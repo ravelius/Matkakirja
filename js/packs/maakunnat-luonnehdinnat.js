@@ -11861,4 +11861,346 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Pääkaupunki Greenvillen satama on Liberian kolmanneksi suurin, ja sen kautta kulkee nykyään lähinnä puutavaraa.',
     },
   },
+  /*
+   * LBY (erä 9C). Avaimet MAAKUNNAT_KAIKKI.LBY:n tunnuksia TÄSMÄLLEEN
+   * ("Ash Shati'", "Tajura' wa an Nawahi al Arba"). Natural Earthin jako on
+   * sekoitus vanhoja piirikuntia: Tripoli on "Tajura'"-alueella, Derna
+   * "Al Qubbah"-alueella, Nalut "Ghadamis"-alueella ja Gharyan "Mizdah"-
+   * alueella (tarkistettu alueiden rajauslaatikoista). Vain `lyhyt`.
+   * Neutraali sävy. Vältetty maastokohteet-lby.js:n ja fokuskohteet-lby.js:n
+   * aiheet (Leptis Magna, Sabratha, Kyrene, Ghadames, Akakus, Garama,
+   * Ubarin hiekkameri, Syrtti). Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Ajdabiya — Atiq Mosque (Awjila); Al Butnan — Tobruk; Al Jabal al
+   *   Akhdar — Jebel Akhdar (Libya); Al Jifarah — ʽAziziya; Al Kufrah —
+   *   Kufra; Al Marj — Marj; Al Marqab — Villa Silin (Livius, ICOMOS);
+   *   Al Qubbah — Derna waterfalls; Ash Shati' — Wadi al Shatii District;
+   *   Benghazi — University of Benghazi; Ghadamis — Nalut; Ghat — Ghat,
+   *   Libya; Al Jufrah — Haruj; Misratah — Misrata; Mizdah — Gharyan;
+   *   Murzuq — Waw an Namus; An Nuqat al Khams — Zuwara; Sabha — Sabha,
+   *   Libya; Surt — Sirte (Madinat Sultan); Tajura' — Tripoli, Libya
+   *   (Arch of Marcus Aurelius); Wadi al Hayaa — Wadi al Hayaa District;
+   *   Az Zawiyah — Zawiya, Libya
+   */
+  LBY: {
+    "Ajdabiya": {
+      lyhyt: 'Awjilan keitaan Atiq-moskeija on 1100-luvulta, ja sen savitiilistä ja kalkkikivestä muurattua kattoa kruunaa 21 kartiomaista kupolia.',
+    },
+    "Al Butnan": {
+      lyhyt: 'Tobrukin syvä ja luonnostaan suojainen satama on ehkä koko Pohjois-Afrikan rannikon paras luonnonsatama.',
+    },
+    "Al Jabal al Akhdar": {
+      lyhyt: 'Vihreä vuori on Libyan sateisin seutu, ja sen rinteillä kasvaa metsää, jossa viihtyvät muun muassa foinikiankataja ja johanneksenleipäpuu.',
+    },
+    "Al Jifarah": {
+      lyhyt: 'Aziziyassa mitattiin 1922 lukema 58 astetta, jota pidettiin 90 vuotta maailman kuumimpana, kunnes WMO hylkäsi sen 2012.',
+    },
+    "Al Kufrah": {
+      lyhyt: 'Kufran keitaan pyöreät, noin kilometrin levyiset pellot näkyvät avaruuteen asti, ja niitä kastellaan syvältä pumpatulla fossiilisella pohjavedellä.',
+    },
+    "Al Marj": {
+      lyhyt: 'Kun maanjäristys tuhosi Marjin 1963, uusi kaupunki rakennettiin noin viiden kilometrin päähän vanhasta.',
+    },
+    "Al Marqab": {
+      lyhyt: 'Khomsin lähellä meren rannalla on Silinin roomalainen huvila, jonka lattioita peittää noin 800 neliömetriä mosaiikkeja.',
+    },
+    "Al Qubbah": {
+      lyhyt: 'Dernan eteläpuolella Vihreän vuoren rinteellä on noin 20 metriä korkea vesiputous, harvinaisuus kuivassa Libyassa.',
+    },
+    "Ash Shati'": {
+      lyhyt: 'Brakin ympäristössä Wadi ash-Shatin painanteessa on valtavat mutta köyhät rautamalmiesiintymät, jotka löydettiin 1943.',
+    },
+    "Benghazi": {
+      lyhyt: 'Benghazin yliopisto perustettiin 1955 Libyan yliopistona, ja se on maan vanhimpia korkeakouluja.',
+    },
+    "Ghadamis": {
+      lyhyt: 'Nalutin qasr on linnoitettu vilja-aitta, johon kylän perheet säilöivät viljansa; nyt se on tyhjillään mutta avoinna kävijöille.',
+    },
+    "Ghat": {
+      lyhyt: 'Ghatin vanhaa kaupunkia vartioi Koukemenin kukkulalla italialaisten rakentama linnoitus.',
+    },
+    "Al Jufrah": {
+      lyhyt: 'Jufraan ulottuu Harujin tulivuorikenttä, jossa on noin 150 tulivuorta – Pohjois-Afrikan suurin basalttinen tulivuorikenttä.',
+    },
+    "Misratah": {
+      lyhyt: 'Misrataa kutsutaan Libyan kaupan pääkaupungiksi, ja sen keskustorin laidalla myydään yhä mattoja ja perinteisiä vaatteita.',
+    },
+    "Mizdah": {
+      lyhyt: 'Gharyanin ensimmäiset asukkaat asuivat maan alle kaivetuissa luolissa, ja kaupunki tunnetaan yhä keramiikastaan.',
+    },
+    "Murzuq": {
+      lyhyt: 'Waw an-Namusin tulivuoren kraatterissa on pieniä järviä, ja musta tuhka peittää ympäriltä vaalean Saharan hiekan.',
+    },
+    "An Nuqat al Khams": {
+      lyhyt: 'Zuwarassa puhutaan omaa berberikieltä, ja kaupunki tunnetaan hiekkarannoistaan ja kala-aterioistaan.',
+    },
+    "Sabha": {
+      lyhyt: 'Sabhan kaupunkikuvaa hallitsee kukkulalla seisova Elenan linnake, jonka italialaiset rakensivat siirtomaa-aikanaan.',
+    },
+    "Surt": {
+      lyhyt: 'Sirten itäpuolella ovat keskiaikaisen Surtin rauniot, Madinat Sultan, jonka muurit ja portit on kaivettu esiin.',
+    },
+    "Tajura' wa an Nawahi al Arba": {
+      lyhyt: 'Tripolin vanhankaupungin laidalla seisoo 100-luvun Marcus Aureliuksen riemukaari, kaupungin ainoa näkyvä roomalainen muistomerkki.',
+    },
+    "Wadi al Hayaa": {
+      lyhyt: 'Wadi al-Hayat tarkoittaa Elämän laaksoa, sillä tässä aavikon painanteessa pohjavesi riittää taatelipalmuille ja pelloille.',
+    },
+    "Az Zawiyah": {
+      lyhyt: 'Zawiyassa on toinen Libyan kahdesta tärkeimmästä öljynjalostamosta.',
+    },
+  },
+  /*
+   * MLI (erä 9C). Avaimet MAAKUNNAT_KAIKKI.MLI:n tunnuksia TÄSMÄLLEEN
+   * ("Ségou"); Natural Earthin vanha kahdeksan alueen ja Bamakon jako.
+   * Vain `lyhyt`. Neutraali sävy. Vältetty maastokohteet-mli.js:n aiheet
+   * (Djenné, Dogonmaa, Askian hauta, Médine, Sikasson tata, Ségoun
+   * historia, Bamakon perustaminen, Hombori). Lähteet (en-Wikipedia ja
+   * haku 25.9.2026):
+   *   Bamako — African Photography Encounters; Gao — Gao (La Dune Rose);
+   *   Kayes — Kayes; Kidal — Essouk; Koulikoro — Kangaba (Kamablon);
+   *   Mopti — Mopti; Ségou — Markala Dam; Sikasso — Sikasso Region
+   *   (Koutiala); Timbuktu — Djinguereber Mosque
+   */
+  MLI: {
+    "Bamako": {
+      lyhyt: 'Bamakossa järjestetään joka toinen vuosi Afrikan valokuvabiennaali Rencontres de Bamako, jonka ensimmäinen kerta oli 1994.',
+    },
+    "Gao": {
+      lyhyt: 'Gaon lähellä kohoaa La Dune Rose, hiekkadyyni, joka on saanut nimensä vaaleanpunaisesta hehkustaan aamu- ja iltavalossa.',
+    },
+    "Kayes": {
+      lyhyt: 'Kayesia kutsutaan Afrikan painekattilaksi, ja huhtikuussa 2024 siellä mitattiin 48,5 astetta, Malin korkein lämpötila.',
+    },
+    "Kidal": {
+      lyhyt: 'Kidalin lähellä ovat Tadmekkan rauniot, ja niiden hautakivissä on Länsi-Afrikan vanhimpia päivättyjä arabiankielisiä tekstejä.',
+    },
+    "Koulikoro": {
+      lyhyt: 'Kangaban Kamablon-pyhätön olkikatto uusitaan seitsemän vuoden välein juhlassa, jossa griotit kertaavat seudun suullista historiaa.',
+    },
+    "Mopti": {
+      lyhyt: 'Tulvakaudella Mopti muuttuu pengerteiden yhdistämiksi saariksi, ja sen satamassa käydään kauppaa Taoudennin vuorisuolalla.',
+    },
+    "Ségou": {
+      lyhyt: 'Markalan pato ohjaa Nigerin vettä 135 kilometriä pohjoiseen ulottuvaan kanavistoon, jonka varrella viljellään riisiä.',
+    },
+    "Sikasso": {
+      lyhyt: 'Pohjoisosan Koutiala on Malin puuvillateollisuuden keskus, ja puuvilla on maan harvoja vientituotteita.',
+    },
+    "Timbuktu": {
+      lyhyt: 'Timbuktun Djinguereberin moskeija rakennettiin savesta, oljista ja puusta vuonna 1327, ja siihen mahtuu 2 000 rukoilijaa.',
+    },
+  },
+  /*
+   * SOM (erä 9C). Avaimet MAAKUNNAT_KAIKKI.SOM:n tunnuksia TÄSMÄLLEEN
+   * (somalinkieliset "Jubbada Hoose", "Shabeellaha Dhexe" ym.). Vain
+   * `lyhyt`. Neutraali sävy; Puntlandin alueista (Bari, Nugaal, Mudug)
+   * vain maisema ja kulttuuri. Vältetty maastokohteet-som.js:n aiheet
+   * (Bosaso, Hobyo, Barawa, Hamar Weyne, Jubba, Ras Hafun). Lähteet
+   * (en-Wikipedia ja haku 25.9.2026):
+   *   Jubbada Hoose — Kismayo; Bakool — Hudur, Maay language; Banaadir —
+   *   Mogadishu (Lido Beach); Bari — Cape Guardafui; Bay — Buur Heybe;
+   *   Galguduud — El Buur (sepiolite, mindat), Dabqaad; Gedo — Bardera;
+   *   Hiiraan — Beledweyne; Jubbada Dhexe — Middle Juba; Mudug — Mudug,
+   *   Somalia terrain (country-data); Nugaal — Nugaal Valley; Shabeellaha
+   *   Dhexe — Jowhar; Shabeellaha Hoose — Istunka
+   */
+  SOM: {
+    "Jubbada Hoose": {
+      lyhyt: 'Kismayon sataman niemi oli ennen yksi Bajunisaarista, kunnes se yhdistettiin mantereeseen pengertiellä 1964.',
+    },
+    "Bakool": {
+      lyhyt: 'Bakoolin pääkaupungissa Hudurissa puhutaan maayta, joka eroaa pohjoisen somalista suunnilleen kuin espanja portugalista.',
+    },
+    "Banaadir": {
+      lyhyt: 'Mogadishun Lidon hiekkaranta on kaupunkilaisten suosituin rantapaikka, ja sen varrella on kalaravintoloita.',
+    },
+    "Bari": {
+      lyhyt: 'Guardafuin niemi on Afrikan sarven kärki, ja sen nimen arvellaan tulevan merimiesten sanoista "katso ja pakene".',
+    },
+    "Bay": {
+      lyhyt: 'Buur Heyben graniittikallion kalliosuojista on löydetty Afrikan sarven vanhimmat kiistattomat hautaukset.',
+    },
+    "Galguduud": {
+      lyhyt: 'El Buurin tasangolla louhitaan kalkkikiven alta merivahaa, josta veistetään perinteisiä dabqaad-suitsutusastioita.',
+    },
+    "Gedo": {
+      lyhyt: 'Baardheeren nimi tarkoittaa korkeaa palmua, ja palmut reunustavat yhä kaupungin kohdalla joen rantoja ja peltoja.',
+    },
+    "Hiiraan": {
+      lyhyt: 'Beledweynen kaupunki on rakennettu Shabelle-joen molemmin puolin, ja joki jakaa sen itä- ja länsiosaan.',
+    },
+    "Jubbada Dhexe": {
+      lyhyt: 'Keski-Juban jokilaakso on maanviljelyseutua, ja yksi sen tärkeimmistä viljelykasveista on seesami.',
+    },
+    "Mudug": {
+      lyhyt: 'Mudugin tasangolla Haudin ruohomaat vaihtuvat puoliaavikoksi, jonka pensaikossa paimentolaiset laiduntavat kameleitaan.',
+    },
+    "Nugaal": {
+      lyhyt: 'Nugaalin laakson uomassa virtaa vettä vain sateiden jälkeen, ja laakson luonnonvaraisista puista kerätään myrhaa ja suitsuketta.',
+    },
+    "Shabeellaha Dhexe": {
+      lyhyt: 'Jowharin nimi tarkoittaa jalokiveä, ja se viittaa Shabelle-joen varren hedelmällisiin peltoihin.',
+    },
+    "Shabeellaha Hoose": {
+      lyhyt: 'Afgooyessa joen kummankin rannan asukkaat ottavat somalialaisena uutenavuotena mittaa toisistaan istunka-keppitaistelussa.',
+    },
+  },
+  /*
+   * GTM (erä 9C). Avaimet MAAKUNNAT_KAIKKI.GTM:n tunnuksia TÄSMÄLLEEN
+   * ("Petén", "Quezaltenango", "Sacatepéquez", "Sololá" ym.). Vain
+   * `lyhyt`. Vältetty maastokohteet-gtm.js:n aiheet (Tikal, El Mirador,
+   * Atitlán, Chichicastenango, Iximche, Quiriguá, Semuc Champey,
+   * Tajumulco, San Felipe, Motaguan jade). Lähteet (en-Wikipedia ja
+   * haku 25.9.2026):
+   *   Alta Verapaz — cardamom (USDA, Heifer); Baja Verapaz — Biotopo del
+   *   Quetzal; Chimaltenango — San Juan Comalapa; Chiquimula — Black
+   *   Christ of Esquipulas; El Progreso — El Progreso Department;
+   *   Escuintla — Monte Alto culture, La Democracia; Guatemala —
+   *   Kaminaljuyu; Huehuetenango — Todos Santos Cuchumatán; Izabal —
+   *   Livingston, Guatemala; Jalapa — Jalapa Department; Jutiapa — Jutiapa
+   *   Department; Petén — Flores, Petén; Quezaltenango — Quetzaltenango;
+   *   Quiché — Ixil; Retalhuleu — Takalik Abaj; Sacatepéquez — Antigua
+   *   alfombras; San Marcos — La Blanca (archaeological site); Santa Rosa
+   *   — Monterrico; Sololá — Sololá; Suchitepéquez — Mazatenango;
+   *   Totonicapán — Totonicapán Department; Zacapa — Museo de
+   *   Paleontología de Estanzuela
+   */
+  GTM: {
+    "Alta Verapaz": {
+      lyhyt: 'Guatemala on maailman suurin kardemumman tuottaja, ja noin kaksi kolmasosaa sadosta kasvaa Alta Verapazin rinteillä.',
+    },
+    "Baja Verapaz": {
+      lyhyt: 'Baja Verapazin pilvimetsään perustettiin 1976 Quetzal-biotooppi suojelemaan Guatemalan kansallislintua ketsaalia.',
+    },
+    "Chimaltenango": {
+      lyhyt: 'San Juan Comalapaa kutsutaan Amerikan Firenzeksi, sillä kylässä maalaa noin 500 kaqchikel-taiteilijaa.',
+    },
+    "Chiquimula": {
+      lyhyt: 'Esquipulasin basilikan Mustan Kristuksen luo saapuu joka 15. tammikuuta arviolta jopa miljoona pyhiinvaeltajaa.',
+    },
+    "El Progreso": {
+      lyhyt: 'Sierra de las Minasin Cerro El Pinalón kohoaa 2 962 metriin, ja se on El Progreson korkein kohta.',
+    },
+    "Escuintla": {
+      lyhyt: 'La Democracian puistossa on esillä Monte Alton pyylevät kivihahmot ja jättiläispäät, jotka veistettiin noin 500–200 eaa.',
+    },
+    "Guatemala": {
+      lyhyt: 'Pääkaupungin länsiosan korttelien alle on jäänyt Kaminaljuyú, suuri mayakaupunki, josta on säilynyt puistona vain pieni osa.',
+    },
+    "Huehuetenango": {
+      lyhyt: 'Todos Santos Cuchumatánissa 2 500 metrin korkeudella myös miehet käyttävät yhä arjessa perinteistä asua.',
+    },
+    "Izabal": {
+      lyhyt: 'Karibianrannan Livingstoniin ei johda tietä, vaan sinne tullaan veneellä, ja kaupungin kaduilla kuulee garifunaa.',
+    },
+    "Jalapa": {
+      lyhyt: 'Jalapan viileää vuoristoa hallitsee 2 176 metriin kohoava Jumayn tulivuori.',
+    },
+    "Jutiapa": {
+      lyhyt: 'Güijajärven poikki kulkee Guatemalan ja El Salvadorin raja, ja kummallakin maalla on oma rantansa.',
+    },
+    "Petén": {
+      lyhyt: 'Floresin vanhakaupunki on Petén Itzá -järven saarella, jonne pääsee lyhyttä pengertietä pitkin.',
+    },
+    "Quezaltenango": {
+      lyhyt: 'Quetzaltenangon kʼicheʼ-kielinen nimi Xelajú tarkoittaa "kymmenen vuoren alla", ja arjessa kaupunki on Xela.',
+    },
+    "Quiché": {
+      lyhyt: 'Nebajin, Chajulin ja Cotzalin vuoristokylissä puhutaan ixiliä, mayakieltä, joka on tämän seudun oma.',
+    },
+    "Retalhuleu": {
+      lyhyt: 'Takalik Abaj oli olmeekkien ja mayojen kohtauspaikka, ja se liitettiin Unescon maailmanperintöluetteloon 2023.',
+    },
+    "Sacatepéquez": {
+      lyhyt: 'Antiguassa kadut peitetään pääsiäisviikolla värjätystä sahanpurusta tehdyillä matoilla, jotka kulkueet tallaavat.',
+    },
+    "San Marcos": {
+      lyhyt: 'La Blancan 25-metrinen kumpu oli noin 900–600 eaa. yksi Mesoamerikan ensimmäisistä pyramiditemppeleistä.',
+    },
+    "Santa Rosa": {
+      lyhyt: 'Monterricon mustalle tuliperäiselle hiekkarannalle nousee heinä–joulukuussa merikilpikonnia munimaan.',
+    },
+    "Sololá": {
+      lyhyt: 'Sololán kaupungissa 600 metriä Atitlánin yläpuolella pidetään tiistaisin ja perjantaisin yksi Guatemalan suurimmista toreista.',
+    },
+    "Suchitepéquez": {
+      lyhyt: 'Mazatenangon karnevaali on Guatemalan vanhin ja suurin, ja sitä on vietetty vuodesta 1885.',
+    },
+    "Totonicapán": {
+      lyhyt: 'Totonicapánin ylänköjen havumetsissä kasvaa uhanalaista guatemalanpihtaa.',
+    },
+    "Zacapa": {
+      lyhyt: 'Estanzuelan paleontologisessa museossa on koottuina mastodontin ja jättiläislaiskiaisen luurangot.',
+    },
+  },
+  /*
+   * NIC (erä 9C). Avaimet MAAKUNNAT_KAIKKI.NIC:n tunnuksia TÄSMÄLLEEN
+   * ("Atlántico Norte"/"Atlántico Sur" = nykyiset Costa Caribe Norte/Sur,
+   * "Rio San Juan" ilman aksenttia). Vain `lyhyt`. Vältetty
+   * maastokohteet-nic.js:n aiheet (Bilwi, Bluefields, Ciudad Darío,
+   * Cosigüina, El Castillo, Granadan ja Leónin kaupungit, Ometepe, San
+   * Juan -joki, Solentiname, Somoton kanjoni). Lähteet (en-Wikipedia ja
+   * haku 25.9.2026):
+   *   Atlántico Norte — Bosawás Biosphere Reserve; Atlántico Sur — Corn
+   *   Islands; Boaco — Boaco; Carazo — El Güegüense; Chinandega — Corinto;
+   *   Chontales — Museo Gregorio Aguilar Barea; Estelí — cigar industry;
+   *   Granada — Isletas de Granada; Jinotega — Jinotega; León — Cerro
+   *   Negro; Madriz — Somoto (rosquillas); Managua — Ancient footprints of
+   *   Acahualinca; Masaya — Masaya (Monimbó); Matagalpa — cerámica negra;
+   *   Nueva Segovia — Ocotal; Rio San Juan — Indio Maíz Biological
+   *   Reserve; Rivas — Rivas Isthmus (Britannica)
+   */
+  NIC: {
+    "Atlántico Norte": {
+      lyhyt: 'Bosawásin biosfäärialue ulottuu tänne, ja se on Amazonin pohjoispuolen suurin yhtenäinen koskematon sademetsä.',
+    },
+    "Atlántico Sur": {
+      lyhyt: 'Corn Islands -saaret ovat noin 70 kilometrin päässä rannikolta, ja niillä puhutaan arjessa englantipohjaista kreolia.',
+    },
+    "Boaco": {
+      lyhyt: 'Mäkistä Boacoa kutsutaan kaksikerroksiseksi kaupungiksi, sillä sen ainoat tasaiset paikat ovat puisto ja pesäpallokenttä.',
+    },
+    "Carazo": {
+      lyhyt: 'Diriambassa esitetään tammikuun San Sebastián -juhlissa El Güegüense -näytelmää, jonka Unesco nimesi ihmiskunnan perinnöksi 2005.',
+    },
+    "Chinandega": {
+      lyhyt: 'Corinto on Nicaraguan suurin satama, ja sen kautta kulkee valtaosa maan meriteitse kulkevasta ulkomaankaupasta.',
+    },
+    "Chontales": {
+      lyhyt: 'Juigalpan arkeologisessa museossa on yli 120 kivipatsasta, Nicaraguan suurin alkuperäiskansojen veistoskokoelma.',
+    },
+    "Estelí": {
+      lyhyt: 'Estelíä kutsutaan Nicaraguan sikaripääkaupungiksi, ja sikareita kääritään käsin niin suurissa tehtaissa kuin takapihoillakin.',
+    },
+    "Granada": {
+      lyhyt: 'Granadan edustalla Nicaraguajärvessä on noin 365 pientä saarta, jotka syntyivät Mombachon tulivuoren sortuman jäänteistä.',
+    },
+    "Jinotega": {
+      lyhyt: 'Jinotegaa kutsutaan sumujen kaupungiksi, sillä pilvet ajelehtivat jatkuvasti vuorten ympäröimän laakson läpi.',
+    },
+    "León": {
+      lyhyt: 'Cerro Negro ilmestyi maan pinnalle vasta 1850, ja sen mustaa tuhkarinnettä lasketaan nykyään alas laudalla.',
+    },
+    "Madriz": {
+      lyhyt: 'Somotossa leivotaan puu-uuneissa rosquillas-maissikeksejä, ja kaupunkia pidetään niiden syntysijana.',
+    },
+    "Managua": {
+      lyhyt: 'Acahualincassa Managuanjärven rannalla on tuhkaan painuneita ihmisten jalanjälkiä, jotka ovat ainakin 2 100 vuotta vanhoja.',
+    },
+    "Masaya": {
+      lyhyt: 'Masaya on nimetty Nicaraguan kansanperinteen pääkaupungiksi, ja sen Monimbón kaupunginosassa on käsityöpaja lähes joka kadulla.',
+    },
+    "Matagalpa": {
+      lyhyt: 'Matagalpan seudulla tehdään yhä mustaa keramiikkaa, jonka kiilto tulee kasvipihkasta tehdystä pinnoitteesta.',
+    },
+    "Nueva Segovia": {
+      lyhyt: 'Nueva Segovian pääkaupunki Ocotal on saanut nimensä ocote-männyistä, joita seudun vuorilla kasvaa runsaasti.',
+    },
+    "Rio San Juan": {
+      lyhyt: 'Indio Maízin suojelualue on yksi Keski-Amerikan parhaiten säilyneistä alankosademetsistä.',
+    },
+    "Rivas": {
+      lyhyt: 'Rivasin kannaksella Nicaraguajärveä ja Tyyntämerta erottaa vain noin 20 kilometrin kaistale maata.',
+    },
+  },
 };
