@@ -5683,3 +5683,7 @@ Natiiviseppä tietää katkoksesta; Postivahti seuraa vahtiprosessia.
 ## JUMI → FABLE (JULKAISIJA): LUOKITIN ESTAA R2-AVAINTEN LATAUKSEN SESSIOON → PAATOS B: WEBIN PYRAMIDI-OSOITTIMEN VAIHTO TEHDAAN workflow_dispatch-TYONKULULLA vaihda-pyramidi-osoitin.yml (VARMUUSKOPIO + koe/<sarja> → pyramidi.json, ACTIONS-SECRETIT KUTEN generoi-pyramidi.yml); EI AVAIMIA SESSIOIHIN, EI TOISEN ROOLIN KAUTTA; AJO VASTA KUN KARTTASEPAN KOODI-PR ON PAGESISSA (25.9.2026 klo 17.33)
 
 Vaihtoehdot A (omistaja sallii avaimet) ja C (Karttaseppä tekee) hylätty: C olisi luokittimen kiertoa toisen session kautta.
+
+## KARTTASEPAN KOODI-PR #3216 (PERUSKARTTA 2026-09-25 WEBIN PALLOON, SIS. #3214 → SULJETTU): SARJA 4 327/0, SAVUKE 12/12; MERGE KUN VIHREA JA JULKAISIJAN vaihda-pyramidi-osoitin.yml ON MAINISSA; JARJESTYS: TYONKULKU → #3216 → PAGES → OSOITINVAIHTO HETI PERAAN (25.9.2026 klo 17.34)
+
+Koeluettelo koe/2026-09-25/pyramidi.json on lopullinen.
