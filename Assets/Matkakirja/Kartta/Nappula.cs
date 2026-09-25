@@ -488,7 +488,7 @@ namespace Matkakirja
                 kohdeLataus = KarttaKerrokset.Instanssi?.EsilataaKohde(
                     math.min(lat1, sn.Lat - pk), math.max(lat1, sn.Lat + pk), sn.Lon - pl, sn.Lon + pl, lat1, lon1);
             }
-            bool pintaVaihdettu = false, laskuSumu = false, kohdeKirjattu = false, sentinelPois = false;
+            bool pintaVaihdettu = false, laskuSumu = false, kohdeKirjattu = false, sentinelPois = false, pilvetPois = false;
             if (aloitus)
             {
                 // LÖYDÖS 84: feidi mustaan → värillinen topografiakartta latautuu taustalla → feidi takaisin. Pinta
@@ -673,7 +673,10 @@ namespace Matkakirja
                 }
                 if (pilvet != null)
                 {
-                    if (t > jako.Liuku) { if (pilvet.Nakyvissa) pilvet.Piilota(); }
+                    // Kerran: Nakyvissa on tosi myös häivytyksen aikana, ja joka kehys uudelleen alkava smoothstep-häivytys
+                    // (PilviVerho.Aloita nykyisestä peitosta, alkukulmakerroin 0) ei koskaan edennyt — pilvet jäivät
+                    // loppuorbitiin (video aloituslento-84/c; ennen laskusumu peitti ne).
+                    if (t > jako.Liuku) { if (!pilvetPois) { pilvetPois = true; pilvet.Piilota(); } }
                     else pilvet.Korkeus(math.max(2000.0, (lentoPohja + h) * 0.6));
                 }
                 PaivitaKone(kamera, lat0, lon0, lat1, lon1, p, huippu);
