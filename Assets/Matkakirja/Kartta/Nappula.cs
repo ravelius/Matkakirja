@@ -491,6 +491,44 @@ namespace Matkakirja
                     math.min(lat1, sn.Lat - pk), math.max(lat1, sn.Lat + pk), sn.Lon - pl, sn.Lon + pl, lat1, lon1);
             }
             bool pintaVaihdettu = false, laskuSumu = false, kohdeKirjattu = false, sentinelPois = false, pilvetPois = false;
+            // LENNON ESITYS PÄÄLLE (EsitysPaalle): kartta, merkit, valo, filmipino ja pilvet. Löydös 120 v2: aloituslennolla
+            // mustan verhon alla, jotta avauskuva (Lontoo kaukaa) on valmis, kun verho lähtee: ennen renkaat ja maamerkki
+            // ilmestyivät vasta lennon ensimmäisessä kehyksessä ja valo vaihtui 1,5 s avauskuvan aikana. Muilla lennoilla
+            // lähdössä kuten ennen.
+            KaupunkiMerkit merkit = null;
+            string kohdeId = null;
+            var kerrokset = KarttaKerrokset.Instanssi;
+            var pilvet = Matkakirja.Linssit.Pilvet.LentoPilvet.Instanssi;
+            bool esitysPaalla = false;
+            void EsitysPaalle(double pilviKorkeus)
+            {
+                if (esitysPaalla) return;
+                esitysPaalla = true;
+                // LENNON AIKAJANA (omistaja 24.9.): kamera avainkehyksinä datana, kohdekaupungin kierto taulukosta.
+                merkit = aloitusMerkit != null ? aloitusMerkit : FindAnyObjectByType<KaupunkiMerkit>();
+                kohdeId = merkit != null ? merkit.LahinId(lat1, lon1) : null;
+                // LENNON KARTTA (omistaja 24.9.2026 klo 13.4x): reittikaari pois (lähikuvassa se näkyi juovana koneesta
+                // kameraa kohti), sileä pohja ilman teitä ja rajoja, lähtö ja kohde punaisin pistein ja renkain.
+                reititEnnen = kerrokset == null || kerrokset.reitit == null || kerrokset.reitit.Nakyvissa;
+                kerrokset?.Nakyvyys("reitit", false);
+                // VALITUN LENNON KAARI (pariteetti B24, web ui.js:20691 ja 11424 lentoKaari, nollaus perillä 20755/11433):
+                // liikkuva katkoviiva lähdöstä laskeutumiseen koneen omaa reittiä pitkin. Ei aloituslennolla (webissä sillä
+                // ei ole lentoKaarta). Lähikuvissa kaari häivytetään (yllä oleva omistajan havainto: juova kameraa kohti).
+                if (kaari) TeeLentokaari(lat0, lon0, lat1, lon1, huippu0, jako);
+                lentoMerkit = merkit;
+                lentoIdt = new[] { merkit != null ? merkit.LahinId(lat0, lon0) : null, kohdeId }.Where(x => x != null).ToArray();
+                // MAAMERKIT (omistaja 24.9.): lähtö- ja kohdekaupungin tunnusrakennus näkyy koko lennon.
+                if (maamerkit != null) maamerkit.Nayta(lentoIdt);
+                if (merkit != null)
+                {
+                    merkit.Renkaat(lentoIdt, null, LentoPunainen);
+                    foreach (var id in lentoIdt) merkit.Korosta(id, LentoPunainen);
+                }
+                if (aurinko != null) { aurinko.Kohde(lon0); aurinko.Aseta(true); }
+                Filmipino.Instanssi?.Paalle(true);
+                pilvet?.Nayta(math.max(2000.0, huippu0 * 0.35));
+                pilvet?.Korkeus(pilviKorkeus);
+            }
             // LÖYDÖS 120: aloituslennon kamera yhtenä C2-jatkuvana reittinä (LennonAikajana.AloitusReitti) jo ennen mustaa
             // verhoa, jotta verhon alla esiladataan lähikuvan ja avauksen laatat. V2: kone etenee reitin omalla profiililla
             // (AloitusReitti.KoneenOsuus), ja suunnat lasketaan koneen reittiosuudesta.
@@ -537,7 +575,9 @@ namespace Matkakirja
                     var lahikuva = aloitusReitti.Lahikuva;
                     var ql = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, aloitusReitti.KoneenOsuus(aloitusReitti.LahikuvaOsuus));
                     kierto.Kuvaa(ql.x, ql.y, lahikuva.etaisyys, lahikuva.kallistus, lahikuva.suunta, pohja0 + LennonAikajana.MinKoneKorkeusM);
-                    yield return Lataa(MustanKatto * 0.6f);
+                    // Löydös 120 v2: lähikuvalle vain pyyntöjen verran aikaa (LahikuvanKatto), avaukselle loput: verho paljastaa
+                    // avauksen (sim 25.9.: lähikuva 3,0 s ja avaus 2,0 s → pallo 31 %, kaukana vielä vanha kartta).
+                    yield return Lataa(LahikuvanKatto);
                     float lahi = Time.unscaledTime - odotus;
                     var avaus = aloitusReitti.Avaus;
                     kierto.Kuvaa(lat0, lon0, avaus.etaisyys, avaus.kallistus, avaus.suunta, pohja0);
@@ -547,6 +587,7 @@ namespace Matkakirja
                     koneMinimi = LennonAikajana.KoneenMinimi(0, jako, LennonAikajana.AloituksenNousu);
                     Siirra(lat0, lon0, KoneenKorkeus(0, huippu0));
                     PaivitaKone(kierto.GetComponent<Camera>(), lat0, lon0, lat1, lon1, 0, huippu0, savuun: false);
+                    EsitysPaalle(math.max(2000.0, (lentoPohja + KoneenKorkeus(0, huippu0)) * 0.6));
                     yield return Lataa(MustanKatto - (Time.unscaledTime - odotus));
                     Debug.Log($"MATKAKIRJA aloituslento: lähikuvan laatat {lahi:0.0} s, avaus {avaus.etaisyys / 1000:0} km {avaus.kallistus:0}° {avaus.suunta:0}°");
                 }
@@ -588,28 +629,6 @@ namespace Matkakirja
             double reittiM = math.radians(kulma) * 6371000.0;
             double huippu = huippu0;
             var kamera = kierto != null ? kierto.GetComponent<Camera>() : null;
-
-            // LENNON AIKAJANA (omistaja 24.9.): kamera avainkehyksinä datana, kohdekaupungin kierto taulukosta.
-            var merkit = aloitusMerkit != null ? aloitusMerkit : FindAnyObjectByType<KaupunkiMerkit>();
-            string kohdeId = merkit != null ? merkit.LahinId(lat1, lon1) : null;
-            // LENNON KARTTA (omistaja 24.9.2026 klo 13.4x): reittikaari pois (lähikuvassa se näkyi juovana koneesta
-            // kameraa kohti), sileä pohja ilman teitä ja rajoja, lähtö ja kohde punaisin pistein ja renkain.
-            var kerrokset = KarttaKerrokset.Instanssi;
-            reititEnnen = kerrokset == null || kerrokset.reitit == null || kerrokset.reitit.Nakyvissa;
-            kerrokset?.Nakyvyys("reitit", false);
-            // VALITUN LENNON KAARI (pariteetti B24, web ui.js:20691 ja 11424 lentoKaari, nollaus perillä 20755/11433):
-            // liikkuva katkoviiva lähdöstä laskeutumiseen koneen omaa reittiä pitkin. Ei aloituslennolla (webissä sillä
-            // ei ole lentoKaarta). Lähikuvissa kaari häivytetään (yllä oleva omistajan havainto: juova kameraa kohti).
-            if (kaari) TeeLentokaari(lat0, lon0, lat1, lon1, huippu, jako);
-            lentoMerkit = merkit;
-            lentoIdt = new[] { merkit != null ? merkit.LahinId(lat0, lon0) : null, kohdeId }.Where(x => x != null).ToArray();
-            // MAAMERKIT (omistaja 24.9.): lähtö- ja kohdekaupungin tunnusrakennus näkyy koko lennon.
-            if (maamerkit != null) maamerkit.Nayta(lentoIdt);
-            if (merkit != null)
-            {
-                merkit.Renkaat(lentoIdt, null, LentoPunainen);
-                foreach (var id in lentoIdt) merkit.Korosta(id, LentoPunainen);
-            }
             // Maisemasuunta ratkaisee vain kiertosuunnan (Fable 24.9.); muille kohteille lyhyempi kierto.
             var kaupunki = kohdeId != null && LennonAikajana.Kaupungit.TryGetValue(kohdeId, out var kk) ? kk : LennonAikajana.EiMaisemaa;
             // Aloituslento: AloitusReitti (löydös 120); muut lennot avaimina (build 11:n aikajana).
@@ -632,10 +651,7 @@ namespace Matkakirja
             float seuraavaNayte = 0f;
 
             if (savu != null) savu.Aloita();
-            if (aurinko != null) aurinko.Aseta(true);
-            Filmipino.Instanssi?.Paalle(true);
-            var pilvet = Matkakirja.Linssit.Pilvet.LentoPilvet.Instanssi;
-            pilvet?.Nayta(math.max(2000.0, huippu * 0.35));
+            EsitysPaalle(math.max(2000.0, (lentoPohja + KoneenKorkeus(0, huippu)) * 0.6));
             AsetaVaihe(LennonVaihe.Nousu);
 
             float alku = Time.unscaledTime;
@@ -779,6 +795,11 @@ namespace Matkakirja
         public const float MustanKatto = 5f;
         /// <summary>Näkyvän pallon latausaste (%), jolla musta verho saa lähteä (Cesium3DTileset.ComputeLoadProgress).</summary>
         public const float MustanLataus = 97f;
+        /// <summary>
+        /// Lähikuvan latausodotuksen katto (s) mustan alla (sama kuin BUILD 16:n natiiviseppa/pohja-buildiin): lähikuva ei
+        /// valmistu verhon aikana joka tapauksessa, 0,6 s riittää Cesiumin pyyntöihin. Löydös 120 v2: loppuaika avaukselle.
+        /// </summary>
+        public const float LahikuvanKatto = 0.6f;
 
         /// <summary>Lennon esitys pois (perillä tai keskeytys): kamera palautuu, valo, sumu ja pilvet pois.</summary>
         KaupunkiMerkit aloitusMerkit;

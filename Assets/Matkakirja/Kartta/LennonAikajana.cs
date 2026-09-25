@@ -195,7 +195,7 @@ namespace Matkakirja
         //                              saapumisnäkymä, jarrutus lepoon viimeisen 1,2 s:n aikana
         // Koneen eteneminen on reitin oma (AloitusReitti.KoneenOsuus): lähtö levosta, lähikuvissa 20 km/s (kaikilla
         // reiteillä sama), matka kattaa loput, ja laskeutumisessa nopeus seuraa kameran etäisyyttä (kulmanopeus kamerasta
-        // enintään matkan kulmanopeus), joten kone on perillä ennen kuin katse lähtee siitä.
+        // 0,6 × matkan kulmanopeus, enintään 0,3 rad/s), joten kone on perillä ennen kuin katse lähtee siitä.
 
         /// <summary>Aloituslennon referenssikesto (s): vaiheiden sekunnit on annettu tälle, osuus = s / 12.</summary>
         public const double AloitusRefS = 12.0;
