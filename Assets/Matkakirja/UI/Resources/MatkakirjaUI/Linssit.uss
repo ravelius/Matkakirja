@@ -1156,10 +1156,14 @@
     color: #f1e6d0;
 }
 
+/* Web text-shadow: 0 2px 14px rgba(0,0,0,.95), 0 0 4px rgba(0,0,0,.8). UITK ottaa yhden varjon; toinen, tiivis
+ * tumma kehä tekstin ympärillä ääriviivana (löydös 74 d2: teksti luki heikosti vaalean pallon päällä). */
 .mk-aikajana-kertomus.mk-keskella .mk-aikajana-kertomus__teksti {
     font-size: 24px;
     color: #f7eeda;
     text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
+    -unity-text-outline-width: 0.8px;
+    -unity-text-outline-color: rgba(0, 0, 0, 0.6);
 }
 
 /* Web @media (max-width: 600px): avausteksti 1,25rem puhelimessa. */
