@@ -161,6 +161,19 @@ namespace Matkakirja
         }
 
         /// <summary>
+        /// Vapaa kaari annettuja pisteitä pitkin (x = lat, y = lon, z = korkeus m ellipsoidista) samalla viivalla kuin
+        /// reitit; materiaali null = korostus (liikkuva katko). Kutsuja omistaa olion (Destroy), ja se näkyy kerroksen
+        /// näkyvyydestä riippumatta. Nappula: valitun lennon kaari lennon ajan (pariteetti B24, web ui.js:20691 lentoKaari).
+        /// </summary>
+        public GameObject PiirraKaari(string id, List<double3> pisteet, Material materiaali = null)
+        {
+            if (pisteet == null || pisteet.Count < 2 || georeferenssi == null) return null;
+            var go = Piirra(new Reitti { id = id, laji = "lento", pisteet = pisteet }, materiaali != null ? materiaali : korostus);
+            go.SetActive(true);
+            return go;
+        }
+
+        /// <summary>
         /// Kamera sovittaa kaupungit ruutuun vain loitontaen ja vain, jos ne eivät jo mahdu
         /// (web sovitaKohteetNakyviin, KOHDESOVITUKSEN_MARGINAALI).
         /// </summary>
