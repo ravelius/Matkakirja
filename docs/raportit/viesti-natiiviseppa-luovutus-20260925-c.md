@@ -38,6 +38,13 @@ Edellinen luovutus: viesti-natiiviseppa-luovutus-20260925-b.md. Suunnitelma: doc
      pohja-25/jalkeen` synkkauksen jälkeen, sitten vierekkäin → Fablelle. Sen jälkeen juna-merge.sh natiiviseppa/pohja-25.
 2. **Offline Z9** Siirtosepällä (Fablen päätös): offline.jsonin rasteriväleihin uusi pohjasarja, Z9 vain kaupunkien
    ympärille ~0,5° (sama rajaus kuin satelliittipinnan Z8–Z11), muualla Z8. Pyyntö lähetetty 12.1x; odottaa paketin versiota.
+   **Siirtosepän vastaus (pysäytyksen jälkeen, ei vielä tehty):** skeema 1.40, luonnos-PR #3155 (pinottu #3133:n päälle),
+   koepaketit 1.x v51 /Users/Shared/Claude/sisalto-koe ja 2.0 v12 /Users/Shared/Claude/sisalto-koe-2. lahteet.rasteri: url
+   2026-09-25-pohja-20260925, maxzoom 9, maaMax 8, kaupunkitaso { tasot [9], sadeKm 60 } (72 kaupunkia);
+   maat[iso].rasteri z6–z8 ennallaan, z9 = välilista kaupunkia kohti. **KORJAA Alueet.RasterinLaatikko**: lukee nyt
+   syvimmän tason → z9-kaupunkivälit kutistaisivat maan laatikon (vektorisolujen offline-polut). Lue laatikko tasolta
+   lahteet.rasteri.maaMax (8) tai syvimmästä tasosta ≤ maaMax. Tee pohja-25-haaraan. Siirtosepän merge odottaa
+   Z9-synkkausta (klo 12.4x 14/71 kaupunkikeskusta ämpärissä); tuotantoversio tulee Siirtosepältä.
 3. **Natiivi-UI**: avauskaaro-11 ja maapilleri-41 käännöksessä b13n → merge junaan, kun merge-pyyntö tulee.
 4. **BUILD**: merge masteriin sanalla BUILD vasta Laitetestaajan savukierroksen jälkeen (kaava
    lokit/natiiviseppa-skriptit/build12-master.sh; SHA Fablelle ja Julkaisijalle).
