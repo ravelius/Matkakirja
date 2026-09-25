@@ -72,6 +72,7 @@ namespace Matkakirja.Natiivi
         readonly IhmisenNostokortti nostokortti;
         // Tutkimusvaihe (web luoTutkimusvaihe): palkin virtanapit, nostopisteet ja vanalappu.
         readonly IhmisenTutkimusNakyma tutkimus;
+        bool virratNakyi;
         Loytopaikka kuvanPaikka;
         Tila tila;
         string kelloTeksti;
@@ -199,6 +200,14 @@ namespace Matkakirja.Natiivi
             nostokortti.Muuttui += () => LinssiUi.IhmisenMatka?.Tutkimus?.KorttiAuki(nostokortti.Auki);
             // Virtanapit palkkiin kellon ja ohjainten väliin (web .aikajana.kertomus .ihmisen-vananapit margin 0 auto).
             tutkimus = new IhmisenTutkimusNakyma(kerros, ylarivi, 2, nostokortti);
+            // Virtanappien rivi tulee ja menee tutkimusvaiheen mukana: saaririvin korkeus uudelleen (löydös 74).
+            kerros.JokaRuutu += () =>
+            {
+                bool nakyy = tutkimus.Rivi.resolvedStyle.display != DisplayStyle.None;
+                if (nakyy == virratNakyi) return;
+                virratNakyi = nakyy;
+                Asettele();
+            };
             kerros.JokaRuutu += SijoitaKertomuskuva;
 
             // Ihmisen matkan aikaselain alareunassa (web luoAikaselain): veto esikatselee, irrotus valitsee.
@@ -381,18 +390,19 @@ namespace Matkakirja.Natiivi
             kelloRuutu.style.left = r.x + reuna;
             kelloRuutu.style.top = rivi2;
             float kellonKorkeus = float.IsNaN(kelloRuutu.layout.height) || kelloRuutu.layout.height <= 0 ? 36f : kelloRuutu.layout.height;
-            // Ihmisen tutkimusvaiheen virtanapit (web .ihmisen-vananapit kellon ja ohjainten välissä): saaririvillä
-            // niille ei ole tilaa, joten ne siirtyvät toiselle riville vuosiluvun oikealle puolelle (muuten ne
-            // jäisivät palkin vasempaan yläkulmaan Dynamic Islandin alle).
-            if (virrat != null)
-            {
-                float kellonLeveys = float.IsNaN(kelloRuutu.layout.width) || kelloRuutu.layout.width <= 0 ? 90f : kelloRuutu.layout.width;
-                virrat.style.left = r.x + reuna + kellonLeveys + 8f * yksikko;
-                virrat.style.right = r.z + reuna;
-                virrat.style.top = rivi2;
-                virrat.style.height = kellonKorkeus;
-            }
             float korkeus = rivi2 + kellonKorkeus + 8f * yksikko;
+            // Ihmisen tutkimusvaiheen virtanapit (web .ihmisen-vananapit kellon ja ohjainten välissä): saaririvillä
+            // niille ei ole tilaa (vuosilaatikko ~150 pt + viisi nappia), joten ne saavat oman rivin vuosiluvun alle
+            // (muuten ne jäisivät palkin vasempaan yläkulmaan Dynamic Islandin alle tai vuosiluvun päälle).
+            if (virrat != null && virrat.resolvedStyle.display != DisplayStyle.None)
+            {
+                float rivi3 = rivi2 + kellonKorkeus + 4f * yksikko;
+                float virtaKorkeus = float.IsNaN(virrat.layout.height) || virrat.layout.height <= 0 ? 28f : virrat.layout.height;
+                virrat.style.left = r.x + reuna;
+                virrat.style.right = r.z + reuna;
+                virrat.style.top = rivi3;
+                korkeus = rivi3 + virtaKorkeus + 8f * yksikko;
+            }
             ylarivi.style.height = korkeus;
             palkki = korkeus - r.y;
             return true;
