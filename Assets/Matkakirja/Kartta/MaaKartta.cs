@@ -19,6 +19,13 @@ namespace Matkakirja
     /// rasteroidaan taustasäikeessä tasakulmaiseen tunnuskarttaan (parillisuussääntö,
     /// päivämääräraja kiertää), ja varjostin (Shaders/MaaTaytto) värittää sen paletista.
     /// Sävyn vaihto kirjoittaa vain 256×2-paletin, joten korostus on ilmainen.
+    ///
+    /// MAAKUNNAT (<see cref="maakohtainen"/>, kokoelma maakuntarajat, skeema 1.42: 138 maata, 2 546 aluetta): kerros on
+    /// maakohtainen kuten webissä (js/pallolauta/lauta.js:5098 maakunnat?.asetaMaa(linssiPaalla() ? null : korostusIso),
+    /// js/pallomaakunnat.js). Aineisto jäsennetään kerran taustasäikeessä maittain (<see cref="Maakuntajako"/>), ja kun
+    /// pelaajan maa vaihtuu (sama kuin väritasolla ja ääriviivalla: <see cref="Varitaso.Kohde"/>), tunnuskartta
+    /// rasteroidaan taustasäikeessä vain sen maan alueista maan omaan rajaukseen ja rajajanat rakennetaan vain maan
+    /// kaarista. Napautus, korostus ja <see cref="MaaPisteessa"/> koskevat nykyisen maan alueita.
     /// </summary>
     public class MaaKartta : MonoBehaviour, IMaaKartta
     {
@@ -39,8 +46,15 @@ namespace Matkakirja
         [Tooltip("Piirtojärjestys kuorten kesken (maakunnat maiden päälle).")]
         public int jonoLisa = 0;
         [Tooltip("Tunnuskartan rajaus (länsi, etelä, itä, pohjoinen) asteina; nollat = koko maailma. " +
-                 "Maakunnille Eurooppa: sama tekstuurimuisti, noin 9× tarkempi raja. Rajauksen ulkopuoliset alueet jätetään pois.")]
+                 "Rajauksen ulkopuoliset alueet jätetään pois. Ei käytössä maakohtaisessa kerroksessa (rajaus maasta).")]
         public Vector4 rajaus;
+        [Tooltip("Maakohtainen kerros (maakunnat, web js/pallomaakunnat.js asetaMaa): vain pelaajan maan alueet, " +
+                 "tunnuskartta maan omasta rajauksesta (Maakuntajako). Pois = koko kokoelma kerralla (maatila).")]
+        public bool maakohtainen;
+        [Tooltip("Maakohtaisen tunnuskartan tavoiteteksel asteina: 44°/4096 ≈ 1,2 km (sama kuin entinen Euroopan rajaus).")]
+        public double tekseliAste = 44.0 / 4096;
+        [Tooltip("Maakohtaisen tunnuskartan tekselibudjetti (R8 = tavua): suuri maa (RUS, CAN, USA) saa karkeamman tekselin.")]
+        public int tekseleitaEnintaan = 4096 * 4096;
         [Tooltip("Rajat vektoriviivoina (Shaders/Rajaviiva), tarkkuus ei riipu tunnuskartasta. null = rajat " +
                  "tunnuskartasta varjostimessa (maatila). Korostetun alueen raja piirtyy edelleen varjostimessa.")]
         public Material rajaMateriaali;
@@ -49,6 +63,10 @@ namespace Matkakirja
         public float rajatMinTiheys = (float)Vektorisolut.RajatTiheys;
 
         public event Action<string> MaaNapautettu;
+        /// <summary>Maakohtainen kerros: pakotettu maa (komento maakunta maa ISO3), null = pelaajan maa.</summary>
+        public string Pakotettu { get; set; }
+        /// <summary>Maakohtainen kerros: maa, jonka alueet ovat tunnuskartassa (null = ei maakuntia).</summary>
+        public string NykyinenMaa { get; private set; }
         public bool Paalla { get; private set; }
         public bool Valmis => tunnukset != null;
 
@@ -66,6 +84,13 @@ namespace Matkakirja
         // Vektorirajojen peiton kerroin 0–1 (Viivaleveys.AluerajaHaive) ja viimeksi luettu tiheys (px/°).
         float rajaHaive;
         float rajaTiheys;
+        // Maakohtainen kerros: aineisto maittain, käynnissä oleva rakennus, rakennetun rajauksen avain (maa#rypäs)
+        // ja tunnuskartan rajaus shaderille (länsi, pohjoinen, pituusväli, leveysväli).
+        Maakuntajako jako;
+        Coroutine rakennus;
+        string rakennettu;
+        float seuraavaTarkistus;
+        Vector4 alue = new Vector4(-180, 90, 360, 180);
 
         void Start()
         {
@@ -108,7 +133,7 @@ namespace Matkakirja
             PaivitaNakyvyys();
         }
 
-        bool NakyyNyt => Paalla && Valmis && !linssit;
+        bool NakyyNyt => Paalla && Valmis && !linssit && (!maakohtainen || indeksi.Count > 0);
 
         /// <summary>Kuori heti; vektorirajat häivytetään LateUpdatessa tiheyden mukaan (Viivaleveys.AluerajaHaive).</summary>
         void PaivitaNakyvyys()
@@ -182,6 +207,7 @@ namespace Matkakirja
             string teksti = null;
             yield return Sisalto.HaeTeksti(kokoelma, t => teksti = t, true);
             if (teksti == null) { Debug.LogWarning($"MATKAKIRJA maat: {kokoelma}.json puuttuu tästä paketista"); latausAlkanut = false; yield break; }
+            if (maakohtainen) { yield return LataaMaittain(teksti); yield break; }
             float alku = Time.realtimeSinceStartup;
             bool rajattu = rajaus.z > rajaus.x && rajaus.w > rajaus.y;
             double lon0 = rajattu ? rajaus.x : -180, lat1 = rajattu ? rajaus.w : 90;
@@ -242,6 +268,143 @@ namespace Matkakirja
             if (janat != null) TeeRajat(janat);
             Debug.Log($"MATKAKIRJA maat ({kokoelma}): {jarjestys.Count} aluetta, tunnuskartta {w}×{h}, " +
                       $"{janat?.Count ?? 0} rajajanaa, {(Time.realtimeSinceStartup - alku) * 1000f:0} ms");
+            PaivitaNakyvyys();
+        }
+
+        // ---- Maakohtainen kerros (maakunnat) ----
+
+        /// <summary>Jäsennys kerran taustasäikeessä maittain; ensimmäinen maa rakennetaan Updatessa.</summary>
+        IEnumerator LataaMaittain(string teksti)
+        {
+            Maakuntajako j = null;
+            long jasennys = 0, maittain = 0;
+            var tehtava = Task.Run(() =>
+            {
+                var kello = System.Diagnostics.Stopwatch.StartNew();
+                var juuri = Peli.MiniJson.Jasenna(teksti);
+                jasennys = kello.ElapsedMilliseconds;
+                kello.Restart();
+                j = Maakuntajako.Lue(juuri);
+                maittain = kello.ElapsedMilliseconds;
+            });
+            while (!tehtava.IsCompleted) yield return null;
+            if (tehtava.IsFaulted)
+            {
+                Debug.LogError("MATKAKIRJA maakunnat: jäsennys kaatui: " + tehtava.Exception?.GetBaseException());
+                latausAlkanut = false;
+                yield break;
+            }
+            jako = j;
+            Debug.Log($"MATKAKIRJA maakunnat ({kokoelma}): {j.Maat.Count} maata, {j.AlueitaYhteensa} aluetta, {j.Kaaria} kaarta " +
+                      $"({j.KohdistamattomatKaaret} ilman maata), jäsennys {jasennys} ms, maittain {maittain} ms");
+            if (j.AlueitaEnintaan > Maakuntajako.AluetaEnintaan)
+                Debug.LogWarning($"MATKAKIRJA maakunnat: {j.AlueitaEnintaanMaa} {j.AlueitaEnintaan} aluetta, tunnuskartassa enintään " +
+                                 $"{Maakuntajako.AluetaEnintaan} (loput jäävät pois)");
+            seuraavaTarkistus = 0f;
+        }
+
+        /// <summary>Pelaajan maa kuten ääriviivalla (Maaraja): väritason kohde, ilman väritasoa nostokerroksen maa.</summary>
+        string SeurattavaMaa()
+        {
+            if (!string.IsNullOrEmpty(Pakotettu)) return Pakotettu;
+            var vt = kerrokset != null ? kerrokset.varitaso : null;
+            if (vt != null) return vt.Kohde;
+            var nk = NostoKerros.Instanssi;
+            return nk != null && !string.IsNullOrEmpty(nk.NykyinenMaa) ? nk.NykyinenMaa : NykyinenMaa;
+        }
+
+        /// <summary>
+        /// Maakohtainen kerros seuraa pelaajan maata (web asetaMaa(korostusIso)) ja nappulan rypästä (Cayenne → Guyana,
+        /// Anchorage → Alaska). Vain näkyvissä: piilossa tai linssin aikana ei rakenneta, vaan palatessa.
+        /// </summary>
+        void Update()
+        {
+            if (!maakohtainen || jako == null || !Paalla || linssit || rakennus != null) return;
+            if (Time.unscaledTime < seuraavaTarkistus) return;
+            seuraavaTarkistus = Time.unscaledTime + 0.5f;
+            var nappula = kerrokset != null ? kerrokset.nappula : null;
+            if (nappula != null && nappula.Liikkeessa) return;
+            string maa = SeurattavaMaa();
+            double? lat = null, lon = null;
+            if (nappula != null && nappula.Nakyy && string.IsNullOrEmpty(Pakotettu)) { lat = nappula.Lat; lon = nappula.Lon; }
+            string avain = string.IsNullOrEmpty(maa) ? "" : maa + "#" + Maakuntajako.LahtoRypas(jako.Hae(maa), lat, lon);
+            if (avain == rakennettu) return;
+            rakennus = StartCoroutine(Rakenna(maa, lat, lon, avain));
+        }
+
+        /// <summary>Maan tunnuskartta ja rajajanat taustasäikeessä; pääsäikeessä vain tekstuurin ja verkon vaihto.</summary>
+        IEnumerator Rakenna(string maa, double? lat, double? lon, string avain)
+        {
+            float alku = Time.realtimeSinceStartup;
+            var j = jako;
+            double tavoite = tekseliAste, kork = korkeus;
+            long budjetti = Math.Max(1, tekseleitaEnintaan);
+            int sivu = Math.Min(8192, SystemInfo.maxTextureSize);
+            bool vektorirajat = rajaMateriaali != null;
+            Maakuntajako.Rajaus rj = null;
+            byte[] kartta = null;
+            List<(double3 a, double3 b)> janat = null;
+            var tehtava = Task.Run(() =>
+            {
+                rj = string.IsNullOrEmpty(maa) ? null : j.Rajaa(maa, lat, lon, tavoite, budjetti, sivu);
+                if (rj == null) return;
+                kartta = Maakuntajako.Rasteroi(rj);
+                if (!vektorirajat) return;
+                var asteet = j.Janat(rj);
+                janat = new List<(double3, double3)>(asteet.Count);
+                double3 E((double Lon, double Lat) p) =>
+                    CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(p.Lon, p.Lat, kork));
+                foreach (var (a, b) in asteet) janat.Add((E(a), E(b)));
+            });
+            while (!tehtava.IsCompleted) yield return null;
+            rakennus = null;
+            rakennettu = avain; // myös kaatuessa: ei uusintakierrettä samaan virheeseen
+            if (tehtava.IsFaulted)
+            {
+                Debug.LogError($"MATKAKIRJA maakunnat: {maa} rasterointi kaatui: " + tehtava.Exception?.GetBaseException());
+                yield break;
+            }
+            indeksi.Clear();
+            NykyinenMaa = rj != null ? maa : null;
+            if (rj == null)
+            {
+                osuma = null;
+                if (rajat != null) TeeRajat(new List<(double3, double3)>());
+                PaivitaPaletti();
+                PaivitaNakyvyys();
+                Debug.Log($"MATKAKIRJA maakunnat: {(string.IsNullOrEmpty(maa) ? "ei maata" : maa + ": ei maakuntia")}");
+                yield break;
+            }
+            for (int i = 0; i < rj.Alueet.Count; i++) indeksi[rj.Alueet[i].Id] = i + 1;
+            osuma = new MaaOsuma(rj.Alueet);
+            var vanha = tunnukset;
+            tunnukset = new Texture2D(rj.W, rj.H, TextureFormat.R8, false, true)
+            {
+                name = "Maakuntatunnukset " + maa, filterMode = FilterMode.Point,
+                wrapModeU = TextureWrapMode.Clamp, wrapModeV = TextureWrapMode.Clamp,
+            };
+            tunnukset.SetPixelData(kartta, 0);
+            tunnukset.Apply(false, true);
+            alue = new Vector4((float)rj.Lon0, (float)rj.Lat1, (float)rj.LonVali, (float)rj.LatVali);
+            if (paletti == null)
+                paletti = new Texture2D(256, 2, TextureFormat.RGBA32, false, false)
+                {
+                    name = "Maakuntapaletti", filterMode = FilterMode.Point, wrapMode = TextureWrapMode.Clamp,
+                };
+            if (kuori == null) TeeKuori();
+            else
+            {
+                kuori.sharedMaterial.SetTexture("_Tunnus", tunnukset);
+                kuori.sharedMaterial.SetVector("_Alue", alue);
+            }
+            if (vanha != null) Destroy(vanha);
+            if (janat != null) TeeRajat(janat);
+            PaivitaPaletti();
+            if (rj.AlueitaPois > 0)
+                Debug.LogWarning($"MATKAKIRJA maakunnat: {maa} yli {Maakuntajako.AluetaEnintaan} aluetta, {rj.AlueitaPois} jäi pois");
+            Debug.Log($"MATKAKIRJA maakunnat {maa}: {rj.Alueet.Count} aluetta, tunnuskartta {rj.W}×{rj.H} " +
+                      $"(teksel {rj.Teksel * 111.2:0.0} km, {rj.Lon0:0.#}…{rj.Lon0 + rj.LonVali:0.#}°), rypäitä {rj.Rypaita} " +
+                      $"(+{rj.RypaitaPois} pois), {janat?.Count ?? 0} rajajanaa, {(Time.realtimeSinceStartup - alku) * 1000f:0} ms");
             PaivitaNakyvyys();
         }
 
@@ -334,8 +497,8 @@ namespace Matkakirja
             // Raja 1 laitepikseli kuten webin polygonStrokeColor (ei Pistekerrointa).
             kuori.sharedMaterial.SetFloat("_ReunaLeveys", 0.5f);
             bool rj = rajaus.z > rajaus.x && rajaus.w > rajaus.y;
-            kuori.sharedMaterial.SetVector("_Alue", rj ? new Vector4(rajaus.x, rajaus.w, rajaus.z - rajaus.x, rajaus.w - rajaus.y)
-                                                       : new Vector4(-180, 90, 360, 180));
+            if (!maakohtainen && rj) alue = new Vector4(rajaus.x, rajaus.w, rajaus.z - rajaus.x, rajaus.w - rajaus.y);
+            kuori.sharedMaterial.SetVector("_Alue", alue);
             kuori.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             kuori.receiveShadows = false;
             kuori.enabled = false;
@@ -387,10 +550,13 @@ namespace Matkakirja
             return ulos;
         }
 
-        /// <summary>Janoista nauhaverkko Rajaviiva-varjostimelle: jokainen jana on oma nelikulmionsa.</summary>
+        /// <summary>
+        /// Janoista nauhaverkko Rajaviiva-varjostimelle: jokainen jana on oma nelikulmionsa. Maakohtaisessa kerroksessa
+        /// maan vaihto korvaa verkon (vanha tuhotaan).
+        /// </summary>
         void TeeRajat(List<(double3 a, double3 b)> janat)
         {
-            if (rajat != null || janat.Count == 0) return;
+            if (rajat == null && janat.Count == 0) return;
             int n = janat.Count;
             var paikat = new Vector3[n * 4];
             var toiset = new Vector3[n * 4];
@@ -416,6 +582,14 @@ namespace Matkakirja
             mesh.SetUVs(1, puolet);
             mesh.triangles = kolmiot;
             mesh.RecalculateBounds();
+            if (rajat != null)
+            {
+                var mf = rajat.GetComponent<MeshFilter>();
+                var vanha = mf.sharedMesh;
+                mf.sharedMesh = mesh;
+                if (vanha != null) Destroy(vanha);
+                return;
+            }
             var go = new GameObject("Aluerajat");
             go.transform.SetParent(georeferenssi.transform, false);
             go.AddComponent<MeshFilter>().sharedMesh = mesh;

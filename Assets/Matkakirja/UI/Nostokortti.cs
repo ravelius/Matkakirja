@@ -108,7 +108,7 @@ namespace Matkakirja.Natiivi
             kortti.RegisterCallback<PointerCaptureOutEvent>(_ => { raahaa = false; eleId = -1; kortti.RemoveFromClassList("mk-nosto--raahauksessa"); });
             kortti.RegisterCallback<ClickEvent>(NapautusKorttiin);
 
-            suurennos = new Kuvasuurennos(ui.Juuri(UiKerros.Valikot));
+            suurennos = new Kuvasuurennos(ui.Juuri(UiKerros.Valikot)) { Tayteen = true }; // löydös 102
         }
 
         /// <summary>Avaa kortin karttavalon id:llä (UiPalvelut.ValoNapautettu, testikomento) napautuspisteen viereen.</summary>
@@ -146,11 +146,14 @@ namespace Matkakirja.Natiivi
         /// </summary>
         System.Collections.IEnumerator AvaaReitti(string valoId, int v, Action<bool> jalkeen)
         {
+            // Verkko-odotus: kortti on piilossa, kunnes data on jäsennetty (löydös 104).
+            var odotus = VerkkoOdotus.Alku("nosto", valoId);
             Lisakaupunki lk = null;
             yield return NostoSisalto.HaeLisakaupunki(valoId, x => lk = x);
-            if (v != versio) yield break;
+            if (v != versio) { VerkkoOdotus.Loppu(odotus, "ohitettu"); yield break; }
             if (lk != null)
             {
+                VerkkoOdotus.Loppu(odotus, "lisakaupunki");
                 napit.Clear();
                 NaytaLisakaupunki(lk);
                 jalkeen?.Invoke(true);
@@ -158,6 +161,7 @@ namespace Matkakirja.Natiivi
             }
             Nosto n = null;
             yield return NostoSisalto.Hae(valoId, x => n = x);
+            VerkkoOdotus.Loppu(odotus, v != versio ? "ohitettu" : n == null ? "ei sisältöä" : null);
             if (v != versio) yield break;
             if (n == null) Debug.Log("MATKAKIRJA ui nostot: ei sisältöä valolle " + valoId);
             else Nayta(n);

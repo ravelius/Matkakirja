@@ -346,7 +346,12 @@ namespace Matkakirja.Natiivi
                 {
                     r.downloadHandler = new DownloadHandlerFile(valiaikainen) { removeFileOnAbort = true };
                     r.timeout = 60;
+                    // Verkko-odotus: ääni alkaa vasta latauksen jälkeen (välimuistista heti).
+                    var odotus = VerkkoOdotus.Alku(VerkkoOdotus.Vaihe, "puhe:" + Path.GetFileName(url.Split('?')[0]));
+                    float hakuAlku = Time.realtimeSinceStartup;
                     yield return r.SendWebRequest();
+                    VerkkoOdotus.Haku("puhe", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)r.downloadedBytes);
+                    VerkkoOdotus.Loppu(odotus, r.result == UnityWebRequest.Result.Success ? null : "virhe");
                     if (oma != tunnus) yield break;
                     if (r.result != UnityWebRequest.Result.Success)
                     {

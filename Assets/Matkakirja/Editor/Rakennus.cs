@@ -127,8 +127,9 @@ namespace Matkakirja.Editori
             maakunnat.piilotaKaupungit = false;
             maakunnat.jonoLisa = 1;
             maakunnat.toleranssi = 0.1;
-            // Maakunnat ovat Euroopassa (FRA DEU ITA ESP GBR POL AUT CHE): 44° × 26° → 4096 × 2420, noin 1,2 km/teksel.
-            maakunnat.rajaus = new Vector4(-12f, 35f, 32f, 61f);
+            // Skeema 1.42: maakunnat 138 maasta. Maakohtainen kuten webin asetaMaa (lauta.js:5098): vain pelaajan maan
+            // alueet, tunnuskartta maan omasta rajauksesta (Maakuntajako), teksel noin 1,2 km (suurilla mailla karkeampi).
+            maakunnat.maakohtainen = true;
             // Rajat vektoriviivoina (Fable 24.9.): täyttö 1,2 km:n tunnuskartasta, rajan tarkkuus aineistosta.
             maakunnat.rajaMateriaali = Materiaali("Rajaviiva", "Matkakirja/Rajaviiva", new Color(0.23f, 0.18f, 0.13f, 0.8f));
             kerrokset.maakunnat = maakunnat;

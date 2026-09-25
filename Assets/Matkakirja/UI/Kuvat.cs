@@ -302,7 +302,9 @@ namespace Matkakirja.Natiivi
             {
                 using var p = UnityWebRequestTexture.GetTexture(reitit[i], true);
                 p.timeout = 20;
+                float hakuAlku = Time.realtimeSinceStartup;
                 yield return p.SendWebRequest();
+                VerkkoOdotus.Haku("kuva", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)p.downloadedBytes);
                 if (p.result != UnityWebRequest.Result.Success) continue;
                 tulos = Nimea(DownloadHandlerTexture.GetContent(p), avain);
                 if (tulos == null) continue;
@@ -360,7 +362,9 @@ namespace Matkakirja.Natiivi
             {
                 using var p = UnityWebRequest.Get(reitit[i]);
                 p.timeout = 20;
+                float hakuAlku = Time.realtimeSinceStartup;
                 yield return p.SendWebRequest();
+                VerkkoOdotus.Haku("kuva", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)p.downloadedBytes);
                 if (p.result == UnityWebRequest.Result.Success) { tavut = p.downloadHandler.data; verkosta = true; }
             }
             if (tavut == null || tavut.Length < 16) { valmis(null); yield break; }

@@ -29,6 +29,18 @@ namespace Matkakirja.Natiivi
             // on versiosta riippumaton, joten osoittimen vaihtuminen ei riko laitekokeita.
             string koe = Path.Combine(Application.persistentDataPath, "sisalto-koe", polku.Replace('/', Path.DirectorySeparatorChar));
             if (File.Exists(koe)) { valmis(File.ReadAllText(koe)); yield break; }
+            // Verkko-odotus vain, kun linssi on auki (pelaaja odottaa aineistoa); käynnistyksen taustarekisteröinti
+            // (esim. LataaAstronautti) kirjautuu vain hakuna.
+            if (LinssiOhjain.Rekisteri?.Auki == null) { yield return HaeSisalto(polku, valmis); yield break; }
+            var odotus = VerkkoOdotus.Alku("linssi", polku);
+            string saatu = null;
+            yield return HaeSisalto(polku, t => saatu = t);
+            VerkkoOdotus.Loppu(odotus, saatu == null ? "ei saatu" : null);
+            valmis(saatu);
+        }
+
+        static IEnumerator HaeSisalto(string polku, Action<string> valmis)
+        {
             while (haussa) yield return null;
             if (versioPolku == null)
             {
@@ -53,7 +65,9 @@ namespace Matkakirja.Natiivi
             if (File.Exists(tiedosto)) { valmis(File.ReadAllText(tiedosto)); yield break; }
             using var k = UnityWebRequest.Get(Sisalto.Juuri + koko);
             k.timeout = 20;
+            float hakuAlku = Time.realtimeSinceStartup;
             yield return k.SendWebRequest();
+            VerkkoOdotus.Haku("linssi", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)k.downloadedBytes);
             if (k.result != UnityWebRequest.Result.Success)
             {
                 Debug.LogWarning($"MATKAKIRJA linssit: {koko} epäonnistui: {k.error}");

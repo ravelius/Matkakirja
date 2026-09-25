@@ -26,8 +26,9 @@ namespace Matkakirja
     /// </summary>
     public class Varitaso : MonoBehaviour
     {
-        /// <summary>Karttasepän kermasarja 23a-pohjasta, peitto 0,80 (löydös 22).</summary>
-        public const string Versio = "2026-09-23a-p080";
+        /// <summary>Karttasepän kermasarja pohjasta, peitto 0,80 (löydös 22).</summary>
+        // 25.9.: sarja pohjasta 2026-09-25-pohja-20260925 (build 14:n pohja; 23a-sarjan maski ei osunut uuteen rantaan).
+        public const string Versio = "2026-09-25-p080";
         public const string Kansio = "julisteet/pallo/kerma/" + Versio + "/";
         /// <summary>Alin huntutaso: sitä kauempana ei huntua (web kermaPaalla 0 maailmanäkymässä).</summary>
         public const int AlinTaso = 5;

@@ -91,6 +91,7 @@ namespace Matkakirja
                 if (pallo != null && Time.frameCount > 10 && pallo.ComputeLoadProgress() >= Valmis) break;
                 yield return null;
             }
+            VerkkoOdotus.Kirjaa("kaynnistys", "aloitusverho", (Time.realtimeSinceStartup - alku) * 1000.0);
             Debug.Log($"MATKAKIRJA aloitusverho: pois {Time.realtimeSinceStartup - alku:0.0} s " +
                       $"(pallo {(pallo != null ? pallo.ComputeLoadProgress().ToString("0") : "-")} %)");
             for (float t = 0; t < Haivytys; t += Time.unscaledDeltaTime)

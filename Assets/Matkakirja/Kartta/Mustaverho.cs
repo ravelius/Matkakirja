@@ -15,6 +15,9 @@ namespace Matkakirja
         /// <summary>Häivytys mustaan ja takaisin (s), pehmeä ease in/out (KAMERA-AJOT).</summary>
         public const float Haivytys = 0.5f;
 
+        /// <summary>Natiivi-UI:n UiKerros.Traileri (Aloitusnakyma ja Ohita-nappi); Kartta ei näe UI-kokoonpanoa.</summary>
+        const int OhitaKerros = 45;
+
         static Mustaverho instanssi;
         CanvasGroup ryhma;
         Coroutine ajo;
@@ -35,7 +38,10 @@ namespace Matkakirja
         {
             var canvas = gameObject.AddComponent<Canvas>();
             canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-            canvas.sortingOrder = short.MaxValue - 1;
+            // Fablen päätös 25.9.: Ohita-nappi (Natiivi-UI:n Aloitusnakyma, UITK-kerros UiKerros.Traileri = 45) näkyy
+            // ja toimii myös mustan aikana → verho juuri sen alle (UGUI- ja UITK-overlayt lajitellaan yhdessä).
+            // Muut UI-kerrokset (≤ 40) jäävät verhon alle.
+            canvas.sortingOrder = OhitaKerros - 1;
             ryhma = gameObject.AddComponent<CanvasGroup>();
             ryhma.alpha = 0f;
             ryhma.blocksRaycasts = false;

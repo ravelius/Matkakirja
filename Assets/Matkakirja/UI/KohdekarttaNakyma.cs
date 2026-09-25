@@ -112,7 +112,7 @@ namespace Matkakirja.Natiivi
                 var tyokalut = Rakenne.El("mk-kohdekartta__tyokalut", this, PickingMode.Ignore);
                 var nappi = Rakenne.Nappi("KOKORUUTU", "mk-kohdekartta__kokoruutu", () => KokoruutuPyydetty?.Invoke(), tyokalut, Kokoruutuikoni);
                 nappi.tooltip = "Avaa kartta kokoruudulle";
-                Kirjasimet.Aseta(nappi, Kirjasin.Kone);
+                Kirjasimet.Aseta(nappi, Kirjasin.KoneLihava); // web-kuva 94a: lihava versaali
             }
 
             kehys = Rakenne.El("mk-kohdekartta__kehys", this);
@@ -743,7 +743,9 @@ namespace Matkakirja.Natiivi
             r.Tausta.style.paddingTop = reunat.y;
             r.Tausta.style.paddingRight = reunat.z;
             r.Tausta.style.paddingBottom = reunat.w;
-            r.Tausta.RegisterCallback<PointerDownEvent>(e => { if (e.target == r.Tausta) Sulje(); });
+            // Löydös 94: pohjan napautus ei sulje (web .kartta-suurennos: vain rasti, omistaja 21.8.2026), mutta se ei
+            // myöskään valu alla olevaan nähtävyysarkkiin.
+            r.Tausta.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
 
             r.Kortti = Rakenne.El("mk-kohdekartta-kokoruutu__kortti", r.Tausta);
             r.Nakyma = new KohdekarttaNakyma(k, kokoruutu: true);
@@ -757,6 +759,7 @@ namespace Matkakirja.Natiivi
 
             var sulku = Rakenne.Nappi("×", "mk-kohdekartta-kokoruutu__sulku", Sulje, r.Kortti);
             sulku.tooltip = "Sulje suurennettu kartta";
+            Kirjasimet.Aseta(sulku, Kirjasin.KoneLihava);
 
             if (k.Kohteet.Count > 0)
             {
@@ -765,6 +768,11 @@ namespace Matkakirja.Natiivi
                 r.Selitteet.verticalScrollerVisibility = ScrollerVisibility.Hidden;
                 r.Selitteet.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
                 r.Kortti.Add(r.Selitteet);
+                // Web .kartta-selitteet: rivitetty keskitetty luettelo (ScrollViewin sisältö on muuten sarake).
+                var sisalto = r.Selitteet.contentContainer;
+                sisalto.style.flexDirection = FlexDirection.Row;
+                sisalto.style.flexWrap = Wrap.Wrap;
+                sisalto.style.justifyContent = Justify.Center;
                 foreach (var kohde in k.Kohteet)
                 {
                     VisualElement rivi;
@@ -774,7 +782,8 @@ namespace Matkakirja.Natiivi
                         rivi = Rakenne.Nappi(kohde.Nimi, "mk-kohdekartta-kokoruutu__selite mk-kohdekartta-kokoruutu__selite--nappi", () => Avaa(kk), r.Selitteet.contentContainer);
                     }
                     else rivi = Rakenne.Teksti(kohde.Nimi, "mk-kohdekartta-kokoruutu__selite", r.Selitteet.contentContainer);
-                    Kirjasimet.Aseta(rivi, Kirjasin.Kone);
+                    // Web-kuva (b13o/web/94b): kohdenimet lihavina (.dialog button).
+                    Kirjasimet.Aseta(rivi, Kirjasin.KoneLihava);
                 }
             }
             if (!string.IsNullOrEmpty(k.Lahde))
