@@ -173,6 +173,8 @@ namespace Matkakirja
             if (aktiiviset.Count > 0) Siivoa();
             if (jono.Count == 0) return;
             bool laatatKiireessa = Laattapalvelin.Kiireinen;
+            // Lämpö (Raamattu LÄMPÖ JA VIRRANKULUTUS kohta 2): kuumana tai virransäästössä tasot 4–5 seis.
+            bool kuuma = Lampo.Kuuma;
             // Yksi paikka jää aina näkyvälle (Rinnakkain - 1 taustalle).
             while (kaynnissa < Rinnakkain - 1)
             {
@@ -181,6 +183,7 @@ namespace Matkakirja
                 {
                     var o = jono[i];
                     if (laatatKiireessa && o.Taso >= Taso.TamaKaupunki) continue;
+                    if (kuuma && o.Taso >= Taso.Kohdekaupungit) continue;
                     if (paras < 0 || o.Taso < jono[paras].Taso || (o.Taso == jono[paras].Taso && o.Nro < jono[paras].Nro)) paras = i;
                 }
                 if (paras < 0) break;

@@ -91,6 +91,14 @@ namespace Matkakirja
     ///   mastot yovalot <voimakkuus> [suodatettu|raaka]   yövalojen voimakkuus (oletus 0,85) ja painon lähde heti
     ///                             (suodatettu = poltossa leivottu w, varjostin käyttää luminanssia; RadioMastot.PaivitaYovalot)
     ///   hamara <0–1>              radion hämärä suoraan (tileset, napakannet, mastot, tausta)
+    ///   valokeila lat lon sadeKm [pehmeys] [hamaryys] [kesto]   valokeila kohtaan, muu pallo hämärä (KarttaKerrokset.Valokeila;
+    ///                             oletus pehmeys 0,35, hämäryys 0,6, kesto 1,2 s); päällä olevana liukuu isoympyrää pitkin
+    ///   valokeila toinen lat lon sadeKm [voimakkuus] [kesto] | valokeila toinen pois [kesto]   toinen keila (oletus 0,6)
+    ///   valokeila vari <K> [osuus] [kirkkaus] [kesto]   molempien keilojen värilämpötila (osuus 0–1 valkoisen päällä,
+    ///                             oletus 3200 K × 0,5) ja keskustan lisäkirkkaus 0–0,3 (oletus 0,12)
+    ///   valokeila pois [kesto] | valokeila tila   keilat pois (oletus 1,2 s) / tila lokiin
+    ///   linssisiirto dx dy [kesto] | linssisiirto pois [kesto]   katsekohde ruudulla dx oikealle, dy ylös ruudun osuuksina
+    ///                             (KarttaKerrokset.Linssisiirto; oletus kesto 0,8 s)
     ///   s2meri r g b kynnys       Sentinelin meren värjäys heti (sRGB 0–1 tai 0–255; kynnys = sRGB-luma, 0 = pois;
     ///                             oletus 17 46 92 0.18)
     /// </summary>
@@ -297,6 +305,52 @@ namespace Matkakirja
             var sb = new StringBuilder($"MATKAKIRJA suodatus: {nahdyt.Count} tekstuuria, quality aniso {QualitySettings.anisotropicFiltering}");
             foreach (var p in ryhmat) sb.Append("\n  ").Append(p.Value).Append(" × ").Append(p.Key);
             Debug.Log(sb.ToString());
+        }
+
+        /// <summary>
+        /// valokeila lat lon sadeKm [pehmeys] [hamaryys] [kesto] | toinen lat lon sadeKm [voimakkuus] [kesto] | toinen pois [kesto]
+        /// | vari K [osuus] [kirkkaus] [kesto] | pois [kesto] | tila (KarttaKerrokset.Valokeila, Ihmisen matka II).
+        /// </summary>
+        static void Valokeila(string[] o, System.Func<int, double> D)
+        {
+            float F(int i, float oletus) => o.Length > i ? (float)D(i) : oletus;
+            const float Kesto = 1.2f;
+            var paa = KarttaKerrokset.PaaKeila;
+            switch (o[1])
+            {
+                case "pois":
+                    KarttaKerrokset.ValokeilaPois(F(2, Kesto));
+                    break;
+                case "tila":
+                    break;
+                case "toinen" when o.Length > 2 && o[2] == "pois":
+                    if (paa.HasValue) KarttaKerrokset.Valokeila(paa.Value, null, KarttaKerrokset.KeilanHamaryys, F(3, Kesto));
+                    break;
+                case "toinen" when o.Length > 4:
+                {
+                    if (!paa.HasValue) { Debug.LogWarning("MATKAKIRJA valokeila: toinen vaatii pääkeilan"); break; }
+                    var p = paa.Value;
+                    var t = new KarttaKerrokset.Keila(D(2), D(3), (float)D(4), p.pehmeys, p.vari, p.kirkkaus, F(5, 0.6f));
+                    KarttaKerrokset.Valokeila(p, t, KarttaKerrokset.KeilanHamaryys, F(6, Kesto));
+                    break;
+                }
+                case "vari" when o.Length > 2:
+                {
+                    if (!paa.HasValue) { Debug.LogWarning("MATKAKIRJA valokeila: vari vaatii pääkeilan"); break; }
+                    var vari = KarttaKerrokset.KelvinVari((float)D(2), F(3, KarttaKerrokset.LyhdynSavy));
+                    float kirkkaus = F(4, paa.Value.kirkkaus);
+                    var p = paa.Value; p.vari = vari; p.kirkkaus = kirkkaus;
+                    KarttaKerrokset.Keila? t = KarttaKerrokset.ToinenKeila;
+                    if (t.HasValue) { var tt = t.Value; tt.vari = vari; tt.kirkkaus = kirkkaus; t = tt; }
+                    KarttaKerrokset.Valokeila(p, t, KarttaKerrokset.KeilanHamaryys, F(5, Kesto));
+                    break;
+                }
+                default:
+                    if (o.Length < 4) { Debug.LogWarning("MATKAKIRJA valokeila: lat lon sadeKm puuttuu"); break; }
+                    KarttaKerrokset.Valokeila(D(1), D(2), (float)D(3), F(4, 0.35f), F(5, 0.6f), F(6, Kesto));
+                    break;
+            }
+            Debug.Log("MATKAKIRJA valokeila: " + KarttaKerrokset.ValokeilaKuvaus());
         }
 
         void Aja(string rivi)
@@ -732,6 +786,14 @@ namespace Matkakirja
                 }
                 case "hamara":
                     RadioMastot.Instanssi?.Hamara((float)D(1));
+                    break;
+                case "valokeila" when o.Length > 1:
+                    Valokeila(o, D);
+                    break;
+                case "linssisiirto" when o.Length > 1:
+                    if (o[1] == "pois") KarttaKerrokset.LinssisiirtoPois(o.Length > 2 ? (float)D(2) : 0.8f);
+                    else KarttaKerrokset.Linssisiirto((float)D(1), o.Length > 2 ? (float)D(2) : 0f, o.Length > 3 ? (float)D(3) : 0.8f);
+                    Debug.Log($"MATKAKIRJA linssisiirto: tavoite {o[1]} {(o.Length > 2 ? o[2] : "")}, nyt {PalloKierto.LinssisiirtoNyt}");
                     break;
                 case "odota":
                     odotus = Time.unscaledTime + (float)D(1);

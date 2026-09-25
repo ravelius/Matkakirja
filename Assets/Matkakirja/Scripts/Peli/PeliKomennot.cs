@@ -34,6 +34,8 @@
 //   aani mittaa [s]           todellinen lähtötaso s sekuntia (AudioListener.GetOutputData: rms, huippu), soivat
 //                             lähteet ja iOS:n ääni-istunto (luokka, voimakkuus, reitti) peli-lokiin (löydös 49)
 //   tila [nimi]               kirjoittaa Documents/peli-tila.json (tai peli-tila-nimi.json)
+//   ruutu                     ruudunpäivityksen tila (täysi/lepo/paikallaan, fps, piirtoväli, lämpö, kamera)
+//   lampo normaali|kuuma|kriittinen|auto  pakottaa lämpötason (Lampo.Pakotettu)
 //   verkko [nollaa]           verkko-odotusmittarin yhteenveto (Documents/verkko-yhteenveto.json; rivit verkko-odotus.jsonl)
 //   odota s                   seuraava rivi s sekunnin päästä
 //   odota-tila tila [max s]   odottaa silmukan tilaa (Kartta, Dialogi, Matkalla, Lehti, Kysymys), oletus 20 s
@@ -261,6 +263,23 @@ namespace Matkakirja.Natiivi
                 case "odota":
                     odotus = Time.unscaledTime + Luku(A(1), 1f);
                     return null;
+                case "ruutu":
+                    // Dynaaminen ruudunpäivitys ja lämpö (Kartta/Ruudunpaivitys.cs, lämpöerä 25.9.2026).
+                    return Ruudunpaivitys.Instanssi != null ? Ruudunpaivitys.Instanssi.Kuvaus() : "ei ruudunpäivitystä";
+                case "lampo":
+                {
+                    // lampo normaali|kuuma|kriittinen|auto: pakottaa lämpötason (simulaattorissa thermalState on aina 0).
+                    switch (A(1))
+                    {
+                        case "normaali": Lampo.Pakotettu = Lampotaso.Normaali; break;
+                        case "kuuma": Lampo.Pakotettu = Lampotaso.Kuuma; break;
+                        case "kriittinen": Lampo.Pakotettu = Lampotaso.Kriittinen; break;
+                        case "auto": Lampo.Pakotettu = null; break;
+                        default: return "käyttö: lampo normaali|kuuma|kriittinen|auto";
+                    }
+                    Lampo.Paivita(true);
+                    return "lämpö " + Lampo.Taso;
+                }
                 case "verkko":
                     // Verkko-odotusmittari (Kartta/VerkkoOdotus.cs): yhteenveto → verkko-yhteenveto.json; nollaa = summat pois.
                     if (A(1) == "nollaa") { VerkkoOdotus.NollaaSummat(); return null; }

@@ -332,7 +332,7 @@ namespace Matkakirja.Natiivi
                 var o = PeliOhjain.Instanssi;
                 if (o == null) { Tilarivi.Viesti("Peli ei ole vielä käynnissä"); return; }
                 SuljeKaikki();
-                PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka");
+                PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka"); PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka-2");
                 Aloitus.Nayta(id => Aloita(o, id), o.Lahtokaupungit(), null);
             };
 
@@ -465,7 +465,7 @@ namespace Matkakirja.Natiivi
         {
             SuljeKaikki();
             // Uusi peli unohtaa linssin muistin (web: linssimuisti kuuluu matkaan).
-            PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka");
+            PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka"); PlayerPrefs.DeleteKey(global::Matkakirja.Linssit.Aikajana.LinssiMuisti.Etuliite + "ihmisen-matka-2");
             Aloitus.NaytaAvaus(id => Aloita(o, id), o.Lahtokaupungit());
         }
 
