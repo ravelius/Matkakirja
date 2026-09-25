@@ -321,6 +321,8 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Pilleri ja napit saaren riville (ks. SAARIRIVI yllä); paneelin yksiköt muunnetaan ruudun pisteistä.</summary>
+        string viimeSaariLoki;
+
         bool AsetaSaaririvi(Vector4 r, bool matala = false)
         {
             var paneeli = palkki.panel;
@@ -338,6 +340,8 @@ namespace Matkakirja.Natiivi
             float saarenKorkeus = saari.height > 0 ? Mathf.Abs(alakulma.y - ylakulma.y) : 0f;
             if (matala && saarenKorkeus > 20f * yksikko) rivi = saarenKorkeus;
             float napinKorkeus = matala ? rivi : float.NaN;
+            string loki = $"matala {matala}, saari {saari}, saaren korkeus {saarenKorkeus:0.#}, rivi {rivi:0.#}, yksikkö {yksikko:0.###}";
+            if (loki != viimeSaariLoki) { viimeSaariLoki = loki; Debug.Log("MATKAKIRJA ylapalkki saaririvi: " + loki); }
             foreach (var e in new VisualElement[] { pilleri, Valikko })
             {
                 e.style.height = float.IsNaN(napinKorkeus) ? StyleKeyword.Null : new StyleLength(napinKorkeus);
