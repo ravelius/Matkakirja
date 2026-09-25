@@ -24,7 +24,7 @@ namespace Matkakirja
     /// valaisematon vakioväri; fragmentteja varjostetaan vain reikien kohdalla. Arvio alle 0,1 ms/kehys laitteella;
     /// ei omaa päivitystä (LateUpdate vain vertaa tiloja), joten lepotilan kehystahtiin ja lämpöön ei vaikutusta.
     ///
-    /// SÄVY (Pohjapallolaskenta.Savy): pergamentti #d9d0bb (varalaatan väri); satelliittilennolla Blue Marblen avomeri;
+    /// SÄVY (Pohjapallolaskenta.Savy): pergamentti #e5d0a7 (renderöidyn pallon mediaani); satelliittilennolla Blue Marblen avomeri;
     /// linssin reliefin aikana (pergamenttipohja piilossa: topografia, radio, astronautti, Isoisä) reliefin meri. Pallon
     /// sävy (_pallonTummuus), valokeila (_keila*), radion hämärä (_radioHamara) ja usva (Unityn lineaarinen sumu)
     /// vaikuttavat kuten laattoihin. Magentamittauksessa (PalloReiat) piilossa, ellei tila ole Paalle.

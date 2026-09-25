@@ -140,14 +140,18 @@ namespace Matkakirja
         // katosi samasta näkymästä minuutin päästä (b-rajatpois-alpit.png: pinnan sisällä 0 magentapikseliä). Lähempi
         // laatta oli siis emo, joka pysyy (forbidHoles), kunnes kaikki sen lapset ovat ladattuja: saumassa hyppäsi
         // kaksi tai useampi taso. cesium-native (QuantizedMeshLoader) ripustaa laatan reunaan helman, jonka korkeus on
-        // 5 × tason geometrinen virhe (HelmanKorkeus; z9 752 m), mutta karkean tason reuna on DEM:n overview-tasosta
-        // (z7: näyteväli 2,4 km) ja voi jyrkässä maastossa olla sitä enemmän hienon reunan alla.
+        // CesiumJS:n säännöllä 5 × tason geometrinen virhe (HelmanKorkeus; z9 752 m; cesium-nativen lähdettä ei ole
+        // tällä koneella, joten kerroin on CesiumJS:n), mutta karkean tason reuna on DEM:n overview-tasosta (z7:
+        // näyteväli 2,4 km) ja voi jyrkässä maastossa olla sitä enemmän hienon reunan alla.
         // Korkeuskerroin ei avaa eikä sulje rakoja: varjostimen korotus H(h) = h (h ≤ 0) tai k·h (h > 0) on aidosti
         // kasvava, joten reunojen ja helmojen järjestys säilyy (HelmaPeittaa); rako vain kasvaa ruudulla k-kertaiseksi.
         // Korjaus vaatisi pidemmät helmat (cesium-native, ei säädettävissä Cesium for Unity 1.25:ssä) tai maastopolton,
         // jossa karkean tason reuna ei jää hienon alle — molemmat isoja, joten raot peittää pohjapallo (Pohjapallo.cs).
 
-        /// <summary>Helman korkeus tasolla z (m): cesium-native 5 × 77 067 m / 2^z (CesiumJS:n tasovirhe, ei 8×-kerrointa).</summary>
+        /// <summary>
+        /// Helman korkeus tasolla z (m): 5 × 77 067 m / 2^z (CesiumJS:n sääntö tasovirheestä ilman cesium-nativen
+        /// valintaa varten käyttämää 8×-kerrointa; oletus, että cesium-native ripustaa helman samoin).
+        /// </summary>
         public static double HelmanKorkeus(int taso) => 5.0 * Pohjapallolaskenta.Taso0Virhe / Math.Pow(2.0, taso);
 
         /// <summary>Varjostimen korotus (tee_tileset.py): h + max(h, 0)·(k − 1) eli h meren alla, k·h maalla.</summary>

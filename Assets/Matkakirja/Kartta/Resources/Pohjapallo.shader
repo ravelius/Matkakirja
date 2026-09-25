@@ -17,7 +17,7 @@ Shader "Matkakirja/Pohjapallo"
 {
     Properties
     {
-        _BaseColor("Väri", Color) = (0.851, 0.816, 0.733, 1)
+        _BaseColor("Väri", Color) = (0.898, 0.816, 0.655, 1)
         _Sade("Etupinnan säde (maailman yksiköissä)", Float) = 6375137
     }
     SubShader

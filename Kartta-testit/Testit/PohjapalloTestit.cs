@@ -124,7 +124,7 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Sama(Pohjapallolaskenta.Pinta.Satelliitti, Pohjapallolaskenta.Valitse(true, true), "satelliittilento");
             Oleta.Sama(Pohjapallolaskenta.Pinta.Satelliitti, Pohjapallolaskenta.Valitse(true, false), "lento voittaa");
             Oleta.Sama(Pohjapallolaskenta.Pinta.Reliefi, Pohjapallolaskenta.Valitse(false, false), "linssin reliefi");
-            Oleta.Tosi(Pohjapallolaskenta.Savy(Pohjapallolaskenta.Pinta.Pergamentti) == (0xd9, 0xd0, 0xbb), "varalaatan pergamentti");
+            Oleta.Tosi(Pohjapallolaskenta.Savy(Pohjapallolaskenta.Pinta.Pergamentti) == (0xe5, 0xd0, 0xa7), "renderöidyn pergamentin mediaani");
             Oleta.Tosi(Pohjapallolaskenta.Savy(Pohjapallolaskenta.Pinta.Satelliitti) == (17, 46, 92), "S2MeriVari");
             Oleta.Tosi(Pohjapallolaskenta.Savy(Pohjapallolaskenta.Pinta.Reliefi) == (38, 78, 145), "ReliefiPohjoinen");
         }

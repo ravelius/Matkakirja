@@ -27,7 +27,7 @@ namespace Matkakirja
     /// erottaa ~1e-7 × etäisyys eli ~1,3 m 13 000 km:ssä). Syvyys vaikuttaa vain siluettiin: reiän läpi katsova säde
     /// osuu pohjapalloon, jos se painuu maan alle yli 3 km (verkon oma jänne ≤ <see cref="SuurinPainuma"/> lisää tähän
     /// alle 2 km tasolla 5). Matalalla horisontin lähellä säde ei ehdi syvälle: horisontin alla on kapea kaista
-    /// (150 m:n korkeudelta noin 1,4°), jonka reiät näyttävät yhä taustan (usvan).
+    /// (150 m:n korkeudelta noin 1,4–1,8° verkon jänteestä riippuen), jonka reiät näyttävät yhä taustan (usvan).
     /// </summary>
     public static class Pohjapallolaskenta
     {
@@ -134,17 +134,20 @@ namespace Matkakirja
             satelliittiLento ? Pinta.Satelliitti : pohjaNakyy ? Pinta.Pergamentti : Pinta.Reliefi;
 
         /// <summary>
-        /// Pinnan sävy (sRGB-tavuina): pergamentti = Laattapalvelimen varalaatan väri #d9d0bb ("pergamentti, meren ja maan
-        /// välissä": pohjan meri #c8c0b0 ja maa #e4c890 mitattu 2026-09-25-pohja-laatoista z4–z6); satelliitti = Blue
-        /// Marble -bathyn avomeren keskiarvo (KarttaKerrokset.S2MeriVari 17, 46, 92); reliefi = reliefisarjan avomeri
-        /// (web MERIVARI, NapaKannet.ReliefiPohjoinen 38, 78, 145). Maata ei tavoitella: reiät ovat pieniä, ja
-        /// pinnan valtasävy erottuu niissä vähiten. Tummennukset (pallon sävy, valokeila, radion hämärä) ja usva lisää
-        /// varjostin samoilla globaaleilla kuin laatoille.
+        /// Pinnan sävy (sRGB-tavuina). Varjostin on valaisematon, joten sävy on se, miltä pinta NÄYTTÄÄ, ei laatan
+        /// tekstuurin väri. Pergamentti #e5d0a7 = renderöidyn pallon mediaani koe2:n viidestä näkymästä (25.9.2026,
+        /// iPhone-simulaattori: Alpit, vuonot, Kreikka, Himalaja, kaukaa; pohja, väritason kerma, valo ja usva mukana;
+        /// Reitit-kommentin mittaus pergamentilla #e6d7b4…#efdcb4 on samaa luokkaa). Pohjan tekstuurissa meri on #c8c0b0
+        /// ja maa #e4c890 (2026-09-25-pohja z4–z6); ensin kokeiltu varalaatan väri #d9d0bb näkyi raoissa harmaana
+        /// (koe2 reika-kaukaa-lahi.jpg). Satelliitti = Blue Marble -bathyn avomeren keskiarvo (KarttaKerrokset.S2MeriVari
+        /// 17, 46, 92); reliefi = reliefisarjan avomeri (web MERIVARI, NapaKannet.ReliefiPohjoinen 38, 78, 145). Maata ei
+        /// tavoitella erikseen: reiät ovat pieniä, ja pinnan valtasävy erottuu niissä vähiten. Tummennukset (pallon sävy,
+        /// valokeila, radion hämärä) ja usva lisää varjostin samoilla globaaleilla kuin laatoille.
         /// </summary>
         public static (byte r, byte g, byte b) Savy(Pinta pinta) =>
             pinta == Pinta.Satelliitti ? ((byte)17, (byte)46, (byte)92)
             : pinta == Pinta.Reliefi ? ((byte)38, (byte)78, (byte)145)
-            : ((byte)0xd9, (byte)0xd0, (byte)0xbb);
+            : ((byte)0xe5, (byte)0xd0, (byte)0xa7);
 
         // ---- Vektorit ----
 
