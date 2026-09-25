@@ -52,7 +52,11 @@ namespace Matkakirja.Natiivi
     public sealed class Ylapalkki : ITilarivi
     {
         /// <summary>Webin .topbar-korkeus: puhelimella 57, muuten 61 (mitattu 393 × 852 ja 834 × 1194).</summary>
-        public static float Korkeus => Puhelin ? 57f : 61f;
+        /// <summary>
+        /// Palkin korkeus turva-alueen alla. iPad 61 → 65 (löydös 78, omistaja 25.9. klo 09.4x: "hieman korkeampi";
+        /// hyväksytty poikkeama webin 60 pt:stä, Fable). iPhonen matala palkki: MatalaLisa.
+        /// </summary>
+        public static float Korkeus => Puhelin ? 57f : 65f;
         /// <summary>Webin .topbar-täyte (pysty, vaaka).</summary>
         static Vector2 Tayte => Puhelin ? new Vector2(4.8f, 7.2f) : new Vector2(7.2f, 12.8f);
 
