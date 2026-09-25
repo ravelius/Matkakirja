@@ -20,7 +20,8 @@
 // "kamera <lat> <lon> <korkeus km>" (hyppy kuvakaappausta varten), "tila" ja
 // "kyllaisyys 0.8|1" (astronautin reliefi) ja "kehittaja 0|1" (kaikki linssit auki);
 // radiolle "radio <ISO3> | kaupunki <id> | taajuus <0–1> | aani <0–1> | tauko 0|1 | stop | tila" (aani 0 = testit ilman ääntä, soi-tila näkyy silti);
-// kylläisyys ja kehittäjätila muistetaan PlayerPrefsissä; isoisän linssille 1873 "isoisa tila".
+// kylläisyys ja kehittäjätila muistetaan PlayerPrefsissä; isoisän linssille 1873 "isoisa tila"; elävän kartan videolle
+// "elava kreikka [alku s] [nopeus] | kuva <s> | jatka | pois | tila" (ElavaKartta).
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
 using System.Collections.Generic;
@@ -1139,6 +1140,8 @@ namespace Matkakirja.Natiivi
                     rekisteri.Sulje();
                 else if (osat[0] == "linssi" && osat.Length > 1)
                     rekisteri.Valitse(osat[1]);
+                else if (osat[0] == "elava")
+                    ElavaKartta.Komento(osat, this);
                 else if (osat[0] == "keksinnot" && osat.Length > 1)
                     Keksinnot(osat[1]);
                 else if (osat[0] == "esitys" && osat.Length > 1)
