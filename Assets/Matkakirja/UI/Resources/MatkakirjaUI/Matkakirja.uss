@@ -2932,7 +2932,7 @@
     margin: 2.4px 0 0 0;
     font-size: 13.3px;
     white-space: normal;
-    color: rgba(33, 29, 24, 0.88);
+    color: rgb(57, 53, 47); /* web rgba(33, 29, 24, 0.88) paperilla; UITK:n alfa sekoittuu lineaarisesti ja vaalenee */
 }
 
 /* Web .lippu-tunnus.tarkennettu: pelkkä vaakuna isona (min(64 %, 13rem)), selite paperilla sen alla. */
