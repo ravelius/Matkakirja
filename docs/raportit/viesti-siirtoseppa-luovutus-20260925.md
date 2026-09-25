@@ -17,9 +17,7 @@ rakennuskomennot ovat yhä voimassa, joten lue sieltä kohdat "Koepaketit" ja
 - **Koepaketit:** `/Users/Shared/Claude/sisalto-koe` v51 (1.40) ja
   `/Users/Shared/Claude/sisalto-koe-2` v12.
 - **Worktree:** `/Users/Shared/Claude/wt/siirtoseppa-offline-z9` (#3155) ja tämä
-  luovutus-worktree `wt/siirtoseppa-luovutus`, jonka voi poistaa pushin jälkeen.
-  `wt/siirtoseppa-nostoankkurit` (#3133 mergetty) on poistettava:
-  `tools/uusi-worktree.sh --poista siirtoseppa-nostoankkurit`.
+  luovutus-worktree `wt/siirtoseppa-luovutus` (poistettu pushin jälkeen).
 
 ## Avoin erä: #3155 (skeema 1.40, LUONNOS)
 
