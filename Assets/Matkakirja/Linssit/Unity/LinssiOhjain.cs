@@ -786,6 +786,10 @@ namespace Matkakirja.Natiivi
                         bool jatkuu = l.PaivitaSulku();
                         if (!jatkuu && ReferenceEquals(sulkeva, l)) sulkeva = null;
                         return jatkuu;
+                    }, () =>
+                    {
+                        l.LopetaSulku();
+                        if (ReferenceEquals(sulkeva, l)) sulkeva = null;
                     });
                 }
                 linssi = null;
@@ -924,7 +928,7 @@ namespace Matkakirja.Natiivi
             using (KytkeMerkki.Auto()) kerrokset.Kytke();
             rekisteri.Paivita();
             // Suljettujen linssien jälkiajot (radion ulosliuku): true = jatkuu.
-            if (jalkiajot.Count > 0) jalkiajot.RemoveAll(f => !f());
+            if (jalkiajot.Count > 0) jalkiajot.RemoveAll(j => !j.Ajo());
 #if !MATKAKIRJA_APPSTORE
             // App Store -käännöksessä ei testikomentoja (kuten ui-komento.txt ja komento.txt).
             komentoKello -= Time.unscaledDeltaTime;
@@ -932,14 +936,32 @@ namespace Matkakirja.Natiivi
 #endif
         }
 
-        readonly List<Func<bool>> jalkiajot = new List<Func<bool>>();
+        readonly List<(Func<bool> Ajo, Action Lopetus)> jalkiajot = new List<(Func<bool>, Action)>();
 
-        /// <summary>Kehyksittäinen ajo linssin sulun jälkeen (esim. radion hämärän ulosliuku); palauttaa false, kun valmis.</summary>
-        internal void Jalkiajo(Func<bool> ajo) { if (ajo != null) jalkiajot.Add(ajo); }
+        /// <summary>
+        /// Kehyksittäinen ajo linssin sulun jälkeen (esim. radion hämärän ulosliuku); palauttaa false, kun valmis.
+        /// Lopetus viedään loppuun heti, jos ohjain poistuu tai kytketään pois kesken (löydös 77: radion hämärä,
+        /// mastot ja reliefi jäivät pallolle, kun jälkiajo katkesi).
+        /// </summary>
+        internal void Jalkiajo(Func<bool> ajo, Action lopetus = null) { if (ajo != null) jalkiajot.Add((ajo, lopetus)); }
+
+        void ViimeisteleJalkiajot()
+        {
+            var kesken = jalkiajot.ToArray();
+            jalkiajot.Clear();
+            foreach (var j in kesken)
+            {
+                try { j.Lopetus?.Invoke(); }
+                catch (Exception e) { Debug.LogException(e); }
+            }
+        }
+
+        void OnDisable() => ViimeisteleJalkiajot();
 
         void OnDestroy()
         {
             rekisteri?.Sulje();
+            ViimeisteleJalkiajot();
             kerrokset?.Irrota();
             if (Instanssi == this) Instanssi = null;
         }
