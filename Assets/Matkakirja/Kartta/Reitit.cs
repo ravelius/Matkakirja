@@ -15,11 +15,16 @@ namespace Matkakirja
     ///
     /// Maa- ja merireittien polku lasketaan samalla kaavalla kuin laattoihin
     /// poltettu viiva (ReittiGeometria), joten viiva osuu kartan reittiin.
+    ///
+    /// Build 13 (pariteetti B4/B5/B23): maa- ja merireitin alla pergamenttivarjo, välipisteissä askelhelmet
+    /// (sama polku kuin viivalla), lentokaari webin paraabelina ja listan kaarissa paikallaan pysyvä katko.
     /// </summary>
     public class Reitit : MonoBehaviour
     {
         public CesiumGeoreference georeferenssi;
         public Material maa, meri, lento, korostus;
+        [Tooltip("Askelhelmen levy: Kohdemerkki-varjostin (Rakennus: Siirtokohde-materiaali). Tyhjä = Siirtokohdemerkit.materiaali.")]
+        public Material helmi;
         [Tooltip("Viivan korkeus ellipsoidin yläpuolella, metreinä.")]
         public double viivanKorkeus = 5000.0;
         [Tooltip("Lentokaaren huippu pallon säteinä 180°:n matkalla (LENTOKAAREN_KORKEUS).")]
@@ -30,8 +35,10 @@ namespace Matkakirja
         class Reitti
         {
             public string id, laji, tyyppi, a, b;
+            public double askelia = 1; // askelhelmet (päätaso askelia, raaka data.steps)
             public List<double2> via;
             public List<double3> pisteet; // (lat, lon, korkeus), laskettu tarvittaessa
+            public List<(double X, double Y)> polku; // korjattu laudan polku (helmet), vain maa- ja merireitillä
         }
 
         readonly Dictionary<string, Kaupunki> kaupungit = new Dictionary<string, Kaupunki>();
@@ -84,6 +91,7 @@ namespace Matkakirja
                     a = MiniJson.Teksti(r, "a"),
                     b = MiniJson.Teksti(r, "b"),
                     tyyppi = MiniJson.Teksti(r, "laji") == "sea" ? "sea" : d != null ? MiniJson.Teksti(d, "type") : null,
+                    askelia = MiniJson.Luku(r, "askelia") ?? (d != null ? MiniJson.Luku(d, "steps") : null) ?? 1,
                 };
                 if ((MiniJson.Kentta(r, "via") ?? (d != null ? MiniJson.Kentta(d, "via") : null)) is List<object> via && via.Count > 0)
                 {
@@ -123,7 +131,27 @@ namespace Matkakirja
         {
             Tyhjenna(false);
             if (!naapurit.TryGetValue(kaupunki, out var l)) return;
-            foreach (var r in l) naytetyt.Add(Piirra(r, Materiaali(r)));
+            foreach (var r in l) naytetyt.Add(PiirraMatka(r));
+        }
+
+        /// <summary>
+        /// Pelin matkareitit (web ui.matkareittienValinta → reittiTunnukset, js/ui.js:7885): annetut reitit
+        /// varjoineen ja askelhelmineen, vanhat pois (korostus jää). Tunnus "a|b" kumpaan suuntaan tahansa
+        /// (Reittiverkko). null tai tyhjä = matkareitit pois. Palauttaa piirrettyjen reittien määrän.
+        /// </summary>
+        public int NaytaReitit(IEnumerable<string> tunnukset)
+        {
+            Tyhjenna(false);
+            if (tunnukset == null) return 0;
+            var piirretyt = new HashSet<Reitti>();
+            foreach (var t in tunnukset)
+            {
+                int i = t == null ? -1 : t.IndexOf('|');
+                if (i <= 0) continue;
+                var r = Hae(t.Substring(0, i), t.Substring(i + 1));
+                if (r != null && piirretyt.Add(r)) naytetyt.Add(PiirraMatka(r));
+            }
+            return piirretyt.Count;
         }
 
         /// <summary>Korostaa reitin a–b (valittu matka). Palauttaa false, jos reittiä ei ole.</summary>
@@ -137,27 +165,24 @@ namespace Matkakirja
         }
 
         readonly List<GameObject> lentokaaret = new List<GameObject>();
-        Material kirkasLento;
 
         /// <summary>
-        /// Lentolista auki (web matkareittienValinta → lennot): kirkkaat lentokaaret lähdöstä jokaiseen
-        /// kohteeseen. Pelikoodarin ohjain kutsuu listan avautuessa; null tai tyhjä = pois.
+        /// Lentolista auki (web matkareittienValinta → lennot): lentokaaret lähdöstä jokaiseen kohteeseen
+        /// webin värillä rgba(150,54,40,.6) ilman kirkastusta (reitit.js:214, 368). Katko on paikallaan; vain
+        /// <paramref name="elava"/>-kohteen kaaren katko liikkuu (web valittu lento ui.lentoKaari.b,
+        /// arcDashAnimateTime reitit.js:372). Pelikoodarin ohjain kutsuu listan avautuessa; null tai tyhjä = pois.
         /// Kaaria ei napauteta (valinta listasta).
         /// </summary>
-        public void Lentokaaret(string lahto, IReadOnlyCollection<string> kohteet)
+        public void Lentokaaret(string lahto, IReadOnlyCollection<string> kohteet, string elava = null)
         {
             foreach (var g in lentokaaret) Destroy(g);
             lentokaaret.Clear();
             if (lahto == null || kohteet == null || !kaupungit.ContainsKey(lahto)) return;
-            if (kirkasLento == null && lento != null)
-            {
-                kirkasLento = new Material(lento) { name = "Lento (lista)" };
-                var c = lento.GetColor("_BaseColor");
-                kirkasLento.SetColor("_BaseColor", new Color(c.r, c.g, c.b, Mathf.Min(1f, c.a * 2f + 0.2f)));
-            }
+            Valmistele();
             foreach (var k in kohteet)
                 if (k != lahto && kaupungit.ContainsKey(k))
-                    lentokaaret.Add(Piirra(new Reitti { id = "lista:" + lahto + "-" + k, laji = "lento", a = lahto, b = k }, kirkasLento ?? lento));
+                    lentokaaret.Add(Piirra(new Reitti { id = "lista:" + lahto + "-" + k, laji = "lento", a = lahto, b = k },
+                        (k == elava ? elavaLento : listaLento) ?? lento));
         }
 
         /// <summary>
@@ -192,16 +217,72 @@ namespace Matkakirja
         {
             foreach (var g in naytetyt) Destroy(g);
             naytetyt.Clear();
+            helmet.Clear(); // helmet ovat naytetyt-reittien lapsia
             if (myosKorostus && korostettu != null) { Destroy(korostettu); korostettu = null; }
         }
 
-        Material Materiaali(Reitti r) => r.laji == "lento" ? lento : r.laji == "sea" || r.tyyppi == "sea" ? meri : maa;
+        Material Materiaali(Reitti r)
+        {
+            if (r.laji != "lento") return r.laji == "sea" || r.tyyppi == "sea" ? meri : maa;
+            Valmistele();
+            return listaLento ?? lento;
+        }
+
+        // Ajonaikaiset kopiot (ei uusia materiaaliassetteja): varjo maareitin materiaalista, lentokaaret
+        // lento-materiaalista paikallaan pysyvällä ja liikkuvalla katkolla.
+        Material varjo, listaLento, elavaLento;
+
+        /// <summary>Pergamenttivarjo reitit.js:221 REITIN_VARIT.varjo rgba(250,243,226,.3), 4 pt (reitit.js:67).</summary>
+        static readonly Color VarjonVari = new Color(250f / 255f, 243f / 255f, 226f / 255f, 0.3f);
+        /// <summary>Valitun lennon katkon liike: jakso 0,35° (LENTOKAAREN_KATKO_AST) 2,4 s:ssa (LENTOKAAREN_ELO_MS).</summary>
+        const float LennonKatkoLiike = 0.35f / 2.4f;
+
+        void Valmistele()
+        {
+            if (varjo == null && maa != null)
+            {
+                varjo = new Material(maa) { name = "Reitti-varjo" };
+                varjo.SetColor("_BaseColor", VarjonVari);
+                varjo.SetFloat("_Paksuus", ReittiMitat.VarjonPaksuusPt);
+                // Musteviivan alle myös piirtojärjestyksessä (Viiva: ZWrite Off, sama jono).
+                varjo.renderQueue = maa.renderQueue - 1;
+            }
+            if (listaLento == null && lento != null)
+            {
+                // Väri suoraan lento-materiaalista (Rakennus: 150,54,40,153 = webin .6), ei kirkastusta.
+                listaLento = new Material(lento) { name = "Lento (lista)" };
+                var k = lento.GetVector("_Katko");
+                listaLento.SetVector("_Katko", new Vector4(k.x, k.y, 0, k.w));
+                elavaLento = new Material(lento) { name = "Lento (valittu)" };
+                elavaLento.SetVector("_Katko", new Vector4(k.x, k.y, LennonKatkoLiike, k.w));
+            }
+        }
 
         void Update()
         {
             float kerroin = PalloKierto.Pistekerroin;
-            foreach (var m in new[] { maa, meri, lento, korostus })
+            foreach (var m in new[] { maa, meri, lento, korostus, varjo, listaLento, elavaLento })
                 if (m != null) m.SetFloat("_Kerroin", kerroin);
+        }
+
+        /// <summary>
+        /// Matkareitti kuten webin reitinMuisti (reitit.js:405–471): musteviiva, maa- ja merireitillä sen alla
+        /// pergamenttivarjo (hitusen alempana, reitit.js:452) ja välipisteissä askelhelmet (reitit.js:426–444).
+        /// Varjo ja helmet ovat viivan lapsia: Tyhjenna ja Nakyvat koskevat niitä samalla.
+        /// </summary>
+        GameObject PiirraMatka(Reitti r)
+        {
+            var go = Piirra(r, Materiaali(r));
+            if (r.laji == "lento" || r.polku == null) return go;
+            Valmistele();
+            if (varjo != null)
+            {
+                var v = Piirra(r, varjo, viivanKorkeus * (1.0 - ReittiMitat.VarjonKorkeusSuhde));
+                v.name = "Varjo " + r.id;
+                v.transform.SetParent(go.transform, false);
+            }
+            Helmet(r, go.transform);
+            return go;
         }
 
         List<double3> Pisteet(Reitti r)
@@ -212,17 +293,18 @@ namespace Matkakirja
             var ulos = new List<double3>();
             if (r.laji == "lento" || !A.lautaOn || !B.lautaOn)
             {
-                // Lentokaari: isoympyrä, joka nousee keskeltä matkan pituuden mukaan.
+                // Lentokaari: isoympyrä, joka nousee keskeltä paraabelina matkan pituuden mukaan
+                // (web reitit.js:284 lentokaarenKorkeus ja :300 lentokaarenKohta, 4 t (1 − t)).
                 double kulma = ReittiGeometria.Kulma(A.lat, A.lon, B.lat, B.lon);
                 double huippu = r.laji == "lento"
-                    ? kaarenKorkeus * math.clamp(kulma / 180.0, 0.02, 1.0) * CesiumWgs84Ellipsoid.GetMaximumRadius()
+                    ? ReittiMitat.LentokaarenHuippu(kulma, kaarenKorkeus) * CesiumWgs84Ellipsoid.GetMaximumRadius()
                     : 0;
                 int n = math.max(16, (int)(kulma * 2));
                 for (int i = 0; i <= n; i++)
                 {
                     double t = (double)i / n;
                     var p = ReittiGeometria.Isoympyra(A.lat, A.lon, B.lat, B.lon, t);
-                    ulos.Add(new double3(p.x, p.y, viivanKorkeus + huippu * math.sin(math.PI_DBL * t)));
+                    ulos.Add(new double3(p.x, p.y, viivanKorkeus + huippu * ReittiMitat.KaarenNousu(t)));
                 }
             }
             else
@@ -232,6 +314,7 @@ namespace Matkakirja
                 polku = ReittiGeometria.Korjaa(polku,
                     ReittiGeometria.Siirtyma(A.lauta, A.lat, A.lon),
                     ReittiGeometria.Siirtyma(B.lauta, B.lat, B.lon));
+                r.polku = polku.ConvertAll(p => (p.x, p.y));
                 foreach (var p in polku)
                 {
                     var ll = ReittiGeometria.Asteiksi(p.x, p.y);
@@ -241,7 +324,8 @@ namespace Matkakirja
             return r.pisteet = ulos;
         }
 
-        GameObject Piirra(Reitti r, Material materiaali)
+        /// <param name="lasku">Metriä viivan korkeuden alle (pergamenttivarjo).</param>
+        GameObject Piirra(Reitti r, Material materiaali, double lasku = 0)
         {
             var pisteet = Pisteet(r);
             int n = pisteet.Count;
@@ -252,7 +336,7 @@ namespace Matkakirja
             for (int i = 0; i < n; i++)
             {
                 var p = pisteet[i];
-                var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(p.y, p.x, p.z));
+                var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(p.y, p.x, p.z - lasku));
                 u[i] = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
             }
             double matka = 0;
@@ -288,6 +372,104 @@ namespace Matkakirja
             go.AddComponent<MeshRenderer>().sharedMaterial = materiaali;
             go.SetActive(nakyvat);
             return go;
+        }
+
+        // ── ASKELHELMET (pariteetti B5) ──────────────────────────────────────────────
+        // reitit.js:100–109 ja 426–444: välipisteissä i / askelia (i = 1 … askelia − 1) 15 pt ympyrä, 2,2 pt
+        // tumma reunus rgba(74,58,36,.88) ja pergamenttitäyte rgba(250,243,226,.9); päätekaupungeissa ei helmeä.
+        // Paikka korjatulta laudan polulta pointAlong-kaavalla (ReittiMitat.PisteMatkalla), sama polku kuin viivalla.
+        // Levy on Kohdemerkki-varjostin ilman haloa ja katkoa (MaterialPropertyBlock), koko vakio näytön
+        // pisteinä kuten Siirtokohdemerkeissä: neliö tuodaan näkösädettä pitkin pinnan eteen.
+
+        sealed class Helmi { public Transform juuri; public Vector3 pinta, normaali; }
+
+        readonly List<Helmi> helmet = new List<Helmi>();
+        MaterialPropertyBlock helmiLohko;
+        Mesh helmiNelio;
+        Camera kamera;
+        /// <summary>Hitusen vähemmän kuin Siirtokohdemerkit.Etuna (0,3): siirtokohteen rengas piirtyy helmen päälle.</summary>
+        const float HelmenEtuna = 0.29f;
+        /// <summary>Neliön sivu: ulkohalkaisija + reunan pehmennys.</summary>
+        const float HelmenNelio = ReittiMitat.HelmenHalkaisijaPt + 4f;
+        static readonly Color HelmenTaytto = new Color(250f / 255f, 243f / 255f, 226f / 255f, 0.9f);
+        static readonly Color HelmenReuna = new Color(74f / 255f, 58f / 255f, 36f / 255f, 0.88f);
+
+        void Helmet(Reitti r, Transform isanta)
+        {
+            if (helmi == null) helmi = Siirtokohdemerkit.Instanssi != null ? Siirtokohdemerkit.Instanssi.materiaali : null;
+            if (helmi == null || r.polku == null || r.polku.Count < 2) return;
+            var osuudet = ReittiMitat.HelmienOsuudet(r.askelia);
+            if (osuudet.Count == 0) return;
+            helmiNelio ??= Nelio();
+            if (helmiLohko == null)
+            {
+                helmiLohko = new MaterialPropertyBlock();
+                helmiLohko.SetFloat("_Sade", ReittiMitat.HelmenKeskiSadePt);
+                helmiLohko.SetFloat("_Viiva", ReittiMitat.HelmenReunaPt);
+                helmiLohko.SetFloat("_Koko", HelmenNelio);
+                helmiLohko.SetFloat("_HaloViiva", 0f);
+                // Yhtenäinen reunus: katko pidempi kuin kehä (2π · 6,4 ≈ 40 pt).
+                helmiLohko.SetVector("_Katko", new Vector4(1000f, 0f, 0f, 0f));
+                helmiLohko.SetColor("_Taytto", HelmenTaytto);
+                helmiLohko.SetColor("_Viivavari", HelmenReuna);
+                // Halo pois (peitto 0); sävy reunuksen musteesta, jolloin täytteen alle jää webin tapaan
+                // kymmenesosa tummasta levystä (reunuslevy pergamentin alla, reitit.js:440).
+                helmiLohko.SetColor("_Halovari", new Color(HelmenReuna.r, HelmenReuna.g, HelmenReuna.b, 0f));
+            }
+            double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
+            for (int i = 0; i < osuudet.Count; i++)
+            {
+                var p = ReittiMitat.PisteMatkalla(r.polku, osuudet[i]);
+                var ll = ReittiGeometria.Asteiksi(p.X, p.Y);
+                var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(ll.y, ll.x, viivanKorkeus));
+                double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+                var juuri = new GameObject("Helmi " + r.id + "#" + (i + 1)).transform;
+                juuri.SetParent(isanta, false);
+                var q = new GameObject("Levy").transform;
+                q.SetParent(juuri, false);
+                q.localScale = new Vector3(HelmenNelio, HelmenNelio, 1);
+                q.gameObject.AddComponent<MeshFilter>().sharedMesh = helmiNelio;
+                var mr = q.gameObject.AddComponent<MeshRenderer>();
+                mr.sharedMaterial = helmi;
+                mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                mr.receiveShadows = false;
+                mr.SetPropertyBlock(helmiLohko);
+                helmet.Add(new Helmi { juuri = juuri, pinta = (float3)u, normaali = (float3)math.normalize(u - keskus) });
+            }
+        }
+
+        void LateUpdate()
+        {
+            if (helmet.Count == 0) return;
+            if (kamera == null) kamera = Camera.main;
+            if (kamera == null) return;
+            var kt = kamera.transform;
+            var gt = georeferenssi.transform;
+            float tanPuoli = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
+            float pikseleita = Screen.height / PalloKierto.Pistekerroin;
+            foreach (var h in helmet)
+            {
+                if (h.juuri == null) continue;
+                Vector3 paikka = gt.TransformPoint(h.pinta);
+                Vector3 kohti = kt.position - paikka;
+                float etaisyys = kohti.magnitude;
+                bool edessa = !PalloKierto.PorttiSumea && Vector3.Dot(gt.TransformDirection(h.normaali), kohti / etaisyys) > 0.12f;
+                if (h.juuri.gameObject.activeSelf != edessa) h.juuri.gameObject.SetActive(edessa);
+                if (!edessa) continue;
+                float lahella = etaisyys * (1f - HelmenEtuna);
+                h.juuri.SetPositionAndRotation(kt.position - kohti / etaisyys * lahella, kt.rotation);
+                h.juuri.localScale = Vector3.one * (2f * lahella * tanPuoli / pikseleita);
+            }
+        }
+
+        static Mesh Nelio()
+        {
+            var m = new Mesh { name = "Helmi" };
+            m.vertices = new[] { new Vector3(-0.5f, -0.5f), new Vector3(0.5f, -0.5f), new Vector3(-0.5f, 0.5f), new Vector3(0.5f, 0.5f) };
+            m.uv = new[] { new Vector2(0, 0), new Vector2(1, 0), new Vector2(0, 1), new Vector2(1, 1) };
+            m.triangles = new[] { 0, 2, 1, 1, 2, 3 };
+            m.RecalculateBounds();
+            return m;
         }
     }
 }

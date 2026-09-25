@@ -91,7 +91,8 @@ namespace Matkakirja.Editori
             reitit.georeferenssi = georef;
             reitit.maa = Viiva("Reitti-maa", new Color32(74, 58, 36, 107), 2.5f, new Vector4(0.16f, 0.5f, 0, 0));
             reitit.meri = Viiva("Reitti-meri", new Color32(61, 85, 112, 107), 2.5f, new Vector4(0.16f, 0.5f, 0, 0));
-            reitit.lento = Viiva("Reitti-lento", new Color32(150, 54, 40, 153), 2.5f, new Vector4(0.35f, 0.6f, 0.35f / 2.4f, 0));
+            // Lento: katko paikallaan (build 13, B23); Reitit tekee valitulle lennolle liikkuvan kopion (reitit.js:372).
+            reitit.lento = Viiva("Reitti-lento", new Color32(150, 54, 40, 153), 2.5f, new Vector4(0.35f, 0.6f, 0, 0));
             reitit.korostus = Viiva("Reitti-korostus", new Color32(96, 40, 26, 230), 4f, new Vector4(0.35f, 0.6f, 0.35f / 1.2f, 0));
             merkit.reitit = reitit;
 
@@ -225,6 +226,8 @@ namespace Matkakirja.Editori
             siirtokohteet.materiaali = Materiaali("Siirtokohde", "Matkakirja/Kohdemerkki", Color.white);
             // Aloitusvalinnan kohdemerkit (web kohdeElementti huomio: true) samalla varjostimella ja materiaalilla.
             merkit.kohdemerkkiMateriaali = siirtokohteet.materiaali;
+            // Reitin askelhelmet (build 13, B5) samalla Kohdemerkki-varjostimella ilman haloa ja katkoa.
+            reitit.helmi = siirtokohteet.materiaali;
             maaraja.kierto = kierto;
             radioMastot.kierto = kierto;
             var komennot = kameraGo.AddComponent<Komennot>();
