@@ -20,7 +20,10 @@
 //   jaksoissa sininen päivänvalo, merellä kuunvalo, muuten lyhty (3200 K). Kuvan aikana hämärä syvenee (kuva nousee
 //   valosta), aikahypyssä valo sammuu hetkeksi, lopussa keilat sammuvat ja koko pallo syttyy.
 //
-// ERÄT 3–5 (sumu, äänimaisemat, vapaat kädet) rakentuvat samoihin koukkuihin.
+// ERÄ 4 (AIDOT ÄÄNIMAISEMAT): IhmisenMatka2Maisema soittaa jakson `maisema`-tyypin ämpäristä (aanihaku, Freesound
+//   CC0/CC BY) ristihäivytyksellä; kertojan puheen alla väistö. Loppu häivyttää.
+//
+// ERÄT 3 ja 5 (sumu, vapaat kädet) rakentuvat samoihin koukkuihin.
 using System.Collections.Generic;
 using Matkakirja.Linssit.Aikajana;
 using UnityEngine;
@@ -67,6 +70,7 @@ namespace Matkakirja.Natiivi
         KarttaKerrokset.Keila nykyinen;
         KarttaKerrokset.Keila? toinen;
         (double Lat, double Lon)? edellinenKohde;
+        IhmisenMatka2Maisema maisema;
         string kuvaKohde;
         float kuvanPeitto;
         bool siirtoPaalla;
@@ -79,6 +83,8 @@ namespace Matkakirja.Natiivi
         {
             kerros = k;
             paikat = paikkaIndeksi;
+            maisema = IhmisenMatka2Maisema.Luo(transform);
+            maisema.KertojaSoi = () => (LinssiOhjain.Rekisteri?.Auki as LinssiOhjain.IhmisenMatkaSovitin)?.Aani?.KohtaMs != null;
             LinssiOhjain.Instanssi?.Kirjaa("ihmisen matka II: tehosteet kytketty");
         }
 
@@ -103,6 +109,7 @@ namespace Matkakirja.Natiivi
         {
             jakso = j;
             if (j == null) return;
+            maisema?.Aseta(j.Maisema);
             if (j.Vaihe == "loppu") { Sammuta(Kesto(LopunSammutusS)); return; }
             if (j.Vaihe == "pimea") return;
             if (j.Vaihe == "hyppy")
@@ -206,6 +213,7 @@ namespace Matkakirja.Natiivi
 
         public void Loppu()
         {
+            maisema?.Lopeta();
             Sammuta(Kesto(LopunSammutusS));
             KuvanAlue = null;
             if (siirtoPaalla) KarttaKerrokset.LinssisiirtoPois(Kesto(SiirtoS));
