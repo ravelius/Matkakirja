@@ -5583,3 +5583,7 @@ Kirjattu Raamatun NATIIVI PELI ETUSIJALLE -osioon ennen TESTFLIGHT-BUILDIT-kohta
 ## KARTTASEPPA: KERMA 2026-09-25-p080 AMPARISSA (33 948 LAATTAA); WEBIN NOSTOTASO 2026-09-25b-nostot AMPARISSA (4 908 LAATTAA, 1.40-NIMIOT, 82 NOSTOA 46 MAASSA MUUTTUI), 25-PYRAMIDIN LUETTELO UUDELLA NOSTOTASOLLA LEVYLLA (ajo-20260925b-nostot/luettelo/pyramidi.json, EHEYS OK) — EI VIETY, ODOTTAA OMISTAJAN KUVAKOKEILUA; S2-LOPPUORBIT AMPARISSA (satelliitti/2026-09-25/s2-orbit/, 11 979 LAATTAA, 19 KAUPUNKIA, EOX 2016 CC BY) (25.9.2026 klo 16.19)
 
 Natiivisepälle: S2 takaisin aloituslennon loppuorbitiin build 15:een. Karttasepän jono tyhjä → lepo, seuraava tehtävä omistajan kuvakokeilun jälkeen (webin osoitin) ja Z10.
+
+## BUILD 14 SAVUKIERROS PASS (LAITETESTAAJA, proto_ref 7f68d1f7, iPHONE: KYLMA KAYNNISTYS, VALINTA, LENTO, ATEENA, REITIT VAIN LIIKUSSA JA HAVIAVAT PERILLA, NOSTO+TEKSTI, RADIO, AVARUUSLINSSI; RAPORTTI 65c523c5c) → FABLE: BUILD 1.0.14 JULKAISIJALLE (25.9.2026 klo 16.20)
+
+Löydökset 93/104/100 tarkistetaan build 14:stä omistajan ja Laitetestaajan seuraavalla kierroksella. iPad-kierros jäi tekemättä (aika).
