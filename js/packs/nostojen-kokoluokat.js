@@ -47,7 +47,7 @@ export const NOSTOJEN_KOKOLUOKAT = {
     'nosto:nosto-sofia-korut': 'paakohde',
     'nosto:thessaloniki': 'paakohde',
 
-    // KOHTEET (29)
+    // KOHTEET (31)
     'nosto:epidauros': 'kohde',
     'nosto:hahmotelma-delos': 'kohde',
     'nosto:hahmotelma-bassae': 'kohde',
