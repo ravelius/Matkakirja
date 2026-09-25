@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2217, teksti: 'NC-lisenssien korvaus: 6/9 tunnettua kohdetta (#2895)' },
   { v: 2216, teksti: 'Sisältöjuna: ennenNyt, galleria, N1/N3, taidemuseo' },
   { v: 2215, teksti: 'Sisältöjuna: katalogin kuvitus, radio, suunnitelmat' },
   { v: 2214, teksti: 'Maakunnat-välilehti: nykyisen maan ryhmä auki,… (#3140)' },
