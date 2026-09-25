@@ -15,26 +15,26 @@ namespace Matkakirja
     /// opacity …) silti joka kehys: aloitusportin piilotettu Etusivulento-kerros vei iPad Pro 13:lla 46–50 ms GPU-aikaa
     /// kehyksessä koko pelin ajan (korjattu myös kerroksessa itsessään).
     ///
-    /// Vartija kulkee kaikkien UIDocumenttien puut harvoin: paneeli, jonka IPanel.isDirty on tosi, <see cref="TarkistusVali"/>
-    /// välein, ja kaikki paneelit viimeistään <see cref="KokoVali"/> välein (ei joka kehys). Se poistaa koodissa asetetut
-    /// suotimet (inline style.filter) elementeiltä, joiden jokin esivanhempi (tai ne itse) on display:none, ja palauttaa ne,
-    /// kun elementti tulee taas näkyviin. Palautus tarkistetaan joka kehys vain poistetuille elementeille (yleensä ei
-    /// yhtään), joten palautus osuu samaan kehykseen, kun näkyvyys muuttuu koodista (inline display), ja viimeistään
-    /// seuraavaan, kun se muuttuu USS-luokasta. Jos elementin omistaja on sillä välin asettanut uuden suotimen, vartija ei
-    /// kirjoita sen päälle. USS:stä tulevia suotimia vartija ei poista (niitä ei nyt ole): ne kirjataan lokiin korjattaviksi.
+    /// Vartija kiertää kaikkien UIDocumenttien puut taustalla: kierros alkaa <see cref="KierrosVali"/> edellisen jälkeen, ja
+    /// yhdessä kehyksessä käsitellään enintään <see cref="Budjetti"/> elementtiä (ei koko puuta kerralla, ei piikkiä). Se
+    /// poistaa koodissa asetetut suotimet (inline style.filter) elementeiltä, joiden jokin esivanhempi (tai ne itse) on
+    /// display:none, ja palauttaa ne, kun elementti tulee taas näkyviin. Palautus tarkistetaan joka kehys vain poistetuille
+    /// elementeille (yleensä ei yhtään), joten se osuu samaan kehykseen, kun näkyvyys muuttuu koodista (inline display), ja
+    /// viimeistään seuraavaan, kun se muuttuu USS-luokasta. Jos omistaja on sillä välin asettanut uuden suotimen, vartija
+    /// ei kirjoita sen päälle. USS:stä tulevia suotimia vartija ei poista (niitä ei nyt ole): ne kirjataan lokiin.
     ///
-    /// Lokiin (`MATKAKIRJA piilovartija …`) kirjataan jokainen poisto ja palautus sekä piilossa olevat mutta piirrettävät
-    /// alipuut (visibility: hidden tai opacity 0, ei display:none), jotka kuluttavat piirtoa näkymättöminä. Näitä vartija
-    /// ei muuta, koska display vaikuttaisi asetteluun. Komento `piilo tila` (Komennot) kertoo tilan ja vartijan mitatun
-    /// hinnan, `piilo pois|paalle` kytkee vartijan (pois palauttaa kaikki suotimet).
+    /// Lokiin (`MATKAKIRJA piilovartija …`) kirjataan jokainen poisto ja palautus. Komento `piilo tila` (Komennot) tekee
+    /// lisäksi kertakatsauksen: piilossa olevat mutta piirrettävät alipuut (visibility: hidden tai opacity 0, ei
+    /// display:none), joita vartija ei muuta (display vaikuttaisi asetteluun), sekä vartijan mitattu hinta.
+    /// `piilo pois|paalle` kytkee vartijan (pois palauttaa kaikki suotimet).
     /// </summary>
     [DefaultExecutionOrder(32000)] // kaikkien LateUpdatejen jälkeen: tämän kehyksen näkyvyysmuutokset ennen piirtoa
     public sealed class PiiloVartija : MonoBehaviour
     {
-        /// <summary>Likaisten paneelien tarkistusväli (s).</summary>
-        public const float TarkistusVali = 0.5f;
-        /// <summary>Kaikkien paneelien kulku viimeistään näin usein (s).</summary>
-        public const float KokoVali = 2f;
+        /// <summary>Tauko kierrosten välillä (s).</summary>
+        public const float KierrosVali = 1f;
+        /// <summary>Elementtejä enintään kehyksessä.</summary>
+        public const int Budjetti = 250;
 
         public static PiiloVartija Instanssi { get; private set; }
 
@@ -49,15 +49,14 @@ namespace Matkakirja
         }
 
         readonly List<Poisto> poistot = new List<Poisto>();
-        readonly List<UIDocument> dokumentit = new List<UIDocument>();
-        readonly Dictionary<string, int> piirrettavatPiilossa = new Dictionary<string, int>();
-        readonly HashSet<string> kirjatutUss = new HashSet<string>();
+        readonly List<(VisualElement e, bool piilossa, string paneeli)> pino = new List<(VisualElement, bool, string)>();
+        readonly HashSet<VisualElement> kirjatutUss = new HashSet<VisualElement>();
         readonly Stopwatch kello = new Stopwatch();
-        float seuraavaTarkistus, seuraavaKoko;
-        int kayntejaKaikkiaan, elementteja, poistojaKaikkiaan, palautuksiaKaikkiaan;
-        double kulkuMsYht, kulkuMsMax, kehysMsYht, kehysMsMax;
+        float seuraavaKierros;
+        bool kierrosKaynnissa;
+        int kierrosElementit, kierrosKehykset, viimeElementit, viimeKehykset, kierroksia, poistojaKaikkiaan, palautuksiaKaikkiaan;
+        double kierrosMs, viimeMs, kehysMsYht, kehysMsMax;
         long kehyksia;
-        string viimeKulku = "-";
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa() { Instanssi = null; Paalla = true; }
@@ -81,118 +80,106 @@ namespace Matkakirja
 
         void LateUpdate()
         {
-            kello.Restart();
             if (!Paalla)
             {
                 if (poistot.Count > 0) PalautaKaikki("vartija pois");
+                pino.Clear();
+                kierrosKaynnissa = false;
                 return;
             }
+            kello.Restart();
 
             // 1) Joka kehys vain poistetut (yleensä ei yhtään): palautus heti, kun elementti on taas näkyvissä.
             for (int i = poistot.Count - 1; i >= 0; i--)
             {
                 var p = poistot[i];
                 if (p.e == null || p.e.panel == null) { Palauta(p, "irrotettu"); poistot.RemoveAt(i); continue; }
-                if (!Piilossa(p.e, true)) { Palauta(p, "näkyvissä"); poistot.RemoveAt(i); }
+                if (!Piilossa(p.e)) { Palauta(p, "näkyvissä"); poistot.RemoveAt(i); }
             }
 
-            // 2) Harvoin: likaiset paneelit TarkistusVali välein, kaikki KokoVali välein.
-            float nyt = Time.unscaledTime;
-            if (nyt >= seuraavaTarkistus)
+            // 2) Taustakierros budjetilla.
+            if (!kierrosKaynnissa && Time.unscaledTime >= seuraavaKierros) AloitaKierros();
+            if (kierrosKaynnissa)
             {
-                seuraavaTarkistus = nyt + TarkistusVali;
-                bool koko = nyt >= seuraavaKoko;
-                if (koko)
+                int n = 0;
+                while (pino.Count > 0 && n < Budjetti)
                 {
-                    seuraavaKoko = nyt + KokoVali;
-                    dokumentit.Clear();
-                    dokumentit.AddRange(FindObjectsByType<UIDocument>(FindObjectsInactive.Exclude, FindObjectsSortMode.None));
-                    piirrettavatPiilossa.Clear();
+                    var (e, piilossa, paneeli) = pino[pino.Count - 1];
+                    pino.RemoveAt(pino.Count - 1);
+                    if (e == null || e.panel == null) continue; // irrotettu kierroksen aikana: seuraava kierros kattaa
+                    n++;
+                    bool tamaPiilossa = piilossa || e.resolvedStyle.display == DisplayStyle.None;
+                    if (tamaPiilossa) Tarkista(e, paneeli);
+                    var h = e.hierarchy;
+                    for (int i = h.childCount - 1; i >= 0; i--) pino.Add((h[i], tamaPiilossa, paneeli));
                 }
-                var kulku = Stopwatch.StartNew();
-                int kaydyt = 0, n = 0;
-                foreach (var d in dokumentit)
+                kierrosElementit += n;
+                kierrosKehykset++;
+                if (pino.Count == 0)
                 {
-                    if (d == null) continue;
-                    var juuri = d.rootVisualElement;
-                    var paneeli = juuri?.panel;
-                    if (paneeli == null || (!koko && !paneeli.isDirty)) continue;
-                    kaydyt++;
-                    n += Kulje(juuri, false, d.name, koko);
-                }
-                kulku.Stop();
-                if (kaydyt > 0)
-                {
-                    double ms = kulku.Elapsed.TotalMilliseconds;
-                    kayntejaKaikkiaan++;
-                    kulkuMsYht += ms;
-                    if (ms > kulkuMsMax) kulkuMsMax = ms;
-                    elementteja = n;
-                    viimeKulku = $"{kaydyt} paneelia, {n} elementtiä, {ms.ToString("0.000", CultureInfo.InvariantCulture)} ms{(koko ? " (kaikki)" : "")}";
+                    kierrosKaynnissa = false;
+                    kierroksia++;
+                    viimeElementit = kierrosElementit;
+                    viimeKehykset = kierrosKehykset;
+                    viimeMs = kierrosMs + kello.Elapsed.TotalMilliseconds;
+                    seuraavaKierros = Time.unscaledTime + KierrosVali;
                 }
             }
 
             kello.Stop();
             double k = kello.Elapsed.TotalMilliseconds;
+            if (kierrosKaynnissa) kierrosMs += k;
             kehyksia++;
             kehysMsYht += k;
             if (k > kehysMsMax) kehysMsMax = k;
         }
 
+        void AloitaKierros()
+        {
+            pino.Clear();
+            foreach (var d in FindObjectsByType<UIDocument>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
+            {
+                var juuri = d.rootVisualElement;
+                if (juuri?.panel != null) pino.Add((juuri, false, d.name));
+            }
+            kierrosKaynnissa = pino.Count > 0;
+            kierrosElementit = kierrosKehykset = 0;
+            kierrosMs = 0;
+            if (!kierrosKaynnissa) seuraavaKierros = Time.unscaledTime + KierrosVali;
+        }
+
+        /// <summary>Piilotettu elementti: koodin asettama suodin pois, USS-suodin lokiin.</summary>
+        void Tarkista(VisualElement e, string paneeli)
+        {
+            if (OnPoistettu(e)) return;
+            var suodin = e.style.filter;
+            if (suodin.keyword == StyleKeyword.Undefined && suodin.value != null && suodin.value.Count > 0)
+            {
+                // Kierros kestää useita kehyksiä: piilotus tarkistetaan uudelleen juuri ennen poistoa (vanhentunut lippu).
+                if (!Piilossa(e)) return;
+                var p = new Poisto { e = e, suodin = suodin, kuvaus = paneeli + "/" + Polku(e) };
+                e.style.filter = StyleKeyword.Null; // ei StyleKeyword.Nonea (kaataa RenderTreeCompositorin 6.3:ssa)
+                poistot.Add(p);
+                poistojaKaikkiaan++;
+                Debug.Log($"MATKAKIRJA piilovartija: suodin pois piilotetusta elementistä {p.kuvaus} ({suodin.value.Count} suodinta)");
+            }
+            else if (UssSuodin(e) && kirjatutUss.Add(e))
+                Debug.LogWarning($"MATKAKIRJA piilovartija: USS-suodin piilotetussa elementissä {paneeli}/{Polku(e)} (vartija ei poista; korjaa tyyli)");
+        }
+
         /// <summary>
-        /// Elementti tai jokin sen esivanhemmista on display:none. palautus = tosi: koodista asetettu inline Flex kumoaa
-        /// vanhentuneen resolvedStylen (tyylit lasketaan vasta ennen piirtoa), jotta palautus osuu samaan kehykseen.
+        /// Elementti tai jokin sen esivanhemmista on display:none. Koodista asetettu inline Flex kumoaa vanhentuneen
+        /// resolvedStylen (tyylit lasketaan vasta ennen piirtoa), jotta palautus osuu samaan kehykseen.
         /// </summary>
-        static bool Piilossa(VisualElement e, bool palautus)
+        static bool Piilossa(VisualElement e)
         {
             for (var a = e; a != null; a = a.hierarchy.parent)
             {
                 if (a.resolvedStyle.display != DisplayStyle.None) continue;
-                if (palautus && a.style.display.keyword == StyleKeyword.Undefined && a.style.display.value == DisplayStyle.Flex) continue;
+                if (a.style.display.keyword == StyleKeyword.Undefined && a.style.display.value == DisplayStyle.Flex) continue;
                 return true;
             }
             return false;
-        }
-
-        static bool OmaSuodin(VisualElement e, out StyleList<FilterFunction> suodin)
-        {
-            suodin = e.style.filter;
-            return suodin.keyword == StyleKeyword.Undefined && suodin.value != null && suodin.value.Count > 0;
-        }
-
-        /// <summary>Kulkee alipuun; palauttaa elementtien määrän.</summary>
-        int Kulje(VisualElement e, bool piilossa, string paneeli, bool koko)
-        {
-            int n = 1;
-            var tyyli = e.resolvedStyle;
-            bool tamaPiilossa = piilossa || tyyli.display == DisplayStyle.None;
-            if (tamaPiilossa)
-            {
-                if (OmaSuodin(e, out var suodin) && !OnPoistettu(e))
-                {
-                    var p = new Poisto { e = e, suodin = suodin, kuvaus = paneeli + "/" + Polku(e) };
-                    e.style.filter = StyleKeyword.Null; // ei StyleKeyword.Nonea (kaataa RenderTreeCompositorin 6.3:ssa)
-                    poistot.Add(p);
-                    poistojaKaikkiaan++;
-                    Debug.Log($"MATKAKIRJA piilovartija: suodin pois piilotetusta elementistä {p.kuvaus} ({suodin.value.Count} suodinta)");
-                }
-                else if (!OnPoistettu(e) && UssSuodin(e))
-                {
-                    string avain = paneeli + "/" + Polku(e);
-                    if (kirjatutUss.Add(avain))
-                        Debug.LogWarning($"MATKAKIRJA piilovartija: USS-suodin piilotetussa elementissä {avain} (vartija ei poista; korjaa tyyli)");
-                }
-            }
-            else if (koko && (tyyli.visibility == Visibility.Hidden || tyyli.opacity <= 0.001f))
-            {
-                // Piilossa, mutta piirrettävä (ei display:none): kirjataan, ei muuteta (asettelu).
-                int alipuu = Laske(e);
-                string avain = paneeli + "/" + Polku(e) + (tyyli.visibility == Visibility.Hidden ? " (visibility hidden)" : " (opacity 0)");
-                if (!piirrettavatPiilossa.ContainsKey(avain) && alipuu >= 1) piirrettavatPiilossa[avain] = alipuu;
-                return n + alipuu - 1;
-            }
-            for (int i = 0; i < e.hierarchy.childCount; i++) n += Kulje(e.hierarchy[i], tamaPiilossa, paneeli, koko);
-            return n;
         }
 
         static bool UssSuodin(VisualElement e)
@@ -203,13 +190,6 @@ namespace Matkakirja
             }
             catch (Exception) { }
             return false;
-        }
-
-        static int Laske(VisualElement e)
-        {
-            int n = 1;
-            for (int i = 0; i < e.hierarchy.childCount; i++) n += Laske(e.hierarchy[i]);
-            return n;
         }
 
         bool OnPoistettu(VisualElement e)
@@ -246,22 +226,68 @@ namespace Matkakirja
             return string.Join(">", osat);
         }
 
-        /// <summary>Tila testikomennolle `piilo tila`: poistot, piilossa piirrettävät ja vartijan mitattu hinta.</summary>
+        /// <summary>
+        /// Testikomento `piilo tila`: vartijan tila ja hinta sekä kertakatsaus (koko puut kerralla, vain komennosta):
+        /// display:none-alipuut, niiden suotimet ja piilossa olevat mutta piirrettävät alipuut.
+        /// </summary>
         public string Kuvaus()
         {
             var ic = CultureInfo.InvariantCulture;
             var sb = new StringBuilder("MATKAKIRJA piilovartija: ");
             sb.Append(Paalla ? "päällä" : "pois").Append(", poistettuna ").Append(poistot.Count).Append(" suodinta (kaikkiaan ")
-              .Append(poistojaKaikkiaan).Append(" poistoa, ").Append(palautuksiaKaikkiaan).Append(" palautusta), viimeisin kulku ")
-              .Append(viimeKulku).Append(", kulkuja ").Append(kayntejaKaikkiaan).Append(", kulku ka ")
-              .Append((kayntejaKaikkiaan > 0 ? kulkuMsYht / kayntejaKaikkiaan : 0).ToString("0.000", ic)).Append(" ms / max ")
-              .Append(kulkuMsMax.ToString("0.000", ic)).Append(" ms, hinta ka ")
-              .Append((kehyksia > 0 ? kehysMsYht / kehyksia : 0).ToString("0.0000", ic)).Append(" ms/kehys (max ")
-              .Append(kehysMsMax.ToString("0.000", ic)).Append(" ms, ").Append(kehyksia).Append(" kehystä)");
+              .Append(poistojaKaikkiaan).Append(" poistoa, ").Append(palautuksiaKaikkiaan).Append(" palautusta); kierroksia ")
+              .Append(kierroksia).Append(", viimeisin ").Append(viimeElementit).Append(" elementtiä ").Append(viimeKehykset)
+              .Append(" kehyksessä, ").Append(viimeMs.ToString("0.000", ic)).Append(" ms yhteensä; hinta ka ")
+              .Append((kehyksia > 0 ? kehysMsYht / kehyksia : 0).ToString("0.0000", ic)).Append(" ms/kehys, max ")
+              .Append(kehysMsMax.ToString("0.000", ic)).Append(" ms (").Append(kehyksia).Append(" kehystä)");
             foreach (var p in poistot) sb.Append("\n  poistettu: ").Append(p.kuvaus);
-            foreach (var p in piirrettavatPiilossa) sb.Append("\n  piilossa mutta piirrettävä: ").Append(p.Key).Append(", ").Append(p.Value).Append(" elementtiä");
-            foreach (var k in kirjatutUss) sb.Append("\n  USS-suodin piilossa: ").Append(k);
+
+            var katsaus = Stopwatch.StartNew();
+            int elementit = 0, piilossa = 0, piilossaSuotimia = 0;
+            var piirrettavat = new List<string>();
+            foreach (var d in FindObjectsByType<UIDocument>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
+            {
+                var juuri = d.rootVisualElement;
+                if (juuri?.panel == null) continue;
+                Katsaus(juuri, false, d.name, ref elementit, ref piilossa, ref piilossaSuotimia, piirrettavat);
+            }
+            katsaus.Stop();
+            sb.Append("\n  katsaus: ").Append(elementit).Append(" elementtiä, display:none-alipuissa ").Append(piilossa)
+              .Append(", niissä suotimia ").Append(piilossaSuotimia).Append(", piilossa mutta piirrettäviä alipuita ")
+              .Append(piirrettavat.Count).Append(" (").Append(katsaus.Elapsed.TotalMilliseconds.ToString("0.000", ic)).Append(" ms)");
+            foreach (var s in piirrettavat) sb.Append("\n  piilossa mutta piirrettävä: ").Append(s);
             return sb.ToString();
+        }
+
+        static void Katsaus(VisualElement e, bool piilossa, string paneeli, ref int elementit, ref int piilossaN, ref int suotimia,
+                            List<string> piirrettavat)
+        {
+            elementit++;
+            var t = e.resolvedStyle;
+            bool p = piilossa || t.display == DisplayStyle.None;
+            if (p)
+            {
+                piilossaN++;
+                var f = e.style.filter;
+                if ((f.keyword == StyleKeyword.Undefined && f.value != null && f.value.Count > 0) || UssSuodin(e)) suotimia++;
+            }
+            else if (t.visibility == Visibility.Hidden || t.opacity <= 0.001f)
+            {
+                int n = 0;
+                Laske(e, ref n);
+                piirrettavat.Add($"{paneeli}/{Polku(e)} ({(t.visibility == Visibility.Hidden ? "visibility hidden" : "opacity 0")}, {n} elementtiä)");
+                elementit += n - 1;
+                return;
+            }
+            var h = e.hierarchy;
+            for (int i = 0; i < h.childCount; i++) Katsaus(h[i], p, paneeli, ref elementit, ref piilossaN, ref suotimia, piirrettavat);
+        }
+
+        static void Laske(VisualElement e, ref int n)
+        {
+            n++;
+            var h = e.hierarchy;
+            for (int i = 0; i < h.childCount; i++) Laske(h[i], ref n);
         }
     }
 }
