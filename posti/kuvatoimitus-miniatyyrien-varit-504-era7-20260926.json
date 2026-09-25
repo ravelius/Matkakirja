@@ -1,0 +1,1090 @@
+[
+  {
+    "id": "luxor-luxorin-temppeli",
+    "replacement_id": "luxor-luxorin-temppeli-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/luxor-luxorin-temppeli-vari2.png",
+    "sha256": "881af618c2478df22096b3853d22d96c321e6ac041bb56d46b7411707e015e3d",
+    "bytes": 1478172,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "luxor-luxorin-museo",
+    "replacement_id": "luxor-luxorin-museo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/luxor-luxorin-museo-vari2.png",
+    "sha256": "b350028ef0b5fa8bcd619596adb6f069c0f7940ad46a791b498ff26e82a5e8ca",
+    "bytes": 1603472,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "luxor-sfinksikuja",
+    "replacement_id": "luxor-sfinksikuja-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/luxor-sfinksikuja-vari2.png",
+    "sha256": "1a123140cbef98875467fcb9efc810c574915444d5e1425b886974ca2e5cb425",
+    "bytes": 1550241,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "luxor-mutin-temppeli",
+    "replacement_id": "luxor-mutin-temppeli-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/luxor-mutin-temppeli-vari2.png",
+    "sha256": "db6d2f2f4bb8d6a1b63bfeaa8de7532ec75bd8302ab1663a0d92e3757f4a066c",
+    "bytes": 1557501,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "luxor-khonsun-temppeli",
+    "replacement_id": "luxor-khonsun-temppeli-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/luxor-khonsun-temppeli-vari2.png",
+    "sha256": "833a9457164f6e7315623bb36d688fed3b88ca7e19ea5f8de10d3d9950a40116",
+    "bytes": 1613416,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "luxor-karnakin-suuri-pylvassali",
+    "replacement_id": "luxor-karnakin-suuri-pylvassali-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/luxor-karnakin-suuri-pylvassali-vari2.png",
+    "sha256": "d29352448e50bca37297a431fb3291ae1ea910f8162d957509703cd5db297257",
+    "bytes": 1831095,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "magadan-kaupungin-sauna",
+    "replacement_id": "magadan-kaupungin-sauna-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/magadan-kaupungin-sauna-vari2.png",
+    "sha256": "193d6798449304d4f3e5b09383cf90c2f31bc53f63fc95bfd7efa4a637645424",
+    "bytes": 1440814,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "magadan-severovostokzoloton-talo",
+    "replacement_id": "magadan-severovostokzoloton-talo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/magadan-severovostokzoloton-talo-vari2.png",
+    "sha256": "1f8887ccc969d72fcd503f6a09c24e032fb0ca6885f81668cfd93cee8ff982ef",
+    "bytes": 1582466,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "magadan-leninin-valtakatu-18",
+    "replacement_id": "magadan-leninin-valtakatu-18-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/magadan-leninin-valtakatu-18-vari2.png",
+    "sha256": "21133bc169a13fc574093b289f0cc0be395d6ebda58c4a8c9b13d4e01db49590",
+    "bytes": 1615762,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "magadan-kinoteatteri-gornjak",
+    "replacement_id": "magadan-kinoteatteri-gornjak-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/magadan-kinoteatteri-gornjak-vari2.png",
+    "sha256": "9f481e2c53c5ae65e993faf12e7cc6b001e68d7edb9b31f4dd0a5929e4274d0f",
+    "bytes": 1664626,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "magadan-nagajevanlahti",
+    "replacement_id": "magadan-nagajevanlahti-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/magadan-nagajevanlahti-vari2.png",
+    "sha256": "088b6da70e036f2b0fda9271ddb777ac9bac0477e0548727957f57a9b3b9cac8",
+    "bytes": 1893218,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "magadan-urheilupalatsi",
+    "replacement_id": "magadan-urheilupalatsi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/magadan-urheilupalatsi-vari2.png",
+    "sha256": "8e669cee0abe71b12c6601213e8c26d5c504b4199dead9b2b5939edfe6ae7957",
+    "bytes": 1615383,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "magadan-pushkinin-kirjasto",
+    "replacement_id": "magadan-pushkinin-kirjasto-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/magadan-pushkinin-kirjasto-vari2.png",
+    "sha256": "75c3359800c52839ca880a8d24a365b0ac888f260947457abd45633b721dd7e1",
+    "bytes": 1555000,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mandalay-mandalay-kukkula",
+    "replacement_id": "mandalay-mandalay-kukkula-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mandalay-mandalay-kukkula-vari2.png",
+    "sha256": "e7f48b2fe9266d402368ee9a104ea256ecca34f8c82e773b9e99fa10fb4938aa",
+    "bytes": 1747398,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mandalay-kuthodaw-pagodi",
+    "replacement_id": "mandalay-kuthodaw-pagodi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mandalay-kuthodaw-pagodi-vari2.png",
+    "sha256": "37a3e5b3788d834f221e39e354d235310add0635e1388f9f66c60c46aa57a809",
+    "bytes": 1605509,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mandalay-kyauktawgyi-pagodi",
+    "replacement_id": "mandalay-kyauktawgyi-pagodi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mandalay-kyauktawgyi-pagodi-vari2.png",
+    "sha256": "0ec2fd73b49195278fe6f3ba443764d67302fe5f5bbd6ecac614802a700ac0fd",
+    "bytes": 1387071,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mandalay-sandamuni-pagodi",
+    "replacement_id": "mandalay-sandamuni-pagodi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mandalay-sandamuni-pagodi-vari2.png",
+    "sha256": "d6fb41f57ed462db0e53f4645ced1d5172dd89ccb3d6ebd4a1d9dc546707150a",
+    "bytes": 1373955,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mandalay-shwenandaw-luostari",
+    "replacement_id": "mandalay-shwenandaw-luostari-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mandalay-shwenandaw-luostari-vari2.png",
+    "sha256": "1314514eeaddad61ae8b8fa7dbf46de2bd03c62e1c34d3fe107f7180ddbee097",
+    "bytes": 1417340,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mandalay-mandalayn-palatsi",
+    "replacement_id": "mandalay-mandalayn-palatsi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mandalay-mandalayn-palatsi-vari2.png",
+    "sha256": "0e8653bedb5f88c757855998126606ed192d5c8da2f89a472ffaf7648b1dce65",
+    "bytes": 725709,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mandalay-zegyo-tori",
+    "replacement_id": "mandalay-zegyo-tori-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mandalay-zegyo-tori-vari2.png",
+    "sha256": "d864910299a893d8b06914adfc796aa5e774322d3ec3c01fee809729de7b8fa2",
+    "bytes": 848762,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mandalay-setkyathiha-pagodi",
+    "replacement_id": "mandalay-setkyathiha-pagodi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mandalay-setkyathiha-pagodi-vari2.png",
+    "sha256": "81805d501789f901860e94de63d835f1b93c38451df4ecbd4452908b537644b4",
+    "bytes": 1421966,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mandalay-mahamuni-temppeli",
+    "replacement_id": "mandalay-mahamuni-temppeli-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mandalay-mahamuni-temppeli-vari2.png",
+    "sha256": "fd55f4b17c3916b1f7fc23f6ad95add9dc0e98207b2ca936326aa41ec2780c6b",
+    "bytes": 1284467,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "manila-binondon-kirkko",
+    "replacement_id": "manila-binondon-kirkko-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/manila-binondon-kirkko-vari2.png",
+    "sha256": "f094e5a0dc9a4398e63b47d727d15025d6b47ec2580117eaba0d67375a3f0e5a",
+    "bytes": 1030708,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "manila-quiapon-kirkko",
+    "replacement_id": "manila-quiapon-kirkko-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/manila-quiapon-kirkko-vari2.png",
+    "sha256": "b7c9069cd224d81738fcb15d678346bcd64c830a34c9c039b36db966e9a86a17",
+    "bytes": 1134650,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "manila-escolta-katu",
+    "replacement_id": "manila-escolta-katu-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/manila-escolta-katu-vari2.png",
+    "sha256": "02599a46a514af59899a0f3926a1d6b078609dacc24fcdfd3396b0d3d651f91e",
+    "bytes": 1181084,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "manila-jones-silta",
+    "replacement_id": "manila-jones-silta-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/manila-jones-silta-vari2.png",
+    "sha256": "37a1d78ac660d82aa5841ea18dfe7a1f994226fe1622cb8e92e6c3cb7b7c4462",
+    "bytes": 382406,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "manila-fort-santiago",
+    "replacement_id": "manila-fort-santiago-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/manila-fort-santiago-vari2.png",
+    "sha256": "d014497a3324dac538c67ff499328f186ba9c75d42100d9a27a908be6c5d35c4",
+    "bytes": 1075372,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "manila-manilan-katedraali",
+    "replacement_id": "manila-manilan-katedraali-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/manila-manilan-katedraali-vari2.png",
+    "sha256": "850f1365b0efc770962b39ca18dd8dfa116027b85a2c32784fbc65199ff4aee0",
+    "bytes": 1018535,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "manila-san-agustinin-kirkko",
+    "replacement_id": "manila-san-agustinin-kirkko-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/manila-san-agustinin-kirkko-vari2.png",
+    "sha256": "59b7e7f90a77ea8bd9f0010ddb79a9199977ea02e1e033319854e679796f8c52",
+    "bytes": 1006603,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "manila-kansallinen-taidemuseo",
+    "replacement_id": "manila-kansallinen-taidemuseo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/manila-kansallinen-taidemuseo-vari2.png",
+    "sha256": "1887485abfc0d4716a53aba16e11ac943f7531d074b9b7169cbc3301293546f0",
+    "bytes": 894531,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "manila-baluarte-de-san-diego",
+    "replacement_id": "manila-baluarte-de-san-diego-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/manila-baluarte-de-san-diego-vari2.png",
+    "sha256": "c14487588bf6955950124e882b738c954994b81cbe05fade3f46c1073acd088b",
+    "bytes": 967595,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "manila-rizal-puisto",
+    "replacement_id": "manila-rizal-puisto-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/manila-rizal-puisto-vari2.png",
+    "sha256": "860f5a324e4796bceb9dbd7bf6b87b2df617b3bb5be7ed0f80a966509c066001",
+    "bytes": 827463,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "marseille-mucem",
+    "replacement_id": "marseille-mucem-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/marseille-mucem-vari2.png",
+    "sha256": "b93cd8b0d732e195fafc9466cef8dbd1e6cfcb7badd2653fc0fbba9d5a49da17",
+    "bytes": 1198211,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "marseille-marseillen-katedraali",
+    "replacement_id": "marseille-marseillen-katedraali-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/marseille-marseillen-katedraali-vari2.png",
+    "sha256": "dbb3b3b35adb0ccb9f883839cfd6cd21cdb6bce46b6a4eaf4e83c5068b4b03ed",
+    "bytes": 1167751,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "marseille-saint-victorin-kirkko",
+    "replacement_id": "marseille-saint-victorin-kirkko-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/marseille-saint-victorin-kirkko-vari2.png",
+    "sha256": "0d4a69fcd086edf4a127006131b6f0218bf66a9dba2c0c610c9701218dd4b44b",
+    "bytes": 1234686,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "marseille-vanhasatama",
+    "replacement_id": "marseille-vanhasatama-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/marseille-vanhasatama-vari2.png",
+    "sha256": "4381d285268a163b6cdc2dc65bba47bdfc30664ccba3d2b93ffa79df5284803c",
+    "bytes": 852313,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "marseille-notre-dame-de-la-garde",
+    "replacement_id": "marseille-notre-dame-de-la-garde-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/marseille-notre-dame-de-la-garde-vari2.png",
+    "sha256": "59c047825f99b092fcccb4875a08509c8f1cdbbb3dc306e90f280db6fde5bee0",
+    "bytes": 985214,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "marseille-saint-charlesin-asema",
+    "replacement_id": "marseille-saint-charlesin-asema-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/marseille-saint-charlesin-asema-vari2.png",
+    "sha256": "43229733637a20bfc4d0cba7fb9d1b73593f4798ad5e78c04e2008c7bf7896dc",
+    "bytes": 1417824,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "masqat-masqatin-portti",
+    "replacement_id": "masqat-masqatin-portti-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/masqat-masqatin-portti-vari2.png",
+    "sha256": "b8e546afbc7b49b9d1a7a3c502ab59ab5b6699835eef690c8763b836a6090b56",
+    "bytes": 948779,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "masqat-al-miranin-linnake",
+    "replacement_id": "masqat-al-miranin-linnake-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/masqat-al-miranin-linnake-vari2.png",
+    "sha256": "130e385ddd7fba64586ac2ad0784a58c4f689dd8d0bf449c5147200e652cfed3",
+    "bytes": 1245759,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "masqat-al-jalalin-linnake",
+    "replacement_id": "masqat-al-jalalin-linnake-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/masqat-al-jalalin-linnake-vari2.png",
+    "sha256": "f8c571de74faea5291585bbb327ad0aef3d31e07a75c1568e5b86b8645be69bb",
+    "bytes": 1122291,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "masqat-al-alamin-palatsi",
+    "replacement_id": "masqat-al-alamin-palatsi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/masqat-al-alamin-palatsi-vari2.png",
+    "sha256": "70be65fb5cbc2d6c122b17d60df894c095c5aff0eef3395beba996f4eccafaf6",
+    "bytes": 857606,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "masqat-bait-al-zubair",
+    "replacement_id": "masqat-bait-al-zubair-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/masqat-bait-al-zubair-vari2.png",
+    "sha256": "0dc9ef495cad1949f48eea6404608585718d53ebfa6f2109827cafabafd826b1",
+    "bytes": 1321250,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "masqat-motishwar-mandir",
+    "replacement_id": "masqat-motishwar-mandir-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/masqat-motishwar-mandir-vari2.png",
+    "sha256": "9cb4bf9875e554d520cbeaf9693c84b283b319f2547bb0b2d3ad6e6fa86a4fbe",
+    "bytes": 1041310,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "medina-al-baqin-hautausmaa",
+    "replacement_id": "medina-al-baqin-hautausmaa-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/medina-al-baqin-hautausmaa-vari2.png",
+    "sha256": "8c26cb8759c78edfc4d29761edf6acc389cee8214b77a218a03c80b57c125f55",
+    "bytes": 1141173,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "medina-al-ghamama-moskeija",
+    "replacement_id": "medina-al-ghamama-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/medina-al-ghamama-moskeija-vari2.png",
+    "sha256": "09be65ccef9cbccf2799d8bd32ad9b44059d5c1ee6d00f4003a9853e821952bc",
+    "bytes": 769550,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "medina-hidzaz-radan-asema",
+    "replacement_id": "medina-hidzaz-radan-asema-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/medina-hidzaz-radan-asema-vari2.png",
+    "sha256": "b9fb91118e2710b5d90337d06a56ddf048bd53d58630a75902eacc3c271028d1",
+    "bytes": 991509,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "medina-profeetan-moskeija",
+    "replacement_id": "medina-profeetan-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/medina-profeetan-moskeija-vari2.png",
+    "sha256": "928468325ec72b576aa5fbd428a402fb68778fe0c7f8bf57e38a50167dfe31b1",
+    "bytes": 1191733,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "medina-qiblatayn-moskeija",
+    "replacement_id": "medina-qiblatayn-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/medina-qiblatayn-moskeija-vari2.png",
+    "sha256": "548eb31ba404e6c3f12f5227ff0d15f467c894b1be56f4a30427b1597ab4ae50",
+    "bytes": 1109020,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "medina-quba-moskeija",
+    "replacement_id": "medina-quba-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/medina-quba-moskeija-vari2.png",
+    "sha256": "003b0ee0c44842e4398f7b580b53fea8f58ac9d8e215709fe6c05f148cdfdbf8",
+    "bytes": 1090580,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "medina-seitseman-moskeijaa",
+    "replacement_id": "medina-seitseman-moskeijaa-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/medina-seitseman-moskeijaa-vari2.png",
+    "sha256": "48e93fc61d3068e5586efab5ad985d4309374c84ef8c01782c42545f40ce84b4",
+    "bytes": 1455629,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mekka-jabal-al-nour",
+    "replacement_id": "mekka-jabal-al-nour-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mekka-jabal-al-nour-vari2.png",
+    "sha256": "45ca912a96e8ea4ef095d123a0afd039937f1f8088bfa58e8582306d7bb90993",
+    "bytes": 1113549,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mekka-jannat-al-mu-alla",
+    "replacement_id": "mekka-jannat-al-mu-alla-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mekka-jannat-al-mu-alla-vari2.png",
+    "sha256": "c8e103ab0f1d26d5c2d6ddcac23a963a47ffd1f6862894542ebf598f9321c32e",
+    "bytes": 1312887,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mekka-jinnien-moskeija",
+    "replacement_id": "mekka-jinnien-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mekka-jinnien-moskeija-vari2.png",
+    "sha256": "e4a74c3a3f2b2856a96862d0e0b9275634cfe0e95073e48ffa3614e5ce734a11",
+    "bytes": 851361,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mekka-kellotorni",
+    "replacement_id": "mekka-kellotorni-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mekka-kellotorni-vari2.png",
+    "sha256": "8a75f7b5f84322db6c979ab21da5bc4b3a9de3862c5ce628c03e7243af899e3f",
+    "bytes": 762556,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mekka-mekan-kirjasto",
+    "replacement_id": "mekka-mekan-kirjasto-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mekka-mekan-kirjasto-vari2.png",
+    "sha256": "62b759b53b98cf427564875b0eb67d2a7bf58b85f39089db7c4583bde387d4a0",
+    "bytes": 1114803,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mekka-suuri-moskeija",
+    "replacement_id": "mekka-suuri-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mekka-suuri-moskeija-vari2.png",
+    "sha256": "79f0c46f8394f5bb5f75c7003b15857f0d077d6752e8931d436cbc0558763f01",
+    "bytes": 1088045,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mosul-al-masfin-moskeija",
+    "replacement_id": "mosul-al-masfin-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mosul-al-masfin-moskeija-vari2.png",
+    "sha256": "475c8ae91fb44e1a0d8732b3aa0db52a4fbcf3d7c585aaf9f8287e84dbdf1cc0",
+    "bytes": 1029145,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mosul-al-nabi-jirjisin-moskeija",
+    "replacement_id": "mosul-al-nabi-jirjisin-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mosul-al-nabi-jirjisin-moskeija-vari2.png",
+    "sha256": "7564afa1c9551d099bc019715fcd4b33fed6fe42493fa0956a64bdda515ec8e2",
+    "bytes": 1106351,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mosul-al-nurin-moskeija",
+    "replacement_id": "mosul-al-nurin-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mosul-al-nurin-moskeija-vari2.png",
+    "sha256": "fe2971076fd903c39d7ef315a4bcb6b4b3ee92bb926a21387caf9bb2b97665c4",
+    "bytes": 1025319,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mosul-bash-tapian-linna",
+    "replacement_id": "mosul-bash-tapian-linna-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mosul-bash-tapian-linna-vari2.png",
+    "sha256": "4340370f4ad2a1af8775c5b2447a62ea0b8847d9b837824bedada73196664e3a",
+    "bytes": 1260381,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mosul-kuyunjikin-kumpu",
+    "replacement_id": "mosul-kuyunjikin-kumpu-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mosul-kuyunjikin-kumpu-vari2.png",
+    "sha256": "765541951c3f0a8942e33702e389faefd0134becec9e91d55770cea12777f17c",
+    "bytes": 1172893,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mosul-nabi-yunusin-kumpu",
+    "replacement_id": "mosul-nabi-yunusin-kumpu-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mosul-nabi-yunusin-kumpu-vari2.png",
+    "sha256": "b36fbc18342d1b96cfc9dd17f08828035fe5c5e87b92f91e1d97f7ce901ebfb0",
+    "bytes": 1431316,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "mosul-qara-saray",
+    "replacement_id": "mosul-qara-saray-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/mosul-qara-saray-vari2.png",
+    "sha256": "5a05947705b1634aa88e6b82f0e0624fb0e0d5df58422c3d296fd921a64b3ce8",
+    "bytes": 1320269,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  }
+]
