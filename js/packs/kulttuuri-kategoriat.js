@@ -108715,6 +108715,37 @@ export const KULTTUURI_KATEGORIAT = {
             'Maalaus näyttää nelimastoisen parkkilaivan Port Stanley kallellaan raskaassa, tummansinisessä merenkäynnissä harmaan myrskytaivaan alla; suuri osa purjeista on reivattu ja aallot lyövät kannelle.',
           lahde: 'T. G. Purvis, Wikimedia Commons (Public domain)',
           wiki: 'Cape Horner',
+          galleria: [
+            {
+              otsikko: 'Myrsky lännestä',
+              tiedosto: '1884 Ship Scudding Off Cape Horn byClementDrew.jpg',
+              lyhyt: 'Laiva pakenee myötätuulessa Kap Hornin myrskyä Clement Drew’n maalauksessa (1884).',
+              selite: 'Clement Drew’n maalaus (1884): täysin takiloitu laiva '
+                + 'kiitää raskaan merenkäynnin ja synkän myrskytaivaan alla '
+                + 'Kap Hornin edustalla — juuri se sää, jonka takia niemeä '
+                + 'kutsuttiin purjelaivojen hautausmaaksi.',
+              lahde: 'Clement Drew, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Yhdysvaltain löytöretkikunnan vesiväri',
+              tiedosto: 'Cape Horn by Alfred Agate.jpg',
+              lyhyt: 'Alfred Agaten vesiväri (1838) Kap Hornista Yhdysvaltain löytöretkikunnalta.',
+              selite: 'Alfred T. Agaten vesiväri (1838): tumma, jyrkkäpiirteinen '
+                + 'niemi kohoaa merestä myrskyisen taivaan alla — kuvattu '
+                + 'Yhdysvaltain Tyynenmeren tutkimusretkikunnan (1838–1842) matkalla.',
+              lahde: 'Alfred Thomas Agate, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Kaksi alusta taistelee vastatuulta',
+              tiedosto: "Nicolas Cammillieri - The Frigate 'Maria Reigersbergen' and Corvette 'Pollux' in stormy weather west of Cape Horn on 10 February 1825.jpg",
+              lyhyt: 'Fregatti Maria Reigersbergen ja korvetti Pollux taistelevat myrskyä vastaan Kap Hornin luona 1825.',
+              selite: 'Nicolas Cammillierin maalaus (n. 1825): hollantilainen '
+                + 'fregatti Maria Reigersbergen ja korvetti Pollux ponnistavat '
+                + 'vastatuuleen kohti Valparaísoa myrskyisessä merenkäynnissä '
+                + 'Kap Hornin länsipuolella, helmikuussa 1825.',
+              lahde: 'Nicolas Cammillieri, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Albatrossi jota ei saanut tappaa',
@@ -109151,6 +109182,27 @@ export const KULTTUURI_KATEGORIAT = {
             'James Glen Wilsonin vuonna 1855 tekemä kynäpiirros näyttää Government Housen pitkän, kuistillisen puurakennuksen, lipputangon Union Jackineen sekä kaksi ratsastajaa edustan nurmikolla.',
           lahde: 'James Glen Wilson (1827-1863), Wikimedia Commons (Public domain)',
           wiki: 'Alexander Maconochie',
+          galleria: [
+            {
+              otsikko: 'Vankisiirtola 1839',
+              tiedosto: 'Penal settlement at Norfolk Island c 1839 watercolour.jpg',
+              lyhyt: 'Thomas Sellerin vesiväri (n. 1839) näyttää Norfolkin ankaran rangaistussiirtolan.',
+              selite: 'Thomas Sellerin vesiväri (n. 1839): Norfolkin '
+                + 'rangaistussiirtolan rakennukset komentaja Morissetin '
+                + 'ankaran kauden aikana, jolloin saaren maine "helvettinä '
+                + 'maan päällä" vakiintui.',
+              lahde: 'Thomas Seller, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Sydney Bay 1850-luvulla',
+              tiedosto: 'Sydney Bay, Norfolk Island Wilson Nla.obj-135935390-1.jpg',
+              lyhyt: 'James Glen Wilsonin maalaus Sydney Baystä, jonne pitcairnilaiset saapuivat.',
+              selite: 'James Glen Wilsonin maalaus (1850-luku): Sydney Bayn '
+                + 'ranta ja Kingstonin siirtokunta, samalla rannalla, jolle '
+                + 'pitcairnilaiset nousivat maihin vuonna 1856.',
+              lahde: 'James Glen Wilson, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Pitcairnilaisten pitkä purjehdus',
