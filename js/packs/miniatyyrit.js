@@ -859,12 +859,12 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Jameh-moskeija': 'isfahan-jameh-moskeija',
-    'Isfahanin basaari': 'isfahan-isfahanin-basaari',
-    'Ali Qapu': 'isfahan-ali-qapu',
-    'Shaahin moskeija': 'isfahan-shaahin-moskeija',
-    'Hasht Behesht': 'isfahan-hasht-behesht',
-    'Chahar Baghin koulu': 'isfahan-chahar-baghin-koulu',
+    'Jameh-moskeija': 'isfahan-jameh-moskeija-vari2',
+    'Isfahanin basaari': 'isfahan-isfahanin-basaari-vari2',
+    'Ali Qapu': 'isfahan-ali-qapu-vari2',
+    'Shaahin moskeija': 'isfahan-shaahin-moskeija-vari2',
+    'Hasht Behesht': 'isfahan-hasht-behesht-vari2',
+    'Chahar Baghin koulu': 'isfahan-chahar-baghin-koulu-vari2',
   },
   tabriz: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1042,12 +1042,12 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Damaskoksen portti': 'jerusalem-damaskoksen-portti',
-    'Pyhän haudan kirkko': 'jerusalem-pyhan-haudan-kirkko',
-    Kalliomoskeija: 'jerusalem-kalliomoskeija',
-    'Läntinen muuri': 'jerusalem-lantinen-muuri',
-    'Jaffan portti': 'jerusalem-jaffan-portti',
-    'Al-Aqsa-moskeija': 'jerusalem-al-aqsa-moskeija',
+    'Damaskoksen portti': 'jerusalem-damaskoksen-portti-vari2',
+    'Pyhän haudan kirkko': 'jerusalem-pyhan-haudan-kirkko-vari2',
+    Kalliomoskeija: 'jerusalem-kalliomoskeija-vari2',
+    'Läntinen muuri': 'jerusalem-lantinen-muuri-vari2',
+    'Jaffan portti': 'jerusalem-jaffan-portti-vari2',
+    'Al-Aqsa-moskeija': 'jerusalem-al-aqsa-moskeija-vari2',
   },
   petra: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1176,14 +1176,14 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Saha-teatteri': 'jakutsk-saha-teatteri',
-    'Jaroslavskin museo': 'jakutsk-jaroslavskin-museo',
-    'Spasskin luostari': 'jakutsk-spasskin-luostari',
-    'Nikolskin kirkko': 'jakutsk-nikolskin-kirkko',
-    'Pushkinin draamateatteri': 'jakutsk-pushkinin-draamateatteri',
-    'Kansallinen taidemuseo': 'jakutsk-kansallinen-taidemuseo',
-    Vanhakaupunki: 'jakutsk-vanhakaupunki',
-    'Ooppera- ja balettiteatteri': 'jakutsk-ooppera-ja-balettiteatteri',
+    'Saha-teatteri': 'jakutsk-saha-teatteri-vari2',
+    'Jaroslavskin museo': 'jakutsk-jaroslavskin-museo-vari2',
+    'Spasskin luostari': 'jakutsk-spasskin-luostari-vari2',
+    'Nikolskin kirkko': 'jakutsk-nikolskin-kirkko-vari2',
+    'Pushkinin draamateatteri': 'jakutsk-pushkinin-draamateatteri-vari2',
+    'Kansallinen taidemuseo': 'jakutsk-kansallinen-taidemuseo-vari2',
+    Vanhakaupunki: 'jakutsk-vanhakaupunki-vari2',
+    'Ooppera- ja balettiteatteri': 'jakutsk-ooppera-ja-balettiteatteri-vari2',
   },
   magadan: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1228,13 +1228,13 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Vanha rautatieasema': 'jekaterinburg-vanha-rautatieasema',
-    'Kharitonovin kartano': 'jekaterinburg-kharitonovin-kartano',
-    'Uralin valtionyliopisto': 'jekaterinburg-uralin-valtionyliopisto',
-    'Historiallinen aukio': 'jekaterinburg-historiallinen-aukio',
-    Kuvataidemuseo: 'jekaterinburg-kuvataidemuseo',
-    'Suuri Zlatoust': 'jekaterinburg-suuri-zlatoust',
-    'Kolminaisuuden katedraali': 'jekaterinburg-kolminaisuuden-katedraali',
+    'Vanha rautatieasema': 'jekaterinburg-vanha-rautatieasema-vari2',
+    'Kharitonovin kartano': 'jekaterinburg-kharitonovin-kartano-vari2',
+    'Uralin valtionyliopisto': 'jekaterinburg-uralin-valtionyliopisto-vari2',
+    'Historiallinen aukio': 'jekaterinburg-historiallinen-aukio-vari2',
+    Kuvataidemuseo: 'jekaterinburg-kuvataidemuseo-vari2',
+    'Suuri Zlatoust': 'jekaterinburg-suuri-zlatoust-vari2',
+    'Kolminaisuuden katedraali': 'jekaterinburg-kolminaisuuden-katedraali-vari2',
   },
   novosibirsk: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1250,13 +1250,13 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Znamenskin luostari': 'irkutsk-znamenskin-luostari',
-    'Epifanian katedraali': 'irkutsk-epifanian-katedraali',
-    'Taivaaseenastumisen kirkko': 'irkutsk-taivaaseenastumisen-kirkko',
-    Rautatieasema: 'irkutsk-rautatieasema',
-    'Ristin ylentämisen kirkko': 'irkutsk-ristin-ylentamisen-kirkko',
-    '130. kortteli': 'irkutsk-130-kortteli',
-    'Jäänmurtaja Angara': 'irkutsk-jaanmurtaja-angara',
+    'Znamenskin luostari': 'irkutsk-znamenskin-luostari-vari2',
+    'Epifanian katedraali': 'irkutsk-epifanian-katedraali-vari2',
+    'Taivaaseenastumisen kirkko': 'irkutsk-taivaaseenastumisen-kirkko-vari2',
+    Rautatieasema: 'irkutsk-rautatieasema-vari2',
+    'Ristin ylentämisen kirkko': 'irkutsk-ristin-ylentamisen-kirkko-vari2',
+    '130. kortteli': 'irkutsk-130-kortteli-vari2',
+    'Jäänmurtaja Angara': 'irkutsk-jaanmurtaja-angara-vari2',
   },
   kioto: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1455,16 +1455,16 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Sunda Kelapan satama': 'jakarta-sunda-kelapan-satama',
-    Merenkulkumuseo: 'jakarta-merenkulkumuseo',
-    'Kota Intanin nostosilta': 'jakarta-kota-intanin-nostosilta',
-    'Fatahillah-aukio': 'jakarta-fatahillah-aukio',
-    'Toko Merah': 'jakarta-toko-merah',
-    'Jakarta Kotan asema': 'jakarta-jakarta-kotan-asema',
-    'Kim Tek Ie -temppeli': 'jakarta-kim-tek-ie-temppeli',
-    'Jakartan katedraali': 'jakarta-jakartan-katedraali',
-    'Istiqlal-moskeija': 'jakarta-istiqlal-moskeija',
-    'Kansallismonumentti Monas': 'jakarta-kansallismonumentti-monas',
+    'Sunda Kelapan satama': 'jakarta-sunda-kelapan-satama-vari2',
+    Merenkulkumuseo: 'jakarta-merenkulkumuseo-vari2',
+    'Kota Intanin nostosilta': 'jakarta-kota-intanin-nostosilta-vari2',
+    'Fatahillah-aukio': 'jakarta-fatahillah-aukio-vari2',
+    'Toko Merah': 'jakarta-toko-merah-vari2',
+    'Jakarta Kotan asema': 'jakarta-jakarta-kotan-asema-vari2',
+    'Kim Tek Ie -temppeli': 'jakarta-kim-tek-ie-temppeli-vari2',
+    'Jakartan katedraali': 'jakarta-jakartan-katedraali-vari2',
+    'Istiqlal-moskeija': 'jakarta-istiqlal-moskeija-vari2',
+    'Kansallismonumentti Monas': 'jakarta-kansallismonumentti-monas-vari2',
   },
   manila: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1524,14 +1524,14 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Timur Shahin mausoleumi': 'kabul-timur-shahin-mausoleumi',
-    'Shah-Do Shamshiran moskeija': 'kabul-shah-do-shamshiran-moskeija',
-    'Ka Faroshin lintutori': 'kabul-ka-faroshin-lintutori',
-    'Bala Hissar': 'kabul-bala-hissar',
-    'Baburin puutarhat': 'kabul-baburin-puutarhat',
-    'Kabulin vanha kaupunginmuuri': 'kabul-kabulin-vanha-kaupunginmuuri',
-    'Chihil Sutunin palatsi': 'kabul-chihil-sutunin-palatsi',
-    'Darul Amanin palatsi': 'kabul-darul-amanin-palatsi',
+    'Timur Shahin mausoleumi': 'kabul-timur-shahin-mausoleumi-vari2',
+    'Shah-Do Shamshiran moskeija': 'kabul-shah-do-shamshiran-moskeija-vari2',
+    'Ka Faroshin lintutori': 'kabul-ka-faroshin-lintutori-vari2',
+    'Bala Hissar': 'kabul-bala-hissar-vari2',
+    'Baburin puutarhat': 'kabul-baburin-puutarhat-vari2',
+    'Kabulin vanha kaupunginmuuri': 'kabul-kabulin-vanha-kaupunginmuuri-vari2',
+    'Chihil Sutunin palatsi': 'kabul-chihil-sutunin-palatsi-vari2',
+    'Darul Amanin palatsi': 'kabul-darul-amanin-palatsi-vari2',
   },
   chennai: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
