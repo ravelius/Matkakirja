@@ -743,7 +743,9 @@ namespace Matkakirja.Natiivi
             r.Tausta.style.paddingTop = reunat.y;
             r.Tausta.style.paddingRight = reunat.z;
             r.Tausta.style.paddingBottom = reunat.w;
-            r.Tausta.RegisterCallback<PointerDownEvent>(e => { if (e.target == r.Tausta) Sulje(); });
+            // Löydös 94: pohjan napautus ei sulje (web .kartta-suurennos: vain rasti, omistaja 21.8.2026), mutta se ei
+            // myöskään valu alla olevaan nähtävyysarkkiin.
+            r.Tausta.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
 
             r.Kortti = Rakenne.El("mk-kohdekartta-kokoruutu__kortti", r.Tausta);
             r.Nakyma = new KohdekarttaNakyma(k, kokoruutu: true);

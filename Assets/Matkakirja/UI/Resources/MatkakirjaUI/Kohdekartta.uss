@@ -104,7 +104,7 @@
 
 .mk-kohdekartta__kokoruutu .mk-nappi__teksti {
     font-size: 10.6px;
-    letter-spacing: 1.3px;
+    letter-spacing: 12px; /* web 0.12em */
     color: rgba(70, 51, 31, 0.85);
 }
 
@@ -268,4 +268,123 @@
     color: rgb(47, 38, 27);
     background-color: rgba(247, 240, 222, 0.72);
     border-radius: 2px;
+}
+
+
+/* --- Löydös 94 (omistaja, build 13): kohdekartan KOKORUUTU (web avaaKarttaSuurennos, css/styles.css
+ * .postikortti.kulttuuri-suurennos.kartta-suurennos 17865–18062). Tyylit puuttuivat kokonaan, joten näkymä aukesi
+ * tyylittömänä vasempaan yläkulmaan. Koko ruudun pohja #0b0805 (::before), kortti ilman omaa taustaa keskellä
+ * (leveys koodista: min(98 % ruudusta, 85 % korkeudesta × kartan suhde)), rasti kortin oikeassa yläkulmassa,
+ * vaaleat kohdenimet ja lähderivi kartan alla. Pohjan napautus ei sulje (web: vain rasti, omistaja 21.8.2026). --- */
+.mk-kohdekartta-kokoruutu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b0805;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-kohdekartta-kokoruutu.mk-auki {
+    opacity: 1;
+}
+
+.mk-kohdekartta-kokoruutu__kortti {
+    position: relative;
+    flex-shrink: 0;
+    max-width: 98%;
+}
+
+.mk-kohdekartta--kokoruutu {
+    width: 100%;
+}
+
+.mk-kohdekartta--kokoruutu .mk-kohdekartta__kehys {
+    margin: 0;
+    border-width: 0;
+}
+
+/* Web .dialog .kartta-suurennos button.uutinen-sulku: 2rem, top 0.35rem, right 0.4rem, paperinen neliö. */
+.mk-kohdekartta-kokoruutu__sulku {
+    position: absolute;
+    top: 5.6px;
+    right: 6.4px;
+    width: 32px;
+    height: 32px;
+    min-height: 32px;
+    padding: 0;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.45);
+    border-radius: 3px;
+    background-color: rgba(247, 240, 222, 0.88);
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-kohdekartta-kokoruutu__sulku .mk-nappi__teksti {
+    font-size: 20px;
+    -unity-text-align: middle-center;
+    color: #2c2318;
+}
+
+.mk-kohdekartta-kokoruutu__sulku:active {
+    background-color: rgba(255, 250, 238, 0.98);
+    border-color: rgba(70, 51, 31, 0.75);
+}
+
+/* Web .kartta-suurennos-selitteet: rivitetty keskitetty luettelo (gap 0.3rem 1rem), margin-top 0.45rem, sivut 0.5rem,
+ * enintään 20 % korkeudesta (koodi). */
+.mk-kohdekartta-kokoruutu__selitteet {
+    flex-shrink: 1;
+    margin-top: 7.2px;
+    padding: 0 8px;
+}
+
+.mk-kohdekartta-kokoruutu__selitteet .unity-scroll-view__content-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Web .dialog .kartta-suurennos .kartta-selitteet .kartta-selite: Kone 0.78rem, harvennus 0.03em, vaalea. */
+.mk-kohdekartta-kokoruutu__selite {
+    min-height: 0;
+    margin: 0 8px 4.8px 8px;
+    padding: 1.6px 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 12.5px;
+    letter-spacing: 3px; /* web 0.03em */
+    color: #e4dccb; /* web rgba(247, 239, 220, 0.92) pohjalla #0b0805 */
+    white-space: normal;
+}
+
+.mk-kohdekartta-kokoruutu__selite .mk-nappi__teksti {
+    font-size: 12.5px;
+    letter-spacing: 3px; /* web 0.03em */
+    color: #e4dccb; /* web rgba(247, 239, 220, 0.92) pohjalla #0b0805 */
+}
+
+.mk-kohdekartta-kokoruutu__selite--nappi:active .mk-nappi__teksti {
+    color: #f0d9a4;
+}
+
+/* Web .postikortti.kulttuuri-suurennos .kuvalahde: 0.6rem, vaalea 0,62, keskitetty, margin-top 0.3rem. */
+.mk-kohdekartta-kokoruutu__lahde {
+    margin-top: 4.8px;
+    font-size: 9.6px;
+    -unity-text-align: middle-center;
+    white-space: normal;
+    color: #9d978a; /* web rgba(247, 239, 220, 0.62) pohjalla #0b0805 */
+}
+
+.mk-kohdekartta-kokoruutu__kortti--levitetty .mk-kohdekartta-kokoruutu__selitteet,
+.mk-kohdekartta-kokoruutu__kortti--levitetty .mk-kohdekartta-kokoruutu__lahde {
+    display: none;
 }
