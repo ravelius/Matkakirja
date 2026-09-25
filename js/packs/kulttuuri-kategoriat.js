@@ -113551,6 +113551,268 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Tilapia',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on koko järvi, joten
+       * opas kulkee rantakaupunkien kautta kolmessa maassa. Taustatiedot
+       * englannin Wikipediasta (Entebbe, Entebbe International Airport,
+       * National Botanical Gardens (Uganda), Uganda Wildlife Conservation
+       * Education Centre, Ngamba Island Chimpanzee Sanctuary, Mabamba Bay,
+       * Shoebill, Kisumu, Kisumu Impala Sanctuary, Kit-Mikayi, Rusinga
+       * Island, Mfangano Island, Abasuba Community Peace Museum, Tom Mboya,
+       * Proconsul, Mwanza, Saanane Island National Park, Rubondo Island
+       * National Park, Lake Victoria ferries, MV Victoria (1959),
+       * Kigongo–Busisi Bridge, Lake Victoria: bilharsian kotilot),
+       * Wikivoyagesta (Lake Victoria, Entebbe, Kisumu, Mwanza, Bukoba) ja
+       * saksan Wikipediasta (Mwanza: Bismarckin muistomerkki, Tampere
+       * ystävyyskaupunkina; Saanane-Nationalpark: Tansanian pienin
+       * kansallispuisto; Tampere myös suomen Wikipedian Mwanza-artikkelissa)
+       * — teksti omaa. Hinnat, aukioloajat ja laivojen aikataulut jätetty
+       * pois, koska lähteiden tiedot ovat vuosien takaa. Nostojen ja
+       * gallerioiden aiheita (Speke, Ripon Falls, Stanley, järven koko ja
+       * kolmen maan jako, Ssese-saaret, kalastus, kirjoahvenet, niiliahven,
+       * kalasääski, papyruksen ekologia) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja wikitekstistä, ja
+       * kuvat katsottu silmin. Pystykuva: Bismarckin kallio Mwanzassa.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Bismarck Rock (5385361213).jpg',
+          lyhyt: 'Bismarckin kallio nousee Viktorianjärvestä Mwanzan rannan edustalla.',
+          selite: 'Pyöreiden graniittilohkareiden kasa nousee järvestä '
+            + 'Mwanzan rannan edustalla, ja sen laella seisoo kapea '
+            + 'pystyssä oleva kivi. Etualalla rannalla kasvaa ruohoa. Kuva '
+            + 'on otettu joulukuussa 2010.',
+          lahde: 'Rahim.Lalani, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Viktorianjärvelle saavutaan useimmiten lentäen: Ugandan '
+          + 'ainoa kansainvälinen lentoasema on Entebben niemellä aivan '
+          + 'järven rannassa, ja Kenian Kisumussa ja Tansanian Mwanzassa on '
+          + 'omat kenttänsä. Järveä ei nykyään kierretä yhdellä laivalla, '
+          + 'sillä 1900-luvun reittilaivat ovat jääneet historiaan ja lautat '
+          + 'kulkevat enimmäkseen kunkin maan omilla vesillä. Matka kannattaa '
+          + 'siksi rakentaa rantakaupunkien varaan: Entebbestä veneellä '
+          + 'simpanssien saarelle, Kisumusta luo-kansan pyhälle kivelle, '
+          + 'Mbitasta Rusingan ja Mfanganon saarille ja Mwanzasta '
+          + 'kansallispuistosaarille. Noin 1 100 metrin korkeus pitää '
+          + 'ilmaston tasaisena, ja kuivimmat matkakuukaudet ovat Wikivoyagen '
+          + 'mukaan kesäkuusta syyskuuhun sekä joulukuusta helmikuuhun. '
+          + 'Järveen ei mennä uimaan: rantavesissä leviää bilharsia, ja '
+          + 'rannoilla liikkuu krokotiileja ja virtahepoja.',
+        artikkeli: {
+          nimi: 'Matkailijan Viktoria Nyanza',
+          teksti: 'Afrikan suurimman järven rannoille päästään kaupunki kerrallaan.',
+          nosto: 'Vuonna 1959 Glasgow\'ssa rakennettu Victoria-laiva '
+            + 'laivattiin järvelle 1 500 laatikossa, ja se kulkee yhä '
+            + 'Mwanzan ja Bukoban väliä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kiitotie järven niemellä',
+              teksti: 'Entebbe on useimmille ensimmäinen kosketus järveen, '
+                + 'sillä Ugandan ainoa kansainvälinen lentoasema on kaupungin '
+                + 'niemellä veden ympäröimänä. Kiitotietä pidennettiin '
+                + 'vuonna 1951 ensimmäisiä suihkumatkustajakoneita varten, ja '
+                + 'Kampalaan on kentältä tietä pitkin noin 40 kilometriä. Moni '
+                + 'viettää ensimmäisen tai viimeisen yönsä pääkaupungin sijaan '
+                + 'Entebbessä, jonka rauhallisia katuja ja puhdasta ilmaa '
+                + 'Wikivoyage kehuu. Kaupunki oli Ugandan protektoraatin '
+                + 'hallinnon keskus vuoteen 1962, ja siirtomaa-ajan puistot '
+                + 'reunustavat yhä rantaa. Kasvitieteellinen puutarha '
+                + 'perustettiin vuonna 1898, ja sen sademetsäosan kerrotaan '
+                + 'näkyvän 1940-luvun Tarzan-elokuvissa; puissa näkee '
+                + 'mustavalkoisia guerezoja ja sarvinokkia. Vieressä on '
+                + 'Ugandan luonnonsuojelun opetuskeskus, joka aloitti 1952 '
+                + 'loukkaantuneiden ja orpojen villieläinten vastaanottona ja '
+                + 'toimii nykyään maan kansallisena eläintarhana. Rannasta '
+                + 'lähtee veneitä noin 23 kilometrin päähän Ngamban saarelle, '
+                + 'jonka 40 hehtaarin sademetsä on vuodesta 1998 ollut '
+                + 'salametsästäjiltä pelastettujen orpojen simpanssien '
+                + 'turvapaikka; vierailijat seuraavat ruokintaa aidan takaa. '
+                + 'Aamuvarhaisella lintuharrastajat suuntaavat niemen '
+                + 'luoteispuolelle Mabamban lahdelle, vuodesta 2006 '
+                + 'Ramsar-sopimuksella suojellulle kosteikolle, jossa kapeilla '
+                + 'kanooteilla etsitään harvinaista kenkänokkaa. Kosteikko '
+                + 'tunnetaan keuhkokaloistaan, joita luganda-kielellä kutsutaan '
+                + 'mambaksi, ja Ugandassa kenkänokka ruokkii poikasiaan juuri '
+                + 'keuhkokaloilla.',
+              kuva: [
+                {
+                  tiedosto: 'Entebbe Aerial view.jpg',
+                  lyhyt: 'Entebben niemi ilmasta: lentoaseman kiitotie kulkee veden ympäröimällä kannaksella.',
+                  selite: 'Ilmakuvassa Entebben niemi työntyy '
+                    + 'Viktorianjärveen, ja sen poikki kulkee lentoaseman pitkä '
+                    + 'kiitotie. Kaupungin talot ja puut peittävät niemen '
+                    + 'kärkeä. Kuva on otettu toukokuussa 2012.',
+                  lahde: 'Niranjanoak, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Entebbe Botanical Gardens 4.jpg',
+                  lyhyt: 'Sammaloituneet kiviportaat nousevat Entebben kasvitieteellisen puutarhan lehväkatoksen alla.',
+                  selite: 'Leveät kiviportaat nousevat palmujen ja köynnösten '
+                    + 'muodostaman tunnelin läpi kohti valoisaa aukeaa '
+                    + 'Entebben kasvitieteellisessä puutarhassa. Kuva on '
+                    + 'otettu joulukuussa 2010.',
+                  lahde: 'Gotouganda.com, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Ngamba Island Chimpanzee Sanctuary - Pallet.jpg',
+                  lyhyt: 'Vierailijat seuraavat Ngamban saaren simpansseja aidan takaa puiselta laiturilta.',
+                  selite: 'Ngamban simpanssien turvapaikassa vierailijat '
+                    + 'seisovat puisella katselulaiturilla sähköaidan takana, '
+                    + 'ja nurmikolla liikkuu simpansseja. Kuva on otettu '
+                    + 'lokakuussa 2008.',
+                  lahde: 'Eduard Grebe (Maanscyn), Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kisumu ja ensimmäisen vaimon kivi',
+              teksti: 'Kenian puolen suurin kaupunki Kisumu on luo-kansan '
+                + 'keskus Winamin lahden pohjukassa. Mombasasta rakennettu '
+                + 'Ugandan rautatie saavutti sen laiturin joulukuussa 1901, '
+                + 'ja kaupunki kantoi hetken nimeä Port Florence, kunnes vanha '
+                + 'nimi palasi. Nimen arvellaan juontuvan vaihtokauppaa '
+                + 'tarkoittavasta sanasta. Kaupungin laidalla on alle '
+                + 'neliökilometrin kokoinen impalasuojelualue, jonka '
+                + 'rantapolulla kävellään impalojen keskellä ja jonka '
+                + 'viereisillä soilla elää uhanalainen sitatunga-antilooppi. '
+                + 'Sen eteläpuolella Hippo Pointissa kokoonnutaan katsomaan '
+                + 'auringonlaskua järven ylle, vaikka virtahepoja näkee '
+                + 'nimestä huolimatta harvoin. Viereisellä Dungan rannalla '
+                + 'papyrussuolle rakennettu pitkospuureitti vie lintujen '
+                + 'luo. Vuonna 1980 perustettu Kisumun museo on rakennettu '
+                + 'luo-talon pihapiirin muotoon, ja sen suurin näyttely on '
+                + 'täysikokoinen perinteinen pihapiiri isännän talon, '
+                + 'aittojen ja kolmen vaimon majojen kanssa. Noin 29 '
+                + 'kilometriä kaupungista länteen kohoaa Kit Mikayi, '
+                + 'toistensa päälle kasautuneista lohkareista syntynyt '
+                + 'kalliotorni, jonka nimi tarkoittaa luon kielellä '
+                + 'ensimmäisen vaimon kiveä. Tarinan mukaan Ngeso-niminen '
+                + 'mies vietti päivänsä kiven luolassa, ja hänen vaimonsa '
+                + 'kertoi kyselijöille miehen menneen ensimmäisen vaimonsa '
+                + 'luo. Kivellä rukoilevat ja paastoavat yhä Legio Maria '
+                + '-kirkon pyhiinvaeltajat, ja Unesco lisäsi pyhäkön '
+                + 'rituaalit kiireellisesti suojeltavan aineettoman perinnön '
+                + 'luetteloon vuonna 2019.',
+              kuva: {
+                tiedosto: 'KIT MIKAYI a.jpg',
+                lyhyt: 'Kit Mikayin lohkarepino kohoaa vehreän rinteen yläpuolelle Kisumun länsipuolella.',
+                selite: 'Kit Mikayin suuret, halkeilleet lohkareet ovat '
+                  + 'kasautuneet kahdeksi torniksi puuston yläpuolelle. Luon '
+                  + 'kielellä nimi tarkoittaa ensimmäisen vaimon kiveä. Kuva '
+                  + 'on otettu kesäkuussa 2021.',
+                lahde: 'Comondi, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Fossiilisaari ja kalliomaalaukset',
+              teksti: 'Winamin lahden suulla Kenian puolella Mbitan '
+                + 'pikkukaupungista pääsee sillalla Rusingan saarelle, joka on '
+                + 'noin 16 kilometriä pitkä ja enimmillään viisi leveä. Saari '
+                + 'on paleontologeille tuttu: sen tulivuorituhkan kerroksista '
+                + 'on kaivettu tuhansia noin 18 miljoonaa vuotta vanhoja '
+                + 'mioseenikauden nisäkkäiden fossiileja. Vuonna 1948 Mary '
+                + 'Leakey löysi saarelta ensimmäisen kokonaisen '
+                + 'Proconsul-kallon, apinan, jota pidettiin tuolloin '
+                + 'ihmisapinoiden varhaisena kantamuotona. Rantojen musta '
+                + 'hiekka kimaltelee, sillä se on rapautunut vanhan '
+                + 'tulivuoren laavasta, ja siinä on granaatti- ja '
+                + 'magnetiittikiteitä. Saarella on myös Tom Mboyan hauta. '
+                + 'Itsenäisen Kenian nouseva poliitikko, jota pidettiin '
+                + 'Jomo Kenyattan todennäköisenä seuraajana, murhattiin '
+                + '1969, ja hänen kartiokattoinen mausoleuminsa valmistui '
+                + 'seuraavana vuonna. Länsinaapuri Mfangano on syrjäisempi, '
+                + 'ja sinne mennään veneellä. Saarella asuu Kenian suurin '
+                + 'suban kieltä puhuva yhteisö, ja ensimmäinen auto ajoi '
+                + 'saarella vasta vuonna 2007. Mfanganon kalliosuojissa on '
+                + 'maalauksia, joiden on arveltu olevan jopa 2 000 vuotta '
+                + 'vanhoja ja varhaisten metsästäjä-keräilijöiden tekemiä. '
+                + 'Paikallinen Abasuba-yhteisön rauhanmuseo huolehtii '
+                + 'kolmesta maalauspaikasta ja opastaa kävijät niille.',
+              kuva: {
+                tiedosto: 'Tom Mboya Mausoleum.jpg',
+                lyhyt: 'Tom Mboyan mausoleumin valkoinen kartiokatto kohoaa Rusingan saarella.',
+                selite: 'Tom Mboyan mausoleumin valkoinen kartiokatto '
+                  + 'kohoaa pyöreän kivirakennuksen päällä, ja edessä on '
+                  + 'penkein kalustettu katos vierailijoille. Kuva on otettu '
+                  + 'kesäkuussa 2012.',
+                lahde: 'Wycondi, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kalliokaupunki ja saaripuistot',
+              teksti: 'Järven etelärannalla oleva Mwanza on Tansanian '
+                + 'toiseksi suurin kaupunki, ja vuoden 2022 väestönlaskennassa '
+                + 'siellä asui yli miljoona ihmistä. Asukkaat kutsuvat sitä '
+                + 'kalliokaupungiksi, Rock Cityksi, sillä pyöreitä '
+                + 'graniittilohkareita on kaikkialla: kukkuloilla, pihoilla '
+                + 'ja rannan edustalla. Tunnetuin on vedestä nouseva '
+                + 'Bismarckin kallio, jonka nimi on jäänne Saksan '
+                + 'siirtomaavallasta. Kalliolla seisonut Bismarckin '
+                + 'muistomerkki poistettiin, kun britit valtasivat kaupungin '
+                + 'ensimmäisessä maailmansodassa. Capri Pointin niemeltä on '
+                + 'vain noin 500 metriä Saananen saarelle, joka on Tansanian '
+                + 'pienin kansallispuisto. Sen kallioilla elää seeproja, '
+                + 'kivikoita ja brazzanmarakatteja, joita ei Tansaniassa '
+                + 'tavata muualla. Maaliskuussa 1979, Ugandan–Tansanian sodan '
+                + 'aikana, Libyan pommikone yritti iskeä Mwanzaan mutta ohitti '
+                + 'kaupungin, ja sen raketit osuivat saaren silloiseen '
+                + 'riistansuojelualueeseen. Järven lounaiskulmassa on '
+                + 'Rubondon saaren kansallispuisto, jonne pääsee veneellä tai '
+                + 'pienkoneella. Saaresta noin neljä viidesosaa on metsää, ja '
+                + 'siellä elää simpansseja, joiden esi-isät olivat viettäneet '
+                + 'vuosia eurooppalaisissa eläintarhoissa ja sirkuksissa: '
+                + 'saksalainen eläintieteilijä Bernhard Grzimek vapautti '
+                + 'saarelle 17 simpanssia vuosina 1966–1969. Mwanzalla on '
+                + 'yhteys myös Suomeen, sillä Tampere on sen ystävyyskaupunki.',
+              kuva: {
+                tiedosto: 'Rubondo National Park.jpg',
+                lyhyt: 'Hiekkaranta ja palmu Rubondon saaren kansallispuistossa järven lounaiskulmassa.',
+                selite: 'Vaalea hiekkaranta kaartuu tyynen lahden reunalla '
+                  + 'Rubondon saarella, ja lahden takana kohoaa metsäinen '
+                  + 'kukkula. Rannalla on veneen muotoinen penkki ja '
+                  + 'etualalla palmu. Kuva on otettu elokuussa 2023.',
+                lahde: 'Asterlegorch367, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Laivalla, lautalla ja sillalla',
+              teksti: '1900-luvulla järveä kiersivät reittilaivat, jotka '
+                + 'yhdistivät Kenian, Ugandan ja Tansanian satamat ja '
+                + 'rautatiet. Nykyään lautat liikennöivät enimmäkseen kunkin '
+                + 'maan omilla vesillä, ja Wikivoyagen mukaan Kisumusta ei '
+                + 'kulje matkustajalauttaa muihin järven kaupunkeihin. '
+                + 'Laivoja on eniten Tansanian puolella. Mwanzan ja Bukoban '
+                + 'väliä kulkee yön yli New Victoria, entinen RMS Victoria: '
+                + 'se rakennettiin Glasgow\'ssa 1959, purettiin 1 500 '
+                + 'laatikkoon, laivattiin Mombasan kautta Kisumuun ja koottiin '
+                + 'uudelleen järven rannalla. Vuosien tauon jälkeen '
+                + 'kunnostettu laiva palasi reitille vuonna 2020. Mwanzan '
+                + 'länsipuolella lautta vaihtui kesällä 2025 siltaan: 3,2 '
+                + 'kilometrin Kigongo–Busisi-silta ylittää Mwanzan lahden, ja '
+                + 'ylitys, joka lautalla jonotuksineen saattoi kestää '
+                + 'tunteja, sujuu autolla muutamassa minuutissa. Siltaa on '
+                + 'kutsuttu Itä-Afrikan pisimmäksi. Vesillä kannattaa '
+                + 'käyttää vain rekisteröityjä veneitä, joissa on '
+                + 'pelastusliivit, sillä järvelle voi nousta äkillinen '
+                + 'myrsky. Uimaan ei mennä: rantavesien kotilot levittävät '
+                + 'bilharsiaa eli skistosomiaasia, ja rannoilla liikkuu '
+                + 'krokotiileja ja virtahepoja. Koko järven seutu on myös '
+                + 'malaria-aluetta, joten hyttysverkko ja karkotteet kuuluvat '
+                + 'matkatavaroihin.',
+              kuva: {
+                tiedosto: 'M.V. Sengerema.JPG',
+                lyhyt: 'Sengerema-lautta ylittää Mwanzan lahtea Geitaan johtavalla päätiellä vuonna 2014.',
+                selite: 'Sinivalkoinen autolautta Sengerema kulkee Mwanzan '
+                  + 'lahden poikki, ja sen takana kohoaa lohkareinen kukkula. '
+                  + 'Kuva on otettu tammikuussa 2014, ennen kuin reitin '
+                  + 'rinnalle valmistui Kigongo–Busisi-silta.',
+                lahde: 'Macabe5387, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'jarvielama',
