@@ -41,9 +41,10 @@ namespace Matkakirja.Natiivi
         /// </summary>
         float AloituslennonKesto(double lat, double lon)
         {
-            double reitti = LennonAikajana.ReittiM(AloitusLat, AloitusLon, lat, lon);
+            // Löydös 110 (omistaja 25.9. klo 14.5x): kiinteä kesto kohteen etäisyydestä riippumatta
+            // (LennonAikajana.AloituslennonKestoS); ennen 16–26 s reitin pituuden mukaan (LennonAikajana.Kesto).
             float repliikki = Mathf.Min((float)LennonAikajana.PisinS, (float)(luennat.LentoAlku?.Kesto ?? LentoAlkuOletusS) + 1f);
-            return Mathf.Max((float)LennonAikajana.Kesto(reitti), repliikki);
+            return Mathf.Max((float)LennonAikajana.AloituslennonKestoS, repliikki);
         }
 
         /// <summary>

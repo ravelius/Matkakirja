@@ -104,6 +104,13 @@ namespace Matkakirja
         /// <summary>Lontoo → Ateena isoympyränä (R = 6371 km), 20 s:n referenssi.</summary>
         public const double ReferenssiM = 2_392_000.0;
         public const double ReferenssiS = 20.0, LyhinS = 16.0, PisinS = 26.0;
+        /// <summary>
+        /// Löydös 110 (omistaja 25.9. klo 14.5x): aloituslennon KIINTEÄ kesto (s) kohteesta riippumatta. Vaihejako
+        /// (Jaa) on silloin sama kaikille kohteille: nousu (syöksy, sivukylki) ja lasku (kierto, orbit) kestävät
+        /// saman ajan, ja ero kurotaan koneen nopeudella matkavaiheessa (KoneenOsuus on normitettu koko reitille).
+        /// Ehdotus 20 s = Lontoo–Ateena-referenssi (video aloituslento-84); omistaja vahvistaa. Muut lennot: Kesto.
+        /// </summary>
+        public static double AloituslennonKestoS = ReferenssiS;
         /// <summary>Sekuntia reitin pituuden e-kertaistumista kohden: 16 s ≈ 630 km, 26 s ≈ 17 700 km (Sydney 17 000 km → 25,9 s).</summary>
         public const double KestonKerroin = 3.0;
 
