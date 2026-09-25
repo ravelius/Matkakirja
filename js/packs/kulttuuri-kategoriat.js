@@ -109622,6 +109622,230 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Kingston, Norfolk Island',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Norfolk Island, Norfolk Island Airport, Burnt
+       * Pine, Norfuk language, Norfolk Island National Park, Mount
+       * Bates, Two Chimneys Wines, Thanksgiving) ja Wikivoyagesta
+       * (Norfolk Island: saapuminen, liikkuminen, ruoka, juhlat,
+       * uiminen, yhteydet) — teksti omaa. Nostojen ja maalehden
+       * aiheita (Cook ja männyt, vankisiirtola, Maconochie,
+       * pitcairnilaisten muutto, Nobbs, Kingstonin laituri ja
+       * rakennukset, papukaija, liitäjä, hibiskus, sukunimet,
+       * kielen historia) ei toisteta. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: viikunapuiden varjostama tie (Brian,
+       * Flickr 2017; tien nimeä ei kerrota, siksi teksti yleinen).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Norfolk Island (13).jpg',
+          lyhyt: 'Norfolkin kapeaa tietä varjostavat järeät viikunapuut ja norfolkinmännyt.',
+          selite: 'Norfolkinsaaren teillä ajetaan enintään 50 kilometrin '
+            + 'tuntinopeutta, ja tämä kapea tie kulkee järeiden, '
+            + 'pöytäjuuristen viikunapuiden ja norfolkinmäntyjen alta.',
+          lahde: 'Brian, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Norfolkinsaarelle lennetään Sydneystä tai Brisbanesta '
+          + 'kansainvälisen terminaalin kautta, vaikka saari kuuluu '
+          + 'Australiaan. Perillä vuokrataan auto, sillä busseja ei ole, ja '
+          + 'teillä lehmillä on etuajo-oikeus ja jokaista vastaantulijaa '
+          + 'tervehditään. Kaupat ja ravintolat ovat Burnt Pinen '
+          + 'pääkadulla, ja lautaselle päätyy pääosin saarella kasvanutta, '
+          + 'koska tuoreiden hedelmien ja vihannesten tuonti on kielletty. '
+          + 'Kylteissä näkyy saaren omaa norfukin kieltä, ja marraskuussa '
+          + 'vietetään amerikkalaisten valaanpyytäjien tuomaa kiitospäivää. '
+          + 'Kansallispuiston polut kulkevat puusaniaisten alta kallioiden '
+          + 'reunoille, ja uimaan mennään Kingstonin lahtiin, joita '
+          + 'koralliriutta suojaa avomereltä.',
+        artikkeli: {
+          nimi: 'Matkailijan Norfolk',
+          teksti: 'Norfolkinsaarella jokainen vastaantulija tervehtii.',
+          nosto: 'Saaren teillä lehmillä on lain turvaama etuajo-oikeus, ja '
+            + 'jokainen autoilija nostaa vastaantulijalle tervehdykseksi '
+            + 'ainakin sormen ratista.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Norfolkinsaari kuuluu Australiaan, mutta matka sinne '
+                + 'alkaa Sydneyn tai Brisbanen kansainväliseltä terminaalilta: '
+                + 'vaikka lento on kotimainen, saarelle lähtijät kulkevat '
+                + 'tulli- ja passintarkastuksen kautta, joten '
+                + 'henkilöllisyystodistus on otettava mukaan. Suoria vuoroja '
+                + 'lentää Qantas. Tuoreita hedelmiä, vihanneksia ja lihaa ei '
+                + 'kannata pakata laukkuun, sillä karanteenisäännöt kieltävät '
+                + 'niiden tuonnin. Lentokenttä rakennettiin vuonna 1942 '
+                + 'Yhdysvaltain ilmavoimien pyynnöstä, ja tasaista maata oli '
+                + 'niin vähän, että kukkuloiden laet tasoitettiin '
+                + 'puskutraktoreilla ja laaksot täytettiin. Samalla kaadettiin '
+                + 'noin 500 norfolkinmännyn Pine Avenue -puukuja. '
+                + 'Joukkoliikennettä saarella ei ole, joten matkailija vuokraa '
+                + 'auton, ja teitä on kaikkiaan 80 kilometriä. Nopeusrajoitus '
+                + 'on 50 kilometriä tunnissa, kylässä 40 ja koulun kohdalla '
+                + '30, ja paikallinen laki antaa etuajo-oikeuden karjalle. '
+                + 'Lisäksi on opittava Norfolk wave: jokaista vastaantulijaa '
+                + 'tervehditään, vähintään nostamalla etusormi ratista, '
+                + 'innokkaimmin koko käsivarrella.',
+              kuva: [
+                {
+                  tiedosto: 'Norfolk terminal.JPG',
+                  lyhyt: 'Saattajat vilkuttavat lentoaseman aidan takaa lähtevälle koneelle.',
+                  selite: 'Norfolkinsaaren lentoaseman edessä liehuvat '
+                    + 'Australian ja Norfolkinsaaren liput, ja saattajat '
+                    + 'vilkuttavat aidan takaa koneelle, jonka varjo näkyy '
+                    + 'asematasolla.',
+                  lahde: 'Rwiseman97, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Norfolk Island 2017 (8).jpg',
+                  lyhyt: 'Lentokentän kiitorata halkoo saaren länsiosan nurmitasankoa.',
+                  selite: 'Vuonna 1942 rakennettu kiitorata erottuu '
+                    + 'norfolkinmäntyjen takaa saaren länsiosan '
+                    + 'nurmitasangolla, kun sitä katsoo saaren korkeilta '
+                    + 'rinteiltä.',
+                  lahde: 'Brian, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Norfolk air 7.1.12.jpg',
+                  lyhyt: 'Norfolk Airin Boeing 737 odotti lähtöä Brisbaneen tammikuussa 2012.',
+                  selite: 'Saaren oma lentoyhtiö Norfolk Air lensi vuosina '
+                    + '2006–2012, ja kuva on otettu kuukautta ennen kuin '
+                    + 'yhtiö lopetti lentonsa.',
+                  lahde: 'Rwiseman97, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Burnt Pinen katu ja saaren pöytä',
+              teksti: 'Saaren kauppakeskus Burnt Pine, norfukiksi Ban Pain, '
+                + 'on nuori kylä: se syntyi 1940-luvulla lentokentän '
+                + 'kupeeseen, ja matkailun kasvaessa kauppoja, kahviloita ja '
+                + 'majataloja nousi Taylors Roadin varteen. Kylän rajoilla '
+                + 'tiehen on upotettu karjaritilät, joiden yli lehmät eivät '
+                + 'kävele. Ostoksilla käynti vaatii suunnittelua: moni '
+                + 'erikoisliike avaa vasta kymmenen tai yhdentoista aikaan ja '
+                + 'sulkee kolmelta, ja keskiviikko- ja lauantai-iltapäivisin '
+                + 'sekä sunnuntaisin useimmat ovet ovat kiinni. '
+                + 'Pankkiautomaatteja on vain yksi, joten käteistä kannattaa '
+                + 'pitää mukana. Koska tuoreiden hedelmien ja vihannesten '
+                + 'tuonti on kielletty, ruoka kasvaa enimmäkseen saarella: '
+                + 'banaaneja, bataatteja, avokadoja ja viikunoita. '
+                + 'Pitcairnilta periytyneitä ruokia ovat raakabanaaneista '
+                + 'tehdyt mudda-mykyt ja kumara-pilhi, ja ravintolat '
+                + 'tarjoavat tuoretta kalaa. Illallinen alkaa puoli kuudelta '
+                + 'ja päättyy kahdeksaan mennessä, ja pöytä varataan jo '
+                + 'edellisenä päivänä. Juomiakin tehdään saarella: '
+                + 'ainoan viinitilan, Two Chimneysin, ensimmäiset köynnökset '
+                + 'istutettiin 2003, ja Cascade Roadin likööritehtaan '
+                + 'yhteydessä pullotetaan vanhanaikaisen makuisia '
+                + 'virvoitusjuomia.',
+              kuva: {
+                tiedosto: 'Burnt Pine in Norfolk Island, Australia.jpg',
+                lyhyt: 'Burnt Pinen pääkatu sadepäivänä: puusaniaisia, palmuja ja matalia liiketaloja.',
+                selite: 'Burnt Pinen kauppakatu on saaren liike-elämän '
+                  + 'keskus, ja sen kautta kulkee lähes kaikki liikenne '
+                  + 'saaren puolelta toiselle.',
+                lahde: 'bertknot, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Norfukia kylteissä, kiitospäivä marraskuussa',
+              teksti: 'Englannin rinnalla saaren virallinen kieli on norfuk, '
+                + 'ja sitä näkee matkan varrella: lentoasema on Norfuk Ailen '
+                + 'Aeyaport, korkein huippu Maun Biets ja eräs '
+                + 'sademetsäpolku A Trip Ina Stik. Kielessä on myös saaren '
+                + 'omia nimiä. Yksi kalalaji sai nimensä Sandford Warren '
+                + '-nimiseltä mieheltä, joka sai sen saalisosuudekseen, ja '
+                + 'pyhimyskalastaja on norfukiksi nuffka. Juhlista '
+                + 'erikoisin on kiitospäivä, jonka saarella käyneet '
+                + 'amerikkalaiset valaanpyyntialukset toivat mukanaan. Sitä '
+                + 'vietetään marraskuun viimeisenä keskiviikkona '
+                + 'jumalanpalveluksin ja ruokajuhlin, ainoana paikkana '
+                + 'Australiassa. Iltaisin Ferny Lanen teatterissa näytetään '
+                + 'elokuvia, ja paikalliset näyttelijät esittävät '
+                + 'oikeussalidraamaa Trial of the 15, joka kertoo saaren '
+                + 'vankiajasta viidentoista todistajanlausunnon kautta. '
+                + 'Middlegatessa voi kiertää 360 asteen '
+                + 'panoraamamaalauksen Bountyn tarinasta, jonka '
+                + 'saarelaistaiteilijat tekivät vuosina 2001–2002. Keskustelun saarelaisten kanssa voi '
+                + 'avata kysymällä, kumpi esitti paremmin Fletcher '
+                + 'Christianin, Marlon Brando vuoden 1962 vai Mel Gibson '
+                + 'vuoden 1984 elokuvassa: molemmat ovat kaikille tuttuja.',
+              kuva: {
+                tiedosto: 'NFcinema.jpg',
+                lyhyt: 'Ferny Lanen teatteri näyttää elokuvia ja saaren omaa oikeussalinäytelmää.',
+                selite: 'Tammikuussa 2018 Burnt Pinen Ferny Lanen teatterin '
+                  + 'ilmoitustaululla olivat uudet elokuvat ja paikallisten '
+                  + 'näyttelijöiden Trial of the Fifteen.',
+                lahde: 'Casliber, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kansallispuiston polut',
+              teksti: 'Noin kymmenesosa saaresta kuuluu kansallispuistoon, '
+                + 'joka suojelee viimeisiä rippeitä saarta aikoinaan '
+                + 'peittäneestä subtrooppisesta sademetsästä. Mount Pittin '
+                + 'huipulle pääsee autolla, ja sieltä noin kilometrin '
+                + 'mittainen harjupolku vie saaren korkeimmalle kohdalle, '
+                + '319-metriselle Mount Batesille. Sen laelle sijoitettiin '
+                + 'toisen maailmansodan aikana tutka-asema, jonka paikalla '
+                + 'voi yhä käydä. Parin tunnin reitti Bridle Track '
+                + 'alkaa Captain Cookin muistomerkiltä ja seuraa '
+                + 'kallionreunaa ja sademetsää rannikkoa pitkin, ja '
+                + 'sivupolut vievät näköalapaikoille Bird Rockin yllä. '
+                + 'Kasvitieteellisessä puutarhassa on polkuja pyörätuolillakin '
+                + 'kuljettavasta yläosasta rotkon pohjalle asti, ja puiston '
+                + 'metsissä kasvaa palmuja ja maailman korkein '
+                + 'puusaniaislaji, jotka ovat muualla saarella harvinaisia. '
+                + 'Luoteisrannan Anson Bayn näköalapaikalta '
+                + 'katsotaan turkoosia lahtea, jonne retkiyhtiöt järjestävät '
+                + 'grilliaamiaisia, mutta uimaan siellä ei pidä mennä '
+                + 'voimakkaiden virtausten takia. Hundred Acres Reserven '
+                + 'rantakallioilla pesii merilintuja, ja polun varrella '
+                + 'kasvaa valtavia viikunapuita.',
+              kuva: {
+                tiedosto: 'NBGvista.jpg',
+                lyhyt: 'Puusaniainen kohoaa sumuisen kasvitieteellisen puutarhan metsän yllä.',
+                selite: 'Norfolkinsaaren kasvitieteellisessä puutarhassa '
+                  + 'puusaniainen ja norfolkinmännyt kohoavat tiheän '
+                  + 'aluskasvillisuuden yllä sumuisena tammikuun päivänä.',
+                lahde: 'Casliber, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Riutan suojassa, verkon ulkopuolella',
+              teksti: 'Uimaan mennään Kingstonin edustalle Emily Bayhin ja '
+                + 'viereiseen Slaughter Bayhin, joita pieni koralliriutta '
+                + 'suojaa avomereltä. Muut rannat ovat valvomattomia, ja '
+                + 'saarelaiset varoittavat "seitsemännestä aallosta", '
+                + 'yllättäen korkeammaksi nousevasta aallosta, joka voi '
+                + 'viedä varomattoman uimarin mukanaan. Riutan sisällä '
+                + 'snorklataan korallien ja trooppisten kalojen keskellä, ja '
+                + 'Emily Baystä lähtee lasipohjaveneitä riutan reunalle. '
+                + 'Rannalta voi nähdä myös valaita: kaupallinen valaanpyynti '
+                + 'jatkui saarella vuoteen 1956, ja nykyään lähivesillä '
+                + 'liikkuu ryhävalaita, muita valaslajeja ja delfiinejä. '
+                + 'Maissa matkailijan älypuhelin menettää älynsä: Australian '
+                + 'matkapuhelinverkot eivät ulotu saarelle, verkkovierailu '
+                + 'ei yleensä toimi, ja yhteydet hoidetaan kahviloiden ja '
+                + 'majoitusten langattomilla verkoilla. Paikalliset '
+                + 'puhelinnumerot ovat viisinumeroisia, ja retkien ja '
+                + 'ravintolapöytien varaukset hoidetaan usein puhelimella. '
+                + 'Rikoksia on niin vähän, että '
+                + 'moni saarelainen jättää talonsa ja autonsa lukitsematta.',
+              kuva: {
+                tiedosto: 'Moorish Idol, Emily Bay, Kingston 2899, Norfolk Island imported from iNaturalist photo 347594377.jpg',
+                lyhyt: 'Kolme sarvikalaa uiskentelee Emily Bayn riutalla korallien yllä.',
+                selite: 'Emily Bayn riutan suojassa snorklaaja näkee '
+                  + 'trooppisia kaloja, kuten näitä kolmea sarvikalaa, jotka '
+                  + 'uivat punertavan korallin yllä.',
+                lahde: 'Susan Prior, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
