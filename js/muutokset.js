@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2228, teksti: 'Sisältöjuna: turistiopas 14–18, miniatyyrit, suunnitelmat' },
   { v: 2227, teksti: 'Koepyramidi ?pyramidi=<sarja>: uusi peruskartta… (#3203)' },
   { v: 2226, teksti: 'Sisältöjuna: miniatyyrit, Välimeri, turistiopas 11–13' },
   { v: 2225, teksti: 'Sisältöpaketti 1.42: maakuntarajat kaikista web… (#3185)' },
