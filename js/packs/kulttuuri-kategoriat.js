@@ -110468,6 +110468,218 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'German South West Africa',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Sossusvlei, Deadvlei, Sesriem, Tsauchab River,
+       * Solitaire, Spreetshoogte Pass, Namib-Naukluft National Park,
+       * NamibRand Nature Reserve, Namib), Wikivoyagesta (Sossusvlei,
+       * Namib-Naukluft National Park) ja saksan Wikipediasta (Sossusvlei,
+       * Deadvlei, Sesriem-Canyon, Solitaire: Unescon luettelo 2013,
+       * leipomo ja Moose McGregor) — teksti omaa. Hinnat jätetty pois.
+       * Nostojen aiheita (aavikon ikä, Luurankorannikko, hylyt, dyynien
+       * väri ja korkeudet, Deadvlein puiden historia, Kuiseb, 1873,
+       * eläimet, sumu, puiston koko) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: Big Daddyn harjanne.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Climbing Big Daddy (3688096060).jpg',
+          lyhyt: 'Retkeilijät nousevat Big Daddyn harjannetta, Sossusvlein seudun korkeimmalle dyynille.',
+          selite: 'Retkeilijät kulkevat jonossa Big Daddyn kapeaa harjannetta '
+            + 'ylös lokakuun aamuna 2006, ja jalanjäljet painuvat pehmeään '
+            + 'hiekkaan. Big Daddy on Sossusvlein seudun korkein dyyni.',
+          lahde: 'Greg Willis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Useimmille matkailijoille Namib tarkoittaa Sossusvleitä: '
+          + 'valkoisia savipannuja punaisten dyynien keskellä, osana '
+          + 'Namibin hiekkamerta, joka liitettiin Unescon '
+          + 'maailmanperintöluetteloon kesäkuussa 2013. Windhoekista ajetaan '
+          + 'suurin osa päivästä ylängöltä jyrkkiä soloja alas aavikolle, ja '
+          + 'viimeinen huoltopaikka on Solitairen leipomo ja huoltoasema. '
+          + 'Sesriemin portti aukeaa vasta auringon noustessa, joten aamun '
+          + 'ensimmäisen valon dyyneillä näkee vain portin sisäpuolella '
+          + 'yöpynyt. Asfaltin päästä jatketaan nelivedolla tai sukkulalla '
+          + 'Deadvleihin ja Big Daddyn juurelle, ja illaksi palataan '
+          + 'Sesriemin kapeaan kanjoniin. Kesäpäivinä lämpöä on usein 40 '
+          + 'astetta, talviöinä vain kymmenkunta, ja sade on harvinainen.',
+        artikkeli: {
+          nimi: 'Matkailijan Namib',
+          teksti: 'Namibin dyyneille päästään auringon tahdissa.',
+          nosto: 'Sesriemin portti aukeaa auringonnousussa, joten aamun '
+            + 'dyyneillä ovat ensimmäisinä ne, jotka nukkuivat portin '
+            + 'sisäpuolella.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Ylängöltä alas hiekkamereen',
+              teksti: 'Windhoekista Sesriemiin ajetaan suurin osa päivästä, '
+                + 'enimmäkseen soratietä. Ylängöltä aavikolle laskeudutaan '
+                + 'jyrkän reunaportaan yli, ja solan valinta on matkan '
+                + 'ensimmäinen päätös. Helpoin reitti kulkee Rehobothin kautta '
+                + 'Remhoogten solaan, näyttävin Spreetshoogten yli: siellä tie '
+                + 'laskeutuu noin tuhat metriä vain neljän kilometrin matkalla. '
+                + 'Solan rakensi toisen maailmansodan aikana farmari Nicolaas '
+                + 'Spreeth, joka raivasi sen lähes omin käsin ja räjäytti '
+                + 'esteet dynamiitilla. Rekat ja perävaunut ovat solassa '
+                + 'kiellettyjä, jyrkimmät kohdat on päällystetty '
+                + 'betonikivillä, ja alamäessä ajetaan ykkösvaihteella, '
+                + 'etteivät jarrut kuumene. Soratiellä nopeusrajoitus on 100 '
+                + 'kilometriä tunnissa, mutta Wikivoyage muistuttaa, että '
+                + 'turvallisesti sitä voi ajaa harvoin: puiston monet '
+                + 'onnettomuudet sattuvat lähes aina matkailijoille liian '
+                + 'kovassa vauhdissa, usein renkaan puhjettua. Viimeinen kunnon pysähdys on Solitaire, '
+                + 'kahden päätien risteykseen syntynyt farmikylä, jonka '
+                + 'huoltoasema, kauppa ja leipomo ovat ainoat dyynien ja '
+                + 'Walvis Bayn välillä. Leipomon omenapiirakan teki '
+                + 'kuuluisaksi sen perustaja Moose McGregor, joka kuoli '
+                + '2014 ja on haudattu Solitaireen.',
+              kuva: [
+                {
+                  tiedosto: 'D1275 Spreetshoogte Pass.jpg',
+                  lyhyt: 'Spreetshoogten solan jyrkimmät kohdat on päällystetty betonikivillä.',
+                  selite: 'Spreetshoogten solatie D1275 laskeutuu kohti '
+                    + 'Solitairea, ja jyrkimmällä osuudella soran tilalla '
+                    + 'on lukittuvia betonikiviä.',
+                  lahde: 'Olyon01, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Solitaire (2019).jpg',
+                  lyhyt: 'Solitaire ilmasta: rakennukset, puut ja hiekkainen kiitorata soratien varrella.',
+                  selite: 'Ilmakuvassa Solitairen rakennukset ja puut '
+                    + 'ryhmittyvät soratien varteen, ja niiden takana on '
+                    + 'pienkoneiden hiekkainen kiitorata.',
+                  lahde: 'Hp.Baumeler, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Solitaire-Tableau des précipitations.jpg',
+                  lyhyt: 'Solitairen liitutaululle on kirjattu vuosien 2009–2015 sademäärät.',
+                  selite: 'Solitairen seinätaulun mukaan vuonna 2011 satoi '
+                    + '479 millimetriä mutta vuonna 2013 vain 58: aavikon '
+                    + 'reunalla sademäärä vaihtelee vuodesta toiseen rajusti.',
+                  lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Portti aukeaa auringon mukana',
+              teksti: 'Sossusvleihin mennään Sesriemin portista, jonka '
+                + 'toimistosta ostetaan myös puiston lupa. Portti aukeaa '
+                + 'auringonnousussa ja sulkeutuu auringonlaskussa, ja siitä '
+                + 'on vielä noin 60 kilometriä dyyneille. Ainoa tapa olla '
+                + 'perillä jo ennen aamun ensimmäistä valoa on yöpyä portin '
+                + 'sisäpuolella valtion Namibia Wildlife Resortsin '
+                + 'majoituksessa: Sesriemin leirintäalueella, jonka jokaisella '
+                + 'paikalla on varjona oma kameelipiikkipuu, tai Sossus Dune '
+                + 'Lodgessa. Sama koskee iltaa: auringonlaskun jälkeen '
+                + 'dyyneille jäävät vain portin sisällä yöpyvät. Wikivoyage varoittaa '
+                + 'yksityisistä majoista, jotka mainostavat olevansa lähempänä: '
+                + 'niiden vieraat jonottavat samaan porttiin kuin muutkin. '
+                + 'Portilta dyyneille kulkee 2000-luvun alussa rakennettu '
+                + 'asfalttitie, harvinaisuus Namibian maaseudulla, ja ajo '
+                + 'kestää noin tunnin. Tien 45. kilometrillä olevalle Dune '
+                + '45:lle kiivetään usein jo aamuhämärissä, ja huipulle '
+                + 'noustaan noin tunnissa. '
+                + 'Kuumailmapallot lähtevät Sesriemistä varhain aamulla, ja '
+                + 'pienkoneiden kierroslennot dyynien yli lähtevät '
+                + 'enimmäkseen rannikolta Swakopmundista ja Walvis Baysta.',
+              kuva: {
+                tiedosto: 'Sossusvlei, entrance - panoramio.jpg',
+                lyhyt: 'Sesriemin portin kyltti: sisään pääsee auringonnoususta auringonlaskuun.',
+                selite: 'Sesriemin portin punainen pyramidinmuotoinen kyltti ilmoittaa '
+                  + 'aukioloajaksi auringonnoususta auringonlaskuun; kuva '
+                  + 'on otettu syyskuussa 2006.',
+                lahde: 'Frans-Banja Mulder, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Viimeiset viisi kilometriä',
+              teksti: 'Asfaltti päättyy parkkipaikalle, jota kutsutaan '
+                + 'nimellä 2x4: kaksivetoiset autot jätetään siihen. Loput '
+                + 'noin viisi kilometriä Sossusvleihin on syvää, pehmeää '
+                + 'hiekkaa, jossa pärjää vain nelivedolla. Wikivoyage neuvoo, '
+                + 'ettei tämä ole oikea paikka opetella maastoajoa: hiekkaan '
+                + 'juuttuneet vuokra-autot huvittavat oppaita, ja niiden '
+                + 'jäljet ovat myös ympäristöhaitta. Helpompi keino on '
+                + 'sukkula, joka ajaa säännöllisesti parkkipaikalta ja '
+                + 'pysähtyy kahdesti, Deadvlein ja Sossusvlein kohdalla. '
+                + 'Kävellenkin pääsee, noin kymmenen kilometriä edestakaisin, '
+                + 'mutta matkan varrella ei ole varjoa eikä palveluja. '
+                + 'Deadvlein reunalla kohoaa Big Daddy, jonka harjannetta pitkin voi '
+                + 'kiivetä koko seudun korkeimmalle huipulle; vastapäätä on '
+                + 'toinen jättiläinen, Big Mama. Rauhallisempaa on '
+                + 'Hiddenvleissä, joka on neljän kilometrin päässä 2x4:n '
+                + 'parkkipaikalta ja vähiten käyty alueen savipannuista.',
+              kuva: {
+                tiedosto: 'Sandpad zum Sossusvlei, Namibia (2017).jpg',
+                lyhyt: 'Asfaltin jälkeen Sossusvleihin johtaa pehmeä hiekkaura, jossa pärjää vain nelivedolla.',
+                selite: 'Renkaiden urat risteilevät pehmeässä hiekassa '
+                  + 'Sossusvleihin johtavalla tiellä, ja taustalla kohoavat '
+                  + 'punaiset dyynit ja vihreät puut.',
+                lahde: 'Olga Ernst & Hp.Baumeler, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kuuden nahkahihnan kanjoni',
+              teksti: 'Noin neljän kilometrin päässä Sesriemistä maa '
+                + 'halkeaa kapeaksi kanjoniksi. Tsauchab-joki on '
+                + 'kaivertanut sen noin kahden miljoonan vuoden aikana '
+                + 'vanhoista jokisoraikoista kovettuneeseen kiveen. Kanjoni '
+                + 'on noin kilometrin pituinen ja enimmillään 30 metriä syvä, '
+                + 'ja paikoin seinämien väli on vain kaksi metriä. Nimi on '
+                + 'afrikaansia ja tarkoittaa kuutta nahkahihnaa: '
+                + 'Dorsland-vaelluksen uudisasukkaat joutuivat solmimaan '
+                + 'yhteen kuusi hihnaa, ennen kuin sanko ylsi kanjonin '
+                + 'pohjalla olevaan veteen. Pohjalla on yhä kohta, jossa '
+                + 'vettä riittää ympäri vuoden ja jolla eläimet käyvät '
+                + 'juomassa. Kanjoniin on helppo laskeutua, ja kuivaa '
+                + 'uomaa voi kävellä seinämien välissä. '
+                + 'Alajuoksulla kanjoni madaltuu ja levenee puiden '
+                + 'reunustamaksi uomaksi, jonka Sossusvlein tie ylittää. '
+                + 'Wikivoyage suosittelee paikkaa auringonlaskun katsomiseen, '
+                + 'kun dyyneillä on käyty aamulla.',
+              kuva: {
+                tiedosto: 'Cañón Sesriem, Sossusvlei, Namibia, 2018-08-06, DD 176.jpg',
+                lyhyt: 'Sesriemin kanjonin pohjalla kulkijat näyttävät pieniltä korkeiden seinämien välissä.',
+                selite: 'Kolme kulkijaa seisoo Sesriemin kanjonin '
+                  + 'hiekkapohjalla, ja Tsauchab-joen kovettuneeseen '
+                  + 'soraan kovertamat seinämät kohoavat kapeana solana '
+                  + 'heidän ylleen.',
+                lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Helle, tulvavuodet ja pimeä taivas',
+              teksti: 'Sossusvlein vuoden keskilämpötila on noin 24 '
+                + 'astetta, mutta vuorokauden sisällä vaihtelu on suurta: '
+                + 'kesällä päivä kuumenee usein 40 asteeseen, talviöinä '
+                + 'lämpöä on vain kymmenkunta astetta. Dyyneille kannattaa '
+                + 'lähteä aamulla, ja vettä on juotava pitkin päivää. Sade '
+                + 'on harvinaista, mutta kun Naukluft-vuorille sataa '
+                + 'kunnolla, kuiva Tsauchab muuttuu tunneissa vuolaaksi '
+                + 'joeksi. Sossusvleihin asti vesi yltää vain joka viides '
+                + 'tai kymmenes vuosi, ja silloin savipannuun syntyy '
+                + 'lyhytaikainen järvi, jonka syvyys vaihtelee muutamasta '
+                + 'senttimetristä useaan metriin ja jolle lentää '
+                + 'muuttolintuja. Pimeän tultua aavikon suurin nähtävyys on '
+                + 'taivas. Kansallispuiston itärajalla on yksityinen '
+                + 'NamibRandin luonnonsuojelualue, joka on perustettu 1984 '
+                + 'ja rahoittaa itsensä pääosin vähäisen matkailun maksuilla. '
+                + 'Kansainvälinen Dark-Sky-järjestö nimesi sen vuonna 2012 '
+                + 'pimeän taivaan suojelualueeksi, jossa keinovalo ei '
+                + 'himmennä Linnunrataa.',
+              kuva: {
+                tiedosto: 'Sossusvlei with water, Namibia.jpg',
+                lyhyt: 'Sossusvlein savipannussa oli harvinaisesti vettä syyskuussa 2021.',
+                selite: 'Matala vesi lepää Sossusvlein pannussa punaisen '
+                  + 'dyynin juurella, ja etualalla kuivuva savi on '
+                  + 'halkeillut laatoiksi. Kuva on otettu syyskuussa 2021.',
+                lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'elaimet',
