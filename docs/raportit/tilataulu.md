@@ -28,7 +28,9 @@ Ei avoimia kortteja tiedossa juuri nyt.
 
 **UUSI SÄÄNTÖ (Fable 10:1x): simulaattorien sammutusvaltuus + tuntiraportointi.** Postivahti saa itse sammuttaa (xcrun simctl shutdown) simulaattorit joissa peli ei ole pyörinyt 20 min tai joiden rooli juuri nollattu; max 4 boottina päivällä, 5. käynnistyessä ilmoita Fablelle kuka. Raportoi vapaan muistin % ja sivutus tunnin välein.
 
-**ESTETTY (10:15):** yritin sammuttaa 5 idle-simulaattoria (1572C658, 993F8873, D0D2CD1E, 3B4CDACB, C1D5E34C — vain FBBD41D7 ja FB234D08 joissa peli aktiivisesti pyörii jätettiin) — oman session luokitin esti komennon ("Interfere With Workloads"). Ei yritetty kiertää, ilmoitettu Fablelle, odotetaan sallintaa tai omistajaroolien omaa toimintaa. Vapaa muisti n. 36 %, sivutus 22,8 Gt.
+**ESTETTY (10:15) — JA HYVÄ ETTÄ ESTETTY:** yritin sammuttaa 5 "idle"-simulaattoria (1572C658, 993F8873, D0D2CD1E, 3B4CDACB, C1D5E34C) — oman session luokitin esti komennon ("Interfere With Workloads"). Ilmoitettu Fablelle, ei yritetty kiertää. **Jälkikäteen selvisi (10:23):** neljä näistä (1572C658, 3B4CDACB, C1D5E34C, 993F8873) OVAT käännöspalvelun juna/b13-asennuksen kohdelaitteita — ei siis hylättyjä, vaan aktiivisen käännösjunan piirissä (viimeisin onnistunut asennus klo 10:10, ks. varmuuskopio-tarkistus alla). Sammutus olisi voinut häiritä käännösjonoa.
+
+**Varmuuskopio/käännösjuna-tarkistus (Fable-pyyntö):** /Users/Shared/Claude/proto-3d/lokit/varmuuskopio-VIKA.txt on olemassa mutta TYHJÄ (0 tavua) — ei hylättyjä pusheja. Käännösjunan loki (kaannospalvelu/juna.log): viimeisin onnistunut KÄÄNNETTY-rivi klo 10:10 (alle 2h vanha, kunnossa). Jono oli lukossa tuntikausia (08:21-10:02, "lukko ei vapautunut tunnissa" -virhe 09:02) mutta selvisi omillaan.
 
 **Junasääntö (Fable 04:1x):** ei vielä havaintoja 30 min -käännösviiveestä eikä sisältöjonon 4-PR/4h-ehdon täyttymisestä ilman junaa.
 
