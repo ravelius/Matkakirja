@@ -2743,4 +2743,78 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Vilnan Užupis julistautui 1. huhtikuuta 1997 omaksi tasavallakseen, ja sen lipun kämmen vaihtaa väriä vuodenajan mukaan.',
     },
   },
+  /*
+   * SVN (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.SVN:n tunnuksia
+   * TÄSMÄLLEEN (tilastoalueet, esim. "Notranjsko-kraška" ja
+   * "Spodnjeposavska"). Vain `lyhyt` tässä erässä. Osrednjeslovenskan
+   * teksti välttää Ljubljanan fokusvirran aiheet (lohikäärme, linna,
+   * Ljubljanica, Kolmisilta, Laibach). Lähteet (en-Wikipedia,
+   * tarkistettu 25.9.2026):
+   *   Gorenjska             — Lake Bled (99 kiviaskelmaa 1655, toivekello,
+   *                           käsin tehdyt pletna-veneet)
+   *   Goriška               — Nova Gorica (Euroopan kulttuuripääkaupunki
+   *                           2025 yhdessä Gorizian kanssa, Transalpinan /
+   *                           Euroopan aukio rautatieasemalla rajalla)
+   *   Jugovzhodna Slovenija — Novo Mesto ("City of Situlas", Hallstatt,
+   *                           Krkan mutka)
+   *   Koroška               — Petzen / Peca (mountain) (Matjažin luola,
+   *                           Keršičin pronssipatsas 1958, luolaan 1962)
+   *   Notranjsko-kraška     — Lake Cerknica (täytenä maan suurin järvi,
+   *                           tyhjenee kesällä maanalaisiin onkaloihin)
+   *   Obalno-kraška         — Lipica, Sežana (tila 1580, lipizzanin
+   *                           alkukoti, haute école -hevoset)
+   *   Osrednjeslovenska     — Ljubljana Marshes Wheel (löydetty 2002,
+   *                           5 100–5 350 v, vanhin löydetty puupyörä,
+   *                           Ljubljanan kaupunginmuseo)
+   *   Podravska             — Maribor (Lentin žametovka yli 400 v,
+   *                           Guinness 2004)
+   *   Pomurska              — Prekmurje (unkarilaisvalta, Jugoslavian
+   *                           joukot 12.8.1919) + Prekmurska gibanica
+   *                           (EU:n TSG maaliskuusta 2010)
+   *   Savinjska             — Counts of Celje (kolme kultaista tähteä
+   *                           sinisellä pohjalla Slovenian vaakunaan 1991)
+   *   Spodnjeposavska       — Krško Nuclear Power Plant (Gen Energija +
+   *                           HEP, yli neljännes Slovenian sähköstä)
+   *   Zasavska              — Trbovlje Power Station (360 m, Euroopan
+   *                           korkein savupiippu, 1976, suljettu 2016)
+   */
+  SVN: {
+    Gorenjska: {
+      lyhyt: 'Bledinjärven saarelle soudetaan käsin tehdyillä pletna-veneillä, ja kirkolle nousee 99 kiviaskelmaa – perillä voi soittaa toivekelloa.',
+    },
+    'Goriška': {
+      lyhyt: 'Nova Gorica ja italialainen Gorizia olivat yhdessä Euroopan kulttuuripääkaupunki 2025, ja rautatieaseman aukiolla raja kulkee keskeltä.',
+    },
+    'Jugovzhodna Slovenija': {
+      lyhyt: 'Krkan mutkaan rakennettua Novo Mestoa kutsutaan situlojen kaupungiksi, sillä sen maista on kaivettu esiin rautakautisia pronssiastioita.',
+    },
+    'Koroška': {
+      lyhyt: 'Pecan vuoren luolaan on asetettu pronssinen kuningas Matjaž, sillä tarun mukaan hän nukkuu vuoren uumenissa Itävallan rajalla.',
+    },
+    'Notranjsko-kraška': {
+      lyhyt: 'Cerknicanjärvi on täytenä Slovenian suurin järvi, mutta kuivina kesinä sen vesi voi valua kokonaan maanalaisiin onkaloihin.',
+    },
+    'Obalno-kraška': {
+      lyhyt: 'Karstin Lipicaan perustettiin hevostila 1580, ja siellä syntyi lipizzanrotu – tilalla kasvatetaan yhä ratsuja kouluratsastukseen.',
+    },
+    Osrednjeslovenska: {
+      lyhyt: 'Ljubljanan suolta löytyi 2002 yli 5 000 vuotta vanha puupyörä, vanhin koskaan löydetty – sen voi nähdä kaupunginmuseossa.',
+    },
+    Podravska: {
+      lyhyt: 'Mariborin Lentin rannassa kasvaa yli 400 vuotta vanha žametovka-köynnös, jota pidetään maailman vanhimpana viiniköynnöksenä.',
+    },
+    Pomurska: {
+      lyhyt: 'Prekmurje kuului vuosisatoja Unkariin ja liitettiin vasta 1919, ja sen monikerroksinen gibanica-leivos on EU:n suojaama herkku.',
+    },
+    Savinjska: {
+      lyhyt: 'Slovenian vaakunan kolme kultaista tähteä sinisellä pohjalla ovat Celjen keskiaikaisten kreivien perintöä – ne otettiin vaakunaan 1991.',
+    },
+    Spodnjeposavska: {
+      lyhyt: 'Krškon ydinvoimala on Slovenian ja Kroatian yhteinen, ja se tuottaa yli neljänneksen koko Slovenian sähköstä.',
+    },
+    Zasavska: {
+      lyhyt: 'Trbovljen voimalan 360-metrinen savupiippu on Euroopan korkein, ja se seisoo yhä laakson maamerkkinä, vaikka voimala on suljettu.',
+    },
+  },
 };

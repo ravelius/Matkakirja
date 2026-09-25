@@ -19,6 +19,7 @@ const ODOTETUT_MAARAT = {
   EST: 15,
   LVA: 5,
   LTU: 10,
+  SVN: 12,
 };
 
 /*
