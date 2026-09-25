@@ -5015,3 +5015,7 @@ Aiempi muotoilu 'kolmen väkäsen nappi (☰)' oli tulkittu hampurilaiseksi.
 ## OMISTAJAN LOYDOS 69 BUILD 12:STA (iPHONE, KUVA loydos69-iphone-nostot-paneeli-ei-reagoi.png): NOSTOT/MAAKUNNAT-SUODATINPANEELI EI OTA KOSKETUKSIA VASTAAN — EI NAPAUTUKSIA EIKA LIU'UTUSTA (RIVIT KAIKKI 552 … KAUPPA 47, EI MITAAN -KYTKIN, SULJE-X) → NATIIVI-UI (PANEELI) + PELIKOODARI (SYOTELUKKO / OSOITTIMEN KAAPPAUS, VRT. VIIVAIMEN a26b248); BUILD 13, KIIREELLINEN (25.9.2026 klo 05.13)
 
 Fablen sivuhavainto samasta kuvasta: nostojen nimiöt Kreikassa ovat Z5-tasolla pikkuruisia ja kasautuvat — kuuluu löydös 50:n asemointityöhön.
+
+## OMISTAJAN LOYDOS 70 BUILD 12:STA (iPHONE, KUVA loydos70-iphone-maakunnat-vaara-maa.png): MAAKUNNAT-VALILEHTI NAYTTAA RANSKAN MAAKUNNAT VAIKKA PELAAJA ON ATEENASSA (KREIKKA) — VALIKKO EI SEURAA NYKYISTA MAATA — EIKA REAGOI KOSKETUKSIIN (SAMA KUIN 69) → NATIIVI-UI + PELIKOODARI; BUILD 13 (25.9.2026 klo 05.14)
+
+Webissä Maakunnat listaa nykyisen maan maakunnat ja napautus kohdistaa kartan; natiivissa lista näyttää jäävän ensimmäiseen ladattuun maahan.
