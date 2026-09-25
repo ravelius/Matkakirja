@@ -590,7 +590,9 @@ namespace Matkakirja
                 if (yritys > 0) yield return new WaitForSecondsRealtime(0.6f * yritys * yritys);
                 using var r = UnityWebRequest.Get(Ampari + h.Polku);
                 r.timeout = 15;
+                float hakuAlku = Time.realtimeSinceStartup;
                 yield return r.SendWebRequest();
+                VerkkoOdotus.Haku("laatta", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)r.downloadedBytes);
                 if (r.result == UnityWebRequest.Result.Success) { tila = 200; data = r.downloadHandler.data; break; }
                 tila = (int)(r.responseCode > 0 ? r.responseCode : 502);
                 if (tila == 404 || tila == 403) break;
