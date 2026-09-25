@@ -183,6 +183,12 @@ namespace Matkakirja
             if (paras != null) Napautettu?.Invoke(paras.kohde.Avain);
         }
 
+        /// <summary>
+        /// KarttaKerrokset "kaupungit": linssin ajaksi pois kuten kaupunkipisteet ja nappula (LinssiOhjain.Pelikerrokset;
+        /// radiokuva b13: nopan renkaat jäivät radion mastojen sekaan). Kohteet säilyvät ja palaavat linssin jälkeen.
+        /// </summary>
+        public bool Nakyvissa { get; set; } = true;
+
         void LateUpdate()
         {
             if (merkit.Count == 0 || kamera == null) return;
@@ -195,7 +201,7 @@ namespace Matkakirja
                 Vector3 paikka = gt.TransformPoint(m.pinta);
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
-                bool edessa = !PalloKierto.PorttiSumea && Vector3.Dot(gt.TransformDirection(m.normaali), kohti / etaisyys) > 0.12f;
+                bool edessa = Nakyvissa && !PalloKierto.PorttiSumea && Vector3.Dot(gt.TransformDirection(m.normaali), kohti / etaisyys) > 0.12f;
                 if (m.juuri.gameObject.activeSelf != edessa) m.juuri.gameObject.SetActive(edessa);
                 if (!edessa) continue;
                 float lahella = etaisyys * (1f - Etuna);
