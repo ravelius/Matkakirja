@@ -4963,3 +4963,7 @@ Z9-alueen liittäminen Laattapalvelimeen odottaa Fablen käskyä sen jälkeen.
 ## BUILD 12 = 1.0.12 TESTFLIGHTISSA (JULKAISIJA, PROTO b79f036, CFBundleVersion 202609250125, AJO 36081944921): KAANNOSPALVELUN LUKKO #3124 TOIMI, YOAJO EI EHTINYT JA OHITTAA b79f036:N; #3131 JONOSSA; KARTTASEPAN PERUSKARTTAPOLTTO SAA ALKAA (25.9.2026 klo 04.34)
 
 Omistajalle ilmoitettu. Sisältö: löydökset 46, 48, 49, 50, 52, radio kokonaan, eleet, Natiivi-UI:n erät; laitteella vahvistettavaa kahden sormen kallistus.
+
+## OMISTAJA klo 04.3x: MIKSI 4 YDINTA YOLLA KUN KONE VAPAA — FABLEN VIRHE, KORJATTU: PERUSKARTTAPOLTTO NYT 16 YTIMELLA (POHJA ~06.15, PALLO Z0–Z9 ~08.45), 4 YTIMEEN VAIN MITTAUSIKKUNASSA TAI TF-AJON AJAKSI (25.9.2026 klo 04.36)
+
+Sääntö ennallaan: --ytimet 4 päivällä, täysi yöllä; poltto alkoi TF:n jälkeen 04.3x.
