@@ -6662,4 +6662,1021 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Powerscourtin vesiputous putoaa 121 metriä, ja sen ympärille 1858 perustettuun peurapuistoon tuotiin Irlannin ensimmäiset japaninpeurat.',
     },
   },
+  /*
+   * BRA (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5A). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.BRA:n tunnuksia
+   * TÄSMÄLLEEN (26 osavaltiota + liittovaltiopiiri "Distrito Federal").
+   * Vain `lyhyt` tässä erässä. Vältetty maastokohteet-bra.js:n aiheet
+   * (Pico da Neblina, Fernando de Noronha, Itaipu, Serra da Capivara,
+   * São Miguel das Missões, Olinda, Congonhas, Pantanal, Lençóis
+   * Maranhenses); Brasília mainitaan vain kaupunkina. Lähteet (en-/pt-
+   * Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Alagoas            — Braskemin suolakaivokset Maceiósta (viisi
+   *                        kaupunginosaa, noin 60 000 siirrettyä)
+   *   Amapá              — Estádio Zerão (keskiviiva linjattu Marco Zero
+   *                        -muistomerkin mukaan)
+   *   Espírito Santo     — Ofício das Paneleiras de Goiabeiras (IPHAN:n
+   *                        ensimmäinen aineeton perintö 2002, ei dreijaa)
+   *   Piauí              — Teresina (Koillis-Brasilian ainoa ei-rannikon
+   *                        pääkaupunki, Parnaíba ja Poti)
+   *   Rio Grande do Norte — Cajueiro de Pirangi (7 300–8 400 m²; Piauín
+   *                        Cajueiro da Praia kiistää ennätyksen)
+   *   Rondônia           — Madeira–Mamoré Railroad (1907–1912, "Devil's
+   *                        Railroad", kuolleita arviolta 6 000+)
+   *   Sergipe            — Aracaju (uusi pääkaupunki 17.3.1855)
+   *   Muut               — yleistietoa, tarkistettu vastaavista
+   *                        en-Wikipedia-artikkeleista.
+   */
+  BRA: {
+    Acre: {
+      lyhyt: 'Xapurissa voi käydä kumimetsien puolustajan Chico Mendesin kotitalossa, jonka ovella hänet ammuttiin 1988.',
+    },
+    Alagoas: {
+      lyhyt: 'Maceiósta on tyhjennetty viisi kaupunginosaa ja noin 60 000 asukasta, koska maa vajoaa vanhojen vuorisuolakaivosten päällä.',
+    },
+    'Amapá': {
+      lyhyt: 'Macapássa päiväntasaajan kohdalla seisoo Marco Zero -muistomerkki, ja viereisen stadionin keskiviiva on linjattu sen mukaan.',
+    },
+    Amazonas: {
+      lyhyt: 'Manausin lähellä musta Rio Negro ja savenruskea Solimões virtaavat kilometrien matkan rinnakkain sekoittumatta.',
+    },
+    Bahia: {
+      lyhyt: 'Salvadorissa Lacerdan hissi nostaa matkustajat alakaupungista 72 metriä jyrkänteen päälle yläkaupunkiin.',
+    },
+    'Ceará': {
+      lyhyt: 'Cearán rannoilta kalastajat lähtevät yhä merelle jangadoilla, matalilla puisilla purjelautoilla.',
+    },
+    'Distrito Federal': {
+      lyhyt: 'Brasília rakennettiin tyhjälle ylängölle ja vihittiin pääkaupungiksi 1960; ylhäältä sen asemakaava muistuttaa lentokonetta.',
+    },
+    'Espírito Santo': {
+      lyhyt: 'Vitórian Goiabeirasissa naiset muovailevat mustia savipatoja ilman dreijaa, ja niissä keitetään osavaltion kalamoqueca.',
+    },
+    'Goiás': {
+      lyhyt: 'Chapada dos Veadeirosin ylängöllä kanjonit, vesiputoukset ja cerrado-savanni ovat Unescon maailmanperintöä.',
+    },
+    'Maranhão': {
+      lyhyt: 'Alcântarassa on Brasilian rakettien laukaisukeskus, sillä päiväntasaajan läheisyys säästää laukaisuissa polttoainetta.',
+    },
+    'Mato Grosso': {
+      lyhyt: 'Mato Grosso tuottaa soijaa enemmän kuin mikään muu Brasilian osavaltio, ja pellot jatkuvat horisonttiin asti.',
+    },
+    'Mato Grosso do Sul': {
+      lyhyt: 'Boniton joet ovat niin kirkkaita, että niissä snorklataan kalaparvien seassa kuin akvaariossa.',
+    },
+    'Minas Gerais': {
+      lyhyt: 'Brumadinhon Inhotim on valtava ulkomuseo, jossa nykytaide on sijoitettu kasvitieteellisen puutarhan keskelle.',
+    },
+    'Pará': {
+      lyhyt: 'Belémin Ver-o-Peso-torilla myydään açaíta, jonka tummaa sosetta paikalliset syövät paistetun kalan kanssa.',
+    },
+    'Paraíba': {
+      lyhyt: 'João Pessoan kaupungissa oleva Ponta do Seixas -niemi on koko Amerikan mantereen itäisin kohta.',
+    },
+    'Paraná': {
+      lyhyt: 'Iguaçun putoukset jakautuvat noin 275 erilliseen putoukseen Brasilian ja Argentiinan rajajoella.',
+    },
+    Pernambuco: {
+      lyhyt: 'Recifen karnevaaleissa tanssitaan frevoa, nopeaa katutanssia, jossa tanssijat heiluttavat pieniä värikkäitä päivänvarjoja.',
+    },
+    'Piauí': {
+      lyhyt: 'Teresina on Koillis-Brasilian ainoa osavaltion pääkaupunki, joka ei ole rannikolla; se on Parnaíba- ja Potijoen välissä.',
+    },
+    'Rio de Janeiro': {
+      lyhyt: 'Kristus-patsas seisoo Corcovadon noin 700-metrisellä huipulla, ja sen levitetyt kädet näkyvät lähes kaikkialle Rioon.',
+    },
+    'Rio Grande do Norte': {
+      lyhyt: 'Pirangin kylässä Natalin lähellä kasvaa cashewpuu, jonka latvus peittää yli 7 000 neliömetriä; sitä pidetään maailman suurimpana.',
+    },
+    'Rio Grande do Sul': {
+      lyhyt: 'Gaúchot kantavat mukanaan chimarrãota, kuumaa mate-juomaa, jota imetään metallipillillä kurpitsakupista.',
+    },
+    'Rondônia': {
+      lyhyt: 'Porto Velhosta lähti Madeira–Mamoré-rata, jonka rakentaminen viidakkoon vei tuhansia henkiä; sitä kutsutaan paholaisen radaksi.',
+    },
+    Roraima: {
+      lyhyt: 'Roraima-vuori, jyrkkäseinäinen pöytävuori eli tepui, kohoaa Brasilian, Venezuelan ja Guyanan rajojen kohtaamispaikassa.',
+    },
+    'Santa Catarina': {
+      lyhyt: 'Blumenaussa vietetään joka lokakuu Oktoberfestiä, sillä kaupungin perustivat saksalaiset siirtolaiset.',
+    },
+    'São Paulo': {
+      lyhyt: 'Brasiliassa asuu eniten japanilaistaustaisia Japanin ulkopuolella, ja São Paulon Liberdadessa katuja valaisevat japanilaistyyliset lyhdyt.',
+    },
+    Sergipe: {
+      lyhyt: 'Sergipe on Brasilian pienin osavaltio, ja sen pääkaupunki Aracaju rakennettiin ruutukaavaan uudeksi pääkaupungiksi 1855.',
+    },
+    Tocantins: {
+      lyhyt: 'Tocantins on Brasilian nuorin osavaltio, ja sen pääkaupunki Palmas rakennettiin tyhjästä 1989 alkaen.',
+    },
+  },
+  /*
+   * MEX (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.MEX:n tunnuksia TÄSMÄLLEEN: "Distrito Federal" =
+   * Mexico City, "México" = México-osavaltio (molempien nimiFi on
+   * "México"), "MEX+99?" = Natural Earthin nimetön pikkusaari
+   * (iso_3166_2 MX-X01~, 22,4° N 89,7° W) = Alacranesin riutta. Vain
+   * `lyhyt`. Vältetty maastokohteet-mex.js:n ja fokuskohteet-mex.js:n
+   * aiheet (Popocatépetl, Cozumel, Usumacinta, Teotihuacán, Palenque,
+   * Chichén Itzá, Monte Albán, El Tajín, Guanajuaton kaupunki,
+   * Chihuahuan rata, Templo Mayor). Lähteet (en-/es-Wikipedia ja
+   * hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   MEX+99?        — Scorpion Reef / Arrecife Alacranes (CONANP;
+   *                    noin 130–140 km Progresosta, Meksikonlahden suurin)
+   *   Chihuahua      — Cave of the Crystals (11,4 m, luola täyttyi
+   *                    uudelleen vedellä 2015)
+   *   Coahuila       — Cuatro Ciénegas (stromatoliitit)
+   *   Querétaro      — Peña de Bernal (433 m)
+   *   Tamaulipas     — Kemp's ridley sea turtle (Rancho Nuevo, arribadat)
+   *   Zacatecas      — Mining in Mexico (Zacatecas 36 % Meksikon hopeasta
+   *                    2019; Meksiko maailman suurin tuottaja)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  MEX: {
+    Aguascalientes: {
+      lyhyt: 'Aguascalientesin San Marcosin messut, Meksikon kansallismessut, täyttävät kaupungin keväisin useaksi viikoksi.',
+    },
+    'Baja California': {
+      lyhyt: 'Tijuanan ja San Diegon välinen San Ysidron raja-asema on läntisen pallonpuoliskon vilkkain maarajan ylityspaikka.',
+    },
+    'Baja California Sur': {
+      lyhyt: 'San Ignacion laguunissa harmaavalaat synnyttävät talvisin, ja uteliaat emot uivat usein aivan veneiden viereen.',
+    },
+    Campeche: {
+      lyhyt: 'Campechen vanhaa kaupunkia kiertävät muurit ja bastionit, jotka rakennettiin aikoinaan suojaksi merirosvoja vastaan.',
+    },
+    Chiapas: {
+      lyhyt: 'Sumideron kanjonin seinämät kohoavat paikoin yli kilometrin korkeuteen Grijalvajoen yläpuolelle.',
+    },
+    Chihuahua: {
+      lyhyt: 'Naican kaivoksen Kristalliluolassa on yli 11 metrin kipsikiteitä, mutta luola on jälleen veden alla.',
+    },
+    Coahuila: {
+      lyhyt: 'Cuatro Ciénegasin aavikkoaltaissa elää stromatoliitteja, syanobakteerien rakentamia kivikumpuja, jotka ovat muualta lähes kadonneet.',
+    },
+    Colima: {
+      lyhyt: 'Colima-tulivuori on Meksikon aktiivisimpia, ja sen savupatsas näkyy usein osavaltion pääkaupunkiin asti.',
+    },
+    Durango: {
+      lyhyt: 'Durangon aavikkomaisemissa on kuvattu kymmeniä lännenelokuvia, ja vanhoja kuvauskyliä voi yhä kiertää.',
+    },
+    Guanajuato: {
+      lyhyt: 'San Miguel de Allenden vaaleanpunainen uusgoottilainen kirkko, Parroquia, on koko kaupungin tunnusmerkki.',
+    },
+    Guerrero: {
+      lyhyt: 'Acapulcon La Quebradan kallioilta hypätään noin 35 metristä mereen, ja hyppy ajoitetaan tulevan aallon mukaan.',
+    },
+    Hidalgo: {
+      lyhyt: 'Pachucassa syödään pastes-piirakoita, jotka toivat mukanaan Cornwallista tulleet kaivosmiehet.',
+    },
+    Jalisco: {
+      lyhyt: 'Tequilan kaupungin ympärillä sinisen agaven rivit peittävät rinteet, ja agavemaisema on Unescon maailmanperintöä.',
+    },
+    'MEX+99?': {
+      lyhyt: 'Tämä pieni saari kuuluu Alacranesin riuttaan noin 130 km Jukatanin rannikosta; se on Meksikonlahden suurin koralliriutta.',
+    },
+    'México': {
+      lyhyt: 'Nevado de Toluca -tulivuoren kraatterissa on kaksi järveä, Aurinko ja Kuu, yli 4 000 metrin korkeudessa.',
+    },
+    'Distrito Federal': {
+      lyhyt: 'Mexico City on rakennettu kuivatun järven pohjalle, ja osa kaupungista vajoaa kymmeniä senttimetrejä vuodessa.',
+    },
+    'Michoacán': {
+      lyhyt: 'Talvisin miljoonat monarkkiperhoset peittävät Michoacánin vuoristometsien kuuset oransseiksi.',
+    },
+    Morelos: {
+      lyhyt: 'Cuernavacaa kutsutaan ikuisen kevään kaupungiksi, ja pääkaupunkilaiset ajavat sinne viikonloppuisin lämpöön.',
+    },
+    Nayarit: {
+      lyhyt: 'Marietassaarten piilotettu ranta on kalliokuopan pohjalla, ja sinne pääsee vain uimalla tunnelin läpi.',
+    },
+    'Nuevo León': {
+      lyhyt: 'Monterreyn yllä kohoaa Cerro de la Silla, jonka kaksi huippua muodostavat satulan muodon.',
+    },
+    Oaxaca: {
+      lyhyt: 'Hierve el Aguassa kallion rinteellä on kivettyneitä vesiputouksia, jotka mineraalilähteet ovat valuttaneet kalkista.',
+    },
+    Puebla: {
+      lyhyt: 'Cholulan suuri pyramidi on tilavuudeltaan maailman suurin, mutta se on kasvanut umpeen, ja huipulla seisoo kirkko.',
+    },
+    'Querétaro': {
+      lyhyt: 'Bernalin kylän yllä kohoaa Peña de Bernal, yli 400 metriä korkea kalliomonoliitti, yksi maailman suurimmista.',
+    },
+    'Quintana Roo': {
+      lyhyt: 'Tulumin maya-rauniot seisovat kalkkikivijyrkänteellä aivan Karibianmeren turkoosin veden yllä.',
+    },
+    'San Luis Potosí': {
+      lyhyt: 'Xilitlan sademetsässä on Las Pozas, brittiläisen Edward Jamesin rakentama surrealistinen betonipuutarha.',
+    },
+    Sinaloa: {
+      lyhyt: 'Sinaloan banda-yhtyeissä pauhaavat vaskipuhaltimet ja tuuba, ja niiden musiikki soi melkein joka juhlassa.',
+    },
+    Sonora: {
+      lyhyt: 'El Pinacaten laavakentällä on valtavia pyöreitä kraattereita keskellä Altarin hiekka-aavikkoa.',
+    },
+    Tabasco: {
+      lyhyt: 'Villahermosan La Venta -puistossa on olmeekkien jättiläispäitä, basaltista hakattuja kasvoja noin 2 500 vuoden takaa.',
+    },
+    Tamaulipas: {
+      lyhyt: 'Harvinainen Kempin merikilpikonna pesii lähes kokonaan Tamaulipasin rannoilla, ja naaraat nousevat maihin joukolla.',
+    },
+    Tlaxcala: {
+      lyhyt: 'Tlaxcala on Meksikon pienin osavaltio, ja Cacaxtlan raunioilla on säilynyt yli tuhatvuotiaita kirkkaita seinämaalauksia.',
+    },
+    Veracruz: {
+      lyhyt: 'Veracruzin ja Pueblan rajalla kohoaa lumihuippuinen Pico de Orizaba, 5 636 metriä, Meksikon korkein vuori.',
+    },
+    'Yucatán': {
+      lyhyt: 'Chicxulubin kylän kohdalla on 66 miljoonan vuoden takainen törmäyskraatteri, jonka isku liitetään dinosaurusten tuhoon.',
+    },
+    Zacatecas: {
+      lyhyt: 'Zacatecas louhii hopeaa enemmän kuin mikään muu Meksikon osavaltio, ja Meksiko on maailman suurin hopeantuottaja.',
+    },
+  },
+  /*
+   * CAN (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.CAN:n tunnuksia TÄSMÄLLEEN (esim. "Québec"
+   * aksentilla, vaikka nimiFi on "Quebec"). Vain `lyhyt`. Vältetty
+   * maastokohteet-can.js:n aiheet (Mount Logan, Naha Dehé, Baffininsaari,
+   * L'Anse aux Meadows, Craigellachie, Rideaun kanava, Head-Smashed-In,
+   * Dinosaur Provincial Park, Vanha Québec, Louisbourg, Dawson City);
+   * Québecin teksti koskee Montrealia. Lähteet (en-Wikipedia ja
+   * hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Northwest Territories — Great Slave Lake (614 m, Dettahin jäätie)
+   *   Québec         — Underground City, Montreal (32 km)
+   *   Yukon          — Yukon River Quest (715 km, Whitehorse–Dawson)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  CAN: {
+    Alberta: {
+      lyhyt: 'Banff on Kanadan vanhin kansallispuisto, joka perustettiin 1885 Kalliovuorten kuumien lähteiden ympärille.',
+    },
+    'British Columbia': {
+      lyhyt: 'Great Bear -sademetsässä elää henkikarhu, mustakarhun harvinainen muoto, jonka turkki on kermanvalkoinen.',
+    },
+    'Northwest Territories': {
+      lyhyt: 'Iso Orjajärvi on 614 metrin syvyydellään Pohjois-Amerikan syvin järvi, ja talvella sen jäälle aurataan tie.',
+    },
+    Manitoba: {
+      lyhyt: 'Churchillissa jääkarhut kerääntyvät syksyisin Hudsoninlahden rannalle odottamaan meren jäätymistä.',
+    },
+    'New Brunswick': {
+      lyhyt: 'Fundynlahdella on maailman suurimmat vuorovedet, ja Hopewell Rocksin kivipilarien juurella kävellään laskuveden aikaan.',
+    },
+    'Newfoundland and Labrador': {
+      lyhyt: 'Keväisin Grönlannista ajelehtivia jäävuoria lipuu Newfoundlandin rannikon ohi niin läheltä, että ne näkee rannalta.',
+    },
+    'Nova Scotia': {
+      lyhyt: 'Sable Islandin hiekkasaarella elää villihevosia, joita kukaan ei ruoki eikä hoida.',
+    },
+    Nunavut: {
+      lyhyt: 'Nunavut perustettiin 1999 inuiittien alueeksi, ja inuktitut kirjoitetaan siellä omalla tavukirjoituksellaan.',
+    },
+    Ontario: {
+      lyhyt: 'Niagaran hevosenkengän muotoinen putous on suurimmaksi osaksi Ontarion puolella, ja sen vesipöly kastelee katsojat.',
+    },
+    'Prince Edward Island': {
+      lyhyt: 'Cavendishissa voi käydä Vihervaaran talossa, jonka L. M. Montgomeryn Anna-kirjat tekivät kuuluisaksi.',
+    },
+    'Québec': {
+      lyhyt: 'Montrealin maanalainen kaupunki yhdistää 32 kilometrin käytävillä metroasemat ja tuhannet kaupat, joten talvella pärjää ulos menemättä.',
+    },
+    Saskatchewan: {
+      lyhyt: 'Reginassa koulutetaan jokainen Kanadan ratsupoliisin uusi konstaapeli, ja kaupungissa on poliisin perinnekeskus.',
+    },
+    Yukon: {
+      lyhyt: 'Whitehorsesta Dawson Cityyn melotaan joka kesä Yukonjokea pitkin 715 km:n kilpailu, maailman pisin vuosittainen melontakisa.',
+    },
+  },
+  /*
+   * CHL (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.CHL:n tunnuksia TÄSMÄLLEEN (koko viralliset nimet,
+   * esim. "Aisén del General Carlos Ibáñez del Campo"). Vain `lyhyt`.
+   * Vältetty maastokohteet-chl.js:n aiheet (Ojos del Salado, Chiloé,
+   * Chuquicamata, Humberstone, Chinchorro, Sewell, Paranal, Isla Negra,
+   * Valdivian maanjäristys). Lähteet (en-/es-Wikipedia ja hakutarkistus
+   * 25.9.2026), epävarmimmat erikseen:
+   *   Antofagasta    — Mano del Desierto (11 m, Irarrázabal, 1992)
+   *   Arica y Parinacota — Chungará Lake (4 517 m, Parinacotan sortuman
+   *                    patoama, chilenflamingo)
+   *   Bío-Bío        — Chiflón del Diablo (Lota, meren alle, entiset
+   *                    kaivosmiehet oppaina; chile.travel)
+   *   Maule          — Radal Siete Tazas National Park (Claro-joki)
+   *   Tarapacá       — Atacama Giant (119 m, Cerro Unita, 1000–1400 jaa.)
+   *   Valparaíso     — Easter Island (3 512 km mantereelta, Valparaíson
+   *                    alue)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  CHL: {
+    'Aisén del General Carlos Ibáñez del Campo': {
+      lyhyt: 'Kenraali Carreran järven marmoriluolien seinät hehkuvat sinisinä, kun järven vesi heijastuu niihin.',
+    },
+    Antofagasta: {
+      lyhyt: 'Autiomaassa Antofagastan kaakkoispuolella nousee hiekasta 11-metrinen betonikäsi, Mario Irarrázabalin Mano del Desierto.',
+    },
+    'La Araucanía': {
+      lyhyt: 'Pucónin yllä savuaa Villarrica, yksi Chilen aktiivisimmista tulivuorista, jonka kraatterissa on laavajärvi.',
+    },
+    'Arica y Parinacota': {
+      lyhyt: 'Chungaránjärvi on 4 517 metrin korkeudessa Parinacotan tulivuoren juurella, ja sen rannoilla elää flamingoja.',
+    },
+    Atacama: {
+      lyhyt: 'Sateisina vuosina Atacaman autiomaa puhkeaa kukkaan, ja ilmiötä kutsutaan nimellä desierto florido.',
+    },
+    'Bío-Bío': {
+      lyhyt: 'Lotan hiilikaivokset ulottuivat meren alle, ja Chiflón del Diablo -kaivokseen vievät nyt kierroksia entiset kaivosmiehet.',
+    },
+    Coquimbo: {
+      lyhyt: 'Nobel-runoilija Gabriela Mistral kasvoi Elquin laaksossa, ja hänet on haudattu laakson Monte Granden kylään.',
+    },
+    "Libertador General Bernardo O'Higgins": {
+      lyhyt: 'Colchaguan laaksossa viljellään carménèreä, rypälettä jota luultiin kadonneeksi, kunnes se löydettiin Chilen viinitarhoista 1994.',
+    },
+    'Los Lagos': {
+      lyhyt: 'Osornon tulivuoren lähes täydellinen lumikartio kohoaa Llanquihuejärven itärannalla.',
+    },
+    'Los Ríos': {
+      lyhyt: 'Valdivian jokirannan kalatorilla merileijonat odottavat, että kauppiaat heittävät niille kalanperkeitä.',
+    },
+    'Magallanes y Antártica Chilena': {
+      lyhyt: 'Torres del Painen kolme graniittitornia nousevat jyrkkinä Patagonian aroilta ja järviltä.',
+    },
+    Maule: {
+      lyhyt: 'Radal Siete Tazasin puistossa Claro-joki virtaa seitsemän peräkkäisen kallioaltaan ja vesiputouksen läpi.',
+    },
+    'Ñuble': {
+      lyhyt: 'Ñuble erotettiin omaksi alueekseen vasta 2018, ja sen pääkaupungissa Chillánissa syntyi pianisti Claudio Arrau.',
+    },
+    'Región Metropolitana de Santiago': {
+      lyhyt: 'Santiagon Gran Torre on 300 metriä korkea, Latinalaisen Amerikan korkein rakennus, ja sen takana siintävät Andit.',
+    },
+    'Tarapacá': {
+      lyhyt: 'Cerro Unitan rinteessä on Atacaman jättiläinen, 119-metrinen esikolumbiaaninen maahan tehty ihmishahmo.',
+    },
+    'Valparaíso': {
+      lyhyt: 'Pääsiäissaari moai-patsaineen kuuluu hallinnollisesti Valparaíson alueeseen, vaikka se on yli 3 500 km mantereelta.',
+    },
+  },
+  /*
+   * THA (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5B). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.THA:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti: 77 aluetta (76 maakuntaa ja
+   * Bangkok, avaimella "Bangkok Metropolis"). Vain `lyhyt` tässä
+   * erässä; jokaisella alueella eri aihe. Vältetty maastokohteet-tha.js:n
+   * aiheet (Ayutthayan ja Sukhothain raunioalueet, Ban Chiang, Phanom
+   * Rung, Phimai, Khao Yai, Doi Inthanon, Kuoleman rautatie). Lähteet
+   * (en-Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Chachoengsao   — Wat Saman Rattanaram (Ganesha 16 m, matkailulähteet)
+   *   Chanthaburi    — Chanthaburi Gem Market (pe–su, GIA/travelfish)
+   *   Mae Hong Son   — Su Tong Pae Bridge (yli 500 m, thailand.go.th)
+   *   Nakhon Nayok   — Khun Dan Prakan Chon Dam (2 720 m, TAT-hakemisto)
+   *   Narathiwat     — Talo Mano Mosque (tiikki, ei nauloja)
+   *   Nong Bua Lam Phu — Wat Tham Erawan (600 porrasta)
+   *   Pathum Thani   — Talaad Thai (ASEANin suurin, auki 24 h)
+   *   Pattani        — Kolae boat (Sai Buri -joen laiturit)
+   *   Phatthalung    — Thale Noi (uivat vesipuhvelit, TAT)
+   *   Sakon Nakhon   — Sakon Nakhon Natural Indigo Fabric (GI 2006)
+   *   Satun          — Satun UNESCO Global Geopark (2018, ensimmäinen)
+   *   Songkhla       — Golden Mermaid, Samila (1966, pronssi)
+   *   Trang          — Emerald Cave, Ko Muk (tunneli noin 80 m)
+   *   Udon Thani     — Red Lotus Sea (kukat ovat lumpeita)
+   *   Yala           — Betongin postilaatikko (1924, noin 3,2 m)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  THA: {
+    'Amnat Charoen': {
+      lyhyt: 'Amnat Charoenissa istuu 20 metriä korkea Phra Mongkhon Ming Mueang -Buddha, jota paikalliset kutsuvat yksinkertaisesti Phra Yaiksi, Isoksi Buddhaksi.',
+    },
+    'Ang Thong': {
+      lyhyt: 'Wat Muangin kultainen Buddha on 92 metriä korkea ja 63 metriä leveä, ja se kohoaa kauas yli Ang Thongin tasaisten riisipeltojen.',
+    },
+    'Bangkok Metropolis': {
+      lyhyt: 'Bangkokin thainkielinen juhlanimi on Guinnessin ennätysten mukaan maailman pisin paikannimi, 168 kirjainta – arjessa kaupunki on vain Krung Thep.',
+    },
+    'Bueng Kan': {
+      lyhyt: 'Bueng Kan on Thaimaan nuorin maakunta vuodelta 2011, ja sen tunnuksen, Phu Tokin hiekkakivivuoren, huipulle kuljetaan puista kävelysiltaa pitkin.',
+    },
+    'Buri Ram': {
+      lyhyt: 'Buriramin kilparadalla ajetaan joka vuosi MotoGP-moottoripyöräsarjan Thaimaan osakilpailu, ja sopimus ulottuu 2030-luvulle asti.',
+    },
+    Chachoengsao: {
+      lyhyt: 'Bang Pakong -joen rannalla Wat Saman Rattanaramissa makaa 16 metriä korkea vaaleanpunainen Ganesha, norsupäinen jumala, käsi siunaukseen nostettuna.',
+    },
+    'Chai Nat': {
+      lyhyt: 'Chai Natin Chao Phraya -pato valmistui 1957, ja sen säätelemä vesi kastelee peltoja seitsemässätoista maakunnassa.',
+    },
+    Chaiyaphum: {
+      lyhyt: 'Pa Hin Ngamin kansallispuistossa kukkii sadekaudella kokonaisia niittyjä dok krachiaota, inkiväärin sukuista kasvia, jota kutsutaan Siamin tulppaaniksi.',
+    },
+    Chanthaburi: {
+      lyhyt: "Chanthaburin jalokivikorttelissa kauppiaat levittävät perjantaista sunnuntaihin pöydilleen vaa'at, laskimet, safiirit ja rubiinit.",
+    },
+    'Chiang Mai': {
+      lyhyt: 'Yi Peng -juhlan öinä Chiang Main taivaalle nousee tuhansia paperilyhtyjä, khom loita, mutta kaupungin keskustassa niiden lennättämistä nyt rajoitetaan.',
+    },
+    'Chiang Rai': {
+      lyhyt: 'Chiang Rain Valkoinen temppeli, Wat Rong Khun, on taiteilija Chalermchai Kositpipatin omin rahoin rakentama, ja sen valkoisissa seinissä kimaltaa peilinsiruja.',
+    },
+    'Chon Buri': {
+      lyhyt: 'Pattayan rannalla seisova Totuuden pyhäkkö on veistetty kokonaan puusta, ja sen rakennustyöt ovat jatkuneet vuodesta 1981.',
+    },
+    Chumphon: {
+      lyhyt: 'Chumphonin kohdalla Malakan niemimaa kapenee Kran kannakseksi: Andamaninmereltä Thaimaanlahdelle on kapeimmillaan vain 44 kilometriä.',
+    },
+    Kalasin: {
+      lyhyt: 'Phu Kum Khaon vuorelta löytyi 1994 Thaimaan suurin kasvissyöjädinosaurusten fossiilipaikka, ja sen luita esitellään nyt Sirindhornin museossa.',
+    },
+    'Kamphaeng Phet': {
+      lyhyt: 'Kamphaeng Phetin ylpeys on kluai khai, pieni, pyöreä ja makea banaani, ja sadon kiitokseksi maakunnassa vietetään joka vuosi banaanijuhlaa.',
+    },
+    Kanchanaburi: {
+      lyhyt: 'Erawanin vesiputous laskee seitsemänä porrasmaisena kerroksena, ja sen vihreänturkoosissa altaissa saa uida.',
+    },
+    'Khon Kaen': {
+      lyhyt: 'Khon Kaenin Chonnabotissa kudotaan mudmee-silkkiä: langat sidotaan ja värjätään kuvioiksi jo ennen kuin ne päätyvät kangaspuihin.',
+    },
+    Krabi: {
+      lyhyt: 'Railayn niemelle ei pääse maitse, koska kalkkikivijyrkänteet katkaisevat tien – perille tullaan pitkähäntäveneellä, ja kallioilla kiipeillään.',
+    },
+    Lampang: {
+      lyhyt: 'Lampangissa hevosvaunut ovat yhä käytössä, ja kaupunkia kutsutaankin nimellä mueang rot ma, hevosvaunujen kaupunki.',
+    },
+    Lamphun: {
+      lyhyt: 'Lamphun on longaanitarhojen maakunta, ja täältä on peräisin kuaitiao lamyai, possunuudelikeitto kuivatuilla longaaneilla.',
+    },
+    Loei: {
+      lyhyt: 'Dan Sain Phi Ta Khon -juhlassa kuljetaan aavenaamioissa, jotka tehdään palmunlehden tupeista ja tahmean riisin höyrytyskoreista.',
+    },
+    'Lop Buri': {
+      lyhyt: 'Lopburissa Phra Prang Sam Yotin temppelin makakeille katetaan joka vuosi apinabuffet, jossa hedelmiä on jäädytetty jopa jääkimpaleiden sisään.',
+    },
+    'Mae Hong Son': {
+      lyhyt: 'Mae Hong Sonin Su Tong Pae on yli 500 metriä pitkä bambusilta, joka kulkee riisipeltojen ja joen yli kylästä meditaatiokeskukseen.',
+    },
+    'Maha Sarakham': {
+      lyhyt: 'Maha Sarakham on Isanin yliopistokaupunki: pelkästään Mahasarakhamin yliopistossa opiskelee kymmeniätuhansia nuoria.',
+    },
+    Mukdahan: {
+      lyhyt: 'Mukdahanista pääsee Mekongin yli Laosin Savannakhetiin toista Thaimaan–Laosin ystävyydensiltaa pitkin.',
+    },
+    'Nakhon Pathom': {
+      lyhyt: 'Nakhon Pathomin Phra Pathommachedi on Thaimaan korkein stupa, noin 120 metriä, ja sen kellonmuotoinen kupoli näkyy kaupungissa joka suuntaan.',
+    },
+    'Nakhon Phanom': {
+      lyhyt: 'Buddhalaisen paaston päättyessä Nakhon Phanomissa lasketaan Mekongille valaistuja veneitä, lai ruea fai, jotka hehkuvat yön pimeydessä.',
+    },
+    'Nakhon Ratchasima': {
+      lyhyt: 'Dan Kwianin kylässä poltetaan keramiikkaa yhä puulla lämmitettävissä anagama-uuneissa, käyttöruukuista savimuraaleihin ja veistoksiin.',
+    },
+    'Nakhon Sawan': {
+      lyhyt: 'Nakhon Sawanissa asuu paljon kiinalaistaustaisia thaimaalaisia, ja kaupungin kiinalaisen uudenvuoden juhlaa on vietetty jo yli sata vuotta.',
+    },
+    'Nakhon Si Thammarat': {
+      lyhyt: 'Wat Phra Mahathatin chedi on Etelä-Thaimaan tärkein buddhalainen muistomerkki, ja se on kuvattu myös maakunnan sinettiin.',
+    },
+    'Nakhon Nayok': {
+      lyhyt: 'Nakhon Nayokin Khun Dan Prakan Chonin betonipato on yli kaksi ja puoli kilometriä pitkä, ja sen harjalla voi kävellä altaan ja laakson välissä.',
+    },
+    Nan: {
+      lyhyt: 'Nanin Wat Phuminin thai lue -seinämaalausten kuuluisimpia kohtauksia on mies, joka kuiskaa jotakin naisen korvaan.',
+    },
+    Narathiwat: {
+      lyhyt: 'Talo Manon moskeija on rakennettu tiikistä ilman ainuttakaan naulaa, ja se on yksi Thaimaan vanhimmista moskeijoista.',
+    },
+    'Nong Bua Lam Phu': {
+      lyhyt: 'Wat Tham Erawanin luolatemppeliin kiivetään 600 porrasta, ja luolan suulla istuva suuri Buddha näkyy kauas riisipelloille.',
+    },
+    'Nong Khai': {
+      lyhyt: 'Nong Khain Mekong-rannoilla väki odottaa lokakuussa naga-tulipalloja, punertavia valoja, joiden uskotaan nousevan joessa asuvasta käärmeestä.',
+    },
+    Nonthaburi: {
+      lyhyt: 'Chao Phraya -joen Ko Kret -saarella asuu mon-kansaa, joka elää yhä saviruukkujen valmistuksesta, ja saarelle kuljetaan lautalla.',
+    },
+    'Pathum Thani': {
+      lyhyt: 'Pathum Thanin Talaad Thai on Kaakkois-Aasian suurin maataloustuotteiden tukkutori, ja se on auki vuorokauden ympäri.',
+    },
+    Pattani: {
+      lyhyt: 'Sai Buri -joen rannoilla keinuvat kolae-kalastusveneet, joiden keula ja perä on maalattu kirjaviksi malaijilaisin, thaimaalaisin ja kiinalaisin kuvioin.',
+    },
+    Phangnga: {
+      lyhyt: 'Phang Ngan lahdella merestä nousee 20-metrinen Ko Tapu -kalliopilari, jota kutsutaan James Bond -saareksi vuoden 1974 elokuvan mukaan.',
+    },
+    Phatthalung: {
+      lyhyt: 'Thale Noin kosteikon vesipuhvelit ovat oppineet uimaan: tulvakaudella ne sukeltavat laiduntamaan veden alla kasvavaa ruohoa.',
+    },
+    Phayao: {
+      lyhyt: 'Kwan Phayao on Pohjois-Thaimaan suurin makeanveden järvi, mutta syvyyttä sillä on vain puolitoista metriä.',
+    },
+    Phetchabun: {
+      lyhyt: 'Phu Thap Boekin rinteillä hmong-viljelijät kasvattavat kaalia, sillä vuoren viileä ilmasto sopii sille paremmin kuin tasangon helle.',
+    },
+    Phetchaburi: {
+      lyhyt: 'Phetchaburi on tunnettu jälkiruoistaan, kuten khanom mo kaeng -vanukkaasta, ja Unesco nimesi sen gastronomian kaupungiksi vuonna 2021.',
+    },
+    Phichit: {
+      lyhyt: 'Bueng Si Fai on Thaimaan viidenneksi suurin makeanveden järvi, ja sen rannalla vartioi jättimäinen krokotiilipatsas Chalawan-tarinan mukaan.',
+    },
+    Phitsanulok: {
+      lyhyt: 'Phitsanulokin Wat Yaissa istuu kullattu Phra Phuttha Chinnarat, jota moni thaimaalainen pitää maan kauneimpana Buddha-kuvana.',
+    },
+    'Phra Nakhon Si Ayutthaya': {
+      lyhyt: 'Ayutthayan kaduilla myydään roti sai maita, ohuita lettuja, joiden sisään kääritään värikästä sokerihattaraa.',
+    },
+    Phrae: {
+      lyhyt: 'Phae Mueang Phi eli aavemaa on eroosion muovaamien sienikivien ja pylväiden kenttä, ja se on ollut suojeltu metsäpuisto vuodesta 1981.',
+    },
+    Phuket: {
+      lyhyt: 'Phuketin kasvisruokajuhlassa meediot lävistävät transsissa poskiaan, ja kasvisruokaa tarjoavat kojut nostavat keltapunaiset jay-liput.',
+    },
+    'Prachin Buri': {
+      lyhyt: 'Prachin Burin sinetissä on bodhipuu, sillä Wat Si Maha Photin puun kerrotaan istutetun noin kaksituhatta vuotta sitten.',
+    },
+    'Prachuap Khiri Khan': {
+      lyhyt: 'Phraya Nakhonin luolassa seisoo vuonna 1890 rakennettu kuninkaallinen paviljonki, ja tiettyinä tunteina sitä valaisee katon aukosta laskeutuva auringonvalo.',
+    },
+    Ranong: {
+      lyhyt: 'Ranong on Thaimaan sateisimpia seutuja, yli 4 500 millimetriä vuodessa, ja sitä kutsutaan kahdeksan sadekuukauden ja neljän aurinkokuukauden kaupungiksi.',
+    },
+    Ratchaburi: {
+      lyhyt: 'Ratchaburi on lohikäärmeruukkujen kaupunki: suuriin kivitavararuukkuihin maalataan kiemurtelevia lohikäärmeitä.',
+    },
+    Rayong: {
+      lyhyt: 'Rayongin rannikon edustalla on Khao Laem Ya–Mu Ko Sametin kansallispuisto, ja sen tunnetuin saari Ko Samet on kuvattu maakunnan sinettiin.',
+    },
+    'Roi Et': {
+      lyhyt: 'Roi Et tarkoittaa kirjaimellisesti sataayhtä, ja kaupungin keskustan järven rannalla nousee 101 metriä korkea näkötorni.',
+    },
+    'Sa Kaeo': {
+      lyhyt: 'Aranyaprathetin Rong Kluea on vilkas rajatori Kambodžan-rajan tuntumassa, ja sen nimi tarkoittaa suolavaraston toria.',
+    },
+    'Sakon Nakhon': {
+      lyhyt: 'Sakon Nakhonin luonnonindigolla värjätty puuvillakangas on suojattu alkuperämerkintä, ja sen sini vaihtelee vaaleasta syvään tummansiniseen.',
+    },
+    'Samut Prakan': {
+      lyhyt: 'Samut Prakanin Erawan-museon jalustalla seisoo 29 metriä korkea ja 250 tonnia painava kolmipäinen pronssinorsu, jonka vatsassa on näyttelysali.',
+    },
+    'Samut Sakhon': {
+      lyhyt: 'Maeklongin rautatie katkeaa Samut Sakhonissa Tha Chin -jokeen, ja matkustajat ylittävät joen lautalla ennen kuin jatkavat seuraavaan junaan.',
+    },
+    'Samut Songkhram': {
+      lyhyt: 'Maeklongin rautatietorilla myyjät vetävät markiisinsa ja vihannesvasunsa pois kiskoilta aina, kun juna lähestyy.',
+    },
+    Saraburi: {
+      lyhyt: 'Wat Phra Phutthabatin kultaisen kotelon alla on puolitoista metriä pitkä kivipainauma, jota pidetään Buddhan jalanjälkenä.',
+    },
+    Satun: {
+      lyhyt: 'Satunista tuli 2018 Thaimaan ensimmäinen Unescon globaali geopark, ja sen kallioista löytyy yli 500 miljoonaa vuotta vanhoja trilobiitteja.',
+    },
+    'Si Sa Ket': {
+      lyhyt: 'Khun Hanin Wat Pa Maha Chedi Kaewiin on muurattu yli puolitoista miljoonaa tyhjää olutpulloa, vihreitä ja ruskeita.',
+    },
+    'Sing Buri': {
+      lyhyt: 'Sing Burin ylpeys on pla chon mae la, käärmepääkala, joka on kotoisin maakunnan läpi virtaavasta Mae La -joesta.',
+    },
+    Songkhla: {
+      lyhyt: 'Samilan rannalla istuu vuonna 1966 valettu pronssinen merenneito kampaamassa hiuksiaan, ja sen koskettamisen sanotaan tuovan onnea.',
+    },
+    Sukhothai: {
+      lyhyt: 'Sukhothain Si Satchanalaissa valmistetaan yhä sangkhalok-keramiikkaa, jota alueen sadat polttouunit tekivät jo 1300-luvulla.',
+    },
+    'Suphan Buri': {
+      lyhyt: 'Tha Chin -joen varren Sam Chukin vanha tori sai 2009 Unescon kulttuuriperintöpalkinnon, kun asukkaat itse kunnostivat sen puiset kauppatalot.',
+    },
+    'Surat Thani': {
+      lyhyt: 'Khao Sokin sademetsässä kukkii Rafflesia kerrii, jonka kukka voi olla lähes metrin levyinen ja haisee mätänevältä lihalta.',
+    },
+    Surin: {
+      lyhyt: 'Surinissa kasvatetaan noin neljännes Thaimaan kesyistä norsuista, ja marraskuun norsujuhlassa norsut kisaavat köydenvedossa ihmisiä vastaan.',
+    },
+    Tak: {
+      lyhyt: 'Umphangin Thi Lo Su -vesiputous on noin 250 metriä korkea ja 450 metriä leveä, ja sitä pidetään Thaimaan suurimpana.',
+    },
+    Trang: {
+      lyhyt: 'Ko Mukin Smaragdiluolaan uidaan 80 metriä pilkkopimeää tunnelia pitkin, ja sen päässä odottaa kallioiden ympäröimä salainen ranta.',
+    },
+    Trat: {
+      lyhyt: 'Ko Chang eli Norsusaari on Thaimaan kolmanneksi suurin saari, ja noin 85 prosenttia siitä kuuluu kansallispuistoon.',
+    },
+    'Ubon Ratchathani': {
+      lyhyt: 'Ubonin kynttiläjuhlassa kaupungin läpi kulkee jättimäisiä vahaveistoksia, joita ei koskaan sytytetä – ne kuljetetaan temppeleihin sadekauden paaston alkaessa.',
+    },
+    'Udon Thani': {
+      lyhyt: 'Nong Han Kumphawapin järvi muuttuu talvella vaaleanpunaiseksi, kun tuhannet lumpeet kukkivat – paikalliset kutsuvat sitä punaisten lootusten mereksi.',
+    },
+    'Uthai Thani': {
+      lyhyt: 'Huai Kha Khaengin luonnonsuojelualue on Unescon maailmanperintöä, ja sen metsissä elää noin 90 luonnonvaraista indokiinantiikeriä.',
+    },
+    Uttaradit: {
+      lyhyt: 'Uttaradit tunnetaan Laplaen durianeista, joilta puuttuu hedelmän tavallinen voimakas haju, ja syyskuussa vietetään langsat-juhlaa.',
+    },
+    Yala: {
+      lyhyt: 'Betongin kellotornin risteyksessä seisoo vuonna 1924 valettu yli kolmemetrinen betoninen postilaatikko, jonka päällä oli aikoinaan radio.',
+    },
+    Yasothon: {
+      lyhyt: 'Yasothonissa ammutaan toukokuun Bun Bang Fai -juhlassa taivaalle kotitekoisia raketteja kutsumaan sadetta riisipelloille.',
+    },
+  },
+  /*
+   * PHL (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5B). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.PHL:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti: 17 hallinnollista aluetta
+   * (region). Huom. datan nimissä: "Autonomous Region in Muslim Mindanao
+   * (ARMM)" on vuodesta 2019 BARMM, ja "Dinagat Islands (Region XIII)"
+   * on koko Caragan alue (Dinagat on vain yksi sen maakunnista) —
+   * luonnehdinta kertoo siksi Caragan Siargaosta. Vältetty
+   * maastokohteet-phl.js:n aiheet (Apo, Mayon, Banaue, Vigan, Chocolate
+   * Hills, Tubbataha, maanalainen joki, Callao, Paoay, Corregidor).
+   * Lähteet (en-Wikipedia ja hakutarkistus 25.9.2026): Lake Lanao,
+   * Donsol, Ivatan people, Taal Volcano, Giant Lantern Festival, Sinulog,
+   * Sagada/Hanging coffins, Philippine eagle, Siargao, San Juanico
+   * Bridge, Bangui Wind Farm, Coron Island, Jeepney, Cagayan de Oro,
+   * T'nalak, Boracay (sulku 26.4.2018 alkaen), Chavacano.
+   */
+  PHL: {
+    'Autonomous Region in Muslim Mindanao (ARMM)': {
+      lyhyt: 'Lanao-järvi on Filippiinien syvin ja toiseksi suurin järvi, ja sen rannoilla asuvat maranaot, joiden nimi tarkoittaa järven kansaa.',
+    },
+    'Bicol (Region V)': {
+      lyhyt: 'Sorsogonin Donsolissa voi marras–kesäkuussa uida valashaiden, paikallisittain butandingien, rinnalla valvotuilla retkillä.',
+    },
+    'Cagayan Valley (Region II)': {
+      lyhyt: 'Batanesin saarilla ivatanit asuvat kivitaloissa, joiden metrin paksuiset kalkkikiviseinät ja tiheät heinäkatot kestävät taifuunit.',
+    },
+    'CALABARZON (Region IV-A)': {
+      lyhyt: 'Taal-järven keskellä on Tulivuorisaari, ja sen kraatterijärvessä on vielä Vulcan Point – saari järvessä saaressa järvessä.',
+    },
+    'Central Luzon (Region III)': {
+      lyhyt: 'Pampangan San Fernandossa kaupunginosat kilpailevat joka joulukuu jättimäisillä parol-tähtilyhdyillä Ligligan Parul -juhlassa.',
+    },
+    'Central Visayas (Region VII)': {
+      lyhyt: 'Cebu Cityssä tanssitaan tammikuun kolmantena sunnuntaina sinulogia, rumpujen tahtiin etenevää rukoustanssia Santo Niñon kunniaksi.',
+    },
+    'Cordillera Administrative Region (CAR)': {
+      lyhyt: 'Sagadan Echo Valleyssa arkut roikkuvat kalkkikivijyrkänteillä, sillä vainajat on perinteisesti haudattu kallioille eikä maahan.',
+    },
+    'Davao (Region XI)': {
+      lyhyt: 'Davaon kotkakeskuksessa hoidetaan filippiinienkotkia, ja siellä onnistuttiin ensimmäisen kerran kasvattamaan lajin poikanen tarhassa vuonna 1992.',
+    },
+    'Dinagat Islands (Region XIII)': {
+      lyhyt: 'Caragan alueeseen kuuluvan Siargaon Cloud 9 on Filippiinien tunnetuin surffipaikka, jonka paksut aallot kaartuvat onttoiksi putkiksi.',
+    },
+    'Eastern Visayas (Region VIII)': {
+      lyhyt: 'San Juanicon silta kulkee 2,16 kilometriä salmen yli Leytestä Samariin, ja avattaessa 1973 se oli Filippiinien pisin silta.',
+    },
+    'Ilocos (Region I)': {
+      lyhyt: 'Banguin lahden rannalla seisoo yhdessä rivissä kaksikymmentä 70-metristä tuulivoimalaa, jotka kääntyvät kohti merta, josta tuuli puhaltaa.',
+    },
+    'MIMAROPA (Region IV-B)': {
+      lyhyt: 'Coronin lahden pohjassa lepää toisen maailmansodan japanilaisia laivanhylkyjä, ja niiden luo sukelletaan kuudesta yli neljäänkymmeneen metriin.',
+    },
+    'National Capital Region': {
+      lyhyt: 'Manilan kaduilla kulkevat jeepneyt, värikkäiksi maalatut pikkubussit, joiden esikuvina olivat Yhdysvaltain armeijan jättämät sotilasjeepit.',
+    },
+    'Northern Mindanao (Region X)': {
+      lyhyt: 'Cagayan de Oron kaupungin läpi virtaavalla joella lasketaan koskia kumiveneillä ja kajakeilla, ja kisoja järjestetään joka vuosi.',
+    },
+    'SOCCSKSARGEN (Region XII)': {
+      lyhyt: "Lake Sebun t'boli-naiset kutovat abakakuidusta t'nalak-kangasta kuvioihin, jotka he ovat nähneet unissaan.",
+    },
+    'Western Visayas (Region VI)': {
+      lyhyt: 'Boracayn saari suljettiin turisteilta puoleksi vuodeksi 2018, jotta sen viemäröinti ja rannat saatiin kuntoon.',
+    },
+    'Zamboanga Peninsula (Region IX)': {
+      lyhyt: 'Zamboanga Cityssä puhutaan chavacanoa, Aasian ainoaa espanjapohjaista kreolikieltä, ja se on kaupungin virallinen kieli.',
+    },
+  },
+  /*
+   * VNM (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5C). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.VNM:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti (Natural Earthin nimet, osa ilman
+   * diakriittejä: "Ha Noi", "Can Tho", "Ha Tinh", "Hau Giang", "Lai Chau",
+   * "Son La"; "Ðong Tháp" alkaa islannin eth-kirjaimella U+00D0, ja
+   * "Quàng Nam" on väärällä sävymerkillä). KOLME NATURAL EARTHIN VIRHETTÄ:
+   * kolmella maakunnalla on tunnuksena suuralueen nimi, ja luonnehdinta
+   * kuvaa polygonin todellista maakuntaa (tunnistettu keskipisteestä,
+   * julisteet/pallo/maakunnat/2026-09-25a/VNM.json):
+   *   "Đông Bắc"            (105,85 E 22,24 N) = Bắc Kạn
+   *   "Đồng Bằng Sông Hồng" (106,06 E 20,83 N) = Hưng Yên
+   *   "Đông Nam Bộ"         (107,20 E 11,06 N) = Đồng Nai
+   * Jako on vuoden 2025 uudistusta edeltävä 63 maakuntaa (1.7.2025 alkaen
+   * 34), joten tekstit kuvaavat seutua eivätkä hallintoyksikköä. Vältetty
+   * maastokohteet-vnm.js:n aiheet (Hội An, Huến linnoitus, Mỹ Sơn, Phong
+   * Nha ja Sơn Đoòng, Điện Biên Phủn taistelu, Hồ-linnoitus, Hoa Lư, Po
+   * Nagar, Fansipan, Punainenjoki, Hạ Long, Mekong). Vain `lyhyt`.
+   * Lähteet (en-Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat:
+   *   Bà Rịa - Vũng Tàu — Côn Đảon kansallispuisto (n. 90 % Vietnamin
+   *                        vihermerikilpikonnien pesinnästä; hautomot)
+   *   Bạc Liêu           — Bac Lieu near-shore wind farm (vuorovesimuta)
+   *   Bình Dương         — huonekaluteollisuuden keskittymä (Nam Tân Uyên)
+   *   Bình Phước         — Vietnam News: puolet maan cashew-alasta
+   *   Bình Thuận         — n. 55 % pitayasadosta 2019; yövalaistus
+   *   Cà Mau             — kerrostuminen 25–100 m/v niemen kärjessä
+   *   Đắk Nông           — Unesco-geopuisto 2020, n. 50 laavaluolaa, 10 km
+   *   Hà Nam             — Tam Chúc, YK:n vesak-päivä 12.–14.5.2019
+   *   Hau Giang          — Ngã Bảy, seitsemän kanavan risteys (1915)
+   *   Hồ Chí Minh city   — Metro Line 1, avattu 22.12.2024
+   *   Kon Tum            — puukirkko 1913–1918, bahnarien paalutalotyyli
+   *   Lai Chau           — Lai Châun vesivoimala, vihitty 20.12.2016
+   *   Long An            — Nhà trăm cột, 120 pylvästä, 1901–1903
+   *   Ninh Thuận         — maan kuivin seutu, suurin rypäleiden tuottaja
+   *   Quảng Bình         — Võ Nguyên Giápin hauta, Vũng Chùa (2013)
+   *   Thái Bình          — Keon pagodi, kolmikerroksinen kellotorni
+   *   Thừa Thiên - Huế   — Tam Giang–Cầu Hai, lähes 70 km
+   *   Tuyên Quang        — Thành Tuyên -festivaali (jättilyhdyt)
+   *   Muut               — yleistietoa, tarkistettu vastaavista
+   *                        en-Wikipedia-artikkeleista.
+   */
+  VNM: {
+    'An Giang': {
+      lyhyt: 'Trà Sưn kajaputmetsässä liikutaan tulvakaudella veneillä, ja vettä peittää niin tiheä vihreä kasvimatto, että kanava näyttää niityltä.',
+    },
+    'Bà Rịa - Vũng Tàu': {
+      lyhyt: 'Côn Đảon saarilla munii noin 90 prosenttia Vietnamin vihermerikilpikonnista, ja vartijat siirtävät munat suojaan hautomoihin.',
+    },
+    'Bắc Giang': {
+      lyhyt: 'Lục Ngạnin litsipuutarhoissa kesäkuu on sadonkorjuun aikaa, ja teiden varret täyttyvät punaisista hedelmäkasoista.',
+    },
+    'Bạc Liêu': {
+      lyhyt: 'Bạc Liêun tuulivoimalat seisovat rannikon vuorovesimudassa, ja nousuveden aikaan ne näyttävät kasvavan suoraan merestä.',
+    },
+    'Bắc Ninh': {
+      lyhyt: 'Bắc Ninhin kylissä lauletaan quan họ -vuorolauluja, joissa miesten ja naisten ryhmät vastaavat toisilleen; perinne on Unescon listalla.',
+    },
+    'Bến Tre': {
+      lyhyt: 'Bến Tre on kookospalmujen seutua, ja pienissä perhepajoissa kookosmaidosta keitetään sitkeitä kookoskaramelleja.',
+    },
+    'Bình Định': {
+      lyhyt: 'Bình Định tunnetaan vietnamilaisten perinteisten kamppailulajien kotiseutuna, ja niitä harjoitellaan monessa kylässä yhä.',
+    },
+    'Bình Dương': {
+      lyhyt: 'Bình Dươngin teollisuusalueet Hồ Chí Minhin kaupungin pohjoispuolella ovat Vietnamin huonekaluteollisuuden ydintä.',
+    },
+    'Bình Phước': {
+      lyhyt: 'Bình Phước on Vietnamin suurin cashewpähkinän viljelyseutu, ja sen punamullassa kasvaa noin puolet maan cashewpuista.',
+    },
+    'Bình Thuận': {
+      lyhyt: 'Bình Thuận kasvattaa yli puolet Vietnamin pitayoista, ja viljelmillä palaa öisin lamppuja, jotka saavat kaktukset kukkimaan.',
+    },
+    'Cà Mau': {
+      lyhyt: 'Cà Maun niemen kärjessä mangrovemetsä kasvattaa maata mereen päin kymmeniä metrejä vuodessa, kun juuret pidättävät lietettä.',
+    },
+    'Can Tho': {
+      lyhyt: 'Cần Thơn Cái Răngin kelluvalla torilla kauppa käydään veneistä aamuhämärissä, ja myyjät ripustavat tuotteensa pitkän salon nokkaan.',
+    },
+    'Cao Bằng': {
+      lyhyt: 'Bản Giốcin vesiputous valuu monena portaana Kiinan rajalla, ja bambulautat vievät vierailijoita aivan kuohujen eteen.',
+    },
+    'Đà Nẵng': {
+      lyhyt: 'Đà Nẵngin Lohikäärmesilta syöksee viikonloppuiltaisin suustaan tulta ja vettä, ja katsojat kerääntyvät Hàn-joen rannoille.',
+    },
+    'Đắk Lắk': {
+      lyhyt: 'Buôn Ma Thuộtia kutsutaan Vietnamin kahvipääkaupungiksi, ja ympäröivän ylängön punamullassa kasvaa robustakahvia.',
+    },
+    'Đắk Nông': {
+      lyhyt: 'Đắk Nôngin Unescon geopuistossa on noin 50 laavaluolan järjestelmä, jonka käytäviä on yhteensä yli kymmenen kilometriä.',
+    },
+    'Điện Biên': {
+      lyhyt: 'Maaliskuussa Điện Biênin vuorenrinteet valkenevat ban-puiden kukista, ja kukinnan kunniaksi vietetään omaa juhlaa.',
+    },
+    'Đông Bắc': {
+      lyhyt: 'Ba Bể on Vietnamin suurin luonnollinen makean veden järvi, ja sen rannoilla tày-kansan paalutalot katsovat kalkkivuorten ympäröimälle vedelle.',
+    },
+    'Đồng Bằng Sông Hồng': {
+      lyhyt: 'Hưng Yênin longaneja vietiin aikoinaan lahjaksi keisarin hoviin, ja kesällä puutarhojen puut notkuvat yhä hedelmistä.',
+    },
+    'Đông Nam Bộ': {
+      lyhyt: 'Đồng Nain Cát Tiênin kansallispuiston alankosademetsässä elää keltaposkigibboneja, joiden laulu kaikuu aamuisin latvoista.',
+    },
+    'Ðong Tháp': {
+      lyhyt: 'Đồng Thápin tulvatasangolla lootuslammet kukkivat kesällä vaaleanpunaisina, ja lootuksesta tehdään makeisia ja teetä.',
+    },
+    'Gia Lai': {
+      lyhyt: 'Pleikun laidalla on Biển Hồ, sammuneen tulivuoren kraateriin syntynyt järvi, josta kaupunki saa juomavetensä.',
+    },
+    'Hà Giang': {
+      lyhyt: 'Mã Pí Lèngin sola kiemurtelee jyrkänteen reunalla satoja metrejä Nho Quế -joen yläpuolella, ja tie on Vietnamin huimaavimpia.',
+    },
+    'Hà Nam': {
+      lyhyt: 'Tam Chúcin laaja buddhalainen temppelialue rakennettiin järven ja kalkkivuorten väliin, ja 2019 siellä vietettiin YK:n vesak-päivää.',
+    },
+    'Ha Tinh': {
+      lyhyt: 'Tiên Điền on runoilija Nguyễn Dun suvun kotikylä, ja hänen Kiềun tarinaansa pidetään vietnamilaisen kirjallisuuden kulmakivenä.',
+    },
+    'Hải Dương': {
+      lyhyt: 'Hải Dương tunnetaan mungpapukakuistaan, pienistä makeista paloista, joita syödään vihreän teen kanssa ja viedään tuliaisiksi.',
+    },
+    'Hải Phòng': {
+      lyhyt: 'Cát Bàn saaren kalkkikivikallioilla elää Cát Bàn languri, maailman uhanalaisimpia apinoita, jota ei tavata missään muualla.',
+    },
+    'Ha Noi': {
+      lyhyt: 'Hanoin Hoàn Kiếm -järven ympäristö suljetaan viikonloppuisin autoilta, ja kadut täyttyvät kävelijöistä ja katusoittajista.',
+    },
+    'Hau Giang': {
+      lyhyt: 'Ngã Bảyn kaupungissa seitsemän kanavaa kohtaa samassa risteyksessä, ja nimikin tarkoittaa seitsemän tien risteystä.',
+    },
+    'Hồ Chí Minh city': {
+      lyhyt: 'Hồ Chí Minhin kaupungin ensimmäinen metrolinja avattiin joulukuussa 2024, ja se kulkee Bến Thànhin torilta Suối Tiêniin.',
+    },
+    'Hòa Bình': {
+      lyhyt: 'Mai Châun laaksossa valkoiset thait asuvat paalutaloissa riisipeltojen keskellä, ja moni talo majoittaa matkalaisia.',
+    },
+    'Thừa Thiên - Huế': {
+      lyhyt: 'Tam Giang–Cầu Hain laguuniketju ulottuu lähes 70 kilometriä rannikon suuntaisesti, ja matalassa vedessä seisoo kalastajien bambuaitoja.',
+    },
+    'Khánh Hòa': {
+      lyhyt: 'Khánh Hòan rannikon saarten luolista kerätään salangaanien pesiä, ja niistä keitetty keitto on Vietnamissa arvostettu herkku.',
+    },
+    'Kiên Giang': {
+      lyhyt: 'Phú Quốcin saarella kalakastiketta kypsytetään kuukausia suurissa puutynnyreissä sardelleista ja suolasta.',
+    },
+    'Kon Tum': {
+      lyhyt: 'Kon Tumin puukirkko valmistui 1918, ja siinä eurooppalainen kirkkomalli yhdistyy bahnarien paalutalojen tyyliin.',
+    },
+    'Lai Chau': {
+      lyhyt: 'Lai Châun vesivoimalan pato Đà-joella valmistui 2016, ja se on samalla joella olevien Sơn Lan ja Hòa Bìnhin voimaloiden ketjun ylin.',
+    },
+    'Lâm Đồng': {
+      lyhyt: 'Đà Lạt on noin 1 500 metrin korkeudessa, ja sen viileässä ilmastossa kasvatetaan kasvihuoneissa kukkia koko maan tarpeisiin.',
+    },
+    'Lạng Sơn': {
+      lyhyt: 'Hữu Nghịn raja-asema on yksi Vietnamin ja Kiinan vilkkaimmista, ja rekkajonot sen edessä voivat venyä kilometrien mittaisiksi.',
+    },
+    'Lào Cai': {
+      lyhyt: 'Bắc Hàn sunnuntaitorille tulee vuoristokylistä kirjavasti pukeutuneita kukka-hmongeja, ja torin laidalla käydään kauppaa puhveleista.',
+    },
+    'Long An': {
+      lyhyt: 'Cần Đướcin satapylväinen talo rakennettiin 1900-luvun alussa Huếsta tulleiden puuseppien voimin, ja sen kattoa kannattelee 120 pylvästä.',
+    },
+    'Nam Định': {
+      lyhyt: 'Trầnin temppelissä avataan joka vuosi ensimmäisen kuukauden täydenkuun yönä sinetti, ja siunattuja leimoja tavoittelee valtava väkijoukko.',
+    },
+    'Nghệ An': {
+      lyhyt: 'Kim Liênin kylässä on Hồ Chí Minhin lapsuudenkoti, olkikattoinen puutalo, jota käy katsomassa vierailijoita ympäri maata.',
+    },
+    'Ninh Bình': {
+      lyhyt: 'Tam Cốcin joella soutajat vievät veneitä riisipeltojen ja kalkkivuorten välissä, ja moni heistä soutaa jaloillaan.',
+    },
+    'Ninh Thuận': {
+      lyhyt: 'Ninh Thuận on Vietnamin kuivinta seutua, ja sen paahteessa kypsyy suurin osa maan viinirypäleistä.',
+    },
+    'Phú Thọ': {
+      lyhyt: 'Nghĩa Lĩnh -vuorella ovat Hùng-kuninkaiden temppelit, ja kolmannen kuukauden kymmenentenä päivänä heitä muistetaan koko maassa vapaapäivällä.',
+    },
+    'Phú Yên': {
+      lyhyt: 'Gành Đá Đĩan rannalla musta basaltti on jähmettynyt kuusikulmaisiksi pylväiksi, jotka näyttävät pinotuilta lautasilta.',
+    },
+    'Quảng Bình': {
+      lyhyt: 'Vũng Chùan rannikolla Thọ-vuoren rinteellä on kenraali Võ Nguyên Giápin hauta, jolta avautuu näkymä Etelä-Kiinan merelle.',
+    },
+    'Quàng Nam': {
+      lyhyt: 'Quảng Namin nimi on jokaiselle vietnamilaiselle tuttu mì Quảng -nuudeleista, joiden kulhon pohjalla on vain loraus lientä.',
+    },
+    'Quảng Ngãi': {
+      lyhyt: 'Lý Sơnin tuliperäisellä saarella kasvatetaan valkosipulia, josta saari tunnetaan kaikkialla Vietnamissa.',
+    },
+    'Quảng Ninh': {
+      lyhyt: 'Yên Tửn vuorelle nousee pyhiinvaeltajia, sillä siellä kuningas Trần Nhân Tông perusti vietnamilaisen zenin Trúc Lâm -koulun.',
+    },
+    'Quảng Trị': {
+      lyhyt: 'Hiền Lươngin silta Bến Hải -joen yli merkitsi kahden vuosikymmenen ajan Pohjois- ja Etelä-Vietnamin rajaa, ja nyt se on muistomerkki.',
+    },
+    'Sóc Trăng': {
+      lyhyt: 'Sóc Trăngin khmerit kilpailevat Ok Om Bok -juhlassa pitkillä ghe ngo -veneillä, joissa kymmenet soutajat melovat samaan tahtiin.',
+    },
+    'Son La': {
+      lyhyt: 'Mộc Châun ylätasanko on Vietnamin maidontuotannon keskuksia, ja sen viileillä laitumilla laiduntaa lypsykarjaa.',
+    },
+    'Tây Ninh': {
+      lyhyt: 'Tây Ninhissä on caodaismin pyhä istuin, värikäs temppeli, jossa rukoushetkiä pidetään neljästi vuorokaudessa.',
+    },
+    'Thái Bình': {
+      lyhyt: 'Keon pagodin kolmikerroksinen puinen kellotorni on 1600-luvulta, ja sen jokaisessa kerroksessa riippuu oma pronssikellonsa.',
+    },
+    'Thái Nguyên': {
+      lyhyt: 'Tân Cươngin teeviljelmiltä tulee Vietnamin tunnetuinta vihreää teetä, ja lehdet paahdetaan usein käsin pannuissa.',
+    },
+    'Thanh Hóa': {
+      lyhyt: 'Sầm Sơnin hiekkaranta on Pohjois-Vietnamin suosituimpia, ja kesäviikonloppuisin sinne ajetaan joukolla Hanoista asti.',
+    },
+    'Tiền Giang': {
+      lyhyt: 'Mỹ Thon mukaan nimetty hủ tiếu -keitto on kirkasta lientä ja ohuita riisinuudeleita, ja sitä syödään mielellään aamiaiseksi.',
+    },
+    'Trà Vinh': {
+      lyhyt: 'Ao Bà Omin nelikulmaista lampea reunustavat vanhat puut, joiden juuret kiemurtelevat maan pinnalla kuin veistokset.',
+    },
+    'Tuyên Quang': {
+      lyhyt: 'Tuyên Quangissa keskisyksyn juhlaa vietetään jättimäisten lyhtyjen kulkueella, ja lyhdyt rakennetaan korttelien omin voimin.',
+    },
+    'Vĩnh Long': {
+      lyhyt: 'Mang Thítin joenvarsilla savuavat kupolinmuotoiset tiili- ja keramiikkauunit, ja seutua kutsutaan punaisen saven valtakunnaksi.',
+    },
+    'Vĩnh Phúc': {
+      lyhyt: 'Tam Đảon vuoristokylä noin 900 metrin korkeudessa on hanoilaisten kesäpakopaikka, jossa ilma on laaksoa viileämpää.',
+    },
+    'Yên Bái': {
+      lyhyt: 'Mù Cang Chảin vuorenrinteille hmongit ovat rakentaneet porrasmaisia riisipeltoja, jotka kellastuvat syyskuussa ennen sadonkorjuuta.',
+    },
+  },
+  /*
+   * MYS (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5C). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.MYS:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti ("Melaka" = Malakka, "Pulau
+   * Pinang" = Penang; Kuala Lumpur, Labuan ja Putrajaya ovat
+   * liittovaltion alueita). Vain `lyhyt`. Lähteet (en-Wikipedia ja
+   * hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Johor        — Tanjung Piai (Manner-Aasian eteläisin kohta, Ramsar)
+   *   Kuala Lumpur — Petronas Towers (silta 41.–42. kerros, 170 m)
+   *   Pahang       — BOH Plantations (1929, Malesian vanhin teetuottaja)
+   *   Selangor     — Batu Caves Murugan Statue (42,7 m, 272 porrasta)
+   *   Terengganu   — Crystal Mosque (Wan Man, avattu 8.2.2008)
+   *   Muut         — yleistietoa, tarkistettu vastaavista
+   *                  en-Wikipedia-artikkeleista.
+   */
+  MYS: {
+    Johor: {
+      lyhyt: 'Johorin Tanjung Piai on Aasian mantereen eteläisin kohta, ja niemen kärkeen kävellään mangrovemetsän halki pitkospuita pitkin.',
+    },
+    Kedah: {
+      lyhyt: 'Kedahia kutsutaan Malesian riisiaitaksi, ja sen tasaiset riisipellot ulottuvat Gunung Jerain juurelta merenrantaan asti.',
+    },
+    Kelantan: {
+      lyhyt: 'Kelantanissa rakennetaan wau bulan -leijoja, joiden alaosa on kuunsirpin muotoinen, ja niitä lennätetään sadonkorjuun jälkeen pelloilla.',
+    },
+    'Kuala Lumpur': {
+      lyhyt: 'Petronasin kaksoistornien välillä kulkee 170 metrin korkeudessa kaksikerroksinen silta, jolle pääsee lipulla kävelemään.',
+    },
+    Labuan: {
+      lyhyt: 'Labuanin saari on liittovaltion alue ja tullivapaa satama, jonne Borneon puolelta tullaan lautalla ostoksille.',
+    },
+    Melaka: {
+      lyhyt: 'Malakan Stadthuys rakennettiin 1650 hollantilaisten kuvernöörin virkataloksi, ja nykyään sen punaisissa saleissa on museo.',
+    },
+    'Negeri Sembilan': {
+      lyhyt: 'Negeri Sembilanin minangkabau-talojen katot kaartuvat kuin puhvelin sarvet, ja perinteessä maa periytyy äidiltä tyttärelle.',
+    },
+    Pahang: {
+      lyhyt: 'Cameron Highlandsin rinteille perustettiin 1929 BOH-teetila, Malesian vanhin teentuottaja, ja sen pensasrivit peittävät kokonaisia kukkuloita.',
+    },
+    'Pulau Pinang': {
+      lyhyt: 'George Townin seinämaalaukset, kuten polkupyörällä ajavat lapset, houkuttelevat kuvaajia vanhan kaupungin kujille.',
+    },
+    Perak: {
+      lyhyt: 'Ipohin vanhan kaupungin kahviloissa juodaan valkoista kahvia, jonka pavut paahdetaan margariinissa ja joka makeutetaan kondensoidulla maidolla.',
+    },
+    Perlis: {
+      lyhyt: 'Perlis on Malesian pienin osavaltio, ja sen rajakaupungista Padang Besarista kulkevat junat Thaimaan puolelle.',
+    },
+    Putrajaya: {
+      lyhyt: 'Putrajaya on Malesian hallinnollinen pääkaupunki, ja sen tekojärven rannalla seisoo vaaleanpunaisesta graniitista rakennettu Putra-moskeija.',
+    },
+    Sabah: {
+      lyhyt: 'Kinabalu kohoaa Sabahissa 4 095 metriin, ja huipulle kiivetään tavallisesti kahdessa päivässä yöpyen vuoren rinteellä.',
+    },
+    Sarawak: {
+      lyhyt: 'Mulun kansallispuistossa on Sarawakin kammio, yksi maailman suurimmista tunnetuista luolasaleista.',
+    },
+    Selangor: {
+      lyhyt: 'Batu Caves -luolatemppeliin noustaan 272 värikästä porrasta, ja niiden juurella seisoo 42,7-metrinen kullattu Murugan-patsas.',
+    },
+    Terengganu: {
+      lyhyt: 'Kuala Terengganun Wan Manin saarella on vuonna 2008 avattu Kristallimoskeija, joka on rakennettu teräksestä ja lasista.',
+    },
+  },
+  /*
+   * SGP (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5C). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.SGP:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti: viisi CDC-piiriä (Community
+   * Development Council). Kohteet on sijoitettu piireihin polygonien
+   * laatikoiden mukaan (julisteet/pallo/maakunnat/2026-09-25a/SGP.json):
+   * Changin lentoasema South Eastissa, Mandai North Westissä. Vältetty
+   * maastokohteet-sgp.js:n aiheet (Kasvitieteellinen puutarha, Pulau Ubin,
+   * Kranji, Rafflesin majakka, Haw Par Villa, Bukit Timah, Sungei Buloh).
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja hakutarkistus 25.9.2026):
+   *   Central Singapore — Gardens by the Bay (Supertree Grove)
+   *   North East        — Sengkang LRT / Punggol LRT (kuljettajaton)
+   *   North West        — Night Safari (avattu 1994, ensimmäinen yöeläintarha)
+   *   South East        — Jewel Changi Airport (Rain Vortex, 40 m)
+   *   South West        — Jurong Lake Gardens (kolmas kansallispuutarha, 2019)
+   */
+  SGP: {
+    'Central Singapore': {
+      lyhyt: 'Marina Bayn Gardens by the Bay -puistossa kohoaa kasvien peittämiä teräksisiä superpuita, jotka syttyvät iltaisin valoesitykseen.',
+    },
+    'North East': {
+      lyhyt: 'Sengkangin ja Punggolin uusissa lähiöissä kulkee kuljettajaton kevytmetro, joka pujottelee korkeiden asuintalojen välissä.',
+    },
+    'North West': {
+      lyhyt: 'Mandain Night Safari avattiin 1994 maailman ensimmäisenä yöeläintarhana, ja eläimiä katsellaan hämärässä pienen junan kyydistä.',
+    },
+    'South East': {
+      lyhyt: 'Changin lentoaseman Jewel-rakennuksen lasikupolista syöksyy 40 metriä alas Rain Vortex, maailman korkein sisävesiputous.',
+    },
+    'South West': {
+      lyhyt: 'Jurong Lake Gardens on Singaporen kolmas kansallispuutarha, ja sen järvenrannalle on ennallistettu makean veden suometsää.',
+    },
+  },
 };
