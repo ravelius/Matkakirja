@@ -117265,6 +117265,275 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Macapá',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Macapá; Macapá International Airport; Santana, Amapá;
+       * Franco-Brazilian Binational Bridge; Açaí palm; Tucupi; Tacacá;
+       * Marabaixo; Mazagão; Central Market of Macapá; Parque Arqueológico
+       * do Solstício) ja Wikivoyagen sivuilta Macapá, Amapá ja Oiapoque;
+       * marabaixon kierron päivät, Encontro dos Tambores, Museu Sacaca,
+       * Bioparque da Amazônia, Porto de Santanan etäisyys, lentokentän
+       * tax free -myymälät ja açaín syöntitavat portugalin Wikipediasta
+       * (Marabaixo, Museu Sacaca, Macapá, Porto de Santana, Aeroporto
+       * Internacional de Macapá, Açaí) — teksti omaa. Belémin laivamatkan
+       * kestosta lähteet eivät ole yksimielisiä (24 tai 36–38 tuntia),
+       * joten se annetaan välinä. Nostojen aiheita (perustaminen 1758 ja
+       * linnoitus, vartiotornin näkymä, Marco Zero, Zerão, Orlan kävelyreitti
+       * ja ilmasto, suisto, pororoca, Curiaún suojelualue ja guará,
+       * Tumucumaque ja biodiversiteettikäytävä), ennen–nyt-kuvien aihetta
+       * (São Josén kirkko) eikä saapumisen ja visan aiheita (stadionin
+       * keskiviiva, maantien puuttuminen) toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: Museu Sacacan regatão-vene puiden alla.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Márcia do Carmo Museu Sacaca Barco regatão Macapá AP (40824636404).jpg',
+          lyhyt: 'Museu Sacacan puistossa vanha jokikauppiaan vene lepää puiden varjostamassa uomassa.',
+          selite: 'Museu Sacacan ulkomuseo Macapássa maaliskuussa 2018: tiheiden '
+            + 'lehtipuiden alla kulkee tyyni vesiuoma, jonka päässä on valkoinen '
+            + 'kaksikerroksinen jokivene. Regatão on Amazonin jokivarsilla '
+            + 'kylästä kylään kiertävän kauppiaan vene.',
+          lahde: 'Márcia do Carmo / MTur Destinos, Wikimedia Commons (Public domain)',
+        },
+        kappale: 'Macapáan ei johda maantietä muualta Brasiliasta, joten perille '
+          + 'tullaan lentäen tai jokilaivalla naapurikaupunki Santanan satamaan. '
+          + 'Açaí syödään kylmänä maniokkijauhon kanssa, ja kuuma '
+          + 'tacacá-keitto lusikoidaan kalebassikupista. '
+          + 'Pääsiäisestä alkukesään kaupungin afrobrasilialaiset korttelit '
+          + 'juhlivat marabaixon rumpujen tahdissa, ja marraskuussa rummut '
+          + 'kokoontuvat Encontro dos Tambores -juhlaan. Päiväretket vievät '
+          + 'Bioparque da Amazônian poluille, Fazendinhan jokirannalle ja '
+          + 'heinäkuussa Mazagão Velhoon katsomaan maurien ja kristittyjen '
+          + 'taistelua. Pohjoiseen Ranskan Guayanan rajalle kulkee BR-156, '
+          + 'jonka päässä Oyapock-joen ylittää vuonna 2017 avattu rajasilta.',
+        artikkeli: {
+          nimi: 'Matkailijan Macapá',
+          teksti: 'Macapássa liikutaan jokilaivalla ja juhlitaan rumpujen tahdissa.',
+          nosto: 'Marabaixon tanssijat laahaavat jalkojaan rummun tahdissa '
+            + 'kahleissa tanssineiden esivanhempien muistoksi, mutta nykyään '
+            + 'tanssi on ylpeä ja iloinen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentäen, jokilaivalla tai rajasillan kautta',
+              teksti: 'Macapá–Alberto Alcolumbren kansainvälinen lentokenttä on '
+                + 'vain noin kolmen kilometrin päässä keskustasta. Sen juuret '
+                + 'ovat pienessä lentotukikohdassa, jonka Yhdysvallat rakensi '
+                + 'toisen maailmansodan aikana, ja nykyinen terminaali avattiin '
+                + 'huhtikuussa 2019. Suorat lennot kulkevat ennen kaikkea '
+                + 'Belémiin ja Brasíliaan. Jokilaivat lähtevät naapurikaupunki '
+                + 'Santanan satamasta noin 18 kilometrin päästä keskustasta. '
+                + 'Belémiin laiva kiertää Marajón saaren, ja matka kestää '
+                + 'laivasta riippuen vuorokaudesta puoleentoista. Santarémiin '
+                + 'mennään puolitoista vuorokautta ja Manausiin noin viisi '
+                + 'päivää. Halvin tapa on ripustaa oma riippumatto kannelle, '
+                + 'ja hytti maksaa suunnilleen kaksinkertaisesti. Vuonna 2020 '
+                + 'Santanan ja Belémin välillä kulki Brasilian suurin lautta, '
+                + '115 metriä pitkä. Maata pitkin pääsee vain pohjoiseen: '
+                + 'BR-156 kulkee sademetsän ja Guayanan savannin halki '
+                + 'Oiapoqueen Ranskan Guayanan rajalle. Bussit lähtevät '
+                + 'kaupungin pohjoisosan linja-autoasemalta, ja matka kestää '
+                + 'tien kunnosta riippuen 7–12 tuntia. Nopeampia ovat jaetut '
+                + 'nelivetoiset Toyota Hilux -avolavat, jotka lähtevät, kun '
+                + 'ohjaamoon on saatu neljä matkustajaa. Joulukuussa 2025 '
+                + 'tiestä oli päällystetty noin kaksi kolmasosaa, ja loput '
+                + 'oli soratietä, jolla purot ylitetään yksikaistaisilla '
+                + 'puusilloilla. Oiapoquessa Oyapock-joen ylittää 378 metrin '
+                + 'vinoköysisilta, joka avattiin liikenteelle maaliskuussa 2017. '
+                + 'Rajatarkastukset ovat sillan kummassakin päässä, ja yöksi '
+                + 'silta suljetaan.',
+              kuva: [
+                {
+                  tiedosto: 'Porto de Santana Amapá BR - panoramio.jpg',
+                  lyhyt: 'Santanan satamassa jokilaivan kyltti lupaa lähdön Santarémiin joka maanantai.',
+                  selite: 'Jokilaiva João Quirino Santanan satamassa helmikuussa '
+                    + '2015 toisen laivan kannelta kuvattuna. Kaiteeseen '
+                    + 'sidotun kyltin mukaan laiva lähtee joka maanantai kello '
+                    + '14 Santarémiin ja pysähtyy matkalla Almeirimissa, '
+                    + 'Prainhassa ja Monte Alegressa. Taustalla virtaa ruskea '
+                    + 'Amazon.',
+                  lahde: 'Jose Donizetti Dias, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'BR-156 fim asfalto.jpg',
+                  lyhyt: 'BR-156:n asfaltti loppuu, ja punainen soratie jatkuu metsän halki.',
+                  selite: 'BR-156 lokakuussa 2019 kohdassa, jossa Oiapoquesta '
+                    + 'Macapán suuntaan kulkevan tien asfaltti loppuu. Leveä '
+                    + 'punainen soratie jatkuu vihreän metsän välissä, ja '
+                    + 'oikealla tien laidassa on 60 kilometrin '
+                    + 'nopeusrajoitusmerkki ja kaksi kylttiä.',
+                  lahde: 'WikiFietsjes, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Oiapoque (30690937688).jpg',
+                  lyhyt: 'Oyapockin vinoköysisilta yhdistää Brasilian Oiapoquen ja Ranskan Guayanan.',
+                  selite: 'Ranskalais-brasilialainen rajasilta Oyapock-joen yllä '
+                    + 'elokuussa 2018. Kahden betonipylonin varaan ripustettu '
+                    + 'silta ylittää joen metsäisten rantojen välillä, ja sen '
+                    + 'alla kulkee pieni vene.',
+                  lahde: 'Rômulo Ferreira, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Açaíta, tacacáa ja katkarapuja',
+              teksti: 'Amazonin suistossa açaí ei ole herkku vaan arkiruokaa, '
+                + 'ja palmun pienistä mustanvioleteista marjoista tehtyä '
+                + 'paksua sosetta on syöty täällä vuosisatoja. Perinteisesti '
+                + 'sitä syödään kylmänä maniokkijauhon eli farinhan tai '
+                + 'tapiokan kanssa. Moni tekee açaísta ja farinhasta paksun '
+                + 'pirãon grillatun kalan tai katkarapujen seuraksi, ja vain osa '
+                + 'lisää sokeria. Granolalla ja banaanilla kuorrutettu açaí na '
+                + 'tigela on myöhempi keksintö: 1980-luvulla brasilialainen '
+                + 'Gracien suku alkoi markkinoida açaíta energiaruokana. '
+                + 'Kuuma välipala on tacacá. Keltainen tucupi-liemi '
+                + 'puristetaan raastetusta maniokinjuuresta, ja sitä keitetään '
+                + 'päiväkausia, jotta myrkky häviää. Liemeen lisätään '
+                + 'tapiokatärkkelystä, kuivattuja katkarapuja ja jambu-yrttiä, '
+                + 'joka saa huulet ja kielen kihelmöimään ja puutumaan. Keitto '
+                + 'tarjoillaan kuumana cuia-kalebassikupista. Samassa '
+                + 'tucupissa haudutetaan pato no tucupi -ankkaruoka. Amapán '
+                + 'joista ja suistosta tulevat gurijuba-kala, hiillostettava '
+                + 'tucunaré ja höyrytetyt camarão no bafo -katkaravut. '
+                + 'Linnoituksen vieressä joen rannalla on lounasravintoloita ja '
+                + 'churrascarioita, joihin paikalliset kokoontuvat '
+                + 'puolenpäivän aikaan puoli kahdestatoista kahteen. Kalaan '
+                + 'erikoistuneissa ravintoloissa kannattaa tilata alueen '
+                + 'vaaleanpunaisia katkarapuja valkosipulissa ja öljyssä.',
+              kuva: {
+                tiedosto: 'MarciaDoCarmo Gastronomia acai na tigela Macapa AP (40077441955).jpg',
+                lyhyt: 'Paksu açaí-sose syödään Amazonilla usein tapiokan tai maniokkijauhon kanssa.',
+                selite: 'Valkoisessa kulhossa on tummanviolettia açaí-sosetta, ja '
+                  + 'sen takana on lasikupeissa valkoisia tapiokahelmiä ja '
+                  + 'keltaista maniokkijauhoa. Säkkikankaalla kulhon ympärillä '
+                  + 'on mustia açaí-marjoja. Kuva on otettu Macapássa '
+                  + 'maaliskuussa 2018.',
+                lahde: 'Márcia do Carmo / MTur Destinos, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Marabaixon rummut',
+              teksti: 'Macapán oma perinne on marabaixo, afrobrasilialaisten '
+                + 'yhteisöjen piiritanssi, jossa lauletaan yhdessä ja soitetaan '
+                + 'rumpuja kansankatolisten pyhimysjuhlien kunniaksi. '
+                + 'Kansallinen kulttuuriperintövirasto IPHAN merkitsi sen '
+                + 'Brasilian aineettomaksi kulttuuriperinnöksi vuonna 2018. '
+                + 'Yleensä ainoa soitin on caixa de marabaixo, kovapuinen '
+                + 'lieriörumpu, jonka molemmissa päissä on eläimennahkakalvo '
+                + 'ja jota kannetaan olalla värikkään hihnan varassa. Rumpalit '
+                + 'eivät seiso paikallaan, vaan kulkevat piirissä tanssijoiden '
+                + 'mukana ja vastaavat laulettuihin säkeisiin. Tanssijat '
+                + 'kiertävät vastapäivään laahaten jalkojaan, ja naiset '
+                + 'pyörähtelevät leveissä hameissa. Tanssi esitettiin ennen São '
+                + 'Josén kirkon edessä, mutta 1940-luvulla keskustan musta '
+                + 'väestö siirrettiin Laguinhon ja Favelan, nykyisen Santa '
+                + 'Ritan, kaupunginosiin, ja juhlat muuttivat järjestäjien '
+                + 'koteihin. Marabaixon kierto alkaa Favelassa '
+                + 'pääsiäislauantaina ja Laguinhossa pääsiäispäivänä ja päättyy '
+                + 'Kristuksen ruumiin ja veren juhlaa seuraavaan sunnuntaihin. '
+                + 'Siihen kuuluu messuja, litanioita, salkojen kaatoa ja '
+                + 'tanssiaisia, ja 16. kesäkuuta on osavaltion marabaixopäivä. '
+                + 'Marraskuussa Mustan tietoisuuden päivän aikaan Laguinhon '
+                + 'mustan kulttuurin keskuksessa järjestetään Encontro dos '
+                + 'Tambores, rumpujen kohtaaminen. Sitä on vietetty vuodesta '
+                + '1995, ja sen huipennus on Missa dos Quilombos -messu. '
+                + 'Lokakuun toisena sunnuntaina Macapán Círio de Nazaré '
+                + '-kulkue kokoaa yli 250 000 ihmistä.',
+              kuva: {
+                tiedosto: 'Marabaixo.jpg',
+                lyhyt: 'Marabaixon rummun kehykseen on kirjoitettu Amapá; taustalla laulaa tanssija.',
+                selite: 'Lähikuva caixa de marabaixo -rummusta Macapássa vuonna '
+                  + '2015: puukehykseen kiristetty nahkakalvo, köysikiristimet '
+                  + 'ja kehykseen kirjoitettu Amapá. Taustalla valkoiseen '
+                  + 'puseroon pukeutunut nainen laulaa, ja reunoilla hulmuavat '
+                  + 'kukkakuvioiset hameet.',
+                lahde: 'Lia de Paula / Ministério da Cultura, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Museo, biopuisto ja jokiranta',
+              teksti: 'Museu Sacaca avattiin 1997 noin 21 000 neliömetrin '
+                + 'viheralueelle Tremin kaupunginosaan. Sen tärkein osa on '
+                + 'ulkomuseo, joka rakennettiin yhdessä alkuperäiskansojen, '
+                + 'jokivarsien asukkaiden, luonnontuotteiden kerääjien ja '
+                + 'maniokkijauhon tekijöiden kanssa. Museo on nimetty '
+                + 'parantaja Raimundo dos Santos Souzan eli Sacacan mukaan, ja '
+                + 'sen apteekissa myydään paikallisista raaka-aineista '
+                + 'tehtyjä luontaistuotteita saippuoista lihasvoiteisiin. '
+                + 'Jos ymmärtää portugalia, opastus kannattaa maksaa. Macapán ja '
+                + 'Santanan välisen AP-010-tien varrella on Bioparque da '
+                + 'Amazônia, 107 hehtaarin puisto, joka avattiin uudelleen '
+                + 'lokakuussa 2019. Sen alkuna oli Sacacan vuonna 1973 '
+                + 'perustama kaupunginmetsä, johon tuotiin Santanan tien '
+                + 'rakennustöissä loukkaantuneita villieläimiä. Nyt puistossa '
+                + 'on eri vaikeustason polkuja, orkideatarha, '
+                + 'riippumattoalue, pistimettömien mehiläisten tarha, vesipolku '
+                + 'ja vaijeriliuku. '
+                + 'Siellä voi myös kävellä vaihettumisvyöhykkeellä, jossa '
+                + 'kohtaavat kuivan maan metsä, savanni ja kosteikko. '
+                + 'Sunnuntaisin kaupunkilaiset lähtevät pienille jokirannoille, '
+                + 'ja helpoimmin pääsee Fazendinhaan, jonne kulkee suora bussi '
+                + 'keskustasta. Etelässä Mazagão Velhon kylän perustivat '
+                + 'siirtolaiset, jotka Portugali evakuoi vuonna 1769 '
+                + 'Marokon Mazagãosta, nykyisestä El Jadidasta. Heinäkuun '
+                + '16. ja 28. päivän välillä kylän São Tiagon juhlassa '
+                + 'näytellään maurien ja kristittyjen sotaa. Pidemmän retken '
+                + 'kohde on Calçoenen lähellä noin 390 kilometrin päässä '
+                + 'pohjoisessa: Amazonin Stonehengeksi kutsuttu 127 '
+                + 'graniittipaaden kehä, jonka yhden kiven varjo katoaa '
+                + 'joulukuun päivänseisauksena.',
+              kuva: {
+                tiedosto: 'Fim de tarde na Praia de Fazendinha.jpg',
+                lyhyt: 'Fazendinhan jokiranta on Macapán helpoimmin saavutettava uimapaikka.',
+                selite: 'Auringonlasku Fazendinhan jokirannalla elokuussa 2022: '
+                  + 'tummat pilvet ja oranssi taivas, jota vasten piirtyvät '
+                  + 'rantametsän ja kahden palmun siluetit. Etualalla kiiltävät '
+                  + 'märkä hiekka ja matala vesi, ja kaukana joella näkyy '
+                  + 'pieni vene.',
+                lahde: 'Marcondes Pereira de Oliveira, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Vapaakauppaa ja varovaisuutta tiellä',
+              teksti: 'Macapá ja Santana ovat vuodesta 1991 olleet '
+                + 'vapaakauppa-aluetta, ja keskustan liikkeissä on laaja '
+                + 'valikoima tuontitavaraa. Lentokentän tax free '
+                + '-myymälöissä voi siksi asioida kuka tahansa, myös ilman '
+                + 'lentolippua. Käsitöitä kannattaa etsiä Casa do Artesãosta, '
+                + 'jossa myydään alkuperäiskansojen töitä, punottuja '
+                + 'huonekaluja ja balata-kumilla päällystettyä keramiikkaa. '
+                + 'Linnoituksen edessä on vuonna 1953 avattu Mercado Central. '
+                + 'Se kunnostettiin ja avattiin uudelleen tammikuussa 2020, ja '
+                + 'sen 63 kojussa myydään enimmäkseen ruokaa. Torin kyljessä '
+                + 'oleva Bar Du Pedro avattiin samana päivänä kuin tori, ja se '
+                + 'on sen vanhin yhä toimiva liike. Kaupungissa liikutaan '
+                + 'takseilla ja moottoripyörätakseilla, ja kaupunkibussit '
+                + 'kulkevat myös Santanaan ja Mazagãoon. Keskitason hotellit '
+                + 'antavat usein 20–30 prosentin alennuksen listahinnoista, '
+                + 'joten hinnasta kannattaa kysyä. Jos lähtee BR-156:lle, on '
+                + 'syytä tietää, että tie tunnetaan ryöstöistä etenkin '
+                + 'päällystämättömillä osuuksilla. Asumattomilla seuduilla '
+                + 'pysähdytään vain pakon edessä, koska ryöstäjät lavastavat '
+                + 'usein auton rikkoutumisen. Bussi- ja satamaterminaalien '
+                + 'välittäjiä kannattaa välttää ja sopia kyydistä suoraan '
+                + 'kuljettajan kanssa. Oiapoquessa Oyapock-joki ylitetään '
+                + 'sillan kautta, sillä veneellä rajan yli menemistä pidetään '
+                + 'laittomana, jos matka jatkuu pidemmälle kumpaankaan maahan. '
+                + 'Ranskan puolella maksetaan euroilla.',
+              kuva: {
+                tiedosto: 'Mercado Central de Macapá (2021).jpg',
+                lyhyt: 'Linnoituksen edessä oleva Mercado Central avattiin uudelleen vuonna 2020.',
+                selite: 'Kunnostettu Mercado Central lokakuussa 2021: valkoinen '
+                  + 'halli sinisine kaari-ikkunoineen ja ovineen, edustalla '
+                  + 'suihkulähde ja värikäs neliapilan muotoinen veistos. '
+                  + 'Oikealla Bar Du Pedron pöydissä istuu asiakkaita.',
+                lahde: 'Perci Hong, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'suisto',
@@ -118980,6 +119249,338 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Piikkipiru',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Kalgoorlie; Prospector (Western Australian train);
+       * Kalgoorlie railway station; Kalgoorlie–Boulder Airport; Goldfields
+       * Water Supply Scheme; Golden Pipeline Heritage Trail; Palace Hotel,
+       * Kalgoorlie; Exchange Hotel, Kalgoorlie; York Hotel, Kalgoorlie;
+       * Diggers & Dealers; Boulder, Western Australia; Andrew Wilson
+       * (architect); Western Australian Museum; Kanowna, Western Australia;
+       * Coolgardie, Western Australia; Coolgardie safe; Lake Ballard; Lake
+       * Lefroy; Menzies, Western Australia) ja Wikivoyagen Kalgoorlie-,
+       * Coolgardie- ja Menzies-sivuilta — teksti omaa. Wikivoyagen tiedot
+       * (Midlandin pysäkki, kaupunkibussien vuorovälit, museon holvi ja
+       * ammattiyhdistysliput, Super Pitin näköalapaikan tie, Karlkurlan
+       * 4 km:n kierros, Pyhän Barbaran kulkue, Race Round syyskuussa, Menzies
+       * Classic, Lake Ballardin 51 km:n soratie ja leiripaikka) on
+       * päivitetty eri vuosina 2015–2024, joten tekstissä ei ole
+       * aukioloaikoja eikä hintoja. Lentokentän etäisyys vaihtelee
+       * lähteissä (Wikipedia 5,6 km, Wikivoyage 7 km), samoin Kanownan
+       * (Wikipedia noin 20 km, Wikivoyage 29 km tietä pitkin). Boulderin
+       * kaupungintalon esirippu, peltikatot ja Nellie Melba ovat kuvan
+       * "Boulder Town Hall, Western Australia.jpg" Commons-kuvauksesta;
+       * vuosi 1908 ja arkkitehti Wikipedian Andrew Wilson -artikkelista.
+       * Salin nykyistä aukioloa ei väitetä, koska Commons-kuvaus kertoo
+       * maanjäristyksen jälkeisestä sulusta. Kaksiraha-pelin (two-up)
+       * nykytilaa ei voitu tarkistaa, joten se jätettiin pois.
+       * Nostojen aiheita (nimen alkuperä ja wongatha-kansat, Paddy Hannanin
+       * löytö ja patsas, afgaanikamelit, Boulderin eroaminen ja
+       * kehärata, Hannans Northin kaivosmuseo, piikkipiru, Superpitin koko,
+       * yhdistäminen 1989, kalaveriitti, jättirekat, Hannan Streetin
+       * rakennukset, louhinnan jatko 2035) sekä Oseanian valokuvien
+       * (Palace Hotelin julkisivu, Komatsu-kaivinkone) ja saapumistekstin
+       * aiheita ei toisteta. Galleriaa lohkossa ei ole. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta, ja kuvat katsottu
+       * silmin. Pystykuva: Exchange Hotel Palace Hotelin verannalta
+       * (Bahnfrend, CC BY-SA 4.0).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Exchange Hotel, Kalgoorlie, 2018 (01).jpg',
+          lyhyt: 'Exchange Hotelin kulmatorni Hannan Streetillä Palace Hotelin verannan alta nähtynä.',
+          selite: 'Heinäkuussa 2018 kuvattu Exchange Hotel seisoo Hannan- ja '
+            + 'Maritana Streetin kulmassa, ja sen kulmatornin huipulla '
+            + 'liehuu hotellin lippu. Kuva on otettu kadun toiselta puolelta '
+            + 'Palace Hotelin verannan alta. Etualan kyltti mainostaa '
+            + 'Hooverin kahvilaa, joka on nimetty hotellin kuuluisimman '
+            + 'kanta-asiakkaan mukaan.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kalgoorlie–Boulder on Länsi-Australian kultakenttien '
+          + 'pääkaupunki, noin 600 kilometriä Perthistä itään Great Eastern '
+          + 'Highwayn päässä. Kaupunkialueella asui vuonna 2021 noin 29 000 '
+          + 'ihmistä, ja kaivostoiminta työllistää yhä noin neljänneksen '
+          + 'työvoimasta. Matkailijalle Kalgoorlie on harvinainen yhdistelmä '
+          + 'toimivaa kaivoskaupunkia ja hyvin säilynyttä kultakauden '
+          + 'katukuvaa. Tämä opas kertoo, miten aavikon yli pääsee junalla, '
+          + 'missä historiallisissa pubeissa istutaan, mitä museoissa ja '
+          + 'juhlissa nähdään, minne päiväretket suuntautuvat ja miten '
+          + 'kuumassa kaivoskaupungissa pärjää.',
+        artikkeli: {
+          nimi: 'Matkailijan Kalgoorlie',
+          teksti: 'Perthistä pääsee junalla perille päivässä, mutta hotellihuone kannattaa varata ennen junalippua.',
+          nosto: 'Boulder Block -pubiin oli oma kaivoskuilu, jota pitkin '
+            + 'maanalaiset työmiehet pääsivät oluelle, kunnes Superpit nieli '
+            + 'sen vuonna 1991.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Prospector ylittää aavikon',
+              teksti: 'Mukavin tapa tulla Kalgoorlieen on juna. Transwan '
+                + 'Prospector ajaa East Perthin asemalta Kalgoorlieen joka '
+                + 'päivä, maanantaisin ja perjantaisin kahdesti, ja kyytiin '
+                + 'pääsee myös Midlandista Perthin itälaidalta. Rataa on 653 '
+                + 'kilometriä, ja matka kestää noin kuusi ja kolme neljännestä '
+                + 'tuntia. Kaksi junaa lähtee suunnilleen yhtä aikaa '
+                + 'vastakkaisiin suuntiin, ja miehistöt vaihtavat junaa '
+                + 'puolivälissä Merredinissä. Kaikki paikat ovat samaa '
+                + 'luokkaa. Istuimissa on kosketusnäyttö elokuville ja '
+                + 'musiikille sekä pistorasia, ja vuodesta 2022 junassa on '
+                + 'ollut langaton verkko. Ruoka ei sisälly lippuun, mutta '
+                + 'buffetista saa kinkkujuustosarvia, piirakoita, muffinsseja, '
+                + 'virvokkeita ja alkoholia. Nykyiset junat tulivat '
+                + 'liikenteeseen 2004. Ne kulkisivat 200 kilometriä tunnissa, '
+                + 'mutta rata sallii enintään 160. Prospector aloitti 29. '
+                + 'marraskuuta 1971 ja korvasi yöjunan, jolla matka oli '
+                + 'kestänyt neljätoista tuntia. Uusi päiväjuna selvisi '
+                + 'matkasta kahdeksassa tunnissa ja oli silloin Australian '
+                + 'nopein. Kesäkuuhun 2025 päättyneenä vuonna sillä matkusti '
+                + 'noin 82 600 ihmistä. Kalgoorlien asema avattiin syyskuussa '
+                + '1896, ja sen päälaituri oli aikanaan Länsi-Australian '
+                + 'pisin, 527 metriä. Asemalta kävelee keskustaan ja '
+                + 'hotelleille. Idästä saapuu kerran viikossa Sydneyn ja '
+                + 'Perthin väliä ajava Indian Pacific, joka pysähtyy '
+                + 'Kalgoorliessa. Perthistä lennetään Kalgoorlie–Boulderin '
+                + 'kentälle useita kertoja päivässä, ja reittiä lentävät '
+                + 'Qantas, Virgin Australia ja Alliance Airlines. Autolla '
+                + 'Great Eastern Highway vie Perthistä perille kuudessa tai '
+                + 'seitsemässä tunnissa. Tie seuraa suurimman osan matkasta '
+                + 'vesiputkea, joka on tuonut kaupunkiin juomavettä vuodesta '
+                + '1903. Esperancesta etelärannikolta ajaa Transwan bussi '
+                + 'kolmesti viikossa, ja matka kestää noin viisi tuntia.',
+              kuva: [
+                {
+                  tiedosto: 'Prospector Salt Flats.jpg',
+                  lyhyt: 'Prospector ylittää valkoisen suolatasangon Cunderdinin länsipuolella matkalla Kalgoorlieen.',
+                  selite: 'Tammikuussa 2026 kuvattu kaksivaunuinen '
+                    + 'Prospector kulkee penkereellä, jonka juurella '
+                    + 'kimaltaa valkoinen suolatasanko matalien pensaiden '
+                    + 'keskellä. Kuvaajan mukaan juna on matkalla '
+                    + 'Kalgoorlieen hieman Cunderdinin länsipuolella.',
+                  lahde: 'Riley the dude, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'Prospector, Kalgoorlie, 2016 (01).jpg',
+                  lyhyt: 'Keltakeulainen Prospector odottaa lähtöä Kalgoorlien aseman katetulla laiturilla.',
+                  selite: 'Toukokuussa 2016 kuvattu Prospector on lähdössä '
+                    + 'sunnuntai-iltapäivänä takaisin East Perthiin. '
+                    + 'Laituria varjostaa puinen katos, ja matkustajat '
+                    + 'nousevat kyytiin rautaisen aidan rajaamalta '
+                    + 'laiturilta.',
+                  lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Kalgoorlie railway station, 2016 (01).jpg',
+                  lyhyt: 'Kalgoorlien matala tiiliasema Forrest Streetiltä, edessä sotilaan patsas.',
+                  selite: 'Kalgoorlien rautatieaseman pitkä tiilirakennus '
+                    + 'aaltopeltikattoineen toukokuussa 2016 Forrest '
+                    + 'Streetiltä nähtynä. Etualan liikenneympyrässä seisoo '
+                    + 'muistomerkki, jonka huipulla on kivääriä kantavan '
+                    + 'sotilaan patsas.',
+                  lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Pubeja kultakauden parvekkeilla',
+              teksti: 'Wikivoyagen mukaan Kalgoorliessa on toiminnassa '
+                + 'parikymmentäviisi pubia, ja monet niistä ovat kultakauden '
+                + 'komeita kulmahotelleja, joissa olut tilataan paikallisten '
+                + 'tapaan middy-lasista. Hannan- ja Maritana Streetin '
+                + 'risteyksessä seisoo kaksi kilpailijaa vastakkain. Palace '
+                + 'Hotel avattiin joulukuussa 1897. Siinä oli 44 huonetta, ja '
+                + 'se oli kaupungin ensimmäinen hotelli, jossa oli sähkövalo '
+                + 'oman generaattorin ansiosta. Aulassa on peili, jonka nuori '
+                + 'kaivosinsinööri Herbert Hoover jätti hotellille ennen '
+                + 'lähtöään Kiinaan, ja sen vieressä ote runosta, jonka hän '
+                + 'kertoman mukaan kirjoitti ihastumalleen baarineidolle. '
+                + 'Hooverista tuli myöhemmin Yhdysvaltain presidentti. '
+                + 'Hotellin parvekeravintolasta näkee pääkadulle. Kadun '
+                + 'toisella puolella on vuonna 1900 rakennettu Exchange Hotel '
+                + 'kulmatorneineen. Vuoden 1934 rotumellakoiden aikana Bill '
+                + 'Trythall osti sen edelliseltä omistajalta, jonka nimi '
+                + 'kuulosti vieraalta, ja rakennus säästyi vaurioilta. '
+                + 'Kauempana Hannan Streetillä on York Hotel vuosilta '
+                + '1900–1901, kaksikerroksinen kupolitalo, joka pääsi '
+                + 'postimerkkiin 1992. Boulderissa vanhoja hotelleja on '
+                + 'Burt Streetin varrella. Kaikki pubit eivät ole säilyneet: '
+                + 'Boulder Block purettiin 1991 Superpitin tieltä. Joidenkin '
+                + 'pubien etubaarissa tarjoilevat niukasti pukeutuneet '
+                + 'skimpy-baarimikot, joten perheen kanssa kannattaa valita '
+                + 'ravintolasali tai olutpuutarha. Hannan Streetin varrelta '
+                + 'löytyy keittiöitä intialaisesta thaimaalaiseen, ja '
+                + 'pikaruokaketjut ovat Boulder Roadin varrella. Retkelle '
+                + 'lähtevän kannattaa täydentää ruokavarastot Kalgoorliessa, '
+                + 'sillä seuraavat kunnon kaupat ovat vasta Esperancessa tai '
+                + 'Perthissä. Boulderin Burt Streetillä ja Loopline Parkissa '
+                + 'pidetään kuukauden kolmantena sunnuntaina markkinat, '
+                + 'joilla myydään käsitöitä sekä vähän hedelmiä ja '
+                + 'vihanneksia.',
+              kuva: {
+                tiedosto: 'York Hotel, Kalgoorlie, WA, 2023.jpg',
+                lyhyt: 'York Hotelin kupolit hehkuvat laskevan auringon valossa Hannan Streetillä.',
+                selite: 'Elokuussa 2023 kuvatun York Hotelin punatiilinen '
+                  + 'julkisivu ja kaksi kupolia hohtavat illan oranssissa '
+                  + 'valossa. Parvekkeella on terassipöytiä aurinkovarjojen '
+                  + 'alla, ja katoksen kyltti mainostaa ravintolaa, '
+                  + 'urheilubaaria ja majoitusta.',
+                lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Nostotorni museon portilla',
+              teksti: 'Kultakenttien historiaan pääsee parhaiten Museum of '
+                + 'the Goldfieldsissä Hannan Streetillä. Se on yksi '
+                + 'Länsi-Australian museon kuudesta toimipisteestä, ja sen '
+                + 'sisäänkäynnin merkkinä kohoaa punainen kaivoksen '
+                + 'nostotorni, jonka näköalatasanteelta näkee kaupungin yli. '
+                + 'Wikivoyagen mukaan kultakimpaleet ja muut kiiltävät '
+                + 'esineet ovat maanalaisessa holvissa, yläkerrassa on '
+                + 'alkuperäiskansojen esineistöä ja kaivoskauden arkea, ja '
+                + 'viereisen British Arms -hotellin tiloissa on vanhoja '
+                + 'ammattiyhdistysten lippuja. Hannan- ja Wilson Streetin '
+                + 'kulmassa ovat Kalgoorlien kaupungintalo ja '
+                + 'matkailuneuvonta. Boulderin kaupungintalo valmistui 1908 '
+                + 'arkkitehti A. Oswald Wilsonin suunnitelmista. Salissa on '
+                + 'prässätyt peltikatot, takorautaiset kaiteet ja Philip '
+                + 'Goatcherin maalaama näyttämöesirippu, ja näyttämöllä on '
+                + 'esiintynyt muun muassa oopperalaulaja Nellie Melba. '
+                + 'Huhtikuussa 2010 voimakkuudeltaan 5,0 maanjäristys '
+                + 'vaurioitti Burt Streetin vanhoja rakennuksia, ja koko '
+                + 'kortteli evakuoitiin muutamaksi päiväksi. Tapahtumat '
+                + 'seuraavat kaivosten rytmiä. Joka elokuu pidettävä Diggers '
+                + '& Dealers on Australian merkittävin kaivoskonferenssi. '
+                + 'Sen käynnisti 1992 Palace Hotelin omistaja Geoffrey '
+                + 'Stokes kymmenen osallistujan voimin, ja nykyään '
+                + 'osallistujia on yli 2 500. Syyskuussa laukkakausi '
+                + 'huipentuu Race Roundiin, ja naapurin Coolgardie viettää '
+                + 'samaan aikaan omaa päiväänsä. Joulukuun alussa juhlitaan '
+                + 'kaivosmiesten suojeluspyhimystä Pyhää Barbaraa, ja '
+                + 'pääkulkueessa kaivosmiehet ajavat jättimäisillä '
+                + 'kuorma-autoillaan Hannan Streetiä pitkin. Kesäkuun '
+                + 'ensimmäisenä viikonloppuna Kalgoorliesta lähtee Menzies '
+                + 'Classic -pyöräkilpailu, jota on ajettu vuodesta 1928. '
+                + 'Hay Street oli vuosikymmeniä kaupungin punaisten lyhtyjen '
+                + 'katu. Siellä toimii yhä Questa Casa, joka kertoo '
+                + 'aloittaneensa 1904 ja järjestää aikuisille historiaan '
+                + 'keskittyviä kierroksia.',
+              kuva: {
+                tiedosto: 'Boulder Town Hall, Western Australia.jpg',
+                lyhyt: 'Boulderin kaupungintalo vuodelta 1908 kellotorneineen, edessä korkea palmu.',
+                selite: 'Toukokuussa 2007 kuvattu Boulderin kaupungintalo '
+                  + 'on punatiilinen, valkoisin koristein reunustettu '
+                  + 'rakennus, jonka kulmassa kohoaa kellotorni '
+                  + 'harmaanvihreine kupoleineen. Edustan liikenneympyrässä '
+                  + 'kasvaa korkea palmu. Salin aarre on Philip Goatcherin '
+                  + 'maalaama näyttämöesirippu.',
+                lahde: 'Michael Gorey, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Räjäytys kello yksi, patsaat suolajärvellä',
+              teksti: 'Superpitin avolouhos toimii ympäri vuorokauden, ja '
+                + 'sen reunalle Boulderin laidalle on rakennettu yleisön '
+                + 'näköalapaikka, jonne ajetaan Mount Monger Roadilta. '
+                + 'Paikalla on opastetauluja ja vanhoja kaivoskoneita. '
+                + 'Louhoksessa räjäytetään kerran päivässä kello 13, ellei '
+                + 'tuuli uhkaa kantaa pölyä kaupungin ylle, joten '
+                + 'näköalapaikalle kannattaa ehtiä vähän ennen. Kaivoksen '
+                + 'työntekijöiden on asuttava Kalgoorliessa, vaikka '
+                + 'kaupungin lentokenttä on muuten seudun kaivoksille '
+                + 'lentävien työntekijöiden solmukohta. Parhaan näköalan '
+                + 'kaupungin yli saa Mount Charlotten mäeltä pohjoislaidalla, '
+                + 'jossa on Perthistä tulevan vesiputken pääteallas. '
+                + 'Karlkurla Bushland Parkissa kaupungin laidalla neljän '
+                + 'kilometrin kierros nousee eukalyptusmetsän läpi '
+                + 'näköalatasanteelle. Kultaryntäyksen varjopuolen näkee '
+                + 'Kanownassa, parikymmentä kilometriä itään. Siellä asui '
+                + '1899 yli 12 000 ihmistä, mutta pintakulta loppui nopeasti, '
+                + 'ja vuonna 1953 kaupunki oli autio. Jäljellä ovat '
+                + 'asemalaituri, kaksi hautausmaata ja kyltit, jotka '
+                + 'kertovat, missä kaupat ja hotellit ennen seisoivat. '
+                + 'Coolgardie 38 kilometriä lounaaseen oli 1898 siirtokunnan '
+                + 'kolmanneksi suurin kaupunki noin 15 000 asukkaallaan. '
+                + 'Pääkatu sai sähkövalot 1896, mutta 1924 sitä valaisi '
+                + 'neljä myrskylyhtyä. Coolgardiessa keksittiin 1890-luvun '
+                + 'lopulla haihtuvalla vedellä viilentävä ruokakaappi, '
+                + 'Coolgardie safe, ja hautausmaalla lepää tutkimusmatkailija '
+                + 'Ernest Giles. Pidemmän päiväretken arvoinen on Lake '
+                + 'Ballard. Menziesin pikkukaupunkiin on Kalgoorliesta 132 '
+                + 'kilometriä pohjoiseen, ja sieltä tasainen soratie vie noin '
+                + '50 kilometriä järvelle ilman nelivetoakin. Tavallisesti '
+                + 'kuivan suolajärven pinnalle brittiläinen kuvanveistäjä '
+                + 'Antony Gormley pystytti 2003 Perthin taidefestivaalin '
+                + '50-vuotisjuhlaan 51 metallihahmoa, jotka on muotoiltu '
+                + 'Menziesin asukkaiden laserkeilauksista. Veistosten piti '
+                + 'olla väliaikaisia, mutta ne jäivät järvelle. Parhaimmillaan '
+                + 'ne ovat aamulla ja myöhään iltapäivällä, kun '
+                + 'keskipäivän kuumuus ei polta suolapintaa. Kambaldan '
+                + 'kupeessa noin 55 kilometriä Boulderista etelään on Lake '
+                + 'Lefroy, jonka laajaa suolakuorta pidetään yhtenä '
+                + 'parhaista paikoista maapurjehdukseen.',
+              kuva: {
+                tiedosto: 'Lake Ballard - Inside Australia (2009).jpg',
+                lyhyt: 'Gormleyn hoikka metallihahmo peilautuu veden peittämän Lake Ballardin pintaan.',
+                selite: 'Maaliskuussa 2009 kuvattu Lake Ballard on '
+                  + 'poikkeuksellisesti veden peitossa, ja Antony Gormleyn '
+                  + 'veistos heijastuu tyyneen pintaan kuin peiliin. '
+                  + 'Horisontissa erottuu kaksi muuta hahmoa, ja oikealla '
+                  + 'järveen työntyy matala niemi.',
+                lahde: 'Tamsin Slater, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Varaa huone ennen kaivosmiehiä',
+              teksti: 'Kalgoorliessa on kuuma, puolikuiva ilmasto. '
+                + 'Tammikuun keskimääräinen ylin lämpötila on noin 34 astetta, '
+                + 'ja kuumien pohjoistuulten aikaan yli 40 astetta mitataan '
+                + 'lähes kerran viikossa. Heinäkuussa päivälämpö jää noin 17 '
+                + 'asteeseen, ja tavallisena talvena yölämpötila putoaa '
+                + 'pakkasen puolelle noin neljä kertaa. Sadetta tulee '
+                + 'vuodessa keskimäärin 260 millimetriä, mutta vuosien '
+                + 'vaihtelu on suurta. Lämpiminä iltapäivinä kärpäsiä on '
+                + 'paljon, ja Lake Ballardille kannattaa ottaa hyönteisverkko '
+                + 'tai karkotetta. Majoitus on varattava hyvissä ajoin, sillä '
+                + 'motellit täyttyvät kaivoksille lentävistä työntekijöistä. '
+                + 'Elokuun kaivoskonferenssin aikaan huoneet on varattu jopa '
+                + 'kaksi vuotta etukäteen, yöhinnat voivat nousta 150 '
+                + 'prosenttia, ja paikallisia kehotetaan vuokraamaan kotinsa '
+                + 'ja lähtemään kaupungista. Lentokenttä on kuuden–seitsemän '
+                + 'kilometrin päässä keskustasta etelään. Sen pysäköintialue '
+                + 'on usein täynnä kaivostyöläisten autoja, eikä kentältä '
+                + 'kulje bussia, mutta taksit odottavat jokaista saapuvaa '
+                + 'lentoa. Suurilla vuokra-autoyhtiöillä on toimipiste '
+                + 'kentällä, mutta kaivosyhtiöt vuokraavat paljon autoja '
+                + 'etenkin messujen aikaan, joten auto on varattava ajoissa. '
+                + 'Tarjolla on tavallisesti isoja sedaneja ja nelivetoja. '
+                + 'Keskustan nähtävyydet ovat kävelymatkan päässä toisistaan. '
+                + 'Kaupunkibussit kiertävät kolmella linjalla, ja '
+                + 'matkailijalle hyödyllisin on Kalgoorlien ja Boulderin '
+                + 'välinen linja. Wikivoyagen mukaan bussit kulkevat päivisin '
+                + 'noin kerran tunnissa ja viikonloppuisin vain aamupäivisin, '
+                + 'ja päätepysäkki on Hannan- ja Maritana Streetin kulmassa. '
+                + 'Pohjoiseen Goldfields Highwaylla Menzies on ainoa kaupunki '
+                + 'ennen Leonoraa, eikä sieltä aina saa polttoainetta, joten '
+                + 'tankki täytetään Kalgoorliessa. Menziesissä ei ole '
+                + 'supermarkettia, ja puhelin toimii vain kaupungissa ja vain '
+                + 'Telstran verkossa. Lake Ballardin ilmaisella leiripaikalla '
+                + 'on vain kuivakäymälä ja tulipaikat, joten vesi ja ruoka '
+                + 'otetaan mukaan.',
+              kuva: {
+                tiedosto: 'Kalgoorlie-Boulder Airport terminal, 2018 (01).jpg',
+                lyhyt: 'Kalgoorlie–Boulderin lentoaseman matala terminaali keltaisine teräsristikoineen.',
+                selite: 'Heinäkuussa 2018 kuvatun terminaalin katoksia '
+                  + 'kannattelevat keltaiset teräsristikot, ja '
+                  + 'jalkakäytävän varressa on yleisilmailun opaste. '
+                  + 'Taustalla kohoaa valkoinen torni kirkkaan sinistä '
+                  + 'taivasta vasten.',
+                lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'superpit',
@@ -119302,6 +119903,232 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Simpson Desert',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Birdsville, Birdsville Track, Birdsville Races, Big
+       * Red Bash, Birdsville Hotel, Birdsville Airport, Birdsville
+       * Developmental Road, Simpson Desert, Munga-Thirri National Park,
+       * Poeppel Corner, Tom Kruse (mailman)) ja Wikivoyagen
+       * Birdsville-sivulta — teksti omaa. Nostojen ja kuvagallerian aiheita
+       * (Burke ja Wills, nimen synty, rajatullit, hotellin synty 1884,
+       * kilpailujen synty 1882, Diamantina, Big Redin dyyni, wangkangurrut
+       * ja mikirit, postiauto 1934) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: kylän tienviitta.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Road Signs to even more Remote Areas in Birdsville - panoramio.jpg',
+          lyhyt: 'Birdsvillen tienviitan mukaan Adelaideen on 1 191 ja Brisbaneen 1 602 kilometriä.',
+          selite: 'Birdsvillen laidalla seisova tienviitta luettelee seuraavat '
+            + 'asutut paikat: Betootaan on 170, Marreehen 518 ja Brisbaneen '
+            + '1 602 kilometriä.',
+          lahde: 'Lobster1, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Birdsvillessä asuu runsaat sata ihmistä, mutta kylä on '
+          + 'Australian tunnetuimpia sisämaan matkakohteita. Brisbaneen on '
+          + 'yli 1 500 kilometriä, ja autolla matka kestää kauemmin kuin '
+          + 'Brisbanesta Melbourneen. Etelästä tullaan Birdsville Trackia '
+          + 'pitkin, länteen alkaa Simpsonin aavikon ylitys, ja syyskuun '
+          + 'laukkakilpailuihin kylän kiitoradalle laskeutuu satoja '
+          + 'pienkoneita. Pubi on lentoterminaalia vastapäätä, leipomossa '
+          + 'myydään kamelipiirakkaa, ja kylän vesi nousee maan alta lähes '
+          + 'kiehuvana. Parhaiten Birdsville sopii matkaan huhti–lokakuussa: '
+          + 'tammikuussa päivän ylin lämpötila on keskimäärin yli 40 astetta, '
+          + 'ja Queenslandin lämpöennätys, 49,5 astetta, mitattiin juuri '
+          + 'täällä.',
+        artikkeli: {
+          nimi: 'Matkailijan Birdsville',
+          teksti: 'Birdsvilleen saavutaan joko pölyistä soratietä tai '
+            + 'pienkoneella lähes pubin ovelle.',
+          nosto: 'Kilpailuviikonloppuna lentäjät saavat leiriytyä oman '
+            + 'koneensa siiven alle.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille maitse tai ilmateitse',
+              teksti: 'Birdsville on 1 590 kilometriä Brisbanesta länteen ja '
+                + '720 kilometriä Mount Isasta etelään, ja ajomatka '
+                + 'Brisbanesta vie kauemmin kuin sieltä Melbourneen tai '
+                + 'Cairnsiin. Idästä kylään johtaa 273 kilometrin Birdsville '
+                + 'Developmental Road, joka on yhä suurimmaksi osaksi '
+                + 'päällystämätön, ja etelästä Etelä-Australian Marreesta '
+                + 'runsaat 500 kilometriä pitkä Birdsville Track. Kuivalla '
+                + 'säällä tavallinen kaksivetoinen auto pärjää yleensä '
+                + 'molemmilla, mutta sade voi sulkea tiet joko kaikilta tai '
+                + 'vain kaksivetoisilta. Kiireisempi lentää: osavaltion '
+                + 'tilaama reittikone kulkee Brisbanesta Charlevillen, '
+                + 'Quilpien ja Windorahin kautta ja jatkaa pohjoiseen '
+                + 'Bedourien ja Boulian kautta Mount Isaan. Terminaali on '
+                + 'pubia vastapäätä, joten koneesta pääsee tiskille '
+                + 'muutamassa minuutissa. Vuonna 2011 valmistunut 1,5 '
+                + 'miljoonan dollarin remontti toi kentälle uuden '
+                + 'terminaalin ja kiitotievalot, sillä pienkoneilla saapuvat '
+                + 'matkailijat ovat kylälle tärkeä tulonlähde. Kentällä '
+                + 'käy myös postilento, joka kuljettaa kirjeet Etelä-'
+                + 'Australian Port Augustasta syrjäisille karja-asemille.',
+              kuva: [
+                {
+                  tiedosto: 'YBDV Birdsville Airport.jpg',
+                  lyhyt: 'Birdsvillen kiitotie kulkee hiekkaharjun viertä, ja sen päässä ovat kylän talot.',
+                  selite: 'Jouluaattona 2007 otetussa ilmakuvassa Birdsvillen '
+                    + 'kiitotie kulkee punaisen hiekkaharjun vierellä, ja sen '
+                    + 'päässä näkyvät kylän talot ja Diamantinan puiden '
+                    + 'reunustamat uomat.',
+                  lahde: 'Stuart Edwards, Wikimedia Commons (PD)',
+                },
+                {
+                  tiedosto: 'VH-EEH with DC3.JPG',
+                  lyhyt: 'Pienkone tankkaa Birdsvillen kentällä, taustalla vanha DC-3-matkustajakone.',
+                  selite: 'Cessna 210 -pienkone VH-EEH tankkaa Birdsvillen '
+                    + 'kentällä kesäkuussa 2010, ja sen takana seisoo Air '
+                    + 'Nostalgia -yhtiön DC-3, 1930-luvulla suunniteltu '
+                    + 'potkurikone.',
+                  lahde: 'Danger85, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Birdsville Track sign 0789.jpg',
+                  lyhyt: 'Birdsville Trackin pohjoispään kyltti toivottaa hyvää matkaa soratielle.',
+                  selite: 'Birdsville Trackin pohjoispäässä kyltti toivottaa '
+                    + 'antoisaa ajoa, ja soratie katoaa sen takana tasaiselle '
+                    + 'kivikkotasangolle.',
+                  lahde: 'Summerdrought, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Soratie etelään, dyynit länteen',
+              teksti: 'Birdsville Track syntyi karjatieksi, jota pitkin laumat '
+                + 'ajettiin Marreen rautatieasemalle. Nykyään 517 kilometrin reitti on '
+                + 'tasoitettu soratie, joka halkoo Strzeleckin, Sturtin '
+                + 'kivikkoaavikon ja Tirarin aavikot. Ainoa palvelupiste '
+                + 'matkan varrella on Mungeranien asema, jossa on '
+                + 'polttoainetta ja hotelli 204 kilometrin päässä Marreesta '
+                + 'ja 313 kilometrin päässä Birdsvillestä. Kylään ja '
+                + 'Marreehen tuotiin 2008 pronssinen rintakuva Tom Kruselle, joka '
+                + 'ajoi tien postireittiä vuosina 1936–1957. Länteen alkaa '
+                + 'vaativampi seikkailu, Simpsonin aavikon ylitys. Suosituin '
+                + 'reitti Mount Daren hotellille, läntisen reunan viimeiselle '
+                + 'polttoaineasemalle, kulkee French Linea, jonka ranskalainen '
+                + 'öljy-yhtiö raivasi 1960-luvun alussa. Useimmat ajavat sen '
+                + 'lännestä itään, koska vallitsevat tuulet auttavat ja '
+                + 'dyynien länsirinteet ovat loivempia, joten Birdsville on '
+                + 'monelle maali. 174 kilometriä kylästä länteen on Poeppel '
+                + 'Corner, jossa kolme osavaltiota kohtaa ja uusi vuosi '
+                + 'vaihtuu kolmesti puolen tunnin välein. Munga-Thirrin '
+                + 'kansallispuistossa ajetaan vain QAA Line -uraa ja '
+                + 'leiriydytään enintään 500 metrin päähän siitä. Puisto on '
+                + 'suljettu joulukuun alusta maaliskuun puoliväliin, ja '
+                + 'aavikolle lähdetään vähintään kahdella nelivetoautolla ja '
+                + 'kaukoyhteyslaittein.',
+              kuva: {
+                tiedosto: 'Simpson DSC02969 Qld (24379197118).jpg',
+                lyhyt: 'Tarroilla peitetty aavikkokyltti: Mount Daren hotelliin on 375 km French Linea.',
+                selite: 'Simpsonin aavikon hiekalla seisova kyltti lupaa Mount '
+                  + 'Daren hotellissa leirintää, majoitusta, ruokaa, korjaamon, '
+                  + 'hinauksen ja polttoainetta 375 kilometrin päässä, ja ohi '
+                  + 'ajaneet ovat peittäneet sen tarroillaan.',
+                lahde: 'Ian Cochrane, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Laukkaa ja rockia aavikolla',
+              teksti: 'Syyskuinen Birdsville Races on kylän vuoden suurin '
+                + 'tapahtuma: kahden päivän kilpailuihin saapuu 7 000–9 000 '
+                + 'vierasta, ja jopa kaksisataa pienkonetta täyttää 1 700 '
+                + 'metrin kiitoradan. Lentäjät saavat leiriytyä koneensa '
+                + 'siiven alle, ja maanteitse tulevia toivottaa matkan '
+                + 'varrella tervetulleiksi Quilpien kaupunki. Tuotto menee '
+                + 'lentävälle lääkäripalvelulle Royal Flying Doctor '
+                + 'Servicelle ja kylän terveysasemalle. Kilpailut on peruttu '
+                + 'harvoin: ensimmäisen kerran 128 vuoden aikana tulvan '
+                + 'takia 2010, sitten pandemian vuoksi 2020, ja vuoden 2021 '
+                + 'kilpailut siirrettiin huhtikuulle 2022. Heinäkuussa '
+                + 'Big Redin juurella pidetään Big Red Bash, maailman '
+                + 'syrjäisimmäksi mainostettu musiikkijuhla. Ensimmäiseen '
+                + 'kolmipäiväiseen festivaaliin tuli 2013 noin 500 ihmistä, '
+                + 'vuonna 2023 jo yli 11 000, ja kaikki yöpyvät '
+                + 'festivaalialueella. Ohjelmaan kuuluu australialaista '
+                + 'rockia, kamelikyytejä ja joukkotanssi Nutbush City '
+                + 'Limitsin tahdissa: vuonna 2023 tanssijoita oli '
+                + 'maailmanennätykselliset 5 838. Vuoden 2026 juhla '
+                + 'peruttiin maaliskuussa, kun ennennäkemättömät sateet '
+                + 'olivat tulvineet seudun. Myös Simpsonin aavikon ylittävä '
+                + 'pyöräkilpailu päättyy perinteisesti Birdsvilleen.',
+              kuva: {
+                tiedosto: 'Tim Rogers, at the Big Red Bash 2022.jpg',
+                lyhyt: 'Laulaja Tim Rogers esiintyi Big Red Bashin lavalla heinäkuussa 2022.',
+                selite: 'You Am I -yhtyeen laulaja Tim Rogers esiintyi Big Red '
+                  + 'Bashissa 2022 poikkeuksellisesti ilman kitaraa, Rolling '
+                  + 'Stonesin kappaleita soittavan kokoonpanon keulilla.',
+                lahde: 'LeglessGoat, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Pubin tiski ja kamelipiirakka',
+              teksti: 'Birdsville Hotel on yhä kylän olohuone, ja sen Green '
+                + 'Lizard -baarissa tilataan lounas ja illallinen tiskiltä. '
+                + 'Pubin vaiheisiin mahtuu tulta ja myrskyjä: vuoden 1905 '
+                + 'sykloni kaatoi tontilta kaiken muun kuin kivestä '
+                + 'muuratun, ja 1964 tulipalo vei etubaarin ja myrsky '
+                + 'rakennuksen kaakkoiskulman. Vuonna 1979 seikkailija Dick '
+                + 'Smith ehti allekirjoittaa kauppakirjan, mutta hotelli '
+                + 'paloi seuraavana päivänä ja kaupat raukesivat. Seuraavana '
+                + 'vuonna sen ostivat David Brook ja Kim Fort, jotka pitivät '
+                + 'sitä 40 vuotta ennen kuin myivät sen matkailuyrittäjille '
+                + 'Courtney ja Talia Ellisille. Kadun toisella puolella '
+                + 'seisoo muistomerkki Augustus Poeppelille, joka mittasi '
+                + 'Queenslandin ja Etelä-Australian rajan. Pubin ohella '
+                + 'kylän kuuluisin ruokapaikka on Birdsville Bakery, jonka '
+                + 'kahvila on sisustettu vanhan maalaisaustralian tyyliin. '
+                + 'Kahvin ja kakkujen lisäksi se leipoo omia piirakoitaan, '
+                + 'ja niistä tunnetuimmat ovat currylla maustettu '
+                + 'kamelipiirakka ja kenguru-punaviinipiirakka. Leirintäalueella '
+                + 'on lisäksi oma kahvila.',
+              kuva: {
+                tiedosto: 'Bakery Hotel Birdsville - panoramio.jpg',
+                lyhyt: 'Birdsville Bakeryn matala peltikattoinen rakennus seisoo kylän leveän kadun varrella.',
+                selite: 'Birdsville Bakeryn kahvilassa myydään piirakoita, '
+                  + 'joiden täytteenä voi olla kamelia currykastikkeessa tai '
+                  + 'kengurua punaviinissä.',
+                lahde: 'Lobster1, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Ennen kuin lähdet',
+              teksti: 'Matkailukausi kestää huhtikuusta lokakuuhun. Talvella '
+                + 'päivät ovat lämpimiä ja yöt kylmiä, heinäkuussa aamun '
+                + 'lämpötila on keskimäärin seitsemän astetta, mutta kesällä '
+                + 'päivän ylin lämpötila liikkuu neljänkymmenen tienoilla. '
+                + 'Sadepäiviä on keskimäärin vain 22 vuodessa, mutta '
+                + 'rankkasade voi eristää kylän päiviksi mihin vuodenaikaan '
+                + 'tahansa, joten tieolot tarkistetaan ennen lähtöä. Niistä, '
+                + 'säästä ja kartoista kertoo Wirrarrin matkailuneuvonta, '
+                + 'jossa on myös langaton verkko. Telstran ja Optuksen '
+                + 'matkapuhelinverkot toimivat kylässä, mutta kilpailuviikolla '
+                + 'ne ruuhkautuvat. Vesi tulee vuonna 1961 poratusta '
+                + 'arteesisesta kaivosta 97–99-asteisena: jäähtyneenä se on '
+                + 'kylän juomavettä, ja sen lämmöllä tuotetaan noin kolmannes '
+                + 'kylän sähköstä Australian ainoassa laatuaan olevassa '
+                + 'geotermisessä voimalassa. Uimaan pääsee kylän viereen '
+                + 'billabongiin, jonne on rakennettu laituri. Majoitusta on '
+                + 'pubissa ja leirintäalueen mökeissä, mutta kilpailujen ja '
+                + 'festivaalin aikaan on varauduttava telttaan, ellei varaa '
+                + 'ajoissa. Aavikon kansallispuistoon otetaan mukaan '
+                + 'kaasukeitin, sillä leirinuotiot ovat hupentaneet '
+                + 'puuvaroja niin, että eläimistö voi kärsiä.',
+              kuva: {
+                tiedosto: 'Bore Water Outlet in Birdsville - panoramio.jpg',
+                lyhyt: 'Birdsvillen arteesisen kaivon kuuma vesi höyryää valuessaan putkesta altaaseen.',
+                selite: 'Kylän porakaivosta nouseva vesi on lähes kiehuvaa, ja '
+                  + 'sen kuumuus näkyy höyrynä, kun se valuu suppilon läpi '
+                  + 'altaaseen. Jäähtynyt vesi päätyy kylän vesijohtoihin.',
+                lahde: 'Lobster1, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'mikirit',
