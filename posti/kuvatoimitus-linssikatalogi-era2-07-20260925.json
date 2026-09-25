@@ -1,0 +1,720 @@
+{
+  "erä": "linssikatalogi-era2-07-20260925",
+  "tila": "40 R2-objektia ja kanonista URL-osoitetta todennettu takaisinluvulla; katalogiin ja peliin kytkentä odottaa Fablea",
+  "tilaus": "posti/linssikatalogi-tilaus-20260924.json@3576ee735273bca9a1611f88c3adc7e4ccad704a",
+  "count": {
+    "lenses": 10,
+    "concepts": 10,
+    "cc": 10,
+    "cc_not_found": 0,
+    "objects": 40
+  },
+  "entries": [
+    {
+      "id": "N5",
+      "nimi": "Krimin sota",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainnekuva: krimin sota (1853 – 1856). Kartta on tulkinnallinen, ei historiallinen lähdekartta eikä tarkka rajojen tai reittien esitys.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Historical-atlas concept, Crimean War 1853–1856. Parchment map of Europe, Baltic and Black Sea, with understated focal lights for Sinope, Sevastopol, Bomarsund and Paris. Sober muted palette, geographical coastlines, no battle spectacle, national flags, text or UI.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/full/N5-havainne.jpg",
+            "objectKey": "linssikatalogi/N5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248329,
+            "sha256": "f5105f6fd35436a7846817a55745853479b1eb527355d6ebbf4bcd9c186c0396"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/thumb/N5-thumb.jpg",
+            "objectKey": "linssikatalogi/N5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 36858,
+            "sha256": "3369342cece696d5f48ef03ac02476a473bbe4624c81c1bfbe8163c22d443a85"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Tykkikuulien peittämä tie Sevastopolin piirityksen maisemassa vuonna 1855.",
+        "creator": "Roger Fenton",
+        "title": "Shadow of the Valley of Death",
+        "year": "1855",
+        "collection": "Library of Congress, Roger Fenton Crimean War Photograph Collection",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Roger_Fenton_-_Shadow_of_the_Valley_of_Death.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Roger_Fenton_-_Shadow_of_the_Valley_of_Death.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Krimin sodan aikalaisvalokuva ilman haavoittuneita tai vainajia; kuva ei yksin selitä sodan vaikutuksia siviileihin.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/N5-cc.jpg",
+            "objectKey": "linssikatalogi/N5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 272565,
+            "sha256": "49a51b1e9dd10e152124a6fdfc9673a530ab70e82150ee6a424ac933d791f342"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/N5-cc-480.jpg",
+            "objectKey": "linssikatalogi/N5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 38017,
+            "sha256": "ed7dbe45878b2b178132b9957483f856aef37e3a0eead7cffd79eeba072c344e"
+          }
+        ]
+      }
+    },
+    {
+      "id": "N6",
+      "nimi": "Yhdysvaltain sisällissota",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainnekuva: yhdysvaltain sisällissota (1861 – 1865). Kartta on tulkinnallinen, ei historiallinen lähdekartta eikä tarkka rajojen tai reittien esitys.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Historical-atlas concept, US Civil War 1861–1865. Overhead eastern United States with subtle blue and ochre sectional washes and small markers for Fort Sumter, Antietam, Gettysburg, Sherman's campaign and Appomattox. Somber, no people, flag, labels, numbers, clocks or UI.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/full/N6-havainne.jpg",
+            "objectKey": "linssikatalogi/N6-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N6-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244409,
+            "sha256": "0215ce2b20a84707b4df68850a36a398eb067459aa67ea4da55ee1e0835b143d"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/thumb/N6-thumb.jpg",
+            "objectKey": "linssikatalogi/N6-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N6-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 34443,
+            "sha256": "c961db7afb000fbe17c6b60c7a68159e4c35b87d784d213246be47ab22ee159a"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Gettysburgin kolmen päivän taistelukenttä vuoden 1864 kartassa.",
+        "creator": "J. Lippincott Company",
+        "title": "Map of the battle field of Gettysburg, July 1st, 2nd, and 3rd 1863",
+        "year": "1864",
+        "collection": "Library of Congress Geography and Map Division, 99439123",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Map_of_the_battle_field_of_Gettysburg._%28July_1st%2C_2nd%2C_and_3rd_1863%29_LOC_99439123.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Map_of_the_battle_field_of_Gettysburg._%28July_1st%2C_2nd%2C_and_3rd_1863%29_LOC_99439123.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample; centered on neutral canvas",
+        "source_context": "Historiallinen sotilaskartta, ei kuva väkivallasta; sisällissodan orjuuteen liittyvä tausta ei näy kartassa.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/N6-cc.jpg",
+            "objectKey": "linssikatalogi/N6-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N6-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 198821,
+            "sha256": "467e8e37ea4c3b80d40829a40511041ae3332c6a8d239f7b76989c8ac6e5f7bf"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/N6-cc-480.jpg",
+            "objectKey": "linssikatalogi/N6-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N6-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 22539,
+            "sha256": "70d96b60b49909dca72d08d54a5c3797228181611638b77dd23271517415aeaa"
+          }
+        ]
+      }
+    },
+    {
+      "id": "N7",
+      "nimi": "Balkanin sodat",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainnekuva: balkanin sodat (1877 – 1913). Kartta on tulkinnallinen, ei historiallinen lähdekartta eikä tarkka rajojen tai reittien esitys.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Historical-atlas concept, Balkan conflicts and treaties 1877–1913. Parchment map of southeastern Europe and the Balkan Peninsula, muted overlapping era washes and small lights for Pleven, San Stefano, Berlin and later Balkan events. No modern borders, text, flags or sensational warfare.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/full/N7-havainne.jpg",
+            "objectKey": "linssikatalogi/N7-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N7-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 245342,
+            "sha256": "da2a2c1665c1d3b9729c9f78963261ecce484e790b01ccdb86d6de9f62bcf977"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/thumb/N7-thumb.jpg",
+            "objectKey": "linssikatalogi/N7-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N7-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 41904,
+            "sha256": "34f8234dd4cc2c17968f3287f3f9b2bacbe1a0849315ca909c8c50cb823b7bab"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Balkanin niemimaa vuoden 1913 aikalaiskartassa.",
+        "creator": "Loreck und Winter",
+        "title": "Austria-Hungary and the Balkan Peninsula, topographic map",
+        "year": "1913",
+        "collection": "Université Bordeaux Montaigne, 1886.u-bordeaux-montaigne.fr, item 70192",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:1913_topographic_map_of_Austria-Hungary_and_the_Balkan_peninsula.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/1913_topographic_map_of_Austria-Hungary_and_the_Balkan_peninsula.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Kartta kuvaa Balkanin sotien ajan maantiedettä; rajat ja nimistö heijastavat julkaisijan aikakauden näkökulmaa.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/N7-cc.jpg",
+            "objectKey": "linssikatalogi/N7-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N7-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 299475,
+            "sha256": "d70673a8f40f73ee7c192da0e59c6f1699dd1b7c2969c1552eab7f923fde1b72"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/N7-cc-480.jpg",
+            "objectKey": "linssikatalogi/N7-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N7-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 54143,
+            "sha256": "fbdf7fce31c9268445d97452d1897536d964ace0760b4b3ad1ff26803a39004d"
+          }
+        ]
+      }
+    },
+    {
+      "id": "O1",
+      "nimi": "Espanja ja Portugali maailmalla",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainnekuva: espanja ja portugali maailmalla (1494 – 1825). Kartta on tulkinnallinen, ei historiallinen lähdekartta eikä tarkka rajojen tai reittien esitys.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Historical-atlas concept, Spanish and Portuguese overseas expansion 1494–1825. Antique Atlantic-centred world map with coastlines only, an understated Tordesillas meridian and schematic routes toward Brazil, the Philippines and American independence. No current national boundaries, text, flags or celebratory colonial imagery.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/full/O1-havainne.jpg",
+            "objectKey": "linssikatalogi/O1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249453,
+            "sha256": "d51bb0d4a2df098b18cb22e42f1e13183064519ee0e3994eaaa444de751e260e"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/thumb/O1-thumb.jpg",
+            "objectKey": "linssikatalogi/O1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 37382,
+            "sha256": "269cf8ec316f3df5b643c02e46c08ed032bf569c5a0c5cdc45096aa80c812ec4"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1502 Cantinon maailmankartta näyttää Portugalin tutkimusmatkojen tiedot ja Brasilian.",
+        "creator": "tuntematon portugalilainen kartografi; Alberto Cantino hankki kartan",
+        "title": "Cantino Planisphere",
+        "year": "1502",
+        "collection": "Biblioteca Estense Universitaria, Modena",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:CantinoPlanisphere.png",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/07/CantinoPlanisphere.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "full source extent fitted on neutral canvas, no upscaling",
+        "source_context": "Eurooppalainen löytöretkien ja valtapolitiikan aikalaiskartta; kuvattu maailma oli monien paikallisten yhteisöjen asuttama.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/O1-cc.jpg",
+            "objectKey": "linssikatalogi/O1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 292300,
+            "sha256": "46deba8238c8d514c5914df0581965fb9d29a3c595db0e921dff84ac7f844953"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/O1-cc-480.jpg",
+            "objectKey": "linssikatalogi/O1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 37409,
+            "sha256": "b605e6fad454a9ab739ab613867f53a30eaa55a4311de3c117578884e9665a2d"
+          }
+        ]
+      }
+    },
+    {
+      "id": "O2",
+      "nimi": "Britannian imperiumi",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainnekuva: britannian imperiumi (1600 – 1922). Kartta on tulkinnallinen, ei historiallinen lähdekartta eikä tarkka rajojen tai reittien esitys.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Historical-atlas concept, British Empire 1600–1922. Global antique map with restrained territorial overlays and sea routes linking Britain, India, Canada, Australia and Egypt. Sober interpretation of colonial history, no present-day borders, flags, portraits, lettering or UI.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/full/O2-havainne.jpg",
+            "objectKey": "linssikatalogi/O2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249760,
+            "sha256": "65f8b18b0b4cad5f8bd27f37c325620898bee8ad3c6cd0b0f026ee5183c4588e"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/thumb/O2-thumb.jpg",
+            "objectKey": "linssikatalogi/O2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 37462,
+            "sha256": "1f068fcc0d7cca55e7264f803265a9bd295a93c061b32b2088f3abf752d8365b"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Britannian imperiumin alueet punaisella vuoden 1886 aikalaiskartassa.",
+        "creator": "J. C. R. Colomb (karttatiedot); Walter Crane (kuvitus)",
+        "title": "Imperial Federation: Map of the World Showing the Extent of the British Empire in 1886",
+        "year": "1886",
+        "collection": "Bibliothèque nationale de France, btv1b530620982",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Imperial_federation._Map_of_the_world_showing_the_extent_of_the_British_empire_in_1886._Special_information_furnished_-_by_capitain_J._C._R._Colomb..._-_btv1b530620982.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Imperial_federation._Map_of_the_world_showing_the_extent_of_the_British_empire_in_1886._Special_information_furnished_-_by_capitain_J._C._R._Colomb..._-_btv1b530620982.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Imperiumia ihannoiva brittiläinen kartta; siirtomaiden rajat eivät kuvasta paikallisten kansojen suostumusta.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/O2-cc.jpg",
+            "objectKey": "linssikatalogi/O2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 294825,
+            "sha256": "f81ff76e3eed87996c42da50ae8eb9c2825b1640dea07fffe7b4b42687763f02"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/O2-cc-480.jpg",
+            "objectKey": "linssikatalogi/O2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 60582,
+            "sha256": "0307f3d7774de3a9608be2ededa6a56190c34c70bd69e412cea9630602fe1078"
+          }
+        ]
+      }
+    },
+    {
+      "id": "O4",
+      "nimi": "Venäjä laajenee Siperiaan",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainnekuva: venäjä laajenee siperiaan (1582 – 1867). Kartta on tulkinnallinen, ei historiallinen lähdekartta eikä tarkka rajojen tai reittien esitys.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Historical-atlas concept, Russian expansion across Siberia 1582–1867. Overhead map from European Russia across Siberia to Kamchatka and Alaska, subdued wash and unobtrusive route markers for Yermak, Yakutsk, Okhotsk, Kamchatka and Alaska sale. No text, flags or triumphalist imagery.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/full/O4-havainne.jpg",
+            "objectKey": "linssikatalogi/O4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 241901,
+            "sha256": "dc04034b6b2fde83847c45bf75aac31eb716f5eb48e9cf1bb16a2346e7406476"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/thumb/O4-thumb.jpg",
+            "objectKey": "linssikatalogi/O4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 42926,
+            "sha256": "d3b875073fb4406ea5afb924d1b4e8d72f7307d8708e76ae71accb963a82b817"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Venäjä ja Siperia Strahlenbergin vuoden 1730 kartassa.",
+        "creator": "Philipp Johann von Strahlenberg",
+        "title": "Russia and Siberia",
+        "year": "1730",
+        "collection": "Geographicus / historiallinen karttapainos",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:1730_map_of_Russia_and_Siberia_by_Strahlenberg.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/1730_map_of_Russia_and_Siberia_by_Strahlenberg.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "full source extent fitted on neutral canvas, no upscaling",
+        "source_context": "Eurooppalainen kartta 1700-luvun Siperian alueista; Venäjän laajenemisen vaikutukset alueen alkuperäiskansoihin eivät näy siinä.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/O4-cc.jpg",
+            "objectKey": "linssikatalogi/O4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 298264,
+            "sha256": "7bf3f91ef12b587c3500f7c4ffd327a62189325adef010d1278f2e73184242a1"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/O4-cc-480.jpg",
+            "objectKey": "linssikatalogi/O4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 56913,
+            "sha256": "a9e7f276f8f1229866ddcc1f78c3039c879d6141fcd636e6e37f75c36ee1f3f3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "O5",
+      "nimi": "Yhdysvallat laajenee",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainnekuva: yhdysvallat laajenee (1783 – 1912). Kartta on tulkinnallinen, ei historiallinen lähdekartta eikä tarkka rajojen tai reittien esitys.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Historical-atlas concept, United States territorial expansion 1783–1912. Overhead North America with Alaska inset, restrained successive translucent area washes for Louisiana, Texas, Oregon, Mexico and Alaska, credible coastlines and terrain. Serious historical tone, no text, flags or portraits.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/full/O5-havainne.jpg",
+            "objectKey": "linssikatalogi/O5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244265,
+            "sha256": "e2d5e29423898f693c586c82ac72c5fc667c1fce5d7a990c1269b56b7dfe9c7a"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/thumb/O5-thumb.jpg",
+            "objectKey": "linssikatalogi/O5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 45537,
+            "sha256": "97533e28ddae9ec3235d549f2b012a10e4274716b561ed5c26cf4d4880614e65"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Yhdysvaltain mantereen alueellisen kasvun vaiheet vuoden 1900 kartassa.",
+        "creator": "Friedenwald Co.; julkaisu Binger Hermann",
+        "title": "Map of the Territorial Growth of the United States",
+        "year": "1900",
+        "collection": "Missouri Historical Society, N30004 / DPLA 3cdf5b02bba263009c5a34a55e4a0183",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Map_of_the_Territorial_Growth_of_the_United_States_%28showing_the_Louisiana_Purchase%29._From_%22The_Louisiana_Purchase...%22_by_Binger_Hermann._Washington-_USGPO%2C_1900._Frontispiece._-_DPLA_-_3cdf5b02bba263009c5a34a55e4a0183.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Map_of_the_Territorial_Growth_of_the_United_States_%28showing_the_Louisiana_Purchase%29._From_%22The_Louisiana_Purchase...%22_by_Binger_Hermann._Washington-_USGPO%2C_1900._Frontispiece._-_DPLA_-_3cdf5b02bba263009c5a34a55e4a0183.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "full source extent fitted on neutral canvas, no upscaling",
+        "source_context": "Yhdysvaltalainen kartta esittää aluelaajennukset valtion näkökulmasta eikä alkuperäiskansojen omia rajoja tai pakkosiirtoja. Alaska ei sisälly tähän mantereen karttaan.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/O5-cc.jpg",
+            "objectKey": "linssikatalogi/O5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 296726,
+            "sha256": "b36cb3330288c092170f6eb011fb86bb87a263752d5378df598d558dbd0b2871"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/O5-cc-480.jpg",
+            "objectKey": "linssikatalogi/O5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 46717,
+            "sha256": "d678f7fb658df3f10ffeca3fa44b92e6712a80489923f718c5645a57d464db97"
+          }
+        ]
+      }
+    },
+    {
+      "id": "O6",
+      "nimi": "Euroopan kartta uusiksi",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainnekuva: euroopan kartta uusiksi (1815 – 1923). Kartta on tulkinnallinen, ei historiallinen lähdekartta eikä tarkka rajojen tai reittien esitys.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Generate a wholly NEW image for historical educational map concept O6, Europe 1815 to 1923. Horizontal 16:9. Make a sepia 19th-century antique atlas map of Europe's COASTLINES AND MOUNTAINS ONLY, with NO country borders, NO country-shaped polygons, NO modern national map. Show Britain, Iberia, Italian peninsula, Alps, Balkans, Black Sea, Anatolia and western Russia with approximate credible geography. Across this base, six broad semitransparent DIAGONAL INK WASHES and softly radiating ripples overlap to poetically evoke shifting political eras from Vienna 1815 through Lausanne 1923; these color bands must cross geography and must NOT trace any nation's territory. Place six subtle pinprick lights approximately at Vienna, Italian peninsula, German region, Berlin, Versailles and Lausanne. Muted ochre, slate blue and umber, museum-quality restrained cartographic illustration, no labels, letters, numbers, clocks, flags, people, UI, or iconography. This is a schematic conceptual illustration, explicitly NOT an accurate period boundary map.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/full/O6-havainne.jpg",
+            "objectKey": "linssikatalogi/O6-v2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O6-v2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 240795,
+            "sha256": "054d91088c97c3956528fd27929429d54ae0ca1ba22d6ce855af2d75d750e972"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/thumb/O6-thumb.jpg",
+            "objectKey": "linssikatalogi/O6-v2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O6-v2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 34599,
+            "sha256": "cd29070960d781fdae8443f97278a7fa146a1422647c0a60f0da3e12a13c6d23"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Euroopan valtiorajat vuoden 1923 tilanteessa Baconin historiallisella kartalla.",
+        "creator": "George Washington Bacon; kustantaja Weber Costello Co.",
+        "title": "Bacon's Standard Map of Europe, 1923",
+        "year": "1923 karttatilanne; painos 1924 jälkeen",
+        "collection": "Library of Congress Geography and Map Division, g5700.ct001973",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Europe_in_1923.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Europe_in_1923.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Kartta näyttää yhden ajankohdan vuosien 1815–1923 rajamuutoksissa; lähde luetteloi painoksen vuoden 1924 jälkeiseksi.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/O6-cc.jpg",
+            "objectKey": "linssikatalogi/O6-v2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O6-v2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 285234,
+            "sha256": "0d7eaaf72235846c97df8d89fc09950aaf16a0475e17be8724794058ada7f997"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/O6-cc-480.jpg",
+            "objectKey": "linssikatalogi/O6-v2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O6-v2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 78895,
+            "sha256": "c7702f367ee92e0ef8900b1e718f7d4d3c213d68481c16d30c2f12c4b47504e3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P2",
+      "nimi": "Musta surma",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainnekuva: musta surma (1347 – 1353). Kartta on tulkinnallinen, ei historiallinen lähdekartta eikä tarkka rajojen tai reittien esitys.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create one original 16:9 landscape conceptual atlas image for a history education lens P2 on the Black Death's spread in 1347–1353. Overhead map of the Mediterranean and Europe from the Black Sea and Sicily through western and northern Europe to Norway and western Russia. Parchment ground with historically plausible coastlines, faint medieval maritime routes from the Black Sea through Messina, Marseille, then soft branching diffusion through Paris, London, Bergen and toward Moscow. Use a restrained, translucent blue-gray veil spreading across the map over time and tiny warm focal glows, without implying precise epidemiological paths or modern national borders. Serious and humane, visually elegant, age-13+ suitable. The route graphic must be gently schematic rather than a definitive epidemiological claim. No corpses, skeletons, plague doctors, rats, monsters, disease symbols, people, flags, labels, letters, numbers, dates, legend, UI or watermark. No country border polygons. Quiet antique engraved-map texture in muted ink, sepia and blue gray.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/full/P2-havainne.jpg",
+            "objectKey": "linssikatalogi/P2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244095,
+            "sha256": "1c2b033d12f0693b80cb3c27a83acaa60d4ceec0018b2930485407ea252acbee"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/thumb/P2-thumb.jpg",
+            "objectKey": "linssikatalogi/P2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 43150,
+            "sha256": "0afff94df829f6851d573839b545a20b9b5f848fa599bdc5046a69a8ada89064"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "1300-luvun miniatyyri kuvaa ruton uhrien hautaamista Tournai’ssa.",
+        "creator": "1300-luvun miniatyyrin tekijä tuntematon; näyttelyvalokuva Sodabottle",
+        "title": "Tournain asukkaat hautaavat ruton uhreja",
+        "year": "1300-luku; näyttelyvalokuva 2011",
+        "collection": "KBR, Chroniques de Gilles le Muisit, MS 13076–77 f. 24v; kuvattu Beit Hatfutsot -näyttelyssä",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Blackdeath%2C_tourmai.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/Blackdeath%2C_tourmai.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "full source extent fitted on neutral canvas, no upscaling",
+        "source_context": "Ajankohdan eurooppalainen käsikirjoituskuva surusta ja hautaamisesta; Tournai ei ole linssin nimetyissä pysäkeissä, mutta kuuluu samaan epidemiaan.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/P2-cc.jpg",
+            "objectKey": "linssikatalogi/P2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 296486,
+            "sha256": "a0de214b3cbb263ad7a29ee3a950440937e666765b93b16c223728e814ebe03e"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/P2-cc-480.jpg",
+            "objectKey": "linssikatalogi/P2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 58225,
+            "sha256": "1a4972c5454443c9225fa104746fabd852d95cccecd125286f2b6b0304b492e9"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P3",
+      "nimi": "Indoeurooppalaiset kielet",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainnekuva: indoeurooppalaiset kielet (3500 eaa – 1500). Kartta on tulkinnallinen, ei historiallinen lähdekartta eikä tarkka rajojen tai reittien esitys.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create a wholly original 16:9 landscape educational historical cartography concept image for lens P3 on the long history of Indo-European language families, roughly 3500 BCE to 1500 CE. Antique parchment overhead map spanning Europe, the Black Sea, Anatolia, the Iranian plateau and the Indian subcontinent, with credible broad coastlines and terrain but NO political borders or nation-shaped color regions. A small gentle glow in the broad Pontic-Caspian steppe area and several very faint branching ink-and-light threads stretching over long centuries toward Anatolia, Greece, the Italian peninsula, central and northern Europe, and the Indian subcontinent. Present them as plural, softly fading conceptual pathways, not a single definitive or exact migration route. Scholarly, elegant, understated ochre, muted slate blue and warm cream, age-13+ serious tone. No people, racial or ethnic iconography, flags, weapons, DNA symbols, labels, words, letters, numerals, dates, modern borders, UI or watermark. Avoid implying certainty of historical pathways; make it clearly a poetic schematic map, not source evidence.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/full/P3-havainne.jpg",
+            "objectKey": "linssikatalogi/P3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 246881,
+            "sha256": "08894f192cd6c3542a08e337961a213d716c8f57bea0df884729bd8f80fc3cc9"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-07/thumb/P3-thumb.jpg",
+            "objectKey": "linssikatalogi/P3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 43249,
+            "sha256": "8e7125205fe4b0b42587911e1c7b4534e32828739c4c756dd720a0ad87bef6e8"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Indoeurooppalaisten kielten eurooppalaisia haaroja vuoden 1850 kielikartassa.",
+        "creator": "tekijä tuntematon",
+        "title": "Indo-European languages: Map of Europe",
+        "year": "1850",
+        "collection": "An Ethnographic Atlas, Samuel Bagster and Sons; University of Alabama Map Library",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Indo-European_languages._Map_of_Europe_%281850%29.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Indo-European_languages._Map_of_Europe_%281850%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Historiallinen 1800-luvun kielitieteen kartta koskee vain Eurooppaa, vaikka linssi ulottuu Euraasiaan; sen luokituksia ei tule lukea nykyiseksi eikä muinaisen leviämisen kartaksi.",
+        "attribution_note": null,
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/P3-cc.jpg",
+            "objectKey": "linssikatalogi/P3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 299300,
+            "sha256": "0618cda05b1390d0fd8ea8aea97d6e0fe00f4e99e79340dc3bce896e99a73c00"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-07/P3-cc-480.jpg",
+            "objectKey": "linssikatalogi/P3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 60698,
+            "sha256": "a8060330d548d0912485ddb14daf0686b448376d7fd2d99cbca0d51334a94081"
+          }
+        ]
+      }
+    }
+  ],
+  "r2_verified": {
+    "objects": 40,
+    "canonicalUrlsVerified": true,
+    "receipt": "output/fable-20260924/linssikatalogi/era2/ready-07-20260925/r2-receipt.json"
+  },
+  "key_collision_note": "O6:n neljä vanhaa R2-objektia olivat eri sisältöä ja julkiselta URL:lta 403. Uusi tarkistettu O6 käyttää O6-v2-avaimia; vanhoja objekteja ei korvattu."
+}
