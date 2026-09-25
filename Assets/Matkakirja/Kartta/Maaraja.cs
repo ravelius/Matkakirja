@@ -130,6 +130,14 @@ namespace Matkakirja
         /// <summary>Linssin portti (web: kehä pois linssin ajaksi, samalla portilla kuin kaupunkipisteet).</summary>
         public void Linssit(bool paalla) => linssit = paalla;
 
+        /// <summary>
+        /// Kotimaan korostus (Linssisepän kierros 3 rivi 39): vertailu- ja maatietolinssissä kehä näkyy kuten webissä
+        /// (vain aikajana piilottaa sen, lauta.js:5089). Oma lippu, koska "kaupungit"-portti (Linssit) asettuu
+        /// linssin aikana uudelleen muualta. LinssiOhjain.Pelikerrokset asettaa ja purkaa.
+        /// </summary>
+        public void SallittuLinssissa(bool sallittu) => linssissaSallittu = sallittu;
+        bool linssissaSallittu;
+
         // ---- Maa ----
 
         string PelaajanMaa()
@@ -367,7 +375,7 @@ namespace Matkakirja
         {
             if (piirto == null || georeferenssi == null) return;
             bool rantaPiirtyy = Rannikko.Instanssi != null && Rannikko.Instanssi.Piirtyy;
-            bool nakyy = suodatin.sharedMesh != null && !linssit && !piilossa && Sallittu && (Pakota || !rantaPiirtyy);
+            bool nakyy = suodatin.sharedMesh != null && (!linssit || linssissaSallittu) && !piilossa && Sallittu && (Pakota || !rantaPiirtyy);
             // Linssin jälkeen kehä palaa häiveellä kuten webissä (korostaMaa → rakennaKorostus(true)).
             if (nakyy && !nakyiEdella) haiveAlku = Time.unscaledTime;
             nakyiEdella = nakyy;
