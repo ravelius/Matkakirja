@@ -256,8 +256,15 @@ namespace Matkakirja.Natiivi
         static double Kiedo(double lon) => ((lon % 360.0) + 540.0) % 360.0 - 180.0;
 
         /// <summary>
-        /// Sijainnin lat/lon: kaupunki sellaisenaan, reitin askel idx isoympyrällä
-        /// a→b osuudella idx/askeleet. null = tuntematon kaupunki tai reitti.
+        /// Piste piirretyltä reittiviivalta (Natiiviseppä, Reitit): reittitunnus "a|b" ja osuus 0–1 kaaren pituudesta
+        /// a:sta b:hen → lat/lon (web siirto.js pointAlong(reitit.poly(reitti), idx/steps)). null = ei viivaa.
+        /// </summary>
+        public static Func<string, double, (double Lat, double Lon)?> ReittiPiste;
+
+        /// <summary>
+        /// Sijainnin lat/lon: kaupunki sellaisenaan, reitin askel idx piirretyltä reittiviivalta osuudella idx/askeleet
+        /// (liikkumisen pariteetti B7: nappula, välipiste ja kohderengas osuvat viivalle mutkaisillakin reiteillä), tai
+        /// ilman viivaa isoympyrällä a→b. null = tuntematon kaupunki tai reitti.
         /// </summary>
         public static (double Lat, double Lon)? Koordinaatti(IReittiverkko v, Sijainti s)
         {
@@ -265,8 +272,13 @@ namespace Matkakirja.Natiivi
                 return v.Kaupungit.TryGetValue(s.Kaupunki, out var k) ? (k.Lat, k.Lon) : ((double, double)?)null;
             if (s.Reitti == null || !v.Reitit.TryGetValue(s.Reitti, out var r)) return null;
             if (!v.Kaupungit.TryGetValue(r.A, out var a) || !v.Kaupungit.TryGetValue(r.B, out var b)) return null;
-            double t = r.Askeleet > 0 ? (double)s.Askel / r.Askeleet : 0.5;
-            return Isoympyra(a.Lat, a.Lon, b.Lat, b.Lon, Math.Max(0, Math.Min(1, t)));
+            double t = Math.Max(0, Math.Min(1, r.Askeleet > 0 ? (double)s.Askel / r.Askeleet : 0.5));
+            if (ReittiPiste != null)
+            {
+                try { var p = ReittiPiste(s.Reitti, t); if (p.HasValue) return p; }
+                catch (Exception e) { UnityEngine.Debug.LogException(e); }
+            }
+            return Isoympyra(a.Lat, a.Lon, b.Lat, b.Lon, t);
         }
 
         /// <summary>Kamera-ajon kesto sekunteina: 1,5 s lähelle, 3 s yli 45° matkalle.</summary>
