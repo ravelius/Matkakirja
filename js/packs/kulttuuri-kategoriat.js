@@ -119138,6 +119138,253 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Arctic sea ice decline',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Nome, Alaska; Nome Airport; Bering Air; Nome–Council
+       * Highway; Nome–Teller Highway; Council, Alaska; Solomon, Alaska;
+       * Council City and Solomon River Railroad; Swanberg Dredge;
+       * Pilgrim Hot Springs; Bristle-thighed curlew; Teller Reindeer
+       * Station; Seward Peninsula; Bering Land Bridge National Preserve;
+       * Alaskan ice cream; Rubus chamaemorus; Iñupiat; Iñupiaq language;
+       * King Island (Alaska); Muskox; The Nome Nugget; Eliot Staples
+       * Bering Sea Ice Golf Classic) ja Wikivoyagen Nome (Alaska) -sivulta
+       * sekä kuvien Commons-kuvauksista (Salmon Lake, Pilgrim Hot
+       * Springsin puut, Safety Soundin mökit) — teksti omaa. Nostojen
+       * aiheita (nimen kirjoitusvirhe, Sitnasuaq ennen kultaa, Alaskan
+       * osto, Beringinsalmi ja Diomedet, pakkasennätys ja lumivallit,
+       * Iditarodin maali, merijää, kultaryntäys, Wyatt Earp, Happy
+       * Jackin mursunhammas, seerumiajo) eikä saapumistekstin
+       * rantavaskausta toisteta. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * tienvarsikyltti Nomen laitamilla kesäkuussa 1998.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Road sign, Nome 01(js).jpg',
+          lyhyt: 'Kyltti Nomen laitamilla neuvoo varautumaan pakkaseen ja kertomaan, minne on menossa.',
+          selite: 'Oranssi ja keltainen tienvarsikyltti Nomen laitamilla '
+            + 'kesäkuussa 1998: matkaa eteenpäin ei suositella, ja jos tietä '
+            + 'on pakko käyttää, pitää varautua kovaan pakkaseen ja lumeen, '
+            + 'ottaa mukaan selviytymisvarusteet ja kertoa jollekulle, minne '
+            + 'on menossa.',
+          lahde: 'Jerzy Strzelecki, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Nomeen ei pääse autolla, sillä kaupunki on Alaskan '
+          + 'maantieverkon ulkopuolella, ja perille tullaan lentäen '
+          + 'Anchoragesta. Kaupungista lähtee silti kolme omaa soratietä '
+          + 'tundralle, ja kesällä niitä pitkin pääsee vuokra-autolla '
+          + 'katsomaan ruostuneita höyryvetureita, myskihärkiä ja kahlaajia, '
+          + 'jotka lentävät tänne pesimään Tyynenmeren saarilta asti. Noin '
+          + 'puolet asukkaista on alkuperäiskansaa, ja iñupiatien '
+          + 'ruokaperinne, kieli ja tanssi näkyvät kaupungin arjessa. '
+          + 'Pöydässä voi olla hillaa ja poroa, ja pizzan voi tilata '
+          + 'lentokoneella kylään asti. Kesä on lyhyt ja viileä, mutta '
+          + 'keskikesällä valoisaa riittää lähes vuorokauden ympäri.',
+        artikkeli: {
+          nimi: 'Matkailijan Nome',
+          teksti: 'Nomeen tullaan lentäen, mutta kesällä kolme soratietä vie tundralle.',
+          nosto: 'Airport Pizza ottaa tilauksia syrjäisistä kylistä, ja '
+            + 'Bering Air kuljettaa pizzat perille vuorolennoillaan '
+            + 'maksutta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentäen perille, soralla eteenpäin',
+              teksti: 'Nomesta ei ole maantietä muualle Alaskaan eikä '
+                + 'rautatietä, joten matkailija saapuu lentäen. Alaska Airlines '
+                + 'lentää kaupunkiin Anchoragesta ja Kotzebuesta, ja Nome '
+                + 'Airport on noin neljän kilometrin päässä keskustan '
+                + 'länsipuolella. Kaupungissa päämajaansa pitävä Bering Air '
+                + 'lentää pienkoneillaan reittiliikennettä lähes kolmeenkymmeneen '
+                + 'Länsi-Alaskan kylään, ja Nome on koko Beringinsalmen seudun '
+                + 'liikenteen solmukohta. Tieyhteyttä Fairbanksin suunnasta on '
+                + 'selvitetty 1950-luvulta asti, mutta vuonna 2010 noin 800 '
+                + 'kilometrin tien hinnaksi arvioitiin 2,3–2,7 miljardia '
+                + 'dollaria, eikä sitä ole rakennettu. Kaupungista lähtee sen '
+                + 'sijaan kolme omaa tietä: Council Road 116 kilometriä itään, '
+                + 'Kougarok Road 137 kilometriä pohjoiseen ja Teller Road 116 '
+                + 'kilometriä luoteeseen Tellerin iñupiat-kylään, joka on '
+                + 'kesäisen tieverkon ainoa alkuperäiskansan kylä. Tiet ovat '
+                + 'sorapintaisia ja ennen kaikkea kesäteitä: Council Road '
+                + 'muuttuu talvella autolla ajokelvottomaksi heti kaupungin '
+                + 'laitojen jälkeen, ja sen päässä Niukluk-joen yli '
+                + 'Counciliin pääsee vain maavaraltaan korkealla autolla, jos '
+                + 'olosuhteet sallivat. Auton voi vuokrata paikallisista vuokraamoista '
+                + 'ja hotellista. Keskusta on niin pieni, että sen kiertää '
+                + 'kesällä helposti jalan.',
+              kuva: [
+                {
+                  tiedosto: 'Nome Airport.jpg',
+                  lyhyt: 'Bering Airin halli toivottaa lentomatkustajat tervetulleiksi Nomeen.',
+                  selite: 'Bering Airin hallin seinässä lukee Welcome to Nome, '
+                    + 'ja sen edessä seisoo yhtiön yksimoottorinen potkurikone, '
+                    + 'jollaisilla lennetään ympäröiviin kyliin. Kuva on '
+                    + 'lokakuulta 2018.',
+                  lahde: 'Office of Don Young / U.S. House of Representatives, Wikimedia Commons (Public domain)',
+                },
+                {
+                  tiedosto: 'Safety Sound Cabin, Nome AK (14347294043).jpg',
+                  lyhyt: 'Hirsimökki seisoo Safety Soundin laguunin rannalla Council Roadin varrella.',
+                  selite: 'Harmaa hirsimökki peltikattoineen Safety Soundin '
+                    + 'rannalla kesäkuun alussa 2014. Laguunin varrella on sekä '
+                    + 'kesämökkejä että ympärivuotisia koteja, ja Council Road '
+                    + 'kulkee aivan sen vieritse.',
+                  lahde: 'Gregory Smith, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Nome Alaska salmon lake.jpg',
+                  lyhyt: 'Salmon Lake Kougarok Roadin varrella on kesäkuun puolivälissä vielä osin jäässä.',
+                  selite: 'Salmon Lake 19. kesäkuuta 2006: järven pinnalla on '
+                    + 'yhä jäätä, rannoilla lumilaikkuja, ja taustalla kohoavat '
+                    + 'Kigluaik-vuoret. Järven rannalla, Kougarok Roadin 40. '
+                    + 'mailin kohdalla, on maksuton leirintäalue.',
+                  lahde: 'ra64, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Hilla, poro ja lentävä pizza',
+              teksti: 'Moni nomelainen elää yhä osin pyyntitaloudesta: '
+                + 'kalastus, pyynti ja marjastus kuuluvat vuoden kiertoon, '
+                + 'vaikka kaupassakin käydään. Iñupiatien juhlaruoka on '
+                + 'akutaq, jota englanniksi kutsutaan eskimojäätelöksi. '
+                + 'Perinteisesti siihen vatkataan hylkeenöljyä tai mursun- tai '
+                + 'karibuntalia, kuivattua kalaa tai lihaa ja tundran marjoja. '
+                + 'Yksi rakkaimmista marjoista on hilla, jota Alaskassa '
+                + 'kutsutaan nimellä salmonberry ja iñupiaqiksi aqpik. '
+                + 'Seward-niemimaa on myös Alaskan porotalouden kehto. Vuonna '
+                + '1892 Siperiasta tuotiin 171 poroa Port Clarencen rannalle '
+                + 'perustetulle Tellerin poroasemalle, ja 1894 Finnmarkin '
+                + 'tuntureilta saapui saamelaispaimenia opettamaan '
+                + 'poronhoitoa iñupiateille. 1930-luvulla poroja oli jo noin '
+                + '600 000, ja vuoden 1937 porolaki rajasi poronomistuksen '
+                + 'alkuperäiskansalle. Nykyiset tokat ovat paljon pienempiä, '
+                + 'ja vuonna 1997 monet niemimaan kesyistä poroista lähtivät läntisen '
+                + 'arktisen karibulauman kesävaellukselle eivätkä palanneet. '
+                + 'Ravintoloita on muutama. Airport Pizza tunnetaan pizzojen '
+                + 'lisäksi hampurilaisista ja ramenista, ja se ottaa tilauksia '
+                + 'myös syrjäisistä kylistä: Bering Air kuljettaa pizzat '
+                + 'vuorolennoillaan perille maksutta.',
+              kuva: {
+                tiedosto: 'Reindeer in truck.jpg',
+                lyhyt: 'Poro seisoo lava-auton lavalla Nomen kaupan edessä lokakuussa 2009.',
+                selite: 'Harmaan Toyotan lavalla seisoo elävä poro Nome Liquor '
+                  + 'Store and Grocery -kaupan edessä lokakuussa 2009, ja '
+                  + 'ohikulkija pysähtyy katsomaan sitä lumisella kadulla.',
+                lahde: 'James Brooks, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Iñupiatien kaupunki',
+              teksti: 'Nomen noin 3 700 asukkaasta noin puolet on '
+                + 'alkuperäiskansaa, enimmäkseen iñupiateja. Kaupungissa toimii '
+                + 'liittovaltion tunnustama heimo Nome Eskimo Community, ja '
+                + 'maata ja yrityksiä hallitsevat alkuperäiskansayhtiöt: '
+                + 'kaupungin oma Sitnasuak Native Corporation sekä Bering '
+                + 'Straits Native Corporation, jonka pääkonttori on Nomessa. '
+                + 'Kaupungissa puhutaan iñupiaqin qawiaraq-murretta, ja kieltä '
+                + 'elvytetään: vuonna 2018 kielenoppijoiden kahden viikon '
+                + 'intensiivijakso Iḷisaqativut pidettiin Nomessa, jonka '
+                + 'iñupiaqinkielinen nimi on Sitŋasuaq. Nomessa asuu myös '
+                + 'King Islandin eli Ugiuvakin väkeä. Pieni jyrkkä saari '
+                + 'Beringinmerellä oli heidän talvikotinsa, jossa pimeät '
+                + 'talvipäivät vietettiin tanssien miesten yhteistalossa, ja '
+                + 'joulukuun nimi on heidän kielessään rummutuksen aika. Kun '
+                + 'viranomaiset sulkivat saaren koulun 1959, perheiden oli '
+                + 'muutettava lastensa perässä mantereelle, ja vuoteen 1966 '
+                + 'mennessä koko yhteisö oli asettunut sinne pysyvästi. King '
+                + 'Islandin väki on silti säilyttänyt oman identiteettinsä, ja '
+                + 'osa käy saarella yhä pyytämässä mursuja ja hylkeitä. '
+                + 'Seudun historiaan pääsee Carrie M. McLain Memorial '
+                + 'Museumissa ja Katirvik-kulttuurikeskuksessa, jotka toimivat '
+                + 'samassa Richard Foster Buildingissa 7th Streetillä. Front '
+                + 'Streetin Sitnasuak-talossa on Bering Land Bridge '
+                + '-suojelualueen opastuskeskus, ja sekä museoon että '
+                + 'opastuskeskukseen pääsee maksutta.',
+              kuva: {
+                tiedosto: 'Visitor Center in Nome- BELA edit (15651017164).jpg',
+                lyhyt: 'Front Streetin Sitnasuak-talossa toimii Bering Land Bridge -suojelualueen opastuskeskus.',
+                selite: 'Vaaleankeltaisen talon seinässä lukee Sitnasuak Native '
+                  + 'Corporation, parvekkeen kaiteessa on mammuttikuvioinen '
+                  + 'Bering Land Bridge National Preserven kyltti, ja '
+                  + 'julkisivulla seisoo valkoinen jääkarhupatsas. Kuva on '
+                  + 'kesäkuulta 2012.',
+                lahde: 'Bering Land Bridge National Preserve, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Council Road ja juna ei minnekään',
+              teksti: 'Nomen suosituin päiväretki on Council Road, joka alkaa '
+                + 'Front Streetin itäpäästä. Heti ensimmäisellä maililla East '
+                + 'End Parkin lammessa seisoo Swanberg Dredge, San Franciscossa '
+                + 'rakennettu kultaruoppaaja, jolla kaivettiin vain kesä 1946 '
+                + 'ennen kuin pankki otti sen haltuunsa, ja lammet ovat '
+                + 'muuttolintujen tärkeä levähdyspaikka. Cape Nomen niemen '
+                + 'jälkeen tie kulkee kapeaa hiekkasärkkää Safety Soundin '
+                + 'laguunin ja meren välissä, ja laguunilla näkee kesällä '
+                + 'muun muassa haahkoja. Noin 34 kilometrin päässä kaupungista '
+                + 'on vain kesäisin auki oleva Safety Roadhouse, jonka seinille '
+                + 'vieraat jättävät nimikirjoituksin varustettuja '
+                + 'dollarinseteleitä. Mailin 31 kohdalla, ennen Solomon-joen '
+                + 'siltaa, tundralla ruostuu kolme höyryveturia, kaksi '
+                + 'avovaunua ja höyrykattila. Ne kuuluivat Council City and '
+                + 'Solomon River Railroadille, joka liikennöi vain vuodet '
+                + '1903–1907, ja nähtävyyttä kutsutaan nimellä Last Train to '
+                + 'Nowhere. Solomonin kaivoskylän ja radan hävitti myrsky '
+                + '1913. Lintujen vuoksi kannattaa ajaa myös Kougarok Roadia: '
+                + 'Seward-niemimaa ja Jukon-joen alajuoksu ovat alaskankuovin '
+                + 'ainoat pesimäalueet. Tämä Tyynenmeren saarilla talveava '
+                + 'kahlaaja lentää syksyllä Alaskasta Laysanin saarelle 4 000 '
+                + 'kilometriä ilman välilaskua, ja sen pesimäpaikat löydettiin '
+                + 'vasta 1948. Kougarok Roadin 65. mailin kohdalta noin 13 '
+                + 'kilometriä etelään ovat Pilgrim Hot Springsin lähteet, '
+                + 'iñupiaqiksi Unaatuq eli lämpimät vedet, ja niiden '
+                + 'ympärillä kasvavat niemimaan suurimmat puut.',
+              kuva: {
+                tiedosto: 'Arct0936.jpg',
+                lyhyt: 'Vuosina 1903–1907 kulkeneen radan höyryveturit ruostuvat tundralla Solomonin luona.',
+                selite: 'Ruostuneita höyryvetureita ja lahonneita avovaunuja '
+                  + 'seisoo vihreässä heinikossa Solomonin luona Council Roadin '
+                  + 'varrella elokuussa 2013, ja taivaalla kasautuu '
+                  + 'kumpupilviä.',
+                lahde: 'John Cloud / NOAA, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Myskihärät ja muut käytännön asiat',
+              teksti: 'Nomen matkailuneuvonta on Front Streetillä numerossa '
+                + '301. Kesä on lyhyt: viimeinen pakkasyö osuu keskimäärin '
+                + 'kesäkuun 9. päivään ja ensimmäinen jo syyskuun 2. päivään, '
+                + 'joten hallaton kausi kestää vain noin 78 päivää, ja '
+                + 'sateisinta on juuri kesäkuukausina. '
+                + 'Beringinmeren vesi pysyy kesälläkin 2–10 asteessa. Nome on '
+                + '64,5 leveysasteella hieman napapiirin eteläpuolella, joten '
+                + 'aurinko laskee keskikesälläkin, mutta vain hetkeksi. '
+                + 'Tundralla tärkein neuvo koskee myskihärkiä. Alaskan '
+                + 'alkuperäinen kanta hävisi 1900-luvun alkuun mennessä, mutta '
+                + 'laji on palautettu Seward-niemimaalle, ja kaupungin '
+                + 'laitamilla niitä näkee usein laiduntamassa. Rauhalliselta '
+                + 'näyttävä eläin voi olla vaarallinen: joulukuussa 2022 '
+                + 'myskihärkä tappoi Nomen lähellä miehen, joka yritti '
+                + 'hätistellä laumaa pois kotinsa koiratarhan luota. '
+                + 'Etäisyyttä kannattaa siis pitää. Paikalliset uutiset saa '
+                + 'Nome Nuggetista, joka ilmestyy torstaisin ja on Alaskan '
+                + 'vanhin yhtäjaksoisesti ilmestynyt sanomalehti. '
+                + 'Maaliskuussa tuleva voi katsoa Bering Sea Ice Golf '
+                + 'Classicia, jossa jäätyneen Norton Soundin päällä pelataan '
+                + 'kuuden reiän golfia oransseilla ja vihreillä palloilla.',
+              kuva: {
+                tiedosto: 'Musk ox near Nome, AK (8029730150).jpg',
+                lyhyt: 'Myskihärkä seisoo heinikossa Nomen lähellä, taustalla kivikkoranta ja meri.',
+                selite: 'Tuuhea myskihärkä katsoo kameraan heinikon takaa Nomen '
+                  + 'lähellä heinäkuussa 2012, ja sen takana on kivikkoinen '
+                  + 'ranta ja harmaa meri.',
+                lahde: 'Neal Herbert / NPS, Wikimedia Commons (Public domain)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -119440,6 +119687,219 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Amazonindelfiini',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Porto Velho, Madeira River, Governador Jorge Teixeira
+       * de Oliveira International Airport, BR-364, BR-319, Tambaqui,
+       * Tacacá, Acmella oleracea, Santo Antônio Dam, Lago do Cuniã
+       * Extractive Reserve), Wikivoyagesta (Porto Velho, Manaus) sekä
+       * portugalin Wikipediasta (Porto Velho: ilmasto, kalat, satama ja
+       * juhlat; Tambaqui: Rondônian kasvatustilasto 2021–2022; Turismo em
+       * Rondônia: Três Caixas d'Água ja Arraial Flor do Maracujá; Reserva
+       * Extrativista do Lago do Cuniã) — teksti omaa. Nostojen aiheita
+       * (Madeira-joki, katedraali ja vanha keskusta, auringonlasku
+       * rantaraitilla, viljasatama, kaupungin kasvu, amazonindelfiini)
+       * eikä Perkeleen radan kategorian rautatietä ja rautatiemuseota
+       * toisteta. Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja kuvat katsottu silmin; Santo Antônion vanhan
+       * rajan kyltti luettu MTurin samalla käynnillä ottamasta kuvasta.
+       * Pystykuva: Três Caixas d'Água alhaalta kuvattuna.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: "Caixas d'água da ferrovia Madeira-Mamoré em Porto Velho - RO.jpg",
+          lyhyt: 'Kolme vanhaa vesitornia ovat Porto Velhon tunnetuin maamerkki.',
+          selite: 'Três Caixas d\'Água eli Kolme Mariaa seisovat ristikkojaloillaan '
+            + 'keskustan aukiolla. Säiliöt pystytettiin 1910 ja 1912, ja ne '
+            + 'jakoivat kaupungille vettä painovoimalla vuoteen 1957 asti.',
+          lahde: 'Sergio Del Giorno, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Porto Velho on nuori virkamies- ja kauppakaupunki Brasilian '
+          + 'länsilaidalla, eikä sillä ole siirtomaa-ajan vanhaa kaupunkia eikä '
+          + 'matkailutoimistoa. Uteliaalle se antaa silti paljon. Perille '
+          + 'pääsee lentäen, pitkän matkan bussilla tai riippumatossa '
+          + 'jokilaivan kannella, ja kaupungin postikorttikuva on kolme '
+          + 'ristikkojalkojen varaan nostettua vesitornia. Keittiö elää '
+          + 'Madeiran kaloista ja maniokista, kesäkuun juhlien aikaan '
+          + 'kaupungissa tanssitaan Amazonian suurimmassa festa juninassa, ja '
+          + 'alajuoksun suojelualueella kalastajat melovat yhä itse tehdyillä '
+          + 'kanooteilla. Kuivin aika on kesä–elokuussa, mutta sen lopulla '
+          + 'taivaan voi peittää kulojen savu.',
+        artikkeli: {
+          nimi: 'Matkailijan Porto Velho',
+          teksti: 'Porto Velhoon voi saapua riippumatossa jokilaivan kannella.',
+          nosto: 'Kun tacacán jambunlehdet osuvat kieleen, suu kihelmöi ja '
+            + 'puutuu kuin hammaslääkärin tuolissa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille lentäen, bussilla tai jokea pitkin',
+              teksti: 'Nopein reitti on lento. Governador Jorge Teixeira de '
+                + 'Oliveira -lentoasema on noin seitsemän kilometrin päässä '
+                + 'keskustasta, ja sieltä lennetään suoraan Brasilian suuriin '
+                + 'kaupunkeihin. Kenttä on nimetty Rondônian ensimmäisen '
+                + 'kuvernöörin mukaan, ja kansainvälisen aseman se sai vuonna '
+                + '2002. Maata pitkin kaupunkiin tuo BR-364, 1960-luvulla '
+                + 'avattu ja 1980-luvulla päällystetty valtatie, joka yhdistää '
+                + 'Rondônian São Pauloon ja Acreen: Rio Brancosta ajetaan 544 '
+                + 'kilometriä, Cuiabásta lähes 1 500. Linja-autoasemalta '
+                + 'lähtee vuoroja useimpiin suuriin kaupunkeihin, mutta matkat '
+                + 'ovat pitkiä: Cuiabáan noin vuorokausi ja São Pauloon noin '
+                + 'kaksi ja puoli. Madeiran ylittää nykyään silta, jonka takaa '
+                + 'alkaa pohjoiseen Manausiin vievä BR-319. Tie avattiin '
+                + '1970-luvulla mutta rapistui pian kulkukelvottomaksi, ja sitä '
+                + 'ajetaan yhä lähinnä kuivalla kaudella. Tunnelmallisin '
+                + 'tulotapa on joki: Manausin ja Porto Velhon väliä kulkee '
+                + 'matkustajalaivoja pari kolme kertaa viikossa, ja halvimmassa '
+                + 'luokassa nukutaan kannella omassa riippumatossa.',
+              kuva: [
+                {
+                  tiedosto: 'Ponte Rio Madeira.jpg',
+                  lyhyt: 'Silta vie Madeiran yli kohti Manausiin johtavaa BR-319-tietä.',
+                  selite: 'Ilmakuvassa silta kaartuu ruskean Madeiran yli, '
+                    + 'taustalla on Porto Velhon keskusta ja joella liikkuu '
+                    + 'proomuja. Ennen siltaa autot kuljetettiin joen yli '
+                    + 'lautoilla.',
+                  lahde: 'Silva Júnior / MTur, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Porto Velho - Bus station in Porto Velho (4088529479).jpg',
+                  lyhyt: 'Linja-autoasemalta São Pauloon on matkaa noin kaksi ja puoli vuorokautta.',
+                  selite: 'Porto Velhon linja-autoasema lokakuussa 2009. '
+                    + 'Katoksen alla on muun muassa alueen suurimman '
+                    + 'bussiyhtiön Eucaturin lipunmyynti.',
+                  lahde: 'Ben Sutherland, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Centro, Porto Velho - RO, Brazil - panoramio.jpg',
+                  lyhyt: 'Monikerroksiset jokilaivat odottavat Madeiran rannassa illan hämärässä.',
+                  selite: 'Matkustajalaivat ovat kiinnittyneet Porto Velhon '
+                    + 'keskustan rantaan. Niillä kuljetaan jokivarren kyliin ja '
+                    + 'Manausiin asti, ja halvimmassa luokassa matkustaja '
+                    + 'ripustaa oman riippumattonsa kannelle.',
+                  lahde: 'clsbezerra, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Tambaqui, tacacá ja sunnuntain tori',
+              teksti: 'Madeiran vesistössä on arvioitu elävän yli 900 '
+                + 'kalalajia, ja se näkyy lautasella. Tutuimpia ovat '
+                + 'tambaqui, piraijojen suurikokoinen sukulainen, jonka '
+                + 'poskihampaita muistuttavat hampaat murskaavat tulvametsään '
+                + 'pudonneita hedelmiä ja siemeniä, sekä petokala tucunaré, '
+                + 'monni surubim ja pienempi jatuarana. Tambaquita myös '
+                + 'kasvatetaan, ja Rondônia on viime vuosina ollut sen '
+                + 'suurin tuottaja koko Brasiliassa. Kalan rinnalla kulkee '
+                + 'maniokki. Sen puristemehusta keitetty kellertävä tucupi on '
+                + 'tacacán pohja: kuuma liemi kaadetaan kalebassikuppiin '
+                + 'tapiokatärkkelyksen, kuivattujen katkarapujen ja jambun '
+                + 'lehtien päälle. Jambu on kasvi, joka kihelmöi ja puuduttaa '
+                + 'kieltä, ja ensikertalaisen suu voi olla tunnottomana '
+                + 'pitkäänkin. Cai n\'Águan viikkotorilla myydään '
+                + 'sunnuntaisin jo aamuviideltä açaíta, tacacáta, vatapáta ja '
+                + 'tuoretta sokeriruokomehua. Açaí syödään täällä kulhollisena '
+                + 'guaranan, banaanin ja granolan kanssa.',
+              kuva: {
+                tiedosto: 'Henrique Fotografo Feira Tradicional PortoVelho RO (40222011644).jpg',
+                lyhyt: 'Torin kalapöydällä on hopeakylkisiä ja vihreäjuovaisia jokikaloja.',
+                selite: 'Tuoreita jokikaloja myynnissä Porto Velhon torilla '
+                  + 'maaliskuussa 2018. Madeiran vesistö on yksi maailman '
+                  + 'lajirikkaimmista makean veden alueista.',
+                lahde: 'Henrique Fotógrafo / MTur, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Vesitornit, käsityöt ja kesäkuun juhlat',
+              teksti: 'Keskustassa, omalla aukiollaan, seisoo Porto Velhon '
+                + 'tunnus: kolme ristikkojalkojen varaan nostettua '
+                + 'vesisäiliötä, joita kutsutaan myös Kolmeksi Mariaksi. '
+                + 'Ensimmäinen pystytettiin 1910 ja kaksi muuta 1912. Ne '
+                + 'valmisti chicagolainen Chicago Bridge & Iron Works, kuhunkin '
+                + 'mahtuu 200 000 litraa, ja kaupungin vesi tuli niistä '
+                + 'painovoimalla vuoteen 1957 asti. Aukion kupeessa on Casa da '
+                + 'Cultura Ivan Marrocos, jossa on vaihtuvia paikallisten '
+                + 'taiteilijoiden näyttelyitä, ja Casa do Artesão '
+                + '-käsityötalossa myydään alkuperäiskansojen ja paikallisten '
+                + 'tekijöiden töitä savesta, köynnöksistä, bambusta ja kumista. '
+                + 'Porto Velho on siirtolaisten kaupunki, ja sen juhlissa '
+                + 'kuuluu etenkin Koillis-Brasilian perintö. Kesäkuun juhlien '
+                + 'aikaan pidettävä Arraial Flor do Maracujá on Amazonian '
+                + 'suurin festa junina, jossa esiintyvät kansantanssiryhmät ja '
+                + 'boi-bumbá-härkänäytelmät. Karnevaalina kaduille lähtee '
+                + 'vuonna 1981 perustettu Banda do Vai Quem Quer, jonka perässä '
+                + 'kulkee yli 100 000 ihmistä.',
+              kuva: {
+                tiedosto: 'Henrique Fotografo Casa do Artesão e artesanto indígena PortoVelho RO (26057811257).jpg',
+                lyhyt: 'Casa do Artesão myy helmistä pujoteltuja kaimaaneja ja liskoja.',
+                selite: 'Helmistä pujoteltuja eläinhahmoja myynnissä Porto '
+                  + 'Velhon Casa do Artesão -käsityötalossa. Talo tukee '
+                  + 'alkuperäiskansojen ja paikallisten käsityöläisten työtä.',
+                lahde: 'Henrique Fotógrafo / MTur, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Kappeli koskella ja kalastajien järvi',
+              teksti: 'Lyhin retki vie seitsemän kilometriä ylävirtaan Santo '
+                + 'Antônioon, jossa kosken partaalla oli kylä jo ennen Porto '
+                + 'Velhoa. Santo Antônio do Madeira kuului silloin Mato '
+                + 'Grosson maakuntaan, ja kun kumibuumi hiipui, sen raitiotie '
+                + 'ja viikkolehti jäivät historiaan. Törmällä seisoo yhä pieni '
+                + 'valkoinen Pyhän Antonius Padovalaisen kappeli, ja lähellä '
+                + 'kyltti ja muistomerkki kertovat Amazonasin ja Mato Grosson '
+                + 'vanhasta rajasta. Koskea ei enää ole: vuonna 2012 '
+                + 'käynnistyneen Santo Antônion vesivoimalan allas peitti sen. '
+                + 'Toinen suunta on alavirta. Madeiran länsirannalla on vuonna '
+                + '1999 perustettu Lago do Cuniãn luonnonvarareservi, jossa '
+                + 'noin 400 asukasta elää kalastuksesta ja keräilystä. '
+                + 'Reservin nimikkojärvi on noin 18 000 hehtaarin kokoinen. '
+                + 'Alueella elää jalohaikaroita, jabirukurkia ja '
+                + 'mustakaimaaneja, ja pirarucua saa pyytää perinteisin '
+                + 'menetelmin vain touko–lokakuussa. Kanoottien rakentamisen '
+                + 'taito on opittu alkuperäisasukkailta. Kohteisiin kannattaa '
+                + 'lähteä paikallisen oppaan kanssa, sillä opasteita on vähän.',
+              kuva: {
+                tiedosto: 'Aurora amazônica no Lago do Cuniã.jpg',
+                lyhyt: 'Kalastaja meloo aamu-usvassa Lago do Cuniãn luonnonvarareservissä.',
+                selite: 'Auringonnousu Lago do Cuniãlla elokuussa 2013. '
+                  + 'Reservin asukkaat lähtevät aamuisin kalaan, ja kalastus on '
+                  + 'heidän tärkein elinkeinonsa.',
+                lahde: 'RodrigoErse, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sää, savu ja arjen varotoimet',
+              teksti: 'Porto Velho on Brasilian kuumimpia pääkaupunkeja: '
+                + 'keskilämpö pysyy ympäri vuoden 25 ja 26 asteen tienoilla. '
+                + 'Marras–huhtikuussa sataa keskimäärin parisataa millimetriä '
+                + 'kuussa, ja kuivin aika osuu kesä–elokuuhun. Kuivalla '
+                + 'kaudella on omat yllätyksensä. Etelästä saapuva kylmä '
+                + 'ilmamassa, friagem, voi pudottaa lämpötilan joinakin '
+                + 'päivinä alle 15 asteen, ja elo–syyskuussa taas mitataan '
+                + 'vuoden kovimmat helteet, kun ilman suhteellinen kosteus voi '
+                + 'laskea alle 30 prosentin. Samaan aikaan kulot voivat peittää '
+                + 'kaupungin savuun. Rondônia elää Amazonin aikaa, tunnin '
+                + 'Brasílian jäljessä. Hanavettä ei kannata juoda: alle puolet '
+                + 'asukkaista on kunnallisen vesijohdon piirissä, ja kaupunki '
+                + 'on vuosia jäänyt viimeiseksi Brasilian sadan suurimman '
+                + 'kaupungin vesihuoltovertailussa. Porto Velho kuuluu myös '
+                + 'Brasilian väkivaltaisimpiin pääkaupunkeihin, joten '
+                + 'arvoesineet jätetään majapaikkaan ja satamaan mennään vähin '
+                + 'tavaroin. Lähiseutua on helpointa tutkia vuokra-autolla, ja '
+                + 'auto kannattaa ottaa tunnetulta vuokraamolta, ei '
+                + 'yksityiseltä.',
+              kuva: {
+                tiedosto: 'Cidade defumada (4932168845).jpg',
+                lyhyt: 'Kulojen savu peitti Porto Velhon keskustan elokuussa 2010.',
+                selite: 'Näkymä Porto Velhon keskustaan elokuussa 2010, kun '
+                  + 'ympäristön kulot olivat sumentaneet taivaan. Savua voi '
+                  + 'esiintyä kuivan kauden lopulla, elo–syyskuussa.',
+                lahde: 'Luiz Alexandre, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'perkeleenrata',
@@ -120937,6 +121397,238 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Red kangaroo',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Mount Isa, The Inlander (Queensland Rail), Mount Isa
+       * Airport, Barkly Highway, Lake Moondarra, Mary Kathleen, Boodjamulla
+       * National Park) ja Wikivoyagesta (Mount Isa, Boodjamulla National
+       * Park) — teksti omaa. Nostojen aiheita (joen nimi, kalkatungut ja
+       * ruohomaluri, malmio ja piiput, Milesin löytö, Riversleighin
+       * fossiilit, punajättikenguru, rodeon synty 1959 ja koko, kamelikuskit,
+       * Hard Times Mine, maanalainen sairaala, Landsborough) ei toisteta.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja
+       * kuvat katsottu silmin. Pystykuva: kuparisulaton piippu
+       * näköalapaikalta. Härkäveistoksen tarkkaa paikkaa Commons ei kerro,
+       * joten selite sanoo vain "Mount Isassa".
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Mount Isa Mine Stack.JPG',
+          lyhyt: 'Kuparisulaton punavalkoinen piippu kohoaa Mount Isan keskustan ja punaisten kukkuloiden yllä.',
+          selite: 'Näköalapaikalta katsottuna Mount Isan keskusta '
+            + 'levittäytyy kaivosalueen juurelle, ja kuparisulaton '
+            + 'punavalkoinen piippu puskee savua punaisten kukkuloiden '
+            + 'edessä. Kaupunki ja kaivos ovat niin kiinni toisissaan, ettei '
+            + 'kumpaakaan näe ilman toista.',
+          lahde: 'Scientificusrex, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Mount Isa on Luoteis-Queenslandin ainoa suuri kaupunki, '
+          + 'ja paikalliset kutsuvat sitä lyhyesti nimellä "The Isa". '
+          + 'Rannikolta tänne tullaan yöjunalla, lentäen tai ajaen Barkly '
+          + 'Highwayta, joka on Queenslandin ja Pohjoisterritorion ainoa '
+          + 'päällystetty maantieyhteys. Kaupungissa syödään seudun '
+          + 'naudanlihaa ja barramundia, ja elokuun rodeoviikonloppuna '
+          + 'kaduilla kulkee karnevaalikulkue. Päiväretkellä pääsee '
+          + 'uimaan ja kalastamaan tekojärvelle tai katsomaan purettua '
+          + 'uraanikaivoskaupunkia, ja kauempana luoteessa odottaa Lawn '
+          + 'Hillin vihreä rotko. Paras aika on kuiva kausi huhtikuusta '
+          + 'marraskuuhun, jolloin päivät ovat aurinkoisia ja yöt viileitä.',
+        artikkeli: {
+          nimi: 'Matkailijan Mount Isa',
+          teksti: 'Mount Isaan tullaan yöjunalla, pienkoneella tai road '
+            + 'trainien rinnalla aavikkotietä pitkin.',
+          nosto: 'Lake Moondarran hiekkaranta on tehty kaivosyhtiön '
+            + 'kuorma-autoilla, jotka kippasivat hiekan tekojärven rantaan.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Yöjunalla, koneella tai maantietä',
+              teksti: 'Townsvillestä Mount Isaan kulkee kahdesti viikossa '
+                + 'matkustajajuna The Inlander. Se lähtee rannikolta '
+                + 'keskiviikkoisin ja lauantaisin puolenpäivän jälkeen ja on '
+                + 'perillä seuraavana aamuna: 977 kilometriin kuluu noin 21 '
+                + 'tuntia. Juna aloitti liikenteen helmikuussa 1953, mutta '
+                + 'makuu- ja ravintolavaunut poistettiin vuoden 2014 lopussa, '
+                + 'joten yö istutaan, ja ruoka-aikoina matkustajille jaetaan '
+                + 'eväspakkaus. Nopeammin pääsee lentäen: kaupungin '
+                + 'pohjoispuolella noin kuuden kilometrin päässä olevalta '
+                + 'kentältä lennetään päivittäin Brisbaneen, Cairnsiin ja '
+                + 'Townsvilleen, ja samalla kentällä on lentävien lääkärien '
+                + 'Royal Flying Doctor Servicen tukikohta. Autoilija saapuu '
+                + 'Barkly Highwayta, jolla kulkevat myös road trainit eli '
+                + 'useaa perävaunua vetävät rekat. Idässä Townsvilleen on '
+                + 'noin 900 ja lännessä Tennant Creekiin 660 kilometriä. '
+                + 'Perillä kannattaa muistaa, että Leichhardtin joki jakaa '
+                + 'kaupungin kahtia: länsirannalla, mineside-puolella, ovat '
+                + 'kaivos, voimala, lentokenttä ja rautatieasema, itärannalla, '
+                + 'townside-puolella, keskusta ja suurin osa asunnoista.',
+              kuva: [
+                {
+                  tiedosto: 'The Inlander (Queensland Rail) train at Townsville station, preparing to depart for Mount Isa.jpg',
+                  lyhyt: 'The Inlander odottaa Townsvillen asemalla lähtöä yön yli kestävälle matkalle Mount Isaan.',
+                  selite: 'Keltainen dieselveturi ja The Inlander -junan '
+                    + 'vaunut odottavat Townsvillen aseman katoksen alla '
+                    + 'kesäkuussa 2025. Lauantaina iltapäivällä lähtenyt juna '
+                    + 'oli perillä Mount Isassa sunnuntaiaamuna.',
+                  lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Mount Isa Airport, Queensland, 2023, 01.jpg',
+                  lyhyt: 'QantasLinkin potkuriturbiinikone rullaa Mount Isan kentällä kivikkoisten kukkuloiden edessä.',
+                  selite: 'Qantasin punaisen kengurupyrstön tunnusta kantava '
+                    + 'Dash 8 -potkuriturbiinikone rullaa Mount Isan '
+                    + 'lentokentällä kesäkuussa 2023; kiitotien takana '
+                    + 'kohoavat kuivat, kivikkoiset kukkulat.',
+                  lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Barkly Highway at the outskirts of Mount Isa, Queensland, 2023.jpg',
+                  lyhyt: 'Barkly Highwayn viitta Mount Isan laidalla: Darwiniin on vielä 1 606 kilometriä.',
+                  selite: 'Mount Isan laitamilla Barkly Highwayn viitta '
+                    + 'kertoo, että Pohjoisterritorion rajan tuntumassa '
+                    + 'olevaan Camoowealiin on 185 kilometriä, Alice '
+                    + 'Springsiin 1 155 ja Darwiniin 1 606 kilometriä.',
+                  lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Pihviä, barramundia ja etiopialaista',
+              teksti: 'Mount Isa on kokoonsa nähden yllättävän monipuolinen '
+                + 'ruokakaupunki: keskustassa ja pääteiden varsilla on '
+                + 'intialaisia, italialaisia, kiinalaisia, saksalaisia ja '
+                + 'ranskalaisia ravintoloita. Seudun omat raaka-aineet ovat '
+                + 'ympäröivien karjatilojen naudanliha ja barramundi, '
+                + 'isokokoinen petokala, jota istutetaan myös kaupungin '
+                + 'tekojärveen. Keskustan Isa Hotelin grilliravintola on '
+                + 'rakentanut listansa juuri näiden kahden ympärille, ja '
+                + 'perjantai- ja lauantai-illoiksi pöytä kannattaa varata. '
+                + 'Erikoisuus on Marian Streetin Abyssinia Cafe, joka on '
+                + 'tarjonnut etiopialaista ruokaa jo vuosikymmenten ajan ja '
+                + 'päässyt esittelemään keittiötään myös SBS-kanavalla. '
+                + 'Kaivoskaupungin iltaelämä pyörii klubien ympärillä: Irish '
+                + 'Club, Buffs Club ja monet pubit tarjoavat aterioita ja '
+                + 'happy hour -tarjouksia, ja monella klubilla on oma '
+                + 'maksuton kuljetusbussi, joka ajaa seitsemänä päivänä '
+                + 'viikossa pikkutunneille asti. Syyskuun alussa kaupungissa '
+                + 'järjestetään lisäksi monikulttuurinen festivaali.',
+              kuva: {
+                tiedosto: 'Barramundi at Giuseppe\'s Cantina, Mount Isa, 2023.jpg',
+                lyhyt: 'Rapeaksi paistettu barramundifilee oliivien ja kuivattujen tomaattien kera.',
+                selite: 'Mount Isan Giuseppe\'s Cantinassa kesäkuussa 2023 '
+                  + 'tarjoiltu barramundifilee on paistettu nahka rapeaksi, ja '
+                  + 'sen päällä on vihreitä oliiveja ja kuivattuja tomaatteja; '
+                  + 'vieressä on kesäkurpitsanauhoja pinjansiementen kanssa ja '
+                  + 'alla tummanpunaista sosetta.',
+                lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Rodeoviikonloppu ja syrjäisin orkesteri',
+              teksti: 'Elokuun rodeo on Mount Isan vuoden kohokohta, mutta '
+                + 'viikonloppu on paljon muutakin kuin kilpailuareena. Samana '
+                + 'viikonloppuna kaupungin kaduilla kulkee Mardi Gras '
+                + '-karnevaalikulkue, ja ohjelmaan kuuluu katujuhlia, '
+                + 'konsertteja, markkinakojuja ja perheohjelmaa. '
+                + 'Rodeokuningattaren valintakilpailu kerää rahaa '
+                + 'hyväntekeväisyyteen, ja voittaja kruunataan '
+                + 'rodeotanssiaisissa. Kilpailut käydään nykyään vuonna 2007 '
+                + 'avatussa Buchanan Parkissa, johon mahtuu 6 000 katsojaa, '
+                + 'ja lajeja on villihevosratsastuksesta joukkuesuopungintiin '
+                + 'ja naisten tynnyriratsastukseen. Rohkeimmat voivat '
+                + 'osallistua rodeokouluun, jossa opetellaan '
+                + 'sonniratsastusta. Vuonna 2009 rodeo nimettiin yhdeksi '
+                + 'Queenslandin 150-vuotisjuhlan ikoneista. Muina aikoina '
+                + 'kulttuurista huolehtii esimerkiksi teatteriseura MITS, joka '
+                + 'esittää näytelmiä ja musikaaleja muutaman kuukauden '
+                + 'välein. Heinäkuussa 2015 kaupunki sai oman '
+                + 'sinfoniaorkesterin, jota kutsuttiin maailman '
+                + 'syrjäisimmäksi: avajaisissa esiintyi jazzmuusikko James '
+                + 'Morrison, ja tilaisuutta varten sävelletty Matthew Deweyn '
+                + 'Symphony of the Inland Sea sai kantaesityksensä.',
+              kuva: {
+                tiedosto: 'Sculpture in Mount Isa, Queensland, 2023, 01.jpg',
+                lyhyt: 'Ruostuneista teräslevyistä koottu härkä laskee päänsä puskuasentoon.',
+                selite: 'Kerroksittain leikatuista, ruostuneista '
+                  + 'teräslevyistä koottu härkäveistos seisoo rakennuksen '
+                  + 'edustalla Mount Isassa pää alas laskettuna ja sarvet '
+                  + 'eteenpäin, kuin valmiina rodeoareenalle.',
+                lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Järvi, aavekaupunki ja vihreä rotko',
+              teksti: 'Lähin retkikohde on Lake Moondarra vajaan '
+                + 'parinkymmenen kilometrin päässä pohjoisessa. Leichhardtin '
+                + 'joen pato valmistui vuonna 1958 kaupungin ja kaivoksen '
+                + 'vesilähteeksi, ja järvi sai nimensä 1962 paikallisen '
+                + 'asukkaan voittaman nimikilpailun jälkeen: alkuperäiskielen '
+                + 'sana moondarra tarkoittaa runsasta sadetta ja ukkosta. '
+                + 'Rannalla on piknikpaikkoja, laitureita ja '
+                + 'vesihiihtohyppyri, ja lintuharrastajat, purjehtijat ja '
+                + 'kalastajat viihtyvät järvellä. Siihen istutetaan vuosittain '
+                + 'noin 10 000 barramundin ja sooty grunter -kalan poikasta, '
+                + 'ja joka vuosi pidettävä kalastuskilpailu on Queenslandin '
+                + 'suurin makean veden kalastustapahtuma. Idässä, Mount Isan '
+                + 'ja Cloncurryn välillä Selwyn-vuoristossa, on Mary Kathleen, '
+                + 'uraanikaivoksen ympärille 1950-luvulla rakennettu '
+                + 'mallikaupunki, jossa asui parhaimmillaan noin 1 200 '
+                + 'ihmistä. Kaivos suljettiin 1982 ja kaupunki purettiin, ja '
+                + 'nyt paikalla ovat jäljellä vain kadut ja betonilaatat; '
+                + 'Barkly Highwaylta sinne pääsee yöpymään leiriin. Kauimpana, '
+                + 'noin 340 kilometriä luoteeseen, on Boodjamullan '
+                + 'kansallispuisto, jonka Lawn Hillin rotkossa melotaan '
+                + 'vihreän veden ja punaisten jyrkänteiden välissä. Puisto '
+                + 'suljettiin maaliskuun 2023 tulvien jälkeen ja avautuu '
+                + 'vaiheittain heinäkuusta 2025 alkaen, ja sinne johtavat '
+                + 'päällystämättömät tiet voivat olla sateen jälkeen '
+                + 'kulkukelvottomia.',
+              kuva: {
+                tiedosto: 'Lawn Hill Gorge.JPG',
+                lyhyt: 'Lawn Hillin rotkon tyyni vesi heijastaa punaiset hiekkakivijyrkänteet.',
+                selite: 'Boodjamullan kansallispuiston Lawn Hillin rotkossa '
+                  + 'ympäri vuoden virtaava puro on uurtanut tiensä '
+                  + 'hiekkakiviylängön läpi, ja vehreiden rantojen takana '
+                  + 'kohoavat punaiset jyrkänteet heijastuvat tyyneen veteen.',
+                lahde: 'DavidB601, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kuivan kauden kaupunki',
+              teksti: 'Mount Isan ilmasto on kuuma ja puolikuiva. Sadekausi '
+                + 'osuu joulu–maaliskuuhun, ja silloin helle ja kosteus '
+                + 'voivat tuntua yli 40 asteelta. Kuiva kausi huhtikuusta '
+                + 'marraskuuhun on matkailijalle mukavin: ilma on kuivaa ja '
+                + 'yöt viileitä, ja heinäkuussa alin lämpötila on keskimäärin '
+                + 'vajaat yhdeksän astetta. Mittaushistoriassa lämpötila on '
+                + 'vaihdellut 2,9 pakkasasteesta 45,9 helleasteeseen. '
+                + 'Sadekaudella tiet voivat tulvia yllättäen: vedenpeittämää '
+                + 'tieosuutta ei pidä koskaan ylittää, vaikka varoituskylttejä '
+                + 'tai puomeja ei olisi, ja Barkly Highwayn varren kyltit '
+                + 'kertovat, mitkä tiet ovat tulva-aikaan ajettavissa. '
+                + 'Tieoloista paikalliset tietävät usein parhaiten. '
+                + 'Kaupungissa liikutaan omalla tai vuokra-autolla, taksilla '
+                + 'tai klubien kuljetusbusseilla, ja lauantaiaamuisin kello '
+                + 'seitsemän Tharrapatha Waylta lähtee maksuton viiden '
+                + 'kilometrin parkrun-juoksu, johon osallistuu myös '
+                + 'matkailijoita. Kannattaa myös muistaa, että kaupungin '
+                + 'rajat ovat kaukana: Mount Isan kunta on yli 43 000 '
+                + 'neliökilometrin kokoinen, Australian toiseksi suurin, ja '
+                + 'siihen kuuluu Camoowealin kylä lähellä Pohjoisterritorion '
+                + 'rajaa.',
+              kuva: {
+                tiedosto: 'Leichhardt River from Sir James Foots Bridge at Mount Isa, 2023, 02.jpg',
+                lyhyt: 'Leichhardtin joki on kuivalla kaudella hiekkainen uoma eukalyptusten välissä.',
+                selite: 'Kesäkuussa 2023 Sir James Footsin sillalta kuvattu '
+                  + 'Leichhardtin joki on kuivalla kaudella pelkkä '
+                  + 'hiekkainen uoma eukalyptusten reunustamana; sadekaudella '
+                  + 'sama uoma voi täyttyä vedestä nopeasti.',
+                lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'arki',
