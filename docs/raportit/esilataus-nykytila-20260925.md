@@ -68,8 +68,15 @@ Verkkohaut vaiheittain (kylmä): käynnistys 42 hakua (sisältö 8 Mt, linssit 1
 19 (sisältö 15,5 Mt), lento 1 062 (laatat 1 046 = 20,7 Mt), saapuminen 461 (laatat 451), kaupunki 406, linssi
 859 laattaa (6,1 Mt). Lämpimänä verkkoon menevät lähes vain laatat (aloitus 77, kaupunki 395).
 
+**KORJAUS 25.9. ilta (Natiiviseppä):** ajoissa kylma-1 ja lammin-1 `uusi-matka` käynnistyi kesken aloitusverhon
+(2,0 s / 4,9 s), joten niiden aloitusverhon rivi mittasi lennon mustaa. Savuke odottaa nyt lokiriviä
+"aloitusverho: pois" (proto 3cd5259c). Uusi kylmä ajo `kylma-2` (juna/b13 c7091b7c + löydös 117):
+aloitusverho 8 004 ms (pallo 60 %), aloituslennon musta 5 001 ms (esilataus 278/278, pallo 41 %), aloituspuhe
+531 ms, luenta 82 ms, nostot 99–115 ms ilman verkkohakuja. Natiivisepän mittaus normaalissa kulussa: aloitusverho
+1,9–2,8 s (aste 100 %, lokit/verho-valmius). Kylmänä verho osuu siis yhä kattoon; lämmin uusitaan savukkeella.
+
 Havainnot esilatauspolitiikalle:
-1. **Molemmat verhot osuvat aina kattoonsa, myös lämpimänä.** Lämpimänä kaikki 278 reitin laattaa ovat
+1. **Molemmat verhot osuivat kattoonsa (katso korjaus yllä: aloitusverhon lämmin luku oli mittausvirhe).** Lämpimänä kaikki 278 reitin laattaa ovat
    välimuistissa, mutta pallon latausaste jää 71–72 %:iin (raja 97 ja 99 %). Verho ei siis odota verkkoa vaan
    latausastetta, joka ei simulaattorissa nouse rajaan. Kylmänä pallo on verhon lähtiessä 10 % (pelaaja näkee
    keskeneräisen pallon). → Natiiviseppä: latausasteen raja tai laskenta ja pallon Z0–Z5 buildiin (politiikka, kohta 1).
