@@ -15,7 +15,8 @@
 // Kamera: PalloKierto.Kuvaa joka kehys (lennon kuvauksen rajapinta: kohde, etäisyys, kallistus, suuntima).
 //
 // KOMENNOT (Documents/linssi-komento.txt): "elava kreikka [alku s] [nopeus]" soittaa kohtauksen, "elava kuva <s>"
-// pysäyttää kohtaan s (pysäytyskuvat), "elava jatka", "elava pois" (kartta ennalleen) ja "elava tila".
+// pysäyttää kohtaan s (pysäytyskuvat), "elava jatka", "elava pois" (kartta ennalleen), "elava tila" ja "elava ui 0|1"
+// (käyttöliittymä piiloon kohtauksen ajaksi, oletus 0 = piiloon).
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -67,8 +68,14 @@ namespace Matkakirja.Natiivi
         float nimenMinX, nimenMaxX;
         GameObject laivaOlio;
 
+        /// <summary>Käyttöliittymä piiloon videon ajaksi (komento "elava ui 0|1"): kartta ilman yläpalkkia ja nappeja.</summary>
+        public static bool UiPiiloon = true;
+
         // Pelin tila talteen
         bool tilaTalteen;
+        readonly List<(UnityEngine.UIElements.UIDocument Dokumentti, UnityEngine.UIElements.StyleEnum<UnityEngine.UIElements.DisplayStyle> Nakyvyys)> piilotetutUi =
+            new List<(UnityEngine.UIElements.UIDocument, UnityEngine.UIElements.StyleEnum<UnityEngine.UIElements.DisplayStyle>)>();
+        readonly List<Canvas> piilotetutKanvasit = new List<Canvas>();
         string varitasoEnnen;
         double aurinkoEnnen, aurinkoKorkeusEnnen;
 
@@ -97,6 +104,10 @@ namespace Matkakirja.Natiivi
                     break;
                 case "jatka":
                     if (e != null && e.kohtaus != null) { e.vaihe = Vaihe.Soi; e.Kirjaa($"jatkuu {e.t:F2} s"); }
+                    break;
+                case "ui":
+                    UiPiiloon = !(osat.Length > 2 && osat[2] == "1");
+                    ohjain.Kirjaa("elävä: käyttöliittymä " + (UiPiiloon ? "piiloon kohtauksen ajaksi" : "näkyvissä"));
                     break;
                 case "pois":
                     if (e != null) e.Lopeta();
@@ -501,6 +512,18 @@ namespace Matkakirja.Natiivi
             }
             aurinkoEnnen = Aurinko.Atsimuutti;
             aurinkoKorkeusEnnen = Aurinko.KorkeusAst;
+            if (UiPiiloon)
+            {
+                foreach (var d in FindObjectsByType<UnityEngine.UIElements.UIDocument>(FindObjectsSortMode.None))
+                {
+                    var juuri = d.rootVisualElement;
+                    if (juuri == null) continue;
+                    piilotetutUi.Add((d, juuri.style.display));
+                    juuri.style.display = UnityEngine.UIElements.DisplayStyle.None;
+                }
+                foreach (var c in FindObjectsByType<Canvas>(FindObjectsSortMode.None))
+                    if (c.enabled && c.isRootCanvas && c.renderMode == RenderMode.ScreenSpaceOverlay) { c.enabled = false; piilotetutKanvasit.Add(c); }
+            }
             tilaTalteen = true;
         }
 
@@ -514,6 +537,11 @@ namespace Matkakirja.Natiivi
                 foreach (var kerros in new[] { "kaupungit", "nimiot", "nappula", "pisteet" }) k.Nakyvyys(kerros, true);
                 if (k.varitaso != null) k.varitaso.Pakotettu = varitasoEnnen;
             }
+            foreach (var (d, nakyvyys) in piilotetutUi)
+                if (d != null && d.rootVisualElement != null) d.rootVisualElement.style.display = nakyvyys;
+            piilotetutUi.Clear();
+            foreach (var c in piilotetutKanvasit) if (c != null) c.enabled = true;
+            piilotetutKanvasit.Clear();
             KarttaKerrokset.PallonSavy(null);
             Aurinko.Atsimuutti = aurinkoEnnen;
             Aurinko.KorkeusAst = aurinkoKorkeusEnnen;
