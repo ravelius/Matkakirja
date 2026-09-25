@@ -116893,6 +116893,238 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Rebiana Sand Sea',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Kufra, Kufra District, Kufra Airport, El Tag, Capture
+       * of Kufra, Tragedy at Kufra, Gabal El Uweinat, Libyan cuisine,
+       * Nubian Sandstone Aquifer System), Wikivoyagen Libya-artikkelista
+       * (Kufralla ei ole omaa artikkelia), Suomen ulkoministeriön Libyan
+       * matkustustiedotteesta 3.7.2026, Britannian FCDO:n Libyan
+       * matkustusohjeesta 21.7.2026 sekä NASA Earth Observatoryn ja JPL:n
+       * kuvaselitteistä Commonsissa — teksti omaa. Nostojen ja gallerioiden
+       * aiheita (allas ja Al Jawfin mitat, zuwayyat, karavaanit, Rohlfs,
+       * Rebiana, senussit ja El Tagin perustaminen, vieraanvaraisuus, teen
+       * kolme lasillista, pohjaveden ikä) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: Uweinatin retkikuntaleiri 2021.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Jebel Uweinat , South Easte of Libya, North Africa.jpg',
+          lyhyt: 'Retkikunnan maastoautot leirissä Uweinatin vuoriston kalliopatsaiden juurella.',
+          selite: 'Libyalainen retkikunta leiriytyi vuonna 2021 tuulen '
+            + 'hiomien kalliopatsaiden juurelle Uweinatin vuoristossa, '
+            + 'Libyan, Egyptin ja Sudanin rajojen kohtaamispaikalla. '
+            + 'Punaisen auton katolla ovat retken vesikanisterit.',
+          lahde: 'Mustafa.explore, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kufra on Libyan syrjäisimpiä asuttuja paikkoja: '
+          + 'keidasryhmä Saharan kaakkoiskolkassa, jonka pääkaupunki Al Jawf '
+          + 'on yli 900 kilometrin päässä lähimmästä suurkaupungista. '
+          + 'Nykymatkailijalle se on ennen kaikkea paikka, jonne ei tällä '
+          + 'hetkellä pidä lähteä, sillä Suomen ulkoministeriö kehottaa '
+          + 'välttämään kaikkea matkustamista Libyaan. Tämä opas kertoo, '
+          + 'millainen Kufra on sitten, kun matka joskus taas on mahdollinen: '
+          + 'aavikon vuoret, avaruuteen asti näkyvät pellot, maan alta '
+          + 'pumpattava muinainen vesi, Etelä-Libyan ruoka ja sodan jäljet, '
+          + 'jotka näkyvät yhä kaupungin laella.',
+        artikkeli: {
+          nimi: 'Matkailijan Kufra',
+          teksti: 'Kufraan kannattaa nyt matkustaa vain kartan ja kirjan '
+            + 'kautta.',
+          nosto: 'Kufran lähellä kulki kerran joki, jonka hiekan alta löysi '
+            + 'vasta avaruussukkulan tutka vuonna 1994.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Matkustusvaroitus ja pitkä tie',
+              teksti: 'Rehellisesti sanottuna Kufraan ei nyt matkusteta '
+                + 'huvin vuoksi. Suomen ulkoministeriön matkustustiedote '
+                + 'pitää Libyaa korkeimmalla turvallisuustasolla: ministeriö '
+                + 'kehottaa välttämään kaikkea matkustamista maahan ja jo '
+                + 'siellä olevia poistumaan. Britannian ulkoministeriö '
+                + 'varoittaa kaikesta matkustamisesta muualle kuin Tripoliin, '
+                + 'Misrataan ja Bengasin seudulle, joten Kufra on varoituksen '
+                + 'piirissä. Syitä on monta. Kaupunki on Sudanista pohjoiseen '
+                + 'kulkevan siirtolaisreitin pysähdyspaikka, jossa '
+                + 'ihmissalakuljettajat toimivat, ja vuonna 2012 toubujen ja '
+                + 'zuwayyojen yhteenotoissa kuoli yli sata ihmistä. Sudanin '
+                + 'sisällissodan alettua vuonna 2023 Kufran lentoaseman on '
+                + 'raportoitu toimineen Arabiemiirikuntien huoltokenttänä '
+                + 'sodan toiselle osapuolelle, RSF-joukoille, ja tammikuussa '
+                + '2026 itäistä Libyaa hallitseva Libyan kansallinen armeija '
+                + 'sulki kentän kuukaudeksi. Kun matkustaminen joskus taas '
+                + 'onnistuu, Kufraan lennetään kotimaan vuorolla tai ajetaan '
+                + 'pohjoisesta Jalun keitaan kautta kulkevaa aavikkotietä. '
+                + 'Libya otti sähköisen viisumin käyttöön maaliskuussa 2024, '
+                + 'mutta maahantulon säännöt muuttuvat usein ilman '
+                + 'ennakkovaroitusta, ja lyhyelläkin vierailulla on '
+                + 'ilmoittauduttava poliisille viikon kuluessa saapumisesta.',
+              kuva: [
+                {
+                  tiedosto: 'مطار الكفرة.jpg',
+                  lyhyt: 'Kufran lentoaseman terminaali, jonka kyltissä lukee arabiaksi Kufran kansainvälinen lentoasema.',
+                  selite: 'Auton tuulilasin läpi vuonna 2022 kuvattu terminaali '
+                    + 'on Al Jawfin itälaidalla, italialaisten 1930-luvulla '
+                    + 'rakentaman Buman lentokentän paikalla.',
+                  lahde: 'مريم محمد الروادي, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'End of Road in Libya.jpg',
+                  lyhyt: 'Aavikkoura katkeaa jyrkänteelle Libyan Saharassa, ja matka jatkuu maastoautolla.',
+                  selite: 'Vuonna 2002 Messak Mustafetin kivikkoylängöllä '
+                    + 'Lounais-Libyassa kuvattu ura päättyy jyrkänteelle: '
+                    + 'Saharassa tie voi loppua kesken, ja matkalle tarvitaan '
+                    + 'maastoauto ja reitin tunteva kuljettaja.',
+                  lahde: 'Bernhard Holub (Dromedar61), Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'The Al Kufrah Oasis in southeastern Libya is shown in this Envisat image ESA206420.jpg',
+                  lyhyt: 'Envisat-satelliitin kuvassa Kufran kasteluympyrät asettuvat riveiksi hiekkameren laitaan.',
+                  selite: 'Euroopan avaruusjärjestön Envisat kuvasi Kufran '
+                    + 'keitaan helmikuussa 2006: kastelupeltojen tummat '
+                    + 'ympyrät muodostavat rivejä, ja kuvan oikeaa laitaa '
+                    + 'peittää aaltoileva hiekkameri.',
+                  lahde: 'ESA, Wikimedia Commons (CC BY-SA 3.0 IGO)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kennot, ympyrät ja lähteiden vuori',
+              teksti: 'Lentokoneen ikkunasta Kufra näyttää geometrian '
+                + 'oppikirjalta. Al Jawfin eteläpuolella on vierekkäin kolmea '
+                + 'peltokuviota: vanhinta viljelytapaa edustavia ruutupeltoja, '
+                + 'Libyan aavikon ensimmäisen suunnitellun viljelyhankkeen '
+                + 'kuusikulmaisia kennoja noin vuodelta 1970 sekä niiden '
+                + 'tilalle vettä säästämään tulleita kiertokastelun ympyröitä, '
+                + 'joista jokainen on noin kilometrin levyinen. Keitaan '
+                + 'ulkopuolella alkaa tyhjyys. Kaakossa, Egyptin ja Sudanin '
+                + 'rajan tuntumassa, hiekasta kohoavat Arkenun ja Uweinatin '
+                + 'vuoristot. Uweinat tarkoittaa arabiaksi lähteiden vuorta, ja '
+                + 'sen kallioihin on hakattu tuhansia esihistoriallisia kuvia '
+                + 'leijonista, kirahveista, strutseista, gaselleista ja '
+                + 'karjasta ajalta, jolloin Saharassa laidunnettiin karjaa. '
+                + 'Ilmasto on maailman kuivimpia: sadetta tulee noin '
+                + 'millimetri vuodessa, ja aurinko paistaa lähes 3 700 tuntia. '
+                + 'Kesällä päivälämpö nousee keskimäärin 38 asteeseen, kun '
+                + 'taas tammikuussa päivä on noin 21-asteinen ja yö viilenee '
+                + 'viiteen asteeseen, joten talvi on paras matka-aika. '
+                + 'Keväällä kannattaa varautua hiekkamyrskyihin, jotka voivat '
+                + 'kestää neljästä kahdeksaan päivää.',
+              kuva: {
+                tiedosto: 'Al Jawf, Libya.jpg',
+                lyhyt: 'Al Jawfin eteläpuolella ruutupellot, kuusikulmaiset kennot ja kastelukehät vierekkäin.',
+                selite: 'Avaruusasemalta lokakuussa 2016 otetussa kuvassa '
+                  + 'Al Jawf on ylälaidassa, vanhat ruutupellot vasemmalla, '
+                  + 'noin vuoden 1970 kuusikulmaiset kennot keskellä ja '
+                  + 'uudemmat kiertokastelun ympyrät vasemmassa alakulmassa.',
+                lahde: 'NASA, International Space Station Program, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Joki hiekan alla',
+              teksti: 'Kufran vehreys on lainaa menneisyydeltä. Lokakuussa '
+                + '1994 avaruussukkula Endeavourin tutka kuvasi Kufran '
+                + 'lähistön aavikkoa taajuuksilla, jotka läpäisevät kuivan '
+                + 'hiekan, ja kuvasta löytyi aiemmin tuntematon haara '
+                + 'muinaisesta jokiverkostosta, jonka tuulen kuljettama hiekka '
+                + 'oli haudannut tuhansiksi vuosiksi. Sama sade on yhä maan '
+                + 'alla: keitaan kaivot ja kastelupuomit pumppaavat vettä '
+                + 'Nubian hiekkakiven pohjavesiesiintymästä, jota Saharan '
+                + 'rankkasateet täyttivät vielä yli 20 000 vuotta sitten. '
+                + 'Nykyään vettä ei tule lisää, ja liikakäyttö näkyy jo: '
+                + 'joulukuuhun 2011 mennessä keitaan järvi oli kuivunut '
+                + 'kokonaan. Pumppaus silti jatkuu, sillä Libya on sopinut '
+                + 'YK:n elintarvike- ja maatalousjärjestön FAO:n kanssa alueen '
+                + 'maatalouden kehittämisestä ruokaturvan parantamiseksi. '
+                + 'Matkailijalle vesi on Kufrassa arvokkain varuste. '
+                + 'Aavikkoretket tehdään usean maastoauton saattueessa, ja '
+                + 'jokaiseen autoon pakataan omat vesikanisterit, kuten '
+                + 'tämän oppaan kansikuvan retkikunta Uweinatin vuoristossa.',
+              kuva: {
+                tiedosto: 'Kufra-space-radar.jpg',
+                lyhyt: 'Avaruussukkulan tutka paljasti hiekan alta muinaisen jokiuoman Kufran lähellä.',
+                selite: 'Endeavourin SIR-C/X-SAR-tutka kuvasi lokakuussa 1994 '
+                  + 'aluetta Kufran keitaan lähellä: tummat, haarautuvat '
+                  + 'juovat ovat hiekan alle hautautuneita, kauan sitten '
+                  + 'kuivuneita jokilaaksoja.',
+                lahde: 'NASA, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Bazin, taatelisiirappi ja kuivan maan tavat',
+              teksti: 'Etelä-Libyan keittiö on rakentunut säilyvien '
+                + 'raaka-aineiden varaan: kuivatun lihan, hapatettujen '
+                + 'maitotuotteiden, ohran ja kestävien palkokasvien. Lammas '
+                + 'on koko maan yleisin liha, mutta etelässä syödään '
+                + 'rannikkoa useammin kamelia, ja suolattu, auringossa '
+                + 'kuivattu gideed-liha säilötään oliiviöljyyn keittoja ja '
+                + 'kuskusia varten. Tunnetuin kotiruoka on bazin: '
+                + 'ohrajauhoista keitetty taikina vatkataan magraf-kepillä '
+                + 'kiinteäksi kuvuksi, jonka ympärille kaadetaan lampaanlihalla '
+                + 'haudutettu tomaattikastike, keitettyjä kananmunia ja '
+                + 'perunaa. Asida-taikinamöykky syödään usein rubin, '
+                + 'taateleista tai johanneksenleivästä keitetyn tumman '
+                + 'siirapin kanssa, ja kesähelteellä juodaan kylmää ja hapanta '
+                + 'hibiskusjuomaa, karkadea. Alkoholi ja sianliha ovat '
+                + 'kiellettyjä. Rahana on Libyan dinaari, jota idässä '
+                + 'kutsutaan puhekielessä nimellä jneh, brittiläisen guinean '
+                + 'mukaan. Pankkikortin toimivuus kannattaa varmistaa ennen '
+                + 'kuin lähtee suurista kaupungeista. Kohteliaisuus alkaa '
+                + 'vanhimmista: kotiin kutsuttu vieras tervehtii ensin talon '
+                + 'vanhimpia, ja libyalaiset ilmaisevat erimielisyytensä '
+                + 'mieluummin kiertoteitse kuin suoraan.',
+              kuva: {
+                tiedosto: 'Bazin.jpg',
+                lyhyt: 'Bazin: ohrataikinan kupu lihakastikkeessa, ympärillä kananmunia ja perunaa.',
+                selite: 'Libyalaisen bazinin keskellä on ohrajauhoista '
+                  + 'vatkattu taikinakupu ja ympärillä tomaattinen '
+                  + 'lihakastike, keitetyt kananmunat ja perunat, tällä '
+                  + 'kertaa myös sieniä.',
+                lahde: 'Libiya11, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Linnake kaupungin laella',
+              teksti: 'Kufran uudempaa historiaa voi lukea kaupungin '
+                + 'siluetista. Keitaan pohjoisreunan kohoumalla El Tagissa '
+                + 'seisoo yhä italialaisten 1930-luvun puolivälissä rakentama '
+                + 'linnake, joka hallitsee edelleen näkymää. Italia oli '
+                + 'vallannut Kufran vuonna 1931: kenraali Rodolfo Graziani toi '
+                + 'paikalle noin 3 000 sotilasta ja parikymmentä pommikonetta, '
+                + 'ja moni asukas pakeni aavikon halki Uweinatin kautta '
+                + 'Egyptiin. Brittiläinen kartoittaja Pat Clayton kohtasi '
+                + 'pakolaisia ja auttoi pelastamaan monet menehtymästä '
+                + 'aavikolle. Samoihin aikoihin rakennettu Buman lentokenttä '
+                + 'oli tärkeä välilasku Italian Itä-Afrikkaan, ja sen '
+                + 'paikalla on nykyinen lentoasema. Toisessa maailmansodassa '
+                + 'Tšadista tullut vapaiden ranskalaisten joukko kenraali '
+                + 'Leclercin johdolla piiritti Kufraa 31. tammikuuta – 1. '
+                + 'maaliskuuta 1941. Voiton jälkeen Leclerc miehineen vannoi, '
+                + 'ettei laskisi aseita ennen kuin Ranskan liput liehuvat '
+                + 'Strasbourgin katedraalilla, ja lupaus täyttyi 23. '
+                + 'marraskuuta 1944. Siksi useassa ranskalaisessa kaupungissa '
+                + 'on yhä Kufran mukaan nimetty katu. Myöhemmin keitaalla oli '
+                + 'brittiläisen Long Range Desert Group -kaukopartion '
+                + 'tukikohta, ja toukokuussa 1942 kolme eteläafrikkalaista '
+                + 'pommikonetta eksyi harjoituslennolla ja teki pakkolaskun '
+                + 'aavikolle: kahdestatoista miehestä vain yksi selvisi. '
+                + 'Tapaus muistuttaa, miksi Kufrasta ei vieläkään lähdetä '
+                + 'aavikolle ilman opasta ja vesivarastoa.',
+              kuva: {
+                tiedosto: 'Serment de Koufra 2 mars 1941.JPG',
+                lyhyt: 'Kufran valan teksti on hakattu Leclercin muistomerkkiin Strasbourgissa.',
+                selite: 'Strasbourgin Place Broglien Leclerc-muistomerkkiin '
+                  + 'kaiverrettu teksti toistaa Kufrassa vannotun valan: '
+                  + 'aseita ei lasketa ennen kuin liput liehuvat Strasbourgin '
+                  + 'katedraalilla. Muistomerkki ajoittaa valan 2. '
+                  + 'maaliskuuta 1941.',
+                lahde: 'Claude Truong-Ngoc, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'senussit',
@@ -117157,6 +117389,259 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'New Coimbra Fort',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Campo Grande, Campo Grande International Airport,
+       * Mato Grosso do Sul, Bonito (Mato Grosso do Sul), Buraco das Araras
+       * (Mato Grosso do Sul), Tereré, Arroz carreteiro, Sopa paraguaya, Time
+       * in Brazil) ja Wikivoyagen Campo Grande-, Bonito- ja Pantanal-sivuilta;
+       * Bioparque Pantanalin, Parque das Nações Indígenasin, Museu das
+       * Culturas Dom Boscon ja Gruta do Lago Azulin yksityiskohdat
+       * portugalinkielisestä Wikipediasta, koska englanninkielistä artikkelia
+       * ei ole — teksti omaa. Wikivoyagen hinnat ja aikataulut ovat eri
+       * vuosilta (2018 ja marraskuu 2025), joten ainoa hinta on marraskuun
+       * 2025 Pantanal-retkihinta, ja vanhemmat tiedot (paraguaylaisten
+       * sunnuntaitanssit, bussien matkakortti, Boniton bussivuorot) on kerrottu
+       * Wikivoyagen tietoina tai ilman kellonaikoja. Buraco das Ararasin
+       * mitoista lähteet eroavat (halkaisija vai ympärys 500 m), siksi
+       * tekstissä on vain "satoja metrejä leveä". Nostojen aiheita (cerrado,
+       * terenat, guatót, Maracajun vuoret, Coimbran linnake; Pantanalin tulva,
+       * kapybara, jaguaari, hyasinttiaara, kaimaani), saapumistekstin aroja
+       * kaupungin puistoissa ja Etelä-Amerikan valokuvapaketin kuvien aiheita
+       * (lentotukikohdan vihkiäiset 1945, Feira Central, sobá, rautatieasema,
+       * Avenida Afonso Pena) ei toisteta. Galleriaa lohkossa ei ole. Kuvien
+       * lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja
+       * tiedostosivuilta, ja kuvat katsottu silmin; MTur Destinosin kuvista
+       * valittiin vain Flickrin PD-merkinnällä julkaistut (ei Attribution-
+       * mallineella julkaistuja). Pystykuva: Abismo Anhumasin luola Bonitossa.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Abismo Anhumas.jpg',
+          lyhyt: 'Auringonsäde lankeaa Abismo Anhumasin luolaan ja sen maanalaiseen järveen Bonitossa.',
+          selite: 'Kapeasta kattoaukosta lankeava valokeila valaisee tippukivien '
+            + 'peittämää luolaseinää ja kirkasta, vihreänsinistä järveä luolan '
+            + 'pohjalla. Järven rantaan laskeudutaan köysien varassa 72 metriä. '
+            + 'Kuva on otettu joulukuussa 2014.',
+          lahde: 'Marcel Favery, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Campo Grande on Mato Grosso do Sulin pääkaupunki ja suurin '
+          + 'kaupunki, väljäksi suunniteltu tasangon kaupunki, jonka leveitä '
+          + 'katuja varjostavat puurivit. Matkailijalle se on ennen kaikkea '
+          + 'portti: länteen lähtevät tiet vievät eteläiseen Pantanaliin, ja '
+          + 'noin 300 kilometrin päässä lounaassa odottaa Bonito kirkkaine '
+          + 'jokineen ja luolineen. Kaupunkiinkin kannattaa jäädä päiväksi tai '
+          + 'pariksi, sillä täällä on akvaario, jota kutsutaan maailman '
+          + 'suurimmaksi makean veden akvaarioksi, museo täynnä '
+          + 'alkuperäiskansojen esineitä, Paraguayn makuja ja kylmää tereréä '
+          + 'kuumaan iltapäivään.',
+        artikkeli: {
+          nimi: 'Matkailijan Campo Grande',
+          teksti: 'Campo Grande on portti Bonitoon ja eteläiseen Pantanaliin, mutta kaupunki itsekin palkitsee pysähtyjän.',
+          nosto: 'Campo Grandessa kello on tunnin jäljessä Riosta ja São Paulosta, '
+            + 'sillä Mato Grosso do Sul elää Amazonin aikaa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja eteenpäin',
+              teksti: 'Useimmat matkailijat saapuvat lentäen. Kansainvälinen lentoasema '
+                + '(CGR) on noin seitsemän kilometrin päässä keskustasta, ja se '
+                + 'jakaa osan tiloistaan Brasilian ilmavoimien tukikohdan kanssa. '
+                + 'Kenttää on vuodesta 2022 hoitanut espanjalainen lentoasemayhtiö '
+                + 'Aena, ja lokakuusta 2021 se on kantanut paikallisen yrittäjän '
+                + 'Ueze Elias Zahranin nimeä. Lennot ovat enimmäkseen kotimaisia, '
+                + 'mutta muutama yhteys kulkee myös Boliviaan ja Paraguayhin. '
+                + 'Kaupunkiin pääsee linja-autoilla 409 ja 414 tai taksilla, jossa '
+                + 'on taksamittari. Kaukoliikenteen bussit lähtevät keskustan '
+                + 'eteläpuolella olevalta linja-autoasemalta. Corumbáan Bolivian '
+                + 'rajalle ajetaan viidestä kuuteen tuntia, São Pauloon 13–15 tuntia '
+                + 'ja Rio de Janeiroon noin 20 tuntia. Bonitoon lähtee Wikivoyagen '
+                + 'mukaan neljä vuoroa päivässä, ja matka kestää noin viisi tuntia. '
+                + 'Rataa pitkin kulkee enää vain tavarajunia. Kaupungin oma '
+                + 'bussiverkko rakentuu vaihtoterminaalien varaan: niissä voi '
+                + 'vaihtaa bussia maksutta, mutta useimmissa autoissa maksu käy vain '
+                + 'kaupungin matkakortilla. Pantanaliin ajetaan BR-262-tietä '
+                + 'länteen. Buraco das Piranhasin risteyksestä erkanee Estrada '
+                + 'Parque, joka kiertää Passo do Lontran ja Curva do Lequen kautta '
+                + 'Corumbáan. Omalla autolla tieltä näkee helposti suuria lintuja ja '
+                + 'kaimaaneja, ja ilman autoa matkaan pääsee yhteiskuljetuksilla, '
+                + 'joita Campo Grandesta lähtee päivittäin Bonitoon, Corumbáan ja '
+                + 'Buraco das Piranhasiin.',
+              kuva: [
+                {
+                  tiedosto: 'Aeroporto Internacional de Campo Grande MS, 20-07-2025.jpg',
+                  lyhyt: 'Campo Granden kansainvälisen lentoaseman terminaali heinäkuussa 2025.',
+                  selite: 'Matalan, valkoisen terminaalirakennuksen julkisivussa lukee '
+                    + 'vihreillä kirjaimilla Aeroporto Internacional de Campo Grande. '
+                    + 'Edessä kulkee saattoliikenteen kaista pysäköityine autoineen, ja '
+                    + 'kuivan kauden taivas on kirkkaan sininen.',
+                  lahde: 'Jcornelius, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Ônibus no Terminal Rodoviário de Campo Grande, dezembro de 2022 (1).jpg',
+                  lyhyt: 'Kaukoliikenteen busseja Campo Granden linja-autoasemalla joulukuussa 2022.',
+                  selite: 'Sadekauden pilvinen taivas kaartuu linja-autoaseman yllä. Märällä '
+                    + 'ajoradalla kulkee valko-oranssi kaukoliikenteen bussi, ja toinen '
+                    + 'seisoo laiturissa katoksen reunalla.',
+                  lahde: 'Fronteira, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Ponte Passo Lontra MS 184 Corumba MS.jpg',
+                  lyhyt: 'Estrada Parquen silta ylittää Miranda-joen Passo do Lontrassa.',
+                  selite: 'Tammikuussa 2018 otetussa ilmakuvassa betonisilta ylittää leveän, '
+                    + 'tumman Miranda-joen. Sillan juurelle on kiinnittynyt '
+                    + 'kaksikerroksinen jokilaiva ja pieniä veneitä, ja rannoilla on '
+                    + 'rakennuksia vihreän kasvillisuuden keskellä.',
+                  lahde: 'Luiz Ricardo Bernhard, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Tereréä ja chipaa',
+              teksti: 'Campo Granden ruokapöytä on koottu monesta suunnasta: '
+                + 'Paraguaysta, alkuperäiskansoilta, siirtolaisilta ja '
+                + 'karjatiloilta. Seudun tyypillisin ruoka on Wikivoyagen mukaan '
+                + 'arroz carreteiro, riisiä naudanlihakuutioiden ja yrttien kanssa. '
+                + 'Se syntyi Rio Grande do Sulin härkävankkurien ajajien eväänä ja '
+                + 'on levinnyt koko Brasiliaan. Paraguaysta ovat peräisin chipa, '
+                + 'maniokkitärkkelyksestä ja juustosta leivottu rengas, jonka '
+                + 'paikalliset valitsevat mieluummin kuin Minas Geraisin pão de '
+                + 'queijon, sekä sopa paraguaia. Nimestään huolimatta se ei ole '
+                + 'keitto vaan maissijauhosta, juustosta, sipulista ja maidosta '
+                + 'paistettu suolainen kakku. Joen kaloista syödään esimerkiksi '
+                + 'paistettua pacua ja piraijakeittoa. Kaimaanin lihaakin saa, mutta '
+                + 'Wikivoyage neuvoo varmistamaan, että liha on peräisin '
+                + 'kasvattamosta eikä salametsästäjiltä. Cerradon hedelmät, kuten '
+                + 'pequi, buriti, bocaiúva ja guavira, maustavat jäätelöitä ja jopa '
+                + 'paikallisia oluita. Tärkein juoma on tereré, kylmänä nautittava '
+                + 'mate: kuppi täytetään karkeaksi jauhetulla mateyrtillä, päälle '
+                + 'kaadetaan jäävettä, ja juoma imetään metallisen suodatinpillin '
+                + 'läpi. Lounais-Brasiliassa veteen sekoitetaan usein hedelmämehua. '
+                + 'Tereré on alun perin guaranien juoma, ja Unesco merkitsi '
+                + 'Paraguayn tereré-perinteen aineettomaksi kulttuuriperinnöksi '
+                + 'joulukuussa 2020. Mateyrtit, rapadura-sokerikakut, paikalliset '
+                + 'juustot ja tuoreet chilit ostetaan Mercadão Municipalista, '
+                + 'kaupungin kauppahallista.',
+              kuva: {
+                tiedosto: 'Sopa Paraguaia e Chipa.jpg',
+                lyhyt: 'Sopa paraguaia -kakkua ja rengasmaisia chipoja kukkakuvioisilla lautasilla.',
+                selite: 'Etualalla on kukkakuvioisella lautasella pala kullanruskeaksi '
+                  + 'paistettua sopa paraguaiaa, ja taaempana toisella lautasella on '
+                  + 'kaksi rengasmaista chipaa. Kuva on otettu Mato Grosso do Sulissa '
+                  + 'maaliskuussa 2018.',
+                lahde: 'Flávio André / MTur Destinos, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Akvaario, museo ja polkka',
+              teksti: 'Kaupungin näyttävin uusi rakennus on Bioparque Pantanal Avenida '
+                + 'Afonso Penan varrella Parque das Nações Indígenasin kupeessa. '
+                + 'Arkkitehti Ruy Ohtaken suunnittelema akvaario avattiin '
+                + 'maaliskuussa 2022, ja sitä kutsutaan maailman suurimmaksi makean '
+                + 'veden akvaarioksi. Rakentaminen alkoi jo 2011, ja 900 päiväksi '
+                + 'suunniteltu työmaa venyi yli kymmeneen vuoteen. Viereinen puisto '
+                + 'on yli sadan hehtaarin viheralue Prosa-puron muodostaman järven '
+                + 'ympärillä. Sen kuusi sisäänkäyntiä on nimetty Mato Grosso do '
+                + 'Sulin alkuperäiskansojen mukaan, ja järven saarella on Anor '
+                + 'Mendesin seitsemän metriä pitkä veistos guaicurú-ratsastajasta. '
+                + 'Puistossa ovat myös nykytaiteen museo MARCO sekä Museu das '
+                + 'Culturas Dom Bosco, jonka salesiaanipapit avasivat 1951. Museon '
+                + 'noin 40 000 esineen kokoelmissa on yli 5 000 alkuperäiskansojen '
+                + 'esinettä muun muassa bororo-, karajá- ja xavante-kansoilta sekä '
+                + 'laaja hyönteiskokoelma. Käsitöitä kannattaa etsiä Casa do '
+                + 'Artesãosta, jossa myydään muun muassa kadiwéu-kansan töitä. '
+                + 'Iltaisin kaupunki tanssii: seuratanssien suosikkeja ovat chamamé, '
+                + 'vaneira, sertanejo ja paraguaylainen polkka, ja paraguaylaisten '
+                + 'siirtolaisten yhdistys on Wikivoyagen mukaan järjestänyt '
+                + 'sunnuntaisin lounaan ja tanssit elävän musiikin tahdissa. Moni '
+                + 'pukeutuu niihin saappaisiin, leveään vyöhön ja hattuun. '
+                + 'Tammi–helmikuussa pidetään vuodesta 2004 järjestetty '
+                + 'elokuvajuhla, joka keskittyy itsenäiseen elokuvaan.',
+              kuva: {
+                tiedosto: 'Bioparque Pantanal 36.jpg',
+                lyhyt: 'Punaiset kaaret kiertävät Bioparque Pantanalin kaarevaa akvaariorakennusta.',
+                selite: 'Joulukuussa 2024 kuvatun akvaarion pitkänomaista, harmaata runkoa '
+                  + 'kiertävät punaiset kaaret, ja sisäänkäynnin yllä lukee Bioparque '
+                  + 'Pantanal. Laajalla betoniaukiolla kävijät kuvaavat toisiaan.',
+                lahde: 'Ajmcbarreto, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Bonito ja Pantanal',
+              teksti: 'Bonito on noin 300 kilometrin päässä Campo Grandesta. '
+                + 'Pikkukaupunki itse on vaatimaton, mutta sen ympärillä virtaavat '
+                + 'Brasilian kuuluisimmat kirkasvetiset joet: vedessä runsaana oleva '
+                + 'kalsiumkarbonaatti tarttuu leijuviin hiukkasiin ja painaa ne '
+                + 'pohjaan, joten vesi on lasinkirkasta. Suosituin tapa kokea joet '
+                + 'on flutuação, jossa ajelehditaan virran mukana snorklaten '
+                + 'kalaparvien yllä, esimerkiksi Rio da Pratalla tai Sucuri-joella. '
+                + 'Gruta do Lago Azul on luola, jonka pohjalla on kirkkaansininen '
+                + 'järvi. Paikallinen alkuperäisasukas löysi sen 1924, ja se on '
+                + 'ollut suojeltu vuodesta 1978. Abismo Anhumasiin laskeudutaan '
+                + 'köysillä 72 metriä maanalaisen järven rantaan, ja naapurikunta '
+                + 'Jardimissa Buraco das Ararasin satoja metrejä leveässä vajoamassa '
+                + 'pesii kymmeniä pareja punavihreitä aroja. Lähes kaikki kohteet '
+                + 'ovat yksityismailla, niiden päivittäiset kävijämäärät on rajattu, '
+                + 'ja liput myydään vain valtuutettujen matkatoimistojen kautta. '
+                + 'Kannattaa aina kysyä, sisältyykö kuljetus hintaan. Pantanaliin '
+                + 'mennään yleensä karjatiloille eli fazendoille, jotka majoittavat '
+                + 'vieraita ja järjestävät vene-, maastoauto- ja ratsastusretkiä. '
+                + 'Eteläisen Pantanalin majapaikkoja on Mirandan, Aquidauanan ja '
+                + 'Passo do Lontran seuduilla. Wikivoyagen mukaan majapaikkojen '
+                + 'retkipaketit alkoivat marraskuussa 2025 noin sadasta dollarista '
+                + 'hengeltä vuorokaudessa, tavallisesti vähintään neljän päivän '
+                + 'varauksella. Kalastamiseen tarvitaan lupa.',
+              kuva: {
+                tiedosto: 'Flavioandre Rio da Prata Jardim MS (41505787072).jpg',
+                lyhyt: 'Kalaparvi ui Rio da Pratan kirkkaassa vedessä aivan pinnan alla.',
+                selite: 'Veden alta kuvattuna hopeanhohtoiset, mustajuovaiset ja '
+                  + 'oranssieväiset kalat uivat pinnan tuntumassa, ja niiden alla '
+                  + 'erottuu vaalea pohja uppopuun oksineen. Kuva on otettu Jardimissa '
+                  + 'maaliskuussa 2018.',
+                lahde: 'Flávio André / MTur Destinos, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Kello, kuivuus ja kausi',
+              teksti: 'Mato Grosso do Sul noudattaa Amazonin aikaa (UTC−4), joten kello '
+                + 'on tunnin jäljessä Riosta, São Paulosta ja Brasíliasta. Se '
+                + 'kannattaa muistaa, kun vertaa bussien ja lentojen aikatauluja. '
+                + 'Tammikuu on kuumin ja sateisin kuukausi. Kesäkuusta syyskuuhun '
+                + 'kestävä kuiva kausi tuo aurinkoiset päivät ja viileämmät yöt: '
+                + 'heinäkuussa keskimääräinen alin lämpötila on noin 14 astetta, ja '
+                + 'kylmimpinä öinä lämpötila voi laskea lähelle nollaa. Kuivalla '
+                + 'kaudella ilman suhteellinen kosteus laskee helposti alle 30 '
+                + 'prosentin, jolloin kannattaa juoda tavallista enemmän ja välttää '
+                + 'rasitusta keskipäivän auringossa. Aamuisin ja iltaisin voi '
+                + 'kävellä Parque das Nações Indígenasin neljän kilometrin lenkin '
+                + 'järven ympäri, sillä puisto on auki joka päivä kuudesta '
+                + 'yhdeksään. Elo- ja syyskuussa keltaisena kukkivat ipê-puut '
+                + 'värittävät kaupunkia. Bonitossa vuodenaika ratkaisee paljon: '
+                + 'toukokuusta elokuuhun joet ovat kirkkaimmillaan, kun taas '
+                + 'joulu–maaliskuun sateet samentavat veden mutta antavat '
+                + 'vesiputouksille voimaa. Brasilian lomakaudet eli joulu–tammikuu, '
+                + 'karnevaali, pääsiäisviikko ja heinäkuu täyttävät majapaikat, '
+                + 'joten ne kannattaa varata ajoissa. Pantanaliin lähtevälle '
+                + 'suositellaan keltakuumerokotusta, ja se on otettava noin kymmenen '
+                + 'päivää ennen matkaa, jotta se ehtii tehota. Sadekaudella '
+                + 'hyttysiltä kannattaa suojautua denguen takia. Sunnuntaisin lähes '
+                + 'kaikki kaupat ja kahvilat ovat kiinni. Kieli on portugali. '
+                + 'Kouluissa opetetaan englantia ja espanjaa, mutta Bonitossa kaikki '
+                + 'oppaat eivät puhu kumpaakaan, joten opastetun retken kieli '
+                + 'kannattaa varmistaa etukäteen.',
+              kuva: {
+                tiedosto: 'Parque das Nações Indígenas - visão aérea.jpg',
+                lyhyt: 'Parque das Nações Indígenasin järvi ja valaistut kävelytiet yöllä ylhäältä.',
+                selite: 'Marraskuussa 2013 korkealta kuvatussa yönäkymässä puiston järvi '
+                  + 'heijastaa lamppujen valoa, ja sen ympärillä kiertävät valaistut '
+                  + 'kävelytiet. Taustalla levittäytyvät kaupungin valot ja muutama '
+                  + 'tornitalo.',
+                lahde: 'Giovanni Gabas Coelho, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -117292,6 +117777,297 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Dugong',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Exmouth, Western Australia; Learmonth Airport;
+       * Exmouth Gulf; Exmouth Submarine Base eli Operation Potshot;
+       * Operation Jaywick; Ningaloo Coast; Cape Range National Park; Coral
+       * Bay, Western Australia; Solar eclipse of April 20, 2023; Tim
+       * Winton; Cyclone Narelle (2026)) ja Wikivoyagen Exmouth (Western
+       * Australia)-, Cape Range National Park- ja Ningaloo Reef -sivuilta
+       * — teksti omaa. Katkarapupyynnin luvut (viisi lajia, kausi touko–
+       * marraskuu, noin 700 000 kg vuodessa, täysikuun tauko, MG Kailis
+       * ainoa luvanhaltija) ja Big Prawnin tiedot (7 m, 2 000 kg,
+       * lasikuitu, 2005, Brian Paskins, lahjoitettu kaupungille 2013,
+       * varastossa joulu–maaliskuun) on luettu Big Prawnin vieressä olevista
+       * opastetauluista, jotka näkyvät Commonsin kuvissa "A fisheries sign
+       * at the Big Prawn in Exmouth, Western Australia, 2024 07.jpg" ja
+       * "Sign next to the Big Prawn in Exmouth, Western Australia,
+       * 2024.jpg" (Aliceinthealice, CC BY 4.0); vuosi 2005 täsmää
+       * Wikipedian kanssa, vaikka pääkuvan Commons-kuvaus sanoo 2004.
+       * Learmonthin etäisyys vaihtelee lähteissä (Wikipedia 35 km,
+       * Wikivoyage 40 km). Pimennyksen kustannus on Wikipediassa 20 tai 22
+       * miljoonaa dollaria, joten tekstissä "noin 20 miljoonaa". Jaywickin
+       * upotuksista on kerrottu seitsemän, mutta japanilaisten lähteiden
+       * mukaan kuusi alusta upposi tai vaurioitui. Nostojen aiheita
+       * (maailman suurin rantariutta ja kahlaaminen harjalle, Cape Rangen
+       * geologia ja Charles Knife Canyon, maailmanperintö 2011, aallot
+       * riutan reunalla, dugongit, valashain biologia ja kokoontuminen),
+       * Oseanian valokuvien aiheita (Vlamingh Headin majakka, Harold E.
+       * Holtin viestiasema, kaupungin perustaminen 1960-luvulla),
+       * saapumistekstin ryhävalaita isoisän silmin eikä Australian
+       * maalehden aiheita (Suuri valliriutta, damper, swag) toisteta.
+       * Galleriaa lohkossa ei ole. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta, ja kuvat katsottu silmin. Pystykuva:
+       * Exmouthin tervetulokyltti (Greg Schechter, CC BY 2.0).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'The City of Exmouth - Flickr - GregTheBusker.jpg',
+          lyhyt: 'Exmouthin tervetulokyltissä ovat valashai, siipisimppu, katkarapu ja meritähti.',
+          selite: 'Tienvarren kyltti toivottaa tulijan tervetulleeksi '
+            + 'Exmouthiin Ningaloon riutalle. Kirkkaanvärisissä ruuduissa '
+            + 'ovat valashai, siipisimppu, katkarapu ja meritähti, ja '
+            + 'vasemmassa yläkulmassa on kunnan tunnus. Kuva on otettu '
+            + 'huhtikuussa 2009.',
+          lahde: 'Greg Schechter, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Exmouth on pieni kaupunki Luoteisniemen kärjessä, runsaat '
+          + 'tuhat kilometriä Perthistä pohjoiseen. Asukkaita oli vuonna '
+          + '2021 noin 2 800, mutta matkailukauden huipulla väkeä on ollut '
+          + 'noin 6 000, ja kaupunki elää nykyään enemmän matkailijoista '
+          + 'kuin laivaston viestiasemasta, jota varten se aikanaan '
+          + 'rakennettiin. Tänne tullaan snorklaamaan riutalla suoraan '
+          + 'rannalta, uimaan valashain rinnalla ja kiertämään Cape Rangen '
+          + 'rotkoja. Tämä opas kertoo, miten perille pääsee, mitä lahdelta '
+          + 'syödään, mitä sota ja auringonpimennys jättivät jälkeensä ja '
+          + 'miten kuumassa ja vähävetisessä maastossa pärjää.',
+        artikkeli: {
+          nimi: 'Matkailijan Exmouth',
+          teksti: 'Riutalle pääsee rannalta, mutta Exmouthiin tarvitaan lentokone tai kolme ajopäivää.',
+          nosto: 'Exmouthinlahden katkarapuja pyydetään öisin, ja täysikuun '
+            + 'aikaan pyynti pitää taukoa, kun katkaravut luovat nahkansa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentäen, bussilla tai omin pyörin',
+              teksti: 'Nopein tie Exmouthiin kulkee ilmateitse. Qantas lentää '
+                + 'Perthistä Learmonthin kentälle yleensä kerran tai kaksi '
+                + 'päivässä, ja lento kestää vajaat kaksi tuntia. Kenttä on '
+                + 'noin 35–40 kilometriä kaupungista etelään, ja se jakaa '
+                + 'tilansa ilmavoimien Learmonthin tukikohdan kanssa. '
+                + 'Kaupunkiin pääsee etukäteen varattavalla pikkubussilla, ja '
+                + 'myös vuokra-auto on varattava ennakkoon, koska se tuodaan '
+                + 'kentälle kaupungista. Maaliskuussa 2026 hirmumyrsky '
+                + 'Narelle vaurioitti kenttää pahoin, joten lentojen tilanne '
+                + 'kannattaa tarkistaa ennen lähtöä. Maata pitkin Integrityn '
+                + 'linja-auto ajaa Perthin ja Exmouthin väliä kolmesti '
+                + 'viikossa. Aamulla Perthistä lähtevä bussi on perillä vasta '
+                + 'seuraavana iltapäivänä, ja se pysähtyy matkailuneuvonnan '
+                + 'edessä. Omalla autolla Perthistä tai Broomesta kannattaa '
+                + 'varata ajoon kolme päivää. Etelästä tultaessa Exmouthin tie '
+                + 'erkanee Luoteisesta rannikkomaantiestä Minilyan kohdalla. '
+                + 'Pohjoisesta tuleva voi oikaista Burkett Roadia pitkin ja '
+                + 'säästää noin 200 kilometriä. Perillä auto on lähes '
+                + 'välttämätön: kaupunki on levittäytynyt laajalle, '
+                + 'kesäaurinko polttaa, ja Cape Rangen rannat ovat kymmenien '
+                + 'kilometrien päässä. Kansallispuiston läpi Yardie Creekiin '
+                + 'asti kulkee päällystetty tie, joka sopii myös '
+                + 'matkailuautoille. Leirintäalueille ja rannoille vievät '
+                + 'sivutiet ovat enimmäkseen sorateitä, ja vuokrasopimus voi '
+                + 'kieltää niillä ajamisen, joten ehdot kannattaa lukea ennen '
+                + 'kuin kääntyy päällysteeltä.',
+              kuva: [
+                {
+                  tiedosto: 'QantasLink Fokker 100 VH-NHV Perth 2023 (02).jpg',
+                  lyhyt: 'QantasLinkin Fokker 100 laskeutuu Perthiin Learmonthista tulleen lennon päätteeksi.',
+                  selite: 'Maaliskuussa 2023 kuvattu QantasLinkin suihkukone on '
+                    + 'loppulähestymisessä Perthin lentoasemalle. Se oli '
+                    + 'lentänyt Exmouthin Learmonthin kentältä vuorolla '
+                    + 'QF1603.',
+                  lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Integrity Coach Lines Scania K113TRB (QCC Majestic) CVL2407 @ Mounts Bay Road,Perth CBD.jpg',
+                  lyhyt: 'Integrityn kaukoliikennebussi Perthin keskustassa, ja sama yhtiö ajaa Exmouthiin.',
+                  selite: 'Integrity Coach Linesin valkoinen Scania-linja-auto '
+                    + 'seisoo Mounts Bay Roadilla Perthin keskustassa '
+                    + 'elokuussa 2022. Yhtiön bussit ajavat Perthistä '
+                    + 'Exmouthiin kolmesti viikossa.',
+                  lahde: 'ZidaneHartono, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: '00 1836 West Coastel Highway (National Route 1) - Tropic of Capricorn.jpg',
+                  lyhyt: 'Matkailuauto Kauriin kääntöpiirin kyltin kohdalla Luoteisella rannikkomaantiellä.',
+                  selite: 'Toukokuussa 2007 matkailuauto on pysähtynyt '
+                    + 'tienvarteen Kauriin kääntöpiirin kyltin kohdalle North '
+                    + 'West Coastal Highwaylla. Exmouth on noin puolitoista '
+                    + 'leveysastetta kääntöpiiristä pohjoiseen.',
+                  lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Katkarapuja lahdelta',
+              teksti: 'Exmouthin tunnetuin herkku tulee kaupungin itäpuolen '
+                + 'lahdelta. Exmouthinlahti on opastetaulun mukaan yksi '
+                + 'harvoista paikoista maailmassa, joissa kalastetaan '
+                + 'kannattavasti viittä katkaraputyyppiä, ja arvostetuin '
+                + 'niistä on ruskea tiikerikatkarapu. Kausi kestää '
+                + 'toukokuusta marraskuuhun. Troolarit pyytävät yöllä, kun '
+                + 'katkaravut lähtevät meriheinäniityiltä ruoan etsintään, ja '
+                + 'pitävät taukoa täysikuun aikaan, jolloin katkaravut luovat '
+                + 'nahkansa. Vuosisaalis on keskimäärin noin 700 000 kiloa, '
+                + 'ja siitä puolet on tiikerikatkarapuja. Katkarapuja pyytää lahdella '
+                + 'vain yksi luvan saanut yhtiö, MG Kailis, ja paikallista saalista '
+                + 'myydään sen myymälässä sekä monen ravintolan listalla. '
+                + 'Pyynnin kunniaksi kaupungissa seisoo seitsemän metriä '
+                + 'korkea ja kaksi tonnia painava Big Prawn, lasikuituinen '
+                + 'läntinen kuningaskatkarapu vuodelta 2005. Se tehtiin '
+                + 'alun perin Kailisin tehtaan portille Learmonthiin ja '
+                + 'lahjoitettiin kaupungille 2013. Hirmumyrskykauden ajaksi '
+                + 'joulukuusta maaliskuun loppuun patsas viedään varastoon. '
+                + 'Paikalliset pitävät sitä aidomman näköisenä kuin Uuden '
+                + 'Etelä-Walesin Ballinan suurempaa Big Prawnia. Ulkona '
+                + 'syöminen maksaa Wikivoyagen mukaan noin kaksi kertaa niin '
+                + 'paljon kuin Perthissä, koska kuljetus ja työvoima ovat '
+                + 'kalliita ja kilpailua on vähän. Siksi moni laittaa ruokansa '
+                + 'itse. Kaupungissa on kaksi supermarkettia vierekkäin ja '
+                + 'kalatukku, josta saa tuoretta kalaa. Iltaa istutaan '
+                + 'pienpanimoissa, joissa on myös ruokaa ja tilaa '
+                + 'lapsiperheille. Omaa saalista saa kansallispuiston '
+                + 'rannoilla pyytää siimalla, mutta harppuunakalastus on '
+                + 'kielletty, ja rauhoitusalueiden rajat on tarkistettava '
+                + 'paikan päällä.',
+              kuva: {
+                tiedosto: 'The Big Prawn in Exmouth, Western Australia, 2024.jpg',
+                lyhyt: 'Exmouthin Big Prawn, seitsemänmetrinen lasikuituinen katkarapu, kohoaa pilviä vasten.',
+                selite: 'Vuonna 2024 kuvattu Big Prawn esittää läntistä '
+                  + 'kuningaskatkarapua, ja sen takana on pysäköity '
+                  + 'matkailuvaunuja. Patsas tehtiin lahden '
+                  + 'katkarapupyynnin kunniaksi.',
+                lahde: 'Aliceinthealice, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kommandoja ja pimeä päivä',
+              teksti: 'Rannikon perinteisiä omistajia ovat baiyungu- ja '
+                + 'yinigudura-kansat, ja riutan nimi Ningaloo tulee wajarrin '
+                + 'kielen sanasta, joka tarkoittaa niemeä tai mereen '
+                + 'työntyvää maata. Kaupungin nykyhistoria alkaa toisesta '
+                + 'maailmansodasta. Kun Japani oli vallannut Jaavan keväällä '
+                + '1942, liittoutuneet tarvitsivat sukellusveneilleen '
+                + 'tukikohdan pommikoneiden ulottumattomista. '
+                + 'Exmouthinlahdelle perustettiin Potshot-tukikohta, jossa '
+                + 'oli polttoaineproomu, lentokenttä ja tutka-asema. '
+                + 'Japanilaiset pommittivat lahtea toukokuussa 1943 kahtena '
+                + 'yönä osumatta mihinkään. Saman vuoden syyskuun '
+                + 'ensimmäisenä päivänä lahdelta lähti Singaporeen Krait, '
+                + 'entinen japanilainen kalastusalus. Sen kommandot meloivat '
+                + 'kokoontaitettavilla kajakeilla satamaan ja kiinnittivät '
+                + 'miinoja laivojen kylkiin, ja japanilaisten lähteiden '
+                + 'mukaan kuusi alusta upposi tai vaurioitui. Krait palasi '
+                + 'lahdelle 19. lokakuuta. Iskun muistomerkki on Learmonthin '
+                + 'laiturin lähellä, ja kuusi sodassa kuollutta saman '
+                + 'erikoisyksikön miestä on saanut nimensä Exmouthin '
+                + 'kaduille. Huhtikuun 20. päivänä 2023 '
+                + 'kaupunki oli täydellisen auringonpimennyksen reitillä, ja '
+                + 'pimennystä tuli katsomaan yli 20 000 ihmistä, vaikka '
+                + 'asukkaita on alle 3 000. Osavaltio käytti järjestelyihin '
+                + 'noin 20 miljoonaa Australian dollaria. Riutan suojelusta '
+                + 'on myös kiistelty. 2000-luvun alussa suunniteltiin '
+                + 'lomakeskusta Mauds Landingiin, tärkeälle '
+                + 'merikilpikonnien pesimärannalle. Kirjailija Tim Winton '
+                + 'lahjoitti vuonna 2002 saamansa 25 000 dollarin '
+                + 'kirjallisuuspalkinnon vastustajien kampanjalle, eikä '
+                + 'lomakeskusta rakennettu. Winton käsikirjoitti ja kertoi '
+                + 'myös ABC:n kolmiosaisen dokumenttisarjan Ningaloo '
+                + 'Nyinggulu vuonna 2023, ja se on hyvä johdatus riuttaan jo '
+                + 'ennen matkaa.',
+              kuva: {
+                tiedosto: 'April 20, 2023 Solar eclipse.jpg',
+                lyhyt: 'Täydellinen auringonpimennys Exmouthissa 20.4.2023, ja kuun ympärillä hehkuu korona.',
+                selite: 'Kuva on otettu Exmouthissa pimennyksen täydellisen '
+                  + 'vaiheen aikana. Kuun musta kiekko peittää auringon, ja '
+                  + 'sen ympärillä loistaa valkoinen korona. Kiekon '
+                  + 'vasemmassa reunassa erottuu punertavaa hehkua.',
+                lahde: 'Dougie3000, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Rannalta riutalle, veneellä jättiläisten luo',
+              teksti: 'Cape Rangen kansallispuistossa riutalle pääsee suoraan '
+                + 'hiekalta. Parhaat snorklauspaikat ovat niemen länsipuolella '
+                + 'noin 50 kilometrin ajomatkan päässä kaupungista, ja '
+                + 'tunnetuin niistä on Turquoise Bay. Lahden eteläkärjessä '
+                + 'käy virta, jota kokeneet snorklaajat käyttävät hyväkseen: '
+                + 'veteen mennään Drift Loopin pysäköintipaikalta, ja virta '
+                + 'kuljettaa pohjoiseen riutan yli. Virran voi välttää lahden '
+                + 'pohjoispäässä. Oyster Stacksin kivillä snorklataan vain '
+                + 'nousuveden aikaan, koska matalalla vedellä terävät kivet ja '
+                + 'kuoret ovat liian lähellä. Ennen rantaa kannattaa poiketa '
+                + 'Milyeringin opastuskeskuksessa, jossa kerrotaan puistosta '
+                + 'ja riutasta ja voi vuokrata snorkkelin ja räpylät. Puiston tien '
+                + 'päässä Yardie Creekin rotkossa on vettä ympäri vuoden, ja '
+                + 'huhti–syyskuussa sinne tehdään tunnin veneretkiä. '
+                + 'Rotkon kallioilla voi nähdä mustakylkikalliowallabeja, ja '
+                + 'Mandu Mandun rotkoon vie kolmen kilometrin edestakainen '
+                + 'polku. Valashairetket lähtevät kaupungista, ja haita '
+                + 'nähdään eniten huhti–kesäkuussa. Veneiden apuna ovat '
+                + 'tähystyslentokoneet, jotka etsivät matalalla ja '
+                + 'rauhallisesti uivia yksilöitä. Kun hai löytyy, snorklaajat '
+                + 'hyppäävät veteen sen reitille ja uivat rinnalla niin kauan '
+                + 'kuin pysyvät mukana. Koskeminen on kielletty, eikä '
+                + 'laitesukellus ole sallittua. Ryhävalaat kulkevat rannikon '
+                + 'ohi kesä–marraskuussa. Valekaretit, '
+                + 'liemikilpikonnat ja karetit nousevat rannoille munimaan, '
+                + 'ja Jurabin kilpikonnakeskus opastaa seuraamaan pesintää '
+                + 'häiritsemättä. Noin 150 kilometriä etelämpänä Coral '
+                + 'Bayssa järjestetään retkiä mantojen luo ja '
+                + 'lasipohjaveneajeluja.',
+              kuva: {
+                tiedosto: 'Turquoise Bay Bundera.jpg',
+                lyhyt: 'Turquoise Bayn valkoinen hiekkaranta ja kirkas laguuni Cape Rangen kansallispuistossa.',
+                selite: 'Maaliskuussa 2008 kuvatun lahden matalassa, '
+                  + 'turkoosissa vedessä erottuu tummia riuttalaikkuja aivan '
+                  + 'rannan tuntumassa. Kaukana taustalla kohoavat Cape '
+                  + 'Rangen matalat kukkulat.',
+                lahde: 'Robert Young, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Vettä, varauksia ja varovaisuutta',
+              teksti: 'Exmouthissa on kuuma aavikkoilmasto, ja marras–'
+                + 'huhtikuussa lämpötila nousee kansallispuistossa usein yli '
+                + '40 asteen. Sadetta tulee vähän, mutta helmi–toukokuussa se '
+                + 'voi tulla rankkasateena, jolloin päätiekin voi jäädä veden '
+                + 'alle. Virtaavan veden yli ei pidä ajaa, eikä sateella '
+                + 'kannata lähteä sorateille. Hirmumyrskyt ovat todellinen '
+                + 'vaara: Vance toi vuonna 1999 Learmonthiin Australian '
+                + 'mantereen kovimman koskaan mitatun tuulenpuuskan, 267 '
+                + 'kilometriä tunnissa, ja Narelle vaurioitti kaupunkia '
+                + 'maaliskuussa 2026. Cape Rangen puistossa ei ole varjoa, '
+                + 'juomavettä eikä polttoainetta. Vettä on varattava noin '
+                + 'viisi litraa henkeä kohden päivässä, ja tankki täytetään '
+                + 'kaupungissa. Puistoon peritään sisäänpääsymaksu autoa '
+                + 'kohden. Leirintäpaikkoja on tarkoituksella vähän, joten ne '
+                + 'on varattava etukäteen, eikä koiria saa tuoda puistoon. '
+                + 'Kaupungissa puhelin toimii Telstran ja Optusin verkoissa, '
+                + 'mutta puistossa kenttää ei ole lainkaan, lukuun ottamatta '
+                + 'opastuskeskuksen langatonta yhteyspistettä. Hämärässä ja '
+                + 'pimeällä ajetaan hyvin hitaasti, sillä kengurut, wallabit '
+                + 'ja emut liikkuvat silloin teillä, eivätkä niiden silmät '
+                + 'heijasta valoa kuten lampaiden. Aurinkoa kannattaa välttää '
+                + 'päivän kuumimpina tunteina. Riutta on herkkä: lämpöaallot '
+                + 'vaalensivat Ningaloon koralleja vuosina 2011 ja 2025, ja '
+                + 'Narelle tappoi Länsi-Australian rannoilla yli tuhat '
+                + 'merikilpikonnaa. Meripuisto on jaettu vyöhykkeisiin, '
+                + 'joilla on eri säännöt kalastukselle ja muulle toiminnalle, '
+                + 'joten ne on tarkistettava paikan päällä ennen veteen '
+                + 'menoa.',
+              kuva: {
+                tiedosto: 'Ningaloo WA, local kangaroo.jpg',
+                lyhyt: 'Vuorikenguru illan matalassa valossa Ningaloon rannikolla.',
+                selite: 'Kesäkuussa 2016 kuvattu vuorikenguru seisoo kuivan '
+                  + 'pensaikon edessä, ja taustalla häämöttää rakennus. '
+                  + 'Kuvaajan mukaan kengurut kiertelevät seudun '
+                  + 'leirintäalueilla.',
+                lahde: 'Parriswrightt, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'elaimet',
