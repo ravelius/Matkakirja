@@ -35,9 +35,10 @@ namespace Matkakirja.Natiivi
             Kuviot.AsetaArkki(arkki);
             Kirjasimet.Aseta(arkki, Kirjasin.Luku);
             var yla = Rakenne.El("mk-nahtavyydet__yla", arkki, PickingMode.Ignore);
-            otsikko = Rakenne.Teksti("Nähtävyydet", "mk-nahtavyydet__otsikko", yla);
-            Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
-            Rakenne.Nappi("×", "mk-galleria__rasti", Sulje, yla);
+            // Web .tiivis-lehtiarkki .lehti-nimio: versaalinimiö keskellä (× ei siirrä keskikohtaa).
+            otsikko = Rakenne.Teksti("NÄHTÄVYYDET", "mk-nahtavyydet__otsikko", yla);
+            Kirjasimet.Aseta(otsikko, Kirjasin.KoneBold);
+            Rakenne.Nappi("×", "mk-galleria__rasti mk-nahtavyydet__sulje", Sulje, yla);
             var v = new ScrollView(ScrollViewMode.Vertical);
             v.AddToClassList("mk-nahtavyydet__vieritys");
             v.verticalScrollerVisibility = ScrollerVisibility.Hidden;

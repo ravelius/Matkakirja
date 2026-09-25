@@ -23,10 +23,24 @@
     border-bottom-color: rgba(70, 51, 31, 0.25);
 }
 
+.mk-nahtavyydet__yla {
+    justify-content: center;
+}
+
+/* Web .tiivis-lehtiarkki .lehti-nimio: clamp(1.2rem, 4.5vw, 1.6rem), letter-spacing 0.1em (UITK: em/100 → 10),
+ * versaalit keskellä, #16130f. */
 .mk-nahtavyydet__otsikko {
     flex-grow: 1;
-    font-size: 24px;
-    color: #3a2a1a;
+    font-size: 19.2px;
+    letter-spacing: 10px;
+    -unity-text-align: middle-center;
+    color: #16130f;
+    margin: 0 36px;
+}
+
+.mk-nahtavyydet__sulje {
+    position: absolute;
+    right: 0;
 }
 
 .mk-nahtavyydet__vieritys {
