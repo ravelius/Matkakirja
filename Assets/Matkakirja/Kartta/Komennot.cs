@@ -76,6 +76,8 @@ namespace Matkakirja
     ///                             VU-tahtia jäljittelevä kirkkaus ja renkaat
     ///   mastot tila               mastot, näkyvät, valot, valittu, renkaat ja hämärä lokiin
     ///   mastot osoita <id>        napauttaa maston puoliväliä (napautuksen päästä päähän -testi)
+    ///   mastot yovalot <voimakkuus> [suodatettu|raaka]   yövalojen voimakkuus (oletus 0,85) ja painon lähde heti
+    ///                             (suodatettu = poltossa leivottu w, varjostin käyttää luminanssia; RadioMastot.PaivitaYovalot)
     ///   hamara <0–1>              radion hämärä suoraan (tileset, napakannet, mastot, tausta)
     ///   s2meri r g b kynnys       Sentinelin meren värjäys heti (sRGB 0–1 tai 0–255; kynnys = sRGB-luma, 0 = pois;
     ///                             oletus 17 46 92 0.18)
@@ -653,6 +655,12 @@ namespace Matkakirja
                     if (rm == null) { Debug.LogWarning("MATKAKIRJA komento: RadioMastot puuttuu"); break; }
                     if (o.Length > 1 && o[1] == "koe") rm.Koe(true, o.Length > 2 ? int.Parse(o[2], CultureInfo.InvariantCulture) : 115);
                     else if (o.Length > 1 && o[1] == "pois") rm.Koe(false);
+                    else if (o.Length > 2 && o[1] == "yovalot")
+                    {
+                        rm.yovalojenVoimakkuus = Mathf.Max(0f, float.Parse(o[2], CultureInfo.InvariantCulture));
+                        if (o.Length > 3) RadioMastot.YovalotSuodatettu = o[3] == "suodatettu";
+                        Debug.Log($"MATKAKIRJA mastot: yövalot {rm.yovalojenVoimakkuus:0.00}, {(RadioMastot.YovalotSuodatettu ? "suodatettu" : "raaka")}");
+                    }
                     else if (o.Length > 2 && o[1] == "osoita")
                     {
                         if (rm.RuutuPaikka(o[2], out var mp)) kierto.Napauta(mp);

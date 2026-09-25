@@ -133,7 +133,9 @@ namespace Matkakirja.Natiivi
                 new Rivi { Nimi = "Maasto ja pallo", Tekija = KarttaKerrokset.Tekijatiedot, EiLisenssia = true },
                 // Lennon pinta satelliittiin (Natiiviseppä build 10, Fable: EOX:n täysi muoto, s2/laatat.json attribuutioEox).
                 new Rivi { Nimi = "Lennon pinta", Tekija = "NASA Earth Observatory (Blue Marble Next Generation)", EiLisenssia = true },
-                new Rivi { Nimi = "Lennon pinta, pilvetön", Tekija = "EOxCloudless https://cloudless.eox.at by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016 & 2017)", EiLisenssia = true },
+                // Radiolinssin yövalot (Karttasepän sarja yovalot/2026-09-25, VIIRS, public domain; RadioMastot.YovaloUrl).
+                new Rivi { Nimi = "Radion yövalot", Tekija = "NASA Earth Observatory (Black Marble)", EiLisenssia = true },
+                new Rivi { Nimi = "Lennon pinta, pilvetön",Tekija = "EOxCloudless https://cloudless.eox.at by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016 & 2017)", EiLisenssia = true },
                 new Rivi { Nimi = "Lentokone (DC-3-tyyppinen potkurikone)", Tekija = "Pelin oma malli", Lisenssi = "CC0 (public domain)" },
                 new Rivi { Nimi = "EB Garamond (varafontti)", Tekija = "Georg Duffner ja Octavio Pardo", Lisenssi = "SIL Open Font License 1.1",
                     Huom = "American Typewriter, Iowan Old Style ja Snell Roundhand ovat iOS:n järjestelmäfontteja." },
