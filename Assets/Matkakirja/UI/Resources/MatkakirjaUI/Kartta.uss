@@ -873,19 +873,9 @@
     background-color: rgba(18, 12, 4, 0.3);
 }
 
-/* E3: kuvaton kortti ja lisäkaupunki napautuspisteen vieressä ilman himmennystä (web .fokuskohde-popup:
- * kartta näkyy). Vapaa = kortti absoluuttisena (ankkuroitu tai raahattu), kerroksessa ei täytettä. */
-.mk-nosto__kerros--ankkuroitu {
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.mk-nosto__kerros--vapaa {
-    padding: 0;
-}
-
 .mk-nosto {
     width: 100%;
-    max-width: 544px;
+    max-width: 544px; /* vara ennen ensimmäistä asettelua; leveys koodista (Nostokortti.Mitoita, löydökset 130/135) */
     max-height: 88%;
     /* Web .fokuskohde-popup: täyte 13,6 / 15,2 / 15,2 px molemmissa vaiheissa (mitattu 24.9. b11). */
     padding: 13.6px 15.2px 15.2px 15.2px;
@@ -896,18 +886,10 @@
     color: #211d18;
 }
 
-.mk-nosto--kohde {
-    max-width: 384px;
-}
-
+/* Löydös 135: kohde ja skandaali samaan kokoon kuin muut (leveys koodista, Nostokortti.Mitoita); skandaalilla vain tyyli. */
 .mk-nosto--looppi {
-    max-width: 640px;
     background-color: #f6ecc6;
     border-color: rgba(122, 85, 20, 0.45);
-}
-
-.mk-nosto--esittely {
-    max-width: 760px;
 }
 
 .mk-nosto__sisus {
@@ -1009,6 +991,11 @@
     border-radius: 6px;
     overflow: hidden;
     background-color: rgba(70, 51, 31, 0.1);
+}
+
+/* Löydös 130: kehys kuvan omassa muodossa korkeuskattoon asti; katetun kuvan sivuilla kortin paperi, ei sävyä. */
+.mk-nosto__kuvakehys--ladattu {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .mk-nosto__kuva {
@@ -1790,30 +1777,6 @@
     padding: 0;
     margin: 0;
     color: rgb(88, 70, 51);
-}
-
-/* Nostokortin kaksipalstataitto ≥ 1100 pt (web css/fokusnosto.css osio 13, mitattu 24.9. b12 1194 × 834 ja
-   1366 × 1024): kuvapalsta (kuva ja kuvateksti) vasemmalla, tekstipalsta oikealla, väli 1,5 rem, palstat alkavat
-   samalta yläreunalta (align-items flex-start). Kuvapalstan leveys tulee koodista (Nostokortti.MitoitaKuvapalsta). */
-.mk-nosto__rivi {
-    flex-direction: row;
-    align-items: flex-start;
-}
-
-.mk-nosto__kuvapalsta {
-    flex-shrink: 0;
-    margin-right: 24px;
-}
-
-.mk-nosto__kuvapalsta > .mk-nosto__kuvasarja {
-    margin-top: 0;
-}
-
-.mk-nosto__tekstipalsta {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0;
-    min-width: 0;
 }
 
 /* Lyhyt kuvateksti kotelona (Nostokortti.Kuvateksti): rivi rivittyy ja keskittyy kuten webin text-align center. */
