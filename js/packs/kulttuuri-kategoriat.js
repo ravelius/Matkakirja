@@ -113799,6 +113799,248 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Cable Beach',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Broome, Western Australia; Broome International
+       * Airport; Sun Picture Gardens; Yawuru; Cable Beach; Cape Leveque
+       * Road; Cape Leveque; Dampier Peninsula; Beagle Bay Community,
+       * Western Australia; Horizontal Falls; Irukandji jellyfish; Time in
+       * Australia) ja Wikivoyagen Broome-sivulta — teksti omaa. Nostojen
+       * aiheita (riji, Dampier, kuvernööri ja Port of Pearls, sukeltajat ja
+       * painekammio, Women of Pearling, Chinatownin kielet, lennätinkaapeli,
+       * dinosaurusten jäljet, Pinctada maxima, Staircase to the Moon,
+       * kahlaajat, mangrovet), gallerian aiheita (Koolama, Dampier
+       * Terrace, Streeter's Jetty, japanilainen hautausmaa, kamelit) eikä
+       * saapumistekstin aiheita toisteta. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin.
+       * Pystykuva: Sun Picture Gardensin katsomo hämärässä (CC0).
+       * Katuvalokuvan "matalina pidetyt" valot perustuvat Commonsin
+       * tiedostonimeen. Beagle Bayn kuvan nimessä on kaarevat lainausmerkit
+       * (U+2018/U+2019), kuten Commonsissa.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'A crowd settle in at dusk to watch a film at Sun Picture Gardens, Broome, WA, Australia 03.jpg',
+          lyhyt: 'Katsojat asettuvat tuoleihin Sun Picturesin ulkoteatterissa illan hämärtyessä.',
+          selite: 'Sun Picture Gardensin katsomo lokakuussa 2024 hämärän '
+            + 'laskeutuessa. Valkokangas on taivasalla, ja katsojat istuvat '
+            + 'kangasselkäisissä tuoleissa; Broomen lentokentälle laskeutuvat '
+            + 'koneet lentävät teatterin yli.',
+          lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+        },
+        kappale: 'Broomeen tullaan useimmiten lentäen, sillä Perthiin on '
+          + 'maanteitse yli kaksituhatta kilometriä, ja kone laskeutuu lähes '
+          + 'keskelle kaupunkia. Kuivana kautena toukokuusta lokakuuhun sade '
+          + 'on harvinaista ja kaupungissa on eniten matkailijoita; '
+          + 'sadekaudella ilma on kuuma ja kostea, ja moni yritys sulkee '
+          + 'ovensa. Iltaisin elokuvaa katsotaan maailman vanhimmassa yhä '
+          + 'toimivassa ulkoteatterissa, lauantaiaamuisin kierretään '
+          + 'oikeustalon markkinat, ja päiväretki pohjoiseen vie Dampierin '
+          + 'niemimaalle simpukankuorin koristeltuun kirkkoon. Meressä on '
+          + 'muistettava suistokrokotiilit ja polttavat meduusat.',
+        artikkeli: {
+          nimi: 'Matkailijan Broome',
+          teksti: 'Broomessa lentokenttä on keskellä kaupunkia, ja elokuvaa katsotaan taivasalla.',
+          nosto: 'Sun Picturesissa elokuvia on näytetty taivasalla joulukuusta '
+            + '1916, ja vielä 1970-luvulle asti nousuvesi tulvi usein '
+            + 'katsomoon kesken näytöksen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kiitotie keskellä kaupunkia',
+              teksti: 'Broome on kaukana kaikesta: Perthiin on maanteitse noin '
+                + '2 050 kilometriä sisämaan Great Northern Highwayta ja yli '
+                + '2 300 kilometriä rannikkoa pitkin, Darwiniin lähes 1 900 '
+                + 'kilometriä. Pitkän matkan bussit tulevat molemmista '
+                + 'suunnista, mutta useimmat matkailijat saapuvat lentäen. '
+                + 'Qantas ja Virgin Australia lentävät Perthistä noin kahdessa '
+                + 'ja puolessa tunnissa, ja Airnorthin kone tulee Darwinista '
+                + 'Kununurran kautta. Nimestään huolimatta Broome International '
+                + 'Airportilta ei kesäkuussa 2026 lentänyt yhtään säännöllistä '
+                + 'ulkomaan vuoroa, sillä Singaporen kausireitti oli jälleen '
+                + 'tauolla. Kenttä on alle kilometrin päässä kaupungin '
+                + 'postitoimistosta, ja kiitotie erottaa Chinatownin keskustan '
+                + 'Cable Beachin hotelleista ja rannasta. Matkaoppaat neuvovat, '
+                + 'ettei turvatarkastukseen kannata mennä liian aikaisin, koska '
+                + 'lähtöaulan puolella ei ole ilmastointia. Kaupunki on '
+                + 'hajanainen: Chinatownista Cable Beachille on seitsemän '
+                + 'kilometriä, jonka kävelee tunnissa, mutta helteessä sitä ei '
+                + 'kannata tehdä. Elokuussa 2025 aloitti julkinen TransBroome-'
+                + 'bussilinja 890 Town Beachin ja Cable Beachin välillä, kun '
+                + 'aiempi yksityinen bussiyhtiö oli lopettanut. Pääteiden '
+                + 'varsilla on pyöräteitä, mutta varjoa niillä ei juuri ole.',
+              kuva: [
+                {
+                  tiedosto: 'GLAMPeak Broome 25-280618 gnangarra-129.jpg',
+                  lyhyt: 'Airnorthin matkustajakone rullaa Broomen kentällä punaisen maan keskellä.',
+                  selite: 'Airnorthin suihkukone rullaa Broomen lentokentällä '
+                    + 'kesäkuussa 2018. Kuva on otettu toisen koneen ikkunasta, '
+                    + 'ja kiitoteiden välissä näkyy Kimberleylle tyypillistä '
+                    + 'punaista pindan-maata.',
+                  lahde: 'Gnangarra, Wikimedia Commons (CC BY 2.5 AU)',
+                },
+                {
+                  tiedosto: 'Broome International Airport terminal, September 2025 01.jpg',
+                  lyhyt: 'Broomen lentoaseman saapuvien matkustajien halli syyskuussa 2025.',
+                  selite: 'Broome International Airportin saapumisaula '
+                    + 'syyskuussa 2025. Matala, harjakattoinen rakennus on pieni, '
+                    + 'vaikka kenttä on koko Kimberleyn alueen lentoliikenteen '
+                    + 'solmukohta.',
+                  lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Streetlights on the flight path to Broome airport, WA, Australia kept low 01.jpg',
+                  lyhyt: 'Jalkakäytävä Chinatowniin kulkee lentokentän laidalla matalien katuvalojen alla.',
+                  selite: 'Kyltti opastaa Short Streetille ja Chinatowniin '
+                    + 'lentokentän laidalla. Laskeutuvien koneiden reitin alla '
+                    + 'katuvalot on pidetty matalina, ja taustalla näkyvät kentän '
+                    + 'rakennukset.',
+                  lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Merestä, puroista ja markkinoilta',
+              teksti: 'Broomen keittiö nojaa mereen. Yawuru-kansan perinteinen '
+                + 'ruokavalio koostui kaloista, kilpikonnista, rauskuista, '
+                + 'dugongeista, taskuravuista ja mangrovesimpukoista, ja '
+                + 'pindan-pensaikon syötäville hedelmille ja siemenille heidän '
+                + 'kielessään on yli yhdeksänkymmentä nimeä. Yawurujen kalastus '
+                + 'seuraa vuodenaikoja: viileällä kuivakaudella saalis haetaan '
+                + 'avomeren sijaan puroista, ja kosteana kautena pyydetään '
+                + 'rannikon parvikaloja, kuten piikkimakrilleja ja keltejä. '
+                + 'Urheilukalastajille Broome on yksi maailman parhaista '
+                + 'paikoista pyydystää purjekalaa, ja kymmenkunta yritystä vie '
+                + 'veneillä kalaan tai katselemaan rannikkoa. Lauantaiaamuisin '
+                + 'kahdeksasta puoleenpäivään kaupunkilaiset kokoontuvat '
+                + 'Courthouse-markkinoille vanhan oikeustalon luo Frederick '
+                + 'Streetin ja Hamersley Streetin kulmaan. Muutaman korttelin '
+                + 'päässä Hamersley Streetillä toimii Matso\'s-panimo '
+                + 'ravintoloineen entisessä kauppa- ja kapteenintalossa lähellä '
+                + 'Roebuck Bayn rantaa. Sen erikoisuus on alkoholipitoinen '
+                + 'inkiväärijuoma, sillä panimon mukaan tavalliselle oluelle on '
+                + 'Broomessa liian kuuma. Pääasiallinen ruokakauppa on lentokentän '
+                + 'vieressä Frederick Streetillä, ja se on auki joka päivä '
+                + 'aamusta iltaan.',
+              kuva: {
+                tiedosto: 'Matso\'s Broome Brewery, 2019 (01).jpg',
+                lyhyt: 'Matso\'s-panimo toimii puutalossa Hamersley Streetillä palmujen ja säleaidan takana.',
+                selite: 'Matso\'s Broome Brewery Hamersley Streetillä '
+                  + 'tammikuussa 2019. Aaltopeltikattoinen puutalo oli aiemmin '
+                  + 'kauppa ja kapteeni Gregoryn asunto, ja puutarhan takaa '
+                  + 'pilkottaa meri.',
+                lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Elokuvia tähtitaivaan alla',
+              teksti: 'Chinatownin Carnarvon Streetillä toimii Sun Pictures, '
+                + 'joka pääsi vuonna 2004 Guinnessin ennätysten kirjaan '
+                + 'maailman vanhimpana yhä toimivana ulkoelokuvateatterina. '
+                + 'Paikalla oli alun perin japanilaisen Yamasakin perheen '
+                + 'kauppa, jonka osaan perhe rakensi nō-teatterin. '
+                + 'Helmenpyyntiyrittäjä Ted Hunter osti talon 1913, ja ensimmäinen näytös pidettiin '
+                + '9. joulukuuta 1916 täydelle katsomolle. Nousuvesi tulvi '
+                + 'usein katsomoon, ja kadulla saattoi näytöksen jälkeen olla '
+                + 'vettä, kunnes vuonna 1974 rakennettiin pato. Katsomo oli myös '
+                + 'jaettu: vuoteen 1967 asti eurooppalaiset istuivat keskellä, '
+                + 'muut valkoiset ja aasialaiset vasemmalla, ja aboriginaalit '
+                + 'ohjattiin omasta ovestaan oikean laidan puupenkeille. '
+                + 'Järjestely päättyi boikottiin ja uusiin syrjinnän '
+                + 'vastaisiin lakeihin. Nykyään teatteri näyttää useita '
+                + 'elokuvia joka ilta, mikä on ulkoteatterille harvinaista, ja '
+                + 'vuonna 2009 siellä oli länsiaustralialaisen '
+                + 'musikaalielokuvan Bran Nue Daen ensi-ilta, jossa tähdet '
+                + 'kävelivät punaisella multamatolla. Elokuun lopulla kaupunki '
+                + 'viettää Shinju Matsuria, helmen juhlaa, joka juhlii '
+                + 'helmenpyynnin mukanaan tuomien kulttuurien sekoittumista. '
+                + 'Short Streetin galleria myy Kimberleyn ja Pilbaran '
+                + 'aboriginaalien nykytaidetta.',
+              kuva: {
+                tiedosto: 'Sun Picture Gardens, 2019 (02).jpg',
+                lyhyt: 'Sun Picturesin aaltopeltinen julkisivu Carnarvon Streetillä Chinatownissa.',
+                selite: 'Sun Picture Gardensin katujulkisivu Carnarvon '
+                  + 'Streetillä tammikuussa 2019. Aaltopeltiseinäisen talon '
+                  + 'päädyssä lukee Movies Nightly, ja katsomo on rakennuksen '
+                  + 'takana taivasalla.',
+                lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Päiväretki Dampierin niemimaalle',
+              teksti: 'Broomesta pohjoiseen avautuu Dampierin niemimaa, jonka '
+                + 'perinteisiä omistajia ovat bardit, nyulnyulit ja '
+                + 'jabirrjabirrit. Sen halki kulkee 205 kilometrin Cape Leveque '
+                + 'Road. Tien keskiosa oli pitkään hiekkatietä, joka '
+                + 'suljettiin sadekaudella usein tulvien vuoksi, mutta '
+                + 'loppuvuodesta 2020 myös se päällystettiin. Suunnilleen '
+                + 'puolivälissä on Beagle Bayn aboriginaaliyhteisö, joka sai '
+                + 'alkunsa trappistimunkkien lähetysasemana noin 1890. Sen '
+                + 'valkoisen kirkon rakensivat ensimmäisen maailmansodan '
+                + 'aikana internoidut paikalliset saksalaiset, ja sisältä se on '
+                + 'koristeltu helmiäisellä sekä kauri-, volutta- ja '
+                + 'oliivikotiloiden kuorilla. Yhteisön hautausmaalla '
+                + 'noudatetaan aboriginaalien tapaa, jonka mukaan kuolleiden '
+                + 'nimiä ei mainita. Niemimaan kärjessä Cape Levequessa on '
+                + 'vuonna 1911 käyttöön otettu majakka, rannoilla pesii '
+                + 'kilpikonnia, ja ryhävalaat tulevat suojaisten saarten '
+                + 'lomaan synnyttämään. Kauempana koillisessa, Buccaneerin '
+                + 'saaristossa, ovat vaakasuorat vesiputoukset: jopa '
+                + 'kymmenen metrin vuorovesi ryöppyää kahden kapean '
+                + 'kalliosolan läpi. Broomesta sinne tehdään lentoretkiä. '
+                + 'Vuodesta 2026 veneajelut solien läpi on lopetettu, sillä '
+                + 'ne on todettu vaarallisiksi ja dambimangarit pitävät paikkaa '
+                + 'pyhänä.',
+              kuva: {
+                tiedosto: 'Altar of Beagle Bay ‘Mother of Pearl’ church.jpg',
+                lyhyt: 'Beagle Bayn kirkon alttari on koristeltu helmiäisellä ja simpukankuorilla.',
+                selite: 'Beagle Bayn kirkon alttari syyskuussa 2024. '
+                  + 'Turkoosien seinien holvikaaret ja alttarin etuosa on '
+                  + 'peitetty helmiäisellä ja simpukankuorilla, ja alttarin '
+                  + 'vieressä seisoo Jeesus-patsas.',
+                lahde: 'Dr-ziego, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Kuivakausi, krokotiilit ja etikka',
+              teksti: 'Broomessa on kaksi vuodenaikaa. Kuivana kautena '
+                + 'toukokuusta lokakuuhun sataa tuskin lainkaan, päivät ovat '
+                + 'noin kolmenkymmenen asteen lämpöisiä, ja matkailijoita on '
+                + 'eniten. Sadekausi joulukuusta maaliskuuhun tai huhtikuuhun '
+                + 'on kuuma ja kostea: kolme neljäsosaa vuoden sateesta tulee '
+                + 'tammi–maaliskuussa, trooppiset syklonit ovat mahdollisia, ja '
+                + 'moni yritys sulkee ovensa. Yawurut erottavat vuodessa '
+                + 'kuitenkin kuusi kautta, esimerkiksi viileän ja kuivan '
+                + 'barrganan ja kostean marrulin. Meressä on varottava kahta '
+                + 'asiaa. Kuutiomeduusoja voi esiintyä marraskuusta '
+                + 'huhtikuuhun, ja lähes läpinäkyvää irukandji-meduusaa on '
+                + 'vaikea huomata. Rantojen kylteissä neuvotaan kaatamaan '
+                + 'polttoon etikkaa ja hakeutumaan hoitoon; hätänumero on 000. '
+                + 'Suistokrokotiileja on toisinaan nähty Cable Beachinkin '
+                + 'edustalla, eikä Town Beachilla saa perata kaloja, koska '
+                + 'perkeet houkuttelevat krokotiileja. Cable Beachin kallioiden '
+                + 'pohjoispuolella rannalla saa ajaa nelivetoautolla, ja '
+                + 'laskuvedellä rantaa pääsee näin tutkimaan paljon kauemmas '
+                + 'kuin jalan. Kuivassa ilmassa hiki haihtuu niin '
+                + 'nopeasti, ettei janoa huomaa, joten vettä on juotava '
+                + 'paljon. Kaupungista kannattaa lähteä vähintään puolillaan '
+                + 'olevalla tankilla, sillä seuraaviin kaupunkeihin on satoja '
+                + 'kilometrejä. Kellot käyvät Länsi-Australian ajassa, '
+                + 'kahdeksan tuntia UTC:tä edellä, eikä kesäaikaa käytetä.',
+              kuva: {
+                tiedosto: 'Town Beach and environs at high tide, Broome, WA, Australia 06.jpg',
+                lyhyt: 'Town Beachin kyltti varoittaa suistokrokotiileista ja polttavista meduusoista.',
+                selite: 'Varoituskyltti Town Beachilla lokakuussa 2024: '
+                  + 'alueella voi olla suistokrokotiileja ja polttavia meduusoja, '
+                  + 'kalojen perkaaminen on kielletty, ja polttoon neuvotaan '
+                  + 'kaatamaan etikkaa. Kyltin takana välkkyy Roebuck Bayn '
+                  + 'turkoosi vesi.',
+                lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
