@@ -111926,6 +111926,368 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Saint Helena plover',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Saint Helena; Saint Helena Airport; RMS St Helena
+       * (1989); RAF Ascension Island; Diana's Peak; Flora of Saint Helena;
+       * Saint Helena National Trust; Museum of Saint Helena; Sandy Bay,
+       * Saint Helena; Whale shark) ja Wikivoyagen Saint Helena (island)-
+       * ja Ascension Island -sivuilta — teksti omaa. Wikivoyagen tiedot
+       * (lauantain lento ja yö Johannesburgissa, näköalaterassi,
+       * vieraspoijut ja VHF-kanavat, Ascensionin e-viisumi, hedelmät
+       * rahtilaivan jälkeen, ravintolat ja baarit, Farm Lodge, neljä
+       * kahviplantaasia ja Harrods-vertailu, Saint-murteen esimerkit,
+       * The Canister, Post Box Walks, Heart-Shaped Waterfallin 90 metriä,
+       * Lot's Wife's Ponds, delfiinilajit, pimeän taivaan kultataso,
+       * pankki ilman automaattia ja turistikortti, evakuointivakuutus,
+       * nopeusrajoitus Jamestownissa, skorpionit ja kivivyöryt) on
+       * päivitetty eri vuosina 2018–2026, joten tekstissä ei ole
+       * aukioloaikoja eikä hintoja. Ravintolan nimi on kyltin mukaan
+       * Anne's Place (Wikivoyage kirjoittaa Ann's Place). Postilaatikon
+       * leimasin reitin päässä on Commons-kuvien "Post Box (41074069982)"
+       * ja "Stamped (40186023465)" kuvauksista, rekisterikilpien
+       * nelinumeroisuus kuvan "Number plates (39247444030)" kuvauksesta.
+       * Lentoaseman rakentamista, Walvis Bayn kautta alkanutta
+       * ensimmäistä reittilentoa, Plantation Housea ja Jonathania, High
+       * Knollia ja Diana's Peakin puistohistoriaa kertovat jo karttanostot
+       * (js/packs/maastokohteet-shn.js), joten opas kertoo vain matkustajan
+       * käytännön. Nostojen ja gallerian (Jamestownin laakso ja vuoden 1846
+       * aallot, St. James, Jaakobin tikkaat, Consulate Hotel, High Knoll
+       * Fort, tikkuri, Napoleonin koko kategoria), SHN-maalehden (Fernão
+       * Lopes, löytöpäivä, komppanian siirtomaa, Rupert's Bayn vapautetut,
+       * pihtihäntä, eebenpuu, Millennium Forest, Halley, Maskelyne,
+       * Darwin, Forsterit, kahvin historia, tungi, tonnikala ja hunaja,
+       * plo ja kalapihvit, tikkaiden juoksu, kriketti, Governor's Cup ja
+       * postilaivan viiden vuorokauden matka, ympärysuinti),
+       * Afrikan-kulttuurin (Longwood, Jonathan, saaren kahvi),
+       * skandaalien (Longwood, Deadwoodin leiri) ja saapumistekstin
+       * aiheita ei toisteta. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta, ja kuvat katsottu silmin. Pystykuva:
+       * puusaniainen ja kaalipuu Diana's Peakin kansallispuistossa
+       * (Kevstan, CC BY-SA 4.0).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Tree fern and cabbage tree on Saint Helena.jpg',
+          lyhyt: "Kotoperäinen puusaniainen ja kaalipuu Diana's Peakin pilvimetsässä maaliskuussa 2020.",
+          selite: 'Maaliskuussa 2020 kuvattu kotoperäinen puusaniainen '
+            + "levittää lehtensä Diana's Peakin kansallispuistossa harmaan "
+            + 'pilvikaton alla, ja sen vieressä kasvaa tummanvihreä, '
+            + 'leveälehtinen kaalipuu. Etualan rinnettä peittävät saniaiset, '
+            + 'ja oikealla alhaalla pilkottavat meri ja saaren paljas, '
+            + 'ruskea rannikkorinne.',
+          lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'St. Helena on Britannian merentakainen saari eteläisellä '
+          + 'Atlantilla, noin 1 860 kilometriä Afrikan rannikolta, ja sen '
+          + 'ainoa kaupunki Jamestown on jokaisen vierailun keskipiste. '
+          + 'Lentoaseman ansiosta matka ei enää vaadi viittä vuorokautta '
+          + 'merellä, mutta saari on yhä yksi maailman syrjäisimmistä '
+          + 'matkakohteista, jonne vuoroja on harvoin. Tämä opas kertoo, '
+          + 'miten saarelle lennetään, mitä syödään ja missä istutaan iltaa, '
+          + 'keitä saintit ovat, mitä ylängön poluilla ja rannikon '
+          + 'altailla näkee ja mitä rahasta, autosta ja säästä on hyvä '
+          + 'tietää ennen lähtöä.',
+        artikkeli: {
+          nimi: 'Matkailijan Saint Helena',
+          teksti: 'Kone lähtee Johannesburgista kerran viikossa, joten sinne kannattaa saapua jo edellisenä päivänä.',
+          nosto: 'Kun Airlinkin kone saapuu, moni saarelainen nousee '
+            + 'lentoaseman näköalaterassille katsomaan laskeutumista.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kerran viikossa Johannesburgista',
+              teksti: 'Saarelle pääsee reittilennolla vain yhdestä '
+                + 'suunnasta. Eteläafrikkalainen Airlink lentää kerran '
+                + 'viikossa Johannesburgin O. R. Tambon kentältä, ja '
+                + 'koneena on Embraer E190. Saarelle päin kone pysähtyy '
+                + 'yleensä tankkaamaan Namibian Walvis Bayhin, ja lentoaika '
+                + 'on neljästä ja puolesta kuuteen tuntiin. Kapkaupungista, '
+                + 'joka oli saaren vanha yhteys laivojen aikaan, on lennetty '
+                + 'myös kausivuoroja. Koska koneita on vähän, Wikivoyage '
+                + 'neuvoo yöpymään Johannesburgissa ennen lähtöä, jotta '
+                + 'myöhästyminen ei vie koko viikon matkaa. Sää voi sotkea '
+                + 'aikataulun: syksyllä ja talvella matalat pilvet ja myrskyt '
+                + 'vaikeuttavat laskeutumista, ja heinäkuussa 2018 lennot '
+                + 'viivästyivät kokonaisen viikon. Helmikuussa 2026 kenttä '
+                + 'suljettiin muutamaksi päiväksi, kun palokaluston valmius '
+                + 'ei täyttänyt vaatimuksia, ja kaikki lennot peruttiin; '
+                + 'liikenne palasi normaaliksi 15. helmikuuta. Terminaalissa '
+                + 'on kahvila, matkamuistomyymälä, verovapaa myymälä ja '
+                + 'ravintola. Rupert\'s Bayn lahdesta kentälle rakennettu '
+                + 'työmaatie päällystettiin ja avattiin kaikelle liikenteelle '
+                + '2019. Ascensionin saarelle, noin 1 300 kilometriä '
+                + 'luoteeseen, lennetään kerran kuukaudessa: kone saapuu '
+                + 'Ascensionille lauantai-iltapäivänä ja palaa sunnuntaiaamuna. '
+                + 'Ascensionille tarvitaan sähköinen viisumi, joka on '
+                + 'Wikivoyagen mukaan haettava vähintään 14 vuorokautta ennen '
+                + 'saapumista. Postilaiva RMS St Helena lähti saarelta '
+                + 'viimeiselle matkalleen Kapkaupunkiin 10. helmikuuta 2018. '
+                + 'Se oli silloin yksi maailman neljästä laivasta, joilla oli '
+                + 'yhä Royal Mail Ship -arvo. Laiva myytiin samana keväänä, '
+                + 'ja se toimi jonkin aikaa aseistusvarastona Omaninlahdella. '
+                + 'Rahdin tuo nykyään '
+                + 'yleensä kerran kuukaudessa Kapkaupungista kulkeva '
+                + 'rahtilaiva, joka jatkaa Ascensionille. Omalla '
+                + 'purjeveneellä tulevat kiinnittyvät James Bayn '
+                + 'vieraspoijuihin: satamakapteeni vastaa VHF-kanavalla 14, '
+                + 'ja saapumisesta ilmoitetaan tulli- ja maahantulomuodollisuuksia '
+                + 'varten St Helena Radiolle kanavalla 16.',
+              kuva: [
+                {
+                  tiedosto: 'Airlink Embraer 190 at Saint Helena Airport.jpg',
+                  lyhyt: 'Airlinkin Embraer 190 lähdössä St. Helenan lentoasemalta takaisin Johannesburgiin.',
+                  selite: 'Maaliskuussa 2020 kuvattu Airlinkin Embraer 190 '
+                    + 'seisoo asematasolla, ja huomioliiveihin pukeutunut '
+                    + 'maahenkilökunta valmistelee konetta paluulennolle '
+                    + 'Johannesburgiin. Etualalla on matkatavaravaunuja, ja '
+                    + 'taustalla näkyy puuton, ruskea tasanko pilvisen '
+                    + 'taivaan alla.',
+                  lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Saint Helena Airport terminal building.jpg',
+                  lyhyt: 'Lentoaseman matala lasiseinäinen terminaali asematasolla seisovasta koneesta nähtynä.',
+                  selite: 'Terminaali maaliskuussa 2020 asematasolla '
+                    + 'seisovan koneen ikkunasta. Lasiseinäisen rakennuksen '
+                    + 'julkisivussa lukee St Helena Airport, edessä on '
+                    + 'matkatavaravaunuja ja maahenkilökuntaa, ja taustalla '
+                    + 'kohoavat paljaat, ruskeat kukkulat.',
+                  lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'RMS St Helena (16362601381).jpg',
+                  lyhyt: 'Postilaiva RMS St Helena ankkurissa James Bayssä syyskuussa 2014, kontteja keulakannella.',
+                  selite: 'Syyskuussa 2014 ylhäältä kuvattu postilaiva RMS '
+                    + 'St Helena on ankkurissa James Bayssä. Keulakannella '
+                    + 'on värikkäitä kontteja, savupiippu on keltainen, ja '
+                    + 'laivan vierellä on pieniä veneitä, joilla matkustajat '
+                    + 'ja rahti vietiin maihin, koska laiva ei päässyt '
+                    + 'rantaan.',
+                  lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Omat eväät ja kahvi saaren rinteiltä',
+              teksti: 'Wikivoyage suosittelee omatoimista ruoanlaittoa. '
+                + 'Vuokrahuoneesta tai -talosta käsin ostokset hoituvat '
+                + 'Jamestownin pienistä ruokakaupoista ja lihakaupasta, ja '
+                + 'samalla oppii tuntemaan saarelaiset, joilta asunnon '
+                + 'vuokraa. Vieraita yllättää, ettei näin hedelmällisellä '
+                + 'saarella ole toria. Vihanneksia ja salaattia on yhä '
+                + 'enemmän, mutta tarjonta seuraa satokausia, ja hedelmiä on '
+                + 'kaupoissa lähinnä heti rahtilaivan käynnin jälkeen. '
+                + 'Poikkeus ovat banaanit, joita kasvatetaan saarella: '
+                + 'suurin osa saaren banaaneista ja kahvista tulee '
+                + 'etelärannikon Sandy Bayn piirikunnasta. Kalatiskillä on '
+                + 'tavallisesti tummanpunaista tonnikalaa ja wahoota. '
+                + 'Ravintolat ovat pieniä, ja moni haluaa pöytävarauksen '
+                + 'etukäteen. Jamestownin Castle Gardensin laidalla on '
+                + 'ulkoilmaravintola Anne\'s Place, jonne illalliselle on '
+                + 'Wikivoyagen mukaan soitettava jo ennen puoltapäivää. '
+                + 'Association Hallin kellarikäytävän kautta pääsee Smith\'s '
+                + 'Yardiin, jossa Orange Tree tarjoilee kiinalaista, '
+                + 'japanilaista, thaimaalaista, malesialaista ja '
+                + 'filippiiniläistä ruokaa. Merenrannan Leisure Parkissa on '
+                + 'ulkokahvila, jonka nurmikon piknikpöydistä näkee merelle. '
+                + 'Ylängöllä Rosemary Plainilla on Farm Lodge, talo, jonka '
+                + 'Itä-Intian kauppakomppania rakennutti plantaasinomistajalle '
+                + 'noin 1690. Sen omilta pelloilta ja puutarhoista tulevat '
+                + 'pöydän hedelmät, vihannekset, liha, munat ja kahvi. Talo '
+                + 'ottaa ulkopuolisiakin aamukahville, lounaalle, '
+                + 'iltapäiväteelle ja päivälliselle, ja pöytä kannattaa varata '
+                + 'edellisenä päivänä. Kahviplantaaseja on Wikivoyagen mukaan '
+                + 'nykyään neljä, ja saaren kahvia saa paikan päältä '
+                + 'huomattavasti halvemmalla kuin Lontoon Harrodsilta. '
+                + 'Tislaamo tekee samasta kahvista Midnight Mist -likööriä, '
+                + 'jota myydään kaupungin kaupoissa. Illalla istutaan '
+                + 'ulkobaareissa: Donny\'s Placesta katsotaan James Baylle, '
+                + 'ja Mule Yard on rantakadulla uima-altaan vieressä. '
+                + 'Maaseudulla Colin\'s Barista näkee alas Sandy Baylle, ja '
+                + 'Longwoodissa on Pub Paradise. Saaren ensimmäinen '
+                + 'luksushotelli Mantis avattiin Jamestowniin 2017 '
+                + 'upseerikasarmiin, joka rakennettiin 1774.',
+              kuva: {
+                tiedosto: "Anne's Place (39270134530).jpg",
+                lyhyt: "Anne's Place -ulkoilmaravintola Castle Gardensin laidalla leikattujen pensasaitojen takana.",
+                selite: "Maaliskuussa 2018 kuvattu Anne's Place on matala, "
+                  + 'sivuilta avoin ravintolakatos Jamestownin Castle '
+                  + 'Gardensin laidalla. Katoksen alla roikkuu valkoisia '
+                  + 'verhoja ja valonauhoja, sisäänkäynnin vieressä on '
+                  + 'ravintolan kyltti, ja edustaa rajaavat leikatut '
+                  + 'pensasaidat ja valkokukkainen puu. Taustalla nousee '
+                  + 'laakson kivinen rinne.',
+                lahde: 'Luke McKernan, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Saintien saari',
+              teksti: 'Saaren asukkaita kutsutaan sainteiksi, ja heidän '
+                + 'juurensa ovat kaikkialla, minne purjelaivat kulkivat. '
+                + 'Varhaiset asukkaat olivat brittiläisiä uudisasukkaita ja '
+                + 'sotilaita sekä orjuutettuja ihmisiä, jotka tuotiin ensin '
+                + 'Afrikasta – vanhoissa asiakirjoissa mainitaan Kap Verde, '
+                + 'Kultarannikko ja Afrikan länsirannikko – ja myöhemmin '
+                + 'Intiasta ja Madagaskarilta. Vuodesta 1810 saarelle tuotiin '
+                + 'kiinalaisia työmiehiä, joita oli enimmillään 618 vuonna '
+                + '1818. Wikivoyagen mukaan tulijat eivät säilyttäneet omia '
+                + 'kieliään, ja sukupolvien avioliitot ovat tehneet '
+                + 'saarelaisista yhden kansan. Virallinen kieli on englanti, '
+                + 'mutta saaren omaa murretta kutsutaan nimellä Saint. Siinä '
+                + 'tutut sanat asettuvat uuteen järjestykseen: nimeä kysytään '
+                + '"What your name is?", ja uutta rengasta tarvitseva sanoo '
+                + '"Us need one new tyre". Moni saint on lähtenyt töihin '
+                + 'Falklandinsaarille, Ascensionille tai Britanniaan, ja '
+                + 'vuonna 2018 Swindonissa asui niin paljon saarelaisia, että '
+                + 'kaupunki sai lempinimen Swindolena. Jamestownin yleinen '
+                + 'kirjasto on toiminut vuodesta 1813, ja se on eteläisen '
+                + 'pallonpuoliskon vanhin; kirjastoauto kiertää maaseudulla '
+                + 'kerran viikossa. Saaren museota ylläpitää vuonna 1979 '
+                + 'perustettu Heritage Society. Museo avattiin 1980 '
+                + 'Broadway Housessa ja muutti saaren löytämisen '
+                + '500-vuotispäivänä 21. toukokuuta 2002 entiseen voimalaan, '
+                + '1700-luvun lopun kivirakennukseen. Moni sen esineistä on '
+                + 'nostettu saaren edustalla uponneista laivoista. Saaren '
+                + 'talous nojasi vuoteen 1966 asti uusiseelanninpellavaan, '
+                + 'josta tehtiin köyttä ja narua, ja pellavaa kasvaa yhä '
+                + 'laajalti rinteillä. Siitä punottuja töitä myydään puutöiden, '
+                + 'pitsien ja korujen rinnalla The Canister -talon '
+                + 'käsityökeskuksessa matkailutoimiston vieressä. '
+                + 'Postitoimisto myy keräilijöille Saint Helenan, '
+                + 'Ascensionin ja Tristan da Cunhan postimerkkejä. Useimmat '
+                + 'asukkaat ovat anglikaaneja, ja hiippakunnan piispan istuin '
+                + 'on vuonna 1856 rakennettu St. Paul\'s Cathedral. Wikivoyage '
+                + 'pyytää vieraita kunnioittamaan saarelaisten uskoa ja '
+                + 'uskollisuutta Britannian hallitsijaa kohtaan. Kuulumiset '
+                + 'kulkevat radiossa: SAMS Radio 1 lähettää saaren omia '
+                + 'uutisia ja keskusteluja, ja Saint FM on saaren ainoa '
+                + 'itsenäinen asema. Viikkolehtiä on kaksi, St Helena '
+                + 'Independent ja The Sentinel.',
+              kuva: {
+                tiedosto: 'Jamestown Public Library (26246711327).jpg',
+                lyhyt: 'Jamestownin yleisen kirjaston matala valkoinen talo suurten puiden varjossa.',
+                selite: 'Maaliskuussa 2018 kuvattu Jamestownin yleinen '
+                  + 'kirjasto on matala, valkoiseksi rapattu rakennus, jonka '
+                  + 'oven yllä lukee Public Library. Julkisivun edessä on '
+                  + 'musta rautaaita ja pieni pensas, ja suuret puut '
+                  + 'varjostavat rakennusta ja nurmikkoa.',
+                lahde: 'Luke McKernan, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Leimasin polun päässä',
+              teksti: 'Saaren parhaat kävelyt ovat ylängöllä. Rannikkoa '
+                + 'pitkin ei useimmissa kohdin pääse, koska jyrkänteet '
+                + 'kiertävät koko saaren, ja merelle laskeudutaan '
+                + 'tuliperäistä maastoa halkovia jyrkkiä laaksoja pitkin. '
+                + 'Wikivoyage suosittelee 21:tä vaikeusasteen mukaan '
+                + 'luokiteltua Post Box Walks -reittiä, joiden kartat ja '
+                + 'kuvaukset ovat saaren luonnonsuojeluryhmän kirjassa; sitä '
+                + 'myydään matkailutoimistossa. Reitin päässä odottaa '
+                + 'postilaatikko, jonka leimasimella kulkija voi merkitä '
+                + 'kävelyn tehdyksi. Saari on pieni, mutta matkat ovat '
+                + 'kävelijälle pitkiä, ja vettä ja aurinkovoidetta tarvitaan. '
+                + 'Suosituin nousu vie saaren korkeimmalle kohdalle Diana\'s '
+                + 'Peakille, 818 metriin. Huiput ovat usein pilvessä, ja '
+                + 'polku kulkee puusaniaistiheikön läpi: se on saaren '
+                + 'kasvillisuustyypeistä ainoa, joka on yhä luonnontilassa, '
+                + 'ja keskiylängön huipuilla kasvaa saaren kotoperäisiä '
+                + 'lajeja tiheämmin kuin missään muualla. Jamestownin laakson '
+                + 'yläpäässä on Heart-Shaped Waterfall, joka on nimetty '
+                + 'sydämen muotoisen kallion mukaan; sen reunalta vesi putoaa '
+                + 'noin 90 metriä. Laakso lahjoitettiin 2006 saaren '
+                + 'National Trustille, ja sen läpi avattiin uusi polku '
+                + 'joulukuussa 2010. Putouksen näkee myös Jamestownista '
+                + 'pohjoiseen nousevalta tieltä. Sandy Bayn laaksossa on '
+                + 'saaren ainoa hiekkaranta, jonka hiekka on tumman harmaata. '
+                + 'Meri on siellä liian vaarallinen uimiseen, mutta perheet '
+                + 'tulevat rannalle grillaamaan. Sandy Baysta lähtee kävely '
+                + 'Lot\'s Wife\'s Pondsin luonnon vuorovesialtaille, joita '
+                + 'Wikivoyage pitää saaren parhaana uimapaikkana. Veden alla '
+                + 'näkee vielä enemmän: sukelluspalvelut vievät hylyille ja '
+                + 'luoliin, ja veneet lähtevät katsomaan delfiinejä ja '
+                + 'valaita. Saaren ympärillä elää pysyvästi useita '
+                + 'delfiinilajeja, muun muassa pullokuonodelfiinejä, ja '
+                + 'vierailijoina nähdään ryhävalaita, paholaisrauskuja ja '
+                + 'valashaita. Saarelaiset kutsuvat valashaita nimellä bone '
+                + 'shark, ja niiden parittelu on nähty saaren vesillä kahdesti. '
+                + 'National Trust perusti niiden suojeluun 2018 meriosaston. '
+                + 'Yöllä kannattaa katsoa ylös: Wikivoyagen mukaan saaren '
+                + 'taivas täyttää kansainvälisen pimeän taivaan järjestön '
+                + 'korkeimman, kultaisen tason vaatimukset, eikä lämpötila '
+                + 'yleensä laske öisinkään alle kymmenen asteen.',
+              kuva: {
+                tiedosto: "Lot's Wife's Ponds in Sandy Bay Saint Helena.jpg",
+                lyhyt: "Lot's Wife's Pondsin tumma vuorovesiallas paljaan tuliperäisen rinteen juurella.",
+                selite: "Maaliskuussa 2020 ylhäältä kuvatut Lot's Wife's "
+                  + 'Ponds: vasemmalla alhaalla on tumma, kallioiden suojaama '
+                  + 'allas, jonka ulkoreunalla aallot murtuvat valkoiseksi '
+                  + 'vaahdoksi. Ympärillä on paljasta, punaruskeaa ja '
+                  + 'keltaista tuliperäistä rinnettä, ja oikealla jyrkät '
+                  + 'rantakalliot jatkuvat syvänsinisen meren reunalla.',
+                lahde: 'Kevstan, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Punnat mukaan, auto ajoissa',
+              teksti: 'Saaren valuutta on Saint Helenan punta, joka on '
+                + 'sidottu Englannin puntaan yksi yhteen ja kelpaa myös '
+                + 'Ascensionilla. Brittipunnat käyvät saarella sellaisinaan, '
+                + 'ja jotkin kaupat ottavat Wikivoyagen mukaan vastaan myös '
+                + 'dollareita, randeja ja euroja. Saaren omia seteleitä saa '
+                + 'harvoin muualta, joten rahat vaihdetaan etukäteen '
+                + 'Englannin puntiin. Ainoa pankki on vuonna 2004 perustettu '
+                + 'Bank of St Helena, jonka konttori on Jamestownissa ja auki '
+                + 'arkipäivisin ja lauantaiaamuisin. Wikivoyagen mukaan '
+                + 'pankkiautomaattia ei ole, mutta pankki voi nostaa '
+                + 'käteistä kortilta, ja kortteja hyväksyy vain osa kaupoista. '
+                + 'Käteisettömälle matkalle pankki tarjoaa turistikortin, '
+                + 'jota käytetään pankin mobiilisovelluksella ja jolle '
+                + 'ladataan rahaa omalta kortilta; jäljelle jääneet varat voi '
+                + 'palauttaa samalle kortille. Saarelle tulevalla on oltava '
+                + 'sairausvakuutus, joka kattaa lääkintäevakuoinnin '
+                + 'kotimaahan asti: sairaala on, mutta vaikeat tapaukset '
+                + 'hoidetaan saaren ulkopuolella. Hanavesi on juomakelpoista. '
+                + 'Puhelimet ja netti kulkevat Sure South Atlanticin verkossa. '
+                + 'Matkapuhelinverkko avattiin 2015, ja kun Equiano-merikaapeli '
+                + 'otettiin käyttöön 2023, saarella myytiin ensimmäistä kertaa '
+                + 'rajattomia datapaketteja. Liikenne kulkee vasemmalla, ja '
+                + 'liikennemerkit ovat brittiläisiä. Koko saaren '
+                + 'nopeusrajoitus on 30 mailia tunnissa (48 km/h) ja '
+                + 'Jamestownissa 20 mailia (32 km/h). Tiet ovat enimmäkseen '
+                + 'yksikaistaisia ja täynnä hiusneulamutkia, ja '
+                + 'kiertoliittymiä on koko saarella kolme. Vuokra-auto on '
+                + 'varattava hyvissä ajoin, koska autoja on vähän ja yksi '
+                + 'lento tuo kerralla kymmeniä matkailijoita. Pikkubussi '
+                + 'kulkee harvoin, ja sen vuorot palvelevat lähinnä '
+                + 'saarelaisten asiointia Jamestownissa. Taksiasema on '
+                + 'matkailutoimiston takana Main Streetin yläpäässä, jossa '
+                + 'katu haarautuu Napoleon- ja Market Streetiksi; toimistosta '
+                + 'voi myös varata retkiä. Rikoksia ei juuri ole, ja ainoat '
+                + 'varottavat eläimet ovat skorpionit. Jamestownin jyrkiltä '
+                + 'laaksonrinteiltä voi pudota kiviä, vaikka niille on '
+                + 'rakennettu suojaverkkoja. Ympärivuorokautisia kauppoja ei '
+                + 'ole, ja sunnuntaisin lähes kaikki on kiinni. Jamestownissa '
+                + 'on tammi–huhtikuussa 21–28 astetta ja muuna aikana 17–24. '
+                + 'Kaupunki saa hyvin vähän sadetta, mutta sisäylänkö on '
+                + 'keskimäärin viisi–kuusi astetta viileämpi, ja sinne sataa '
+                + 'vuodessa 750–1 000 millimetriä.',
+              kuva: {
+                tiedosto: 'Number plates (39247444030).jpg',
+                lyhyt: 'Saaren rekisterikilvissä on pelkkiä lyhyitä numeroita, kuten 260 keskimmäisessä autossa.',
+                selite: 'Maaliskuussa 2018 kuvatut kolme autoa seisovat '
+                  + 'Jamestownin St. Jamesin kirkon edustalla, ja niiden '
+                  + 'kilvissä on vain numerot 4155, 260 ja 3998. Kuvaajan '
+                  + 'mukaan saaren kilvet ovat valtion autoja lukuun '
+                  + 'ottamatta enintään nelinumeroisia, ja 5000-sarjan '
+                  + 'numeroita oli juuri otettu käyttöön.',
+                lahde: 'Luke McKernan, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'napoleon',
