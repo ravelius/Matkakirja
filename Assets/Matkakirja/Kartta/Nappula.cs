@@ -488,7 +488,7 @@ namespace Matkakirja
                 kohdeLataus = KarttaKerrokset.Instanssi?.EsilataaKohde(
                     math.min(lat1, sn.Lat - pk), math.max(lat1, sn.Lat + pk), sn.Lon - pl, sn.Lon + pl, lat1, lon1);
             }
-            bool pintaVaihdettu = false, laskuSumu = false, kohdeKirjattu = false;
+            bool pintaVaihdettu = false, laskuSumu = false, kohdeKirjattu = false, sentinelPois = false;
             if (aloitus)
             {
                 // LÖYDÖS 84: feidi mustaan → värillinen topografiakartta latautuu taustalla → feidi takaisin. Pinta
@@ -699,6 +699,9 @@ namespace Matkakirja
                 }
                 double laskuSumuun = jako.Kierto + 0.55 * (1 - jako.Kierto);
                 if (usva != null && t > jako.Sivu + 0.02 && t < laskuSumuun) usva.Tavoite(0f, kesto * 0.12f);
+                // Löydös 85 / Fablen päätös A (25.9.): Sentinel-2:n pilviset laatat pois ennen loppuorbitia; liu'ussa kamera
+                // on kaukana (~3000 km), joten vaihto ei näy.
+                if (aloitus && !sentinelPois && t >= jako.Liuku) { sentinelPois = true; kerrokset?.LentoSentinelPois(); }
                 // Löydös 85: aloituslento pysyy topografiakartalla loppuun asti (ei laskusumua eikä paluuta pohjaan).
                 if (usva != null && !aloitus && !laskuSumu && t > laskuSumuun)
                 {
