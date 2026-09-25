@@ -70,4 +70,8 @@ if os.path.exists(p):
     for k, s in y["odotukset"].items(): print(f"  {k:<11} {s['ms']:>7} ms  max {s['max']:>6}  n {s['n']}")
     print("\nVERKKOHAUT VAIHEITTAIN JA LÄHTEITTÄIN (kpl, summa-aika, max, kt)")
     for k, s in y["haut"].items(): print(f"  {k:<22} n {s['n']:>4}  {s['ms']:>8} ms  max {s['max']:>6}  {s['kt']:>7} kt")
+    if "osumat" in y:
+        print("\nOSUMA-% (välimuistista / pyynnöt) VAIHEITTAIN JA LÄHTEITTÄIN")
+        for k, o in y["osumat"].items(): print(f"  {k:<22} {o['osumia']:>5}/{o['n']:<5} {o['pros']:>3} %")
+    if "esilataaja" in y: print("\nESILATAAJA", y["esilataaja"])
 EOF

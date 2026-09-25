@@ -353,16 +353,13 @@ namespace Matkakirja.Natiivi
             esiladataan.Add(url);
             Directory.CreateDirectory(Kansio);
             string valiaikainen = tiedosto + ".esilataus";
-            bool ok;
-            using (var r = new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET))
+            bool ok = false;
+            // Seuraavan ruudun esilataus (Esilataaja: näkyvä ohittaa).
+            yield return Esilataaja.Hae(() => new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET)
             {
-                r.downloadHandler = new DownloadHandlerFile(valiaikainen) { removeFileOnAbort = true };
-                r.timeout = 60;
-                float hakuAlku = Time.realtimeSinceStartup;
-                yield return r.SendWebRequest();
-                VerkkoOdotus.Haku("puhe", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)r.downloadedBytes);
-                ok = r.result == UnityWebRequest.Result.Success;
-            }
+                downloadHandler = new DownloadHandlerFile(valiaikainen) { removeFileOnAbort = true },
+                timeout = 60,
+            }, Taso.SeuraavaRuutu, "puhe", r => ok = r.result == UnityWebRequest.Result.Success);
             try
             {
                 if (ok && !File.Exists(tiedosto)) File.Move(valiaikainen, tiedosto);
@@ -379,6 +376,7 @@ namespace Matkakirja.Natiivi
             // Buildiin mukana (Mukana, löydös 118: avausluenta ilman verkkoa) → suoraan sieltä.
             string mukana = sailo && !synteesi ? Mukana.Polku(url) : null;
             bool valimuistista = mukana != null || (sailo && File.Exists(Path.Combine(Kansio, Tiiviste(url) + (synteesi ? ".mp3" : Paate(url)))));
+            if (sailo) VerkkoOdotus.Osuma("puhe", valimuistista);
             string kansio = sailo ? Kansio : Application.temporaryCachePath;
             string tiedosto = mukana ?? (sailo ? Path.Combine(Kansio, Tiiviste(url) + (synteesi ? ".mp3" : Paate(url)))
                 : Path.Combine(kansio, "puhenayte-" + oma + ".mp3"));
@@ -389,24 +387,26 @@ namespace Matkakirja.Natiivi
             {
                 Directory.CreateDirectory(kansio);
                 string valiaikainen = tiedosto + ".lataus";
-                using (var r = pyynto())
+                // Verkko-odotus: ääni alkaa vasta latauksen jälkeen (välimuistista heti). Kirjataan valmiina (Kirjaa), koska
+                // uusi puhe voi pysäyttää tämän coroutinen kesken latauksen.
+                string vaihe = VerkkoOdotus.Vaihe, virhe = null;
+                float odotusAlku = Time.realtimeSinceStartup;
+                bool ok = false;
+                yield return Esilataaja.Hae(() =>
                 {
+                    var r = pyynto();
                     r.downloadHandler = new DownloadHandlerFile(valiaikainen) { removeFileOnAbort = true };
                     r.timeout = 60;
-                    // Verkko-odotus: ääni alkaa vasta latauksen jälkeen (välimuistista heti).
-                    var odotus = VerkkoOdotus.Alku(VerkkoOdotus.Vaihe, "puhe:" + Path.GetFileName(url.Split('?')[0]));
-                    float hakuAlku = Time.realtimeSinceStartup;
-                    yield return r.SendWebRequest();
-                    VerkkoOdotus.Haku("puhe", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)r.downloadedBytes);
-                    VerkkoOdotus.Loppu(odotus, r.result == UnityWebRequest.Result.Success ? null : "virhe");
-                    if (oma != tunnus) yield break;
-                    if (r.result != UnityWebRequest.Result.Success)
-                    {
-                        ViimeVirhe = r.error;
-                        Debug.LogWarning($"MATKAKIRJA puhe: {url} ei latautunut: {r.error}");
-                        LatausPetti();
-                        yield break;
-                    }
+                    return r;
+                }, Taso.Nakyva, "puhe", r => { ok = r.result == UnityWebRequest.Result.Success; virhe = r.error; });
+                VerkkoOdotus.Kirjaa(vaihe, "puhe:" + Path.GetFileName(url.Split('?')[0]), (Time.realtimeSinceStartup - odotusAlku) * 1000.0, 1, ok ? null : "virhe");
+                if (oma != tunnus) yield break;
+                if (!ok)
+                {
+                    ViimeVirhe = virhe;
+                    Debug.LogWarning($"MATKAKIRJA puhe: {url} ei latautunut: {virhe}");
+                    LatausPetti();
+                    yield break;
                 }
                 try { if (File.Exists(tiedosto)) File.Delete(tiedosto); File.Move(valiaikainen, tiedosto); }
                 catch (Exception e) { ViimeVirhe = e.Message; Debug.LogWarning("MATKAKIRJA puhe: välimuisti: " + e.Message); LatausPetti(); yield break; }
