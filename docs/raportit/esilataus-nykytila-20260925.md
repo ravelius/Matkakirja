@@ -111,4 +111,4 @@ Osuma-% (välimuistista / pyynnöt), kylmä → lämmin: sisältö 18–50 % →
 laatat lennolla 19 % → 54 %, kaupungissa 55 % → 72 %, linssissä 6 % → 94 %. Jonossa lopuksi 0, käynnissä 0, uusintoja 0.
 Erä 1 ei lisännyt esilatausta, joten odotukset pysyivät ennallaan (luennan 82/798 ms vaihtelee verkon mukaan); erä 2
 (kohta 3 lennon aikana) tähtää saapumisen puheisiin ja kuviin. Löydös 118: avausluenta ja etusivun musiikki buildissa
-(StreamingAssets/mukana), mittaus Natiivi-UI:n testikäännöksestä.
+(StreamingAssets/mukana): "puhe: alkoi 31 ms pyynnöstä (välimuisti) intro-puhe.mp3 [buildissa]" (Natiivi-UI eb6a9c8c; ennen verkosta noin 1–4 s), ja etusivun raita soi koko intron ajan vaimennettuna webin vakioilla.
