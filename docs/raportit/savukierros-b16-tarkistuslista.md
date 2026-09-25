@@ -42,3 +42,9 @@ letterboxia; kuvapari vierekkäin ilman marginaaleja; hidastus omana tiedostonaa
 (Syy: omistaja ei saanut selvää 146-mallista, kun puhelimen ruutu oli pieni
 harmaan kankaan keskellä.) Savukierroksen kuvakaappaukset ovat jo pelkkää ruutua
 (simctl io screenshot) — älä koskaan aseta niitä kankaalle.
+
+Täsmennys (Fable 26.9.): omistajan soitin näyttää pystyvideot vain 1:4-kokoisina →
+omistajalle ENSISIJAISESTI pysäytyskuvat (PNG, laitteen ruutu rajattuna, avattu
+tila), video vain liikkeen todentamiseen; kuvapari mieluummin kuin video.
+Omistajalle menevät kuvat PNG:nä (savukierroksen sisäiset raporttikuvat saavat
+olla pakattuja jpg).
