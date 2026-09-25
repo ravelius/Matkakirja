@@ -138,6 +138,27 @@ const LUETTELO = `${JULKINEN_JUURI}julisteet/pyramidi/pyramidi.json`;
 export const LAATTA = 256;
 export const LAATU = 80;
 /*
+ * LÖYDÖS 46 -KOE (Karttaseppä 24.9.2026): NÄYTTEISTYS JA JPEG.
+ *
+ * Pyramidin taso z = Z − 1 on Kreikan leveyksillä noin 1,3 kertaa
+ * vaakasuunnassa ja 1,2 kertaa pystysuunnassa TIHEÄMPI kuin Mercator-
+ * laatta. Lähin pikseli (oletus, 'lahin') hyppää siksi joka kolmannen
+ * tai neljännen lähdepikselin yli epäsäännöllisesti: yhden pikselin
+ * viiva katkeilee ja maan ja meren raja saa epätasaisen portaikon.
+ * `--suodatin laatikko` keskiarvoistaa 3 × 3 alinäytettä pikselin
+ * alalta (pinta-alakeskiarvo), joten kavennus on suodatettu.
+ *
+ * JPEG: `--jpeg-laatu 90` ja `--jpeg-444` (ei värin alinäytteistystä):
+ * oletus 80 + 4:2:0 puolittaa värierot 2 × 2 -ruuduiksi, mikä näkyy
+ * ruskean rantaviivan ja harmaan meren rajalla porrastuksena.
+ */
+let SUODATIN = 'lahin';
+let JPEG = { quality: LAATU };
+export function asetaNaytteistys({ suodatin = 'lahin', laatu = LAATU, v444 = false } = {}) {
+  SUODATIN = suodatin;
+  JPEG = { quality: laatu, ...(v444 ? { chromaSubsampling: '4:4:4' } : {}) };
+}
+/*
  * JULISTEEN ULKOPUOLI ILMAN "HARMAATA HATTUA" (omistaja 5.9.2026: "Lisää
  * 4 tasolle navat ... Tai joku muu toteutus että päästään siitä harmaasta
  * hatusta eroon"; sama päivä klo 15 kuvakaappaus Huippuvuorilta: "Miksi
@@ -288,6 +309,13 @@ export function laatanReunat(Z, X, Y) {
 }
 
 /** Laatan pikselirivin (0..LAATTA-1) leveysaste: Mercatorin käänteiskaava. */
+/** Alirivin leveysaste: rivin sisällä osuudella f ∈ [0, 1) (SUODATIN 'laatikko'). */
+export function alirivinLeveysaste(Z, Y, rivi, f) {
+  const n = 2 ** Z;
+  const y = Y + (rivi + f) / LAATTA;
+  return Math.atan(Math.sinh(Math.PI * (1 - (2 * y) / n))) / RAD;
+}
+
 export function rivinLeveysaste(Z, Y, rivi) {
   const n = 2 ** Z;
   const y = Y + (rivi + 0.5) / LAATTA;
@@ -864,8 +892,26 @@ export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
         ulos[o] = tayte[0]; ulos[o + 1] = tayte[1]; ulos[o + 2] = tayte[2];
         continue;
       }
-      // Lähin pikseli riittää: lähdetaso on aina tiheämpi kuin kohde.
-      lukija.pikseli(z, a.px, a.py, ulos, o);
+      if (SUODATIN === 'laatikko') {
+        // 3 × 3 alinäytettä pikselin alalta (ks. SUODATIN).
+        let k = 0; const summa = [0, 0, 0]; const rgb = [0, 0, 0];
+        for (let j = 0; j < 3; j += 1) {
+          const latj = alirivinLeveysaste(Z, Y, r, (j + 0.5) / 3);
+          for (let i = 0; i < 3; i += 1) {
+            const loni = ((X + (s + (i + 0.5) / 3) / LAATTA) / n) * 360 - 180;
+            const b = arkinPikseli(luettelo, taso, loni, latj);
+            if (!b) continue;
+            lukija.pikseli(z, b.px, b.py, rgb, 0);
+            summa[0] += rgb[0]; summa[1] += rgb[1]; summa[2] += rgb[2]; k += 1;
+          }
+        }
+        if (k) {
+          ulos[o] = Math.round(summa[0] / k); ulos[o + 1] = Math.round(summa[1] / k); ulos[o + 2] = Math.round(summa[2] / k);
+        } else lukija.pikseli(z, a.px, a.py, ulos, o);
+      } else {
+        // Lähin pikseli (oletus): lähdetaso on aina tiheämpi kuin kohde.
+        lukija.pikseli(z, a.px, a.py, ulos, o);
+      }
       if (reuna > 0 && !relief) nostaReuna(ulos, o, reunanSavy(s, puoli), reuna);
     }
   }
@@ -975,6 +1021,12 @@ async function paa() {
    */
   const ranta = !argv.includes('--ilman-rantaa');
   const tunniste = lippu('--tunniste') ?? '';
+  // Löydös 46 -koe (ks. SUODATIN); ilman lippuja tavulleen entinen.
+  asetaNaytteistys({
+    suodatin: lippu('--suodatin') ?? 'lahin',
+    laatu: Number(lippu('--jpeg-laatu') ?? LAATU),
+    v444: argv.includes('--jpeg-444'),
+  });
   if (!/^[a-z0-9]*$/.test(tunniste)) throw new Error(`--tunniste: vain a–z ja 0–9 (${tunniste})`);
   const osa = lueOsa(lippu('--osa'));
   // Rinnakkaisten osien yhteistahti (ks. tiedoston alku, NOUTOTAHTI).
@@ -1090,7 +1142,7 @@ async function paa() {
     } else {
       const rgb = await laskeLaatta(luettelo, lukija, Z, X, Y); // eslint-disable-line no-await-in-loop
       if (luettelo.kyllaisyys && luettelo.kyllaisyys !== 1) kyllaista(rgb, luettelo.kyllaisyys);
-      const jpg = await sharp(rgb, { raw: { width: LAATTA, height: LAATTA, channels: 3 } }).jpeg({ quality: LAATU }).toBuffer(); // eslint-disable-line no-await-in-loop
+      const jpg = await sharp(rgb, { raw: { width: LAATTA, height: LAATTA, channels: 3 } }).jpeg(JPEG).toBuffer(); // eslint-disable-line no-await-in-loop
       writeFileSync(join(ulos, String(Z), String(X), `${Y}.jpg`), jpg);
     }
     tehty += 1;

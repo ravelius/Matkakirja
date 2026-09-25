@@ -76,7 +76,11 @@ jobs:
     timeout-minutes: 90
 
     env:
-      PROJEKTI: /Users/Shared/Claude/proto-3d/Matkakirja-proto
+      # Käännöspalvelun kopio (Natiiviseppä 24.9.2026): pääkopio Matkakirja-proto on Natiivisepän
+      # työkopio; tämä worktree on levossa puhdas irrotettu master. Vuorot jaetaan
+      # proto-kaanna.sh:n lukolla (ks. "Käännöspalvelun lukko").
+      PROJEKTI: /Users/Shared/Claude/proto-3d/Matkakirja-proto-kaannos
+      KAANNOSLUKKO: /tmp/matkakirja-kaannospalvelu.lukko
       YOLOKI: /Users/Shared/Claude/proto-3d/lokit/yo-testflight.log
       YOMERKKI: /Users/Shared/Claude/proto-3d/lokit/yo-testflight-viimeisin.txt
       VIE_UNITYSTA: ${{ github.event_name == 'schedule' || inputs.vie_unitysta }}
@@ -96,6 +100,33 @@ jobs:
             echo "::error title=Unity-projekti puuttuu::$PROJEKTI ei löydy tältä ajurilta."
             exit 1
           fi
+
+      # Sama lukko kuin proto-3d/tyokalut/proto-kaanna.sh:lla: simulaattorijono odottaa viennin.
+      # Lukon pid on taustalla odottava sleep (elää vaiheiden yli; ajuri tappaa sen työn lopussa),
+      # joten kaatuneen ajon lukko tunnistetaan vanhentuneeksi kuten palvelussa.
+      - name: Käännöspalvelun lukko ja puhdas master
+        working-directory: ${{ env.PROJEKTI }}
+        run: |
+          set -euo pipefail
+          oma=0
+          for i in $(seq 1 270); do
+            if mkdir "$KAANNOSLUKKO" 2>/dev/null; then oma=1; break; fi
+            p=$(cat "$KAANNOSLUKKO/pid" 2>/dev/null || true)
+            if [ -n "$p" ] && ! kill -0 "$p" 2>/dev/null; then rm -rf "$KAANNOSLUKKO"; continue; fi
+            [ "$i" = 1 ] && echo "Jonossa: $(cat "$KAANNOSLUKKO/kuka" 2>/dev/null || echo tuntematon)"
+            sleep 10
+          done
+          if [ "$oma" != 1 ]; then
+            echo "::error title=Käännöspalvelun lukko varattu::$(cat "$KAANNOSLUKKO/kuka" 2>/dev/null || true) — ei vapautunut 45 minuutissa."
+            exit 1
+          fi
+          nohup sleep 7200 >/dev/null 2>&1 &
+          echo $! > "$KAANNOSLUKKO/pid"
+          echo "testflight ajo $GITHUB_RUN_ID $(date +%H:%M)" > "$KAANNOSLUKKO/kuka"
+          echo "LUKKO_OMA=1" >> "$GITHUB_ENV"
+          git checkout -q --detach master
+          git reset -q --hard
+          echo "Käännöskopio: $(git rev-parse --short HEAD) (master)"
 
       # Aikaleima buildinumeroksi: App Store Connect hylkää saman
       # versio+build-parin kahdesti. Unity-viennissä sama numero menee
@@ -134,10 +165,9 @@ jobs:
           if [ "$vapaa" -lt 30 ]; then syy="levyllä vain $vapaa Gt vapaana (raja 30 Gt)"; fi
           # Vain ajurin oma käyttäjä: toisen macOS-käyttäjän (omistajan) Unity ei koske tätä projektia;
           # saman projektin varaus näkyy Library-lukosta alla (24.9.2026, build 10 ohittui turhaan).
-          if pgrep -u "$(id -u)" -f "Unity.app/Contents/MacOS/Unity" >/dev/null; then [ -n "$syy" ] || syy="Unity on käynnissä"; fi
+          # Oma käännöskopio: Natiivisepän Unity pääkopiossa ei estä; vain tämän kopion Library-lukko.
           if [ -z "$syy" ] && [ -e Temp/UnityLockfile ] && lsof Temp/UnityLockfile >/dev/null 2>&1; then syy="Library-lukko on varattu"; fi
-          haara=$(git rev-parse --abbrev-ref HEAD)
-          if [ -z "$syy" ] && [ "$haara" != "master" ]; then syy="työkopio on haarassa $haara, ei masterissa"; fi
+          if [ -z "$syy" ] && [ "$(git rev-parse HEAD)" != "$(git rev-parse master)" ]; then syy="käännöskopio ei ole masterissa"; fi
           muutokset=$(git status --porcelain | grep -v " Assets/Matkakirja/Materiaalit/" || true)
           if [ -z "$syy" ] && [ -n "$muutokset" ]; then syy="työkopiossa on muutoksia: $(echo "$muutokset" | head -3 | tr '\n' ' ')"; fi
           master=$(git rev-parse --short master)
@@ -645,6 +675,12 @@ jobs:
       # Avainnippu ($HOME/Library/Keychains/matkakirja-testflight.keychain-db)
       # on pysyvä eikä sitä poisteta — varmenne ja yksityinen avain
       # säilyvät seuraavaa ajoa varten (ks. "Pysyvä avainnippu" -vaihe).
+      - name: Vapauta käännöspalvelun lukko
+        if: always() && env.LUKKO_OMA == '1'
+        run: |
+          kill "$(cat "$KAANNOSLUKKO/pid" 2>/dev/null)" 2>/dev/null || true
+          rm -rf "$KAANNOSLUKKO"
+
       - name: Siivoa avaimet
         if: always()
         run: |

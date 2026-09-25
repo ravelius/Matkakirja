@@ -13,6 +13,19 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2217, teksti: 'NC-lisenssien korvaus: 6/9 tunnettua kohdetta (#2895)' },
+  { v: 2216, teksti: 'Sisältöjuna: ennenNyt, galleria, N1/N3, taidemuseo' },
+  { v: 2215, teksti: 'Sisältöjuna: katalogin kuvitus, radio, suunnitelmat' },
+  { v: 2214, teksti: 'Maakunnat-välilehti: nykyisen maan ryhmä auki,… (#3140)' },
+  { v: 2213, teksti: 'Linssikatalogi: neljä välilehteä (#3131)' },
+  { v: 2212, teksti: 'Nostonimiöt kursiiviksi: asua ei lueta irrotetu… (#3135)' },
+  { v: 2211, teksti: 'Linssikatalogi: ulkoasukorjaukset PR #3128:aan (#3129)' },
+  { v: 2210, teksti: 'Kaupunkien nimet: lattiakertoimella ei lukita e… (#3136)' },
+  { v: 2209, teksti: 'Linssikatalogi: esittelysivun vaihe 1 (#3128)' },
+  { v: 2208, teksti: 'Peilaus lukee js/linssit; 8 Commons-nimeä korja… (#2913)' },
+  { v: 2207, teksti: 'Kohdekartat 7 kaupunkiin, Churchillin merijää, N2–N6' },
+  { v: 2206, teksti: 'Havainnekuva-merkinnän tyyli styles.css:ään (#3119)' },
+  { v: 2205, teksti: 'Isoisän iso kuva äänen \'playing\'-hetkestä, vara… (#3118)' },
   { v: 2204, teksti: 'Kohdekartta: Geraldton (#3082)' },
   { v: 2203, teksti: 'Kohdekartta: Mount Isa (#3080)' },
   { v: 2202, teksti: 'Sää: Appalakit, Churchill, Karthago, Sierra Leo… (#3053)' },

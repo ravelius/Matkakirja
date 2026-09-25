@@ -10979,8 +10979,8 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Sardana',
           musiikki: 'https://music.apple.com/fi/search?term=sardana%20cobla',
           musiikkiNimi: 'Sardana-musiikkia Apple Musicissa',
-          musiikkiNayte: 'https://archive.org/download/TarannCobla-OdaAlFolklore/01RquiemDeCooper.mp3',
-          musiikkiNayteNimi: 'Cobla soittaa — Tarannà + Cobla, CC BY-NC',
+          musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7e/Emigrant.ogg/Emigrant.ogg.mp3',
+          musiikkiNayteNimi: 'Sardana "L\'Emigrant" — Mauné i els seus dinàmics, CC BY-SA (Wikimedia Commons)',
         },
         {
           otsikko: 'Ihmistornin huipulla on lapsi',
@@ -15604,8 +15604,8 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Bandura',
           musiikki: 'https://music.apple.com/fi/search?term=bandura%20kobzar',
           musiikkiNimi: 'Bandura-musiikkia Apple Musicissa',
-          musiikkiNayte: 'https://archive.org/download/jamendo-369605/01-1720225-Nataliya%20Bermas-Ukrainian%20Melody%20Ivanko.mp3',
-          musiikkiNayteNimi: 'Ukrainalainen sävelmä "Ivanko" — Nataliya Bermas, CC BY-NC',
+          musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/%D0%A4%D0%B5%D1%81%D1%82%D0%B8%D0%B2%D0%B0%D0%BB%D1%8C.ogg/%D0%A4%D0%B5%D1%81%D1%82%D0%B8%D0%B2%D0%B0%D0%BB%D1%8C.ogg.mp3',
+          musiikkiNayteNimi: 'Ukrainalaista kansanmusiikkia — Mmm5555b, CC BY-SA (Wikimedia Commons)',
         },
         {
           otsikko: 'Neljä säveltä, joita soitetaan joka joulu',
@@ -15910,8 +15910,8 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Dmitri Šostakovitš',
           musiikki: 'https://music.apple.com/fi/search?term=shostakovich%20symphony%207',
           musiikkiNimi: 'Šostakovitšin 7. sinfonia Apple Musicissa',
-          musiikkiNayte: 'https://archive.org/download/ShostakovichSymphonyNo.5-Stokowski/02.Ii.Allegretto.mp3',
-          musiikkiNayteNimi: 'Šostakovitš: 5. sinfonia — Leopold Stokowski, CC BY-NC-SA',
+          musiikkiNayte: 'https://archive.org/download/dso20060204old/dso20060204.2.mp3',
+          musiikkiNayteNimi: 'Šostakovitš: 5. sinfonia, II Allegretto — DuPage Symphony Orchestra, PD',
         },
       ],
           /*
@@ -28624,6 +28624,136 @@ export const KULTTUURI_KATEGORIAT = {
           + 'linnoitus puretaan, ja Luxemburgista tulee pysyvästi '
           + 'puolueeton.',
       },
+    },
+    /*
+     * EUROOPPA-SIVU (23.9.2026). Toinen aihesivu kannen rinnalle: kansi
+     * kertoo kalliolinnoituksesta ja vanhastakaupungista, tämä sivu
+     * EU:n toimielinten kaupungista 1952 alkaen. LUX-maalehti
+     * (js/packs/maa-kategoriat.js) ei käsittele EU:ta, joten nostot
+     * eivät toista sitä. Faktat en-Wikipediasta: Robert Schuman,
+     * Clausen (Luxembourg), Schuman Declaration, Location of European
+     * Union institutions, High Authority of the European Coal and Steel
+     * Community, European Court of Justice, Villa Vauban, Kirchberg
+     * (Luxembourg), European Parliament in Luxembourg ja Grand Duchess
+     * Charlotte Bridge. Minitehtävän vastaus on nostossa 2.
+     *
+     * SIVU-ID `eurooppa` on AIHE_IKONIT-taulun ulkopuolella ja piirtyy
+     * yleiskuvakkeella (sama perusteltu poikkeus kuin esim.
+     * `saksalaisperinne`): vakioaiheista `historia` olisi harhaanjohtava,
+     * koska sivu jatkuu nykypäivän Kirchbergiin.
+     *
+     * KUVAT: neljä Commons-kuvaa, lisenssi ja tekijä luettu rajapinnan
+     * extmetadatasta (LicenseShortName, Artist, Restrictions tyhjä),
+     * kaikki vähintään 3500 px leveitä, katsottu silmin eikä yhtäkään
+     * käytetä muualla repossa.
+     */
+    {
+      id: 'eurooppa',
+      nimi: 'Eurooppa',
+      johdanto: 'Seitsemästä EU:n toimielimestä viisi toimii ainakin osittain '
+        + 'Luxemburgissa — enemmän kuin missään muussa kaupungissa. Kaikki alkoi '
+        + '1952, kun kuusi maata ei päässyt sopuun, minne uusi hiili- ja '
+        + 'teräsyhteisö sijoitetaan.',
+      tehtava: {
+        kysymys: 'Miksi Luxemburgista tuli vuonna 1952 Euroopan hiili- ja '
+          + 'teräsyhteisön kotipaikka?',
+        vaihtoehdot: [
+          'Robert Schuman vaati sitä, koska oli syntynyt kaupungissa',
+          'Jäsenmaat eivät päässeet sopuun, ja Luxemburg tarjoutui väliaikaiseksi kotipaikaksi',
+          'Luxemburg oli jäsenmaista suurin teräksentuottaja',
+          'Kirchbergissä oli jo valmiina toimistokortteli',
+        ],
+        oikea: 1,
+        fakta: 'Bryssel olisi kelvannut monelle, mutta Belgia vaati Liègeä. '
+          + 'Luxemburgin pääministeri Joseph Bech ehdotti umpikujan ratkaisuksi, '
+          + 'että toimielimet sijoitetaan Luxemburgiin väliaikaisesti, kunnes '
+          + 'pysyvästä paikasta sovitaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Clausenin poika, joka ehdotti yhteistä Eurooppaa',
+          tiedosto: 'Luxembourg rue Jules Wilhelm - Gebuertshaus Robert Schuman (101).jpg',
+          teksti: 'Robert Schuman syntyi 29. kesäkuuta 1886 Luxemburgin '
+            + 'Clausenissa, talossa, jota hänen vanhempansa vuokrasivat rue Jules '
+            + 'Wilhelmin varrelta. Isä oli kotoisin Lotaringiasta ja äiti '
+            + 'luxemburgilainen; poika puhui äidinkielenään luxemburgia ja kävi '
+            + 'koulua Luxemburgin Athénée-lyseossa. Ranskan ulkoministerinä hän '
+            + 'ehdotti 9. toukokuuta 1950, että Ranskan ja Länsi-Saksan hiili ja '
+            + 'teräs asetetaan yhteisen viranomaisen alle, jotta sota maiden '
+            + 'välillä kävisi aineellisesti mahdottomaksi. Päivää juhlitaan '
+            + 'nykyään EU:ssa Eurooppa-päivänä. Valtio osti syntymätalon 1985, ja '
+            + 'Euroopan parlamentti on kunnostanut sen.',
+          lyhyt: 'Robert Schumanin syntymätalo Clausenissa rue Jules Wilhelmin varrella.',
+          selite: 'Robert Schumanin syntymätalo Clausenin kaupunginosassa; '
+            + 'Luxemburgin valtio osti talon 1985, ja nykyään siinä toimii pieni '
+            + 'tutkimuslaitos.',
+          lahde: 'GilPe, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Robert Schuman',
+        },
+        {
+          otsikko: 'Väliaikainen kotipaikka, joka jäi pysyväksi',
+          tiedosto: 'Lux City Hall 1952.jpg',
+          teksti: 'Pariisin sopimus perusti 1951 Euroopan hiili- ja '
+            + 'teräsyhteisön, mutta kuusi jäsenmaata ei päässyt sopuun sen '
+            + 'kotipaikasta. Bryssel olisi kelvannut monelle, mutta Belgia vaati '
+            + 'Liègeä. Umpikujan ratkaisi Luxemburgin pääministeri Joseph Bech: '
+            + 'toimielimet sijoitettaisiin väliaikaisesti Luxemburgiin, kunnes '
+            + 'pysyvästä paikasta sovitaan. Yhteisön toimeenpanoelin, korkea '
+            + 'viranomainen, piti ensimmäisen istuntonsa Luxemburgin '
+            + 'kaupungintalossa 10. elokuuta 1952, ja sen ensimmäiseksi '
+            + 'puheenjohtajaksi valittiin Jean Monnet. Myöhemmin komissio ja '
+            + 'neuvosto keskittyivät Brysseliin, mutta vuoden 1965 päätös '
+            + 'korvasi menetyksen: tuomioistuin jäi Luxemburgiin, ja EU:n '
+            + 'neuvosto kokoontuu täällä yhä huhti-, kesä- ja lokakuussa.',
+          lyhyt: 'Väkijoukko Luxemburgin kaupungintalon edessä 10. elokuuta 1952.',
+          selite: 'Väkeä kerääntyi Luxemburgin kaupungintalon eteen 10. elokuuta '
+            + '1952, kun sisällä pidettiin hiili- ja teräsyhteisön korkean '
+            + 'viranomaisen ensimmäinen istunto.',
+          lahde: 'European Parliament, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'High Authority of the European Coal and Steel Community',
+        },
+        {
+          otsikko: 'Tuomioistuin taiteilijahuvilassa',
+          tiedosto: 'Villa Vauban - Luxembourg City - DSC06363.JPG',
+          teksti: 'Villa Vauban rakennettiin 1873 yksityisasunnoksi tontille, '
+            + 'joka vapautui, kun kaupungin linnoitukset purettiin, ja nimensä se '
+            + 'sai paikalla aiemmin seisseestä Vaubanin linnakkeesta. Kaupunki '
+            + 'osti huvilan 1949 taidekokoelmilleen, mutta hiili- ja '
+            + 'teräsyhteisön tuomioistuin tarvitsi tilat, ja se piti huvilassa '
+            + 'ensimmäisen istuntonsa 28. marraskuuta 1954. Talo jäi pian '
+            + 'ahtaaksi: tuomioistuin muutti 1959 Côte d\'Eichin rakennukseen ja '
+            + '1972 omaan palatsiinsa Kirchbergiin. Tuomarit neuvottelevat yhä '
+            + 'ranskaksi, ja tuomio kirjoitetaan ensin sillä kielellä, oli asian '
+            + 'kieli mikä tahansa.',
+          lyhyt: 'Villa Vauban on nykyään Luxemburgin kaupungin taidemuseo.',
+          selite: 'Villa Vauban rakennettiin 1873, ja siinä toimi hiili- ja '
+            + 'teräsyhteisön tuomioistuin vuosina 1952–1959. Nykyään se on '
+            + 'kaupungin taidemuseo.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+          wiki: 'Villa Vauban',
+        },
+        {
+          otsikko: 'Punainen silta Euroopan kortteleihin',
+          tiedosto: 'Puente rojo, ciudad de Luxemburgo, Luxemburgo, 2023-12-16, DD 137.jpg',
+          teksti: 'Kun Bryssel ja Strasbourg kilpailivat 1950-luvun lopulla '
+            + 'uusien yhteisöjen virastoista, Luxemburgin hallitus halusi tarjota '
+            + 'niille halpaa maata Kirchbergin lähes rakentamattomalta ylängöltä. '
+            + 'Sinne oli kuitenkin hankala päästä, koska välissä oli 75 metriä '
+            + 'syvä Pfaffenthalin laakso. Vuoden 1957 suunnittelukilpailuun tuli '
+            + '69 ehdotusta, ja voittajan, saksalaisen Egon Juxin, silta avattiin '
+            + 'liikenteelle 24. lokakuuta 1966. Kirkkaanpunainen väri valittiin '
+            + 'tarkoituksella, jotta silta erottuisi myös sumussa. Nykyään '
+            + 'Kirchbergissä ovat EU:n tuomioistuin, tilintarkastustuomioistuin, '
+            + 'Euroopan investointipankki ja parlamentin sihteeristö, jossa '
+            + 'työskentelee yli 4 000 ihmistä.',
+          lyhyt: 'Punainen Grande-Duchesse Charlotten silta ylittää Pfaffenthalin laakson.',
+          selite: 'Grande-Duchesse Charlotten silta, luxemburgiksi Rout Bréck, '
+            + 'kulkee 75 metrin korkeudella Alzetten yllä ja yhdistää '
+            + 'yläkaupungin Kirchbergin EU-kortteleihin.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Grand Duchess Charlotte Bridge',
+        },
+      ],
     },
   ],
   nikosia: [
@@ -57865,8 +57995,8 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           tiedosto: 'Golden Gate Bridge as seen from Marshall’s Beach, March 2018.jpg',
-          lyhyt: 'Golden Gate -silta oli lähes 40 vuotta pisin riippusilta, kunnes Verrazzano-Narrows ohitti sen 1964.',
-          selite: 'Golden Gate -silta oli lähes neljäkymmentä vuotta '
+          lyhyt: 'Golden Gate -silta oli 27 vuotta pisin riippusilta, kunnes Verrazzano-Narrows ohitti sen 1964.',
+          selite: 'Golden Gate -silta oli 27 vuotta '
             + 'maailman pisin riippusilta, kunnes New Yorkin '
             + 'Verrazzano-Narrows-silta ohitti sen 1964.',
           lahde: 'Frank Schulenburg, Wikimedia Commons (CC BY-SA 4.0)',
@@ -58273,6 +58403,147 @@ export const KULTTUURI_KATEGORIAT = {
           },
         },
       },
+    },
+    /*
+     * ALCATRAZ (lisätty 23.9.2026). Kansi kertoo Alcatrazista vain
+     * avauskuvan rivin ja oppaan maininnan, joten saari saa oman
+     * sivunsa: majakka, linnake, liittovaltion vankila ja valtaus
+     * 1969–1971. Faktat en-Wikipedian raakatekstistä (haettu
+     * 23.9.2026): Alcatraz Island, Alcatraz Island Lighthouse, Fort
+     * Alcatraz, Alcatraz Federal Penitentiary, Occupation of Alcatraz ja
+     * Alcatraz water tower. Hopi-vankien vuosi 1895 on Fort Alcatraz
+     * -artikkelista (Alcatraz Island -artikkeli sanoo epätarkasti
+     * "1870s"). RAJAUS: vankilasta kerrotaan rakenne, arki ja
+     * sulkemisen syyt — ei Battle of Alcatrazia, ammuttuja pakenijoita
+     * eikä D-korttelin rangaistussellejä. Valtaus kerrotaan
+     * alkuperäiskansojen omana aloitteena ja päättyy nykyhetkeen
+     * (Raamatun pilari 3). Kuvien lisenssit ja tekijät Commonsin
+     * extmetadatasta 23.9.2026, kaikki katsottu silmin: majakkakuvan
+     * vasemmassa laidassa oleva kävijä pitää puhelinta kasvojensa
+     * edessä, eikä muissa ole ihmisiä; vuoden 1888 vedoksen numero
+     * "3071" on alkuperäinen negatiivimerkintä.
+     */
+    {
+      id: 'historia',
+      nimi: 'Alcatrazin saari',
+      johdanto: 'Lahden keskellä, kahden kilometrin päässä rannasta, on pieni '
+        + 'kallio, jolla on ollut majakka, linnake, sotilasvankila ja maan '
+        + 'kuuluisin vankila. Isoisän matkavuonna 1873 armeija tasoitti '
+        + 'saarta vankiensa voimin.',
+      tehtava: {
+        kysymys: 'Mihin sopimukseen Alcatrazin valtaajat vetosivat vaatiessaan saarta 1969?',
+        vaihtoehdot: [
+          'Guadalupe Hidalgon rauhaan 1848',
+          'Fort Laramien sopimukseen 1868',
+          'Chicagon sopimukseen 1833',
+          'Pariisin rauhaan 1783',
+        ],
+        oikea: 1,
+        fakta: 'Valtaajien mukaan sopimus lupasi palauttaa käytöstä poistetut '
+          + 'liittovaltion maat alkuperäiskansoille. Vankila oli suljettu '
+          + '1963, ja saari oli julistettu ylijäämämaaksi 1964.',
+      },
+      nostot: [
+        {
+          otsikko: 'Pelikaanien saari ja lännen ensimmäinen majakka',
+          tiedosto: 'San Francisco (CA, USA), Alcatraz, Lighthouse -- 2022 -- 3155.jpg',
+          teksti: 'Espanjalainen merenkulkija Juan Manuel de Ayala kartoitti '
+            + 'lahden 1775 ja antoi nykyiselle Yerba Buena Islandille nimen '
+            + 'La Isla de los Alcatraces; nimen siirsi myöhemmin tälle '
+            + 'kalliolle englantilainen kapteeni Frederick W. Beechey. Nimi '
+            + 'tarkoittanee pelikaanien saarta, ja ranskalainen kapteeni '
+            + 'Auguste Duhaut-Cilly kirjoitti elokuussa 1827, että laukaus '
+            + 'nosti saaren linnut pilveksi hurrikaanin äänellä. '
+            + 'Kultaryntäyksen vilkastuttama merenkulku sai kongressin '
+            + 'tilaamaan 1851–1852 seitsemän majakkaa länsirannikolle, ja '
+            + 'Alcatrazin majakka valmistui niistä ensimmäisenä. Ranskalainen '
+            + 'Fresnel-linssi tuotiin laivalla Etelä-Amerikan ympäri, ja '
+            + 'vartija Michael Cassin sytytti valon 1. kesäkuuta 1854 — '
+            + 'ensimmäisenä Yhdysvaltain Tyynenmeren rannikolla.',
+          lyhyt: 'Nykyinen betonitorni rakennettiin 1909, kun alkuperäinen majakka oli vaurioitunut maanjäristyksessä.',
+          selite: 'Nykyinen betoninen majakkatorni rakennettiin 1909 uuden '
+            + 'sellirakennuksen viereen, ja vuoden 1906 maanjäristyksessä '
+            + 'vaurioitunut alkuperäinen majakka purettiin.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Alcatraz Island Lighthouse',
+        },
+        {
+          otsikko: 'Isoisän vuonna: linnakkeesta tuli vankila',
+          tiedosto: 'Fort Alcatraz, San Francisco, circa 1888 (14660678076).jpg',
+          teksti: 'Armeijan insinöörit linnoittivat saarta 1853–1859 Zealous '
+            + 'B. Towerin johdolla, ja sisällissodan alkaessa 1861 muureilla '
+            + 'oli 85 tykkiä, vuoteen 1866 mennessä 105. Tykkejä ei koskaan '
+            + 'laukaistu vihollista kohti, mutta kylmä vesi ja voimakkaat '
+            + 'virtaukset tekivät saaresta hyvän vankilan: rikoksiin '
+            + 'syyllistyneitä sotilaita pidettiin siellä jo 1859, ja 1868 '
+            + 'saari nimettiin virallisesti armeijan pitkäaikaisvankilaksi. '
+            + 'Vuosina 1870–1876 armeija yritti tasoittaa koko saaren, ja '
+            + 'majuri George Mendell pani vangit ja muulit kaatamaan louhetta '
+            + 'lahteen; nykyinen paraatikenttä on keskeneräisen työn jälki. '
+            + 'Kesäkuun 5. päivänä 1873 saarelle tuotiin ensimmäinen '
+            + 'alkuperäiskansan vanki, paiute Tom, ja vuoteen 1895 mennessä '
+            + 'heitä oli ollut 32 — joukossa 19 hopi-miestä, jotka olivat '
+            + 'kieltäytyneet lähettämästä lapsiaan pois perheiltään '
+            + 'sisäoppilaitoksiin.',
+          lyhyt: 'Noin vuodelta 1888 oleva valokuva katsoo kaupungin rannasta lahdelle ja Fort Alcatrazin kalliolle.',
+          selite: 'Noin vuodelta 1888 oleva valokuva katsoo kaupungin '
+            + 'rannasta lahdelle, jonka keskellä seisoo Fort Alcatraz '
+            + 'linnakkeineen ja majakoineen.',
+          lahde: 'USMC Archives from Quantico, USA, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Fort Alcatraz',
+        },
+        {
+          otsikko: 'Kallio, josta ei pitänyt päästä pois',
+          tiedosto: 'Alcatraz cell block (5938779149).jpg',
+          teksti: 'Oikeusministeriö otti saaren armeijalta 12. lokakuuta 1933, '
+            + 'ja 11. elokuuta 1934 ensimmäiset 137 vankia tuotiin junalla '
+            + 'Kansasin Leavenworthista lahden rantaan ja sieltä saarelle. '
+            + 'Alcatraz oli tarkoitettu vangeille, jotka olivat aiheuttaneet '
+            + 'jatkuvasti ongelmia muissa liittovaltion vankiloissa, ja 29 '
+            + 'toimintavuoden aikana siellä oli kaikkiaan 1 576 vankia. Selli '
+            + 'oli noin 2,7 metriä pitkä ja 1,5 metriä leveä, eikä yksikään '
+            + 'selli ollut ulkoseinää vasten. Alkuvuosina vankilassa vallitsi '
+            + 'ehdoton vaikenemisen sääntö, ja kirjastosta, jossa oli 10 000–'
+            + '15 000 kirjaa, keskivertovanki luki 75–100 kirjaa vuodessa. '
+            + 'Vankila suljettiin 21. maaliskuuta 1963, koska se oli maan '
+            + 'kallein: vankipäivä maksoi lähes kymmenen dollaria, Atlantassa '
+            + 'kolme, ja saarelle piti kuljettaa mantereelta lähes miljoona '
+            + 'gallonaa vettä viikossa.',
+          lyhyt: 'Sellirakennus valmistui armeijan vankilaksi 1912, ja siinä on neljä selliosastoa A:sta D:hen.',
+          selite: 'Sellirakennus valmistui armeijan vankilaksi 1912, ja '
+            + 'liittovaltion vankilan aikana sen kolmikerroksiset sellirivit '
+            + 'jakautuivat neljään osastoon A:sta D:hen.',
+          lahde: 'Tim Wilson from Blaine, MN, USA, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Alcatraz Federal Penitentiary',
+        },
+        {
+          otsikko: 'Kaikkien heimojen intiaanit',
+          tiedosto: 'San Francisco (CA, USA), Alcatraz, Water Tower -- 2022 -- 3136.jpg',
+          teksti: 'Maaliskuun 8. päivänä 1964 joukko lakotoja nousi Belva '
+            + 'Cottierin aloitteesta saarelle neljäksi tunniksi ja tarjosi '
+            + 'siitä saman hinnan, jonka valtio oli aikanaan tarjonnut heille '
+            + 'maistaan: 47 senttiä eekkeriltä eli 9,40 dollaria koko '
+            + 'saaresta. Marraskuun 20. päivänä 1969 lähti 89 alkuperäiskansojen '
+            + 'jäsentä, enimmäkseen lahden alueen opiskelijoita, valtaamaan '
+            + 'saarta nimellä Indians of All Tribes, Kaikkien heimojen '
+            + 'intiaanit. He vetosivat vuoden 1868 Fort Laramien sopimukseen, '
+            + 'jonka katsoivat lupaavan käytöstä poistetut liittovaltion maat '
+            + 'takaisin alkuperäisille asukkailleen, ja suunnittelivat '
+            + 'saarelle kulttuurikeskusta. Valtaus kesti 19 kuukautta, '
+            + 'parhaimmillaan saarella oli 400 ihmistä, ja siellä toimivat '
+            + 'koulu, päiväkoti, terveysasema ja John Trudellin Radio Free '
+            + 'Alcatraz. Presidentti Nixon luopui heinäkuussa 1970 '
+            + 'alkuperäiskansojen aseman lakkauttamispolitiikasta, ja '
+            + 'saarella pidetään yhä joka vuosi Unthanksgiving Dayn '
+            + 'aamunkoittoseremonia.',
+          lyhyt: 'Vesitornin punaiset tekstit maalattiin valtauksen aikana ja uudelleen korjauksessa 2011–2012.',
+          selite: 'Vesitorni rakennettiin 1940–1941, ja sen kylkeen valtauksen '
+            + 'aikana maalatut punaiset tekstit maalattiin uudelleen, kun '
+            + 'torni korjattiin 2011–2012.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Occupation of Alcatraz',
+        },
+      ],
     },
   ],
   /*
@@ -63475,18 +63746,18 @@ export const KULTTUURI_KATEGORIAT = {
           + 'tanssiaiset juuri ennen Waterloota: neljä käännekohtaa, jotka muovasivat '
           + 'Brysselin.',
       tehtava: {
-        kysymys: 'Minkä ansiosta Brysseliin voitiin 1800-luvun lopulla rakentaa uusia '
-            + 'keskeisiä bulevardeja?',
+        kysymys: 'Kuinka monessa vuodessa Grand-Place rakennettiin uudelleen vuoden 1695 '
+            + 'pommituksen jälkeen?',
         vaihtoehdot: [
-          'Vanhojen kaupunkimuurien purkamisen',
-          'Senne-joen peittämisen kaupungin alueella',
-          'Uuden kanavan kaivamisen keskustaan',
-          'Rautatieaseman rakentamisen keskustaan',
+          'Yhdessä vuodessa',
+          'Neljässä vuodessa',
+          'Kymmenessä vuodessa',
+          'Kolmessakymmenessä vuodessa',
         ],
         oikea: 1,
-        fakta: 'Senne oli 1800-luvun jälkipuoliskolla vakava terveysriski, ja pormestari '
-            + 'Jules Anspach ryhtyi peittämään sen. Joki virtaa nykyään suurimmaksi osaksi '
-            + 'kaupungin sisärenkaan alla.',
+        fakta: 'Killat rakensivat talonsa uudelleen neljässä vuodessa, ja viranomaiset '
+            + 'tarkastivat suunnitelmat, joten Grand-Placesta tuli yllättävän yhtenäinen '
+            + 'kokonaisuus tuhon jäljiltä.',
       },
       nostot: [
         {
@@ -64785,7 +65056,7 @@ export const KULTTUURI_KATEGORIAT = {
           otsikko: 'Euroopan vanhin maraton',
           tiedosto: 'Kosice (Slovakia) - Memorial of the International Peace Marathon 2.jpg',
           teksti: 'Košicen rauhanmaraton on juostu vuodesta 1924, ja se on Euroopan vanhin '
-              + 'maraton ja maailman kolmanneksi vanhin Bostonin ja Yonkersin jälkeen. Sen '
+              + 'maraton ja yksi maailman vanhimmista, heti Bostonin maratonin jälkeen. Sen '
               + 'järjesti ensimmäisen kerran kaupunkilainen urheilun ystävä Vojtech '
               + 'Bukovský Pariisin olympialaisten innoittamana. Kisan ovat voittaneet muun '
               + 'muassa Juan Carlos Zabala 1931, joka voitti seuraavana vuonna '
@@ -65115,6 +65386,110 @@ export const KULTTUURI_KATEGORIAT = {
           + 'Kadut nousevat ja laskevat jyrkästi niemen muodon mukaan, '
           + 'ja monessa kohdassa portaat korvaavat ajoradan kokonaan.',
       },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Haukka vuokrana, lähes neljän kuukauden piiritys, ritarien antautuminen '
+          + 'Napoleonille ja kaksi vuotta pommituksia: neljä vaihetta, joissa pieni saari '
+          + 'oli Välimeren taistelujen keskipisteessä.',
+      tehtava: {
+        kysymys: 'Mitä johanniittaritarien piti maksaa vuosittain, kun keisari Kaarle V '
+            + 'antoi heille Maltan vuonna 1530?',
+        vaihtoehdot: [
+          'Tynnyrillinen maltalaista viiniä',
+          'Sata kultadukaattia',
+          'Kaksi varustettua kaleeria',
+          'Yksi maltalainen haukka',
+        ],
+        oikea: 3,
+        fakta: 'Kaarle V antoi Maltan, Gozon ja Tripolin ritarikunnalle ikuiseksi '
+            + 'läänitykseksi. Vuosimaksuksi riitti yksi maltalainen haukka, joka lähetettiin '
+            + 'Sisilian varakuninkaalle.',
+      },
+      nostot: [
+        {
+          otsikko: 'Saari, jonka vuokra oli yksi haukka',
+          tiedosto: 'Prise de Malte en 1530.jpg',
+          teksti: 'Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun '
+              + 'osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän '
+              + 'vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana '
+              + 'Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. '
+              + 'Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian '
+              + 'varakuninkaalle. Suurmestari Philippe Villiers de L\'Isle-Adam purjehti '
+              + 'Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä '
+              + 'Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. '
+              + 'Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan '
+              + 'uudelleen Pyhän Angelon linnakkeeksi.',
+          lyhyt: 'Punaviittaiset ritarit ja ritarikunnan valkoristinen lippu Maltan '
+              + 'rannalla.',
+          selite: 'René Théodore Berthonin vuonna 1839 maalaama kuva ritarikunnan '
+              + 'saapumisesta Maltalle vuonna 1530: punaviittaiset ritarit, trumpetit ja '
+              + 'valkoristinen lippu linnoituksen edustalla.',
+          lahde: 'René Théodore Berthon, Wikimedia Commons (PD)',
+          wiki: 'Hospitaller Malta',
+        },
+        {
+          otsikko: 'Lähes neljän kuukauden piiritys',
+          tiedosto: 'Matteo Perez d\' Aleccio (1547-1616) - The Siege of Malta, Capture of St Elmo, 23 June 1565 - BHC0254 - Royal Museums Greenwich.jpg',
+          teksti: 'Sulttaani Suleiman Suuri lähetti vuonna 1565 valtavan laivaston '
+              + 'ajamaan ritarit Maltalta. Piiritys kesti 18. toukokuuta – 8. syyskuuta, ja '
+              + 'saarta puolusti noin 500 ritaria ja 6 000 jalkaväen sotilasta. Osmanit '
+              + 'hyökkäsivät ensin Pyhän Elmon linnakkeeseen Sciberras-vuoren kärjessä, '
+              + 'nykyisen Vallettan paikalla, ja sen valtaaminen 23. kesäkuuta maksoi heille '
+              + 'ainakin 6 000 miestä. Birgu ja Senglea kestivät silti pommituksen, jossa '
+              + 'aikalaiskertoja Francisco Balbin mukaan ammuttiin noin 130 000 tykinkuulaa. '
+              + 'Voiton jälkeen Euroopasta virtasi Maltalle rahaa, ja suurmestari Jean de '
+              + 'Valette rakensi Sciberras-vuorelle linnoitetun kaupungin, joka sai hänen '
+              + 'nimensä.',
+          lyhyt: 'Osmanien joukot ja tykit Pyhän Elmon linnakkeen ympärillä kesäkuussa '
+              + '1565.',
+          selite: 'Matteo Perez d\'Aleccion maalaus Pyhän Elmon valtauksesta 23. kesäkuuta '
+              + '1565 on Greenwichissä Lontoossa. Saman taiteilijan freskot piirityksestä '
+              + 'koristavat Vallettan Suurmestarin palatsin valtaistuinsalia.',
+          lahde: 'Matteo Perez d\'Aleccio, Royal Museums Greenwich, Wikimedia Commons (PD)',
+          wiki: 'Great Siege of Malta',
+        },
+        {
+          otsikko: 'Ritarikunnan loppu ja ranskalaisten kaksi vuotta',
+          tiedosto: 'Palazzo Parisio plaque Napoleon Bonaparte.jpg',
+          teksti: 'Kesäkuun 9. päivänä 1798 Egyptiin matkalla ollut Napoleon Bonaparten '
+              + 'laivasto saapui Vallettan edustalle. Suurmestari Ferdinand von Hompesch '
+              + 'vetosi Maltan puolueettomuuteen ja suostui päästämään satamaan vain kaksi '
+              + 'laivaa kerrallaan, jolloin Napoleon määräsi pommituksen ja maihinnousun. '
+              + 'Vaikka Valletta olisi kestänyt pitkän piirityksen, Hompesch luovutti saaret '
+              + 'ranskalaisille vastineeksi tiloista ja eläkkeistä itselleen ja ritareilleen. '
+              + 'Ranskalaiset lakkauttivat aateliston ja orjuuden, mutta kun he alkoivat '
+              + 'ryöstää kirkkojen omaisuutta, maltalaiset nousivat syyskuussa kapinaan ja '
+              + 'saartoivat varuskunnan Vallettaan. Ranskalaiset antautuivat briteille 5. '
+              + 'syyskuuta 1800, kun heidän ruokavaransa olivat loppumassa.',
+          lyhyt: 'Napoleonin muistolaatta Palazzo Parision kalkkikiviseinässä Vallettassa.',
+          selite: 'Palazzo Parision marmorilaatan mukaan Napoleon asui talossa 12.–18. '
+              + 'kesäkuuta 1798. Nykyään rakennuksessa toimii Maltan ulkoministeriö.',
+          lahde: 'Сале, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'French occupation of Malta',
+        },
+        {
+          otsikko: 'Saari, joka sai George-ristin',
+          tiedosto: 'BombDamageMalta.jpg',
+          teksti: 'Kesäkuusta 1940 marraskuuhun 1942 Saksan ja Italian ilmavoimat yrittivät '
+              + 'pommittaa ja näännyttää brittien Maltan antautumaan, sillä saarelta käsin '
+              + 'iskettiin Pohjois-Afrikkaan kulkeviin huoltokuljetuksiin. Pelkästään 20. '
+              + 'maaliskuuta – 28. huhtikuuta 1942 saksalaiset pudottivat saarelle 6 557 '
+              + 'tonnia pommeja, niistä 3 150 tonnia Vallettaan. Ruoka ja vesi alkoivat '
+              + 'loppua, ja elokuun 1942 Pedestal-saattueen 14 kauppalaivasta upotettiin '
+              + 'yhdeksän. Kuningas Yrjö VI myönsi 15. huhtikuuta 1942 George-ristin koko '
+              + 'saarelle sen asukkaiden sankaruuden kunniaksi. Risti on ollut Maltan '
+              + 'lipussa vuodesta 1943, ja itse kunniamerkki ja kuninkaan viestit ovat nyt '
+              + 'Pyhän Elmon linnakkeen sotamuseossa.',
+          lyhyt: 'Pommituksissa raunioitunut Kingsway, Vallettan pääkatu, huhtikuussa 1942.',
+          selite: 'Sotilaat ja siviilit raivaavat raunioita Vallettan pääkadulla Kingswaylla '
+              + 'huhtikuussa 1942. Kuvan otti kuninkaallisen laivaston valokuvaaja J. E. '
+              + 'Russell.',
+          lahde: 'J. E. Russell, Royal Navy, Imperial War Museums, Wikimedia Commons (PD)',
+          wiki: 'Siege of Malta (World War II)',
+        },
+      ],
     },
   ],
 
@@ -102704,7 +103079,7 @@ export const KULTTUURI_KATEGORIAT = {
             + 'yli purjehtii aluksia ja vasemmassa ylälaidassa on '
             + 'Newfoundlandin rannikko.',
           lahde: 'Mille, Wikimedia Commons (CC0)',
-          wiki: 'St. John’s, Newfoundland and Labrador',
+          wiki: 'St. John\'s, Newfoundland and Labrador',
         },
         {
           otsikko: 'Kapea portti ja sen puolustajat',
@@ -107941,7 +108316,7 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'kaupunki',
       nimi: 'Kilimanjaro',
-      johdanto: 'Kilimanjaro kohoaa Tansaniassa aivan päiväntasaajan tuntumassa, ja silti sen huipulla kimaltaa lumi ja jää. Se on Afrikan korkein vuori ja maailman korkein yksinäinen tulivuori.',
+      johdanto: 'Kilimanjaro kohoaa Tansaniassa päiväntasaajan tuntumassa, ja silti sen huipulla kimaltaa lumi. Se on Afrikan korkein vuori. Isoisän matkavuonna 1873 Euroopassa yhä väiteltiin, oliko lumihuippu edes totta.',
       nostot: [
         {
           otsikko: 'Vuori savannin yllä',
@@ -108715,6 +109090,37 @@ export const KULTTUURI_KATEGORIAT = {
             'Maalaus näyttää nelimastoisen parkkilaivan Port Stanley kallellaan raskaassa, tummansinisessä merenkäynnissä harmaan myrskytaivaan alla; suuri osa purjeista on reivattu ja aallot lyövät kannelle.',
           lahde: 'T. G. Purvis, Wikimedia Commons (Public domain)',
           wiki: 'Cape Horner',
+          galleria: [
+            {
+              otsikko: 'Myrsky lännestä',
+              tiedosto: '1884 Ship Scudding Off Cape Horn byClementDrew.jpg',
+              lyhyt: 'Laiva pakenee myötätuulessa Kap Hornin myrskyä Clement Drew’n maalauksessa (1884).',
+              selite: 'Clement Drew’n maalaus (1884): täysin takiloitu laiva '
+                + 'kiitää raskaan merenkäynnin ja synkän myrskytaivaan alla '
+                + 'Kap Hornin edustalla — juuri se sää, jonka takia niemeä '
+                + 'kutsuttiin purjelaivojen hautausmaaksi.',
+              lahde: 'Clement Drew, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Yhdysvaltain löytöretkikunnan vesiväri',
+              tiedosto: 'Cape Horn by Alfred Agate.jpg',
+              lyhyt: 'Alfred Agaten vesiväri (1838) Kap Hornista Yhdysvaltain löytöretkikunnalta.',
+              selite: 'Alfred T. Agaten vesiväri (1838): tumma, jyrkkäpiirteinen '
+                + 'niemi kohoaa merestä myrskyisen taivaan alla — kuvattu '
+                + 'Yhdysvaltain Tyynenmeren tutkimusretkikunnan (1838–1842) matkalla.',
+              lahde: 'Alfred Thomas Agate, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Kaksi alusta taistelee vastatuulta',
+              tiedosto: "Nicolas Cammillieri - The Frigate 'Maria Reigersbergen' and Corvette 'Pollux' in stormy weather west of Cape Horn on 10 February 1825.jpg",
+              lyhyt: 'Fregatti Maria Reigersbergen ja korvetti Pollux taistelevat myrskyä vastaan Kap Hornin luona 1825.',
+              selite: 'Nicolas Cammillierin maalaus (n. 1825): hollantilainen '
+                + 'fregatti Maria Reigersbergen ja korvetti Pollux ponnistavat '
+                + 'vastatuuleen kohti Valparaísoa myrskyisessä merenkäynnissä '
+                + 'Kap Hornin länsipuolella, helmikuussa 1825.',
+              lahde: 'Nicolas Cammillieri, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Albatrossi jota ei saanut tappaa',
@@ -108750,6 +109156,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Namib',
       johdanto:
         'Namib on maailman vanhin aavikko, yli 55 miljoonan vuoden ikäinen hiekka- ja sorameri Afrikan lounaisrannikolla. Isoisän matkavuonna 1873 sen sisämaa oli eurooppalaisille yhä lähes täysin tuntematon alue.',
+      ennenNyt: [
+        {
+          tiedosto: 'Lüderitzbucht, Deutsch-Südwestafrika. The newly finished pier with an Illing locomotive, February 1908, photograph by de Meillon.jpg',
+          vuosi: '1908',
+          lyhyt: 'Lüderitzin uusi laituri Namibin rannikolla 1908, keskellä maailman vanhinta aavikkoa.',
+          selite: 'Lüderitzin uusi laituri Namibin rannikolla 1908: veturi ja nostokurjet keskellä maailman vanhinta aavikkoa.',
+          lahde: 'Commons (PD)',
+        },
+        {
+          tiedosto: 'Lüderitz.jpg',
+          lyhyt: 'Lüderitz nykyään: saksalaisajan jugendtalot aavikon ja Atlantin välissä.',
+          selite: 'Lüderitz nykyään: saksalaisajan jugendtalot seisovat värikkäinä aavikon ja Atlantin välissä, ja laituri on edelleen paikallaan.',
+          lahde: 'SkyPixels, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Maailman vanhin aavikko',
@@ -108912,6 +109333,22 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Robinson Crusoe',
       johdanto:
         'Isoisän matkavuonna 1873 saarta kutsuttiin vielä nimellä Más a Tierra – vasta 1966 Chile nimesi sen virallisesti Robinson Crusoen saareksi kunniaksi tarinalle, jonka todellinen tapahtuma synnytti kaukana Tyynellämerellä.',
+      ennenNyt: [
+        {
+          tiedosto: 'Scene of the story of Robinson Crusoe. Selkirk\'s Cave. Side view looking up the valley. "Crusoe\'s Quibedrada" LCCN2006687056.jpg',
+          vuosi: '1874',
+          lyhyt: 'Selkirkin luola Robinson Crusoe -saarella Chilessä vuonna 1874.',
+          selite: 'Laakso, jota vedoksen alkuperäinen kuvateksti kutsuu Selkirkin luolaksi, valokuvattuna vuonna 1874. Skotlantilainen merimies Alexander Selkirk jätettiin saarelle 1704 ja eli siellä yksin yli neljä vuotta; tarina antoi aiheen Defoen romaaniin.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Robinson Crusoe Island bayside view of the town of San Juan Bautista.jpg',
+          vuosi: '2020',
+          lyhyt: 'San Juan Bautista, saaren ainoa kylä Cumberlandinlahden rannalla kansallispuiston keskellä.',
+          selite: 'San Juan Bautista, saaren ainoa kylä, Cumberlandinlahden rannalla. Kylän ulkopuolinen osa saarta on kansallispuistoa ja Unescon biosfäärialuetta.',
+          lahde: 'Richard N Horne, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Nimi joka vaihtui vasta 1966',
@@ -109072,6 +109509,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Norfolk',
       johdanto:
         'Norfolkinsaari oli isoisän matkavuonna 1873 nuori mutta jo värikäs paikka: rangaistussiirtolan pahamaineinen historia oli päättynyt vasta 1855, ja sen tyhjät kasarmit asutti nyt kokonainen yhteisö Bounty-kapinallisten jälkeläisiä.',
+      ennenNyt: [
+        {
+          tiedosto: 'Penal settlement at Norfolk Island c 1839 watercolour.jpg',
+          vuosi: '1839',
+          lyhyt: 'Thomas Sellerin vesiväri Norfolkin ankarasta rangaistussiirtolasta noin 1839.',
+          selite: 'Thomas Sellerin vesiväri (n. 1839) Norfolkin rangaistussiirtolasta komentaja Morissetin ankaran kauden aikana.',
+          lahde: 'Thomas Seller, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Kingston, Norfolk Island.jpg',
+          lyhyt: 'Kingston norfolkinmäntyjen välistä nykyään, vankisiirtolan rakennukset alarinteessä.',
+          selite: 'Kingston norfolkinmäntyjen välistä nykyään: alarinteessä näkyvät vankisiirtolan ajan rakennukset ja niiden takana avomeri.',
+          lahde: 'thinboyfatter, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Löytöretkeläisen mäntyerhe',
@@ -109105,6 +109557,27 @@ export const KULTTUURI_KATEGORIAT = {
             'James Glen Wilsonin vuonna 1855 tekemä kynäpiirros näyttää Government Housen pitkän, kuistillisen puurakennuksen, lipputangon Union Jackineen sekä kaksi ratsastajaa edustan nurmikolla.',
           lahde: 'James Glen Wilson (1827-1863), Wikimedia Commons (Public domain)',
           wiki: 'Alexander Maconochie',
+          galleria: [
+            {
+              otsikko: 'Vankisiirtola 1839',
+              tiedosto: 'Penal settlement at Norfolk Island c 1839 watercolour.jpg',
+              lyhyt: 'Thomas Sellerin vesiväri (n. 1839) näyttää Norfolkin ankaran rangaistussiirtolan.',
+              selite: 'Thomas Sellerin vesiväri (n. 1839): Norfolkin '
+                + 'rangaistussiirtolan rakennukset komentaja Morissetin '
+                + 'ankaran kauden aikana, jolloin saaren maine "helvettinä '
+                + 'maan päällä" vakiintui.',
+              lahde: 'Thomas Seller, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Sydney Bay 1850-luvulla',
+              tiedosto: 'Sydney Bay, Norfolk Island Wilson Nla.obj-135935390-1.jpg',
+              lyhyt: 'James Glen Wilsonin maalaus Sydney Baystä, jonne pitcairnilaiset saapuivat.',
+              selite: 'James Glen Wilsonin maalaus (1850-luku): Sydney Bayn '
+                + 'ranta ja Kingstonin siirtokunta, samalla rannalla, jolle '
+                + 'pitcairnilaiset nousivat maihin vuonna 1856.',
+              lahde: 'James Glen Wilson, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Pitcairnilaisten pitkä purjehdus',
@@ -109208,6 +109681,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Angola',
       johdanto:
         'Angola oli isoisän matkavuonna 1873 Portugalin vanha siirtomaa Atlantin rannikolla: satamakaupunki Luanda oli perustettu jo 1575, ja sen historiaan kuuluivat sekä orjakauppa että tutkimusmatkailijoiden kulku sisämaahan.',
+      ennenNyt: [
+        {
+          tiedosto: 'Saint-Paul de Luanda, port de (l\')Angola dans le Portugal africain (vue générale) - btv1b6932475d.jpg',
+          vuosi: '1914',
+          lyhyt: 'Luandan satama ja rantakatu 1914, purjelaivoja ja höyryaluksia lahdessa.',
+          selite: 'Luandan satama ja rantakatu vuonna 1914. Lahden suojissa lepäsi purjelaivoja ja höyryaluksia rinnakkain.',
+          lahde: 'Agence Rol / BnF (PD)',
+        },
+        {
+          tiedosto: 'Marginal de Luanda HD Dji Mavic 3 Classic - By Délcio Geovany Borges.jpg',
+          lyhyt: 'Luandan lahti nykyään: rantakadusta kasvanut tornien reunustama Marginal-bulevardi.',
+          selite: 'Luandan lahti nykyään: purjelaivojen rantakadusta on kasvanut tornien reunustama rantabulevardi, Marginal.',
+          lahde: 'Iamdelcioborges, Commons (CC BY 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kivipylväs rannikon merkkinä',
@@ -109332,6 +109820,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Karthago',
       johdanto:
         'Isoisän vuonna 1873 Karthago ei ollut avoin muistomerkkipuisto: suurin osa muinaisesta suurkaupungista lepäsi hiekan ja oliivitarhojen alla Tunisinlahden rannalla, odottaen ensimmäisiä järjestelmällisiä kaivauksia.',
+      ennenNyt: [
+        {
+          tiedosto: 'Tunisie, Carthage, cathédrale et séminaire de St Louis - btv1b53114044m.jpg',
+          vuosi: '1912',
+          lyhyt: 'Karthagon Byrsan kukkula isoisän aikaan: katedraali raunioiden keskellä, kaivaukset alussa.',
+          selite: 'Karthagon Byrsan kukkula isoisän aikaan: raunioiden keskelle oli noussut katedraali, ja kaivaukset olivat vasta alussa.',
+          lahde: 'Agence Rol / BnF Gallica (PD)',
+        },
+        {
+          tiedosto: '01996 01434 Ruins of Antonine Baths at Carthage.jpg',
+          lyhyt: 'Karthagon kaivaukset nykyään: Antoninuksen termien rauniot maailmanperintökohteena.',
+          selite: 'Karthagon kaivaukset valmistuivat kertomaan tarinansa: Antoninuksen termien rauniot ovat nykyään maailmanperintökohde meren äärellä.',
+          lahde: 'Silar, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kylpylä hiekan alla',
@@ -109343,6 +109846,38 @@ export const KULTTUURI_KATEGORIAT = {
             'Kuvassa erottuu Antonine-kylpylöiden yksinäinen korinttilaispylväs ja rauniomuureja, taustalla Tunisinlahden sininen vesi – isoisän aikaan suurin osa rakennuksesta oli vielä hiekan peitossa.',
           lahde: 'Silar, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Baths of Antoninus',
+          galleria: [
+            {
+              otsikko: 'Marius raunioiden keskellä',
+              tiedosto: 'John Vanderlyn - Caius Marius Amid the Ruins of Carthage - Google Art Project.jpg',
+              lyhyt: 'John Vanderlynin maalaus (1807) roomalaiskenraali Mariuksesta karkotettuna Karthagon raunioille.',
+              selite: 'John Vanderlynin maalaus (1807, Pariisin Salon): '
+                + 'roomalaiskenraali Gaius Marius istuu karkotettuna '
+                + 'Karthagon raunioilla — suosittu neoklassistinen aihe, '
+                + 'jonka moni taidemaalari käsitteli 1800-luvun alussa.',
+              lahde: 'John Vanderlyn, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Ranskalainen tulkinta samasta aiheesta',
+              tiedosto: "'Marius Meditating on the Ruins of Carthage' by Pierre-Nolasque Bergeret, Dayton Art Institute.JPG",
+              lyhyt: 'Pierre-Nolasque Bergeretin versio (1807) Mariuksesta Karthagon raunioilla.',
+              selite: 'Pierre-Nolasque Bergeretin maalaus (1807): samaa '
+                + 'Marius-aihetta käsiteltiin samana vuonna useiden '
+                + 'ranskalaisten ja amerikkalaisten taidemaalarien '
+                + 'töissä — aihe oli koko sukupolven suosikki.',
+              lahde: 'Pierre-Nolasque Bergeret, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Rauniot ennen kaivauksia',
+              tiedosto: 'Ruins at Carthage, with salt marshes in the distance, Tunisi Wellcome V0050117.jpg',
+              lyhyt: 'Charles Gülinin vesiväri (1778) Karthagon raunioista ennen järjestelmällisiä kaivauksia.',
+              selite: 'Charles Gülinin vesiväri (1778): Karthagon rauniot '
+                + 'ja suolamarskit taustalla, samankaltaisina kuin isoisä '
+                + 'näki ne sata vuotta myöhemmin 1873 — ennen kuin '
+                + 'järjestelmälliset kaivaukset alkoivat 1875.',
+              lahde: 'Charles Gülin, Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+            },
+          ],
         },
         {
           otsikko: 'Puunilaisten kaupunkikortteli',
@@ -109468,6 +110003,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Tanganjika',
       johdanto:
         'Tanganjikajärven itärannalla sijaitseva kauppakylä Ujiji oli 1800-luvulla karavaanien päätepiste — ja marraskuussa 1871 näyttämö kohtaamiselle, josta tuli yksi löytöretkien historian tunnetuimmista hetkistä.',
+      ennenNyt: [
+        {
+          tiedosto: 'Memorial tablet marking the spot where Livingstone and Stanley met at Ujiji in 1871 ATLIB 305982.png',
+          vuosi: '1903',
+          lyhyt: 'Muistolaatta Ujijissa: Stanley löysi Livingstonen 1871, "Tohtori Livingstone, otaksun?".',
+          selite: 'Muistolaatta Ujijissa Tanganjikajärven rannalla — paikassa, jossa Stanley löysi kadonneen Livingstonen vuonna 1871 ja tervehti: "Tohtori Livingstone, otaksun?"',
+          lahde: 'A. P. Godber (PD)',
+        },
+        {
+          tiedosto: 'Lake Tanganyika ,Kigoma port.jpg',
+          lyhyt: 'Kigoman satama Tanganjikajärvellä nykyään, satavuotias höyrylaiva Liemba liikennöi yhä.',
+          selite: 'Kigoman satama Tanganjikajärvellä nykyään — Ujijin naapurissa, jossa Stanley ja Livingstone kohtasivat. Järvellä liikennöi yhä yli satavuotias höyrylaiva Liemba.',
+          lahde: 'Erasmus Kamugisha, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Järvi jota Eurooppa ei tuntenut',
@@ -109769,6 +110319,17 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Emma, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Churchill, Manitoba',
         },
+        {
+          otsikko: 'Odotus venyy vuosi vuodelta',
+          teksti:
+            'Jääkarhujen syksyinen odotus riippuu suoraan siitä, milloin Hudsoninlahti jäätyy, ja jäätyminen puolestaan riippuu koko Jäämeren tilasta. Syyskuun 12. päivänä 2026 NASA ja Yhdysvaltain lumi- ja jäätietokeskus NSIDC mittasivat kesän jäljelle jättämäksi merijääksi 4,60 miljoonaa neliökilometriä eli 1,78 miljoonaa neliömailia — mittaushistorian kymmenenneksi vähiten, saman verran kuin vuosina 2008, 2010 ja 2025. Tutkijat seuraavat Churchillin karhupopulaatiota tarkemmin kuin lähes mitään muuta juuri siksi, että se on ensimmäisten joukossa kärsimässä lyhenevästä jääkaudesta.',
+          tiedosto: 'Arctic Sea Ice Minimum 2026 (SVS5677 - 3199 print).jpg',
+          lyhyt: 'NASA:n kuva näyttää Jäämeren jääpeitteen laajuuden syyskuussa 2026.',
+          selite:
+            'NASA:n Scientific Visualization Studion kuva näyttää Jäämeren jääpeitteen syyskuun 12. päivänä 2026, keltaisen ääriviivan merkitessä vuosien 1981–2010 keskimääräistä minimilaajuutta vertailuksi.',
+          lahde: 'NASA / NSIDC (Trent L. Schindler, James Riordon, Walt Meier), Wikimedia Commons (Public domain)',
+          wiki: 'Arctic sea ice decline',
+        },
       ],
     },
   ],
@@ -109778,6 +110339,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Sierra Leone',
       johdanto:
         'Isoisän matkavuonna 1873 Freetown oli Britannian Länsi-Afrikan siirtomaan pääkaupunki ja laivaston tukikohta, jonka kaduilla kohtasivat orjuudesta vapautettujen jälkeläiset, brittiupseerit ja kauppiaat kaikkialta maailmasta.',
+      ennenNyt: [
+        {
+          tiedosto: 'Cotton Tree Railway Station 3.30 p.m. Bungalow Train, Freetown.jpg',
+          vuosi: '1910-luku',
+          lyhyt: 'Iltapäiväjuna Freetownin Cotton Tree -asemalta, kuuluisa puuvillapuu paikallaan.',
+          selite: 'Iltapäiväjuna lähdössä Freetownin Cotton Tree -asemalta. Kaupungin kuuluisa puuvillapuu kasvaa yhä samalla paikalla.',
+          lahde: 'Lisk-Carew Brothers (PD)',
+        },
+        {
+          tiedosto: 'Cotton tree in Freetown, SL - Mapillary (yIBZ74r6IsUFOaWtAPwhWw).jpg',
+          lyhyt: 'Cotton Tree sata vuotta myöhemmin liikenneympyrässä; puu kaatui myrskyssä 2023.',
+          selite: 'Sama puuvillapuu sata vuotta myöhemmin keskellä liikenneympyrää. Vanhus kaatui lopulta myrskyssä 2023, ja sen taimista kasvatetaan seuraajaa.',
+          lahde: 'danbjoseph @ Mapillary.com, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Puu, jonka alle vapaus istutettiin',
@@ -109914,6 +110490,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Appalakit',
       johdanto:
         'Appalakit ovat Pohjois-Amerikan itälaidan ikivanha vuorijono, joka kohosi kauan ennen dinosauruksia ja kului metsäisiksi, pyöreiksi harjanteiksi. Isoisän matkavuonna 1873 ne olivat yhä harvaan asuttua rajaseutua.',
+      ennenNyt: [
+        {
+          tiedosto: 'Coal miner\'s child taking home kerosene for lamps, 8a39248.jpg',
+          vuosi: '1938',
+          lyhyt: 'Kaivosmiehen lapsi kantaa petrolia Pursglovessa Länsi-Virginiassa vuonna 1938.',
+          selite: 'Kaivosmiehen lapsi kantaa kotiin kanisterillisen petrolia lamppuja varten Pursglovessa Länsi-Virginiassa. Vasemmalla seisoo hiilellä lastattu junavaunujono, taustalla kaivoksen lastaustorni ja oikealla yhtiön rakentamat asuintalot — sähköä ei kylässä ollut.',
+          lahde: 'Marion Post Wolcott, Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Autumn Colors Overlook View Graveyard Fields Blue Ridge Pkwy NC.jpg',
+          lyhyt: 'Syysväreissä Graveyard Fieldsin laakso: Appalakit vanhoja, pyöreitä ja metsäisiä huipulle asti.',
+          selite: 'Syysväreissä oleva Graveyard Fieldsin laakso Blue Ridge Parkwayn näköalapaikalta. Appalakit ovat vanhoja ja kuluneita vuoria, mistä johtuu niiden pyöreä muoto ja se, että metsä yltää huipuille asti.',
+          lahde: 'bobistraveling, Commons (CC BY 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Vuoret jotka olivat jo vanhoja ennen dinosauruksia',
@@ -110062,6 +110653,21 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'kaupunki',
       nimi: 'St. Helena',
       johdanto: 'St. Helena on pieni tulivuorisaari keskellä eteläistä Atlanttia, yli 1800 kilometrin päässä lähimmästä mantereesta. Isoisän matkan aikaan 1873 saari oli yhä laivaliikenteen tärkeä välietappi ja Napoleonin kohtalon leimaama.',
+      ennenNyt: [
+        {
+          tiedosto: 'The drama of Saint Helena (1910) (14777842132).jpg',
+          vuosi: '1910',
+          lyhyt: 'Näkymä St. Helenalle 1910: jyrkät kalliot ottivat vastaan jokaisen saapujan.',
+          selite: 'Näkymä St. Helenalle 1910 julkaistun kirjan sivuilta — jyrkät kalliot ottivat vastaan jokaisen saapujan, keisarista matkalaiseen.',
+          lahde: 'Internet Archive (PD)',
+        },
+        {
+          tiedosto: 'Jacob\'s Ladder near St. James Cathedral in Jamestown Saint Helena.jpg',
+          lyhyt: 'Jamestown nykyään: Jaakobin portaat, 699 askelmaa laakson pohjalta jyrkänteelle.',
+          selite: 'Jamestown nykyään: Jaakobin portaat — 699 askelmaa — nousevat laakson pohjalta jyrkänteelle. Saarelle pääsee nykyisin myös lentäen.',
+          lahde: 'Kevstan, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Jamestown ahtaassa laaksossa',
@@ -110184,6 +110790,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Kimberley',
       johdanto:
         'Isoisän saapuessa Etelä-Afrikkaan 1873 uusi kaivoskaupunki sai sinä vuonna nimensä brittiläisen siirtomaaministerin mukaan – kaksi vuotta aiemmin löydetyt timantit olivat tehneet savannikummusta maailman kuuluisimman kaivoksen.',
+      ennenNyt: [
+        {
+          tiedosto: 'Twee gezichten op de mijn Die Groot Gat te Kimberley Diamond fields-Kimberley mine (titel op object) Diamond fields-Tramway, Kimberley mine (titel op object), RP-F-2001-7-425-25.jpg',
+          vuosi: 'noin 1870',
+          lyhyt: 'Kimberleyn timanttikaivos alkuaikoina: tuhannet kaivajat louhivat käsin, syntyi Iso Reikä.',
+          selite: 'Kimberleyn timanttikaivos alkuaikoinaan: tuhannet kaivajat louhivat kuoppaa käsin, köysiradat kuljettivat maata ylös. Kuopasta kasvoi lopulta Iso Reikä.',
+          lahde: 'Rijksmuseum (CC0)',
+        },
+        {
+          tiedosto: 'Big Hole, Kimberley, Northern Cape, South Africa (20512571296).jpg',
+          lyhyt: 'Kimberleyn Iso kuoppa: käsin kaivettu, pohjalla tummansininen järvi.',
+          selite: 'Kimberleyn Iso kuoppa kaupungin laidalla. Kaivos on kaivettu käsin, ja pohjalla on nyt tummansininen järvi; reunalla näkyy nykyinen kaupunki.',
+          lahde: 'South African Tourism, Commons (CC BY 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Löytö Colesbergin kummulla',
@@ -110310,6 +110931,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Labrador',
       johdanto:
         'Labrador on Kanadan koillisin ja karuin maakolkka: jylhiä vuoria, jäisiä vuonoja ja satojen vuosien takaisia inuittikyliä. Isoisän matkavuonna 1873 se oli jo vanha tuttu paikka valaanpyytäjille ja turkiskauppiaille.',
+      ennenNyt: [
+        {
+          tiedosto: 'Labrador, the country and the people (1909) (14779270504).jpg',
+          vuosi: '1909',
+          lyhyt: 'Kalastuslaivasto lipuin Labradorin rannikolla lääkärilähetystä vastassa 1909.',
+          selite: 'Kalastuslaivasto liputettuna vastassa lähetysveneen tuloa Labradorin rannikolla. Kuvalaatta on lääkäri Wilfred Grenfellin kirjasta; hänen lähetyksensä kiersi rannikkoa veneellä ja toi lääkärinavun hajallaan oleviin kalastajakyliin, joihin ei päässyt maitse.',
+          lahde: 'Wilfred Grenfell: Labrador, the country and the people (1909), Internet Archive / Commons (PD)',
+        },
+        {
+          tiedosto: 'BattleHarbour Labrador 2008.JPG',
+          lyhyt: 'Battle Harbourin varastorakennukset sumussa, entinen turskakalastuksen tukikohta.',
+          selite: 'Battle Harbourin puiset varasto- ja käsittelyrakennukset sumussa saarella Labradorin etelärannikolla. Paikka oli vuosisatojen ajan turskakalastuksen tukikohta, jossa saalis suolattiin ennen laivausta.',
+          lahde: 'Paul Gierszewski, Commons (PD)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kirkko joka ehti sata vuotta ennen isoisää',
@@ -110462,6 +111098,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Kap Palmas',
       johdanto:
         'Kap Palmas on Liberian kaakkoiskärjen kalliopilkka, jonka isoisä näki vuonna 1873 jo osana Liberiaa – vain kuusitoista vuotta aiemmin niemi oli ollut oman pienen tasavallan, Marylandin, pääkaupunki.',
+      ennenNyt: [
+        {
+          tiedosto: 'HEARD(1898) 50 Church of Harper, Cape Palmas.jpg',
+          vuosi: '1898',
+          lyhyt: 'Harperin kirkko Kap Palmasin niemellä, torni purjehtijoiden maamerkkinä.',
+          selite: 'Harperin kirkko Kap Palmasin niemellä. Sen torni näkyi kauas merelle ja toimi purjehtijoiden maamerkkinä.',
+          lahde: 'W. H. Heard (PD)',
+        },
+        {
+          tiedosto: 'Harper, Liberia - panoramio (1).jpg',
+          lyhyt: 'Harperin kaupunki Kap Palmasin niemellä nykyään: palmuja, peltikattoja ja Atlantti.',
+          selite: 'Harperin kaupunki Kap Palmasin niemellä nykyään: palmut, peltikatot ja Atlantin ranta samassa kuvassa.',
+          lahde: 'blk24ga, Commons (CC BY 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Grebot asuivat niemellä ennen siirtolaisia',
@@ -110737,6 +111388,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Viktoria Nyanza',
       johdanto:
         'Viktorianjärvi on Afrikan suurin ja maailman toiseksi suurin makeavesijärvi, jonka rannoilla asuu nykyään yli 45 miljoonaa ihmistä kolmessa maassa. Sen löytöhistoria kesti lähes 20 vuotta ja synnytti Lontoossa kiivaan tiedekiistan.',
+      ennenNyt: [
+        {
+          tiedosto: 'Jules Leclercq- Aux sources du Nil-1913-chutes Ripon.jpg',
+          vuosi: '1913',
+          lyhyt: 'Riponin putoukset, joista Niili lähti Viktoria Nyanzasta; upposi padon alle 1954.',
+          selite: 'Riponin putoukset, joista Niili lähti Viktoria Nyanzasta pohjoiseen. Isoisän ajan kuuluisa nähtävyys upposi padon alle 1954 — putousta ei enää ole.',
+          lahde: 'Commons (PD)',
+        },
+        {
+          tiedosto: 'Boats by the Lake Victoria Shore.jpg',
+          lyhyt: 'Kalastajaveneitä Viktoria Nyanzan rannassa nykyään, voimalaitos putouksen paikalla.',
+          selite: 'Kalastajaveneitä Viktoria Nyanzan rannassa nykyään. Järvi on Afrikan suurin, ja putouksen paikalla humisee nyt voimalaitos.',
+          lahde: 'Laura Awino, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Speke näkee unelmansa järven',
@@ -110884,6 +111550,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Gao',
       johdanto:
         'Gao oli Songhain valtakunnan pääkaupunki, jonka vaurauden takasi Saharan yli kulkeva kulta- ja suolakauppa. Isoisän matkavuonna 1873 kerran mahtavasta kaupungista oli jäljellä vain köyhtynyt Nigerjoen varren kylä.',
+      ennenNyt: [
+        {
+          tiedosto: 'ETH-BIB-Grabmal von Askia, Gao-Tschadseeflug 1930-31-LBS MH02-08-0548.tif',
+          vuosi: '1930–31',
+          lyhyt: 'Askian hauta Gaossa, savipyramidi puurunkoisin piikein, Songhain suurvallan muistomerkki.',
+          selite: 'Askian hauta Gaossa — savesta muurattu pyramidi, jonka piikit ovat rakennustelineiksi jätettyjä puunrunkoja. Songhain suurvallan mahtavin muistomerkki.',
+          lahde: 'ETH-Bibliothek (PD)',
+        },
+        {
+          tiedosto: 'Tombeau dAskia in Gao by David Sessoms.jpg',
+          lyhyt: 'Askian savipyramidihauta Gaossa nykyään, puiset tukipuut ja savitiiliaita edessä.',
+          selite: 'Savesta muurattu porrasmainen pyramidihauta, jonka seinistä työntyy ulos puisia tukipuita, ja sen edessä matala savitiiliaita hiekkaisen aukion laidalla.',
+          lahde: 'David Sessoms from Fribourg, Switzerland, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Songhain valtakunnan sydän',
@@ -111030,6 +111711,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Kamerun',
       johdanto:
         'Kamerunvuori kohoaa yli 4000 metriä suoraan Guineanlahden rannasta – tulivuori, jonka purkaukset ovat muokanneet koko rannikkoa jo yli 2000 vuoden ajan ja synnyttäneet legendan jumalten vaunusta.',
+      ennenNyt: [
+        {
+          tiedosto: 'People gathered before a church, Cameroon, ca.1910-1920 (IMP-YDS-RG101-012-0000-0036).jpg',
+          vuosi: '1910-luku',
+          lyhyt: 'Väkeä koolla kirkon edustalla Kamerunissa 1910-luvulla, vuoren juurella.',
+          selite: 'Väkeä koolla kirkon edustalla Kamerunissa 1910-luvulla — vuoren juurella kohtasivat tuolloin monet maailmat.',
+          lahde: 'Yale Divinity School (PD)',
+        },
+        {
+          tiedosto: 'Mount Cameroon view from Buea (Soppo).jpg',
+          lyhyt: 'Kamerunvuori Buean yltä nykyään, tulivuori purkautui viimeksi 2000.',
+          selite: 'Kamerunvuori Buean kaupungin yltä nykyään. Tulivuori on yhä toiminnassa — viimeksi se purkautui vuonna 2000.',
+          lahde: 'Yona Tientcheu, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Jumalten vaunu',
@@ -111187,6 +111883,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Suakin',
       johdanto:
         'Suakin oli vuosisatoja Punaisenmeren tärkein satama Sudanin rannikolla ja pyhiinvaeltajien portti Mekkaan; isoisän matkavuonna 1873 se oli osa khediivi Ismailin uudistuvaa Egyptiä, jonka Suezin kanava oli juuri avannut maailmalle.',
+      ennenNyt: [
+        {
+          tiedosto: 'TheLandingPlaceAtSuakim(Suakin)1871.jpg',
+          vuosi: '1871',
+          lyhyt: 'Suakinin laituripaikka 1871, dhow-veneitä ja korallitaloja täydessä kukassaan.',
+          selite: 'Suakinin laituripaikka 1871: dhow-veneitä ja korallitaloja saaren rannassa, kun satama oli vielä täydessä kukassaan.',
+          lahde: 'Commons (PD)',
+        },
+        {
+          tiedosto: 'Suakin,custom office.jpg',
+          lyhyt: 'Suakinin korallitalot nykyään rauniokaupunkina, jota entisöidään.',
+          selite: 'Suakinin korallitalot ovat nykyään rauniokaupunki, jota on alettu entisöidä. Punaisenmeren helmen kadut ovat hiljentyneet — dhow-veneet käyvät yhä.',
+          lahde: 'Bertramz, Commons (CC BY 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Saari ja manner — kaksoiskaupunki',
@@ -111312,6 +112023,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Ahaggar',
       johdanto:
         'Ahaggarin vuoristo kohoaa keskellä Saharaa tulivuorenpurkausten muovaamana kalliomaisemana. Isoisän matkavuonna 1873 ranskalainen Henri Duveyrier oli vasta äskettäin kartoittanut nämä seudut eläen tuaregien keskuudessa.',
+      ennenNyt: [
+        {
+          tiedosto: 'Eremitage Foucauld (1991).jpg',
+          vuosi: '1991',
+          lyhyt: 'Charles de Foucauldin kivinen erakkomaja Assekremin laella, rakennettu 1911.',
+          selite: 'Charles de Foucauldin kivinen erakkomaja Assekremin laella, rakennettu 1911. Aikakauden valokuvaa vuorilta ei ole vapaana saatavilla — maja seisoo kuvassa samanlaisena kuin isoisän aikaan.',
+          lahde: 'Albert Backer, Commons (CC BY-SA 3.0)',
+        },
+        {
+          tiedosto: 'Sunrise Over the Assekrem Peaks — Hoggar Mountains, Algeria.jpg',
+          lyhyt: 'Auringonnousu Ahaggarin vuorilla, kivipiikit autiomaan yllä.',
+          selite: 'Auringonnousu Ahaggarin vuorilla. Kivipiikit nousevat autiomaan yllä, ja etualalla kulkee kivinen polku kohti näköalapaikkaa.',
+          lahde: 'Rachid Hamatou, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Ranskalainen joka eli tuaregien keskuudessa',
@@ -111449,6 +112175,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Mosambik',
       johdanto:
         'Mosambik-saari on kapea koralliriutta Itä-Afrikan rannikolla: isoisän matkavuonna 1873 se oli yhä Portugalin Itä-Afrikan pääkaupunki, jossa kivinen linnoituskaupunki ja Makuti-kaupunginosa elivät rinnakkain.',
+      ennenNyt: [
+        {
+          tiedosto: 'Planta da fortaleza da ilha de Moçambique, Leonardo de Ferrari, 1655.jpg',
+          vuosi: '1655',
+          lyhyt: 'São Sebastiãon linnoituksen piirros 1655, vanhin kuva Mosambikin saarelta.',
+          selite: 'São Sebastiãon linnoituksen piirros vuodelta 1655 — vanhin kuva saarelta. Sama linnoitus vartioi satamaa isoisän aikaan ja vartioi yhä.',
+          lahde: 'Commons (PD)',
+        },
+        {
+          tiedosto: 'Forte de São Sebastião - Igreja.jpg',
+          lyhyt: 'São Sebastiãon linnoituksen sisäpiha Mosambikin saarella, kirkko muurien sisällä.',
+          selite: 'São Sebastiãon linnoituksen sisäpiha Mosambikin saarella. Valkoiseksi kalkittu kirkko seisoo muurien sisällä, ja takana avautuu Intian valtameri.',
+          lahde: 'Stig Nygaard, Commons (CC BY 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'São Sebastiãon linnoitus',
@@ -111586,6 +112327,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Darfur',
       johdanto:
         'Kun isoisä matkusti maailmalla 1873, Darfurin sulttaanikunta Länsi-Sudanissa eli viimeisiä itsenäisiä kuukausiaan: jo seuraavana vuonna egyptiläinen kauppias-sotapäällikkö kaatoi Keira-suvun vuosisataisen Fur-valtakunnan.',
+      ennenNyt: [
+        {
+          tiedosto: 'Photo Dwelling in the Darfur region 1958 - Touring Club Italiano BBT 072.jpg',
+          vuosi: '1958',
+          lyhyt: 'Darfurilaisen talouden piha: olkikattoinen maja ja pieniä pyhäkkökatoksia vainajien sieluille.',
+          selite: 'Darfurilaisen talouden piha: takana iso olkikattoinen maja, edessä rivi jalkojen varaan nostettuja pieniä olkikatoksia ja maassa puhvelin kallo. Pienet katokset ovat pyhäkköjä, joihin vainajien sielujen uskotaan asettuvan katsomaan suvun elämää.',
+          lahde: 'Touring Club Italiano, Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'ElFasherDarfurSudan RomanDeckert18022015.jpg',
+          lyhyt: 'El Fasher, Darfurin vanha sulttaanien kaupunki, ennen nykyistä sotaa.',
+          selite: 'El Fasher, Darfurin vanha sulttaanien kaupunki, savitalojen ja hiekkakatujen laajana mattona ennen nykyistä sotaa.',
+          lahde: 'RomanDeckert, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Jebel Marra — sulttaanikunnan vuoristosydän',
@@ -111732,6 +112488,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Tšad-järvi',
       johdanto:
         'Isoisän matkavuonna 1873 Tšad-järvi oli Keski-Afrikan sisämeri, jonka rannoille saksalaiset Barth ja Nachtigal olivat juuri raivanneet eurooppalaisille tien – ja jonka koko on sittemmin kutistunut murto-osaan entisestä.',
+      ennenNyt: [
+        {
+          tiedosto: 'ETH-BIB-Ufer des Tschadsee-Tschadseeflug 1930-31-LBS MH02-08-0976.tif',
+          vuosi: '1930–31',
+          lyhyt: 'Tšad-järven rantaa ilmasta Walter Mittelholzerin Afrikan-lennolla.',
+          selite: 'Tšad-järven rantaa ilmasta Walter Mittelholzerin kuuluisalla Afrikan-lennolla — juuri sellaiselta matkalta, joista isoisäkin luki lehdistä.',
+          lahde: 'ETH-Bibliothek, Mittelholzer (PD)',
+        },
+        {
+          tiedosto: 'Lake chad shore (detilt).jpg',
+          lyhyt: 'Tšad-järven avointa vettä ja kaislaista vastarantaa nykyään.',
+          selite: 'Tšad-järven avointa vettä ja vastarantaa: matalaa vettä, ruoho- ja kaislakasvustoa sekä tiheä puurivi rannalla. Järvi on hyvin matala, ja sen rantaviiva on paksun kasvillisuuden peittämä.',
+          lahde: 'Coolthoom1 Detilt: Hike395, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Barth saapuu järvelle',
@@ -111878,6 +112649,21 @@ export const KULTTUURI_KATEGORIAT = {
       id: 'kaupunki',
       nimi: 'Ras Hafun',
       johdanto: 'Ras Hafun on Afrikan mantereen itäisin niemi Somalian rannikolla, kapean hiekkakannaksen päässä. Sen suojaisassa lahdessa on purjehdittu jo yli kaksituhatta vuotta ennen isoisän matkaa.',
+      ennenNyt: [
+        {
+          tiedosto: 'Garesadihafun.jpg',
+          vuosi: '1900-luvun alku',
+          lyhyt: 'Vanha garesa-linnoitus Hafunin niemellä, Afrikan itäisimmässä kärjessä.',
+          selite: 'Vanha garesa-linnoitus Hafunin niemellä, Afrikan itäisimmässä kärjessä. Monsuunituulet toivat tänne purjehtijoita jo tuhat vuotta sitten.',
+          lahde: 'Commons (PD)',
+        },
+        {
+          tiedosto: 'Hafun from space.jpg',
+          lyhyt: 'Hafunin niemi avaruudesta: Afrikan itäisin kärki hiekkakannaksen päässä.',
+          selite: 'Hafunin niemi avaruudesta: Afrikan itäisin kärki työntyy Intian valtamereen kapean hiekkakannaksen päässä.',
+          lahde: 'NASA (PD)',
+        },
+      ],
       nostot: [
         { otsikko: 'Mantereen itäisin kärki',
           teksti: 'Ras Hafun on sirpinmuotoinen niemi, joka työntyy Guardafui-salmeen Somalian koillisosassa Barin alueella. Se on koko Afrikan mantereen itäisin kohta. Niemi liittyy mantereeseen noin kaksikymmentä kilometriä pitkän ja vain yhdestä kolmeen kilometriä leveän hiekkakannaksen kautta lähellä Foarin kylää. Kalastajakylä sijaitsee itse niemellä, parin kilometrin päässä kannaksesta. Ilmakuvasta paikka näyttää ohuelta, mereen työntyvältä sormelta kahden vedenalueen välissä – juuri tällaista muotoa isoisän kartatkin yrittivät vuonna 1873 tavoittaa.',
@@ -111952,6 +112738,22 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Cayenne',
       johdanto:
         'Cayenne oli isoisän matkavuonna 1873 jo kaksisataavuotias siirtomaakaupunki: sen satamasta lähtivät rangaistussiirtolan laivat sademetsän reunaan, ja sen nimi oli antanut maailmalle tulisimman mausteensa.',
+      ennenNyt: [
+        {
+          tiedosto: 'Gezicht op een plein in Cayenne, Frans Guyana Public Square, Cayenne (titel op object), RP-F-2001-7-959-2.jpg',
+          vuosi: '1880-luvun loppu',
+          lyhyt: 'Aukio Cayennessa 1880-luvun lopulla.',
+          selite: 'Aukio Cayennessa 1880-luvun lopulla: palmurivi, matalia puutaloja ja yksinäinen kulkija. Painolaatta on kirjasta, jossa Lick-observatorion tutkijat raportoivat joulukuun 1889 auringonpimennyksestä — sitä varten retkikunta matkusti Kaliforniasta Guayanaan.',
+          lahde: 'W. B. Tyler / Rijksmuseum, Commons (CC0)',
+        },
+        {
+          tiedosto: 'Cayenne place des palmistes 2013.jpg',
+          vuosi: '2013',
+          lyhyt: 'Place des Palmistes, Cayennen palmuaukio kuninkaanpalmujen mukaan nimetty.',
+          selite: 'Place des Palmistes eli palmuaukio Cayennen keskustassa. Nimi tulee aukion korkeista kuninkaanpalmuista; taustalla kulkee Avenue du Général-de-Gaulle.',
+          lahde: 'Cayambe, Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Linnake Cépéroun kukkulalla',
@@ -112087,6 +112889,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Orjarannikko',
       johdanto:
         'Ouidah oli Länsi-Afrikan tärkein orjasatama, jonka kaduilla python-jumalan temppeli ja katolinen basilika seisovat yhä vierekkäin. Kaupunki syntyi maatilasta ja kasvoi Dahomeyn kuningaskunnan tärkeimmäksi ikkunaksi merelle.',
+      ennenNyt: [
+        {
+          tiedosto: 'São João Baptista de Ajudá 1920s.jpg',
+          vuosi: '1920-luku',
+          lyhyt: 'Ouidahin vanha portugalilaislinnake, Orjarannikon synkän historian vartiopaikka.',
+          selite: 'Ouidahin vanha portugalilaislinnake, Orjarannikon synkän historian vartiopaikka. Isoisän aikaan sen muurit olivat jo rapistumassa.',
+          lahde: 'Commons (PD)',
+        },
+        {
+          tiedosto: 'Benin UNESCO à la Porte du non-retour à Ouidah.jpg',
+          lyhyt: 'Muistomerkin kivilaatta Ouidahin rannalla, portti pystytetty 1995.',
+          selite: 'Muistomerkin kivilaatta Ouidahin rannalla. Siihen on kaiverrettu portin nimi ranskaksi sekä Beninin ja Unescon tunnukset; portti pystytettiin 1995.',
+          lahde: 'Rachad Sanoussi, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kolme linnaketta yhden rannan varrella',
@@ -112222,6 +113039,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Bahr el Ghazal',
       johdanto:
         'Bahr el Ghazal, arabiaksi "gasellien meri", on Etelä-Sudanin luoteisosan suoinen ja rautakivitasankoinen alue. Isoisän matkavuonna 1873 se oli Samuel Bakerin orjakaupan vastaisen sotaretken näyttämö ja hänen kautensa päätepiste.',
+      ennenNyt: [
+        {
+          tiedosto: 'Mission Marchand Haut-Oubangui Bahr-el-Ghazal Nil (...)Marchand Jean-Baptiste btv1b53198373d 4.jpg',
+          vuosi: '1903',
+          lyhyt: 'Marchandin retkikunnan kartta: Ranska marssi Bahr el Ghazaliin Fashodaan 1898.',
+          selite: 'Marchandin retkikunnan kartta: Ranska marssi Bahr el Ghazalin halki Fashodaan 1898 ja oli ajaa Euroopan suursotaan Britannian kanssa — suot ratkaisivat enemmän kuin armeijat.',
+          lahde: 'BnF Gallica (PD)',
+        },
+        {
+          tiedosto: 'Cattle Wau Sudan.jpg',
+          lyhyt: 'Pitkäsarvinen karja Bahr el Ghazalin rikkautena nykyäänkin.',
+          selite: 'Pitkäsarvinen karja on Bahr el Ghazalin rikkaus nykyäänkin: paimenten vuosi kiertää karjaleirien ja tulvatasankojen mukana.',
+          lahde: 'Bertramz, Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Gasellien meri',
@@ -112372,6 +113204,22 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Sepik',
       johdanto:
         'Sepik on Uuden-Guinean pisin joki: yli tuhat kilometriä sademetsää ja hylättyjä jokimutkia. Isoisän 1873 matkassa kaikuu tuore huhu miehestä, joka asui rannikolla aseettomana jo kaksi vuotta aiemmin.',
+      ennenNyt: [
+        {
+          tiedosto: 'Ceremonieel huis (tambaran) in het Sepik-gebied op Australisch Nieuw-Guinea, KITLV 153233.tiff',
+          vuosi: '1921',
+          lyhyt: 'Henkitalo eli haus tambaran Sepikin alueella, klaanin veistosten säilytyspaikka.',
+          selite: 'Henkitalo eli haus tambaran Sepikin alueella. Korkea kärkiharja kohoaa palmujen yli, ja kylän aukio on lakaistu talon eteen. Tällaiseen taloon kokoontuivat vain miehet, ja siellä säilytettiin klaanin veistokset ja huilut.',
+          lahde: 'KITLV, Leidenin yliopiston kirjastot (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Men\'s house in Tambunum village, Sepik River, Papua New Guinea (side view).jpg',
+          vuosi: '2014',
+          lyhyt: 'Tambunumin kylän miestentalo Sepikillä, iatmulien krokotiiliklaanin rakennus noin 2010.',
+          selite: 'Tambunumin kylän uusin miestentalo keski-Sepikillä, rakennettu noin 2010. Se kuuluu iatmulien krokotiiliklaanille, ja kuvanottohetkellä sisällä käytiin muodollista neuvonpitoa. Talot uusitaan, mutta muoto pysyy.',
+          lahde: 'Eksilverman, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Mies joka tuli kaksi vuotta aiemmin',
@@ -112512,6 +113360,22 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Broome',
       johdanto:
         'Broome kasvoi 1880-luvulla satamaksi, kun helmiäissimpukka teki siitä hetkeksi maailman johtavan helmikaupungin. Kauan ennen sitä rannikkoa asutti Yawuru-kansa, jolle helmiäinen oli pyhää jo ennen "Broome"-nimen syntyä.',
+      ennenNyt: [
+        {
+          tiedosto: 'LISWA 009553d Koolama.jpg',
+          vuosi: '1940-luku',
+          lyhyt: 'Höyrylaiva Koolama laskuvedellä Broomen laiturissa noin 1940, vuorovesi lähes kymmenen metriä.',
+          selite: 'Höyrylaiva Koolama laskuveden aikaan Broomen laiturissa noin vuonna 1940: runko lepää merenpohjalla ja vesiraja näkyy kylkeen piirtyneenä juovana. Broomessa vuorovesi vaihtelee suurimmillaan lähes kymmenen metriä, joten laivat jäivät kuiville joka päivä.',
+          lahde: 'State Library of Western Australia, Commons (PD)',
+        },
+        {
+          tiedosto: 'Dampier Terrace, Broome, 2019 (02).jpg',
+          vuosi: '2019',
+          lyhyt: 'Dampier Terrace Broomen Chinatownissa, entisten helmenpyytäjien kaupunginosa.',
+          selite: 'Dampier Terrace Broomen Chinatownissa. Matalissa aaltopeltikattoisissa taloissa on nykyään helmiliikkeitä; kaupunginosa tunnetaan Chinatownina, vaikka helmenpyynnin väki tuli aikoinaan myös Japanista, Malajien saaristosta ja Filippiineiltä.',
+          lahde: 'Bahnfrend, Commons (CC BY-SA 4.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Helmiäinen ennen Broomea',
@@ -112958,6 +113822,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Murzuk',
       johdanto:
         'Murzuk oli satoja vuosia Fezzanin pääkaupunki ja Saharan halki kulkevien karavaanien tärkein risteysasema – eurooppalaiset matkalaiset kutsuivat hiekkalinnoineen kaupunkia jopa "Saharan Pariisiksi".',
+      ennenNyt: [
+        {
+          tiedosto: 'AFR V2 D101 General view of Murzuk.jpg',
+          vuosi: '1891',
+          lyhyt: 'Murzuk maantieteellisessä teoksessa 1891: savilinnoitus vartioi Saharan karavaanireittiä.',
+          selite: 'Yleisnäkymä Murzukiin maantieteellisessä teoksessa vuodelta 1891. Savilinnoitus vartioi Saharan karavaanireittiä, ja sen muurien varjossa lepäsivät sekä kamelit että kauppiaat.',
+          lahde: 'Commons (PD)',
+        },
+        {
+          tiedosto: 'Murzuq - Festung Qala at Turk über dem Ort.jpg',
+          lyhyt: 'Sama savilinnoitus Murzukissa yhä: karavaanit vaihtuneet autoihin, aavikko lähellä.',
+          selite: 'Sama savilinnoitus kohoaa Murzukin kattojen yllä yhä — karavaanit ovat vaihtuneet autoihin, mutta aavikko alkaa entisestä paikasta.',
+          lahde: 'Franzfoto, Commons (CC BY-SA 3.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Qala at Turk — turkkilaisten linna',
@@ -113383,6 +114262,22 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'João Pessoa',
       johdanto:
         'João Pessoa on Brasilian koillisrannikon satamakaupunki, jonka portugalilaiset perustivat 1585 – kolmanneksi vanhimpana koko maassa. Vieressä kohoava niemi ottaa vastaan Amerikan mantereen ensimmäisen auringonsäteen joka aamu.',
+      ennenNyt: [
+        {
+          tiedosto: 'João Pessoa, Paraíba circa 1903.jpg',
+          vuosi: '1903',
+          lyhyt: 'Parahyban, nykyisen João Pessoan, kaupunki jokirannasta 1903.',
+          selite: 'Parahyban kaupunki jokirannasta katsottuna, kuva kirjasta vuodelta 1903. Rannassa on höyrylaiva ja pitkä varastorakennus; kaupunki kasvoi Paraíbajoen varteen satamana ja sai nykyisen nimensä João Pessoa vasta 1930, murhatun kuvernöörin mukaan.',
+          lahde: 'Virgílio Cardoso de Oliveira, A Patria Brazileira, Commons (PD)',
+        },
+        {
+          tiedosto: 'João Pessoa, capital da Paraíba.jpg',
+          vuosi: '2022',
+          lyhyt: 'João Pessoa ilmasta: tiilikattoja edessä, tornirivi ja Atlantti kasvaneen kaupungin takana.',
+          selite: 'João Pessoa ilmasta. Etualalla matalaa tiilikattoista asutusta, taustalla rannan tornirivi ja Atlantti: kaupunki on kasvanut jokivarresta merenrantaan asti.',
+          lahde: 'Marcos Elias de Oliveira Júnior, Commons (CC0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Kolmanneksi vanhin kaupunki',
@@ -113665,6 +114560,21 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Al Kufra',
       johdanto:
         'Al Kufra on viiden oaasin ryppäs syvällä Kaakkois-Libyan Saharassa, satojen kilometrien päässä lähimmästä naapuristaan. Isoisän matkavuonna 1873 se oli eurooppalaisille yhä täysin tuntematon paikka.',
+      ennenNyt: [
+        {
+          tiedosto: 'Kufra (aeroview).jpg',
+          vuosi: 'noin 1930',
+          lyhyt: 'Kufran keitaat ilmasta: palmulehtoja ja suolajärviä keskellä hiekkamerta.',
+          selite: 'Kufran keitaat ilmasta kuvattuna: palmulehtoja ja suolajärviä keskellä hiekkamerta, päivien matkan päässä kaikesta.',
+          lahde: 'Commons (PD)',
+        },
+        {
+          tiedosto: 'ISS-50 Al-Jawf Oasis in Eastern Libya.jpg',
+          lyhyt: 'Kufran keitaat nykyään avaruudesta: vihreät kastelupellot ympyröinä hiekkamerellä.',
+          selite: 'Kufran keitaat nykyään avaruudesta: vihreät kastelupellot piirtyvät täysinä ympyröinä keskelle hiekkamerta.',
+          lahde: 'NASA (PD)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Al Jawf – oaasiryhmän sydän',
@@ -113791,6 +114701,22 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Macapá',
       johdanto:
         'Macapá on ainoa Brasilian osavaltion pääkaupunki, jonka halki päiväntasaaja kulkee: se syntyi 1700-luvulla Amazonin suiston rajavartiopaikaksi ja on nykyisin lähes 490 000 asukkaan portti sademetsään.',
+      ennenNyt: [
+        {
+          tiedosto: 'Macapá 1908.jpg',
+          vuosi: '1908',
+          lyhyt: 'Macapá, São Josén kirkkoineen, Brasilian Amazonin suulla vuonna 1908.',
+          selite: 'Macapá vuonna 1908: São Josén kirkko aukion laidalla, matalia tiilikattoisia taloja ja yksi katulyhty. Kirkko ja kaupungin linnoitus rakennettiin 1700-luvun jälkipuoliskolla, kun Portugali halusi varmistaa Amazonin suun hallinnan.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Saint Joseph Church, Macapá city, Brazil.jpg',
+          vuosi: '2011',
+          lyhyt: 'Sama São Josén kirkko sata vuotta myöhemmin: kellotorni ennallaan, hiekan tilalla asfaltti.',
+          selite: 'Sama São Josén kirkko runsaat sata vuotta myöhemmin. Hiekkakentän tilalla on asfalttikatu ja pysäköityjä autoja, mutta kupolillinen kellotorni on entisellään; kaupungin vuosipäivää vietetään yhä täällä messulla.',
+          lahde: 'Jorge Andrade, Commons (CC BY 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Rajalinnake syntyy',
@@ -114574,6 +115500,22 @@ export const KULTTUURI_KATEGORIAT = {
         + 'vasta 1900-luvun alussa, kuolonuhreja vaatineen rautatiehankkeen '
         + 'leirinä. Nykyisin puoli miljoonaa ihmistä elää täällä joen '
         + 'tulvista, kumista, tinasta ja soijasta.',
+      ennenNyt: [
+        {
+          tiedosto: 'Vista Panorâmica de Porto Velho em 1910 - 1144, Acervo do Museu Paulista da USP.jpg',
+          vuosi: '1910',
+          lyhyt: 'Porto Velho radan rakennustyömaana Brasiliassa vuonna 1910.',
+          selite: 'Porto Velho vuonna 1910: raivattua rantatörmää, puisia halleja, kiskoja ja pieni laituri Madeirajoen rannassa. Kuvan otti Dana Merrill, joka palkattiin dokumentoimaan Madeira–Mamoré-radan rakentamista; kaupunki syntyi radan päätepisteeksi keskelle metsää.',
+          lahde: 'Dana Merrill / Museu Paulista (USP), Commons (PD)',
+        },
+        {
+          tiedosto: 'Porto Velho, Rondônia, Brasil.jpg',
+          vuosi: '2018',
+          lyhyt: 'Porto Velho nykyään: silta, viljasiilot ja proomu entisen ratatyömaan paikalla.',
+          selite: 'Porto Velho nykyään: etualalla joen ylittävä silta, rannassa viljasiiloja ja proomu, takana korkeaa keskustaa. Sadassa vuodessa metsän reunaan raivatusta ratatyömaasta on tullut osavaltion pääkaupunki, jossa asuu yli puoli miljoonaa ihmistä.',
+          lahde: 'Silva Júnior / MTur, Commons (CC0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Jättiläisjoki, joka kantaa kaupungin',
@@ -114855,6 +115797,22 @@ export const KULTTUURI_KATEGORIAT = {
         + 'kultaryntäyksen mukana 1893, mutta seutu oli asuttua kauan ennen '
         + 'sitä: wongatha-kansa tunsi joka vesipaikan ikivanhalla '
         + 'kultakalliolla.',
+      ennenNyt: [
+        {
+          tiedosto: 'Crowd watching parade in Hannan Street, Kalgoorlie, 1901.jpg',
+          vuosi: '1901',
+          lyhyt: 'Väkeä seuraamassa kulkuetta Hannan Streetillä Kalgoorliessa 1901, kultakaupungin nousu.',
+          selite: 'Väkeä seuraamassa kulkuetta Hannan Streetillä vuonna 1901. Kalgoorlien kulta löytyi 1893, ja alle kymmenessä vuodessa leiristä oli kasvanut kaupunki, jonka pääkadun varrella oli tiilisiä liiketaloja, postikonttori ja hotelleja.',
+          lahde: 'State Library of Western Australia, Commons (PD)',
+        },
+        {
+          tiedosto: 'Hannan Street looking south.jpg',
+          vuosi: '2017',
+          lyhyt: 'Hannan Street Kalgoorliessa nykyään, leveä pääkatu kuin vanhassa kuvassa.',
+          selite: 'Hannan Street nykyään etelään päin. Kadun päässä kohoaa kaupungintalon kellotorni, ja pääkatu on yhä yhtä leveä kuin vanhassa kuvassa — kultakenttien kaupungit mitoitettiin väljiksi alusta alkaen.',
+          lahde: 'JarrahTree, Commons (CC BY 2.5 AU)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Karlkurla, hopeanhohtoinen köynnös',
@@ -115147,6 +116105,22 @@ export const KULTTUURI_KATEGORIAT = {
         + 'Diamantina-joki hupenee Simpsonin aavikon hiekkaan. '
         + 'Isoisän matkavuonna 1873 paikkaa ei vielä ollut — mutta '
         + 'Burke ja Wills leiriytyivät samalle kohdalle jo 1861.',
+      ennenNyt: [
+        {
+          tiedosto: 'Royal Mail car on Birdsville Track, 1934.jpg',
+          vuosi: '1934',
+          lyhyt: 'Postiauto ylittämässä dyyniä Birdsville Trackilla 1934, Australian rankimpia postireittejä.',
+          selite: 'Postiauto ylittämässä hiekkadyyniä Birdsville Trackilla vuonna 1934. Reitti Marreesta Birdsvilleen oli 320 mailia eli runsaat 500 kilometriä autiomaata, ja sitä pidettiin yhtenä Australian rankimmista postireiteistä.',
+          lahde: 'State Library of South Australia, Commons (PD)',
+        },
+        {
+          tiedosto: 'Birdsville Pub (34616985520).jpg',
+          vuosi: '2007',
+          lyhyt: 'Autiomaakylän hotellirakennus Birdsvillen pääkadulla hämärän ja täysikuun aikaan.',
+          selite: 'Matala valkoinen hotellirakennus leveine kuistikatoksineen autiomaakylän hiljaisen pääkadun varrella hämärän aikaan. Katolla liehuu Australian lippu, täysikuu nousee sen takana ja ikkunoista hohtaa lämmin valo, kun taustalla tasainen aavikko jatkuu horisonttiin.',
+          lahde: 'NomadicPics from cairns, australia, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Leiri numero 76',
@@ -115459,6 +116433,22 @@ export const KULTTUURI_KATEGORIAT = {
         + 'ylängöllä Leichhardtin joen varrella. Joki sai nimensä jo '
         + '1856, kauan ennen kuin kukaan tiesi kivien alla lymyävästä '
         + 'hopeasta ja lyijystä.',
+      ennenNyt: [
+        {
+          tiedosto: 'StateLibQld 2 160404 Weekly Qantas plane service from Mount Isa to Brisbane, 1932.jpg',
+          vuosi: '1932',
+          lyhyt: 'Qantasin viikoittainen kone Mount Isan hiekkakentällä 1932, sisämaan reittien alkuaikoina.',
+          selite: 'Qantasin viikoittainen kone Mount Isan hiekkakentällä vuonna 1932. Kaksitaso on De Havilland DH.50J nimeltä Hippomenes, ja se hoiti yhteyttä Brisbaneen; Qantas aloitti nimenomaan sisämaan reiteillä, ei valtamerilennoilla.',
+          lahde: 'State Library of Queensland, Commons (PD)',
+        },
+        {
+          tiedosto: 'Panorama of Mount Isa, Queensland.jpg',
+          vuosi: '2006',
+          lyhyt: 'Mount Isa ja kaivos samassa kuvassa, savupiippu yli 250 metriä korkea.',
+          selite: 'Mount Isa ja sen kaivos samassa kuvassa. Kaupunki ja sulatto ovat Leichhardt-joen vastakkaisilla puolilla, ja savupiippu on yli 250 metriä korkea — se kohoaa ympäröivien punaisten kukkuloiden yli.',
+          lahde: 'Tennis expert, Commons (CC BY-SA 2.5)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Joki, joka lainasi nimensä kadonneelta',
@@ -115775,6 +116765,22 @@ export const KULTTUURI_KATEGORIAT = {
       johdanto: 'Coober Pedy kohoaa Etelä-Australian punaisella aavikolla, jonka läpi '
         + 'tutkimusmatkailija John McDouall Stuart ratsasti jo 1858. Opaali löytyi '
         + 'vasta 1915, ja siitä lähtien kaupunki on kaivautunut maan alle helteen tieltä.',
+      ennenNyt: [
+        {
+          tiedosto: 'Men standing outside an underground post office - branch of Commonwealth Bank of Australia (Coober Pedy)(GN04186).jpg',
+          vuosi: '1920-luku',
+          lyhyt: 'Miehiä Coober Pedyn maanalaisen postin edessä noin 1925.',
+          selite: 'Miehiä Coober Pedyn maanalaisen postin ja pankkiasiamiehen edessä noin vuonna 1925. Käsin maalattu kyltti ilmoittaa Commonwealth Bankin säästöpankkiosaston; talon rakensivat Arch Burnett ja Jack Norton, jotka olivat saapuneet paikalle autolla vuonna 1919.',
+          lahde: 'State Government Photographer / History Trust of South Australia, Commons (CC0)',
+        },
+        {
+          tiedosto: 'Coober Pedy - The Big winch lookout.jpg',
+          vuosi: '2000',
+          lyhyt: 'Coober Pedy Big Winch -näköalapaikalta, suuri osa asunnoista maan alla piilossa.',
+          selite: 'Coober Pedy Big Winch -näköalapaikalta. Kuvassa erottuu päätie, motelli, poravaunu ja kymmeniä sivukiviläjiä; suuri osa asunnoista ei näy lainkaan, koska ne on kaivettu rinteiden sisään.',
+          lahde: 'Tal Shiar, Commons (PD)',
+        },
+      ],
       nostot: [
         {
           otsikko: 'Stuart ratsasti ohi tietämättä',
@@ -116128,6 +117134,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Dennis Martínez',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Nicaragua. National Palace, Managua LCCN2016820953.jpg',
+          vuosi: '1910-luku',
+          lyhyt: 'Managuan kansallispalatsi 1910-luvulla, ennen kuin '
+            + 'keskusta tuhoutui kahdesti maanjäristyksissä.',
+          selite: 'Managuan kansallispalatsi 1910-luvulla. Nicaraguan '
+            + 'pääkaupunki oli tuolloin pieni järvenrantakaupunki, ja '
+            + 'keskusta sortui myöhemmin kahdesti maanjäristyksessä, '
+            + 'vuosina 1931 ja 1972.',
+          lahde: 'National Photo Company / Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Old Managua Cathedral (3).jpg',
+          vuosi: '2016',
+          lyhyt: 'Managuan vanha katedraali seisoo yhä vuoden 1972 '
+            + 'maanjäristyksen jäljiltä vaurioituneena.',
+          selite: 'Vanha katedraali Managuan keskustassa vuonna 2016. '
+            + 'Kirkko vaurioitui 1972 maanjäristyksessä eikä ole enää '
+            + 'käytössä, mutta managualaiset käyvät sitä yhä katsomassa '
+            + 'joka viikonloppu.',
+          lahde: 'Byralaal, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'luonto',
@@ -116305,6 +117335,67 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Reggae Maranhão Museum',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Largo do Carmo - São Luís - em 1908.jpg',
+          vuosi: '1908',
+          lyhyt: 'Largo do Carmo São Luísissa vuonna 1908, aukio joka '
+            + 'nimettiin pian uudelleen.',
+          selite: 'Largo do Carmo São Luísissa vuonna 1908, raitiotien '
+            + 'kiskoineen ja Carmon kirkkoineen. Aukio sai 1901 uuden '
+            + 'nimen Praça João Lisboa maranhãolaisen kirjailijan '
+            + 'mukaan.',
+          lahde: 'Gaudêncio Cunha, Álbum do Maranhão em 1908, Wikimedia '
+            + 'Commons (PD)',
+        },
+        {
+          tiedosto: 'Mercado das Tulhas - 01.jpg',
+          vuosi: '2019',
+          lyhyt: 'Mercado das Tulhas, vuonna 1861 rakennettu kauppahalli, '
+            + 'on yhä käytössä São Luísissa.',
+          selite: 'Mercado das Tulhas São Luísin vanhassakaupungissa. '
+            + 'Kaarikäytävän yläpuolelle on hakattu vuosiluku 1861, ja '
+            + 'halli on yhä kauppapaikka, nykyään enimmäkseen käsitöille '
+            + 'ja vaatteille.',
+          lahde: 'Ajmcbarreto, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      galleria: [
+        {
+          otsikko: 'Vingboonsin näkymä 1665',
+          tiedosto: 'AMH-6765-NA View of Sao Luis de Maranhao.jpg',
+          lyhyt: 'Johannes Vingboonsin näkymä (1665) São Luísista '
+            + 'hollantilaismiehityksen jäljiltä.',
+          selite: 'Hollantilaisen Johannes Vingboonsin näkymä (1665): '
+            + '"St. Lodewijkin kaupunki" linnoituksineen ja jokisuun '
+            + 'aluksineen, piirretty vuosikymmen sen jälkeen kun '
+            + 'Alankomaiden Länsi-Intian kauppakomppania hallitsi '
+            + 'kaupunkia 1641–1644.',
+          lahde: 'Johannes Vingboons, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Righinin öljyvärinäkymä',
+          tiedosto: 'Joseph Léon Righini - View of São Luis do Maranhão - Google Art Project.jpg',
+          lyhyt: 'Italialaissyntyisen Joseph Léon Righinin maalaus São '
+            + 'Luísista.',
+          selite: 'Italialaissyntyinen Joseph Léon Righini (1820–1884) '
+            + 'kuoli Brasiliassa Belémissä ja maalasi useita näkymiä '
+            + 'maan kaupungeista — tämä esittää São Luísia mereltä '
+            + 'päin.',
+          lahde: 'Joseph Léon Righini, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Tuntemattoman taiteilijan näkymä',
+          tiedosto: 'Vista de São Luis do Maranhão (atribuído), da Coleção Brasiliana Iconográfica.jpg',
+          lyhyt: 'Tuntemattoman taiteilijan näkymä São Luísista '
+            + 'Brasiliana Iconográfica -kokoelmasta.',
+          selite: 'Nimettömän taiteilijan maalaus kuuluu Brasiliana '
+            + 'Iconográfica -kokoelmaan, joka kokoaa historiallisia '
+            + 'näkymiä Brasilian kaupungeista.',
+          lahde: 'Tuntematon tekijä, Brasiliana Iconográfica -kokoelma, '
+            + 'Wikimedia Commons (PD)',
+        },
+      ],
     },
     {
       id: 'kuvataide',
@@ -116438,6 +117529,31 @@ export const KULTTUURI_KATEGORIAT = {
             'Vanha valokuva Casa Blancasta ja sitä ympäröivästä merimuurista; talo oli Ponce de Leónin suvun asuntona lähes 250 vuotta.',
           lahde: 'Detroit Photographic Co., Wikimedia Commons (PD)',
           wiki: 'Casa Blanca (San Juan)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'St. Cristobal Fortress, San Juan, Puerto Rico LCCN96522666.jpg',
+          vuosi: '1908',
+          lyhyt: 'San Cristóbalin linnoitus San Juanissa vuonna 1908, '
+            + 'kymmenen vuotta Yhdysvaltain vallan alkamisesta.',
+          selite: 'San Cristóbalin linnoitus vuonna 1908. Espanjalaisten '
+            + 'rakentama linnake sulkee vanhan kaupungin '
+            + 'maanpuoleisen kannaksen, ja kuva on otettu kymmenen '
+            + 'vuotta sen jälkeen, kun Puerto Rico siirtyi Espanjalta '
+            + 'Yhdysvalloille.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Top of homes in La Perla, San Juan, Puerto Rico.jpg',
+          vuosi: '2019',
+          lyhyt: 'La Perlan kattoja San Juanin kaupunginmuurin '
+            + 'ulkopuolella vuonna 2019.',
+          selite: 'La Perlan kattoja kaupunginmuurin ulkopuolella. '
+            + 'Kaupunginosa rakentui muurin ja meren väliin jäävälle '
+            + 'kapealle kaistaleelle, ja talot laskeutuvat portaittain '
+            + 'rantakalliolle.',
+          lahde: 'Šarūnas Burdulis, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },
@@ -116590,6 +117706,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Nouméa Cathedral',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Nouméa - Hauts fourneaux Ballande - Ch. B. Nething - btv1b10121338v.jpg',
+          vuosi: '1900–1920-luku',
+          lyhyt: 'Ballanden masuunit savusivat Nouméan lahdella '
+            + 'nikkelinsulatuksen alkuaikoina.',
+          selite: 'Ballanden masuunit savuavat Nouméan lahden toisella '
+            + 'rannalla. Uuden-Kaledonian nikkeli löydettiin '
+            + '1860-luvulla, ja sitä alettiin sulattaa saarella '
+            + 'itsellään sen sijaan että malmi olisi viety kokonaan '
+            + 'pois.',
+          lahde: 'Ch. B. Nething / Gallica, Ranskan kansalliskirjasto (PD)',
+        },
+        {
+          tiedosto: 'Noumea Market.jpg',
+          vuosi: '2006',
+          lyhyt: 'Bataattikauppias Nouméan rantatorilla varhain aamulla.',
+          selite: 'Bataattikauppias Nouméan torilla. Tori on kaupungin '
+            + 'rannassa ja avautuu varhain aamulla, kun kalastajat '
+            + 'tuovat yön saaliin samaan aikaan kuin viljelijät '
+            + 'juurekset.',
+          lahde: 'Fanny Schertzer, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
     },
     {
       id: 'luonto',
@@ -116721,6 +117861,29 @@ export const KULTTUURI_KATEGORIAT = {
             'Costanera-kadun varrella kohoavia korkeita asuin- ja liiketorneja, edessä rantakivikko ja Reloncavín selän sininen vesi.',
           lahde: 'Manxuc, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Puerto Montt',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Puerto Montt (ca. 1912).jpg',
+          vuosi: 'noin 1912',
+          lyhyt: 'Puerto Montt noin vuonna 1912, saksalaissiirtolaisten '
+            + '1853 perustama kaupunki.',
+          selite: 'Puerto Montt noin vuonna 1912. Kaupunki perustettiin '
+            + '1853 saksalaisten siirtolaisten asutuskeskukseksi '
+            + 'Reloncavín lahden pohjukkaan ja nimettiin Chilen '
+            + 'silloisen presidentin Manuel Monttin mukaan.',
+          lahde: 'Bulletin of the Pan American Union, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Angelmó 2014 f06 -entrada al mercado.jpg',
+          vuosi: '2014',
+          lyhyt: 'Angelmón kalatorin sisäänkäynti Puerto Montin '
+            + 'satamakylässä.',
+          selite: 'Sisäänkäynti Angelmón torille. Angelmó on Puerto '
+            + 'Montin satamakylä Tenglon salmen varrella, ja sen '
+            + 'kojuista ostetaan kalaa, simpukoita ja merilevää.',
+          lahde: 'Rodrigo Fernández, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -116869,6 +118032,43 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Thomas Moran',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Castle Geyser, Yellowstone National Park-LCCN2008678250.jpg',
+          vuosi: '1898',
+          lyhyt: 'Castle Geyser purkautuu Yellowstonessa, '
+            + 'käsinväritetty photochrom vuodelta 1898.',
+          selite: 'Castle Geyser purkautuu kartiomaisen kekonsa päältä, '
+            + 'etualalla sininen kuuma lähde. Kartio on piikerrostumaa, '
+            + 'jota lähde on kasvattanut vähitellen tuhansien vuosien '
+            + 'ajan.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Yellowstone National Park (WY, USA), Grand Prismatic Spring -- 2022 -- 2514.jpg',
+          vuosi: '2022',
+          lyhyt: 'Grand Prismatic Spring, Yellowstonen suurin kuuma '
+            + 'lähde, vuonna 2022.',
+          selite: 'Grand Prismatic Spring, puiston suurin kuuma lähde. '
+            + 'Renkaiden värit tulevat eri lämpötiloissa viihtyvistä '
+            + 'mikrobeista: keskellä on kuumin ja kirkkaan sininen '
+            + 'vesi, reunoilla viileämpi ja oranssi.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      galleria: [
+        {
+          otsikko: 'Sateenkaari kanjonin yllä',
+          tiedosto: 'Rainbow over the Grand Canyon of the Yellowstone, 1900, by Thomas Moran - SAAM - DSC00847.JPG',
+          lyhyt: 'Thomas Moranin toinen öljymaalaus Yellowstonen '
+            + 'kanjonista, tällä kertaa sateenkaaren kera (1900).',
+          selite: 'Thomas Moran palasi Yellowstonen kanjonin aiheeseen '
+            + 'vielä lähes kolme vuosikymmentä ensimmäisen '
+            + 'maalauksensa jälkeen: tässä 1900 valmistuneessa '
+            + 'teoksessa sateenkaari kaartuu putouksen yllä.',
+          lahde: 'Thomas Moran, Wikimedia Commons (PD)',
+        },
+      ],
     },
     {
       id: 'luonto',
@@ -117003,6 +118203,52 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Powell Geographic Expedition of 1869',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Grand Canyon)- Burro trains at Indian Gardens LCCN2002715958.jpg',
+          vuosi: '1906',
+          lyhyt: 'Aasijono Indian Gardensin telttaleirissä Grand '
+            + 'Canyonissa vuonna 1906.',
+          selite: 'Aasijono lastattuna Indian Gardensin telttaleirissä '
+            + 'puolimatkassa kanjonin seinämää. Kaikki tavara '
+            + 'kannettiin rotkoon eläinten selässä, koska polku on '
+            + 'liian jyrkkä ja kapea kärryille.',
+          lahde: 'Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Grand Canyon National Park, Bright Angel Trial, Mule Trip 4825 - Flickr - Grand Canyon NPS.jpg',
+          vuosi: '2011',
+          lyhyt: 'Muuliratsastajia Bright Angel -polulla Grand '
+            + 'Canyonissa vuonna 2011.',
+          selite: 'Opas johdattaa muuliratsastajia ylös Bright Angel '
+            + '-polkua. Samaa polkua käytetään yhä sekä matkustajien '
+            + 'että tavaran kuljettamiseen kanjonin pohjalle.',
+          lahde: 'Michael Quinn, National Park Service (PD)',
+        },
+      ],
+      galleria: [
+        {
+          otsikko: 'Moranin toinen kanjoni',
+          tiedosto: 'Thomas Moran - Grand Canyon.jpg',
+          lyhyt: 'Thomas Moranin vuoden 1908 maalaus Grand Canyonista, '
+            + 'eri kohteesta kuin hänen tunnetumpi Yellowstone-teoksensa.',
+          selite: 'Thomas Moran maalasi useita kertoja Yhdysvaltain '
+            + 'suuria kanjoneita; tämä 1908 valmistunut teos kuvaa '
+            + 'Colorado-joen Grand Canyonia, ei Yellowstonen '
+            + 'samannimistä kanjonia.',
+          lahde: 'Thomas Moran, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Brownin impressionistinen näkymä',
+          tiedosto: 'Grand Canyon painting by Benjamin Chambers Brown.jpg',
+          lyhyt: 'Benjamin Chambers Brownin impressionistinen maalaus '
+            + 'Colorado-joesta Grand Canyonissa.',
+          selite: 'Yhdysvaltalainen impressionisti Benjamin Chambers '
+            + 'Brown maalasi Colorado-joen mutkittelevan uoman '
+            + 'syvällä kanjonin pohjalla.',
+          lahde: 'Benjamin Chambers Brown, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'tiede',
@@ -117123,6 +118369,32 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Ilmasta kuvattuna kallio erottuu selvärajaisena punaisena massana keskellä laakeaa pensasaavikkoa; taustalla taivaalla näkyy ohut savuvana.',
           lahde: 'Emily Cox, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Uluru',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: "Camel team approaching Ayers Rock in search for Lasseter's body - John Bailey.jpg",
+          vuosi: '1930-luku',
+          lyhyt: 'Kamelijono etsimässä Harold Lasseterin ruumista '
+            + 'Ayers Rockin lähellä.',
+          selite: 'Kamelijono lähestymässä Ayers Rockia etsimässä '
+            + 'Harold Lasseterin ruumista. Lasseter väitti '
+            + 'löytäneensä keskisestä Australiasta valtavan '
+            + 'kultasuonen ja katosi lähtiessään uudelleen etsimään '
+            + 'sitä; etsintäretkikunnat liikkuivat aavikolla '
+            + 'kameleilla.',
+          lahde: 'State Library of New South Wales, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Wet Uluru.jpg',
+          vuosi: '2010',
+          lyhyt: 'Sadevettä valumassa Ulurua pitkin Mutitjulun '
+            + 'vesikuoppaan maaliskuussa 2010.',
+          selite: 'Sadevettä valumassa Ulurua pitkin Mutitjulun '
+            + 'vesikuoppaan maaliskuussa 2010. Sade on täällä '
+            + 'harvinaista, mutta kun sitä tulee, kallion sivut '
+            + 'muuttuvat tunneissa vesiputousten verkoksi.',
+          lahde: 'Harbison, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
     },
@@ -117263,6 +118535,54 @@ export const KULTTUURI_KATEGORIAT = {
             'Ilmakuvassa kenkähevosen muotoinen putoussarja avautuu keskellä laajaa, tiheää sademetsää; joki jatkuu mutkitellen metsän halki kuvan reunoille.',
           lahde: 'Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Iguazú National Park',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Salto Floriano e Garganta do Inferno, na fronteira Brasil-Argentina.jpg',
+          vuosi: '1929–1930',
+          lyhyt: 'Salto Florianon putoukset ja Garganta do Inferno '
+            + 'Iguazúlla 1929–1930.',
+          selite: 'Salto Florianon putoukset ja Garganta do Inferno '
+            + 'panoraamavedoksena. Kuva on Brasilian sotaministeriön '
+            + 'rajakomission aineistoa: putouksia mitattiin ja '
+            + 'kuvattiin, koska ne merkitsevät valtakunnanrajaa '
+            + 'Brasilian ja Argentiinan välillä.',
+          lahde: 'B. Rondon, Arquivo Nacional (PD)',
+        },
+        {
+          tiedosto: 'IGUACU FALLS AND CATWALK, BRAZIL.jpg',
+          vuosi: '2009',
+          lyhyt: 'Kävelysilta Iguazún putousten keskelle Paholaisen '
+            + 'kurkkua kohti 2009.',
+          selite: 'Kävelysilta vie keskelle putousryhmää kohti '
+            + 'Paholaisen kurkkua. Sillalla on jatkuva vesisumu, joka '
+            + 'kastelee kulkijat ja kamerat muutamassa minuutissa.',
+          lahde: 'Jerrye & Roy Klotz MD, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      galleria: [
+        {
+          otsikko: 'Ballerinin panoraama',
+          tiedosto: 'Augusto Ballerini - La cascada del Iguazú - Google Art Project.jpg',
+          lyhyt: 'Argentiinalaisen Augusto Ballerinin 1800-luvun '
+            + 'panoraamamaalaus Iguazún putouksista.',
+          selite: 'Argentiinalainen maisemamaalari Augusto Ballerini '
+            + 'kuvasi putoukset laajana panoraamana — teos on nykyään '
+            + 'esillä osana Trilha das Cataratasin näkymien '
+            + 'kokoelmaa.',
+          lahde: 'Augusto Ballerini, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Wiegandtin näkymä 1878',
+          tiedosto: 'Bernhard Wiegandt, Iguazu waterfall, Brazil, 1878.jpg',
+          lyhyt: 'Saksalaisen Bernhard Wiegandtin maalaus Iguazún '
+            + 'putouksista vuodelta 1878.',
+          selite: 'Saksalainen taiteilija Bernhard Wiegandt maalasi '
+            + 'putoukset 1878 — yksi varhaisimmista tunnetuista '
+            + 'eurooppalaisen taiteilijan tekemistä kuvauksista '
+            + 'Iguazústa.',
+          lahde: 'Bernhard Wiegandt, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -117419,6 +118739,28 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Lake Titicaca',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'N° 308. Lago Titicaca, Balsas de cañas, hechas por los naturales del pais.png',
+          vuosi: '1900',
+          lyhyt: 'Kaislaveneitä Titicacajärvellä vuonna 1900.',
+          selite: 'Kaislaveneitä Titicacajärvellä vuonna 1900. Miehet '
+            + 'seisovat keulassa ja työntävät venettä sauvomalla, ja '
+            + 'tyyni vesi kahdentaa mastot. Veneet punotaan '
+            + 'totora-kaislasta, jota kasvaa järven matalikoilla.',
+          lahde: 'Fernando Garreaud, albumi República Peruana (PD)',
+        },
+        {
+          tiedosto: 'Islas flotantes de los Uros, Lago Titicaca, Perú, 2015-08-01, DD 32.JPG',
+          vuosi: '2015',
+          lyhyt: 'Uros-kansan kelluva kaislasaari Titicacajärvellä '
+            + 'vuonna 2015.',
+          selite: 'Uros-kansan kelluva saari. Sekä alusta että majat '
+            + 'tehdään totora-kaislasta. Pintaan on lisättävä uutta '
+            + 'kaislaa jatkuvasti, koska alta se lahoaa veteen.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'luonto',
@@ -117570,6 +118912,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Mount Rushmore',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Mount Rushmore unrestored.jpg',
+          vuosi: 'noin 1932',
+          lyhyt: 'Työmiehet kiipeävät Mount Rushmoren keskeneräisillä '
+            + 'kasvoilla noin 1932.',
+          selite: 'Työmiehet kiipeävät tikkaita George Washingtonin '
+            + 'kasvoilla, kun veistos on vielä kesken. Kalliota '
+            + 'muotoiltiin dynamiitilla ja poravasaroilla, ja miehet '
+            + 'laskeutuivat työhön vaijerien varassa.',
+          lahde: 'Rise Studio, Rapid City / Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'American Indian Dancers at Mount Rushmore - panoramio.jpg',
+          vuosi: '2008',
+          lyhyt: 'Intiaanitanssijoita Mount Rushmoren alueella Black '
+            + 'Hillsissä vuonna 2008.',
+          selite: 'Intiaanitanssijoita esiintymässä Mount Rushmoren '
+            + 'alueella. Black Hills on lakotoille pyhää maata, ja '
+            + 'veistos on hakattu vuoreen, josta heidät aikanaan '
+            + 'siirrettiin pois.',
+          lahde: 'Jason Rollette, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
     },
     {
       id: 'historia',
@@ -117715,6 +119081,30 @@ export const KULTTUURI_KATEGORIAT = {
             'Vanhassa valokuvassa upseeri laskee suurta havaijilaista lippua salosta juhlallisesti pukeutuneen väkijoukon edessä palmujen ympäröimällä terassilla – kuva on liittämisseremoniasta ʻIolani-palatsin edustalla elokuussa 1898.',
           lahde: 'Frank Davey, Wikimedia Commons (Public domain)',
           wiki: 'Newlands Resolution',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Native Hawaiian surfer standing with alaia board (PPWD-19-6-019, original).jpg',
+          vuosi: '1898',
+          lyhyt: 'Charles Kauha alaia-lautoineen Waikikin rannalla '
+            + 'vuonna 1898.',
+          selite: 'Charles Kauha ja hänen alaia-lautansa Waikikin '
+            + 'rannalla. Alaia oli ohut ja evätön puulauta, ja '
+            + 'arkiston mukaan tämä oli yksi viimeisistä.',
+          lahde: 'Frank Davey / Hawaii State Archives, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'USGS Lava on Makamae Street.jpg',
+          vuosi: '2018',
+          lyhyt: 'Laavavirta Leilani Estatesin asuinalueella Havaijilla '
+            + '6.5.2018.',
+          selite: 'Laavavirta etenee Makamae-katua pitkin Leilani '
+            + 'Estatesin asuinalueella 6. toukokuuta 2018. Kuvan otti '
+            + 'Yhdysvaltain geologian tutkimuskeskus, joka seuraa '
+            + 'Kīlaueaa päivittäin; tuon kesän purkaus tuhosi noin '
+            + '600 taloa.',
+          lahde: 'USGS, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -117863,6 +119253,31 @@ export const KULTTUURI_KATEGORIAT = {
             'Pronssipatsas esittää kolmea kris-tikarein ja keihäin aseistautunutta balilaismiestä hyökkäysasennossa – muistomerkki vuoden 1906 puputanille, jossa satoja Badungin asukkaita kuoli taistellessaan hollantilaisia joukkoja vastaan.',
           lahde: 'Eric Bajart, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Puputan',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Strand te Koeta bij Denpasar, KITLV 154735.tiff',
+          vuosi: '1930-luku',
+          lyhyt: 'Kutan ranta Denpasarin lähellä Balilla ennen '
+            + 'matkailun alkua 1920–1930-luvuilla.',
+          selite: 'Kutan ranta Denpasarin lähellä. Rannan takana on '
+            + 'kookospalmuja, aita ja pari olkikattoista majaa — ei '
+            + 'mitään muuta. Ensimmäiset matkailijat alkoivat tulla '
+            + 'Balille 1920- ja 1930-luvulla hollantilaisilla '
+            + 'höyrylaivoilla.',
+          lahde: 'KITLV, Leidenin yliopiston kirjastot (CC BY 4.0)',
+        },
+        {
+          tiedosto: 'Jatiluwih Rice Terrace - Subak Jatiluwih Tabanan Bali 01.jpg',
+          vuosi: '2023',
+          lyhyt: 'Riisiterasseja Jatiluwihissa Balilla, '
+            + 'subak-vedenjakojärjestelmän hoitamana.',
+          selite: 'Riisiterasseja Jatiluwihissa Tabananin alueella. '
+            + 'Vesi jaetaan terassilta toiselle subak-järjestelmällä, '
+            + 'jota hoitavat viljelijöiden omat yhdistykset ja '
+            + 'temppelit — ei viranomainen.',
+          lahde: 'Anggabuana, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -118022,6 +119437,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Milford Sound',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Mitre Peak. Milford Sound I LCCN2017658061.jpg',
+          vuosi: '1890-luku',
+          lyhyt: 'Mitre Peak Milford Soundin yllä photochrom-vedoksena, '
+            + 'aikana jolloin sinne pääsi vain laivalla.',
+          selite: 'Mitre Peak vuonon yllä käsinvärjättynä '
+            + 'photochrom-vedoksena. Tällaisia vedoksia myytiin '
+            + 'matkailijoille jo silloin, kun paikalle päästiin vain '
+            + 'laivalla tai viikon vaelluksen päästä vuorten yli.',
+          lahde: 'Photoglob Co. / Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'Stirling Falls, Milford Sound, South Island, New Zealand.jpg',
+          vuosi: '2008',
+          lyhyt: 'Stirlingin putous täydessä virtaamassa Milford '
+            + 'Soundissa sateen jälkeen.',
+          selite: 'Stirlingin putous täydessä virtaamassa sateen '
+            + 'jälkeen. Kalliolta putoava vesi tulee ylhäältä '
+            + 'jäätikön kaivamasta riippuvasta laaksosta, ja '
+            + 'retkiveneet työntävät keulansa suoraan putouksen alle.',
+          lahde: 'Karora, Wikimedia Commons (PD)',
+        },
+      ],
     },
     {
       id: 'luonto',
@@ -118168,6 +119607,54 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Ouro Preto',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Ouro preto 1881 00.jpg',
+          vuosi: '1881',
+          lyhyt: 'Ouro Preto vuonna 1881, kultakaupungin '
+            + 'vuorenrinteille rakentuneet korttelit.',
+          selite: 'Ouro Preto vuonna 1881, valokuvattuna Minas '
+            + 'Geraisin osavaltiossa. Kaupunki kasvoi 1700-luvun '
+            + 'kultaryntäyksestä vuorenrinteille, joita se peittää '
+            + 'yhä.',
+          lahde: 'Guilherme (Wilhelm) Liebenau, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Igreja de São Francisco de Assis (Ouro Preto), vista aérea.jpg',
+          vuosi: '2026',
+          lyhyt: 'São Franciscon kirkko ja Ouro Preton '
+            + 'kultakaupungin vanhakaupunki ylhäältä.',
+          selite: 'São Franciscon kirkko ja Ouro Preton tiilikattoinen '
+            + 'vanhakaupunki ylhäältä. Kirkon vuolukiviveistokset ovat '
+            + 'Aleijadinhon, brasilialaisen barokin kuuluisimman '
+            + 'mestarin, käsialaa.',
+          lahde: 'Rafael Lemieszek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      galleria: [
+        {
+          otsikko: 'Rugendasin vesiväri 1824',
+          tiedosto: 'Johann Moritz Rugendas - Cachoeira de Ouro Preto.jpg',
+          lyhyt: 'Saksalaisen Johann Moritz Rugendasin vesiväri '
+            + 'Ouro Preton putouksesta vuodelta 1824.',
+          selite: 'Saksalainen Johann Moritz Rugendas matkusti Brasiliassa '
+            + '1820-luvulla ja kuvasi maan luontoa ja kaupunkeja '
+            + 'lukuisissa teoksissaan — tämä vesiväri esittää Ouro '
+            + 'Preton lähellä olevaa putousta.',
+          lahde: 'Johann Moritz Rugendas, Wikimedia Commons (PD)',
+        },
+        {
+          otsikko: 'Bernardellin maisema',
+          tiedosto: 'Henrique Bernardelli - Paisagem de Ouro Preto.jpg',
+          lyhyt: 'Henrique Bernardellin 1870-luvun maisemamaalaus '
+            + 'Ouro Pretosta.',
+          selite: 'Brasilialainen Henrique Bernardelli kuvasi Ouro '
+            + 'Preton vuorenrinteille kiipeäviä kattoja 1870-luvulla, '
+            + 'jolloin kaupunki oli yhä Minas Geraisin pääkaupunki — '
+            + 'asema siirtyi Belo Horizontelle vasta 1897.',
+          lahde: 'Henrique Bernardelli, Wikimedia Commons (PD)',
+        },
+      ],
     },
     {
       id: 'historia',
@@ -118305,6 +119792,30 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Vuonna 1964 avattu tutkimusasema Santa Cruzin saarella kasvattaa uhanalaisia jättiläiskilpikonnia ja seuraa saariston lajien tilaa.',
           lahde: 'TriiipleThreat, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Charles Darwin Research Station',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Preparing for the trail LCCN99472325.jpg',
+          vuosi: '1903',
+          lyhyt: 'Keräysretkikunnan miehiä Galápagossaarilla vuonna '
+            + '1903.',
+          selite: 'Keräysretkikunnan miehiä työssä Galápagossaarilla '
+            + 'vuonna 1903: maassa on jättiläiskilpikonnien kilpiä, ja '
+            + 'näytteitä valmistellaan kuljetusta varten museoiden '
+            + 'kokoelmiin.',
+          lahde: 'R. H. Beck, Library of Congress (PD)',
+        },
+        {
+          tiedosto: 'PtoAyoraMercado.jpg',
+          vuosi: '2018',
+          lyhyt: 'Puerto Ayoran tori Santa Cruzin saarella '
+            + 'Galápagossaarilla vuonna 2018.',
+          selite: 'Puerto Ayoran tori Santa Cruzin saarella. Kaali, '
+            + 'banaani, sipuli ja munat myydään muovilaareista ja '
+            + 'pahvilaatikoista — osa kasvatetaan saaren kosteammalla '
+            + 'ylängöllä, osa tuodaan laivalla mantereelta.',
+          lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -118445,6 +119956,28 @@ export const KULTTUURI_KATEGORIAT = {
             'Belgian kuningas Leopold II, jonka henkilökohtaiseksi omaisuudeksi Kongo-vapaavaltio julistettiin vuonna 1885.',
           lahde: 'Internet Archive Book Images, Wikimedia Commons (Public domain)',
           wiki: 'Congo Free State',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Boma, Congo, ca. 1900-1915 (IMP-CSCNWW33-OS11-74).jpg',
+          vuosi: '1900–1915',
+          lyhyt: 'Boman satama Kongojoen rannalla noin vuosina '
+            + '1900–1915.',
+          selite: 'Lasilevykuva Boman satamasta Kongojoen rannalla — '
+            + 'Boma oli tuolloin Kongo-vapaavaltion pääkaupunki ja '
+            + 'joen tärkein satama sisämaahan.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Aerial view of the Congo River near Kisangani.jpg',
+          vuosi: '2010',
+          lyhyt: 'Kongojoki ilmasta Kisanganin lähellä, haarautuu '
+            + 'vehreiden saarten väliin kuin meri.',
+          selite: 'Kongojoki ilmasta Kisanganin lähellä. Joki haarautuu '
+            + 'vehreiden saarten väliin niin laajaksi, että sitä on '
+            + 'helppo luulla mereksi.',
+          lahde: 'MONUSCO / Myriam Asmani, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },
@@ -118597,6 +120130,30 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Huayna Picchu',
         },
       ],
+      ennenNyt: [
+        {
+          tiedosto: 'Machupicchu hb10.jpg',
+          vuosi: '1912',
+          lyhyt: 'Machu Picchu vuonna 1912, kun Hiram Binghamin '
+            + 'retkikunta oli raivannut rinteen.',
+          selite: 'Machu Picchu vuonna 1912, kun Hiram Binghamin '
+            + 'retkikunta oli raivannut rinteen kasvillisuudesta. '
+            + 'Vuotta aiemmin paikka oli lähes kokonaan viidakon '
+            + 'peitossa, ja raivaus tehtiin käsityönä.',
+          lahde: 'Hiram Bingham, National Geographic 1913 (PD)',
+        },
+        {
+          tiedosto: 'Machu Picchu, Perú, 2015-07-30, DD 51.JPG',
+          vuosi: '2015',
+          lyhyt: 'Machu Picchun laastittomia kivimuureja ja '
+            + 'pengerryksiä vuonna 2015.',
+          selite: 'Muureja ja pengerryksiä läheltä. Kivet on hakattu '
+            + 'sopimaan toisiinsa ilman laastia, ja terassien '
+            + 'tukimuurit pitävät jyrkän rinteen paikallaan '
+            + 'sadekaudella.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
     },
     {
       id: 'tiede',
@@ -118739,6 +120296,28 @@ export const KULTTUURI_KATEGORIAT = {
             'Sepiansävyinen ryhmäpotretti noin vuodelta 1880: kuvernööri istuu keskellä ruudullisessa puvussa, ympärillä kymmenkunta perheenjäsentä osin perinteisissä raidallisissa lamba-viitoissa.',
           lahde: 'Wikimedia Commons (PD)',
           wiki: 'Toamasina',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Antananarivo Four Roads c1905.jpg',
+          vuosi: 'noin 1905',
+          lyhyt: 'Postikortti Antananarivon "Neljän tien" risteyksestä '
+            + 'noin 1905.',
+          selite: 'Vanha postikortti Antananarivon "Neljän tien" '
+            + 'risteyksestä ja teatterista noin vuodelta 1905 — '
+            + 'Tananarive oli kaupungin silloinen ranskalainen nimi.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Highlands, Madagascar (22741639463).jpg',
+          vuosi: '2015',
+          lyhyt: 'Madagaskarin ylängön punertavat kukkulat, raudan väri '
+            + 'antaa lempinimen "punainen saari".',
+          selite: 'Madagaskarin ylängön punertavia kukkuloita ja kyliä. '
+            + 'Maan väri tulee raudasta, ja se antaa saarelle '
+            + 'lempinimen punainen saari.',
+          lahde: 'Rod Waddington, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
     },

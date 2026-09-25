@@ -238,6 +238,16 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
   --dem <kansio>             Copernicus GLO-30 -ruudut syville tasoille
                              (tools/maasto/dem-ikkuna.mjs; polussa ei
                              välilyöntejä)
+  --dem90 <kansio>           Copernicus GLO-90 -ruudut (koko maailman
+                             reliefi; valinta kuten tools/maasto/tee-maasto.mjs)
+  --resepti 2026-09-25       NIMETTY PERUSKARTAN RESEPTI (tools/polttoresepti.mjs):
+                             pohja D2 + C-reliefi (ei rantamustetta, AA-maski,
+                             meri sävyliukuna, GLO-30/90-reliefi kaikille
+                             tasoille) ja pallon sarja Z0-Z9 laatikko-
+                             suodattimella, JPEG 90 4:4:4. Pohjan shardit
+                             tasoittain ja DEM-kaistoittain. Vaatii --sarjat
+                             kaikki (tai pallo). DEM-oletukset NAS:ilta:
+                             …/Matkakirja-arkisto/dem/copernicus-glo30 ja -glo90.
   --syva-alue lon0,lat0,lon1,lat1
                              syvien tasojen ala (oletus Ranska
                              -5.5,41,9.8,51.5)
@@ -363,6 +373,9 @@ DATA=""; YHTEISLIPUT=""; POHJALIPUT=""; VIIVALIPUT=""; RANTALIPUT=""; NOSTOLIPUT
 NIMIOVERSIO=""; NIMIOT=""; ILMAN_NOSTOJA=0; ILMAN_NIMIOITA=0
 # SYVÄT TASOT z9-z10 (Karttaseppä 23.9.2026, ks. SYVÄT TASOT alempana).
 DEM=""; SYVA_ALUE="-5.5,41,9.8,51.5"; PALLO_ALUE=""
+# NIMETTY RESEPTI (Karttaseppä 25.9.2026, ks. RESEPTI alempana).
+RESEPTI=""; DEM90=""; PALLOLIPUT=""; PALLO_TASOT_ANNETTU=0
+DEM_NAS="/Volumes/NAS-Homes/koodaus/Claude/Matkakirja-arkisto/dem"
 
 while [ $# -gt 0 ]; do
   case "$1" in
@@ -390,9 +403,11 @@ while [ $# -gt 0 ]; do
     --pallo-osia) PALLO_OSIA="$2"; shift 2 ;;
     --pallo-ilman-nostoja) PALLON_NOSTOT=""; shift ;;
     --pallon-nostot) PALLON_NOSTOT="--nostot"; shift ;;
-    --pallo-tasot) PALLO_TASOT="$2"; shift 2 ;;
+    --pallo-tasot) PALLO_TASOT="$2"; PALLO_TASOT_ANNETTU=1; shift 2 ;;
     --pallo-alue) PALLO_ALUE="$2"; shift 2 ;;
     --dem) DEM="$2"; shift 2 ;;
+    --dem90) DEM90="$2"; shift 2 ;;
+    --resepti) RESEPTI="$2"; shift 2 ;;
     --syva-alue) SYVA_ALUE="$2"; shift 2 ;;
     --nostot-ja-pallo) YKSI_AJO=1; shift ;;
     --pallon-lahde) PALLON_LAHDE="$2"; shift 2 ;;
@@ -458,6 +473,11 @@ if [ "$LAPSI" -eq 1 ]; then
   [ -n "$DEM" ] || DEM="${POLTTO_DEM:-}"
   SYVA_ALUE="${POLTTO_SYVA_ALUE:-$SYVA_ALUE}"
   [ -n "$PALLO_ALUE" ] || PALLO_ALUE="${POLTTO_PALLO_ALUE:-}"
+  # Resepti on jo purettu lippuihin vanhemmassa (POLTTO_POHJALIPUT ym.);
+  # lapsi tarvitsee nimen shardilistaan ja tunnukseen, ei purkua uudestaan.
+  [ -n "$RESEPTI" ] || RESEPTI="${POLTTO_RESEPTI:-}"
+  [ -n "$DEM90" ] || DEM90="${POLTTO_DEM90:-}"
+  [ -n "$PALLOLIPUT" ] || PALLOLIPUT="${POLTTO_PALLOLIPUT:-}"
 fi
 vie_lapsille () {
   export POLTTO_DATA="$DATA" POLTTO_YHTEISLIPUT="$YHTEISLIPUT" POLTTO_POHJALIPUT="$POHJALIPUT"
@@ -465,6 +485,7 @@ vie_lapsille () {
   export POLTTO_NIMIOVERSIO="$NIMIOVERSIO" POLTTO_NIMIOT="$NIMIOT" POLTTO_PALLOTUNNISTE="$PALLOTUNNISTE"
   export POLTTO_HAHMOTELMAT="$HAHMOTELMAT" POLTTO_ILMAN_NOSTOJA="$ILMAN_NOSTOJA" POLTTO_ILMAN_NIMIOITA="$ILMAN_NIMIOITA"
   export POLTTO_DEM="$DEM" POLTTO_SYVA_ALUE="$SYVA_ALUE" POLTTO_PALLO_ALUE="$PALLO_ALUE"
+  export POLTTO_RESEPTI="$RESEPTI" POLTTO_DEM90="$DEM90" POLTTO_PALLOLIPUT="$PALLOLIPUT"
 }
 # Aineistokansio absoluuttiseksi; oletus on ULOS/ne-data (hae_aineisto).
 if [ -n "$DATA" ]; then
@@ -482,6 +503,57 @@ esac
 if [ "$SARJAT" = "pallo" ]; then VAIN_PALLO=1; PALLO=1; fi
 # YKSI AJO: shardilista on nostotason oma (ks. polta_nostot_ja_pallo).
 if [ "$YKSI_AJO" -eq 1 ]; then SARJAT=nostot; PALLO=1; fi
+
+# ============================================================ RESEPTI
+#
+# PERUSKARTAN RESEPTI 2026-09-25 (omistaja 25.9.2026 klo 00, Raamattu):
+# koko maailmalle D2 + C-reliefi + natiivin vektorirannat. Liput ja
+# pohjan shardijako ovat YHDESSÄ paikassa (tools/polttoresepti.mjs),
+# ja tämä purkaa ne skriptin muuttujiin. Ilman --reseptiä mikään alla
+# oleva ei tee mitään, ja poltto on tavulleen entinen.
+#
+#   - pohja ILMAN rantaviivaa (web piirtää rannan rantatasollaan, natiivi
+#     vektorina): --ilman-rantaviivaa on reseptin pohjalippu, joten
+#     rantatason shardit ja pallon `"ranta": null` seuraavat entisestä
+#     säännöstä (ks. RANTATON POHJA ja polta_pallo);
+#   - DEM joka tasolle: GLO-30 (vain E28) ja GLO-90 (muu maailma) NAS:ilta
+#     tai --dem/--dem90, lähde valitaan kuten natiivin maastolaatoissa;
+#   - pallon sarja Z0-Z9 (lähde pyramidin z0-z8) laatikkosuodattimella.
+if [ -n "$RESEPTI" ] && [ "$LAPSI" -eq 0 ]; then
+  reseptin_liput="$(node "$JUURI/tools/polttoresepti.mjs" liput "$RESEPTI")" \
+    || { echo "VIRHE: --resepti $RESEPTI" >&2; exit 2; }
+  eval "$reseptin_liput"
+  if [ "$VAIN_PALLO" -eq 0 ] && [ "$SARJAT" != "kaikki" ]; then
+    echo "VIRHE: --resepti $RESEPTI polttaa koko pohjan (--sarjat kaikki)" >&2
+    echo "tai pelkän pallon sarjan (--sarjat pallo / --vain-pallo)." >&2
+    exit 2
+  fi
+  for kielletty in $R_KIELLETYT; do
+    case " $POHJALIPUT $YHTEISLIPUT " in
+      *" $kielletty "*)
+        echo "VIRHE: $kielletty on reseptin $RESEPTI vastainen (meri ilman käyriä ja" >&2
+        echo "vesiviivoitusta, ei rantamustetta). Poista se --pohjaliput/--yhteisliput-riviltä." >&2
+        exit 2 ;;
+    esac
+  done
+  [ -n "$DEM" ] || DEM="$DEM_NAS/copernicus-glo30"
+  [ -n "$DEM90" ] || DEM90="$DEM_NAS/copernicus-glo90"
+  if [ "$SARJAT" = "kaikki" ]; then
+    for d in "$DEM" "$DEM90"; do
+      [ -d "$d" ] || { echo "VIRHE: DEM-kansio $d puuttuu (NAS irti?)" >&2; exit 2; }
+      case "$d" in *" "*) echo "VIRHE: DEM-polussa ei saa olla välilyöntejä: $d" >&2; exit 2 ;; esac
+    done
+  fi
+  YHTEISLIPUT="$R_YHTEISLIPUT${YHTEISLIPUT:+ $YHTEISLIPUT}"
+  POHJALIPUT="$R_POHJALIPUT --dem $DEM --dem90 $DEM90${POHJALIPUT:+ $POHJALIPUT}"
+  PALLOLIPUT="$R_PALLOLIPUT"
+  [ "$PALLO_TASOT_ANNETTU" -eq 1 ] || PALLO_TASOT="$R_PALLO_TASOT"
+  LAATU="${LAATU:-$R_LAATU}"
+  PATINA="${PATINA:-$R_PATINA}"
+  # Pohjan rantaviiva pois: sama kytkin kuin --ilman-rantaviivaa, jolla
+  # skripti päättää rantatason shardeista ja pallon rantavalinnasta.
+  [ "$R_ILMAN_RANTAVIIVAA" -eq 1 ] && ILMAN_RANTAVIIVAA=1
+fi
 
 PALLO_MIN="${PALLO_TASOT%%-*}"; PALLO_MAX="${PALLO_TASOT##*-}"
 for luku in "$PALLO_MIN" "$PALLO_MAX"; do
@@ -542,7 +614,7 @@ fi
 # koska pohjan versio vaihtuu, lepokerroksen versiovahti (js/pallo.js
 # lepokerroksenKerrokset) sammuttaa kerroksen, kunnes pallon oma sarja
 # on poltettu samasta versiosta — siksi --pallo on pakollinen.
-if [ "$ILMAN_RANTAVIIVAA" -eq 1 ]; then
+if [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && ! { [ -n "$RESEPTI" ] && [ "$VAIN_PALLO" -eq 1 ]; }; then
   case "$SARJAT" in
     kaikki|z0-z7) ;;
     *) echo "VIRHE: --ilman-rantaviivaa vaatii --sarjat kaikki (tai z0-z7):" >&2
@@ -713,7 +785,9 @@ hae_korkeuspalat () {
 # z8 kirjoitetaan olemassa olevien versioiden alle, ja jos laatu tai
 # patina eroaisi, uudet laatat erottuisivat silmällä naapureistaan
 # (sama perustelu kuin paikkausajolla, generoi-pyramidi.yml).
-LUETTELO_URL="https://media.matkakirja.app/julisteet/pyramidi/pyramidi.json"
+# POLTTO_LUETTELO_URL vain testeille (tests/peruskartta-resepti.test.mjs:
+# --lista ilman verkkoa ajokansioon kylvetyllä luettelolla).
+LUETTELO_URL="${POLTTO_LUETTELO_URL:-https://media.matkakirja.app/julisteet/pyramidi/pyramidi.json}"
 lue_ampari () {
   local t="$ULOS/ampari-luettelo.json"
   # VANHENTUNUT VÄLIMUISTI (24.9.2026): ajokansioon jäänyt luettelo on
@@ -837,6 +911,16 @@ nostoshardit () {
   done
 }
 
+# RESEPTIN POHJASHARDIT (nimi|argumentit) tools/polttoresepti.mjs:stä,
+# välimuistiin: lapsiprosessit kutsuvat shardit-funktiota joka kerta.
+RESEPTIN_SHARDIT=""
+reseptin_shardit () {
+  if [ -z "$RESEPTIN_SHARDIT" ]; then
+    RESEPTIN_SHARDIT="$(node "$JUURI/tools/polttoresepti.mjs" shardit "$RESEPTI" --korkeus "$KORKEUS")" || return 1
+  fi
+  echo "$RESEPTIN_SHARDIT"
+}
+
 shardit () {
   # HAHMOTELMAT JÄÄVÄT ELÄVIKSI (Fablen päätös 20.9.2026; erät L ja M,
   # docs/raportit/viesti-fable-nostotaso-poltto-20260919.md).
@@ -898,11 +982,20 @@ shardit () {
   esac
   case "$SARJAT" in
     z0-z7|kaikki)
+      if [ -n "$RESEPTI" ]; then
+        # RESEPTIN POHJA z0-z8 TASOITTAIN JA DEM-KAISTOITTAIN (ks.
+        # tools/polttoresepti.mjs DEM-KAISTAJAKO): jokainen taso tarvitsee
+        # oman DEM-ruudukkonsa, ja z5-z8 jaetaan kaistoiksi, jotta
+        # ruudukko pysyy ~330 Mt:ssä shardia kohti. z8 on mukana tässä,
+        # joten alempi z8-silmukka ohitetaan reseptillä.
+        reseptin_shardit | while IFS='|' read -r n a; do echo "$n|$a$pohjaarg"; done
+      else
       echo "z0-z6|--tasot 0-6 --kaariminuutit 3$pohjaarg"
       echo "z7a|--tasot 7 --sarakkeet 0-43 --kaariminuutit $KORKEUS$pohjaarg"
       echo "z7b|--tasot 7 --sarakkeet 44-87 --kaariminuutit $KORKEUS$pohjaarg"
       echo "z7c|--tasot 7 --sarakkeet 88-131 --kaariminuutit $KORKEUS$pohjaarg"
       echo "z7d|--tasot 7 --sarakkeet 132-168 --kaariminuutit $KORKEUS$pohjaarg"
+      fi
       echo "viiva-z0-z7|--tasot 0-7 $viivaarg"
       [ "$ILMAN_NOSTOJA" -eq 0 ] && nostoshardit "nosto-z5-z7" "--tasot 5-7" "$nostoarg"
       [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && echo "ranta-z0-z7|--tasot 0-7 $rantaarg"
@@ -945,7 +1038,7 @@ shardit () {
   case "$SARJAT" in
     z8|kaikki)
       local a=0 b n=1
-      while [ "$a" -lt "$Z8_SARAKKEITA" ]; do
+      while [ -z "$RESEPTI" ] && [ "$a" -lt "$Z8_SARAKKEITA" ]; do
         b=$((a + Z8_KAISTA - 1))
         [ "$b" -ge "$Z8_SARAKKEITA" ] && b=$((Z8_SARAKKEITA - 1))
         printf 'z8-%03d|--tasoja 9 --tasot 8 --sarakkeet %s-%s --kaariminuutit %s%s\n' \
@@ -1176,6 +1269,9 @@ ajon_tunnus () {
   # kaistat, uusi DEM = eri laatat). Muille sarjoille tunnus on entinen.
   if [ "${SARJAT:-}" = "syva" ]; then printf '/s%s/d%s' "$SYVA_ALUE" "$DEM"; fi
   if [ -n "${PALLO_ALUE:-}" ]; then printf '/a%s' "$PALLO_ALUE"; fi
+  # Nimetty resepti: eri resepti = eri laatat (vanhan ajon valmis-merkit
+  # eivät kelpaa). Ilman reseptiä tunnus on entinen.
+  if [ -n "${RESEPTI:-}" ]; then printf '/R%s' "$RESEPTI"; fi
 }
 
 # Onko shardin valmis-merkki tästä samasta ajosta?
@@ -1579,7 +1675,7 @@ pallon_yritys () {
   local koodi=0
   # shellcheck disable=SC2086
   (cd "$JUURI" && node tools/tee-pallolaatat.mjs \
-      --min "$PALLO_MIN" --max "$PALLO_MAX" $PALLON_NOSTOT $rantalippu \
+      --min "$PALLO_MIN" --max "$PALLO_MAX" $PALLON_NOSTOT $rantalippu $PALLOLIPUT \
       $( [ -n "$PALLO_ALUE" ] && echo --alue "$PALLO_ALUE" ) \
       --tunniste "$PALLOTUNNISTE" --osa "$i/$PALLO_OSIA" \
       $( [ -n "$PALLO_LUETTELO" ] && echo --luettelo "$PALLO_LUETTELO" ) \
@@ -1648,6 +1744,18 @@ aja_pallo_shardi () {
   return 1
 }
 
+# PALLON RANTAVALINTA (ks. polta_pallo): rantataso luettelossa = pohja on
+# rannaton ja pallolla ranta on vektori, joten sarjaan ei polteta
+# rantatasoa ja laatat.json saa `"ranta": null`. Oma funktio, jotta
+# --lista näyttää saman valinnan kuin poltto tekee.
+pallon_rantalippu () {
+  local rantalippu=""
+  if [ "$PALLON_RANTA" -eq 0 ] && [ -n "$RANTAVERSIO" ]; then
+    rantalippu="--ilman-rantaa"
+  fi
+  echo "$rantalippu"
+}
+
 polta_pallo () {
   if [ "$VIE" -eq 1 ]; then vaadi_avaimet; fi
   [ -n "$PALLOTUNNISTE" ] || {
@@ -1657,7 +1765,7 @@ polta_pallo () {
     exit 2
   }
   (cd "$JUURI" && npm install --no-save --no-fund --no-audit sharp)
-  local rantalippu=""
+  local rantalippu
   # PALLOLLA RANTAVIIVA ON VEKTORI (js/pallovektorit.js), joten sarjaan ei
   # polteta rantatasoa: poltettu muste jäisi vektorin alle venytettynä
   # usvana ja levossa viiva näkyisi kahtena. `--pallon-ranta` palauttaa
@@ -1669,9 +1777,7 @@ polta_pallo () {
   # pelkkään pallon polttoon (`--vain-pallo`) ja z8:n lisäykseen —
   # muuten sarja saisi rantaviivan, jonka vektorikerros piirtää
   # toistamiseen. Ilman rantatasoa (vanha pohja) lippu ei tee mitään.
-  if [ "$PALLON_RANTA" -eq 0 ] && [ -n "$RANTAVERSIO" ]; then
-    rantalippu="--ilman-rantaa"
-  fi
+  rantalippu="$(pallon_rantalippu)"
 
   # 1. LUETTELO ENSIN, VIENTI VIIMEISENÄ. Luettelo kuvaa koko sarjan,
   #    joten shardit eivät kirjoita sitä (tee-pallolaatat `--osa`);
@@ -1861,7 +1967,8 @@ kokoa_lahde_levylta () {
   alkoi="$(date +%s)"
   rm -rf "$lahde"
   mkdir -p "$lahde/$VERSIO"
-  for kansio in "$ULOS"/z0-z6 "$ULOS"/z7? "$ULOS"/z8-*; do
+  # Reseptin pohjashardit: z0…z4 ja z5-01…z7-NN (ks. reseptin_shardit).
+  for kansio in "$ULOS"/z0-z6 "$ULOS"/z7? "$ULOS"/z[0-9] "$ULOS"/z[5-7]-[0-9]* "$ULOS"/z8-*; do
     [ -d "$kansio" ] || continue
     for d in "$kansio"/z*; do
       [ -d "$d" ] || continue
@@ -2072,7 +2179,8 @@ if [ "$LISTA" -eq 1 ]; then
   fi
   if [ "$PALLO" -eq 1 ]; then
     pallon_shardit | awk -v n="$PALLO_OSIA" -v a="$PALLO_MIN" -v b="$PALLO_MAX" \
-      '{ printf "%-14s pallon Mercator-sarja z%s-%s, osa %d/%s\n", $1, a, b, NR, n }'
+      -v l="$(pallon_rantalippu) $PALLOLIPUT" \
+      '{ printf "%-14s pallon Mercator-sarja z%s-%s, osa %d/%s %s\n", $1, a, b, NR, n, l }'
   fi
   exit 0
 fi

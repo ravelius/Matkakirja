@@ -12,7 +12,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  MAAKUNTIEN_NIMET, MAAKUNTIEN_MAAT, maakunnanNimi, maakunnanKuvat,
+  MAAKUNTIEN_NIMET, MAAKUNTIEN_MAAT, maakunnanNimi, maakunnanKuvat, maakuntienMaa, EI_MAAKUNTIA_TEKSTI,
 } from '../js/karttatyokalu-maakunnat.js';
 import { MAAKUNTIEN_LUONNEHDINNAT } from '../js/packs/maakunnat-luonnehdinnat.js';
 import { MAAKUNTIEN_PULU } from '../js/packs/maakunnat-pulu.js';
@@ -105,4 +105,17 @@ test('MAAKUNTIEN_PULU: muoto on ISO -> tunnus -> [{ q, a }] ja avaimet ovat kelv
     }
   }
   assert.deepEqual(virheet, [], virheet.join('\n'));
+});
+
+/*
+ * LÖYDÖS 70 (Fable 25.9.2026): Kreikassa Maakunnat-välilehti näytti Ranskan.
+ * Nykyinen maa avataan vain, jos sillä on maakuntia; muuten ei yhtään ryhmää
+ * eikä Ranskaa varalle, ja lista kertoo sen tekstillä.
+ */
+test('maakuntienMaa: vain maakuntamaat, ei Ranskaa varalle', () => {
+  for (const { iso } of MAAKUNTIEN_MAAT) assert.equal(maakuntienMaa(iso), iso);
+  assert.equal(maakuntienMaa('GRC'), null);
+  assert.equal(maakuntienMaa('BGR'), null);
+  assert.equal(maakuntienMaa(undefined), null);
+  assert.equal(EI_MAAKUNTIA_TEKSTI, 'Tälle maalle ei ole vielä maakuntia');
 });

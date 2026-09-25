@@ -370,3 +370,46 @@ test('9. ruudun reuna ei pura lukkoa eikä pudota lukittua nimeä', () => {
   assert.equal(y.sijoitukset().get('pariisi'), alku,
     'reuna ei saa vaihtaa kylkeä');
 });
+
+/*
+ * 10. LATTIAKERTOIMELLA LADOTTUA NIMEÄ EI LUKITA EIKÄ NÄYTETÄ (Fablen
+ * päätös 25.9.2026; js/pallolauta/nimet.js samanniminen osio).
+ *
+ * Tuotannossa ensimmäiset ladonnat ajetaan maailmanäkymässä ennen kuin
+ * vertailuskaala on olemassa: kerroin on lattiassa ja kyltti 2,7 px.
+ * Siellä syntynyt lukko kerrottiin perillä viisinkertaiseksi, ja
+ * PARIISI jäi 185 px:n päähän pisteestään. Tässä ympäristössä sama
+ * mekanismi antaa lattiassa sijoituksen (0; 5,58) kyltin alle, joka
+ * skaalautuisi perillä (0; 27,96) — tuore sijoitus on (−16,92; 4,23).
+ *
+ * Vaatimus: perillä sijoitus on TÄSMÄLLEEN sama kuin ympäristössä, joka
+ * ei koskaan käynyt lattiassa, ja lattian ladonta ei näytä yhtään nimeä
+ * mutta pitää kaupungin nimettynä (piste jää).
+ */
+const { nimenKerroinLattialla } = await import('../js/pallolauta/nimet.js');
+
+test('10. lattiakertoimella ladottu nimi ei lukitu eikä näy; perillä tuore sijoitus', () => {
+  const MAAILMA = { katto: 40, karttaskaala: 0.18, vertailuskaala: 0 };
+  const PERILLA = { katto: 40, karttaskaala: 0.6552, vertailuskaala: 0.6552 };
+  assert.ok(nimenKerroinLattialla(MAAILMA.karttaskaala, MAAILMA.vertailuskaala));
+  assert.ok(!nimenKerroinLattialla(PERILLA.karttaskaala, PERILLA.vertailuskaala));
+  // Tuntematon mittakaava ei ole lattia (entinen ruutuvakio).
+  assert.ok(!nimenKerroinLattialla(0));
+
+  const matka = ymparisto();
+  matka.nimet.lado(MAAILMA);
+  assert.ok(matka.nimet.nimetty('pariisi'), 'lattiassa kaupunki pysyy nimettynä (piste jää)');
+  assert.equal(matka.sijoitukset().size, 0, 'lattiassa ei yhtään nimeä ruudulle');
+  matka.nimet.lado(PERILLA);
+
+  const suoraan = ymparisto();
+  suoraan.nimet.lado(PERILLA);
+  assert.equal(matka.sijoitukset().get('pariisi'), suoraan.sijoitukset().get('pariisi'),
+    'lattian ladonta ei saa jättää lukkoa, joka skaalautuu perille');
+
+  // Perillä syntynyt lukko pitää kuten ennenkin (vartio 3): zoomi skaalaa.
+  const ennen = matka.sijoitukset().get('pariisi').split('|');
+  matka.nimet.lado({ ...PERILLA, karttaskaala: 2 * PERILLA.karttaskaala });
+  const jalkeen = matka.sijoitukset().get('pariisi').split('|');
+  assert.equal(jalkeen[2], ennen[2], 'perillä syntynyt lukko pitää kyljen zoomissa');
+});
