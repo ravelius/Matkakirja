@@ -118,6 +118,7 @@
 //   ui kierto vaaka|pysty|auto                näytön suunta (Screen.orientation); simulaattorin vaakakuvat ilman Simulator.appia
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy (lehti tai nähtävyysjuttu auki → "Ehdota tallennettavaksi")
 //   ui traileri [kaupunki]                    saapumistraileri ilman puhetta (oletus lontoo)
+//   ui saapumiskortti [RIVI]                  saapumisen välikortti (oletus ATEENA · PÄIVÄ 1/80, löydös 52)
 //   ui luento [kaupunki] [loppu]              matkakirjakortti + luentakuvat (oletus ateena); loppu = Livian vuoro
 //   ui matkakirja [kaupunki] [laji]           matkakirjakortin polut ilman ääntä (oletus tanger; Matkakirjamerkinnat.cs):
 //                                             fokus (virran merkintä) | aarre (aarremerkintä) | saapuminen (pakin
@@ -545,6 +546,17 @@ namespace Matkakirja.Natiivi
                 {
                     string tk = loput.Length > 0 ? loput : "lontoo";
                     ui.Traileri.Nayta(tk, null, () => Kirjaa("traileri valmis: " + tk));
+                    return null;
+                }
+                case "saapumiskortti-mitta":
+                    Kirjaa("saapumiskortti-mitta: " + ui.Saapumiskortti.Mitta(loput.Length > 0 ? loput : "ATEENA · PÄIVÄ 1/80"));
+                    return null;
+                case "saapumiskortti":
+                {
+                    // Välikortti ilman lentoa (löydös 52, kuvaparit): ui saapumiskortti [RIVI], oletus ATEENA · PÄIVÄ 1/80.
+                    string korttirivi = loput.Length > 0 ? loput : "ATEENA · PÄIVÄ 1/80";
+                    ui.Saapumiskortti.Nayta(korttirivi, () => Kirjaa("saapumiskortti arkki täynnä"),
+                        () => Kirjaa("saapumiskortti valmis: " + korttirivi));
                     return null;
                 }
                 case "chat":

@@ -257,6 +257,13 @@ namespace Matkakirja.Natiivi
         /// Asettamaton = ei traileria: saapumispuhe soi kamera-ajon aikana (entinen vuo).
         /// </summary>
         public static Action<string, string, Action> Saapumistraileri;
+        /// <summary>
+        /// Saapumisen välikortti aloituslennon jälkeen (web ui.js naytaSaapumiskortti, löydös 52): (rivi, arkki täynnä,
+        /// valmis). Pergamenttiarkki nousee 420 ms, rivi "KAUPUNKI · PÄIVÄ n/80" kirjoittuu, jää 1 s ja häipyy; sitten
+        /// valmis ja arkki häipyy 700 ms. Arkki täynnä -kutsussa PeliOhjain purkaa lennon ja vie kameran saapumis-
+        /// näkymään arkin alla. Asettamaton = ei korttia: saapuminen jatkuu heti kuten ennen.
+        /// </summary>
+        public static Action<string, Action, Action> Saapumiskortti;
         /// <summary>Asettamaton = ei korttia: napautus avaa matkavalinnan suoraan (erän 3 vuo).</summary>
         public static Func<GameObject, IKaupunkiKortti> KaupunkiKortti;
         /// <summary>

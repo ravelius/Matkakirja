@@ -76,6 +76,7 @@ namespace Matkakirja.Natiivi
             matkaKohde = b.Value;
             Tila = SilmukanTila.Matkalla;
             AloituslentoKaynnissa = true;
+            saapumiskorttiTunnus++;
             try { AloituslentoAlkoi?.Invoke(kohde); } catch (Exception e) { Debug.LogException(e); }
             Debug.Log($"MATKAKIRJA peli: aloituslento Lontoo → {kohde}, {kesto:0.0} s");
 
@@ -111,11 +112,55 @@ namespace Matkakirja.Natiivi
 
         void AloituslentoPerilla(string kohde)
         {
+            var kortti = PeliNakymat.Saapumiskortti;
+            if (kortti == null || matka == null || Tila != SilmukanTila.Matkalla)
+            {
+                AloituslentoLoppui(kohde, kameraPerilla: false);
+                return;
+            }
+            // Saapumisen välikortti (löydös 52; web ui.js aloituslento → naytaSaapumiskortti): lennon ääni loppuu
+            // (sfx.stopFlight), lento päättyy (web flight-active pois ja kohtaus.poistuma: yläpalkki palaa),
+            // pergamenttiarkki nousee, ja sen alla kamera asettuu saapumisnäkymään (web kohtaus.pura). Kortin jälkeen saapuminen jatkuu (traileri tai lehti), ja arkki häipyy
+            // valmiin kartan päältä ilman zoomausanimaatiota. Aloituslento päättyy vasta kortin jälkeen
+            // (web aloituslentoKesken = false ja paataAloituslennonSignaali('loppu') kortin jälkeen).
+            Lentoaani(false);
+            PaataLento();
+            int oma = ++saapumiskorttiTunnus;
+            bool Voimassa() => oma == saapumiskorttiTunnus && AloituslentoKaynnissa && Tila == SilmukanTila.Matkalla;
+            bool kameraPerilla = false;
+            try
+            {
+                kortti(SaapumiskortinRivi(kohde),
+                    () =>
+                    {
+                        if (!Voimassa()) return;
+                        Saavu(maaRajaus: false);
+                        kameraPerilla = true;
+                    },
+                    () => { if (Voimassa()) AloituslentoLoppui(kohde, kameraPerilla); });
+            }
+            catch (Exception e)
+            {
+                Debug.LogException(e);
+                if (Voimassa()) AloituslentoLoppui(kohde, kameraPerilla);
+            }
+        }
+
+        /// <summary>Uusi aloituslento mitätöi kesken olevan välikortin kutsut.</summary>
+        int saapumiskorttiTunnus;
+
+        /// <summary>Web saapumisKortinTeksti: kaupungin nimi versaalina ja päivä isoisän ennätystä (80) vasten.</summary>
+        string SaapumiskortinRivi(string kohde) =>
+            PeliApu.KaupunginNimi(verkko, kohde).ToUpperInvariant() + " · PÄIVÄ " + matka.Tila.Paiva() + "/" + LaattaVakiot.EnnatysPaivat;
+
+        void AloituslentoLoppui(string kohde, bool kameraPerilla)
+        {
             AloituslentoKaynnissa = false;
             try { AloituslentoPaattyi?.Invoke(kohde); } catch (Exception e) { Debug.LogException(e); }
             // Saapuminen normaalisti: traileri tai kaupunkilehti (Perilla); kamera webin avauslennon tapaan
-            // kaupunkinäkymään (siirto.js laske: omaKamera → kamera.kotiin ilman maan laatikkoa).
-            Perilla(aloituslento: true);
+            // kaupunkinäkymään (siirto.js laske: omaKamera → kamera.kotiin ilman maan laatikkoa), ellei se jo
+            // asettunut välikortin alla.
+            Perilla(aloituslento: true, kameraPerilla: kameraPerilla);
         }
     }
 }
