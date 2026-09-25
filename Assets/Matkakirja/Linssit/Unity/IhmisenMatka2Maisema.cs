@@ -109,6 +109,7 @@ namespace Matkakirja.Natiivi
                 klipit[tunnus] = klippi;
             }
             if (haluttu != tunnus || lopetus) yield break;   // jakso vaihtui latauksen aikana
+            if (tyyppi == tunnus) yield break;   // toinen lataus ehti ensin (jaksot edestakaisin): ei alkua uudelleen
             Vaihda(tunnus, klippi);
         }
 
@@ -139,7 +140,9 @@ namespace Matkakirja.Natiivi
 
         float Taso()
         {
-            if (!Asetukset.Paalla(Kytkin.Aanimaisema) || (EsityksenAani.Mykistetty?.Invoke() ?? false)) return 0f;
+            // Vain Äänimaisema-kytkin (koko pelin mykistys, web sfx.enabled). EI EsityksenAani.Mykistetty: se on tosi myös,
+            // kun pelaaja on ottanut pelkän kertojan pois, eikä kertojan poisto saa vaientaa paikkojen ääniä.
+            if (!Asetukset.Paalla(Kytkin.Aanimaisema)) return 0f;
             float t = MaisemanVoima * Asetukset.Taso(Voima.Tausta);
             return KertojaSoi != null && KertojaSoi() ? t * Vaisto : t;
         }
