@@ -9,7 +9,7 @@ import { MAAKUNTIEN_PULU } from '../js/packs/maakunnat-pulu.js';
  * kommentti) — pulu tulee vasta erässä 3, joten se ei kuulu vielä
  * tähän täydellisyystestiin. Samoin MDA, UKR, BLR ja ISL (erä 3A).
  */
-const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP', 'MDA', 'UKR', 'BLR', 'ISL', 'TUR']);
+const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP', 'MDA', 'UKR', 'BLR', 'ISL', 'TUR', 'RUS']);
 test('jokaisella luonnehdinta-avaimella on pulu 2-3 paria, ei ylimääräisiä avaimia', () => {
   for (const [iso, alueet] of Object.entries(MAAKUNTIEN_LUONNEHDINNAT)) {
     if (ERASSA_1.has(iso)) continue;

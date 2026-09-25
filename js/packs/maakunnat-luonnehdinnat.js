@@ -4556,4 +4556,321 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Zonguldak perustettiin 1849 satamakaupungiksi Ereğlin hiilikaivoksia varten, ja kivihiili on siitä asti ollut sen elinkeino.',
     },
   },
+  /*
+   * RUS (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 3C). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.RUS:n tunnuksia
+   * TÄSMÄLLEEN (Natural Earthin nimet, esim. "Maga Buryatdan" = Magadanin
+   * alue, "Chita" = Taka-Baikalin aluepiiri, "Altay" = Altain aluepiiri,
+   * "Gorno-Altay" = Altain tasavalta, "Yevrey" = Juutalainen autonominen
+   * alue, "RUS+99?" = Natural Earthin nimetön pikkusaari Bajdaratskajan-
+   * lahdella, 68,8° N 67,3° E). Vain `lyhyt` tässä erässä. Crimea ja
+   * Sevastopol kuvaavat vain maisemaa ja kaupunkia. Vältetty Moskovan ja
+   * Pietarin fokusvirtojen sekä maastokohteet-rus.js:n aiheet (Baikalin
+   * repeämä, Kizhi, Pietarhof, Elbrus, Kazanin kreml, Jasnaja Poljana,
+   * Tobolsk, Kolan syväreikä, Tunguska). Lähteet (en-/ru-Wikipedia ja
+   * hakutarkistus 25.9.2026), epävarmimmat tarkistettu erikseen:
+   *   Altay            — Altai Krai (tattarista 40–60 % Venäjän sadosta,
+   *                      alueen maatalousministeriö / FAO)
+   *   Buryat           — Selenga River (lähes puolet Baikalin jokivedestä,
+   *                      Ramsar-kohde, yli 170 lintulajia)
+   *   Chelyabinsk      — Chelyabinsk meteor (654 kg:n kappale nostettiin
+   *                      Tšebarkuljärvestä 16.10.2013)
+   *   Chita            — Landscapes of Dauria (Toreijärvet, dzeren)
+   *   Crimea           — Swallow's Nest (Aurora-kallio 40 m, 1911–1912)
+   *   Dagestan         — Sulak Canyon (1 920 m, 63 m Grand Canyonia syvempi)
+   *   Kabardin-Balkar  — Baksan Neutrino Observatory (SN1987A)
+   *   Kaliningrad      — Kaliningrad Amber Combine (noin 90 % louhittavasta
+   *                      meripihkasta Jantarnyin ympäristössä)
+   *   Karachay-Cherkess — BTA-6 (first light 1975, suurin 1990 asti)
+   *   Karelia          — Petroglyphs of Lake Onega and the White Sea (2021)
+   *   Kalmyk           — Elista (Kultainen asumus, Euroopan suurin
+   *                      buddhalainen temppeli, 2005)
+   *   Chechnya         — Kezenoyam (ru: pinta-alaltaan Kaukasuksen suurin,
+   *                      1 854–1 869 m)
+   *   Irkutsk          — Irkutsk (72 km Angaran lähtökohdasta)
+   *   Ivanovo          — Ivanovo ("city of brides")
+   *   Komi             — Manpupuner rock formations (7 pylvästä, 30–42 m)
+   *   Kostroma         — Terem Snegurochki (2008, Volgan ranta)
+   *   Maga Buryatdan   — Magadan Oblast (462 464 km², 136 085 as. 2021)
+   *   North Ossetia    — Dargavs (99 hautaa ja kryptaa)
+   *   Rostov           — Tanais (Nedvigovka, arkeologinen museoalue)
+   *   RUS+99?          — Baydaratskaya Bay (Gazpromin putket pohjaan 2014)
+   *   Saratov          — Saratovskaya garmonika (kaksi kelloa kannessa)
+   *   Smolensk         — Smolensk Kremlin (6,5 km, 1595–1602)
+   *   City of St. Petersburg — Hermitage cats (50–74 kissaa)
+   *   Tambov           — Ivanovka estate (Rahmaninovin kesäkoti 1890–1917)
+   *   Tula             — Tula pryanik (kaiverretut puulaudat, täyte)
+   *   Tver'            — Volgoverkhovye (kappeli lähteen päällä)
+   *   Tyumen'          — Tyumen (1586, ensimmäinen venäläinen asutus
+   *                      Siperiassa)
+   *   Udmurt           — Buranovskiye Babushki (Euroviisut 2012, 2. sija)
+   *   Volgograd        — Lake Elton (Euroopan suurin mineraalijärvi,
+   *                      Dunaliella salina -levä)
+   *   Voronezh         — Kostenki (26 paleoliittista kohdetta,
+   *                      mammutinluurakennelmat)
+   *   Yamal-Nenets     — Salekhard (napapiirillä, muistomerkki)
+   *   Yevrey           — Birobidzhan (Šolem Aleichemin katu)
+   *   Muut             — yleistietoa, tarkistettu vastaavista
+   *                      en-Wikipedia-artikkeleista.
+   */
+  RUS: {
+    Adygey: {
+      lyhyt: 'Adygea on kokonaan Krasnodarin aluepiirin ympäröimä, ja sen nimeä kantaa adygeanjuusto, pehmeä tuorejuusto, jota syödään kaikkialla Venäjällä.',
+    },
+    Altay: {
+      lyhyt: 'Altain aluepiirin pelloilta korjataan vuosittain noin puolet koko Venäjän tattarista, ja kesällä tattaripellot kukkivat valkoisina.',
+    },
+    Amur: {
+      lyhyt: 'Amurin alueen taigaan on rakennettu Vostotšnyin avaruuskeskus, josta ensimmäinen raketti nousi huhtikuussa 2016.',
+    },
+    "Arkhangel'sk": {
+      lyhyt: 'Arkangelin alueeseen kuuluu myös Frans Joosefin maa, arktinen saaristo, jonka saaret ovat suurelta osin jäätiköiden peitossa.',
+    },
+    "Astrakhan'": {
+      lyhyt: 'Volga laskee Astrahanin alueella Kaspianmereen Euroopan suurimpana jokisuistona, ja kesällä suiston lahdet peittyvät lootuksen kukkiin.',
+    },
+    Bashkortostan: {
+      lyhyt: 'Baškortostanin Šulgan-Tašin eli Kapovan luolan seinillä on kivikautisia maalauksia mammuteista ja hevosista.',
+    },
+    Belgorod: {
+      lyhyt: 'Belgorod tarkoittaa valkoista kaupunkia, ja nimi viittaa seudun vaaleisiin liitu- ja kalkkikiviesiintymiin.',
+    },
+    Bryansk: {
+      lyhyt: 'Brjanskin metsän mänty- ja tammimetsät ja Nerussajoen suot on suojeltu, ja ne kuuluvat Unescon biosfäärialueeseen.',
+    },
+    Buryat: {
+      lyhyt: 'Selenga tuo Burjatiasta lähes puolet Baikaliin laskevien jokien vedestä, ja sen suisto on satojen lintulajien levähdyspaikka.',
+    },
+    Chelyabinsk: {
+      lyhyt: 'Helmikuussa 2013 Tšeljabinskin yllä räjähti meteori, ja sen yli 600 kilon kappale nostettiin myöhemmin Tšebarkuljärven pohjasta.',
+    },
+    Chita: {
+      lyhyt: 'Taka-Baikalin Daurian arot ja Toreijärvet ovat Unescon maailmanperintöä, ja niillä vaeltaa mongoliangaselleja.',
+    },
+    Crimea: {
+      lyhyt: 'Jaltan lähellä Pääskysenpesän pieni linna kyyhöttää 40-metrisen jyrkänteen reunalla Mustanmeren yllä.',
+    },
+    Dagestan: {
+      lyhyt: 'Dagestanin Sulakin kanjoni on lähes kaksi kilometriä syvä, syvempi kuin Coloradon Grand Canyon.',
+    },
+    'Gorno-Altay': {
+      lyhyt: 'Altain tasavallan Beluha, 4 506 metriä, on Altain vuoriston korkein huippu, ja sen jäätiköiltä saa alkunsa Katunjoki.',
+    },
+    Khakass: {
+      lyhyt: 'Hakassiassa Jenisei on padottu Sajano-Šušenskajan voimalaksi, joka on Venäjän suurin sähkövoimala.',
+    },
+    'Khanty-Mansiy': {
+      lyhyt: 'Hanti-Mansijsk on rakennettu Irtyšin ja Obin yhtymäkohdan lähelle, ja alue on nimetty kahden alkuperäiskansan, hantien ja mansien, mukaan.',
+    },
+    Ingush: {
+      lyhyt: 'Inguššian vuoriston rotkoissa seisoo keskiaikaisia kivitorneja, ja Vovnuškin tornit on rakennettu suoraan kallionhuipuille.',
+    },
+    Irkutsk: {
+      lyhyt: 'Angara on ainoa joki, joka virtaa ulos Baikalista, ja Irkutsk on sen rannalla noin 70 kilometriä järveltä.',
+    },
+    Ivanovo: {
+      lyhyt: 'Ivanovo on vanha tekstiilikaupunki, ja koska kutomoissa työskenteli enimmäkseen naisia, sitä kutsutaan morsiamien kaupungiksi.',
+    },
+    'Kabardin-Balkar': {
+      lyhyt: 'Baksanin laakson vuoren alla on neutriinolaboratorio, jonka ilmaisin tallensi vuonna 1987 kaukaisesta supernovasta tulleita neutriinoja.',
+    },
+    Kaliningrad: {
+      lyhyt: 'Kaliningradin alueen Jantarnyissa on maailman suurin meripihkaesiintymä, ja meripihkaa kaivetaan siellä avolouhoksesta.',
+    },
+    Kalmyk: {
+      lyhyt: 'Kalmukian pääkaupungissa Elistassa on Euroopan suurin buddhalainen temppeli, Buddha Šakjamunin kultainen asumus.',
+    },
+    Kaluga: {
+      lyhyt: 'Kalugassa asui avaruuslentojen uranuurtaja Konstantin Tsiolkovski, ja kaupungin kosmonautiikan historian museo kantaa hänen nimeään.',
+    },
+    Kamchatka: {
+      lyhyt: 'Kamtšatkan Kljutševskaja Sopka, noin 4 750 metriä, on Euraasian korkein toimiva tulivuori, ja se purkautuu yhä usein.',
+    },
+    'Karachay-Cherkess': {
+      lyhyt: 'Karatšai-Tšerkessian vuorilla on BTA-6-kaukoputki, jonka kuusimetrinen peili oli valmistuessaan 1975 maailman suurin.',
+    },
+    Karelia: {
+      lyhyt: 'Äänisen ja Vienanmeren rantakallioihin on hakattu tuhansia kivikautisia kalliopiirroksia, ja ne ovat Unescon maailmanperintöä.',
+    },
+    Kemerovo: {
+      lyhyt: 'Kemerovon alue on Kuzbass eli Kuznetskin hiiliallas, Venäjän suurin kivihiilen louhinta-alue.',
+    },
+    Khabarovsk: {
+      lyhyt: 'Habarovskin kohdalla Amurin ylittävä pitkä silta on kuvattu Venäjän 5 000 ruplan setelin kääntöpuolelle.',
+    },
+    Kirov: {
+      lyhyt: 'Kirovin lähellä Dymkovossa muovaillaan yhä savileluja, jotka kalkitaan valkoisiksi ja maalataan kirkkain värein.',
+    },
+    Komi: {
+      lyhyt: 'Komin Manpupunerin ylängöllä seisoo seitsemän 30–42-metristä kivipylvästä, joita kutsutaan seitsemäksi voimamieheksi.',
+    },
+    Kostroma: {
+      lyhyt: 'Kostromaa pidetään Snegurotškan, Pakkasukon lumityttären, kotikaupunkina, ja Volgan rannalla on hänen puinen satutalonsa.',
+    },
+    Krasnodar: {
+      lyhyt: 'Krasnodarin aluepiirin Sotši on subtrooppinen lomakaupunki, jonka yläpuolisilla vuorilla ajettiin 2014 talviolympialaisten alppilajit.',
+    },
+    Krasnoyarsk: {
+      lyhyt: 'Krasnojarskin aluepiiriin kuuluu Tšeljuskininniemi Taimyrin niemimaalla, Euraasian mantereen pohjoisin kärki.',
+    },
+    Kurgan: {
+      lyhyt: 'Kurganissa toimii Ilizarovin keskus, jossa kehitettiin luiden pidentämiseen ja murtumien hoitoon käytetty rengaskehikko.',
+    },
+    Kursk: {
+      lyhyt: 'Kurskin alueen maaperässä on niin paljon rautamalmia, että kompassi näyttää väärin – ilmiö tunnetaan Kurskin magneettisena anomaliana.',
+    },
+    Leningrad: {
+      lyhyt: 'Leningradin alueella on suuri osa Laatokasta, Euroopan suurimmasta järvestä, josta Neva virtaa kohti Pietaria.',
+    },
+    Lipetsk: {
+      lyhyt: 'Lipetskin nimi tulee lehmuksesta, venäjäksi lipa, mutta nykyään kaupunki tunnetaan ennen kaikkea suuresta terästehtaastaan.',
+    },
+    'Maga Buryatdan': {
+      lyhyt: 'Magadanin alue on pinta-alaltaan Saksaa suurempi, mutta asukkaita on vain noin 136 000, ja lähes kaikki asuvat kaupungeissa.',
+    },
+    'Mariy-El': {
+      lyhyt: 'Moni mari harjoittaa yhä vanhaa luonnonuskontoaan, ja yhteisiä rukoushetkiä pidetään pyhissä lehdoissa.',
+    },
+    Mordovia: {
+      lyhyt: 'Mordvassa puhutaan kahta suomalais-ugrilaista kieltä, ersää ja mokšaa, jotka ovat tasavallan virallisia kieliä venäjän rinnalla.',
+    },
+    Moskva: {
+      lyhyt: 'Moskovan Ostankinon televisiotorni kohoaa 540 metriin, ja se on Euroopan korkein vapaasti seisova rakennelma.',
+    },
+    Moskovskaya: {
+      lyhyt: 'Moskovan alueen Sergijev Posadissa on Kolminaisuuden lavra, Venäjän ortodoksisen kirkon tärkeimpiä luostareita.',
+    },
+    Murmansk: {
+      lyhyt: 'Murmansk on maailman suurin kaupunki napapiirin pohjoispuolella, ja talvella aurinko pysyy siellä horisontin alla noin kuusi viikkoa.',
+    },
+    Nenets: {
+      lyhyt: 'Nenetsian tundralla nenetsit paimentavat yhä poroja, ja pääkaupungin Narjan-Marin nimi tarkoittaa nenetsiksi punaista kaupunkia.',
+    },
+    Nizhegorod: {
+      lyhyt: 'Nižni Novgorodin alueen Semjonovissa maalataan hohlomaa, puuastioita, joiden kukkakuviot hohtavat punaisena, mustana ja kultaisena.',
+    },
+    Novgorod: {
+      lyhyt: 'Novgorodin kosteasta maasta on kaivettu esiin yli tuhat keskiaikaista tuohikirjettä, tavallisten kaupunkilaisten arkisia viestejä.',
+    },
+    Novosibirsk: {
+      lyhyt: 'Novosibirskin Akademgorodok on 1950-luvulla metsän keskelle rakennettu tiedekaupunki, jossa toimii kymmeniä tutkimuslaitoksia.',
+    },
+    Omsk: {
+      lyhyt: 'Omsk on rakennettu kohtaan, jossa pieni Om-joki laskee Irtyšiin, ja kaupunki on saanut nimensä pienemmältä joelta.',
+    },
+    Orel: {
+      lyhyt: 'Orjolissa syntyi kirjailija Ivan Turgenev, ja hänen sukunsa kartano Spasskoje-Lutovinovo on nykyään museo.',
+    },
+    Orenburg: {
+      lyhyt: 'Orenburgin untuvahuivit neulotaan vuohenuntuvasta niin ohuiksi, että hienoimman huivin voi pujottaa sormuksen läpi.',
+    },
+    Penza: {
+      lyhyt: 'Penzan alueen Tarhanyssa kasvoi runoilija Mihail Lermontov isoäitinsä kartanossa, joka on nyt hänen museonsa.',
+    },
+    "Perm'": {
+      lyhyt: 'Maapallon historian permikausi on nimetty Permin mukaan, sillä brittigeologi Murchison tutki kauden kerrostumia täällä 1841.',
+    },
+    'City of St. Petersburg': {
+      lyhyt: 'Pietarin Eremitaasissa asuu kymmeniä kissoja, jotka pitävät museon kellarit hiirettöminä, ja niillä on omat hoitajansa.',
+    },
+    'North Ossetia': {
+      lyhyt: 'Pohjois-Ossetian Dargavsin laakson rinteellä on vanha kuolleiden kaupunki, lähes sata kivistä hautahuonetta rivissä.',
+    },
+    "Primor'ye": {
+      lyhyt: 'Primorjen Leopardin maan kansallispuistossa elää suurin osa maailman luonnonvaraisista amurinleopardeista.',
+    },
+    Pskov: {
+      lyhyt: 'Puškinin sukutila Mihailovskoje Pihkovan alueella on museona, ja runoilija on haudattu läheiseen Svjatogorskin luostariin.',
+    },
+    Rostov: {
+      lyhyt: 'Donin suistossa Rostovin lähellä on Tanaisin kaivausalue, antiikin kreikkalaisten kauppakaupungin rauniot, jotka ovat nyt ulkomuseo.',
+    },
+    'RUS+99?': {
+      lyhyt: 'Tämä pieni saari on Karanmeren Bajdaratskajanlahdella, jonka pohjaan laskettiin 2014 kaasuputket Jamalin niemimaalta.',
+    },
+    "Ryazan'": {
+      lyhyt: 'Runoilija Sergei Jesenin syntyi Rjazanin alueen Konstantinovon kylässä Okan rannalla, ja hänen kotitalonsa on museo.',
+    },
+    'Sakha (Yakutia)': {
+      lyhyt: 'Sahan Oimjakonin kylässä on mitattu lähes 68 asteen pakkanen, yksi pohjoisen pallonpuoliskon kylmimmistä koskaan mitatuista lukemista.',
+    },
+    Sakhalin: {
+      lyhyt: 'Anton Tšehov matkusti Sahaliniin 1890 ja kirjoitti saaresta kirjan, jolle on Južno-Sahalinskissa oma museonsa.',
+    },
+    Samara: {
+      lyhyt: 'Samaran alueen Toljatissa on AvtoVAZin tehdas, jonka linjoilta Lada-autoja on vierinyt vuodesta 1970.',
+    },
+    Saratov: {
+      lyhyt: 'Saratovin harmonikan kannessa on kaksi pientä kelloa, jotka helähtävät bassonappien tahdissa tanssikappaleissa.',
+    },
+    Sevastopol: {
+      lyhyt: 'Sevastopolin laidalla antiikin Khersonesoksen rauniot laskeutuvat suoraan Mustanmeren rantaan.',
+    },
+    Smolensk: {
+      lyhyt: 'Smolenskin linnoitusmuuri rakennettiin 1595–1602 yli kuuden kilometrin mittaiseksi, ja pitkiä osuuksia torneineen on yhä pystyssä.',
+    },
+    "Stavropol'": {
+      lyhyt: 'Stavropolin aluepiirin Kislovodskista pulppuaa narzan-kivennäisvettä, ja sen kylpylöihin tullaan yhä parantumaan.',
+    },
+    Sverdlovsk: {
+      lyhyt: 'Jekaterinburgin lähellä Uralilla voi seistä yhtä aikaa Euroopassa ja Aasiassa, rajaa merkitsevän obeliskin kummallakin puolella.',
+    },
+    Tambov: {
+      lyhyt: 'Säveltäjä Sergei Rahmaninov vietti kesiään Tambovin alueen Ivanovkassa, ja kartano on nykyään hänen museonsa.',
+    },
+    Tatarstan: {
+      lyhyt: 'Tatarstanin kesäjuhlassa sabantuissa kiivetään liukkaaseen salkoon ja painitaan perinteistä vyöpainia.',
+    },
+    Tomsk: {
+      lyhyt: 'Tomskia kutsutaan Siperian Ateenaksi, sillä kaupungissa on Siperian vanhin yliopisto ja suuri joukko opiskelijoita.',
+    },
+    Chechnya: {
+      lyhyt: 'Tšetšenian vuoristossa lähes 1 900 metrin korkeudessa on Kezenoi-am, Kaukasuksen vuoriston pinta-alaltaan suurin järvi.',
+    },
+    'Chukchi Autonomous Okrug': {
+      lyhyt: 'Tšukotkan Dežnevinniemi on Euraasian mantereen itäisin kärki, ja Beringinsalmen toisella puolella on Alaska.',
+    },
+    Chuvash: {
+      lyhyt: 'Tšuvassin kieli on ainoa elossa oleva oguurien turkkilaiskieli, ja se eroaa paljon muista turkkilaiskielistä.',
+    },
+    Tula: {
+      lyhyt: 'Tulan prjanikit ovat hunajaisia piparkakkulevyjä, jotka painetaan kaiverrettuihin puumuotteihin ja täytetään usein hillolla.',
+    },
+    Tuva: {
+      lyhyt: 'Tuvassa lauletaan kurkkulaulua, jossa laulaja tuottaa yhtä aikaa matalan pohjasävelen ja sen yllä viheltävän yläsävelen.',
+    },
+    "Tver'": {
+      lyhyt: 'Volgan lähde on Tverin alueen Valdain ylängöllä, ja pienen lähteen päälle on rakennettu kappeli.',
+    },
+    "Tyumen'": {
+      lyhyt: 'Tjumen perustettiin 1586, ja sitä pidetään ensimmäisenä venäläisenä kaupunkina Siperiassa.',
+    },
+    Udmurt: {
+      lyhyt: 'Udmurtialaisen Buranovon kylän mummokuoro lauloi Euroviisuissa 2012 toiseksi, osin udmurtiksi.',
+    },
+    "Ul'yanovsk": {
+      lyhyt: 'Oblomovin kirjoittaja Ivan Gontšarov syntyi nykyisessä Uljanovskissa, ja kaupungissa on hänen museonsa.',
+    },
+    Vladimir: {
+      lyhyt: 'Nerljoen Pokrovan kirkko seisoo yksin tulvaniityn keskellä Bogoljubovon lähellä, ja se on Unescon maailmanperintöä.',
+    },
+    Volgograd: {
+      lyhyt: 'Volgogradin alueen Eltonjärvi on Euroopan suurin mineraalijärvi, ja levät värjäävät sen suolaisen veden punertavaksi.',
+    },
+    Vologda: {
+      lyhyt: 'Vologdan nypläyspitsi on alueen tunnetuin käsityö, ja kaupungissa on sille oma museonsa.',
+    },
+    Voronezh: {
+      lyhyt: 'Voronežin alueen Kostjonkissa on kaivettu esiin kymmeniä kivikautisia asuinpaikkoja, joista osa on rakennettu mammutinluista.',
+    },
+    'Yamal-Nenets': {
+      lyhyt: 'Salehard on rakennettu aivan napapiirille, ja kaupungissa napapiirin kohtaa merkitsee oma muistomerkki.',
+    },
+    "Yaroslavl'": {
+      lyhyt: 'Jaroslavlin vaakunassa on kirvestä kantava karhu, sillä tarun mukaan kaupungin perustaja Jaroslav Viisas kaatoi karhun juuri täällä.',
+    },
+    Yevrey: {
+      lyhyt: 'Juutalaisen autonomisen alueen pääkaupungin Birobidžanin pääkatu on nimetty jiddišiksi kirjoittaneen Šolem Aleichemin mukaan.',
+    },
+  },
 };
