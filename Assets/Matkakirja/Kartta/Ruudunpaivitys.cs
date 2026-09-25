@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using CesiumForUnity;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -50,9 +49,8 @@ namespace Matkakirja
         PalloKierto kierto;
         Camera kamera;
         Nappula nappula;
-        Cesium3DTileset pallo;
-        float viimeLiike, edellinenAste = -1f;
-        bool edellinenKiire, kameraPois;
+        float viimeLiike;
+        bool kameraPois;
         UniversalRenderPipelineAsset asetus;
         float perusSkaala = -1f;
         Lampotaso sovellettuLampo = Lampotaso.Normaali;
@@ -105,7 +103,6 @@ namespace Matkakirja
         {
             if (kierto == null) { kierto = FindAnyObjectByType<PalloKierto>(); kamera = kierto != null ? kierto.GetComponent<Camera>() : null; }
             if (nappula == null) nappula = FindAnyObjectByType<Nappula>();
-            if (pallo == null) pallo = FindAnyObjectByType<Cesium3DTileset>();
         }
 
         void LateUpdate()
@@ -159,12 +156,9 @@ namespace Matkakirja
         /// <summary>Jokin muuttuu ilman liikettä (piirto joka kehys 30 fps:llä): laatat tai UI.</summary>
         bool Muuttuu(out string syy)
         {
-            bool kiire = Laattapalvelin.Kiireinen;
-            float aste = pallo != null && !kameraPois ? pallo.ComputeLoadProgress() : 100f;
-            bool laatat = kiire || kiire != edellinenKiire || aste < 100f || aste != edellinenAste;
-            edellinenKiire = kiire;
-            edellinenAste = aste;
-            if (laatat) { syy = "laatat"; return true; }
+            // Pallo (Natiiviseppä, PallonLepo): kamera levossa, kaikki tilesetit valmiit ja vakaat, palvelin vapaa, herätys ohi
+            // ja kartan animaatiot seis. Korvaa entisen Laattapalvelin.Kiireinen- ja ComputeLoadProgress-ehdon (Fable 25.9.).
+            if (!PallonLepo.Lepaa(out var pallonSyy)) { syy = pallonSyy; return true; }
             bool rauhassa;
             try { rauhassa = UiRauhassa != null && UiRauhassa(); } catch (Exception) { rauhassa = false; }
             if (!rauhassa) { syy = UiRauhassa == null ? "ui (ei lepokyselyä)" : "ui"; return true; }
