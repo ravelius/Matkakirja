@@ -42,7 +42,11 @@ namespace Matkakirja
         static readonly List<string> aktiiviset = new List<string>();
         static readonly Dictionary<string, Summa> odotukset = new Dictionary<string, Summa>();
         static readonly Dictionary<string, Summa> haut = new Dictionary<string, Summa>();
+        /// <summary>Osuma-% (Esilataaja erä 1): vaihe/lähde → N = pyyntöjä, Tavut = välimuistista (osumat).</summary>
+        static readonly Dictionary<string, Summa> osumat = new Dictionary<string, Summa>();
         static int hakuja;
+        /// <summary>Pääsäikeen viimeksi laskema vaihe (PaivitaVaihe), taustasäikeiden kirjauksiin.</summary>
+        static volatile string vaiheKopio = "kaynnistys";
         static string tiedosto;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
@@ -50,7 +54,27 @@ namespace Matkakirja
         {
             PeliVaihe = null;
             tiedosto = null;
-            lock (lukko) { aktiiviset.Clear(); odotukset.Clear(); haut.Clear(); hakuja = 0; }
+            lock (lukko) { aktiiviset.Clear(); odotukset.Clear(); haut.Clear(); osumat.Clear(); hakuja = 0; }
+            vaiheKopio = "kaynnistys";
+        }
+
+        /// <summary>Pääsäie (Esilataaja.Update): vaihe talteen taustasäikeiden kirjauksia varten.</summary>
+        public static void PaivitaVaihe() => vaiheKopio = Vaihe;
+
+        /// <summary>
+        /// Pyyntö palveltiin välimuistista (osuma) tai verkosta. Osuma-% = osumat / pyynnöt per vaihe ja lähde.
+        /// Säieturvallinen (Laattapalvelin kirjaa taustasäikeestä): käyttää pääsäikeen vaihekopiota.
+        /// </summary>
+        public static void Osuma(string lahde, bool valimuistista)
+        {
+            string avain;
+            lock (lukko) avain = (aktiiviset.Count > 0 ? aktiiviset[aktiiviset.Count - 1] : vaiheKopio) + "/" + lahde;
+            lock (lukko)
+            {
+                if (!osumat.TryGetValue(avain, out var o)) osumat[avain] = o = new Summa();
+                o.N++;
+                if (valimuistista) o.Tavut++;
+            }
         }
 
         /// <summary>Nykyinen vaihe: viimeisin aktiivinen odotus, muuten pelin vaihe.</summary>
@@ -106,10 +130,11 @@ namespace Matkakirja
             catch (Exception) { }
         }
 
-        /// <summary>Oikea verkkohaku valmistui (lahde: sisalto, peli, kuva, puhe, laatta, linssi). Pääsäikeessä (Vaihe lukee pelin tilaa).</summary>
+        /// <summary>Oikea verkkohaku valmistui (lahde: sisalto, peli, kuva, puhe, laatta, linssi).</summary>
         public static void Haku(string lahde, double ms, long tavut)
         {
-            string vaihe = Vaihe;
+            string vaihe;
+            lock (lukko) vaihe = aktiiviset.Count > 0 ? aktiiviset[aktiiviset.Count - 1] : vaiheKopio;
             lock (lukko)
             {
                 hakuja++;
@@ -135,6 +160,18 @@ namespace Matkakirja
                 Kirjoita(sb, odotukset, false);
                 sb.Append("},\"haut\":{");
                 Kirjoita(sb, haut, true);
+                sb.Append("},\"osumat\":{");
+                bool eka = true;
+                var avaimet = new List<string>(osumat.Keys);
+                avaimet.Sort(StringComparer.Ordinal);
+                foreach (var k in avaimet)
+                {
+                    var o = osumat[k];
+                    if (!eka) sb.Append(',');
+                    eka = false;
+                    sb.Append('"').Append(k).Append("\":{\"n\":").Append(o.N).Append(",\"osumia\":").Append(o.Tavut)
+                      .Append(",\"pros\":").Append(o.N > 0 ? (100 * o.Tavut / o.N).ToString(CultureInfo.InvariantCulture) : "0").Append('}');
+                }
                 sb.Append("}}");
             }
             var json = sb.ToString();
@@ -163,7 +200,7 @@ namespace Matkakirja
         /// <summary>Testikomento `verkko nollaa`: summat pois (tiedosto jää).</summary>
         public static void NollaaSummat()
         {
-            lock (lukko) { odotukset.Clear(); haut.Clear(); }
+            lock (lukko) { odotukset.Clear(); haut.Clear(); osumat.Clear(); }
         }
     }
 }
