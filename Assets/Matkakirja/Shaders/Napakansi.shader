@@ -52,9 +52,14 @@ Shader "Matkakirja/Napakansi"
             float _radioHamara;
             // Pallon tummennus (löydös 98, KarttaKerrokset.PallonSavy): sama kerroin kuin tileset-varjostimessa.
             float _pallonTummuus;
+            // Valokeila (Ihmisen matka II, KarttaKerrokset.Valokeila): samat globaalit ja kaava kuin tileset-varjostimen
+            // RadioHamarassa (Shaders/Cesium/Lahde~/tee_tileset.py). Maan keskipiste _maaKeski (KorkeusKerroin).
+            float4 _maaKeski;
+            float4 _keila0, _keila1, _keilaRajat, _keila0Vari, _keila1Vari;
+            float _keilaHamaryys;
 
             struct Syote { float4 paikka : POSITION; float3 normaali : NORMAL; half4 vari : COLOR; float2 uv : TEXCOORD0; };
-            struct Vali { float4 paikka : SV_POSITION; float3 normaali : TEXCOORD0; float2 uv : TEXCOORD1; half4 vari : COLOR; };
+            struct Vali { float4 paikka : SV_POSITION; float3 normaali : TEXCOORD0; float2 uv : TEXCOORD1; half4 vari : COLOR; float3 maailma : TEXCOORD2; };
 
             Vali vert(Syote i)
             {
@@ -72,6 +77,7 @@ Shader "Matkakirja/Napakansi"
                 o.normaali = n;
                 o.uv = i.uv;
                 o.vari = i.vari;
+                o.maailma = paikka;
                 return o;
             }
 
@@ -92,8 +98,21 @@ Shader "Matkakirja/Napakansi"
                 // Kärkipisteen rgb: reliefikannen väri (NapaKannet ReliefinPohjoisreuna, lineaarisena); muilla valkoinen.
                 half3 vari = lerp(savy * _BaseColor.rgb * i.vari.rgb, _Kerma.rgb, _Kerma.a * maa);
                 vari *= (half)(1.0 - saturate(_pallonTummuus));
+                // Valokeila ennen radion hämärää: keilan ulkopuolinen perusväri tummuu, keilassa lyhdyn sävy ja hehku
+                // (emissiona, valaistuksen ohi kuten laattojen emissio). Jänne |n − k|, floatina tarkka pienilläkin keiloilla.
+                half3 hehku = half3(0, 0, 0);
+                float kh = saturate(_keilaHamaryys);
+                if (kh > 0.0 || _keilaRajat.y > 0.0 || _keilaRajat.w > 0.0)
+                {
+                    float3 kn = normalize(i.maailma - _maaKeski.xyz);
+                    float k0 = (1.0 - smoothstep(_keila0.w, max(_keilaRajat.x, _keila0.w + 1e-6), length(kn - _keila0.xyz))) * saturate(_keilaRajat.y);
+                    float k1 = (1.0 - smoothstep(_keila1.w, max(_keilaRajat.z, _keila1.w + 1e-6), length(kn - _keila1.xyz))) * saturate(_keilaRajat.w);
+                    float3 ksavy = k0 >= k1 ? lerp(float3(1, 1, 1), _keila0Vari.rgb, k0) : lerp(float3(1, 1, 1), _keila1Vari.rgb, k1);
+                    hehku = (half3)(vari * (_keila0Vari.rgb * (_keila0Vari.a * k0 * k0) + _keila1Vari.rgb * (_keila1Vari.a * k1 * k1)));
+                    vari *= (half3)(lerp(1.0 - 0.95 * kh, 1.0, max(k0, k1)) * ksavy);
+                }
                 vari = lerp(vari, vari * half3(0.18, 0.17, 0.24) + half3(0.006, 0.006, 0.016), (half)saturate(_radioHamara));
-                return half4(vari * valaistus * a, a);
+                return half4((vari * valaistus + hehku) * a, a);
             }
             ENDHLSL
         }
