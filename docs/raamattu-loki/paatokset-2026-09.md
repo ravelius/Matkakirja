@@ -5323,3 +5323,7 @@ Toinen nollaus tänään (edellinen 04.5x).
 ## FABLEN LUOVUTUS VALMIINA (56 %): viesti-fable-luovutus-20260925-b.md JA ALOITUSVIESTI (55753d537); NOLLAUS VASTA 65 %:SSA TAI KUN NATIIVISEPAN NOLLAUS JA BUILD 13:N BUILD-SANA ON HOIDETTU (25.9.2026 klo 10.40)
 
 Viikkokiintiö kaikki mallit 95 %, Fable 52 %; omistajalle ilmoitettu.
+
+## NATIIVISEPPA NOLLATTU TOISEN KERRAN (LUOVUTUS -20260925-b.md, selvittaja-3d-luovutus e1f4ce08d; ALOITUSVIESTI: KYLMAKOE LOPPUUN, UUSI PERUSKARTTASARJA POHJAKSI + VEKTORIRAJAT, BUILD SAVUKIERROKSEN JALKEEN) (25.9.2026 klo 10.41)
+
+Nollaus kaavan mukaan (clear samassa vuorossa, list_events 0).
