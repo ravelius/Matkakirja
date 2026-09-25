@@ -118799,6 +118799,230 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Sepik',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Sepik, Wewak, Wewak Airport, Pagwi, Angoram, Chambri
+       * Lakes, Chambri people, Iatmul people, Gregory Bateson, Sex and
+       * Temperament in Three Primitive Societies, Euphoria (King novel),
+       * Cannibal Tours, Garamut, New Guinea crocodile, Hatazō Adachi,
+       * Health in Papua New Guinea) ja Wikivoyagesta (Sepik, Wewak, Papua
+       * New Guinea: Talk, Respect, Money, Stay healthy, Stay safe) — teksti
+       * omaa. Chambrin järven aallokko kuvaajan omasta kuvauksesta
+       * Commonsissa. Nostojen ja galleroiden aiheita (Miklouho-Maclay,
+       * paalukylät ja suvannot, Pagwin polttoaine, rahtialukset, saago,
+       * kielten määrä, haus tambaran, krokotiiliarvet, veistoskauppa) ei
+       * toisteta. Hintoja ja aikatauluja ei mainita, koska lähteet ovat
+       * vanhoja. Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja kuvat katsottu silmin; kanoottikuvan paikka
+       * Angoramin kohdalla on kuvan sijaintitiedosta.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Sepik 0269.jpg',
+          lyhyt: 'Kesy lori istuu pojan päälaella Kaminabitin kylässä Keski-Sepikillä.',
+          selite: 'Punamusta, mustapäinen lori on laskeutunut pojan päälaelle '
+            + 'Kaminabitin kylässä Keski-Sepikillä tammikuussa 2010. Joen '
+            + 'varsi tunnetaan runsaasta linnustostaan ja eläimistöstään.',
+          lahde: 'Tryfon Topalidis, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Sepikille ei ajeta suoraan. Ensin lennetään rannikon '
+          + 'Wewakiin, Itä-Sepikin maakunnan pääkaupunkiin, jonka kenttä oli '
+          + 'toisessa maailmansodassa Japanin suurin lentotukikohta Uuden-Guinean '
+          + 'mantereella. Sieltä maantie vie kolmeen jokikylään, ja niistä '
+          + 'eteenpäin matka jatkuu perämoottorilla varustetulla '
+          + 'kovertokanootilla. Järvet ja suvannot kätkevät kyliä, joihin '
+          + 'mikään tie ei johda, ja joella kulkee mukana paikallinen opas. '
+          + 'Kesäkuusta marraskuuhun hyttysiä on vähemmän, mikä on tärkeää, '
+          + 'sillä malaria on koko maan yleisin sairastumisen syy. Kylissä '
+          + 'kelpaa vain käteinen kina, kättelyssä ei katsota silmiin, eikä '
+          + 'ketään valokuvata kysymättä.',
+        artikkeli: {
+          nimi: 'Matkailijan Sepik',
+          teksti: 'Sepikille tullaan lentäen, sitten maantietä ja lopulta kanootilla.',
+          nosto: 'Kun Sepikin kylissä halutaan kuvata ihmisiä, ensin kätellään '
+            + 'ja kysytään lupaa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Portti rannikolla',
+              teksti: 'Matka Sepikille alkaa Wewakista, Itä-Sepikin maakunnan '
+                + 'pääkaupungista, joka on suurin kaupunki Madangin ja '
+                + 'Indonesian puolella sijaitsevan Jayapuran välillä. Air '
+                + 'Niugini lentää sinne päivittäin Port Moresbysta, Laen '
+                + 'Nadzabista ja Madangista, ja PNG Air yhdistää kaupungin '
+                + 'ylängön Mount Hageniin. Kenttää kutsutaan myös Boramiksi, ja '
+                + 'se on sama, jota japanilaiset käyttivät vuosina 1943–1945 '
+                + 'suurimpana tukikohtanaan Uuden-Guinean mantereella; '
+                + 'liittoutuneet pommittivat sitä toistuvasti, rajuimmin 17. '
+                + 'elokuuta 1943. Keskustan länsipuolella olevalla Cape Wom '
+                + '-niemellä Japanin 18. armeijan komentaja, kenraaliluutnantti '
+                + 'Hatazō Adachi, allekirjoitti 13. syyskuuta 1945 Uuden-Guinean '
+                + 'joukkojen antautumisen. Paikalla on nyt pieni muistomerkki ja '
+                + 'rauhanpuisto, ja sen takana on yhä avoimia japanilaisten '
+                + 'tunneleita. Sotahistoria tuo Wewakiin paljon vieraita '
+                + 'Japanista, ja vuonna 2014 Japanin pääministeri laski '
+                + 'kaupungissa seppeleen sodassa kuolleiden muistoksi. Rannikon '
+                + 'edustalla, alle tunnin venematkan päässä, ovat Kairirun ja '
+                + 'Mushun saaret, joilla on muutama yksinkertainen majatalo. '
+                + 'Wewakia pidetään turvallisempana kuin Port Moresbya tai '
+                + 'Laeta, mutta pimeällä liikkumista kannattaa välttää.',
+              kuva: [
+                {
+                  tiedosto: 'WewakBeach.jpg',
+                  lyhyt: 'Palmujen reunustama hiekkaranta Wewakissa, Itä-Sepikin maakunnan pääkaupungissa.',
+                  selite: 'Wewak on rakennettu kapealle tasaiselle kaistaleelle '
+                    + 'meren ja rannikkovuorten väliin, ja kaupungin kohdalla '
+                    + 'rantaa reunustavat palmut. Kuva on vuodelta 2004.',
+                  lahde: 'Toksave, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Japanese surrender (AWM 019296).jpg',
+                  lyhyt: 'Kenraali Adachi luovuttaa miekkansa Cape Womilla Wewakin lähellä 13.9.1945.',
+                  selite: 'Allekirjoitettuaan ehdottoman antautumisen Japanin 18. '
+                    + 'armeijan komentaja Hatazō Adachi luovuttaa miekkansa '
+                    + 'australialaiselle kenraalimajuri Horace Robertsonille '
+                    + 'Womin kiitoradalla. Paikalla on nykyään muistomerkki ja '
+                    + 'rauhanpuisto.',
+                  lahde: 'Australian War Memorial, Wikimedia Commons (PD)',
+                },
+                {
+                  tiedosto: 'Kairiru & Muschu (Landsat).JPG',
+                  lyhyt: 'Kairirun ja Mushun saaret Wewakin edustalla Landsat 7 -satelliitin kuvassa.',
+                  selite: 'Vuonna 2001 otetussa satelliittikuvassa pohjoisempana '
+                    + 'on vuorinen Kairiru ja sen eteläpuolella Mushu. '
+                    + 'Vasemmassa alakulmassa näkyy mantereen rannikkoa, josta '
+                    + 'saarille pääsee veneellä alle tunnissa.',
+                  lahde: 'NASA, Wikimedia Commons (PD)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kovertokanootilla joelle',
+              teksti: 'Wewakista maantie vie vain kolmeen Sepikin varren '
+                + 'kylään: alajuoksun Angoramiin sekä keskijuoksun Timbunkeen '
+                + 'ja Pagwiin. Tiet eivät aina ole hyvässä kunnossa, ja Pagwiin '
+                + 'ajetaan rannikolta neljästä viiteen tuntia. Joen rannassa '
+                + 'vuokrataan puunrungosta koverrettu kanootti, perämoottori ja '
+                + 'kuljettaja, ja siitä eteenpäin kylästä toiseen edetään '
+                + 'vesitse. Vuorilta merelle on vain vähän korkeuseroa, joten '
+                + 'joki virtaa hitaasti ja kääntyy jatkuvasti takaisin itseensä '
+                + 'muodostaen suvantoja, pikkujärviä ja soita. Vedenpinta voi '
+                + 'vaihdella vuoden mittaan jopa viisi metriä. Isommat alukset '
+                + 'pääsevät yleensä liikkeelle vasta sadekaudella, kun vesi '
+                + 'nousee korkeimmilleen tavallisesti pääsiäisen tienoilla, ja '
+                + 'joelle tehdään myös risteilyjä matkailualuksilla. Rannoilla '
+                + 'kannattaa pitää silmät auki: uudenguineankrokotiili kuvattiin '
+                + 'tieteelle ensimmäisen kerran juuri Sepikin alueelta. '
+                + 'Kanoottimatkalle otetaan mukaan paikallinen opas, sillä '
+                + 'kylien ja kieliryhmien välillä on usein kiistoja. Oppaalta '
+                + 'kannattaa kysyä ajankohtaisista riidoista, hänen omasta '
+                + 'kotikylästään ja siitä, mihin kyliin hänellä on suhteita.',
+              kuva: {
+                tiedosto: 'Sepik River IMG 2097.jpg',
+                lyhyt: 'Kovertokanootteja rivissä Sepikin suvannon rannassa Angoramin kohdalla.',
+                selite: 'Puunrungoista koverretut kanootit odottavat meloineen '
+                  + 'matalan suvannon rannassa Sepikin alajuoksulla. Taustalla '
+                  + 'näkyy paalujen varaan rakennettu olkikattoinen maja, ja '
+                  + 'vasemmalla kulkee pieni vene.',
+                lahde: 'David Bacon, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kättely ennen kameraa',
+              teksti: 'Sepikin alueella puhutaan pienellä alueella enemmän eri '
+                + 'kieliä kuin missään muualla Papua-Uudessa-Guineassa, ja '
+                + 'tok pisin on yhteinen kieli. Kaupungissa keskustelu kannattaa '
+                + 'aloittaa englanniksi, mutta jokikylissä englantia puhuu vain '
+                + 'harva, ja muutama tok pisinin sana ja fraasi avaa ovia: '
+                + 'kyläläiset opettavat niitä mielellään. Melanesialaiseen '
+                + 'tapaan ystävällinen kättely on tärkeä tervehdys, mutta '
+                + 'silmiin katsomista vältetään kunnioituksesta, ja moni puhuu '
+                + 'hiljaisella äänellä. Ihmisiä ei valokuvata ilman lupaa, '
+                + 'vaikka koristelu olisi kuinka näyttävä. Aihetta on käsitelty '
+                + 'elokuvassakin: australialaisen Dennis O\'Rourken dokumentti '
+                + 'Cannibal Tours (1988) seuraa varakkaita eurooppalaisia ja '
+                + 'amerikkalaisia matkailijoita Keski-Sepikin iatmul-kylissä. '
+                + 'Kamerat räpsyvät taukoamatta, veistoksista tingitään kovaa ja '
+                + 'kyläläisille jaetaan savukkeita, ilmapalloja ja hajuvettä, '
+                + 'kunnes katsoja alkaa kysyä, kumpi osapuoli tässä on '
+                + 'oikeastaan outo. Kylissä voi kuulla myös kaukaista jylinää: '
+                + 'se on usein garamutia, yhdestä puunrungosta koverretun '
+                + 'rakorummun rytmiä, jolla viesti kulkee kilometrien päähän.',
+              kuva: {
+                tiedosto: 'Sepik 0203.jpg',
+                lyhyt: 'Sepikin kylässä vieraat otetaan vastaan hymyillen, kuvattu tammikuussa 2010.',
+                selite: 'Nainen ojentaa kätensä vierasta kohti kylän '
+                  + 'nurmikentällä, ja lapset seuraavat tilannetta puiden '
+                  + 'katveesta. Kuvaaja antoi kuvalleen nimen, joka tarkoittaa '
+                  + 'lämmintä tervetulotoivotusta ulkomaisille vieraille.',
+                lahde: 'Tryfon Topalidis, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Chambrin järvet ja tutkijoiden jäljet',
+              teksti: 'Pagwista etelään avautuvat Chambrin järvet, matalien '
+                + 'soiden ja vesikanavien verkosto, jonka Sepikin tulvavesi '
+                + 'täyttää luoteismonsuunin aikaan syyskuusta maaliskuuhun. '
+                + 'Silloin järvi kattaa yli 200 neliökilometriä. Sen saarella '
+                + 'asuvat chambrit, jotka tunnetaan taitavina taiteilijoina. '
+                + 'Heidän luonaan työskenteli vuonna 1933 yhdysvaltalainen '
+                + 'antropologi Margaret Mead, jonka kaksi vuotta myöhemmin '
+                + 'ilmestynyt kirja Sex and Temperament in Three Primitive '
+                + 'Societies esitti chambrinaiset yhteisön todellisina '
+                + 'vallankäyttäjinä; myöhemmät tutkijat ovat pitäneet kuvaa '
+                + 'liian yksinkertaisena. Keskijuoksulla työskennellyt '
+                + 'englantilainen Gregory Bateson otti käyttöön nimen iatmul koko '
+                + 'kieliryhmälle, vaikka ihmiset itse kertovat yleensä '
+                + 'klaaninsa tai kylänsä. Hänen kirjansa Naven (1936), joka on '
+                + 'nimetty ensimmäisiä saavutuksia juhlistavan iatmul-riitin '
+                + 'mukaan, muutti tapaa, jolla antropologit ajattelivat omia '
+                + 'tulkintojaan. Meadin ja Batesonin tarinasta ammentaa myös '
+                + 'Lily Kingin romaani Euphoria (2014), sopivaa luettavaa '
+                + 'kanoottimatkan iltoihin. Järvelle lähdetään paikallisen '
+                + 'kanssa, sillä selällä aallokko voi olla vaarallinen '
+                + 'isoillekin kanooteille, joissa ei ole tukipuita.',
+              kuva: {
+                tiedosto: 'Chambri Lake.jpg',
+                lyhyt: 'Chambrin järven laaja selkä ja metsäinen kukkula Keski-Sepikillä helmikuussa 2006.',
+                selite: 'Chambrin järvi on Sepikin tulvavesien täyttämä laaja '
+                  + 'allas. Kuvaajan mukaan sen aallokko voi olla vaarallinen '
+                  + 'isoillekin kanooteille, koska niissä ei ole tukipuita.',
+                lahde: 'Weli\'mi\'nakwan, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Terveenä joella',
+              teksti: 'Malaria on Papua-Uuden-Guinean yleisin sairastumisen syy, '
+                + 'ja Sepikin soilla hyttysiä riittää. Ennaltaehkäisystä '
+                + 'sovitaan lääkärin kanssa jo ennen lähtöä, ja kaupunkien '
+                + 'apteekeista saa malarialääkkeitä. Majatalossa nukutaan '
+                + 'hyttysverkon alla, ja hämärän tunteina iho suojataan. '
+                + 'Joelle kannattaa tulla kesäkuun ja marraskuun välillä, kun '
+                + 'hyttysiä on vähemmän. Hanavesi ei ole kaikkialla '
+                + 'juomakelpoista, ja suuret tulvat, joita sattuu noin kerran '
+                + 'kymmenessä vuodessa, voivat tuoda mukanaan koleraa ja '
+                + 'punatautia. Maailman terveysjärjestön ohjeen mukaan '
+                + 'poliorokotteen tehoste on hyvä ottaa, jos edellisestä on '
+                + 'kulunut yli kymmenen vuotta, koska maassa on todettu '
+                + 'rokoteperäistä poliota. Sairaanhoitoa on tarjolla epätasaisesti: '
+                + 'Wewakissa on Boramin sairaala, mutta joen varressa apua on '
+                + 'vähän. Käteinen hoidetaan ennen joelle lähtöä, sillä '
+                + 'pankkiautomaatit ovat suurissa kaupungeissa, ja kylissä '
+                + 'ulkomainen valuutta ei kelpaa lainkaan. Toreilla myyjät '
+                + 'toivovat pientä rahaa.',
+              kuva: {
+                tiedosto: 'Sepik River IMG 2225.jpg',
+                lyhyt: 'Aurinko nousee Sepikin tulvatasangon suvantojen yllä marraskuun aamuna.',
+                selite: 'Aamuaurinko kajastaa pilviverhon takaa Sepikin '
+                  + 'suvantojen ja ruohosaarekkeiden yllä. Hämärä on hyttysten '
+                  + 'aikaa, joten verkko ja karkote pidetään käsillä aamuin '
+                  + 'illoin.',
+                lahde: 'David Bacon, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'henkihuoneet',
