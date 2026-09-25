@@ -110210,6 +110210,282 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Cape Horn',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Cape Horn, Hornos Island, Cabo de Hornos National
+       * Park, Cape Horn Biosphere Reserve, Drake Passage, Puerto Williams,
+       * Williwaw), espanjan Wikipediasta (Isla Hornos, Cabo de Hornos:
+       * Caleta León, Alcaldía de Mar, tuntemattoman merimiehen muistomerkki,
+       * FitzRoyn laatta, miinakenttä 1982 ja raivaus 2009–2010) sekä
+       * Wikivoyagen sivuilta Cabo de Hornos National Park (aukiolokausi),
+       * Puerto Williams (lennot, lautta, veneet Ushuaiasta,
+       * tuontirajoitukset), Ushuaia (retkiristeily), Antarctica
+       * (aallokko, alustyypit, vaatetus, lento-risteilyt) ja Motion
+       * sickness — teksti omaa. Wikivoyagen hinnat (2023–2025),
+       * lentojen viikkomäärät ja aikataulut on jätetty pois; opas kertoo,
+       * että reitit ja yhtiöt vaihtuvat. Wikipedian sääluvut ovat
+       * vuosien 1882–1883 mittauksista, ja ne on kerrottu sellaisina.
+       * Nostojen aiheita (nimen synty, tuulet ja jättiaallot,
+       * Panaman kanava, Diego Ramírezin saaret, majakan historia,
+       * albatrossimuistomerkki ja sen kaatuminen 2014, klipperit,
+       * korvarengas, albatrossiuskomus, Balclutha) eikä gallerian
+       * maalauksia toisteta. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * Kap Horn laivalta nähtynä (Jerzy Strzelecki, tammikuu 2000).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Cape Horn (js) 2.jpg',
+          lyhyt: 'Kap Hornin jyrkkä niemi kohoaa tuulen pieksemän meren takaa.',
+          selite: 'Laivalta kuvattu näkymä tammikuulta 2000: tuuli repii '
+            + 'vaahtoa aallonharjalta etualalla, ja kaukana taustalla '
+            + 'Kap Hornin tumma, jyrkkärinteinen niemi nousee merestä '
+            + 'raskaiden pilvien alla.',
+          lahde: 'Jerzy Strzelecki, Wikimedia Commons (CC BY 3.0)',
+        },
+        kappale: 'Kap Horniin ei kulje tietä eikä säännöllistä lauttaa, ja '
+          + 'useimmat matkailijat näkevät niemen vain laivan kannelta. '
+          + 'Lähtösatamia ovat Argentiinan Ushuaia, Chilen Punta Arenas ja '
+          + 'pieni Puerto Williams Beaglen kanaalin rannalla, josta '
+          + 'purjeveneet ja retkialukset lähtevät etelään. Maihin Hornosin '
+          + 'saarelle päästään vain tyynellä säällä ja vain kesäkaudella, '
+          + 'ja silloinkin retki on lyhyt: kulkuväylä rinnettä ylös, laivaston '
+          + 'asema, majakka ja muistomerkit. Saarella ei ole majoitusta, sillä se '
+          + 'kuuluu tiukasti suojeltuun kansallispuistoon. Etelässä avautuu '
+          + 'Drakensalmi, jonka yli Etelämantereen laivat keinuvat pari '
+          + 'vuorokautta, ja joulukuun lähes valkoisina öinä aurinko painuu '
+          + 'mailleen vasta myöhään illalla. Varaa aikaa, lämpimät vaatteet ja '
+          + 'kärsivällisyyttä: sää päättää täällä aikataulun.',
+        artikkeli: {
+          nimi: 'Matkailijan Kap Horn',
+          teksti: 'Perille pääsee vain meritse, ja maihinnousun ratkaisee aina sää.',
+          nosto: 'Kap Hornin majakka ja muistomerkki eivät ole itse '
+            + 'niemellä, vaan noin puolentoista kilometrin päässä siitä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille vain meritse',
+              teksti: 'Wikivoyagen mukaan Kap Hornin kansallispuisto on auki '
+                + 'vain lokakuusta huhtikuuhun, eikä sinne kulje yleistä '
+                + 'laivaliikennettä. Helpoin tapa nähdä niemi on risteily. '
+                + 'Suuret risteilyalukset kiertävät Hornin siirtyessään '
+                + 'valtamereltä toiselle ja pysähtyvät yleensä Ushuaiassa, '
+                + 'Punta Arenasissa tai Falklandinsaarten Stanleyssä, ja osa '
+                + 'Ushuaiasta Etelämantereelle lähtevistä pienistä aluksista '
+                + 'ohittaa niemen, jos aikaa ja säätä riittää. Maihin laskevat '
+                + 'matkustajia vain jotkin yksityiset toimijat, nekin satunnaisesti. Wikivoyage mainitsee '
+                + 'esimerkkinä Cruceros Australiksen neljän yön risteilyn '
+                + 'Punta Arenasista Ushuaiaan: reitti kulkee Beaglen ja '
+                + 'Murrayn kanavia pitkin Pían jäätikölle ja Wulaian lahdelle '
+                + 'ja pysähtyy myös Kap Hornin kansallispuistossa. '
+                + 'Purjehtijoiden tukikohta on Navarinon saaren Puerto '
+                + 'Williams, jonka satamassa laivaston entinen kuljetusalus '
+                + 'Micalvi toimii nykyään pursiseuran laiturina. Sieltä '
+                + 'puistoon on veneellä noin 12 tunnin matka. Puerto '
+                + 'Williamsiin lennetään Punta Arenasista, ja samalta '
+                + 'suunnalta kulkee noin 32 tunnin lautta, joka saapuu yöllä: '
+                + 'matkustajat nukkuvat laivassa ja nousevat maihin aamulla. '
+                + 'Ushuaiasta pääsee yksityisillä veneyhteyksillä, yleensä '
+                + 'veneellä Beaglen kanaalin yli Puerto Navarinoon ja sieltä '
+                + 'pikkubussilla saaren poikki. Silloin ylitetään Argentiinan ja '
+                + 'Chilen raja, joten passi tarvitaan, ja Chilen tuontirajoitukset '
+                + 'koskevat hedelmiä, lihaa ja maitotuotteita. Puerto Williamsista '
+                + 'voi myös lentää niemen yli tilauslennolla, ja Wikipedian '
+                + 'mukaan Hornin voi kiertää päiväretkellä helikopterilla. '
+                + 'Yhtiöt ja aikataulut vaihtuvat usein, joten tiedot '
+                + 'kannattaa tarkistaa juuri ennen matkaa.',
+              kuva: [
+                {
+                  tiedosto: 'Aerovías DAP en Puerto Williams 1.jpg',
+                  lyhyt: 'Aerovías DAP:n kone Puerto Williamsin lentokentällä vuorten juurella.',
+                  selite: 'Aerovías DAP -yhtiön valkoinen nelimoottorinen BAe '
+                    + '146 -matkustajakone seisoo Guardiamarina Zañartun '
+                    + 'lentokentällä Puerto Williamsissa, ja sen vieressä on '
+                    + 'autoja ja matkatavarakärryjä; taustalla metsäiset '
+                    + 'vuoret. Kuva helmikuulta 2016.',
+                  lahde: 'Janitoalevic, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Micalvi yacht club navarino chile.jpg',
+                  lyhyt: 'Purjeveneet ovat kiinnittyneet vanhan Micalvi-aluksen kylkeen.',
+                  selite: 'Puerto Williamsin Micalvi-pursiseuran laiturilla '
+                    + 'purjeveneiden mastot tungeksivat vanhan aluksen '
+                    + 'ympärillä; nurmikolta laiturille vie puinen kulkusilta '
+                    + 'valkoisten aitojen välistä, ja taustalla kohoavat '
+                    + 'metsäiset rinteet.',
+                  lahde: 'James Cadwell, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Cape Horn Coral Princess.jpg',
+                  lyhyt: 'Risteilyalukselta Kap Horn näkyy harmaana, sahalaitaisena siluettina.',
+                  selite: 'Kap Hornin jyrkkä, sahalaitainen huippu ja sen '
+                    + 'viereiset kalliot erottuvat utuisina tummansinisen, '
+                    + 'tuulen rypyttämän meren takaa; taivaalla ajelehtii '
+                    + 'valkoisia pilviä. Tiedostonimen mukaan kuva on otettu '
+                    + 'Coral Princess -risteilyalukselta joulukuussa 2019.',
+                  lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Maihin Hornosin saarelle',
+              teksti: 'Espanjankielisen Wikipedian mukaan matkustajia tuovat '
+                + 'alukset ankkuroivat Caleta Leónin poukamaan, josta maihin '
+                + 'noustaan pienveneellä. Moni yllättyy ylhäällä: laivaston '
+                + 'asema, majakka ja muistomerkit eivät ole itse Kap Hornilla, '
+                + 'vaan Punta Espolónin kärjessä noin puolentoista kilometrin '
+                + 'päässä niemestä itäkoilliseen. Varsinainen niemi on saaren '
+                + 'jyrkkä, noin 425 metriä korkea länsipää, jonne on vaikea '
+                + 'päästä sekä maalta että mereltä, ja sen pientä automaattista '
+                + 'valoa huolletaan omasta poukamastaan. Asemalla, Chilen '
+                + 'laivaston Alcaldía de Marilla, on vartijan perheen asunto, '
+                + 'radio- ja tutkahuone, sääasema, joka lähettää mittauksia '
+                + 'reaaliajassa, sekä pieni kappeli. Vuonna 2019 saarella asui '
+                + 'Wikipedian mukaan viisi ihmistä: majakanvartija, hänen '
+                + 'vaimonsa ja heidän kolme lastaan. Albatrossiveistoksen '
+                + 'lisäksi asemalta löytyy tuntemattoman merimiehen '
+                + 'muistomerkki sekä laatta, joka paljastettiin vuonna 2005 '
+                + 'Robert FitzRoyn syntymän 200-vuotisjuhlan kunniaksi. '
+                + 'Beaglen kapteeni nousi saarelle huhtikuussa 1830, kiipesi '
+                + 'sen huipulle ja hautasi sinne kirjallisen muistion, jonka '
+                + 'Chilen laivaston upseerit löysivät vuonna 1989. Saaren '
+                + 'rauhallinen nummi kätki pitkään myös rajakiistan jäljen: Chilen '
+                + 'laivasto miinoitti vuonna 1982 Beaglen kiistan aikana noin '
+                + '18 000 neliömetrin alueen, ja miinat raivattiin kokonaan '
+                + 'vuosina 2009–2010. Nykyään vaara on ohi, mutta nummi on '
+                + 'herkkä, joten kulje vain merkittyjä kulkureittejä.',
+              kuva: {
+                tiedosto: 'Horn Island Navy Base.jpg',
+                lyhyt: 'Laivaston asema ja majakka Hornosin saaren kärjessä, taustalla Drakensalmi.',
+                selite: 'Viereiseltä kukkulalta etelään kuvattu näkymä '
+                  + 'lokakuulta 2023: ruskean nummen takana niemekkeellä ovat '
+                  + 'laivaston punakattoiset rakennukset, majakka ja '
+                  + 'radiomasto, rinnettä nousee oranssi kulkuväylä, ja '
+                  + 'oikealla niemen reunalla erottuu albatrossimuistomerkin '
+                  + 'siluetti. Taustalla avautuu Drakensalmi.',
+                lahde: 'Mat Austro, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sää, valo ja vaatteet',
+              teksti: 'Kap Hornin ilmasto luokitellaan polaariseksi, ja suuri '
+                + 'osa sateesta tulee räntänä tai lumena. Wikipedian '
+                + 'sääluvut ovat vanhoja, vuosien 1882–1883 tutkimuksesta: '
+                + 'vuoden keskilämpötila oli noin viisi astetta, ja sadepäiviä '
+                + 'kertyi 278, niistä 70 lumisina. Kesän ja talven ero on '
+                + 'silti selvä. Myrskytuulta on '
+                + 'kesäisin enintään viisi prosenttia ajasta, '
+                + 'yleensä hyvällä näkyvyydellä, talvella jopa 30 prosenttia, '
+                + 'usein huonolla näkyvyydellä. Siksi matkat tehdään eteläisen '
+                + 'pallonpuoliskon kesällä. Valo on toinen yllätys: '
+                + 'joulukuun päivänseisauksen aikaan päivä kestää noin 17 ja '
+                + 'puoli tuntia, eikä yö ehdi pimetä kunnolla, kun taas '
+                + 'kesäkuussa valoisaa on vain vajaat seitsemän tuntia. '
+                + 'Saarten välisissä kanavissa purjehtijoita varoitetaan '
+                + 'williwaw-puuskista: vuorilta alas syöksyvä kylmä ilma voi '
+                + 'iskeä veneeseen lähes varoittamatta. Maissa tuuli tuntuu '
+                + 'heti, sillä puita kasvaa vain suojaisissa notkoissa. Etelämantereen '
+                + 'matkoille annettu Wikivoyagen neuvo sopii tännekin: '
+                + 'kannella seisominenkin vaatii lämpimät kerrokset, '
+                + 'lämpimät alusvaatteet, vedenpitävät housut, parkatakin, '
+                + 'hupun, käsineet ja saappaat. Ushuaiasta voi '
+                + 'ostaa tai vuokrata varusteita, mutta omaa kokoa ei aina '
+                + 'löydy. Retken ohjelma voi muuttua lyhyellä varoitusajalla, '
+                + 'ja maihinnousu voidaan perua, jos aallokko on liian kova.',
+              kuva: {
+                tiedosto: 'Horn Leve de soleil.JPG',
+                lyhyt: 'Aurinko nousee oranssina pilvien alta Kap Hornilta itään katsottaessa.',
+                selite: 'Kuvaajan mukaan Kap Hornilta kuvattu auringonnousu '
+                  + 'Deceitin saaren yllä huhtikuussa 2006: oranssi ja '
+                  + 'kultainen taivas heijastuu tyyneen mereen, ja '
+                  + 'horisontissa erottuvat saarten ja luotojen tummat '
+                  + 'ääriviivat.',
+                lahde: 'Rémi Jouan, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Drakensalmen yli',
+              teksti: 'Kap Hornin eteläpuolella alkaa Drakensalmi, noin 800 '
+                + 'kilometrin levyinen merialue, joka ulottuu Etelä-Shetlannin '
+                + 'Livingstoninsaarelle asti. Se on lyhin merimatka '
+                + 'Etelämantereelta muille mantereille, ja sen läpi virtaa '
+                + 'Etelämantereen ympärysvirta, maailman voimakkain '
+                + 'merivirta. Kansainvälinen merenmittausjärjestö IHO vetää '
+                + 'Atlantin ja Tyynen valtameren rajan Kap Hornin kautta '
+                + 'kulkevaa pituuspiiriä 67° 16′ W pitkin, joten niemen '
+                + 'kohdalla vaihdetaan valtamerta. Wikivoyagen mukaan '
+                + 'Etelämantereen laivakausi kestää marraskuusta helmikuuhun, '
+                + 'ja salmen aallot ovat tavallisesti noin neljän metrin '
+                + 'korkuisia, joskus jopa 12-metrisiä. Useimmat matkustaja-alukset '
+                + 'ovat jäävahvistettuja, sillä pyöreäpohjaiset jäänmurtajat '
+                + 'keinuvat aallokossa vielä enemmän. Jos parin vuorokauden '
+                + 'keinunta arveluttaa, jotkin yhtiöt tarjoavat '
+                + 'lento-risteilyjä, joissa salmen yli lennetään Chilestä. '
+                + 'Merisairauteen Wikivoyage neuvoo varautumaan ajoissa: '
+                + 'lääke otetaan ennen oireita, koska se voi alkaa vaikuttaa '
+                + 'vasta yli tunnin kuluttua, ja se väsyttää usein. '
+                + 'Runsasta ateriaa ja alkoholia kannattaa välttää, ja '
+                + 'hyvät yöunet auttavat. Laivassa paras paikka on keskellä '
+                + 'alusta, katse horisontissa ja raitista ilmaa kasvoilla, '
+                + 'ja jos olo pahenee, kannattaa käydä pitkälleen silmät '
+                + 'kiinni. Rauhallisina hetkinä kannelta kannattaa katsoa '
+                + 'merelle: salmessa elää valaita, delfiinejä, '
+                + 'jättiläisliitäjiä, albatrosseja ja pingviinejä.',
+              kuva: {
+                tiedosto: 'Drake2.JPG',
+                lyhyt: 'Valkoinen kuohu vyöryy laivan kylkeä vasten Drakensalmen aallokossa.',
+                selite: 'Laivan kannelta kuvattu näkymä tammikuulta 2014: '
+                  + 'vihreän kannen ja valkoisen kaiteen vieressä aalto '
+                  + 'murtuu valkoiseksi vaahdoksi, ja taustalla '
+                  + 'tummansininen meri jatkuu horisonttiin pilvisen taivaan '
+                  + 'alla.',
+                lahde: 'Lewnwdc77, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Luonto maailman laidalla',
+              teksti: 'Kap Horn kuuluu maailman eteläisimpään kansallispuistoon, '
+                + 'joka perustettiin vuonna 1945. Siihen kuuluvat Wollastonin '
+                + 'ja Hermiten saariryhmät, yhteensä noin 63 000 hehtaaria, '
+                + 'ja sitä hoitaa Chilen metsähallinto CONAF. Vuodesta 2005 '
+                + 'puisto on ollut osa Unescon Kap Hornin biosfäärialuetta, '
+                + 'jonka ydinvyöhykkeelle ei saa rakentaa majoitusta, joten '
+                + 'saarilla ei ole hotelleja eikä majoja. Maisema on lähes puutonta '
+                + 'turvenummea, jolla kasvaa matalia heinätupsuja, pensaita, '
+                + 'jäkäliä ja sammalia. Vuonna 2019 tutkijat löysivät '
+                + 'Hornosin saaren kaakkoiskulmasta maailman eteläisimmän '
+                + 'puun, Nothofagus betuloides -pyökin, joka kasvaa lähes '
+                + 'maata myöten taipuneena. Saaristossa elää viisi '
+                + 'prosenttia maailman sammal- ja maksasammallajeista, ja '
+                + 'Puerto Williamsin lähellä Omoran etnobotaanisessa '
+                + 'puistossa matkailijoita opastetaan katsomaan niitä suurennuslasilla. Kap Horn on '
+                + 'magellaninpingviinin levinneisyyden eteläraja, ja '
+                + 'rannikolla on pingviiniyhdyskuntia, eikä saarella ole '
+                + 'maapetoja. BirdLife on nimennyt puiston tärkeäksi '
+                + 'lintualueeksi muun muassa töyhtö- ja magellaninpingviinien '
+                + 'sekä nokiliitäjien vuoksi, ja vesillä '
+                + 'voi nähdä meriuttereita, chilendelfiinejä ja '
+                + 'ryhävalaita. Myös ihmisen jälki on vanha: yaganit ovat '
+                + 'meloneet näillä kanavilla tuhansia vuosia, ja vuonna 2019 '
+                + 'Hornosin saaren eteläosasta löytyi harppuunankärkiä ja '
+                + 'nuotiopaikka, maailman eteläisin esiteollisen ajan '
+                + 'metsästysleiri. Biosfäärialuetta uhkaavat vieraslajit, '
+                + 'lohenkasvatus ja kasvava matkailu, joten jätä nummelle '
+                + 'vain jalanjälkesi.',
+              kuva: {
+                tiedosto: 'PNCabodeHornos.JPG',
+                lyhyt: 'Kansallispuiston turvenummea Herschelin saarella Kap Hornin naapurissa.',
+                selite: 'Herschelin saaren nummella kasvaa korkeita, '
+                  + 'vaaleita heinätupsuja ja matalia vihreitä pensaita, ja '
+                  + 'taustalla kohoaa puuton, loiva vaara harmaan taivaan '
+                  + 'alla. Saari kuuluu samaan Hermiten saariryhmään kuin '
+                  + 'Hornosin saari. Kuva vuodelta 2007.',
+                lahde: 'Butterfly austral - Serge Ouachée, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'merenkulku',
@@ -110421,6 +110697,218 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'German South West Africa',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Sossusvlei, Deadvlei, Sesriem, Tsauchab River,
+       * Solitaire, Spreetshoogte Pass, Namib-Naukluft National Park,
+       * NamibRand Nature Reserve, Namib), Wikivoyagesta (Sossusvlei,
+       * Namib-Naukluft National Park) ja saksan Wikipediasta (Sossusvlei,
+       * Deadvlei, Sesriem-Canyon, Solitaire: Unescon luettelo 2013,
+       * leipomo ja Moose McGregor) — teksti omaa. Hinnat jätetty pois.
+       * Nostojen aiheita (aavikon ikä, Luurankorannikko, hylyt, dyynien
+       * väri ja korkeudet, Deadvlein puiden historia, Kuiseb, 1873,
+       * eläimet, sumu, puiston koko) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: Big Daddyn harjanne.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Climbing Big Daddy (3688096060).jpg',
+          lyhyt: 'Retkeilijät nousevat Big Daddyn harjannetta, Sossusvlein seudun korkeimmalle dyynille.',
+          selite: 'Retkeilijät kulkevat jonossa Big Daddyn kapeaa harjannetta '
+            + 'ylös lokakuun aamuna 2006, ja jalanjäljet painuvat pehmeään '
+            + 'hiekkaan. Big Daddy on Sossusvlein seudun korkein dyyni.',
+          lahde: 'Greg Willis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Useimmille matkailijoille Namib tarkoittaa Sossusvleitä: '
+          + 'valkoisia savipannuja punaisten dyynien keskellä, osana '
+          + 'Namibin hiekkamerta, joka liitettiin Unescon '
+          + 'maailmanperintöluetteloon kesäkuussa 2013. Windhoekista ajetaan '
+          + 'suurin osa päivästä ylängöltä jyrkkiä soloja alas aavikolle, ja '
+          + 'viimeinen huoltopaikka on Solitairen leipomo ja huoltoasema. '
+          + 'Sesriemin portti aukeaa vasta auringon noustessa, joten aamun '
+          + 'ensimmäisen valon dyyneillä näkee vain portin sisäpuolella '
+          + 'yöpynyt. Asfaltin päästä jatketaan nelivedolla tai sukkulalla '
+          + 'Deadvleihin ja Big Daddyn juurelle, ja illaksi palataan '
+          + 'Sesriemin kapeaan kanjoniin. Kesäpäivinä lämpöä on usein 40 '
+          + 'astetta, talviöinä vain kymmenkunta, ja sade on harvinainen.',
+        artikkeli: {
+          nimi: 'Matkailijan Namib',
+          teksti: 'Namibin dyyneille päästään auringon tahdissa.',
+          nosto: 'Sesriemin portti aukeaa auringonnousussa, joten aamun '
+            + 'dyyneillä ovat ensimmäisinä ne, jotka nukkuivat portin '
+            + 'sisäpuolella.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Ylängöltä alas hiekkamereen',
+              teksti: 'Windhoekista Sesriemiin ajetaan suurin osa päivästä, '
+                + 'enimmäkseen soratietä. Ylängöltä aavikolle laskeudutaan '
+                + 'jyrkän reunaportaan yli, ja solan valinta on matkan '
+                + 'ensimmäinen päätös. Helpoin reitti kulkee Rehobothin kautta '
+                + 'Remhoogten solaan, näyttävin Spreetshoogten yli: siellä tie '
+                + 'laskeutuu noin tuhat metriä vain neljän kilometrin matkalla. '
+                + 'Solan rakensi toisen maailmansodan aikana farmari Nicolaas '
+                + 'Spreeth, joka raivasi sen lähes omin käsin ja räjäytti '
+                + 'esteet dynamiitilla. Rekat ja perävaunut ovat solassa '
+                + 'kiellettyjä, jyrkimmät kohdat on päällystetty '
+                + 'betonikivillä, ja alamäessä ajetaan ykkösvaihteella, '
+                + 'etteivät jarrut kuumene. Soratiellä nopeusrajoitus on 100 '
+                + 'kilometriä tunnissa, mutta Wikivoyage muistuttaa, että '
+                + 'turvallisesti sitä voi ajaa harvoin: puiston monet '
+                + 'onnettomuudet sattuvat lähes aina matkailijoille liian '
+                + 'kovassa vauhdissa, usein renkaan puhjettua. Viimeinen kunnon pysähdys on Solitaire, '
+                + 'kahden päätien risteykseen syntynyt farmikylä, jonka '
+                + 'huoltoasema, kauppa ja leipomo ovat ainoat dyynien ja '
+                + 'Walvis Bayn välillä. Leipomon omenapiirakan teki '
+                + 'kuuluisaksi sen perustaja Moose McGregor, joka kuoli '
+                + '2014 ja on haudattu Solitaireen.',
+              kuva: [
+                {
+                  tiedosto: 'D1275 Spreetshoogte Pass.jpg',
+                  lyhyt: 'Spreetshoogten solan jyrkimmät kohdat on päällystetty betonikivillä.',
+                  selite: 'Spreetshoogten solatie D1275 laskeutuu kohti '
+                    + 'Solitairea, ja jyrkimmällä osuudella soran tilalla '
+                    + 'on lukittuvia betonikiviä.',
+                  lahde: 'Olyon01, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Solitaire (2019).jpg',
+                  lyhyt: 'Solitaire ilmasta: rakennukset, puut ja hiekkainen kiitorata soratien varrella.',
+                  selite: 'Ilmakuvassa Solitairen rakennukset ja puut '
+                    + 'ryhmittyvät soratien varteen, ja niiden takana on '
+                    + 'pienkoneiden hiekkainen kiitorata.',
+                  lahde: 'Hp.Baumeler, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Solitaire-Tableau des précipitations.jpg',
+                  lyhyt: 'Solitairen liitutaululle on kirjattu vuosien 2009–2015 sademäärät.',
+                  selite: 'Solitairen seinätaulun mukaan vuonna 2011 satoi '
+                    + '479 millimetriä mutta vuonna 2013 vain 58: aavikon '
+                    + 'reunalla sademäärä vaihtelee vuodesta toiseen rajusti.',
+                  lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Portti aukeaa auringon mukana',
+              teksti: 'Sossusvleihin mennään Sesriemin portista, jonka '
+                + 'toimistosta ostetaan myös puiston lupa. Portti aukeaa '
+                + 'auringonnousussa ja sulkeutuu auringonlaskussa, ja siitä '
+                + 'on vielä noin 60 kilometriä dyyneille. Ainoa tapa olla '
+                + 'perillä jo ennen aamun ensimmäistä valoa on yöpyä portin '
+                + 'sisäpuolella valtion Namibia Wildlife Resortsin '
+                + 'majoituksessa: Sesriemin leirintäalueella, jonka jokaisella '
+                + 'paikalla on varjona oma kameelipiikkipuu, tai Sossus Dune '
+                + 'Lodgessa. Sama koskee iltaa: auringonlaskun jälkeen '
+                + 'dyyneille jäävät vain portin sisällä yöpyvät. Wikivoyage varoittaa '
+                + 'yksityisistä majoista, jotka mainostavat olevansa lähempänä: '
+                + 'niiden vieraat jonottavat samaan porttiin kuin muutkin. '
+                + 'Portilta dyyneille kulkee 2000-luvun alussa rakennettu '
+                + 'asfalttitie, harvinaisuus Namibian maaseudulla, ja ajo '
+                + 'kestää noin tunnin. Tien 45. kilometrillä olevalle Dune '
+                + '45:lle kiivetään usein jo aamuhämärissä, ja huipulle '
+                + 'noustaan noin tunnissa. '
+                + 'Kuumailmapallot lähtevät Sesriemistä varhain aamulla, ja '
+                + 'pienkoneiden kierroslennot dyynien yli lähtevät '
+                + 'enimmäkseen rannikolta Swakopmundista ja Walvis Baysta.',
+              kuva: {
+                tiedosto: 'Sossusvlei, entrance - panoramio.jpg',
+                lyhyt: 'Sesriemin portin kyltti: sisään pääsee auringonnoususta auringonlaskuun.',
+                selite: 'Sesriemin portin punainen pyramidinmuotoinen kyltti ilmoittaa '
+                  + 'aukioloajaksi auringonnoususta auringonlaskuun; kuva '
+                  + 'on otettu syyskuussa 2006.',
+                lahde: 'Frans-Banja Mulder, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Viimeiset viisi kilometriä',
+              teksti: 'Asfaltti päättyy parkkipaikalle, jota kutsutaan '
+                + 'nimellä 2x4: kaksivetoiset autot jätetään siihen. Loput '
+                + 'noin viisi kilometriä Sossusvleihin on syvää, pehmeää '
+                + 'hiekkaa, jossa pärjää vain nelivedolla. Wikivoyage neuvoo, '
+                + 'ettei tämä ole oikea paikka opetella maastoajoa: hiekkaan '
+                + 'juuttuneet vuokra-autot huvittavat oppaita, ja niiden '
+                + 'jäljet ovat myös ympäristöhaitta. Helpompi keino on '
+                + 'sukkula, joka ajaa säännöllisesti parkkipaikalta ja '
+                + 'pysähtyy kahdesti, Deadvlein ja Sossusvlein kohdalla. '
+                + 'Kävellenkin pääsee, noin kymmenen kilometriä edestakaisin, '
+                + 'mutta matkan varrella ei ole varjoa eikä palveluja. '
+                + 'Deadvlein reunalla kohoaa Big Daddy, jonka harjannetta pitkin voi '
+                + 'kiivetä koko seudun korkeimmalle huipulle; vastapäätä on '
+                + 'toinen jättiläinen, Big Mama. Rauhallisempaa on '
+                + 'Hiddenvleissä, joka on neljän kilometrin päässä 2x4:n '
+                + 'parkkipaikalta ja vähiten käyty alueen savipannuista.',
+              kuva: {
+                tiedosto: 'Sandpad zum Sossusvlei, Namibia (2017).jpg',
+                lyhyt: 'Asfaltin jälkeen Sossusvleihin johtaa pehmeä hiekkaura, jossa pärjää vain nelivedolla.',
+                selite: 'Renkaiden urat risteilevät pehmeässä hiekassa '
+                  + 'Sossusvleihin johtavalla tiellä, ja taustalla kohoavat '
+                  + 'punaiset dyynit ja vihreät puut.',
+                lahde: 'Olga Ernst & Hp.Baumeler, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kuuden nahkahihnan kanjoni',
+              teksti: 'Noin neljän kilometrin päässä Sesriemistä maa '
+                + 'halkeaa kapeaksi kanjoniksi. Tsauchab-joki on '
+                + 'kaivertanut sen noin kahden miljoonan vuoden aikana '
+                + 'vanhoista jokisoraikoista kovettuneeseen kiveen. Kanjoni '
+                + 'on noin kilometrin pituinen ja enimmillään 30 metriä syvä, '
+                + 'ja paikoin seinämien väli on vain kaksi metriä. Nimi on '
+                + 'afrikaansia ja tarkoittaa kuutta nahkahihnaa: '
+                + 'Dorsland-vaelluksen uudisasukkaat joutuivat solmimaan '
+                + 'yhteen kuusi hihnaa, ennen kuin sanko ylsi kanjonin '
+                + 'pohjalla olevaan veteen. Pohjalla on yhä kohta, jossa '
+                + 'vettä riittää ympäri vuoden ja jolla eläimet käyvät '
+                + 'juomassa. Kanjoniin on helppo laskeutua, ja kuivaa '
+                + 'uomaa voi kävellä seinämien välissä. '
+                + 'Alajuoksulla kanjoni madaltuu ja levenee puiden '
+                + 'reunustamaksi uomaksi, jonka Sossusvlein tie ylittää. '
+                + 'Wikivoyage suosittelee paikkaa auringonlaskun katsomiseen, '
+                + 'kun dyyneillä on käyty aamulla.',
+              kuva: {
+                tiedosto: 'Cañón Sesriem, Sossusvlei, Namibia, 2018-08-06, DD 176.jpg',
+                lyhyt: 'Sesriemin kanjonin pohjalla kulkijat näyttävät pieniltä korkeiden seinämien välissä.',
+                selite: 'Kolme kulkijaa seisoo Sesriemin kanjonin '
+                  + 'hiekkapohjalla, ja Tsauchab-joen kovettuneeseen '
+                  + 'soraan kovertamat seinämät kohoavat kapeana solana '
+                  + 'heidän ylleen.',
+                lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Helle, tulvavuodet ja pimeä taivas',
+              teksti: 'Sossusvlein vuoden keskilämpötila on noin 24 '
+                + 'astetta, mutta vuorokauden sisällä vaihtelu on suurta: '
+                + 'kesällä päivä kuumenee usein 40 asteeseen, talviöinä '
+                + 'lämpöä on vain kymmenkunta astetta. Dyyneille kannattaa '
+                + 'lähteä aamulla, ja vettä on juotava pitkin päivää. Sade '
+                + 'on harvinaista, mutta kun Naukluft-vuorille sataa '
+                + 'kunnolla, kuiva Tsauchab muuttuu tunneissa vuolaaksi '
+                + 'joeksi. Sossusvleihin asti vesi yltää vain joka viides '
+                + 'tai kymmenes vuosi, ja silloin savipannuun syntyy '
+                + 'lyhytaikainen järvi, jonka syvyys vaihtelee muutamasta '
+                + 'senttimetristä useaan metriin ja jolle lentää '
+                + 'muuttolintuja. Pimeän tultua aavikon suurin nähtävyys on '
+                + 'taivas. Kansallispuiston itärajalla on yksityinen '
+                + 'NamibRandin luonnonsuojelualue, joka on perustettu 1984 '
+                + 'ja rahoittaa itsensä pääosin vähäisen matkailun maksuilla. '
+                + 'Kansainvälinen Dark-Sky-järjestö nimesi sen vuonna 2012 '
+                + 'pimeän taivaan suojelualueeksi, jossa keinovalo ei '
+                + 'himmennä Linnunrataa.',
+              kuva: {
+                tiedosto: 'Sossusvlei with water, Namibia.jpg',
+                lyhyt: 'Sossusvlein savipannussa oli harvinaisesti vettä syyskuussa 2021.',
+                selite: 'Matala vesi lepää Sossusvlein pannussa punaisen '
+                  + 'dyynin juurella, ja etualalla kuivuva savi on '
+                  + 'halkeillut laatoiksi. Kuva on otettu syyskuussa 2021.',
+                lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'elaimet',
@@ -129102,6 +129590,254 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Jason Rollette, Wikimedia Commons (CC BY 3.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Mount Rushmore, Crazy Horse Memorial, Custer State
+       * Park, South Dakota Highway 87 eli Needles Highway, U.S. Route 16A
+       * eli Iron Mountain Road, Rapid City, Rapid City Regional Airport,
+       * Keystone, Black Hills Central Railroad, Jewel Cave National
+       * Monument, Wind Cave National Park, Sturgis Motorcycle Rally) ja
+       * Wikivoyagesta (Mount Rushmore National Memorial, Badlands and
+       * Black Hills, Rapid City, Custer) — teksti omaa. Hinnat ja
+       * aukioloajat jätetty pois, koska Wikivoyagen tiedot ovat osin
+       * vanhoja. Vuoden 2026 ilotulitus: Commonsin luokka "Donald Trump at
+       * the 2026 Mount Rushmore Fireworks Celebrations" (Valkoisen talon
+       * kuvat 3.7.2026). Nostojen aiheita (nimi, Robinsonin idea,
+       * louhinta, Jefferson, Borglumin kuolema ja Hall of Records,
+       * kävijämäärä ja graniitin kuluminen, Kuusi isoisää, Fort Laramie,
+       * Custer ja kultaryntäys, Crazy Horsen alkuvaiheet) ei toisteta.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta
+       * ja kuvat katsottu silmin. Pystykuva: Avenue of Flags.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Mount Rushmore and State Flags 1.jpg',
+          lyhyt: 'Osavaltioiden liput reunustavat kävelykatua presidenttien kasvojen alla.',
+          selite: 'Avenue of Flags -kävelykatu vie pysäköintialueelta '
+            + 'näköalaterassille, ja sen varrella liehuvat kaikkien '
+            + 'osavaltioiden ja alusmaiden liput. Vasemmalla näkyvät '
+            + 'valonheittimet, joilla kasvot valaistaan kesäiltaisin.',
+          lahde: 'Amaury Laporte, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Mount Rushmore ei ole kaupunki vaan kansallinen '
+          + 'muistomerkki Mustien vuorten mäntymetsissä, Keystonen '
+          + 'pikkukaupungin kupeessa. Lähin lentoasema on Rapid Cityssä '
+          + 'runsaan 50 kilometrin ajomatkan päässä, eikä seudulla pääse '
+          + 'ilman autoa pitkälle. Kasvot näkee lyhyellä kävelyllä, mutta '
+          + 'moni jää iltaan, sillä kesällä vuori valaistaan hämärän '
+          + 'laskeuduttua. Samaan retkeen mahtuvat lähistöllä yhä veistettävä '
+          + 'Crazy Horse -muistomerkki, Custerin osavaltiopuiston '
+          + 'biisonilaumat ja kapeat vuoristotiet, joiden tunneleista '
+          + 'presidentit näkyvät kuin kehyksissä. Vuoret ovat lakotoille '
+          + 'pyhää maata, ja muistomerkki kertoo nykyään myös heidän '
+          + 'tarinaansa. Paras aika on kesä: lokakuusta toukokuuhun '
+          + 'seudulla sataa lunta, ja osa maisemateistä suljetaan talveksi.',
+        artikkeli: {
+          nimi: 'Matkailijan Mount Rushmore',
+          teksti: 'Mount Rushmorelle tullaan autolla, ja moni jää vuoren juurelle pimeään asti.',
+          nosto: 'Iron Mountain Roadin tunnelit linjattiin niin, että '
+            + 'presidenttien kasvot näkyvät niiden suuaukossa kuin taulussa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Rapid Citystä vuorille',
+              teksti: 'Lähin liikennelentoasema on Rapid City Regional '
+                + 'Airport, jolle lennetään suurten vaihtokenttien kautta; '
+                + 'sieltä muistomerkille on ajomatkaa noin 51 kilometriä. '
+                + 'Kaukoliikenteen bussit pysähtyvät Rapid Cityssä, mutta '
+                + 'vuorille ne eivät vie, joten useimmat vuokraavat auton. '
+                + 'Moottoritieltä I-90 käännytään Rapid Cityssä valtatielle '
+                + '16, joka nousee Keystoneen, ja sieltä tie 244 kiipeää '
+                + 'muistomerkille. Rapid Cityn keskustassa kannattaa '
+                + 'pysähtyä: kadunkulmissa seisoo luonnollisen kokoinen '
+                + 'pronssipatsas jokaisesta entisestä presidentistä, ja '
+                + 'siksi kaupunkia kutsutaan presidenttien kaupungiksi. '
+                + 'Yksi heistä, Calvin Coolidge, piti kesällä 1927 '
+                + 'kesätoimistoaan Rapid Cityssä ja puhui Mount Rushmoren '
+                + 'vihkiäisissä. Keystone on vuonna 1883 syntynyt '
+                + 'kaivoskylä, jossa asuu vain parisataa ihmistä mutta '
+                + 'jonka pääkatu on täynnä matkamuistokauppoja ja '
+                + 'motelleja. Hill Cityn ja Keystonen väliä kulkee '
+                + 'höyryjuna radalla, jota pitkin aikanaan tuotiin '
+                + 'veistotöiden kalustoa. Idästä tai etelästä tulevan '
+                + 'kannattaa valita Iron Mountain Road: kuvernööri Peter '
+                + 'Norbeck suunnitteli sen hitaaksi maisematieksi, jonka '
+                + 'yksikaistaisista tunneleista presidentit näkyvät '
+                + 'suoraan edessä ja jonka kierresillat kiertyvät '
+                + 'itsensä yli.',
+              kuva: [
+                {
+                  tiedosto: 'Calvin Coolidge statue (54721038957).jpg',
+                  lyhyt: 'Calvin Coolidge nostaa hattuaan Rapid Cityn keskustan kadunkulmassa.',
+                  selite: 'Rapid Cityn keskustassa on pronssipatsas '
+                    + 'jokaisesta entisestä presidentistä. Calvin Coolidge '
+                    + 'vietti kesän 1927 Mustilla vuorilla ja puhui Mount '
+                    + 'Rushmoren vihkiäisissä.',
+                  lahde: 'Gage Skidmore, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Through a tunnel on Iron Mountain Road. (f5007327-155d-4519-3e33-b713ab24ae16).jpg',
+                  lyhyt: 'Iron Mountain Roadin tunnelin suulta presidentit näkyvät mäntymetsän takana.',
+                  selite: 'Iron Mountain Roadin yksikaistaiset tunnelit '
+                    + 'linjattiin niin, että Mount Rushmoren kasvot näkyvät '
+                    + 'niiden läpi kaukana metsän yllä.',
+                  lahde: 'NPS Photo, Wikimedia Commons (Public domain)',
+                },
+                {
+                  tiedosto: 'Black Hills Central 104 (12690981295).jpg',
+                  lyhyt: 'Höyryveturi 104 vetää museojunaa kohti Hill Cityä.',
+                  selite: 'Black Hills Central Railroad ajaa museojunaa '
+                    + 'Hill Cityn ja Keystonen välillä. Rata valmistui '
+                    + 'Keystoneen vuonna 1900, ja sitä pitkin tuotiin '
+                    + 'myöhemmin Mount Rushmoren veistotöiden kalustoa.',
+                  lahde: 'Drew Jacksich, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Lippukujalta Presidenttien polulle',
+              teksti: 'Pysäköintialueelta kasvojen eteen on vain lyhyt '
+                + 'kävely. Leveä Avenue of Flags -kävelykatu rakennettiin '
+                + 'Yhdysvaltain 200-vuotisjuhlavuonna 1976, ja sen varrella '
+                + 'liehuvat aakkosjärjestyksessä kaikkien 50 osavaltion, '
+                + 'pääkaupunkipiirin ja alusmaiden liput. Kadun päässä on '
+                + 'vuonna 1998 valmistunut Grand View -terassi, jonka alla '
+                + 'toimiva museo kertoo veistotyöstä ja neljästä '
+                + 'presidentistä. Terassille asti pääsee esteettä. '
+                + 'Kilometrin mittainen Presidential Trail -polku kiertää '
+                + 'kivikkorinteen reunalle, jolta kasvot näkyvät '
+                + 'lähimpää, ja sen varrella on Gutzon Borglumin vuonna '
+                + '1939 rakennuttama ateljee. Siellä kerrotaan kesäisin '
+                + 'veiston työkaluista, ja esillä on kipsimalli, jossa '
+                + 'presidentit ulottuvat vyötäröön asti, kuten ne alun '
+                + 'perin piti veistää. Ateljeelle ja takaisin kuljetaan yli '
+                + '400 porrasta. Rinteillä liikkuu usein vuorikauriita, '
+                + 'jotka eivät ole alueen alkuperäisiä asukkaita: ne '
+                + 'polveutuvat laumasta, jonka Kanada lahjoitti Custerin '
+                + 'osavaltiopuistoon vuonna 1924 ja joka pääsi karkuun. '
+                + 'Muistomerkille pääsee maksutta, mutta pysäköinti '
+                + 'maksaa, eikä kansallispuistojen vuosikortti kelpaa '
+                + 'siihen, koska pysäköintialueen rakensi ja omistaa '
+                + 'yksityinen yhteisö.',
+              kuva: {
+                tiedosto: 'Sculptors Studio Interior Mt Rushmore 2024.jpg',
+                lyhyt: 'Puistonvartija kertoo veistotyöstä ateljeessa kipsimallin edessä.',
+                selite: 'Gutzon Borglumin vuonna 1939 rakennuttamassa '
+                  + 'ateljeessa on veistoksen kipsimalli, jossa presidentit '
+                  + 'ulottuvat vyötäröön asti. Kesäisin puistonvartijat '
+                  + 'kertovat siellä, miten kasvot tehtiin.',
+                lahde: 'Larry D. Moore, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kun vuori syttyy valoon',
+              teksti: 'Kesäiltaisin kannattaa jäädä muistomerkille pimeän '
+                + 'tuloon asti. Terassin alla olevassa ulkoamfiteatterissa '
+                + 'puistonvartija puhuu ensin presidenteistä ja maan '
+                + 'historiasta, sitten näytetään lyhyt elokuva, ja lopuksi '
+                + 'valonheittimet sytytetään ja kasvot alkavat hohtaa '
+                + 'mustaa taivasta vasten. Ohjelma järjestetään vain '
+                + 'kesäkaudella ja sään salliessa, ja aikataulu on '
+                + 'nähtävillä vierailukeskuksessa. Itsenäisyyspäivän '
+                + 'ilotulitukset ovat sen sijaan harvinaisia: vuosina '
+                + '1998–2009 ammutut raketit sytyttivät '
+                + 'kansallispuistoviraston mukaan ainakin 27 maastopaloa, '
+                + 'ja geologian tutkimuslaitos löysi alueen vesistä '
+                + 'perkloraattia, jonka lähteeksi se arveli ilotulitukset. '
+                + 'Sen jälkeen niitä on ammuttu vain vuosina 2020 ja 2026. '
+                + 'Iltaohjelma kertoo presidenttien tarinaa, mutta '
+                + 'Presidential Trail -polun alkuosan lakota-, nakota- ja '
+                + 'dakotakylä esittelee niiden kansojen tapoja, joille '
+                + 'vuori oli pyhä jo ennen veistosta. Kansat eivät ole '
+                + 'hyväksyneet Mustien vuorten menetystä: kun Yhdysvaltain '
+                + 'korkein oikeus vuonna 1980 määräsi niille 102 miljoonan '
+                + 'dollarin korvauksen, ne kieltäytyivät rahasta ja '
+                + 'vaativat maata takaisin. Vuonna 2004 muistomerkin '
+                + 'johtajaksi nimitettiin ensimmäistä kertaa '
+                + 'alkuperäisamerikkalainen, Gerard Baker.',
+              kuva: {
+                tiedosto: 'Mount Rushmore Lighting Ceremony.jpg',
+                lyhyt: 'Valonheittimet nostavat presidenttien kasvot esiin yön pimeydestä.',
+                selite: 'Kesäkaudella muistomerkin iltaohjelma päättyy '
+                  + 'siihen, että valonheittimet sytytetään ja '
+                  + 'graniittikasvot alkavat hohtaa mustaa taivasta vasten.',
+                lahde: 'Hardy008, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Crazy Horse, keskeneräinen naapuri',
+              teksti: 'Noin 27 kilometrin päässä Mount Rushmoresta, '
+                + 'Custerin ja Hill Cityn välisen valtatien varrella, '
+                + 'veistetään yhä toista vuorta. Crazy Horse -muistomerkki '
+                + 'on yksityisellä maalla, eikä sen säätiö ota vastaan '
+                + 'valtion rahaa, joten pääsymaksu peritään autokunnittain '
+                + 'ja sillä rahoitetaan sekä veistotyötä että opetusta. '
+                + 'Vierailukeskuksesta näkee kallion, jossa oglalalakotojen '
+                + 'sotapäällikön kasvot ovat valmiina: ne ovat 26,7 metriä '
+                + 'korkeat, kun Rushmoren presidenttien päät ovat '
+                + '18-metrisiä. Samaan rakennuskokonaisuuteen kuuluu '
+                + 'Pohjois-Amerikan intiaanimuseo, ja paikalla toimiva '
+                + 'Indian University of North America on vuodesta 2011 '
+                + 'järjestänyt kesäopintoja alkuperäiskansoihin kuuluville '
+                + 'opiskelijoille. Vuoren kyljessä työ etenee nyt '
+                + 'nopeammin kuin ennen: vuoteen 2025 mennessä pystytetty '
+                + 'torninosturi siirtää louhittuja kivilohkareita ja '
+                + 'kalustoa, ja veistäjät ovat siirtyneet hevosen harjaan '
+                + 'ja ratsastajan oikeaan olkapäähän. Valmistumisvuotta ei '
+                + 'ole ilmoitettu. Kaikki lakotat eivät hanketta hyväksy: '
+                + 'osa pitää pyhän vuoren veistämistä loukkauksena, sillä '
+                + 'Crazy Horse ei antanut valokuvata itseään, ja hänet '
+                + 'haudattiin paikkaan, jota ei haluttu kenenkään '
+                + 'löytävän.',
+              kuva: {
+                tiedosto: 'Museum Crazy Horse Memorial South Dakota 2024.jpg',
+                lyhyt: 'Tiipii seisoo Crazy Horse -muistomerkin museon puupaneloidussa salissa.',
+                selite: 'Crazy Horse -muistomerkin vierailukeskuksen '
+                  + 'museossa on esillä alkuperäiskansojen esineitä ja '
+                  + 'maalauksia, ja keskelle salia on pystytetty tiipii.',
+                lahde: 'Larry D. Moore, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Biisoneita ja graniittineuloja',
+              teksti: 'Mount Rushmoren eteläpuolella, Iron Mountain Roadin '
+                + 'päässä, alkaa Custerin osavaltiopuisto, Etelä-Dakotan '
+                + 'ensimmäinen ja suurin: yli 280 neliökilometriä preeriaa '
+                + 'ja vuoristoa, jonne tarvitaan maksullinen ajolupa. '
+                + 'Puistossa elää noin 1 400 biisonin lauma, joka sai '
+                + 'alkunsa 36 eläimestä vuonna 1914. Wildlife Loop '
+                + '-kiertotieltä näkee biisonien lisäksi preeriakoirien '
+                + 'yhdyskuntia, hanka-antilooppeja ja villiintyneitä '
+                + 'aaseja. Vuodesta 1965 lähtien viitisenkymmentä '
+                + 'ratsastajaa on kerran vuodessa ajanut lauman yhteen '
+                + 'terveystarkastukseen, ja näytöstä on seurannut jopa '
+                + '20 000 katsojaa. Biisoneita katsotaan autosta tai '
+                + 'kaukaa, sillä kömpelön näköinen eläin ehtii yllättävän '
+                + 'nopeasti hyökätä, eikä preeriakoiriakaan pidä silittää: '
+                + 'ne purevat. Puiston halki kiemurtelee vuonna 1922 '
+                + 'valmistunut Needles Highway, 23 kilometriä kapeaa tietä '
+                + 'graniittineulojen lomassa ja kolmen kallioon louhitun '
+                + 'tunnelin läpi; talveksi se suljetaan. Mustien vuorten '
+                + 'alla on lisäksi kaksi maailman pisimpiin kuuluvaa '
+                + 'luolaa: Jewel Caven käytäviä on kartoitettu yli 350 '
+                + 'kilometriä, ja Wind Cavessa on valtaosa maailman '
+                + 'tunnetuista kennomaisista boxwork-kalsiittimuodostumista. '
+                + 'Elokuussa majoitus kannattaa varata ajoissa, sillä '
+                + 'Sturgisin moottoripyörätapahtuma tuo seudulle '
+                + 'satojatuhansia ajajia.',
+              kuva: {
+                tiedosto: 'Buffalo at Custer State Park, South Dakota.jpg',
+                lyhyt: 'Biisoni kävelee kohti kameraa Custerin osavaltiopuiston preerialla.',
+                selite: 'Custerin osavaltiopuiston noin 1 400 biisonin '
+                  + 'lauma laiduntaa vapaana preerialla. Lauma kootaan '
+                  + 'kerran vuodessa terveystarkastukseen, ja osa '
+                  + 'eläimistä myydään huutokaupassa.',
+                lahde: 'Jack Siebold, MyTown Black Hills, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
