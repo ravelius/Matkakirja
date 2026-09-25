@@ -117,3 +117,9 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | # | Löydös | Rooli |
 |---|---|---|
 | 145 | Aarrekohtaaminen aukesi natiivissa lehden kautta → pois. Webin sääntö: kun pelaaja ratkaisee tietovisan lehdestä tai karttanostosta, ruudulle syttyy vihreä piste, josta pääsee tapaamaan henkilön ja ratkaisemaan tehtävän. Omistaja: kynnys pudotetaan kahdesta YHTEEN oikeaan ratkaisuun (web ja natiivi). Kohtaamiset ovat vielä vaiheessa; omistaja palaa niihin. | Pelikoodari (sääntö web + natiivi) + Natiivi-UI (lehden avaus pois, vihreä piste) |
+
+## Build 16 — omistajan löydös klo 23.2x (kaupungin pieni valikko)
+
+| # | Löydös | Rooli |
+|---|---|---|
+| 146 | Kaupungin napautuksesta aukeava pieni valikko kehitetään: aukeaa VÄLITTÖMÄSTI (kuori heti, tiedot ja pieni kuva esiladattuina), sisältö tulee animoidusti esiin, kuva isompana. Fablen "postikortti"-ehdotus omistajalle: pergamenttikortti ohuella reunalla; herokuva kortin levyisenä (3:2) kellastuneella vinjetillä, paljastuu 180 ms vasemmalta; nimi + postileima (kierto −8° → 0, koko 1,2 → 1, 150 ms); rivit porrastetusti 40 ms välein (Nähtävyydet, Turistiopas, viiva, nostoluokat värillisin pistein, pisteet syttyvät yksi kerrallaan); kokonaisuus < 350 ms, ease-out, ei pomppua; ei (x):ää eikä koristeita; sulkeutuu napautuksesta karttaan 120 ms; iPadilla kaupungin vieressä, iPhonella alareunasta nouseva postikortti. Natiivi-UI tekee videomallin (iPhone + iPad) omistajan hyväksyttäväksi ennen toteutusta. | Natiivi-UI (Pelikoodari: esilataus välittömään avaukseen) |
