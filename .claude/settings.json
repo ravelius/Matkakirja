@@ -40,7 +40,11 @@
       "Bash(aws:*)",
       "Bash(xcodebuild:*)",
       "Bash(xcrun:*)",
-      "Bash(security:*)"
+      "Bash(security:*)",
+      "Bash(sudo killall coreaudiod)",
+      "Bash(sudo killall -9 com.apple.CoreSimulator.CoreSimulatorService)",
+      "Bash(sudo killall mDNSResponder)",
+      "Bash(sudo purge)"
     ]
   }
 }
