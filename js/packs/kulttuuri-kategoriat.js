@@ -118268,6 +118268,221 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Ouidah',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on Ouidah, Benin.
+       * Taustatiedot englannin Wikipediasta (Ouidah, Cadjehoun Airport,
+       * Zemidjan, Vodun Days, Zangbeto, Beninese cuisine, Sodabi,
+       * Marie-Cécile Zinsou), ranskan Wikipediasta (Ouidah, Route des
+       * Pêches, Vodun Days, Fondation Zinsou, Musée d'art contemporain de
+       * Ouidah, Villa Ajavon, Maison du Brésil (Ouidah), Agouda, Kaléta)
+       * sekä Wikivoyagesta (Ouidah, Benin) — teksti omaa. Route des
+       * Pêchesin päällystetty Ouidah'n pää perustuu tammikuun 2026
+       * Commons-kuvaan. Aukioloajat ja hinnat jätetty pois (lähteet
+       * vanhoja). Nostojen ja orjakauppakategorian aiheita (linnake ja
+       * historiallinen museo, python-temppeli, Kpassèn metsä, ranta,
+       * basilika, Unohduksen portti, Chachan tori, agojiet, Zoungbodji,
+       * Clotilda) ei toisteta. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Vodun Days - Fort Français.jpg',
+          lyhyt: 'Olkiasuinen zangbeto-yövartija Ranskan linnakkeen aukiolla Vodun-päivillä 2025.',
+          selite: 'Punaruskeasta raffiasta punottu zangbeto-asu kuuluu '
+            + 'vodun-perinteen yövartijoille, ja sen huipulla on pieni '
+            + 'veistetty hahmo; ympärille kerääntynyt yleisö seuraa esitystä '
+            + '10. tammikuuta 2025.',
+          lahde: 'Eureka9090, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Ouidah on Cotonousta vajaan tunnin ajomatkan päässä, ja '
+          + 'matkailija tulee sinne yleensä päiväretkelle tai pariksi yöksi. '
+          + 'Kaupungilla liikutaan moottoripyörätaksin kyydissä, ja '
+          + 'muistomerkkien lisäksi Ouidah’ssa on Beninin ensimmäinen '
+          + 'nykytaiteen museo, afrobrasilialaisia huviloita ja jouluisin '
+          + 'tanssivia Kaléta-naamioita. Vuoden suurin tapahtuma on '
+          + 'tammikuussa, kun vodun-uskonnon juhla täyttää aukiot tanssijoilla, '
+          + 'naamiohahmoilla ja konserttiyleisöllä. Kadunvarsilla syödään '
+          + 'maissitaikinaa, paistettua jauhobanaania ja grillattua kalaa. '
+          + 'Maahan saapuvalta vaaditaan todistus keltakuumerokotuksesta, ja '
+          + 'Afrikan ulkopuolelta tuleva hakee viisumin verkossa ennen matkaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Orjarannikko',
+          teksti: 'Ouidah’ssa muistomerkkien rinnalla elävät vodun-juhla, '
+            + 'nykytaide ja brasilialainen perintö.',
+          nosto: 'Zangbeton olkiasuun ei saa koskea, eikä ääneen sanota, että '
+            + 'sen sisällä on ihminen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Cotonousta rannikkoa länteen',
+              teksti: 'Kansainväliset lennot laskeutuvat Cotonoun '
+                + 'lentoasemalle, joka nimettiin vuonna 2021 beniniläisen '
+                + 'kardinaalin Bernardin Gantinin mukaan. Sieltä Ouidah’hun on '
+                + '42 kilometriä länteen, ja maantie jatkuu kaupungin ohi Togon '
+                + 'rajalle. Ajomatka kestää vajaan tunnin. Useimmat ulkomaalaiset '
+                + 'kulkevat vuokra-autolla ja kuljettajalla; halvempi yhteistaksi '
+                + 'lähtee Cotonoun asemalta, kun paikat ovat täynnä, ja sen '
+                + 'hinnasta sovitaan etukäteen. Rannikon puolelle on vuodesta 2003 '
+                + 'suunniteltu Route des Pêches -matkailutietä, ja tammikuussa '
+                + '2026 sen Ouidah’n pää rannan tuntumassa oli jo päällystetty ja '
+                + 'valaistu. Elokuun viimeisenä viikonloppuna samaa rannikkoa '
+                + 'kävellään joka vuosi 32 kilometrin matka Cotonousta '
+                + 'Ouidah’hun. Perillä kulkuneuvo on zémidjan eli '
+                + 'moottoripyörätaksi, jonka nimi tarkoittaa fonin kielellä '
+                + '”vie minut nopeasti”. Kuljettajan tunnistaa kaupungin värin '
+                + 'mukaisesta paidasta, jonka selässä on rekisterinumero. Hinta '
+                + 'sovitaan ennen kyytiä ja maksetaan perillä, ja numero kannattaa '
+                + 'painaa mieleen.',
+              kuva: [
+                {
+                  tiedosto: 'Zemidjan de cotonou Bénin.jpg',
+                  lyhyt: 'Keltapaitainen zémidjan-kuljettaja ajaa sillalla Cotonoussa.',
+                  selite: 'Cotonoun moottoripyörätaksien kuljettajat '
+                    + 'käyttävät keltaista paitaa; kuva on otettu huhtikuussa '
+                    + '2020, kun kasvomaskit olivat kaduilla yleisiä.',
+                  lahde: 'Rachad sanoussi, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Arriving in Ouidah (32568152427).jpg',
+                  lyhyt: 'Ouidah’n kivetty pääkatu puiden varjossa, moottoripyöriä ja pieniä kauppoja.',
+                  selite: 'Maaliskuussa 2019 Ouidah’hun saavuttaessa kuvatulla '
+                    + 'leveällä, kivetyllä kadulla kulkee moottoripyöriä, ja '
+                    + 'reunoilla on matalia kauppoja ja keltaiseksi maalattu '
+                    + 'kioski.',
+                  lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Début de la route des pêches.jpg',
+                  lyhyt: 'Route des Pêches -tien alku Ouidah’n rannalla tammikuussa 2026.',
+                  selite: 'Uusi, aurinkokennovalaisimin reunustettu katu alkaa '
+                    + 'Ouidah’n rannalta; suunnitelmissa tie jatkuu rannikkoa '
+                    + 'pitkin Cotonouhun asti.',
+                  lahde: 'Aurelefreddy, Wikimedia Commons (CC0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Vodun-päivät tammikuussa',
+              teksti: 'Benin tunnusti vodunin viralliseksi uskonnoksi vuonna '
+                + '1996, ja pian sen jälkeen Ouidah’ssa alettiin viettää '
+                + 'vodunin juhlaa joka vuosi 10. tammikuuta. Vuonna 2024 juhla '
+                + 'uudistettiin Vodun Days -tapahtumaksi, ja saman vuoden '
+                + 'heinäkuussa hyväksytyn lain mukaan perinteisten uskontojen '
+                + 'juhlaa vietetään tammikuun toisena perjantaina: perjantai ja '
+                + 'sitä edeltävä torstai ovat koko maassa vapaapäiviä. Vuonna '
+                + '2025 ohjelmaa oli ympäri kaupunkia, Maron aukiolla, Ranskan '
+                + 'linnakkeen edustalla, python-temppelissä, Kpassèn pyhässä '
+                + 'metsässä ja uudella areenalla, jolla tanssivat esi-isiä '
+                + 'edustavat egungun-naamiot. Pääseremoniassa Fâ-oraakkelin '
+                + 'papit julistavat merkin, jonka uskotaan ennustavan alkavaa '
+                + 'vuotta, ja iltaisin lavoilla esiintyy afrikkalaisia ja '
+                + 'karibialaisia tähtiä. Beninin tilastoviraston mukaan kävijöitä '
+                + 'oli vuonna 2024 noin 97 000 ja seuraavana vuonna yli 435 000, '
+                + 'joten majoitus kannattaa varata ajoissa. Kulkueissa näkyy myös '
+                + 'zangbetoja, olkiasuisia yövartijoita. Niiden asuun ei saa '
+                + 'koskea, eikä ääneen sanota, että asun sisällä on ihminen.',
+              kuva: {
+                tiedosto: 'Vodun Days - Arène de Ouidah.jpg',
+                lyhyt: 'Egungun-naamiot tanssivat Ouidah’n areenan hiekalla tammikuussa 2025.',
+                selite: 'Kirjailluista kangaspaloista ommellut egungun-asut '
+                  + 'peittävät kantajansa kokonaan; taustan katsomo on täynnä '
+                  + 'yleisöä Vodun-päivien viimeisenä päivänä 11. tammikuuta 2025.',
+                lahde: 'Eureka9090, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Nykytaidetta vuoden 1922 huvilassa',
+              teksti: 'Basilikan takana seisoo beige, kaksikerroksinen huvila, '
+                + 'jonka päätyyn on kohokirjaimin kirjoitettu Villa Ajavon 1922. '
+                + 'Sen rakennutti 1920-luvun alussa Togosta Ouidah’hun muuttanut '
+                + 'varakas kauppias, ja talo edustaa kaupungille tyypillistä '
+                + 'afrobrasilialaista rakennustapaa. Marraskuussa 2013 huvilassa '
+                + 'avattiin Beninin ensimmäinen nykytaiteen museo. Sitä ylläpitää '
+                + 'Fondation Zinsou, jonka taidehistorioitsija Marie-Cécile Zinsou '
+                + 'perusti Cotonouhun vuonna 2005 perheensä tuella. Säätiö ei myy '
+                + 'teoksia kuten galleria, vaan tuo afrikkalaista nykytaidetta '
+                + 'kotimaiselle yleisölle, ja vuonna 2015 neljä viidestä säätiön '
+                + 'kävijästä oli alle 20-vuotiaita. Avausnäyttelyssä oli '
+                + 'esillä muun muassa beniniläisen Romuald Hazoumèn, kongolaisen '
+                + 'Chéri Samban sekä malilaisten valokuvaajien Malick Sidibén ja '
+                + 'Seydou Keïtan töitä. Kokoelmassa on valokuvia, veistoksia, '
+                + 'installaatioita, videoita ja maalauksia, ja esillä on joka vuosi '
+                + 'uusi valikoima. Museossa on myös kahvila ja kauppa, joten '
+                + 'huvila sopii hengähdyspaikaksi muistomerkkien kiertämisen '
+                + 'lomassa.',
+              kuva: {
+                tiedosto: 'Zinsou Art Center in Ouidah Benin in Jan 2018.jpg',
+                lyhyt: 'Villa Ajavon, jossa Fondation Zinsoun nykytaiteen museo toimii.',
+                selite: 'Tammikuussa 2018 kuvatun huvilan päädyssä on '
+                  + 'enkelikoriste ja talon nimi, ja kulmaoven yllä punainen '
+                  + 'kyltti kertoo museosta; julkisivua koristavat parvekkeiden '
+                  + 'sorvatut kaiteet ja tummat ikkunaluukut.',
+                lahde: 'Kulttuurinavigaattori, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Brasilialainen Ouidah',
+              teksti: 'Ouidah’n kaduilla kuulee sukunimiä kuten de Souza, da '
+                + 'Silva ja Olympio. Ne kertovat agudoista, afrobrasilialaisesta '
+                + 'yhteisöstä, joka syntyi, kun Brasiliassa vapautuneita entisiä '
+                + 'orjia alkoi palata Guineanlahden rannikolle 1800-luvulla. '
+                + 'Paluumuutto vilkastui vuoden 1835 jälkeen, kun Salvador da '
+                + 'Bahiassa oli kukistettu orjien kapina, ja palaajat muodostivat '
+                + 'yhteisön brasilialaisten kauppiaiden jälkeläisten kanssa. '
+                + 'Ouidah’ssa agudat asuvat yhä omassa kaupunginosassaan vanhan '
+                + 'torin lähellä, ja brasilialainen perintö näkyy ruoassa, '
+                + 'rakennuksissa ja joissakin sanoissa. Useimmat agudat ovat '
+                + 'katolilaisia, mutta muslimivähemmistö perusti kaupungin '
+                + 'ensimmäisen moskeijan. Vuonna 1930 rakennettu Maison du Brésil, '
+                + 'de Souzan suvun afrobrasilialaistyylinen talo, kunnostettiin '
+                + 'vuosina 2016–2022 Maailmanpankin tuella kansallisen '
+                + 'matkailuviraston toimipisteeksi. Joulun aikaan kaupungissa '
+                + 'tanssii Kaléta, Brasiliasta 1830-luvulla tuotu naamioperinne: '
+                + 'naamioituneet lapset kiertävät talosta taloon laulamassa ja '
+                + 'saavat palkaksi kolikoita tai makeisia. Samaa perinnettä '
+                + 'vaalii Ouidah’n Kaléta-festivaali, joka vuonna 2017 '
+                + 'järjestettiin jo 14. kerran.',
+              kuva: {
+                tiedosto: 'Kaleta group.jpg',
+                lyhyt: 'Nuoret tanssijat ja keltainen Kaléta-naamio festivaalin lavalla joulukuussa 2017.',
+                selite: 'Ouidah’n Kaléta-festivaalin lavalla lapset tanssivat '
+                  + 'ison keltaisen naamion ympärillä, ja taustan maalattu kangas '
+                  + 'kertoo juhlan päivät 22.–24. joulukuuta 2017.',
+                lahde: 'Kulttuurinavigaattori, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kadunvarren pöydässä',
+              teksti: 'Etelä-Beninin keittiön perusta on maissi. Maissijauhosta '
+                + 'keitetty taikina syödään maapähkinä- tai tomaattikastikkeen '
+                + 'kanssa, ja sen hapatettu muoto akassa myydään lehteen '
+                + 'käärittynä. Punainen amiwo maustetaan tomaatilla, sipulilla ja '
+                + 'paprikalla. Lihaa syödään säästeliäästi, mutta kalaa ja kanaa '
+                + 'on tarjolla joka päivä, usein palmu- tai maapähkinäöljyssä '
+                + 'paistettuna. Paistetun kalan kanssa tarjotaan moyo-kastiketta '
+                + 'tomaatista, sipulista ja paprikasta, ja lisäkkeenä on aloko '
+                + 'eli paistettu jauhobanaani. Pienissä buvette-baareissa juodaan '
+                + 'paikallista olutta tai palmuviiniä. Palmuviinistä tislattu '
+                + 'sodabi on väkevä viina, jota nautitaan juhlissa ja käytetään '
+                + 'vodun-rituaaleissa, ja ensimmäinen lasi kaadetaan joskus maahan '
+                + 'siunauksen kera. Katuruoassa kannattaa valita myyjä, jonka ruoka '
+                + 'on kuumaa ja katettua. Rahana on euroon sidottu Länsi-Afrikan '
+                + 'CFA-frangi, ja osa pankkiautomaateista hyväksyy Visa- ja '
+                + 'Mastercard-kortit. Malariahyttyset liikkuvat hämärästä aamuun, '
+                + 'joten suojautumisesta kannattaa kysyä matkailuklinikalta hyvissä '
+                + 'ajoin ennen lähtöä.',
+              kuva: {
+                tiedosto: 'Aloko and fish.jpg',
+                lyhyt: 'Grillattua kalaa, paistettua jauhobanaania ja tomaatti-sipulikastiketta.',
+                selite: 'Beniniläisessä annoksessa on hiillostettua kalaa, '
+                  + 'kullanruskeiksi paistettuja jauhobanaaninviipaleita, tuoretta '
+                  + 'tomaatti-sipulikastiketta ja pieni nokare vihreää tahnaa.',
+                lahde: 'Prillytee, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
