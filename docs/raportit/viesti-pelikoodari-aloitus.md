@@ -4,15 +4,13 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260925-b.md`](viesti-pelikoodari-luovutus-20260925-b.md) (25.9. klo 12.2x, tilinvaihto).
-   - LIIKKUMISEN PARITEETTIKIERROS on valmis Pelikoodarin osalta. `pelikoodari/liikkuminen` 03218b4 on junassa. Todennettu
-     simulaattorissa: 55, 56, 57/60, 53, 58 ja 59. Pelikoodarilla ei ole avoimia rivejä (lista
-     [`liikkuminen-pariteetti-20260925.md`](liikkuminen-pariteetti-20260925.md), luku 0). 54 ja 66 ovat Natiivi-UI:n.
-   - ENSIMMÄISENÄ: löydöksen 61 ja D17:n todennus iPad11:llä (juna d76c9669 asennettuna). Pyydä vuoro Julkaisijalta ensin.
-   - Sitten `pelikoodari/pulu-puhe` b3e0b67 (66 kohta 7) junaan yhdessä Natiivi-UI:n 66-erän kanssa. 67 (#3139) ja 70
-     (#3140) ovat mainissa.
-   - Pariteettiajon työkalu (origin/pelikoodari-pariteetti-ajo 4f5d1d6e9) sisältää Linssisepän korjaukset rivit 13, 30 ja
-     12b, sallitut poikkeamat (iPhonen yläpalkki) ja muistisäännön (2 simulaattoria).
+   [`viesti-pelikoodari-luovutus-20260925-ilta.md`](viesti-pelikoodari-luovutus-20260925-ilta.md) (25.9. klo 15.3x).
+   - Liikkumisen pariteettilista: ERI/PUUTTUU 0 (A13 junassa). Todennettu videolla A3, A9, A11, B22, B23, A13 ja D6.
+   - ENSIMMÄISENÄ: C16 (+ C10 ja C12). Edellinen A/B-testi oli virheellinen (väärä nollauskomento). Aja B uudelleen komennolla
+     **`ui livia paljastus nollaa`** (luovutus luku 5), ja hyvän tuloksen jälkeen lähetä merge-pyyntö
+     `natiivi-ui/paljastus-c16b` 30db4207 Natiivisepälle Natiivi-UI:n puolesta. Pyydä vuoro ensin Julkaisijalta.
+   - Omistajan b13-löydökset 93, 100, 101, 104 ja 109 ovat junassa. 100 ja 109 todennetaan Laitetestaajan b14-kierroksella.
+     111:n ja 112:n mitat ovat Natiivisepällä. Web #3188 (pariteettikuvat: reitit) on Julkaisijalla.
 3. Merge-pyynnöt ja tilaukset: `/Users/Shared/Claude/proto-3d/lokit/merge-pyynto-pelikoodari-maisemakompressori.md`
    (Claude Desktopin 10 viestin raja: niputa viestit).
 
