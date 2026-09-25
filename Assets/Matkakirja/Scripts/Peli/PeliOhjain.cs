@@ -357,12 +357,16 @@ namespace Matkakirja.Natiivi
             if (Instanssi == this) Instanssi = null;
             if (kierto != null) { kierto.KaupunkiNapautettu -= Napautettu; kierto.Napautettu -= PalloNapautettu; kierto.PelaajanEle -= KarttaKosketettu; }
             if (lehtiNakyma != null) lehtiNakyma.Suljettu -= LehtiSuljettu;
+            Esilataaja.Joutilas -= Joutilaana;
         }
 
         void Alusta(PalloKierto k, KaupunkiMerkit m)
         {
             kierto = k;
             merkit = m;
+            // ESILATAUSPOLITIIKKA kohta 4 (PeliOhjain.Esilataus).
+            Esilataaja.Joutilas += Joutilaana;
+            Esilataaja.Kaynnista();
             KytkeReitit();
             TMP_FontAsset fontti = m != null ? m.fontti : null;
             if (fontti == null) { var kortti = FindAnyObjectByType<NimiKortti>(); if (kortti != null) fontti = kortti.fontti; }
