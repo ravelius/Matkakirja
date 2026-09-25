@@ -97,7 +97,7 @@ namespace Matkakirja
         protected override int Pakotettu => PakotettuTaso;
         protected override bool LinssinPaallaOma => LinssinPaalla;
         protected override string OmaSyy() =>
-            !Sallittu ? (Sallittu == OletusPaalla ? "löydös 126: oletuksena pois (komento rannikko paalle)" : "komento pois")
+            !Sallittu ? (OletusPaalla ? "komento pois" : "löydös 126: pois (komento rannikko paalle)")
             : !Nakyvissa ? "Rannikko.Nakyvissa = false" : null;
     }
 }
