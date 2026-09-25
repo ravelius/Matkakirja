@@ -178,7 +178,8 @@ namespace Matkakirja
             bool kuuma = Lampo.Kuuma;
             float skaala = kuuma ? KuumaSkaala : perusSkaala;
             // PalloSumennus (portti, kuvasumennus) palauttaa tähän arvoon; sen aikana renderScalea ei kirjoiteta.
-            PalloSumennus.PerusSkaala = kuuma ? KuumaSkaala : (float?)null;
+            // Myös normaalilämmössä perusarvo, jottei jäähtyminen kesken sumennuksen jätä kuumaa 0,7:ää (Natiiviseppä 25.9.).
+            PalloSumennus.PerusSkaala = kuuma ? KuumaSkaala : (perusSkaala > 0f ? perusSkaala : (float?)null);
             if (asetus != null && skaala > 0f && !PalloKierto.PorttiSumea && !PalloKierto.KuvaSumea) asetus.renderScale = skaala;
             if (bloom == null && Filmipino.Instanssi != null && Filmipino.Instanssi.volyymi != null
                 && Filmipino.Instanssi.volyymi.profile != null && Filmipino.Instanssi.volyymi.profile.TryGet(out bloom))
