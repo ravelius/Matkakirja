@@ -25,6 +25,12 @@ namespace Matkakirja
         public const float Katto = 8f;
         /// <summary>Häivytys (s), pehmeä ease in/out (KAMERA-AJOT).</summary>
         public const float Haivytys = 0.5f;
+        /// <summary>
+        /// Portin odotus (s): verho lähtee vasta, kun aloitusportti on auki (PalloKierto.PorttiSumea; UI avaa sen, kun
+        /// sisältö on luettu), jottei valmis pallo näy hetkeä ilman aloitusnäkymää. Tämän jälkeen pelkkä pallo riittää
+        /// (kehittäjän suorat aloitukset, joissa porttia ei avata).
+        /// </summary>
+        public const float PorttiOdotus = 5f;
 
         public static Aloitusverho Instanssi { get; private set; }
         public static bool Nakyvissa => Instanssi != null;
@@ -93,8 +99,11 @@ namespace Matkakirja
             while (Time.realtimeSinceStartup - alku < Katto)
             {
                 if (pallo == null) pallo = FindAnyObjectByType<Cesium3DTileset>();
-                // Yhteinen ehto (BUILD 16): ≥ 90 % ja tasaantunut 300 ms, ≥ 10 kehystä (ValmiusEhto).
-                if (Valmius.Tasaantunut(ehto, pallo)) { syy = "valmis"; break; }
+                // Yhteinen ehto (BUILD 16): ≥ 90 % ja tasaantunut 300 ms, ≥ 10 kehystä (ValmiusEhto). Ehto luetaan joka
+                // kehys (tasaantumisen ikkuna), mutta verho lähtee vasta, kun portti on auki tai PorttiOdotus kulunut.
+                bool valmis = Valmius.Tasaantunut(ehto, pallo);
+                bool portti = PalloKierto.PorttiSumea || Time.realtimeSinceStartup - alku >= PorttiOdotus;
+                if (valmis && portti) { syy = PalloKierto.PorttiSumea ? "valmis" : "valmis:ei-porttia"; break; }
                 yield return null;
             }
             Valmius.VerhoLoppu("aloitusverho", pallo == null ? "katto:ei-palloa" : syy,

@@ -146,6 +146,8 @@ namespace Matkakirja
         /// <summary>Kamera on aloituspallotilassa (PorttiSumea luettu tässä kehyksessä).</summary>
         public bool Portissa => porttiTila;
         bool porttiTila;
+        /// <summary>Käynnistyksen porttiasento asetettu (kerran, aloitusverhon takana).</summary>
+        bool alkuAsento;
         PalloSumennus sumennus;
         Etusivulento etusivulento;
 
@@ -445,6 +447,15 @@ namespace Matkakirja
         {
             PaivitaPeitto();
             if (georeferenssi == null) return;
+            // Kylmä käynnistys (löydös 80, BUILD 16): aloitusverhon takana kamera on heti portin alkuasennossa, jotta
+            // Cesium lataa portin laatat (laattapaketista) sillä aikaa, kun sisältö latautuu. Portti avautui kylmänä vasta
+            // ~2,9 s:n kohdalla (sisältö 1,2 s verkosta), ja siihen asti ladattiin oletusnäkymää (26 600 km).
+            if (Application.isPlaying && !alkuAsento && Aloitusverho.Nakyvissa && !porttiTila && ajo == null && !Seurataan)
+            {
+                alkuAsento = true;
+                PorttiAika = 0;
+                PorttiKierto(0);
+            }
             if (korkeus <= 0.0) korkeus = MaxKorkeus();
             if (Application.isPlaying)
             {
