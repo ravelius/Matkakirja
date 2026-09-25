@@ -39,6 +39,7 @@ import { lueRadiotarkistus } from './radiotarkistus.mjs';
 import { rikastaLehdet } from './lehdet.mjs';
 import { karttavaloKokoelma, rikastaKohdekartat, takynostoKokoelma } from './karttavalot.mjs';
 import { rikastaElavaKartta } from './elava-kartta.mjs';
+import { reitti1873Kokoelma } from './reitit1873.mjs';
 import { saapumisKokoelmat } from './saapumiset.mjs';
 import { tyypitaLoput } from './tyypitys.mjs';
 import { maamerkkiKokoelma } from './maamerkit.mjs';
@@ -989,6 +990,8 @@ export function kokoaKokoelmat(nimiavaruudet, { media = [] } = {}) {
   kokoelmat.merinimet = merinimiKokoelma(taulukko);
   // Skeema 1.37 (Karttaseppä, löydös 38 b): aluenimet elävinä, webin väistön jälkeiset ankkurit.
   kokoelmat.aluenimet = aluenimiKokoelma(taulukko);
+  // Skeema 1.46 (Elävä kartta): 1873 laivalinjat ja rautatiet (Karttaseppä, tools/vienti/reitit1873.mjs).
+  kokoelmat.reitit1873 = reitti1873Kokoelma(taulukko);
   // Skeema 1.35 (Natiiviseppä 24.9.2026): webin fokuspohja maittain (js/packs/fokus-grc.js
   // FOKUS_POHJAT). Web laskee nostotason ja maan kokonaisena ruudulla -portin tästä
   // (js/pallolauta/nostot.js lehdenOsuus), ei maarajoista: natiivi lukee saman.
