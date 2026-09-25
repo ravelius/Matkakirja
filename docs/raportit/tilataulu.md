@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-26 00:36 EEST
+**Päivitetty:** 2026-09-26 00:47 EEST
 
 ## 1) Sessiot
 
@@ -10,17 +10,17 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
-| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 59% | running | — |
-| Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 55% | running | — |
-| Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 66% | running | Nollattu ja palannut käyntiin |
-| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 56% | idle (lepokäsky) | Nollattu ja jo uudelleenkäynnistetty (huomattu vasta jälkikäteen, 18.23–18.35 välillä) |
-| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 75% | running, RC päällä | Sai aloitusviestin ja RC kytketty 23.2x (Fable) |
-| Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 38% | running | Nollattu ja palannut käyntiin |
+| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 61% | running | — |
+| Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 56% | running | — |
+| Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 67% | running | Nollattu ja palannut käyntiin |
+| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 57% | idle (lepokäsky) | Nollattu ja jo uudelleenkäynnistetty (huomattu vasta jälkikäteen, 18.23–18.35 välillä) |
+| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 8% (nollattu 00.4x) | running, RC päällä | Sai aloitusviestin ja RC kytketty 23.2x (Fable) |
+| Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 41% | running | Nollattu ja palannut käyntiin |
 | Laitetestaaja | local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1 | 56% | idle | PR #3153 (savukierros B13) |
 | Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 44% | idle | PR #3155 |
-| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 52% | running | Nollattu ja palannut käyntiin |
+| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 53% | running | Nollattu ja palannut käyntiin |
 | Karttaseppä | local_37708e68-5a58-45ca-8dee-c13620993531 | 46% | running | Nollattu ja palannut käyntiin (8 %) |
-| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu; 00.34: viikko 73 %, 5 h 77 %, swap 12,6 Gt (laskee), levy 143 Gt, juna: jumi (IL2CPP) purettu 00.35 Natiiviseppä, juna käännetään uudelleen) |
+| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu; 00.34: viikko 73 %, 5 h 77 %, swap 12,6 Gt (laskee), levy 143 Gt, 00.45: viikko 74 %, 5 h 82 %, swap 11,6 Gt, levy 143 Gt; juna: jumi purettu 00.35 (Natiiviseppä), 3 proto-kaanna.sh käynnissä, viimeisin KÄÄNNETTY yhä 21.36) |
 
 ## 2) Jumit ja avoimet kortit omistajalle
 
