@@ -1037,6 +1037,7 @@ namespace Matkakirja.Natiivi
             if (k == null) return;
             k.Nakyvyys("kaupungit", nakyvissa);
             k.Nakyvyys("nimiot", nakyvissa);
+            PalloKierto.LinssiAuki = !nakyvissa;
             // Web body.aikajana-paalla piilottaa myös nappulan ja nostot (RAJAPINTA 4, Natiiviseppä c6c83c9).
             k.Nakyvyys("nappula", nakyvissa);
             k.Nakyvyys("pisteet", nakyvissa);
