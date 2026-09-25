@@ -60,5 +60,5 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 - **Simulaattorit boottina:** 2 (natiiviseppa-iPhone, iPhone 17). coreaudiod 5 %. **Chrome-GPU-prosesseja:** 0.
 - **5 h -kiintiö:** 51 % (nollautuu 14:30 UTC). **Viikko (kaikki mallit):** 14 %. **Viikko (Fable):** 7 %.
 - **Konteksti:** Pelikoodari nollattu 15:33 (odottaa Fablen aloitusviestiä 99d0451a0). Natiiviseppä 56 %, Fable 53 %.
-- **JUNA JUMISSA (kiireellinen, ilmoitettu Fablelle 15:34):** yläraja laukesi 15:22, EI KÄÄNNETTY 12 min sen jälkeen. 15:25 niputettu juna/b13 + natiiviseppa/etusivulento-112 + natiiviseppa/reittiviiva-111, ei uutta juna.log-riviä sen jälkeen — junavahti näyttää jumiutuneen.
+- **Juna:** ei jumissa (Fable 15:36) — proto-kaanna.sh juna/b13 käynnissä, xcodebuild-vaihe alkoi 15:34, Unity-vaihe kesti ~10 min kolmen haaran niputuksen takia. Odotetaan valmistumista (~10–15 min). Valvonta jatkossa: pgrep -f proto-kaanna.sh elossa → ei hälytystä; hälytys vain jos prosessia ei ole JA ei KÄÄNNETTY-riviä 25 min ylärajan jälkeen.
 - **Postilaatikko:** ei uutta (kärki 8c2944063). **Avoimia PR:iä:** 14.
