@@ -2817,4 +2817,315 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Trbovljen voimalan 360-metrinen savupiippu on Euroopan korkein, ja se seisoo yhä laakson maamerkkinä, vaikka voimala on suljettu.',
     },
   },
+  /*
+   * ROU (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 2A). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.ROU:n tunnuksia
+   * TÄSMÄLLEEN (diakriitittömät, paitsi "Dâmbovita" ja "Vâlcea").
+   * Vain `lyhyt`. Bukarestin teksti välttää fokusvirran ja
+   * europe-kulttuurin aiheet (Parlamenttipalatsi, Colțean torni,
+   * Dracula, karhut). Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Alba            — Alba Iulia (Great Union 1.12.1918, kansallispäivä)
+   *   Arad            — 13 Martyrs of Arad (teloitettu 6.10.1849)
+   *   Arges           — Transfăgărășan (huippu noin 2 042 m, auki kesällä)
+   *   Bacau           — Nadia Comăneci (Onești, Montreal 1976, ensimmäinen 10)
+   *   Bihor           — Bears' Cave (avattu räjäyttämällä 17.9.1975,
+   *                     140 luolakarhun luurankoa)
+   *   Bistrita-Nasaud — Dracula (romaani): Bistritz, Borgo Pass = Tihuța
+   *   Botosani        — Mihai Eminescu, Ipotești (muistomuseo)
+   *   Braila          — Brăila Bridge (avattu 2023, Romanian pisin riippusilta)
+   *   Brasov          — Black Church (nimi vuoden 1689 palosta)
+   *   Bucharest       — Dimitrie Gusti National Village Museum (1936)
+   *   Buzau           — Berca Mud Volcanoes
+   *   Calarasi        — Oltenița (Gumelnițan kumpu, 4. vuosituhat eaa.)
+   *   Caras-Severin   — Băile Herculane (roomalaiset kylvyt, Herkuleen patsas)
+   *   Cluj            — Salina Turda
+   *   Constanta       — Port of Constanța, Danube–Black Sea Canal (64 km)
+   *   Covasna         — Covasna (mofetit, hiilidioksidihoidot)
+   *   Dâmbovita       — Trial and execution of the Ceaușescus (25.12.1989)
+   *   Dolj            — Nicolae Romanescu Park (Redont, 1897–1903,
+   *                     riippusilta 1901–1902)
+   *   Galati          — Liberty Galați (Romanian suurin terästehdas)
+   *   Giurgiu         — Giurgiu–Ruse Friendship Bridge (1954, ainoa silta
+   *                     Bulgariaan vuoteen 2013)
+   *   Gorj            — The Endless Column (Brâncuși, Târgu Jiu)
+   *   Harghita        — Lake Sfânta Ana (Romanian ainoa tulivuorijärvi)
+   *   Hunedoara       — Corvin Castle
+   *   Ialomita        — Lake Amara (sapropeelinen hoitomuta)
+   *   Iasi            — Palace of Culture (neljä museota)
+   *   Ilfov           — Snagov Monastery (perimätieto Vladin haudasta)
+   *   Maramures       — Merry Cemetery (Săpânța)
+   *   Mehedinti       — Rock sculpture of Decebalus (55 m, 1994–2004,
+   *                     Euroopan korkein kallioreliefi)
+   *   Mures           — Sighișoara (Vlad III:n syntymäkaupunki, asuttu
+   *                     linnoitus, Unesco)
+   *   Neamt           — Neamț Citadel (Mehmed II:n piiritys 1476)
+   *   Olt             — Alro (Slatina, suurin alumiinintuottaja Keski- ja
+   *                     Itä-Euroopassa IVY-maita lukuun ottamatta)
+   *   Prahova         — Peleș Castle (ensimmäinen kokonaan sähkövaloin
+   *                     valaistu linna Euroopassa, oma voimala)
+   *   Salaj           — Porolissum (Moigrad)
+   *   Satu Mare       — Satu Mare: palokunnan torni (47 m, 1904)
+   *   Sibiu           — Sibiu (Euroopan kulttuuripääkaupunki 2007)
+   *   Suceava         — Voroneț Monastery ("Voronețin sininen")
+   *   Teleorman       — Teleorman County (kuumaanin "hullu metsä",
+   *                     Zimnicea Romanian eteläisin paikkakunta)
+   *   Timis           — Timișoara (sähköinen katuvalaistus 1884)
+   *   Tulcea          — Danube Delta (Unesco, pelikaanit)
+   *   Vaslui          — Battle of Vaslui (1475)
+   *   Vâlcea          — Horezu Monastery + Horezu ceramics (Unesco)
+   *   Vrancea         — 1977 Vrancea earthquake (Bukarestin tuhot)
+   */
+  ROU: {
+    Alba: {
+      lyhyt: 'Alba Iuliassa julistettiin 1. joulukuuta 1918 Transilvanian liittyminen Romaniaan, ja päivä on yhä maan kansallispäivä.',
+    },
+    Arad: {
+      lyhyt: 'Aradissa teloitettiin lokakuussa 1849 kolmetoista Unkarin vapaussodan kenraalia, ja heitä muistetaan kaupungissa yhä joka syksy.',
+    },
+    Arges: {
+      lyhyt: 'Argeșin laaksosta Transfăgărășan-tie kiemurtelee Făgărașin vuorten yli yli kahteen kilometriin, ja tie on auki vain kesäisin.',
+    },
+    Bacau: {
+      lyhyt: 'Oneștin kaupungissa kasvoi ja harjoitteli Nadia Comăneci, joka sai Montrealissa 1976 voimistelun ensimmäisen täyden kympin.',
+    },
+    Bihor: {
+      lyhyt: 'Chișcăun Karhuluola aukesi 1975, kun louhoksen räjäytys puhkaisi sen suuaukon, ja sisältä löytyi 140 luolakarhun luurankoa.',
+    },
+    'Bistrita-Nasaud': {
+      lyhyt: 'Bram Stokerin Draculassa Jonathan Harker yöpyy Bistritzissa, ja kreivin linnaan vievä Borgon sola on täkäläinen Tihuțan sola.',
+    },
+    Botosani: {
+      lyhyt: 'Kansallisrunoilija Mihai Eminescu vietti lapsuutensa Ipoteștin kylässä, ja hänen kotitalonsa on nykyään muistomuseo.',
+    },
+    Braila: {
+      lyhyt: 'Brăilan kohdalla Tonavan ylittää 2023 avattu riippusilta, Romanian pisin – ennen sitä joen yli pääsi täällä vain lautalla.',
+    },
+    Brasov: {
+      lyhyt: 'Brașovin Musta kirkko sai nimensä vuoden 1689 suurpalosta, joka nokesi sen muurit, ja goottilainen jättiläinen hallitsee yhä vanhaakaupunkia.',
+    },
+    Bucharest: {
+      lyhyt: 'Bukarestin kylämuseoon on vuodesta 1936 siirretty taloja, kirkkoja ja tuulimyllyjä eri puolilta Romaniaa järven rantaan.',
+    },
+    Buzau: {
+      lyhyt: 'Bercan lähellä maasta kuplii harmaata mutaa pieninä tulivuorina, kun maakaasu puskee pintaan – maisema näyttää kuun pinnalta.',
+    },
+    Calarasi: {
+      lyhyt: 'Oltenițassa Argeș laskee Tonavaan, ja kaupungin lähellä on Gumelnițan kumpu, jolla asuttiin jo noin 6 000 vuotta sitten.',
+    },
+    'Caras-Severin': {
+      lyhyt: 'Băile Herculanen kuumia lähteitä käyttivät jo roomalaiset, ja kylpyläkaupungin tunnuksena seisoo Herkuleen patsas.',
+    },
+    Cluj: {
+      lyhyt: 'Turdan vanhaan suolakaivokseen on rakennettu maailmanpyörä, minigolfrata ja soutuvenelampi syvälle maan alle.',
+    },
+    Constanta: {
+      lyhyt: 'Constanțan satama on Mustanmeren suurin, ja 64 kilometrin kanava oikaisee sieltä suoraan Tonavalle.',
+    },
+    Covasna: {
+      lyhyt: 'Covasnan kylpylässä sydänpotilaita hoidetaan hiilidioksidilla, joka pulppuaa maasta niin sanotuissa mofeteissa.',
+    },
+    'Dâmbovita': {
+      lyhyt: 'Târgoviștessa Nicolae ja Elena Ceaușescu tuomittiin ja ammuttiin joulupäivänä 1989, ja varuskunnan rakennus on nyt museo.',
+    },
+    Dolj: {
+      lyhyt: 'Craiovan Romanescu-puiston suunnitteli ranskalainen Édouard Redont, ja sen järven yli kaartuu yli sata vuotta vanha riippusilta.',
+    },
+    Galati: {
+      lyhyt: 'Galațin terästehdas on Romanian suurin, ja Tonavan rannan telakalla rakennetaan yhä laivoja.',
+    },
+    Giurgiu: {
+      lyhyt: 'Giurgiun ja Rusen välinen Ystävyyden silta valmistui 1954, ja se oli vuoteen 2013 ainoa silta Romaniasta Bulgariaan.',
+    },
+    Gorj: {
+      lyhyt: 'Târgu Jiun puistossa kohoaa Constantin Brâncușin Loputon pylväs, lähes 30 metriä päällekkäisiä valurautamoduuleja.',
+    },
+    Harghita: {
+      lyhyt: 'Pyhän Annan järvi täyttää sammuneen tulivuoren kraatterin, ja se on Romanian ainoa tulivuorijärvi.',
+    },
+    Hunedoara: {
+      lyhyt: 'Hunedoaran Corvinin linna on yksi Euroopan suurimmista, ja sen portille johtaa pitkä puusilta korkeiden kivipilarien päällä.',
+    },
+    Ialomita: {
+      lyhyt: 'Amaran suolaisen järven pohjamutaa käytetään kylpylässä reuman ja ihotautien hoitoon.',
+    },
+    Iasi: {
+      lyhyt: 'Iașin kulttuuripalatsi on neogoottinen jättirakennus, jossa toimii nykyään neljä museota.',
+    },
+    Ilfov: {
+      lyhyt: 'Snagovinjärven saarella seisoo luostari, jonne perimätiedon mukaan Vlad Seivästäjä on haudattu.',
+    },
+    Maramures: {
+      lyhyt: 'Săpânțan Iloisella hautausmaalla ristit ovat kirkkaansinisiä, ja niihin on maalattu vainajan elämästä leikillinen kuva ja runo.',
+    },
+    Mehedinti: {
+      lyhyt: 'Rautaportin kallioon on hakattu 55 metriä korkeat daakialaiskuningas Decebaluksen kasvot, Euroopan korkein kallioreliefi.',
+    },
+    Mures: {
+      lyhyt: 'Sighișoaran linnoituksen muurien sisällä asutaan yhä, ja kellotornin lähellä on talo, jossa Vlad Seivästäjän kerrotaan syntyneen.',
+    },
+    Neamt: {
+      lyhyt: 'Neamțin linnoitus kesti 1476 sulttaani Mehmed II:n piirityksen, ja kunnostettu linna kohoaa yhä Târgu Neamțin yllä.',
+    },
+    Olt: {
+      lyhyt: 'Slatinan Alro-tehdas on Keski- ja Itä-Euroopan suurimpia alumiinin tuottajia, ja valtaosa sen metallista viedään ulkomaille.',
+    },
+    Prahova: {
+      lyhyt: 'Sinaian Peleșin linna oli ensimmäinen kokonaan sähkövaloin valaistu linna Euroopassa – virran tuotti oma voimala.',
+    },
+    Salaj: {
+      lyhyt: 'Moigradin kukkuloilla ovat Porolissumin rauniot, Rooman Dakian maakunnan luoteisrajan suuren linnoituskaupungin jäänteet.',
+    },
+    'Satu Mare': {
+      lyhyt: 'Satu Maren keskustaa vartioi 1904 rakennettu 47-metrinen palokunnan torni, josta vahdit aikanaan tähyilivät tulipaloja.',
+    },
+    Sibiu: {
+      lyhyt: 'Sibiun kattoikkunat näyttävät silmiltä, jotka seuraavat kulkijaa, ja kaupunki oli Euroopan kulttuuripääkaupunki 2007.',
+    },
+    Suceava: {
+      lyhyt: 'Voronețin luostarin ulkoseinät on maalattu täyteen raamatunkertomuksia, ja niiden syvä sävy tunnetaan Voronețin sinisenä.',
+    },
+    Teleorman: {
+      lyhyt: 'Teleormanin nimi tarkoittaa kumaanien kielellä ”hullua metsää”, ja maakunnan Zimnicea on Romanian eteläisin paikkakunta.',
+    },
+    Timis: {
+      lyhyt: 'Timișoaran kaduilla syttyivät sähkölamput jo 1884, ensimmäisenä kaupunkina Euroopassa.',
+    },
+    Tulcea: {
+      lyhyt: 'Tulcean takana Tonava hajoaa suistoksi, jonka kaislikoissa pesii Euroopan suurin pelikaanikanta.',
+    },
+    Vaslui: {
+      lyhyt: 'Vasluin lähellä Moldavian ruhtinas Tapani Suuri löi tammikuussa 1475 moninkertaisen osmaniarmeijan sumuisessa laaksossa.',
+    },
+    'Vâlcea': {
+      lyhyt: 'Horezun luostari on Unescon maailmanperintöä, ja kylän savenvalajat koristavat astiansa yhä kukko- ja spiraalikuvioin.',
+    },
+    Vrancea: {
+      lyhyt: 'Vrancean vuorten alla syvällä maankuoressa syntyvät Romanian pahimmat maanjäristykset – vuoden 1977 järistys tuhosi osia Bukarestista.',
+    },
+  },
+  /*
+   * CZE (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 2A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.CZE:n tunnuksia TÄSMÄLLEEN (Prahan tunnus on
+   * "Prague"). Vain `lyhyt`. Prahan teksti välttää fokusvirran aiheet
+   * (Karlštejn, Kultainen kuja, Klementinum, Tycho Brahe, hevoset).
+   * Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Jihočeský       — Český Krumlov Castle (barokkiteatteri,
+   *                     alkuperäinen lavakoneisto)
+   *   Jihomoravský    — Villa Tugendhat (Mies van der Rohe 1930, Unesco 2001)
+   *   Karlovarský     — Karlovy Vary, Vřídlo (noin 73 °C)
+   *   Královéhradecký — Sněžka (1 603 m, Tšekin korkein, Puolan raja)
+   *   Liberecký       — Ještěd Tower (hotelli + lähetin, 1973)
+   *   Moravskoslezský — Dolní Vítkovice (masuunit suljettu 1998)
+   *   Olomoucký       — Holy Trinity Column (Unesco 2000)
+   *   Pardubický      — Velká pardubická (1874 alkaen, Taxis-oja)
+   *   Plzeňský        — Pilsner Urquell (1842)
+   *   Prague          — Petřín Lookout Tower (1891, Eiffel-tornin mallinen,
+   *                     299 askelmaa)
+   *   Středočeský     — Sedlec Ossuary (40 000–70 000 vainajan luut)
+   *   Ústecký         — Pravčická brána (Euroopan suurin luonnon
+   *                     hiekkakivikaari)
+   *   Vysočina        — Telč (Unesco 1992, renessanssiaukio)
+   *   Zlínský         — Baťa's Skyscraper (johtajan toimisto hississä)
+   */
+  CZE: {
+    'Jihočeský': {
+      lyhyt: 'Český Krumlovin linnan barokkiteatterissa on säilynyt alkuperäinen puinen lavakoneisto kulisseineen, harvinaisuus koko Euroopassa.',
+    },
+    'Jihomoravský': {
+      lyhyt: 'Brnon Tugendhatin huvila valmistui 1930 Mies van der Rohen piirustuksista, ja sen olohuoneen suuret ikkunat voi laskea lattian alle.',
+    },
+    'Karlovarský': {
+      lyhyt: 'Karlovy Varyn kuumin lähde Vřídlo suihkuaa yli 70-asteista vettä, ja kylpylävieraat juovat lähdevettä nokallisista posliinikupeista.',
+    },
+    'Královéhradecký': {
+      lyhyt: 'Krkonošen Sněžka on 1 603 metrillään Tšekin korkein vuori, ja sen huipun poikki kulkee raja Puolaan.',
+    },
+    'Liberecký': {
+      lyhyt: 'Ještědin huipulla seisoo 1973 valmistunut suppilomainen torni, jossa on sekä televisiolähetin että hotelli ja ravintola.',
+    },
+    'Moravskoslezský': {
+      lyhyt: 'Ostravan Dolní Vítkovicessa masuunit sammuivat 1998, ja nyt yhden niistä huipulle pääsee kiipeämään näköalapaikalle.',
+    },
+    'Olomoucký': {
+      lyhyt: 'Olomoucin torilla kohoaa barokkinen Pyhän Kolminaisuuden pylväs, joka on Unescon maailmanperintöä ja kätkee jalustaansa pienen kappelin.',
+    },
+    'Pardubický': {
+      lyhyt: 'Pardubicessa juostaan joka lokakuu Velká pardubická, yksi Euroopan rankimmista estelaukoista, ja sen pelätyin este on Taxis-oja.',
+    },
+    'Plzeňský': {
+      lyhyt: 'Plzeňissä pantiin 1842 ensimmäinen vaalea pohjahiivaolut, ja sen mukaan pils-oluet saivat nimensä ympäri maailman.',
+    },
+    Prague: {
+      lyhyt: 'Petřínin kukkulalla seisoo 1891 rakennettu näkötorni, Eiffel-tornin pienempi sukulainen, jonka huipulle noustaan 299 askelmaa.',
+    },
+    'Středočeský': {
+      lyhyt: 'Kutná Horan Sedlecin luukappelin kattokruunu ja koristeet on koottu kymmenientuhansien vainajien luista.',
+    },
+    'Ústecký': {
+      lyhyt: 'Böömin Sveitsin kansallispuistossa kohoaa Pravčická brána, Euroopan suurin luonnon muovaama hiekkakivikaari.',
+    },
+    'Vysočina': {
+      lyhyt: 'Telčin pitkää toria reunustavat renessanssitalot pastellisävyisine päätyineen, ja koko vanha keskusta on Unescon maailmanperintöä.',
+    },
+    'Zlínský': {
+      lyhyt: 'Zlín on Baťan kenkätehtaan kaupunki, ja sen pilvenpiirtäjässä johtajan työhuone oli hissi, joka liikkui kerroksesta toiseen.',
+    },
+  },
+  /*
+   * LUX (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 2A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.LUX:n tunnuksia TÄSMÄLLEEN (entiset piirit, jotka
+   * lakkautettiin hallintoyksikköinä 2015). Vain `lyhyt`. Luxemburgin
+   * teksti välttää fokusvirran aiheen (puretun linnoituksen muuri).
+   * Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Diekirch     — Vianden Castle + Victor Hugo House (Hugo 1871)
+   *   Grevenmacher — Schengen Agreement (1985, Princesse Marie-Astrid
+   *                  Mosel-joella, kolmen maan rajapiste)
+   *   Luxembourg   — Transport in Luxembourg (maksuton julkinen liikenne
+   *                  29.2.2020 alkaen)
+   */
+  LUX: {
+    Diekirch: {
+      lyhyt: 'Viandenin linna kohoaa Our-joen laakson yllä, ja joen varrella on talo, jossa Victor Hugo asui maanpaossa 1871.',
+    },
+    Grevenmacher: {
+      lyhyt: 'Schengenin viinikylän edustalla allekirjoitettiin 1985 rajasopimus laivalla Mosel-joella, jossa Luxemburg, Saksa ja Ranska kohtaavat.',
+    },
+    Luxembourg: {
+      lyhyt: 'Luxemburgissa bussit, junat ja raitiovaunut ovat olleet maksuttomia koko maassa helmikuusta 2020 lähtien.',
+    },
+  },
+  /*
+   * MLT (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 2A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.MLT:n englanninkielisiä piiritunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Southern Harbourin teksti välttää fokusvirran aiheen
+   * (Pjazza Teatru Rjal). Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Southern Harbour — Saluting Battery (Upper Barrakka, laukaus
+   *                      keskipäivällä)
+   *   Northern Harbour — Malta Railway (1883–1931), Birkirkaran asema:
+   *                      Malta Railway Foundation and Tram Museum 2023
+   *   South Eastern    — Marsaxlokk, luzzu (silmä keulassa)
+   *   Western          — Mdina ("Hiljainen kaupunki", autot vain asukkaille)
+   *   Northern         — Rotunda of Mosta (pommi 9.4.1942, ei räjähtänyt)
+   *   Gozo and Comino  — Azure Window (romahti 8.3.2017)
+   */
+  MLT: {
+    'Southern Harbour': {
+      lyhyt: 'Vallettan Upper Barrakka -puutarhan alla Saluting Battery laukaisee tykin joka päivä keskipäivällä Suuren sataman yli.',
+    },
+    'Northern Harbour': {
+      lyhyt: 'Maltalla kulki 1883–1931 rautatie Vallettasta Mdinaan, ja sen Birkirkaran asemarakennus on nyt rautatiemuseo.',
+    },
+    'South Eastern': {
+      lyhyt: 'Marsaxlokkin satamassa keinuvat kirjavat luzzu-kalastusveneet, joiden keulaan on maalattu suojeleva silmä.',
+    },
+    Western: {
+      lyhyt: 'Muurien ympäröimää Mdinaa kutsutaan Hiljaiseksi kaupungiksi, sillä sen kapeille kujille saavat ajaa vain asukkaiden autot.',
+    },
+    Northern: {
+      lyhyt: 'Mostan kirkon kupolin läpi putosi huhtikuussa 1942 saksalainen pommi, joka ei räjähtänyt – sen kopio on esillä kirkossa.',
+    },
+    'Gozo and Comino': {
+      lyhyt: 'Gozon kuuluisa Azure Window -kivikaari romahti mereen myrskyssä maaliskuussa 2017, ja sen paikalla on nyt vain avomerta.',
+    },
+  },
 };
