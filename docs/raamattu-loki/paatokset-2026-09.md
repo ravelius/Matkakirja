@@ -5075,3 +5075,7 @@ Kuvassa pergamentti loppuu terävään viistoon rajaan ja alapuoli on mustaa ast
 ## KARTTASEPPA: LEVYN LASKU EI JOHDU POLTOSTA (POLTTO 1,1 Gt + tmp 3,7 Gt; HUIPPU ~25–35 Gt, EI UHKAA 70 Gt); E28 NAS-ARKISTOITU; 44 Gt KADONNUT MUUALLE (TODENNAKOISESTI TF-VIENTI/UNITY TAI TOISEN KAYTTAJAN KANSIOT) → JULKAISIJA TARKISTAA TF-VIENNIN JALJET (25.9.2026 klo 05.44)
 
 Pohjashardit ja pallosarja jäävät levylle vientiin ja NAS-siirtoon asti.
+
+## LAITETESTAAJA NOLLATTU (LUOVUTUS -20260925.md, laitetestaaja-inventaario-ipad 2d6594d52; ALOITUSVIESTI LAHETETTY: LIIKKUMISEN PARITEETTIVIDEOT WEB + NATIIVI, JUMI → FABLE, KAANNOSVAHTI) (25.9.2026 klo 05.46)
+
+Nollaus kaavan mukaan (clear samassa vuorossa, list_events 0).
