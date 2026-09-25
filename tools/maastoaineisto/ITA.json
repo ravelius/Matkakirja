@@ -41,6 +41,20 @@
       ],
       "teksti": "Ligurianmeri on Välimeren haara Luoteis-Italian ja Korsikan välissä. Sen uskotaan saaneen nimensä muinaisesta liguurien kansasta, joka asui näillä rannoilla ennen roomalaisia. Meri jää Tyrrhenanmeren pohjoispuolelle.",
       "lahde": "en-Wikipedia \"Ligurian Sea\", johdanto-osa (tarkistettu 29.8.2026)."
+    },
+    {
+      "nimi": "Messinansalmi",
+      "lon": 15.61,
+      "lat": 38.2,
+      "lahdeKoordinaatti": "en-Wikipedia \"Strait of Messina\" — salmen keskikohta Messinan ja Calabrian rannan välissä",
+      "nappi": "Skyllan ja Kharybdiksen salmi",
+      "kysymykset": [
+        "Mikä oli Kharybdis?",
+        "Miksi salmen yli ei vieläkään kulje siltaa?"
+      ],
+      "korostukset": ["Kharybdis|Kharybdis"],
+      "teksti": "Messinansalmi erottaa Sisilian Calabriasta ja yhdistää Tyrrhenanmeren Joonianmereen. Kapeimmillaan se on 3,1 kilometriä leveä.",
+      "lahde": "en-Wikipedia \"Strait of Messina\", johdanto-osa (tarkistettu 25.9.2026)."
     }
   ]
 }
