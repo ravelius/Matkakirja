@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 18:23 EEST
+**Päivitetty:** 2026-09-25 18:35 EEST
 
 ## 1) Sessiot
 
@@ -10,10 +10,10 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
-| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 21% | running | — |
+| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 23% | running | — |
 | Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 39% | running | — |
 | Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 61% | running | Sai aloitusviestin, aktiivinen 16:21 |
-| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 68% | idle | Nollattu 15.22, palasi 16 % 15.29 |
+| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 17% | idle | Nollattu ja jo uudelleenkäynnistetty (huomattu vasta jälkikäteen, 18.23–18.35 välillä) |
 | Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 39% | idle | — |
 | Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 52% | idle | PR #3154 |
 | Laitetestaaja | local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1 | 24% | idle | PR #3153 (savukierros B13) |
@@ -42,10 +42,9 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **Paikallinen levy:** 174 Gt vapaana (raja 35 Gt). **NAS:** 5,6 Ti vapaana (raja 500 Gt). **wt/-worktreet:** 32 kpl. **Swap:** 0 Gt.
-- **Simulaattorit boottina:** 1 (linssiseppa-iPhone). coreaudiod 5 %. **Chrome-GPU-prosesseja:** 1.
-- **5 h -kiintiö NOLLAUTUNUT:** 22 % (uusi raja 22:30 EEST). **Viikko (kaikki mallit):** 32 %. **Viikko (Fable):** 15 %.
-- **Konteksti:** Natiivi-UI 68 % (lähestyy 70), Natiiviseppä 61 %, Pelikoodari 56 %, Julkaisija 39 %.
-- **Juna:** kunnossa — KÄÄNNETTY 17:33 (4a813e60) ja 18:05 (bd2e717a), jono varattu 18:11 (c7091b7c).
-- **Postilaatikko:** 5 uutta commitia (Pariisi+4 kaupungin leikatut kuvat, 97 maakunnan pikkukuvat löydös 115, kohtauskuva-kuittaus), kärki 82c5c1d7f. Ilmoitettu Fablelle. **Avoimia PR:iä:** 14.
-- **Huom:** kierto oli tauolla n. 17:32–18:23 (ScheduleWakeup jäi ketjuttamatta cross-session-viestien käsittelyn yhteydessä) — korjattu, jatketaan 10 min tahtiin.
+- **Paikallinen levy:** 170 Gt vapaana (raja 35 Gt). **NAS:** 5,6 Ti vapaana (raja 500 Gt). **wt/-worktreet:** 34 kpl. **Swap:** 0 Gt.
+- **Simulaattorit boottina:** 0. coreaudiod 2 %. **Chrome-GPU-prosesseja:** 0.
+- **5 h -kiintiö:** 29 % (nollautuu 22:30 EEST). **Viikko (kaikki mallit):** 34 %. **Viikko (Fable):** 15 %.
+- **Konteksti:** Natiivi-UI nollattu ja jo palannut 17 % (ohitettiin väliaikatarkistus, ei erillistä "nollattu"-ilmoitusta tarvittu). Fable 23 %.
+- **Juna:** viimeisin KÄÄNNETTY 18:27 (eebb08f4), ei odottavaa.
+- **Postilaatikko:** ei uutta (kärki 82c5c1d7f). **Avoimia PR:iä:** 15.
