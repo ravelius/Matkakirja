@@ -110609,6 +110609,261 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Alexander Selkirk',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Robinson Crusoe Island, San Juan Bautista, Chile,
+       * Juan Fernández Islands, Juan Fernández fur seal, SMS Dresden
+       * (1907), 2010 Chile earthquake), espanjan Wikipediasta (Isla
+       * Robinson Crusoe, San Juan Bautista (Chile), Aeródromo Robinson
+       * Crusoe, Aeródromo Eulogio Sánchez, Parque nacional Archipiélago
+       * de Juan Fernández, Juan Fernández (comuna), Terremoto de Chile
+       * de 2010, Sistema de Alerta de Emergencia) ja Wikivoyagen Juan
+       * Fernández Islands -sivulta (lennot, huoltolaiva, Selkirkin
+       * näköalapaikan reitti, kranaattien jäljet) — teksti omaa.
+       * Wikivoyagen hinnat (2021–2025) ja aikataulut on jätetty pois.
+       * Kuolonuhrien määrä vuoden 2010 tsunamissa vaihtelee lähteittäin,
+       * joten lukua ei kerrota. Nostojen aiheita (nimenvaihto 1966,
+       * tulivuoriperä ja El Yunquen korkeus, kylän asukasluku ja uudet
+       * evakuointitiet, langustinpyynti, liekkikolibri, kaalipuu ja
+       * vieraslajit, Selkirkin muistolaatta, Selkirk, Defoe, Anson,
+       * Liman aarre ja Keiser) eikä gallerian Ansonin leiriä toisteta.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja kuvat katsottu silmin. Pystykuva: kylän ainoa
+       * tie laskeutuu rantaan (PatHen3333, tammikuu 2013).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'L\'unique "route" de l\'unique village de l\'île.jpg',
+          lyhyt: 'Kapea tie laskeutuu eukalyptusten välistä San Juan Bautistan rantaan.',
+          selite: 'Kuvaajan mukaan kylän ainoa tie viettää eukalyptusten ja '
+            + 'sähkölinjojen alta rantaan, jossa näkyvät laituri ja lahden '
+            + 'sininen vesi; kuva tammikuulta 2013.',
+          lahde: 'PatHen3333, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Robinson Crusoen saarelle pääsee vain pienkoneella tai '
+          + 'huoltolaivalla, ja kumpikin matka riippuu säästä. Kone '
+          + 'laskeutuu saaren kuivaan lounaiskärkeen, josta kylään ei ole '
+          + 'tietä, joten viimeinen osuus kuljetaan veneellä rannikkoa '
+          + 'pitkin. San Juan Bautistassa kaikki on kävelymatkan päässä: '
+          + 'laituri, isänmaallisten luolat ja vanhan espanjalaisen '
+          + 'linnoituksen rauniot. Kylän takana alkaa kansallispuisto, '
+          + 'jonka polut nousevat pilvimetsään, ja laiturin kivillä '
+          + 'loikoilee merikarhuja, joita pidettiin aikanaan jo '
+          + 'sukupuuttoon kuolleina. Kylän pohjoispuolen kallioissa näkyvät yhä '
+          + 'vuoden 1915 meritaistelun ammusten jäljet. Vuoden 2010 '
+          + 'tsunamin opetus on otettu vakavasti, ja kylän kaduilla '
+          + 'vihreät viitat osoittavat pakoreitin ylös rinteeseen.',
+        artikkeli: {
+          nimi: 'Matkailijan Robinson Crusoe',
+          teksti: 'Kylään ei lennetä eikä ajeta: viimeinen matka kuljetaan aina meritse.',
+          nosto: 'Tsunamiyönä 2010 kylän naapureita varoitti 12-vuotias '
+            + 'tyttö, joka huomasi meren vetäytyvän rannasta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Pienkoneella Santiagosta',
+              teksti: 'Saarelle lennetään muutaman ilmataksiyhtiön pienillä '
+                + 'koneilla. Wikivoyagen mukaan tavallisin lähtöpaikka on '
+                + 'Tobalaban lentokenttä (Aeródromo Eulogio Sánchez) '
+                + 'Santiagon itäosassa, mutta lentoja on lähtenyt myös '
+                + 'Santiagon päälentoasemalta ja Valparaísosta. Koneet ovat '
+                + 'pieniä kaksimoottorisia, joihin mahtuu vain noin seitsemän '
+                + 'matkustajaa, joten matkatavaroiden on oltava kevyitä. '
+                + 'Lentoja on eniten tammi- ja helmikuussa, ja marraskuun ja '
+                + 'maaliskuun välisen kauden ulkopuolella niitä on harvoin. '
+                + 'Kiitotie on saaren lounaiskärjessä, ainoalla riittävän '
+                + 'tasaisella paikalla, jonka lentäjät ja saarelaiset '
+                + 'raivasivat kivistä vuonna 1966. Kentällä ei ole '
+                + 'lennonjohtotornia eikä valaistusta, joten sinne lennetään '
+                + 'vain päivällä ja hyvällä näkyvyydellä, ja sade tai kova '
+                + 'tuuli voi perua lähdön mihin vuodenaikaan tahansa. '
+                + 'Kentältä ei ole tietä kylään, vaan matkustajat jatkavat '
+                + 'kentän läheiseltä lahdelta moottoriveneellä noin '
+                + 'puolitoista tuntia rannikkoa pitkin San Juan Bautistaan. '
+                + 'Hitaampi vaihtoehto on Valparaísosta noin kahdesti kuussa '
+                + 'lähtevä huoltolaiva, jossa on muutama paikka matkailijoille. '
+                + 'Merimatka kestää lähes kaksi vuorokautta, ja paluu voi '
+                + 'viivästyä säiden takia, joten matkaan kannattaa varata '
+                + 'vähintään viikko. Wikivoyage varoittaa myös, että '
+                + 'lentohakukoneet ovat sekoittaneet saaren kentän mantereen '
+                + 'Concepciónin kaupunkiin.',
+              kuva: [
+                {
+                  tiedosto: 'Sector aerodromo Isla Robinson Crusoe.jpg',
+                  lyhyt: 'Lentokentän ympäristö saaren lounaiskärjessä on kuivaa ja lähes puutonta.',
+                  selite: 'Saaren lounaisosan kuivaa, ruohon ja kuivuneiden '
+                    + 'kasvien peittämää ylänköä lentokentän läheltä; '
+                    + 'taustalla näkyvät Punta de Isla ja Santa Claran saari. '
+                    + 'Kuva tammikuulta 2011.',
+                  lahde: 'Pato Novoa, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Baie près de l\'aérodrome .jpg',
+                  lyhyt: 'Lentokentän läheisestä lahdesta matka kylään jatkuu veneellä.',
+                  selite: 'Punaisen ja keltaisen tuliperäisen kiven '
+                    + 'kerrostamat rinteet kohoavat pienen lahden yllä '
+                    + 'lentokentän lähellä. Kuvaajan mukaan tästä lahdesta '
+                    + 'kylään pääsee vain meritse; kuva tammikuulta 2013.',
+                  lahde: 'PatHen3333, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'CI-Robinson-kai.jpg',
+                  lyhyt: 'San Juan Bautistan laiturilta kävellään suoraan kylän rantaan.',
+                  selite: 'Matkustajat kävelevät punakaiteista laituria '
+                    + 'pitkin San Juan Bautistaan, jonka talot nousevat '
+                    + 'metsäisten vuorten juurelle; kuva marraskuulta 2017.',
+                  lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kylä, luolat ja linnoitus',
+              teksti: 'San Juan Bautistan kiertää jalan, ja suurin osa sen '
+                + 'kaduista on yhä päällystämättömiä. Kylän '
+                + 'perustamisvuodeksi mainitaan yleensä 1877, jolloin '
+                + 'sveitsiläinen paroni Alfred von Rodt aloitti pysyvän '
+                + 'asutuksen, ja hänen nimeään kantaa yhä yksi kylän '
+                + 'kaduista. Pohjoispäässä ovat jalkapallokenttä ja '
+                + 'Dresden-koulu, joka on nimetty lahteen 1915 upotetun '
+                + 'saksalaisen risteilijän mukaan. Kylän yläpuolisessa '
+                + 'rinteessä näkyvät Cuevas de los Patriotas eli '
+                + 'isänmaallisten luolat. Kun espanjalaiset olivat lyöneet '
+                + 'Chilen itsenäisyysliikkeen Rancaguan taistelussa '
+                + 'lokakuussa 1814, he karkottivat saarelle 42 kreolien '
+                + 'johtohahmoa, muiden muassa Juan Egañan ja Manuel de '
+                + 'Salasin. Vangit elivät luolissa vuoteen 1817, ja paikka '
+                + 'julistettiin kansallismonumentiksi 1979. Samaa rinnettä '
+                + 'nousevan polun varrella ovat Santa Bárbaran linnoituksen '
+                + 'rauniot: espanjalaiset rakensivat linnoituksen 1700-luvulla '
+                + 'suojaamaan lahtea merirosvoilta. Kylässä on myös pieni '
+                + 'museo ja kirjasto, turisti-info ja muutama ravintola ja '
+                + 'baari. Nettiyhteydet ovat uusia: internet yleistyi kylässä '
+                + 'vasta vuonna 2020, kun saarelle pystytettiin '
+                + 'satelliittiantennit.',
+              kuva: {
+                tiedosto: 'Isla Robinson Crusoe y las Cuevas de los Patriotas..JPG',
+                lyhyt: 'Isänmaallisten luolien suuaukot näkyvät kylän yläpuolisessa rinteessä.',
+                selite: 'Mereltä kuvatussa näkymässä San Juan Bautistan '
+                  + 'rantaa ja laituria; paljaassa, punaruskeassa rinteessä '
+                  + 'talojen ja havupuiden keskellä ammottaa kaksi tummaa '
+                  + 'luolan suuta. Kuva helmikuulta 2011.',
+                lahde: 'Marisol Romero, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Merikarhut ja Dresdenin hylky',
+              teksti: 'Meri on kylmempi kuin leuto ilma antaa odottaa, sillä '
+                + 'saaren itäpuolella pohjoiseen virtaava Humboldtin virta '
+                + 'viilentää vettä, eikä valkoisia hiekkarantoja ole. '
+                + 'Sukeltajia ja snorklaajia houkuttelevat silti '
+                + 'Juan Fernándezin merikarhut. Lajia pyydettiin '
+                + 'turkiskaupan aikana 1800-luvun alussa niin armottomasti, '
+                + 'että sitä pidettiin kuolleena sukupuuttoon, kunnes '
+                + 'saarilta löydettiin 1960-luvulla noin 200 eläimen ryhmä. '
+                + 'Suojelun ansiosta merikarhuja on nyt yli kymmenentuhatta, '
+                + 'ja niitä makailee kymmenittäin laiturin lähellä '
+                + 'rantakivillä. Poikaset syntyvät marras–joulukuussa, ja emot '
+                + 'hakevat ruokansa öisin kaukana avomerellä. Kuuluisin '
+                + 'sukelluskohde on saksalaisen kevyen risteilijän SMS '
+                + 'Dresdenin hylky Cumberlandinlahdella. Brittiläiset '
+                + 'risteilijät Glasgow ja Kent yllättivät Chilen '
+                + 'puolueettomilla vesillä ankkurissa olleen aluksen 14. '
+                + 'maaliskuuta 1915, ja miehistö upotti sen itse '
+                + 'räjähteillä. Hylky makaa noin 70 metrin syvyydessä, joten '
+                + 'se on vain syväsukellukseen koulutettujen kohde. Sen kello '
+                + 'nostettiin vuonna 2006 ja vietiin Saksaan. Maalla '
+                + 'taistelun jäljet näkee helpommin: kylästä pohjoiseen '
+                + 'kulkevan polun varrella kallioon on jäänyt brittiläisten '
+                + 'ammusten iskemiä. Wikivoyage mainitsee saaren '
+                + 'harrastuksina myös urheilukalastuksen, lintujen '
+                + 'tarkkailun ja ratsastuksen.',
+              kuva: {
+                tiedosto: 'Lobo fino.jpg',
+                lyhyt: 'Juan Fernándezin merikarhu ui pinnalla turkoosissa vedessä evät koholla.',
+                selite: 'Juan Fernándezin merikarhun naaras tai nuori '
+                  + 'yksilö ui aivan pinnassa ja nostaa eväänsä vedestä; '
+                  + 'laji lisääntyy vain Juan Fernándezin ja Desventuradasin '
+                  + 'saarilla. Kuva tammikuulta 2011.',
+                lahde: 'Pato Novoa, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kansallispuiston polut',
+              teksti: 'Kylää lukuun ottamatta lähes koko saari kuuluu vuonna '
+                + '1935 perustettuun kansallispuistoon, johon kuuluvat myös '
+                + 'Alejandro Selkirkin ja Santa Claran saaret, ja puisto on '
+                + 'ollut Unescon maailmanperintöehdokkaiden listalla vuodesta '
+                + '1994. Suosituin retki nousee kylästä vuoriston satulaan, '
+                + 'josta näkee saaren molemmat puolet: vihreän kylänpuoleisen '
+                + 'rinteen ja toisella puolella kuivan, ruskean maaston '
+                + 'sahalaitaisine huippuineen. Liikkeelle kannattaa lähteä jo kahdeksan '
+                + 'maissa aamulla, ennen kuin sumu peittää vuoret. Polku '
+                + 'nousee istutetusta eukalyptusmetsästä alkuperäiseen '
+                + 'pilvimetsään, ja sivupolku vie kalliolle, johon merimiehet '
+                + 'kaiversivat vuonna 1866 laivan ja jättiläiskalan. Toinen '
+                + 'reitti johtaa El Yunquen alle Plazoleta El Yunquelle. '
+                + 'Siellä asui 1930-luvulla Hugo Weber, Dresdenin '
+                + 'entinen merimies, jota kyläläiset kutsuivat saksalaiseksi '
+                + 'Robinsoniksi ja josta tuli Chilen ensimmäinen saarten '
+                + 'puistonvartija. Toisen maailmansodan aikana häntä '
+                + 'syytettiin vakoilusta, ja hän pakeni saarelta vaimonsa '
+                + 'kanssa. Kasveista kannattaa etsiä Lactoris fernandeziana, '
+                + 'vaatimaton pensas, joka on koko kasviheimonsa ainoa laji ja '
+                + 'kasvaa luonnossa vain tällä saarella. Lintujen tarkkailija '
+                + 'voi nähdä pienen, töyhtöpäisen Anairetes fernandezianus '
+                + '-tyrannin, ja merilinnuista saarella elää viistäjälaji, joka '
+                + 'tunnetaan englanniksi saaren vanhan nimen mukaan nimellä '
+                + 'Masatierra petrel.',
+              kuva: {
+                tiedosto: 'Cerro el Yunque.jpg',
+                lyhyt: 'El Yunquen jyrkät seinämät katoavat puistolle tyypilliseen sumuun.',
+                selite: 'Cerro El Yunquen huippu on pilven peitossa, ja '
+                  + 'etualalla punaisessa maassa kasvaa ruohomättäitä ja '
+                  + 'pensaita; kuva marraskuulta 2014.',
+                lahde: 'Daniela HV, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sää, arki ja tsunamivaroitus',
+              teksti: 'Saari on samalla aikavyöhykkeellä kuin Manner-Chile. '
+                + 'Ilmasto on leuto, vuoden keskilämpö on noin 16 astetta, '
+                + 'ja sateet painottuvat talvikuukausiin. Yli 500 metrin '
+                + 'korkeudessa sataa lähes päivittäin, kun taas saaren '
+                + 'tuulensuojainen länsiosa on kuiva, joten sadetakki kuuluu '
+                + 'jokaiselle vaellukselle. Kylän sähkö tehdään '
+                + 'dieselgeneraattoreilla, joiden polttoaine tuodaan laivalla '
+                + 'mantereelta, ja juomavesi kerätään vuorten lähteistä. '
+                + 'Autoja on vähän, ja hevoset ovat yhä tavallinen kulkuneuvo. '
+                + 'Helmikuun 27. päivän 2010 maanjäristystä ei saarella '
+                + 'tuntunut lainkaan, sillä sen keskus oli yli 600 '
+                + 'kilometrin päässä mantereen edustalla. Hyökyaalto saapui '
+                + 'noin tunnin kuluttua keskellä yötä ja tunkeutui yli 300 '
+                + 'metriä kylän sisään. Laivasto ei antanut ajoissa '
+                + 'virallista varoitusta, ja monet juoksivat rantaan eivätkä '
+                + 'rinteille. Moni pelastui, koska 12-vuotias Martina '
+                + 'Maturana huomasi meren vetäytyvän ja varoitti naapureitaan. '
+                + 'Katastrofin jälkeen Chile rakensi SAE-järjestelmän, joka '
+                + 'lähettää hätävaroituksen tekstinä, omalla äänimerkillään '
+                + 'ja värinänä alueen matkapuhelimiin, ja vuodesta '
+                + '2017 kaikki Chilessä myydyt puhelimet ovat tukeneet sitä. '
+                + 'Vuonna 2013 kylän kaava kielsi rakentamasta asuntoja '
+                + 'rantaan. Matkailijan sääntö on yksinkertainen: jos meri '
+                + 'vetäytyy äkkiä tai puhelin hälyttää, lähde heti vihreiden '
+                + '"Vía de evacuación tsunami" -viittojen suuntaan ylös '
+                + 'rinteeseen äläkä jää rantaan katsomaan.',
+              kuva: {
+                tiedosto: 'CI-Robinson-dorfstrasse.jpg',
+                lyhyt: 'Vihreä kyltti Alfred von Rodtin kadulla osoittaa tsunamin pakoreitin.',
+                selite: 'Puisen Alfred von Rodt -kadunnimikyltin vieressä '
+                  + 'seisoo vihreävalkoinen "Vía de evacuación tsunami" '
+                  + '-kyltti; taustalla kylän puutalot ja metsäinen '
+                  + 'vuorenrinne. Kuva marraskuulta 2017.',
+                lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'kirjallisuus',
@@ -112574,6 +112829,267 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Freetown',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on Sierra Leone
+       * Freetownin ja sen niemimaan kautta: nostot kertovat Freetownista,
+       * joten opas pysyy pääkaupungissa, niemimaan rannoilla ja
+       * lentokentän matkalla. Taustatiedot englannin Wikipediasta
+       * (Freetown, Freetown International Airport, Tourism in Sierra
+       * Leone, Bureh Town, Banana Islands, Kent, Sierra Leone, Western
+       * Area Peninsula National Park, Wildlife of Sierra Leone, Pan
+       * African Sanctuary Alliance, Sierra Leonean cuisine, Sierra
+       * Leonean leone, 2017 Sierra Leone mudslides) ja Wikivoyagesta
+       * (Freetown, Sierra Leone, Banana Islands; hinnat, aukioloajat ja
+       * yritysten nimet jätetty pois, koska ne vanhenevat) — teksti omaa.
+       * Nostojen ja gallerian aiheita (puuvillapuu, Fourah Bay College,
+       * Horton, leijonavuorten nimi ja satama, The Graphic, Bunce-saari,
+       * vapautettujen turvakoti, Black Joke, Cuffee, Crowther) eikä
+       * africa-kulttuuri.js:n krioa ja riisiä tai maalehden (SLE)
+       * kassavanlehtiä, poyoa ja garia toisteta; Bai Bureh vain nimenä.
+       * Sisällissota mainitaan vain päättyneenä (2002). Kuvien lisenssit
+       * ja tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: River Number 2:n auringonlasku (2009).
+       * Lautan kuvan tekijä on CDC:n Flickr-tilin mukaan Katrin Kohl.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Sierra Leone River No 2 sunset.jpg',
+          lyhyt: 'Aurinko laskee Atlanttiin River Number 2:n rannalla Freetownin niemimaalla.',
+          selite: 'Palmunlehdet ja kaksi olkikattoista varjoa piirtyvät '
+            + 'mustina oranssia iltataivasta vasten, ja vesirajassa istuu '
+            + 'pariskunta aurinkovarjon alla; River Number 2:n ranta '
+            + 'joulupäivänä 2009.',
+          lahde: 'Niroshan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Sierra Leonen sisällissota päättyi 2002, ja sen jälkeen '
+          + 'maa on ollut rauhallinen. Matkailu on toipunut tasaisesti, '
+          + 'ja eniten kävijöitä vetää Freetownin niemimaa, jonka '
+          + 'Atlantin puolta kiertää pitkä rivi vaaleita hiekkarantoja sademetsän peittämien vuorten '
+          + 'juurella. Lentokenttä on Lungissa suiston pohjoispuolella, '
+          + 'joten ensimmäinen matka tehdään yleensä veneellä lahden yli. '
+          + 'Kaupungin omalta Lumley Beachiltä ajetaan etelään River '
+          + 'Number 2:n, Tokehin ja Bureh Beachin rannoille ja Kentin '
+          + 'kylästä veneellä Banaanisaarille. Vuorten metsässä, lähellä '
+          + 'keskustaa, on Tacugaman simpanssien turvapaikka. Rannoilla '
+          + 'syödään tuoretta kalaa ja hummeria, ja kuivakausi joulukuusta '
+          + 'huhtikuuhun on myös vilkkainta matkailuaikaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Sierra Leone',
+          teksti: 'Lentokentältä kaupunkiin mennään veneellä, ja rannat alkavat kaupungin laidalta.',
+          nosto: 'Tacugaman simpanssien turvapaikka sai alkunsa, kun '
+            + 'pariskunta osti tienvarresta myytävänä olleen '
+            + 'simpanssinpoikasen 30 dollarilla.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lungista veneellä kaupunkiin',
+              teksti: 'Sierra Leonen ainoa kansainvälinen lentoasema, '
+                + 'Freetown International Airport, on Lungin kaupungissa '
+                + 'Sierra Leone -joen suiston pohjoisrannalla, noin 17 '
+                + 'kilometrin päässä pääkaupungista veden yli. Kiitotien '
+                + 'pohjoispuolelle rakennettu uusi terminaali avattiin '
+                + 'maaliskuussa 2023. Useimmat ulkomaiset matkailijat '
+                + 'ylittävät lahden vesitaksilla: pikaveneet lähtevät '
+                + 'kentän läheltä ja ajavat 30–40 minuutissa Freetownin '
+                + 'länsiosan Aberdeeniin tai Murray Towniin tai keskustan '
+                + 'Government Wharfiin. Liput myydään tuloaulan tiskeiltä, '
+                + 'ja usein ne voi varata myös verkossa. Halvin mutta '
+                + 'hitain vaihtoehto on valtion autolautta, joka kulkee '
+                + 'Lungin eteläkärjen Tagrinista Freetownin itäosan '
+                + 'Kissyyn; itse ylitys kestää noin tunnin, mutta lastaus ja '
+                + 'odotus voivat venyttää matkan tunneiksi. Maanteitse '
+                + 'Port Lokon kautta ajo kestää vähintään kolme tuntia. '
+                + 'Laskuveden aikaan kaikkiin laitureihin ei pääse '
+                + 'kuivin jaloin, ja kantajat nostavat matkustajat '
+                + 'matkatavaroineen veneeseen. Yöllä yksityisveneisiin ei '
+                + 'kannata nousta. Presidentti Julius Maada Bio julkisti '
+                + 'lahden ylittävän sillan hankkeen 2019, mutta toistaiseksi '
+                + 'kentältä kaupunkiin pääsee vain veneellä tai kiertotietä. '
+                + 'Tullessa tarkastetaan keltakuumerokotustodistus, joten '
+                + 'se kannattaa pitää käsimatkatavaroissa passin vieressä.',
+              kuva: [
+                {
+                  tiedosto: 'New Freetown International Airport airside.jpg',
+                  lyhyt: 'Lungin uusi terminaali avattiin 2023 kiitotien pohjoispuolelle.',
+                  selite: 'Freetown International Airportin kaareva '
+                    + 'terminaalirakennus ja keltaiset matkustajasillat '
+                    + 'utuisessa ilta-auringossa; kuva tammikuulta 2024.',
+                  lahde: 'Davidbstanley, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Aberdeen, Freetown, Sierra Leone - panoramio - Ghassan Mroue.jpg',
+                  lyhyt: 'Vesitaksit odottavat Aberdeenin sillan alla lähtöä Lungin lentokentälle.',
+                  selite: 'Valkoisia Sea Coach Express -pikaveneitä '
+                    + 'kelluvan puulaiturin vieressä Aberdeenin ja Murray '
+                    + 'Townin välisen sillan alla; taustalla Freetownin '
+                    + 'rinnetaloja. Kuva heinäkuulta 2011.',
+                  lahde: 'Ghassan Mroue, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Daily ferry commute in Sierra Leone (14794863188).jpg',
+                  lyhyt: 'Autolautta on halvin tapa ylittää suisto, mutta matka voi venyä tunneiksi.',
+                  selite: 'Ruosteinen matkustaja-autolautta on laskenut '
+                    + 'rampin betonirantaan, ja pakettiauto ajaa kannelta '
+                    + 'maihin; kuva elokuulta 2014.',
+                  lahde: 'Katrin Kohl / CDC Global, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Niemimaan rannat',
+              teksti: 'Freetownin niemimaan Atlantin puoleista rannikkoa '
+                + 'kiertää pitkä sarja hiekkarantoja, ja Wikivoyagen mukaan '
+                + 'ne ovat tavallisena arkipäivänä usein lähes tyhjiä. '
+                + 'Lähin on kaupungin oma Lumley Beach, joka ulottuu Cape '
+                + 'Sierra Leonen niemeltä Lumleyhin. Sen koko pituudelta '
+                + 'kulkee päällystetty kävelytie, hiekalla pelataan '
+                + 'jalkapalloa, ja viikonloppuisin ja pyhinä ranta täyttyy '
+                + 'väestä. Aberdeenin ja Lumleyn välisen rantatien baarit, '
+                + 'ravintolat ja yökerhot ovat kaupungin yöelämän keskus. '
+                + 'Etelään ajettaessa vastaan tulevat ensin Lakka ja sitten '
+                + 'River Number 2, jossa pieni joki kiemurtelee valkoisen '
+                + 'hiekan poikki mereen. Kylän asukkaat perustivat '
+                + 'yhteisöhankkeen, joka hoitaa rantaa, ja pieni baari myy '
+                + 'kylmää juotavaa ja tuoretta kalaa. Tokehin kohdalta alkaa '
+                + 'hyvä päällystetty tie. Bureh Beachin kylässä toimii '
+                + 'Sierra Leonen ainoa surffiklubi, ja John Obeyn ja Bureh '
+                + 'Beachin tienoilla ravintoloita on niin vähän, että eväät '
+                + 'kannattaa ottaa mukaan. Niemen eteläpäässä Kentin '
+                + 'kalastajakylästä pääsee paikallisella veneellä '
+                + 'Banaanisaarille, noin 40 kilometrin päähän Freetownista. '
+                + 'Saarilla ei ole autoja, Dublinin ja Rickettsin saaret '
+                + 'yhdistää kivipenger, ja edustan hylkyjen luona sukelletaan '
+                + 'ja snorklataan. Poda-poda-minibussit vievät vain Lakan '
+                + 'risteykseen, sieltä eteenpäin mennään okadalla eli '
+                + 'moottoripyörätaksilla. Rannoille johtavat sivutiet ovat '
+                + 'usein huonoja ja huonosti viitoitettuja.',
+              kuva: {
+                tiedosto: 'Hodroj Houssein-Tokey Beach (IMG 2218).jpg',
+                lyhyt: 'Kalastajien veneet ovat ankkurissa Tokehin rannan edustalla Freetownin niemimaalla.',
+                selite: 'Leveä, vaalea hiekkaranta kaartuu palmujen '
+                  + 'reunustamana, ja matalassa vedessä on ankkurissa puisia '
+                  + 'kalastus- ja kuljetusveneitä; horisontissa kaksi pientä '
+                  + 'saarta. Kuva tammikuulta 2016.',
+                lahde: 'Hodroj Houssein, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Tacugaman simpanssit',
+              teksti: 'Freetownin selän takana kohoavien vuorten metsä on '
+                + 'suojeltu jo vuodesta 1916, jolloin siitä tehtiin '
+                + 'metsäreservi, ja kansallispuisto Western Area Peninsula '
+                + 'National Parkista tuli 2012. Se on Sierra Leonen '
+                + 'läntisin yhtenäinen sademetsä, jossa elää muun muassa '
+                + 'kolme sukeltajakauriin lajia ja runsaasti lintuja, ja '
+                + 'puisto on Unescon maailmanperintöehdokkaiden listalla. '
+                + 'Metsän keskellä, vain muutaman kilometrin päässä '
+                + 'keskustasta, on Tacugaman simpanssien turvapaikka. Sen '
+                + 'tarina alkoi 1988, kun Bala Amarasekaran ja hänen '
+                + 'vaimonsa Sharmila näkivät tienvarressa Freetownin '
+                + 'pohjoispuolella myytävänä simpanssinpoikasen ja ostivat '
+                + 'sen 30 dollarilla. Pian he huomasivat, että simpansseja '
+                + 'pidettiin yleisesti lemmikkeinä ja kohdeltiin usein '
+                + 'huonosti, ja 1995 he perustivat turvapaikan orvoille ja '
+                + 'hylätyille eläimille. Noin 40 hehtaarin alueella käy '
+                + 'vuosittain yli 2 000 maaseudun koululaista oppimassa '
+                + 'simpanssien suojelusta. Vuoden 2010 laskennassa Sierra '
+                + 'Leonen luonnossa arvioitiin elävän yli 5 500 simpanssia, '
+                + 'mikä on Guinean jälkeen toiseksi suurin '
+                + 'länsiafrikansimpanssien kanta. Vierailut sovitaan '
+                + 'etukäteen, ja perille ajetaan Regent Roadia Hill '
+                + 'Stationin ja Leicesterin kautta; Wikivoyage suosittelee '
+                + 'nelivetoautoa. Suojelusta huolimatta kaupungin kasvu on '
+                + 'syönyt metsää, ja sisällissota pahensi hakkuita.',
+              kuva: {
+                tiedosto: 'Chimpas at Tacugama Sanctuary, near Freetown.jpg',
+                lyhyt: 'Kaksi simpanssia istuu puunrungolla Tacugaman turvapaikassa Freetownin lähellä.',
+                selite: 'Kaksi simpanssia istuu vastakkain köysin '
+                  + 'sidotulla puunrungolla, toinen kurottaa kohti toista '
+                  + 'ja toinen työntää huulensa esiin; taustalla vihreää '
+                  + 'metsää ja aitaus. Kuva kesäkuulta 2010.',
+                lahde: 'Jeremy Weate, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kalaa, inkivääriä ja libanonilaista',
+              teksti: 'Freetown on Atlantin rannalla, ja kala on sen '
+                + 'ruokapöydän ylpeys. Barrakudaa, meriahventa ja hummeria '
+                + 'saa helposti, ja Lumley Beachillä voi nähdä kalastajien '
+                + 'vetävän nuottaa käsin rantaan täynnä rapuja, napsijoita '
+                + 'ja muuta saalista. Niemimaan rantaravintoloissa Lakassa '
+                + 'ja River Number 2:lla tarjotaan tuoretta kalaa ja '
+                + 'hummeria. Kaupungissa asuu suuri libanonilainen '
+                + 'yhteisö, ja siksi libanonilaista ruokaa saa useimmista '
+                + 'ravintoloista. Kadulla ja kodeissa syödään friteerattua '
+                + 'akaraa, paistettua plantainia, kanalla ja vihanneksilla haudutettua maapähkinäpataa ja '
+                + 'jollof-riisiä, ja jälkiruoaksi foorahia, makeita '
+                + 'riisijauhonyyttejä. Lumleyn rannalla kaupataan tuoreita '
+                + 'maapähkinöitä, ja hedelmiä myydään toreilla samana '
+                + 'päivänä poimittuina: mangoa, papaijaa, ananasta ja '
+                + 'guavaa. Juotavaksi kannattaa kokeilla kotitekoista '
+                + 'inkiväärijuomaa, ginger beeriä. Se tehdään pelkästä inkivääristä ja '
+                + 'sokerista, joskus mausteena on neilikkaa ja limettiä, eikä '
+                + 'siinä ole alkoholia. Oluista tunnetuin on paikallisen '
+                + 'panimon Star. Muoviastioissa myytäviin väkeviin '
+                + 'viinoihin ei kannata koskea, koska niiden laadusta ei ole '
+                + 'varmuutta. Juomavedeksi käy vain pullovesi, ja '
+                + 'Wikivoyage neuvoo syömään mieluummin tuoreeltaan '
+                + 'valmistettua paikallista ruokaa kuin pitkään säilytettyjä '
+                + 'länsimaisia annoksia.',
+              kuva: {
+                tiedosto: 'Zegenvisserij in Freetown, Sierra Leone, -2 oktober 2010 a.jpg',
+                lyhyt: 'Kalastajat vetävät nuottaa käsin rantaan Lumley Beachillä Freetownissa.',
+                selite: 'Rivi miehiä ja poikia vetää paljain jaloin '
+                  + 'nuotan köyttä pitkin Lumley Beachin märkää hiekkaa '
+                  + 'tyrskyjen reunassa; taustalla harmaa Atlantti.',
+                lahde: 'Ghassan Mroue, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Raha, sää ja arjen turvallisuus',
+              teksti: 'Useimmat ulkomaalaiset tarvitsevat viisumin, jonka '
+                + 'saa sähköisenä etukäteen tai lentokentällä. Leonesta '
+                + 'poistettiin heinäkuussa 2022 kolme nollaa, ja vanhat '
+                + 'setelit lakkasivat kelpaamasta maksuvälineeksi vuoden 2024 '
+                + 'alussa, joten vanhojen oppaiden hinnat näyttävät '
+                + 'tuhatkertaisilta. Pankkiautomaatteja on Freetownissa ja '
+                + 'suuremmissa kaupungeissa, ja kortti, useimmiten Visa, '
+                + 'käy yhä useammassa hotellissa, ravintolassa ja '
+                + 'supermarketissa. Sähkö on 220 volttia brittiläisillä '
+                + 'pistorasioilla, mutta katkoja on usein. Kuivakausi kestää '
+                + 'joulukuusta huhtikuuhun, ja silloin Saharasta puhaltaa '
+                + 'kuiva harmattan-tuuli. Toukokuusta marraskuuhun on '
+                + 'sadekausi, ja heinä- ja elokuussa sataa lähes joka päivä, '
+                + 'kumpanakin kuukautena Freetowniin keskimäärin yli metri. Elokuussa '
+                + '2017 kolmen päivän rankkasateet laukaisivat Regentissä '
+                + 'mutavyöryn, jossa 1 141 ihmistä kuoli tai katosi; '
+                + 'syyksi on arvioitu myös rinteiden metsäkatoa. Väkivaltarikokset '
+                + 'ovat Wikivoyagen mukaan harvinaisia, mutta taskuvarkaita '
+                + 'on, ja Aberdeenin ja Lumleyn yökerhojen lähellä on '
+                + 'sattunut välikohtauksia. Suurempi vaara on liikenne: '
+                + 'ylikuormatut poda-podat ja kiireiset okadat. Pimeällä '
+                + 'kannattaa kantaa taskulamppua, koska katuvaloja on vähän. '
+                + 'Jaetut taksit ajavat kiinteitä reittejä; sanomalla '
+                + '"no cha cha" kertoo haluavansa jakaa kyydin eikä '
+                + 'vuokrata koko autoa. Malaria on suurin terveysriski, joten '
+                + 'estolääkityksestä kannattaa kysyä lääkäriltä hyvissä '
+                + 'ajoin. Aidosti paikallisia käsitöitä ovat solmuvärjätty '
+                + 'gara-kangas, kudottu country cloth, batiikkikuvat ja '
+                + 'puuveistokset, ja niitä myyvät Wallace Johnson Streetin '
+                + 'Big Marketin kojut.',
+              kuva: {
+                tiedosto: 'An aisle at the Sierra Leone Big Market.jpg',
+                lyhyt: 'Freetownin Big Marketin käytävillä myydään koreja, kalebasseja ja helmikoruja.',
+                selite: 'Kapean käytävän molemmin puolin on hyllyt '
+                  + 'täynnä punottuja koreja, kalebasseja, savikulhoja ja '
+                  + 'helminauhoja, ja mies kävelee käytävää pitkin; kuva '
+                  + 'huhtikuulta 2025.',
+                lahde: 'ODC-SIERRA-LEONE, Wikimedia Commons (CC0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -112746,6 +113262,271 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Great Smoky Mountains National Park',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on vuoristo, ei
+       * kaupunki: opas keskittyy eteläisiin Appalakkeihin (Great Smoky
+       * Mountains, Blue Ridge Parkway, Shenandoah) ja niitä yhdistävään
+       * Appalachian Trailiin. Taustatiedot englannin Wikipediasta
+       * (Appalachian Trail, Great Smoky Mountains National Park, Blue
+       * Ridge Parkway, Linn Cove Viaduct, Skyline Drive, Kuwohi, Mount
+       * Le Conte, Photinus carolinus, Hot Springs (North Carolina),
+       * Crooked Road (Virginia), Floyd (Virginia), Galax (Virginia),
+       * Bristol sessions, Birthplace of Country Music Museum, Qualla
+       * Boundary, Museum of the Cherokee People, Unto These Hills,
+       * Pigeon Forge, Asheville) ja Wikivoyagesta (Appalachian Trail,
+       * Great Smoky Mountains National Park, Blue Ridge Parkway,
+       * Shenandoah National Park) — teksti omaa. Wikivoyagen hinnat ovat
+       * vuosilta 2020–2024, joten hinnat ja aukioloajat on jätetty pois;
+       * Helene-myrskyn tiesulkujen tila on Wikipedian mukaan kevään 2025
+       * tieto, ja se kerrotaan vanhenevana. Nostojen ja gallerian aiheita
+       * (vuorten geologia ja sininen usva, Mount Mitchell, puulajien
+       * runsaus, New River Gorge, karhut kirsikkapuussa, puiston
+       * kävijäennätys, Cumberlandin sola, Daniel Boone, Erämaantie,
+       * hirsimökit, hiilikaivokset) ei toisteta: karhuista kerrotaan vain
+       * retkeilijän turvaohjeet. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * Appalachian Trailin kyltti ja valkoinen merkki (Pennsylvania).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Flickr - Nicholas T - White Blaze.jpg',
+          lyhyt: 'Appalachian Trailin kyltti ja valkoinen reittimerkki tolpassa Delaware Water Gapissa.',
+          selite: 'Ruskea Appalachian Trail -kyltti Delaware Water Gapin '
+            + 'suojelualueella Pennsylvaniassa kertoo vaeltajien '
+            + 'leiriytymissäännöt, ja sen alla puutolpassa on reitin '
+            + 'valkoinen maalimerkki; kuva syyskuulta 2010.',
+          lahde: 'Nicholas A. Tonelli, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Appalakit eivät ole yksi nähtävyys vaan tuhansien '
+          + 'kilometrien vuorijono, joten matkailija valitsee yleensä yhden '
+          + 'alueen. Tämä opas keskittyy eteläisiin Appalakkeihin: Great '
+          + 'Smoky Mountainsin kansallispuistoon Tennesseen ja '
+          + 'Pohjois-Carolinan rajalla, sieltä pohjoiseen kiemurtelevaan '
+          + 'Blue Ridge Parkwayhin ja Virginian Shenandoahiin sekä niitä '
+          + 'kaikkia yhdistävään Appalachian Trailiin. Vuorille tarvitaan '
+          + 'auto, sillä julkista liikennettä ei juuri ole. Huipuilla on '
+          + 'selvästi viileämpää kuin laaksoissa, ja sää vaihtuu nopeasti. '
+          + 'Tiet, luvat ja säännöt muuttuvat usein — ja syyskuun 2024 '
+          + 'Helene-myrsky sulki osan teistä pitkäksi aikaa — joten tilanne '
+          + 'kannattaa tarkistaa kansallispuistojen sivuilta juuri ennen '
+          + 'matkaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Appalakit',
+          teksti: 'Vuorille ajetaan autolla, ja niiden halki kävellään valkoisten merkkien perässä.',
+          nosto: 'Mount LeConten majataloon ei vie yhtään tietä: tarvikkeet '
+            + 'kantavat ylös laamat ja helikopteri.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Great Smoky Mountainsia lähimmät lentoasemat ovat '
+                + 'Knoxvillessä noin 70 kilometriä lännessä ja Ashevillessä '
+                + 'noin 100 kilometriä idässä. Käytännössä vuorille '
+                + 'tarvitaan auto: esimerkiksi '
+                + 'Shenandoahiin ei kulje lainkaan julkista liikennettä. '
+                + 'Smokyjen läpi pohjoisesta etelään vie Newfound Gap Road, '
+                + 'joka yhdistää Tennesseen Gatlinburgin Pohjois-Carolinan '
+                + 'Cherokeehin. Puistoon ei peritä pääsymaksua, mutta yli '
+                + 'vartin pysäköintiin tarvitaan nykyään pysäköintilupa, ja '
+                + 'bensaa puiston sisältä ei saa. '
+                + 'Smokyjen itälaidalta alkaa Blue Ridge Parkway, 755 '
+                + 'kilometriä pitkä maisematie, joka seuraa Blue Ridgen '
+                + 'harjannetta Virginiaan asti. Tie on maksuton, kaupallinen '
+                + 'liikenne on siellä kielletty ilman erillistä lupaa, eikä '
+                + 'nopeusrajoitus ole missään yli 72 '
+                + 'km/h. Matkan varrella on 26 tunnelia, joista lähes kaikki '
+                + 'ovat Pohjois-Carolinan puolella, ja paikat merkitään '
+                + 'pohjoisesta alkavilla mailitolpilla. Tien viimeinen pala, '
+                + 'Grandfather Mountainin kylkeä kiertävä Linn Cove '
+                + 'Viaduct, valmistui vasta 1980-luvulla. Talvella tietä ei '
+                + 'aurata, ja korkeat osuudet ovat kiinni myöhäissyksystä '
+                + 'kevääseen. Helene-myrsky sulki syyskuussa 2024 koko '
+                + 'tien, ja osa siitä oli yhä suljettuna keväällä 2025, joten '
+                + 'reitti on tarkistettava ennen lähtöä. Parkwayn '
+                + 'pohjoispäästä matka jatkuu Skyline Drivena Shenandoahin '
+                + 'kansallispuiston läpi, ja siellä peritään pääsymaksu.',
+              kuva: [
+                {
+                  tiedosto: 'Linn Cove Viaduct in the Autumn.jpg',
+                  lyhyt: 'Linn Cove Viaduct kiertää Grandfather Mountainin kylkeä ruskan keskellä.',
+                  selite: 'Betoninen siltatie kaartuu S-mutkana oranssien '
+                    + 'ja punaisten lehtipuiden sekä tummien kuusten '
+                    + 'keskellä, ja taustalla siintää sinisiä '
+                    + 'vuorenhuippuja.',
+                  lahde: 'Goins, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Blue Ridge Parkway NC.jpg',
+                  lyhyt: 'Kivimuurattu tunneli Blue Ridge Parkwaylla Yanceyn piirikunnassa.',
+                  selite: 'Kaksikaistainen tie keltaisine keskiviivoineen '
+                    + 'katoaa kivimuuratun kaariportin kautta vuoren sisään '
+                    + 'tiheän lehtimetsän alla Pohjois-Carolinassa; kuva '
+                    + 'syyskuulta 2021.',
+                  lahde: 'Maria newengland, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Skyline Drive overlook view.jpg',
+                  lyhyt: 'Näköalapaikka Skyline Drivella Shenandoahin kansallispuistossa Virginiassa.',
+                  selite: 'Kivimuurin reunustamalta levennykseltä avautuu '
+                    + 'kesäinen näkymä metsäisten harjanteiden yli '
+                    + 'peltojen kirjomaan laaksoon; kuva heinäkuulta 2020.',
+                  lahde: 'APK, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Valkoisten merkkien polku',
+              teksti: 'Appalachian Trail kulkee noin 3 500 kilometriä '
+                + 'Georgian Springer Mountainilta Mainen Katahdinille ja '
+                + '14 osavaltion halki. Metsänhoitaja Benton MacKaye '
+                + 'ehdotti reittiä 1921, ja vapaaehtoiset saivat sen '
+                + 'yhtenäiseksi 1937. Polku on merkitty puihin ja kiviin '
+                + 'maalatuin valkoisin suorakaiteen muotoisin merkein; '
+                + 'siniset merkit vievät sivupoluille, laavuille ja '
+                + 'näköalapaikoille. '
+                + 'Koko matkan yrittää vuosittain yli 3 000 ihmistä, mutta '
+                + 'perille pääsee Appalachian Trail Conservancyn arvion '
+                + 'mukaan vain noin neljännes. Useimmat lähtevät Georgiasta '
+                + 'keväällä ja kulkevat lämmön mukana pohjoiseen viidestä '
+                + 'seitsemään kuukautta. Matkalla on yli 250 laavua ja '
+                + 'leiripaikkaa, ja laavujen vihkoihin kirjoitetaan '
+                + 'viestejä omalla retkinimellä. '
+                + 'Useimmat reitin käyttäjät kävelevät kuitenkin vain '
+                + 'päivän tai muutaman: osuuksia kulkee vuosittain yli '
+                + 'kolme miljoonaa ihmistä, eikä suurimmalle osalle '
+                + 'reitistä tarvita lupaa. Poikkeuksia ovat Smokyt, '
+                + 'Shenandoah ja Mainen Baxterin osavaltiopuisto. Monessa '
+                + 'pikkukaupungissa polku kulkee suoraan keskustan läpi, '
+                + 'kuten Pohjois-Carolinan Hot Springsissä. Länsi-Virginian '
+                + 'Harpers Ferryssä, reitin "henkisellä puolivälillä", '
+                + 'toimii ATC:n päämaja, jossa pitkän matkan vaeltajat '
+                + 'kuvataan vuoden vaeltaja-albumiin.',
+              kuva: {
+                tiedosto: 'Hiker being photographed at ATC for the thru-hiker album.jpg',
+                lyhyt: 'Vaeltaja poseeraa Harpers Ferryssä ATC:n talon edessä vuosialbumin kuvaa varten.',
+                selite: 'Punapaitainen vaeltaja nostaa kädet ilmaan '
+                  + 'Appalachian Trail Conservancyn kivitalon edessä, kun '
+                  + 'mies kuvaa häntä; seinustalla lepäävät rinkat ja '
+                  + 'vaellussauvat. Kuva heinäkuulta 2018.',
+                lahde: 'HLKirk, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Yö metsässä ja karhujen naapurina',
+              teksti: 'Great Smoky Mountainsin takamailla saa yöpyä vain '
+                + 'merkityillä leiripaikoilla ja laavuissa, ja jokaiseen '
+                + 'yöhön tarvitaan lupa ja varaus. Laavussa saa olla yhden '
+                + 'yön ja leiripaikalla enintään kolme. Autolla '
+                + 'saavutettavia leirintäalueita puistossa on kymmenen. '
+                + 'Mustakarhuja puistossa arvioidaan olevan noin 1 900, '
+                + 'vaikka luku vaihtelee, joten '
+                + 'ruokaa ei jätetä vartioimatta eikä koskaan viedä '
+                + 'telttaan: leirintäalueella se kuuluu suljettuun autoon '
+                + 'ja takamailla karhuvaijeriin ripustettuna tai '
+                + 'karhunkestävään rasiaan. Karhua ei lähestytä eikä '
+                + 'ruokita — jos eläimen käytös muuttuu, olet jo liian '
+                + 'lähellä. Puiston 23 käärmelajista vain kaksi on '
+                + 'myrkyllisiä, eikä kumpikaan ole hyökkäävä. '
+                + 'Vesiputouksille ei pidä kiivetä, sillä niillä on '
+                + 'sattunut kuolemantapauksia, ja puroveden saa juoda vain '
+                + 'keitettynä tai suodatettuna. Pohjoisempana '
+                + 'Appalachian Traililla vaivana ovat punkit ja niiden '
+                + 'levittämä borrelioosi. Kännykkäyhteys katkeaa usein, '
+                + 'joten reitti kannattaa kertoa jollekulle etukäteen. '
+                + 'Huipulla voi olla 5–10 astetta kylmempää kuin laaksossa. '
+                + 'Puiston ainoa majatalo, Mount LeConten huipun '
+                + 'hirsimökkimajatalo, on noin 50 vieraan kokoinen ja '
+                + 'tavoitettavissa vain kävellen, vähintään kahdeksan '
+                + 'kilometrin nousulla. Sen tarvikkeet kantavat ylös '
+                + 'laamakaravaanit ja helikopteri, ja paikat varataan '
+                + 'usein yli vuotta etukäteen.',
+              kuva: {
+                tiedosto: 'LeConte Lodge Llamas.jpg',
+                lyhyt: 'Laamat Trillium Gap Traililla, jota pitkin LeConten majatalon tarvikkeet kannetaan.',
+                selite: 'Sinitakkinen nainen taluttaa kahta laamaa, '
+                  + 'valkoista ja mustaa, joiden selässä on kantolaukut, '
+                  + 'kapealla metsäpolulla korkeiden puiden ja '
+                  + 'rododendronien keskellä; kuva toukokuulta 2018.',
+                lahde: 'ZachN 0421, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ruska, kukat ja tulikärpäset',
+              teksti: 'Appalakkien tunnetuin sesonki on ruska. Blue Ridge '
+                + 'Parkwaylla lehdet alkavat värittyä huipuilla syyskuun '
+                + 'lopulla, ja väri valuu laaksoihin lokakuun loppuun '
+                + 'mennessä. Lokakuun alkupuolella voi nähdä kolme '
+                + 'vuodenaikaa yhtä aikaa: kylmällä harjanteella puut ovat '
+                + 'jo paljaita, rinteet hehkuvat punaisina ja keltaisina, ja '
+                + 'laaksot ovat vielä vihreitä. Smokyissa syksy on myös vuoden kuivinta '
+                + 'aikaa, mutta suosio näkyy ruuhkina: Shenandoahin Skyline '
+                + 'Drivella ajaa lokakuun puolivälin jälkeen satojatuhansia '
+                + 'autoilijoita, joten näköalapaikoille kannattaa lähteä '
+                + 'aamulla ja arkena. Värien ajankohta vaihtelee vuosittain '
+                + 'sään mukaan. '
+                + 'Keväällä vuoret ovat rauhallisempia. Kesäkuussa '
+                + 'kukkivat violetit alppiruusut ensin Virginian Peaks of '
+                + 'Otterilla ja kesäkuun kolmannella viikolla Pohjois-'
+                + 'Carolinan Craggy Gardensissa. '
+                + 'Erikoisin näytös nähdään touko–kesäkuun vaihteessa '
+                + 'Smokyjen Elkmontissa, kun Photinus carolinus '
+                + '-tulikärpäset välkkyvät tahdissa: koiraat välähtävät '
+                + 'muutaman sekunnin ajan yhtä aikaa ja pimenevät sitten '
+                + 'noin kymmeneksi sekunniksi. Näytös kestää vain parisen '
+                + 'viikkoa, ja katsojamäärää säännöstellään. Kävijät on '
+                + 'viety alueelle kuljetuksella Sugarlandsin '
+                + 'vierailukeskukselta, ja järjestelyt kannattaa tarkistaa '
+                + 'puiston sivuilta hyvissä ajoin keväällä.',
+              kuva: {
+                tiedosto: 'Photinus carolinus Great Smoky Mountains.jpg',
+                lyhyt: 'Tahdissa välkkyvät tulikärpäset valaisevat metsänpohjan Great Smoky Mountainsissa.',
+                selite: 'Pitkä valotus tallentaa pimeään lehtimetsään '
+                  + 'satoja keltaisia valopisteitä ja -viiruja, kun '
+                  + 'Photinus carolinus -tulikärpäset välkkyvät; kuva '
+                  + 'toukokuulta 2017.',
+                lahde: 'Niemand für Polyphemus, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Porttikaupungit ja vuorten musiikki',
+              teksti: 'Smokyjen pohjoisportilla Tennesseessä Gatlinburg ja '
+                + 'Pigeon Forge ovat täynnä motelleja, ravintoloita ja '
+                + 'huvipuistoja, kuten läheisestä Seviervillestä '
+                + 'kotoisin olevan Dolly Partonin Dollywood. Pohjois-'
+                + 'Carolinan puolella majoitusta löytyy usein '
+                + 'helpommin ja edullisemmin, esimerkiksi Cherokeesta ja '
+                + 'Bryson Citystä. Cherokee on Itäisen tšerokiheimon '
+                + 'pääkaupunki Qualla Boundaryn alueella, jonka heimo osti '
+                + 'itselleen 1870-luvulla. Kaupungin museo uudistettiin ja '
+                + 'nimettiin 2023 Museum of the Cherokee Peopleksi, ja '
+                + 'kesäisin ulkoilmateatterissa esitetään vuodesta 1950 '
+                + 'pyörinyttä näytelmää Unto These Hills. Heimon '
+                + 'aloitteesta Smokyjen korkein huippu Clingmans Dome sai '
+                + 'syyskuussa 2024 virallisesti tšerokinkielisen nimen '
+                + 'Kuwohi. Idempänä Asheville tunnetaan taiteilijakortteleistaan '
+                + 'ja Biltmoren kartanostaan, mutta Helene-myrskyn tulvat '
+                + 'runtelivat kaupunkia pahoin syksyllä 2024. '
+                + 'Virginian lounaiskulmassa kiemurtelee noin 480 kilometrin '
+                + 'Crooked Road, vuoriston perinnemusiikin reitti. Floydin '
+                + 'kyläkaupassa paikalliset yhtyeet soittavat '
+                + 'perjantai-iltaisin, ja Galaxissa on pidetty old-time- ja '
+                + 'bluegrass-soittajien kokoontumista vuodesta 1935. '
+                + 'Bristolia kutsutaan kantrimusiikin syntysijaksi: '
+                + 'kaupungin museo kertoo vuoden 1927 äänityksistä, joilla '
+                + 'Carter Family ja Jimmie Rodgers tekivät '
+                + 'ensilevytyksensä.',
+              kuva: {
+                tiedosto: 'Kate and the Bubbatones Friday Night Jamboree Floyd Country Store Floyd VA October 2010.jpg',
+                lyhyt: 'Bluegrass-yhtye soittaa Floyd Country Storen perjantai-illan jamboreessa.',
+                selite: 'Kitaristi, viulisti ja banjonsoittaja soittavat '
+                  + 'mikrofonien edessä puupaneloidun salin lavalla '
+                  + 'Floydissa Virginiassa; kuva lokakuulta 2010.',
+                lahde: 'Bruce Tuten, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
