@@ -74,11 +74,17 @@
 
 .mk-kartuscha__nimirivi {
     flex-direction: row;
-    align-items: center;
+    /* Löydös 143: lippu ylimmän nimirivin tasalla (margin-top Kartuscha.TasaaNimirivi), ei kaksirivisen lohkon keskellä. */
+    align-items: flex-start;
+    flex-shrink: 1;
+    max-width: 100%;
 }
 
 /* Web .maapaneeli-nimi-suomi: American Typewriter, puhelimessa 1,3rem / 0,16em, tabletilla 1,9rem / 0,2em. */
 .mk-kartuscha__nimi {
+    /* Löydös 143: pitkä nimi rivittyy sanavälistä kahdelle riville (ei katkaisua eikä ellipsiä). */
+    flex-shrink: 1;
+    white-space: normal;
     font-size: 20.8px;
     letter-spacing: 16.01px; /* web 3.33px */
     color: rgba(58, 40, 25, 0.92);

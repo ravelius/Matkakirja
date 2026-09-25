@@ -32,7 +32,7 @@ namespace Matkakirja.Natiivi
     public sealed class Kartuscha
     {
         readonly UiKerros kerros;
-        readonly VisualElement kortti, sisus, aiheet, tilastot, kielet, lippu;
+        readonly VisualElement kortti, sisus, aiheet, tilastot, kielet, lippu, nimirivi;
         readonly Button masto, radio;
         readonly Label nimi, alarivi, valtiomuoto;
         readonly VisualElement valtiomuotoRivi;
@@ -55,7 +55,7 @@ namespace Matkakirja.Natiivi
 
             // Ylhäältä alas (web): masto (nimi + lippu, viiva, alarivi) ja sen alla sisus (rivit, aiheet).
             masto = Rakenne.Nappi(null, "mk-kartuscha__masto", Vaihda, kortti);
-            var nimirivi = Rakenne.El("mk-kartuscha__nimirivi", masto, PickingMode.Ignore);
+            nimirivi = Rakenne.El("mk-kartuscha__nimirivi", masto, PickingMode.Ignore);
             nimi = Rakenne.Teksti("", "mk-kartuscha__nimi", nimirivi);
             lippu = Rakenne.El("mk-kartuscha__lippu", nimirivi);
             // Lipun napautus → lipun tarina (web maapaneeli avaaLippuikkuna); muuten masto kuten ennen.
@@ -85,6 +85,11 @@ namespace Matkakirja.Natiivi
             var radioPaikka = kortti;
             radio = Mediarivi.Radionappi(radioPaikka);
 
+            // Löydös 143: nimen rivitys muuttaa korkeutta ja radio ilmestyy asemahaun jälkeen → tasaus uusiksi.
+            kortti.RegisterCallback<GeometryChangedEvent>(_ => TasaaNimirivi());
+            nimi.RegisterCallback<GeometryChangedEvent>(_ => TasaaNimirivi());
+            radio.RegisterCallback<GeometryChangedEvent>(_ => TasaaNimirivi());
+
             kerros.TurvaMuuttui += Asettele;
             kerros.JokaRuutu += TarkistaOhiNapautus;
             // Pelaajan maa tarkistetaan harvakseltaan (kaupunki vaihtuu vain saapuessa).
@@ -101,6 +106,41 @@ namespace Matkakirja.Natiivi
             kortti.style.bottom = reuna;
             kortti.style.right = auki && !UiKerros.Tabletti ? reuna : StyleKeyword.Null;
             kortti.EnableInClassList("mk-kartuscha--tabletti", UiKerros.Tabletti);
+        }
+
+        /// <summary>
+        /// Löydös 143 (omistaja, build 16): pitkä maannimi (BOSNIA JA HERTSEGOVINA) rivittyy sanavälistä kahdelle
+        /// riville, ja lippu sekä radio tasataan YLIMMÄN nimirivin keskelle (ei kaksirivisen lohkon keskelle).
+        /// Avattuna nimi ei mene radion alle: nimirivin oikea täyte varaa radion kohdan (+ 6 pt väli).
+        /// </summary>
+        void TasaaNimirivi()
+        {
+            if (kortti.panel == null || kortti.resolvedStyle.display == DisplayStyle.None) return;
+            float riviK = nimi.MeasureTextSize("Å", 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).y;
+            if (float.IsNaN(riviK) || riviK <= 0) return;
+            float nimiY = nimi.ChangeCoordinatesTo(kortti, Vector2.zero).y;
+
+            float lippuK = lippu.layout.height; // 0 = lippu piilossa (kiinni), tasataan avattaessa
+            if (lippuK > 0) Aseta(lippu.style.marginTop, v => lippu.style.marginTop = v, Mathf.Max(0f, (riviK - lippuK) / 2f));
+
+            bool radioNakyy = auki && radio.resolvedStyle.display != DisplayStyle.None && radio.layout.height > 0;
+            if (radioNakyy)
+            {
+                // Absoluuttinen top lasketaan reunan sisäpuolelta.
+                float top = nimiY - kortti.resolvedStyle.borderTopWidth + (riviK - radio.layout.height) / 2f;
+                Aseta(radio.style.top, v => radio.style.top = v, Mathf.Max(0f, top));
+                float sisaOikea = kortti.worldBound.xMax - kortti.resolvedStyle.borderRightWidth - kortti.resolvedStyle.paddingRight;
+                Aseta(nimirivi.style.paddingRight, v => nimirivi.style.paddingRight = v, Mathf.Max(0f, sisaOikea - radio.worldBound.xMin + 6f));
+            }
+            else if (nimirivi.style.paddingRight.keyword != StyleKeyword.Null)
+                nimirivi.style.paddingRight = StyleKeyword.Null;
+        }
+
+        /// <summary>Asettaa pituuden vain, kun se muuttuu yli 0,5 pt (GeometryChanged ei jää kiertämään).</summary>
+        static void Aseta(StyleLength nyt, System.Action<StyleLength> aseta, float arvo)
+        {
+            if (nyt.keyword == StyleKeyword.Undefined && Mathf.Abs(nyt.value.value - arvo) < 0.5f) return;
+            aseta(arvo);
         }
 
         /// <summary>Linssi päällä tai muu koko ruudun näkymä: kartuscha piiloon.</summary>
