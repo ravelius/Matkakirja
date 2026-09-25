@@ -5,6 +5,7 @@
 # → radio- ja satelliittilinssi → yhteenveto. Mittari: Assets/Matkakirja/Kartta/VerkkoOdotus.cs.
 #
 #   Peli-testit/verkko-savuke.sh <Matkakirja3D.app> <UDID> <tuloskansio>
+#   LAMMIN=1 Peli-testit/verkko-savuke.sh …   lämmin käynnistys (välimuistit edellisestä ajosta)
 #
 # Tulos: <tuloskansio>/{verkko-odotus.jsonl, verkko-yhteenveto.json, konsoli.log, RAPORTTI.txt}. Vain omiin
 # simulaattoreihin (Raamattu, SIMULAATTORIEN OMISTUS); simulaattori sammutetaan lopuksi, jos se ei ollut päällä.
@@ -15,8 +16,14 @@ mkdir -p $OUT; OUT=${OUT:A}
 oli_paalla=$(xcrun simctl list devices booted | grep -c $UDID)
 xcrun simctl boot $UDID 2>/dev/null; xcrun simctl bootstatus $UDID -b >/dev/null
 xcrun simctl terminate $UDID $BID 2>/dev/null
-xcrun simctl uninstall $UDID $BID 2>/dev/null
-xcrun simctl install $UDID $APP || { echo "VIKA: asennus"; exit 1; }
+if [[ -z $LAMMIN ]]; then
+  xcrun simctl uninstall $UDID $BID 2>/dev/null
+  xcrun simctl install $UDID $APP || { echo "VIKA: asennus"; exit 1; }
+else
+  # LAMMIN=1: välimuistit jäävät (edellinen ajo); vain edellisen ajon mittaritiedostot pois.
+  D0=$(xcrun simctl get_app_container $UDID $BID data)/Documents
+  rm -f $D0/verkko-odotus.jsonl $D0/verkko-yhteenveto.json
+fi
 : > $OUT/konsoli.log
 T0=$(date +%s)
 for i in 1 2 3; do
