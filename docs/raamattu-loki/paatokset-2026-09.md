@@ -5587,3 +5587,7 @@ Natiivisepälle: S2 takaisin aloituslennon loppuorbitiin build 15:een. Karttasep
 ## BUILD 14 SAVUKIERROS PASS (LAITETESTAAJA, proto_ref 7f68d1f7, iPHONE: KYLMA KAYNNISTYS, VALINTA, LENTO, ATEENA, REITIT VAIN LIIKUSSA JA HAVIAVAT PERILLA, NOSTO+TEKSTI, RADIO, AVARUUSLINSSI; RAPORTTI 65c523c5c) → FABLE: BUILD 1.0.14 JULKAISIJALLE (25.9.2026 klo 16.20)
 
 Löydökset 93/104/100 tarkistetaan build 14:stä omistajan ja Laitetestaajan seuraavalla kierroksella. iPad-kierros jäi tekemättä (aika).
+
+## OMISTAJA klo 16.2x (SITOVA, ESILATAUSPOLITIIKAN TARKENNUS): MOBIILIDATA LATAA AINA SAMAT KUIN WIFI — SUOMESSA WIFI JA MOBIILI OVAT KAYTANNOSSA SAMA ASIA; VERKKOTYYPIN EROTTELU (JA < 5 Mt -RAJA) MIETITAAN ERIKSEEN, JOS TULEE JULKAISU YHDYSVALTOIHIN; VIRRANSAASTOTILA PYSAYTTAA EDELLEEN KOHDAT 4–5 (25.9.2026 klo 16.21)
+
+Raamattu päivitetty; Pelikoodarille ja Siirtosepälle tieto (verkkotyypin tunnistus jää valmiuteen, ei rajoita).
