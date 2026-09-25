@@ -26,6 +26,12 @@ namespace Matkakirja
     /// pelaajan maa vaihtuu (sama kuin väritasolla ja ääriviivalla: <see cref="Varitaso.Kohde"/>), tunnuskartta
     /// rasteroidaan taustasäikeessä vain sen maan alueista maan omaan rajaukseen ja rajajanat rakennetaan vain maan
     /// kaarista. Napautus, korostus ja <see cref="MaaPisteessa"/> koskevat nykyisen maan alueita.
+    ///
+    /// MAAKUNTIEN TÄYTTÖ (WEB ON MALLI, Fable 25.9.2026): maakohtainen kerros täyttää alueet webin paletista
+    /// (js/pallomaakunnat.js MAAKUNNAT_PALETTI, peitto 0,34, värinumero <see cref="Maakuntajako.Varita"/>), eikä perussävyn
+    /// täyttöä käytetä. Korostettu alue (Korosta, B17 `maakunta ISO3:tunnus`) saa webin valitun sävyn (väri × 0,62 / 0,34)
+    /// ja korostuksen rajan kuten ennen. Täyttö häipyy sisään 260 ms ease-out, kun maa vaihtuu ja kun kerros tulee
+    /// näkyviin (web haivyta). Maatila (maakohtainen pois) ei muutu.
     /// </summary>
     public class MaaKartta : MonoBehaviour, IMaaKartta
     {
@@ -91,6 +97,12 @@ namespace Matkakirja
         string rakennettu;
         float seuraavaTarkistus;
         Vector4 alue = new Vector4(-180, 90, 360, 180);
+        // Maakohtainen täyttö: alueen värinumero (tunnus → vari), häiveen alku (unscaledTime, < 0 = ei käynnissä),
+        // nykyinen häive shaderille ja näkyikö kuori viimeksi (näkyviin tulo käynnistää häiveen).
+        readonly Dictionary<string, int> varit = new Dictionary<string, int>();
+        float haiveAlku = -1f;
+        float haive = 1f;
+        bool nakyi;
 
         void Start()
         {
@@ -138,6 +150,9 @@ namespace Matkakirja
         /// <summary>Kuori heti; vektorirajat häivytetään LateUpdatessa tiheyden mukaan (Viivaleveys.AluerajaHaive).</summary>
         void PaivitaNakyvyys()
         {
+            bool nakyy = NakyyNyt;
+            if (maakohtainen && nakyy && !nakyi) AloitaHaive();
+            nakyi = nakyy;
             if (kuori != null) kuori.enabled = NakyyNyt;
             if (rajat != null && !NakyyNyt) { rajaHaive = 0f; rajat.enabled = false; }
         }
@@ -365,6 +380,8 @@ namespace Matkakirja
                 yield break;
             }
             indeksi.Clear();
+            varit.Clear();
+            string edellinen = NykyinenMaa;
             NykyinenMaa = rj != null ? maa : null;
             if (rj == null)
             {
@@ -375,7 +392,13 @@ namespace Matkakirja
                 Debug.Log($"MATKAKIRJA maakunnat: {(string.IsNullOrEmpty(maa) ? "ei maata" : maa + ": ei maakuntia")}");
                 yield break;
             }
-            for (int i = 0; i < rj.Alueet.Count; i++) indeksi[rj.Alueet[i].Id] = i + 1;
+            for (int i = 0; i < rj.Alueet.Count; i++)
+            {
+                indeksi[rj.Alueet[i].Id] = i + 1;
+                varit[rj.Alueet[i].Id] = rj.Varit[i];
+            }
+            // Web asetaMaa → nayta → haivyta: uusi maa häipyy sisään (rypään vaihto samassa maassa ei).
+            if (maa != edellinen) AloitaHaive();
             osuma = new MaaOsuma(rj.Alueet);
             var vanha = tunnukset;
             tunnukset = new Texture2D(rj.W, rj.H, TextureFormat.R8, false, true)
@@ -470,11 +493,20 @@ namespace Matkakirja
             if (paletti == null) return;
             var px = new Color32[256 * 2];
             Color32 C(Rgba v) => new Color32((byte)(v.R * 255), (byte)(v.G * 255), (byte)(v.B * 255), (byte)(v.A * 255));
+            byte B(double x) => (byte)Math.Round(Math.Min(1, Math.Max(0, x)) * 255);
+            bool lineaarinen = QualitySettings.activeColorSpace == ColorSpace.Linear;
             foreach (var p in indeksi)
             {
                 bool korostettu = korostukset.TryGetValue(p.Key, out var k);
                 var s = korostettu ? k : perus;
-                px[p.Value] = C(s.Taytto);
+                if (maakohtainen)
+                {
+                    // Webin täyttö (Maakuntajako.Taytto): sRGB-väri paletin sRGB-tekstuuriin, alfa jo lineaarisen
+                    // sekoituksen vastine (varjostimen _TayttoEksponentti 1).
+                    var t = Maakuntajako.Taytto(varit.TryGetValue(p.Key, out int v) ? v : 0, korostettu, lineaarinen);
+                    px[p.Value] = new Color32(B(t.R), B(t.G), B(t.B), B(t.A));
+                }
+                else px[p.Value] = C(s.Taytto);
                 // Vektorirajojen kanssa varjostin piirtää vain korostetun alueen rajan.
                 px[256 + p.Value] = rajat != null && !korostettu ? new Color32(0, 0, 0, 0) : C(s.Reuna);
             }
@@ -499,6 +531,11 @@ namespace Matkakirja
             bool rj = rajaus.z > rajaus.x && rajaus.w > rajaus.y;
             if (!maakohtainen && rj) alue = new Vector4(rajaus.x, rajaus.w, rajaus.z - rajaus.x, rajaus.w - rajaus.y);
             kuori.sharedMaterial.SetVector("_Alue", alue);
+            if (maakohtainen)
+            {
+                kuori.sharedMaterial.SetFloat("_TayttoEksponentti", 1f);
+                kuori.sharedMaterial.SetFloat("_Haive", haive);
+            }
             kuori.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             kuori.receiveShadows = false;
             kuori.enabled = false;
@@ -617,8 +654,25 @@ namespace Matkakirja
         /// <summary>Vektorirajojen peiton kerroin 0–1 (0 = piilossa: kaukana, linssissä tai tila pois).</summary>
         public float RajaHaive => rajaHaive;
 
+        /// <summary>Täytön häive alusta (web haivyta: peitto 0 → 0,34 ease-out 260 ms).</summary>
+        void AloitaHaive()
+        {
+            haiveAlku = Time.unscaledTime;
+            haive = 0f;
+            if (kuori != null) kuori.sharedMaterial.SetFloat("_Haive", 0f);
+        }
+
+        void PaivitaHaive()
+        {
+            if (haiveAlku < 0f || kuori == null) return;
+            haive = (float)Maakuntajako.Haive(Time.unscaledTime - haiveAlku);
+            kuori.sharedMaterial.SetFloat("_Haive", haive);
+            if (haive >= 1f) haiveAlku = -1f;
+        }
+
         void LateUpdate()
         {
+            if (maakohtainen) PaivitaHaive();
             if (rajaOma == null || rajat == null || georeferenssi == null) return;
             bool sallittu = NakyyNyt;
             if (!sallittu && rajaHaive <= 0f && !rajat.enabled) return;
