@@ -196,7 +196,14 @@ export const RAAMATTU = {
           + '(Open folder…, Opus 5.5) eivät reagoi System Eventsin click at -klikkiin, näppäimet toimivat; modifier-näppäimiä '
           + '(⌘⇧G) ei käytetä, ne hyppäsivät Chromeen; koordinaatit 2560×1440-näytöllä Avaa {1746,1312}, mallichippi '
           + '{1702,1421}, kirjoituskenttä {1300,1385}, muulla resoluutiolla kuvakaappauksesta. Omistajaa ei tarvita; '
-          + 'Fable ilmoittaa lopuksi rivillä, Trust workspace hyväksytään vain /Users/Shared/Claude/-roolikansioille.',
+          + 'Fable ilmoittaa lopuksi rivillä, Trust workspace hyväksytään vain /Users/Shared/Claude/-roolikansioille. '
+          + 'ROOLIEN KANSIOT JA MALLIT (kaikki /Users/Shared/Claude/ alla; haara = rooli-checkoutin työhaara, '
+          + 'aloitusviesti docs/raportit/viesti-<rooli>-aloitus.md roolin uusimmassa origin-haarassa): '
+          + 'Julkaisija Matkakirja-julkaisija (Opus); Natiiviseppä Matkakirja-3d-selvittaja, haara selvittaja-3d-luovutus (Opus); '
+          + 'Pelikoodari Matkakirja-pelikoodari (Opus); Natiivi-UI Matkakirja-natiivi-ui (Opus); Linssiseppä Matkakirja-linssiseppa (Opus); '
+          + 'Siirtoseppä Matkakirja-siirtoseppa (Opus); Karttaseppä Matkakirja-karttaseppa (Opus); Sisältökirjuri Matkakirja-sisaltokirjuri (Sonnet); '
+          + 'Laitetestaaja Matkakirja-laitetestaaja (Sonnet); Postivahti Matkakirja-posti, haara postivahti (Sonnet); '
+          + 'Fable Matkakirja-fable (Fable). Proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto, erä-worktreet /Users/Shared/Claude/wt/<rooli>-<aihe>.',
         'NATIIVI PELI ETUSIJALLE (omistaja 23.9.2026, sitova; tarkennus klo 16.2x: KOKO PELI '
           + 'KAIKKINE LINSSEINEEN TEHDÄÄN VALMIIKSI NATIIVIIN PYSÄHTYMÄTTÄ, web-kehitys jätetään '
           + 'kesken toistaiseksi, nopeutukset ja lisäsessiot vapaasti käyttöön): peli siirretään natiiviksi '
