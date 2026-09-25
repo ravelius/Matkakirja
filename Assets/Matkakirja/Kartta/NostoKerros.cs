@@ -50,6 +50,16 @@ namespace Matkakirja
         public sealed class Nosto
         {
             public string Id, Tunnus, Aihe, Kategoria, Nimi, Nimio, Maa, KaupunkiAvain, TakyNosto;
+            /// <summary>
+            /// Kohteen tyyppi (web datumin symLaji = kohde.tyyppi: vuori, meri, joki, jarvi, saari, ruoka, tekniikka,
+            /// kaupunki …) tai null. Ratkaisee luonnon merkin (aalto vai kolmio), kuvamerkin tyypin, kaupunkimerkin
+            /// koon ja meren nimiön (NostoSaannot, löydös 125). karttavalot.json ei vielä vie kenttää (data).
+            /// </summary>
+            public string Laji;
+            /// <summary>Kartan minimerkki (NostoSaannot.MiniTunnus): vuori, meri, huuto, elain, ihme tai pisteen kategoria.</summary>
+            public string Minimerkki => NostoSaannot.MiniTunnus(Kategoria, Laji);
+            /// <summary>Kaupunkimerkki (web merkinKerroin 11,5 / 8,5): laji kaupunki tai ilman lajia aihe kaupungit.</summary>
+            public bool Kaupunkimerkki => NostoSaannot.OnKaupunkimerkki(Aihe, Kategoria, Laji);
             /// <summary>Piirtopiste (NostoSaannot.Piirtopiste): webin lukittu `ankkuri` (skeema 1.39), muuten viennin
             /// `ladottu`, puuttuessa oma paikka. Ruutu lasketaan tästä.</summary>
             public double Lat, Lon;
@@ -130,6 +140,19 @@ namespace Matkakirja
         }
         bool linssiNimet;
 
+        /// <summary>
+        /// NIMIÖN MUSTE LINEAARISESSA SEKOITUKSESSA (löydös 125, mitattu proto-3d/lokit/nostot-125): web latoo nimiön
+        /// canvasille sRGB-sekoituksella, natiivin UI Toolkit sekoittaa SDF-reunan lineaarisesti, jolloin sama
+        /// kattavuus a näyttää vaaleammalta ja viiva ohuemmalta (Ateena avauslennon jälkeen, nimiö 4,4 px: mustetta
+        /// −11 %, tummat pikselit keskimäärin ~20 tasoa vaaleampia). Natiivi-UI vahvistaa reunaa samalla musteella:
+        /// REUNA = SDF-ääriviiva (-unity-text-outline-*) lähes nollaleveydellä ja peitolla O: UI Toolkitin varjostin
+        /// (UnityUIE.cginc uie_textcore) antaa reunalle a → F·a + O·a(1 − a); O 0,65 vastaa pergamentilla tumman musteen
+        /// sRGB-sekoitusta (sovitus a 0–1, jäännös 1e-4). POHJA = siirtymätön varjo (text-shadow 0 0 0), a → F·a +
+        /// U·a(1 − a)², heikompi vaihtoehto, jos ääriviiva ei piirry. Ydin (a = 1) ja fonttikoko pysyvät webin.
+        /// Testikomennot `nostot nimio reuna &lt;O&gt; [leveys px]` ja `nostot nimio pohja &lt;U&gt;` (0 = pois).
+        /// </summary>
+        public static float NimionReunaPeitto = 0.65f, NimionReunaLeveys = 0.05f, NimionPohjaPeitto = 0f;
+
         readonly Dictionary<string, List<Nosto>> maittain = new Dictionary<string, List<Nosto>>();
         readonly Dictionary<string, double4> bboxit = new Dictionary<string, double4>(); // länsi, etelä, itä, pohjoinen
         readonly List<Nosto> naytettavat = new List<Nosto>();
@@ -204,6 +227,8 @@ namespace Matkakirja
                         Tunnus = MiniJson.Teksti(a, "tunnus"),
                         Aihe = MiniJson.Teksti(a, "aihe"),
                         Kategoria = MiniJson.Teksti(a, "kategoria"),
+                        // Löydös 125: kohteen tyyppi datasta, kun vienti tuo sen (`laji`, webin datumissa symLaji).
+                        Laji = MiniJson.Teksti(a, "laji") ?? MiniJson.Teksti(a, "symLaji"),
                         Nimi = MiniJson.Teksti(a, "nimi"),
                         Nimio = MiniJson.Teksti(a, "nimio"),
                         Maa = MiniJson.Teksti(a, "maa"),
@@ -383,6 +408,15 @@ namespace Matkakirja
         bool LahiAuki => UloinOsuus > 0 && UloinOsuus <= lahizoomOsuus;
 
         /// <summary>
+        /// Kameran korkeus (m), jolla kartan mittakerroin on <paramref name="kerroin"/> (saapumiskorkeus / kerroin,
+        /// ennen porrastusta); 0 = saapumiskorkeus tuntematon. Testikomento `nostot kerroin` (webin portaat 1, 2, 3,13).
+        /// </summary>
+        public double KorkeusKertoimella(double kerroin) => saapumisKorkeusM > 0 && kerroin > 0 ? saapumisKorkeusM / kerroin : 0;
+
+        /// <summary>Paivittyi herää seuraavassa kehyksessä (testikomento muutti nimiön asua ilman kameran liikettä).</summary>
+        public void Herata() => muuttui = nakymaMuuttui = true;
+
+        /// <summary>
         /// Varaa näytettävien nostojen IKONIT ilman nimiöitä (löydös 50 vaihe 2, web nostot.js KIINTEÄ MUSTE ON
         /// NIMILADONNAN VARAUS, LIIKKUVA EI): NimiLadonta.NostonIkonilaatikko, kerroin = pikseliä pisteelle.
         /// Palauttaa varattujen määrän (0, kun kerros ei ole näkyvissä).
@@ -455,9 +489,22 @@ namespace Matkakirja
                 if (!syyt.TryGetValue(avain, out var nimet)) syyt[avain] = nimet = new List<string>();
                 nimet.Add(s.Nimio ?? s.Nimi);
             }
-            int lahiLippu = 0, ankkuroituja = 0;
-            foreach (var s in lista) { if (s.Lahizoom) lahiLippu++; if (s.Ankkuroitu) ankkuroituja++; }
+            int lahiLippu = 0, ankkuroituja = 0, ilmanLajia = 0;
+            var merkit = new SortedDictionary<string, int>(StringComparer.Ordinal);
+            foreach (var s in lista)
+            {
+                if (s.Lahizoom) lahiLippu++;
+                if (s.Ankkuroitu) ankkuroituja++;
+                if (s.Laji == null) ilmanLajia++;
+                string m = s.Minimerkki;
+                merkit[m] = merkit.TryGetValue(m, out var n) ? n + 1 : 1;
+            }
             b.Append($"; nostoja {lista.Count} (lahizoom-lippu {lahiLippu}, ei porttia; webin ankkurissa {ankkuroituja}), porttien läpi {portista}, näkyy {nakyvat.Count}");
+            // Löydös 125: minimerkit maan nostoille ja lajin puute datassa (ilman lajia luonto on aina kolmio).
+            var mb = new System.Text.StringBuilder();
+            foreach (var p in merkit) mb.Append(mb.Length > 0 ? ", " : "").Append(p.Key).Append(' ').Append(p.Value);
+            b.Append($"; minimerkit {mb}; laji puuttuu {ilmanLajia}/{lista.Count}; nimiön reuna {NimionReunaPeitto:0.##} " +
+                     $"({NimionReunaLeveys:0.###} px), pohja {NimionPohjaPeitto:0.##}");
             foreach (var p in syyt) b.Append($"\n  {p.Key}: {p.Value.Count} — {string.Join(", ", p.Value)}");
             return b.ToString();
         }
