@@ -130291,6 +130291,246 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Rod Waddington, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on koko saari;
+       * opas seuraa etelään vievää kansallistie 7:ää (Antsirabe,
+       * Fianarantsoa, Ambalavao, Anja, Isalo) ja FCE-rataa. Taustatiedot
+       * englannin Wikipediasta (Isalo National Park, Anja Community
+       * Reserve, Ring-tailed lemur, Ambalavao, Antemoro people, Route
+       * nationale 7 (Madagascar), Antsirabe, Ivato International Airport,
+       * Transport in Madagascar, Fianarantsoa-Côte Est railway, Malagasy
+       * ariary, Malagasy cuisine, Nosy Boraha), ranskan Wikipedian
+       * Ambalavao-artikkelista (antemoro-paperi, havoha) ja Wikivoyagen
+       * sivuilta Madagascar, Isalo National Park, Ambalavao, Antsirabe ja
+       * Île Sainte-Marie — teksti omaa. Hinnat, viisumimaksut ja
+       * aukioloajat jätetty pois, koska Wikivoyagen luvut ovat vuosilta
+       * 2014–2020; torin viikonpäivät on merkitty Wikivoyagen tiedoksi.
+       * Sebutorin kokoluokasta lähteet eroavat (Wikivoyage: suurin,
+       * fr-Wikipedia: toiseksi suurin), siksi "saaren suurimpia".
+       * Nostojen aiheita (tsingy, Rova, Andafiavaratra, Ranavalona II,
+       * lähetyskirkot, Toamasinan satama, indri ja Andasibe, baobabien
+       * kuja, pantterikameleontti, fossa, hiirimakit ja Ranomafana),
+       * gallerian ja ennen–nyt-kuvien aiheita (sikidy, Neljän tien
+       * risteys, punainen ylänkö), maalehden aiheita (kanootit, Radama,
+       * Rovan palo, ai-ai, elefanttilintu, katarantus, riisiateriat,
+       * romazava ja sakay, vanilja, koba ja mofo gasy, valiha,
+       * hira gasy, salegy, sorabe, Ibonia, kabary, Rabearivelo) eikä
+       * Afrikan kulttuurinostoja (baobab, valiha, fady) toisteta.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta
+       * ja kuvat katsottu silmin. Pystykuva: Isalon Canyon des Makis ja
+       * Canyon des Rats. Hotelyn liitutaulun hinnat ovat vuodelta 2008.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Canyon des Makis & Canyon des Rats - Isalo-Gebirge.jpg',
+          lyhyt: 'Isalon kanjonin jyrkät hiekkakiviseinät kohoavat vihreän vesialtaan yllä.',
+          selite: 'Canyon des Makis ja Canyon des Rats Isalon kansallispuistossa: '
+            + 'tuuli ja vesi ovat uurtaneet hiekkakiveen kapeita, jyrkkäseinäisiä '
+            + 'rotkoja, joiden pohjalla virtaa vesi ja kasvaa rehevä kasvillisuus.',
+          lahde: 'Andrea Schieber, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Madagaskar on niin suuri ja sen tiet niin huonoja, että '
+          + 'matkailija joutuu valitsemaan: lentää tai hyväksyä, että '
+          + 'taksibussi lähtee vasta, kun jokainen paikka on täynnä. Useimmat '
+          + 'tulevat makien vuoksi, ja kansallispuistoihin mennään paikallisen '
+          + 'oppaan kanssa. Etelään vievän kansallistie 7:n varrella ovat '
+          + 'riksakaupunki Antsirabe, sebutoristaan tunnettu Ambalavao ja '
+          + 'Isalon hiekkakivikanjonit, ja Fianarantsoasta itärannikolle '
+          + 'kulkee juna, joka ylittää matkansa lopussa lentokentän '
+          + 'kiitotien. Taskuun kannattaa varata pieniä ariary-seteleitä ja '
+          + 'muutama sana malagassia.',
+        artikkeli: {
+          nimi: 'Matkailijan Madagaskar',
+          teksti: 'Madagaskarilla makeja katsotaan oppaan kanssa, ja taksibussi lähtee vasta täynnä.',
+          nosto: 'Manakaran lentokentällä juna ja lentokone jakavat saman '
+            + 'asfaltin: rata ylittää kiitotien samassa tasossa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kissamakit ja kanjonit',
+              teksti: 'Useimmat Madagaskarin kävijät tulevat katsomaan makeja, '
+                + 'ja siihen tarvitaan paikallinen opas. Esimerkiksi Isalon '
+                + 'kansallispuistoon saaren lounaisosassa ei saa mennä ilman '
+                + 'opasta, ja oppaat ja kantajat palkataan läheisestä '
+                + 'Ranohiran kylästä. Isalo on hiekkakiviylänkö, jonka tuuli '
+                + 'ja vesi ovat uurtaneet jopa 200 metriä syviksi kanjoneiksi. '
+                + 'Retket kestävät muutamasta tunnista viikkoon, ja kanjonien '
+                + 'pohjalla on luonnonaltaita, joissa voi uida. Seudun '
+                + 'bara-kansa hautaa vainajansa vuorten luoliin, joita pidetään '
+                + 'pyhinä, eikä hautoja kuvata ilman lupaa. Kansallistie 7:n '
+                + 'varrella, 13 kilometriä Ambalavaosta etelään, on Anjan '
+                + 'kyläsuojelualue. Kyläläiset perustivat sen vuonna 2001, kun '
+                + 'metsää raivattiin maissipelloiksi ja makeja metsästettiin '
+                + 'ruoaksi. Nykyään alueella elää noin 300 kissamakia, jotka '
+                + 'ovat tottuneet ihmisiin ja päästävät kävijät muutaman metrin '
+                + 'päähän. Ruokkiminen on kuitenkin kielletty, ja '
+                + 'matkailutuloilla rahoitetaan kylän koulutus- ja '
+                + 'terveyshankkeita. Kissamaki, malagassiksi maky, viettää '
+                + 'maassa enemmän aikaa kuin yksikään muu maki, ja viileinä '
+                + 'aamuina lauma istuu yhdessä vatsa aurinkoa kohti '
+                + 'lämmittelemässä.',
+              kuva: [
+                {
+                  tiedosto: 'Ring-Tailed Lemur, Anja Reserve (3953827770).jpg',
+                  lyhyt: 'Kissamaki istuu graniittilohkareella Anjan suojelualueella.',
+                  selite: 'Kissamaki katsoo kameraan graniittilohkareen päältä '
+                    + 'Anjan kyläsuojelualueella; vasemmassa reunassa näkyy '
+                    + 'mustavalkoisesti rengastettua häntää.',
+                  lahde: 'Antony Stanley, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Anja Reserve 01.jpg',
+                  lyhyt: 'Anjan lohkareiden takana on järvi, riisipeltoja ja kylä kallioisen kukkulan juurella.',
+                  selite: 'Näkymä Anjan kyläsuojelualueelta Ambalavaon lähellä: '
+                    + 'etualalla graniittilohkareita ja metsää, alempana järvi, '
+                    + 'vihreitä riisipeltoja ja kylä paljaan kalliokukkulan '
+                    + 'juurella.',
+                  lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Isalo - Namaza - piscine naturelle.jpg',
+                  lyhyt: 'Pieni putous laskee luonnonaltaaseen Isalon Namazan reitin varrella.',
+                  selite: 'Luonnonallas Namazan reitin varrella Isalon '
+                    + 'kansallispuistossa: pieni putous laskee kirkkaaseen '
+                    + 'veteen kallioiden, saniaisten ja puiden keskellä.',
+                  lahde: 'Hardscarf, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Taksibussilla etelään',
+              teksti: 'Useimmat kansainväliset lennot laskeutuvat Ivaton '
+                + 'lentokentälle 16 kilometriä Antananarivon keskustasta '
+                + 'luoteeseen, osa Nosy Been saarelle. Maan sisällä lentäminen '
+                + 'säästää päiviä, sillä useimmat tiet ovat kuoppaisia ja '
+                + 'sadekaudella moni muuttuu mutavelliksi. Kotimaan lentoja '
+                + 'kuitenkin perutaan ja siirretään, joten tiukkoja '
+                + 'jatkoyhteyksiä ei kannata varata, ja lähtöaika kannattaa '
+                + 'varmistaa edellisenä iltana. Malagassit itse matkustavat '
+                + 'taksibusseilla (taxi-brousse): noin viidentoista hengen '
+                + 'pikkubusseilla, jotka lähtevät vasta täynnä, joten odotus voi '
+                + 'venyä tunneiksi. Kyyti on ahdas, ilmastointia ei ole ja '
+                + 'kuivalla kaudella pöly tunkee sisään, mutta kuljettaja jättää '
+                + 'matkustajan pyynnöstä reitin varrelle, vaikkapa kansallispuiston '
+                + 'kohdalle. Suosituin reitti on kansallistie 7, joka kulkee '
+                + 'pääkaupungista lähes tuhat kilometriä lounaisrannikon '
+                + 'Toliaraan ja on maan paremmin hoidettuja teitä. Varrella ovat '
+                + 'viileä kylpyläkaupunki Antsirabe, jonka kaduilla kulkee '
+                + 'tuhansia värikkäitä pousse-pousse-riksoja, sekä Fianarantsoa, '
+                + 'Ambalavao ja Isalo. Auton voi vuokrata, mutta lähes aina '
+                + 'kuljettajan kanssa, ja kuljettaja toimii usein myös oppaana '
+                + 'ja tulkkina.',
+              kuva: {
+                tiedosto: 'Madagascar - Taxi brousse Nord Sud.jpg',
+                lyhyt: 'Taksibussi kansallistie 7:llä, katolla matkustajien tavarat.',
+                selite: 'Vihreävalkoinen, Nord-Sud-tekstillä merkitty taksibussi '
+                  + 'ajaa kansallistie 7:llä kesäkuussa 2007; matkatavarat on '
+                  + 'köytetty katolle, ja tien varressa ajaa pyöräilijä '
+                  + 'myyntikojun ohi.',
+                lahde: 'Jean-Louis Vandevivère, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Juna kiitoradan poikki',
+              teksti: 'Ylängön Fianarantsoasta itärannikon Manakaraan kulkee '
+                + '163 kilometrin FCE-rata (Fianarantsoa–Côte Est). Ranskalaiset '
+                + 'rakennuttivat sen vuosina 1926–1936 siirtomaan '
+                + 'pakkotyöjärjestelmällä, ja kiskot saatiin Saksalta '
+                + 'ensimmäisen maailmansodan sotakorvauksina; osassa näkyy yhä '
+                + 'valmistusvuosi 1893. Rata laskeutuu noin 1 100 metristä '
+                + 'meren tasolle maailman uhanalaisimpiin kuuluvien metsien '
+                + 'halki. Vuonna 2000 kaksi peräkkäistä hirmumyrskyä aiheutti '
+                + 'radalle 280 maanvyöryä ja katkaisi liikenteen kuukausiksi, '
+                + 'kunnes rata korjattiin ulkomaisella tuella. Samana vuonna '
+                + 'tehdyn selvityksen mukaan junan pitäminen liikenteessä '
+                + 'säästää 20 vuodessa noin 97 000 hehtaaria metsää: radanvarren '
+                + 'kylät vievät junalla torille puissa kasvavia satojaan, ja '
+                + 'ilman junaa ne joutuisivat kaatamaan puunsa ja viljelemään '
+                + 'riisiä tai maniokkia. Manakarassa rata ylittää lentokentän '
+                + 'kiitotien samassa tasossa, ja tällaisia paikkoja tunnetaan '
+                + 'maailmassa vain kolme. Kalusto on vanhaa, ja katkenneet '
+                + 'kiskot, vaunujen viat ja myrskyjen maanvyöryt keskeyttävät '
+                + 'liikenteen usein. Aikataulu kannattaa siksi tarkistaa paikan '
+                + 'päällä juuri ennen matkaa.',
+              kuva: {
+                tiedosto: 'Rail-run-way-crossing.jpg',
+                lyhyt: 'FCE-radan juna ja pienkone kohtaavat Manakaran lentokentän kiitotiellä.',
+                selite: 'Manakaran lentokentällä rata leikkaa kiitotien samassa '
+                  + 'tasossa: punainen FCE-veturi seisoo kiskoilla, kun '
+                  + 'yksimoottorinen potkurikone rullaa sateenmärällä '
+                  + 'kiitotiellä lokakuussa 2009.',
+                lahde: 'chirlula, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Sebutori ja kukkapaperi',
+              teksti: 'Ambalavao on pieni kaupunki keskiylängön eteläreunalla, '
+                + '56 kilometriä Fianarantsoasta etelään kansallistie 7:n '
+                + 'varrella, ja sen asukkaat ovat enimmäkseen betsileoja. '
+                + 'Kaupungissa pidetään kahdesti viikossa sebumarkkinat, '
+                + 'Wikivoyagen mukaan keskiviikko- ja torstaiaamuisin, ja ne '
+                + 'ovat saaren suurimpia karjatoreja. Kaupungin keskustassa voi '
+                + 'käydä antemoro-paperin pajassa. Paperimassa tehdään '
+                + 'havoha-pensaan, erään mulperilajin, kuoresta, ja vielä '
+                + 'märän arkin pintaan painetaan kukkia ja lehtiä ennen kuin '
+                + 'arkki kuivataan. Taito on peräisin kaakkoisrannikon '
+                + 'antemoro-kansalta, ja nykyään kukka-arkkeja myydään '
+                + 'etenkin matkailijoille ja ulkomaille. Kaupungin '
+                + 'pohjoisosassa voi käydä silkkikutomossa: Ambalavaon silkki '
+                + 'saadaan erityisestä silkkiperhoslajista, jonka toukat '
+                + 'syövät tapia-puun lehtiä. Samaa puuta kasvaa laajimpina '
+                + 'yhtenäisinä metsikköinä juuri Isalossa. Torilla ja kylissä '
+                + 'ihmisiä kuvataan vain luvan kanssa, ja syrjäiseen kylään '
+                + 'asialle tultaessa on tapana tervehtiä ensin kylän '
+                + 'päämiestä.',
+              kuva: {
+                tiedosto: 'Zebu Market Ambalavao Madagascar.jpg',
+                lyhyt: 'Sebukarjaa ja kauppiaita Ambalavaon karjatorilla punamultaisten kukkuloiden keskellä.',
+                selite: 'Ambalavaon sebutorilla karjaa pidetään ryhmissä '
+                  + 'ruohikolla, ja ihmisiä kulkee punamultaista polkua pitkin '
+                  + 'kohti torin keskustaa; monella on kädessään paimensauva.',
+                lahde: 'JialiangGao, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Pieniä seteleitä ja tompoko',
+              teksti: 'Madagaskarin raha on ariary. Se on toinen maailman '
+                + 'kahdesta valuutasta, joita ei jaeta sadasosiin tai '
+                + 'kymmenyksiin: ariary jakautuu viiteen iraimbilanjaan, mutta '
+                + 'pikkuyksiköllä ei ole enää käytännössä arvoa. '
+                + 'Pankkiautomaatteja on isommissa kaupungeissa, mutta ne ovat '
+                + 'usein epäkunnossa, joten euroja tai dollareita kannattaa '
+                + 'pitää varalla. Pieniä seteleitä tarvitaan: suurella setelillä '
+                + 'maksaminen herättää huomiota, eikä myyjällä usein ole '
+                + 'vaihtorahaa. Edullisimmin syö hotelyssä. Nimestään huolimatta '
+                + 'se on ruokapaikka eikä hotelli, ja riisin kanssa saa '
+                + 'päivän lisukkeen. Katukioskien kahvi juodaan '
+                + 'makeana kondensoidun maidon kanssa, mutta hanavettä ei '
+                + 'juoda. Koko saarella puhutaan malagassia, ja ranska on '
+                + 'toinen virallinen kieli. Muutama malagassin sana ilahduttaa, '
+                + 'ja vanhempia ihmisiä ja virkailijoita puhutellaan '
+                + 'kohteliaisuussanalla tompoko. Sadekausi kestää marraskuusta '
+                + 'huhtikuuhun, ja silloin itärannikolle iskee hirmumyrskyjä. '
+                + 'Toukokuusta lokakuuhun on kuivempaa ja viileämpää, ja '
+                + 'kesä–syyskuussa ryhävalaat saapuvat Sainte-Marien saaren ja '
+                + 'mantereen väliseen salmeen parittelemaan ja poikimaan. '
+                + 'Antananarivossa ei pidä kävellä pimeällä, ja hyttysiltä on '
+                + 'suojauduttava hämärän tultua. Verkon matkaoppaiden tiedot '
+                + 'vanhenevat nopeasti, joten turvallisuus- ja terveystiedot '
+                + 'kannattaa tarkistaa juuri ennen lähtöä.',
+              kuva: {
+                tiedosto: 'Hotely menu Madagascar.jpg',
+                lyhyt: 'Hotelyn liitutaululle on kirjoitettu päivän ruoat ja niiden hinnat ariaryinä.',
+                selite: 'Hotelyn taulussa lukee Sakafo anio, päivän ruoka: '
+                  + 'listalla on muun muassa kanaa, kalaa, pihviä ja keittoja '
+                  + 'riisin tai ranskalaisten kanssa. Kuva on vuodelta 2008, '
+                  + 'eivätkä hinnat enää päde.',
+                lahde: 'Hery Zo Rakotondramanana, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
