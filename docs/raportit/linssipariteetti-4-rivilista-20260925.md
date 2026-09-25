@@ -12,7 +12,7 @@ Työkalussa pitää olla mukana #3195 (kerronnan odotus).
 
 ```
 PARITEETTI_IPHONE_UDID=D0D2CD1E-… PARITEETTI_VAAKA_UDID=D0D2CD1E-… PARITEETTI_IPAD11_UDID=903C2B91-… \
-  node tools/pariteetti-ajo.mjs --build b13-linssit-4 --rivit 11,12,13,30,31,37,38,39,40,41 --laitteet <laite>
+  node tools/pariteetti-ajo.mjs --build b13-linssit-4 --rivit 11,12,13,30,31,37,38,39,40,41,42,43 --laitteet <laite>
 ```
 
 ## A. Koko linssitaulu kaikilla laitteilla (regressio)
@@ -43,12 +43,14 @@ Rivin 39 tekstiero on pieni, mutta kuva tarkistetaan aina kontaktiarkista: alapa
    "reilusti". Natiiviseppä huomautti, että natiivi on reunoilta hieman utuisempi kuin web.
 3. **Kotimaan korostus muissa tiloissa** (Natiivisepän huomio): kartta ilman linssiä (rivi 22) ja maatiedot (rivi 41).
    Kotimaan kehä ja reliefi pitää näkyä vain kotimaassa.
-4. **Linssit ilman riviä:** natiivin `isoisa-1873` ja webin `pallo` (karttapallon toiminto) eivät ole pariteettitaulussa.
-   Selvitetään webin vastine ja lisätään rivi, tai kirjataan, ettei vertailua tehdä.
+4. **Linssit ilman riviä (Fablen päätös 25.9.: taulu kattaa molempien puolten kaikki linssit):** työkaluun lisättiin
+   rivi 42, jossa webin karttapallo vastaa natiivin koko palloa ruudulla (PUUTTUU natiivista, jos sisältö ei vastaa),
+   ja rivi 43, jossa on natiivin `isoisa-1873` tilassa VAIN-NATIIVISSA (ei ERI, mutta näkyy taulussa). Ajo:
+   `--rivit 11,12,13,30,31,37,38,39,40,41,42,43`.
 5. **Radio build 13:** paneeli, mastot, hämärä, veto ja sulku. Yövalot odottavat Karttasepän Black Marblea.
 
 ## C. Valmis, kun
 
 - iPhone, iPad ja vaaka: 0 riviä yli 16 px, jotka eivät ole hyväksyttyjä poikkeamia
-- kohdan B tarkistukset 1–3 ok ja kohta 4 päätetty
+- kohdan B tarkistukset 1–3 ok, ja rivit 42–43 ajettu
 - omistajan build-kokeilusta ei tule uusia linssilöydöksiä
