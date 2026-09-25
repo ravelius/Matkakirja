@@ -334,7 +334,8 @@ namespace Matkakirja.Natiivi
             var ylakulma = P(saari.xMin, saari.yMin);
             var alakulma = P(saari.xMax, saari.yMax);
             // Löydös 73: matalalla palkilla pilleri ja ☰ Dynamic Islandin korkuisina ja sen korkeudella.
-            float saarenKorkeus = saari.height > 0 ? alakulma.y - ylakulma.y : 0f;
+            // ScreenToPanel kääntää y-akselin (pisteet annetaan yläreunasta), joten korkeus itseisarvona.
+            float saarenKorkeus = saari.height > 0 ? Mathf.Abs(alakulma.y - ylakulma.y) : 0f;
             if (matala && saarenKorkeus > 20f * yksikko) rivi = saarenKorkeus;
             float napinKorkeus = matala ? rivi : float.NaN;
             foreach (var e in new VisualElement[] { pilleri, Valikko })
