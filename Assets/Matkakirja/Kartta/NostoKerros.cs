@@ -151,6 +151,12 @@ namespace Matkakirja
             if (Instanssi == this) Instanssi = null;
             if (kierto != null) kierto.NakymaMuuttui -= Muuttui;
         }
+
+        // LÄMPÖERÄ (PallonLepo): syttyminen 0,7 s saapumisportin jälkeen. Merkit piirtää Natiivi-UI (UI Toolkit, oma
+        // lepokysely), mutta syttyminen alkaa kameran pysähdyttyä, joten pallo pysyy hereillä sen ajan.
+        void OnEnable() => PallonLepo.Animoi(Syttyy, "nostot: syttyminen");
+        void OnDisable() => PallonLepo.Poista(Syttyy);
+        bool Syttyy() => Nakyvissa && Syttyminen < 1f;
         void Start()
         {
             if (kierto != null) kierto.NakymaMuuttui += Muuttui;

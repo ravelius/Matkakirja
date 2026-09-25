@@ -49,6 +49,26 @@ namespace Matkakirja
             naytetty = Nakyy;
             foreach (var p in pisteet.Values)
                 if (p.Olio != null && p.Olio.TryGetComponent<MeshRenderer>(out var r)) r.enabled = naytetty;
+            PallonLepo.Muuttui("karttapisteet");
+        }
+
+        // LÄMPÖERÄ (PallonLepo): avoimen pisteen syke on JATKUVA idle-animaatio, joka näkyy tavallisessa lepokartassa.
+        // Nykyinen ilme säilyy: ruudulla oleva avoin piste pitää pallon hereillä (30 fps), ruudun ulkopuolinen ei.
+        void OnEnable() => PallonLepo.Animoi(Sykkii, "karttapisteet: syke");
+        void OnDisable() => PallonLepo.Poista(Sykkii);
+
+        bool Sykkii()
+        {
+            if (!naytetty || sykeMaara == 0f || georeferenssi == null) return false;
+            var kamera = PallonLepo.Kamera;
+            if (kamera == null) return false;
+            var gt = georeferenssi.transform;
+            float reuna = sade * (1f + sykeMaara) * PalloKierto.Pistekerroin;
+            foreach (var p in pisteet.Values)
+                if (!p.Lukittu && p.Olio != null && p.Olio.activeInHierarchy
+                    && PallonLepo.PinnallaRuudulla(kamera, gt.TransformPoint(p.Paikka), gt.TransformDirection(p.Normaali), reuna))
+                    return true;
+            return false;
         }
 
         void Start()
@@ -95,6 +115,7 @@ namespace Matkakirja
             p.Oma.SetFloat("_Koko", p.Koko);
             p.Oma.SetVector("_Keskus", (Vector3)(float3)keskus);
             p.Olio.SetActive(true);
+            PallonLepo.Muuttui("karttapisteet");
         }
 
         void Update()
@@ -110,6 +131,7 @@ namespace Matkakirja
             if (!pisteet.TryGetValue(id, out var p)) return;
             Destroy(p.Olio);
             pisteet.Remove(id);
+            PallonLepo.Muuttui("karttapisteet");
         }
 
         static Mesh Verkko(Vector3 paikka, Color vari)

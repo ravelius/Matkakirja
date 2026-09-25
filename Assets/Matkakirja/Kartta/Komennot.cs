@@ -41,11 +41,21 @@ namespace Matkakirja
     ///   pohjoinen [s]             pohjoinen ylös (PalautaPohjoinen, kuin tuplanapautus tai kompassinappi)
     ///   hiljaa | aanet            koko sovellus mykäksi / äänet takaisin (laitetestit)
     ///   alue|offline lataa|peru|poista <ISO3|maailma> | offline tila   offline-lataus (Alueet)
-    ///   palvelin                  laattapalvelimen osumat lokiin (offline / välimuisti / verkko) ja maastoluokan laskurit
+    ///   palvelin                  laattapalvelimen osumat lokiin (paketti / offline / välimuisti / verkko) ja maastoluokan
+    ///                             laskurit
     ///   palvelin loki paalle|pois epäonnistuneet haut lokiin: "MATKAKIRJA palvelin virhe luokka polku koodi yritykset ms
     ///                             seuraus" (löydös 119)
     ///   palvelin maastouusinta paalle|pois   maastolaattaa ei palauteta Cesiumille virheenä verkkovirheen takia, vaan
     ///                             uusitaan 0,5–8 s:n välein niin kauan kuin Cesium odottaa (oletus päällä; löydös 119)
+    ///   valmius seuraa [s]        pallon valmiusasteen seuranta lokiin 0,5 s välein (oletus 30 s; Valmius.cs, löydös 80):
+    ///                             ComputeLoadProgress, Cesiumin valintatilasto, raster-kerrokset, palvelimen jonot, kameran liike
+    ///   valmius auto paalle [s] | valmius auto pois   sama seuranta aloitusverhon ja mustan verhon alussa (PlayerPrefs
+    ///                             matkakirja-valmius-auto tai Documents/valmius-auto.txt, oletus 12 s; voimaan seuraavista
+    ///                             verhoista, myös käynnistyksessä; simulaattorissa xcrun simctl spawn &lt;UDID&gt; defaults write …)
+    ///   valmius tila | valmius pois   yksi näyte heti / käynnissä olevat seurannat loppuun (yhteenveto)
+    ///   valmius kevennys pois|paalle   verhon kevennys (Laattapalvelin: näkyvä jono 24 rinnakkain, tausta tauolla) pois
+    ///                             A/B-mittaukseen; muistetaan (PlayerPrefs matkakirja-valmius-kevennys-pois tai
+    ///                             Documents/valmius-kevennys-pois.txt), voimaan seuraavista verhoista
     ///   valot <aihe>|kaikki|ei|tila     karttavalot (AiheValot), tila = laskurit lokiin
     ///   valot osoita <id>               napauttaa valon kohtaa (esim. skandaali:shakkiturkkilainen)
     ///   maakunta <ISO3:tunnus>|pois|tila | maakunta maa ISO3|pois   maakunnan värjäys (B17); maa = pakotettu kerroksen maa
@@ -104,6 +114,13 @@ namespace Matkakirja
     ///                             (KarttaKerrokset.Linssisiirto; oletus kesto 0,8 s)
     ///   s2meri r g b kynnys       Sentinelin meren värjäys heti (sRGB 0–1 tai 0–255; kynnys = sRGB-luma, 0 = pois;
     ///                             oletus 17 46 92 0.18)
+    ///   pallo lepo                pallon lepotila ja syy lokiin (PallonLepo: kamera, tilesetit, palvelin, herätys ja
+    ///                             käynnissä olevat kartan animaatiot); ei herätä palloa
+    ///   hdr pois|paalle|oletus|tila   pallon kameran HDR (LampoSaadot; oletus ennallaan päällä) kuvapariin
+    ///   varjot pois|auto|paalle|tila  päävalon varjot (LampoSaadot; oletus pois = nykyinen ilme, auto = vain kun
+    ///                             maamerkki on ruudulla, varjokartan etäisyys maamerkeistä)
+    /// Jokainen muu komento herättää pallon hetkeksi (PallonLepo.Muuttui), jotta muutos piirtyy heti myös lepopiirrossa,
+    /// ja kuva piirtää tuoreen kehyksen (Ruudunpaivitys.Herata).
     /// </summary>
     public class Komennot : MonoBehaviour
     {
@@ -369,10 +386,38 @@ namespace Matkakirja
                     AudioListener.volume = o[0] == "hiljaa" ? 0f : 1f;
                     break;
                 case "kuva":
+                    // Lepopiirrossa (Ruudunpaivitys PAIKALLAAN) kehys piirretään vain 2 s välein: kaappaukseen tuore kehys.
+                    Ruudunpaivitys.Herata(0.5f);
                     // Mobiilissa polku on suhteellinen persistentDataPathiin.
                     ScreenCapture.CaptureScreenshot(Application.isMobilePlatform
                         ? o[1] + ".png" : Path.Combine(Application.persistentDataPath, o[1] + ".png"));
                     break;
+                case "pallo" when o.Length > 1 && o[1] == "lepo":
+                    // Lämpöerä: pallon lepotila ja syy (PallonLepo.Kuvaus); ei herätä palloa (ks. loppu).
+                    Debug.Log(PallonLepo.Kuvaus());
+                    break;
+                case "hdr":
+                {
+                    // hdr pois|paalle|oletus|tila (LampoSaadot, kuvapari): oletus = ennallaan päällä (HdrOletus).
+                    string m = o.Length > 1 ? o[1] : "tila";
+                    var p = Lampopaatos.PaalleTaiPois(m);
+                    if (p.HasValue) LampoSaadot.Hdr = p.Value;
+                    else if (m == "oletus") LampoSaadot.Hdr = LampoSaadot.HdrOletus;
+                    else if (m != "tila") { Debug.LogWarning("MATKAKIRJA komento: hdr pois|paalle|oletus|tila, ei " + m); return; }
+                    Debug.Log("MATKAKIRJA lämpösäädöt: " + LampoSaadot.Kuvaus());
+                    break;
+                }
+                case "varjot":
+                {
+                    // varjot pois|auto|paalle|tila (LampoSaadot, kuvapari): oletus pois (nykyinen ilme, VarjoOletus).
+                    string m = o.Length > 1 ? o[1] : "tila";
+                    var t = Lampopaatos.VarjoTilaksi(m);
+                    if (t.HasValue) LampoSaadot.Varjot = t.Value;
+                    else if (m == "oletus") LampoSaadot.Varjot = LampoSaadot.VarjoOletus;
+                    else if (m != "tila") { Debug.LogWarning("MATKAKIRJA komento: varjot pois|auto|paalle|oletus|tila, ei " + m); return; }
+                    Debug.Log("MATKAKIRJA lämpösäädöt: " + LampoSaadot.Kuvaus());
+                    break;
+                }
                 case "kaupunki":
                     if (!merkit.ValitseKaupunki(o[1])) Debug.LogWarning("MATKAKIRJA komento: ei kaupunkia " + o[1]);
                     break;
@@ -709,10 +754,31 @@ namespace Matkakirja
                     // palvelin | palvelin loki paalle|pois | palvelin maastouusinta paalle|pois (löydös 119)
                     if (o.Length > 2 && o[1] == "loki") Laattapalvelin.Loki = o[2] == "paalle";
                     else if (o.Length > 2 && o[1] == "maastouusinta") Laattapalvelin.MaastoUusinta = o[2] == "paalle";
-                    Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} offline {Laattapalvelin.Offline}, " +
+                    Debug.Log($"MATKAKIRJA laattapalvelin: {Laattapalvelin.Juuri} paketti {Laattapalvelin.Paketista}" +
+                              $" ({(Laattapalvelin.Paketti != null ? Laattapalvelin.Paketti.Laattoja + " laattaa" : "ei")}), offline {Laattapalvelin.Offline}, " +
                               $"välimuisti {Laattapalvelin.Valimuistista}, verkko {Laattapalvelin.Verkosta}, virheitä {Laattapalvelin.Virheita}, varalaattoja {Laattapalvelin.Varakuvia}");
                     Debug.Log(Laattapalvelin.MaastoKuvaus());
                     break;
+                case "valmius":
+                {
+                    // valmius seuraa [s] | valmius auto paalle [s] | valmius auto pois | valmius kevennys pois|paalle | valmius tila | valmius pois
+                    string m = o.Length > 1 ? o[1] : "tila";
+                    if (m == "seuraa") Valmius.Seuraa("komento", o.Length > 2 ? (float)D(2) : 30f);
+                    else if (m == "auto" && o.Length > 2)
+                    {
+                        Valmius.AutoS = o[2] == "paalle" ? (o.Length > 3 ? (float)D(3) : Valmius.AutoOletusS) : 0f;
+                        Debug.Log($"MATKAKIRJA valmius: auto {(Valmius.AutoS > 0f ? Valmius.AutoS.ToString("0.#") + " s" : "pois")} (seuraavista verhoista)");
+                    }
+                    else if (m == "kevennys" && o.Length > 2)
+                    {
+                        // valmius kevennys pois|paalle: verhon kevennys A/B-mittaukseen (muistetaan PlayerPrefsissä)
+                        Valmius.KevennysPois = o[2] == "pois";
+                        Debug.Log($"MATKAKIRJA valmius: kevennys {Valmius.KevennysTila()} (seuraavista verhoista)");
+                    }
+                    else if (m == "pois") Valmius.Lopeta();
+                    else Valmius.Tila();
+                    break;
+                }
                 case "valot":
                 {
                     // valot <aihe> | valot kaikki | valot ei | valot tila (laskurit lokiin)
@@ -816,7 +882,28 @@ namespace Matkakirja
                     Debug.LogWarning("MATKAKIRJA komento: tuntematon " + rivi);
                     return;
             }
+            // Lämpöerä: muutos näkyviin heti myös lepopiirrossa (PAIKALLAAN piirtää vain 2 s välein).
+            if (Herattaa(o)) PallonLepo.Muuttui("komento " + o[0]);
             Debug.Log("MATKAKIRJA komento: " + rivi);
+        }
+
+        /// <summary>Muuttaako komento kuvaa: kyselyt, odotus ja mittaus eivät herätä palloa (lepomittaukset pysyvät puhtaina).</summary>
+        static bool Herattaa(string[] o)
+        {
+            switch (o[0])
+            {
+                case "odota":
+                case "mittaus":
+                case "palvelin":
+                case "suodatus":
+                    return false;
+                case "pallo" when o.Length > 1 && o[1] == "lepo":
+                    return false;
+                case "pallo" when o.Length > 2 && o[1] == "pohja" && o[2] == "tila":
+                    return false;
+                default:
+                    return !(o.Length > 1 && o[1] == "tila");
+            }
         }
     }
 }

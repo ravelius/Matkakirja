@@ -152,6 +152,13 @@ namespace Matkakirja
         void Awake() => Instanssi = this;
         void OnDestroy() { if (Instanssi == this) Instanssi = null; }
 
+        // LÄMPÖERÄ (PallonLepo): nimien syttyminen ja sammuminen (haiveS 0,25 s) jatkuu kameran pysähdyttyä, ja levossa
+        // ladonta ajetaan lepoVali-välein (varaukset voivat muuttua ilman kameraa, esim. nostojen ikonit).
+        void OnEnable() => PallonLepo.Animoi(Haivyttaa, "aluenimet");
+        void OnDisable() => PallonLepo.Poista(Haivyttaa);
+        bool Haivyttaa() => haivyttaa;
+        bool haivyttaa;
+
         /// <summary>Vanha kohtaus (ei Rakennus.LuoPallo tämän jälkeen): kerros liitetään kaupunkimerkkien olioon.</summary>
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         static void Liita()
@@ -441,6 +448,7 @@ namespace Matkakirja
         {
             float askel = haiveS > 0f ? Time.unscaledDeltaTime / haiveS : 1f;
             bool aaltoja = false;
+            haivyttaa = false;
             for (int i = 0; i < rivit.Count; i++)
             {
                 var r = rivit[i];
@@ -448,14 +456,16 @@ namespace Matkakirja
                 float a = Mathf.MoveTowards(r.alfa, tavoite, askel);
                 if (a <= 0f)
                 {
+                    if (r.alfa > 0f) haivyttaa = true;
                     r.alfa = 0f;
                     Vapauta(r);
                     continue;
                 }
                 if (r.tmp == null && !Varaa(r)) { r.alfa = 0f; continue; }
                 bool muuttui = a != r.alfa;
+                if (muuttui) haivyttaa = true;
                 r.alfa = a;
-                if (r.tmpTaso != r.taso || r.tmpKaannetty != r.kaannetty) Aseta(r);
+                if (r.tmpTaso != r.taso || r.tmpKaannetty != r.kaannetty) { Aseta(r); haivyttaa = true; }
                 if (muuttui || !r.tmp.enabled)
                 {
                     var v = r.vari;

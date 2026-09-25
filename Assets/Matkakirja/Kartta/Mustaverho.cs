@@ -34,6 +34,11 @@ namespace Matkakirja
             return instanssi;
         }
 
+        // LÄMPÖERÄ (PallonLepo): häivytys käynnissä (0,5 s mustaan ja takaisin); uGUI ei kuulu UI:n lepokyselyyn.
+        void OnEnable() => PallonLepo.Animoi(Haivyttaa, "mustaverho");
+        void OnDisable() => PallonLepo.Poista(Haivyttaa);
+        bool Haivyttaa() => ajo != null;
+
         void Awake()
         {
             var canvas = gameObject.AddComponent<Canvas>();
@@ -67,6 +72,7 @@ namespace Matkakirja
             if (instanssi == null) return;
             if (instanssi.ajo != null) instanssi.StopCoroutine(instanssi.ajo);
             instanssi.ajo = null;
+            if (instanssi.ryhma.alpha > 0f) PallonLepo.Muuttui("mustaverho");
             instanssi.ryhma.alpha = 0f;
             instanssi.ryhma.blocksRaycasts = false;
         }

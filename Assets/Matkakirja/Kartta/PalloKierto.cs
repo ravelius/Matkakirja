@@ -150,6 +150,8 @@ namespace Matkakirja
         /// <summary>Kamera on aloituspallotilassa (PorttiSumea luettu tässä kehyksessä).</summary>
         public bool Portissa => porttiTila;
         bool porttiTila;
+        /// <summary>Käynnistyksen porttiasento asetettu (kerran, aloitusverhon takana).</summary>
+        bool alkuAsento;
         PalloSumennus sumennus;
         Etusivulento etusivulento;
 
@@ -165,9 +167,20 @@ namespace Matkakirja
         /// <summary>Testikomento "etusivu pysayta|jatka": kierrosaika seis (kuvaus samasta hetkestä kuin web).</summary>
         public static bool PorttiAikaSeis { get; set; }
 
-        /// <summary>Onko sormi ruudulla, liukuma tai kamera-ajo käynnissä (kehysmittari lukee).</summary>
+        /// <summary>
+        /// Onko sormi ruudulla, liukuma tai kamera-ajo käynnissä (kehysmittari lukee; Ruudunpaivitys: täysi taajuus).
+        /// Lämpöerä (25.9.): myös kameran omat liikkeet, joita ennen ei laskettu: lennon suuntiman ja katseen palautus
+        /// (Palauta) ja pallon oma pyöritys ennen ensimmäistä kosketusta. Muuten ne olisivat vain PallonLepon kameraehdon
+        /// varassa (LEPO 30 fps), eikä liikkeen sulavuus saa huonontua (Raamattu).
+        /// </summary>
         public bool Liikkeessa => edellinenSormia > 0 || math.lengthsq(liuku) > 1e-4 || ajo != null || Seurataan || porttiTila || pohjoiseen
-                                  || LinssisiirtoLiukuu;
+                                  || LinssisiirtoLiukuu || Palautuu || PyoriiItse;
+
+        /// <summary>Lennon suuntima tai katseen korkeus palautuu (Update → Palauta).</summary>
+        bool Palautuu => !Seurataan && ((lennonSuuntima && suuntima != 0) || katseKorkeus != 0);
+
+        /// <summary>Pallo pyörii itsestään (Ohjaa: ei vielä kosketusta eikä ajoa, ei porttia).</summary>
+        bool PyoriiItse => Application.isPlaying && !kosketettu && ajo == null && !porttiTila && nopeus != 0.0 && georeferenssi != null;
 
         /// <summary>Nappula ohjaa kameraa (Nappula.seuraaKamera): kamera katsoo annettua pistettä.</summary>
         public bool Seurataan { get; private set; }
@@ -431,10 +444,19 @@ namespace Matkakirja
             EnhancedTouchSupport.Enable();
             // Saapumisnäkymän maarajat (web saapumisrajaus): ladataan kerran taustalla.
             StartCoroutine(Saapumisrajaus.Lataa());
+            PallonLepo.Animoi(SumennusLiukuu, "pallon sumennus");
         }
+
+        /// <summary>
+        /// PallonLepo: portin tai kuvasumennuksen häivytys käynnissä (0,4 / 0,3 s). Sumennus on jälkikäsittely eikä
+        /// muuta kameraa, joten kameraehto ei näe sitä. Portin linssin liuku muuttaa projektiota (kameraehto näkee).
+        /// </summary>
+        bool SumennusLiukuu() => sumennusLiukuu;
+        bool sumennusLiukuu;
 
         void OnDisable()
         {
+            if (Application.isPlaying) PallonLepo.Poista(SumennusLiukuu);
             if (Application.isPlaying) EnhancedTouchSupport.Disable();
             // Editorissa URP-asetus on tiedosto: renderScale ei saa jäädä portin arvoon.
             sumennus?.Palauta();
@@ -449,6 +471,15 @@ namespace Matkakirja
         {
             PaivitaPeitto();
             if (georeferenssi == null) return;
+            // Kylmä käynnistys (löydös 80, BUILD 16): aloitusverhon takana kamera on heti portin alkuasennossa, jotta
+            // Cesium lataa portin laatat (laattapaketista) sillä aikaa, kun sisältö latautuu. Portti avautui kylmänä vasta
+            // ~2,9 s:n kohdalla (sisältö 1,2 s verkosta), ja siihen asti ladattiin oletusnäkymää (26 600 km).
+            if (Application.isPlaying && !alkuAsento && Aloitusverho.Nakyvissa && !porttiTila && ajo == null && !Seurataan)
+            {
+                alkuAsento = true;
+                PorttiAika = 0;
+                PorttiKierto(0);
+            }
             if (korkeus <= 0.0) korkeus = MaxKorkeus();
             if (Application.isPlaying)
             {
@@ -544,9 +575,12 @@ namespace Matkakirja
                 if (sumennus.Paalla && !Mathf.Approximately(sumennus.sumennusPt, tavoite)) sumennus.Aseta(false);
                 if (!sumennus.Paalla) { sumennus.sumennusPt = tavoite; sumennus.Aseta(true); }
             }
+            sumennusLiukuu = false;
             if (sumennus == null || !sumennus.Paalla) return;
             float askel = (float)dt / Mathf.Max(0.01f, sumennus.sumennusPt >= porttiSumennusPt ? porttiHaivytysS : kuvaHaivytysS);
+            float ennen = sumennus.Osuus;
             sumennus.Osuus += tavoite > 0f ? askel : -askel;
+            sumennusLiukuu = sumennus.Osuus != ennen || tavoite <= 0f;
             if (tavoite <= 0f && sumennus.Osuus <= 0f) sumennus.Aseta(false);
         }
 

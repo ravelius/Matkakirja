@@ -30,6 +30,11 @@ namespace Matkakirja
         readonly GradientColorKey[] varit = new GradientColorKey[2];
         readonly GradientAlphaKey[] alfat = new GradientAlphaKey[3];
 
+        // LÄMPÖERÄ (PallonLepo): näkyvä savu häipyy elinajassa (5 s), myös lennon päätyttyä.
+        void OnEnable() => PallonLepo.Animoi(Nakyy, "savujana");
+        void OnDisable() => PallonLepo.Poista(Nakyy);
+        bool Nakyy() => viiva != null && viiva.enabled;
+
         public void Aloita()
         {
             Tee();

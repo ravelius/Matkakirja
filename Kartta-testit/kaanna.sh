@@ -27,8 +27,11 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/Horisonttiusva.cs
 ../Assets/Matkakirja/Kartta/KameraEleet.cs
 ../Assets/Matkakirja/Kartta/Karttavalo.cs
+../Assets/Matkakirja/Kartta/Laattapaketti.cs
+../Assets/Matkakirja/Kartta/Lampopaatos.cs
 ../Assets/Matkakirja/Kartta/LennonAikajana.cs
 ../Assets/Matkakirja/Kartta/Maakuntajako.cs
+../Assets/Matkakirja/Kartta/MaastoLaatat.cs
 ../Assets/Matkakirja/Kartta/MastoGeometria.cs
 ../Assets/Matkakirja/Kartta/NimiLadonta.cs
 ../Assets/Matkakirja/Kartta/NostoSaannot.cs
@@ -38,6 +41,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/ReittiMitat.cs
 ../Assets/Matkakirja/Kartta/Saapumisnakyma.cs
 ../Assets/Matkakirja/Kartta/Siirtokoreografia.cs
+../Assets/Matkakirja/Kartta/ValmiusEhto.cs
 ../Assets/Matkakirja/Kartta/Valokeilalaskenta.cs
 ../Assets/Matkakirja/Kartta/Vektorisolut.cs
 ../Assets/Matkakirja/Kartta/Viivaleveys.cs

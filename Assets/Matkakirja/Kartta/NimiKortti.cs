@@ -90,5 +90,10 @@ namespace Matkakirja
             alfa = Mathf.MoveTowards(alfa, kohde, Time.unscaledDeltaTime / haive);
             ryhma.alpha = alfa * alfa * (3f - 2f * alfa);
         }
+
+        // LÄMPÖERÄ (PallonLepo): uGUI-kortin häivytys 0,25 s (ei kuulu Natiivi-UI:n lepokyselyyn).
+        void OnEnable() => PallonLepo.Animoi(Haivyttaa, "nimikortti");
+        void OnDisable() => PallonLepo.Poista(Haivyttaa);
+        bool Haivyttaa() => !Mathf.Approximately(alfa, kohde);
     }
 }

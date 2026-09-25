@@ -76,6 +76,7 @@ namespace Matkakirja
         {
             nakyvat = nakyy;
             foreach (var p in verkot) p.Value.enabled = nakyy && !PalloKierto.PorttiSumea && (Valittu == "kaikki" || Valittu == p.Key);
+            PallonLepo.Muuttui("valot");
         }
         bool nakymaMuuttui = true;
         float seuraavaLasku;
@@ -97,6 +98,7 @@ namespace Matkakirja
             foreach (var p in verkot) p.Value.enabled = nakyvat && !PalloKierto.PorttiSumea && (aihe == "kaikki" || aihe == p.Key);
             nakymaMuuttui = true;
             seuraavaLasku = 0;
+            PallonLepo.Muuttui("valot");
             Muuttui?.Invoke();
         }
 
@@ -169,6 +171,7 @@ namespace Matkakirja
             Debug.Log($"MATKAKIRJA valot: maa {uusi ?? "-"}, {valot.Count} valoa, {verkot.Count} aihetta");
             nakymaMuuttui = true;
             seuraavaLasku = 0;
+            PallonLepo.Muuttui("valot");
         }
 
         static Mesh Verkko(List<Valo> omat, Color32 vari)

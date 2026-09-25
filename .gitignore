@@ -8,3 +8,6 @@
 *.csproj
 *.sln
 .DS_Store
+
+# Laattapaketti (tyokalut/laattapaketti.mjs, LaattapakettiRakennus): ei gitiin, ei LFS:ää; Build/ on jo ohitettu.
+/Assets/StreamingAssets/laattapaketti.bin*

@@ -136,6 +136,26 @@ namespace Matkakirja
             foreach (var r in l) naytetyt.Add(PiirraMatka(r));
         }
 
+        // LÄMPÖERÄ (PallonLepo): poiston häivytys 250 ms (Haivyta) ja Viiva-varjostimen liikkuva katko (_Katko.z ≠ 0,
+        // _Time): korostettu reitti (korostus-materiaali) ja lentolistan elävä kaari. Liikkuva katko on JATKUVA
+        // idle-animaatio, kun korostus näkyy (pelissä nyt vain proto-komennoilla: PeliOhjaaReitit, elava = null).
+        void OnEnable() => PallonLepo.Animoi(Animoituu, "reitit");
+        void OnDisable() => PallonLepo.Poista(Animoituu);
+
+        GameObject elavaKaari;
+
+        bool Animoituu()
+        {
+            if (haipuvat.Count > 0) return true;
+            if (korostettu != null && KatkoLiikkuu(korostus) && Nakyy(korostettu)) return true;
+            return elavaKaari != null && Nakyy(elavaKaari);
+        }
+
+        static bool KatkoLiikkuu(Material m) => m != null && m.HasVector("_Katko") && m.GetVector("_Katko").z != 0f;
+
+        /// <summary>Viiva kuvassa: aktiivinen ja viime piirrossa kameran näkökentässä (Renderer.isVisible).</summary>
+        static bool Nakyy(GameObject g) => g.activeInHierarchy && g.TryGetComponent<MeshRenderer>(out var r) && r.enabled && r.isVisible;
+
         /// <summary>
         /// PELIN MATKAREITIT (pelitilan ainoa reittiohjaus; web ui.matkareittienValinta → reittiTunnukset,
         /// js/ui.js:7885): täsmälleen annetut reitit tavallisella tyylillä (maa/meri-materiaali) pergamenttivarjon
@@ -163,6 +183,7 @@ namespace Matkakirja
                 var r = HaeTunnus(t, out _);
                 if (r != null && piirretyt.Add(r)) naytetyt.Add(PiirraMatka(r));
             }
+            PallonLepo.Muuttui("reitit");
         }
 
         [Tooltip("Matkareittien poiston häivytys sekunteina (web pathTransitionDuration = lauta.js:682 MERKKIEN_SIIRTYMA_MS 250).")]
@@ -254,6 +275,7 @@ namespace Matkakirja
         public bool Korosta(string a, string b)
         {
             if (korostettu != null) Destroy(korostettu);
+            PallonLepo.Muuttui("reitit");
             var r = Hae(a, b);
             if (r == null) return false;
             korostettu = Piirra(r, korostus);
@@ -273,12 +295,18 @@ namespace Matkakirja
         {
             foreach (var g in lentokaaret) Destroy(g);
             lentokaaret.Clear();
+            elavaKaari = null;
+            PallonLepo.Muuttui("reitit");
             if (lahto == null || kohteet == null || !kaupungit.ContainsKey(lahto)) return;
             Valmistele();
             foreach (var k in kohteet)
                 if (k != lahto && kaupungit.ContainsKey(k))
-                    lentokaaret.Add(Piirra(new Reitti { id = "lista:" + lahto + "-" + k, laji = "lento", a = lahto, b = k },
-                        (k == elava ? elavaLento : listaLento) ?? lento));
+                {
+                    var g = Piirra(new Reitti { id = "lista:" + lahto + "-" + k, laji = "lento", a = lahto, b = k },
+                        (k == elava ? elavaLento : listaLento) ?? lento);
+                    lentokaaret.Add(g);
+                    if (k == elava && elavaLento != null) elavaKaari = g;
+                }
         }
 
         /// <summary>
@@ -323,10 +351,12 @@ namespace Matkakirja
             foreach (var g in haipuvat) if (g != null) g.SetActive(nakyy);
             foreach (var g in lentokaaret) g.SetActive(nakyy);
             if (korostettu != null) korostettu.SetActive(nakyy);
+            PallonLepo.Muuttui("reitit");
         }
 
         public void Tyhjenna(bool myosKorostus = true)
         {
+            if (naytetyt.Count > 0 || (myosKorostus && korostettu != null)) PallonLepo.Muuttui("reitit");
             foreach (var g in naytetyt) Destroy(g);
             naytetyt.Clear();
             // Helmet ovat reittien lapsia: tuhotut karsitaan LateUpdatessa (häivytettävät elävät vielä hetken).

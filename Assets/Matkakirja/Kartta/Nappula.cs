@@ -439,6 +439,12 @@ namespace Matkakirja
         /// <summary>Aloituslennon Lento-ajo käynnissä (musta verho tai lento).</summary>
         bool aloitusAjossa;
 
+        /// <summary>
+        /// Aloituslento käynnissä (AloitusLento kutsuttu, ei vielä perillä tai keskeytetty). KarttaKerrokset pitää valmiiksi
+        /// luodun lennon pinnan tämän ajan, vaikka valinta sulkeutui (LentoPohjaValmiiksi(false)).
+        /// </summary>
+        public bool AloitusAjossa => aloitusAjossa;
+
         /// <summary>Lennon vaihe (LENNON ESITYS): Pelikoodari ajoittaa äänet ja luennan, UI tekstit.</summary>
         public LennonVaihe Vaihe { get; private set; }
         public event Action<LennonVaihe> VaiheVaihtui;
@@ -496,26 +502,48 @@ namespace Matkakirja
                 // LÖYDÖS 84: feidi mustaan → värillinen topografiakartta latautuu taustalla → feidi takaisin. Pinta
                 // vaihdetaan verhon takana (ei lähtösumua), ja verho lähtee, kun reitin laatat ja näkyvä pallo ovat
                 // valmiit tai Katto on kulunut.
+                // Valmiusdiagnostiikka (löydös 80): seuranta kehittäjälipulla jo ennen pinnan vaihtoa, jotta uusien
+                // raster-kerrosten (Blue Marble, Sentinel) vaikutus asteeseen näkyy; lähtörivit aina (Valmius.cs).
+                Valmius.VerhoAlku("musta");
+                // Verhon kevennys (BUILD 16): näkyvän kartan haut ensin, tausta tauolla; lennon reitti jatkuu (Verholle).
+                Valmius.KevennysAlku("musta");
                 yield return Mustaverho.Haivyta(1f);
+                // Lennon pinta: valintanäkymässä valmiiksi luotu (KarttaKerrokset.LentoPohjaValmiiksi) vain näkyviin, muuten
+                // luodaan nyt. Tila verhon lähtöriveille ("pinta valmiina …" / "pinta luotu nyt").
                 KarttaKerrokset.Instanssi?.LentoPohja(true);
+                string pinta = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.PintaTila : null;
                 pintaVaihdettu = true;
                 var pallo = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo : null;
                 float odotus = Time.unscaledTime;
                 // Ennen lähtösumu peitti koneen lähikuvan maan; nyt lähikuvan laatat ladataan mustan alla: kamera ensin
                 // lähikuvaan (Lontoo, koneen kylki 30 km, sama asento kuin syöksyn lopussa), sitten takaisin
                 // valintanäkymään, ja kummassakin odotetaan näkyvän pallon latausta (Cesium pitää laatat välimuistissa).
-                IEnumerator Lataa(float katto)
+                string lataaSyy = "katto";
+                IEnumerator Lataa(float katto, string vaihe)
                 {
                     float alku = Time.unscaledTime;
-                    // Vähintään muutama kehys, jotta Cesium ehtii pyytää uudet laatat ennen latausasteen lukua.
+                    // Yhteinen valmiusehto (BUILD 16, Valmius.Tasaantunut): ≥ 90 % ja tasaantunut 300 ms, vähintään 10 kehystä,
+                    // jotta Cesium ehtii pyytää uuden näkymän laatat ennen luentaa. Uusi ehto kummallekin näkymälle.
+                    var ehto = new ValmiusEhto();
                     int kehykset = 0;
+                    bool reitti = false, nakyma = false;
+                    lataaSyy = "katto:ei-aikaa";
                     while (Time.unscaledTime - alku < katto)
                     {
-                        bool reitti = esilataus == null || esilataus.Osuus >= 0.9f;
-                        bool nakyma = pallo == null || pallo.ComputeLoadProgress() >= MustanLataus;
-                        if (++kehykset > 10 && reitti && nakyma) yield break;
+                        reitti = esilataus == null || esilataus.Osuus >= 0.9f;
+                        nakyma = pallo == null ? ++kehykset > ValmiusEhto.MinKehykset : Valmius.Tasaantunut(ehto, pallo);
+                        if (reitti && nakyma)
+                        {
+                            lataaSyy = "valmis";
+                            Valmius.VerhoLoppu("musta-" + vaihe, lataaSyy, (Time.unscaledTime - alku) * 1000.0,
+                                pallo != null ? pallo.ComputeLoadProgress() : -1f, pinta);
+                            yield break;
+                        }
+                        lataaSyy = reitti ? "katto:pallo" : nakyma ? "katto:reitti" : "katto:pallo+reitti";
                         yield return null;
                     }
+                    Valmius.VerhoLoppu("musta-" + vaihe, lataaSyy, (Time.unscaledTime - alku) * 1000.0,
+                        pallo != null ? pallo.ComputeLoadProgress() : -1f, pinta);
                 }
                 if (kierto != null)
                 {
@@ -524,16 +552,19 @@ namespace Matkakirja
                     double pohja0 = double.IsNaN(lentoPohja) ? KorkeusKerroin.Sovita(nosto) : lentoPohja;
                     kierto.Kuvaa(lat0, lon0, LennonAikajana.LahiM, LennonAikajana.LahiKallistus,
                         Suuntima(lat0, lon0, lat1, lon1, 0) + 90.0, pohja0 + LennonAikajana.MinKoneKorkeusM);
-                    yield return Lataa(MustanKatto * 0.6f);
+                    yield return Lataa(LahikuvanKatto, "lahi");
                     float lahi = Time.unscaledTime - odotus;
                     kierto.Kuvaa(vLat, vLon, vKork, vKall, vSuunta, vKatse);
-                    yield return Lataa(MustanKatto - (Time.unscaledTime - odotus));
+                    yield return Lataa(MustanKatto - (Time.unscaledTime - odotus), "valinta");
                     Debug.Log($"MATKAKIRJA aloituslento: lähikuvan laatat {lahi:0.0} s");
                 }
-                else yield return Lataa(MustanKatto);
+                else yield return Lataa(MustanKatto, "valinta");
                 Debug.Log($"MATKAKIRJA aloituslento: musta {Time.unscaledTime - odotus:0.0} s, esilataus "
                           + (esilataus != null ? $"{esilataus.Valmis}+{esilataus.Epaonnistui}/{esilataus.Yhteensa}" : "-")
-                          + $", pallo {(pallo != null ? pallo.ComputeLoadProgress().ToString("0") : "-")} %");
+                          + $", pallo {(pallo != null ? pallo.ComputeLoadProgress().ToString("0") : "-")} %, {pinta ?? "pinta -"}");
+                Valmius.VerhoLoppu("musta", lataaSyy, (Time.unscaledTime - odotus) * 1000.0,
+                    pallo != null ? pallo.ComputeLoadProgress() : -1f, pinta);
+                Valmius.KevennysLoppu("musta");
                 VerkkoOdotus.Kirjaa("lento", "aloituslento-musta", (Time.unscaledTime - odotus) * 1000.0);
                 yield return Mustaverho.Haivyta(0f);
             }
@@ -739,8 +770,14 @@ namespace Matkakirja
 
         /// <summary>Löydös 84: pisin musta odotus (s) lennon pinnan latautumista, vaikka laatat eivät olisi valmiita.</summary>
         public const float MustanKatto = 5f;
-        /// <summary>Näkyvän pallon latausaste (%), jolla musta verho saa lähteä (Cesium3DTileset.ComputeLoadProgress).</summary>
-        public const float MustanLataus = 97f;
+        /// <summary>
+        /// Lontoon lähikuvan latausodotuksen katto (s) mustan alla (BUILD 16; ennen MustanKatto × 0,6 = 3 s, sitten 1,2 s).
+        /// Lähikuvan laatat esiladataan jo aloitusnäytössä (KarttaKerrokset.EsilataaAloituslahto: rasterit ja maasto), ja
+        /// valmius on yhteinen Valmius.Tasaantunut. Löydös 80/84 (tavoite musta ≤ 2 s myös kylmänä): lähikuva osui 1,2 s:n
+        /// kattoon asteella 3–10 % sekä kylmänä että lämpimänä (horisonttinäkymä, syvyys 13), eli se on lämmitys eikä
+        /// valmistu verhon aikana; 0,6 s riittää Cesiumin pyyntöihin, ja lennon syöksy löytää laatat levyltä.
+        /// </summary>
+        public const float LahikuvanKatto = 0.6f;
 
         /// <summary>Lennon esitys pois (perillä tai keskeytys): kamera palautuu, valo, sumu ja pilvet pois.</summary>
         KaupunkiMerkit aloitusMerkit;
@@ -991,6 +1028,10 @@ namespace Matkakirja
 
         void Pysayta()
         {
+            // Aloituslento keskeytyi jo mustan verhon aikana (Ohita tai PeliOhjaimen varareitti ennen koneen lähtöä, jolloin
+            // LennonVaihe on vielä Ei): esitys (lennon pinta, merkkien rajaus, pisteet) puretaan silti, ja verhon kevennys
+            // vapautuu. Ennen pinta ja väistetty väritaso jäivät kartalle.
+            bool aloitusKesken = aloitusAjossa && liike != null;
             lentoPohja = double.NaN;
             AloituslentoPerilla = false;
             aloitusAjossa = false;
@@ -1000,7 +1041,8 @@ namespace Matkakirja
             kesken = null;
             Nosta(0);
             PoistaLentokaari();
-            if (Vaihe != LennonVaihe.Ei) Paatalento();
+            if (aloitusKesken) Valmius.KevennysLoppu("musta");
+            if (Vaihe != LennonVaihe.Ei || aloitusKesken) Paatalento();
             else if (kierto != null) kierto.SeurantaLoppui();
             Kone(false);
         }

@@ -88,11 +88,51 @@ namespace Matkakirja
             public bool haluttu;
             public float nakyvyys;      // 0..1 (kasvu)
             public float logKerroin = float.NaN;
+            public Renderer[] piirrot;
         }
 
         readonly Dictionary<string, Esiintyma> esiintymat = new Dictionary<string, Esiintyma>();
         readonly HashSet<string> naytettavat = new HashSet<string>();
         bool varoitettu;
+
+        // LÄMPÖERÄ (Natiiviseppä 25.9.2026): kasvu, painuminen ja kertoimen pehmennys animoituvat ilman kameran liikettä
+        // (PallonLepo), ja päävalon varjojen kokeilu (LampoSaadot, oletus pois) lukee, onko maamerkki ruudulla.
+        bool varjot, animoituu, ruudulla;
+        float ruudullaTarve = float.NaN;
+
+        void OnEnable() => PallonLepo.Animoi(Animoituu, "maamerkit");
+        void OnDisable() => PallonLepo.Poista(Animoituu);
+
+        /// <summary>PallonLepo: kasvu, painuminen tai kertoimen pehmennys muutti mallia tässä kehyksessä.</summary>
+        bool Animoituu() => animoituu;
+
+        /// <summary>
+        /// Onko jokin maamerkki ruudulla (jalka tai huippu kuvan sisällä, pallon etupuolella) viime kehyksessä, ja
+        /// varjokartan tarve (m, Lampopaatos.VarjoTarve: kauimman etäisyys + 2 × korkeus ruudulla). LampoSaadot (varjot Auto).
+        /// </summary>
+        public bool Ruudulla(out float tarve)
+        {
+            tarve = ruudullaTarve;
+            return ruudulla;
+        }
+
+        /// <summary>Maamerkit heittävät ja vastaanottavat varjon (LampoSaadot; oletus pois kuten ennen).</summary>
+        public void HeitaVarjot(bool paalla)
+        {
+            varjot = paalla;
+            foreach (var e in esiintymat.Values) AsetaVarjot(e);
+        }
+
+        void AsetaVarjot(Esiintyma e)
+        {
+            if (e.piirrot == null) return;
+            foreach (var mr in e.piirrot)
+            {
+                if (mr == null) continue;
+                mr.shadowCastingMode = varjot ? UnityEngine.Rendering.ShadowCastingMode.On : UnityEngine.Rendering.ShadowCastingMode.Off;
+                mr.receiveShadows = varjot;
+            }
+        }
 
         /// <summary>Näyttää annettujen kaupunkien maamerkit (muut painuvat maahan). null tai tyhjä = kaikki pois.</summary>
         public void Nayta(IEnumerable<string> kaupunkiIdt)
@@ -166,10 +206,12 @@ namespace Matkakirja
             }
             var go = Instantiate(malli.prefab, georeferenssi.transform, false);
             go.name = "Maamerkki " + r.id;
-            foreach (var mr in go.GetComponentsInChildren<Renderer>())
+            var piirrot = go.GetComponentsInChildren<Renderer>();
+            foreach (var mr in piirrot)
             {
-                mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
-                mr.receiveShadows = false;
+                // Varjot pois (nykyinen ilme); LampoSaadot kytkee ne kokeiluun (HeitaVarjot).
+                mr.shadowCastingMode = varjot ? UnityEngine.Rendering.ShadowCastingMode.On : UnityEngine.Rendering.ShadowCastingMode.Off;
+                mr.receiveShadows = varjot;
                 if (malli.materiaali != null)
                 {
                     var m = mr.sharedMaterials;
@@ -186,6 +228,7 @@ namespace Matkakirja
             {
                 rivi = r,
                 t = go.transform,
+                piirrot = piirrot,
                 paikka = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef),
                 ylos = ((Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(ylosE)).normalized,
             };
@@ -200,6 +243,9 @@ namespace Matkakirja
 
         void LateUpdate()
         {
+            animoituu = false;
+            ruudulla = false;
+            ruudullaTarve = float.NaN;
             if (esiintymat.Count == 0) return;
             if (kamera == null) kamera = Camera.main;
             if (kamera == null || georeferenssi == null) return;
@@ -227,9 +273,12 @@ namespace Matkakirja
                 float ruudullaPt = korkeus * k / Mathf.Max(1e-6f, mPerPt);
                 bool nakyy = e.haluttu && ruudullaPt >= piiloPt && Vector3.Dot(ylos, kohti / Mathf.Max(d, 1e-3f)) > -0.05f;
 
+                float vanhaNakyvyys = e.nakyvyys, vanhaKerroin = e.logKerroin;
                 e.nakyvyys = Mathf.MoveTowards(e.nakyvyys, nakyy ? 1f : 0f, kasvu);
                 float lk = Mathf.Log(k);
-                e.logKerroin = float.IsNaN(e.logKerroin) ? lk : Mathf.Lerp(e.logKerroin, lk, pehmennys);
+                // Pehmennys päättyy 0,1 %:n päässä tavoitteesta (lämpöerä: loputon Lerp piti pallon hereillä, PallonLepo).
+                e.logKerroin = float.IsNaN(e.logKerroin) || Mathf.Abs(e.logKerroin - lk) < 1e-3f ? lk : Mathf.Lerp(e.logKerroin, lk, pehmennys);
+                if (e.nakyvyys != vanhaNakyvyys || (!float.IsNaN(vanhaKerroin) && e.logKerroin != vanhaKerroin)) animoituu = true;
                 bool aktiivinen = e.nakyvyys > 0f;
                 if (e.t.gameObject.activeSelf != aktiivinen) e.t.gameObject.SetActive(aktiivinen);
                 if (!aktiivinen) { e.logKerroin = float.NaN; continue; }
@@ -237,6 +286,15 @@ namespace Matkakirja
                 float a = e.nakyvyys, pysty = 1f - Mathf.Pow(1f - a, 3f), vaaka = Mathf.Lerp(0.6f, 1f, pysty);
                 float s = Mathf.Exp(e.logKerroin);
                 e.t.localScale = new Vector3(s * vaaka, s * pysty, s * vaaka);
+                // Ruudulla (varjojen kokeilu, LampoSaadot): jalka tai huippu kuvassa pallon etupuolella.
+                float mallinKorkeus = korkeus * s * pysty;
+                if (Vector3.Dot(ylos, kohti / Mathf.Max(d, 1e-3f)) > -0.05f
+                    && (PallonLepo.Ruudulla(kamera, p, 0f) || PallonLepo.Ruudulla(kamera, p + ylos * mallinKorkeus, 0f)))
+                {
+                    ruudulla = true;
+                    float t = Lampopaatos.VarjoTarve(d, mallinKorkeus);
+                    ruudullaTarve = float.IsNaN(ruudullaTarve) ? t : Mathf.Max(ruudullaTarve, t);
+                }
             }
         }
     }
