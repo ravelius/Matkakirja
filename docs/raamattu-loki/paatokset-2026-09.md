@@ -5739,3 +5739,7 @@ Raamatun kohta 4 (MITTARI) tarkentuu näin; Raamattua ei muuteta.
 ## NATIIVI-UI LUOVUTUS q PUSHATTU (natiivi-ui-luovutus-m 3fad35340, viesti-natiivi-ui-luovutus-20260925-q.md + ALOITUSVIESTI), IHMISEN MATKA II:N UI-HAARA 5d45d8b2 (KAANNOS 514db4f8 OK) NATIIVISEPALLA EHDOLLISENA MERGE-PYYNTONA LINSSISEPAN VIDEON JALKEEN; NOLLAUS KAYNNISSA, FABLE LAHETTAA ALOITUSVIESTIN (25.9.2026 klo 18.26)
 
 Postivahti kuittaa nollauksen.
+
+## NATIIVI-UI NOLLATTU (isRunning false) → ALOITUSVIESTI LAHETETTY send_message-KANAVALLA (luovutus q, natiivi-ui-luovutus-m), RC TAKAISIN (connecting); #3227 MAINISSA (25.9.2026 klo 18.28)
+
+Odotetaan kuittausta.
