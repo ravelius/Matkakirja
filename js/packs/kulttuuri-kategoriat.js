@@ -108364,6 +108364,247 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'German East Africa',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Mount Kilimanjaro: Tourism industry, Trekking
+       * routes, Marangu Route, Safety, Climate; Kilimanjaro National
+       * Park, Kilimanjaro International Airport, Marangu, Altitude
+       * sickness, Kilimanjaro Christian Medical Centre) ja Wikivoyagen
+       * sivuilta Mount Kilimanjaro, Moshi, Arusha, Tanzania, Dar es
+       * Salaam ja Altitude sickness — teksti omaa. Nostojen aiheita
+       * (näkymä savannilta, kolme tulivuorikartiota, Rebmann, Meyerin
+       * ensinousu, Saksan Itä-Afrikka) eikä luonto-kategorian aiheita
+       * (ilmastovyöhykkeet, jättiruusukoivu, jättiloopelia, norsut,
+       * sulava jäätikkö) toisteta. Hintoja ja maksujen summia ei
+       * kirjata, koska puiston maksut ja lentoyhteydet muuttuvat;
+       * Western Breachin sulkeminen tammikuussa 2024 on Wikipedian
+       * tieto, joka voi vanhentua. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Uhuru Peakin kyltin kuva on tekijän vapaaseen käyttöön
+       * luovuttama (PD-self). Pystykuva: vaeltajat Barrancon
+       * seinämällä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Climbers Barranco Wall Kilimanjaro Tanzania.jpg',
+          lyhyt: 'Vaeltajat kiipeävät käsin ja jaloin Barrancon seinämää Kilimanjaron etelärinteellä.',
+          selite: 'Retkeläiset ja oppaat nousevat reppuineen jyrkkää, '
+            + 'jäkälän laikuttamaa laavakivirinnettä Barrancon seinämällä, '
+            + 'jonka Machamen ja Lemoshon reitit ylittävät; yllä on '
+            + 'pilvien vaalentama taivas.',
+          lahde: 'Altezzatravel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kilimanjarolle ei nousta omin päin: kansallispuistoon '
+          + 'pääsee vain luvan saaneen oppaan kanssa, ja useimmat retket '
+          + 'lähtevät Moshista tai Arushasta, joiden puolivälissä on '
+          + 'Kilimanjaron kansainvälinen lentokenttä. Huipulle johtaa '
+          + 'seitsemän virallista reittiä, joista yhdellä nukutaan majoissa '
+          + 'ja muilla teltoissa. Vaikein osa ei ole kiipeily vaan ohut '
+          + 'ilma: liian nopea aikataulu on vuoristotaudin tavallisin syy, '
+          + 'ja jokainen lisäpäivä parantaa mahdollisuuksia päästä perille. '
+          + 'Retkikuntaan kuuluu oppaiden lisäksi kantajia ja kokki, ja '
+          + 'kuivimmat kiipeilykuukaudet osuvat kahden sadekauden väliin.',
+        artikkeli: {
+          nimi: 'Matkailijan Kilimanjaro',
+          teksti: 'Kilimanjarolla hitaasti kulkeva pääsee useimmiten pisimmälle.',
+          nosto: 'Huipulle lähdetään keskiyön tienoilla, kun sora on vielä '
+            + 'jäässä, ja kraatterin reunalla odottaa auringonnousu.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Moshin ja Arushan kautta',
+              teksti: 'Kilimanjaron kansainvälinen lentokenttä avattiin 1971, '
+                + 'ja se on Moshin ja Arushan kaupunkien puolivälissä: '
+                + 'Moshiin on noin puolen tunnin ja Arushaan noin 45 minuutin '
+                + 'ajomatka. Euroopasta sinne lennetään suoraan Amsterdamista, '
+                + 'ja vaihtoyhteyksiä on esimerkiksi Addis Abeban, Dohan ja '
+                + 'Nairobin kautta, mutta reitit muuttuvat. Halvemman lennon voi löytää Dar es '
+                + 'Salaamiin, josta bussimatka Moshiin kestää seitsemästä '
+                + 'kahdeksaan tuntia, tai Nairobiin, josta pääsee bussilla '
+                + 'rajan yli Arushaan ja Moshiin. Wikivoyage varoittaa '
+                + 'säästämästä bussiyhtiössä, sillä halvimpien turvallisuus '
+                + 'on usein heikko. Moshi on vuoren etelärinteen juurella, '
+                + 'ja kiipeily on sen ilmeisin syy matkustaa sinne. '
+                + 'Kaupungista pääsee vuoren kyliin, kuten Machameen ja '
+                + 'Maranguun, daladaloilla eli pienillä minibusseilla, joiden '
+                + 'rahastaja huutaa määränpään ohi ajaessa. Kansallispuiston '
+                + 'päämaja on Maranguissa noin 44 kilometrin päässä Moshista. '
+                + 'Retken voi varata kotimaasta tai paikan päältä, mutta '
+                + 'kannattaa asioida toimistossa eikä kadulla kaupustelevan '
+                + 'kanssa. Useimmat matkailijat tarvitsevat Tansaniaan viisumin, '
+                + 'jonka voi hakea verkossa etukäteen tai lentokentältä, ja '
+                + 'kansallispuistojen maksut peritään ulkomaalaisilta '
+                + 'Yhdysvaltain dollareina. Maksut ja viisumisäännöt '
+                + 'muuttuvat, joten ne kannattaa tarkistaa juuri ennen matkaa. '
+                + 'Rokotuksista ja malarian estolääkityksestä puhutaan '
+                + 'lääkärin kanssa hyvissä ajoin: keltakuumerokotustodistusta '
+                + 'voidaan kysyä, jos matka jatkuu naapurimaihin.',
+              kuva: [
+                {
+                  tiedosto: 'Kilimanjaro Airport Terminal Building.jpg',
+                  lyhyt: 'Kilimanjaron lentokentän terminaali on Moshin ja Arushan puolivälissä.',
+                  selite: 'Matkustajat kävelevät matalan terminaalirakennuksen '
+                    + 'edustalla lokakuussa 2014; asfaltilla seisoo '
+                    + 'matkatavaroiden lastausauto, ja julkisivun edessä kasvaa '
+                    + 'kukkivia pensaita.',
+                  lahde: 'Peter Makholm, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Mount Kilimanjaro from Moshi.jpg',
+                  lyhyt: 'Kibon lumihuippu näkyy kirkkaalla säällä Moshin kattojen yllä.',
+                  selite: 'Moshin keskustan talojen takana kohoaa Kilimanjaron '
+                    + 'loiva massiivi, jonka huipulla on lunta; kuva on otettu '
+                    + 'joulukuussa 2019.',
+                  lahde: 'Ganeshpednekar, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Daladala Moshi.jpg',
+                  lyhyt: 'Daladala-minibussi vie Moshista vuoren juurella oleviin kyliin.',
+                  selite: 'Tumma, vaaleanpunaraitainen minibussi ajaa Moshin '
+                    + 'kadulla lokakuussa 2007; tuulilasin yläreunassa on sen '
+                    + 'nimi ja keulassa reitin paikannimet.',
+                  lahde: 'Fanny Schertzer, Wikimedia Commons (CC BY 2.5)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Seitsemän reittiä huipulle',
+              teksti: 'Kilimanjaron kansallispuistossa saa kulkea vain '
+                + 'nimetyillä reiteillä ja luvan saaneen oppaan kanssa. '
+                + 'Suosituimpana pidetty Marangu on niin sanottu '
+                + 'Coca-Cola-reitti ja ainoa, jolla yövytään majoissa. '
+                + 'Portilta noustaan sademetsän läpi Mandaran majalle, sitten '
+                + 'nummen poikki Horomboon ja lopulta Mawenzin ja Kibon '
+                + 'välisen satulan yli Kibon majalle noin 4700 metriin. '
+                + 'Telttavarusteita ei tarvita, joten Marangu on usein '
+                + 'halvin, mutta lyhyen aikataulunsa vuoksi siltä pääsee '
+                + 'huipulle harvemmin kuin muilta reiteiltä. Machame, jota '
+                + 'sanotaan viskireitiksi, on lounaasta nouseva telttareitti '
+                + 'ja monen mielestä maisemiltaan kaunein. Lemosho lähtee '
+                + 'lännestä Londorossin portilta ja kulkee Shiran ylätasangon '
+                + 'yli; sen ensimmäisenä päivänä ryhmän mukana voi kulkea '
+                + 'aseistettu vartija, koska metsissä liikkuu puhveleita ja '
+                + 'norsuja. Rongai nousee koillisesta Kenian rajan tuntumasta, '
+                + 'ja sitä pidetään telttareiteistä helpoimpana. Lisäksi ovat '
+                + 'Umbwen ja Shiran reitit sekä vähintään seitsemän päivän '
+                + 'Northern Circuit, ja Mwekan reittiä pitkin vain '
+                + 'laskeudutaan. Jyrkkä Western Breach '
+                + 'suljettiin tammikuussa 2024, kun rankkasateet olivat '
+                + 'huuhtoneet rinnettä ja irrottaneet kiviä. Jos huippu ei '
+                + 'houkuttele, Maranguin portilta voi tehdä oppaan kanssa '
+                + 'päivävaelluksen sademetsän läpi Maundin kraatterille ja '
+                + 'nähdä matkalla apinoita ja lintuja.',
+              kuva: {
+                tiedosto: 'Horombo Huts (17053013102).jpg',
+                lyhyt: 'Maranguin reitillä yövytään majoissa, kuten näissä Horombon mökeissä.',
+                selite: 'Horombon tummat, jyrkkäkattoiset puumökit seisovat '
+                  + 'pensaikkoisella nummella noin 3700 metrin korkeudessa, ja '
+                  + 'taustalla kohoaa Kibon lumihuippu helmikuussa 2009.',
+                lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Hitaasti ylös, heti alas',
+              teksti: 'Kilimanjarolle ei tarvita köysiä, mutta 5895 metrin '
+                + 'korkeus koettelee hyväkuntoisiakin. Heinä- ja elokuussa '
+                + '2005 tehdyssä tutkimuksessa huipulle pääsi 61 prosenttia '
+                + 'yrittäjistä, ja 77 prosenttia sai äkillisen vuoristotaudin '
+                + 'oireita: päänsärkyä, pahoinvointia ja ruokahaluttomuutta. '
+                + 'Vakavimmat muodot, keuhko- ja aivoedeema, ovat '
+                + 'hengenvaarallisia, ja niiden riskiä kasvattavat liian '
+                + 'kiireiset aikataulut, joihin kalliit päivämaksut '
+                + 'houkuttelevat. Moshin Kilimanjaro Christian Medical Centren '
+                + 'mukaan tammikuun 1996 ja lokakuun 2003 välillä vuorella '
+                + 'kuoli 25 kiipeilijää, heistä 14 vuoristotautiin. Swahiliksi hitaasti '
+                + 'on pole pole, ja se on vuoren paras ohje. Yli 3000 metrissä '
+                + 'nukkumiskorkeutta suositellaan nostettavaksi vain noin 300 '
+                + 'metriä yössä, ja moni reitti noudattaa periaatetta nouse '
+                + 'korkealle, nuku alempana: Machamella käydään päivällä Lava '
+                + 'Towerilla 4630 metrissä ja yövytään Barrancossa noin '
+                + '650 metriä alempana. Oireiden alkaessa ei nousta '
+                + 'ylemmäs, ja jos olo pahenee, laskeudutaan heti, yölläkin — '
+                + 'jo sadan metrin lasku auttaa. Asetatsolamidi nopeuttaa '
+                + 'sopeutumista, mutta se on reseptilääke eikä korvaa hidasta '
+                + 'nousua. Huippuyönä lähdetään Barafun leiristä tai Kibon '
+                + 'majalta keskiyön tienoilla, koska jäätynyttä soraa on '
+                + 'helpompi nousta, ja aamulla kraatterin reunalta näkee '
+                + 'auringonnousun.',
+              kuva: {
+                tiedosto: 'Kilimanjaro Uhuru Peak Sign.jpg',
+                lyhyt: 'Uhuru Peakin kyltti onnittelee 5895 metriin ehtinyttä kulkijaa.',
+                selite: 'Huurteinen puukyltti Uhuru Peakilla kertoo englanniksi, '
+                  + 'että kulkija on Afrikan korkeimmassa kohdassa 5895 '
+                  + 'metrissä; laudoissa on retkikuntien tarroja, ja taustalla '
+                  + 'näkyy pilvimeri.',
+                lahde: 'Arne d, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Kantajat, oppaat ja kokki',
+              teksti: 'Ilman opasta vuorelle ei pääse: kiipeilyluvan saa vain '
+                + 'luvan saaneen oppaan kanssa, ja oppaan voi palkata ennen '
+                + 'matkaa tai perillä. Retkikuntaan kuuluu vaeltajien ja '
+                + 'oppaiden lisäksi kokki ja kantajia, jotka kuljettavat '
+                + 'teltat, ruoan ja vaeltajien isot laukut leiristä '
+                + 'toiseen. '
+                + 'Vuonna 2007 vuori antoi epäsäännöllistä, kausiluonteista '
+                + 'työtä noin 11 000 oppaalle, kantajalle ja kokille, ja '
+                + 'heidän huonoista työoloistaan ja palkoistaan on esitetty '
+                + 'huolta. Esimerkiksi Maranguun tulee nuoria eri puolilta '
+                + 'Tansaniaa kantajiksi ja oppaiksi. Kun valitsee '
+                + 'retkiyritystä, kannattaa kysyä, miten se kohtelee ja '
+                + 'varustaa kantajansa: Wikivoyagen mukaan monen kantajan '
+                + 'varusteet eivät riitä vuoren oloihin, ja moni on '
+                + 'kiitollinen, jos vaeltaja voi antaa omiaan. '
+                + 'Retken hinnan päälle maksetaan juomarahat oppaille, '
+                + 'kokeille ja kantajille, ja ne kannattaa antaa jokaiselle '
+                + 'itse eikä yhdelle ihmiselle jaettavaksi. Ruoan laatu '
+                + 'riippuu yrityksestä, joten omat pähkinät ja suklaa ovat '
+                + 'hyvä vara. Kiipeilylupaan on ikäraja kymmenen vuotta.',
+              kuva: {
+                tiedosto: 'Porter at Mount Kilimandjaro 01.jpg',
+                lyhyt: 'Kantaja kuljettaa retkikunnan tavaroita niskallaan sumuisella rinteellä.',
+                selite: 'Kantaja nousee soraista polkua kumarassa ison vihreän '
+                  + 'säkin ja retkituolien kanssa, ja hänen takanaan tulee '
+                  + 'lisää kantajia kuormineen; kuva on otettu marraskuussa '
+                  + '2017.',
+                lahde: 'MelissaW, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sadekaudet ja pakkasyö',
+              teksti: 'Päiväntasaajan tuntumassa ei ole kesää ja talvea vaan '
+                + 'kuivia ja sateisia kausia. Sadekausia on kaksi: '
+                + 'maaliskuusta toukokuuhun ja marraskuun tienoilla. '
+                + 'Tammi- ja helmikuu ovat lämpimimpiä, huhti- ja '
+                + 'toukokuu sateisimpia, kesä- ja heinäkuu viileimpiä ja '
+                + 'elo- ja syyskuu kuivimpia, ja Wikivoyage suosittelee '
+                + 'säänsä puolesta tammi-, helmi- ja syyskuuta. Vuori tekee '
+                + 'silti oman säänsä: lunta voi sataa mihin vuodenaikaan '
+                + 'tahansa, ja sadevaatteet kuuluvat mukaan kuivallakin '
+                + 'kaudella. Portilla voi olla helle, mutta huipun '
+                + 'keskilämpötila on noin seitsemän astetta pakkasta, ja '
+                + 'kirkkaina öinä ja tuulessa on paljon kylmempää, joten '
+                + 'huippuyötä varten tarvitaan lämpimiä vaatekerroksia, '
+                + 'pipo, lapaset ja otsalamppu. Juoda pitää paljon, ja kaikki '
+                + 'vuoren vesi keitetään tai puhdistetaan, koska ihmisjätteen '
+                + 'huolimaton hävittäminen on tehnyt vedestä terveysriskin. Yöpyä saa vain '
+                + 'merkityillä leiripaikoilla, ei luolissa. Sähköä vuorella ei '
+                + 'ole, mutta matkapuhelinverkko kuuluu monin paikoin jopa '
+                + 'huipun tuntumassa, joten varavirtalähde kannattaa pakata.',
+              kuva: {
+                tiedosto: 'Rainbow and Barranco wall, Barranco camp, Kilimanjaro region, Tanzania.jpg',
+                lyhyt: 'Sateenkaari kaartuu Barrancon leirin telttojen ja seinämän yllä.',
+                selite: 'Pilvien peittämän laakson reunalla kohoaa Barrancon jyrkkä '
+                  + 'kallioseinämä, ja sen edessä leiripaikalla on kymmeniä '
+                  + 'värikkäitä telttoja; kuva otettiin joulukuun 2016 '
+                  + 'lopulla illalla.',
+                lahde: 'KpokeJlJla, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -125267,6 +125508,253 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on kansallispuisto,
+       * ei kaupunki, joten opas käsittelee portit, tiestön, geysirialueiden
+       * turvallisuuden, eläinten välimatkat, sään ja käytännön asiat.
+       * Taustatiedot englannin Wikipediasta (Yellowstone National Park:
+       * osiot Recreation ja Climate and weather sekä vuoden 2022 tulva;
+       * Grand Loop Road Historic District, Roosevelt Arch, Beartooth
+       * Highway, Old Faithful Inn, Norris Geyser Basin, Death of Colin
+       * Scott, Lamar Valley, Hayden Valley, West Yellowstone, Gardiner,
+       * Snowcoach, Bison) ja Wikivoyagesta (Yellowstone National Park:
+       * Get in, Get around, Stay safe, Sleep) — teksti omaa. Hintoja ja
+       * aukioloaikoja ei kirjata, koska Wikivoyagen majoitus- ja
+       * leirintätiedot ovat vuosilta 2012–2020; tieolot ja talvikauden
+       * palvelut neuvotaan tarkistamaan puiston sivuilta. Boiling Riverin
+       * kylpypaikka jätetään pois, koska Wikivoyagen tieto on vuoden
+       * 2022 tulvaa vanhempi. Nostojen ja ennen–nyt-kuvien aiheita
+       * (puiston perustaminen, Colter, Washburnin ja Haydenin
+       * retkikunnat, Jackson, Moran, Old Faithful -geysiri, Grand
+       * Prismatic, Castle Geyser, kaldera, biisonien ja susien paluu) ei
+       * toisteta. Kaikki kuvat ovat Yellowstonen kansallispuiston (NPS)
+       * julkaisemia public domain -kuvia paitsi Beartooth Highway
+       * (tekijän PD-julistus); lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * Roosevelt Arch sateenkaaren kera.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Rainbow through Roosevelt Arch (48266871937).jpg',
+          lyhyt: 'Pohjoisportin Roosevelt Arch on toivottanut matkailijat tervetulleiksi vuodesta 1903.',
+          selite: 'Gardinerin pohjoisportin 16-metrinen holvi on muurattu '
+            + 'pylväsbasaltista, ja sen laatassa lukee "For the Benefit and '
+            + 'Enjoyment of the People", kansan hyödyksi ja iloksi. Portti '
+            + 'on puiston viidestä ainoa, joka on auki ympäri vuoden.',
+          lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+        },
+        kappale: 'Yellowstone ei ole kaupunki vaan kokonainen ylänkö: lähes '
+          + '9 000 neliökilometriä geysirialueita, laaksoja ja metsää '
+          + 'keskimäärin 2 400 metrin korkeudessa, ja sen halki kiertää '
+          + 'kahdeksikon muotoinen maantie. Vuonna 2023 puistossa kävi 4,5 '
+          + 'miljoonaa ihmistä, eniten heinäkuussa. Matkailija tulee '
+          + 'autolla jostakin viidestä portista, kulkee geysirialueilla '
+          + 'vain laudoituksia pitkin ja katselee biisoneita ja karhuja '
+          + 'kiikarilla kaukaa. Kesälläkin sää voi kääntyä lumisateeksi, ja '
+          + 'talvella lähes kaikki tiet ovat kiinni autoilta. Puiston '
+          + 'majapaikat varataan hyvissä ajoin, eikä kännykkä toimi '
+          + 'suuressa osassa puistoa.',
+        artikkeli: {
+          nimi: 'Matkailijan Yellowstone',
+          teksti: 'Yellowstone kierretään autolla, mutta parhaat hetket '
+            + 'koetaan laudoituksilla ja kiikarin takana.',
+          nosto: 'Puiston vaarallisin paikka ei ole kuuma lähde eikä karhu '
+            + 'vaan maantie.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Viisi porttia ja kahdeksikko',
+              teksti: 'Yellowstonen kansallispuisto on lähes 9 000 '
+                + 'neliökilometrin kokoinen, ja suurin osa siitä on Wyomingin '
+                + 'luoteiskulmassa; reunat ulottuvat Montanan ja Idahon '
+                + 'puolelle. Julkista liikennettä puiston sisällä ei ole, '
+                + 'joten useimmat tulevat omalla tai vuokra-autolla. Lähimmät '
+                + 'isot lentokentät ovat Bozemanissa Montanassa ja Jackson '
+                + 'Holessa Grand Tetonin kansallispuistossa, ja pienempiä '
+                + 'kenttiä on Codyssa, Idaho Fallsissa sekä kesäisin West '
+                + 'Yellowstonessa. Portteja on viisi: länsiportti avautuu West '
+                + 'Yellowstonen pikkukaupungista, eteläportti Grand Tetonin '
+                + 'suunnasta, itäportti Codyn tieltä ja koillisportti Cooke '
+                + 'Cityn kautta, jonne idästä kiipeää 3 337 metrin solaan '
+                + 'nouseva Beartooth Highway. Vain Gardinerin pohjoisportti on '
+                + 'auki ympäri vuoden. Sisällä tärkeimmät kohteet yhdistää '
+                + 'noin 230 kilometrin Grand Loop Road, joka piirtyy kartalle '
+                + 'kahdeksikkona: eteläinen lenkki on noin 140 ja pohjoinen '
+                + 'noin 110 kilometriä. Matkat kannattaa laskea tunteina eikä '
+                + 'kilometreinä, sillä tie kiemurtelee solien yli ja liikenne '
+                + 'pysähtyy usein tienvarren eläinten takia. Kesäkuussa 2022 '
+                + 'ennätystulva vei pohjoisportin tien paikoin kokonaan, ja '
+                + 'portti avattiin uudelleen vasta lokakuun lopussa. Tieolot '
+                + 'kannattaa siksi tarkistaa puiston sivuilta juuri ennen '
+                + 'lähtöä.',
+              kuva: [
+                {
+                  tiedosto: 'Traffic at West Entrance backing up into West Yellowstone, Montana (54642717364).jpg',
+                  lyhyt: 'Kesän autojono ulottuu länsiportin kopeilta West Yellowstonen kaupunkiin asti.',
+                  selite: 'Heinäkuussa 2025 kuvatussa ilmakuvassa autot '
+                    + 'jonottavat Yellowstonen länsiportille metsän halki '
+                    + 'West Yellowstonen kaupungista asti. Heinäkuu on '
+                    + 'puiston vilkkain kuukausi.',
+                  lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+                },
+                {
+                  tiedosto: 'Grand Loop Road through Golden Gate (35375950120).jpg',
+                  lyhyt: 'Grand Loop Road kiertää Golden Gaten jyrkänteen kylkeen rakennettua siltaa pitkin.',
+                  selite: 'Mammoth Hot Springsin eteläpuolella Grand Loop '
+                    + 'Road kulkee Golden Gaten rotkon kallion kylkeen '
+                    + 'rakennetulla sillalla. Suuri osa puiston tiestöstä '
+                    + 'suunniteltiin armeijan insinöörin Hiram Chittendenin '
+                    + 'johdolla puiston alkuvuosina.',
+                  lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+                },
+                {
+                  tiedosto: 'Beartooth Highway Showing Switchbacks.jpg',
+                  lyhyt: 'Beartooth Highway mutkittelee järvien täplittämällä ylätasangolla lähellä solaa.',
+                  selite: 'Näkymä Beartooth Passin läheltä lounaaseen: '
+                    + 'koillisportille vievä tie kiemurtelee ylätasangon '
+                    + 'järvien lomassa. Sola on runsaan lumen takia yleensä '
+                    + 'auki vain toukokuun puolivälistä lokakuun puoliväliin.',
+                  lahde: 'WizardFusion, Wikimedia Commons (Public domain)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Laudoitus on raja',
+              teksti: 'Geysirialueilla kuljetaan puisia laudoituksia ja '
+                + 'merkittyjä polkuja pitkin, eikä niiltä saa astua sivuun. '
+                + 'Vaalea, kova näköinen maa voi olla vain ohut kuori kiehuvan '
+                + 'veden päällä, ja monen lähteen vesi on kuuman lisäksi '
+                + 'hapanta. Kuumat lähteet ovat puiston luonnonvaaroista '
+                + 'vakavimpia: niihin on vuodesta 1890 kuollut ainakin 22 '
+                + 'ihmistä. Kesäkuussa 2016 nuori mies poistui sisarensa kanssa '
+                + 'laudoitukselta Norrisin geysirialueella, liukastui kuumaan '
+                + 'lähteeseen eikä pelastunut; kännykkäyhteyttä ei ollut, ja '
+                + 'apua piti lähteä hakemaan jalan. Norris on puiston kuumin '
+                + 'geysirialue, ja toisin kuin useimmissa muissa altaissa, sen '
+                + 'vedet ovat happamia. Uiminen ja kylpeminen kuumissa '
+                + 'lähteissä on kiellettyä, samoin kaiken heittäminen niihin: '
+                + 'Morning Glory Poolin värit ovat muuttuneet, kun turistien '
+                + 'sinne heittämät esineet ovat tukkineet lähteen. Geysirien hienoa '
+                + 'sumua ei tarvitse pelätä, sillä se ehtii jäähtyä ilmassa, '
+                + 'mutta sen mineraalit voivat naarmuttaa silmälaseja ja '
+                + 'kameran linssejä, jotka kannattaa huuhdella puhtaalla '
+                + 'vedellä ennen pyyhkimistä. Syrjäisillä geysirialueilla '
+                + 'laudoituksia ei ole lainkaan, ja niille lähdetään vain '
+                + 'kokeneen oppaan kanssa.',
+              kuva: {
+                tiedosto: 'Taking photos from the boardwalks at Porcelain Basin (50134535048).jpg',
+                lyhyt: 'Kävijät kuvaavat Norrisin Porcelain Basinia höyryävän maan yli kulkevalta laudoitukselta.',
+                selite: 'Porcelain Basin kuuluu Norrisin geysirialueeseen, '
+                  + 'puiston kuumimpaan. Laudoitus kantaa kulkijan maan yli, '
+                  + 'jonka ohuen kuoren alla voi olla kiehuvaa ja hapanta '
+                  + 'vettä.',
+                lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Sata jaardia karhuun',
+              teksti: 'Yellowstonessa elää Yhdysvaltain 48 yhtenäisen '
+                + 'osavaltion tihein nisäkäskeskittymä, ja moni eläin on '
+                + 'tottunut autoihin ja ihmisiin — mutta kesy se ei ole. '
+                + 'Puiston sääntö on selvä: karhuihin ja susiin pidetään '
+                + 'vähintään sadan jaardin eli 91 metrin ja kaikkiin muihin '
+                + 'eläimiin 25 jaardin eli 23 metrin välimatka. Jos eläin '
+                + 'siirtyy sinun takiasi, olet liian lähellä. Biisonit, '
+                + 'karhut ja wapitit ovat loukanneet ja tappaneet ihmisiä, ja '
+                + 'esimerkiksi vuonna 2015 biisonit vahingoittivat viittä '
+                + 'kävijää, jotka olivat menneet liian lähelle kuvaamaan. '
+                + 'Parhaat katseluajat ovat aamu- ja iltahämärä ja parhaat '
+                + 'paikat laajat laaksot: Hayden Valley kanjonin ja järven '
+                + 'välissä sekä koillisen Lamar Valley, joka on maailman '
+                + 'luotettavimpia paikkoja nähdä susia luonnossa. Kiikari tai '
+                + 'kaukoputki on tärkein varuste. Kun tienvarressa näkyy '
+                + 'karhu, liikenne voi seisoa pitkään, ja tällaisella '
+                + 'ruuhkalla on puistossa oma nimensä, bear jam. Auto ajetaan '
+                + 'levennykselle eikä jätetä keskelle tietä, eikä eläimiä '
+                + 'ruokita koskaan: ihmisten ruokaan tottunut eläin muuttuu '
+                + 'usein aggressiiviseksi. Leirissä ruoka, roskat ja '
+                + 'hajustetut tavarat säilytetään niin, etteivät karhut pääse '
+                + 'niihin käsiksi.',
+              kuva: {
+                tiedosto: 'Bear jam near Roaring Mountain (54641642107).jpg',
+                lyhyt: 'Karhua katsomaan pysähtyneet autot ruuhkauttivat tien Roaring Mountainin lähellä.',
+                selite: 'Heinäkuussa 2025 Grand Loop Roadille syntyi '
+                  + 'Roaring Mountainin lähellä ruuhka, kun autoilijat '
+                  + 'pysähtyivät katsomaan karhua. Puisto neuvoo ajamaan '
+                  + 'levennykselle ja katsomaan eläimiä kaukaa.',
+                lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Lunta mihin aikaan vuodesta tahansa',
+              teksti: 'Yellowstonen ylänkö on keskimäärin 2 400 metrin '
+                + 'korkeudessa, ja sää vaihtuu nopeasti. Kesäpäivinä lämpöä '
+                + 'on usein noin 25 astetta, mutta korkeimmilla paikoilla yöt '
+                + 'voivat olla pakkasella, ja iltapäivisin jyrisee ukkonen; '
+                + 'salama on puistossa tappanut ihmisiä. Lunta voi sataa '
+                + 'minä kuukautena tahansa, joten lämmin takki ja sadevaatteet '
+                + 'kuuluvat mukaan heinäkuussakin. Talvella päivälämpötila on '
+                + 'tyypillisesti 20 ja 5 pakkasasteen välillä, ja kylmin '
+                + 'puistossa mitattu lukema on −54 astetta. Marraskuun alusta '
+                + 'huhtikuun puoliväliin, osin toukokuulle asti, tiet ovat '
+                + 'kiinni pyörillä kulkevilta ajoneuvoilta; vain Gardinerista '
+                + 'Cooke Cityyn vievä tie pidetään auki. Muualle pääsee '
+                + 'joulukuun puolivälistä maaliskuun puoliväliin vain '
+                + 'opastetulla moottorikelkkaretkellä tai lumibussilla '
+                + '(snowcoach), jonka jättirenkaat tai telat kulkevat lumen '
+                + 'päällä, ja retkien päivittäinen määrä on rajoitettu. '
+                + 'Yellowstonejärvi on jäässä lähes puolet vuodesta, '
+                + 'tavallisesti vuodenvaihteesta touko–kesäkuun vaihteeseen. Keväällä '
+                + 'teitä on avattu ennen autokauden alkua ensin pyöräilijöille, '
+                + 'ja syyskuussa wapitiurosten kiimahuuto kaikuu niityillä. '
+                + 'Rauhallisinta on talvella, vilkkainta heinäkuussa.',
+              kuva: {
+                tiedosto: 'Snowcoach in front of Snow Lodge (49265891453).jpg',
+                lyhyt: 'Isorenkainen lumibussi odottaa matkustajia Old Faithful Snow Lodgen edessä.',
+                selite: 'Joulukuussa 2019 kuvattu lumibussi Old Faithful '
+                  + 'Snow Lodgen edessä. Talvella Old Faithfulin alueelle '
+                  + 'pääsee vain opastetulla lumibussilla tai '
+                  + 'moottorikelkalla, sillä tiet ovat lumen peitossa.',
+                lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Yösija, polut ja katvealueet',
+              teksti: 'Puiston sisällä on yhdeksän hotellia ja lomakylää, '
+                + 'yhteensä noin 2 200 huonetta ja mökkiä, sekä '
+                + 'toistakymmentä leirintäaluetta, joilla on yli 2 000 '
+                + 'paikkaa. Kesällä ne täyttyvät, joten majoitus varataan '
+                + 'hyvissä ajoin; peruutuksia tulee usein, ja täyteen '
+                + 'varattua paikkaa kannattaa kysellä uudelleen. Kuuluisin '
+                + 'majapaikka on 1903–1904 rakennettu Old Faithful Inn, '
+                + 'maailman suurin hirsihotelli, jonka noin 20 metriä '
+                + 'korkeaa aulaa hallitsee 450-tonninen kivitakka. Jos '
+                + 'puistosta ei löydy tilaa, apuun tulevat porttikaupungit: '
+                + 'West Yellowstone on lähellä geysirialueita ja Gardiner '
+                + 'Mammothia. Kännykkä ei toimi suuressa osassa puistoa, '
+                + 'joten kartat kannattaa ladata puhelimeen etukäteen, eikä '
+                + 'hätätilanteessa voi luottaa verkkoon. Retkeilypolkuja on '
+                + 'noin 1 800 kilometriä, ja purovesi keitetään tai '
+                + 'suodatetaan ennen juomista, vaikka se näyttäisi kirkkaalta. '
+                + 'Moni yllättyy siitä, että puiston vaarallisin paikka on '
+                + 'maantie: vuosina 2007–2023 puistossa kuoli 74 ihmistä, ja '
+                + 'liikenne oli yleisin syy, yli 45 prosenttia kuolemista. '
+                + 'Huoltoasemat, kaupat ja ravintolat sulkeutuvat talveksi, '
+                + 'ja niiden kaudet vaihtelevat vuosittain, joten ajantasaiset '
+                + 'tiedot kannattaa katsoa puiston omilta sivuilta.',
+              kuva: {
+                tiedosto: 'Old Faithful Inn, lobby (9411170948).jpg',
+                lyhyt: 'Old Faithful Innin hirsiaulaa hallitsee katonrajaan asti nouseva kivitakka.',
+                selite: 'Old Faithful Inn valmistui 1904 ja on maailman '
+                  + 'suurin hirsihotelli. Arkkitehti Robert Reamer suunnitteli '
+                  + 'aulan, jonka parvia kiertävät kiemuraiset '
+                  + 'kontortamännyn oksat.',
+                lahde: 'NPS / Jim Peaco, Wikimedia Commons (Public domain)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -125447,6 +125935,230 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Michael Quinn, National Park Service (PD)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Grand Canyon National Park, Grand Canyon Railway,
+       * Bright Angel Trail, South Kaibab Trail, Phantom Ranch, Grand
+       * Canyon Lodge, Dragon Bravo Fire, 2026 Grand Canyon flood,
+       * Transcanyon Waterline, Desert View Watchtower, Grand Canyon
+       * Skywalk) ja Wikivoyagesta (Grand Canyon National Park, tila
+       * 13.9.2026) — teksti omaa. Hinnat ja aukioloajat jätetty pois;
+       * vuoden 2026 tulvan jälkeiset sulut ja pohjoisreunan palvelut
+       * muuttuvat nopeasti, ja teksti sanoo sen. Nostojen, gallerian ja
+       * ennen–nyt-kuvien aiheita (geologia, Cárdenas, viljavarastot,
+       * havasupait, Powell, eläimet, muulimatkat, Hopi House, koskilautat)
+       * ei toisteta. Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja kuvat katsottu silmin. Pystykuva: Desert View'n
+       * vartiotorni.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Desert View Watchtower, Grand Canyon.jpg',
+          lyhyt: 'Desert View’n vartiotorni kohoaa eteläreunan itäpäässä, kaukana kylän tungoksesta.',
+          selite: 'Mary Colterin suunnittelema, vuonna 1932 valmistunut '
+            + '21-metrinen kivitorni jäljittelee muinaisten puebloasukkaiden '
+            + 'vartiotorneja mutta on niitä paljon suurempi, ja sen huippu '
+            + 'on koko eteläreunan korkein kohta.',
+          lahde: 'Supercarwaar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Grand Canyonille tullaan tavallisesti etelästä: yhdeksän '
+          + 'kävijää kymmenestä näkee kanjonin eteläreunalta, jonne pääsee '
+          + 'autolla, vanhalla rautatiellä ja puiston ilmaisilla busseilla. '
+          + 'Pohjoisreunalle on linnuntietä vain 16 kilometriä, mutta autolla '
+          + 'matkaa kertyy noin 350 kilometriä, ja talvisin sinne johtava tie '
+          + 'on kiinni. Kanjoniin laskeutuvilla poluilla raskain osuus tulee '
+          + 'aina viimeisenä, ja heinäkuussa pohjalla on keskimäärin yli '
+          + 'kymmenen astetta kuumempaa kuin reunalla. Kesän ukkoskuurot '
+          + 'tuovat salamoita ja tulvia, talvi lunta ja jäisiä polkuja. '
+          + 'Vuoden 2025 metsäpalo ja vuoden 2026 tulva muuttivat puistoa '
+          + 'paljon, joten ajantasainen tilanne kannattaa aina tarkistaa '
+          + 'kansallispuiston omilta sivuilta ennen lähtöä.',
+        artikkeli: {
+          nimi: 'Matkailijan Grand Canyon',
+          teksti: 'Grand Canyonissa matka alas on helppo, ja vaikein osa odottaa paluumatkalla.',
+          nosto: 'Kanjonissa vaellus kulkee väärinpäin: alas mennään '
+            + 'levänneenä, ja raskain nousu odottaa aivan lopussa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Junalla, autolla ja bussilla',
+              teksti: 'Eteläreunalle ajetaan useimmiten Flagstaffista, josta '
+                + 'matkaa kertyy noin 130 kilometriä. Lähimmät suuret '
+                + 'lentokentät ovat Phoenixissa noin 370 ja Las Vegasissa '
+                + 'noin 440 kilometrin päässä. Tunnelmallisempi tapa tulla on '
+                + 'Williamsin kaupungista lähtevä Grand Canyon Railway: Santa '
+                + 'Fe -rautatieyhtiön vuonna 1901 valmistunut 103 kilometrin '
+                + 'rata päättyy Grand Canyon Villageen aivan kanjonin reunan '
+                + 'tuntumaan. Henkilöliikenne loppui autoistumisen takia 1968, '
+                + 'mutta yksityiset omistajat kunnostivat radan, ja junat '
+                + 'alkoivat kulkea uudelleen syyskuussa 1989. Matka kestää '
+                + 'suuntaansa parisen tuntia, eikä itse kanjonia näe junan '
+                + 'ikkunasta. Tavallisesti junaa vetävät dieselveturit, mutta '
+                + 'erikoisvuoroilla ajetaan höyryvetureilla, jotka on muutettu '
+                + 'polttamaan ravintoloista kerättyä käytettyä kasviöljyä. '
+                + 'Rata päättyy vuonna 1910 valmistuneelle hirsiasemalle. '
+                + 'Kylässä auto kannattaa jättää parkkiin: puisto ajaa '
+                + 'eteläreunalla ilmaisia bussilinjoja, ja länteen Hermit’s '
+                + 'Restiin vievä näköalatie on suurimman osan vuotta suljettu '
+                + 'yksityisautoilta.',
+              kuva: [
+                {
+                  tiedosto: 'Grand Canyon Railway No. 239 and 4124 pulling a passenger train - May 2018 - 02.jpg',
+                  lyhyt: 'Grand Canyon Railwayn juna kulkee mäntymetsän halki Williamsista kohti eteläreunaa.',
+                  selite: 'Dieselveturien vetämä matkustajajuna Williamsin ja '
+                    + 'Grand Canyon Villagen välisellä radalla toukokuussa '
+                    + '2018; rata valmistui 1901 ja otettiin uudelleen '
+                    + 'käyttöön 1989.',
+                  lahde: 'Rob Bixby, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Grand Canyon Depot - May 2018.jpg',
+                  lyhyt: 'Grand Canyon Villagen hirsinen rautatieasema valmistui vuonna 1910.',
+                  selite: 'Radan pohjoinen pääteasema on puiston historioitsijan '
+                    + 'mukaan yksi Yhdysvaltain kolmesta yhä pystyssä olevasta '
+                    + 'hirsirakenteisesta rautatieasemasta.',
+                  lahde: 'Rob Bixby, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Grand Canyon NP Boarding Hermit Road Shuttle Bus 0214 (5446223423).jpg',
+                  lyhyt: 'Retkeilijät nousevat puiston ilmaiseen bussiin Hermit Roadin pysäkillä.',
+                  selite: 'Hermit Roadin näköalatie on suurimman osan vuotta '
+                    + 'suljettu yksityisautoilta, joten sen varren '
+                    + 'näköalapaikoille kuljetaan puiston ilmaisilla '
+                    + 'busseilla.',
+                  lahde: 'Grand Canyon National Park, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kaksi reunaa ja palanut majatalo',
+              teksti: 'Pohjois- ja eteläreunan välillä on linnuntietä '
+                + 'keskimäärin vain 16 kilometriä, mutta siltoja ei ole, joten '
+                + 'autolla kanjonin ympäri ajetaan noin 350 kilometriä ja '
+                + 'neljästä viiteen tuntia. Eteläreunalle pääsee helpommin, ja '
+                + 'sinne tulee noin 90 prosenttia puiston kävijöistä. Sen '
+                + 'itäpäässä, 43 kilometrin päässä kylästä, seisoo Desert '
+                + 'View’n vartiotorni, jonka huipulta näkyy Coloradojoki. '
+                + 'Pohjoisreuna on noin 2 400 metrin korkeudessa, noin 300 '
+                + 'metriä vastarantaa ylempänä, ja lumen takia sinne johtava '
+                + 'tie on suljettu joulukuun alusta toukokuun puoliväliin. '
+                + 'Heinäkuussa 2025 salaman sytyttämä Dragon Bravo -palo '
+                + 'levisi kuivuudesta kärsineillä ylängöillä lähes 59 000 '
+                + 'hehtaarin alueelle ja tuhosi 113 rakennusta. Niiden '
+                + 'joukossa oli vuonna 1928 rakennettu Grand Canyon Lodge, '
+                + 'pohjoisreunan historiallinen majatalo, joka oli palanut '
+                + 'kerran aiemminkin, vuonna 1932. Pohjoisreunan palvelujen '
+                + 'tilanne on siksi syytä tarkistaa ennen matkaa. Kanjonin '
+                + 'lännessä oleva lasilattiainen Skywalk-näköalasilta ei taas '
+                + 'kuulu kansallispuistoon lainkaan: sen omistaa hualapai-kansa, '
+                + 'ja sinne ajetaan Las Vegasista lähes 210 kilometriä.',
+              kuva: {
+                tiedosto: 'Grand Canyon - North Rim Lodge 03.jpg',
+                lyhyt: 'Pohjoisreunan Grand Canyon Lodge vuonna 2013, ennen kuin metsäpalo tuhosi sen.',
+                selite: 'Kalkkikivestä ja männyntukeista rakennettu Grand '
+                  + 'Canyon Lodge tuhoutui heinäkuussa 2025 Dragon Bravo '
+                  + '-metsäpalossa; majatalon päärakennus oli palanut kerran '
+                  + 'aiemminkin, syyskuussa 1932.',
+                lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Polut alas kanjoniin',
+              teksti: 'Helpoin tapa kokea kanjoni on kävellä reunaa pitkin: '
+                + 'Rim Trail kulkee eteläreunaa yli 20 kilometriä, enimmäkseen '
+                + 'päällystettynä ja tasaisena, ja bussipysäkkien ansiosta '
+                + 'siitä voi kävellä vain palan. Kanjoniin eteläreunalta vievät '
+                + 'kaksi hoidettua pääpolkua. Bright Angel Trail alkaa kylästä '
+                + 'ja laskeutuu mutka mutkalta Havasupai Gardensin keitaalle, '
+                + 'jonka nimi vaihdettiin vuonna 2022 havasupai-kansan '
+                + 'pyynnöstä. Kesällä polun varrella on juomavesipisteitä. '
+                + 'Jyrkempi South Kaibab Trail seuraa harjannetta Yaki '
+                + 'Pointista, jonne pääsee vain bussilla tai kävellen. Näkymät '
+                + 'avautuvat heti, ja ensimmäinen näköalapaikka on nimetty Ooh '
+                + 'Aah Pointiksi kävijöiden huudahdusten mukaan, mutta varjoa '
+                + 'ja vettä polulla ei ole. Pohjalla, Coloradojoen '
+                + 'pohjoisrannalla, odottaa vuonna 1922 avattu Phantom Ranch, '
+                + 'jonne pääsee vain jalan, muulilla tai jokea pitkin. Sen '
+                + 'paikat on viime vuosina arvottu 15 kuukautta etukäteen, ja '
+                + 'muu yöpyminen reunan alapuolella vaatii leiriytymisluvan, '
+                + 'jota haetaan neljä kuukautta ennen. Kapealla polulla '
+                + 'muulijonolle väistetään aina.',
+              kuva: {
+                tiedosto: 'Grand Canyon Nat. Park S Kaibab Trail - Red & White Switchbacks 2354 (6752118021).jpg',
+                lyhyt: 'South Kaibab Trail laskeutuu serpentiineinä jyrkänteen läpi kohti kanjonin pohjaa.',
+                selite: 'Sateisena tammikuun päivänä 2012 kuvattu näkymä '
+                  + 'South Kaibab Trailin mutkiin, jotka kiemurtelevat alas '
+                  + 'Redwall-kalkkikiven jyrkänteen halki.',
+                lahde: 'Grand Canyon National Park, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Vesi ja kuumuus',
+              teksti: 'Grand Canyonissa vuori on ylösalaisin: toisin kuin '
+                + 'tunturissa, alas mennään levänneenä ja raskain nousu jää '
+                + 'päivän loppuun. Reunalta joelle on pystysuunnassa noin '
+                + 'puolitoista kilometriä, ja alaspäin mentäessä lämpenee. '
+                + 'Heinäkuussa päivän ylin lämpötila on eteläreunalla '
+                + 'keskimäärin 29 astetta, pohjan Phantom Ranchilla 41. Siksi '
+                + 'puisto ei suosittele kävelemään joelle ja takaisin yhden '
+                + 'päivän aikana, ja reunan alapuolelta pelastetaan silti '
+                + 'vuosittain satoja uupuneita ja nestehukasta kärsiviä '
+                + 'retkeilijöitä. Kesällä kävellään aamulla ja illalla, sillä '
+                + 'keskipäivä on kanjonin alaosissa vaarallisin. Vettä kuluu '
+                + 'enemmän kuin luulisi, mutta pelkkä vesi ei riitä: myös '
+                + 'suolaa pitää saada, koska runsas juominen ilman ruokaa voi '
+                + 'laimentaa veren suolapitoisuuden vaarallisen alas. Polkujen '
+                + 'juomapisteet saavat vetensä yhdestä ainoasta putkesta: '
+                + 'vuonna 1970 valmistunut Transcanyon-vesijohto tuo '
+                + 'pohjoisreunan Roaring Springsin lähdevettä kanjonin poikki '
+                + 'koko eteläreunalle, ja vanha putki rikkoutuu usein. Hanat '
+                + 'voivat siis olla kiinni, ja luonnon vesilähteiden vesi on '
+                + 'aina puhdistettava ennen juomista.',
+              kuva: {
+                tiedosto: "'Victor Vomit' sign on the Upper Bright Angel Trail (51295697782).jpg",
+                lyhyt: 'Bright Angel Trailin kyltti varoittaa kävelemästä joelle ja takaisin yhdessä päivässä.',
+                selite: 'Bright Angel Trailin yläosan kyltti muistuttaa usealla '
+                  + 'kielellä, että joelle ja takaisin on pitkä matka, kova '
+                  + 'kuumuus ja lähes 1 500 metrin korkeusero; piirroksessa '
+                  + 'kuumuudesta sairastunut retkeilijä oksentaa polun varrella.',
+                lahde: 'Grand Canyon National Park, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Ukkonen, tulvat ja lumi',
+              teksti: 'Heinä- ja elokuu ovat Arizonassa monsuuniaikaa: '
+                + 'iltapäivisin kerääntyvät ukkoskuurot tuovat rankkasateita '
+                + 'ja salamoita, ja korkeilla reunoilla salama iskee ihmisiin '
+                + 'varsin säännöllisesti. Ukkosella mennään sisätiloihin. '
+                + 'Kapeissa kanjoneissa tulva voi yllättää, vaikka omalla '
+                + 'kohdalla ei sataisi lainkaan, koska vesi syöksyy alas '
+                + 'ylempää. Näin kävi 29. elokuuta 2026, kun pohjoisreunan '
+                + 'rankkasade valui Bright Angel Creekiin: edellisvuonna '
+                + 'palaneet rinteet eivät imeneet vettä, ja puron pinta nousi '
+                + 'yli puolitoista metriä kymmenessä minuutissa. Tulva oli '
+                + 'puiston suurin sitten vuoden 1966. Kolme retkeilijää kuoli, '
+                + 'ja yli 80 ihmistä pelastettiin, useimmat helikopterilla. '
+                + 'Tulva rikkoi myös eteläreunan vesijohtoa, joten puisto '
+                + 'rajoitti veden käyttöä ja perui hotelliyöpymisiä. Syyskuun '
+                + 'puolivälissä sisäkanjonissa oli yhä laajoja sulkuja, ja '
+                + 'tilanne muuttuu nopeasti. Talvella sää kääntyy toisin päin: '
+                + 'eteläreunalle sataa vuodessa keskimäärin puolitoista metriä '
+                + 'lunta, polkujen yläosat jäätyvät ja kenkiin kannattaa ottaa '
+                + 'liukuesteet. Puhelin ei kuulu kanjonissa varmasti missään, '
+                + 'joten paperikartta kulkee mukana joka säällä.',
+              kuva: {
+                tiedosto: 'Monsoon Rain and a Partial Rainbow as seen from the Village Historic District (53949587432).jpg',
+                lyhyt: 'Monsuunikuuro ja sateenkaari kanjonin yllä elokuun 2024 auringonlaskussa.',
+                selite: 'Heinä–elokuun monsuuniukkoset tuovat kanjoniin '
+                  + 'kaivattua sadetta mutta myös hengenvaarallisia salamoita; '
+                  + 'kuva on otettu Grand Canyon Villagen historiallisesta '
+                  + 'kylänosasta.',
+                lahde: 'Grand Canyon NPS, Wikimedia Commons (PD)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'tiede',
@@ -125604,6 +126316,238 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Harbison, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Uluru, Uluṟu-Kata Tjuṯa National Park, Kata Tjuta,
+       * Ayers Rock Airport, Yulara, Bruce Munro) ja Wikivoyagesta
+       * (Uluṟu-Kata Tjuṯa National Park, Yulara) — teksti omaa. Nostojen
+       * aiheita (Gosse ja retkikunta, Gossen nousu 1873, Ayersin nimi,
+       * anangujen asuinhistoria ja vesikuopat, kallion koko, geologia ja
+       * värin syy) ei toisteta. Hintoja, aukioloja ja lentoreittejä ei
+       * mainita, koska lähteiden tiedot vanhenevat; tekstissä kehotetaan
+       * tarkistamaan ajantasaiset ohjeet. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin.
+       * Pystykuva: Rabichin kuivunut puu Kuniya-polun varrelta.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Petermann Ranges (AU), Uluru-Kata Tjuta National Park, Uluru, Kuniya Walk -- 2019 -- 3630.jpg',
+          lyhyt: 'Kuivunut puu seisoo Ulurun juurella kirkkaassa iltapäivän auringossa.',
+          selite: 'Lokakuussa 2019 Kuniya-polun varrelta kuvattu kuivunut '
+            + 'puu kallion eteläpuolella; kallion juuren poluilla varjoa on '
+            + 'vähän, joten vesi ja hattu kulkevat aina mukana.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Uluru ei ole kaupunki: kallio ja 36 kupolin Kata Tjuta '
+          + 'ovat kansallispuistossa, joka suljetaan yöksi ja jossa ei saa '
+          + 'yöpyä. Matkailija nukkuu lähes 20 kilometrin päässä Yularan '
+          + 'lomakylässä, jonne lennetään Ayers Rockin lentokentälle tai '
+          + 'ajetaan Alice Springsistä noin 450 kilometriä. Kalliolle ei enää '
+          + 'kiivetä, vaan sen kiertää kävellen, ja anangut pyytävät, ettei '
+          + 'tiettyjä kohtia kuvata. Päivän kohokohdat ovat aamu ja ilta, '
+          + 'jolloin katselupaikoilla odotetaan valon muuttumista, ja kesällä '
+          + 'juuri silloin kuumuus sallii liikkumisen. Leudointa on '
+          + 'huhtikuusta syyskuuhun, Australian syksynä, talvena ja '
+          + 'varhaiskeväänä.',
+        artikkeli: {
+          nimi: 'Matkailijan Uluru',
+          teksti: 'Ulurulla matkailijan päivä alkaa ennen auringonnousua ja '
+            + 'päättyy tähtitaivaan alla.',
+          nosto: 'Kiipeämiskielto astui voimaan 26. lokakuuta 2019, '
+            + 'täsmälleen 34 vuotta sen jälkeen, kun kallio palautettiin '
+            + 'anangujen omistukseen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kenttä, kylä ja puisto',
+              teksti: 'Ulurulle saapuvan kannattaa hahmottaa kolme erillistä '
+                + 'paikkaa. Ayers Rockin lentokenttä, jota kutsutaan myös '
+                + 'Connellanin kentäksi, on noin kuusi kilometriä Yularan '
+                + 'pohjoispuolella ja parinkymmenen minuutin ajomatkan päässä '
+                + 'kalliosta. Sinne lennetään suoraan muun muassa Sydneystä, '
+                + 'Melbournesta, Brisbanesta ja Cairnsista, mutta reitit ja '
+                + 'yhtiöt vaihtuvat, joten ne kannattaa tarkistaa ennen matkaa. '
+                + 'Yulara on 1980-luvulla rakennettu lomakylä aivan puiston '
+                + 'rajan ulkopuolella: hotellit, leirintäalue, kauppa ja '
+                + 'ravintolat ovat kaikki siellä, sillä kansallispuistossa ei '
+                + 'ole majoitusta eikä siellä saa leiriytyä. Kylän hotelleja '
+                + 'kiertää ilmainen bussi, ja kentältä pääsee kylään lentojen '
+                + 'mukaan ajoitetulla kuljetuksella. Kolmas paikka on itse '
+                + 'puisto, jonne tarvitaan henkilökohtainen, omalla nimellä '
+                + 'varustettu pääsylippu; sen voi ostaa verkosta tai puiston '
+                + 'portilta, ja vartijat voivat pyytää nähdä '
+                + 'henkilöllisyystodistuksen. Alice Springsistä ajetaan ensin '
+                + 'noin 200 kilometriä etelään Stuart Highwayta ja sitten 245 '
+                + 'kilometriä länteen Lasseter Highwayta; matkaan menee neljästä '
+                + 'viiteen tuntia. Pimeällä ajamista kannattaa välttää, sillä '
+                + 'tietä ei ole aidattu koko matkalta ja sille vaeltaa '
+                + 'kenguruja ja karjaa, ja moni vuokra-autoyhtiö kieltää yöajon '
+                + 'sopimuksessaan.',
+              kuva: [
+                {
+                  tiedosto: 'Ayers Rock Airport, October 2025 02.jpg',
+                  lyhyt: 'Ayers Rockin lentokentän matala terminaali on noin kuuden kilometrin päässä Yularasta.',
+                  selite: 'Lokakuussa 2025 kuvatun terminaalin edessä kyltti '
+                    + 'varaa kaistan lomakylän kuljetusbussille; kentälle '
+                    + 'lennetään suoraan Australian suurista kaupungeista.',
+                  lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: '2010-03 Lasseter Highway.jpg',
+                  lyhyt: 'Lasseter Highway vie Stuart Highwaylta Ulurulle punaisen aavikon halki.',
+                  selite: 'Lasseter Highway Mount Connerin näköalapaikan '
+                    + 'kohdalla maaliskuussa 2010; tie on päällystetty, mutta '
+                    + 'sitä ei ole aidattu koko matkalta.',
+                  lahde: 'Pulv, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Climb to Imalung Lookout, Yulara.jpg',
+                  lyhyt: 'Hiekkapolku nousee Yularan keskellä Imalungin näköalapaikalle dyynin laelle.',
+                  selite: 'Yularan keskustan Imalungin näköalapaikka on '
+                    + 'hiekkadyynin laella; sieltä näkyvät Uluru ja osittain '
+                    + 'Kata Tjuta, ja iltaisin sinne noustaan katsomaan '
+                    + 'auringonlaskua.',
+                  lahde: 'Querent, Wikimedia Commons (CC BY 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kallion kierto ja kulttuurikeskus',
+              teksti: 'Koska kalliolle ei enää kiivetä, Ulurun kokee '
+                + 'parhaiten sen juurella. Koko kallion kiertävä perusreitti '
+                + 'on noin kymmenen kilometriä pitkä ja tasainen, ja siihen '
+                + 'kannattaa varata kolmesta neljään tuntia. Useimmat kulkevat '
+                + 'myötäpäivään, ja muutaman kilometrin jälkeen muut kävelijät '
+                + 'harvenevat. Lyhyemmistä poluista Mala-reitti vie pohjoisen '
+                + 'pysäköintipaikalta Kantjun rotkoon, ja kallion '
+                + 'eteläpuolella noin kilometrin mittaisen Kuniya-polun '
+                + 'varrella on kalliosuojan maalauksia. Anangut vetävät myös '
+                + 'opastettuja kävelyjä, joilla kerrotaan pensasruoasta, '
+                + 'kasveista ja tjukurpan kertomuksista. Ennen kiertoa '
+                + 'kannattaa poiketa kulttuurikeskuksessa, joka avattiin 1995 '
+                + 'maanpalautuksen kymmenvuotispäivän kunniaksi. Arkkitehti '
+                + 'Gregory Burgessin suunnittelemassa rakennuksessa kerrotaan '
+                + 'tjukurpasta, anangujen elämästä ja puiston '
+                + 'yhteishallinnosta, ja näyttelyn tekstejä on pitjantjatjaran '
+                + 'ja englannin lisäksi saksaksi, ranskaksi, italiaksi ja '
+                + 'japaniksi. Sisäänpääsy on ilmainen. Keskuksessa toimivat '
+                + 'anangujen omistama Maruku Arts ja Mutitjulun taiteilijoiden '
+                + 'Walkatjara-taidekeskus, joten sieltä ostettu teos tukee '
+                + 'suoraan tekijöitään. Keskukselta kallion juurelle johtaa '
+                + 'Liru-polku.',
+              kuva: {
+                tiedosto: 'Outback Trip - Uluru Base Walk 2 (4157509210).jpg',
+                lyhyt: 'Hiekkapolku kulkee harvan puuston läpi Ulurun jyrkän seinämän juurelle.',
+                selite: 'Ulurun perusreitti kiertää koko kallion, ja '
+                  + 'marraskuussa 2009 kuvattu osuus kulkee puiden välistä '
+                  + 'aivan seinämän juurelle; kaukana polulla näkyy '
+                  + 'kävelijäryhmä.',
+                lahde: 'eyeintim, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kiipeämisen loppu ja kuvaamisen rajat',
+              teksti: 'Vielä 2010-luvun alussa noin joka kuudes puiston '
+                + 'kävijä kiipesi Ulurun laelle vuonna 1964 asennettua ja 1976 '
+                + 'jatkettua ketjukaidetta pitkin. Reitti seuraa polkua, jota '
+                + 'esi-isien mala-miehet kulkivat saapuessaan kalliolle '
+                + 'seremoniaan, eivätkä anangut itse kiipeä sille. He '
+                + 'pyysivät vuosikymmenten ajan vieraita jättämään nousun '
+                + 'väliin, myös turvallisuuden vuoksi: heinäkuuhun 2018 '
+                + 'mennessä kiipeilyyn liittyviä kuolemia oli kirjattu 37. '
+                + 'Pääministeri Bob Hawke oli jo 1983 luvannut kiellon osana '
+                + 'maanpalautusta, mutta lupausta ei pidetty. Puiston hallitus '
+                + 'päätti yksimielisesti marraskuussa 2017 kieltää '
+                + 'kiipeämisen, ja kielto astui voimaan 26. lokakuuta 2019; '
+                + 'ketjut purettiin. Ennen kiellon alkua kalliolle ehti '
+                + 'rynnätä poikkeuksellisen paljon kiipeilijöitä. '
+                + 'Kuvaamisellakin on rajansa: osa kallion kohdista liittyy '
+                + 'vain miesten tai vain naisten seremonioihin, ja anangut '
+                + 'pyytävät, ettei niitä kuvata, jotta kukaan väärää sukupuolta '
+                + 'oleva ei näkisi kuvaa vahingossa. Kohdat on merkitty '
+                + 'perusreitin varrelle kyltein. Droonilla kuvaaminen on '
+                + 'kielletty, ja kaupallinen kuvaaminen vaatii luvan. '
+                + 'Mutitjulun yhteisöön ei mennä ilman lupaa, eikä ihmisiä '
+                + 'kuvata kysymättä.',
+              kuva: {
+                tiedosto: 'Uluru climb permanently closed sign.jpg',
+                lyhyt: 'Ulurun juurella oleva kyltti kertoo nousureitin pysyvästä sulkemisesta.',
+                selite: 'Kyltissä lukee englanniksi, että reitti suljettiin '
+                  + 'pysyvästi 26. lokakuuta 2019; kuva on otettu kallion '
+                  + 'juurella huhtikuussa 2022.',
+                lahde: 'Querent, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Aamun ja illan katselupaikat',
+              teksti: 'Ulurun päivä rytmittyy auringon mukaan. Kallion '
+                + 'itäpuolella on auringonnousun katselualue Talinguru '
+                + 'Nyakuntjaku, jonka nimi tarkoittaa suunnilleen paikkaa, '
+                + 'josta katsotaan hiekkadyyniltä. Korotetulta paikalta '
+                + 'näkyvät sekä Uluru että kaukana Kata Tjuta, ja alueella on '
+                + 'noin puolentoista kilometrin kävelypolut, varjokatoksia ja '
+                + 'käymälät. Aiempi aamun katselupaikka suljettiin, koska '
+                + 'sieltä näkyi pyhä kohde. Iltaa varten on omat '
+                + 'auringonlaskualueet Kata Tjutan tienhaaran ja '
+                + 'kulttuurikeskuksen välillä, ja Kata Tjutalla on '
+                + 'katselupaikat sekä aamulle että illalle. Pimeän tultua '
+                + 'Yularan liepeillä syttyy Field of Light, brittitaiteilija '
+                + 'Bruce Munron valoteos. Munro sai idean leiriytyessään '
+                + 'Ulurulla 1992: hän kuvitteli teoksen, joka puhkeaisi yöllä '
+                + 'kukkaan kuin aavikon siemenet sateen jälkeen. Teos avattiin '
+                + '2016, ja 2019 se päätettiin jättää paikalleen toistaiseksi. '
+                + 'Pitjantjatjaraksi sen nimi on Tili Wiru Tjuta Nyakutjaku, '
+                + '”katsotaan monia kauniita valoja”, ja noin seitsemän '
+                + 'jalkapallokentän kokoisella alueella kävellään pimeässä '
+                + 'tuhansien hehkuvien varsien keskellä; alueelle mennään '
+                + 'lomakylän bussilla. Kun kaupunkien valoja ei ole satojen '
+                + 'kilometrien säteellä, myös Linnunrata näkyy harvinaisen '
+                + 'kirkkaana.',
+              kuva: {
+                tiedosto: 'Field of Light Uluru, October 2025 01.jpg',
+                lyhyt: 'Field of Light -teoksen tuhannet valot hehkuvat aavikolla Ulurun lähellä.',
+                selite: 'Lokakuussa 2025 hämärässä kuvatut valovarret '
+                  + 'hehkuvat pensaiden lomassa; Bruce Munron teoksen '
+                  + 'alueella kuljetaan pimeän tultua polkuja pitkin.',
+                lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kata Tjuta ja aavikon kuumuus',
+              teksti: 'Noin 25 kilometriä Ulurusta länteen kohoaa Kata Tjuta, '
+                + '36 punaisen kupolin ryhmä, jonka nimi tarkoittaa '
+                + 'pitjantjatjaraksi ”monta päätä”. Korkein kupu, Mount Olga, '
+                + 'nousee noin 546 metriä tasangon yläpuolelle, lähes 200 '
+                + 'metriä Ulurua korkeammalle; eurooppalaisen nimensä se sai '
+                + '1872 tutkimusmatkailija Ernest Gilesiltä Württembergin '
+                + 'kuningatar Olgan mukaan. Suuri osa kupolien välisistä '
+                + 'laaksoista on suljettu, mutta kaksi reittiä vie niiden '
+                + 'sisään: helppo, noin 2,6 kilometrin Walpan rotko ja 7,4 '
+                + 'kilometrin Tuulten laakso, jonka kivikkoinen ja paikoin '
+                + 'jyrkkä polku vaatii kunnon kengät. Kuumuus ohjaa kaikkea '
+                + 'liikkumista. Joulu- ja tammikuussa päivän ylin lämpötila '
+                + 'on keskimäärin lähes 38 astetta ja ennätys 46, kun taas '
+                + 'talviöinä lämpötila voi laskea pakkasen puolelle. '
+                + 'UV-säteily on lokakuusta maaliskuuhun äärimmäistä. Tuulten '
+                + 'laakso suljetaan kuumina päivinä ensimmäisen näköalapaikan '
+                + 'jälkeen jo aamupäivällä, joten kävelyt kannattaa aloittaa '
+                + 'heti aamulla. Vettä juodaan janosta riippumatta, ja '
+                + 'lämpiminä kuukausina kasvoille hakeutuvilta kärpäsiltä '
+                + 'suojaa parhaiten hattuun kiinnitettävä verkko. '
+                + 'Sulkemiskäytännöt voivat muuttua, joten puiston '
+                + 'ajankohtaiset ohjeet kannattaa tarkistaa paikan päällä.',
+              kuva: {
+                tiedosto: 'KataTjuta ValleyOfTheWinds.jpg',
+                lyhyt: 'Tuulten laakso kulkee kivikkoisena Kata Tjutan jyrkkien kupolien välissä.',
+                selite: 'Heinäkuussa 2009 kuvatussa Tuulten laaksossa '
+                  + 'kupolien sileät, punaiset seinämät kohoavat louhikkoisen '
+                  + 'laakson molemmin puolin.',
+                lahde: 'Toby Hudson, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'tiede',
@@ -125792,6 +126736,249 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Jerrye & Roy Klotz MD, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Iguazu Falls, Iguazú National Park, Iguaçu National
+       * Park, Puerto Iguazú, Tancredo Neves Bridge, Rainforest Ecological
+       * Train, Cataratas del Iguazú International Airport, Foz do Iguaçu
+       * International Airport, Itaipu Dam, Guaíra Falls, Parque das Aves),
+       * portugalinkielisestä Wikipediasta (Parque Nacional do Iguaçu:
+       * Santos-Dumont ja maiden lunastus 1916), Wikivoyagesta (Iguaçu
+       * Falls, Puerto Iguazú, Foz do Iguaçu) sekä La Nacionin jutuista
+       * 8.7. ja 12.7.2024 (Garganta del Diablon kävelysiltojen tuho
+       * lokakuun 2023 tulvassa ja uudelleenavaus 13.7.2024) ja Turismo
+       * Misionesin uutisesta 12.12.2024 (varotoimisulku tulvan aikaan)
+       * — teksti omaa.
+       * Nostojen, gallerian ja ennen-nyt-kuvien aiheita (Cabeza de Vaca,
+       * legenda, putousten määrä ja kurkku, rajakiista ja kolmen maan
+       * raja, jesuiittalähetys, puistojen perustaminen, sademetsä,
+       * tukaani, nenäkarhu, perhoset, basaltti) ei toisteta. Hinnat ja
+       * aukioloajat on jätetty pois, koska ne muuttuvat nopeasti. Kuvien
+       * lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja kuvat
+       * katsottu silmin. Pystykuva: Brasilian puolen näköalatasanne.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Parque Nacional do Iguaçú - Iguaçu National Park (14116493062).jpg',
+          lyhyt: 'Brasilian puolen näköalatasanteelta näkyvät Argentiinan puolen kaksiportaiset putoukset.',
+          selite: 'Brasilian puolen rantapolun näköalatasanteelta avautuu '
+            + 'näkymä joen yli Argentiinan puolelle, jossa vesi putoaa '
+            + 'kahtena portaana sademetsän reunalta.',
+          lahde: 'Deni Williams, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Iguazún putouksille ei tulla yhteen kaupunkiin vaan '
+          + 'kahteen maahan. Argentiinan puolella porttina on pieni Puerto '
+          + 'Iguazú, Brasilian puolella suurempi Foz do Iguaçu, ja '
+          + 'kummallakin on oma lentokenttänsä. Putoukset kannattaa katsoa '
+          + 'molemmilta puolilta: Argentiinassa kuljetaan kapearaiteisella '
+          + 'junalla ja kävelysiltoja pitkin aivan putousten päälle ja alle, '
+          + 'Brasiliassa yksi rantapolku näyttää koko putousrintaman kerralla. '
+          + 'Vesi kastelee joka tapauksessa, ja kumiveneet ajavat '
+          + 'matkustajansa tahallaan putousten alle. Sataa ympäri vuoden, ja '
+          + 'vettä virtaa yleensä eniten joulu–helmikuussa. Rajan ylitys käy '
+          + 'vaivattomasti, mutta passi on pidettävä mukana.',
+        artikkeli: {
+          nimi: 'Matkailijan Iguazú',
+          teksti: 'Iguazún putoukset katsotaan kahdesta maasta, ja '
+            + 'kummaltakin puolelta ne näyttävät erilaisilta.',
+          nosto: 'Lokakuun 2023 tulva vei valtaosan Paholaisen kurkun '
+            + 'kävelysilloista, ja reitti oli suljettuna yhdeksän kuukautta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kaksi porttikaupunkia ja Veljeyden silta',
+              teksti: 'Argentiinan puolen lentokenttä on metsän keskellä '
+                + 'noin 16 kilometriä Puerto Iguazústa kaakkoon ja vain '
+                + 'kuutisen kilometriä putouksista etelään, ja sinne '
+                + 'lennetään enimmäkseen Buenos Airesista. Brasilian kenttä '
+                + 'avattiin 1974 Foz do Iguaçun ja kansallispuiston väliin, ja '
+                + 'sinne tulee vuoroja Brasilian suurista kaupungeista; '
+                + 'Wikivoyagen vinkin mukaan koneen vasemmasta ikkunasta voi '
+                + 'laskeuduttaessa nähdä putoukset. Kaupunkeja yhdistää '
+                + 'Iguazú-joen ylittävä Tancredo Nevesin silta, paremmin '
+                + 'tunnettu Veljeyden siltana, joka avattiin marraskuussa '
+                + '1985. Rajan ylitys on arkinen asia, sillä viranomaiset '
+                + 'olettavat useimpien tekevän vain päiväretken, mutta '
+                + 'passileimat on hoidettava. Bussinkuljettaja ei aina pysähdy '
+                + 'raja-asemalle itsestään, joten hänelle kannattaa kertoa '
+                + 'asiasta etukäteen: ilman leimaa palaaminen voi tulla '
+                + 'kalliiksi. Argentiinan puolella poliisi voi tarkistaa '
+                + 'henkilöpaperit kotimaan matkallakin. Vuokra-autolla rajan '
+                + 'yli ajaminen vaatii vuokraamon luvan ja erillisen '
+                + 'vakuutuksen, joka on voimassa Argentiinassa. Fozista '
+                + 'puiston portille pääsee paikallisbussilla, joka kulkee '
+                + 'lentokentän ohi, ja Puerto Iguazún linja-autoasemalta '
+                + 'lähtee vuoroja Argentiinan puolen portille.',
+              kuva: [
+                {
+                  tiedosto: 'Ponte da Fraternidade.jpg',
+                  lyhyt: 'Veljeyden silta yhdistää Foz do Iguaçun ja Puerto Iguazún Iguazú-joen yli.',
+                  selite: 'Vuonna 1985 avattu Tancredo Nevesin silta eli '
+                    + 'Veljeyden silta ylittää Iguazú-joen Brasiliasta '
+                    + 'Argentiinaan; kuva on otettu joen pinnan tasolta '
+                    + 'sillan alta.',
+                  lahde: 'Garon Piceli, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Ingreso a la Aduana de Argentina (Puerto Iguazú) por el Puente Internacional "Tancredo Neves" desde Foz do Iguaçu, Brasil.jpg',
+                  lyhyt: 'Autot jonottavat Argentiinan raja-asemalle sillan päässä Puerto Iguazússa.',
+                  selite: 'Syyskuussa 2025 otetussa kuvassa Brasiliasta '
+                    + 'Veljeyden sillan yli tulleet autot jonottavat '
+                    + 'Argentiinan raja- ja tulliasemalle Puerto Iguazússa.',
+                  lahde: 'Horacio Cambeiro, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'IGR03.jpg',
+                  lyhyt: 'Cataratas del Iguazún lentoasema on metsän keskellä lähellä putouksia.',
+                  selite: 'Argentiinan puolen lentoaseman terminaali '
+                    + 'syyskuussa 2022; kenttä on noin 16 kilometriä Puerto '
+                    + 'Iguazústa kaakkoon ja vain kuutisen kilometriä '
+                    + 'putouksista etelään.',
+                  lahde: 'Vmzp85, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Argentiinan puoli: juna ja kävelysillat',
+              teksti: 'Lähes neljä viidestä putouksesta on Argentiinan '
+                + 'puolella, ja siellä kulkija pääsee niiden päälle ja alle. '
+                + 'Portilta lähtee kapearaiteinen Tren Ecológico de la Selva, '
+                + 'jonka vihreä, propaanilla kulkeva veturi vetää avonaisia '
+                + 'puupenkkivaunuja seitsemän kilometrin rataa pitkin '
+                + 'enintään 20 kilometrin tuntinopeutta. Juna pysähtyy, jos '
+                + 'eläin ylittää radan. Cataratas-asemalta alkavat ylempi '
+                + 'polku, joka kulkee putousten yläreunaa pitkin, ja pidempi '
+                + 'alempi polku, joka tuo kävijän putousten juurelle. '
+                + 'Päätepysäkiltä kävellään kilometrin mittaista siltaa '
+                + 'pitkin joen yli Paholaisen kurkun partaalle. Lokakuussa '
+                + '2023 yksi joen historian suurimmista tulvista vei '
+                + 'valtaosan kurkun kävelysilloista sekä 400 metriä '
+                + 'junarataa. Reitti avattiin uudelleen heinäkuussa 2024, ja '
+                + 'se suljetaan yhä varmuuden vuoksi, kun joki nousee. '
+                + 'Väkijoukkoja pääsee pakoon Sendero Macucolle, noin '
+                + 'seitsemän kilometrin edestakaiselle päällystämättömälle '
+                + 'metsäpolulle, joka päättyy pieneen Arrechean putoukseen; '
+                + 'sille kannattaa lähteä hyvissä ajoin päivällä. Polkujen ja '
+                + 'San Martínin saarelle vievän veneen tilanne vaihtelee '
+                + 'vedenkorkeuden mukaan, joten se kannattaa tarkistaa '
+                + 'puiston sivuilta juuri ennen käyntiä.',
+              kuva: {
+                tiedosto: 'Tren Ecológico de la Selva • Iguazú, Argentina (55805).jpg',
+                lyhyt: 'Tren Ecológico de la Selva kuljettaa kävijät avovaunuissa sademetsän halki.',
+                selite: 'Kapearaiteisen junan avovaunut täynnä matkustajia '
+                  + 'kulkevat vehreän metsän reunustamaa rataa pitkin '
+                  + 'Argentiinan kansallispuistossa syyskuussa 2025.',
+                lahde: 'Horacio Cambeiro, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Brasilian puoli: koko rintama kerralla',
+              teksti: 'Brasiliaan kuuluu vain runsas viidennes putouksista, '
+                + 'mutta sieltä kokonaisuuden näkee parhaiten. Puiston '
+                + 'sisällä kävijöitä kuljettavat kaksikerroksiset '
+                + 'panoraamabussit, joihin mahtuu 72 matkustajaa: kun '
+                + 'jokaisessa autossa on paljon väkeä, puiston luonto kärsii '
+                + 'vähemmän. Bussit pysähtyvät jokaisen polun alkupäässä. '
+                + 'Päänähtävyys on noin kahden kilometrin rantapolku, jonka '
+                + 'näköalapaikoilta putousrintama avautuu joen toiselle '
+                + 'puolelle. Lopuksi kävelysilta vie veden päälle Paholaisen '
+                + 'kurkun juurelle, Argentiinan tasannetta alemmas, missä '
+                + 'sumu kastelee ja aurinkoisena päivänä sateenkaaria syntyy '
+                + 'jatkuvasti. Polku päättyy Porto Canoasin asemalle, jonka '
+                + 'kohdalla joki virtaa vielä tyynenä putousten yläpuolella. '
+                + 'Wikivoyagen mukaan Brasilian puolelle riittää muutama '
+                + 'tunti, mutta metsään johtaa myös hiljaisempia reittejä, '
+                + 'kuten suoalueen halki kulkeva Bananeiras-polku, jonka '
+                + 'varrella voi nähdä kapusiiniapinoita ja agouteja. Puiston '
+                + 'syntyyn liittyy ilmailun uranuurtaja Alberto '
+                + 'Santos-Dumont: hän näki putoukset 1916 ja käytti '
+                + 'arvovaltaansa, jotta Paranán osavaltio lunasti maat '
+                + 'yleiseen käyttöön. Hänen patsaansa, lentoyhtiö VASP:n '
+                + 'lahja, seisoo puistossa. Brasiliasta voi myös lentää '
+                + 'helikopterilla putousten yllä, mutta Argentiina on '
+                + 'kieltänyt helikopteriajelut luonnolle koituvan haitan '
+                + 'vuoksi.',
+              kuva: {
+                tiedosto: 'Statue of Santos Dumont, Iguaçu National Park, 30-07-2025.jpg',
+                lyhyt: 'Santos-Dumontin patsas muistuttaa lentäjästä, joka ajoi putousten suojelua 1916.',
+                selite: 'Ilmailun uranuurtajan Alberto Santos-Dumontin '
+                  + 'pronssipatsas lierihattuineen seisoo trooppisten '
+                  + 'kasvien keskellä Brasilian kansallispuistossa; kuva on '
+                  + 'heinäkuulta 2025.',
+                lahde: 'Jcornelius, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kastumaan: veneet, sade ja sumu',
+              teksti: 'Iguazúlla kastuu, vaikka ei haluaisi, joten '
+                + 'sadetakki ja kameran suojapussi kuuluvat varustukseen; '
+                + 'kesällä osa kävijöistä kulkee näköalapaikoilla suoraan '
+                + 'uimapuvussa. Argentiinan puolella Iguazu Jungle Explorer '
+                + 'ajaa kumiveneillä putousten juurelle, ja kameralle '
+                + 'annetaan kuivapussi, koska matkustajat kastuvat '
+                + 'läpimäriksi. Brasilian puolella Macuco Safari aloittaa '
+                + 'avoautolla viidakon halki, ja lopuksi kävellään laiturille, '
+                + 'jolta noin 20 hengen kumiveneet nousevat kahden ison '
+                + 'moottorin voimin koskia ylös. Aivan Paholaisen kurkun alle '
+                + 'ei kivikon takia päästä, mutta kapteenit ohjaavat veneen '
+                + 'muiden putousten alle aina kun voivat, ja kuivat vaatteet '
+                + 'kannattaa jättää lähtöpaikan säilytyslokeroon. Ilmasto on '
+                + 'kostea ja subtrooppinen: sataa ympäri vuoden, enimmäkseen '
+                + 'ukkoskuuroina, ja päivän keskilämpötila vaihtelee kesän '
+                + 'noin 25 asteesta talven noin 15 asteeseen. Vettä on '
+                + 'yleensä eniten joulu–helmikuussa, mutta kuivuus voi '
+                + 'yllättää: vuonna 2006 virtaama pysyi poikkeuksellisen '
+                + 'kauan murto-osana tavallisesta. Talvella Puerto Iguazússa '
+                + 'voi olla koleaa, harvoin jopa pakkasta. Seudulla esiintyy '
+                + 'keltakuumetta ja muita hyttysten levittämiä tauteja, joten '
+                + 'rokotussuositukset kannattaa tarkistaa ennen matkaa.',
+              kuva: {
+                tiedosto: 'Iguassu Falls, Brazil-Argentina - by boat to the foot of the falls on the Argentine side - prepare to get soaked!! - (24215190874).jpg',
+                lyhyt: 'Kumivene täynnä matkustajia kurvaa Argentiinan puolen putousten juurelle.',
+                selite: 'Punainen kumivene kuljettaa pelastusliiveihin '
+                  + 'pukeutuneita matkustajia ruskeaa, kuohuvaa jokea pitkin '
+                  + 'kohti Argentiinan puolen putouksia, joiden sumu peittää '
+                  + 'kallioseinämän.',
+                lahde: 'Murray Foubister, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Pato, joka hukutti toiset putoukset',
+              teksti: 'Foz do Iguaçun pohjoispuolella Paraná-joen patoava '
+                + 'Itaipun voimala on putousten ohella seudun suurin '
+                + 'nähtävyys. Brasilian ja Paraguayn yhteinen pato valmistui '
+                + '1984, ja sen 20 generaattoria tuottavat kukin noin 700 '
+                + 'megawattia. Mittasuhteet selviävät Iguazún kautta: '
+                + 'putousten keskimääräinen vesimäärä riittäisi pyörittämään '
+                + 'vain kahta generaattoria, ja täysin auki olevat tulvaportit '
+                + 'päästävät läpi 40 kertaa putousten keskivirtaaman. Patoa '
+                + 'kierretään opastetuilla kierroksilla sekä Brasilian että '
+                + 'Paraguayn puolelta. Padon hinta näkyy ylävirrassa: kun '
+                + 'tekojärvi täyttyi lokakuussa 1982, sen alle jäivät '
+                + 'Guaíran putoukset, joiden virtaamaa pidettiin yhtenä '
+                + 'maailman suurimmista. Viimeisinä kuukausina tuhannet '
+                + 'tulivat katsomaan niitä vielä kerran, ja tammikuussa 1982 '
+                + 'ylikuormitettu riippusilta romahti ja vei kymmeniä '
+                + 'ihmishenkiä. Eläimiä pääsee katsomaan lähempää kahdessa '
+                + 'pienemmässä kohteessa. Kansallispuiston porttia vastapäätä '
+                + 'on vuonna 1994 avattu Parque das Aves, jossa kävelypolku '
+                + 'kulkee 16 hehtaarin metsään rakennettujen suurten '
+                + 'lintuhäkkien läpi. Puerto Iguazússa Güirá Oga hoitaa '
+                + 'pelastettuja lintuja ja muita eläimiä ja yrittää palauttaa '
+                + 'ne luontoon.',
+              kuva: {
+                tiedosto: 'Usina Hidroelétrica Itaipu Binacional - Itaipu Dam (17174823579).jpg',
+                lyhyt: 'Itaipun padon tulvauomat laskeutuvat jyrkkinä kohti Paraná-jokea.',
+                selite: 'Itaipun padon harjalta näkyvät hyppyrimäen '
+                  + 'muotoiset tulvauomat, jotka ovat kuvassa lähes kuivina; '
+                  + 'niiden alapuolella Paraná-joki virtaa metsäisten '
+                  + 'rantojen välissä.',
+                lahde: 'Deni Williams, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -126332,6 +127519,275 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'USGS, Wikimedia Commons (PD)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Daniel K. Inouye International Airport, Skyline
+       * (Honolulu), Hawaiian Airlines, Hawaii Superferry, 2023 Hawaii
+       * wildfires, Lahaina, Haleakalā National Park, Hāʻena State Park,
+       * Plate lunch, Poke, Loco moco, Spam musubi, Shave ice, Hawaiian
+       * language, ʻOkina, Lei, Merrie Monarch Festival, Kīlauea, Mauna
+       * Kea, Hanauma Bay, Sunscreen, Hawaiian monk seal, Green sea turtle)
+       * ja Wikivoyagesta (Hawaii, Maui, Kauai, Haleakala National Park,
+       * Hawaii Volcanoes National Park) — teksti omaa.
+       * Nostojen ja ennen-nyt-kuvien aiheita (Cook, Kamehameha I,
+       * Lunalilo, sokeriplantaasit, kuningaskunnan kaataminen ja
+       * liittäminen, alaia-surffaus, Leilani Estatesin laava, Mauna Loa,
+       * kuuma piste, Kilauean purkaukset, Pele, Mark Twain, Diamond Head)
+       * ei toisteta. Hinnat ja aukioloajat on jätetty pois, koska ne
+       * muuttuvat nopeasti. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * Kalalau-polku Kauailla.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Kalalau Trail 2004-08-22.JPG',
+          lyhyt: 'Kalalau-polku kiemurtelee Kauain Nā Pali -rannikon jyrkänteillä meren yllä.',
+          selite: 'Kalalau-polun alkupään kapea, punamultainen polku '
+            + 'kulkee hala-puiden ja heinikon läpi Kauain pohjoisrannikolla, '
+            + 'ja taustalla Nā Pali -rannikon vihreät jyrkänteet laskeutuvat '
+            + 'suoraan mereen.',
+          lahde: 'Matt Wright, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Havaiji on Yhdysvaltain 50. osavaltio keskellä '
+          + 'Tyyntämerta. Useimmat matkailijat lentävät ensin Honoluluun ja '
+          + 'jatkavat sieltä pienemmillä koneilla naapurisaarille. Kuudella '
+          + 'matkailijoille avoimella saarella on kullakin oma luonteensa: '
+          + 'Oahulla on kaupunki ja Waikikin ranta, Mauilla Haleakalān huippu, '
+          + 'Kauailla jyrkät rannikot ja Isolla saarella toimivat tulivuoret. '
+          + 'Paikallinen ruoka yhdistää havaijilaista, aasialaista, '
+          + 'portugalilaista ja amerikkalaista keittiötä. Lämmintä on ympäri '
+          + 'vuoden, mutta tuulen puoleisilla pohjois- ja itärannikoilla '
+          + 'sataa selvästi enemmän kuin suojan puolella, ja korkeimmilla '
+          + 'huipuilla voi olla pakkasta. Paikalliset arvostavat vierailijaa, '
+          + 'joka kunnioittaa havaijilaista kulttuuria ja luontoa.',
+        artikkeli: {
+          nimi: 'Matkailijan Hawaii',
+          teksti: 'Havaijin kuusi matkailijoille avointa saarta kuuluvat '
+            + 'samaan osavaltioon, mutta jokaisella on oma luonteensa.',
+          nosto: 'Saarten välillä ei ole kulkenut autolauttaa vuoden 2009 '
+            + 'jälkeen, joten saarelta toiselle lennetään.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentäen perille ja saarelta toiselle',
+              teksti: 'Useimmat lennot Yhdysvaltain mantereelta ja lähes '
+                + 'kaikki kansainväliset lennot laskeutuvat Honoluluun Daniel '
+                + 'K. Inouyen lentoasemalle, joka sai nimensä 2017 Honolulussa '
+                + 'syntyneen pitkäaikaisen senaattorin mukaan. Suoria lentoja '
+                + 'mantereelta on myös Mauin Kahuluihin, Ison saaren Konaan ja '
+                + 'Hiloon sekä Kauain Lihueen, ja Los Angelesista tai San '
+                + 'Franciscosta lento kestää noin viisi tuntia. Saarten välillä '
+                + 'liikutaan käytännössä lentäen, ja lennot kestävät 20 '
+                + 'minuutista tuntiin. Autolautta Hawaii Superferry lopetti jo '
+                + '2009, kun Havaijin korkein oikeus totesi sen toimintaluvan '
+                + 'perustuslain vastaiseksi puuttuvan ympäristöarvioinnin '
+                + 'vuoksi. Suurin saarten välinen lentoyhtiö Hawaiian Airlines '
+                + 'kuuluu nykyään Alaska Airlinesin emoyhtiöön, mutta nimi on '
+                + 'säilynyt Havaijin-lennoilla. Kun saapuu yhdelle saarelle ja '
+                + 'lähtee kotiin toiselta, säästää yhden saarten välisen '
+                + 'paluulennon. Lokakuusta 2025 lähtien kuljettajaton '
+                + 'Skyline-metro on pysähtynyt lentoasemalla, mutta keskustaan '
+                + 'rata on määrä jatkaa vasta noin 2031, eikä se ulotu '
+                + 'Waikikiin. Lentoasemalta Waikikiin pääsee TheBusin W-linjalla. '
+                + 'Naapurisaarilla bussiyhteydet ovat vähäisiä, joten auto '
+                + 'kannattaa vuokrata ajoissa. Maatalouskaranteeni koskee '
+                + 'matkailijaa molempiin suuntiin: saapuessa täytetään '
+                + 'ilmoitus kasveista ja eläimistä, ja mantereelle lähtiessä '
+                + 'kaikki matkatavarat tarkastetaan. Tuoreita hedelmiä ei saa '
+                + 'viedä, lukuun ottamatta ananasta ja käsiteltyä papaijaa. '
+                + 'Havaijilla ei siirrytä kesäaikaan, joten aikaero mantereelle '
+                + 'vaihtelee vuodenajan mukaan.',
+              kuva: [
+                {
+                  tiedosto: 'Skyline Lelepaua Station with eastbound train 2025-11-24.jpg',
+                  lyhyt: 'Kuljettajaton Skyline-juna Honolulun lentoaseman Lelepaua-asemalla 2025.',
+                  selite: 'Valkoinen, sateenkaariraidallinen Skyline-juna '
+                    + 'seisoo korotetulla laiturilla lentoaseman asemalla; kuva '
+                    + 'on otettu marraskuussa 2025 kansainvälisen '
+                    + 'pysäköintitalon kuudennesta kerroksesta.',
+                  lahde: 'Musashi1600, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'Hawaiian Airlines Boeing 717 at Hilo International Airport.jpg',
+                  lyhyt: 'Hawaiian Airlinesin saarten välinen Boeing 717 Hilon lentoasemalla Isolla saarella.',
+                  selite: 'Hawaiian Airlinesin Boeing 717 odottaa '
+                    + 'matkustajasillan vieressä Hilon lentoasemalla elokuussa '
+                    + '2013. Peräsimessä on yhtiön tunnus Pualani, "taivaan '
+                    + 'kukka"; yhtiö on lentänyt tällä konetyypillä saarten '
+                    + 'välisiä lentoja vuodesta 2001.',
+                  lahde: 'Macpro3000, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Kahului Airport Terminal Entrance 2021.jpg',
+                  lyhyt: 'Mauin Kahuluin lentoasema on osavaltion toiseksi suurin kaupallinen lentokenttä.',
+                  selite: 'Matkustajia matkalaukkuineen ja autoja Kahuluin '
+                    + 'lentoaseman terminaalin edessä heinäkuussa 2021. '
+                    + 'Kentälle lennetään suoraan useista Yhdysvaltain '
+                    + 'mantereen ja Kanadan kaupungeista.',
+                  lahde: 'Larry D. Moore, Wikimedia Commons (CC BY 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kuusi saarta, kuusi luonnetta',
+              teksti: 'Havaijin kahdeksasta pääsaaresta kuusi on avoinna '
+                + 'matkailijoille. Oahu on väkirikkain: siellä ovat Honolulu ja '
+                + 'Waikikin ranta, ja sademetsäpolut alkavat vain minuuttien '
+                + 'päässä hotelleista. Talvella saaren pohjoisrannikolle '
+                + 'vyöryvät jättiaallot tekevät muuten uneliaasta seudusta '
+                + 'surffauksen maailmankeskuksen. Mauilla ajetaan Hanan tietä, '
+                + 'joka on vain noin 90 kilometriä pitkä mutta niin mutkainen '
+                + 'ja paikoin yksikaistainen, että matka voi kestää kolme '
+                + 'tuntia suuntaansa. Haleakalān yli 3 000 metrin huipulle '
+                + 'nousee auringonnousua katsomaan niin paljon väkeä, että '
+                + 'aamun käyntiin tarvitaan ennakkovaraus, ja huipulla voi olla '
+                + 'lähes pakkasta. Mauin länsirannikon Lahaina paloi elokuussa '
+                + '2023: maastopalossa kuoli ainakin 102 ihmistä ja yli 2 200 '
+                + 'rakennusta tuhoutui. Jälleenrakennus kestää vuosia, eikä '
+                + 'suljetuille palaneille alueille ole asiaa, mutta muualle '
+                + 'saarelle matkailijat ovat tervetulleita. Kauai on pääsaarista '
+                + 'vanhin ja eroosion eniten muovaama. Nā Pali -rannikon ja '
+                + 'noin kilometrin syvyisen Waimean kanjonin vuoksi mikään tie '
+                + 'ei kierrä saarta. Pohjoisrannikon tien päässä Hāʻenan '
+                + 'osavaltiopuistoon tarvitaan ennakkovaraus, ja sieltä alkaa '
+                + '18 kilometrin Kalalau-polku, jonka pidempi osuus vaatii '
+                + 'yöpymisluvan. Molokailla ja Lanailla ei ole säännöllisiä '
+                + 'bussivuoroja. Sadekausi on suunnilleen loka–maaliskuussa ja '
+                + 'hurrikaanikausi kesä–marraskuussa. Wikivoyagen mukaan sää on '
+                + 'miellyttävimmillään huhti–toukokuussa ja syys–lokakuussa, '
+                + 'jolloin matkat ovat usein myös edullisempia kuin joulun '
+                + 'sesonkina.',
+              kuva: {
+                tiedosto: 'Haleakala sunrise.jpg',
+                lyhyt: 'Aurinko nousee pilvimeren yltä Haleakalān huipulla Mauilla.',
+                selite: 'Kansallispuistopalvelun kuvassa aurinko nousee '
+                  + 'raidallisten pilvien takaa, ja sen alla lepää tumma '
+                  + 'pilvimeri, josta vain vuoren reunan siluetti kohoaa esiin.',
+                lahde: 'National Park Service, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Plate lunch, poke ja shave ice',
+              teksti: 'Havaijin arkiruoka syntyi plantaaseilla, joille '
+                + 'tuotiin työläisiä muun muassa Kiinasta, Japanista, '
+                + 'Portugalista ja Filippiineiltä. Heidän eväistään kehittyi '
+                + 'plate lunch: kaksi kauhallista valkoista riisiä, '
+                + 'makaronisalaattia ja pääruoka, esimerkiksi teriyakilihaa, '
+                + 'kanakatsua tai korealaista kalbia. Sitä myyvät ketjut, '
+                + 'ostoskeskusten ruokapaikat ja parkkipaikoille pysäköidyt '
+                + 'lounasautot, joita paikalliset suosivat. Hilossa keksittiin '
+                + '1949 loco moco, jossa riisin päällä on jauhelihapihvi, '
+                + 'paistettu kananmuna ja ruskea kastike. Poke tarkoittaa '
+                + 'havaijiksi paloittelua: kuutioitu raaka kala, usein '
+                + 'keltaevätonnikala ʻahi, maustetaan nykyään tavallisesti '
+                + 'soijakastikkeella ja seesamiöljyllä, sipulilla ja '
+                + 'merilevällä. Spam musubi, säilykelihaviipale riisipalan '
+                + 'päällä merilevään käärittynä, odottaa lähikauppojen '
+                + 'kassoilla. Portugalilaiset malasada-munkit ja kiinalaista '
+                + 'perua olevat suolatut ja kuivatut hedelmät, kuten li hing '
+                + 'mui -luumut, ovat tyypillisiä välipaloja. Helteellä syödään '
+                + 'shave icea, japanilaisesta kakigōrista periytyvää hienoksi '
+                + 'höylättyä jäätä, joka imee itseensä guava-, passionhedelmä- '
+                + 'tai kookossiirapin; päälle voi pyytää azukipapuja tai '
+                + 'jäätelöä. Perinteisiä havaijilaisia ruokia tarjoillaan '
+                + 'lūʻau-juhlissa, joita järjestävät monet lomakeskukset: '
+                + 'maakuopassa haudutettua kālua-possua, taaron juuresta '
+                + 'survottua poita, taaron lehtiin käärittyä laulauta ja '
+                + 'kookoshyytelö haupiaa. Hinnat ovat saarilla yleensä '
+                + 'korkeammat kuin mantereella, koska lähes kaikki tuodaan '
+                + 'laivalla.',
+              kuva: {
+                tiedosto: 'Wardsplatelunch.jpg',
+                lyhyt: 'Havaijilainen lounasrasia: ahi-pokea, lomi-lohta, kālua-possua ja laulau riisin kera.',
+                selite: 'Styroksirasiassa on kaksi kauhallista riisiä, '
+                  + 'soijaan marinoitua ahi-pokea, tomaatin kanssa sekoitettua '
+                  + 'lomi lomi -lohta, kālua-possua, taaron lehtiin haudutettu '
+                  + 'laulau ja pala kookoshyytelö haupiaa; annos on ostettu '
+                  + 'Honolulun Wardin torilta vuonna 2007.',
+                lahde: 'christian razukas, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Aloha käytännössä: kieli, lei ja hula',
+              teksti: 'Havaijin kieli, ʻōlelo Hawaiʻi, on englannin ohella '
+                + 'osavaltion virallinen kieli, vaikka arjessa puhutaan '
+                + 'lähinnä englantia ja paikallista pidginiä. Vuonna 1896 '
+                + 'Havaijin tasavalta kielsi havaijin opetuskielenä, ja kieli '
+                + 'palasi julkisiin kouluihin vasta 1987; kielipesät ovat '
+                + 'opettaneet lapsille havaijia vuodesta 1984. Kirjoituksessa '
+                + 'näkyvä ʻokina on oma kirjaimensa, joka merkitsee '
+                + 'kurkkuäänteen katkoa. Muutama sana ilahduttaa: mahalo on '
+                + 'kiitos, pau tarkoittaa valmista, ja reittiohjeissa mauka '
+                + 'viittaa vuorille päin ja makai merelle päin. Mantereen '
+                + 'Yhdysvalloista puhutaan Mainlandina, sillä "the States" '
+                + 'kuulostaa paikallisten korvissa siltä kuin Havaiji ei '
+                + 'kuuluisi niihin. Havaijilainen tarkoittaa saarilla '
+                + 'alkuperäiskansan jälkeläistä, ei jokaista asukasta, ja '
+                + 'kotiin kutsuttuna kengät jätetään oven ulkopuolelle. Lei eli '
+                + 'kukkaseppele otetaan vastaan kiitollisena. Sitä ei heitetä '
+                + 'roskiin, ja jos sitä ei voi pitää kaulassa, se asetetaan '
+                + 'kunniapaikalle. Perinteen mukaan raskaana olevalle annetaan '
+                + 'vain avoin lei. Toukokuun ensimmäisenä päivänä vietetään '
+                + 'vuodesta 1927 lähtien Lei Dayta. Hulan tärkein näyttämö on '
+                + 'Hilon Merrie Monarch -festivaali, joka alkaa joka vuosi '
+                + 'pääsiäissunnuntaina ja huipentuu kolmen illan kilpailuun. '
+                + 'Se on nimetty kuningas Kalākauan mukaan, joka elvytti hulaa '
+                + 'hallituskaudellaan 1874–1891, ja kilpailuillat lähetetään '
+                + 'televisiossa ja verkossa maksutta.',
+              kuva: {
+                tiedosto: 'Hula Hālau O Kamuela under the direction of Kumu Hula Kauʻi Kamanaʻo and Kunewa Mook - 2019 Overall Winners of the Merrie Monarch Festival - Hilo HI - Lokalia Montgomery Perpetual Trophy.jpg',
+                lyhyt: 'Hula Hālau O Kamuela voitti Merrie Monarch -festivaalin kokonaiskilpailun 2019.',
+                selite: 'Kukkaseppeleisiin ja vihreisiin lehtihameisiin '
+                  + 'pukeutuneet tanssijat seisovat rivissä Hilon '
+                  + 'festivaalilavalla huhtikuussa 2019; heidän edessään ovat '
+                  + 'puinen kiertopalkinto, rumpu ja kalebassista tehdyt '
+                  + 'soittimet.',
+                lahde: 'Allanbcool, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Tulivuoripuisto ja luonnon kunnioitus',
+              teksti: 'Ison saaren Hawaiʻi Volcanoes -kansallispuiston ydin '
+                + 'on Kīlauean huippu noin 1 200 metrin korkeudessa, missä voi '
+                + 'sataa ja olla koleaa mihin vuodenaikaan tahansa. Crater Rim '
+                + 'Drive kiersi ennen koko kalderan, mutta osa tiestä sortui '
+                + 'kraatteriin vuoden 2018 purkauksessa ja on suljettu '
+                + 'pysyvästi. Lyhyt polku vie sademetsän läpi Nāhukuun, noin '
+                + '120 metrin mittaiseen valaistuun laavatunneliin. Chain of '
+                + 'Craters Road laskeutuu 32 kilometrin matkalla runsaan '
+                + 'kilometrin rannikolle Hōlein merikaarelle, eikä matkalla ole '
+                + 'ruokaa, vettä eikä polttoainetta. Tien varren Puʻuloan '
+                + 'laavakentällä on yli 23 000 kallioon hakattua kuvaa. '
+                + 'Joulukuussa 2024 alkanut purkaus Halemaʻumaʻun kraatterissa '
+                + 'on jatkunut jaksoittaisina laavasuihkuina, joten nähtävä '
+                + 'vaihtelee päivästä toiseen; ajantasainen tilanne kannattaa '
+                + 'tarkistaa puiston ja USGS:n sivuilta. Tulivuoren rikkipitoinen '
+                + 'savusumu, vog, voi haitata hengityssairaita. Mauna Kean '
+                + 'vierailukeskus on noin 2 800 metrin korkeudessa, ja '
+                + 'kolmannes kävijöistä on saanut vuoristotaudin oireita; '
+                + 'huipulle suositellaan nelivetoa. Luonnossa pätee sääntö: '
+                + 'ota vain valokuvia. Kiviä, hiekkaa tai heiau-temppelien '
+                + 'esineitä ei viedä mukaan. Havaijilla on kielletty '
+                + 'oksibentsonia ja oktinoksaattia sisältävien aurinkovoiteiden '
+                + 'myynti, koska ne vahingoittavat koralleja. Oahun suosittuun '
+                + 'Hanauman lahteen muualla asuvat pääsevät vain verkossa '
+                + 'varatulla ajalla, ja ensikertalaiset katsovat ensin videon '
+                + 'riutan suojelusta. Rannalla lepääviä kilpikonnia ja '
+                + 'munkkihylkeitä ei saa häiritä, ja delfiinejä jahtaavia '
+                + 'retkiveneitä on sakotettu.',
+              kuva: {
+                tiedosto: 'Nāhuku.jpg',
+                lyhyt: 'Kävijöitä Nāhukun valaistussa laavatunnelissa Hawaiʻi Volcanoes -kansallispuistossa.',
+                selite: 'Ryhmä kävelee märkää polkua pitkin Nāhukun eli '
+                  + 'Thurstonin laavatunnelin holvimaisessa käytävässä, jonka '
+                  + 'seinät valaisimet värjäävät kullanruskeiksi; tunneli syntyi '
+                  + 'satoja vuosia sitten, kun sula laava valui sen läpi pois.',
+                lahde: 'Michael Szoenyi / National Park Service, Wikimedia Commons (Public domain)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -126741,6 +128197,266 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Karora, Wikimedia Commons (PD)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Milford Sound, New Zealand State Highway 94, Homer
+       * Tunnel, Transport in Milford Sound, Milford Track, Milford Sound
+       * Airport, Te Anau, Routeburn Track, Kea, Antipathella fiordensis,
+       * Austrosimulium ungulatum, Sandfly, Fiordland National Park) ja
+       * Wikivoyagen sivuilta Milford Sound, Milford Track ja Te Anau —
+       * teksti omaa. Hinnat ja aukioloajat jätetty pois, koska
+       * Wikivoyagen yritystiedot ovat osin vanhoja; observatorion
+       * aukiolo ja ulkomaalaisten pääsymaksuehdotus (2025) merkitty
+       * tarkistettaviksi. Nostojen aiheita (Grono, Piopiotahi-nimi,
+       * Tū-te-rakiwhanoa vuonojen veistäjänä, Sutherland ja Sutherland
+       * Falls, Mitre Peak, Kipling ja kävijämäärät, sademäärä ja
+       * tilapäiset putoukset, Bowen Falls, delfiinit, tawaki, Milford
+       * Trackin synty ja "maailman hienoin kävelyretki") eikä ennen–nyt-
+       * kuvien aiheita (photochrom, Stirling Falls, karvahylkeet,
+       * Homerin tunnelin rakentaminen) toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: autojono Homerin tunnelin itäsuulla.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Homer Tunnel, Milford Sound, New Zealand (18).JPG',
+          lyhyt: 'Autot jonottavat liikennevaloissa Homerin tunnelin itäsuulla Milford Roadilla.',
+          selite: 'Kesän vilkkaimpaan aikaan Homerin tunnelia ajetaan '
+            + 'liikennevalojen tahdissa vuorotellen yhteen suuntaan. Jonon '
+            + 'yllä kohoavat pystysuorat kallioseinät, joilta valuu ohuita '
+            + 'vesiputouksia, ja tunnelin suuta suojaa lumivyörykatos.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Milford Soundiin johtaa yksi ainoa maantie, ja lähes '
+          + 'jokainen kävijä tulee samaa reittiä päiväretkellä: Te Anausta '
+          + 'ajetaan noin 120 ja Queenstownista 291 kilometriä. Perillä '
+          + 'odottavat risteilyveneet, kajakit ja vedenalainen maailma, '
+          + 'jossa mustat korallit kasvavat tavallista paljon lähempänä '
+          + 'pintaa. Milford Trackin kävelijät saapuvat neljän päivän '
+          + 'vaelluksen päätteeksi veneellä, ja paikat reitille varataan '
+          + 'kuukausia etukäteen. Sadetakki ja hyönteiskarkote kuuluvat '
+          + 'jokaisen reppuun, ja tien tila tarkistetaan ennen lähtöä, '
+          + 'sillä vuoristotie voi sulkeutua lumivyöryvaaran, maanvyöryn '
+          + 'tai tulvan takia.',
+        artikkeli: {
+          nimi: 'Matkailijan Milford Sound',
+          teksti: 'Milford Soundiin on yksi tie, ja puolet elämyksestä on '
+            + 'sen varrella.',
+          nosto: 'Māorien tarinan mukaan hiekkakärpänen luotiin, jotta '
+            + 'ihmiset eivät jäisi toimettomina ihailemaan Fiordlandin '
+            + 'kauneutta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille yhtä tietä',
+              teksti: 'Milford Soundin kylään päättyy vain yksi maantie, '
+                + 'valtatie 94 eli Milford Road. Useimmat matkailijat '
+                + 'yöpyvät vajaan 3 000 asukkaan Te Anaussa, josta vuonolle '
+                + 'on noin 120 kilometriä: ajoaikaa kannattaa varata '
+                + 'vähintään kaksi tuntia, pysähdyksineen helposti kolme. '
+                + 'Queenstownista matkaa on 291 kilometriä suuntaansa, koska '
+                + 'tie kiertää Te Anaun kautta, ja sieltä lähtevä bussiretki '
+                + 'venyy noin kaksitoistatuntiseksi. Tankki täytetään Te '
+                + 'Anaussa, sillä myöhemmin polttoainetta saa vain hyvin '
+                + 'rajoitetusti. Tie seurailee ensin Te Anau -järven rantaa '
+                + 'ja nousee sitten Eglintonin laaksoon, jonka puolivälissä '
+                + 'Mirror Lakesin lammet heijastavat tyynellä säällä '
+                + 'vuorenhuiput. The Dividen pysäköintipaikalta alkaa '
+                + 'Routeburn Track, ja sen jälkeen tie kapuaa Homerin '
+                + 'tunnelille 945 metrin korkeuteen. Kesän ruuhka-aikaan '
+                + '1,27 kilometrin tunnelia ajetaan liikennevaloin '
+                + 'vuorotellen yhteen suuntaan, ja odotus voi venyä '
+                + 'parikymmentä minuuttia. Tunnelin suulla liikkuu usein '
+                + 'uteliaita kea-papukaijoja, joita ei saa ruokkia. '
+                + 'Kiireisempi voi lentää pienkoneella tai helikopterilla '
+                + 'Queenstownista, Wānakasta tai Te Anausta vuonon pienelle '
+                + 'lentokentälle, mutta huono sää voi perua lennon.',
+              kuva: [
+                {
+                  tiedosto: '015 City distances on a road sign in New Zealand - distance to Invercargill, Te Anau and Milford Sound.jpg',
+                  lyhyt: 'Valtatie 6:n viitta Queenstownin seudulla: Milford Soundiin on 291 kilometriä.',
+                  selite: 'Queenstownin seudulla valtatie 6:n viitta lupaa '
+                    + 'Milford Soundiin 291 kilometriä ja Te Anauhun 171. '
+                    + 'Matka on pitkä, koska vuorten läpi ei ole oikotietä '
+                    + 'ja tie kiertää Te Anaun kautta.',
+                  lahde: 'Marek Ślusarczyk (Tupungato), Wikimedia Commons (CC BY 3.0)',
+                },
+                {
+                  tiedosto: 'Mirror Lake, Fiordland 3.jpg',
+                  lyhyt: 'Mirror Lakesin lampi Milford Roadin varrella heijastaa lumihuippuisia vuoria.',
+                  selite: 'Eglintonin laaksossa, suunnilleen Te Anaun ja '
+                    + 'Milford Soundin puolivälissä, tien vieressä on '
+                    + 'pieniä lampia, joiden tyyni pinta heijastaa '
+                    + 'Earl-vuoriston huiput. Pysähdyspaikka on '
+                    + 'bussiretkien suosituimpia.',
+                  lahde: 'Robert Linsdell, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Kea 0A2A7264.jpg',
+                  lyhyt: 'Kea-papukaija Homerin tunnelin lähellä, jossa linnut liikkuvat autojen seassa.',
+                  selite: 'Kea on Eteläsaaren vuoristossa elävä papukaija, '
+                    + 'joka tutkii uteliaana reppuja, kenkiä ja autoja. '
+                    + 'Homerin tunnelin suulla ruokinta on houkutellut '
+                    + 'lintuja jonottavien autojen sekaan, ja vuonna 2017 '
+                    + 'tunnelin lähelle rakennettiin keoille oma '
+                    + 'kiipeilypaikka houkuttelemaan niitä pois tieltä.',
+                  lahde: 'JJ Harrison, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Laivalla, kajakilla ja pinnan alla',
+              teksti: 'Vuonolle lähdetään kylän satamaterminaalista, josta '
+                + 'usea yhtiö ajaa tavallisesti tunnista kahteen tuntiin '
+                + 'kestäviä risteilyjä. Monet niistä käyvät vuonon suulla '
+                + 'Tasmaninmerellä ja palaavat samaa reittiä, jota '
+                + 'varhaiset purjehtijat tulivat. Koska Queenstownin ja Te '
+                + 'Anaun bussit saapuvat keskipäivän tienoilla, veneet '
+                + 'ovat täysimmillään juuri silloin; aamun tai myöhäisen '
+                + 'iltapäivän lähdöllä väkeä on vähemmän, ja valokin on '
+                + 'usein kuvaamiseen parempi. Yön yli -risteilyillä '
+                + 'matkustajat syövät ja nukkuvat laivassa vuonolla. '
+                + 'Kajakilla pääsee kalliorannoille, joihin isot alukset '
+                + 'eivät mahdu, ja hiljaa liukuessa hylkeet ja pingviinit '
+                + 'näkyvät paremmin. Opastetut ryhmät ovat pieniä, mutta '
+                + 'melonta on raskasta, ja kylmään ja märkään on '
+                + 'varauduttava. Pinnan alla on oma maailmansa: sadevesi '
+                + 'muodostaa suolaisen meriveden päälle metsän '
+                + 'parkkihapoista ruskean makean kerroksen, joka pimentää '
+                + 'syvyydet. Siksi tavallisesti syvällä elävät mustat '
+                + 'korallit kasvavat täällä jo noin kymmenen metrin '
+                + 'syvyydessä. Harrison Covessa on toiminut kelluva '
+                + 'vedenalainen observatorio, josta korallit näkee lasin '
+                + 'läpi; sen aukiolo kannattaa tarkistaa ennen matkaa.',
+              kuva: {
+                tiedosto: 'Black coral at Milford Sound Underwater Observatory.jpg',
+                lyhyt: 'Elävä musta koralli näyttää vedenalaisen observatorion ikkunasta valkoiselta.',
+                selite: 'Harrison Coven vedenalaisesta observatoriosta '
+                  + 'kuvattu musta koralli on elävänä vaalea: nimensä '
+                  + 'korallit ovat saaneet tummasta tukirangastaan. '
+                  + 'Fiordlandin vuonoissa ne kasvavat poikkeuksellisen '
+                  + 'matalalla, koska ruskea makean veden pintakerros '
+                  + 'himmentää valon.',
+                lahde: 'Pseudopanax, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Milford Track: varaa ajoissa',
+              teksti: 'Milford Track on Uuden-Seelannin '
+                + 'luonnonsuojeluviraston DOC:n Great Walk -reitti, ja '
+                + 'pääkaudella lokakuun lopulta huhtikuun loppuun sitä '
+                + 'kävellään tarkkojen sääntöjen mukaan: vain yhteen '
+                + 'suuntaan, Te Anau -järven päästä Milford Soundiin, '
+                + 'neljässä päivässä. Telttailu on kielletty, ja jokainen '
+                + 'yö vietetään varatussa majassa. Itsenäiset kulkijat '
+                + 'nukkuvat DOC:n Clinton-, Mintaro- ja Dumpling-majoissa '
+                + 'ja kantavat itse ruokansa, makuupussinsa ja kattilansa; '
+                + 'opastetun retken ostaneet yöpyvät omissa majataloissaan, '
+                + 'joissa on suihkut ja valmiit ateriat. Reitille pääsee '
+                + 'päivittäin aloittamaan enintään 40 itsenäistä ja 50 '
+                + 'opastettua kävelijää, joten paikat menevät nopeasti: '
+                + 'toukokuussa 2022 koko kesä varattiin täyteen 13 '
+                + 'minuutissa. Vaellus alkaa veneellä Te Anau Downsista '
+                + 'Glade Wharfiin ja päättyy Sandfly Pointiin, jonne ei '
+                + 'johda tietä; sieltä noin varttitunnin venekyyti vie '
+                + 'Milford Soundin laiturille. Talvella rajoituksia ei ole, '
+                + 'mutta majojen varusteita viedään pois ja siltoja '
+                + 'puretaan lumivyöryjen tieltä, joten reitti sopii silloin '
+                + 'vain kokeneille. Säät voivat sotkea suunnitelmat '
+                + 'kesälläkin: vuonna 2025 kauden alku viivästyi '
+                + 'lumivyöryvaurioiden takia. Ilman varausta pääsee '
+                + 'tien varrelta The Dividesta päiväkävelylle Key '
+                + 'Summitille, jolta näkyy Hollyfordin laaksoon.',
+              kuva: {
+                tiedosto: 'Milford Track Sandfly Point Shelter.jpg',
+                lyhyt: 'Sandfly Pointin suojakatos Milford Trackin päässä, jossa kävelijät odottavat venettä.',
+                selite: 'Milford Trackin viimeinen päivä päättyy Sandfly '
+                  + 'Pointin puiseen suojakatokseen. Tietä ei ole, joten '
+                  + 'kävelijät odottavat täällä venettä, joka vie heidät '
+                  + 'vuonon poikki Milford Soundin laiturille.',
+                lahde: 'AlasdairW, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Sadevarusteet ja tien tila',
+              teksti: 'Sade on Milford Soundissa pikemmin sääntö kuin '
+                + 'poikkeus, joten sadetakki kuuluu päiväretkenkin '
+                + 'varusteisiin ja kameralle kannattaa ottaa sateenvarjo '
+                + 'tai vedenpitävä suoja. Sadepäivää ei silti tarvitse '
+                + 'surra: osa retkiyhtiöistä pitää sitä vuonon parhaana, '
+                + 'ja moni suosittelee näkemään paikan sekä poudalla että '
+                + 'sateella. Tien tila tarkistetaan ennen lähtöä. Milford '
+                + 'Road on korkea vuoristotie, jolla on kesäkuusta '
+                + 'marraskuuhun usein jäätä, ja lumiketjut ovat '
+                + 'lumiolosuhteissa pakolliset. Keskimäärin tie on '
+                + 'suljettuna noin kahdeksan päivää vuodessa, enimmäkseen '
+                + 'talvella, mutta maanvyöryt, kaatuneet puut ja tulvat '
+                + 'voivat katkaista sen mihin vuodenaikaan tahansa. '
+                + 'Lumivyöryalueilla pysähtyminen on kielletty pitkillä '
+                + 'matkoilla, eikä niille pidä jäädä kuvaamaankaan. '
+                + 'Talvella helikoptereista pudotetaan rinteille '
+                + 'räjähteitä, jotta kertynyt lumi saadaan vyörymään '
+                + 'hallitusti; viimeisin tiedossa oleva lumivyöryn '
+                + 'aiheuttama kuolema tiellä sattui vuonna 1983. '
+                + 'Tienvarren taulut kertovat sulkemisista, ja '
+                + 'vaarallisimpina aikoina Hollyfordin ja Cleddaun '
+                + 'laaksoissa lasketaan puomit. Omalla autolla ajavan on '
+                + 'hyvä tietää, että kapea ja mutkainen tie, jolla on '
+                + 'yksikaistaisia siltoja ja vähän ohituspaikkoja, oli '
+                + 'vuoden 2008 tilastossa maan kolmanneksi vaarallisin '
+                + 'valtatieosuus.',
+              kuva: {
+                tiedosto: 'Knobs Flat sgn.jpg',
+                lyhyt: 'Knobs Flatin tienvarsitaulu kertoo tien olevan auki ja lumivyöryvaaran pieni.',
+                selite: 'Eglintonin laakson Knobs Flatissa seisova taulu '
+                  + 'kertoo, onko Hollyfordin ja Milford Soundin välinen '
+                  + 'tieosuus auki ja kuinka suuri lumivyöryvaara '
+                  + 'vuorilla on. Kuvan ottopäivänä syyskuussa 2009 tie '
+                  + 'oli auki ja vaara pieni.',
+                lahde: 'Motorau, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Hiekkakärpäset ja kylän palvelut',
+              teksti: 'Fiordlandin tunnetuin eläin ei ole delfiini eikä '
+                + 'pingviini vaan hiekkakärpänen, māoriksi namu. '
+                + 'Uudessa-Seelannissa hiekkakärpäsiksi kutsutaan pieniä '
+                + 'mäkäräisiä, ja länsirannikon laji Austrosimulium '
+                + 'ungulatum on niistä pahamaineisin. Verta imevät vain '
+                + 'naaraat, jotka tarvitsevat sitä munien kehittymiseen, ja '
+                + 'pahimmillaan ihmistä on laskettu purevan yli tuhat '
+                + 'kärpästä tunnissa, etenkin juuri ennen auringonlaskua '
+                + 'tai sadetta. Māorien tarinan mukaan kärpäsillä on '
+                + 'tehtävä: kun Tū-te-rakiwhanoa oli saanut vuonot '
+                + 'valmiiksi, maisema oli niin kaunis, että ihmiset '
+                + 'lakkasivat tekemästä töitä ja jäivät vain katselemaan, '
+                + 'ja jumalatar Hine-nui-te-pō loi hiekkakärpäsen pitämään '
+                + 'heidät liikkeessä. DEET- tai ikaridiinipitoinen '
+                + 'karkote, pitkät hihat ja lahkeet auttavat; kylän '
+                + 'vierailijakeskuksessa kärpäsille on pystytetty '
+                + 'veistoksiakin. Kylässä palveluja on vähän: '
+                + 'majoituspaikat täyttyvät helposti, ja ruokapaikkoja on '
+                + 'niukasti, joten eväät kannattaa ottaa mukaan. Siksi noin '
+                + 'yhdeksän kävijää kymmenestä tulee vain päiväksi. '
+                + 'Maan luonnonsuojeluministeri ehdotti vuonna 2025 '
+                + 'ulkomaisille kävijöille 20–40 Uuden-Seelannin dollarin '
+                + 'pääsymaksua muutamiin luontokohteisiin, Milford Sound '
+                + 'mukaan lukien. Maksu ei tulisi voimaan ainakaan ennen kesää '
+                + '2027, joten tilanne kannattaa tarkistaa ennen matkaa.',
+              kuva: {
+                tiedosto: 'Biting sandfly.jpg',
+                lyhyt: 'Hiekkakärpänen imee verta sormesta, luultavasti Te Anaun seudulla.',
+                selite: 'Uudessa-Seelannissa hiekkakärpäsiksi kutsutut '
+                  + 'mäkäräiset ovat vain muutaman millimetrin mittaisia, '
+                  + 'mutta niiden puremat kutiavat. Kuva on otettu '
+                  + 'todennäköisesti Te Anaun seudulla, Milford Roadin '
+                  + 'alkupäässä.',
+                lahde: 'Emilio Floris, Wikimedia Commons (PD)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -127330,6 +129046,234 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Galápagos Islands, Galápagos National Park, Seymour
+       * Airport, Puerto Baquerizo Moreno, Puerto Villamil, Isabela Island,
+       * San Cristóbal Island, Floreana Island, Sierra Negra) ja
+       * Wikivoyagesta (Galapagos Islands, Galapagos wildlife, Santa Cruz,
+       * San Cristobal, Isabela, Floreana) — teksti omaa. Nostojen,
+       * ennen/nyt-kuvien ja valokuvapaketin aiheita (geologia, Berlanga,
+       * Beagle, peipposet, Puerto Ayoran synty ja väkiluku, puiston ja
+       * tutkimusaseman perustaminen, jättiläiskilpikonnat, meri-iguaanit,
+       * pingviini, lentokyvytön kormoraani, merileijonat laiturilla,
+       * sinijalkasuulan kosinta, Bartolomén näköala) ei toisteta. Hinnat
+       * jätetty pois paitsi puiston pääsymaksu, jonka Wikivoyage kertoo
+       * nousseen 1.8.2024; teksti kehottaa tarkistamaan sen. Kuvien
+       * lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja kuvat
+       * katsottu silmin. Pystykuva: Las Grietas.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Las Grietas, isla Santa Cruz, islas Galápagos, Ecuador, 2015-07-26, DD 83.JPG',
+          lyhyt: 'Uimari Las Grietasin laavarailossa Santa Cruzin saarella Puerto Ayoran lähellä.',
+          selite: 'Las Grietas on kallioiden väliin revennyt kapea railo '
+            + 'Puerto Ayoran lähellä. Sen kirkkaassa vedessä sekoittuvat '
+            + 'meri- ja sadevesi, ja railo on paikallisten ja matkailijoiden '
+            + 'suosima uimapaikka.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Galápagos on noin tuhannen kilometrin päässä Ecuadorin '
+          + 'rannikosta, ja sinne pääsee vain lentäen Quitosta tai '
+          + 'Guayaquilista. Pääsaaria on kolmetoista, mutta asuttuja vain '
+          + 'neljä: Santa Cruz, San Cristóbal, Isabela ja Floreana. Muualle '
+          + 'mennään kansallispuiston hyväksymän oppaan kanssa, joko laivalla, '
+          + 'joka kiertää saaria päiviä tai viikon, tai päiväretkillä jonkin '
+          + 'kylän hotellista käsin. Kummallakin tavalla näkee eläimiä, jotka '
+          + 'eivät pakene ihmistä, ja siksi niiden katseluun on tarkat '
+          + 'säännöt. Matka ei ole halpa eikä nopea, mutta harvassa paikassa '
+          + 'pääsee yhtä lähelle luontoa. Vuodenaikoja on kaksi: joulukuusta '
+          + 'toukokuuhun on lämmintä ja meri tyyni, kesäkuusta marraskuuhun '
+          + 'viileämpää ja usvaista.',
+        artikkeli: {
+          nimi: 'Matkailijan Galápagos',
+          teksti: 'Galápagosille pääsee vain lentäen, ja kansallispuistoon vain oppaan kanssa.',
+          nosto: 'Oppaiden nyrkkisääntö on yksinkertainen: jos eläin huomaa '
+            + 'sinut, olet jo liian lähellä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille kahdella lennolla',
+              teksti: 'Galápagosille lennetään Ecuadorin mantereelta, Quitosta '
+                + 'tai Guayaquilista, ja koneet laskeutuvat joko Baltran saaren '
+                + 'Seymourin kentälle tai San Cristóbalin saarelle. Saarille '
+                + 'lennetään yleensä aamupäivällä ja takaisin iltapäivällä, joten '
+                + 'mantereella yövytään usein kumpaankin suuntaan. Jo '
+                + 'lähtökentällä ostetaan saariston matkustajakortti, ja '
+                + 'ruumaan menevät laukut läpivalaistaan ja sinetöidään, jottei '
+                + 'mukana kulkeudu siemeniä, hyönteisiä tai muita vieraita '
+                + 'eliöitä. Perillä maksetaan kansallispuiston pääsymaksu '
+                + 'käteisellä. Elokuussa 2024 ulkomaisen aikuisen maksu nousi '
+                + '200 dollariin; summa on muuttunut ennenkin, joten se kannattaa '
+                + 'tarkistaa ennen matkaa. Baltra oli toisen maailmansodan aikana '
+                + 'Yhdysvaltain lentotukikohta, ja nykyinen terminaali on '
+                + 'rakennettu kierrätetyistä öljynporausputkista ja käyttää '
+                + 'aurinko- ja tuulivoimaa. Kentältä ajetaan bussilla Itabacan '
+                + 'salmelle, jonka yli vesitaksi vie Santa Cruzin puolelle, ja '
+                + 'sieltä matka jatkuu Puerto Ayoraan. San Cristóbalilla kenttä '
+                + 'on keskellä saariston hallintokaupunkia Puerto Baquerizo '
+                + 'Morenoa, ja keskustaan voi kävellä.',
+              kuva: [
+                {
+                  tiedosto: 'Seymour Airport, Isla Baltra, Galapagos Islands.jpg',
+                  lyhyt: 'Seymourin lentoaseman terminaali ja tuulivoimalat Baltran kuivalla tasangolla.',
+                  selite: 'Seymourin lentoasema Baltran saarella on saariston '
+                    + 'vilkkain kenttä. Sen 2010-luvulla uusittu terminaali '
+                    + 'pyrkii toimimaan uusiutuvalla energialla, ja kentän '
+                    + 'laidalla pyörivät tuulivoimalat.',
+                  lahde: 'Pi3.124, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Baltra Island, water taxi dock with the Itabaca Channel - Galápagos in the background.JPG',
+                  lyhyt: 'Baltran laiturilta vesitaksit vievät Itabacan salmen yli Santa Cruzin saarelle.',
+                  selite: 'Lentokentältä bussi tuo matkustajat Baltran '
+                    + 'laiturille, josta vesitaksit ja lautat kuljettavat heidät '
+                    + 'kapean Itabacan salmen yli Santa Cruzille. Vastarannalta '
+                    + 'matka jatkuu Puerto Ayoraan.',
+                  lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Arribo a San Cristóbal (46231006642).jpg',
+                  lyhyt: 'San Cristóbalille laskeutuva kone ylittää lahden, jolla risteilyalukset ovat ankkurissa.',
+                  selite: 'Laskeutuessaan San Cristóbalin kentälle kone '
+                    + 'lentää Puerto Baquerizo Morenon sataman yli. Lahdella on '
+                    + 'ankkurissa risteilyaluksia, ja osa risteilyistä alkaa tai '
+                    + 'päättyy juuri San Cristóbalille.',
+                  lahde: 'David Ceballos, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Risteily vai saarihyppely',
+              teksti: 'Kaukaisimmille saarille, kuten Genovesalle, Fernandinalle '
+                + 'ja Españolalle, pääsee vain risteilyllä. Saaristossa '
+                + 'liikennöi kymmeniä yöpymiseen varustettuja aluksia: pienimpiin '
+                + 'mahtuu kahdeksan, suurimpiin sata matkustajaa. Kansallispuisto '
+                + 'vahvistaa jokaisen aluksen reitit etukäteen, jotta samalla '
+                + 'rannalla ei olisi kerralla liikaa ihmisiä, ja yhdellä oppaalla '
+                + 'saa olla enintään 16 hengen ryhmä. Maissa käydään vain '
+                + 'päivänvalossa, tavallisesti aamupäivällä ja iltapäivällä. '
+                + 'Laivalta siirrytään rantaan pienellä veneellä, pangalla: '
+                + 'kuivassa maihinnousussa astutaan kalliolle, märässä kahlataan '
+                + 'hiekkarannalle. Toinen tapa on saarihyppely, jossa asutaan '
+                + 'kylien hotelleissa ja tehdään päiväretkiä esimerkiksi North '
+                + 'Seymourille, South Plazalle, Santa Fehen tai Bartolomélle. '
+                + 'Asuttujen saarten väliä kulkevat pikaveneet, joiden noin '
+                + 'kahden tunnin matka voi olla hyvin keinuva. Saarihyppely on '
+                + 'halvempi ja joustavampi, ja sen suosio on kasvanut nopeasti: '
+                + 'vuonna 2017 risteilyllä kävi noin 72 000 matkailijaa, maissa '
+                + 'majoittuneita oli yli kaksi kertaa enemmän. Vielä vuoteen 1969 '
+                + 'asti saarille pääsi vain yksityisellä tai vuokratulla aluksella.',
+              kuva: {
+                tiedosto: 'Day 2 - first landing (wet) on Sombrero (Islote Mosquera) at the SE corner of Santiago Is - (16493563889).jpg',
+                lyhyt: 'Risteilyn matkustajat märän maihinnousun jälkeen hiekkarannalla Santiagon kupeessa.',
+                selite: 'Tammikuussa 2015 risteilyn ensimmäinen maihinnousu '
+                  + 'oli märkä: matkustajat kahlasivat pangasta rantaan pienellä '
+                  + 'luodolla Santiagon saaren kaakkoiskulmassa. Taustalla näkyy '
+                  + 'karua laavamaata.',
+                lahde: 'Murray Foubister, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Neljä asuttua saarta',
+              teksti: 'Omin päin liikkuva matkailija asuu jollakin neljästä '
+                + 'asutusta saaresta, ja kylien lähellä on paljon nähtävää ilman '
+                + 'opastettua retkeä. Santa Cruzilla Puerto Ayorasta kävellään '
+                + 'parin kilometrin polkua Tortuga Bayn hiekkarannalle, jonka '
+                + 'suojaisessa poukamassa voi uida ja meloa; polun alussa '
+                + 'kirjaudutaan, ja ranta on auki vain päivällä. Vesitaksilla ja '
+                + 'lyhyellä kävelyllä pääsee Las Grietasin uimarailolle. San '
+                + 'Cristóbalilla Puerto Baquerizo Morenon laidalta lähtee polku '
+                + 'kansallispuiston tulkintakeskukseen ja fregattilintujen '
+                + 'pesimämäelle, ja ylängöllä noin 600 metrin korkeudessa on El '
+                + 'Junco, makean veden järvi, joita kuivassa saaristossa on '
+                + 'hyvin vähän. Isabelan Puerto Villamilin laguuneissa kahlaa '
+                + 'flamingoja, ja kylästä pyöräillään tai kävellään Kyynelten '
+                + 'muurille, jonka vangit rakensivat, kun saarella oli '
+                + 'vankisiirtola 1940- ja 1950-luvuilla. Sierra Negran '
+                + 'tulivuoren valtavan kalderan reunalle tehdään oppaan kanssa '
+                + 'pitkä päiväretki. Floreanalla asuu vain noin sata ihmistä. '
+                + 'Sen Post Office Bayhin valaanpyytäjät jättivät tynnyriin '
+                + 'kirjeitä kotimatkalla olevien laivojen vietäviksi, ja yhä '
+                + 'matkailijat jättävät sinne kortteja ilman postimerkkiä ja '
+                + 'ottavat mukaansa ne, jotka voivat toimittaa perille.',
+              kuva: {
+                tiedosto: 'PtoVillamilMuro.jpg',
+                lyhyt: 'Isabelan Kyynelten muurin kasasivat laavakivistä saaren vankisiirtolan vangit.',
+                selite: 'Muro de las Lágrimas eli Kyynelten muuri on Puerto '
+                  + 'Villamilin lähellä Isabelan saarella. Vankisiirtolan vangit '
+                  + 'rakensivat sen laavalohkareista, ja nykyään sinne johtaa '
+                  + 'kävely- ja pyöräilyreitti laguunien ja rantojen ohi.',
+                lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Säännöt ja eläinten katselu',
+              teksti: 'Galápagosin eläimet eivät pakene, ja juuri siksi '
+                + 'puistossa on tarkat säännöt. Kylien ulkopuolella liikutaan '
+                + 'pääsääntöisesti kansallispuiston hyväksymän oppaan kanssa, '
+                + 'merkityillä poluilla ja vain päivänvalossa. Eläimiin pidetään '
+                + 'vähintään kahden metrin etäisyys, eikä niitä saa koskea eikä '
+                + 'ruokkia. Saarelta toiselle siirryttäessä kengät puhdistetaan, '
+                + 'jotta siemenet eivät kulkeudu mukana, eikä saarille saa tuoda '
+                + 'kasveja tai eläimiä. Tupakointi ja nuotiot ovat kiellettyjä, '
+                + 'eikä matkamuistoksi saa ostaa mustasta korallista, '
+                + 'simpukankuorista, merileijonan hampaista, kilpikonnan kilvestä '
+                + 'tai laavakivestä tehtyjä esineitä. Monelle matkan kohokohta on '
+                + 'snorklaus nuorten merileijonien kanssa, mutta aikuiset urokset '
+                + 'puolustavat reviiriään kiivaasti, joten yhdyskuntien lähellä '
+                + 'ei pidä uida. North Seymourilla pesivät fregattilinnut, joiden '
+                + 'urokset pullistavat punaisen kurkkupussinsa, ja Genovesalla '
+                + 'pensaissa pesii punajalkasuulia. Aaltoalbatrossit palaavat '
+                + 'Españolalle pesimään huhtikuusta marraskuuhun. Sukeltajat '
+                + 'hakeutuvat Darwinin ja Wolfin saarille vasarahaiparvien '
+                + 'perään, mutta niille pääsee vain sukellusristeilyllä, ja '
+                + 'kovat virrat sopivat vain kokeneille.',
+              kuva: {
+                tiedosto: '(Galápagos Islands Tortuga Bay do not touch to tocar Amblyrhynchus cristatus) Maine Iguana.JPG',
+                lyhyt: 'Tortuga Bayn kyltti: iguaaneihin ei kosketa, ja niihin pidetään kahden metrin väli.',
+                selite: 'Santa Cruzin Tortuga Baylla kaksikielinen kyltti kieltää '
+                  + 'koskemasta meri-iguaaneihin tai häiritsemästä niitä ja '
+                  + 'muistuttaa kahden metrin etäisyydestä, joka koskee kaikkia '
+                  + 'saariston eläimiä.',
+                lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Usvakausi ja käytännön vinkit',
+              teksti: 'Vaikka Galápagos on päiväntasaajalla, etelästä tuleva '
+                + 'kylmä Humboldtin virta pitää ilmaston viileämpänä kuin '
+                + 'tropiikissa odottaisi. Joulukuusta toukokuuhun on lämmin '
+                + 'kausi: meri ja ilma ovat noin 25-asteisia, tuulet heikkoja ja '
+                + 'meri tyynimmillään, ja aurinkoisia päiviä keskeyttävät vain '
+                + 'satunnaiset rankkasateet. Kesäkuusta marraskuuhun on garúan '
+                + 'aika. Kaakkoistuuli viilentää rannikon noin 22 asteeseen, ja '
+                + 'matalat pilvet jäävät ylänköjen rinteille, jotka saavat '
+                + 'kosteutensa tihkuna ja usvana, kun alavat rannat pysyvät '
+                + 'kuivina. Meri on silloin rauhattomampi, mutta kesällä eläimet '
+                + 'ovat vilkkaimmillaan, ja heinä–marraskuussa sukeltajat voivat '
+                + 'nähdä valashaita. Syys–marraskuussa moni alus on telakalla. '
+                + 'Muutaman vuoden välein El Niño lämmittää meren ja sekoittaa '
+                + 'koko kuvion. Snorklatessa märkäpuku on usein tarpeen, ja '
+                + 'päiväntasaajan aurinko polttaa nopeasti. Ecuadorin valuutta on '
+                + 'Yhdysvaltain dollari; pankkiautomaatteja on vähän, eikä kortti '
+                + 'kelpaa kaikkialla, joten käteistä kannattaa varata etenkin '
+                + 'Isabelalle ja Floreanalle. Puerto Ayorassa hanavettä ei '
+                + 'suositella juotavaksi, ja joulun ja pääsiäisen ajaksi majoitus '
+                + 'kannattaa varata hyvissä ajoin.',
+              kuva: {
+                tiedosto: 'Clouds surround the Galapagos Islands (MODIS 2020-09-21).jpg',
+                lyhyt: 'Satelliittikuvassa syyskuulta 2020 matala pilvimeri ympäröi Galápagossaaret.',
+                selite: 'NASAn Terra-satelliitti kuvasi saariston 17. syyskuuta '
+                  + '2020 garúan kaudella. Useimmat saaret ovat auringossa, mutta '
+                  + 'Isabelan ja Santa Cruzin rinteillä lepää usvapilvi, ja '
+                  + 'kaakkoinen San Cristóbal on kokonaan pilven peitossa.',
+                lahde: 'NASA, Wikimedia Commons (PD)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -127675,6 +129619,231 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Machu Picchu: Tourist activity, Geography,
+       * Transportation; Inca Trail to Machu Picchu; Aguas Calientes, Peru;
+       * Huayna Picchu; Intipunku) ja Wikivoyagesta (Machu Picchu, Inca
+       * Trail, Aguas Calientes) — teksti omaa. Nostojen aiheita (historia,
+       * sijainti ja sademäärä, kuninkaan maatila, Binghamin löytö,
+       * maailmanperintö ja kävijäkatot, nimi, muurit, Intihuatana,
+       * terassit, Torreón) ei toisteta. Hinnat ja aukioloajat jätetty pois,
+       * koska lippujärjestelmä muuttuu usein (reittijako 1.6.2024
+       * Wikivoyagen mukaan). Machu Picchu -vuoren korkeus "yli 3 000
+       * metriä": Wikivoyage 3 040 m, huipun kyltti kuvassa 3 061 m.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta
+       * ja kuvat katsottu silmin. Pystykuva: Allard Schmidtin
+       * auringonnousukuva (tekijä luovuttanut PD).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Peru Machu Picchu Sunrise.jpg',
+          lyhyt: 'Aamu-usva kiertää Huayna Picchua, kun kaupungissa ei ole vielä kävijöitä.',
+          selite: 'Kuvaaja kiipesi auringonnousun aikaan ryhmänsä edellä '
+            + 'ja löysi kaupungin tyhjänä. Aamun ensimmäisinä tunteina '
+            + 'raunioilla on väljää, ennen kuin päiväretkeläiset ehtivät '
+            + 'junalla ja bussilla perille.',
+          lahde: 'Allard Schmidt, Wikimedia Commons (PD)',
+        },
+        kappale: 'Machu Picchuun ei ajeta autolla. Viimeinen osuus '
+          + 'kuljetaan junalla laakson pohjalle Aguas Calientesin kylään ja '
+          + 'sieltä bussilla tai portaita pitkin ylös, ellei tule neljän '
+          + 'päivän vaelluksella inkapolkua ja Aurinkoportin kautta. '
+          + 'Pääsylippu ostetaan etukäteen yhdelle reitille ja '
+          + 'kellonajalle, ja passi kulkee mukana. Kaupungin yllä kohoavat '
+          + 'Huayna Picchu ja Machu Picchu -vuori vaativat omat lippunsa, '
+          + 'ja inkojen vanha silta kallioseinämän kyljessä on lyhyen '
+          + 'kävelyn päässä. Kuivinta on toukokuusta syyskuuhun, mutta '
+          + 'silloin myös väkeä on eniten. Liput, reitit ja kiintiöt '
+          + 'muuttuvat usein, joten ne kannattaa tarkistaa ennen matkaa '
+          + 'viralliselta sivustolta.',
+        artikkeli: {
+          nimi: 'Matkailijan Machu Picchu',
+          teksti: 'Machu Picchun juurelle pääsee vain junalla tai jalan.',
+          nosto: 'Inkapolulle päästetään päivässä enintään 500 ihmistä, ja '
+            + 'heistä suurin osa on oppaita ja kantajia.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Junalla laakson pohjalle',
+              teksti: 'Useimmat matkailijat saapuvat junalla. PeruRail ja '
+                + 'Inca Rail ajavat Cuscon lähellä olevalta Poroyn asemalta '
+                + 'tai Ollantaytambon pikkukaupungista Urubamban laaksoa '
+                + 'alas Aguas Calientesiin, jonka virallinen nimi on '
+                + 'nykyään Machupicchu Pueblo. Kylään ei johda autotietä: '
+                + 'se syntyi 1920-luvun lopulla ratatyömaan leiriksi ja '
+                + 'alkoi palvella matkailijoita, kun rata valmistui 1931. '
+                + 'Ollantaytambosta junamatka kestää vajaat kaksi tuntia, '
+                + 'Poroysta lähes neljä, ja sadekaudella Cuscon puoleiset '
+                + 'vuorot voidaan korvata bussikuljetuksella '
+                + 'Ollantaytamboon. Kylästä raunioille kiemurtelee 8,6 '
+                + 'kilometrin serpentiinitie, jonka bussit ajavat noin '
+                + 'puolessa tunnissa; jalan portaita pitkin nousu vie '
+                + 'puolestatoista kahteen tuntiin. Halvempi takaovi kulkee '
+                + 'maanteitse Hidroeléctrican voimalan asemalle, josta '
+                + 'kävellään radan viertä kylään kahdesta kolmeen tuntia. '
+                + 'Sadekaudella reittiä ei suositella maanvyöryjen vuoksi, '
+                + 'ja kun voimalalle johtavaa tietä päällystetään, '
+                + 'matka-ajat voivat vielä muuttua.',
+              kuva: [
+                {
+                  tiedosto: 'Train going to Aguas Calientes (Machu Picchu City) at Inca Trail, Peru.jpg',
+                  lyhyt: 'Juna kulkee Urubamban vartta kohti Aguas Calientesia inkojen terassien ohi.',
+                  selite: 'Matkustajajuna matkalla Aguas Calientesiin '
+                    + 'kuohuvan Urubamba-joen rantaa pitkin. Kuva on '
+                    + 'otettu inkapolulta elokuussa 2022, ja vasemmalla '
+                    + 'näkyy inkojen terassimuureja.',
+                  lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Machu Picchu - train runs right through the center of Aguas Calientes - IMG 7789.jpg',
+                  lyhyt: 'PeruRailin veturi ajaa Aguas Calientesin keskustan läpi ravintoloiden vierestä.',
+                  selite: 'Aguas Calientesissa rata kulkee kylän '
+                    + 'kävelykadun keskellä, ja PeruRailin sininen '
+                    + 'dieselveturi ohittaa terassiravintolan pöydät '
+                    + 'muutaman metrin päästä. Kuva vuodelta 2011.',
+                  lahde: 'Bruce Tuten, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Buses on the switchback climb to Machu Picchu.jpg',
+                  lyhyt: 'Bussit kiipeävät soratien mutkia kylästä raunioiden portille.',
+                  selite: 'Kaksi bussia serpentiinitiellä, jota pitkin '
+                    + 'matkailijat ajetaan Aguas Calientesista Machu '
+                    + 'Picchun sisäänkäynnille. Tie kiemurtelee jyrkkää '
+                    + 'metsärinnettä ylös; kuva heinäkuulta 2009.',
+                  lahde: 'Jimmy Harris, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Lippu yhdelle reitille',
+              teksti: 'Pääsylippu ei ole vapaa kulkulupa koko kaupunkiin. '
+                + 'Kesäkuusta 2024 alkaen liput on jaettu kolmeen '
+                + 'kierrokseen ja niiden kymmeneen reittiin, ja yksi lippu '
+                + 'käy vain yhdelle reitille tiettynä kellonaikana. '
+                + 'Ensimmäinen kierros vie ainoastaan ylemmille ja '
+                + 'alemmille näköalapaikoille, toinen eli klassinen kierros '
+                + 'kulkee kaupunkialueen läpi ja kolmas, niin sanottu '
+                + 'kuninkaallinen kierros, kiertää alakaupungin '
+                + 'tärkeimmät rakennukset. Polut ovat pitkälti '
+                + 'yksisuuntaisia, joten ohi kävelty kohde jää helposti '
+                + 'näkemättä. Alueella ei ole vessoja eikä ruokamyyntiä, '
+                + 'eikä ulos pääse käymään ja palaamaan. Portilla kysytään '
+                + 'passia, ja isot reput jätetään säilöön. Lippuja myydään '
+                + 'viralliselta verkkosivustolta ja rajoitetusti Aguas '
+                + 'Calientesin lipputoimistosta, mutta paikan päältä '
+                + 'ostettu lippu kelpaa vasta seuraavana päivänä. '
+                + 'Järjestelmää on muutettu viime vuosina monta kertaa, '
+                + 'joten voimassa olevat säännöt kannattaa tarkistaa '
+                + 'juuri ennen matkaa.',
+              kuva: {
+                tiedosto: 'Machu Picchu, 2023 (035).jpg',
+                lyhyt: 'Köysiaidat ja kyltit ohjaavat kävijöitä polkua pitkin kaupungin keskiosaan.',
+                selite: 'Toukokuussa 2023 otetussa kuvassa matkailijaryhmät '
+                  + 'kulkevat kaupungin keskiosan halki Huayna Picchun '
+                  + 'juurella. Etualan köysiaita ja kyltti rajaavat '
+                  + 'polkua, jota kukin lippureitti seuraa.',
+                lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Inkapolkua Aurinkoportille',
+              teksti: 'Perinteinen tapa saapua on kävellä. Klassinen '
+                + 'inkapolku lähtee Urubamban varrelta rautatien '
+                + 'kilometrin 82 kohdalta ja kulkee runsaat 40 kilometriä '
+                + 'vuorten yli, tavallisesti neljässä päivässä ja kolmena '
+                + 'telttayönä. Toisena päivänä noustaan Warmi Wañusqan eli '
+                + 'Kuolleen naisen solaan 4 215 metrin korkeuteen, ja '
+                + 'viimeisenä aamuna kaupunki avautuu yläpuolelta Inti '
+                + 'Punkun, Aurinkoportin, kautta. Polulle pääsee vain '
+                + 'luvalla. Päivittäiseen 500 hengen kiintiöön lasketaan '
+                + 'myös oppaat ja kantajat, joten vaeltajia on vain '
+                + 'parisataa, ja kuivan kauden luvat loppuvat kuukausia '
+                + 'etukäteen. Jokaisen on kuljettava rekisteröidyn '
+                + 'matkanjärjestäjän ja oppaan kanssa, ja lupa on sidottu '
+                + 'passiin. Kantojuhdat eivät saa kulkea polun yläosilla, '
+                + 'joten leirivarusteet kantavat paikalliset kantajat. '
+                + 'Polku suljetaan joka helmikuu huoltoa ja siivousta '
+                + 'varten. Kiireisemmälle on kahden päivän versio '
+                + 'kilometriltä 104, ja ilman inkapolun lupaa voi lähteä '
+                + 'esimerkiksi viiden päivän Salkantay-vaellukselle.',
+              kuva: {
+                tiedosto: 'Machu Picchu seen from Intipunku (the Gate of the Sun), Peru.jpg',
+                lyhyt: 'Aurinkoportilta vaeltaja näkee kaupungin ensi kertaa, Huayna Picchu taustallaan.',
+                selite: 'Inkapolun viimeinen kivetty osuus Inti Punkun '
+                  + 'kohdalla. Alhaalla harjanteella näkyvät Machu Picchun '
+                  + 'terassit, takana kohoaa Huayna Picchu ja rinteessä '
+                  + 'erottuvat bussitien mutkat. Kuva elokuulta 2022.',
+                lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kaksi huippua ja inkasilta',
+              teksti: 'Lipun voi valita niin, että siihen kuuluu vuoren '
+                + 'nousu. Kaupungin pohjoispäässä kohoava Huayna Picchu '
+                + 'nousee 2 693 metriin, noin 260 metriä raunioita '
+                + 'korkeammalle. Jyrkällä polulla on kiviportaita ja '
+                + 'paikoin teräsvaijereita, joista otetaan tukea, ja '
+                + 'huipun alla kuljetaan ahtaan luolan läpi; reipas '
+                + 'kulkija on ylhäällä alle tunnissa. Polulle päästetään '
+                + 'päivittäin enintään 400 kävijää kahdessa aikaikkunassa, '
+                + 'ja marraskuusta huhtikuuhun märät kivet ovat liukkaita. '
+                + 'Werner Herzogin Aguirre – Jumalan viha (1972) kuvattiin '
+                + 'osin juuri näillä portailla. Kaupungin eteläpuolella '
+                + 'kohoaa Machu Picchu -vuori, jonka yli 3 000 metrin '
+                + 'huipulle noustaan Aurinkoportin polulta haarautuvaa '
+                + 'porraspolkua. Edestakaiseen matkaan kuluu pari–kolme '
+                + 'tuntia, ja väkeä on vähemmän. Lyhyin sivuretki johtaa '
+                + 'lounaaseen Inkasillalle: kapea polku on muurattu '
+                + 'pystysuoran kallioseinämän kylkeen, ja muurin aukon yli '
+                + 'on laskettu tukkeja. Ne poistamalla inkat saattoivat '
+                + 'sulkea toisen kaupunkiin johtaneista reiteistä.',
+              kuva: {
+                tiedosto: 'Inca bridge, Machu Picchu 2.jpg',
+                lyhyt: 'Inkasillan tukit peittävät muurin aukon pystysuoran kallion kyljessä.',
+                selite: 'Inkasillan kohdalla polku on muurattu '
+                  + 'kallioseinämän kylkeen, ja sen aukon yli on laskettu '
+                  + 'tukkeja. Ne poistamalla kulku kaupunkiin voitiin '
+                  + 'katkaista. Kuva syyskuulta 2009.',
+                lahde: 'Corey from Australia, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Sää, korkeus ja ruuhkat',
+              teksti: 'Kuivinta on toukokuusta syyskuuhun, ja sateisin aika '
+                + 'osuu marraskuusta maaliskuuhun. Päivälämpötila pysyy '
+                + 'ympäri vuoden lähes samana, mutta kuivan kauden yöt '
+                + 'ovat viileitä. Kuiva kausi on myös ruuhka-aikaa: eniten '
+                + 'väkeä on kesä–elokuussa, vähiten helmikuussa, kun '
+                + 'inkapolku on kiinni. Pakettimatkalaiset ovat raunioilla '
+                + 'enimmäkseen kymmenen ja kahden välillä, joten yö Aguas '
+                + 'Calientesissa antaa tilaisuuden kulkea aamulla tai '
+                + 'iltapäivällä väljemmin. Aamuisin näkymät peittyvät '
+                + 'usein pilveen. Korkeus yllättää väärässä järjestyksessä: '
+                + 'Cusco on noin 3 400 metrissä, yli kilometrin raunioita '
+                + 'ylempänä, joten moni totuttelee ohueen ilmaan ensin '
+                + 'matalammassa Pyhässä laaksossa. Korkealla aurinko '
+                + 'polttaa, joten hattu ja aurinkovoide kuuluvat mukaan. '
+                + 'Luonto ja politiikka voivat katkaista yhteydet: '
+                + 'tammikuussa 2010 tulvat saartoivat yli 4 000 ihmistä ja '
+                + 'raunioalue avattiin vasta huhtikuussa, ja alkuvuonna '
+                + '2023 mielenosoitukset sulkivat sen muutamaksi '
+                + 'viikoksi. Pitkän päivän jälkeen voi laskeutua kylän '
+                + 'kuumiin lähteisiin, joista Aguas Calientes on saanut '
+                + 'nimensä.',
+              kuva: {
+                tiedosto: 'Montaña Machu Picchu, 2023 (37).jpg',
+                lyhyt: 'Machu Picchu -vuoren huippu katoksineen on kokonaan pilven ympäröimä.',
+                selite: 'Toukokuussa 2023 kiviportaat ja huipun katos '
+                  + 'erottuivat, mutta pilvi peitti koko laakson. '
+                  + 'Pilvisellä säällä raunioiden kuuluisat näkymät '
+                  + 'voivat jäädä kokonaan näkemättä.',
+                lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'tiede',

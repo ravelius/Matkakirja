@@ -28,6 +28,10 @@
  * koskea eikä yhtään sen kohdetta ole toistettu täällä.
  *
  * Italian maastokohteet — TÄYDENNYS. Maalla on jo fokuskohteet-ita.js (Vesuvius, Etna, Dolomiitit, Po, Sardinia), joten tässä ovat vain puuttuvat rantameret. Faktat en-Wikipediasta 29.8.2026.
+ *
+ * Messinansalmi lisättiin 25.9.2026 omistajan löydöksestä 108 ("Välimeri ja
+ * Messinansalmi klikattaviksi nostoiksi kuvineen ja teksteineen"); sen
+ * koordinaattirivi on myös tools/maastoaineisto/ITA.json:ssa.
  */
 export const MAASTOKOHTEET_ITA = [
   {
@@ -156,6 +160,95 @@ export const MAASTOKOHTEET_ITA = [
       + 'yli 2 800 metriä Korsikan luoteispuolella.',
     lahde: 'en-Wikipedia "Ligurian Sea", osiot "Geography" ja "Conservation" (tarkistettu '
       + '1.9.2026).',
+  },
+  {
+    id: 'messinansalmi',
+    kuva: {
+      tiedosto: 'Strait of Messina from Dinnammare.jpg',
+      lyhyt: 'Messinansalmi Dinnammare-vuorelta: edessä Messina, salmen takana Calabria.',
+      selite: 'Näkymä Peloritani-vuorten Dinnammarelta salmen yli: etualalla Messina ja sen '
+        + 'sirpinmuotoinen satamaniemi, vasemmalla Torre Faron niemen pylväs ja veden takana '
+        + 'Calabrian rannikko.',
+      lahde: 'Valokuva: Edd48, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Edd48',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Strait_of_Messina_from_Dinnammare.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        tiedosto: 'Scilla - Vista da via Cristoforo Colombo - 5.jpg',
+        lyhyt: 'Scillan kallio, jonka kreikkalaiset tunsivat hirviö Skyllan kotina.',
+        selite: 'Jyrkkä kallioniemeke kohoaa Calabrian Scillan rannan yllä, ja sen laella seisoo '
+          + 'Ruffon linna; tarun mukaan kalliossa asui merihirviö Skylla.',
+        lahde: 'Valokuva: Benjamin Smith, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Benjamin Smith',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Scilla_-_Vista_da_via_Cristoforo_Colombo_-_5.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+      {
+        tiedosto: 'Feluca in the strait of Messina.JPG',
+        lyhyt: 'Miekkakalaa pyytävä felukka-vene Messinansalmessa.',
+        selite: 'Sininen felukka ja sen korkea tähystysmasto, jonka huipulla istuu kalastaja; '
+          + 'taustalla Torre Faron punavalkoinen pylväs ja Calabrian vuoret.',
+        lahde: 'Valokuva: Shifegu, Wikimedia Commons (CC0).',
+        tekija: 'Shifegu',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Feluca_in_the_strait_of_Messina.JPG',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+      {
+        tiedosto: 'Comerio, Luca (1878-1940) - Il Lungomare dopo il terremoto di Messina (dicembre 1908).jpg',
+        lyhyt: 'Messinan rantakatu veden vallassa vuoden 1908 maanjäristyksen jälkeen.',
+        selite: 'Messinan rantabulevardi joulukuussa 1908: kiveys on haljennut ja painunut, vesi '
+          + 'on noussut kadulle, lyhtypylväs on kallellaan ja tynnyrit lojuvat palatsirivin edessä.',
+        lahde: 'Valokuva: Luca Comerio, 1908, Wikimedia Commons (public domain).',
+        tekija: 'Luca Comerio',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Comerio,_Luca_(1878-1940)_-_Il_Lungomare_dopo_il_terremoto_di_Messina_(dicembre_1908).jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
+    nimi: 'Messinansalmi',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mikä oli Kharybdis?',
+      'Miksi salmen yli ei vieläkään kulje siltaa?',
+    ],
+    korostukset: ['Kharybdis|Kharybdis'],
+    nappi: 'Skyllan ja Kharybdiksen salmi',
+    // 15.61 E / 38.2 N — en-Wikipedia "Strait of Messina" — salmen keskikohta Messinan ja
+    // Calabrian rannan välissä (laskettu: node tools/johda-maastokohteet.mjs ITA)
+    laudat: {
+      maailmankartta: { x: 6353.7, y: 1873.1 },
+      europe: { x: 510.9, y: 888.9 },
+    },
+    teksti: 'Sisilian ja Calabrian välinen Messinansalmi on kapeimmillaan vain 3,1 kilometriä '
+      + 'leveä. Se yhdistää Tyrrhenanmeren Joonianmereen, ja vuorovesivirrat ovat niin '
+      + 'voimakkaita, että syvänmeren kaloja huuhtoutuu joskus aamulla rannalle. Kreikkalaiset '
+      + 'sijoittivat tänne Homeroksen merihirviöt: Skylla oli Calabrian puoleinen kallio, '
+      + 'Kharybdis pyörre Sisilian edustalla. Joulukuussa 1908 salmen alla järisi magnitudilla '
+      + '7,1. Messina ja Reggio Calabria tuhoutuivat lähes kokonaan, ja noin 120 000 ihmistä '
+      + 'kuoli — Euroopan historian kuolettavin maanjäristys. Salmen ylittävä silta sai '
+      + 'hallituksen hyväksynnän elokuussa 2025, mutta tilintarkastustuomioistuin kaatoi '
+      + 'päätöksen jo lokakuussa. Joskus salmen yllä näkyy Fata Morgana -kangastus, ja sen '
+      + 'vesillä pyydetään yhä miekkakalaa harppuunalla.',
+    lahde: 'en-Wikipedia "Strait of Messina", johdanto-osa ja osio "Marine life"; '
+      + '"1908 Messina earthquake"; "Strait of Messina Bridge", johdanto-osa; "Between Scylla '
+      + 'and Charybdis"; "Fata Morgana (mirage)"; "Bagnara Calabra", osio "Economy" '
+      + '(tarkistettu 25.9.2026).',
+    visa: {
+      kysymys: 'Kuinka leveä Messinansalmi on kapeimmillaan?',
+      vaihtoehdot: [
+        '3,1 kilometriä',
+        '14 kilometriä',
+        '33 kilometriä',
+        '0,7 kilometriä',
+      ],
+      oikea: 0,
+      fakta: 'Messinansalmi on kapeimmillaan vain 3,1 kilometriä leveä.',
+    },
   },
 ];
 
