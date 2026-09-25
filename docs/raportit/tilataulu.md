@@ -28,6 +28,8 @@ Ei avoimia kortteja.
 
 **LÄMPÖERÄ build 16:een (omistajan päätös 18.2x):** Pelikoodari — dynaaminen ruudunpäivitys + lepopiirto + thermalState; Natiiviseppä — HDR/varjot/anturi; Laitetestaaja — 10 min lämpö- ja akkumittaus laitteella ennen/jälkeen.
 
+**Pysyvä ohje (Fable 20:2x): 5 h -kiintiö >95 % ennen 22:30** → lähetä lepokäsky ("vie käsillä oleva erä pushiin ja lepää 22.30:een") Sisältökirjurille (local_256f6a15-b806-4259-97bd-b2ba8d342f86), Linssisepälle (local_45a869de-4d6b-4ed6-a6c9-30fd8442587e) ja Natiivi-UI:lle (local_33ba1387-d688-4e44-8e05-10951e61efc0), ja ilmoita Fablelle. Build 16:n polku (Pelikoodari, Laitetestaaja, Julkaisija, Natiiviseppä) jatkaa. Alle 95 % ei toimia.
+
 ## 3) Avoimet PR:t
 
 Yhteensä ~40 avointa PR:tä (karkea jako, ei virallinen luokitus):
