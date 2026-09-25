@@ -4,9 +4,12 @@
 //            [nuotti] Musiikki      PÄÄLLÄ
 //            [kaiutin] Äänimaisema  PÄÄLLÄ
 //   KARTTA   [aalto]  Pieni liike   PÄÄLLÄ
+//            [pallo]  Maailma       PÄÄLLÄ   (vain kehittäjätilassa; löydös 65: KOKEET-ryhmästä tänne)
 //   RETKIKUNTA (sähkelinja, UI/Sahke/SahkeNakyma rakentaa; piilossa, kunnes linjan tila selviää;
-//            web retkikuntaOsio asuu hampurilaisen palautelomakkeessa)
-//   KOKEET   [satelliitti] Astronautin reliefi  TÄYSI | VAIMEA
+//            web retkikuntaOsio asuu hampurilaisen palautelomakkeessa). Löydös 65 (omistaja 25.9.2026): vain omana
+//            osanaan (Osa.Retkikunta) ☰-valikon Muut-paneelin Retkikunta-napista.
+//   KEHITTÄJÄ (löydös 65: entinen KOKEET, vain Kehittäjä-osassa kehittäjätilassa, ei pelaajalle)
+//            [satelliitti] Astronautin reliefi  TÄYSI | VAIMEA
 //            (omistajan TestFlight-vertailu 24.9.2026: kylläisyys 1,0 vs. webin 0,8;
 //            LinssiOhjain.AsetaAstronautinKyllaisyys, muistetaan, näkyy seuraavalla
 //            avauksella. Poistetaan, kun omistaja on päättänyt.)
@@ -21,8 +24,9 @@
 // pois-rivi himmeä. Tilateksti versaalina ("päällä"/"pois").
 // Kehittäjän syötekokeet (webin Syötekoe, Kerrokset, Kehysprofiili) ja
 // laudanvalinta (piilossa webissäkin) jätetään pois.
-// iPHONE (löydös 20): ☰ avaa linssivalikon, jonka riveiltä tämä paneeli aukeaa osana: Asetukset (kytkimet ja
-// retkikunta) tai Kehittäjä (KOKEET-rivit ja kehittäjäkoodi); komennot kutsutaan suoraan (KysyUusiPeli ym.).
+// ☰-VALIKKO (löydös 20 iPhone, löydös 65 kaikki laitteet): ☰ avaa linssivalikon, jonka riveiltä tämä paneeli aukeaa
+// osana: Asetukset (äänentasot ja kytkimet), Retkikunta tai Kehittäjä (kehittäjärivit ja kehittäjäkoodi); komennot
+// kutsutaan suoraan (KysyUusiPeli ym.).
 // Uusi peli kysyy varmistuksen (webin #nollaa-dialog) ja tyhjentää tallennuksen
 // ja ääniasetukset: PeliOhjain.UusiPeli (Pelikoodari) + Asetukset.Nollaa.
 using System;
@@ -47,13 +51,16 @@ namespace Matkakirja.Natiivi
         public readonly VisualElement Retkikunta;
 
         /// <summary>Paneelin osa (iPhonen ☰-valikon riveiltä); Kaikki = iPad ja web-asettelu.</summary>
-        public enum Osa { Kaikki, Asetukset, Kehittaja }
+        public enum Osa { Kaikki, Asetukset, Kehittaja, Retkikunta }
+
+        /// <summary>Retkikunnalla on sisältöä (SahkeNakyma rakensi osion): Muut-paneelin Retkikunta-nappi näkyy.</summary>
+        public bool RetkikuntaSaatavilla => Retkikunta.childCount > 0 && Retkikunta.resolvedStyle.display != DisplayStyle.None;
         Osa osa;
         readonly List<VisualElement> asetusosat = new List<VisualElement>(), komentoosat = new List<VisualElement>();
         readonly Vahvistus vahvistus;
         readonly VisualElement aanentasot;
         readonly Dictionary<Voima, (Slider Saadin, Label Arvo)> saatimet = new Dictionary<Voima, (Slider, Label)>();
-        StyleEnum<DisplayStyle>? retkiEnnen;
+        readonly VisualElement retkiKuori;
 
         public void AvaaOsa(Osa o)
         {
@@ -77,23 +84,27 @@ namespace Matkakirja.Natiivi
             Kytkinrivi(Kytkin.Aanimaisema, Ikonit.Aanimaisema);
             Otsikko("Kartta");
             Kytkinrivi(Kytkin.PieniLiike, Ikonit.PieniLiike);
-            Retkikunta = Rakenne.El("mk-paavalikko__retkikunta", Sisalto, PickingMode.Ignore);
+            // Maailmanappi (omistajan löydös 36, web #kehittaja-maailma-btn kehittäjävalikossa): vain kehittäjälle;
+            // huntu pois koko pallolta (web: ei kermaa maailmanäkymässä). Löydös 65: KARTTA-ryhmään Pieni liike -rivin alle.
+            maailma = Rakenne.Nappi(null, "mk-kytkinrivi", () => { AsetaMaailma(!Maailma); Paivita(); }, Sisalto, Maapallo);
+            maailma.tooltip = "Maailmanäkymä: huntu pois ja liikkuminen koko pallolla (kehittäjä)";
+            Rakenne.Teksti("Maailma", "mk-kytkinrivi__nimi", maailma);
+            maailmaTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", maailma);
+            // Retkikunta omassa kuoressaan: SahkeNakyma ohjaa sisemmän näkyvyyttä, osa kuoren.
+            retkiKuori = Rakenne.El("mk-paavalikko__retkikuori", Sisalto, PickingMode.Ignore);
+            Retkikunta = Rakenne.El("mk-paavalikko__retkikunta", retkiKuori, PickingMode.Ignore);
             Retkikunta.style.display = DisplayStyle.None;
             asetusosat.AddRange(Sisalto.Children());
             asetusosat.Remove(aanentasot);
-            // KOKEET vain kehittäjätilassa (Fablen tarkastus C4: ei App Storen pelaajille).
+            asetusosat.Remove(maailma);
+            asetusosat.Remove(retkiKuori);
+            // Kehittäjärivit vain Kehittäjä-osassa kehittäjätilassa (Fablen tarkastus C4, löydös 65: ei pelaajalle).
             kokeet = Rakenne.El("mk-paavalikko__kokeet", Sisalto, PickingMode.Ignore);
-            Rakenne.Teksti("KOKEET", "mk-pudotus__otsikko", kokeet);
+            Rakenne.Teksti("KEHITTÄJÄ", "mk-pudotus__otsikko", kokeet);
             reliefi = Rakenne.Nappi(null, "mk-kytkinrivi", VaihdaReliefi, kokeet, Ikonit.Viiva["satelliitti"]);
             reliefi.tooltip = "Astronautin kameran reliefi: täysvärinen (1,0) tai webin vaimea (0,8). Näkyy seuraavalla avauksella.";
             Rakenne.Teksti("Astronautin reliefi", "mk-kytkinrivi__nimi", reliefi);
             reliefiTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", reliefi);
-            // Maailmanappi (omistajan löydös 36, web #kehittaja-maailma-btn kehittäjävalikossa): vain kehittäjälle;
-            // huntu pois koko pallolta (web: ei kermaa maailmanäkymässä), panorointi on natiivissa jo vapaa.
-            maailma = Rakenne.Nappi(null, "mk-kytkinrivi", () => { AsetaMaailma(!Maailma); Paivita(); }, kokeet, Maapallo);
-            maailma.tooltip = "Maailmanäkymä: huntu pois ja liikkuminen koko pallolla (kehittäjä)";
-            Rakenne.Teksti("Maailma", "mk-kytkinrivi__nimi", maailma);
-            maailmaTila = Rakenne.Teksti("", "mk-kytkinrivi__tila", maailma);
 #if !MATKAKIRJA_APPSTORE
             // Linssien avautumiskynnykset (Linssiseppä): kehittäjätilassa kaikki linssit auki.
             kynnykset = Rakenne.Nappi(null, "mk-kytkinrivi", () =>
@@ -230,14 +241,16 @@ namespace Matkakirja.Natiivi
             maailma.EnableInClassList("mk-valittu", Maailma);
             maailmaTila.text = Maailma ? "PÄÄLLÄ" : "POIS";
             reliefiTila.text = ReliefiTaysi ? "TÄYSI" : "VAIMEA";
-            kokeet.style.display = Asetukset.Kehittaja && osa != Osa.Asetukset ? DisplayStyle.Flex : DisplayStyle.None;
-            aanentasot.style.display = osa == Osa.Asetukset ? DisplayStyle.Flex : DisplayStyle.None;
+            DisplayStyle Nayta(bool b) => b ? DisplayStyle.Flex : DisplayStyle.None;
+            bool asetuksia = osa == Osa.Kaikki || osa == Osa.Asetukset;
+            kokeet.style.display = Nayta(Asetukset.Kehittaja && osa == Osa.Kehittaja);
+            aanentasot.style.display = Nayta(osa == Osa.Asetukset);
             if (osa == Osa.Asetukset) Aanentasot.PaivitaSaatimet(saatimet);
-            foreach (var e in asetusosat) if (e != Retkikunta) e.style.display = osa == Osa.Kehittaja ? DisplayStyle.None : DisplayStyle.Flex;
-            // Retkikunnan näkyvyys on SahkeNakyman: Kehittäjä-osassa piiloon ja takaisin entiseen seuraavalla avauksella.
-            if (osa == Osa.Kehittaja) { retkiEnnen ??= Retkikunta.style.display; Retkikunta.style.display = DisplayStyle.None; }
-            else if (retkiEnnen.HasValue) { Retkikunta.style.display = retkiEnnen.Value; retkiEnnen = null; }
-            foreach (var e in komentoosat) e.style.display = osa == Osa.Kaikki ? DisplayStyle.Flex : DisplayStyle.None;
+            foreach (var e in asetusosat) e.style.display = Nayta(asetuksia);
+            maailma.style.display = Nayta(asetuksia && Asetukset.Kehittaja);
+            // Retkikunnan sisemmän näkyvyyden päättää SahkeNakyma; kuori näkyy vain Retkikunta-osassa.
+            retkiKuori.style.display = Nayta(osa == Osa.Retkikunta);
+            foreach (var e in komentoosat) e.style.display = Nayta(osa == Osa.Kaikki);
             if (kynnykset != null)
             {
                 bool paalla = !Matkakirja.Linssit.Linssirekisteri.Kehittajatila;
