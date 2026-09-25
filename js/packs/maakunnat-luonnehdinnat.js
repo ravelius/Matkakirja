@@ -2883,7 +2883,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Aradissa teloitettiin lokakuussa 1849 kolmetoista Unkarin vapaussodan kenraalia, ja heitä muistetaan kaupungissa yhä joka syksy.',
     },
     Arges: {
-      lyhyt: 'Argeșin laaksosta Transfăgărășan-tie kiemurtelee Făgărașin vuorten yli yli kahteen kilometriin, ja tie on auki vain kesäisin.',
+      lyhyt: 'Argeșin laaksosta Transfăgărășan-tie kiemurtelee Făgărașin vuorten yli kahden kilometrin korkeuteen, ja tie on auki vain kesäisin.',
     },
     Bacau: {
       lyhyt: 'Oneștin kaupungissa kasvoi ja harjoitteli Nadia Comăneci, joka sai Montrealissa 1976 voimistelun ensimmäisen täyden kympin.',
@@ -2967,7 +2967,7 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Neamțin linnoitus kesti 1476 sulttaani Mehmed II:n piirityksen, ja kunnostettu linna kohoaa yhä Târgu Neamțin yllä.',
     },
     Olt: {
-      lyhyt: 'Slatinan Alro-tehdas on Keski- ja Itä-Euroopan suurimpia alumiinin tuottajia, ja valtaosa sen metallista viedään ulkomaille.',
+      lyhyt: 'Slatinan Alro-tehdas on yksi Euroopan suurimpia alumiinin tuottajia, ja valtaosa sen metallista viedään ulkomaille.',
     },
     Prahova: {
       lyhyt: 'Sinaian Peleșin linna oli ensimmäinen kokonaan sähkövaloin valaistu linna Euroopassa – virran tuotti oma voimala.',
