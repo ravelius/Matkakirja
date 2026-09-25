@@ -54,6 +54,9 @@ namespace Matkakirja.Natiivi
         bool porttiOli;
         /// <summary>Linssin oma raita (Pelikoodari: Aanisoitin.LinssiMusiikki): laji tai null = pois.</summary>
         public static Action<string> LinssiMusiikkiKasittelija;
+        /// <summary>Linssin äänitehoste ja taustaääni (Aanisoitin, PeliOhjain.Aanet kytkee).</summary>
+        public static Action<string, float> TehosteKasittelija;
+        public static Action<string> TaustaaaniKasittelija;
         /// <summary>Raidan taso 0…1 (Pelikoodari: Aanisoitin.LinssiHimmennys): 1 ajossa, 0,5 tauolla ja lopussa.</summary>
         public static Action<double> LinssiHimmennysKasittelija;
         /// <summary>
@@ -1112,6 +1115,18 @@ namespace Matkakirja.Natiivi
         public void LinssiMusiikki(string laji) => LinssiMusiikkiKasittelija?.Invoke(laji);
 
         public void LinssiMusiikkiHimmennys(double taso) => LinssiHimmennysKasittelija?.Invoke(taso);
+
+        public void Tehoste(string nimi, float voima = 1f)
+        {
+            Kirjaa($"tehoste {nimi} {voima:0.##}");
+            TehosteKasittelija?.Invoke(nimi, voima);
+        }
+
+        public void Taustaaani(string tunnus)
+        {
+            Kirjaa("taustaääni " + (tunnus ?? "pois"));
+            TaustaaaniKasittelija?.Invoke(tunnus);
+        }
 
         public bool VahennettyLiike => VahennettyLiikeKysely?.Invoke() ?? false;
 

@@ -95,6 +95,12 @@ namespace Matkakirja.Natiivi
             // Linssin oma raita (Linssiseppä: keksinnot / ihmisen-matka, null = pois) ja sen himmennys.
             LinssiOhjain.LinssiMusiikkiKasittelija = Aanisoitin.LinssiMusiikki;
             LinssiOhjain.LinssiHimmennysKasittelija = Aanisoitin.LinssiHimmennys;
+            // Linssin tehosteet (tehosteväylä, Tehostetaulu) ja taustaääni (maiseman paikalla), Pelikoodari 26.9.2026.
+            LinssiOhjain.TehosteKasittelija = (nimi, voima) =>
+            {
+                if (!Aanet.Tehoste(nimi, voima)) Debug.Log("MATKAKIRJA aani: linssin tehostetta ei ole taulussa: " + nimi);
+            };
+            LinssiOhjain.TaustaaaniKasittelija = Aanisoitin.LinssiTausta;
         }
 
         /// <summary>

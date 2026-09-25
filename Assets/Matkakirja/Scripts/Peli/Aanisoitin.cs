@@ -124,6 +124,28 @@ namespace Matkakirja.Natiivi
             if (laji == null) s.Koukut.LinssinRaitaLoppui(); else s.Koukut.Siirtyma(laji);
         }
 
+        /// <summary>
+        /// Linssien taustaäänet (ILinssiYmparisto.Taustaaani, Pelikoodari 26.9.2026): tunnus → osoite, voima (web
+        /// KERROKSET-nupit) ja nousu. Uudet tunnukset lisätään tähän (musiikki- ja äänisuunnitelma 26.9.).
+        /// </summary>
+        public static readonly Dictionary<string, (string Url, double Voima, int NousuMs)> LinssiTaustat =
+            new Dictionary<string, (string, double, int)>
+            {
+                // Web js/linssit/satelliitti-aani.js ASTRONAUTIN_HUMINA: 84 s, −30,48 LUFS, voima 0,45, nousu 2 s.
+                ["astro-humina"] = ("https://media.matkakirja.app/matkakirja/aanet/linssit/astronautin-kamera/20260916/"
+                                    + "93aaf7fb15092bac80abd1d740aa2a22a0fdb761558df2273673bc263fde2f2b.mp3", 0.45, 2000),
+            };
+
+        /// <summary>Linssin taustaääni tunnuksella; null = pois. Tuntematon tunnus kirjataan eikä soi.</summary>
+        public static void LinssiTausta(string tunnus)
+        {
+            var s = Instanssi;
+            if (s == null) return;
+            if (tunnus == null) { s.Tila.LinssiTausta(null, 0, 0); return; }
+            if (!LinssiTaustat.TryGetValue(tunnus, out var t)) { Debug.Log("MATKAKIRJA aani: tuntematon linssin taustaääni " + tunnus); return; }
+            s.Tila.LinssiTausta(t.Url, t.Voima, t.NousuMs);
+        }
+
         /// <summary>Linssin raidan himmennys (kellon pysäytys 0,5; jatko 1).</summary>
         public static void LinssiHimmennys(double kerroin) => Instanssi?.Tila.Himmennys(kerroin);
 
