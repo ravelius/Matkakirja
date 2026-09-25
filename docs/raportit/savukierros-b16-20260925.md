@@ -55,7 +55,18 @@ Kehittäjätila `defaults write … matkakirja-kehittaja 1`.
   — vastaa 12 s -tavoitetta. Pieni huomio: "Ohita" puuttuu aivan ensimmäisestä
   mustasta kuvasta.
 
-## Avoinna
+## Ihmisen matka II + CC (iPhone, 21.5x, `linssi ihmisen-matka-2`) — PASS
+
+- II avautuu: johdantokortin otsikko "Ihmisen matka II" (kuva 13); käynnistyksen
+  jälkeen otsikko katkeaa "IHMISEN MATK…", lämmin valokeila Afrikan yllä, hämärä
+  muu pallo, äänimaisemia 15 (loki). Tekstitys oletuksena pois. Kuva 14.
+- **CC-nappi näkyy** vuosiluvun rivin oikeassa päässä (toinen rivi). Napautus →
+  nappi korostuu (kultareunus) ja tekstityslaatikko näkyy (kuva 15); toinen
+  napautus → nappi normaali ja laatikko pois (kuva 16). Toimii.
+- iPadin CC (Tauon vasemmalla puolella) ja iPadin maakunnat "Pois" ajamatta —
+  seuraavalla kierroksella (Natiivi-UI:n pyyntö).
+
+## Avoinna (VANHENTUNUT — ratkaistu yllä)
 
 - **CC-nappia ei havaittu** Ihmisen matka II:n yläriviltä (vuosiluvun rivin
   oikea pää; commit 15827520 sanoo että sen pitäisi olla siellä) eikä iPhonella
