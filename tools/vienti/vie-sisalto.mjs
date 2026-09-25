@@ -189,8 +189,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        kaupungit tyyppi 'kaupunki', sama rajaus kuin satelliittipinnalla) — Natiiviseppä, build 13.
  *   1.42 maakuntarajat kaikista webin maakuntamaista (138, oli 8; webin maakuntienMaa) ja juuren maat [{ iso3, nimi }];
  *        nimet webin maakunnanNimi-funktiolla — Fable 25.9.2026, Karttasepän löydökset 105/107.
+ *   1.43 maakuntarajat.vari (0–4): webin väri ämpärin <ISO>.json-aineistosta (tools/tee-maakuntavektorit.mjs
+ *        varita, naapureilla eri) — Natiiviseppä 25.9.2026, sama sävy kuin webissä.
  */
-export const SKEEMAVERSIO_TARKKA = '1.42';
+export const SKEEMAVERSIO_TARKKA = '1.43';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 
