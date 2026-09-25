@@ -109,6 +109,9 @@ namespace Matkakirja.Natiivi
 
         void Kutista() => AsetaPieni(!pieni);
 
+        /// <summary>Testikomento (ui linssi selite auki|kiinni): kortti avattuna tai kutistettuna.</summary>
+        public void Avaa(bool auki) => AsetaPieni(!auki);
+
         void AsetaPieni(bool p)
         {
             pieni = p;

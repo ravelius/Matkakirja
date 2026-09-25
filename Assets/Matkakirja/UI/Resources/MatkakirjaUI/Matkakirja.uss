@@ -171,6 +171,17 @@
     --mk-ikoni-viiva: 1.6;
 }
 
+/* Löydös 76: logo avatun laukun oikeassa yläkulmassa (iPhone), webin puhelinlogon koko 92 × 22. */
+.mk-laukku__logo {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    width: 92px;
+    height: 22px;
+    -unity-background-scale-mode: scale-to-fit;
+    background-position-x: right;
+}
+
 .mk-logo {
     width: 96px;
     height: 24px;
@@ -1813,6 +1824,36 @@
     border-top-color: rgba(70, 51, 31, 0.3);
     transition-property: opacity;
     transition-duration: 0.9s;
+}
+
+/* Saapumisen välikortti (web .aloitusverho.saapumiskortti, .saapumiskortti-teksti; Saapumiskortti.cs): tyhjä
+ * pergamenttiarkki koko näkymän yli, keskellä konekirjoitusrivi. Fonttikoko ja harvennus lasketaan koodissa
+ * (clamp(1.05rem, 4.4vw, 1.6rem), 0,13em); arkin peittävyyden kesto vaihtuu (sisään 420 ms, ulos 700 ms). */
+.mk-saapumiskortti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.42s;
+    transition-timing-function: ease;
+}
+
+.mk-saapumiskortti__teksti {
+    max-width: 480px;
+    margin: 0 16px;
+    color: rgb(70, 51, 31);
+    font-size: 17px;
+    white-space: normal;
+    -unity-text-align: middle-center;
+    transition-property: opacity;
+    transition-duration: 0.32s;
+    transition-timing-function: ease;
 }
 
 /* Aloituskaava: avausteksti lennon aikana pallon päällä — ei verhoa eikä julistetta, arkki

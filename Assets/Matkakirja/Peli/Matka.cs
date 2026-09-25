@@ -515,6 +515,30 @@ namespace Matkakirja.Peli
             return TekoTulos.Onnistui();
         }
 
+        /// <summary>
+        /// Web actionKehittajaSiirto (löydös 58): kehittäjän maailmanäkymässä kaupungin napautus siirtää pelaajan
+        /// suoraan kaupunkiin. Laiska kuten webissä: päivä ei kulu, rahaa ei mene, noppaa ei heitetä eikä voittoa
+        /// tarkisteta. Käynti kirjataan (web visitCity), jotta kortti ja päiväkirja näyttävät uuden kaupungin.
+        /// Vaihe on Toiminta (web 'action'), joten lehti ei aukea itsestään.
+        /// </summary>
+        public TekoTulos KehittajaSiirto(string kaupunki)
+        {
+            if (kaupunki == null || !Verkko.Kaupungit.TryGetValue(kaupunki, out var k)) return TekoTulos.Epaonnistui("Tuntematon kaupunki");
+            var p = P;
+            p.Sijainti = Sijainti.KaupungissaSijainti(kaupunki);
+            Tila.ViimePolku = new List<Sijainti> { p.Sijainti };
+            KirjaaKaynti(p);
+            Tila.Siirrot = null;
+            Tila.Noppa = null;
+            Tila.Kulkutapa = null;
+            Tila.OdottavaMaksu = 0;
+            Tila.AutoMatka = false;
+            Tila.JatkaAutomaattisesti = false;
+            Tila.Vaihe = Vaihe.Toiminta;
+            Tapahtui?.Invoke("say", $"{p.Nimi} siirtyi kehittäjätilassa kaupunkiin {k.Nimi}.");
+            return TekoTulos.Onnistui();
+        }
+
         // --- rahan ja kauppojen tuki (Peli/Kaupat.cs) ------------------------
 
         /// <summary>

@@ -189,7 +189,7 @@ namespace Matkakirja.Linssit.Radio
         /// sama reliefisarja kuin topografialinssissä. Oma avain, ettei topografialinssin tila sekoitu.
         /// </summary>
         public const string PohjaKerros = "radio-topografia";
-        bool pohjaVaihdettu, pohjaPalautettu;
+        bool pohjaVaihdettu, pohjaPalautettu, laatatPalautettu;
 
         void VaihdaPohja()
         {
@@ -201,6 +201,7 @@ namespace Matkakirja.Linssit.Radio
             });
             y.Kerrokset.Nakyvyys(Topografia.Pohja, false);
             pohjaVaihdettu = true;
+            laatatPalautettu = false;
             pohjaPalautettu = false;
         }
 
@@ -208,7 +209,10 @@ namespace Matkakirja.Linssit.Radio
         {
             if (!pohjaVaihdettu || y?.Kerrokset == null) return;
             y.Kerrokset.Poista(PohjaKerros);
-            y.Kerrokset.Nakyvyys(Topografia.Pohja, true);
+            // Laatat vain kerran: sulun alussa palautettuina liu'un aikana avattu toinen linssi (topografia,
+            // astronautti) on voinut jo piilottaa ne uudelleen, eikä radion lopetus saa tuoda niitä takaisin.
+            if (!laatatPalautettu) y.Kerrokset.Nakyvyys(Topografia.Pohja, true);
+            laatatPalautettu = true;
             pohjaVaihdettu = false;
         }
 
@@ -303,7 +307,7 @@ namespace Matkakirja.Linssit.Radio
                 sulkuY = y;
                 // Pergamentti takaisin heti reliefin alle (paikka 0, reliefi 1 peittää): se latautuu liu'un ajan
                 // piilossa. Lopussa palautettuna se näkyi 2,4 s sumeana ja laikuittain (simulaattori 25.9. klo 01.2x).
-                if (pohjaVaihdettu) y?.Kerrokset?.Nakyvyys(Topografia.Pohja, true);
+                if (pohjaVaihdettu && y?.Kerrokset != null) { y.Kerrokset.Nakyvyys(Topografia.Pohja, true); laatatPalautettu = true; }
             }
             else PalautaPohja();
             if (y != null && Mastot3D != null && kallistusEnnen is double k)

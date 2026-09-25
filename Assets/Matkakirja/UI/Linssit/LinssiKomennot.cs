@@ -64,6 +64,14 @@ namespace Matkakirja.Natiivi
                     return null;
                 case "selite":
                     if (a1 == "pois") { l.Selite.Piilota(); return null; }
+                    // ui linssi selite auki|kiinni: auki olevan linssin OMA selite (pariteettiajot, Linssiseppä 25.9.).
+                    if (a1 == "auki" || a1 == "kiinni")
+                    {
+                        if (l.Auki?.Tiedot == null) return "linssi ei ole auki";
+                        l.Selite.Nayta(l.Auki.Tiedot);
+                        l.Selite.Avaa(a1 == "auki");
+                        return null;
+                    }
                     l.Selite.Nayta("Topografia", Esimerkkiselite());
                     return null;
                 case "astro":

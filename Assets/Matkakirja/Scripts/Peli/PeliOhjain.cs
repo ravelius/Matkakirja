@@ -168,11 +168,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Luento loppui (kaupunki): soi loppuun, pysäytettiin tai toinen puhe korvasi sen.</summary>
         public event Action<string> LuentoLoppui;
 
-        /// <summary>Kortin Ohita-nappi: soiva luento häipyy nopeasti (LuentoLoppui herää).</summary>
-        public void OhitaLuento()
-        {
-            if (soivaLuento != null || odottavaLuento != null) { odottavaLuento = null; puhe?.Pysayta(0.3f); }
-        }
+        /// <summary>
+        /// Kortin Ohita-nappi (web ohitaSaapumisluenta): ohituslippu ensin, sitten kertoja ja pulu vaikenevat ja kuplat
+        /// lähtevät (VaiennaPaikanPuhe). LuentoLoppui herää, mutta LuentoOhitettu estää pulun kommentin.
+        /// </summary>
+        public void OhitaLuento() => VaiennaPaikanPuhe();
 
         /// <summary>Soiva luento, tai null.</summary>
         public Luento SoivaLuento => soivaLuento;
@@ -363,6 +363,7 @@ namespace Matkakirja.Natiivi
         {
             kierto = k;
             merkit = m;
+            KytkeReitit();
             TMP_FontAsset fontti = m != null ? m.fontti : null;
             if (fontti == null) { var kortti = FindAnyObjectByType<NimiKortti>(); if (kortti != null) fontti = kortti.fontti; }
 
@@ -805,13 +806,17 @@ namespace Matkakirja.Natiivi
         /// Uusi matka lähtökaupungista (aloitusnäkymä, voiton Uusi matka). null = Pariisi.
         /// Korvaa tallennuksen. Palauttaa virheen tai null.
         /// </summary>
-        public string UusiMatka(string lahtokaupunki, long? siemen = null)
+        /// <param name="kaikkiKelpaa">Kehittäjän maailmatila: mikä tahansa kaupunki kelpaa lähdöksi (web
+        /// actionPickStart hyväksyy laudan jokaisen kaupungin; liikkumisen pariteetti D6).</param>
+        public string UusiMatka(string lahtokaupunki, long? siemen = null, bool kaikkiKelpaa = false)
         {
             using var _ = Ajoita("uusiMatka");
             if (verkko == null) return "sisältö ei ole vielä latautunut";
-            if (lahtokaupunki != null && !Lahtokaupungit().Any(k => k.Id == lahtokaupunki)) return "ei lähtökaupunki: " + lahtokaupunki;
+            if (lahtokaupunki != null && !(kaikkiKelpaa ? verkko.Kaupungit.ContainsKey(lahtokaupunki) : Lahtokaupungit().Any(k => k.Id == lahtokaupunki)))
+                return "ei lähtökaupunki: " + lahtokaupunki;
             if (Tila != SilmukanTila.Aloitus && Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
             jatkettava = null;
+            PeruLykkays();
             UusiPeli(siemen, lahtokaupunki);
             // Aloituskaava (omistaja 24.9.2026 klo 16.1x): intro soi avausruudulla ennen karttaa (Natiivi-UI,
             // SoitaIntro); valintaan siirtyminen ohittaa sen, ja kone lentää Lontoosta valittuun kaupunkiin (PeliOhjain.Aloitus.cs).
@@ -999,7 +1004,9 @@ namespace Matkakirja.Natiivi
                 // vaihe 'move', PaivitaSiirtoKohteet; Laitetestaajan pariteettiero 24.9.2026).
                 dialogi.PiilotaHeitto();
             PaivitaSiirtoKohteet();
+            PaivitaMatkareitit();
             LiikuMuuttui?.Invoke();
+            AjastaAutomaattinenHeitto();
         }
 
         /// <summary>
@@ -1034,9 +1041,11 @@ namespace Matkakirja.Natiivi
                     return;
                 case SilmukanTila.Kartta:
                     if (uiPaalla) { PysaytaKamera(); return; }
+                    // Kehittäjän maailmanäkymä: napautus on saapuminen (löydös 58).
+                    if (MaailmaHyppy(kaupunki)) return;
                     // Siirtovaiheessa korostettu kaupunki valitsee siirron (web lauta.js valitseSiirto → doMove).
                     if (SiirtoAvain(kaupunki) != null) { Siirry(SiirtoAvain(kaupunki)); return; }
-                    if (kaupunkiKortti != null) { AvaaKortti(kaupunki); return; }
+                    if (kaupunkiKortti != null) { AvaaKorttiAjonJalkeen(kaupunki); return; }
                     AvaaDialogi(kaupunki);
                     return;
                 default:
@@ -1044,11 +1053,57 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>
+        /// Kaupunkimerkin ruutupiste kortin avautuessa pikseleinä (origo vasen alakulma). Web lauta.js
+        /// napautaKaupunki: merkki vaakasuunnassa neljännekseen leveydestä (LIUSKAN_MERKIN_OSUUS_X 1/4), jotta
+        /// liuskalle jää tilaa oikealle, ja pystysuunnassa vapaan kaistan keskelle (kalusteiden ja liuskan
+        /// korkeuden mukaan). Natiivi-UI voi asettaa tarkemman pisteen (kaupunki → piste); oletus on ruudun
+        /// korkeuden puoliväli.
+        /// </summary>
+        public static Func<string, Vector2> KortinRuutupiste;
+
+        /// <summary>
+        /// Löydös 48 (web napautaKaupunki → kamera.ajaKamera, LIUSKAN_AJO_MS 420 ja LIUSKAN_PEHMENNYS): kamera
+        /// panoroi merkin kortin viereen, korkeus, kallistus ja suuntima pysyvät. KaupunkiMerkkien oma lento
+        /// kaupunkiin (uloszoomaus, omistajan moite) korvataan samassa ruudussa (kameranOhitus).
+        /// </summary>
+        void KortinKamera(string kaupunki, Action valmis = null)
+        {
+            var k = PeliApu.Koordinaatti(verkko, Sijainti.KaupungissaSijainti(kaupunki));
+            if (!k.HasValue || kierto == null) { PysaytaKamera(); valmis?.Invoke(); return; }
+            Vector2 maali = new Vector2(Screen.width / 4f, Screen.height / 2f);
+            try { if (KortinRuutupiste != null) maali = KortinRuutupiste(kaupunki); }
+            catch (Exception e) { Debug.LogException(e); }
+            double lat = k.Value.Lat, lon = k.Value.Lon;
+            kameranOhitus = () => kierto.Panoroi(lat, lon, maali, Panorointi.LiuskanAjoS, valmis);
+        }
+
+        int korttiAjo;
+
+        /// <summary>
+        /// Liikkumisen pariteetti D17 (web lauta.js napautaKaupunki: await ajaKamera(LIUSKAN_AJO_MS) → ladoLevossa →
+        /// avaaLiuskaKaupungista): kortti aukeaa vasta, kun 420 ms:n ajo on perillä, jolloin Natiivi-UI ripustaa sen
+        /// merkin uuteen ruutupisteeseen. Sormen keskeyttämä ajo ei kutsu valmista, joten varakutsu ajon keston
+        /// jälkeen; kortti aukeaa kerran, ja uusi napautus ohittaa vanhan.
+        /// </summary>
+        void AvaaKorttiAjonJalkeen(string kaupunki)
+        {
+            int oma = ++korttiAjo;
+            Action avaa = () =>
+            {
+                if (oma != korttiAjo) return;
+                korttiAjo++;
+                AvaaKortti(kaupunki);
+            };
+            KortinKamera(kaupunki, avaa);
+            StartCoroutine(Viiveella(Panorointi.LiuskanAjoS + 0.15f, avaa));
+        }
+
         void PysaytaKamera() => kameranOhitus = () => kierto.Aja(kierto.leveys, kierto.pituus, 0, 0.05f, null);
 
         /// <summary>
         /// Kaupunkikortti (web kaupunkiliuska): Lue kaupunkilehti, Liiku tänne tai omassa kaupungissa
-        /// Mannerlento. Kamera lentää kaupunkiin kuten 3D:ssä (KaupunkiMerkit), joten ohitusta ei aseteta.
+        /// Mannerlento. Napautuksesta kamera siirtyy vain sivuun (KortinKamera), ei lennä kaupunkiin.
         ///
         /// "LIIKU TÄNNE" WEBIN MUKAAN (WEB ON MALLI, Natiivi-UI:n havainto 24.9.2026; web js/pallolauta/lauta.js
         /// napautaKaupunki ja liuskan 'liiku'-rivi): rivi on vain, kun kaupunkiin on nopan siirto tarjolla
@@ -1063,17 +1118,14 @@ namespace Matkakirja.Natiivi
             if (kaupunkiKortti == null) return AvaaDialogi(kaupunki);
             if (Tila != SilmukanTila.Kartta) return "silmukka on tilassa " + Tila;
             if (!verkko.Kaupungit.ContainsKey(kaupunki)) return "tuntematon kaupunki " + kaupunki;
-            var p = matka.Tila.Pelaaja;
-            bool oma = p.Sijainti.Kaupungissa && p.Sijainti.Kaupunki == kaupunki;
-            bool mannerlento = oma && kaupat != null && kaupat.MannerLennot().Count > 0;
+            // Ei Mannerlento-riviä (liikkumisen pariteetti D13): webin kaupunkiliuskassa on vain Liiku tänne ja aiheet;
+            // mannerlento avataan Liiku → Lentäen -listasta (web ui.js 11407–11440), joka on natiivissakin.
             string siirto = SiirtoAvain(kaupunki);
             var t = new KaupunkiToiminnot
             {
                 LueLehti = LehtiOn ? () => LueLehti(kaupunki) : (Action)null,
                 Liiku = siirto != null ? () => { PiilotaKortti(); ValitseSiirto(siirto); } : (Action)null,
                 LiikuTeksti = siirto != null ? LiikuNimio : null,
-                Mannerlento = mannerlento ? () => { PiilotaKortti(); AvaaMannerlennot(); } : (Action)null,
-                MannerlentoTeksti = mannerlento ? $"Mannerlento ({Vakiot.LentoHinta} {PeliApu.Valuutta})" : null,
                 Sulje = () => PiilotaKortti(),
             };
             KorttiKaupunki = kaupunki;
@@ -1214,6 +1266,8 @@ namespace Matkakirja.Natiivi
             dialogi.Piilota();
             dialogi.PiilotaHeitto();
             if (kohde != null) Tavoite = kohde;
+            // Lähtö vaientaa paikan puheen (web doRoll/doMove → vaiennaPaikanPuhe).
+            VaiennaPaikanPuhe();
 
             tapahtumat.Clear();
             var t = PeliApu.Matkusta(matka, Tavoite, tapa, mannerlento, vapaa && linssit != null ? linssit.VapaaSiirtyminen : (Func<string, TekoTulos>)null, siirto);
@@ -1233,7 +1287,9 @@ namespace Matkakirja.Natiivi
             // Näkyvä noppa kertoo silmäluvun itse (web: ei tekstiä); ilman sitä tilariville.
             if (t.Noppa.HasValue && (PeliNakymat.Noppa == null || !Kaytossa)) osat.Add("Noppa " + t.Noppa.Value);
             osat.AddRange(tapahtumat);
-            if (t.Saapui != null) osat.Add("Saavuit: " + PeliApu.KaupunginNimi(verkko, t.Saapui));
+            // Webissä ei ole saapumisilmoitusta (saapumisen kertovat nimikortti ja traileri), ja siirron alussa
+            // näytettynä se ennätti nappulan ohi (liikkumisen pariteetti, c535aea-video). Vain ilman pelinäkymää.
+            if (t.Saapui != null && !Kaytossa) osat.Add("Saavuit: " + PeliApu.KaupunginNimi(verkko, t.Saapui));
             Viesti(string.Join(" · ", osat));
             Debug.Log($"MATKAKIRJA peli: {PeliApu.TavanNimi(t.Tapa)} {t.Lahto} → {t.Kohde}" + (t.Noppa.HasValue ? $" (noppa {t.Noppa})" : "")
                       + (t.Saapui != null ? ", saapui " + t.Saapui : ""));
@@ -1253,6 +1309,10 @@ namespace Matkakirja.Natiivi
             saapumisKaupunki = t.Saapui;
             matkaKohde = b.Value;
             Tila = SilmukanTila.Matkalla;
+            // Reitit piirretään lähtöpaikasta koko siirron ajan (web siirtoKaynnissa, B8).
+            siirtoLahto = t.Lahto;
+            saapumisaaniSoi = false;
+            PaivitaMatkareitit();
             tilarivi.Aseta(PeliApu.TilaTeksti(verkko, matka.Tila));
             // Lennon alun repliikki kerran istunnossa; muuten saapumispuhe kohteeseen.
             var lentoRepliikki = t.Tapa == Kulkutapa.Lento ? luennat.OtaLentoAlku() : null;
@@ -1304,8 +1364,16 @@ namespace Matkakirja.Natiivi
                     NappulaAjo(v => nappula.Lenna(a.Value.Lat, a.Value.Lon, b.Lat, b.Lon, kesto, v), kesto, Perilla);
                 else
                 {
-                    var pisteet = PeliApu.Matkapisteet(verkko, t.Lahto, t.Polku, t.Kohde);
-                    NappulaAjo(v => nappula.Aja(pisteet, kesto, v), kesto, Perilla);
+                    // Webin koreografia (Natiiviseppä, RAJAPINTA 3b; pariteetti A20, A21, B12–B16): ennakkozoomi,
+                    // saattava kamera ja liftauksen hypyt / bussin ajo / laivan liuku; kesto askelmäärästä kuten webissä.
+                    var liike = new Nappula.Matkaliike
+                    {
+                        Pisteet = PeliApu.Matkapisteet(verkko, t.Lahto, t.Polku, t.Kohde), Tapa = t.Tapa,
+                        Askelia = t.Polku?.Count ?? 0,
+                    };
+                    TilaaNappulanVaiheet(); // Laskeutui → askel- ja saapumisääni (B21)
+                    float matkanKesto = nappula.MatkanKesto(liike);
+                    NappulaAjo(v => nappula.Aja(liike, v), matkanKesto, Perilla);
                 }
                 return;
             }
@@ -1315,22 +1383,31 @@ namespace Matkakirja.Natiivi
         /// <summary>Kamera-ajo perille: kaupungissa lehti, reitin varrella takaisin kartalle.</summary>
         void Perilla() => Perilla(false);
 
-        void Perilla(bool aloituslento)
+        void Perilla(bool aloituslento, bool kameraPerilla = false)
         {
             if (Tila != SilmukanTila.Matkalla) return;
             Lentoaani(false);
             PaataLento();
             var kaupunki = saapumisKaupunki;
             saapumisKaupunki = null;
+            // Uusi paikka: edellisen kaupungin ohitus ei koske tämän kerrontaa (web luennanOhitus per saapuminen).
+            if (kaupunki != null) LuentoOhitettu = false;
+            // C16: aloituslennon kohteen luenta voi odottaa pulun paljastusta (PeliOhjain.Lykkays.cs).
+            AsetaLykkays(kaupunki, aloituslento);
+            // Nappula laskeutui: reitit lähtöpaikasta pois; toisessa kaupungissa sessio päättyy (B9, löydös 60).
+            siirtoLahto = null;
+            PaivitaMatkareitit();
             // Liike päättyi (kaupunki tai null = reitin varrella): noppa häipyy (web saapuessa).
             try { MatkaPerilla?.Invoke(kaupunki); } catch (Exception e) { Debug.LogException(e); }
-            if (kaupunki != null) Aanita(Aanitunnukset.Saapuminen);
+            // Hyppyketju soitti saapumisäänen jo viimeisellä laskeutumisella (NappulaLaskeutui); muuten tässä.
+            if (kaupunki != null && !saapumisaaniSoi) Aanita(Aanitunnukset.Saapuminen);
+            saapumisaaniSoi = false;
             // Kaupunkiin päättynyt matka: kamera saapumisnäkymään (web ui.js palaaMaanRajaukseen ja siirto.js laske
             // → lauta.saavu; avauslento → kamera.kotiin ilman maan laatikkoa). Reitin varrella kamera jää paikalleen.
-            if (kaupunki != null) Saavu(maaRajaus: !aloituslento);
+            if (kaupunki != null && !kameraPerilla) Saavu(maaRajaus: !aloituslento);
             if (kaupunki != null && TraileriTarjolla(kaupunki))
             {
-                // Traileri ennen lehteä (web: saapumisesitys → lehti → luento).
+                // Traileri ennen isoisän luentoa (web render: naytaSaapumistraileri → aloitaMerkinta); lehti ei aukea itsestään.
                 trailerinaytetty.Add(kaupunki);
                 Tila = SilmukanTila.Traileri;
                 traileriKaupunki = kaupunki;
@@ -1353,9 +1430,14 @@ namespace Matkakirja.Natiivi
         readonly HashSet<string> trailerinaytetty = new HashSet<string>();
         string traileriKaupunki;
 
-        /// <summary>Traileri kerran per kaupunki istunnossa, ei aarrekaupungeissa (web saapumistraileri).</summary>
+        /// <summary>
+        /// Traileri kerran per kaupunki istunnossa, kun kaupungilla on fokusvirran matkakirjamerkintä (web ui.js ~13577
+        /// fokusvirtaMatkakirja ja ~13790; kuvat tarkistaa näkymä). Laatta ei vaikuta: aarrekaupungissakin traileri näkyy
+        /// (liikkumisen pariteetti C4; ennen natiivi ohitti laattakaupungit ja näytti fokusvirrattomat).
+        /// </summary>
         bool TraileriTarjolla(string kaupunki) =>
-            PeliNakymat.Saapumistraileri != null && Kaytossa && !trailerinaytetty.Contains(kaupunki) && !matka.LaattaTassa(kaupunki);
+            PeliNakymat.Saapumistraileri != null && Kaytossa && !trailerinaytetty.Contains(kaupunki)
+            && !string.IsNullOrEmpty(Fokusvirrat.Hae(kaupunki)?.Teksti);
 
         /// <summary>Ohittaa trailerin ohjaimen puolelta (testikomento 'ohita-traileri'); näkymä piilottaa itsensä Tilan vaihtuessa.</summary>
         public string OhitaTraileri()
@@ -1375,16 +1457,18 @@ namespace Matkakirja.Natiivi
         /// <summary>Kaupunki, jonka saapumislehti on auki: sen sulkeminen aloittaa matkakirjaluennan (web saapuminen).</summary>
         string saapumisLehti;
 
+        /// <summary>
+        /// Löydös 59 (build 12): saapuminen ei avaa lehteä (web game.js offerQuiz palauttaa aina false, omistajan ohje:
+        /// "mikään ikkuna ei aukea itsestään", myös laattakaupungissa). Kartalle ja isoisän matkakirjaluento heti (web
+        /// aloitaMerkinta trailerin jälkeen); lehti avataan napautuksesta.
+        /// </summary>
         void SaavuLehteen(string kaupunki)
         {
-            if (kaupunki != null && LehtiOn)
-            {
-                saapumisLehti = kaupunki;
-                Tila = SilmukanTila.Lehti;
-                AvaaLehti(kaupunki);
-                return;
-            }
             Kartalle(false);
+            if (kaupunki == null) return;
+            var l = luennat.OtaLuento(kaupunki);
+            if (l != null && LykkaaLuento(kaupunki, l)) return;
+            if (l != null && SoitaLuento(l, 0.6f) == null && !string.IsNullOrEmpty(l.Paikkarivi)) Viesti(l.Paikkarivi);
         }
 
         /// <summary>Kaupunki, jonka lehti (tai jonka kautta maalehti) avattiin: Suljettu antaa maalehdessä ISO3:n.</summary>
@@ -1898,6 +1982,10 @@ namespace Matkakirja.Natiivi
             PaivitaKysymysAika();
             PaivitaSahke();
             PaivitaLento();
+            // Maan rajat pois maailmatilassa (Natiivisepän PalloKierto.MaailmaTila, pariteetti D7/D8/D11; setteri ei tee
+            // mitään samalla arvolla, sammutus puristaa kameran heti maan rajaan).
+            if (kierto != null) kierto.MaailmaTila = Paavalikko.Maailma;
+            PaivitaAutomaattiheitto();
             if (matka != null) { PaivitaSiirtoKohteet(); PaivitaValintavihje(); }
             // Pallo ei ota kosketuksia modaalisen näkymän (ja lehden) aikana.
             bool esta = Kaytossa && (Tila == SilmukanTila.Dialogi || Tila == SilmukanTila.Kysymys || Tila == SilmukanTila.Lehti

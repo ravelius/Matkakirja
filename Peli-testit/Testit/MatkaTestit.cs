@@ -226,6 +226,22 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(2, m.Tila.VuoroLaskuri);
         }
 
+        [Testi] static void KehittajaSiirtoKuinWeb()
+        {
+            var m = Uusi("ala");
+            m.Tila.Pelaaja.Sijainti = Sijainti.ReitillaSijainti("ala|saari", 1);
+            m.AloitaVuoro();
+            int raha = m.Tila.Pelaaja.Raha, vuoro = m.Tila.VuoroLaskuri;
+            Oleta.Tosi(m.KehittajaSiirto("saari").Ok, "siirto");
+            Oleta.Sama("saari", m.Tila.Pelaaja.Sijainti.Kaupunki);
+            Oleta.Sama(Vaihe.Toiminta, m.Tila.Vaihe, "web phase 'action'");
+            Oleta.Sama(raha, m.Tila.Pelaaja.Raha, "rahaa ei mene");
+            Oleta.Sama(vuoro, m.Tila.VuoroLaskuri, "päivä ei kulu");
+            Oleta.Tosi(m.Tila.Noppa == null && m.Tila.Kulkutapa == null && !m.Tila.JatkaAutomaattisesti, "noppa ja tapa pois");
+            Oleta.Tosi(m.Tila.Pelaaja.Kaydyt.Contains("saari"), "käynti kirjattu (web visitCity)");
+            Oleta.Tosi(!m.KehittajaSiirto("eiole").Ok, "tuntematon kaupunki");
+        }
+
         [Testi] static void ReitillaMatkaJatkuuIlmaiseksiJaItsestaan()
         {
             var m = Uusi("ala");

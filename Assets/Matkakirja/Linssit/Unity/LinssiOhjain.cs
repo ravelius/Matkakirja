@@ -15,7 +15,7 @@
 // "linssi <id>" (vaihtokytkin), "linssi pois", "linssit" (luettelo lokiin);
 // maatilan linsseille "maa <ISO3>" (napautus), "vertaa" ja "lehti" (maakyltti);
 // keksinnöille "keksinnot kaynnista | jatka | tauko | tila | <pysäkki 0–25>";
-// ihmisen matkalle "esitys <jakso-id> | tauko | jatka | tila"; kaikille
+// ihmisen matkalle "esitys <jakso-id> | kaynnista | alusta | tauko | jatka | tila"; kaikille
 // "kamera <lat> <lon> <korkeus km>" (hyppy kuvakaappausta varten), "tila" ja
 // "kyllaisyys 0.8|1" (astronautin reliefi) ja "kehittaja 0|1" (kaikki linssit auki);
 // radiolle "radio <ISO3> | kaupunki <id> | taajuus <0–1> | aani <0–1> | tauko 0|1 | stop | tila" (aani 0 = testit ilman ääntä, soi-tila näkyy silti);
@@ -786,6 +786,10 @@ namespace Matkakirja.Natiivi
                         bool jatkuu = l.PaivitaSulku();
                         if (!jatkuu && ReferenceEquals(sulkeva, l)) sulkeva = null;
                         return jatkuu;
+                    }, () =>
+                    {
+                        l.LopetaSulku();
+                        if (ReferenceEquals(sulkeva, l)) sulkeva = null;
                     });
                 }
                 linssi = null;
@@ -924,7 +928,7 @@ namespace Matkakirja.Natiivi
             using (KytkeMerkki.Auto()) kerrokset.Kytke();
             rekisteri.Paivita();
             // Suljettujen linssien jälkiajot (radion ulosliuku): true = jatkuu.
-            if (jalkiajot.Count > 0) jalkiajot.RemoveAll(f => !f());
+            if (jalkiajot.Count > 0) jalkiajot.RemoveAll(j => !j.Ajo());
 #if !MATKAKIRJA_APPSTORE
             // App Store -käännöksessä ei testikomentoja (kuten ui-komento.txt ja komento.txt).
             komentoKello -= Time.unscaledDeltaTime;
@@ -932,14 +936,32 @@ namespace Matkakirja.Natiivi
 #endif
         }
 
-        readonly List<Func<bool>> jalkiajot = new List<Func<bool>>();
+        readonly List<(Func<bool> Ajo, Action Lopetus)> jalkiajot = new List<(Func<bool>, Action)>();
 
-        /// <summary>Kehyksittäinen ajo linssin sulun jälkeen (esim. radion hämärän ulosliuku); palauttaa false, kun valmis.</summary>
-        internal void Jalkiajo(Func<bool> ajo) { if (ajo != null) jalkiajot.Add(ajo); }
+        /// <summary>
+        /// Kehyksittäinen ajo linssin sulun jälkeen (esim. radion hämärän ulosliuku); palauttaa false, kun valmis.
+        /// Lopetus viedään loppuun heti, jos ohjain poistuu tai kytketään pois kesken (löydös 77: radion hämärä,
+        /// mastot ja reliefi jäivät pallolle, kun jälkiajo katkesi).
+        /// </summary>
+        internal void Jalkiajo(Func<bool> ajo, Action lopetus = null) { if (ajo != null) jalkiajot.Add((ajo, lopetus)); }
+
+        void ViimeisteleJalkiajot()
+        {
+            var kesken = jalkiajot.ToArray();
+            jalkiajot.Clear();
+            foreach (var j in kesken)
+            {
+                try { j.Lopetus?.Invoke(); }
+                catch (Exception e) { Debug.LogException(e); }
+            }
+        }
+
+        void OnDisable() => ViimeisteleJalkiajot();
 
         void OnDestroy()
         {
             rekisteri?.Sulje();
+            ViimeisteleJalkiajot();
             kerrokset?.Irrota();
             if (Instanssi == this) Instanssi = null;
         }
@@ -1151,11 +1173,15 @@ namespace Matkakirja.Natiivi
 
         void Esitys(string mita)
         {
+            // "esitys kaynnista" = aloituskortin Käynnistä (Aloita avauksesta), "esitys alusta" = valikon Aloita alusta.
+            var il = (rekisteri.Auki as IhmisenMatkaSovitin)?.Linssi;
+            if (mita == "kaynnista" && il != null) Kirjaa("esitys: käynnistä " + il.Kaynnista());
+            else if (mita == "alusta" && il != null) Kirjaa("esitys: alusta " + il.AloitaAlusta());
             var e = (rekisteri.Auki as IhmisenMatkaSovitin)?.Linssi?.Esitys;
             if (e == null) { Kirjaa("esitys: ihmisen matka ei ole auki tai ei käynnissä"); return; }
             if (mita == "tauko") e.Tauko();
             else if (mita == "jatka") e.Jatka();
-            else if (mita != "tila") e.Valitse(mita);
+            else if (mita != "tila" && mita != "kaynnista" && mita != "alusta") e.Valitse(mita);
             var aani = (rekisteri.Auki as IhmisenMatkaSovitin)?.Aani;
             Kirjaa($"esitys: jakso {e.I}, kulunut {e.Kulunut / 1000:F1}/{e.Kesto / 1000:F1} s, vuosia {e.Vuosia:F0}, käynnissä {e.Kaynnissa}, ääni {aani?.Tila ?? "ei"}");
         }

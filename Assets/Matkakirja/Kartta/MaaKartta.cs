@@ -44,6 +44,9 @@ namespace Matkakirja
         [Tooltip("Rajat vektoriviivoina (Shaders/Rajaviiva), tarkkuus ei riipu tunnuskartasta. null = rajat " +
                  "tunnuskartasta varjostimessa (maatila). Korostetun alueen raja piirtyy edelleen varjostimessa.")]
         public Material rajaMateriaali;
+        [Tooltip("Vektorirajat vasta tästä ruudun tiheydestä (laitepikseliä/aste), web VEKTORIT_RAJAT_PX_ASTE 30 " +
+                 "(js/pallovektorit.js:171). Kaukana vakioleveä viiva sulaa läiskäksi (löydös 74 d). 0 = aina.")]
+        public float rajatMinTiheys = (float)Vektorisolut.RajatTiheys;
 
         public event Action<string> MaaNapautettu;
         public bool Paalla { get; private set; }
@@ -58,6 +61,11 @@ namespace Matkakirja
         MeshRenderer kuori, rajat;
         Material rajaOma;
         bool latausAlkanut;
+        // Linssi piilottaa pelikerrokset (KarttaKerrokset "kaupungit" pois) → kerros pois (web lauta.js:5098).
+        bool linssit;
+        // Vektorirajojen peiton kerroin 0–1 (Viivaleveys.AluerajaHaive) ja viimeksi luettu tiheys (px/°).
+        float rajaHaive;
+        float rajaTiheys;
 
         void Start()
         {
@@ -83,8 +91,30 @@ namespace Matkakirja
                 kerrokset.Nakyvyys("nimiot", !paalla);
             }
             if (paalla && !latausAlkanut) StartCoroutine(Lataa());
-            if (kuori != null) kuori.enabled = paalla && Valmis;
-            if (rajat != null) rajat.enabled = paalla && Valmis;
+            PaivitaNakyvyys();
+        }
+
+        /// <summary>
+        /// Linssi piilotti pelikerrokset (KarttaKerrokset.Nakyvyys("kaupungit", false), LinssiOhjain.Pelikerrokset):
+        /// maakuntakerros pois linssin ajaksi kuten webissä (js/pallolauta/lauta.js:5098
+        /// maakunnat?.asetaMaa(linssiPaalla() ? null : korostusIso)). Löydös 74 d: ihmisen matkan avaruuspallossa
+        /// valitun maakunnan rajat jäivät Euroopan päälle. Pelaajan valinta säilyy ja palaa linssin sulkeutuessa.
+        /// Vain maakuntien kerros kuuntelee tätä; maatila (maat) on itse linssin työkalu.
+        /// </summary>
+        public void Linssit(bool paalla)
+        {
+            if (linssit == paalla) return;
+            linssit = paalla;
+            PaivitaNakyvyys();
+        }
+
+        bool NakyyNyt => Paalla && Valmis && !linssit;
+
+        /// <summary>Kuori heti; vektorirajat häivytetään LateUpdatessa tiheyden mukaan (Viivaleveys.AluerajaHaive).</summary>
+        void PaivitaNakyvyys()
+        {
+            if (kuori != null) kuori.enabled = NakyyNyt;
+            if (rajat != null && !NakyyNyt) { rajaHaive = 0f; rajat.enabled = false; }
         }
 
         public void MaaPerussavy(Savy savy) { perus = savy; PaivitaPaletti(); }
@@ -212,8 +242,7 @@ namespace Matkakirja
             if (janat != null) TeeRajat(janat);
             Debug.Log($"MATKAKIRJA maat ({kokoelma}): {jarjestys.Count} aluetta, tunnuskartta {w}×{h}, " +
                       $"{janat?.Count ?? 0} rajajanaa, {(Time.realtimeSinceStartup - alku) * 1000f:0} ms");
-            if (kuori != null) kuori.enabled = Paalla;
-            if (rajat != null) rajat.enabled = Paalla;
+            PaivitaNakyvyys();
         }
 
         /// <summary>
@@ -286,8 +315,7 @@ namespace Matkakirja
                 // Vektorirajojen kanssa varjostin piirtää vain korostetun alueen rajan.
                 px[256 + p.Value] = rajat != null && !korostettu ? new Color32(0, 0, 0, 0) : C(s.Reuna);
             }
-            if (rajaOma != null)
-                rajaOma.SetColor("_BaseColor", new Color(perus.Reuna.R, perus.Reuna.G, perus.Reuna.B, perus.Reuna.A));
+            AsetaRajanVari();
             paletti.SetPixels32(px);
             paletti.Apply(false);
         }
@@ -403,9 +431,31 @@ namespace Matkakirja
             PaivitaPaletti();
         }
 
+        /// <summary>Perussävyn reuna × häive (kaukana 0, lähellä 1).</summary>
+        void AsetaRajanVari()
+        {
+            if (rajaOma == null) return;
+            rajaOma.SetColor("_BaseColor", new Color(perus.Reuna.R, perus.Reuna.G, perus.Reuna.B, perus.Reuna.A * rajaHaive));
+        }
+
+        /// <summary>Ruudun tiheys (px/°) viimeksi, kun vektorirajat olivat mahdollisia (tila-komennot, mittarit).</summary>
+        public float RajaTiheys => rajaTiheys;
+        /// <summary>Vektorirajojen peiton kerroin 0–1 (0 = piilossa: kaukana, linssissä tai tila pois).</summary>
+        public float RajaHaive => rajaHaive;
+
         void LateUpdate()
         {
-            if (rajaOma == null || georeferenssi == null || !rajat.enabled) return;
+            if (rajaOma == null || rajat == null || georeferenssi == null) return;
+            bool sallittu = NakyyNyt;
+            if (!sallittu && rajaHaive <= 0f && !rajat.enabled) return;
+            // Löydös 74 d: vakioleveä viiva (Rajaviiva _Paksuus pisteinä) sulaa kaukana läiskäksi, joten rajat vasta
+            // webin rajojen tiheydestä (Viivaleveys.AluerajaHaive). Kaksi sädettä kehyksessä (Pintaosuma.Tiheys).
+            var kamera = kierto != null ? kierto.GetComponent<Camera>() : Camera.main;
+            rajaTiheys = sallittu ? Pintaosuma.Tiheys(georeferenssi, kamera) : 0f;
+            float uusi = Viivaleveys.AluerajaHaive(rajaHaive, sallittu, rajaTiheys, rajatMinTiheys, Time.unscaledDeltaTime);
+            if (uusi != rajaHaive) { rajaHaive = uusi; AsetaRajanVari(); }
+            rajat.enabled = rajaHaive > 0f;
+            if (!rajat.enabled) return;
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             rajaOma.SetVector("_Keskus", georeferenssi.transform.TransformPoint((float3)keskus));
         }

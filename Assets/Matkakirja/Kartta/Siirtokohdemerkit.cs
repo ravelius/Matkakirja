@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using CesiumForUnity;
 using TMPro;
@@ -39,7 +40,7 @@ namespace Matkakirja
         [Tooltip("KOHDEMERKIN_NIMI_PX ja KOHDEMERKIN_NIMI_RAKO_PX.")]
         public float nimiPx = 13f, nimiRako = 8f;
         [Tooltip("Napautuksen osuma-alue (web: lähin kohde 44 px).")]
-        public float osumaSade = 22f;
+        public float osumaSade = 44f;
         [Tooltip("Merkin nosto pinnasta (m), kuten kaupunkimerkeissä.")]
         public double nosto = 5000.0;
         public Color musteenVari = new Color(0.20f, 0.15f, 0.10f);
@@ -57,6 +58,13 @@ namespace Matkakirja
         }
 
         readonly List<Merkki> merkit = new List<Merkki>();
+        readonly HashSet<string> nimetytKaupungit = new HashSet<string>();
+
+        /// <summary>
+        /// Kaupungit, joiden nimen siirtokohdemerkki piirtää (kohdemerkin nimi halon yläpuolella). KaupunkiMerkit jättää
+        /// niiden oman nimiön pois, jotta nimi näkyy kerran kuten webissä (Pelikoodarin havainto 25.9.: "Sofia" tuplana).
+        /// </summary>
+        public bool NimeaaKaupungin(string kaupunki) => kaupunki != null && nimetytKaupungit.Contains(kaupunki);
         Mesh nelio;
         Material nimiMateriaali;
         const float Etuna = 0.3f;
@@ -76,10 +84,35 @@ namespace Matkakirja
         }
 
         /// <summary>Uudet kohteet (vanhat pois). Tyhjä tai null = renkaat pois.</summary>
+        /// <summary>
+        /// LÖYDÖS 56 (build 13): nopan heiton jälkeen kamera sovittaa pelaajan ja kaikki siirtokohteet ruutuun kuten web
+        /// (js/ui.js sovitaSiirtokohteet → sovitaKohteetNakyviin): vain jos ne eivät jo mahdu 14 %:n marginaaliin,
+        /// keskitys rajauksen keskelle, vain loitonnus, 720 ms pehmeä ajo (PalloKierto.SovitaPisteet). Sama joukko ei
+        /// aja uudestaan (kytkentä tai uusi piirto samoilla kohteilla).
+        /// </summary>
+        void Sovita(IReadOnlyList<Kohde> kohteet)
+        {
+            if (kohteet == null || kohteet.Count == 0) { sovitettu = null; return; }
+            var avain = string.Join("|", kohteet.Select(k => k.Avain));
+            if (avain == sovitettu) return;
+            sovitettu = avain;
+            if (kierto == null) kierto = FindAnyObjectByType<PalloKierto>();
+            if (kierto == null) return;
+            // Web sovitaSiirtokohteet: matkaZoomivapaus(true) ennen sovitusta (maan katto ei estä loitonnusta).
+            kierto.MatkallaVapaana = true;
+            var n = FindAnyObjectByType<Nappula>();
+            kierto.SovitaPisteet(kohteet.Select(k => (k.Lat, k.Lon)).ToList(), PalloKierto.KohdesovitusMarginaali,
+                                 PalloKierto.KohdesovitusKesto, n != null && n.Nakyy ? (n.Lat, n.Lon) : null);
+        }
+        string sovitettu;
+
         public void Nayta(IReadOnlyList<Kohde> kohteet)
         {
             foreach (var m in merkit) Destroy(m.juuri.gameObject);
             merkit.Clear();
+            nimetytKaupungit.Clear();
+            if (kohteet != null) foreach (var k in kohteet) if (!string.IsNullOrEmpty(k.Kaupunki)) nimetytKaupungit.Add(k.Kaupunki);
+            Sovita(kohteet);
             if (kohteet == null || georeferenssi == null || materiaali == null) return;
             nelio ??= Nelio();
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
@@ -150,6 +183,12 @@ namespace Matkakirja
             if (paras != null) Napautettu?.Invoke(paras.kohde.Avain);
         }
 
+        /// <summary>
+        /// KarttaKerrokset "kaupungit": linssin ajaksi pois kuten kaupunkipisteet ja nappula (LinssiOhjain.Pelikerrokset;
+        /// radiokuva b13: nopan renkaat jäivät radion mastojen sekaan). Kohteet säilyvät ja palaavat linssin jälkeen.
+        /// </summary>
+        public bool Nakyvissa { get; set; } = true;
+
         void LateUpdate()
         {
             if (merkit.Count == 0 || kamera == null) return;
@@ -162,7 +201,7 @@ namespace Matkakirja
                 Vector3 paikka = gt.TransformPoint(m.pinta);
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
-                bool edessa = !PalloKierto.PorttiSumea && Vector3.Dot(gt.TransformDirection(m.normaali), kohti / etaisyys) > 0.12f;
+                bool edessa = Nakyvissa && !PalloKierto.PorttiSumea && Vector3.Dot(gt.TransformDirection(m.normaali), kohti / etaisyys) > 0.12f;
                 if (m.juuri.gameObject.activeSelf != edessa) m.juuri.gameObject.SetActive(edessa);
                 if (!edessa) continue;
                 float lahella = etaisyys * (1f - Etuna);

@@ -36,5 +36,28 @@ namespace Matkakirja
 
         /// <summary>Rajaviivan puolen peiton leveys laitepikseleinä: pt · kerroin + 0,5.</summary>
         public static double NakyvaLaitePx(double pt, double kerroin) => pt * kerroin + 0.5;
+
+        /// <summary>Aluerajojen (maakunnat) häive sisään ja ulos, s (web VEKTORIT_HAIVE_MS 260, js/pallovektorit.js).</summary>
+        public const float AluerajaHaiveS = 0.26f;
+
+        /// <summary>
+        /// ALUERAJOJEN NÄKYVYYS (omistajan löydös 74 d, build 12: ihmisen matkan avaruuspallossa maakuntien rajat
+        /// piirtyivät mustana läiskänä Euroopan päälle, koska vakioleveä viiva ei ohene kaukana). Webin sääntö
+        /// vektoriviivoille: rajat vasta tiheydestä VEKTORIT_RAJAT_PX_ASTE 30 laitepikseliä/aste (js/pallovektorit.js:171
+        /// ja :1691 "tarve >= VEKTORIT_RAJAT_PX_ASTE"; natiivissa Vektorisolut.RajatTiheys), ja webin maakuntakerros on
+        /// pois linssin ajan (js/pallolauta/lauta.js:5098 maakunnat?.asetaMaa(linssiPaalla() ? null : …)).
+        /// Palauttaa uuden peiton kertoimen 0–1: liukuu kohti tavoitetta (1 = sallittu ja tiheys ≥ min) nopeudella
+        /// 1 / <paramref name="kestoS"/> sekunnissa. NaN-tiheys = kaukana.
+        /// </summary>
+        public static float AluerajaHaive(float nyt, bool sallittu, double tiheys, double minTiheys, float dt,
+            float kestoS = AluerajaHaiveS)
+        {
+            bool nakyy = sallittu && !double.IsNaN(tiheys) && tiheys >= minTiheys;
+            float tavoite = nakyy ? 1f : 0f;
+            float nykyinen = float.IsNaN(nyt) ? 0f : Math.Max(0f, Math.Min(1f, nyt));
+            if (!(kestoS > 0f)) return tavoite;
+            float askel = Math.Max(0f, dt) / kestoS;
+            return nykyinen < tavoite ? Math.Min(tavoite, nykyinen + askel) : Math.Max(tavoite, nykyinen - askel);
+        }
     }
 }

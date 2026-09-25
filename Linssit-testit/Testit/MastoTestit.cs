@@ -113,6 +113,26 @@ namespace Matkakirja.Linssit.Testit
             Lahella(1.6, Mastot.KaarenKorotus(5000), 1e-9, "korotus enintään 1,6");
         }
     
+        [Testi] static void SulunLopetusEiPalautaLaattojaToiselleLinssille()
+        {
+            // Löydös 77: liu'un aikana avattu toinen linssi (topografia) piilottaa laatat; radion lopetus
+            // (LopetaSulku, myös LinssiOhjaimen viimeistely) poistaa vain oman reliefinsä.
+            var y = new ValeYmparisto();
+            var m = new ValeMastot();
+            var l = new RadioLinssi(RadioTestit.SallittuAineisto(), new ValeVirta(), new ValeViritin(), new ValeRadioKartta())
+                { OmatNapit = true, Mastot3D = m };
+            l.Avaa(y);
+            var kerrokset = (ValeKerrokset)y.Kerrokset;
+            l.Sulje();
+            Oleta.Tosi(l.Sulkeutuu && kerrokset.Nakyvat["laatat"], "liuku alkaa, laatat takaisin");
+            kerrokset.Nakyvyys("laatat", false);   // topografia auki liu'un aikana
+            l.LopetaSulku();
+            Oleta.Tosi(!l.Sulkeutuu && !kerrokset.Rasterit.ContainsKey(RadioLinssi.PohjaKerros), "radion reliefi pois");
+            Oleta.Sama(false, kerrokset.Nakyvat["laatat"], "toisen linssin piilottamat laatat pysyvät piilossa");
+            Oleta.Sama(0f, m.H, "hämärä pois");
+            Oleta.Sama(null, m.Lista, "mastot pois");
+        }
+
         [Testi] static void AvausSoittoJaSulkuMastoilla()
         {
             var y = new ValeYmparisto();

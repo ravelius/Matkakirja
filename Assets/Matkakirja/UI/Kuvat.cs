@@ -284,14 +284,21 @@ namespace Matkakirja.Natiivi
         {
             Texture2D tulos = null;
             string levy = Valimuisti(reitit[0]);
-            if (File.Exists(levy))
+            // Löydös 63: Unity ei pura WebP:tä (kohdekarttojen miniatyyripiirrokset ovat ämpärissä vain webp:nä),
+            // joten webp kulkee ImageIO-purun kautta (Natiivisepän MatkakirjaKuvat_Pura, iOS 14+).
+            if (OnWebpOsoite(reitit[0]))
+            {
+                var w = LataaWebp(avain, reitit, levy, t => tulos = t);
+                while (w.MoveNext()) yield return w.Current;
+            }
+            else if (File.Exists(levy))
             {
                 using var l = UnityWebRequestTexture.GetTexture("file://" + levy, true);
                 yield return l.SendWebRequest();
                 tulos = l.result == UnityWebRequest.Result.Success ? Nimea(DownloadHandlerTexture.GetContent(l), avain) : null;
                 if (tulos == null) try { File.Delete(levy); } catch (IOException) { }
             }
-            for (int i = 0; tulos == null && i < reitit.Length; i++)
+            for (int i = 0; tulos == null && !OnWebpOsoite(reitit[0]) && i < reitit.Length; i++)
             {
                 using var p = UnityWebRequestTexture.GetTexture(reitit[i], true);
                 p.timeout = 20;
@@ -331,6 +338,78 @@ namespace Matkakirja.Natiivi
                 foreach (var o in odottajat) { try { o?.Invoke(tulos); } catch (Exception e) { Debug.LogException(e); } }
             }
         }
+
+        static bool OnWebpOsoite(string url) => url != null && url.Split('?')[0].EndsWith(".webp", StringComparison.OrdinalIgnoreCase);
+
+        /// <summary>
+        /// WebP: tavut laitevälimuistista tai verkosta, purku taustasäikeessä ImageIO:lla (RGBA8 + mipit,
+        /// esikerrottu alfa, rivi 0 alhaalla) ja alfa takaisin suoraksi, koska UI Toolkit piirtää suoralla
+        /// alfalla (esikerrottu tummentaisi piirrosten häivytetyt reunat). Editorissa ei purkua (null).
+        /// </summary>
+        static IEnumerator LataaWebp(string avain, string[] reitit, string levy, Action<Texture2D> valmis)
+        {
+            byte[] tavut = null;
+            if (File.Exists(levy))
+            {
+                var luku = System.Threading.Tasks.Task.Run(() => { try { return File.ReadAllBytes(levy); } catch (IOException) { return null; } });
+                while (!luku.IsCompleted) yield return null;
+                tavut = luku.Result;
+            }
+            bool verkosta = false;
+            for (int i = 0; (tavut == null || tavut.Length < 16) && i < reitit.Length; i++)
+            {
+                using var p = UnityWebRequest.Get(reitit[i]);
+                p.timeout = 20;
+                yield return p.SendWebRequest();
+                if (p.result == UnityWebRequest.Result.Success) { tavut = p.downloadHandler.data; verkosta = true; }
+            }
+            if (tavut == null || tavut.Length < 16) { valmis(null); yield break; }
+#if UNITY_IOS && !UNITY_EDITOR
+            var tyo = System.Threading.Tasks.Task.Run(() =>
+            {
+                IntPtr d = MatkakirjaKuvat_Pura(tavut, tavut.Length, 0, out int w, out int h, out int koko);
+                byte[] rgba = null;
+                if (d != IntPtr.Zero)
+                {
+                    rgba = new byte[koko];
+                    System.Runtime.InteropServices.Marshal.Copy(d, rgba, 0, koko);
+                    MatkakirjaKuvat_Vapauta(d);
+                    // Esikerrottu → suora alfa (kaikki mip-tasot ovat samassa puskurissa peräkkäin).
+                    for (int j = 0; j + 3 < rgba.Length; j += 4)
+                    {
+                        int a = rgba[j + 3];
+                        if (a == 0 || a == 255) continue;
+                        rgba[j] = (byte)Math.Min(255, rgba[j] * 255 / a);
+                        rgba[j + 1] = (byte)Math.Min(255, rgba[j + 1] * 255 / a);
+                        rgba[j + 2] = (byte)Math.Min(255, rgba[j + 2] * 255 / a);
+                    }
+                }
+                return (rgba, w, h);
+            });
+            while (!tyo.IsCompleted) yield return null;
+            var (data, leveys, korkeus) = tyo.Result;
+            if (data == null) { valmis(null); yield break; }
+            var t = new Texture2D(leveys, korkeus, TextureFormat.RGBA32, true);
+            try { t.LoadRawTextureData(data); t.Apply(false, true); }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui kuva webp: " + e.Message); UnityEngine.Object.Destroy(t); valmis(null); yield break; }
+            if (verkosta)
+                System.Threading.Tasks.Task.Run(() =>
+                {
+                    try { Directory.CreateDirectory(Path.GetDirectoryName(levy)); File.WriteAllBytes(levy, tavut); }
+                    catch (IOException e) { Debug.LogWarning("MATKAKIRJA ui kuva: " + e.Message); }
+                });
+            valmis(Nimea(t, avain));
+#else
+            valmis(null);
+#endif
+        }
+
+#if UNITY_IOS && !UNITY_EDITOR
+        [System.Runtime.InteropServices.DllImport("__Internal")]
+        static extern IntPtr MatkakirjaKuvat_Pura(byte[] tavut, int pituus, int sivu, out int leveys, out int korkeus, out int koko);
+        [System.Runtime.InteropServices.DllImport("__Internal")]
+        static extern void MatkakirjaKuvat_Vapauta(IntPtr puskuri);
+#endif
 
         static Texture2D Nimea(Texture2D t, string nimi)
         {

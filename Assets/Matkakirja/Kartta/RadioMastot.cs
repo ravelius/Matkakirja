@@ -27,7 +27,9 @@ namespace Matkakirja
     ///   maavalo    lämmin #ff8a4a valitun maston ympärillä, säde 110–140 km kirkkauden mukaan, nousee 0,8 s:ssa
     ///              valinnan vaihtuessa (tileset-varjostimen _radioMaavalo, emissiona)
     ///   renkaat    pallokalotti 2 km pinnan yläpuolella yhdellä piirtokutsulla (Shaders/Radiorengas)
-    ///   yövalot    uniformit valmiina (_radioYonValot), kerros odottaa Karttasepän Black Marble -polttoa
+    ///   yövalot    NASA Black Marble (Karttasepän sarja Z0–Z6) omana raster-kerroksenaan sekoituspainolla 0; tileset-
+    ///              varjostin näytteistää paikan ja lisää valot emissiona hämärän jälkeen (_radioYovalot, _radioYonValot;
+    ///              PaivitaYovalot)
     ///   pohja      radion topografiareliefi häivytetään pergamentin päälle samalla h:lla (Pohja)
     ///
     /// Napautus: mastot korvaavat ▶-napit. Osuma-alue on 44 × 44 pt maston puolivälissä (Osuma); osuma ilmoitetaan
@@ -56,6 +58,27 @@ namespace Matkakirja
         public Color maavalonVari = new Color32(0xff, 0x8a, 0x4a, 0xff);
         [Tooltip("Maavalon nousu valinnan vaihtuessa (s).")]
         public float maavalonNousuS = 0.8f;
+        [Tooltip("Yövalojen voimakkuus (suunnitelma luku 3: valo = w × 0,85 × (0,5 + 0,5 × paikallinen) × natrium).")]
+        public float yovalojenVoimakkuus = MastoGeometria.YovalonVoimakkuus;
+
+        /// <summary>
+        /// YÖVALOT (radiouudistus, suunnitelma docs/raportit/linssi-radiouudistus-suunnitelma-20260924.md luku 3):
+        /// Karttasepän NASA Black Marble -sarja (VIIRS, public domain; attribuutio "NASA Earth Observatory (Black
+        /// Marble)" Tietoja-näkymässä), Z0–Z6, XYZ-rivit ({reverseY} on Cesium Unityssä XYZ-rivi kuten muissa sarjoissa),
+        /// 256 px JPEG mustalla taustalla (tarkoitettu emissiiviseen lisäykseen). Kattavuus: laatat.json samassa kansiossa.
+        /// </summary>
+        public static string YovaloUrl = "https://media.matkakirja.app/julisteet/pallo/yovalot/2026-09-25/{z}/{x}/{reverseY}.jpg";
+        public const int YovaloMaxTaso = 6;
+        /// <summary>KarttaKerrokset-avain (ei linssin avain: LinssiOhjain ei seuraa sitä).</summary>
+        public const string YovaloKerros = "radio-yovalot";
+        /// <summary>
+        /// Tosi, jos Karttaseppä on leiponut lämpimän valon painon (suunnitelma luku 3, w) jo polttoon: varjostin käyttää
+        /// silloin näytteen luminanssia sellaisenaan (_radioYovalot.z = 1). Oletus epätosi: w lasketaan varjostimessa, mikä
+        /// on myös suodatetulle sarjalle lähes neutraali (lämmin valo läpäisee, alle 48/255 himmenee pois).
+        /// Oletus tosi (Karttaseppä 25.9. klo 10.2x): sarja 2026-09-25 sisältää vain valot, Black Marblen sininen yöpohja
+        /// ja jää on poistettu polttoon (musta = ei valoa); alkuperäinen sininen versio on polussa …/2026-09-25-alkup/.
+        /// </summary>
+        public static bool YovalotSuodatettu = true;
 
         /// <summary>Mastoa napautettiin (kaupungin id); ilmoitetaan myös PalloKierto.IlmoitaKaupunki-reittiä.</summary>
         public event Action<string> MastoNapautettu;
@@ -64,6 +87,7 @@ namespace Matkakirja
         static readonly int MaavaloId = Shader.PropertyToID("_radioMaavalo");
         static readonly int MaavaloVariId = Shader.PropertyToID("_radioMaavaloVari");
         static readonly int YonValotId = Shader.PropertyToID("_radioYonValot");
+        static readonly int YovalotId = Shader.PropertyToID("_radioYovalot");
         static readonly int PeittoId = Shader.PropertyToID("_Peitto");
         static readonly int ValoId = Shader.PropertyToID("_Valo");
         static readonly int SadeId = Shader.PropertyToID("_Sade");
@@ -185,6 +209,7 @@ namespace Matkakirja
             }
             // Edellisen kohtauksen jäljiltä voimassa olevat globaalit nollaan (0 = tileset ennallaan).
             Shader.SetGlobalFloat(HamaraId, 0f);
+            Shader.SetGlobalVector(YovalotId, Vector4.zero);
             maavaloPaalla = true;
             AsetaGlobaalit();
         }
@@ -194,6 +219,7 @@ namespace Matkakirja
             if (kierto != null) kierto.Napautettu -= Napautus;
             if (Instanssi == this) Instanssi = null;
             hamara = 0; maara = 0; valittu = -1; maavaloPaalla = true;
+            PoistaYovalot();
             Shader.SetGlobalFloat(HamaraId, 0f);
             AsetaGlobaalit();
         }
@@ -214,7 +240,7 @@ namespace Matkakirja
             indeksi.Clear();
             valittu = -1;
             osumia = 0;
-            if (lista == null || !valmis) { KarttaKerrokset.Instanssi?.PidaPohja(false); return; }
+            if (lista == null || !valmis) { PoistaYovalot(); KarttaKerrokset.Instanssi?.PidaPohja(false); return; }
             var gt = georeferenssi.transform;
             for (int i = 0; i < lista.Count && maara < EnintaanMastoja; i++)
             {
@@ -239,6 +265,10 @@ namespace Matkakirja
             }
             mastotAika = Time.unscaledTime;
             Pohja();
+            // Yövalot lisätään vasta LateUpdatessa: RadioLinssi.AvaaMastot kutsuu tätä ennen kuin se lisää reliefin
+            // (VaihdaPohja), ja reliefin pitää saada raster-paikka ensin.
+            if (maara > 0) yovalotPyydetty = true;
+            else PoistaYovalot();
             Debug.Log($"MATKAKIRJA mastot: {maara} mastoa");
         }
 
@@ -249,6 +279,8 @@ namespace Matkakirja
 
         public void Hamara(float h)
         {
+            hamaraKehys = Time.frameCount;
+            hamaraAika = Time.unscaledTime;
             hamara = Mathf.Clamp01(float.IsNaN(h) ? 0 : h);
             Shader.SetGlobalFloat(HamaraId, hamara);
             Tausta();
@@ -303,9 +335,9 @@ namespace Matkakirja
 
         public void YonValot(double lat, double lon, float paikallinen)
         {
-            // YÖVALOT (suunnitelma luku 3): NASA Black Marble -kerros ei ole vielä käytössä, koska Karttasepän poltto
-            // Z0–Z6 puuttuu (tulee E28:n jälkeen). Uniformit asetetaan jo, jotta tileset-varjostimen RadioHamara-funktioon
-            // lisätään vain rasterin näyte, kun sarja on ämpärissä.
+            // YÖVALOT (suunnitelma luku 3): valitun maston paikka ja paikallinen tehostus (syttyminen 0 → 1, 1,2 s);
+            // tileset-varjostin tehostaa valot täysiksi 60 km:n sisällä ja palaa perustasoon 230 km:ssä. Kerros itse:
+            // PaivitaYovalot.
             Alusta();
             if (!valmis) return;
             if (lat != yLat || lon != yLon)
@@ -361,8 +393,95 @@ namespace Matkakirja
 
         // ---- Piirto ----
 
+        // ---- VAHTI (omistajan löydös 77, build 12): radiolinssi päivittää hämärän joka kehys, kun se on auki
+        //      (RadioLinssi.PaivitaMastot) tai sulkeutuu (PaivitaSulku). Jos linssi suljetaan muuta tietä kuin
+        //      SuljeMastot (laukku, matka, toinen linssi), PaivitaMastot palaa heti eikä nollaa mitään, ja hämärä,
+        //      maavalo sekä kuuluvuuskalotin renkaat jäivät pallolle: Saharan eteläpuolelle musta kalotti renkaineen
+        //      ja maston hehku. Kun päivitystä ei ole tullut <see cref="VahdinRaja"/> sekuntiin, tila puretaan kuten
+        //      OnDestroyssa. Koetila (Koe) ohjaa itse.
+        int hamaraKehys = -1;
+        float hamaraAika;
+        /// <summary>Päivittämätön aika (s), jonka jälkeen radion jäänteet puretaan.</summary>
+        const float VahdinRaja = 0.3f;
+
+        void Vahti()
+        {
+            if (koe || (hamara <= 0f && renkaita == 0 && valittu < 0 && maara == 0)) return;
+            if (Time.frameCount - hamaraKehys < 3 || Time.unscaledTime - hamaraAika < VahdinRaja) return;
+            Debug.LogWarning($"MATKAKIRJA radiomastot: linssi ei päivitä ({Time.unscaledTime - hamaraAika:0.0} s), jäänteet pois " +
+                             $"(hämärä {hamara:0.00}, renkaita {renkaita}, valittu {valittu}, mastoja {maara})");
+            renkaita = 0; valittu = -1; kirkkaus = 0f;
+            YonValot(0, 0, 0);
+            Hamara(0f);
+            Mastot(null);
+            maavaloPaalla = true;
+            AsetaGlobaalit();
+        }
+
+        // ---- YÖVALOT: kerros ja varjostimen globaalit ----
+
+        bool yovalotPyydetty, yovaloYritetty, yovaloLisatty;
+
+        /// <summary>
+        /// Yövalokerros avauksen jälkeen ja sen globaalit joka kehys (kutsutaan LateUpdatessa ennen piirtoa). Kerros on
+        /// tavallinen Cesiumin raster-kerros (KarttaKerrokset.LisaaRasteri), mutta sen sekoituspaino _overlayAlfa_&lt;paikka&gt;
+        /// on 0 (RasterinAlfa), joten musta tausta ei peitä karttaa; tileset-varjostin (RadioHamara) näytteistää saman
+        /// paikan ja lisää valot emissiona: _radioYovalot = (paikka, voimakkuus, suodatettu, 0). Paikka tulee
+        /// LisaaRasterilta (reliefi lisätään ensin, joten yleensä 2; väritaso vapauttaa sen linssin ajaksi). Jos paikkaa
+        /// ei ole (lennon pinta tai kaksi linssikerrosta), yövalot jäävät pois ja lokiin tulee varoitus. Kerros on
+        /// väistyvä: sulun ulosliu'un aikana avattu toinen linssi (RadioLinssi.SuljeMastot) saa sen paikan.
+        /// </summary>
+        void PaivitaYovalot()
+        {
+            if (!yovalotPyydetty) return;
+            var kk = KarttaKerrokset.Instanssi;
+            if (kk == null) return;
+            if (!yovaloYritetty)
+            {
+                yovaloYritetty = true;
+                if (!kk.RasteriPaikkaVapaana())
+                {
+                    Debug.LogWarning("MATKAKIRJA mastot: yövaloille ei ole raster-paikkaa (reliefi ja lennon pinta tai toinen linssi), yövalot pois");
+                    return;
+                }
+                // Alfa 1 = kerros päälle (alfa 0 jättäisi sen pois Cesiumista); sekoituspaino nollataan heti alla samassa
+                // kehyksessä ennen piirtoa, joten musta laatta ei näy.
+                yovaloLisatty = kk.LisaaRasteri(YovaloKerros, YovaloUrl, CesiumUrlTemplateRasterOverlayProjection.WebMercator,
+                    0, YovaloMaxTaso, 1f, vaistyva: true) != null;
+                if (!yovaloLisatty) { Debug.LogWarning("MATKAKIRJA mastot: yövalokerros ei mahtunut, yövalot pois"); return; }
+            }
+            if (!yovaloLisatty) return;
+            // −1: kerros väistyi toisen linssin tieltä (KarttaKerrokset.LisaaRasteri, vaistyva) → globaali heti nollaan,
+            // ettei paikan uutta rasteria lisätä emissiona.
+            int paikka = kk.RasterinAlfa(YovaloKerros, 0f);
+            if (paikka == 1 || paikka == 2)
+                Shader.SetGlobalVector(YovalotId, new Vector4(paikka, Mathf.Max(0f, yovalojenVoimakkuus), YovalotSuodatettu ? 1f : 0f, 0f));
+            else
+                Shader.SetGlobalVector(YovalotId, Vector4.zero);
+            if (!yovaloLokattu)
+            {
+                yovaloLokattu = true;
+                Debug.Log($"MATKAKIRJA mastot: yövalot raster-paikassa {paikka} (voimakkuus {yovalojenVoimakkuus:0.00})");
+            }
+        }
+        bool yovaloLokattu;
+
+        /// <summary>Yövalokerros pois ja globaali nollaan (sulku, vahti, kohtauksen purku); paikan alfa palautuu 1:een.</summary>
+        void PoistaYovalot()
+        {
+            // Globaali ensin: paikka voi seuraavaksi olla väritason tai toisen linssin, jota ei saa lisätä emissiona.
+            Shader.SetGlobalVector(YovalotId, Vector4.zero);
+            yovalotPyydetty = yovaloYritetty = yovaloLokattu = false;
+            if (!yovaloLisatty) return;
+            yovaloLisatty = false;
+            var kk = KarttaKerrokset.Instanssi;
+            if (kk != null) kk.PoistaRasteri(YovaloKerros);
+        }
+
         void LateUpdate()
         {
+            Vahti();
+            PaivitaYovalot();
             Valoja = 0;
             if (!valmis || (maara == 0 && renkaita == 0))
             {

@@ -31,6 +31,8 @@
 //   jatka                     tuloksen Jatka-nappi: kysymys kiinni, vuoro päättyy
 //   luento kaupunki|intro|lento|lento-alku|saapuminen kaupunki   soittaa luennan (kerran-säännöistä välittämättä)
 //   puhe seis|pois|paalle     pysäyttää puheen / luennat pois tai päälle (PlayerPrefs)
+//   aani mittaa [s]           todellinen lähtötaso s sekuntia (AudioListener.GetOutputData: rms, huippu), soivat
+//                             lähteet ja iOS:n ääni-istunto (luokka, voimakkuus, reitti) peli-lokiin (löydös 49)
 //   tila [nimi]               kirjoittaa Documents/peli-tila.json (tai peli-tila-nimi.json)
 //   odota s                   seuraava rivi s sekunnin päästä
 //   odota-tila tila [max s]   odottaa silmukan tilaa (Kartta, Dialogi, Matkalla, Lehti, Kysymys), oletus 20 s
@@ -208,6 +210,38 @@ namespace Matkakirja.Natiivi
                         default: return ohjain.SoitaLuento(l.Luento(A(1)));
                     }
                 }
+                case "aani" when A(1) == "mittaa":
+                    // Löydös 49: todellinen lähtötaso (Unityn miksattu ulostulo ennen laitteistoa), ei play()-kutsu.
+                    StartCoroutine(MittaaAani(float.TryParse(A(2), System.Globalization.NumberStyles.Float,
+                        System.Globalization.CultureInfo.InvariantCulture, out var mittaS) ? mittaS : 3f));
+                    return null;
+                case "aani" when A(1) == "sini":
+                {
+                    // Positiivinen kontrolli (löydös 49): 440 Hz 2 s omasta klipistä ilman latausta. rms > 0 = Unityn
+                    // miksaus toimii; rms 0 = ulostulo ei käy lainkaan (istunto, keskeytys tai AudioSettings).
+                    int taajuus = AudioSettings.outputSampleRate > 0 ? AudioSettings.outputSampleRate : 48000;
+                    var data = new float[taajuus * 2];
+                    for (int i = 0; i < data.Length; i++) data[i] = 0.3f * Mathf.Sin(2f * Mathf.PI * 440f * i / taajuus);
+                    var klippi = AudioClip.Create("sini440", data.Length, 1, taajuus, false);
+                    klippi.SetData(data, 0);
+                    var go = new GameObject("MatkakirjaSini");
+                    var l = go.AddComponent<AudioSource>();
+                    l.clip = klippi; l.spatialBlend = 0f; l.volume = 1f;
+                    l.Play();
+                    Destroy(go, 2.5f);
+                    return null;
+                }
+                case "aani" when A(1) == "istunto":
+                    // aani istunto playback|puhe|ambient: istunnon vaihto mittausta varten (AaniIstunto.Vaihda).
+                    return AaniIstunto.Vaihda(A(2));
+                case "aani" when A(1) == "nollaa":
+                {
+                    // Unityn ääni uudelleen käyntiin samoilla asetuksilla (FMOD avaa ulostulon uudelleen).
+                    var k = AudioSettings.GetConfiguration();
+                    bool ok = AudioSettings.Reset(k);
+                    Kirjaa("aani nollaa", (ok ? "ok" : "EPÄONNISTUI") + ", näytetaajuus " + AudioSettings.outputSampleRate);
+                    return null;
+                }
                 case "puhe":
                     switch (A(1))
                     {
@@ -305,6 +339,39 @@ namespace Matkakirja.Natiivi
 
         static float Luku(string s, float oletus) =>
             float.TryParse(s, NumberStyles.Float, CultureInfo.InvariantCulture, out var f) ? f : oletus;
+
+        /// <summary>
+        /// "aani mittaa [s]": s sekunnin ajan AudioListener.GetOutputData (kanavat 0 ja 1) joka kehys → RMS ja huippu,
+        /// soivat AudioSourcet, kuuntelijan tila, asetusten kytkimet ja tasot sekä iOS:n ääni-istunto (AaniIstunto.Tila).
+        /// Tulos peli-lokiin rivinä "aani:". RMS 0 = mitään ei soi pelin sisällä (vika Unityssä), RMS > 0 mutta ei
+        /// kuulu = istunto tai laite (äänetön tila, reitti, voimakkuus).
+        /// </summary>
+        System.Collections.IEnumerator MittaaAani(float sekunnit)
+        {
+            var naytteet = new float[1024];
+            double summa = 0; long lkm = 0; float huippu = 0;
+            float loppu = Time.unscaledTime + Mathf.Clamp(sekunnit, 0.5f, 30f);
+            while (Time.unscaledTime < loppu)
+            {
+                for (int k = 0; k < 2; k++)
+                {
+                    AudioListener.GetOutputData(naytteet, k);
+                    foreach (var x in naytteet) { summa += x * x; huippu = Mathf.Max(huippu, Mathf.Abs(x)); }
+                    lkm += naytteet.Length;
+                }
+                yield return null;
+            }
+            double rms = lkm > 0 ? Math.Sqrt(summa / lkm) : 0;
+            var soivat = new List<string>();
+            foreach (var l in FindObjectsByType<AudioSource>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
+                if (l.isPlaying) soivat.Add($"{l.gameObject.name}:{(l.clip != null ? l.clip.name : "-")}@{l.volume:0.00}{(l.mute ? " mykkä" : "")}");
+            var inv = System.Globalization.CultureInfo.InvariantCulture;
+            var kokoonpano = AudioSettings.GetConfiguration();
+            Kirjaa("aani", string.Format(inv, "rms {0:0.00000}, huippu {1:0.0000}, kuuntelijoita {11}, kuuntelija {2:0.00}{3}, näytetaajuus {4} ({8} {9}, dsp {10}), soivia {5} [{6}], istunto: {7}",
+                rms, huippu, AudioListener.volume, AudioListener.pause ? " TAUOLLA" : "", AudioSettings.outputSampleRate,
+                soivat.Count, string.Join(", ", soivat), AaniIstunto.Tila(), kokoonpano.sampleRate, kokoonpano.speakerMode,
+                kokoonpano.dspBufferSize, AaniIstunto.Kuuntelijoita));
+        }
 
         void Kirjaa(string rivi, string tulos)
         {

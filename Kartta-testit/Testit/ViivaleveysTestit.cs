@@ -37,5 +37,33 @@ namespace Matkakirja.Kartta.Testit
         {
             Oleta.Tosi(Viivaleveys.Pt(250, Viivaleveys.RannikkoKaukana, Viivaleveys.RannikkoLahella) == 1.2, "rannikko 1,2");
         }
+        [Testi]
+        static void AluerajatVastaMaanakymasta()
+        {
+            // Löydös 74 d: iPhonen avaruuspallo (halkaisija ~560 laitepikseliä) = säde 280 px → keskellä 280 · π/180 ≈ 4,9 px/°.
+            double avaruus = 280.0 * Math.PI / 180.0;
+            double raja = Vektorisolut.RajatTiheys;
+            Oleta.Tosi(raja == 30, "web VEKTORIT_RAJAT_PX_ASTE 30");
+            Oleta.Tosi(Viivaleveys.AluerajaHaive(0f, true, avaruus, raja, 1f) == 0f, "avaruudessa piilossa");
+            Oleta.Tosi(Viivaleveys.AluerajaHaive(1f, true, avaruus, raja, 1f) == 0f, "loitonnus häivyttää pois");
+            Oleta.Tosi(Viivaleveys.AluerajaHaive(0f, true, 30, raja, 1f) == 1f, "maanäkymässä näkyvissä");
+            Oleta.Tosi(Viivaleveys.AluerajaHaive(0f, true, double.NaN, raja, 1f) == 0f, "NaN = kaukana");
+            Oleta.Tosi(Viivaleveys.AluerajaHaive(1f, false, 240, raja, 1f) == 0f, "linssissä pois");
+            Oleta.Tosi(Viivaleveys.AluerajaHaive(0f, true, 0, 0, 0f, 0f) == 1f, "raja 0 ja kesto 0 = heti näkyvissä");
+        }
+
+        [Testi]
+        static void AluerajojenHaiveKuinWebissa()
+        {
+            // Web VEKTORIT_HAIVE_MS 260: puolivälissä 0,13 s:n jälkeen, perillä 0,26 s:ssa, ei yli.
+            float h = 0f;
+            for (int i = 0; i < 13; i++) h = Viivaleveys.AluerajaHaive(h, true, 100, 30, 0.01f);
+            Oleta.Tosi(Math.Abs(h - 0.5f) < 1e-3f, "puolivälissä " + h);
+            for (int i = 0; i < 20; i++) h = Viivaleveys.AluerajaHaive(h, true, 100, 30, 0.01f);
+            Oleta.Tosi(h == 1f, "perillä " + h);
+            h = Viivaleveys.AluerajaHaive(h, true, 10, 30, 0.13f);
+            Oleta.Tosi(Math.Abs(h - 0.5f) < 1e-3f, "ulos samaa tahtia " + h);
+            Oleta.Tosi(Viivaleveys.AluerajaHaive(float.NaN, true, 100, 30, -1f) == 0f, "NaN ja negatiivinen dt eivät liikuta");
+        }
     }
 }

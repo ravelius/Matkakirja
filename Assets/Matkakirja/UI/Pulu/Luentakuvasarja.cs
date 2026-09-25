@@ -84,15 +84,49 @@ namespace Matkakirja.Natiivi
             loppu = pakka.schedule.Execute(() => Tyhjenna(true)).StartingIn(viiveMs);
         }
 
+        /// <summary>Kuvien lennon maali (Matkakirjakortti): kortin laatikko paneelissa tai tyhjä, jos kortti ei näy.</summary>
+        public Func<Rect> Maali;
+
+        /// <summary>Web fokusvirta.js KUVALENNON_MS, KUVALENNON_PORRAS_MS ja KUVALENNON_HAIVE_MS.</summary>
+        const int LentoMs = 600, PorrasMs = 120, HaiveMs = 220;
+        /// <summary>Web matkakirjanPikkukuvanLeveys: .fact-pikkukuva 3,1 rem.</summary>
+        const float PikkukuvanLeveys = 49.6f;
+
         /// <summary>Kuvat pois; lento = kortin pikkukuviksi (Lahti-tapahtuma).</summary>
         public void Tyhjenna(bool lento)
         {
             loppu?.Pause();
+            // Web lennataKuvatMatkakirjaan: kukin kuva lentää matkakirjalapun yläreunaan pikkukuvan kokoiseksi (600 ms),
+            // seuraava 120 ms myöhemmin, ja häipyy perillä 220 ms:ssa. Ilman näkyvää korttia (tai vähennetty liike)
+            // kuvat häipyvät paikallaan kuten ennen.
+            var m = lento && !LinssiUi.VahennettyLiike() ? Maali?.Invoke() ?? default : default;
+            int i = 0;
             foreach (var k in kortit)
             {
-                k.AddToClassList("mk-kuvakortti--lahtee");
                 var poistettava = k;
-                k.schedule.Execute(() => poistettava.RemoveFromHierarchy()).StartingIn(650);
+                var wb = k.worldBound;
+                if (m.width > 0 && wb.width > 0)
+                {
+                    int viive = i * PorrasMs;
+                    var t0 = k.resolvedStyle.translate;
+                    var d = new Vector2(m.xMin + PikkukuvanLeveys * (0.5f + i) - wb.center.x, m.yMin - wb.center.y);
+                    var st = k.style;
+                    st.transitionProperty = new List<StylePropertyName> { "translate", "scale", "opacity" };
+                    st.transitionDuration = new List<TimeValue> { new TimeValue(LentoMs, TimeUnit.Millisecond), new TimeValue(LentoMs, TimeUnit.Millisecond), new TimeValue(HaiveMs, TimeUnit.Millisecond) };
+                    st.transitionDelay = new List<TimeValue> { new TimeValue(viive, TimeUnit.Millisecond), new TimeValue(viive, TimeUnit.Millisecond), new TimeValue(viive + LentoMs - HaiveMs, TimeUnit.Millisecond) };
+                    st.transitionTimingFunction = new List<EasingFunction> { new EasingFunction(EasingMode.EaseInOut), new EasingFunction(EasingMode.EaseInOut), new EasingFunction(EasingMode.Linear) };
+                    st.translate = new Translate(t0.x + d.x, t0.y + d.y);
+                    float s = Mathf.Clamp(PikkukuvanLeveys / wb.width, 0.05f, 1f);
+                    st.scale = new Scale(new Vector2(s, s));
+                    st.opacity = 0f;
+                    k.schedule.Execute(() => poistettava.RemoveFromHierarchy()).StartingIn(viive + LentoMs + 50);
+                }
+                else
+                {
+                    k.AddToClassList("mk-kuvakortti--lahtee");
+                    k.schedule.Execute(() => poistettava.RemoveFromHierarchy()).StartingIn(650);
+                }
+                i++;
             }
             kortit.Clear();
             if (lento) foreach (var k in naytetyt) Lahti?.Invoke(k);
@@ -102,8 +136,9 @@ namespace Matkakirja.Natiivi
 
         void Ohita()
         {
-            PeliOhjain.Instanssi?.OhitaLuento();
+            // Lento ensin: OhitaLuento herättää PaikanPuheVaiennettu-tapahtuman, joka tyhjentää pakan.
             Tyhjenna(true);
+            PeliOhjain.Instanssi?.OhitaLuento();
         }
 
         /// <summary>Suurennos sarjasta (luennan kuvat), alkaen kohdasta alku; ‹ › selaa.</summary>

@@ -125,5 +125,48 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(paperi / viiva > 5, $"kontrasti {paperi / viiva}");
             Oleta.Tosi(Math.Abs(MastoGeometria.Lineaarinen(1) - 1) < 1e-5 && MastoGeometria.Lineaarinen(0.5f) < 0.22f, "sRGB → lineaarinen");
         }
+
+        [Testi]
+        static void YovalonPaino()
+        {
+            // Musta tausta ja JPEG-kohina alle 48/255 eivät pala.
+            Oleta.Sama(0f, MastoGeometria.YovalonPaino(0, 0));
+            Oleta.Sama(0f, MastoGeometria.YovalonPaino(40f / 255f, 0));
+            // Kirkas lämmin kaupunki: täysi paino.
+            Oleta.Tosi(Math.Abs(MastoGeometria.YovalonPaino(230f / 255f, 120f / 255f) - 1) < 1e-6, "lämmin kirkas");
+            // Kuunvalaistu lumi tai jää (sinertävä, B > R + 10/255): ei valoa, vaikka kirkas.
+            Oleta.Sama(0f, MastoGeometria.YovalonPaino(200f / 255f, 215f / 255f));
+            // Neutraali harmaa (R = B) saa vain neljänneksen lämpimän painosta.
+            float harmaa = MastoGeometria.YovalonPaino(1f, 1f);
+            Oleta.Tosi(Math.Abs(harmaa - 0.25f) < 1e-5, $"harmaa {harmaa}");
+        }
+
+        [Testi]
+        static void YovalonLahi()
+        {
+            Oleta.Sama(1f, MastoGeometria.YovalonLahi(0, 1));
+            Oleta.Sama(1f, MastoGeometria.YovalonLahi(60_000, 1));
+            Oleta.Sama(0f, MastoGeometria.YovalonLahi(230_000, 1));
+            Oleta.Sama(0f, MastoGeometria.YovalonLahi(6_371_000, 1), "ei valittua mastoa (maan keskipiste)");
+            Oleta.Tosi(Math.Abs(MastoGeometria.YovalonLahi(145_000, 1) - 0.5f) < 1e-5, "puolivälissä 0,5");
+            Oleta.Sama(0f, MastoGeometria.YovalonLahi(0, 0), "ennen syttymistä");
+            Oleta.Tosi(Math.Abs(MastoGeometria.YovalonLahi(0, 0.4f) - 0.4f) < 1e-6, "syttyminen skaalaa");
+        }
+
+        [Testi]
+        static void YovalonVoimakkuus()
+        {
+            // Perustaso on puolet valitun maston ympäristön valosta (omistaja: selvästi näkyvä), sävy natrium.
+            float perus = MastoGeometria.Yovalo(1, MastoGeometria.YovalonVoimakkuus, 0, 0);
+            float lahi = MastoGeometria.Yovalo(1, MastoGeometria.YovalonVoimakkuus, 1, 0);
+            Oleta.Tosi(Math.Abs(perus / lahi - 0.5f) < 1e-6, "perustaso 0,5");
+            Oleta.Tosi(Math.Abs(lahi - 0.85f * 1.05f) < 1e-6, $"täysi punainen {lahi}");
+            Oleta.Tosi(MastoGeometria.Yovalo(1, 1, 1, 0) > MastoGeometria.Yovalo(1, 1, 1, 1)
+                       && MastoGeometria.Yovalo(1, 1, 1, 1) > MastoGeometria.Yovalo(1, 1, 1, 2), "lämmin: R > G > B");
+            Oleta.Sama(0f, MastoGeometria.Yovalo(0, 1, 1, 0), "ei painoa, ei valoa");
+            // Linearisoituna perustaso jää täyttä selvästi himmeämmäksi mutta näkyväksi hämärän pohjan (≈ 0,03) päällä.
+            float perusLin = MastoGeometria.Lineaarinen(perus);
+            Oleta.Tosi(perusLin > 0.1f && perusLin < MastoGeometria.Lineaarinen(lahi) * 0.5f, $"lineaarinen perustaso {perusLin}");
+        }
     }
 }

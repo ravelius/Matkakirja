@@ -154,16 +154,11 @@ namespace Matkakirja
         {
             Poista();
             if (ladattu == null || linssit || piilossa || pelikerroksetPois || kaukana || pallo == null) return;
-            kerros = pallo.gameObject.AddComponent<CesiumUrlTemplateRasterOverlay>();
-            kerros.materialKey = MateriaaliAvain;
-            // Slippy-rivi 0 on pohjoisin, Cesiumin {y} eteläisin (kuten pohjassa).
-            kerros.templateUrl = Laattapalvelin.Paikallinen(Laattapalvelin.Ampari + Kansio + ladattu + "/{z}/{x}/{reverseY}.webp");
-            kerros.projection = CesiumUrlTemplateRasterOverlayProjection.WebMercator;
-            // Taso 0 alkaen: kaukonäkymän laatat ovat laattapalvelimen läpinäkyviä (ei 1024 laatan pyyntöä tasolla 5).
-            kerros.minimumLevel = 0;
-            kerros.maximumLevel = tasoMax;
-            kerros.tileWidth = 256;
-            kerros.tileHeight = 256;
+            // Slippy-rivi 0 on pohjoisin, Cesiumin {y} eteläisin (kuten pohjassa). Taso 0 alkaen: kaukonäkymän laatat
+            // ovat laattapalvelimen läpinäkyviä (ei 1024 laatan pyyntöä tasolla 5). Kierrätyksestä (KarttaKerrokset.UusiKerros).
+            kerros = KarttaKerrokset.UusiKerros(pallo.gameObject, MateriaaliAvain,
+                Laattapalvelin.Ampari + Kansio + ladattu + "/{z}/{x}/{reverseY}.webp",
+                CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, tasoMax);
             Navat(true);
         }
 
@@ -217,9 +212,8 @@ namespace Matkakirja
             alfaNyt = -1f;
             if (kerros == null) return;
             Navat(false);
-            // Pois Cesiumista heti (OnDisable), jotta linssi saa paikan 2 samassa kehyksessä.
-            kerros.enabled = false;
-            Destroy(kerros);
+            // Pois Cesiumista heti (OnDisable), jotta linssi saa paikan 2 samassa kehyksessä; komponentti kierrätykseen.
+            KarttaKerrokset.VapautaKerros(kerros);
             kerros = null;
         }
 

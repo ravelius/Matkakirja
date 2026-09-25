@@ -772,7 +772,9 @@ namespace Matkakirja.Natiivi
             valintaIdt.Clear();
             foreach (var (id, _) in kohteet) if (id != null && id != Lahto) valintaIdt.Add(id);
             var nakyvat = new HashSet<string>(valintaIdt) { Lahto };
-            valintaMerkit.NaytaVain(nakyvat);
+            // Kehittäjän maailmatila (liikkumisen pariteetti D6): kaikki kaupungit näkyvät ja kelpaavat
+            // lähdöksi (web lauta.js:2794 ohittaa pickstart-rajauksen, doKehittajaSiirto → doPickStart).
+            valintaMerkit.NaytaVain(Paavalikko.Maailma ? null : nakyvat);
             // Valittavien hehkurenkaat (web .pallolauta-huomio; Natiivisepän KaupunkiMerkit.Renkaat).
             valintaMerkit.Renkaat(valintaIdt);
             // Ei erillistä kultaista Valopistettä (Karttapisteet): webissä valittavan merkki on kohdemerkki
@@ -796,7 +798,8 @@ namespace Matkakirja.Natiivi
 
         void KaupunkiValittu(string id)
         {
-            if (ValitseePallolla && valintaIdt.Contains(id)) UiKerros.PaaSaikeessa(() => Valitse(id));
+            if (ValitseePallolla && (valintaIdt.Contains(id) || (Paavalikko.Maailma && UiSisalto.Kaupunki(id) != null)))
+                UiKerros.PaaSaikeessa(() => Valitse(id));
         }
 
         void PisteValittu(string pid)

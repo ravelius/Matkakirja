@@ -39,6 +39,8 @@ namespace Matkakirja.Natiivi
         public readonly Saapumisesitys Saapuminen;
         public readonly PuluChat Chat;
         public readonly Saapumistraileri Traileri;
+        /// <summary>Saapumisen välikortti aloituslennon jälkeen (Traileri-kerroksen päällimmäinen).</summary>
+        public readonly Saapumiskortti Saapumiskortti;
         public readonly Tietoja Tietoja;
         /// <summary>"Kerro mitä huomasit": ehdotus, kuvavinkki ja pro (webin naytaPalauteKulmasta).</summary>
         public readonly PalauteIkkuna Palaute;
@@ -67,6 +69,7 @@ namespace Matkakirja.Natiivi
             PeliNakymat.MatkaValinta = _ => Hae().Matkavalinta;
             PeliNakymat.KaupunkiKortti = _ => Hae().Kaupunkikortti;
             PeliNakymat.Saapumistraileri = (kaupunki, url, valmis) => Hae().Traileri.NaytaPelista(kaupunki, url, valmis);
+            PeliNakymat.Saapumiskortti = (rivi, arkkiTaynna, valmis) => Hae().Saapumiskortti.Nayta(rivi, arkkiTaynna, valmis);
             PeliNakymat.Kysymys = _ => Hae().Kysymys;
             // Sähkelinja (B5): pöllön liuska ja valikon retkikunta. Asettamattomana linjaa ei avata.
             PeliNakymat.Sahke = _ => Hae().Sahke;
@@ -112,7 +115,7 @@ namespace Matkakirja.Natiivi
         public static bool? PakotaKuvaSumea;
 
         /// <summary>
-        /// iPhonen ☰-valikon rivit linssien alle (omistaja ja Fable 24.9.2026, löydös 20): pelaajan asetukset,
+        /// ☰-valikon rivit linssien alle (omistaja ja Fable 24.9.2026, löydös 20; kaikki laitteet löydös 65): pelaajan asetukset,
         /// vanhan päävalikon komennot ja kehittäjätilassa viimeisenä Kehittäjä (ei App Store -käännöksessä).
         /// </summary>
         void RakennaPuhelinvalikko()
@@ -135,6 +138,9 @@ namespace Matkakirja.Natiivi
 #endif
             v.LisaMuuRivi("Offline-kartat", Ikonit.Viiva["taitekartta"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline), () => UiPalvelut.Offline != null);
             v.LisaMuuRivi("Asetukset", Ikonit.Viiva["kaiutin"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Asetukset); });
+            // Löydös 65 (omistaja 25.9.2026): retkikunta yhden napin takana omana paneelinaan.
+            v.LisaMuuRivi("Retkikunta", Ikonit.Viiva["kompassi"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Retkikunta); },
+                () => Valikko.RetkikuntaSaatavilla);
             v.LisaMuuRivi("Ehdota sisältöä", Ikonit.Kyna, Valikko.Ehdota);
             v.LisaMuuRivi("Tekijätiedot ja lähteet", Ikonit.Viiva["kirja"], Valikko.Tietoja);
             v.LisaMuuRivi("Mitä uutta", Ikonit.Viiva["tahti"], Valikko.MitaUutta.Avaa);
@@ -211,6 +217,7 @@ namespace Matkakirja.Natiivi
             Nahtavyysnakyma = new Nahtavyysnakyma(kerros); // kaupunkikortin "Nähtävyydet"
             Nahtavyydet = new Nahtavyysarkki(kerros); // lehden ja nähtävyysnäkymän päälle (sama kerros, myöhemmin)
             Wiki = new WikiIkkuna(kerros); // kaikkien edellisten päälle (sama kerros, myöhemmin; avaus tuo eteen)
+            Saapumiskortti = new Saapumiskortti(kerros, () => Tilarivi.Alareuna); // karttaruudun päälle, myös lennon kaistaleen
             Liike = new PieniLiike(kerros); // kerros 10: pallon päällä, muun UI:n alla
             Noppa = new Noppa(kerros.Juuri(PieniLiike.Kerros)); // web die-layer karttaruudussa, UI:n alla
             Leima = new Leima(kerros); // tapahtumakuplat (rahan muutokset)
@@ -249,10 +256,11 @@ namespace Matkakirja.Natiivi
             Valikko.TietojaPainettu += Tietoja.Avaa;
             Valikko.EhdotaPainettu += () => Palaute.Avaa();
             Tilarivi.LogoPainettu += () => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Tietoja.Avaa(); };
+            Matkalaukku.LogoPainettu += () => Tietoja.Avaa();
             UiSisalto.Lataa(null); // kaupunkidata valmiiksi ennen ensimmäistä napautusta
             Aanet.Alusta(); // tehostekanava, mykistyksen napsahdus ja tehosteiden tiedostot laitteelle
 
-            // iPhone (löydös 20): ☰ avaa linssivalikon koko pelin valikkona; iPad ja muut: päävalikko.
+            // ☰ avaa linssivalikon koko pelin valikkona (löydös 20 iPhone, löydös 65 kaikki laitteet).
             Tilarivi.Valikko.clicked += () =>
             {
                 Aanentasot.Sulje(); Matkalaukku.Sulje();
@@ -324,11 +332,16 @@ namespace Matkakirja.Natiivi
             o.ValintavihjeAika += t => UiKerros.PaaSaikeessa(() => Pulu.NaytaVihje(t));
             o.ValintavihjePois += () => UiKerros.PaaSaikeessa(Pulu.PiilotaVihje);
             o.AloituslentoPaattyi += _ => UiKerros.PaaSaikeessa(Aloitus.AloituslentoPaattyi);
+            // C16: Livian tuurauspaljastus (ensimmäinen saapuminen koskaan) tai saapumisen ohjekuplat aloituslennon jälkeen.
+            LivianPaljastus.Kytke(o);
             if (o.Tila == SilmukanTila.Aloitus) NaytaAloitus(o);
             // Rahan muutos kupliksi (web buildToast kind stamp, "+10 puntaa · Lehden minitehtävä ratkesi").
             o.RahaMuuttui += (muutos, syy, _) => UiKerros.PaaSaikeessa(() => Leima.Raha(muutos, syy));
             // Noppa häipyy, kun nappula on perillä (web haivyta saapuessa).
-            o.MatkaPerilla += _ => UiKerros.PaaSaikeessa(() => Noppa.Haivyta());
+            // A11 (web ui.js piilotaNoppa): noppa häipyy vain kaupunkiin päättyneellä matkalla; reitin varrella se jää
+            // lepopaikalleen seuraavaan heittoon asti.
+            o.MatkaPerilla += k => { if (k != null) UiKerros.PaaSaikeessa(() => Noppa.Haivyta()); };
+            PeliOhjain.KortinRuutupiste = LiuskanRuutupiste;
             // Livian sähkekuplat (johdanto, odotus, vinkki, linkin saate, oikein, paluu) puluun.
             o.LivianKuplat += (kaupunki, kentta, kuplat) => Sahkelomake.LivianKuplat(kaupunki, kentta, kuplat);
             // Sähkehakemisto valmiiksi, kun saavutaan sähkekaupunkiin (lehtien jäsennys ennen pisteen napautusta).
@@ -388,7 +401,8 @@ namespace Matkakirja.Natiivi
 
         void Aloita(PeliOhjain o, string id)
         {
-            var virhe = o.UusiMatka(id);
+            // Kehittäjän maailmatilassa mikä tahansa kaupunki kelpaa lähdöksi (D6, web doPickStart).
+            var virhe = o.UusiMatka(id, kaikkiKelpaa: Paavalikko.Maailma);
             if (virhe != null) { Debug.LogWarning("MATKAKIRJA ui aloitus: " + virhe); Tilarivi.Viesti(virhe); }
         }
 
@@ -457,7 +471,15 @@ namespace Matkakirja.Natiivi
             float w = juuri.resolvedStyle.width, h = juuri.resolvedStyle.height;
             if (float.IsNaN(w) || w <= 0 || juuri.panel == null) { valmis?.Invoke(); return; }
             var arpa = new System.Random();
-            var loppu = new Vector2(w * (0.8f + (float)(arpa.NextDouble() - 0.5) * 0.06f), h * (0.74f + (float)(arpa.NextDouble() - 0.5) * 0.05f));
+            // A9 (web dieRestingSpot, packs/maailmankartta.js dieSpot): lepo vasemmassa reunassa puolivälissä (0,06; 0,5);
+            // jos matkakirjakortti on samassa (vasen ala) kulmassa, oikea reuna (dieSpotAlt 0,94; 0,5). Värinä ±0,03 / ±0,025.
+            float sx = 0.06f;
+            if (Matkakirja != null && Matkakirja.Nakyy)
+            {
+                var r = Matkakirja.Laatikko;
+                if (r.center.x < w * 0.5f && r.center.y >= h * 0.5f) sx = 0.94f;
+            }
+            var loppu = new Vector2(w * (sx + (float)(arpa.NextDouble() - 0.5) * 0.06f), h * (0.5f + (float)(arpa.NextDouble() - 0.5) * 0.05f));
             var alku = loppu;
             kierto ??= UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
             if (kierto != null && kierto.RuutuPiste(lat, lon, out var ruutu, 5000))
@@ -467,6 +489,35 @@ namespace Matkakirja.Natiivi
             Noppa.Heita(arvo, alku, loppu, valmis, vahennettyLiike: LinssiUi.VahennettyLiike(),
                 laskeutui: () => Aanet.Tehoste(Aanitunnukset.Noppa),
                 pomppu: () => Aanet.Tehoste("clack"), kohina: () => Aanet.Tehoste("dieTick"));
+        }
+
+        /// <summary>
+        /// D17 (web lauta.js napautaKaupunki, PAATOKSET 34 kohdat 10 ja 12): kaupunkimerkki liuskan avautuessa
+        /// vaakasuunnassa neljännekseen leveydestä (LIUSKAN_MERKIN_OSUUS_X) ja pystysuunnassa vapaan kaistan keskelle:
+        /// ylärajana ylimmän kolmanneksen kalusteet (yläpalkki, matkakirjakortti) + 18 px, alarajana alimman kolmanneksen
+        /// kalusteet (pulu, Liiku) − 18 px (LIUSKAN_YLAVARA_PX, YLAKALUSTEEN_RAJA 1/3). Jos kaista on listaa korkeampi,
+        /// merkki saa jäädä ruudun keskelle kaistan sisällä. Palauttaa ruudun pikselit (origo vasen ala).
+        /// </summary>
+        Vector2 LiuskanRuutupiste(string kaupunki)
+        {
+            var juuri = Kerros.Juuri(UiKerros.Valikot);
+            float w = juuri.layout.width, h = juuri.layout.height;
+            if (float.IsNaN(w) || w <= 0 || h <= 0) return new Vector2(Screen.width / 4f, Screen.height / 2f);
+            const float Vara = 18f, Raja = 1f / 3f;
+            // Listan korkeus: kaupunki, Nähtävyydet, Turistiopas, Liiku ja noin neljä kategoriaa (.mk-liuska__rivi 18,85).
+            float tarve = 8 * 18.85f;
+            float r0 = Kerros.Reunat(UiKerros.Valikot).y;
+            var ylat = new System.Collections.Generic.List<Rect> { new Rect(0, 0, w, r0 + Ylapalkki.Varaus) };
+            if (Matkakirja != null && Matkakirja.Nakyy) ylat.Add(Matkakirja.Laatikko);
+            var alat = new System.Collections.Generic.List<Rect> { Pulu.Laatikko, Matkavalinta.LiikuLaatikko };
+            float ylaRaja = Vara, alaRaja = h - Vara;
+            foreach (var k in ylat) if (k.height > 0 && k.yMin < h * Raja) ylaRaja = Mathf.Max(ylaRaja, k.yMax + Vara);
+            foreach (var k in alat) if (k.height > 0 && k.yMax > h * (1f - Raja)) alaRaja = Mathf.Min(alaRaja, k.yMin - Vara);
+            float puolikas = tarve / 2f;
+            float y = alaRaja - ylaRaja >= tarve
+                ? Mathf.Min(Mathf.Max(h / 2f, ylaRaja + puolikas), alaRaja - puolikas)
+                : (ylaRaja + alaRaja) / 2f;
+            return new Vector2(Screen.width * 0.25f, Screen.height * (1f - y / h));
         }
 
         /// <summary>Testikomento 'ui matka': esimerkkivalinta ilman peliä.</summary>

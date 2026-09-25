@@ -49,8 +49,11 @@ namespace Matkakirja.Natiivi
         public bool Auki { get; private set; }
         public event Action<bool> AukiMuuttui;
 
-        /// <summary>iPhone: paneeli on yläpalkin ☰-valikko (ei silmälasinappia).</summary>
-        public static bool Valikkona => Ylapalkki.Puhelin; // iPhonen ☰ = linssivalikko (omistaja 24.9. klo 13.3x)
+        /// <summary>
+        /// Paneeli on yläpalkin ☰-valikko (ei silmälasinappia eikä erillistä linssipaneelia): iPhonella omistaja 24.9. klo
+        /// 13.3x, kaikilla laitteilla löydös 65 (omistaja 25.9.2026, build 12 iPad).
+        /// </summary>
+        public static bool Valikkona => true;
 
         /// <summary>Paneelin avaava muu nappi (☰): sen painallus ei ole "ohi paneelin".</summary>
         public VisualElement Avaaja;

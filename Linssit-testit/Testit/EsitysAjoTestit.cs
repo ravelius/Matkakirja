@@ -32,7 +32,7 @@ namespace Matkakirja.Linssit.Testit
             }
             public void Tauko() { if (alku != null) tauolla = KohtaMs; }
             public void Jatka() { if (tauolla is double k) { alku = y.Kello * 1000 - k; tauolla = null; } }
-            public void Lopeta() { alku = null; }
+            public void Lopeta() { alku = null; tauolla = null; }
             public double? KohtaMs => tauolla ?? (alku is double a ? Math.Min(Pituus, y.Kello * 1000 - a) : (double?)null);
         }
 
@@ -104,6 +104,20 @@ namespace Matkakirja.Linssit.Testit
             while (y.Kello < loppu && !e.Paattynyt) { y.Kello += dt; e.Paivita(); }
         }
 
+        [Testi] static void UusiEsitysKelaaKertojanAlkuun()
+        {
+            // Löydös 74 (build 12, iPhone): "Aloita alusta" tauon jälkeen, ja kertoja jatkoi vanhasta kohdasta.
+            // Sama äänite jää edellisen esityksen tauon kohtaan (80 s); uuden esityksen pitää kelata jakson 0 alkuun.
+            var (e, y, _, a, l, k) = Luo();
+            a.Soita(80000);
+            a.Tauko();
+            e.Aloita();
+            Lahella(l[k[0].Id].Alku, a.Siirrot.Last(), "kertoja kelattu jakson 0 alkuun", 1e-9);
+            Aja(e, y, 0.5);
+            Oleta.Tosi(a.KohtaMs is double kohta && kohta < 1000, "kertoja alusta: " + a.KohtaMs);
+            Oleta.Sama(0, e.I, "jakso 0");
+        }
+
         [Testi] static void AvausLasketaanManifestista()
         {
             var (e, y, _, _, _, _) = Luo();
@@ -118,20 +132,19 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void AvausLahteeAvaruudesta()
         {
-            // Web avaaKaukaisuus + tempon dramaturgia (Raamattu KAMERA-AJOT 24.9.): musta kaupungin yllä,
-            // NOUSU tähtiin (300 pallonsädettä Afrikan yllä) mustan häivyttyä, HETKI TÄHDISSÄ, SYÖKSY
-            // Afrikkaan kuminauhajarrutuksella (omistajan build 5 -löydös 12: zoomi lähti kaupungista).
+            // Web avaaKaukaisuus (js/linssit/ihmisen-matka-esitys.js:1460, pointOfView(…, 0)): kamera 300 pallonsäteen
+            // päähän Afrikan yllä HETI mustan alla (löydös 74 e: näkyvä nousu mustan häivyttyä näytti pallon kutistumisena),
+            // HETKI TÄHDISSÄ, SYÖKSY Afrikkaan kuminauhajarrutuksella (omistajan build 5 -löydös 12: zoomi lähti kaupungista).
             var (e, y, _, _, _, _) = Luo();
             e.Aloita();
             var v = e.AvauksenAjat();
-            Oleta.Tosi(y.Ajo == null && y.Avaruus == null, "mustan aikana kamera paikallaan");
+            Oleta.Tosi(y.Ajo == null && y.Avaruus != null, "kamera avaruudessa jo mustan alla, ilman ajoa");
+            Oleta.Tosi(e.MustaPaalla, "musta päällä, kun kamera siirtyy");
+            Lahella(Esitysmatikka.AvaruudenKorkeus, y.Avaruus.Value.Sateita, "avaruuden korkeus (pallonsäteitä)", 1e-9);
+            Lahella(1.0, y.Avaruus.Value.Lat, "avaruuden keskus lat (−35…37)", 1e-9);
+            Lahella(17.0, y.Avaruus.Value.Lon, "avaruuden keskus lon (−18…52)", 1e-9);
             Aja(e, y, (v.Musta + 100) / 1000.0);
-            Oleta.Tosi(y.Ajo != null, "nousu alkoi mustan häivyttyä");
-            Lahella(Esitysmatikka.AvaruudenKorkeus * Kameramatikka.MaanSade, y.Ajo.Value.Korkeus, "nousun korkeus", 1);
-            Lahella(1.0, y.Ajo.Value.Lat, "nousun keskus lat (−35…37)", 1e-9);
-            Lahella(17.0, y.Ajo.Value.Lon, "nousun keskus lon (−18…52)", 1e-9);
-            Oleta.Tosi(y.AjonKesto > 0 && y.AjonKesto <= Esitys.NousuMaxMs / 1000 + 1e-6, "nousun kesto " + y.AjonKesto);
-            Oleta.Tosi(y.AjonPehmennys != null && Math.Abs(y.AjonPehmennys(0.3) - Kamerakayrat.Pehmea(0.3)) < 1e-12, "nousu symmetrinen (Pehmea)");
+            Oleta.Tosi(!e.MustaPaalla && y.Ajo == null, "musta häipyi, kamera paikallaan (ei näkyvää nousua)");
             int ajoja = y.Loki.Count(l => l == "ajo");
             Aja(e, y, (v.ZoomAlku - v.Musta - 300) / 1000.0);
             Oleta.Sama(ajoja, y.Loki.Count(l => l == "ajo"), "hetki tähdissä: ei uutta ajoa ennen zoomia");
