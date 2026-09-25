@@ -3830,4 +3830,387 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Paphosin rannikolla Petra tou Romioun kallio on tarun mukaan paikka, jossa Afrodite nousi merenvaahdosta.',
     },
   },
+  /*
+   * MOLDOVA (MDA) — lisätty 25.9.2026 (Sisältökirjuri, erä 3A), 39 aluetta.
+   * Avaimet kopioitu koneellisesti MAAKUNNAT_KAIKKI.MDA:sta: data sekoittaa
+   * cedilla-merkit (ş U+015F, ţ U+0163) ja pilkkumerkit (ș U+0219), ja osa
+   * avaimista on ilman diakriittejä (Causeni, Donduseni, Hîncesti) — avaimet
+   * pidetään datan mukaisina, tekstit käyttävät oikeaa kirjoitusasua.
+   * Natural Earthin rajaukset: "Stîngă Nistrului" = Dubăsarin piiri (name_alt
+   * Dubăsari), "Transnistria" = pieni alue Dubăsarin kaupungin kohdalla,
+   * "Comrat" = koko Gagauzia, "Bender" ulottuu itään Dnestrin yli. Datassa on
+   * kaksi "Rezina"-aluetta (toinen on Dnestrin itäpuolinen Rîbnițan seutu);
+   * teksti kuvaa Rezinan piiriä. Dnestrin itärannan ja Gagauzian tekstit ovat
+   * neutraaleja (luonto, historia, kulttuuri). Vain `lyhyt`. Lähteet
+   * (en/ro-Wikipedia, tarkistettu 25.9.2026):
+   *   Anenii Noi       — Skirmish at Bender (Kaarle XII:n leiri Varnițassa
+   *                      7/1711–1.2.1713); Varnița (Anenii Noin piiri)
+   *   Bălţi            — Bălți (nimi = lätäköt; Răuțel laskee Răutiin)
+   *   Basarabeasca     — Basarabeasca (Romanovka 1846, nimi 11.9.1957)
+   *   Bender           — Tighina Fortress (Süleyman 1538, Sinan, 10
+   *                      bastionia, valmis 1541)
+   *   Briceni          — Briceni District; Emil Racoviță Cave (Criva, löydetty
+   *                      1959, noin 90 km)
+   *   Cahul            — Giurgiulești (Tonavaa noin 480 m, ainoa Tonavan satama)
+   *   Călărași         — Hîrjauca Monastery (1740, munkit Neamțista)
+   *   Camenca          — Dniester Sanatorium (ampeloterapia)
+   *   Cantemir         — ro: Cantemir, Cantemir (nimi 6.4.1973, 300 v.)
+   *   Causeni          — Căușeni (kirkko yli 0,91 m maan alla, Moldovan ainoa
+   *                      keskiaikainen fresko)
+   *   Chişinău         — Cricova (winery) (120 km teitä, Chișinăun kunnassa)
+   *   Cimişlia         — ro: Râpele de la Cimișlia (fossiilit 1929 alkaen, yli
+   *                      40 selkärankaislajia, 8–6 milj. v.)
+   *   Comrat           — Gagauzia (turkkilainen kieli, 95,9 % ortodokseja)
+   *   Criuleni         — ro: Peștera Surprizelor (1 700 m, toiseksi pisin)
+   *   Donduseni        — Dondușeni District (Țaulin puisto, Moldovan suurin,
+   *                      5 km Dondușenista)
+   *   Drochia          — Drochia (Moldovan suurin sokeritehdas); Drochia
+   *                      District (mustamulta noin 80 %)
+   *   Edineţ           — Edineț District (toltry 15–20 milj. v., Brînzenin
+   *                      riutat ja luolat)
+   *   Făleşti          — Gheorghe Vrabie (Făleștin piiristä; vaakuna, leu)
+   *   Floreşti         — Japca Monastery (ainoa Bessarabian luostari, jota
+   *                      neuvostovalta ei sulkenut)
+   *   Glodeni          — Glodeni District (Pădurea Domnească, visentit
+   *                      Puolasta 2006, yli 3 500 kumpua)
+   *   Grigoriopol      — Grigoriopol (armenialaisten siirtokunta 1792)
+   *   Hîncesti         — Manuc Bei (vetäytyi Hînceștiin, poika rakensi palatsin)
+   *   Ialoveni         — Mileștii Mici (winery) (Guinness 8/2005, lähes
+   *                      2 milj. pulloa)
+   *   Leova            — ro: Raionul Leova (Valul lui Traian); Prut rajajokena
+   *   Nisporeni        — Bălănești Hill (430 m, Moldovan korkein kohta)
+   *   Ocniţa           — Naslavcea (Moldovan pohjoisin kohta)
+   *   Orhei            — Orheiul Vechi (luostari, jossa kourallinen munkkeja)
+   *   Rezina           — Saharna Monastery (pyhiinvaelluskeskus, jalanjälki-
+   *                      taru)
+   *   Rîşcani          — Rîșcani District (Costești–Stânca 1978, noin
+   *                      1,28 mrd m³)
+   *   Sîngerei         — Sîngerei District; Răut (pisin kokonaan Moldovassa)
+   *   Şoldăneşti       — Șoldănești District (metsää 19,3 %, susia)
+   *   Soroca           — Soroca Fort (ympyrä, viisi bastionia, kivi 1543–46)
+   *   Ștefan Vodă      — Purcari (winery) (1827 keisarin asetus)
+   *   Stîngă Nistrului — Dubăsari (pato ja voimala 1951–1954, tekojärvi)
+   *   Străşeni         — Codru Reserve (1971, 5 177 ha)
+   *   Taraclia         — Taraclia (bulgarialaisia 76,3 %, yliopisto 2004)
+   *   Teleneşti        — Telenești (Nachum Gutman 1898–1980); Nahum Gutman
+   *                      Museum, Tel Aviv
+   *   Transnistria     — Dubăsari (nimi sanasta dubăsar = veneentekijä)
+   *   Ungheni          — Eiffel Bridge, Ungheni (avattu 21.4.1877)
+   */
+  MDA: {
+    'Anenii Noi': {
+      lyhyt: 'Varnițan kylässä Benderin pohjoispuolella leireili Ruotsin kuningas Kaarle XII vuosina 1711–1713, kunnes osmanien joukot hyökkäsivät leiriin.',
+    },
+    'Bălţi': {
+      lyhyt: 'Bălți tarkoittaa romaniaksi lätäköitä – kaupunki sai nimensä kosteikoista mäen juurella, jossa Răuțel-puro laskee Răut-jokeen.',
+    },
+    Basarabeasca: {
+      lyhyt: 'Basarabeasca sai alkunsa 1846 juutalaisesta maanviljelyssiirtokunnasta nimeltä Romanovka, ja nykyisen nimensä kaupunki sai vasta 1957.',
+    },
+    Bender: {
+      lyhyt: 'Benderin linnoituksen Dnestrin rannalla rakennutti uudelleen sulttaani Süleyman Suuri 1500-luvulla, ja sen muureissa on kymmenen bastionia.',
+    },
+    Briceni: {
+      lyhyt: 'Crivan kylän kipsilouhoksesta avautui 1959 Emil Racovițăn luola, jonka maanalaisia käytäviä on kartoitettu noin 90 kilometriä.',
+    },
+    Cahul: {
+      lyhyt: 'Giurgiuleștissa Moldova ulottuu Tonavalle vain noin 480 metrin matkalta, ja siihen on mahtunut maan ainoa Tonavan satama.',
+    },
+    'Călărași': {
+      lyhyt: 'Hîrjaucan luostari Codrun metsissä perustettiin 1740, kun sinne asettui kaksi munkkia Romanian puolella sijaitsevasta Neamțin luostarista.',
+    },
+    Camenca: {
+      lyhyt: 'Camencan Dnestr-parantolassa joen rannalla hoidetaan vieraita ampeloterapialla eli rypälemehulla ja viinillä.',
+    },
+    Cantemir: {
+      lyhyt: 'Cantemirin kaupunki sai nimensä 1973 ruhtinas Dimitrie Cantemirin 300-vuotispäivänä – hän oli Moldovan hallitsija ja oppinut kirjailija.',
+    },
+    Causeni: {
+      lyhyt: 'Căușenin 1600-luvun Neitsyt Marian kirkon lattia on yli 90 senttiä maanpinnan alapuolella, ja seinillä on Moldovan ainoa keskiaikainen fresko.',
+    },
+    'Chişinău': {
+      lyhyt: 'Chișinăun pohjoislaidalla Cricovan viinikellareissa kulkee noin 120 kilometriä maanalaisia teitä entisissä kalkkikivilouhoksissa.',
+    },
+    'Cimişlia': {
+      lyhyt: 'Cimișlian rotkoista on kaivettu 1929 lähtien yli 40 selkärankaislajin fossiileja 6–8 miljoonan vuoden takaa, muun muassa mastodontteja.',
+    },
+    Comrat: {
+      lyhyt: 'Comrat on Gagauzian pääkaupunki, ja gagauusit puhuvat turkkilaista kieltä mutta ovat valtaosin ortodoksikristittyjä.',
+    },
+    Criuleni: {
+      lyhyt: 'Criulenin lähellä Dnestrin rantametsässä on Yllätysten luola, 1 700 metriä pitkä kalkkikiviluola ja Moldovan toiseksi pisin.',
+    },
+    Donduseni: {
+      lyhyt: 'Țaulin kylässä vain viiden kilometrin päässä Dondușenista on puisto, jota pidetään Moldovan suurimpana.',
+    },
+    Drochia: {
+      lyhyt: 'Drochiassa toimii Moldovan suurin sokeritehdas, ja piirin maaperästä noin 80 prosenttia on hedelmällistä mustaamultaa.',
+    },
+    'Edineţ': {
+      lyhyt: 'Edinețin toltry-kukkulat ovat 15–20 miljoonaa vuotta vanhoja muinaisen meren riuttoja, ja Brînzenin kallioihin on syöpynyt luolia.',
+    },
+    'Făleşti': {
+      lyhyt: 'Făleștin piiristä lähtöisin oleva taiteilija Gheorghe Vrabie piirsi Moldovan vaakunan, ja häntä kutsutaan Moldovan leun isäksi.',
+    },
+    'Floreşti': {
+      lyhyt: 'Dnestrin rannalla seisova Japcan luostari oli Bessarabian ainoa luostari, jota neuvostovalta ei koskaan sulkenut.',
+    },
+    Glodeni: {
+      lyhyt: 'Pădurea Domneascăn suojelualueelle tuotiin 2006 Puolasta visenttejä, ja sen metsissä on yli 3 500 arvoituksellista muinaista kumpua.',
+    },
+    Grigoriopol: {
+      lyhyt: 'Grigoriopol perustettiin 1792 armenialaisten siirtokunnaksi Dnestrin vasemmalle rannalle.',
+    },
+    'Hîncesti': {
+      lyhyt: 'Hînceștin tiluksille vetäytyi elämänsä lopulla armenialainen kauppias ja diplomaatti Manuc Bei, ja hänen poikansa rakennutti sinne palatsin.',
+    },
+    Ialoveni: {
+      lyhyt: 'Mileștii Micin viinikellareissa on lähes kaksi miljoonaa pulloa – Guinness kirjasi sen 2005 maailman suurimmaksi viinikokoelmaksi.',
+    },
+    Leova: {
+      lyhyt: 'Leovan seudun halki kulkee Traianuksen valliksi kutsuttu muinainen maavalli, ja piirin länsilaitaa seuraa Romanian rajajoki Prut.',
+    },
+    Nisporeni: {
+      lyhyt: 'Nisporenin piirissä kohoava Bălăneștin kukkula on noin 430 metrin korkeudellaan Moldovan korkein kohta.',
+    },
+    'Ocniţa': {
+      lyhyt: 'Naslavcean kylä Dnestrin rannalla on Moldovan pohjoisin kohta, ja sen kalkkikivirinteiltä avautuu näkymä joen mutkiin.',
+    },
+    Orhei: {
+      lyhyt: 'Răut-joen mutkassa Orheiul Vechin kalkkikivikallioon on kaiverrettu luolaluostari, jossa asuu yhä kourallinen munkkeja.',
+    },
+    Rezina: {
+      lyhyt: 'Saharnan luostari on Moldovan suurimpia pyhiinvaelluspaikkoja, ja tarun mukaan sen yllä kohoavalla kalliolla on Neitsyt Marian jalanjälki.',
+    },
+    'Rîşcani': {
+      lyhyt: 'Prutille Costeștiin valmistui 1978 yhdessä Romanian kanssa rakennettu pato ja vesivoimala, jonka tekojärvessä on noin 1,3 miljardia kuutiota vettä.',
+    },
+    'Sîngerei': {
+      lyhyt: 'Sîngerein piirin halki virtaa Răut, pisin kokonaan Moldovan rajojen sisällä virtaava joki, matkallaan kohti Dnestriä.',
+    },
+    'Şoldăneşti': {
+      lyhyt: 'Șoldăneștin piiristä lähes viidennes on tammi-, saarni- ja lehmusmetsää, jonka kätköissä elää susia ja villisikoja.',
+    },
+    Soroca: {
+      lyhyt: 'Sorocan linnoitus Dnestrin rannalla on täydellinen ympyrä, jossa on viisi tasavälein sijoitettua bastionia; kivisenä se valmistui 1540-luvulla.',
+    },
+    'Ștefan Vodă': {
+      lyhyt: 'Purcarin viinitila sai 1827 keisarin asetuksella Bessarabian ensimmäisen erikoistuneen viinitilan aseman, ja siellä tehdään tummaa Negru de Purcaria.',
+    },
+    'Stîngă Nistrului': {
+      lyhyt: 'Dnestrin itärannalla Dubăsarin pato ja vesivoimala valmistuivat 1954, ja padon taakse syntyi Dubăsarin tekojärvi.',
+    },
+    'Străşeni': {
+      lyhyt: 'Lozovan lähellä Codrun luonnonsuojelualueella on suojeltu vuodesta 1971 yli 5 000 hehtaaria tiheää tammi- ja pyökkimetsää.',
+    },
+    Taraclia: {
+      lyhyt: 'Taraclian asukkaista yli kolme neljäsosaa on bulgarialaisia, ja kaupungin yliopistossa opetetaan bulgariaksi ja romaniaksi.',
+    },
+    'Teleneşti': {
+      lyhyt: 'Teleneștissä syntyi 1898 Nachum Gutman, josta tuli tunnettu israelilainen taidemaalari – hänen taidemuseonsa on Tel Avivissa.',
+    },
+    Transnistria: {
+      lyhyt: 'Dnestrin itärannalla olevan Dubăsarin nimi tulee vanhasta sanasta dubăsar, joka tarkoitti veneentekijää tai lauttamiestä.',
+    },
+    Ungheni: {
+      lyhyt: 'Unghenin rautatiesilta Prutin yli tunnetaan Eiffelin siltana; se avattiin 1877, ja sitä pitkin kulkevat yhä junat Romaniaan.',
+    },
+  },
+  /*
+   * UKRAINA (UKR) — lisätty 25.9.2026 (Sisältökirjuri, erä 3A), 25 aluetta
+   * (Natural Earthin 24 aluetta + Kiovan kaupunki; Krim ei ole datassa).
+   * Tekstit kuvaavat luontoa, kaupunkeja, kulttuuria ja historiaa neutraalisti
+   * eivätkä käsittele sotaa. Vain `lyhyt`. Lähteet (en-Wikipedia, tarkistettu
+   * 25.9.2026):
+   *   Cherkasy         — Taras Hill (Kaniv, Ševtšenko haudattu 1861)
+   *   Chernihiv        — Transfiguration Cathedral, Chernihiv (Mstislav k.
+   *                      1035/36, pre-Mongol Rus)
+   *   Chernivtsi       — Residence of Bukovinian and Dalmatian Metropolitans
+   *                      (yliopisto, Unesco 2011)
+   *   Dnipropetrovs'k  — Petrykivka painting (Unesco 2013)
+   *   Donets'k         — Sviatohirsk Lavra (Siverskyi Donets, maininta 1627)
+   *   Ivano-Frankivs'k — Pysanka Museum (Kolomyia, 14 m, yli 10 000 pysankaa)
+   *   Kharkiv          — Derzhprom (1928, ensimmäinen pilvenpiirtäjä NL:ssa)
+   *   Kherson          — Askania-Nova (Falz-Fein 1898, przewalskinhevoset)
+   *   Khmel'nyts'kyy   — Kamianets-Podilskyi Castle (Smotrytš, 88 m silta)
+   *   Kiev             — Arboretum Oleksandriya (1793, Branicki, Ukrainan
+   *                      suurin dendrologinen puisto)
+   *   Kiev City        — Arsenalna (Kyiv Metro) (105,5 m)
+   *   Kirovohrad       — Dobrovelychkivka (oletettu maantieteellinen keskipiste)
+   *   L'viv            — Market Square (Lviv) (44 taloa, kaivot 1793)
+   *   Luhans'k         — Striltsivskyi Steppe Nature Reserve (arosurmeli)
+   *   Mykolayiv        — Pontic Olbia (Parutyne, Miletos, 600-luku eaa.)
+   *   Odessa           — Odesa Catacombs (jopa 2 500 km, louhoksia)
+   *   Poltava          — Opishnia (keramiikka 1800-luvulta)
+   *   Rivne            — Tunnel of Love (railway) (Klevan, 3–5 km)
+   *   Sumy             — Hlukhiv (hetmanaatin pääkaupunki 1708–1764,
+   *                      laulukoulu 1730)
+   *   Ternopil'        — Optymistychna Cave (noin 264 km, pisin kipsiluola)
+   *   Transcarpathia   — Valley of Narcissi (Kireshi, Khust, 256 ha)
+   *   Vinnytsya        — Mykola Leontovych (Tultšyn 1908–1919, Štšedryk 1914)
+   *   Volyn            — Lubart's Castle (200 hryvnan seteli)
+   *   Zaporizhzhya     — Khortytsia (12,5 km, Dneprin suurin saari)
+   *   Zhytomyr         — Sergei Korolev (s. 1907 Žytomyr, museo vastapäätä)
+   */
+  UKR: {
+    Cherkasy: {
+      lyhyt: 'Kanivin lähellä Tarasinmäellä Dneprin rannalla lepää runoilija Taras Ševtšenko, jonka maalliset jäännökset siirrettiin sinne Pietarista 1861.',
+    },
+    Chernihiv: {
+      lyhyt: 'Tšernihivin Kirkastumisen katedraalia alettiin rakentaa 1030-luvulla, ja se on harvoja mongolivalloitusta edeltäneen Kiovan Rusin rakennuksia.',
+    },
+    Chernivtsi: {
+      lyhyt: 'Tšernivtsin yliopisto toimii entisessä Bukovinan ja Dalmatian metropoliittojen residenssissä, joka on Unescon maailmanperintöä vuodesta 2011.',
+    },
+    "Dnipropetrovs'k": {
+      lyhyt: 'Petrykivkan kylästä on lähtöisin valkoiselle pohjalle maalattu kukkakoristelu, joka on ollut Unescon aineetonta kulttuuriperintöä vuodesta 2013.',
+    },
+    "Donets'k": {
+      lyhyt: 'Svjatohirskin luostari kohoaa Siverskyi Donetsin jyrkälle oikealle rannalle liitukallioiden keskelle, ja siitä on kirjallinen maininta vuodelta 1627.',
+    },
+    "Ivano-Frankivs'k": {
+      lyhyt: 'Kolomyjassa on pääsiäismunan muotoinen 14-metrinen museo, jonka kokoelmissa on yli 10 000 koristeltua pysankaa.',
+    },
+    Kharkiv: {
+      lyhyt: 'Harkovan Vapaudenaukion laidalla seisova konstruktivistinen Deržprom valmistui 1928 Neuvostoliiton ensimmäiseksi pilvenpiirtäjäksi.',
+    },
+    Kherson: {
+      lyhyt: 'Askania-Novan suojelualueen perusti 1898 Friedrich Falz-Fein, ja se tunnetaan przewalskinhevosistaan ja koskemattomasta arostaan.',
+    },
+    "Khmel'nyts'kyy": {
+      lyhyt: 'Kamjanets-Podilskyin linna seisoo niemellä, jonka ympärille Smotrytš-joki on kaivertanut kanjonin; linnaan johtaa 88-metrinen silta.',
+    },
+    Kiev: {
+      lyhyt: 'Bila Tserkvan Oleksandrija on Ukrainan suurin dendrologinen puisto, jonka kreivi Branicki perusti Ros-joen rannalle 1793.',
+    },
+    'Kiev City': {
+      lyhyt: 'Kiovan metron Arsenalna-asema on 105,5 metrin syvyydessä, ja se on yksi maailman syvimmistä metroasemista.',
+    },
+    Kirovohrad: {
+      lyhyt: 'Kirovohradin alueen pikkukaupunkia Dobrovelytškivkaa pidetään Ukrainan maantieteellisenä keskipisteenä.',
+    },
+    "L'viv": {
+      lyhyt: 'Lvivin Rynok-toria ympäröi 44 vanhaa kaupunkitaloa, ja torin jokaisessa kulmassa on 1790-luvun kaivolähde antiikin tarujen hahmon patsaineen.',
+    },
+    "Luhans'k": {
+      lyhyt: 'Alueen pohjoisosan Striltsivskyin aro otettiin suojeluun arosurmelin vuoksi, ja tuo murmeli on yhä suojelualueen tunnuseläin.',
+    },
+    Mykolayiv: {
+      lyhyt: 'Parutynen kylän lähellä Etelä-Bugin suistossa ovat Olbian rauniot – kaupungin perustivat Miletoksen kreikkalaiset 600-luvulla eaa.',
+    },
+    Odessa: {
+      lyhyt: 'Odessan alla kiemurtelee jopa 2 500 kilometriä katakombeja, enimmäkseen louhoksia, joista kaupungin rakennuskivi aikanaan nostettiin.',
+    },
+    Poltava: {
+      lyhyt: 'Opišnjan kylä on tunnettu keramiikastaan: siellä on valmistettu koristeellisia saviastioita perinteisin menetelmin 1800-luvulta asti.',
+    },
+    Rivne: {
+      lyhyt: 'Klevanin lähellä kulkee Rakkauden tunneli, muutaman kilometrin teollisuusrata, jonka yllä puut kaartuvat vihreäksi holviksi.',
+    },
+    Sumy: {
+      lyhyt: 'Hluhiv oli kasakkahetmanaatin pääkaupunki 1708–1764, ja sinne perustettiin 1730 Venäjän keisarikunnan ensimmäinen laulukoulu.',
+    },
+    "Ternopil'": {
+      lyhyt: 'Korolivkan kylän alla on Optymistytšna, maailman pisin kipsiluola – sen käytäviä on kartoitettu noin 264 kilometriä.',
+    },
+    Transcarpathia: {
+      lyhyt: 'Hustin lähellä on Narsissien laakso, 256 hehtaarin niitty, jolla villit narsissit kukkivat keväisin valkoisena mattona.',
+    },
+    Vinnytsya: {
+      lyhyt: 'Tultšynissa opettanut Mykola Leontovytš sävelsi 1914 Štšedrykin, jonka melodia kiertää maailmaa joululauluna Carol of the Bells.',
+    },
+    Volyn: {
+      lyhyt: 'Lutskin Lubartin linna rakennettiin 1300-luvulla, ja sen porttitorni on painettu 200 hryvnan setelin taakse.',
+    },
+    Zaporizhzhya: {
+      lyhyt: 'Hortytsja on Dneprin suurin saari, 12,5 kilometriä pitkä, ja se on Zaporožjen kasakoiden historian keskeisiä paikkoja.',
+    },
+    Zhytomyr: {
+      lyhyt: 'Žytomyrissa syntyi 1907 rakettisuunnittelija Sergei Koroljov, ja hänen syntymäkotinsa vastapäätä on astronautiikan museo.',
+    },
+  },
+  /*
+   * VALKO-VENÄJÄ (BLR) — lisätty 25.9.2026 (Sisältökirjuri, erä 3A),
+   * 7 aluetta. Tekstit kuvaavat luontoa ja kulttuuriperintöä neutraalisti.
+   * Vain `lyhyt`. Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Brest         — Białowieża Forest (Brestin ja Hrodnan alueet, yli 800
+   *                   visenttiä)
+   *   Gomel         — Gomel (Rumjantsev–Paskevitš-palatsi, englantilainen
+   *                   puisto Sožin rannalla)
+   *   Grodno        — Mir Castle Complex (1500-luvun alku, Unesco 2000)
+   *   Mogilev       — Mogilev (Pyhän Nikolauksen katedraali 1668,
+   *                   alkuperäinen ikonostaasi)
+   *   Minsk         — Nesvizh Castle (Radziwiłł, Unesco 2005)
+   *   City of Minsk — National Library of Belarus (73,6 m, avattu 16.6.2006)
+   *   Vitebsk       — Vitebsk (Chagallin talo Pokrovskaja-kadulla); Marc
+   *                   Chagall House Museum
+   */
+  BLR: {
+    Brest: {
+      lyhyt: 'Belovežin aarniometsässä, jonka Valko-Venäjä jakaa Puolan kanssa, elää yli 800 visenttiä – Euroopan painavinta maaeläintä.',
+    },
+    Gomel: {
+      lyhyt: 'Homelin palatsin ympärille Sož-joen rannalle perusti ruhtinas Ivan Paskevitš 1800-luvulla englantilaisen puiston, joka on yhä paikallaan.',
+    },
+    Grodno: {
+      lyhyt: 'Mirin linnaa alettiin rakentaa 1500-luvun alussa goottilaiseksi linnoitukseksi, ja se on Unescon maailmanperintöä vuodesta 2000.',
+    },
+    Mogilev: {
+      lyhyt: 'Mahiljoun Pyhän Nikolauksen luostarin katedraali valmistui 1668, ja sen alkuperäinen ikonostaasi on säilynyt.',
+    },
+    Minsk: {
+      lyhyt: 'Njasvižin linna oli vuosisatoja Radziwiłłien suvun kotilinna, ja se on Unescon maailmanperintöä vuodesta 2005.',
+    },
+    'City of Minsk': {
+      lyhyt: 'Minskin kansalliskirjasto on 73,6 metriä korkea rombikuboktaedri, kuin timantiksi hiottu talo, ja se avattiin 2006.',
+    },
+    Vitebsk: {
+      lyhyt: 'Vitsebskin Pokrovskaja-kadulla on talo, jossa Marc Chagall vietti lapsuutensa – nykyään siinä toimii hänen kotimuseonsa.',
+    },
+  },
+  /*
+   * ISLANTI (ISL) — lisätty 25.9.2026 (Sisältökirjuri, erä 3A), 9 aluetta.
+   * Natural Earthissa Reykjavík ja Höfuðborgarsvæði ovat erillisiä alueita;
+   * jälkimmäinen kuvataan Álftanesin Bessastaðirin kautta. Vain `lyhyt`.
+   * Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Austurland        — Hallormsstaðaskógur (suojeltu 1905, ensimmäinen
+   *                       kansallismetsä)
+   *   Höfuðborgarsvæði  — Bessastaðir (presidentin asunto 1941, Snorri)
+   *   Vestfirðir        — Látrabjarg (14 km, 440 m, läntisin kohta)
+   *   Norðurland eystra — Húsavík (valaiden katselu, Apollo-astronautit)
+   *   Norðurland vestra — Hvítserkur (15 m, peikkotaru)
+   *   Reykjavík         — Geothermal power in Iceland (Nesjavellirin putki)
+   *   Suðurland         — Þingvellir (Alþingi 930, Unesco 2004)
+   *   Suðurnes          — Bridge Between Continents (15 m, Visit Reykjanes)
+   *   Vesturland        — Snæfellsjökull (1 446 m, Jules Verne)
+   */
+  ISL: {
+    Austurland: {
+      lyhyt: 'Hallormsstaðurin koivikko suojeltiin 1905, ja siitä tuli Islannin ensimmäinen kansallismetsä – nyt se on maan suurimpia metsiä.',
+    },
+    'Höfuðborgarsvæði': {
+      lyhyt: 'Bessastaðir Álftanesin niemellä on ollut Islannin presidentin virka-asunto vuodesta 1941; 1200-luvulla sen omisti Snorri Sturluson.',
+    },
+    'Vestfirðir': {
+      lyhyt: 'Látrabjarg on Islannin läntisin kohta: 14 kilometriä pitkä ja paikoin 440 metriä korkea lintuvuori, jonka jyrkänteillä pesii lunneja.',
+    },
+    'Norðurland eystra': {
+      lyhyt: 'Húsavíkin lahdelle tulee usein valaita, ja kaupungin ympäristössä harjoittelivat 1960-luvulla Apollo-lentojen astronautit.',
+    },
+    'Norðurland vestra': {
+      lyhyt: 'Vatnsnesin rannalla seisova Hvítserkur on 15-metrinen kivipaasi; tarun mukaan se on peikko, jonka nouseva aurinko muutti kiveksi.',
+    },
+    'Reykjavík': {
+      lyhyt: 'Reykjavíkin taloja lämmitetään kuumalla maalämpövedellä, jota johdetaan putkia pitkin muun muassa Nesjavellirin voimalasta.',
+    },
+    'Suðurland': {
+      lyhyt: 'Þingvellirin laaksossa kokoontui Islannin Alþingi ensimmäisen kerran 930, ja paikka on Unescon maailmanperintöä vuodesta 2004.',
+    },
+    'Suðurnes': {
+      lyhyt: 'Reykjanesin niemimaalla 15-metrinen kävelysilta ylittää railon, joka erottaa Pohjois-Amerikan ja Euraasian mannerlaatat.',
+    },
+    Vesturland: {
+      lyhyt: 'Snæfellsjökull on 1 446-metrinen jäätikön peittämä tulivuori – Jules Vernen romaanissa matka maan keskipisteeseen alkaa sen kraaterista.',
+    },
+  },
 };

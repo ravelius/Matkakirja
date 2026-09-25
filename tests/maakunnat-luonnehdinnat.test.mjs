@@ -32,6 +32,10 @@ const ODOTETUT_MAARAT = {
   MKD: 8,
   ALB: 12,
   CYP: 5,
+  MDA: 39,
+  UKR: 25,
+  BLR: 7,
+  ISL: 9,
 };
 
 /*
@@ -40,9 +44,10 @@ const ODOTETUT_MAARAT = {
  * koskee siis yhä vain alkuperäisiä 97 aluetta (7 maata), kunnes
  * GRC:n kuvat saapuvat kuvaputkelta ja se lasketaan mukaan. NLD, BEL,
  * DNK ja SVK lisättiin samana päivänä samalla tavalla (erä 1, vain
- * `lyhyt`), samoin FIN, EST, LVA, LTU ja SVN.
+ * `lyhyt`), samoin FIN, EST, LVA, LTU ja SVN sekä erässä 3A MDA, UKR,
+ * BLR ja ISL.
  */
-const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP']);
+const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN', 'ROU', 'CZE', 'LUX', 'MLT', 'BGR', 'HRV', 'MNE', 'SRB', 'BIH', 'MKD', 'ALB', 'CYP', 'MDA', 'UKR', 'BLR', 'ISL']);
 const KUVATTU_VALMIIKSI = (iso) => !ERASSA_1.has(iso);
 
 test('jokaisella maalla on odotettu määrä alueita', () => {
