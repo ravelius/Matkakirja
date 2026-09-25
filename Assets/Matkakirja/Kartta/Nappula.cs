@@ -491,6 +491,17 @@ namespace Matkakirja
                     math.min(lat1, sn.Lat - pk), math.max(lat1, sn.Lat + pk), sn.Lon - pl, sn.Lon + pl, lat1, lon1);
             }
             bool pintaVaihdettu = false, laskuSumu = false, kohdeKirjattu = false, sentinelPois = false, pilvetPois = false;
+            // LÖYDÖS 120: aloituslennon kamera yhtenä C1-jatkuvana reittinä (LennonAikajana.AloitusReitti) jo ennen mustaa
+            // verhoa, jotta verhon alla esiladataan juuri ensimmäisen lähikuvan laatat.
+            LennonAikajana.AloitusReitti aloitusReitti = null;
+            if (aloitus)
+            {
+                var am = aloitusMerkit != null ? aloitusMerkit : FindAnyObjectByType<KaupunkiMerkit>();
+                string aloitusKohde = am != null ? am.LahinId(lat1, lon1) : null;
+                var maisema = aloitusKohde != null && LennonAikajana.Kaupungit.TryGetValue(aloitusKohde, out var km) ? km : LennonAikajana.EiMaisemaa;
+                aloitusReitti = LennonAikajana.LaskeAloitus(reittiM0, saapumisKorkeus, maisema, jako,
+                    tt => Suuntima(lat0, lon0, lat1, lon1, LennonAikajana.KoneenOsuus(tt, jako)));
+            }
             if (aloitus)
             {
                 // LÖYDÖS 84: feidi mustaan → värillinen topografiakartta latautuu taustalla → feidi takaisin. Pinta
@@ -502,8 +513,9 @@ namespace Matkakirja
                 var pallo = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo : null;
                 float odotus = Time.unscaledTime;
                 // Ennen lähtösumu peitti koneen lähikuvan maan; nyt lähikuvan laatat ladataan mustan alla: kamera ensin
-                // lähikuvaan (Lontoo, koneen kylki 30 km, sama asento kuin syöksyn lopussa), sitten takaisin
-                // valintanäkymään, ja kummassakin odotetaan näkyvän pallon latausta (Cesium pitää laatat välimuistissa).
+                // ensimmäiseen lähikuvaan (löydös 120: Lontoo, 13 km, 82°, etuviisto kylki P(100) = AloitusReitti.Lahikuva),
+                // sitten takaisin valintanäkymään, ja kummassakin odotetaan näkyvän pallon latausta (Cesium pitää laatat
+                // välimuistissa).
                 IEnumerator Lataa(float katto)
                 {
                     float alku = Time.unscaledTime;
@@ -522,8 +534,8 @@ namespace Matkakirja
                     var (vLat, vLon, vKork, vKall, vSuunta, vKatse) =
                         (kierto.leveys, kierto.pituus, kierto.korkeus, kierto.KaytettyKallistus, kierto.suuntima, kierto.katseKorkeus);
                     double pohja0 = double.IsNaN(lentoPohja) ? KorkeusKerroin.Sovita(nosto) : lentoPohja;
-                    kierto.Kuvaa(lat0, lon0, LennonAikajana.LahiM, LennonAikajana.LahiKallistus,
-                        Suuntima(lat0, lon0, lat1, lon1, 0) + 90.0, pohja0 + LennonAikajana.MinKoneKorkeusM);
+                    var lahikuva = aloitusReitti.Lahikuva;
+                    kierto.Kuvaa(lat0, lon0, lahikuva.etaisyys, lahikuva.kallistus, lahikuva.suunta, pohja0 + LennonAikajana.MinKoneKorkeusM);
                     yield return Lataa(MustanKatto * 0.6f);
                     float lahi = Time.unscaledTime - odotus;
                     kierto.Kuvaa(vLat, vLon, vKork, vKall, vSuunta, vKatse);
@@ -592,18 +604,24 @@ namespace Matkakirja
             }
             // Maisemasuunta ratkaisee vain kiertosuunnan (Fable 24.9.); muille kohteille lyhyempi kierto.
             var kaupunki = kohdeId != null && LennonAikajana.Kaupungit.TryGetValue(kohdeId, out var kk) ? kk : LennonAikajana.EiMaisemaa;
-            var avaimet = LennonAikajana.Laske(reittiM, saapumisKorkeus, kaupunki, jako,
+            // Aloituslento: AloitusReitti (löydös 120); muut lennot avaimina (build 11:n aikajana).
+            var avaimet = aloitus ? null : LennonAikajana.Laske(reittiM, saapumisKorkeus, kaupunki, jako,
                 tt => Suuntima(lat0, lon0, lat1, lon1, LennonAikajana.KoneenOsuus(tt, jako)));
             // Lähtöasento kamerasta (esim. Lontoon zoomin loppu): aikajanan ensimmäinen avain.
             var alku0 = kierto != null
                 ? (lat: kierto.leveys, lon: kierto.pituus, katse: kierto.katseKorkeus)
                 : (lat: lat0, lon: lon0, katse: 0.0);
-            if (kierto != null)
+            if (kierto != null && aloitusReitti != null)
+                aloitusReitti.AsetaAlku(kierto.korkeus, kierto.KaytettyKallistus, kierto.suuntima);
+            else if (kierto != null)
                 avaimet[0] = new LennonAikajana.Avain
                 {
                     Osuus = 0, Kohde = -1, SuuntaAbs = true,
                     Etaisyys = kierto.korkeus, Kallistus = kierto.KaytettyKallistus, Suunta = kierto.suuntima,
                 };
+            // Kehittäjäloki (komento "kamerareitti paalle"): oikea kamera 0,1 s:n välein, raportti lennon lopussa.
+            var reittiNaytteet = KamerareittiLoki && kamera != null ? new List<LennonKamerareitti.Nayte>() : null;
+            float seuraavaNayte = 0f;
 
             if (savu != null) savu.Aloita();
             if (aurinko != null) aurinko.Aseta(true);
@@ -636,7 +654,8 @@ namespace Matkakirja
                               + $"/{kohdeLataus.Yhteensa} ({kohdeLataus.Osuus:P0})");
                 }
 
-                var (etaisyys, kallistusNyt, suuntimaNyt, kohde, koneOsuus) = LennonAikajana.Arvo(avaimet, t, suunta);
+                var (etaisyys, kallistusNyt, suuntimaNyt, kohde, koneOsuus) = aloitusReitti != null
+                    ? aloitusReitti.Arvo(t) : LennonAikajana.Arvo(avaimet, t, suunta);
                 koneRuudusta = (float)koneOsuus;
                 // Kohde: −1 lähtöpiste → 0 kone → 1 kohdekaupunki → 2 saapumisnäkymän keskipiste.
                 double klat, klon, katse;
@@ -661,6 +680,13 @@ namespace Matkakirja
                     katse = 0.0;
                 }
                 if (kierto != null) kierto.Kuvaa(klat, klon, etaisyys, kallistusNyt, suuntimaNyt, katse);
+                if (reittiNaytteet != null && (kulunut >= seuraavaNayte || t >= 1))
+                {
+                    seuraavaNayte += 0.1f;
+                    var kp = kamera.transform.position;
+                    var ke = kamera.transform.forward;
+                    reittiNaytteet.Add(new LennonKamerareitti.Nayte(kulunut, kp.x, kp.y, kp.z, ke.x, ke.y, ke.z));
+                }
 
                 // Etäisyyssumu loittonuksen jälkipuoliskolta kierron puoliväliin (build 10: 30–80 %).
                 double matka = Pehmea((t - (jako.Sivu + 0.35 * (jako.Loitto - jako.Sivu))) / (0.3 * (jako.Loitto - jako.Sivu)))
@@ -727,6 +753,9 @@ namespace Matkakirja
                 if (t >= 1) break;
                 yield return null;
             }
+            if (reittiNaytteet != null)
+                Debug.Log(LennonKamerareitti.Raportti(LennonKamerareitti.Analysoi(reittiNaytteet),
+                    $"{(aloitus ? "aloituslento" : "lento")} {kohdeId ?? "?"} {kesto:0.0} s (oikea kamera)"));
             liike = null;
             kesken = null;
             lentoPohja = double.NaN;
@@ -751,8 +780,14 @@ namespace Matkakirja
         /// <summary>Koneen vähimmäiskorkeus lennon pohjasta tässä kehyksessä (LennonAikajana.KoneenMinimi).</summary>
         double koneMinimi;
 
-        /// <summary>Koneen korkeus lennon pohjasta reitin kohdassa p: kaari huippu · sin πp, vähintään koneMinimi.</summary>
-        double KoneenKorkeus(double p, double huippu) => math.max(huippu * math.sin(math.PI * p), koneMinimi);
+        /// <summary>Koneen korkeus lennon pohjasta reitin kohdassa p: kaari huippu · sin πp, vähintään koneMinimi (pehmeä maksimi).</summary>
+        double KoneenKorkeus(double p, double huippu) => LennonAikajana.KoneenKorkeus(p, huippu, koneMinimi);
+
+        /// <summary>
+        /// Kehittäjäloki (löydös 120, komento "kamerareitti paalle|pois"): lennon oikea kamera 0,1 s:n näytteinä lokiin
+        /// lennon lopussa (nopeus m/s, kulmanopeus °/s, HYPPY = muutos yli 3 × ympäröivien keskiarvo; LennonKamerareitti).
+        /// </summary>
+        public static bool KamerareittiLoki;
 
         /// <summary>Lennon lähdön ja kohteen merkki (omistaja 24.9.: punainen piste tai hehkurengas).</summary>
         static readonly Color LentoPunainen = new Color32(0xb8, 0x32, 0x28, 0xff);
@@ -774,7 +809,7 @@ namespace Matkakirja
 
         /// <summary>
         /// Koneen reitti viivaksi: aikajanan näytteet t = 0…1, koneen osuus KoneenOsuus(t) ja korkeus
-        /// lentoPohja + max(huippu · sin πp, KoneenMinimi(t)), eli täsmälleen koneen kulkema kaari.
+        /// lentoPohja + LennonAikajana.KoneenKorkeus(p, huippu, KoneenMinimi(t)), eli täsmälleen koneen kulkema kaari.
         /// </summary>
         void TeeLentokaari(double lat0, double lon0, double lat1, double lon1, double huippu, LennonAikajana.Jako jako)
         {
@@ -790,7 +825,7 @@ namespace Matkakirja
                 double t = (double)i / N;
                 double p = LennonAikajana.KoneenOsuus(t, jako);
                 var q = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, p);
-                pisteet.Add(new double3(q.x, q.y, pohja + math.max(huippu * math.sin(math.PI * p), LennonAikajana.KoneenMinimi(t, jako))));
+                pisteet.Add(new double3(q.x, q.y, pohja + LennonAikajana.KoneenKorkeus(p, huippu, LennonAikajana.KoneenMinimi(t, jako))));
             }
             lentokaari = reitit.PiirraKaari("valittu-lento", pisteet, lentokaarenMateriaali);
             lentokaarenPohja = pohja;

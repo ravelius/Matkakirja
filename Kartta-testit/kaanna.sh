@@ -27,6 +27,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/KameraEleet.cs
 ../Assets/Matkakirja/Kartta/Karttavalo.cs
 ../Assets/Matkakirja/Kartta/LennonAikajana.cs
+../Assets/Matkakirja/Kartta/LennonKamerareitti.cs
 ../Assets/Matkakirja/Kartta/Maakuntajako.cs
 ../Assets/Matkakirja/Kartta/MastoGeometria.cs
 ../Assets/Matkakirja/Kartta/NimiLadonta.cs

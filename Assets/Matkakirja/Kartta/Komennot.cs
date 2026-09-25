@@ -40,6 +40,8 @@ namespace Matkakirja
     ///   maat paalle|pois | maat korosta ISO3 [#täyttö #raja] | maat pois-korostus   Maatila (MaaKartta)
     ///   lentokaaret lähtö kohde … | lentokaaret pois   lentolistan kaaret + kameran sovitus (Reitit)
     ///   nappula aseta lat lon | aja lat lon … kesto | lenna lat0 lon0 lat1 lon1 kesto | aloitus lat0 lon0 lat1 lon1 kesto | pois
+    ///   kamerareitti paalle|pois  lennon oikea kamera 0,1 s:n näytteinä lokiin lennon lopussa (nopeus m/s, kulmanopeus °/s,
+    ///                             HYPPY/KULMAHYPPY = muutos yli 3 × ympäröivien keskiarvo; löydös 120, LennonKamerareitti)
     ///   piste <id> lat lon [lukittu] | piste pois <id>   pelin karttapiste (vihreä)
     ///   napauta x y               synteettinen napautus (osuus näytöstä, origo vasen alakulma)
     ///   portti paalle|pois        aloitusportin pallo (PalloKierto.PorttiSumea): sumennus 6 pt, täyttö, kierto
@@ -413,6 +415,10 @@ namespace Matkakirja
                     else if (o[1] == "pois") np.Piilota();
                     break;
                 }
+                case "kamerareitti":
+                    Nappula.KamerareittiLoki = o.Length < 2 || o[1] != "pois";
+                    Debug.Log($"MATKAKIRJA kamerareitti: loki {(Nappula.KamerareittiLoki ? "päällä" : "pois")}");
+                    break;
                 case "piste":
                 {
                     // piste <id> lat lon [lukittu] | piste pois <id>: pelin karttapiste (Karttapisteet)
