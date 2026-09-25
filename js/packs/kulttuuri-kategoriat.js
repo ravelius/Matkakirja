@@ -127831,6 +127831,234 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Galápagos Islands, Galápagos National Park, Seymour
+       * Airport, Puerto Baquerizo Moreno, Puerto Villamil, Isabela Island,
+       * San Cristóbal Island, Floreana Island, Sierra Negra) ja
+       * Wikivoyagesta (Galapagos Islands, Galapagos wildlife, Santa Cruz,
+       * San Cristobal, Isabela, Floreana) — teksti omaa. Nostojen,
+       * ennen/nyt-kuvien ja valokuvapaketin aiheita (geologia, Berlanga,
+       * Beagle, peipposet, Puerto Ayoran synty ja väkiluku, puiston ja
+       * tutkimusaseman perustaminen, jättiläiskilpikonnat, meri-iguaanit,
+       * pingviini, lentokyvytön kormoraani, merileijonat laiturilla,
+       * sinijalkasuulan kosinta, Bartolomén näköala) ei toisteta. Hinnat
+       * jätetty pois paitsi puiston pääsymaksu, jonka Wikivoyage kertoo
+       * nousseen 1.8.2024; teksti kehottaa tarkistamaan sen. Kuvien
+       * lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja kuvat
+       * katsottu silmin. Pystykuva: Las Grietas.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Las Grietas, isla Santa Cruz, islas Galápagos, Ecuador, 2015-07-26, DD 83.JPG',
+          lyhyt: 'Uimari Las Grietasin laavarailossa Santa Cruzin saarella Puerto Ayoran lähellä.',
+          selite: 'Las Grietas on kallioiden väliin revennyt kapea railo '
+            + 'Puerto Ayoran lähellä. Sen kirkkaassa vedessä sekoittuvat '
+            + 'meri- ja sadevesi, ja railo on paikallisten ja matkailijoiden '
+            + 'suosima uimapaikka.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Galápagos on noin tuhannen kilometrin päässä Ecuadorin '
+          + 'rannikosta, ja sinne pääsee vain lentäen Quitosta tai '
+          + 'Guayaquilista. Pääsaaria on kolmetoista, mutta asuttuja vain '
+          + 'neljä: Santa Cruz, San Cristóbal, Isabela ja Floreana. Muualle '
+          + 'mennään kansallispuiston hyväksymän oppaan kanssa, joko laivalla, '
+          + 'joka kiertää saaria päiviä tai viikon, tai päiväretkillä jonkin '
+          + 'kylän hotellista käsin. Kummallakin tavalla näkee eläimiä, jotka '
+          + 'eivät pakene ihmistä, ja siksi niiden katseluun on tarkat '
+          + 'säännöt. Matka ei ole halpa eikä nopea, mutta harvassa paikassa '
+          + 'pääsee yhtä lähelle luontoa. Vuodenaikoja on kaksi: joulukuusta '
+          + 'toukokuuhun on lämmintä ja meri tyyni, kesäkuusta marraskuuhun '
+          + 'viileämpää ja usvaista.',
+        artikkeli: {
+          nimi: 'Matkailijan Galápagos',
+          teksti: 'Galápagosille pääsee vain lentäen, ja kansallispuistoon vain oppaan kanssa.',
+          nosto: 'Oppaiden nyrkkisääntö on yksinkertainen: jos eläin huomaa '
+            + 'sinut, olet jo liian lähellä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille kahdella lennolla',
+              teksti: 'Galápagosille lennetään Ecuadorin mantereelta, Quitosta '
+                + 'tai Guayaquilista, ja koneet laskeutuvat joko Baltran saaren '
+                + 'Seymourin kentälle tai San Cristóbalin saarelle. Saarille '
+                + 'lennetään yleensä aamupäivällä ja takaisin iltapäivällä, joten '
+                + 'mantereella yövytään usein kumpaankin suuntaan. Jo '
+                + 'lähtökentällä ostetaan saariston matkustajakortti, ja '
+                + 'ruumaan menevät laukut läpivalaistaan ja sinetöidään, jottei '
+                + 'mukana kulkeudu siemeniä, hyönteisiä tai muita vieraita '
+                + 'eliöitä. Perillä maksetaan kansallispuiston pääsymaksu '
+                + 'käteisellä. Elokuussa 2024 ulkomaisen aikuisen maksu nousi '
+                + '200 dollariin; summa on muuttunut ennenkin, joten se kannattaa '
+                + 'tarkistaa ennen matkaa. Baltra oli toisen maailmansodan aikana '
+                + 'Yhdysvaltain lentotukikohta, ja nykyinen terminaali on '
+                + 'rakennettu kierrätetyistä öljynporausputkista ja käyttää '
+                + 'aurinko- ja tuulivoimaa. Kentältä ajetaan bussilla Itabacan '
+                + 'salmelle, jonka yli vesitaksi vie Santa Cruzin puolelle, ja '
+                + 'sieltä matka jatkuu Puerto Ayoraan. San Cristóbalilla kenttä '
+                + 'on keskellä saariston hallintokaupunkia Puerto Baquerizo '
+                + 'Morenoa, ja keskustaan voi kävellä.',
+              kuva: [
+                {
+                  tiedosto: 'Seymour Airport, Isla Baltra, Galapagos Islands.jpg',
+                  lyhyt: 'Seymourin lentoaseman terminaali ja tuulivoimalat Baltran kuivalla tasangolla.',
+                  selite: 'Seymourin lentoasema Baltran saarella on saariston '
+                    + 'vilkkain kenttä. Sen 2010-luvulla uusittu terminaali '
+                    + 'pyrkii toimimaan uusiutuvalla energialla, ja kentän '
+                    + 'laidalla pyörivät tuulivoimalat.',
+                  lahde: 'Pi3.124, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Baltra Island, water taxi dock with the Itabaca Channel - Galápagos in the background.JPG',
+                  lyhyt: 'Baltran laiturilta vesitaksit vievät Itabacan salmen yli Santa Cruzin saarelle.',
+                  selite: 'Lentokentältä bussi tuo matkustajat Baltran '
+                    + 'laiturille, josta vesitaksit ja lautat kuljettavat heidät '
+                    + 'kapean Itabacan salmen yli Santa Cruzille. Vastarannalta '
+                    + 'matka jatkuu Puerto Ayoraan.',
+                  lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Arribo a San Cristóbal (46231006642).jpg',
+                  lyhyt: 'San Cristóbalille laskeutuva kone ylittää lahden, jolla risteilyalukset ovat ankkurissa.',
+                  selite: 'Laskeutuessaan San Cristóbalin kentälle kone '
+                    + 'lentää Puerto Baquerizo Morenon sataman yli. Lahdella on '
+                    + 'ankkurissa risteilyaluksia, ja osa risteilyistä alkaa tai '
+                    + 'päättyy juuri San Cristóbalille.',
+                  lahde: 'David Ceballos, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Risteily vai saarihyppely',
+              teksti: 'Kaukaisimmille saarille, kuten Genovesalle, Fernandinalle '
+                + 'ja Españolalle, pääsee vain risteilyllä. Saaristossa '
+                + 'liikennöi kymmeniä yöpymiseen varustettuja aluksia: pienimpiin '
+                + 'mahtuu kahdeksan, suurimpiin sata matkustajaa. Kansallispuisto '
+                + 'vahvistaa jokaisen aluksen reitit etukäteen, jotta samalla '
+                + 'rannalla ei olisi kerralla liikaa ihmisiä, ja yhdellä oppaalla '
+                + 'saa olla enintään 16 hengen ryhmä. Maissa käydään vain '
+                + 'päivänvalossa, tavallisesti aamupäivällä ja iltapäivällä. '
+                + 'Laivalta siirrytään rantaan pienellä veneellä, pangalla: '
+                + 'kuivassa maihinnousussa astutaan kalliolle, märässä kahlataan '
+                + 'hiekkarannalle. Toinen tapa on saarihyppely, jossa asutaan '
+                + 'kylien hotelleissa ja tehdään päiväretkiä esimerkiksi North '
+                + 'Seymourille, South Plazalle, Santa Fehen tai Bartolomélle. '
+                + 'Asuttujen saarten väliä kulkevat pikaveneet, joiden noin '
+                + 'kahden tunnin matka voi olla hyvin keinuva. Saarihyppely on '
+                + 'halvempi ja joustavampi, ja sen suosio on kasvanut nopeasti: '
+                + 'vuonna 2017 risteilyllä kävi noin 72 000 matkailijaa, maissa '
+                + 'majoittuneita oli yli kaksi kertaa enemmän. Vielä vuoteen 1969 '
+                + 'asti saarille pääsi vain yksityisellä tai vuokratulla aluksella.',
+              kuva: {
+                tiedosto: 'Day 2 - first landing (wet) on Sombrero (Islote Mosquera) at the SE corner of Santiago Is - (16493563889).jpg',
+                lyhyt: 'Risteilyn matkustajat märän maihinnousun jälkeen hiekkarannalla Santiagon kupeessa.',
+                selite: 'Tammikuussa 2015 risteilyn ensimmäinen maihinnousu '
+                  + 'oli märkä: matkustajat kahlasivat pangasta rantaan pienellä '
+                  + 'luodolla Santiagon saaren kaakkoiskulmassa. Taustalla näkyy '
+                  + 'karua laavamaata.',
+                lahde: 'Murray Foubister, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Neljä asuttua saarta',
+              teksti: 'Omin päin liikkuva matkailija asuu jollakin neljästä '
+                + 'asutusta saaresta, ja kylien lähellä on paljon nähtävää ilman '
+                + 'opastettua retkeä. Santa Cruzilla Puerto Ayorasta kävellään '
+                + 'parin kilometrin polkua Tortuga Bayn hiekkarannalle, jonka '
+                + 'suojaisessa poukamassa voi uida ja meloa; polun alussa '
+                + 'kirjaudutaan, ja ranta on auki vain päivällä. Vesitaksilla ja '
+                + 'lyhyellä kävelyllä pääsee Las Grietasin uimarailolle. San '
+                + 'Cristóbalilla Puerto Baquerizo Morenon laidalta lähtee polku '
+                + 'kansallispuiston tulkintakeskukseen ja fregattilintujen '
+                + 'pesimämäelle, ja ylängöllä noin 600 metrin korkeudessa on El '
+                + 'Junco, makean veden järvi, joita kuivassa saaristossa on '
+                + 'hyvin vähän. Isabelan Puerto Villamilin laguuneissa kahlaa '
+                + 'flamingoja, ja kylästä pyöräillään tai kävellään Kyynelten '
+                + 'muurille, jonka vangit rakensivat, kun saarella oli '
+                + 'vankisiirtola 1940- ja 1950-luvuilla. Sierra Negran '
+                + 'tulivuoren valtavan kalderan reunalle tehdään oppaan kanssa '
+                + 'pitkä päiväretki. Floreanalla asuu vain noin sata ihmistä. '
+                + 'Sen Post Office Bayhin valaanpyytäjät jättivät tynnyriin '
+                + 'kirjeitä kotimatkalla olevien laivojen vietäviksi, ja yhä '
+                + 'matkailijat jättävät sinne kortteja ilman postimerkkiä ja '
+                + 'ottavat mukaansa ne, jotka voivat toimittaa perille.',
+              kuva: {
+                tiedosto: 'PtoVillamilMuro.jpg',
+                lyhyt: 'Isabelan Kyynelten muurin kasasivat laavakivistä saaren vankisiirtolan vangit.',
+                selite: 'Muro de las Lágrimas eli Kyynelten muuri on Puerto '
+                  + 'Villamilin lähellä Isabelan saarella. Vankisiirtolan vangit '
+                  + 'rakensivat sen laavalohkareista, ja nykyään sinne johtaa '
+                  + 'kävely- ja pyöräilyreitti laguunien ja rantojen ohi.',
+                lahde: 'Torbenbrinker, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Säännöt ja eläinten katselu',
+              teksti: 'Galápagosin eläimet eivät pakene, ja juuri siksi '
+                + 'puistossa on tarkat säännöt. Kylien ulkopuolella liikutaan '
+                + 'pääsääntöisesti kansallispuiston hyväksymän oppaan kanssa, '
+                + 'merkityillä poluilla ja vain päivänvalossa. Eläimiin pidetään '
+                + 'vähintään kahden metrin etäisyys, eikä niitä saa koskea eikä '
+                + 'ruokkia. Saarelta toiselle siirryttäessä kengät puhdistetaan, '
+                + 'jotta siemenet eivät kulkeudu mukana, eikä saarille saa tuoda '
+                + 'kasveja tai eläimiä. Tupakointi ja nuotiot ovat kiellettyjä, '
+                + 'eikä matkamuistoksi saa ostaa mustasta korallista, '
+                + 'simpukankuorista, merileijonan hampaista, kilpikonnan kilvestä '
+                + 'tai laavakivestä tehtyjä esineitä. Monelle matkan kohokohta on '
+                + 'snorklaus nuorten merileijonien kanssa, mutta aikuiset urokset '
+                + 'puolustavat reviiriään kiivaasti, joten yhdyskuntien lähellä '
+                + 'ei pidä uida. North Seymourilla pesivät fregattilinnut, joiden '
+                + 'urokset pullistavat punaisen kurkkupussinsa, ja Genovesalla '
+                + 'pensaissa pesii punajalkasuulia. Aaltoalbatrossit palaavat '
+                + 'Españolalle pesimään huhtikuusta marraskuuhun. Sukeltajat '
+                + 'hakeutuvat Darwinin ja Wolfin saarille vasarahaiparvien '
+                + 'perään, mutta niille pääsee vain sukellusristeilyllä, ja '
+                + 'kovat virrat sopivat vain kokeneille.',
+              kuva: {
+                tiedosto: '(Galápagos Islands Tortuga Bay do not touch to tocar Amblyrhynchus cristatus) Maine Iguana.JPG',
+                lyhyt: 'Tortuga Bayn kyltti: iguaaneihin ei kosketa, ja niihin pidetään kahden metrin väli.',
+                selite: 'Santa Cruzin Tortuga Baylla kaksikielinen kyltti kieltää '
+                  + 'koskemasta meri-iguaaneihin tai häiritsemästä niitä ja '
+                  + 'muistuttaa kahden metrin etäisyydestä, joka koskee kaikkia '
+                  + 'saariston eläimiä.',
+                lahde: 'David Adam Kess, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Usvakausi ja käytännön vinkit',
+              teksti: 'Vaikka Galápagos on päiväntasaajalla, etelästä tuleva '
+                + 'kylmä Humboldtin virta pitää ilmaston viileämpänä kuin '
+                + 'tropiikissa odottaisi. Joulukuusta toukokuuhun on lämmin '
+                + 'kausi: meri ja ilma ovat noin 25-asteisia, tuulet heikkoja ja '
+                + 'meri tyynimmillään, ja aurinkoisia päiviä keskeyttävät vain '
+                + 'satunnaiset rankkasateet. Kesäkuusta marraskuuhun on garúan '
+                + 'aika. Kaakkoistuuli viilentää rannikon noin 22 asteeseen, ja '
+                + 'matalat pilvet jäävät ylänköjen rinteille, jotka saavat '
+                + 'kosteutensa tihkuna ja usvana, kun alavat rannat pysyvät '
+                + 'kuivina. Meri on silloin rauhattomampi, mutta kesällä eläimet '
+                + 'ovat vilkkaimmillaan, ja heinä–marraskuussa sukeltajat voivat '
+                + 'nähdä valashaita. Syys–marraskuussa moni alus on telakalla. '
+                + 'Muutaman vuoden välein El Niño lämmittää meren ja sekoittaa '
+                + 'koko kuvion. Snorklatessa märkäpuku on usein tarpeen, ja '
+                + 'päiväntasaajan aurinko polttaa nopeasti. Ecuadorin valuutta on '
+                + 'Yhdysvaltain dollari; pankkiautomaatteja on vähän, eikä kortti '
+                + 'kelpaa kaikkialla, joten käteistä kannattaa varata etenkin '
+                + 'Isabelalle ja Floreanalle. Puerto Ayorassa hanavettä ei '
+                + 'suositella juotavaksi, ja joulun ja pääsiäisen ajaksi majoitus '
+                + 'kannattaa varata hyvissä ajoin.',
+              kuva: {
+                tiedosto: 'Clouds surround the Galapagos Islands (MODIS 2020-09-21).jpg',
+                lyhyt: 'Satelliittikuvassa syyskuulta 2020 matala pilvimeri ympäröi Galápagossaaret.',
+                selite: 'NASAn Terra-satelliitti kuvasi saariston 17. syyskuuta '
+                  + '2020 garúan kaudella. Useimmat saaret ovat auringossa, mutta '
+                  + 'Isabelan ja Santa Cruzin rinteillä lepää usvapilvi, ja '
+                  + 'kaakkoinen San Cristóbal on kokonaan pilven peitossa.',
+                lahde: 'NASA, Wikimedia Commons (PD)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
