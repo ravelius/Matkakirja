@@ -143,7 +143,8 @@ namespace Matkakirja.Natiivi
             avausAlku = Time.realtimeSinceStartup;
             avausKehys = Time.frameCount;
             int v = ++versio;
-            UiKerros.Hae().StartCoroutine(AvaaReitti(valoId, v, jalkeen));
+            // Löydös 134: välimuistissa oleva data avaa kortin samassa kehyksessä (ei kehystä per sisäkkäinen haku).
+            Korutiini.Kaynnista(UiKerros.Hae(), AvaaReitti(valoId, v, jalkeen));
         }
 
         /// <summary>
