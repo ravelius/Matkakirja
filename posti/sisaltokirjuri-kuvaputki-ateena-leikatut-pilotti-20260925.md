@@ -26,3 +26,7 @@ Uudet webp-tiedostot samoille poluille PR:ään (avaa PR, jätä auki, älä mer
 ### Seuraava vaihe (vasta omistajan hyväksynnän jälkeen)
 
 Kaikki 70 kohtauskuvaa (lista: docs/raportit/miniatyyrit-kohtauskuvat-20260925.md haarassa sisaltokirjuri-miniatyyrit-kohtauskuvat, PR #3180; ei vielä tilattu). Valmistele tyyliä mutta älä generoi ennen kuin Fable kuittaa.
+
+### Lisäys 25.9. iltapäivä: mittaus manifestiin
+
+Vartija lukee mitat tiedostosta tools/miniatyyri-mitat.json (CI:ssä ei ole sharpia). Kun korvaat kuvia, aja `node tools/mittaa-miniatyyrit.mjs` (vaatii devDependency sharpin) ja committoi päivitetty manifesti samassa PR:ssä. Jos sharpia ei ole, kirjoita postiin "kuvat vaihdettu, mittaus puuttuu", niin Sisältökirjuri ajaa mittauksen. Vartija on PR #3180:ssä (kunnes se on mainissa, toimita silti kuvat — testin sha-tarkistus kaatuu vain, jos manifesti on jäänyt vanhaksi).
