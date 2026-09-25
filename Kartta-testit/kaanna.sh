@@ -33,6 +33,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/NimiLadonta.cs
 ../Assets/Matkakirja/Kartta/NostoSaannot.cs
 ../Assets/Matkakirja/Kartta/Panorointi.cs
+../Assets/Matkakirja/Kartta/Pohjapallolaskenta.cs
 ../Assets/Matkakirja/Kartta/Reikakorjaus.cs
 ../Assets/Matkakirja/Kartta/ReittiMitat.cs
 ../Assets/Matkakirja/Kartta/Saapumisnakyma.cs

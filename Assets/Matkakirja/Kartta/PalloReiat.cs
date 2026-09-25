@@ -23,7 +23,9 @@ namespace Matkakirja
     /// ja karsii näiden välissä), joten pelin omat taustan asettajat (Aurinko: usva ja lennon taivas eli skybox,
     /// RadioMastot, KarttaKerrokset.Taustavari) eivät häiriinny. Lennon skybox ohitetaan (SolidColor), ja pallon taakse
     /// piirtyvät linssien tähtitaivas (Tahtitaivas) ja astronautin ilmakehän hehku (Ilmakeha) piilotetaan piirron ajaksi.
-    /// Muuta pallon taakse ei piirry: napakannet ovat pinnalla, usva on sumua (ei koske taustaan).
+    /// Muuta pallon taakse ei piirry: napakannet ovat pinnalla, usva on sumua (ei koske taustaan). Pergamenttinen
+    /// pohjapallo (Pohjapallo, tila auto) piiloutuu magentan ajaksi, jotta reiät näkyvät; "pallo pohja paalle" pitää sen
+    /// näkyvissä, jolloin jäljelle jäävä magenta pinnan sisällä on reikiä, joita pohjapallokaan ei peitä.
     /// </summary>
     public class PalloReiat : MonoBehaviour
     {
@@ -203,7 +205,8 @@ namespace Matkakirja
             }
             return $"MATKAKIRJA pallo: rajat {(RajatPaalla ? "päällä" : "pois")} (kerroin {KorkeusKerroin.Arvo:0.##}, " +
                    $"korkeus {KorkeusM:0} m → marginaali {MarginaaliM:0} m), laattojen renderöijiä {laattoja}{esim}; " +
-                   $"tausta {(Magenta ? "magenta" : "pelin oma")}" + (p == null ? " (PalloReiat puuttuu: ei tilesetiä)" : "");
+                   $"tausta {(Magenta ? "magenta" : "pelin oma")}, pohjapallo {Pohjapallo.Tila}" +
+                   (p == null ? " (PalloReiat puuttuu: ei tilesetiä)" : "");
         }
     }
 }

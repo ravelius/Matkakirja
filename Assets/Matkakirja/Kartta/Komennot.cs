@@ -21,6 +21,9 @@ namespace Matkakirja
     ///                             (PalloReiat, löydös 119; oletus päällä, m = 9 000; päivittyy komennolla "korkeus n")
     ///   pallo tausta magenta|pois kameran tausta magentaksi piirron ajaksi (reiät kuviin; lennon skybox, tähtitaivas ja
     ///                             astronautin ilmakehä pois samalla)
+    ///   pallo pohja auto|paalle|pois|tila   pergamenttinen pohjapallo 3 km ellipsoidin alla (Pohjapallo, löydös 119):
+    ///                             auto (oletus) = päällä paitsi magentataustan ajan, paalle = myös magentan kanssa
+    ///                             (jäljelle jäävät reiät mitattavissa), pois = ei koskaan; tila = lokiin
     ///   panoroi lat lon x y [s]   piste (lat, lon) ruudun kohtaan (x, y) (osuudet 0–1, origo vasen alakulma);
     ///                             korkeus, kallistus ja suuntima pysyvät (PalloKierto.Panoroi, oletus 0,42 s)
     ///   odota s                   seuraava rivi vasta s sekunnin päästä
@@ -397,6 +400,14 @@ namespace Matkakirja
                     // pallo tausta magenta|pois: reiät erottuvat kuvissa (löydös 119, PalloReiat)
                     PalloReiat.Magenta = o[2] == "magenta";
                     Debug.Log(PalloReiat.Kuvaus());
+                    break;
+                case "pallo" when o.Length > 2 && o[1] == "pohja":
+                    // pallo pohja auto|paalle|pois|tila: pergamenttinen pohjapallo (löydös 119, Pohjapallo)
+                    if (o[2] == "auto") Pohjapallo.Tila = Pohjapallolaskenta.Tila.Auto;
+                    else if (o[2] == "paalle") Pohjapallo.Tila = Pohjapallolaskenta.Tila.Paalle;
+                    else if (o[2] == "pois") Pohjapallo.Tila = Pohjapallolaskenta.Tila.Pois;
+                    Pohjapallo.Instanssi?.Paivita();
+                    Debug.Log(Pohjapallo.Kuvaus());
                     break;
                 case "pallo":
                     kierto.Aja(kierto.leveys, kierto.pituus, kierto.MaxKorkeus(), 1.4f, null);

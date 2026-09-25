@@ -19,6 +19,8 @@ namespace Matkakirja
     /// 2. LAATTOJEN RAJAT: korkeuskerroin (KorkeusKerroin, oletus 2) nostaa maastoa verteksivarjostimessa, mutta
     ///    Unity karsii laatan Meshin rajoista, jotka on laskettu nostamattomasta geometriasta. Rajoja laajennetaan
     ///    kaikkiin suuntiin marginaalilla (k − 1) × korkeus (<see cref="Marginaali"/>, oletus 9 km).
+    /// 3. HELMAT: Alppien halkeaman juurisyy (laattatasojen hyppy ja helman pituus, <see cref="HelmaPeittaa"/>); raot
+    ///    peittää pergamenttinen pohjapallo (Pohjapallolaskenta, Pohjapallo).
     /// </summary>
     public static class Reikakorjaus
     {
@@ -130,6 +132,38 @@ namespace Matkakirja
         {
             float m = float.IsNaN(marginaali) || marginaali < 0f ? 0f : marginaali;
             return (Math.Abs(puolikas.x) + m, Math.Abs(puolikas.y) + m, Math.Abs(puolikas.z) + m);
+        }
+
+        // ---- 3. Helmat (Alppien halkeama, koe1 25.9.2026: reikarajaus.jpg) ----
+        //
+        // Halkeama oli vaakasuora laattasauma (leveyspiiri) terävän kaukaisen ja sumean lähemmän laatan välissä, ja se
+        // katosi samasta näkymästä minuutin päästä (b-rajatpois-alpit.png: pinnan sisällä 0 magentapikseliä). Lähempi
+        // laatta oli siis emo, joka pysyy (forbidHoles), kunnes kaikki sen lapset ovat ladattuja: saumassa hyppäsi
+        // kaksi tai useampi taso. cesium-native (QuantizedMeshLoader) ripustaa laatan reunaan helman, jonka korkeus on
+        // 5 × tason geometrinen virhe (HelmanKorkeus; z9 752 m), mutta karkean tason reuna on DEM:n overview-tasosta
+        // (z7: näyteväli 2,4 km) ja voi jyrkässä maastossa olla sitä enemmän hienon reunan alla.
+        // Korkeuskerroin ei avaa eikä sulje rakoja: varjostimen korotus H(h) = h (h ≤ 0) tai k·h (h > 0) on aidosti
+        // kasvava, joten reunojen ja helmojen järjestys säilyy (HelmaPeittaa); rako vain kasvaa ruudulla k-kertaiseksi.
+        // Korjaus vaatisi pidemmät helmat (cesium-native, ei säädettävissä Cesium for Unity 1.25:ssä) tai maastopolton,
+        // jossa karkean tason reuna ei jää hienon alle — molemmat isoja, joten raot peittää pohjapallo (Pohjapallo.cs).
+
+        /// <summary>Helman korkeus tasolla z (m): cesium-native 5 × 77 067 m / 2^z (CesiumJS:n tasovirhe, ei 8×-kerrointa).</summary>
+        public static double HelmanKorkeus(int taso) => 5.0 * Pohjapallolaskenta.Taso0Virhe / Math.Pow(2.0, taso);
+
+        /// <summary>Varjostimen korotus (tee_tileset.py): h + max(h, 0)·(k − 1) eli h meren alla, k·h maalla.</summary>
+        public static double Korotettu(double korkeusM, double kerroin) =>
+            korkeusM > 0.0 ? korkeusM * Math.Max(1.0, kerroin) : korkeusM;
+
+        /// <summary>
+        /// Peittääkö saumassa ylemmän reunan helma raon alempaan reunaan korotuksen jälkeen. Laatat piirtyvät
+        /// kaksipuolisina (Pallo.mat _Cull 0), joten kumman tahansa helma näkyy. Reunat ellipsoidista (m) ja tasot.
+        /// </summary>
+        public static bool HelmaPeittaa(double reunaA, int tasoA, double reunaB, int tasoB, double kerroin)
+        {
+            double a = Korotettu(reunaA, kerroin), b = Korotettu(reunaB, kerroin);
+            return a >= b
+                ? Korotettu(reunaA - HelmanKorkeus(tasoA), kerroin) <= b
+                : Korotettu(reunaB - HelmanKorkeus(tasoB), kerroin) <= a;
         }
     }
 }

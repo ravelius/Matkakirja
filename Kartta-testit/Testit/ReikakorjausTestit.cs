@@ -1,4 +1,4 @@
-// Löydös 119: pallon reiät (Kartta/Reikakorjaus.cs): maastouusinnan viiveet ja luokat, laattojen rajojen marginaali.
+// Löydös 119: pallon reiät (Kartta/Reikakorjaus.cs): maastouusinnan viiveet ja luokat, laattojen rajojen marginaali, helmat.
 using System;
 using Matkakirja;
 
@@ -131,6 +131,49 @@ namespace Matkakirja.Kartta.Testit
                 double px = r.NextDouble() * 200 - 100 + ax * s, py = r.NextDouble() * 200 - 100 + ay * s, pz = r.NextDouble() * 200 - 100 + az * s;
                 Oleta.Tosi(Math.Abs(px) <= l.x + 1e-3 && Math.Abs(py) <= l.y + 1e-3 && Math.Abs(pz) <= l.z + 1e-3, $"piste {i}");
             }
+        }
+
+        [Testi]
+        static void HelmanKorkeusTasoittain()
+        {
+            // cesium-native: 5 × 77 067 m / 2^z.
+            Oleta.Tosi(Math.Abs(Reikakorjaus.HelmanKorkeus(0) - 385336.7) < 1.0, "z0");
+            Oleta.Tosi(Math.Abs(Reikakorjaus.HelmanKorkeus(9) - 752.6) < 0.1, "z9 ≈ 753 m");
+            Oleta.Tosi(Math.Abs(Reikakorjaus.HelmanKorkeus(12) - 94.1) < 0.1, "z12 ≈ 94 m");
+            Oleta.Tosi(Math.Abs(Reikakorjaus.HelmanKorkeus(7) / Reikakorjaus.HelmanKorkeus(9) - 4.0) < 1e-12, "puolittuu tasoittain");
+        }
+
+        [Testi]
+        static void KorkeusKerroinEiAvaaEikaSuljeRakoja()
+        {
+            // Korotus on aidosti kasvava (meri ennallaan, maa × k), joten reunojen ja helmojen järjestys ei muutu.
+            var r = new Random(46);
+            int avoimia = 0;
+            for (int i = 0; i < 20000; i++)
+            {
+                double a = r.NextDouble() * 6000 - 500, b = a + (r.NextDouble() * 2 - 1) * 3000;
+                int ta = 6 + r.Next(7), tb = Math.Max(0, ta - r.Next(5));
+                bool k1 = Reikakorjaus.HelmaPeittaa(a, ta, b, tb, 1.0);
+                if (!k1) avoimia++;
+                foreach (double k in new[] { 1.5, 2.0, 3.0 })
+                    Oleta.Sama(k1, Reikakorjaus.HelmaPeittaa(a, ta, b, tb, k), $"a {a:0} z{ta}, b {b:0} z{tb}, k {k}");
+            }
+            Oleta.Tosi(avoimia > 0, "otoksessa on myös avoimia saumoja");
+        }
+
+        [Testi]
+        static void AlppienTasohyppy()
+        {
+            // Yhden tason sauma, ero alle hienon helman: peittyy. Kolmen tason hyppy jyrkässä rinteessä (z10:n reuna
+            // 2 400 m, emo z7 painunut 1 500 m:iin): z10:n helma 376 m ei ulotu, rako auki kertoimella 1 ja 2.
+            Oleta.Tosi(Reikakorjaus.HelmaPeittaa(2400, 10, 2100, 9, 2.0), "z10/z9, ero 300 m");
+            Oleta.Tosi(!Reikakorjaus.HelmaPeittaa(2400, 10, 1500, 7, 1.0), "z10/z7, ero 900 m, k 1");
+            Oleta.Tosi(!Reikakorjaus.HelmaPeittaa(2400, 10, 1500, 7, 2.0), "z10/z7, ero 900 m, k 2");
+            // Karkea reuna ylempänä: sen oma (pidempi) helma peittää, laatat ovat kaksipuolisia.
+            Oleta.Tosi(Reikakorjaus.HelmaPeittaa(1500, 10, 2400, 7, 2.0), "karkea ylempänä");
+            // Meren alle ulottuva helma ei korotu: rannikolla helma pitenee korotuksessa.
+            Oleta.Sama(-200.0, Reikakorjaus.Korotettu(-200, 2), "meri ennallaan");
+            Oleta.Sama(4000.0, Reikakorjaus.Korotettu(2000, 2), "maa × 2");
         }
     }
 }
