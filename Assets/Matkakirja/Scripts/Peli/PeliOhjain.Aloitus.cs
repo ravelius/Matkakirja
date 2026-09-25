@@ -134,6 +134,8 @@ namespace Matkakirja.Natiivi
                     () =>
                     {
                         if (!Voimassa()) return;
+                        // Löydös 85: topografiapinta, kone ja lennon merkit pois vasta paperin alla.
+                        Nappula?.PaataAloituslento();
                         Saavu(maaRajaus: false);
                         kameraPerilla = true;
                     },
@@ -156,6 +158,8 @@ namespace Matkakirja.Natiivi
         void AloituslentoLoppui(string kohde, bool kameraPerilla)
         {
             AloituslentoKaynnissa = false;
+            // Varareitti (ei korttia tai kortti keskeytyi): lennon esitys pois viimeistään tässä.
+            Nappula?.PaataAloituslento();
             try { AloituslentoPaattyi?.Invoke(kohde); } catch (Exception e) { Debug.LogException(e); }
             // Saapuminen normaalisti: traileri tai kaupunkilehti (Perilla); kamera webin avauslennon tapaan
             // kaupunkinäkymään (siirto.js laske: omaKamera → kamera.kotiin ilman maan laatikkoa), ellei se jo

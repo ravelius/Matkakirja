@@ -164,6 +164,11 @@ namespace Matkakirja
         public const double KiertoM = 250_000.0, KiertoKallistus = 55.0;
         /// <summary>Koneen vähimmäiskorkeus lähikuvista kiertoon (m lennon pohjasta): skaalattu kone ei leikkaa maastoa.</summary>
         public const double MinKoneKorkeusM = 10_000.0;
+        /// <summary>
+        /// Löydös 84 (omistaja 25.9.): aloituslennolla kone on jo nousussa, kun kamera lähtee valintanäkymästä, ja kamera
+        /// löytää sen vasta täydessä korkeudessa: nousu päättyy tällä osuudella syöksystä (muilla lennoilla 1,0).
+        /// </summary>
+        public const double AloituksenNousu = 0.6;
 
         /// <summary>
         /// Avaimet lennolle. reittiM = isoympyrän pituus, saapumisKorkeus = saapumisnäkymän korkeus (m, webin
@@ -316,8 +321,8 @@ namespace Matkakirja
         /// kamera on koneen tasolla 30 km:n päässä ja kone skaalattu 0,9 ruudun levyiseksi) ja laskee orbitin aikana
         /// nollaan, jotta kone laskeutuu kaupunkiin. Nappula: korkeus = max(huippu · sin πp, tämä).
         /// </summary>
-        public static double KoneenMinimi(double t, Jako j) =>
-            MinKoneKorkeusM * Kamerakayrat.Pehmea(t / Math.Max(1e-6, j.Syoksy)) * (1.0 - Kamerakayrat.Pehmea((t - j.Kierto) / Math.Max(1e-6, 1.0 - j.Kierto)));
+        public static double KoneenMinimi(double t, Jako j, double nousu = 1.0) =>
+            MinKoneKorkeusM * Kamerakayrat.Pehmea(t / Math.Max(1e-6, nousu * j.Syoksy)) * (1.0 - Kamerakayrat.Pehmea((t - j.Kierto) / Math.Max(1e-6, 1.0 - j.Kierto)));
 
         // ---- Koneen eteneminen: nopeusprofiili integroituna, normitettuna niin, että t = 1 → 1. ----
 

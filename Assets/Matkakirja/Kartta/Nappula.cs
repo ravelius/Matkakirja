@@ -410,7 +410,27 @@ namespace Matkakirja
             // Lähtökin näkyy (omistaja 24.9. klo 13.4x: punainen piste ja rengas lähtöön ja kohteeseen koko lennon).
             if (aloitusMerkit != null) aloitusMerkit.NaytaVain(new[] { kohde, lahto }.Where(x => x != null).ToArray());
             KarttaKerrokset.Instanssi?.Nakyvyys("pisteet", false);
-            liike = StartCoroutine(Lento(lahtoLat, lahtoLon, lat, lon, math.max(1f, kestoS), lahtoZoomS, lahti, valmis, false));
+            // Löydös 84 (omistaja 25.9. build 13): ei erillistä Lontoon zoomia. Kuva häivytetään mustaan, lennon pinta
+            // latautuu verhon takana, ja verhon jälkeen kamera lähtee valintanäkymästä kohti konetta, joka on jo
+            // nousussa (zoomin aika lisätään lentoon, jotta syöksy ei nopeudu).
+            liike = StartCoroutine(Lento(lahtoLat, lahtoLon, lat, lon, math.max(1f, kestoS) + lahtoZoomS, 0f, lahti, valmis, false, aloitus: true));
+        }
+
+        /// <summary>
+        /// Aloituslento odottaa perillä saapumiskorttia (löydös 85): lennon esitys (pinta, kone, merkit) jää kuvaan,
+        /// kunnes PeliOhjain kutsuu <see cref="PaataAloituslento"/> kortin peittäessä ruudun.
+        /// </summary>
+        public bool AloituslentoPerilla { get; private set; }
+
+        /// <summary>
+        /// Löydös 85: aloituslennon esitys pois (topografiapinta → vanha kartta, kone ja lennon merkit pois) vasta,
+        /// kun saapumiskortin paperi peittää ruudun. Ei tee mitään, jos aloituslento ei odota.
+        /// </summary>
+        public void PaataAloituslento()
+        {
+            if (!AloituslentoPerilla) return;
+            AloituslentoPerilla = false;
+            Paatalento();
         }
 
         /// <summary>Lennon vaihe (LENNON ESITYS): Pelikoodari ajoittaa äänet ja luennan, UI tekstit.</summary>
@@ -424,9 +444,11 @@ namespace Matkakirja
             VaiheVaihtui?.Invoke(v);
         }
 
-        IEnumerator Lento(double lat0, double lon0, double lat1, double lon1, float kesto, float zoomS, Action lahti, Action valmis, bool kaari)
+        IEnumerator Lento(double lat0, double lon0, double lat1, double lon1, float kesto, float zoomS, Action lahti, Action valmis, bool kaari,
+            bool aloitus = false)
         {
             kesken = valmis;
+            AloituslentoPerilla = false;
             // Lähtözoomin korkeus (Lontoo ennen koneen lähtöä).
             double lahtoKorkeus = kierto != null ? kierto.KorkeusKaarelle(lahtoKaari) : 0;
             // KAMERAREITTI (build 11): vaihejako lennon keston mukaan (sivukylki ≥ 1,4 s, orbit ≥ 4 s).
@@ -460,12 +482,36 @@ namespace Matkakirja
                 kohdeLataus = KarttaKerrokset.Instanssi?.EsilataaKohde(
                     math.min(lat1, sn.Lat - pk), math.max(lat1, sn.Lat + pk), sn.Lon - pl, sn.Lon + pl, lat1, lon1);
             }
-            if (usva != null)
+            bool pintaVaihdettu = false, laskuSumu = false, kohdeKirjattu = false;
+            if (aloitus)
+            {
+                // LÖYDÖS 84: feidi mustaan → värillinen topografiakartta latautuu taustalla → feidi takaisin. Pinta
+                // vaihdetaan verhon takana (ei lähtösumua), ja verho lähtee, kun reitin laatat ja näkyvä pallo ovat
+                // valmiit tai Katto on kulunut.
+                yield return Mustaverho.Haivyta(1f);
+                KarttaKerrokset.Instanssi?.LentoPohja(true);
+                pintaVaihdettu = true;
+                var pallo = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo : null;
+                float odotus = Time.unscaledTime;
+                // Vähintään muutama kehys, jotta Cesium ehtii pyytää uuden kerroksen laatat ennen latausasteen lukua.
+                int kehykset = 0;
+                while (Time.unscaledTime - odotus < MustanKatto)
+                {
+                    bool reitti = esilataus == null || esilataus.Osuus >= 0.9f;
+                    bool nakyma = pallo == null || pallo.ComputeLoadProgress() >= 99f;
+                    if (++kehykset > 10 && reitti && nakyma) break;
+                    yield return null;
+                }
+                Debug.Log($"MATKAKIRJA aloituslento: musta {Time.unscaledTime - odotus:0.0} s, esilataus "
+                          + (esilataus != null ? $"{esilataus.Valmis}+{esilataus.Epaonnistui}/{esilataus.Yhteensa}" : "-")
+                          + $", pallo {(pallo != null ? pallo.ComputeLoadProgress().ToString("0") : "-")} %");
+                yield return Mustaverho.Haivyta(0f);
+            }
+            else if (usva != null)
             {
                 usva.Aseta(lat0, lon0, UsvanKorkeus, 0f);
                 usva.Tavoite(1f, math.max(0.8f, zoomS));
             }
-            bool pintaVaihdettu = false, laskuSumu = false, kohdeKirjattu = false;
             if (kierto != null && zoomS > 0)
             {
                 kierto.Aja(lat0, lon0, lahtoKorkeus, zoomS, null);
@@ -547,7 +593,7 @@ namespace Matkakirja
                 var q = ReittiGeometria.Isoympyra(lat0, lon0, lat1, lon1, p);
                 // Kone vähintään 10 km lennon pohjan yllä lähikuvista kiertoon (skaalattu kone ei leikkaa maastoa,
                 // ja sivukyljen kamera on koneen tasolla), laskeutuu orbitin aikana.
-                koneMinimi = LennonAikajana.KoneenMinimi(t, jako);
+                koneMinimi = LennonAikajana.KoneenMinimi(t, jako, aloitus ? LennonAikajana.AloituksenNousu : 1.0);
                 double h = KoneenKorkeus(p, huippu);
                 Siirra(q.x, q.y, h);
                 double suunta = Suuntima(lat0, lon0, lat1, lon1, p);
@@ -626,7 +672,8 @@ namespace Matkakirja
                 }
                 double laskuSumuun = jako.Kierto + 0.55 * (1 - jako.Kierto);
                 if (usva != null && t > jako.Sivu + 0.02 && t < laskuSumuun) usva.Tavoite(0f, kesto * 0.12f);
-                if (usva != null && !laskuSumu && t > laskuSumuun)
+                // Löydös 85: aloituslento pysyy topografiakartalla loppuun asti (ei laskusumua eikä paluuta pohjaan).
+                if (usva != null && !aloitus && !laskuSumu && t > laskuSumuun)
                 {
                     laskuSumu = true;
                     usva.Aseta(lat1, lon1, UsvanKorkeus, usva.Peitto);
@@ -647,9 +694,14 @@ namespace Matkakirja
             liike = null;
             kesken = null;
             lentoPohja = double.NaN;
-            Paatalento();
+            // Löydös 85: aloituslennon esitys jää kuvaan saapumiskortin alle (PaataAloituslento).
+            if (aloitus) AloituslentoPerilla = true;
+            else Paatalento();
             valmis?.Invoke();
         }
+
+        /// <summary>Löydös 84: pisin musta odotus (s) lennon pinnan latautumista, vaikka laatat eivät olisi valmiita.</summary>
+        public const float MustanKatto = 5f;
 
         /// <summary>Lennon esitys pois (perillä tai keskeytys): kamera palautuu, valo, sumu ja pilvet pois.</summary>
         KaupunkiMerkit aloitusMerkit;
@@ -901,6 +953,8 @@ namespace Matkakirja
         void Pysayta()
         {
             lentoPohja = double.NaN;
+            AloituslentoPerilla = false;
+            Mustaverho.Pois();
             if (liike != null) StopCoroutine(liike);
             liike = null;
             kesken = null;
