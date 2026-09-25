@@ -1,0 +1,687 @@
+{
+  "erä": "linssikatalogi-era2-10-20260925",
+  "tila": "38 R2-objektia ja kanonista URL-osoitetta todennettu takaisinluvulla; katalogiin ja peliin kytkentä odottaa Fablea",
+  "tilaus": "posti/linssikatalogi-tilaus-20260924.json@3576ee735273bca9a1611f88c3adc7e4ccad704a",
+  "count": {
+    "lenses": 10,
+    "concepts": 10,
+    "cc": 9,
+    "cc_not_found": 1,
+    "objects": 38
+  },
+  "entries": [
+    {
+      "id": "R30",
+      "nimi": "Jääkauden rannat",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Jääkauden rantaviivat hahmottuvat nykyisten rannikoiden rinnalle; värit ovat havainnollistavia.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: clean 16:9 Matkakirja game-map lens concept illustration for 'Jääkauden rannat' (Ice Age shorelines). View of a believable world globe/map in warm cream and brown 19th-century parchment cartography, with the actual lens layer: translucent pale-blue lowered sea surfaces and clearly distinct ancient Ice Age coastlines tracing continental shelves, especially North Atlantic, Siberian shelf and Sunda shelf. Tiny sparse contour accents, tactile paper grain, gentle vignette, elegant restrained visual depth, premium museum-game art direction. This is a schematic visual concept based on bathymetry and past sea-level change; no numeric sea-level values or measured data. Wide landscape composition with globe/map filling frame. No title, lettering, labels, numbers, legends, user interface, buttons, logos, watermark, people, or fake live status.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/R30-havainne.jpg",
+            "objectKey": "linssikatalogi/R30-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R30-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 243930,
+            "sha256": "f5506622d919f8aeca05b417f8e0cd64937e537746fae6ba70c0c21a5d1c0f4d"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/R30-havainne-480.jpg",
+            "objectKey": "linssikatalogi/R30-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R30-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 34320,
+            "sha256": "e56b89dc7e92580e03e1ad917b263123576182639cb2342593a2aa297ec7e31e"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Jääkauden merenpinnan tasoja kuvaava NOAA:n maailmanlaajuinen visualisointi.",
+        "creator": "National Oceanic and Atmospheric Administration",
+        "title": "Global sea levels during the last Ice Age",
+        "year": "2008",
+        "collection": "NOAA / Wikimedia Commons",
+        "license": "Public domain (PD-USGov-NOAA)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Global_sea_levels_during_the_last_Ice_Age.jpg",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Global_sea_levels_during_the_last_Ice_Age.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Global_sea_levels_during_the_last_Ice_Age.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "transform_note": "Koko lähde mahtuu kuva-alalle; sRGB-RGB-muunnos, Lanczos-pienennys ja tarvittaessa neutraali reunatäyttö. Ei sisältömuokkausta.",
+        "source_context": "Yksittäinen NOAA-visualisointi, ei GEBCO/ETOPO- tai Spratt–Lisiecki-aikasarja eikä animoitu rannansiirtymä.",
+        "attribution_note": "National Oceanic and Atmospheric Administration: Global sea levels during the last Ice Age (2008). NOAA / Wikimedia Commons. Public domain (PD-USGov-NOAA). Rajattu/sovitettu 4:3-kuvaan; katso alkuperäinen: https://commons.wikimedia.org/wiki/File:Global_sea_levels_during_the_last_Ice_Age.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/full/R30-cc.jpg",
+            "objectKey": "linssikatalogi/R30-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R30-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 283791,
+            "sha256": "41806859d4bd02c68033147a4ae77e236b423abf39e8d1d70fdb08bfe7f9fa18"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/thumb/R30-cc-480.jpg",
+            "objectKey": "linssikatalogi/R30-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R30-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 37764,
+            "sha256": "4c092227db421532b468ca851c58ece328a8c373390d0d877e5f3814ad260d49"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R31",
+      "nimi": "80 päivää → 80 tuntia",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Höyrylaiva- ja junamatkan mutkitteleva reitti vertautuu lentoreitin kaareen.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 Matkakirja game-map lens concept for '80 päivää → 80 tuntia', global travel-time comparison. Elegant 19th-century cream-and-brown parchment world map split by a subtle fold in the paper: on one half a winding steamship-and-rail path with tiny period vessel silhouettes; on the other a clean long-range air route arc with tiny airplane silhouette. Same geographic endpoints, different route geometry, no dates or time values rendered. Glowing route points are purely symbolic, not measured itinerary data. Refined brass compass detail, cinematic gentle light, tactile paper texture, broad geographic clarity. No text, numbers, symbols resembling UI, legends, buttons, logos, watermarks, modern people, or live data claim.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/R31-havainne.jpg",
+            "objectKey": "linssikatalogi/R31-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R31-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 246439,
+            "sha256": "e91ec1d77e58287eb9242fef3756eb9c64a57dbbe56ce769fb60822bfa5a7195"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/R31-havainne-480.jpg",
+            "objectKey": "linssikatalogi/R31-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R31-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 38550,
+            "sha256": "f7e4d7cd7bf443b67d86d299780ef26e0887adbf4e263bf8642b8c354ec2fbff"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Jules Vernen kahdeksankymmenen päivän maailmanympärimatkan alkuperäinen reittikartta.",
+        "creator": "Alphonse de Neuville ja Léon Benett",
+        "title": "Around the World in Eighty Days - map",
+        "year": "1873 (romaanin ranskankielinen kuvitus)",
+        "collection": "Wikimedia Commons, alkuperäinen ranskalainen romaanikuvitus",
+        "license": "Public domain (PD-old, PDM 1.0)",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Around_the_World_in_Eighty_Days_-_map.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Around_the_World_in_Eighty_Days_-_map.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "transform_note": "Koko lähde mahtuu kuva-alalle; sRGB-RGB-muunnos, Lanczos-pienennys ja tarvittaessa neutraali reunatäyttö. Ei sisältömuokkausta.",
+        "source_context": "Kuva esittää romaanin 80 päivän reittiä; 80 tunnin nykyvertailu ei sisälly lähteeseen.",
+        "attribution_note": "Alphonse de Neuville ja Léon Benett: Around the World in Eighty Days - map (1873 (romaanin ranskankielinen kuvitus)). Wikimedia Commons, alkuperäinen ranskalainen romaanikuvitus. Public domain (PD-old, PDM 1.0). Rajattu/sovitettu 4:3-kuvaan; katso alkuperäinen: https://commons.wikimedia.org/wiki/File:Around_the_World_in_Eighty_Days_-_map.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/full/R31-cc.jpg",
+            "objectKey": "linssikatalogi/R31-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R31-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 290615,
+            "sha256": "cf2ad1a06b4f05ba5534fcacb1606d5e76b27f7305c43a0bc8568641d9839d1f"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/thumb/R31-cc-480.jpg",
+            "objectKey": "linssikatalogi/R31-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R31-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 42404,
+            "sha256": "d38eab9910b62afa7455f22ebe4ea5242ab0e391ae1db35a6ce574aa4e7ad2d4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R32",
+      "nimi": "Lentävä maapallo",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Lentokoneiden liike kiertää karttapalloa havainnollisina valojuovina, ei oikeina lentoina.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 Matkakirja game-map concept for 'Lentävä maapallo', aircraft motion around Earth over a day. A three-dimensional parchment-toned globe seen from orbit, believable continents and oceans, a few small elegant aircraft silhouettes at varying altitudes with translucent gold motion trails gracefully wrapping the sphere. Motion trails are intentionally schematic and decorative; avoid implying actual aircraft locations, counts, routes, ADS-B measurements, or live tracking. Warm cream, bronze and midnight teal, subtle atmospheric rim lighting and tactile old-cartography surface, immersive premium museum-game art. No labels, writing, numbers, UI, buttons, radar screen, logos, watermark, or human figures.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/R32-havainne.jpg",
+            "objectKey": "linssikatalogi/R32-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R32-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244098,
+            "sha256": "a786d97860a8bc8c40034f91904127cb77a762eef1ee1ae5c8609eb9df4e07c2"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/R32-havainne-480.jpg",
+            "objectKey": "linssikatalogi/R32-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R32-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 34169,
+            "sha256": "da5e66bd4417fa9eb2eb7ecd15c9ec77d8ccffb4793e8b24744db28fbca9ce46"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "ei löytynyt",
+        "reason": "Tilauksen 24 tunnin ADS-B-lentoliikenteestä ei löytynyt täsmällistä itsenäistä PD/CC0/CC BY/CC BY-SA -kuvaa. adsb.lol:n API on ODbL 1.0 -lisensoitu, ja yleinen reittikartta kuvaisi eri aineistoa kuin todellisia lentoja vuorokauden aikana.",
+        "rights_reference": "https://www.adsb.lol/docs/open-data/api/"
+      }
+    },
+    {
+      "id": "R33",
+      "nimi": "Sähkeet 1873 ja nyt",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Sähkeajan merikaapelien harva verkko rinnastuu nykyisen yhteydenpidon tiheämpään kerrokseen.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 Matkakirja game-map concept for 'Sähkeet 1873 ja nyt', historical telegraph versus modern submarine communications. Believable world map on warm aged parchment, with two visually distinct but unlabeled transparent layers: sparse copper telegraph cable threads crossing oceans from 19th-century coastal hubs, and a finer cool blue network of contemporary subsea fiber threads. A faint vertical paper crease signals comparison. Routes are illustrative only, not claims of actual cable alignment or present-day connectivity. Precise coastlines, restrained glowing nodes, ink and brass details, no charts. No text, dates, numbers, legends, UI, logos, watermark, people, or live-status cues.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/R33-havainne.jpg",
+            "objectKey": "linssikatalogi/R33-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R33-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244767,
+            "sha256": "908f3ecdd8f48925ec731d40212596d108fe8adad1726d1e60acb89fed528cd5"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/R33-havainne-480.jpg",
+            "objectKey": "linssikatalogi/R33-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R33-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 32435,
+            "sha256": "52e7b8128a2f6c4815424dfc686cbe6c4ece19df3bb99e7a758d22c07808ec7f"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1871 maailmankartta näyttää käytössä olevia ja suunniteltuja lennätinlinjoja.",
+        "creator": "J. H. Colton & Co.; Nathaniel P. Banks; G. W. & C. Colton & Co.",
+        "title": "Map showing the telegraph lines in operation, under contract, and contemplated, to complete the circuit of the globe",
+        "year": "1871",
+        "collection": "Library of Congress / Wikimedia Commons",
+        "license": "Public domain (PD-old / PD-Art, PDM 1.0)",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Map_showing_the_telegraph_lines_in_operation%2C_under_contract%2C_and_contemplated%2C_to_complete_the_circuit_of_the_globe_LOC_86692708.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Map_showing_the_telegraph_lines_in_operation%2C_under_contract%2C_and_contemplated%2C_to_complete_the_circuit_of_the_globe_LOC_86692708.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "transform_note": "Koko lähde mahtuu kuva-alalle; sRGB-RGB-muunnos, Lanczos-pienennys ja tarvittaessa neutraali reunatäyttö. Ei sisältömuokkausta.",
+        "source_context": "Kartta on vuodelta 1871, kaksi vuotta ennen linssin 1873-vertailukohtaa; se sisältää myös rakenteilla ja vasta suunnitteilla olleita linjoja, eikä kuvaa nykyisiä merikaapeleita.",
+        "attribution_note": "J. H. Colton & Co.; Nathaniel P. Banks; G. W. & C. Colton & Co.: Map showing the telegraph lines in operation, under contract, and contemplated, to complete the circuit of the globe (1871). Library of Congress / Wikimedia Commons. Public domain (PD-old / PD-Art, PDM 1.0). Rajattu/sovitettu 4:3-kuvaan; katso alkuperäinen: https://commons.wikimedia.org/wiki/File:Map_showing_the_telegraph_lines_in_operation%2C_under_contract%2C_and_contemplated%2C_to_complete_the_circuit_of_the_globe_LOC_86692708.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/full/R33-cc.jpg",
+            "objectKey": "linssikatalogi/R33-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R33-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 293245,
+            "sha256": "4002f6f623420df70b71a2620bc01cae293d038c6c5ae2bec696088503767da9"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/thumb/R33-cc-480.jpg",
+            "objectKey": "linssikatalogi/R33-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R33-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 56619,
+            "sha256": "709520fb4f6509a31a2be1e480a42ec18ecbdb3d5fd95d86bdd2bf1278678238"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R34",
+      "nimi": "Elinajan kartta",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Abstraktit värinauhat havainnollistavat elinajan muutosta ilman keksittyä aluejakaumaa.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 Matkakirja game-map concept for 'Elinajan kartta', a lens about changing life expectancy. Wide world map in consistent neutral cream-and-brown parchment, all countries and land areas the same neutral color. Above it hover three broad translucent watercolor ribbons of amber, teal, and rose, curved like successive time sheets and loosely crossing the map without filling particular countries, regions, or latitude belts. Add only a few tiny soft points of light as conceptual places, with no sizes or values. The ribbons show the idea of comparing change through time; they MUST NOT form a choropleth, geographic gradient, climate-zone map, or factual spatial distribution. Gentle engraved coastlines, tactile paper, premium museum-game aesthetic. No numbers, text, legend, labels, UI, buttons, logos, watermark, people, or live status.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/R34-havainne.jpg",
+            "objectKey": "linssikatalogi/R34-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R34-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 235411,
+            "sha256": "e677e7a6923f2ac0e40cea0262b015213a6f4530e2a43ff89279d56b4f3058d0"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/R34-havainne-480.jpg",
+            "objectKey": "linssikatalogi/R34-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R34-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 27087,
+            "sha256": "50dfbb0b7a04664d8db5a6358bc05774bac83f71a4a816a38b2758d7dc9f83bf"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Our World in Datan kartta esittää elinajanodotteen maittain vuonna 2023.",
+        "creator": "Our World in Data",
+        "title": "Life expectancy, World, 2023",
+        "year": "2023",
+        "collection": "Our World in Data / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Life_expectancy%2C_World%2C_2023.svg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Life_expectancy%2C_World%2C_2023.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "transform_note": "Koko lähde mahtuu kuva-alalle; sRGB-RGB-muunnos, Lanczos-pienennys ja tarvittaessa neutraali reunatäyttö. Ei sisältömuokkausta.",
+        "source_context": "Staattinen vuoden 2023 tilannekuva; ei linssin ajallista animaatiota. Lähteen omat aineisto- ja menetelmähuomiot tulee säilyttää kuvatekstin yhteydessä.",
+        "attribution_note": "Our World in Data: Life expectancy, World, 2023 (2023). Our World in Data / Wikimedia Commons. CC BY 4.0. Rajattu/sovitettu 4:3-kuvaan; katso alkuperäinen: https://commons.wikimedia.org/wiki/File:Life_expectancy%2C_World%2C_2023.svg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/full/R34-cc.jpg",
+            "objectKey": "linssikatalogi/R34-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R34-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 161674,
+            "sha256": "1d51718723cf6e75c5d2e656f74828313601ad99ccb003e52e84850a015aa639"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/thumb/R34-cc-480.jpg",
+            "objectKey": "linssikatalogi/R34-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R34-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 29242,
+            "sha256": "fadb84690f2af1b4f27e9134a1d55edda724fd50b1a9b7486c1eebb75fcae930"
+          }
+        ]
+      }
+    },
+    {
+      "id": "X1",
+      "nimi": "Karttapallo",
+      "tyyppi": "muu",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Karttapallo kutsuu tutkimaan maapallon alueita läheltä.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 Matkakirja game-world concept for 'Karttapallo', the interactive world globe itself. A single magnificent three-dimensional Earth globe suspended above a warm parchment table, believable coastlines and terrain, soft golden light grazing its surface, delicate latitude-longitude engraved traces and a subtle suggestion of dive-in depth toward one region. Premium tactile museum-game illustration, cream/brown/teal palette, uncluttered composition, globe occupying most of the frame. No interface, labels, writing, numbers, buttons, icons, logos, watermarks, recognizable people, or screenshots.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/X1-havainne.jpg",
+            "objectKey": "linssikatalogi/X1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 238944,
+            "sha256": "3d51255a7fba718c02b6a2fa2428834964800ab1fd8ddff9556f64c51f7945aa"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/X1-havainne-480.jpg",
+            "objectKey": "linssikatalogi/X1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 31065,
+            "sha256": "bc594d29b38fa8fe2416dca9b0765fdc45f4b2eecf1c08b52ccd55a831c0eb15"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Apollo 17 -miehistön valokuvassa Maa näkyy kokonaisena avaruudesta.",
+        "creator": "Apollo 17 -miehistö / NASA",
+        "title": "The Blue Marble (AS17-148-22727)",
+        "year": "1972",
+        "collection": "NASA / Wikimedia Commons",
+        "license": "Public domain (PD-USGov-NASA)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:The_Blue_Marble.jpg",
+        "source_url": "https://commons.wikimedia.org/wiki/File:The_Blue_Marble.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/78/The_Blue_Marble.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "transform_note": "Koko lähde mahtuu kuva-alalle; sRGB-RGB-muunnos, Lanczos-pienennys ja tarvittaessa neutraali reunatäyttö. Ei sisältömuokkausta.",
+        "source_context": "Todellinen valokuva Maasta, ei pelin vuorovaikutteisen karttapallon kuvakaappaus.",
+        "attribution_note": "Apollo 17 -miehistö / NASA: The Blue Marble (AS17-148-22727) (1972). NASA / Wikimedia Commons. Public domain (PD-USGov-NASA). Rajattu/sovitettu 4:3-kuvaan; katso alkuperäinen: https://commons.wikimedia.org/wiki/File:The_Blue_Marble.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/full/X1-cc.jpg",
+            "objectKey": "linssikatalogi/X1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 293486,
+            "sha256": "5dd4dba9ef3ae765ea96ae3b8231e0b63a162eaf2beef47df2857cd873c9bf77"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/thumb/X1-cc-480.jpg",
+            "objectKey": "linssikatalogi/X1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 43250,
+            "sha256": "f181c86a5855fc23d6565b4d8ca1195eb808bab8b8126e410c6d3a98a3f85664"
+          }
+        ]
+      }
+    },
+    {
+      "id": "X2",
+      "nimi": "Topografialinssi",
+      "tyyppi": "pohjakartta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Topografialinssissä korkeusväri ja maaston varjostus nostavat vuoristot näkyviin.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 Matkakirja base-map lens concept for 'Topografialinssi'. A believable raised-relief world map rendered as finely crafted topographic cartography on cream parchment: color conveys elevation from lowland sage through warm ochre to high alpine ivory, while directional terrain shadows make mountain shapes palpable. Distinct Andes, Himalaya, East African Rift, Alps, and ocean floor relief in plausible geography. Three-dimensional shallow oblique lighting, restrained old-map texture, clean museum-game visual. No labels, text, scale, contour numbers, UI, buttons, logos, watermark, people, or invented quantitative legend.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/X2-havainne.jpg",
+            "objectKey": "linssikatalogi/X2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248719,
+            "sha256": "d6e9b472980bb19d917d3f09d1a61afa9dacc17bdb5fbe04f87a1fa0612a35ec"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/X2-havainne-480.jpg",
+            "objectKey": "linssikatalogi/X2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 38028,
+            "sha256": "a7362290bc481c865b892409ac8d11474bcded6f84d5a01ebff9cdb615c5a564"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "NOAA:n globaali korkeus- ja syvyysmalli näyttää Maan pinnan muodot.",
+        "creator": "National Oceanic and Atmospheric Administration",
+        "title": "Elevation",
+        "year": "vuosi ilmoittamatta",
+        "collection": "NOAA / Wikimedia Commons",
+        "license": "Public domain (PD-USGov-NOAA)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Elevation.jpg",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Elevation.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/Elevation.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "transform_note": "Koko lähde mahtuu kuva-alalle; sRGB-RGB-muunnos, Lanczos-pienennys ja tarvittaessa neutraali reunatäyttö. Ei sisältömuokkausta.",
+        "source_context": "Staattinen maailman korkeusvisualisointi, ei pelin topografisen pohjakartan kuvakaappaus.",
+        "attribution_note": "National Oceanic and Atmospheric Administration: Elevation (vuosi ilmoittamatta). NOAA / Wikimedia Commons. Public domain (PD-USGov-NOAA). Rajattu/sovitettu 4:3-kuvaan; katso alkuperäinen: https://commons.wikimedia.org/wiki/File:Elevation.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/full/X2-cc.jpg",
+            "objectKey": "linssikatalogi/X2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 297662,
+            "sha256": "115eecd521ea8f0daa6ae6c1a5e8ab010bd22489e61d1d07334b5300e7d34b83"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/thumb/X2-cc-480.jpg",
+            "objectKey": "linssikatalogi/X2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 49509,
+            "sha256": "1fa995321a98c15924ee648ac93c06b5174b2a4764194e000171512d8d338955"
+          }
+        ]
+      }
+    },
+    {
+      "id": "X3",
+      "nimi": "Vesistölinssi",
+      "tyyppi": "pohjakartta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Vesistölinssi piirtää jokiverkot, järvet ja meret maaston päälle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 Matkakirja base-map lens concept for 'Vesistölinssi'. A geographically believable parchment globe/world map with topographic relief under a vivid but restrained blue hydrology layer: major river systems flowing to the sea, freshwater lakes, connected basins and deep ocean; recognizable Amazon, Nile, Congo, Mississippi, Ganges, Great Lakes, Caspian. Water glints softly while land retains fine cream-and-brown engraved terrain. Premium tactile museum-game illustration; no numerical flow values or fake measurements. No text, labels, UI, buttons, logos, watermark, people, or screenshots.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/X3-havainne.jpg",
+            "objectKey": "linssikatalogi/X3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248217,
+            "sha256": "4bf39ccde4b57daa939f5a1a18af55e08c891c5eb89e6a5cef37c886d6d2765a"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/X3-havainne-480.jpg",
+            "objectKey": "linssikatalogi/X3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 40810,
+            "sha256": "508f4949a0eb26a3f79b2739f518c8f14ada7dc6601126dbf0e025373fc2ef0d"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Maailmankartassa yhdistyvät topografia sekä jokien ja järvien karttakerrokset.",
+        "creator": "MTBlack",
+        "title": "Large World Topo Map 1",
+        "year": "2016",
+        "collection": "Wikimedia Commons; NOAA-, NASA- ja Natural Earth III -aineistot",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Large_World_Topo_Map_1.png",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Large_World_Topo_Map_1.png/3840px-Large_World_Topo_Map_1.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+        "transform_note": "Koko lähde mahtuu kuva-alalle; sRGB-RGB-muunnos, Lanczos-pienennys ja tarvittaessa neutraali reunatäyttö. Ei sisältömuokkausta.",
+        "source_context": "Globaali koontikartta, jonka pienet vesistöt eivät erotu 1600 pikselin esityksessä. Lähteeksi säilytetty Commonsin 3840 pikselin versio, koska alkuperäinen PNG on 311 Mt.",
+        "attribution_note": "MTBlack: Large World Topo Map 1 (2016). Wikimedia Commons; NOAA-, NASA- ja Natural Earth III -aineistot. CC BY-SA 4.0. Rajattu/sovitettu 4:3-kuvaan; katso alkuperäinen: https://commons.wikimedia.org/wiki/File:Large_World_Topo_Map_1.png",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/full/X3-cc.jpg",
+            "objectKey": "linssikatalogi/X3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 290470,
+            "sha256": "fdb422f5d9c9ce76d317eae56cf1d7bdd9e2f16be4f80eb3f49fdacefae0f4e1"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/thumb/X3-cc-480.jpg",
+            "objectKey": "linssikatalogi/X3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 41522,
+            "sha256": "1b0c3a3c0bd3bfa2b22d28077d971f4f8d75b9a3043b176d7d74d4cb1a35e72f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "X4",
+      "nimi": "Astronautin kamera",
+      "tyyppi": "muu",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Astronautin kameran näkökulma avaa maapallon kuvauskohteet kiertoradalta.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 Matkakirja game lens concept for 'Astronautin kamera'. Cinematic orbital viewpoint over a believable three-dimensional Earth in warm parchment/teal grade, with a subtle vintage brass camera-lens rim in the foreground and a few small luminous photo-location glints on the globe; a moonlit atmospheric horizon and gentle sunlit terrain. Conveys exploring astronaut photographs made from 1991–2026 without showing any actual copyrighted astronaut photo, gallery interface, image card, or a specific camera frame. Premium tactile museum-game art, hopeful and curious. No people, text, labels, numbers, buttons, logos, watermark, or screen UI.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/X4-havainne.jpg",
+            "objectKey": "linssikatalogi/X4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244301,
+            "sha256": "88c22a358731fc97bf7e173aa83931017c225203985b97354480a184c2a24425"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/X4-havainne-480.jpg",
+            "objectKey": "linssikatalogi/X4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 36841,
+            "sha256": "cd8ef1577f7a6a3eceb972cedb7d9911c27edfbb9a4847fcf240972551fbda7b"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "ISS:n miehistön ottama valokuva maapallosta yövalaistuksessa.",
+        "creator": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center",
+        "title": "ISS065-E-400662 - View of Earth",
+        "year": "2021-09-09",
+        "collection": "NASA JSC Gateway to Astronaut Photography of Earth / Wikimedia Commons",
+        "license": "Public domain (PD-USGov-NASA)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:ISS065-E-400662_-_View_of_Earth.jpg",
+        "source_url": "https://commons.wikimedia.org/wiki/File:ISS065-E-400662_-_View_of_Earth.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/ISS065-E-400662_-_View_of_Earth.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "transform_note": "Koko lähde mahtuu kuva-alalle; sRGB-RGB-muunnos, Lanczos-pienennys ja tarvittaessa neutraali reunatäyttö. Ei sisältömuokkausta.",
+        "source_context": "Yksi aito astronauttikuva, ei 64 kuvauskohteen galleria eikä käyttöliittymän kuva.",
+        "attribution_note": "Earth Science and Remote Sensing Unit, NASA Johnson Space Center: ISS065-E-400662 - View of Earth (2021-09-09). NASA JSC Gateway to Astronaut Photography of Earth / Wikimedia Commons. Public domain (PD-USGov-NASA). Rajattu/sovitettu 4:3-kuvaan; katso alkuperäinen: https://commons.wikimedia.org/wiki/File:ISS065-E-400662_-_View_of_Earth.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/full/X4-cc.jpg",
+            "objectKey": "linssikatalogi/X4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 183073,
+            "sha256": "179b664738c9dcd0d90a9a18bbd3f7a72fd2d6f42de04876161b08b09cbf35b4"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/thumb/X4-cc-480.jpg",
+            "objectKey": "linssikatalogi/X4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 20850,
+            "sha256": "7f390571ae686d68020a35cdd24f9145ceffd55de8ca1e94fa30c91235bd5b74"
+          }
+        ]
+      }
+    },
+    {
+      "id": "X5",
+      "nimi": "Maailmanradio",
+      "tyyppi": "muu",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Maailmanradio yhdistää kaupunkeja kuvitteellisilla ääniaalloilla karttapallon yllä.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 Matkakirja game lens concept for 'Maailmanradio'. A believable parchment world globe/map at twilight, warm city glows and a handful of slender period-inspired radio towers sending translucent concentric amber sound-wave arcs across continents and oceans; elegant brass and deep indigo ambience suggesting tuning across world cities. Purely conceptual visual metaphor, no real station locations, frequencies or live broadcasts represented. Keep map geography recognizable and atmosphere restrained, not a dashboard. No text, labels, numbers, logos, user-interface controls, play buttons, radio dial markings, people, watermark, or screenshot.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/X5-havainne.jpg",
+            "objectKey": "linssikatalogi/X5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 245573,
+            "sha256": "fb2bf9e739d08ac56cf8c22928b31798bbdb81c9506ce01823939f06353c8aea"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-10/X5-havainne-480.jpg",
+            "objectKey": "linssikatalogi/X5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 34426,
+            "sha256": "e1da6ca018d215f5e0a9c4631a8c07b8c0e42bc9714f4bc524351bd2e6c40f62"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "NIST:n vuoden 1920 valokuva näyttää musiikkia lähettävän varhaisen radioaseman laitteiston.",
+        "creator": "National Institute of Standards and Technology",
+        "title": "WWVNBSRadioStation 001: Phonograph playing into a radio transmitting set",
+        "year": "1920",
+        "collection": "NIST WWV NBS Radio Station Photographic Collection / Wikimedia Commons",
+        "license": "Public domain (PD-USGov-NIST)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:WWVNBSRadioStation_001.jpg",
+        "source_url": "https://commons.wikimedia.org/wiki/File:WWVNBSRadioStation_001.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/WWVNBSRadioStation_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "transform_note": "Koko lähde mahtuu kuva-alalle; sRGB-RGB-muunnos, Lanczos-pienennys ja tarvittaessa neutraali reunatäyttö. Ei sisältömuokkausta.",
+        "source_context": "Historiallinen radiolähetyskuva, ei nykyisten suorien radiolähetysten näkymä. NIST edellyttää attribuutiota.",
+        "attribution_note": "National Institute of Standards and Technology: WWVNBSRadioStation 001: Phonograph playing into a radio transmitting set (1920). NIST WWV NBS Radio Station Photographic Collection / Wikimedia Commons. Public domain (PD-USGov-NIST). Rajattu/sovitettu 4:3-kuvaan; katso alkuperäinen: https://commons.wikimedia.org/wiki/File:WWVNBSRadioStation_001.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/full/X5-cc.jpg",
+            "objectKey": "linssikatalogi/X5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 233795,
+            "sha256": "78a997f946f8266cbddfcda2c43d3e0fe5cf64cda0f7a225bee2ea0ee314d283"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-10/thumb/X5-cc-480.jpg",
+            "objectKey": "linssikatalogi/X5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 29911,
+            "sha256": "fc965550752f6b155af7805f917e6722be4f09e22bd4c5f6ca7bfcf1285f18c2"
+          }
+        ]
+      }
+    }
+  ],
+  "r2_verified": {
+    "objects": 38,
+    "canonicalUrlsVerified": true,
+    "receipt": "output/fable-20260924/linssikatalogi/era2/ready-10-20260925/r2-receipt.json"
+  }
+}

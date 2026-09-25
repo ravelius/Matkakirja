@@ -1,0 +1,687 @@
+{
+  "erä": "linssikatalogi-era2-09-20260925",
+  "tila": "38 R2-objektia ja kanonista URL-osoitetta todennettu takaisinluvulla; katalogiin ja peliin kytkentä odottaa Fablea",
+  "tilaus": "posti/linssikatalogi-tilaus-20260924.json@3576ee735273bca9a1611f88c3adc7e4ccad704a",
+  "count": {
+    "lenses": 10,
+    "concepts": 10,
+    "cc": 9,
+    "cc_not_found": 1,
+    "objects": 38
+  },
+  "entries": [
+    {
+      "id": "R19",
+      "nimi": "Maailmantalouden painopiste",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainne maailmantalouden painopisteen liikkeestä kartalla; valopisteet ja reitti ovat kuvituksellisia, eivät laskettuja arvoja.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create a single polished 16:9 landscape concept illustration for an educational world-map game lens called 'world economy's moving center of gravity'. A readable globe-like flat world map in soft parchment and midnight-blue ocean, with a smooth luminous dotted trajectory crossing the map from East Asia toward the North Atlantic and curving back east, a few translucent circular region halos suggesting relative economic weight. Editorial cartography, beautifully restrained, precise geography of continents, elegant atmospheric light, clear hierarchy, age 13+. It is a conceptual interface visualization only, not a measured historical map: do not include numeric values, dates, axes, labels, text, legends, UI chrome, flags, logos, watermarks, or a claim of real-time data. Distinctive painterly cartographic style, wide composition with generous breathing room, 16:9.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R19.jpg",
+            "objectKey": "linssikatalogi/R19-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R19-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 242635,
+            "sha256": "f9e904c5434a9122814ee4820594304f8ee792b8729d78d153f9b3693845d5bd"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R19-thumb.jpg",
+            "objectKey": "linssikatalogi/R19-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R19-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 35542,
+            "sha256": "85d05e9bdc87d59f50c34f7882dc774db751bcfe2d6a18e9fda742d1a975c861"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Danny Quahin laskema maailman taloudellisen painopisteen reitti vuosina 1980–2050; vuoden 2010 jälkeiset pisteet ovat ennusteita.",
+        "creator": "Danny Quah",
+        "title": "The World’s Economic Centre of Gravity 1980–2050",
+        "year": "2010–2011",
+        "collection": "Wikimedia Commons; creator upload",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:2010.09.27-LSE-Research-Danny.Quah-Map.png",
+        "download_url": "https://commons.wikimedia.org/wiki/File:2010.09.27-LSE-Research-Danny.Quah-Map.png",
+        "transform_note": "crop/downsample",
+        "source_context": "Tekijän oma tutkimuskuva, ei suoraan tilausrivin Maddison-aineiston visualisointi.",
+        "attribution_note": "Danny Quah, The World’s Economic Centre of Gravity 1980–2050, CC BY-SA 4.0; 4:3 sovitus.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R19.jpg",
+            "objectKey": "linssikatalogi/R19-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R19-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 147919,
+            "sha256": "185f6731e42433d4300b7bd532cf456a0c9bb511609ea869fc07ad4b0e8fd193"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R19-thumb.jpg",
+            "objectKey": "linssikatalogi/R19-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R19-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 32984,
+            "sha256": "a9142aeca548d2c208fffa0c6ccbf313e651fbc0a134b74bee2b34b557adb92a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R21",
+      "nimi": "Metsät katoavat",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainne metsäpeitteen muutoksen tutkimisesta: kartta ja tarkennus näyttävät, miltä metsäkadon linssi voisi tuntua.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create a wide 16:9 conceptual map-lens illustration for an educational geography game about forests disappearing. Global equirectangular world map with recognizable continents, deep blue ocean, forest regions represented by textured emerald canopy, and scattered small amber gaps/dissolving edges in the Amazon, Congo Basin and Southeast Asia as a visual metaphor for forest change. A soft translucent magnifying-lens circle over one forest region reveals leaf canopy and clearings. Polished editorial cartography, sophisticated natural colors, warm gentle light, suitable for age 13+. This is symbolic, not a plotted dataset: no measured rates, dates, quantitative scale, red-alert dashboard, text, labels, logos or watermark. Clear composition and distinct visual identity.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R21.jpg",
+            "objectKey": "linssikatalogi/R21-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R21-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 243208,
+            "sha256": "40ddc2e659bb6848146ff9bd63fbac069d137dea6d08cbe6d07f395e4ea964e9"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R21-thumb.jpg",
+            "objectKey": "linssikatalogi/R21-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R21-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 45911,
+            "sha256": "4cf592743ea33215ac51bc75574b6ec2062ba6a6e5e0e00b7eeed63f3a44f3f6"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Kongojoen lähialueen puuston menetys vuosina 2000–2013 Hansenin Global Forest Change -aineistossa. Värit merkitsevät muutoksen ajankohtaa.",
+        "creator": "Joshua Stevens / NASA Earth Observatory",
+        "title": "Mapping Forest Loss with Landsat: Congo River forest change, 2000–2013",
+        "year": "2015",
+        "collection": "NASA Earth Observatory; Hansen et al. / University of Maryland Global Forest Change",
+        "license": "Public domain (US federal government work)",
+        "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "source_url": "https://science.nasa.gov/earth/earth-observatory/mapping-forest-loss-with-landsat-85824/",
+        "download_url": "https://science.nasa.gov/earth/earth-observatory/mapping-forest-loss-with-landsat-85824/",
+        "transform_note": "crop/downsample",
+        "source_context": "Paikallinen näyte maailmanlaajuisesta aineistosta; ei globaali kartta.",
+        "attribution_note": "NASA Earth Observatory map by Joshua Stevens, using Global Forest Change data from Hansen et al./UMD; 4:3 sovitus.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R21.jpg",
+            "objectKey": "linssikatalogi/R21-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R21-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 272881,
+            "sha256": "415abb36cb2083615916c10f9e5733bbffb826a8812286c8e7f59df2b8a8cdf0"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R21-thumb.jpg",
+            "objectKey": "linssikatalogi/R21-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R21-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 48609,
+            "sha256": "8de3367ff3ec997933c0257b7a31d625df441c4fd1f0bb6c830dbb004b3b7b26"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R22",
+      "nimi": "Pisaran matka",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainne pisaran kulusta Andien rinteiltä Amazonin sivujokia pitkin Atlantille; jokiverkko on kuvituksellinen.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create a new 16:9 wide educational concept art image of a river-basin map lens. Show a geographically credible world map. In northern South America, trace one symbolic raindrop from the green eastern slopes of the Andes (not a snowy mountain close-up) into converging Amazon tributaries and toward the Atlantic. A circular magnification inset at left must depict that same green Andean-to-Amazon tropical drainage landscape with a matching blue branching watershed, connected by a thin line to the precise northern South American focus point. Other world rivers are subtle blue background lines. Elegant midnight ocean and light earth colors, age 13+, clear and spacious. Purely illustrative, no measured flow values, no dates, no legends, no text, no labels, no logos, no watermark, no real-time indication.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R22.jpg",
+            "objectKey": "linssikatalogi/R22-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R22-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 240639,
+            "sha256": "54b5a8c969a73e5038a143085d34cad1adaf33fe7366dcf68afb0b936450eb20"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R22-thumb.jpg",
+            "objectKey": "linssikatalogi/R22-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R22-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 29857,
+            "sha256": "593735b341c671e84ad32d016a00ff5ce44abcec0698849c536adc302734ffb5"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Jokiverkon luonnollinen virtaama RiverATLAS-tietokannassa. Kartta havainnollistaa, kuinka vesi kerääntyy suuriin jokiuomiin.",
+        "creator": "Simon Linke, Bernhard Lehner, Camille Ouellet Dallaire et al.",
+        "title": "Example attributes of HydroATLAS, Fig. 2: natural discharge per river reach of RiverATLAS",
+        "year": "2019",
+        "collection": "Scientific Data 6, article 283, Fig. 2",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://www.nature.com/articles/s41597-019-0300-6",
+        "download_url": "https://www.nature.com/articles/s41597-019-0300-6",
+        "transform_note": "crop/downsample",
+        "source_context": "HydroATLAS/RiverATLAS perustuvat HydroRIVERS- ja HydroBASINS-verkkoon; alkuperäisestä kuvasta rajattu alempi paneeli.",
+        "attribution_note": "Linke et al. 2019, Scientific Data, Fig. 2 (alempi paneeli), CC BY 4.0; rajaus ja 4:3 sovitus.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R22.jpg",
+            "objectKey": "linssikatalogi/R22-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R22-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 289316,
+            "sha256": "4b59455cb9d28d1a9727bd3c990e652ea4659ba8cac6aa63c06ed2576ad16e60"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R22-thumb.jpg",
+            "objectKey": "linssikatalogi/R22-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R22-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 58966,
+            "sha256": "eb5c74ab359382ed7f2e6c5c53203e6f77a59b1ef42ef43e7a5239fa6376bd49"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R23",
+      "nimi": "Kielten kirjo",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainne kielten rakenteellisesta moninaisuudesta; värimosaiikki ei esitä kielirajoja tai lukumääriä.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "A distinctive 16:9 landscape conceptual illustration for an educational world-map lens about the diversity of human languages. Global map with geographically recognizable continents on a warm ivory background, every inhabited region made of many small richly colored woven mosaic cells and differently shaped nonverbal speech-wave motifs, emphasizing variety without implying numerical counts or exact boundaries. A few soft translucent close-up circles reveal subtle branching language-family patterns, not words or scripts. Museum-quality editorial cartography with jewel-tone indigo, teal, coral and gold, clear hierarchy, sophisticated and inclusive, suitable for age 13+. Pure concept visualization inspired by linguistic datasets; no text, letters, pseudo-text, labels, numbers, flags, logos, legends, watermark, or false statistical scale.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R23.jpg",
+            "objectKey": "linssikatalogi/R23-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R23-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 242011,
+            "sha256": "a633ad84b64c0cfffd8476d56014d6f76900740ba993e1051a75b01cb4fb114f"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R23-thumb.jpg",
+            "objectKey": "linssikatalogi/R23-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R23-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 45963,
+            "sha256": "93dd4dc060d9b46cced82181f5714019d5973a41408fbc78919a8cba95384ba8"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Grambank-aineistosta lasketun paikallisen kielitypologisen vaihtelun maailmanlaajuinen jakauma. Harmaa tarkoittaa puuttuvaa tai rajallista aineistoa.",
+        "creator": "Anna Graff, Natalia Chousou-Polydouri, David Inman, Hedvig Skirgård, Marc Lischka, Taras Zakharko, Chiara Barbieri & Balthasar Bickel",
+        "title": "Curating global datasets of structural linguistic features for independence, Fig. 10a",
+        "year": "2025",
+        "collection": "Scientific Data 12, Fig. 10a",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://www.nature.com/articles/s41597-024-04319-4",
+        "download_url": "https://www.nature.com/articles/s41597-024-04319-4",
+        "transform_note": "crop/downsample",
+        "source_context": "Esittää kielten rakenteellista vaihtelua, ei kielten lukumäärää tai Glottologin kielirajoja.",
+        "attribution_note": "Graff et al. 2025, Scientific Data, Fig. 10a, CC BY 4.0; yläpaneelin rajaus ja 4:3 sovitus.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R23.jpg",
+            "objectKey": "linssikatalogi/R23-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R23-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 122595,
+            "sha256": "51e787a6e4994ce45b918e4010f6659dfa41092e943ec93ddf6a5d4d9f7b906b"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R23-thumb.jpg",
+            "objectKey": "linssikatalogi/R23-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R23-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 26030,
+            "sha256": "95897e76f0bd662f81e033fd08958a694fd16c15366e318205098f361637c178"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R24",
+      "nimi": "Mitä maa kasvaa",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainne viljelykasvien ja kasvuympäristöjen karttalinssistä; värit ja kasvien sijoittelu eivät ole aineistokartta.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "A wide 16:9 landscape concept visualization for an educational global map lens about what Earth's farmland grows. Recognizable world map as an elegant warm topographic relief, with gentle irregular patches of wheat-gold, leafy green, rice-paddy teal and orchard rust over broad plausible agricultural regions, plus three circular botanical close-ups of a wheat head, rice plant and maize cob connected lightly to different continents. Show climate and soil as subtle layered textures, not hard boundaries. Distinct refined natural-history atlas style, soft daylight, geographically credible, suitable for age 13+. This is a symbolic concept illustration, not a measured MapSPAM or SoilGrids map: no exact claims, no percentages, no scale bars, no legends, no captions, no text, no flags, no logos, no watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R24.jpg",
+            "objectKey": "linssikatalogi/R24-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R24-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244721,
+            "sha256": "f02b0ccea5fb2e896c6c294f34b380f87adc3c9f0a8aabf1cd84466b224cf1b6"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R24-thumb.jpg",
+            "objectKey": "linssikatalogi/R24-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R24-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 45764,
+            "sha256": "e1adf4797f1e1253c7ee6ae341bc7289831e8d660f01b222f9c4db4faa911aef"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Peltoalan nettomuutos eri puolilla maailmaa 2003–2019: vihreä ilmaisee laajenemista ja ruskea supistumista.",
+        "creator": "Lauren Dauphin / NASA Earth Observatory",
+        "title": "Global Croplands Expand: net cropland change, 2003–2019",
+        "year": "2022",
+        "collection": "NASA Earth Observatory; Potapov et al. global cropland change",
+        "license": "Public domain (US federal government work)",
+        "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "source_url": "https://science.nasa.gov/earth/earth-observatory/global-croplands-expand-149617/",
+        "download_url": "https://science.nasa.gov/earth/earth-observatory/global-croplands-expand-149617/",
+        "transform_note": "crop/downsample",
+        "source_context": "Kuva ei näytä viljelykasvilajeja eikä käytä MapSPAMia. MapSPAM-verkkolisenssi on CC BY-NC, joten sitä ei käytetty.",
+        "attribution_note": "NASA Earth Observatory image by Lauren Dauphin using data from Potapov et al. (2022); 4:3 sovitus.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R24.jpg",
+            "objectKey": "linssikatalogi/R24-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R24-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 223554,
+            "sha256": "3bf8b88cd7c3a3b5e72911b182ee5997a31b9323f7bb6b5b5fe84f4b2f0264fd"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R24-thumb.jpg",
+            "objectKey": "linssikatalogi/R24-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R24-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 27236,
+            "sha256": "fd06cbb2da89369b8d6b2b8c2ffb571975eb12b09054d42e07be00c84df65004"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R25",
+      "nimi": "Sähkö syttyy",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainne eri sähköntuotantotapojen näkymisestä maailmankartalla; laitosten sijainnit ovat kuvituksellisia.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create a wide 16:9 conceptual map illustration for a thoughtful educational game lens about how electricity lights up the world. Geographically credible flat world map at blue twilight. Across major inhabited regions, show sparse tiny luminous clusters of power stations represented with distinct simple silhouettes: wind turbines, solar panels, hydropower dams and thermal plant chimneys, woven into a soft network of light connecting cities. Different energy sources are visually distinct by shapes and gentle color, but no counts or exact factual placements implied. Atmospheric yet clear editorial cartography, age 13+, sophisticated midnight-indigo and amber palette, no dramatic pollution or invented statistics. No text, labels, dates, numbers, percentages, legend, logos, flags, watermark or dashboard UI.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R25.jpg",
+            "objectKey": "linssikatalogi/R25-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R25-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 235196,
+            "sha256": "154800e81dba37b365028d3ac22fd3696fdbe398b98847a7fee84bfc41a6d64d"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R25-thumb.jpg",
+            "objectKey": "linssikatalogi/R25-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R25-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 32394,
+            "sha256": "2a52cdb3b7968292d3bbf22e8608f5bbe2f2b8f9dc0d8f9318c2ec1934c370e1"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Maailman voimalaitoksia energialähteen mukaan GPPD-tietokannan pohjalta. Pisteiden sijainti ja väri osoittavat voimalatyypin.",
+        "creator": "Wikideas1",
+        "title": "World power plants",
+        "year": "2026",
+        "collection": "Wikimedia Commons; data: World Resources Institute Global Power Plant Database",
+        "license": "CC0 1.0 (visualization); GPPD data CC BY 4.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:World_power_plants.svg",
+        "download_url": "https://commons.wikimedia.org/wiki/File:World_power_plants.svg",
+        "transform_note": "crop/downsample",
+        "source_context": "Voimalaitosten sijainnit, ei sähkön tuotannon aikajana. Commons-visualisointi ladattu alkuperäisenä SVG:nä.",
+        "attribution_note": "Wikideas1, World power plants, CC0 1.0; underlying Global Power Plant Database © World Resources Institute, CC BY 4.0; SVG-rasterointi ja 4:3 sovitus.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R25.jpg",
+            "objectKey": "linssikatalogi/R25-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R25-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 276868,
+            "sha256": "eb1f24aa53354d631749a8a1cd19cf87a2d5ee78afa131fe1c8193f764257fd7"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R25-thumb.jpg",
+            "objectKey": "linssikatalogi/R25-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R25-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 43042,
+            "sha256": "4b08ff06088d964f71604229d24cd3661b21c6c7a5d375fd4d8eaa090685b85c"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R26",
+      "nimi": "Tuulet nyt",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainne virtaviivaisesta tuulikartasta; virtausviivat eivät ole sääennuste tai tämänhetkinen mittaus.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create a wide 16:9 conceptual educational world-map lens for global winds. A recognizable global projection seen from above with subtle Earth relief and oceans, overlaid with elegant semi-transparent flowing streamlines circling high and low pressure systems over oceans and continents. Streamlines have a fluid cyan-to-gold glow solely for visual separation, with a circular magnification area showing layered airflow above the North Atlantic. Beautiful calm editorial meteorological illustration, sophisticated and readable, age 13+. Schematic wind motion only, not a live forecast or measured field: no dates, clocks, velocity numbers, color scale, pressure values, labels, text, logos, watermark or real-time UI. Make it visually distinct from a generic satellite photograph.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R26.jpg",
+            "objectKey": "linssikatalogi/R26-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R26-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 245936,
+            "sha256": "1ccc705542ceee54e4d303bc736fc61fede5ab895a43b576e26953534c5bcb62"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R26-thumb.jpg",
+            "objectKey": "linssikatalogi/R26-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R26-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 47732,
+            "sha256": "524276f595ac68ef041d403ffb956370013ec80fee1767d4852de17f965d6c33"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "GFS-mallin tuulet 10 hPa:n painepinnalla 1.1.2023; kuva esittää yläilmakehää eikä maanpinnan tämänhetkistä tuulta.",
+        "creator": "Cameron Beccario / earth.nullschool.net; GFS data: NCEP / U.S. National Weather Service",
+        "title": "Earth - Air - Wind - 10hPa - Patterson - 2023-01-01",
+        "year": "2023",
+        "collection": "Wikimedia Commons; earth.nullschool.net GFS visualization",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Earth_-_Air_-_Wind_-_10hPa_-_Patterson_-_2023-01-01.png",
+        "download_url": "https://commons.wikimedia.org/wiki/File:Earth_-_Air_-_Wind_-_10hPa_-_Patterson_-_2023-01-01.png",
+        "transform_note": "crop/downsample",
+        "source_context": "Historiallinen 10 hPa:n yläilmakehän kartta, ei reaaliaikainen pintatuuli. Käytä vain tällä täsmällisellä rajauksella.",
+        "attribution_note": "GFS/NCEP/NWS data; visualization © Cameron Beccario, earth.nullschool.net, CC BY-SA 4.0; 4:3 sovitus.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R26.jpg",
+            "objectKey": "linssikatalogi/R26-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R26-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 285726,
+            "sha256": "fa1c55a1cda3c6ecc73ac11ea8798c6ffbf0c97833945d6fd23ee496a5657664"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R26-thumb.jpg",
+            "objectKey": "linssikatalogi/R26-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R26-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 69766,
+            "sha256": "2e1a4595af78c3a3c84db191b984091275c7a2944023879cbcc6877847757de4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R27",
+      "nimi": "Ilma jota hengitämme",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainne ilmanlaadun ja pienhiukkasten tutkimisesta maailmankartalla; utukerrokset eivät esitä mitattuja pitoisuuksia.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create a 16:9 wide conceptual visualization for an educational global map lens about the air people breathe. Credible world geography at dawn, subtle translucent atmospheric layers above inhabited continents, with restrained soft amber-gray haze in some broad urban and desert regions and clearer blue air elsewhere. A single magnifying inset shows floating microscopic aerosol particles and clean air currents above a generic city silhouette, connected to the map without asserting an exact city. Delicate scientific illustration blended with editorial cartography, age 13+, calm and thoughtful, not apocalyptic. Symbolic only, not measured OpenAQ or EDGAR concentrations: no values, no scales, no colors claiming a real air-quality index, no current/live badge, no dates, no text, labels, logos, watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R27.jpg",
+            "objectKey": "linssikatalogi/R27-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R27-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 246155,
+            "sha256": "4d840ae927ec321f7d3d07d7a51d81df54fb4622024767897a64186729fbbb8e"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R27-thumb.jpg",
+            "objectKey": "linssikatalogi/R27-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R27-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 34978,
+            "sha256": "4ee66f29c27628d93a8cad83ebeb28789aebb2aff03348896f666234e513811e"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Arvio maanpinnan lähellä olevien pienhiukkasten (PM2.5) keskimääräisestä pitoisuudesta vuosina 2001–2006. Saharan ja Lähi-idän voimakas väri sisältää luonnollista pölyä.",
+        "creator": "Robert Simmon / NASA Earth Observatory",
+        "title": "Global View of Fine Aerosol Particles",
+        "year": "2010",
+        "collection": "NASA Earth Observatory; MISR, MODIS and GEOS-Chem PM2.5 estimates",
+        "license": "Public domain (US federal government work)",
+        "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "source_url": "https://science.nasa.gov/earth/earth-observatory/global-view-of-fine-aerosol-particles-46823/",
+        "download_url": "https://science.nasa.gov/earth/earth-observatory/global-view-of-fine-aerosol-particles-46823/",
+        "transform_note": "crop/downsample",
+        "source_context": "NASA:n satelliitti- ja malliarvio; ei tilausrivin OpenAQ- tai EDGAR-aineistoa eikä nykyhetken mittaus.",
+        "attribution_note": "NASA map by Robert Simmon, based on MISR, MODIS and GEOS-Chem data; 4:3 sovitus.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R27.jpg",
+            "objectKey": "linssikatalogi/R27-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R27-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 210918,
+            "sha256": "9ceec42dab2a3ebf3af4d6f255a3f14bd93ab83306eb604dbb778e8312a75e48"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R27-thumb.jpg",
+            "objectKey": "linssikatalogi/R27-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R27-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 30291,
+            "sha256": "ec490240f1ba666f64aef845ebe8e369cf0fecb58409af271a4d4b93c2328f96"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R28",
+      "nimi": "Eläinten matkat",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainne lintujen, valaiden ja maaeläinten matkojen tutkimisesta; reitit ovat symbolisia, eivät seurantadataa.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create a distinctive 16:9 wide conceptual world-map game lens for animal journeys and migration. Recognizable global geography on deep teal ocean and muted land. Three clearly symbolic journey pathways: a broad graceful bird flight ribbon from Europe toward Africa, a whale route winding through the Pacific, and an ungulate seasonal loop in East Africa. Show tiny elegant silhouettes of a stork-like bird, whale and antelope beside the paths, and subtle habitat vignettes; paths are decorative conceptual arcs, not exact tracking records. Museum-quality natural-history cartography, restrained luminous colors, emotionally engaging but scientifically careful, age 13+. Do not imply measured Movebank or OBIS tracks: no coordinates, dates, counts, exact species names, legends, text, labels, logos, watermark, dashboard chrome or real-time status.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R28.jpg",
+            "objectKey": "linssikatalogi/R28-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R28-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 241584,
+            "sha256": "1ef2a48747d550216806fd59140f81035046dfdb5e1544df0093e51e58401362"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R28-thumb.jpg",
+            "objectKey": "linssikatalogi/R28-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R28-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 36571,
+            "sha256": "bd846a816dfb1e9d5478c5ab052799417636dae028e050dc301a3218d7d95648"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "ei löytynyt",
+        "reason": "Movebankin The wonders of animal tracking -video on CC BY 4.0, mutta itse videon käyttökelpoista karttaruutua ei voitu noutaa; julkinen pikkukuva on abstrakti valo eikä esitä eläinten reittejä. OBIS:n yksittäisissä aineistoissa on myös CC BY-NC -rajoituksia. Harhaanjohtavaa tai lisenssiltään epäselvää sijaiskuvaa ei toimiteta.",
+        "rights_reference": null
+      }
+    },
+    {
+      "id": "R29",
+      "nimi": "Korallien helle",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainne koralliriuttojen lämpöstressilinssistä; korallien hehku ei kuvaa mitattuja Degree Heating Weeks -arvoja.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create a wide 16:9 conceptual educational map-lens illustration about heat stress on coral reefs. A credible world map with deep ocean blue and accurately placed broad tropical reef belts as sparse delicate coral-shaped glints, not an exact dataset map. A large circular underwater magnification inset shows a living colorful reef transitioning subtly toward pale bleached branches under a gentle amber warming current, with fish still present and a sober hopeful tone. Rich scientific-natural-history art blended with polished cartography, age 13+, elegant and clear. The glow is symbolic only, not NOAA Coral Reef Watch measurements: no values, date, color scale, legends, alerts, text, labels, logos, watermark or real-time badge.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R29.jpg",
+            "objectKey": "linssikatalogi/R29-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R29-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249289,
+            "sha256": "774c0eb31347c29fc72df842a7856fa7ba6e65ca878107f152f9b34ea5e72184"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-09/R29-thumb.jpg",
+            "objectKey": "linssikatalogi/R29-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R29-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 38896,
+            "sha256": "a0eed37d246c074b6e23c4a21c22221cf66f62517a3201e94bf951b44d29ce8e"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "NOAA Coral Reef Watchin 23.9.2026 kartta kuvaa trooppisten merien kertyvää lämpöstressiä Degree Heating Weeks -mittarilla.",
+        "creator": "NOAA Coral Reef Watch",
+        "title": "Daily 5km Degree Heating Weeks (DHW), 23 Sep 2026",
+        "year": "2026",
+        "collection": "NOAA Coral Reef Watch, Daily 5km Satellite Coral Bleaching Heat Stress DHW v3.1",
+        "license": "Public domain (US federal government work)",
+        "license_url": "https://www.noaa.gov/disclaimer",
+        "source_url": "https://www.coralreefwatch.noaa.gov/product/5km/index_5km_dhw.php",
+        "download_url": "https://www.coralreefwatch.noaa.gov/product/5km/index_5km_dhw.php",
+        "transform_note": "crop/downsample",
+        "source_context": "Trooppinen alue, ei koko maapallo; ajantasainen kuva muuttuu päivittäin ja arkistoitu alkuperäinen säilytetään.",
+        "attribution_note": "NOAA Coral Reef Watch, Daily 5km Degree Heating Weeks v3.1, 23 September 2026, public domain; 4:3 sovitus.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R29.jpg",
+            "objectKey": "linssikatalogi/R29-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R29-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 287292,
+            "sha256": "9cc2ae6955a5652369542f28e3a09224063882b4e4411b2db5f234b690293451"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-09/R29-thumb.jpg",
+            "objectKey": "linssikatalogi/R29-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R29-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 44803,
+            "sha256": "7c575507ae414dc2e0540fe9c6b2bf80e14eeb9be50147659603454f15e3d842"
+          }
+        ]
+      }
+    }
+  ],
+  "r2_verified": {
+    "objects": 38,
+    "canonicalUrlsVerified": true,
+    "receipt": "output/fable-20260924/linssikatalogi/era2/ready-09-20260925/r2-receipt.json"
+  }
+}
