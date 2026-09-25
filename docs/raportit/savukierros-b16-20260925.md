@@ -34,6 +34,18 @@ Kehittäjätila `defaults write … matkakirja-kehittaja 1`.
    → Ateena → (välietappi, paluu Ateenaan noppatuloksella) → **Sofia**, perillä
    ei reittejä. Kuva 9.
 
+## Täydennys (Fablen lisäkohdat, 21.3x)
+
+- **Äänimaisema kuuluu (IM II, iPhone):** `aani mittaa` → rms 0,092, huippu 0,53,
+  soivia 2 (`linssi-ihmisen-matka-lyria.mp3` + Kertoja), reitti Speaker,
+  voimakkuus 0,6 — PASS.
+- **Aloituslento, kone kuvassa:** kontaktilehti kuva 12 (9 kuvaa ~1,5–2 s välein):
+  kone näkyy kuvissa 2–6, "Ohita" näkyy kaikissa paitsi ensimmäisessä (musta
+  alkukuva, t=0), lopussa Ateena-verho "ATEENA · Päivä 1/80" → esittelykortti.
+  Kesto napautuksesta verhoon ≈ 12–14 s (mittaus sisältää simctl-kuvien viiveen)
+  — vastaa 12 s -tavoitetta. Pieni huomio: "Ohita" puuttuu aivan ensimmäisestä
+  mustasta kuvasta.
+
 ## Avoinna
 
 - **CC-nappia ei havaittu** Ihmisen matka II:n yläriviltä (vuosiluvun rivin
