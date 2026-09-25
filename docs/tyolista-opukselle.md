@@ -70,7 +70,32 @@ siirretään arkistoon. Uudet paketit lisää omistaja tai Fable.
 Valmiit paketit ja koko vanha historia:
 docs/arkisto/tyolista-opukselle-2026-08.md.
 
-## Paketti O9: kaikki lehdet valmiiksi + uudet mantereet (tilattu 22.8.2026) 🟡 KESKEN
+## Paketti Turistioppaat: matkailijalle-osio 71 uudelle kaupungille (tilattu 25.9.2026) 🟡 KESKEN
+
+**Fablen tilaus 25.9.2026** (docs/raportit/sisalto-inventaario-20260924.md,
+"Turistiopas (`matkailijalle:`)" 0/71): sama kaava kuin Lontoon/Pariisin
+opas (`kuva` + `kappale` + `artikkeli.jaksot`, ensimmäisessä jaksossa
+kolmen kuvan karuselli), Commons-todennus jokaiselle kuvalle. Vain
+oikeat kaupungit/taajamat (ei alueita — sama rajaus kuin kohdekartassa,
+ks. docs/raportit/sisalto-inventaario-20260924.md kohta 3). Erät 3
+kaupunkia kerrallaan, yksi PR per erä sisältöjunaan. Sisältökirjuri
+jatkaa erää toisensa jälkeen ilman erillistä lupaa, kunnes 71 kaupungin
+lista on täynnä tai Fable/omistaja käskee toisin.
+
+- **Erä 1 (PR seuraa):** Managua, San Juan, Nouméa.
+
+## Paketti O9: kaikki lehdet valmiiksi + uudet mantereet (tilattu 22.8.2026) — VANHENTUNUT, KS. ALLA
+
+**HUOM (Sisältökirjuri 25.9.2026):** tätä dokumenttia ei ole päivitetty
+elokuun jälkeen, ja peli on ehtinyt paljon pidemmälle (natiiviversio,
+71 uuden kaupungin erä, kartta- ja lehtiuudistukset — ks. Raamattu).
+Tarkistin suoraan koodista: paketit O6, O7 ja O8 alla ovat KAIKKI jo
+täysin toteutettuja (kaikilla mainituilla kaupungeilla on
+`KULTTUURI_KATEGORIAT`-lohko), vaikka otsikot väittävät toisin. En
+merkinnyt niitä yksitellen ✅:ksi rivi riviltä ajan säästämiseksi —
+tämä koko O6–O9-lohko voidaan siirtää arkistoon seuraavalla
+siivouskerralla. Ajankohtainen työ on nyt yllä oleva
+Turistioppaat-paketti ja docs/raportit/sisalto-inventaario-20260924.md.
 
 **Omistajan tilaus 22.8.2026 illalla (kumoaa LEHTITAUKO-huomautuksen
 kokonaan):** *"pyritään tekemään siis kaikki kaupunki- ja maalehdet
