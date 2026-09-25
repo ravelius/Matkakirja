@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2231, teksti: 'Leikatut kohtauskuvat: Luxemburg, Madrid, New Y… (#3215)' },
   { v: 2230, teksti: 'Sisältöjuna: leikatut kohtauskuvat Ljubljana, Lux–Nikosia' },
   { v: 2229, teksti: 'Sisältöjuna: leikatut kohtauskuvat (5 kaupunkierää)' },
   { v: 2228, teksti: 'Sisältöjuna: turistiopas 14–18, miniatyyrit, suunnitelmat' },
