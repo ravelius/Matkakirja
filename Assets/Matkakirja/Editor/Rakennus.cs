@@ -612,7 +612,9 @@ namespace Matkakirja.Editori
         public static void IosSimulaattori()
         {
             AsetaIos(iOSSdkVersion.SimulatorSDK);
-            Kaanna("Build/iOS-sim");
+            // MATKAKIRJA_KEHITYS=1: Development-käännös (Profilerin skriptimerkit CpuMittarille), kuten laitteelle.
+            bool kehitys = Environment.GetEnvironmentVariable("MATKAKIRJA_KEHITYS") == "1";
+            Kaanna("Build/iOS-sim", kehitys ? BuildOptions.Development : BuildOptions.None);
         }
 
         /// <summary>
