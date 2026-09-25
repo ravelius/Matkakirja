@@ -10,7 +10,28 @@ const ODOTETUT_MAARAT = {
   GBR: 4,
   POL: 16,
   AUT: 9,
+  GRC: 14,
+  NLD: 15,
+  BEL: 11,
+  DNK: 5,
+  SVK: 8,
+  FIN: 18,
+  EST: 15,
+  LVA: 5,
+  LTU: 10,
+  SVN: 12,
 };
+
+/*
+ * GRC lisättiin 25.9.2026 (Sisältökirjuri, löydös 115:n yhteydessä) ja
+ * on vielä erässä 1 — vain `lyhyt`. `97 maakuntaa`-testi jäljempänä
+ * koskee siis yhä vain alkuperäisiä 97 aluetta (7 maata), kunnes
+ * GRC:n kuvat saapuvat kuvaputkelta ja se lasketaan mukaan. NLD, BEL,
+ * DNK ja SVK lisättiin samana päivänä samalla tavalla (erä 1, vain
+ * `lyhyt`), samoin FIN, EST, LVA, LTU ja SVN.
+ */
+const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN', 'EST', 'LVA', 'LTU', 'SVN']);
+const KUVATTU_VALMIIKSI = (iso) => !ERASSA_1.has(iso);
 
 test('jokaisella maalla on odotettu määrä alueita', () => {
   for (const [iso, maara] of Object.entries(ODOTETUT_MAARAT)) {
@@ -71,6 +92,7 @@ test('97 maakuntaa säilyttää Commons-kuvan ja saa vuoden 1873 havainnekuvan',
   const osoitteet = new Set();
   let maara = 0;
   for (const [iso, alueet] of Object.entries(MAAKUNTIEN_LUONNEHDINNAT)) {
+    if (!KUVATTU_VALMIIKSI(iso)) continue;
     for (const [tunnus, alue] of Object.entries(alueet)) {
       assert.ok(Array.isArray(alue.kuva), `${iso}:${tunnus} kuva ei ole lista`);
       assert.equal(alue.kuva.length, 2, `${iso}:${tunnus} kuvien määrä`);

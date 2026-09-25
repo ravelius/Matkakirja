@@ -13,6 +13,10 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2232, teksti: 'Sisältöjuna: maakunnat erä 1, turistiopas 20, Pariisin kuvat' },
+  { v: 2231, teksti: 'Leikatut kohtauskuvat: Luxemburg, Madrid, New Y… (#3215)' },
+  { v: 2230, teksti: 'Sisältöjuna: leikatut kohtauskuvat Ljubljana, Lux–Nikosia' },
+  { v: 2229, teksti: 'Sisältöjuna: leikatut kohtauskuvat (5 kaupunkierää)' },
   { v: 2228, teksti: 'Sisältöjuna: turistiopas 14–18, miniatyyrit, suunnitelmat' },
   { v: 2227, teksti: 'Koepyramidi ?pyramidi=<sarja>: uusi peruskartta… (#3203)' },
   { v: 2226, teksti: 'Sisältöjuna: miniatyyrit, Välimeri, turistiopas 11–13' },
