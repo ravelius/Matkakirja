@@ -17,6 +17,7 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Sama(Kermasarja.Oletus, Kermasarja.Nimi(" "));
             Oleta.Sama("2026-09-24-23a", Kermasarja.Nimi("/2026-09-24-23a/"), "täysi nimi sellaisenaan");
             Oleta.Sama("p06", Kermasarja.Nimi("p06"), "vain kolme numeroa on lyhyt nimi");
+            Oleta.Sama("2026-09-25-", Kermasarja.Etuliite, "etuliite oletussarjan pohjasta (26-pohjaan vaihdettaessa vain Oletus muuttuu)");
         }
 
         [Testi]

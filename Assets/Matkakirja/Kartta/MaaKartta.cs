@@ -712,7 +712,8 @@ namespace Matkakirja
             {
                 var m = Viivaleveys.AluerajaMuste;
                 bool lin = QualitySettings.activeColorSpace == ColorSpace.Linear;
-                double peitto = lin ? Viivaleveys.AluerajaPeittoNatiivi : Viivaleveys.AluerajaPeittoWeb;
+                // Löydös 113 jatko: oletusrajat ilman täyttöä webin täydellä rasterirajalla (0,45), täytön kanssa 0,297.
+                double peitto = Viivaleveys.AluerajaPeitto(TayttoNakyy, lin);
                 // Color on sRGB-arvoina; URP muuntaa _BaseColorin lineaariseksi lineaarisessa projektissa.
                 rajaOma.SetColor("_BaseColor", new Color((float)m[0], (float)m[1], (float)m[2], (float)peitto * rajaAlfa * rajaHaive));
                 return;

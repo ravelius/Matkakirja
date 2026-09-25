@@ -144,5 +144,16 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(Viivaleveys.LueKehanPaino("kevein", out p) && p == Viivaleveys.KehanPaino.Kevein, "kevein");
             Oleta.Tosi(!Viivaleveys.LueKehanPaino("paksu", out _), "tuntematon");
         }
+
+        [Testi]
+        static void OletusrajatIlmanTayttoaWebinRasterinPeitolla()
+        {
+            // Löydös 113 jatko: webin rasteriraja 0,45; pallomaakuntien täyttö (0,34) himmentää sen 0,297:ään vain täytön kanssa.
+            Oleta.Tosi(Viivaleveys.AluerajaPeitto(false, false) == 0.45, "ilman täyttöä web 0,45");
+            Oleta.Tosi(Viivaleveys.AluerajaPeitto(true, false) == Viivaleveys.AluerajaPeittoWeb, "täytön kanssa 0,297");
+            double ilman = Viivaleveys.AluerajaPeitto(false, true), kanssa = Viivaleveys.AluerajaPeitto(true, true);
+            Oleta.Tosi(ilman > kanssa && ilman >= 0.45 && ilman < 1, $"natiivi ilman {ilman:0.000} > kanssa {kanssa:0.000}");
+            Console.WriteLine($"      maakuntaraja ilman täyttöä: web 0,45 → natiivi {ilman:0.000} (täytön kanssa {kanssa:0.000})");
+        }
     }
 }

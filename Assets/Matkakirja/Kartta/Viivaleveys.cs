@@ -129,6 +129,20 @@ namespace Matkakirja
         /// <summary>Sama lineaarisessa sekoituksessa maan pohjalla (NimiLadonta.LineaarinenAlfa, PohjaMaa).</summary>
         public static readonly double AluerajaPeittoNatiivi =
             NimiLadonta.LineaarinenAlfa(AluerajaMuste, AluerajaPeittoWeb, NimiLadonta.PohjaMaa);
+        /// <summary>
+        /// OLETUSRAJAT ILMAN TÄYTTÖÄ (löydös 113 jatko, 25.9. klo 23.5x: "ohuita maakuntarajoja ei näy"): webin rasteriraja on
+        /// 0,45 ja vain pallomaakuntien täyttö (0,34, oletuksena POIS: PALLOMAAKUNNAT_OLETUS false) himmentää sen 0,297:ään.
+        /// Natiivin oletusrajoissa täyttö on läpinäkyvä (MaaKartta.TayttoNakyy false), joten webin vastine on täysi 0,45;
+        /// 0,297 kuuluu vain valitun maakunnan täytön kanssa.
+        /// </summary>
+        public const double AluerajaPeittoWebIlmanTayttoa = 0.45;
+        public static readonly double AluerajaPeittoNatiiviIlmanTayttoa =
+            NimiLadonta.LineaarinenAlfa(AluerajaMuste, AluerajaPeittoWebIlmanTayttoa, NimiLadonta.PohjaMaa);
+
+        /// <summary>Maakuntarajan peitto: täytön kanssa 0,297, ilman (oletusrajat) 0,45; lineaarinen = natiivin sekoitus.</summary>
+        public static double AluerajaPeitto(bool taytto, bool lineaarinen) =>
+            taytto ? (lineaarinen ? AluerajaPeittoNatiivi : AluerajaPeittoWeb)
+                   : (lineaarinen ? AluerajaPeittoNatiiviIlmanTayttoa : AluerajaPeittoWebIlmanTayttoa);
 
         /// <summary>Webin pallon pyramiditaso ruudun tiheydelle (laitepx/leveysaste): 0…8, syvin 8.</summary>
         public static int AluerajaTaso(double tiheys)

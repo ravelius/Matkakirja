@@ -17,8 +17,13 @@ namespace Matkakirja
     {
         /// <summary>Oletussarja (build 14:n pohjasta, peitto 0,80; löydös 22).</summary>
         public const string Oletus = "2026-09-25-p080";
-        /// <summary>Lyhyen nimen ("p060") etuliite: saman pohjan sarjat.</summary>
-        public const string Etuliite = "2026-09-25-";
+        /// <summary>
+        /// Lyhyen nimen ("p060") etuliite: saman pohjan sarjat, oletussarjan nimestä ennen "-pNNN"-päätettä. Kun kerma
+        /// poltetaan uudelleen uudesta pohjasta (Karttaseppä: 2026-09-26-pohja-20260926 ja valittu peitto), vaihdetaan vain
+        /// <see cref="Oletus"/>, ja lyhyet nimet osoittavat uuden pohjan sarjoihin.
+        /// </summary>
+        public static string Etuliite => Oletus.LastIndexOf("-p", System.StringComparison.Ordinal) is int i && i >= 0
+            ? Oletus.Substring(0, i + 1) : Oletus + "-";
         /// <summary>Peitto, jos nimessä ei ole "-pNNN"-päätettä (vanhat sarjat olivat 0,80).</summary>
         public const float OletusPeitto = 0.80f;
 
