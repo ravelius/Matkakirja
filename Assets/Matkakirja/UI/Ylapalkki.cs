@@ -58,7 +58,8 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static float Korkeus => Puhelin ? 57f : 65f;
         /// <summary>Webin .topbar-täyte (pysty, vaaka).</summary>
-        static Vector2 Tayte => Puhelin ? new Vector2(4.8f, 7.2f) : new Vector2(7.2f, 12.8f);
+        /// <summary>Palkin täyte (pysty, sivut). Löydös 88 (omistaja build 13): logo ja ☰ sisemmäs kuin webissä (12,8 → 22 pt).</summary>
+        static Vector2 Tayte => Puhelin ? new Vector2(4.8f, 14f) : new Vector2(7.2f, 22f);
 
         /// <summary>Testikomento (ui ylapalkki vaaka|pysty|auto): null = ruudun mukaan.</summary>
         public static bool? Pakota;
@@ -105,8 +106,8 @@ namespace Matkakirja.Natiivi
         static float? kelluvaVaraus;
 
         /// <summary>Saaririvin korkeus ja reunavara pisteinä (näytön pyöristetty kulma).</summary>
-        /// <summary>SaariReuna: löydös 68 (omistaja 25.9.) pilleri ja ☰ hieman sisemmäs reunoista (14 → 20 pt).</summary>
-        const float SaariRivi = 36f, SaariReuna = 20f, SaariVali = 6f;
+        /// <summary>SaariReuna: löydös 68 (omistaja 25.9.) pilleri ja ☰ sisemmäs reunoista (14 → 20 pt), löydös 88 (build 13) 26 pt.</summary>
+        const float SaariRivi = 36f, SaariReuna = 26f, SaariVali = 6f;
 
         /// <summary>
         /// Löydös 44 (omistaja 24.9. klo 19.4x, Raamattu NATIIVIN YLÄPALKKI, TARKENNUS): iPhonen pystyasennossa palkki
