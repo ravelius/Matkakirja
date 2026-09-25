@@ -44,6 +44,43 @@ const lehdenSivu = (p) => {
   return { sivu: p.sivu, osio: p.sivu === 0 ? 'kansi' : sivut[p.sivu - 1]?.id };
 };
 
+/**
+ * Lehden vieritys ANKKURILLA (pariteettitaulun rivit 4 ja 6: pikselimäärä
+ * osui webissä ja natiivissa eri kohtaan, koska otsikon korkeus erosi).
+ * p.ankkuri = valitsin, jonka ensimmäinen näkyvä osuma vieritetään kortin
+ * yläreunaan; p.ankkuriLoppu = valinnainen toinen valitsin, jonka pitää
+ * mahtua samaan ruutuun — silloin väli ankkurin yläreunasta sen
+ * alareunaan keskitetään kortin näkyvään osaan (jos mahtuu).
+ */
+const vieritaAnkkuriin = (p) => {
+  const kortti = document.querySelector('#arrival-dialog .dialog-card');
+  const eka = (v) => [...document.querySelectorAll(v)].find((e) => e.getBoundingClientRect().height > 0);
+  const ankkuri = eka(p.ankkuri);
+  if (!kortti || !ankkuri) return { virhe: `ankkuria ${p.ankkuri} ei näkyvissä` };
+  ankkuri.scrollIntoView({ block: 'start' });
+  /*
+   * Lehden otsikkorivi (sivun nimi, ☰ ja kaiutin) on sticky: pelkkä
+   * scrollIntoView jättää ankkurin sen alle. Näkyvä alue alkaa siksi
+   * kortin yläreunassa kiinni olevien sticky/fixed-elementtien alta.
+   */
+  const k = kortti.getBoundingClientRect();
+  let yla = Math.max(0, k.top);
+  for (const e of kortti.querySelectorAll('*')) {
+    const asema = getComputedStyle(e).position;
+    if (asema !== 'sticky' && asema !== 'fixed') continue;
+    const r = e.getBoundingClientRect();
+    // Yläreunan läheisyydessä (kortin täyte ja hiusviiva ~40 px) ja alle puoli korttia.
+    if (r.height > 0 && r.top <= k.top + 40 && r.bottom > yla && r.bottom < k.top + k.height / 2) yla = r.bottom;
+  }
+  const ala = Math.min(innerHeight, k.bottom);
+  const loppu = p.ankkuriLoppu ? eka(p.ankkuriLoppu) : null;
+  const a = ankkuri.getBoundingClientRect();
+  const vara = loppu ? (ala - yla) - (loppu.getBoundingClientRect().bottom - a.top) : -1;
+  // Mahtuu: väli keskelle. Muuten ankkuri 8 px otsikkorivin alle.
+  kortti.scrollTop += vara > 0 ? (a.top - yla) - vara / 2 : (a.top - yla) - 8;
+  return { vieritys: Math.round(kortti.scrollTop), ankkuri: p.ankkuri };
+};
+
 /** Pallolaudan nosto tunnuksen alulla (lauta.napautaNosto; savuke-nostoklikkaus.mjs). */
 const avaaNosto = (p) => {
   const lauta = window.matkakirja.ui.pallolauta;
@@ -258,6 +295,33 @@ export const NAKYMAT = [
     avaa: avaaLehti, odota: '#arrival-dialog[open]', jalkeen: lehdenSivu, parametri: { sivu: 2 },
   },
   {
+    nimi: 'kaupunkilehti-kansi-alas', kuvaus: 'Kaupunkilehden kansi vieritettynä Ennen/Nyt-pariin ja radion mediariviin (ankkuri #arrival-lehti-kuvat → #arrival-media-kaupunki)',
+    avaa: avaaLehti, odota: '#arrival-dialog[open]', jalkeen: lehdenSivu,
+    parametri: { sivu: 0, ankkuri: '#arrival-lehti-kuvat', ankkuriLoppu: '#arrival-media-kaupunki' },
+    viimeinen: vieritaAnkkuriin,
+  },
+  {
+    nimi: 'kaupunkilehti-aihe1-nostot', kuvaus: 'Kaupunkilehden 1. aihesivu vieritettynä ensimmäiseen nostoon (ankkuri #arrival-kategoria .wiki-nosto)',
+    avaa: avaaLehti, odota: '#arrival-dialog[open]', jalkeen: lehdenSivu,
+    parametri: { sivu: 1, ankkuri: '#arrival-kategoria .wiki-nosto' },
+    viimeinen: vieritaAnkkuriin,
+  },
+  {
+    nimi: 'kaupunkilehti-loppu', kuvaus: 'Kaupunkilehden viimeinen aihesivu (naytaTutkiSivu(sivut.length)) vieritettynä sivun loppuun',
+    avaa: avaaLehti, odota: '#arrival-dialog[open]',
+    jalkeen: () => {
+      const ui = window.matkakirja.ui;
+      const sivut = ui.lehtitila?.tutkiSivut ?? [];
+      if (!sivut.length) return { virhe: 'lehdessä ei ole aihesivuja' };
+      ui.naytaTutkiSivu(sivut.length, { heti: true });
+      return { sivu: sivut.length, osio: sivut[sivut.length - 1]?.id };
+    },
+    viimeinen: () => {
+      const kortti = document.querySelector('#arrival-dialog .dialog-card');
+      kortti?.scrollTo?.(0, kortti.scrollHeight);
+    },
+  },
+  {
     nimi: 'kaupunkilehti-sisallys', kuvaus: 'Kaupunkilehden sisällysvalikko (.lehti-hampurilainen)',
     avaa: avaaLehti, odota: '#arrival-dialog[open]',
     jalkeen: () => {
@@ -432,12 +496,13 @@ export const NAKYMAT = [
   },
   {
     nimi: 'ratas', kuvaus: 'Hammasratas: äänentasot ja asetukset (#kehittaja-valikko-btn)',
-    avaa: () => { document.getElementById('kehittaja-valikko-btn')?.click(); },
+    // Vaakapuhelimella yläpalkki on väkäsnapin takana (js/ylapalkki-vaaka.js): auki ensin, muuten nappi ei näy.
+    avaa: () => { document.body.classList.add('ylapalkki-auki'); document.getElementById('kehittaja-valikko-btn')?.click(); },
     odota: '#kehittaja-valikko:not([hidden])',
   },
   {
     nimi: 'valikko', kuvaus: 'Hampurilainen: päävalikko (#menu-btn)',
-    avaa: () => { document.getElementById('menu-btn')?.click(); },
+    avaa: () => { document.body.classList.add('ylapalkki-auki'); document.getElementById('menu-btn')?.click(); },
     odota: '#paavalikko:not([hidden])',
   },
   {
@@ -545,6 +610,34 @@ const TODENNUS = {
   'kaupunkilehti-kansi': { nakyy: ['#arrival-dialog .dialog-card'], ehto: lehtiSivulla },
   'kaupunkilehti-aihe1': { nakyy: ['#arrival-dialog .dialog-card'], ehto: lehtiSivulla },
   'kaupunkilehti-aihe2': { nakyy: ['#arrival-dialog .dialog-card'], ehto: lehtiSivulla },
+  'kaupunkilehti-kansi-alas': {
+    nakyy: ['#arrival-lehti-kuvat .lehti-kuva-ennen', '#arrival-lehti-kuvat .lehti-kuva-nyt', '#arrival-media-kaupunki'],
+    ehto: lehtiSivulla,
+  },
+  'kaupunkilehti-aihe1-nostot': {
+    ehto: (p) => {
+      const ui = window.matkakirja.ui;
+      if ((ui.lehtitila?.tutkiSivu ?? 0) !== p.sivu) return `lehden sivu ${ui.lehtitila?.tutkiSivu}, odotettiin ${p.sivu}`;
+      // Juuri ENSIMMÄISEN noston otsikko näkyvissä (ei peitossa sticky-otsikon alla).
+      const o = document.querySelector('#arrival-kategoria .wiki-nosto .kulttuuri-otsikkorivi');
+      const b = o?.getBoundingClientRect();
+      if (!b || b.height <= 0) return 'ensimmäisen noston otsikkoriviä ei ole';
+      const osuma = document.elementFromPoint(b.left + Math.min(40, b.width / 2), b.top + b.height / 2);
+      return osuma && (osuma === o || o.contains(osuma)) && b.top >= 0 && b.bottom <= innerHeight
+        ? null : `ensimmäisen noston otsikko ei näy (y ${Math.round(b.top)}, päällä ${osuma?.className ?? '–'})`;
+    },
+  },
+  'kaupunkilehti-loppu': {
+    nakyy: ['#arrival-dialog .dialog-card'],
+    ehto: () => {
+      const ui = window.matkakirja.ui;
+      const n = ui.lehtitila?.tutkiSivut?.length ?? 0;
+      if ((ui.lehtitila?.tutkiSivu ?? 0) !== n) return `lehden sivu ${ui.lehtitila?.tutkiSivu}, odotettiin viimeinen ${n}`;
+      const k = document.querySelector('#arrival-dialog .dialog-card');
+      return k && k.scrollTop + k.clientHeight >= k.scrollHeight - 2
+        ? null : `ei vieritetty loppuun (${Math.round(k?.scrollTop ?? 0)}/${Math.round((k?.scrollHeight ?? 0) - (k?.clientHeight ?? 0))})`;
+    },
+  },
   'kaupunkilehti-sisallys': { nakyy: ['.sisallys-levy'] },
   'kaupunkilehti-luelisaa': { nakyy: ['#wiki-dialog[open]'] },
   'maalehti-kansi': {
@@ -668,7 +761,13 @@ const LINSSIEHDOT = {
     },
   },
   satelliitti: { nakyy: ['.satelliitti-linssikehys'] },
-  topografia: { nakyy: ['.linssi-selite'] },
+  topografia: {
+    nakyy: ['.linssi-selite'],
+    // Odotuspeite (js/linssit/topografia.js PEITTEEN_OSA) on tumma kalvo, kunnes relief on ladattu (Linssiseppä 25.9.:
+    // rivin 30 web-kuva oli tumma). Kuva vasta kun peite on purettu.
+    ehto2: () => (window.matkakirja.ui.pallolauta?.linssit?.paalla?.('topografia-peite')
+      ? 'topografian odotuspeite yhä päällä (relief latautuu)' : null),
+  },
   vertailu: {
     ehto2: () => {
       if (!document.body.classList.contains('vertailu-tila')) return 'body.vertailu-tila puuttuu';

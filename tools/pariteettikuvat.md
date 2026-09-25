@@ -1,7 +1,7 @@
 # Pariteettikuvat — webin näkymät kuviksi natiivin vertailuun
 
 Työkalu: `tools/pariteettikuvat.mjs` (ajo) ja `tools/pariteettikuvat-nakymat.mjs`
-(näkymälista). Tilaaja Fable 24.9.2026 Laitetestaajalle: noin 40 näkymää (nyt 44) kahdessa
+(näkymälista). Tilaaja Fable 24.9.2026 Laitetestaajalle: noin 40 näkymää (nyt 51) kahdessa
 koossa ilman introa ja UI-polkuja. Kuva vie noin 3–6 s eikä 30–40 s.
 
 ## Pikaohje Laitetestaajalle
@@ -12,6 +12,7 @@ node tools/pariteettikuvat.mjs                 # kaikki näkymät, iPhone ja iPa
 node tools/pariteettikuvat.mjs --lista         # näkymien nimet ja oikotiet
 node tools/pariteettikuvat.mjs --nakymat sahke,visa,laukku --koot 393x852
 node tools/pariteettikuvat.mjs --url paikallinen   # tämän checkoutin koodi omalla palvelimella
+node tools/pariteettikuvat.mjs --laatikot          # + DOM-laatikot JSONina natiivin ui-puu.json-vertailuun
 ```
 
 Kuvat menevät kansioon `/Users/Shared/Claude/proto-3d/lokit/pariteetti-web-<pvm>/`
@@ -31,10 +32,36 @@ nimellä `<nakyma>-<leveys>x<korkeus>.png`. Samassa kansiossa on `yhteenveto.jso
 | `--siemen` | `5` | Pelin siemen (sama kuin savukkeissa) |
 | `--uusinta` | `1` | Montako kertaa epäonnistunut kuva yritetään uudestaan |
 | `--gpu` | `metal` | `metal` = `--use-angle=metal` (Mac Studion GPU), `ohjelma` = SwiftShader |
+| `--laatikot` | pois | Jokaisen onnistuneen kuvan viereen `<nakyma>-<koko>.json` (ks. Laatikot) ja yhteenvedon riville `laatikot` |
 
 Playwright haetaan järjestyksessä `playwright`, `$PLAYWRIGHT_JS`,
 `/Users/Shared/Claude/Matkakirja-fable/node_modules/playwright/index.js`, …;
 selain on Playwrightin oma Chromium (tai `$CHROMIUM`).
+
+## Laatikot (`--laatikot`)
+
+Automaattinen pariteettiajo vertaa webin DOM-laatikoita natiivin UI-puuhun, joten
+skeema on sama kuin natiivin `ui-puu.json`:
+
+```json
+{ "paneeli": { "w": 393, "h": 852 },
+  "elementit": [
+    { "teksti": "Sähke", "fontti": 11.5, "versaali": true, "x": 30, "y": 145.5, "w": 297.9, "h": 13,
+      "opasiteetti": 1, "luokat": "fokusvirta-ylarivi", "nimi": "p" },
+    { "kuva": true, "x": 8.2, "y": 64.8, "w": 377, "h": 779, "opasiteetti": 1, "luokat": "", "nimi": "canvas" } ] }
+```
+
+- Mitat ovat CSS-pikseleitä (`getBoundingClientRect`, yksi desimaali), `opasiteetti` on
+  esivanhemmista kertynyt, `nimi` on id tai tagin nimi.
+- Mukana on jokainen näkyvä elementti, jolla on omaa suoraa tekstiä (lapsitekstinoodit,
+  välilyönnit tiivistettyinä, enintään 200 merkkiä), sekä näkyvät `<img>`, `<canvas>`,
+  `<video>` ja `url()`-taustakuvalliset elementit, vähintään 16 × 16 px (`kuva: true`).
+- Teksti on raakateksti ilman `text-transform`ia; versaali merkitään kentällä `versaali`.
+- Näkyvä: ei `display:none`a esivanhemmissa, ei `visibility:hidden`ia, opacity > 0,02,
+  laatikko leikkaa ruudun ja `elementFromPoint` osuu ruudulle rajatun laatikon keskelle.
+  `pointer-events:none`-elementti kytketään osumaan hetkeksi, jottei lehden alle jäävä
+  paneeli tule mukaan.
+- Laatikot kerätään heti kuvan jälkeen, ennen jälkitodennusta (sama hetki kuin kuvassa).
 
 ## Resurssit
 
@@ -117,6 +144,9 @@ Näkymää ilman todennusta ei voi lisätä, koska moduuli kaatuu latautuessaan.
 | visa | Kohtaamisen kysymys (ajastin käy) | kohtaaminen + `.quiz-aloita` |
 | sahke | Sähke (Sofia) | kohtaaminen sähkekaupungissa (`savuke-sahkekortti.mjs`) |
 | kaupunkilehti-kansi / -aihe1 / -aihe2 | Kaupunkilehti ja aihesivut | `ui.openArrival(city)`, `naytaTutkiSivu(n)` |
+| kaupunkilehti-kansi-alas | Kansi vieritettynä Ennen/Nyt-pariin ja radioon (pariteettitaulun rivi 4) | ankkuri `#arrival-lehti-kuvat` → `#arrival-media-kaupunki`, väli keskelle |
+| kaupunkilehti-aihe1-nostot | 1. aihesivu ensimmäisen noston kohdalla (rivi 6) | ankkuri `#arrival-kategoria .wiki-nosto` sticky-otsikon alle |
+| kaupunkilehti-loppu | Viimeinen aihesivu vieritettynä loppuun (rivi 7) | `naytaTutkiSivu(sivut.length)` + `scrollTo(0, scrollHeight)` |
 | kaupunkilehti-sisallys | Lehden sisällysvalikko | `.lehti-hampurilainen` |
 | kaupunkilehti-luelisaa | "Lue lisää" (wiki) | `.wiki-btn` → `#wiki-dialog` |
 | maalehti-kansi / -aihe1 | Maalehden etusivu (sivu 1, kantta ei ole) / ensimmäinen aihesivu (sivu 2) | `ui.avaaMaalehti(iso)`, `naytaTutkiSivu(2)` |
@@ -144,7 +174,10 @@ Linssien hankinnan näkymäksi käy `laukku-linssit`.
 Lisää rivi `tools/pariteettikuvat-nakymat.mjs`:n `NAKYMAT`-listaan: `nimi`, `kuvaus`,
 `avaa(p)` (ajetaan sivulla, `p = { kaupunki, ...parametri }`, palauta `{ virhe }`
 jos ei onnistu), `odota` (valitsin) ja tarvittaessa `jalkeen`, `odotaJalkeen`,
-`viimeinen` (vieritys kuvien latauduttua) tai `palloJalkeen` (linssit).
+`viimeinen` (vieritys kuvien latauduttua; palauta `{ virhe }` jos ei onnistu) tai
+`palloJalkeen` (linssit). Vieritä lehteä ankkurilla (`vieritaAnkkuriin`,
+`parametri: { ankkuri, ankkuriLoppu }`), ei pikselimäärällä: otsikon korkeus vaihtelee
+webin ja natiivin välillä.
 Funktiot sarjallistetaan `page.evaluate`en, joten ne eivät saa viitata moduulin
 muuttujiin.
 
