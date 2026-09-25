@@ -5743,3 +5743,7 @@ Postivahti kuittaa nollauksen.
 ## NATIIVI-UI NOLLATTU (isRunning false) → ALOITUSVIESTI LAHETETTY send_message-KANAVALLA (luovutus q, natiivi-ui-luovutus-m), RC TAKAISIN (connecting); #3227 MAINISSA (25.9.2026 klo 18.28)
 
 Odotetaan kuittausta.
+
+## MAAKUNTIEN LUONNEHDINNAT ERA 1 (SISALTOKIRJURI PR #3226): 17 MAATA / 210 ALUETTA LYHYT (NLD/BEL/DNK/SVK/FIN/EST/LVA/LTU/SVN + AIEMMAT) + GRC PITKA/PULU, TESTIT 102/102; SEURAAVA ERA CHE/PRT/HUN; MENEE JULKAISIJAN SISALTOJUNASSA (25.9.2026 klo 18.29)
+
+Natiivi-UI (uusi konteksti) kuittasi: II:n UI-haara ensin, sitten 115 ja 113/114.
