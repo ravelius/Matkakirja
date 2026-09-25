@@ -1,7 +1,7 @@
 # Esilataaja-palvelu: suunnitelma (Pelikoodari 25.9.2026)
 
 Raamattu: ESILATAUSPOLITIIKKA (omistaja 25.9.2026 klo 16.1x). Nykytila ja mittari: `esilataus-nykytila-20260925.md`.
-Toteutus alkaa build 15:n jälkeen. Tämä sivu hyväksytetään Fablella ennen koodia.
+Toteutus alkaa build 15:n jälkeen. HYVÄKSYTTY (Fable 25.9.2026) sellaisenaan, erät 1–4 tässä järjestyksessä.
 
 ## Rakenne (proto: `Assets/Matkakirja/Kartta/Esilataaja.cs`, Kartta-asmdef, kuten VerkkoOdotus)
 
@@ -33,6 +33,8 @@ void RyhmaValmis(string ryhma, Action<int valmiit, int virheet> kutsu);
   kuulu palvelulle.
 - **Jatkaminen:** `Kohde.Tiedosto` ladataan `.lataus`-tiedostoon Range-pyynnöin, ja keskeytynyt lataus jatkuu
   seuraavalla kerralla. Esilataaja ei tarkista sha256-tiivistettä: sen tekee Siirtoseppä `RyhmaValmis`-kutsussa.
+  Tarkistettu 25.9.: ämpäri (media.matkakirja.app, R2) vastaa Range-pyyntöön `206` + `content-range`, sekä mp3:lle
+  että sisältöpaketin JSONille (`kokoelmat/kaupungit.json`).
 - **Välimuistit:** levyllä nykyiset kansiot (sisalto/ versiolla, kuvat/ osoitteella, aani/ osoitteella, laatat
   sarjan nimellä), yhteinen siivous vanhimmasta, kun yhteensä yli 2 Gt (nyt laatat 600 Mt erikseen). Muistissa
   purettujen tekstuurien LRU tavuina: iPhone 200 Mt ja iPad 300 Mt (nyt Kuvat 48 kpl). Purku on jo taustasäikeessä
@@ -65,7 +67,10 @@ void RyhmaValmis(string ryhma, Action<int valmiit, int virheet> kutsu);
 
 ## Erät
 
-1. Jono, uusinta ja nykyiset latausavut palvelun kautta, osuma-% (ei uutta esilatausta; mittari näyttää pohjan).
-2. Kohta 3 lennon ja matkan aikana + savukkeen raja "saapuminen 0 ms".
+Jokaisen erän osuma-% ja odotukset (ennen ja jälkeen, kylmä ja lämmin) kirjataan samaan raporttiin
+`esilataus-nykytila-20260925.md` (Fable 25.9.).
+
+1. Jono, uusinta ja nykyiset latausavut palvelun kautta, osuma-% (ei uutta esilatausta; mittauspohja).
+2. Kohta 3 lennon ja matkan aikana + Laitetestaajan savukkeen raja "saapuminen 0 ms" kylmänä JA lämpimänä.
 3. Kohdat 4 ja 5, virransäästösääntö.
 4. Muistin LRU ja 2 Gt:n levysiivous. Kohta 6 Linssisepän listoilla.
