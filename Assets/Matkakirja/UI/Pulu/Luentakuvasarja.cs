@@ -7,7 +7,7 @@
 // pinoutuvat korteiksi vuorotellen kallistettuina (2,0° + 0,4° per kortti,
 // siirto 14 × 8 pt, enintään 7) — omistaja 15.9.2026. Terävät reunat ja
 // paperikehys, ei Ken Burnsia. Lyhyt kuvateksti paperikaistaleella kuvan alla
-// (#f7f1e2). Viimeinen kuva häipyy 6 s hiljaisuuden jälkeen ja kuvat lentävät
+// (#f7f1e2). Löydös 138 (omistaja, build 16): kehys ja kuvateksti pois, pelkkä kuva. Viimeinen kuva häipyy 6 s hiljaisuuden jälkeen ja kuvat lentävät
 // matkakirjakortin pikkukuviksi. "Ohita" kelluu pakan alla ja pysäyttää
 // luennon (PeliOhjain.OhitaLuento); kuvan napautus avaa suurennoksen.
 // Pakka on kortin alla (webin z 3 < rail 4) eikä ota kosketuksia (kartta liikkuu).
@@ -62,11 +62,7 @@ namespace Matkakirja.Natiivi
                 float suhde = t.height > 0 ? (float)t.width / t.height : 1.5f;
                 kuva.style.aspectRatio = suhde;
                 kortti.style.width = Leveys(suhde);
-                if (!string.IsNullOrEmpty(k.Lyhyt))
-                {
-                    var teksti = Rakenne.Teksti(k.Lyhyt, "mk-kuvakortti__teksti", kortti);
-                    Kirjasimet.Aseta(teksti, Kirjasin.Kone);
-                }
+                // Löydös 138 (omistaja, build 16): ei kuvatekstiä kuvan alla (paperikehys pois, Pulu.uss).
                 // Vuorotellen vasemmalle ja oikealle, kallistus kasvaa pakan mukana.
                 float suunta = n % 2 == 0 ? -1f : 1f;
                 kortti.style.rotate = new Rotate(new Angle(suunta * (Kallistus + KallistusLisa * n)));

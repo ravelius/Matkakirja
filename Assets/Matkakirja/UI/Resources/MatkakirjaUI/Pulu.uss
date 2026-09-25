@@ -480,10 +480,10 @@
 .mk-kuvakortti {
     position: absolute;
     width: 78%; /* koodi asettaa webin mitan (Luentakuvasarja.Leveys, löydös 90) */
-    padding: 7px 7px 0 7px;
-    background-color: #f7f1e2;
-    border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.35);
+    /* Löydös 138 (omistaja, build 16): isoisän ja pulun kuvista paperikehys pois (ja kuvateksti, Luentakuvasarja). */
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
     opacity: 0;
     transition-property: opacity, translate;
     transition-duration: 0.4s, 0.6s;
