@@ -55,9 +55,22 @@ namespace Matkakirja
             public Kohde kohde;
             public Transform juuri;
             public Vector3 pinta, normaali;
+            public MeshRenderer rengas;
+            public MaterialPropertyBlock lohko;
+            public TextMeshPro nimi;
+            /// <summary>Häivytyksen lähtöhetki ja -alfa (Time.unscaledTime); poistuva menee kohti nollaa.</summary>
+            public float alku, alkuAlfa, alfa = -1f;
+            public bool poistuu;
         }
 
+        /// <summary>
+        /// A13 (liikkumisen pariteetti, web lauta.js:682 MERKKIEN_SIIRTYMA_MS): merkit ilmestyvät ja poistuvat 250 ms:n
+        /// häivytyksellä. Poistuvat merkit elävät omassa listassaan häivytyksen loppuun, eikä niitä voi napauttaa.
+        /// </summary>
+        public const float SiirtymaS = 0.25f;
+
         readonly List<Merkki> merkit = new List<Merkki>();
+        readonly List<Merkki> poistuvat = new List<Merkki>();
         readonly HashSet<string> nimetytKaupungit = new HashSet<string>();
 
         /// <summary>
@@ -108,7 +121,15 @@ namespace Matkakirja
 
         public void Nayta(IReadOnlyList<Kohde> kohteet)
         {
-            foreach (var m in merkit) Destroy(m.juuri.gameObject);
+            // Vanhat häivyttyvät nykyisestä alfastaan (kesken ilmestymisen poistuva ei välähdä täyteen).
+            float nyt = Time.unscaledTime;
+            foreach (var m in merkit)
+            {
+                m.poistuu = true;
+                m.alkuAlfa = Mathf.Max(m.alfa, 0f);
+                m.alku = nyt;
+                poistuvat.Add(m);
+            }
             merkit.Clear();
             nimetytKaupungit.Clear();
             if (kohteet != null) foreach (var k in kohteet) if (!string.IsNullOrEmpty(k.Kaupunki)) nimetytKaupungit.Add(k.Kaupunki);
@@ -141,10 +162,12 @@ namespace Matkakirja
                 lohko.SetFloat("_HaloViiva", kaupunki ? 3.4f : 2.4f);
                 lohko.SetVector("_Katko", kaupunki ? new Vector4(6, 4, 0, 0) : new Vector4(4, 3, 0, 0));
                 lohko.SetColor("_Taytto", new Color(0.965f, 0.824f, 0.478f, kaupunki ? 0.72f : 0.55f));
+                lohko.SetFloat("_Alfa", 0f);
                 r.SetPropertyBlock(lohko);
+                TextMeshPro n = null;
                 if (kaupunki && fontti != null && !string.IsNullOrEmpty(k.Nimi))
                 {
-                    var n = new GameObject("Nimi").AddComponent<TextMeshPro>();
+                    n = new GameObject("Nimi").AddComponent<TextMeshPro>();
                     n.transform.SetParent(juuri, false);
                     n.font = fontti;
                     n.text = k.Nimi;
@@ -163,7 +186,9 @@ namespace Matkakirja
                     nimiMateriaali ??= new Material(fontti.material) { renderQueue = 3006 };
                     n.fontSharedMaterial = nimiMateriaali;
                 }
-                merkit.Add(new Merkki { kohde = k, juuri = juuri, pinta = (float3)u, normaali = (float3)math.normalize(u - keskus) });
+                if (n != null) n.alpha = 0f;
+                merkit.Add(new Merkki { kohde = k, juuri = juuri, pinta = (float3)u, normaali = (float3)math.normalize(u - keskus),
+                                        rengas = r, lohko = lohko, nimi = n, alku = nyt, alkuAlfa = 0f });
             }
         }
 
@@ -191,19 +216,43 @@ namespace Matkakirja
 
         void LateUpdate()
         {
-            if (merkit.Count == 0 || kamera == null) return;
+            if ((merkit.Count == 0 && poistuvat.Count == 0) || kamera == null) return;
             var kt = kamera.transform;
             var gt = georeferenssi.transform;
             float tanPuoli = Mathf.Tan(kamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
             float pikseleita = Screen.height / PalloKierto.Pistekerroin;
-            foreach (var m in merkit)
+            float nyt = Time.unscaledTime;
+            for (int i = poistuvat.Count - 1; i >= 0; i--)
+                if (Haivyta(poistuvat[i], nyt)) { Destroy(poistuvat[i].juuri.gameObject); poistuvat.RemoveAt(i); }
+            foreach (var m in merkit) Haivyta(m, nyt);
+            foreach (var m in poistuvat) Aseta(m, kt, gt, tanPuoli, pikseleita);
+            foreach (var m in merkit) Aseta(m, kt, gt, tanPuoli, pikseleita);
+        }
+
+        /// <summary>Häivytysaskel (lineaarinen kuten CSS-siirtymä 250 ms); tosi, kun poistuva on kokonaan poissa.</summary>
+        static bool Haivyta(Merkki m, float nyt)
+        {
+            float t = Mathf.Clamp01((nyt - m.alku) / SiirtymaS);
+            float a = m.poistuu ? Mathf.Lerp(m.alkuAlfa, 0f, t) : Mathf.Lerp(m.alkuAlfa, 1f, t);
+            if (!Mathf.Approximately(a, m.alfa))
+            {
+                m.alfa = a;
+                m.lohko.SetFloat("_Alfa", a);
+                m.rengas.SetPropertyBlock(m.lohko);
+                if (m.nimi != null) m.nimi.alpha = a;
+            }
+            return m.poistuu && t >= 1f;
+        }
+
+        void Aseta(Merkki m, Transform kt, Transform gt, float tanPuoli, float pikseleita)
+        {
             {
                 Vector3 paikka = gt.TransformPoint(m.pinta);
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
                 bool edessa = Nakyvissa && !PalloKierto.PorttiSumea && Vector3.Dot(gt.TransformDirection(m.normaali), kohti / etaisyys) > 0.12f;
                 if (m.juuri.gameObject.activeSelf != edessa) m.juuri.gameObject.SetActive(edessa);
-                if (!edessa) continue;
+                if (!edessa) return;
                 float lahella = etaisyys * (1f - Etuna);
                 m.juuri.SetPositionAndRotation(kt.position - kohti / etaisyys * lahella, kt.rotation);
                 m.juuri.localScale = Vector3.one * (2f * lahella * tanPuoli / pikseleita);

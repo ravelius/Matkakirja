@@ -6,8 +6,8 @@
 //              napautus valitsee (valinta muistetaan: PlayerPrefs
 //              matkakirja-karttatyokalu-maakunta, avain "ISO:tunnus").
 //              Auki on pelaajan nykyisen maan ryhmä (löydös 70, Fablen linjaus
-//              25.9.2026); maassa ilman maakuntia yläpuolella teksti "Tälle maalle
-//              ei ole vielä maakuntia" ja kaikki ryhmät kiinni. Saapuminen toiseen
+//              25.9.2026); maassa ilman maakuntia pelkkä teksti "Tälle maalle
+//              ei ole vielä maakuntia" (löydös 105: muiden maiden ryhmät piilossa). Saapuminen toiseen
 //              maahan päivittää listan ilman uudelleenavausta (Matka.Saapui).
 //   Luonnehdinta  listan alla kiinteänä: nimi, lyhyt teksti ja ⊕ → kortti.
 //   Kortti     kuvat (1–2 rinnakkain, useampi vaakavieritteenä, lähderivi),
@@ -261,7 +261,19 @@ namespace Matkakirja.Natiivi
             sovellettuIso = iso;
             bool onMaakuntia = ryhmat.ContainsKey(iso);
             eiMaakuntia.style.display = onMaakuntia ? DisplayStyle.None : DisplayStyle.Flex;
-            foreach (var muu in ryhmat.Keys.ToList()) AsetaRyhma(muu, muu == iso);
+            // Löydös 105 (omistaja build 13): lista näyttää vain nykyisen maan maakunnat, ei koskaan muiden maiden; maalla
+            // ilman maakuntia pelkkä ilmoitus. Toisen maan valinta ja luonnehdinta pois.
+            foreach (var muu in ryhmat.Keys.ToList())
+            {
+                AsetaRyhma(muu, muu == iso);
+                ryhmat[muu].Otsikko.parent.style.display = muu == iso ? DisplayStyle.Flex : DisplayStyle.None;
+            }
+            if (ValittuAvain != null && Jaa(ValittuAvain).Iso != iso)
+            {
+                if (rivit.TryGetValue(ValittuAvain, out var vanha)) vanha.RemoveFromClassList("mk-valittu");
+                ValittuAvain = null;
+                PaivitaLuonnehdinta();
+            }
             SiirraPeukalo();
         }
 

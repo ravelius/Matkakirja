@@ -83,6 +83,8 @@ namespace Matkakirja.Natiivi
             kylttiLippu = Rakenne.El("mk-maakyltti__lippu", rivi, PickingMode.Ignore);
             kylttiNimi = Rakenne.Teksti("", "mk-maakyltti__nimi", rivi);
             kylttiLehti = Rakenne.Teksti("Lue lehti ›", "mk-maakyltti__lehti", kyltti);
+            // Linssipariteetti rivi 41 (web .maa-pilleri): yksi rivi, lippu + NIMI; koko pilleri avaa lehden.
+            kylttiLehti.style.display = DisplayStyle.None;
 
             // Vertailuarkki pelidialogien tasolla (koko ruutu, ottaa kosketukset).
             arkki = Rakenne.El("mk-vertailuarkki", kerros.Juuri(LinssiUi.Ylakerros));
@@ -115,9 +117,12 @@ namespace Matkakirja.Natiivi
 
         void Asettele()
         {
-            float reuna = Screen.width > 1500 ? 24 : 12;
-            kyltti.style.left = reuna;
-            kyltti.style.bottom = reuna;
+            // Web .maa-pilleri: kartan oikea yläkulma (top/right 0,4rem kartan kehyksestä), matkakirjan lapun
+            // korkeudella. Natiivissa linssin ✕ ja selitenappi ovat samassa kulmassa, joten pilleri niiden
+            // vasemmalle puolelle paikkakuplan riville (b13-linssit-2 rivi 41: kortti peitti kartuschan).
+            var r = UiKerros.Hae().Reunat(LinssiUi.Kerros);
+            kyltti.style.top = Ylapalkki.Varaus + 8f;
+            kyltti.style.right = r.z + 96f;
         }
 
         /// <summary>Linssi vaihtui: kuunnellaan maatilan linssin tapahtumia, muuten kaikki pois.</summary>
@@ -343,7 +348,7 @@ namespace Matkakirja.Natiivi
             kylttiMaa = m;
             if (m == null) { kyltti.style.display = DisplayStyle.None; return; }
             kylttiNimi.text = (m.Nimi ?? m.Id).ToUpperInvariant();
-            kylttiLehti.style.display = string.IsNullOrEmpty(m.Maalehti) ? DisplayStyle.None : DisplayStyle.Flex;
+            // Web .maa-pilleri: ei "Lue lehti" -riviä; koko pilleri avaa lehden (AvaaLehti).
             AsetaLippu(kylttiLippu, m, 16f);
             Asettele();
             kyltti.style.display = DisplayStyle.Flex;

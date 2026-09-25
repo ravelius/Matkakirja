@@ -93,7 +93,7 @@ namespace Matkakirja
         // piirtokutsu; pohja-, väri- ja linssirasterit samassa materiaalissa) ja kolmioita ≈ 4–8× niin kauan kuin
         // laatan verteksimäärä vielä kasvaa (tasolta 8 ylöspäin enää ≈ 1,3× / taso). Kreikka SSE 16: ~60 laattaa,
         // ~0,2 M kolmiota; SSE 8: ~250 laattaa, ~1,4 M kolmiota. Rasterien taso seuraa geometrialaattaa (katto
-        // LaattaMaxTaso 8), joten pienempi SSE terävöittää myös pohjakarttaa kaukana ja kallistuksessa.
+        // LaattaMaxTaso 9), joten pienempi SSE terävöittää myös pohjakarttaa kaukana ja kallistuksessa.
         // HUOM: SSE:n asetus luo tilesetin uudelleen (Cesium3DTileset.RecreateTileset: kaikki laatat ladataan uudelleen
         // levyvälimuistista), joten sitä ei vaihdeta lennon ja kartan välillä kehyksittäin, vaan komennolla.
 
@@ -313,11 +313,13 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Karttasepän sileä 23a-sarja: sama pohja ilman poltettua viivatasoa (ei teitä, rajoja eikä kaupunkipisteitä;
-        /// joet, vesiviivoitus ja syvyyskäyrät jäävät). Z0–Z8 kuten pohja.
+        /// Sileä pohja ilman poltettua viivatasoa: peruskarttasarja 2026-09-25 on itse viivaton, joten sama kuin
+        /// Rakennus.LaattaUrl (aiemmin erillinen 23a-rajaton-sarja). Z0–Z9 kuten pohja (Rakennus.LaattaMaxTaso).
         /// </summary>
         public const string SileaUrl =
-            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-23a-pohja-20260923arajaton/{z}/{x}/{reverseY}.jpg";
+            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-25-pohja-20260925/{z}/{x}/{reverseY}.jpg";
+        /// <summary>Sileän pohjan syvin taso (= Rakennus.LaattaMaxTaso; Editor-luokkaa ei voi viitata ajossa).</summary>
+        public const int SileaMaxTaso = 9;
 
         CesiumUrlTemplateRasterOverlay silea, sentinel;
 
@@ -599,6 +601,17 @@ namespace Matkakirja
             }
         }
 
+        static readonly int PallonTummuusId = Shader.PropertyToID("_pallonTummuus");
+
+        /// <summary>
+        /// PALLON SÄVY (löydös 98, build 14; Linssisepän avaruuslinssi): pallon perusväri kerrotaan kertoimella
+        /// (web satelliitti-avaruus.js PALLON_SAVY 0x999999 = 0,6), jotta yökartan pisteet hehkuvat. Tileset-varjostimen
+        /// ja napakansien globaali _pallonTummuus = 1 − kerroin (asettamaton 0 = ennallaan). null = palauta (1).
+        /// Vaikuttaa perusväriin ennen radion hämärää; emissio (yövalot, maavalo) ei tummu.
+        /// </summary>
+        public static void PallonSavy(float? kerroin) =>
+            Shader.SetGlobalFloat(PallonTummuusId, kerroin.HasValue ? 1f - Mathf.Clamp01(kerroin.Value) : 0f);
+
         /// <summary>
         /// LENNON KARTTA (omistaja 24.9.2026 klo 13.4x, Fablen päätös): lennon ajaksi sileä sarja pohjan päälle
         /// Cesiumin raster-paikkaan 1. Pohja latautuu sen alla, joten paluu perillä on välitön (tiet ja rajat
@@ -628,7 +641,7 @@ namespace Matkakirja
             string versio = SatelliittiVersio;
             if (string.IsNullOrEmpty(versio))
             {
-                silea = Kerros(pallo.gameObject, "1", SileaUrl, 8);
+                silea = Kerros(pallo.gameObject, "1", SileaUrl, SileaMaxTaso);
                 return;
             }
             // Satelliitti: Blue Marble paikkaan 1 (Z0–Z7; Cesium venyttää Z7:n syvemmälle), Sentinel paikkaan 2
@@ -640,6 +653,19 @@ namespace Matkakirja
             satelliittiLento = true;
             VarmistaVarakartta();
             PaivitaLennonVarjostin();
+        }
+
+        /// <summary>
+        /// Löydös 85 / Fablen päätös A (25.9.): Sentinel-2-kerros pois kesken satelliittilennon (aloituslennon loppuorbit),
+        /// koska sen laatoissa on pilviä. Blue Marble (paikka 1, Z7 venytettynä) jää; väritaso pysyy väistössä, kunnes
+        /// LentoPohja(false) palauttaa pohjan. Ei tee mitään ilman Sentinel-kerrosta.
+        /// </summary>
+        public void LentoSentinelPois()
+        {
+            if (sentinel == null) return;
+            VapautaKerros(sentinel);
+            sentinel = null;
+            Debug.Log("MATKAKIRJA lennon pinta: Sentinel pois (aloituslennon loppu)");
         }
 
         /// <summary>Sentinel-sarjan kansio (ämpärin osoite, "/"-loppuinen); kattavuus Laattapalvelimelle ja sen haku.</summary>

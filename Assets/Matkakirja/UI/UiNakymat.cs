@@ -69,7 +69,13 @@ namespace Matkakirja.Natiivi
             PeliNakymat.MatkaValinta = _ => Hae().Matkavalinta;
             PeliNakymat.KaupunkiKortti = _ => Hae().Kaupunkikortti;
             PeliNakymat.Saapumistraileri = (kaupunki, url, valmis) => Hae().Traileri.NaytaPelista(kaupunki, url, valmis);
-            PeliNakymat.Saapumiskortti = (rivi, arkkiTaynna, valmis) => Hae().Saapumiskortti.Nayta(rivi, arkkiTaynna, valmis);
+            PeliNakymat.Saapumiskortti = (rivi, arkkiTaynna, valmis) =>
+            {
+                var ui = Hae();
+                // Aloituslento perillä (tai ohitettu): Ohita-nappi ja lennon kaistale pois, yläpalkki palaa arkin yllä.
+                ui.AloituslentoPerilla();
+                ui.Saapumiskortti.Nayta(rivi, arkkiTaynna, valmis);
+            };
             PeliNakymat.Kysymys = _ => Hae().Kysymys;
             // Sähkelinja (B5): pöllön liuska ja valikon retkikunta. Asettamattomana linjaa ei avata.
             PeliNakymat.Sahke = _ => Hae().Sahke;
@@ -152,21 +158,51 @@ namespace Matkakirja.Natiivi
         /// Liiku ja pulu. Näkyvissä vain lento ja luennan tekstipalkki (Traileri-kerros). Häivytys 0,6 s, paluu laskun jälkeen.
         /// </summary>
         public static readonly int[] LennonPiilokerrokset = { UiKerros.Nostot, UiKerros.Tilarivi, UiKerros.Matkavalinta, LinssiUi.Kerros, Natiivi.Pulu.Kerros };
-        public bool LentoPiilossa { get; private set; }
+        /// <summary>
+        /// Löydökset 81 ja 82 (omistaja 25.9., build 13): aloitusnäytöllä (portti, avaus ja kaupungin valinta) ei
+        /// ruskeaa yläpalkkia, logoa eikä ☰-nappia (web: aloitusnäkymässä ei palkkia). Pulu jää: se esittelee valinnan.
+        /// </summary>
+        static readonly int[] AloituksenPiilokerrokset = { UiKerros.Nostot, UiKerros.Tilarivi, UiKerros.Matkavalinta };
+        public bool LentoPiilossa => lentoVaihePiilo || aloituslentoPiilo;
+        /// <summary>LennonVaihe Nousu … Lasku (kaikki lennot).</summary>
+        bool lentoVaihePiilo;
+        /// <summary>
+        /// Löydös 83: aloituslennon koko esitys (kameran zoomi ja musta verho ennen nousua, lento) valinnasta
+        /// saapumiskorttiin; LennonVaihe alkaa vasta koneen lähtiessä, joten pelkkä vaihe jätti palkin ja pulun näkyviin.
+        /// </summary>
+        bool aloituslentoPiilo;
+        readonly System.Collections.Generic.HashSet<int> piilotetut = new System.Collections.Generic.HashSet<int>();
 
         public void LentoPiilo(bool piiloon)
         {
-            if (piiloon == LentoPiilossa) return;
-            LentoPiilossa = piiloon;
+            lentoVaihePiilo = piiloon;
+            if (!piiloon) aloituslentoPiilo = false;
+            PaivitaPiilot();
+        }
+
+        void AloituslentoPiilo(bool piiloon)
+        {
+            aloituslentoPiilo = piiloon;
+            Aloitus.NaytaOhita(piiloon);
+            PaivitaPiilot();
+        }
+
+        void PaivitaPiilot()
+        {
+            bool lento = LentoPiilossa;
             var ui = UiKerros.Hae();
             foreach (int k in LennonPiilokerrokset)
             {
+                bool piiloon = lento || (Aloitusnakyma.AloitusAuki && System.Array.IndexOf(AloituksenPiilokerrokset, k) >= 0);
+                if (piiloon == piilotetut.Contains(k)) continue;
+                if (piiloon) piilotetut.Add(k); else piilotetut.Remove(k);
+                int kk = k;
                 var j = ui.Juuri(k);
                 // Häivytys USS-luokalla (Matkakirja.uss .mk-lentopiilo: opacity 0,6 s); paluu 0,8 s.
                 j.AddToClassList("mk-lentosiirtyma");
                 j.EnableInClassList("mk-lentopiilo", piiloon);
                 // Häivytyksen jälkeen ei napautuksia (näkymätön ei ota osumia); paluu heti näkyväksi.
-                if (piiloon) j.schedule.Execute(() => { if (LentoPiilossa) j.style.visibility = UnityEngine.UIElements.Visibility.Hidden; }).StartingIn(650);
+                if (piiloon) j.schedule.Execute(() => { if (piilotetut.Contains(kk)) j.style.visibility = UnityEngine.UIElements.Visibility.Hidden; }).StartingIn(650);
                 else j.style.visibility = UnityEngine.UIElements.StyleKeyword.Null;
             }
         }
@@ -204,13 +240,27 @@ namespace Matkakirja.Natiivi
             Saapuminen = new Saapumisesitys(Matkakirja, Pulu);
             Chat = new PuluChat(kerros, Pulu);
             Traileri = new Saapumistraileri(kerros);
+            // Web pollo.js avaa → linssiEstaaChatin (satelliitti.js asettaa aikajana-paalla): astronautin pallonäkymässä
+            // ison pulun napautus ei avaa pääkeskustelua (löydös 96); kuvanäkymässä keskustelu on minipulun kortissa.
             Pulu.Napautus += Chat.Vaihda;
+            Pulu.NapautusEstetty = () =>
+            {
+                var l = Linssit;
+                return !Chat.Auki && l != null && l.Auki?.Tiedot?.Id == LinssiUi.AstronauttiId && !l.Astronautti.Kuva.Auki;
+            };
             // Livia lennähtää paikalle, kun käyttöliittymä on valmis (webin ensisaapuminen: handoff).
             kerros.Juuri(UiKerros.Tilarivi).schedule.Execute(() => Pulu.Tilanne("arrival")).StartingIn(1500);
             Tietoja = new Tietoja(kerros);
             Palaute = new PalauteIkkuna(kerros); // hampurilaisen "ehdota sisältöä"
             Valikko.MitaUutta.TarkistaPaivitys(); // web: "Peli päivittyi", kun laitteella oli aiempi versio
             Aloitus = new Aloitusnakyma(kerros);
+            // Löydökset 81/82: yläpalkki pois aloitusnäytöltä. Sulkeutuessa päivitys seuraavassa ruudussa, jotta
+            // valinnan Aloita ehtii merkitä aloituslennon (palkki ei välähdä valinnan ja lennon välissä).
+            Aloitusnakyma.AukiMuuttui += auki =>
+            {
+                if (auki) PaivitaPiilot();
+                else kerros.Juuri(UiKerros.Traileri).schedule.Execute(PaivitaPiilot);
+            };
             Huipennus = new Huipennus(kerros);
             Nostokortti = new Nostokortti(kerros);
             Lehti = new Lehtinakyma(kerros);
@@ -325,13 +375,13 @@ namespace Matkakirja.Natiivi
             Matkavalinta.PaivitaLiiku(o);
             // Aloituskaava: avausteksti häipyy, kun aloituslento on perillä (Pelikoodarin PeliOhjain.Aloitus).
             // Aloituslento ilman pallovalintaa (testikomento ui aloita, muut polut): avausteksti silti lennolle.
-            o.AloituslentoAlkoi += _ => UiKerros.PaaSaikeessa(() => { if (!Aloitus.Lennolla) Aloitus.LentoKirjoitus(); });
+            o.AloituslentoAlkoi += _ => UiKerros.PaaSaikeessa(() => { if (!Aloitus.Lennolla) Aloitus.LentoKirjoitus(); AloituslentoPiilo(true); });
             // Löydös 23: lennon ajaksi kaikki muu piiloon (Nousu … Perilla, myös aloituslento).
             o.LennonVaiheMuuttui += (v, _) => UiKerros.PaaSaikeessa(() => LentoPiilo(v != LennonVaihe.Perilla));
             // Pöllön valintavihje nopan jälkeen (Pelikoodari: 15 s ilman valintaa, kerran vaiheessa).
             o.ValintavihjeAika += t => UiKerros.PaaSaikeessa(() => Pulu.NaytaVihje(t));
             o.ValintavihjePois += () => UiKerros.PaaSaikeessa(Pulu.PiilotaVihje);
-            o.AloituslentoPaattyi += _ => UiKerros.PaaSaikeessa(Aloitus.AloituslentoPaattyi);
+            o.AloituslentoPaattyi += _ => UiKerros.PaaSaikeessa(() => { AloituslentoPerilla(); Aloitus.AloituslentoPaattyi(); });
             // C16: Livian tuurauspaljastus (ensimmäinen saapuminen koskaan) tai saapumisen ohjekuplat aloituslennon jälkeen.
             LivianPaljastus.Kytke(o);
             if (o.Tila == SilmukanTila.Aloitus) NaytaAloitus(o);
@@ -347,6 +397,9 @@ namespace Matkakirja.Natiivi
             // Sähkehakemisto valmiiksi, kun saavutaan sähkekaupunkiin (lehtien jäsennys ennen pisteen napautusta).
             o.MatkaPerilla += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaSahkehakemisto(kaupunki));
             EsilataaSahkehakemisto(o.PelaajanKaupunki);
+            // Löydös 104: maan karttanostojen data valmiiksi saapuessa (web sw.js), jotta kortti aukeaa heti.
+            o.MatkaPerilla += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaNostot(kaupunki));
+            EsilataaNostot(o.PelaajanKaupunki);
             // Huipennus vasta, kun viimeisen aarteen kysymys (ja sen paljastus) on suljettu: tapahtuma
             // tulee löytöhetkellä, ennen paljastusta, eikä huipennus saa jäädä paljastuksen alle.
             // Web: voittoikkuna aukeaa → sfx.play('win').
@@ -367,6 +420,23 @@ namespace Matkakirja.Natiivi
             o.LentoAani += (alkaa, kesto) => UiKerros.PaaSaikeessa(() => Aanet.LentoAani(alkaa, kesto));
             // Lehti (WKWebView) aukeaa kaiken päälle: auki jääneet valikot kiinni.
             if (o.Lehti != null) o.Lehti.Avautui += _ => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Vahvistus.Sulje(); };
+        }
+
+        static string esiladattuMaa;
+
+        /// <summary>Saapumismaan nostodata taustalla 2 s:n päästä (saapumisen animaatio ja luenta ensin); maa kerran.</summary>
+        static void EsilataaNostot(string kaupunki)
+        {
+            var maa = kaupunki != null ? UiSisalto.Kaupunki(kaupunki)?.Maa : null;
+            if (string.IsNullOrEmpty(maa) || maa == esiladattuMaa) return;
+            esiladattuMaa = maa;
+            UiKerros.Hae().StartCoroutine(Viiveella(2f, NostoSisalto.Esilataa(maa)));
+        }
+
+        static System.Collections.IEnumerator Viiveella(float s, System.Collections.IEnumerator ajo)
+        {
+            yield return new WaitForSecondsRealtime(s);
+            yield return ajo;
         }
 
         static void EsilataaSahkehakemisto(string kaupunki)
@@ -399,10 +469,19 @@ namespace Matkakirja.Natiivi
             Aloitus.NaytaAvaus(id => Aloita(o, id), o.Lahtokaupungit());
         }
 
+        /// <summary>Aloituslento perillä, ohitettu tai katkennut: Ohita-nappi ja kaistale pois, piilotetut takaisin.</summary>
+        void AloituslentoPerilla()
+        {
+            Aloitus.LentoPerilla();
+            if (aloituslentoPiilo || Aloitus.OhitaNakyy) AloituslentoPiilo(false);
+        }
+
         void Aloita(PeliOhjain o, string id)
         {
             // Kehittäjän maailmatilassa mikä tahansa kaupunki kelpaa lähdöksi (D6, web doPickStart).
             var virhe = o.UusiMatka(id, kaikkiKelpaa: Paavalikko.Maailma);
+            // Palkki ja pulu pysyvät piilossa valinnasta suoraan lennolle (ei välähdystä, kun aloitus sulkeutuu).
+            if (o.AloituslentoKaynnissa) AloituslentoPiilo(true);
             if (virhe != null) { Debug.LogWarning("MATKAKIRJA ui aloitus: " + virhe); Tilarivi.Viesti(virhe); }
         }
 

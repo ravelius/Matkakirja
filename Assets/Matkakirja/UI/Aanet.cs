@@ -55,8 +55,10 @@ namespace Matkakirja.Natiivi
         static bool kytketty;
 
         /// <summary>Soiko kertoja (isoisän luenta) juuri nyt: pulu vaikenee sen ajan.</summary>
-        public static bool KertojaPuhuu => (kertoja != null && kertoja.isPlaying) || (Puhe.Instanssi != null && Puhe.Instanssi.Soi);
-        public static bool PuluPuhuu => puhe != null && puhe.isPlaying;
+        public static bool KertojaPuhuu => (kertoja != null && kertoja.isPlaying)
+            || (Puhe.Instanssi != null && Puhe.Instanssi.Soi && !Puhe.Instanssi.PuluaaniSoi);
+        /// <summary>Pulu puhuu: oma repliikki tai chat-vastauksen ääneen luku (Puhe, persoona pollo).</summary>
+        public static bool PuluPuhuu => (puhe != null && puhe.isPlaying) || (Puhe.Instanssi != null && Puhe.Instanssi.PuluaaniSoi);
         public static AudioSource Kertojasoitin => Soitin(AaniKanava.Kertoja);
         public static AudioSource Puhesoitin => Soitin(AaniKanava.Puhe);
 
@@ -266,8 +268,10 @@ namespace Matkakirja.Natiivi
             Hae(urlTaiAvain, klippi =>
             {
                 if (klippi == null) { alkoi?.Invoke(null); return; }
-                // Pulu ei aloita kertojan päälle (kupla jää ruudulle äänettä).
-                if (k == AaniKanava.Puhe && KertojaPuhuu) { alkoi?.Invoke(null); return; }
+                // Pulu ei aloita kertojan eikä oman chat-vastauksensa ääneen luvun päälle
+                // (kupla jää ruudulle äänettä).
+                if (k == AaniKanava.Puhe && (KertojaPuhuu || (Puhe.Instanssi != null && Puhe.Instanssi.PuluaaniSoi)))
+                { alkoi?.Invoke(null); return; }
                 if (k == AaniKanava.Tehoste)
                 {
                     if (Mykistetty) { alkoi?.Invoke(null); return; }

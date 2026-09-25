@@ -407,7 +407,7 @@
 .mk-astrokuva__selite {
     position: absolute;
     left: 12px;
-    top: 12px;
+    top: 10px;
     right: 64px;
     max-width: 560px;
     padding: 8px 10px 6px 10px;
@@ -418,7 +418,10 @@
     color: rgba(233, 250, 240, 0.92);
 }
 
+/* Löydös 97 (web .satelliitti-selite-kiinni: width auto, katto ennen ✕:ää): kelattu nimilaatikko tekstin kokoinen. */
 .mk-astrokuva__selite.mk-kiinni {
+    right: auto;
+    max-width: 78%;
     padding: 5px 10px;
     background-color: rgba(6, 13, 10, 0.25);
     border-color: rgba(93, 255, 168, 0.12);
@@ -503,7 +506,7 @@
 
 .mk-astrokuva__sulku {
     position: absolute;
-    top: 12px;
+    top: 10px;
     right: 12px;
     width: 38px;
     height: 38px;
@@ -551,18 +554,33 @@
     border-width: 2px;
 }
 
+/* Web .satelliitti-pulukulma: sarake oikeassa alakulmassa, kortti pulun yläpuolella 8 pt:n välein (löydös 96). */
 .mk-astrokuva__pulu {
     position: absolute;
     right: 12px;
     bottom: 12px;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 360px;
+}
+
+/* Web .satelliitti-pulunappi: läpinäkyvä, osuma-ala vähintään 44 pt, hahmo alas keskelle. */
+.mk-astrokuva__pulunappi {
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 /* --- vertailu: alapalkki ja laput (webin .vertailu-palkki) ------------------ */
 
+/* Web: kelluva pilleri keskellä sisältönsä levyisenä (left 50 %, translateX(-50 %), max-width min(96vw, 900px));
+   reunasta reunaan ulottuva palkki peitti maan nimen (linssipariteetti rivi 39). */
 .mk-vertailupalkki {
     position: absolute;
-    left: 8px;
-    right: 8px;
+    left: 50%;
+    translate: -50% 0;
+    max-width: 96%;
     bottom: 10px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -742,15 +760,18 @@
 
 /* --- maakyltti (webin .maa-pilleri) ------------------------------------------ */
 
+/* Web .maa-pilleri: 0,8rem kirjoituskone versaalein, harvennus 0,1 em, padding 0 0,5em, kulma 6 px, tausta
+ * rgba(244,231,202,.86); korkeus matkakirjan supistetun lapun mukaan (iPhonen kaupunkipilleri 36 px). */
 .mk-maakyltti {
     position: absolute;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    height: 36px;
     min-height: 0;
-    padding: 5px 10px;
+    padding: 0 8px;
     border-width: 0;
     border-radius: 6px;
-    background-color: rgba(244, 231, 202, 0.9);
+    background-color: rgba(244, 231, 202, 0.86);
     color: rgba(70, 51, 31, 0.92);
 }
 
@@ -771,8 +792,8 @@
 }
 
 .mk-maakyltti__nimi {
-    font-size: 15px;
-    letter-spacing: 13.33px; /* web 2px */
+    font-size: 12.8px;
+    letter-spacing: 10px; /* web 0.1em */
     color: rgba(70, 51, 31, 0.92);
 }
 
@@ -1282,35 +1303,147 @@
     color: #3a2812;
 }
 
+/* --- aloituslaatikko (linssipariteetti rivi 11; web css/aikajana.css .aikajana-avaus*) ------------------ */
+.mk-aikajana-avaus {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* Keksinnöt: täysmusta peite (web .aikajana-avaus.musta .aikajana-avaus-peite #000). */
+.mk-aikajana-avaus--musta {
+    background-color: #000;
+}
+
+/* Web .aikajana-avaus-kehys: min(31rem, 88 %). */
+.mk-aikajana-avaus__kehys {
+    width: 88%;
+    max-width: 496px;
+    flex-shrink: 0;
+}
+
+.mk-aikajana-avaus__paperi {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+/* Web padding: calc(2,4rem + 4,4 %) calc(2rem + 5,6 %) — prosentit leveydestä (≈ 326 px: 14 / 18 px). */
+.mk-aikajana-avaus__laatikko {
+    padding: 52px 50px 48px 50px;
+    align-items: center;
+}
+
+/* Web .aikajana-avaus-otsikko: 1,46rem, 600, small-caps, 0,09 em (UITK em/100 → 9), #3a2812. */
+.mk-aikajana-avaus__otsikko {
+    font-size: 23.4px;
+    letter-spacing: 9px;
+    color: #3a2812;
+    -unity-text-align: upper-center;
+    white-space: normal;
+    margin: 0;
+}
+
+/* Web ::after: 6rem × 2 px, liukuvärinen, margin 0,55rem auto 0; otsikon alamarginaali 0,85rem. */
+.mk-aikajana-avaus__viiva {
+    width: 96px;
+    height: 2px;
+    margin: 8.8px 0 13.6px 0;
+    flex-direction: row;
+    -unity-background-scale-mode: stretch-to-fill;
+    background-size: 50% 100%;
+    background-repeat: no-repeat no-repeat;
+    background-position-x: left 0;
+}
+
+.mk-aikajana-avaus__viiva2 {
+    position: absolute;
+    left: 48px;
+    width: 48px;
+    top: 0;
+    bottom: 0;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-aikajana-avaus__teksti {
+    align-self: stretch;
+    margin-bottom: 19.2px;
+}
+
+/* Web .aikajana-avaus-teksti: 0,98rem, rivi 1,58, vasen liehu, #2b2116. */
+.mk-aikajana-avaus__kappale {
+    font-size: 15.7px;
+    color: #2b2116;
+    -unity-text-align: upper-left;
+    white-space: normal;
+    margin: 0;
+}
+
+/* Web ::first-letter: 2,55 em, 600, #3a2812. */
+.mk-aikajana-avaus__anfangi {
+    color: #3a2812;
+}
+
+.mk-aikajana-avaus__napit {
+    align-items: center;
+}
+
+/* Web .aikajana-lyhty: lämmin keila kummassakin yläkulmassa (keskus 17 % / 7 % laatikosta, joka on 98 % × 118 %). */
+/* Lyhtyjen valo on paperin kokoinen ja jo rajattu repaleiseen reunaan (RepaleinenPergamentti); sijainti C#:ssa. */
+.mk-aikajana-avaus__valo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.mk-aikajana-avaus__lyhty {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+/* Web .aikajana-avaus-nappi: 44 px, padding 0,62rem 2,1rem, pilleri, reuna 1,5 px kulta, liukuväri (C#). */
 .mk-aikajana-avausnappi {
     min-height: 44px;
-    padding: 8px 26px;
+    padding: 9.9px 33.6px;
     border-width: 1.5px;
     border-color: rgba(214, 168, 84, 0.92);
     border-radius: 22px;
-    background-color: rgb(58, 39, 16);
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-scale-mode: stretch-to-fill;
     color: #f6e6c2;
 }
 
 .mk-aikajana-avausnappi:active {
-    background-color: rgb(74, 51, 22);
+    border-color: rgba(240, 198, 118, 1);
 }
 
+/* 1,06rem small-caps (C# Kapiteelit), 0,17 em (UITK 17). */
 .mk-aikajana-avausnappi .mk-nappi__teksti {
-    font-size: 16px;
-    letter-spacing: 12.5px; /* web 2px */
+    font-size: 17px;
+    letter-spacing: 17px;
     color: #f6e6c2;
 }
 
 /* --- minipulun kysymyskortti (webin .satelliitti-pulukortti) ----------------- */
 
 .mk-minipuluKortti {
-    position: absolute;
-    right: 12px;
-    bottom: 80px;
+    margin-bottom: 8px;
     width: 320px;
-    max-width: 92%;
-    max-height: 62%;
     padding: 10px 12px 12px 12px;
     border-width: 1px;
     border-color: rgba(93, 255, 168, 0.28);
@@ -1351,6 +1484,11 @@
 .mk-minipuluKortti__virta {
     flex-shrink: 1;
     margin-top: 8px;
+}
+
+/* Web: ↑ pois käytöstä kysymyksen ajan (opacity 0,5). */
+.mk-minipuluKortti__laheta:disabled {
+    opacity: 0.5;
 }
 
 .mk-minipuluKortti__ehdotukset {

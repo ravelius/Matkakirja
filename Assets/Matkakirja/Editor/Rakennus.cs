@@ -22,14 +22,15 @@ namespace Matkakirja.Editori
         public const string PalloKohtaus = "Assets/Matkakirja/Scenes/Pallo.unity";
 
         /// <summary>
-        /// Pelin oma pallolaatasto (Web Mercator, z0–8, 256 px, jpg) ämpärissä.
-        /// Karttasepän poltto 23a (sama sävy kuin isoisän linssin rajaton 23a-sarja; web on
-        /// vielä 22c:ssä), docs/raportit/natiivi-laattaosoitteet-20260923.md. Slippy-rivi 0 on pohjoisin,
+        /// Pelin oma pallolaatasto (Web Mercator, z0–9, 256 px, jpg) ämpärissä.
+        /// Karttasepän peruskarttasarja 2026-09-25 (resepti löydös 46: viivaton, ei rantamustetta, meri sävyliukuna;
+        /// rannat ja rajat natiivissa vektorina, Rannikko ja Rajat). Aiempi 23a-sarja poltti viivat laattoihin.
+        /// Slippy-rivi 0 on pohjoisin,
         /// Cesiumin {y} eteläisin, joten osoitteessa on {reverseY}.
         /// </summary>
         public const string LaattaUrl =
-            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-23a-pohja-20260923a/{z}/{x}/{reverseY}.jpg";
-        public const int LaattaMaxTaso = 8;
+            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-25-pohja-20260925/{z}/{x}/{reverseY}.jpg";
+        public const int LaattaMaxTaso = 9;
 
         /// <summary>
         /// Karttasepän maasto (quantized-mesh-1.0, EPSG:4326, Copernicus GLO-30/90), poltto 2026-09-24-maailma:
@@ -89,10 +90,14 @@ namespace Matkakirja.Editori
             // Reitit: värit ja katkot verkkopelin js/pallolauta/reitit.js REITIN_VARIT ja *_KATKO_AST.
             var reitit = georefGo.AddComponent<Reitit>();
             reitit.georeferenssi = georef;
-            reitit.maa = Viiva("Reitti-maa", new Color32(74, 58, 36, 107), 2.5f, new Vector4(0.16f, 0.5f, 0, 0));
-            reitit.meri = Viiva("Reitti-meri", new Color32(61, 85, 112, 107), 2.5f, new Vector4(0.16f, 0.5f, 0, 0));
+            // Löydös 111 (Pelikoodarin mittaus 25.9.): webin muste .42 sekoittuu sRGB:ssä, natiivi lineaarisessa tilassa,
+            // jolloin ohut tumma viiva näkyi puolet vaaleampana (mitattu ~.2). Alfa kompensoitu niin, että tulos
+            // pergamentilla (#e6d7b4…#efdcb4) on sama kuin webin sRGB-sekoitus: maa .42 → .59 (152), meri .42 → .55 (140).
+            reitit.maa = Viiva("Reitti-maa", new Color32(74, 58, 36, 152), 2.5f, new Vector4(0.16f, 0.5f, 0, 0));
+            reitit.meri = Viiva("Reitti-meri", new Color32(61, 85, 112, 140), 2.5f, new Vector4(0.16f, 0.5f, 0, 0));
             // Lento: katko paikallaan (build 13, B23); Reitit tekee valitulle lennolle liikkuvan kopion (reitit.js:372).
-            reitit.lento = Viiva("Reitti-lento", new Color32(150, 54, 40, 153), 2.5f, new Vector4(0.35f, 0.6f, 0, 0));
+            // Sama kompensaatio (löydös 111): webin .6 (reitit.js:214) pergamentilla = lineaarisena .76 (193).
+            reitit.lento = Viiva("Reitti-lento", new Color32(150, 54, 40, 193), 2.5f, new Vector4(0.35f, 0.6f, 0, 0));
             reitit.korostus = Viiva("Reitti-korostus", new Color32(96, 40, 26, 230), 4f, new Vector4(0.35f, 0.6f, 0.35f / 1.2f, 0));
             merkit.reitit = reitit;
 

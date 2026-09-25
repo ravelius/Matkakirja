@@ -395,12 +395,11 @@ namespace Matkakirja.Natiivi
             kierto.PelaajanEle += KarttaKosketettu;
             // Heittonapin päältä alkava veto ei pyöritä palloa.
             SyoteLukko.LisaaPeitto(p => Kaytossa && dialogi.PeittaaPisteen(p));
-            // Lehti peittää pallon: pallo piirtää harvemmin sen ajan (NakymaPeitetty).
-            if (lehtiNakyma != null)
-            {
-                SyoteLukko.LisaaNakymaPeitto(() => lehtiNakyma.Auki);
-                lehtiNakyma.Suljettu += LehtiSuljettu;
-            }
+            // LÖYDÖS 101 (maalehtien tahmea vieritys laitteella): lehteä EI rekisteröidä näkymäpeitoksi. Peitto asettaa
+            // OnDemandRendering.renderFrameInterval = 4 (PalloKierto.PaivitaPeitto), joka harventaa KOKO Unityn piirron
+            // eikä vain palloa. Se oli tehty WKWebView-lehdelle, jonka iOS piirsi itse; nykyinen lehti on UI Toolkit -näkymä
+            // samassa piirrossa, joten se päivittyi 60 Hz:n näytöllä vain 15 fps:llä, ja vieritys ja heitto nykivät.
+            if (lehtiNakyma != null) lehtiNakyma.Suljettu += LehtiSuljettu;
             AlustaAanet();
 
             if (File.Exists(PoisPolku))
@@ -873,6 +872,7 @@ namespace Matkakirja.Natiivi
         void Kytke(Matka m)
         {
             using var _ = Ajoita("kytke");
+            AloitaMatkareitit();
             linssit = new Linssiomistus(passi ?? new Passi(), m.Tila.Linssit).Kytke(m);
             linssit.Kynnyssaanto = Linssirekisteri.Kynnys;   // omistajan sääntö (1400: radio ja topografia)
             kytkettyRekisteri = null;
@@ -1468,7 +1468,10 @@ namespace Matkakirja.Natiivi
             if (kaupunki == null) return;
             var l = luennat.OtaLuento(kaupunki);
             if (l != null && LykkaaLuento(kaupunki, l)) return;
-            if (l != null && SoitaLuento(l, 0.6f) == null && !string.IsNullOrEmpty(l.Paikkarivi)) Viesti(l.Paikkarivi);
+            // Löydökset 86/89 (omistaja, build 13): ei paikkarivin ilmoitusta luennan alkaessa (web aloitaMerkinta ei näytä
+            // ilmoitusta; tumma laatikko "Ateena, elokuussa 1873. Pölyä ja puhetta kullasta." näytti väärän väriseltä
+            // matkakirjalta). Paikkarivi on matkakirjan merkinnässä.
+            if (l != null) SoitaLuento(l, 0.6f);
         }
 
         /// <summary>Kaupunki, jonka lehti (tai jonka kautta maalehti) avattiin: Suljettu antaa maalehdessä ISO3:n.</summary>
@@ -1492,7 +1495,7 @@ namespace Matkakirja.Natiivi
             bool saapuminen = saapumisLehti != null && saapumisLehti == kaupunki;
             saapumisLehti = null;
             var l = maalehti || !saapuminen ? null : luennat.OtaLuento(kaupunki);
-            if (l != null && SoitaLuento(l, 0.6f) == null && !string.IsNullOrEmpty(l.Paikkarivi)) Viesti(l.Paikkarivi);
+            if (l != null) SoitaLuento(l, 0.6f); // löydökset 86/89: ei paikkarivin ilmoitusta (ks. SaavuLehteen)
         }
 
         /// <summary>Avaa lehden natiivin rahalla ja kauppojen kirjanpidolla (lehtikuoren #tila).</summary>

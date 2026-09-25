@@ -61,6 +61,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Numeroympyräkartta (web numeroympyrat: luxemburg, bryssel, ljubljana, kosice, valletta).</summary>
         public bool Numeroympyrat;
         public List<KohdekarttaKohde> Kohteet = new List<KohdekarttaKohde>();
+        /// <summary>Mittakaavajanan leveys osuutena koko kuvan leveydestä (0–1), tai 0 (ei janaa); JanaTeksti "500 m".</summary>
+        public float JanaOsuus;
+        public string JanaTeksti;
         public float Suhde => Leveys > 0 && Korkeus > 0 ? (float)Korkeus / Leveys : 1f;
     }
 
@@ -161,6 +164,7 @@ namespace Matkakirja.Natiivi
                 };
                 var rajat = Ob(MiniJson.Kentta(a, "rajat"));
                 var piirto = Ob(MiniJson.Kentta(a, "piirtoRajat"));
+                if (rajat != null && T(a, "projektio") != "laea") Mittakaava(k, rajat, piirto ?? rajat);
                 if (rajat != null && piirto != null)
                 {
                     double L(Dictionary<string, object> o, string n) => MiniJson.Luku(o, n) ?? 0;
@@ -228,6 +232,24 @@ namespace Matkakirja.Natiivi
                 });
             }
             return j;
+        }
+
+        // Web js/packs/maakartat.js mittakaava(): pituus vakiosarjasta, tavoite neljäsosa ydinrajauksen leveydestä,
+        // osuus koko piirretystä kuvasta; kilometrit rajauksen keskileveydellä. Laea-kartoille ei janaa.
+        static readonly int[] JananPituudet = { 50, 100, 200, 250, 500, 1000, 2000, 2500, 5000, 10000, 20000, 25000, 50000 };
+
+        static void Mittakaava(Kohdekartta k, Dictionary<string, object> rajat, Dictionary<string, object> piirto)
+        {
+            double L(Dictionary<string, object> o, string n) => MiniJson.Luku(o, n) ?? double.NaN;
+            double kosini = Math.Cos((L(rajat, "pohjoinen") + L(rajat, "etela")) / 2 * Math.PI / 180);
+            double metria = (L(piirto, "ita") - L(piirto, "lansi")) * 111320 * kosini;
+            double ydinMetria = (L(rajat, "ita") - L(rajat, "lansi")) * 111320 * kosini;
+            if (double.IsNaN(metria) || metria <= 0 || double.IsNaN(ydinMetria)) return;
+            double tavoite = ydinMetria * 0.25;
+            int paras = JananPituudet[0];
+            foreach (int p in JananPituudet) if (Math.Abs(p - tavoite) < Math.Abs(paras - tavoite)) paras = p;
+            k.JanaOsuus = (float)(paras / metria);
+            k.JanaTeksti = paras < 1000 ? paras + " m" : (paras / 1000.0).ToString(System.Globalization.CultureInfo.InvariantCulture).Replace('.', ',') + " km";
         }
     }
 }

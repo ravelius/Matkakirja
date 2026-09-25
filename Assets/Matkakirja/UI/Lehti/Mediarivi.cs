@@ -227,8 +227,11 @@ namespace Matkakirja.Natiivi
             {
                 Debug.Log("MATKAKIRJA ui lehti: radio " + radio);
                 virta ??= RadioVirta.Luo(UiKerros.Hae().transform);
-                virta.Voimakkuus = 0.55f * Puhe.Voimakkuus;
                 virta.Avaa(radio, null);
+                // LÖYDÖS 100: voimakkuus vasta avauksen jälkeen. Setteri kirjoittaa vain omistajalle (RadioVirta.Oma), ja
+                // natiivin avaa: aloittaa mykkänä (RadioLinssi nostaa lukituksessa); ennen avausta asetettu arvo katosi,
+                // joten nappi paloi punaisena ilman ääntä. Web: audio.volume = 0,55 × voima (ui.js kulttuuriAaniNapista).
+                virta.Voimakkuus = 0.55f * Puhe.Voimakkuus;
                 // Radiolinssin oma viritys voittaa (RadioVirta.Varattu): syy tilariville, ei varanäytettä päälle.
                 if (virta.Estetty) { UiNakymat.Hae()?.Tilarivi.Viesti(virta.Virhe); Pysayta(); return; }
                 soivaUrl = null;
@@ -254,6 +257,8 @@ namespace Matkakirja.Natiivi
             {
                 // Kanavan haku (web maapaneeli aloitaHaku): nappi vilkkuu, kunnes lähetys kuuluu.
                 bool etsii = !virta.Kuuluu;
+                // Voimakkuus pysyy asetuksen mukaisena koko soiton ajan (web: audio.volume ei nollaudu).
+                if (!etsii) virta.Voimakkuus = 0.55f * Puhe.Voimakkuus;
                 soiva.Nappi.EnableInClassList("mk-etsii", etsii);
                 soiva.Nappi.EnableInClassList("mk-vilkku", etsii && !soiva.Nappi.ClassListContains("mk-vilkku"));
                 // Suora lähetys: virhe tai aikaraja → kaupungin kielinäyte, live-merkki sammuu (web petti).

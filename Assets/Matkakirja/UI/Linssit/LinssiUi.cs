@@ -52,7 +52,15 @@ namespace Matkakirja.Natiivi
         readonly Button sulje;
         Linssirekisteri kuunneltu;
         // Sulkupillerin peittäjät: astronautin kuvanäkymä, vertailuarkki ja aikajanan hampurilainen.
-        bool kuvaPeittaa, arkkiPeittaa, valikkoKorvaa;
+        bool kuvaPeittaa, arkkiPeittaa, valikkoKorvaa, avausPeittaa;
+
+        /// <summary>Aikajanan aloituslaatikko auki (web: .aikajana-avaus peittää ✕:n): sulkupilleri piiloon.</summary>
+        public void AvausPeittaa(bool peittaa)
+        {
+            if (avausPeittaa == peittaa) return;
+            avausPeittaa = peittaa;
+            PaivitaSulku();
+        }
 
         /// <summary>Auki oleva linssi (null = ei mitään).</summary>
         public ILinssi Auki { get; private set; }
@@ -77,6 +85,10 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(sulje, Kirjasin.Kone);
             sulje.tooltip = "Sulje linssi";
             sulje.style.display = DisplayStyle.None;
+            // Selitteen nimilappu samalle riville ✕:n vasemmalle (web .linssi-selite.pieni); ✕:n leveys muuttuu tekstin
+            // sulaessa, joten lappu seuraa sitä.
+            Selite.Vasen = () => sulje.resolvedStyle.display == DisplayStyle.None ? float.NaN : sulje.worldBound.xMin;
+            sulje.RegisterCallback<GeometryChangedEvent>(_ => Selite.Uudelleen());
             kerros.TurvaMuuttui += Asettele;
             Asettele();
 
@@ -178,6 +190,8 @@ namespace Matkakirja.Natiivi
         static readonly Unity.Profiling.ProfilerMarker MerkkiMaat = new Unity.Profiling.ProfilerMarker("UI.Linssi.Maat");
         static readonly Unity.Profiling.ProfilerMarker MerkkiRadio = new Unity.Profiling.ProfilerMarker("UI.Linssi.Radio");
 
+        bool kerrosPaalla;
+
         void Vaihtui(ILinssi linssi)
         {
             // Vaihtui voi tulla LinssiOhjaimen komennoista; UI:ta muutetaan vain pääsäikeessä,
@@ -196,6 +210,9 @@ namespace Matkakirja.Natiivi
             ui.OfflineTila.NaytaSallittu(!paalla);
             ui.Matkavalinta.NaytaSallittu(!(portti || vertailu || radio));
             ui.Matkakirja.NaytaSallittu(!(portti || vertailu || radio));
+            // Web piirraLinssiSelite: kerroksellinen linssi (radio on kerrokseton) kutistaa päiväkirjan lapuksi.
+            bool kerros = paalla && !radio;
+            if (kerros != kerrosPaalla) { kerrosPaalla = kerros; ui.Matkakirja.Linssi(kerros); }
             // Löydös 42: karttaselitteen nappi näkyy linssin aikana kuten webissä; piiloon vain aikajanalinsseissä
             // (web body.aikajana-paalla .karttaselite) ja astronautin kamerassa (body.linssi-satelliitti .karttaselite).
             bool selitePiiloon = id == AstronauttiId || id == AikajanaNakyma.KeksinnotId || id == AikajanaNakyma.IhmisenMatkaId;
@@ -248,7 +265,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void PaivitaSulku()
         {
-            bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa;
+            bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa && !avausPeittaa;
             sulje.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (nakyy && !sulkuNakyi) Kutista();
             else if (!nakyy) { kutistus?.Pause(); kutistus = null; }

@@ -78,9 +78,8 @@ namespace Matkakirja.Natiivi
             var l = lykattyLuento;
             PeruLykkays();
             if (k == null || l == null || LuentoOhitettu || PelaajanKaupunki != k) return false;
-            if (SoitaLuento(l, 0f) != null) return false;
-            if (!string.IsNullOrEmpty(l.Paikkarivi)) Viesti(l.Paikkarivi);
-            return true;
+            // Löydökset 86/89: ei paikkarivin ilmoitusta (web aloitaLykattyLuenta vain soittaa luennan).
+            return SoitaLuento(l, 0f) == null;
         }
     }
 }

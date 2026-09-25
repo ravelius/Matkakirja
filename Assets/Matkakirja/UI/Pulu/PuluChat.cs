@@ -104,6 +104,8 @@ namespace Matkakirja.Natiivi
             sulkija.RegisterCallback<PointerDownEvent>(e => { Sulje(); e.StopPropagation(); });
 
             paneeli = Rakenne.El("mk-chat", juuri);
+            // Löydös 91 (web .pollo-paneeli: --pollo-paperi + --paper-noise multiply): paperikohina kuten lippukortissa.
+            Kuviot.AsetaArkki(paneeli);
             paneeli.style.display = DisplayStyle.None;
             // Ylärivi (web .pollo-ylarivi): "Näytä puhekuplat" tuo ohi menneen repliikin takaisin.
             var ylarivi = Rakenne.El("mk-chat__ylarivi", paneeli, PickingMode.Ignore);

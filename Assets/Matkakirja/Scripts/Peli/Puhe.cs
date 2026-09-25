@@ -166,6 +166,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Soiva (tai ladattava) äänite, null = hiljaa.</summary>
         public string SoivaUrl { get; private set; }
         public bool Soi => puhuu;
+        /// <summary>Soivan synteesin persoona (merkinnat | kertoja | pollo), äänitteellä null.</summary>
+        public string SoivaPersoona { get; private set; }
+        /// <summary>
+        /// Pulun chat-vastaus soi (persoona pollo): pulu puhuu itse eikä kertoja (löydös 66 kohta 7,
+        /// web lukija → ilmoitaLivianKasvopuhe): nokka liikkuu, eikä tämä vaienna pulua kertojana.
+        /// </summary>
+        public bool PuluaaniSoi => puhuu && SoivaPersoona == "pollo";
         public float Aika => lahde != null && lahde.clip != null ? lahde.time : 0;
         public float Kesto => lahde != null && lahde.clip != null ? lahde.clip.length : 0;
         public string ViimeVirhe { get; private set; }
@@ -241,6 +248,7 @@ namespace Matkakirja.Natiivi
             if (lahde.isPlaying) Haivyta(Alkuhaivytys, false);
             this.loppu = loppu;
             SoivaUrl = url;
+            SoivaPersoona = null;
             ViimeVirhe = null;
             lataus = StartCoroutine(LataaJaSoita(url, () => new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET), viiveS, oma, false, true));
             return true;
@@ -282,6 +290,7 @@ namespace Matkakirja.Natiivi
             if (lahde.isPlaying) Haivyta(Alkuhaivytys, false);
             this.loppu = loppu;
             SoivaUrl = "puhe:" + persoona + ":" + teksti;
+            SoivaPersoona = persoona;
             ViimeVirhe = null;
             var (runko, koodi) = Saadot.Pyynto(teksti, persoona, lohko);
             string avain = Saadot.Valimuistiavain(persoona, teksti);

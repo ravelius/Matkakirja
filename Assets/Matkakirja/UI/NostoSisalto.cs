@@ -135,6 +135,35 @@ namespace Matkakirja.Natiivi
         static Dictionary<string, object> Ob(object x) => x as Dictionary<string, object>;
         static string T(Dictionary<string, object> o, string k) => MiniJson.Teksti(o, k);
 
+        // --- esilataus (löydös 104) ---------------------------------------------------------
+
+        /// <summary>
+        /// LÖYDÖS 104 (omistaja build 13: karttanostot aukeavat hitaasti). Kortti pysyy piilossa, kunnes sen data on
+        /// jäsennetty. Ensimmäisellä kerralla tämä tarkoittaa kokoelman tai maan moduulien verkkohakua (kohde: jopa kolme
+        /// peräkkäin). Web ei hae mitään kortin avauksessa, koska sw.js on välimuistittanut samat tiedostot valmiiksi
+        /// (fokuskohteet-, maastokohteet-, hahmotelma- ja nakyvat-kaupungit-&lt;iso&gt; sekä kokoelmat). Natiivi lämmittää saman
+        /// joukon saapumismaalle taustalla, tiedosto kerrallaan ja kehys välissä (jäsennys pääsäikeessä). Kuvia ei esiladata,
+        /// koska web ei esilataa tuntemattomien nostojen kuvia.
+        /// </summary>
+        public static IEnumerator Esilataa(string iso)
+        {
+            if (string.IsNullOrEmpty(iso)) yield break;
+            string pieni = iso.ToLowerInvariant(), suuri = iso.ToUpperInvariant();
+            yield return ValojenMaat();
+            foreach (var k in new[] { "skandaalit", "historianHetket", "elaintayt", "takynostot" })
+            {
+                yield return null;
+                yield return LataaKokoelma(k);
+            }
+            foreach (var (tiedosto, vienti) in new[] { ("fokuskohteet", "FOKUSKOHTEET"), ("maastokohteet", "MAASTOKOHTEET"),
+                                                       ("hahmotelma", "HAHMOTELMA"), ("nakyvat-kaupungit", "NAKYVAT_KAUPUNGIT") })
+            {
+                yield return null;
+                yield return ModuuliArvo($"moduulit/js/packs/{tiedosto}-{pieni}.json", $"{vienti}_{suuri}", _ => { });
+            }
+            Debug.Log("MATKAKIRJA ui nostot: esiladattu " + suuri);
+        }
+
         // --- haku --------------------------------------------------------------------------
 
         /// <summary>Hakee kortin datan valon id:llä (null = ei löytynyt tai paketissa ei ole).</summary>

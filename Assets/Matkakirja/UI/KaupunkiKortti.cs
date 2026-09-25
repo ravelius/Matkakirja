@@ -35,7 +35,9 @@ namespace Matkakirja.Natiivi
             + "<path d=\"M7.5 9h6M7.5 12h6M7.5 15h3.5\"/>";
 
         // Web: LIUSKAN_RIVIVALI_KERROIN 1,45 × 13 px, LIUSKAN_YLAVARA_PX 18, LIUSKAN_LEVEYDEN_OSUUS 0,78, LIUSKAN_AJO_MS 420.
-        const float RivinKorkeus = 18.85f, Rako = 15f, Ylavara = 18f, LeveydenOsuus = 0.78f, Reunavara = 8f;
+        // Löydös 92 (omistaja build 13): liuska 1,4 × webin mitoista (USS .mk-liuska samalla kertoimella).
+        const float Koko = 1.4f;
+        const float RivinKorkeus = 18.85f * Koko, Rako = 15f, Ylavara = 18f, LeveydenOsuus = 0.78f, Reunavara = 8f;
         const long AvausViive = 420;
         static readonly string KelausYlosIkoni = "<path d=\"M5.5 15 12 8.5 18.5 15\"/>";
 

@@ -59,6 +59,9 @@ namespace Matkakirja
         bool peruttu;
         string maastoPohja;
         float seuraavaIlmoitus;
+        // offline.jsonin lahteet.rasteri.maaMax (skeema 1.40): syvin taso, joka kattaa koko maan. Sen yli (Z9) välit
+        // ovat vain kaupunkien ympärillä, eivätkä ne kelpaa maan laatikoksi.
+        static int rasterinMaaMax = int.MaxValue;
 
         static string Kirjanpito => Path.Combine(Laattapalvelin.OfflineKansio, "_alueet");
         static string Merkki(string id) => Path.Combine(Kirjanpito, id + ".txt");
@@ -76,6 +79,11 @@ namespace Matkakirja
             if (teksti == null) { Debug.Log("MATKAKIRJA alueet: offline.json puuttuu tästä paketista"); yield break; }
             var juuri = Peli.MiniJson.Jasenna(teksti) as Dictionary<string, object>;
             if (juuri == null) yield break;
+            rasterinMaaMax = int.MaxValue;
+            if (juuri.TryGetValue("lahteet", out var la) && la is Dictionary<string, object> lahteet &&
+                lahteet.TryGetValue("rasteri", out var lr) && lr is Dictionary<string, object> rasteri &&
+                rasteri.TryGetValue("maaMax", out var mm) && mm is double mmd)
+                rasterinMaaMax = (int)mmd;
 
             if (!string.IsNullOrEmpty(maastoLayer))
             {
@@ -212,8 +220,8 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Alueen laatikko asteina offline.jsonin rasterivälien syvimmältä tasolta (XYZ-laatat, rivi 0 pohjoisessa).
-        /// false, jos rasteria ei ole.
+        /// Alueen laatikko asteina offline.jsonin rasterivälien syvimmältä maan kattavalta tasolta (≤ lahteet.rasteri.maaMax;
+        /// XYZ-laatat, rivi 0 pohjoisessa). false, jos rasteria ei ole.
         /// </summary>
         static bool RasterinLaatikko(Dictionary<string, object> tiedot, out Vektorisolut.Alue laatikko)
         {
@@ -222,7 +230,7 @@ namespace Matkakirja
             int zMax = -1;
             List<object> valit = null;
             foreach (var t in tasot)
-                if (int.TryParse(t.Key, out int z) && z > zMax && t.Value is List<object> l && l.Count > 0) { zMax = z; valit = l; }
+                if (int.TryParse(t.Key, out int z) && z > zMax && z <= rasterinMaaMax && t.Value is List<object> l && l.Count > 0) { zMax = z; valit = l; }
             if (valit == null) return false;
             var lista = new List<List<object>>();
             if (valit[0] is List<object>) foreach (var v in valit) lista.Add((List<object>)v);

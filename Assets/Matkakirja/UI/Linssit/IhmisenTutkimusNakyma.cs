@@ -3,7 +3,8 @@
 // Moottori on Linssisepän (Tutkimusvaihe, ITutkimuksenNakyma); tämä on pinta:
 //
 //   Virtanapit  palkissa otsikon ja kellon välissä: pilkku virran rintamavärillä ja nimi (≤ 1000 px lyhyt).
-//               Esityksen ajan legenda (himmeä, ei napautusta), tutkimusvaiheessa napit (Tutkimus.Valitse).
+//               Esityksen ajan legenda (himmeä, ei napautusta; puhelimella ≤ 600 px piilossa kuten webissä),
+//               tutkimusvaiheessa napit (Tutkimus.Valitse).
 //   Nostot      noin 40 sykkivää pistettä (14 px syke 2,6 s + 5 px ydin, virran sävy tai kulta) pallon
 //               pisteissä (IhmisenMatkaKerros.NostonPiste joka ruutu); napautus avaa nostokortin.
 //   Vanalappu   valitun virran pergamenttilappu alalaidassa: nimi versaalina ja yhteenveto.
@@ -29,6 +30,8 @@ namespace Matkakirja.Natiivi
         readonly Label lappuOtsikko, lappuTeksti;
         readonly IhmisenNostokortti kortti;
         readonly List<(Button Nappi, string Tunnus)> virtanapit = new List<(Button, string)>();
+        /// <summary>Virrat rakennettu eikä linssiä ole suljettu (Pois).</summary>
+        bool kaytossa;
         readonly List<(VisualElement El, TutkimusNosto Nosto)> nostot = new List<(VisualElement, TutkimusNosto)>();
         bool toiminnassa, syke;
 
@@ -68,6 +71,7 @@ namespace Matkakirja.Natiivi
         {
             napit.Clear();
             virtanapit.Clear();
+            kaytossa = true;
             // Web @media (max-width: 1000px): lyhyet nimet ("Pää", "Eur.", …) myös iPadilla pystyssä (834 px), koska
             // kello, otsikko ja napit vievät palkista yli puolet. Leveys UI-yksiköinä (= web CSS px) paneelin juuresta.
             float leveys = napit.panel?.visualTree?.layout.width ?? 0f;
@@ -85,13 +89,13 @@ namespace Matkakirja.Natiivi
                 Kirjasimet.Aseta(nimi, Kirjasin.Kone);
                 virtanapit.Add((b, tunnus));
             }
-            napit.style.display = virtanapit.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             Napit(toiminnassa);
         }
 
         /// <summary>Linssi pois: napit, pisteet ja lappu pois.</summary>
         public void Pois()
         {
+            kaytossa = false;
             toiminnassa = false;
             napit.style.display = DisplayStyle.None;
             Nostot(null);
@@ -105,6 +109,11 @@ namespace Matkakirja.Natiivi
         public void Napit(bool paalla)
         {
             toiminnassa = paalla;
+            // Web ≤ 600 px (css/ihmisen-tutkimus.css PUHELIN): esityksen aikana legendaa ei näytetä lainkaan (kaksi
+            // pilkkua viidestä olisi harhaanjohtavampi kuin ei mitään); värit vasta tutkimusvaiheessa omalla rivillään.
+            float leveys = napit.panel?.visualTree?.layout.width ?? 0f;
+            bool kapea = !float.IsNaN(leveys) && leveys > 0f && leveys <= 600f;
+            napit.style.display = kaytossa && virtanapit.Count > 0 && (paalla || !kapea) ? DisplayStyle.Flex : DisplayStyle.None;
             napit.EnableInClassList("mk-vananapit--legenda", !paalla);
             foreach (var (b, _) in virtanapit) b.pickingMode = paalla ? PickingMode.Position : PickingMode.Ignore;
         }

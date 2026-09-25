@@ -369,9 +369,18 @@
 .mk-matkakirja--pieni .mk-matkakirja__teksti,
 .mk-matkakirja--pieni .mk-matkakirja__pikkukuvat,
 .mk-matkakirja--pieni .mk-matkakirja__lahteet,
-.mk-matkakirja--pieni .mk-matkakirja__kuva,
-.mk-matkakirja--pieni .mk-matkakirja__kaiutin {
+.mk-matkakirja--pieni .mk-matkakirja__kuva {
     display: none;
+}
+
+/* Linssipariteetti rivi 31 (iPad): webin lapussa 🔊 näkyy tekstin perässä ("Marseille, syyskuussa 1873 🔊"). Piilo
+   merkinnän mukaan (Piiloon, inline) voittaa. */
+.mk-matkakirja--pieni .mk-matkakirja__kaiutin {
+    width: 24px;
+    height: 24px;
+    min-height: 24px;
+    margin-left: 6px;
+    color: #211d18;
 }
 
 /* Löydös 73: iPhonella pienennetty lappu vain kaupungin nimen levyinen ("Ateena"). */
@@ -587,13 +596,14 @@
     font-size: 15px;
 }
 
+/* Löydös 91 (web .pollo-kayttaja): koko levyinen lohko, --pollo-paperi-2, 8 px, Kone 0,85rem. */
 .mk-chat__pelaaja {
-    align-self: flex-end;
-    max-width: 86%;
-    padding: 5px 10px 5px 10px;
-    border-radius: 10px;
-    background-color: #e9dfc8;
-    font-size: 13.5px;
+    align-self: stretch;
+    padding: 5.6px 8px;
+    border-radius: 8px;
+    background-color: #ece2c8;
+    color: #211d18;
+    font-size: 13.6px;
 }
 
 .mk-chat__odottaa {
@@ -849,10 +859,11 @@
     margin-left: 6px;
     padding: 4px 12px;
     border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.3);
+    /* Löydös 91 (web button.pollo-ehdota): --pollo-viiva, --pollo-paperi-2, --pollo-korostus. */
+    border-color: rgba(122, 85, 20, 0.32);
     border-radius: 12px;
-    background-color: #efe5cf;
-    color: #7a4a1c;
+    background-color: #ece2c8;
+    color: #7a5514;
 }
 
 .mk-chat__pilleri .mk-nappi__teksti {

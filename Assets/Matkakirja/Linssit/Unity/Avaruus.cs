@@ -7,7 +7,12 @@
 //   hehku     kuori R × 1,25 (Ilmakeha-varjostin, three-glow-mesh: coefficient 0,1,
 //             power 3,5, takapinnat, pallon kiekko hylätään)
 //
-// Hehku häivytetään sisään linssin avautuessa (0,6 s); molemmat puretaan kerroksen mukana.
+//   pinta    KarttaKerrokset.PallonSavy (Natiivisepän rajapinta): pallon perusväri × Savy linssin
+//             ajaksi (web PALLON_SAVY 0x999999 = 0,6; omistajan löydös 98 25.9.2026: "reilusti
+//             tummemmaksi, jotta vihreät pisteet hehkuvat yökartalla" → 0,5). Pisteiden
+//             screen-sekoitus (Havaintopiste) hehkuu vain tummalla pohjalla.
+//
+// Hehku ja tummennus häivytetään sisään linssin avautuessa (0,6 s); kaikki puretaan kerroksen mukana.
 using CesiumForUnity;
 using Unity.Mathematics;
 using UnityEngine;
@@ -18,6 +23,8 @@ namespace Matkakirja.Natiivi
     public class Avaruus : MonoBehaviour
     {
         public const float IlmakehanKorkeus = 0.25f;
+        /// <summary>Pallon perusvärin kerroin linssin ajaksi (löydös 98; web 0,6).</summary>
+        public const float Savy = 0.5f;
         const float HaivytysS = 0.6f;
         static readonly Color Tausta = new Color32(4, 6, 14, 255);
         static readonly Color Ilmakeha = new Color32(127, 182, 255, 255);
@@ -87,13 +94,16 @@ namespace Matkakirja.Natiivi
 
         void Update()
         {
+            if (peitto >= 1f) return;
             peitto = Mathf.MoveTowards(peitto, 1f, Time.unscaledDeltaTime / HaivytysS);
             if (hehku != null) hehku.SetFloat("_Peitto", peitto);
+            KarttaKerrokset.PallonSavy(Mathf.Lerp(1f, Savy, peitto));
         }
 
         void OnDestroy()
         {
             KarttaKerrokset.Instanssi?.Taustavari(null);
+            KarttaKerrokset.PallonSavy(null);
             if (hehku != null) Destroy(hehku);
             if (kuori != null) Destroy(kuori);
         }

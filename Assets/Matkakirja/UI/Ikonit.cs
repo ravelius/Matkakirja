@@ -36,6 +36,8 @@ namespace Matkakirja.Natiivi
         // tekstinä ne näkyisivät laatikkoina, joten ne piirretään viivaikoneina.
         public const string Aarremerkki = "<path d=\"M12 3 21 12 12 21 3 12z\"/><path d=\"M12 8.2 15.8 12 12 15.8 8.2 12z\" fill=\"currentColor\"/>";
         // js/lehti.js avaaSisallysvalikko: "Palaa kartalle" -napin nuoli.
+        // js/ui.js .flight-eteen (Ohita lento -nuoli, aloituslennon Ohita-nappi, löydös 83).
+        public const string OhitaLento = "<path d=\"M8 5 L15 12 L8 19\"/>";
         public const string Paluu = "<path d=\"M13.5 5.5 7 12l6.5 6.5\"/><path d=\"M7 12h10.5\"/>";
 
         // js/maalehti.js naytaMaaTunnusluvut IKONIT (15 × 15 viewBox: SvgIkoni.Ruutu = 15).

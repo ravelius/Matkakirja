@@ -91,7 +91,9 @@ namespace Matkakirja.Natiivi
             ohjain = o;
             // Synkroninen kysymys ennen saapumista (web luennanLykkays = livianPaljastusOdottaa).
             o.EnsisaapumisenLykkays = _ => !annettu && !Nahty;
-            o.AloituslentoPaattyi += k => UiKerros.PaaSaikeessa(() => Saapui(k));
+            // AloituslentoLoppui laukaisee tapahtuman ENNEN Perilla → AsetaLykkays (Pelikoodarin havainto 25.9.): Saapui
+            // seuraavaan ruutuun, jotta LuentaLykatty(k) on jo asetettu (muuten paljastus = false ja luenta alkaa heti).
+            o.AloituslentoPaattyi += k => UiKerros.PaaSaikeessa(() => Kello.schedule.Execute(() => Saapui(k)));
             o.PaikanPuheVaiennettu += () => UiKerros.PaaSaikeessa(Peru);
             o.LuentoAlkoi += (k, _) => UiKerros.PaaSaikeessa(() => { if (k != null && k == kaupunki) luentaSoi = true; });
             o.LuentoLoppui += k => UiKerros.PaaSaikeessa(() =>

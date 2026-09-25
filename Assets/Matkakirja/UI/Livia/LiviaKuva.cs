@@ -83,6 +83,14 @@ namespace Matkakirja.Natiivi
             RegisterCallback<AttachToPanelEvent>(_ => { if (tila.Astronautti) leijunta?.Resume(); });
         }
 
+        /// <summary>Minipulun korkeus (web minipulu.js asetaKoko: leveys 58/70 korkeudesta).</summary>
+        public void MiniKorkeus(float korkeus)
+        {
+            if (!mini || Mathf.Approximately(resolvedStyle.height, korkeus)) return;
+            style.width = korkeus * 58f / 70f;
+            style.height = korkeus;
+        }
+
         /// <summary>Tallettaa tilan ja pyytää uuden piirron.</summary>
         public void Aseta(LiviaTila uusi)
         {

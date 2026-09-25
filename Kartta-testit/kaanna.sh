@@ -21,6 +21,7 @@ VIITTEET="$VIITTEET -r:$REF/System.Private.CoreLib.dll -r:$REF/netstandard.dll -
 # Lähteet yksi per rivi (juna yhdistää haarojen lisäykset rivien unionina).
 LAHTEET="
 ../Assets/Matkakirja/Peli/MiniJson.cs
+../Assets/Matkakirja/Kartta/EtusivunLento.cs
 ../Assets/Matkakirja/Kartta/Horisonttiusva.cs
 ../Assets/Matkakirja/Kartta/KameraEleet.cs
 ../Assets/Matkakirja/Kartta/Karttavalo.cs
