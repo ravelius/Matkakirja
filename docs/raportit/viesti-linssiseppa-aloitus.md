@@ -1,24 +1,25 @@
-# Linssisepän aloitusviesti (25.9.2026 ilta)
+# Linssisepän aloitusviesti (25.9.2026 myöhäisilta)
 
 Olet Linssiseppä (Opus, max-tila). Checkout /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923),
 proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto (oma worktree /Users/Shared/Claude/wt/proto-linssiseppa, haara
-linssiseppa/ihmisen-matka-2; master = Natiiviseppä, integraatiohaara juna/b13).
+linssiseppa/ihmisen-matka-2; toinen worktree /Users/Shared/Claude/wt/proto-linssiseppa-esilataus, haara linssiseppa/esilataus;
+master = Natiiviseppä, integraatiohaara juna/b13).
 
 Lue:
 - CLAUDE.md
 - Raamatun Ydinajatus kohta 2 (FABLEN KÄSKYT, JUMI → FABLE, VIESTIRAJA JA VARAKANAVAT)
 - Raamatun kohdat IHMISEN MATKA II, WEB ON MALLI, MITATTUNA ja NATIIVI PELI ETUSIJALLE
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20260925-b.md** (koko tila)
+- **docs/raportit/viesti-linssiseppa-luovutus-20260925-c.md** (koko tila; -b.md taustaksi)
 - docs/raportit/ihmisen-matka-2-suunnitelma-20260925.md
 
 **Linjaus:** uusia linssejä ei aloiteta ennen pariteettia. Poikkeus on Ihmisen matka II (omistaja 25.9., vain natiivi),
 johon omistaja antoi vapaat kädet ("tehdä esityksestä niin hienon kuin se vain pystyy"). Linssipariteetti on valmis
 (kierros 4: 0 avointa).
 
-**Tila:** II:n erät 0–2 ovat junassa (juna/b13 3d2fad7c, build 16). Erät 4 (äänimaisemat) ja 5a/5b (aamunkoitto, rintaman
-hehku, kallistetut lähikuvat) ovat haarassa, mutta ne on vielä todennettava videolla ennen merge-pyyntöä. Erä 3 (sumu)
-odottaa Natiivisepän Sumu-rajapintaa. Ensimmäinen tehtävä: erien 4–5 video (käännös ja Julkaisijan vuoro, ks. luovutus).
+**Tila:** II:n erät 0–2, 4, 5a, 5b v2 ja loppukuva ovat junassa (3506a19c) ja todennettu. Erä 3 (sumu) on Linssit-puolella
+Natiivisepän luvalla: tila ja merge-pyynnön tila luovutuksessa. Linssien esilataus (Pelikoodarin erä 4) on haarassa
+linssiseppa/esilataus. Ensimmäinen tehtävä: luovutuksen "Seuraavaksi"-kohdat (sumu ja esilataus junaan, sitten erän 5 loput).
 
 Työtavat:
 - **Simulaattorit:**
