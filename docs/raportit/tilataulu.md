@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 14:26 EEST
+**Päivitetty:** 2026-09-25 14:37 EEST
 
 ## 1) Sessiot
 
@@ -10,16 +10,16 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
-| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 45% | running | — |
+| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 46% | running | — |
 | Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 21% | running | — |
-| Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 24% | idle | — |
-| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 44% | running | — |
-| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 24% | idle | — |
-| Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 31% | idle | PR #3154 |
+| Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 34% | idle | — |
+| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 50% | running | — |
+| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 26% | idle | — |
+| Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 37% | idle | PR #3154 |
 | Laitetestaaja | local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1 | 15% | idle | PR #3153 (savukierros B13) |
 | Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 16% | idle | PR #3155 |
-| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 39% | running | — |
-| Karttaseppä | local_37708e68-5a58-45ca-8dee-c13620993531 | 21% | running | — |
+| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 40% | running | — |
+| Karttaseppä | local_37708e68-5a58-45ca-8dee-c13620993531 | 28% | running | — |
 | Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu) |
 
 ## 2) Jumit ja avoimet kortit omistajalle
@@ -56,9 +56,8 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **Levy:** 183 Gt vapaana (raja 35 Gt; 184 → 183 Gt 10 min, lasku tasaantunut). **wt/-worktreet:** 29 kpl. **Swap:** 0 Gt.
-- **Simulaattorit boottina:** 1 (iPhone 17). coreaudiod 4 %.
-- **Chrome for Testing GPU-prosesseja:** 1. Aiemmat 6 olivat CI-savukkeita (Sisältökirjurin turistiopas-era7, ajo 36126582856) — Julkaisija perui ajon Linssisepän simulaattorikierroksen vuoksi; rajausta ei tarvita.
-- **5 h -kiintiö:** 31 % (nollautuu 14:30 UTC). **Viikko (kaikki mallit):** 9 %. **Viikko (Fable):** 5 %.
-- **Juna:** viimeisin KÄÄNNETTY 14:16 (juna/b13 aeb1657f), ei odottavaa.
-- **Postilaatikko:** ei uutta (kärki 7edc71dfd). **Avoimia PR:iä:** 14.
+- **Levy:** 202 Gt vapaana (raja 35 Gt; nousi 183 → 202 Gt, joku siivosi). **wt/-worktreet:** 31 kpl. **Swap:** 0 Gt.
+- **Simulaattorit boottina:** 2 (natiiviseppa-iPhone, iPhone 17). coreaudiod 4 %. **Chrome-GPU-prosesseja:** 1.
+- **5 h -kiintiö:** 35 % (nollautuu 14:30 UTC). **Viikko (kaikki mallit):** 10 %. **Viikko (Fable):** 6 %.
+- **Juna:** viimeisin KÄÄNNETTY 14:16 (aeb1657f); juna/b13 0eaef772 uusi 14:24, alle 25 min, ei hälytystä.
+- **Postilaatikko:** uusi commit ffda384d4 (Sisältökirjuri → Kuvaputki, miniatyyrien leikkaus, löydös 95), ilmoitettu Fablelle 14:33. **Avoimia PR:iä:** 12.
