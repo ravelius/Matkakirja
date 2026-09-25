@@ -339,6 +339,20 @@ namespace Matkakirja
             return Math.Min(1.0, Math.Max(0.0, w));
         }
 
+        /// <summary>NOSTOSYM_SYKKEEN_OSUUS 0,07, NOSTOSYM_SYKKEEN_JAKSO_MS 2400 ja glSykeKerroin-nousu 600 ms (sekunteina).</summary>
+        public const double SykkeenOsuus = 0.07, SykkeenJaksoS = 2.4, SykkeenNousuS = 0.6;
+
+        /// <summary>
+        /// Hehkupisteen sykähdys (web js/pallolauta/glnimiot-sovitin.js glSykeKerroin): koko 1 + 0,07 · a ·
+        /// sin(2π t / 2,4 s), a = amplitudi 0–1 (webissä nousu 0,6 s levon alusta, liikkeessä 0). Natiivissa t ja a:n
+        /// katto tulevat Joutosykkeestä (Lampopaatos.SykeJaatyy: syke jäätyy levossa, jotta pallo ja UI saavat levätä).
+        /// </summary>
+        public static double PisteenSyke(double aikaS, double amplitudi) =>
+            1.0 + SykkeenOsuus * Math.Min(1.0, Math.Max(0.0, amplitudi)) * Math.Sin(2 * Math.PI * aikaS / SykkeenJaksoS);
+
+        /// <summary>Noston taso datasta (web nostot.js `kohde.taso === 1 || kohde.taso === 3 ? kohde.taso : 2`): oletus 2.</summary>
+        public static int Taso(double? arvo) => arvo == 1.0 ? 1 : arvo == 3.0 ? 3 : 2;
+
         /// <summary>Väri valkoista kohti osuudella t (web nostosymVaalenna, kanavat pyöristetään 0–255-asteikolla).</summary>
         public static double[] Vaalenna(double[] c, double t)
         {

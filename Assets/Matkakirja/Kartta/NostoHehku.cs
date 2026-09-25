@@ -23,9 +23,16 @@ namespace Matkakirja
         const int Alinaytteet = 4;
 
         static Texture2D kuva;
+        static Color32[] tekselit;
 
         /// <summary>Hehkupisteen kuva (luodaan kerran, mipit pieniä kokoja varten, ei luettavissa luonnin jälkeen).</summary>
         public static Texture2D Kuva => kuva != null ? kuva : (kuva = Luo());
+
+        /// <summary>
+        /// Tekselit valmiiksi taustasäikeessä (NostoKerros.Lataa): 128 × 128 × 16 alinäytettä ei kuulu ensimmäisen
+        /// nostomerkin kehykseen (UI-piikit). Pääsäie laskee itse, jos kuva tarvitaan ennen tätä.
+        /// </summary>
+        public static void Esilaske() { if (tekselit == null) tekselit = Tekselit(); }
 
         static Texture2D Luo()
         {
@@ -33,7 +40,7 @@ namespace Matkakirja
             {
                 name = "NostoHehku", wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Trilinear,
             };
-            t.SetPixels32(Tekselit());
+            t.SetPixels32(tekselit ?? (tekselit = Tekselit()));
             t.Apply(true, true);
             return t;
         }

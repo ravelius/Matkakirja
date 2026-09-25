@@ -212,6 +212,7 @@ namespace Matkakirja
                 JasennaFokuspohjat(maatJson);
                 if (aluenimet != null) NostoSaannot.LisaaMerinimet(MiniJson.Alkiot(aluenimet), true, merinimet);
                 if (merinimetJson != null) NostoSaannot.LisaaMerinimet(MiniJson.Alkiot(merinimetJson), false, merinimet);
+                NostoHehku.Esilaske(); // hehkupisteen tekselit valmiiksi (löydös 125), ei ensimmäisen merkin kehyksessä
             });
             while (!tehtava.IsCompleted) yield return null;
             if (tehtava.IsFaulted) { Debug.LogError("MATKAKIRJA nostot: " + tehtava.Exception?.GetBaseException()); yield break; }
@@ -253,7 +254,8 @@ namespace Matkakirja
                         OmaLon = omaLon ?? double.NaN,
                         // Skeema: paikka on merkkijono; vanhassa muodossa olio { nimi } (web kohde.paikka?.nimi).
                         Paikka = MiniJson.Kentta(a, "paikka") is Dictionary<string, object> po ? MiniJson.Teksti(po, "nimi") : MiniJson.Teksti(a, "paikka"),
-                        Taso = (int)(MiniJson.Luku(a, "taso") ?? 1),
+                        // Web: taso 1 tai 3 sellaisenaan, muuten 2 (ennen oletus 1 teki puuttuvasta tasosta kuvamerkin).
+                        Taso = NostoSaannot.Taso(MiniJson.Luku(a, "taso")),
                         Tarkeys = (int)(MiniJson.Luku(a, "tarkeys") ?? 1),
                         Lahizoom = a.GetValueOrDefault("lahizoom") is bool lz && lz,
                     };

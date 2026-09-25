@@ -140,6 +140,20 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(NostoSaannot.KuvamerkkiKaytossa(2, 4.0), "taso 2 kertoimesta 4");
         }
 
+        [Testi]
+        static void TasoJaSykeWebinMukaan()
+        {
+            Oleta.Sama(2, NostoSaannot.Taso(null), "puuttuva taso = 2 (web), ei 1");
+            Oleta.Sama(1, NostoSaannot.Taso(1));
+            Oleta.Sama(3, NostoSaannot.Taso(3));
+            Oleta.Sama(2, NostoSaannot.Taso(0), "tuntematon arvo = 2");
+            Oleta.Sama(2, NostoSaannot.Taso(1.5));
+            Oleta.Tosi(Math.Abs(NostoSaannot.PisteenSyke(0.6, 1) - 1.07) < 1e-9, "neljännesjakso: 1,07");
+            Oleta.Tosi(Math.Abs(NostoSaannot.PisteenSyke(1.8, 1) - 0.93) < 1e-9, "kolme neljännestä: 0,93");
+            Oleta.Tosi(Math.Abs(NostoSaannot.PisteenSyke(0.6, 0) - 1) < 1e-12, "jäätynyt (voima 0) = 1");
+            Oleta.Tosi(Math.Abs(NostoSaannot.PisteenSyke(0.6, 0.5) - 1.035) < 1e-9, "puolikas amplitudi");
+        }
+
         /// <summary>Web keraa: eläintäyt koko laudalta, kun näkymän korkeus ≤ 34 / 0,75 = 45,3° eikä nappula liiku.</summary>
         [Testi]
         static void ElaintaytKokoLaudalta()
