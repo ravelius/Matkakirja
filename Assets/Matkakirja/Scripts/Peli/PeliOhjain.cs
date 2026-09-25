@@ -1336,8 +1336,15 @@ namespace Matkakirja.Natiivi
                     NappulaAjo(v => nappula.Lenna(a.Value.Lat, a.Value.Lon, b.Lat, b.Lon, kesto, v), kesto, Perilla);
                 else
                 {
-                    var pisteet = PeliApu.Matkapisteet(verkko, t.Lahto, t.Polku, t.Kohde);
-                    NappulaAjo(v => nappula.Aja(pisteet, kesto, v), kesto, Perilla);
+                    // Webin koreografia (Natiiviseppä, RAJAPINTA 3b; pariteetti A20, A21, B12–B16): ennakkozoomi,
+                    // saattava kamera ja liftauksen hypyt / bussin ajo / laivan liuku; kesto askelmäärästä kuten webissä.
+                    var liike = new Nappula.Matkaliike
+                    {
+                        Pisteet = PeliApu.Matkapisteet(verkko, t.Lahto, t.Polku, t.Kohde), Tapa = t.Tapa,
+                        Askelia = t.Polku?.Count ?? 0,
+                    };
+                    float matkanKesto = nappula.MatkanKesto(liike);
+                    NappulaAjo(v => nappula.Aja(liike, v), matkanKesto, Perilla);
                 }
                 return;
             }
