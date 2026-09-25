@@ -66,3 +66,23 @@ Korjausjärjestys hyödyn mukaan:
 
 **Laitemittaus:** sama `cpu`-komento toimii iPadilla Development-laitekäännöksessä (`MATKAKIRJA_KEHITYS=1`,
 `pelikoodari/cpu-mittari`). Komentosarja: `cpu profiler`, sitten `cpu mittaa 15 -` ja `cpu mittaa 15 - piirto`.
+
+### Korjaukset
+
+1. **Ei ladontaa piirtämättömässä kehyksessä** (proto `pelikoodari/kehys-cpu`). KaupunkiMerkit.LateUpdate ja
+   Nimikerros.LateUpdate palaavat heti, kun `OnDemandRendering.willCurrentFrameRender` on epätosi. Näin käy
+   PAIKALLAAN-tilassa 59 kehyksessä 60:stä, jolloin kamera ja näkymä ovat levossa ja edellinen ladonta on voimassa. Kerrokset
+   ohittavat samat kehykset, joten niiden yhteiset Varaukset pysyvät yhtenäisinä. Mittaus `lokit/kehyksen-hinta/ipad11-{ennen,jalkeen}`:
+
+   | PAIKALLAAN, ms/kehys | ennen | jälkeen |
+   |---|---|---|
+   | KaupunkiMerkit.LateUpdate | 0,200 | 0,004 |
+   | Nimikerros.LateUpdate | 0,030 | 0,003 |
+   | Skriptien LateUpdate yhteensä | 0,39 | 0,17 |
+
+   LEPO-tila (piirto joka kehys) pysyy ennallaan: siinä ladonta tarvitaan. Nimiöt ja merkit ovat ehjät levossa ja noston
+   jälkeen (`lokit/kehyksen-hinta/kuva-jalkeen`).
+2. **Cesium3DTileset.Update levossa** (0,5 ms): kysytty Natiivisepältä. Tileset on hänen alueensa, ja traversalin voisi
+   ohittaa, kun PallonLepo lepää ja laatat ovat valmiit.
+3. PeliOhjain.Update (0,05 ms) ja UiKerros.Update (0,04 ms) ovat joukko pieniä tarkistuksia. Niiden muuttaminen
+   tapahtumaohjatuiksi säästäisi alle 0,1 ms, joten ne jätettiin tekemättä, kunnes laitemittaus näyttää toisin.
