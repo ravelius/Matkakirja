@@ -192,7 +192,7 @@ namespace Matkakirja.Natiivi
                 if (testi && l == null) return;
                 LopetaTesti();
                 sovitin = null;
-                Sido(null);
+                // Paneeli liukuu alas sisältöineen; sidonta puretaan vasta liu'un lopussa (Nayta).
                 Nayta(false);
                 return;
             }
@@ -222,12 +222,51 @@ namespace Matkakirja.Natiivi
             TilaMuuttui(l.Tila);
         }
 
+        // Radiosuunnitelma 24.9. luku 6 (Fable 25.9.): sulku 0,8 s on avauksen käänteinen Pehmeällä käyrällä; paneeli
+        // liukuu alas samassa tahdissa kuin hämärä ja topografia palaavat. Ennen se katosi yhdessä kehyksessä, koska
+        // Sido(null) tyhjensi sisällön heti ja piilotus oli 0,18 s:n häivytys.
+        const float SulkuS = 0.8f;
+        IVisualElementScheduledItem sulku;
+
+        /// <summary>Smootherstep (Kamerakayrat.Pehmea): nopeus nollassa molemmissa päissä.</summary>
+        static float Pehmea(float t) { t = Mathf.Clamp01(t); return t * t * t * (t * (t * 6f - 15f) + 10f); }
+
         void Nayta(bool auki)
         {
             if (auki == nakyvissa) return;
             nakyvissa = auki;
-            Rakenne.Nayta(juuri, auki, 180);
-            if (!auki) { naytto.Pysayta(); PysaytaLiike(); }
+            sulku?.Pause();
+            sulku = null;
+            if (auki)
+            {
+                juuri.style.transitionDuration = StyleKeyword.Null;
+                juuri.style.translate = StyleKeyword.Null;
+                juuri.style.opacity = StyleKeyword.Null;
+                Rakenne.Nayta(juuri, true, 180);
+                return;
+            }
+            naytto.Pysayta();
+            PysaytaLiike();
+            if (juuri.resolvedStyle.display == DisplayStyle.None) { Sido(null); return; }
+            // Käsiajo: USS-siirtymä pois, jottei se viivästä joka kehyksen arvoja.
+            juuri.userData = null; // mitätöi Rakenne.Nayta-kutsun viivästetyn askeleen
+            juuri.style.transitionDuration = new StyleList<TimeValue>(new List<TimeValue> { new TimeValue(0) });
+            float alku = Time.unscaledTime, korkeus = Mathf.Max(1f, juuri.layout.height);
+            sulku = juuri.schedule.Execute(() =>
+            {
+                float e = Pehmea((Time.unscaledTime - alku) / SulkuS);
+                juuri.style.translate = new Translate(0, Mathf.Round(e * korkeus));
+                juuri.style.opacity = 1f - Mathf.Clamp01((e - 0.6f) / 0.4f);
+                if (e < 1f) return;
+                sulku?.Pause();
+                sulku = null;
+                juuri.RemoveFromClassList("mk-auki");
+                juuri.style.display = DisplayStyle.None;
+                juuri.style.translate = StyleKeyword.Null;
+                juuri.style.opacity = StyleKeyword.Null;
+                juuri.style.transitionDuration = StyleKeyword.Null;
+                if (!nakyvissa) Sido(null);
+            }).Every(16);
         }
 
         void Asettele()

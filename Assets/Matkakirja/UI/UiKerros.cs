@@ -168,8 +168,19 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        /// <summary>Pikseliä iOS-pisteessä: iPadit ovat @2x (dpi / 132, mini 326 dpi → 2); tuntematon dpi → 2.</summary>
-        public static float PikseliaPisteessa => Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 132f)) : 2f;
+        /// <summary>
+        /// Pikseliä iOS-pisteessä. iPadit ovat @2x (dpi / 132, mini 326 dpi → 2; tuntematon dpi → 2). iPhonella dpi ei kelpaa
+        /// (iPadin kaava antoi iPhone 17 Pro -simulaattorissa ×2 ja paneelin 603 × 1311, Pelikoodari 25.9.): lyhyt sivu
+        /// ≥ 1000 px on @3x (1080–1320), muuten @2x (SE 750, 11/XR 828).
+        /// </summary>
+        public static float PikseliaPisteessa
+        {
+            get
+            {
+                if (Tabletti) return Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 132f)) : 2f;
+                return Mathf.Min(Screen.width, Screen.height) >= 1000 ? 3f : 2f;
+            }
+        }
 
         static void AsetaSkaala(PanelSettings asetukset)
         {
