@@ -4931,3 +4931,7 @@ Juna kääntyi simulaattoriin (9cd472d), savutesti ilman poikkeuksia. Merge vaat
 ## NATIIVI-UI ERA 2: #18 PAAVALIKON LEVEYS WEBIN 244,6 (valikko-18 da30a74), LOYDOS 50 VAIHE 2 NOSTOJEN NIMIOT VAISTAVAT NIMILAATIKOITA (nostot-nimet f3b0e3e) → NATIIVISEPALLE; FABLE: PARITEETTI #1 (ALOITUSRUUDUN OTSIKKO) = OMISTAJAN HYVAKSYTTY POIKKEAMA (24.9. klo 12.16), OTSIKKOA EI POISTETA (25.9.2026 klo 04.04)
 
 Kuvaparit proto-3d/lokit/pariteetti-b12/merge-pyynto-natiivi-ui-b12-valikko18-nostonimet.md. Kirjainvali 7eeebda jo junassa.
+
+## OMISTAJA klo 04.1x: KLO 08 JUNAKAANNOS AIKAISTETAAN — juna/b12 03b7ed4 KAANTYI JO 04.07 (KAANNOSPALVELU, xcodebuild-VAIHE, VALMIS ~04.25) → LAITETESTAAJAN SAVUKIERROS HETI ASENNUKSEN JALKEEN → NATIIVISEPPA BUILD → JULKAISIJA 1.0.12 ~05–05.30; MACIN KUORMA ~90 (xcodebuild + E28 AMPARIVIENTI) (25.9.2026 klo 04.10)
+
+Perustelu: juna koossa, savutesti läpi, sessiot hereillä; klo 08 oli vain 2 h ajastimen seuraava lyönti. Punainen, joka ei ole build-este, ei pysäytä BUILDia (korjaus b13:een).
