@@ -26211,6 +26211,15 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   gap: 0.15rem;
 }
 
+/* Maa ilman maakuntia (löydös 70): teksti listan yllä, muut maat suljettuina alla. */
+.maakunnat-ei-maakuntia {
+  margin: 0 0 0.3rem;
+  color: rgba(70, 51, 31, 0.78);
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
 .maakunnat-ryhma {
   display: flex;
   flex-direction: column;
