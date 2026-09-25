@@ -353,11 +353,11 @@ jäljitettävyyden vuoksi, mutta sitä ei kytketä.
 
 **Tarkistettavaa ennen toteutusta (Linssiseppä, 25.9.):**
 1. Pietàn R2-polku on luettelossa muodossa `museo/renessanssi/veistokset/sculpture-pieta.glb` ilman
-   `matkakirja/`-etuliitettä, toisin kuin muut. Sisältökirjuri korjaa luettelon (tilattu 25.9.).
+   `matkakirja/`-etuliitettä, toisin kuin muut. Korjattu luetteloon 7346a8403 (objekti tarkistettu, HTTP 200).
 2. **Leonardon muotokuvan lähde on Biblioteca comunale di Trento** (Magonio Bossin mukaan, 1837). Kunnan
    kirjasto on italialainen julkisyhteisö, joten Fablen päätöksen 1 kulttuuriperintölakiriski (Codice art.
    107–108) voi koskea tätäkin, vaikka teos on PD. **Fable 25.9.: vaihdetaan** Rijksmuseumin RP-P-2022-4655
-   (Vasarin Vite -puupiirros, CC0; varalla RP-P-1907-793, Mellan). Tilattu Sisältökirjurilta.
+   (Vasarin Vite -puupiirros, PD (PDM 1.0); varalla RP-P-1907-793, Mellan). Toimitettu luetteloon 7346a8403.
 3. Colombinin ja Cecchin 1769-laatat (Botticelli, Fra Bartolomeo) ovat Commonsista ilman nimettyä
    pitävää laitosta. Tarkistetaan, ettei skannaus ole italialaisen valtionkirjaston.
 
