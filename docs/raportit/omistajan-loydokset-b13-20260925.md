@@ -111,3 +111,9 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | 142 | Suurennettu kartussi animoidaan: vertailutiedot piirtyvät animoidusti lukujen perään, kun kartussi aukeaa. Visuaalisesti yksinkertaista, mutta liike ja sisääntulo ensiluokkaista animaatiota (KAMERA-AJOT-henki: ease in/out). | Natiivi-UI |
 | 143 | Pitkät maannimet (Bosnia ja Hertsegovina ym.) jaetaan kahdelle riville; radionappi tasaa korkeutensa ylimmän rivin mukaan. | Natiivi-UI |
 | 144 | Maiden liput animoidaan liikkumaan arvokkaasti kuin tuulessa (omistajan kysymys → toteutetaan: lippu verkkona vertex-aallolla RenderTextureen tai vastaava, hidas ja arvokas, ei lepatus). | Natiiviseppä (tekniikka) + Natiivi-UI (kartussi) |
+
+## Build 16 — omistajan löydökset klo 23.0x (kohtaamiset)
+
+| # | Löydös | Rooli |
+|---|---|---|
+| 145 | Aarrekohtaaminen aukesi natiivissa lehden kautta → pois. Webin sääntö: kun pelaaja ratkaisee tietovisan lehdestä tai karttanostosta, ruudulle syttyy vihreä piste, josta pääsee tapaamaan henkilön ja ratkaisemaan tehtävän. Omistaja: kynnys pudotetaan kahdesta YHTEEN oikeaan ratkaisuun (web ja natiivi). Kohtaamiset ovat vielä vaiheessa; omistaja palaa niihin. | Pelikoodari (sääntö web + natiivi) + Natiivi-UI (lehden avaus pois, vihreä piste) |
