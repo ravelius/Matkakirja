@@ -25,6 +25,22 @@ namespace Matkakirja.Linssit.Aikajana
             Jarjestys = 26,
         };
 
+        /// <summary>
+        /// IHMISEN MATKA II (omistaja 25.9.2026, Raamattu "IHMISEN MATKA II", vain natiivi): sama kaari, kertoja,
+        /// pysäkit ja kuvat kuin I:ssä, mutta esitys kerrotaan valolla (valokeila, hämärä, sumu, äänimaisemat;
+        /// docs/raportit/ihmisen-matka-2-suunnitelma-20260925.md). Oma muisti (Tiedot.Id), sama sisältö.
+        /// </summary>
+        public static readonly LinssiTiedot IhmisenMatka2Tiedot = new LinssiTiedot
+        {
+            Id = "ihmisen-matka-2",
+            Nimi = "Ihmisen matka II",
+            Lyhyt = "Sama matka valon kertomana: valokeila kulkee tarinan mukana, muu maailma odottaa hämärässä.",
+            Jarjestys = 27,
+        };
+
+        /// <summary>Onko tunnus Ihmisen matka (I tai II): UI:n tilat, portti ja muisti kohtelevat molempia samoin.</summary>
+        public static bool OnIhmisenMatka(string id) => id == IhmisenMatkaTiedot.Id || id == IhmisenMatka2Tiedot.Id;
+
         readonly IhmisenMatkaAineisto aineisto;
         readonly IReadOnlyDictionary<string, JaksonLeimat> leimat;
         readonly IEsityksenNakyma nakyma;
