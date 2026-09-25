@@ -34,6 +34,7 @@
 //   aani mittaa [s]           todellinen lähtötaso s sekuntia (AudioListener.GetOutputData: rms, huippu), soivat
 //                             lähteet ja iOS:n ääni-istunto (luokka, voimakkuus, reitti) peli-lokiin (löydös 49)
 //   tila [nimi]               kirjoittaa Documents/peli-tila.json (tai peli-tila-nimi.json)
+//   vieritys [pois|paalle|nollaa]  ScrollViewien herätys täyteen taajuuteen (löydös 137) ja mittari
 //   ruutu                     ruudunpäivityksen tila (täysi/lepo/paikallaan, fps, piirtoväli, lämpö, kamera)
 //   lampo normaali|kuuma|kriittinen|auto  pakottaa lämpötason (Lampo.Pakotettu)
 //   verkko [nollaa]           verkko-odotusmittarin yhteenveto (Documents/verkko-yhteenveto.json; rivit verkko-odotus.jsonl)
@@ -275,6 +276,12 @@ namespace Matkakirja.Natiivi
                     if (A(1) == "profiler") return "=" + CpuMittari.Profiloi(A(2) != "pois");
                     if (A(1) == "mittaa") return CpuMittari.Mittaa(float.TryParse(A(2), out var cs) ? cs : 10f, A(3), A(4) == "piirto");
                     return "cpu lista | cpu profiler [pois] | cpu mittaa [s] [suodatin|-|kaikki] [piirto] | cpu tila";
+                case "vieritys":
+                    // Löydös 137 (UI/VieritysHeratys.cs): vieritys [pois|paalle|nollaa] → tila ja mittari.
+                    if (A(1) == "pois") VieritysHeratys.Paalla = false;
+                    else if (A(1) == "paalle") VieritysHeratys.Paalla = true;
+                    else if (A(1) == "nollaa") VieritysHeratys.NollaaLaskurit();
+                    return "=" + VieritysHeratys.Kuvaus();
                 case "ruutu":
                     // Dynaaminen ruudunpäivitys ja lämpö (Kartta/Ruudunpaivitys.cs, lämpöerä 25.9.2026).
                     return Ruudunpaivitys.Instanssi != null ? "=" + Ruudunpaivitys.Instanssi.Kuvaus() : "ei ruudunpäivitystä";
