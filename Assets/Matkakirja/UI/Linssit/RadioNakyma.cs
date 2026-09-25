@@ -100,6 +100,8 @@ namespace Matkakirja.Natiivi
 
         // Testitila (ui linssi radio …): keksitty tila ilman linssiä.
         bool testi;
+        /// <summary>Testikuori näkyvissä ilman oikeaa linssiä (LinssiOhjaimen "radio tila" kertoo sen; iPad-kierros 25.9.).</summary>
+        public static bool Testikuori { get; private set; }
         List<(string Id, string Nimi)> testiAsteikko;
         int testiVersio;
 
@@ -741,6 +743,7 @@ namespace Matkakirja.Natiivi
             if (mika == "pois") { TestiPois(); return null; }
             if (LinssiUi.Rekisteri?.Auki is LinssiOhjain.RadioSovitin) return "radio on auki: testitila ei ohita oikeaa linssiä";
             testi = true;
+            Testikuori = true;
             sovitin = null;
             Sido(null);
             testiAsteikko = new List<(string, string)>
@@ -785,6 +788,7 @@ namespace Matkakirja.Natiivi
         {
             if (!testi) return;
             testi = false;
+            Testikuori = false;
             testiVersio++;
             testiAsteikko = null;
             tauolla = false;

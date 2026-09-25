@@ -1124,7 +1124,10 @@ namespace Matkakirja.Natiivi
                 else if (osat[0] == "radio" && osat.Length > 1)
                 {
                     var r = (rekisteri.Auki as RadioSovitin)?.Linssi;
-                    if (r == null) Kirjaa("radio: linssi ei ole auki");
+                    // Linssin tila on rekisterin (yksi totuus); ui linssi radio näyttää vain Natiivi-UI:n testikuoren.
+                    if (r == null) Kirjaa(RadioNakyma.Testikuori
+                        ? "radio: linssi ei ole auki (näkyvissä testikuori ui linssi radio; oikea linssi: linssi radio)"
+                        : "radio: linssi ei ole auki");
                     else if (osat[1] == "stop") r.Keskeyta();
                     else if (osat[1] == "taajuus" && osat.Length > 2) r.Taajuus(Luku(osat[2]));
                     else if (osat[1] == "tauko" && osat.Length > 2) r.Tauko(osat[2] == "1");
