@@ -5287,3 +5287,7 @@ Omistajalle ehdotus: joutilaat sessiot (Siirtoseppä, Karttaseppä polton jälke
 ## LOYDOS 75 (UNITYN LOGO POIS, OMA AVAUS) JUNASSA — SIMULAATTORIKUVAT lokit/b13-yhdistelma/0a–0d RIITTAVAT MERGE-TODISTEEKSI (recordVideo JAI TYHJAKSI KUORMASSA), OMISTAJA KATSOO KYLMAN KAYNNISTYKSEN BUILD 13:STA; YOVALOHAARA natiiviseppa/yovalot KAANTYY (73e24cea), KUVAUS KUN KARTTASEPAN SARJA ON AMPARISSA (~10.45) (25.9.2026 klo 10.15)
 
 Omistajan build 13 -kokeilulistaan: kylmä käynnistys (ei Unityn logoa, pergamentti + logo ~2 s → aloitus).
+
+## POSTIVAHDIN LUOKITIN ESTI SIMULAATTORIEN SAMMUTUKSEN (Interfere With Workloads) → FABLE PYYSI OMISTAJAROOLEJA SAMMUTTAMAAN OMANSA (LAITETESTAAJA 1572C658 + 3B4CDACB, LINSSISEPPA D0D2CD1E, PELIKOODARI C1D5E34C); OMISTAJALLE EHDOTUS SALLINNASTA Bash(xcrun simctl shutdown *) + terminate SETTINGS-TIEDOSTOON (25.9.2026 klo 10.16)
+
+Fable ei aja estettyä toimea Postivahdin puolesta.
