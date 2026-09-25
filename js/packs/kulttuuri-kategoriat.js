@@ -113382,6 +113382,243 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Boa Vista, Roraima',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Pelin boavista on Roraiman
+       * pääkaupunki Brasiliassa (southamerica-pakka, BRA), ei Kap Verden
+       * saari. Taustatiedot englannin Wikipediasta (Boa Vista, Roraima;
+       * Roraima; BR-174 (Brazil highway); Boa Vista International Airport;
+       * Takutu River Bridge; Bonfim, Roraima; Pacaraima; Waimiri-Atroari;
+       * Tepequém; Lake Caracaranã), Wikivoyagen Boa Vista- ja Roraima-
+       * sivuilta sekä portugalin Wikipediasta (Boa Vista (Roraima): kulttuuri
+       * ja gastronomia; Roraima: keittiö, musiikki, juhlat ja aikavyöhyke;
+       * Orla Taumanan; Serra do Tepequém; Lago Caracaranã) — teksti omaa.
+       * Wikivoyagen hinnat ja aikataulut ovat vanhoja, joten ne jätettiin
+       * pois. Nostojen aiheita (karjatila ja seurakunta, Rio Branco
+       * kulkuväylänä, viuhkakaava, kuivan kauden hiekkasärkät,
+       * garimpeiro-patsas, päiväntasaajan pohjoispuoli ja rantapromenadi,
+       * lavrado ja termiittikeot, sadekauden tulvat, Roraima-vuori, im
+       * Thurnin ensinousu, Kadonnut maailma) eikä valokuva- ja
+       * saapumistekstien aiheita (Pintolândian vastaanottokeskus, Igarapé
+       * Água Boa, paistettu piraija) toisteta. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin.
+       * Pystykuva: Funilin putouksen kallioleikkaus Tepequémin ylängöllä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Cachoeira do Funil.jpg',
+          lyhyt: 'Funilin puro virtaa kapeassa kallioleikkauksessa Tepequémin ylängön reunalla.',
+          selite: 'Funilin putouksen puro Serra do Tepequémin ylängöllä kulkee '
+            + 'kapeassa, punertavassa kallioleikkauksessa, jonka uomaa '
+            + 'timantinkaivajat aikanaan muokkasivat dynamiitilla; taustalla '
+            + 'aukeaa metsäinen laakso.',
+          lahde: 'Ingrid Torres de Macedo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Boa Vistaan saavutaan useimmiten lentäen Manausin tai '
+          + 'Brasílian kautta, sillä Roraimasta muualle Brasiliaan vie vain '
+          + 'yksi päällystetty maantie, ja sekin suljetaan öisin '
+          + 'Waimiri-Atroarien alueen kohdalla. Kaupunki on silti portti kahteen '
+          + 'naapurimaahan: Guyanan rajalle Bonfimiin on reilut sata '
+          + 'kilometriä ja Venezuelan rajalle Pacaraimaan parisataa. '
+          + 'Kesäkuussa kaupunki tanssii quadrilhaa koillisbrasilialaiseen '
+          + 'tapaan, ja pöydässä maistuu paçoca, keltaisen maniokkijauhon '
+          + 'kanssa survottu kuivaliha. Savannin takana odottavat Tepequémin '
+          + 'ylängön vesiputoukset ja Caracaranã-järven rannat, joita '
+          + 'reunustavat cashewpuut.',
+        artikkeli: {
+          nimi: 'Matkailijan Boa Vista',
+          teksti: 'Boa Vistaan tullaan taivaalta tai yhtä ainoaa maantietä, '
+            + 'ja sieltä jatketaan kolmeen maahan.',
+          nosto: 'Takutu-joen rajasillalla auto vaihtaa tien puolta: '
+            + 'Guyanassa ajetaan vasemmalla, Brasiliassa oikealla.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentäen tai BR-174:ää pitkin',
+              teksti: 'Useimmat matkailijat saapuvat Boa Vistaan lentäen. '
+                + 'Kaupungin lentoasema on Brasilian pohjoisin, jolle lennetään '
+                + 'säännöllisiä vuoroja, ja lennot kulkevat tavallisesti '
+                + 'Manausin tai Brasílian kautta. Kenttä on nimetty vuodesta 2009 '
+                + 'lentäjä ja poliitikko Atlas Brasil Cantanhedeen mukaan, joka '
+                + 'raivasi 1950-luvulla tietä ilmailulle Roraimassa, ja '
+                + 'keskustaan on vain noin neljä kilometriä. Maitse Boa Vistaan '
+                + 'tullaan Manausista BR-174-tietä, joka on ainoa päällystetty '
+                + 'tie Roraimasta muualle Brasiliaan. Bussilla matka kestää '
+                + 'reilusti yli kymmenen tuntia, ja matkan varrella '
+                + 'liittovaltion poliisi tarkastaa matkustajien henkilöpaperit. '
+                + 'Tie halkaisee Waimiri-Atroarien alkuperäiskansan alueen, ja '
+                + 'sen kohdalla tie suljetaan joka ilta puoli seitsemältä ja '
+                + 'avataan vasta aamukuudelta. Alueella ei ole suotavaa '
+                + 'pysähtyä, sillä metsän eläimet ja osa asukkaista liikkuvat '
+                + 'öisin, ja eläinonnettomuuksia sattuu päivälläkin. '
+                + 'Kaukoliikenteen bussit lähtevät José Amador de Oliveira – '
+                + 'Batonin kansainväliseltä linja-autoasemalta, josta pääsee '
+                + 'Roraiman pikkukaupunkeihin, Amazonasin osavaltioon, Guyanaan '
+                + 'ja Venezuelaan. Kello kannattaa siirtää heti perillä: '
+                + 'Roraima on tunnin jäljessä Brasílian virallisesta ajasta.',
+              kuva: [
+                {
+                  tiedosto: 'Entrada do Aeroporto Internacional de Boa Vista - Atlas Brasil Cantanhede, Boa Vista RR.jpg',
+                  lyhyt: 'Boa Vistan kansainvälisen lentoaseman sisäänkäynti ja lennonjohtotorni.',
+                  selite: 'Boa Vistan lentoaseman terminaalin kaareva katos ja '
+                    + 'sininen nimikyltti toukokuussa 2011; katon takana kohoaa '
+                    + 'lennonjohtotorni, ja edustalla on pysäköityjä autoja.',
+                  lahde: 'Jorge Andrade, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Rodoviária Internacional de Boa Vista - panoramio.jpg',
+                  lyhyt: 'Kansainväliseltä linja-autoasemalta bussit lähtevät Manausiin ja naapurimaihin.',
+                  selite: 'Boa Vistan kansainvälisen linja-autoaseman julkisivu '
+                    + 'iltahämärissä huhtikuussa 2007: katoksen edessä seisovat '
+                    + 'mopo ja katukeittiön kärry, ja taivaalla on tummia '
+                    + 'pilviä.',
+                  lahde: 'Rogério Regis, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'BR-174 Sul.jpg',
+                  lyhyt: 'BR-174 kulkee mäkisessä sademetsässä Waimiri-Atroarien alueella.',
+                  selite: 'Päällystetty kaksikaistainen BR-174 nousee ja laskee '
+                    + 'sademetsän halki Waimiri-Atroarien alkuperäiskansan '
+                    + 'alueella; tien oikealla puolella punainen maa paljastuu '
+                    + 'leikkauksessa.',
+                  lahde: 'SallesNeto BR, Wikimedia Commons (Public domain)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Rajan yli Guyanaan ja Venezuelaan',
+              teksti: 'Boa Vistasta pääsee maanteitse kolmeen maahan, ja moni '
+                + 'ulkomaalainen kulkee kaupungin läpi matkalla Manausin ja '
+                + 'Venezuelan välillä. Itään lähtee BR-401, joka ylittää Rio '
+                + 'Brancon heti kaupungin kohdalla Macuxien sillalla ja päättyy '
+                + 'noin 115 kilometrin päässä Bonfimin rajakaupunkiin. '
+                + 'Takutu-joen yli Guyanan Lethemiin vie silta, jonka Brasilia '
+                + 'rakensi ja maksoi ja joka avattiin vuonna 2009. Se on koko '
+                + 'Amerikan ainoa maaraja, jolla autoilija vaihtaa tien puolta: '
+                + 'Guyanassa ajetaan vasemmalla ja Brasiliassa oikealla, ja '
+                + 'vaihto tehdään Guyanan puolella ylikulkusillan avulla. '
+                + 'Lethemistä tie jatkuu Georgetowniin Atlantin rannikolle. '
+                + 'Bonfimin seudulla asuu wapishana- ja macuxi-kansaa, ja moni '
+                + 'puhuu omaa kieltään, portugalia ja englantia. Pohjoiseen '
+                + 'BR-174 nousee noin 220 kilometriä Pacaraimaan Venezuelan '
+                + 'rajalle. Pacaraima on 920 metrin korkeudessa koko '
+                + 'Pohjois-Brasilian korkeimmalla sijaitseva kunta, ja sen '
+                + 'vuoristoilma on selvästi viileämpää kuin kuuman savannin '
+                + 'pääkaupungissa. Rajan takana on Santa Elena de Uairén, ja '
+                + 'sieltä lähtevät myös Roraima-vuoren vaellukset, sillä '
+                + 'vuorelle noustaan vain Venezuelan puolelta.',
+              kuva: {
+                tiedosto: 'Vgm Guiana 054.JPG',
+                lyhyt: 'Tie nousee Takutu-joen rajasillalle, joka vie Bonfimista Guyanan Lethemiin.',
+                selite: 'Katuvalojen reunustama tie nousee Takutu-joen sillalle '
+                  + 'Bonfimin puolella helmikuussa 2012; vihreä kyltti ilmoittaa '
+                  + 'sillan pituudeksi 230 metriä.',
+                lahde: 'SallesNeto BR, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kesäkuussa tanssitaan quadrilhaa',
+              teksti: 'Boa Vistan kulttuuri on paljolti koillisbrasilialaista ja '
+                + 'alkuperäiskansojen perintöä. Roraimaan muutti 1900-luvulla '
+                + 'paljon väkeä etenkin Koillis-Brasiliasta, ja muuttajien '
+                + 'mukana tulivat forró ja sertanejo, jotka ovat yhä kaupungin '
+                + 'kuunnelluimmat musiikkityylit. Boa Vistalla on myös '
+                + 'ystävyyssuhde Caruaruun, Pernambucon osavaltion kaupunkiin '
+                + 'Koillis-Brasiliassa. Vuoden kohokohta on kesäkuun festa '
+                + 'junina. Portugalilaisten tuoma juhla alkaa perinteisesti 12. '
+                + 'kesäkuuta Pyhän Antoniuksen aattona, huipentuu Johannes '
+                + 'Kastajan päivänä 24. kesäkuuta ja päättyy Pyhän Pietarin '
+                + 'päivään 29. kesäkuuta. Juhlaan kuuluvat kokot, ilotulitukset '
+                + 'ja kaduilla tanssittavat kansantanssit. Kaupungin oma juhla '
+                + 'on nimeltään Boa Vista Junina: kojut myyvät ruokaa ja '
+                + 'juomaa, ja lavalla esiintyvät quadrilha-ryhmät värikkäissä '
+                + 'maalaisasuissa. Quadrilha on alun perin eurooppalaisten '
+                + 'hovien tanssi, ja sen askelilla on yhä ranskankieliset '
+                + 'nimet, mikä kertoo hovielämän ja maalaiskulttuurin '
+                + 'vuorovaikutuksesta. Ennen maaseudun juhla on nykyään '
+                + 'Brasiliassa ennen kaikkea kaupunkien juhla. Lokakuun '
+                + 'viides päivä on Roraiman ainoa osavaltion oma vapaapäivä: '
+                + 'silloin muistetaan, että liittovaltion alueesta tuli '
+                + 'osavaltio vuoden 1988 perustuslailla.',
+              kuva: {
+                tiedosto: 'Portal do Arraial 2008 - panoramio.jpg',
+                lyhyt: 'Boa Vista Junina -juhlan portti kesäkuussa 2008 ja sen takana kojujen rivi.',
+                selite: 'Sininen, värikkäin kolmioin koristeltu portti Boa Vista '
+                  + 'Junina -juhlan alueelle kesäkuussa 2008; portin pielissä '
+                  + 'seisoo tanssivia maalaishahmoja esittäviä veistoksia, ja '
+                  + 'taustalla palavat kojujen valot.',
+                lahde: 'Rogério Regis, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Paçocaa, damuridaa ja pepitoja',
+              teksti: 'Roraiman keittiö yhdistää macuxi- ja wapixana-kansojen '
+                + 'perinteitä sekä naapuriosavaltioiden Amazonasin, Parán ja '
+                + 'Maranhãon ruokia. Arjen perusta on riisi ja maniokkijauho eli '
+                + 'farinha, ja joista pyydetään tambaquia, pirarukua ja pacua. '
+                + 'Boa Vistan oma ylpeys on paçoca, jossa kuivattu liha '
+                + 'survotaan keltaisen maniokkijauhon kanssa murumaiseksi '
+                + 'seokseksi. Vuonna 2025 kaupunki sai arvonimen Brasilian '
+                + 'lihapaçocan pääkaupunkina. Macuxien perinneruoka on '
+                + 'damurida-keitto, ja jokikaloista tehdään tambaquipataa ja '
+                + 'grillattua tambaquia. Cuscuz ja tapioka kuuluvat '
+                + 'aamiaispöytään, ja kaduilla myydään pepitoa, Venezuelasta '
+                + 'tullutta täytettyä voileipää. Iltaisin joenrannan Orla '
+                + 'Taumananilla soi brasilialainen populaarimusiikki ja '
+                + 'roraimeira, paikallinen musiikki, jonka lauluissa kerrotaan '
+                + 'Roraiman luonnosta, alkuperäiskansoista, tavoista ja '
+                + 'muuttoliikkeestä. Sen oma rytmi makunaimeira sekoittaa '
+                + 'alkuperäiskansojen parixara-rituaalien, karibialaisen '
+                + 'merenguen ja salsan sekä Amazonin rytmejä. Viikonlopun '
+                + 'ostokset kannattaa hoitaa ajoissa, sillä monet kaupat '
+                + 'sulkeutuvat lauantaina aikaisin ja pysyvät sunnuntaina '
+                + 'kiinni.',
+              kuva: {
+                tiedosto: 'Paçoca salgada.JPG',
+                lyhyt: 'Suolaista paçocaa: kuivalihaa survottuna keltaisen maniokkijauhon kanssa.',
+                selite: 'Rasiallinen suolaista paçocaa, jonka keltaisesta '
+                  + 'jauhosta erottuu punertavia lihasuikaleita; kauha on '
+                  + 'jätetty seokseen tarjoilua varten.',
+                lahde: 'Mizunoryu, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Ylängön putoukset ja cashewpuiden järvi',
+              teksti: 'Boa Vistan parhaat retkikohteet ovat parin sadan '
+                + 'kilometrin päässä. Luoteessa Amajarin kunnassa kohoaa Serra '
+                + 'do Tepequém, ylänkö, jonka laki nousee noin tuhanteen '
+                + 'metriin. Asfalttitie vie ylös Vila do Paivan kylään, jossa on '
+                + 'majataloja, ravintoloita ja leirintäpaikkoja. Ylängöllä '
+                + 'vaelletaan ja pyöräillään, laskeudutaan köysillä, tutkitaan '
+                + 'luolia, tarkkaillaan lintuja ja uidaan Paivan, Sobralin, '
+                + 'Baratan ja Funilin putouksilla. Maisemassa näkyy yhä '
+                + 'timanttikuumeen jälki: kaivaminen alkoi virallisesti '
+                + '1930-luvulla ja oli vilkkaimmillaan 1940- ja 1950-luvuilla. '
+                + 'Nyt ylängön talous nojaa matkailuun ja käsitöihin, kuten '
+                + 'vuolukiviesineisiin. Idässä BR-401:n varrella, noin 180 '
+                + 'kilometrin päässä Normandian kunnassa, on Caracaranã-järvi, '
+                + 'jota kiertävät hienohiekkaiset rannat ja luonnonvaraiset '
+                + 'cashewpuut. Järvi on Raposa Serra do Solin alkuperäiskansojen '
+                + 'alueella, ja se avattiin matkailijoille uudelleen vuonna '
+                + '2013. Kävijät maksavat pienen pääsymaksun, alkoholi on '
+                + 'alueella kielletty, eikä rannalla ole enää majoitusta, joten '
+                + 'yöksi ajetaan 18 kilometrin päähän Normandiaan. Pacaraiman '
+                + 'kunnassa on Pedra Pintada, noin 40 metriä korkea '
+                + 'graniittimonoliitti, jonka kylkeä peittävät punaiset '
+                + 'kalliomaalaukset. Se on alkuperäiskansojen maalla, ja '
+                + 'käynnille tarvitaan alkuperäiskansaviraston FUNAIn lupa.',
+              kuva: {
+                tiedosto: 'Crespusculo.jpg',
+                lyhyt: 'Ilta laskeutuu Caracaranã-järvelle Raposa Serra do Solin alueella.',
+                selite: 'Pitkällä valotuksella kuvattu iltanäkymä '
+                  + 'Caracaranã-järveltä kesäkuussa 2013: rantapuun siluetti '
+                  + 'kaartuu veden ylle, ja horisontissa siintää vuorijono '
+                  + 'pilvisen taivaan alla.',
+                lahde: 'Guignipper, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
