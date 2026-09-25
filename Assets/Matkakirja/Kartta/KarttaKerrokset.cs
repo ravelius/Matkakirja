@@ -160,6 +160,12 @@ namespace Matkakirja
             if (Instanssi == this) Instanssi = null;
         }
 
+        // LÄMPÖERÄ (PallonLepo): valokeilan siirtymä (keila liukuu, hämärä syvenee tai vaalenee) muuttaa tileset-varjostimen
+        // globaaleja ilman kameran liikettä. Kerrosten näkyvyys (Nakyvyys) ja raster-kerrokset ovat yksittäisiä muutoksia.
+        void OnEnable() => PallonLepo.Animoi(KeilaLiukuu, "valokeila");
+        void OnDisable() => PallonLepo.Poista(KeilaLiukuu);
+        bool KeilaLiukuu() => keilaKaynnissa;
+
         void Epaonnistui(CesiumRasterOverlayLoadFailureDetails d)
         {
             foreach (var p in rasterit)
@@ -183,6 +189,7 @@ namespace Matkakirja
         /// </summary>
         public void Nakyvyys(string kerros, bool nakyy)
         {
+            PallonLepo.Muuttui("kerros " + kerros);
             switch (kerros)
             {
                 case "laatat":
@@ -827,6 +834,7 @@ namespace Matkakirja
         /// </summary>
         public void LentoPohja(bool paalle)
         {
+            PallonLepo.Muuttui("lentopohja");
             if (!paalle)
             {
                 // Perillä: lennon jono pois (näkyvä kartta saa paikat takaisin).

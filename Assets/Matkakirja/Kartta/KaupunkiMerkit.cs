@@ -72,7 +72,28 @@ namespace Matkakirja
             LinssiTila = paalla;
             foreach (var m in merkit) Tyyli(m);
             PaivitaRenkaat();
+            PallonLepo.Muuttui("kaupungit");
             Debug.Log($"MATKAKIRJA kaupungit: linssinimet {(paalla ? "päälle" : "pois")} ({merkit.Count} merkkiä)");
+        }
+
+        // LÄMPÖERÄ (PallonLepo): aloitusvalinnan huomiorengas (Rengas-varjostin, syke 2,6 s) ja kohdemerkin halo
+        // (Kohdemerkki, 2,4 s) animoituvat _Timella. JATKUVA idle-animaatio, joka näkyy lepokartassa koko lähtövalinnan
+        // (ja lennon punaisten renkaiden) ajan: nykyinen ilme säilyy, eli ruudulla oleva rengas pitää pallon hereillä.
+        void OnEnable() => PallonLepo.Animoi(RenkaatSykkivat, "kaupungit: huomiorenkaat");
+        void OnDisable() => PallonLepo.Poista(RenkaatSykkivat);
+
+        bool RenkaatSykkivat()
+        {
+            if (rengasIdt.Count == 0 || LinssiTila || kamera == null) return false;
+            float reuna = (rengasSade * 1.16f + 2f) * PalloKierto.Pistekerroin;
+            foreach (var m in merkit)
+            {
+                if (!m.juuri.gameObject.activeSelf) continue;
+                bool rengas = m.rengas != null && m.rengas.gameObject.activeSelf;
+                bool kohde = m.kohdemerkki != null && m.kohdemerkki.gameObject.activeSelf;
+                if ((rengas || kohde) && PallonLepo.Ruudulla(kamera, m.juuri.position, reuna)) return true;
+            }
+            return false;
         }
 
         /// <summary>Merkin koko ja nimiön asu nykyisen tilan mukaan (pelin asu tai linssinimet); päivittää nimiön mitat.</summary>
@@ -122,6 +143,7 @@ namespace Matkakirja
         public void NaytaVain(ICollection<string> kaupungit)
         {
             suodatin = kaupungit == null ? null : new HashSet<string>(kaupungit);
+            PallonLepo.Muuttui("kaupungit");
         }
         HashSet<string> suodatin;
 
@@ -135,6 +157,7 @@ namespace Matkakirja
         public void PeliSuodatin(ICollection<string> kaupungit)
         {
             peliSuodatin = kaupungit == null ? null : new HashSet<string>(kaupungit);
+            PallonLepo.Muuttui("kaupungit");
         }
         HashSet<string> peliSuodatin;
 
@@ -212,6 +235,7 @@ namespace Matkakirja
                 r.SetPropertyBlock(null);
                 m.pisteT.localScale = new Vector3(m.pisteKoko, m.pisteKoko, 1);
             }
+            PallonLepo.Muuttui("kaupungit");
         }
         MaterialPropertyBlock korostusLohko;
 
@@ -273,6 +297,7 @@ namespace Matkakirja
                     if (!string.IsNullOrEmpty(id)) rengasIdt.Add(id);
             rengasValittu = valittu;
             PaivitaRenkaat();
+            PallonLepo.Muuttui("kaupungit");
         }
 
         readonly HashSet<string> rengasIdt = new HashSet<string>();
@@ -527,6 +552,7 @@ namespace Matkakirja
                     new double3(k.lon, k.lat, korkeudet[i] + nosto));
                 kohteet[i].pinta = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
             }
+            PallonLepo.Muuttui("kaupungit");
         }
 
         /// <summary>Tärkeys 0–2 merkin tyyliä varten: paketin 1.2-kenttä tai vanha päättely.</summary>
@@ -596,6 +622,7 @@ namespace Matkakirja
             valmiit.Sort((a, b) => b.tarkeys != a.tarkeys ? b.tarkeys - a.tarkeys : a.nimio.text.Length - b.nimio.text.Length);
             merkit.AddRange(valmiit);
             PaivitaRenkaat();
+            PallonLepo.Muuttui("kaupungit");
             Debug.Log($"MATKAKIRJA kaupungit: {merkit.Count} merkkiä, tärkeys {(paketinTarkeys ? "paketista" : "päätelty")}");
         }
 

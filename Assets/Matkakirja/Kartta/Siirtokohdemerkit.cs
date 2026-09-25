@@ -90,6 +90,27 @@ namespace Matkakirja
             if (kierto != null) kierto.Napautettu -= Napautus;
         }
 
+        // LÄMPÖERÄ (PallonLepo): häivytys 250 ms ja Kohdemerkki-varjostimen hengittävä halo (_Time, 2,4 s). Halo on JATKUVA
+        // idle-animaatio, joka näkyy lepokartassa koko siirron valinnan ajan: nykyinen ilme säilyy, eli ruudulla oleva
+        // merkki pitää pallon hereillä (30 fps).
+        void OnEnable() => PallonLepo.Animoi(Animoituu, "siirtokohteet: halo");
+        void OnDisable() => PallonLepo.Poista(Animoituu);
+
+        bool Animoituu()
+        {
+            if (poistuvat.Count > 0) return true;
+            if (merkit.Count == 0 || kamera == null || georeferenssi == null) return false;
+            float nyt = Time.unscaledTime;
+            var gt = georeferenssi.transform;
+            float reuna = (kaupunkiPx * 0.71f + 4f) * PalloKierto.Pistekerroin;
+            foreach (var m in merkit)
+            {
+                if (m.juuri == null || !m.juuri.gameObject.activeSelf) continue;
+                if (nyt - m.alku < SiirtymaS || PallonLepo.Ruudulla(kamera, gt.TransformPoint(m.pinta), reuna)) return true;
+            }
+            return false;
+        }
+
         void Start()
         {
             if (kamera == null) kamera = Camera.main;

@@ -92,6 +92,13 @@ namespace Matkakirja
     ///                             (KarttaKerrokset.Linssisiirto; oletus kesto 0,8 s)
     ///   s2meri r g b kynnys       Sentinelin meren värjäys heti (sRGB 0–1 tai 0–255; kynnys = sRGB-luma, 0 = pois;
     ///                             oletus 17 46 92 0.18)
+    ///   pallo lepo                pallon lepotila ja syy lokiin (PallonLepo: kamera, tilesetit, palvelin, herätys ja
+    ///                             käynnissä olevat kartan animaatiot); ei herätä palloa
+    ///   hdr pois|paalle|oletus|tila   pallon kameran HDR (LampoSaadot; oletus ennallaan päällä) kuvapariin
+    ///   varjot pois|auto|paalle|tila  päävalon varjot (LampoSaadot; oletus pois = nykyinen ilme, auto = vain kun
+    ///                             maamerkki on ruudulla, varjokartan etäisyys maamerkeistä)
+    /// Jokainen muu komento herättää pallon hetkeksi (PallonLepo.Muuttui), jotta muutos piirtyy heti myös lepopiirrossa,
+    /// ja kuva piirtää tuoreen kehyksen (Ruudunpaivitys.Herata).
     /// </summary>
     public class Komennot : MonoBehaviour
     {
@@ -357,10 +364,38 @@ namespace Matkakirja
                     AudioListener.volume = o[0] == "hiljaa" ? 0f : 1f;
                     break;
                 case "kuva":
+                    // Lepopiirrossa (Ruudunpaivitys PAIKALLAAN) kehys piirretään vain 2 s välein: kaappaukseen tuore kehys.
+                    Ruudunpaivitys.Herata(0.5f);
                     // Mobiilissa polku on suhteellinen persistentDataPathiin.
                     ScreenCapture.CaptureScreenshot(Application.isMobilePlatform
                         ? o[1] + ".png" : Path.Combine(Application.persistentDataPath, o[1] + ".png"));
                     break;
+                case "pallo" when o.Length > 1 && o[1] == "lepo":
+                    // Lämpöerä: pallon lepotila ja syy (PallonLepo.Kuvaus); ei herätä palloa (ks. loppu).
+                    Debug.Log(PallonLepo.Kuvaus());
+                    break;
+                case "hdr":
+                {
+                    // hdr pois|paalle|oletus|tila (LampoSaadot, kuvapari): oletus = ennallaan päällä (HdrOletus).
+                    string m = o.Length > 1 ? o[1] : "tila";
+                    var p = Lampopaatos.PaalleTaiPois(m);
+                    if (p.HasValue) LampoSaadot.Hdr = p.Value;
+                    else if (m == "oletus") LampoSaadot.Hdr = LampoSaadot.HdrOletus;
+                    else if (m != "tila") { Debug.LogWarning("MATKAKIRJA komento: hdr pois|paalle|oletus|tila, ei " + m); return; }
+                    Debug.Log("MATKAKIRJA lämpösäädöt: " + LampoSaadot.Kuvaus());
+                    break;
+                }
+                case "varjot":
+                {
+                    // varjot pois|auto|paalle|tila (LampoSaadot, kuvapari): oletus pois (nykyinen ilme, VarjoOletus).
+                    string m = o.Length > 1 ? o[1] : "tila";
+                    var t = Lampopaatos.VarjoTilaksi(m);
+                    if (t.HasValue) LampoSaadot.Varjot = t.Value;
+                    else if (m == "oletus") LampoSaadot.Varjot = LampoSaadot.VarjoOletus;
+                    else if (m != "tila") { Debug.LogWarning("MATKAKIRJA komento: varjot pois|auto|paalle|oletus|tila, ei " + m); return; }
+                    Debug.Log("MATKAKIRJA lämpösäädöt: " + LampoSaadot.Kuvaus());
+                    break;
+                }
                 case "kaupunki":
                     if (!merkit.ValitseKaupunki(o[1])) Debug.LogWarning("MATKAKIRJA komento: ei kaupunkia " + o[1]);
                     break;
@@ -780,7 +815,26 @@ namespace Matkakirja
                     Debug.LogWarning("MATKAKIRJA komento: tuntematon " + rivi);
                     return;
             }
+            // Lämpöerä: muutos näkyviin heti myös lepopiirrossa (PAIKALLAAN piirtää vain 2 s välein).
+            if (Herattaa(o)) PallonLepo.Muuttui("komento " + o[0]);
             Debug.Log("MATKAKIRJA komento: " + rivi);
+        }
+
+        /// <summary>Muuttaako komento kuvaa: kyselyt, odotus ja mittaus eivät herätä palloa (lepomittaukset pysyvät puhtaina).</summary>
+        static bool Herattaa(string[] o)
+        {
+            switch (o[0])
+            {
+                case "odota":
+                case "mittaus":
+                case "palvelin":
+                case "suodatus":
+                    return false;
+                case "pallo" when o.Length > 1 && o[1] == "lepo":
+                    return false;
+                default:
+                    return !(o.Length > 1 && o[1] == "tila");
+            }
         }
     }
 }

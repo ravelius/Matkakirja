@@ -108,6 +108,11 @@ namespace Matkakirja
         bool linssit, piilossa, nakyiEdella;
         float haiveAlku = -1f;
 
+        // LÄMPÖERÄ (PallonLepo): uuden kehän häive 260 ms; kehän katoaminen on yksittäinen muutos (LateUpdate).
+        void OnEnable() => PallonLepo.Animoi(Haivyttaa, "maaraja");
+        void OnDisable() => PallonLepo.Poista(Haivyttaa);
+        bool Haivyttaa() => piirto != null && piirto.enabled && haiveAlku >= 0f && Time.unscaledTime - haiveAlku < HaiveSek;
+
         void Start()
         {
             if (georeferenssi == null) georeferenssi = GetComponentInParent<CesiumGeoreference>();
@@ -379,6 +384,7 @@ namespace Matkakirja
             // Linssin jälkeen kehä palaa häiveellä kuten webissä (korostaMaa → rakennaKorostus(true)).
             if (nakyy && !nakyiEdella) haiveAlku = Time.unscaledTime;
             nakyiEdella = nakyy;
+            if (piirto.enabled != nakyy) PallonLepo.Muuttui("maaraja");
             piirto.enabled = nakyy;
             if (!nakyy) return;
 
