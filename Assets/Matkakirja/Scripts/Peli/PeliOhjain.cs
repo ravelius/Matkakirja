@@ -1330,7 +1330,7 @@ namespace Matkakirja.Natiivi
             if (kaupunki != null) Saavu(maaRajaus: !aloituslento);
             if (kaupunki != null && TraileriTarjolla(kaupunki))
             {
-                // Traileri ennen isoisän luentoa (web render: naytaSaapumistraileri → aloitaMerkinta); lehti vain aarrekaupungissa.
+                // Traileri ennen isoisän luentoa (web render: naytaSaapumistraileri → aloitaMerkinta); lehti ei aukea itsestään.
                 trailerinaytetty.Add(kaupunki);
                 Tila = SilmukanTila.Traileri;
                 traileriKaupunki = kaupunki;
@@ -1376,19 +1376,12 @@ namespace Matkakirja.Natiivi
         string saapumisLehti;
 
         /// <summary>
-        /// Löydös 59 (build 12): lehti aukeaa saapuessa vain aarrekaupungissa (web render: game.phase 'offer' →
-        /// openArrival, js/ui.js). Muualla kartalle ja isoisän matkakirjaluento heti (web aloitaMerkinta traileriin
-        /// jälkeen); lehti avataan napautuksesta.
+        /// Löydös 59 (build 12): saapuminen ei avaa lehteä (web game.js offerQuiz palauttaa aina false, omistajan ohje:
+        /// "mikään ikkuna ei aukea itsestään", myös laattakaupungissa). Kartalle ja isoisän matkakirjaluento heti (web
+        /// aloitaMerkinta trailerin jälkeen); lehti avataan napautuksesta.
         /// </summary>
         void SaavuLehteen(string kaupunki)
         {
-            if (kaupunki != null && LehtiOn && matka != null && matka.LaattaTassa(kaupunki))
-            {
-                saapumisLehti = kaupunki;
-                Tila = SilmukanTila.Lehti;
-                AvaaLehti(kaupunki);
-                return;
-            }
             Kartalle(false);
             if (kaupunki == null) return;
             var l = luennat.OtaLuento(kaupunki);
