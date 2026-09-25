@@ -268,6 +268,12 @@ namespace Matkakirja.Natiivi
                 case "odota":
                     odotus = Time.unscaledTime + Luku(A(1), 1f);
                     return null;
+                case "cpu":
+                    // Kehyksen CPU-hinta (Kartta/CpuMittari.cs): cpu lista | cpu mittaa [s] [suodatin|kaikki] | cpu tila
+                    if (A(1) == "lista") return "=" + CpuMittari.Lista();
+                    if (A(1) == "tila") return "=" + CpuMittari.Tila;
+                    if (A(1) == "mittaa") return CpuMittari.Mittaa(float.TryParse(A(2), out var cs) ? cs : 10f, A(3));
+                    return "cpu lista | cpu mittaa [s] [suodatin|kaikki] | cpu tila";
                 case "ruutu":
                     // Dynaaminen ruudunpäivitys ja lämpö (Kartta/Ruudunpaivitys.cs, lämpöerä 25.9.2026).
                     return Ruudunpaivitys.Instanssi != null ? "=" + Ruudunpaivitys.Instanssi.Kuvaus() : "ei ruudunpäivitystä";
