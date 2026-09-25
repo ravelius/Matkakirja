@@ -1,0 +1,699 @@
+{
+  "erä": "linssikatalogi-era2-06-20260925",
+  "tila": "40 R2-objektia ja kanonista URL-osoitetta todennettu takaisinluvulla; katalogiin ja peliin kytkentä odottaa Fablea",
+  "tilaus": "posti/linssikatalogi-tilaus-20260924.json@3576ee735273bca9a1611f88c3adc7e4ccad704a",
+  "count": {
+    "lenses": 10,
+    "concepts": 10,
+    "cc": 10,
+    "cc_not_found": 0,
+    "objects": 40
+  },
+  "entries": [
+    {
+      "id": "L4",
+      "nimi": "Evoluution saaret",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Galápagossa ja Ternatella syntyneet evoluution oivallukset yhdistyvät aikajanalla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 landscape game map concept for L4 Evolution Islands. Antique cream parchment world map, geographically credible Galápagos west of Ecuador and Ternate in the Indonesian Moluccas, two glowing brass pinpoints and delicate route arc between discoveries, finely engraved finch beaks and butterfly at margins, unlettered brass timeline dial along bottom. Refined nineteenth-century map aesthetic, light vignette, 13+ educational. No words, labels, letters, numbers, logos, buttons, watermark, people.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/L4-havainne.jpg",
+            "objectKey": "linssikatalogi/L4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244348,
+            "sha256": "1d84b0f444470b0e275f8e98b6fa60446779bde015cee77d1a16728cf3a08c3b"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/L4-havainne-480.jpg",
+            "objectKey": "linssikatalogi/L4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 38771,
+            "sha256": "06757a326f50cec2deabeb7f300f8e1cea861926e90c6764ef2e043463ed8c66"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Galápagossa kerättyjä peippoja John Gouldin piirroksena Darwinin matkakertomuksesta.",
+        "creator": "John Gould",
+        "title": "Darwin’s finches",
+        "year": "1845 edition (illustration before 1882)",
+        "collection": "Voyage of the Beagle / Darwin Online and Biodiversity Heritage Library",
+        "license": "Public domain (author died 1881)",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Darwin%27s_finches_by_Gould.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Darwin%27s_finches_by_Gould.jpg",
+        "transform_note": "aspect-fit on warm neutral 4:3 canvas, resized and JPEG-encoded; source content retained",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/L4.jpg",
+            "objectKey": "linssikatalogi/L4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 285768,
+            "sha256": "81031c85c9b773e6d7b5403de5d8eebc2a1b8e83d66bd6439e9fcc9d9997fe96"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/L4-thumb.jpg",
+            "objectKey": "linssikatalogi/L4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 35521,
+            "sha256": "fbcd2c26e8a7a91c91abe753344d1de5b7dd57b00b957b372919eaa6fb894ec4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "M3",
+      "nimi": "Aleksanteri Suuri",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Aleksanterin valtakunnan kerros levittäytyy Makedoniasta Egyptin ja Persian kautta Intiaan.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 parchment game-map concept of Alexander the Great's empire, an area lens. Geographically credible eastern Mediterranean, Greece, Anatolia, Egypt, Mesopotamia, Persia and northwest India in an oblique antique map view. A single muted cobalt-blue territorial wash expands east from Macedon to the Indus, with fine boundary edge and tiny brass points at Issus, Gaugamela, Persepolis and Hydaspes; no route line as dominant element. Intricate but restrained 19th-century cream/brown map etching, subtle topographic relief, muted brass, cinematic angled light, 13+ educational tone. No person or battle, no text, letters, numerals, labels, legend, UI, logos or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M3-havainne.jpg",
+            "objectKey": "linssikatalogi/M3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249443,
+            "sha256": "97dfd182db2d0972a9fff1eb99c1ec456f123689a5926dac0bd165df64d0c0d6"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M3-havainne-480.jpg",
+            "objectKey": "linssikatalogi/M3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 40128,
+            "sha256": "da1e6b5e73e80de783b297ce39d18ab2bb5c8bf604b2449f9a64f00b12d29abb"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Issoksen taistelua kuvaava antiikin mosaiikki Pompeijista.",
+        "creator": "Unknown Roman mosaicist",
+        "title": "Alexander Mosaic (Battle of Issus)",
+        "year": "ancient Roman mosaic; page gives c. 310 BCE for its Greek original",
+        "collection": "Naples National Archaeological Museum, inv. 10020",
+        "license": "Public domain (ancient work; PD-Art)",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Alexander_%28Battle_of_Issus%29_Mosaic.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Alexander_%28Battle_of_Issus%29_Mosaic.jpg/3840px-Alexander_%28Battle_of_Issus%29_Mosaic.jpg",
+        "transform_note": "aspect-fit on warm neutral 4:3 canvas, resized and JPEG-encoded; source content retained",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M3.jpg",
+            "objectKey": "linssikatalogi/M3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 292631,
+            "sha256": "e7eb02f218823f9e75b7b2eb8c839a232e40bf74e6de56777a99a3146149813d"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M3-thumb.jpg",
+            "objectKey": "linssikatalogi/M3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 42836,
+            "sha256": "8628fc90afed14ee47f76a18d923f61265dcd3ed16d5273571fd6bf941f03eba"
+          }
+        ]
+      }
+    },
+    {
+      "id": "M4",
+      "nimi": "Islamin leviäminen",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Varhaisten kalifaattien laajeneminen näkyy Lähi-idästä Pohjois-Afrikan kautta Iberiaan.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 parchment game-map concept for the expansion of early Islam from 622 to 750, an area lens. Geographically credible Near East, Arabian peninsula, North Africa, Iberian peninsula and southern France in an oblique antique map view. One dignified muted teal territorial color traces chronological growth outward from Medina across Jerusalem, Persia, North African coast and Iberia; delicate period boundary edges and a few soft brass lightpoints at Medina, Jerusalem and Iberia. Keep sacred places small and respectful, no figures of religious founders, no worship scene. Cream/brown engraved cartography, subtle texture and vignette, no triumphal war scene, 13+ educational. Absolutely no text, letters, numbers, labels, symbols of UI, logo or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M4-havainne.jpg",
+            "objectKey": "linssikatalogi/M4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248170,
+            "sha256": "7d8116f38d14b4af002daad758c5e651984ec3b100eb8f37642d9b6f5c585c20"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M4-havainne-480.jpg",
+            "objectKey": "linssikatalogi/M4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 38445,
+            "sha256": "0625fe481fdd41f993c0c1503c03e630f9e0f9674571ec5fa966787e5ff3a836"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Kalifaatin laajeneminen vuosina 622–750, mukaan lukien Pohjois-Afrikka ja Iberia.",
+        "creator": "DieBuche",
+        "title": "Map of expansion of Caliphate",
+        "year": "2010; depicts 622–750 CE",
+        "collection": "Wikimedia Commons, original cartography",
+        "license": "Public domain dedication by author",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Map_of_expansion_of_Caliphate.svg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Map_of_expansion_of_Caliphate.svg/3840px-Map_of_expansion_of_Caliphate.svg.png",
+        "transform_note": "aspect-fit on warm neutral 4:3 canvas, resized and JPEG-encoded; source content retained",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M4.jpg",
+            "objectKey": "linssikatalogi/M4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 121982,
+            "sha256": "8295a58c2071b8d60187db2f66df50059c8f957436d6526d8e9ad027d28d532e"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M4-thumb.jpg",
+            "objectKey": "linssikatalogi/M4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 23255,
+            "sha256": "a0ef1c698234504d2ba547734a172b24c91c0f2cee91fdddff2f31c5e9c3402c"
+          }
+        ]
+      }
+    },
+    {
+      "id": "M5",
+      "nimi": "Mongolien imperiumi",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Mongolivallan laaja alue ja myöhemmät kaanikunnat piirtyvät Euraasian kartalle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 parchment game-map concept for the Mongol Empire area lens, 1206 to 1368. Geographically credible northern Eurasia from eastern Europe through Central Asian steppe to China; black Caspian Sea and Central Asian mountain/grassland relief correctly placed. A broad single muted burnt-copper territorial wash marks the empire at its height, branching into four subtly differentiated khanate regions; fine borders, small brass lightpoints at Kyiv, Baghdad and the Yuan court. Emphasize scale of land and steppe, not combat or people. Cream and sepia 19th-century engraved atlas style, restrained vignette, 13+ educational tone. No text, letters, numerals, labels, legend, UI, logos or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M5-havainne.jpg",
+            "objectKey": "linssikatalogi/M5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248870,
+            "sha256": "b850584f652d88ea8948c14704f1b49ef6149582a6344683bf7c6a00a5f9ecfd"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M5-havainne-480.jpg",
+            "objectKey": "linssikatalogi/M5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 39047,
+            "sha256": "b887a2b12f1ad7ea5893b9cab02d19c47385e06151f16ac7bb48227ad4f303df"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Mongolivallan eteneminen Euraasiassa vuosina 1206–1294.",
+        "creator": "Cattette",
+        "title": "Expansion of the Mongol Empire",
+        "year": "2021; depicts 1206–1294 CE",
+        "collection": "Wikimedia Commons, original cartography",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Expansion_of_the_Mongol_Empire.svg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Expansion_of_the_Mongol_Empire.svg/3840px-Expansion_of_the_Mongol_Empire.svg.png",
+        "transform_note": "aspect-fit on warm neutral 4:3 canvas, resized and JPEG-encoded; source content retained",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M5.jpg",
+            "objectKey": "linssikatalogi/M5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 215473,
+            "sha256": "90e4114b7a096c607fba067553ac64424bec02b593be4934c33637e06d423203"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M5-thumb.jpg",
+            "objectKey": "linssikatalogi/M5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 24604,
+            "sha256": "5cc5cbe50cdb878420da50a084dfcfe421e55548c251d34a9d0ebf6340ff564f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "M6",
+      "nimi": "Bysantti",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Bysantin valtakunnan muuttuvat rajat kiertyvät Konstantinopolin ja itäisen Välimeren ympärille.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 parchment game-map area lens for Byzantine history 395–1453. Geographically credible eastern Mediterranean with Constantinople on Bosporus, Balkans, Anatolia, Levant and Egypt. An imperial muted purple territorial wash centered on Constantinople, with soft concentric historical boundary traces hinting at Justinian's broad reconquest, Basil II's heartland and final contraction; clear recognizable Aegean Sea, Mediterranean and Black Sea. Small understated mosaic-gold glint at Constantinople, fragments of Byzantine tesserae along border. Antique cream parchment map, delicate inked relief, restrained dignified educational mood, 13+; no battle, no people. No text, letters, numbers, labels, legend, UI, logos, watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M6-havainne.jpg",
+            "objectKey": "linssikatalogi/M6-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M6-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248058,
+            "sha256": "0806d86c6948397adc58eb3eea9360cf3c92b5d4992df9e59e5a15d905455a20"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M6-havainne-480.jpg",
+            "objectKey": "linssikatalogi/M6-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M6-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 40897,
+            "sha256": "9f2da13a8612339799c019d6c0efd2e78f700bc848182e6c69c988234b3c6d07"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Keisari Justinianuksen hovia esittävä 500-luvun mosaiikki Ravennassa.",
+        "creator": "Username.Ruge (photograph); unknown 6th-century mosaicists",
+        "title": "Ravenna – Basilica of San Vitale – mosaic with Justinian",
+        "year": "photograph 2016; mosaic completed c. 547 CE",
+        "collection": "Basilica of San Vitale, Ravenna / Wikimedia Commons",
+        "license": "CC BY-SA 4.0 (photograph)",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Ravenna_Basilica_of_San_Vitale_mosaic_Justinian.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Ravenna_Basilica_of_San_Vitale_mosaic_Justinian.jpg/3840px-Ravenna_Basilica_of_San_Vitale_mosaic_Justinian.jpg",
+        "transform_note": "aspect-fit on warm neutral 4:3 canvas, resized and JPEG-encoded; source content retained",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M6.jpg",
+            "objectKey": "linssikatalogi/M6-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M6-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 289345,
+            "sha256": "4a37ae3a444bd195a8c41d8bc17519c35984798921bd4bc46673eae29bbce32b"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M6-thumb.jpg",
+            "objectKey": "linssikatalogi/M6-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M6-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 67950,
+            "sha256": "37299ac9fd4e37ba959de63f3b8556d7dda9272575fdc6f3fbafb603bf7d17f5"
+          }
+        ]
+      }
+    },
+    {
+      "id": "M8",
+      "nimi": "Reconquista",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Iberian eri vaiheiden rajat etenevät kohti Granadaa vuoteen 1492.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 parchment game-map area lens for Reconquista in Iberia 711–1492. Correct Iberian Peninsula with Pyrenees at northern edge, Atlantic to west, Mediterranean to east; no invented coastlines. Warm terracotta regional wash slowly progresses from northern mountain pockets toward Granada in the south, visible as layered translucent historical frontiers. Small subdued brass points at Covadonga in Asturias, Toledo in central Spain and Granada beneath the Sierra Nevada. Equal dignity to layered Andalusi and Christian cultural heritage; no triumphant battle scene or religious iconography. Museum-grade 19th-century cream sepia atlas aesthetic, fine topography, slight vignette, 13+ reflective tone. No text, letters, numbers, labels, legend, UI, logos or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M8-havainne.jpg",
+            "objectKey": "linssikatalogi/M8-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M8-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 245402,
+            "sha256": "6dfde1c9a66a1254f5c14ccb52b34e587e49734e4a0e3989b76b13a592eb07c4"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M8-havainne-480.jpg",
+            "objectKey": "linssikatalogi/M8-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M8-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 40017,
+            "sha256": "154e618c0fc57b06c621b975d15590fcdf5a598b30a723c7dc7caae9dddf9f21"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Granadan luovutusta vuonna 1492 kuvaava historiallinen maalaus.",
+        "creator": "Francisco Pradilla y Ortiz",
+        "title": "La rendición de Granada",
+        "year": "1882; depicts 1492",
+        "collection": "Senate of Spain, Madrid",
+        "license": "Public domain (artist died 1921; PD-Art)",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:La_Rendici%C3%B3n_de_Granada_-_Pradilla.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/La_Rendici%C3%B3n_de_Granada_-_Pradilla.jpg/3840px-La_Rendici%C3%B3n_de_Granada_-_Pradilla.jpg",
+        "transform_note": "aspect-fit on warm neutral 4:3 canvas, resized and JPEG-encoded; source content retained",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M8.jpg",
+            "objectKey": "linssikatalogi/M8-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M8-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 296730,
+            "sha256": "d2e843cd6c97a3c606d8a5924b463b3b54a72526a7f6171d9c198b76fd14f2ba"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M8-thumb.jpg",
+            "objectKey": "linssikatalogi/M8-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M8-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 46874,
+            "sha256": "198ff1a38cd6b89216bdadbaf5d95f0d81105f5eca81033f62817044262a0b22"
+          }
+        ]
+      }
+    },
+    {
+      "id": "M9",
+      "nimi": "Viikinkien maailma",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Viikinkiajan yhteydet kulkevat Skandinaviasta Atlantin saarille ja Pohjois-Amerikan reunalle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 parchment game-map area lens for Viking world 793–1066. Geographically credible North Atlantic and northern Europe, Scandinavia on east, British Isles, Normandy coast, Iceland, Greenland and edge of North America all in correct broad relative positions. Deep muted sea-blue overlay on Scandinavian influence and thin copper sea routes reaching Lindisfarne, Iceland, Greenland and Vinland; very small historically plausible longships as cartographic marginal details, not a battle scene. Antique engraved coastlines, cream parchment, brassy glints, cool northern ocean haze, light vignette, 13+ educational. No text, letters, numbers, labels, legend, UI, logo, watermark, modern people.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M9-havainne.jpg",
+            "objectKey": "linssikatalogi/M9-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M9-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249205,
+            "sha256": "4574868957396f59f115213e97a5758769a35d91b623264cfac9763c03f52964"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M9-havainne-480.jpg",
+            "objectKey": "linssikatalogi/M9-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M9-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 40700,
+            "sha256": "7ac98e9b640eb87b9343fe9fb23442a28b168b43c718029c2921bb9144cf4fa4"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Osebergin viikinkilaiva, noin vuodelta 820.",
+        "creator": "Макс Вальтер",
+        "title": "Oseberg ship",
+        "year": "photograph 2010; ship c. 820 CE",
+        "collection": "Viking Ship Museum, Oslo / Wikimedia Commons",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Oseberg_ship.JPG",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Oseberg_ship.JPG",
+        "transform_note": "aspect-fit on warm neutral 4:3 canvas, resized and JPEG-encoded; source content retained",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M9.jpg",
+            "objectKey": "linssikatalogi/M9-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M9-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 244209,
+            "sha256": "83e7a9b2514edabbb60390a1aabce578103cb45bb882fed19a2cab74f84d21e5"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M9-thumb.jpg",
+            "objectKey": "linssikatalogi/M9-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M9-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 24611,
+            "sha256": "bdc372329674c6d954ae6b7157da5e2f1427ac66a6fb2d614df0ec478bd39bfd"
+          }
+        ]
+      }
+    },
+    {
+      "id": "M10",
+      "nimi": "Ruotsin suurvalta ja Suomi",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Ruotsin suurvalta-ajan aluekerros näyttää Suomen osana Itämeren valtakuntaa.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 parchment game-map area lens for Swedish Great Power and Finland, 1561–1809. Geographically credible Baltic Sea centered composition, Sweden on west shore, Finland on east and northeastern shore, Estonia and Livonia to southeast, northern Germany and Poland to south; distinguish land and sea accurately. A coherent muted forest-green territorial wash marks Swedish dominions at its 17th-century height, including Finland and Baltic provinces, with delicate brass points at Tallinn, the Gulf of Finland and Nystad coast. Light historical border ghosts suggest later contraction; no army or battlefield. Cream/brown antique atlas engraving, fine coastal details, subtle vignette, elegant game-map layer, 13+ educational. No text, letters, numbers, labels, legend, UI, logos or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M10-havainne.jpg",
+            "objectKey": "linssikatalogi/M10-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M10-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244706,
+            "sha256": "5d523c8810e20aa33863a2dce01a37bf9b8074e47792d652a769369a5b110193"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M10-havainne-480.jpg",
+            "objectKey": "linssikatalogi/M10-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M10-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 39633,
+            "sha256": "5db98cca1db7dca7004e5722169f33e5b1adcccd58248dfa492a59ed68c46a57"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Ruotsin valtakunnan alueet vuonna 1658, Suomi mukaan lukien.",
+        "creator": "Fenn-O-maniC",
+        "title": "Map of Kingdom of Sweden in 1658",
+        "year": "2013; depicts 1658",
+        "collection": "Wikimedia Commons, original cartography",
+        "license": "CC BY-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Swedish_Empire_Map.svg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Swedish_Empire_Map.svg/3840px-Swedish_Empire_Map.svg.png",
+        "transform_note": "aspect-fit on warm neutral 4:3 canvas, resized and JPEG-encoded; source content retained",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M10.jpg",
+            "objectKey": "linssikatalogi/M10-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M10-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 128573,
+            "sha256": "db603046af5caf89622f6729c25bf92019960bdf951f58aa69178483e9d88d67"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M10-thumb.jpg",
+            "objectKey": "linssikatalogi/M10-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M10-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 21251,
+            "sha256": "b032f50cb98f432892b8de99892e72baebcccc78f5e96f527fd0545dc3bb5e0d"
+          }
+        ]
+      }
+    },
+    {
+      "id": "M11",
+      "nimi": "Inkat ja atsteekit",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Atsteekkien Meksiko ja inkojen Andit saavat omat rinnakkaiset aluekerroksensa.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 historical area-lens game map for both Aztec and Inca civilizations, 1325–1572. Compose the image as two equally sized adjacent cartographic panels within ONE seamless antique parchment atlas: LEFT HALF a large, clearly recognizable map of central Mexico with the Valley of Mexico and lake-set Tenochtitlan, muted turquoise territorial overlay; RIGHT HALF a large, clearly recognizable map of western South America with the Pacific edge, Andes and a long narrow Inca realm through Ecuador, Peru, Bolivia and northern Chile, muted ochre territorial overlay. Each half should occupy about 45 percent of image width, separated by a graceful unlettered engraved meridian ornament, with equivalent visual weight; do not shrink Mexico to a distant corner. A tiny brass glint at Tenochtitlan and another at Cuzco; mountain topography for the Andes, lake for Tenochtitlan. Refined cream sepia nineteenth-century parchment map concept, warm vignette, respectful 13+ educational tone. No text, letters, numerals, labels, legend, UI, logo, watermark or people.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M11-havainne.jpg",
+            "objectKey": "linssikatalogi/M11-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M11-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244651,
+            "sha256": "1003419e90b5a460f486c9bfb190fae1a59e82a79521d5a23424943de1f34688"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/M11-havainne-480.jpg",
+            "objectKey": "linssikatalogi/M11-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M11-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 38972,
+            "sha256": "230a5fa64c2c01c6df57143f73841b077d55caa4f1113d7b743fc0c2358a09fe"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuonna 1524 painettu kartta Tenochtitlánista; kuva havainnollistaa atsteekkien pääkaupunkia, ei inkoja.",
+        "creator": "Friedrich Peypus (attributed publisher/engraver)",
+        "title": "Map of Tenochtitlan, 1524",
+        "year": "1524",
+        "collection": "Newberry Library, Chicago, Ayer 655.51.C8 1524b/c/d",
+        "license": "Public domain (1524 woodcut; PD-Art)",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Map_of_Tenochtitlan%2C_1524.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Map_of_Tenochtitlan%2C_1524.jpg",
+        "transform_note": "aspect-fit on warm neutral 4:3 canvas, resized and JPEG-encoded; source content retained",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M11.jpg",
+            "objectKey": "linssikatalogi/M11-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M11-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 298946,
+            "sha256": "b36d7ef0f64ad4d74069caef8013d7ba7cbecd0e14a657b80bc60c4c5a31feb3"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/M11-thumb.jpg",
+            "objectKey": "linssikatalogi/M11-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M11-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 42613,
+            "sha256": "2f6d16c3e639eb1298d5e682bf16a6869b56d77742f6496a49456a4460f05c61"
+          }
+        ]
+      }
+    },
+    {
+      "id": "N4",
+      "nimi": "Kolmikymmenvuotinen sota",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Kolmikymmenvuotisen sodan Keski-Euroopan alueet ja rauhan päätepiste hahmottuvat kartalla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset: 16:9 parchment game-map area lens for Thirty Years War 1618–1648 in central Europe. Accurate broad Central European geography centered on Prague, Bohemia, Saxony, Bavaria and Westphalia with the Baltic to the north and Alps to the south. One sober muted iron-blue regional wash indicates broad theaters/fronts; restrained translucent campaign bands and small amber points at Prague, Breitenfeld, Lützen and the Westphalian peace region. Show geopolitical movement and the eventual peace through subtle quiet light, never flames, bodies or triumphant battle. Museum-grade cream/brown 19th-century engraved parchment atlas, slight vignette, 13+ reflective tone. No text, letters, numbers, labels, legend, UI, logos or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/N4-havainne.jpg",
+            "objectKey": "linssikatalogi/N4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244611,
+            "sha256": "581717691c0f00053471c4d16b74b1a3f77b8a6774832b2c7e1a24f49ef24d47"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-06/N4-havainne-480.jpg",
+            "objectKey": "linssikatalogi/N4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 40302,
+            "sha256": "c1e3ff77bd9da374de45329e92ff4f6d8d2f206f84062e1ba6af9e54e29dc1c8"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Jan Asselijnin maalaus Lützenin taistelusta, kolmikymmenvuotisen sodan käännekohdasta.",
+        "creator": "Jan Asselijn",
+        "title": "King Gustav II Adolf of Sweden at the Battle by Lützen November 16th, 1632",
+        "year": "1634; depicts 1632",
+        "collection": "Statens Museum for Kunst, KMSsp370",
+        "license": "Public domain artwork; digital reproduction CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Jan_Asselijn%2C_Gustav_II_Adolf_af_Sverige_i_slaget_ved_L%C3%BCtzen_16_november_1632%2C_1634%2C_KMSsp370%2C_Statens_Museum_for_Kunst.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Jan_Asselijn%2C_Gustav_II_Adolf_af_Sverige_i_slaget_ved_L%C3%BCtzen_16_november_1632%2C_1634%2C_KMSsp370%2C_Statens_Museum_for_Kunst.jpg/3840px-Jan_Asselijn%2C_Gustav_II_Adolf_af_Sverige_i_slaget_ved_L%C3%BCtzen_16_november_1632%2C_1634%2C_KMSsp370%2C_Statens_Museum_for_Kunst.jpg",
+        "transform_note": "aspect-fit on warm neutral 4:3 canvas, resized and JPEG-encoded; source content retained",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/N4.jpg",
+            "objectKey": "linssikatalogi/N4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 285387,
+            "sha256": "c32594a35ba8655181835f68edbc76a4c4fe58083d468ba3a1cbe3fa5558c572"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-06/N4-thumb.jpg",
+            "objectKey": "linssikatalogi/N4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/N4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 34062,
+            "sha256": "427cf792a93cd852b1bfa397e14c566e47c29628e431e441a91e48c7aa9d9505"
+          }
+        ]
+      }
+    }
+  ],
+  "r2_verified": {
+    "objects": 40,
+    "canonicalUrlsVerified": true,
+    "receipt": "output/fable-20260924/linssikatalogi/era2/ready-06-20260925/r2-receipt.json"
+  }
+}
