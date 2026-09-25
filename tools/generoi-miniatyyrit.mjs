@@ -34,6 +34,14 @@
  *      "generoi kunnes kelpaa" -silmukkaa.
  *   3. Ajon loppuun tulostuu generointien määrä ja kustannusarvio.
  *
+ * TYYLISÄÄNTÖ (Fable 25.9.2026, omistajan löydös 95 "piirretty tausta on
+ * väärin"): miniatyyri on LEIKATTU KOHDE, EI KOHTAUS. Kuvassa on yksi
+ * kohde (rakennus, esine, henkilö tai pieni ryhmä) tasaisella
+ * paperitaustalla, joka leikataan pois (tools/leikkaa-miniatyyrit.mjs);
+ * maalattua taustaa, taivasta, maisemaa tai huonetta kohteen ympärillä
+ * ei ole. Sama koskee karttanostojen kuvia. Vartija:
+ * tests/miniatyyrit-leikkaus.test.mjs (täyttö < 0,6, reuna <= 0,35).
+ *
  * API-avainta EI koskaan repoon eikä lokiin.
  */
 
