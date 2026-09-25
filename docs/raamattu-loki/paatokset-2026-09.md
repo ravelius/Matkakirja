@@ -5023,3 +5023,7 @@ Webissä Maakunnat listaa nykyisen maan maakunnat ja napautus kohdistaa kartan; 
 ## OMISTAJAN LOYDOKSET 71–72 BUILD 12:STA (iPHONE, KUVAT loydos71-iphone-maalehti-radio-nappi.png, loydos72-iphone-lippukortti-tausta.png): 71 MAALEHDEN PERUSTIETOJEN RADIO-NAPPI EI TOIMI → NATIIVI-UI (NAPPI) + LINSSISEPPA (RADION AVAUS); 72 LIPPUKORTILLA VAARA TAUSTA (KELLERTAVA PERGAMENTTI, WEBISSA MAALEHDEN VAALEA KORTTIPOHJA) → NATIIVI-UI; BUILD 13 (25.9.2026 klo 05.15)
 
 Kuvassa 72 lippukortti (Kreikka, Nykyinen lippu, symboliikka, historia) avautuu maalehden päälle omalla tummemmalla pergamenttitaustalla.
+
+## LIIKKUMISEN PARITEETTILISTA VALMIS (PELIKOODARI, Matkakirja-pelikoodari/docs/raportit/liikkuminen-pariteetti-20260925.md): 4 OSIOTA (NOPPA, MATKA JA REITIT, SAAPUMINEN, MAAILMA), 41 ERI + 13 PUUTTUU; JAKO PELIKOODARI ~20, NATIIVISEPPA ~15, NATIIVI-UI ~10; TEHTY 55 (e4bfb61), 56 KOHDESOVITUS (NATIIVISEPPA), 61 KAMERAKYTKENTA OLI POISSA b12:STA → juna/b13 044a2fe; FABLE B25: LENNON ESITYS KOSKEE KAIKKIA NATIIVIN LENTOJA (HYVAKSYTTY POIKKEAMA WEBISTA), ENNEN LAHTOA JA LASKUN JALKEEN WEBIN TILA (25.9.2026 klo 05.17)
+
+Laitetestaajan kuvauskäsikirjoitus listan luvussa 1.
