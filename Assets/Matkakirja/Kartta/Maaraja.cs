@@ -384,7 +384,7 @@ namespace Matkakirja
             // Linssin jälkeen kehä palaa häiveellä kuten webissä (korostaMaa → rakennaKorostus(true)).
             if (nakyy && !nakyiEdella) haiveAlku = Time.unscaledTime;
             nakyiEdella = nakyy;
-            if (piirto.enabled != nakyy) PallonLepo.Muuttui("maaraja");
+            if (piirto.enabled != nakyy) PallonLepo.Valmistui("maaraja");
             piirto.enabled = nakyy;
             if (!nakyy) return;
 

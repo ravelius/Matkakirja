@@ -129,5 +129,109 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Sama(50f, Lampopaatos.VarjoEtaisyys(float.NaN, 50f), "ei maamerkkiä ruudulla");
             Oleta.Sama(50f, Lampopaatos.VarjoEtaisyys(0f, 50f), "tarve 0");
         }
+
+        // ---- Joutosyke (Fable 25.9.2026 klo 20.1x): kello, keskiasento ja jatko ----
+
+        const float Kehys = 1f / 30f;
+
+        /// <summary>n kehystä (30 fps) hetkestä alku alkaen ilman aktiivisuutta.</summary>
+        static Lampopaatos.Syke Kehykset(Lampopaatos.Syke s, float alku, int n, bool jaatyy = true)
+        {
+            for (int i = 1; i <= n; i++) s = Lampopaatos.SykeAskel(s, alku + i * Kehys, Kehys, false, jaatyy);
+            return s;
+        }
+
+        /// <summary>Aktiivisuus hetkellä 0, sitten lepo niin, että viimeinen askel on hetkellä nyt.</summary>
+        static Lampopaatos.Syke Levossa(float nyt, bool jaatyy = true)
+        {
+            var s = Lampopaatos.SykeAskel(Lampopaatos.Syke.Alku, 0f, Kehys, true, jaatyy);
+            return Lampopaatos.SykeAskel(s, nyt, Kehys, false, jaatyy);
+        }
+
+        [Testi]
+        static void SykeElaaKolmeSekuntiaLevossa()
+        {
+            Oleta.Sama(1f, Levossa(2.99f).Voima, "2,99 s levossa: täysi syke");
+            Oleta.Tosi(Levossa(3f).Voima < 1f, "3 s levossa: liuku keskiasentoon alkaa");
+            var s = Lampopaatos.SykeAskel(Lampopaatos.Syke.Alku, 0f, Kehys, true, true);
+            Oleta.Sama(0f, s.Aktiivinen, "aktiivisuus merkitty");
+            s = Lampopaatos.SykeAskel(s, 2f, Kehys, false, true);
+            Oleta.Sama(0f, s.Aktiivinen, "lepo (myös idle-animaatiot ja laatat) ei siirrä aktiivisuuden hetkeä");
+        }
+
+        [Testi]
+        static void SykeLiukuuKeskiasentoonNoin03s()
+        {
+            // Lepo alkaa hetkellä 0; kolmen sekunnin kohdalla voima laskee tasaisesti nollaan 0,3 s:ssa (9–10 kehystä).
+            var s = Lampopaatos.SykeAskel(Lampopaatos.Syke.Alku, 0f, Kehys, true, true);
+            float edellinen = 1f;
+            int kehyksia = 0;
+            for (float nyt = 3f; s.Voima > 0f && kehyksia < 100; nyt += Kehys, kehyksia++)
+            {
+                s = Lampopaatos.SykeAskel(s, nyt, Kehys, false, true);
+                Oleta.Tosi(s.Voima < edellinen, "voima laskee joka kehys");
+                // Pehmennetty voima (näytölle) ei hyppää: muutos kehyksessä alle kolmanneksen.
+                Oleta.Tosi(Math.Abs(Lampopaatos.SykePehmea(s.Voima) - Lampopaatos.SykePehmea(edellinen)) < 0.34f, "ei hyppyä");
+                edellinen = s.Voima;
+            }
+            Oleta.Tosi(kehyksia >= 9 && kehyksia <= 10, $"liuku {kehyksia} kehystä (0,3 s = 9)");
+            Oleta.Sama(0f, s.Voima, "jäätynyt");
+        }
+
+        [Testi]
+        static void JaatynytAikaPysahtyyJaJatkuuHetiSamasta()
+        {
+            var s = Levossa(3.5f);
+            s = Kehykset(s, 3.5f, 15);
+            Oleta.Sama(0f, s.Voima, "jäätynyt 3,5 s levon jälkeen");
+            float jaatynyt = s.Aika;
+            s = Kehykset(s, 4f, 300);
+            Oleta.Sama(jaatynyt, s.Aika, "jäätyneenä aika ei etene (10 s)");
+            // Aktiivisuus (kosketus, kamera-ajo, Muuttui): voima nousee heti samassa kehyksessä, aika jatkaa samasta kohdasta.
+            s = Lampopaatos.SykeAskel(s, 20f, Kehys, true, true);
+            Oleta.Tosi(s.Voima > 0f && s.Voima < 0.2f, $"voima nousee heti ja pehmeästi ({s.Voima})");
+            Lahella(jaatynyt + Kehys, s.Aika, "aika jatkaa jäätyneestä kohdasta");
+            s = Kehykset(s, 20f, 9);
+            Oleta.Sama(1f, s.Voima, "täysi syke 0,3 s:ssa");
+        }
+
+        [Testi]
+        static void AktiivisuusNollaaKellon()
+        {
+            var s = Lampopaatos.SykeAskel(Lampopaatos.Syke.Alku, 0f, Kehys, true, true);
+            s = Lampopaatos.SykeAskel(s, 2.9f, Kehys, true, true);   // esim. kosketus juuri ennen jäädytystä
+            s = Lampopaatos.SykeAskel(s, 5.8f, Kehys, false, true);
+            Oleta.Sama(1f, s.Voima, "kello alkoi alusta 2,9 s:ssa");
+            s = Lampopaatos.SykeAskel(s, 5.9f, Kehys, false, true);
+            Oleta.Tosi(s.Voima < 1f, "3 s viimeisestä aktiivisuudesta: liuku alkaa");
+        }
+
+        [Testi]
+        static void KytkinPoisPitaaSykkeenJatkuvana()
+        {
+            var s = Levossa(1f, false);
+            s = Kehykset(s, 1f, 1800, false);   // minuutti levossa
+            Oleta.Sama(1f, s.Voima, "jatkuva syke (TODO: KEHYKSEN HINTA -erän jälkeen)");
+            Oleta.Tosi(s.Aika > 60f, $"aika etenee ({s.Aika})");
+        }
+
+        [Testi]
+        static void KeskiasentoJaPehmennys()
+        {
+            // Avoimen karttapisteen syke 1 … 1,2 (määrä 0,2, jakso 1,6 s): keskiasento 1,1 millä tahansa ajalla.
+            foreach (var aika in new[] { 0f, 0.4f, 0.77f, 1.2f, 13.3f })
+                Lahella(1.1f, Lampopaatos.PisteenSyke(aika, 1.6f, 0.2f, 0f), $"keskiasento ajalla {aika}");
+            Lahella(1.2f, Lampopaatos.PisteenSyke(0.4f, 1.6f, 0.2f, 1f), "täysi syke: huippu neljänneksessä jaksoa");
+            Lahella(1.0f, Lampopaatos.PisteenSyke(1.2f, 1.6f, 0.2f, 1f), "täysi syke: pohja kolmessa neljänneksessä");
+            Lahella(1.15f, Lampopaatos.PisteenSyke(0.4f, 1.6f, 0.2f, 0.5f), "puolikas voima puolivälissä");
+            // Halo ja rengas (varjostimet): e = 0,5 + voima × (e − 0,5); keskiasento e = 0,5 (säde ×1,28 / ×1,08).
+            Oleta.Sama(0.5f, Lampopaatos.Keskelle(0.93f, 0.5f, 0f));
+            Oleta.Sama(0.93f, Lampopaatos.Keskelle(0.93f, 0.5f, 1f));
+            Oleta.Sama(0f, Lampopaatos.SykePehmea(0f));
+            Oleta.Sama(1f, Lampopaatos.SykePehmea(1f));
+            Oleta.Sama(0.5f, Lampopaatos.SykePehmea(0.5f));
+            Oleta.Sama(1f, Lampopaatos.SykePehmea(2f), "rajattu");
+            Oleta.Sama(0f, Lampopaatos.SykePehmea(-1f), "rajattu");
+        }
     }
 }

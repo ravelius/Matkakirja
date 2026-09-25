@@ -3,6 +3,8 @@
 // rgba(234, 184, 78, 0.08). Syke 2,6 s ease-in-out: säde 1 → 1,16 ja peitto 0,92 → 0,42 → takaisin.
 // Neliö on KaupunkiMerkit-juuren sisällä, jossa yksi yksikkö = yksi näytön piste; _Koko = neliön sivu
 // pisteinä (sama kuin C#:n localScale), joten mitat ovat pisteitä pistekertoimesta riippumatta.
+// JOUTOSYKE (Fable 25.9.2026 klo 20.1x, Kartta/Joutosyke.cs): syke ei lue Unityn _Time.y:tä vaan globaalit _SykeAika
+// (sykkeen oma aika, pysähtyy levossa) ja _SykeVoima (0 = keskiasento: säde ×1,08, peitto 0,67; 1 = täysi syke).
 Shader "Matkakirja/Rengas"
 {
     Properties
@@ -38,6 +40,8 @@ Shader "Matkakirja/Rengas"
                 half4 _BaseColor;
                 float _Sade, _Paksuus, _Taytto, _Koko, _Jakso, _Kasvu, _PeittoYla, _PeittoAla;
             CBUFFER_END
+            // Joutosykkeen globaalit (Shader.SetGlobalFloat, Kartta/Joutosyke.cs), ei materiaalin ominaisuuksia.
+            float _SykeAika, _SykeVoima;
 
             struct Syote { float4 paikka : POSITION; float2 uv : TEXCOORD0; };
             struct Vali { float4 paikka : SV_POSITION; float2 uv : TEXCOORD0; };
@@ -55,9 +59,11 @@ Shader "Matkakirja/Rengas"
                 float r = length(i.uv);
                 float w = max(fwidth(r), 1e-4);
                 // Keyframes 0 %, 100 % lepo, 50 % huippu; CSS ease-in-out ≈ smoothstep kummallakin puolikkaalla.
-                float t = frac(_Time.y / max(_Jakso, 0.01));
+                // Joutosykkeen voima painaa keskiasentoon (e = 0,5).
+                float t = frac(_SykeAika / max(_Jakso, 0.01));
                 float s = t < 0.5 ? t * 2.0 : (1.0 - t) * 2.0;
                 float e = s * s * (3.0 - 2.0 * s);
+                e = 0.5 + _SykeVoima * (e - 0.5);
                 float sade = _Sade * (1.0 + _Kasvu * e);
                 float peitto = lerp(_PeittoYla, _PeittoAla, e);
                 float puoli = _Paksuus * 0.5;

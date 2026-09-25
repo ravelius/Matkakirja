@@ -81,6 +81,68 @@ namespace Matkakirja
         public static float Heratys(float hereillaAsti, float nyt, float sekuntia) =>
             Math.Max(hereillaAsti, nyt + (sekuntia > 0f ? sekuntia : 0f));
 
+        // ---- Joutosyke (Fable 25.9.2026 klo 20.1x) ----
+        // Kolme jatkuvaa idle-animaatiota (avoimen aarrepisteen syke, siirtokohteiden halo, aloitusvalinnan renkaat ja
+        // halo) pysähtyvät levossa: SykeLepoS viimeisen aidon aktiivisuuden jälkeen voima liukuu SykeLiukuS:ssa nollaan
+        // eli keskiasentoon, ja sykkeen oma aika pysähtyy. Aktiivisuus nostaa voiman heti takaisin, ja aika jatkaa siitä,
+        // mihin se jäi (Unity-puoli: Joutosyke).
+        // TODO (Fable 25.9.2026): kun KEHYKSEN HINTA -erä on tuonut staattisen kehyksen ≤ 16 ms:iin, syke palautetaan jatkuvaksi 30 fps:llä (webin mukaan).
+
+        /// <summary>
+        /// Jäädytyksen kytkin (oletus): tosi = idle-animaatiot pysähtyvät levossa keskiasentoon, epätosi = jatkuva syke
+        /// kuten ennen. Kääntö pois palauttaa jatkuvan sykkeen (ks. TODO yllä); ajossa Joutosyke.Jaatyy (komento syke).
+        /// </summary>
+        public const bool SykeJaatyy = true;
+        /// <summary>Lepo ennen jäädytystä (s viimeisestä aidosta aktiivisuudesta).</summary>
+        public const float SykeLepoS = 3f;
+        /// <summary>Liuku keskiasentoon ja takaisin täyteen sykkeeseen (s).</summary>
+        public const float SykeLiukuS = 0.3f;
+
+        /// <summary>Joutosykkeen tila: oma aika (s, varjostimien _Time.y:n tilalla), lineaarinen voima 0–1 ja viimeisen
+        /// aidon aktiivisuuden hetki (s).</summary>
+        public struct Syke
+        {
+            public float Aika, Voima, Aktiivinen;
+            public static Syke Alku => new Syke { Voima = 1f };
+        }
+
+        /// <summary>
+        /// Joutosykkeen askel kerran kehyksessä. Aktiivisuus merkitään hetkeksi nyt; voiman tavoite on 1, kunnes lepoa on
+        /// kestänyt <see cref="SykeLepoS"/> (ja jäädytys on päällä), sitten 0. Voima liukuu tavoitetta kohti tasaisesti
+        /// <see cref="SykeLiukuS"/>:ssa, ja aika etenee vain, kun voima on yli 0: jäätynyt syke ei kuluta aikaa, joten jatko
+        /// alkaa samasta vaiheesta. Negatiivinen tai NaN dt = 0.
+        /// </summary>
+        public static Syke SykeAskel(Syke s, float nyt, float dt, bool aktiivisuus, bool jaatyy)
+        {
+            if (aktiivisuus) s.Aktiivinen = nyt;
+            float d = dt > 0f ? dt : 0f;
+            float tavoite = jaatyy && nyt - s.Aktiivinen >= SykeLepoS ? 0f : 1f;
+            float askel = d / SykeLiukuS;
+            s.Voima = s.Voima < tavoite ? Math.Min(tavoite, s.Voima + askel) : Math.Max(tavoite, s.Voima - askel);
+            if (s.Voima > 0f) s.Aika += d;
+            return s;
+        }
+
+        /// <summary>Voima näytölle pehmeänä (smoothstep): liuku alkaa ja päättyy ilman nykäystä.</summary>
+        public static float SykePehmea(float voima)
+        {
+            float v = voima < 0f ? 0f : voima > 1f ? 1f : voima;
+            return v * v * (3f - 2f * v);
+        }
+
+        /// <summary>Keskiasentoon painettu arvo: keski + voima × (arvo − keski). Voima 0 = keskiasento, 1 = alkuperäinen.</summary>
+        public static float Keskelle(float arvo, float keski, float voima) => keski + voima * (arvo - keski);
+
+        /// <summary>
+        /// Avoimen karttapisteen sykkeen kokokerroin: 1 … 1 + määrä siniaaltona jaksolla (Karttapisteet), keskiasento
+        /// 1 + määrä / 2. Aika = sykkeen oma aika, voima = näytön voima (SykePehmea).
+        /// </summary>
+        public static float PisteenSyke(float aika, float jakso, float maara, float voima)
+        {
+            double aalto = Math.Sin(aika * 2.0 * Math.PI / Math.Max(1e-3f, jakso));
+            return Keskelle(1f + maara * 0.5f * (1f + (float)aalto), 1f + maara * 0.5f, voima);
+        }
+
         // ---- Kytkimet (komennot hdr ja varjot) ----
 
         /// <summary>Komennon sana päälle/pois: "paalle"/"päälle" = tosi, "pois" = epätosi, muu = null (esim. "tila").</summary>

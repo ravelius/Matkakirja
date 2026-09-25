@@ -164,7 +164,7 @@ namespace Matkakirja
                 Laattapalvelin.Ampari + Kansio + ladattu + "/{z}/{x}/{reverseY}.webp",
                 CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, tasoMax);
             Navat(true);
-            PallonLepo.Muuttui("väritaso");
+            PallonLepo.Valmistui("väritaso");
         }
 
         /// <summary>Napakalotit samaan kermaan kuin laatat (kalotti piirtyy laattojen päälle).</summary>
@@ -220,7 +220,7 @@ namespace Matkakirja
             // Pois Cesiumista heti (OnDisable), jotta linssi saa paikan 2 samassa kehyksessä; komponentti kierrätykseen.
             KarttaKerrokset.VapautaKerros(kerros);
             kerros = null;
-            PallonLepo.Muuttui("väritaso");
+            PallonLepo.Valmistui("väritaso");
         }
 
         /// <summary>Luettelo ja kerros uudelleen seuraavassa Updatessa (esim. AlinKaytetty muuttui).</summary>

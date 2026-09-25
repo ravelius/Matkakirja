@@ -77,14 +77,15 @@ namespace Matkakirja
         }
 
         // LÄMPÖERÄ (PallonLepo): aloitusvalinnan huomiorengas (Rengas-varjostin, syke 2,6 s) ja kohdemerkin halo
-        // (Kohdemerkki, 2,4 s) animoituvat _Timella. JATKUVA idle-animaatio, joka näkyy lepokartassa koko lähtövalinnan
-        // (ja lennon punaisten renkaiden) ajan: nykyinen ilme säilyy, eli ruudulla oleva rengas pitää pallon hereillä.
+        // (Kohdemerkki, 2,4 s) ovat jatkuva idle-animaatio koko lähtövalinnan (ja lennon punaisten renkaiden) ajan.
+        // Fable 25.9. klo 20.1x: ne jäätyvät keskiasentoon 3 s levon jälkeen ja jatkuvat heti aktiivisuudesta (Joutosyke,
+        // varjostimien _SykeAika ja _SykeVoima); jäätyneinä ehto on false, ja pallo saa levätä.
         void OnEnable() => PallonLepo.Animoi(RenkaatSykkivat, "kaupungit: huomiorenkaat");
         void OnDisable() => PallonLepo.Poista(RenkaatSykkivat);
 
         bool RenkaatSykkivat()
         {
-            if (rengasIdt.Count == 0 || LinssiTila || kamera == null) return false;
+            if (!Joutosyke.Elaa || rengasIdt.Count == 0 || LinssiTila || kamera == null) return false;
             float reuna = (rengasSade * 1.16f + 2f) * PalloKierto.Pistekerroin;
             foreach (var m in merkit)
             {
@@ -552,7 +553,7 @@ namespace Matkakirja
                     new double3(k.lon, k.lat, korkeudet[i] + nosto));
                 kohteet[i].pinta = (float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
             }
-            PallonLepo.Muuttui("kaupungit");
+            PallonLepo.Valmistui("kaupungit");
         }
 
         /// <summary>Tärkeys 0–2 merkin tyyliä varten: paketin 1.2-kenttä tai vanha päättely.</summary>
@@ -622,7 +623,7 @@ namespace Matkakirja
             valmiit.Sort((a, b) => b.tarkeys != a.tarkeys ? b.tarkeys - a.tarkeys : a.nimio.text.Length - b.nimio.text.Length);
             merkit.AddRange(valmiit);
             PaivitaRenkaat();
-            PallonLepo.Muuttui("kaupungit");
+            PallonLepo.Valmistui("kaupungit");
             Debug.Log($"MATKAKIRJA kaupungit: {merkit.Count} merkkiä, tärkeys {(paketinTarkeys ? "paketista" : "päätelty")}");
         }
 

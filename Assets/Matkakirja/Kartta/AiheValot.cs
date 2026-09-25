@@ -171,7 +171,7 @@ namespace Matkakirja
             Debug.Log($"MATKAKIRJA valot: maa {uusi ?? "-"}, {valot.Count} valoa, {verkot.Count} aihetta");
             nakymaMuuttui = true;
             seuraavaLasku = 0;
-            PallonLepo.Muuttui("valot");
+            PallonLepo.Valmistui("valot");
         }
 
         static Mesh Verkko(List<Valo> omat, Color32 vari)

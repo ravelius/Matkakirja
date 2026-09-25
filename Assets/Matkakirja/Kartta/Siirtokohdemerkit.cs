@@ -90,9 +90,10 @@ namespace Matkakirja
             if (kierto != null) kierto.Napautettu -= Napautus;
         }
 
-        // LÄMPÖERÄ (PallonLepo): häivytys 250 ms ja Kohdemerkki-varjostimen hengittävä halo (_Time, 2,4 s). Halo on JATKUVA
-        // idle-animaatio, joka näkyy lepokartassa koko siirron valinnan ajan: nykyinen ilme säilyy, eli ruudulla oleva
-        // merkki pitää pallon hereillä (30 fps).
+        // LÄMPÖERÄ (PallonLepo): häivytys 250 ms ja Kohdemerkki-varjostimen hengittävä halo (2,4 s). Halo on jatkuva
+        // idle-animaatio, joka näkyy lepokartassa koko siirron valinnan ajan. Fable 25.9. klo 20.1x: halo jäätyy
+        // keskiasentoon 3 s levon jälkeen ja jatkuu heti aktiivisuudesta (Joutosyke, varjostimen _SykeAika ja _SykeVoima);
+        // jäätyneenä ehto on false (häivytys pitää silti hereillä), ja pallo saa levätä.
         void OnEnable() => PallonLepo.Animoi(Animoituu, "siirtokohteet: halo");
         void OnDisable() => PallonLepo.Poista(Animoituu);
 
@@ -101,12 +102,14 @@ namespace Matkakirja
             if (poistuvat.Count > 0) return true;
             if (merkit.Count == 0 || kamera == null || georeferenssi == null) return false;
             float nyt = Time.unscaledTime;
+            bool halo = Joutosyke.Elaa;
             var gt = georeferenssi.transform;
             float reuna = (kaupunkiPx * 0.71f + 4f) * PalloKierto.Pistekerroin;
             foreach (var m in merkit)
             {
                 if (m.juuri == null || !m.juuri.gameObject.activeSelf) continue;
-                if (nyt - m.alku < SiirtymaS || PallonLepo.Ruudulla(kamera, gt.TransformPoint(m.pinta), reuna)) return true;
+                if (nyt - m.alku < SiirtymaS) return true;
+                if (halo && PallonLepo.Ruudulla(kamera, gt.TransformPoint(m.pinta), reuna)) return true;
             }
             return false;
         }
@@ -153,6 +156,8 @@ namespace Matkakirja
             }
             merkit.Clear();
             nimetytKaupungit.Clear();
+            // Uusi valinta on tilan muutos: joutosyke (halo) jatkuu heti (Fable 25.9.).
+            PallonLepo.Muuttui("siirtokohteet");
             if (kohteet != null) foreach (var k in kohteet) if (!string.IsNullOrEmpty(k.Kaupunki)) nimetytKaupungit.Add(k.Kaupunki);
             Sovita(kohteet);
             if (kohteet == null || georeferenssi == null || materiaali == null) return;
