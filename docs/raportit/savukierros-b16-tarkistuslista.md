@@ -12,7 +12,7 @@ asentanut sen (juna.log + `simctl listapps`). Laitteet: iPhone 1572C658, iPad
    kehysajat.jsonl): levossa (taysi=0) fps ≤ 30 ja lepo.p50 ≥ 30 ms; NYT myös
    lepopiirto: paikallaan > 0 ja piirretty < kehyksia. `lampo kuuma|kriittinen|auto`
    → 30/20/60 fps, renderScale 0,7/0,7/0,8. Edellinen tulos: savukierros-b16-lampo-20260925.md.
-3. Ihmisen matka II avautuu (lens `ihmisen-matka`, tarkista nimi Linssiomistus.cs:stä)
+3. Ihmisen matka II avautuu (lens **`ihmisen-matka-2`**, EI `ihmisen-matka` = I)
    ja CC-nappi toimii.
 4. Maakunnat "Pois" (☰ → Nostot/Maakunnat -paneeli, valinta Pois).
 5. UITK-napit todennetaan kuvakaappauksesta, ei ui-puusta.
@@ -24,3 +24,5 @@ vain kuvakaappauksesta; näkyy linssin auettua koko ajan, tekstitys oletuksena
 pois. Todenna kuvasta seuraavalla kierroksella (kokeile myös napautusta:
 tekstitys päälle/pois). Alkuperäinen "ei löytynyt" johtui siitä, että etsin
 ylärivistä (raportti savukierros-b16-20260925.md, Avoinna).
+
+HUOM (Linssiseppä): b16-kierroksella ajettiin vahingossa Ihmisen matka I. II tunnistetaan otsikosta "Ihmisen matka II", lämpimästä valokeilasta Afrikan yllä ja hämärästä pallosta; CC kytkee tekstityksen (oletus pois, vain 1. virke näkyy).

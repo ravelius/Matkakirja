@@ -1,3 +1,12 @@
+> **KORJAUS (Linssiseppä 25.9. ~21.5x):** kohdan 6 "Ihmisen matka II" ja
+> avoinna-osion CC-havainnot koskevat oikeasti **Ihmisen matka I:tä**
+> (`linssi ihmisen-matka`; otsikko "IHMISEN MATKA", tekstityslaatikko, ei
+> valokeilaa). II on oma linssinsä **`linssi ihmisen-matka-2`** (johdantokortin
+> otsikko "Ihmisen matka II", lämmin valokeila Afrikan yllä, hämärä muu pallo).
+> CC on vain II:ssa, aikajanan vuosiluvun oikeassa päässä (toinen rivi), tekstitys
+> oletuksena pois. Ihmisen matka II ja CC ovat siis TODENTAMATTA — ajetaan
+> `ihmisen-matka-2`:lla seuraavalla kierroksella. Muut PASS-kohdat ennallaan.
+
 # Savukierros: build 16 (juna/b13 1aa7c558, käännös 7f3979b0), iPhone + iPad
 
 25.9.2026 20.5x–21.3x. PASS-commit: **1aa7c558** (juna/b13, käännös 7f3979b0;
