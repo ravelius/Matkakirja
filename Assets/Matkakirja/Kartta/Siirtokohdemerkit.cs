@@ -91,6 +91,8 @@ namespace Matkakirja
             sovitettu = avain;
             if (kierto == null) kierto = FindAnyObjectByType<PalloKierto>();
             if (kierto == null) return;
+            // Web sovitaSiirtokohteet: matkaZoomivapaus(true) ennen sovitusta (maan katto ei estä loitonnusta).
+            kierto.MatkallaVapaana = true;
             var n = FindAnyObjectByType<Nappula>();
             kierto.SovitaPisteet(kohteet.Select(k => (k.Lat, k.Lon)).ToList(), PalloKierto.KohdesovitusMarginaali,
                                  PalloKierto.KohdesovitusKesto, n != null && n.Nakyy ? (n.Lat, n.Lon) : null);

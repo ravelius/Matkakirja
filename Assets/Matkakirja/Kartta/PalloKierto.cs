@@ -774,7 +774,7 @@ namespace Matkakirja
                             // kallistus ei muutu (käytetty kallistus voi silti laskea pallon mittakaavassa, KallistusRaja).
                             Kierra(siirto, dt);
                             if (edellinenVali > 1f && vali > 1f)
-                                korkeus = math.clamp(korkeus * edellinenVali / vali, MinKorkeus(), MaxKorkeus());
+                                korkeus = math.clamp(korkeus * edellinenVali / vali, MinKorkeus(), EleKatto());
                             // Tahaton kierto nipistyksessä ei käännä karttaa (KameraEleet.KiertoEstin, kynnys 15°).
                             double kierto = kiertoEstin.Suodata(KameraEleet.KulmaMuutos(Pt(edellinenA, 1f), Pt(edellinenB, 1f), Pt(sa, 1f), Pt(sb, 1f)));
                             if (kierto != 0)
@@ -860,6 +860,101 @@ namespace Matkakirja
         {
             pituus = Kiedo(pituus + muutos.x);
             leveys = math.clamp(leveys + muutos.y, -maxLeveys, maxLeveys);
+            RajaaMaahan();
+        }
+
+        // ---- MAAN RAJAT (build 13, liikkumisen pariteetti D7, D8, D11; web js/pallolauta/lauta.js:1690 maanZoomiraja
+        //      ja :1778 maanPanoraja, kamera.js:1059 uloszoomausRaja ja :1089 panoraja) ----
+        //
+        // Tavallisessa pelissä saapumisen jälkeen pelaaja ei pääse loitontamaan saapumisnäkymää kauemmas (katto =
+        // saapumisnäkymä, kerroin 1,02) eikä vetämään keskipistettä maan laatikosta × 1,3 ulos. Rajat koskevat vain
+        // pelaajan eleitä (nipistys, veto, liuku); kamera-ajot (lennot, sovitukset, linssit) eivät rajaudu. Rajat
+        // eivät ole voimassa: ennen ensimmäistä saapumista, maissa ilman laatikkoa (kaupunkinäkymä), matkalla
+        // (<see cref="MatkallaVapaana"/>, web matkaZoomivapaus: nopan kohteiden sovitus avaa, saapuminen sulkee),
+        // linssissä (KaupunkiMerkit.LinssiTila) eikä maailmatilassa (<see cref="MaailmaTila"/>).
+
+        Saapumisnakyma.Laatikko? maanLaatikko;
+        double maanKatto, maanToiveLng, webSuhde = 1;
+        Saapumisnakyma.Panoraja? panorajaMuisti;
+        KaupunkiMerkit kaupunkiMerkit;
+        bool maailmaTila;
+
+        /// <summary>Matka käynnissä: maan rajat pois (web matkaZoomivapaus(true)); saapuminen palauttaa.</summary>
+        public bool MatkallaVapaana { get; set; }
+
+        /// <summary>
+        /// Maailmatila (Paavalikko.Maailma, kehittäjätila): rajat pois. Pelikoodari asettaa PeliOhjaimesta. Kun tila
+        /// sammuu, kamera puristetaan heti maan kattoon ja rajaan (web tahdistaZoomirajat, ei ajoa, D11).
+        /// </summary>
+        public bool MaailmaTila
+        {
+            get => maailmaTila;
+            set
+            {
+                if (maailmaTila == value) return;
+                maailmaTila = value;
+                if (!value) PuristaMaahan();
+            }
+        }
+
+        bool RajatVoimassa
+        {
+            get
+            {
+                if (!maanLaatikko.HasValue || MatkallaVapaana || maailmaTila) return false;
+                if (kaupunkiMerkit == null) kaupunkiMerkit = FindAnyObjectByType<KaupunkiMerkit>();
+                return kaupunkiMerkit == null || !kaupunkiMerkit.LinssiTila;
+            }
+        }
+
+        /// <summary>Eleen loitonnuksen katto metreinä: maan katto, jos rajat ovat voimassa, muuten koko pallo.</summary>
+        double EleKatto() => RajatVoimassa && maanKatto > 0 ? math.clamp(maanKatto, MinKorkeus(), MaxKorkeus()) : MaxKorkeus();
+
+        /// <summary>Asettaa maan rajat saapumisnäkymästä (AjaSaapumisnakymaan) tai poistaa ne (laatikoton saapuminen).</summary>
+        void AsetaMaanRajat(Saapumisnakyma.Tulos t, double toiveLng)
+        {
+            var katto = Saapumisnakyma.Uloszoomauskatto(t);
+            maanLaatikko = katto.HasValue ? t.Laatikko : null;
+            maanKatto = katto.HasValue ? katto.Value * CesiumWgs84Ellipsoid.GetMaximumRadius() : 0;
+            maanToiveLng = toiveLng;
+            webSuhde = t.Korkeus > 0 ? t.WebKorkeus / t.Korkeus : 1;
+            panorajaMuisti = null;
+            MatkallaVapaana = false;
+        }
+
+        Saapumisnakyma.Panoraja? MaanPanoraja()
+        {
+            if (!maanLaatikko.HasValue) return null;
+            if (panorajaMuisti.HasValue && !panorajaMuisti.Value.Elava) return panorajaMuisti;
+            var kamera = GetComponent<Camera>();
+            double k = Pistekerroin;
+            var kotelo = Saapumisnakyma.WebinKotelo((kamera != null ? kamera.pixelWidth : Screen.width) / k,
+                                                    (kamera != null ? kamera.pixelHeight : Screen.height) / k);
+            double nyt = korkeus / CesiumWgs84Ellipsoid.GetMaximumRadius() * webSuhde;
+            panorajaMuisti = Saapumisnakyma.MaanPanoraja(maanLaatikko.Value, kotelo.W, kotelo.H, maanToiveLng, nyt);
+            return panorajaMuisti;
+        }
+
+        void RajaaMaahan()
+        {
+            if (!RajatVoimassa) return;
+            var raja = MaanPanoraja();
+            if (!raja.HasValue) return;
+            var (lat, lon) = Saapumisnakyma.RajaaPanorointi(raja.Value, leveys, pituus);
+            if (math.abs(lat - leveys) > 1e-9 || math.abs(Kiedo(lon - pituus)) > 1e-9)
+            {
+                leveys = lat;
+                pituus = Kiedo(lon);
+                vetoNopeus = 0; // liuku pysähtyy rajaan
+            }
+        }
+
+        /// <summary>Kamera heti maan kattoon ja rajaan (maailmatila pois, D11).</summary>
+        void PuristaMaahan()
+        {
+            if (!RajatVoimassa) return;
+            korkeus = math.min(korkeus, EleKatto());
+            RajaaMaahan();
         }
 
         static double Kiedo(double lon) => ((lon % 360.0) + 540.0) % 360.0 - 180.0;
@@ -939,6 +1034,7 @@ namespace Matkakirja
             bool maaRajaus = true)
         {
             var t = SaapumisNakyma(maa, lat, lon, maaRajaus);
+            AsetaMaanRajat(t, lon);
             Aja(t.Lat, t.Lon, t.Korkeus * CesiumWgs84Ellipsoid.GetMaximumRadius(), kestoS, valmis);
             if (ajo != null)
             {
