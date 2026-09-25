@@ -395,11 +395,14 @@ namespace Matkakirja.Natiivi
             kierto.PelaajanEle += KarttaKosketettu;
             // Heittonapin päältä alkava veto ei pyöritä palloa.
             SyoteLukko.LisaaPeitto(p => Kaytossa && dialogi.PeittaaPisteen(p));
-            // LÖYDÖS 101 (maalehtien tahmea vieritys laitteella): lehteä EI rekisteröidä näkymäpeitoksi. Peitto asettaa
-            // OnDemandRendering.renderFrameInterval = 4 (PalloKierto.PaivitaPeitto), joka harventaa KOKO Unityn piirron
-            // eikä vain palloa. Se oli tehty WKWebView-lehdelle, jonka iOS piirsi itse; nykyinen lehti on UI Toolkit -näkymä
-            // samassa piirrossa, joten se päivittyi 60 Hz:n näytöllä vain 15 fps:llä, ja vieritys ja heitto nykivät.
-            if (lehtiNakyma != null) lehtiNakyma.Suljettu += LehtiSuljettu;
+            // Lehti peittää pallon: Ruudunpaivitys sammuttaa pallon kameran sen ajaksi (lämpöerä 25.9.2026, Raamattu LÄMPÖ JA
+            // VIRRANKULUTUS: lehden alla pallon piirto seis). Löydös 101: peitto EI enää harvenna koko piirtoa
+            // (renderFrameInterval 4 hidasti UI Toolkit -lehden 15 fps:iin), joten lehti voi taas olla näkymäpeitto.
+            if (lehtiNakyma != null)
+            {
+                SyoteLukko.LisaaNakymaPeitto(() => lehtiNakyma.Auki);
+                lehtiNakyma.Suljettu += LehtiSuljettu;
+            }
             AlustaAanet();
 
             if (File.Exists(PoisPolku))
