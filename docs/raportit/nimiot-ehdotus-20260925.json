@@ -1,0 +1,2198 @@
+[
+ {
+  "maa": "AGO",
+  "tyyppi": "elaintaky",
+  "tunniste": "elaintaky:AGO",
+  "nimi": "Jättiläisseeprantilooppi",
+  "lyhennys": "Jättiläisseeprant.",
+  "nimio": "Palanca negra",
+  "lahde": "js/packs/elaintakyt.js:1449 (elain)"
+ },
+ {
+  "maa": "ARG",
+  "tyyppi": "elaintaky",
+  "tunniste": "elaintaky:ARG",
+  "nimi": "Magellaninpingviini",
+  "lyhennys": "Magellaninpingvii.",
+  "nimio": "Pingviini",
+  "lahde": "js/packs/elaintakyt.js:949 (elain)"
+ },
+ {
+  "maa": "ARG",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:cordobanjesuiitat",
+  "nimi": "Córdoban jesuiittakortteli",
+  "lyhennys": "Córdoban.",
+  "nimio": "Córdoba, jesuiitat",
+  "lahde": "js/packs/maastokohteet-arg.js:186"
+ },
+ {
+  "maa": "ARG",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:peritomoreno",
+  "nimi": "Perito Moreno -jäätikkö",
+  "lyhennys": "Perito Moreno.",
+  "nimio": "Perito Moreno",
+  "lahde": "js/packs/maastokohteet-arg.js:322"
+ },
+ {
+  "maa": "ARG",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:polvorilla",
+  "nimi": "La Polvorillan viadukti",
+  "lyhennys": "La Polvorillan.",
+  "nimio": "La Polvorilla",
+  "lahde": "js/packs/maastokohteet-arg.js:214"
+ },
+ {
+  "maa": "ARG",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:quebradadehumahuaca",
+  "nimi": "Quebrada de Humahuaca",
+  "lyhennys": "Quebrada de.",
+  "nimio": "Humahuaca",
+  "lahde": "js/packs/maastokohteet-arg.js:160"
+ },
+ {
+  "maa": "ATA",
+  "tyyppi": "napakohde",
+  "tunniste": "kohde:ata-etelanapa-asema",
+  "nimi": "Amundsen–Scottin asema",
+  "lyhennys": "Amundsen–Scottin.",
+  "nimio": "Etelänapa-asema",
+  "lahde": "js/packs/maastokohteet-ata.js:87"
+ },
+ {
+  "maa": "ATA",
+  "tyyppi": "napakohde",
+  "tunniste": "kohde:ata-kuivat-laaksot",
+  "nimi": "McMurdon kuivat laaksot",
+  "lyhennys": "McMurdon kuivat.",
+  "nimio": "Kuivat laaksot",
+  "lahde": "js/packs/maastokohteet-ata.js:168"
+ },
+ {
+  "maa": "AUS",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:parkesin-radioteleskooppi",
+  "nimi": "Parkesin radioteleskooppi",
+  "lyhennys": "Parkesin.",
+  "nimio": "Parkes",
+  "lahde": "js/packs/maastokohteet-aus.js:111"
+ },
+ {
+  "maa": "AUS",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:snowy-mountains-hanke",
+  "nimi": "Snowy Mountains -hanke",
+  "lyhennys": "Snowy Mountains.",
+  "nimio": "Snowy Mountains",
+  "lahde": "js/packs/maastokohteet-aus.js:190"
+ },
+ {
+  "maa": "AUT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-heiligenkreuz",
+  "nimi": "Heiligenkreuzin luostari",
+  "lyhennys": "Heiligenkreuzin.",
+  "nimio": "Heiligenkreuz",
+  "lahde": "js/packs/hahmotelma-aut.js:491"
+ },
+ {
+  "maa": "AUT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-karntnertor-bastioni",
+  "nimi": "Kärntnertor-bastioni",
+  "lyhennys": "Kärntnertor-basti.",
+  "nimio": "Kärntnertor",
+  "lahde": "js/packs/monumentit-eurooppa.js:180"
+ },
+ {
+  "maa": "AUT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-kremsmuenster",
+  "nimi": "Kremsmünsterin luostari",
+  "lyhennys": "Kremsmünsterin.",
+  "nimio": "Kremsmünster",
+  "lahde": "js/packs/hahmotelma-aut.js:540"
+ },
+ {
+  "maa": "AUT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-st-anton",
+  "nimi": "St. Anton am Arlberg",
+  "lyhennys": "St. Anton am.",
+  "nimio": "Sankt Anton",
+  "lahde": "js/packs/hahmotelma-aut.js:1468"
+ },
+ {
+  "maa": "AUT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-vanha-burgtheater",
+  "nimi": "Wienin vanha Burgtheater",
+  "lyhennys": "Wienin vanha.",
+  "nimio": "Burgtheater",
+  "lahde": "js/packs/monumentit-eurooppa.js:170"
+ },
+ {
+  "maa": "AUT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hohensalzburg",
+  "nimi": "Hohensalzburgin linnoitus",
+  "lyhennys": "Hohensalzburgin.",
+  "nimio": "Hohensalzburg",
+  "lahde": "js/packs/maastokohteet-aut.js:394"
+ },
+ {
+  "maa": "BEL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-antwerpen-beurs",
+  "nimi": "Antwerpenin pörssitalo",
+  "lyhennys": "Antwerpenin.",
+  "nimio": "Handelsbeurs",
+  "lahde": "js/packs/hahmotelma-bel.js:1542"
+ },
+ {
+  "maa": "BEL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-bastogne",
+  "nimi": "Bastognen tähtimuistomerkki",
+  "lyhennys": "Bastognen.",
+  "nimio": "Bastogne",
+  "lahde": "js/packs/hahmotelma-bel.js:488"
+ },
+ {
+  "maa": "BEL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-canal-du-centre",
+  "nimi": "Canal du Centren laivanostimet",
+  "lyhennys": "Canal du Centren.",
+  "nimio": "Canal du Centre",
+  "lahde": "js/packs/hahmotelma-bel.js:1195"
+ },
+ {
+  "maa": "BEL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-coudenberg",
+  "nimi": "Coudenbergin palatsi",
+  "lyhennys": "Coudenbergin.",
+  "nimio": "Coudenberg",
+  "lahde": "js/packs/hahmotelma-bel.js:1493"
+ },
+ {
+  "maa": "BEL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-eben-emael",
+  "nimi": "Ében-Émaelin linnake",
+  "lyhennys": "Ében-Émaelin.",
+  "nimio": "Ében-Émael",
+  "lahde": "js/packs/hahmotelma-bel.js:636"
+ },
+ {
+  "maa": "BEL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-han-sur-lesse",
+  "nimi": "Han-sur-Lessen luolat",
+  "lyhennys": "Han-sur-Lessen.",
+  "nimio": "Han-sur-Lesse",
+  "lahde": "js/packs/hahmotelma-bel.js:172"
+ },
+ {
+  "maa": "BEL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-kortrijk",
+  "nimi": "Kultaisten kannusten taistelu",
+  "lyhennys": "Kultaisten.",
+  "nimio": "Kortrijk 1302",
+  "lahde": "js/packs/hahmotelma-bel.js:684"
+ },
+ {
+  "maa": "BEL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-lions-mound",
+  "nimi": "Waterloon leijonakumpu",
+  "lyhennys": "Waterloon.",
+  "nimio": "Leijonakumpu",
+  "lahde": "js/packs/hahmotelma-bel.js:378"
+ },
+ {
+  "maa": "BEL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-seraing",
+  "nimi": "Seraingin terästehdas",
+  "lyhennys": "Seraingin.",
+  "nimio": "Seraing",
+  "lahde": "js/packs/hahmotelma-bel.js:1374"
+ },
+ {
+  "maa": "BEL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-tervuren",
+  "nimi": "Tervurenin Afrikka-museo",
+  "lyhennys": "Tervurenin.",
+  "nimio": "Tervuren",
+  "lahde": "js/packs/hahmotelma-bel.js:1027"
+ },
+ {
+  "maa": "BEL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-tournai",
+  "nimi": "Tournain tuomiokirkko",
+  "lyhennys": "Tournain.",
+  "nimio": "Tournai",
+  "lahde": "js/packs/hahmotelma-bel.js:586"
+ },
+ {
+  "maa": "BGR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-cherven",
+  "nimi": "Chervenin linnoitus",
+  "lyhennys": "Chervenin.",
+  "nimio": "Cherven",
+  "lahde": "js/packs/hahmotelma-bgr.js:1538"
+ },
+ {
+  "maa": "BGR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-pliska-palatsi",
+  "nimi": "Pliskan kaanien palatsi",
+  "lyhennys": "Pliskan kaanien.",
+  "nimio": "Pliska",
+  "lahde": "js/packs/monumentit-eurooppa.js:235"
+ },
+ {
+  "maa": "BIH",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-gradacac",
+  "nimi": "Gradačacin linnoitus",
+  "lyhennys": "Gradačacin.",
+  "nimio": "Gradačac",
+  "lahde": "js/packs/hahmotelma-bih.js:604"
+ },
+ {
+  "maa": "BIH",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-kozara",
+  "nimi": "Kozaran kansallispuisto",
+  "lyhennys": "Kozaran.",
+  "nimio": "Kozara",
+  "lahde": "js/packs/hahmotelma-bih.js:769"
+ },
+ {
+  "maa": "BIH",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-mile-kruunajaiskirkko",
+  "nimi": "Milen kruunajaiskirkko",
+  "lyhennys": "Milen.",
+  "nimio": "Mile",
+  "lahde": "js/packs/monumentit-eurooppa.js:433"
+ },
+ {
+  "maa": "BOL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:chiquitos",
+  "nimi": "Chiquitosin lähetysasemat",
+  "lyhennys": "Chiquitosin.",
+  "nimio": "Chiquitos",
+  "lahde": "js/packs/maastokohteet-bol.js:206"
+ },
+ {
+  "maa": "BOL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:samaipata",
+  "nimi": "El Fuerte de Samaipata",
+  "lyhennys": "El Fuerte de.",
+  "nimio": "Samaipata",
+  "lahde": "js/packs/maastokohteet-bol.js:319"
+ },
+ {
+  "maa": "BRA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:congonhas",
+  "nimi": "Congonhasin profeetat",
+  "lyhennys": "Congonhasin.",
+  "nimio": "Congonhas",
+  "lahde": "js/packs/maastokohteet-bra.js:267"
+ },
+ {
+  "maa": "BRA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:fernandodenoronha",
+  "nimi": "Fernando de Noronha",
+  "lyhennys": "Fernando de.",
+  "nimio": "Noronha",
+  "lahde": "js/packs/maastokohteet-bra.js:69"
+ },
+ {
+  "maa": "BRA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:lencoismaranhenses",
+  "nimi": "Lençóis Maranhenses",
+  "lyhennys": "Lençóis.",
+  "nimio": "Lençóis",
+  "lahde": "js/packs/maastokohteet-bra.js:324"
+ },
+ {
+  "maa": "BRA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:saomigueldasmissoes",
+  "nimi": "São Miguel das Missões",
+  "lyhennys": "São Miguel das.",
+  "nimio": "São Miguel",
+  "lahde": "js/packs/maastokohteet-bra.js:211"
+ },
+ {
+  "maa": "CAN",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:dinosaur-provincial-park",
+  "nimi": "Dinosaur Provincial Park",
+  "lyhennys": "Dinosaur.",
+  "nimio": "Dinosaur Park",
+  "lahde": "js/packs/maastokohteet-can.js:248"
+ },
+ {
+  "maa": "CAN",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:louisbourgin-linnoitus",
+  "nimi": "Louisbourgin linnoitus",
+  "lyhennys": "Louisbourgin.",
+  "nimio": "Louisbourg",
+  "lahde": "js/packs/maastokohteet-can.js:302"
+ },
+ {
+  "maa": "CHE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-christoffelturm",
+  "nimi": "Bernin Christoffelturm",
+  "lyhennys": "Bernin.",
+  "nimio": "Christoffelturm",
+  "lahde": "js/packs/monumentit-eurooppa.js:192"
+ },
+ {
+  "maa": "CHE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-grande-dixence",
+  "nimi": "Grande Dixence -pato",
+  "lyhennys": "Grande Dixence.",
+  "nimio": "Grande Dixence",
+  "lahde": "js/packs/hahmotelma-che.js:653"
+ },
+ {
+  "maa": "CHE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-lavaux",
+  "nimi": "Lavaux'n viinitarhat",
+  "lyhennys": "Lavaux'n.",
+  "nimio": "Lavaux",
+  "lahde": "js/packs/hahmotelma-che.js:155"
+ },
+ {
+  "maa": "CHE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-porte-neuve",
+  "nimi": "Geneven Porte Neuve",
+  "lyhennys": "Geneven Porte.",
+  "nimio": "Porte Neuve",
+  "lahde": "js/packs/monumentit-eurooppa.js:202"
+ },
+ {
+  "maa": "CHL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:chinchorro",
+  "nimi": "Chinchorron muumiot",
+  "lyhennys": "Chinchorron.",
+  "nimio": "Chinchorro",
+  "lahde": "js/packs/maastokohteet-chl.js:203"
+ },
+ {
+  "maa": "CHL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:paranal",
+  "nimi": "Paranalin observatorio",
+  "lyhennys": "Paranalin.",
+  "nimio": "Paranal",
+  "lahde": "js/packs/maastokohteet-chl.js:259"
+ },
+ {
+  "maa": "CHL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:valdivia1960",
+  "nimi": "Valdivian maanjäristys",
+  "lyhennys": "Valdivian.",
+  "nimio": "Valdivia 1960",
+  "lahde": "js/packs/maastokohteet-chl.js:315"
+ },
+ {
+  "maa": "COL",
+  "tyyppi": "elaintaky",
+  "tunniste": "elaintaky:COL",
+  "nimi": "Kultamyrkkysammakko",
+  "lyhennys": "Kultamyrkkysammak.",
+  "nimio": "Myrkkysammakko",
+  "lahde": "js/packs/elaintakyt.js:1224 (elain)"
+ },
+ {
+  "maa": "COL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:barranquillankarnevaali",
+  "nimi": "Barranquillan karnevaali",
+  "lyhennys": "Barranquillan.",
+  "nimio": "Barranquilla",
+  "lahde": "js/packs/maastokohteet-col.js:288"
+ },
+ {
+  "maa": "COL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:cartagenacol",
+  "nimi": "Cartagena de Indias",
+  "lyhennys": "Cartagena de.",
+  "nimio": "Cartagena",
+  "lahde": "js/packs/maastokohteet-col.js:204"
+ },
+ {
+  "maa": "COL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:cristobalcolon",
+  "nimi": "Pico Cristóbal Colón",
+  "lyhennys": "Pico Cristóbal.",
+  "nimio": "Cristóbal Colón",
+  "lahde": "js/packs/maastokohteet-col.js:36"
+ },
+ {
+  "maa": "CUB",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:san-pedro-de-la-roca",
+  "nimi": "San Pedro de la Roca",
+  "lyhennys": "San Pedro de la.",
+  "nimio": "El Morro",
+  "lahde": "js/packs/maastokohteet-cub.js:174"
+ },
+ {
+  "maa": "CYP",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:paphoksenmosaiikit",
+  "nimi": "Paphoksen mosaiikit",
+  "lyhennys": "Paphoksen.",
+  "nimio": "Paphos",
+  "lahde": "js/packs/maastokohteet-cyp.js:215"
+ },
+ {
+  "maa": "CZE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-adrspach",
+  "nimi": "Adršpach-Teplicen kalliot",
+  "lyhennys": "Adršpach-Teplicen.",
+  "nimio": "Adršpach",
+  "lahde": "js/packs/hahmotelma-cze.js:115"
+ },
+ {
+  "maa": "CZE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-josefov-asanace",
+  "nimi": "Josefov ennen asanacea",
+  "lyhennys": "Josefov ennen.",
+  "nimio": "Josefov",
+  "lahde": "js/packs/monumentit-eurooppa.js:213"
+ },
+ {
+  "maa": "CZE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-koniggratz",
+  "nimi": "Königgrätzin taistelu",
+  "lyhennys": "Königgrätzin.",
+  "nimio": "Königgrätz",
+  "lahde": "js/packs/hahmotelma-cze.js:795"
+ },
+ {
+  "maa": "CZE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-kromeriz",
+  "nimi": "Kroměřížin arkkipiispanlinna",
+  "lyhennys": "Kroměřížin.",
+  "nimio": "Kroměříž",
+  "lahde": "js/packs/hahmotelma-cze.js:599"
+ },
+ {
+  "maa": "CZE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-podyji",
+  "nimi": "Podyjín kansallispuisto",
+  "lyhennys": "Podyjín.",
+  "nimio": "Podyjí",
+  "lahde": "js/packs/hahmotelma-cze.js:391"
+ },
+ {
+  "maa": "CZE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-slavkov",
+  "nimi": "Austerlitzin taistelu",
+  "lyhennys": "Austerlitzin.",
+  "nimio": "Austerlitz",
+  "lahde": "js/packs/hahmotelma-cze.js:488"
+ },
+ {
+  "maa": "CZE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-zdar",
+  "nimi": "Vihreän vuoren pyhiinvaelluskirkko",
+  "lyhennys": "Vihreän vuoren.",
+  "nimio": "Zelená hora",
+  "lahde": "js/packs/hahmotelma-cze.js:1135"
+ },
+ {
+  "maa": "CZE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:olomouc",
+  "nimi": "Olomoucin Kolminaisuus",
+  "lyhennys": "Olomoucin.",
+  "nimio": "Olomouc",
+  "lahde": "js/packs/maastokohteet-cze.js:725"
+ },
+ {
+  "maa": "DEU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-bayreuth",
+  "nimi": "Bayreuthin Festspielhaus",
+  "lyhennys": "Bayreuthin.",
+  "nimio": "Bayreuth",
+  "lahde": "js/packs/hahmotelma-deu.js:881"
+ },
+ {
+  "maa": "DEU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-bernkastel",
+  "nimi": "Bernkastel ja Mosel",
+  "lyhennys": "Bernkastel.",
+  "nimio": "Bernkastel",
+  "lahde": "js/packs/hahmotelma-deu.js:1002"
+ },
+ {
+  "maa": "DEU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-freiberg",
+  "nimi": "Freibergin hopeakaivokset",
+  "lyhennys": "Freibergin.",
+  "nimio": "Freiberg",
+  "lahde": "js/packs/hahmotelma-deu.js:1325"
+ },
+ {
+  "maa": "DEU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-hampurin-vanha-raatihuone",
+  "nimi": "Hampurin vanha raatihuone",
+  "lyhennys": "Hampurin vanha.",
+  "nimio": "Vanha raatihuone",
+  "lahde": "js/packs/monumentit-eurooppa.js:50"
+ },
+ {
+  "maa": "DEU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-hohenzollern",
+  "nimi": "Hohenzollernin linna",
+  "lyhennys": "Hohenzollernin.",
+  "nimio": "Hohenzollern",
+  "lahde": "js/packs/hahmotelma-deu.js:647"
+ },
+ {
+  "maa": "DEU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-maulbronn",
+  "nimi": "Maulbronnin luostari",
+  "lyhennys": "Maulbronnin.",
+  "nimio": "Maulbronn",
+  "lahde": "js/packs/hahmotelma-deu.js:757"
+ },
+ {
+  "maa": "DEU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-rammelsberg",
+  "nimi": "Rammelsbergin kaivos",
+  "lyhennys": "Rammelsbergin.",
+  "nimio": "Rammelsberg",
+  "lahde": "js/packs/hahmotelma-deu.js:1699"
+ },
+ {
+  "maa": "DEU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-rothenburg",
+  "nimi": "Rothenburg ob der Tauber",
+  "lyhennys": "Rothenburg ob der.",
+  "nimio": "Rothenburg",
+  "lahde": "js/packs/hahmotelma-deu.js:817"
+ },
+ {
+  "maa": "DEU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-ruedesheim",
+  "nimi": "Rüdesheim ja Rheingau",
+  "lyhennys": "Rüdesheim.",
+  "nimio": "Rüdesheim",
+  "lahde": "js/packs/hahmotelma-deu.js:931"
+ },
+ {
+  "maa": "DEU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-ruegen",
+  "nimi": "Rügenin liitukalliot",
+  "lyhennys": "Rügenin.",
+  "nimio": "Rügen",
+  "lahde": "js/packs/hahmotelma-deu.js:134"
+ },
+ {
+  "maa": "DEU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-saechsische-schweiz",
+  "nimi": "Saksilainen Sveitsi",
+  "lyhennys": "Saksilainen.",
+  "nimio": "Sächsische Schweiz",
+  "lahde": "js/packs/hahmotelma-deu.js:65"
+ },
+ {
+  "maa": "DEU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-voelklingen",
+  "nimi": "Völklingenin rautatehdas",
+  "lyhennys": "Völklingenin.",
+  "nimio": "Völklingen",
+  "lahde": "js/packs/hahmotelma-deu.js:1255"
+ },
+ {
+  "maa": "DEU",
+  "tyyppi": "takynosto",
+  "tunniste": "nosto:kopenickin-kapteeni",
+  "nimi": "Köpenickin kapteeni",
+  "lyhennys": "Köpenickin.",
+  "nimio": "Köpenick",
+  "lahde": "js/packs/fokusvirta-berliini.js:607"
+ },
+ {
+  "maa": "DNK",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:frederiksborgin-linna",
+  "nimi": "Frederiksborgin linna",
+  "lyhennys": "Frederiksborgin.",
+  "nimio": "Frederiksborg",
+  "lahde": "js/packs/maastokohteet-dnk.js:484"
+ },
+ {
+  "maa": "DNK",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-christiansborg",
+  "nimi": "Toinen Christiansborg",
+  "lyhennys": "Toinen.",
+  "nimio": "Christiansborg",
+  "lahde": "js/packs/monumentit-eurooppa.js:359"
+ },
+ {
+  "maa": "DNK",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-thy",
+  "nimi": "Thyn kansallispuisto",
+  "lyhennys": "Thyn.",
+  "nimio": "Thy",
+  "lahde": "js/packs/hahmotelma-dnk.js:287"
+ },
+ {
+  "maa": "DNK",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-viborg",
+  "nimi": "Viborgin tuomiokirkko",
+  "lyhennys": "Viborgin.",
+  "nimio": "Viborg",
+  "lahde": "js/packs/hahmotelma-dnk.js:825"
+ },
+ {
+  "maa": "DNK",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:roskilden-tuomiokirkko",
+  "nimi": "Roskilden tuomiokirkko",
+  "lyhennys": "Roskilden.",
+  "nimio": "Roskilde",
+  "lahde": "js/packs/maastokohteet-dnk.js:201"
+ },
+ {
+  "maa": "ECU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:valdivian-kulttuuri",
+  "nimi": "Valdivian kulttuuri",
+  "lyhennys": "Valdivian.",
+  "nimio": "Valdivia",
+  "lahde": "js/packs/maastokohteet-ecu.js:298"
+ },
+ {
+  "maa": "ESP",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:cordoban-moskeijakatedraali",
+  "nimi": "Córdoban moskeijakatedraali",
+  "lyhennys": "Córdoban.",
+  "nimio": "Mezquita",
+  "lahde": "js/packs/maastokohteet-esp.js:596"
+ },
+ {
+  "maa": "ESP",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-almaden",
+  "nimi": "Almadénin elohopeakaivos",
+  "lyhennys": "Almadénin.",
+  "nimio": "Almadén",
+  "lahde": "js/packs/hahmotelma-esp.js:1283"
+ },
+ {
+  "maa": "ESP",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-buen-retiro",
+  "nimi": "Palacio del Buen Retiro",
+  "lyhennys": "Palacio del Buen.",
+  "nimio": "Buen Retiro",
+  "lahde": "js/packs/monumentit-eurooppa.js:114"
+ },
+ {
+  "maa": "ESP",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-campo-de-criptana",
+  "nimi": "Campo de Criptanan tuulimyllyt",
+  "lyhennys": "Campo de Criptanan.",
+  "nimio": "Campo de Criptana",
+  "lahde": "js/packs/hahmotelma-esp.js:889"
+ },
+ {
+  "maa": "ESP",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-las-navas",
+  "nimi": "Las Navas de Tolosa",
+  "lyhennys": "Las Navas de.",
+  "nimio": "Las Navas",
+  "lahde": "js/packs/hahmotelma-esp.js:840"
+ },
+ {
+  "maa": "ESP",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-real-alcazar-madrid",
+  "nimi": "Madridin Real Alcázar",
+  "lyhennys": "Madridin Real.",
+  "nimio": "Real Alcázar",
+  "lahde": "js/packs/monumentit-eurooppa.js:104"
+ },
+ {
+  "maa": "ESP",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-riotinto",
+  "nimi": "Riotinton kaivokset",
+  "lyhennys": "Riotinton.",
+  "nimio": "Riotinto",
+  "lahde": "js/packs/hahmotelma-esp.js:1210"
+ },
+ {
+  "maa": "ESP",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-tabernas",
+  "nimi": "Tabernasin autiomaa",
+  "lyhennys": "Tabernasin.",
+  "nimio": "Tabernas",
+  "lahde": "js/packs/hahmotelma-esp.js:359"
+ },
+ {
+  "maa": "ESP",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:meridan-roomalainen-teatteri",
+  "nimi": "Méridan roomalainen teatteri",
+  "lyhennys": "Méridan.",
+  "nimio": "Mérida",
+  "lahde": "js/packs/maastokohteet-esp.js:713"
+ },
+ {
+  "maa": "ESP",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:salamancan-yliopisto",
+  "nimi": "Salamancan yliopisto",
+  "lyhennys": "Salamancan.",
+  "nimio": "Salamanca",
+  "lahde": "js/packs/maastokohteet-esp.js:768"
+ },
+ {
+  "maa": "ESP",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:santiago-de-compostela",
+  "nimi": "Santiago de Compostela",
+  "lyhennys": "Santiago de.",
+  "nimio": "Santiago",
+  "lahde": "js/packs/maastokohteet-esp.js:312"
+ },
+ {
+  "maa": "ESP",
+  "tyyppi": "takynosto",
+  "tunniste": "nosto:munkkiaratit",
+  "nimi": "Madridin papukaijat",
+  "lyhennys": "Madridin.",
+  "nimio": "Papukaijat",
+  "lahde": "js/packs/fokusvirta-madrid.js:757"
+ },
+ {
+  "maa": "EST",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-dominikaaniluostari",
+  "nimi": "Tallinnan dominikaaniluostari",
+  "lyhennys": "Tallinnan.",
+  "nimio": "Dominikaanit",
+  "lahde": "js/packs/hahmotelma-est.js:1753"
+ },
+ {
+  "maa": "EST",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-endla",
+  "nimi": "Endlan luonnonsuojelualue",
+  "lyhennys": "Endlan.",
+  "nimio": "Endla",
+  "lahde": "js/packs/hahmotelma-est.js:230"
+ },
+ {
+  "maa": "EST",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-kuremae",
+  "nimi": "Kuremäen Pühtitsan luostari",
+  "lyhennys": "Kuremäen Pühtitsan.",
+  "nimio": "Pühtitsa",
+  "lahde": "js/packs/hahmotelma-est.js:918"
+ },
+ {
+  "maa": "EST",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-narvan-vanhakaupunki",
+  "nimi": "Narvan barokkinen vanhakaupunki",
+  "lyhennys": "Narvan barokkinen.",
+  "nimio": "Narva",
+  "lahde": "js/packs/monumentit-eurooppa.js:306"
+ },
+ {
+  "maa": "EST",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-soomaa",
+  "nimi": "Soomaan kansallispuisto",
+  "lyhennys": "Soomaan.",
+  "nimio": "Soomaa",
+  "lahde": "js/packs/hahmotelma-est.js:78"
+ },
+ {
+  "maa": "EST",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-vilsandi",
+  "nimi": "Vilsandin kansallispuisto",
+  "lyhennys": "Vilsandin.",
+  "nimio": "Vilsandi",
+  "lahde": "js/packs/hahmotelma-est.js:155"
+ },
+ {
+  "maa": "ETH",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:balenpuisto",
+  "nimi": "Balen kansallispuisto",
+  "lyhennys": "Balen.",
+  "nimio": "Bale",
+  "lahde": "js/packs/maastokohteet-eth.js:333"
+ },
+ {
+  "maa": "FIN",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-lemmenjoki",
+  "nimi": "Lemmenjoen kansallispuisto",
+  "lyhennys": "Lemmenjoen.",
+  "nimio": "Lemmenjoki",
+  "lahde": "js/packs/hahmotelma-fin.js:567"
+ },
+ {
+  "maa": "FIN",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-merenkurkku",
+  "nimi": "Merenkurkun saaristo",
+  "lyhennys": "Merenkurkun.",
+  "nimio": "Merenkurkku",
+  "lahde": "js/packs/hahmotelma-fin.js:141"
+ },
+ {
+  "maa": "FIN",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-oulanka",
+  "nimi": "Oulangan kansallispuisto",
+  "lyhennys": "Oulangan.",
+  "nimio": "Oulanka",
+  "lahde": "js/packs/hahmotelma-fin.js:283"
+ },
+ {
+  "maa": "FIN",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-pallas",
+  "nimi": "Pallas-Yllästunturin kansallispuisto",
+  "lyhennys": "Pallas-Yllästuntu.",
+  "nimio": "Pallas-Ylläs",
+  "lahde": "js/packs/hahmotelma-fin.js:219"
+ },
+ {
+  "maa": "FIN",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-turun-tuomiokirkon-vanha-torni",
+  "nimi": "Turun tuomiokirkon vanha torni",
+  "lyhennys": "Turun tuomiokirkon.",
+  "nimio": "Tuomiokirkon torni",
+  "lahde": "js/packs/monumentit-eurooppa.js:316"
+ },
+ {
+  "maa": "FIN",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-vanha-vaasa-kirkko",
+  "nimi": "Vanhan Vaasan kirkko",
+  "lyhennys": "Vanhan Vaasan.",
+  "nimio": "Vanha Vaasa",
+  "lahde": "js/packs/hahmotelma-fin.js:1981"
+ },
+ {
+  "maa": "FIN",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:petajavedenvanhakirkko",
+  "nimi": "Petäjäveden vanha kirkko",
+  "lyhennys": "Petäjäveden vanha.",
+  "nimio": "Petäjävesi",
+  "lahde": "js/packs/maastokohteet-fin.js:403"
+ },
+ {
+  "maa": "FJI",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:sri-siva-subramaniya",
+  "nimi": "Sri Siva Subramaniya",
+  "lyhennys": "Sri Siva.",
+  "nimio": "Sri Siva",
+  "lahde": "js/packs/maastokohteet-fji.js:131"
+ },
+ {
+  "maa": "FRA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:carcassonnen-linnoituskaupunki",
+  "nimi": "Carcassonnen linnoituskaupunki",
+  "lyhennys": "Carcassonnen.",
+  "nimio": "Carcassonne",
+  "lahde": "js/packs/maastokohteet-fra.js:450"
+ },
+ {
+  "maa": "FRA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:chartresin-katedraali",
+  "nimi": "Chartresin katedraali",
+  "lyhennys": "Chartresin.",
+  "nimio": "Chartres",
+  "lahde": "js/packs/maastokohteet-fra.js:570"
+ },
+ {
+  "maa": "FRA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-amiens",
+  "nimi": "Amiensin tuomiokirkko",
+  "lyhennys": "Amiensin.",
+  "nimio": "Amiens",
+  "lahde": "js/packs/hahmotelma-fra.js:537"
+ },
+ {
+  "maa": "FRA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-pic-du-midi",
+  "nimi": "Pic du Midi de Bigorre",
+  "lyhennys": "Pic du Midi de.",
+  "nimio": "Pic du Midi",
+  "lahde": "js/packs/hahmotelma-fra.js:97"
+ },
+ {
+  "maa": "FRA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-place-stanislas",
+  "nimi": "Nancy, Place Stanislas",
+  "lyhennys": "Nancy, Place.",
+  "nimio": "Place Stanislas",
+  "lahde": "js/packs/hahmotelma-fra.js:830"
+ },
+ {
+  "maa": "FRA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-rouen",
+  "nimi": "Rouenin tuomiokirkko",
+  "lyhennys": "Rouenin.",
+  "nimio": "Rouen",
+  "lahde": "js/packs/hahmotelma-fra.js:1077"
+ },
+ {
+  "maa": "FRA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-saint-cloud",
+  "nimi": "Saint-Cloud’n linna",
+  "lyhennys": "Saint-Cloud’n.",
+  "nimio": "Saint-Cloud",
+  "lahde": "js/packs/monumentit-eurooppa.js:39"
+ },
+ {
+  "maa": "FRA",
+  "tyyppi": "maalehtinosto",
+  "tunniste": "nosto:maalehti-bouquinistit",
+  "nimi": "Seinen kirjalaatikot",
+  "lyhennys": "Seinen.",
+  "nimio": "Bouquinistes",
+  "lahde": "js/packs/maalehtinostot-fra.js:728"
+ },
+ {
+  "maa": "FRA",
+  "tyyppi": "maalehtinosto",
+  "tunniste": "nosto:maalehti-le-mans",
+  "nimi": "Le Mansin 24 tuntia",
+  "lyhennys": "Le Mansin 24.",
+  "nimio": "Le Mans 24 h",
+  "lahde": "js/packs/maalehtinostot-fra.js:661"
+ },
+ {
+  "maa": "FRA",
+  "tyyppi": "maalehtinosto",
+  "tunniste": "nosto:maalehti-montgolfier",
+  "nimi": "Montgolfierin pallo",
+  "lyhennys": "Montgolfierin.",
+  "nimio": "Montgolfier",
+  "lahde": "js/packs/maalehtinostot-fra.js:264"
+ },
+ {
+  "maa": "FRA",
+  "tyyppi": "maalehtinosto",
+  "tunniste": "nosto:maalehti-peilisali",
+  "nimi": "Versaillesin peilisali",
+  "lyhennys": "Versaillesin.",
+  "nimio": "Peilisali",
+  "lahde": "js/packs/maalehtinostot-fra.js:114"
+ },
+ {
+  "maa": "FRA",
+  "tyyppi": "takynosto",
+  "tunniste": "nosto:guimardin-metro",
+  "nimi": "Metron sisäänkäynti",
+  "lyhennys": "Metron.",
+  "nimio": "Métropolitain",
+  "lahde": "js/packs/maakartat.js:5284"
+ },
+ {
+  "maa": "FRA",
+  "tyyppi": "takynosto",
+  "tunniste": "nosto:kirahvin-kavelymatka",
+  "nimi": "Kirahvin kävelymatka",
+  "lyhennys": "Kirahvin.",
+  "nimio": "Kirahvi",
+  "lahde": "js/packs/maakartat.js:5169"
+ },
+ {
+  "maa": "FRA",
+  "tyyppi": "takynosto",
+  "tunniste": "nosto:pariisin-vuosisadat",
+  "nimi": "Pariisin vuosisadat",
+  "lyhennys": "Pariisin.",
+  "nimio": "Vuosisadat",
+  "lahde": "js/packs/maakartat.js:5310"
+ },
+ {
+  "maa": "GBR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:bathin-roomalaiset-kylpylat",
+  "nimi": "Bathin roomalaiset kylpylät",
+  "lyhennys": "Bathin roomalaiset.",
+  "nimio": "Roomalaiskylpylä",
+  "lahde": "js/packs/maastokohteet-gbr.js:524"
+ },
+ {
+  "maa": "GBR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-dover-strait",
+  "nimi": "Doverin liiduvuoret",
+  "lyhennys": "Doverin.",
+  "nimio": "Dover",
+  "lahde": "js/packs/hahmotelma-gbr.js:865"
+ },
+ {
+  "maa": "GBR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-geevor-tin",
+  "nimi": "Geevorin tinakaivos",
+  "lyhennys": "Geevorin.",
+  "nimio": "Geevor",
+  "lahde": "js/packs/hahmotelma-gbr.js:181"
+ },
+ {
+  "maa": "GBR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-liverpool-docks",
+  "nimi": "Albert Dock, Liverpool",
+  "lyhennys": "Albert Dock,.",
+  "nimio": "Albert Dock",
+  "lahde": "js/packs/hahmotelma-gbr.js:286"
+ },
+ {
+  "maa": "GBR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-oxford",
+  "nimi": "Radcliffe Camera, Oxford",
+  "lyhennys": "Radcliffe Camera,.",
+  "nimio": "Radcliffe Camera",
+  "lahde": "js/packs/hahmotelma-gbr.js:347"
+ },
+ {
+  "maa": "GBR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-stockton-darlington",
+  "nimi": "Stockton ja Darlingtonin rautatie",
+  "lyhennys": "Stockton.",
+  "nimio": "Rautatie 1825",
+  "lahde": "js/packs/hahmotelma-gbr.js:581"
+ },
+ {
+  "maa": "GBR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-york-minster",
+  "nimi": "Yorkin tuomiokirkko",
+  "lyhennys": "Yorkin.",
+  "nimio": "York Minster",
+  "lahde": "js/packs/hahmotelma-gbr.js:927"
+ },
+ {
+  "maa": "GHA",
+  "tyyppi": "elaintaky",
+  "tunniste": "elaintaky:GHA",
+  "nimi": "Valkokaulakalliovaris",
+  "lyhennys": "Valkokaulakalliov.",
+  "nimio": "Kalliovaris",
+  "lahde": "js/packs/elaintakyt.js:2015 (elain)"
+ },
+ {
+  "maa": "GRC",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-korintin-apollon-temppeli",
+  "nimi": "Korintin Apollon temppeli",
+  "lyhennys": "Korintin Apollon.",
+  "nimio": "Apollontemppeli",
+  "lahde": "js/packs/hahmotelma-grc.js:1921"
+ },
+ {
+  "maa": "GRC",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-lavrio",
+  "nimi": "Lavrion hopeakaivokset",
+  "lyhennys": "Lavrion.",
+  "nimio": "Lavrio",
+  "lahde": "js/packs/hahmotelma-grc.js:1382"
+ },
+ {
+  "maa": "GRC",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-navagio",
+  "nimi": "Navagio (Zakynthos)",
+  "lyhennys": "Navagio.",
+  "nimio": "Navagio",
+  "lahde": "js/packs/hahmotelma-grc.js:384"
+ },
+ {
+  "maa": "GRL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:gronlannin-jaatikko",
+  "nimi": "Grönlannin jäätikkö",
+  "lyhennys": "Grönlannin.",
+  "nimio": "Mannerjäätikkö",
+  "lahde": "js/packs/maastokohteet-grl.js:213"
+ },
+ {
+  "maa": "GRL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:ilulissatin-jaavuono",
+  "nimi": "Ilulissatin jäävuono",
+  "lyhennys": "Ilulissatin.",
+  "nimio": "Ilulissat",
+  "lahde": "js/packs/maastokohteet-grl.js:77"
+ },
+ {
+  "maa": "GRL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:koillis-gronlannin-kansallispuisto",
+  "nimi": "Koillis-Grönlannin kansallispuisto",
+  "lyhennys": "Koillis-Grönlannin.",
+  "nimio": "Koillis-Grönlanti",
+  "lahde": "js/packs/maastokohteet-grl.js:317"
+ },
+ {
+  "maa": "HKG",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:kowloonin-muurikaupunki",
+  "nimi": "Kowloonin muurikaupunki",
+  "lyhennys": "Kowloonin.",
+  "nimio": "Muurikaupunki",
+  "lahde": "js/packs/maastokohteet-hkg.js:101"
+ },
+ {
+  "maa": "HKG",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:tung-chungin-linnake",
+  "nimi": "Tung Chungin linnake",
+  "lyhennys": "Tung Chungin.",
+  "nimio": "Tung Chung",
+  "lahde": "js/packs/maastokohteet-hkg.js:150"
+ },
+ {
+  "maa": "HRV",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-salona-amfiteatteri",
+  "nimi": "Salonan amfiteatteri",
+  "lyhennys": "Salonan.",
+  "nimio": "Amfiteatteri",
+  "lahde": "js/packs/hahmotelma-hrv.js:1585"
+ },
+ {
+  "maa": "HRV",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-salona-porta-caesarea",
+  "nimi": "Salonan Porta Caesarea",
+  "lyhennys": "Salonan Porta.",
+  "nimio": "Porta Caesarea",
+  "lahde": "js/packs/monumentit-eurooppa.js:256"
+ },
+ {
+  "maa": "HUN",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-budan-matyas-palatsi",
+  "nimi": "Budan Mátyás-palatsi",
+  "lyhennys": "Budan.",
+  "nimio": "Mátyás-palatsi",
+  "lahde": "js/packs/monumentit-eurooppa.js:223"
+ },
+ {
+  "maa": "HUN",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-esztergom",
+  "nimi": "Esztergomin basilika",
+  "lyhennys": "Esztergomin.",
+  "nimio": "Esztergom",
+  "lahde": "js/packs/hahmotelma-hun.js:385"
+ },
+ {
+  "maa": "HUN",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-fertod",
+  "nimi": "Fertőd (Eszterháza)",
+  "lyhennys": "Fertőd.",
+  "nimio": "Eszterháza",
+  "lahde": "js/packs/hahmotelma-hun.js:1100"
+ },
+ {
+  "maa": "HUN",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-visegrad-palota",
+  "nimi": "Visegrádin kuninkaallinen palatsi",
+  "lyhennys": "Visegrádin.",
+  "nimio": "Visegrád",
+  "lahde": "js/packs/hahmotelma-hun.js:1473"
+ },
+ {
+  "maa": "IND",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:darjeelingin-vuoristorata",
+  "nimi": "Darjeelingin vuoristorata",
+  "lyhennys": "Darjeelingin.",
+  "nimio": "Darjeeling",
+  "lahde": "js/packs/maastokohteet-ind.js:224"
+ },
+ {
+  "maa": "IND",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:konark",
+  "nimi": "Konarkin aurinkotemppeli",
+  "lyhennys": "Konarkin.",
+  "nimio": "Konark",
+  "lahde": "js/packs/maastokohteet-ind.js:171"
+ },
+ {
+  "maa": "IRL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-dublinin-keskiaikainen-linna",
+  "nimi": "Dublinin keskiaikainen linna",
+  "lyhennys": "Dublinin.",
+  "nimio": "Dublin Castle",
+  "lahde": "js/packs/monumentit-eurooppa.js:348"
+ },
+ {
+  "maa": "IRL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-mellifont",
+  "nimi": "Mellifontin luostari",
+  "lyhennys": "Mellifontin.",
+  "nimio": "Mellifont",
+  "lahde": "js/packs/hahmotelma-irl.js:1451"
+ },
+ {
+  "maa": "IRL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-powerscourt",
+  "nimi": "Powerscourtin vesiputous",
+  "lyhennys": "Powerscourtin.",
+  "nimio": "Powerscourt",
+  "lahde": "js/packs/hahmotelma-irl.js:405"
+ },
+ {
+  "maa": "IRQ",
+  "tyyppi": "elaintaky",
+  "tunniste": "elaintaky:IRQ",
+  "nimi": "Basranruokokerttunen",
+  "lyhennys": "Basranruokokerttu.",
+  "nimio": "Ruokokerttunen",
+  "lahde": "js/packs/elaintakyt.js:1769 (elain)"
+ },
+ {
+  "maa": "ITA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-agrigento",
+  "nimi": "Agrigenton temppelilaakso",
+  "lyhennys": "Agrigenton.",
+  "nimio": "Agrigento",
+  "lahde": "js/packs/hahmotelma-ita.js:503"
+ },
+ {
+  "maa": "ITA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-carrara",
+  "nimi": "Carraran marmorilouhokset",
+  "lyhennys": "Carraran.",
+  "nimio": "Carrara",
+  "lahde": "js/packs/hahmotelma-ita.js:1176"
+ },
+ {
+  "maa": "ITA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-vanha-pietarinkirkko",
+  "nimi": "Vanha Pietarinkirkko",
+  "lyhennys": "Vanha.",
+  "nimio": "Pietarinkirkko",
+  "lahde": "js/packs/monumentit-eurooppa.js:82"
+ },
+ {
+  "maa": "LKA",
+  "tyyppi": "elaintaky",
+  "tunniste": "elaintaky:LKA",
+  "nimi": "Sri lankan leopardi",
+  "lyhennys": "Sri lankan.",
+  "nimio": "Leopardi",
+  "lahde": "js/packs/elaintakyt.js:1373 (elain)"
+ },
+ {
+  "maa": "LKA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hammastemppeli",
+  "nimi": "Kandyn hammastemppeli",
+  "lyhennys": "Kandyn.",
+  "nimio": "Hammastemppeli",
+  "lahde": "js/packs/maastokohteet-lka.js:146"
+ },
+ {
+  "maa": "LKA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:yhdeksan-kaaren-silta",
+  "nimi": "Yhdeksän kaaren silta",
+  "lyhennys": "Yhdeksän kaaren.",
+  "nimio": "Kaarisilta",
+  "lahde": "js/packs/maastokohteet-lka.js:225"
+ },
+ {
+  "maa": "LTU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:aukstaitija",
+  "nimi": "Aukštaitijan puisto",
+  "lyhennys": "Aukštaitijan.",
+  "nimio": "Aukštaitija",
+  "lahde": "js/packs/maastokohteet-ltu.js:792"
+ },
+ {
+  "maa": "LTU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-dzukija",
+  "nimi": "Dzūkijan kansallispuisto",
+  "lyhennys": "Dzūkijan.",
+  "nimio": "Dzūkija",
+  "lahde": "js/packs/hahmotelma-ltu.js:560"
+ },
+ {
+  "maa": "LTU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-trakai-niemekelinna",
+  "nimi": "Trakain niemekelinna",
+  "lyhennys": "Trakain.",
+  "nimio": "Trakai",
+  "lahde": "js/packs/hahmotelma-ltu.js:1470"
+ },
+ {
+  "maa": "LTU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:palangan-meripihkamuseo",
+  "nimi": "Palangan meripihkamuseo",
+  "lyhennys": "Palangan.",
+  "nimio": "Palanga",
+  "lahde": "js/packs/maastokohteet-ltu.js:450"
+ },
+ {
+  "maa": "LUX",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-altmunster",
+  "nimi": "Altmünsterin luostari",
+  "lyhennys": "Altmünsterin.",
+  "nimio": "Altmünster",
+  "lahde": "js/packs/hahmotelma-lux.js:994"
+ },
+ {
+  "maa": "LUX",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-luxembourg",
+  "nimi": "Luxembourgin kaupunki",
+  "lyhennys": "Luxembourgin.",
+  "nimio": "Luxembourg",
+  "lahde": "js/packs/hahmotelma-lux.js:442"
+ },
+ {
+  "maa": "LVA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-mustapaiden-talo",
+  "nimi": "Riian Mustapäiden talo",
+  "lyhennys": "Riian Mustapäiden.",
+  "nimio": "Mustapäiden talo",
+  "lahde": "js/packs/monumentit-eurooppa.js:296"
+ },
+ {
+  "maa": "MDG",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:merirosvojen-hautausmaa",
+  "nimi": "Merirosvojen hautausmaa",
+  "lyhennys": "Merirosvojen.",
+  "nimio": "Sainte-Marie",
+  "lahde": "js/packs/maastokohteet-mdg.js:290"
+ },
+ {
+  "maa": "MLT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-mdinan-vanha-katedraali",
+  "nimi": "Mdinan vanha normannikatedraali",
+  "lyhennys": "Mdinan vanha.",
+  "nimio": "Mdina",
+  "lahde": "js/packs/monumentit-eurooppa.js:423"
+ },
+ {
+  "maa": "MLT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-victoria-cittadella",
+  "nimi": "Victoria (Cittadella)",
+  "lyhennys": "Victoria.",
+  "nimio": "Cittadella",
+  "lahde": "js/packs/hahmotelma-mlt.js:1112"
+ },
+ {
+  "maa": "NAM",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:fish-riverin-kanjoni",
+  "nimi": "Fish Riverin kanjoni",
+  "lyhennys": "Fish Riverin.",
+  "nimio": "Fish River",
+  "lahde": "js/packs/maastokohteet-nam.js:183"
+ },
+ {
+  "maa": "NLD",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-amsterdamin-vanha-raatihuone",
+  "nimi": "Amsterdamin vanha raatihuone",
+  "lyhennys": "Amsterdamin vanha.",
+  "nimio": "Vanha raatihuone",
+  "lahde": "js/packs/monumentit-eurooppa.js:148"
+ },
+ {
+  "maa": "NLD",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-oostvaardersplassen",
+  "nimi": "Oostvaardersplassen",
+  "lyhennys": "Oostvaardersplass.",
+  "nimio": "Oostvaarders",
+  "lahde": "js/packs/hahmotelma-nld.js:318"
+ },
+ {
+  "maa": "NLD",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-utrechtin-domkirkon-keskilaiva",
+  "nimi": "Utrechtin Domkirkon keskilaiva",
+  "lyhennys": "Utrechtin.",
+  "nimio": "Domkirkko",
+  "lahde": "js/packs/monumentit-eurooppa.js:158"
+ },
+ {
+  "maa": "NLD",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:krollermuller",
+  "nimi": "Kröller-Müllerin museo",
+  "lyhennys": "Kröller-Müllerin.",
+  "nimio": "Kröller-Müller",
+  "lahde": "js/packs/maastokohteet-nld.js:502"
+ },
+ {
+  "maa": "NLD",
+  "tyyppi": "takynosto",
+  "tunniste": "nosto:tulppaanimania",
+  "nimi": "Alkmaarin huutokauppa",
+  "lyhennys": "Alkmaarin.",
+  "nimio": "Alkmaar",
+  "lahde": "js/packs/fokusvirta-amsterdam.js:889"
+ },
+ {
+  "maa": "NOR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:altankalliopiirrokset",
+  "nimi": "Altan kalliopiirrokset",
+  "lyhennys": "Altan.",
+  "nimio": "Alta",
+  "lahde": "js/packs/maastokohteet-nor.js:370"
+ },
+ {
+  "maa": "NOR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:eidsvoll",
+  "nimi": "Eidsvollin rakennus",
+  "lyhennys": "Eidsvollin.",
+  "nimio": "Eidsvoll",
+  "lahde": "js/packs/maastokohteet-nor.js:619"
+ },
+ {
+  "maa": "NOR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-borgund",
+  "nimi": "Borgundin sauvakirkko",
+  "lyhennys": "Borgundin.",
+  "nimio": "Borgund",
+  "lahde": "js/packs/hahmotelma-nor.js:375"
+ },
+ {
+  "maa": "NOR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-dovrefjell",
+  "nimi": "Dovrefjell ja myskihärkä",
+  "lyhennys": "Dovrefjell.",
+  "nimio": "Dovrefjell",
+  "lahde": "js/packs/hahmotelma-nor.js:1059"
+ },
+ {
+  "maa": "NOR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-lindesnes",
+  "nimi": "Lindesnesin majakka",
+  "lyhennys": "Lindesnesin.",
+  "nimio": "Lindesnes",
+  "lahde": "js/packs/hahmotelma-nor.js:989"
+ },
+ {
+  "maa": "NOR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:nidaros",
+  "nimi": "Nidarosin tuomiokirkko",
+  "lyhennys": "Nidarosin.",
+  "nimio": "Nidaros",
+  "lahde": "js/packs/maastokohteet-nor.js:470"
+ },
+ {
+  "maa": "NOR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:urnes",
+  "nimi": "Urnesin sauvakirkko",
+  "lyhennys": "Urnesin.",
+  "nimio": "Urnes",
+  "lahde": "js/packs/maastokohteet-nor.js:287"
+ },
+ {
+  "maa": "NPL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:bardiya",
+  "nimi": "Bardiyan kansallispuisto",
+  "lyhennys": "Bardiyan.",
+  "nimio": "Bardiya",
+  "lahde": "js/packs/maastokohteet-npl.js:243"
+ },
+ {
+  "maa": "PAN",
+  "tyyppi": "elaintaky",
+  "tunniste": "elaintaky:PAN",
+  "nimi": "Panamankultasammakko",
+  "lyhennys": "Panamankultasamma.",
+  "nimio": "Kultasammakko",
+  "lahde": "js/packs/elaintakyt.js:2259 (elain)"
+ },
+ {
+  "maa": "POL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-bochnia",
+  "nimi": "Bochnian suolakaivos",
+  "lyhennys": "Bochnian.",
+  "nimio": "Bochnia",
+  "lahde": "js/packs/hahmotelma-pol.js:1422"
+ },
+ {
+  "maa": "POL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-grunwald",
+  "nimi": "Grunwaldin taistelu",
+  "lyhennys": "Grunwaldin.",
+  "nimio": "Grunwald",
+  "lahde": "js/packs/hahmotelma-pol.js:502"
+ },
+ {
+  "maa": "POL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-kalwaria",
+  "nimi": "Kalwaria Zebrzydowska",
+  "lyhennys": "Kalwaria.",
+  "nimio": "Kalwaria",
+  "lahde": "js/packs/hahmotelma-pol.js:742"
+ },
+ {
+  "maa": "POL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-tarnowskie-gory",
+  "nimi": "Tarnowskie Górin hopeakaivos",
+  "lyhennys": "Tarnowskie Górin.",
+  "nimio": "Tarnowskie Góry",
+  "lahde": "js/packs/hahmotelma-pol.js:1482"
+ },
+ {
+  "maa": "POL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-torun-zamek",
+  "nimi": "Toruńin ristiritarien linna",
+  "lyhennys": "Toruńin.",
+  "nimio": "Toruń",
+  "lahde": "js/packs/hahmotelma-pol.js:1615"
+ },
+ {
+  "maa": "POL",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-wolin",
+  "nimi": "Wolinin kansallispuisto",
+  "lyhennys": "Wolinin.",
+  "nimio": "Wolin",
+  "lahde": "js/packs/hahmotelma-pol.js:291"
+ },
+ {
+  "maa": "PRT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:almendres",
+  "nimi": "Almendresin kivikehä",
+  "lyhennys": "Almendresin.",
+  "nimio": "Almendres",
+  "lahde": "js/packs/maastokohteet-prt.js:430"
+ },
+ {
+  "maa": "PRT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-castro-marim",
+  "nimi": "Castro Marimin suoalue",
+  "lyhennys": "Castro Marimin.",
+  "nimio": "Castro Marim",
+  "lahde": "js/packs/hahmotelma-prt.js:1257"
+ },
+ {
+  "maa": "PRT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-foz-coa",
+  "nimi": "Côa-laakson kalliopiirrokset",
+  "lyhennys": "Côa-laakson.",
+  "nimio": "Côa-laakso",
+  "lahde": "js/packs/hahmotelma-prt.js:636"
+ },
+ {
+  "maa": "PRT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-hospital-real-todos-os-santos",
+  "nimi": "Hospital Real de Todos-os-Santos",
+  "lyhennys": "Hospital Real de.",
+  "nimio": "Todos-os-Santos",
+  "lahde": "js/packs/monumentit-eurooppa.js:136"
+ },
+ {
+  "maa": "PRT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-panasqueira",
+  "nimi": "Panasqueiran kaivos",
+  "lyhennys": "Panasqueiran.",
+  "nimio": "Panasqueira",
+  "lahde": "js/packs/hahmotelma-prt.js:1384"
+ },
+ {
+  "maa": "PRT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-sao-domingos",
+  "nimi": "São Domingosin kaivos",
+  "lyhennys": "São Domingosin.",
+  "nimio": "São Domingos",
+  "lahde": "js/packs/hahmotelma-prt.js:1195"
+ },
+ {
+  "maa": "PRT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-torres-vedras",
+  "nimi": "Torres Vedrasin linjat",
+  "lyhennys": "Torres Vedrasin.",
+  "nimio": "Torres Vedras",
+  "lahde": "js/packs/hahmotelma-prt.js:1516"
+ },
+ {
+  "maa": "PRT",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-vila-nova-de-cerveira",
+  "nimi": "Vila Nova de Cerveira",
+  "lyhennys": "Vila Nova de.",
+  "nimio": "Cerveira",
+  "lahde": "js/packs/hahmotelma-prt.js:431"
+ },
+ {
+  "maa": "ROU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-alba-iulia",
+  "nimi": "Alba Carolina -linnoitus",
+  "lyhennys": "Alba Carolina.",
+  "nimio": "Alba Carolina",
+  "lahde": "js/packs/hahmotelma-rou.js:760"
+ },
+ {
+  "maa": "ROU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-berca",
+  "nimi": "Bercan mutatulivuoret",
+  "lyhennys": "Bercan.",
+  "nimio": "Berca",
+  "lahde": "js/packs/hahmotelma-rou.js:272"
+ },
+ {
+  "maa": "ROU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-curtea-de-arges",
+  "nimi": "Curtea de Argeșin luostari",
+  "lyhennys": "Curtea de Argeșin.",
+  "nimio": "Curtea de Argeș",
+  "lahde": "js/packs/hahmotelma-rou.js:963"
+ },
+ {
+  "maa": "ROU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-retezat",
+  "nimi": "Retezatin kansallispuisto",
+  "lyhennys": "Retezatin.",
+  "nimio": "Retezat",
+  "lahde": "js/packs/hahmotelma-rou.js:73"
+ },
+ {
+  "maa": "ROU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-scarisoara",
+  "nimi": "Scărișoaran jääluola",
+  "lyhennys": "Scărișoaran.",
+  "nimio": "Scărișoara",
+  "lahde": "js/packs/hahmotelma-rou.js:346"
+ },
+ {
+  "maa": "ROU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-slanic",
+  "nimi": "Slănic Prahovan suolakaivos",
+  "lyhennys": "Slănic Prahovan.",
+  "nimio": "Slănic Prahova",
+  "lahde": "js/packs/hahmotelma-rou.js:1840"
+ },
+ {
+  "maa": "RUS",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-nizni-novgorod",
+  "nimi": "Nižni Novgorodin messut",
+  "lyhennys": "Nižni Novgorodin.",
+  "nimio": "Nižni Novgorod",
+  "lahde": "js/packs/hahmotelma-rus.js:280"
+ },
+ {
+  "maa": "RUS",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-tsiolkovski",
+  "nimi": "Konstantin Tsiolkovski",
+  "lyhennys": "Konstantin.",
+  "nimio": "Tsiolkovski",
+  "lahde": "js/packs/hahmotelma-rus.js:381"
+ },
+ {
+  "maa": "RUS",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-valkokivinen-kreml",
+  "nimi": "Moskovan valkokivinen Kreml",
+  "lyhennys": "Moskovan.",
+  "nimio": "Kreml",
+  "lahde": "js/packs/monumentit-eurooppa.js:380"
+ },
+ {
+  "maa": "RUS",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:solovetskin-luostari",
+  "nimi": "Solovetskin luostari",
+  "lyhennys": "Solovetskin.",
+  "nimio": "Solovetski",
+  "lahde": "js/packs/maastokohteet-rus.js:507"
+ },
+ {
+  "maa": "RUS",
+  "tyyppi": "takynosto",
+  "tunniste": "nosto:pietarhovin-suihkulahteet",
+  "nimi": "Pietarhovin kaskadi",
+  "lyhennys": "Pietarhovin.",
+  "nimio": "Pietarhovi",
+  "lahde": "js/packs/fokusvirta-pietari.js:1166"
+ },
+ {
+  "maa": "SAU",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:jubbah",
+  "nimi": "Jubbahin kalliotaide",
+  "lyhennys": "Jubbahin.",
+  "nimio": "Jubbah",
+  "lahde": "js/packs/maastokohteet-sau.js:187"
+ },
+ {
+  "maa": "SGP",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:sgp-kasvitieteellinen-puutarha",
+  "nimi": "Kasvitieteellinen puutarha",
+  "lyhennys": "Kasvitieteellinen.",
+  "nimio": "Kasvitarha",
+  "lahde": "js/packs/maastokohteet-sgp.js:84"
+ },
+ {
+  "maa": "SLB",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:uuden-georgian-salmi",
+  "nimi": "Uuden-Georgian salmi",
+  "lyhennys": "Uuden-Georgian.",
+  "nimio": "Uusi-Georgia",
+  "lahde": "js/packs/maastokohteet-slb.js:228"
+ },
+ {
+  "maa": "SLE",
+  "tyyppi": "elaintaky",
+  "tunniste": "elaintaky:SLE",
+  "nimi": "Länsiafrikansimpanssi",
+  "lyhennys": "Länsiafrikansimpa.",
+  "nimio": "Simpanssi",
+  "lahde": "js/packs/elaintakyt.js:2062 (elain)"
+ },
+ {
+  "maa": "SVK",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-bratislava",
+  "nimi": "Bratislava (Pozsony)",
+  "lyhennys": "Bratislava.",
+  "nimio": "Bratislava",
+  "lahde": "js/packs/hahmotelma-svk.js:706"
+ },
+ {
+  "maa": "SVK",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-ochtinska",
+  "nimi": "Ochtinská aragoniittiluola",
+  "lyhennys": "Ochtinská.",
+  "nimio": "Ochtinská",
+  "lahde": "js/packs/hahmotelma-svk.js:204"
+ },
+ {
+  "maa": "SVK",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-poloniny",
+  "nimi": "Poloninyn kansallispuisto",
+  "lyhennys": "Poloninyn.",
+  "nimio": "Poloniny",
+  "lahde": "js/packs/hahmotelma-svk.js:253"
+ },
+ {
+  "maa": "SVK",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-tokaj",
+  "nimi": "Tokaj (Slovakian puoli)",
+  "lyhennys": "Tokaj (Slovakian.",
+  "nimio": "Tokaj",
+  "lahde": "js/packs/hahmotelma-svk.js:1837"
+ },
+ {
+  "maa": "SVK",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-vydrica-zuckermandel",
+  "nimi": "Vydrica–Zuckermandel",
+  "lyhennys": "Vydrica–Zuckerman.",
+  "nimio": "Zuckermandel",
+  "lahde": "js/packs/monumentit-eurooppa.js:276"
+ },
+ {
+  "maa": "SVN",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-kostanjevica",
+  "nimi": "Kostanjevica na Krki",
+  "lyhennys": "Kostanjevica na.",
+  "nimio": "Kostanjevica",
+  "lahde": "js/packs/hahmotelma-svn.js:952"
+ },
+ {
+  "maa": "SWE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-abisko",
+  "nimi": "Abiskon kansallispuisto",
+  "lyhennys": "Abiskon.",
+  "nimio": "Abisko",
+  "lahde": "js/packs/hahmotelma-swe.js:143"
+ },
+ {
+  "maa": "SWE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-gammelstad",
+  "nimi": "Gammelstadin kirkkokylä",
+  "lyhennys": "Gammelstadin.",
+  "nimio": "Gammelstad",
+  "lahde": "js/packs/hahmotelma-swe.js:1863"
+ },
+ {
+  "maa": "SWE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-halsingegardar",
+  "nimi": "Hälsingen koristellut maatilat",
+  "lyhennys": "Hälsingen.",
+  "nimio": "Hälsingegårdar",
+  "lahde": "js/packs/hahmotelma-swe.js:1568"
+ },
+ {
+  "maa": "SWE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-kosterhavet",
+  "nimi": "Kosterhavetin kansallispuisto",
+  "lyhennys": "Kosterhavetin.",
+  "nimio": "Kosterhavet",
+  "lahde": "js/packs/hahmotelma-swe.js:486"
+ },
+ {
+  "maa": "SWE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-sarek",
+  "nimi": "Sarekin kansallispuisto",
+  "lyhennys": "Sarekin.",
+  "nimio": "Sarek",
+  "lahde": "js/packs/hahmotelma-swe.js:78"
+ },
+ {
+  "maa": "SWE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-varberg",
+  "nimi": "Varbergin linnoitus",
+  "lyhennys": "Varbergin.",
+  "nimio": "Varberg",
+  "lahde": "js/packs/hahmotelma-swe.js:1085"
+ },
+ {
+  "maa": "SWE",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:lundintuomiokirkko",
+  "nimi": "Lundin tuomiokirkko",
+  "lyhennys": "Lundin.",
+  "nimio": "Lund",
+  "lahde": "js/packs/maastokohteet-swe.js:864"
+ },
+ {
+  "maa": "TZA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:kondoa",
+  "nimi": "Kondoan kalliotaide",
+  "lyhennys": "Kondoan.",
+  "nimio": "Kondoa",
+  "lahde": "js/packs/maastokohteet-tza.js:179"
+ },
+ {
+  "maa": "UGA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:kibale",
+  "nimi": "Kibalen kansallispuisto",
+  "lyhennys": "Kibalen.",
+  "nimio": "Kibale",
+  "lahde": "js/packs/maastokohteet-uga.js:208"
+ },
+ {
+  "maa": "UGA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:murchison",
+  "nimi": "Murchisonin putoukset",
+  "lyhennys": "Murchisonin.",
+  "nimio": "Murchison",
+  "lahde": "js/packs/maastokohteet-uga.js:153"
+ },
+ {
+  "maa": "UGA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:nyero",
+  "nimi": "Nyeron kalliomaalaukset",
+  "lyhennys": "Nyeron.",
+  "nimio": "Nyero",
+  "lahde": "js/packs/maastokohteet-uga.js:235"
+ },
+ {
+  "maa": "UGA",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:queenelizabeth",
+  "nimi": "Queen Elizabethin puisto",
+  "lyhennys": "Queen Elizabethin.",
+  "nimio": "Queen Elizabeth",
+  "lahde": "js/packs/maastokohteet-uga.js:180"
+ },
+ {
+  "maa": "UKR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-bakhchysarai",
+  "nimi": "Bakhchysarain palatsi",
+  "lyhennys": "Bakhchysarain.",
+  "nimio": "Bakhchysarai",
+  "lahde": "js/packs/hahmotelma-ukr.js:253"
+ },
+ {
+  "maa": "UKR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-kolomyia",
+  "nimi": "Pysanka-museo, Kolomyia",
+  "lyhennys": "Pysanka-museo,.",
+  "nimio": "Pysanka-museo",
+  "lahde": "js/packs/hahmotelma-ukr.js:304"
+ },
+ {
+  "maa": "UKR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-kultainen-portti",
+  "nimi": "Kiovan Kultainen portti",
+  "lyhennys": "Kiovan Kultainen.",
+  "nimio": "Kultainen portti",
+  "lahde": "js/packs/hahmotelma-ukr.js:1064"
+ },
+ {
+  "maa": "UKR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-kymmenyskirkko",
+  "nimi": "Kiovan Kymmenyskirkko",
+  "lyhennys": "Kiovan.",
+  "nimio": "Kymmenyskirkko",
+  "lahde": "js/packs/monumentit-eurooppa.js:390"
+ },
+ {
+  "maa": "UKR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:hahmotelma-medzhybizh",
+  "nimi": "Medzhybižin linnoitus",
+  "lyhennys": "Medzhybižin.",
+  "nimio": "Medzhybiž",
+  "lahde": "js/packs/hahmotelma-ukr.js:760"
+ },
+ {
+  "maa": "UKR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:kamjanets-podilskyin-linna",
+  "nimi": "Kamjanets-Podilskyin linna",
+  "lyhennys": "Kamjanets-Podilsk.",
+  "nimio": "Kamjanets",
+  "lahde": "js/packs/maastokohteet-ukr.js:306"
+ },
+ {
+  "maa": "UKR",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:tsernobylin-ydinvoimala",
+  "nimi": "Tšernobylin ydinvoimala",
+  "lyhennys": "Tšernobylin.",
+  "nimio": "Tšernobyl",
+  "lahde": "js/packs/maastokohteet-ukr.js:351"
+ },
+ {
+  "maa": "URY",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:coloniadelsacramento",
+  "nimi": "Colonia del Sacramento",
+  "lyhennys": "Colonia del.",
+  "nimio": "Colonia",
+  "lahde": "js/packs/maastokohteet-ury.js:135"
+ },
+ {
+  "maa": "URY",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:quebradadeloscuervos",
+  "nimi": "Quebrada de los Cuervos",
+  "lyhennys": "Quebrada de los.",
+  "nimio": "Los Cuervos",
+  "lahde": "js/packs/maastokohteet-ury.js:269"
+ },
+ {
+  "maa": "URY",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:santateresanlinnoitus",
+  "nimi": "Santa Teresan linnoitus",
+  "lyhennys": "Santa Teresan.",
+  "nimio": "Santa Teresa",
+  "lahde": "js/packs/maastokohteet-ury.js:241"
+ },
+ {
+  "maa": "VEN",
+  "tyyppi": "elaintaky",
+  "tunniste": "elaintaky:VEN",
+  "nimi": "Jättimuurahaiskarhu",
+  "lyhennys": "Jättimuurahaiskar.",
+  "nimio": "Muurahaiskarhu",
+  "lahde": "js/packs/elaintakyt.js:2315 (elain)"
+ },
+ {
+  "maa": "YEM",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:jabalannabishuayb",
+  "nimi": "Jabal an-Nabi Shu'ayb",
+  "lyhennys": "Jabal an-Nabi.",
+  "nimio": "An-Nabi Shu'ayb",
+  "lahde": "js/packs/maastokohteet-yem.js:34"
+ },
+ {
+  "maa": "ZAF",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:sterkfonteinin-luolat",
+  "nimi": "Sterkfonteinin luolat",
+  "lyhennys": "Sterkfonteinin.",
+  "nimio": "Sterkfontein",
+  "lahde": "js/packs/maastokohteet-zaf.js:163"
+ },
+ {
+  "maa": "ZAF",
+  "tyyppi": "fokuskohde",
+  "tunniste": "kohde:vredefortin-kraatteri",
+  "nimi": "Vredefortin kraatteri",
+  "lyhennys": "Vredefortin.",
+  "nimio": "Vredefort",
+  "lahde": "js/packs/maastokohteet-zaf.js:316"
+ },
+ {
+  "maa": "-",
+  "tyyppi": "napakohde",
+  "tunniste": "kohde:ark-gronlannin-jaatikko",
+  "nimi": "Grönlannin jäätikkö",
+  "lyhennys": "Grönlannin.",
+  "nimio": "Mannerjäätikkö",
+  "lahde": "js/packs/maastokohteet-ark.js:814"
+ },
+ {
+  "maa": "-",
+  "tyyppi": "napakohde",
+  "tunniste": "kohde:ark-ilulissat",
+  "nimi": "Ilulissatin jäävuono",
+  "lyhennys": "Ilulissatin.",
+  "nimio": "Ilulissat",
+  "lahde": "js/packs/maastokohteet-ark.js:877"
+ },
+ {
+  "maa": "-",
+  "tyyppi": "napakohde",
+  "tunniste": "kohde:ark-nautilus",
+  "nimi": "Nautilus navan alla",
+  "lyhennys": "Nautilus navan.",
+  "nimio": "Nautilus",
+  "lahde": "js/packs/maastokohteet-ark.js:469"
+ }
+]
