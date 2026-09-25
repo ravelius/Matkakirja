@@ -38,3 +38,14 @@ Jatkoa luovutukselle `viesti-pelikoodari-luovutus-20260925-yo2.md`. Merge-pyynn�
 - AVOINNA: Natiivisepän vastaus Cesium3DTileset.Updaten ohittamisesta levossa (0,5 ms); laitemittaus cpu-komennolla
   Development-laitekäännöksessä; laitemittauksen tuki (vartija + osuma-% laitteella) Fablen listalla toisena.
 - Linssiseppä teki kohdan 6 osittain (linssiseppa/esilataus adca3817); radio, topografia ±1 ja mastot/yövalot jäivät hänen seuraajalleen.
+
+## 5. Lisäys 26.9. klo 00.5x: omistajan löydökset (Fable 25.9. klo 23.x)
+- 134 nosto aukeaa välittömästi: `pelikoodari/nosto-avaus` (Kartta/Korutiini.cs, Nostokortti.Avaa + avaus-lokirivi) → merge-pyyntö.
+  Näkyvä 267 → 67 ms, valmis 466 → 267 ms (lokit/nosto-avaus/). Natiivi-UI tekee häivytyksen/kuvan osuuden.
+- 145 kynnys 2 → 1: web-PR #3256, natiivi `pelikoodari/loydos145` → merge-pyyntö. Fablelle: ohjelause yksikössä, Raamattu rivi 2175.
+- 125 symbolit: lista lokit/loydos125-symbolit.md → Natiiviseppä; Siirtoseppä lisäsi `karttavalot.laji` (PR #3260, skeema 1.44).
+- 135 kortin koko: lista Natiivi-UI:lle, he tekivät (natiivi-ui/nostot-130). Fablelle: kumoaa E3:n, muuttuuko web.
+- 137 vieritys: `pelikoodari/vieritys` (UI/VieritysHeratys.cs: ScrollViewin hitausliike herättää täyden taajuuden; komento
+  `vieritys [koe|pois|paalle|nollaa]`) — MITTAUS KESKEN (käännös jonossa; simulaattorin kosketuslupaa ei ole, siksi `vieritys koe`).
+- 122: odottaa Natiivi-UI:n tekstin piilotusta, sitten todennus että luenta kuuluu.
+- Linssisepän äänitoiveet (linssien-aanitoiveet-20260925.md) tulivat minulle: Fablelta ei ole annettu äänisuunnitelmaa — kysy.
