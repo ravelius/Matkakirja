@@ -110073,6 +110073,230 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Kingston, Norfolk Island',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Norfolk Island, Norfolk Island Airport, Burnt
+       * Pine, Norfuk language, Norfolk Island National Park, Mount
+       * Bates, Two Chimneys Wines, Thanksgiving) ja Wikivoyagesta
+       * (Norfolk Island: saapuminen, liikkuminen, ruoka, juhlat,
+       * uiminen, yhteydet) — teksti omaa. Nostojen ja maalehden
+       * aiheita (Cook ja männyt, vankisiirtola, Maconochie,
+       * pitcairnilaisten muutto, Nobbs, Kingstonin laituri ja
+       * rakennukset, papukaija, liitäjä, hibiskus, sukunimet,
+       * kielen historia) ei toisteta. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: viikunapuiden varjostama tie (Brian,
+       * Flickr 2017; tien nimeä ei kerrota, siksi teksti yleinen).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Norfolk Island (13).jpg',
+          lyhyt: 'Norfolkin kapeaa tietä varjostavat järeät viikunapuut ja norfolkinmännyt.',
+          selite: 'Norfolkinsaaren teillä ajetaan enintään 50 kilometrin '
+            + 'tuntinopeutta, ja tämä kapea tie kulkee järeiden, '
+            + 'pöytäjuuristen viikunapuiden ja norfolkinmäntyjen alta.',
+          lahde: 'Brian, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Norfolkinsaarelle lennetään Sydneystä tai Brisbanesta '
+          + 'kansainvälisen terminaalin kautta, vaikka saari kuuluu '
+          + 'Australiaan. Perillä vuokrataan auto, sillä busseja ei ole, ja '
+          + 'teillä lehmillä on etuajo-oikeus ja jokaista vastaantulijaa '
+          + 'tervehditään. Kaupat ja ravintolat ovat Burnt Pinen '
+          + 'pääkadulla, ja lautaselle päätyy pääosin saarella kasvanutta, '
+          + 'koska tuoreiden hedelmien ja vihannesten tuonti on kielletty. '
+          + 'Kylteissä näkyy saaren omaa norfukin kieltä, ja marraskuussa '
+          + 'vietetään amerikkalaisten valaanpyytäjien tuomaa kiitospäivää. '
+          + 'Kansallispuiston polut kulkevat puusaniaisten alta kallioiden '
+          + 'reunoille, ja uimaan mennään Kingstonin lahtiin, joita '
+          + 'koralliriutta suojaa avomereltä.',
+        artikkeli: {
+          nimi: 'Matkailijan Norfolk',
+          teksti: 'Norfolkinsaarella jokainen vastaantulija tervehtii.',
+          nosto: 'Saaren teillä lehmillä on lain turvaama etuajo-oikeus, ja '
+            + 'jokainen autoilija nostaa vastaantulijalle tervehdykseksi '
+            + 'ainakin sormen ratista.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Norfolkinsaari kuuluu Australiaan, mutta matka sinne '
+                + 'alkaa Sydneyn tai Brisbanen kansainväliseltä terminaalilta: '
+                + 'vaikka lento on kotimainen, saarelle lähtijät kulkevat '
+                + 'tulli- ja passintarkastuksen kautta, joten '
+                + 'henkilöllisyystodistus on otettava mukaan. Suoria vuoroja '
+                + 'lentää Qantas. Tuoreita hedelmiä, vihanneksia ja lihaa ei '
+                + 'kannata pakata laukkuun, sillä karanteenisäännöt kieltävät '
+                + 'niiden tuonnin. Lentokenttä rakennettiin vuonna 1942 '
+                + 'Yhdysvaltain ilmavoimien pyynnöstä, ja tasaista maata oli '
+                + 'niin vähän, että kukkuloiden laet tasoitettiin '
+                + 'puskutraktoreilla ja laaksot täytettiin. Samalla kaadettiin '
+                + 'noin 500 norfolkinmännyn Pine Avenue -puukuja. '
+                + 'Joukkoliikennettä saarella ei ole, joten matkailija vuokraa '
+                + 'auton, ja teitä on kaikkiaan 80 kilometriä. Nopeusrajoitus '
+                + 'on 50 kilometriä tunnissa, kylässä 40 ja koulun kohdalla '
+                + '30, ja paikallinen laki antaa etuajo-oikeuden karjalle. '
+                + 'Lisäksi on opittava Norfolk wave: jokaista vastaantulijaa '
+                + 'tervehditään, vähintään nostamalla etusormi ratista, '
+                + 'innokkaimmin koko käsivarrella.',
+              kuva: [
+                {
+                  tiedosto: 'Norfolk terminal.JPG',
+                  lyhyt: 'Saattajat vilkuttavat lentoaseman aidan takaa lähtevälle koneelle.',
+                  selite: 'Norfolkinsaaren lentoaseman edessä liehuvat '
+                    + 'Australian ja Norfolkinsaaren liput, ja saattajat '
+                    + 'vilkuttavat aidan takaa koneelle, jonka varjo näkyy '
+                    + 'asematasolla.',
+                  lahde: 'Rwiseman97, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Norfolk Island 2017 (8).jpg',
+                  lyhyt: 'Lentokentän kiitorata halkoo saaren länsiosan nurmitasankoa.',
+                  selite: 'Vuonna 1942 rakennettu kiitorata erottuu '
+                    + 'norfolkinmäntyjen takaa saaren länsiosan '
+                    + 'nurmitasangolla, kun sitä katsoo saaren korkeilta '
+                    + 'rinteiltä.',
+                  lahde: 'Brian, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Norfolk air 7.1.12.jpg',
+                  lyhyt: 'Norfolk Airin Boeing 737 odotti lähtöä Brisbaneen tammikuussa 2012.',
+                  selite: 'Saaren oma lentoyhtiö Norfolk Air lensi vuosina '
+                    + '2006–2012, ja kuva on otettu kuukautta ennen kuin '
+                    + 'yhtiö lopetti lentonsa.',
+                  lahde: 'Rwiseman97, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Burnt Pinen katu ja saaren pöytä',
+              teksti: 'Saaren kauppakeskus Burnt Pine, norfukiksi Ban Pain, '
+                + 'on nuori kylä: se syntyi 1940-luvulla lentokentän '
+                + 'kupeeseen, ja matkailun kasvaessa kauppoja, kahviloita ja '
+                + 'majataloja nousi Taylors Roadin varteen. Kylän rajoilla '
+                + 'tiehen on upotettu karjaritilät, joiden yli lehmät eivät '
+                + 'kävele. Ostoksilla käynti vaatii suunnittelua: moni '
+                + 'erikoisliike avaa vasta kymmenen tai yhdentoista aikaan ja '
+                + 'sulkee kolmelta, ja keskiviikko- ja lauantai-iltapäivisin '
+                + 'sekä sunnuntaisin useimmat ovet ovat kiinni. '
+                + 'Pankkiautomaatteja on vain yksi, joten käteistä kannattaa '
+                + 'pitää mukana. Koska tuoreiden hedelmien ja vihannesten '
+                + 'tuonti on kielletty, ruoka kasvaa enimmäkseen saarella: '
+                + 'banaaneja, bataatteja, avokadoja ja viikunoita. '
+                + 'Pitcairnilta periytyneitä ruokia ovat raakabanaaneista '
+                + 'tehdyt mudda-mykyt ja kumara-pilhi, ja ravintolat '
+                + 'tarjoavat tuoretta kalaa. Illallinen alkaa puoli kuudelta '
+                + 'ja päättyy kahdeksaan mennessä, ja pöytä varataan jo '
+                + 'edellisenä päivänä. Juomiakin tehdään saarella: '
+                + 'ainoan viinitilan, Two Chimneysin, ensimmäiset köynnökset '
+                + 'istutettiin 2003, ja Cascade Roadin likööritehtaan '
+                + 'yhteydessä pullotetaan vanhanaikaisen makuisia '
+                + 'virvoitusjuomia.',
+              kuva: {
+                tiedosto: 'Burnt Pine in Norfolk Island, Australia.jpg',
+                lyhyt: 'Burnt Pinen pääkatu sadepäivänä: puusaniaisia, palmuja ja matalia liiketaloja.',
+                selite: 'Burnt Pinen kauppakatu on saaren liike-elämän '
+                  + 'keskus, ja sen kautta kulkee lähes kaikki liikenne '
+                  + 'saaren puolelta toiselle.',
+                lahde: 'bertknot, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Norfukia kylteissä, kiitospäivä marraskuussa',
+              teksti: 'Englannin rinnalla saaren virallinen kieli on norfuk, '
+                + 'ja sitä näkee matkan varrella: lentoasema on Norfuk Ailen '
+                + 'Aeyaport, korkein huippu Maun Biets ja eräs '
+                + 'sademetsäpolku A Trip Ina Stik. Kielessä on myös saaren '
+                + 'omia nimiä. Yksi kalalaji sai nimensä Sandford Warren '
+                + '-nimiseltä mieheltä, joka sai sen saalisosuudekseen, ja '
+                + 'pyhimyskalastaja on norfukiksi nuffka. Juhlista '
+                + 'erikoisin on kiitospäivä, jonka saarella käyneet '
+                + 'amerikkalaiset valaanpyyntialukset toivat mukanaan. Sitä '
+                + 'vietetään marraskuun viimeisenä keskiviikkona '
+                + 'jumalanpalveluksin ja ruokajuhlin, ainoana paikkana '
+                + 'Australiassa. Iltaisin Ferny Lanen teatterissa näytetään '
+                + 'elokuvia, ja paikalliset näyttelijät esittävät '
+                + 'oikeussalidraamaa Trial of the 15, joka kertoo saaren '
+                + 'vankiajasta viidentoista todistajanlausunnon kautta. '
+                + 'Middlegatessa voi kiertää 360 asteen '
+                + 'panoraamamaalauksen Bountyn tarinasta, jonka '
+                + 'saarelaistaiteilijat tekivät vuosina 2001–2002. Keskustelun saarelaisten kanssa voi '
+                + 'avata kysymällä, kumpi esitti paremmin Fletcher '
+                + 'Christianin, Marlon Brando vuoden 1962 vai Mel Gibson '
+                + 'vuoden 1984 elokuvassa: molemmat ovat kaikille tuttuja.',
+              kuva: {
+                tiedosto: 'NFcinema.jpg',
+                lyhyt: 'Ferny Lanen teatteri näyttää elokuvia ja saaren omaa oikeussalinäytelmää.',
+                selite: 'Tammikuussa 2018 Burnt Pinen Ferny Lanen teatterin '
+                  + 'ilmoitustaululla olivat uudet elokuvat ja paikallisten '
+                  + 'näyttelijöiden Trial of the Fifteen.',
+                lahde: 'Casliber, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kansallispuiston polut',
+              teksti: 'Noin kymmenesosa saaresta kuuluu kansallispuistoon, '
+                + 'joka suojelee viimeisiä rippeitä saarta aikoinaan '
+                + 'peittäneestä subtrooppisesta sademetsästä. Mount Pittin '
+                + 'huipulle pääsee autolla, ja sieltä noin kilometrin '
+                + 'mittainen harjupolku vie saaren korkeimmalle kohdalle, '
+                + '319-metriselle Mount Batesille. Sen laelle sijoitettiin '
+                + 'toisen maailmansodan aikana tutka-asema, jonka paikalla '
+                + 'voi yhä käydä. Parin tunnin reitti Bridle Track '
+                + 'alkaa Captain Cookin muistomerkiltä ja seuraa '
+                + 'kallionreunaa ja sademetsää rannikkoa pitkin, ja '
+                + 'sivupolut vievät näköalapaikoille Bird Rockin yllä. '
+                + 'Kasvitieteellisessä puutarhassa on polkuja pyörätuolillakin '
+                + 'kuljettavasta yläosasta rotkon pohjalle asti, ja puiston '
+                + 'metsissä kasvaa palmuja ja maailman korkein '
+                + 'puusaniaislaji, jotka ovat muualla saarella harvinaisia. '
+                + 'Luoteisrannan Anson Bayn näköalapaikalta '
+                + 'katsotaan turkoosia lahtea, jonne retkiyhtiöt järjestävät '
+                + 'grilliaamiaisia, mutta uimaan siellä ei pidä mennä '
+                + 'voimakkaiden virtausten takia. Hundred Acres Reserven '
+                + 'rantakallioilla pesii merilintuja, ja polun varrella '
+                + 'kasvaa valtavia viikunapuita.',
+              kuva: {
+                tiedosto: 'NBGvista.jpg',
+                lyhyt: 'Puusaniainen kohoaa sumuisen kasvitieteellisen puutarhan metsän yllä.',
+                selite: 'Norfolkinsaaren kasvitieteellisessä puutarhassa '
+                  + 'puusaniainen ja norfolkinmännyt kohoavat tiheän '
+                  + 'aluskasvillisuuden yllä sumuisena tammikuun päivänä.',
+                lahde: 'Casliber, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Riutan suojassa, verkon ulkopuolella',
+              teksti: 'Uimaan mennään Kingstonin edustalle Emily Bayhin ja '
+                + 'viereiseen Slaughter Bayhin, joita pieni koralliriutta '
+                + 'suojaa avomereltä. Muut rannat ovat valvomattomia, ja '
+                + 'saarelaiset varoittavat "seitsemännestä aallosta", '
+                + 'yllättäen korkeammaksi nousevasta aallosta, joka voi '
+                + 'viedä varomattoman uimarin mukanaan. Riutan sisällä '
+                + 'snorklataan korallien ja trooppisten kalojen keskellä, ja '
+                + 'Emily Baystä lähtee lasipohjaveneitä riutan reunalle. '
+                + 'Rannalta voi nähdä myös valaita: kaupallinen valaanpyynti '
+                + 'jatkui saarella vuoteen 1956, ja nykyään lähivesillä '
+                + 'liikkuu ryhävalaita, muita valaslajeja ja delfiinejä. '
+                + 'Maissa matkailijan älypuhelin menettää älynsä: Australian '
+                + 'matkapuhelinverkot eivät ulotu saarelle, verkkovierailu '
+                + 'ei yleensä toimi, ja yhteydet hoidetaan kahviloiden ja '
+                + 'majoitusten langattomilla verkoilla. Paikalliset '
+                + 'puhelinnumerot ovat viisinumeroisia, ja retkien ja '
+                + 'ravintolapöytien varaukset hoidetaan usein puhelimella. '
+                + 'Rikoksia on niin vähän, että '
+                + 'moni saarelainen jättää talonsa ja autonsa lukitsematta.',
+              kuva: {
+                tiedosto: 'Moorish Idol, Emily Bay, Kingston 2899, Norfolk Island imported from iNaturalist photo 347594377.jpg',
+                lyhyt: 'Kolme sarvikalaa uiskentelee Emily Bayn riutalla korallien yllä.',
+                selite: 'Emily Bayn riutan suojassa snorklaaja näkee '
+                  + 'trooppisia kaloja, kuten näitä kolmea sarvikalaa, jotka '
+                  + 'uivat punertavan korallin yllä.',
+                lahde: 'Susan Prior, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -110717,6 +110941,229 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Hudson Bay Railway',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Churchill, Manitoba; Winnipeg–Churchill train;
+       * Hudson Bay Railway (1997); Churchill station; Churchill Airport;
+       * Wapusk National Park; Beluga whale; Churchill Rocket Research
+       * Range; Itsanitaq Museum; List of accidents and incidents involving
+       * the Curtiss C-46 Commando) ja Wikivoyagesta (Churchill) — teksti
+       * omaa. Nostojen aiheita (turkiskauppa, linnoitus, Hearne, La
+       * Pérouse, radan rakentaminen, karhujen odotus ja uinti, merijää,
+       * karhuvankila, karhuhälytys) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: jääkarhu tundrabussin kyljessä (Ansgar Walk).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Tundra Buggy 2004-11-13.jpg',
+          lyhyt: 'Jääkarhu nousee takajaloilleen tundrabussin kylkeä vasten ja kurkistaa ikkunaan.',
+          selite: 'Marraskuussa 2004 kuvattu jääkarhu tutkii tundrabussia, '
+            + 'jonka matkustamo on nostettu jättimäisten pyörien varaan '
+            + 'korkealle maasta.',
+          lahde: 'Ansgar Walk, Wikimedia Commons (CC BY 2.5)',
+        },
+        kappale: 'Churchilliin ei johda yhtään maantietä: 870 asukkaan '
+          + 'kaupunkiin Hudsoninlahden rannalle tullaan joko lentäen '
+          + 'Winnipegistä tai lähes kaksi vuorokautta kestävällä '
+          + 'junamatkalla. Perillä kaupungin kävelee päästä päähän '
+          + 'kymmenessä minuutissa, mutta luontomatkailijoita saapuu '
+          + 'vuosittain 10 000–12 000. Vuodessa on kolme sesonkia: kesällä '
+          + 'joen suistoon uivat tuhannet maitovalaat, loka–marraskuussa '
+          + 'jääkarhuja katsotaan tundrabussien ikkunoista, ja sydäntalven '
+          + 'pitkät yöt ovat revontulien aikaa. Kaupungin laidoilla '
+          + 'odottavat maahan syöksynyt rahtikone, karille ajanut laiva ja '
+          + 'entinen rakettiasema, jonne tutkijat ovat tulleet revontulien '
+          + 'perässä jo 1950-luvulta asti.',
+        artikkeli: {
+          nimi: 'Matkailijan Churchill',
+          teksti: 'Churchilliin pääsee vain junalla tai lentokoneella.',
+          nosto: 'Tundralla lepää yhä vuonna 1979 maahan syöksynyt rahtikone, '
+            + 'jonka lastina oli moottorikelkka ja laatikoittain virvoitusjuomia.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ilman maantietä',
+              teksti: 'Churchill ei ole yhteydessä Kanadan maantieverkkoon, '
+                + 'joten autoilija pääsee enintään Thompsoniin, jonne auton '
+                + 'voi jättää parkkiin. Ainoa maitse kulkeva yhteys on rata. '
+                + 'Via Railin juna lähtee Winnipegin Union Stationilta kahdesti '
+                + 'viikossa ja ajaa noin 1 700 kilometriä Manitoban ja '
+                + 'Saskatchewanin halki noin 45 tunnissa; lisäksi kerran '
+                + 'viikossa kulkee vuoro The Pasista. Thompsonissa juna seisoo '
+                + 'tunteja, ja matkustajat ehtivät kauppaan ja syömään. '
+                + 'Makuuvaunussa matka on elämys, istumapaikalla kaksi yötä '
+                + 'käyvät pitkiksi. Toukokuussa 2017 tulvat huuhtoivat radan '
+                + 'poikki, ja kun kaikki tavara jouduttiin lentämään perille, '
+                + 'ruoan ja polttoaineen hinnat nousivat jyrkästi. Rata '
+                + 'myytiin 2018 Arctic Gateway Group -yhtiölle, jonka nykyään '
+                + 'omistavat pohjoisen Manitoban kunnat ja alkuperäiskansojen '
+                + 'yhteisöt, ja korjatulla radalla matkustajajunat palasivat '
+                + 'joulukuussa 2018. Nopeammin perille pääsee Calm Airin '
+                + 'lennolla Winnipegistä noin kahdessa ja puolessa tunnissa. '
+                + 'Kentän 2 803 metrin kiitotie on perua toisen maailmansodan '
+                + 'aikaisesta yhdysvaltalaisesta tukikohdasta, ja sille voi '
+                + 'hätätilanteessa laskeutua jumbojettikin. Churchillin '
+                + 'pienellä kentällä ei ole turvatarkastusta, joten '
+                + 'Winnipegissä jatkolennolle vaihtavan on varattava aikaa '
+                + 'tarkastukseen.',
+              kuva: [
+                {
+                  tiedosto: 'VIA Rail Winnipeg–Churchill Train at Churchill Railway Station 2024-09-17.jpg',
+                  lyhyt: 'Via Railin juna Winnipegistä on saapunut Churchillin asemalle radan päähän.',
+                  selite: 'Syyskuussa 2024 kuvattu juna 693 lähti Winnipegistä '
+                    + 'kaksi päivää aiemmin ja saapui Churchilliin aamulla '
+                    + 'noin tunnin etuajassa.',
+                  lahde: 'Phil Richards, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'VIA Rail Canada Churchill Station.jpg',
+                  lyhyt: 'Matkustajat nousevat junasta Churchillin asemalaiturille heinäkuussa 2019.',
+                  selite: 'Churchillin suojeltu asemarakennus toimii myös Parks '
+                    + 'Canadan opastuskeskuksena, jossa kerrotaan seudun '
+                    + 'luonnosta ja historiasta.',
+                  lahde: 'Cjstepney, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Churchill Airport (11812003204).jpg',
+                  lyhyt: 'Churchillin lentoaseman pieni terminaali lentokoneen ikkunasta nähtynä.',
+                  selite: 'Lokakuussa 2013 kuvattu terminaali palvelee '
+                    + 'Winnipegin-lentoja ja toimii vaihtokenttänä Nunavutin '
+                    + 'Kivallikin yhteisöihin matkaaville.',
+                  lahde: 'Josh Campbell, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Karhukausi varataan ajoissa',
+              teksti: 'Loka–marraskuussa Churchillin hotellit, junat ja lennot '
+                + 'täyttyvät, ja karhuja katsomaan lähdetään lähes aina '
+                + 'tundrabussilla. Nämä jättipyöräiset ajoneuvot kulkevat '
+                + 'kaupungin itäpuolella Churchill Wildlife Management Arean '
+                + 'suojelualueella, jolla ajamiseen tarvitaan lupa, ja '
+                + 'retkipäivän hintaan kuuluvat opas, keitto ja kuuma kaakao. '
+                + 'Takaosan ulkotasanteelta kuvataan, mutta sisälläkin on '
+                + 'kylmä, koska kaikki avaavat ikkunat. Majoitus, kulkuyhteys '
+                + 'ja tundrabussi kannattaa varata samalla kertaa, sillä '
+                + 'sesongin varaukset maksetaan usein kokonaan etukäteen eikä '
+                + 'rahoja palauteta: muuten voi jäädä käsiin hotellihuone '
+                + 'ilman retkeä tai retki ilman huonetta. Innokkaimmat '
+                + 'yöpyvät tundralla Tundra Buggy Lodgessa, makuu-, ruoka- ja '
+                + 'oleskeluvaunuista kootussa junassa, joka on käytössä vain '
+                + 'karhukaudella. Etelämpänä alkavaan Wapuskin '
+                + 'kansallispuistoon, jonka nimi tulee jääkarhua tarkoittavasta '
+                + 'cree-kielen sanasta, pääsee vain helikopterilla tai '
+                + 'luvallisten retkien mukana. Sesongin viimeinen viikko osuu '
+                + 'yleensä marraskuun loppupuolelle: kun lahti jäätyy, karhut '
+                + 'lähtevät jäälle ja tundrabussit jäävät talliin.',
+              kuva: {
+                tiedosto: 'Tundra Buggy Lodge 2004-11-16.jpg',
+                lyhyt: 'Tundra Buggy Lodgen vaunujunaa kiertävät jääkarhut marraskuussa 2004.',
+                selite: 'Tundralle pysäköity Tundra Buggy Lodge on koottu '
+                  + 'makuu-, ruoka- ja oleskeluvaunuista, ja sen vieraat näkevät '
+                  + 'karhuja ikkunasta heti herättyään.',
+                lahde: 'Ansgar Walk, Wikimedia Commons (CC BY 2.5)',
+              },
+            },
+            {
+              otsikko: 'Maitovalaiden kesä',
+              teksti: 'Kun jäät lähtevät, Churchill-joen suistoon ui kesäkuun '
+                + 'puolivälistä elokuun puoliväliin tuhansia maitovalaita eli '
+                + 'belugoita. Ne kuuluvat Hudsoninlahden länsiosan noin '
+                + '55 000 valaan kantaan, joka talvehtii jään alla '
+                + 'Hudsoninsalmessa ja hakeutuu kesäksi lämpimämpiin '
+                + 'jokisuihin; Hudsoninlahdella poikaset syntyvät enimmäkseen '
+                + 'kesäkuun lopulla. Valkoisia valaita kutsutaan '
+                + 'merikanarioiksi niiden visertävän ääntelyn vuoksi. '
+                + 'Retkille lähdetään kumiveneillä, kajakeilla tai '
+                + 'suppilaudoilla, ja rohkeimmat laskeutuvat märkä- tai '
+                + 'kuivapuvussa snorklaamaan jokeen valaiden joukkoon. '
+                + 'Veneretki jatkuu usein joen toiselle rannalle linnoituksen '
+                + 'raunioille, joille pääsee vain vesitse tai helikopterilla. '
+                + 'Churchill-joen suisto oli vuosina 1967–1992 akvaarioiden '
+                + 'tärkein belugojen pyyntipaikka, kunnes pyynti kiellettiin; '
+                + 'nyt valaiden katselu on kasvanut niin suureksi, että '
+                + 'tutkijat seuraavat veneiden melun vaikutusta valaisiin. '
+                + 'Kesä on myös hyönteisten aikaa, ja heinäkuussa pistäviä '
+                + 'kärpäsiä ja hyttysiä on eniten: mukaan kannattaa pakata '
+                + 'pitkähihaiset vaatteet ja DEET-pitoista karkotetta.',
+              kuva: {
+                tiedosto: 'Belugaschule 1999-07-02.jpg',
+                lyhyt: 'Maitovalasparvi ui Hudsoninlahdella Churchillin edustalla heinäkuussa 1999.',
+                selite: 'Heinäkuun alussa ilmasta kuvatussa maitovalasparvessa '
+                  + 'pinnalla näkyvät valkoiset selät, syvemmällä uivat valaat '
+                  + 'hohtavat vihreinä veden läpi.',
+                lahde: 'Ansgar Walk, Wikimedia Commons (CC BY 2.5)',
+              },
+            },
+            {
+              otsikko: 'Revontulet ja raketit',
+              teksti: 'Churchill on vilkkaan revontulivyöhykkeen keskellä, ja '
+                + 'kirkkaana yönä vihreitä verhoja voi nähdä jo loppukesästä '
+                + 'karhukauteen. Paras aika on silti tammi–maaliskuu, kun yöt '
+                + 'ovat pisimmät ja pilviä vähiten; keskikesällä taivas ei '
+                + 'pimene tarpeeksi. Juuri revontulien takia kaupungin '
+                + 'itäpuolelle rakennettiin 1950-luvulla rakettiasema, josta '
+                + 'Kanada ja Yhdysvallat laukaisivat yli 3 500 luotainrakettia '
+                + 'tutkimaan yläilmakehää ja revontulien vaikutusta '
+                + 'radioyhteyksiin. Asema hiljeni 1980-luvulla, ja viimeinen '
+                + 'raketti lähti huhtikuussa 1998, kun Akjuit Aerospace yritti '
+                + 'tehdä paikasta kaupallisen avaruussataman. Nyt entisellä '
+                + 'rakettikentällä 23 kilometrin päässä kaupungista toimii '
+                + 'Churchill Northern Studies Centre, tutkimusasema, joka '
+                + 'järjestää helmi–maaliskuussa viiden päivän '
+                + 'revontulikursseja myös matkailijoille. Omatoimimatkailija '
+                + 'voi vuokrata auton ja ajaa kaupungin valojen ulkopuolelle, '
+                + 'jolloin auto toimii samalla lämmittelytupana. Suosittu '
+                + 'kuvauspaikka on inuksuk, ihmistä esittävä kivikummeli '
+                + 'Hudsoninlahden rannassa. Kuvaamiseen tarvitaan jalusta ja '
+                + 'pitkä valotus, ja pakkanen tyhjentää akut nopeasti, joten '
+                + 'varakennot kannattaa pitää lämpimässä lähellä vartaloa.',
+              kuva: {
+                tiedosto: 'Aurora Borealis - Churchill, Manitoba (41299224291).jpg',
+                lyhyt: 'Revontulet kaartuvat Churchillin laitamien yllä elokuun lopun yönä 2014.',
+                selite: 'Revontulia näkyy Churchillissa jo loppukesällä, kun '
+                  + 'yöt alkavat pimetä: kuva on otettu 30. elokuuta 2014 vähän '
+                  + 'ennen puoltayötä.',
+                lahde: 'TravelingOtter, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Hylyt tundralla ja veistokset museossa',
+              teksti: 'Vapaapäivänä Churchillin ympäristöä voi kiertää '
+                + 'vuokra-autolla tai oppaan kanssa. Rantatien varressa '
+                + 'kaupungin itäpuolella lepää Miss Piggy, Lambairin Curtiss '
+                + 'C-46 -rahtikone, jonka vasemman moottorin öljynpaine katosi '
+                + 'pian nousun jälkeen 13. marraskuuta 1979. Miehistö yritti '
+                + 'palata kentälle, mutta kone syöksyi maahan muutama sata '
+                + 'metriä ennen kiitotietä, ja kolmesta miehistön jäsenestä '
+                + 'kaksi loukkaantui. Lastina oli moottorikelkka ja '
+                + 'laatikoittain virvoitusjuomia; nimensä kone sai pyöreästä '
+                + 'muodostaan ja huhusta, että se olisi joskus kuljettanut '
+                + 'sikoja. Hylky on jätetty paikalleen. Kauempana '
+                + 'vuorovesitasangolla ruostuu vuonna 1960 karille ajanut '
+                + 'Ithaka-laiva, jonne kävellään laskuveden aikaan paikallisen '
+                + 'oppaan kanssa. Kaupungissa kannattaa käydä '
+                + 'Itsanitaq-museossa, jonka katoliset lähetyssaarnaajat '
+                + 'perustivat vuonna 1944. Sen noin 1 300 esineen kokoelmassa '
+                + 'on kivestä, valaanluusta ja norsunluusta veistettyjä '
+                + 'inuiittiveistoksia, työkaluja ja kajakkeja. '
+                + 'Postitoimistosta saa matkamuistoksi koristeleiman, mutta '
+                + 'se kannattaa painattaa vanhaan passiin tai vihkoon: '
+                + 'voimassa olevan passin epävirallinen leima voi tehdä '
+                + 'passista kelvottoman.',
+              kuva: {
+                tiedosto: 'Miss Piggy - Curtiss C-46 (16620989048).jpg',
+                lyhyt: 'Vuonna 1979 maahan syöksyneen Miss Piggy -rahtikoneen hylky lepää Churchillin rantakallioilla.',
+                selite: 'Lambairin Curtiss C-46 menetti moottorinsa öljynpaineen '
+                  + 'pian nousun jälkeen ja syöksyi maahan ennen kiitotietä; '
+                  + 'taustalla häämöttää Hudsoninlahden jää.',
+                lahde: 'Mike Beauregard, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'jaakarhut',
@@ -112174,6 +112621,240 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Niger River',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Gao, 2026 Mali offensives, 2017 Gao bombing,
+       * Tombouctou and Bamba attacks, Camp Castor, United Nations
+       * Multidimensional Integrated Stabilization Mission in Mali, Gao
+       * International Airport, Koyraboro Senni, Takamba, Sidi Touré,
+       * Malian cuisine, Mali, Time in Mali) ja Wikivoyagen Gao-sivulta,
+       * matkustusvaroitukset Britannian ulkoministeriön Mali-sivulta
+       * (päivitetty 10.7.2026) ja Yhdysvaltain ulkoministeriön tasolta 4
+       * — teksti omaa. Suomen ulkoministeriön tiedotteen tasoa ei
+       * mainita, koska sivua ei saatu luettua; lukija ohjataan sinne.
+       * Nostojen ja historian aiheita (Songhain synty, Askian hauta ja
+       * sen käyttö, Tondibi, Barth, piroget ja rantamarkkinat, Sonni Ali,
+       * Askia Muhammadin uudistukset ja pyhiinvaellus, kulta-suolakauppa,
+       * lautta) eikä maalehden aiheita (griotit, sorko-kalastajat) eikä
+       * gallerian dyyniä toisteta. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja tiedostosivuilta, ja
+       * kuvat katsottu silmin. Hautakiven valokuva on CC BY 4.0 (itse
+       * teos PD). Pystykuva: Gao-Saneyn hautakivi, ainoa laadukas
+       * pystykuva Gaosta.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Stele Almeria Gao-Saney MNM R88-19-279.jpg',
+          lyhyt: 'Gao-Saneysta löydetyn marmorisen hautakiven kufilainen kirjoitus mainitsee hallitsijoita.',
+          selite: 'Todennäköisesti Espanjan Almeríassa 1100-luvulla '
+            + 'veistetty marmorinen hautakivi löytyi Gao-Saneyn '
+            + 'kuninkaalliselta hautausmaalta kaupungin itäpuolelta, ja se '
+            + 'kuuluu nykyään Malin kansallismuseon kokoelmiin.',
+          lahde: 'Marie-Lan Nguyen, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Gao on Nigerin itärannalla, 320 kilometriä Timbuktusta '
+          + 'itäkaakkoon, ja sen läpi kulkee nollameridiaani. Bamakoon '
+          + 'johtaa 1 200 kilometriä päällystettyä tietä, ja joen yli pääsee '
+          + 'vuonna 2006 avattua siltaa pitkin. Matkailijalle Gao on silti nyt '
+          + 'suljettu kaupunki: se on ollut Malin sodan etulinjassa vuodesta '
+          + '2012, ja keväällä 2026 sen kaduilla taisteltiin taas. Tämä opas '
+          + 'kertoo kaupungista sellaisena kuin se matkailijaa odottaa: joesta, joka '
+          + 'tulvii joulukuussa neljän kilometrin levyiseksi, torista, jolla '
+          + 'myydään pohjoisen suolalaattoja, ja kielestä, jonka nimi '
+          + 'tarkoittaa kaupunkilaisten kieltä. Yksi kaupungin vanhimmista '
+          + 'aarteista, Gao-Saneyn kuninkaalliselta hautausmaalta löydetty '
+          + 'marmorinen hautakivi, on jo Malin kansallismuseossa.',
+        artikkeli: {
+          nimi: 'Matkailijan Gao',
+          teksti: 'Gao odottaa matkailijoita, mutta nyt sinne ei matkusteta.',
+          nosto: 'Gaon lentokentän kiitorata ylittää nollameridiaanin, joten '
+            + 'kaupungissa ollaan samalla pituuspiirillä kuin Lontoon '
+            + 'Greenwichissä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Matka, jota nyt ei tehdä',
+              teksti: 'Gao on ollut Malin sodan keskellä vuodesta 2012. '
+                + 'Maaliskuun lopussa 2012 tuaregikapinalliset ja islamistiset '
+                + 'ryhmät ajoivat Malin armeijan kaupungista, ja saman vuoden '
+                + 'kesäkuussa vallan ottivat aseistetut islamistiryhmät. Ranskan '
+                + 'ja Malin joukot valtasivat Gaon takaisin tammikuussa 2013, ja '
+                + 'lentokentän laidalle nousi YK:n rauhanturvaoperaation leirejä, '
+                + 'joissa palveli sotilaita muun muassa Alankomaista ja '
+                + 'Saksasta. Rauha ei silti palannut: tammikuussa 2017 '
+                + 'itsemurhaiskussa kaupungin lähellä olleeseen sotilasleiriin '
+                + 'kuoli 77 ihmistä. Ranska veti joukkonsa Malista 2022 ja YK '
+                + 'vuoden 2023 loppuun mennessä. Huhtikuun 25. päivänä 2026 '
+                + 'Azawadin vapautusrintama FLA ja al-Qaidaan kytkeytyvä JNIM '
+                + 'hyökkäsivät yhtä aikaa moniin Malin kaupunkeihin, myös '
+                + 'Gaohon, ja kaupungissa taisteltiin uudelleen heinäkuussa. '
+                + 'Britannian ulkoministeriö neuvoo välttämään kaikkea '
+                + 'matkustamista Maliin, ja Yhdysvallat pitää maata '
+                + 'korkeimmalla "älä matkusta" -tasollaan. Suomen '
+                + 'ulkoministeriön matkustustiedote kannattaa lukea ennen kuin '
+                + 'Malia edes harkitsee. Kun matkaan joskus taas voi lähteä, '
+                + 'perille pääsee kolmea reittiä: lentäen Gaon kentälle, '
+                + 'Bamakosta 1 200 kilometriä päällystettyä maantietä tai '
+                + 'tulvakaudella jokea pitkin. Nigerin yli Gaosta pääsee '
+                + 'Wabarian siltaa, joka avattiin 2006 vanhan lauttayhteyden '
+                + 'tilalle.',
+              kuva: [
+                {
+                  tiedosto: 'Accueil à l’aéroport de Gao.jpg',
+                  lyhyt: 'Gaon lentokentällä vieraat otettiin maaliskuussa 2012 vastaan laululla ja tanssilla.',
+                  selite: 'Euroopan komission avustusvaltuuskunta otettiin '
+                    + 'maaliskuun alussa 2012 Gaon lentokentällä vastaan '
+                    + 'laululla ja tanssilla, vaikka pohjoisen Malin kapina oli '
+                    + 'jo alkanut; soittajat istuvat maassa kalebassin ääressä.',
+                  lahde: 'European Commission DG ECHO/Cyprien Fabre, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Pontgao.JPG',
+                  lyhyt: 'Wabarian silta vie Nigerin yli Gaossa, ja se korvasi vanhan lautan vuonna 2006.',
+                  selite: 'Helmikuussa 2008 kuvattu Wabarian silta ylittää '
+                    + 'Nigerin Gaossa: kuivan kauden matalan veden aikaan '
+                    + 'sillan edessä on ruohoisia kosteikkoja, ja taustalla '
+                    + 'kohoaa punertava törmä.',
+                  lahde: 'Taguelmoust, Wikimedia Commons (CC BY 3.0)',
+                },
+                {
+                  tiedosto: 'Camp Castor 2016-3.jpg',
+                  lyhyt: 'Alankomaalainen sotilas ohjaa rahtikonetta YK:n leirin kentällä Gaossa heinäkuussa 2016.',
+                  selite: 'YK:n rauhanturvaoperaation Camp Castor -leirissä '
+                    + 'Gaon lentokentän laidalla sotilaat ottivat vastaan '
+                    + 'kaiken saapuvan rahdin ja henkilöstön; leiri toimi '
+                    + 'vuodesta 2014 vuoteen 2023.',
+                  lahde: 'Hille Hillinga, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Joki nousee joulukuussa',
+              teksti: 'Gaossa Niger elää omaa vuoden kiertoaan. Joen ja sen '
+                + 'sivujoen Banin latvoilla Guineassa ja Norsunluurannikon '
+                + 'pohjoisosissa sataa eniten elokuussa, mutta tulvavesi kulkee '
+                + 'sisämaan suiston halki niin hitaasti, että Gaossa joki on '
+                + 'korkeimmillaan vasta joulukuussa. Silloin se on kaupungin '
+                + 'kohdalla neljä kilometriä leveä. Kesä- ja heinäkuussa '
+                + 'virtaamasta on jäljellä vain noin viisi prosenttia, ja '
+                + 'uomaan nousee saaria. Lähes kaikki kaupungin viljely '
+                + 'kastellaan joen vedellä. Valtion laivayhtiön matkustajalaivat '
+                + 'ovat kulkeneet Koulikorosta Gaohon 1 380 kilometrin matkan '
+                + 'yleensä heinäkuun lopusta marraskuun puoliväliin, kun vettä '
+                + 'riittää koko reitille, ja pienemmät veneet liikennöivät '
+                + 'pidempään Bouremin ja Ansongon välillä. Reitin varrella, '
+                + 'Gaosta ylävirtaan, on Timbuktun satama Korioumé. Joki '
+                + 'on nyt kuitenkin vaarallinen kulkutie: syyskuussa 2023 '
+                + 'JNIM-ryhmän taistelijat ampuivat raketeilla Moptista Gaohon '
+                + 'matkalla ollutta Tombouctou-laivaa, ja kuolleita oli yli '
+                + '150.',
+              kuva: {
+                tiedosto: 'Kankou.JPG',
+                lyhyt: 'Kankou Moussa -matkustajalaiva on kiinnittynyt Timbuktun Korioumén satamaan.',
+                selite: 'Malin valtion laivayhtiön Kankou Moussa -laiva '
+                  + 'Korioumén satamassa vuonna 2008; laiva on nimetty '
+                  + '1300-luvun Malin kuninkaan Mansa Musan mukaan.',
+                lahde: 'Lukecf, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Suolalaattoja ja räätäleitä',
+              teksti: 'Gaon vihannes- ja lihatorit ovat keskustassa aivan '
+                + 'joen rannalla. Tavallisten tuotteiden ja mausteiden '
+                + 'rinnalla niillä myydään suolalaattoja, jotka on louhittu '
+                + 'Malin kaukaisessa pohjoisessa. Askian haudalle päin johtavan '
+                + 'tien varrella on Marché Washington, vaate- ja kangastori, '
+                + 'jonka kojuissa räätälit ompelevat työn ääressä. Kaupungissa '
+                + 'on myös yötori. Malilaisen ruoan pohja on riisi ja hirssi, '
+                + 'joiden kanssa syödään lehdistä, esimerkiksi baobabin '
+                + 'lehdistä, keitettyjä kastikkeita tai maapähkinäkastiketta, '
+                + 'ja mukana on usein palasia grillattua kanaa, lammasta, '
+                + 'naudanlihaa tai vuohta. Aamulla syödään hirssipuuroa tai '
+                + 'leipää ja juodaan makeaa teetä. Gaon ruokaa on kehuttu '
+                + 'ennenkin. Ibn Battuta vieraili kaupungissa 1350-luvulla ja '
+                + 'kirjoitti sen riisistä, maidosta, kanoista, kalasta ja '
+                + 'kurkuista, joille ei ollut vertaa. Leo Africanus kävi '
+                + 'Gaossa 1500-luvun alussa ja näki leipää, lihaa, meloneja, '
+                + 'kurkkuja, kurpitsoja ja valtavat määrät riisiä, mutta viiniä '
+                + 'tai hedelmiä hän ei löytänyt.',
+              kuva: {
+                tiedosto: 'Mali, le marché à Gao (8438017791).jpg',
+                lyhyt: 'Gaon torilla myydään jauhoja vadeista ja polttopuita kasoista puiden varjossa.',
+                selite: 'Tammikuussa 1997 Gaon torilla myyjät istuvat '
+                  + 'jauho- ja viljavatiensa ääressä, polttopuut on kasattu '
+                  + 'puiden alle, ja taustalla näkyy vaaleaksi rapattu '
+                  + 'kaariovinen rakennus.',
+                lahde: 'Jeanne Menjoulet, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kaupunkilaisten kieli ja songhai-blues',
+              teksti: 'Useimmat gaolaiset puhuvat koyraboro sennia. Se '
+                + 'kuuluu songhain kieliin, ja sitä puhuu noin 400 000 ihmistä '
+                + 'Nigerin varrella Gourma-Rharousista Bouremin, Gaon ja '
+                + 'Ansongon kautta Nigerin valtion rajalle. Nimi tarkoittaa '
+                + 'kaupunkilaisten kieltä, erotukseksi tuaregien kaltaisista '
+                + 'paimentolaisista. Timbuktun itäpuolella kieli vaihtuu melko '
+                + 'jyrkästi lähisukulaiseensa koyra chiiniin, jota puhutaan '
+                + 'Timbuktussa. Gao on silti monen kansan kaupunki: siellä '
+                + 'asuu myös perinteisesti joella liikkuneita bozoja, '
+                + 'fulanikarjankasvattajia, tuaregeja, arabeja ja Länsi-Malista '
+                + 'tulleita bambaroita. Songhain kulttuurin pääkaupunkina Gao '
+                + 'isännöi seitsemättä songhain taiteen ja kulttuurin '
+                + 'festivaalia helmikuussa 2007. Songhaiden ja tuaregien '
+                + 'yhteistä perinnettä on takamba, musiikki ja tanssi, jossa '
+                + 'hartiat ja käsivarret keinuvat musiikin mukana ja jota '
+                + 'tanssitaan sekä istuen että seisten. Soittimina ovat luuttu '
+                + 'ja kalebassi. Gaossa vuonna 1959 syntynyt laulaja ja '
+                + 'kitaristi Sidi Touré aloitti uransa alueellisessa Sonhaï '
+                + 'Stars -orkesterissa ja voitti Malin kansallisessa '
+                + 'biennaalissa parhaan laulajan palkinnon 1984 ja uudelleen '
+                + '1986. Hänen musiikkiaan kutsutaan songhai-bluesiksi, ja '
+                + 'hänen vuoden 2012 levynsä Koïma jakaa nimensä Gaon '
+                + 'vastarannan dyynin laidalla olevan muinaisen asuinpaikan '
+                + 'kanssa.',
+              kuva: {
+                tiedosto: 'Sidi Touré 2013.jpg',
+                lyhyt: 'Gaossa syntynyt Sidi Touré laulaa ja soittaa kitaraa lavalla lokakuussa 2013.',
+                selite: 'Sidi Touré (keskellä) esiintyy WOMEX-'
+                  + 'maailmanmusiikkimessuilla lokakuussa 2013 akustisen '
+                  + 'kitaran kanssa; vasemmalla soittaja pitelee pientä '
+                  + 'luuttua ja oikealla sähkökitaraa.',
+                lahde: 'Yannis Psathas, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Nollameridiaanilla',
+              teksti: 'Gaon läpi kulkee nollameridiaani, sama pituuspiiri '
+                + 'kuin Lontoon Greenwichissä, ja lentokentän kiitorata, joka '
+                + 'päällystettiin asfaltilla 2018, ylittää sen. Malin kellot '
+                + 'ovat koko vuoden Greenwichin ajassa ilman kesäaikaa. '
+                + 'Ilmasto on kuuma ja kuiva. Toukokuu on kuumin kuukausi, '
+                + 'jolloin päivän ylin lämpötila on keskimäärin 43 astetta, ja '
+                + 'joulu- ja tammikuun öinä lämpötila laskee noin 15 asteeseen. '
+                + 'Sadetta tulee vain kesäkuun ja syyskuun välillä, eniten '
+                + 'elokuussa, ja vuoden sademäärä on keskimäärin vain 220 '
+                + 'millimetriä, joskin vuodet vaihtelevat paljon. Lokakuusta '
+                + 'maaliskuuhun Saharalta puhaltaa koillisesta kuiva '
+                + 'harmattan-tuuli. Rahana on Länsi-Afrikan CFA-frangi. '
+                + 'Vuoden 2023 perustuslaissa ranska menetti virallisen kielen '
+                + 'asemansa ja jäi työkieleksi, ja virallisia kieliä ovat nyt '
+                + 'maan omat kielet, songhai mukaan lukien. Yhteisenä kielenä '
+                + 'toimii bambara, jota noin 80 prosenttia malilaisista osaa. '
+                + 'Gaon ystävyyskaupunkeja ovat Thionville Ranskassa ja '
+                + 'Berkeley Kaliforniassa.',
+              kuva: {
+                tiedosto: 'Gao Mali 2006.jpg',
+                lyhyt: 'Ruskea pölymyrsky vyöryy Gaon matalien savitalojen ylle syyskuussa 2006.',
+                selite: 'Syyskuun 2006 iltana ruskea pölypilvi nousee Gaon '
+                  + 'savitalojen, muurien ja hiekkakatujen taakse ja peittää '
+                  + 'jo puolet taivaasta.',
+                lahde: 'David Sessoms, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
