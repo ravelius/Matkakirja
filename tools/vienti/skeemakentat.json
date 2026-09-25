@@ -19,11 +19,10 @@
   "1.38": "8ecfeec7eec821e1",
   "1.39": "3c9e4ae05bfc9dcb",
   "1.40": "a6303d9592c8e80b",
-  "1.41": "a6303d9592c8e80b",
-  "1.42": "450976039e4a59be"
+  "1.41": "a6303d9592c8e80b"
  },
  "uusin": {
-  "skeemaversio": "1.42",
+  "skeemaversio": "1.41",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -415,7 +414,6 @@
    ],
    "maakuntarajat": [
     "/kaaret",
-    "/maat",
     "bbox",
     "id",
     "iso3",
