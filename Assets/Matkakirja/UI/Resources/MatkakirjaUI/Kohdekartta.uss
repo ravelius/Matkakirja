@@ -75,6 +75,31 @@
     margin-bottom: 6px;
 }
 
+/* Web .kartta-tyokalut button.kartta-kokoruutu-nappi: vaalea pilleri (padding 0.2rem 0.6rem, 0.66rem versaalit,
+ * letter-spacing 0.12em, reunus rgba(70,51,31,0.35)). Ilman tätä nappi sai oletusnapin tumman kultapohjan. */
+.mk-kohdekartta__kokoruutu {
+    min-height: 0;
+    height: auto;
+    padding: 3.2px 9.6px;
+    border-width: 1px;
+    border-color: rgba(70, 51, 31, 0.35);
+    border-radius: 999px;
+    background-color: rgba(255, 250, 238, 0.6);
+    color: rgba(70, 51, 31, 0.85);
+}
+
+.mk-kohdekartta__kokoruutu .mk-nappi__teksti {
+    font-size: 10.6px;
+    letter-spacing: 1.3px;
+    color: rgba(70, 51, 31, 0.85);
+}
+
+.mk-kohdekartta__kokoruutu .mk-ikoni {
+    width: 11px;
+    height: 11px;
+    margin-right: 5px;
+}
+
 .mk-kohdekartta__kehys {
     position: relative;
     overflow: hidden;
