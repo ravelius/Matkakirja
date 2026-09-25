@@ -51,7 +51,7 @@ export const RIVIT = [
   { rivi: '11', nimi: 'Linssi: keksinnöt', web: 'linssi-keksinnot', peli: true, natiivi: ['linssi:linssi keksinnot', 'odota:4'], huom: 'aikajana: eri vuosi = eri hetki' },
   { rivi: '12', nimi: 'Linssi: selite', web: 'linssi-selite', peli: true, natiivi: ['linssi:linssi topografia', 'odota:3', 'ui:ui linssi selite', 'odota:2'], huom: 'natiivin selite on esimerkkiriveillä (ui linssi selite)' },
   { rivi: '12b', nimi: 'Linssi: selite (keksinnöt)', web: 'linssi-selite', peli: true, natiivi: ['linssi:linssi keksinnot', 'odota:4', 'ui:ui linssi selite', 'odota:2'] },
-  { rivi: '13', nimi: 'Linssi: ihmisen matka käynnissä', web: 'linssi-ihmisen-matka-kaynnissa', peli: true, natiivi: ['linssi:linssi ihmisen-matka', 'odota:18'], huom: 'esitys: alkukortti → musta kysymys → pallo (8 s ei riittänyt)' },
+  { rivi: '13', nimi: 'Linssi: ihmisen matka käynnissä', web: 'linssi-ihmisen-matka-kaynnissa', peli: true, natiivi: ['linssi:linssi ihmisen-matka', 'odota:4', 'linssi:esitys kaynnista', 'odota:16'], huom: 'esitys: alkukortti → Käynnistä (linssi-komento esitys kaynnista, juna/b13) → musta kysymys → pallo' },
   { rivi: '14', nimi: 'Asetukset (ratas)', web: 'ratas', peli: true, natiivi: ['ui:ui asetukset', 'odota:2'] },
   { rivi: '15', nimi: 'Karttaselite', web: 'karttaselite', peli: true, natiivi: ['ui:ui selite', 'odota:2'] },
   { rivi: '16', nimi: 'Kysymys (kohtaamisen visa)', web: 'visa', peli: true, natiivi: ['peli:tutki', 'peli:odota-tila Kysymys 15', 'peli:aloita', 'odota:2'], nollaa: true },

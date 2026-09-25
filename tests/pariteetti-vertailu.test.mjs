@@ -337,3 +337,19 @@ test('parita: anfangi, katkelmien kokoaminen, upotettu lihavointi ja natiivin pe
   assert.ok(p.parit.some((x) => x.laatu === 'koottu' && /France/.test(x.web.teksti)));
   assert.equal(tuomio(p).tila, 'SAMA', tuomio(p).syyt.join('; '));
 });
+
+test('tuomio: sallittu poikkeama (iPhonen yläpalkki) ei tee ERI:tä, mutta kerrotaan', () => {
+  const web = nakyma(PERUS);
+  const natiivi = nakyma(siirra(PERUS, (e, i) => ({ x: e.x - (i === 0 ? 93 : 0) })));
+  const ilman = tuomio(parita(web, natiivi));
+  assert.equal(ilman.tila, 'ERI');
+  const avain = normalisoi(PERUS[0].teksti);
+  const salli = [{ teksti: new RegExp(`^${avain}$`), syy: 'testi' }];
+  const kanssa = tuomio(parita(web, natiivi), null, { sallitutPoikkeamat: salli });
+  assert.equal(kanssa.tila, 'SAMA', kanssa.syyt.join('; '));
+  assert.ok(kanssa.eroPx < 8);
+  assert.match(kanssa.syyt.join('; '), /dx -93 px, dy \+0 px \(sallittu poikkeama: testi\)/);
+  // Pystyraja: sama teksti alempana ei ole yläpalkkia.
+  const alempana = tuomio(parita(web, natiivi), null, { sallitutPoikkeamat: [{ ...salli[0], yEnintaan: -1 }] });
+  assert.equal(alempana.tila, 'ERI');
+});

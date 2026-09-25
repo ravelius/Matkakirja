@@ -36,8 +36,21 @@ const odota = (ms) => new Promise((ok) => { setTimeout(ok, ms); });
  * pariteetti-iPad13 (iPad Pro 13" M5 1032 × 1376). Omina ne ajetaan kaikki rinnakkain.
  * Käännös kaikkiin: proto-kaanna.sh <haara> <UDID…> (ks. KAANNOS alla).
  */
+/*
+ * NATIIVIN iPHONE-ASETTELU (Raamattu, omistajan hyväksymä poikkeama): iPhonen yläpalkin raha ja päivä ovat
+ * eri kohdassa kuin webissä (raha dx ≈ −93). Linssiseppä 25.9.: ilman tätä yksikään rivi ei pääse alle 16 px:n.
+ */
+const IPHONEN_YLAPALKKI = [
+  { teksti: /^\d+$/, yEnintaan: 64, syy: 'iPhonen yläpalkki, raha' },
+  { teksti: /^päivä \d+( \p{L}+)?$/u, yEnintaan: 64, syy: 'iPhonen yläpalkki, päivä' },
+];
+
 export const LAITTEET = {
-  iphone: { udid: 'A2FD9C9F-37CA-4D7A-BA59-E65AF9EBCCA2', w: 402, h: 874, kierto: 'pysty' },
+  // PARITEETTI_IPHONE_UDID: toisen roolin oma simulaattori (Linssiseppä 25.9.: vain omiin simulaattoreihin).
+  iphone: {
+    udid: process.env.PARITEETTI_IPHONE_UDID || 'A2FD9C9F-37CA-4D7A-BA59-E65AF9EBCCA2', w: 402, h: 874, kierto: 'pysty',
+    sallitut: IPHONEN_YLAPALKKI,
+  },
   'iphone-vaaka': { udid: '993F8873-E2D9-4230-81CE-CBF9230D9B55', w: 874, h: 402, kierto: 'vaaka' },
   ipad11: { udid: 'C1D5E34C-DFA8-4326-AD85-92B58A672AA7', w: 834, h: 1210, kierto: 'pysty' },
   ipad13: { udid: '88939C12-2D15-4514-B107-DF6DAAABB227', w: 1032, h: 1376, kierto: 'pysty' },
@@ -368,7 +381,7 @@ async function vertaa() {
         const natiivi = lueJson(join(NATIIVI, `${r.rivi}-${l.nimi}.json`));
         let t;
         if (web && natiivi) {
-          t = tuomio(parita(web, skaalaa(natiivi, web)), kuva);
+          t = tuomio(parita(web, skaalaa(natiivi, web)), kuva, { sallitutPoikkeamat: l.sallitut ?? [] });
         } else {
           // Ilman UI-puuta (vanha käännös) tai web-laatikoita: tuomio pelkästä kuvasta.
           const sama = kuva.ssim >= 0.15 && kuva.reunat >= 0.15;

@@ -46,6 +46,9 @@ export const OLETUSRAJAT = Object.freeze({
   // Webin karttanimet (maa-, vesi- ja kaupunkinimet pallolla) ovat natiivissa 3D-kerrosta eivätkä näy UI-puussa:
   // tekstivertailu ohittaa ne, ja kartan vertaa kuvaero (b12-2-ajo: linssirivien PUUTTUU tuli pelkistä karttanimistä).
   ohitaWebLuokat: ['pallolauta-merkki'],
+  // Hyväksytyt poikkeamat: [{ teksti: RegExp normalisoidulle tekstille, yEnintaan?: web-px (keskipiste), syy }].
+  // Parin sijainti- ja kokoero ei tee näkymästä ERI:tä, vaan se kerrotaan huomautuksena (esim. iPhonen yläpalkki).
+  sallitutPoikkeamat: [],
 });
 
 // ---------------------------------------------------------------- teksti
@@ -505,8 +508,12 @@ export function tuomio(paritus, kuva = null, rajat = {}) {
   const siirtoOk = !pan || (Math.abs(siirto.dx) <= pan.w * r.siirtoOsuus && Math.abs(siirto.dy) <= pan.h * r.siirtoOsuus);
   const sx = siirtoOk ? siirto.dx : 0, sy = siirtoOk ? siirto.dy : 0;
   const ero = (p) => ({ dx: p.dx - sx, dy: p.dy - sy });
-  const eroPx = parit.length
-    ? pyor1(Math.max(...parit.map((p) => { const e = ero(p); return p.pitka ? Math.abs(e.dy) : Math.max(Math.abs(e.dx), Math.abs(e.dy)); })))
+  const poikkeama = (p) => (r.sallitutPoikkeamat ?? []).find((s) => s.teksti.test(p.web.avain ?? normalisoi(p.web.teksti))
+    && (s.yEnintaan == null || p.web.y + p.web.h / 2 <= s.yEnintaan));
+  const sallitut = parit.filter(poikkeama);
+  const mitattavat = parit.filter((p) => !poikkeama(p));
+  const eroPx = mitattavat.length
+    ? pyor1(Math.max(...mitattavat.map((p) => { const e = ero(p); return p.pitka ? Math.abs(e.dy) : Math.max(Math.abs(e.dx), Math.abs(e.dy)); })))
     : null;
 
   // PUUTTUU: natiivista ei saatu mitään tai suurin osa teksteistä puuttuu.
@@ -535,7 +542,7 @@ export function tuomio(paritus, kuva = null, rajat = {}) {
 
   // Sijainti ja koko, suurin ero ensin.
   const sijainti = [], koko = [];
-  for (const p of parit) {
+  for (const p of mitattavat) {
     const nimi = `"${lyhenna(p.web.teksti)}"`;
     const osat = [];
     const e = ero(p);
@@ -580,6 +587,12 @@ export function tuomio(paritus, kuva = null, rajat = {}) {
     syyt.push(...vainNatiivi.map((e) => `vain natiivissa (sallittu): "${lyhenna(e.teksti)}"`));
   }
 
+  for (const p of sallitut) {
+    const e = ero(p);
+    if (Math.abs(e.dx) > r.sijaintiPx || Math.abs(e.dy) > r.sijaintiPx) {
+      syyt.push(`"${lyhenna(p.web.teksti)}": dx ${etumerkki(e.dx)} px, dy ${etumerkki(e.dy)} px (sallittu poikkeama: ${poikkeama(p).syy})`);
+    }
+  }
   if (sx || sy) syyt.push(`koko näkymä siirtynyt dx ${etumerkki(sx)} px, dy ${etumerkki(sy)} px (turva-alue; vähennetty)`);
   return { tila: eri ? 'ERI' : 'SAMA', eroPx, syyt };
 }
