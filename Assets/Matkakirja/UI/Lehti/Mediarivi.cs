@@ -177,8 +177,10 @@ namespace Matkakirja.Natiivi
             // sormi osui "radio"-tekstiin, alla oleva trickle-pysäytys katkaisi PointerDownin napin kohdalla, eikä
             // Clickable saanut sitä (nappi toimi vain tyhjästä reunasta).
             t.Merkki.pickingMode = t.Nimi.pickingMode = t.Aika.pickingMode = PickingMode.Ignore;
-            // Napautus ei avaa/sulje kartuschaa (masto kuuntelee isäntää).
-            b.RegisterCallback<PointerDownEvent>(e => e.StopPropagation(), TrickleDown.TrickleDown);
+            // Napautus ei avaa/sulje kartuschaa (masto kuuntelee isäntää). Pysäytys kuplimisvaiheessa Clickablen jälkeen:
+            // TrickleDown-pysäytys napissa itsessään katkaisi myös kohdevaiheen, jolloin Clickable ei saanut painallusta
+            // (iPhone b13-testi: osuma napissa, mutta Painettu ei käynnistynyt).
+            b.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
             b.clicked += () =>
             {
                 var (tila, url) = radionapit[b];
