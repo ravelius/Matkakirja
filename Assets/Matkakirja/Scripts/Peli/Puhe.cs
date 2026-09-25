@@ -342,6 +342,7 @@ namespace Matkakirja.Natiivi
         public void Esilataa(string url)
         {
             if (string.IsNullOrEmpty(url) || esiladataan.Contains(url)) return;
+            if (Mukana.Polku(url) != null) { Debug.Log($"MATKAKIRJA puhe: esiladattu {Path.GetFileName(url.Split('?')[0])} (buildissa)"); return; }
             string tiedosto = Path.Combine(Kansio, Tiiviste(url) + Paate(url));
             if (File.Exists(tiedosto)) { Debug.Log($"MATKAKIRJA puhe: esiladattu {Path.GetFileName(url.Split('?')[0])} (välimuistissa)"); return; }
             StartCoroutine(EsilataaTiedosto(url, tiedosto));
@@ -372,11 +373,13 @@ namespace Matkakirja.Natiivi
         IEnumerator LataaJaSoita(string url, Func<UnityWebRequest> pyynto, float viiveS, int oma, bool synteesi, bool sailo)
         {
             float alku = Time.unscaledTime;
-            bool valimuistista = sailo && File.Exists(Path.Combine(Kansio, Tiiviste(url) + (synteesi ? ".mp3" : Paate(url))));
+            // Buildiin mukana (Mukana, löydös 118: avausluenta ilman verkkoa) → suoraan sieltä.
+            string mukana = sailo && !synteesi ? Mukana.Polku(url) : null;
+            bool valimuistista = mukana != null || (sailo && File.Exists(Path.Combine(Kansio, Tiiviste(url) + (synteesi ? ".mp3" : Paate(url)))));
             if (sailo) VerkkoOdotus.Osuma("puhe", valimuistista);
             string kansio = sailo ? Kansio : Application.temporaryCachePath;
-            string tiedosto = sailo ? Path.Combine(Kansio, Tiiviste(url) + (synteesi ? ".mp3" : Paate(url)))
-                : Path.Combine(kansio, "puhenayte-" + oma + ".mp3");
+            string tiedosto = mukana ?? (sailo ? Path.Combine(Kansio, Tiiviste(url) + (synteesi ? ".mp3" : Paate(url)))
+                : Path.Combine(kansio, "puhenayte-" + oma + ".mp3"));
             // Esilataus kesken (Esilataa): odotetaan sitä, ettei samaa tiedostoa ladata kahdesti rinnakkain.
             while (sailo && esiladataan.Contains(url)) yield return null;
             if (oma != tunnus) yield break;
@@ -444,7 +447,7 @@ namespace Matkakirja.Natiivi
             lahde.Play();
             // Viive pyynnöstä ääneen (löydös 118: intron pitää alkaa painalluksesta heti).
             Debug.Log($"MATKAKIRJA puhe: alkoi {(Time.unscaledTime - alku) * 1000:0} ms pyynnöstä ({(valimuistista ? "välimuisti" : "verkko")}) "
-                      + Path.GetFileName(url.Split('?')[0]));
+                      + Path.GetFileName(url.Split('?')[0]) + (mukana != null ? " [buildissa]" : ""));
             if (vanha != null && vanha != klippi) Destroy(vanha);
             // Uusi puhe korvasi soivan: kuuntelijat näkevät lopun ja uuden alun.
             if (puhuu) AsetaPuhuu(false);
