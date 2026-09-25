@@ -5447,3 +5447,7 @@ Siirtoseppä vie 1.40:n tuotantoon mergen jälkeen.
 ## AANILINJA-SELVITYS (PELIKOODARI): PELI PITAA AVAudioSessionin (Playback+Mix) AKTIIVISENA KAYNNISTYKSESTA ASTI, PYSYVA AudioListener + KAKSI OnAudioFilterRead-KASITTELIJAA (MaisemaKompressori, PuheVahvistin) LASKEVAT JOKA PUSKURIN; JOUTILAANA SULKEMINEN RISKI (RemoteIO PYSAHTYY, Ambient TOISI LOYDOKSEN 49 TAKAISIN) → FABLE: EI TOTEUTETA NYT; coreaudiodin 9,9 Gt OLI SIMULAATTORIVUOTO, EI PELIN; LIIKKUMISLISTA ERA 1: 12 AVOIMESTA 10 KORJATTU KOODISSA juna/b13 (fc90962d6), C11 SAMA, A13 KYSYTTY NATIIVISEPALTA, VIDEOTODENNUS ODOTTAA VUOROA; ERA 2 PR #3170 (25.9.2026 klo 13.48)
 
 Mahdollinen kevyt keino myöhemmin: ohittaa suodattimien laskenta hiljaisuudessa, mitattava iPadilla — vasta pariteetin jälkeen.
+
+## SISALTOPAKETTI 1.40 TUOTANNOSSA (SIIRTOSEPPA): 1.x v102 SKEEMA 1.40, 2.0 v48, AMPARI 498/498, YLI 18 MERKIN NIMIOITA 0; NATIIVISEPPA JA NATIIVI-UI ILMOITETTU; #3155 (1.41 OFFLINE Z9) ODOTTAA Z9:AA (25.9.2026 klo 13.48)
+
+POI-nimivika (Rouenin.) korjaantuu natiivissa, kun peli lataa paketin 1.40; ei build-riippuvuutta.
