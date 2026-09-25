@@ -109697,6 +109697,15 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Luandan satama ja rantakatu 1914, purjelaivoja ja höyryaluksia lahdessa.',
           selite: 'Luandan satama ja rantakatu vuonna 1914. Lahden suojissa lepäsi purjelaivoja ja höyryaluksia rinnakkain.',
           lahde: 'Agence Rol / BnF (PD)',
+          galleria: [
+            {
+              otsikko: 'Luanda hollantilaismiehityksen jäljiltä',
+              tiedosto: 'AMH-6863-KB View of Loanda.jpg',
+              lyhyt: 'Jacob van Meursin kaiverrus (n. 1668) näyttää Luandan sataman pian Alankomaiden Länsi-Intian kauppakomppanian miehityksen jälkeen.',
+              selite: 'Kaiverrus on hollantilaisen siirtomaavallan tuottama näkymä eikä paikallinen kuvaus: komppania hallitsi Luandaa vuosina 1641–1648, ennen kuin Portugali valtasi sataman takaisin.',
+              lahde: 'Jacob van Meurs, Atlas of Mutual Heritage / Koninklijke Bibliotheek, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           tiedosto: 'Marginal de Luanda HD Dji Mavic 3 Classic - By Délcio Geovany Borges.jpg',
@@ -109760,15 +109769,6 @@ export const KULTTUURI_KATEGORIAT = {
             'Värillisessä vuoden 1876 kartassa näkyvät Verney Lovett Cameronin reitti Tanganjika-järveltä länteen sekä alueen nimet Kongo, Angola ja Benguela – Cameronin matkan päätepiste Atlantin rannikolla.',
           lahde: 'J. Perthes, Gotha, Wikimedia Commons (Public domain)',
           wiki: 'Verney Lovett Cameron',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Luanda hollantilaismiehityksen jäljiltä',
-          tiedosto: 'AMH-6863-KB View of Loanda.jpg',
-          lyhyt: 'Jacob van Meursin kaiverrus (n. 1668) näyttää Luandan sataman pian Alankomaiden Länsi-Intian kauppakomppanian miehityksen jälkeen.',
-          selite: 'Kaiverrus on hollantilaisen siirtomaavallan tuottama näkymä eikä paikallinen kuvaus: komppania hallitsi Luandaa vuosina 1641–1648, ennen kuin Portugali valtasi sataman takaisin.',
-          lahde: 'Jacob van Meurs, Atlas of Mutual Heritage / Koninklijke Bibliotheek, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -110373,6 +110373,15 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Iltapäiväjuna Freetownin Cotton Tree -asemalta, kuuluisa puuvillapuu paikallaan.',
           selite: 'Iltapäiväjuna lähdössä Freetownin Cotton Tree -asemalta. Kaupungin kuuluisa puuvillapuu kasvaa yhä samalla paikalla.',
           lahde: 'Lisk-Carew Brothers (PD)',
+          galleria: [
+            {
+              otsikko: 'Freetown lähetyssaarnaajan kirjassa',
+              tiedosto: 'Freetown, Sierra Leone ca 1856.jpg',
+              lyhyt: 'John Leighton Wilsonin vuoden 1856 kirjankuva näyttää Freetownin satamakaupungin brittiläisen siirtomaavallan aikana.',
+              selite: 'Kuva on peräisin amerikkalaisen lähetyssaarnaajan Wilsonin teoksesta Western Africa (1856) ja edustaa ulkopuolisen katsetta kaupunkiin, joka oli tuolloin Britannian Länsi-Afrikan siirtomaan pääkaupunki ja vapautettujen orjien asuttama satama.',
+              lahde: 'John Leighton Wilson tai nimetön kuvittaja, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           tiedosto: 'Cotton tree in Freetown, SL - Mapillary (yIBZ74r6IsUFOaWtAPwhWw).jpg',
@@ -110436,15 +110445,6 @@ export const KULTTUURI_KATEGORIAT = {
             'Vanhan kuvalehden sivulla on viisi puupiirrosta: Madeiran ja Teneriffan maisemia, lentokala sekä oikeassa alakulmassa Freetownin "Club House" -rakennus palmujen keskellä.',
           lahde: 'Tuntematon tekijä, Wikimedia Commons (Public domain)',
           wiki: 'Freetown',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Freetown lähetyssaarnaajan kirjassa',
-          tiedosto: 'Freetown, Sierra Leone ca 1856.jpg',
-          lyhyt: 'John Leighton Wilsonin vuoden 1856 kirjankuva näyttää Freetownin satamakaupungin brittiläisen siirtomaavallan aikana.',
-          selite: 'Kuva on peräisin amerikkalaisen lähetyssaarnaajan Wilsonin teoksesta Western Africa (1856) ja edustaa ulkopuolisen katsetta kaupunkiin, joka oli tuolloin Britannian Länsi-Afrikan siirtomaan pääkaupunki ja vapautettujen orjien asuttama satama.',
-          lahde: 'John Leighton Wilson tai nimetön kuvittaja, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -110533,6 +110533,15 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Kaivosmiehen lapsi kantaa petrolia Pursglovessa Länsi-Virginiassa vuonna 1938.',
           selite: 'Kaivosmiehen lapsi kantaa kotiin kanisterillisen petrolia lamppuja varten Pursglovessa Länsi-Virginiassa. Vasemmalla seisoo hiilellä lastattu junavaunujono, taustalla kaivoksen lastaustorni ja oikealla yhtiön rakentamat asuintalot — sähköä ei kylässä ollut.',
           lahde: 'Marion Post Wolcott, Library of Congress (PD)',
+          galleria: [
+            {
+              otsikko: 'Sonntagin maalaus Shenandoahin laaksosta',
+              tiedosto: 'Shenandoah Valley William Louis Sonntag.jpeg',
+              lyhyt: 'William Louis Sonntag maalasi Shenandoahin laakson Appalakkien keskellä vuosina 1859–1860.',
+              selite: 'Sonntag oli yhdysvaltalaisen Hudson River -koulukunnan maisemamaalari, joka kuvasi Appalakkien vuoristolaaksoja juuri ennen sisällissotaa.',
+              lahde: 'William Louis Sonntag, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           tiedosto: 'Autumn Colors Overlook View Graveyard Fields Blue Ridge Pkwy NC.jpg',
@@ -110608,15 +110617,6 @@ export const KULTTUURI_KATEGORIAT = {
             'Kuva näyttää sumuisia, tiheän lehtimetsän peittämiä vuorenharjanteita Newfound Gap Roadin varrelta Great Smoky Mountainsin kansallispuistossa.',
           lahde: 'Ken Lund, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Great Smoky Mountains National Park',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Sonntagin maalaus Shenandoahin laaksosta',
-          tiedosto: 'Shenandoah Valley William Louis Sonntag.jpeg',
-          lyhyt: 'William Louis Sonntag maalasi Shenandoahin laakson Appalakkien keskellä vuosina 1859–1860.',
-          selite: 'Sonntag oli yhdysvaltalaisen Hudson River -koulukunnan maisemamaalari, joka kuvasi Appalakkien vuoristolaaksoja juuri ennen sisällissotaa.',
-          lahde: 'William Louis Sonntag, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -111001,6 +111001,15 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Kalastuslaivasto lipuin Labradorin rannikolla lääkärilähetystä vastassa 1909.',
           selite: 'Kalastuslaivasto liputettuna vastassa lähetysveneen tuloa Labradorin rannikolla. Kuvalaatta on lääkäri Wilfred Grenfellin kirjasta; hänen lähetyksensä kiersi rannikkoa veneellä ja toi lääkärinavun hajallaan oleviin kalastajakyliin, joihin ei päässyt maitse.',
           lahde: 'Wilfred Grenfell: Labrador, the country and the people (1909), Internet Archive / Commons (PD)',
+          galleria: [
+            {
+              otsikko: 'Bradfordin rannikkomaalaus 1866',
+              tiedosto: 'William Bradford - The Coast of Labrador - 1983.529 - Art Institute of Chicago.jpg',
+              lyhyt: 'William Bradfordin vuoden 1866 maalaus kuvaa Labradorin rannikkoa jäävuorineen.',
+              selite: 'Bradford erikoistui arktisiin merimaisemiin ja teki useita retkiä Labradorin ja Grönlannin rannikoille löytääkseen aiheita maalauksilleen.',
+              lahde: 'William Bradford, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           tiedosto: 'BattleHarbour Labrador 2008.JPG',
@@ -111076,15 +111085,6 @@ export const KULTTUURI_KATEGORIAT = {
             'Valokuva sumuisesta Battle Harbourista: valkoisia, punakattoisia varastorakennuksia rannalla, edessä laitureita ja telineitä, tausta katoaa usvaan.',
           lahde: 'Paul Gierszewski, Wikimedia Commons (Public domain)',
           wiki: 'Battle Harbour',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Bradfordin rannikkomaalaus 1866',
-          tiedosto: 'William Bradford - The Coast of Labrador - 1983.529 - Art Institute of Chicago.jpg',
-          lyhyt: 'William Bradfordin vuoden 1866 maalaus kuvaa Labradorin rannikkoa jäävuorineen.',
-          selite: 'Bradford erikoistui arktisiin merimaisemiin ja teki useita retkiä Labradorin ja Grönlannin rannikoille löytääkseen aiheita maalauksilleen.',
-          lahde: 'William Bradford, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -111177,6 +111177,15 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Harperin kirkko Kap Palmasin niemellä, torni purjehtijoiden maamerkkinä.',
           selite: 'Harperin kirkko Kap Palmasin niemellä. Sen torni näkyi kauas merelle ja toimi purjehtijoiden maamerkkinä.',
           lahde: 'W. H. Heard (PD)',
+          galleria: [
+            {
+              otsikko: 'Rannikko 1853 siirtolaisjulkaisussa',
+              tiedosto: 'Cape Palmas etch.jpg',
+              lyhyt: 'Wagner & C:n litografia (1853) kuvaa Kap Palmasin rannikkoa Liberian siirtolaisasutuksen aikaisessa julkaisussa.',
+              selite: 'Litografia on peräisin americo-liberialaisten siirtolaisten omasta julkaisusta Liberia Past and Present ja kuvaa nuoren siirtokunnan rantaviivaa vain parikymmentä vuotta sen perustamisen jälkeen.',
+              lahde: 'Wagner & C., Lith., Philadelphia, Liberia Past and Present, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           tiedosto: 'Harper, Liberia - panoramio (1).jpg',
@@ -111243,15 +111252,6 @@ export const KULTTUURI_KATEGORIAT = {
             'Nykyvalokuva näyttää kaksikerroksisen rakennuksen mustuneet, katottomat seinät, pylväiden reunustaman sisäänkäynnin ja niitä kohti nousevat leveät kiviportaat korkean heinikon keskellä.',
           lahde: 'Sophieroad, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Americo-Liberians',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Rannikko 1853 siirtolaisjulkaisussa',
-          tiedosto: 'Cape Palmas etch.jpg',
-          lyhyt: 'Wagner & C:n litografia (1853) kuvaa Kap Palmasin rannikkoa Liberian siirtolaisasutuksen aikaisessa julkaisussa.',
-          selite: 'Litografia on peräisin americo-liberialaisten siirtolaisten omasta julkaisusta Liberia Past and Present ja kuvaa nuoren siirtokunnan rantaviivaa vain parikymmentä vuotta sen perustamisen jälkeen.',
-          lahde: 'Wagner & C., Lith., Philadelphia, Liberia Past and Present, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -111476,6 +111476,15 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Riponin putoukset, joista Niili lähti Viktoria Nyanzasta; upposi padon alle 1954.',
           selite: 'Riponin putoukset, joista Niili lähti Viktoria Nyanzasta pohjoiseen. Isoisän ajan kuuluisa nähtävyys upposi padon alle 1954 — putousta ei enää ole.',
           lahde: 'Commons (PD)',
+          galleria: [
+            {
+              otsikko: 'Retkikunnan leiri rannalla',
+              tiedosto: 'Camp on the shores of Lake Victoria. Wellcome L0034853.jpg',
+              lyhyt: 'F. Meaullen etsaus (1890) näyttää eurooppalaisen retkikunnan leirin Viktorianjärven lounaisrannalla.',
+              selite: 'Etsaus kuvaa vain retkikunnan omaa leiriä eikä järven ranta-asukkaiden elämää — tyypillinen rajaus 1800-luvun eurooppalaisessa tutkimusmatkakuvastossa.',
+              lahde: 'F. Meaulle, Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
+            },
+          ],
         },
         {
           tiedosto: 'Boats by the Lake Victoria Shore.jpg',
@@ -111550,15 +111559,6 @@ export const KULTTUURI_KATEGORIAT = {
             'Kuvassa perinteisiä puuveneitä on ajettu rantaan Ggaban kalasatamassa Ugandassa; veneet ovat juuri tuoneet tilapiasaaliin myyntiin.',
           lahde: 'sarahemcc, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Tilapia',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Retkikunnan leiri rannalla',
-          tiedosto: 'Camp on the shores of Lake Victoria. Wellcome L0034853.jpg',
-          lyhyt: 'F. Meaullen etsaus (1890) näyttää eurooppalaisen retkikunnan leirin Viktorianjärven lounaisrannalla.',
-          selite: 'Etsaus kuvaa vain retkikunnan omaa leiriä eikä järven ranta-asukkaiden elämää — tyypillinen rajaus 1800-luvun eurooppalaisessa tutkimusmatkakuvastossa.',
-          lahde: 'F. Meaulle, Wellcome Collection, Wikimedia Commons (CC BY 4.0)',
         },
       ],
     },
@@ -111808,6 +111808,15 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Väkeä koolla kirkon edustalla Kamerunissa 1910-luvulla, vuoren juurella.',
           selite: 'Väkeä koolla kirkon edustalla Kamerunissa 1910-luvulla — vuoren juurella kohtasivat tuolloin monet maailmat.',
           lahde: 'Yale Divinity School (PD)',
+          galleria: [
+            {
+              otsikko: 'Näkymä vuoren juurelta 1892',
+              tiedosto: 'View taken at the foot of the Cameroons.jpg',
+              lyhyt: 'Élisée Reclus’n maantiedeteoksen kirjankuva (1892) näyttää maiseman Kamerunvuoren juurelta.',
+              selite: 'Kaiverrus on peräisin ranskalaisesta maantiedeteoksesta The Earth and Its Inhabitants ja edustaa 1800-lukulaisen eurooppalaisen matkakirjallisuuden näkemystä vuoresta.',
+              lahde: 'Tekijä tuntematon, The Earth and Its Inhabitants – Africa (1892), Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           tiedosto: 'Mount Cameroon view from Buea (Soppo).jpg',
@@ -111882,15 +111891,6 @@ export const KULTTUURI_KATEGORIAT = {
             'Kuvassa kolme uimaria kahlaa mereen mustien, pyöristyneiden laavakivien peittämällä rannalla – Kamerunvuoren purkausten synnyttämä tumma kivikko on tyypillinen näky koko Ambas-lahden rannikolla.',
           lahde: 'PRA, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Ambas Bay',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Näkymä vuoren juurelta 1892',
-          tiedosto: 'View taken at the foot of the Cameroons.jpg',
-          lyhyt: 'Élisée Reclus’n maantiedeteoksen kirjankuva (1892) näyttää maiseman Kamerunvuoren juurelta.',
-          selite: 'Kaiverrus on peräisin ranskalaisesta maantiedeteoksesta The Earth and Its Inhabitants ja edustaa 1800-lukulaisen eurooppalaisen matkakirjallisuuden näkemystä vuoresta.',
-          lahde: 'Tekijä tuntematon, The Earth and Its Inhabitants – Africa (1892), Wikimedia Commons (PD)',
         },
       ],
     },
@@ -111989,6 +111989,15 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Suakinin laituripaikka 1871, dhow-veneitä ja korallitaloja täydessä kukassaan.',
           selite: 'Suakinin laituripaikka 1871: dhow-veneitä ja korallitaloja saaren rannassa, kun satama oli vielä täydessä kukassaan.',
           lahde: 'Commons (PD)',
+          galleria: [
+            {
+              otsikko: 'Saaren näkymä 1875',
+              tiedosto: '"L\'île de Souakim (mer rouge) vue prise de l\'entrée du port" - par D. Morionas - btv1b8459557r.jpg',
+              lyhyt: 'D. Morionasin piirros (1875) kuvaa Suakinin saarta ja sataman sisääntuloa eurooppalaisen matkailijan silmin.',
+              selite: 'Piirros on peräisin ranskalaisesta matkakuvastosta ja näyttää isoisän matkavuotta lähellä olevan aikakauden näkymän, ei nykyistä raunioitunutta kaupunkia.',
+              lahde: 'D. Morionas, Bibliothèque nationale de France / Gallica, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           tiedosto: 'Suakin,custom office.jpg',
@@ -112052,15 +112061,6 @@ export const KULTTUURI_KATEGORIAT = {
             'Valokuva näyttää katunäkymän Suakinin mantereen puoleisesta El-Geyfin kaupunginosasta: hiekkaisen kadun ja aasinvetoisen kärryn, joilla tavaraa ja ihmisiä kuljetettiin vielä vuosikymmeniä kaupungin kulta-ajan jälkeenkin.',
           lahde: 'Bertramz, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Suakin',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Saaren näkymä 1875',
-          tiedosto: '"L\'île de Souakim (mer rouge) vue prise de l\'entrée du port" - par D. Morionas - btv1b8459557r.jpg',
-          lyhyt: 'D. Morionasin piirros (1875) kuvaa Suakinin saarta ja sataman sisääntuloa eurooppalaisen matkailijan silmin.',
-          selite: 'Piirros on peräisin ranskalaisesta matkakuvastosta ja näyttää isoisän matkavuotta lähellä olevan aikakauden näkymän, ei nykyistä raunioitunutta kaupunkia.',
-          lahde: 'D. Morionas, Bibliothèque nationale de France / Gallica, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -112138,6 +112138,15 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Charles de Foucauldin kivinen erakkomaja Assekremin laella, rakennettu 1911.',
           selite: 'Charles de Foucauldin kivinen erakkomaja Assekremin laella, rakennettu 1911. Aikakauden valokuvaa vuorilta ei ole vapaana saatavilla — maja seisoo kuvassa samanlaisena kuin isoisän aikaan.',
           lahde: 'Albert Backer, Commons (CC BY-SA 3.0)',
+          galleria: [
+            {
+              otsikko: 'Ranskalaisen taiteilijan tulkinta paimentolaiselämästä',
+              tiedosto: 'Paul-élie dubois, pastorale a hoggar, 1947.jpg',
+              lyhyt: 'Paul-Élie Dubois’n maalaus (1947) tulkitsee Ahaggarin paimentolaiselämää ulkopuolisen katseesta.',
+              selite: 'Maalaus on 1900-luvun puolivälin ranskalaisen taiteilijan näkemys tuaregipaimentolaisista, ei isoisän 1873 ajan kuva eikä paikallinen itsekuvaus.',
+              lahde: 'Paul-Élie Dubois (maalaus), Francesco Bini (valokuva), Musée des Années 30, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+          ],
         },
         {
           tiedosto: 'Sunrise Over the Assekrem Peaks — Hoggar Mountains, Algeria.jpg',
@@ -112215,15 +112224,6 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Hoggar Mountains',
         },
       ],
-      galleria: [
-        {
-          otsikko: 'Ranskalaisen taiteilijan tulkinta paimentolaiselämästä',
-          tiedosto: 'Paul-élie dubois, pastorale a hoggar, 1947.jpg',
-          lyhyt: 'Paul-Élie Dubois’n maalaus (1947) tulkitsee Ahaggarin paimentolaiselämää ulkopuolisen katseesta.',
-          selite: 'Maalaus on 1900-luvun puolivälin ranskalaisen taiteilijan näkemys tuaregipaimentolaisista, ei isoisän 1873 ajan kuva eikä paikallinen itsekuvaus.',
-          lahde: 'Paul-Élie Dubois (maalaus), Francesco Bini (valokuva), Musée des Années 30, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
     },
     {
       id: 'kulttuuri',
@@ -112299,6 +112299,15 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'São Sebastiãon linnoituksen piirros 1655, vanhin kuva Mosambikin saarelta.',
           selite: 'São Sebastiãon linnoituksen piirros vuodelta 1655 — vanhin kuva saarelta. Sama linnoitus vartioi satamaa isoisän aikaan ja vartioi yhä.',
           lahde: 'Commons (PD)',
+          galleria: [
+            {
+              otsikko: 'Lintuperspektiivi merivallan ajalta',
+              tiedosto: 'AMH-6803-NA Bird\'s eye view of Mozambique island.jpg',
+              lyhyt: 'Johannes Vingboonsin lintuperspektiivi (n. 1665) näyttää Mosambikin saaren Portugalin merivallan kartoituksessa.',
+              selite: 'Näkymä on eurooppalaisen merivallan tuottama historiallinen kartoituskuva saaren linnoituksesta ja satamasta, ei paikallinen kuvaus.',
+              lahde: 'Johannes Vingboons, Atlas of Mutual Heritage / Nationaal Archief, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           tiedosto: 'Forte de São Sebastião - Igreja.jpg',
@@ -112374,15 +112383,6 @@ export const KULTTUURI_KATEGORIAT = {
             'Valokuva näyttää pitkän, matalan sillan mantereelta saarelle auringonlaskun aikaan, veden pinnan heijastaessa taivaan värejä.',
           lahde: 'Michael Jack, Wikimedia Commons (CC BY 2.0)',
           wiki: 'Mozambique Island Bridge',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Lintuperspektiivi merivallan ajalta',
-          tiedosto: 'AMH-6803-NA Bird\'s eye view of Mozambique island.jpg',
-          lyhyt: 'Johannes Vingboonsin lintuperspektiivi (n. 1665) näyttää Mosambikin saaren Portugalin merivallan kartoituksessa.',
-          selite: 'Näkymä on eurooppalaisen merivallan tuottama historiallinen kartoituskuva saaren linnoituksesta ja satamasta, ei paikallinen kuvaus.',
-          lahde: 'Johannes Vingboons, Atlas of Mutual Heritage / Nationaal Archief, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -112621,6 +112621,15 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Tšad-järven rantaa ilmasta Walter Mittelholzerin Afrikan-lennolla.',
           selite: 'Tšad-järven rantaa ilmasta Walter Mittelholzerin kuuluisalla Afrikan-lennolla — juuri sellaiselta matkalta, joista isoisäkin luki lehdistä.',
           lahde: 'ETH-Bibliothek, Mittelholzer (PD)',
+          galleria: [
+            {
+              otsikko: 'Rantamaisema 1859',
+              tiedosto: 'Meyers Universum Band 20 04.jpg',
+              lyhyt: 'Vuoden 1859 eurooppalainen kaiverrus näyttää Tšadjärven rantamaiseman saksalaisessa matkakirjassa.',
+              selite: 'Kaiverrus on peräisin saksalaisesta Meyer\'s Universum -sarjasta ja edustaa 1800-lukulaista eurooppalaista näkemystä järven rannoista, ei paikallista kuvausta.',
+              lahde: 'Tekijä tuntematon, Meyer\'s Universum osa 20 (1859), Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           tiedosto: 'Lake chad shore (detilt).jpg',
@@ -112695,15 +112704,6 @@ export const KULTTUURI_KATEGORIAT = {
             'Väärävärinen satelliittikuva näyttää järven tumman sinisen avoveden pienenä läiskänä keskellä paljon laajempaa vaaleanvihreää, kosteikkokasvillisuuden peittämää aluetta, jota ympäröi vaaleanruskea aavikko.',
           lahde: 'MODIS Land Rapid Response Team, NASA GSFC, Wikimedia Commons (Public domain)',
           wiki: 'Lake Chad',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Rantamaisema 1859',
-          tiedosto: 'Meyers Universum Band 20 04.jpg',
-          lyhyt: 'Vuoden 1859 eurooppalainen kaiverrus näyttää Tšadjärven rantamaiseman saksalaisessa matkakirjassa.',
-          selite: 'Kaiverrus on peräisin saksalaisesta Meyer\'s Universum -sarjasta ja edustaa 1800-lukulaista eurooppalaista näkemystä järven rannoista, ei paikallista kuvausta.',
-          lahde: 'Tekijä tuntematon, Meyer\'s Universum osa 20 (1859), Wikimedia Commons (PD)',
         },
       ],
     },
@@ -112880,6 +112880,15 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Aukio Cayennessa 1880-luvun lopulla.',
           selite: 'Aukio Cayennessa 1880-luvun lopulla: palmurivi, matalia puutaloja ja yksinäinen kulkija. Painolaatta on kirjasta, jossa Lick-observatorion tutkijat raportoivat joulukuun 1889 auringonpimennyksestä — sitä varten retkikunta matkusti Kaliforniasta Guayanaan.',
           lahde: 'W. B. Tyler / Rijksmuseum, Commons (CC0)',
+          galleria: [
+            {
+              otsikko: 'Ranskan siirtomaasuunnitelma n. 1760',
+              tiedosto: 'Vue de la Rivière et de l\'Isle de Cayenne - c\'est en cet endroit que doit se rendre la nouvelle colonie françoise pour y occuper principalement les belles plaines situées entre les rivieres de Marauny, d\'Amaribo et... - btv1b69494998.jpg',
+              lyhyt: 'Noin vuonna 1760 tehty kaiverrus esittää Cayennejoen suuta ranskalaisen siirtomaasuunnitelman näkökulmasta.',
+              selite: 'Kaiverrus on osa Ranskan siirtomaahallinnon omaa suunnitteludokumentaatiota eikä paikallinen kuvaus — se merkitsee alueet, joille "uusi ranskalainen siirtokunta" oli tarkoitus perustaa.',
+              lahde: 'Tekijä tuntematon, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           tiedosto: 'Cayenne place des palmistes 2013.jpg',
@@ -113148,15 +113157,6 @@ export const KULTTUURI_KATEGORIAT = {
           ],
         },
       },
-      galleria: [
-        {
-          otsikko: 'Ranskan siirtomaasuunnitelma n. 1760',
-          tiedosto: 'Vue de la Rivière et de l\'Isle de Cayenne - c\'est en cet endroit que doit se rendre la nouvelle colonie françoise pour y occuper principalement les belles plaines situées entre les rivieres de Marauny, d\'Amaribo et... - btv1b69494998.jpg',
-          lyhyt: 'Noin vuonna 1760 tehty kaiverrus esittää Cayennejoen suuta ranskalaisen siirtomaasuunnitelman näkökulmasta.',
-          selite: 'Kaiverrus on osa Ranskan siirtomaahallinnon omaa suunnitteludokumentaatiota eikä paikallinen kuvaus — se merkitsee alueet, joille "uusi ranskalainen siirtokunta" oli tarkoitus perustaa.',
-          lahde: 'Tekijä tuntematon, Wikimedia Commons (PD)',
-        },
-      ],
     },
     {
       id: 'historia',
@@ -113904,6 +113904,15 @@ export const KULTTUURI_KATEGORIAT = {
             + 'portugalilaistyyliset talot on perinteisesti päällystetty.',
           lahde: 'MTur Destinos, Wikimedia Commons (Public domain)',
           wiki: 'Santarém, Pará',
+          galleria: [
+            {
+              otsikko: 'Hercule Florencen näkymä 1828',
+              tiedosto: 'Vue de Santarem sur le Tapajós, prise du côte de l\'Ouest. Août, 1828. Hercule Florence, ft., do acervo do Instituto Hercule Florence.jpg',
+              lyhyt: 'Ranskalais-brasilialaisen tutkimusmatkailijan Hercule Florencen vesiväri (1828) näyttää Santarémin Tapajós-joen länsirannalta.',
+              selite: 'Florence maalasi näkymän matkallaan Langsdorffin retkikunnan mukana — yksi harvoista aidoista, paikan päällä tehdyistä kuvista Santarémista isoisän ajan sukupolvea edeltävältä ajalta.',
+              lahde: 'Hércules Florence, Instituto Hercule Florence GLAM, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Vesien kohtaaminen',
@@ -114032,15 +114041,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'paviljonki puiston keskellä.',
           lahde: 'Lopmed, Wikimedia Commons (Public domain)',
           wiki: 'Santarém, Pará',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Hercule Florencen näkymä 1828',
-          tiedosto: 'Vue de Santarem sur le Tapajós, prise du côte de l\'Ouest. Août, 1828. Hercule Florence, ft., do acervo do Instituto Hercule Florence.jpg',
-          lyhyt: 'Ranskalais-brasilialaisen tutkimusmatkailijan Hercule Florencen vesiväri (1828) näyttää Santarémin Tapajós-joen länsirannalta.',
-          selite: 'Florence maalasi näkymän matkallaan Langsdorffin retkikunnan mukana — yksi harvoista aidoista, paikan päällä tehdyistä kuvista Santarémista isoisän ajan sukupolvea edeltävältä ajalta.',
-          lahde: 'Hércules Florence, Instituto Hercule Florence GLAM, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -114929,6 +114929,15 @@ export const KULTTUURI_KATEGORIAT = {
           lyhyt: 'Kufran keitaat ilmasta: palmulehtoja ja suolajärviä keskellä hiekkamerta.',
           selite: 'Kufran keitaat ilmasta kuvattuna: palmulehtoja ja suolajärviä keskellä hiekkamerta, päivien matkan päässä kaikesta.',
           lahde: 'Commons (PD)',
+          galleria: [
+            {
+              otsikko: 'Kufran keidas 1891',
+              tiedosto: 'AFR V2 D046 The Kufra oasis.jpg',
+              lyhyt: 'Vuonna 1891 julkaistu kuvitus näyttää Kufran keitaan Libyan aavikolla.',
+              selite: 'Kuvitus on peräisin Élisée Reclus’n ranskalaisesta maantiedeteoksesta ja edustaa 1800-lukulaista eurooppalaista näkemystä keitaasta, jonne harvat ulkopuoliset olivat tuolloin päässeet.',
+              lahde: 'Élisée Reclus’n teoksen kuvittaja, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           tiedosto: 'ISS-50 Al-Jawf Oasis in Eastern Libya.jpg',
@@ -114994,15 +115003,6 @@ export const KULTTUURI_KATEGORIAT = {
           lahde:
             'O.V.E.R.V.I.E.W. (Landsat 8 / USGS, käsittely Paul Quast), Wikimedia Commons (CC BY 2.0)',
           wiki: 'Rebiana Sand Sea',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Kufran keidas 1891',
-          tiedosto: 'AFR V2 D046 The Kufra oasis.jpg',
-          lyhyt: 'Vuonna 1891 julkaistu kuvitus näyttää Kufran keitaan Libyan aavikolla.',
-          selite: 'Kuvitus on peräisin Élisée Reclus’n ranskalaisesta maantiedeteoksesta ja edustaa 1800-lukulaista eurooppalaista näkemystä keitaasta, jonne harvat ulkopuoliset olivat tuolloin päässeet.',
-          lahde: 'Élisée Reclus’n teoksen kuvittaja, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -117393,6 +117393,15 @@ export const KULTTUURI_KATEGORIAT = {
             + 'kalastajakylä perustettiin 1800-luvun alussa.',
           lahde: 'Byralaal, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Managua',
+          galleria: [
+            {
+              otsikko: 'Squierin puupiirros 1852',
+              osoite: 'https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/managua-galleria.jpg',
+              lyhyt: 'E. G. Squierin matkakirjan puupiirros (1852) katsoo Managua-järvelle kaupungin rannalta.',
+              selite: 'Yhdysvaltain diplomaatti ja tutkimusmatkailija Squier kuvasi teoksessaan Nicaragua (1852) järven rantaa mökkeineen ja asukkaineen, samana vuonna kun Managuasta tuli maan pääkaupunki.',
+              lahde: 'Ephraim George Squier, Nicaragua (1852), Wikimedia Commons -skannaus / Project Gutenberg (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Rakennukset jäivät seisomaan tyhjinä',
@@ -117739,15 +117748,6 @@ export const KULTTUURI_KATEGORIAT = {
           ],
         },
       },
-      galleria: [
-        {
-          otsikko: 'Squierin puupiirros 1852',
-          osoite: 'https://media.matkakirja.app/kaupunkikuvasto/20260924/galleria/managua-galleria.jpg',
-          lyhyt: 'E. G. Squierin matkakirjan puupiirros (1852) katsoo Managua-järvelle kaupungin rannalta.',
-          selite: 'Yhdysvaltain diplomaatti ja tutkimusmatkailija Squier kuvasi teoksessaan Nicaragua (1852) järven rantaa mökkeineen ja asukkaineen, samana vuonna kun Managuasta tuli maan pääkaupunki.',
-          lahde: 'Ephraim George Squier, Nicaragua (1852), Wikimedia Commons -skannaus / Project Gutenberg (PD)',
-        },
-      ],
     },
     {
       id: 'luonto',
@@ -117878,6 +117878,42 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Kuva on otettu vanhan kaupungin kivikadulta, jonka reunoilla siirtomaa-ajan talot kohoavat parvekkeineen ja kaari-ikkunoineen; kadun päässä portaat nousevat kohti ylempää katutasoa.',
           lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
           wiki: 'Equinoctial France',
+          galleria: [
+            {
+              otsikko: 'Vingboonsin näkymä 1665',
+              tiedosto: 'AMH-6765-NA View of Sao Luis de Maranhao.jpg',
+              lyhyt: 'Johannes Vingboonsin näkymä (1665) São Luísista '
+                + 'hollantilaismiehityksen jäljiltä.',
+              selite: 'Hollantilaisen Johannes Vingboonsin näkymä (1665): '
+                + '"St. Lodewijkin kaupunki" linnoituksineen ja jokisuun '
+                + 'aluksineen, piirretty vuosikymmen sen jälkeen kun '
+                + 'Alankomaiden Länsi-Intian kauppakomppania hallitsi '
+                + 'kaupunkia 1641–1644.',
+              lahde: 'Johannes Vingboons, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Righinin öljyvärinäkymä',
+              tiedosto: 'Joseph Léon Righini - View of São Luis do Maranhão - Google Art Project.jpg',
+              lyhyt: 'Italialaissyntyisen Joseph Léon Righinin maalaus São '
+                + 'Luísista.',
+              selite: 'Italialaissyntyinen Joseph Léon Righini (1820–1884) '
+                + 'kuoli Brasiliassa Belémissä ja maalasi useita näkymiä '
+                + 'maan kaupungeista — tämä esittää São Luísia mereltä '
+                + 'päin.',
+              lahde: 'Joseph Léon Righini, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Tuntemattoman taiteilijan näkymä',
+              tiedosto: 'Vista de São Luis do Maranhão (atribuído), da Coleção Brasiliana Iconográfica.jpg',
+              lyhyt: 'Tuntemattoman taiteilijan näkymä São Luísista '
+                + 'Brasiliana Iconográfica -kokoelmasta.',
+              selite: 'Nimettömän taiteilijan maalaus kuuluu Brasiliana '
+                + 'Iconográfica -kokoelmaan, joka kokoaa historiallisia '
+                + 'näkymiä Brasilian kaupungeista.',
+              lahde: 'Tuntematon tekijä, Brasiliana Iconográfica -kokoelma, '
+                + 'Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Leijonien palatsi meren rannalla',
@@ -117948,42 +117984,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'halli on yhä kauppapaikka, nykyään enimmäkseen käsitöille '
             + 'ja vaatteille.',
           lahde: 'Ajmcbarreto, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Vingboonsin näkymä 1665',
-          tiedosto: 'AMH-6765-NA View of Sao Luis de Maranhao.jpg',
-          lyhyt: 'Johannes Vingboonsin näkymä (1665) São Luísista '
-            + 'hollantilaismiehityksen jäljiltä.',
-          selite: 'Hollantilaisen Johannes Vingboonsin näkymä (1665): '
-            + '"St. Lodewijkin kaupunki" linnoituksineen ja jokisuun '
-            + 'aluksineen, piirretty vuosikymmen sen jälkeen kun '
-            + 'Alankomaiden Länsi-Intian kauppakomppania hallitsi '
-            + 'kaupunkia 1641–1644.',
-          lahde: 'Johannes Vingboons, Wikimedia Commons (PD)',
-        },
-        {
-          otsikko: 'Righinin öljyvärinäkymä',
-          tiedosto: 'Joseph Léon Righini - View of São Luis do Maranhão - Google Art Project.jpg',
-          lyhyt: 'Italialaissyntyisen Joseph Léon Righinin maalaus São '
-            + 'Luísista.',
-          selite: 'Italialaissyntyinen Joseph Léon Righini (1820–1884) '
-            + 'kuoli Brasiliassa Belémissä ja maalasi useita näkymiä '
-            + 'maan kaupungeista — tämä esittää São Luísia mereltä '
-            + 'päin.',
-          lahde: 'Joseph Léon Righini, Wikimedia Commons (PD)',
-        },
-        {
-          otsikko: 'Tuntemattoman taiteilijan näkymä',
-          tiedosto: 'Vista de São Luis do Maranhão (atribuído), da Coleção Brasiliana Iconográfica.jpg',
-          lyhyt: 'Tuntemattoman taiteilijan näkymä São Luísista '
-            + 'Brasiliana Iconográfica -kokoelmasta.',
-          selite: 'Nimettömän taiteilijan maalaus kuuluu Brasiliana '
-            + 'Iconográfica -kokoelmaan, joka kokoaa historiallisia '
-            + 'näkymiä Brasilian kaupungeista.',
-          lahde: 'Tuntematon tekijä, Brasiliana Iconográfica -kokoelma, '
-            + 'Wikimedia Commons (PD)',
         },
       ],
       /*
@@ -119212,6 +119212,19 @@ export const KULTTUURI_KATEGORIAT = {
             'Valokuva näyttää Yellowstonejoen kaivaman kanjonin jyrkät, keltaisenväriset kalliot — juuri tällaisia näkymiä puiston perustamislaki vuonna 1872 asetti kansan yhteiseksi omaisuudeksi.',
           lahde: 'William Henry Jackson, Wikimedia Commons (Public domain)',
           wiki: 'Yellowstone National Park',
+          galleria: [
+            {
+              otsikko: 'Sateenkaari kanjonin yllä',
+              tiedosto: 'Rainbow over the Grand Canyon of the Yellowstone, 1900, by Thomas Moran - SAAM - DSC00847.JPG',
+              lyhyt: 'Thomas Moranin toinen öljymaalaus Yellowstonen '
+                + 'kanjonista, tällä kertaa sateenkaaren kera (1900).',
+              selite: 'Thomas Moran palasi Yellowstonen kanjonin aiheeseen '
+                + 'vielä lähes kolme vuosikymmentä ensimmäisen '
+                + 'maalauksensa jälkeen: tässä 1900 valmistuneessa '
+                + 'teoksessa sateenkaari kaartuu putouksen yllä.',
+              lahde: 'Thomas Moran, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Colterin helvetti',
@@ -119291,19 +119304,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'mikrobeista: keskellä on kuumin ja kirkkaan sininen '
             + 'vesi, reunoilla viileämpi ja oranssi.',
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Sateenkaari kanjonin yllä',
-          tiedosto: 'Rainbow over the Grand Canyon of the Yellowstone, 1900, by Thomas Moran - SAAM - DSC00847.JPG',
-          lyhyt: 'Thomas Moranin toinen öljymaalaus Yellowstonen '
-            + 'kanjonista, tällä kertaa sateenkaaren kera (1900).',
-          selite: 'Thomas Moran palasi Yellowstonen kanjonin aiheeseen '
-            + 'vielä lähes kolme vuosikymmentä ensimmäisen '
-            + 'maalauksensa jälkeen: tässä 1900 valmistuneessa '
-            + 'teoksessa sateenkaari kaartuu putouksen yllä.',
-          lahde: 'Thomas Moran, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -119393,6 +119393,29 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Ilmakuvassa näkyvät Grand Canyonin kerrostuneet punaruskeat kalliot ja alhaalla mutkitteleva Coloradojoki vuonna 2012 kuvattuna.',
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Grand Canyon',
+          galleria: [
+            {
+              otsikko: 'Moranin toinen kanjoni',
+              tiedosto: 'Thomas Moran - Grand Canyon.jpg',
+              lyhyt: 'Thomas Moranin vuoden 1908 maalaus Grand Canyonista, '
+                + 'eri kohteesta kuin hänen tunnetumpi Yellowstone-teoksensa.',
+              selite: 'Thomas Moran maalasi useita kertoja Yhdysvaltain '
+                + 'suuria kanjoneita; tämä 1908 valmistunut teos kuvaa '
+                + 'Colorado-joen Grand Canyonia, ei Yellowstonen '
+                + 'samannimistä kanjonia.',
+              lahde: 'Thomas Moran, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Brownin impressionistinen näkymä',
+              tiedosto: 'Grand Canyon painting by Benjamin Chambers Brown.jpg',
+              lyhyt: 'Benjamin Chambers Brownin impressionistinen maalaus '
+                + 'Colorado-joesta Grand Canyonissa.',
+              selite: 'Yhdysvaltalainen impressionisti Benjamin Chambers '
+                + 'Brown maalasi Colorado-joen mutkittelevan uoman '
+                + 'syvällä kanjonin pohjalla.',
+              lahde: 'Benjamin Chambers Brown, Wikimedia Commons (CC BY-SA 4.0)',
+            },
+          ],
         },
         {
           otsikko: 'Espanjalaiset eksyvät reunalle',
@@ -119461,29 +119484,6 @@ export const KULTTUURI_KATEGORIAT = {
             + '-polkua. Samaa polkua käytetään yhä sekä matkustajien '
             + 'että tavaran kuljettamiseen kanjonin pohjalle.',
           lahde: 'Michael Quinn, National Park Service (PD)',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Moranin toinen kanjoni',
-          tiedosto: 'Thomas Moran - Grand Canyon.jpg',
-          lyhyt: 'Thomas Moranin vuoden 1908 maalaus Grand Canyonista, '
-            + 'eri kohteesta kuin hänen tunnetumpi Yellowstone-teoksensa.',
-          selite: 'Thomas Moran maalasi useita kertoja Yhdysvaltain '
-            + 'suuria kanjoneita; tämä 1908 valmistunut teos kuvaa '
-            + 'Colorado-joen Grand Canyonia, ei Yellowstonen '
-            + 'samannimistä kanjonia.',
-          lahde: 'Thomas Moran, Wikimedia Commons (PD)',
-        },
-        {
-          otsikko: 'Brownin impressionistinen näkymä',
-          tiedosto: 'Grand Canyon painting by Benjamin Chambers Brown.jpg',
-          lyhyt: 'Benjamin Chambers Brownin impressionistinen maalaus '
-            + 'Colorado-joesta Grand Canyonissa.',
-          selite: 'Yhdysvaltalainen impressionisti Benjamin Chambers '
-            + 'Brown maalasi Colorado-joen mutkittelevan uoman '
-            + 'syvällä kanjonin pohjalla.',
-          lahde: 'Benjamin Chambers Brown, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
     },
@@ -119561,6 +119561,15 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Kuvassa näkyvät Ulurun pystysuorat vako-urat ja kallion tyvellä kasvava harva pensaikko sekä kuivuneita puita; matala aurinko luo kalliolle voimakkaan varjorajan.',
           lahde: 'Alexandra, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'William Gosse (explorer)',
+          galleria: [
+            {
+              otsikko: 'Maisemapiirros vuosisadan vaihteesta',
+              tiedosto: 'Ayers Rock, Northern Territory - drawing(GN00088).jpg',
+              lyhyt: 'Vuosisadan vaihteen maisemapiirros kuvaa Ulurua, jota arkisto nimittää Ayers Rockiksi.',
+              selite: 'Piirros on historiallinen maisemakuva eikä anangujen pyhän kalliotaiteen valokuva; arkiston käyttämä nimi Ayers Rock on kolonialistinen, kun taas Uluru on paikan oma nimi.',
+              lahde: 'Tekijä tuntematon, History Trust of South Australia, Wikimedia Commons (CC0)',
+            },
+          ],
         },
         {
           otsikko: 'Kamelikaravaani autiomaan halki',
@@ -119632,15 +119641,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'harvinaista, mutta kun sitä tulee, kallion sivut '
             + 'muuttuvat tunneissa vesiputousten verkoksi.',
           lahde: 'Harbison, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Maisemapiirros vuosisadan vaihteesta',
-          tiedosto: 'Ayers Rock, Northern Territory - drawing(GN00088).jpg',
-          lyhyt: 'Vuosisadan vaihteen maisemapiirros kuvaa Ulurua, jota arkisto nimittää Ayers Rockiksi.',
-          selite: 'Piirros on historiallinen maisemakuva eikä anangujen pyhän kalliotaiteen valokuva; arkiston käyttämä nimi Ayers Rock on kolonialistinen, kun taas Uluru on paikan oma nimi.',
-          lahde: 'Tekijä tuntematon, History Trust of South Australia, Wikimedia Commons (CC0)',
         },
       ],
     },
@@ -119726,6 +119726,30 @@ export const KULTTUURI_KATEGORIAT = {
             'Kuvassa on Jerez de la Fronteran vanha kaupunginmuuri, jonka juurella pieni patsasryhmä ja muistolaatta kunnioittavat kaupungissa syntynyttä löytöretkeilijää.',
           lahde: 'Jerezplataforma, Wikimedia Commons (CC BY 3.0)',
           wiki: 'Álvar Núñez Cabeza de Vaca',
+          galleria: [
+            {
+              otsikko: 'Ballerinin panoraama',
+              tiedosto: 'Augusto Ballerini - La cascada del Iguazú - Google Art Project.jpg',
+              lyhyt: 'Argentiinalaisen Augusto Ballerinin 1800-luvun '
+                + 'panoraamamaalaus Iguazún putouksista.',
+              selite: 'Argentiinalainen maisemamaalari Augusto Ballerini '
+                + 'kuvasi putoukset laajana panoraamana — teos on nykyään '
+                + 'esillä osana Trilha das Cataratasin näkymien '
+                + 'kokoelmaa.',
+              lahde: 'Augusto Ballerini, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Wiegandtin näkymä 1878',
+              tiedosto: 'Bernhard Wiegandt, Iguazu waterfall, Brazil, 1878.jpg',
+              lyhyt: 'Saksalaisen Bernhard Wiegandtin maalaus Iguazún '
+                + 'putouksista vuodelta 1878.',
+              selite: 'Saksalainen taiteilija Bernhard Wiegandt maalasi '
+                + 'putoukset 1878 — yksi varhaisimmista tunnetuista '
+                + 'eurooppalaisen taiteilijan tekemistä kuvauksista '
+                + 'Iguazústa.',
+              lahde: 'Bernhard Wiegandt, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Käärmejumala ja pakenevat rakastavaiset',
@@ -119805,30 +119829,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Paholaisen kurkkua. Sillalla on jatkuva vesisumu, joka '
             + 'kastelee kulkijat ja kamerat muutamassa minuutissa.',
           lahde: 'Jerrye & Roy Klotz MD, Wikimedia Commons (CC BY-SA 3.0)',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Ballerinin panoraama',
-          tiedosto: 'Augusto Ballerini - La cascada del Iguazú - Google Art Project.jpg',
-          lyhyt: 'Argentiinalaisen Augusto Ballerinin 1800-luvun '
-            + 'panoraamamaalaus Iguazún putouksista.',
-          selite: 'Argentiinalainen maisemamaalari Augusto Ballerini '
-            + 'kuvasi putoukset laajana panoraamana — teos on nykyään '
-            + 'esillä osana Trilha das Cataratasin näkymien '
-            + 'kokoelmaa.',
-          lahde: 'Augusto Ballerini, Wikimedia Commons (PD)',
-        },
-        {
-          otsikko: 'Wiegandtin näkymä 1878',
-          tiedosto: 'Bernhard Wiegandt, Iguazu waterfall, Brazil, 1878.jpg',
-          lyhyt: 'Saksalaisen Bernhard Wiegandtin maalaus Iguazún '
-            + 'putouksista vuodelta 1878.',
-          selite: 'Saksalainen taiteilija Bernhard Wiegandt maalasi '
-            + 'putoukset 1878 — yksi varhaisimmista tunnetuista '
-            + 'eurooppalaisen taiteilijan tekemistä kuvauksista '
-            + 'Iguazústa.',
-          lahde: 'Bernhard Wiegandt, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -119927,6 +119927,15 @@ export const KULTTUURI_KATEGORIAT = {
             'Euroopan avaruusjärjestön Sentinel-2-satelliitti kuvasi koko Titicaca-järven ylhäältä; kuvan oikeassa yläkulmassa erottuu lumista Andien vuoristoa.',
           lahde: 'European Space Agency, Wikimedia Commons (CC BY-SA 3.0 IGO)',
           wiki: 'Lake Titicaca',
+          galleria: [
+            {
+              otsikko: 'Retkikuntalitografia 1853',
+              tiedosto: 'Llamas traversing the Andes laden with silver Titicaca balsa off Puno - - sketched by L. Gibbon ; JQ ; lith. of P.S. Duval & Co. Philada. LCCN2014649307.jpg',
+              lyhyt: 'Vuoden 1853 retkikuntalitografia näyttää Titicacajärven balsalautan Punon edustalla.',
+              selite: 'Kuva on peräisin Yhdysvaltain laivaston Etelä-Amerikan-retkikunnan raportista ja näyttää laamat ja hopeakuorman perinteisellä kaislaveneellä, jollaisia järvellä käytettiin jo isoisän ajan sukupolvea ennen.',
+              lahde: 'L. Gibbon, P. S. Duval & Co., Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Isoisän ajan höyrylaiva vuorten yli',
@@ -120005,15 +120014,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'tehdään totora-kaislasta. Pintaan on lisättävä uutta '
             + 'kaislaa jatkuvasti, koska alta se lahoaa veteen.',
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Retkikuntalitografia 1853',
-          tiedosto: 'Llamas traversing the Andes laden with silver Titicaca balsa off Puno - - sketched by L. Gibbon ; JQ ; lith. of P.S. Duval & Co. Philada. LCCN2014649307.jpg',
-          lyhyt: 'Vuoden 1853 retkikuntalitografia näyttää Titicacajärven balsalautan Punon edustalla.',
-          selite: 'Kuva on peräisin Yhdysvaltain laivaston Etelä-Amerikan-retkikunnan raportista ja näyttää laamat ja hopeakuorman perinteisellä kaislaveneellä, jollaisia järvellä käytettiin jo isoisän ajan sukupolvea ennen.',
-          lahde: 'L. Gibbon, P. S. Duval & Co., Wikimedia Commons (PD)',
         },
       ],
     },
@@ -120110,6 +120110,15 @@ export const KULTTUURI_KATEGORIAT = {
             'Valokuva näyttää valmiin muistomerkin edestä: Washingtonin, Jeffersonin, Rooseveltin ja Lincolnin kasvot vaaleassa graniitissa, edessä mäntyjä ja sinistä taivasta.',
           lahde: 'Dean Franklin, Wikimedia Commons (Public domain)',
           wiki: 'Mount Rushmore',
+          galleria: [
+            {
+              otsikko: 'Black Hills ennen veistotöitä',
+              tiedosto: 'Franklin De Haven - Castle Creek Canyon, South Dakota - 1913.6.2 - Smithsonian American Art Museum.jpg',
+              lyhyt: 'Franklin De Haven maalasi Black Hillsin Castle Creek Canyonin vuonna 1912, kaksitoista vuotta ennen Rushmoren veistotöiden alkua.',
+              selite: 'Maalaus näyttää lakotoille pyhän Paha Sápa -vuoriston koskemattomana metsämaisemana, ennen kuin vuoreen alettiin louhia presidenttien kasvoja 1927.',
+              lahde: 'Franklin De Haven, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Idea neljästä presidentistä',
@@ -120189,15 +120198,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'veistos on hakattu vuoreen, josta heidät aikanaan '
             + 'siirrettiin pois.',
           lahde: 'Jason Rollette, Wikimedia Commons (CC BY 3.0)',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Black Hills ennen veistotöitä',
-          tiedosto: 'Franklin De Haven - Castle Creek Canyon, South Dakota - 1913.6.2 - Smithsonian American Art Museum.jpg',
-          lyhyt: 'Franklin De Haven maalasi Black Hillsin Castle Creek Canyonin vuonna 1912, kaksitoista vuotta ennen Rushmoren veistotöiden alkua.',
-          selite: 'Maalaus näyttää lakotoille pyhän Paha Sápa -vuoriston koskemattomana metsämaisemana, ennen kuin vuoreen alettiin louhia presidenttien kasvoja 1927.',
-          lahde: 'Franklin De Haven, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -120482,6 +120482,29 @@ export const KULTTUURI_KATEGORIAT = {
             '1600-luvun kaiverruksessa neljä hollantilaista laivaa – Amsterdam, Mauritius, Hollandia ja Duyfken – purjehtii kohti rantaa savuavine tykkeineen, kaukana näkyy kaupungin ääriviivat.',
           lahde: '17th century artist, Wikimedia Commons (Public domain)',
           wiki: 'Cornelis de Houtman',
+          galleria: [
+            {
+              otsikko: 'Nieuwenkamp Loloan Baratissa',
+              tiedosto: 'Gezicht op Loloan Barat op Bali, RP-P-1921-1038.jpg',
+              lyhyt: 'Hollantilaisen Nieuwenkampin grafiikka (n. 1907–1921) kuvaa Loloan Baratin jokirannan kalastajakylää Balilla.',
+              selite: 'Matkailijataiteilija Nieuwenkamp matkusti Balilla toistuvasti 1900-luvun alussa, ja hänen grafiikkansa edustavat eurooppalaisen ulkopuolisen katsetta saareen.',
+              lahde: 'Wijnand Otto Jan Nieuwenkamp, Rijksmuseum Amsterdam, Wikimedia Commons (CC0)',
+            },
+            {
+              otsikko: 'Sadonkorjuu 1910-luvulla',
+              tiedosto: 'De oogst, Bali, RP-P-1921-1057.jpg',
+              lyhyt: 'Nieuwenkampin grafiikka tallensi sadonkorjuun Balilla 1910-luvulla.',
+              selite: 'Sama hollantilainen matkailijataiteilija kuvasi myös riisin korjuuta, saaren tärkeintä maataloustyötä, samalla vuosikymmenten kiertomatkallaan.',
+              lahde: 'Wijnand Otto Jan Nieuwenkamp, Rijksmuseum Amsterdam, Wikimedia Commons (CC0)',
+            },
+            {
+              otsikko: 'Sadekuuro Gitgitin riisipelloilla',
+              tiedosto: 'Regenbui boven de rijstvelden bij Gitgit op Bali, RP-P-1921-1044.jpg',
+              lyhyt: 'Nieuwenkampin grafiikka (1908) näyttää sadekuuron nousevan Gitgitin riisipeltojen ylle.',
+              selite: 'Kolmas Nieuwenkampin Bali-grafiikka kuvaa saaren riisiviljelymaisemaa sadekauden pilvien alla, samasta hollantilaisen matkailijataiteilijan kiertueesta.',
+              lahde: 'Wijnand Otto Jan Nieuwenkamp, Rijksmuseum Amsterdam, Wikimedia Commons (CC0)',
+            },
+          ],
         },
         {
           otsikko: 'Yhdeksän kuningaskunnan saari',
@@ -120551,29 +120574,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jota hoitavat viljelijöiden omat yhdistykset ja '
             + 'temppelit — ei viranomainen.',
           lahde: 'Anggabuana, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Nieuwenkamp Loloan Baratissa',
-          tiedosto: 'Gezicht op Loloan Barat op Bali, RP-P-1921-1038.jpg',
-          lyhyt: 'Hollantilaisen Nieuwenkampin grafiikka (n. 1907–1921) kuvaa Loloan Baratin jokirannan kalastajakylää Balilla.',
-          selite: 'Matkailijataiteilija Nieuwenkamp matkusti Balilla toistuvasti 1900-luvun alussa, ja hänen grafiikkansa edustavat eurooppalaisen ulkopuolisen katsetta saareen.',
-          lahde: 'Wijnand Otto Jan Nieuwenkamp, Rijksmuseum Amsterdam, Wikimedia Commons (CC0)',
-        },
-        {
-          otsikko: 'Sadonkorjuu 1910-luvulla',
-          tiedosto: 'De oogst, Bali, RP-P-1921-1057.jpg',
-          lyhyt: 'Nieuwenkampin grafiikka tallensi sadonkorjuun Balilla 1910-luvulla.',
-          selite: 'Sama hollantilainen matkailijataiteilija kuvasi myös riisin korjuuta, saaren tärkeintä maataloustyötä, samalla vuosikymmenten kiertomatkallaan.',
-          lahde: 'Wijnand Otto Jan Nieuwenkamp, Rijksmuseum Amsterdam, Wikimedia Commons (CC0)',
-        },
-        {
-          otsikko: 'Sadekuuro Gitgitin riisipelloilla',
-          tiedosto: 'Regenbui boven de rijstvelden bij Gitgit op Bali, RP-P-1921-1044.jpg',
-          lyhyt: 'Nieuwenkampin grafiikka (1908) näyttää sadekuuron nousevan Gitgitin riisipeltojen ylle.',
-          selite: 'Kolmas Nieuwenkampin Bali-grafiikka kuvaa saaren riisiviljelymaisemaa sadekauden pilvien alla, samasta hollantilaisen matkailijataiteilijan kiertueesta.',
-          lahde: 'Wijnand Otto Jan Nieuwenkamp, Rijksmuseum Amsterdam, Wikimedia Commons (CC0)',
         },
       ],
     },
@@ -120665,6 +120665,29 @@ export const KULTTUURI_KATEGORIAT = {
             'Kuva näyttää Milford Soundin suulla sijaitsevan Anita Bayn: metsäisen rantavuoren, kivikkoisen rannan ja tyynen, tummanvihreän veden - juuri sellaisen näkymän John Grono kohtasi purjehtiessaan vuonolle vuonna 1823.',
           lahde: 'Pseudopanax, Wikimedia Commons (Public domain)',
           wiki: 'John Grono',
+          galleria: [
+            {
+              otsikko: 'Gullyn vuonomaisema 1881',
+              tiedosto: 'John Gully - Milford Sound - Sarjeant Gallery.jpg',
+              lyhyt: 'John Gully maalasi Milford Soundin vuorenseinämät vuonna 1881.',
+              selite: 'Gully oli 1800-luvun Uuden-Seelannin tunnetuimpia maisemamaalareita, ja hänen vuonokuvansa edustavat eurooppalaistaustaisen siirtolaisen näkemystä maorien Piopiotahiksi kutsumasta paikasta.',
+              lahde: 'John Gully, Sarjeant Gallery / National Library of New Zealand, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Heaphy Harrison\'s Covessa 1874',
+              tiedosto: 'Harrison\'s cove, Milford Sound. C-025-019.jpg',
+              lyhyt: 'Charles Heaphy ikuisti Milford Soundin Harrison\'s Coven vesivärityöhönsä vuonna 1874.',
+              selite: 'Heaphy oli varhainen uusiseelantilainen maisemamaalari, jonka työ tallensi vuonon lahdenpoukaman lähes vuosikymmen ennen isoisän matkaa.',
+              lahde: 'Charles Heaphy, Sarjeant Gallery / National Library of New Zealand, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Hodgkinsin näkymä ennen 1898',
+              tiedosto: 'William Hodgkins - Milford Sound - Sarjeant Gallery.jpg',
+              lyhyt: 'William Mathew Hodgkins maalasi Milford Soundin ennen 1800-luvun loppua.',
+              selite: 'Kolmas Sarjeant Galleryn Milford Sound -maalaus jatkaa samaa 1800-luvun uusiseelantilaista maisemamaalauksen perinnettä.',
+              lahde: 'William Mathew Hodgkins, Sarjeant Gallery / National Library of New Zealand, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Yksinäisen linnun nimi',
@@ -120757,29 +120780,6 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Karora, Wikimedia Commons (PD)',
         },
       ],
-      galleria: [
-        {
-          otsikko: 'Gullyn vuonomaisema 1881',
-          tiedosto: 'John Gully - Milford Sound - Sarjeant Gallery.jpg',
-          lyhyt: 'John Gully maalasi Milford Soundin vuorenseinämät vuonna 1881.',
-          selite: 'Gully oli 1800-luvun Uuden-Seelannin tunnetuimpia maisemamaalareita, ja hänen vuonokuvansa edustavat eurooppalaistaustaisen siirtolaisen näkemystä maorien Piopiotahiksi kutsumasta paikasta.',
-          lahde: 'John Gully, Sarjeant Gallery / National Library of New Zealand, Wikimedia Commons (PD)',
-        },
-        {
-          otsikko: 'Heaphy Harrison\'s Covessa 1874',
-          tiedosto: 'Harrison\'s cove, Milford Sound. C-025-019.jpg',
-          lyhyt: 'Charles Heaphy ikuisti Milford Soundin Harrison\'s Coven vesivärityöhönsä vuonna 1874.',
-          selite: 'Heaphy oli varhainen uusiseelantilainen maisemamaalari, jonka työ tallensi vuonon lahdenpoukaman lähes vuosikymmen ennen isoisän matkaa.',
-          lahde: 'Charles Heaphy, Sarjeant Gallery / National Library of New Zealand, Wikimedia Commons (PD)',
-        },
-        {
-          otsikko: 'Hodgkinsin näkymä ennen 1898',
-          tiedosto: 'William Hodgkins - Milford Sound - Sarjeant Gallery.jpg',
-          lyhyt: 'William Mathew Hodgkins maalasi Milford Soundin ennen 1800-luvun loppua.',
-          selite: 'Kolmas Sarjeant Galleryn Milford Sound -maalaus jatkaa samaa 1800-luvun uusiseelantilaista maisemamaalauksen perinnettä.',
-          lahde: 'William Mathew Hodgkins, Sarjeant Gallery / National Library of New Zealand, Wikimedia Commons (PD)',
-        },
-      ],
     },
     {
       id: 'luonto',
@@ -120869,6 +120869,30 @@ export const KULTTUURI_KATEGORIAT = {
             'Kuva näyttää Ouro Preton vanhaa kaupunginosaa kivimuurin takaa: valkoiset kirkot kellotorneineen kohoavat punakattoisten talojen keskeltä vihreiden vuorten juurella.',
           lahde: 'Adam Jones, Wikimedia Commons (CC BY-SA 3.0)',
           wiki: 'Ouro Preto',
+          galleria: [
+            {
+              otsikko: 'Rugendasin vesiväri 1824',
+              tiedosto: 'Johann Moritz Rugendas - Cachoeira de Ouro Preto.jpg',
+              lyhyt: 'Saksalaisen Johann Moritz Rugendasin vesiväri '
+                + 'Ouro Preton putouksesta vuodelta 1824.',
+              selite: 'Saksalainen Johann Moritz Rugendas matkusti Brasiliassa '
+                + '1820-luvulla ja kuvasi maan luontoa ja kaupunkeja '
+                + 'lukuisissa teoksissaan — tämä vesiväri esittää Ouro '
+                + 'Preton lähellä olevaa putousta.',
+              lahde: 'Johann Moritz Rugendas, Wikimedia Commons (PD)',
+            },
+            {
+              otsikko: 'Bernardellin maisema',
+              tiedosto: 'Henrique Bernardelli - Paisagem de Ouro Preto.jpg',
+              lyhyt: 'Henrique Bernardellin 1870-luvun maisemamaalaus '
+                + 'Ouro Pretosta.',
+              selite: 'Brasilialainen Henrique Bernardelli kuvasi Ouro '
+                + 'Preton vuorenrinteille kiipeäviä kattoja 1870-luvulla, '
+                + 'jolloin kaupunki oli yhä Minas Geraisin pääkaupunki — '
+                + 'asema siirtyi Belo Horizontelle vasta 1897.',
+              lahde: 'Henrique Bernardelli, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Rikkaampi kuin monta muuta kaupunkia yhteensä',
@@ -120948,30 +120972,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Aleijadinhon, brasilialaisen barokin kuuluisimman '
             + 'mestarin, käsialaa.',
           lahde: 'Rafael Lemieszek, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Rugendasin vesiväri 1824',
-          tiedosto: 'Johann Moritz Rugendas - Cachoeira de Ouro Preto.jpg',
-          lyhyt: 'Saksalaisen Johann Moritz Rugendasin vesiväri '
-            + 'Ouro Preton putouksesta vuodelta 1824.',
-          selite: 'Saksalainen Johann Moritz Rugendas matkusti Brasiliassa '
-            + '1820-luvulla ja kuvasi maan luontoa ja kaupunkeja '
-            + 'lukuisissa teoksissaan — tämä vesiväri esittää Ouro '
-            + 'Preton lähellä olevaa putousta.',
-          lahde: 'Johann Moritz Rugendas, Wikimedia Commons (PD)',
-        },
-        {
-          otsikko: 'Bernardellin maisema',
-          tiedosto: 'Henrique Bernardelli - Paisagem de Ouro Preto.jpg',
-          lyhyt: 'Henrique Bernardellin 1870-luvun maisemamaalaus '
-            + 'Ouro Pretosta.',
-          selite: 'Brasilialainen Henrique Bernardelli kuvasi Ouro '
-            + 'Preton vuorenrinteille kiipeäviä kattoja 1870-luvulla, '
-            + 'jolloin kaupunki oli yhä Minas Geraisin pääkaupunki — '
-            + 'asema siirtyi Belo Horizontelle vasta 1897.',
-          lahde: 'Henrique Bernardelli, Wikimedia Commons (PD)',
         },
       ],
       /*
@@ -121452,6 +121452,15 @@ export const KULTTUURI_KATEGORIAT = {
             'Kaivettu puuvene eli pirogi Kongojoella auringonlaskun aikaan — perinteinen kulkuväline, joka oli käytössä joella jo isoisän aikaan ja on sitä yhä.',
           lahde: 'Julien Harneis, Wikimedia Commons (CC BY-SA 2.0)',
           wiki: 'Congo River',
+          galleria: [
+            {
+              otsikko: 'Matadin markkina siirtomaanäyttelyssä 1913',
+              tiedosto: 'View of the Congo river and a corner of the Matadi market, work by Alfred Bastien, 1913, Prints Department of the Royal Library of Belgium (KBR), S.I 24227.jpeg',
+              lyhyt: 'Alfred Bastienin vuoden 1913 painokuva esittää Kongojoen rantaa ja Matadin markkinaa eurooppalaisen siirtomaanäyttelyn katseen kautta.',
+              selite: 'Teos tehtiin Belgian siirtomaanäyttelyä varten ja kuvaa Kongoa Belgian oman propagandan silmin, ei kongolaisten itsensä näkökulmasta.',
+              lahde: 'Alfred Bastien, Kuninkaallinen kirjasto (KBR), Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Kivi joka pysäytti purjehtijat',
@@ -121529,15 +121538,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'vehreiden saarten väliin niin laajaksi, että sitä on '
             + 'helppo luulla mereksi.',
           lahde: 'MONUSCO / Myriam Asmani, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Matadin markkina siirtomaanäyttelyssä 1913',
-          tiedosto: 'View of the Congo river and a corner of the Matadi market, work by Alfred Bastien, 1913, Prints Department of the Royal Library of Belgium (KBR), S.I 24227.jpeg',
-          lyhyt: 'Alfred Bastienin vuoden 1913 painokuva esittää Kongojoen rantaa ja Matadin markkinaa eurooppalaisen siirtomaanäyttelyn katseen kautta.',
-          selite: 'Teos tehtiin Belgian siirtomaanäyttelyä varten ja kuvaa Kongoa Belgian oman propagandan silmin, ei kongolaisten itsensä näkökulmasta.',
-          lahde: 'Alfred Bastien, Kuninkaallinen kirjasto (KBR), Wikimedia Commons (PD)',
         },
       ],
     },
@@ -121800,6 +121800,15 @@ export const KULTTUURI_KATEGORIAT = {
             'Piikikäs kalkkikivilabyrintti Bemarahan luonnonpuistossa: sade on vuosituhansien aikana veistänyt kalliosta terävät harjanteet ja syvät kuilut, joita malagassiksi kutsutaan tsingyksi.',
           lahde: 'ASMaloney, Wikimedia Commons (PD)',
           wiki: 'Tsingy de Bemaraha Strict Nature Reserve',
+          galleria: [
+            {
+              otsikko: 'Ratovan maalaus sikidy-ennustamisesta',
+              tiedosto: 'Sikidy, Tananarive, Painting.webp',
+              lyhyt: 'Henri Ratova maalasi Tananarivessa vuonna 1912 kohtauksen sikidy-ennustamisesta.',
+              selite: 'Ratova oli malagassilainen taidemaalari, joka kuvasi oman kulttuurinsa perinteistä ennustuskäytäntöä sisältä päin, toisin kuin useimmat aikakauden eurooppalaiset kuvat Madagaskarista.',
+              lahde: 'Henri Ratova, Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Kuninkaanmäki pilvien yläpuolella',
@@ -121878,15 +121887,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'Maan väri tulee raudasta, ja se antaa saarelle '
             + 'lempinimen punainen saari.',
           lahde: 'Rod Waddington, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Ratovan maalaus sikidy-ennustamisesta',
-          tiedosto: 'Sikidy, Tananarive, Painting.webp',
-          lyhyt: 'Henri Ratova maalasi Tananarivessa vuonna 1912 kohtauksen sikidy-ennustamisesta.',
-          selite: 'Ratova oli malagassilainen taidemaalari, joka kuvasi oman kulttuurinsa perinteistä ennustuskäytäntöä sisältä päin, toisin kuin useimmat aikakauden eurooppalaiset kuvat Madagaskarista.',
-          lahde: 'Henri Ratova, Wikimedia Commons (PD)',
         },
       ],
     },
@@ -121976,6 +121976,15 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'NASA:n satelliittikuva näyttää Saharan hiekka- ja kivikkoalueet ylhäältä, koko aavikon laajuuden hahmottuen kerralla.',
           lahde: 'NASA, Wikimedia Commons (PD)',
           wiki: 'Sahara',
+          galleria: [
+            {
+              otsikko: 'Karavaani kirjankuvituksessa 1870',
+              tiedosto: 'Mammaliatheirva00figu orig 0254.png',
+              lyhyt: 'Vuoden 1870 kirjankuvitus kuvaa karavaania Saharan aavikolla.',
+              selite: 'Kuvitus on peräisin ranskalaisesta 1800-luvun kirjasta ja edustaa eurooppalaista näkemystä Saharan karavaanikaupasta, ei paikallista kuvausta.',
+              lahde: 'Albin Mesnel, Édouard Riou ym., Wikimedia Commons (PD)',
+            },
+          ],
         },
         {
           otsikko: 'Kultaa, suolaa ja karavaanireittejä',
@@ -122021,15 +122030,6 @@ export const KULTTUURI_KATEGORIAT = {
           selite: 'Kuva on koostettu 58 Landsat 8 -satelliittikuvasta ja näyttää Ahaggarin eli Hoggarin vuoriston muodot ylhäältä.',
           lahde: 'Linus Wolf, Wikimedia Commons (CC0)',
           wiki: 'Hoggar Mountains',
-        },
-      ],
-      galleria: [
-        {
-          otsikko: 'Karavaani kirjankuvituksessa 1870',
-          tiedosto: 'Mammaliatheirva00figu orig 0254.png',
-          lyhyt: 'Vuoden 1870 kirjankuvitus kuvaa karavaania Saharan aavikolla.',
-          selite: 'Kuvitus on peräisin ranskalaisesta 1800-luvun kirjasta ja edustaa eurooppalaista näkemystä Saharan karavaanikaupasta, ei paikallista kuvausta.',
-          lahde: 'Albin Mesnel, Édouard Riou ym., Wikimedia Commons (PD)',
         },
       ],
     },
