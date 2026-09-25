@@ -125447,6 +125447,230 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Michael Quinn, National Park Service (PD)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Grand Canyon National Park, Grand Canyon Railway,
+       * Bright Angel Trail, South Kaibab Trail, Phantom Ranch, Grand
+       * Canyon Lodge, Dragon Bravo Fire, 2026 Grand Canyon flood,
+       * Transcanyon Waterline, Desert View Watchtower, Grand Canyon
+       * Skywalk) ja Wikivoyagesta (Grand Canyon National Park, tila
+       * 13.9.2026) — teksti omaa. Hinnat ja aukioloajat jätetty pois;
+       * vuoden 2026 tulvan jälkeiset sulut ja pohjoisreunan palvelut
+       * muuttuvat nopeasti, ja teksti sanoo sen. Nostojen, gallerian ja
+       * ennen–nyt-kuvien aiheita (geologia, Cárdenas, viljavarastot,
+       * havasupait, Powell, eläimet, muulimatkat, Hopi House, koskilautat)
+       * ei toisteta. Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja kuvat katsottu silmin. Pystykuva: Desert View'n
+       * vartiotorni.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Desert View Watchtower, Grand Canyon.jpg',
+          lyhyt: 'Desert View’n vartiotorni kohoaa eteläreunan itäpäässä, kaukana kylän tungoksesta.',
+          selite: 'Mary Colterin suunnittelema, vuonna 1932 valmistunut '
+            + '21-metrinen kivitorni jäljittelee muinaisten puebloasukkaiden '
+            + 'vartiotorneja mutta on niitä paljon suurempi, ja sen huippu '
+            + 'on koko eteläreunan korkein kohta.',
+          lahde: 'Supercarwaar, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Grand Canyonille tullaan tavallisesti etelästä: yhdeksän '
+          + 'kävijää kymmenestä näkee kanjonin eteläreunalta, jonne pääsee '
+          + 'autolla, vanhalla rautatiellä ja puiston ilmaisilla busseilla. '
+          + 'Pohjoisreunalle on linnuntietä vain 16 kilometriä, mutta autolla '
+          + 'matkaa kertyy noin 350 kilometriä, ja talvisin sinne johtava tie '
+          + 'on kiinni. Kanjoniin laskeutuvilla poluilla raskain osuus tulee '
+          + 'aina viimeisenä, ja heinäkuussa pohjalla on keskimäärin yli '
+          + 'kymmenen astetta kuumempaa kuin reunalla. Kesän ukkoskuurot '
+          + 'tuovat salamoita ja tulvia, talvi lunta ja jäisiä polkuja. '
+          + 'Vuoden 2025 metsäpalo ja vuoden 2026 tulva muuttivat puistoa '
+          + 'paljon, joten ajantasainen tilanne kannattaa aina tarkistaa '
+          + 'kansallispuiston omilta sivuilta ennen lähtöä.',
+        artikkeli: {
+          nimi: 'Matkailijan Grand Canyon',
+          teksti: 'Grand Canyonissa matka alas on helppo, ja vaikein osa odottaa paluumatkalla.',
+          nosto: 'Kanjonissa vaellus kulkee väärinpäin: alas mennään '
+            + 'levänneenä, ja raskain nousu odottaa aivan lopussa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Junalla, autolla ja bussilla',
+              teksti: 'Eteläreunalle ajetaan useimmiten Flagstaffista, josta '
+                + 'matkaa kertyy noin 130 kilometriä. Lähimmät suuret '
+                + 'lentokentät ovat Phoenixissa noin 370 ja Las Vegasissa '
+                + 'noin 440 kilometrin päässä. Tunnelmallisempi tapa tulla on '
+                + 'Williamsin kaupungista lähtevä Grand Canyon Railway: Santa '
+                + 'Fe -rautatieyhtiön vuonna 1901 valmistunut 103 kilometrin '
+                + 'rata päättyy Grand Canyon Villageen aivan kanjonin reunan '
+                + 'tuntumaan. Henkilöliikenne loppui autoistumisen takia 1968, '
+                + 'mutta yksityiset omistajat kunnostivat radan, ja junat '
+                + 'alkoivat kulkea uudelleen syyskuussa 1989. Matka kestää '
+                + 'suuntaansa parisen tuntia, eikä itse kanjonia näe junan '
+                + 'ikkunasta. Tavallisesti junaa vetävät dieselveturit, mutta '
+                + 'erikoisvuoroilla ajetaan höyryvetureilla, jotka on muutettu '
+                + 'polttamaan ravintoloista kerättyä käytettyä kasviöljyä. '
+                + 'Rata päättyy vuonna 1910 valmistuneelle hirsiasemalle. '
+                + 'Kylässä auto kannattaa jättää parkkiin: puisto ajaa '
+                + 'eteläreunalla ilmaisia bussilinjoja, ja länteen Hermit’s '
+                + 'Restiin vievä näköalatie on suurimman osan vuotta suljettu '
+                + 'yksityisautoilta.',
+              kuva: [
+                {
+                  tiedosto: 'Grand Canyon Railway No. 239 and 4124 pulling a passenger train - May 2018 - 02.jpg',
+                  lyhyt: 'Grand Canyon Railwayn juna kulkee mäntymetsän halki Williamsista kohti eteläreunaa.',
+                  selite: 'Dieselveturien vetämä matkustajajuna Williamsin ja '
+                    + 'Grand Canyon Villagen välisellä radalla toukokuussa '
+                    + '2018; rata valmistui 1901 ja otettiin uudelleen '
+                    + 'käyttöön 1989.',
+                  lahde: 'Rob Bixby, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Grand Canyon Depot - May 2018.jpg',
+                  lyhyt: 'Grand Canyon Villagen hirsinen rautatieasema valmistui vuonna 1910.',
+                  selite: 'Radan pohjoinen pääteasema on puiston historioitsijan '
+                    + 'mukaan yksi Yhdysvaltain kolmesta yhä pystyssä olevasta '
+                    + 'hirsirakenteisesta rautatieasemasta.',
+                  lahde: 'Rob Bixby, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Grand Canyon NP Boarding Hermit Road Shuttle Bus 0214 (5446223423).jpg',
+                  lyhyt: 'Retkeilijät nousevat puiston ilmaiseen bussiin Hermit Roadin pysäkillä.',
+                  selite: 'Hermit Roadin näköalatie on suurimman osan vuotta '
+                    + 'suljettu yksityisautoilta, joten sen varren '
+                    + 'näköalapaikoille kuljetaan puiston ilmaisilla '
+                    + 'busseilla.',
+                  lahde: 'Grand Canyon National Park, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kaksi reunaa ja palanut majatalo',
+              teksti: 'Pohjois- ja eteläreunan välillä on linnuntietä '
+                + 'keskimäärin vain 16 kilometriä, mutta siltoja ei ole, joten '
+                + 'autolla kanjonin ympäri ajetaan noin 350 kilometriä ja '
+                + 'neljästä viiteen tuntia. Eteläreunalle pääsee helpommin, ja '
+                + 'sinne tulee noin 90 prosenttia puiston kävijöistä. Sen '
+                + 'itäpäässä, 43 kilometrin päässä kylästä, seisoo Desert '
+                + 'View’n vartiotorni, jonka huipulta näkyy Coloradojoki. '
+                + 'Pohjoisreuna on noin 2 400 metrin korkeudessa, noin 300 '
+                + 'metriä vastarantaa ylempänä, ja lumen takia sinne johtava '
+                + 'tie on suljettu joulukuun alusta toukokuun puoliväliin. '
+                + 'Heinäkuussa 2025 salaman sytyttämä Dragon Bravo -palo '
+                + 'levisi kuivuudesta kärsineillä ylängöillä lähes 59 000 '
+                + 'hehtaarin alueelle ja tuhosi 113 rakennusta. Niiden '
+                + 'joukossa oli vuonna 1928 rakennettu Grand Canyon Lodge, '
+                + 'pohjoisreunan historiallinen majatalo, joka oli palanut '
+                + 'kerran aiemminkin, vuonna 1932. Pohjoisreunan palvelujen '
+                + 'tilanne on siksi syytä tarkistaa ennen matkaa. Kanjonin '
+                + 'lännessä oleva lasilattiainen Skywalk-näköalasilta ei taas '
+                + 'kuulu kansallispuistoon lainkaan: sen omistaa hualapai-kansa, '
+                + 'ja sinne ajetaan Las Vegasista lähes 210 kilometriä.',
+              kuva: {
+                tiedosto: 'Grand Canyon - North Rim Lodge 03.jpg',
+                lyhyt: 'Pohjoisreunan Grand Canyon Lodge vuonna 2013, ennen kuin metsäpalo tuhosi sen.',
+                selite: 'Kalkkikivestä ja männyntukeista rakennettu Grand '
+                  + 'Canyon Lodge tuhoutui heinäkuussa 2025 Dragon Bravo '
+                  + '-metsäpalossa; majatalon päärakennus oli palanut kerran '
+                  + 'aiemminkin, syyskuussa 1932.',
+                lahde: 'P. Hughes, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Polut alas kanjoniin',
+              teksti: 'Helpoin tapa kokea kanjoni on kävellä reunaa pitkin: '
+                + 'Rim Trail kulkee eteläreunaa yli 20 kilometriä, enimmäkseen '
+                + 'päällystettynä ja tasaisena, ja bussipysäkkien ansiosta '
+                + 'siitä voi kävellä vain palan. Kanjoniin eteläreunalta vievät '
+                + 'kaksi hoidettua pääpolkua. Bright Angel Trail alkaa kylästä '
+                + 'ja laskeutuu mutka mutkalta Havasupai Gardensin keitaalle, '
+                + 'jonka nimi vaihdettiin vuonna 2022 havasupai-kansan '
+                + 'pyynnöstä. Kesällä polun varrella on juomavesipisteitä. '
+                + 'Jyrkempi South Kaibab Trail seuraa harjannetta Yaki '
+                + 'Pointista, jonne pääsee vain bussilla tai kävellen. Näkymät '
+                + 'avautuvat heti, ja ensimmäinen näköalapaikka on nimetty Ooh '
+                + 'Aah Pointiksi kävijöiden huudahdusten mukaan, mutta varjoa '
+                + 'ja vettä polulla ei ole. Pohjalla, Coloradojoen '
+                + 'pohjoisrannalla, odottaa vuonna 1922 avattu Phantom Ranch, '
+                + 'jonne pääsee vain jalan, muulilla tai jokea pitkin. Sen '
+                + 'paikat on viime vuosina arvottu 15 kuukautta etukäteen, ja '
+                + 'muu yöpyminen reunan alapuolella vaatii leiriytymisluvan, '
+                + 'jota haetaan neljä kuukautta ennen. Kapealla polulla '
+                + 'muulijonolle väistetään aina.',
+              kuva: {
+                tiedosto: 'Grand Canyon Nat. Park S Kaibab Trail - Red & White Switchbacks 2354 (6752118021).jpg',
+                lyhyt: 'South Kaibab Trail laskeutuu serpentiineinä jyrkänteen läpi kohti kanjonin pohjaa.',
+                selite: 'Sateisena tammikuun päivänä 2012 kuvattu näkymä '
+                  + 'South Kaibab Trailin mutkiin, jotka kiemurtelevat alas '
+                  + 'Redwall-kalkkikiven jyrkänteen halki.',
+                lahde: 'Grand Canyon National Park, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Vesi ja kuumuus',
+              teksti: 'Grand Canyonissa vuori on ylösalaisin: toisin kuin '
+                + 'tunturissa, alas mennään levänneenä ja raskain nousu jää '
+                + 'päivän loppuun. Reunalta joelle on pystysuunnassa noin '
+                + 'puolitoista kilometriä, ja alaspäin mentäessä lämpenee. '
+                + 'Heinäkuussa päivän ylin lämpötila on eteläreunalla '
+                + 'keskimäärin 29 astetta, pohjan Phantom Ranchilla 41. Siksi '
+                + 'puisto ei suosittele kävelemään joelle ja takaisin yhden '
+                + 'päivän aikana, ja reunan alapuolelta pelastetaan silti '
+                + 'vuosittain satoja uupuneita ja nestehukasta kärsiviä '
+                + 'retkeilijöitä. Kesällä kävellään aamulla ja illalla, sillä '
+                + 'keskipäivä on kanjonin alaosissa vaarallisin. Vettä kuluu '
+                + 'enemmän kuin luulisi, mutta pelkkä vesi ei riitä: myös '
+                + 'suolaa pitää saada, koska runsas juominen ilman ruokaa voi '
+                + 'laimentaa veren suolapitoisuuden vaarallisen alas. Polkujen '
+                + 'juomapisteet saavat vetensä yhdestä ainoasta putkesta: '
+                + 'vuonna 1970 valmistunut Transcanyon-vesijohto tuo '
+                + 'pohjoisreunan Roaring Springsin lähdevettä kanjonin poikki '
+                + 'koko eteläreunalle, ja vanha putki rikkoutuu usein. Hanat '
+                + 'voivat siis olla kiinni, ja luonnon vesilähteiden vesi on '
+                + 'aina puhdistettava ennen juomista.',
+              kuva: {
+                tiedosto: "'Victor Vomit' sign on the Upper Bright Angel Trail (51295697782).jpg",
+                lyhyt: 'Bright Angel Trailin kyltti varoittaa kävelemästä joelle ja takaisin yhdessä päivässä.',
+                selite: 'Bright Angel Trailin yläosan kyltti muistuttaa usealla '
+                  + 'kielellä, että joelle ja takaisin on pitkä matka, kova '
+                  + 'kuumuus ja lähes 1 500 metrin korkeusero; piirroksessa '
+                  + 'kuumuudesta sairastunut retkeilijä oksentaa polun varrella.',
+                lahde: 'Grand Canyon National Park, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Ukkonen, tulvat ja lumi',
+              teksti: 'Heinä- ja elokuu ovat Arizonassa monsuuniaikaa: '
+                + 'iltapäivisin kerääntyvät ukkoskuurot tuovat rankkasateita '
+                + 'ja salamoita, ja korkeilla reunoilla salama iskee ihmisiin '
+                + 'varsin säännöllisesti. Ukkosella mennään sisätiloihin. '
+                + 'Kapeissa kanjoneissa tulva voi yllättää, vaikka omalla '
+                + 'kohdalla ei sataisi lainkaan, koska vesi syöksyy alas '
+                + 'ylempää. Näin kävi 29. elokuuta 2026, kun pohjoisreunan '
+                + 'rankkasade valui Bright Angel Creekiin: edellisvuonna '
+                + 'palaneet rinteet eivät imeneet vettä, ja puron pinta nousi '
+                + 'yli puolitoista metriä kymmenessä minuutissa. Tulva oli '
+                + 'puiston suurin sitten vuoden 1966. Kolme retkeilijää kuoli, '
+                + 'ja yli 80 ihmistä pelastettiin, useimmat helikopterilla. '
+                + 'Tulva rikkoi myös eteläreunan vesijohtoa, joten puisto '
+                + 'rajoitti veden käyttöä ja perui hotelliyöpymisiä. Syyskuun '
+                + 'puolivälissä sisäkanjonissa oli yhä laajoja sulkuja, ja '
+                + 'tilanne muuttuu nopeasti. Talvella sää kääntyy toisin päin: '
+                + 'eteläreunalle sataa vuodessa keskimäärin puolitoista metriä '
+                + 'lunta, polkujen yläosat jäätyvät ja kenkiin kannattaa ottaa '
+                + 'liukuesteet. Puhelin ei kuulu kanjonissa varmasti missään, '
+                + 'joten paperikartta kulkee mukana joka säällä.',
+              kuva: {
+                tiedosto: 'Monsoon Rain and a Partial Rainbow as seen from the Village Historic District (53949587432).jpg',
+                lyhyt: 'Monsuunikuuro ja sateenkaari kanjonin yllä elokuun 2024 auringonlaskussa.',
+                selite: 'Heinä–elokuun monsuuniukkoset tuovat kanjoniin '
+                  + 'kaivattua sadetta mutta myös hengenvaarallisia salamoita; '
+                  + 'kuva on otettu Grand Canyon Villagen historiallisesta '
+                  + 'kylänosasta.',
+                lahde: 'Grand Canyon NPS, Wikimedia Commons (PD)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'tiede',
@@ -125792,6 +126016,249 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Jerrye & Roy Klotz MD, Wikimedia Commons (CC BY-SA 3.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Iguazu Falls, Iguazú National Park, Iguaçu National
+       * Park, Puerto Iguazú, Tancredo Neves Bridge, Rainforest Ecological
+       * Train, Cataratas del Iguazú International Airport, Foz do Iguaçu
+       * International Airport, Itaipu Dam, Guaíra Falls, Parque das Aves),
+       * portugalinkielisestä Wikipediasta (Parque Nacional do Iguaçu:
+       * Santos-Dumont ja maiden lunastus 1916), Wikivoyagesta (Iguaçu
+       * Falls, Puerto Iguazú, Foz do Iguaçu) sekä La Nacionin jutuista
+       * 8.7. ja 12.7.2024 (Garganta del Diablon kävelysiltojen tuho
+       * lokakuun 2023 tulvassa ja uudelleenavaus 13.7.2024) ja Turismo
+       * Misionesin uutisesta 12.12.2024 (varotoimisulku tulvan aikaan)
+       * — teksti omaa.
+       * Nostojen, gallerian ja ennen-nyt-kuvien aiheita (Cabeza de Vaca,
+       * legenda, putousten määrä ja kurkku, rajakiista ja kolmen maan
+       * raja, jesuiittalähetys, puistojen perustaminen, sademetsä,
+       * tukaani, nenäkarhu, perhoset, basaltti) ei toisteta. Hinnat ja
+       * aukioloajat on jätetty pois, koska ne muuttuvat nopeasti. Kuvien
+       * lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja kuvat
+       * katsottu silmin. Pystykuva: Brasilian puolen näköalatasanne.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Parque Nacional do Iguaçú - Iguaçu National Park (14116493062).jpg',
+          lyhyt: 'Brasilian puolen näköalatasanteelta näkyvät Argentiinan puolen kaksiportaiset putoukset.',
+          selite: 'Brasilian puolen rantapolun näköalatasanteelta avautuu '
+            + 'näkymä joen yli Argentiinan puolelle, jossa vesi putoaa '
+            + 'kahtena portaana sademetsän reunalta.',
+          lahde: 'Deni Williams, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Iguazún putouksille ei tulla yhteen kaupunkiin vaan '
+          + 'kahteen maahan. Argentiinan puolella porttina on pieni Puerto '
+          + 'Iguazú, Brasilian puolella suurempi Foz do Iguaçu, ja '
+          + 'kummallakin on oma lentokenttänsä. Putoukset kannattaa katsoa '
+          + 'molemmilta puolilta: Argentiinassa kuljetaan kapearaiteisella '
+          + 'junalla ja kävelysiltoja pitkin aivan putousten päälle ja alle, '
+          + 'Brasiliassa yksi rantapolku näyttää koko putousrintaman kerralla. '
+          + 'Vesi kastelee joka tapauksessa, ja kumiveneet ajavat '
+          + 'matkustajansa tahallaan putousten alle. Sataa ympäri vuoden, ja '
+          + 'vettä virtaa yleensä eniten joulu–helmikuussa. Rajan ylitys käy '
+          + 'vaivattomasti, mutta passi on pidettävä mukana.',
+        artikkeli: {
+          nimi: 'Matkailijan Iguazú',
+          teksti: 'Iguazún putoukset katsotaan kahdesta maasta, ja '
+            + 'kummaltakin puolelta ne näyttävät erilaisilta.',
+          nosto: 'Lokakuun 2023 tulva vei valtaosan Paholaisen kurkun '
+            + 'kävelysilloista, ja reitti oli suljettuna yhdeksän kuukautta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kaksi porttikaupunkia ja Veljeyden silta',
+              teksti: 'Argentiinan puolen lentokenttä on metsän keskellä '
+                + 'noin 16 kilometriä Puerto Iguazústa kaakkoon ja vain '
+                + 'kuutisen kilometriä putouksista etelään, ja sinne '
+                + 'lennetään enimmäkseen Buenos Airesista. Brasilian kenttä '
+                + 'avattiin 1974 Foz do Iguaçun ja kansallispuiston väliin, ja '
+                + 'sinne tulee vuoroja Brasilian suurista kaupungeista; '
+                + 'Wikivoyagen vinkin mukaan koneen vasemmasta ikkunasta voi '
+                + 'laskeuduttaessa nähdä putoukset. Kaupunkeja yhdistää '
+                + 'Iguazú-joen ylittävä Tancredo Nevesin silta, paremmin '
+                + 'tunnettu Veljeyden siltana, joka avattiin marraskuussa '
+                + '1985. Rajan ylitys on arkinen asia, sillä viranomaiset '
+                + 'olettavat useimpien tekevän vain päiväretken, mutta '
+                + 'passileimat on hoidettava. Bussinkuljettaja ei aina pysähdy '
+                + 'raja-asemalle itsestään, joten hänelle kannattaa kertoa '
+                + 'asiasta etukäteen: ilman leimaa palaaminen voi tulla '
+                + 'kalliiksi. Argentiinan puolella poliisi voi tarkistaa '
+                + 'henkilöpaperit kotimaan matkallakin. Vuokra-autolla rajan '
+                + 'yli ajaminen vaatii vuokraamon luvan ja erillisen '
+                + 'vakuutuksen, joka on voimassa Argentiinassa. Fozista '
+                + 'puiston portille pääsee paikallisbussilla, joka kulkee '
+                + 'lentokentän ohi, ja Puerto Iguazún linja-autoasemalta '
+                + 'lähtee vuoroja Argentiinan puolen portille.',
+              kuva: [
+                {
+                  tiedosto: 'Ponte da Fraternidade.jpg',
+                  lyhyt: 'Veljeyden silta yhdistää Foz do Iguaçun ja Puerto Iguazún Iguazú-joen yli.',
+                  selite: 'Vuonna 1985 avattu Tancredo Nevesin silta eli '
+                    + 'Veljeyden silta ylittää Iguazú-joen Brasiliasta '
+                    + 'Argentiinaan; kuva on otettu joen pinnan tasolta '
+                    + 'sillan alta.',
+                  lahde: 'Garon Piceli, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Ingreso a la Aduana de Argentina (Puerto Iguazú) por el Puente Internacional "Tancredo Neves" desde Foz do Iguaçu, Brasil.jpg',
+                  lyhyt: 'Autot jonottavat Argentiinan raja-asemalle sillan päässä Puerto Iguazússa.',
+                  selite: 'Syyskuussa 2025 otetussa kuvassa Brasiliasta '
+                    + 'Veljeyden sillan yli tulleet autot jonottavat '
+                    + 'Argentiinan raja- ja tulliasemalle Puerto Iguazússa.',
+                  lahde: 'Horacio Cambeiro, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'IGR03.jpg',
+                  lyhyt: 'Cataratas del Iguazún lentoasema on metsän keskellä lähellä putouksia.',
+                  selite: 'Argentiinan puolen lentoaseman terminaali '
+                    + 'syyskuussa 2022; kenttä on noin 16 kilometriä Puerto '
+                    + 'Iguazústa kaakkoon ja vain kuutisen kilometriä '
+                    + 'putouksista etelään.',
+                  lahde: 'Vmzp85, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Argentiinan puoli: juna ja kävelysillat',
+              teksti: 'Lähes neljä viidestä putouksesta on Argentiinan '
+                + 'puolella, ja siellä kulkija pääsee niiden päälle ja alle. '
+                + 'Portilta lähtee kapearaiteinen Tren Ecológico de la Selva, '
+                + 'jonka vihreä, propaanilla kulkeva veturi vetää avonaisia '
+                + 'puupenkkivaunuja seitsemän kilometrin rataa pitkin '
+                + 'enintään 20 kilometrin tuntinopeutta. Juna pysähtyy, jos '
+                + 'eläin ylittää radan. Cataratas-asemalta alkavat ylempi '
+                + 'polku, joka kulkee putousten yläreunaa pitkin, ja pidempi '
+                + 'alempi polku, joka tuo kävijän putousten juurelle. '
+                + 'Päätepysäkiltä kävellään kilometrin mittaista siltaa '
+                + 'pitkin joen yli Paholaisen kurkun partaalle. Lokakuussa '
+                + '2023 yksi joen historian suurimmista tulvista vei '
+                + 'valtaosan kurkun kävelysilloista sekä 400 metriä '
+                + 'junarataa. Reitti avattiin uudelleen heinäkuussa 2024, ja '
+                + 'se suljetaan yhä varmuuden vuoksi, kun joki nousee. '
+                + 'Väkijoukkoja pääsee pakoon Sendero Macucolle, noin '
+                + 'seitsemän kilometrin edestakaiselle päällystämättömälle '
+                + 'metsäpolulle, joka päättyy pieneen Arrechean putoukseen; '
+                + 'sille kannattaa lähteä hyvissä ajoin päivällä. Polkujen ja '
+                + 'San Martínin saarelle vievän veneen tilanne vaihtelee '
+                + 'vedenkorkeuden mukaan, joten se kannattaa tarkistaa '
+                + 'puiston sivuilta juuri ennen käyntiä.',
+              kuva: {
+                tiedosto: 'Tren Ecológico de la Selva • Iguazú, Argentina (55805).jpg',
+                lyhyt: 'Tren Ecológico de la Selva kuljettaa kävijät avovaunuissa sademetsän halki.',
+                selite: 'Kapearaiteisen junan avovaunut täynnä matkustajia '
+                  + 'kulkevat vehreän metsän reunustamaa rataa pitkin '
+                  + 'Argentiinan kansallispuistossa syyskuussa 2025.',
+                lahde: 'Horacio Cambeiro, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Brasilian puoli: koko rintama kerralla',
+              teksti: 'Brasiliaan kuuluu vain runsas viidennes putouksista, '
+                + 'mutta sieltä kokonaisuuden näkee parhaiten. Puiston '
+                + 'sisällä kävijöitä kuljettavat kaksikerroksiset '
+                + 'panoraamabussit, joihin mahtuu 72 matkustajaa: kun '
+                + 'jokaisessa autossa on paljon väkeä, puiston luonto kärsii '
+                + 'vähemmän. Bussit pysähtyvät jokaisen polun alkupäässä. '
+                + 'Päänähtävyys on noin kahden kilometrin rantapolku, jonka '
+                + 'näköalapaikoilta putousrintama avautuu joen toiselle '
+                + 'puolelle. Lopuksi kävelysilta vie veden päälle Paholaisen '
+                + 'kurkun juurelle, Argentiinan tasannetta alemmas, missä '
+                + 'sumu kastelee ja aurinkoisena päivänä sateenkaaria syntyy '
+                + 'jatkuvasti. Polku päättyy Porto Canoasin asemalle, jonka '
+                + 'kohdalla joki virtaa vielä tyynenä putousten yläpuolella. '
+                + 'Wikivoyagen mukaan Brasilian puolelle riittää muutama '
+                + 'tunti, mutta metsään johtaa myös hiljaisempia reittejä, '
+                + 'kuten suoalueen halki kulkeva Bananeiras-polku, jonka '
+                + 'varrella voi nähdä kapusiiniapinoita ja agouteja. Puiston '
+                + 'syntyyn liittyy ilmailun uranuurtaja Alberto '
+                + 'Santos-Dumont: hän näki putoukset 1916 ja käytti '
+                + 'arvovaltaansa, jotta Paranán osavaltio lunasti maat '
+                + 'yleiseen käyttöön. Hänen patsaansa, lentoyhtiö VASP:n '
+                + 'lahja, seisoo puistossa. Brasiliasta voi myös lentää '
+                + 'helikopterilla putousten yllä, mutta Argentiina on '
+                + 'kieltänyt helikopteriajelut luonnolle koituvan haitan '
+                + 'vuoksi.',
+              kuva: {
+                tiedosto: 'Statue of Santos Dumont, Iguaçu National Park, 30-07-2025.jpg',
+                lyhyt: 'Santos-Dumontin patsas muistuttaa lentäjästä, joka ajoi putousten suojelua 1916.',
+                selite: 'Ilmailun uranuurtajan Alberto Santos-Dumontin '
+                  + 'pronssipatsas lierihattuineen seisoo trooppisten '
+                  + 'kasvien keskellä Brasilian kansallispuistossa; kuva on '
+                  + 'heinäkuulta 2025.',
+                lahde: 'Jcornelius, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kastumaan: veneet, sade ja sumu',
+              teksti: 'Iguazúlla kastuu, vaikka ei haluaisi, joten '
+                + 'sadetakki ja kameran suojapussi kuuluvat varustukseen; '
+                + 'kesällä osa kävijöistä kulkee näköalapaikoilla suoraan '
+                + 'uimapuvussa. Argentiinan puolella Iguazu Jungle Explorer '
+                + 'ajaa kumiveneillä putousten juurelle, ja kameralle '
+                + 'annetaan kuivapussi, koska matkustajat kastuvat '
+                + 'läpimäriksi. Brasilian puolella Macuco Safari aloittaa '
+                + 'avoautolla viidakon halki, ja lopuksi kävellään laiturille, '
+                + 'jolta noin 20 hengen kumiveneet nousevat kahden ison '
+                + 'moottorin voimin koskia ylös. Aivan Paholaisen kurkun alle '
+                + 'ei kivikon takia päästä, mutta kapteenit ohjaavat veneen '
+                + 'muiden putousten alle aina kun voivat, ja kuivat vaatteet '
+                + 'kannattaa jättää lähtöpaikan säilytyslokeroon. Ilmasto on '
+                + 'kostea ja subtrooppinen: sataa ympäri vuoden, enimmäkseen '
+                + 'ukkoskuuroina, ja päivän keskilämpötila vaihtelee kesän '
+                + 'noin 25 asteesta talven noin 15 asteeseen. Vettä on '
+                + 'yleensä eniten joulu–helmikuussa, mutta kuivuus voi '
+                + 'yllättää: vuonna 2006 virtaama pysyi poikkeuksellisen '
+                + 'kauan murto-osana tavallisesta. Talvella Puerto Iguazússa '
+                + 'voi olla koleaa, harvoin jopa pakkasta. Seudulla esiintyy '
+                + 'keltakuumetta ja muita hyttysten levittämiä tauteja, joten '
+                + 'rokotussuositukset kannattaa tarkistaa ennen matkaa.',
+              kuva: {
+                tiedosto: 'Iguassu Falls, Brazil-Argentina - by boat to the foot of the falls on the Argentine side - prepare to get soaked!! - (24215190874).jpg',
+                lyhyt: 'Kumivene täynnä matkustajia kurvaa Argentiinan puolen putousten juurelle.',
+                selite: 'Punainen kumivene kuljettaa pelastusliiveihin '
+                  + 'pukeutuneita matkustajia ruskeaa, kuohuvaa jokea pitkin '
+                  + 'kohti Argentiinan puolen putouksia, joiden sumu peittää '
+                  + 'kallioseinämän.',
+                lahde: 'Murray Foubister, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Pato, joka hukutti toiset putoukset',
+              teksti: 'Foz do Iguaçun pohjoispuolella Paraná-joen patoava '
+                + 'Itaipun voimala on putousten ohella seudun suurin '
+                + 'nähtävyys. Brasilian ja Paraguayn yhteinen pato valmistui '
+                + '1984, ja sen 20 generaattoria tuottavat kukin noin 700 '
+                + 'megawattia. Mittasuhteet selviävät Iguazún kautta: '
+                + 'putousten keskimääräinen vesimäärä riittäisi pyörittämään '
+                + 'vain kahta generaattoria, ja täysin auki olevat tulvaportit '
+                + 'päästävät läpi 40 kertaa putousten keskivirtaaman. Patoa '
+                + 'kierretään opastetuilla kierroksilla sekä Brasilian että '
+                + 'Paraguayn puolelta. Padon hinta näkyy ylävirrassa: kun '
+                + 'tekojärvi täyttyi lokakuussa 1982, sen alle jäivät '
+                + 'Guaíran putoukset, joiden virtaamaa pidettiin yhtenä '
+                + 'maailman suurimmista. Viimeisinä kuukausina tuhannet '
+                + 'tulivat katsomaan niitä vielä kerran, ja tammikuussa 1982 '
+                + 'ylikuormitettu riippusilta romahti ja vei kymmeniä '
+                + 'ihmishenkiä. Eläimiä pääsee katsomaan lähempää kahdessa '
+                + 'pienemmässä kohteessa. Kansallispuiston porttia vastapäätä '
+                + 'on vuonna 1994 avattu Parque das Aves, jossa kävelypolku '
+                + 'kulkee 16 hehtaarin metsään rakennettujen suurten '
+                + 'lintuhäkkien läpi. Puerto Iguazússa Güirá Oga hoitaa '
+                + 'pelastettuja lintuja ja muita eläimiä ja yrittää palauttaa '
+                + 'ne luontoon.',
+              kuva: {
+                tiedosto: 'Usina Hidroelétrica Itaipu Binacional - Itaipu Dam (17174823579).jpg',
+                lyhyt: 'Itaipun padon tulvauomat laskeutuvat jyrkkinä kohti Paraná-jokea.',
+                selite: 'Itaipun padon harjalta näkyvät hyppyrimäen '
+                  + 'muotoiset tulvauomat, jotka ovat kuvassa lähes kuivina; '
+                  + 'niiden alapuolella Paraná-joki virtaa metsäisten '
+                  + 'rantojen välissä.',
+                lahde: 'Deni Williams, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -127675,6 +128142,231 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Machu Picchu: Tourist activity, Geography,
+       * Transportation; Inca Trail to Machu Picchu; Aguas Calientes, Peru;
+       * Huayna Picchu; Intipunku) ja Wikivoyagesta (Machu Picchu, Inca
+       * Trail, Aguas Calientes) — teksti omaa. Nostojen aiheita (historia,
+       * sijainti ja sademäärä, kuninkaan maatila, Binghamin löytö,
+       * maailmanperintö ja kävijäkatot, nimi, muurit, Intihuatana,
+       * terassit, Torreón) ei toisteta. Hinnat ja aukioloajat jätetty pois,
+       * koska lippujärjestelmä muuttuu usein (reittijako 1.6.2024
+       * Wikivoyagen mukaan). Machu Picchu -vuoren korkeus "yli 3 000
+       * metriä": Wikivoyage 3 040 m, huipun kyltti kuvassa 3 061 m.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta
+       * ja kuvat katsottu silmin. Pystykuva: Allard Schmidtin
+       * auringonnousukuva (tekijä luovuttanut PD).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Peru Machu Picchu Sunrise.jpg',
+          lyhyt: 'Aamu-usva kiertää Huayna Picchua, kun kaupungissa ei ole vielä kävijöitä.',
+          selite: 'Kuvaaja kiipesi auringonnousun aikaan ryhmänsä edellä '
+            + 'ja löysi kaupungin tyhjänä. Aamun ensimmäisinä tunteina '
+            + 'raunioilla on väljää, ennen kuin päiväretkeläiset ehtivät '
+            + 'junalla ja bussilla perille.',
+          lahde: 'Allard Schmidt, Wikimedia Commons (PD)',
+        },
+        kappale: 'Machu Picchuun ei ajeta autolla. Viimeinen osuus '
+          + 'kuljetaan junalla laakson pohjalle Aguas Calientesin kylään ja '
+          + 'sieltä bussilla tai portaita pitkin ylös, ellei tule neljän '
+          + 'päivän vaelluksella inkapolkua ja Aurinkoportin kautta. '
+          + 'Pääsylippu ostetaan etukäteen yhdelle reitille ja '
+          + 'kellonajalle, ja passi kulkee mukana. Kaupungin yllä kohoavat '
+          + 'Huayna Picchu ja Machu Picchu -vuori vaativat omat lippunsa, '
+          + 'ja inkojen vanha silta kallioseinämän kyljessä on lyhyen '
+          + 'kävelyn päässä. Kuivinta on toukokuusta syyskuuhun, mutta '
+          + 'silloin myös väkeä on eniten. Liput, reitit ja kiintiöt '
+          + 'muuttuvat usein, joten ne kannattaa tarkistaa ennen matkaa '
+          + 'viralliselta sivustolta.',
+        artikkeli: {
+          nimi: 'Matkailijan Machu Picchu',
+          teksti: 'Machu Picchun juurelle pääsee vain junalla tai jalan.',
+          nosto: 'Inkapolulle päästetään päivässä enintään 500 ihmistä, ja '
+            + 'heistä suurin osa on oppaita ja kantajia.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Junalla laakson pohjalle',
+              teksti: 'Useimmat matkailijat saapuvat junalla. PeruRail ja '
+                + 'Inca Rail ajavat Cuscon lähellä olevalta Poroyn asemalta '
+                + 'tai Ollantaytambon pikkukaupungista Urubamban laaksoa '
+                + 'alas Aguas Calientesiin, jonka virallinen nimi on '
+                + 'nykyään Machupicchu Pueblo. Kylään ei johda autotietä: '
+                + 'se syntyi 1920-luvun lopulla ratatyömaan leiriksi ja '
+                + 'alkoi palvella matkailijoita, kun rata valmistui 1931. '
+                + 'Ollantaytambosta junamatka kestää vajaat kaksi tuntia, '
+                + 'Poroysta lähes neljä, ja sadekaudella Cuscon puoleiset '
+                + 'vuorot voidaan korvata bussikuljetuksella '
+                + 'Ollantaytamboon. Kylästä raunioille kiemurtelee 8,6 '
+                + 'kilometrin serpentiinitie, jonka bussit ajavat noin '
+                + 'puolessa tunnissa; jalan portaita pitkin nousu vie '
+                + 'puolestatoista kahteen tuntiin. Halvempi takaovi kulkee '
+                + 'maanteitse Hidroeléctrican voimalan asemalle, josta '
+                + 'kävellään radan viertä kylään kahdesta kolmeen tuntia. '
+                + 'Sadekaudella reittiä ei suositella maanvyöryjen vuoksi, '
+                + 'ja kun voimalalle johtavaa tietä päällystetään, '
+                + 'matka-ajat voivat vielä muuttua.',
+              kuva: [
+                {
+                  tiedosto: 'Train going to Aguas Calientes (Machu Picchu City) at Inca Trail, Peru.jpg',
+                  lyhyt: 'Juna kulkee Urubamban vartta kohti Aguas Calientesia inkojen terassien ohi.',
+                  selite: 'Matkustajajuna matkalla Aguas Calientesiin '
+                    + 'kuohuvan Urubamba-joen rantaa pitkin. Kuva on '
+                    + 'otettu inkapolulta elokuussa 2022, ja vasemmalla '
+                    + 'näkyy inkojen terassimuureja.',
+                  lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Machu Picchu - train runs right through the center of Aguas Calientes - IMG 7789.jpg',
+                  lyhyt: 'PeruRailin veturi ajaa Aguas Calientesin keskustan läpi ravintoloiden vierestä.',
+                  selite: 'Aguas Calientesissa rata kulkee kylän '
+                    + 'kävelykadun keskellä, ja PeruRailin sininen '
+                    + 'dieselveturi ohittaa terassiravintolan pöydät '
+                    + 'muutaman metrin päästä. Kuva vuodelta 2011.',
+                  lahde: 'Bruce Tuten, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Buses on the switchback climb to Machu Picchu.jpg',
+                  lyhyt: 'Bussit kiipeävät soratien mutkia kylästä raunioiden portille.',
+                  selite: 'Kaksi bussia serpentiinitiellä, jota pitkin '
+                    + 'matkailijat ajetaan Aguas Calientesista Machu '
+                    + 'Picchun sisäänkäynnille. Tie kiemurtelee jyrkkää '
+                    + 'metsärinnettä ylös; kuva heinäkuulta 2009.',
+                  lahde: 'Jimmy Harris, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Lippu yhdelle reitille',
+              teksti: 'Pääsylippu ei ole vapaa kulkulupa koko kaupunkiin. '
+                + 'Kesäkuusta 2024 alkaen liput on jaettu kolmeen '
+                + 'kierrokseen ja niiden kymmeneen reittiin, ja yksi lippu '
+                + 'käy vain yhdelle reitille tiettynä kellonaikana. '
+                + 'Ensimmäinen kierros vie ainoastaan ylemmille ja '
+                + 'alemmille näköalapaikoille, toinen eli klassinen kierros '
+                + 'kulkee kaupunkialueen läpi ja kolmas, niin sanottu '
+                + 'kuninkaallinen kierros, kiertää alakaupungin '
+                + 'tärkeimmät rakennukset. Polut ovat pitkälti '
+                + 'yksisuuntaisia, joten ohi kävelty kohde jää helposti '
+                + 'näkemättä. Alueella ei ole vessoja eikä ruokamyyntiä, '
+                + 'eikä ulos pääse käymään ja palaamaan. Portilla kysytään '
+                + 'passia, ja isot reput jätetään säilöön. Lippuja myydään '
+                + 'viralliselta verkkosivustolta ja rajoitetusti Aguas '
+                + 'Calientesin lipputoimistosta, mutta paikan päältä '
+                + 'ostettu lippu kelpaa vasta seuraavana päivänä. '
+                + 'Järjestelmää on muutettu viime vuosina monta kertaa, '
+                + 'joten voimassa olevat säännöt kannattaa tarkistaa '
+                + 'juuri ennen matkaa.',
+              kuva: {
+                tiedosto: 'Machu Picchu, 2023 (035).jpg',
+                lyhyt: 'Köysiaidat ja kyltit ohjaavat kävijöitä polkua pitkin kaupungin keskiosaan.',
+                selite: 'Toukokuussa 2023 otetussa kuvassa matkailijaryhmät '
+                  + 'kulkevat kaupungin keskiosan halki Huayna Picchun '
+                  + 'juurella. Etualan köysiaita ja kyltti rajaavat '
+                  + 'polkua, jota kukin lippureitti seuraa.',
+                lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Inkapolkua Aurinkoportille',
+              teksti: 'Perinteinen tapa saapua on kävellä. Klassinen '
+                + 'inkapolku lähtee Urubamban varrelta rautatien '
+                + 'kilometrin 82 kohdalta ja kulkee runsaat 40 kilometriä '
+                + 'vuorten yli, tavallisesti neljässä päivässä ja kolmena '
+                + 'telttayönä. Toisena päivänä noustaan Warmi Wañusqan eli '
+                + 'Kuolleen naisen solaan 4 215 metrin korkeuteen, ja '
+                + 'viimeisenä aamuna kaupunki avautuu yläpuolelta Inti '
+                + 'Punkun, Aurinkoportin, kautta. Polulle pääsee vain '
+                + 'luvalla. Päivittäiseen 500 hengen kiintiöön lasketaan '
+                + 'myös oppaat ja kantajat, joten vaeltajia on vain '
+                + 'parisataa, ja kuivan kauden luvat loppuvat kuukausia '
+                + 'etukäteen. Jokaisen on kuljettava rekisteröidyn '
+                + 'matkanjärjestäjän ja oppaan kanssa, ja lupa on sidottu '
+                + 'passiin. Kantojuhdat eivät saa kulkea polun yläosilla, '
+                + 'joten leirivarusteet kantavat paikalliset kantajat. '
+                + 'Polku suljetaan joka helmikuu huoltoa ja siivousta '
+                + 'varten. Kiireisemmälle on kahden päivän versio '
+                + 'kilometriltä 104, ja ilman inkapolun lupaa voi lähteä '
+                + 'esimerkiksi viiden päivän Salkantay-vaellukselle.',
+              kuva: {
+                tiedosto: 'Machu Picchu seen from Intipunku (the Gate of the Sun), Peru.jpg',
+                lyhyt: 'Aurinkoportilta vaeltaja näkee kaupungin ensi kertaa, Huayna Picchu taustallaan.',
+                selite: 'Inkapolun viimeinen kivetty osuus Inti Punkun '
+                  + 'kohdalla. Alhaalla harjanteella näkyvät Machu Picchun '
+                  + 'terassit, takana kohoaa Huayna Picchu ja rinteessä '
+                  + 'erottuvat bussitien mutkat. Kuva elokuulta 2022.',
+                lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kaksi huippua ja inkasilta',
+              teksti: 'Lipun voi valita niin, että siihen kuuluu vuoren '
+                + 'nousu. Kaupungin pohjoispäässä kohoava Huayna Picchu '
+                + 'nousee 2 693 metriin, noin 260 metriä raunioita '
+                + 'korkeammalle. Jyrkällä polulla on kiviportaita ja '
+                + 'paikoin teräsvaijereita, joista otetaan tukea, ja '
+                + 'huipun alla kuljetaan ahtaan luolan läpi; reipas '
+                + 'kulkija on ylhäällä alle tunnissa. Polulle päästetään '
+                + 'päivittäin enintään 400 kävijää kahdessa aikaikkunassa, '
+                + 'ja marraskuusta huhtikuuhun märät kivet ovat liukkaita. '
+                + 'Werner Herzogin Aguirre – Jumalan viha (1972) kuvattiin '
+                + 'osin juuri näillä portailla. Kaupungin eteläpuolella '
+                + 'kohoaa Machu Picchu -vuori, jonka yli 3 000 metrin '
+                + 'huipulle noustaan Aurinkoportin polulta haarautuvaa '
+                + 'porraspolkua. Edestakaiseen matkaan kuluu pari–kolme '
+                + 'tuntia, ja väkeä on vähemmän. Lyhyin sivuretki johtaa '
+                + 'lounaaseen Inkasillalle: kapea polku on muurattu '
+                + 'pystysuoran kallioseinämän kylkeen, ja muurin aukon yli '
+                + 'on laskettu tukkeja. Ne poistamalla inkat saattoivat '
+                + 'sulkea toisen kaupunkiin johtaneista reiteistä.',
+              kuva: {
+                tiedosto: 'Inca bridge, Machu Picchu 2.jpg',
+                lyhyt: 'Inkasillan tukit peittävät muurin aukon pystysuoran kallion kyljessä.',
+                selite: 'Inkasillan kohdalla polku on muurattu '
+                  + 'kallioseinämän kylkeen, ja sen aukon yli on laskettu '
+                  + 'tukkeja. Ne poistamalla kulku kaupunkiin voitiin '
+                  + 'katkaista. Kuva syyskuulta 2009.',
+                lahde: 'Corey from Australia, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Sää, korkeus ja ruuhkat',
+              teksti: 'Kuivinta on toukokuusta syyskuuhun, ja sateisin aika '
+                + 'osuu marraskuusta maaliskuuhun. Päivälämpötila pysyy '
+                + 'ympäri vuoden lähes samana, mutta kuivan kauden yöt '
+                + 'ovat viileitä. Kuiva kausi on myös ruuhka-aikaa: eniten '
+                + 'väkeä on kesä–elokuussa, vähiten helmikuussa, kun '
+                + 'inkapolku on kiinni. Pakettimatkalaiset ovat raunioilla '
+                + 'enimmäkseen kymmenen ja kahden välillä, joten yö Aguas '
+                + 'Calientesissa antaa tilaisuuden kulkea aamulla tai '
+                + 'iltapäivällä väljemmin. Aamuisin näkymät peittyvät '
+                + 'usein pilveen. Korkeus yllättää väärässä järjestyksessä: '
+                + 'Cusco on noin 3 400 metrissä, yli kilometrin raunioita '
+                + 'ylempänä, joten moni totuttelee ohueen ilmaan ensin '
+                + 'matalammassa Pyhässä laaksossa. Korkealla aurinko '
+                + 'polttaa, joten hattu ja aurinkovoide kuuluvat mukaan. '
+                + 'Luonto ja politiikka voivat katkaista yhteydet: '
+                + 'tammikuussa 2010 tulvat saartoivat yli 4 000 ihmistä ja '
+                + 'raunioalue avattiin vasta huhtikuussa, ja alkuvuonna '
+                + '2023 mielenosoitukset sulkivat sen muutamaksi '
+                + 'viikoksi. Pitkän päivän jälkeen voi laskeutua kylän '
+                + 'kuumiin lähteisiin, joista Aguas Calientes on saanut '
+                + 'nimensä.',
+              kuva: {
+                tiedosto: 'Montaña Machu Picchu, 2023 (37).jpg',
+                lyhyt: 'Machu Picchu -vuoren huippu katoksineen on kokonaan pilven ympäröimä.',
+                selite: 'Toukokuussa 2023 kiviportaat ja huipun katos '
+                  + 'erottuivat, mutta pilvi peitti koko laakson. '
+                  + 'Pilvisellä säällä raunioiden kuuluisat näkymät '
+                  + 'voivat jäädä kokonaan näkemättä.',
+                lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'tiede',
