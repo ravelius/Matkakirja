@@ -80,6 +80,8 @@ namespace Matkakirja.Natiivi
             o.LuentoAlkoi += (k, _) => Alkoi(k);
             o.LuentoLoppui += Loppui;
             o.MatkaPerilla += Perilla;
+            // A7/C14 (löydökset 53–54): heitto, siirto, maailmahyppy ja Ohita vaientavat paikan puheen.
+            o.PaikanPuheVaiennettu += () => UiKerros.PaaSaikeessa(VaiennaPaikanPuhe);
             o.TilaMuuttui += TarkistaAarre;
             // Aloituslento alkaa: kortti ja luentakuvat pois lennon tieltä (web renderFact aloituslentoKesken).
             o.AloituslentoAlkoi += _ => UiKerros.PaaSaikeessa(() => { kortti.Piilota(); kortti.Kuvat.Tyhjenna(false); });
@@ -303,6 +305,19 @@ namespace Matkakirja.Natiivi
         }
 
         int vuoro = -1;
+
+        /// <summary>
+        /// Web vaiennaLivianKaupunkipuhe + polloKuplatPois: Livian ääni seis, kaupungin ajastimet (kommenttiketju,
+        /// luennan odotus, kuvien vaihto) pois ja kuplapino häivytyksellä pois. Sanottu jää chatin historiaan.
+        /// </summary>
+        void VaiennaPaikanPuhe()
+        {
+            vuoro = int.MaxValue; // Kommentti(v, i) ei enää jatka ketjua tässä kaupungissa
+            vaihto?.Pause();
+            luentoOdotus?.Pause();
+            Aanet.Pysayta(AaniKanava.Puhe);
+            pulu.Kuplat.TyhjennaKaikki();
+        }
 
         void Kommentti(Saapumisvirta v, int i)
         {
