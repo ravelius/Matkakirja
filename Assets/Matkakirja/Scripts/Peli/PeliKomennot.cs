@@ -283,7 +283,7 @@ namespace Matkakirja.Natiivi
                         default: return "käyttö: lampo normaali|kuuma|kriittinen|auto";
                     }
                     Lampo.Paivita(true);
-                    return "lämpö " + Lampo.Taso;
+                    return "=lämpö " + Lampo.Taso;
                 }
                 case "levy":
                 {
