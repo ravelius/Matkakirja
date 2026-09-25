@@ -522,9 +522,40 @@ namespace Matkakirja
         /// Sallittu kallistus annetulla korkeudella (lennon lasku päättyy tähän, ettei kamera hyppää): täysi
         /// <see cref="maxKallistus"/> ≤ <see cref="kallistusTaysiKm"/>, nolla ≥ <see cref="kallistusNollaKm"/>,
         /// välillä smootherstep (KameraEleet.KallistusRaja). Rajaa käytetyn kallistuksen, ei tallennettua.
+        /// Lisäksi horisonttiusvan katto (<see cref="KallistusKattoPaalla"/>) ja kallistuksen kytkin
+        /// (<see cref="KallistusSallittu"/>); eleet lukevat rajan tästä eivätkä muutu.
         /// </summary>
-        public double KallistusRaja(double korkeusM) =>
-            KameraEleet.KallistusRaja(korkeusM, maxKallistus, kallistusTaysiKm * 1000.0, kallistusNollaKm * 1000.0);
+        public double KallistusRaja(double korkeusM)
+        {
+            if (!KallistusSallittu) return 0.0;
+            double raja = KameraEleet.KallistusRaja(korkeusM, maxKallistus, kallistusTaysiKm * 1000.0, kallistusNollaKm * 1000.0);
+            if (KallistusKattoPaalla && raja > 0.0)
+                raja = math.min(raja, Horisonttiusva.KallistusKatto(korkeusM, PuoliKulmaPysty(),
+                    CesiumWgs84Ellipsoid.GetMaximumRadius(), raja));
+            return raja;
+        }
+
+        // KALLISTUKSEN KATTO JA KYTKIN (omistajan löydös 46, build 11: "kallistus on aneeminen", "kallistuksen voi ottaa pois,
+        // jos ei saada paremman näköiseksi"). Katto webin säännöllä (js/pallolauta/kallistus.js, horisontin raja 0,6 ×
+        // korkeus): kallistus kasvaa, kunnes usvan raja laskee ruudun puoliväliin keskeltä yläreunaan (Horisonttiusva,
+        // noin 52° Kreikan korkeudella; build 11:ssä 85°, jolloin kuva oli enimmäkseen horisonttia). Yläneljännes on
+        // pergamenttiusvaa (Aurinko.cs), ei mustaa avaruutta. Kytkin on varavaihtoehto: oletus päällä.
+
+        /// <summary>Pelaajan kallistus sallittu (komento "kallistus pois|paalle"). false = kartta aina suoraan ylhäältä
+        /// (lennon kuvaus ei muutu). Oletus true.</summary>
+        public static bool KallistusSallittu = true;
+        /// <summary>Horisonttiusvan kallistuskatto (komento "kallistus katto pois|paalle"). Oletus true.</summary>
+        public static bool KallistusKattoPaalla = true;
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void NollaaKallistus() { KallistusSallittu = true; KallistusKattoPaalla = true; }
+
+        /// <summary>Pystysuuntainen puolikuvakulma asteina (Camera.fieldOfView on pystykulma).</summary>
+        double PuoliKulmaPysty()
+        {
+            var kamera = GetComponent<Camera>();
+            return (kamera != null ? kamera.fieldOfView : 50.0) * 0.5;
+        }
 
         /// <summary>Korkeus, jolla koko pallo mahtuu kuvan kapeampaan suuntaan.</summary>
         public double MaxKorkeus()
