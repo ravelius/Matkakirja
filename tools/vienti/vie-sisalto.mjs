@@ -191,8 +191,10 @@ export const SKEEMAVERSIO = 'matkakirja-vienti/1';
  *        nimet webin maakunnanNimi-funktiolla — Fable 25.9.2026, Karttasepän löydökset 105/107.
  *   1.43 maakuntarajat.vari (0–4): webin väri ämpärin <ISO>.json-aineistosta (tools/tee-maakuntavektorit.mjs
  *        varita, naapureilla eri) — Natiiviseppä 25.9.2026, sama sävy kuin webissä.
+ *   1.44 karttavalot.laji = webin symLaji (kohteen tyyppi: vuori, saari, jarvi, meri, joki, ruoka,
+ *        tekniikka…; eläintäky elain): kuvamerkki ja vektorisymboli lajin mukaan — Pelikoodari, löydös 125.
  */
-export const SKEEMAVERSIO_TARKKA = '1.43';
+export const SKEEMAVERSIO_TARKKA = '1.44';
 
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 
