@@ -6,7 +6,7 @@
  *
  *   node tools/tee-pallokerma.mjs --pohja <kansio Z/X/Y.jpg> --polygonit <maapolygonit.geojson>
  *        --ulos <kansio> (--maa ISO --alue lon0,lat0,lon1,lat1 | --maailma)
- *        [--min 5] [--max 8] [--osa i/n] [--vain-luettelo]
+ *        [--min 5] [--max 8] [--osa i/n] [--vain-luettelo] [--peitto 0.8] [--pohjanimi <sarja>]
  *   node tools/tee-pallokerma.mjs --ulos <sarjan kansio> --alasnayte 3 [--vara <_maailma-kansio>]
  *        (tasot 3…min−1 valmiista alimmasta tasosta, laatat.json tasot.min → 3)
  *
@@ -48,9 +48,20 @@ const RAD = Math.PI / 180;
 
 const smoothstep = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
 
+/*
+ * Ajon peitto (omistajan löydös 128, build 16: p080 peittää liikaa; Natiiviseppä
+ * 25.9.2026: vaihtoehdot p060 ja p045 kuvapariin). `--peitto 0.6`; oletus on
+ * webin KERMA_PEITTO, jolloin tulos on tavulleen entinen.
+ */
+let ajonPeitto = KERMA_PEITTO;
+export function asetaPeitto(p) {
+  if (!(p > 0 && p <= 1)) throw new Error(`--peitto ${p}: oltava 0 < p <= 1`);
+  ajonPeitto = p;
+}
+
 /** Kerman alfa (0…255) texelin sRGB-arvoista. */
 export function kermanAlfa(r, b, sisalla = 0) {
-  return Math.round(255 * smoothstep(KERMA_MERI_ERO, KERMA_MAA_ERO, r - b) * KERMA_PEITTO * (1 - sisalla));
+  return Math.round(255 * smoothstep(KERMA_MERI_ERO, KERMA_MAA_ERO, r - b) * ajonPeitto * (1 - sisalla));
 }
 
 /** Web Mercator: lon/lat → maailman pikseli tasolla Z. */
@@ -208,6 +219,7 @@ async function paa() {
   const argv = process.argv.slice(2);
   const lippu = (n) => { const i = argv.indexOf(n); return i >= 0 ? argv[i + 1] : null; };
   const pohja = lippu('--pohja'); const ulos = lippu('--ulos');
+  if (lippu('--peitto') !== null) asetaPeitto(Number(lippu('--peitto')));
   if (lippu('--alasnayte') !== null) {
     const lp = join(ulos, 'laatat.json');
     const l = JSON.parse(readFileSync(lp, 'utf8'));
@@ -232,8 +244,8 @@ async function paa() {
   const osa = lippu('--osa')?.split('/').map(Number) ?? null;
   mkdirSync(ulos, { recursive: true });
   const luettelo = {
-    lahde: 'webin laattakerma-shaderin sääntö (js/laattakerma-shader.js), pohja 2026-09-23a-pohja-20260923a',
-    kerma: '#faf4d6', peitto: KERMA_PEITTO, ero: [KERMA_MERI_ERO, KERMA_MAA_ERO],
+    lahde: `webin laattakerma-shaderin sääntö (js/laattakerma-shader.js), pohja ${lippu('--pohjanimi') ?? '2026-09-23a-pohja-20260923a'}`,
+    kerma: '#faf4d6', peitto: ajonPeitto, ero: [KERMA_MERI_ERO, KERMA_MAA_ERO],
     ...(iso ? { maa: iso, varitaso: { alue: { lon0: alue[0], lat0: alue[1], lon1: alue[2], lat1: alue[3] } } } : { maailma: true }),
     tasot: { min, max }, laatta: LAATTA, muoto: 'webp', puuttuva: 'läpinäkyvä', tehty: new Date().toISOString(),
   };
