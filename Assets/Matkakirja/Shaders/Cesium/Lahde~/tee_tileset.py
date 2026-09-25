@@ -7,7 +7,8 @@
 # joka paikassa 1 korvaa puuttuvan rasterin lennon varakartalla ja paikassa 2 värjää Sentinelin tumman meren.
 # Lisäksi verteksivaiheeseen korkeuserojen liioittelu (globaali _korkeusKerroin, Kartta/KorkeusKerroin.cs; löydös 29).
 # Radiouudistus (build 12): fragmentin perusväri ja emissio kulkevat RadioHamara-funktion läpi (hämärä, maavalo ja
-# yövalojen uniformit; Kartta/RadioMastot.cs). Globaalit 0 = ennallaan.
+# yövalot; Kartta/RadioMastot.cs). Globaalit 0 = ennallaan. Yövalot (build 13): NASA Black Marble omassa raster-paikassa
+# sekoituspainolla 0, ja RadioHamara näytteistää saman paikan tekstuurin ja lisää sen emissiona (_radioYovalot).
 # Käyttö: python3 tee_tileset.py <Cesium-paketin Resources-kansio> <kohdekansio>
 import json, sys, uuid, os
 
@@ -478,8 +479,21 @@ print("paikka 1 ← lennon varakartta (_lentoVara, _lentoVaraKartta); paikka 2 �
 #   _radioMaavalo      xyz = valitun maston juuri Unityn maailmassa, w = säde (m) = 110 km + 30 km × kirkkaus
 #   _radioMaavaloVari  rgb = lämmin #ff8a4a lineaarisena × kirkkaus; lisätään emissiona (valaisee paperia)
 #   _radioYonValot     xyz = valitun maston juuri, w = paikallinen tehostus 0…1 (RadioMastot.YonValot)
-# Yövalojen kerros (NASA Black Marble) puuttuu vielä: Karttasepän poltto Z0–Z6 tulee E28:n jälkeen. Uniformit ovat
-# kaaviossa valmiina, ja kerros lisätään tähän funktioon, kun rasteri on olemassa.
+#   _radioYovalot      x = yövalojen raster-paikka (1 tai 2; 0 = pois), y = voimakkuus (0,85), z = 1: poltto on jo
+#                      suodatettu (lämpimän valon paino ohitetaan), w varalla (RadioMastot.PaivitaYovalot)
+# YÖVALOT (NASA Black Marble, Karttasepän sarja 2026-09-25 Z0–Z6, musta tausta): kerros on tavallinen Cesiumin
+# raster-overlay paikassa n (KarttaKerrokset.LisaaRasteri), mutta sen sekoituspaino _overlayAlfa_n = 0, joten
+# MatkakirjaSekoitus ei peitä pohjaa mustalla. Tämä funktio näytteistää saman tekstuurin (_overlayTexture_n) Cesiumin
+# alikaavion tavalla: UV = texCoord[_overlayTextureCoordinateIndex_n] × ts.zw + ts.xy (ts =
+# _overlayTranslationAndScale_n), näyte kohdassa (u, 1 − v) (CesiumRasterOverlay.shadersubgraph) ja lisää valot
+# emissioon HÄMÄRÄN JÄLKEEN (perusväri tummuu, valot eivät):
+#   w     = saturate((R − 48/255) / (170/255)) × saturate((R − B + 10/255) / (40/255))   sRGB, vain lämmin valo
+#   lähi  = (1 − smoothstep(60 km, 230 km, etäisyys valittuun mastoon)) × _radioYonValot.w
+#   valo  = w × voimakkuus × (0,5 + 0,5 × lähi) × (1,05, 0,82, 0,52)                        natriumin sävy, sRGB
+#   emisOut += lineaarinen(valo) × h
+# (suunnitelma docs/raportit/linssi-radiouudistus-suunnitelma-20260924.md luku 3). Bloom on filmipinon (Filmipino.asset).
+# Tekstuurien nimet viitataan suoraan (Shader Graph julistaa ne kaavion ominaisuuksista samoilla nimillä), UV-kanavat
+# tulevat UV-solmuista 0–3. Näyte _GRAD-muodossa, derivaatat ennen haarautumista.
 HAMARA_RUNKO = (
     "variOut = vari.rgb; emisOut = emis;\n"
     "float h = saturate(hamara);\n"
@@ -495,8 +509,31 @@ HAMARA_RUNKO = (
     "    float f = saturate(1.0 - length(pos - maavalo.xyz) / maavalo.w);\n"
     "    emisOut += maavaloVari.rgb * (1.3 * f * f + 0.45 * f) * (vari.rgb * 1.6 + 0.12);\n"
     "}\n"
-    "// Night lights (NASA Black Marble): yonValot.xyz = selected mast, yonValot.w = local boost. Layer pending the\n"
-    "// Black Marble burn (Karttaseppa, Z0-Z6 after E28); uniforms are wired so only this body changes then.\n")
+    "// Night lights (NASA Black Marble, plan ch. 3): yovalot.x = raster slot 1/2 (0 = off), y = strength, z = 1 when the\n"
+    "// burn is pre-filtered. The slot's blend weight is 0 (RadioMastot), so the black tile never covers the map; the same\n"
+    "// texture is sampled here like CesiumRasterOverlay (uv = texCoord[index] * ts.zw + ts.xy, v flipped) and added as\n"
+    "// emission after the dusk (the dusk darkens the base colour, not the lights). yonValot.xyz = selected mast,\n"
+    "// yonValot.w = local boost (full within 60 km, fading out by 230 km).\n"
+    "int yp = (int)(yovalot.x + 0.5);\n"
+    "int yi = (int)((yp == 2 ? _overlayTextureCoordinateIndex_2 : _overlayTextureCoordinateIndex_1) + 0.5);\n"
+    "float4 yts = yp == 2 ? _overlayTranslationAndScale_2 : _overlayTranslationAndScale_1;\n"
+    "float2 ytc[4] = { tc0, tc1, tc2, tc3 };\n"
+    "float2 yuv = ytc[clamp(yi, 0, 3)] * yts.zw + yts.xy;\n"
+    "yuv.y = 1.0 - yuv.y;\n"
+    "float2 ydx = ddx(yuv), ydy = ddy(yuv);\n"
+    "if ((yp == 1 || yp == 2) && yovalot.y > 0.0 && h > 0.0)\n"
+    "{\n"
+    "    float4 yn;\n"
+    "    if (yp == 2) yn = SAMPLE_TEXTURE2D_GRAD(_overlayTexture_2, sampler_overlayTexture_2, yuv, ydx, ydy);\n"
+    "    else yn = SAMPLE_TEXTURE2D_GRAD(_overlayTexture_1, sampler_overlayTexture_1, yuv, ydx, ydy);\n"
+    "    float3 yg = pow(max(yn.rgb, 1e-5), 0.4545);   // sRGB texture, linear sample -> sRGB values for the thresholds\n"
+    "    float yw = yovalot.z > 0.5 ? dot(yg, float3(0.2126, 0.7152, 0.0722))\n"
+    "        : saturate((yg.r - 0.188235) / 0.666667) * saturate((yg.r - yg.b + 0.039216) / 0.156863);\n"
+    "    yw *= yn.a;   // tile not loaded yet: Cesium's default black (0,0,0,0)\n"
+    "    float ylahi = (1.0 - smoothstep(60000.0, 230000.0, length(pos - yonValot.xyz))) * saturate(yonValot.w);\n"
+    "    float3 yvalo = yw * yovalot.y * (0.5 + 0.5 * ylahi) * float3(1.05, 0.82, 0.52);\n"
+    "    emisOut += pow(max(yvalo, 1e-6), 2.2) * h;\n"
+    "}\n")
 flohko = {byid[b["m_Id"]]["m_SerializedDescriptor"]: b["m_Id"] for b in G["m_FragmentContext"]["m_Blocks"]}
 def sisaan(lohko_id):
     return next(e for e in G["m_Edges"] if e["m_InputSlot"]["m_Node"]["m_Id"] == lohko_id)
@@ -508,7 +545,8 @@ ham_slotit = [slotti("Vector4MaterialSlot", 0, "vari", 0, v4()), slotti("Vector3
               slotti("Vector3MaterialSlot", 2, "pos", 0, v3()), slotti("Vector1MaterialSlot", 3, "hamara", 0, 0.0),
               slotti("Vector4MaterialSlot", 4, "maavalo", 0, v4()), slotti("Vector4MaterialSlot", 5, "maavaloVari", 0, v4()),
               slotti("Vector4MaterialSlot", 6, "yonValot", 0, v4()), slotti("Vector3MaterialSlot", 7, "variOut", 1, v3()),
-              slotti("Vector3MaterialSlot", 8, "emisOut", 1, v3())]
+              slotti("Vector3MaterialSlot", 8, "emisOut", 1, v3()), slotti("Vector4MaterialSlot", 9, "yovalot", 0, v4())]
+ham_slotit += [slotti("Vector2MaterialSlot", 10 + i, "tc%d" % i, 0, {"x": 0.0, "y": 0.0}) for i in range(4)]
 for s in ham_slotit: s["m_StageCapability"] = 2
 ham_cf = solmupohja("CustomFunctionNode", "RadioHamara (Custom Function)", FX, FY, ham_slotit, m_SGVersion=1,
                     synonyms=["code", "HLSL"], m_SourceType=1, m_FunctionName="RadioHamara", m_FunctionSource="",
@@ -517,10 +555,19 @@ ham_om = kellu_ominaisuus("radioHamara", "_radioHamara", True); ham_om["m_Value"
 maavalo_om = vektori_ominaisuus("radioMaavalo", "_radioMaavalo")
 maavari_om = vektori_ominaisuus("radioMaavaloVari", "_radioMaavaloVari")
 yon_om = vektori_ominaisuus("radioYonValot", "_radioYonValot")
+yovalot_om = vektori_ominaisuus("radioYovalot", "_radioYovalot")
 ham_solmu, ham_ulos = ominaisuussolmu(ham_om, FX - 300.0, FY + 120.0)
 maavalo_solmu, maavalo_ulos = vektori_ominaisuussolmu(maavalo_om, FX - 300.0, FY + 180.0)
 maavari_solmu, maavari_ulos = vektori_ominaisuussolmu(maavari_om, FX - 300.0, FY + 240.0)
 yon_solmu, yon_ulos = vektori_ominaisuussolmu(yon_om, FX - 300.0, FY + 300.0)
+yovalot_solmu, yovalot_ulos = vektori_ominaisuussolmu(yovalot_om, FX - 300.0, FY + 360.0)
+# UV-kanavat 0–3 (Cesiumin CesiumSelectTexCoords-alikaavion tapaan: UV-solmun Vector4 → Vector2-syöte).
+uv_solmut, uv_ulot = [], []
+for i in range(4):
+    u = slotti("Vector4MaterialSlot", 0, "Out", 1, v4())
+    uv_solmut.append(solmupohja("UVNode", "UV", FX - 300.0, FY + 420.0 + 140.0 * i, [u], synonyms=["texcoords", "coords", "coordinates"],
+                                m_OutputChannel=i))
+    uv_ulot.append(u)
 hpaikka_ulos = slotti("Vector3MaterialSlot", 0, "Out", 1, v3())
 hpaikka_solmu = solmupohja("PositionNode", "Position", FX - 300.0, FY + 60.0, [hpaikka_ulos], m_SGVersion=1, m_Space=4,
                            m_PositionSource=0, m_DismissedVersion=0)
@@ -532,16 +579,19 @@ G["m_Edges"] += [reuna(vari_reuna["m_OutputSlot"]["m_Node"]["m_Id"], vari_reuna[
                  reuna(maavalo_solmu["m_ObjectId"], 0, H, 4),
                  reuna(maavari_solmu["m_ObjectId"], 0, H, 5),
                  reuna(yon_solmu["m_ObjectId"], 0, H, 6),
+                 reuna(yovalot_solmu["m_ObjectId"], 0, H, 9),
                  reuna(H, 7, vari_reuna["m_InputSlot"]["m_Node"]["m_Id"], vari_reuna["m_InputSlot"]["m_SlotId"]),
                  reuna(H, 8, emis_reuna["m_InputSlot"]["m_Node"]["m_Id"], emis_reuna["m_InputSlot"]["m_SlotId"])]
-for om in (ham_om, maavalo_om, maavari_om, yon_om):
+G["m_Edges"] += [reuna(uv_solmut[i]["m_ObjectId"], 0, H, 10 + i) for i in range(4)]
+for om in (ham_om, maavalo_om, maavari_om, yon_om, yovalot_om):
     G["m_Properties"].append({"m_Id": om["m_ObjectId"]})
     KAT["m_ChildObjectList"].append({"m_Id": om["m_ObjectId"]})
-hsolmut = [ham_cf, ham_solmu, maavalo_solmu, maavari_solmu, yon_solmu, hpaikka_solmu]
+hsolmut = [ham_cf, ham_solmu, maavalo_solmu, maavari_solmu, yon_solmu, yovalot_solmu, hpaikka_solmu] + uv_solmut
 for s in hsolmut:
     G["m_Nodes"].append({"m_Id": s["m_ObjectId"]})
-lisat += [ham_om, maavalo_om, maavari_om, yon_om, ham_ulos, maavalo_ulos, maavari_ulos, yon_ulos, hpaikka_ulos] + hsolmut + ham_slotit
-print("fragmentti → RadioHamara (_radioHamara, _radioMaavalo, _radioMaavaloVari, _radioYonValot)")
+lisat += [ham_om, maavalo_om, maavari_om, yon_om, yovalot_om, ham_ulos, maavalo_ulos, maavari_ulos, yon_ulos, yovalot_ulos,
+          hpaikka_ulos] + uv_ulot + hsolmut + ham_slotit
+print("fragmentti → RadioHamara (_radioHamara, _radioMaavalo, _radioMaavaloVari, _radioYonValot, _radioYovalot + UV 0–3)")
 
 kaavio += lisat
 kirjoita(os.path.join(kohde, "MatkakirjaTileset.shadergraph"), kaavio)
