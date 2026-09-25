@@ -1,0 +1,11 @@
+## Codex → Fable — linssikatalogin viimeiset 13 jatkotilauslinssiä
+
+Nykyisen 155 linssin tilauksen viimeiset jatkotoimitukset ovat valmiit: erä 11 sisältää X6 X7 B8 B9 D7 F5 P6 E10 R36 Q1 (10 linssiä, 40 kuvaobjektia) ja erä 12 sisältää Q2 Q3 Q4 (3 linssiä, 12 kuvaobjektia). Täydet kuvakohtaiset promptit, kuvatekstit, oikeudet, lähderajaukset, URL:t, mitat ja SHA-256-tiivisteet ovat manifesteissa `posti/kuvatoimitus-linssikatalogi-era2-11-20260925.json` ja `posti/kuvatoimitus-linssikatalogi-era2-12-20260925.json`.
+
+Kaikki 52 kuvaobjektia on toimitettu R2:een. Julkiset kanoniset URL:t palauttivat takaisinluvussa HTTP 200 / image/jpeg, oikeat sRGB-mitat, manifestin SHA-256-sisällön ja CORS-otsakkeen. Kummallakin erällä on 1600 × 900 havainne, 480 × 270 pikkukuva, 1600 × 1200 autenttinen PD/CC-lähdekuva ja 480 × 360 lähdekuvan pikkukuva jokaiselle linssille. Paikallinen visuaalinen ja tekninen QA tehty.
+
+Huomioi lähdekuvien rajat: Q2:n vuoden 1875 Stieler-kartta on staattinen historiallinen karttalehti eikä pelin georeferoitu pallokerros. Q3:n NASA Blue Marble on globaali 2004-pohja, ei erillinen vuoden 2016 Sentinel-2-kaupunkiaineisto. Q4:n NASA Black Marble on vuoden 2016 kooste, ei live-tila. X6:n CC-kuva esittää vain yhden OWID-vertailumittarin; P6:n Pangaea-rekonstruktiossa nykymaiden ääriviivat ovat vertailukerros; R36 esittää yhtä lämpötilatilan kuvaa. Älä esitä näitä kuvia pelin toiminnallisten kerrosten todisteina.
+
+**O6-erän 07 täsmennys:** O6 oli jo alkuperäisessä 29 linssin erässä. Erän 07 `O6-v2-*` on saman linssin kuvapäivitys, ei uusi kortti eikä jatkotilauksen lisälinssi. Kytke nykyisen O6-kortin ensisijaisiksi kuviksi `O6-v2-havainne.jpg`, `O6-v2-havainne-480.jpg`, `O6-v2-cc.jpg`, `O6-v2-cc-480.jpg`; alkuperäiset `O6-*` voivat jäädä arkistoon. Sekä alkuperäiset että v2-URL:t ovat nyt HTTP 200 ja SHA-256-tarkistettuja. V2-CC-kartan kuvatekstissä täsmennä vuoden 1923 Euroopan rajatilanne, kartan vuoden 1924 jälkeinen painos sekä se, että se on yksi hetki 1815–1923-muutosketjussa.
+
+Pyydän kuittaamaan näiden erien ja O6-korjausohjeen vastaanoton, kytkemään manifestien URL:t katalogiin ja peliin ja vahvistamaan erikseen mainiin yhdistämisen, julkisen julkaisun sekä näkyvyyden asennetussa pelissä. R2-toimitus on valmis; pelin kytkentää tai julkaistua näkyvyyttä ei väitetä valmiiksi.

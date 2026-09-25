@@ -1,0 +1,719 @@
+{
+  "erä": "linssikatalogi-era2-11-20260925",
+  "tila": "40 R2-objektia ja kanonista URL-osoitetta todennettu takaisinluvulla; katalogiin ja peliin kytkentä odottaa Fablea",
+  "tilaus": "posti/linssikatalogi-tilaus-20260924.json@3576ee735273bca9a1611f88c3adc7e4ccad704a",
+  "count": {
+    "lenses": 10,
+    "concepts": 10,
+    "cc": 10,
+    "cc_not_found": 0,
+    "objects": 40
+  },
+  "entries": [
+    {
+      "id": "X6",
+      "nimi": "Vertailulinssi",
+      "tyyppi": "muu",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Vertailulinssi asettaa Suomen muiden maiden rinnalle samaan mittakaavaan.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja lens X6, 16:9 landscape atlas illustration for Vertailulinssi, a visual metaphor for comparing up to three countries with Finland always beside the others on the same scale. Three equal-sized empty brass-rimmed circular magnifying-glass areas rest on one pale antique world map, all aligned to a single horizontal baseline; the first lens subtly frames the recognizable outline of Finland, while the other two frame other broad land silhouettes without national flags or labels. Fine parallel ruled lines behind the lenses imply comparable scales, but no plotted values or invented data. Restrained sepia ink, watercolor, teal seas, warm brass highlights, slightly worn paper, clear at small size. Avoid UI widgets or screens; this should be an atmospheric atlas concept image, not a usable analytical chart. No text, numbers, graphs, legends, logos, watermarks, modern borders or fabricated measurements.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/X6-havainne.jpg",
+            "objectKey": "linssikatalogi/X6-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X6-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 232721,
+            "sha256": "a3f9847a9f4aab8e1d306ec9fa7d6c661adac380099bc3c07721f684bc640613"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/X6-havainne-480.jpg",
+            "objectKey": "linssikatalogi/X6-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X6-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 43064,
+            "sha256": "b70311bee49fcc9a4f65b50d52014143c383333c6dfc7c44ff76f4b560664e73"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Our World in Datan kaavio vertaa Suomen, Ruotsin ja Norjan elinajanodotetta samalla asteikolla vuosina 1950–2023.",
+        "creator": "Our World in Data",
+        "title": "Life expectancy: Finland, Sweden, Norway, 1950–2023",
+        "year": "2026 kaaviovienti; havaintovuodet 1950–2023",
+        "collection": "Our World in Data Grapher",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://ourworldindata.org/grapher/life-expectancy?tab=chart&time=1950..2023&country=FIN~SWE~NOR",
+        "download_url": "https://ourworldindata.org/grapher/life-expectancy.png?tab=chart&time=1950..2023&country=FIN~SWE~NOR&imWidth=1600&imHeight=1200",
+        "transform_note": "Koko kuva mahtuu 4:3-kuva-alaan; Lanczos-pienennys, neutraali reunatäyttö ja sRGB-ICC. Ei lähteen sisällön muokkausta.",
+        "source_context": "Vain yksi vertailumittari ja kolme maata; tämä ei ole pelin toiminnallisen vertailulinssin kuvakaappaus. Aineistolähteet kaaviossa: Riley, Zijdeman ym., HMD ja UN WPP.",
+        "attribution_note": "Our World in Data: Life expectancy: Finland, Sweden, Norway, 1950–2023 (2026 kaaviovienti; havaintovuodet 1950–2023). Our World in Data Grapher. CC BY 4.0. Sovitettu 4:3-kuvaan; alkuperäinen: https://ourworldindata.org/grapher/life-expectancy?tab=chart&time=1950..2023&country=FIN~SWE~NOR",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/full/X6-cc.jpg",
+            "objectKey": "linssikatalogi/X6-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X6-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 172682,
+            "sha256": "6b949848ffd9940da0ed265665aa4646f827bc4398c440a7c0d821a055cac063"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/thumb/X6-cc-480.jpg",
+            "objectKey": "linssikatalogi/X6-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X6-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 33038,
+            "sha256": "77a1c23224235755195613690fe58beccb52c99a02f97811cf2587cf96b1e9e1"
+          }
+        ]
+      }
+    },
+    {
+      "id": "X7",
+      "nimi": "Maiden tiedot",
+      "tyyppi": "muu",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Maan valinta avaa oman tietolehtensä; tässä esimerkkinä Australia.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja lens X7, 16:9 antique atlas illustration for selecting a country to read its facts. An open atlas on a wooden table shows a north-up map of Australia and surrounding Pacific/Indian ocean: the entire outline of Australia is unmistakably highlighted in a restrained copper wash, while the surrounding ocean stays muted teal and the nearby islands stay pale parchment. Beside the map is one small BLANK unfolded paper fact sheet, clearly empty and ready to be filled in by the game. A quiet brass compass, ink engraving, subtle wear, balanced natural light. The geography must be recognizable and uncluttered at thumbnail size. No other country highlighted. No text, labels, numbers, tables, graphs, flags, UI, logos or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/X7-havainne.jpg",
+            "objectKey": "linssikatalogi/X7-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X7-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 223003,
+            "sha256": "c0f81ce5846e78947bb3114e0c441af19b2f9ae34bd3ed196bc10c4de60b6b4f"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/X7-havainne-480.jpg",
+            "objectKey": "linssikatalogi/X7-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X7-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 36293,
+            "sha256": "7078ee30b9770291dc3e93c346a084df973787b05a356c4ffe988fd063bcaabc"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "CIA:n vuoden 2023 poliittinen maailmankartta näyttää maiden rajat ja nimet.",
+        "creator": "Central Intelligence Agency (kartantekijä nimeämättä)",
+        "title": "CIA World Political Map (2023)",
+        "year": "2023",
+        "collection": "CIA World Factbook / Wikimedia Commons",
+        "license": "Public domain (PD-USGov-CIA)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:CIA_World_Political_Map_(2023).pdf",
+        "source_url": "https://commons.wikimedia.org/wiki/File:CIA_World_Political_Map_%282023%29.pdf",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/CIA_World_Political_Map_%282023%29.pdf?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "transform_note": "Koko kuva mahtuu 4:3-kuva-alaan; Lanczos-pienennys, neutraali reunatäyttö ja sRGB-ICC. Ei lähteen sisällön muokkausta.",
+        "source_context": "Staattinen vuoden 2023 kartta; maan lehden tietoja, napautusta tai vuoden 2026 ajantasaista raja-arviota se ei sisällä. CIA:n esittämät kiistanalaisten alueiden rajaukset ovat sen omia.",
+        "attribution_note": "Central Intelligence Agency (kartantekijä nimeämättä): CIA World Political Map (2023) (2023). CIA World Factbook / Wikimedia Commons. Public domain (PD-USGov-CIA). Sovitettu 4:3-kuvaan; alkuperäinen: https://commons.wikimedia.org/wiki/File:CIA_World_Political_Map_%282023%29.pdf",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/full/X7-cc.jpg",
+            "objectKey": "linssikatalogi/X7-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X7-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 178883,
+            "sha256": "c3dd2507d8cadab39bee31e07d80ebdbd9a609571e55d80ee9f94d92ff3054f5"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/thumb/X7-cc-480.jpg",
+            "objectKey": "linssikatalogi/X7-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/X7-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 23698,
+            "sha256": "44a64c815fe45ceab1e0c5c3f86e75d759e7c45051d9d3ced37874dde052ce7f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "B8",
+      "nimi": "Valokuvan synty",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Valokuvan varhaiset menetelmät kehittyivät levyistä paperivedoksiin ja liikettä tallentaviin kuvasarjoihin.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens B8, 16:9 landscape illustration for the birth of photography from 1826 to 1895. An elegant antique Atlantic atlas base spanning western Europe and eastern North America. Across the map, a sequence of five small historically plausible photographic objects forms a gentle visual route: camera obscura, silvered daguerreotype plate, calotype paper print, Victorian wet-plate bellows camera, early Kodak box camera and a tiny strip of sequential motion photographs. Place each object as a restrained inset on the paper, never imply exact city positions or dates with lines; the objects tell the progression. Warm sepia ink and desaturated blue wash, varied worn photographic paper textures, focused and legible at thumbnail size. No readable text, labels, dates, numbers, modern digital cameras, flash units, logos, UI or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/B8-havainne.jpg",
+            "objectKey": "linssikatalogi/B8-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B8-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 232661,
+            "sha256": "b5d9d86d579efa1845f1641eb35341f9461948810d6996fd0468b3b456ff85d3"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/B8-havainne-480.jpg",
+            "objectKey": "linssikatalogi/B8-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B8-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 43854,
+            "sha256": "fa008bebdcb89eef26f1e4a7cc8ae2c5083fd764baec8c67c54c3705836ca0e1"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Niépcen Le Gras'n ikkunasta ottama heliografia kuuluu varhaisimpaan säilyneeseen valokuvaukseen.",
+        "creator": "Joseph Nicéphore Niépce",
+        "title": "View from the Window at Le Gras",
+        "year": "1826/1827",
+        "collection": "Harry Ransom Center, University of Texas at Austin / Wikimedia Commons",
+        "license": "Public domain (PD-old, PDM 1.0)",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:View_from_the_Window_at_Le_Gras%2C_Joseph_Nic%C3%A9phore_Ni%C3%A9pce.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/5c/View_from_the_Window_at_Le_Gras%2C_Joseph_Nic%C3%A9phore_Ni%C3%A9pce.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "transform_note": "Koko kuva mahtuu 4:3-kuva-alaan; Lanczos-pienennys, neutraali reunatäyttö ja sRGB-ICC. Ei lähteen sisällön muokkausta.",
+        "source_context": "Kuva esittää yhtä valokuvauksen synnyn varhaista pysäkkiä; se ei kuvaa Daguerrea, Talbotia eikä myöhempää aikajanaa.",
+        "attribution_note": "Joseph Nicéphore Niépce: View from the Window at Le Gras (1826/1827). Harry Ransom Center, University of Texas at Austin / Wikimedia Commons. Public domain (PD-old, PDM 1.0). Sovitettu 4:3-kuvaan; alkuperäinen: https://commons.wikimedia.org/wiki/File:View_from_the_Window_at_Le_Gras%2C_Joseph_Nic%C3%A9phore_Ni%C3%A9pce.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/full/B8-cc.jpg",
+            "objectKey": "linssikatalogi/B8-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B8-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 288221,
+            "sha256": "236e9fbc48033aa3c8f0fbe47d2a1410a44089663283de432061bc49dad513e3"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/thumb/B8-cc-480.jpg",
+            "objectKey": "linssikatalogi/B8-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B8-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 56914,
+            "sha256": "a7c635d3b4b5f69a5773e76bf702b3300eccda1cf7cb14b815372c84c18b036a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "B9",
+      "nimi": "Aika ja nollameridiaani",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Pituuspiirin mittaus ja yhteinen aika sitoivat merimatkat ja rautatiet samaan maailmaan.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: historical-scene. Asset type: Matkakirja historical timeline lens B9, 16:9 landscape visual for Aika ja nollameridiaani. Photorealistic-but-gently antique illustration of a late-19th-century Royal Observatory Greenwich interior: brass transit telescope and precise marine chronometer on dark wood desk, daylight from tall window over period brick architecture, a slim unlabelled brass meridian line running along the floor in the foreground. Near the side is a folded railway timetable with NO readable writing and a small pocket watch, showing why shared time mattered. Restrained documentary light, quiet sophistication, period-accurate instruments and materials, slight paper grain around margins so it fits an atlas series. No world map or questionable geography. No readable text, words, numerals, modern clock, digital display, modern telescope, logo, UI or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/B9-havainne.jpg",
+            "objectKey": "linssikatalogi/B9-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B9-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 219171,
+            "sha256": "c3d4c4a90b48f4779e465c24a45746234e7e478683fbc7bec845e105d6634d3d"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/B9-havainne-480.jpg",
+            "objectKey": "linssikatalogi/B9-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B9-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 38061,
+            "sha256": "0272d71e771eb1debc8fe4e0674594825e7aaba8de2200ba90fb9ec9d2546596"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1833 puupiirros näyttää Greenwichin observatorion, jonka meridiaanista tuli maailman ajanlaskun lähtökohta.",
+        "creator": "The Penny Magazine (puupiirroksen tekijä nimeämättä)",
+        "title": "Greenwich Observatory",
+        "year": "1833",
+        "collection": "The Penny Magazine, vol. II, no. 87 / Wikimedia Commons",
+        "license": "Public domain (1833 julkaisu; Commons PD-US)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Greenwich_Observatory.jpg",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Greenwich_Observatory.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Penny_Magazine_1833_308_Greenwich_Observatory.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "transform_note": "Koko kuva mahtuu 4:3-kuva-alaan; Lanczos-pienennys, neutraali reunatäyttö ja sRGB-ICC. Ei lähteen sisällön muokkausta.",
+        "source_context": "Kuva esittää observatorion 1833, ei vuoden 1884 konferenssia, Harrisonin H4-kronometria eikä aikavyöhykkeitä.",
+        "attribution_note": "The Penny Magazine (puupiirroksen tekijä nimeämättä): Greenwich Observatory (1833). The Penny Magazine, vol. II, no. 87 / Wikimedia Commons. Public domain (1833 julkaisu; Commons PD-US). Sovitettu 4:3-kuvaan; alkuperäinen: https://commons.wikimedia.org/wiki/File:Greenwich_Observatory.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/full/B9-cc.jpg",
+            "objectKey": "linssikatalogi/B9-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B9-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 292481,
+            "sha256": "bbd26759006530c68cc9d0ff596b746c26a2fc535230be8d62a6e0d19681e73b"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/thumb/B9-cc-480.jpg",
+            "objectKey": "linssikatalogi/B9-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/B9-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 58023,
+            "sha256": "069f1a77c6cb1e9808fb34b49e3b41cc11a66fb5577cff80312cea2245e2ee43"
+          }
+        ]
+      }
+    },
+    {
+      "id": "D7",
+      "nimi": "Suomi isoisän aikaan",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Koulu, rautatie ja kanava muuttivat 1800-luvun Suomea isoisän elinaikana.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens D7, 16:9 landscape illustration for Finland in Grandfather's era, 1809–1917. A historically grounded 19th-century Finnish landscape arranged as a single quiet narrative: foreground a small wooden rural schoolhouse with warm light in one window and children walking toward it; middle distance a modest early steam train crosses a low bridge; beyond, a canal boat enters a lock among birch woods and lakes; very far distance a pale Helsinki neoclassical skyline on the horizon. A few understated worn paper edges link it visually to an antique atlas, with cool Nordic light and restrained sepia/blue palette. Convey social change and endurance without romanticizing the famine years or showing invented exact dates/events. Clear layered composition, photographic material realism in buildings and people at small scale, strong but sober storytelling. No readable signs, labels, text, numbers, modern roads, electric wires, modern train, flags, UI, logos or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/D7-havainne.jpg",
+            "objectKey": "linssikatalogi/D7-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D7-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249681,
+            "sha256": "e679e763e3acddda3592a90a277e79675ae561c14e88b49868900576796777a3"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/D7-havainne-480.jpg",
+            "objectKey": "linssikatalogi/D7-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D7-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 45911,
+            "sha256": "827d200e7e980307511f63898561a92cbc25221329c7dcc43587f0a234b60ef6"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Emanuel Thelningin maalaus esittää Aleksanteri I:n Porvoon valtiopäivien avajaisissa vuonna 1809.",
+        "creator": "Emanuel Thelning",
+        "title": "Porvoon valtiopäivien avajaiset 1809",
+        "year": "1812",
+        "collection": "Porvoon hiippakunta / Wikimedia Commons (historiamaalauksen reproduktio)",
+        "license": "Public domain (PD-old, PDM 1.0)",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Porvoon_valtiop%C3%A4iv%C3%A4t_1809_by_Emanuel_Thelning.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Porvoon_valtiop%C3%A4iv%C3%A4t_1809_by_Emanuel_Thelning.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "transform_note": "Koko kuva mahtuu 4:3-kuva-alaan; Lanczos-pienennys, neutraali reunatäyttö ja sRGB-ICC. Ei lähteen sisällön muokkausta.",
+        "source_context": "Teos maalattiin 1812 ja esittää vuoden 1809 tapahtumaa; se on yhden pysäkin kuva, ei koko Suomen 1809–1917 kehityksen esitys.",
+        "attribution_note": "Emanuel Thelning: Porvoon valtiopäivien avajaiset 1809 (1812). Porvoon hiippakunta / Wikimedia Commons (historiamaalauksen reproduktio). Public domain (PD-old, PDM 1.0). Sovitettu 4:3-kuvaan; alkuperäinen: https://commons.wikimedia.org/wiki/File:Porvoon_valtiop%C3%A4iv%C3%A4t_1809_by_Emanuel_Thelning.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/full/D7-cc.jpg",
+            "objectKey": "linssikatalogi/D7-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D7-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 291279,
+            "sha256": "395b6c94157eb73115648d3d8a000bd1ff315a81a8d588c0710bad8497a45a42"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/thumb/D7-cc-480.jpg",
+            "objectKey": "linssikatalogi/D7-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/D7-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 38347,
+            "sha256": "aaad2e338386d1192e8685d1939337445b8a3b22c1d040ddf5ccdc44d4d2ac6a"
+          }
+        ]
+      }
+    },
+    {
+      "id": "F5",
+      "nimi": "Elämän matka",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Elämän vaiheet avautuvat erillisinä aikakausina varhaisesta merestä ihmisen aikaan.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: scientific-educational. Asset type: Matkakirja lens F5, 16:9 natural-history visual for the journey of life across deep time. A museum diorama with FOUR DISTINCT ADJACENT WINDOWS, visibly separated by narrow upright stone ribs so no animals appear to coexist across eras. Left window: ancient shallow sea with microbial mats and Cambrian trilobites only. Second: early land plants, swamp forest and an amphibian only. Third: Mesozoic fern woodland with one non-bird dinosaur only, no mammals or humans. Fourth: late Cenozoic grassland with a mammoth and a tiny separate human observer, NO dinosaurs. Beneath the windows runs a continuous geological rock-strata base without dates. Fine scientific watercolor and ink on lightly worn paper, realistic anatomy, restrained earth and sea colors, clear silhouettes at thumbnail size. No text, labels, numbers, arrows, fantasy creatures, UI, logos or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/F5-havainne.jpg",
+            "objectKey": "linssikatalogi/F5-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/F5-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244706,
+            "sha256": "529a4ead887fad36e5569aa11a4098200515f30ed19ec006f2e25cc3368073ba"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/F5-havainne-480.jpg",
+            "objectKey": "linssikatalogi/F5-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/F5-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 45643,
+            "sha256": "fbb8505f52c35620c8d38f673bef8e77b2e234d1a6e7d9f52a998503259ef9b7"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "LadyofHatsin aikajanakuvio hahmottaa elämän kehityksen päävaiheita Maan varhaishistoriasta nykyhetkeen.",
+        "creator": "LadyofHats",
+        "title": "Timeline evolution of life",
+        "year": "2012",
+        "collection": "Wikimedia Commons",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Timeline_evolution_of_life.svg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Timeline_evolution_of_life.svg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+        "transform_note": "Koko kuva mahtuu 4:3-kuva-alaan; Lanczos-pienennys, neutraali reunatäyttö ja sRGB-ICC. Ei lähteen sisällön muokkausta.",
+        "source_context": "Havainnollistava biologinen kaavio, ei tarkka fylogeneettinen tai kronologinen tutkimusaineisto eikä pelin animaatio.",
+        "attribution_note": "LadyofHats: Timeline evolution of life (2012). Wikimedia Commons. CC0 1.0. Sovitettu 4:3-kuvaan; alkuperäinen: https://commons.wikimedia.org/wiki/File:Timeline_evolution_of_life.svg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/full/F5-cc.jpg",
+            "objectKey": "linssikatalogi/F5-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/F5-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 256894,
+            "sha256": "645581e23757504fce62eded98b283726ad5ef343f53e5a1c0fa8ad81d762a2b"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/thumb/F5-cc-480.jpg",
+            "objectKey": "linssikatalogi/F5-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/F5-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 46365,
+            "sha256": "fc31a879c6e6b45c49dff9b87e002eee9a6eef8f354e98c79813a57628828277"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P6",
+      "nimi": "Mantereet liikkuvat",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Mantereiden liike esitetään kolmessa havainnollistavassa vaiheessa, ei tarkkana paleomaantieteellisenä karttana.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: scientific-educational. Asset type: Matkakirja area lens P6, 16:9 landscape antique atlas visual for continental drift. Three DISTINCT aligned map insets on one worn natural-history paper sheet, separated by narrow clear vertical borders: left a plausible single Pangaea supercontinent surrounded by ocean, center the split into northern Laurasia and southern Gondwana with a narrow opening Atlantic, right the recognizable present-day world continents in correct broad positions. Fine ink coastlines, restrained blue sea and cream land, softly raised relief, a few subtle brass directional traces between insets. The visual is a simplified sequence, not a measured geologic reconstruction or exact date chart. Right panel geography must be recognizable, no dramatic catastrophic movement. No labels, words, numbers, dates, axes, modern borders, flags, UI, logos or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/P6-havainne.jpg",
+            "objectKey": "linssikatalogi/P6-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P6-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 247926,
+            "sha256": "a1bedb9a2f13b6d9e13d59e36d7dadca10a0acaefb6781555bb6373b48a2d16c"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/P6-havainne-480.jpg",
+            "objectKey": "linssikatalogi/P6-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P6-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 40777,
+            "sha256": "d84984448dd41860ae3e1d60f406a31b1d0ed87402d25142c3679c7b9a8393a0"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "PALEOMAP-hankkeen paleogeografinen kartta rekonstruoi mantereiden sijainnit noin 250 miljoonaa vuotta sitten.",
+        "creator": "Christopher R. Scotese; Christian Vérard; Landon Burgener; Reece P. Elling; Ádám T. Kocsis",
+        "title": "Mollweide Paleographic Map of Earth, 250 Ma (Olenekian Age)",
+        "year": "2024; kuvattu ajankohta noin 250 miljoonaa vuotta sitten",
+        "collection": "PALEOMAP project / Zenodo / Wikimedia Commons",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Mollweide_Paleographic_Map_of_Earth%2C_250_Ma_%28Olenekian_Age%29.png",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Mollweide_Paleographic_Map_of_Earth%2C_250_Ma_%28Olenekian_Age%29.png/1920px-Mollweide_Paleographic_Map_of_Earth%2C_250_Ma_%28Olenekian_Age%29.png",
+        "transform_note": "Koko kuva mahtuu 4:3-kuva-alaan; Lanczos-pienennys, neutraali reunatäyttö ja sRGB-ICC. Ei lähteen sisällön muokkausta.",
+        "source_context": "Yksi tutkimukseen perustuva rekonstruktio; nykyisten maiden mustat ääriviivat ovat vertailukerros eivätkä 250 miljoonan vuoden takaisia valtiorajoja. Kuva ei esitä koko mannerliikkeen animaatiota.",
+        "attribution_note": "Christopher R. Scotese; Christian Vérard; Landon Burgener; Reece P. Elling; Ádám T. Kocsis: Mollweide Paleographic Map of Earth, 250 Ma (Olenekian Age) (2024; kuvattu ajankohta noin 250 miljoonaa vuotta sitten). PALEOMAP project / Zenodo / Wikimedia Commons. CC BY 4.0. Sovitettu 4:3-kuvaan; alkuperäinen: https://commons.wikimedia.org/wiki/File:Mollweide_Paleographic_Map_of_Earth%2C_250_Ma_%28Olenekian_Age%29.png",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/full/P6-cc.jpg",
+            "objectKey": "linssikatalogi/P6-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P6-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 227453,
+            "sha256": "9b49e18c9d9442551bf09fc36509b9952ee49241cff5ed4e260844d3eb33dcde"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/thumb/P6-cc-480.jpg",
+            "objectKey": "linssikatalogi/P6-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P6-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 30879,
+            "sha256": "59ba4348dc771c64aaaaf5116d8b09cd5a36a44dceb1a89e0f332db71c0be817"
+          }
+        ]
+      }
+    },
+    {
+      "id": "E10",
+      "nimi": "Rooman kasvu pallolla",
+      "tyyppi": "esitys",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Rooman historia piirtyy varhaisesta kukkulakaupungista keisarillisen ja myöhemmän kaupungin kerroksiin; kehät ovat havainnollistavia.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja presentation lens E10, 16:9 landscape illustration for the growth of Rome on the globe from antiquity to the present. A tactile antique atlas map centered on the recognizable Italian peninsula and Tyrrhenian Sea, with one small copper light point at the real Rome area on the west-central coast by the Tiber. Around that point, three nested translucent rings suggest changing city extent across eras WITHOUT implying measured boundaries. Along the lower open paper margin sit three small period silhouettes: early Roman hill settlement, imperial aqueduct/Forum colonnade, later city domes and neighborhoods. Rich but restrained ink engraving and watercolor, warm bronze and desaturated blue, faint paper wear, visually coherent and clear at thumbnail size. No population numbers, dates, labels, fake precise historical borders, modern skyscrapers, flags, UI, logos or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/E10-havainne.jpg",
+            "objectKey": "linssikatalogi/E10-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E10-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244409,
+            "sha256": "17be343a0c4075ead9e8332c2a8f531f17fec93c689e840aff1a55bebfcc5785"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/E10-havainne-480.jpg",
+            "objectKey": "linssikatalogi/E10-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E10-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 48287,
+            "sha256": "8d46f0c7f898ebd659c51af0f5316e30c70bc22df2cfdb9127f451129521b70c"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Nollin ja Piranesin vuoden 1748 Rooman kartta kuvaa kaupungin rakennetta yhdellä linssin aikakaudella.",
+        "creator": "Giovanni Battista Nolli ja Giovanni Battista Piranesi",
+        "title": "La topografia di Roma",
+        "year": "1748",
+        "collection": "Geographicus Rare Antique Maps / Wikimedia Commons",
+        "license": "Public domain (PD-old / PD-Art, PDM 1.0)",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:1748_map_of_Rome.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/1748_map_of_Rome.jpg/3840px-1748_map_of_Rome.jpg",
+        "transform_note": "Koko kuva mahtuu 4:3-kuva-alaan; Lanczos-pienennys, neutraali reunatäyttö ja sRGB-ICC. Ei lähteen sisällön muokkausta.",
+        "source_context": "Staattinen historiallinen kaupunkikartta, ei Rooman kasvun 750 eaa.–2020 animointi; Commonsin 3840 pikselin versio säilytetty 58,8 Mt alkuperäisestä.",
+        "attribution_note": "Giovanni Battista Nolli ja Giovanni Battista Piranesi: La topografia di Roma (1748). Geographicus Rare Antique Maps / Wikimedia Commons. Public domain (PD-old / PD-Art, PDM 1.0). Sovitettu 4:3-kuvaan; alkuperäinen: https://commons.wikimedia.org/wiki/File:1748_map_of_Rome.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/full/E10-cc.jpg",
+            "objectKey": "linssikatalogi/E10-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E10-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 296263,
+            "sha256": "339c422224b6f6547e788ae7568a98bd73024fe5c7cb6344c0cc8b662dc0f925"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/thumb/E10-cc-480.jpg",
+            "objectKey": "linssikatalogi/E10-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/E10-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 62170,
+            "sha256": "c5df950057a49fbf8c2cc2c14940d0c72fb8c8fc6465aa2cd8fb4318ef638e45"
+          }
+        ]
+      }
+    },
+    {
+      "id": "R36",
+      "nimi": "Maapallon tila",
+      "tyyppi": "data",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Merijää, lämpötila ja merenpinta ovat maapallon tilan erillisiä mittareita; kuva ei esitä niiden arvoja.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja data lens R36, 16:9 landscape visual for 'Maapallon tila' (state of Earth): sea ice, temperature and sea level. A single beautiful but sober Earth atlas sphere centered in frame on worn blue-gray paper. Around it, THREE clearly distinct small visual motifs, not charts: upper left a white Arctic sea-ice floe, upper right a warm sunlight/thermometer symbol without scale, lower edge a coastal tide line against stone. Fine ink and watercolor, credible geography, scientific editorial restraint, no alarmist or fabricated precise changes, no claim to current live readings. Limited cool blue, cream and muted copper, clear at thumbnail size, generous negative space. No data points, graphs, text, numbers, labels, legends, modern borders, logos, UI or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/R36-havainne.jpg",
+            "objectKey": "linssikatalogi/R36-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R36-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 237734,
+            "sha256": "c487d2661db7e45546e25532ee10f1bad5ab80c41181428995def59d5946e925"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/R36-havainne-480.jpg",
+            "objectKey": "linssikatalogi/R36-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R36-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 41501,
+            "sha256": "3b2f6214875dc169eb79ceeed50b523765b5f2321371b1287dfc962c97484770"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "NASA:n kartta näyttää vuoden 2024 pintalämpötilapoikkeamat suhteessa vuosien 1951–1980 vertailujaksoon.",
+        "creator": "NASA Scientific Visualization Studio; GISS/Gavin A. Schmidt; SIGMA Space Partners/Robert B. Schmunk ja Reto A. Ruedy; NASA GSFC/Peter H. Jacobs ja Mark SubbaRao; NASA JPL/Sally Younger; Telophase/Jenny Marder Fadoul",
+        "title": "Global Temperature Anomalies from 1880 to 2024 (SVS5450, 2024 GISTEMP map)",
+        "year": "2025 (visualisointi); 2024 (kuvattu vuosi)",
+        "collection": "NASA Scientific Visualization Studio / Wikimedia Commons",
+        "license": "Public domain (PD-USGov-NASA)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:Global_Temperature_Anomalies_from_1880_to_2024_(SVS5450_-_2024GISTEMPMap).png",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Global_Temperature_Anomalies_from_1880_to_2024_%28SVS5450_-_2024GISTEMPMap%29.png",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Global_Temperature_Anomalies_from_1880_to_2024_%28SVS5450_-_2024GISTEMPMap%29.png/1920px-Global_Temperature_Anomalies_from_1880_to_2024_%28SVS5450_-_2024GISTEMPMap%29.png",
+        "transform_note": "Koko kuva mahtuu 4:3-kuva-alaan; Lanczos-pienennys, neutraali reunatäyttö ja sRGB-ICC. Ei lähteen sisällön muokkausta.",
+        "source_context": "Yksi lämpötilan tilannekuva; ei merijään tai merenpinnan kerroksia eikä vuosien 1880–2024 animaatiota. Värien vertailujakso on 1951–1980.",
+        "attribution_note": "NASA Scientific Visualization Studio; GISS/Gavin A. Schmidt; SIGMA Space Partners/Robert B. Schmunk ja Reto A. Ruedy; NASA GSFC/Peter H. Jacobs ja Mark SubbaRao; NASA JPL/Sally Younger; Telophase/Jenny Marder Fadoul: Global Temperature Anomalies from 1880 to 2024 (SVS5450, 2024 GISTEMP map) (2025 (visualisointi); 2024 (kuvattu vuosi)). NASA Scientific Visualization Studio / Wikimedia Commons. Public domain (PD-USGov-NASA). Sovitettu 4:3-kuvaan; alkuperäinen: https://commons.wikimedia.org/wiki/File:Global_Temperature_Anomalies_from_1880_to_2024_%28SVS5450_-_2024GISTEMPMap%29.png",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/full/R36-cc.jpg",
+            "objectKey": "linssikatalogi/R36-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R36-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 176211,
+            "sha256": "194b02e1fb5426e7b5b075c3144fd81bfa3e5b45f05663571f8be62febe7fa7c"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/thumb/R36-cc-480.jpg",
+            "objectKey": "linssikatalogi/R36-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/R36-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 25547,
+            "sha256": "2c8a3b74b65d251746a1fb02f905ca38abdfacaf73d17f0ff7ad08644e44af8f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q1",
+      "nimi": "Isoisän linssi — vuosi 1873",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Isoisän vuoden 1873 matkasta jää jälki atlaslehdelle ja valokuva-albumiin; reitti on havainnollistava.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja Q1 lens cover, 16:9 landscape for 'Isoisän linssi — vuosi 1873'. An open late-19th-century travel atlas of Europe in a cool faded ivory paper tone, ink coastlines and quietly worn fold marks. A delicate dotted traveler route threads between a few regions as a poetic suggestion, not an exact itinerary or political-boundary record. Two small blank photo corners and a tucked, softly blurred album print reveal a distant anonymous 1870s traveler with a folding camera seen from behind; face unrecognizable. A restrained brass compass and natural window light; nuanced paper grain, not overly warm, slightly faded period photograph surface. The atmosphere is mysterious and inviting, with no strong staged pose. No modern maps, exact historical border claims, labels, readable text, dates, numbers, flags, UI, logos or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/Q1-havainne.jpg",
+            "objectKey": "linssikatalogi/Q1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 209784,
+            "sha256": "64cd86f90fee20d3e324e5645199b06d438b08e052fc998b2b410bc517285a0d"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-11/Q1-havainne-480.jpg",
+            "objectKey": "linssikatalogi/Q1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 35158,
+            "sha256": "ad1515446753eb5f513449da79fc9c0aba1d2c3be79e40cd2bc04b80f121c967"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Boothin 1870-luvun maailmankartta näyttää ajan maantieteellisen näkymän isoisän linssin taustaksi.",
+        "creator": "Kartantekijä nimeämättä; julkaisu Edwin Carton Booth",
+        "title": "The World (Australia Illustrated, vol. 2, s. 491)",
+        "year": "1873–1876 (kirjasarjan julkaisuaika; karttalehden tarkka painovuosi epäselvä)",
+        "collection": "British Library -digitoitu teos / Wikimedia Commons",
+        "license": "Public domain (PD-old, Commons)",
+        "license_url": "https://commons.wikimedia.org/wiki/File:BOOTH(1873)_2.491_THE_WORLD.jpg",
+        "source_url": "https://commons.wikimedia.org/wiki/File:BOOTH%281873%29_2.491_THE_WORLD.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/BOOTH%281873%29_2.491_THE_WORLD.jpg/1920px-BOOTH%281873%29_2.491_THE_WORLD.jpg",
+        "transform_note": "Koko kuva mahtuu 4:3-kuva-alaan; Lanczos-pienennys, neutraali reunatäyttö ja sRGB-ICC. Ei lähteen sisällön muokkausta.",
+        "source_context": "Lähteen kirjasarja julkaistiin 1873–1876, eikä tämän karttalehden täsmällistä 1873-painovuotta ole varmistettu. Kartta ei sisällä Horation reittiä, isoisän valokuvia eikä ääniä; historialliset rajat voivat olla julkaisijan näkökulmasta valikoivia.",
+        "attribution_note": "Kartantekijä nimeämättä; julkaisu Edwin Carton Booth: The World (Australia Illustrated, vol. 2, s. 491) (1873–1876 (kirjasarjan julkaisuaika; karttalehden tarkka painovuosi epäselvä)). British Library -digitoitu teos / Wikimedia Commons. Public domain (PD-old, Commons). Sovitettu 4:3-kuvaan; alkuperäinen: https://commons.wikimedia.org/wiki/File:BOOTH%281873%29_2.491_THE_WORLD.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/full/Q1-cc.jpg",
+            "objectKey": "linssikatalogi/Q1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 291466,
+            "sha256": "4dfcaa84662133ed3643424c235dd74c28ac2b81b1fe5cd7e935ce36d927e3e0"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-11/thumb/Q1-cc-480.jpg",
+            "objectKey": "linssikatalogi/Q1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 46490,
+            "sha256": "c4c42d3bf81f7d5db908f1f486beec26fa9f9587b8b7cb739a4fb407e9fa570e"
+          }
+        ]
+      }
+    }
+  ],
+  "r2_verified": {
+    "objects": 40,
+    "canonicalUrlsVerified": true,
+    "receipt": "output/fable-20260924/linssikatalogi/era2/ready-11-20260925/r2-receipt.json"
+  }
+}

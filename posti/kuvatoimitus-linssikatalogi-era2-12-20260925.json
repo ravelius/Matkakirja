@@ -1,0 +1,229 @@
+{
+  "erä": "linssikatalogi-era2-12-20260925",
+  "tila": "12 R2-objektia ja kanonista URL-osoitetta todennettu takaisinluvulla; katalogiin ja peliin kytkentä odottaa Fablea",
+  "tilaus": "posti/linssikatalogi-tilaus-20260924.json@3576ee735273bca9a1611f88c3adc7e4ccad704a",
+  "count": {
+    "lenses": 3,
+    "concepts": 3,
+    "cc": 3,
+    "cc_not_found": 0,
+    "objects": 12
+  },
+  "entries": [
+    {
+      "id": "Q2",
+      "nimi": "Atlaslehti",
+      "tyyppi": "pohjakartta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainne 1800-luvun atlaslehden karttakuvituksen siirtymisestä pallon pinnalle; kuva ei ole Stielerin 1875 atlaslehden skanni eikä georeferoitu pelikerros.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create one 16:9 landscape concept illustration for an educational world-map game's antique 'Atlas sheet' base-map lens. Show a large globe occupying the right two thirds of the frame, its surface visibly wrapped in a warm ivory nineteenth-century engraved atlas texture: fine copperplate coastlines, sepia relief hatching, restrained muted green and ochre land washes, elegant graticule, aged paper grain. A partly unfurled flat atlas sheet sits to the left and visually flows onto the globe to explain the idea of a historical paper map projected onto a sphere. Historically evocative of an 1875 Stieler atlas, but this is entirely newly imagined concept art: do not reproduce any specific Stieler plate, exact historical borders, readable place names, atlas title, labels, text, logos, watermark or UI. Geography should be broadly credible; polished restrained museum style, age 13+, soft studio daylight. The image must not imply it is an actual public-domain scan or a georeferenced game layer.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-12/Q2.jpg",
+            "objectKey": "linssikatalogi/Q2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 243937,
+            "sha256": "edbd15492db0b633a0696f87cce6b0affed224da3ee347ffbffba0a57bde1d74"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-12/Q2-thumb.jpg",
+            "objectKey": "linssikatalogi/Q2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 38872,
+            "sha256": "6ea2efd913974cf993bcca8b9205af9c817c90828226e87ee4f5e627c88c39ff"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Stielerin atlaksen vuoden 1875 itäinen Välimeren ja Pohjois-Afrikan karttalehti.",
+        "creator": "August Petermann (cartography); L. Friederichsen and Hermann Habenicht (revision); Poppey and Jungmann (engraving); Stieler atlas series",
+        "title": "Das Mittelländische Meer und Nord-Afrika (Oestliches Blatt), Stieler’s Hand-Atlas No. 14",
+        "year": "1875",
+        "collection": "David Rumsey Historical Map Collection; Commons reproduction of Justus Perthes, Gotha atlas leaf",
+        "license": "Public domain (PD-Art / Public Domain Mark on Wikimedia Commons)",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Stieler,_Adolf._Das_Mittellandische_Meer_Und_Nord-Afrika._1875.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Stieler%2C_Adolf._Das_Mittellandische_Meer_Und_Nord-Afrika._1875.jpg/1920px-Stieler%2C_Adolf._Das_Mittellandische_Meer_Und_Nord-Afrika._1875.jpg",
+        "transform_note": "Original composition preserved; scaled to fit 4:3 canvas with neutral bars.",
+        "source_context": "Wikimedia Commons marks this faithful reproduction of a 1875 two-dimensional map as public domain. The source collection has separate site-use language; downloaded here from Commons, not from its site. The historical map sheet is not the game’s georeferenced globe layer.",
+        "attribution_note": "August Petermann (cartography); L. Friederichsen and Hermann Habenicht (revision); Poppey and Jungmann (engraving); Stieler atlas series. Das Mittelländische Meer und Nord-Afrika (Oestliches Blatt), Stieler’s Hand-Atlas No. 14 (1875). David Rumsey Historical Map Collection; Commons reproduction of Justus Perthes, Gotha atlas leaf. Public domain (PD-Art / Public Domain Mark on Wikimedia Commons). https://commons.wikimedia.org/wiki/File:Stieler,_Adolf._Das_Mittellandische_Meer_Und_Nord-Afrika._1875.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-12/Q2-cc.jpg",
+            "objectKey": "linssikatalogi/Q2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 289544,
+            "sha256": "f56a7d922655e050540cf107d93f7959d786aa41e115532f52c6e2b7cf5a70bd"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-12/Q2-cc-480.jpg",
+            "objectKey": "linssikatalogi/Q2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 53631,
+            "sha256": "a8f82f5d3d74ecee62d2c84c5f304bfbd66cc64389ec60eb5a3057fcee33fd72"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q3",
+      "nimi": "Satelliittipinta (lennon pinta)",
+      "tyyppi": "pohjakartta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainne Maapallon luonnollisesta pintanäkymästä ja lähempää tarkasteltavasta rannikkoalueesta; kuva ei ole NASA:n Blue Marble- eikä ESA:n Sentinel-2-aineistoa.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create one polished 16:9 landscape concept illustration for an educational game's natural satellite-surface globe lens. A single complete Earth globe dominates the frame against a subtle deep-space navy background, sunlit hemisphere centered on Africa, Europe and the Atlantic with recognizable geography, realistic blue oceans, clouds, coastlines, deserts and forests. A small circular magnification inset reveals natural-color terrain texture near a generic European coastline and connects gently to the globe, suggesting a seamless transition from global surface to a closer city region. Restrained science-museum visual direction, high clarity, suitable for ages 13+. This is generated concept art, not actual NASA Blue Marble or ESA Sentinel-2 data, not a georeferenced playable texture. No captions, text, labels, numbers, logos, flags, UI chrome or watermark; no fake data overlays.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-12/Q3.jpg",
+            "objectKey": "linssikatalogi/Q3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 247082,
+            "sha256": "1c0464a9929d67815f9a6694430a341b49634225aebfc20e1e4afdacbd561fb7"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-12/Q3-thumb.jpg",
+            "objectKey": "linssikatalogi/Q3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 34233,
+            "sha256": "611fb8f22478ace0f7c3ae43249eccdb03ee0fd875dea2ffa9f3252d629fb3f7"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "NASA:n Blue Marble Next Generation näyttää maapallon pinnan elokuun 2004 koostekuvana.",
+        "creator": "NASA Goddard Space Flight Center; Reto Stöckli and Matthew R. Radcliff",
+        "title": "Blue Marble: Next Generation, World Topography, August 2004",
+        "year": "havainnot elokuu 2004; NASA SVS -julkaisu 2017",
+        "collection": "NASA Scientific Visualization Studio / Goddard Space Flight Center",
+        "license": "Public domain (NASA work, US government)",
+        "license_url": "https://commons.wikimedia.org/wiki/Template:PD-USGov-NASA",
+        "source_url": "https://commons.wikimedia.org/wiki/File:World.topo.2004-08.png",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/World.topo.2004-08.png/1920px-World.topo.2004-08.png",
+        "transform_note": "Original composition preserved; scaled to fit 4:3 canvas with neutral bars.",
+        "source_context": "This is the global NASA Blue Marble NG composite for August 2004. It does not include, represent, or license the separate 2016 ESA Sentinel-2 city imagery named in the product source row. It is not a live game surface or proof of the game’s georeferencing.",
+        "attribution_note": "NASA Goddard Space Flight Center; Reto Stöckli and Matthew R. Radcliff. Blue Marble: Next Generation, World Topography, August 2004 (havainnot elokuu 2004; NASA SVS -julkaisu 2017). NASA Scientific Visualization Studio / Goddard Space Flight Center. Public domain (NASA work, US government). https://commons.wikimedia.org/wiki/File:World.topo.2004-08.png",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-12/Q3-cc.jpg",
+            "objectKey": "linssikatalogi/Q3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 197054,
+            "sha256": "9957ae3a282c1bf31b4cf6febaa4a3fc5b95fbb1fa04c6cfc48dcc4516e6d749"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-12/Q3-cc-480.jpg",
+            "objectKey": "linssikatalogi/Q3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 19614,
+            "sha256": "5097cb2c7e15a74597fd7b6181a89218f64cf004cae4d7d6a334456b2c8d6370"
+          }
+        ]
+      }
+    },
+    {
+      "id": "Q4",
+      "nimi": "Yövalot (Black Marble)",
+      "tyyppi": "pohjakartta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Havainne kaupunkien yövalojen näkymisestä maapallolla; valopisteet eivät ole NASA Black Marble -mittauksia.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create one 16:9 landscape concept illustration for an educational game's 'night lights' world-map base layer. Show a full round Earth globe from space on a dark indigo background, night hemisphere centered on Europe, Africa and western Asia; coastlines and cloud wisps remain geographically credible. Warm tiny city-light constellations concentrate broadly around populated regions and fade naturally over seas and deserts, with a soft atmospheric rim and a little dawn at the edge. No exaggerated solid glowing borders or fabricated exact light-intensity map. Polished and contemplative science-museum art, suitable for age 13+. This is generated concept art only, not NASA Black Marble observations or a georeferenced playable layer. No text, captions, dates, numbers, legends, color bar, logos, flags, watermark or UI chrome.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-12/Q4.jpg",
+            "objectKey": "linssikatalogi/Q4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244536,
+            "sha256": "3a72a78a3bf43f41d7f5d552f51eb5ea0c067f1359f259021a2a219f18129907"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-12/Q4-thumb.jpg",
+            "objectKey": "linssikatalogi/Q4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 24172,
+            "sha256": "023019db6574d5957067e70b5dd8da855a3f6286b82809fbdce919d2dc4eff70"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "NASA:n Black Marble -kooste näyttää vuonna 2016 havaitut yövalot maapallon pinnalla.",
+        "creator": "Joshua Stevens / NASA Earth Observatory; Suomi NPP VIIRS data from Miguel Román and NASA Goddard Space Flight Center",
+        "title": "Black Marble 2016 1 km global composite",
+        "year": "havainnot 2016; julkaistu 23.3.2017",
+        "collection": "NASA Earth Observatory / Goddard Space Flight Center",
+        "license": "Public domain (NASA work, US government)",
+        "license_url": "https://commons.wikimedia.org/wiki/Template:PD-USGov-NASA",
+        "source_url": "https://commons.wikimedia.org/wiki/File:BlackMarble20161km.jpg",
+        "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/BlackMarble20161km.jpg/1920px-BlackMarble20161km.jpg",
+        "transform_note": "Original composition preserved; scaled to fit 4:3 canvas with neutral bars.",
+        "source_context": "2016 monthly clear-night observations combined into one composite, not a single nighttime exposure, live condition, or the game’s georeferenced Z0–Z6 rendering.",
+        "attribution_note": "Joshua Stevens / NASA Earth Observatory; Suomi NPP VIIRS data from Miguel Román and NASA Goddard Space Flight Center. Black Marble 2016 1 km global composite (havainnot 2016; julkaistu 23.3.2017). NASA Earth Observatory / Goddard Space Flight Center. Public domain (NASA work, US government). https://commons.wikimedia.org/wiki/File:BlackMarble20161km.jpg",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-12/Q4-cc.jpg",
+            "objectKey": "linssikatalogi/Q4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 147464,
+            "sha256": "15fd9191d8d1b5b0cf44ee8f7498e3ea4de7a6142ecac7954903a791f47207b2"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-12/Q4-cc-480.jpg",
+            "objectKey": "linssikatalogi/Q4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/Q4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 12960,
+            "sha256": "f3a08666160f29147742eba2727ffd2a2ff0968195c8846d2c5c62f825e70bc1"
+          }
+        ]
+      }
+    }
+  ],
+  "r2_verified": {
+    "objects": 12,
+    "canonicalUrlsVerified": true,
+    "receipt": "output/fable-20260924/linssikatalogi/era2/ready-12-20260925/r2-receipt.json"
+  }
+}
