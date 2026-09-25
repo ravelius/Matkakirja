@@ -115558,6 +115558,268 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Tilapia',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on koko järvi, joten
+       * opas kulkee rantakaupunkien kautta kolmessa maassa. Taustatiedot
+       * englannin Wikipediasta (Entebbe, Entebbe International Airport,
+       * National Botanical Gardens (Uganda), Uganda Wildlife Conservation
+       * Education Centre, Ngamba Island Chimpanzee Sanctuary, Mabamba Bay,
+       * Shoebill, Kisumu, Kisumu Impala Sanctuary, Kit-Mikayi, Rusinga
+       * Island, Mfangano Island, Abasuba Community Peace Museum, Tom Mboya,
+       * Proconsul, Mwanza, Saanane Island National Park, Rubondo Island
+       * National Park, Lake Victoria ferries, MV Victoria (1959),
+       * Kigongo–Busisi Bridge, Lake Victoria: bilharsian kotilot),
+       * Wikivoyagesta (Lake Victoria, Entebbe, Kisumu, Mwanza, Bukoba) ja
+       * saksan Wikipediasta (Mwanza: Bismarckin muistomerkki, Tampere
+       * ystävyyskaupunkina; Saanane-Nationalpark: Tansanian pienin
+       * kansallispuisto; Tampere myös suomen Wikipedian Mwanza-artikkelissa)
+       * — teksti omaa. Hinnat, aukioloajat ja laivojen aikataulut jätetty
+       * pois, koska lähteiden tiedot ovat vuosien takaa. Nostojen ja
+       * gallerioiden aiheita (Speke, Ripon Falls, Stanley, järven koko ja
+       * kolmen maan jako, Ssese-saaret, kalastus, kirjoahvenet, niiliahven,
+       * kalasääski, papyruksen ekologia) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja wikitekstistä, ja
+       * kuvat katsottu silmin. Pystykuva: Bismarckin kallio Mwanzassa.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Bismarck Rock (5385361213).jpg',
+          lyhyt: 'Bismarckin kallio nousee Viktorianjärvestä Mwanzan rannan edustalla.',
+          selite: 'Pyöreiden graniittilohkareiden kasa nousee järvestä '
+            + 'Mwanzan rannan edustalla, ja sen laella seisoo kapea '
+            + 'pystyssä oleva kivi. Etualalla rannalla kasvaa ruohoa. Kuva '
+            + 'on otettu joulukuussa 2010.',
+          lahde: 'Rahim.Lalani, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Viktorianjärvelle saavutaan useimmiten lentäen: Ugandan '
+          + 'ainoa kansainvälinen lentoasema on Entebben niemellä aivan '
+          + 'järven rannassa, ja Kenian Kisumussa ja Tansanian Mwanzassa on '
+          + 'omat kenttänsä. Järveä ei nykyään kierretä yhdellä laivalla, '
+          + 'sillä 1900-luvun reittilaivat ovat jääneet historiaan ja lautat '
+          + 'kulkevat enimmäkseen kunkin maan omilla vesillä. Matka kannattaa '
+          + 'siksi rakentaa rantakaupunkien varaan: Entebbestä veneellä '
+          + 'simpanssien saarelle, Kisumusta luo-kansan pyhälle kivelle, '
+          + 'Mbitasta Rusingan ja Mfanganon saarille ja Mwanzasta '
+          + 'kansallispuistosaarille. Noin 1 100 metrin korkeus pitää '
+          + 'ilmaston tasaisena, ja kuivimmat matkakuukaudet ovat Wikivoyagen '
+          + 'mukaan kesäkuusta syyskuuhun sekä joulukuusta helmikuuhun. '
+          + 'Järveen ei mennä uimaan: rantavesissä leviää bilharsia, ja '
+          + 'rannoilla liikkuu krokotiileja ja virtahepoja.',
+        artikkeli: {
+          nimi: 'Matkailijan Viktoria Nyanza',
+          teksti: 'Afrikan suurimman järven rannoille päästään kaupunki kerrallaan.',
+          nosto: 'Vuonna 1959 Glasgow\'ssa rakennettu Victoria-laiva '
+            + 'laivattiin järvelle 1 500 laatikossa, ja se kulkee yhä '
+            + 'Mwanzan ja Bukoban väliä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kiitotie järven niemellä',
+              teksti: 'Entebbe on useimmille ensimmäinen kosketus järveen, '
+                + 'sillä Ugandan ainoa kansainvälinen lentoasema on kaupungin '
+                + 'niemellä veden ympäröimänä. Kiitotietä pidennettiin '
+                + 'vuonna 1951 ensimmäisiä suihkumatkustajakoneita varten, ja '
+                + 'Kampalaan on kentältä tietä pitkin noin 40 kilometriä. Moni '
+                + 'viettää ensimmäisen tai viimeisen yönsä pääkaupungin sijaan '
+                + 'Entebbessä, jonka rauhallisia katuja ja puhdasta ilmaa '
+                + 'Wikivoyage kehuu. Kaupunki oli Ugandan protektoraatin '
+                + 'hallinnon keskus vuoteen 1962, ja siirtomaa-ajan puistot '
+                + 'reunustavat yhä rantaa. Kasvitieteellinen puutarha '
+                + 'perustettiin vuonna 1898, ja sen sademetsäosan kerrotaan '
+                + 'näkyvän 1940-luvun Tarzan-elokuvissa; puissa näkee '
+                + 'mustavalkoisia guerezoja ja sarvinokkia. Vieressä on '
+                + 'Ugandan luonnonsuojelun opetuskeskus, joka aloitti 1952 '
+                + 'loukkaantuneiden ja orpojen villieläinten vastaanottona ja '
+                + 'toimii nykyään maan kansallisena eläintarhana. Rannasta '
+                + 'lähtee veneitä noin 23 kilometrin päähän Ngamban saarelle, '
+                + 'jonka 40 hehtaarin sademetsä on vuodesta 1998 ollut '
+                + 'salametsästäjiltä pelastettujen orpojen simpanssien '
+                + 'turvapaikka; vierailijat seuraavat ruokintaa aidan takaa. '
+                + 'Aamuvarhaisella lintuharrastajat suuntaavat niemen '
+                + 'luoteispuolelle Mabamban lahdelle, vuodesta 2006 '
+                + 'Ramsar-sopimuksella suojellulle kosteikolle, jossa kapeilla '
+                + 'kanooteilla etsitään harvinaista kenkänokkaa. Kosteikko '
+                + 'tunnetaan keuhkokaloistaan, joita luganda-kielellä kutsutaan '
+                + 'mambaksi, ja Ugandassa kenkänokka ruokkii poikasiaan juuri '
+                + 'keuhkokaloilla.',
+              kuva: [
+                {
+                  tiedosto: 'Entebbe Aerial view.jpg',
+                  lyhyt: 'Entebben niemi ilmasta: lentoaseman kiitotie kulkee veden ympäröimällä kannaksella.',
+                  selite: 'Ilmakuvassa Entebben niemi työntyy '
+                    + 'Viktorianjärveen, ja sen poikki kulkee lentoaseman pitkä '
+                    + 'kiitotie. Kaupungin talot ja puut peittävät niemen '
+                    + 'kärkeä. Kuva on otettu toukokuussa 2012.',
+                  lahde: 'Niranjanoak, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Entebbe Botanical Gardens 4.jpg',
+                  lyhyt: 'Sammaloituneet kiviportaat nousevat Entebben kasvitieteellisen puutarhan lehväkatoksen alla.',
+                  selite: 'Leveät kiviportaat nousevat palmujen ja köynnösten '
+                    + 'muodostaman tunnelin läpi kohti valoisaa aukeaa '
+                    + 'Entebben kasvitieteellisessä puutarhassa. Kuva on '
+                    + 'otettu joulukuussa 2010.',
+                  lahde: 'Gotouganda.com, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Ngamba Island Chimpanzee Sanctuary - Pallet.jpg',
+                  lyhyt: 'Vierailijat seuraavat Ngamban saaren simpansseja aidan takaa puiselta laiturilta.',
+                  selite: 'Ngamban simpanssien turvapaikassa vierailijat '
+                    + 'seisovat puisella katselulaiturilla sähköaidan takana, '
+                    + 'ja nurmikolla liikkuu simpansseja. Kuva on otettu '
+                    + 'lokakuussa 2008.',
+                  lahde: 'Eduard Grebe (Maanscyn), Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kisumu ja ensimmäisen vaimon kivi',
+              teksti: 'Kenian puolen suurin kaupunki Kisumu on luo-kansan '
+                + 'keskus Winamin lahden pohjukassa. Mombasasta rakennettu '
+                + 'Ugandan rautatie saavutti sen laiturin joulukuussa 1901, '
+                + 'ja kaupunki kantoi hetken nimeä Port Florence, kunnes vanha '
+                + 'nimi palasi. Nimen arvellaan juontuvan vaihtokauppaa '
+                + 'tarkoittavasta sanasta. Kaupungin laidalla on alle '
+                + 'neliökilometrin kokoinen impalasuojelualue, jonka '
+                + 'rantapolulla kävellään impalojen keskellä ja jonka '
+                + 'viereisillä soilla elää uhanalainen sitatunga-antilooppi. '
+                + 'Sen eteläpuolella Hippo Pointissa kokoonnutaan katsomaan '
+                + 'auringonlaskua järven ylle, vaikka virtahepoja näkee '
+                + 'nimestä huolimatta harvoin. Viereisellä Dungan rannalla '
+                + 'papyrussuolle rakennettu pitkospuureitti vie lintujen '
+                + 'luo. Vuonna 1980 perustettu Kisumun museo on rakennettu '
+                + 'luo-talon pihapiirin muotoon, ja sen suurin näyttely on '
+                + 'täysikokoinen perinteinen pihapiiri isännän talon, '
+                + 'aittojen ja kolmen vaimon majojen kanssa. Noin 29 '
+                + 'kilometriä kaupungista länteen kohoaa Kit Mikayi, '
+                + 'toistensa päälle kasautuneista lohkareista syntynyt '
+                + 'kalliotorni, jonka nimi tarkoittaa luon kielellä '
+                + 'ensimmäisen vaimon kiveä. Tarinan mukaan Ngeso-niminen '
+                + 'mies vietti päivänsä kiven luolassa, ja hänen vaimonsa '
+                + 'kertoi kyselijöille miehen menneen ensimmäisen vaimonsa '
+                + 'luo. Kivellä rukoilevat ja paastoavat yhä Legio Maria '
+                + '-kirkon pyhiinvaeltajat, ja Unesco lisäsi pyhäkön '
+                + 'rituaalit kiireellisesti suojeltavan aineettoman perinnön '
+                + 'luetteloon vuonna 2019.',
+              kuva: {
+                tiedosto: 'KIT MIKAYI a.jpg',
+                lyhyt: 'Kit Mikayin lohkarepino kohoaa vehreän rinteen yläpuolelle Kisumun länsipuolella.',
+                selite: 'Kit Mikayin suuret, halkeilleet lohkareet ovat '
+                  + 'kasautuneet kahdeksi torniksi puuston yläpuolelle. Luon '
+                  + 'kielellä nimi tarkoittaa ensimmäisen vaimon kiveä. Kuva '
+                  + 'on otettu kesäkuussa 2021.',
+                lahde: 'Comondi, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Fossiilisaari ja kalliomaalaukset',
+              teksti: 'Winamin lahden suulla Kenian puolella Mbitan '
+                + 'pikkukaupungista pääsee sillalla Rusingan saarelle, joka on '
+                + 'noin 16 kilometriä pitkä ja enimmillään viisi leveä. Saari '
+                + 'on paleontologeille tuttu: sen tulivuorituhkan kerroksista '
+                + 'on kaivettu tuhansia noin 18 miljoonaa vuotta vanhoja '
+                + 'mioseenikauden nisäkkäiden fossiileja. Vuonna 1948 Mary '
+                + 'Leakey löysi saarelta ensimmäisen kokonaisen '
+                + 'Proconsul-kallon, apinan, jota pidettiin tuolloin '
+                + 'ihmisapinoiden varhaisena kantamuotona. Rantojen musta '
+                + 'hiekka kimaltelee, sillä se on rapautunut vanhan '
+                + 'tulivuoren laavasta, ja siinä on granaatti- ja '
+                + 'magnetiittikiteitä. Saarella on myös Tom Mboyan hauta. '
+                + 'Itsenäisen Kenian nouseva poliitikko, jota pidettiin '
+                + 'Jomo Kenyattan todennäköisenä seuraajana, murhattiin '
+                + '1969, ja hänen kartiokattoinen mausoleuminsa valmistui '
+                + 'seuraavana vuonna. Länsinaapuri Mfangano on syrjäisempi, '
+                + 'ja sinne mennään veneellä. Saarella asuu Kenian suurin '
+                + 'suban kieltä puhuva yhteisö, ja ensimmäinen auto ajoi '
+                + 'saarella vasta vuonna 2007. Mfanganon kalliosuojissa on '
+                + 'maalauksia, joiden on arveltu olevan jopa 2 000 vuotta '
+                + 'vanhoja ja varhaisten metsästäjä-keräilijöiden tekemiä. '
+                + 'Paikallinen Abasuba-yhteisön rauhanmuseo huolehtii '
+                + 'kolmesta maalauspaikasta ja opastaa kävijät niille.',
+              kuva: {
+                tiedosto: 'Tom Mboya Mausoleum.jpg',
+                lyhyt: 'Tom Mboyan mausoleumin valkoinen kartiokatto kohoaa Rusingan saarella.',
+                selite: 'Tom Mboyan mausoleumin valkoinen kartiokatto '
+                  + 'kohoaa pyöreän kivirakennuksen päällä, ja edessä on '
+                  + 'penkein kalustettu katos vierailijoille. Kuva on otettu '
+                  + 'kesäkuussa 2012.',
+                lahde: 'Wycondi, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kalliokaupunki ja saaripuistot',
+              teksti: 'Järven etelärannalla oleva Mwanza on Tansanian '
+                + 'toiseksi suurin kaupunki, ja vuoden 2022 väestönlaskennassa '
+                + 'siellä asui yli miljoona ihmistä. Asukkaat kutsuvat sitä '
+                + 'kalliokaupungiksi, Rock Cityksi, sillä pyöreitä '
+                + 'graniittilohkareita on kaikkialla: kukkuloilla, pihoilla '
+                + 'ja rannan edustalla. Tunnetuin on vedestä nouseva '
+                + 'Bismarckin kallio, jonka nimi on jäänne Saksan '
+                + 'siirtomaavallasta. Kalliolla seisonut Bismarckin '
+                + 'muistomerkki poistettiin, kun britit valtasivat kaupungin '
+                + 'ensimmäisessä maailmansodassa. Capri Pointin niemeltä on '
+                + 'vain noin 500 metriä Saananen saarelle, joka on Tansanian '
+                + 'pienin kansallispuisto. Sen kallioilla elää seeproja, '
+                + 'kivikoita ja brazzanmarakatteja, joita ei Tansaniassa '
+                + 'tavata muualla. Maaliskuussa 1979, Ugandan–Tansanian sodan '
+                + 'aikana, Libyan pommikone yritti iskeä Mwanzaan mutta ohitti '
+                + 'kaupungin, ja sen raketit osuivat saaren silloiseen '
+                + 'riistansuojelualueeseen. Järven lounaiskulmassa on '
+                + 'Rubondon saaren kansallispuisto, jonne pääsee veneellä tai '
+                + 'pienkoneella. Saaresta noin neljä viidesosaa on metsää, ja '
+                + 'siellä elää simpansseja, joiden esi-isät olivat viettäneet '
+                + 'vuosia eurooppalaisissa eläintarhoissa ja sirkuksissa: '
+                + 'saksalainen eläintieteilijä Bernhard Grzimek vapautti '
+                + 'saarelle 17 simpanssia vuosina 1966–1969. Mwanzalla on '
+                + 'yhteys myös Suomeen, sillä Tampere on sen ystävyyskaupunki.',
+              kuva: {
+                tiedosto: 'Rubondo National Park.jpg',
+                lyhyt: 'Hiekkaranta ja palmu Rubondon saaren kansallispuistossa järven lounaiskulmassa.',
+                selite: 'Vaalea hiekkaranta kaartuu tyynen lahden reunalla '
+                  + 'Rubondon saarella, ja lahden takana kohoaa metsäinen '
+                  + 'kukkula. Rannalla on veneen muotoinen penkki ja '
+                  + 'etualalla palmu. Kuva on otettu elokuussa 2023.',
+                lahde: 'Asterlegorch367, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Laivalla, lautalla ja sillalla',
+              teksti: '1900-luvulla järveä kiersivät reittilaivat, jotka '
+                + 'yhdistivät Kenian, Ugandan ja Tansanian satamat ja '
+                + 'rautatiet. Nykyään lautat liikennöivät enimmäkseen kunkin '
+                + 'maan omilla vesillä, ja Wikivoyagen mukaan Kisumusta ei '
+                + 'kulje matkustajalauttaa muihin järven kaupunkeihin. '
+                + 'Laivoja on eniten Tansanian puolella. Mwanzan ja Bukoban '
+                + 'väliä kulkee yön yli New Victoria, entinen RMS Victoria: '
+                + 'se rakennettiin Glasgow\'ssa 1959, purettiin 1 500 '
+                + 'laatikkoon, laivattiin Mombasan kautta Kisumuun ja koottiin '
+                + 'uudelleen järven rannalla. Vuosien tauon jälkeen '
+                + 'kunnostettu laiva palasi reitille vuonna 2020. Mwanzan '
+                + 'länsipuolella lautta vaihtui kesällä 2025 siltaan: 3,2 '
+                + 'kilometrin Kigongo–Busisi-silta ylittää Mwanzan lahden, ja '
+                + 'ylitys, joka lautalla jonotuksineen saattoi kestää '
+                + 'tunteja, sujuu autolla muutamassa minuutissa. Siltaa on '
+                + 'kutsuttu Itä-Afrikan pisimmäksi. Vesillä kannattaa '
+                + 'käyttää vain rekisteröityjä veneitä, joissa on '
+                + 'pelastusliivit, sillä järvelle voi nousta äkillinen '
+                + 'myrsky. Uimaan ei mennä: rantavesien kotilot levittävät '
+                + 'bilharsiaa eli skistosomiaasia, ja rannoilla liikkuu '
+                + 'krokotiileja ja virtahepoja. Koko järven seutu on myös '
+                + 'malaria-aluetta, joten hyttysverkko ja karkotteet kuuluvat '
+                + 'matkatavaroihin.',
+              kuva: {
+                tiedosto: 'M.V. Sengerema.JPG',
+                lyhyt: 'Sengerema-lautta ylittää Mwanzan lahtea Geitaan johtavalla päätiellä vuonna 2014.',
+                selite: 'Sinivalkoinen autolautta Sengerema kulkee Mwanzan '
+                  + 'lahden poikki, ja sen takana kohoaa lohkareinen kukkula. '
+                  + 'Kuva on otettu tammikuussa 2014, ennen kuin reitin '
+                  + 'rinnalle valmistui Kigongo–Busisi-silta.',
+                lahde: 'Macabe5387, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'jarvielama',
@@ -119609,6 +119871,224 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Eyre Highway',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Eyre Highway, Indian Pacific, Cook South Australia,
+       * Rawlinna, Nullarbor Links, Head of Bight, Southern right whale,
+       * Yalata, Border Village, Time in Australia) ja Wikivoyagesta
+       * (Eyre Highway, Indian Pacific, Eucla, Western Australia) — teksti
+       * omaa. Nostojen aiheita (Eyren retki, Baxter, Wylie, Euclan
+       * lennätinasema, nimi ja pisimmät suorat, geologia, Bunda Cliffs,
+       * luolat, wombatti) ei toisteta. Hinnat ja aikataulut jätetty pois.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja
+       * kuvat katsottu silmin. Pystykuva: Balladonian eläinvaroituskyltti.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Beware sign, Balladonia, 2017 (01).jpg',
+          lyhyt: 'Kyltti varoittaa aitaamattomalla tiellä kulkevista kameleista, emuista ja kenguruista.',
+          selite: 'Balladonian tienvarsiaseman itäpuolella Eyre Highwayn '
+            + 'kyltti varoittaa, että seuraavat 150 kilometriä tielle voi '
+            + 'astella kameleita, emuja ja kenguruita.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Nullarborin poikki pääsee nykyään kahta reittiä: autolla '
+          + 'rannikkoa seurailevaa Eyre Highwayta tai junalla sisämaan halki '
+          + 'kulkevaa rataa. Autoilija ajaa Norsemanista Cedunaan noin 1 200 '
+          + 'kilometriä, ja välillä ainoat asutut paikat ovat tienvarsiasemia, '
+          + 'joilla tankataan, syödään ja nukutaan. Indian Pacific -juna '
+          + 'ylittää tasangon kerran viikossa kumpaankin suuntaan ja pysähtyy '
+          + 'tankkaamaan aavekaupunkiin, jossa asuu enää neljä ihmistä. Pitkää '
+          + 'ajoa voi rytmittää maailman pisimmällä golfkentällä, ja kesäkuusta '
+          + 'lokakuuhun tasangon eteläreunan jyrkänteeltä näkee poikivia '
+          + 'valaita. Valtioiden rajalla odottavat hedelmätarkastus ja kello, '
+          + 'joka siirtyy 45 minuuttia.',
+        artikkeli: {
+          nimi: 'Matkailijan Nullarbor',
+          teksti: 'Nullarborin poikki ajetaan tienvarsiasemalta toiselle.',
+          nosto: 'Maantie on paikoin myös lentokenttä: asfalttiin on maalattu '
+            + 'kiitotien merkinnät lentävien lääkärien koneille.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Tienvarsiasemalta toiselle',
+              teksti: 'Eyre Highway on ainoa päällystetty tie Etelä- ja '
+                + 'Länsi-Australian välillä. Sen 1 664 kilometriä alkavat '
+                + 'Länsi-Australian Norsemanista ja päättyvät Port Augustaan, '
+                + 'ja itse tasanko ylitetään Norsemanin ja Cedunan välisellä '
+                + 'noin 1 200 kilometrin osuudella. Länsi-Australian puolella '
+                + 'tien varrella on 720 kilometrin matkalla vain yksi kylä, '
+                + 'Eucla, ja muuten pelkkiä tienvarsiasemia: Balladonia, '
+                + 'Caiguna, Cocklebiddy, Madura ja Mundrabilla, 65–180 '
+                + 'kilometrin välein. Ne ovat yhtä aikaa huoltoasemia, '
+                + 'kahviloita, motelleja ja leirintäalueita. Tavallisella '
+                + 'henkilöautolla pärjää, eikä ylimääräistä polttoainetta '
+                + 'tarvitse kuljettaa mukana, mutta kaikki asemat eivät ole '
+                + 'auki ympäri vuorokauden, joten yöajo kannattaa suunnitella. '
+                + 'Pisin väli on noin 190 kilometriä Balladonian ja Norsemanin '
+                + 'välillä. Nopeusrajoitus on enimmäkseen 110 km/h, ja vastaan '
+                + 'tulee jopa 42,5-metrisiä rekkajunia. Tie on aitaamaton, ja '
+                + 'kyltit varoittavat kameleista, wombateista ja kenguruista. '
+                + 'Syrjäisyyden takia muutama levennetty tieosuus on lentävien '
+                + 'lääkärien, Royal Flying Doctor Servicen, varakiitorata: '
+                + 'asfalttiin on maalattu kiitotien merkinnät, ja pienkoneille '
+                + 'on tehty kääntöpaikat.',
+              kuva: [
+                {
+                  tiedosto: 'Highway sign, Norseman, 2017 (04).jpg',
+                  lyhyt: 'Norsemanista on Balladoniaan 189, Euclaan 710 ja Adelaideen 1 986 kilometriä.',
+                  selite: 'Eyre Highwayn länsipäässä Norsemanin itäpuolella '
+                    + 'seisova opaste kertoo matkan mittakaavan: ensimmäiselle '
+                    + 'tienvarsiasemalle on 189 kilometriä ja Adelaideen lähes '
+                    + 'kaksituhatta.',
+                  lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Eyre Highway, Western Australia (near Balladonia) with RFDS landing sign.jpg',
+                  lyhyt: 'Kyltti merkitsee tieosuuden, jolle lentävien lääkärien kone voi laskeutua.',
+                  selite: 'Balladonian itäpuolella Eyre Highwayn varressa '
+                    + 'oleva keltainen kyltti kertoo, että edessä oleva '
+                    + 'levennetty tieosuus on Royal Flying Doctor Servicen '
+                    + 'hätälaskupaikka.',
+                  lahde: 'Chuq, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Caiguna Roadhouse, 2017 (02).jpg',
+                  lyhyt: 'Caigunan tienvarsiasema on huoltoasema, kahvila ja motelli keskellä tasankoa.',
+                  selite: 'Caigunan tienvarsiasema Länsi-Australiassa on '
+                    + 'yksi niistä harvoista paikoista, joissa Eyre Highwayn '
+                    + 'kulkija voi tankata, syödä ja yöpyä satojen kilometrien '
+                    + 'matkalla.',
+                  lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Indian Pacific ja aavekaupunki Cook',
+              teksti: 'Juna ylittää Nullarborin sisämaassa, kaukana '
+                + 'maantiestä. Indian Pacific kulkee Tyynenmeren rannalta '
+                + 'Sydneystä Intian valtameren rannalle Perthiin 4 352 '
+                + 'kilometriä, ja matka kestää noin kolme vuorokautta. '
+                + 'Ensimmäinen juna lähti Sydneystä 23. helmikuuta 1970, ja '
+                + 'nykyään vuoroja on kerran viikossa kumpaankin suuntaan. '
+                + 'Juna on elämysmatka: halvin istumaluokka lakkautettiin 2016, '
+                + 'ja matkustajat nukkuvat makuuvaunuosastoissa ja syövät '
+                + 'ravintolavaunussa. Autoja junaan ei enää oteta. Tasangon '
+                + 'keskellä juna pysähtyy Cookiin, joka perustettiin 1917 '
+                + 'radan huoltokyläksi ja jossa asui parhaimmillaan 200 '
+                + 'ihmistä; vuonna 2025 asukkaita oli neljä. Veturit tankataan '
+                + 'ja vesi täydennetään noin kahden tunnin pysähdyksellä, ja '
+                + 'sillä välin matkustajat saavat kävellä autioituneessa '
+                + 'kylässä. Entisen sairaalan kylteissä kehotetaan yhä '
+                + 'tulemaan Cookiin sairastamaan, ja kylässä on säilynyt '
+                + 'vanhat vankisellit. Perthiin päin matkaavat pysähtyvät myös '
+                + 'Rawlinnassa, Australian suurimman toimivan lammastilan '
+                + 'kupeessa, jossa kesäisin illallinen tarjoillaan '
+                + 'asemalaiturilla elävän musiikin soidessa.',
+              kuva: {
+                tiedosto: 'Cook (AU), Indian Pacific, NR Class Locomotive -- 2019 -- 0636.jpg',
+                lyhyt: 'Indian Pacificin veturi tankataan Cookissa keskellä Nullarboria.',
+                selite: 'Keltainen NR-sarjan veturi Indian Pacificin väreissä '
+                  + 'seisoo Cookin tankkauspaikalla: juna pysähtyy '
+                  + 'aavekaupunkiin täydentämään polttoainetta ja vettä.',
+                lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Maailman pisin golfkenttä',
+              teksti: 'Nullarbor Links on 18-reikäinen par 72 -golfkenttä, '
+                + 'joka on levitetty 1 365 kilometrin matkalle Eyre Highwayn '
+                + 'varteen Länsi-Australian Kalgoorliesta Etelä-Australian '
+                + 'Cedunaan. Ajatus syntyi punaviinipullon ääressä Balladonian '
+                + 'tienvarsiasemalla: kahden paikallisen yrittäjän mielestä '
+                + 'golf katkaisisi pitkän ajon, vähentäisi väsymyksen '
+                + 'aiheuttamia vaaratilanteita ja toisi asemille asiakkaita. '
+                + 'Kenttä avattiin virallisesti 22. lokakuuta 2009. Seitsemän '
+                + 'reikää on olemassa olevilla golfkentillä, ja loput '
+                + 'yksitoista on rakennettu tienvarsiasemien ja '
+                + 'levähdyspaikkojen viereen: aloitusalueet ja viheriöt ovat '
+                + 'tekonurmea, väylät paljasta aavikkoa. Reikien väli on '
+                + 'keskimäärin 66 kilometriä ja pisimmillään lähes 200. '
+                + 'Pelaaja ostaa tuloskortin Cedunasta tai Kalgoorliesta, '
+                + 'leimauttaa sen matkan varrella ja saa perillä todistuksen '
+                + 'maailman pisimmän golfkentän kiertämisestä. Esteinä ovat '
+                + 'varikset, emut, kengurut, myrkkykäärmeet ja wombattien '
+                + 'kolot, ja kesällä lämpötila voi nousta yli 50 asteen. '
+                + 'Vuoteen 2022 mennessä kentän oli virallisesti pelannut yli '
+                + '20 000 matkailijaa.',
+              kuva: {
+                tiedosto: 'Wombat Hole, Nundroo, 2017 (01).jpg',
+                lyhyt: 'Nullarbor Linksin neljäs reikä, Wombat Hole, sijaitsee Nundroossa.',
+                selite: 'Nundroossa Etelä-Australiassa olevan neljännen reiän '
+                  + 'alussa on katos ja opastaulu, ja väylä kulkee punaisen, '
+                  + 'matalan pensaikon peittämän maan halki.',
+                lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Valaat jyrkänteen juurella',
+              teksti: 'Siellä missä Suuri Australianlahti ulottuu '
+                + 'pohjoisimmilleen, Head of Bightissa, tasangon reuna laskee '
+                + 'jyrkänteenä mereen, ja joka vuosi sen alle uivat eteläiset '
+                + 'sileävalaat. Paikka on toinen niistä kahdesta Australian '
+                + 'etelärannikon kohdasta, joihin valaat tulevat poikimaan, ja '
+                + 'kesäkuusta lokakuuhun, eteläisen pallonpuoliskon talvella, '
+                + 'siellä nähdään vuosittain yli sata valasta. Jyrkänteen '
+                + 'päälle on rakennettu lankkupolkuja ja näköalatasanteita, '
+                + 'joilta valaita katsotaan lähes suoraan alapuolelta; '
+                + 'merialuetta voi katsella myös näköalalennolta. Tutkijoiden '
+                + 'mukaan valaat suosivat juuri tällaista rajun aallokon '
+                + 'rannikkoa, koska murtuvien aaltojen kohina peittää emon ja '
+                + 'vasan äänet miekkavalailta. Naaras palaa samaan '
+                + 'poikimispaikkaan tavallisesti kolmen vuoden välein. Maa '
+                + 'jyrkänteen päällä kuuluu Yalatan alkuperäiskansojen '
+                + 'suojelualueeseen, jonka keskellä on noin 300 asukkaan '
+                + 'aboriginaaliyhteisö, ja rannikon vedet ovat osa '
+                + 'merensuojelualuetta.',
+              kuva: {
+                tiedosto: 'Head of the Bight, Yalata, South Australia, July 2026 13.jpg',
+                lyhyt: 'Head of Bightin lankkupolut kulkevat jyrkänteen reunalla valaiden poikimisalueen yllä.',
+                selite: 'Heinäkuussa 2026 otetussa kuvassa Head of Bightin '
+                  + 'puiset lankkupolut kiertävät pensaikkoisen jyrkänteen '
+                  + 'reunaa, ja taustalla erottuvat rannikon vaaleat '
+                  + 'hiekkadyynit.',
+                lahde: 'Calistemon, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Rajalla hedelmät jäävät ja kello siirtyy',
+              teksti: 'Etelä- ja Länsi-Australian raja kulkee Border '
+                + 'Villagen kohdalla, 12 kilometriä Euclasta itään. Kylä on '
+                + 'pelkkä tienvarsiasema motelleineen ja leirintäalueineen, ja '
+                + 'sen tunnistaa jättimäisestä kenguruveistoksesta, joka '
+                + 'pitelee Vegemite-purkkia. Länteen ajavalle raja on myös '
+                + 'tarkastuspiste: Länsi-Australiaan ei saa tuoda tuoreita '
+                + 'hedelmiä, vihanneksia, siemeniä eikä hunajaa, ja kaikki '
+                + 'kasvit ja kasvikset on ilmoitettava tarkastajille. Sääntöjä '
+                + 'valvotaan tiukasti, ja tarkastajat nousevat myös juniin. '
+                + 'Itään ajavan seuraava karanteenipysähdys on vasta Cedunassa. '
+                + 'Rajalla muuttuu myös aika. Border Village ja Länsi-Australian '
+                + 'puolen kylät Caigunasta itään noudattavat epävirallista '
+                + 'keskistä läntistä aikaa, joka on 8 tuntia 45 minuuttia '
+                + 'UTC:tä edellä, puolivälissä Länsi- ja Etelä-Australian '
+                + 'aikojen välissä. Aikavyöhykkeellä ei ole laillista asemaa, '
+                + 'ja sitä noudattaa arviolta 200 ihmistä. Lännestä tuleva '
+                + 'siirtää kelloa 45 minuuttia eteenpäin Caigunassa ja toiset '
+                + '45 minuuttia rajalla; Etelä-Australian kesäaikana ero '
+                + 'rajalla on vielä tunnin suurempi.',
+              kuva: {
+                tiedosto: 'Checkpoint, Border Village, 2017 (01).jpg',
+                lyhyt: 'Länsi-Australian karanteenitarkastuspiste Border Villagessa valtioiden rajalla.',
+                selite: 'Kuva on otettu Länsi-Australian puolelta itään: '
+                  + 'oikealla on tarkastusaseman katos, jonka kyltti kertoo '
+                  + 'seuraavan karanteenipysähdyksen olevan Cedunassa, ja '
+                  + 'vasemmalla toivotetaan tervetulleeksi Etelä-Australiaan.',
+                lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'geologia',
@@ -129406,6 +129886,221 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Lake Titicaca, PeruRail, Belmond Andean Explorer,
+       * Inca Manco Cápac International Airport, Sillustani, Altitude
+       * sickness, Coca tea, Candlemas/Peru, List of Intangible Cultural
+       * Heritage elements in Peru, Diablada, Taquile Island, Amantaní,
+       * Copacabana Bolivia, Basilica of Our Lady of Copacabana, Strait
+       * of Tiquina) ja Wikivoyagesta (Lake Titicaca, Puno, Copacabana,
+       * Isla del Sol, Isla Amantani, Isla Taquile, Sillustani) — teksti
+       * omaa. Hinnat ja aikataulut jätetty pois, koska lähteiden tiedot
+       * ovat osin vanhoja. Nostojen aiheita (korkein purjehduskelpoinen
+       * järvi, Yavari, inkojen luomistaru, Tiwanaku, Isla del Solin
+       * rauniot, järven nimi, Uros-saarten rakenne, totora,
+       * jättiläissammakko, uikku) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvasivuilta, ja
+       * kuvat katsottu silmin. Pystykuva: Taquilen neuloja.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Knitter of Taquile.jpg',
+          lyhyt: 'Taquilen saarella neulominen on miesten työtä, ja taitava neuloja on arvostettu.',
+          selite: 'Taquilen saaren mies neuloo kirjavaa lankaa '
+            + 'sukkapuikoilla, ja päässä hänellä on neulottu punainen myssy. '
+            + 'Saaren tekstiilitaide on UNESCOn aineettoman '
+            + 'kulttuuriperinnön luettelossa.',
+          lahde: 'Thomas Quine, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Titicaca-järvelle on kaksi porttia: Puno Perun puolella '
+          + 'ja Copacabana Bolivian puolella. Kummassakin ollaan lähes '
+          + 'neljän kilometrin korkeudessa, joten matkan tärkein vaihe on '
+          + 'hidas nousu ylös vuoristoon. Punossa järven avointa selkää ei '
+          + 'edes näe, sillä kaupunki on suljetun lahden pohjukassa; '
+          + 'suuri järvi avautuu vasta veneestä ja saarilta, joilla '
+          + 'matkailija voi yöpyä paikallisen perheen luona. Helmikuussa '
+          + 'Puno täyttyy kymmenistätuhansista tanssijoista, kun kaupunki '
+          + 'juhlii suojeluspyhimystään. Bolivian puolella Copacabanan '
+          + 'basilikan edessä siunataan autoja, ja La Paziin vievällä '
+          + 'tiellä bussit ylittävät järven salmen lautalla. Järven vettä '
+          + 'ei pidä juoda puhdistamatta.',
+        artikkeli: {
+          nimi: 'Matkailijan Titicaca-järvi',
+          teksti: 'Titicaca-järvellä matkailijan tärkein matkatavara on aika totutella korkeuteen.',
+          nosto: 'Taquilen saarella neulominen on miesten työtä, ja pojat '
+            + 'oppivat sen jo lapsina.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille Punon kautta',
+              teksti: 'Perun puolella matka järvelle kulkee Punon kautta. '
+                + 'Lähin lentoasema on Juliacassa, noin 45 minuutin '
+                + 'ajomatkan päässä: sen kiitotie on Perun pisin, mutta '
+                + 'säännöllisiä kansainvälisiä suoria lentoja kentälle ei '
+                + 'ole. Maisemallisempi tapa on PeruRailin Titicaca-juna, '
+                + 'joka ajaa Cuscosta Punoon noin kymmenessä tunnissa. '
+                + 'Radan korkein kohta on La Rayan sola 4 313 metrissä, ja '
+                + 'siellä juna pysähtyy hetkeksi, jotta matkustajat pääsevät '
+                + 'jaloittelemaan. Vuodesta 2017 samaa rataa on kulkenut '
+                + 'myös Belmond Andean Explorer, Etelä-Amerikan ensimmäinen '
+                + 'luksusmakuujuna, jonka vaunut ajoivat aiemmin Australiassa. '
+                + 'Bussit ajavat Cuscosta kuudessa–kahdeksassa tunnissa '
+                + 'enimmäkseen radan viertä. Punon satamasta lähtevät veneet '
+                + 'Uros-saarille sekä Taquilelle ja Amantanílle. Puolen päivän '
+                + 'retken voi tehdä myös 31 kilometrin päähän Sillustaniin, '
+                + 'jossa Umayo-järveen pistävällä niemellä seisoo 91 '
+                + 'kivistä hautatornia. Collat rakensivat niitä ylhäisilleen '
+                + 'ennen inkoja ja vielä inkavallan aikana.',
+              kuva: [
+                {
+                  tiedosto: 'PeruRail La Raya.jpg',
+                  lyhyt: 'Cuscon ja Titicacan välinen juna pysähtyy La Rayan solassa, radan korkeimmalla kohdalla.',
+                  selite: 'PeruRailin sininen juna seisoo La Rayan asemalla '
+                    + 'yli 4 300 metrin korkeudessa, ja taustalla kohoavat '
+                    + 'kuivan ylängön lumilaikkuiset huiput.',
+                  lahde: 'Unukorno, Wikimedia Commons (CC BY 3.0)',
+                },
+                {
+                  tiedosto: 'Muelle de Puno.jpg',
+                  lyhyt: 'Punon laiturilta lähtevät veneet Taquilen ja Amantanín saarille.',
+                  selite: 'Punon satamassa odottaa rivi matkustajaveneitä, ja '
+                    + 'rannan kyltit osoittavat kohti Taquilen ja Amantanín '
+                    + 'saaria järven avoimella selällä.',
+                  lahde: 'Ciudades, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Urnas funerarias, Sillustani, Perú, 2015-08-01, DD 100.JPG',
+                  lyhyt: 'Sillustanin kiviset hautatornit seisovat Umayo-järven rannalla Punon lähellä.',
+                  selite: 'Sillustanin hautatornit eli chullpat on muurattu '
+                    + 'tarkasti sovitetuista kivilohkareista; oikealla '
+                    + 'pilkottaa Umayo-järven sininen vesi.',
+                  lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Korkeus tulee ensin',
+              teksti: 'Titicaca on niin korkealla, että ohut ilma tuntuu jo '
+                + 'kävellessä. Vuoristotautiin sairastuu nopeasti '
+                + 'noustessa noin viidesosa ihmisistä jo 2 500 metrissä ja '
+                + 'kaksi viidestä 3 000 metrissä, ja järvi on vielä '
+                + 'kahdeksansataa metriä ylempänä. Hyvä kunto ei suojaa. '
+                + 'Tärkein oire on päänsärky, joka alkaa usein kymmenen '
+                + 'tunnin sisällä ja hellittää yleensä parissa päivässä; jos '
+                + 'olo pahenee, ainoa varma hoito on laskeutua alemmas. '
+                + 'Siksi reitti kannattaa rakentaa portaittain, esimerkiksi '
+                + 'Pyhän laakson ja Cuscon kautta, ja ottaa ensimmäiset päivät '
+                + 'Punossa rauhallisesti. Hotellien aamiaispöydissä on usein '
+                + 'kokanlehtiä ja kokateetä, jota paikalliset suosittelevat '
+                + 'vuoristotautiin. Tee on Perussa ja Boliviassa laillista, '
+                + 'mutta jo yksi kupillinen voi näkyä huumetestissä, eikä '
+                + 'lehtiä pidä tuoda kotiin. Päivällä ohut ilma päästää läpi '
+                + 'polttavan auringon: saarille vievän veneen katolle '
+                + 'torkahtanut matkailija voi palaa pahasti. Yöt taas ovat '
+                + 'kylmiä, ja kesä–elokuussa lämpötila voi laskea pakkasen '
+                + 'puolelle.',
+              kuva: {
+                tiedosto: '20150720 Puno Hotelbreakfast.jpg',
+                lyhyt: 'Punolaisen hotellin aamiaispöydässä on tarjolla kokanlehtiä ja kokateepusseja.',
+                selite: 'Punolaisen hotellin aamiaispöydässä on kulhollinen '
+                  + 'kuivattuja kokanlehtiä ja kokateepusseja kamomillateen '
+                  + 'vieressä hotellin vieraille.',
+                lahde: 'Hekaheka, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Helmikuu kuuluu Candelarialle',
+              teksti: 'Joka helmikuu Puno juhlii suojeluspyhimystään, '
+                + 'Candelarian Neitsyttä, ja kahden viikon ajan kaupunki on '
+                + 'täynnä musiikkia. Juhla on Riossa pidettävän karnevaalin ja '
+                + 'Bolivian Oruron karnevaalin ohella Etelä-Amerikan '
+                + 'suurimpia, ja UNESCO lisäsi sen aineettoman '
+                + 'kulttuuriperinnön luetteloon vuonna 2014. Kaikki alkaa '
+                + 'aamunkoiton messusta ja ikivanhasta puhdistusmenosta, '
+                + 'minkä jälkeen Neitsyen kuvaa kannetaan kulkueessa kaduilla '
+                + 'musiikin ja tanssin saattelemana. Sitten seuraavat kaksi '
+                + 'tanssikilpailua. Mukana on yli 200 eri tanssia: '
+                + 'alkuperäiskylien omia tansseja ja kaupunginosien '
+                + 'loisteliaita pukutansseja. Tanssijoita on noin 40 000 ja '
+                + 'muusikoita 5 000, ja välillisesti mukana on noin 25 000 '
+                + 'muuta, kuten brodeeraajia, naamiontekijöitä ja '
+                + 'soittokuntien väkeä. Tunnetuin on diablada, paholaistanssi, jonka '
+                + 'syntysijasta Peru ja Bolivia kiistelevät yhä. Juhlaviikoille '
+                + 'majoitus kannattaa varata hyvissä ajoin.',
+              kuva: {
+                tiedosto: 'Diablada Candelaria 2025.jpg',
+                lyhyt: 'Diablada-tanssijat kilpailevat Punon Candelaria-juhlassa helmikuussa 2025.',
+                selite: 'Sarvipäiset diablada-tanssijat kirjailluissa '
+                  + 'asuissaan esiintyvät Candelaria-juhlan tanssikilpailussa '
+                  + 'Punon stadionilla; taustalla katsomo ja kaupungin '
+                  + 'ympäröivät rinteet.',
+                lahde: 'Leyner MCG, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Yö saarella perheen luona',
+              teksti: 'Titicacan suurta selkää pääsee tuntemaan vasta, kun '
+                + 'jää saarelle yöksi. Perun puolen Amantanílla asuu noin '
+                + '4 000 ihmistä kymmenessä kylässä, eikä saarella ole autoja '
+                + 'eikä hotelleja. Sen sijaan perheet majoittavat vieraita '
+                + 'omiin huoneisiinsa ja kokkaavat heille. Tuliaisiksi sopivat '
+                + 'ruokatarvikkeet kuten riisi ja öljy tai koulutarvikkeet, '
+                + 'mutta ei makeiset, sillä hammashoitoa saarella on niukasti. '
+                + 'Iltapäivällä kiivetään Pachamaman ja Pachatatan huipuille, '
+                + 'Äiti Maan ja Isä Maan temppelien raunioille, ihailemaan '
+                + 'auringonlaskua. Pimeän tultua ilma kylmenee heti, ja '
+                + 'illalla isännät pukevat vieraat omiin juhla-asuihinsa '
+                + 'tanssiaisiin. Taskulamppu on tarpeen, koska sähköä on '
+                + 'vähän. Naapurisaari Taquilelle tulee vuosittain kymmeniä '
+                + 'tuhansia päiväkävijöitä, mutta veneet saapuvat vasta '
+                + 'aamupäivällä ja lähtevät iltapäivällä. Yöpyjä näkee '
+                + 'saaren hiljaisena, ja torilla hinnoista ei tingitä.',
+              kuva: {
+                tiedosto: 'Atardecer en el Apu Pachatata, 2023.jpg',
+                lyhyt: 'Aurinko laskee Titicacan saarten taakse Amantanín Pachatata-vuorelta nähtynä.',
+                selite: 'Satuloitu hevonen seisoo Pachatata-vuoren rinteellä '
+                  + 'Amantanín saarella, kun aurinko laskee järven ja sen '
+                  + 'pienten saarten taakse lokakuussa 2023.',
+                lahde: 'Abelchristian111, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Copacabana ja Bolivian ranta',
+              teksti: 'Punosta Bolivian Copacabanaan ajetaan noin kolme ja '
+                + 'puoli tuntia, ja raja ylitetään Kasanissa noin seitsemän '
+                + 'ja puolen kilometrin päässä kaupungista. Kellot siirretään '
+                + 'rajalla tunnilla eteenpäin. Noin 6 000 asukkaan kaupungin '
+                + 'nimi tulee aimarankielisestä ilmauksesta "näkymä '
+                + 'järvelle", ja siitä sai nimensä myös Rio de Janeiron '
+                + 'kuuluisa ranta. Kaupungin keskus on vuosina 1669–1679 '
+                + 'rakennettu valkoinen basilika. Sen kappelissa säilytetään '
+                + 'Copacabanan Neitsyen kuvaa, Bolivian suojeluspyhimystä, jonka '
+                + 'inkahallitsijoiden sukuun kuulunut Francisco Tito Yupanqui veisti '
+                + '1500-luvun lopulla. Basilikan edessä siunataan '
+                + 'autoja: kukilla koristellut ajoneuvot pirskotetaan '
+                + 'vihkivedellä. Illalla kiivetään puolessa '
+                + 'tunnissa Cerro Calvarion ristintien asemien ohi katsomaan '
+                + 'auringonlaskua, ja rannan kojuista syödään järven taimenta. '
+                + 'Satamasta veneet vievät Isla del Solille, jonka pohjois- ja '
+                + 'keskiosa olivat kylien kiistan vuoksi suljettuina matkailijoilta vuosina '
+                + '2019–2022; tilanne kannattaa tarkistaa. La Paziin '
+                + 'mennessä tie ylittää Tiquinan salmen, joka on '
+                + 'kapeimmillaan 850 metriä. Matkustajat ylittävät sen '
+                + 'veneellä, ja bussit kuljetetaan lautalla perässä.',
+              kuva: {
+                tiedosto: 'Bautismo de autos frente a Catedral de CC (4).JPG',
+                lyhyt: 'Munkki siunaa kukilla koristeltuja pikkubusseja Copacabanan basilikan edessä.',
+                selite: 'Ruskeakaapuinen munkki pirskottaa vihkivettä '
+                  + 'kukkaseppelein koristeltujen pikkubussien ylle '
+                  + 'Copacabanan basilikan edustalla, ja ihmiset seuraavat '
+                  + 'siunausta vieressä.',
+                lahde: 'Elemaki, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
