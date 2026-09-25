@@ -114519,6 +114519,254 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Panulirus cygnus',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Geraldton; Geraldton Airport; TransGeraldton; Transwa;
+       * Indian Ocean Drive; St Francis Xavier's Cathedral, Geraldton; John
+       * Hawes; Mullewa, Western Australia; Cathedral of the Holy Cross,
+       * Geraldton; Randolph Stow; The Merry-Go-Round in the Sea; Greenough,
+       * Western Australia; Kalbarri National Park; Hutt Lagoon) ja
+       * Wikivoyagen Geraldton-, Kalbarri- ja Mid West -sivuilta — teksti
+       * omaa. Nostojen aiheita (lyijy ja satama, rautatie ja asema, Point
+       * Mooren majakka, tuuli ja purjelautailu, piikkihummeri, Batavia ja
+       * Houtman Abrolhos kalastusleireineen), valokuvien aiheita (Charon,
+       * HMAS Sydneyn muistomerkki, rannan uimalahti ja viljasiilo,
+       * kalastusalus, satama) eikä saapumistekstin aiheita toisteta. Kuvien
+       * lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja kuvat
+       * katsottu silmin. Pystykuva: katedraalin julkisivu (CC BY-SA 4.0).
+       * Leaning Treen wajarrinkielinen nimi Wirnda Ngadara on luettu
+       * paikan opastetaulusta Commonsin kuvassa "Leaning Tree, Greenough,
+       * October 2023 02.jpg" (DaHuzyBru, CC BY-SA 4.0), jota ei käytetä
+       * oppaan kuvana. Bussikuvan linjanumero 853 näkyy kuvan
+       * linjakilvessä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'St Francis Xavier Cathedral, Geraldton, October 2023 02.jpg',
+          lyhyt: 'Pyhän Franciscus Xavierin katedraalin kaksoistornit kohoavat Geraldtonin keskustassa.',
+          selite: 'John Hawesin suunnittelema Pyhän Franciscus Xavierin '
+            + 'katedraali lokakuussa 2023. Kellanruskean kivijulkisivun '
+            + 'kaksoistornien aukoista näkyvät kellot, ja pääoven edessä on '
+            + 'kivetty labyrintti.',
+          lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Geraldton on Keskilännen ainoa suuri kaupunki runsaan '
+          + 'neljänsadan kilometrin päässä Perthistä, ja monelle pohjoiseen '
+          + 'ajavalle se on matkan ensimmäinen yöpymispaikka. Perille pääsee '
+          + 'rannikkotietä, bussilla tai tunnin lennolla. Keskustassa '
+          + 'kannattaa käydä papin ja arkkitehdin John Hawesin rakentamassa '
+          + 'katedraalissa ja syödä Marine Terracen varrella, ja päiväretket '
+          + 'vievät tuulen taivuttamien puiden luo Greenoughiin, '
+          + 'vaaleanpunaiselle Hutt Lagoonille ja Kalbarrin rotkoille. Kesän '
+          + 'helle voi olla ankara, joten vettä ja polttoainetta on syytä '
+          + 'varata reilusti.',
+        artikkeli: {
+          nimi: 'Matkailijan Geraldton',
+          teksti: 'Geraldtonissa pappi rakensi katedraalin, ja päiväretket vievät punaisille rotkoille.',
+          nosto: 'Geraldtonista lähti 5. joulukuuta 1921 Australian '
+            + 'ensimmäinen säännöllinen lentopostivuoro, joka lensi '
+            + 'Kimberleyn Derbyyn.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Rannikkotie, valtatie vai tunnin lento',
+              teksti: 'Perthistä Geraldtoniin on maanteitse runsaat 420 '
+                + 'kilometriä, ja reittejä on kaksi. Rannikkoa seuraava Indian '
+                + 'Ocean Drive päällystettiin koko matkalta vuonna 2010, ja se on '
+                + 'henkilöautolla noin puoli tuntia nopeampi ja maisemiltaan '
+                + 'kauniimpi. Sisämaan Brand Highway on raskaan liikenteen reitti, '
+                + 'ja koska tie on pitkälti yksikaistainen kumpaankin suuntaan, '
+                + 'jättimäisten rekkajunien ohittaminen on vaarallista etenkin '
+                + 'pimeällä. Transwan bussit ajavat Perthistä Geraldtoniin '
+                + 'useita kertoja päivässä rannikon tai sisämaan kautta, ja '
+                + 'matka kestää noin kuusi tuntia; osa vuoroista jatkaa '
+                + 'Northamptonin kautta Kalbarriin. Henkilöjunia kaupunkiin ei '
+                + 'ole kulkenut 1970-luvun jälkeen. Lentäen Perthistä pääsee '
+                + 'noin tunnissa: QantasLink ja Nexus Airlines lentävät '
+                + 'päivittäin, ja kenttä on Moonyoonookassa noin kymmenen '
+                + 'kilometriä kaupungista itään. Kentälle ei kulje julkista '
+                + 'liikennettä, joten sieltä jatketaan taksilla tai etukäteen '
+                + 'varatulla vuokra-autolla. Kentällä on pitkä historia: '
+                + 'joulukuussa 1921 Geraldtonista lähti Australian ensimmäinen '
+                + 'säännöllinen lentopostivuoro, joka lensi Derbyyn. Kaupungin '
+                + 'sisällä liikennöi TransGeraldtonin kahdeksan bussilinjaa, '
+                + 'mutta lähikyliin kuten Greenoughiin ne eivät ulotu, ja '
+                + 'Kalbarriin tai kauemmas pohjoiseen tarvitaan oma auto.',
+              kuva: [
+                {
+                  tiedosto: 'Geraldton Airport main terminal, October 2023 01.jpg',
+                  lyhyt: 'Geraldtonin lentoaseman matala terminaali kaarevine katoksineen.',
+                  selite: 'Geraldtonin lentoaseman pääterminaali lokakuussa '
+                    + '2023. Kaarevien katosten alla on lähtevien matkustajien '
+                    + 'sisäänkäynti, ja kyltti osoittaa pysäkin, jolla vain '
+                    + 'taksit ja kuljetusbussit ottavat kyytiin matkustajia.',
+                  lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'VH-8XN at Geraldton Airport, October 2023 01.jpg',
+                  lyhyt: 'Nexus Airlinesin potkuriturbiinikone odottaa Geraldtonin kentällä.',
+                  selite: 'Nexus Airlinesin Dash 8 -potkuriturbiinikone '
+                    + 'VH-8XN Geraldtonin lentoasemalla lokakuussa 2023. '
+                    + 'Etualalla ovat matkatavaroiden lastaukseen käytettävät '
+                    + 'hihnakärryt, ja kentän takana näkyy kuivaa, matalaa '
+                    + 'maastoa.',
+                  lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'TransGeraldton Mercedes-Benz OC500LE (Volgren CR228L Futurebus) TP2101 at Chapman Road,Geraldton.jpg',
+                  lyhyt: 'TransGeraldtonin linjan 853 bussi ajaa Chapman Roadilla vanhan vankilan ohi.',
+                  selite: 'TransGeraldtonin kaupunkibussi linjalla 853 '
+                    + 'Chapman Roadilla syyskuussa 2023. Taustalla on vanha '
+                    + 'Geraldtonin vankila, jonka rakennuksissa toimii nykyään '
+                    + 'käsityökeskus.',
+                  lahde: 'ZidaneHartono, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Marine Terrace, torit ja oma saalis',
+              teksti: 'Keskustan pääkatu Marine Terrace kulkee rannan '
+                + 'suuntaisesti, ja sen varrella on suurin osa kaupungin '
+                + 'kahviloista, pubeista ja ravintoloista, joissa tarjolla on '
+                + 'esimerkiksi mereneläviä, puu-uunipizzaa sekä thaimaalaista ja '
+                + 'italialaista ruokaa. Paikalliset kutsuvat kaupunkia lyhyesti '
+                + 'Geroksi, ja se on koko Keskilännen kauppapaikka: Carnarvonista, '
+                + 'Exmouthista ja Meekatharrasta asti ajetaan tänne ostoksille. '
+                + 'Pohjoiseen tai sisämaahan lähtevän kannattaakin täydentää '
+                + 'eväät juuri täällä. Lauantaiaamuisin kahdeksasta '
+                + 'puoleenpäivään Maitland Parkissa Cathedral Avenuella pidetään '
+                + 'tuottajatori, ja sunnuntaisin tori kokoontuu vanhalle '
+                + 'rautatieasemalle Chapman Roadin ja Forrest Streetin kulmaan. '
+                + 'Moni hankkii kalansa itse. Rannalta ja laitureilta saa '
+                + 'kalastaa ilman lupaa, mutta veneestä kalastaminen vaatii '
+                + 'kalastusviranomaisen luvan, ja monille lajeille on koko- ja '
+                + 'saaliskiintiöt. Rannalta pyydetään esimerkiksi sinikalaa, '
+                + 'jota australialaiset kutsuvat tailoriksi, ja kauempana '
+                + 'riutoilla dhufishiä ja snapperia. Vajaan kolmen '
+                + 'meripeninkulman päässä rannikosta on kuitenkin alue, jolla '
+                + 'kalastus on kielletty ympäri vuoden. Sinne upotettiin 2004 '
+                + 'South Tomi -alus, joka oli jäänyt kiinni laittomasta '
+                + 'patagonianhammaskalan pyynnistä Australian subantarktisilla '
+                + 'vesillä ja jota oli ajettu takaa neljätoista päivää. Hylystä '
+                + 'tuli keinoriutta ja sukelluskohde, jonka kansi on noin '
+                + 'kolmentoista metrin syvyydessä.',
+              kuva: {
+                tiedosto: 'OIC geraldton cbd marine terrace E from cathedral.jpg',
+                lyhyt: 'Marine Terrace -pääkatu hiljaisena aamuna Cathedral Avenuen kulmasta itään.',
+                selite: 'Marine Terrace itään Cathedral Avenuen kulmasta '
+                  + 'toukokuussa 2014 pian auringonnousun jälkeen. Kadun '
+                  + 'varrella on vanhoja liiketaloja katoksineen, ja '
+                  + 'liikenneympyrän keskellä seisoo majakkaa muistuttava '
+                  + 'pylväs.',
+                lahde: 'Orderinchaos, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Pappi, joka rakensi katedraalin',
+              teksti: 'Geraldtonin keskustaa hallitsee Pyhän Franciscus '
+                + 'Xavierin katedraali, jonka suunnitteli englantilainen pappi '
+                + 'ja arkkitehti John Hawes. Hän tuli kaupunkiin vuonna 1915 pian '
+                + 'katoliseksi papiksi vihkimisensä jälkeen. Rakennustyöt '
+                + 'alkoivat 1916, ja valmis katedraali vihittiin käyttöön '
+                + 'vuonna 1938. Kaksoistorneineen se edustaa espanjalaista '
+                + 'lähetysasematyyliä, ja sisällä raidalliset holvikaaret on '
+                + 'maalattu Córdoban moskeijakatedraalin innoittamina. Vuosina '
+                + '2015–2017 rakennus kunnostettiin, ja vuonna 2019 länsitorneihin '
+                + 'asennettiin 27 kellon kellopeli, joka lyö vartit kahdeksasta '
+                + 'aamulla kuuteen illalla. Hawesin muita rakennuksia voi kiertää '
+                + 'Monsignor Hawes Heritage Trail -reitillä; Mullewan kirkon noin '
+                + 'sadan kilometrin päässä sisämaassa hän rakensi pitkälti omin '
+                + 'käsin. Kaupungin anglikaaninen katedraali vuodelta 1964 '
+                + 'tunnetaan puolestaan laajoista lasimaalauksistaan. Wajarrin '
+                + 'kielellä, joka on Keskilännen puhutuin aboriginaalikieli, '
+                + 'Geraldtonin nimi on Jambinu. Yamaji-taiteelle ovat '
+                + 'ominaisia tuhansista okrapisteistä syntyvät kuviot, ja '
+                + 'Geraldtonin museossa on pysyvä näyttely yamajien ja '
+                + 'wajarrien kulttuurista. Kaupungissa syntynyt kirjailija '
+                + 'Randolph Stow sijoitti romaaninsa The Merry-Go-Round in the '
+                + 'Sea (1965) 1940-luvun Geraldtoniin.',
+              kuva: {
+                tiedosto: 'St Francis Xavier Cathedral, Geraldton, October 2023 05.jpg',
+                lyhyt: 'Katedraalin keskilaivan raidalliset holvikaaret on maalattu Córdoban mallin mukaan.',
+                selite: 'Pyhän Franciscus Xavierin katedraalin keskilaiva '
+                  + 'lokakuussa 2023. Harmaavalkoiset seinät ja '
+                  + 'oranssiraidalliset holvikaaret johtavat alttarille, ja '
+                  + 'kaaren yläpuolella kiertää latinankielinen teksti.',
+                lahde: 'DaHuzyBru, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kaatuneet puut ja punainen rotko',
+              teksti: 'Brand Highwaytä etelään 24 kilometrin päässä on '
+                + 'Greenough, 1800-luvun jälkipuoliskolla vehnänviljelyllä '
+                + 'vaurastunut kylä, jonka kalkkikivirakennuksista monet ovat '
+                + 'nykyään National Trustin hoidossa. Tasangon pelloilla kasvaa '
+                + 'punaeukalyptuksia, jotka jatkuva etelätuuli on taivuttanut '
+                + 'paikoin lähes vaakatasoon; paikan opastetaulun mukaan niiden '
+                + 'wajarrinkielinen nimi on Wirnda Ngadara. Pohjoisessa noin '
+                + '160 kilometrin päässä on Kalbarrin kansallispuisto, jossa '
+                + 'Murchison-joki on kovertanut punavalkoraitaiseen '
+                + 'hiekkakiveen lähes 80 kilometriä pitkän rotkon. Kalbarri '
+                + 'Skywalkin kaksi ulokenäköalatasannetta kurottavat noin sadan '
+                + 'metrin korkeudella joen mutkan ylle, ja ne ovat esteettömiä. '
+                + 'Läheltä lähtevä polku vie Nature\'s Window -kivikaarelle, '
+                + 'puiston tunnetuimpaan kuvauskohteeseen. Puistossa ei ole '
+                + 'juomavettä, ja sisämaan rotkoilla lämpötila nousee '
+                + 'kesällä usein yli 40 asteen. Kalbarrin seudulla kukkii yli '
+                + '800 luonnonkukkalajia, eniten elo–syyskuussa. Matkalla '
+                + 'kannattaa pysähtyä Port Gregoryn kohdalla Hutt Lagoonilla: '
+                + 'suolajärvi on vaaleanpunainen, koska siinä elää '
+                + 'beetakaroteenia tuottavaa levää, ja järven altaissa toimii '
+                + 'maailman suurin mikrolevien viljelylaitos. Sisämaassa Mullewa on '
+                + 'harvoja paikkoja Länsi-Australiassa, joissa kasvaa '
+                + 'wreath flower -niminen luonnonkukka.',
+              kuva: {
+                tiedosto: 'Kalbarri Skywalk Platform Over the Murchison Gorge.jpg',
+                lyhyt: 'Kalbarri Skywalkin ruosteenruskea näköalatasanne kurottaa Murchison-joen rotkon ylle.',
+                selite: 'Kalbarri Skywalkin ulokemainen näköalatasanne '
+                  + 'marraskuussa 2020. Tasanne ulottuu punaisen '
+                  + 'hiekkakivijyrkänteen reunalta rotkon ylle, ja taustalla '
+                  + 'aukeaa matala pensaikko.',
+                lahde: 'Findlay Osborn, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Helle, riutan virtaukset ja täysi tankki',
+              teksti: 'Geraldtonissa on välimerellinen ilmasto. Kesällä '
+                + 'päivälämpötila on keskimäärin noin 32 astetta, ja '
+                + 'helleaaltojen aikana mittari voi nousta yli 40 asteen: '
+                + 'helmikuussa 2024 ja uudelleen tammikuussa 2025 kaupungissa '
+                + 'mitattiin kaikkien aikojen ennätys, 49,3 astetta. Iltapäivän '
+                + 'merituuli viilentää rannikon kaupunginosia enemmän kuin '
+                + 'sisämaan puolen asuinalueita. Talvella päivät ovat noin '
+                + 'kahdenkymmenen asteen lämpöisiä, ja suurin osa vuoden '
+                + 'sateesta tulee silloin, eniten kesä- ja heinäkuussa. Talven '
+                + 'isot maininkiaallot tuovat surffaajille hyviä aaltoja, mutta '
+                + 'rannikkoa suojaavan riutan aukoista purkautuva vesi voi '
+                + 'synnyttää vaarallisia paluuvirtauksia. Monella rannalla saa '
+                + 'ajaa nelivetoautolla, mutta nousuveden ja myrskyaaltojen '
+                + 'aikaan ranta voi olla ajokelvoton. Rannikkotiellä on sattunut '
+                + 'paljon onnettomuuksia, ja sen parannustöissä tien varteen on '
+                + 'lisätty opasteita, jotka muistuttavat vasemmanpuoleisesta '
+                + 'liikenteestä myös saksaksi, ranskaksi ja kiinaksi. Tankki '
+                + 'kannattaa täyttää ajoissa: rannikkotiellä huoltoasemia on '
+                + 'harvassa, ja Geraldtonista pohjoiseen polttoainetta, ruokaa '
+                + 'ja majoitusta on yhä harvemmassa aina Carnarvoniin asti. '
+                + 'Kellot käyvät Länsi-Australian ajassa, kahdeksan tuntia '
+                + 'UTC:tä edellä, eikä kesäaikaa käytetä.',
+              kuva: {
+                tiedosto: 'Keep left sign on Indian Ocean Drive in four different languages, September 2021.jpg',
+                lyhyt: 'Kyltti Indian Ocean Drivella neuvoo ajamaan vasemmalla neljällä kielellä.',
+                selite: 'Keep left -kyltti Indian Ocean Drivella Leemanin '
+                  + 'pohjoispuolella syyskuussa 2021. Englannin lisäksi ohje '
+                  + 'ajaa vasemmalla on kirjoitettu saksaksi, ranskaksi ja '
+                  + 'kiinaksi, ja tie jatkuu matalan pensaikon halki.',
+                lahde: 'Calistemon, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'batavia',
