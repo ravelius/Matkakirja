@@ -5531,3 +5531,7 @@ Huomio: Wikidata-haussa lähti vahingossa omistajan sähköposti User-Agentissa,
 ## NATIIVI-UI LUOVUTUS o PUSHATTU, KONTEKSTI 67 % → clear_session self KASKETTY; JUNASSA f: 92, 103, 105; JALJELLA 81/83 (OhitaAloituslento-API), 82, 89, 90, 94, 102. NATIIVISEPPA: 110 JUNASSA (68a4cfa9, 10,0 s VIDEO), KOTIMAAN KOROSTUS JUNASSA (377ef7af), 112 KAANTYY (49,6 s KIERROS), 111 MUSTEEN ALFA .42→.59 (VARJO SELVITYKSESSA) (25.9.2026 klo 15.21)
 
 C16-regressio natiivi-ui/paljastus-c16b Pelikoodarilla todennettavana. Video proto-3d/lokit/aloituslento-84/e110/aloituslento-110.mp4.
+
+## NATIIVI-UI NOLLATTU klo 15.22 (PROSESSI POIS, RC POIS) → ALOITUSVIESTI LAHETETTY send_message-KANAVALLA (LUOVUTUS o, 6518eff24), RC TAKAISIN; PELIKOODARI 63 % → ERA LOPPUUN JA LUOVUTUS 65 %:SSA; juna/b13 YLARAJA LAUKESI 15.22 (1550 s), KAANNOS KAYNNISSA (25.9.2026 klo 15.24)
+
+Postivahti ei näe kontekstia sammuneesta prosessista; nollaus todetaan isRunning false + RC pois.
