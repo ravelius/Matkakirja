@@ -1000,6 +1000,7 @@ namespace Matkakirja.Natiivi
                 dialogi.PiilotaHeitto();
             PaivitaSiirtoKohteet();
             LiikuMuuttui?.Invoke();
+            AjastaAutomaattinenHeitto();
         }
 
         /// <summary>
@@ -1898,6 +1899,7 @@ namespace Matkakirja.Natiivi
             PaivitaKysymysAika();
             PaivitaSahke();
             PaivitaLento();
+            PaivitaAutomaattiheitto();
             if (matka != null) { PaivitaSiirtoKohteet(); PaivitaValintavihje(); }
             // Pallo ei ota kosketuksia modaalisen näkymän (ja lehden) aikana.
             bool esta = Kaytossa && (Tila == SilmukanTila.Dialogi || Tila == SilmukanTila.Kysymys || Tila == SilmukanTila.Lehti
