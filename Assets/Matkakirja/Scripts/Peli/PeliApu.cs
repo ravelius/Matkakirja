@@ -275,8 +275,9 @@ namespace Matkakirja.Natiivi
             double t = Math.Max(0, Math.Min(1, r.Askeleet > 0 ? (double)s.Askel / r.Askeleet : 0.5));
             if (ReittiPiste != null)
             {
+                // Viivan virhe ei saa kaataa pelisilmukkaa: varana isoympyrä (PeliApu käännetään myös ilman Unityä).
                 try { var p = ReittiPiste(s.Reitti, t); if (p.HasValue) return p; }
-                catch (Exception e) { UnityEngine.Debug.LogException(e); }
+                catch (Exception) { }
             }
             return Isoympyra(a.Lat, a.Lon, b.Lat, b.Lon, t);
         }
