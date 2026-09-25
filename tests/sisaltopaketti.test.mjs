@@ -1341,3 +1341,28 @@ test('skeema 1.40: kartan nimiöt mahtuvat 18 merkkiin, monumentit.nimio (Sisäl
   assert.ok(mon.some((m) => m.nimio), 'monumentit.nimio puuttuu');
   for (const m of mon) if (m.nimio) assert.ok(m.nimio.length <= 18 && m.nimio.length < (m.nimi ?? '').length + 1, `${m.id}: ${m.nimio}`);
 });
+
+test('skeema 1.41: offline-rasteri sarjasta 2026-09-25, z9 vain kaupunkien ympärillä (Natiiviseppä, build 13)', () => {
+  const o = JSON.parse(tiedostot.get('offline.json'));
+  const R = o.lahteet.rasteri;
+  assert.match(R.url, /\/2026-09-25-pohja-20260925\/\{z\}\/\{x\}\/\{y\}\.jpg$/);
+  assert.equal(R.maxzoom, 9);
+  assert.deepEqual(R.kaupunkitaso.tasot, [9]);
+  const kaupungit = JSON.parse(tiedostot.get('kokoelmat/kaupungit.json')).alkiot.filter((c) => c.tyyppi === 'kaupunki');
+  assert.ok(kaupungit.length >= 70);
+  let valeja = 0;
+  for (const [iso, m] of Object.entries(o.maat)) {
+    for (const z of [6, 7, 8]) if (m.rasteri[z]) assert.equal(m.rasteri[z].length, 4, `${iso} z${z}`);
+    const omat = kaupungit.filter((c) => c.maa === iso);
+    if (!omat.length) { assert.equal(m.rasteri[9], undefined, iso); continue; }
+    assert.equal(m.rasteri[9].length, omat.length, iso);
+    for (const [x0, y0, x1, y1] of m.rasteri[9]) {
+      assert.ok(x0 <= x1 && y0 <= y1 && x1 - x0 <= 3 && y1 - y0 <= 3, `${iso}: ${[x0, y0, x1, y1]}`);
+    }
+    valeja += m.rasteri[9].length;
+  }
+  assert.equal(valeja, kaupungit.filter((c) => o.maat[c.maa]).length);
+  // Pariisi (48.86, 2.35) z9: laatta x = 259, y = 176 on välissä.
+  const fra = o.maat.FRA.rasteri[9];
+  assert.ok(fra.some(([x0, y0, x1, y1]) => x0 <= 259 && 259 <= x1 && y0 <= 176 && 176 <= y1), JSON.stringify(fra));
+});
