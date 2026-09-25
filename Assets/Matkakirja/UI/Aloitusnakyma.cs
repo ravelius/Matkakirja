@@ -213,7 +213,68 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(linkki, Kirjasin.Kone);
 
             periaatteet = Periaatteet(juuri);
+
+            // 4 OHITA (löydös 83): lennon ajan alareunassa, turva-alueen sisällä, kaistaleen yläpuolella.
+            ohitaNappi = Rakenne.Nappi("Ohita", "mk-aloitus__ohita", Ohita, kerros.Turva(UiKerros.Traileri));
+            Kirjasimet.Aseta(ohitaNappi.Q<Label>(), Kirjasin.Kone);
+            ohitaNappi.Add(new SvgIkoni(Ikonit.OhitaLento));
+            ohitaNappi.style.display = DisplayStyle.None;
+            arkki.RegisterCallback<GeometryChangedEvent>(_ => AsetteleOhita());
             UiKerros.Hae().StartCoroutine(LataaTekstit());
+        }
+
+        // --- Ohita-nappi (löydös 83) --------------------------------------------------------
+
+        /// <summary>
+        /// Löydös 83 (omistaja 25.9., build 13): aloituslennon alareunassa Ohita-nappi, joka ohittaa koko animaation
+        /// (PeliOhjain.OhitaAloituslento: lentorepliikki vaikenee, saapumiskortti tulee heti). Web .flight-eteen on
+        /// huomaamaton nuoli oikeassa alanurkassa (opacity 0,3, syttyy 3,5 s:ssa); omistajan löydös voittaa: näkyvä
+        /// nappi heti lennon alusta. Näkyy AloituslentoAlkoi → saapumiskortti (UiNakymat).
+        /// </summary>
+        readonly Button ohitaNappi;
+        bool ohitaNakyy;
+        public bool OhitaNakyy => ohitaNakyy;
+
+        public void NaytaOhita(bool nakyy)
+        {
+            if (ohitaNakyy == nakyy) return;
+            ohitaNakyy = nakyy;
+            AsetteleOhita();
+            Rakenne.Nayta(ohitaNappi, nakyy, nakyy ? 400 : 250);
+        }
+
+        /// <summary>Ohita-napin painallus (myös testikomento ui ohitalento).</summary>
+        public void Ohita()
+        {
+            if (!ohitaNakyy) return;
+            Aanet.Tehoste("clack");
+            NaytaOhita(false);
+            LentoPerilla();
+            PeliOhjain.Instanssi?.OhitaAloituslento();
+        }
+
+        /// <summary>Nappi lennon kaistaleen yläpuolelle; ilman kaistaletta 16 pt turva-alueen alareunasta.</summary>
+        void AsetteleOhita()
+        {
+            if (!ohitaNakyy) return;
+            var turva = ohitaNappi.parent;
+            float ala = 16f;
+            if (lennolla && turva != null && arkki.resolvedStyle.display == DisplayStyle.Flex && !float.IsNaN(arkki.worldBound.yMin))
+                ala = Mathf.Max(ala, turva.worldBound.yMax - arkki.worldBound.yMin + 12f);
+            ohitaNappi.style.bottom = ala;
+        }
+
+        /// <summary>
+        /// Aloituslento perillä tai ohitettu (saapumiskortti nousee): lennon kaistale häipyy heti, ettei avauslennon
+        /// rivi jää ruudun alareunaan laskeutumisen jälkeen (Pelikoodarin havainto 25.9.; web: lentokalvo poistuu
+        /// saapuessa, ohitus päättää tekstin paataLennonTeksti).
+        /// </summary>
+        public void LentoPerilla()
+        {
+            lentoOhi = true;
+            if (!lennolla) return;
+            kirjoitus?.Pause();
+            LopetaLento(0);
         }
 
         // Fablen kaanonlause (23.9.2026); webin meta description päivitetään samaksi.
@@ -727,6 +788,7 @@ namespace Matkakirja.Natiivi
                     juuri.pickingMode = PickingMode.Position;
                     intro.RemoveFromClassList("mk-aloitus__intro--lento");
                     intro.RemoveFromClassList("mk-aloitus__intro--vaaka");
+                    AsetteleOhita();
                 }).StartingIn(900);
             }).StartingIn(viiveMs);
         }
