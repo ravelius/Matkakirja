@@ -2195,6 +2195,12 @@ export const RAAMATTU = {
       otsikko: 'Kohtaamiset ja henkilöt',
       tila: 'luonnos',
       kohdat: [
+        'KOHTAAMISEN AVAUS (omistaja 25.9.2026 klo 23.0x, sitova, web ja natiivi; löydös 145): '
+          + 'kohtaaminen ei aukea lehden kautta. Kun pelaaja ratkaisee YHDEN tietovisan '
+          + '(lehdestä tai karttanostosta) oikein, kartalle syttyy vihreä piste, josta pääsee '
+          + 'tapaamaan henkilön ja ratkaisemaan tehtävän (kynnys pudotettu kahdesta yhteen). '
+          + 'Pulun ohje yksikössä: "Löytämällä kartalta kysymyksen ja vastaamalla siihen oikein saat '
+          + 'vihjeen aarteen sijainnista." Kohtaamiset ovat muuten vielä vaiheessa; omistaja palaa niihin.',
         'KEHYS: maisema on muuttunut 150 vuodessa — kätkö löytyy '
           + 'vain isoisän kuvauksen JA paikallisen hiljaisen tiedon '
           + 'yhdistelmällä.',
