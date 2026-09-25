@@ -102,7 +102,9 @@ namespace Matkakirja.Natiivi
                     float ny = (Fbm(x * 0.012f / s, y * 0.022f / s, o3, 3) - 0.5f) * 2f * karkea * 0.38f
                              + (Fbm(x * 0.04f / s, y * 0.075f / s, o4, 2) - 0.5f) * 2f * hieno * 0.44f;
                     float ex = x + nx, ey = y + ny;
-                    float dist = Etaisyys(ex, ey, w, h, marg + karkea * 0.9f, v1, v2, v3, v4);
+                    // Sisennys laatikon reunasta: webin näkyvä paperi on 291/325 laatikosta (mitattu iPhone 402),
+                    // eli noin 5 % kummaltakin sivulta (MARGINAALI 12/400 + turbulenssin siirto sisäänpäin).
+                    float dist = Etaisyys(ex, ey, w, h, marg + 20f * s, v1, v2, v3, v4);
                     float paperi = Mathf.Clamp01(0.5f - dist);
                     Color c = default;
                     if (paperi > 0f)
