@@ -65,7 +65,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Paperin ja lyhtyjen tekstuurit tälle koolle (RepaleinenPergamentti); uudet vasta koon muuttuessa.</summary>
         Vector2Int paperinKoko;
         Texture2D paperi, lyhtyV, lyhtyO;
-        readonly Button tauko, kaynnista, kahva, lueJuttu, cc;
+        readonly Button tauko, kaynnista, kahva, lueJuttu;
         readonly Aikaselain aikaselain;
         readonly Tiedeliitenakyma tiedeliite;
         readonly Keksijakaruselli karuselli;
@@ -144,14 +144,6 @@ namespace Matkakirja.Natiivi
             kahva = Rakenne.Nappi("", "mk-aikajana-nappi mk-aikajana-kahva", NaytaLappu, ohjaimet);
             kahva.style.display = DisplayStyle.None;
             // Yksi tekstinappi: Tauko / Jatka (myös välinäytöksessä, hehkuen) / Loppu (web taukoNappi).
-            // Ihmisen matka II (omistaja 25.9.2026, Linssisepän suunnitelma #3221): CC-nappi Tauon vasemmalle samalle riville
-            // (LINSSIEN YLÄPALKKI iPHONELLA: Dynamic Islandin korkeus), tekstitys oletuksena pois; vain II:ssa.
-            cc = Rakenne.Nappi("CC", "mk-aikajana-nappi mk-aikajana-nappi--teksti mk-aikajana-cc",
-                () => IhmisenMatkaKerros.AsetaTekstitys(!IhmisenMatkaKerros.TekstitysPaalla), ohjaimet);
-            Kirjasimet.Aseta(cc, Kirjasin.KoneLihava);
-            cc.tooltip = "Tekstitys";
-            cc.style.display = DisplayStyle.None;
-            IhmisenMatkaKerros.TekstitysMuuttui += _ => PaivitaCc();
             tauko = Rakenne.Nappi("Tauko", "mk-aikajana-nappi mk-aikajana-nappi--teksti", VaihdaTauko, ohjaimet);
             Kirjasimet.Aseta(tauko, Kirjasin.Kone);
             Valikko = new LinssiValikko(kerros, () => linssit.SuljeLinssi(), AloitaAlusta);
@@ -485,11 +477,7 @@ namespace Matkakirja.Natiivi
             bool saari = Ylapalkki.Matala && p != null && Screen.width > 0;
             ylarivi.EnableInClassList("mk-aikajana-ylarivi--saari", saari);
             var virrat = tutkimus?.Rivi;
-            // Ihmisen matka II:n CC (Linssisepän video 25.9.2026): saaririvillä Tauon vieressä se osui Dynamic Islandin
-            // alle (oikealla on tilaa vain Tauolle ja ☰:lle), joten saaririvillä CC on vuosiluvun rivin oikeassa päässä.
-            if (saari && cc.parent != ylarivi) ylarivi.Add(cc);
-            else if (!saari && cc.parent != ohjaimet) ohjaimet.Insert(ohjaimet.IndexOf(tauko), cc);
-            foreach (var e in new[] { otsikot, kelloRuutu, ohjaimet, virrat, cc })
+            foreach (var e in new[] { otsikot, kelloRuutu, ohjaimet, virrat })
             {
                 if (e == null) continue;
                 e.style.position = saari ? Position.Absolute : StyleKeyword.Null;
@@ -517,8 +505,6 @@ namespace Matkakirja.Natiivi
             kelloRuutu.style.top = rivi2;
             float kellonKorkeus = float.IsNaN(kelloRuutu.layout.height) || kelloRuutu.layout.height <= 0 ? 36f : kelloRuutu.layout.height;
             float korkeus = rivi2 + kellonKorkeus + 8f * yksikko;
-            cc.style.right = r.z + reuna;
-            cc.style.top = rivi2 + Mathf.Max(0f, (kellonKorkeus - 36f) / 2f);
             // Ihmisen tutkimusvaiheen virtanapit (web .ihmisen-vananapit kellon ja ohjainten välissä): saaririvillä
             // niille ei ole tilaa (vuosilaatikko ~150 pt + viisi nappia), joten ne saavat oman rivin vuosiluvun alle
             // (muuten ne jäisivät palkin vasempaan yläkulmaan Dynamic Islandin alle tai vuosiluvun päälle).
@@ -1328,18 +1314,21 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Joka ruutu: näkyvä osa esityksen seinäkellosta (Esitys.Kulunut), jolloin tauko pysäyttää sen.</summary>
-        /// <summary>CC-napin näkyvyys (vain Ihmisen matka II) ja tila (valittu = tekstitys päällä); kertomusteksti uudelleen.</summary>
-        void PaivitaCc()
+        /// <summary>
+        /// Löydös 147 (omistaja, build 17): Ihmisen matka II:n tekstitys ☰-valikon kytkimenä "Tekstitys" (entinen CC-nappi
+        /// yläpalkissa); vain II:ssa (IhmisenMatkaKerros.CcNappi).
+        /// </summary>
+        void PaivitaTekstitysKytkin()
         {
             bool nakyy = tila == Tila.Ihminen && IhmisenMatkaKerros.CcNappi;
-            var d = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
-            if (cc.style.display.value != d) cc.style.display = d;
-            cc.EnableInClassList("mk-valittu", nakyy && IhmisenMatkaKerros.TekstitysPaalla);
+            if (nakyy == Valikko.TekstitysNakyy) return;
+            if (nakyy) Valikko.NaytaTekstitys(() => IhmisenMatkaKerros.TekstitysPaalla, IhmisenMatkaKerros.AsetaTekstitys);
+            else Valikko.NaytaTekstitys(null, null);
         }
 
         void PaivitaKertomus()
         {
-            if (tila == Tila.Ihminen && (cc.style.display.value == DisplayStyle.Flex) != IhmisenMatkaKerros.CcNappi) PaivitaCc();
+            PaivitaTekstitysKytkin();
             if (tila != Tila.Ihminen || osat == null || kertomus.style.display.value != DisplayStyle.Flex) return;
             if (osat.Count == 0) { AsetaKertomusteksti("", false); return; }
             var es = LinssiUi.IhmisenMatka?.Esitys;

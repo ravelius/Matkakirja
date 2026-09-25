@@ -906,22 +906,6 @@
     letter-spacing: 3.85px; /* web 0.5px */
 }
 
-/* Ihmisen matka II: CC-nappi (tekstitys). Pois = palkin tavallinen nappi, himmeä teksti; päällä = linssin kultainen
- * teema (web --aikajana-kulta #d9a13b), läpinäkymättömänä sekoituksena (lineaarinen väriavaruus). */
-.mk-aikajana-cc .mk-nappi__teksti {
-    letter-spacing: 7.7px; /* web 1px */
-    color: #9c8f78;
-}
-
-.mk-aikajana-nappi.mk-aikajana-cc.mk-valittu {
-    border-color: #d9a13b;
-    background-color: #4a3818;
-}
-
-.mk-aikajana-cc.mk-valittu .mk-nappi__teksti {
-    color: #f3cf7a;
-}
-
 /* Jatka hehkuu välinäytöksessä (web .aikajana-nappi.hehku): hento punainen, hitaasti sykkien. */
 .mk-aikajana-nappi.mk-hehku {
     border-color: rgba(214, 96, 72, 0.9);
