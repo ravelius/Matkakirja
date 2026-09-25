@@ -365,8 +365,8 @@ namespace Matkakirja
         public double saapumisKaari = 18.6;
         [Tooltip("Verkkopelin PALLOKAMERAN_AJO_MS.")]
         public float saapumisKesto = 1.4f;
-        [Tooltip("Napautuksen osuma-alue pisteen ympärillä, näytön pisteinä.")]
-        public float osumaSade = 22f;
+        [Tooltip("Napautuksen osuma-alue pisteen ympärillä, näytön pisteinä (web lauta.js:713 NAPAUTUKSEN_SADE_PX = 44, lähin kohde).")]
+        public float osumaSade = 44f;
         [Tooltip("Montako merkkiä rakennetaan kehystä kohden (käynnistysnykäyksen välttämiseksi).")]
         public int rakennusKehys = 24;
         public Material pisteMateriaali;
@@ -596,7 +596,7 @@ namespace Matkakirja
                 if (!m.juuri.gameObject.activeSelf) continue; // suodatetut ja takapuolen merkit ovat pois
                 Vector3 p = kamera.WorldToScreenPoint(m.juuri.position);
                 float d = Vector2.Distance(ruutu, p);
-                // Huomiorenkaan sisällä napautus osuu (säde 27 pt > osumaSade 22 pt).
+                // Huomiorenkaan sisällä napautus osuu (raja suurempi säteistä: rengas 27 pt, osumaSade 44 pt).
                 float raja = m.rengas != null && m.rengas.gameObject.activeSelf ? Mathf.Max(osumaSade, rengasSade) * kerroin : osumaSade * kerroin;
                 // Näkyvän nimiön päällä napautus osuu myös.
                 if (m.nimio.enabled && NimenAla(m, p, kerroin).Contains(ruutu)) d = Mathf.Min(d, 1f);

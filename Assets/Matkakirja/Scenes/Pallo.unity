@@ -800,7 +800,7 @@ MonoBehaviour:
   rengasValittuPaksuus: 3
   saapumisKaari: 18.6
   saapumisKesto: 1.4
-  osumaSade: 22
+  osumaSade: 44
   rakennusKehys: 24
   pisteMateriaali: {fileID: 2100000, guid: 4353d89444b4e402fbea0f34520d7387, type: 2}
   fontti: {fileID: 11400000, guid: fc4382f2b8d284fd592e90260c58b4ee, type: 2}
@@ -924,7 +924,7 @@ MonoBehaviour:
   pistePx: 15
   nimiPx: 13
   nimiRako: 8
-  osumaSade: 22
+  osumaSade: 44
   nosto: 5000
   musteenVari: {r: 0.2, g: 0.15, b: 0.1, a: 1}
 --- !u!114 &2116600900

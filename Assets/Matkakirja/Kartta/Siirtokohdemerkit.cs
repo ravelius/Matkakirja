@@ -39,7 +39,7 @@ namespace Matkakirja
         [Tooltip("KOHDEMERKIN_NIMI_PX ja KOHDEMERKIN_NIMI_RAKO_PX.")]
         public float nimiPx = 13f, nimiRako = 8f;
         [Tooltip("Napautuksen osuma-alue (web: lähin kohde 44 px).")]
-        public float osumaSade = 22f;
+        public float osumaSade = 44f;
         [Tooltip("Merkin nosto pinnasta (m), kuten kaupunkimerkeissä.")]
         public double nosto = 5000.0;
         public Color musteenVari = new Color(0.20f, 0.15f, 0.10f);
