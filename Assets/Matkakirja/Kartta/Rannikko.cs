@@ -57,6 +57,11 @@ namespace Matkakirja
         public static int PakotettuTaso = -1;
         /// <summary>Peiton ohitus (komento "rannikko peitto &lt;a&gt;|oletus"); NaN = <see cref="PeittoNatiivi"/>.</summary>
         public static float PeittoOhitus = float.NaN;
+        /// <summary>
+        /// Omistajan valinta 25.9.2026 (kortti, löydös 46: vaihtoehto 3 "himmeä"): rantaviiva natiivin peitolla 0,25,
+        /// maiden rajat täydellä webin voimalla. Webin voima <see cref="PeittoNatiivi"/> komennolla "rannikko peitto web".
+        /// </summary>
+        public const float OmistajanPeitto = 0.25f;
         public static Rannikko Instanssi { get; private set; }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
@@ -77,7 +82,7 @@ namespace Matkakirja
         protected override string Nimi => "Rannikko";
         protected override int Jono => RantaJono;
         protected override Color Muste => RantaMuste;
-        public override float PeittoNyt => PeittoOhitus >= 0f && PeittoOhitus <= 1f ? PeittoOhitus : PeittoNatiivi;
+        public override float PeittoNyt => PeittoOhitus >= 0f && PeittoOhitus <= 1f ? PeittoOhitus : OmistajanPeitto;
         protected override double LeveysPt(double tiheys) => Viivaleveys.Pt(tiheys, Viivaleveys.RannikkoKaukana, Viivaleveys.RannikkoLahella);
         protected override int Pakotettu => PakotettuTaso;
         protected override bool LinssinPaallaOma => LinssinPaalla;

@@ -472,7 +472,9 @@ namespace Matkakirja
                     }
                     else if (o.Length > 2 && o[1] == "peitto")
                     {
-                        float p = o[2] == "oletus" ? float.NaN : (float)D(2);
+                        // "web" = webin voima (lineaarikorjattu); "oletus" = omistajan valinta (rannikko 0,25, rajat web).
+                        float p = o[2] == "oletus" ? float.NaN
+                            : o[2] == "web" ? (ranta ? Rannikko.PeittoNatiivi : Rajat.PeittoNatiivi) : (float)D(2);
                         if (ranta) Rannikko.PeittoOhitus = p; else Rajat.PeittoOhitus = p;
                     }
                     else if (o.Length > 2 && o[1] == "syvyys") Vektorikerros.Syvyystesti = o[2] == "paalle";
