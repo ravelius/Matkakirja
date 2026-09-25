@@ -238,11 +238,13 @@ namespace Matkakirja.Natiivi
         {
             if (v == null || string.IsNullOrEmpty(v.Teksti)) return null;
             string nimi = Nimi(v.Kaupunki);
-            var (o, t) = MatkakirjanOtsikko(v.Paikkarivi ?? nimi, nimi);
+            // Löydös 86 (omistaja build 13): tunnelmarivi ("Pölyä ja puhetta kullasta") ei näy kirjassa; otsikko on
+            // "Ateena, elokuussa 1873". Data ennallaan (Pelikoodarin selvitys).
+            var (o, _) = MatkakirjanOtsikko(v.Paikkarivi ?? nimi, nimi);
             return new Merkinta
             {
                 Avain = "fokus:" + v.Kaupunki, Kaupunki = v.Kaupunki, Laji = "fokus",
-                Otsikko = o, PaikkaAika = true, Paikkarivi = t, Tunnelma = true, Lyhyt = "",
+                Otsikko = o, PaikkaAika = true, Paikkarivi = null, Tunnelma = true, Lyhyt = "",
                 Teksti = v.Teksti, Kaiutin = true,
             };
         }
@@ -252,11 +254,11 @@ namespace Matkakirja.Natiivi
         {
             if (v?.AarreTeksti == null) return null;
             string nimi = Nimi(v.Kaupunki);
-            var (o, t) = MatkakirjanOtsikko(v.AarrePaikkarivi ?? "Isoisän merkintä · " + nimi, nimi);
+            var (o, _) = MatkakirjanOtsikko(v.AarrePaikkarivi ?? "Isoisän merkintä · " + nimi, nimi);
             return new Merkinta
             {
                 Avain = "fokusaarre:" + v.Kaupunki, Kaupunki = v.Kaupunki, Laji = "aarre",
-                Otsikko = o, PaikkaAika = true, Paikkarivi = t, Tunnelma = true, Lyhyt = "",
+                Otsikko = o, PaikkaAika = true, Paikkarivi = null, Tunnelma = true, Lyhyt = "",
                 Teksti = v.AarreTeksti,
             };
         }

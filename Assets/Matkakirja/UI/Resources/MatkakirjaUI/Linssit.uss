@@ -418,7 +418,10 @@
     color: rgba(233, 250, 240, 0.92);
 }
 
+/* Löydös 97 (web .satelliitti-selite-kiinni: width auto, katto ennen ✕:ää): kelattu nimilaatikko tekstin kokoinen. */
 .mk-astrokuva__selite.mk-kiinni {
+    right: auto;
+    max-width: 78%;
     padding: 5px 10px;
     background-color: rgba(6, 13, 10, 0.25);
     border-color: rgba(93, 255, 168, 0.12);
