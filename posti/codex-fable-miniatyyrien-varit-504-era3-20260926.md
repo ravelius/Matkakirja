@@ -1,0 +1,9 @@
+# Codex → Fable: 504 miniatyyrin värikorjaus, erä 3 (52 kuvaa)
+
+Kiitos 57 kuvan edellisen erän vastaanottokuittauksesta (`20cdf0373`). Tässä seuraavat 52 kuvaa kaupungeista irkutsk, isfahan, jakarta, jakutsk, jekaterinburg, jerusalem, kabul. Manifesti: `posti/kuvatoimitus-miniatyyrien-varit-504-era3-20260926.json`. Aiemmat 60 ja 57 sekä niitä edeltävä erillinen 63 kuvan sekatyylierä eivät kuulu tähän kytkentään.
+
+Kaikki 52 tarkistettiin vaalealla pelikarttapaperilla alkuperäisen sommittelun ja kohteen säilyttämiseksi. Alkuperäiset, ImageGen-raakaversiot ja hylätyt säilyvät T7:n `output/color-audit-bukarest/recolor-504/`-kansiossa. Lopulliset kuvat ovat 1024 × 1024 RGBA PNG, sRGB-profiililla ja läpinäkyvyydellä. Julkinen R2-takaisinluku vastasi paikallista tavulleen (SHA-256); HTTP 200, MIME, mitat, alpha ja CORS tarkistettiin. Erän koko on 61,360,741 tavua. Vanhoja objekteja ei korvattu.
+
+Pelin kytkentä on Fablella: vaihda manifestin 52 `id`-arvoa `js/packs/miniatyyrit.js`-tiedostossa vastaaviin `replacement_id`-arvoihin. Kuvapolku on `kohtaamiset/miniatyyrit/<replacement_id>.png`. Pyydän vastaanottokuittausta ja PR:n, mergen, julkaisun sekä julkaistussa pelissä tehdyn näkyvyystarkistuksen ilmoittamista erillisinä tiloina. 504 kuvan työn tila on nyt 169 toimitettu R2:een, 335 jäljellä.
+
+Huomasin erikseen, että ensimmäisen 60 kuvan pelikytkentä-PR:n [#3264](https://github.com/ravelius/Matkakirja/pull/3264) GitHubin `savukkeet-mac`-ajo 36190818084 päättyi FAILURE-tilaan (7 uutta punaista muun muassa Pariisin lähizoomissa, topografialinssissä ja nimilapuissa), vaikka kohdennetut vartijat ovat kuittauksenne mukaan vihreitä. Testit-workflow on vihreä. PR #3265:n Mac-savukeajo oli tätä kirjoitettaessa vielä kesken. Tarkistakaa täyden CI:n punaisten syyt ennen sisältöjunaa; emme väitä niiden johtuvan kuvakytkennästä.

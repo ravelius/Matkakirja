@@ -1,0 +1,886 @@
+[
+  {
+    "id": "irkutsk-znamenskin-luostari",
+    "replacement_id": "irkutsk-znamenskin-luostari-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/irkutsk-znamenskin-luostari-vari2.png",
+    "sha256": "fe3956ccfe855a71e2c37c6d6f7c54e310cc9e626ebcd471b5867c0083bd2bb9",
+    "bytes": 1617846,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "irkutsk-epifanian-katedraali",
+    "replacement_id": "irkutsk-epifanian-katedraali-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/irkutsk-epifanian-katedraali-vari2.png",
+    "sha256": "991b1abc6b2e1b9b4e1df18b5f9c56a5fee8596c8db05de1aaac605bd334fa7e",
+    "bytes": 1679310,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "irkutsk-taivaaseenastumisen-kirkko",
+    "replacement_id": "irkutsk-taivaaseenastumisen-kirkko-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/irkutsk-taivaaseenastumisen-kirkko-vari2.png",
+    "sha256": "6c76f6801d300a2022b7c40dd8d4146278b0d853544ed0b27aad0ac2b0f9c385",
+    "bytes": 1313734,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "irkutsk-rautatieasema",
+    "replacement_id": "irkutsk-rautatieasema-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/irkutsk-rautatieasema-vari2.png",
+    "sha256": "ab0b42616c114ac0aa8c675f6f2c2aa93edb243b7c6a7eaa157313b7ec98837a",
+    "bytes": 1424817,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "irkutsk-ristin-ylentamisen-kirkko",
+    "replacement_id": "irkutsk-ristin-ylentamisen-kirkko-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/irkutsk-ristin-ylentamisen-kirkko-vari2.png",
+    "sha256": "8f795242065b36f9a986601e5ed3310e441f1eba0afed040745e817166c1e554",
+    "bytes": 1528935,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "irkutsk-130-kortteli",
+    "replacement_id": "irkutsk-130-kortteli-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/irkutsk-130-kortteli-vari2.png",
+    "sha256": "031a1fba07d4fb6391d359dc84f25961eba96263b7b733ee64a2f002bb1a7d60",
+    "bytes": 1674177,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "irkutsk-jaanmurtaja-angara",
+    "replacement_id": "irkutsk-jaanmurtaja-angara-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/irkutsk-jaanmurtaja-angara-vari2.png",
+    "sha256": "f28a5d7a5dfc72b1a132c34fde14486bd422c625efb994aec86402139a0e9341",
+    "bytes": 1597017,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "isfahan-jameh-moskeija",
+    "replacement_id": "isfahan-jameh-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/isfahan-jameh-moskeija-vari2.png",
+    "sha256": "fb99d42549899ad13fad648a40c6ad39c286395d58941cdfe08d6b2477272475",
+    "bytes": 1596816,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "isfahan-isfahanin-basaari",
+    "replacement_id": "isfahan-isfahanin-basaari-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/isfahan-isfahanin-basaari-vari2.png",
+    "sha256": "2ac4b6347237e6e497e970658738d859d0a21940e953d230d6c1dca94d88ad8d",
+    "bytes": 1816687,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "isfahan-ali-qapu",
+    "replacement_id": "isfahan-ali-qapu-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/isfahan-ali-qapu-vari2.png",
+    "sha256": "4d81e8f69166fb1f8e4155c185bdb69912ae4b39630917163222049c6951a73f",
+    "bytes": 1509578,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "isfahan-shaahin-moskeija",
+    "replacement_id": "isfahan-shaahin-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/isfahan-shaahin-moskeija-vari2.png",
+    "sha256": "95cc0a4d2ddc997c3de7cb6017161752029978c5fd53a1b322d69ec4f69e3133",
+    "bytes": 1684298,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "isfahan-hasht-behesht",
+    "replacement_id": "isfahan-hasht-behesht-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/isfahan-hasht-behesht-vari2.png",
+    "sha256": "4a1e56e245d4783c7421af627b19a7109150abfb772ceb61ac7c7c77d9df31eb",
+    "bytes": 1582322,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "isfahan-chahar-baghin-koulu",
+    "replacement_id": "isfahan-chahar-baghin-koulu-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/isfahan-chahar-baghin-koulu-vari2.png",
+    "sha256": "13e68f73f7cb09e4fca2befc87259f667d053b51cf9c122ce1c8a281e8aa2489",
+    "bytes": 1668053,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakarta-fatahillah-aukio",
+    "replacement_id": "jakarta-fatahillah-aukio-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakarta-fatahillah-aukio-vari2.png",
+    "sha256": "aae23f58fd9a0224e13b981e0c06d937df9d0ee25195d6e04f7822278b465085",
+    "bytes": 813585,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakarta-istiqlal-moskeija",
+    "replacement_id": "jakarta-istiqlal-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakarta-istiqlal-moskeija-vari2.png",
+    "sha256": "bafff52aa9575857aa07436125741e3d40211c93f4f85a965be379593cea358c",
+    "bytes": 833463,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakarta-jakarta-kotan-asema",
+    "replacement_id": "jakarta-jakarta-kotan-asema-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakarta-jakarta-kotan-asema-vari2.png",
+    "sha256": "f866eec9fb0e9f0d820b9d67d2d1486abec83a889930f6087432eada92451fe3",
+    "bytes": 980081,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakarta-jakartan-katedraali",
+    "replacement_id": "jakarta-jakartan-katedraali-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakarta-jakartan-katedraali-vari2.png",
+    "sha256": "2c719d41553dd8b6e21efc8ac31ad14f278b29ba30a727117370103b750942d0",
+    "bytes": 804177,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakarta-kansallismonumentti-monas",
+    "replacement_id": "jakarta-kansallismonumentti-monas-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakarta-kansallismonumentti-monas-vari2.png",
+    "sha256": "0c44aec18d2db2248d2a09cc996c93ab7b570bbc934a0ccd5eae36d86ca3ac4b",
+    "bytes": 303747,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakarta-kim-tek-ie-temppeli",
+    "replacement_id": "jakarta-kim-tek-ie-temppeli-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakarta-kim-tek-ie-temppeli-vari2.png",
+    "sha256": "451dd17be76f89e3385189b2d324b53b1f66d24bffdfbf6e411488224ddb5c18",
+    "bytes": 1156596,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakarta-kota-intanin-nostosilta",
+    "replacement_id": "jakarta-kota-intanin-nostosilta-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakarta-kota-intanin-nostosilta-vari2.png",
+    "sha256": "8247186d073dfeaccd8df5d64501a97f65b458c7ffc40a6930f65a9cc36c2733",
+    "bytes": 828494,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakarta-merenkulkumuseo",
+    "replacement_id": "jakarta-merenkulkumuseo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakarta-merenkulkumuseo-vari2.png",
+    "sha256": "21be4de1c9249a5c0a6f8c67e28558efe61150d063098bc5b09e32a560a4e748",
+    "bytes": 961573,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakarta-sunda-kelapan-satama",
+    "replacement_id": "jakarta-sunda-kelapan-satama-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakarta-sunda-kelapan-satama-vari2.png",
+    "sha256": "964fb91dd704866d6654829eb2745ad6bc069ba2684a72d68fc542cf74736274",
+    "bytes": 1152460,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakarta-toko-merah",
+    "replacement_id": "jakarta-toko-merah-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakarta-toko-merah-vari2.png",
+    "sha256": "d2412eedb4b29b15a5af8f20cd07fd4ac46618583d678c803517ade3302c0f6c",
+    "bytes": 1278853,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakutsk-jaroslavskin-museo",
+    "replacement_id": "jakutsk-jaroslavskin-museo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakutsk-jaroslavskin-museo-vari2.png",
+    "sha256": "5b4436af360bc15092090746af102386c6f89eef5c22d55c99ffa1568457f1da",
+    "bytes": 1042266,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakutsk-kansallinen-taidemuseo",
+    "replacement_id": "jakutsk-kansallinen-taidemuseo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakutsk-kansallinen-taidemuseo-vari2.png",
+    "sha256": "d90b34f3fcd120810926baf16911f84a65da50dc61e0c1150cea4552d02dae11",
+    "bytes": 1185848,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakutsk-nikolskin-kirkko",
+    "replacement_id": "jakutsk-nikolskin-kirkko-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakutsk-nikolskin-kirkko-vari2.png",
+    "sha256": "314fc5bf50c83873d2f7fd67b420d311d400d0f4e20b37a209c98c3e595509b7",
+    "bytes": 811114,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakutsk-ooppera-ja-balettiteatteri",
+    "replacement_id": "jakutsk-ooppera-ja-balettiteatteri-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakutsk-ooppera-ja-balettiteatteri-vari2.png",
+    "sha256": "ecdaed6071443c503868df07b123d7d8f1f1528e885b1f07eb832f3b1d18f4fc",
+    "bytes": 1111563,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakutsk-pushkinin-draamateatteri",
+    "replacement_id": "jakutsk-pushkinin-draamateatteri-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakutsk-pushkinin-draamateatteri-vari2.png",
+    "sha256": "1dff42f7382ccaf2bab61b983f2782587b69ac24cfb7c25a15fa016932e2feca",
+    "bytes": 1166411,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakutsk-saha-teatteri",
+    "replacement_id": "jakutsk-saha-teatteri-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakutsk-saha-teatteri-vari2.png",
+    "sha256": "21fa6601e88014feddc552b05591dc525a86c8cf7a530e5e924dc8da87c4ddcf",
+    "bytes": 1273714,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakutsk-spasskin-luostari",
+    "replacement_id": "jakutsk-spasskin-luostari-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakutsk-spasskin-luostari-vari2.png",
+    "sha256": "9ce9b2a00172c9f761d15b8ad9e9b5ed2fa3a50e7bcbe2e11e4712990abad68b",
+    "bytes": 939358,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jakutsk-vanhakaupunki",
+    "replacement_id": "jakutsk-vanhakaupunki-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jakutsk-vanhakaupunki-vari2.png",
+    "sha256": "68bba627e6dd95717280e71d005253c63687d522b0a73595e3c0ca86417bced8",
+    "bytes": 1356962,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jekaterinburg-vanha-rautatieasema",
+    "replacement_id": "jekaterinburg-vanha-rautatieasema-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jekaterinburg-vanha-rautatieasema-vari2.png",
+    "sha256": "a88dd69f7ef34876f3791ce69eae29b4ecd902dbcf8825cf831723750d26ce7e",
+    "bytes": 1018765,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jekaterinburg-kharitonovin-kartano",
+    "replacement_id": "jekaterinburg-kharitonovin-kartano-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jekaterinburg-kharitonovin-kartano-vari2.png",
+    "sha256": "788274a5e8699fe69b1566753b5e1599cfc69ceb50ef9afb1d74277f97500908",
+    "bytes": 1399750,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jekaterinburg-uralin-valtionyliopisto",
+    "replacement_id": "jekaterinburg-uralin-valtionyliopisto-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jekaterinburg-uralin-valtionyliopisto-vari2.png",
+    "sha256": "c61ed1832472bd3f0389b89e7444ca2fab7895a412bc35ed5f30a71585262dd9",
+    "bytes": 1040648,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jekaterinburg-historiallinen-aukio",
+    "replacement_id": "jekaterinburg-historiallinen-aukio-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jekaterinburg-historiallinen-aukio-vari2.png",
+    "sha256": "bfaf7491eee05984e0e682b09bfe5034c54dd679514456ddddccc9a1368a4085",
+    "bytes": 1036703,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jekaterinburg-kuvataidemuseo",
+    "replacement_id": "jekaterinburg-kuvataidemuseo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jekaterinburg-kuvataidemuseo-vari2.png",
+    "sha256": "4fb091f9f909fd3ffe0b064d04c208149072c91887f97c4eef8974057a9c7fc0",
+    "bytes": 1052669,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jekaterinburg-suuri-zlatoust",
+    "replacement_id": "jekaterinburg-suuri-zlatoust-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jekaterinburg-suuri-zlatoust-vari2.png",
+    "sha256": "9276adc41a672d3fa4164cba4754a5d9f9d2d808e32248101a2be92a7d883120",
+    "bytes": 682552,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jekaterinburg-kolminaisuuden-katedraali",
+    "replacement_id": "jekaterinburg-kolminaisuuden-katedraali-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jekaterinburg-kolminaisuuden-katedraali-vari2.png",
+    "sha256": "d78b5becab031b2a854243c4f197f1a84a48b39ecc4719343c204765289803da",
+    "bytes": 1056660,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jerusalem-damaskoksen-portti",
+    "replacement_id": "jerusalem-damaskoksen-portti-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jerusalem-damaskoksen-portti-vari2.png",
+    "sha256": "e0a16efe163c8952c7ea68bfedd2185c8a57708d9bbe75f0d32526befea42384",
+    "bytes": 1358386,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jerusalem-pyhan-haudan-kirkko",
+    "replacement_id": "jerusalem-pyhan-haudan-kirkko-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jerusalem-pyhan-haudan-kirkko-vari2.png",
+    "sha256": "254bd8eaf1092baececd0715773f35637be5b3312f2944e816bfb5f38ea37a1c",
+    "bytes": 1109816,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jerusalem-kalliomoskeija",
+    "replacement_id": "jerusalem-kalliomoskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jerusalem-kalliomoskeija-vari2.png",
+    "sha256": "0641e7d399ff56606162d87a8839fdec305e27eb2118dd263aa82bfe54370778",
+    "bytes": 1234311,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jerusalem-lantinen-muuri",
+    "replacement_id": "jerusalem-lantinen-muuri-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jerusalem-lantinen-muuri-vari2.png",
+    "sha256": "3f0df1563748ae9a5b76ee3ceff1162c58ac497f2a12ae83d58cdb3aeb0ad43c",
+    "bytes": 1108707,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jerusalem-jaffan-portti",
+    "replacement_id": "jerusalem-jaffan-portti-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jerusalem-jaffan-portti-vari2.png",
+    "sha256": "46656c2c7cc085b906162149ee2a5abfffb6487bfab0a49950cb852acc8bb50f",
+    "bytes": 1137549,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "jerusalem-al-aqsa-moskeija",
+    "replacement_id": "jerusalem-al-aqsa-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/jerusalem-al-aqsa-moskeija-vari2.png",
+    "sha256": "bf4e7f5ff664e8a7eebc2224aa7ce78e617acdbf5f11a0e0e5a5df517f459805",
+    "bytes": 974912,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kabul-timur-shahin-mausoleumi",
+    "replacement_id": "kabul-timur-shahin-mausoleumi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kabul-timur-shahin-mausoleumi-vari2.png",
+    "sha256": "71346e25fc06ca256f60c6d87aa2e66c733028d40ff3ef1bfe99399a43d4a030",
+    "bytes": 1079468,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kabul-shah-do-shamshiran-moskeija",
+    "replacement_id": "kabul-shah-do-shamshiran-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kabul-shah-do-shamshiran-moskeija-vari2.png",
+    "sha256": "70769f31d5e802a13af3933fd259869297445b920797c9fbca26ecebf5c6a5fb",
+    "bytes": 1010445,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kabul-ka-faroshin-lintutori",
+    "replacement_id": "kabul-ka-faroshin-lintutori-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kabul-ka-faroshin-lintutori-vari2.png",
+    "sha256": "ce1ee447f00f52539d34bb4e2733cb3eaaebeae74fcbab99f20ed4b5131ba374",
+    "bytes": 1445392,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kabul-bala-hissar",
+    "replacement_id": "kabul-bala-hissar-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kabul-bala-hissar-vari2.png",
+    "sha256": "2aeb382386506515c66ada0ddcb89bb167b449d5296eb811d6d01ca7d351b515",
+    "bytes": 895528,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kabul-baburin-puutarhat",
+    "replacement_id": "kabul-baburin-puutarhat-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kabul-baburin-puutarhat-vari2.png",
+    "sha256": "4d0d910d684961739c69b2d596f8507b0703f7d48886960c02d61c7e929e8c59",
+    "bytes": 1036471,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kabul-kabulin-vanha-kaupunginmuuri",
+    "replacement_id": "kabul-kabulin-vanha-kaupunginmuuri-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kabul-kabulin-vanha-kaupunginmuuri-vari2.png",
+    "sha256": "095442ca5e07928bed65f50c57f9688762a697402851e1a1febf531f9ddb100a",
+    "bytes": 1084679,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kabul-chihil-sutunin-palatsi",
+    "replacement_id": "kabul-chihil-sutunin-palatsi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kabul-chihil-sutunin-palatsi-vari2.png",
+    "sha256": "1de3ce059e87257cfdb2247b48415e78b517449bec6795ee73960e0a6d67e0ca",
+    "bytes": 1136771,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kabul-darul-amanin-palatsi",
+    "replacement_id": "kabul-darul-amanin-palatsi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kabul-darul-amanin-palatsi-vari2.png",
+    "sha256": "41a17424d435cc838642d2dfc824dd9a9fbb461b6465c8d93abdc2a628ee6cd9",
+    "bytes": 766704,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  }
+]
