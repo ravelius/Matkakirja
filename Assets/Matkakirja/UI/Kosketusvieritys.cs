@@ -124,6 +124,7 @@ namespace Matkakirja.Natiivi
             float edellinen = Time.unscaledTime * 1000f;
             liuku = kohdeSv.schedule.Execute(() =>
             {
+                Ruudunpaivitys.Herata(0.1f); // lämpö: täysi taajuus animaation ajan
                 float nyt = Time.unscaledTime * 1000f, dt = Mathf.Max(0f, nyt - edellinen);
                 edellinen = nyt;
                 // Sijainti integroituna: v(t) = v0 · k^t, siirtymä dt:n aikana v · (k^dt − 1) / ln k.

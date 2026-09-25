@@ -296,6 +296,7 @@ namespace Matkakirja.Natiivi
         void Askel()
         {
             if (!heittaa) { ajo?.Pause(); return; }
+            Ruudunpaivitys.Herata(0.1f); // lämpö: täysi taajuus animaation ajan
             int nro = heittoNro;
             double nyt = Time.realtimeSinceStartupAsDouble;
             float t = (float)Math.Min(kokonais, nyt - alkuAika);
