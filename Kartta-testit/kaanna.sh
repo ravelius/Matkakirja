@@ -10,6 +10,7 @@
 # Nimikerroksen koepaketti: NIMET_KOE=<paketin kansio> ./kaanna.sh NimiLadonta (oletus /Users/Shared/Claude/sisalto-koe-2/v8)
 # Maakunnat maittain oikealla aineistolla (skeema 1.42) ja kestot: MAAKUNTARAJAT=<maakuntarajat.json> ./kaanna.sh Maakuntajako
 # Oikea laattapaketti (tyokalut/laattapaketti.mjs): LAATTAPAKETTI=<paketti.bin> ./kaanna.sh Laattapaketti
+# Maakuntien värinumerot webin <ISO>.json-tiedostoihin verrattuna: MAAKUNTARAJAT=<…> MAAKUNNAT_WEB=<kansio> ./kaanna.sh MaakuntaVarit
 # Kultaiset arvot uusiksi: node Kultaiset/tee-saapuminen.mjs <webin juuri: js/ ja assets/data/maapolygonit.json>
 set -e
 cd "$(dirname "$0")"
