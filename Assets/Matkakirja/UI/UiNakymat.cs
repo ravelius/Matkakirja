@@ -39,6 +39,8 @@ namespace Matkakirja.Natiivi
         public readonly Saapumisesitys Saapuminen;
         public readonly PuluChat Chat;
         public readonly Saapumistraileri Traileri;
+        /// <summary>Saapumisen välikortti aloituslennon jälkeen (Traileri-kerroksen päällimmäinen).</summary>
+        public readonly Saapumiskortti Saapumiskortti;
         public readonly Tietoja Tietoja;
         /// <summary>"Kerro mitä huomasit": ehdotus, kuvavinkki ja pro (webin naytaPalauteKulmasta).</summary>
         public readonly PalauteIkkuna Palaute;
@@ -67,6 +69,7 @@ namespace Matkakirja.Natiivi
             PeliNakymat.MatkaValinta = _ => Hae().Matkavalinta;
             PeliNakymat.KaupunkiKortti = _ => Hae().Kaupunkikortti;
             PeliNakymat.Saapumistraileri = (kaupunki, url, valmis) => Hae().Traileri.NaytaPelista(kaupunki, url, valmis);
+            PeliNakymat.Saapumiskortti = (rivi, arkkiTaynna, valmis) => Hae().Saapumiskortti.Nayta(rivi, arkkiTaynna, valmis);
             PeliNakymat.Kysymys = _ => Hae().Kysymys;
             // Sähkelinja (B5): pöllön liuska ja valikon retkikunta. Asettamattomana linjaa ei avata.
             PeliNakymat.Sahke = _ => Hae().Sahke;
@@ -211,6 +214,7 @@ namespace Matkakirja.Natiivi
             Nahtavyysnakyma = new Nahtavyysnakyma(kerros); // kaupunkikortin "Nähtävyydet"
             Nahtavyydet = new Nahtavyysarkki(kerros); // lehden ja nähtävyysnäkymän päälle (sama kerros, myöhemmin)
             Wiki = new WikiIkkuna(kerros); // kaikkien edellisten päälle (sama kerros, myöhemmin; avaus tuo eteen)
+            Saapumiskortti = new Saapumiskortti(kerros, () => Tilarivi.Alareuna); // karttaruudun päälle, myös lennon kaistaleen
             Liike = new PieniLiike(kerros); // kerros 10: pallon päällä, muun UI:n alla
             Noppa = new Noppa(kerros.Juuri(PieniLiike.Kerros)); // web die-layer karttaruudussa, UI:n alla
             Leima = new Leima(kerros); // tapahtumakuplat (rahan muutokset)

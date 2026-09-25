@@ -1037,7 +1037,7 @@ namespace Matkakirja.Natiivi
                     if (uiPaalla) { PysaytaKamera(); return; }
                     // Siirtovaiheessa korostettu kaupunki valitsee siirron (web lauta.js valitseSiirto → doMove).
                     if (SiirtoAvain(kaupunki) != null) { Siirry(SiirtoAvain(kaupunki)); return; }
-                    if (kaupunkiKortti != null) { AvaaKortti(kaupunki); return; }
+                    if (kaupunkiKortti != null) { KortinKamera(kaupunki); AvaaKortti(kaupunki); return; }
                     AvaaDialogi(kaupunki);
                     return;
                 default:
@@ -1045,11 +1045,36 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>
+        /// Kaupunkimerkin ruutupiste kortin avautuessa pikseleinä (origo vasen alakulma). Web lauta.js
+        /// napautaKaupunki: merkki vaakasuunnassa neljännekseen leveydestä (LIUSKAN_MERKIN_OSUUS_X 1/4), jotta
+        /// liuskalle jää tilaa oikealle, ja pystysuunnassa vapaan kaistan keskelle (kalusteiden ja liuskan
+        /// korkeuden mukaan). Natiivi-UI voi asettaa tarkemman pisteen (kaupunki → piste); oletus on ruudun
+        /// korkeuden puoliväli.
+        /// </summary>
+        public static Func<string, Vector2> KortinRuutupiste;
+
+        /// <summary>
+        /// Löydös 48 (web napautaKaupunki → kamera.ajaKamera, LIUSKAN_AJO_MS 420 ja LIUSKAN_PEHMENNYS): kamera
+        /// panoroi merkin kortin viereen, korkeus, kallistus ja suuntima pysyvät. KaupunkiMerkkien oma lento
+        /// kaupunkiin (uloszoomaus, omistajan moite) korvataan samassa ruudussa (kameranOhitus).
+        /// </summary>
+        void KortinKamera(string kaupunki)
+        {
+            var k = PeliApu.Koordinaatti(verkko, Sijainti.KaupungissaSijainti(kaupunki));
+            if (!k.HasValue || kierto == null) { PysaytaKamera(); return; }
+            Vector2 maali = new Vector2(Screen.width / 4f, Screen.height / 2f);
+            try { if (KortinRuutupiste != null) maali = KortinRuutupiste(kaupunki); }
+            catch (Exception e) { Debug.LogException(e); }
+            double lat = k.Value.Lat, lon = k.Value.Lon;
+            kameranOhitus = () => kierto.Panoroi(lat, lon, maali, Panorointi.LiuskanAjoS, null);
+        }
+
         void PysaytaKamera() => kameranOhitus = () => kierto.Aja(kierto.leveys, kierto.pituus, 0, 0.05f, null);
 
         /// <summary>
         /// Kaupunkikortti (web kaupunkiliuska): Lue kaupunkilehti, Liiku tänne tai omassa kaupungissa
-        /// Mannerlento. Kamera lentää kaupunkiin kuten 3D:ssä (KaupunkiMerkit), joten ohitusta ei aseteta.
+        /// Mannerlento. Napautuksesta kamera siirtyy vain sivuun (KortinKamera), ei lennä kaupunkiin.
         ///
         /// "LIIKU TÄNNE" WEBIN MUKAAN (WEB ON MALLI, Natiivi-UI:n havainto 24.9.2026; web js/pallolauta/lauta.js
         /// napautaKaupunki ja liuskan 'liiku'-rivi): rivi on vain, kun kaupunkiin on nopan siirto tarjolla
@@ -1316,7 +1341,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kamera-ajo perille: kaupungissa lehti, reitin varrella takaisin kartalle.</summary>
         void Perilla() => Perilla(false);
 
-        void Perilla(bool aloituslento)
+        void Perilla(bool aloituslento, bool kameraPerilla = false)
         {
             if (Tila != SilmukanTila.Matkalla) return;
             Lentoaani(false);
@@ -1328,7 +1353,7 @@ namespace Matkakirja.Natiivi
             if (kaupunki != null) Aanita(Aanitunnukset.Saapuminen);
             // Kaupunkiin päättynyt matka: kamera saapumisnäkymään (web ui.js palaaMaanRajaukseen ja siirto.js laske
             // → lauta.saavu; avauslento → kamera.kotiin ilman maan laatikkoa). Reitin varrella kamera jää paikalleen.
-            if (kaupunki != null) Saavu(maaRajaus: !aloituslento);
+            if (kaupunki != null && !kameraPerilla) Saavu(maaRajaus: !aloituslento);
             if (kaupunki != null && TraileriTarjolla(kaupunki))
             {
                 // Traileri ennen lehteä (web: saapumisesitys → lehti → luento).
