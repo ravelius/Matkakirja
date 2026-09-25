@@ -112170,6 +112170,240 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Niger River',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Gao, 2026 Mali offensives, 2017 Gao bombing,
+       * Tombouctou and Bamba attacks, Camp Castor, United Nations
+       * Multidimensional Integrated Stabilization Mission in Mali, Gao
+       * International Airport, Koyraboro Senni, Takamba, Sidi Touré,
+       * Malian cuisine, Mali, Time in Mali) ja Wikivoyagen Gao-sivulta,
+       * matkustusvaroitukset Britannian ulkoministeriön Mali-sivulta
+       * (päivitetty 10.7.2026) ja Yhdysvaltain ulkoministeriön tasolta 4
+       * — teksti omaa. Suomen ulkoministeriön tiedotteen tasoa ei
+       * mainita, koska sivua ei saatu luettua; lukija ohjataan sinne.
+       * Nostojen ja historian aiheita (Songhain synty, Askian hauta ja
+       * sen käyttö, Tondibi, Barth, piroget ja rantamarkkinat, Sonni Ali,
+       * Askia Muhammadin uudistukset ja pyhiinvaellus, kulta-suolakauppa,
+       * lautta) eikä maalehden aiheita (griotit, sorko-kalastajat) eikä
+       * gallerian dyyniä toisteta. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja tiedostosivuilta, ja
+       * kuvat katsottu silmin. Hautakiven valokuva on CC BY 4.0 (itse
+       * teos PD). Pystykuva: Gao-Saneyn hautakivi, ainoa laadukas
+       * pystykuva Gaosta.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Stele Almeria Gao-Saney MNM R88-19-279.jpg',
+          lyhyt: 'Gao-Saneysta löydetyn marmorisen hautakiven kufilainen kirjoitus mainitsee hallitsijoita.',
+          selite: 'Todennäköisesti Espanjan Almeríassa 1100-luvulla '
+            + 'veistetty marmorinen hautakivi löytyi Gao-Saneyn '
+            + 'kuninkaalliselta hautausmaalta kaupungin itäpuolelta, ja se '
+            + 'kuuluu nykyään Malin kansallismuseon kokoelmiin.',
+          lahde: 'Marie-Lan Nguyen, Wikimedia Commons (CC BY 4.0)',
+        },
+        kappale: 'Gao on Nigerin itärannalla, 320 kilometriä Timbuktusta '
+          + 'itäkaakkoon, ja sen läpi kulkee nollameridiaani. Bamakoon '
+          + 'johtaa 1 200 kilometriä päällystettyä tietä, ja joen yli pääsee '
+          + 'vuonna 2006 avattua siltaa pitkin. Matkailijalle Gao on silti nyt '
+          + 'suljettu kaupunki: se on ollut Malin sodan etulinjassa vuodesta '
+          + '2012, ja keväällä 2026 sen kaduilla taisteltiin taas. Tämä opas '
+          + 'kertoo kaupungista sellaisena kuin se matkailijaa odottaa: joesta, joka '
+          + 'tulvii joulukuussa neljän kilometrin levyiseksi, torista, jolla '
+          + 'myydään pohjoisen suolalaattoja, ja kielestä, jonka nimi '
+          + 'tarkoittaa kaupunkilaisten kieltä. Yksi kaupungin vanhimmista '
+          + 'aarteista, Gao-Saneyn kuninkaalliselta hautausmaalta löydetty '
+          + 'marmorinen hautakivi, on jo Malin kansallismuseossa.',
+        artikkeli: {
+          nimi: 'Matkailijan Gao',
+          teksti: 'Gao odottaa matkailijoita, mutta nyt sinne ei matkusteta.',
+          nosto: 'Gaon lentokentän kiitorata ylittää nollameridiaanin, joten '
+            + 'kaupungissa ollaan samalla pituuspiirillä kuin Lontoon '
+            + 'Greenwichissä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Matka, jota nyt ei tehdä',
+              teksti: 'Gao on ollut Malin sodan keskellä vuodesta 2012. '
+                + 'Maaliskuun lopussa 2012 tuaregikapinalliset ja islamistiset '
+                + 'ryhmät ajoivat Malin armeijan kaupungista, ja saman vuoden '
+                + 'kesäkuussa vallan ottivat aseistetut islamistiryhmät. Ranskan '
+                + 'ja Malin joukot valtasivat Gaon takaisin tammikuussa 2013, ja '
+                + 'lentokentän laidalle nousi YK:n rauhanturvaoperaation leirejä, '
+                + 'joissa palveli sotilaita muun muassa Alankomaista ja '
+                + 'Saksasta. Rauha ei silti palannut: tammikuussa 2017 '
+                + 'itsemurhaiskussa kaupungin lähellä olleeseen sotilasleiriin '
+                + 'kuoli 77 ihmistä. Ranska veti joukkonsa Malista 2022 ja YK '
+                + 'vuoden 2023 loppuun mennessä. Huhtikuun 25. päivänä 2026 '
+                + 'Azawadin vapautusrintama FLA ja al-Qaidaan kytkeytyvä JNIM '
+                + 'hyökkäsivät yhtä aikaa moniin Malin kaupunkeihin, myös '
+                + 'Gaohon, ja kaupungissa taisteltiin uudelleen heinäkuussa. '
+                + 'Britannian ulkoministeriö neuvoo välttämään kaikkea '
+                + 'matkustamista Maliin, ja Yhdysvallat pitää maata '
+                + 'korkeimmalla "älä matkusta" -tasollaan. Suomen '
+                + 'ulkoministeriön matkustustiedote kannattaa lukea ennen kuin '
+                + 'Malia edes harkitsee. Kun matkaan joskus taas voi lähteä, '
+                + 'perille pääsee kolmea reittiä: lentäen Gaon kentälle, '
+                + 'Bamakosta 1 200 kilometriä päällystettyä maantietä tai '
+                + 'tulvakaudella jokea pitkin. Nigerin yli Gaosta pääsee '
+                + 'Wabarian siltaa, joka avattiin 2006 vanhan lauttayhteyden '
+                + 'tilalle.',
+              kuva: [
+                {
+                  tiedosto: 'Accueil à l’aéroport de Gao.jpg',
+                  lyhyt: 'Gaon lentokentällä vieraat otettiin maaliskuussa 2012 vastaan laululla ja tanssilla.',
+                  selite: 'Euroopan komission avustusvaltuuskunta otettiin '
+                    + 'maaliskuun alussa 2012 Gaon lentokentällä vastaan '
+                    + 'laululla ja tanssilla, vaikka pohjoisen Malin kapina oli '
+                    + 'jo alkanut; soittajat istuvat maassa kalebassin ääressä.',
+                  lahde: 'European Commission DG ECHO/Cyprien Fabre, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Pontgao.JPG',
+                  lyhyt: 'Wabarian silta vie Nigerin yli Gaossa, ja se korvasi vanhan lautan vuonna 2006.',
+                  selite: 'Helmikuussa 2008 kuvattu Wabarian silta ylittää '
+                    + 'Nigerin Gaossa: kuivan kauden matalan veden aikaan '
+                    + 'sillan edessä on ruohoisia kosteikkoja, ja taustalla '
+                    + 'kohoaa punertava törmä.',
+                  lahde: 'Taguelmoust, Wikimedia Commons (CC BY 3.0)',
+                },
+                {
+                  tiedosto: 'Camp Castor 2016-3.jpg',
+                  lyhyt: 'Alankomaalainen sotilas ohjaa rahtikonetta YK:n leirin kentällä Gaossa heinäkuussa 2016.',
+                  selite: 'YK:n rauhanturvaoperaation Camp Castor -leirissä '
+                    + 'Gaon lentokentän laidalla sotilaat ottivat vastaan '
+                    + 'kaiken saapuvan rahdin ja henkilöstön; leiri toimi '
+                    + 'vuodesta 2014 vuoteen 2023.',
+                  lahde: 'Hille Hillinga, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Joki nousee joulukuussa',
+              teksti: 'Gaossa Niger elää omaa vuoden kiertoaan. Joen ja sen '
+                + 'sivujoen Banin latvoilla Guineassa ja Norsunluurannikon '
+                + 'pohjoisosissa sataa eniten elokuussa, mutta tulvavesi kulkee '
+                + 'sisämaan suiston halki niin hitaasti, että Gaossa joki on '
+                + 'korkeimmillaan vasta joulukuussa. Silloin se on kaupungin '
+                + 'kohdalla neljä kilometriä leveä. Kesä- ja heinäkuussa '
+                + 'virtaamasta on jäljellä vain noin viisi prosenttia, ja '
+                + 'uomaan nousee saaria. Lähes kaikki kaupungin viljely '
+                + 'kastellaan joen vedellä. Valtion laivayhtiön matkustajalaivat '
+                + 'ovat kulkeneet Koulikorosta Gaohon 1 380 kilometrin matkan '
+                + 'yleensä heinäkuun lopusta marraskuun puoliväliin, kun vettä '
+                + 'riittää koko reitille, ja pienemmät veneet liikennöivät '
+                + 'pidempään Bouremin ja Ansongon välillä. Reitin varrella, '
+                + 'Gaosta ylävirtaan, on Timbuktun satama Korioumé. Joki '
+                + 'on nyt kuitenkin vaarallinen kulkutie: syyskuussa 2023 '
+                + 'JNIM-ryhmän taistelijat ampuivat raketeilla Moptista Gaohon '
+                + 'matkalla ollutta Tombouctou-laivaa, ja kuolleita oli yli '
+                + '150.',
+              kuva: {
+                tiedosto: 'Kankou.JPG',
+                lyhyt: 'Kankou Moussa -matkustajalaiva on kiinnittynyt Timbuktun Korioumén satamaan.',
+                selite: 'Malin valtion laivayhtiön Kankou Moussa -laiva '
+                  + 'Korioumén satamassa vuonna 2008; laiva on nimetty '
+                  + '1300-luvun Malin kuninkaan Mansa Musan mukaan.',
+                lahde: 'Lukecf, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Suolalaattoja ja räätäleitä',
+              teksti: 'Gaon vihannes- ja lihatorit ovat keskustassa aivan '
+                + 'joen rannalla. Tavallisten tuotteiden ja mausteiden '
+                + 'rinnalla niillä myydään suolalaattoja, jotka on louhittu '
+                + 'Malin kaukaisessa pohjoisessa. Askian haudalle päin johtavan '
+                + 'tien varrella on Marché Washington, vaate- ja kangastori, '
+                + 'jonka kojuissa räätälit ompelevat työn ääressä. Kaupungissa '
+                + 'on myös yötori. Malilaisen ruoan pohja on riisi ja hirssi, '
+                + 'joiden kanssa syödään lehdistä, esimerkiksi baobabin '
+                + 'lehdistä, keitettyjä kastikkeita tai maapähkinäkastiketta, '
+                + 'ja mukana on usein palasia grillattua kanaa, lammasta, '
+                + 'naudanlihaa tai vuohta. Aamulla syödään hirssipuuroa tai '
+                + 'leipää ja juodaan makeaa teetä. Gaon ruokaa on kehuttu '
+                + 'ennenkin. Ibn Battuta vieraili kaupungissa 1350-luvulla ja '
+                + 'kirjoitti sen riisistä, maidosta, kanoista, kalasta ja '
+                + 'kurkuista, joille ei ollut vertaa. Leo Africanus kävi '
+                + 'Gaossa 1500-luvun alussa ja näki leipää, lihaa, meloneja, '
+                + 'kurkkuja, kurpitsoja ja valtavat määrät riisiä, mutta viiniä '
+                + 'tai hedelmiä hän ei löytänyt.',
+              kuva: {
+                tiedosto: 'Mali, le marché à Gao (8438017791).jpg',
+                lyhyt: 'Gaon torilla myydään jauhoja vadeista ja polttopuita kasoista puiden varjossa.',
+                selite: 'Tammikuussa 1997 Gaon torilla myyjät istuvat '
+                  + 'jauho- ja viljavatiensa ääressä, polttopuut on kasattu '
+                  + 'puiden alle, ja taustalla näkyy vaaleaksi rapattu '
+                  + 'kaariovinen rakennus.',
+                lahde: 'Jeanne Menjoulet, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kaupunkilaisten kieli ja songhai-blues',
+              teksti: 'Useimmat gaolaiset puhuvat koyraboro sennia. Se '
+                + 'kuuluu songhain kieliin, ja sitä puhuu noin 400 000 ihmistä '
+                + 'Nigerin varrella Gourma-Rharousista Bouremin, Gaon ja '
+                + 'Ansongon kautta Nigerin valtion rajalle. Nimi tarkoittaa '
+                + 'kaupunkilaisten kieltä, erotukseksi tuaregien kaltaisista '
+                + 'paimentolaisista. Timbuktun itäpuolella kieli vaihtuu melko '
+                + 'jyrkästi lähisukulaiseensa koyra chiiniin, jota puhutaan '
+                + 'Timbuktussa. Gao on silti monen kansan kaupunki: siellä '
+                + 'asuu myös perinteisesti joella liikkuneita bozoja, '
+                + 'fulanikarjankasvattajia, tuaregeja, arabeja ja Länsi-Malista '
+                + 'tulleita bambaroita. Songhain kulttuurin pääkaupunkina Gao '
+                + 'isännöi seitsemättä songhain taiteen ja kulttuurin '
+                + 'festivaalia helmikuussa 2007. Songhaiden ja tuaregien '
+                + 'yhteistä perinnettä on takamba, musiikki ja tanssi, jossa '
+                + 'hartiat ja käsivarret keinuvat musiikin mukana ja jota '
+                + 'tanssitaan sekä istuen että seisten. Soittimina ovat luuttu '
+                + 'ja kalebassi. Gaossa vuonna 1959 syntynyt laulaja ja '
+                + 'kitaristi Sidi Touré aloitti uransa alueellisessa Sonhaï '
+                + 'Stars -orkesterissa ja voitti Malin kansallisessa '
+                + 'biennaalissa parhaan laulajan palkinnon 1984 ja uudelleen '
+                + '1986. Hänen musiikkiaan kutsutaan songhai-bluesiksi, ja '
+                + 'hänen vuoden 2012 levynsä Koïma jakaa nimensä Gaon '
+                + 'vastarannan dyynin laidalla olevan muinaisen asuinpaikan '
+                + 'kanssa.',
+              kuva: {
+                tiedosto: 'Sidi Touré 2013.jpg',
+                lyhyt: 'Gaossa syntynyt Sidi Touré laulaa ja soittaa kitaraa lavalla lokakuussa 2013.',
+                selite: 'Sidi Touré (keskellä) esiintyy WOMEX-'
+                  + 'maailmanmusiikkimessuilla lokakuussa 2013 akustisen '
+                  + 'kitaran kanssa; vasemmalla soittaja pitelee pientä '
+                  + 'luuttua ja oikealla sähkökitaraa.',
+                lahde: 'Yannis Psathas, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Nollameridiaanilla',
+              teksti: 'Gaon läpi kulkee nollameridiaani, sama pituuspiiri '
+                + 'kuin Lontoon Greenwichissä, ja lentokentän kiitorata, joka '
+                + 'päällystettiin asfaltilla 2018, ylittää sen. Malin kellot '
+                + 'ovat koko vuoden Greenwichin ajassa ilman kesäaikaa. '
+                + 'Ilmasto on kuuma ja kuiva. Toukokuu on kuumin kuukausi, '
+                + 'jolloin päivän ylin lämpötila on keskimäärin 43 astetta, ja '
+                + 'joulu- ja tammikuun öinä lämpötila laskee noin 15 asteeseen. '
+                + 'Sadetta tulee vain kesäkuun ja syyskuun välillä, eniten '
+                + 'elokuussa, ja vuoden sademäärä on keskimäärin vain 220 '
+                + 'millimetriä, joskin vuodet vaihtelevat paljon. Lokakuusta '
+                + 'maaliskuuhun Saharalta puhaltaa koillisesta kuiva '
+                + 'harmattan-tuuli. Rahana on Länsi-Afrikan CFA-frangi. '
+                + 'Vuoden 2023 perustuslaissa ranska menetti virallisen kielen '
+                + 'asemansa ja jäi työkieleksi, ja virallisia kieliä ovat nyt '
+                + 'maan omat kielet, songhai mukaan lukien. Yhteisenä kielenä '
+                + 'toimii bambara, jota noin 80 prosenttia malilaisista osaa. '
+                + 'Gaon ystävyyskaupunkeja ovat Thionville Ranskassa ja '
+                + 'Berkeley Kaliforniassa.',
+              kuva: {
+                tiedosto: 'Gao Mali 2006.jpg',
+                lyhyt: 'Ruskea pölymyrsky vyöryy Gaon matalien savitalojen ylle syyskuussa 2006.',
+                selite: 'Syyskuun 2006 iltana ruskea pölypilvi nousee Gaon '
+                  + 'savitalojen, muurien ja hiekkakatujen taakse ja peittää '
+                  + 'jo puolet taivaasta.',
+                lahde: 'David Sessoms, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
