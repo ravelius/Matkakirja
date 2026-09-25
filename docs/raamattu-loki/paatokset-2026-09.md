@@ -5839,3 +5839,7 @@ Fable lähettää aloitusviestin nollauksen jälkeen.
 ## MAAKUNTAERA 3 VALMIS (SISALTOKIRJURI PR #3236, PINOTTU #3234:N PAALLE: MDA UKR BLR ISL TUR RUS, 247 ALUETTA) — EUROOPAN LYHYET VALMIIT (ERAT 1–3, 46 MAATA); ERA 4: EGY IND ZAF KEN / JPN AUS NZL / CHN USA (25.9.2026 klo 19.44)
 
 Nimidatan virheet (SRB/BIH/HRV/MNE) chipeissä.
+
+## KARTTASEPPA NOLLATTU → ALOITUSVIESTI LAHETETTY (karttaseppa-tyo-20260922, LUOVUTUS -d), RC TAKAISIN; TANAAN NOLLATTU 6 SESSIOTA (25.9.2026 klo 19.45)
+
+Nollaamatta: Julkaisija, Siirtoseppä, Laitetestaaja, Postivahti, Fable.
