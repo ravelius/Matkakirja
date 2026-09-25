@@ -109335,6 +109335,256 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Climate of the Falkland Islands',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (RAF Mount Pleasant, Transport in the Falkland
+       * Islands, Economy of the Falkland Islands, Falkland Islands Museum,
+       * Culture of the Falkland Islands, Empetrum rubrum, Peat Cutting Day,
+       * Yorke Bay / Gypsy Cove, Land mines in the Falkland Islands) sekä
+       * Wikivoyagen Falkland Islands- ja Stanley (Falkland Islands)
+       * -sivuilta — teksti omaa. Nostojen aiheita (valaanpyytäjät,
+       * hylyt, Lady Elizabeth, lampaat, tuuli, pingviinilajit,
+       * albatrossit, varra), maalehden aiheita (Volunteer Point,
+       * Steeple Jason, Sea Lion Island, peltikatot, tuomiokirkko,
+       * Government House, majakka, villa, Land Roverit ja camp, FIGAS,
+       * kivijoet, Shackleton) eikä saapumiskuvien aiheita (fish and chips
+       * -annos) toisteta; sota 1982 mainitaan vain museon ja miinojen
+       * taustana. Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja kuvat katsottu silmin. Pystykuva: punaiset
+       * puhelinkopit Stanleyn postitalon edessä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Red telephone booths (5617653521).jpg',
+          lyhyt: 'Punaiset puhelinkopit seisovat Stanleyn postitalon edessä kuin Lontoon kadulla.',
+          selite: 'Kaksi punaista, kruunulla koristeltua puhelinkoppia Stanleyn '
+            + 'postitalon edessä tammikuussa 2011; kylteissä on saarten '
+            + 'silloisen puhelinyhtiön Cable & Wirelessin nimi.',
+          lahde: 'Liam Quinn, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Falklandinsaarille lennetään kahta tietä: Britannian '
+          + 'puolustusministeriön tilauslennolla Oxfordshiresta tai kerran '
+          + 'viikossa Chilen Punta Arenasista. Useimmat vierailijat tulevat '
+          + 'kuitenkin risteilyaluksella ja astuvat maihin keskellä Stanleyta. '
+          + 'Pikkukaupunki kierretään jalan, pubissa istutaan brittiläiseen '
+          + 'tapaan, ja nummelta poimituista marjoista keitetään diddle-dee-'
+          + 'hilloa. Pingviinit pesivät jo kaupungin laidalla, ja kauemmas '
+          + 'saaristoon lennetään pikkukoneella. Vuonna 1982 laskettujen '
+          + 'miinojen raivaus valmistui 2020, mutta yksi sääntö on pysynyt: '
+          + 'maastosta löytyvään outoon esineeseen ei kosketa.',
+        artikkeli: {
+          nimi: 'Matkailijan Falklandinsaaret',
+          teksti: 'Falklandeilla lentoaikataulu on lupaus, jonka tuuli voi perua.',
+          nosto: 'Pikkukoneiden seuraavan päivän matkustajalistat on luettu '
+            + 'illalla radiossa, ja pingviinit pesivät kaupungin laidalla '
+            + 'dyyneissä, jotka olivat vuosikymmeniä miinakenttää.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kaksi lentotietä ja risteilylaiva',
+              teksti: 'Falklandinsaarten ainoa kansainvälinen lentoasema on '
+                + 'Mount Pleasant, Britannian ilmavoimien tukikohta '
+                + 'Itä-Falklandilla. Se avattiin 1985, kun Stanleyn vanhan '
+                + 'kentän kiitotie oli todettu liian lyhyeksi ja heikoksi '
+                + 'suurille koneille. Britanniasta saarille lennetään '
+                + 'Oxfordshiren Brize Nortonin lentotukikohdasta '
+                + 'puolustusministeriön tilaamilla Voyager-koneilla, joihin '
+                + 'myydään paikkoja myös siviileille, ja matka välilaskuineen '
+                + 'Ascensionin saarella kestää noin 18 tuntia. Etelä-Amerikasta '
+                + 'tulee kerran viikossa LATAMin kone Santiagosta Punta '
+                + 'Arenasin kautta, ja kerran kuussa se laskeutuu myös '
+                + 'Argentiinan Río Gallegosiin. Chilen-yhteys katkesi 1999, kun '
+                + 'Chilen entinen diktaattori Augusto Pinochet oli pidätetty '
+                + 'Lontoossa, ja sen palauttamisesta sovittiin samana vuonna '
+                + 'Britannian ja Argentiinan yhteisessä julkilausumassa. '
+                + 'Mount Pleasantin puuskaiset laskutuulet ja sotilaslentojen '
+                + 'etusija voivat myöhästyttää LATAMin lentoa päiviä, joten '
+                + 'paluulle kannattaa varata väljästi aikaa. Kentältä Stanleyhin '
+                + 'on noin 50 kilometriä enimmäkseen soratietä, ja sen ajaa '
+                + 'bussilla tai etukäteen tilatulla taksilla. Suurin osa '
+                + 'vierailijoista tulee kuitenkin mereltä: risteilyalukset '
+                + 'käyvät lokakuusta huhtikuuhun, ja matkustajat tuodaan '
+                + 'veneillä Stanleyn yleiselle laiturille keskustaan. Muilla '
+                + 'saarilla maihin noustaan kumiveneestä, usein kahlaten. '
+                + 'Maahan tulijalla pitää olla paluulippu, majoitus, riittävät '
+                + 'varat ja matkavakuutus, joka kattaa sairaskuljetuksen pois '
+                + 'saarilta.',
+              kuva: [
+                {
+                  tiedosto: 'Mount Pleasant Airport - Donald Morrison.jpg',
+                  lyhyt: 'Mount Pleasantin tukikohta on saarten ainoa kansainvälinen lentoasema.',
+                  selite: 'Ilmakuva Mount Pleasantin lentotukikohdasta kesäkuussa '
+                    + '2008: pitkä kiitotie, laaja asemataso ja rakennukset '
+                    + 'lampien täplittämällä nummella Itä-Falklandilla.',
+                  lahde: 'Donald Morrison, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Stanley Public Jetty (15862023141).jpg',
+                  lyhyt: 'Risteilymatkustajat astuvat maihin Stanleyn yleiselle laiturille keskustassa.',
+                  selite: 'Stanleyn yleinen laituri mereltä nähtynä lokakuussa '
+                    + '2014: rannan kyltissä lukee The Falkland Islands, ja '
+                    + 'rinteellä nousevat kaupungin värikkäät talot.',
+                  lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Sea Adventurer Tourists (15645742567).jpg',
+                  lyhyt: 'Retkialuksen matkustajat nousevat kumiveneistä West Point Islandin laiturille.',
+                  selite: 'Sea Adventurer -retkialus on ankkurissa lahdella '
+                    + 'lokakuussa 2014, ja pelastusliiveihin pukeutuneet '
+                    + 'matkustajat kävelevät kumiveneestä West Point Islandin '
+                    + 'kapealle laiturille.',
+                  lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Lammasta, hilloa ja pubi-ilta',
+              teksti: 'Falklandeilla syödään brittiläisittäin. Pubeissa ja '
+                + 'kahviloissa tarjotaan fish and chipsiä, paahtopaistia ja '
+                + 'teetä, ja kaupan ainoa tuore liha on usein saarilla '
+                + 'kasvatettua lampaanlihaa. Eteläamerikkalainen vaikutus näkyy '
+                + 'sekin: ruokalistalla voi olla leivitettyä milanesaa tai '
+                + 'cazuela-pataa. Tuoreet hedelmät ja vihannekset tuodaan '
+                + 'kaukaa ja ovat kalliita, ja Stanleyn FIC West Store myy '
+                + 'brittiläisen Waitrose-ketjun tuotteita. Maaseudun '
+                + 'majataloissa ruoka on usein kotitekoista ja annokset suuria. '
+                + 'Saarten oma herkku on diddle-dee-hillo, joka keitetään '
+                + 'punaisen variksenmarjan marjoista. Matala varpu on laajojen '
+                + 'nummien valtakasvi, ja se mainitaan saarten epävirallisessa '
+                + 'kansallislaulussa. Pubi Globe Tavern on Crozier Placella, '
+                + 'korttelin päässä yleiseltä laiturilta, '
+                + 'joten moni risteilymatkustaja pistäytyy siellä ennen paluuta '
+                + 'laivaan, ja sunnuntai-iltaisin siellä lauletaan karaokea. '
+                + 'Victory Bar Philomel Hillillä tarjoaa olutta ja lämmintä '
+                + 'ruokaa, ja Deano’s Bar muuttuu perjantai- ja lauantai-iltaisin '
+                + 'yökerhoksi. Saarilla on myös pieniä panimoita, joiden oluita '
+                + 'myydään matkamuistokaupoissa ja joissakin Stanleyn baareissa '
+                + 'hanasta. Kahvi- tai teetaukoa kutsutaan saarilla nimellä '
+                + 'smoko, alun perin tupakkatauko.',
+              kuva: {
+                tiedosto: 'Globe Tavern in Stanley.jpg',
+                lyhyt: 'Globe Tavern on punakattoinen pubi korttelin päässä Stanleyn yleiseltä laiturilta.',
+                selite: 'Globe Tavern Stanleyssa tammikuussa 2011: valkoisen '
+                  + 'pubin punaisen katon alla on nimikyltti, seinustalla '
+                  + 'penkkipöydät ja kadun kulmalla vihreä maastoauto.',
+                lahde: 'Liam Quinn, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Museo vanhalla telakalla',
+              teksti: 'Stanleyn museo on muuttanut monta kertaa. Ensimmäisen '
+                + 'kokoelman avasi kuvernööri William Allardyce marraskuussa '
+                + '1909 vanhassa pikkulasten koulussa, ja esillä oli '
+                + 'kaikenlaisia kummallisuuksia, kuten Etelä-Amerikan luolasta '
+                + 'löydetyn muinaisen jättiläislaiskiaisen karvoja. Myöhemmin '
+                + 'kokoelma siirtyi kaupungintalolle, joka paloi huhtikuussa '
+                + '1944, ja suurin osa esineistä tuhoutui. Vapaaehtoiset '
+                + 'kokosivat museon uudelleen, ja vuonna 1982 esineet pakattiin '
+                + 'laatikoihin miehityksen ajaksi. Nykyinen Falkland Islands '
+                + 'Museum avautui syyskuussa 2014 historialliselle '
+                + 'telakka-alueelle rannan tuntumaan. Kokoelmassa on yli 5 000 '
+                + 'kohdetta, ja laajan merenkulun osaston lisäksi yhdessä '
+                + 'huoneessa saarelaiset kertovat omin sanoin, millaista '
+                + 'miehityksen viikkoina oli elää. Kulttuuria löytyy myös '
+                + 'kaduilta: 2020-luvulla joku on alkanut kiinnittää '
+                + 'liikennemerkkeihin, risteysten viereen ja aitoihin romusta, kuten '
+                + 'pölykapseleista ja pulteista, koottuja veistoksia. '
+                + 'Nimetöntä tekijää kutsutaan Pete Banksyksi, mikä on '
+                + 'sanaleikki turvepenkoista, englanniksi peat banks. Saarten '
+                + 'omia postimerkkejä on julkaistu vuodesta 1878, ja '
+                + 'keräilijät tuntevat ne kaikkialla. Niitä voi ostaa suoraan '
+                + 'kaupungintalon filateliatoimistosta. Lokakuun ensimmäinen '
+                + 'maanantai on turpeenleikkuupäivä, josta tuli virallinen '
+                + 'vapaapäivä 2002. Ennen turve oli saarten tärkein '
+                + 'lämmitys- ja ruoanlaittopolttoaine, mutta nykyään päivänä '
+                + 'lähdetään kalastamaan ja telttailemaan.',
+              kuva: {
+                tiedosto: 'Falkland Islands Museum (15693010410).jpg',
+                lyhyt: 'Falklandinsaarten museo toimii Stanleyn historiallisella telakalla vuodesta 2014.',
+                selite: 'Museon pihalla lokakuussa 2014 on suuri vanha ankkuri '
+                  + 'kivireunaisella jalustalla, ja taustalla näkyvät '
+                  + 'puupaneloitu päärakennus, vihreäkattoiset rakennukset ja '
+                  + 'punainen puhelinkoppi.',
+                lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Pingviinit kaupungin laidalla',
+              teksti: 'Pingviinejä ei tarvitse lähteä katsomaan kauas. Gypsy '
+                + 'Cove on pieni poukama Yorke Bayn länsilaidalla, noin '
+                + 'vartin ajomatkan päässä Stanleysta, ja monelle matkailijalle '
+                + 'se on ensimmäinen paikka, jossa pingviinit tulevat vastaan. '
+                + 'Sen rannoilla pesii magellaninpingviinejä, jotka kaivavat '
+                + 'pesäkolonsa maahan, ja risteilyalukset ajavat poukaman ohi '
+                + 'matkalla Stanleyn satamaan. Viereisen Yorke Bayn dyynit '
+                + 'olivat vuosikymmeniä aidattua miinakenttää, ja pingviinit '
+                + 'saivat pitää ne omanaan. Kauemmas pääsee retkillä ja pikkukoneilla: '
+                + 'esimerkiksi Carcass-, Saunders-, Pebble- ja West Point '
+                + '-saarilla on majataloja tai tiloja, jotka ottavat vastaan '
+                + 'vieraita. Seuraavan päivän lentoreitit ja jopa matkustajien '
+                + 'nimet on perinteisesti kerrottu illalla Falklands Radiossa. '
+                + 'Maa on pääosin tilojen omistamaa, joten maanomistajalta '
+                + 'kysytään lupa, ja monella saarella peritään '
+                + 'maihinnousumaksu. Saarten maastosäännöissä eläimiin '
+                + 'pidetään vähintään kuuden metrin väli, niille annetaan tie '
+                + 'mereen ja kuvaaja pysyttelee matalana. Nyrkkisääntö on, että '
+                + 'jos eläin huomaa sinut, olet liian lähellä. Norsuhylkeet ja '
+                + 'merileijonat voivat maata korkean heinän seassa niin, ettei '
+                + 'niitä huomaa ennen kuin on melkein päällä, ja pesiviä '
+                + 'tiiroja ja kihuja on turha lähestyä, sillä ne hyökkäävät '
+                + 'tunkeilijan kimppuun. Harjakarakara, paikallisittain johnny '
+                + 'rook, on peloton petolintu, joka voi seurata kulkijaa '
+                + 'kilometrikaupalla ja varastaa lakin, puhelimen tai kameran.',
+              kuva: {
+                tiedosto: 'Gypsy Cove collections Magellenic Penguin Falkland Islands.jpg',
+                lyhyt: 'Gypsy Coven valkoisella hiekalla seisoo pingviiniryhmiä vartin matkan päässä Stanleysta.',
+                selite: 'Gypsy Cove jouluaattona 2019: valkoisella rantahiekalla '
+                  + 'seisoo tummia magellaninpingviinien ryhmiä, ja rinnettä '
+                  + 'peittävät keltakukkaiset piikkihernepensaat ja heinätupsut.',
+                lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Miinakentät raivattiin',
+              teksti: 'Argentiinalaiset joukot laskivat vuoden 1982 miehityksen '
+                + 'aikana saarille noin 30 000 maamiinaa 146 kenttään, '
+                + 'enimmäkseen Stanleyn ja Goose Greenin ympärille sekä '
+                + 'Länsi-Falklandin Port Howardiin ja Fox Bayhin. Raivaus '
+                + 'keskeytettiin 1983 onnettomuuksien jälkeen, ja kentät '
+                + 'aidattiin ja merkittiin varoituskyltein. Pingviinit olivat '
+                + 'liian kevyitä laukaisemaan miinoja, joten aidatuista '
+                + 'rannoista tuli vahingossa luonnonsuojelualueita. Britannia '
+                + 'oli sitoutunut jalkaväkimiinat kieltävään Ottawan '
+                + 'sopimukseen, ja raivaus alkoi uudelleen 2009. Maa tutkittiin '
+                + 'enimmäkseen käsin sondeeraten, ja suuri osa raivaajista oli '
+                + 'zimbabwelaisia. Viimeiset miinat nostettiin 2020, ja '
+                + 'marraskuussa Yorke Bayllä räjäytettiin juhlan kunniaksi '
+                + 'viimeiset löydetyt. Varovaisuus kannattaa silti: '
+                + 'marraskuussa 2023 turistit löysivät kaksi miinaa Murrellin '
+                + 'niemimaan Hell’s Kitchen -rannalta, jossa hiekka liikkuu, ja '
+                + 'alue raivattiin uudelleen. Jos maastossa näkyy outo esine, '
+                + 'siihen ei kosketa, vaan soitetaan hätänumeroon 999, josta saa '
+                + 'myös pommiryhmän. Muitakin käytännön neuvoja on. Falklandin '
+                + 'punta vastaa Englannin puntaa, mutta saarten seteleitä on '
+                + 'lähes mahdoton vaihtaa muualla, joten ne käytetään ennen '
+                + 'kotimatkaa. Turvemaa syttyy helposti ja voi kyteä kuukausia, '
+                + 'joten tupakantumpit kuljetetaan mukana. Etelämantereen '
+                + 'otsonikato heikentää auringolta suojaa elo–joulukuussa, ja '
+                + 'kylmä tuuli kätkee polttavan auringon. Saaria ei kannata '
+                + 'kutsua Malvinassaariksi eikä Stanleyta Puerto Argentinoksi, '
+                + 'sillä monet saarelaiset elivät miehityksen itse.',
+              kuva: {
+                tiedosto: 'Stanley Road, Falkland Islands (7875495274).jpg',
+                lyhyt: 'Varoituskyltti muistutti vielä 2012 miinakentästä Stanleyn tien varressa.',
+                selite: 'Punareunainen varoituskolmio, jossa on miinan kuva ja '
+                  + 'ristiluut, sekä teksti Slow Minefield Mount Pleasantista '
+                  + 'Stanleyyn vievän soratien varressa elokuussa 2012.',
+                lahde: 'John5199, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'elaimet',
