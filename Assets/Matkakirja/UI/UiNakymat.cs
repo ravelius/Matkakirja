@@ -115,7 +115,7 @@ namespace Matkakirja.Natiivi
         public static bool? PakotaKuvaSumea;
 
         /// <summary>
-        /// iPhonen ☰-valikon rivit linssien alle (omistaja ja Fable 24.9.2026, löydös 20): pelaajan asetukset,
+        /// ☰-valikon rivit linssien alle (omistaja ja Fable 24.9.2026, löydös 20; kaikki laitteet löydös 65): pelaajan asetukset,
         /// vanhan päävalikon komennot ja kehittäjätilassa viimeisenä Kehittäjä (ei App Store -käännöksessä).
         /// </summary>
         void RakennaPuhelinvalikko()
@@ -138,6 +138,9 @@ namespace Matkakirja.Natiivi
 #endif
             v.LisaMuuRivi("Offline-kartat", Ikonit.Viiva["taitekartta"], () => Aanentasot.AvaaOsa(Aanentasot.Osa.Offline), () => UiPalvelut.Offline != null);
             v.LisaMuuRivi("Asetukset", Ikonit.Viiva["kaiutin"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Asetukset); });
+            // Löydös 65 (omistaja 25.9.2026): retkikunta yhden napin takana omana paneelinaan.
+            v.LisaMuuRivi("Retkikunta", Ikonit.Viiva["kompassi"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Retkikunta); },
+                () => Valikko.RetkikuntaSaatavilla);
             v.LisaMuuRivi("Ehdota sisältöä", Ikonit.Kyna, Valikko.Ehdota);
             v.LisaMuuRivi("Tekijätiedot ja lähteet", Ikonit.Viiva["kirja"], Valikko.Tietoja);
             v.LisaMuuRivi("Mitä uutta", Ikonit.Viiva["tahti"], Valikko.MitaUutta.Avaa);
@@ -256,7 +259,7 @@ namespace Matkakirja.Natiivi
             UiSisalto.Lataa(null); // kaupunkidata valmiiksi ennen ensimmäistä napautusta
             Aanet.Alusta(); // tehostekanava, mykistyksen napsahdus ja tehosteiden tiedostot laitteelle
 
-            // iPhone (löydös 20): ☰ avaa linssivalikon koko pelin valikkona; iPad ja muut: päävalikko.
+            // ☰ avaa linssivalikon koko pelin valikkona (löydös 20 iPhone, löydös 65 kaikki laitteet).
             Tilarivi.Valikko.clicked += () =>
             {
                 Aanentasot.Sulje(); Matkalaukku.Sulje();
