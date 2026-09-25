@@ -15,7 +15,7 @@
 // "linssi <id>" (vaihtokytkin), "linssi pois", "linssit" (luettelo lokiin);
 // maatilan linsseille "maa <ISO3>" (napautus), "vertaa" ja "lehti" (maakyltti);
 // keksinnöille "keksinnot kaynnista | jatka | tauko | tila | <pysäkki 0–25>";
-// ihmisen matkalle "esitys <jakso-id> | tauko | jatka | tila"; kaikille
+// ihmisen matkalle "esitys <jakso-id> | kaynnista | alusta | tauko | jatka | tila"; kaikille
 // "kamera <lat> <lon> <korkeus km>" (hyppy kuvakaappausta varten), "tila" ja
 // "kyllaisyys 0.8|1" (astronautin reliefi) ja "kehittaja 0|1" (kaikki linssit auki);
 // radiolle "radio <ISO3> | kaupunki <id> | taajuus <0–1> | aani <0–1> | tauko 0|1 | stop | tila" (aani 0 = testit ilman ääntä, soi-tila näkyy silti);
@@ -1151,11 +1151,15 @@ namespace Matkakirja.Natiivi
 
         void Esitys(string mita)
         {
+            // "esitys kaynnista" = aloituskortin Käynnistä (Aloita avauksesta), "esitys alusta" = valikon Aloita alusta.
+            var il = (rekisteri.Auki as IhmisenMatkaSovitin)?.Linssi;
+            if (mita == "kaynnista" && il != null) Kirjaa("esitys: käynnistä " + il.Kaynnista());
+            else if (mita == "alusta" && il != null) Kirjaa("esitys: alusta " + il.AloitaAlusta());
             var e = (rekisteri.Auki as IhmisenMatkaSovitin)?.Linssi?.Esitys;
             if (e == null) { Kirjaa("esitys: ihmisen matka ei ole auki tai ei käynnissä"); return; }
             if (mita == "tauko") e.Tauko();
             else if (mita == "jatka") e.Jatka();
-            else if (mita != "tila") e.Valitse(mita);
+            else if (mita != "tila" && mita != "kaynnista" && mita != "alusta") e.Valitse(mita);
             var aani = (rekisteri.Auki as IhmisenMatkaSovitin)?.Aani;
             Kirjaa($"esitys: jakso {e.I}, kulunut {e.Kulunut / 1000:F1}/{e.Kesto / 1000:F1} s, vuosia {e.Vuosia:F0}, käynnissä {e.Kaynnissa}, ääni {aani?.Tila ?? "ei"}");
         }

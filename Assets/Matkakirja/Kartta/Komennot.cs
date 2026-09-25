@@ -619,9 +619,16 @@ namespace Matkakirja
                 }
                 case "maakunta":
                 {
-                    // maakunta <ISO3:tunnus> | maakunta pois (B17, sama kuin Natiivi-UI:n Maakunnat-valinta)
+                    // maakunta <ISO3:tunnus> | maakunta pois | maakunta tila (B17, sama kuin Natiivi-UI:n Maakunnat-valinta)
                     var mk = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.maakunnat : null;
                     if (mk == null) break;
+                    if (o[1] == "tila")
+                    {
+                        // Löydös 74 d: vektorirajat vasta tiheydestä rajatMinTiheys, ja pois linssin ajan.
+                        Debug.Log($"MATKAKIRJA maakunnat: päällä {mk.Paalla}, rajojen häive {mk.RajaHaive:0.00}, " +
+                                  $"tiheys {mk.RajaTiheys:0.0} px/° (rajat tiheydestä {mk.rajatMinTiheys:0})");
+                        break;
+                    }
                     mk.KorostusPois(null);
                     if (o[1] == "pois") { mk.MaaTila(false); break; }
                     mk.Korosta(rivi.Substring(rivi.IndexOf(' ') + 1),

@@ -98,7 +98,11 @@ namespace Matkakirja.Natiivi
         public void Lopeta()
         {
             odottavaKohta = null;
+            // Tauko pois myös: muuten KohtaMs jäi tauon kohtaan, eikä uusi esitys ("Aloita alusta", löydös 74)
+            // kelannut ääntä alkuun, vaan kertoja jatkoi vanhasta kohdasta.
+            tauolla = false;
             lahde.Stop();
+            if (aanite != null) lahde.time = 0;
         }
 
         public double? KohtaMs
