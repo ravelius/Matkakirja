@@ -38,7 +38,8 @@ joka kehys.
    varjostinvirheitä). .app-kopio on kansiossa
    `/private/tmp/claude-502/-Users-Shared-Claude-Matkakirja-linssiseppa/54895bc4-ec0e-4550-9d4c-56000f6a52c8/scratchpad/im2c/Matkakirja3D.app`.
    Käännä uudelleen, jos kopio puuttuu tai juna on muuttunut.
-   - Julkaisijalta on pyydetty 15 min vuoro Pelikoodarin lämpöerän jälkeen.
+   - Julkaisija antaa 15 min vuoron mainin savukkeiden jälkeen, arviolta klo 19.30, ja ilmoittaa, kun saat aloittaa.
+     PR:t #3231 ja #3232 mergetään osoitinvaihdon jälkeen.
    - Tarkista: äänimaisemat (vaihto ja silmukka; mykistys pois vain kuunneltaessa), aamunkoitto, rintaman hehku, kallistus
      ja kehysaika.
    - Todennuksen jälkeen merge-pyyntö juna/b13:ään Natiivisepälle ja ilmoitus Fablelle (build 16/17).
