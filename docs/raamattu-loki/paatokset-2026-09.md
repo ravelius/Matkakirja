@@ -5411,3 +5411,7 @@ Selostus proto-3d/lokit/pariteetti-b12/merge-pyynto-natiivi-ui-b13-11-41.md. Lin
 ## PELIKOODARI: LOYDOS 61 JA D17 TODENNETTU iPAD11:LLA (d76c9669: ZOOMI EI MUUTU, KORTTI AVAUTUU ~0,4 s PANOROINNIN JALKEEN, MERKKI ~w/4), 66 KOHTA 7 PULU-PUHE TODENNETTU (b3e0b67 MERGE-PYYNNOSSA BUILD 14:AAN); RADIO-DESYNC EI OLE TILARISTIRIITA — ui linssi radio ON NATIIVI-UI:N TESTIKUORI ILMAN LINSSIA, REKISTERI OMISTAA TILAN → radio tila KERTOO TESTIKUORESTA (BUILD 14); linssi pois JA × KUTSUVAT SAMAA Rekisteri.Sulje → TOISTO SIMULAATTORISSA, MATALA PRIORITEETTI (25.9.2026 klo 13.19)
 
 Aineisto lokit/loydos61-d17-ipad11 ja lokit/loydos66-67/pulu-puhe-todennus. coreaudiod 150 % / 1,1 Gt yhdella simulaattorilla klo 13.2x: luokitin esti Fablen killall-komennon (Interfere With Workloads), omistajalle annettu sudo killall coreaudiod; aanilaitteita 4 (AF16Rig, Scarlett Solo, AirPods Max -yhdistelma, Mac Studio -kaiuttimet), yhdistelmalaitteen purku suositeltu.
+
+## BUILD 13 VIENTI KAYNNISSA klo 13.20 (AJO 36123399651, PROTO-MASTER ddb3cfb6 = c168c2e4:N PUU); ESTO #3161 KORJATTU ENNEN VIENTIA: TF-VIENTI EI AJANUT LuoPalloA VAAN KAYTTI VANHAA Pallo.unity-TIEDOSTOA — NYT AJAA KUTEN KAANNOSPALVELU; RAAMATTU-SYNKKA 2/2 MAINISSA (#3157, #3158) (25.9.2026 klo 13.21)
+
+Aiemmat TestFlight-buildit ovat voineet saada vanhan pallon; build 13 on ensimmainen, jossa LuoPallo ajetaan viennissa. SHA ja laskuri Fablelle kun TestFlightissa.
