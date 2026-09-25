@@ -117021,6 +117021,297 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Dugong',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Exmouth, Western Australia; Learmonth Airport;
+       * Exmouth Gulf; Exmouth Submarine Base eli Operation Potshot;
+       * Operation Jaywick; Ningaloo Coast; Cape Range National Park; Coral
+       * Bay, Western Australia; Solar eclipse of April 20, 2023; Tim
+       * Winton; Cyclone Narelle (2026)) ja Wikivoyagen Exmouth (Western
+       * Australia)-, Cape Range National Park- ja Ningaloo Reef -sivuilta
+       * — teksti omaa. Katkarapupyynnin luvut (viisi lajia, kausi touko–
+       * marraskuu, noin 700 000 kg vuodessa, täysikuun tauko, MG Kailis
+       * ainoa luvanhaltija) ja Big Prawnin tiedot (7 m, 2 000 kg,
+       * lasikuitu, 2005, Brian Paskins, lahjoitettu kaupungille 2013,
+       * varastossa joulu–maaliskuun) on luettu Big Prawnin vieressä olevista
+       * opastetauluista, jotka näkyvät Commonsin kuvissa "A fisheries sign
+       * at the Big Prawn in Exmouth, Western Australia, 2024 07.jpg" ja
+       * "Sign next to the Big Prawn in Exmouth, Western Australia,
+       * 2024.jpg" (Aliceinthealice, CC BY 4.0); vuosi 2005 täsmää
+       * Wikipedian kanssa, vaikka pääkuvan Commons-kuvaus sanoo 2004.
+       * Learmonthin etäisyys vaihtelee lähteissä (Wikipedia 35 km,
+       * Wikivoyage 40 km). Pimennyksen kustannus on Wikipediassa 20 tai 22
+       * miljoonaa dollaria, joten tekstissä "noin 20 miljoonaa". Jaywickin
+       * upotuksista on kerrottu seitsemän, mutta japanilaisten lähteiden
+       * mukaan kuusi alusta upposi tai vaurioitui. Nostojen aiheita
+       * (maailman suurin rantariutta ja kahlaaminen harjalle, Cape Rangen
+       * geologia ja Charles Knife Canyon, maailmanperintö 2011, aallot
+       * riutan reunalla, dugongit, valashain biologia ja kokoontuminen),
+       * Oseanian valokuvien aiheita (Vlamingh Headin majakka, Harold E.
+       * Holtin viestiasema, kaupungin perustaminen 1960-luvulla),
+       * saapumistekstin ryhävalaita isoisän silmin eikä Australian
+       * maalehden aiheita (Suuri valliriutta, damper, swag) toisteta.
+       * Galleriaa lohkossa ei ole. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta, ja kuvat katsottu silmin. Pystykuva:
+       * Exmouthin tervetulokyltti (Greg Schechter, CC BY 2.0).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'The City of Exmouth - Flickr - GregTheBusker.jpg',
+          lyhyt: 'Exmouthin tervetulokyltissä ovat valashai, siipisimppu, katkarapu ja meritähti.',
+          selite: 'Tienvarren kyltti toivottaa tulijan tervetulleeksi '
+            + 'Exmouthiin Ningaloon riutalle. Kirkkaanvärisissä ruuduissa '
+            + 'ovat valashai, siipisimppu, katkarapu ja meritähti, ja '
+            + 'vasemmassa yläkulmassa on kunnan tunnus. Kuva on otettu '
+            + 'huhtikuussa 2009.',
+          lahde: 'Greg Schechter, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Exmouth on pieni kaupunki Luoteisniemen kärjessä, runsaat '
+          + 'tuhat kilometriä Perthistä pohjoiseen. Asukkaita oli vuonna '
+          + '2021 noin 2 800, mutta matkailukauden huipulla väkeä on ollut '
+          + 'noin 6 000, ja kaupunki elää nykyään enemmän matkailijoista '
+          + 'kuin laivaston viestiasemasta, jota varten se aikanaan '
+          + 'rakennettiin. Tänne tullaan snorklaamaan riutalla suoraan '
+          + 'rannalta, uimaan valashain rinnalla ja kiertämään Cape Rangen '
+          + 'rotkoja. Tämä opas kertoo, miten perille pääsee, mitä lahdelta '
+          + 'syödään, mitä sota ja auringonpimennys jättivät jälkeensä ja '
+          + 'miten kuumassa ja vähävetisessä maastossa pärjää.',
+        artikkeli: {
+          nimi: 'Matkailijan Exmouth',
+          teksti: 'Riutalle pääsee rannalta, mutta Exmouthiin tarvitaan lentokone tai kolme ajopäivää.',
+          nosto: 'Exmouthinlahden katkarapuja pyydetään öisin, ja täysikuun '
+            + 'aikaan pyynti pitää taukoa, kun katkaravut luovat nahkansa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentäen, bussilla tai omin pyörin',
+              teksti: 'Nopein tie Exmouthiin kulkee ilmateitse. Qantas lentää '
+                + 'Perthistä Learmonthin kentälle yleensä kerran tai kaksi '
+                + 'päivässä, ja lento kestää vajaat kaksi tuntia. Kenttä on '
+                + 'noin 35–40 kilometriä kaupungista etelään, ja se jakaa '
+                + 'tilansa ilmavoimien Learmonthin tukikohdan kanssa. '
+                + 'Kaupunkiin pääsee etukäteen varattavalla pikkubussilla, ja '
+                + 'myös vuokra-auto on varattava ennakkoon, koska se tuodaan '
+                + 'kentälle kaupungista. Maaliskuussa 2026 hirmumyrsky '
+                + 'Narelle vaurioitti kenttää pahoin, joten lentojen tilanne '
+                + 'kannattaa tarkistaa ennen lähtöä. Maata pitkin Integrityn '
+                + 'linja-auto ajaa Perthin ja Exmouthin väliä kolmesti '
+                + 'viikossa. Aamulla Perthistä lähtevä bussi on perillä vasta '
+                + 'seuraavana iltapäivänä, ja se pysähtyy matkailuneuvonnan '
+                + 'edessä. Omalla autolla Perthistä tai Broomesta kannattaa '
+                + 'varata ajoon kolme päivää. Etelästä tultaessa Exmouthin tie '
+                + 'erkanee Luoteisesta rannikkomaantiestä Minilyan kohdalla. '
+                + 'Pohjoisesta tuleva voi oikaista Burkett Roadia pitkin ja '
+                + 'säästää noin 200 kilometriä. Perillä auto on lähes '
+                + 'välttämätön: kaupunki on levittäytynyt laajalle, '
+                + 'kesäaurinko polttaa, ja Cape Rangen rannat ovat kymmenien '
+                + 'kilometrien päässä. Kansallispuiston läpi Yardie Creekiin '
+                + 'asti kulkee päällystetty tie, joka sopii myös '
+                + 'matkailuautoille. Leirintäalueille ja rannoille vievät '
+                + 'sivutiet ovat enimmäkseen sorateitä, ja vuokrasopimus voi '
+                + 'kieltää niillä ajamisen, joten ehdot kannattaa lukea ennen '
+                + 'kuin kääntyy päällysteeltä.',
+              kuva: [
+                {
+                  tiedosto: 'QantasLink Fokker 100 VH-NHV Perth 2023 (02).jpg',
+                  lyhyt: 'QantasLinkin Fokker 100 laskeutuu Perthiin Learmonthista tulleen lennon päätteeksi.',
+                  selite: 'Maaliskuussa 2023 kuvattu QantasLinkin suihkukone on '
+                    + 'loppulähestymisessä Perthin lentoasemalle. Se oli '
+                    + 'lentänyt Exmouthin Learmonthin kentältä vuorolla '
+                    + 'QF1603.',
+                  lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Integrity Coach Lines Scania K113TRB (QCC Majestic) CVL2407 @ Mounts Bay Road,Perth CBD.jpg',
+                  lyhyt: 'Integrityn kaukoliikennebussi Perthin keskustassa, ja sama yhtiö ajaa Exmouthiin.',
+                  selite: 'Integrity Coach Linesin valkoinen Scania-linja-auto '
+                    + 'seisoo Mounts Bay Roadilla Perthin keskustassa '
+                    + 'elokuussa 2022. Yhtiön bussit ajavat Perthistä '
+                    + 'Exmouthiin kolmesti viikossa.',
+                  lahde: 'ZidaneHartono, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: '00 1836 West Coastel Highway (National Route 1) - Tropic of Capricorn.jpg',
+                  lyhyt: 'Matkailuauto Kauriin kääntöpiirin kyltin kohdalla Luoteisella rannikkomaantiellä.',
+                  selite: 'Toukokuussa 2007 matkailuauto on pysähtynyt '
+                    + 'tienvarteen Kauriin kääntöpiirin kyltin kohdalle North '
+                    + 'West Coastal Highwaylla. Exmouth on noin puolitoista '
+                    + 'leveysastetta kääntöpiiristä pohjoiseen.',
+                  lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Katkarapuja lahdelta',
+              teksti: 'Exmouthin tunnetuin herkku tulee kaupungin itäpuolen '
+                + 'lahdelta. Exmouthinlahti on opastetaulun mukaan yksi '
+                + 'harvoista paikoista maailmassa, joissa kalastetaan '
+                + 'kannattavasti viittä katkaraputyyppiä, ja arvostetuin '
+                + 'niistä on ruskea tiikerikatkarapu. Kausi kestää '
+                + 'toukokuusta marraskuuhun. Troolarit pyytävät yöllä, kun '
+                + 'katkaravut lähtevät meriheinäniityiltä ruoan etsintään, ja '
+                + 'pitävät taukoa täysikuun aikaan, jolloin katkaravut luovat '
+                + 'nahkansa. Vuosisaalis on keskimäärin noin 700 000 kiloa, '
+                + 'ja siitä puolet on tiikerikatkarapuja. Katkarapuja pyytää lahdella '
+                + 'vain yksi luvan saanut yhtiö, MG Kailis, ja paikallista saalista '
+                + 'myydään sen myymälässä sekä monen ravintolan listalla. '
+                + 'Pyynnin kunniaksi kaupungissa seisoo seitsemän metriä '
+                + 'korkea ja kaksi tonnia painava Big Prawn, lasikuituinen '
+                + 'läntinen kuningaskatkarapu vuodelta 2005. Se tehtiin '
+                + 'alun perin Kailisin tehtaan portille Learmonthiin ja '
+                + 'lahjoitettiin kaupungille 2013. Hirmumyrskykauden ajaksi '
+                + 'joulukuusta maaliskuun loppuun patsas viedään varastoon. '
+                + 'Paikalliset pitävät sitä aidomman näköisenä kuin Uuden '
+                + 'Etelä-Walesin Ballinan suurempaa Big Prawnia. Ulkona '
+                + 'syöminen maksaa Wikivoyagen mukaan noin kaksi kertaa niin '
+                + 'paljon kuin Perthissä, koska kuljetus ja työvoima ovat '
+                + 'kalliita ja kilpailua on vähän. Siksi moni laittaa ruokansa '
+                + 'itse. Kaupungissa on kaksi supermarkettia vierekkäin ja '
+                + 'kalatukku, josta saa tuoretta kalaa. Iltaa istutaan '
+                + 'pienpanimoissa, joissa on myös ruokaa ja tilaa '
+                + 'lapsiperheille. Omaa saalista saa kansallispuiston '
+                + 'rannoilla pyytää siimalla, mutta harppuunakalastus on '
+                + 'kielletty, ja rauhoitusalueiden rajat on tarkistettava '
+                + 'paikan päällä.',
+              kuva: {
+                tiedosto: 'The Big Prawn in Exmouth, Western Australia, 2024.jpg',
+                lyhyt: 'Exmouthin Big Prawn, seitsemänmetrinen lasikuituinen katkarapu, kohoaa pilviä vasten.',
+                selite: 'Vuonna 2024 kuvattu Big Prawn esittää läntistä '
+                  + 'kuningaskatkarapua, ja sen takana on pysäköity '
+                  + 'matkailuvaunuja. Patsas tehtiin lahden '
+                  + 'katkarapupyynnin kunniaksi.',
+                lahde: 'Aliceinthealice, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kommandoja ja pimeä päivä',
+              teksti: 'Rannikon perinteisiä omistajia ovat baiyungu- ja '
+                + 'yinigudura-kansat, ja riutan nimi Ningaloo tulee wajarrin '
+                + 'kielen sanasta, joka tarkoittaa niemeä tai mereen '
+                + 'työntyvää maata. Kaupungin nykyhistoria alkaa toisesta '
+                + 'maailmansodasta. Kun Japani oli vallannut Jaavan keväällä '
+                + '1942, liittoutuneet tarvitsivat sukellusveneilleen '
+                + 'tukikohdan pommikoneiden ulottumattomista. '
+                + 'Exmouthinlahdelle perustettiin Potshot-tukikohta, jossa '
+                + 'oli polttoaineproomu, lentokenttä ja tutka-asema. '
+                + 'Japanilaiset pommittivat lahtea toukokuussa 1943 kahtena '
+                + 'yönä osumatta mihinkään. Saman vuoden syyskuun '
+                + 'ensimmäisenä päivänä lahdelta lähti Singaporeen Krait, '
+                + 'entinen japanilainen kalastusalus. Sen kommandot meloivat '
+                + 'kokoontaitettavilla kajakeilla satamaan ja kiinnittivät '
+                + 'miinoja laivojen kylkiin, ja japanilaisten lähteiden '
+                + 'mukaan kuusi alusta upposi tai vaurioitui. Krait palasi '
+                + 'lahdelle 19. lokakuuta. Iskun muistomerkki on Learmonthin '
+                + 'laiturin lähellä, ja kuusi sodassa kuollutta saman '
+                + 'erikoisyksikön miestä on saanut nimensä Exmouthin '
+                + 'kaduille. Huhtikuun 20. päivänä 2023 '
+                + 'kaupunki oli täydellisen auringonpimennyksen reitillä, ja '
+                + 'pimennystä tuli katsomaan yli 20 000 ihmistä, vaikka '
+                + 'asukkaita on alle 3 000. Osavaltio käytti järjestelyihin '
+                + 'noin 20 miljoonaa Australian dollaria. Riutan suojelusta '
+                + 'on myös kiistelty. 2000-luvun alussa suunniteltiin '
+                + 'lomakeskusta Mauds Landingiin, tärkeälle '
+                + 'merikilpikonnien pesimärannalle. Kirjailija Tim Winton '
+                + 'lahjoitti vuonna 2002 saamansa 25 000 dollarin '
+                + 'kirjallisuuspalkinnon vastustajien kampanjalle, eikä '
+                + 'lomakeskusta rakennettu. Winton käsikirjoitti ja kertoi '
+                + 'myös ABC:n kolmiosaisen dokumenttisarjan Ningaloo '
+                + 'Nyinggulu vuonna 2023, ja se on hyvä johdatus riuttaan jo '
+                + 'ennen matkaa.',
+              kuva: {
+                tiedosto: 'April 20, 2023 Solar eclipse.jpg',
+                lyhyt: 'Täydellinen auringonpimennys Exmouthissa 20.4.2023, ja kuun ympärillä hehkuu korona.',
+                selite: 'Kuva on otettu Exmouthissa pimennyksen täydellisen '
+                  + 'vaiheen aikana. Kuun musta kiekko peittää auringon, ja '
+                  + 'sen ympärillä loistaa valkoinen korona. Kiekon '
+                  + 'vasemmassa reunassa erottuu punertavaa hehkua.',
+                lahde: 'Dougie3000, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Rannalta riutalle, veneellä jättiläisten luo',
+              teksti: 'Cape Rangen kansallispuistossa riutalle pääsee suoraan '
+                + 'hiekalta. Parhaat snorklauspaikat ovat niemen länsipuolella '
+                + 'noin 50 kilometrin ajomatkan päässä kaupungista, ja '
+                + 'tunnetuin niistä on Turquoise Bay. Lahden eteläkärjessä '
+                + 'käy virta, jota kokeneet snorklaajat käyttävät hyväkseen: '
+                + 'veteen mennään Drift Loopin pysäköintipaikalta, ja virta '
+                + 'kuljettaa pohjoiseen riutan yli. Virran voi välttää lahden '
+                + 'pohjoispäässä. Oyster Stacksin kivillä snorklataan vain '
+                + 'nousuveden aikaan, koska matalalla vedellä terävät kivet ja '
+                + 'kuoret ovat liian lähellä. Ennen rantaa kannattaa poiketa '
+                + 'Milyeringin opastuskeskuksessa, jossa kerrotaan puistosta '
+                + 'ja riutasta ja voi vuokrata snorkkelin ja räpylät. Puiston tien '
+                + 'päässä Yardie Creekin rotkossa on vettä ympäri vuoden, ja '
+                + 'huhti–syyskuussa sinne tehdään tunnin veneretkiä. '
+                + 'Rotkon kallioilla voi nähdä mustakylkikalliowallabeja, ja '
+                + 'Mandu Mandun rotkoon vie kolmen kilometrin edestakainen '
+                + 'polku. Valashairetket lähtevät kaupungista, ja haita '
+                + 'nähdään eniten huhti–kesäkuussa. Veneiden apuna ovat '
+                + 'tähystyslentokoneet, jotka etsivät matalalla ja '
+                + 'rauhallisesti uivia yksilöitä. Kun hai löytyy, snorklaajat '
+                + 'hyppäävät veteen sen reitille ja uivat rinnalla niin kauan '
+                + 'kuin pysyvät mukana. Koskeminen on kielletty, eikä '
+                + 'laitesukellus ole sallittua. Ryhävalaat kulkevat rannikon '
+                + 'ohi kesä–marraskuussa. Valekaretit, '
+                + 'liemikilpikonnat ja karetit nousevat rannoille munimaan, '
+                + 'ja Jurabin kilpikonnakeskus opastaa seuraamaan pesintää '
+                + 'häiritsemättä. Noin 150 kilometriä etelämpänä Coral '
+                + 'Bayssa järjestetään retkiä mantojen luo ja '
+                + 'lasipohjaveneajeluja.',
+              kuva: {
+                tiedosto: 'Turquoise Bay Bundera.jpg',
+                lyhyt: 'Turquoise Bayn valkoinen hiekkaranta ja kirkas laguuni Cape Rangen kansallispuistossa.',
+                selite: 'Maaliskuussa 2008 kuvatun lahden matalassa, '
+                  + 'turkoosissa vedessä erottuu tummia riuttalaikkuja aivan '
+                  + 'rannan tuntumassa. Kaukana taustalla kohoavat Cape '
+                  + 'Rangen matalat kukkulat.',
+                lahde: 'Robert Young, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Vettä, varauksia ja varovaisuutta',
+              teksti: 'Exmouthissa on kuuma aavikkoilmasto, ja marras–'
+                + 'huhtikuussa lämpötila nousee kansallispuistossa usein yli '
+                + '40 asteen. Sadetta tulee vähän, mutta helmi–toukokuussa se '
+                + 'voi tulla rankkasateena, jolloin päätiekin voi jäädä veden '
+                + 'alle. Virtaavan veden yli ei pidä ajaa, eikä sateella '
+                + 'kannata lähteä sorateille. Hirmumyrskyt ovat todellinen '
+                + 'vaara: Vance toi vuonna 1999 Learmonthiin Australian '
+                + 'mantereen kovimman koskaan mitatun tuulenpuuskan, 267 '
+                + 'kilometriä tunnissa, ja Narelle vaurioitti kaupunkia '
+                + 'maaliskuussa 2026. Cape Rangen puistossa ei ole varjoa, '
+                + 'juomavettä eikä polttoainetta. Vettä on varattava noin '
+                + 'viisi litraa henkeä kohden päivässä, ja tankki täytetään '
+                + 'kaupungissa. Puistoon peritään sisäänpääsymaksu autoa '
+                + 'kohden. Leirintäpaikkoja on tarkoituksella vähän, joten ne '
+                + 'on varattava etukäteen, eikä koiria saa tuoda puistoon. '
+                + 'Kaupungissa puhelin toimii Telstran ja Optusin verkoissa, '
+                + 'mutta puistossa kenttää ei ole lainkaan, lukuun ottamatta '
+                + 'opastuskeskuksen langatonta yhteyspistettä. Hämärässä ja '
+                + 'pimeällä ajetaan hyvin hitaasti, sillä kengurut, wallabit '
+                + 'ja emut liikkuvat silloin teillä, eivätkä niiden silmät '
+                + 'heijasta valoa kuten lampaiden. Aurinkoa kannattaa välttää '
+                + 'päivän kuumimpina tunteina. Riutta on herkkä: lämpöaallot '
+                + 'vaalensivat Ningaloon koralleja vuosina 2011 ja 2025, ja '
+                + 'Narelle tappoi Länsi-Australian rannoilla yli tuhat '
+                + 'merikilpikonnaa. Meripuisto on jaettu vyöhykkeisiin, '
+                + 'joilla on eri säännöt kalastukselle ja muulle toiminnalle, '
+                + 'joten ne on tarkistettava paikan päällä ennen veteen '
+                + 'menoa.',
+              kuva: {
+                tiedosto: 'Ningaloo WA, local kangaroo.jpg',
+                lyhyt: 'Vuorikenguru illan matalassa valossa Ningaloon rannikolla.',
+                selite: 'Kesäkuussa 2016 kuvattu vuorikenguru seisoo kuivan '
+                  + 'pensaikon edessä, ja taustalla häämöttää rakennus. '
+                  + 'Kuvaajan mukaan kengurut kiertelevät seudun '
+                  + 'leirintäalueilla.',
+                lahde: 'Parriswrightt, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'elaimet',
