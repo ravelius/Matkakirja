@@ -100,14 +100,9 @@ namespace Matkakirja
         public double ajonRamppi = 0.3;
 
         [Header("Aloitusportti (web etusivupallo, löydös 17)")]
-        [Tooltip("Pituusasteita sekunnissa itään (Lontoosta kohti Aasiaa). Web js/etusivupallo.js: kierros 360° " +
-                 "= 10 jaksoa × JAKSON_POHJA_S 1,0 + 322° × JAKSON_ASTE_S 0,115 + LOPPU_PITO_S 2,6 ≈ 49,6 s.")]
-        public double porttiNopeus = 360.0 / 49.6;
-        [Tooltip("Kameran leveysaste portissa. Web ETUSIVUN_KAMERA: 0,62 × koneen leveys rajattuna 2–38°, " +
-                 "reitin keskiarvo noin 25°.")]
-        public double porttiLeveys = 25.0;
-        [Tooltip("Aloituspituus portin avautuessa: Lontoo (web ETUSIVUN_REITTI alkaa Lontoosta).")]
-        public double porttiPituus = 0.0;
+        // KAMERA SEURAA ETUSIVUN LENTOA (löydös 112): ennen tasainen kierto 360° / 49,6 s leveydellä 25° ja
+        // Lontoosta alkaen (porttiNopeus, porttiLeveys, porttiPituus); nyt pituus ja leveys ovat webin kameranNakyma
+        // (EtusivunLento.KameranNakyma: koneen silotettu paikka ±3,4 s, leveys 0,62 × rajattuna 2–38°).
         [Tooltip("Web KIEKON_YLITYS: pallon kiekon säde / etäisyys ruudun keskeltä nurkkaan. 1,15 vie reunan " +
                  "selvästi ruudun ulkopuolelle kaikilla kuvasuhteilla.")]
         public double porttiYlitys = 1.15;
@@ -125,7 +120,7 @@ namespace Matkakirja
         /// <summary>
         /// ALOITUSPORTTI (Natiivi-UI: Aloitusnakyma.PorttiMuuttui → tämä). true = kamera aloituspallotilaan
         /// kuten webin etusivupallo: pallo täyttää koko ruudun (kiekko 1,15 × nurkkaetäisyys), pyörii hitaasti
-        /// itään (<see cref="porttiNopeus"/>), kaupunkimerkit, nimiöt, karttapisteet, valot ja nostot piiloon,
+        /// etusivun lennon mukana (<see cref="PorttiAika"/>, kone ja punainen viiva: Etusivulento), kaupunkimerkit, nimiöt, karttapisteet, valot ja nostot piiloon,
         /// sumennus 6 pt päälle (PalloSumennus), sormet eivät liikuta palloa. false = sumennus häipyy
         /// 0,4 s:ssa ja merkit palaavat; kamera jää paikalleen, ja kutsuja ajaa sen seuraavaan näkymään
         /// (Aja toimii samassa kehyksessä). Asetettavissa ennen kuin kamera on olemassa.
@@ -142,13 +137,25 @@ namespace Matkakirja
 
         /// <summary>Editorin pelitila ilman domain reloadia: staattinen tila ei jää edellisestä ajosta.</summary>
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void NollaaPortti() { PorttiSumea = false; KuvaSumea = false; }
+        static void NollaaPortti() { PorttiSumea = false; KuvaSumea = false; PorttiAikaSeis = false; }
 
         /// <summary>Kamera on aloituspallotilassa (PorttiSumea luettu tässä kehyksessä).</summary>
         public bool Portissa => porttiTila;
         bool porttiTila;
-        double porttiLon;
         PalloSumennus sumennus;
+        Etusivulento etusivulento;
+
+        /// <summary>
+        /// Etusivun lennon kierrosaika sekunteina [0, EtusivunLento.Kesto): kamera (PorttiKierto) ja kone + viiva
+        /// (<see cref="Etusivulento"/>) lukevat saman hetken. Alkaa nollasta aina, kun portti avautuu.
+        /// </summary>
+        public double PorttiAika { get; private set; }
+
+        /// <summary>Testikomento "etusivu aika &lt;s&gt; [pysayta]": hyppää kierroksen hetkeen (webin klippien vertailu).</summary>
+        public void AsetaPorttiAika(double t) => PorttiAika = EtusivunLento.Kierroksessa(t);
+
+        /// <summary>Testikomento "etusivu pysayta|jatka": kierrosaika seis (kuvaus samasta hetkestä kuin web).</summary>
+        public static bool PorttiAikaSeis { get; set; }
 
         /// <summary>Onko sormi ruudulla, liukuma tai kamera-ajo käynnissä (kehysmittari lukee).</summary>
         public bool Liikkeessa => edellinenSormia > 0 || math.lengthsq(liuku) > 1e-4 || ajo != null || Seurataan || porttiTila || pohjoiseen;
@@ -503,7 +510,13 @@ namespace Matkakirja
                     edellinenSormia = 0;
                     Seurataan = false;
                     vapaaKuvaus = false;
-                    porttiLon = Kiedo(porttiPituus);
+                    PorttiAika = 0;
+                }
+                // Kone ja punainen viiva ruututasossa (löydös 112); kerros seuraa porttia itse (Portissa).
+                if (sumea && etusivulento == null)
+                {
+                    etusivulento = gameObject.AddComponent<Etusivulento>();
+                    etusivulento.kierto = this;
                 }
             }
             // Sumennuksen tavoite: portti 6 pt, kuvat mieto (löydös 19), muuten pois.
@@ -523,12 +536,16 @@ namespace Matkakirja
             if (tavoite <= 0f && sumennus.Osuus <= 0f) sumennus.Aseta(false);
         }
 
-        /// <summary>Aloituspallo: hidas kierto itään kiinteällä leveydellä ja korkeudella, joka täyttää ruudun.</summary>
+        /// <summary>
+        /// Aloituspallo: kamera seuraa etusivun lentoa webin tapaan (js/etusivupallo.js kameranNakyma 411–426):
+        /// pituus = koneen silotettu pituus, leveys = clamp(0,62 × silotettu leveys, 2°, 38°); korkeus täyttää ruudun.
+        /// </summary>
         void PorttiKierto(double dt)
         {
-            porttiLon = Kiedo(porttiLon + porttiNopeus * dt);
-            pituus = porttiLon;
-            leveys = porttiLeveys;
+            if (!PorttiAikaSeis) PorttiAika = EtusivunLento.Kierroksessa(PorttiAika + dt);
+            var nakyma = EtusivunLento.KameranNakyma(PorttiAika);
+            pituus = Kiedo(nakyma.Lon);
+            leveys = nakyma.Lat;
             korkeus = PorttiKorkeus();
             kallistus = 0;
             suuntima = 0;

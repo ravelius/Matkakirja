@@ -43,6 +43,9 @@ namespace Matkakirja
     ///   piste <id> lat lon [lukittu] | piste pois <id>   pelin karttapiste (vihreä)
     ///   napauta x y               synteettinen napautus (osuus näytöstä, origo vasen alakulma)
     ///   portti paalle|pois        aloitusportin pallo (PalloKierto.PorttiSumea): sumennus 6 pt, täyttö, kierto
+    ///   etusivu aika <s> [pysayta] | etusivu pysayta|jatka|tila | etusivu sumennus pois|paalle   portin etusivun
+    ///                             lento (löydös 112): hyppy kierroksen hetkeen s (0–49,62; web julisteAika 17.833),
+    ///                             aika seis/jatkuu, kerroksen blur(6 pt) pois vertailuun; jokainen rivi kirjaa tilan lokiin
     ///   renkaat id,id,… [valittu] | renkaat pois   aloitusvalinnan huomiorenkaat (KaupunkiMerkit.Renkaat)
     ///   maasto paalle|pois        Karttasepän maasto (layer.json) tai ellipsoidi; valinta
     ///                             muistetaan tiedostossa Documents/maasto.txt
@@ -422,6 +425,23 @@ namespace Matkakirja
                 case "portti":
                     PalloKierto.PorttiSumea = o[1] == "paalle";
                     break;
+                case "etusivu" when o.Length > 1:
+                {
+                    // etusivu aika <s> [pysayta] | pysayta | jatka | sumennus pois|paalle | tila (löydös 112, Etusivulento).
+                    switch (o[1])
+                    {
+                        case "aika" when o.Length > 2:
+                            kierto.AsetaPorttiAika(D(2));
+                            PalloKierto.PorttiAikaSeis = o.Length > 3 && o[3] == "pysayta";
+                            break;
+                        case "pysayta": PalloKierto.PorttiAikaSeis = true; break;
+                        case "jatka": PalloKierto.PorttiAikaSeis = false; break;
+                        case "sumennus" when o.Length > 2: Etusivulento.Sumea = o[2] != "pois"; break;
+                    }
+                    var lento = kierto.GetComponent<Etusivulento>();
+                    Debug.Log(lento != null ? lento.Tila() : $"MATKAKIRJA etusivu: t {kierto.PorttiAika:0.000} s (kerros luodaan portissa)");
+                    break;
+                }
                 case "kerros":
                 {
                     // kerros <avain> paalle|pois: KarttaKerrokset.Nakyvyys (esim. "kerros kaupungit pois" +
