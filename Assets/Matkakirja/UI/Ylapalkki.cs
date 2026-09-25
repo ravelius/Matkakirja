@@ -112,6 +112,11 @@ namespace Matkakirja.Natiivi
         public static bool Matala => Puhelin && Screen.height > Screen.width && !Kelluva;
         /// <summary>Matalan palkin rivi (webin iPhone-napit 40 × 40) ja alavara (webin täyte 4,8).</summary>
         const float MatalaRivi = 40f, MatalaAla = 4.8f;
+        /// <summary>
+        /// Löydös 78 (omistaja 25.9.2026): matala palkki hieman turva-aluetta korkeampi (build 12: 62 pt = pelkkä
+        /// turva-alue iPhone 17:ssä → 70 pt), yhä webiä matalampi; pilleri ja ☰ pysyvät saaren rivillä.
+        /// </summary>
+        const float MatalaLisa = 8f;
         bool? matalaNyt;
 
         /// <summary>Testikomento (ui ylapalkki saari x,y,w,h pisteinä | pois): simulaattorissa ei ole cutouts-tietoa.</summary>
@@ -367,7 +372,7 @@ namespace Matkakirja.Natiivi
             palkki.style.paddingLeft = r.x + SaariReuna * yksikko;
             palkki.style.paddingRight = r.z + SaariReuna * yksikko;
             // Matala: ruskea tausta turva-alueen korkuisena, ja rivi + alavara, jos rivi ulottuu sen alle.
-            float korkeus = matala ? Mathf.Max(r.y, yla + rivi + MatalaAla * yksikko) : yla + rivi;
+            float korkeus = matala ? Mathf.Max(r.y + MatalaLisa * yksikko, yla + rivi + MatalaAla * yksikko) : yla + rivi;
             palkki.style.height = korkeus;
             // Löydös 73: palkki keskittää rivin pystysuunnassa, joten turva-alueen korkuinen palkki valutti pillerin
             // ja ☰:n 5,6 pt saaren alapuolelle (iPhone 17: pilleri y 19,6, saari y 14). Loppu alatäytteeksi.
