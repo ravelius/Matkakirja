@@ -30,6 +30,8 @@ import {
   KUVA_PROMPTIN_KATTO,
   PUHE_TEKSTIN_KATTO,
   SAHKE_VASTAUKSET,
+  ajatteluKentat,
+  katkaiseKokonaiseen,
   kuukausiAvain,
   lueLista,
   lueLuku,
@@ -1070,6 +1072,7 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
 async function kutsuRajapintaa(env, {
   jarjestelma, viestit, maxTokens, striimi = false, lampotila = null,
 }) {
+  const malli = env.POLLO_MALLI || MALLI_OLETUS;
   return fetch(RAJAPINTA, {
     method: 'POST',
     headers: {
@@ -1078,8 +1081,10 @@ async function kutsuRajapintaa(env, {
       'anthropic-version': RAJAPINNAN_VERSIO,
     },
     body: JSON.stringify({
-      model: env.POLLO_MALLI || MALLI_OLETUS,
+      model: malli,
       max_tokens: maxTokens,
+      // Ajattelu ei saa kuluttaa lyhyen vastauksen sanarajaa (löydös 67).
+      ...ajatteluKentat(malli),
       system: jarjestelma,
       messages: viestit,
       // Lämpötila annetaan vain kun se on tarkoituksella asetettu:
@@ -1151,7 +1156,10 @@ async function paikkaaTyhja(env, kutsu, havainto) {
     try {
       const toinen = await kysyMallitiedot(env, kutsu);
       const { vastaus, jatkot } = poimiJatkot(toinen.teksti);
-      if (vastaus) return { vastaus, jatkot, syy: null };
+      if (vastaus) {
+        const valmis = toinen.stop === 'max_tokens' ? katkaiseKokonaiseen(vastaus) : vastaus;
+        return { vastaus: valmis, jatkot, syy: null };
+      }
       // Uusintakin jäi tyhjäksi: syy luetaan siitä, se on tuoreempi.
       ({ syy, loki } = tyhjanSyy({ stop: toinen.stop }));
       console.log(`pollo: uusinta jäi tyhjäksi (${loki})`);
@@ -1244,11 +1252,13 @@ function striimiPala(rivi) {
  * vuoro ja pyyntö on lopettaa ajatus lyhyesti. Palauttaa jatkotekstin
  * (tyhjä, jos kutsu epäonnistuu — silloin näytetään se mikä ehti tulla).
  * Jatkoon ei liitetä JATKOT-lohkoa uudestaan, jos raaka jo sisältää sen.
+ * Palauttaa myös jatkon lopetussyyn: jos jatkokin pysähtyi sanarajaan,
+ * vastaus leikataan viimeiseen kokonaiseen virkkeeseen (löydös 67).
  */
 async function jatkaKeskenJaanyt(env, { jarjestelma, viestit }, raaka) {
-  if (!raaka.trim()) return '';
+  if (!raaka.trim()) return { teksti: '', stop: null };
   try {
-    const { teksti } = await kysyMallitiedot(env, {
+    const { teksti, stop } = await kysyMallitiedot(env, {
       jarjestelma,
       viestit: [
         ...viestit,
@@ -1259,9 +1269,10 @@ async function jatkaKeskenJaanyt(env, { jarjestelma, viestit }, raaka) {
       ],
       maxTokens: JATKON_MAX_TOKENS,
     });
-    return teksti ? (raaka.endsWith(' ') || /^[,.;:!?]/.test(teksti) ? teksti : ` ${teksti}`) : '';
+    const liitos = raaka.endsWith(' ') || /^[,.;:!?]/.test(teksti) ? teksti : ` ${teksti}`;
+    return { teksti: teksti ? liitos : '', stop };
   } catch {
-    return '';
+    return { teksti: '', stop: null };
   }
 }
 
@@ -1314,8 +1325,10 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
         }
       }
       // Sanarajaan pysähtynyt vastaus saa yhden jatkon samaan kuplaan.
-      if (stop === 'max_tokens') {
-        const jatko = await jatkaKeskenJaanyt(env, { jarjestelma, viestit }, raaka);
+      let kesken = stop === 'max_tokens';
+      if (kesken) {
+        const { teksti: jatko, stop: jatkonStop } = await jatkaKeskenJaanyt(env, { jarjestelma, viestit }, raaka);
+        kesken = !jatko || jatkonStop === 'max_tokens';
         if (jatko) {
           raaka += jatko;
           const nakyva = suodatin.lisaa(jatko);
@@ -1325,7 +1338,11 @@ async function striimaaVastaus(env, kors, { jarjestelma, viestit, maxTokens }) {
       // Viimeinen pidätetty rivi mukaan, sitten koko vastaus kerralla.
       const { hanta } = suodatin.loppu();
       if (hanta) await laheta('pala', { teksti: hanta });
-      const { vastaus, jatkot } = poimiJatkot(raaka);
+      const poimittu = poimiJatkot(raaka);
+      const { jatkot } = poimittu;
+      // Yhä kesken jatkonkin jälkeen: loppu korvaa kuplan tekstin, joten
+      // kesken sanan katkennut häntä ei jää näkyviin (löydös 67).
+      const vastaus = kesken ? katkaiseKokonaiseen(poimittu.vastaus) : poimittu.vastaus;
       // Paikkarivi luetaan RAAKATEKSTISTÄ: se on JATKOT-lohkon alla,
       // eikä sitä ole koskaan lähetetty pelaajalle palana.
       const paikka = poimiPaikka(raaka);
@@ -2049,7 +2066,10 @@ export default {
       const kerralla = await kysyMallitiedot(env, kutsu);
       // Erotinrivi puretaan aina täällä: pelaajalle menee vastaus ja
       // erillinen lista, ei koskaan raakaa merkintää.
-      const { vastaus, jatkot } = poimiJatkot(kerralla.teksti);
+      const poimittu = poimiJatkot(kerralla.teksti);
+      const { jatkot } = poimittu;
+      const vastaus = kerralla.stop === 'max_tokens'
+        ? katkaiseKokonaiseen(poimittu.vastaus) : poimittu.vastaus;
       // Sama tyhjän käsittely kuin striimissä: yksi uusinta, sitten
       // rehellinen teksti ja syyluokka asiakkaalle.
       if (!vastaus) {
