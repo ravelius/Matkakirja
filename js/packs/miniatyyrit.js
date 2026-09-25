@@ -1114,10 +1114,10 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Steamer Point': 'aden-steamer-point',
-    Kansallismuseo: 'aden-kansallismuseo',
-    'Craterin tori': 'aden-craterin-tori',
-    'Tawilan altaat': 'aden-tawilan-altaat',
+    'Steamer Point': 'aden-steamer-point-vari2',
+    Kansallismuseo: 'aden-kansallismuseo-vari2',
+    'Craterin tori': 'aden-craterin-tori-vari2',
+    'Tawilan altaat': 'aden-tawilan-altaat-vari2',
   },
   salalah: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1147,15 +1147,15 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Sanam Luang': 'bangkok-sanam-luang',
-    'Wat Saket ja Kultainen vuori': 'bangkok-wat-saket-ja-kultainen-vuori',
-    'Sao Ching Cha': 'bangkok-sao-ching-cha',
-    'Wat Phra Kaew': 'bangkok-wat-phra-kaew',
-    Suurpalatsi: 'bangkok-suurpalatsi',
-    'Wat Pho': 'bangkok-wat-pho',
-    'Wat Arun': 'bangkok-wat-arun',
-    Yaowarat: 'bangkok-yaowarat',
-    'Hua Lamphong': 'bangkok-hua-lamphong',
+    'Sanam Luang': 'bangkok-sanam-luang-vari2',
+    'Wat Saket ja Kultainen vuori': 'bangkok-wat-saket-ja-kultainen-vuori-vari2',
+    'Sao Ching Cha': 'bangkok-sao-ching-cha-vari2',
+    'Wat Phra Kaew': 'bangkok-wat-phra-kaew-vari2',
+    Suurpalatsi: 'bangkok-suurpalatsi-vari2',
+    'Wat Pho': 'bangkok-wat-pho-vari2',
+    'Wat Arun': 'bangkok-wat-arun-vari2',
+    Yaowarat: 'bangkok-yaowarat-vari2',
+    'Hua Lamphong': 'bangkok-hua-lamphong-vari2',
   },
   peking: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1372,14 +1372,14 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Astana Opera': 'astana-astana-opera',
-    'Khan Shatyr': 'astana-khan-shatyr',
-    Bajterek: 'astana-bajterek',
-    'Nurjol-bulevardi': 'astana-nurjol-bulevardi',
-    Akorda: 'astana-akorda',
-    'Hazrat Sultanin moskeija': 'astana-hazrat-sultanin-moskeija',
-    'Rauhan ja sovinnon palatsi': 'astana-rauhan-ja-sovinnon-palatsi',
-    Kansallismuseo: 'astana-kansallismuseo',
+    'Astana Opera': 'astana-astana-opera-vari2',
+    'Khan Shatyr': 'astana-khan-shatyr-vari2',
+    Bajterek: 'astana-bajterek-vari2',
+    'Nurjol-bulevardi': 'astana-nurjol-bulevardi-vari2',
+    Akorda: 'astana-akorda-vari2',
+    'Hazrat Sultanin moskeija': 'astana-hazrat-sultanin-moskeija-vari2',
+    'Rauhan ja sovinnon palatsi': 'astana-rauhan-ja-sovinnon-palatsi-vari2',
+    Kansallismuseo: 'astana-kansallismuseo-vari2',
   },
   kanton: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1537,16 +1537,16 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Madrasin ylin oikeus': 'chennai-madrasin-ylin-oikeus',
-    'Chennai Centralin asema': 'chennai-chennai-centralin-asema',
-    'Ripon Building': 'chennai-ripon-building',
-    'Fort St. George': 'chennai-fort-st-george',
-    'Chennai Egmoren asema': 'chennai-chennai-egmoren-asema',
-    'Government Museum': 'chennai-government-museum',
-    'Chepaukin palatsi': 'chennai-chepaukin-palatsi',
-    'Marina Beach': 'chennai-marina-beach',
-    'Kapaleeshwararin temppeli': 'chennai-kapaleeshwararin-temppeli',
-    'San Thomen basilika': 'chennai-san-thomen-basilika',
+    'Madrasin ylin oikeus': 'chennai-madrasin-ylin-oikeus-vari2',
+    'Chennai Centralin asema': 'chennai-chennai-centralin-asema-vari2',
+    'Ripon Building': 'chennai-ripon-building-vari2',
+    'Fort St. George': 'chennai-fort-st-george-vari2',
+    'Chennai Egmoren asema': 'chennai-chennai-egmoren-asema-vari2',
+    'Government Museum': 'chennai-government-museum-vari2',
+    'Chepaukin palatsi': 'chennai-chepaukin-palatsi-vari2',
+    'Marina Beach': 'chennai-marina-beach-vari2',
+    'Kapaleeshwararin temppeli': 'chennai-kapaleeshwararin-temppeli-vari2',
+    'San Thomen basilika': 'chennai-san-thomen-basilika-vari2',
   },
   mumbai: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1567,15 +1567,15 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Colombon satama': 'colombo-colombon-satama',
-    'Wolvendaalin kirkko': 'colombo-wolvendaalin-kirkko',
-    'Punainen moskeija': 'colombo-punainen-moskeija',
-    'Fortin kellotorni': 'colombo-fortin-kellotorni',
-    'Fortin rautatieasema': 'colombo-fortin-rautatieasema',
-    'Beira-järvi': 'colombo-beira-jarvi',
-    'Galle Face Hotel': 'colombo-galle-face-hotel',
-    'Gangaramayan temppeli': 'colombo-gangaramayan-temppeli',
-    'Colombon kansallismuseo': 'colombo-colombon-kansallismuseo',
+    'Colombon satama': 'colombo-colombon-satama-vari2',
+    'Wolvendaalin kirkko': 'colombo-wolvendaalin-kirkko-vari2',
+    'Punainen moskeija': 'colombo-punainen-moskeija-vari2',
+    'Fortin kellotorni': 'colombo-fortin-kellotorni-vari2',
+    'Fortin rautatieasema': 'colombo-fortin-rautatieasema-vari2',
+    'Beira-järvi': 'colombo-beira-jarvi-vari2',
+    'Galle Face Hotel': 'colombo-galle-face-hotel-vari2',
+    'Gangaramayan temppeli': 'colombo-gangaramayan-temppeli-vari2',
+    'Colombon kansallismuseo': 'colombo-colombon-kansallismuseo-vari2',
   },
   karachi: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1596,16 +1596,16 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Ferry Building': 'auckland-ferry-building',
-    'Victoria Park Market': 'auckland-victoria-park-market',
-    'Albert Park': 'auckland-albert-park',
-    'Aucklandin kaupungintalo': 'auckland-aucklandin-kaupungintalo',
-    'Karangahape Road': 'auckland-karangahape-road',
-    'Symonds Streetin hautausmaa': 'auckland-symonds-streetin-hautausmaa',
-    'Ewelme Cottage': 'auckland-ewelme-cottage',
-    Highwic: 'auckland-highwic',
-    'Eden Park': 'auckland-eden-park',
-    Maungawhau: 'auckland-maungawhau',
+    'Ferry Building': 'auckland-ferry-building-vari2',
+    'Victoria Park Market': 'auckland-victoria-park-market-vari2',
+    'Albert Park': 'auckland-albert-park-vari2',
+    'Aucklandin kaupungintalo': 'auckland-aucklandin-kaupungintalo-vari2',
+    'Karangahape Road': 'auckland-karangahape-road-vari2',
+    'Symonds Streetin hautausmaa': 'auckland-symonds-streetin-hautausmaa-vari2',
+    'Ewelme Cottage': 'auckland-ewelme-cottage-vari2',
+    Highwic: 'auckland-highwic-vari2',
+    'Eden Park': 'auckland-eden-park-vari2',
+    Maungawhau: 'auckland-maungawhau-vari2',
   },
   sanfrancisco: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1626,16 +1626,16 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Pilarin basilika': 'buenosaires-pilarin-basilika',
-    'Plaza San Martín': 'buenosaires-plaza-san-martin',
-    'Palacio de Aguas Corrientes': 'buenosaires-palacio-de-aguas-corrientes',
-    'Museo Mitre': 'buenosaires-museo-mitre',
-    'Buenos Airesin katedraali': 'buenosaires-buenos-airesin-katedraali',
-    'Café Tortoni': 'buenosaires-cafe-tortoni',
-    'Palacio Barolo': 'buenosaires-palacio-barolo',
-    Kongressipalatsi: 'buenosaires-kongressipalatsi',
-    'Manzana de las Luces': 'buenosaires-manzana-de-las-luces',
-    'Santo Domingon luostari': 'buenosaires-santo-domingon-luostari',
+    'Pilarin basilika': 'buenosaires-pilarin-basilika-vari2',
+    'Plaza San Martín': 'buenosaires-plaza-san-martin-vari2',
+    'Palacio de Aguas Corrientes': 'buenosaires-palacio-de-aguas-corrientes-vari2',
+    'Museo Mitre': 'buenosaires-museo-mitre-vari2',
+    'Buenos Airesin katedraali': 'buenosaires-buenos-airesin-katedraali-vari2',
+    'Café Tortoni': 'buenosaires-cafe-tortoni-vari2',
+    'Palacio Barolo': 'buenosaires-palacio-barolo-vari2',
+    Kongressipalatsi: 'buenosaires-kongressipalatsi-vari2',
+    'Manzana de las Luces': 'buenosaires-manzana-de-las-luces-vari2',
+    'Santo Domingon luostari': 'buenosaires-santo-domingon-luostari-vari2',
   },
   sydney: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
