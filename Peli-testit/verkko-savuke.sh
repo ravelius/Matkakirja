@@ -65,6 +65,7 @@ if [[ -n $ENNAKOINTI ]]; then
   done
   sleep 15
 fi
+peli "levy" 3                              # erä 4: purettujen kuvien muisti (LRU) ja levyvälimuistin koko
 peli "verkko" 3
 cp $DOC/verkko-odotus.jsonl $DOC/verkko-yhteenveto.json $DOC/peli-loki.txt $DOC/ui-loki.txt $DOC/linssi-loki.txt $OUT/ 2>/dev/null
 kill $LPID 2>/dev/null
@@ -99,5 +100,9 @@ if os.environ.get("ENNAKOINTI"):
     for avain in ("esilataaja: joutilas", "peli: joutilas", "ennakointi (siirtokohteet)", "ui nostot: kuvat esiladataan", "ui: saapumisen esilataus"):
         rivit_ = [l for l in loki if avain in l]
         print(f"  {avain:<32} {len(rivit_):>3}  " + (rivit_[-1].split("MATKAKIRJA ", 1)[-1][:150] if rivit_ else ""))
+pl = os.path.join(out, "peli-loki.txt")
+if os.path.exists(pl):
+    levy = [l for l in open(pl, errors="replace") if " levy → " in l]
+    if levy: print("\nLEVY JA MUISTI " + levy[-1].split(" levy → ", 1)[1].strip()[:300])
 print(f"\nRAJA saapuminen 0 ms verkko-odotusta: {'PASS' if ms == 0 else 'FAIL'} ({ms} ms: " + ", ".join(f"{r['mita']} {r['ms']}" for r in saap) + ")")
 EOF
