@@ -1002,4 +1002,247 @@ export const ASIA_MAATIEDOT = {
       { teksti: 'السلام عليكم', kieli: 'arabia', lippu: 'Flag of Yemen.svg', osuus: '100 %' },
     ],
   },
+
+  ARM: {
+    vakiluku: '3,0 milj.',
+    vakilukuSija: '136./217',
+    pintaAla: '29 740 km²',
+    pintaAlaSija: '139./215',
+    demokratia: {
+      arvo: '0,37',
+      sija: '84./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~ARM',
+      selitys: 'Armenia siirtyi vuoden 2015 perustuslakiuudistuksessa '
+        + 'presidenttivetoisesta järjestelmästä parlamentaariseksi '
+        + 'tasavallaksi, jossa todellinen valta on pääministerillä. '
+        + 'Vuoden 2018 mielenosoitukset vaihtoivat pitkäaikaisen '
+        + 'valtaeliitin vaaleilla valittuun hallitukseen, ja maata '
+        + 'pidetäänkin Kaukasian demokraattisimpana — silti puoluekenttä '
+        + 'on pirstaleinen (yli 120 rekisteröityä puoluetta) ja '
+        + 'instituutiot yhä nuoria.',
+    },
+    keskitulo: { arvo: '7 810 $/v', sija: '98./198' },
+    tervehdykset: [
+      { teksti: 'Barev', kieli: 'armenia', lippu: 'Flag of Armenia.svg', osuus: '98 %' },
+    ],
+  },
+
+  AZE: {
+    vakiluku: '10 milj.',
+    vakilukuSija: '94./217',
+    pintaAla: '86 600 km²',
+    pintaAlaSija: '115./215',
+    demokratia: {
+      arvo: '0,05',
+      sija: '159./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~AZE',
+      selitys: 'Azerbaidžanin valtaa on pitänyt Alijevin suku vuodesta '
+        + '1969 lähtien, ja nykyinen presidentti Ilham Alijev nimittää '
+        + 'itse hallituksen, tuomarit ja aluejohtajat. Perustuslakia '
+        + 'muutettiin 2009 poistamalla presidentin kausirajoitus, ja '
+        + 'hallitsevan puolueen sanotaan hallitsevan myös '
+        + 'vaalilautakuntia — kansainväliset tarkkailijat eivät ole '
+        + 'pitäneet maan vaaleja vapaina eikä reiluina.',
+    },
+    keskitulo: { arvo: '7 340 $/v', sija: '101./198' },
+    tervehdykset: [
+      { teksti: 'Salam', kieli: 'azerbaidžan', lippu: 'Flag of Azerbaijan.svg', osuus: '95 %' },
+    ],
+  },
+
+  BGD: {
+    vakiluku: '174 milj.',
+    vakilukuSija: '8./217',
+    pintaAla: '147 570 km²',
+    pintaAlaSija: '93./215',
+    demokratia: {
+      arvo: '0,12',
+      sija: '129./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~BGD',
+      selitys: 'Bangladeshin politiikkaa on hallinnut kahden suurpuolueen, '
+        + 'Awami-liiton ja Kansallispuolueen (BNP), pitkä vastakkainasettelu, ja '
+        + 'vuonna 2011 hallitseva puolue lakkautti aiemmin vaaleja valvoneen '
+        + 'väliaikaishallintojärjestelmän, mikä on ollut toistuva riidan aihe '
+        + 'puolueiden välillä ja on heikentänyt luottamusta vaalien '
+        + 'riippumattomuuteen.',
+    },
+    keskitulo: { arvo: '2 820 $/v', sija: '150./198' },
+    tervehdykset: [
+      { teksti: 'আসসালামু আলাইকুম', kieli: 'bengali (islamilainen tervehdys)', lippu: 'Flag of Bangladesh.svg', osuus: '91 %' },
+      { teksti: 'নমস্কার', kieli: 'bengali (hindulainen tervehdys)', lippu: 'Flag of Bangladesh.svg', osuus: '8 %' },
+    ],
+  },
+
+  BTN: {
+    vakiluku: '792 000',
+    vakilukuSija: '165./217',
+    pintaAla: '38 390 km²',
+    pintaAlaSija: '134./215',
+    demokratia: {
+      arvo: '0,46',
+      sija: '70./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~BTN',
+      selitys: 'Bhutan siirtyi hallitsijan omasta aloitteesta perustuslailliseksi '
+        + 'monarkiaksi vasta vuonna 2008, jolloin maassa pidettiin ensimmäiset '
+        + 'demokraattiset parlamenttivaalit, ja kuninkaalla on riippumattoman '
+        + 'vaalilautakunnan ja monipuoluejärjestelmän rinnalla edelleen '
+        + 'huomattava tosiasiallinen asema, vaikka toimeenpanovalta kuuluu '
+        + 'pääministerille.',
+    },
+    keskitulo: { arvo: '3 910 $/v', sija: '134./198' },
+    tervehdykset: [
+      { teksti: 'ཀུ་ཟུ་ཟང་པོ', kieli: 'kurtöp (itä-Bhutan; tunnetaan koko maassa)', lippu: 'Flag of Bhutan.svg', osuus: '~2 %' },
+      { teksti: 'नमस्ते', kieli: 'nepali (lhotshampa-vähemmistö)', lippu: 'Flag of Nepal.svg', osuus: '24 %' },
+    ],
+  },
+
+  GEO: {
+    vakiluku: '3,8 milj.',
+    vakilukuSija: '130./217',
+    pintaAla: '69 700 km²',
+    pintaAlaSija: '122./215',
+    demokratia: {
+      arvo: '0,28',
+      sija: '98./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~GEO',
+      selitys: 'Georgia on parlamentaarinen tasavalta, jossa presidentin '
+        + 'rooli on lähinnä edustuksellinen. Yksi puolue, Bidzina '
+        + 'Ivanishvilin perustama Georgian Dream, on hallinnut vuodesta '
+        + '2012 ja saanut kahdesti perustuslain muuttamiseen riittävän '
+        + 'enemmistön. Tuomarien nimityksistä päättävää '
+        + 'oikeusneuvostoa on arvosteltu puoluepoliittisista '
+        + 'nimityksistä, mikä heikentää tuomioistuinten riippumattomuutta.',
+    },
+    keskitulo: { arvo: '7 870 $/v', sija: '97./198' },
+    tervehdykset: [
+      { teksti: 'გამარჯობა', kieli: 'georgia', lippu: 'Flag of Georgia.svg', osuus: '84 %' },
+      { teksti: 'Salam', kieli: 'azerbaidžan', lippu: 'Flag of Azerbaijan.svg', osuus: '7 %' },
+    ],
+  },
+
+  KGZ: {
+    vakiluku: '7,2 milj.',
+    vakilukuSija: '106./217',
+    pintaAla: '199 950 km²',
+    pintaAlaSija: '86./215',
+    demokratia: {
+      arvo: '0,18',
+      sija: '111./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~KGZ',
+      selitys: 'Vuoden 2021 perustuslakiuudistus siirsi valtaa parlamentilta presidentille, ja Economist Intelligence Unit on luokitellut maan autoritaariseksi. Vaalitarkkailijat ovat todenneet vaalien suosineen yhtä ehdokasta epätasaisten varojen ja hallinnollisten etujen vuoksi.',
+    },
+    keskitulo: { arvo: '2 260 $/v', sija: '158./198' },
+    tervehdykset: [
+      { teksti: 'Салам', kieli: 'kirgiisi', lippu: 'Flag of Kyrgyzstan.svg', osuus: '70 %' },
+      { teksti: 'Здравствуйте', kieli: 'venäjä', lippu: 'Flag of Russia.svg', osuus: '90 %' },
+    ],
+  },
+
+  KHM: {
+    vakiluku: '18 milj.',
+    vakilukuSija: '72./217',
+    pintaAla: '181 040 km²',
+    pintaAlaSija: '89./215',
+    demokratia: {
+      arvo: '0,05',
+      sija: '160./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~KHM',
+      selitys: 'Kambodžaa on vuodesta 1997 hallinnut Kansanpuolue (CPP), joka '
+        + 'voitti vuoden 2023 vaaleissa 125 paikasta 120 sen jälkeen, kun suurin '
+        + 'oppositiopuolue oli suljettu vaaleista ja edellinen oppositiopuolue '
+        + 'oli hajotettu korkeimman oikeuden päätöksellä vuonna 2017, minkä '
+        + 'jälkeen pääministerille ei ole jäänyt tosiasiallista vastavoimaa.',
+    },
+    keskitulo: { arvo: '2 550 $/v', sija: '151./198' },
+    tervehdykset: [
+      { teksti: 'សួស្តី', kieli: 'khmer', lippu: 'Flag of Cambodia.svg', osuus: '90 %' },
+    ],
+  },
+
+  LAO: {
+    vakiluku: '7,8 milj.',
+    vakilukuSija: '102./217',
+    pintaAla: '236 800 km²',
+    pintaAlaSija: '83./215',
+    demokratia: {
+      arvo: '0,11',
+      sija: '134./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~LAO',
+      selitys: 'Laosin perustuslain 3. pykälä antaa ainoana sallittuna puolueena '
+        + 'toimivalle Lao-kansan vallankumouspuolueelle johtavan aseman '
+        + 'valtiossa, puolue nimeää maan johtajat ja ohjaa yhteiskuntaa '
+        + 'joukkojärjestöjensä, kuten nuoriso- ja naisjärjestön, kautta, eikä '
+        + 'maassa ole vaaleissa kilpailevia oppositiopuolueita.',
+    },
+    keskitulo: { arvo: '2 000 $/v', sija: '161./198' },
+    tervehdykset: [
+      { teksti: 'ສະບາຍດີ', kieli: 'lao', lippu: 'Flag of Laos.svg', osuus: '55 %' },
+    ],
+  },
+
+  PRK: {
+    vakiluku: '26 milj.',
+    vakilukuSija: '56./217',
+    pintaAla: '120 540 km²',
+    pintaAlaSija: '100./215',
+    demokratia: {
+      arvo: '0,01',
+      sija: '173./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~PRK',
+      selitys: 'Pohjois-Koreaa johtaa yksi puolue, Korean työväenpuolue, '
+        + 'ja valta on periytynyt Kim-suvussa kolmannessa polvessa '
+        + 'vuodesta 1948. Vaaleissa on jokaisessa piirissä vain yksi '
+        + 'ehdokas, jonka puolue on valinnut etukäteen, ja vastaan '
+        + 'äänestäminen vaatisi näkyvän teon vaaliuurnalla. '
+        + 'Tiedotusvälineet ovat kokonaan valtion hallinnassa eikä '
+        + 'oikeuslaitos toimi vallasta riippumattomana.',
+    },
+    keskitulo: {
+      arvo: '1 320 $/v',
+      sija: '174./199',
+      huom: 'Maailmanpankilla ei ole Pohjois-Korealle NY.GNP.PCAP.CD-sarjaa. '
+        + 'Luku on Etelä-Korean keskuspankin (Bank of Korea) 2025-arvio '
+        + 'Pohjois-Korean nimellisestä BKTL:sta/asukas (1 317 $), ja sija '
+        + 'on laskettu lisäämällä se Maailmanpankin 198 maan jakaumaan.',
+    },
+    tervehdykset: [
+      { teksti: '안녕하세요', kieli: 'korea', lippu: 'Flag of North Korea.svg', osuus: '100 %' },
+    ],
+  },
+
+  TJK: {
+    vakiluku: '11 milj.',
+    vakilukuSija: '90./217',
+    pintaAla: '141 379 km²',
+    pintaAlaSija: '96./215',
+    demokratia: {
+      arvo: '0,04',
+      sija: '163./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~TJK',
+      selitys: 'Presidentti Emomali Rahmon on johtanut maata vuodesta 1994, ja hänen perheenjäseniään istuu keskeisissä valtion viroissa. Hänen asemansa "kansakunnan johtajana" vapauttaa hänet perustuslaillisista kausirajoituksista, ja vaalilainsäädäntö on rajoittanut oppositiopuolueiden rekisteröitymistä.',
+    },
+    keskitulo: { arvo: '1 650 $/v', sija: '167./198' },
+    tervehdykset: [
+      { teksti: 'Салом', kieli: 'tadžikki', lippu: 'Flag of Tajikistan.svg', osuus: '84 %' },
+      { teksti: 'Здравствуйте', kieli: 'venäjä', lippu: 'Flag of Russia.svg', osuus: '20 %' },
+    ],
+  },
+
+  TKM: {
+    vakiluku: '7,5 milj.',
+    vakilukuSija: '104./217',
+    pintaAla: '491 209 km²',
+    pintaAlaSija: '54./215',
+    demokratia: {
+      arvo: '0,03',
+      sija: '169./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~TKM',
+      selitys: 'Kaikki maan rekisteröidyt puolueet tukevat istuvaa presidenttiä eikä todellista oppositiota ole sallittu. Perustuslaki takaa muodollisesti sananvapauden, mutta valtio kontrolloi käytännössä kaikkia tiedotusvälineitä, ja kansalaisten liikkumista rajoittavat sisäiset passit.',
+    },
+    keskitulo: { arvo: '5 640 $/v', sija: '118./198' },
+    tervehdykset: [
+      { teksti: 'Salawmaleýkim', kieli: 'turkmeeni', lippu: 'Flag of Turkmenistan.svg', osuus: '85 %' },
+      { teksti: 'Здравствуйте', kieli: 'venäjä', lippu: 'Flag of Russia.svg', osuus: '10 %' },
+    ],
+  },
 };
