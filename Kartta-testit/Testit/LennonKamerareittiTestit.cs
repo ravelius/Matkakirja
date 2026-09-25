@@ -1,7 +1,7 @@
-// LÖYDÖS 120 (build 14): aloituslennon kamera yhtenä C1-jatkuvana reittinä. Reitti ajetaan näytteinä pallomallilla
+// LÖYDÖS 120 (build 14): aloituslennon kamera yhtenä C2-jatkuvana reittinä. Reitti ajetaan näytteinä pallomallilla
 // (LennonKamerareitti.Kuva = PalloKierto.Aseta + Nappula.Lento ilman maastoa): ei hyppyjä 0,1 s:n näytteissä
-// (muutos > 3 × ympäröivien keskiarvo), kanavien ja kamerapaikan nopeus jatkuva 120 Hz:n näytteissä, kone ei takaa,
-// kaarto nokan edestä monotoninen ja loppu saapumisnäkymässä.
+// (muutos > 3 × ympäröivien keskiarvo), kanavien ja kamerapaikan nopeus ja kiihtyvyys jatkuvia 120 Hz:n näytteissä,
+// kone ei takaa, kaarto nokan edestä monotoninen ja loppu saapumisnäkymässä (nopeus ja kiihtyvyys 0).
 // Raportti: ./kaanna.sh TulostaKamerareitti; kanavat CSV:nä: LENTO_CSV=<polku.csv> ./kaanna.sh KanavatCsv
 using System;
 using System.Collections.Generic;
@@ -46,14 +46,14 @@ namespace Matkakirja.Kartta.Testit
             Console.WriteLine(LennonKamerareitti.Raportti(r, "ateena (pallomalli)"));
         }
 
-        /// <summary>Kanavat CSV:nä 120 Hz:llä (LENTO_CSV=polku): t, etäisyys, suunta, kallistus, kohde, kone, nopeudet.</summary>
+        /// <summary>Kanavat CSV:nä 120 Hz:llä (LENTO_CSV=polku): t, etäisyys, suunta, kallistus, kohde, kone, nopeudet, kiihtyvyys.</summary>
         [Testi]
         static void KanavatCsv()
         {
             string polku = Environment.GetEnvironmentVariable("LENTO_CSV");
             if (string.IsNullOrEmpty(polku)) return;
             var c = CultureInfo.InvariantCulture;
-            var sb = new StringBuilder("t_s,etaisyys_m,suunta_abs,suunta_rel,kallistus,kohde,kone,nopeus_ms,kulmanopeus_as,hyppy\n");
+            var sb = new StringBuilder("t_s,etaisyys_m,suunta_abs,suunta_rel,kallistus,kohde,kone,nopeus_ms,kulmanopeus_as,kiihtyvyys_ms2,hyppy\n");
             var l = Aloitus("ateena", 37.98, 23.73, LennonKamerareitti.Valintanakyma);
             double T = l.Jako.KestoS, dt = 1.0 / 120.0;
             var n = LennonKamerareitti.Suunnitelma(l, dt);
@@ -66,8 +66,11 @@ namespace Matkakirja.Kartta.Testit
                 double s = ed.Equals(double.NaN) ? a.s : ed + Kiedo180(a.s - ed);
                 ed = s;
                 double rel = ((a.s - l.Suunta(t)) % 360 + 360) % 360;
-                sb.Append(string.Format(c, "{0:0.0000},{1:0.0},{2:0.000},{3:0.000},{4:0.000},{5:0.0000},{6:0.0000},{7:0.0},{8:0.000},{9}\n",
-                    n[i].T, a.e, s, rel, a.k, a.kohde, a.kone, r[i].NopeusMs, r[i].KulmanopeusAs, r[i].Hyppy || r[i].KulmaHyppy ? 1 : 0));
+                // Kameran paikan kiihtyvyys: toinen differenssi (keskitetty), päissä 0.
+                double kiih = i == 0 || i == n.Length - 1 ? 0 : Pituus(n[i + 1].X - 2 * n[i].X + n[i - 1].X,
+                    n[i + 1].Y - 2 * n[i].Y + n[i - 1].Y, n[i + 1].Z - 2 * n[i].Z + n[i - 1].Z) / (dt * dt);
+                sb.Append(string.Format(c, "{0:0.0000},{1:0.0},{2:0.000},{3:0.000},{4:0.000},{5:0.0000},{6:0.0000},{7:0.0},{8:0.000},{9:0.0},{10}\n",
+                    n[i].T, a.e, s, rel, a.k, a.kohde, a.kone, r[i].NopeusMs, r[i].KulmanopeusAs, kiih, r[i].Hyppy || r[i].KulmaHyppy ? 1 : 0));
             }
             Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(polku)));
             File.WriteAllText(polku, sb.ToString());
@@ -157,6 +160,80 @@ namespace Matkakirja.Kartta.Testit
                     Oleta.Tosi(dw <= 0.1 * wMax + 0.2,
                         $"{id}: kulmanopeus porrastuu t={n[i].T:0.000} s: Δω {dw:0.00} °/s ({wp[i - 1]:0.0} → {wp[i]:0.0}, maks {wMax:0.0})");
                 }
+            }
+        }
+
+        /// <summary>
+        /// C2 (Fable 25.9., löydös 120): kiihtyvyys jatkuva 120 Hz:n näytteissä kaikissa kanavissa ja kameran paikassa ja
+        /// katsesuunnassa. Ehdokas: kahden näytteen kiihtyvyysmuutos |a(i+1) − a(i−1)| (porras voi jakautua kahdelle
+        /// näytteelle) on yli 3 × kahden näytteen päässä olevien vastaavien keskiarvo ja yli 2 % ympäristön suurimmasta
+        /// |a|:sta. Varmistus 8 × tiheämmillä näytteillä: kiihtyvyyden porras ei pienene näytevälin mukana, jatkuvan
+        /// kiihtyvyyden muutos (nykäys × näyteväli, myös nykäyksen merkin vaihtuessa avaimessa) pienenee 8-kertaisesti.
+        /// Kanavissa lisäksi |Δa| per näyte alle 40 % ympäristön (±0,25 s) suurimmasta kiihtyvyydestä.
+        /// </summary>
+        [Testi]
+        static void KiihtyvyysJatkuva120Hz()
+        {
+            const double Hz = 120.0;
+            foreach (var alku in Alut)
+            foreach (var (id, lat, lon) in Kohteet)
+            {
+                var l = Aloitus(id, lat, lon, alku);
+                double T = l.Jako.KestoS;
+                for (int k = 0; k < 5; k++)
+                {
+                    int kk = k;
+                    TarkistaKiihtyvyys(id + ": " + Nimi[k], t =>
+                    {
+                        var a = l.Arvo(t);
+                        return new[] { new[] { Math.Log(a.e), a.k, a.s, a.kohde, a.kone }[kk], 0.0, 0.0 };
+                    }, T, Hz, 0.4);
+                }
+                TarkistaKiihtyvyys(id + ": kameran paikka", t => LennonKamerareitti.Kuva(l, t).silma, T, Hz, double.NaN);
+                TarkistaKiihtyvyys(id + ": katsesuunta", t =>
+                {
+                    var (silma, kohde, _, _) = LennonKamerareitti.Kuva(l, t);
+                    double dx = kohde[0] - silma[0], dy = kohde[1] - silma[1], dz = kohde[2] - silma[2], p = Pituus(dx, dy, dz);
+                    return new[] { dx / p, dy / p, dz / p };
+                }, T, Hz, double.NaN);
+            }
+        }
+
+        /// <summary>Kiihtyvyysvektori toisena differenssinä: f(osuus) → vektori, t sekunteina, h näyteväli (s).</summary>
+        static double[] Kiihtyvyys(Func<double, double[]> f, double T, double t, double h)
+        {
+            var a = f(Math.Max(0, t - h) / T);
+            var b = f(t / T);
+            var c = f(Math.Min(T, t + h) / T);
+            return new[] { (a[0] - 2 * b[0] + c[0]) / (h * h), (a[1] - 2 * b[1] + c[1]) / (h * h), (a[2] - 2 * b[2] + c[2]) / (h * h) };
+        }
+
+        static double Ero(double[] a, double[] b) => Pituus(a[0] - b[0], a[1] - b[1], a[2] - b[2]);
+
+        static void TarkistaKiihtyvyys(string nimi, Func<double, double[]> f, double T, double hz, double raja)
+        {
+            double h = 1.0 / hz;
+            int n = (int)Math.Round(T * hz);
+            var a = new double[n + 1][];
+            for (int i = 1; i < n; i++) a[i] = Kiihtyvyys(f, T, i * h, h);
+            a[0] = a[1]; a[n] = a[n - 1];
+            var d2 = new double[n + 1];
+            for (int i = 1; i < n; i++) d2[i] = Ero(a[i + 1], a[i - 1]);
+            int ikkuna = (int)(0.25 * hz);
+            for (int i = 4; i <= n - 4; i++)
+            {
+                double aMax = 0;
+                for (int q = Math.Max(1, i - ikkuna); q <= Math.Min(n - 1, i + ikkuna); q++) aMax = Math.Max(aMax, Pituus(a[q][0], a[q][1], a[q][2]));
+                if (!double.IsNaN(raja))
+                    Oleta.Tosi(Ero(a[i], a[i - 1]) <= raja * aMax + 1e-6,
+                        $"{nimi}: kiihtyvyyden muutos t={i * h:0.000} s: |Δa| {Ero(a[i], a[i - 1]):0.####} > {raja:P0} × {aMax:0.###}");
+                if (!(d2[i] > 3.0 * 0.5 * (d2[i - 2] + d2[i + 2]) && d2[i] > 0.02 * aMax + 1e-6)) continue;
+                // Varmistus tiheämmin: suurin kahden näytteen muutos ehdokkaan ympäristössä 8 × lyhyemmällä välillä.
+                double hh = h / 8, tiheä = 0;
+                for (double s = (i - 2) * h; s <= (i + 2) * h; s += hh)
+                    tiheä = Math.Max(tiheä, Ero(Kiihtyvyys(f, T, s + hh, hh), Kiihtyvyys(f, T, s - hh, hh)));
+                Oleta.Tosi(tiheä < 0.5 * d2[i],
+                    $"{nimi}: kiihtyvyys porrastuu t={i * h:0.000} s: |a(i+1) − a(i−1)| {d2[i]:0.####} (8 × tiheämmin {tiheä:0.####}; |a| {Pituus(a[i][0], a[i][1], a[i][2]):0.###})");
             }
         }
 
