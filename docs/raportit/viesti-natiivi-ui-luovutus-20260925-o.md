@@ -1,4 +1,4 @@
-# Natiivi-UI:n luovutus 25.9.2026 (o), klo 15.06
+# Natiivi-UI:n luovutus 25.9.2026 (o), klo 15.06 (päivitetty 15.2x)
 
 Jatkaa luovutusta (m). Proto-git: `/Users/Shared/Claude/proto-3d/Matkakirja-proto` (paikallinen). Build 14 kulkee
 juna/b13:n kautta, ja Natiiviseppä mergeää. Työkopio: `/Users/Shared/Claude/wt/proto-natiivi-ui-sisallys`. Merge-pyyntöjen
@@ -22,6 +22,10 @@ Merkitse valmis rivi sinne ("→ KORJATTU <sha>"), jos Fable ei tee sitä. Tät�
   tekstin levyinen kaikilla laitteilla), 97 (kutistus rivi kerrallaan, myös astronautin selite tekstin kokoiseksi) ja
   iPadin lapun kaiutin.
 - natiivi-ui/ylapalkki-88 3aca5217, natiivi-ui/chat-91 02c9a50d, natiivi-ui/avaruus-96b fe98c37e.
+- natiivi-ui/liuska-92 19e6dd53 (kaupunkiliuska 1,4 ×), natiivi-ui/kehittaja-103 1da2bfc7 (Maailma-kytkin myös KEHITTÄJÄ-osaan,
+  Kehittäjä-osaa ei kuvattu), natiivi-ui/maakunnat-105 6ef4985c (lista vain nykyisestä maasta).
+- natiivi-ui/paljastus-c16b 30db4207 (C16 regressio: Saapui seuraavaan ruutuun Perilla → AsetaLykkays -kutsun jälkeen,
+  Pelikoodarin havainto). EI KÄÄNNETTY. Pelikoodari todentaa ja lähettää merge-pyynnön.
 
 ## Seuraavaksi (omistajan löydökset, Fablen jako)
 - 81/83 (aloitusnäytöllä ei yläpalkkia/logoa/☰; lennolla yläpalkki ja pulu pois + Ohita-nappi alareunassa) yhdessä
@@ -30,9 +34,11 @@ Merkitse valmis rivi sinne ("→ KORJATTU <sha>"), jos Fable ei tee sitä. Tät�
   sha:ta. Kuuntele AloituslentoAlkoi/AloituslentoPaattyi (PeliOhjain.Aloitus.cs). 85: paperikortti ja teksti "Ateena,
   päivä 1" ovat Saapumiskortti (ui saapumiskortti).
 - 82 (valinnassa yläpalkki pois), 89 (matkakirjan väri oikea alusta asti), 90 (isoisän kuvat isommiksi iPadilla,
-  kaiutin näkyy), 92 (kaupungin minivalikko isommaksi), 94 (koko ruutu -nappi toimimaan, ulkoasu webistä; todennäköisesti
-  kohdekartan KOKORUUTU), 102 (noston kuva koko ruudulle liian pieni), 103 (kehittäjätilaan Maailma pois -kytkin).
-- Avustat: 85, 93 (tehty Pelikoodarin haarassa), 101 (maalehtien tahmea vieritys), 105 (maakuntalista), 108.
+  kaiutin näkyy), 94 (koko ruutu -nappi toimimaan, ulkoasu webistä; todennäköisesti kohdekartan KOKORUUTU), 102 (noston
+  kuva koko ruudulle liian pieni).
+- Lennon alapalkin teksti ("Kone nousee. Isoisän kirja aukeaa sylissäni…") jää ruudun alareunaan laskeutumisen jälkeen
+  (Pelikoodarin havainto, Aloitus.LentoKirjoitus). Tämä kuuluu erään 81/83.
+- Avustat: 85, 101 (maalehtien tahmea vieritys), 108.
 - Linssisepän havainto 96 b: minipulun käytetty pilleri jää virran yläpuolelle. Webissä pillerit vierivät pois (web
   ankkuroi kysymyksen yläreunaan tyhjällä tilalla ja vapauttaa sen, vapautaTila). Tämä on tekemättä.
 - Sisältökirjuri 95: miniatyyrit ovat alfallisia. Uudet 6 kohtauskuvaa sisältävät tarkoituksella taustan. Jos vanhat
