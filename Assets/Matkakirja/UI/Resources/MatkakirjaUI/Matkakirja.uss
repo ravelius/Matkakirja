@@ -1944,6 +1944,50 @@
     border-color: var(--map-ink);
 }
 
+/* Löydös 83: aloituslennon Ohita-nappi alareunassa (turva-alueen sisällä, lennon kaistaleen yläpuolella; bottom
+ * asetetaan koodista). Sama kehystetty paperinappi kuin VALITSE ALOITUSKAUPUNKI, jotta se erottuu kartan päältä
+ * (web .flight-eteen on 0,3-läpinäkyvä nuoli; omistaja pyysi näkyvän napin). */
+.mk-aloitus__ohita {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    flex-direction: row;
+    align-items: center;
+    min-height: 44px;
+    padding: 6px 12px 6px 18px;
+    border-width: 1.5px;
+    border-color: rgba(70, 51, 31, 0.75);
+    border-radius: 2px;
+    background-color: rgba(247, 237, 216, 0.92);
+    color: var(--map-ink);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.4s;
+}
+
+.mk-aloitus__ohita.mk-auki {
+    opacity: 1;
+}
+
+.mk-aloitus__ohita .mk-nappi__teksti {
+    font-size: 15px;
+    color: var(--map-ink);
+}
+
+.mk-aloitus__ohita .mk-ikoni {
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+    margin-right: 0;
+    color: var(--map-ink);
+    --mk-ikoni-viiva: 2; /* web stroke-width 2 */
+}
+
+.mk-aloitus__ohita:active {
+    background-color: rgba(247, 237, 216, 1);
+    border-color: var(--map-ink);
+}
+
 .mk-aloitus__portti {
     position: absolute;
     top: 0;

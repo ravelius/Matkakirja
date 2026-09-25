@@ -681,6 +681,11 @@ namespace Matkakirja.Natiivi
                 case "aloitus":
                     ui.Aloitus.Testaa(loput.Length > 0 ? loput : "portti", id => ui.Tilarivi.Viesti("Lähtö: " + id));
                     return null;
+                case "ohitalento":
+                    // Löydös 83: aloituslennon Ohita-napin painallus.
+                    if (!ui.Aloitus.OhitaNakyy) return "Ohita-nappi ei ole näkyvissä";
+                    ui.Aloitus.Ohita();
+                    return null;
                 case "aloita":
                 case "jatka":
                 {
