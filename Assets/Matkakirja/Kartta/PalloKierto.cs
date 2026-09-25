@@ -141,7 +141,11 @@ namespace Matkakirja
 
         /// <summary>Editorin pelitila ilman domain reloadia: staattinen tila ei jää edellisestä ajosta.</summary>
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void NollaaPortti() { PorttiSumea = false; KuvaSumea = false; LinssiAuki = false; PorttiAikaSeis = false; }
+        static void NollaaPortti()
+        {
+            PorttiSumea = false; KuvaSumea = false; LinssiAuki = false; PorttiAikaSeis = false;
+            siirtoAlku = siirtoKohde = siirtoNyt = Vector2.zero; siirtoT = 1f;
+        }
 
         /// <summary>Kamera on aloituspallotilassa (PorttiSumea luettu tässä kehyksessä).</summary>
         public bool Portissa => porttiTila;
@@ -162,7 +166,8 @@ namespace Matkakirja
         public static bool PorttiAikaSeis { get; set; }
 
         /// <summary>Onko sormi ruudulla, liukuma tai kamera-ajo käynnissä (kehysmittari lukee).</summary>
-        public bool Liikkeessa => edellinenSormia > 0 || math.lengthsq(liuku) > 1e-4 || ajo != null || Seurataan || porttiTila || pohjoiseen;
+        public bool Liikkeessa => edellinenSormia > 0 || math.lengthsq(liuku) > 1e-4 || ajo != null || Seurataan || porttiTila || pohjoiseen
+                                  || LinssisiirtoLiukuu;
 
         /// <summary>Nappula ohjaa kameraa (Nappula.seuraaKamera): kamera katsoo annettua pistettä.</summary>
         public bool Seurataan { get; private set; }
@@ -586,23 +591,69 @@ namespace Matkakirja
             var kamera = GetComponent<Camera>();
             if (kamera == null) return;
             porttiLinssi = Mathf.MoveTowards(porttiLinssi, porttiTila ? 1f : 0f, (float)dt / Mathf.Max(0.01f, porttiHaivytysS));
-            if (porttiLinssi <= 0f)
+            PaivitaLinssisiirto((float)dt);
+            if (porttiLinssi <= 0f && siirtoNyt == Vector2.zero)
             {
                 if (linssiAsetettu) { kamera.ResetProjectionMatrix(); linssiAsetettu = false; }
                 return;
             }
-            float kerroin = Pistekerroin;
-            double lev = kamera.pixelWidth / kerroin, kork = kamera.pixelHeight / kerroin;
-            if (lev <= 0 || kork <= 0) return;
-            var sov = EtusivunLento.RuudulleSovitus(lev, kork);
-            float osuus = Mathf.SmoothStep(0f, 1f, porttiLinssi);
-            float fovWeb = (float)(2.0 * math.degrees(math.atan(kork / 2.0 / sov.F)));
-            var p = Matrix4x4.Perspective(Mathf.Lerp(kamera.fieldOfView, fovWeb, osuus), kamera.aspect, kamera.nearClipPlane, kamera.farClipPlane);
-            // Kuvakeskipisteen siirto (lens shift): x_ndc − m02, y_ndc − m12; ruudun y alas = NDC:n y alas.
-            p[0, 2] = -2f * (float)((sov.Cx - lev / 2.0) / lev) * osuus;
-            p[1, 2] = 2f * (float)((sov.Cy - kork / 2.0) / kork) * osuus;
+            float fov = kamera.fieldOfView, m02 = 0f, m12 = 0f;
+            if (porttiLinssi > 0f)
+            {
+                float kerroin = Pistekerroin;
+                double lev = kamera.pixelWidth / kerroin, kork = kamera.pixelHeight / kerroin;
+                if (lev <= 0 || kork <= 0) return;
+                var sov = EtusivunLento.RuudulleSovitus(lev, kork);
+                float osuus = Mathf.SmoothStep(0f, 1f, porttiLinssi);
+                float fovWeb = (float)(2.0 * math.degrees(math.atan(kork / 2.0 / sov.F)));
+                fov = Mathf.Lerp(kamera.fieldOfView, fovWeb, osuus);
+                // Kuvakeskipisteen siirto (lens shift): x_ndc − m02, y_ndc − m12; ruudun y alas = NDC:n y alas.
+                m02 = -2f * (float)((sov.Cx - lev / 2.0) / lev) * osuus;
+                m12 = 2f * (float)((sov.Cy - kork / 2.0) / kork) * osuus;
+            }
+            // Linssisiirto: optisen akselin piste (katsekohde) siirtyy ruudulla dx oikealle ja dy ylös ruudun osuuksina,
+            // eli NDC:ssä 2·d (akselin piste on x_ndc = −m02, y_ndc = −m12).
+            m02 -= 2f * siirtoNyt.x;
+            m12 -= 2f * siirtoNyt.y;
+            var p = Matrix4x4.Perspective(fov, kamera.aspect, kamera.nearClipPlane, kamera.farClipPlane);
+            p[0, 2] = m02;
+            p[1, 2] = m12;
             kamera.projectionMatrix = p;
             linssiAsetettu = true;
+        }
+
+        // ---- LINSSISIIRTO (Ihmisen matka II, Linssisepän tilaus 25.9.2026: "kartta väistää") ----
+        // Isot havainnekuvat peittävät osan ruudusta, joten tarinan kohta siirretään vapaaseen osaan kameraa liikuttamatta:
+        // vain projektion pääpiste siirtyy (kuten portin linssissä), joten kallistus, etäisyys ja eleet pysyvät ennallaan.
+        static Vector2 siirtoAlku, siirtoKohde, siirtoNyt;
+        static float siirtoT = 1f, siirtoKestoS;
+
+        /// <summary>
+        /// Katsekohde siirtyy ruudulla dx (oikealle) ja dy (ylös) ruudun leveyden ja korkeuden osuuksina, esim. (0, −0,25) =
+        /// kohde ruudun keskeltä alaspäin neljänneksen verran. Liuku kestoS sekunnissa (ease in/out, KAMERA-AJOT); uusi kutsu
+        /// jatkaa nykyisestä kohdasta. (0, 0) palauttaa.
+        /// </summary>
+        public static void Linssisiirto(float dx, float dy, float kestoS)
+        {
+            siirtoAlku = siirtoNyt;
+            siirtoKohde = new Vector2(Mathf.Clamp(dx, -0.5f, 0.5f), Mathf.Clamp(dy, -0.5f, 0.5f));
+            siirtoKestoS = Mathf.Max(0f, kestoS);
+            siirtoT = 0f;
+            if (siirtoKestoS <= 0f) { siirtoNyt = siirtoKohde; siirtoT = 1f; }
+        }
+
+        /// <summary>Nykyinen linssisiirto (ruudun osuuksina).</summary>
+        public static Vector2 LinssisiirtoNyt => siirtoNyt;
+        /// <summary>Linssisiirto liukuu (kuva muuttuu, vaikka kamera on paikallaan: lepopiirto ei saa harventaa).</summary>
+        public static bool LinssisiirtoLiukuu => siirtoT < 1f;
+
+        static void PaivitaLinssisiirto(float dt)
+        {
+            if (siirtoT >= 1f) return;
+            siirtoT = Mathf.Min(1f, siirtoT + dt / Mathf.Max(1e-3f, siirtoKestoS));
+            // Smootherstep: nopeus ja kiihtyvyys nollassa molemmissa päissä.
+            float s = siirtoT * siirtoT * siirtoT * (siirtoT * (siirtoT * 6f - 15f) + 10f);
+            siirtoNyt = siirtoT >= 1f ? siirtoKohde : Vector2.LerpUnclamped(siirtoAlku, siirtoKohde, s);
         }
 
         /// <summary>Sallittu kallistus tällä korkeudella: kaukaa pallo katsotaan aina suoraan.</summary>

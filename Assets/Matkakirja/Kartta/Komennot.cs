@@ -88,6 +88,8 @@ namespace Matkakirja
     ///   valokeila vari <K> [osuus] [kirkkaus] [kesto]   molempien keilojen värilämpötila (osuus 0–1 valkoisen päällä,
     ///                             oletus 3200 K × 0,5) ja keskustan lisäkirkkaus 0–0,3 (oletus 0,12)
     ///   valokeila pois [kesto] | valokeila tila   keilat pois (oletus 1,2 s) / tila lokiin
+    ///   linssisiirto dx dy [kesto] | linssisiirto pois [kesto]   katsekohde ruudulla dx oikealle, dy ylös ruudun osuuksina
+    ///                             (KarttaKerrokset.Linssisiirto; oletus kesto 0,8 s)
     ///   s2meri r g b kynnys       Sentinelin meren värjäys heti (sRGB 0–1 tai 0–255; kynnys = sRGB-luma, 0 = pois;
     ///                             oletus 17 46 92 0.18)
     /// </summary>
@@ -756,6 +758,11 @@ namespace Matkakirja
                     break;
                 case "valokeila" when o.Length > 1:
                     Valokeila(o, D);
+                    break;
+                case "linssisiirto" when o.Length > 1:
+                    if (o[1] == "pois") KarttaKerrokset.LinssisiirtoPois(o.Length > 2 ? (float)D(2) : 0.8f);
+                    else KarttaKerrokset.Linssisiirto((float)D(1), o.Length > 2 ? (float)D(2) : 0f, o.Length > 3 ? (float)D(3) : 0.8f);
+                    Debug.Log($"MATKAKIRJA linssisiirto: tavoite {o[1]} {(o.Length > 2 ? o[2] : "")}, nyt {PalloKierto.LinssisiirtoNyt}");
                     break;
                 case "odota":
                     odotus = Time.unscaledTime + (float)D(1);
