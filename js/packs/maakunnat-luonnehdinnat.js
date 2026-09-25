@@ -3071,4 +3071,121 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Lamegossa kiivetään 686 porrasta Nossa Senhora dos Remédiosin barokkikirkolle, ja tarun mukaan Portugalin ensimmäiset säätykokoukset pidettiin täällä 1143.',
     },
   },
+  /*
+   * HUN (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.HUN:n tunnuksia
+   * (19 lääniä + Budapest). Vain `lyhyt` tässä erässä, kuten GRC:llä.
+   * Budapest on pelissä jo kaupunkina (kulttuuri-kategoriat.js,
+   * europe-artikkelit.js): sen lyhyt välttää olemassa olevien
+   * nostojen aiheet (parlamentti, kylpylät, metro, raunioravintolat,
+   * Rubik, keskushalli, kaupunkien yhdistyminen 1873).
+   *
+   * Lähteet (Fablen vaatimus 25.9.2026): faktat tarkistettu
+   * en-Wikipediasta 25.9.2026, artikkelit:
+   *   Bács-Kiskun           — Kalocsa (Bács-Kiskun, Paprikamuseo,
+   *                           "red gold", syyskuun punaiset pellot)
+   *   Baranya               — Busójárás (Mohács, naamiot, turkkilaiset
+   *                           pelästyivät melua, Unesco 2009)
+   *   Békés                 — Szarvas (Unkarin maantieteellinen keskipiste
+   *                           ennen Trianonia, tuulimyllymuistomerkki)
+   *   Borsod-Abaúj-Zemplén  — Tokaj wine region (Unesco 2002, Ludvig XIV
+   *                           "Vinum Regum, Rex Vinorum")
+   *   Budapest              — Budapest Children's Railway (10–14-vuotiaat
+   *                           hoitavat kaiken paitsi veturinkuljettajan)
+   *   Csongrád              — Arrival of the Hungarians (Feszty, lähes
+   *                           120 m, Ópusztaszer 1995 alkaen) + Ópusztaszer
+   *                           (Csongrád-Csanád)
+   *   Fejér                 — Székesfehérvár (43 kuningasta kruunattu,
+   *                           basilikan rauniot kaivettu, avoinna)
+   *   Győr-Moson-Sopron     — Pan-European Picnic (Sopron 19.8.1989,
+   *                           661 ylitti rajan)
+   *   Hajdú-Bihar           — Hortobágy National Park (1. kansallispuisto
+   *                           1973, Euroopan suurin puoliluonnontilainen
+   *                           niitty, csikós-paimenet)
+   *   Heves                 — Siege of Eger (1552) (2 100–2 300 puolustajaa,
+   *                           35 000–40 000 osmania, puolustus onnistui)
+   *   Jász-Nagykun-Szolnok  — Palingenia longicauda (Tiszan kukinta
+   *                           kesäkuun puolivälissä, aikuiset elävät
+   *                           tunteja) + Jász-Nagykun-Szolnok County
+   *                           (Tisza virtaa läänin halki)
+   *   Komárom-Esztergom     — Esztergom Basilica (Unkarin suurin kirkko,
+   *                           ulkoa 100 m korkea)
+   *   Nógrád                — Hollókő ("Raven-stone", palócit, Unesco 1987)
+   *   Pest                  — Visegrád, Hungary (kongressi 1335,
+   *                           Visegrád-ryhmä 15.2.1991 viittauksena siihen)
+   *   Somogy                — Siófok ("capital of Lake Balaton", 17 km
+   *                           rantaa, yli 1 000 hotellia, yökerhot)
+   *   Szabolcs-Szatmár-Bereg — Szabolcs–Szatmár–Bereg County (luumut:
+   *                           tuoreena, kuivattuna, lekvár, paloviinat)
+   *   Tolna                 — Gemenc (Szekszárdin ja Bajan välissä,
+   *                           saksanhirvien sarvet maailmankuuluja)
+   *   Vas                   — Szombathely (Unkarin vanhin kaupunki,
+   *                           Savaria 45 jaa., Pyhän Martin syntymäpaikka)
+   *   Veszprém              — Herend Porcelain Manufactory (taideposliini
+   *                           1839 alkaen, Habsburgien hovin hankkija)
+   *   Zala                  — Lake Hévíz (Euroopan suurin uimakelpoinen
+   *                           lämpöjärvi, talvella n. 22 °C ja usva)
+   */
+  HUN: {
+    'Bács-Kiskun': {
+      lyhyt: 'Kalocsassa on oma paprikamuseo, ja syyskuussa kypsyvät pellot hehkuvat niin punaisina, että maustetta kutsutaan punaiseksi kullaksi.',
+    },
+    Baranya: {
+      lyhyt: 'Mohácsin busójárásissa naamioidut busót meluavat helmikuussa kaduilla – tarun mukaan sama meteli ajoi aikoinaan turkkilaiset pakoon.',
+    },
+    'Békés': {
+      lyhyt: 'Szarvasissa Körös-joen rannalla tuulimyllyn muotoinen muistomerkki näyttää, missä Unkarin keskipiste oli ennen vuoden 1920 rajoja.',
+    },
+    'Borsod-Abaúj-Zemplén': {
+      lyhyt: 'Tokajin viinialue on Unescon listalla, ja sen aszú-viini kelpasi jo Ludvig XIV:lle – hän kutsui sitä kuninkaiden viiniksi.',
+    },
+    Budapest: {
+      lyhyt: 'Budan kukkuloilla kulkee Lastenrata, jonka junissa kaikki työt veturinkuljettajaa lukuun ottamatta hoitavat 10–14-vuotiaat lapset.',
+    },
+    'Csongrád': {
+      lyhyt: 'Ópusztaszerissa Feszty-panoraama kiertää katsojan ympäri: lähes 120 metriä pitkä maalaus unkarilaisten saapumisesta tälle tasangolle.',
+    },
+    'Fejér': {
+      lyhyt: 'Székesfehérvárissa kruunattiin keskiajalla 43 Unkarin kuningasta, ja kaivettujen basilikan raunioiden keskellä voi nyt kävellä.',
+    },
+    'Győr-Moson-Sopron': {
+      lyhyt: 'Sopronin lähellä rajaportti avattiin elokuussa 1989 Pan-Eurooppa-piknikillä, ja 661 itäsaksalaista juoksi samana päivänä Itävaltaan.',
+    },
+    'Hajdú-Bihar': {
+      lyhyt: 'Hortobágy on Euroopan suurin puoliluonnontilainen niitty, ja sen arolla karjaa ja hevosia paimentavat yhä ratsastavat csikós-paimenet.',
+    },
+    Heves: {
+      lyhyt: 'Egerin linnassa muistetaan vuotta 1552, kun runsaat 2 000 puolustajaa kesti moninkertaisen osmaniarmeijan piirityksen.',
+    },
+    'Jász-Nagykun-Szolnok': {
+      lyhyt: 'Kesäkuun puolivälissä Tisza kukkii: valtavat päivänkorentoparvet kuoriutuvat joesta, ja aikuisina ne elävät vain muutaman tunnin.',
+    },
+    'Komárom-Esztergom': {
+      lyhyt: 'Esztergomin basilika on Unkarin suurin kirkko, ja sen kupoli kohoaa Tonavan rannalla ulkoa sadan metrin korkeuteen.',
+    },
+    'Nógrád': {
+      lyhyt: 'Hollókő eli Korppikivi on palócien vanha kylä, jonka puiset talot ja kapea raitti ovat olleet Unescon maailmanperintöä vuodesta 1987.',
+    },
+    Pest: {
+      lyhyt: 'Visegrádissa kolme kuningasta neuvotteli rauhasta 1335, ja siksi Unkarin, Puolan ja Tšekkoslovakian yhteistyö sai 1991 nimen Visegrád-ryhmä.',
+    },
+    Somogy: {
+      lyhyt: 'Siófokia kutsutaan Balatonin pääkaupungiksi: 17 kilometrin rannalla on yli tuhat hotellia, ja kesäöisin yökerhot ovat täynnä.',
+    },
+    'Szabolcs-Szatmár-Bereg': {
+      lyhyt: 'Maakunta on kuuluisa luumuistaan: niitä syödään tuoreina, kuivataan, keitetään lekvár-hilloksi ja tislataan tunnetuiksi paloviinoiksi.',
+    },
+    Tolna: {
+      lyhyt: 'Szekszárdin kupeessa Gemencin tulvametsässä elää saksanhirviä, joiden mahtavat sarvet ovat maailmankuulut.',
+    },
+    Vas: {
+      lyhyt: 'Szombathely on Unkarin vanhin kaupunki: roomalaiset perustivat Savarian vuonna 45, ja täällä syntyi myös Pyhä Martti Toursilainen.',
+    },
+    'Veszprém': {
+      lyhyt: 'Herendin tehtaassa on maalattu posliinia käsin vuodesta 1839, ja 1800-luvulla sen astioita toimitettiin Habsburgien hoville.',
+    },
+    Zala: {
+      lyhyt: 'Hévízin järvi on Euroopan suurin lämmin järvi, jossa voi uida – talvellakin vesi pysyy noin 22-asteisena, ja pinnalla leijuu usva.',
+    },
+  },
 };
