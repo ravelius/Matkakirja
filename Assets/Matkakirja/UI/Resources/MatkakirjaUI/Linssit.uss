@@ -1358,6 +1358,16 @@
 }
 
 /* Web .aikajana-lyhty: lämmin keila kummassakin yläkulmassa (keskus 17 % / 7 % laatikosta, joka on 98 % × 118 %). */
+/* Lyhtyjen valo rajataan paperiin (reunan roso jää leikkauksen sisään: sivuilla 3 %). */
+.mk-aikajana-avaus__valo {
+    position: absolute;
+    left: 3%;
+    right: 3%;
+    top: 2%;
+    bottom: 2%;
+    overflow: hidden;
+}
+
 .mk-aikajana-avaus__lyhty {
     position: absolute;
     width: 110%;

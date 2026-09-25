@@ -363,6 +363,9 @@ namespace Matkakirja.Natiivi
                 Lehtinakyma.AnfangiKappale(eTeksti, teksti, "mk-aikajana-avaus__kappale", 1.58f, Kirjasin.Luku, false,
                     Kirjasin.LukuLihava, 2.55f, "mk-lehti__anfangi mk-aikajana-avaus__anfangi");
             esittely.EnableInClassList("mk-aikajana-avaus--musta", musta);
+            // Web min(31rem, 88 %) 1rem:n täytteen sisältä; asetetaan ennen näyttöä (GeometryChanged ehti myöhässä).
+            float w = esittely.parent?.layout.width ?? float.NaN;
+            if (!float.IsNaN(w) && w > 0) eKehys.style.width = Mathf.Min(496f, 0.88f * (w - 32f));
         }
 
         /// <summary>Paperi uudelleen, kun laatikon koko muuttuu (web piirtää paperin 400 px:n leveyteen).</summary>
@@ -392,11 +395,12 @@ namespace Matkakirja.Natiivi
         static void Lyhdyt(VisualElement kehys)
         {
             var keila = RepaleinenPergamentti.Keila;
-            // Paperin päälle mutta tekstin alle (laatikko on kehyksen viimeinen lapsi).
-            var vasen = Rakenne.El("mk-aikajana-avaus__lyhty mk-aikajana-avaus__lyhty--vasen", null, PickingMode.Ignore);
-            var oikea = Rakenne.El("mk-aikajana-avaus__lyhty mk-aikajana-avaus__lyhty--oikea", null, PickingMode.Ignore);
-            kehys.Insert(1, vasen);
-            kehys.Insert(2, oikea);
+            // Paperin päälle mutta tekstin alle (laatikko on kehyksen viimeinen lapsi), ja rajattuna paperiin:
+            // webissä valo ei näy paperin ulkopuolella (b13k:ssa keila valui ruudun yläreunaan asti).
+            var valo = Rakenne.El("mk-aikajana-avaus__valo", null, PickingMode.Ignore);
+            kehys.Insert(1, valo);
+            var vasen = Rakenne.El("mk-aikajana-avaus__lyhty mk-aikajana-avaus__lyhty--vasen", valo, PickingMode.Ignore);
+            var oikea = Rakenne.El("mk-aikajana-avaus__lyhty mk-aikajana-avaus__lyhty--oikea", valo, PickingMode.Ignore);
             vasen.style.backgroundImage = oikea.style.backgroundImage = new StyleBackground(keila);
             var arpa = new System.Random(7);
             float va = 0.85f, oa = 0.85f;
