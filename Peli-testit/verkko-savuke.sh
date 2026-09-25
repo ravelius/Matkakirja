@@ -55,8 +55,14 @@ if [[ -n $ENNAKOINTI ]]; then
   sleep 4                                  # kohta 4: 2 s ilman liikettä, jonoa ja laattahakuja
   odota_loki "esilataaja: joutilas" 40
   sleep 25                                 # joutilaan esilataukset (puheet, nostojen kuvat, nopan päässä olevat)
-  peli "kulkutapa liftaus" 6               # kohta 5: siirtokohteet kartalle → kohdekaupungit heti
-  odota_loki "ennakointi (siirtokohteet)" 20
+  # Kohta 5: siirtokohteet kartalle → kohdekaupungit heti. Noppa voi antaa vain reitin varren pisteitä:
+  # silloin siirrytään ensimmäiseen ja heitetään uudelleen (enintään 4 kertaa).
+  for yritys in 1 2 3 4; do
+    peli "kulkutapa liftaus" 8
+    odota_loki "ennakointi (siirtokohteet)" 20
+    grep "ennakointi (siirtokohteet)" $OUT/konsoli.log | grep -qv "ei kaupunkeja" && break
+    peli "rivi 0" 14
+  done
   sleep 15
 fi
 peli "verkko" 3

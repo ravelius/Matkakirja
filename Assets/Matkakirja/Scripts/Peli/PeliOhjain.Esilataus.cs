@@ -42,11 +42,26 @@ namespace Matkakirja.Natiivi
             try { SaapuminenTiedossa?.Invoke(kaupunki); } catch (Exception e) { Debug.LogException(e); }
         }
 
+        /// <summary>Puheet, joita pyydettiin ennen kuin luennat.json ja saapumispuheet.json oli luettu (kylmä käynnistys).</summary>
+        readonly List<(string Kaupunki, Taso Taso)> puheetOdottaa = new List<(string, Taso)>();
+        bool luennatLuettu;
+
         void EsilataaPuheet(string kaupunki, Taso taso)
         {
-            if (luennat == null || puhe == null) return;
+            if (puhe == null) return;
+            // Kylmänä aloituslento voi alkaa ennen kuin puheiden osoitteet on haettu (Esilataaja erä 3:n savuke:
+            // saapumispuhe odotti 97 ms): pyyntö odottaa HaeLuennat-haun loppuun.
+            if (!luennatLuettu) { puheetOdottaa.Add((kaupunki, taso)); return; }
             puhe.Esilataa(luennat.Saapumispuhe(kaupunki)?.Url, taso);
             puhe.Esilataa(luennat.Luento(kaupunki)?.Url, taso);
+        }
+
+        void LuennatLuettu()
+        {
+            luennatLuettu = true;
+            if (puheetOdottaa.Count > 0) Debug.Log($"MATKAKIRJA peli: odottaneet puheet esiladataan ({string.Join(", ", puheetOdottaa.Select(p => p.Kaupunki))})");
+            foreach (var (k, t) in puheetOdottaa) EsilataaPuheet(k, t);
+            puheetOdottaa.Clear();
         }
 
         /// <summary>Kohdat 4–5: kaupungin saapumistarpeet taustalla (ei, jos Esilataaja.Seis).</summary>
@@ -63,8 +78,7 @@ namespace Matkakirja.Natiivi
         {
             if (kohteet == null || kohteet.Count == 0 || Esilataaja.Seis) return;
             var kaupungit = kohteet.Where(k => k.Kaupunki != null).Select(k => k.Kaupunki).Distinct().ToList();
-            if (kaupungit.Count == 0) return;
-            Debug.Log("MATKAKIRJA peli: ennakointi (siirtokohteet) " + string.Join(", ", kaupungit));
+            Debug.Log("MATKAKIRJA peli: ennakointi (siirtokohteet) " + (kaupungit.Count > 0 ? string.Join(", ", kaupungit) : "ei kaupunkeja"));
             foreach (var k in kaupungit) EnnakoiKaupunki(k, Taso.Kohdekaupungit);
         }
 

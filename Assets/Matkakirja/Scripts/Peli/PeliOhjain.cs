@@ -681,6 +681,7 @@ namespace Matkakirja.Natiivi
                 Debug.Log($"MATKAKIRJA peli: saapumispuheita {luennat.Saapumispuheita}, luentoja {luennat.Luentoja}");
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: luennat eivät jäsenny: " + e.Message); }
+            LuennatLuettu();
         }
 
         /// <summary>
