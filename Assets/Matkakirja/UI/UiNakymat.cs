@@ -401,7 +401,8 @@ namespace Matkakirja.Natiivi
 
         void Aloita(PeliOhjain o, string id)
         {
-            var virhe = o.UusiMatka(id);
+            // Kehittäjän maailmatilassa mikä tahansa kaupunki kelpaa lähdöksi (D6, web doPickStart).
+            var virhe = o.UusiMatka(id, kaikkiKelpaa: Paavalikko.Maailma);
             if (virhe != null) { Debug.LogWarning("MATKAKIRJA ui aloitus: " + virhe); Tilarivi.Viesti(virhe); }
         }
 

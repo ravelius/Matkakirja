@@ -806,11 +806,14 @@ namespace Matkakirja.Natiivi
         /// Uusi matka lähtökaupungista (aloitusnäkymä, voiton Uusi matka). null = Pariisi.
         /// Korvaa tallennuksen. Palauttaa virheen tai null.
         /// </summary>
-        public string UusiMatka(string lahtokaupunki, long? siemen = null)
+        /// <param name="kaikkiKelpaa">Kehittäjän maailmatila: mikä tahansa kaupunki kelpaa lähdöksi (web
+        /// actionPickStart hyväksyy laudan jokaisen kaupungin; liikkumisen pariteetti D6).</param>
+        public string UusiMatka(string lahtokaupunki, long? siemen = null, bool kaikkiKelpaa = false)
         {
             using var _ = Ajoita("uusiMatka");
             if (verkko == null) return "sisältö ei ole vielä latautunut";
-            if (lahtokaupunki != null && !Lahtokaupungit().Any(k => k.Id == lahtokaupunki)) return "ei lähtökaupunki: " + lahtokaupunki;
+            if (lahtokaupunki != null && !(kaikkiKelpaa ? verkko.Kaupungit.ContainsKey(lahtokaupunki) : Lahtokaupungit().Any(k => k.Id == lahtokaupunki)))
+                return "ei lähtökaupunki: " + lahtokaupunki;
             if (Tila != SilmukanTila.Aloitus && Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
             jatkettava = null;
             PeruLykkays();
