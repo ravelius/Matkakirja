@@ -134,10 +134,17 @@ namespace Matkakirja.Natiivi
             return kerros.WorldToLocal(RuntimePanelUtils.ScreenToPanel(kerros.panel, new Vector2(r.x, Screen.height - r.y)));
         }
 
+        // Löydös 134 (Pelikoodari): avauksen vaiheet lokiin — data (ms, kehyksiä), ensimmäinen näkyvä kehys, valmis.
+        float avausAlku;
+        int avausKehys;
+
         void Avaa(string valoId, Action<bool> jalkeen)
         {
+            avausAlku = Time.realtimeSinceStartup;
+            avausKehys = Time.frameCount;
             int v = ++versio;
-            UiKerros.Hae().StartCoroutine(AvaaReitti(valoId, v, jalkeen));
+            // Löydös 134: välimuistissa oleva data avaa kortin samassa kehyksessä (ei kehystä per sisäkkäinen haku).
+            Korutiini.Kaynnista(UiKerros.Hae(), AvaaReitti(valoId, v, jalkeen));
         }
 
         /// <summary>
@@ -156,6 +163,7 @@ namespace Matkakirja.Natiivi
                 VerkkoOdotus.Loppu(odotus, "lisakaupunki");
                 napit.Clear();
                 NaytaLisakaupunki(lk);
+                MittaaAvaus(valoId, v);
                 jalkeen?.Invoke(true);
                 yield break;
             }
@@ -164,7 +172,7 @@ namespace Matkakirja.Natiivi
             VerkkoOdotus.Loppu(odotus, v != versio ? "ohitettu" : n == null ? "ei sisältöä" : null);
             if (v != versio) yield break;
             if (n == null) Debug.Log("MATKAKIRJA ui nostot: ei sisältöä valolle " + valoId);
-            else Nayta(n);
+            else { Nayta(n); MittaaAvaus(valoId, v); }
             jalkeen?.Invoke(n != null);
         }
 
@@ -201,6 +209,25 @@ namespace Matkakirja.Natiivi
                 if (!loytyi) { tulos?.Invoke("ei sisältöä valolle " + valoId); return; }
                 Paina();
             });
+        }
+
+        void MittaaAvaus(string valoId, int v)
+        {
+            float dataMs = (Time.realtimeSinceStartup - avausAlku) * 1000f;
+            int dataKehyksia = Time.frameCount - avausKehys;
+            float nakyvaMs = -1f;
+            IVisualElementScheduledItem ajo = null;
+            ajo = kerros.schedule.Execute(() =>
+            {
+                if (v != versio) { ajo.Pause(); return; }
+                float o = kerros.resolvedStyle.opacity;
+                float ms = (Time.realtimeSinceStartup - avausAlku) * 1000f;
+                if (nakyvaMs < 0 && o > 0.01f) nakyvaMs = ms;
+                if (o < 0.99f && ms < 3000f) return;
+                ajo.Pause();
+                Debug.Log($"MATKAKIRJA ui nostot: avaus {valoId}: data {dataMs:0} ms ({dataKehyksia} kehystä), näkyvä {nakyvaMs:0} ms, "
+                        + $"valmis {ms:0} ms ({Time.frameCount - avausKehys} kehystä), kuvia {nosto?.Kuvat.Count ?? 0}");
+            }).Every(0);
         }
 
         public void Sulje()
