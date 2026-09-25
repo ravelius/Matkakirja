@@ -5019,3 +5019,7 @@ Fablen sivuhavainto samasta kuvasta: nostojen nimiöt Kreikassa ovat Z5-tasolla 
 ## OMISTAJAN LOYDOS 70 BUILD 12:STA (iPHONE, KUVA loydos70-iphone-maakunnat-vaara-maa.png): MAAKUNNAT-VALILEHTI NAYTTAA RANSKAN MAAKUNNAT VAIKKA PELAAJA ON ATEENASSA (KREIKKA) — VALIKKO EI SEURAA NYKYISTA MAATA — EIKA REAGOI KOSKETUKSIIN (SAMA KUIN 69) → NATIIVI-UI + PELIKOODARI; BUILD 13 (25.9.2026 klo 05.14)
 
 Webissä Maakunnat listaa nykyisen maan maakunnat ja napautus kohdistaa kartan; natiivissa lista näyttää jäävän ensimmäiseen ladattuun maahan.
+
+## OMISTAJAN LOYDOKSET 71–72 BUILD 12:STA (iPHONE, KUVAT loydos71-iphone-maalehti-radio-nappi.png, loydos72-iphone-lippukortti-tausta.png): 71 MAALEHDEN PERUSTIETOJEN RADIO-NAPPI EI TOIMI → NATIIVI-UI (NAPPI) + LINSSISEPPA (RADION AVAUS); 72 LIPPUKORTILLA VAARA TAUSTA (KELLERTAVA PERGAMENTTI, WEBISSA MAALEHDEN VAALEA KORTTIPOHJA) → NATIIVI-UI; BUILD 13 (25.9.2026 klo 05.15)
+
+Kuvassa 72 lippukortti (Kreikka, Nykyinen lippu, symboliikka, historia) avautuu maalehden päälle omalla tummemmalla pergamenttitaustalla.
