@@ -5167,3 +5167,7 @@ Sessio 85 %; ei lisäviestejä ennen vuoron päättymistä.
 ## NATIIVI-UI NOLLATTU TOISEN KERRAN (LUOVUTUS -20260925-l.md, natiivi-ui-luovutus-l e02ca9c35; ALOITUSVIESTI LAHETETTY: KAANNOS b13d TODENNUS (73/68, 63, 72, 76, 66, 74 d2) → MERGE-PYYNNOT, SITTEN 70 JA PELIKOODARIN RIVIT) (25.9.2026 klo 08.01)
 
 Nollaus kaavan mukaan (clear samassa vuorossa, list_events 0); sessio ehti 87 %:iin ennen vuoron päättymistä.
+
+## KUORMA 400–900 VAIKKA POLTTO 8 YTIMELLA: coreaudiod 305 % CPU JA NELJA JOUTILASTA Matkakirja3D-INSTANSSIA SIMULAATTOREISSA (22–31 % KUKIN) — FABLE: PELI SAMMUTETAAN SIMULAATTORISTA HETI KIERROKSEN JALKEEN (simctl terminate) JA AANET MYKISTETAAN TESTIEN AJAKSI; POSTIVAHTI VALVOO (>30 min JOUTILAS → MUISTUTUS) (25.9.2026 klo 08.02)
+
+Todennäköinen syy coreaudiodille: simulaattorien ääni AudioListener-korjauksen (49) jälkeen.
