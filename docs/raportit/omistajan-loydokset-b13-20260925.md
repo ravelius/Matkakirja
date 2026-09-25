@@ -77,3 +77,17 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | 118 | "Vintiltä löytyi isoisän matkalaukku" -luenta ja teksti tulevat SAMAAN aloitusruutuun, jossa Aloita seikkailu -painike on: taustalla pyörii sama pallo- ja lentokoneanimaatio ja sama musiikki jatkuu, kun luenta alkaa (ei erillistä ruutua). → KORJATTU UI-osa natiivi-ui/intro-118 b84c8a55 + avausluenta ja musiikki buildiin (Pelikoodari, puhe 31 ms pyynnöstä, merge-pyynnössä build 16) | Natiivi-UI (ruutu) + Pelikoodari (luennan ajoitus) |
 | 119 | Pallossa on vieläkin todella paljon reikiä, joista näkyy maapallon läpi (build 14). → KORJATTU juna/b13 35424e12 (natiiviseppa/reiat-119 6b8d45f0): pohjapallo = pergamentinvärinen (#e5d0a7) umpinainen varapinta 3 km ellipsoidin alla, joten reiästä näkyy pergamenttia eikä avaruutta, ja maastolaattojen uusinta. Koe: magentareiät pinnan sisällä 308/34 px → 0; kuvaparit proto-3d/lokit/reiat-119/koe2/. Juurisyy: laattatasojen saumat latauksen aikana (forbidHoles) ja pysyvät pistereiät (helmat) jäävät. | Natiiviseppä (Karttaseppä: laattojen/maaston kattavuus) |
 | 120 | Lentokonekohtaus on outo: kamera pomppii liian villisti eri paikkoihin. Opus miettii sen paremmaksi: vaihtelevat nopeudet säilyvät, mutta yksi yhtenäinen kamera-ajo ilman hyppyjä (KAMERA-AJOT: ease in/out, yhtenäinen spline). VIDEOPARI 1 (lento-spline f9d785c9) → omistaja 19.0x: EI VIELÄ — lentokone koko ajan näkyvissä, ja lennon alku näkyy vaikka kaukaa; lento saa kestää 2 s pidempään (12 s). VIDEOPARI v2 (lento-spline 5cc1597c, 12 s, kone aina kuvassa ≥ 21 %) → OMISTAJA HYVÄKSYI 20.3x → KORJATTU juna/b13 8e53cb03 (natiiviseppa/lento-spline c8b03f98, build 16). | Natiiviseppä |
+
+## Build 16 (1.0.16) — omistajan löydökset klo 22.4x
+
+| # | Löydös | Rooli |
+|---|---|---|
+| 121 | Aloitusruutu: otsikon alta pois teksti "seuraa isoisän jäljillä…" (tai vastaava alaotsikko). | Natiivi-UI |
+| 122 | Lentokohtaus: tekstitys pois — tekstikenttä on lisäksi järkyttävän iso. Luenta kuuluu, teksti ei näy. | Natiivi-UI (Pelikoodari: luennan tekstin lähde) |
+| 123 | Lennon Ohita-nappi pienemmäksi ja läpinäkyvälle taustalle (vain teksti ja kevyt reuna, kuten Liiku-nappi). | Natiivi-UI |
+| 124 | Lennon jälkeinen "Ateena, päivä 1/80" -teksti näkyviin noin sekunnin pidempään. | Natiivi-UI (Natiiviseppä: ajoitus) |
+| 125 | Ateenan karttanostoista puuttuu symboleita, ja niiden teksteistä ei saa selvää. Vertaa webiin mitattuna: symbolit, fonttikoko, kontrasti, hehkupiste. | Natiiviseppä (nimiöt ja symbolit) + Pelikoodari (nostodata, mitkä symbolit puuttuvat) |
+| 126 | Meren ja maan välissä näkyy tuplaraja (pohjan antialiasoitu raja + vektorirantaviiva). Reseptin mukaan rantaviiva vektorina himmeänä tai pois → pois. | Natiiviseppä |
+| 127 | Maanraja vain kahden maan välillä, ei niiltä osin, joissa maa loppuu mereen; raja joka tapauksessa kevyempi. Rajadata: maa–maa-segmentit erilleen rannikosta. | Karttaseppä (rajadata) + Natiiviseppä (piirto, paino) |
+| 128 | Kermahuntu peittää nyt liikaa muita maita → peittoa alas (kuvapari, omistaja valitsee). | Natiiviseppä (Karttaseppä: sarjan peitto) |
+| 129 | Meressä syvyyserot näkyvät liian vähän → pohjan meren sävyliuku voimakkaammaksi (poltto, kuvapari). | Karttaseppä |
