@@ -155,7 +155,9 @@ namespace Matkakirja
             {
                 using var k = UnityWebRequest.Get(Juuri + polku);
                 k.timeout = 20;
+                float hakuAlku = Time.realtimeSinceStartup;
                 yield return k.SendWebRequest();
+                VerkkoOdotus.Haku("sisalto", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)k.downloadedBytes);
                 if (k.result != UnityWebRequest.Result.Success)
                 {
                     if (valinnainen && k.responseCode == 404)

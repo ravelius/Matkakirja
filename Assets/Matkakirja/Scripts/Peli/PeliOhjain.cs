@@ -478,7 +478,9 @@ namespace Matkakirja.Natiivi
             }
             using var k = UnityWebRequest.Get(Sisalto.Juuri + polku);
             k.timeout = 30;
+            float hakuAlku = Time.realtimeSinceStartup;
             yield return k.SendWebRequest();
+            VerkkoOdotus.Haku("peli", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)k.downloadedBytes);
             if (k.result != UnityWebRequest.Result.Success)
             {
                 if (hiljaa) Debug.Log($"MATKAKIRJA peli: {polku} ei saatavilla ({k.responseCode})");
@@ -497,10 +499,29 @@ namespace Matkakirja.Natiivi
             valmis(teksti);
         }
 
+        /// <summary>Verkko-odotusmittarin vaihe (VerkkoOdotus.PeliVaihe): saapuminen = 20 s perillä olosta.</summary>
+        string VerkkoVaihe()
+        {
+            if (Tila == SilmukanTila.Lataa || Tila == SilmukanTila.Virhe) return "kaynnistys";
+            if (AloituslentoKaynnissa) return "lento";
+            if (Tila == SilmukanTila.Aloitus) return "aloitus";
+            if (LinssiOhjain.Rekisteri?.Auki != null) return "linssi";
+            if (Tila == SilmukanTila.Lehti) return "lehti";
+            if (Tila == SilmukanTila.Matkalla) return "matka";
+            return Time.realtimeSinceStartup - verkkoSaapui < 20f ? "saapuminen" : "kaupunki";
+        }
+
+        float verkkoSaapui = -100f;
+
         IEnumerator Lataa()
         {
             Tila = SilmukanTila.Lataa;
             tilarivi.Aseta("Haetaan matkakirjaa…");
+            VerkkoOdotus.PeliVaihe = VerkkoVaihe;
+            AloituslentoPaattyi += _ => verkkoSaapui = Time.realtimeSinceStartup;
+            MatkaPerilla += k => { if (k != null) verkkoSaapui = Time.realtimeSinceStartup; };
+            // Verkko-odotus: pelin sisältö (kaupungit, reitit) ennen aloitusta; aloitusnäkymä odottaa tätä.
+            var sisaltoOdotus = VerkkoOdotus.Alku("kaynnistys", "sisalto");
             for (int yritys = 0; ; yritys++)
             {
                 yield return HaeVersio();
@@ -530,6 +551,7 @@ namespace Matkakirja.Natiivi
             StartCoroutine(HaeMaamerkit()); // taustalla (PeliOhjain.Maamerkit.cs)
 
             yield return HaeLaattamaarat();
+            VerkkoOdotus.Loppu(sisaltoOdotus);
             AloitaTaiJatka();
             KaynnistaSahke();
             yield return HaeKysymykset();

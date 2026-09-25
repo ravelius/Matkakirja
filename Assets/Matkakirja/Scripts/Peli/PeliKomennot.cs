@@ -34,6 +34,7 @@
 //   aani mittaa [s]           todellinen lähtötaso s sekuntia (AudioListener.GetOutputData: rms, huippu), soivat
 //                             lähteet ja iOS:n ääni-istunto (luokka, voimakkuus, reitti) peli-lokiin (löydös 49)
 //   tila [nimi]               kirjoittaa Documents/peli-tila.json (tai peli-tila-nimi.json)
+//   verkko [nollaa]           verkko-odotusmittarin yhteenveto (Documents/verkko-yhteenveto.json; rivit verkko-odotus.jsonl)
 //   odota s                   seuraava rivi s sekunnin päästä
 //   odota-tila tila [max s]   odottaa silmukan tilaa (Kartta, Dialogi, Matkalla, Lehti, Kysymys), oletus 20 s
 //   uusi-peli [siemen] [kaupunki]  uusi peli (oletus Lontoo; siemen = toistettava noppa); sulkee aloitusnäkymän
@@ -260,6 +261,10 @@ namespace Matkakirja.Natiivi
                 case "odota":
                     odotus = Time.unscaledTime + Luku(A(1), 1f);
                     return null;
+                case "verkko":
+                    // Verkko-odotusmittari (Kartta/VerkkoOdotus.cs): yhteenveto → verkko-yhteenveto.json; nollaa = summat pois.
+                    if (A(1) == "nollaa") { VerkkoOdotus.NollaaSummat(); return null; }
+                    return VerkkoOdotus.Yhteenveto();
                 case "odota-tila":
                 {
                     // Useampi tila pystyviivalla: odota-tila kartta|aloitus 40 (aloitusnäkymä käytössä tai ei).
