@@ -91,6 +91,8 @@ import {
   tarkistaRajat,
   tyhjanSyy,
   tyhjanTeksti,
+  ajatteluKentat,
+  katkaiseKokonaiseen,
   vertaaSalaisuus,
   SAHKE_VASTAUKSEN_KATTO,
   SAHKE_VASTAUKSET,
@@ -2581,9 +2583,85 @@ test('sanarajaan pysähtynyt vastaus jatketaan kerran samaan kuplaan', () => {
   const kehote = readFileSync(new URL('../tools/pollo/worker.js', import.meta.url), 'utf8');
   assert.match(kehote, /const MAX_TOKENS = 900;/);
   assert.match(kehote, /const JATKON_MAX_TOKENS = 350;/);
-  assert.match(kehote, /if \(stop === 'max_tokens'\) \{\s*const jatko = await jatkaKeskenJaanyt\(/);
+  assert.match(kehote, /let kesken = stop === 'max_tokens';\s*if \(kesken\) \{\s*const \{ teksti: jatko, stop: jatkonStop \} = await jatkaKeskenJaanyt\(/);
   assert.match(kehote, /async function jatkaKeskenJaanyt\(env, \{ jarjestelma, viestit \}, raaka\)/);
   assert.match(kehote, /kolmessa virkkeessä\.'/);
+});
+
+/*
+ * LÖYDÖS 67 (omistajan kuva 25.9.2026: vastaus loppui "…muurin alta, n").
+ * Sonnet 5 ajatteli oletuksena, ja ajattelu söi sanarajan. Pyyntö sulkee
+ * ajattelun mallin mukaan, eikä kesken sanan loppuvaa tekstiä lähetetä
+ * koskaan valmiina vastauksena.
+ */
+const palaksi = (teksti) => ({
+  laji: 'content_block_delta',
+  data: { type: 'content_block_delta', delta: { type: 'text_delta', text: teksti } },
+});
+const pysahdys = (syy) => ({ laji: 'message_delta', data: { type: 'message_delta', delta: { stop_reason: syy } } });
+
+test('ajattelu suljetaan mallin mukaan, eikä se syö vastauksen sanarajaa', async () => {
+  assert.deepEqual(ajatteluKentat('claude-sonnet-5'), { thinking: { type: 'disabled' } });
+  assert.deepEqual(ajatteluKentat('claude-opus-5'), { thinking: { type: 'disabled' } });
+  assert.deepEqual(ajatteluKentat('claude-haiku-4-5-20251001'), {});
+  // Näillä `disabled` on 400: pienin vaiva on ainoa säädin.
+  for (const malli of ['claude-fable-5-1', 'claude-mythos-5-1', 'claude-opus-5-5']) {
+    assert.deepEqual(ajatteluKentat(malli), { output_config: { effort: 'low' } }, malli);
+  }
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [palaksi('Sparta oli kaupunkivaltio.'), pysahdys('end_turn')],
+  });
+  const sonnet = await (async () => {
+    const vanha = SAHKE_ENV.POLLO_MALLI;
+    SAHKE_ENV.POLLO_MALLI = 'claude-sonnet-5';
+    try {
+      return await ajaChat({ runko: { striimi: true }, virta: [palaksi('Sparta.'), pysahdys('end_turn')] });
+    } finally {
+      if (vanha === undefined) delete SAHKE_ENV.POLLO_MALLI; else SAHKE_ENV.POLLO_MALLI = vanha;
+    }
+  })();
+  assert.equal(ajo.kutsut[0].thinking, undefined, 'Haiku-oletus ei saa thinking-kenttää');
+  assert.deepEqual(sonnet.kutsut[0].thinking, { type: 'disabled' });
+  assert.equal(sonnet.kutsut[0].model, 'claude-sonnet-5');
+});
+
+test('kesken sanan katkennut teksti leikataan viimeiseen kokonaiseen virkkeeseen', () => {
+  assert.equal(katkaiseKokonaiseen('Hän kaivoi. Löytö herätti kysymyksen, joka on seurannut sitä siit'),
+    'Hän kaivoi.');
+  assert.equal(katkaiseKokonaiseen('Hän huusi: "Troija!" Sitten [[Hisarlık]], n'), 'Hän huusi: "Troija!"');
+  assert.equal(katkaiseKokonaiseen('Seinämästä, muurin alta, n'), 'Seinämästä, muurin alta…');
+  assert.equal(katkaiseKokonaiseen('Versio 1.5 on hyvä'), 'Versio 1.5 on…');
+  assert.equal(katkaiseKokonaiseen('Valmis.'), 'Valmis.');
+  assert.equal(katkaiseKokonaiseen(''), '');
+});
+
+test('jos jatkokin pysähtyy sanarajaan, loppu ei pääty kesken sanan', async () => {
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [palaksi('Schliemann kaivoi Hisarlıkissa. Aarre löytyi muurin alta, n'), pysahdys('max_tokens')],
+    kerta: malliVastaus('ja löytö herätti kysymyksen, joka on seurannut sitä siit', 'max_tokens'),
+  });
+  assert.equal(ajo.kutsut.length, 2, 'jatkokutsu puuttui');
+  assert.equal(loppu(ajo).vastaus, 'Schliemann kaivoi Hisarlıkissa.');
+  assert.equal(loppu(ajo).syy, null);
+
+  // Jatko, joka lopettaa ajatuksen, kelpaa sellaisenaan.
+  const ehja = await ajaChat({
+    runko: { striimi: true },
+    virta: [palaksi('Aarre löytyi muurin alta, '), pysahdys('max_tokens')],
+    kerta: malliVastaus('aivan kivijalan vierestä.'),
+  });
+  assert.equal(loppu(ehja).vastaus, 'Aarre löytyi muurin alta, aivan kivijalan vierestä.');
+});
+
+test('kertavastaus ja uusinta leikkaavat sanarajaan pysähtyneen tekstin', async () => {
+  const kerta = await ajaChat({ kerta: malliVastaus('Troija löytyi. Muurin alta, n', 'max_tokens') });
+  assert.equal(kerta.data.vastaus, 'Troija löytyi.');
+  const uusinta = await ajaChat({
+    kerta: [malliVastaus(''), malliVastaus('Sparta oli valtio. Sen kunin', 'max_tokens')],
+  });
+  assert.equal(uusinta.data.vastaus, 'Sparta oli valtio.');
 });
 
 /*
