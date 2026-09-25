@@ -52,6 +52,25 @@ namespace Matkakirja
         }
         public bool Liikkeessa => liike != null;
 
+        /// <summary>
+        /// Pelinappulan laatikko ruudulla pikseleinä (y ylös) nimiladonnan pinoksi (web js/pallolauta/nimet.js
+        /// pinot + PELIMERKIN_VARA_PX): kuva <see cref="koko"/> pistettä korkea, leveys 32/36, jalka pisteessä
+        /// (Nappula.shader). false, jos nappula ei näy, on lentokoneena tai pallon takana.
+        /// </summary>
+        public bool Pino(Camera kamera, float kerroin, float vara, out Ruutulaatikko laatikko)
+        {
+            laatikko = default;
+            if (!Nakyy || kone || kamera == null || georeferenssi == null) return false;
+            var paikka = olio.transform.position;
+            var keskus = georeferenssi.transform.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero));
+            if (Vector3.Dot((paikka - keskus).normalized, (kamera.transform.position - paikka).normalized) < 0.02f) return false;
+            Vector3 r = kamera.WorldToScreenPoint(paikka);
+            if (r.z <= 0) return false;
+            float k = koko * kerroin, puoli = k * 0.5f * (32f / 36f), v = vara * kerroin;
+            laatikko = new Ruutulaatikko(r.x - puoli - v, r.y - v, r.x + puoli + v, r.y + k + v);
+            return true;
+        }
+
         [Header("Aloituslento")]
         [Tooltip("Lentokoneen koko iOS-pisteinä.")]
         public float koneKoko = 44f;

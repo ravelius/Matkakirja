@@ -386,6 +386,115 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(nayta[0], "noston nimiön alue ei ole varaus");
         }
 
+        static NimiLadonta.KaupunkiEhdokas KE(float x, float y, float leveys = 60, bool lukittu = false, NimiLadonta.NimenPaikka lukko = default) => new NimiLadonta.KaupunkiEhdokas
+        {
+            Piste = new Ruutulaatikko(x - 3, y - 3, x + 3, y + 3),
+            X = x, Y = y, Leveys = leveys, Korkeus = 10, Kirjain = 13, Sivu = 7.5f, Sallittu = true,
+            Lukittu = lukittu, Lukko = lukko,
+        };
+
+        static readonly Ruutulaatikko Ruutu = new Ruutulaatikko(0, 0, 1000, 800);
+
+        [Testi] static void NimiOikeallaKunVapaata()
+        {
+            var v = new Ruutuvaraukset(); v.Aloita(1);
+            var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(100, 200) }, null, Ruutu, 1f, v, nayta, paikat);
+            Oleta.Tosi(nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Alku && paikat[0].Dx == 7.5f && paikat[0].Dy == 0, paikat[0].ToString());
+        }
+
+        [Testi] static void NimiVaihtaaKylkeaKunOikeaVarattu()
+        {
+            // Web sijoitaKaupunginNimi: oikea → vasen → ylä → ala → kehä.
+            var v = new Ruutuvaraukset(); v.Aloita(1);
+            v.Varaa(new Ruutulaatikko(110, 190, 200, 210)); // oikea kylki
+            var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(100, 200) }, null, Ruutu, 1f, v, nayta, paikat);
+            Oleta.Tosi(nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Loppu, "vasen: " + paikat[0]);
+            v.Aloita(2);
+            v.Varaa(new Ruutulaatikko(0, 190, 200, 210)); // molemmat kyljet
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(100, 200) }, null, Ruutu, 1f, v, nayta, paikat);
+            Oleta.Tosi(nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Keski && paikat[0].Dy > 0, "ylös: " + paikat[0]);
+            v.Aloita(3);
+            v.Varaa(new Ruutulaatikko(0, 150, 200, 240)); // kyljet, ylä ja ala: kehä vinoon
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(100, 200) }, null, Ruutu, 1f, v, nayta, paikat);
+            Oleta.Tosi(!nayta[0] || paikat[0].Dy >= 40 || paikat[0].Dy <= -50 || System.Math.Abs(paikat[0].Dx) > 100, "kehä ohittaa esteen: " + paikat[0]);
+        }
+
+        [Testi] static void NimiEiValuRuudunUlkopuolelle()
+        {
+            // Web RUUDUN ULKOPUOLI ON ESTE: oikeassa reunassa nimi kääntyy vasemmalle.
+            var v = new Ruutuvaraukset(); v.Aloita(1);
+            var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(980, 400) }, null, Ruutu, 1f, v, nayta, paikat);
+            Oleta.Tosi(nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Loppu, paikat[0].ToString());
+        }
+
+        [Testi] static void LiikevaraPitaaKyljenReunalla()
+        {
+            // Web liikevara: reunalle tullut kaupunki saa saman kyljen (oikea), mutta ei näy eikä lukitu ennen kuin mahtuu.
+            var v = new Ruutuvaraukset(); v.Aloita(1);
+            var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(980, 400) }, null, Ruutu, 1f, v, nayta, paikat, 500f);
+            Oleta.Tosi(!nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Alku, "oikea, piilossa: " + paikat[0]);
+            v.Aloita(2);
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(800, 400) }, null, Ruutu, 1f, v, nayta, paikat, 500f);
+            Oleta.Tosi(nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Alku, "mahtuu: näkyy oikealla");
+        }
+
+        [Testi] static void NappulanPinoVaistetaanYlos()
+        {
+            // Web VÄISTÖKEHÄ PELIMERKIN YMPÄRI: piste pinon sisällä → ensin ylös pinon yläpuolelle.
+            var v = new Ruutuvaraukset(); v.Aloita(1);
+            var pino = new Ruutulaatikko(100 - 20, 200 - 4, 100 + 20, 200 + 40);
+            var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(100, 200), KE(130, 220, 40) }, new[] { pino }, Ruutu, 1f, v, nayta, paikat);
+            var l = NimiLadonta.NimenLaatikko(100, 200, paikat[0], 60, 10, 1f);
+            Oleta.Tosi(nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Keski && l.Y0 >= pino.Y1, "pinon yläpuolella: " + l);
+            // Naapuri, jonka piste on pinon sisällä, väistää samaa pinoa; nimi ei osu pinoon.
+            var l2 = NimiLadonta.NimenLaatikko(130, 220, paikat[1], 40, 10, 1f);
+            Oleta.Tosi(!nayta[1] || !l2.Leikkaa(pino), "naapuri ei pinon päällä: " + l2);
+        }
+
+        [Testi] static void LukittuEiVaihdaKylkea()
+        {
+            // Web LUKKO: lukittu nimi pysyy kyljessään niin kauan kuin paikka on vapaa; varattuna se etsii uuden paikan.
+            var vasen = new NimiLadonta.NimenPaikka(-7.5f, 0, NimiLadonta.NimenAnkkuri.Loppu);
+            var v = new Ruutuvaraukset(); v.Aloita(1);
+            var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(100, 200, lukittu: true, lukko: vasen) }, null, Ruutu, 1f, v, nayta, paikat);
+            Oleta.Tosi(nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Loppu, "lukko pitää vasemman: " + paikat[0]);
+            v.Aloita(2);
+            v.Varaa(new Ruutulaatikko(0, 190, 95, 210));
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(100, 200, lukittu: true, lukko: vasen) }, null, Ruutu, 1f, v, nayta, paikat);
+            Oleta.Tosi(nayta[0] && paikat[0].Ank != NimiLadonta.NimenAnkkuri.Loppu, "varattu lukko vapautuu, uusi paikka: " + paikat[0]);
+        }
+
+        [Testi] static void LaudanOmaAsetteluEnsin()
+        {
+            // Paketin nimionAnkkuri (webin maailmankartan la/lx/ly), esimerkkinä end −16/14 → vasemmalle ja hieman alas.
+            Oleta.Tosi(NimiLadonta.OmaPaikka("end", -16, 14, 13, 1f, out var p), "la annettu");
+            Oleta.Tosi(p.Ank == NimiLadonta.NimenAnkkuri.Loppu && Lahella(p.Dx, -16 * 11f / 13f) && p.Dy < 0, p.ToString());
+            Oleta.Tosi(!NimiLadonta.OmaPaikka(null, 0, 0, 13, 1f, out _) && !NimiLadonta.OmaPaikka("", 0, 0, 13, 1f, out _), "ei la → ei ehdokasta");
+            var e = KE(500, 400); e.OnOma = true; e.Oma = p;
+            var v = new Ruutuvaraukset(); v.Aloita(1);
+            var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { e }, null, Ruutu, 1f, v, nayta, paikat);
+            Oleta.Tosi(nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Loppu, "oma ensin: " + paikat[0]);
+        }
+
+        static bool Lahella(float a, float b) => System.Math.Abs(a - b) < 1e-3f;
+
+        [Testi] static void EhdokkaitaKahdeksanSuuntaanKahdellaEtaisyydella()
+        {
+            var p = new List<NimiLadonta.NimenPaikka>();
+            NimiLadonta.NimenPaikat(13, 7.5f, null, 2f, p);
+            Oleta.Sama(4 + 16, p.Count, "4 tavanomaista + 2 × 8 kehää");
+            NimiLadonta.NimenPaikat(13, 7.5f, new Ruutulaatikko(-10, -4, 10, 40), 2f, p);
+            Oleta.Sama(4 + 4 + 16, p.Count, "pinon kehä edelle");
+            Oleta.Tosi(p[0].Ank == NimiLadonta.NimenAnkkuri.Keski && p[0].Dy > 40, "pinon ensimmäinen ylös: " + p[0]);
+        }
+
         [Testi] static void OsuuPaitsiOhittaaVainSamanLaatikon()
         {
             var v = new Ruutuvaraukset();

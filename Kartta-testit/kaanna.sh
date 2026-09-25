@@ -29,6 +29,7 @@ LAHTEET="
 ../Assets/Matkakirja/Kartta/NimiLadonta.cs
 ../Assets/Matkakirja/Kartta/NostoSaannot.cs
 ../Assets/Matkakirja/Kartta/Panorointi.cs
+../Assets/Matkakirja/Kartta/ReittiMitat.cs
 ../Assets/Matkakirja/Kartta/Saapumisnakyma.cs
 ../Assets/Matkakirja/Kartta/Vektorisolut.cs
 ../Assets/Matkakirja/Kartta/Viivaleveys.cs
