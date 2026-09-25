@@ -116746,6 +116746,207 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Casa Blanca (San Juan)',
         },
       ],
+      /*
+       * Matkailijalle (Turistioppaat-paketti, erä 1, 25.9.2026).
+       * Taustatiedot Wikipediasta, Wikivoyagesta ja El Yunquen osalta
+       * USDA Forest Servicen sivulta — teksti omaa. Linnoitukset on
+       * rajattu pois, koska Linnoitukset-kategoria kertoo ne; herokuvan
+       * garita on mukana tunnuskuvana, ei linnoitusaiheena. Kuvat
+       * tarkistettu Commonsin extmetadatasta 25.9.2026 (lisenssi,
+       * kuvaaja, kuvaus, koko). Modernit veistokset (Raíces-suihkulähde,
+       * La Placitan avokadoveistos) jätettiin tarkoituksella pois:
+       * Yhdysvaltain laissa ei ole veistosten panoraamavapautta.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Bastion San Antonio garita 1 - San Juan NHS Puerto Rico.jpg',
+          lyhyt: 'Garita, kaupunginmuurin kupolikattoinen vahtikoju, on San Juanin tunnetuin tunnuskuva.',
+          selite: 'San Antonion bastionin garita vartioi Vanhan San Juanin '
+            + 'pohjoismuuria, ja samanlainen El Morron garita on painettu '
+            + 'Puerto Ricon vuoden 2009 neljännesdollariin.',
+          lahde: 'Ian Poellet, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'San Juan on kaksi kaupunkia peräkkäin. Kalliosaaren vanha '
+          + 'kaupunki on muurien sisällä: sinertäviä katukiviä, '
+          + 'pastellinvärisiä taloja ja rautaparvekkeita, joiden välissä '
+          + 'kuljetaan jalan. Siltojen takana alkaa uudempi San Juan, jossa '
+          + 'Condadon ja Isla Verden hotellit seisovat suoraan hiekkarannalla '
+          + 'ja Santurcen torikortteli herää vasta illalla. Puerto Rico on '
+          + 'Yhdysvaltain aluetta, joten suomalainen tarvitsee saman '
+          + 'ESTA-luvan kuin mantereelle matkustaessaan, ja rahana on '
+          + 'dollari. Sademetsään pääsee päiväretkellä, mutta luontoa kuulee '
+          + 'kaupungissakin: pimeän tultua pikkuruisten coquí-sammakoiden '
+          + 'ko-kii-huuto kaikuu puutarhoista.',
+        artikkeli: {
+          nimi: 'Matkailijan San Juan',
+          teksti: 'San Juan on kaksi kaupunkia: muurien sisäinen vanha ja rantojen uusi.',
+          nosto: 'Piña coladan syntymäpaikaksi ilmoittautuu kaksi San Juanin '
+            + 'baaria, ja kumpikin sekoittaa todisteensa tilauksesta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Muurien sisällä jalan',
+              teksti: 'Vanha San Juan kuljetaan jalan. Kaupunki on tiivis: '
+                + 'vuonna 1876 muurien sisällä asui 24 000 ihmistä vain 25 '
+                + 'hehtaarin alueella, eikä autolle ole tilaa nykyäänkään — '
+                + 'pysäköintipaikkoja ei käytännössä ole. Kadut nousevat ja '
+                + 'laskevat kalliosaaren mukana, ja siniset katukivet ovat '
+                + 'sadekuuron jälkeen liukkaita, joten kävelykengät voittavat '
+                + 'sandaalit. Calle del Criston päässä on pieni Capilla del '
+                + 'Cristo, jonka rakentaminen alkoi 1753; legendan mukaan '
+                + 'kadulla ratsastettu kilpa päättyi siihen, että ratsastaja '
+                + 'syöksyi jyrkänteeltä mutta jäi henkiin. Illansuussa '
+                + 'kannattaa laskeutua lahden rantaan Paseo de la '
+                + 'Princesalle, joka rakennettiin 1852–1854. Nimensä '
+                + 'kävelykatu jakaa varrellaan seisovan La Princesan '
+                + 'vankilan kanssa: vankila toimi vuodesta 1837 vuoteen 1965, '
+                + 'joten isoisän matkan aikaan se oli täydessä käytössä.',
+              /*
+               * Karuselli seuraa jakson kulkua: värikäs katu, Criston
+               * kappeli ja Paseo de la Princesa. Kaikki kolme ovat
+               * vanhan kaupungin muurien sisä- tai juurella.
+               */
+              kuva: [
+                {
+                  tiedosto: 'Balconies on Calle San Sebastian.jpg',
+                  lyhyt: 'Calle San Sebastiánin rautaparvekkeiden alla vietetään joka tammikuu SanSe-katujuhlaa.',
+                  selite: 'Calle San Sebastiánin värikkäät talot '
+                    + 'rautaparvekkeineen reunustavat katua, jonka juhliin '
+                    + 'tulee tammikuun kolmantena viikonloppuna yli 200 000 '
+                    + 'ihmistä.',
+                  lahde: 'vxla, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Capilla del Santo Cristo de la Salud.jpg',
+                  lyhyt: 'Capilla del Criston rakentaminen alkoi 1753 Calle del Criston päähän.',
+                  selite: 'Legendan mukaan Capilla del Cristo muistuttaa '
+                    + 'kilparatsastajasta, joka syöksyi Calle del Criston '
+                    + 'päästä jyrkänteeltä ja jäi ihmeen kaupalla henkiin.',
+                  lahde: 'H. Michael Miley, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Paseo de la Princesa, San Juan - IMG 0317.JPG',
+                  lyhyt: 'Paseo de la Princesa kulkee kaupunginmuurin juurella San Juanin lahden rannassa.',
+                  selite: 'Paseo de la Princesa rakennettiin 1852–1854, ja '
+                    + 'se jakaa nimensä varrellaan seisovan La Princesan '
+                    + 'vankilan kanssa, joka toimi vuosina 1837–1965.',
+                  lahde: 'Daderot, Wikimedia Commons (PD)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Atlantin rannat',
+              teksti: 'Rannalle ei tarvitse lähteä kauas: San Juanin '
+                + 'hiekkarannat alkavat vanhan kaupungin itäpuolelta ja '
+                + 'jatkuvat lentoasemalle asti. Lähimpänä on Escambrón '
+                + 'Puerta de Tierrassa, jonka edustan koralliriutta taltuttaa '
+                + 'aallot, joten se sopii lapsiperheille ja tyynessä vedessä '
+                + 'näkee kaloja. Samassa kaupunginosassa Caribe Hilton otti '
+                + 'vastaan ensimmäiset vieraansa 9. joulukuuta 1949, ja sen '
+                + 'pihalla seisoo yhä pieni espanjalainen San Gerónimon '
+                + 'linnake. Sillan yli alkaa Condado, jonka rakentaminen '
+                + 'alkoi 1908 ja jonka rannalla seisoo jo vuonna 1919 '
+                + 'rakennettu Condado Vanderbilt -hotelli. Kauempana Ocean '
+                + 'Parkin ranta on kaupungin laajin, ja sen takana on '
+                + 'rauhallisempaa asuinaluetta. Isla Verden hotellit ovat '
+                + 'aivan lentoaseman kupeessa.',
+              kuva: {
+                tiedosto: 'Condado, San Juan, Puerto Rico.jpg',
+                lyhyt: 'Condadon ranta kaartuu hotellirivin edessä, ja kaupunginosa sai nimensä kreivi Pablo Ubarrilta.',
+                selite: 'Condadon rakentaminen alkoi 1908, ja kaupunginosa '
+                  + 'on nimetty kreivi Pablo Ubarrin mukaan, joka rakensi '
+                  + 'San Juanin raitiotien vuonna 1880.',
+                lahde: 'Ktorrespr, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Mofongo, lechón ja piña colada',
+              teksti: 'Puertoricolaisen keittiön tunnusruoka on mofongo: '
+                + 'paistetut keittobanaanit survotaan puisessa '
+                + 'pilón-huhmareessa valkosipulin, rasvan ja rapeiden '
+                + 'porsaankamaroiden kanssa ja muotoillaan kupoliksi '
+                + 'lautaselle. Resepti yhdistää länsiafrikkalaisen fufun, '
+                + 'taínojen juuresperinteen ja espanjalaiset ainekset. '
+                + 'Juhlaruoka on lechón, kokonaisena hiilloksella paahdettu '
+                + 'porsas; sitä hakemaan ajetaan viikonloppuisin Cayeyn '
+                + 'vuorille Guavaten ”porsastielle”, jonka varrella '
+                + 'lechonerat seuraavat toisiaan. Piña coladan '
+                + 'syntymäpaikaksi ilmoittautuu kaksi San Juanin paikkaa: '
+                + 'Caribe Hiltonin mukaan baarimikko Ramón Marrero tarjoili '
+                + 'juoman ensimmäisen kerran 15. elokuuta 1954, '
+                + 'Barrachina-ravintolan mukaan Ramón Portas Mingot keksi '
+                + 'sen 1963. Kiista ei ole haitannut: vuonna 1978 piña '
+                + 'coladasta tuli Puerto Ricon virallinen kansallisjuoma. '
+                + 'Kahvia kannattaa maistaa myös, sillä 1800-luvun lopulla '
+                + 'saari oli maailman seitsemänneksi suurin kahvintuottaja.',
+              kuva: {
+                tiedosto: 'Mofongo de chicharrón de cerdo.jpg',
+                lyhyt: 'Mofongo survotaan keittobanaaneista, valkosipulista ja rapeasta porsaankamarasta.',
+                selite: 'Mofongon esikuva on länsiafrikkalainen fufu, ja '
+                  + 'nimi juontuu kikongon sanasta mfwenge-mfwenge, joka '
+                  + 'tarkoittaa suurta määrää mitä tahansa.',
+                lahde: 'Arnold Gatilao, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Salsaa, reggaetonia ja La Placita',
+              teksti: 'Santurcen La Placita on päivällä tori ja illalla '
+                + 'katujuhla. Plaza del Mercadon torialue perustettiin 1910, '
+                + 'ja hallissa myydään yhä hedelmiä ja lihaa, mutta '
+                + 'torstaista lauantaihin ympäröivät baarit työntävät '
+                + 'musiikin kadulle ja tanssi jatkuu pitkälle yöhön. '
+                + 'Soitossa kuuluu salsaa, jonka ”yliopistoksi” kutsuttu El '
+                + 'Gran Combo perustettiin San Juanissa 21. toukokuuta 1962, ja '
+                + 'reggaetonia, joka syntyi 1990-luvun alussa San Juanin '
+                + 'underground-skenessä autojen takakonteista myydyillä '
+                + 'kaseteilla — helmikuussa 1995 poliisi takavarikoi niitä '
+                + 'kuudesta levykaupasta säädyllisyyslakien nojalla. Muurin '
+                + 'ulkopuolinen La Perla pääsi maailmankartalle, kun Luis '
+                + 'Fonsin ja Daddy Yankeen Despacito-video kuvattiin siellä; '
+                + 'elokuussa 2017 siitä tuli ensimmäinen YouTube-video, jolla '
+                + 'oli kolme miljardia katselukertaa. Tammikuun kolmantena '
+                + 'viikonloppuna vanha kaupunki täyttyy Calle San '
+                + 'Sebastiánin SanSe-juhlista.',
+              kuva: {
+                tiedosto: 'Edificio de la Plaza del Mercado de Santurce en Puerto Rico.jpg',
+                lyhyt: 'Santurcen Plaza del Mercado on päivällä tori, mutta illalla sen ympärille kokoontuu katujuhla.',
+                selite: 'Santurcen torialue perustettiin 1910, ja La '
+                  + 'Placitana tunnettu kortteli on päivällä hedelmätori ja '
+                  + 'iltaisin baarien ja tanssin keskus.',
+                lahde: 'Betxypr, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Päivä sademetsässä',
+              teksti: 'Noin tunnin ajomatkan päässä itään kohoaa El Yunque, '
+                + 'Yhdysvaltain kansallismetsäjärjestelmän ainoa trooppinen '
+                + 'sademetsä. Espanjan kuningas Alfonso XII julisti sen '
+                + 'metsänsuojelualueeksi 1876, vain kolme vuotta isoisän '
+                + 'matkan jälkeen. Paikoin sadetta tulee yli kuusi metriä '
+                + 'vuodessa, joten sadetakki kuuluu varustukseen '
+                + 'kuivimpanakin päivänä. Tien PR-191 varrella La Coca '
+                + '-putous syöksyy noin 26 metriä suoraan tien viereen, ja '
+                + 'vuonna 1963 rakennetusta Yokahú-tornista näkee metsän '
+                + 'yli rannikolle asti. María-hirmumyrsky runteli metsää '
+                + 'syyskuussa 2017, ja El Portalin vierailukeskus avattiin '
+                + 'uudelleen vasta tammikuussa 2022. Hämärissä metsä alkaa '
+                + 'huutaa: pikkuruinen coquí-sammakko, Puerto Ricon '
+                + 'kansallisena tunnuksena pidetty eläin, toistaa nimeään '
+                + 'jopa 73 desibelin voimalla. Ensimmäinen tavu karkottaa '
+                + 'kilpailevat koiraat, toinen houkuttelee naaraita.',
+              kuva: {
+                tiedosto: 'El Yunque N.F. 01.jpg',
+                asettelu: 'kapea',
+                lyhyt: 'La Coca -putous syöksyy noin 26 metriä El Yunquen päätien PR-191 viereen.',
+                selite: 'La Coca -putous näkyy suoraan El Yunquen '
+                  + 'päätieltä PR-191, joten sen katsomiseen ei tarvita '
+                  + 'patikointia.',
+                lahde: 'LBM1948, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
       ennenNyt: [
         {
           tiedosto: 'St. Cristobal Fortress, San Juan, Puerto Rico LCCN96522666.jpg',
