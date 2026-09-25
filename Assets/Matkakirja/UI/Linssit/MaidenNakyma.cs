@@ -348,7 +348,7 @@ namespace Matkakirja.Natiivi
             kylttiMaa = m;
             if (m == null) { kyltti.style.display = DisplayStyle.None; return; }
             kylttiNimi.text = (m.Nimi ?? m.Id).ToUpperInvariant();
-            kylttiLehti.style.display = string.IsNullOrEmpty(m.Maalehti) ? DisplayStyle.None : DisplayStyle.Flex;
+            // Web .maa-pilleri: ei "Lue lehti" -riviä; koko pilleri avaa lehden (AvaaLehti).
             AsetaLippu(kylttiLippu, m, 16f);
             Asettele();
             kyltti.style.display = DisplayStyle.Flex;
