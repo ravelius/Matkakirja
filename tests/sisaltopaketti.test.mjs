@@ -31,7 +31,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 
 import { kokoaVienti, JUURI, SKEEMAVERSIO_TARKKA } from '../tools/vienti/vie-sisalto.mjs';
-import { kokoaJulkaisu, tarkistaPaketti, paketinTiiviste, MIN_SOVELLUS } from '../tools/vienti/julkaise-sisalto.mjs';
+import { kokoaJulkaisu, tarkistaPaketti, paketinTiiviste, MIN_SOVELLUS, kokoaTasoittain } from '../tools/vienti/julkaise-sisalto.mjs';
 import { validoiNimella } from '../tools/vienti/validoi.mjs';
 import { ISO2 } from '../tools/vienti/iso2.mjs';
 import { PAAKAUPUNGIT } from '../tools/vienti/paakaupungit.mjs';
@@ -1383,5 +1383,33 @@ test('skeema 1.43: maakuntarajojen vari webin aineistosta (Natiiviseppä)', () =
   const alueet = JSON.parse(tiedostot.get('kokoelmat/maakuntarajat.json')).alkiot;
   assert.ok(alueet.every((a) => Number.isInteger(a.vari) && a.vari >= 0 && a.vari <= 4), 'vari 0–4');
   assert.ok(new Set(alueet.map((a) => a.vari)).size >= 3);
+});
+
+test('taustapäivitys vaihe 1: hakemisto kattaa paketin ja osoittimen tiiviste lasketaan sen riveistä', () => {
+  const j = kokoaJulkaisu({ tiedostot, commit: 'abc1234', julkaistu: JULKAISTU });
+  assert.deepEqual(j.virheet, []);
+  const h = JSON.parse(j.hakemisto.teksti);
+  assert.deepEqual(h.tiedostot.map((r) => r.polku), [...tiedostot.keys()].sort());
+  const sha = (t) => createHash('sha256').update(t).digest('hex');
+  for (const r of h.tiedostot) {
+    assert.equal(r.sha256, sha(tiedostot.get(r.polku)), r.polku);
+    assert.equal(r.tavuja, Buffer.byteLength(tiedostot.get(r.polku)), r.polku);
+    assert.ok(r.siirto > 0 && r.siirto <= r.tavuja + 16, r.polku);
+  }
+  // Natiivin tarkistus: rivit "polku\tsha256\n" aakkosjärjestyksessä → osoitin.sha256.
+  assert.equal(sha(h.tiedostot.map((r) => `${r.polku}\t${r.sha256}\n`).join('')), j.osoitin.sha256);
+  assert.deepEqual(j.osoitin.hakemisto, { polku: 'hakemisto.json', sha256: sha(j.hakemisto.teksti), tavuja: Buffer.byteLength(j.hakemisto.teksti) });
+  assert.equal(j.osoitin.tavuja, h.tiedostot.reduce((a, r) => a + r.tavuja, 0));
+  assert.ok(j.osoitin.siirto < j.osoitin.tavuja);
+  assert.ok(!tiedostot.has('hakemisto.json'), 'hakemisto ei kuulu pakettiin eikä tiivisteeseen');
+});
+
+test('taustapäivitys vaihe 1: tasoittain periytyy ja uusi taso jättää vanhan viimeiseen kelpaavaan', () => {
+  const eka = kokoaJulkaisu({ tiedostot, commit: 'abc1234', julkaistu: JULKAISTU }).osoitin;
+  assert.deepEqual(eka.tasoittain, { ios: { [String(MIN_SOVELLUS.ios)]: 1 } });
+  assert.deepEqual(kokoaTasoittain({ tasoittain: { ios: { 1: 106 } } }, 107, { ios: 1 }), { ios: { 1: 107 } });
+  assert.deepEqual(kokoaTasoittain({ tasoittain: { ios: { 1: 107 } } }, 108, { ios: 2 }), { ios: { 1: 107, 2: 108 } });
+  assert.deepEqual(kokoaTasoittain(null, 5, { ios: 1 }), { ios: { 1: 5 } });
+  assert.ok(validoiNimella({ ...eka, tasoittain: { ios: { x: 1 } } }, 'osoitin.schema.json').length);
 });
 
