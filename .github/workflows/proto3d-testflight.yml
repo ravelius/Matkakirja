@@ -53,6 +53,10 @@ on:
         description: 'CFBundleVersion — oletus aikaleima (VVVVKKPPTTMM), koska versiolla 1.0.0 on jo aikaleimanumeroita.'
         type: string
         default: ''
+      proto_ref:
+        description: 'Proton haara tai commit Unity-vientiin (tyhjä = master). Build 14: juna/b13-commit, jos Natiiviseppä ei ehdi mergetä (puu = testattu, Fable 25.9.2026).'
+        type: string
+        default: ''
       sisainen_ryhma:
         description: 'Vie build latauksen jälkeen sisäiselle testiryhmälle (testaaja = TESTFLIGHT_TESTAAJA tai tilin omistaja)'
         type: boolean
@@ -91,6 +95,8 @@ jobs:
       # Viimeisimmän TestFlightiin ladatun buildin ordinaali (ajurin levyllä kuten YOMERKKI).
       LASKURI: /Users/Shared/Claude/proto-3d/lokit/testflight-ordinaali.txt
       SISAINEN_RYHMA: ${{ github.event_name == 'schedule' || inputs.sisainen_ryhma }}
+      # Yöajo (schedule) vie aina masterin; käsiajo voi antaa haaran tai commitin.
+      PROTO_REF: ${{ inputs.proto_ref || 'master' }}
 
     steps:
       - name: Onko Unity-projekti paikallaan
@@ -124,9 +130,10 @@ jobs:
           echo $! > "$KAANNOSLUKKO/pid"
           echo "testflight ajo $GITHUB_RUN_ID $(date +%H:%M)" > "$KAANNOSLUKKO/kuka"
           echo "LUKKO_OMA=1" >> "$GITHUB_ENV"
-          git checkout -q --detach master
+          git rev-parse -q --verify "$PROTO_REF^{commit}" >/dev/null || { echo "::error::Proton ref $PROTO_REF ei löydy"; exit 1; }
+          git checkout -q --detach "$PROTO_REF"
           git reset -q --hard
-          echo "Käännöskopio: $(git rev-parse --short HEAD) (master)"
+          echo "Käännöskopio: $(git rev-parse --short HEAD) ($PROTO_REF)"
 
       # Aikaleima buildinumeroksi: App Store Connect hylkää saman
       # versio+build-parin kahdesti. Unity-viennissä sama numero menee
@@ -174,10 +181,10 @@ jobs:
           # saman projektin varaus näkyy Library-lukosta alla (24.9.2026, build 10 ohittui turhaan).
           # Oma käännöskopio: Natiivisepän Unity pääkopiossa ei estä; vain tämän kopion Library-lukko.
           if [ -z "$syy" ] && [ -e Temp/UnityLockfile ] && lsof Temp/UnityLockfile >/dev/null 2>&1; then syy="Library-lukko on varattu"; fi
-          if [ -z "$syy" ] && [ "$(git rev-parse HEAD)" != "$(git rev-parse master)" ]; then syy="käännöskopio ei ole masterissa"; fi
+          if [ -z "$syy" ] && [ "$(git rev-parse HEAD)" != "$(git rev-parse "$PROTO_REF^{commit}")" ]; then syy="käännöskopio ei ole kohdassa $PROTO_REF"; fi
           muutokset=$(git status --porcelain | grep -v " Assets/Matkakirja/Materiaalit/" || true)
           if [ -z "$syy" ] && [ -n "$muutokset" ]; then syy="työkopiossa on muutoksia: $(echo "$muutokset" | head -3 | tr '\n' ' ')"; fi
-          master=$(git rev-parse --short master)
+          master=$(git rev-parse --short "$PROTO_REF^{commit}")
           edellinen=$(cat "$YOMERKKI" 2>/dev/null || true)
           if [ -z "$syy" ] && [ "$master" = "$edellinen" ]; then syy="master $master on jo ladattu"; fi
           echo "PROTO_MASTER=$master" >> "$GITHUB_ENV"
