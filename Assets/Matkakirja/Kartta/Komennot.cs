@@ -36,7 +36,7 @@ namespace Matkakirja
     ///   palvelin                  laattapalvelimen osumat lokiin (offline / välimuisti / verkko)
     ///   valot <aihe>|kaikki|ei|tila     karttavalot (AiheValot), tila = laskurit lokiin
     ///   valot osoita <id>               napauttaa valon kohtaa (esim. skandaali:shakkiturkkilainen)
-    ///   maakunta <ISO3:tunnus>|pois  maakunnan värjäys (B17)
+    ///   maakunta <ISO3:tunnus>|pois|tila | maakunta maa ISO3|pois   maakunnan värjäys (B17); maa = pakotettu kerroksen maa
     ///   maat paalle|pois | maat korosta ISO3 [#täyttö #raja] | maat pois-korostus   Maatila (MaaKartta)
     ///   lentokaaret lähtö kohde … | lentokaaret pois   lentolistan kaaret + kameran sovitus (Reitit)
     ///   nappula aseta lat lon | aja lat lon … kesto | lenna lat0 lon0 lat1 lon1 kesto | aloitus lat0 lon0 lat1 lon1 kesto | pois
@@ -622,13 +622,20 @@ namespace Matkakirja
                 case "maakunta":
                 {
                     // maakunta <ISO3:tunnus> | maakunta pois | maakunta tila (B17, sama kuin Natiivi-UI:n Maakunnat-valinta)
+                    // maakunta maa <ISO3> | maakunta maa pois: kerroksen maa pakotetaan (oletus pelaajan maa, skeema 1.42)
                     var mk = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.maakunnat : null;
                     if (mk == null) break;
                     if (o[1] == "tila")
                     {
                         // Löydös 74 d: vektorirajat vasta tiheydestä rajatMinTiheys, ja pois linssin ajan.
-                        Debug.Log($"MATKAKIRJA maakunnat: päällä {mk.Paalla}, rajojen häive {mk.RajaHaive:0.00}, " +
-                                  $"tiheys {mk.RajaTiheys:0.0} px/° (rajat tiheydestä {mk.rajatMinTiheys:0})");
+                        Debug.Log($"MATKAKIRJA maakunnat: päällä {mk.Paalla}, maa {mk.NykyinenMaa ?? "-"} (pakotettu {mk.Pakotettu ?? "-"}), " +
+                                  $"rajojen häive {mk.RajaHaive:0.00}, tiheys {mk.RajaTiheys:0.0} px/° (rajat tiheydestä {mk.rajatMinTiheys:0})");
+                        break;
+                    }
+                    if (o[1] == "maa")
+                    {
+                        mk.Pakotettu = o.Length > 2 && o[2] != "pois" ? o[2].ToUpperInvariant() : null;
+                        mk.MaaTila(true);
                         break;
                     }
                     mk.KorostusPois(null);
