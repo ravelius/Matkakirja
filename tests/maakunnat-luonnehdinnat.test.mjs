@@ -15,6 +15,7 @@ const ODOTETUT_MAARAT = {
   BEL: 11,
   DNK: 5,
   SVK: 8,
+  FIN: 18,
 };
 
 /*
@@ -23,9 +24,9 @@ const ODOTETUT_MAARAT = {
  * koskee siis yhä vain alkuperäisiä 97 aluetta (7 maata), kunnes
  * GRC:n kuvat saapuvat kuvaputkelta ja se lasketaan mukaan. NLD, BEL,
  * DNK ja SVK lisättiin samana päivänä samalla tavalla (erä 1, vain
- * `lyhyt`).
+ * `lyhyt`), samoin FIN 25.9.2026.
  */
-const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK']);
+const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN']);
 const KUVATTU_VALMIIKSI = (iso) => !ERASSA_1.has(iso);
 
 test('jokaisella maalla on odotettu määrä alueita', () => {

@@ -2460,4 +2460,106 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Oravan linna kohoaa korkealla kalliolla joen yllä, ja moni vuoden 1922 kauhuklassikon Nosferatun kohtaus kuvattiin sen muureilla.',
     },
   },
+  /*
+   * FIN (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.FIN:n tunnuksia
+   * TÄSMÄLLEEN (Natural Earthin englanninkielinen nimi, esim.
+   * "Finland Proper" = Varsinais-Suomi). Vain `lyhyt` tässä erässä.
+   * Lähteet (tarkistettu 25.9.2026; en = en-Wikipedia, fi = fi-Wikipedia):
+   *   South Karelia         — en Imatrankoski (pato 1929, avataan päivittäin
+   *                           kesä–elokuussa klo 18)
+   *   Southern Ostrobothnia — en Tangomarkkinat (world's oldest tango
+   *                           festival, Seinäjoki, vuodesta 1985)
+   *   Southern Savonia      — en Saimaa ringed seal (vain Saimaassa, n. 500
+   *                           yksilöä, eristyksissä n. 9 500 vuotta)
+   *   Kainuu                — fi Hiljainen kansa (Suomussalmi, vt 5:n
+   *                           varressa, turvepäät, puetaan vuodenajan mukaan)
+   *   Tavastia Proper       — en Iittala (lasitehdas 1881); fi Iittala
+   *                           (taajama kuuluu Hämeenlinnaan)
+   *   Central Ostrobothnia  — en Kokkola (Halkokarin kahakka 7.6.1854,
+   *                           tykkivene English Parkissa, palautuspyynnöt
+   *                           torjuttu)
+   *   Central Finland       — en Rally Finland (fastest event in the WRC,
+   *                           blind crests and big jumps, Jyväskylä)
+   *   Kymenlaakso           — fi Langinkosken keisarillinen kalastusmaja
+   *                           (Aleksanteri III, valmis 1889, useana kesänä);
+   *                           en Langinkoski (lohikoski, Kotka)
+   *   Lapland               — en Inari, Finland (suurin kunta, neljä
+   *                           virallista kieltä)
+   *   Pirkanmaa             — en Tampere ("Sauna Capital of the World",
+   *                           eniten yleisiä saunoja)
+   *   Ostrobothnia          — en Kvarken (maannousu lähes 10 mm/v, Unesco
+   *                           2006, Mustasaari/Korsholm)
+   *   North Karelia         — en Koli National Park (Pielisen länsiranta;
+   *                           Sibelius, Aho, Järnefelt)
+   *   Northern Ostrobothnia — en Air Guitar World Championships (Oulu, 1996)
+   *   Northern Savonia      — fi Eukonkanto (MM-kisat Sonkajärvellä
+   *                           vuosittain vuodesta 1992)
+   *   Päijät-Häme           — fi Salpausselän hyppyrimäet; en Salpausselkä
+   *                           (reunamoreeni 12 250–10 400 v. sitten); en Lahti
+   *                           (Salpausselkä UNESCO Global Geopark 2022)
+   *   Satakunta             — en Sammallahdenmäki (33 röykkiötä, yli 3 000
+   *                           v., Rauma, Unesco 1999)
+   *   Uusimaa               — en Porkkala Naval Base (1944–1956, junien
+   *                           ikkunat luukuilla, neuvostoveturit)
+   *   Finland Proper        — en Archipelago Sea (by some definitions the
+   *                           largest archipelago by number of islands, n.
+   *                           50 000)
+   */
+  FIN: {
+    'South Karelia': {
+      lyhyt: 'Imatrankoski on ollut padottuna vuodesta 1929, mutta kesäiltaisin padon luukut avataan ja vesi ryöppyää taas vanhaan uomaansa.',
+    },
+    'Southern Ostrobothnia': {
+      lyhyt: 'Seinäjoen Tangomarkkinat on maailman vanhin tangofestivaali, ja joka heinäkuu siellä etsitään Suomen parhaita tangolaulajia.',
+    },
+    'Southern Savonia': {
+      lyhyt: 'Saimaannorppa elää vain Saimaassa, eristyksissä muista norpista jo noin 9 500 vuotta – jäljellä on vain noin 500 yksilöä.',
+    },
+    Kainuu: {
+      lyhyt: 'Suomussalmella valtatien varren pellolla seisoo Hiljainen kansa, turvepäisten hahmojen joukko, jonka vaatteet vaihdetaan vuodenajan mukaan.',
+    },
+    'Tavastia Proper': {
+      lyhyt: 'Hämeenlinnaan kuuluvassa Iittalan kylässä on puhallettu lasia vuodesta 1881, ja kylän nimi on nyt maailmalla tunnettu muotoilumerkki.',
+    },
+    'Central Ostrobothnia': {
+      lyhyt: 'Kokkolan Englantilaisessa puistossa on brittien tykkivene, joka kaapattiin 1854 – kaupunki ei ole palauttanut sitä pyynnöistä huolimatta.',
+    },
+    'Central Finland': {
+      lyhyt: 'Keski-Suomen soratiet ajetaan Rally Finlandissa, MM-rallin nopeimmassa osakilpailussa, jossa autot lentävät harjanteilta pitkiä hyppyjä.',
+    },
+    Kymenlaakso: {
+      lyhyt: 'Kotkan Langinkoskella seisoo keisari Aleksanteri III:n kalastusmaja, jossa tsaarin perhe vietti kesiä lohikosken rannalla.',
+    },
+    Lapland: {
+      lyhyt: 'Inari on Suomen suurin kunta, ja siellä on peräti neljä virallista kieltä: suomi sekä pohjois-, inarin- ja koltansaame.',
+    },
+    Pirkanmaa: {
+      lyhyt: 'Tampere on julistettu maailman saunapääkaupungiksi, koska missään muualla maailmassa ei ole yhtä paljon yleisiä saunoja.',
+    },
+    Ostrobothnia: {
+      lyhyt: 'Merenkurkun saaristo kohoaa merestä lähes sentin vuodessa, ja tämän maannousun vuoksi se on vuodesta 2006 ollut Unescon maailmanperintöä.',
+    },
+    'North Karelia': {
+      lyhyt: 'Kolin vaaroilta avautuu näkymä Pielisjärvelle, ja samaa maisemaa ovat ihailleet Sibelius, Juhani Aho ja taidemaalari Eero Järnefelt.',
+    },
+    'Northern Ostrobothnia': {
+      lyhyt: 'Oulussa ratkotaan joka vuosi ilmakitaran maailmanmestaruus: soittimena on pelkkä kuviteltu kitara, ja kisa on pidetty vuodesta 1996.',
+    },
+    'Northern Savonia': {
+      lyhyt: 'Sonkajärvellä kisataan joka vuosi eukonkannon maailmanmestaruudesta, ja voittaja on se, joka kantaa toisen ihmisen esteradan läpi nopeimmin.',
+    },
+    'Päijät-Häme': {
+      lyhyt: 'Lahden hyppyrimäet nousevat Salpausselältä, jääkauden reunalle kasaamalta harjulta – vuodesta 2022 seutu on ollut Unescon geopuisto.',
+    },
+    Satakunta: {
+      lyhyt: 'Rauman Sammallahdenmäellä on 33 yli 3 000 vuotta vanhaa pronssikautista hautaröykkiötä, ja paikka on Unescon maailmanperintökohde.',
+    },
+    Uusimaa: {
+      lyhyt: 'Porkkalan niemi oli 1944–1956 Neuvostoliiton laivastotukikohta, ja sen läpi ajavien suomalaisjunien ikkunat piti sulkea luukuilla.',
+    },
+    'Finland Proper': {
+      lyhyt: 'Saaristomerellä on joidenkin laskutapojen mukaan maailman eniten saaria, noin 50 000, ja moni niistä on vain pieni luoto.',
+    },
+  },
 };

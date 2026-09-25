@@ -4,11 +4,11 @@ import { MAAKUNTIEN_LUONNEHDINNAT } from '../js/packs/maakunnat-luonnehdinnat.js
 import { MAAKUNTIEN_PULU } from '../js/packs/maakunnat-pulu.js';
 
 /*
- * GRC, NLD, BEL, DNK ja SVK ovat 25.9.2026 lähtien erässä 1 (vain
+ * GRC, NLD, BEL, DNK, SVK ja FIN ovat 25.9.2026 lähtien erässä 1 (vain
  * lyhyt, ks. maakunnat-luonnehdinnat.js:n kommentti) — pulu tulee
  * vasta erässä 3, joten se ei kuulu vielä tähän täydellisyystestiin.
  */
-const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK']);
+const ERASSA_1 = new Set(['GRC', 'NLD', 'BEL', 'DNK', 'SVK', 'FIN']);
 test('jokaisella luonnehdinta-avaimella on pulu 2-3 paria, ei ylimääräisiä avaimia', () => {
   for (const [iso, alueet] of Object.entries(MAAKUNTIEN_LUONNEHDINNAT)) {
     if (ERASSA_1.has(iso)) continue;
