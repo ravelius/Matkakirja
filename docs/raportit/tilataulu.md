@@ -2,39 +2,35 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 10:15 EEST (YÖTILA — omistaja nukkuu, ei muistutuspusheja)
+**Päivitetty:** 2026-09-25 10:25 EEST (YÖTILA — omistaja nukkuu, ei muistutuspusheja)
 
 ## 1) Sessiot
 
 | Rooli | Session id | Malli | Konteksti | Tila | Viimeisin valmis erä | Odottaa |
 |---|---|---|---|---|---|---|
-| Fable | local_742d1717-d642-426a-840b-c5c0e75578bf | Fable 5.1 | 54% | idle | — | — |
+| Fable | local_742d1717-d642-426a-840b-c5c0e75578bf | Fable 5.1 | 56% | idle | — | — |
 | Julkaisija | local_9922c4b6-320f-4074-aed4-f2811a7c9640 | Opus, high | 28% | idle | — | — |
-| Natiiviseppä | local_860f922b-94b8-49da-975d-4233a993bbb8 | Opus | 64% | idle | — | — |
-| Natiivi-UI | local_9ed5a7df-5c9c-47e5-be64-bad4353b81b9 | Opus | 52% | idle | — | — |
+| Natiiviseppä | local_860f922b-94b8-49da-975d-4233a993bbb8 | Opus | 69% | idle | — | Lähestyy 70%, seurataan |
+| Natiivi-UI | local_9ed5a7df-5c9c-47e5-be64-bad4353b81b9 | Opus | 59% | idle | — | — |
 | Linssiseppä | local_3273f209-099d-4ed3-830e-e4e1b40bcc7d | Opus | 57% | idle | — | — |
-| Sisältökirjuri | local_e5685e4a-4ed7-41f4-96f0-5899ff6d8d7f | Sonnet | 57% | idle | — | — |
-| Laitetestaaja | local_992b689f-357b-4ce1-a236-b69d1cfcb0d5 | Sonnet | 53% | idle | — | — |
+| Sisältökirjuri | local_e5685e4a-4ed7-41f4-96f0-5899ff6d8d7f | Sonnet | 60% | idle | — | — |
+| Laitetestaaja | local_992b689f-357b-4ce1-a236-b69d1cfcb0d5 | Sonnet | 54% | idle | — | — |
 | Siirtoseppä | local_7a1255c5-d525-4323-9438-70e7379ad2fe | Opus | 33% | idle | — | — |
-| Pelikoodari | local_7b5a6c65-e4fd-4142-b21f-e12089f5b417 | Opus | 48% | idle | — | — |
-| Karttaseppä | local_445a5c7b-4317-4989-b65d-4cb81bd10056 | Opus | 67% | idle | — | Lähestyy 70%, seurataan |
-| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d | Sonnet | 58% | busy | (tämä taulu) | — |
+| Pelikoodari | local_7b5a6c65-e4fd-4142-b21f-e12089f5b417 | Opus | 49% | idle | — | — |
+| Karttaseppä | local_445a5c7b-4317-4989-b65d-4cb81bd10056 | Opus | 68% | idle | — | Lähestyy 70%, seurataan |
+| Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d | Sonnet | 61% | busy | (tämä taulu) | — |
 
 ## 2) Jumit ja avoimet kortit omistajalle (yön kooste)
 
 Ei avoimia kortteja tiedossa juuri nyt.
 
-**Tuntiraportti sivutuksesta (10:13, ilmoitettu Fablelle):** tilanne EI parantunut — vm.swapusage 22,3→20,2→**22,8 Gt** (nousi takaisin). Simulaattorit 6→3→**8** boottina (uutta testiaktiviteettia käynnistynyt, sammutuspyynnöt purivat vain väliaikaisesti). Ei omaa lisätoimenpidettä, Fablen päätettävissä jatko.
+Tuntiraportti sivutuksesta lähetetty Fablelle 10:13 (ei parantunut). Simulaattori-korjaus lähetetty 10:23 (4 "idle"-laitetta ovatkin käännösjunan kohteita, ei sammuteta).
 
-**UUSI SÄÄNTÖ (Fable 10:1x): simulaattorien sammutusvaltuus + tuntiraportointi.** Postivahti saa itse sammuttaa (xcrun simctl shutdown) simulaattorit joissa peli ei ole pyörinyt 20 min tai joiden rooli juuri nollattu; max 4 boottina päivällä, 5. käynnistyessä ilmoita Fablelle kuka. Raportoi vapaan muistin % ja sivutus tunnin välein.
-
-**ESTETTY (10:15) — JA HYVÄ ETTÄ ESTETTY:** yritin sammuttaa 5 "idle"-simulaattoria (1572C658, 993F8873, D0D2CD1E, 3B4CDACB, C1D5E34C) — oman session luokitin esti komennon ("Interfere With Workloads"). Ilmoitettu Fablelle, ei yritetty kiertää. **Jälkikäteen selvisi (10:23):** neljä näistä (1572C658, 3B4CDACB, C1D5E34C, 993F8873) OVAT käännöspalvelun juna/b13-asennuksen kohdelaitteita — ei siis hylättyjä, vaan aktiivisen käännösjunan piirissä (viimeisin onnistunut asennus klo 10:10, ks. varmuuskopio-tarkistus alla). Sammutus olisi voinut häiritä käännösjonoa.
-
-**Varmuuskopio/käännösjuna-tarkistus (Fable-pyyntö):** /Users/Shared/Claude/proto-3d/lokit/varmuuskopio-VIKA.txt on olemassa mutta TYHJÄ (0 tavua) — ei hylättyjä pusheja. Käännösjunan loki (kaannospalvelu/juna.log): viimeisin onnistunut KÄÄNNETTY-rivi klo 10:10 (alle 2h vanha, kunnossa). Jono oli lukossa tuntikausia (08:21-10:02, "lukko ei vapautunut tunnissa" -virhe 09:02) mutta selvisi omillaan.
+**Varmuuskopio-tarkistus (Fable-pyyntö, joka kierros):** varmuuskopio-VIKA.txt tyhjä — ei hylättyjä pusheja. Käännösjunan viimeisin onnistunut ajo klo 10:10 (alle 2h).
 
 **Junasääntö (Fable 04:1x):** ei vielä havaintoja 30 min -käännösviiveestä eikä sisältöjonon 4-PR/4h-ehdon täyttymisestä ilman junaa.
 
-**Postilaatikko:** viimeisin commit b2772e286 "Posti: toimita kahden puuttuneen kaupungin galleriakuvat" — muuttumaton.
+**Postilaatikko:** uusi commit 7755d9c5a "Posti: kuittaa kahden kaupungin galleriakytkentä PR:ssä" — sarjan jatkoa (galleria 59), ei kriittinen.
 
 ## 3) Avoimet PR:t
 
@@ -50,13 +46,12 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **Levy** (/System/Volumes/Data): 166 Gt vapaana. Raja 35 Gt.
-- **wt/-worktreet:** 36 kpl.
-- **5 h -kiintiö:** 44%, nollautuu n. 10:20 EEST. Raja 95%/98%.
-- **Viikkokiintiö (kaikki mallit):** 93%. **Viikkokiintiö (Fable):** 51%. Nollautuu 2026-09-28 klo 01:00.
-- **Sivutus:** 22,8 Gt käytössä (raja 16 Gt, EI parantunut, ilmoitettu Fablelle).
-- **Simulaattorit:** 8 boottina (nousi takaisin 3:sta).
+- **Levy** (/System/Volumes/Data): 164 Gt vapaana. Raja 35 Gt.
+- **wt/-worktreet:** 37 kpl.
+- **5 h -kiintiö:** 2%, nollautunut n. 10:20 EEST. Raja 95%/98%.
+- **Viikkokiintiö (kaikki mallit):** 94%. **Viikkokiintiö (Fable):** 51%. Nollautuu 2026-09-28 klo 01:00.
+- **Sivutus:** viimeksi mitattu 22,8 Gt (raja 16 Gt), seuraava tuntiraportti n. klo 11:13-11:23.
 
 ## 6) Kellonaika
 
-2026-09-25 10:13 EEST. Yön merkkipaalut: tuntiraportti sivutuksesta lähetetty (ei parantunut), Karttaseppä lähestyy 70%.
+2026-09-25 10:25 EEST. Yön merkkipaalut: varmuuskopio kunnossa, Natiiviseppä ja Karttaseppä molemmat lähestyvät 70%.
