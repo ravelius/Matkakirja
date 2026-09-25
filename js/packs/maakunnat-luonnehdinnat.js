@@ -2817,4 +2817,150 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Trbovljen voimalan 360-metrinen savupiippu on Euroopan korkein, ja se seisoo yhä laakson maamerkkinä, vaikka voimala on suljettu.',
     },
   },
+  /*
+   * CHE (Sisältökirjuri 25.9.2026, Fablen tilaus). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.CHE:n tunnuksia
+   * TÄSMÄLLEEN (26 kantonia, Natural Earthin `name`, esim. "Genève",
+   * "Lucerne" ja "Sankt Gallen"). Vain `lyhyt` tässä erässä.
+   * Lähteet (en-Wikipedia, tarkistettu 25.9.2026):
+   *   Aargau                 — Habsburg Castle (rakennettu n. 1020,
+   *                            Habsburgien suvun alkuperäinen kotipaikka)
+   *   Appenzell Ausserrhoden — Henry Dunant + Heiden, Switzerland (Heideniin
+   *                            1887, kuoli siellä 1910, Nobel 1901)
+   *   Appenzell Innerrhoden  — Appenzell Innerrhoden (Landsgemeinde huhtikuun
+   *                            viim. sunnuntaina, n. 4000 osallistujaa;
+   *                            naisten äänioikeus 1991 liittovaltion
+   *                            tuomioistuimen päätöksellä)
+   *   Basel-Landschaft       — Augusta Raurica (Alppien pohjoispuolen suurin
+   *                            roomalainen teatteri, savustetun sianlihan
+   *                            vienti; Augst Basel-Landiin 1833)
+   *   Basel-Stadt            — Basel, osio Ferries (neljä virran voimalla
+   *                            kulkevaa lossia, ei ulkoista energiaa)
+   *   Bern                   — Einsteinhaus (Kramgasse 49, 1903–1905,
+   *                            Annus Mirabilis -artikkelit, patenttivirasto)
+   *   Fribourg               — Fribourg funicular (1899, jätevesi
+   *                            painolastina)
+   *   Genève                 — CERN (Meyrin, WWW 1989 Tim Berners-Lee,
+   *                            LHC:n 27 km:n tunneli rajan yli)
+   *   Glarus                 — Canton of Glarus (äänestysikä 16 v.
+   *                            6.5.2007 ensimmäisenä, Landsgemeinde)
+   *   Graubünden             — Grisons (ainoa kolmikielinen kantoni, ainoa
+   *                            jossa retoromaani virallinen)
+   *   Jura                   — Canton of Jura (uusin kantoni, 1979, erosi
+   *                            Bernistä)
+   *   Lucerne                — Kapellbrücke (Euroopan vanhin katettu
+   *                            puusilta, tulipalo 1993, 1600-luvun maalaukset)
+   *   Neuchâtel              — Absinthe (syntyi Neuchâtelin kantonissa,
+   *                            kielto 1910–2005, Maison de l'Absinthe
+   *                            entisessä oikeustalossa Môtiers'ssa) +
+   *                            Val-de-Travers
+   *   Nidwalden              — Stanserhorn (maailman ensimmäinen "CabriO",
+   *                            avokattoinen kaksikerroksinen köysirata 2012)
+   *   Obwalden               — Pilatus Railway (Alpnachstad, maailman jyrkin
+   *                            hammasrata, enintään 48 %)
+   *   Schaffhausen           — Canton of Schaffhausen (pidempi raja Saksan
+   *                            kuin muiden kantonien kanssa, Büsingenin
+   *                            saareke)
+   *   Schwyz                 — Canton of Schwyz + Federal Charter of 1291
+   *                            (maan nimi ja lippu, liittokirja museossa)
+   *   Solothurn              — Solothurn (Ranskan lähettilään kotipaikka
+   *                            1530–1792, autoton barokkivanhakaupunki)
+   *   Sankt Gallen           — Abbey library of Saint Gall (maailman
+   *                            vanhimpia luostarikirjastoja, rokokoosali,
+   *                            muumio Shep-en-Isis)
+   *   Thurgau                — Thurgau (omena- ja päärynätarhat, sato
+   *                            pääosin siideriksi)
+   *   Ticino                 — Monte San Giorgio (Unesco 2003, keskitrias,
+   *                            yli 21 000 fossiilia vuoteen 2010 mennessä)
+   *   Uri                    — Gotthard Base Tunnel (Erstfeld–Giornico,
+   *                            57,09 km, maailman pisin, syvyys 2 450 m)
+   *   Valais                 — Hérens cattle (lehmätaistelut, loppuottelu
+   *                            vuodesta 1922, "queen of queens")
+   *   Vaud                   — Lausanne (maailman pienin kaupunki, jolla on
+   *                            metro; KOK:n päämaja)
+   *   Zug                    — Canton of Zug (verot bitcoinina tai Etheruminä
+   *                            100 000 frangiin asti vuodesta 2021)
+   *   Zürich                 — Cabaret Voltaire (Zurich) (dadan syntypaikka
+   *                            1916, Spiegelgasse, Lenin samalla kadulla)
+   */
+  CHE: {
+    Aargau: {
+      lyhyt: 'Habsburgin kylän kukkulalla seisoo noin 1020 rakennettu linna, josta yksi Euroopan mahtavimmista hallitsijasuvuista sai nimensä.',
+    },
+    'Appenzell Ausserrhoden': {
+      lyhyt: 'Punaisen Ristin perustaja Henry Dunant vietti viimeiset vuotensa Heidenin kylässä, ja siellä asuessaan hän sai ensimmäisen Nobelin rauhanpalkinnon.',
+    },
+    'Appenzell Innerrhoden': {
+      lyhyt: 'Appenzellin aukiolle kokoontuu joka huhtikuu tuhansia kansalaisia päättämään kantonin asioista – naiset pääsivät mukaan vasta 1991.',
+    },
+    'Basel-Landschaft': {
+      lyhyt: 'Augusta Rauricassa oli Alppien pohjoispuolen suurin roomalainen teatteri, ja kaupungista vietiin savustettua sianlihaa ympäri valtakuntaa.',
+    },
+    'Basel-Stadt': {
+      lyhyt: 'Baselin Rein-lossit kulkevat ilman moottoria: lossari kääntää veneen vinoon virtaan, ja virta työntää sen vaijeria pitkin toiselle rannalle.',
+    },
+    Bern: {
+      lyhyt: 'Bernin Kramgassen talossa 49 Albert Einstein kirjoitti 1905 artikkelit, joissa hän esitteli suhteellisuusteoriansa – päivät hän teki töitä patenttivirastossa.',
+    },
+    Fribourg: {
+      lyhyt: 'Fribourgin köysirataa on vuodesta 1899 liikuttanut jätevesi: yläpään vaunuun lasketaan viemärivettä, ja painava vaunu vetää toisen ylös.',
+    },
+    'Genève': {
+      lyhyt: 'Genevessä CERNissä syntyi 1989 World Wide Web, ja 27 kilometrin hiukkaskiihdytin kiertää maan alla Ranskan rajan yli.',
+    },
+    Glarus: {
+      lyhyt: 'Glarus laski äänestysiän 16 vuoteen 2007 ensimmäisenä Sveitsin kantonina, ja asioista päättää yhä Landsgemeinde-kansankokous.',
+    },
+    'Graubünden': {
+      lyhyt: 'Graubünden on Sveitsin ainoa kolmikielinen kantoni ja ainoa, jossa maan neljäs kansalliskieli retoromaani on virallinen kieli.',
+    },
+    Jura: {
+      lyhyt: 'Jura on Sveitsin nuorin kantoni: se irtautui Bernistä pitkän ja paikoin kiivaan kamppailun jälkeen ja liittyi valaliittoon 1979.',
+    },
+    Lucerne: {
+      lyhyt: 'Luzernin Kapellbrücke on Euroopan vanhin katettu puusilta, mutta tulipalo tuhosi 1993 suuren osan siitä ja sen 1600-luvun maalauksista.',
+    },
+    'Neuchâtel': {
+      lyhyt: 'Absintti syntyi Neuchâtelissa, ja Môtiers’n absinttimuseo toimii entisessä oikeustalossa, jossa kiellon aikana tuomittiin tislaajia.',
+    },
+    Nidwalden: {
+      lyhyt: 'Stanserhornille nousevassa köysiradassa on avoin yläkansi – se oli avatessaan 2012 maailman ensimmäinen kaksikerroksinen avokattoinen köysirata.',
+    },
+    Obwalden: {
+      lyhyt: 'Alpnachstadista Pilatukselle kiipeävä hammasrata on maailman jyrkin: jyrkimmässä kohdassa kaltevuus on 48 prosenttia.',
+    },
+    Schaffhausen: {
+      lyhyt: 'Schaffhausenilla on pidempi raja Saksan kuin muiden kantonien kanssa, ja sen kupeessa on Büsingen, Saksalle kuuluva saareke.',
+    },
+    Schwyz: {
+      lyhyt: 'Koko Sveitsi on saanut nimensä ja lippunsa Schwyzin kantonilta, ja vuoden 1291 liittokirja on yhä nähtävillä Schwyzin museossa.',
+    },
+    Solothurn: {
+      lyhyt: 'Solothurn oli 1530–1792 Ranskan Sveitsin-lähettilään kotipaikka, ja sen autoton vanhakaupunki on täynnä barokkirakennuksia.',
+    },
+    'Sankt Gallen': {
+      lyhyt: 'St. Gallenin luostarikirjasto on maailman vanhimpia, ja sen rokokoosalissa lepää keskiaikaisten käsikirjoitusten seassa egyptiläinen muumio.',
+    },
+    Thurgau: {
+      lyhyt: 'Thurgaussa kasvaa omenaa ja päärynää niin paljon, että suurin osa hedelmätarhojen sadosta puristetaan siideriksi.',
+    },
+    Ticino: {
+      lyhyt: 'Luganonjärven yllä kohoavasta Monte San Giorgiosta on kaivettu yli 21 000 fossiilia triaskauden merestä – vuori on Unescon maailmanperintöä.',
+    },
+    Uri: {
+      lyhyt: 'Erstfeldistä alkava Gotthardin pohjatunneli on 57 kilometriä pitkä, maailman pisin rautatietunneli, ja kalliota on enimmillään 2 450 metriä yllä.',
+    },
+    Valais: {
+      lyhyt: 'Valais’n Hérens-lehmät ottelevat keväisin sarvet vastakkain, ja kansallisen loppuottelun voittaja kruunataan kuningattarien kuningattareksi.',
+    },
+    Vaud: {
+      lyhyt: 'Lausanne on maailman pienin kaupunki, jolla on oma metro, ja siellä on myös Kansainvälisen olympiakomitean päämaja.',
+    },
+    Zug: {
+      lyhyt: 'Zugissa veroja voi maksaa bitcoineina: kantoni hyväksyy kryptovaluuttaa 100 000 frangiin asti ja vaihtaa sen itse frangeiksi.',
+    },
+    'Zürich': {
+      lyhyt: 'Zürichin Spiegelgassella avattu Cabaret Voltaire synnytti 1916 dada-taideliikkeen – samalla kadulla asui samaan aikaan Lenin.',
+    },
+  },
 };
