@@ -5403,3 +5403,7 @@ Lista PR:nä docs/raportit/nimiot-ehdotus-20260925.md (tunniste, nimi, nykyinen 
 ## NIMIOT 244 NOSTOLLE DATAAN (SISALTOKIRJURI PR #3162, 82 TIEDOSTOA, TESTIT 83/83; POIKKEUS UTRECHTIN DOM → 'Utrecht'; Elaintaky-rivit.js LUKI nimio-KENTAN JO) → SIIRTOSEPPA TEKEE PAKETTIVERSION MERGEN JALKEEN JA ILMOITTAA NATIIVISEPALLE + NATIIVI-UI:LLE; TURISTIOPAS ERA 3 PR #3159, ERAT 4–5 AGENTEILLA (25.9.2026 klo 13.16)
 
 Poltto valmis 10.00, Z9-vienti ämpäriin käynnissä 12.55 alkaen, arvio valmis ~14.10; kuorma 685 (Unity-vienti build 13, Codex-runtime, Evoto, Creative Cloud).
+
+## NATIIVI-UI: RIVIT 11 (avauskaaro 2c46639c, PAPERI 296 pt) JA 41 (maapilleri 1a374a68, YKSIRIVINEN) VALMIIT, MERGE-PYYNTO NATIIVISEPALLA (7c959cd8 iPHONE); FABLE: RIVIT 40 JA 31/41 LIIKU — TURVA-ALUE PIDETAAN, KARUSELLIKORTTI +27 pt JA LIIKU +38 pt HYVAKSYTTY POIKKEAMA (KOTIPALKKI EI PEITA NAPPEJA); SEURAAVAKSI 72 VAAKUNAOSIO (25.9.2026 klo 13.16)
+
+Selostus proto-3d/lokit/pariteetti-b12/merge-pyynto-natiivi-ui-b13-11-41.md. Linssiseppä merkitsee 40 ja 31/41 Liikun kierroksella 3 poikkeamaksi.
