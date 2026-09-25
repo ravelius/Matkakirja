@@ -5003,3 +5003,7 @@ Kuvassa 61 kortti Bukarest (Nähtävyydet, Turistiopas, Kadonneet ihmeet 1, Skan
 ## OMISTAJA klo 05.0x (SITOVA, LOYDOS 65, iPAD-KUVA loydos65-ipad-valikko-ei-yhdistetty.png): ☰-VALIKKO JA LINSSIT YHDISTETAAN KAIKILLA LAITTEILLA (iPADILLA YHA ERILLINEN LINSSIPANEELI + ASETUSVALIKKO); RETKIKUNTA YHDEN NAPIN TAAKSE; KOKEET-RYHMA POIS PELAAJALTA — VAIN MAAILMA-KYTKIN TARKEA (KARTTA-RYHMAAN), MUUT KEHITTAJA-RIVILLE TAI POIS → NATIIVI-UI, BUILD 13; RAAMATTU PAIVITETTY (KORVAA 'iPAD KATSOTAAN ERIKSEEN') (25.9.2026 klo 05.02)
 
 Omistajan sanoin: 'Eikö tämä hampurilainen ja linssit valikko pitänyt jo yhdistyä? … Saisi olla kaikilla.' Kokeet-ryhmän sisältö b12:ssa: Astronautin reliefi, Maailma, Linssien kynnykset, Raamattu, Kehittäjälehti.
+
+## OMISTAJAN LOYDOKSET 66–67 BUILD 12:STA (iPHONE, KUVA loydos66-pulu-animointi-chat-iphone.png): 66 PULUN ANIMOINTI EI TOIMI TAYSIN (PULU SEISOO PAIKALLAAN CHATIN AIKANA; WEBISSA PULU ELAA — KAVELY, PAAN KAANTO, PUHEEN LIIKE) → PELIKOODARI; 67 FABLEN HAVAINTO SAMASTA KUVASTA: PULUN VASTAUS KATKEAA KESKEN SANAN ('muurin alta, n') ENNEN MATKAKIRJA-LINKKIA → PELIKOODARI + NATIIVI-UI (CHATIN TEKSTIN KATKAISU); BUILD 13 (25.9.2026 klo 05.07)
+
+Web on malli: pulun animaatiotilat (pallolauta-liike-pulu, puhe, lepo) mitataan webistä videolla.
