@@ -5371,3 +5371,7 @@ BUILD-sana odottaa: savukierros iPhonella on läpi 93ab72f1:llä, mutta juna on 
 ## PYSAYTYS VALMIS 9/10 klo 12.2x: PELIKOODARI ec0357ded, LINSSISEPPA 514a3b8e6, KARTTASEPPA (ROOLIHAARA), POSTIVAHTI (postivahti), NATIIVI-UI 32f1b1689, SISALTOKIRJURI PR #3154 (COOBER PEDY VALMIS c687e8149 AGENTTI-WORKTREESSA, EI CHERRY-PICKATTU; BERMUDA + SITKA KESKEN), JULKAISIJA c4bf3c5ff (#3152 JA #3133 MAINISSA v2218), NATIIVISEPPA 06f4974aa (POHJA-25 ODOTTAA Z9), SIIRTOSEPPA (#3155 OFFLINE Z9 LUONNOS); LAITETESTAAJA VIELA ILMOITTAMATTA (PR #3153 PUSHATTU) (25.9.2026 klo 12.27)
 
 Kaikki simulaattorit sammutettu; uusi Fable lähettää aloitusviestit uusimmista origin-haaroista.
+
+## UUSI FABLE-SESSIO TILINVAIHDON JALKEEN (local_593b89a1-2514-4d74-b956-2a73db862382, REMOTE CONTROL PAALLA): MUITA SESSIOITA EI VIELA OLE — OMISTAJA LUO 10 ROOLISESSIOTA FABLEN ANTAMASTA NIMI- JA KANSIOLISTASTA, FABLE LAHETTAA ALOITUSVIESTIT (docs/raportit/viesti-<rooli>-aloitus.md UUSIMMASTA ORIGIN-HAARASTA) KUN SESSIOT NAKYVAT ListAgentsissa; VANHA FABLE local_742d1717 LEPAA (25.9.2026 klo 12.33)
+
+Sessioiden checkoutit /Users/Shared/Claude/Matkakirja-<rooli>; Natiiviseppä kansiossa Matkakirja-3d-selvittaja (haara selvittaja-3d-luovutus), Postivahti Matkakirja-posti (haara postivahti). Siirtosepän aloitusviesti on haarassa siirtoseppa-luovutus, checkout haarassa siirtoseppa-peilaus.
