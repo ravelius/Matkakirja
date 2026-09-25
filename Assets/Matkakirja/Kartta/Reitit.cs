@@ -285,14 +285,16 @@ namespace Matkakirja
         /// Kamera sovittaa kaupungit ruutuun vain loitontaen ja vain, jos ne eivät jo mahdu
         /// (web sovitaKohteetNakyviin, KOHDESOVITUKSEN_MARGINAALI).
         /// </summary>
-        public void SovitaKohteet(IEnumerable<string> kohteet, double marginaali = 0.12)
+        public void SovitaKohteet(IEnumerable<string> kohteet, double marginaali = PalloKierto.KohdesovitusMarginaali)
         {
             var kierto = FindAnyObjectByType<PalloKierto>();
             if (kierto == null || kohteet == null) return;
             var pisteet = new List<(double lat, double lon)>();
             foreach (var k in kohteet)
                 if (k != null && kaupungit.TryGetValue(k, out var c)) pisteet.Add((c.lat, c.lon));
-            kierto.SovitaPisteet(pisteet, marginaali);
+            // Web sovitaLentokohteet: rajaukseen myös pelaajan paikka (kohteidenRajaus).
+            var n = FindAnyObjectByType<Nappula>();
+            kierto.SovitaPisteet(pisteet, marginaali, PalloKierto.KohdesovitusKesto, n != null && n.Nakyy ? (n.Lat, n.Lon) : null);
         }
 
         bool nakyvat = true;

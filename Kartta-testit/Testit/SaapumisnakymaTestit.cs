@@ -114,6 +114,56 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(r.Korkeus >= r.KorkeusMin && r.Korkeus <= Saapumisnakyma.KorkeusMax, "rajoissa");
         }
 
+        // ------------------------------------------------------------------ maan rajat (build 13, D7/D8)
+
+        static Saapumisnakyma.Laatikko Ranska()
+        {
+            var a = Saapumisnakyma.ProjisoiLaudalle(-5, 51.1);
+            var b = Saapumisnakyma.ProjisoiLaudalle(8.2, 42.3);
+            return new Saapumisnakyma.Laatikko(a.X, a.Y, b.X - a.X, b.Y - a.Y);
+        }
+
+        [Testi] static void UloszoomauksenKattoOnSaapumisnakyma()
+        {
+            // Web kamera.js:1059: sama kaava kuin saapumisella kertoimella 1,02 → katto = saapumisen korkeus.
+            var r = Saapumisnakyma.Laske(Ranska(), 43.3, 5.4, 390, 700, 50, 3);
+            var katto = Saapumisnakyma.Uloszoomauskatto(r);
+            Oleta.Tosi(katto.HasValue && katto.Value == r.Korkeus, $"katto {katto} = saapuminen {r.Korkeus}");
+            var iso = Saapumisnakyma.Laske(new Saapumisnakyma.Laatikko(1000, 500, 1900, 900), 40, -100, 1210, 834, 50, 2);
+            Oleta.Tosi(!Saapumisnakyma.Uloszoomauskatto(iso).HasValue, "kaupunkinäkymässä ei kattoa (RUS, USA)");
+        }
+
+        [Testi] static void PanorajaLaatikkoKertaa13()
+        {
+            // Leveällä ruudulla (ei korkeuteen sovitusta) raja on laatikko × 1,3 keskeltä.
+            var l = Ranska();
+            var raja = Saapumisnakyma.MaanPanoraja(l, 1400, 900, 5.4, 0);
+            Oleta.Tosi(raja.HasValue && raja.Value.Pituus && !raja.Value.Elava, "kiinteä raja");
+            var r = raja.Value;
+            var keski = Saapumisnakyma.LaudaltaAsteiksi(l.X + l.W / 2, l.Y + l.H / 2);
+            Oleta.Tosi(r.LatMin < 42.3 && r.LatMax > 51.1 && r.LngMin < -5 && r.LngMax > 8.2, $"sisältää Ranskan: {r.LatMin:0.#}–{r.LatMax:0.#}, {r.LngMin:0.#}–{r.LngMax:0.#}");
+            Lahella(keski.Lon, (r.LngMin + r.LngMax) / 2, 1e-6, "keskellä");
+            // Japani rajataan pois; pituus lähimpään kiertoon.
+            var (lat, lon) = Saapumisnakyma.RajaaPanorointi(r, 36, 139);
+            Oleta.Tosi(lat <= r.LatMax && lat >= r.LatMin && lon == r.LngMax, $"Japani → itäreuna ({lat:0.#}, {lon:0.#})");
+            var (lat2, lon2) = Saapumisnakyma.RajaaPanorointi(r, 46, 2 + 360);
+            Lahella(2, lon2, 1e-9, "kierto"); Lahella(46, lat2, 1e-9, "sisällä ennallaan");
+        }
+
+        static void Lahella(double odotettu, double saatu, double vara, string viesti) =>
+            Oleta.Tosi(System.Math.Abs(odotettu - saatu) <= vara, $"{viesti}: {odotettu} ≠ {saatu}");
+
+        [Testi] static void KapeallaRuudullaPituusrajaElaa()
+        {
+            // Puhelimen pystykotelo: korkeuteen sovitus → X-raja riippuu korkeudesta (web panoraja elava).
+            var l = Ranska();
+            var kaukana = Saapumisnakyma.MaanPanoraja(l, 377, 690, 5.4, 0);
+            Oleta.Tosi(kaukana.HasValue && kaukana.Value.Elava, "elävä raja");
+            var lahella = Saapumisnakyma.MaanPanoraja(l, 377, 690, 5.4, 0.02);
+            Oleta.Tosi(lahella.Value.LngMax - lahella.Value.LngMin > kaukana.Value.LngMax - kaukana.Value.LngMin,
+                $"lähempänä saa panoroida laajemmin: {lahella.Value.LngMin:0.##}–{lahella.Value.LngMax:0.##} vs {kaukana.Value.LngMin:0.##}–{kaukana.Value.LngMax:0.##}");
+        }
+
         // ------------------------------------------------------------------ kotelo → koko ruutu (löydös 50)
 
         [Testi] static void WebinKoteloKuinMitattu()
