@@ -8424,4 +8424,356 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'San Pedro on Itä-Paraguayn laajin departementti, ja sen pienviljelijöille seesami on tärkeä vientikasvi.',
     },
   },
+  /*
+   * IDN (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6C). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.IDN:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti: 33 provinssia vanhan jaon mukaan
+   * (ei Pohjois-Kalimantania eikä vuoden 2022 uusia Papuan provinsseja),
+   * joten Papua Barat kattaa myös Raja Ampatin ja Papua Baliemin laakson.
+   * Vältetty maastokohteet-idn.js:n aiheet (Borobudur, Prambanan,
+   * Trowulan, Sangiran, Sawahlunto, Tana Toraja, Bandasaaret, Besakih,
+   * Krakatau, Tobajärvi, Komodo). Vain `lyhyt`. Lähteet (en-Wikipedia ja
+   * hakutarkistus 25.9.2026):
+   *   Aceh                — PLTD Apung 1 (2004 tsunamin kantama voimalalaiva)
+   *   Gorontalo           — Botubaranin valashait (n. 100 m rannasta)
+   *   Sulawesi Barat      — Sandeq Race (vuodesta 1995, n. 300 mpk)
+   *   Sulawesi Tenggara   — Buton Palace Fortress (muuri 2 740 m)
+   *   Sulawesi Selatan    — pinisi, Unescon aineeton perintö 2017
+   *   Maluku              — Ambon, Unescon musiikkikaupunki 2019
+   *   Muut                — yleistietoa, tarkistettu vastaavista
+   *                         en-Wikipedia-artikkeleista.
+   */
+  IDN: {
+    Aceh: {
+      lyhyt: 'Banda Acehin asuinkorttelien keskellä seisoo yhä voimalalaiva, jonka vuoden 2004 tsunami kantoi kilometrien päähän rannasta.',
+    },
+    Bali: {
+      lyhyt: 'Balilla vietetään Nyepi-päivää hiljaisuudessa: kadut tyhjenevät, valot sammuvat ja jopa saaren lentoasema suljetaan vuorokaudeksi.',
+    },
+    'Bangka-Belitung': {
+      lyhyt: 'Bangkan ja Belitungin saarilla on louhittu tinaa vuosisatoja, ja hylätyt kaivoskuopat ovat täyttyneet kirkkaanvihreiksi järviksi.',
+    },
+    Banten: {
+      lyhyt: 'Ujung Kulonin kansallispuisto Jaavan länsikärjessä on jaavansarvikuonon viimeinen elinpaikka koko maailmassa.',
+    },
+    Bengkulu: {
+      lyhyt: 'Bengkulun sademetsissä kukkii Rafflesia arnoldii, maailman suurin yksittäinen kukka, jonka läpimitta voi olla lähes metri.',
+    },
+    Gorontalo: {
+      lyhyt: 'Botubaranin kylän edustalla uiskentelee nuoria valashaita vain sadan metrin päässä rannasta, joten niitä pääsee katsomaan snorklaten.',
+    },
+    'Jakarta Raya': {
+      lyhyt: 'Jakartan Merdeka-aukion keskellä kohoaa 132-metrinen Monas-muistomerkki, jonka huippua koristaa kullattu liekki.',
+    },
+    Jambi: {
+      lyhyt: 'Batanghari-joen varrella on Muaro Jambi, yksi Kaakkois-Aasian laajimmista muinaisista buddhalaisista temppelialueista.',
+    },
+    'Jawa Barat': {
+      lyhyt: 'Bandungin Gedung Merdekassa pidettiin vuonna 1955 Aasian ja Afrikan maiden konferenssi, ja rakennus on nyt sen muistomuseo.',
+    },
+    'Jawa Tengah': {
+      lyhyt: 'Semarangin Lawang Sewu, "tuhat ovea", rakennettiin hollantilaisen rautatieyhtiön pääkonttoriksi, ja nyt se on museo.',
+    },
+    'Jawa Timur': {
+      lyhyt: 'Bromon tulivuorelle noustaan ennen aamunkoittoa katsomaan, kun aurinko nousee Tenggerin kalderan hiekkameren yllä.',
+    },
+    'Kalimantan Barat': {
+      lyhyt: 'Pontianak on päiväntasaajalla: kun aurinko on päiväntasauksen aikaan suoraan yllä, päiväntasaajamonumentin varjo katoaa hetkeksi.',
+    },
+    'Kalimantan Selatan': {
+      lyhyt: 'Banjarmasinin lähellä Lok Baintanissa käydään aamuisin kauppaa kelluvalla torilla, jossa myyjät meloskelevat hedelmäveneissään.',
+    },
+    'Kalimantan Tengah': {
+      lyhyt: 'Tanjung Putingin kansallispuistoon matkataan klotok-jokiveneellä katsomaan orankeja, jotka tulevat metsästä ruokintapaikoille.',
+    },
+    'Kalimantan Timur': {
+      lyhyt: 'Itä-Kalimantanin metsien keskelle rakennetaan Nusantaraa, kaupunkia, josta on määrä tulla Indonesian uusi pääkaupunki.',
+    },
+    'Kepulauan Riau': {
+      lyhyt: 'Batamin, Rempangin ja Galangin saaria yhdistää kuuden sillan Barelang-ketju, jonka komein osa on vinoköysisilta.',
+    },
+    Lampung: {
+      lyhyt: 'Way Kambasin kansallispuistossa suojellaan sumatranelefantteja, ja puistossa toimii norsujen hoito- ja suojelukeskus.',
+    },
+    Maluku: {
+      lyhyt: 'Ambon nimettiin vuonna 2019 Unescon musiikkikaupungiksi, ja laulu kuuluu kaupungin kirkoista, kaduilta ja kodeista.',
+    },
+    'Maluku Utara': {
+      lyhyt: 'Ternaten saari on käytännössä yksi tulivuori, Gamalama, ja sen rinteillä kasvaa yhä neilikkapuita.',
+    },
+    'Nusa Tenggara Barat': {
+      lyhyt: 'Lombokin Rinjani kohoaa 3 726 metriin, ja sen kalderassa lepää kuunsirpin muotoinen Segara Anak -järvi.',
+    },
+    'Nusa Tenggara Timur': {
+      lyhyt: 'Floresin Kelimutu-tulivuoren huipulla on kolme kraatterijärveä, joiden värit vaihtelevat turkoosista ruskeaan ja lähes mustaan.',
+    },
+    Papua: {
+      lyhyt: 'Baliemin laakson festivaalissa Wamenan lähellä ylänköjen kansat esittävät joka elokuu perinteisiä taistelunäytöksiä ja tansseja.',
+    },
+    'Papua Barat': {
+      lyhyt: 'Raja Ampatin saarten riutoilla on yksi maailman runsaimmista koralli- ja kalalajistoista, ja kalkkikivisaaret nousevat merestä jyrkkinä.',
+    },
+    Riau: {
+      lyhyt: 'Kampar-joella vyöryy vuoroveden mukana Bono-aalto, joka voi kulkea kilometrikaupalla ylävirtaan ja jolla surffaajat ratsastavat.',
+    },
+    'Sulawesi Barat': {
+      lyhyt: 'Mandarilaiset kalastajat purjehtivat kapeilla sandeq-ulokeveneillä, ja joka vuosi niillä kisataan satojen merimailien kilpapurjehdus.',
+    },
+    'Sulawesi Selatan': {
+      lyhyt: 'Bulukumban rannoilla rakennetaan yhä käsin puisia pinisi-purjealuksia, ja niiden rakennustaito on Unescon aineetonta kulttuuriperintöä.',
+    },
+    'Sulawesi Tengah': {
+      lyhyt: 'Badan laakson niityillä seisoo ikivanhoja kivipatsaita, joiden tekijöistä ja tarkoituksesta ei tiedetä varmasti.',
+    },
+    'Sulawesi Tenggara': {
+      lyhyt: 'Butonin saaren Baubaussa on Wolion linnoitus, jonka kivimuuri kiertää kukkulan laen lähes kolmen kilometrin matkalta.',
+    },
+    'Sulawesi Utara': {
+      lyhyt: 'Manadon edustalla Bunakenin meripuiston riutat putoavat jyrkkinä seinäminä syvyyteen, ja sukeltajat uivat niiden vierellä.',
+    },
+    'Sumatera Barat': {
+      lyhyt: 'Minangkabaujen talojen katot kaartuvat ylös kuin puhvelin sarvet, ja suvun maat periytyvät äidiltä tyttärelle.',
+    },
+    'Sumatera Selatan': {
+      lyhyt: 'Palembangin tunnetuin ruoka on pempek, kalasta ja tapiokasta tehty kakku, joka kastetaan makeanhappamaan cuko-kastikkeeseen.',
+    },
+    'Sumatera Utara': {
+      lyhyt: 'Nias-saaren kylissä nuoret miehet hyppäävät yli kaksimetrisen kivimuurin yli; perinteen nimi on hombo batu.',
+    },
+    Yogyakarta: {
+      lyhyt: 'Yogyakarta on Indonesian erityisalue, jonka kuvernöörinä toimii hallitseva sulttaani, ja kraton-palatsi on yhä hänen kotinsa.',
+    },
+  },
+  /*
+   * PAK (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.PAK:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti
+   * (vanha jako: F.A.T.A. on liitetty Khyber Pakhtunkhwaan 2018,
+   * Northern Areas on nykyinen Gilgit-Baltistan). Azad Kashmir ja
+   * Northern Areas: neutraali, vain maisema. Vältetty maastokohteet-pak.js:n
+   * aiheet (K2, Indus, Mohenjo-daro, Taxila, Makli, Rohtas, Takht-i-Bahi,
+   * Khewra, Deosai, Mehrgarh). Vain `lyhyt`. Lähteet (en-Wikipedia ja
+   * hakutarkistus 25.9.2026):
+   *   Northern Areas — Attabad Lake (maanvyöry 2010)
+   *   F.C.T.         — Faisal Mosque (1986, beduiinitelttamainen katto)
+   *   Punjab         — Badshahi Mosque (1673)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  PAK: {
+    'Azad Kashmir': {
+      lyhyt: 'Neelumin laakso kiemurtelee metsäisten vuorten välissä, ja sen joki virtaa kirkkaan vihreänä kylien ohi.',
+    },
+    Baluchistan: {
+      lyhyt: 'Makranin rannikkotien varrella Hingolin kansallispuistossa tuuli on veistänyt kallioon hahmon, jota kutsutaan Toivon prinsessaksi.',
+    },
+    'F.A.T.A.': {
+      lyhyt: 'Entiset heimoalueet liitettiin Khyber Pakhtunkhwaan 2018, ja niiden halki Khyberin sola kiemurtelee Afganistanin rajalle.',
+    },
+    'F.C.T.': {
+      lyhyt: 'Islamabadin Faisal-moskeija valmistui 1986 Margalla-kukkuloiden juurelle, ja sen katon muoto muistuttaa beduiinitelttaa.',
+    },
+    'K.P.': {
+      lyhyt: 'Peshawarin Qissa Khwani -basaarin nimi tarkoittaa tarinankertojien basaaria: sen teehuoneissa kerrottiin ennen tarinoita kauppiaille.',
+    },
+    'Northern Areas': {
+      lyhyt: 'Hunzan laakson Attabadjärvi syntyi vuonna 2010, kun maanvyöry patosi joen, ja sen vesi hohtaa sinivihreänä vuorten välissä.',
+    },
+    Punjab: {
+      lyhyt: 'Lahoren Badshahi-moskeija valmistui 1673 punaisesta hiekkakivestä, ja sen pihalle mahtuu kymmeniä tuhansia rukoilijoita.',
+    },
+    Sind: {
+      lyhyt: 'Sindhissä painetaan yhä ajrak-huiveja puuleimasimilla syvänsinisin ja punaisin kuvioin, ja ajrak on sindhiläisten ylpeyden merkki.',
+    },
+  },
+  /*
+   * BGD (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.BGD:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti:
+   * seitsemän hallintoaluetta ennen Mymensinghin eroamista 2015 (Dinajpur
+   * kuuluu Rangpuriin). Vain `lyhyt`. Lähteet (en-Wikipedia ja
+   * hakutarkistus 25.9.2026):
+   *   Dhaka    — Rickshaws and rickshaw painting in Dhaka (Unesco 2023)
+   *   Rajshahi — Somapura Mahavihara, Paharpur
+   *   Rangpur  — Kantajew Temple, Dinajpur
+   *   Muut     — yleistietoa, tarkistettu vastaavista
+   *              en-Wikipedia-artikkeleista.
+   */
+  BGD: {
+    Barisal: {
+      lyhyt: 'Dhakasta Barisaliin matkataan usein yön yli suurilla jokilautoilla, jotka lipuvat aamuun mennessä suiston joenhaarojen halki.',
+    },
+    Chittagong: {
+      lyhyt: "Cox's Bazarin hiekkaranta jatkuu yhtäjaksoisesti noin 120 kilometriä, ja se on yksi maailman pisimmistä luonnonrannoista.",
+    },
+    Dhaka: {
+      lyhyt: 'Dhakan kaduilla ajaa satojatuhansia polkupyöräriksoja, ja niiden kirjavat maalaukset lisättiin Unescon listalle 2023.',
+    },
+    Khulna: {
+      lyhyt: 'Sundarbans on maailman laajin mangrovemetsä, ja sen vuorovesikanavien varrella elää bengalintiikereitä.',
+    },
+    Rajshahi: {
+      lyhyt: 'Paharpurissa ovat Somapuran luostarin rauniot, yksi Himalajan eteläpuolen suurimmista buddhalaisista luostareista.',
+    },
+    Rangpur: {
+      lyhyt: 'Dinajpurin lähellä seisoo Kantajewin temppeli, jonka seinät on peitetty tarinoita kuvaavilla terrakottalaatoilla.',
+    },
+    Sylhet: {
+      lyhyt: 'Sreemangalia kutsutaan Bangladeshin teepääkaupungiksi, ja sen kojuissa kaadetaan lasiin kerroksittain moniväristä teetä.',
+    },
+  },
+  /*
+   * LKA (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.LKA:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti:
+   * 25 piirikuntaa sinhalan translitteraatiolla diakriitteineen
+   * (Kŏḷamba = Colombo, Mahanuvara = Kandy, Yāpanaya = Jaffna). Vältetty
+   * maastokohteet-lka.js:n aiheet (Sigiriya, Anuradhapuran ja
+   * Polonnaruwan muinaiskaupungit, Yapahuwa, hammastemppeli, Gallen
+   * linnoitus, Nuwara Eliyan kaupunki, Yhdeksän kaaren silta, Sri Pada,
+   * Mahaweli, Palkinlahti). Vain `lyhyt`. Lähteet (en-Wikipedia ja
+   * hakutarkistus 25.9.2026):
+   *   Badulla     — Dunhinda Falls (64 m)
+   *   Kalutara    — Kalutara Chaitya (ontto, 74 seinämaalausta)
+   *   Kilinochchi — Iranamadu Tank (pohjoisen maakunnan suurin)
+   *   Kurunegala  — Ethagala / Athugala (27 m Buddha-patsas)
+   *   Mullaitivu  — Kokkilai Sanctuary (1951)
+   *   Muut        — yleistietoa, tarkistettu vastaavista
+   *                 en-Wikipedia-artikkeleista.
+   */
+  LKA: {
+    'Ampāra': {
+      lyhyt: 'Arugam Bayn aallot vetävät surffaajia ympäri maailmaa etenkin touko–syyskuussa, ja rannan kalastajakylä elää nyt myös lautailijoista.',
+    },
+    'Anurādhapura': {
+      lyhyt: 'Mihintalen vuorelle johtavat pitkät kiviportaat, ja kesäkuun Poson-täysikuulla sinne nousee suuri joukko pyhiinvaeltajia.',
+    },
+    Badulla: {
+      lyhyt: 'Badullan lähellä Dunhindan vesiputous syöksyy 64 metriä, ja sen juurelta nouseva vesiusva on antanut sille nimen.',
+    },
+    'Gālla': {
+      lyhyt: 'Koggalan rannalla kalastajat istuvat meressä pystyyn lyötyjen seipäiden päällä ja onkivat aallokon keskeltä.',
+    },
+    Gampaha: {
+      lyhyt: 'Useimmat matkailijat saapuvat Sri Lankaan Gampahan piirikuntaan, sillä maan päälentoasema on Katunayakessa Negombon kupeessa.',
+    },
+    'Hambantŏṭa': {
+      lyhyt: 'Yalan kansallispuistossa elää yksi maailman tiheimmistä leopardikannoista, ja kissoja etsitään pensaikosta safariautoista.',
+    },
+    'Kægalla': {
+      lyhyt: 'Kitulgalassa lasketaan Kelani-joen koskia kumiveneillä, ja joen rannalla kuvattiin vuonna 1957 elokuva Kwai-joen silta.',
+    },
+    'Kaḷutara': {
+      lyhyt: 'Kalutaran sillan kupeessa seisova valkoinen stupa on sisältä ontto, ja sen seinille on maalattu 74 kuvaa Buddhan elämästä.',
+    },
+    'Kilinŏchchi': {
+      lyhyt: 'Iranamadun tekojärvi on Sri Lankan pohjoisen maakunnan suurin, ja sen vesi kastelee tuhansia hehtaareja riisipeltoja.',
+    },
+    'Kŏḷamba': {
+      lyhyt: 'Colombon Galle Face Greenin merenrantanurmelle kokoonnutaan iltaisin syömään katuruokaa ja lennättämään leijoja.',
+    },
+    'Kuruṇægala': {
+      lyhyt: 'Kurunegalan kaupungin yllä kohoaa Ethagala, norsukallioksi kutsuttu kivimuodostelma, jonka laella istuu suuri Buddha-patsas.',
+    },
+    'Maḍakalapuva': {
+      lyhyt: 'Batticaloan laguunin kerrotaan "laulavan" tyyninä täysikuun öinä, ja kalastajat ovat kuunnelleet ääntä vedestä veneistään.',
+    },
+    Mahanuvara: {
+      lyhyt: 'Peradeniyan kasvitieteellinen puutarha Kandyn laitamilla on Sri Lankan suurin, ja sen orkideahuone houkuttelee kävijöitä.',
+    },
+    'Mannārama': {
+      lyhyt: 'Mannarin saarella kasvaa jättimäinen baobab-puu, jonka arabikauppiaiden arvellaan tuoneen Afrikasta satoja vuosia sitten.',
+    },
+    'Mātale': {
+      lyhyt: 'Dambullan luolatemppelin viisi kallioluolaa ovat täynnä Buddha-patsaita ja kattomaalauksia, ja paikka on Unescon maailmanperintöä.',
+    },
+    'Mātara': {
+      lyhyt: 'Dondra Headin majakka Sri Lankan eteläisimmässä kärjessä on 49 metrillään saaren korkein majakka.',
+    },
+    'Mŏṇarāgala': {
+      lyhyt: 'Buduruvagalan kallioon on hakattu seitsemän hahmoa, joista keskimmäinen seisova Buddha on noin 15 metriä korkea.',
+    },
+    Mulativ: {
+      lyhyt: 'Kokkilain laguuni on ollut lintujensuojelualue vuodesta 1951, ja sen matalikoissa kahlaa pelikaaneja ja flamingoja.',
+    },
+    'Nuvara Ĕliya': {
+      lyhyt: "Horton Plainsin ylätasangolla polku päättyy World's Endiin, jossa jyrkänne putoaa noin 870 metriä alas.",
+    },
+    'Pŏḷŏnnaruva': {
+      lyhyt: 'Minneriyan kansallispuistossa kuivakauden lopulla sadat norsut kokoontuvat tekojärven rannalle laiduntamaan.',
+    },
+    Puttalama: {
+      lyhyt: 'Kalpitiyan laguunilla tuulee tuulikaudella niin tasaisesti, että siitä on tullut Sri Lankan leijalautailun keskus.',
+    },
+    Ratnapura: {
+      lyhyt: 'Ratnapuran nimi tarkoittaa jalokivikaupunkia, ja sen ympäristön mutakuopista huuhdotaan yhä safiireja ja rubiineja.',
+    },
+    'Trikuṇāmalaya': {
+      lyhyt: 'Trincomaleen syvä luonnonsatama on yksi maailman suurimmista, ja sen suulle kohoaa Swami-kallio.',
+    },
+    'Vavuniyāva': {
+      lyhyt: 'Vavuniyaa kutsutaan pohjoisen portiksi: sen kautta kulkevat sekä Jaffnaan vievä A9-valtatie että pohjoisen rautatie.',
+    },
+    'Yāpanaya': {
+      lyhyt: 'Jaffnan Nallurin Kandaswamy-temppelissä vietetään joka kesä 25 päivän juhlaa, johon kerääntyy tamilipyhiinvaeltajia kaukaa.',
+    },
+  },
+  /*
+   * NPL (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.NPL:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti:
+   * 14 vanhaa vyöhykettä (lakkautettu 2015). "Bhojpur" vastaa Kosin
+   * vyöhykettä; teksti on kirjoitettu Bhojpurin piirikunnasta, joka
+   * kuuluu siihen kummin päin tahansa. Vältetty maastokohteet-npl.js:n
+   * aiheet ja Kathmandun kohdekartan kohteet (Lumbini, Bhaktapur, Gorkha,
+   * Janakpur, Muktinath, Lo Manthang, Nuwakot, Bardiya, Dhaulagiri, Koshi,
+   * Rara, Boudhanath, Pashupatinath). Vain `lyhyt`. Lähteet
+   * (en-Wikipedia ja hakutarkistus 25.9.2026):
+   *   Bagmati     — Langtang National Park (1976, ensimmäinen Himalajan)
+   *   Bhojpur     — Bhojpure khukuri
+   *   Dhawalagiri — Kushman benjisilta (228 m)
+   *   Rapti       — Swargadwari (2 200 m)
+   *   Muut        — yleistietoa, tarkistettu vastaavista
+   *                 en-Wikipedia-artikkeleista.
+   */
+  NPL: {
+    Bagmati: {
+      lyhyt: 'Langtangin laakso Kathmandun pohjoispuolella on suosittu vaellusreitti, ja sen kansallispuisto oli Nepalin ensimmäinen Himalajan puisto.',
+    },
+    Bheri: {
+      lyhyt: 'Nepalgunjin lentoasemalta lähtee pienkoneita Länsi-Nepalin vuoristokylien kiitoradoille, esimerkiksi Simikotiin.',
+    },
+    Bhojpur: {
+      lyhyt: 'Bhojpurin kylissä taotaan kukri-veitsiä, ja Bhojpuren kukri tunnetaan koko Nepalissa ja sen rajojen ulkopuolellakin.',
+    },
+    Dhawalagiri: {
+      lyhyt: 'Kushmassa hypätään benjihyppyjä Kali Gandakin rotkon ylle ripustetulta sillalta, joka kulkee 228 metrin korkeudella.',
+    },
+    Gandaki: {
+      lyhyt: 'Pokharan Phewa-järven tyynestä vedestä heijastuu aamuisin Machhapuchhren terävä, pyhänä pidetty huippu.',
+    },
+    Janakpur: {
+      lyhyt: 'Rolwalingin laaksossa on Tsho Rolpa, yksi Nepalin suurimmista jäätikköjärvistä; sen pintaa laskettiin 2000 tulvavaaran vuoksi.',
+    },
+    Karnali: {
+      lyhyt: 'Dolpan Phoksundo-järvi lepää yli 3 600 metrin korkeudessa, ja sen vesi on syvän sinistä.',
+    },
+    Lumbini: {
+      lyhyt: 'Palpan Tansenissa kudotaan dhaka-kangasta, josta tehdään nepalilaisten miesten tunnettu kuviollinen topi-lakki.',
+    },
+    Mahakali: {
+      lyhyt: 'Shuklaphantan kansallispuiston laajoilla ruohoniityillä laiduntaa suuria barasinga-peuralaumoja.',
+    },
+    Mechi: {
+      lyhyt: 'Taplejungin pohjoisosassa kohoaa Kanchenjunga, maailman kolmanneksi korkein vuori, jonka juurelle vaelletaan viikkoja.',
+    },
+    Narayani: {
+      lyhyt: 'Chitwan perustettiin vuonna 1973 Nepalin ensimmäiseksi kansallispuistoksi, ja sen jokivarsilla viihtyvät kapeakuonoiset gaviaalit.',
+    },
+    Rapti: {
+      lyhyt: 'Pyuthanin Swargadwari, "taivaan portti", on 2 200 metrin kukkulalla oleva temppeli, jolta näkyy Himalajan lumihuippuja.',
+    },
+    Sagarmatha: {
+      lyhyt: 'Namche Bazaar 3 440 metrissä on Everestin reitin sherpakylä, jossa vaeltajat totuttelevat ohueen ilmaan.',
+    },
+    Seti: {
+      lyhyt: 'Khaptadin kansallispuisto on noin 3 000 metrin korkeudessa aaltoileva ylätasanko, jonka niityt kukkivat kesällä.',
+    },
+  },
 };
