@@ -10722,4 +10722,401 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Viqueque on pinta-alaltaan Itä-Timorin suurin kunta, ja sen etelärannikon tasangoilla viljellään riisiä.',
     },
   },
+  /*
+   * GEO (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 8C). Avaimet
+   * MAAKUNNAT_KAIKKI.GEO:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti.
+   * Vain `lyhyt`. Abhasiasta ja Šida Kartlista vain maisema ja
+   * kulttuuri. Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Abkhazia        — Veryovkina Cave (Arabika)
+   *   Ajaria          — Ali and Nino (Batumi, Kvesitadze)
+   *   Guria           — Georgian polyphony (krimanchuli)
+   *   Imereti         — Gelati Monastery (David IV)
+   *   Kakheti         — Qvevri (Unesco 2013)
+   *   Kvemo Kartli    — Dmanisi hominins
+   *   Mtskheta-Mt.    — Gergeti Trinity Church
+   *   Racha-Lechkhumi — Khvanchkara (wine)
+   *   Samegrelo-ZS    — Upper Svaneti (Unesco 1996)
+   *   Samtskhe-Jav.   — Vardzia
+   *   Shida Kartli    — Uplistsikhe
+   *   Tbilisi         — Abanotubani
+   */
+  GEO: {
+    Abkhazia: {
+      lyhyt: 'Arabikan kalkkikivivuoristossa on Verjovkinan luola, maailman syvin tunnettu luola, joka ulottuu yli 2 200 metrin syvyyteen.',
+    },
+    Ajaria: {
+      lyhyt: 'Batumin rantabulevardilla kaksi kahdeksanmetristä teräsveistosta, Ali ja Nino, liukuvat iltaisin hitaasti toistensa läpi.',
+    },
+    Guria: {
+      lyhyt: 'Gurian moniäänisessä laulussa ylin ääni, krimantšuli, jodlaa kiemurrellen muiden äänten yläpuolella.',
+    },
+    Imereti: {
+      lyhyt: 'Gelatin luostarin perusti kuningas Daavid Rakentaja 1106, ja hänet haudattiin portin alle, jotta kävijät astuisivat hänen ylitseen.',
+    },
+    Kakheti: {
+      lyhyt: 'Kakhetissa viini käytetään yhä maahan upotetuissa saviruukuissa, kvevreissä, ja menetelmä on Unescon aineetonta kulttuuriperintöä.',
+    },
+    "Kvemo Kartli": {
+      lyhyt: 'Dmanisista on kaivettu noin 1,8 miljoonaa vuotta vanhoja ihmisen sukulaisten kalloja, vanhimpia Afrikan ulkopuolelta löydettyjä.',
+    },
+    "Mtskheta-Mtianeti": {
+      lyhyt: 'Stepantsmindan yllä 2 170 metrin korkeudessa seisoo Gergetin kolminaisuuskirkko, ja sen takana kohoaa lumihuippuinen Kazbek.',
+    },
+    "Racha-Lechkhumi-Kvemo Svaneti": {
+      lyhyt: 'Ratšan Khvantškarassa tehdään luonnostaan puolimakeaa punaviiniä aleksandrouli- ja mudžuretuli-rypäleistä.',
+    },
+    "Samegrelo-Zemo Svaneti": {
+      lyhyt: 'Ylä-Svanetin vuoristokylissä kohoaa keskiaikaisia kivisiä puolustustorneja, ja laakso on Unescon maailmanperintöä.',
+    },
+    "Samtskhe-Javakheti": {
+      lyhyt: 'Vardzian luostarikaupunki hakattiin 1100-luvun lopulla kuningatar Tamaran aikana Erušetivuoren jyrkkään kallioseinään.',
+    },
+    "Shida Kartli": {
+      lyhyt: 'Uplistsikhe on Mtkvari-joen yllä kallioon hakattu muinainen kaupunki, jonka vanhimmat osat ovat varhaiselta rautakaudelta.',
+    },
+    Tbilisi: {
+      lyhyt: 'Tbilisin nimi juontuu sanasta tbili, lämmin, ja Abanotubanin kupolikylpylöissä kylvetään yhä kuumassa rikkivedessä.',
+    },
+  },
+  /*
+   * ARM (erä 8C). Avaimet MAAKUNNAT_KAIKKI.ARM:n tunnuksia TÄSMÄLLEEN
+   * ("Erevan"). Vain `lyhyt`. Araratin vuori on jo TUR/Iğdır-rivillä,
+   * joten Ararat-maakunnassa Khor Virap. Lähteet (en-Wikipedia):
+   *   Aragatsotn — Mount Aragats; Ararat — Khor Virap; Armavir —
+   *   Etchmiadzin Cathedral; Gegharkunik — Sevanavank; Erevan —
+   *   Erebuni Fortress; Kotayk — Garni Temple; Lori — Haghpat/Sanahin;
+   *   Shirak — Gyumri (huumori); Syunik — Wings of Tatev; Tavush —
+   *   Dilijan/Haghartsin; Vayots Dzor — Areni-1 shoe
+   */
+  ARM: {
+    Aragatsotn: {
+      lyhyt: 'Nelihuippuinen Aragats nousee 4 090 metriin, ja se on Armenian nykyisten rajojen sisällä korkein vuori.',
+    },
+    Ararat: {
+      lyhyt: 'Khor Virapin luostarin maanalaisessa kuopassa Gregorius Valaistaja oli perimätiedon mukaan vankina 13 vuotta.',
+    },
+    Armavir: {
+      lyhyt: 'Vagharšapatin Etšmiadzinin katedraali rakennettiin 300-luvun alussa, ja se on Armenian apostolisen kirkon äitikirkko.',
+    },
+    Gegharkunik: {
+      lyhyt: 'Sevanjärvi on noin 1 900 metrin korkeudessa, ja sen niemellä seisoo vuonna 874 perustettu Sevanavankin luostari.',
+    },
+    Erevan: {
+      lyhyt: 'Jerevan laskee syntynsä vuoteen 782 eaa., jolloin urartulaiset rakensivat Erebunin linnoituksen nykyisen kaupungin laidalle.',
+    },
+    Kotayk: {
+      lyhyt: 'Garnin pylväiden kehystämä temppeli ensimmäiseltä vuosisadalta on ainoa kreikkalais-roomalainen temppeli entisen Neuvostoliiton alueella.',
+    },
+    Lori: {
+      lyhyt: 'Debed-joen rotkon yllä seisovat Haghpatin ja Sanahinin keskiaikaiset luostarit, jotka ovat Unescon maailmanperintöä.',
+    },
+    Shirak: {
+      lyhyt: 'Gjumria kutsutaan Armenian huumorin pääkaupungiksi, ja sen asukkaiden sutkaukset kiertävät koko maassa.',
+    },
+    Syunik: {
+      lyhyt: 'Tatevin köysirata kulkee 5 752 metriä Vorotan-joen rotkon yli, ja se on yksi maailman pisimmistä yhtäjaksoisista köysiradoista.',
+    },
+    Tavush: {
+      lyhyt: 'Dilijanin metsäisiä vuoria kutsutaan Armenian Sveitsiksi, ja läheinen Haghartsinin luostari kätkeytyy metsän keskelle.',
+    },
+    "Vayots Dzor": {
+      lyhyt: 'Arenin luolasta löytyi 2008 noin 5 500 vuotta vanha nahkakenkä, vanhin tunnettu lähes ehjänä säilynyt kenkä.',
+    },
+  },
+  /*
+   * AZE (erä 8C). Avaimet ovat Natural Earthin vanhoja (ennen 2021)
+   * talousalueita TÄSMÄLLEEN. Vain `lyhyt`. Kalbajar-Lachinista,
+   * Yukhari Garabakhista ja Naxçıvanista vain maisema ja kulttuuri.
+   * Lähteet (en-Wikipedia ja haku, tarkistettu 25.9.2026):
+   *   Absheron — Yanar Dag; Aran — Shirvan National Park (2003);
+   *   Daghlig Shirvan — Lahij; Ganja-Gazakh — Nizami Mausoleum;
+   *   Guba-Khachmaz — Khinalug; Kalbajar-Lachin — Istisu resort;
+   *   Lankaran — Hyrcanian Forests (Unesco 2023); Naxçıvan — Momine
+   *   Khatun Mausoleum (1186); Shaki-Zaqatala — Palace of Shaki Khans;
+   *   Yukhari Garabakh — Karabakh horse
+   */
+  AZE: {
+    "Absheron Economic Region": {
+      lyhyt: 'Abšeronin niemimaalla Yanar Dagin rinteessä palaa maasta purkautuva maakaasu liekkeinä yötä päivää.',
+    },
+    "Aran Economic Region": {
+      lyhyt: 'Kura-joen alavalla tasangolla Širvanin kansallispuistossa elää tuhansia struumagaselleja, Kaukasian suurin kanta.',
+    },
+    "Daghlig Shirvan Economic Region": {
+      lyhyt: 'Lahıcin vuoristokylässä kupariseppien verstaat takovat yhä kattiloita ja kannuja kivetyn pääkadun varrella.',
+    },
+    "Ganja-Gazakh Economic Region": {
+      lyhyt: 'Gandžassa on 1100-luvun runoilijan Nizami Gandžavin mausoleumi; hän kirjoitti persiaksi runoelman Leila ja Madžnun.',
+    },
+    "Guba-Khachmaz Economic Region": {
+      lyhyt: 'Xınalıqin kylässä yli 2 300 metrin korkeudessa puhutaan omaa kieltä, jota ei puhuta missään muualla.',
+    },
+    "Kalbajar-Lachin Economic Region": {
+      lyhyt: 'Kəlbəcərin vuorilla yli 2 000 metrin korkeudessa pulppuavat Istisun lähes 60-asteiset mineraalilähteet.',
+    },
+    "Lankaran Economic Region": {
+      lyhyt: 'Talyšvuorten Hyrkanian metsät ovat jäänne esihistoriallisesta lehtimetsästä, ja ne ovat Unescon maailmanperintöä.',
+    },
+    "Naxçıvan Autonomous Republic": {
+      lyhyt: 'Naxçıvanin Möminə Xatunin mausoleumi valmistui 1186, ja sen kymmenkulmaista tiilitornia koristavat turkoosit kuviot.',
+    },
+    "Shaki-Zaqatala Economic Region": {
+      lyhyt: 'Šekin kaanien palatsin ikkunoiden šebeke-lasimosaiikki on koottu puusta ja lasista ilman ainuttakaan naulaa tai liimaa.',
+    },
+    "Yukhari Garabakh Economic Region": {
+      lyhyt: 'Karabahin hevonen on sitkeä ja nopea vuoristorotu, ja se on Azerbaidžanin kansalliseläin.',
+    },
+  },
+  /*
+   * YEM (erä 8C). Avaimet MAAKUNNAT_KAIKKI.YEM:n tunnuksia TÄSMÄLLEEN
+   * (myös "`Adan", "Sa`dah", "Ta`izz"). Vain `lyhyt`, ei sotaa eikä
+   * politiikkaa. Vältetty maastokohteet-yem.js:n aiheet (Nabi Shu'ayb,
+   * Sokotra, Shibam, Zabid, Maribin pato, Tarim, Jibla, Baraqish, Thula,
+   * al-Hajjarah). Lähteet (en-Wikipedia, Archnet, haku 25.9.2026):
+   *   Abyan — Wadi Bana; Adan — Crater; Al Bayda' — Amiriya Madrasa;
+   *   Al Dali' — Jabal Jahaf; Al Jawf — Qarnawu; Al Mahwit — Shibam
+   *   Kawkaban; Amran — Shaharah Bridge; Dhamar — Hammam Ali;
+   *   Hadramawt — Wadi Do'an sidr; Hajjah — Kuhlan Affar; Hudaydah —
+   *   Bayt al-Faqih; Ibb — Ibb Governorate; Lahij — Ahmed Fadhl
+   *   al-Qumindan; Mahrah — Mehri; Ma'rib — Temple of Awwam; Raymah —
+   *   Raymah Governorate; Sa'dah — Al-Hadi Mosque; Shabwah — Bir Ali /
+   *   Qana; Sana'a — Dar al-Hajar; Amanat Al Asimah — Old City of
+   *   Sana'a; Ta'izz — Ashrafiya Mosque
+   */
+  YEM: {
+    Abyan: {
+      lyhyt: 'Abyanin suistossa Wadi Banan tulvavedet johdetaan pelloille, ja ennen itsenäisyyttä seutu oli tunnettu puuvillastaan.',
+    },
+    "`Adan": {
+      lyhyt: 'Adenin vanhin kaupunginosa, Crater, on rakennettu sammuneen tulivuoren kraatteriin meren rannalle.',
+    },
+    "Al Bayda'": {
+      lyhyt: "Rada'n valkoinen al-Amirijan madrasa valmistui 1504, ja sen kunnostus kesti yli kaksikymmentä vuotta.",
+    },
+    "Al Dali'": {
+      lyhyt: 'Jahaf-vuoren ylätasangolla on yli 360 lähdettä ja kaivoa, ja vuoren korkein huippu kohoaa 2 401 metriin.',
+    },
+    "Al Jawf": {
+      lyhyt: 'Al-Jawfin laaksossa ovat Qarnawun rauniot; kaupunki oli muinaisen minealaisten kuningaskunnan pääkaupunki.',
+    },
+    "Al Mahwit": {
+      lyhyt: 'Kawkabanin linnoituskylä on jyrkänteen päällä lähes 3 000 metrin korkeudessa, ja sen alla laaksossa on Šibamin kaksoiskaupunki.',
+    },
+    Amran: {
+      lyhyt: 'Šaharan 1600-luvulla rakennettu kivisilta ylittää syvän rotkon noin 2 600 metrin korkeudessa ja yhdistää kaksi vuorikylää.',
+    },
+    Dhamar: {
+      lyhyt: 'Hammam Alin kylpyläkylä on syntynyt Dhawran-vuoren rinteen lukuisten kuumien rikkilähteiden ympärille.',
+    },
+    Hadramawt: {
+      lyhyt: "Wadi Do'anin vuorilla mehiläiset keräävät sidr-puiden kukista hunajaa, jota pidetään yhtenä maailman kalleimmista.",
+    },
+    Hajjah: {
+      lyhyt: 'Kuhlanin linnoitus kyyhöttää kuin kotkanpesä noin 2 400 metrin huipulla Hajjahin vuorten keskellä.',
+    },
+    "Al Hudaydah": {
+      lyhyt: 'Bayt al-Faqih oli pitkään Jemenin kahvikaupan keskus, ja sen perjantaimarkkinat kokoavat väkeä koko Tihaman tasangolta.',
+    },
+    Ibb: {
+      lyhyt: 'Ibbin vuoristo saa Jemenin runsaimmat sateet, ja siksi sitä kutsutaan vihreäksi maakunnaksi.',
+    },
+    Lahij: {
+      lyhyt: 'Lahijin runoilija ja säveltäjä Ahmad Fadl al-Qumandan loi nykyaikaisen lahjilaisen musiikin, yhden Jemenin päätyyleistä.',
+    },
+    "Al Mahrah": {
+      lyhyt: 'Mahrassa puhutaan mehriä, muinaista eteläarabialaista kieltä, joka ei ole arabian murre vaan oma kielensä.',
+    },
+    "Ma'rib": {
+      lyhyt: 'Maribin Awwamin temppeli tunnetaan myös Saban kuningattaren nimellä Mahram Bilqis, ja se on Unescon maailmanperintöä.',
+    },
+    Raymah: {
+      lyhyt: 'Raiman vuoret nousevat lähes 3 000 metriin, ja niiden pengerrinteillä viljellään sadeveden varassa kahvia.',
+    },
+    "Sa`dah": {
+      lyhyt: "Sa'dan al-Hadin moskeija on 800-luvulta, ja sen viereisen haudan kupoli on Jemenin vanhin tunnettu hautakupoli.",
+    },
+    Shabwah: {
+      lyhyt: 'Bir Alin rannalla mustan laavakallion Husn al-Ghurabin juurella oli muinainen Qana, Arabian tärkein suitsukesatama.',
+    },
+    "Sana'a": {
+      lyhyt: 'Wadi Dharin kallion päälle rakennettu Dar al-Hajar oli imaami Yahyan kesäpalatsi.',
+    },
+    "Amanat Al Asimah": {
+      lyhyt: 'Sanaan vanhan kaupungin tornitalojen ikkunoiden yllä on qamarija-kaari-ikkunoita, joissa valo siivilöityy alabasterin tai värilasin läpi.',
+    },
+    "Ta`izz": {
+      lyhyt: 'Taizzin Ashrafijan moskeija ja madrasa rakennettiin rasulidisulttaanien aikana, ja sen kaksoisminareetit näkyvät yli vanhan kaupungin.',
+    },
+  },
+  /*
+   * OMN (erä 8C). Avaimet MAAKUNNAT_KAIKKI.OMN:n tunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Vältetty maastokohteet-omn.js:n aiheet (Jabal Shams,
+   * Masirah, Bahla, Nizwan linnoitus, Bat, Sur, Sumhuram, Sharqiyan
+   * hiekat, Nakhal, Musandam). Lähteet (en-Wikipedia ja haku):
+   *   Al Batnah North — Sohar (Sindbad); Al Batnah South — Rustaq Fort;
+   *   Al Buraymi — Al Khandaq Fort; Ad Dakhliyah — Nizwan karjatori;
+   *   Al Wusta — Arabian oryx reintroduction (1982); Al Dhahira — As
+   *   Sulaif; Ash Sharqiyah North — Ibra Women's Souq; Ash Sharqiyah
+   *   South — Ras al Jinz; Dhofar — Khareef; Musandam — Kumzari;
+   *   Muscat — Royal Opera House Muscat (2011)
+   */
+  OMN: {
+    "Al Batnah North": {
+      lyhyt: 'Soharia pidetään perimätiedon mukaan Tuhannen ja yhden yön merenkulkijan Sindbadin kotikaupunkina.',
+    },
+    "Al Batnah South": {
+      lyhyt: 'Rustaqin linnoituksen vanhimmat osat ovat ajalta ennen islamia, ja 1600-luvulla sitä laajensivat Yaruba-imaamit.',
+    },
+    "Al Buraymi": {
+      lyhyt: 'Buraimin keidas jatkuu rajan yli Arabiemiraattien Al Ainiin, ja vanhaa Khandaqin linnaa kiertää yhä kuiva vallihauta.',
+    },
+    "Ad Dakhliyah": {
+      lyhyt: 'Nizwan perjantaiaamun karjamarkkinoilla vuohia ja lehmiä talutetaan ringissä ostajien edessä.',
+    },
+    "Al Wusta": {
+      lyhyt: 'Jiddat al-Harasisin kivitasangolle vapautettiin 1982 arabianbeisoja, kun laji oli kuollut luonnosta sukupuuttoon.',
+    },
+    "Al Dhahira": {
+      lyhyt: 'Ibrin laidalla on as-Sulaif, muurien ja vartiotornien ympäröimä savitiilikylä, jonka alitse kulkee falaj-kastelukanava.',
+    },
+    "Ash Sharqiyah North": {
+      lyhyt: 'Ibran keskiviikkomarkkinoilla myyjät ja ostajat ovat naisia, ja kojuissa on hajuvesiä, kankaita ja hopeakoruja.',
+    },
+    "Ash Sharqiyah South": {
+      lyhyt: 'Ras al-Jinzin rannoille nousee öisin vihreitä merikilpikonnia kaivamaan pesiään hiekkaan.',
+    },
+    Dhofar: {
+      lyhyt: 'Kesäkuusta syyskuuhun khareef-monsuuni tuo Salalahin vuorille sumua ja tihkua, ja rinteet vihertyvät keskellä aavikkoa.',
+    },
+    Musandam: {
+      lyhyt: 'Kumzarin kylässä puhutaan kumzaria, iranilaista kieltä, ja kylään pääsee lähinnä veneellä jyrkkien vuorten välistä.',
+    },
+    Muscat: {
+      lyhyt: 'Muscatin kuninkaallinen oopperatalo avattiin 2011, ja se oli Persianlahden alueen ensimmäinen oopperatalo.',
+    },
+  },
+  /*
+   * ARE (erä 8C). Avaimet MAAKUNNAT_KAIKKI.ARE:n tunnuksia TÄSMÄLLEEN
+   * ("Dubay", "Fujayrah", "Neutral Zone"). "Neutral Zone" on Natural
+   * Earthin kaksi yhteishallintoaluetta Hattan lähellä (Fujairah–Sharjah
+   * ja Ajman–Oman, NE:n note-kenttä). Vain `lyhyt`. Vältetty
+   * maastokohteet-are.js:n aiheet. Lähteet (en-Wikipedia ja haku):
+   *   Abu Dhabi — Louvre Abu Dhabi; Ajman — Emirate of Ajman; Dubay —
+   *   Abra (boat); Fujayrah — Emirate of Fujairah; Ras Al Khaymah —
+   *   Dhayah Fort; Sharjah — World Book Capital 2019; Umm Al Qaywayn —
+   *   Siniyah Island
+   */
+  ARE: {
+    "Abu Dhabi": {
+      lyhyt: 'Louvre Abu Dhabin 180-metrinen kupoli on koottu 7 850 tähdestä, ja niiden läpi siivilöityvää valoa kutsutaan valosateeksi.',
+    },
+    Ajman: {
+      lyhyt: 'Ajman on seitsemästä emiraatista pinta-alaltaan pienin, vain noin 260 neliökilometriä.',
+    },
+    Dubay: {
+      lyhyt: 'Dubai Creekin yli pääsee yhä puisella abra-veneellä, ja matka Bur Dubaista Deiraan maksaa yhden dirhamin.',
+    },
+    Fujayrah: {
+      lyhyt: 'Fujairah on ainoa emiraatti, jonka koko rannikko on Omaninlahdella eikä lainkaan Persianlahdella.',
+    },
+    "Neutral Zone": {
+      lyhyt: 'Hajarvuorten karuissa laaksoissa Hattan lähellä on kaksi pientä aluetta, joita naapurit hallitsevat yhdessä.',
+    },
+    "Ras Al Khaymah": {
+      lyhyt: 'Dhayahin linnake on emiraattien ainoa säilynyt kukkulalinnake, ja sen juurella viheriöi taatelipalmujen keidas.',
+    },
+    Sharjah: {
+      lyhyt: 'Sharjah oli Unescon kirjapääkaupunki 2019, ja sen kansainvälisille kirjamessuille saapuu yli 1 500 kustantajaa.',
+    },
+    "Umm Al Qaywayn": {
+      lyhyt: 'Siniyahin saarella pesii noin 15 000 sokotranmerimetsoparia, emiraattien suurin yhdyskunta.',
+    },
+  },
+  /*
+   * QAT (erä 8C). Avaimet MAAKUNNAT_KAIKKI.QAT:n tunnuksia TÄSMÄLLEEN
+   * ("Ar Rayyān"). Vain `lyhyt`. Vältetty maastokohteet-qat.js:n
+   * aiheet. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Al Daayen — Lusail Stadium; Al Khawr — Al Khor Island; Ar Rayyān —
+   *   Education City; Madinat ach Shamal — Ar-Ru'ays; Al Wakrah — Al
+   *   Janoub Stadium; Ad Dawhah — National Museum of Qatar; Umm Salal —
+   *   Barzan Towers
+   */
+  QAT: {
+    "Al Daayen": {
+      lyhyt: 'Lusail on 2000-luvulla tyhjästä rakennettu kaupunki, ja sen stadionilla pelattiin jalkapallon MM-finaali 2022.',
+    },
+    "Al Khawr": {
+      lyhyt: 'Al Khorin Purppurasaarella murskattiin yli 3 500 vuotta sitten miljoonia kotiloita purppuraväriksi.',
+    },
+    "Ar Rayyān": {
+      lyhyt: 'Ar-Rayyanin Education Cityssä on kahdeksan ulkomaisen yliopiston kampus ja Qatarin kansalliskirjasto.',
+    },
+    "Madinat ach Shamal": {
+      lyhyt: "Pohjoiskärjen Ar-Ru'ays oli ennen öljykautta yksi Qatarin tärkeimmistä kalastuskylistä.",
+    },
+    "Al Wakrah": {
+      lyhyt: 'Al Wakrahin Al Janoub -stadionin katto muistuttaa dhow-veneiden purjeita, ja sen suunnitteli Zaha Hadidin toimisto.',
+    },
+    "Ad Dawhah": {
+      lyhyt: 'Qatarin kansallismuseo avattiin Dohassa 2019, ja sen toisiinsa kiilautuvat kiekot jäljittelevät aavikkoruusun kidettä.',
+    },
+    "Umm Salal": {
+      lyhyt: 'Umm Salal Mohammedin 16-metrisistä Barzan-torneista tähyiltiin laivoja ja ramadanin uutta kuuta.',
+    },
+  },
+  /*
+   * KWT (erä 8C). Avaimet MAAKUNNAT_KAIKKI.KWT:n tunnuksia TÄSMÄLLEEN.
+   * Vain `lyhyt`. Vältetty maastokohteet-kwt.js:n aiheet (Mutla,
+   * Failaka, Bubiyan, Burgan ym.). Lähteet (en-Wikipedia ja haku):
+   *   Al Ahmadi — Al Ahmadi, Kuwait; Al Asimah — Kuwait Towers;
+   *   Al Farwaniyah — Farwaniya Governorate; Al Jahrah — Kuwait Red
+   *   Fort; Hawalli — Kuwait Scientific Center; Mubarak Al-Kabeer —
+   *   Mubarak Al-Kabeer (governorate)
+   */
+  KWT: {
+    "Al Ahmadi": {
+      lyhyt: 'Ahmadin kaupunki perustettiin öljylöytöjen myötä 1946, ja se on yhä Kuwait Oil Companyn kotipaikka.',
+    },
+    "Al Asimah": {
+      lyhyt: 'Kuwait Towersin kolme tornia valmistuivat 1979, ja kahden tornin palloissa on vesisäiliöt.',
+    },
+    "Al Farwaniyah": {
+      lyhyt: 'Farwaniya on Kuwaitin väkirikkain kuvernoraatti, ja sen alueella on maan kansainvälinen lentokenttä.',
+    },
+    "Al Jahrah": {
+      lyhyt: 'Jahran Punaisen linnakkeen punertavia savitiiliseiniä alettiin rakentaa 1897 suojaamaan keitaan viljelmiä.',
+    },
+    Hawalli: {
+      lyhyt: 'Salmiyan rannalla Scientific Centerin akvaariossa on 1,5 miljoonan litran allas haille ja rauskuille.',
+    },
+    "Mubarak Al-Kabeer": {
+      lyhyt: 'Mubarak al-Kabirin kuvernoraatti erotettiin Hawallista 1999, ja se on nimetty Kuwaitin seitsemännen hallitsijan Mubarak Suuren mukaan.',
+    },
+  },
+  /*
+   * BHR (erä 8C). Avaimet MAAKUNNAT_KAIKKI.BHR:n tunnuksia TÄSMÄLLEEN
+   * (Natural Earthin vanha viiden kuvernoraatin jako diakriitteineen,
+   * "Al Wusţá" = vuonna 2014 lakkautettu Keskinen kuvernoraatti).
+   * Vain `lyhyt`. Lähteet (en-Wikipedia ja haku 25.9.2026):
+   *   Al Janūbīyah — Tree of Life (Bahrain); Al Manāmah — Bab al-Bahrain;
+   *   Al Wusţá — A'ali (keskinen kuvernoraatti 2001–2014); Ash
+   *   Shamālīyah — Barbar Temple; Al Muḩarraq — Bahrain Pearling Trail
+   */
+  BHR: {
+    "Al Janūbīyah": {
+      lyhyt: 'Aavikolla Jebel Dukhanin lähellä kasvaa Elämän puu, yli 400-vuotias yksinäinen puu, jonka vedensaanti on yhä arvoitus.',
+    },
+    "Al Manāmah": {
+      lyhyt: 'Bab al-Bahrain -portti rakennettiin 1949 rantaan, mutta maantäyttöjen jälkeen se seisoo nyt kaukana merestä.',
+    },
+    "Al Wusţá": {
+      lyhyt: "A'alin savenvalajat ovat rakentaneet verstaansa muinaisten hautakumpujen keskelle, ja osa polttaa astioita vanhoissa hautakammioissa.",
+    },
+    "Ash Shamālīyah": {
+      lyhyt: 'Barbarin temppelit on rakennettu päällekkäin makean veden lähteen ympärille, ja vanhin niistä on noin 5 000 vuotta vanha.',
+    },
+    "Al Muḩarraq": {
+      lyhyt: 'Muharraqin helmipolku kulkee 3,5 kilometriä helmikauppiaiden talojen ohi, ja se on Unescon maailmanperintöä.',
+    },
+  },
 };
