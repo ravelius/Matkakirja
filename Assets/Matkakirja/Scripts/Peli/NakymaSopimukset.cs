@@ -176,6 +176,8 @@ namespace Matkakirja.Natiivi
         void PaivitaTila(LehtiTila tila);
         void Sulje();
         bool Auki { get; }
+        /// <summary>Lehti peittää koko ruudun läpinäkymättömänä (iPadin ≤ 960 pt arkki ei): pallon kamera saa sammua (lämpöerä).</summary>
+        bool PeittaaRuudun { get; }
         /// <summary>Omistaja (kaupunki tai ISO3).</summary>
         event Action<string> Avautui;
         /// <summary>Omistaja; kerran per avaus, myös Sulje-kutsusta.</summary>
