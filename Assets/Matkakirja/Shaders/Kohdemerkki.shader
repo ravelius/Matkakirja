@@ -15,6 +15,7 @@ Shader "Matkakirja/Kohdemerkki"
         _Katko("Katko ja väli (pt)", Vector) = (6, 4, 0, 0)
         _Koko("Neliön sivu (pt)", Float) = 48
         _HaloViiva("Halon viiva (pt)", Float) = 3.4
+        _Alfa("Häivytys (ilmestyminen ja poistuminen, web MERKKIEN_SIIRTYMA_MS)", Float) = 1
     }
     SubShader
     {
@@ -34,7 +35,7 @@ Shader "Matkakirja/Kohdemerkki"
 
             CBUFFER_START(UnityPerMaterial)
                 half4 _Taytto, _Viivavari, _Halovari;
-                float _Sade, _Viiva, _Koko, _HaloViiva;
+                float _Sade, _Viiva, _Koko, _HaloViiva, _Alfa;
                 float4 _Katko;
             CBUFFER_END
 
@@ -73,6 +74,7 @@ Shader "Matkakirja/Kohdemerkki"
                 float katko = 1.0 - smoothstep(_Katko.x - 0.5, _Katko.x + 0.5, kohta);
                 float viiva = (1.0 - smoothstep(_Viiva * 0.5 - 0.5 * w, _Viiva * 0.5 + 0.5 * w, abs(r - _Sade))) * katko;
                 c = Paalle(c, _Viivavari.rgb, viiva * _Viivavari.a);
+                c.a *= _Alfa;
                 if (c.a <= 0.001) discard;
                 return c;
             }
