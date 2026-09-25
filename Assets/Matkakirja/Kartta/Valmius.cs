@@ -30,6 +30,9 @@ namespace Matkakirja
     /// PlayerPrefs "matkakirja-valmius-auto" on päällä (1 = <see cref="AutoOletusS"/> s, ≥ 2 = sekunnit; simulaattorissa
     /// sovellus kiinni: defaults write app.matkakirja.proto3d matkakirja-valmius-auto -int 1; komento `valmius auto
     /// paalle [s]`; varakanava Documents/valmius-auto.txt). Verhon lähtörivi (<see cref="VerhoLoppu"/>) kirjataan aina.
+    ///
+    /// Lisäksi verhojen yhteinen valmiusehto (<see cref="Tasaantunut"/>, BUILD 16) ja verhon kevennys (<see cref="KevennysAlku"/>:
+    /// Laattapalvelimen näkyvä jono ylös, tausta tauolle; lähtö- ja näyterivillä "kevennys paalle/pois").
     /// </summary>
     public sealed class Valmius : MonoBehaviour
     {
@@ -138,7 +141,8 @@ namespace Matkakirja
         /// </summary>
         public static void VerhoLoppu(string nimi, string syy, double ms, float aste)
         {
-            Debug.Log($"MATKAKIRJA valmius: verho {nimi} lähti {syy} {ms:0} ms aste {(aste < 0 ? "-" : aste.ToString("0.0"))} %");
+            Debug.Log($"MATKAKIRJA valmius: verho {nimi} lähti {syy} {ms:0} ms aste {(aste < 0 ? "-" : aste.ToString("0.0"))} % " +
+                      $"kevennys {KevennysTila()}");
             if (instanssi == null) return;
             foreach (var x in instanssi.seurannat)
                 if (x.Nimi == nimi) x.VerhoLahti = Time.realtimeSinceStartup - x.Alku;
@@ -151,6 +155,73 @@ namespace Matkakirja
         /// </summary>
         public static bool Tasaantunut(ValmiusEhto ehto, Cesium3DTileset pallo) =>
             ehto != null && pallo != null && ehto.Paivita(Time.realtimeSinceStartupAsDouble, pallo.ComputeLoadProgress());
+
+        // ---- Verhon kevennys (Fablen päätös BUILD 16, löydös 80) ----
+        // Verhon ajaksi Laattapalvelimen näkyvän kartan jono saa enemmän rinnakkaisia hakuja ja taustan esilataus on tauolla
+        // (Laattapalvelin.VerhoKevennys). Cesiumin valinnan kevennystä (preloadSiblings/preloadAncestors/forbidHoles/
+        // loadingDescendantLimit pois verhon ajaksi) EI tehdä: Cesium for Unity 1.25.1:ssä jokainen näistä asettimista kutsuu
+        // RecreateTileset():iä (Cesium3DTileset.cs), ja natiivi lukee ne vain tilesetin luonnissa (Cesium3DTilesetImpl.cpp:
+        // LoadTileset 650–655), joten vaihto ajon aikana lataisi koko pallon uudelleen.
+
+        /// <summary>Kehittäjälippu A/B-mittaukseen: kevennys pois (PlayerPrefs tai Documents/valmius-kevennys-pois.txt).</summary>
+        public const string KevennysPoisAvain = "matkakirja-valmius-kevennys-pois";
+        public const string KevennysPoisTiedosto = "valmius-kevennys-pois.txt";
+        /// <summary>Kevennys vapautuu viimeistään näin monen sekunnin päästä (verhon korutiini voi keskeytyä ennen loppua).</summary>
+        public const float KevennysKatto = 15f;
+
+        public static bool KevennysPois
+        {
+            get
+            {
+                if (!kevennysLuettu)
+                {
+                    kevennysLuettu = true;
+                    kevennysPois = PlayerPrefs.GetInt(KevennysPoisAvain, 0) == 1;
+                    if (!kevennysPois)
+                        try { kevennysPois = System.IO.File.Exists(System.IO.Path.Combine(Application.persistentDataPath, KevennysPoisTiedosto)); }
+                        catch (System.Exception) { /* valinnainen */ }
+                    if (kevennysPois) Debug.Log("MATKAKIRJA valmius: verhon kevennys pois (kehittäjälippu)");
+                }
+                return kevennysPois;
+            }
+            set
+            {
+                kevennysLuettu = true;
+                kevennysPois = value;
+                PlayerPrefs.SetInt(KevennysPoisAvain, value ? 1 : 0);
+                PlayerPrefs.Save();
+                if (!value)
+                    try { System.IO.File.Delete(System.IO.Path.Combine(Application.persistentDataPath, KevennysPoisTiedosto)); }
+                    catch (System.Exception) { /* ei tiedostoa */ }
+            }
+        }
+        static bool kevennysLuettu, kevennysPois;
+        readonly Dictionary<string, float> kevennykset = new Dictionary<string, float>();
+
+        /// <summary>Verho alkaa: kevennys päälle (ellei lippu estä). Sama nimi kahdesti = yksi kevennys.</summary>
+        public static void KevennysAlku(string nimi)
+        {
+            if (KevennysPois) return;
+            var v = Hae();
+            if (v.kevennykset.ContainsKey(nimi)) return;
+            v.kevennykset[nimi] = Time.realtimeSinceStartup;
+            Laattapalvelin.VerhoKevennys(true);
+        }
+
+        /// <summary>Verho lähtee: kevennys pois (viimeisen verhon jälkeen tausta jatkuu).</summary>
+        public static void KevennysLoppu(string nimi)
+        {
+            if (instanssi == null || !instanssi.kevennykset.Remove(nimi)) return;
+            Laattapalvelin.VerhoKevennys(false);
+        }
+
+        /// <summary>Kevennyksen tila lokiriveille: "paalle (aloitusverho, musta)", "pois" tai "pois (lippu)".</summary>
+        public static string KevennysTila()
+        {
+            if (KevennysPois) return "pois (lippu)";
+            if (instanssi == null || instanssi.kevennykset.Count == 0) return "pois";
+            return "paalle (" + string.Join(", ", instanssi.kevennykset.Keys) + $", rinnakkain {Laattapalvelin.VerhoRinnakkain})";
+        }
 
         /// <summary>Yksi näyte heti lokiin (komento `valmius tila`).</summary>
         public static void Tila()
@@ -216,6 +287,14 @@ namespace Matkakirja
         void Update()
         {
             float nyt = Time.realtimeSinceStartup;
+            // Keskeytyneen verhon kevennys vapautuu katon jälkeen (muuten tausta jäisi tauolle).
+            if (kevennykset.Count > 0)
+                foreach (var p in new List<KeyValuePair<string, float>>(kevennykset))
+                    if (nyt - p.Value > KevennysKatto)
+                    {
+                        Debug.LogWarning($"MATKAKIRJA valmius: kevennys {p.Key} vapautui katossa {KevennysKatto:0} s (verho ei ilmoittanut loppua)");
+                        KevennysLoppu(p.Key);
+                    }
             if (nayteHaussa && (tilasto != null || Time.frameCount - nayteKehys >= 3))
             {
                 KirjaaNayte(nyt);
@@ -319,7 +398,8 @@ namespace Matkakirja
             sb.Append(" | ").Append(Kamera(nyt));
             sb.Append(" | portti ").Append(PalloKierto.PorttiSumea ? 1 : 0).Append(PalloKierto.PorttiAikaSeis ? " seis" : "")
               .Append(" musta ").Append(Mustaverho.Peitto.ToString("0.00"))
-              .Append(" aloitusverho ").Append(Aloitusverho.Nakyvissa ? 1 : 0);
+              .Append(" aloitusverho ").Append(Aloitusverho.Nakyvissa ? 1 : 0)
+              .Append(" | kevennys ").Append(KevennysTila());
             Debug.Log(sb.ToString());
         }
 

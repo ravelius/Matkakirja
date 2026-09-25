@@ -719,6 +719,8 @@ namespace Matkakirja
                 }
             for (int z = 7; z <= huippu; z++) { Lisaa(z, lat0, lon0, 2); Lisaa(z, lat1, lon1, 2); }
             var e = Laattapalvelin.Esilataa(new List<string>(joukko));
+            // Aloituslennon musta verho odottaa tätä (Nappula: reitti ≥ 90 %), joten se jatkuu verhon kevennyksessäkin.
+            e.Verholle = true;
             LennonEsilataus = e;
             Debug.Log($"MATKAKIRJA lennon pinta: esilataus {joukko.Count} laattaa");
             if (!string.IsNullOrEmpty(versio))

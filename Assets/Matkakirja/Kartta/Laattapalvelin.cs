@@ -53,6 +53,30 @@ namespace Matkakirja
         /// näkyvän kartan paikkojen lisäksi, joten se etenee lennon aikana eikä viivästytä näkyviä laattoja.
         /// </summary>
         readonly ConcurrentQueue<Haku> kohdeJono = new ConcurrentQueue<Haku>();
+
+        /// <summary>
+        /// VERHON KEVENNYS (Fablen päätös BUILD 16, löydös 80; Valmius.KevennysAlku/Loppu): kun jokin verho odottaa pallon
+        /// latausta, näkyvän kartan jonolla on <see cref="VerhoRinnakkain"/> rinnakkaista hakua (muuten <see cref="rinnakkain"/>),
+        /// eikä taustan esilatausta (aloitusnäyttö, lennon kohdealue) palvella; verhon odottama lennon reitti
+        /// (<see cref="Esilataus.Verholle"/>) jatkuu. Tauolle jääneet palaavat jonoon, kun viimeinen verho lähtee.
+        /// Vain pääsäikeestä.
+        /// </summary>
+        public const int VerhoRinnakkain = 24;
+        static int verhot;
+        readonly List<Haku> tauolla = new List<Haku>();
+
+        /// <summary>Kevennystä pyytäviä verhoja (0 = normaali jono).</summary>
+        public static int Verhot => verhot;
+
+        /// <summary>Verho alkaa (true) tai lähtee (false). Viimeisen lähtiessä tauolla olleet haut jatkuvat.</summary>
+        public static void VerhoKevennys(bool alku)
+        {
+            verhot = Math.Max(0, verhot + (alku ? 1 : -1));
+            var p = Instanssi;
+            if (verhot > 0 || p == null || p.tauolla.Count == 0) return;
+            foreach (var h in p.tauolla) p.esiJono.Enqueue(h);
+            p.tauolla.Clear();
+        }
         const int KohdePaikat = 4;
         int kaynnissa, kohdeKaynnissa;
         string offline, valimuisti;
@@ -172,6 +196,8 @@ namespace Matkakirja
             /// ovat perillä ajoissa.
             /// </summary>
             public bool Etusija { get; set; }
+            /// <summary>Verho odottaa tätä esilatausta (aloituslennon reitti, Nappula): sitä palvellaan verhon kevennyksen aikanakin.</summary>
+            public bool Verholle { get; set; }
             /// <summary>Käsitellyt (valmiit + epäonnistuneet) osuutena, 1 kun tyhjä tai peruttu.</summary>
             public float Osuus { get { int y = Yhteensa; return y == 0 || peruttu ? 1f : (float)(Valmis + Epaonnistui) / y; } }
             /// <summary>Jonossa odottavat haut vapautetaan ilman verkkoa; käynnissä olevat valmistuvat.</summary>
@@ -461,7 +487,7 @@ namespace Matkakirja
             var p = Instanssi;
             if (p == null) return "-";
             return $"käynnissä {p.kaynnissa} (kohde {p.kohdeKaynnissa}) jono {p.jono.Count} kiire {p.kiireJono.Count} " +
-                   $"esi {p.esiJono.Count} kohdejono {p.kohdeJono.Count}";
+                   $"esi {p.esiJono.Count} kohdejono {p.kohdeJono.Count} tauolla {p.tauolla.Count}";
         }
 
         sealed class Lahde { public string Nimi = "?"; }
@@ -570,16 +596,20 @@ namespace Matkakirja
             SatelliittiLoki.Yhteenveto();
             // Huntulaatoille neljä lisäpaikkaa, jotta ne eivät jää suurten pohja- ja maastolaattojen taakse.
             // Kohdealueen paikat eivät vie näkyvän kartan paikkoja (muut rajat ilman niitä).
-            while (kaynnissa - kohdeKaynnissa < rinnakkain + 4 && kiireJono.TryDequeue(out var k)) StartCoroutine(Lataa(k));
-            while (kaynnissa - kohdeKaynnissa < rinnakkain && jono.TryDequeue(out var h)) StartCoroutine(Lataa(h));
-            while (kohdeKaynnissa < KohdePaikat && kohdeJono.TryDequeue(out var c))
+            // Verhon kevennys (BUILD 16): näkyvän kartan jonolle enemmän paikkoja, tausta tauolla.
+            int raja = verhot > 0 ? Math.Max(rinnakkain, VerhoRinnakkain) : rinnakkain;
+            while (kaynnissa - kohdeKaynnissa < raja + 4 && kiireJono.TryDequeue(out var k)) StartCoroutine(Lataa(k));
+            while (kaynnissa - kohdeKaynnissa < raja && jono.TryDequeue(out var h)) StartCoroutine(Lataa(h));
+            while (verhot == 0 && kohdeKaynnissa < KohdePaikat && kohdeJono.TryDequeue(out var c))
             {
                 if (c.Esi != null && c.Esi.Peruttu) { c.Valmis.TrySetResult((499, null)); continue; }
                 StartCoroutine(LataaKohde(c));
             }
-            while (kaynnissa - kohdeKaynnissa < rinnakkain - 2 && jono.IsEmpty && esiJono.TryDequeue(out var e))
+            while (kaynnissa - kohdeKaynnissa < raja - 2 && jono.IsEmpty && esiJono.TryDequeue(out var e))
             {
                 if (e.Esi != null && e.Esi.Peruttu) { e.Valmis.TrySetResult((499, null)); continue; }
+                // Verhon aikana vain verhon odottama esilataus (Esilataus.Verholle); muut odottavat verhon lähtöä.
+                if (verhot > 0 && (e.Esi == null || !e.Esi.Verholle)) { tauolla.Add(e); continue; }
                 StartCoroutine(Lataa(e));
             }
             if (!uusintaKesken && !varalla.IsEmpty && Time.unscaledTime >= seuraavaUusinta && !Kiireinen)

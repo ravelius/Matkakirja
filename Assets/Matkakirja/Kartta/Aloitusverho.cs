@@ -86,6 +86,8 @@ namespace Matkakirja
             Cesium3DTileset pallo = null;
             // Valmiusdiagnostiikka (löydös 80): seuranta kehittäjälipulla, lähtörivi aina (Valmius.cs).
             Valmius.VerhoAlku("aloitusverho");
+            // Verhon kevennys (BUILD 16): näkyvän kartan haut ensin, taustan esilataus tauolla verhon ajan.
+            Valmius.KevennysAlku("aloitusverho");
             string syy = "katto";
             var ehto = new ValmiusEhto();
             while (Time.realtimeSinceStartup - alku < Katto)
@@ -97,6 +99,7 @@ namespace Matkakirja
             }
             Valmius.VerhoLoppu("aloitusverho", pallo == null ? "katto:ei-palloa" : syy,
                 (Time.realtimeSinceStartup - alku) * 1000.0, pallo != null ? pallo.ComputeLoadProgress() : -1f);
+            Valmius.KevennysLoppu("aloitusverho");
             VerkkoOdotus.Kirjaa("kaynnistys", "aloitusverho", (Time.realtimeSinceStartup - alku) * 1000.0);
             Debug.Log($"MATKAKIRJA aloitusverho: pois {Time.realtimeSinceStartup - alku:0.0} s " +
                       $"(pallo {(pallo != null ? pallo.ComputeLoadProgress().ToString("0") : "-")} %)");

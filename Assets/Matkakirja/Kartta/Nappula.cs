@@ -499,6 +499,8 @@ namespace Matkakirja
                 // Valmiusdiagnostiikka (löydös 80): seuranta kehittäjälipulla jo ennen pinnan vaihtoa, jotta uusien
                 // raster-kerrosten (Blue Marble, Sentinel) vaikutus asteeseen näkyy; lähtörivit aina (Valmius.cs).
                 Valmius.VerhoAlku("musta");
+                // Verhon kevennys (BUILD 16): näkyvän kartan haut ensin, tausta tauolla; lennon reitti jatkuu (Verholle).
+                Valmius.KevennysAlku("musta");
                 yield return Mustaverho.Haivyta(1f);
                 KarttaKerrokset.Instanssi?.LentoPohja(true);
                 pintaVaihdettu = true;
@@ -553,6 +555,7 @@ namespace Matkakirja
                           + $", pallo {(pallo != null ? pallo.ComputeLoadProgress().ToString("0") : "-")} %");
                 Valmius.VerhoLoppu("musta", lataaSyy, (Time.unscaledTime - odotus) * 1000.0,
                     pallo != null ? pallo.ComputeLoadProgress() : -1f);
+                Valmius.KevennysLoppu("musta");
                 VerkkoOdotus.Kirjaa("lento", "aloituslento-musta", (Time.unscaledTime - odotus) * 1000.0);
                 yield return Mustaverho.Haivyta(0f);
             }
