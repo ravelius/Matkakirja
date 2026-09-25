@@ -74,11 +74,25 @@ namespace Matkakirja.Natiivi
         Func<LaukkuNaytto> testiData;
         LaukkuNaytto naytetty;
 
+        /// <summary>Laukun logo (iPhone, löydös 76): tekijätiedot ja lähteet.</summary>
+        public event Action LogoPainettu;
+
         public Matkalaukku(UiKerros kerros, Func<float> alareuna, Func<VisualElement> pilleri) : base(kerros, alareuna, "mk-laukku")
         {
             this.pilleri = pilleri;
             Rakenne.Tausta(Paneeli, Kuviot.Pergamentti);
             Kirjasimet.Aseta(Paneeli, Kirjasin.Luku);
+
+            // Löydös 76 (omistaja 25.9.2026): iPhonen yläpalkissa ei ole logoa, joten se on avatun laukun oikeassa
+            // yläkulmassa ja avaa tekijätiedot ja lähteet kuten webin logo (brand-btn).
+            if (Ylapalkki.Puhelin)
+            {
+                var logo = Rakenne.El("mk-laukku__logo", Paneeli);
+                var kuva = Resources.Load<Texture2D>("MatkakirjaUI/logo");
+                if (kuva != null) logo.style.backgroundImage = new StyleBackground(kuva);
+                logo.tooltip = "Tekijätiedot ja lähteet";
+                logo.AddManipulator(new Clickable(() => { Sulje(); LogoPainettu?.Invoke(); }));
+            }
 
             Osio("Matka");
             matka = Rakenne.El("mk-laukku__rivit", Sisalto, PickingMode.Ignore);
