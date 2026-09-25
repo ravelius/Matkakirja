@@ -313,11 +313,11 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Karttasepän sileä 23a-sarja: sama pohja ilman poltettua viivatasoa (ei teitä, rajoja eikä kaupunkipisteitä;
-        /// joet, vesiviivoitus ja syvyyskäyrät jäävät). Z0–Z8 kuten pohja.
+        /// Sileä pohja ilman poltettua viivatasoa: peruskarttasarja 2026-09-25 on itse viivaton, joten sama kuin
+        /// Rakennus.LaattaUrl (aiemmin erillinen 23a-rajaton-sarja). Z0–Z8 kuten pohja.
         /// </summary>
         public const string SileaUrl =
-            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-23a-pohja-20260923arajaton/{z}/{x}/{reverseY}.jpg";
+            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-25-pohja-20260925/{z}/{x}/{reverseY}.jpg";
 
         CesiumUrlTemplateRasterOverlay silea, sentinel;
 
