@@ -38,15 +38,22 @@ namespace Matkakirja
     /// taustasäikeessä omalla kevyellä lukijalla (<see cref="Geojson"/>) maittain tauluksi. Jos tiedosto
     /// ei tule (offline ilman latausta), varana sisältöpaketin karkea kokoelmat/maarajat.json.
     /// Nauha piirretään Rajaviiva-varjostimella omalla materiaalikopiolla.
+    ///
+    /// LÖYDÖS 46 JATKO (omistajan kuva Kreikasta, build 11: "paksu tumma kehä rantojen ympärillä"): leveys on jo webin
+    /// arvo (Viivaleveys: 1,6–3 pt × Pistekerroin = webin css × dpr, peitto 1, #6b5539), mutta kuvassa kehä oli noin
+    /// 8,6 laitepikseliä 6:n sijaan. Syy: janojen neliöjatke porrasmaisilla rannoilla täytti kulmat; web piirtää
+    /// korostuksen päätypyörylöillä. Rajaviiva-varjostin tekee nyt pyöreät päät. Toinen ero webiin jää: webissä kehä
+    /// piirtyy ohuen rannikkoviivan (0,8–1,2 css, peitto 0,58) ALLE ja naulataan rannikkoaineistoon; natiivissa
+    /// rannikko on poltettu laattaan ja kehä piirtyy sen päälle.
     /// </summary>
     public class Maaraja : MonoBehaviour
     {
         /// <summary>Webin RAJA_MUSTE (paletin --raja-muste), sRGB.</summary>
         public static readonly Color Muste = new Color32(0x6b, 0x55, 0x39, 0xff);
         /// <summary>Leveys css-pikseleinä [kaukana, lähellä] (web VEKTORIT_KOROSTUS_LEVEYS_CSS).</summary>
-        public static readonly Vector2 LeveysCss = new Vector2(1.6f, 3f);
+        public static readonly Vector2 LeveysCss = new Vector2((float)Viivaleveys.KorostusKaukana, (float)Viivaleveys.KorostusLahella);
         /// <summary>Tiheyden liukuma laitepikseleinä astetta kohti (web VEKTORIT_LEVEYS_TIHEYS).</summary>
-        public static readonly Vector2 LeveysTiheys = new Vector2(25f, 250f);
+        public static readonly Vector2 LeveysTiheys = new Vector2((float)Viivaleveys.TiheysKaukana, (float)Viivaleveys.TiheysLahella);
         /// <summary>Häive sisään sekunteina (web VEKTORIT_HAIVE_MS).</summary>
         public const float HaiveSek = 0.26f;
         /// <summary>Pienin piirrettävä rengas laitepikseleinä (web KOROSTUKSEN_PIENIN_RENGAS_PX).</summary>
@@ -64,6 +71,21 @@ namespace Matkakirja
         /// offline-latauksen "maailma"-alueessa (Alueet.Polut).
         /// </summary>
         public const string GeojsonPolku = "julisteet/pallo/vektorit/maapolygonit-2026-09-24/maapolygonit.geojson";
+
+        /// <summary>Kehä sallittu (komento "maaraja pois" = false; oletus true).</summary>
+        public static bool Sallittu = true;
+        /// <summary>
+        /// Kehä myös vektorirannan kanssa (komento "maaraja paalle", vertailuun). Oletus false: OMISTAJAN PÄÄTÖS 25.9.2026
+        /// klo 00.0x (peruskartta D2 + reliefi + vektorirannat): kehä pois, kun Rannikko piirtyy; kehä jää tilanteisiin,
+        /// joissa rannikko on piilossa (lennon satelliittipinta, Rannikko.Nakyvissa = false, luettelo lataamatta).
+        /// Linssien ajan kehä on piilossa kuten ennenkin (kaupungit-portti).
+        /// </summary>
+        public static bool Pakota;
+        /// <summary>Kiinteä leveys pisteinä (komento "maaraja paksuus &lt;pt&gt;"); NaN tai ≤ 0 = webin laki [1,6; 3].</summary>
+        public static float PaksuusPt = float.NaN;
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void NollaaKokeilut() { Sallittu = true; Pakota = false; PaksuusPt = float.NaN; }
 
         public CesiumGeoreference georeferenssi;
         public PalloKierto kierto;
@@ -344,7 +366,8 @@ namespace Matkakirja
         void LateUpdate()
         {
             if (piirto == null || georeferenssi == null) return;
-            bool nakyy = suodatin.sharedMesh != null && !linssit && !piilossa;
+            bool rantaPiirtyy = Rannikko.Instanssi != null && Rannikko.Instanssi.Piirtyy;
+            bool nakyy = suodatin.sharedMesh != null && !linssit && !piilossa && Sallittu && (Pakota || !rantaPiirtyy);
             // Linssin jälkeen kehä palaa häiveellä kuten webissä (korostaMaa → rakennaKorostus(true)).
             if (nakyy && !nakyiEdella) haiveAlku = Time.unscaledTime;
             nakyiEdella = nakyy;
@@ -354,8 +377,8 @@ namespace Matkakirja
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
             oma.SetVector("_Keskus", georeferenssi.transform.TransformPoint((float3)keskus));
             float tiheys = Tiheys();
-            float t = Mathf.Clamp01((tiheys - LeveysTiheys.x) / (LeveysTiheys.y - LeveysTiheys.x));
-            oma.SetFloat("_Paksuus", Mathf.Lerp(LeveysCss.x, LeveysCss.y, t));
+            // Webin laki (Viivaleveys.KehaPt = viivanLeveysCss korostukselle) tai komennon kiinteä leveys.
+            oma.SetFloat("_Paksuus", (float)Viivaleveys.KehaPt(tiheys, PaksuusPt));
             oma.SetFloat("_Tiheys", tiheys);
             float h = haiveAlku < 0f ? 1f : Mathf.Clamp01((Time.unscaledTime - haiveAlku) / HaiveSek);
             float alfa = 1f - (1f - h) * (1f - h) * (1f - h);
@@ -372,33 +395,7 @@ namespace Matkakirja
         {
             var kamera = kierto != null ? kierto.GetComponent<Camera>() : null;
             if (kamera == null) kamera = Camera.main;
-            if (kamera == null) return 0f;
-            float matka = MittamatkaCss * PalloKierto.Pistekerroin;
-            var keski = new Vector2(Screen.width * 0.5f, Screen.height * 0.5f);
-            if (!Leveys(kamera, keski, out double lat0) || !Leveys(kamera, keski - new Vector2(0f, matka), out double lat1))
-                return 0f;
-            double ero = math.abs(lat0 - lat1);
-            return ero > 1e-6 ? (float)(matka / ero) : 0f;
-        }
-
-        /// <summary>Näytön pisteen leveysaste ellipsoidilla (pallotesti kuten MaaKartta.RuutuPallolle).</summary>
-        bool Leveys(Camera kamera, Vector2 ruutu, out double lat)
-        {
-            lat = 0;
-            if (!PalloKierto.Sade(kamera, ruutu, out Ray r)) return false;
-            var gt = georeferenssi.transform;
-            double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
-            double3 o = (float3)gt.InverseTransformPoint(r.origin);
-            double3 s = math.normalize((double3)(float3)gt.InverseTransformDirection(r.direction));
-            double3 oc = o - keskus;
-            const double a = 6378137.0;
-            double B = math.dot(oc, s), C = math.dot(oc, oc) - a * a;
-            double D = B * B - C;
-            if (D < 0 || -B - math.sqrt(D) < 0) return false;
-            double3 osuma = o + s * (-B - math.sqrt(D));
-            double3 ecef = georeferenssi.TransformUnityPositionToEarthCenteredEarthFixed(osuma);
-            lat = CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(ecef).y;
-            return true;
+            return Pintaosuma.Tiheys(georeferenssi, kamera);
         }
 
         /// <summary>

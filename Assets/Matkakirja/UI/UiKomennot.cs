@@ -610,6 +610,14 @@ namespace Matkakirja.Natiivi
                 case "wiki": ui.Wiki.Avaa(loput.Length > 0 ? loput : "Venetsia"); return null;
                 case "media": Mediarivi.Testaa(loput.Length > 0 ? loput.ToLowerInvariant() : "lontoo", t => Kirjaa(t)); return null;
                 case "liiku": ui.Matkavalinta.TestaaLiiku(); return null;
+                case "tasaus":
+                {
+                    // Intron tasauksen kokeilu ilman uutta käännöstä (avaa lehti uudelleen): lainaus, ilman, flush, pois.
+                    string t = loput.Trim().ToLowerInvariant();
+                    Lehtinakyma.TasausTagi = t == "pois" ? "" : t == "ilman" ? "<align=justified>" : t == "flush" ? "<align=\"flush\">"
+                        : t == "flush-ilman" ? "<align=flush>" : "<align=\"justified\">";
+                    return "tasaus: " + (Lehtinakyma.TasausTagi.Length > 0 ? Lehtinakyma.TasausTagi.Replace("<", "‹") : "pois");
+                }
                 case "kierto":
                     Screen.orientation = loput == "vaaka" ? ScreenOrientation.LandscapeLeft
                         : loput == "pysty" ? ScreenOrientation.Portrait : ScreenOrientation.AutoRotation;
@@ -682,6 +690,12 @@ namespace Matkakirja.Natiivi
                     if (osat[1] == "lehti" && (l[0] == "sivu" || l[0] == "kuva" || l[0] == "sisallys" || l[0] == "sisallys-ala" || l[0] == "tehtava" || l[0] == "tehtava-pois" || l[0] == "viimeinen"
                         || l[0] == "fokus-vastaa" || l[0] == "fokus-pulla"))
                         return ui.Lehti.Testaa(l[0], l.Length > 1 && int.TryParse(l[1], out var sn) ? sn : 0);
+                    if (osat[1] == "lehti" && l[0] == "vieritys")
+                    {
+                        // Löydös 51 -vertailu: oma (Kosketusvieritys) tai unity (ScrollViewin oma kosketusvieritys).
+                        if (l.Length > 1) Kosketusvieritys.Kaytossa = l[1] != "unity";
+                        return "vieritys " + (Kosketusvieritys.Kaytossa ? "oma" : "unity");
+                    }
                     if (osat[1] == "lehti" && l[0] == "vierita")
                         return ui.Lehti.Vierita(l.Length > 1 ? l[1] : "loppu");
                     if (osat[1] == "lehti" && l[0] == "fokus")
@@ -689,7 +703,10 @@ namespace Matkakirja.Natiivi
                         ui.Lehti.TestaaFokus(l.Length > 1 && l[1].Length > 0 ? l[1].ToLowerInvariant() : "ateena", l.Length > 2 && l[2] == "juliste");
                         return null;
                     }
-                    if (osat[1] == "maalehti") ui.Lehti.Nayta(LehtiLaji.Maa, l[0].Length > 0 ? l[0] : "ITA", l.Length > 1 ? l[1] : null);
+                    // Maalehti: toinen sana on aihe-id tai sivunumero (pariteettiajo `ui maalehti FRA 1` = aihesivu 1).
+                    if (osat[1] == "maalehti")
+                        ui.Lehti.Nayta(LehtiLaji.Maa, l[0].Length > 0 ? l[0] : "ITA", l.Length > 1 && !int.TryParse(l[1], out _) ? l[1] : null,
+                            l.Length > 1 && int.TryParse(l[1], out var ms) ? ms : (int?)null);
                     else ui.Lehti.Nayta(LehtiLaji.Kaupunki, l[0].Length > 0 ? l[0] : "firenze", null, l.Length > 1 && int.TryParse(l[1], out var s) ? s : (int?)null);
                     return null;
                 }
@@ -721,6 +738,10 @@ namespace Matkakirja.Natiivi
                     ui.Nostokortti.Testaa(valo, nappi, v => Kirjaa("ui " + nappi + " " + kohde + ": " + (v ?? "ok · " + ui.Nostokortti.Kuvaus)));
                     return null;
                 }
+                case "aihemerkit":
+                    // Löydös 50: ryhmitys koelipun takana (web ?aihemerkit=1).
+                    NostotKartalla.Aihemerkit = loput.Trim() == "on";
+                    return "aihemerkit = " + NostotKartalla.Aihemerkit;
                 case "lisakaupunki":
                     ui.Nostokortti.Avaa("kohde:nakyva-kaupunki-" + (loput.Length > 0 ? loput.ToLowerInvariant() : "lyon"));
                     return null;

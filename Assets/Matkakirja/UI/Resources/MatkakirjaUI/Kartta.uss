@@ -80,14 +80,14 @@
 /* Web .maapaneeli-nimi-suomi: American Typewriter, puhelimessa 1,3rem / 0,16em, tabletilla 1,9rem / 0,2em. */
 .mk-kartuscha__nimi {
     font-size: 20.8px;
-    letter-spacing: 3.33px;
+    letter-spacing: 16.01px; /* web 3.33px */
     color: rgba(58, 40, 25, 0.92);
     text-shadow: 0 0 4px rgb(244, 232, 205);
 }
 
 .mk-kartuscha--tabletti .mk-kartuscha__nimi {
     font-size: 30.4px;
-    letter-spacing: 6.08px;
+    letter-spacing: 20px; /* web 6.08px */
 }
 
 .mk-kartuscha.mk-auki .mk-kartuscha__nimi,
@@ -125,7 +125,7 @@
 
 .mk-kartuscha__alarivi {
     font-size: 12.2px;
-    letter-spacing: 0.9px;
+    letter-spacing: 7.38px; /* web 0.9px */
     color: rgba(74, 52, 33, 0.88);
     white-space: normal;
     text-shadow: 0 0 3px rgb(244, 232, 205);
@@ -133,7 +133,7 @@
 
 .mk-kartuscha--tabletti .mk-kartuscha__alarivi {
     font-size: 16px;
-    letter-spacing: 1.3px;
+    letter-spacing: 8.12px; /* web 1.3px */
 }
 
 .mk-kartuscha.mk-auki .mk-kartuscha__alarivi {
@@ -158,7 +158,7 @@
     margin-right: 8px;
     flex-shrink: 0;
     font-size: 9.92px;
-    letter-spacing: 0.89px;
+    letter-spacing: 8.97px; /* web 0.89px */
     color: rgba(74, 52, 33, 0.72);
 }
 
@@ -223,7 +223,7 @@
 
 .mk-tervehdys__kieli {
     font-size: 8.74px;
-    letter-spacing: 0.17px;
+    letter-spacing: 1.95px; /* web 0.17px */
     color: rgba(70, 51, 31, 0.62);
 }
 
@@ -258,7 +258,7 @@
 
 .mk-kartuscha__aihe .mk-nappi__teksti {
     font-size: 12px;
-    letter-spacing: 1.44px;
+    letter-spacing: 12px; /* web 1.44px */
 }
 
 .mk-kartuscha__aiheviiva {
@@ -349,7 +349,7 @@
 
 .mk-selite__otsikko {
     font-size: 11px;
-    letter-spacing: 2px;
+    letter-spacing: 18.18px; /* web 2px */
     color: var(--map-ink);
     padding-bottom: 2px;
     border-bottom-width: 1px;
@@ -459,7 +459,7 @@
 
 .mk-selite-rivi__luku {
     font-size: 11.84px;
-    letter-spacing: 0.47px;
+    letter-spacing: 3.97px; /* web 0.47px */
     color: rgba(70, 51, 31, 0.6);
     -unity-text-align: middle-right;
     min-width: 24px;
@@ -521,7 +521,7 @@
 
 .mk-selite__valilehti .mk-nappi__teksti {
     font-size: 10.88px;
-    letter-spacing: 0.87px;
+    letter-spacing: 8px; /* web 0.87px */
 }
 
 .mk-selite__valilehti.mk-valittu {
@@ -587,7 +587,7 @@
 
 .mk-maakunnat__maanimi {
     font-size: 11.5px;
-    letter-spacing: 1.3px;
+    letter-spacing: 11.3px; /* web 1.3px */
 }
 
 .mk-maakunnat__rivi {
@@ -634,7 +634,7 @@
 
 .mk-maakunnat__lnimi {
     font-size: 11px;
-    letter-spacing: 1.3px;
+    letter-spacing: 11.82px; /* web 1.3px */
     color: rgba(70, 51, 31, 0.75);
     margin-bottom: 4px;
 }
@@ -825,7 +825,7 @@
 
 .mk-offlineTila__teksti {
     font-size: 12px;
-    letter-spacing: 0.3px;
+    letter-spacing: 2.5px; /* web 0.3px */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -935,14 +935,14 @@
 .mk-nosto__ylarivi {
     /* Web .fokuskohde-ylarivi: American Typewriter 10,88 px, harvennus 1,52 px, #7a5514, alla 1,92 px. */
     font-size: 10.88px;
-    letter-spacing: 1.52px;
+    letter-spacing: 13.97px; /* web 1.52px */
     color: #7a5514;
     margin: 2px 40px 1.92px 0;
 }
 
 .mk-nosto__nimio {
     font-size: 9.5px;
-    letter-spacing: 3.3px;
+    letter-spacing: 34.74px; /* web 3.3px */
     color: rgba(70, 51, 31, 0.7);
     -unity-text-align: middle-center;
 }
@@ -958,7 +958,7 @@
 
 .mk-nosto__paivaysteksti {
     font-size: 11px;
-    letter-spacing: 1.8px;
+    letter-spacing: 16.36px; /* web 1.8px */
     -unity-text-align: middle-center;
     white-space: normal;
     color: #46331f;
@@ -1067,7 +1067,7 @@
 
 .mk-nosto__lisaa .mk-nappi__teksti {
     font-size: 13.76px;
-    letter-spacing: 1.1px;
+    letter-spacing: 7.99px; /* web 1.1px */
     color: rgb(92, 63, 14);
 }
 
@@ -1109,7 +1109,7 @@
     background-color: rgba(18, 12, 4, 0.55);
     color: rgb(246, 240, 224);
     font-size: 10.88px;
-    letter-spacing: 0.44px;
+    letter-spacing: 4.04px; /* web 0.44px */
 }
 
 .mk-nosto__visa {
@@ -1123,7 +1123,7 @@
 
 .mk-nosto__visaotsikko {
     font-size: 11px;
-    letter-spacing: 1.5px;
+    letter-spacing: 13.64px; /* web 1.5px */
     color: #7a5514;
     margin-bottom: 4px;
 }
@@ -1325,7 +1325,7 @@
     border-bottom-color: rgba(122, 85, 20, 0.26);
     color: rgba(94, 66, 16, 0.85);
     font-size: 10.5px;
-    letter-spacing: 1.3px;
+    letter-spacing: 12.38px; /* web 1.3px */
 }
 
 .mk-nosto__liitenappi {
@@ -1414,7 +1414,7 @@
 
 .mk-nosto__ihmenappi .mk-nappi__teksti {
     font-size: 13.5px;
-    letter-spacing: 1.4px;
+    letter-spacing: 10.37px; /* web 1.4px */
 }
 
 .mk-nosto__ihmetahti {
@@ -1440,7 +1440,7 @@
 .mk-nosto__leikekirjaotsake {
     margin-bottom: 2px;
     font-size: 11px;
-    letter-spacing: 1.5px;
+    letter-spacing: 13.64px; /* web 1.5px */
     color: #6d4d12;
 }
 
@@ -1474,7 +1474,7 @@
     background-color: #8b3d38;
     color: #f6e7c6;
     font-size: 9.5px;
-    letter-spacing: 1.2px;
+    letter-spacing: 12.63px; /* web 1.2px */
     -unity-text-align: middle-center;
     white-space: nowrap;
 }
@@ -1611,7 +1611,7 @@
 
 .mk-kartuscha__radionimi {
     font-size: 9px;
-    letter-spacing: 1px;
+    letter-spacing: 11.11px; /* web 1px */
     color: rgba(74, 52, 33, 0.75);
     opacity: 0.72;
 }
@@ -1627,21 +1627,22 @@
     bottom: 0;
 }
 
-/* Merkin ankkuri on symbolin keskipiste (translate = ruutupiste); nimiö oikealle. */
+/* Merkin ankkuri on ikoniruudun keskipiste (translate = ruutupiste); koko, marginaalit ja nimiön paikka
+ * lasketaan NostotKartalla.Hae/AsetaNimio-metodeissa webin kaavoilla (löydös 50). */
 .mk-nosto-merkki {
     position: absolute;
     left: 0;
     top: 0;
-    flex-direction: row;
-    align-items: center;
-    height: 20px;
-    margin: -10px 0 0 -10px;
+    width: 11px;
+    height: 11px;
 }
 
 .mk-nosto-merkki__symboli {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .mk-nosto-merkki__symboli--kuva {
@@ -1667,6 +1668,18 @@
     color: #4b3a1c;
 }
 
+/* Web NOSTOSYM_PISTE_HARMAA #6f6a61, kiekon peitto 0,86 (css 25420); väri vain karttaselitteen valossa. */
+.mk-nosto-merkki__kiekko {
+    color: #6f6a61;
+    opacity: 0.86;
+}
+
+/* Web vektori-ikonit (vuori, aalto, tassu, huutomerkki, ruusu) musteella. */
+.mk-nosto-merkki__vektori {
+    color: rgb(58, 40, 25);
+    opacity: 0.86;
+}
+
 /* Ryhmämerkki (web css .pallolauta-aihemerkki-pohja/-lautanen/-keha): levy r 3,4 px ilman sisäsymbolia. */
 .mk-nosto-merkki__levy-pohja {
     color: #efdcb4;
@@ -1683,16 +1696,23 @@
     --mk-ikoni-viiva: 1.1;
 }
 
+/* Web .nostosym-nimio: --font-atlas (Liberation Serif) kursiivi, rgba(74, 52, 33, 0,92), ei haloa, ei harvennusta;
+ * koko 11 × mitta (C#). Häivytys 180 ms (web KYLKIVAIHDON_HAIVYTYS_MS). */
 .mk-nosto-merkki__nimio {
-    margin-left: 2px;
-    font-size: 11px;
+    position: absolute;
+    font-size: 8.5px;
     white-space: nowrap;
-    color: rgba(58, 40, 25, 0.9);
-    text-shadow: 0 0 3px rgb(244, 232, 205);
+    padding: 0;
+    margin: 0;
+    color: rgb(74, 52, 33);
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.18s;
 }
 
-.mk-nosto-merkki--tarkea .mk-nosto-merkki__nimio {
-    font-size: 13.5px;
+/* Web NOSTOSYM_TASO1_MUSTE rgba(46, 30, 14, 0,98). */
+.mk-nosto-merkki__nimio--taso1 {
+    color: rgb(46, 30, 14);
 }
 
 /* Viuhka (web .pallolauta-viuhka-pohja, VIUHKAN_POHJAN_VYOT): kehyksetön paperipohja, reuna pehmennetty
@@ -1815,11 +1835,29 @@
     padding: 0 3.2px;
     height: 14.3px;
     font-size: 9.14px;
-    letter-spacing: 0.73px;
+    letter-spacing: 7.99px; /* web 0.73px */
     color: rgb(119, 104, 86);
     border-width: 1px;
     border-color: rgb(196, 187, 171);
     border-radius: 3px;
     -unity-text-align: middle-center;
     white-space: nowrap;
+}
+
+/* Ylärivin aihesymboli (web .fokuskohde-ylarivi-symboli, mitattu 24.9. b12): 1,5 em = 16,3 pt, oikealla 0,4 em =
+   4,35 pt, kaiverruskuva 14,1 pt keskellä (viewBox −12…12, kuva ±NOSTOSYM_R). Rivin korkeus = symbolin korkeus. */
+.mk-nosto__ylarivi--rivi {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-nosto__ylarivi-symboli {
+    width: 16.3px;
+    height: 16.3px;
+    margin-right: 4.35px;
+    flex-shrink: 0;
+    background-size: 14.1px 14.1px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
 }

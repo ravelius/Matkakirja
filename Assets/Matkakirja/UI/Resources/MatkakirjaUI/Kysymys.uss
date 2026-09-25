@@ -60,7 +60,7 @@
     border-radius: 12px;
     border-color: rgba(70, 51, 31, 0.55);
     font-size: 11px;
-    letter-spacing: 2px;
+    letter-spacing: 18.18px; /* web 2px */
     color: var(--map-ink);
     rotate: -1.5deg;
 }
@@ -343,7 +343,7 @@
 .mk-kysymys__kuvalahteet {
     margin: 1px 0 4px 0;
     font-size: 10px;
-    letter-spacing: 0.3px;
+    letter-spacing: 3px; /* web 0.3px */
     white-space: normal;
     color: rgba(70, 51, 31, 0.55);
 }
@@ -373,7 +373,7 @@
 
 .mk-kysymys__tuomio {
     font-size: 22px;
-    letter-spacing: 0.8px;
+    letter-spacing: 3.64px; /* web 0.8px */
     white-space: normal;
     color: var(--map-ink);
     margin-bottom: 4px;
@@ -411,7 +411,7 @@
 .mk-kysymys__lahdeotsikko {
     margin-right: 5px;
     font-size: 10.9px;
-    letter-spacing: 1.1px;
+    letter-spacing: 10.09px; /* web 1.1px */
     opacity: 0.75;
     color: var(--mk-kysymys-kaupunki);
 }
@@ -558,7 +558,7 @@
 
 .mk-kysymys__muotokuvalahde {
     font-size: 10px;
-    letter-spacing: 0.3px;
+    letter-spacing: 3px; /* web 0.3px */
     color: rgba(70, 51, 31, 0.55);
 }
 
@@ -697,6 +697,7 @@
 }
 
 .mk-paljastus--paikallis {
+    padding: 0;
     background-color: #e6d8ae;
 }
 
@@ -723,7 +724,7 @@
 
 .mk-paljastus__otsake {
     font-size: 14px;
-    letter-spacing: 3.6px;
+    letter-spacing: 25.71px; /* web 3.6px */
     color: #e8c98a;
 }
 
@@ -735,7 +736,7 @@
 
 .mk-paljastus__alaotsake {
     font-size: 11.5px;
-    letter-spacing: 2.3px;
+    letter-spacing: 20px; /* web 2.3px */
     color: #bda87e;
 }
 
@@ -801,22 +802,24 @@
 }
 
 .mk-paljastus__nimi {
-    font-size: 22px;
+    font-size: 20px;
+    letter-spacing: 5px; /* web 1px */
     white-space: normal;
     -unity-text-align: middle-center;
     color: #f4e7ca;
 }
 
 .mk-paljastus__palkkio {
-    margin-top: 3px;
-    font-size: 15px;
+    margin-top: 3.2px;
+    font-size: 15.68px;
     color: #d9c9a4;
 }
 
 .mk-paljastus__fakta {
-    margin-top: 8px;
-    max-width: 430px;
-    font-size: 15px;
+    margin-top: 11.2px;
+    max-width: 432px;
+    font-size: 15.68px;
+    -unity-font-style: italic;
     white-space: normal;
     -unity-text-align: middle-center;
     color: #cbb992;
@@ -832,9 +835,10 @@
 
 /* Kaaren aarreteksti ja pöllön esittely (web .reveal-isoisa). */
 .mk-paljastus__isoisa {
-    margin-top: 8px;
-    max-width: 430px;
-    font-size: 15px;
+    margin-top: 26.9px;
+    max-width: 416px;
+    font-size: 16px;
+    -unity-font-style: italic;
     white-space: normal;
     -unity-text-align: middle-center;
     color: #cbb992;
@@ -856,7 +860,7 @@
 
 .mk-paljastus__arvo {
     font-size: 14px;
-    letter-spacing: 2.2px;
+    letter-spacing: 15.71px; /* web 2.2px */
     color: #e0be7c;
     margin-bottom: 10px;
 }
@@ -883,7 +887,7 @@
 
 .mk-paljastus__leimateksti {
     font-size: 15px;
-    letter-spacing: 3px;
+    letter-spacing: 20px; /* web 3px */
     -unity-text-align: middle-center;
     color: #e2664c;
 }
@@ -891,7 +895,7 @@
 .mk-paljastus__leimapvm {
     margin-top: 1px;
     font-size: 8.5px;
-    letter-spacing: 2.5px;
+    letter-spacing: 29.41px; /* web 2.5px */
     -unity-text-align: middle-center;
     color: #e2664c;
 }
@@ -899,7 +903,7 @@
 .mk-paljastus__jatka {
     margin-top: 18px;
     min-height: 48px;
-    padding: 10px 32px;
+    padding: 10.88px 35.2px;
     border-width: 1px;
     border-color: rgba(228, 196, 128, 0.62);
     border-radius: 3px;
@@ -915,9 +919,11 @@
     opacity: 1;
 }
 
+/* Web .reveal-jatka: 14,72 px, letter-spacing 0,2 em (2,944) ja yhtä suuri text-indent. */
 .mk-paljastus__jatka .mk-nappi__teksti {
-    font-size: 14px;
-    letter-spacing: 3px;
+    font-size: 14.72px;
+    letter-spacing: 20px; /* web 2.944px */
+    padding-left: 2.944px;
 }
 
 .mk-paljastus--paikallis .mk-paljastus__jatka {

@@ -172,13 +172,52 @@ namespace Matkakirja.Natiivi
             UiNakymat.Hae().Palaute.Avaa();
         }
 
+        float korkeus = -1f;
+
+        /// <summary>
+        /// Web livianChatAsettelu (js/livia-chat-tila.js, pariteetti #29): chat jättää oikeaan alakulmaan tilan pulun
+        /// suurimmalle ilmeelle (88 × 104, lehdessä 72 %). Oikea reuna max(42, turva + 24) ja ala turva + 20 ruudun
+        /// reunoista; paneeli päättyy 12 pt ilmeen oikeaa reunaa aiemmin ja 6 pt sen yläpuolelle, leveys enintään 384,
+        /// yläraja max(96, turva + 12, ylärivin ala + 12), korkeus enintään 640 ja 68 % ruudusta. Matalalla ruudulla
+        /// (< 480) paneeli on ilmeen vasemmalla puolella alareunaan asti.
+        /// </summary>
         void Asettele()
         {
             var r = kerros.Reunat(UiKerros.Valikot);
-            paneeli.style.left = r.x + 11;
-            paneeli.style.right = r.z + 11;
-            paneeli.style.bottom = r.w + 11;
             palaa.style.top = Ylapalkki.Varaus + 56;
+            var koko = paneeli.parent?.layout ?? default;
+            float w = koko.width, h = koko.height;
+            if (float.IsNaN(w) || float.IsNaN(h) || w <= 0 || h <= 0) { paneeli.schedule.Execute(Asettele); return; }
+            bool sivulla = h < 480f;
+            float oikea = w - Mathf.Max(sivulla ? 24f : 42f, r.z + 24f), ala = h - r.w - 20f;
+            bool lehti = UiNakymat.Olemassa && UiNakymat.Hae().Lehti?.Auki == true;
+            float ilmeYla = ala - 104f * (lehti ? 0.72f : 1f), ilmeVasen = oikea - 88f;
+            float pOikea = sivulla ? ilmeVasen - 6f : oikea - 12f;
+            float pAla = sivulla ? ala : ilmeYla - 6f;
+            float pYla = Mathf.Max(Mathf.Max(sivulla ? 12f : 96f, r.y + 12f), sivulla ? 0f : r.y + Ylapalkki.Varaus + 12f);
+            float pVasen = Mathf.Max(r.x + 12f, pOikea - 384f);
+            korkeus = Mathf.Max(0f, Mathf.Min(640f, sivulla ? 640f : h * 0.68f, pAla - pYla));
+            var st = paneeli.style;
+            st.left = pVasen;
+            st.right = StyleKeyword.Auto;
+            st.width = Mathf.Max(0f, pOikea - pVasen);
+            st.bottom = h - pAla;
+            st.minHeight = 0f;
+            st.maxHeight = korkeus;
+            AsetaKorkeus();
+        }
+
+        /// <summary>Tuore keskustelu sisällön mittainen (web .livia-chat-tila.pollo-alku height auto), muuten täysi korkeus.</summary>
+        void Alku(bool alku)
+        {
+            paneeli.EnableInClassList("mk-chat--alku", alku);
+            AsetaKorkeus();
+        }
+
+        void AsetaKorkeus()
+        {
+            if (korkeus < 0f) return;
+            paneeli.style.height = paneeli.ClassListContains("mk-chat--alku") ? new StyleLength(StyleKeyword.Auto) : korkeus;
         }
 
         // --- avaus ja sulkeminen -------------------------------------------------
@@ -197,7 +236,8 @@ namespace Matkakirja.Natiivi
             naytaKuplat.style.display = pulu.KuplaPalautettavissa ? DisplayStyle.Flex : DisplayStyle.None;
             if (!tervehditty) { tervehditty = true; Tervehdi(); }
             PuluHaku.Valmistele(); // web: indeksi laiskasti chatin ensimmäisellä avauksella
-            paneeli.EnableInClassList("mk-chat--alku", historia.Count == 0);
+            Alku(historia.Count == 0);
+            Asettele(); // lehti auki → pienempi pulu (web pieniPulu)
             // Linssin valmiit kysymykset tervehdyksen tilalla (web naytaValmiit → naytaLinssinValmiit).
             if (!NaytaLinssinValmiit()) HaeEhdotukset();
         }
@@ -235,7 +275,7 @@ namespace Matkakirja.Natiivi
             if (!lk.Vastaukset.TryGetValue(kysymys.Trim(), out var v)) { Kysy(kysymys); return; }
             PoistaSirut();
             ehdotusPoletti++;
-            paneeli.RemoveFromClassList("mk-chat--alku");
+            Alku(false);
             Viesti("mk-chat__pelaaja", kysymys);
             var kupla = Viesti("mk-chat__livia mk-chat__valmisvastaus", v.Vastaus);
             kupla.enableRichText = false;
@@ -316,7 +356,7 @@ namespace Matkakirja.Natiivi
             kentta.value = "";
             PoistaSirut();
             ehdotusPoletti++;
-            paneeli.RemoveFromClassList("mk-chat--alku");
+            Alku(false);
             Viesti("mk-chat__pelaaja", kysymys);
             bool paikkaa = Paikkakysymys.IsMatch(kysymys);
             // Oma paikkahakemisto ensin (webin ratkaisePaikka): kamera lähtee heti.

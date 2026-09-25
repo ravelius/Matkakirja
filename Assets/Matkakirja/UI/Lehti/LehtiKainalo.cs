@@ -113,7 +113,11 @@ namespace Matkakirja.Natiivi
                 var kehys = kuvapalsta.Q(className: "mk-lehti__kuvakehys");
                 float kh = kuvapalsta.layout.height;
                 if (w <= 0 || float.IsNaN(w) || float.IsNaN(kh)) return;
-                if (kehys != null && kehys.layout.width > 0 && kehys.layout.height > 0) suhdeSelvisi?.Invoke(kehys.layout.height / kehys.layout.width);
+                // Löydös 51: suhde kuvasta (Kuva: kehys.userData) eikä kehyksen asettelusta. Lataamattoman kuvan kehys on
+                // 6 pt korkea (suhde 0,02 → "taysi"), ja kuvan latauduttua sama kainalo palautti "kainalo" ennen ajastettua
+                // uudelleenrakennusta: kainalo rakennettiin uudelleen joka kehys, sivun korkeus heilui 1496 ↔ 1063 pt ja
+                // ScrollView nollasi vierityksen (iPad 25.9., diagnoosiloki).
+                if (kehys?.userData is float suhde) suhdeSelvisi?.Invoke(suhde);
                 if (Mathf.Abs(w - leveys) < 0.5f && Mathf.Abs(kh - kuvaKorkeus) < 0.5f) return;
                 leveys = w;
                 kuvaKorkeus = kh;
@@ -187,17 +191,23 @@ namespace Matkakirja.Natiivi
             rivi0.RegisterCallback<GeometryChangedEvent>(_ => Lado());
         }
 
-        /// <summary>Leipätekstin mittari (mk-lehti__teksti, Iowan, riviväli 1,62, kappaleväli 0,49 em) ja anfangin mitat.</summary>
+        /// <summary>
+        /// Leipätekstin mittari ja anfangin mitat. Oletus mk-lehti__teksti (Iowan, riviväli 1,62, kappaleväli 0,49 em);
+        /// etusivun intro mk-lehti__esittely (American Typewriter, 1,6, 0,7 em, tasattu).
+        /// </summary>
         sealed class LeipaMittari
         {
             public Label Teksti, Kirjain;
-            const float RiviEm = 1.62f, ValiEm = 0.49f;
-            float Koko => Teksti.resolvedStyle.fontSize > 0 ? Teksti.resolvedStyle.fontSize : 16.32f;
+            public string Luokka = "mk-lehti__teksti";
+            public float RiviEm = 1.62f, ValiEm = 0.49f, OletusKoko = 16.32f;
+            public Kirjasin Kirjasin = Kirjasin.Luku;
+            public bool Tasaa;
+            float Koko => Teksti.resolvedStyle.fontSize > 0 ? Teksti.resolvedStyle.fontSize : OletusKoko;
             public float Rivi => RiviEm * Koko;
             public float Vali => Mathf.Round(ValiEm * Koko);
 
             public float Korkeus(string s, float w) =>
-                Teksti.MeasureTextSize(Rivivali(s, RiviEm), w, VisualElement.MeasureMode.Exactly, 0, VisualElement.MeasureMode.Undefined).y;
+                Teksti.MeasureTextSize(Rivivali(s, RiviEm, Tasaa), w, VisualElement.MeasureMode.Exactly, 0, VisualElement.MeasureMode.Undefined).y;
 
             /// <summary>AnfangiKappaleen korkeus: viereiset rivit (rivit × riviväli) ja loput täysleveänä.</summary>
             public float KorkeusAnfangilla(string s, float w)
@@ -232,13 +242,62 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        static LeipaMittari LeipanMittari(VisualElement isa)
+        static LeipaMittari LeipanMittari(VisualElement isa, LeipaMittari m = null)
         {
-            var t = Rivitetty("", "mk-lehti__teksti mk-lehti__mittari", 1.62f, isa);
+            m ??= new LeipaMittari();
+            m.Teksti = Rivitetty("", m.Luokka + " mk-lehti__mittari", m.RiviEm, isa, m.Kirjasin, m.Tasaa);
             var k = Rakenne.Teksti("", "mk-lehti__anfangi mk-lehti__mittari", isa);
             k.enableRichText = false;
             Kirjasimet.Aseta(k, Kirjasin.KoneBold);
-            return new LeipaMittari { Teksti = t, Kirjain = k };
+            m.Kirjain = k;
+            return m;
+        }
+
+        /// <summary>Web @media (min-width: 768px): etusivun intro kahdella palstalla.</summary>
+        const float IntroRaja = 768f, IntroRako = 32f;
+
+        bool IntroLevea()
+        {
+            float w = UiKerros.Hae().Juuri(Kerros).layout.width;
+            return !float.IsNaN(w) && w >= IntroRaja;
+        }
+
+        /// <summary>
+        /// Web .dialog.lehti #arrival-intro ≥ 768 px (mitattu 24.9. b12, web-intro-mitat.txt): column-count 2, väli
+        /// 2 rem (32), ei palstaviivaa, text-align justify, hyphens auto, p 0 0 0,7 em; American Typewriter 16 px,
+        /// riviväli 1,6, anfangi ensimmäisessä kappaleessa. Tavutus pehmein tavuviivoin (Tavutus.Suomi).
+        /// </summary>
+        void IntroPalstat(VisualElement isa, string teksti)
+        {
+            var lohko = Rakenne.El("mk-lehti__leipa", isa, PickingMode.Ignore);
+            var luettava = Rakenne.Teksti(teksti.Replace("**", ""), "mk-lehti__luettava", lohko);
+            luettava.enableRichText = false;
+            luettava.style.display = DisplayStyle.None;
+            var kappaleet = Kappalejako.Jaa(teksti).Select(Tavutus.Suomi).ToList();
+            if (kappaleet.Count == 0) return;
+            var rivi0 = Rakenne.El("mk-lehti__palstat", lohko, PickingMode.Ignore);
+            var vasen = Rakenne.El("mk-lehti__palsta", rivi0, PickingMode.Ignore);
+            var vali = Rakenne.El(null, rivi0, PickingMode.Ignore);
+            vali.style.width = IntroRako;
+            var oikea = Rakenne.El("mk-lehti__palsta", rivi0, PickingMode.Ignore);
+            var mittari = LeipanMittari(lohko, new LeipaMittari
+            {
+                Luokka = "mk-lehti__esittely", RiviEm = 1.6f, ValiEm = 0.7f, OletusKoko = 16f, Kirjasin = Kirjasin.Kone, Tasaa = true,
+            });
+            float leveys = -1f;
+            void Lado()
+            {
+                float w = rivi0.contentRect.width;
+                if (w <= 0 || float.IsNaN(w) || Mathf.Abs(w - leveys) < 0.5f) return;
+                leveys = w;
+                float palsta = Mathf.Floor((w - IntroRako) / 2f);
+                vasen.style.width = palsta;
+                oikea.style.width = palsta;
+                float yht = mittari.Yhteensa(kappaleet, palsta, true);
+                Virtaa(new[] { vasen, oikea }, new[] { palsta, palsta }, new[] { yht / 2f, float.PositiveInfinity },
+                    mittari.Rivi * 0.5f, kappaleet, true, mittari);
+            }
+            rivi0.RegisterCallback<GeometryChangedEvent>(_ => Lado());
         }
 
         /// <summary>
@@ -264,7 +323,7 @@ namespace Matkakirja.Natiivi
                     if (viimeinenAlue || y + alkuvali + h <= katot[r] + vara)
                     {
                         if (viimeinen != null && y > 0) viimeinen.style.marginBottom = m.Vali;
-                        viimeinen = Lisaa(alueet[r], k, anf);
+                        viimeinen = Lisaa(alueet[r], k, anf, m);
                         y += alkuvali + h;
                         break;
                     }
@@ -282,7 +341,7 @@ namespace Matkakirja.Natiivi
                     {
                         var (alku, loppu) = JaaLihavointi(string.Join(" ", sanat, 0, ala), string.Join(" ", sanat, ala, sanat.Length - ala));
                         if (viimeinen != null && y > 0) viimeinen.style.marginBottom = m.Vali;
-                        Lisaa(alueet[r], alku, anf);
+                        Lisaa(alueet[r], alku, anf, m);
                         k = loppu;
                         anf = false;
                     }
@@ -294,9 +353,10 @@ namespace Matkakirja.Natiivi
             if (viimeinen != null) viimeinen.style.marginBottom = 0;
         }
 
-        static VisualElement Lisaa(VisualElement alue, string k, bool anfangi)
+        static VisualElement Lisaa(VisualElement alue, string k, bool anfangi, LeipaMittari m)
         {
-            var e = anfangi ? AnfangiKappale(alue, k, "mk-lehti__teksti", 1.62f) : Rivitetty(k, "mk-lehti__teksti", 1.62f, alue);
+            var e = anfangi ? AnfangiKappale(alue, k, m.Luokka, m.RiviEm, m.Kirjasin, m.Tasaa)
+                : Rivitetty(k, m.Luokka, m.RiviEm, alue, m.Kirjasin, m.Tasaa);
             e.style.marginBottom = 0;
             return e;
         }

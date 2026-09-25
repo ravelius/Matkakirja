@@ -78,6 +78,46 @@ namespace Matkakirja
         /// </summary>
         public static double SuuntimanMuutos(double kulmaMuutosAst) => kulmaMuutosAst;
 
+        // TAHATTOMAN KIERRON ESTIN (omistaja 24.9. klo 22.4x, Raamattu "ELEET: KIERRON ESTIN, KALLISTUS JA MAASTON
+        // TARKKUUS"): kuten Google Earthissa nipistyksen pieni kierto ei käännä karttaa, vaan pohjoinen pysyy, kunnes
+        // kierto ylittää selvän kynnyksen. Web ei kierrä kahdella sormella, joten tämä on natiivin oma sääntö.
+
+        /// <summary>Kynnys (°), jonka kertynyt sormiparin kierto ylittää ennen kuin kartta alkaa kiertyä.</summary>
+        public const double KiertoEstinAst = 15.0;
+
+        /// <summary>
+        /// Yhden kahden sormen eleen kierron estin: kehysten kulmamuutokset kertyvät, ja kartta kiertyy vasta, kun
+        /// kertymä ylittää kynnyksen. Ylityskehyksessä kynnys vähennetään, joten kartta ei hyppää vaan jatkaa sormien
+        /// mukana siitä kohdasta. Nollaa eleen päättyessä (sormia alle kaksi).
+        /// </summary>
+        public sealed class KiertoEstin
+        {
+            public double Kynnys = KiertoEstinAst;
+            double kertyma;
+            public bool Auki { get; private set; }
+
+            public void Nollaa() { kertyma = 0; Auki = false; }
+
+            /// <summary>Kehyksen kulmamuutos (°) → käytettävä kierto (°).</summary>
+            public double Suodata(double muutosAst)
+            {
+                if (Auki) return muutosAst;
+                kertyma += muutosAst;
+                if (Math.Abs(kertyma) < Kynnys) return 0;
+                Auki = true;
+                return kertyma - Math.Sign(kertyma) * Kynnys;
+            }
+        }
+
+        // KAHDEN SORMEN KALLISTUS (sama omistajan linjaus): veto alhaalta ylös kallistaa viistoon, ylhäältä alas
+        // palauttaa ylhäältä katsottavaksi; aavistuksen hitaampi kuin ennen (0,25 → 0,20 °/pt).
+
+        /// <summary>Kallistusasteita näytön pisteelle kahden sormen pystyvedossa.</summary>
+        public const double KallistusHerkkyys = 0.20;
+
+        /// <summary>Kallistuksen muutos (°) pystyvedosta: ylös (pisteinä, Unityn ruudun y ylöspäin) kallistaa lisää.</summary>
+        public static double KallistusMuutos(double ylosPt, double herkkyys = KallistusHerkkyys) => ylosPt * herkkyys;
+
         // KALLISTUSRAJA (löydös 28 b): pelikorkeuksilla täysi, laskee vasta pallon mittakaavassa.
 
         /// <summary>Kallistus on täysi tähän korkeuteen asti (m).</summary>

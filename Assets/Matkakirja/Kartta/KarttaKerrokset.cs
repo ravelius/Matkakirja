@@ -10,7 +10,7 @@ namespace Matkakirja
     /// Cesium-komponentteihin suoraan, vaan pyytää kerroksen avaimella.
     ///
     /// Sisäiset kerrokset: "laatat" (pohja), "maasto", "kaupungit", "nimiot", "reitit",
-    /// "napakannet", "varitaso", "aariviiva", "linssinimet", "aluenimet". Linssin raster-kerrokset (enintään kaksi) piirtyvät pohjan päälle
+    /// "napakannet", "varitaso", "aariviiva", "rannikko", "rajat", "linssinimet", "aluenimet". Linssin raster-kerrokset (enintään kaksi) piirtyvät pohjan päälle
     /// Cesiumin materialKey-järjestyksessä: pohja 0, linssit 1 ja 2.
     /// </summary>
     public class KarttaKerrokset : MonoBehaviour
@@ -26,13 +26,17 @@ namespace Matkakirja
         public Varitaso varitaso;
         /// <summary>Pelaajan maan ääriviiva (web korostuskehä), samaa maata kuin väritaso.</summary>
         public Maaraja maaraja;
+        /// <summary>Rantaviiva vektorina (löydös 46 E1, webin GSHHS-solut).</summary>
+        public Rannikko rannikko;
+        /// <summary>Valtioiden rajat vektorina (löydös 46 E2, webin GSHHS-solut, katkoviiva).</summary>
+        public Rajat rajat;
 
         /// <summary>Linssin rasterin näkyvä alue on ladattu (avain).</summary>
         public event Action<string> KerrosValmis;
         /// <summary>Linssin rasterin lataus epäonnistui (avain).</summary>
         public event Action<string> KerrosEpaonnistui;
 
-        class Rasteri { public CesiumUrlTemplateRasterOverlay kerros; public bool valmis; public float lisatty; }
+        class Rasteri { public CesiumUrlTemplateRasterOverlay kerros; public bool valmis; public float lisatty; public bool alfaMuutettu; }
         readonly Dictionary<string, Rasteri> rasterit = new Dictionary<string, Rasteri>();
 
         /// <summary>
@@ -65,6 +69,45 @@ namespace Matkakirja
             }
         }
         Color? alkuperainenTausta;
+
+        /// <summary>
+        /// Linssi omalla kuvallaan (raster-kerros tai oma taustaväri, esim. topografian reliefi tai astronautin avaruus):
+        /// kartan rinnevalo, tasaus ja horisonttiusva väistyvät (Aurinko.cs), ja linssi näkyy build 11:n kameravalossa.
+        /// </summary>
+        public bool LinssiPaalla => rasterit.Count > 0 || alkuperainenTausta.HasValue;
+
+        /// <summary>Linssi on asettanut oman taustavärin (astronautin avaruus): horisonttiusva ei koske taustaan.</summary>
+        public bool OmaTausta => alkuperainenTausta.HasValue;
+
+        /// <summary>Lennon pinta on satelliittisarja (LentoPohja, Blue Marble + Sentinel): rannikkoviiva väistyy (Rannikko).</summary>
+        public bool SatelliittiLento => satelliittiLento;
+
+        // MAASTON TARKKUUS (omistajan löydös 46, lisäys 5, 24.9.2026 klo 22.4x: Google Earth -vertailu). Maasto on
+        // Karttasepän quantized-mesh (Rakennus.MaastoUrl, layer.json maxzoom 12, tasot 11–12 vain osin), haettuna
+        // Laattapalvelimen kautta. Cesium valitsee tason geometrisesta virheestä 77 067 m / 2^L (taso L), ja
+        // layer.json-maastolla maximumScreenSpaceError jaetaan 8:lla (Cesium3DTileset.cs: oletus 16 = maaston 2 px).
+        // iPad Pro 11" pysty (2 420 px, fov 50°) Kreikan saapumisnäkymässä (≈ 1 200 km): SSE 16 → taso 7 (laatta 1,4°,
+        // Kreikan laatoissa noin 1 500 verteksiä), SSE 8 → taso 8 (0,7°, noin 2 900 verteksiä ja 5 600 kolmiota),
+        // SSE 4 → taso 9. Mitattu 24.9.: Kreikan laatta tasolla 4/6/8/10 = 41/607/2 903/3 686 verteksiä.
+        // ODOTETTU KUSTANNUS: jokainen SSE:n puolitus = yksi taso lisää → näkyviä laattoja ≈ 4× (laatta = yksi
+        // piirtokutsu; pohja-, väri- ja linssirasterit samassa materiaalissa) ja kolmioita ≈ 4–8× niin kauan kuin
+        // laatan verteksimäärä vielä kasvaa (tasolta 8 ylöspäin enää ≈ 1,3× / taso). Kreikka SSE 16: ~60 laattaa,
+        // ~0,2 M kolmiota; SSE 8: ~250 laattaa, ~1,4 M kolmiota. Rasterien taso seuraa geometrialaattaa (katto
+        // LaattaMaxTaso 8), joten pienempi SSE terävöittää myös pohjakarttaa kaukana ja kallistuksessa.
+        // HUOM: SSE:n asetus luo tilesetin uudelleen (Cesium3DTileset.RecreateTileset: kaikki laatat ladataan uudelleen
+        // levyvälimuistista), joten sitä ei vaihdeta lennon ja kartan välillä kehyksittäin, vaan komennolla.
+
+        /// <summary>
+        /// Tilesetin maximumScreenSpaceError (komento "maasto sse &lt;arvo&gt;", 1–64; kohtauksessa 16). Luo tilesetin
+        /// uudelleen, joten vain mittauksiin ja asetukseen, ei kehyksittäin. Palauttaa asetetun arvon (NaN = ei tilesetiä).
+        /// </summary>
+        public float MaastoSse(float arvo)
+        {
+            if (pallo == null) return float.NaN;
+            float v = Mathf.Clamp(float.IsNaN(arvo) ? 16f : arvo, 1f, 64f);
+            if (Mathf.Abs(pallo.maximumScreenSpaceError - v) > 1e-3f) pallo.maximumScreenSpaceError = v;
+            return v;
+        }
 
         /// <summary>Maatila linsseille (IMaaKartta, RAJAPINTA.md luku 4).</summary>
         public Matkakirja.Linssit.Maat.IMaaKartta Maat => maaKartta;
@@ -143,7 +186,8 @@ namespace Matkakirja
             switch (kerros)
             {
                 case "laatat":
-                    if (pohja != null) pohja.enabled = nakyy;
+                    pohjaPyydetty = nakyy;
+                    if (pohja != null) pohja.enabled = nakyy || pohjaPidossa;
                     if (varitaso != null) varitaso.Nakyvat(nakyy);
                     PaivitaNavat();
                     break;
@@ -161,6 +205,8 @@ namespace Matkakirja
                     break;
                 case "linssinimet": linssinimet = nakyy; PaivitaLinssinimet(); break;
                 case "aariviiva": if (maaraja != null) maaraja.Nakyvat(nakyy); break;
+                case "rannikko": if (rannikko != null) rannikko.Nakyvat(nakyy); break;
+                case "rajat": if (rajat != null) rajat.Nakyvat(nakyy); break;
                 case "nimiot": if (merkit != null) merkit.nimiotNakyvat = nakyy; break;
                 // Alue-, meri- ja valtamerinimet (Nimikerros, build 11); seuraavat myös "kaupungit"- ja "nimiot"-porttia.
                 case "aluenimet": if (Nimikerros.Instanssi != null) Nimikerros.Instanssi.paalla = nakyy; break;
@@ -722,9 +768,47 @@ namespace Matkakirja
         public void PoistaRasteri(string avain)
         {
             if (!rasterit.TryGetValue(avain, out var r)) return;
+            if (r.alfaMuutettu && Paikka(r.kerros) is int paikka && paikka >= 0) Shader.SetGlobalFloat(PaikanAlfaId[paikka], 1f);
             if (r.kerros != null) { r.kerros.enabled = false; Destroy(r.kerros); }
             rasterit.Remove(avain);
             if (rasterit.Count == 0 && varitaso != null) varitaso.Linssit(false);
+            PaivitaNavat();
+        }
+
+        // ---- Ristihäivytys pohjan ja linssin rasterin välillä (radiouudistus build 12, RadioMastot.Hamara) ----
+
+        static readonly int[] PaikanAlfaId =
+            { Shader.PropertyToID("_overlayAlfa_0"), Shader.PropertyToID("_overlayAlfa_1"), Shader.PropertyToID("_overlayAlfa_2") };
+        bool pohjaPyydetty = true, pohjaPidossa;
+
+        /// <summary>
+        /// Linssin rasterin globaali alfa tileset-varjostimessa (_overlayAlfa_&lt;paikka&gt;, paikka = kerroksen materialKey
+        /// 1 tai 2, jonka LisaaRasteri antoi): 0 = pohja näkyy läpi, 1 = rasteri kokonaan. Palauttaa paikan tai −1, jos
+        /// avainta ei ole. Paikan alfa palautuu 1:een, kun rasteri poistetaan (seuraava käyttäjä saa täyden alfan).
+        /// </summary>
+        public int RasterinAlfa(string avain, float alfa)
+        {
+            if (avain == null || !rasterit.TryGetValue(avain, out var r) || r.kerros == null) return -1;
+            int paikka = Paikka(r.kerros);
+            if (paikka < 0) return -1;
+            Shader.SetGlobalFloat(PaikanAlfaId[paikka], Mathf.Clamp01(alfa));
+            r.alfaMuutettu = true;
+            return paikka;
+        }
+
+        static int Paikka(CesiumRasterOverlay k) =>
+            k != null && k.materialKey != null && k.materialKey.Length == 1 && k.materialKey[0] >= '0' && k.materialKey[0] <= '2'
+                ? k.materialKey[0] - '0' : -1;
+
+        /// <summary>
+        /// Pergamenttipohja (paikka 0) pidetään näkyvissä linssin pyynnöstä riippumatta (Nakyvyys("laatat", false)),
+        /// kun tosi: linssin rasteri häivytetään pohjan päälle, ja pohja saa poistua vasta, kun rasteri on täysi.
+        /// </summary>
+        public void PidaPohja(bool pida)
+        {
+            if (pohjaPidossa == pida) return;
+            pohjaPidossa = pida;
+            if (pohja != null) pohja.enabled = pohjaPyydetty || pida;
             PaivitaNavat();
         }
 
@@ -742,8 +826,10 @@ namespace Matkakirja
         void PaivitaNavat()
         {
             if (napakannet == null) return;
-            bool reliefi = rasterit.TryGetValue(Matkakirja.Linssit.Topografia.Kerros, out var r)
-                           && r.kerros != null && r.kerros.enabled && (pohja == null || !pohja.enabled);
+            // Radion topografiapohja (RadioLinssi.PohjaKerros, omistaja 24.9. klo 22.3x) on sama reliefisarja omalla avaimella.
+            bool Paalla(string avain) => rasterit.TryGetValue(avain, out var r) && r.kerros != null && r.kerros.enabled;
+            bool reliefi = (Paalla(Matkakirja.Linssit.Topografia.Kerros) || Paalla(Matkakirja.Linssit.Radio.RadioLinssi.PohjaKerros))
+                           && (pohja == null || !pohja.enabled);
             napakannet.Reliefi(reliefi);
         }
 

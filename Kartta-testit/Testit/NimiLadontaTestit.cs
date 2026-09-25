@@ -293,6 +293,111 @@ namespace Matkakirja.Kartta.Testit
             Lahella(220, l.Y1, 1e-4, "10 pt ylös");
         }
 
+        [Testi] static void NostonIkonilaatikkoKutenNatiiviUi()
+        {
+            // Natiivi-UI NostotKartalla.Hae: puolikas = 7,4 × mitta, mitta = min(katto / 11, 8,5/11 × k × oma).
+            float m1 = 8.5f / 11f;
+            Lahella(7.4 * m1, NimiLadonta.NostonIkoninPuolikas(2, "historia", 1f), 1e-5, "taso 2, k 1");
+            Lahella(7.4 * 1.6 * m1 * 1.3, NimiLadonta.NostonIkoninPuolikas(1, "historia", 1f), 1e-5, "taso 1 kuvamerkki × 1,6 ja oma 1,3");
+            Lahella(7.4 * m1 * 1.3, NimiLadonta.NostonIkoninPuolikas(1, "ihmeet", 1f), 1e-5, "taso 1 vektorisymboli ilman kuvakerrointa");
+            Lahella(7.4 * 22 / 11.0, NimiLadonta.NostonIkoninPuolikas(2, "kaupungit", 4f), 1e-5, "katto 22 px kertoimessa 4");
+            Lahella(7.4 * 16 / 11.0, NimiLadonta.NostonIkoninPuolikas(3, "luonto", 2f), 1e-5, "katto 16 px kertoimessa 2");
+            Lahella(7.4 * 19 / 11.0, NimiLadonta.NostonIkoninPuolikas(3, "luonto", 2.8284271f), 1e-4, "katto log2-lineaarisesti");
+            var l = NimiLadonta.NostonIkonilaatikko(100, 200, 2, "historia", 1f, 2f);
+            double p = 7.4 * m1 * 2;
+            Lahella(100 - p, l.X0, 1e-4, "vasen");
+            Lahella(100 + p, l.X1, 1e-4, "oikea: ei nimiötä");
+            Lahella(200 - p, l.Y0, 1e-4, "ala");
+            Lahella(200 + p, l.Y1, 1e-4, "ylä");
+        }
+
+        [Testi] static void NimiEiVaistaNostonNimiota()
+        {
+            // Löydös 50 vaihe 2 (web nostot.js:3835–3845): nimi väistää noston ikonia, ei nimiötä.
+            var ruutu = new Ruutulaatikko(0, 0, 1000, 800);
+            var v = new Ruutuvaraukset();
+            var tulos = new List<int>();
+            v.Aloita(1);
+            v.Varaa(NimiLadonta.NostonIkonilaatikko(100, 110, 2, "historia", 1f, 1f));
+            // E(0): nimiön paikalla oikealla (x 120–220), E(1): ikonin päällä (x 50–150).
+            NimiLadonta.Lado(new List<NimiLadonta.Ehdokas> { E(0, 2, 120), E(1, 2, 50) }, v, ruutu, 0f, tulos);
+            Oleta.Tosi(tulos.SequenceEqual(new[] { 0 }), "nimiön paikka vapaa, ikoni varattu");
+            Oleta.Tosi(NimiLadonta.NostonLaatikko(100, 110, "Verdun", 1, 1f).Leikkaa(new Ruutulaatikko(120, 100, 220, 120)),
+                "vanha nimiöllinen laatikko olisi estänyt");
+        }
+
+        [Testi] static void NimienLaatikotKaupungitJaLadotut()
+        {
+            var ruutu = new Ruutulaatikko(0, 0, 1000, 800);
+            var v = new Ruutuvaraukset();
+            var tulos = new List<int>();
+            v.Aloita(1);
+            // Järjestys kuten KaupunkiMerkit + Nimikerros: nostoikonit, kaupunkien pisteet ja nimiöt, aluenimet.
+            v.Varaa(NimiLadonta.NostonIkonilaatikko(900, 500, 2, "historia", 1f, 1f)); // ikoni ei ole nimi
+            int ikoneita = v.Maara;
+            var piste = new Ruutulaatikko(598, 108, 602, 112);
+            var kaupunki = new Ruutulaatikko(600, 90, 650, 130);
+            v.Varaa(piste);
+            v.Varaa(kaupunki);
+            int kaupunkeja = v.Maara;
+            var e = new List<NimiLadonta.Ehdokas> { E(7, 3, 300), E(3, 2, 580), E(5, 2, 50), E(9, 4, 2000) };
+            NimiLadonta.Lado(e, v, ruutu, 2f, tulos);
+            var ulos = new List<Ruutulaatikko>();
+            NimiLadonta.NimienLaatikot(v.Laatikot, ikoneita, kaupunkeja, e, tulos, ulos);
+            Oleta.Sama(2 + 2, ulos.Count, "piste + kaupunki + kaksi ladottua (580 osui kaupunkiin, 2000 ruudun ulkona)");
+            Oleta.Tosi(NimiLadonta.Samat(new[] { piste, kaupunki }, new[] { ulos[0], ulos[1] }), "kaupungit ensin, ikoni ohitettu");
+            Lahella(50, ulos[2].X0, 1e-6, "maakunta ennen merta (ladontajärjestys)");
+            Lahella(150, ulos[2].X1, 1e-6, "ilman väistön varaa");
+            Lahella(300, ulos[3].X0, 1e-6, "meri");
+        }
+
+        static NimiLadonta.KaupunkiEhdokas K(float x, float y, bool pakko = false, bool sallittu = true) => new NimiLadonta.KaupunkiEhdokas
+        {
+            Piste = new Ruutulaatikko(x - 3, y - 3, x + 3, y + 3),
+            Nimio = new Ruutulaatikko(x - 4, y - 8, x + 60, y + 8),
+            Pakko = pakko, Sallittu = sallittu,
+        };
+
+        [Testi] static void KaupunkienNimetVaistavatNostoikoneita()
+        {
+            // Web: nostot.paivita → ikonit varauksiksi → nimet.lado (ladoRuutunimet: pisteet ennen nimiä).
+            var v = new Ruutuvaraukset();
+            var nayta = new List<bool>();
+            v.Aloita(1);
+            v.Varaa(NimiLadonta.NostonIkonilaatikko(140, 200, 2, "historia", 1f, 1f)); // Pariisin nimen kohdalla
+            var e = new List<NimiLadonta.Ehdokas>();
+            var k = new List<NimiLadonta.KaupunkiEhdokas>
+            {
+                K(100, 200),                 // 0: nimi osuu nostoikoniin → piiloon, piste jää
+                K(100, 400),                 // 1: vapaa, oma piste ei estä
+                K(300, 600),                 // 2: nimi osuu kaupungin 3 pisteeseen (varattu ennen nimiä)
+                K(340, 600),                 // 3: vapaa
+                K(140, 205, pakko: true),    // 4: valittava näkyy aina
+                K(500, 100, sallittu: false) // 5: nimiöt pois
+            };
+            NimiLadonta.LadoKaupungit(k, v, nayta);
+            Oleta.Tosi(nayta.SequenceEqual(new[] { false, true, false, true, true, false }), string.Join(",", nayta));
+            Oleta.Sama(1 + 6 + 3, v.Maara, "ikoni, kaikki pisteet, näytetyt nimiöt");
+            Oleta.Tosi(v.Osuu(k[0].Piste), "piilotetun nimen piste on silti varattu");
+            // Noston nimiö (oikealla) ei estä: laatikko ilman nimiötä.
+            v.Aloita(2);
+            v.Varaa(NimiLadonta.NostonIkonilaatikko(40, 200, 2, "historia", 1f, 1f));
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { K(100, 200) }, v, nayta);
+            Oleta.Tosi(nayta[0], "noston nimiön alue ei ole varaus");
+        }
+
+        [Testi] static void OsuuPaitsiOhittaaVainSamanLaatikon()
+        {
+            var v = new Ruutuvaraukset();
+            v.Aloita(1);
+            var oma = new Ruutulaatikko(0, 0, 6, 6);
+            v.Varaa(oma);
+            var nimi = new Ruutulaatikko(2, 0, 50, 6);
+            Oleta.Tosi(v.Osuu(nimi) && !v.OsuuPaitsi(nimi, oma), "oma piste ohitetaan");
+            v.Varaa(new Ruutulaatikko(40, 0, 46, 6));
+            Oleta.Tosi(v.OsuuPaitsi(nimi, oma), "muu varaus estää");
+        }
+
         // ---- Tyyli -----------------------------------------------------------------------------------------------
 
         [Testi] static void LineaarinenAlfaVastaaWebinSekoitusta()

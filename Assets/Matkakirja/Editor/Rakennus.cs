@@ -132,6 +132,18 @@ namespace Matkakirja.Editori
             maaraja.varitaso = varitaso;
             maaraja.materiaali = maakunnat.rajaMateriaali;
             kerrokset.maaraja = maaraja;
+            // Rantaviiva vektorina (löydös 46 E1): webin GSHHS-solut, Rajaviiva-varjostin syvyystestillä (Rannikko.cs).
+            var rannikko = georefGo.AddComponent<Rannikko>();
+            rannikko.georeferenssi = georef;
+            rannikko.kerrokset = kerrokset;
+            rannikko.materiaali = maakunnat.rajaMateriaali;
+            kerrokset.rannikko = rannikko;
+            // Valtioiden rajat vektorina (löydös 46 E2): sama runko, katkoviiva (Rajat.cs).
+            var rajat = georefGo.AddComponent<Rajat>();
+            rajat.georeferenssi = georef;
+            rajat.kerrokset = kerrokset;
+            rajat.materiaali = maakunnat.rajaMateriaali;
+            kerrokset.rajat = rajat;
             var nappula = georefGo.AddComponent<Nappula>();
             nappula.georeferenssi = georef;
             nappula.materiaali = Materiaali("Nappula", "Matkakirja/Nappula", Color.white);
@@ -169,6 +181,15 @@ namespace Matkakirja.Editori
             var valot = georefGo.AddComponent<AiheValot>();
             valot.georeferenssi = georef;
             valot.materiaali = Materiaali("Karttavalo", "Matkakirja/Valopiste", Color.white);
+            // Radiouudistus (build 12): radiomastot, lentoestevalot ja aaltorenkaat radiolinssin IRadioMastot-piirtäjänä
+            // (Kartta/RadioMastot.cs, silta Scripts/Kartta/RadioMastotSilta.cs). Materiaalit vievät varjostimet ja
+            // instansointivariantit käännökseen (RenderMeshInstanced vaatii enableInstancing).
+            var radioMastot = georefGo.AddComponent<RadioMastot>();
+            radioMastot.georeferenssi = georef;
+            radioMastot.merkit = merkit;
+            radioMastot.mastoMateriaali = Materiaali("Radiomasto", "Matkakirja/Radiomasto", Color.white, true);
+            radioMastot.valoMateriaali = Materiaali("Lentoestevalo", "Matkakirja/Lentoestevalo", Color.white, true);
+            radioMastot.rengasMateriaali = Materiaali("Radiorengas", "Matkakirja/Radiorengas", new Color32(0xff, 0x7a, 0x4a, 0xff));
             var pisteet = georefGo.AddComponent<Karttapisteet>();
             pisteet.georeferenssi = georef;
             pisteet.materiaali = valot.materiaali;
@@ -186,6 +207,9 @@ namespace Matkakirja.Editori
             kamera.nearClipPlane = 10_000f;
             kamera.farClipPlane = 100_000_000f;
             kamera.fieldOfView = 50f; // webin PALLO_FOV (js/pallolauta/kamera.js), pystysuunta kuten three.js
+            // Löydös 49 (25.9.2026): kohtauksessa ei ollut kuuntelijaa, joten Unity ei miksannut yhtään lähdettä.
+            // Äänet ovat 2D-lähteitä, joten kuuntelijan paikalla ei ole väliä; AaniIstunto lisää varakuuntelijan vain, jos tämä puuttuu.
+            kameraGo.AddComponent<AudioListener>();
             var kierto = kameraGo.AddComponent<PalloKierto>();
             kierto.georeferenssi = georef;
             // Aloitusportin sumennus (web .start-gate blur 6px, löydös 17): materiaali vie shaderin käännökseen.
@@ -202,6 +226,7 @@ namespace Matkakirja.Editori
             // Aloitusvalinnan kohdemerkit (web kohdeElementti huomio: true) samalla varjostimella ja materiaalilla.
             merkit.kohdemerkkiMateriaali = siirtokohteet.materiaali;
             maaraja.kierto = kierto;
+            radioMastot.kierto = kierto;
             var komennot = kameraGo.AddComponent<Komennot>();
             komennot.kierto = kierto;
             komennot.merkit = merkit;
@@ -462,12 +487,13 @@ namespace Matkakirja.Editori
         }
 
         /// <summary>Materiaali assetiksi annetulla shaderilla ja värillä.</summary>
-        static Material Materiaali(string nimi, string shader, Color vari)
+        static Material Materiaali(string nimi, string shader, Color vari, bool instansoitu = false)
         {
             string polku = $"Assets/Matkakirja/Materiaalit/{nimi}.mat";
             Directory.CreateDirectory(Path.GetDirectoryName(polku));
             var m = new Material(Shader.Find(shader) ?? throw new Exception("Shaderia ei löydy: " + shader));
             m.SetColor("_BaseColor", vari);
+            m.enableInstancing = instansoitu;
             AssetDatabase.DeleteAsset(polku);
             AssetDatabase.CreateAsset(m, polku);
             return AssetDatabase.LoadAssetAtPath<Material>(polku);

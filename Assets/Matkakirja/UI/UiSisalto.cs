@@ -74,7 +74,10 @@ namespace Matkakirja.Natiivi
     public sealed class JulisteTiedot
     {
         public string Id, Kaupunki, KaupunkiNimi, Tiedosto, Otsikko, Lyhyt, Selite;
-        public string Url => string.IsNullOrEmpty(Tiedosto) ? null : "https://media.matkakirja.app/julisteet/" + Tiedosto;
+        /// <summary>Skeema 1.20: Tiedosto on kuva.url (täysi osoite); vanhempi paketti: polku julisteet/-juuren alla.</summary>
+        public string Url => string.IsNullOrEmpty(Tiedosto) ? null
+            : Tiedosto.StartsWith("https://") || Tiedosto.StartsWith("http://") ? Tiedosto
+            : "https://media.matkakirja.app/julisteet/" + Tiedosto;
     }
 
     public static class UiSisalto

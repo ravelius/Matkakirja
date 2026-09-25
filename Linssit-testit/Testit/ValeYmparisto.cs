@@ -48,8 +48,9 @@ namespace Matkakirja.Linssit.Testit
         public IKarttaKerrokset Kerrokset => Vale;
         public Nakyma Kamera => Asento;
         public Func<double, double> AjonPehmennys;
-        public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null)
-        { Loki.Add("ajo"); Ajo = kohde; AjonKesto = kestoS; AjonPehmennys = pehmennys; }
+        public double? AjonKallistus;
+        public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null, double? kallistukseen = null)
+        { Loki.Add("ajo"); Ajo = kohde; AjonKesto = kestoS; AjonPehmennys = pehmennys; AjonKallistus = kallistukseen; }
         public void ZoomiKatto(double? max) { Loki.Add("katto " + (max?.ToString() ?? "pois")); Katto = max; }
         public (double Lat, double Lon, double Sateita)? Avaruus;
         public void KameraAvaruuteen(double lat, double lon, double sateita) { Loki.Add("avaruus " + sateita); Avaruus = (lat, lon, sateita); }

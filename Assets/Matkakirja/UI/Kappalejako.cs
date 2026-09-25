@@ -54,3 +54,57 @@ namespace Matkakirja.Natiivi
         }
     }
 }
+
+namespace Matkakirja.Natiivi
+{
+    /// <summary>
+    /// TAVUTUS (Natiivi-UI): webin hyphens: auto (lang fi) tasatulle palstalle. UITK ei tavuta, joten sanoihin lisätään
+    /// pehmeät tavuviivat (U+00AD), joista rivi saa katketa. Sääntö on suomen tavusääntö: tavu alkaa konsonantista, jota
+    /// seuraa vokaali (yh-tä-jak-soi-ses-ti, Ak-ro-po-lis). Vokaalien välistä ei katkaista, koska se vaatisi
+    /// diftongisäännöt. Webin rajat: sana vähintään 5 kirjainta, kummallekin puolelle vähintään 2.
+    /// </summary>
+    public static class Tavutus
+    {
+        public const char Pehmea = '­';
+        const int VahinSana = 5, VahinPuoli = 2;
+
+        static bool Vokaali(char c) => "aeiouyäöåéèüáàâêîôûAEIOUYÄÖÅÉÈÜÁÀÂÊÎÔÛ".IndexOf(c) >= 0;
+
+        /// <summary>Kappale pehmein tavuviivoin; muut merkit (lihavointimerkit, välimerkit, numerot) ennallaan.</summary>
+        public static string Suomi(string teksti)
+        {
+            if (string.IsNullOrEmpty(teksti)) return teksti;
+            var sb = new System.Text.StringBuilder(teksti.Length + teksti.Length / 4);
+            int i = 0;
+            while (i < teksti.Length)
+            {
+                if (!char.IsLetter(teksti[i])) { sb.Append(teksti[i++]); continue; }
+                int alku = i;
+                while (i < teksti.Length && char.IsLetter(teksti[i])) i++;
+                Sana(sb, teksti, alku, i - alku);
+            }
+            return sb.ToString();
+        }
+
+        static void Sana(System.Text.StringBuilder sb, string t, int alku, int pituus)
+        {
+            if (pituus < VahinSana) { sb.Append(t, alku, pituus); return; }
+            bool vokaaliNahty = false;
+            for (int k = 0; k < pituus; k++)
+            {
+                char c = t[alku + k];
+                bool raja = k >= VahinPuoli && pituus - k >= VahinPuoli && vokaaliNahty && !Vokaali(c)
+                    && k + 1 < pituus && Vokaali(t[alku + k + 1])
+                    // Vierasperäinen th, ph, ch, sh on yksi äänne (Part-he-non → Par-the-non).
+                    && !(char.ToLowerInvariant(c) == 'h' && "tpcsTPCS".IndexOf(t[alku + k - 1]) >= 0);
+                // th-parin edessä raja siirtyy h:n kohdalta t:n eteen.
+                if (!raja && char.ToLowerInvariant(c) == 'h' && k >= VahinPuoli + 1 && pituus - k >= VahinPuoli && k + 1 < pituus
+                    && Vokaali(t[alku + k + 1]) && "tpcsTPCS".IndexOf(t[alku + k - 1]) >= 0 && vokaaliNahty && sb.Length > 0)
+                    sb.Insert(sb.Length - 1, Pehmea);
+                if (raja) sb.Append(Pehmea);
+                sb.Append(c);
+                if (Vokaali(c)) vokaaliNahty = true;
+            }
+        }
+    }
+}

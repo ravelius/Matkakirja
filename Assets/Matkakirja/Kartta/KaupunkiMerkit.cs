@@ -14,8 +14,13 @@ namespace Matkakirja
     /// näytön pikseleissä. Pallon takana olevat merkit piilotetaan. Nimiöt
     /// harvennetaan joka kehys: tärkeysjärjestyksessä (aloituskaupunki,
     /// lentokenttä, muut) nimiö näytetään vain, jos sen suorakulmio ei osu
-    /// jo näytettyyn nimiöön. Kaukaa näkyvät vain tärkeimmät, ja lähempänä
+    /// jo varattuun. Kaukaa näkyvät vain tärkeimmät, ja lähempänä
     /// tilaa riittää useammille.
+    ///
+    /// JÄRJESTYS WEBIN MUKAAN (löydös 50 vaihe 2, js/pallolauta/lauta.js:4656–4790 ja
+    /// js/karttanimet.js ladoRuutunimet): ensin nostojen IKONIT (NostoKerros.VaraaIkonit, ei nimiöitä), sitten
+    /// kaikkien näkyvien kaupunkien pisteet (pelimerkit pysyvät paikallaan) ja vasta sitten nimiöt, jotka
+    /// väistävät kaikkea jo varattua. Valittavan kaupungin nimi näkyy aina (ennallaan).
     /// </summary>
     public class KaupunkiMerkit : MonoBehaviour
     {
@@ -122,6 +127,27 @@ namespace Matkakirja
         {
             var m = merkit.Find(x => x.kaupunki.id == id);
             return m?.kaupunki.maa;
+        }
+
+        /// <summary>Kaupungin pintakorkeus paketista (m, ennen liioittelua) tai null (RadioMastot: maston juuri).</summary>
+        public double? PintaKorkeus(string id)
+        {
+            var m = merkit.Find(x => x.kaupunki.id == id);
+            return m?.kaupunki.korkeus;
+        }
+
+        /// <summary>Kaupungin paikka (RadioMastot-koe); false, jos kaupunkia ei ole.</summary>
+        public bool Paikka(string id, out double lat, out double lon)
+        {
+            var m = merkit.Find(x => x.kaupunki.id == id);
+            lat = m?.kaupunki.lat ?? 0; lon = m?.kaupunki.lon ?? 0;
+            return m != null;
+        }
+
+        /// <summary>Kaikki kaupungit merkkijärjestyksessä (testikomennot, esim. "mastot koe").</summary>
+        public IEnumerable<Sisalto.Kaupunki> Kaupungit()
+        {
+            foreach (var m in merkit) yield return m.kaupunki;
         }
 
         /// <summary>Lähimmän kaupungin id annetusta pisteestä (enintään maxAste asteen päässä), muuten null.</summary>
@@ -384,11 +410,17 @@ namespace Matkakirja
         readonly List<Merkki> merkit = new List<Merkki>();
 
         /// <summary>
-        /// YHTEINEN RUUTUTÖRMÄYS (löydös 38, build 11): kehyksen varatut nimiöalueet pikseleinä. Kaupungit varaavat
-        /// ensin (LateUpdate), ja Nimikerros lisää samaan nostojen laatikot ja alue-, meri- ja valtamerinimet
-        /// (prioriteetti kaupunki > nosto > maakunta/nykyalue > meri > valtameri, NimiLadonta.Lado).
+        /// YHTEINEN RUUTUTÖRMÄYS (löydös 38, build 11): kehyksen varatut alueet pikseleinä. Tämä kerros aloittaa
+        /// (LateUpdate): ensin <see cref="NostoIkoneita"/> nostojen ikonia, sitten kaupunkien pisteet ja nimiöt;
+        /// Nimikerros lisää samaan alue-, meri- ja valtamerinimet (prioriteetti nostoikoni > kaupunki >
+        /// maakunta/nykyalue > meri > valtameri, NimiLadonta.Lado). Nostojen nimiöt eivät ole varauksia.
         /// </summary>
         public readonly Ruutuvaraukset Varaukset = new Ruutuvaraukset();
+        /// <summary>Tämän kehyksen <see cref="Varaukset"/>-listan alussa olevien nostoikonien määrä (loput: kaupungit, aluenimet).</summary>
+        public int NostoIkoneita { get; private set; }
+        readonly List<Merkki> nakyvat = new List<Merkki>();
+        readonly List<NimiLadonta.KaupunkiEhdokas> ehdokkaat = new List<NimiLadonta.KaupunkiEhdokas>();
+        readonly List<bool> naytetaan = new List<bool>();
         Mesh nelio;
 
         public int Naytetty { get; private set; }
@@ -606,7 +638,15 @@ namespace Matkakirja
             Varaukset.Aloita(Time.frameCount);
             int naytetty = 0;
 
-            // Valintamerkit ensin (jarjestys), muuten tärkeysjärjestys (merkit).
+            // 1) Nostojen ikonit ensin (web nostot.paivita → nimet.lado({ varaukset })). NostoKerros ajetaan ennen
+            //    tätä (DefaultExecutionOrder), joten ruutupisteet ovat tämän kehyksen. Linssin aikana nostot näkyvät
+            //    vain linssinimissä (Natiivi-UI NostotKartalla.NaytaSallittu).
+            var nk = NostoKerros.Instanssi;
+            NostoIkoneita = nk != null && (!LinssiTila || nk.LinssiNimet) ? nk.VaraaIkonit(Varaukset, kerroin) : 0;
+
+            // 2) Paikat ja ehdokkaat tärkeysjärjestyksessä (valintamerkit ensin: jarjestys, muuten merkit).
+            nakyvat.Clear();
+            ehdokkaat.Clear();
             foreach (var m in valintamerkkeja > 0 ? jarjestys : merkit)
             {
                 // Korkeuskerroin nostaa maastoa: merkki nousee saman verran (paketin pintakorkeudesta).
@@ -634,17 +674,24 @@ namespace Matkakirja
                 var suorakulmio = new Rect(ala.x - 4 * kerroin, ala.y - 2 * kerroin, ala.width + 8 * kerroin, ala.height + 4 * kerroin);
                 // Valittavan nimi näkyy aina (web kohdeElementti piirtää nimen joka merkille).
                 bool valinta = m.valintamerkki && !LinssiTila;
-                bool mahtuu = valinta || nimiotNakyvat || LinssiTila;
-                if (!valinta && mahtuu && Varaukset.Osuu(Laatikko(suorakulmio))) mahtuu = false;
-                if (mahtuu)
+                float pp = m.pisteKoko * kerroin;
+                nakyvat.Add(m);
+                ehdokkaat.Add(new NimiLadonta.KaupunkiEhdokas
                 {
-                    // Varataan nimiö ja oma piste: myöhempi nimiö ei saa peittää kumpaakaan.
-                    float pp = m.pisteKoko * kerroin;
-                    Varaukset.Varaa(Laatikko(suorakulmio));
-                    Varaukset.Varaa(Laatikko(new Rect(ruutu.x - pp * 0.5f, ruutu.y - pp * 0.5f, pp, pp)));
-                    naytetty++;
-                }
-                if (m.nimio.enabled != mahtuu) m.nimio.enabled = mahtuu;
+                    Piste = Laatikko(new Rect(ruutu.x - pp * 0.5f, ruutu.y - pp * 0.5f, pp, pp)),
+                    Nimio = Laatikko(suorakulmio),
+                    Pakko = valinta,
+                    Sallittu = valinta || nimiotNakyvat || LinssiTila,
+                });
+            }
+
+            // 3) Pisteet ensin, sitten nimiöt, jotka väistävät ikonit, muiden pisteet ja aiemmat nimiöt.
+            NimiLadonta.LadoKaupungit(ehdokkaat, Varaukset, naytetaan);
+            for (int i = 0; i < nakyvat.Count; i++)
+            {
+                bool mahtuu = naytetaan[i];
+                if (mahtuu) naytetty++;
+                if (nakyvat[i].nimio.enabled != mahtuu) nakyvat[i].nimio.enabled = mahtuu;
             }
             Naytetty = naytetty;
         }

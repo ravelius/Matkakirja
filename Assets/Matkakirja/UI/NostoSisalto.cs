@@ -49,6 +49,8 @@ namespace Matkakirja.Natiivi
         public string Nauha;
         /// <summary>Suurennoksen reaktiorivin tunniste ja otsikko (web kuva.reaktio "ihme:&lt;nimi&gt;"), muuten null.</summary>
         public string Reaktio, ReaktioOtsikko;
+        /// <summary>Lyhyt on eläintäyn vakioselite (web vakioselite): karusellissa ja suurennoksessa, ei vaiheen 1 kuvassa.</summary>
+        public bool LyhytVara;
     }
 
     public sealed class NostoVisa
@@ -65,6 +67,8 @@ namespace Matkakirja.Natiivi
         public NostoLaji Laji;
         public string Id, Iso;
         public string Luokka;           // ylärivin luokka versaalina ("SKANDAALIT")
+        /// <summary>Ylärivin aihesymboli (web nostosymKortinYlarivi / kohteenKategoria): huuto, elain, hetki, ihme …</summary>
+        public string Symboli;
         public string Otsikko, Meta, Ingressi, Teksti;
         public List<NostoKuva> Kuvat = new List<NostoKuva>();
         public NostoVisa Visa;
@@ -385,6 +389,9 @@ namespace Matkakirja.Natiivi
                         // Skeema 1.20+: tyypitetty kuva.url on valmis osoite (esim. elaintayt: tunnus tai
                         // assets/elaimet/… → kohtaamiset/elaimet/…); data.kuva on vain raaka arvo.
                         if (T(Ob(MiniJson.Kentta(o, "kuva")), "url") is string url && !data.ContainsKey("$kuvaUrl")) data["$kuvaUrl"] = url;
+                        // Täkynosto ja kohde lukevat kuvan oliona (lyhyt, tekijä, lähde): tyypitetty kuva talteen (pariteetti
+                        // b12-2 #26: Roquefortin pääkuva puuttui, ja karuselli 1/2 jäi yhteen galleriakuvaan).
+                        if (MiniJson.Kentta(o, "kuva") is Dictionary<string, object> ko && !data.ContainsKey("$kuva")) data["$kuva"] = ko;
                         taulu[aid] = data;
                     }
                 }
@@ -519,7 +526,7 @@ namespace Matkakirja.Natiivi
         {
             var n = new Nosto
             {
-                Laji = NostoLaji.Skandaali, Id = id, Iso = iso, Luokka = "SKANDAALIT",
+                Laji = NostoLaji.Skandaali, Id = id, Iso = iso, Luokka = "SKANDAALIT", Symboli = "huuto",
                 Otsikko = T(d, "otsikko"), Meta = Liita(T(d, "paikka"), T(d, "vuosi")),
                 Ingressi = T(d, "kortti"), Teksti = T(d, "teksti"),
                 VisaKaupunki = iso, VisaAihe = "skandaali:" + id, VisaPalkkio = 50, Looppi = true,
@@ -533,7 +540,7 @@ namespace Matkakirja.Natiivi
         {
             var n = new Nosto
             {
-                Laji = NostoLaji.Hetki, Id = id, Iso = iso, Luokka = "HISTORIAN HETKET",
+                Laji = NostoLaji.Hetki, Id = id, Iso = iso, Luokka = "HISTORIAN HETKET", Symboli = "hetki",
                 Otsikko = T(d, "otsikko"), Meta = Liita(T(d, "paikka"), T(d, "paivays")), Teksti = T(d, "teksti"),
                 VisaKaupunki = iso, VisaAihe = "hetki:" + id, VisaPalkkio = 50,
             };
@@ -547,15 +554,15 @@ namespace Matkakirja.Natiivi
         {
             var n = new Nosto
             {
-                Laji = NostoLaji.Elain, Id = iso, Iso = iso, Luokka = "ELÄIMET",
+                Laji = NostoLaji.Elain, Id = iso, Iso = iso, Luokka = "ELÄIMET", Symboli = "elain",
                 Otsikko = T(d, "otsikko"), Teksti = T(d, "teksti"),
             };
             string elain = T(d, "elain");
             string vara = elain == null ? null : char.ToUpperInvariant(elain[0]) + elain.Substring(1)
                 + (UiSisalto.Maa(iso)?.Nimi is string maa ? ", " + maa : "");
             if (MiniJson.Kentta(d, "kuvat") is List<object> kk && kk.Count > 0) Kuvat(n, kk, "url");
-            else if ((T(d, "$kuvaUrl") ?? T(d, "kuva")) is string k) n.Kuvat.Add(new NostoKuva { Lahde = k, Lyhyt = vara, Selite = vara });
-            foreach (var x in n.Kuvat) { x.Lyhyt ??= vara; x.Selite ??= x.Lyhyt; }
+            else if ((T(d, "$kuvaUrl") ?? T(d, "kuva")) is string k) n.Kuvat.Add(new NostoKuva { Lahde = k });
+            foreach (var x in n.Kuvat) { x.LyhytVara = x.Lyhyt == null; x.Lyhyt ??= vara; x.Selite ??= x.Lyhyt; }
             return n;
         }
 
@@ -577,7 +584,7 @@ namespace Matkakirja.Natiivi
                 VisaKaupunki = "nosto", VisaAihe = id, VisaPalkkio = 25,
             };
             var kuvat = new List<object>();
-            if (MiniJson.Kentta(d, "kuva") is object k1) kuvat.Add(k1);
+            if ((MiniJson.Kentta(d, "kuva") ?? MiniJson.Kentta(d, "$kuva")) is object k1) kuvat.Add(k1);
             if (MiniJson.Kentta(d, "kuvat") is List<object> kk) kuvat.AddRange(kk);
             Kuvat(n, kuvat, "osoite");
             n.Kuvat = n.Kuvat.GroupBy(x => x.Lahde).Select(g => g.First()).ToList();
@@ -610,8 +617,55 @@ namespace Matkakirja.Natiivi
                     n.IhmeNappi = T(ihme, "nappi") ?? "Koe ihme";
                 }
             }
+            n.Symboli = KohteenKategoria(d, n);
+            // Web kohteenYlarivinNimike: luokka kategoriasta (kadonnut ihme → KADONNEET IHMEET, kierros → NÄHTÄVYYDET),
+            // luonnolla laji perään; ilman kategoriaa entinen tyyppinimi.
+            if (n.Symboli != null && SymbolinLuokat.TryGetValue(n.Symboli, out var luokka))
+                n.Luokka = (luokka + (n.Symboli == "luonto" && T(d, "tyyppi") is string tl && LuonnonNimikkeet.TryGetValue(tl, out var laji)
+                    ? " · " + laji : "")).ToUpperInvariant();
             return n;
         }
+
+        // Web js/fokusnosto-symbolit.js NOSTOSYM_PIIRTAJAT (NOSTOSYM_TYYPIT) ja js/fokuskohteet.js KOHDE_TYYPPISYMBOLIT.
+        static readonly HashSet<string> SymboliTyypit = new HashSet<string>
+        {
+            "huuto", "elain", "silma", "historia", "luonto", "ruoka", "kulttuuri", "tekniikka", "kauppa", "sana", "merenkulku",
+            "urheilu", "kaupunki", "ihme", "hetki",
+        };
+        static readonly Dictionary<string, string> KohdeTyyppiSymbolit = new Dictionary<string, string>
+        {
+            { "vuori", "luonto" }, { "meri", "luonto" }, { "saari", "luonto" }, { "joki", "luonto" }, { "jarvi", "luonto" },
+            { "multimedia", "silma" }, { "historia", "historia" }, { "ruoka", "ruoka" }, { "kulttuuri", "kulttuuri" },
+            { "tekniikka", "tekniikka" }, { "kauppa", "kauppa" }, { "sana", "sana" }, { "merenkulku", "merenkulku" },
+            { "urheilu", "urheilu" }, { "elain", "elain" }, { "kaupunki", "kaupunki" },
+        };
+
+        // Web NOSTOSYM_LUOKAT ja LUONNON_NIMIKKEET.
+        static readonly Dictionary<string, string> SymbolinLuokat = new Dictionary<string, string>
+        {
+            { "huuto", "Skandaalit" }, { "elain", "Eläimet" }, { "silma", "Nähtävyydet" }, { "historia", "Historia" },
+            { "luonto", "Luonto" }, { "ruoka", "Ruoka ja juoma" }, { "kulttuuri", "Kulttuuri" }, { "tekniikka", "Tekniikka" },
+            { "kauppa", "Kauppa" }, { "sana", "Tarinat" }, { "merenkulku", "Merenkulku" }, { "urheilu", "Urheilu" },
+            { "kaupunki", "Kaupungit" }, { "ihme", "Kadonneet ihmeet" }, { "hetki", "Historian hetket" },
+        };
+        static readonly Dictionary<string, string> LuonnonNimikkeet = new Dictionary<string, string>
+        {
+            { "vuori", "vuori" }, { "meri", "meri" }, { "saari", "saari" }, { "joki", "joki" }, { "jarvi", "järvi" },
+        };
+
+        /// <summary>Web kohteenKategoria: kadonnut ihme → ihme, oma symboli, kierroksellinen → silma, tyypin symboli.</summary>
+        static string KohteenKategoria(Dictionary<string, object> d, Nosto n)
+        {
+            var ihme = Ob(MiniJson.Kentta(d, "ihme"));
+            if (MiniJson.Totuus(ihme, "kadonnut") && T(ihme, "osoite") != null) return "ihme";
+            if (T(d, "symboli") is string s && SymboliTyypit.Contains(s)) return s;
+            if (n.Kierrokset.Count > 0) return "silma";
+            return T(d, "tyyppi") is string t && KohdeTyyppiSymbolit.TryGetValue(t, out var k) ? k : null;
+        }
+
+        /// <summary>Web nostosymKortinYlarivi: tuntematon symboli → huuto.</summary>
+        static string YlarivinSymboli(string symboli, Dictionary<string, object> luokat) =>
+            symboli != null && MiniJson.Kentta(luokat, symboli) != null ? symboli : "huuto";
 
         /// <summary>Ihmekuvan nauhan teksti (web KOHDE_IHMENAUHA, pelin alaotsikko).</summary>
         public const string IhmeNauha = "Unohdettu aarre";
@@ -639,7 +693,7 @@ namespace Matkakirja.Natiivi
             var n = new Nosto
             {
                 Laji = NostoLaji.Takynosto, Id = id, Iso = iso, Kaupunki = kaupunki,
-                Luokka = Ylarivi(T(d, "symboli") ?? T(d, "kategoria"), luokat),
+                Luokka = Ylarivi(T(d, "symboli") ?? T(d, "kategoria"), luokat), Symboli = YlarivinSymboli(T(d, "symboli") ?? T(d, "kategoria"), luokat),
                 Otsikko = T(d, "otsikko"), Teksti = teksti, Looppi = looppi,
                 Meta = looppi ? T(d, "paivays") ?? Liita(T(Ob(MiniJson.Kentta(d, "paikka")), "nimi"), T(d, "vuosi")) : null,
                 Ingressi = looppi ? T(d, "ingressi") : null,
@@ -651,7 +705,7 @@ namespace Matkakirja.Natiivi
                 MusiikkiNayteNimi = T(d, "musiikkiNayteNimi") ?? T(Ob(MiniJson.Kentta(d, "musiikkiNayte")), "nimi"),
             };
             var kuvat = new List<object>();
-            if (MiniJson.Kentta(d, "kuva") is object k1) kuvat.Add(k1);
+            if ((MiniJson.Kentta(d, "kuva") ?? MiniJson.Kentta(d, "$kuva")) is object k1) kuvat.Add(k1);
             if (MiniJson.Kentta(d, "galleria") is List<object> gal) kuvat.AddRange(gal);
             Kuvat(n, kuvat, "url");
             n.Valokuva = Yksi(MiniJson.Kentta(d, "valokuva"));
@@ -684,7 +738,7 @@ namespace Matkakirja.Natiivi
             var n = new Nosto
             {
                 Laji = NostoLaji.Syvennys, Id = id, Iso = iso, Kaupunki = kaupunki,
-                Luokka = Ylarivi(symboli, luokat),
+                Luokka = Ylarivi(symboli, luokat), Symboli = YlarivinSymboli(symboli, luokat),
                 Otsikko = T(d, "otsikko") ?? T(d, "nappi"), Teksti = T(d, "teksti"),
                 VisaKaupunki = kaupunki, VisaAihe = "fokus:" + id, VisaPalkkio = 50,
                 VisaRahaSyy = "Livian täky ratkesi", VisaJuliste = kaupunki,

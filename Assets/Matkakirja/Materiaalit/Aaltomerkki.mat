@@ -26,10 +26,15 @@ Material:
     m_Ints: []
     m_Floats:
     - _Jatke: 0
+    - _Katko: 0
     - _Kerroin: 3
+    - _Nosto: 0
+    - _NostoOsuus: 0
     - _Paksuus: 1.2
     - _PieninRengas: 0
     - _Tiheys: 0
+    - _Vali: 0
+    - _ZTest: 8
     m_Colors:
     - _BaseColor: {r: 0.22745098, g: 0.25882354, b: 0.32941177, a: 0.62}
     - _Keskus: {r: 0, g: 0, b: 0, a: 0}
