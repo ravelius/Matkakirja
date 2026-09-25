@@ -173,6 +173,12 @@ export const RAAMATTU = {
           + 'päivällä. Poikkeus: työpöytäsovelluksen oma lupaikkuna (esim. simulaattorin laitelupa) jää sessioon, mutta siitäkin sessio '
           + 'ilmoittaa Fablelle, joka kertoo omistajalle missä sessiossa se on. Postivahti ilmoittaa Fablelle yli 10 minuuttia auki '
           + 'olleesta Fablen kortista uudelleen pushilla. '
+          + 'HUOLTOKOMENNOT ILMAN OMISTAJAA (omistaja 25.9.2026 klo 08.4x, sitova): koodaus-käyttäjällä on sudo ilman salasanaa '
+          + 'täsmälleen neljälle itsekorjautuvalle komennolle (/etc/sudoers.d/matkakirja-huolto): sudo killall coreaudiod (äänidemoni jumissa, '
+          + 'yli 200 % CPU yli 2 min — simulaattorien äänet), sudo killall -9 com.apple.CoreSimulator.CoreSimulatorService (simulaattoripalvelu '
+          + 'jumissa), sudo killall mDNSResponder (nimipalvelu) ja sudo purge (muisti); sallinnat .claude/settings.json:ssa. Postivahti ajaa '
+          + 'coreaudiod-komennon kierroksellaan raja-arvon ylittyessä ja kirjaa sen tilatauluun; muut ajaa se rooli, jonka työ on jumissa, ja '
+          + 'ilmoittaa Fablelle rivillä. Laajempaa sudoa ei anneta; uusi komento lisätään yksi rivi kerrallaan omistajan päätöksellä. '
           + 'Sallintasäännöt (send_message, clear_session, set_remote_control, gh, aws, xcodebuild, '
           + 'xcrun, security) ovat projektin .claude/settings.json:ssa 23.9.2026 alkaen.',
         'NATIIVI PELI ETUSIJALLE (omistaja 23.9.2026, sitova; tarkennus klo 16.2x: KOKO PELI '

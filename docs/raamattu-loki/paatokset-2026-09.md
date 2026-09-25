@@ -5195,3 +5195,7 @@ Postivahdin 'poltto valmistunut' oli tauon väärintulkinta.
 ## #3140 MAINISSA v2214 (4293/0, LIIKEVARA 10/10 UUSINNASSA — PUNAISET OLIVAT KUORMAN 0/0-KAATUMISIA); SISALTOJUNA (#3138, #3134, #3122, #3106, #3043, #3005, #2988, #3126) LAHTEE POLTON PAATYTTYA (~10.15) KUORMAN ALLE 100 (25.9.2026 klo 08.36)
 
 Löydös 70 on nyt webissä tuotannossa.
+
+## OMISTAJA klo 08.4x (SITOVA, RAAMATTUUN): HUOLTOKOMENNOT ILMAN OMISTAJAA — sudo NOPASSWD KOODAUS-KAYTTAJALLE NELJALLE KOMENNOLLE (/etc/sudoers.d/matkakirja-huolto, visudo parsed OK): killall coreaudiod, killall -9 CoreSimulatorService, killall mDNSResponder, purge; SALLINNAT .claude/settings.json:SSA (OMISTAJA LISASI, 4 RIVIA, COMMIT OMISTAJALTA); POSTIVAHTI AJAA coreaudiod-KOMENNON KIERROKSELLAAN (>200 % YLI 2 min); LAAJEMPAA SUDOA EI ANNETA (25.9.2026 klo 08.46)
+
+Puhelimen pääte liitti heredocin yhdelle riville — yksiriviset printf-komennot toimivat; oppi: omistajalle annettavat komennot aina yksirivisinä. Fablen luokitin esti settings.json:n lisäämisen committiin (self-modification), joten omistaja committoi sen itse.
