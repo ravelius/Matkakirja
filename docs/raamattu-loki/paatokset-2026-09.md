@@ -5795,3 +5795,7 @@ Fable lähettää aloitusviestin Postivahdin kuittauksen jälkeen.
 ## SISALTOKIRJURI NOLLATTU → ALOITUSVIESTI LAHETETTY (sisaltokirjuri-luovutus-20260925-c), RC TAKAISIN; KAIKKI KOLME 70 %:N SESSIOTA KAYNNISTETTY UUDELLEEN (25.9.2026 klo 19.06)
 
 Luovutus-PR #3233 mergetään kun vihreä.
+
+## PELIKOODARI LUOVUTUS -yo2 PUSHATTU (7cb3a2086): LAMPOERA JUNASSA (BUILD 16), ESILATAAJA ERA 2 KOODATTU MITTAAMATTA (pelikoodari/esilataaja-2 eaf5b352, SIMUVUORO ~19.50), LEPOPIIRTO ODOTTAA NATIIVI-UI:N UiRauhassa-KORJAUSTA; NOLLAUS KAYNNISSA (25.9.2026 klo 19.09)
+
+Postivahti kuittaa; Fable lähettää aloitusviestin.
