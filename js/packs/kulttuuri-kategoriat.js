@@ -114285,6 +114285,249 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Hércules Florence, Instituto Hercule Florence GLAM, Wikimedia Commons (PD)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Santarém, Pará; Santarém-Maestro Wilson Fonseca
+       * Airport; Wilson Fonseca; Tacacá; Tucupi; Pato no tucupi; Maniçoba;
+       * Acmella oleracea; Amazonian cuisine; Açaí palm; Arapaima;
+       * Theobroma grandiflorum; Carimbó; Alter do Chão, Pará; Belterra,
+       * Pará; Fordlândia; Potamotrygon), Wikivoyagen sivuilta Santarém
+       * (Brazil), Alter do Chão, Belterra, Fordlândia ja Voyaging along
+       * the Amazon River sekä portugalin Wikipedian sivuilta Museu João
+       * Fona ja Teatro Municipal Victória — teksti omaa. Nostojen aiheita
+       * (lähetysasema 1661, Vesien kohtaaminen ilmiönä, Tapajós-kansan
+       * keramiikka, vila ja kaupunki, kumikuume, Wickham, katedraali,
+       * Ilha do Amor, kuivan kauden hiekkarannat, boto ja Sairé, Bates,
+       * Tapajós-kansallismetsän tulvametsä), gallerian Florencen näkymää
+       * eikä saapumistekstin tai maastotekstin aiheita (soijaterminaali,
+       * kullankaivuun samentama vesi) toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Açaí-kuva on MTurin julkaisema (Public domain, pyydetty
+       * maininta Tiago Silveira). Riippumattokuvan laivaa ei ole nimetty
+       * Commonsissa, joten selite ei väitä sitä Santarémin laivaksi.
+       * Pystykuva: tacacá kalebassikulhossa.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Tacacá santareno o melhor.jpg',
+          lyhyt: 'Tacacá syödään kuumana kalebassikulhosta, ja jambunlehdet kihelmöivät huulilla.',
+          selite: 'Santarémilainen tacacá mustassa kalebassikulhossa: '
+            + 'keltaisessa tucupiliemessä kelluu tummanvihreitä jambunlehtiä, '
+            + 'kuivattuja katkarapuja, ja kulhoon on pistetty puutikku.',
+          lahde: 'Giancarlos Gabriel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Santarém on Amazonin varren pysähdyspaikka suunnilleen '
+          + 'Manausin ja Belémin puolivälissä, ja tänne tullaan yhä useimmiten '
+          + 'jokilaivalla, omassa riippumatossa kannella. Kaupungissa kannattaa '
+          + 'maistaa tucupilientä ja huulia puuduttavaa jambua, käydä vanhassa '
+          + 'raatihuoneessa, josta on tullut kaupungin museo, ja katsoa '
+          + 'carimbó-tanssia. Bussilla pääsee Alter do Chãon '
+          + 'rantakylään ja Henry Fordin kumiplantaasille Belterraan. Sadekausi '
+          + 'kestää marraskuusta heinäkuuhun, ja kuumimman päivän jälkeen '
+          + 'kaupunkilaiset kokoontuvat iltaisin rantakadulle.',
+        artikkeli: {
+          nimi: 'Matkailijan Santarém',
+          teksti: 'Santarémiin tullaan joelta, ja riippumatto kannattaa ostaa ennen laivaan nousua.',
+          nosto: 'Tacacá syödään kuumana kalebassikulhosta, ja jambunlehdet '
+            + 'saavat huulet kihelmöimään vielä kauan viimeisen lusikallisen '
+            + 'jälkeen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Riippumatossa tai siivin',
+              teksti: 'Teitä on vähän ja ne ovat huonoja, lentäminen on kallista, '
+                + 'ja siksi joki on yhä Santarémin päätie niin ihmisille kuin '
+                + 'rahdille. Manausista matka tavallisella matkustajalaivalla '
+                + 'kestää myötävirtaan noin puolitoista vuorokautta, Belémistä '
+                + 'vastavirtaan 60–70 tuntia, ja Manausista lähtevä pikavene '
+                + 'selviää samasta matkasta noin 13 tunnissa. Laivoilla on pieniä, usein '
+                + 'ikkunattomia hyttejä, mutta useimmat matkustajat nukkuvat '
+                + 'omassa riippumatossaan kannella. Riippumaton ja köydet voi '
+                + 'ostaa satamien kaupoista, ja kannelle kannattaa mennä heti, '
+                + 'kun laiva on saapunut: paikallisetkin valtaavat parhaat '
+                + 'kohdat saman tien. Riippumatto ripustetaan yhtä tiheään kuin '
+                + 'muut ja kauas television, baarin, vessojen ja koneen '
+                + 'melusta. Kaupungissa on kaksi satamaa. Pitkän matkan laivat '
+                + 'Manausiin ja Belémiin lähtevät Docas do Parán laiturista, '
+                + 'kun taas Tapajósin kyliin ja lähikaupunkeihin menevät veneet '
+                + 'lähtevät Praça Tiradentesin pienestä satamasta. Macapán '
+                + 'laivat päättävät matkansa todellisuudessa naapurikaupunkiin '
+                + 'Santanaan. Lentäen perille pääsee Maestro Wilson Fonsecan '
+                + 'lentoasemalle, joka avattiin vuonna 1977 noin 15 kilometrin '
+                + 'päähän keskustasta. Terminaalista näkyy kaksi tykkiä, jotka '
+                + 'on tuotu kaupungin 1690-luvulla rakennetusta linnoituksesta.',
+              kuva: [
+                {
+                  tiedosto: 'Amazon-hammocks.JPG',
+                  lyhyt: 'Amazonin jokilaivalla matkustajat nukkuvat omissa riippumatoissaan kannella.',
+                  selite: 'Kirjavat riippumatot roikkuvat vieri vieressä '
+                    + 'suuren jokilaivan katetulla kannella, laukut lattialla '
+                    + 'niiden alla, ja kaiteen takana näkyy joki ja metsäinen '
+                    + 'ranta.',
+                  lahde: 'Jan Ludewig, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Porto de Santarém.JPG',
+                  lyhyt: 'Jokiveneet odottavat Santarémin rannassa, kun aurinko laskee joen ylle.',
+                  selite: 'Monikerroksisia jokiveneitä on kiinnitetty '
+                    + 'Santarémin satamaan illalla, ja oikealla etualan '
+                    + 'veneessä liehuu Brasilian lippu.',
+                  lahde: 'Oski67, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Aeroporto de Santarém 1.jpg',
+                  lyhyt: 'Maestro Wilson Fonsecan lentoasema on noin 15 kilometrin päässä keskustasta.',
+                  selite: 'Santarémin lentoaseman matala valkoinen terminaali '
+                    + 'ja sen päädyssä oranssin ja valkoisen ruutukuvioinen '
+                    + 'torni tammikuun aamuna vuonna 2017.',
+                  lahde: 'Guilmann, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Tucupia, jambua ja jokikalaa',
+              teksti: 'Santarémin ruoka on Parán osavaltion ruokaa, ja sen '
+                + 'perusta on maniokki. Keltainen tucupi puristetaan '
+                + 'raastetusta maniokinjuuresta. Raakana liemi on myrkyllistä, '
+                + 'joten sitä keitetään kolmesta viiteen päivää ennen kuin '
+                + 'siitä tulee kastiketta. Tunnetuin tucupiruoka on tacacá, '
+                + 'kuuma keitto, joka kaadetaan kalebassista tehtyyn cuia-'
+                + 'kulhoon tapiokasakeutteen, jambunlehtien ja kuivattujen '
+                + 'katkarapujen päälle. Jambu on pieni keltakukkainen kasvi, '
+                + 'jonka lehdet saavat huulet ja kielen kihelmöimään ja '
+                + 'hetkeksi puutumaan, ja happamassa tucupissa vaikutus '
+                + 'voimistuu. Parán tunnetuimpia ruokia ovat myös pato no tucupi, tucupissa '
+                + 'haudutettu ankka, ja maniçoba, jonka jauhettuja '
+                + 'maniokinlehtiä keitetään neljästä päivästä viikkoon '
+                + 'myrkyn poistamiseksi ennen kuin joukkoon lisätään suolattua '
+                + 'sianlihaa, kuivalihaa ja makkaraa. Joesta syödään '
+                + 'tambaquia, tucunaréa ja pirarucua, yhtä maailman '
+                + 'suurimmista makean veden kaloista, jonka tupinkielinen nimi '
+                + 'tarkoittaa punaista kalaa. Jälkiruoaksi tarjotaan '
+                + 'cupuaçu-hedelmän kermaa ja konvehteja; kaakaopuun sukulaisen '
+                + 'hedelmälihan tuoksua kuvataan suklaan ja ananaksen '
+                + 'sekoitukseksi. Mehubaareissa puristetaan açaín ja bacaba-'
+                + 'palmun hedelmistä juomaa. Raaka-aineita myyvät '
+                + 'keskustan Mercado Modelo ja Mercadão 2000 -tori.',
+              kuva: {
+                tiedosto: 'TiagoSilveira Acai Santarem Para (40065071065).jpg',
+                lyhyt: 'Açaípalmun marjoja korissa Santarémissa; Pará tuottaa suurimman osan Brasilian açaísta.',
+                selite: 'Punottu kori on täynnä tummanvioletteja, huurteisen '
+                  + 'näköisiä açaípalmun hedelmiä, jotka on laskettu '
+                  + 'kivetykselle Santarémissa.',
+                lahde: 'Tiago Silveira / MTur Destinos, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Museo raatihuoneessa ja carimbó',
+              teksti: 'Rantakadun itäpäässä seisoo keltainen pylväikköinen '
+                + 'rakennus, joka valmistui vuosina 1853–1868. Siinä ovat '
+                + 'toimineet kaupunginhallinto, valamiesoikeus, '
+                + 'kaupunginvaltuusto ja vankila, ja 22. kesäkuuta 1991, '
+                + 'kaupungin syntymäpäivänä, siitä tuli Centro Cultural João '
+                + 'Fona. Museoon on vapaa pääsy. Vitriineissä on '
+                + 'kivettyneitä kaloja, alkuperäiskansojen käsitöitä, vanhoja '
+                + 'kolikoita, oikeussalin ja valtuuston huonekaluja sekä '
+                + 'välineitä, joilla orjia rangaistiin, ja seinillä kaupungin '
+                + 'pormestarien muotokuvat. Keskustassa on myös '
+                + 'Theatro Victória, jonka santarémilainen draamakerho rakennutti '
+                + 'omin varoin vuosina 1895–1896. Salissa oli 500 paikkaa, ja '
+                + 'kaupunkilaiset kerskuivat, että sen voittivat vain Belémin '
+                + 'Theatro da Paz ja Manausin Teatro Amazonas. Vuonna 1965 teatteri oli vähällä '
+                + 'joutua purettavaksi, mutta se kunnostettiin 2012, ja nyt '
+                + 'siinä on pieni esityssali. Kaupungin oma säveltäjä oli '
+                + 'Wilson Fonseca (1912–2002), maestro Isoca, joka kirjoitti yli '
+                + '1 600 laulua, muun muassa Tapajós Azul -valssin ja botosta '
+                + 'kertovan Lenda do Boton. Hänen mukaansa on nimetty myös '
+                + 'lentoasema. Alter do Chãossa kannattaa katsoa carimbó-esitys. '
+                + 'Parán tanssia säestää samanniminen rumpu: ontosta '
+                + 'puunrungosta koverrettu, eläimennahalla päällystetty rumpu, '
+                + 'jonka päällä soittaja istuu. Naiset pyörähtelevät laajoissa '
+                + 'hameissa. Vuonna 2014 carimbó merkittiin Brasilian '
+                + 'aineettomaksi kulttuuriperinnöksi.',
+              kuva: {
+                tiedosto: 'Grupo Conquista de Carimbó.jpg',
+                lyhyt: 'Santarémilainen carimbó-ryhmä esiintyy laajoissa, kirkkaanvärisissä hameissa.',
+                selite: 'Grupo Conquista de Carimbó -tanssiryhmän naiset '
+                  + 'levittävät kirjavia hameitaan ja miehet pitelevät '
+                  + 'olkihattuja; takana näkyy Tapajós-joki ja hiekkasärkkä '
+                  + 'olkikattoisine katoksineen.',
+                lahde: 'Moisés Everton, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Bussilla rannalle ja Fordin kaupunkiin',
+              teksti: 'Alter do Chãon rantakylään on keskustasta 37 kilometriä '
+                + 'PA-457-tietä, ja bussit lähtevät noin puolen tunnin välein '
+                + 'aamuvarhaisesta myöhään iltaan Avenida Rui Barbosalta ja '
+                + 'Praça Tiradentesin pysäkiltä. Lentoasemalta kylään ei kulje '
+                + 'suoraa bussia, joten sinne ajetaan taksilla tai vaihdetaan '
+                + 'bussia keskustassa. Viikonloppuisin kylä täyttyy '
+                + 'kaupunkilaisista. Kylän edustan hiekkasärkälle soudattaa '
+                + 'pieni kanootti, ja kuivana aikana joen yli pääsee paikoin '
+                + 'kahlaamalla. Syrjäisemmillä rannoilla on syytä varoa '
+                + 'makean veden rauskuja, jotka makaavat hiekkaan kaivautuneina '
+                + 'ja pistävät myrkkypiikillään vain, jos niiden päälle astuu. '
+                + 'Jalkoja kannattaa siksi liu’uttaa pohjaa pitkin eikä astella. '
+                + 'Belterraan, noin 40 kilometriä etelään, lähtee bussi '
+                + 'keskustan Avenida São Sebastiãolta useita kertoja päivässä. '
+                + 'Ford Motor Company perusti kaupungin kumiplantaasiksi, kun '
+                + 'sen ensimmäinen yritys, Fordlândia ylempänä Tapajósilla, '
+                + 'oli epäonnistunut: Belterran tasaisella ylängöllä saattoi '
+                + 'käyttää koneita, ja 1930-luvun lopulla kumipuuta kasvoi noin '
+                + '50 neliökilometrillä. Pääkadulla aukiolta joelle päin seisoo '
+                + 'yhä amerikkalaistyylisiä puutaloja, ja Belterrasta pääsee '
+                + 'bussilla Tapajós-kansallismetsän kyliin, joissa voi yöpyä. '
+                + 'Itse Fordlândiaan on Santarémista noin 12 tunnin yömatka '
+                + 'jokiveneellä Praça Tiradentesin satamasta.',
+              kuva: {
+                tiedosto: 'Belterra.jpg',
+                lyhyt: 'Belterran puutalot ja punainen paloposti muistuttavat Fordin plantaasin ajoista.',
+                selite: 'Valkoinen, vihreäreunainen puutalo kuistineen ja '
+                  + 'tiilikattoineen seisoo Belterrassa kukkivan pensasaidan '
+                  + 'takana, ja jalkakäytävällä on amerikkalaismallinen '
+                  + 'punainen paloposti.',
+                lahde: 'Amit Evron, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Sade, aurinko ja ilta rannalla',
+              teksti: 'Santarémissa on lämmintä ympäri vuoden: keskilämpötila '
+                + 'pysyy 25 ja 28 asteen välillä, ja ilmankosteus on '
+                + 'keskimäärin 86 prosenttia. Vuodessa sataa noin 2 150 '
+                + 'millimetriä, ja sadekausi kestää marraskuusta heinäkuuhun. '
+                + 'Kuivimmat kuukaudet ovat elokuusta lokakuuhun. Aurinko '
+                + 'polttaa joella myös pilvisenä päivänä, sillä vesi heijastaa '
+                + 'valoa ja tuulenvire saa kuumuuden tuntumaan vähäisemmältä. '
+                + 'Hattu, aurinkovoide ja hyttyskarkote kuuluvat päivän '
+                + 'varusteisiin, ja karkotetta levitetään uudelleen '
+                + 'auringonlaskun aikaan. Keltakuumerokotus kannattaa ottaa '
+                + 'ennen Amazonin-matkaa. Englantia puhutaan vähän, joten '
+                + 'puhelimeen kannattaa ladata portugalin käännösohjelma, joka '
+                + 'toimii ilman verkkoa: jokilaivoilla ja kylissä yhteyttä ei '
+                + 'aina ole. Pikkuveneissä ja pienissä kylissä maksetaan usein '
+                + 'vain käteisellä, eikä pienissä kylissä '
+                + 'välttämättä ole pankkiautomaattia. Kaupungissa liikutaan busseilla, '
+                + 'takseilla ja mototakseilla eli moottoripyörätakseilla, ja '
+                + 'monilla aukioilla on kaupungin ilmainen langaton verkko. '
+                + 'Päivän kuumuuden laannuttua kaupunkilaiset lähtevät '
+                + 'kävelylle Tapajósin rantakadulle, jonka varren baareissa '
+                + 'soitetaan iltaisin elävää musiikkia. Paikalliset juhlapäivät '
+                + 'ovat 22. kesäkuuta, kaupungin syntymäpäivä, ja 8. joulukuuta, '
+                + 'suojeluspyhimyksen päivä, jota edeltää marraskuun lopussa '
+                + 'noin kymmenen kilometrin kulkue.',
+              kuva: {
+                tiedosto: 'Orla (45958243781).jpg',
+                lyhyt: 'Auringon laskiessa santarémilaiset kävelevät Tapajósin rantakadulla.',
+                selite: 'Santarémin leveällä rantakadulla kävelee ja istuu '
+                  + 'ihmisiä oranssin iltataivaan alla, kaiteen takana '
+                  + 'kimmeltää joki ja kauempana näkyvät sataman laiturit.',
+                lahde: 'Wellington-stm, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
