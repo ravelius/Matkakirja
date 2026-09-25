@@ -125,6 +125,32 @@ namespace Matkakirja
         }
         HashSet<string> suodatin;
 
+        /// <summary>
+        /// PELIN KAUPUNKIRAJAUS (build 13, pariteetti D15; web js/pallolauta/lauta.js:2676–2716 pelinKaupunkirajaus):
+        /// tavallisessa pelissä näkyvät ja ovat napautettavissa vain kohdemaan kaupungit, oma kaupunki, nopan
+        /// siirtokohteet ja tarjotut lentokohteet — Pelikoodari (PeliOhjain) antaa joukon. null = ei rajausta
+        /// (nappula reitillä, maailmatila, peli pois). Erillinen NaytaVain-suodattimesta: merkki näkyy vain, jos
+        /// molemmat sallivat (leikkaus). Linssinimissä (LinssiTila) pelin rajausta ei käytetä (web linssiPaalla → null).
+        /// </summary>
+        public void PeliSuodatin(ICollection<string> kaupungit)
+        {
+            peliSuodatin = kaupungit == null ? null : new HashSet<string>(kaupungit);
+        }
+        HashSet<string> peliSuodatin;
+
+        /// <summary>Sallivatko NaytaVain- ja pelisuodatin kaupungin (leikkaus).</summary>
+        bool Suodatettu(string id) =>
+            (suodatin == null || suodatin.Contains(id)) && (LinssiTila || peliSuodatin == null || peliSuodatin.Contains(id));
+
+        /// <summary>
+        /// PELI OHJAA REITTEJÄ (build 13, pariteetti B10/D18/A3/A15/C18, löydökset 57 ja 60): webissä kaupungin
+        /// napautus ei piirrä eikä korosta reittejä, vaan reitit tulevat vain ui.matkareittienValinta-säännöstä
+        /// (js/ui.js:7885). Tosi = ValitseKaupunki ei koske Reitteihin (ei Tyhjenna, Korosta eikä NaytaNaapurit);
+        /// PeliOhjain piirtää matkareitit itse (Reitit.NaytaReitit, Lentokaaret). Oletus epätosi: ilman peliä
+        /// (proto-komennot) napautus näyttää naapurireitit kuten ennen.
+        /// </summary>
+        public bool PeliOhjaaReitit { get; set; }
+
         /// <summary>Kaupungin maa (ISO3) tai null.</summary>
         public string KaupunginMaa(string id)
         {
@@ -610,22 +636,24 @@ namespace Matkakirja
         /// <summary>
         /// Lento kaupunkiin ja nimikortti saapuessa (myös ohjelmallisesti). Jos edellisestä
         /// valitusta kaupungista on reitti, se korostetaan lennon ajaksi; saavuttaessa
-        /// näytetään uuden kaupungin naapurireitit.
+        /// näytetään uuden kaupungin naapurireitit. Pelitilassa (PeliOhjaaReitit) reitteihin ei kosketa.
         /// </summary>
         public void ValitseKaupunki(Sisalto.Kaupunki k)
         {
             kortti?.Piilota();
             kierto.IlmoitaKaupunki(k.id);
-            if (reitit != null)
+            var r = PeliOhjaaReitit ? null : reitit;
+            if (r != null)
             {
-                reitit.Tyhjenna();
-                if (valittu != null && valittu != k.id) reitit.Korosta(valittu, k.id);
+                r.Tyhjenna();
+                if (valittu != null && valittu != k.id) r.Korosta(valittu, k.id);
             }
             valittu = k.id;
             kierto.Aja(k.lat, k.lon, kierto.KorkeusKaarelle(saapumisKaari), saapumisKesto, () =>
             {
                 kortti?.Nayta(k);
-                if (reitit != null) { reitit.Tyhjenna(); reitit.NaytaNaapurit(k.id); }
+                // Tila luetaan ajon lopussa: peli on voinut ottaa reitit haltuunsa ajon aikana.
+                if (reitit != null && !PeliOhjaaReitit) { reitit.Tyhjenna(); reitit.NaytaNaapurit(k.id); }
             });
         }
 
@@ -666,7 +694,7 @@ namespace Matkakirja
                 float etaisyys = kohti.magnitude;
                 Vector3 normaali = gt.TransformDirection(m.normaali);
                 // Aloitusportissa (PalloKierto.PorttiSumea) ei merkkejä eikä nimiöitä, kuten webin etusivupallossa.
-                bool edessa = (merkitNakyvat || LinssiTila) && !PalloKierto.PorttiSumea && (suodatin == null || suodatin.Contains(m.kaupunki.id))
+                bool edessa = (merkitNakyvat || LinssiTila) && !PalloKierto.PorttiSumea && Suodatettu(m.kaupunki.id)
                     && Vector3.Dot(normaali, kohti / etaisyys) > 0.12f;
                 if (m.juuri.gameObject.activeSelf != edessa) m.juuri.gameObject.SetActive(edessa);
                 if (!edessa) { m.lukittu = false; continue; }

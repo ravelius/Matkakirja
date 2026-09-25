@@ -36,6 +36,9 @@ korkeudet metreinä. Kaaret ovat asteina kapeammassa näyttösuunnassa.
 | `NimiKortti kortti` | valmis | `Nayta(Sisalto.Kaupunki)` ja `Piilota()`. UI voi korvata oman korttinsa asettamalla `kortti = null`. |
 | `void NaytaKaupungit(bool)` | tulossa | Kaikki merkit ja nimiöt päälle tai pois (linssit). |
 | `void Korosta(string id, Color)` | tulossa | Yksittäisen kaupungin korostus (käyty, tavoite, linssin kohde). |
+| `bool PeliOhjaaReitit { get; set; }` | valmis (build 13) | Tosi pelitilassa: `ValitseKaupunki` (napautus) ei koske Reitteihin (ei Tyhjenna, Korosta eikä NaytaNaapurit); PeliOhjain ohjaa reitit `Reitit.NaytaPeli`-kutsulla (web: napautus ei piirrä reittejä, vain `matkareittienValinta` ui.js:7885; pariteetti B10/D18/A3/A15/C18, löydökset 57 ja 60). Oletus epätosi = proto-komentojen entinen käytös. |
+| `void PeliSuodatin(ICollection<string> kaupungit)` | valmis (build 13) | Pelin kaupunkirajaus (web lauta.js:2676–2716 pelinKaupunkirajaus, pariteetti D15): kohdemaan kaupungit + oma kaupunki + nopan siirtokohteet + tarjotut lentokohteet; muut eivät näy eivätkä ole napautettavissa. null = ei rajausta (nappula reitillä, maailmatila, peli pois). Erillinen `NaytaVain`-suodattimesta (radio, aloitus): merkki näkyy, jos molemmat sallivat. Linssinimissä ei käytetä. Pelikoodari antaa joukon. |
+| `float osumaSade` | valmis (build 13) | 44 pt (web lauta.js:713 NAPAUTUKSEN_SADE_PX, lähin kohde säteellä); sama `Siirtokohdemerkit.osumaSade`. |
 
 ## 3. Reitit — `Reitit` (CesiumGeoreference-olio)
 
