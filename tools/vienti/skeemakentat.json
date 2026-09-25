@@ -4,12 +4,25 @@
   "1.16": "ee8f1651a9311fcd",
   "1.24": "a74682db468c1664",
   "1.25": "137506a64fb28b4d",
-  "1.26": "6ce8cb0b49deb75c"
+  "1.26": "6ce8cb0b49deb75c",
+  "1.27": "6ce8cb0b49deb75c",
+  "1.28": "f06631f1168799e5",
+  "1.29": "5333684225d7cb2b",
+  "1.30": "4eacd12cb5266253",
+  "1.31": "a7e1d2be199a1a5e",
+  "1.32": "39f6e79314ed0da5",
+  "1.33": "081f5d7fd7c62ab5",
+  "1.34": "081f5d7fd7c62ab5",
+  "1.35": "7a7178d9759be893",
+  "1.36": "da7f54e6ae671424",
+  "1.37": "1f3dae321dc1fa92",
+  "1.38": "8ecfeec7eec821e1"
  },
  "uusin": {
-  "skeemaversio": "1.26",
+  "skeemaversio": "1.38",
   "kokoelmat": {
    "aanitaulut": [
+    "ampari",
     "data",
     "id",
     "juuri",
@@ -20,17 +33,41 @@
     "kuvaus",
     "lahde",
     "laji",
+    "laskuMs",
     "lisenssi",
     "naytte",
     "nimi",
+    "nousuMs",
+    "oma",
     "paikka",
     "porras",
+    "ryhma",
     "synteesi",
     "tekija",
     "tunnus",
     "tyyppi",
     "url",
-    "vakio"
+    "vakio",
+    "voima"
+   ],
+   "aluenimet": [
+    "/aineistoversio",
+    "/fontti",
+    "/tyylit",
+    "id",
+    "iso",
+    "koko_arkki",
+    "korkeus_m",
+    "kulma",
+    "lat",
+    "lon",
+    "luokka",
+    "muste",
+    "paikat",
+    "pallotasot",
+    "tasot",
+    "teksti",
+    "tyyli"
    ],
    "elaintayt": [
     "data",
@@ -53,18 +90,46 @@
     "id"
    ],
    "fokusvirrat": [
+    "aarremerkinta",
     "data",
     "id",
     "kaupunki",
+    "kohtaaminen",
     "kohtaamispiste",
+    "kohteet",
     "lehtitehtavat",
+    "matkakirja",
+    "oppitunti",
+    "pollo",
     "sahketehtava",
+    "takynostot",
+    "takyt",
+    "valinta",
     "virta"
    ],
    "historianHetket": [
+    "aihe",
     "data",
     "id",
-    "maa"
+    "iso",
+    "kartalla",
+    "kartanUlkopuolella",
+    "kartanUlkopuolellaSyy",
+    "kattoVapaa",
+    "kuvat",
+    "kuvaversio",
+    "lat",
+    "lehti",
+    "lehtiJohdanto",
+    "lehtiTehtava",
+    "lon",
+    "maa",
+    "nimio",
+    "otsikko",
+    "paikka",
+    "paivays",
+    "teksti",
+    "visa"
    ],
    "julisteet": [
     "data",
@@ -109,6 +174,11 @@
    ],
    "kaupungit": [
     "aloitus",
+    "ambienssi",
+    "asukkaat",
+    "asukkaatAlue",
+    "asukkaatLahde",
+    "asukkaatVuosi",
     "data",
     "id",
     "intro",
@@ -122,10 +192,12 @@
     "maa2",
     "manner",
     "nimi",
+    "nimionAnkkuri",
     "saari",
     "sijaintiLahde",
     "tarkeys",
-    "tyyppi"
+    "tyyppi",
+    "wiki"
    ],
    "kaupunkilehdet": [
     "aiheet",
@@ -181,12 +253,15 @@
     "hahmo",
     "hetki",
     "id",
+    "kansio",
+    "kaupunginNimi",
     "kaupunki",
     "kaytto",
     "kohde",
     "kuvateksti",
     "lyhyt",
     "maa",
+    "tiedosto",
     "tila",
     "url",
     "vihje"
@@ -244,12 +319,30 @@
     "visa"
    ],
    "linssiaineisto": [
+    "aste",
     "data",
+    "humina",
     "id",
+    "ihmisen-matka",
+    "juoksut",
+    "juuri",
+    "keksinnot",
+    "korkeus",
     "kuvaus",
+    "kynnykset",
+    "lahde",
     "laji",
+    "leveys",
     "linssi",
-    "muoto"
+    "manifesti",
+    "muoto",
+    "musiikki",
+    "musiikkiKaytossa",
+    "optikonHyvitys",
+    "peitot",
+    "perus",
+    "url",
+    "webKynnykset"
    ],
    "lippumaat": [
     "id",
@@ -329,10 +422,13 @@
     "maa",
     "sivut"
    ],
+   "maamerkit": [],
    "maarajat": [
     "bbox",
     "id",
     "iso2",
+    "kokoBbox",
+    "muutRenkaat",
     "renkaat"
    ],
    "maastonimet": [
@@ -346,6 +442,7 @@
    ],
    "maat": [
     "aiheet",
+    "fokuspohja",
     "id",
     "intro",
     "iso2",
@@ -365,6 +462,18 @@
     "vanhaAani",
     "wiki"
    ],
+   "merinimet": [
+    "/tyyli",
+    "id",
+    "kaari",
+    "kulma",
+    "lahde",
+    "lat",
+    "lisenssi",
+    "lon",
+    "nimi",
+    "tasot"
+   ],
    "miniatyyrit": [
     "data",
     "id",
@@ -375,7 +484,16 @@
    "monumentit": [
     "data",
     "id",
-    "maa"
+    "ihme",
+    "kysymykset",
+    "lahde",
+    "lahi",
+    "laudat",
+    "maa",
+    "nappi",
+    "nimi",
+    "teksti",
+    "tyyppi"
    ],
    "muutosloki-natiivi": [
     "id",
@@ -415,6 +533,7 @@
     "wiki"
    ],
    "pulmaaineisto": [
+    "aineisto",
     "data",
     "id",
     "pulma",
@@ -463,6 +582,7 @@
     "data",
     "id",
     "laji",
+    "maksu",
     "via"
    ],
    "saannot": [
@@ -532,7 +652,20 @@
    "skandaalit": [
     "data",
     "id",
-    "maa"
+    "kattoVapaa",
+    "kortti",
+    "kuva",
+    "kuvat",
+    "lahde",
+    "lat",
+    "lon",
+    "maa",
+    "nimio",
+    "otsikko",
+    "paikka",
+    "teksti",
+    "visa",
+    "vuosi"
    ],
    "takynostot": [
     "aani",
@@ -570,7 +703,9 @@
    "tapahtumat": [
     "data",
     "id",
-    "lauta"
+    "lauta",
+    "teksti",
+    "vaikutus"
    ],
    "tarinakaari": [
     "aarre",
@@ -579,14 +714,28 @@
     "id",
     "kaupunki",
     "kohtaaminen",
+    "kuva",
     "kysymys",
+    "lauta",
     "muotokuva",
     "mykistetyt",
     "nimi",
     "otsikko",
     "saapuminen",
+    "saapumisLuenta",
     "tunneAarre",
     "tunneKohtaaminen"
+   ],
+   "tyohuonetilastot": [
+    "/sarakkeet",
+    "id",
+    "kaikki",
+    "kaupunkeja",
+    "maat",
+    "nimi",
+    "osuus",
+    "summa",
+    "tehty"
    ]
   },
   "manifest": [

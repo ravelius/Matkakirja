@@ -1,0 +1,147 @@
+{
+  "versio": 2,
+  "kaupunki": null,
+  "luenta": "intro",
+  "teksti": "Vintiltä löytyi isoisän matkalaukku ja kulunut matkakirja. Juokset sisälle terminaaliin ja olet varma, että ukko oli löytänyt jotain. Mutta kuka on repinyt kirjasta viimeisen sivun?",
+  "tekstiSha256": "84309fe403f521fb3823194cd8751cdc0eb55f4c6fa41d8708580a589b6e2d51",
+  "aani": {
+    "nimi": "intro-puhe.mp3",
+    "versio": 2,
+    "tavut": 298048,
+    "sha256": "c0cd5687d5d3542e7e9cfa6dcedc289a81d2696d34f0cfbb56bb7993921731af"
+  },
+  "kesto": 15040,
+  "sanat": [
+    {
+      "sana": "Vintiltä",
+      "alku": 200,
+      "loppu": 640
+    },
+    {
+      "sana": "löytyi",
+      "alku": 680,
+      "loppu": 1060
+    },
+    {
+      "sana": "isoisän",
+      "alku": 1140,
+      "loppu": 1620
+    },
+    {
+      "sana": "matkalaukku",
+      "alku": 1660,
+      "loppu": 2380
+    },
+    {
+      "sana": "ja",
+      "alku": 2720,
+      "loppu": 2780
+    },
+    {
+      "sana": "kulunut",
+      "alku": 2880,
+      "loppu": 3280
+    },
+    {
+      "sana": "matkakirja",
+      "alku": 3340,
+      "loppu": 4100
+    },
+    {
+      "sana": "Juokset",
+      "alku": 5920,
+      "loppu": 6260
+    },
+    {
+      "sana": "sisälle",
+      "alku": 6300,
+      "loppu": 6600
+    },
+    {
+      "sana": "terminaaliin",
+      "alku": 6700,
+      "loppu": 7460
+    },
+    {
+      "sana": "ja",
+      "alku": 7620,
+      "loppu": 7680
+    },
+    {
+      "sana": "olet",
+      "alku": 7700,
+      "loppu": 7920
+    },
+    {
+      "sana": "varma",
+      "alku": 7960,
+      "loppu": 8300
+    },
+    {
+      "sana": "että",
+      "alku": 8380,
+      "loppu": 8600
+    },
+    {
+      "sana": "ukko",
+      "alku": 8680,
+      "loppu": 9000
+    },
+    {
+      "sana": "oli",
+      "alku": 9060,
+      "loppu": 9200
+    },
+    {
+      "sana": "löytänyt",
+      "alku": 9240,
+      "loppu": 9700
+    },
+    {
+      "sana": "jotain",
+      "alku": 9740,
+      "loppu": 10160
+    },
+    {
+      "sana": "Mutta",
+      "alku": 11880,
+      "loppu": 12120
+    },
+    {
+      "sana": "kuka",
+      "alku": 12260,
+      "loppu": 12580
+    },
+    {
+      "sana": "on",
+      "alku": 12640,
+      "loppu": 12760
+    },
+    {
+      "sana": "repinyt",
+      "alku": 12840,
+      "loppu": 13300
+    },
+    {
+      "sana": "kirjasta",
+      "alku": 13360,
+      "loppu": 13920
+    },
+    {
+      "sana": "viimeisen",
+      "alku": 13980,
+      "loppu": 14540
+    },
+    {
+      "sana": "sivun",
+      "alku": 14660,
+      "loppu": 15040
+    }
+  ],
+  "lauseet": [
+    200,
+    5920,
+    11880
+  ],
+  "luotu": "2026-09-24T09:16:03.795Z"
+}

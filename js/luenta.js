@@ -563,6 +563,21 @@ export function soivaPuhuja(paitsi = null) {
 }
 
 /**
+ * PUHEEN KELLO: soivien luentojen toistokohtien summa sekunteina.
+ *
+ * Luentavahti (js/ui.js kaynnistaLuentavahti) vertaa tätä edelliseen
+ * kyselyyn: muuttunut summa = puhe etenee. Varaventtiili aukeaa vain,
+ * jos summa seisoo 30 sekuntia kerronnan aikana (löydös 45).
+ */
+export function puheenKello() {
+  let summa = 0;
+  for (const [audio] of soivatLuennat) {
+    if (!audio.puhevuoroPaattyi) summa += Number(audio.currentTime) || 0;
+  }
+  return summa;
+}
+
+/**
  * KUKA ON ÄÄNESSÄ JUURI NYT — tai null, jos vuoro on vapaa.
  *
  * "Äänessä" tarkoittaa varattua vuoroa, ei pelkkää soivaa signaalia:

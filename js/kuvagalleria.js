@@ -102,6 +102,7 @@
  */
 
 import { html } from './ui-apurit.js';
+import { lisenssiKelpaa } from './lisenssi.js';
 
 /** Enintään näin monta kuvaa yhdestä lähteestä. */
 export const KUVIA_LAHTEESTA = 24;
@@ -153,26 +154,8 @@ export const POIS_JATETYT = [
 
 /* ── Lisenssit ja koko ──────────────────────────────────────────── */
 
-/**
- * Kelpaako lisenssitunnus? Sallittu: PD, CC0, CC BY, CC BY-SA.
- * Kielletty kaikki muu — erityisesti NC (ei-kaupallinen) ja ND (ei
- * muokkauksia), jotka tarkistetaan ENSIN, koska ne esiintyvät juuri
- * sallitun etuliitteen "cc-by" perässä ("cc-by-nc-sa-3.0").
- *
- * Tunnus tulee Commonsilta muodossa "cc-by-sa-4.0", "cc0" tai "pd-old",
- * Openverselta muodossa "by", "by-sa", "cc0", "pdm" (normalisoidaan
- * openversenLisenssi-funktiossa) ja museoilta suoraan "cc0" / "pd".
- */
-export function lisenssiKelpaa(tunnus) {
-  const t = String(tunnus ?? '').toLowerCase().trim().replace(/\s+/g, '-');
-  if (!t) return false;
-  // NC ja ND ensin: ne mitätöivät minkä tahansa muun osuman.
-  if (/(^|[-_,])(nc|nd)([-_,]|\d|$)/.test(t)) return false;
-  if (/noncommercial|non-commercial|no-?deriv/.test(t)) return false;
-  if (/^(cc0|cc-zero)/.test(t)) return true;
-  if (/^(pd|pdm|public-?domain)/.test(t)) return true;
-  return /^cc-by(-sa)?([-,]|$)/.test(t);
-}
+// Lisenssiportti asuu js/lisenssi.js:ssä (sama kuville ja äänille, 23.9.2026).
+export { lisenssiKelpaa };
 
 /** Openversen lyhenne pelin sisäiseen muotoon ("by-sa" → "cc-by-sa"). */
 export function openversenLisenssi(tunnus) {

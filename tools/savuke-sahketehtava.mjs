@@ -63,6 +63,13 @@
  *  20. PUOLIKAS PULLA AVAA OIKEAN PINNAN: Sofiassa kartan kohdekortin,
  *      Tukholmassa kaupunkilehden sivun, jolta vastaus luetaan.
  *
+ * PULLATARJOUS (omistaja 23.9.2026): ratkaistun aarteen avauksen alle ei
+ * jää ostettavaa pullaa (kummallekin kaupungille).
+ *
+ * LENNON AIKANA LÄHTENYT (omistaja 23.9.2026) lisää kolme väitettä:
+ * poissa ollessa laatta ei käänny, paluu jää odottamaan, ja palattua
+ * pisteen napautus tuo aarteen.
+ *
  * SOFIALLA ON YKSI VÄITE LISÄÄ: Nadian kohtaaminen on yhä datassa,
  * vaikka sähke voittaa sen kortilla. Se on omistajan pilottiehto —
  * palautus on yksi rivi vain, jos data on tallessa.
@@ -370,8 +377,10 @@ for (const kaupunki of KAUPUNGIT) {
       const napit = [...document.querySelectorAll('#arrival-dialog .kulttuuri-vaihtoehdot button')];
       const oikea = napit.find((b) => new RegExp(vastaus, 'i').test(b.textContent));
       if (!oikea) return { virhe: napit.map((b) => b.textContent) };
+      const pullaEnnen = document.querySelectorAll('#arrival-dialog .fokus-pulla-aarre .fokus-pulla-nappi').length;
       oikea.click();
       await new Promise((r) => setTimeout(r, 700));
+      const pullaJalkeen = document.querySelectorAll('#arrival-dialog .fokus-pulla-aarre .fokus-pulla-nappi').length;
       document.getElementById('arrival-dialog')?.close();
       ui.render();
       await new Promise((r) => setTimeout(r, 700));
@@ -379,8 +388,14 @@ for (const kaupunki of KAUPUNGIT) {
       return {
         pisteita: document.querySelectorAll('.fokuspiste').length,
         nimi: piste?.getAttribute('aria-label') ?? '',
+        pullaEnnen,
+        pullaJalkeen,
       };
     }, kaupunki.aarreVastaus.source);
+    // Omistaja 23.9.2026: ratkaistun aarretehtävän alle ei jää ostettavaa pullaa.
+    vaadi(`${kaupunki.nimi}: pullatarjous katoaa, kun aarteen avaus ratkeaa`,
+      aarre.pullaJalkeen === 0,
+      JSON.stringify({ ennen: aarre.pullaEnnen, jalkeen: aarre.pullaJalkeen }));
     vaadi(`${kaupunki.nimi}: AARTEEN AVAUS sytyttää vihreän pisteen`,
       aarre.pisteita >= 1, JSON.stringify(aarre));
     vaadi(`${kaupunki.nimi}: pisteen lappu kertoo sähkeestä eikä tapaamisesta`,
@@ -881,6 +896,91 @@ for (const kaupunki of KAUPUNGIT) {
 
   await sivu.screenshot({ path: join(ULOS, `savuke-sahke-${kaupunki.id}-aarre.png`) });
 
+}
+
+/*
+ * LENNON AIKANA LÄHTENYT SAA AARTEEN (omistaja 23.9.2026, sama kuin
+ * natiivissa). Oikean vastauksen jälkeen pelaaja lähtee kaupungista
+ * ennen kuin Livia palaa: laatta ei käänny poissa ollessa, mutta kun
+ * pelaaja palaa ja napauttaa pisteen, Livia tuo aarteen heti eikä vasta
+ * uudessa istunnossa.
+ */
+{
+  const k = KAUPUNGIT[0];
+  const muu = KAUPUNGIT[1].id;
+  console.log(`\n===== ${k.nimi}: lähtö lennon aikana`);
+  const avattu = await sivu.evaluate(async ([id, kortit]) => {
+    const { game, ui } = window.matkakirja;
+    // Edellisen kaupungin aarteen paljastus loppuun kuten pelaaja: "Jatka matkaa".
+    for (let i = 0; i < 40 && ui.busy; i += 1) {
+      [...document.querySelectorAll('.reveal-jatka, dialog[open] button')]
+        .find((b) => /jatka matkaa/i.test(b.textContent))?.click();
+      await new Promise((r) => setTimeout(r, 250));
+    }
+    // Pääsilmukka poistaa paljastuksen peitteen käsin (.reveal-overlay),
+    // jolloin ui.busy jää päälle; pelaajalla näin ei käy.
+    ui.busy = false;
+    game.player.pos = { type: 'city', city: id };
+    game.phase = 'action';
+    game.world.tokens.set(id, 'pieniAarre');
+    ui.sahkeVastattu?.clear();
+    ui.sahkeOhi?.clear();
+    ui.render();
+    await new Promise((r) => setTimeout(r, 800));
+    window.matkakirjaPollo?.tyhjennaPino();
+    // Edellisen kaupungin aarteen paljastus ja dialogit pois tieltä.
+    document.querySelector('.reveal-overlay')?.remove();
+    for (const d of document.querySelectorAll('dialog[open]')) d.close();
+    // Sama kutsu kuin vihreän pisteen napautus (avaaFokusKohtaaminen).
+    const fv = await import('/js/fokusvirta.js');
+    if (!kortit) fv.avaaFokusKohtaaminen(ui, game.cityOf());
+    else fv.avaaFokusvirta(ui, game.cityOf());
+    await new Promise((r) => setTimeout(r, 600));
+    return { lomake: Boolean(document.querySelector('.fokusvirta-sahkelomake')), busy: Boolean(ui.busy) };
+  }, [k.id, KORTIT]);
+  vaadi(`${k.nimi}: sähkekortti aukeaa uudelleen`, avattu.lomake === true && avattu.busy === false, JSON.stringify(avattu));
+
+  const lahti = await sivu.evaluate(async ([id, muuId, kohde, vuosi]) => {
+    const { game, ui } = window.matkakirja;
+    const kortti = document.querySelector('.fokusvirta-kortti');
+    kortti.querySelector('.fokusvirta-sahkevalinta').value = kohde;
+    kortti.querySelector('.fokusvirta-sahkeluku').value = String(vuosi);
+    [...kortti.querySelectorAll('button')].find((b) => /lähetä sähke/i.test(b.textContent))?.click();
+    await new Promise((r) => setTimeout(r, 300));
+    [...document.querySelectorAll('.fokusvirta-kortti button')]
+      .find((b) => /livian/i.test(b.textContent))?.click();
+    // Pelaaja lähtee ennen Livian paluuta.
+    game.player.pos = { type: 'city', city: muuId };
+    ui.render();
+    for (let i = 0; i < 100; i += 1) {
+      if (ui.sahkePaluuOdottaa?.size) break;
+      await new Promise((r) => setTimeout(r, 200));
+    }
+    return { odottaa: ui.sahkePaluuOdottaa?.size ?? 0, laatta: game.tokens.has(id) };
+  }, [k.id, muu, k.kohde, k.vuosi]);
+  vaadi(`${k.nimi}: poissa ollessa laatta ei käänny ja paluu jää odottamaan`,
+    lahti.odottaa === 1 && lahti.laatta === true, JSON.stringify(lahti));
+
+  const palasi = await sivu.evaluate(async (id) => {
+    const { game, ui } = window.matkakirja;
+    game.player.pos = { type: 'city', city: id };
+    ui.render();
+    await new Promise((r) => setTimeout(r, 400));
+    const fv = await import('/js/fokusvirta.js');
+    const avasi = fv.avaaFokusKohtaaminen(ui, game.cityOf());
+    for (let i = 0; i < 80; i += 1) {
+      if (!game.tokens.has(id)) break;
+      await new Promise((r) => setTimeout(r, 250));
+    }
+    return { avasi, laatta: game.tokens.has(id), odottaa: ui.sahkePaluuOdottaa?.size ?? 0, vaihe: game.phase, busy: Boolean(ui.busy), dead: Boolean(ui.dead), kupla: document.querySelector(".fokusvirta-vinkki")?.textContent?.slice(0, 60) ?? null };
+  }, k.id);
+  vaadi(`${k.nimi}: palattua pisteen napautus tuo aarteen`,
+    palasi.avasi === true && palasi.laatta === false && palasi.odottaa === 0, JSON.stringify(palasi));
+  await sivu.evaluate(() => {
+    document.querySelector('.reveal-overlay')?.remove();
+    for (const d of document.querySelectorAll('dialog[open]')) d.close();
+    window.matkakirja.ui.render();
+  });
 }
 
 /*

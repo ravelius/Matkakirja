@@ -3560,6 +3560,14 @@ Fable: Raamatun NATIIVIN iPHONE-ASETTELU päivitetty (Liiku läpinäkyvä; kuvie
 
 Fable: toteutus vasta pariteetin ja build 6 -kokeilun jälkeen (Raamattu MAAPALLON TILA). Artefaktiversio päivitetään Julkaisijan tilillä PR:n mergen jälkeen.
 
+
+## TILA: Natiiviseppä luovutus 24.9. ilta (24.9.2026 klo 15.55)
+
+Natiiviseppä luovutti klo 15.54 (konteksti 70 %): proto-master 9a5618b = build 9 viennissä; build 10 -jono ja WEB ON MALLI -merge-portti: docs/raportit/viesti-natiiviseppa-luovutus-20260924-ilta.md.
+
+## TILA: Julkaisijan luovutus 24.9. ilta (24.9.2026 klo 19.32)
+
+Julkaisija luovutti klo 19.3x: TestFlight buildit 6–10 sisäisessä ryhmässä (build 10 = 202609241607, proto b9755e9); build 11:stä versio 1.0.<ordinaali> (#3107), vienti -nographics (#3071), Unity-tarkistus omalle käyttäjälle (#3110), ei hakulistan vaihtoa; web-jono ja savukeuusinnat kesken: docs/raportit/viesti-julkaisija-luovutus-20260924-ilta.md.
 ## OMISTAJA klo 11.2x (SITOVA, BUILD 5 -LOYDOS 20, iPHONEN YLAREUNA UUSIKSI): VASEMMALLA ISLANDIN VIERESSA MATKALAUKKURYHMA — KAKSI SAMANLEVYISTA PILLERIA PAALLEKKAIN SAMASSA TYYLISSA: YLHAALLA '300£ · 1/80', ALLA PELKKA KAUPUNGIN NIMI (SULJETTU MATKAKIRJA TYPISTETTY NIMEN LEVYISEKSI, PITKA NIMI LYHENNETAAN); MOLEMMAT AVAAVAT MATKALAUKUN ERI VALILEHTEEN; OIKEALLA HAMPURILAINEN JA KARTTANAPPI VIEREKKAIN ISLANDIN RIVILLA, EI MUUTA — HAMPURILAINEN AVAA NYKYISEN LINSSIVALIKON SAMASSA TEEMASSA, SILMALASINAPPI POISTUU, VALIKON YLAKAISTA MAHDOLLISIMMAN MATALA JOTTA LINSSIT SAAVAT KOKO TILAN; HAMMASRATAS EI YLAREUNAAN VAAN HAMPURILAISVALIKON VIIMEISEKSI RIVIKSI 'Kehittäjä' (VAIN KEHITTAJATILASSA; APP STORE JA TESTFLIGHT NAYTTAVAT YLHAALTA SAMALTA) → NATIIVI-UI, BUILD 6; WEB ENNALLAAN (24.9.2026 klo 11.25)
 
 Omistaja valitsi Fablen ehdotuksen kortilla. Kumoaa löydöksen 5 kohdan 'oikeassa vain hampurilainen (kehittäjätilassa lisäksi hammasratas)'.

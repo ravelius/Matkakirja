@@ -14081,7 +14081,7 @@ export const MAA_KATEGORIAT = {
         {
           otsikko: 'Kaksi viikkoa jolloin tunturi syttyy tuleen',
           aika: 'syyskuu',
-          tiedosto: 'Vatikuru nature trail in Pallas-Yllastunturi National Park, Muonio, Lapland, Finland, 2021 September.jpg',
+          tiedosto: 'Vatikuru nature trail in Pallas-Yllästunturi National Park, Muonio, Lapland, Finland, 2021 September.jpg',
           teksti: 'Ruska on lyhyt, muutaman viikon mittainen ajanjakso syyskuun alussa, '
             + 'jolloin Lapin tunturikoivikot ja -kanervikot värjäytyvät nopeasti '
             + 'keltaisiksi, oransseiksi ja tulipunaisiksi ennen lehtien putoamista. Ilmiö '
@@ -60677,5 +60677,1841 @@ export const MAA_KATEGORIAT = {
       ],
     },
   ],
-};
+  BMU: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Heinäkuussa 1609 hirmumyrsky ajoi englantilaisen laivueen lippulaivan riutalle keskellä Atlanttia. Vahingosta syntyi siirtokunta, joka elää yhä, ja saarelle kasvoi oma parlamentti ja vuosisatoja kestänyt laivastohistoria.',
+      tehtava: {
+        kysymys: 'Minä vuonna laiva Sea Venture ajettiin tarkoituksella Bermudan riutalle myrskyn runtelemana?',
+        vaihtoehdot: ['1609', '1620', '1707', '1814'],
+        oikea: 0,
+        fakta: 'Amiraali George Somers ajoi Sea Venturen Bermudan riutalle 28. heinäkuuta 1609, ja kaikki noin 150 matkustajaa selvisivät hengissä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Haaksirikko joka pelasti matkustajat',
+          aika: '1609',
+          tiedosto: 'Wreck of the Sea Venture.png',
+          teksti: 'Kesäkuussa 1609 yhdeksän laivan saattue lähti Lontoosta viemään siirtolaisia ja tarvikkeita nääntyvään Jamestowniin. Heinäkuun lopulla saattue ajautui hirmumyrskyyn, ja lippulaiva Sea Venture alkoi vuotaa niin pahasti, että ruuma täyttyi lähes yhdeksän jalan syvyyteen vedellä. Amiraali George Somers ajoi aamulla 28. heinäkuuta aluksen tarkoituksella Bermudan riutalle upottamisen sijaan. Kaikki noin 150 matkustajaa ja miehistöä selvisivät hengissä ja kahlasivat rannalle – harvinaista onnea ajan haaksirikoissa. Selviytyjän William Stracheyn kertomus myrskystä innoitti luultavasti myös Shakespearen näytelmää Myrsky vuonna 1611.',
+          lyhyt: 'Sea Venturen haaksirikko Bermudan riutalla toi englantilaiset saarelle ja innoitti Shakespearea.',
+          selite: 'Piirros Sea Venturen haaksirikosta Bermudan Gates Bayn edustalla vuonna 1609, julkaistu vuoden 1896 nuorisokirjassa.',
+          lahde: 'Dabney Herndon Maury (1896), Wikimedia Commons (PD)',
+          wiki: 'Sea Venture',
+        },
+        {
+          otsikko: 'Uudet laivat hylyn jäänteistä',
+          aika: '1610',
+          tiedosto: 'Replica of ship Deliverance Bermuda 2009.jpg',
+          teksti: 'Haaksirikkoutuneet eivät jääneet Bermudalle pysyvästi, vaan alkoivat heti rakentaa kahta uutta alusta bermudansypressistä ja Sea Venturen pelastetuista osista. Suurempi Deliverance oli noin 12-metrinen ja pienempi Patience noin 9-metrinen. Toukokuun 10. päivänä 1610 suurin osa matkalaisista purjehti kohti Jamestownia ja saapui perille 8. kesäkuuta – juuri ajoissa pelastamaan nälänhädän partaalla olleen siirtokunnan. Kaksi miestä jätettiin saarelle vahtimaan Englannin oikeutta alueeseen, ja pian heille liittyi kolmas. Heistä tuli Bermudan ensimmäiset pysyvät asukkaat, kolme vuotta ennen siirtokunnan virallista perustamista.',
+          lyhyt: 'Haaksirikkoutuneiden rakentamat laivat veivät suurimman osan matkalaisista Jamestowniin 1610.',
+          selite: 'Nykyaikainen jäljennös laivasta Deliverance St. Georgen satamassa Bermudalla vuonna 2009.',
+          lahde: 'Robyn Fleming, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Sea Venture',
+        },
+        {
+          otsikko: 'Kivitalo ja pippurinsiemenen vuokra',
+          aika: '1620',
+          tiedosto: 'State House- 1620 - St Geo - Bermuda.jpg',
+          teksti: 'State House valmistui St. Georgeen vuonna 1620, ja siitä tuli Bermudan ensimmäinen kivirakennus linnoitusten jälkeen. Samana vuonna kokoontui saaren ensimmäinen parlamentti, joka on istunut siitä lähtien lähes yhtäjaksoisesti – yksi maailman vanhimmista edelleen toimivista lainsäädäntöelimistä. Parlamentti käytti rakennusta istuntosalinaan vuoteen 1815 asti, jolloin pääkaupunki siirrettiin Hamiltoniin. Sen jälkeen talo vuokrattiin vapaamuurareille yhden pippurinsiemenen vuosivuokralla, ja huhtikuussa vietetään yhä Peppercorn-seremoniaa: vapaamuurarit ojentavat kuvernöörille pippurinsiemenen samettityynyllä kunniakaartin ja tykinlaukausten säestyksellä.',
+          lyhyt: 'St. Georgen State House vuodelta 1620 vuokrataan yhä yhden pippurinsiemenen vuosivuokralla.',
+          selite: 'State House St. Georgessa Bermudalla, saaren ensimmäinen kivirakennus ja parlamentin ensimmäinen kotipaikka vuodesta 1620.',
+          lahde: 'Seán Pòl Ó Creachmhaoil (Aodhdubh), Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'State House, Bermuda',
+        },
+        {
+          otsikko: 'Linnoitussaari keskellä valtamerta',
+          aika: '1930-luku',
+          tiedosto: "Naval and military parade in King's Square, St. George's Town, in the British Imperial Fortress colony of Bermuda in the 1930s.jpg",
+          teksti: 'Kun Britannia menetti tukikohtansa Yhdysvaltain itsenäistyttyä, se tarvitsi uuden aseman läntiselle Atlantille. 1790-luvulla Bermudalle alkoi rakentua laivastotukikohta, ja saaresta tuli virallisesti "Imperial Fortress" – linnoitussiirtokunta, jota puolustivat sekä laivasto että maavoimat. Kuninkaallinen laivasto piti Bermudaa Länsi-Atlantin päätukikohtanaan aina 1950-luvulle asti, ja tukikohdasta käsin lähti muun muassa hyökkäys Washingtoniin vuonna 1814. Kuvassa laivaston ja armeijan paraati St. Georgen King\'s Squarella 1930-luvulla, taustalla kaupungintalo, jonka yläkerrassa oli ensimmäisen maailmansodan kaatuneiden muistomerkki.',
+          lyhyt: "Laivaston ja armeijan paraati St. Georgen King's Squarella 1930-luvulla.",
+          selite: "Kuninkaallisen laivaston ja armeijan paraati King's Squarella St. Georgessa 1930-luvulla, taustalla kaupungintalo.",
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+          wiki: 'Bermuda Garrison',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Bermuda tunnetaan mainemyytistä nimeltä Bermudan kolmio, mutta saariston oikea luonto on vielä kiinnostavampi: vaaleanpunaista hiekkaa, sukupuuttoon luultu lintu ja puu, joka melkein hävisi kokonaan yhdessä vuosikymmenessä.',
+      tehtava: {
+        kysymys: 'Minä vuonna luultu sukupuuttoon kuollut bermudanviistäjä löytyi uudelleen?',
+        vaihtoehdot: ['1906', '1951', '1975', '2003'],
+        oikea: 1,
+        fakta: 'Tutkijat löysivät 18 pesivää bermudanviistäjäparia vuonna 1951, kolme vuosisataa sen jälkeen kun laji luultiin hävinneen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kolmio joka ei ole niin salaperäinen',
+          aika: '1945–1970-luku',
+          tiedosto: 'Bermuda Triangle (clear).svg',
+          teksti: 'Joulukuussa 1945 viisi Yhdysvaltain laivaston pommikonetta katosi harjoituslennolla Bermudan, Floridan ja Puerto Ricon rajaamalta merialueelta, eikä niistä tai etsintään lähteneestä pelastuskoneesta löytynyt koskaan jälkeäkään. Tapaus ruokki 1950–70-lukujen lehtijuttuja ja kirjoja, jotka nivoivat yhteen kymmeniä erillisiä onnettomuuksia "Bermudan kolmioksi". Yhdysvaltain merivoimien mukaan alueella ei kuitenkaan katoa aluksia sen enempää kuin muillakaan vilkkailla ja myrskyisillä merialueilla – tilastot vain koottiin näyttävästi yhteen. Osa kadonneista selittyy hirmumyrskyillä, ihmisen virheillä ja Golfvirran oikuilla, ei yliluonnollisilla voimilla.',
+          lyhyt: 'Bermudan kolmio sai maineensa 1945 kadonneesta lentueesta, vaikka tilastot eivät tue mysteeriä.',
+          selite: 'Kartta Bermudan kolmiosta, merialueesta jonka kärjet ovat Bermuda, Florida ja Puerto Rico.',
+          lahde: 'Arz, Wikimedia Commons (PD)',
+          wiki: 'Bermudan kolmio',
+        },
+        {
+          otsikko: 'Lintu joka luultiin kuolleen sukupuuttoon',
+          aika: '1951',
+          tiedosto: 'Cahowchick.jpg',
+          teksti: 'Kun ensimmäiset siirtolaiset saapuivat 1600-luvulla, bermudanviistäjiä eli cahow-lintuja pesi saaristossa arviolta puoli miljoonaa paria. Siirtolaiset ja heidän mukanaan tulleet siat ja rotat söivät munia ja poikasia niin ahnaasti, että laji luultiin kuolleeksi jo 1620-luvulla. Vuonna 1951 tutkijat löysivät saariston ulkoluodoilta yllättäen 18 pesivää paria – yksi tunnetuimmista "Lasarus-lajeista", jotka löytyvät hengissä kuolleeksi julistamisen jälkeen. Sitkeä suojelutyö, muun muassa keinopesät ja rotanpyynti pesimäluodoilla, on kasvattanut kannan yli 150 pariin. Kuvassa suojelija Jeremy Madeiros Nonsuch-saarella cahow-poikasen kanssa 2009.',
+          lyhyt: 'Bermudanviistäjä luultiin sukupuuttoon kuolleeksi, kunnes se löytyi uudelleen vuonna 1951.',
+          selite: 'Cahow-poikanen ja Bermudan luonnonsuojelija Jeremy Madeiros Nonsuch-saarella huhtikuussa 2009.',
+          lahde: 'Depotgrl, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bermudanviistäjä',
+        },
+        {
+          otsikko: 'Hiekka joka on täynnä pieneliöitä',
+          aika: 'nykyään',
+          tiedosto: '00290 IMG 6291 037 Bermuda coral sand 32 mm.jpg',
+          teksti: 'Bermudan etelärannikon hiekka hohtaa vaaleanpunaisena, eikä syy ole väriaine vaan eliöt. Mikroskooppisen pieni yksisoluinen Homotrema rubrum elää koralliriutoilla ja rakentaa itselleen punaisen kalkkikuoren; kuorien jäänteet sekoittuvat valkoiseen korallihiekkaan ja värjäävät koko rannan. Mukana on myös murskaantuneita simpukankuoria ja piikkinahkaisten piikkejä. Lähikuvassa 32 millimetrin levyisestä hiekkanäytteestä erottuvat sekä vaaleanpunaiset foraminiferakuoret että vaaleat korallinsirpaleet. Ilmiö ei ole ainutlaatuinen Bermudalle, mutta harvassa paikassa vaaleanpunainen sävy on yhtä voimakas ja rannat siksi yhtä kuuluisia.',
+          lyhyt: 'Bermudan vaaleanpunainen hiekka syntyy pienen Homotrema rubrum -eliön punaisista kalkkikuorista.',
+          selite: 'Lähikuva 32 mm levyisestä Bermudan koralli- ja foraminiferahiekan näytteestä, jossa erottuu punaisia ja vaaleita jyväsiä.',
+          lahde: 'Siim Sepp / Sandatlas, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bermuda',
+        },
+        {
+          otsikko: 'Puu joka melkein hävisi kokonaan',
+          aika: '1946–1953',
+          tiedosto: 'Bermuda cedars (Juniperus bermudiana), living and dead, at Ferry Reach, Bermuda, 2011.jpg',
+          teksti: 'Bermudankataja oli saariston maisemaa hallinnut puulaji, jonka punertavasta puusta tehtiin laivoja, huonekaluja ja taloja. Toisen maailmansodan aikana tukikohtien rakentaminen toi saarelle vahingossa kaksi kilpikaskaslajia, jotka levisivät hallitsemattomasti. Vuosina 1946–1953 tuho, jota Bermudalla kutsutaan nimellä "The Blight", tappoi noin 95–99 prosenttia saariston katajista muutamassa vuodessa ja autioitti maiseman. Vain pieni osa puista osoittautui vastustuskykyiseksi, ja niiden jälkikasvu muodostaa nykyisen, noin kymmenesosan entisestä kannasta olevan populaation. Tuho vei mukanaan myös kaksi endeemistä kaskaslajia ja yhden mehiläislajin.',
+          lyhyt: 'Toisen maailmansodan jälkeen kilpikaskaset tappoivat lähes kaikki Bermudan endeemiset katajat.',
+          selite: 'Kaksi bermudankatajaa Ferry Reachilla Bermudalla vuonna 2011: vasemmanpuoleinen puu elää, oikeanpuoleinen kuoli tuhon uhrina.',
+          lahde: 'Seán Pòl Ó Creachmhaoil (Aodhdubh), Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bermudankataja',
+        },
+      ],
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Bermudan rakennusperintö on kalkkikiveä, portaikkokattoja ja yksi maailman poikkeuksellisimmista majakoista. Osa rakennuksista on säilynyt lähes muuttumattomana neljä vuosisataa, ja yksi seisoo yhä ilman kattoa.',
+      tehtava: {
+        kysymys: 'Mistä materiaalista Gibbs Hillin majakka rakennettiin vuonna 1846?',
+        vaihtoehdot: ['Graniitista', 'Valuraudasta', 'Tiilestä', 'Betonista'],
+        oikea: 1,
+        fakta: 'Teräs ei ollut vielä saatavilla, joten Gibbs Hillin majakka valettiin kokonaan valuraudasta Englannissa ja koottiin sen jälkeen Bermudalla.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kirkko joka jäi ikuisesti kesken',
+          aika: '1874–',
+          tiedosto: "At the Unfinished Church (St. George's Bermuda) (14498216216).jpg",
+          teksti: 'Vuonna 1874 St. Georgeen alettiin rakentaa uutta, 650 hengelle mitoitettua goottilaistyylistä kirkkoa arkkitehti William Hayn piirustusten mukaan. Sen piti korvata vanha St. Peter\'s Church, mutta hanke sai heti vastatuulta: seurakunta hajosi riidoissa, ja osa jäsenistä lähti perustamaan omaa kirkkoaan. Vuonna 1884 tulipalo tuhosi katedraalin Hamiltonissa, ja rahat suunnattiin sen jälleenrakennukseen St. Georgen kirkon sijaan. Työmaa jäi vaille kattoa ja hylättiin lopulta kokonaan, ja vuoden 1926 hirmumyrsky tuhosi vielä osan valmiista muureista. Kalkkikivinen kuori seisoo yhä Government Hillillä, ja siitä tuli suojeltu muistomerkki vuonna 1992.',
+          lyhyt: 'St. Georgen kesken jäänyt kirkko: rakentaminen alkoi 1874 mutta jäi ikuisesti ilman kattoa.',
+          selite: 'Kesken jääneen kirkon kalkkikiviset goottilaistyyliset muurit ja ikkuna-aukot St. Georgessa Bermudalla.',
+          lahde: 'John Hoey, Wikimedia Commons (CC BY 2.0)',
+          wiki: "Unfinished Church, St George's",
+        },
+        {
+          otsikko: 'Vanhin toimiva kirkko Brittein saarten ulkopuolella',
+          aika: '1612–',
+          tiedosto: "St. Peter's Church, Bermuda, Front.jpg",
+          teksti: 'St. Peter\'s Church perustettiin heti St. Georgen siirtokunnan synnyn jälkeen 1612, ja alun perin se oli olkikattoinen puurakennus, jossa myös Bermudan ensimmäinen parlamentti kokoontui 1620. Puinen kirkko tuhoutui pian, ja tilalle rakennettiin useita kertoja uusi, kunnes vuoden 1712 hirmumyrsky raunioitti sen lähes kokonaan. Nykyinen kalkkikivinen runko nousi 1713, osittain vanhoista raunioista, ja sisälle säilytettiin alkuperäinen puinen alttari. Kirkkoa pidetään vanhimpana yhä toiminnassa olevana anglikaanisena kirkkona Brittein saarten ulkopuolella, ja 400-vuotisjuhlan kunniaksi se sai 2012 arvonimen "Their Majesties Chappell".',
+          lyhyt: "St. Peter's Church on vanhin yhä toimiva anglikaaninen kirkko Brittein saarten ulkopuolella.",
+          selite: "St. Peter's Churchin julkisivu ja kellotorni St. Georgessa Bermudalla.",
+          lahde: 'JoeyBagODonuts, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: "St. Peter's Church, St. George's",
+        },
+        {
+          otsikko: 'Katto joka on myös vesisäiliö',
+          aika: 'nykyään',
+          tiedosto: 'Bermuda Number 162 roof which catches rainwater and leads to an underground tank.jpg',
+          teksti: 'Bermudalla ei ole yhtään pysyvää jokea, järveä tai lähdettä, joten koko saariston juomavesi on aina tullut sateesta. Ratkaisuksi kehittyi omaleimainen arkkitehtuuri: talojen katot muurataan kalkkikivestä portaittain ja valkaistaan kalkkimaalilla, joka samalla puhdistaa valuvaa vettä. Portaat hidastavat veden virtausta rankkasateella ja ohjaavat sen kouruja pitkin maanalaiseen säiliöön talon alle. Laki on vaatinut kattopintaa keräämään sadevettä jo vuosikymmenten ajan, ja järjestelmä toimii ilman yhdyskuntien vesijohtoverkkoja syöttäviä tekojärviä. Kuivina kausina osa talouksista joutuu silti tilaamaan lisävettä tankkiautolla.',
+          lyhyt: 'Bermudan valkoiset portaikkokatot keräävät sadeveden maanalaisiin säiliöihin juomavedeksi.',
+          selite: 'Lähikuva bermudalaistalon portaikkokatosta, joka ohjaa sadeveden maanalaiseen vesisäiliöön.',
+          lahde: 'Tomwsulcer, Wikimedia Commons (CC0)',
+          wiki: 'Bermuda',
+        },
+        {
+          otsikko: 'Valurautainen jättiläinen kukkulalla',
+          aika: '1846',
+          tiedosto: 'Gibbs Hill Lighthouse IMG 0296.jpg',
+          teksti: 'Bermudan riutat ulottuvat parhaimmillaan yli 25 kilometrin päähän rannikosta, ja 1800-luvun alussa ne veivät pohjaan kymmeniä laivoja. Ratkaisuksi Englannista tilattiin majakka, jonka osat valettiin Lambethissa Lontoossa ja laivattiin Bermudalle koottavaksi – teräs ei vielä ollut saatavilla, joten koko 34-metrinen runko tehtiin valuraudasta. Kuninkaalliset pioneerit pystyttivät majakan Gibbsin kukkulalle, ja se syttyi ensi kertaa 1. toukokuuta 1846. Se on yksi maailman vanhimmista säilyneistä valurautamajakoista, ja sen valo näkyy parhaimmillaan yli 60 kilometrin päähän merelle sekä ilma-aluksiin vielä kauempaa.',
+          lyhyt: 'Gibbs Hillin majakan valkoinen torni kohoaa puiden yläpuolelle Bermudan kukkulalla.',
+          selite: 'Gibbs Hillin valkoiseksi maalattu valurautainen majakkatorni erottuu kaukaa palmujen ja muun kasvillisuuden keskeltä Southamptonin seurakunnassa Bermudalla.',
+          lahde: 'Captain-tucker, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Gibbs Hill Lighthouse',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Bermudan arjessa polvisukat ja shortsit kelpaavat pankkiin, autoja saa olla vain yksi per talous, ja hääparit kävelevät onnea toivoen kivikaaren läpi. Pieni saari on kehittänyt hyvin omaleimaiset tapansa.',
+      tehtava: {
+        kysymys: 'Mihin asti Bermudalla ei sallittu lainkaan yksityisiä moottoriajoneuvoja?',
+        vaihtoehdot: ['1900', '1920', '1946', '1960'],
+        oikea: 2,
+        fakta: 'Moottoriajoneuvot sallittiin Bermudalla vasta vuonna 1946, ja sen jälkeenkin laki on rajannut jokaiseen talouteen vain yhden auton.',
+      },
+      nostot: [
+        {
+          otsikko: 'Shortsit joissa mennään pankkiin',
+          aika: '1900-luku–',
+          tiedosto: 'Bermuda Police-1.JPG',
+          teksti: 'Polveen ulottuvat, käännetyllä lahkeella varustetut Bermuda-shortsit syntyivät luultavasti brittiupseerien univormusta 1900-luvun alussa, kun täyspitkät housut tuntuivat saaren helteessä liian kuumilta. Paikalliset liikemiehet omaksuivat tyylin 1950-luvulla, ja siitä lähtien shortsit sopivat Bermudalla virallisimpaankin pukeutumiseen: niitä käytetään bleiserin, kravatin, polvisukkien ja kiiltonahkakenkien kanssa sekä pankeissa että oikeussalissa. Myös poliisin univormuun kuuluvat siniset shortsit polvisukkien kera, mikä hämmentää usein turisteja. Kuvassa poliisi ohjaa liikennettä Front Streetillä Hamiltonissa 2001, pukeutuneena juuri tähän virkapukuun.',
+          lyhyt: 'Bermuda-shortsit polvisukkineen kelpaavat saarella jopa virallisimpaan pukeutumiseen.',
+          selite: 'Bermudan poliisi ohjaa liikennettä Front Streetillä Hamiltonissa vuonna 2001, univormuna siniset shortsit ja polvisukat.',
+          lahde: 'Captain-tucker, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bermuda shorts',
+        },
+        {
+          otsikko: 'Yksi auto per talous',
+          aika: '1946–',
+          tiedosto: 'Bermuda (UK) image number 419 scooters motorcycles parked in Hamilton.jpg',
+          teksti: 'Bermudalla ei sallittu moottoriajoneuvoja lainkaan ennen vuotta 1946 – siihen asti liikuttiin polkupyörillä, hevoskärryillä ja saaren omalla rautatiellä. Kun autot vihdoin sallittiin, laki rajasi jokaiseen talouteen vain yhden auton, eikä sääntöä ole sittemmin kumottu; vain kuvernööri ja pääministeri on vapaita siitä. Turistit eivät voi vuokrata autoa lainkaan, koska tiheästi asutulla saarella liikenne tukkeutuisi ja taksiala kärsisi. Ainoa tapa liikkua itsenäisesti moottorilla onkin vuokrata mopo tai skootteri, joita näkyy pysäköitynä riveissä keskustoissa. Kuvassa mopoja ja skoottereita Hamiltonissa – tavallinen näky työpäivän aikana.',
+          lyhyt: 'Bermudalla sallitaan vain yksi auto per talous, ja turistit liikkuvat vuokramopoilla.',
+          selite: 'Rivissä pysäköityjä mopoja ja skoottereita Hamiltonin keskustassa Bermudalla.',
+          lahde: 'Tomwsulcer, Wikimedia Commons (CC0)',
+          wiki: 'Transport in Bermuda',
+        },
+        {
+          otsikko: 'Rummun tahdissa naamion takaa',
+          aika: 'nykyään',
+          tiedosto: 'Gombey dancers Bermuda.JPG',
+          teksti: 'Gombey on bermudalainen naamiotanssiperinne, joka syntyi orjuutettujen afrikkalaisten, alkuperäiskansojen ja brittiläisten vaikutteiden sekoituksesta 1700-luvulla. Värikkäästi puetut, sulkapäähineitä ja helmipanssareita kantavat tanssijat esiintyvät ryhmissä eli "troopeissa" rummun ja pillin tahdissa, ja johtajaa kutsutaan usein jousimieheksi. Perinteisesti gombeyt kiertävät kaduilla joulun tienoilla, mutta nykyään heitä nähdään myös festivaaleilla ja risteilylaivojen saapuessa. Tanssin liikkeet ja rummutus periytyvät suullisesti, eikä niitä ole kirjoitettu muistiin. Kuvassa gombey-tanssijoita King\'s Squarella St. Georgessa 2004.',
+          lyhyt: 'Gombey on afrikkalais-, alkuperäiskansa- ja brittivaikutteinen naamiotanssiperinne Bermudalla.',
+          selite: "Gombey-tanssijoita esiintymässä King's Squarella St. Georgessa Bermudalla vuonna 2004.",
+          lahde: 'Captain-tucker, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Gombey',
+        },
+        {
+          otsikko: 'Kuunportti tuo onnea',
+          aika: '1860–',
+          tiedosto: 'Bermuda Moongate.JPG',
+          teksti: 'Pyöreä, keskeltä läpikuljettava kuunportti on alun perin kiinalaisten puutarhojen koriste-elementti, ja tarinan mukaan bermudalainen laivankapteeni toi idean saarelle vierailtuaan Kiinassa 1860. Toisin kuin Kiinassa, jossa portit ovat osa puutarhan muuria, Bermudalla niistä tuli vapaasti seisovia, kalkkikivestä muurattuja pyörylöitä puutarhoissa ja hotellien pihoilla. Perinteen mukaan portin läpi käveleminen tuo onnea, ja vastanaimisilla on tapana kulkea kuunportista käsi kädessä, jotta onni ja rakkaus kestäisivät. Muoto tunnistettiin kiinalaisperäiseksi vasta 1920-luvulla, mutta siitä lähtien kuunportit ovat olleet suosittuja häävalokuvauspaikkoja.',
+          lyhyt: 'Kiinalaisperäinen kuunportti tuo bermudalaisen perinteen mukaan onnea sen läpi kävelijälle.',
+          selite: 'Valkoiseksi kalkittu kuunportti puutarhassa kahden Bermudan lomakohteen välissä.',
+          lahde: 'Captain-tucker, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Moon gate',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Bermudan keittiössä yhdistyvät brittiläinen ja Uuden-Englannin perinne: kalapataan kaadetaan tummaa rommia, sipulinvienti antoi koko kansalle lempinimen, ja sotilasklubin drinkistä tuli maailmankuulu tavaramerkki.',
+      tehtava: {
+        kysymys: 'Millä kahdella aineksella bermudalainen kalapata perinteisesti maustetaan omalla lautasella?',
+        vaihtoehdot: [
+          'Suolalla ja valkopippurilla',
+          'Sherrypippurikastikkeella ja tummalla rommilla',
+          'Limellä ja tuoreella chilillä',
+          'Soijakastikkeella ja inkiväärillä',
+        ],
+        oikea: 1,
+        fakta: 'Bermudan kalapataa maustetaan pöydässä sherrypippurikastikkeella ja tummalla, melassilla värjätyllä rommilla.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kalapata jota maustetaan pöydässä',
+          aika: '1600-luku–',
+          tiedosto: 'Bermuda Fish Chowder (3825239570).jpg',
+          teksti: 'Bermudan kansallisruoaksi kutsuttu kalapata syntyi jo 1600-luvulla englantilaissiirtolaisten keittiöissä, ja se poikkeaa mantereen chowdereista: liemi ei ole kermapohjainen vaan valmistetaan kala- ja usein myös naudanlihaliemestä, ja tomaattia on vain vähän. Keittoon lisätään perinteisesti kalaa, vihanneksia ja mausteita, mutta lopullinen sävy tehdään vasta pöydässä. Jokaisen lautasen viereen tarjotaan sherrypippurikastiketta – terävän tulisia paprikoita sherryyn marinoituna – sekä pullo tummaa, melassilla värjättyä rommia. Molempia lisätään keittoon oman maun mukaan, usein reilulla kädellä. Kuvassa annos bermudalaista kalapataa lounaana 2009.',
+          lyhyt: 'Bermudan kansallisruoka on kalapata, jota maustetaan pöydässä sherrypippurilla ja rommilla.',
+          selite: 'Lautasellinen bermudalaista kalapataa, tarjolla lounaana Bermudalla vuonna 2009.',
+          lahde: 'kansasphoto, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Bermuda fish chowder',
+        },
+        {
+          otsikko: 'Sipuli joka nimesi koko kansan',
+          aika: '1616–',
+          tiedosto: "Bolgiano's 1902 catalogue (16349122012) (cropped to Bermuda onion).jpg",
+          teksti: 'Sipulinsiemeniä lähetettiin Bermudalle Englannista jo 1616, ja saaren lämmin ilmasto ja kalkkipitoinen maaperä tuottivat poikkeuksellisen makeaa ja mietoa satoa. 1800-luvulla Madeiralta ja Azoreilta muuttaneet viljelijät toivat mukanaan vielä parempia siemeniä, ja 1870-luvulla Bermudasta lähti New Yorkiin tuhansia tonneja sipulia joka vuosi. Vienti oli niin merkittävää, että koko saarta alettiin kutsua "sipulilaikuksi" ja bermudalaisia itseään "sipuleiksi" – lempinimi elää yhä. Ensimmäinen maailmansota katkaisi laivaliikenteen, ja Yhdysvallat alkoi tullien suojassa kasvattaa omia "Bermuda-sipuleitaan", mikä romahdutti alkuperäisen viennin 1920-luvulla.',
+          lyhyt: 'Sipulinvienti antoi bermudalaisille lempinimen "sipulit", joka on käytössä yhä.',
+          selite: 'Yhdysvaltalaisen siemenkaupan vuoden 1902 luettelokuva valkoisesta ja punaisesta Bermuda-sipulista.',
+          lahde: 'Bolgiano & Co. / Biodiversity Heritage Library, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Bermuda onion',
+        },
+        {
+          otsikko: 'Myrsky lasissa',
+          aika: '1806–',
+          tiedosto: "Dark 'N' Stormy.jpg",
+          teksti: 'Gosling-suku toi ensimmäiset rommitynnyrinsä Bermudalle 1806, ja perheyhtiö alkoi myöhemmin sekoittaa eri tynnyrien rommeja omaksi, melassin tummaksi värjäämäksi Black Seal -merkiksi; nimi ja mustavahalla suljettu pullo vakiintuivat 1900-luvun puolivälissä. Sodan jälkeen Bermudalla asemapaikkaa pitäneet brittisotilaat sekoittivat Black Sealia laivaston upseerikerhon inkiväärioluen kanssa, ja syntyi drinkki, jonka väriä verrattiin myrskypilveen: Dark \'n\' Stormy. Gosling Brothers rekisteröi nimen tavaramerkiksi Bermudalla 1980 ja Yhdysvalloissa 1991 ja on sittemmin puolustanut sitä oikeudessa – nimeä saa virallisesti käyttää vain Goslingin rommilla.',
+          lyhyt: "Dark 'n' Stormy syntyi sotilasklubilla Bermudan tummasta rommista ja inkiväärioluesta.",
+          selite: "Dark 'n' Stormy -cocktail limeviipaleen kera tarjoiltuna baarissa San Franciscossa vuonna 2015.",
+          lahde: 'Will Shenton, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: "Dark 'n' stormy",
+        },
+        {
+          otsikko: 'Sesonkiherkku ilman saksia',
+          aika: 'syyskuu–maaliskuu',
+          tiedosto: 'Panulirus argus NOAA.jpg',
+          teksti: 'Bermudan vesillä elää piikkihummerilaji Panulirus argus, joka poikkeaa pohjoisemmista hummereista: sillä ei ole leveitä saksia, vaan suurin osa syötävästä lihasta on pyrstössä ja se puolustautuu piikkisellä kuorellaan. Lisääntymisen suojelemiseksi pyynti on kielletty keväällä ja kesällä, ja ravintoloiden listoilla hummeria näkyykin vain syyskuun alusta maaliskuun loppuun. Sesongin avautuminen on saarella pieni juhla, ja monet ravintolat tarjoavat silloin uunissa paistettua hummeria erikoisuutena. Ylikalastuksen pelossa saalis- ja kokorajoitukset ovat tiukat, ja alamittaisen tai munivan naaraan pyytäminen on kokonaan kiellettyä.',
+          lyhyt: 'Bermudan piikkihummeria saa pyytää ja tarjoilla vain syyskuusta maaliskuun loppuun.',
+          selite: 'Karibianmeren piikkihummerilaji Panulirus argus, jollaista tavataan myös Bermudan vesillä.',
+          lahde: 'NOAA / Brandi Noble, Wikimedia Commons (PD)',
+          wiki: 'Panulirus argus',
+        },
+      ],
+    },
+  ],
+  PRI: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Puerto Rico on nähnyt taínojen palloaukiot, piirityksiä kestäneet linnoitukset, orjuuden lakkauttamisen riemun ja yhdysvaltalaissotilaiden salamamaihinnousun. Saaren vaiheikas historia näkyy yhä sen muureissa ja toreilla.',
+      tehtava: {
+        kysymys: 'Minä vuonna Espanjan kansalliskokous lakkautti orjuuden Puerto Ricossa?',
+        vaihtoehdot: ['1808', '1833', '1873', '1898'],
+        oikea: 2,
+        fakta: 'Espanjan kansalliskokous hyväksyi niin kutsutun Moret-lain 22. maaliskuuta 1873, ja se vapautti Puerto Ricossa noin 29 000 orjaa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Borikén kohtaa Kolumbuksen',
+          aika: '1493',
+          tiedosto: 'Caguana Ceremonial Ball Courts Site - Utuado Puerto Rico.jpg',
+          teksti: 'Marraskuun 19. päivänä 1493 Kristoffer Kolumbus laski ankkurin saarelle, jota sen asukkaat kutsuivat Borikéniksi, jalojen ihmisten maaksi. Hän nimesi sen San Juan Bautistaksi. Saarella eli arviolta 30 000–60 000 taínoa pienissä kylissä, joita johtivat kasiikit eli päälliköt; mahtavin heistä oli Agüeybaná. Keskellä saarta, nykyisen Utuadon kukkuloilla, taínot kokoontuivat kivillä reunustetuille seremonia-aukioille pelaamaan pallopeliä batey ja tanssimaan areítoja, joissa suvun tarinat siirtyivät sukupolvelta toiselle. Espanjalaisten mukanaan tuomat sairaudet ja pakkotyö tuhosivat taínoväestön lähes kokonaan jo muutamassa vuosikymmenessä.',
+          lyhyt: 'Taínojen suurin tunnettu seremonia- ja pallokenttäalue Utuadon kukkuloilla.',
+          selite: 'Caguanan seremoniapuisto on taínojen laajin tunnettu seremonia- ja pallopelialue. Kuvassa näkyy ruohoinen aukio, jota reunustavat pystyt kivet.',
+          lahde: 'Jbermudez, Wikimedia Commons (CC BY 2.5)',
+          wiki: 'Tainot',
+        },
+        {
+          otsikko: 'Piiritys joka synnytti jättiläisen',
+          aika: '1634',
+          tiedosto: 'Castillo San Cristobal Panorama SJU 06 2019 8311.jpg',
+          teksti: 'Vuonna 1625 hollantilainen amiraali Boudewijn Hendricksz piiritti San Juanin ja poltti suuren osan kaupungista, vaikka El Morron linnoitusta ei saatukaan valtaan. Piiritys paljasti aukon: kaupunki oli suojaton maan puolelta. Espanjan kruunu päätti rakentaa toisen linnakkeen, Castillo San Cristóbalin, jonka työt alkoivat vuonna 1634 ja jatkuivat runsaat sata vuotta, valmistuen 1790. Valmiina se oli suurin espanjalaisten koskaan Uuteen maailmaan rakentama linnoitus. Sen kuivat vallihaudat, tunnelit ja toisiinsa kytketyt bastionit tekivät siitä lähes valloittamattoman, eikä yksikään vihollinen onnistunut koskaan valtaamaan sitä väkisin.',
+          lyhyt: 'Castillo San Cristóbal, suurin linnoitus jonka Espanja koskaan rakensi Uuteen maailmaan.',
+          selite: 'Castillo San Cristóbalin muureja ja bastioneja kuvattuna Vanhassa San Juanissa. Linnoitus suojasi kaupunkia maan puolelta.',
+          lahde: 'Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'San Juan (Puerto Rico)',
+        },
+        {
+          otsikko: 'Kahleet putosivat maaliskuussa',
+          aika: '1873',
+          tiedosto: "Monumento a la Abolición de la Esclavitud, Barrio Cuarto, Ponce, PR, close-up de 'El Hombre Redimido' (DSC00530).jpg",
+          teksti: 'Espanjan kansalliskokous hyväksyi 22. maaliskuuta 1873 niin kutsutun Moret-lain, joka lakkautti orjuuden Puerto Ricossa. Vapaaksi tuli noin 29 000 orjaa, viitisen prosenttia koko saaren väestöstä. Vapautus ei ollut ehdoton: valtio maksoi omistajille korvauksen jokaisesta orjasta, ja vapautetut velvoitettiin jatkamaan työtä entisillä isännillään vielä kolme vuotta ilman äänioikeutta. Lakia ajoivat muun muassa toimittaja Julio Vizcarrondo ja poliitikko Ramón Baldorioty de Castro. Poncen kaupunkiin pystytettiin myöhemmin muistomerkki, jonka keskellä pronssinen mies katkaisee kahleensa symboloiden saavutettua vapautta.',
+          lyhyt: 'Poncen muistomerkki, joka pystytettiin orjuuden lakkauttamisen kunniaksi vuonna 1873.',
+          selite: 'Patsas kuvaa miestä, joka on juuri vapautunut kahleistaan. Se on osa Poncen orjuuden lakkauttamisen muistomerkkiä.',
+          lahde: 'Tito Caraballo, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Orjuus',
+        },
+        {
+          otsikko: 'Kuusi tuntia ilman tappioita',
+          aika: '1898',
+          tiedosto: 'Guánica, Puerto Rico monument to U.S. soldiers, Ohio Infantry, Spanish-American War 1898.jpg',
+          teksti: 'Heinäkuun 25. päivänä 1898 yhdysvaltalaiset sotalaivat ilmestyivät yllättäen Guánican lahdelle Espanjan ja Yhdysvaltain sodan aikana. Kenraali Nelson A. Milesin joukot nousivat maihin ja kukistivat pienen espanjalaisvarniston alle kuudessa tunnissa ilman yhtään kaatunutta. Guánica valittiin maihinnousupaikaksi viime hetkellä, koska sen satama ja tiestö olivat paremmassa kunnossa kuin alun perin suunnitellussa Fajardossa. Sodan päätyttyä elokuussa Puerto Ricosta tuli osa Yhdysvaltoja Pariisin rauhansopimuksella. Guánicaan pystytettiin myöhemmin muistomerkki, joka on omistettu maihinnousussa taistelleille ohiolaissotilaille.',
+          lyhyt: 'Guánicaan pystytetty muistomerkki vuoden 1898 maihinnousussa taistelleille sotilaille.',
+          selite: 'Kivinen muistomerkki Guánicassa on omistettu Ohion jalkaväen sotilaille, jotka nousivat maihin heinäkuussa 1898.',
+          lahde: 'Frederic Gleach, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Espanjan–Yhdysvaltain sota',
+        },
+      ],
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Vanha San Juan on Karibian parhaiten säilynyt siirtomaakaupunki: sitä vartioi kaksi linnoitusta, sen kadut kimaltavat sinisistä laivan painolastikivistä ja sen parvekkeet ovat säilyneet lähes ennallaan viisi vuosisataa.',
+      tehtava: {
+        kysymys: 'Mikä Vanhan San Juanin rakennuksista on maailman vanhin yhä käytössä oleva kuvernöörin virka-asunto?',
+        vaihtoehdot: ['Castillo San Felipe del Morro', 'La Fortaleza', 'Castillo San Cristóbal', 'Puerta de San Juan'],
+        oikea: 1,
+        fakta: 'La Fortaleza on toiminut Puerto Ricon kuvernöörin virka-asuntona vuodesta 1544 lähtien, ja se on maailman vanhin yhä käytössä oleva kuvernöörin virka-asunto.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kuusi kerrosta merta vartioimassa',
+          aika: '1539–1790',
+          tiedosto: 'USA-2016-Puerto Rico-San Juan-Castillo San Felipe del Morro (and lighthouse) 03.jpg',
+          teksti: 'Castillo San Felipe del Morro kohoaa kapean niemen kärjessä, jossa laivat ovat kulkeneet San Juanin satamaan viisi vuosisataa. Espanjalaiset aloittivat sen rakentamisen vuonna 1539 yhden tykin vartiopaikkana, ja työ jatkui yli 250 vuotta, kunnes linnoitus valmistui 1790. Kuusikerroksisesta muurista pistävät esiin pyöreät garitat eli vartiokopit, joista sotilaat tähyilivät merelle myrskyjä ja vihollislaivastoja. Linnoitusta koeteltiin useasti: Francis Drake epäonnistui hyökkäyksessään 1595, mutta englantilaiset onnistuivat valtaamaan kaupungin lyhyeksi aikaa 1598. Nykyään El Morron majakka valvoo yhä samaa salmea.',
+          lyhyt: 'Castillo San Felipe del Morro ja sen majakka San Juanin satamansuulla.',
+          selite: 'Kuvassa näkyy El Morron linnoitus ja sen majakka mereltä päin kuvattuna. Muurit nousevat suoraan kalliolta.',
+          lahde: 'Godot13, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'San Juan (Puerto Rico)',
+        },
+        {
+          otsikko: 'Vanhin yhä asuttu kuvernöörinlinna',
+          aika: '1533–1540',
+          tiedosto: 'La Fortaleza in San Juan, Puerto Rico.jpg',
+          teksti: 'La Fortaleza rakennettiin vuosina 1533–1540 puolustamaan San Juanin satamaa karibialaisilta hyökkäyksiltä ja kilpailevilta eurooppalaisvalloilta. Puolustuslinnoitukseksi se osoittautui huonoksi paikaksi, sillä se sijaitsi kukkulan väärällä puolella nähdäkseen avomerelle. Jo vuonna 1544 siitä tehtiin sen sijaan saaren kuvernöörin virka-asunto, ja sellaisena se on toiminut katkeamatta yli 480 vuotta. Vuosisatojen mittaan alkuperäisiin keskiaikaisiin torneihin liitettiin barokin, goottilaisen ja uusklassisen tyylin osia, ja rakennus laajeni palatsiksi. La Fortaleza on maailman vanhin yhä käytössä oleva kuvernöörin virka-asunto.',
+          lyhyt: 'La Fortaleza, Puerto Ricon kuvernöörin virka-asunto vuodesta 1544 lähtien.',
+          selite: 'Kuvassa näkyy La Fortalezan julkisivu Calle Fortalezan päässä. Rakennuksessa yhdistyvät useiden vuosisatojen tyylikerrokset.',
+          lahde: 'vxla, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'La Fortaleza',
+        },
+        {
+          otsikko: 'Painolasti muuttui kaduksi',
+          aika: '1800-luku',
+          tiedosto: 'Blue cobblestone streets of Old San Juan, Puerto Rico.jpg',
+          teksti: 'Vanhan San Juanin kapeat kadut on päällystetty siniharmailla adoquín-kivillä, jotka eivät ole louhittua kiveä vaan valettua rautasulaton kuonaa. Espanjasta saapuvat laivat kuljettivat 1700- ja 1800-luvuilla kuonalohkareita painolastina, jottei tyhjä ruuma keikahtelisi merellä, ja Espanjaan palatessaan ne ottivat lastiksi sokeria ja muita siirtomaan tuotteita. San Juanissa lohkareet muotoiltiin tiiviiksi, painaviksi harkoiksi ja käytettiin kadunpäällysteenä. Vuosikymmenien kuluminen ja kosteus ovat hioneet niiden pintaan omaleimaisen sinertävän hohteen. Monet 1800-luvulla ladotuista kivistä ovat yhä paikoillaan ja kestävät päivittäistä jalankulkua.',
+          lyhyt: 'Vanhan San Juanin katukiveys lähikuvassa, siniharmaita rautasulaton kuonasta valettuja kiviä.',
+          selite: 'Lähikuva Vanhan San Juanin adoquín-katukivistä. Kivien pinnassa näkyy vuosikymmenien kuluma ja sininen sävy.',
+          lahde: 'Counselman Collection, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'San Juan (Puerto Rico)',
+        },
+        {
+          otsikko: 'Sateenvarjot kukkivat kujan yllä',
+          aika: 'nykyään',
+          tiedosto: 'Calle Fortaleza with umbrellas in Old San Juan, Puerto Rico.jpg',
+          teksti: 'Calle Fortaleza on yksi Vanhan San Juanin vanhimmista kaduista, ja se kulkee kuvernöörin palatsin editse kohti kaupungin sydäntä. Kadun molemmin puolin nousee 1800-luvun ja 1900-luvun alun siirtomaa-arkkitehtuuria: pastellinvärisiä julkisivuja, takorautaisia parvekkeita ja kaksinkertaisia ikkunaluukkuja, jotka pitävät sisätilat viileinä trooppisessa kuumuudessa. Kadun yllä riippuu vaihtuva kattoinstallaatio, joka on tunnetuimmillaan ollut kirjavien sateenvarjojen kaari; se on ajan mittaan vaihtunut muun muassa perhosiksi ja leijoiksi. Yhdistelmä vanhoja kivijulkisivuja ja uutta katutaidetta tekee kadusta yhden saaren valokuvatuimmista paikoista.',
+          lyhyt: 'Calle Fortaleza koristeellisine sateenvarjoineen ja siirtomaa-ajan värikkäine julkisivuineen.',
+          selite: 'Kuvassa näkyy Calle Fortaleza, jonka yllä riippuu rivistö avattuja värikkäitä sateenvarjoja katua reunustavien talojen välissä.',
+          lahde: 'Jorge Rodriguez, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Puerto Rico',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Puerto Rico kätkee sisäänsä Yhdysvaltain ainoan trooppisen sademetsän, maailman kirkkaimman hehkuvan lahden ja pienen sammakon, jonka ääni kaikuu joka ilta koko saarella. Luonto voi täällä olla yhtä äänekästä kuin kaunistakin.',
+      tehtava: {
+        kysymys: 'Mikä tekee El Yunquesta ainutlaatuisen Yhdysvaltain kansallismetsäjärjestelmässä?',
+        vaihtoehdot: ['Se on ainoa aavikko', 'Se on ainoa trooppinen sademetsä', 'Se on ainoa vuoristometsä', 'Se on ainoa mangrovemetsä'],
+        oikea: 1,
+        fakta: 'El Yunque on Yhdysvaltain kansallismetsäjärjestelmän ainoa trooppinen sademetsä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Pilvien peittämä pyhä vuori',
+          aika: 'n. 800–nykyään',
+          tiedosto: 'El Yunque Forest, Puerto Rico 05.jpg',
+          teksti: 'El Yunquen sademetsä levittäytyy Luquillon vuoriston rinteille ja on Yhdysvaltain kansallismetsäjärjestelmän ainoa trooppinen sademetsä. Taínot pitivät aluetta pyhänä ja uskoivat, että jumala Yúcahu asui korkeimman huipun pilvissä; nimen arvellaan juontuvan sanasta yuke, valkoiset maat, mikä viittaa huippua ympäröiviin sumupilviin. Espanjan kruunu suojeli aluetta jo vuonna 1876, mikä tekee siitä yhden läntisen pallonpuoliskon vanhimmista suojelluista metsistä. Vuosittain metsään sataa jopa kuusi metriä vettä, ja se tuottaa lähes viidenneksen koko Puerto Ricon makeasta vedestä lukemattomien putousten virratessa kallioilta.',
+          lyhyt: 'El Yunquen sademetsän tiheää kasvillisuutta Luquillon vuoristossa.',
+          selite: 'Kuvassa näkyy El Yunquen kansallismetsän rehevää sademetsäkasvillisuutta ja sumuista vuoristomaisemaa.',
+          lahde: 'EF5, Wikimedia Commons (CC0)',
+          wiki: 'Sademetsä',
+        },
+        {
+          otsikko: 'Lahti joka hehkuu joka yö',
+          aika: '2006',
+          tiedosto: 'Mosquito bay, Bioluminescent bay, Vieques - panoramio.jpg',
+          teksti: 'Viequesin saaren Mosquito Bay tunnetaan maailman kirkkaimpana bioluminesoivana lahtena, ja Guinnessin ennätyskirja vahvisti tittelin vuonna 2006. Hehkun aiheuttavat mikroskooppiset siimalevät, lähinnä Pyrodinium bahamense -laji, joita vedessä voi olla jopa 700 000 kappaletta gallonassa. Kun vesi häiriintyy melasta tai uimarin kädestä, levät välähtävät hetkeksi sinivihreää valoa puolustautuakseen saalistajilta. Toisin kuin monet muut bioluminoivat vedet maailmassa, Mosquito Bay hehkuu ympäri vuoden, koska lahti on lähes suljettu ja sitä ympäröivät mangrovemetsät suojaavat valosaasteelta ja pitävät veden ravinteet korkealla.',
+          lyhyt: 'Mosquito Bay Viequesin saarella päivänvalossa, ympärillä mangrovereunustus.',
+          selite: 'Kuvassa näkyy Mosquito Bayn tyyni vesi ja sitä ympäröivä mangrovekasvillisuus päiväsaikaan; öisin sama vesi hehkuu siniseksi.',
+          lahde: 'Edgar Torres, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Bioluminesenssi',
+        },
+        {
+          otsikko: 'Pieni sammakko, suuri ääni',
+          aika: 'nykyään',
+          tiedosto: 'Common Coquí.jpg',
+          teksti: 'Coquí-sammakko on niin tärkeä osa Puerto Ricon identiteettiä, että saarelaiset sanovat itsestään: "olen kotoisin täältä kuin coquí". Kämmenelle mahtuva sammakko on saanut nimensä koiraan kaksitavuisesta iltakutsusta, "ko-kee", jota se toistaa väsymättä hämärän laskeuduttua. Ensimmäinen tavu merkitsee koiraalle reviiriä, jälkimmäinen houkuttelee naaraita. Taínojen tarun mukaan jumalatar loi sammakon huutamaan ikuisesti kadonneen rakastettunsa nimeä. Toisin kuin useimmat sammakot, coquí kehittyy munasta suoraan pieneksi sammakoksi ilman nuijapäävaihetta, ja se elää luonnostaan vain Puerto Ricossa.',
+          lyhyt: 'Coquí-sammakko, Puerto Ricon kansallissymboliksi noussut pieni sammakkolaji.',
+          selite: 'Lähikuva ruskeasta coquí-sammakosta vihreällä pinnalla. Laji on kooltaan vain muutaman senttimetrin mittainen.',
+          lahde: 'Yhdysvaltain maatalousministeriö USDA, Wikimedia Commons (PD)',
+          wiki: 'Puerto Rico',
+        },
+        {
+          otsikko: 'Neljä viikkoa raivonnut myrsky',
+          aika: '1899',
+          tiedosto: 'Ponce, Puerto Rico after 1899 San Ciriaco hurricane.jpg',
+          teksti: 'Elokuun 8. päivänä 1899, vain vuosi sen jälkeen kun Puerto Rico oli siirtynyt Yhdysvalloille, hirmumyrsky San Ciriaco pyyhkäisi saaren yli kuudesta yhdeksään tuntiin ja jätti jälkeensä yli 3 000 kuollutta. Myrsky oli koko Atlantin historian pisimpään elänyt, lähes neljä viikkoa, ja se saavutti nelosluokan voiman. Sen mukanaan tuoma runsas sadekertymä tuhosi kahvi- ja sokeriviljelmät juuri ennen satokautta, ja arviolta neljäsosa saaren väestöstä jäi ilman ruokaa tai kattoa pään päälle. Aikalaislehdet julkaisivat piirroskuvia sortuneista taloista ja raunioituneesta keskustorista dokumentoidakseen tuhon laajuutta.',
+          lyhyt: 'Aikalaislehden piirroskuvitus San Ciriaco-hirmumyrskyn jäljiltä Poncessa 1899.',
+          selite: 'Kuvassa on New York-lehden piirroskollaasi, joka näyttää tuhoutuneita taloja ja raunioitunutta toria Poncessa hirmumyrskyn jälkeen.',
+          lahde: 'New York Journal and Advertiser, Wikimedia Commons (PD)',
+          wiki: 'Hirmumyrsky',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Puerto Rican keittiössä kohtaavat taínojen jauhobanaani, Länsi-Afrikan survomisperinne ja Espanjan mausteet. Tuloksena on ruokia ja juomia, jotka ovat levinneet saarelta koko maailman tunnetuiksi herkuiksi.',
+      tehtava: {
+        kysymys: 'Kuka keksi piña coladan vuonna 1954?',
+        vaihtoehdot: ['Ramón Marrero, Caribe Hiltonin baarimikko', 'Rafael Cortijo, muusikko', 'Julio Vizcarrondo, toimittaja', 'Ismael Rivera, laulaja'],
+        oikea: 0,
+        fakta: 'Piña coladan keksi Caribe Hiltonin baarimikko Ramón "Monchito" Marrero vuonna 1954 kolmen kuukauden kokeilujen jälkeen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Survottu perintö kolmelta mantereelta',
+          aika: 'n. 1500-luku–nykyään',
+          tiedosto: 'Mofongo.jpg',
+          teksti: 'Mofongo syntyi, kun länsiafrikkalaiset orjat toivat saarelle fufu-ruokaperinteensä: keitetyn, survotun jauhobanaanin, joka tehtiin täyteläiseksi öljyllä ja suolalla. Espanjalaisilta tulivat sofrito-mauste ja paistetut siankamarat eli chicharrón, joita lisättiin joukkoon rasvan ja maun vuoksi, kun taas taínoilta periytyi tapa survoa raaka-aineita puisessa huhmareessa, pilónissa. Sana mofongo juontuu angolalaisesta kikongon sanasta, joka tarkoittaa suurta määrää mitä tahansa. Nykyään vihreä jauhobanaani paistetaan, survotaan valkosipulin kanssa kupolin muotoiseksi ja tarjoillaan usein katkarapu- tai kanaliemikastikkeen keskellä, lautasen keskipisteenä.',
+          lyhyt: 'Lautasellinen mofongoa: survottua jauhobanaania meri- tai lihakastikkeen keskellä.',
+          selite: 'Kuvassa on kupolin muotoinen mofongo-annos, jonka ympärillä on lihaa ja punertavaa kastiketta.',
+          lahde: 'Diane, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Keittobanaani',
+        },
+        {
+          otsikko: 'Sata metriä paistettua possua',
+          aika: 'n. 1500-luku–nykyään',
+          tiedosto: 'Los Pinos lechon en Guavate, Cayey, Puerto Rico.jpg',
+          teksti: 'Cayeyn vuoristokylässä Guavatessa maantien varrella on kymmeniä lechoneroita, ulkoilmaravintoloita, joissa kokonaisia possuja pyöritetään hitaasti avotulen päällä kuudesta kahdeksaan tuntiin. Reittiä kutsutaan La Ruta del Lechóniksi, possuvaltatieksi, ja se on yksi saaren suosituimmista viikonloppukohteista. Historioitsijoiden mukaan orjuutetut angolalaiset toivat possun paahtamisen tekniikan saarelle jo 1500-luvulla, vaikka possut itse saapuivat jo Kolumbuksen retkikunnilla. Ajan myötä lechónista tuli keskeinen ruoka juhlapyhinä ja suojeluspyhimysten juhlissa, ja siitä muodostui koko saarta yhdistävä ylpeyden ja ilon symboli.',
+          lyhyt: 'Kokonainen possu paistumassa vartaassa Guavaten lechonerassa.',
+          selite: 'Kuvassa näkyy paistettu possu tarjolla Los Pinos -lechonerassa Guavatessa, Cayeyn kunnassa.',
+          lahde: 'Krista, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Sika',
+        },
+        {
+          otsikko: 'Kolme kuukautta kokeiluja baaritiskillä',
+          aika: '1954',
+          tiedosto: 'Piña Colada.jpg',
+          teksti: 'Vuonna 1954 Caribe Hiltonin baarimikko Ramón "Monchito" Marrero alkoi kokeilla juomaa, joka yhdistäisi rommin, kookoskerman ja ananasmehun jäämurskan kanssa. Kolmen kuukauden hionnan jälkeen hän oli tyytyväinen: juoma tuntui vangitsevan koko Puerto Ricon maun yhteen lasiin, ja hän nimesi sen piña coladaksi, siivilöidyksi ananakseksi. Marrero tarjoili omaa versiotaan hotellin baarissa peräti 35 vuoden ajan. Puerto Rico julisti piña coladan saaren viralliseksi juomaksi vuonna 1978. Juoman alkuperää on toisinaan kiistelty, mutta vuonna 2004 saaren kuvernööri vahvisti virallisesti sekä Marreron keksijäksi että Caribe Hiltonin juoman syntypaikaksi.',
+          lyhyt: 'Lasillinen piña coladaa, Puerto Ricon vuonna 1978 viralliseksi julistamaa juomaa.',
+          selite: 'Kuvassa on korkea lasi täynnä vaaleaa, jäistä piña coladaa pillillä ja koristeella.',
+          lahde: 'Mario Trefz, Wikimedia Commons (PD)',
+          wiki: 'Piña Colada',
+        },
+        {
+          otsikko: 'Joulupöydän kultainen riisi',
+          aika: 'perinteisesti joulu',
+          tiedosto: 'Arroz con gandules.jpg',
+          teksti: 'Arroz con gandules eli riisi ja kajanuspavut on Puerto Rican juhlaruoka, joka kattaa pöydän erityisesti jouluna yhdessä lechónin ja pastelien kanssa. Riisi väritetään achiote-siemenistä uutetulla punertavalla öljyllä ja maustetaan sofritolla, sipulin, valkosipulin, korianterin ja paprikan hienonnoksella, joka on monen puertoricolaisen keittiön perusta. Joukkoon lisätään usein kinkkua tai pekonia sekä oliiveja ja kapriksia tuomaan suolaista ja hapokasta vastapainoa. Ruoka periytyy espanjalaisesta paellaperinteestä, mutta gandules-pavut ja monet mausteet ovat peräisin Afrikasta ja Karibian omasta kasvistosta.',
+          lyhyt: 'Lautasellinen arroz con gandulesia, Puerto Rican juhla- ja jouluriisiä.',
+          selite: 'Kuvassa on kulhollinen kellertävää riisiä, jonka joukossa näkyy kajanuspapuja.',
+          lahde: 'Jose Kevo, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Riisi',
+        },
+      ],
+    },
+    {
+      id: 'musiikki',
+      nimi: 'Musiikki',
+      johdanto: 'Puerto Rican musiikki soi kurpitsaraspista ja rumpujen kutsu-ja-vastaus-laulusta aina suurten tanssiorkestereiden puhaltimiin asti. Joka soitin kertoo tarinaansa saaren taíno-, afrikkalais- ja espanjalaisjuurista.',
+      tehtava: {
+        kysymys: 'Minä vuonna Rafael Ithier perusti yhtyeen El Gran Combo de Puerto Rico?',
+        vaihtoehdot: ['1953', '1962', '1978', '1990'],
+        oikea: 1,
+        fakta: 'Rafael Ithier perusti yhtyeen El Gran Combo de Puerto Rico toukokuussa 1962.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kurpitsasta syntynyt rytmi',
+          aika: 'esikolumbiaaninen',
+          tiedosto: 'Phoenix-Musical Instrument Museum-Puerto Rican Güiro.jpg',
+          teksti: 'Güiro on ontoksi kuivatusta higüera-kurpitsasta tehty raspisoitin, jonka pintaan on kaiverrettu urat. Taínot kehittivät sen kauan ennen espanjalaisten saapumista, ja se on yksi harvoja alkuperäiskansan soittimia, jotka ovat säilyneet käytössä tähän päivään asti. Soittaja raapii uria puisella tai metallisella tikulla, jolloin syntyy raspaava, jatkuva rytmi, joka pitää yhtyeen tahdissa. Nykyään güiroa käytetään lähes kaikessa Puerto Rican perinnemusiikissa plenasta salsaan, ja se soi yhtä lailla maaseudun juhlissa kuin suurissa konserttisaleissa. Soitin muistuttaa saaren musiikkiperinteen juurista jo ennen Kolumbuksen saapumista.',
+          lyhyt: 'Puertoricolainen güiro-raspisoitin museonäyttelyssä.',
+          selite: 'Kuvassa on kaiverrettu güiro-soitin esillä Phoenixin musiikki-instrumenttimuseossa.',
+          lahde: 'Marine 69-71, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Guiro',
+        },
+        {
+          otsikko: 'Neljästä kielestä kymmeneen',
+          aika: '1887',
+          tiedosto: 'Phoenix-Musical Instrument Museum-Puerto Rico Exhibit-Cuatro 1900-1915.jpg',
+          teksti: 'Cuatro kehittyi espanjalaisesta kitarasta siirtomaa-ajan maaseudulla, ja sen nimi tulee alkuperäisistä neljästä kielestä. Vuosisatojen mittaan soitin muuttui: 1700-luvulla kielet olivat vielä suolesta, ja 1800-luvun alkuun mennessä niistä oli tullut metallia, mikä antoi soittimelle kirkkaamman ja voimakkaamman äänen. Nykyinen kymmenkielinen, viisikuoroinen cuatro vakiintui vuoteen 1887 mennessä ja on muodoltaan lähempänä viulua kuin kitaraa. Siitä tuli maaseudun jíbaro-väestön musiikin sydän yhdessä tiplen ja bordonúan kanssa, ja sillä säestetään yhä aguinaldo- ja seis-lauluja joulun aikaan. Cuatro tunnetaan nykyään Puerto Rican kansallissoittimena.',
+          lyhyt: 'Vuosien 1900–1915 tienoilla valmistettu puertoricolainen cuatro-soitin.',
+          selite: 'Kuvassa on Ciales-kylästä peräisin oleva vanha cuatro-soitin esillä Phoenixin musiikki-instrumenttimuseossa.',
+          lahde: 'Marine 69-71, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cuatro',
+        },
+        {
+          otsikko: 'Rumpu vastaa tanssijalle',
+          aika: '1600-luku',
+          tiedosto: 'Barril de Bomba.jpg',
+          teksti: 'Bomba syntyi 1600-luvulla, kun orjuutetut länsiafrikkalaiset ja heidän jälkeläisensä loivat rannikkokaupungeissa, erityisesti Loízassa, oman musiikki- ja tanssiperinteensä sokeriplantaasien keskellä. Bombassa tanssija ei seuraa rumpalia vaan päinvastoin: tanssija haastaa subidor-rumpalin hameen heilautuksilla tai vartalon iskuilla, ja rumpalin on seurattava jokaista piquetea eli äkkinäistä liikettä täsmällisesti barril-rummullaan. Kutsu-ja-vastaus-laulu ja moniäänekäs rumpujen soitto periytyvät Länsi-Afrikan perinteistä. Orjuuden lakkauttamisen jälkeen 1873 bomba jatkoi elämäänsä mustien yhteisöjen juhlissa, vaikka yläluokka usein halveksuikin sitä.',
+          lyhyt: 'Muusikoita soittamassa barril-rumpuja bomba-esityksessä.',
+          selite: 'Kuvassa kolme muusikkoa soittaa barril de bomba -rumpuja esiintymistilaisuudessa.',
+          lahde: 'Yolydia, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Bomba',
+        },
+        {
+          otsikko: 'Salsan yliopisto perustettiin toukokuussa',
+          aika: '1962',
+          tiedosto: 'El Gran Combo de Puerto Rico.jpg',
+          teksti: 'Pianisti Rafael Ithier perusti yhtyeen El Gran Combo de Puerto Rico toukokuussa 1962 aiemman orkesterinsa hajottua. Yhtye yhdisti saaren omaa plena- ja bomba-perinnettä kuubalaisperäiseen sonrytmiin ja loi tanssikelpoisen, puhaltimien vetämän soundin, josta tuli tunnettu nimellä salsa. Vuosikymmenten kuluessa riveissä lauloi niin monta myöhemmin maailmankuuluksi tullutta laulajaa, että yhtye sai Kolumbiassa lisänimen "Salsan yliopisto". Ithier johti yhtyettä yli kuusi vuosikymmentä, ja se soittaa edelleen sekä levyillä että lavoilla. El Gran Combo on yhä yksi Latinalaisen Amerikan menestyneimmistä ja pisimpään toimineista yhtyeistä.',
+          lyhyt: 'El Gran Combo de Puerto Rico esiintymässä lavalla vuonna 2011.',
+          selite: 'Kuvassa yhtyeen laulajat esiintyvät lavalla Festival Medina -tapahtumassa vuonna 2011.',
+          lahde: 'Magiciandude, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Salsa (musiikki)',
+        },
+      ],
+    },
+  ],
 
+  GUF: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ranskan Guayanan historia kulkee 1600-luvun uudisraivaajista orjuuden '
+        + 'lakkautukseen ja pahamaineiseen rangaistussiirtolaan. Pienestä sademetsä-'
+        + 'departementista tuli näin koko maailman tuntema nimi, ei aina hyvässä.',
+      tehtava: {
+        kysymys: 'Minä vuonna orjuuden lakkauttava asetus astui voimaan Ranskan Guayanassa?',
+        vaihtoehdot: ['1794', '1848', '1871', '1946'],
+        oikea: 1,
+        fakta: 'Orjuus lakkautettiin Ranskan siirtomaissa huhtikuun 27. päivänä 1848, ja Guayanassa vapautus julistettiin elokuun 10. päivänä samana vuonna.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kukkulalinnake sademetsän reunalla',
+          aika: '1643',
+          tiedosto: 'Cayenne Cépérou cannon.jpg',
+          teksti: 'Vuonna 1643 ranskalainen Charles Poncet de Brétigny nousi joukkoineen '
+            + 'Cépérou-kukkulalle ja perusti sinne linnakkeen, josta kasvoi Cayennen '
+            + 'kaupunki. Poncet de Brétigny hallitsi siirtokuntaa julmalla otteella, ja '
+            + 'parin vuoden kuluttua paikalliset karibit surmasivat hänet ja suurimman '
+            + 'osan muista uudisasukkaista. Kaupunki tuhoutui ja rakennettiin uudelleen, '
+            + 'ja vasta 1600-luvun lopulla Ranska onnistui vakiinnuttamaan otteensa '
+            + 'alueesta. Cépérou-kukkulalle jäi myöhemmin sotilasrakennuksia ja tykkejä '
+            + 'vartioimaan satamaa, ja kukkulalta avautuu yhä näköala koko kaupunkiin.',
+          lyhyt: 'Cayennen kaupunki syntyi 1643 linnakkeesta, jonka perustaja surmattiin parin vuoden kuluttua.',
+          selite: 'Ensimmäisen maailmansodan aikainen tykki Fort Cépéroun alueella Cayennessa. '
+            + 'Kukkula oli kaupungin alkuperäinen linnoituspaikka.',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cayenne',
+        },
+        {
+          otsikko: 'Kuoleman siirtokunta Kouroussa',
+          aika: '1763',
+          tiedosto: 'Kourou drawing dessin expedition.jpg',
+          teksti: 'Menetettyään Kanadan Ranska halusi uuden siirtomaan, ja ministeri '
+            + 'Choiseul suunnitteli Kouroun seudusta eurooppalaisten siirtokunnan ilman '
+            + 'orjatyövoimaa. Vuonna 1763 sinne kuljetettiin kiireesti yli 13 000 '
+            + 'siirtolaista, joukossa myös Britannian Kanadasta karkottamia akadialaisia. '
+            + 'Suurin osa saapui sadekautena, jolloin majoiksi kelpasivat vain teltat ja '
+            + 'hökkelit, ja varastot mätänivät kosteudessa. Keltakuume, punatauti ja '
+            + 'malaria levisivät ahtaissa leireissä nopeasti, ja hankkeesta tuli '
+            + 'katastrofi: yli 9 000 siirtolaista kuoli parissa vuodessa. Kourousta tuli '
+            + 'pitkäksi aikaa varoittava esimerkki huonosti valmistellusta siirtomaasta.',
+          lyhyt: 'Kouroun siirtokuntahanke päätyi katastrofiin: yli 9 000 siirtolaista kuoli sairauksiin.',
+          selite: 'Aikalaispiirros Kouroun siirtokunnasta, sellaisena kuin sen kuvitteli '
+            + 'Pariisissa istunut upseeri hankkeen aikana.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+          wiki: 'Ranskan Guayana',
+        },
+        {
+          otsikko: 'Patsas joka näyttää tien vapauteen',
+          aika: '1848',
+          tiedosto: 'Cayenne Victor Schoelcher statue by Louis-Ernest Barrias.jpg',
+          teksti: 'Ranskalainen Victor Schoelcher taisteli koko aikuisikänsä orjuutta '
+            + 'vastaan nähtyään sen kauhut Yhdysvalloissa. Vuoden 1848 vallankumouksen '
+            + 'jälkeen hän laati asetuksen, joka lakkautti orjuuden kaikissa Ranskan '
+            + 'siirtomaissa; Guayanassa vapautus astui voimaan elokuun 10. päivänä 1848. '
+            + 'Vuonna 1896 Cayenneen pystytettiin Schoelcherin muistopatsas kuvanveistäjä '
+            + 'Louis-Ernest Barriasin käsialaa. Patsas näyttää Schoelcherin osoittamassa '
+            + 'suuntaa vapautetulle orjalle, joka on juuri katkaissut kahleensa. Patsas '
+            + 'seisoo yhä Cayennen keskustassa hänen mukaansa nimetyllä aukiolla.',
+          lyhyt: 'Cayennessa vuonna 1896 pystytetty patsas muistaa Victor Schoelcheria, orjuuden lakkauttajaa.',
+          selite: 'Louis-Ernest Barriasin veistämä pronssipatsas Cayennen Place '
+            + 'Schoelcherilla: Victor Schoelcher osoittaa suuntaa vapautetulle orjalle.',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Victor Schœlcher',
+        },
+        {
+          otsikko: 'Upseeri saarella jota kutsuttiin Paholaiseksi',
+          aika: '1895–1899',
+          tiedosto: 'Île du Diable Dreyfus.jpg',
+          teksti: 'Vuonna 1852 Ranska alkoi lähettää tuomittuja rangaistussiirtolaan '
+            + 'Guayanaan, ja saaristo tunnettiin pian nimellä Paholaisensaaret. '
+            + 'Kuuluisin vanki oli upseeri Alfred Dreyfus, joka tuomittiin väärin '
+            + 'perustein maanpetoksesta ja tuotiin Île du Diablelle huhtikuussa 1895. '
+            + 'Häntä pidettiin yksin kivimajassa, vartijat eivät saaneet puhua hänelle, '
+            + 'ja hän kirjoitti vankeudessaan yli tuhat kirjettä. Ranskaa vuosikausia '
+            + 'jakanut Dreyfusin juttu paljastui lopulta juonitteluksi, ja Dreyfus '
+            + 'vapautettiin kesäkuussa 1899. Rangaistussiirtola toimi saarilla aina '
+            + 'vuoteen 1953 asti.',
+          lyhyt: 'Alfred Dreyfusia pidettiin väärin tuomittuna vankina Paholaisensaarella 1895–1899.',
+          selite: 'Kivimaja Île du Diablella, jossa Alfred Dreyfusia pidettiin vangittuna '
+            + 'hänen karkotuksensa aikana.',
+          lahde: 'Nicolas Richoffer, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Alfred Dreyfus',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Yli 96 prosenttia Ranskan Guayanasta on aarniometsän peitossa, ja se on '
+        + 'yksi maailman metsäisimmistä alueista. Jaguaari, jättiläiskilpikonna ja '
+        + 'maailman suurin jyrsijä elävät kaikki samassa departementissa.',
+      tehtava: {
+        kysymys: 'Missä sademetsän vieressä toimivassa paikassa kapybarat kulkevat vapaana teiden yli?',
+        vaihtoehdot: [
+          'Cayennen satamassa',
+          'Guayanan avaruuskeskuksen alueella Kouroussa',
+          'Saint-Laurent-du-Maronin torilla',
+          'Cacaon kylän pelloilla',
+        ],
+        oikea: 1,
+        fakta: 'Guayanan avaruuskeskuksen 690 neliökilometrin suoja-alueella Kouroussa elää kapybaroita, laiskiaisia, kilpikonnia ja aroja raketinlaukaisualustojen kupeessa.',
+      },
+      nostot: [
+        {
+          otsikko: 'Metsä joka peittää melkein kaiken',
+          aika: 'nykyään',
+          tiedosto: 'ALI, M. (2011-2013). Parc Amazonien de la Guyane. Fleuve Maroni. 1 (17).jpg',
+          teksti: 'Ranskan Guayanasta yli 96 prosenttia on sademetsän peitossa, mikä tekee '
+            + 'siitä yhden maailman metsäisimmistä alueista suhteessa pinta-alaan. Alueella '
+            + 'on laskettu olevan noin 5 500 kasvilajia, yli 700 lintulajia ja lähes 180 '
+            + 'nisäkäslajia. Vuonna 2007 metsän suojaksi perustettiin Guayanan '
+            + 'Amazon-puisto, EU:n alueen suurin suojeltu sademetsäalue. Puiston sisällä, '
+            + 'kaukana Maronin yläjuoksulla, sijaitsee muun muassa Antecume Patan kylä, '
+            + 'jonne pääsee vain lentäen tai pirogilla soutaen useiden päivien matkan.',
+          lyhyt: 'Ranskan Guayanasta yli 96 prosenttia on sademetsän peitossa, poikkeuksellisen suuri osuus.',
+          selite: 'Amazonin sademetsän kasvipeitettä Maroni-joen varrella lähellä Antecume '
+            + 'Patan kylää Ranskan Guayanassa.',
+          lahde: 'Maurizio Alì, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ranskan Guayana',
+        },
+        {
+          otsikko: 'Sademetsän suurin kissa',
+          aika: 'nykyään',
+          tiedosto: 'Jaguar (Panthera onca) male (10532521724).jpg',
+          teksti: 'Jaguaari on Amazonin sademetsän suurin petoeläin ja ravintoketjun '
+            + 'huippu myös Ranskan Guayanassa. Se ui mielellään ja saalistaa kaimaaneja '
+            + 'ja kapybaroita jokien varsilla. Tutkijat ovat seuranneet jaguaarikantaa '
+            + 'riistakameroilla muun muassa Nouraguesin luonnonpuistossa vuodesta 2007 '
+            + 'lähtien, sillä laji on hävinnyt yli puolelta entisestä levinneisyys-'
+            + 'alueestaan Etelä- ja Keski-Amerikassa. Ranskan Guayanassa jaguaarin '
+            + 'metsästys kiellettiin prefektin päätöksellä vuonna 2011. Tämä yksilö on '
+            + 'kuvattu Ranskan Guayanan omassa eläintarhassa Macourian kunnassa.',
+          lyhyt: 'Jaguaari on Amazonin sademetsän huippupeto; sen metsästys kiellettiin Guayanassa 2011.',
+          selite: 'Uroshaguaari Ranskan Guayanan eläintarhassa Macouriassa.',
+          lahde: 'Bernard Dupont, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Jaguaari',
+        },
+        {
+          otsikko: 'Maailman suurin jyrsijä raketin naapurina',
+          aika: 'nykyään',
+          tiedosto: 'Capybara du zoo-refuge de Guyane.jpg',
+          teksti: 'Kapybara on maailman suurin jyrsijä, ja se viihtyy hyvin Kouroun '
+            + 'seudun kosteilla savanneilla — myös Guayanan avaruuskeskuksen 690 '
+            + 'neliökilometrin suoja-alueella, jonne raketit eivät saa lähtökuopalta '
+            + 'muuta liikennettä häiritä. Alueella pääsee ilmaiselle "Visite des '
+            + 'Savanes" -kierrokselle bongaamaan kapybaroiden lisäksi laiskiaisia, '
+            + 'kilpikonnia ja aroja aivan laukaisualustojen kupeessa. Kapybara elää '
+            + 'laumoissa, ui sujuvasti ja voi painaa yli 60 kiloa, mikä tekee siitä '
+            + 'ylivoimaisesti suurimman nykyisin elävän jyrsijälajin.',
+          lyhyt: 'Kapybara, maailman suurin jyrsijä, asustaa Kouroun avaruuskeskuksen suoja-alueella.',
+          selite: 'Kapybara Ranskan Guayanan eläintarha-suojelualueella.',
+          lahde: 'IngridDb, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kapybara',
+        },
+        {
+          otsikko: 'Maailman suurin merikilpikonna munii rannalla',
+          aika: 'huhti–heinäkuu',
+          tiedosto: 'Leatherback Sea Turtle (Dermochelys coriacea) (10628948135).jpg',
+          teksti: 'Awala-Yalimapon Plage des Hattes on yksi maailman tärkeimmistä '
+            + 'merinahkakilpikonnan munintarannoista. Laji on maailman suurin '
+            + 'merikilpikonna: yksilöt voivat kasvaa yli kaksimetrisiksi ja painaa yli '
+            + '500 kiloa. Munintakausi kestää huhtikuusta heinäkuuhun ja huippuu '
+            + 'touko-kesäkuussa, ja poikaset kuoriutuvat heinä-syyskuussa. Parhaimmillaan '
+            + 'jopa 42 prosenttia koko alueen munintapesistä on laskettu tällä yhdellä '
+            + 'rannalla. Rantaeroosio on kuitenkin tuhonnut osan pesistä, ja '
+            + 'merinahkakilpikonnien määrä Länsi-Guayanassa on laskenut voimakkaasti '
+            + '2000-luvulla.',
+          lyhyt: 'Awala-Yalimapon ranta on yksi maailman tärkeimmistä merinahkakilpikonnan munintapaikoista.',
+          selite: 'Merinahkakilpikonna Plage des Hattesin rannalla Awala-Yalimapossa Ranskan '
+            + 'Guayanassa.',
+          lahde: 'Bernard Dupont, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Merinahkakilpikonna',
+        },
+      ],
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Ranskan Guayanassa raketit lähtevät viidakon reunalta ja katedraalin '
+        + 'kellotorni näkyy palmujen yli. Avaruuskeskuksen ja rangaistussiirtolan '
+        + 'muistot elävät saman departementin rakennuksissa aivan vierekkäin.',
+      tehtava: {
+        kysymys: 'Minä vuonna ensimmäinen Ariane-raketti laukaistiin Kouroun avaruuskeskuksesta?',
+        vaihtoehdot: ['1968', '1975', '1979', '2008'],
+        oikea: 2,
+        fakta: 'Ensimmäinen Ariane 1 -kantoraketti laukaistiin Kouroun avaruuskeskuksesta joulukuussa 1979.',
+      },
+      nostot: [
+        {
+          otsikko: 'Eurooppa laukaisee avaruuteen viidakon reunalta',
+          aika: '1964–1968',
+          tiedosto: 'Centre Spatial Guyanais - 46834152082.jpg',
+          teksti: 'Ranska valitsi Kouroun seudun kantorakettiensa laukaisupaikaksi '
+            + 'vuonna 1964, ja avaruuskeskuksen rakentaminen alkoi seuraavana vuonna. '
+            + 'Sijainti lähellä päiväntasaajaa on ihanteellinen: maapallon pyörimis-'
+            + 'liike antaa sieltä laukaistaville raketeille noin 460 kilometrin '
+            + 'tuntinopeuden lisäpotkun, ja avomeri idässä ja pohjoisessa tekee '
+            + 'laukaisuista turvallisia. Vuonna 1975 Euroopan avaruusjärjestö ESA otti '
+            + 'keskuksen yhteiskäyttöön Ranskan kanssa. Nykyään keskus työllistää '
+            + 'tuhansia ihmisiä ja kattaa noin 690 neliökilometriä viidakkoa ja '
+            + 'savannia Kouroun ympärillä.',
+          lyhyt: 'Guayanan avaruuskeskus valittiin päiväntasaajan lähelle Kourouhun vuonna 1964.',
+          selite: 'Guayanan avaruuskeskuksen avaruusmuseon rakennus Kouroussa.',
+          lahde: 'mike (mlcastle), Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Guayanan avaruuskeskus',
+        },
+        {
+          otsikko: 'Raketti joka vei teleskoopin avaruuteen',
+          aika: '25.12.2021',
+          tiedosto: 'James Webb Space Telescope Launch (NHQ202112250022).jpg',
+          teksti: 'Ensimmäinen Ariane-kantoraketti laukaistiin Kouroun avaruuskeskuksesta '
+            + 'joulukuussa 1979, ja siitä alkoi eurooppalaisen avaruustekniikan menestys-'
+            + 'tarina. Vuonna 2008 valmistunut ELA-3-laukaisualue rakennettiin raskaille '
+            + 'Ariane 5 -raketeille. Jouluaamuna 25. joulukuuta 2021 juuri tältä '
+            + 'laukaisualustalta nousi Ariane 5, jonka kyydissä oli Nasan James Webb '
+            + '-avaruusteleskooppi. Se on tähän mennessä rakennetuista avaruus-'
+            + 'teleskoopeista suurin ja tarkin, ja sen kuljettaminen onnistuneesti radalle '
+            + 'oli yksi Kouroun avaruuskeskuksen tunnetuimmista laukaisuista.',
+          lyhyt: 'Ariane 5 -raketti laukaisi James Webb -avaruusteleskoopin Kouroun tukikohdasta jouluna 2021.',
+          selite: 'Ariane 5 -raketti nousee ELA-3-laukaisualueelta Kouroussa James Webb '
+            + '-avaruusteleskooppi kyydissään 25. joulukuuta 2021.',
+          lahde: 'Chris Gunn / NASA, Wikimedia Commons (PD)',
+          wiki: 'Ariane 5',
+        },
+        {
+          otsikko: 'Vankien porttikaupunki Maronin varrella',
+          aika: '1858',
+          tiedosto: 'Camp de la Transportation, Saint-Laurent-du-Maroni, French Guiana 171.jpg',
+          teksti: 'Napoleon III käski 1850-luvun alussa rakentaa Maroni-joen varrelle '
+            + 'uuden vastaanottoleirin rangaistussiirtolan vangeille. Camp de la '
+            + 'Transportation avattiin Saint-Laurent-du-Maronissa vuonna 1858, ja '
+            + 'sinne saapuneet vangit lajiteltiin ja lähetettiin edelleen muille '
+            + 'leireille tai ankarampaan vankeuteen Paholaisensaarille. Vuosina '
+            + '1852–1946 leirin kautta kulki arviolta 70 000 vankia eri puolilta '
+            + 'Ranskaa. Nykyään kaupungin kivisistä leirirakennuksista on tehty '
+            + 'museo, ja Saint-Laurent-du-Maroni sai vuonna 2007 arvonimen "taiteen '
+            + 'ja historian kaupunki" ainutlaatuisen vankila-arkkitehtuurinsa '
+            + 'ansiosta.',
+          lyhyt: 'Saint-Laurent-du-Maronin vankileiri otti vastaan noin 70 000 vankia vuosina 1852–1946.',
+          selite: 'Camp de la Transportationin kivirakennuksia Saint-Laurent-du-Maronissa.',
+          lahde: 'Ayshka Sene, Sophie Fuggle & Claire Reddleman, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Saint-Laurent-du-Maroni',
+        },
+        {
+          otsikko: 'Katedraali jonka puuosat tulivat vankisaarelta',
+          aika: '1825–1833',
+          tiedosto: 'Cathédrale Saint-Sauveur de Cayenne.jpg',
+          teksti: 'Cayennen vanha Saint-Nicolas-kirkko päätettiin korvata uudella '
+            + 'rakennuksella, ja Saint-Sauveurin kirkko rakennettiin vuosina 1825–1833 '
+            + 'neogoottiseen tyyliin. Rakennuksesta tuli Ranskan Guayanan suurin kirkko, '
+            + 'ja sen tornin huippu kohoaa 60 metrin korkeuteen. Kirkosta tuli katedraali '
+            + 'vasta vuonna 1934, kun Guayanan ensimmäinen piispa vihittiin virkaansa. '
+            + 'Katedraalin alttari, saarnastuoli ja rippituoli on veistetty guayanalaisesta '
+            + 'wacapou-puusta, joka tuotiin sinne vuonna 1876 puretusta kappelista '
+            + 'Île la Mèren entiseltä rangaistussiirtolasaarelta.',
+          lyhyt: 'Cayennen katedraali valmistui 1833, ja sen puuosat tuotiin 1876 entiseltä vankisaarelta.',
+          selite: 'Cathédrale Saint-Sauveurin julkisivu Cayennen keskustassa.',
+          lahde: 'Don-vip, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cayenne',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Ranskan Guayanan arjessa kohtaavat kreolikulttuuri, alkuperäiskansat, '
+        + 'Laosista paenneet hmongit ja jokien varsilla kultaa etsivät. Harva '
+        + 'Euroopan departementti on yhtä monikulttuurinen kuin tämä sademetsäkaistale.',
+      tehtava: {
+        kysymys: 'Minä vuonna ensimmäiset hmongpakolaiset asutettiin Cacaon kylään?',
+        vaihtoehdot: ['1962', '1977', '1989', '2001'],
+        oikea: 1,
+        fakta: 'Noin 500 Laosista paennutta hmongpakolaista asutettiin Cacaon kylään syyskuussa 1977.',
+      },
+      nostot: [
+        {
+          otsikko: 'Laosista viidakkokylään',
+          aika: '1977',
+          tiedosto: 'Marché de cacao.jpg',
+          teksti: 'Hmongit taistelivat Ranskan ja myöhemmin Yhdysvaltojen rinnalla '
+            + 'Indokiinan ja Vietnamin sodissa, ja kommunistien noustua valtaan Laosissa '
+            + 'heidän oli paettava. Syyskuussa 1977 noin 500 hmongpakolaista asutettiin '
+            + 'Cacaon kylään Ranskan Guayanan sademetsään, koska seudun ilmasto muistutti '
+            + 'Laosin vuoristoa. Uudisasukkaiden piti rakentaa kaikki tyhjästä: tiet, '
+            + 'koulut, talot ja pellot. Kaksi vuotta myöhemmin toinen samankokoinen ryhmä '
+            + 'asutettiin lännemmäs Acarouanyyn. Nykyään Cacao tunnetaan sunnuntaitorista, '
+            + 'jonne matkustetaan Cayennesta asti ostamaan tuoreita vihanneksia ja '
+            + 'hmongkulttuuria edustavaa käsityötä.',
+          lyhyt: 'Noin 500 hmongpakolaista asutettiin Cacaon sademetsäkylään Laosista paettuaan 1977.',
+          selite: 'Tuoretori Cacaon hmongkylässä Ranskan Guayanassa.',
+          lahde: 'Merwen BA, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cacao, Ranskan Guayana',
+        },
+        {
+          otsikko: 'Arkea Maronin yläjuoksulla',
+          aika: '1979',
+          tiedosto: 'Guyane 0018.jpg',
+          teksti: 'Alkuperäiskansat muodostavat vain noin 4 prosenttia Ranskan Guayanan '
+            + 'väestöstä: rannikolla asuu noin 3 000 kali’naa ja Maronin yläjuoksulla '
+            + 'noin 1 000 wayanaa. Antecume Patan kaltaisiin kyliin pääsee vain pirogilla '
+            + 'tai lentäen, ja arki kulkee joen tahdissa: kalastusta, viljelyä ja '
+            + 'ruoanvalmistusta yhteisissä carbet-katoksissa. Manioki eli maniokki on '
+            + 'ruokavalion perusta, ja sitä käsitellään edelleen samoilla perinteisillä '
+            + 'menetelmillä kuin sukupolvia sitten. Kuvassa nainen kantaa suurta '
+            + 'maniokkileipää eli casabea kylän läpi — arkinen näky, joka on toistunut '
+            + 'Wayanan kylissä vuosikymmenestä toiseen.',
+          lyhyt: 'Wayanat elävät yhä Maronin yläjuoksun kylissä, jonne pääsee vain joitse tai lentäen.',
+          selite: 'Nainen kantaa suurta maniokkileipää eli casabea Antecume Patan kylässä '
+            + 'Ranskan Guayanassa vuonna 1979.',
+          lahde: 'Paul Scot, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Wayanat',
+        },
+        {
+          otsikko: 'Kultaa joen pohjasta',
+          aika: '1850-luvulta',
+          tiedosto: 'Drague orpaillage guyane.jpg',
+          teksti: 'Kultaryntäys alkoi Ranskan Guayanassa 1850-luvulla, kun jokien '
+            + 'varsilta löytyi kultaesiintymiä. 1900-luvun alussa jokien mutkiin '
+            + 'ankkuroitiin suuria ruoppauslaitteita eli draagoja, jotka seuloivat kultaa '
+            + 'jokipohjan sorasta ja mudasta — tällainen laite näkyy vuodelta 1910 '
+            + 'olevassa kuvassa. Kullankaivuu jatkuu Guayanan joilla yhä tänäkin päivänä, '
+            + 'ja se on pitkään ollut monelle sademetsän lähikylien asukkaalle tärkeä '
+            + 'elinkeino. Elohopean käyttö kullanhuuhdonnassa kiellettiin Ranskan '
+            + 'Guayanassa vuonna 2006, sillä se oli saastuttanut jokia ja vaarantanut '
+            + 'niiden varrella asuvien terveyttä.',
+          lyhyt: 'Kultaryntäys alkoi Guayanan joilla 1850-luvulla ja jatkuu yhä tänä päivänä.',
+          selite: 'Kullankaivuudraaga työssä ranskanguayanalaisella joella 1900-luvun alussa, '
+            + 'kuvitettuna Journal des Voyages -lehdessä vuonna 1910.',
+          lahde: 'Gaston Phillip, Journal des Voyages (1910), Wikimedia Commons (PD)',
+          wiki: 'Ranskan Guayana',
+        },
+        {
+          otsikko: 'Puutalot monen kulttuurin kaupungissa',
+          aika: 'nykyään',
+          tiedosto: 'Cayenne Maisons créoles.jpg',
+          teksti: 'Cayennen vanhan keskustan kadunkulmissa seisoo yhä värikkäitä '
+            + 'kreolitaloja: puisia, ikkunaluukullisia ja verannoin koristeltuja '
+            + 'rakennuksia siirtomaa-ajalta. Niiden katveessa elää nykyään väestö, jossa '
+            + 'sekoittuvat kreolit, alkuperäiskansat, Surinamesta paenneiden orjien '
+            + 'jälkeläiset eli bushinengeet, hmongit, kiinalaiset ja brasilialaiset '
+            + 'siirtolaiset. Arjessa kuulee ranskan lisäksi guayanankreolia ja monia '
+            + 'muita kieliä, ja maksuvälineenä on euro, sillä alue on osa Euroopan '
+            + 'unionia siinä missä Ranskan Euroopan puoleinen alue.',
+          lyhyt: 'Cayennen värikkäiden kreolitalojen katveessa asuu monen kulttuurin sekoitus.',
+          selite: 'Värikkäitä kreolitaloja Cayennen keskustassa rue Schoelcherin ja rue '
+            + 'Guizanin kulmassa.',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Cayenne',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Ranskan Guayanan keittiö sekoittaa alkuperäiskansojen maniokin, '
+        + 'orjien jälkeläisten kreolikeittiön ja intialaisten siirtotyöläisten curryn. '
+        + 'Kaupungin nimi on myös levinnyt maailmalle yhden mausteen mukana.',
+      tehtava: {
+        kysymys: 'Mistä sana "colombo" alun perin juontuu ruoan nimenä?',
+        vaihtoehdot: [
+          'Sri Lankan pääkaupungista',
+          'tamilinkielisestä kastiketta tarkoittavasta sanasta',
+          'ranskan sanasta väri',
+          'Kolumbian maan nimestä',
+        ],
+        oikea: 1,
+        fakta: 'Colombo-sana juontuu tamilin kielen sanasta kulambu, joka tarkoittaa kastiketta; nimi ei viittaa Sri Lankan pääkaupunkiin.',
+      },
+      nostot: [
+        {
+          otsikko: '36 tunnin pääsiäiskeitto',
+          aika: 'pääsiäinen',
+          tiedosto: 'Bouyon Wara, Sézon Grenn 2023.jpg',
+          teksti: 'Bouillon d’awara eli awarakeitto valmistetaan piikikkään awara-'
+            + 'palmun hedelmälihasta, joka keitetään sakeaksi oranssinruskeaksi liemeksi. '
+            + 'Liemen sekaan lisätään suolattua ja savustettua lihaa, kalaa, äyriäisiä ja '
+            + 'kasviksia, ja koko valmistus voi kestää jopa 36 tuntia. Keitto liittyy '
+            + 'perinteisesti pääsiäiseen, jolloin perheet kokoontuvat valmistamaan sitä '
+            + 'yhdessä koko päivän ajan. Ranskan Guayanassa tunnetaan sananlasku, jonka '
+            + 'mukaan awarakeiton syönyt palaa aina takaisin Guayanaan — ruoka on '
+            + 'monelle siirtolaiselle side kotiseutuun.',
+          lyhyt: 'Awara-palmun hedelmälihasta keitetty bouillon d’awara on Guayanan pääsiäisruoka.',
+          selite: 'Lautasellinen bouillon d’awaraa pääsiäissunnuntaina 2023.',
+          lahde: 'PouLagwiyann, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ranskan Guayana',
+        },
+        {
+          otsikko: 'Myrkyllisestä juuresta arjen leipä',
+          aika: '1979',
+          tiedosto: 'Guyane 0019.jpg',
+          teksti: 'Manioki eli maniokki on Ranskan Guayanan ruokavalion perusta, vaikka '
+            + 'katkeran maniokin mehu on raakana myrkyllistä. Intiaanit raastavat '
+            + 'juuren, puristavat myrkyllisen nesteen pois ja paahtavat jäljelle jäävän '
+            + 'massan joko couac-nimiseksi karkeaksi jauhoksi tai isoiksi ohuiksi '
+            + 'leiviksi, joita wayanat kutsuvat casabeksi. Perinteen uskotaan tulleen '
+            + 'Cayenneen 1600-luvun lopulla Amazonin alajuoksulta paenneiden intiaanien '
+            + 'mukana, ja couac korvaa monissa ruoissa yhä leivän tai riisin. Kuvassa '
+            + 'wayananainen kantaa juuri valmistettua casabe-leipää Antecume Patan '
+            + 'kylässä.',
+          lyhyt: 'Myrkyllisestä katkerasta maniokista valmistettu couac-jauho on Guayanan ruokavalion perusta.',
+          selite: 'Wayananainen kantaa suurta maniokista paahdettua casabe-leipää '
+            + 'Antecume Patan kylässä vuonna 1979.',
+          lahde: 'Paul Scot, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Maniokki',
+        },
+        {
+          otsikko: 'Kaupungin nimi maailman mausteena',
+          aika: '1652',
+          tiedosto: 'Piment de cayenne marché.jpg',
+          teksti: 'Chilipippureita on viljelty Väli- ja Etelä-Amerikassa jo tuhansia '
+            + 'vuosia, ja Kolumbus toi ne Eurooppaan vuonna 1493. Englantilainen '
+            + 'kasvitieteilijä Nicholas Culpeper käytti ilmausta "cayenne pepper" '
+            + 'ensimmäisiä kertoja jo vuonna 1652 — nimi ei viitannut siihen, mistä '
+            + 'pippuri oli kotoisin, vaan siihen, että Cayennen kaupunki toimi sen '
+            + 'vientisatamana. Nykyään Cayennenpippuri-nimi kattaa ranskan kielessä '
+            + 'monenlaisia tulisia chilejä. Kouroun lauantaitorilla myydään yhä '
+            + 'tuoreita punaisia ja oransseja chilejä paikallisten ruokien '
+            + 'maustamiseen.',
+          lyhyt: 'Cayennenpippurin nimi periytyy Cayennen kaupungista, joka toimi sen vientisatamana 1650-luvulla.',
+          selite: 'Punaisia ja oransseja chilejä myytävänä Kouroun lauantaiaamun torilla.',
+          lahde: 'Arria Belli, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cayennepippuri',
+        },
+        {
+          otsikko: 'Intialaisten siirtotyöläisten currykeitto',
+          aika: '1850-luvulta',
+          tiedosto: 'Colombo de poisson.jpg',
+          teksti: 'Orjuuden lakkauttamisen jälkeen plantaaseille tarvittiin uutta '
+            + 'työvoimaa, ja vuosina 1853–1885 noin 80 000 intialaista sopimustyöläistä, '
+            + 'suurimmaksi osaksi tamileja Pondicherrystä, muutti Martiniquelle, '
+            + 'Guadeloupeen ja Ranskan Guayanaan. He loivat kotimaansa curryn makua '
+            + 'muistuttavan mausteseoksen paikallisista aineksista: kurkumasta, '
+            + 'korianterista, juustokuminasta, sarviapilasta ja sinapinsiemenistä. '
+            + 'Seosta ja sillä maustettua pataruokaa kutsutaan colomboksi, ja nimi '
+            + 'juontuu tamilin sanasta kulambu, joka tarkoittaa kastiketta. Colombosta '
+            + 'tuli osa guayanalaista kreolikeittiötä kalan, kanan tai lihan, perunan '
+            + 'ja vihreiden papujen kanssa.',
+          lyhyt: 'Intialaisten sopimustyöläisten tuoma colombo-currykeitto on nykyään osa Guayanan kreolikeittiötä.',
+          selite: 'Lautasellinen kalacolomboa riisin kanssa.',
+          lahde: 'Arnaud 25, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Ranskan Guayana',
+        },
+      ],
+    },
+  ],
+  FLK: [
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Falklandinsaarilla ei ole yhtään alkuperäistä maanisäkästä eikä puuta, mutta rannoilla ja jyrkänteillä vilisee elämää: pingviinejä, albatrosseja ja merileijonia, jotka eivät ole oppineet pelkäämään ihmistä.',
+      tehtava: {
+        kysymys: 'Miksi Volunteer Pointin rannalla näkyy kuningaspingviinin poikasia ympäri vuoden?',
+        vaihtoehdot: [
+          'Laji ei muuta koskaan pesimäalueeltaan',
+          'Pesimäkierto kestää 14–16 kuukautta, joten ikäluokat menevät limittäin',
+          'Poikaset syntyvät vasta keskitalvella',
+          'Aikuiset tuovat munia talveksi säilöön',
+        ],
+        oikea: 1,
+        fakta: 'Kuningaspingviinin pesimäkierto kestää 14–16 kuukautta, joten Volunteer Pointin rannalla on poikasia eri kasvuvaiheissa läpi vuoden.',
+      },
+      nostot: [
+        {
+          otsikko: 'Tuhat paria valkoisella rannalla',
+          aika: 'nykyään',
+          tiedosto: 'King Penguins (50779765941).jpg',
+          teksti: 'Falklandin koillisosassa, yksityisen Johnson’s Harbour -tilan mailla, on Volunteer Point: saarten suurin kuningaspingviiniyhdyskunta, jossa pesii noin tuhat paria. Kuningaspingviini on toiseksi suurin pingviinilaji keisaripingviinin jälkeen, ja sen poikanen kasvaa ruskeaksi, vanhempiaan pörhöisemmäksi untuvapalloksi, jota kutsutaan leikkisästi nimellä "okum boy" laivanrakennuksen tiivistysaineen mukaan. Koska pesimäkierto kestää 14–16 kuukautta, rannalla näkyy poikasia eri kasvuvaiheissa ympäri vuoden. Point on luonnonsuojelualue, jonne pääsee vain maanomistajan luvalla, yleensä maastoajoneuvolla kuivan kelin aikaan.',
+          lyhyt: 'Volunteer Pointissa pesii noin tuhat paria kuningaspingviinejä, saarten suurin yhdyskunta.',
+          selite: 'Kuningaspingviinejä Volunteer Pointin valkoisella hiekkarannalla Itä-Falklandilla.',
+          lahde: 'kuhnmi, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Kuningaspingviini',
+        },
+        {
+          otsikko: 'Nopein sukeltaja pesii kivikasalla',
+          aika: 'nykyään',
+          tiedosto: 'Gentoo Penguin colony (4312382659).jpg',
+          teksti: 'Valkokulmapingviini eli gentoopingviini on maailman nopein uiva lintu: se voi sukeltaessaan yltää yli 30 kilometrin tuntinopeuteen, kun se ajaa takaa kalaa ja mustekalaa lähivesillä. Falklandinsaaret ovat lajille yksi maailman tärkeimmistä pesimäalueista, ja yhdyskuntia löytyy kymmeniltä rannoilta, muun muassa Berthan rannalta ja Sea Lion Islandilta. Pari rakentaa pesän pienistä kivistä ja ruohosta, ja naaras munii kaksi munaa; puuttuvat kivet on tapana varastaa naapuripesästä heti tilaisuuden tullen. Toisin kuin monet sukulaisensa, valkokulmapingviini ei vaella kauas pesimäalueeltaan talvellakaan.',
+          lyhyt: 'Valkokulmapingviini on maailman nopein uiva lintu ja pesii kivistä kasatuissa pesissä.',
+          selite: 'Valkokulmapingviinien pesimäyhdyskunta rantaniityllä, pesät pieninä kivikasoina ruohikossa.',
+          lahde: 'dfaulder, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Valkokulmapingviini',
+        },
+        {
+          otsikko: 'Neljännesmiljoona lintua yhdellä luodolla',
+          aika: 'nykyään',
+          tiedosto: 'Black- browed albatross colony, Steeple Jason (3444429624).jpg',
+          teksti: 'Steeple Jason on kapea, asumaton luoto Falklandin luoteisosassa, ja sen rannikkoa reunustaa maailman suurin mustakulma-albatrossiyhdyskunta: ilmakuvalaskennassa vuonna 2010 löytyi yli 180 000 pesää, ja yhdyskunta jatkuu viiden kilometrin matkan. Falklandinsaaret ovat lajin tärkein pesimäalue maailmassa, sillä yli 70 prosenttia koko maailman mustakulma-albatrosseista pesii täällä. Linnut palaavat samalle pesäpaikalle ja usein samalle kumppanille vuosi toisensa jälkeen syys-lokakuussa. Yhdyskunnassa pesivät myös kalliopingviinit ja saarten oma petolintu, harjakarakara, joka on niin ikään yleisimmillään juuri Steeple Jasonilla.',
+          lyhyt: 'Steeple Jasonilla pesii yli 180 000 mustakulma-albatrossiparia, maailman suurin yhdyskunta.',
+          selite: 'Mustakulma-albatrosseja pesimässä Steeple Jasonin rantatörmällä, pesät tiheässä rinteessä.',
+          lahde: 'michael clarke stuff, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Mustakulma-albatrossi',
+        },
+        {
+          otsikko: 'Leijona, joka antoi saarelle nimen',
+          aika: 'nykyään',
+          tiedosto: 'Male southern sea lion.jpg',
+          teksti: 'Patagonianmerileijona on levinnyt laajalti Falklandinsaarten rannikoille, ja juuri se antoi nimen saarten eteläkärjessä olevalle Sea Lion Islandille, jonka rannoilla urospuoliset härkämerileijonat vartioivat haaremejaan. Laji on kärsinyt saarilla rajusti: 1930-luvulla Falklandeilla syntyi vuosittain yli 80 000 poikasta, mutta 1990-luvun alussa enää noin 2 000, todennäköisesti kalastuksen ja elinympäristön muutosten vuoksi. Sea Lion Island on myös saarten tärkein etelänmerinorsun poikasten syntymäpaikka: lokakuun huippukautena rannoilla makaa yli 700 poikivaa emoa valtavien, torvimaista kuonoaan puhaltelevien urosten joukossa.',
+          lyhyt: 'Patagonianmerileijona antoi nimen Sea Lion Islandille, jonka rannoilla se yhä lisääntyy.',
+          selite: 'Uros patagonianmerileijona rantakivikolla Falklandinsaarilla.',
+          lahde: 'Brocken Inaglory, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Patagonianmerileijona',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Ennen isoisän aikaa saaret ehtivät nähdä englantilaisen kapteenin, ranskalaisen siirtokunnan ja brittiläisen kartoitusretkikunnan. Satamassa lepää yhä kymmeniä laivoja, jotka eivät koskaan päässeet Kap Hornin ohi.',
+      tehtava: {
+        kysymys: 'Minä vuonna Bougainville perusti Port Louis’n siirtokunnan Falklandinsaarille?',
+        vaihtoehdot: ['1690', '1764', '1833', '1876'],
+        oikea: 1,
+        fakta: 'Louis-Antoine de Bougainville perusti Port Louis’n siirtokunnan Berkeley Soundin rannalle huhtikuussa 1764.',
+      },
+      nostot: [
+        {
+          otsikko: 'Salmi sai nimen varakreivin mukaan',
+          aika: '1690',
+          tiedosto: 'Hawkins Maiden Land and Falkland Sound accountofvoyages01hawk 0109.jpg',
+          teksti: 'Tammikuussa 1690 englantilainen kapteeni John Strong purjehti Welfare-laivallaan kahden pääsaaren välistä salmea pitkin ja nimesi sen Falklandin kanavaksi kunniaksi Anthony Carylle, 5. Falklandin varakreiville, joka oli rahoittanut matkan laivaston rahastonhoitajana mutta ei koskaan itse käynyt saarilla. Nimi Falkland Sound periytyi myöhemmin koko saariryhmälle. Kuvan kartta on peräisin vuonna 1773 julkaistusta teoksesta, joka kertoo komentaja John Byronin 1760-luvun tutkimusmatkasta samalle salmelle: brittiläiset kartoittivat rannikkoa tarkemmin vasta seuraavan vuosisadan aikana.',
+          lyhyt: 'Kapteeni John Strong nimesi Falklandinsalmen varakreivi Anthony Carylle vuonna 1690.',
+          selite: 'Vanha kartta Falklandinsalmesta ja sen rannikoista, brittiläisen 1700-luvun tutkimusmatkan mukaan.',
+          lahde: 'John Hawkesworth (1773), Wikimedia Commons (public domain)',
+          wiki: 'Falklandinsaaret',
+        },
+        {
+          otsikko: 'Ranskalainen siirtokunta Itälahdella',
+          aika: '1764',
+          tiedosto: 'Port-Saint-Louis.jpg',
+          teksti: 'Huhtikuussa 1764 löytöretkeilijä Louis-Antoine de Bougainville perusti Port Louis’n siirtokunnan Berkeley Soundin rannalle ja toi mukanaan joukon akadialaisia siirtolaisia, jotka olivat menettäneet kotinsa Kanadassa Ranskan ja Britannian sodassa. Ranskalaiset nimesivät koko saariryhmän kotisatamansa Saint-Malon mukaan Îles Malouinesiksi, nimi joka elää yhä espanjankielisessä Islas Malvinas -nimessä. Kuningas Ludvig XV vahvisti Ranskan vallan saarilla syyskuussa 1764, mutta jo kolme vuotta myöhemmin Ranska luovutti siirtokunnan Espanjalle korvausta vastaan. Kuvan kaiverrus on Bougainvillen matkan kronikoitsijan Antoine-Joseph Pernetyn teoksesta.',
+          lyhyt: 'Bougainville perusti ranskalaisen Port Louis’n siirtokunnan Berkeley Soundille 1764.',
+          selite: 'Aikalaiskaiverrus Port Louis’n ranskalaisesta siirtokunnasta Itälahden rannalla.',
+          lahde: 'Antoine-Joseph Pernety (1769), Wikimedia Commons (public domain)',
+          wiki: 'Port Louis, Falklandinsaaret',
+        },
+        {
+          otsikko: 'Beagle kartoittaa satamaa',
+          aika: '1834–39',
+          tiedosto: 'East Falkland Island Stanley Harbour with Ports William and Harriet. Surveyed by Captns Fitzroy and Sullivan R.N. 1834-39 RMG D8539.jpg',
+          teksti: 'Kapteeni Robert FitzRoy toi tutkimusalus Beaglen Falklandinsaarille kahdesti 1830-luvulla, ja hänen miehistönsä kartoitti Port Williamin ja Port Stanleyn satama-alueet niin tarkasti, että karttoja käytettiin vuosikymmenten ajan. Mukana toisella käynnillä 1833 ja uudelleen 1834 oli nuori luonnontutkija Charles Darwin, joka keräsi saarilta fossiileja, ihmetteli saarten omalaatuisia kivijokia ja tapasi ainoan alkuperäisen maanisäkkään, falklandinketun. Kartan reunaan on merkitty myös myöhemmin rakennetun Cape Pembroken majakan kaavakuva ja tiedote sen valosta merenkulkijoille.',
+          lyhyt: 'Robert FitzRoyn Beagle kartoitti Port Stanleyn sataman 1830-luvulla, mukana Charles Darwin.',
+          selite: 'Brittiläinen merikartta Port Stanleyn satamasta ja Cape Pembrokesta, FitzRoyn kartoitusretkeltä.',
+          lahde: 'Robert FitzRoy / Royal Museums Greenwich, Wikimedia Commons (public domain)',
+          wiki: 'Robert FitzRoy',
+        },
+        {
+          otsikko: 'Laivojen hautausmaa satamassa',
+          aika: '1800-luku',
+          tiedosto: "The 'Lady Elizabeth' in Stanley Harbour Falklands 1984.jpg",
+          teksti: 'Kap Hornin kiertäminen oli 1800-luvun purjelaivoille niin raskasta, että moni saapui Port Stanleyn satamaan pahoin vaurioituneena eikä koskaan enää lähtenyt merille. Paikallinen vakuutusasiamies oli usein myös kaupungin johtava liikemies, joka julisti laivan "merikelvottomaksi" ja osti sen sitten itse halvalla varastoksi tai asuintaloksi, sillä puu oli puuttomilla saarilla kallista tuontitavaraa. Rannassa lepää yhä parikymmentä hylkyä, muun muassa rautarunkoinen Lady Elizabeth, joka ajautui rantaan myrskyssä 1936 kuljetettuaan aiemmin lastia vuosikymmenten ajan. Satamaa on kutsuttu maailman suurimmaksi 1800-luvun purjelaivojen hautausmaaksi.',
+          lyhyt: 'Port Stanleyn satamassa lepää yhä parikymmentä 1800-luvun purjelaivan hylkyä.',
+          selite: 'Rautarunkoisen Lady Elizabeth -laivan hylky matalikolla Port Stanleyn satamassa.',
+          lahde: 'Petebutt, Wikimedia Commons (Public domain)',
+          wiki: 'Stanley (Falklandinsaaret)',
+        },
+      ],
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Port Stanleyn peltikattoiset talot hohtavat punaisena ja vihreänä, tuomiokirkon edessä kaartuu valaan leuka ja kuvernöörin talo on kasvanut vuosikymmen kerrallaan yhdeksi rakennukseksi.',
+      tehtava: {
+        kysymys: 'Minkä eläimen leukaluista Christ Church Cathedralin edessä oleva kaari on tehty?',
+        vaihtoehdot: ['Merinorsun', 'Sinivalaan', 'Merileijonan', 'Delfiinin'],
+        oikea: 1,
+        fakta: 'Whalebone Arch on tehty kahden sinivalaan leukaluista, ja se pystytettiin vuonna 1933.',
+      },
+      nostot: [
+        {
+          otsikko: 'Peltikatot joka värissä',
+          aika: 'nykyään',
+          tiedosto: 'Colorful Houses Falkland Islands.jpg',
+          teksti: 'Port Stanleyn talot on tehty ja katettu aallotetulla peltilevyllä, sillä puuttomilla saarilla puutavara piti aina tuoda laivalla ja se oli kallista. Peltikatot maalattiin kirkkaisiin väreihin, punaisesta vihreään ja siniseen, osin siksi, että väri suojasi peltiä ruostumiselta Falklandin kosteassa ja tuulisessa säässä. Yhden paikallistarinan mukaan osa väreistä on peräisin haaksirikkoutuneesta maalilastista, joka huuhtoutui rantaan ja jaettiin asukkaiden kesken. Nykyään värikkäät katot ovat Port Stanleyn tavaramerkki, ja niitä näkee parhaiten sataman yllä kohoavalta mäeltä tai suoraan laivan kannelta saapuessa.',
+          lyhyt: 'Port Stanleyn peltikatot maalattiin kirkkaisiin väreihin suojaksi ja koristeeksi.',
+          selite: 'Port Stanleyn rinnettä peittävät värikkäät peltikattoiset talot, punaista, vihreää ja sinistä.',
+          lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Stanley (Falklandinsaaret)',
+        },
+        {
+          otsikko: 'Kaari kahdesta valaanleuasta',
+          aika: '1892 / 1933',
+          tiedosto: 'Whalebone Arch and Christ Church Cathedral (5617630111).jpg',
+          teksti: 'Christ Church Cathedral vihittiin käyttöön helmikuussa 1892 paikallisesta kivestä, ja se on maailman eteläisin anglikaaninen tuomiokirkko. Sen edustalla kaartuu Whalebone Arch, joka on koottu kahden sinivalaan leukaluusta ja pystytetty vuonna 1933 muistoksi siitä, että brittiläinen siirtokunta oli tuolloin täyttänyt sata vuotta. Leukaluut tuotiin Etelä-Shetlansaarilta Etelä-Georgian valaanpyyntiasemien lahjoituksena, ja niiden valkoiseksi kalkkeutunut pinta erottuu kauas kirkon punaisesta katosta. Kaari on nykyään yksi Port Stanleyn valokuvatuimmista kohteista.',
+          lyhyt: 'Christ Church Cathedralin edessä kaartuu kahdesta sinivalaan leuasta koottu Whalebone Arch.',
+          selite: 'Christ Church Cathedral ja sen edustalla valkoinen, kahdesta valaanleuasta koottu kaari.',
+          lahde: 'Liam Quinn, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Christ Church Cathedral (Falklandinsaaret)',
+        },
+        {
+          otsikko: 'Talo joka kasvoi kuvernööri kerrallaan',
+          aika: '1845–',
+          tiedosto: 'Government House (5618248092).jpg',
+          teksti: 'Government House alkoi rakentua vuonna 1845 kuvernööri Richard Moodyn suunnitelmien mukaan, ja sen keskiosan kivirakennus on saarten vanhimpia. Ensimmäinen kuvernööri muutti taloon vasta 1859, ja sen jälkeen lähes jokainen seuraaja lisäsi taloon oman siipensä tai huoneensa, minkä ansiosta rakennus on nykyään omaperäinen sekoitus eri vuosikymmenten tyylejä. Talo on yhä sekä kuvernöörin koti että työpaikka, ja sen puutarha on yksi harvoista suojaisista paikoista, joissa Falklandin tuulissa voi kasvattaa muutakin kuin heinää. Napaseudun tutkimusmatkailija Ernest Shackleton majoittui talossa käydessään Stanleyssa 1916.',
+          lyhyt: 'Government House alkoi rakentua 1845, ja sitä on laajennettu kuvernööri kerrallaan.',
+          selite: 'Government House, Falklandinsaarten kuvernöörin virka-asunto Stanleyssa, useiden aikakausien siipiä.',
+          lahde: 'Liam Quinn, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Government House, Falklandinsaaret',
+        },
+        {
+          otsikko: 'Majakka joka poltti merileijonaöljyä',
+          aika: '1855',
+          tiedosto: 'Pembroke Lighthouse.jpg',
+          teksti: 'Cape Pembroken majakka pystytettiin 1855 saarten kaakkoiskärkeen sen jälkeen, kun lähellä oleva Billy Rock -matalikko oli tuhonnut jo viisitoista laivaa. Esivalmistettu rautatorni tuotiin laivalla Englannista, ja sen lamppu poltti aluksi rapsiöljyä, jota kului lähes viisi tonnia vuodessa. Kun öljy kävi kalliiksi, majakanvartijat kokeilivat polttoaineeksi merileijonanrasvaa saarten omista laumoista, ennen kuin 1906 tehdyn uudistuksen jälkeen valo muutettiin parafiiniksi ja koneistoksi. Majakka on yhä suojeltu rakennus ja opastaa aluksia Port Stanleyn satamaan.',
+          lyhyt: 'Cape Pembroken majakka rakennettiin 1855, ja sen lamppu poltti aluksi rapsi- ja merileijonaöljyä.',
+          selite: 'Cape Pembroken punavalkoinen rautamajakka Falklandinsaarten kaakkoiskärjessä.',
+          lahde: 'Butterfly voyages, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Cape Pembroke',
+        },
+      ],
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Falklandeilla on enemmän lampaita kuin ihmisiä ja enemmän maastoautoja asukasta kohti kuin missään muualla maailmassa. Kaupungin ulkopuolinen maaseutu tunnetaan yksinkertaisesti nimellä camp.',
+      tehtava: {
+        kysymys: 'Mistä sanasta Falklandin maaseutua tarkoittava termi "camp" on peräisin?',
+        vaihtoehdot: [
+          'Englannin sanasta camp, leiri',
+          'Espanjan ja gauchojen sanasta campo, maaseutu',
+          'Ranskan sanasta champ, pelto',
+          'Ruotsin sanasta kamp, taistelu',
+        ],
+        oikea: 1,
+        fakta: 'Camp-sana juontuu espanjan ja Etelä-Amerikan gauchoperinteen sanasta campo, joka tarkoittaa avointa maaseutua.',
+      },
+      nostot: [
+        {
+          otsikko: 'Enemmän lampaita kuin ihmisiä',
+          aika: '1870-luvulta nykyään',
+          tiedosto: 'Falkland Islands Sheep (1) (20240863280).jpg',
+          teksti: 'Lampaanhoito syrjäytti karjatalouden Falklandeilla 1870-luvulla ja oli omavarainen elinkeino jo vuoteen 1885 mennessä. Noin 3 000 asukasta kohti saarilla laiduntaa yhä puoli miljoonaa lammasta avoimilla valkoisilla heinäniityillä ja rannikon vihreämmillä notkoilla. Pitkään suosituin rotu oli karuun ilmastoon ja niukkaan laiduntamiseen sopeutunut corriedale, mutta viimeisen vuosikymmenen aikana tilat ovat siirtyneet yhä enemmän hienovillaisempaan polwarthiin, koska villan hinta paranee laadun myötä. Villa on yhä saarten perinteinen vientituote, vaikka matkailu on ohittanut sen tulonlähteenä.',
+          lyhyt: 'Falklandeilla laiduntaa noin puoli miljoonaa lammasta, enemmän kuin saarilla on asukkaita.',
+          selite: 'Lampaita laitumella Falklandinsaarten avoimella, puuttomalla maaseudulla.',
+          lahde: 'Mark Morgan, Wikimedia Commons (public domain)',
+          wiki: 'Falklandinsaarten talous',
+        },
+        {
+          otsikko: 'Villa pakataan paaleiksi',
+          aika: 'nykyään',
+          tiedosto: 'Wool packing shed; West Point Island (49638644192).jpg',
+          teksti: 'Kerintäkauden jälkeen villa lajitellaan ja puristetaan suuriksi paaleiksi tilojen omissa villavajoissa, kuten West Point Islandin kuvassa näkyvässä rakennuksessa. Paalit kuljetetaan pienillä aluksilla tai lentäen Port Stanleyhin ja sieltä laivalla eteenpäin, sillä Falklandeilla ei ole omaa villatehdasta. Monilla syrjäisillä tiloilla koko perhe osallistuu kerintään ja pakkaamiseen muutaman viikon ajan vuodessa, ja työ on säilynyt lähes samanlaisena jo 1800-luvun lopulta asti. Villavaja on usein tilan suurin rakennus asuinrakennuksen jälkeen.',
+          lyhyt: 'Kerityn villan paalaus tehdään tilojen omissa villavajoissa, kuten West Point Islandilla.',
+          selite: 'Villapaaleja ja villan lajittelua West Point Islandin villavajassa.',
+          lahde: 'chris lovelock, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Falklandinsaarten talous',
+        },
+        {
+          otsikko: 'Maailman eniten maastoautoja',
+          aika: 'nykyään',
+          tiedosto: 'Land Rover Defender on West Point Island (5545460037).jpg',
+          teksti: 'Falklandinsaarilla on korkein neliveto-omistuksen tiheys koko maailmassa, ja paikallinen suosikki on vuosikymmeniä ollut Land Rover Defender. Stanleyn ulkopuolista maaseutua kutsutaan nimellä camp, joka juontuu espanjan ja Etelä-Amerikan gauchoperinteen sanasta campo, avoin maaseutu. Camp-alueilla ei juuri ole päällystettyjä teitä, joten liikkuminen tilalta toiselle tapahtuu suoraan maaston, jokien ja turvesoiden yli. Halpa diesel tekee nelivedosta arkipäiväistä, vaikka matka naapuritilalle voisi olla kymmeniä kilometrejä. Monella tilalla on useampi Land Rover: yksi lampaiden kokoamiseen, toinen tavarankuljetukseen satamaan.',
+          lyhyt: 'Falklandinsaarilla on maailman korkein neliveto-omistuksen tiheys, suosikkina Land Rover.',
+          selite: 'Land Rover Defender pysäköitynä West Point Islandin karulla, tiettömällä maaseudulla.',
+          lahde: 'Liam Quinn, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Falklandinsaaret',
+        },
+        {
+          otsikko: 'Pikkukone yhdistää saaret',
+          aika: 'nykyään',
+          tiedosto: 'Britten-Norman Islander aircraft of the Falkland Islands Government Air Service (FIGAS) on the compacted gravel airstrip at Sea Lion Island, 2004.jpg',
+          teksti: 'Koska monelle syrjäiselle tilalle ja pikkusaarelle ei pääse teitse eikä aina edes laivalla säällä millä hyvänsä, hallituksen oma lentoyhtiö FIGAS lentää pienillä Britten-Norman Islander -koneilla säännöllisesti saarelta toiselle. Kone laskeutuu ruohikolle tai sorapinnoitteiselle kiitotielle, jonka tilan väki on itse tasoittanut, ja nouseva matkustaja saattaa olla ainoa sinä päivänä. Reitit ja aikataulut suunnitellaan usein vasta samana aamuna sään ja matkustajatarpeen mukaan. Palvelu on monelle camp-tilalle ainoa nopea yhteys kouluun, sairaalaan tai Port Stanleyn kauppoihin.',
+          lyhyt: 'FIGAS-hallituksen lentoyhtiö yhdistää syrjäiset camp-tilat pienkoneilla.',
+          selite: 'FIGAS:n Britten-Norman Islander -pienkone soratasanteella Sea Lion Islandilla.',
+          lahde: 'Ryan Holliday (Wrh2), Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Falkland Islands Government Air Service',
+        },
+      ],
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Falklandinsaaret ovat irronnut palanen Gondwanan mannerta, jonka kivijoet hämmensivät Charles Darwinia ja jonka ainoa alkuperäinen maanisäkäs kuoli sukupuuttoon vain vuosikymmeniä hänen käyntinsä jälkeen.',
+      tehtava: {
+        kysymys: 'Minä vuonna falklandinketuksi kutsuttu warrah kuoli sukupuuttoon?',
+        vaihtoehdot: ['1764', '1833', '1876', '1916'],
+        oikea: 2,
+        fakta: 'Viimeinen falklandinkettu tapettiin vuonna 1876, alle puoli vuosisataa Darwinin käynnin jälkeen.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kivinen pala Afrikkaa',
+          aika: 'n. 200 miljoonaa vuotta sitten',
+          tiedosto: 'Mount Usborne - Flickr - chris lovelock.jpg',
+          teksti: 'Falklandinsaarten kallioperä oli alun perin osa Gondwanan manner-Afrikkaa, lähellä nykyistä Etelä-Afrikan rannikkoa. Kun Gondwana alkoi hajota noin 200 miljoonaa vuotta sitten, saarten pohjana oleva kallioläntti irtosi, ajelehti ja kääntyi matkalla lähes 180 astetta, ennen kuin asettui nykyiselle paikalleen Etelä-Atlantille. Saarten korkein kohta, 705 metriä merenpinnasta kohoava Mount Usborne, koostuu samasta kovasta kvartsiitista kuin monin paikoin näkyvät kivijoet. Permikautisista kerrostumista on löydetty kalojen jälkiä ja Glossopteris-kasvien lehtiä, samoja fossiileja kuin muualla entisen Gondwanan alueella.',
+          lyhyt: 'Falklandinsaarten kallioperä oli osa Gondwanaa ja kääntyi lähes 180 astetta ajelehtiessaan.',
+          selite: 'Mount Usborne, Falklandinsaarten korkein kohta, kvartsiittista kalliota ja karua ylänköä.',
+          lahde: 'chris lovelock, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Falklandinsaarten geologia',
+        },
+        {
+          otsikko: 'Kivijoki joka hämmensi Darwinia',
+          aika: '1833–34',
+          tiedosto: 'East Falkland - Stone Run.jpg',
+          teksti: 'Falklandinsaarten rinteillä virtaa outoja "kivijokia": valkoisen kvartsiitin lohkareiden muodostamia, jopa viiden kilometrin pituisia vyöhykkeitä, jotka näyttävät pysähtyneiltä joilta. Charles Darwin näki niitä Beagle-retkikunnalla 1833 ja 1834 ja pohti pitkään, mikä voisi liikutella niin suuria kiviä ilman virtaavaa vettä. Nykyisin kivijokien tiedetään syntyneen viimeisen jääkauden aikana, kun toistuva jäätyminen ja sulaminen halkaisi kalliota ja siirteli kiviä hitaasti alaspäin routivassa maaperässä. Prosessi pysähtyi ilmaston lämmetessä, joten kivijoet ovat nykyään jäätyneen menneisyyden liikkumattomia jäänteitä.',
+          lyhyt: 'Kivijoet ovat jääkauden aikana syntyneitä kvartsiittilohkareiden vöitä, jotka hämmensivät Darwinia.',
+          selite: 'Valkoisen kvartsiitin lohkareista koostuva kivijoki virtaa kuin pysähtynyt joki rinnettä alas.',
+          lahde: 'P. Hughes, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Falklandinsaarten geologia',
+        },
+        {
+          otsikko: 'Kettu jonka Darwin tuomitsi',
+          aika: '– 1876',
+          tiedosto: 'Charles Hamilton Smith - Falkland Islands Wolf - B1981.25.2204 - Yale Center for British Art.jpg',
+          teksti: 'Falklandinkettu eli warrah oli saarten ainoa alkuperäinen maanisäkäs, susimainen mutta kettua muistuttava peto, joka ei pelännyt ihmistä lainkaan. Charles Darwin tapasi eläimiä käynnillään 1833 ja 1834 ja ennusti niiden häviävän pian, koska ne kävelivät suoraan matkalaisten luo eivätkä osanneet varoa. Ennustus toteutui nopeasti: uudisasukkaat pitivät kettua uhkana lampaille, ja sitä metsästettiin ja myrkytettiin järjestelmällisesti, kunnes viimeinen yksilö tapettiin vuonna 1876. Falklandinketusta tuli näin ensimmäinen tunnettu koiraeläinlaji, joka kuoli sukupuuttoon historiallisena aikana ihmisen toimesta.',
+          lyhyt: 'Falklandinkettu warrah oli saarten ainoa maanisäkäs, ja se kuoli sukupuuttoon 1876.',
+          selite: 'Falklandinketun aikalaiskuva 1800-luvulta, susimainen ruskeankeltainen peto.',
+          lahde: 'Charles Hamilton Smith, Wikimedia Commons (CC0)',
+          wiki: 'Falklandinkettu',
+        },
+        {
+          otsikko: 'Napamatkaaja pyytää apua',
+          aika: '1916',
+          tiedosto: 'Ernest Shackleton, portrait photo by Frank Hurley, 1916.jpg',
+          teksti: 'Toukokuun 31. päivänä 1916 Port Stanleyyn saapui uupunut mies, joka kieltäytyi aluksi kertomasta henkilöllisyyttään ja jota tullimiehet epäilivät jopa saksalaiseksi vakoojaksi maailmansodan aikana. Mies oli napamatkaaja Ernest Shackleton, joka oli juuri purjehtinut pienellä veneellä Etelä-Georgiasta pelastaakseen Endurance-retkikuntansa miehistön Elephant Islandilta. Stanleysta hän lähetti sähkeitä Lontooseen ja järjesti pelastusalukset, ja kaupunkilaiset kuulivat kertomuksen vasta myöhemmin pidetyssä kokouksessa. Falklandinsaaret toimivat tuolloin Etelämantereen tutkimusmatkojen viimeisenä välietappina ennen paluuta sivistyksen pariin.',
+          lyhyt: 'Ernest Shackleton pysähtyi Port Stanleyssa 1916 järjestääkseen apua Endurance-miehistölle.',
+          selite: 'Ernest Shackletonin muotokuva vuodelta 1916, samalta retkikunnalta jonka aikana hän kävi Falklandeilla.',
+          lahde: 'Frank Hurley, Wikimedia Commons (public domain)',
+          wiki: 'Ernest Shackleton',
+        },
+      ],
+    },
+  ],
+  NCL: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Uuden-Kaledonian historia kietoutuu saveen, purjeisiin ja kahleisiin: lapitakeramiikan tekijät antoivat nimen koko Tyynenmeren kulttuurille, James Cook nimesi saaren Skotlannin mukaan, ja Ranska teki siitä vankisiirtolan.',
+      tehtava: {
+        kysymys: 'Miksi James Cook nimesi saaren Uudeksi-Kaledoniaksi vuonna 1774?',
+        vaihtoehdot: [
+          'Vuoristoinen rannikko muistutti häntä Skotlannin ylämaista',
+          'Paikalliset kanakit kutsuivat saarta jo niin',
+          'Hänen laivansa oli nimeltään Caledonia',
+          'Kartografit olivat nimenneet sen etukäteen',
+        ],
+        oikea: 0,
+        fakta: 'Cook nimesi saaren 1774 Skotlannin latinankielisen nimen Caledonia mukaan, koska vuoristoinen rannikko muistutti häntä Skotlannin ylämaista.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kuulovirhe joka nimesi kulttuurin',
+          aika: '1952',
+          tiedosto: 'National Museum of Ethnology, Osaka - Reconstructed Lapita female.jpg',
+          teksti: 'Vuonna 1952 arkeologit Edward Gifford ja Richard Shutler kaivoivat Uuden-Kaledonian Konen seudulla Foué-niemellä muinaista kylää. Kun Gifford kysyi paikalliselta kanakioppaalta löytöpaikan nimeä havaken kielellä, vastaus xapeta’a — paikka, jossa kaivetaan kuoppa — kuultiin väärin ja kirjattiin muistiin muotoon Lapita. Nimestä tuli vahingossa koko kolmituhatvuotisen tyynenmerentakaisen keramiikkakulttuurin nimi, joka ulottuu Uudesta-Guineasta Samoalle asti. Foué on yhä lapitakulttuurin tyyppipaikka, ja sen saviastiat kertovat ensimmäisistä merenkulkijoista, jotka asettuivat saarelle jo kolmisen tuhatta vuotta sitten.',
+          lyhyt: 'Lapitakulttuurin nimi syntyi kuulovirheestä uuskaledonialaisella kaivauksella 1952.',
+          selite: 'Lapitakulttuurin naisen kasvojen kolmiulotteinen rekonstruktio Osakan etnologisessa museossa, tehty säilyneiden ihmisluiden pohjalta.',
+          lahde: 'Yanajin33, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Lapitakulttuuri',
+        },
+        {
+          otsikko: 'Patsaita rannalla',
+          aika: '1774',
+          tiedosto: 'Araucaria columnaris New Caledonia 1.jpg',
+          teksti: 'Syyskuussa 1774 James Cook näki idässä vuoristoisen rannikon, joka muistutti häntä Skotlannin ylämaista, ja nimesi saaren Uudeksi-Kaledoniaksi — Kaledonia on Skotlannin latinankielinen nimi. Etelämpänä, Mänty-saarella, hän näki rannalla suoria pylväsmäisiä puita eikä ollut varma, olivatko ne kasveja vai kivipatsaita. Kyseessä olivat pilariaraukariat, saarelle ainutlaatuiset havupuut, jotka kasvavat suorina kuin mastot yli 60 metrin korkeuteen. Myöhemmät merenkulkijat todella luulivat niitä kaukaa katsottuna purjelaivojen mastoiksi, ja puut ovat siitä lähtien olleet osa Uuden-Kaledonian tunnusomaista rantamaisemaa.',
+          lyhyt: 'James Cook nimesi saaren 1774 Skotlannin mukaan ja luuli pilariaraukarioita patsaiksi.',
+          selite: 'Pilariaraukarioita (Araucaria columnaris) Île des Pinsin rannalla; puiden suora, pylväsmäinen kasvutapa erottuu kauas merelle.',
+          lahde: 'Fourrure, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Pilariaraukaria',
+        },
+        {
+          otsikko: 'Vangit tasoittavat kukkulaa',
+          aika: 'n. 1876',
+          tiedosto: 'Les bagnards sur un chantier de la ville de Noumea, arasement de la butte Conneau.jpg',
+          teksti: 'Kapteeni Tardy de Montravel perusti Port-de-Francen sotilastukikohdan Uuden-Kaledonian etelärannikolle kesäkuussa 1854; paikka sai myöhemmin nimen Nouméa. Napoleon III teki saaresta vankisiirtolan vuonna 1864, ja seuraavan kolmenkymmenen vuoden aikana Ranskasta kuljetettiin sinne yli 22 000 vankia rakentamaan teitä, satamia ja koko kaupunkia. Vuonna 1876 vangit tasoittivat lapioilla ja kottikärryillä Conneaun kukkulan, jotta Nouméa pääsi laajenemaan; samanlaista pakkotyötä tehtiin laitureilla ja kaduilla vuosikymmenten ajan. Vankisiirtolajärjestelmä lakkautettiin virallisesti vasta vuonna 1897.',
+          lyhyt: 'Nouméa perustettiin 1854, ja vangit rakensivat kaupunkia pakkotyöllä 1860–1890-luvuilla.',
+          selite: 'Vankipukuisia miehiä työmaalla Nouméassa Conneaun kukkulaa tasoittamassa lapioin ja kottikärryin, noin 1870–1890-luvulla.',
+          lahde: 'Kakou Serge -kokoelma, Wikimedia Commons (julkinen omistus)',
+          wiki: 'Nouméa',
+        },
+        {
+          otsikko: 'Kapinallinen saapuu laivalla',
+          aika: '1873',
+          tiedosto: 'Louise-Michel.jpg',
+          teksti: 'Pariisin kommuunin kukistuttua 1871 Ranska tuomitsi tuhansia kommunardeja karkotukseen. Opettaja ja anarkisti Louise Michel nousi vankilaiva Virginien kyytiin elokuussa 1873, ja alus saapui Uuteen-Kaledoniaan neljän kuukauden purjehduksen jälkeen samana vuonna — samana vuonna, jona Foggin isoisä teki oman matkansa. Michel asettui Ducosin niemelle muiden kommunardien joukkoon, opetti lukemaan kanakilapsia ja opiskeli paikallista kasvistoa ja kieliä. Vuonna 1878 hän asettui julkisesti kanakikapinallisten puolelle heidän noustessaan ranskalaista maanhimoa vastaan. Michel armahdettiin ja palasi Ranskaan vasta 1880.',
+          lyhyt: 'Kommunardi Louise Michel karkotettiin Uuteen-Kaledoniaan 1873, isoisän matkavuonna.',
+          selite: 'Muotokuva Louise Michelistä Nouméassa noin 1879–1880, kommunardien karkotusvuosien lopulla.',
+          lahde: 'Ranskan kulttuuriministeriö, Wikimedia Commons (PD)',
+          wiki: 'Louise Michel',
+        },
+      ],
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Uuden-Kaledonian luonto on eristyksen ihme: maailman toiseksi suurin suojattu koralliriutta, lentokyvytön kagu-lintu ja nikkelipitoinen punainen maaperä ovat muovanneet lajeja, joita ei tavata missään muualla.',
+      tehtava: {
+        kysymys: 'Miksi kagu-lintu ei pysty lentämään?',
+        vaihtoehdot: [
+          'Sen siivet ovat kutistuneet, koska saarella ei ollut nisäkäspetoja',
+          'Se on liian raskas siipiinsä nähden',
+          'Se menetti lentokykynsä ihmisen tuomien kissojen vuoksi',
+          'Se ei koskaan opi lentämään pesästä pudottua',
+        ],
+        oikea: 0,
+        fakta: 'Kagun siivet ovat kutistuneet miljoonien eristyksessä vietettyjen vuosien aikana, koska Uudessa-Kaledoniassa ei ollut maanisäkäspetoja.',
+      },
+      nostot: [
+        {
+          otsikko: 'Toiseksi suurin riutta maailmassa',
+          aika: '2008',
+          tiedosto: 'Lagoons and Reefs of New Caledonia (5638319850).jpg',
+          teksti: 'Uuden-Kaledonian ympärillä kiertää noin 1 600 kilometriä pitkä suojariutta, pituudeltaan maailman toiseksi suurin heti Australian Suuren valliriutan jälkeen. Sen sisäpuolelle jää noin 24 000 neliökilometrin laguuni, yksi maailman laajimmista, jonka vedessä elää satoja korallilajeja ja tuhansia kalalajeja. Unesco liitti kuusi laguunialuetta maailmanperintöluetteloon vuonna 2008 nimellä Uuden-Kaledonian laguunit. Riutan suojissa elävät muun muassa uhanalaiset merikilpikonnat, valaat ja maailman kolmanneksi suurin jäljellä oleva dugonkiparvi, joka viihtyy laguunin meriruohoniityillä.',
+          lyhyt: 'Uuden-Kaledonian riutta on maailman toiseksi pisin, ja Unesco suojeli sen laguunit 2008.',
+          selite: 'Uuden-Kaledonian koralliriuttaa ja turkoosia laguunia satelliittikuvassa Balabio-saaren ja Grande Terren edustalla.',
+          lahde: 'NASA Goddard Space Flight Center, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'New Caledonian barrier reef',
+        },
+        {
+          otsikko: 'Lintu joka unohti lentää',
+          aika: 'nykyään',
+          tiedosto: 'Kagu 0A2A2595.jpg',
+          teksti: 'Kagu on harmaa, huipputukkainen lintu, joka elää vain Uuden-Kaledonian vuoristometsissä eikä lennä lainkaan: sen siivet ovat kutistuneet miljoonien eristyksessä vietettyjen vuosien aikana, koska saarella ei ollut maanisäkäspetoja. Lintu metsästää sammakkoeläimiä ja hyönteisiä haistamalla ne maasta, mikä on poikkeuksellista linnuille. Kun ihminen toi saarelle koiria, kissoja ja rottia, kagu-kanta romahti lähes sukupuuttoon; 1990-luvulla lintuja arvioitiin olevan enää parisataa. Suojeluohjelmat ja pedottomat aidatut alueet ovat sittemmin kasvattaneet kantaa, ja kagu on nykyään Uuden-Kaledonian tunnetuin luontosymboli.',
+          lyhyt: 'Kagu on lentokyvytön, hajuaistiaan käyttävä lintu, joka elää vain Uudessa-Kaledoniassa.',
+          selite: 'Villi kagu Uuden-Kaledonian vuoristometsässä; linnun harmaa höyhenpuku ja pystyssä oleva töyhtö erottuvat selvästi.',
+          lahde: 'JJ Harrison, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Kagut',
+        },
+        {
+          otsikko: 'Punainen maa täynnä metalleja',
+          aika: 'nykyään',
+          tiedosto: 'Landscape, south of New Caledonia.jpg',
+          teksti: 'Uuden-Kaledonian eteläosan maaperä hehkuu punaruskeana, koska se on täynnä nikkeliä ja rautaoksideja: saarella on noin kymmenesosa koko maailman tunnetuista nikkelivaroista. Tällaisella myrkyllisellä, ravinneköyhällä maaperällä kasvaa oma kasviyhteisönsä, maquis minier, jossa lähes 90 prosenttia kasvilajeista ei kasva missään muualla maailmassa. Osa kasveista on sopeutunut niin pitkälle, että ne keräävät nikkeliä kudoksiinsa suojautuakseen kasvinsyöjiltä. Kaivostoiminta on tuhonnut ja pirstonut suuria osia elinympäristöstä, ja nykyisin osaa vanhoista kaivosalueista pyritään ennallistamaan istuttamalla takaisin alkuperäisiä lajeja.',
+          lyhyt: 'Nikkelipitoinen punainen maa kasvattaa ainutlaatuista maquis minier -kasvillisuutta.',
+          selite: 'Punaruskeaa, nikkelipitoista kaivosmaisemaa Uuden-Kaledonian eteläosassa.',
+          lahde: 'Bananaflo, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Nickel mining in New Caledonia',
+        },
+        {
+          otsikko: 'Kolme lentävää lajitoveria',
+          aika: 'nykyään',
+          tiedosto: 'Pteropus vetulus.jpg',
+          teksti: 'Uudessa-Kaledoniassa elää kolme lentävän koiraeläimen eli isolepakon lajia, joista Uuden-Kaledonian lenkko (Pteropus vetulus) on saarelle ainutlaatuinen. Nämä suuret, ketun kokoiset lepakot eivät kaikuluotaa vaan käyttävät näköä ja hajua löytääkseen hedelmiä, ja ne ovat tärkeitä siementen levittäjiä ja pölyttäjiä saaren metsissä. Kanakit ovat perinteisesti käyttäneet niiden karvaa koruissa ja seremoniallisten esineiden koristeluun, ja lihaa on syöty juhla-aterioilla. Metsien häviäminen ja metsästys ovat kutistaneet kantoja, ja laji on nykyisin luokiteltu silmälläpidettäväksi.',
+          lyhyt: 'Uuden-Kaledonian lenkko on saarelle ainutlaatuinen isolepakko, kolmesta paikallisesta harvinaisin.',
+          selite: 'Saksalaisen eläintieteilijän Paul Matschien vuonna 1899 piirtämä kuva Uuden-Kaledonian lenkon kallosta tieteellisessä julkaisussa.',
+          lahde: 'Paul Matschie (1899), Wikimedia Commons (PD)',
+          wiki: 'New Caledonia flying fox',
+        },
+      ],
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Uuden-Kaledonian rakennukset kertovat saman tarinan uudelleen: siirtomaavallan pakkotyötä, meren vaaroja ja lopulta kanakikulttuurin nousua uuden arkkitehtuurin keskiöön Nouméan niemellä.',
+      tehtava: {
+        kysymys: 'Kuka rakensi Nouméan katedraalin vuosina 1887–1897?',
+        vaihtoehdot: [
+          'Rangaistussiirtolan vangit',
+          'Paikalliset kanakikäsityöläiset',
+          'Ranskan laivaston insinöörit',
+          'Australiasta tuodut työntekijät',
+        ],
+        oikea: 0,
+        fakta: 'Nouméan katedraali rakennettiin vankityövoimalla vuosina 1887–1897 erään entisen vangin piirustusten mukaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Majakka joka purjehti Pariisista',
+          aika: '1865',
+          tiedosto: 'Nouméa Phare Amédée.JPG',
+          teksti: 'Amédéen majakka valettiin ja koottiin ensin kokeeksi Pariisissa vuonna 1862 ja esiteltiin Lontoon maailmannäyttelyssä samana vuonna. Sen jälkeen 56 metriä korkea rautatorni purettiin 1 265 osaan, pakattiin lähes 388 tonnin painoisiksi kuormiksi ja purjehdittiin Uuteen-Kaledoniaan, missä sen kokoaminen Amédéen saarelle kesti kymmenen kuukautta. Peruskivi laskettiin tammikuussa 1865, ja majakka sytytettiin ensimmäisen kerran marraskuussa 1865. Se oli Ranskan ensimmäinen kokonaan metallinen majakka ja on yhä yksi maailman korkeimmista, 24 kilometrin päässä Nouméasta laivaväylää valaisemassa.',
+          lyhyt: 'Amédéen 56-metrinen rautamajakka koottiin ensin Pariisissa ja purjehdittiin palasina saarelle.',
+          selite: 'Amédéen saaren majakka Uudessa-Kaledoniassa: 56 metriä korkea, kokonaan valuraudasta valmistettu torni.',
+          lahde: 'Bruno Menetrier, Wikimedia Commons (PD)',
+          wiki: 'Amédée Lighthouse',
+        },
+        {
+          otsikko: 'Vangit rakensivat katedraalin',
+          aika: '1888',
+          tiedosto: 'St Joseph Cathedral - Nouméa.jpg',
+          teksti: 'Nouméan katolinen katedraali rakennettiin vuosina 1887–1897 vankityövoimalla erään entisen vangin, Labullen, piirustusten mukaan. Se siunattiin käyttöön lokakuussa 1890, vaikka julkisivu ja kellotornit valmistuivat vasta myöhemmin, ja se vihittiin lopullisesti vuonna 1893. Latinalaisen ristin muotoinen kirkko on 56 metriä pitkä, ja sen kaksi tornia kohoavat 25 metrin korkeuteen Nouméan sataman yllä. Työmaalla samat kädet, jotka oli tuomittu pakkotyöhön, veistivät myös kirkon koristeelliset alttaripaneelit ja saarnastuolin, jotka ovat säilyneet tähän päivään asti.',
+          lyhyt: 'Nouméan katedraalin rakensivat rangaistussiirtolan vangit vuosina 1887–1897.',
+          selite: 'Nouméan Pyhän Joosefin katedraali, kaksitorninen kivikirkko sataman yllä.',
+          lahde: 'Eustaquio Santimano, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Cathédrale Saint-Joseph de Nouméa',
+        },
+        {
+          otsikko: 'Linnake kapinan jäljiltä',
+          aika: '1871',
+          tiedosto: 'Barracks in Fort Teremba.jpg',
+          teksti: 'Fort Teremba perustettiin vuonna 1871 Moindoun seudulle rangaistussiirtolan hallintokeskukseksi, ja vangit rakensivat sieltä tieverkkoa Canalan, Bourailin ja Boulouparisin välille. Kesäkuussa 1878 päällikkö Ataïn johtama kanakikapina syttyi lähiseudulla, kun siirtokunnille takavarikoitiin yhä enemmän maata; kapinan seurauksena alueelle rakennettiin varsinainen puolustuslinnake vartiotorneineen ja muureineen. Fort Teremba suljettiin vankilana 1898 ja rapistui vuosikymmeniksi, kunnes paikallinen yhdistys alkoi vuonna 1984 kunnostaa sitä museoksi. Nykyisin kävijät voivat kiertää entiset kasarmit, vartiotornin ja muurin sisäpihan.',
+          lyhyt: 'Fort Teremba rakennettiin 1871, ja kanakikapina 1878 johti sen vahvistamiseen linnakkeeksi.',
+          selite: 'Fort Teremban kunnostettu kasarmirakennus Moindoussa, Uudessa-Kaledoniassa.',
+          lahde: 'Vincent Chaigneau, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Fort Teremba',
+        },
+        {
+          otsikko: 'Puiset kaaret jäljittelevät majaa',
+          aika: '1998',
+          tiedosto: 'Nuit des musées - Flickr - uphillblok.jpg',
+          teksti: 'Italialainen arkkitehti Renzo Piano suunnitteli Jean-Marie Tjibaoun kulttuurikeskuksen kymmenen kaarevaa, eri kokoista puurakennelmaa, jotka mukailevat kanakien perinteisten majojen muotoa mutta jäävät tarkoituksella keskeneräisen näköisiksi. Keskus avattiin Nouméan niemellä kesäkuussa 1998 ja nimettiin kanakijohtaja Jean-Marie Tjibaoun mukaan. Piano työskenteli tiiviisti paikallisten kanakien kanssa, jotta rakennus yhdistäisi perinteistä puuta ja kiveä nykyaikaiseen lasiin, alumiiniin ja teräkseen. Kartion muotoiset rungot ja säleiköt toimivat myös passiivisena ilmastointina: ne ohjaavat merituulen rakennusten läpi ilman koneellista jäähdytystä.',
+          lyhyt: 'Renzo Pianon suunnittelema kulttuurikeskus avattiin 1998, ja sen kaaret jäljittelevät kanakimajaa.',
+          selite: 'Jean-Marie Tjibaoun kulttuurikeskus valaistuna illalla museoiden yön aikana Nouméassa.',
+          lahde: 'Gérard, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Jean-Marie Tjibaou Cultural Centre',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Uuden-Kaledonian ruokapöydässä kohtaavat kookosmaito, riutan kalat ja perinteinen maauuni: monet ateriat kypsyvät yhä kuumien kivien alla banaaninlehden sisällä, aivan kuten sukupolvia sitten.',
+      tehtava: {
+        kysymys: 'Mistä kielestä bougnan nimi on peräisin ja mitä se tarkoittaa?',
+        vaihtoehdot: [
+          'Drehun kielestä, käärö',
+          'Ranskasta, illallinen',
+          'Havaken kielestä, tuli',
+          'Englannista, kokata',
+        ],
+        oikea: 0,
+        fakta: 'Bougna-nimi tulee drehun kielen sanasta puhnya, joka tarkoittaa kääröä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Ateria banaaninlehden sisällä',
+          aika: 'nykyään',
+          tiedosto: 'Bougna, New-Caledonia.jpg',
+          teksti: 'Bougna on kanakikulttuurin juhla-ateria, jonka nimi tulee drehun kielen sanasta puhnya, käärö. Taro, jamssi, maniokki, makea peruna ja banaani pilkotaan palasiksi, lisätään kanaa, kalaa tai muuta lihaa sekä runsaasti kookosmaitoa, ja koko seos käärittään tulen päällä pehmennettyihin banaaninlehtiin. Käärö sidotaan köynnöksillä ja haudutetaan perinteisesti maakuopassa kuumien kivien alla useita tunteja, kunnes liha irtoaa luusta ja juurekset ovat voin pehmeitä. Bougnaa tarjoillaan edelleen häissä, hautajaisissa ja perhejuhlissa, ja se on Uuden-Kaledonian tunnetuin ruokalaji.',
+          lyhyt: 'Bougna on banaaninlehteen käärittynä haudutettu juuresten, lihan ja kookosmaidon juhla-ateria.',
+          selite: 'Valmis bougna-ateria avattuna banaaninlehdistä: näkyvissä taroa, jamssia ja kanaa kookosmaidossa.',
+          lahde: 'Axelyeti, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bougna',
+        },
+        {
+          otsikko: 'Kookos puristetaan käsin',
+          aika: 'nykyään',
+          tiedosto: 'Pressage de lait de coco, Poindimié – 2017.jpg',
+          teksti: 'Kookospähkinä on Uuden-Kaledonian keittiön kulmakivi: sen valkoinen hedelmäliha raastetaan ja sekoitetaan veteen, minkä jälkeen seos puristetaan kankaan läpi käsin, jolloin syntyy paksua, makeaa kookosmaitoa. Sitä käytetään bougnan lisäksi kalakeitoissa, jälkiruoissa ja juomissa, ja perinteisesti puristaminen on ollut naisten yhteinen askare, jota tehdään ryhmässä kylän laiturilla tai keittokatoksessa. Kookospalmuja kasvaa runsaasti rannikkokylissä, ja pähkinöiden kerääminen, halkaiseminen ja raastaminen kuuluvat monen perheen arkirutiineihin edelleen, vaikka sähköiset raastimet ovat yleistyneet kaupungeissa.',
+          lyhyt: 'Kookosmaito puristetaan yhä käsin raastetusta hedelmälihasta kankaan läpi.',
+          selite: 'Nainen puristaa raastettua kookospähkinää kankaan läpi kookosmaidon valmistamiseksi Poindimiéssä.',
+          lahde: 'Gérard, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Kookospalmu',
+        },
+        {
+          otsikko: 'Riutan väripaletti lautasella',
+          aika: 'nykyään',
+          tiedosto: 'Poisson-perroquets, Poindimié – 2017.jpg',
+          teksti: 'Uuden-Kaledonian laajan laguunin riutoilla elää lukuisia papukaijakalalajeja, joiden kirkkaanväriset suomut ja terävä, papukaijan nokkaa muistuttava hammasrivistö erottavat ne muista riuttakaloista. Kalastajat pyytävät niitä perinteisillä verkoilla ja onkivälineillä matalilta riutta-alueilta, ja saalis grillataan usein samana päivänä hiillosgrillissä suoraan tulella ilman muuta mausteita kuin suolaa ja limeä. Papukaijakalat syövät koralleja jauhaen niitä hampaillaan hienoksi valkoiseksi hiekaksi, jota ne erittävät — yksittäinen kala voi tuottaa kymmeniä kiloja hiekkaa vuodessa, joten laji muovaa myös riutan ympäröimiä hiekkarantoja.',
+          lyhyt: 'Papukaijakalat grillataan tuoreena riutalta pyydystettyinä, ja ne muovaavat rantojen hiekkaa.',
+          selite: 'Tuoreita papukaijakaloja pöydällä Poindimién rannassa, saaliina samalta päivältä.',
+          lahde: 'Gérard, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Papukaijakalat',
+        },
+        {
+          otsikko: 'Maauuni ruokkii arkena',
+          aika: 'nykyään',
+          tiedosto: 'Repas simple Kanak.jpg',
+          teksti: 'Bougnan juhlavan banaaninlehtikäärön rinnalla kanakiperheet käyttävät edelleen arkisempaa maakuoppauunia: kuoppaan kasataan kuumia kiviä, joiden päälle asetetaan juureksia, lihaa tai kalaa ilman erillistä käärettä, ja koko kasa peitetään lehdillä ja mullalla useiksi tunneiksi. Menetelmä ei vaadi patoja eikä metalliastioita, ja se sopii erityisen hyvin silloin, kun ruokaa valmistetaan kylässä isolle joukolle kerralla. Ruoka kypsyy tasaisesti kivien tasaisen lämmön ansiosta, ja maku muistuttaa savustettua ruokaa. Tapa periytyy sukupolvelta toiselle, ja lapset oppivat kuopan kaivamisen ja kivien kuumentamisen jo pieninä.',
+          lyhyt: 'Maakuoppauuni kypsentää juureksia ja lihaa kuumien kivien alla ilman patoja.',
+          selite: 'Maauunista juuri nostettu arkinen kanakiateria Thiossa, Uudessa-Kaledoniassa.',
+          lahde: 'Mau988, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Bougna',
+        },
+      ],
+    },
+    {
+      id: 'kuvataide',
+      nimi: 'Kuvataide',
+      johdanto: 'Kanakien veistotaide puhuu esivanhemmista, klaanien järjestyksestä ja arvokkaimmista materiaaleista: jadesta, puusta ja jopa lentävän koiraeläimen karvasta punotuista koruista, jotka museot ovat tallentaneet ympäri maailmaa.',
+      tehtava: {
+        kysymys: 'Mistä materiaalista o’kono-kirveen terä on hiottu?',
+        vaihtoehdot: [
+          'Jadeiitista',
+          'Basaltista',
+          'Valuraudasta',
+          'Kilpikonnankuoresta',
+        ],
+        oikea: 0,
+        fakta: 'O’kono on kanakien seremoniallinen kirves, jonka pyöreä terä on hiottu vihreästä jadeiitista.',
+      },
+      nostot: [
+        {
+          otsikko: 'Harjalla asuu esi-isä',
+          aika: '1700-luku',
+          tiedosto: 'Kanak roof finial Louvre 96-2-1.jpg',
+          teksti: 'Kanakiklaanin päällikön suuren majan harjalla seisoo flèche faîtière, veistetty kattokeihäs, joka jatkaa majan keskipilaria kohti taivasta. Kärjen kasvot esittävät klaanin perustajaesi-isää, ja koko veistos symboloi yhteyttä elävien ja kuolleiden maailman välillä. Majan pyöreä muoto ei ole sattumaa: se antaa myrskytuulille vähän tarttumapintaa ja luo tilan, jossa kaikki istuvat yhtä kaukana keskustasta keskustelemassa tasa-arvoisesti. Tämä Louvren kokoelmiin päätynyt, houppuusta veistetty kattokeihään fragmentti on peräisin arviolta 1700-luvulta ja kuuluu maailman merkittävimpiin kanakiveistoksiin.',
+          lyhyt: 'Flèche faîtière eli kattokeihäs kruunaa kanakipäällikön majan ja esittää klaanin esi-isää.',
+          selite: 'Houppuusta veistetty kanakikattokeihään fragmentti mustaa taustaa vasten, Louvren Pavillon des Sessionsissa Pariisissa.',
+          lahde: 'Jastrow (valokuva), Wikimedia Commons (PD)',
+          wiki: 'Flèche faîtière',
+        },
+        {
+          otsikko: 'Päällikön jadekirves',
+          aika: '1878',
+          tiedosto: 'O\'kono hache cérémonielle Nouvelle Calédonie MHNT.jpg',
+          teksti: 'O’kono on kanakien seremoniallinen kirves, jonka pyöreä terä on hiottu vihreästä jadeiitista ja jonka puinen varsi on koristeltu punotulla nyörillä ja simpukankuorilla. Ase ei ollut tarkoitettu puunkaatoon vaan vallan ja arvon merkiksi juhlissa ja neuvotteluissa. Tämä tietty kirves kerättiin La Foan seudulta vuonna 1878, samana vuonna kun päällikkö Ataï johti kanakikapinan ranskalaisia maanhimoja vastaan — kapinan, joka johti muun muassa Fort Teremban linnoittamiseen. Kirves on nykyisin Toulousen luonnontieteellisen museon kokoelmissa, ja sen kahvan nyörit on punottu osittain lentävän koiraeläimen karvasta.',
+          lyhyt: 'O’kono-jadekirves on kanakien arvon ja vallan symboli, kerätty La Foasta 1878.',
+          selite: 'Kanakien seremoniallinen o’kono-kirves: jadeiittiterä ja koristeltu puuvarsi, Toulousen luonnontieteellisessä museossa.',
+          lahde: 'Didier Descouens, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kanakit',
+        },
+        {
+          otsikko: 'Kaulakoru lentävän koiraeläimen karvasta',
+          aika: '1800-luvun loppu',
+          tiedosto: 'Collier en poil de roussette et barillet de jade MHNT ETH AC NC 234 Nouvelle Calédonie Savès.jpg',
+          teksti: 'Tämä kanakikaulakoru on tehty seitsemästä jadeiittihelmestä, jotka on pujotettu kahteen punottuun nauhaan lentävän koiraeläimen eli roussetten karvasta. Jade oli kanakikulttuurissa arvokkainta materiaalia, jota vaihdettiin klaanien välillä juhlissa ja liittoutumissa, ja koruja käytettiin osoittamaan kantajansa asemaa. Roussette taas oli sekä ravintoa että arvostettu käsityömateriaali: sen pehmeä, kiiltävä karva sopi punomiseen erinomaisesti. Ranskalainen Théophile Savès keräsi tämän korun 1800-luvun loppupuolella, ja se kuuluu nykyisin Toulousen luonnontieteellisen museon kokoelmiin osana laajempaa uuskaledonialaista esinekokoelmaa.',
+          lyhyt: 'Kanakikaulakoru on tehty jadehelmistä ja lentävän koiraeläimen karvasta punotuista nauhoista.',
+          selite: 'Seitsemän jadeiittihelmeä kahdella lentävän koiraeläimen karvasta punotulla nauhalla, Toulousen luonnontieteellisessä museossa.',
+          lahde: 'Didier Descouens, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Kanakit',
+        },
+        {
+          otsikko: 'Veistetty vartija kulttuurikeskuksessa',
+          aika: 'nykyään',
+          tiedosto: 'Kanak Totem (45954416171).jpg',
+          teksti: 'Jean-Marie Tjibaoun kulttuurikeskuksen näyttelyissä ja ulkoalueilla seisoo useita puuveistoksia, joita kutsutaan usein toteemeiksi, vaikka termi ei ole täysin osuva kanakikulttuurille: veistokset ovat pikemminkin esi-isien tai suojelevien henkien kuvia kuin klaanitunnuksia länsimaisessa mielessä. Nykykanakiveistäjät jatkavat perinnettä yhdistäen perinteisiä aiheita — kasvoja, käsiä, eläinhahmoja — uusiin materiaaleihin ja mittakaavoihin. Keskus toimii sekä museona että työpajana, jossa nuoret taiteilijat oppivat veistämistä vanhemmilta mestareilta, ja monet keskuksessa esillä olevista teoksista on tehty juuri tätä tarkoitusta varten.',
+          lyhyt: 'Puuveistos Tjibaoun kulttuurikeskuksessa jatkaa kanakien esi-isien kuvaamisen perinnettä.',
+          selite: 'Veistetty puinen hahmo ulkona Jean-Marie Tjibaoun kulttuurikeskuksen alueella Nouméassa.',
+          lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Kanakit',
+        },
+      ],
+    },
+  ],
+
+  NFK: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Pieni saari keskellä Tyyntämerta on nähnyt neljä alkua: kadonneen polynesialaisen kylän, Cookin löytöretken, kaksi rangaistussiirtolaa ja Bounty-kapinallisten jälkeläisten uuden kodin.',
+      nostot: [
+        {
+          otsikko: 'Kylä joka katosi',
+          aika: 'n. 1200–1450',
+          tiedosto: 'Norfolk Island Emily Bay.jpg',
+          teksti: 'Emily Bayn hiekkarannan tuntumassa asui satoja vuosia ennen eurooppalaisia pieni polynesialainen yhteisö. Arkeologit löysivät 1990-luvulla rannalta rakennusten jäänteitä sekä kaksi kivikirvestä eli adzea ja satoja työstöjätteitä, joita käytettiin puutöihin ja kanoottien veistoon. 2020-luvulla Sydneyn yliopiston tutkijat löysivät toisen asuinpaikan saaren vastakkaiselta puolelta, mikä osoitti asutuksen ulottuneen laajemmalle. Silti kukaan ei tiedä varmasti, mistä asukkaat tulivat tai minne he lopulta hävisivät: saari oli autio jo kauan ennen kuin James Cook näki sen vuonna 1774.',
+          lyhyt: 'Emily Bayn rannalta löytyi jäänteitä saarta asuttaneesta polynesialaisesta yhteisöstä.',
+          selite: 'Emily Bay uimarantoineen ja norfolkinmäntyineen; taustalla häämöttää Nepeansaari. Juuri tällä rannalla arkeologit löysivät polynesialaisen asutuksen jäänteet.',
+          lahde: 'Steve Daggar, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Norfolkinsaari',
+        },
+        {
+          otsikko: 'Kapteeni näki männyt',
+          aika: '1774',
+          tiedosto: 'Captainjamescookportrait.jpg',
+          teksti: 'Toisella löytöretkellään Tyynellemerelle kapteeni James Cook purjehti laivalla Resolution kohti pohjoista Uudesta-Seelannista. Lokakuussa 1774 miehistö havaitsi asumattoman saaren, jonka rannikolla kasvoi suoria, korkeita puita – myöhemmin niiden mukaan nimetty norfolkinmänty. Cook nimesi saaren Norfolkinsaareksi Norfolkin herttuattaren mukaan ja piti puita lupaavina purjelaivojen mastoiksi sekä paikallista pellavaa köysien raaka-aineeksi. Kumpikaan haave ei toteutunut: mänty osoittautui liian oksaiseksi ja hauraaksi mastoksi, mutta juuri nämä kaksi kasvia saivat Britannian perustamaan saarelle siirtokunnan jo 14 vuotta myöhemmin.',
+          lyhyt: 'James Cook löysi asumattoman Norfolkinsaaren vuonna 1774 ja nimesi sen herttuattaren mukaan.',
+          selite: 'Nathaniel Dance-Hollandin muotokuva kapteeni James Cookista, maalattu noin vuonna 1776 hänen palattuaan toiselta löytöretkeltään.',
+          lahde: 'Nathaniel Dance-Holland, Wikimedia Commons (public domain)',
+          wiki: 'James Cook',
+        },
+        {
+          otsikko: 'Luutnantti ja kaksikymmentäkaksi',
+          aika: '1788–1814',
+          tiedosto: 'Philip Gidley King SLNSW-FL3251488.jpg',
+          teksti: 'Vain seitsemän viikkoa ensimmäisen laivueen saavuttua Sydneyyn, kuvernööri Arthur Phillip lähetti luutnantti Philip Gidley Kingin 22 hengen kanssa perustamaan siirtokuntaa Norfolkinsaarelle 6. maaliskuuta 1788. Tavoitteena oli hyödyntää Cookin mainitsemia mäntyjä ja pellavaa sekä estää Ranskaa anastamasta saarta. Pian kävi ilmi, ettei mänty kelvannut mastoiksi eikä kukaan osannut käsitellä paikallista pellavaa. Väkiluku kasvoi silti yli tuhanteen asukkaaseen, kunnes Britannia päätti lakkauttaa siirtokunnan kalliina pidettynä: viimeiset asukkaat lähtivät ja rakennukset poltettiin vuonna 1814, ettei saari kelpaisi kilpailijoille.',
+          lyhyt: 'Luutnantti Philip Gidley King perusti Norfolkinsaaren ensimmäisen siirtokunnan 1788.',
+          selite: 'Kuvernööri Philip Gidley Kingin muotokuva noin vuodelta 1798, tuntemattoman taiteilijan maalaama, New South Walesin osavaltionkirjaston kokoelmasta.',
+          lahde: 'Tuntematon taiteilija, Wikimedia Commons (public domain)',
+          wiki: 'Norfolkinsaari',
+        },
+        {
+          otsikko: 'Helvetti paratiisissa',
+          aika: '1825–1855',
+          tiedosto: 'Penal settlement at Norfolk Island c 1839 watercolour.jpg',
+          teksti: 'Britannia avasi Norfolkinsaarelle uuden, aiempaa ankaramman rangaistussiirtolan vuonna 1825 pahimmille rikollisille. Komentaja Morisset käytti 1830-luvulla ruoskaa niin ahkerasti, että saaresta tuli tunnettu nimellä "helvetti paratiisissa". Vuonna 1846 komentaja Childs kielsi vangeilta omat ruoanlaittoastiat ja käski luovuttaa kattilat pois – seurauksena William Westwoodin johtama Kattilakapina surmasi neljä vartijaa. Kapinaan osallistuneista kaksitoista hirtettiin lokakuussa 1846. Piispa Robert Wilsonin raportti julmuuksista sai lopulta Britannian sulkemaan siirtolan asteittain, ja viimeiset vangit siirrettiin pois vuoteen 1855 mennessä.',
+          lyhyt: 'Toinen, erityisen ankara rangaistussiirtola toimi saarella vuosina 1825–1855.',
+          selite: 'Akvarellimaalaus Kingstonin rangaistussiirtolasta noin vuodelta 1839: rakennukset, viljelysmaat ja laiva ankkurissa rannan edustalla.',
+          lahde: 'Thomas Seller, Wikimedia Commons (public domain)',
+          wiki: 'Norfolkinsaari',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä syystä William Westwoodin johtama Kattilakapina syttyi vuonna 1846?',
+        vaihtoehdot: [
+          'Vankien palkkoja leikattiin',
+          'Vangeilta vietiin omat ruoanlaittoastiat',
+          'Vartijat kieltäytyivät työstä',
+          'Saarelle tuotiin uusia vankeja',
+        ],
+        oikea: 1,
+        fakta: 'Komentaja Childs kielsi vangeilta omat ruoanlaittoastiat vuonna 1846, mikä johti Westwoodin johtamaan Kattilakapinaan.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Norfolkinsaaren luonto on kehittynyt miljoonien vuosien eristyksissä: maailmankuulu koristepuu, äärimmäisen harvinainen papukaija ja pensas, josta on jäljellä enää kourallinen yksilöitä.',
+      nostot: [
+        {
+          otsikko: 'Puu joka valloitti maailman',
+          aika: '1774 lähtien',
+          tiedosto: 'Norfolk Island Hill Overlooking Coast.jpg',
+          teksti: 'Norfolkinmänty (Araucaria heterophylla) ei ole oikea mänty vaan araukaria-sukuinen havupuu, joka kasvaa luonnossa vain Norfolkinsaarella lähisaarineen. James Cook piti sen suoria, jopa 60 metriä korkeita runkoja täydellisinä purjelaivojen mastoiksi, mutta puu osoittautui liian oksaiseksi ja hauraaksi. Sen sijaan puusta tuli menestys toisella tavalla: 1800-luvulta lähtien sitä on istutettu koristepuuksi rantabulevardeille ja puutarhoihin ympäri lämmintä maailmaa Australiasta Kaliforniaan, ja ruukkukasvina se tunnetaan monissa kodeissa joulukuusen korvikkeena. Norfolkinsaarella puu on yhä maiseman tunnusmerkki ja saaren lipun keskeinen kuva.',
+          lyhyt: 'Norfolkinsaaren oma havupuu epäonnistui mastopuuna mutta valloitti maailman koristepuuna.',
+          selite: 'Norfolkinmäntyjä kasvaa rykelmänä saaren rannikkokalliolla, jonka juurelta avautuu näkymä merelle.',
+          lahde: 'Leon Perrie, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Norfolkinsaari',
+        },
+        {
+          otsikko: 'Papukaija joka ei antanut periksi',
+          aika: '1988 lähtien',
+          tiedosto: 'Cyanoramphus cookii -Palm Glen, Norfolk Island, Australia-8.jpg',
+          teksti: 'Norfolkinsaarenviherkaija (Cyanoramphus cookii), paikallisesti "vihreä papukaija", on yksi maailman uhanalaisimmista linnuista. Rotat, kissat sekä kilpailevat tuontipapukaijat ja kottaraiset veivät sen pesäpaikat ja munat niin tehokkaasti, että vuonna 1988 luonnossa laskettiin enää 32 yksilöä. Tiukka suojeluohjelma – pesäpönttöjä, petoeläinten pyyntiä ja tarkkaa seurantaa – nosti kannan vuoteen 2013 mennessä 50–100 lintuun, joista vain kymmenkunta oli munivia naaraita. 2020-luvulla laji on levinnyt kansallispuiston rajojen ulkopuolellekin, mutta sen tulevaisuus riippuu yhä pesäpönttöjen huollosta ja vieraspetojen torjunnasta.',
+          lyhyt: 'Norfolkinsaarenviherkaijan kanta romahti 32 yksilöön 1988, mutta suojelutyö on kasvattanut sitä.',
+          selite: 'Norfolkinsaarenviherkaija piiloutuu puiden lehvästöön Palm Glenin metsässä, tunnistettavissa punaisesta otsatäplästään.',
+          lahde: 'Paul Gear, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Norfolkinsaarenviherkaija',
+        },
+        {
+          otsikko: 'Pensas jota mahtuu kahteen ryhmään',
+          aika: 'nykyään',
+          tiedosto: 'Hibiscus insularis.jpg',
+          teksti: 'Phillipinsaaren hibiskus (Hibiscus insularis) kasvaa luonnonvaraisena vain kahdessa pienessä pensasryhmässä Phillipinsaarella – koko luonnonkanta on käytännössä yhden kasviyksilön eli genotyypin klooneja. Kukka avautuu kermanvalkoisena, keskustaltaan tummanpunaisena, ja muuttuu iän myötä punertavammaksi. Se on selvinnyt sitkeästi vuosikymmeniä laiduntaneiden vuohien, sikojen ja kanien keskellä, kun muu kasvillisuus tuhoutui ympäriltä lähes kokonaan. Eläinten hävittämisen jälkeen pensaan ympärille on noussut uusia taimia, ja lajia kasvatetaan varmuuden vuoksi myös kasvitieteellisissä puutarhoissa muualla.',
+          lyhyt: 'Phillipinsaaren hibiskuksesta on luonnossa jäljellä vain kaksi pensasryhmää.',
+          selite: 'Hibiscus insularis -pensaan kermanvalkoinen, tummanpunaiskeskustainen kukka Melbournen kasvitieteellisessä puutarhassa.',
+          lahde: 'Melburnian, Wikimedia Commons (CC BY 2.5)',
+          wiki: 'Norfolkinsaari',
+        },
+        {
+          otsikko: 'Punainen saari vihertyy',
+          aika: '1980-luvulta nykyään',
+          tiedosto: 'Norfolk Island Philip Island.jpg',
+          teksti: 'Phillipinsaari näytti 1900-luvulla Norfolkinsaarelta katsottuna punaruskealta paljaalta kalliolta: siirtolan aikana sinne tuodut vuohet, siat ja kanit olivat syöneet kasvillisuuden loppuun, ja paljas maaperä oli huuhtoutunut mereen. Vuohet ja siat hävitettiin 1900-luvun alkupuolella, ja viimeinen kani tapettiin vasta 1988 laajan myrkytys- ja pyyntikampanjan jälkeen. Ilmavoimien Hercules-kone levitti 1980-luvun lopulla norfolkinmännyn siemeniä ilmasta, ja luonto on palannut yllättävän nopeasti: kasvillisuus on vallannut suuren osan aiemmin paljaista rinteistä, ja merilinnut pesivät koloissa, joissa ei ennen ollut edes maaperää.',
+          lyhyt: 'Phillipinsaaren eroosion aiheuttaneet vieraseläimet hävitettiin, ja saari on vihertynyt.',
+          selite: 'Phillipinsaari ja pieni Nepeansaari kuvattuina Norfolkinsaarelta; taustalla näkyy saaren eroosion paljastamaa punertavaa kalliota.',
+          lahde: 'Steve Daggar, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Norfolkinsaari',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka moneen yksilöön Norfolkinsaarenviherkaijan kanta romahti vuonna 1988?',
+        vaihtoehdot: ['8', '32', '100', '200'],
+        oikea: 1,
+        fakta: 'Vuonna 1988 luonnossa laskettiin enää 32 norfolkinsaarenviherkaijaa.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Kingstonin rannalla seisoo yli 40 kivi- ja hiekkakivirakennusta, jotka vangit muurasivat kahden rangaistussiirtolan aikana. Osa niistä toimii yhä, osa on raunioina – yhdessä ne ovat Unescon maailmanperintökohde.',
+      nostot: [
+        {
+          otsikko: 'Kivitalot jotka vangit muurasivat',
+          aika: '1788–1855, Unesco 2010',
+          tiedosto: 'Norfolk Island convict buildings.jpg',
+          teksti: 'Kingstonin ja Arthur’s Valen historiallinen alue (KAVHA) on yli 40 rakennuksen ja rauniokohteen kokonaisuus, joka syntyi kahden rangaistussiirtolakauden aikana 1788–1855. Vankien muuraamat hiekkakivirakennukset seisovat rivissä niin sanotulla Quality Row’lla, ja niiden joukossa on entisiä varastoja, upseerien asuntoja ja hallintorakennuksia. Alue on ainoa paikka Australiassa, josta löytyy todisteita sekä polynesialaisesta asutuksesta että rangaistussiirtolasta ja myöhemmästä Pitcairn-siirtolaisten asutuksesta. Vuonna 2010 KAVHA liitettiin Unescon rangaistussiirtolakohteiden maailmanperintölistalle yhdessä kymmenen muun paikan kanssa.',
+          lyhyt: 'Kingstonin historiallinen alue käsittää yli 40 vankien rakentamaa rakennusta ja raunioita.',
+          selite: 'Kaksikerroksinen hiekkakivirakennus pylväikköverantoineen Kingstonin Quality Row’lla, kirkkaan sinistä taivasta vasten.',
+          lahde: 'Steve Daggar, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Norfolkinsaari',
+        },
+        {
+          otsikko: 'Talo joka nousi tuhkasta',
+          aika: '1829',
+          tiedosto: 'Government House, Norfolk Island.jpg',
+          teksti: 'Norfolkinsaaren ensimmäinen kuvernöörintalo rakennettiin 1803, mutta se poltettiin 1814, kun ensimmäinen siirtokunta hylättiin eikä sitä haluttu jättää kilpailijoiden käyttöön. Kun ankarampi rangaistussiirtola perustettiin 1825, uusi kuvernöörintalo muurattiin samalle paikalle vanhojen perustusten päälle ja valmistui 1829. Rakennus on Australasian vanhin yhä käytössä oleva virka-asunto ja ainoa, joka sijaitsee Unescon maailmanperintöalueella. Se on toiminut Norfolkinsaaren hallintovirkamiehen residenssinä lähes kahdensadan vuoden ajan, ja sen nurmikentillä kasvaa yhä samoja norfolkinmäntyjä kuin siirtolan aikaan.',
+          lyhyt: 'Government House on Australasian vanhin yhä käytössä oleva virka-asunto, valmistui 1829.',
+          selite: 'Government Housen pitkä pylväikköveranta ja hoidettu nurmikenttä, taustalla korkeita norfolkinmäntyjä.',
+          lahde: 'Kerry Raymond, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Norfolkinsaari',
+        },
+        {
+          otsikko: 'Viisikulmainen vankila',
+          aika: '1836–1847',
+          tiedosto: 'Norfolk Island jail.jpg',
+          teksti: 'Komentaja Andersonin käskystä Kingstoniin alettiin 1836 rakentaa uutta vankilaa kaikkein hankalimmille vangeille. Rakennus valmistui vasta 1847, ja sen pohjapiirros oli harvinaisen moderni: viisikulmainen, säteittäinen muoto mahdollisti kaikkien 84 sellin ja kymmenen pihan valvonnan yhdestä keskuspisteestä. Vankilaa käytettiin erityisrangaistuksena kaikkein kurittomimmille vangeille, joilta vaadittiin raskaampia työtehtäviä kuin muilta. Rakennuksesta on jäljellä enää muureja ja tämä koristeellinen hiekkakiviportti, joka johti vankilan sisäpihalle; suurin osa muurien sisäpuolisista rakennuksista purettiin 1800-luvun lopulla.',
+          lyhyt: 'Uusi vankila valmistui 1847 harvinaisen viisikulmaisella pohjapiirroksella.',
+          selite: 'Koristeellinen hiekkakiviportti, joka on jäänyt jäljelle Kingstonin vankilan muurista; taustalla nurmikenttää ja mäntyjä.',
+          lahde: 'Steve Daggar, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Norfolkinsaari',
+        },
+        {
+          otsikko: 'Kirkko jonka laivanrakentajat pystyttivät',
+          aika: '1875–1880',
+          tiedosto: 'Norfolk Island St Barnabas Chapel.jpg',
+          teksti: 'Melanesian lähetystyön päämaja siirtyi Norfolkinsaarelle 1860-luvulla, ja St Barnabasin kappeli rakennettiin 1875–1880 muistomerkiksi piispa John Coleridge Pattesonille, joka surmattiin lähetystyössä Salomonsaarilla 1871. Kappelin kattorakenteen tekivät lähetysoppilaat, joista monet olivat kotoisin merenkulkuyhteisöistä: katto on veistetty kuin ylösalaisin käännetty laivanrunko, kokonaan ilman nauloja. Penkkien päädyissä on koristeena helmiäissisustusta, ja ruusuikkunan on suunnitellut brittiläinen taidelasiyhtiö. Penkit on aseteltu vastakkain käytävän yli, sillä kappeli rakennettiin alun perin koulukappeliksi melanesialaisille oppilaille.',
+          lyhyt: 'St Barnabasin kappeli rakennettiin 1875–1880 muistoksi murhatulle piispa Pattesonille.',
+          selite: 'St Barnabasin kappelin puu- ja hiekkakivijulkisivu ruusuikkunoineen sekä erillinen valkoinen kellotorni pihalla.',
+          lahde: 'Steve Daggar, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Norfolkinsaari',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minä vuonna Kingstonin ja Arthur’s Valen historiallinen alue liitettiin Unescon maailmanperintölistalle?',
+        vaihtoehdot: ['1855', '1980', '2010', '2020'],
+        oikea: 2,
+        fakta: 'KAVHA liitettiin Unescon maailmanperintölistalle vuonna 2010 osana Australian rangaistussiirtolakohteita.',
+      },
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Norfolkinsaaren noin 2 000 asukkaasta suuri osa polveutuu Bounty-laivan kapinallisista ja heidän tahitilaisista kumppaneistaan. Oma kieli ja tiivis suku tekevät saaren arjesta ainutlaatuisen.',
+      nostot: [
+        {
+          otsikko: 'Koko kylä yhdellä laivalla',
+          aika: '1856',
+          tiedosto: 'Descendants of the mutineers, 1862.jpg',
+          teksti: 'Pitcairnsaari oli 1850-luvulle tultaessa käynyt liian pieneksi kasvavalle yhteisölle, joka polveutui Bounty-laivan kapinallisista ja heidän tahitilaisista kumppaneistaan. Britannian hallitus tarjosi koko kansalle tyhjäksi jääneen Norfolkinsaaren, ja pitcairnilaiset äänestivät muuton puolesta. Kaikki 193 asukasta – sekä yksi matkalla syntynyt vauva – nousivat laivaan Morayshire koko irtaimistoineen, ja viiden viikon purjehduksen jälkeen he saapuivat Kingstoniin 8. kesäkuuta 1856. Aluksi he asuivat parakeissa, mutta vuoteen 1857 mennessä koko yhteisö oli asettunut tyhjilleen jääneisiin siirtolan kivitaloihin, joissa monien jälkeläiset asuvat yhä.',
+          lyhyt: 'Koko Pitcairnsaaren väestö, 193 henkeä, muutti Norfolkinsaarelle laivalla Morayshire 1856.',
+          selite: 'Neljä Bounty-kapinallisten poikaa, Matthew Quintalin ja John Adamsin jälkeläisiä, valokuvattuna Norfolkinsaarella vuonna 1862.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
+          wiki: 'Pitcairnsaaret',
+        },
+        {
+          otsikko: 'Kieli jota puhutaan vain täällä',
+          aika: '1856 lähtien',
+          tiedosto: 'Norfuk language by SA1.svg',
+          teksti: 'Pitcairnilaiset toivat mukanaan oman kielensä, joka oli syntynyt Bounty-laivan englanninkielisten merimiesten ja heidän tahitilaisten kumppaniensa yhteiselosta 1790-luvulla. Norfolkinsaarella kieli kehittyi omaan suuntaansa ja tunnetaan nykyään nimellä norfuk; se on englannin ohella saaren toinen virallinen kieli. Siinä 1700-luvun englannin sanasto ja lauserakenteet sekoittuvat tahitiin, ja monet sanat viittaavat saaren omaan historiaan ja maastoon. Puhujia on enää muutama sata, ja Unesco luokittelee norfukin selvästi uhanalaiseksi, sillä yhä useampi lapsi kasvaa pelkän englannin ympäröimänä.',
+          lyhyt: 'Norfuk on englannin ja tahitin sekoituksesta syntynyt, nykyään uhanalainen saaren oma kieli.',
+          selite: 'Kartta, joka näyttää norfukin ja pitkernin puhujien osuuden Norfolkinsaaren eri tilastoalueilla vuoden 2021 väestönlaskennassa.',
+          lahde: 'Schestos, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Pitcairnin kieli',
+        },
+        {
+          otsikko: 'Kriketti nurmikentällä',
+          aika: '1908',
+          tiedosto: 'Norfolk Island - watching cricket (2807965734).jpg',
+          teksti: 'Pienellä, tiiviillä saarella yhteisölliset tapahtumat ovat aina olleet arjen kohokohtia. Vuoden 1908 valokuvassa norfolkinsaarelaiset perheineen kokoontuvat seuraamaan kriketinpeliä avoimella nurmikentällä norfolkinmäntyjen katveessa – lapset istuvat ruohikolla ja aikuiset seisoskelevat parhaissaan puhumassa keskenään. Tällaiset kokoontumiset olivat tärkeitä paitsi ajanvietteenä myös siksi, että ne pitivät yhteisön kokonaisena: samat suvut ovat tavanneet toisiaan samoilla kentillä sukupolvesta toiseen jo 1850-luvulta lähtien. Nykyäänkin urheilu, kirkkopyhät ja erityisesti Bounty Day -juhla 8. kesäkuuta kokoavat koko pienen saaren yhteen.',
+          lyhyt: 'Vuoden 1908 valokuva näyttää norfolkinsaarelaiset kokoontuneena kriketinpeliin.',
+          selite: 'Mustavalkoinen valokuva vuodelta 1908: perheitä pukeutuneena aikansa juhla-asuihin norfolkinmäntyjen reunustamalla nurmikentällä.',
+          lahde: 'NSW:n valtionarkisto, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Norfolkinsaari',
+        },
+        {
+          otsikko: 'Kylä jossa kaikilla on sama sukunimi',
+          aika: 'nykyään',
+          tiedosto: 'Bounty Folk Museum.jpg',
+          teksti: 'Lähes puolet Norfolkinsaaren asukkaista polveutuu samoista yhdeksästä Bounty-kapinallisesta, joten saarella on käytössä vain kourallinen sukunimiä: Christian, Quintal, Adams, Young, McCoy, Evans, Buffett ja Nobbs. Puhelinluettelossa on noin 40 Quintalia, 37 Evansia ja 18 Adamsia, joten pelkkä sukunimi ei riitä erottamaan ketään. Siksi useimmat saarelaiset tunnetaan lempinimillä, jotka on painettu puhelinluetteloon oikeiden nimien rinnalle: "Dar Bizziebee" on Darlene Buffett, "Chinny" on Rob Adams ja "Moonie" jompikumpi kahdesta John Christianista. Saaren oma Bounty Folk -museo kokoaa yhteen tämän sukuhistorian esineitä ja tarinoita.',
+          lyhyt: 'Harvat sukunimet pakottivat norfolkinsaarelaiset keksimään lempinimet puhelinluetteloa varten.',
+          selite: 'Vanha avovene Bounty Folk -museon seinustalla; museo kertoo Bounty-kapinallisten jälkeläisten sukuhistoriasta.',
+          lahde: 'Dr Bob Hall, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Bountyn kapina',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi moni norfolkinsaarelainen tunnetaan puhelinluettelossa lempinimellä eikä sukunimellä?',
+        vaihtoehdot: [
+          'Sukunimet ovat salaisia',
+          'Samoja harvoja sukunimiä on niin paljon',
+          'Viralliset nimet ovat liian pitkiä',
+          'Norfuk-kieli ei tunne sukunimiä',
+        ],
+        oikea: 1,
+        fakta: 'Lähes puolet saarelaisista polveutuu samoista yhdeksästä kapinallisesta, joten sukunimiä on vain kourallinen ja lempinimet erottavat ihmiset toisistaan.',
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Norfolkinsaari ja sen pikkuiset naapurisaaret ovat luonnontieteilijöille aarreaitta: tulivuoren synnyttämä saariryhmä on tuottanut lajeja, joita ei tavata muualla – osa on kadonnut, osa pelastettu viime hetkellä.',
+      nostot: [
+        {
+          otsikko: 'Saari joka nousi merestä',
+          aika: 'n. 3,1–2,3 milj. vuotta sitten',
+          tiedosto: 'Norfolk Island Captain Cook lookout3.jpg',
+          teksti: 'Norfolkinsaari ja pieni Phillipinsaari syntyivät, kun merenalainen kilpitulivuori purkautui toistuvasti noin 3,1–2,3 miljoonan vuoden ajan basalttilaavaa. Suurin osa alkuperäisestä tulivuoresta on sittemmin kulunut mereen, ja jäljellä on saaren korkein kohta, 319 metriä merenpinnan yläpuolelle kohoava Mount Bates, sekä rannikon jyrkät basalttikalliot ja irralliset kalliosaarekkeet. Saari on osa Norfolkinharjannetta, tuhat kilometriä pitkää enimmäkseen vedenalaista vuoristoa, joka ulottuu Uuden-Seelannin ja Uuden-Kaledonian väliin – Norfolkinsaari ja Phillipinsaari ovat harvoja kohtia, joissa harjanne kohoaa meren pinnan yläpuolelle.',
+          lyhyt: 'Norfolkinsaari syntyi merenalaisen tulivuoren purkauksista 3,1–2,3 miljoonaa vuotta sitten.',
+          selite: 'Näkymä Captain Cook -näköalapaikalta: jyrkät basalttikalliot ja irralliset kalliosaarekkeet, joita meri on vuosimiljoonien aikana veistänyt.',
+          lahde: 'Steve Daggar, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Norfolkinsaari',
+        },
+        {
+          otsikko: 'Kyyhky joka ei selvinnyt',
+          aika: 'sukupuuttoon 1900-luvun alussa',
+          tiedosto: 'Hemiphaga novaeseelandiae spadicea.png',
+          teksti: 'Norfolkinkyyhky oli uudenseelanninkyyhkyn oma alalaji, joka oli asettunut Norfolkinsaarelle luultavasti jo kauan ennen ihmisiä, jääkauden aikoihin Uudesta-Seelannista. Se oli iso, värikäs metsäkyyhky, jonka rinta hohti punaruskeana ja vatsa valkoisena. Ihmisten mukana saapuneet kissat ja rotat söivät sen munia ja poikasia, metsiä raivattiin viljelysmaaksi, ja lintua myös metsästettiin. Yhdistelmä osoittautui kohtalokkaaksi: laji katosi luultavasti 1900-luvun alkuvuosina, paljon myöhemmin kuin vanhat lähteet virheellisesti väittivät. Se on varoittava esimerkki siitä, miten nopeasti pienen saaren ainutlaatuinen laji voi hävitä tuontilajien seurauksena.',
+          lyhyt: 'Norfolkinkyyhky, oma alalajinsa, hävisi saarelta 1900-luvun alkuvuosina.',
+          selite: 'Vanha lintukuvitus norfolkinkyyhkystä oksalla istumassa, punaruskea rintapuoli ja valkoinen vatsa selvästi näkyvissä.',
+          lahde: 'John Gerrard Keulemans, Wikimedia Commons (public domain)',
+          wiki: 'Norfolkinsaari',
+        },
+        {
+          otsikko: 'Saari täynnä jättiläispetoja',
+          aika: 'nykyään',
+          tiedosto: 'Norfolk Island Philip Island2.jpg',
+          teksti: 'Phillipinsaarella elää juoksujalkainen Cormocephalus coynei, joka kasvaa lähes 30 senttiä pitkäksi ja on yksi maailman suurimmista. Se metsästää öisin pesäkoloita täynnä olevalla saarella mustasiipipetreliä, jonka poikasia se tappaa myrkyllisillä etuhampaikkeillaan – tutkijat arvioivat, että juoksujalkaiset syövät jopa 3 700 petrelinpoikasta vuosittain. Määrä kuulostaa dramaattiselta, mutta saaren 19 000 pesivälle petreliparille se ei ole uhka: koska saarella ei ole nisäkkäitä, juoksujalkainen on ottanut niiden paikan luonnollisena petona ravintoketjussa. Laji elää vain tällä yhdellä pienellä saarella eikä sitä tavata muualla maailmassa.',
+          lyhyt: 'Phillipinsaaren lähes 30-senttinen juoksujalkainen syö vuosittain tuhansia lintupoikasia.',
+          selite: 'Tie Norfolkinsaarella kulkee kohti merta; taustalla näkyvät Phillipinsaari ja pienempi Nepeansaari, joilla juoksujalkainen ja merilinnut elävät.',
+          lahde: 'Steve Daggar, Wikimedia Commons (CC BY 3.0)',
+          wiki: 'Norfolkinsaari',
+        },
+        {
+          otsikko: 'Pöllö jonka geenit pelastettiin',
+          aika: '1986–1990',
+          tiedosto: 'Norfolk Boobook.jpg',
+          teksti: 'Norfolkinsaaren haukkapöllöalalaji oli 1980-luvulle tultaessa ajautunut sukupuuton partaalle metsien häviämisen ja tuontipetojen vuoksi: vuonna 1986 eli enää yksi ainoa naaraspöllö. Tutkijat toivat saarelle kaksi lähisukuista uudenseelanninhaukkapöllökoirasta risteytettäväksi. Toinen koiraista katosi vuoden kuluttua, mutta toinen pariutui naaraan kanssa, ja pari sai poikasia 1989 ja 1990. Alkuperäinen naaras nähtiin viimeisen kerran 1996, mutta hänen geeniperimänsä elää yhä risteytyneissä linnuissa, joita arvioidaan olevan noin 25 – siksi laji lasketaan elossa olevaksi, vaikka puhdas Norfolkin kanta on käytännössä hävinnyt.',
+          lyhyt: 'Norfolkin haukkapöllö pelastui risteyttämällä viimeinen naaras uudenseelantilaisiin koiraisiin.',
+          selite: 'Vanha lintukuvitus Norfolkinsaaren haukkapöllöstä oksalla, ruskeatäpläinen höyhenpuku ja keltaiset kynnet selvästi näkyvissä.',
+          lahde: 'Henrik Grönvold, Wikimedia Commons (public domain)',
+          wiki: 'Norfolkinsaari',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka monta puhdasrotuista Norfolkin haukkapöllönaarasta oli jäljellä vuonna 1986?',
+        vaihtoehdot: ['0', '1', '5', '25'],
+        oikea: 1,
+        fakta: 'Vuonna 1986 luonnossa eli enää yksi ainoa naaraspöllö, jonka geeniperimä pelastettiin risteyttämällä uudenseelantilaisiin koiraisiin.',
+      },
+    },
+  ],
+};

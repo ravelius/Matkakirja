@@ -6,7 +6,7 @@ varmistettua alkuperäissivulta, on merkitty **tarkistettava**. Tämä on pelkk�
 Sitovat linjaukset tekee Fable (Raamattu, Karttalinssit).*
 
 Lähtökohdat:
-- Peli ei ole avointa lähdekoodia (kaikki oikeudet pidätetään); se on ilmainen ja rahaa kerätään vain lisätoiminnoista (omistaja 24.9.). Media on vain PD- tai CC-lisensoitua tai avointa dataa attribuutiolla.
+- Peli on avointa lähdekoodia. Media on vain PD- tai CC-lisensoitua tai avointa dataa attribuutiolla.
 - Data esiprosessoidaan kerran ja striimataan pelin omasta ämpäristä (kuten `virta/maapallon-tila/`).
 - Fablen päätös 24.9. (Maapallon tila -suunnitelma): **ei Earthdata-tunnusta eikä muita uusia tunnuksia** ilman erillistä
   lupaa. Siksi merkitsen jokaiseen lähteeseen, tarvitaanko kirjautuminen tai avain.
@@ -505,7 +505,7 @@ Perusteet: (1) avoin lisenssi ilman uusia tunnuksia, (2) vahva sidos isoisän vu
 2. **NC-lisenssit**: hyväksytäänkö yksikään (esim. CShapes 2.0 aluelinsseihin, Falchin valosaasteatlas, GVP)?
    Suositus: ei. Jokaiselle on avoin vaihtoehto (historical-basemaps, EOG + HYG, NCEI).
 3. **ODbL- ja CC BY-SA -jakoehto** (RICardo, adsb.lol, HYG): ämpärin johdettu aineisto julkaistaan samalla
-   lisenssillä, ja se kirjataan `lahde`-kenttään. Jakoehto koskee vain johdettua aineistoa, ei pelin koodia; linjaus on Raamatussa (DATALINSSIT, 24.9.).
+   lisenssillä, ja se kirjataan `lahde`-kenttään. Tämä sopii avoimen lähdekoodin peliin, mutta linjaus kannattaa kirjata Raamattuun.
 
 ---
 
