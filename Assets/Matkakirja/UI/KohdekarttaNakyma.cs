@@ -112,7 +112,7 @@ namespace Matkakirja.Natiivi
                 var tyokalut = Rakenne.El("mk-kohdekartta__tyokalut", this, PickingMode.Ignore);
                 var nappi = Rakenne.Nappi("KOKORUUTU", "mk-kohdekartta__kokoruutu", () => KokoruutuPyydetty?.Invoke(), tyokalut, Kokoruutuikoni);
                 nappi.tooltip = "Avaa kartta kokoruudulle";
-                Kirjasimet.Aseta(nappi, Kirjasin.Kone);
+                Kirjasimet.Aseta(nappi, Kirjasin.KoneLihava); // web-kuva 94a: lihava versaali
             }
 
             kehys = Rakenne.El("mk-kohdekartta__kehys", this);
