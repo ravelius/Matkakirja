@@ -1401,7 +1401,7 @@ namespace Matkakirja.Natiivi
             if (kaupunki != null && !kameraPerilla) Saavu(maaRajaus: !aloituslento);
             if (kaupunki != null && TraileriTarjolla(kaupunki))
             {
-                // Traileri ennen lehteä (web: saapumisesitys → lehti → luento).
+                // Traileri ennen isoisän luentoa (web render: naytaSaapumistraileri → aloitaMerkinta); lehti ei aukea itsestään.
                 trailerinaytetty.Add(kaupunki);
                 Tila = SilmukanTila.Traileri;
                 traileriKaupunki = kaupunki;
@@ -1451,16 +1451,17 @@ namespace Matkakirja.Natiivi
         /// <summary>Kaupunki, jonka saapumislehti on auki: sen sulkeminen aloittaa matkakirjaluennan (web saapuminen).</summary>
         string saapumisLehti;
 
+        /// <summary>
+        /// Löydös 59 (build 12): saapuminen ei avaa lehteä (web game.js offerQuiz palauttaa aina false, omistajan ohje:
+        /// "mikään ikkuna ei aukea itsestään", myös laattakaupungissa). Kartalle ja isoisän matkakirjaluento heti (web
+        /// aloitaMerkinta trailerin jälkeen); lehti avataan napautuksesta.
+        /// </summary>
         void SaavuLehteen(string kaupunki)
         {
-            if (kaupunki != null && LehtiOn)
-            {
-                saapumisLehti = kaupunki;
-                Tila = SilmukanTila.Lehti;
-                AvaaLehti(kaupunki);
-                return;
-            }
             Kartalle(false);
+            if (kaupunki == null) return;
+            var l = luennat.OtaLuento(kaupunki);
+            if (l != null && SoitaLuento(l, 0.6f) == null && !string.IsNullOrEmpty(l.Paikkarivi)) Viesti(l.Paikkarivi);
         }
 
         /// <summary>Kaupunki, jonka lehti (tai jonka kautta maalehti) avattiin: Suljettu antaa maalehdessä ISO3:n.</summary>
