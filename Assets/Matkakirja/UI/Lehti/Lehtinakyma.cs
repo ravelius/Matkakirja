@@ -131,6 +131,8 @@ namespace Matkakirja.Natiivi
             sivupaikka.RegisterCallback<PointerDownEvent>(e => { veto0 = e.position; vetaa = true; }, TrickleDown.TrickleDown);
             sivupaikka.RegisterCallback<PointerUpEvent>(e => Veto(e.position), TrickleDown.TrickleDown);
             sivupaikka.RegisterCallback<PointerCancelEvent>(_ => vetaa = false, TrickleDown.TrickleDown);
+            // Löydös 51: oma kosketusvieritys (UITK:n ScrollView liikutti sisältöä moninkertaisesti sormeen nähden).
+            Kosketusvieritys.Liita(sivupaikka, () => sivu);
 
             alapalkki = Rakenne.El("mk-lehti__alapalkki", arkki, PickingMode.Ignore);
             var navi = Rakenne.El("mk-lehti__navi", alapalkki, PickingMode.Ignore);
@@ -1282,6 +1284,8 @@ namespace Matkakirja.Natiivi
             {
                 if (t == null) { kehys.style.display = DisplayStyle.None; return; }
                 kuva.style.backgroundImage = new StyleBackground(t);
+                // Kuvan todellinen korkeus / leveys (web naturalHeight / naturalWidth) kainalon taittopäätökseen.
+                kehys.userData = (float)t.height / Mathf.Max(1, t.width);
                 // Kuvan oma suhde (pystykuva korkeintaan 1,3 × leveys), kuten webin object-fit contain.
                 omaSuhde = Mathf.Clamp((float)t.height / Mathf.Max(1, t.width), 0.4f, 1.3f);
                 Mitoita();

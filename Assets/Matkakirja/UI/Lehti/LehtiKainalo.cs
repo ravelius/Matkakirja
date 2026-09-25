@@ -113,7 +113,11 @@ namespace Matkakirja.Natiivi
                 var kehys = kuvapalsta.Q(className: "mk-lehti__kuvakehys");
                 float kh = kuvapalsta.layout.height;
                 if (w <= 0 || float.IsNaN(w) || float.IsNaN(kh)) return;
-                if (kehys != null && kehys.layout.width > 0 && kehys.layout.height > 0) suhdeSelvisi?.Invoke(kehys.layout.height / kehys.layout.width);
+                // Löydös 51: suhde kuvasta (Kuva: kehys.userData) eikä kehyksen asettelusta. Lataamattoman kuvan kehys on
+                // 6 pt korkea (suhde 0,02 → "taysi"), ja kuvan latauduttua sama kainalo palautti "kainalo" ennen ajastettua
+                // uudelleenrakennusta: kainalo rakennettiin uudelleen joka kehys, sivun korkeus heilui 1496 ↔ 1063 pt ja
+                // ScrollView nollasi vierityksen (iPad 25.9., diagnoosiloki).
+                if (kehys?.userData is float suhde) suhdeSelvisi?.Invoke(suhde);
                 if (Mathf.Abs(w - leveys) < 0.5f && Mathf.Abs(kh - kuvaKorkeus) < 0.5f) return;
                 leveys = w;
                 kuvaKorkeus = kh;
