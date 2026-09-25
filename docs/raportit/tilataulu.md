@@ -30,6 +30,8 @@ Ei avoimia kortteja.
 
 **LEPOKÄSKY LÄHETETTY 20:40 (5 h -kiintiö 95 %):** Sisältökirjuri, Linssiseppä ja Natiivi-UI kaikki toimitettu ja idle 20:4x–20:48. Fable ilmoitettu. Build 16:n polku jatkaa. Kiintiö nollautuu 22:30 EEST.
 
+**AJASTETTU (Fable 20:5x): klo 22:31** lähetä Natiivisepälle (local_bf20055b-d582-4812-ba2b-b59c37a5e7b8), Laitetestaajalle (local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1) ja Julkaisijalle (local_22b29f10-7af8-43fc-a974-1d666f716c97) "kiintiö nollautui, jatka build 16 -polkua siitä mihin jäit" ja ilmoita Fablelle. Jos kiintiö täyttyy ennen build 16:n vientiä → ei toimia. GLO-30 ja käännösjuna eivät kuluta kiintiötä. (Muut lepäävät: Sisältökirjuri, Linssiseppä, Natiivi-UI — heidän herätys Fablen asia.)
+
 ## 3) Avoimet PR:t
 
 Yhteensä ~40 avointa PR:tä (karkea jako, ei virallinen luokitus):
