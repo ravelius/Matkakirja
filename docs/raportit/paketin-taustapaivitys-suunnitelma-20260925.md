@@ -1,8 +1,10 @@
 # Sisältöpaketin taustapäivitys: toteutussuunnitelma (25.9.2026)
 
 Siirtoseppä (Opus). Pohjana ovat selvitys `paketin-taustapaivitys-20260925.md` ja omistajan hyväksyntä
-25.9.2026. Mobiilidatalla ladataan automaattisesti vain alle 5 Mt:n deltat. Isommat odottavat
-Wi-Fiä, eikä pelaajalta kysytä. **Koodi aloitetaan vasta build 15:n jälkeen.** Latauksen hoitaa
+25.9.2026. **Tarkennus (omistaja Fablen ja Pelikoodarin kautta, 25.9.):** mobiilidata lataa aina samat
+tiedostot kuin Wi-Fi. Paketin deltat ladataan kaikilla verkoilla ilman kokorajaa ja ilman Low Data Mode
+-lykkäystä. Selvityksen 5 Mt:n raja ei ole voimassa. Paketin lataukseen ei vaikuta myöskään
+virransäästötila, joka pysäyttää vain Esilataajan kohdat 4–5. **Koodi aloitetaan vasta build 15:n jälkeen.** Latauksen hoitaa
 Pelikoodarin Esilataaja (`docs/raportit/esilataaja-suunnitelma-20260925.md`, haara
 `pelikoodari/esilataus-nykytila`). Rajapinta sovittiin 25.9.
 
@@ -12,7 +14,7 @@ Pelikoodarin Esilataaja (`docs/raportit/esilataaja-suunnitelma-20260925.md`, haa
 |---|---|
 | Hakemisto, osoittimen lisäkentät, tasoittainen kartta (CI, `julkaise-sisalto.mjs`, `vie-sisalto.yml`) | Siirtoseppä |
 | `PakettiPaivitys.cs`: vertailu, sha256, `valmis.json`, käyttöönotto, siivous, `Sisalto.cs`:n tiedostovarasto | Siirtoseppä (proto, oma haara) |
-| Esilataaja: jono, verkkotyyppi (Wi-Fi, mobiilidata alle 5 Mt, Low Data Mode), Range-jatkaminen, rinnakkaisuus, uusinta, `Joutilas` | Pelikoodari |
+| Esilataaja: jono, Range-jatkaminen, rinnakkaisuus, uusinta, `Joutilas` (ei verkkotyypin rajoituksia) | Pelikoodari |
 | `SISALTOTASO`-vakio ja sen nosto buildiin | Natiiviseppä |
 
 ## Vaihe 1: palvelin (Siirtoseppä, 1.x ja 2.0)
@@ -48,9 +50,8 @@ Pelikoodarin Esilataaja (`docs/raportit/esilataaja-suunnitelma-20260925.md`, haa
 2. **Delta:** haetaan `hakemisto.json` ja tarkistetaan sen sha256 osoittimesta. Puuttuvat sha256:t
    (ne, joita ei ole `tiedostot/`-kansiossa) muuttuvat tehtäviksi:
    `Esilataaja.Pyyda(Kohde.Tiedosto(osoite, sha256, siirto, "tiedostot/<sha>.lataus"), Taso.Muu, Kohta.Kaynnistys, ryhma "paketti:<pää>:v<N>")`.
-3. **Mobiilidatan raja koskee ryhmää:** jos ryhmän `siirto` on yhteensä alle 5 Mt, se ladataan myös
-   mobiilidatalla. Muuten koko ryhmä odottaa Wi-Fiä. Esilataajan pitää laskea raja ryhmän summasta,
-   ei tiedostoista erikseen (sovitaan Pelikoodarin kanssa).
+3. **Verkko:** ryhmä ladataan millä tahansa verkolla heti. `siirto` on vain edistymisen näyttöä ja
+   lokia varten.
 4. **`RyhmaValmis`:** jokaisen tiedoston sha256 tarkistetaan, ja tiedosto siirretään nimelle
    `tiedostot/<sha>`. Jos tiiviste ei täsmää, tiedosto poistetaan ja ryhmä yritetään uudelleen
    seuraavalla kierroksella. Kun kaikki täsmää, kirjoitetaan `valmis.json` atomisesti.
@@ -81,7 +82,7 @@ Pelikoodarin Esilataaja (`docs/raportit/esilataaja-suunnitelma-20260925.md`, haa
   siivouksen viittauslaskennalle ja väärälle tiivisteelle.
 - **Laitteella:**
   1. Juna tekee uuden version → delta ladataan Wi-Fillä ja otetaan käyttöön seuraavassa käynnistyksessä.
-  2. Mobiilidatalla 3 Mt:n delta latautuu, 9 Mt:n delta odottaa.
+  2. Delta latautuu myös mobiilidatalla ja Low Data Modessa.
   3. Palautus toimii ilman latausta.
   4. Levyllä on siivouksen jälkeen enintään kaksi versiota.
 - **Järjestys:** vaihe 1 → Natiiviseppä lisää `SISALTOTASO`-vakion → vaihe 2 yhdessä Esilataajan kanssa
