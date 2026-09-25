@@ -34,7 +34,7 @@ Jatkoa luovutukselle `viesti-pelikoodari-luovutus-20260925-ilta.md`. Merge-pyynn
    pohja juna/b13 b37d2b3e). Sisältää myös Natiivisepän pyytämän korjauksen 3cf6ae5b (PalloSumennus.PerusSkaala normaalilämmössä).
    - `PeliOhjain.SaapuminenTiedossa` (aloituslennon ja matkan alku) → `puhe.Esilataa` (saapumispuhe, luento); `UiNakymat.EsilataaSaapuminen`
      → `Kuvat.Esilataa` (luentakuvat, PuluCam, trailerin kuvat) + `NostoSisalto.Esilataa(maa, SeuraavaRuutu)`. lento-alku buildissa.
-   - Käännös `lokit/esilataaja-2-app` (käännöspalvelu käynnistyi 19.0x). **Simulaattorivuoro A2FD9C9F noin klo 19.50** (Julkaisija).
+   - Käännös valmis: `/Users/Shared/Claude/proto-3d/lokit/esilataaja-2-app` (eaf5b352). **Simulaattorivuoro A2FD9C9F noin klo 19.50** (Julkaisija).
      Aja worktreestä: `Peli-testit/verkko-savuke.sh /Users/Shared/Claude/proto-3d/lokit/esilataaja-2-app A2FD9C9F-37CA-4D7A-BA59-E65AF9EBCCA2 /Users/Shared/Claude/proto-3d/lokit/verkko-odotus/era2-kylma`
      ja sama `LAMMIN=1` → `era2-lammin`. Tavoite rivi "RAJA saapuminen 0 ms verkko-odotusta: PASS" kylmänä ja lämpimänä.
      Kirjaa ennen/jälkeen raporttiin `docs/raportit/esilataus-nykytila-20260925.md` (luku 5), sitten merge-pyyntö Natiivisepälle
