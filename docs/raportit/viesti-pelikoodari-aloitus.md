@@ -4,11 +4,9 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260925-yo2.md`](viesti-pelikoodari-luovutus-20260925-yo2.md) (25.9. klo 19.1x).
-   - Junassa (build 16): 117, 118, Esilataaja erä 1, LÄMPÖERÄ (Ruudunpaivitys, Lampo, KehysMittari-rivi).
-   - ENSIMMÄISENÄ: Esilataaja erä 2 (`pelikoodari/esilataaja-2` eaf5b352, koodattu, mittaamatta) → verkko-savuke kylmä + lämmin,
-     raja "saapuminen 0 ms" PASS, raportti ja merge-pyyntö. Simulaattorivuoro A2FD9C9F noin klo 19.50 (Julkaisija).
-   - Avoinna: lepopiirto (PAIKALLAAN) odottaa Natiivi-UI:n UiRauhassa-korjausta ja Natiivisepän PallonLepoa; erät 3–4 suunnitelman mukaan.
+   [`viesti-pelikoodari-luovutus-20260925-yo3.md`](viesti-pelikoodari-luovutus-20260925-yo3.md) (25.9. klo 20.5x).
+   - Merge-pyynnöissä: `pelikoodari/esilataaja-3` 64794fe8 (erät 2+3) ja `pelikoodari/esilataaja-4` a9df0cc9 (erä 4).
+   - Avoinna: PallonLepo (Natiivisepän SHA) → Ruudunpaivitys; lepopiirto todennettu natiivi-ui/lampo d0a187db:n kanssa.
 3. Merge-pyynnöt ja tilaukset: `/Users/Shared/Claude/proto-3d/lokit/merge-pyynto-pelikoodari-maisemakompressori.md`
    (Claude Desktopin 10 viestin raja: niputa viestit).
 
