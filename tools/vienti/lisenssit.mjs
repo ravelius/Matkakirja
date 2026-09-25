@@ -12,6 +12,14 @@
  */
 export const AINEISTOT = [
   {
+    id: 'openhistoricalmap',
+    nimi: 'OpenHistoricalMap (rautatiet 1873)',
+    lisenssi: 'CC0 1.0',
+    lahde: 'https://wiki.openstreetmap.org/wiki/OpenHistoricalMap/License',
+    attribuutio: 'Rautatiet 1873: OpenHistoricalMap-yhteisö (CC0).',
+    kaytto: 'kokoelma reitit1873 (rautatiet), tools/tee-reitit1873.mjs',
+  },
+  {
     id: 'natural-earth',
     nimi: 'Natural Earth 10m (admin-0 ja admin-1)',
     lisenssi: 'public domain',
