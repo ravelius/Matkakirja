@@ -34,3 +34,11 @@ kaupunkien pisteitä eikä nimiä. Ota kuvakaappaus valintanäkymästä (iPhone 
 iPad; kevyesti 1 laite riittää). Build 16 (1aa7c558) iPhone: PASS —
 kaappaukset/savukierros-b16-20260925/2-iphone-valinta.jpg (Lontoo, Moskova,
 Istanbul, Ateena, Kairo; ei muita pisteitä/nimiä).
+
+## Median muoto omistajalle (Fable 25.9. klo 23.5x, sitova)
+Videot ja kuvat rajataan laitteen ruutuun ILMAN tyhjää reunaa: pystyvideo
+pystynä (esim. 1170×2532 → korkeus 1600 px), iPad vaakana, ei 16:9-kangasta eikä
+letterboxia; kuvapari vierekkäin ilman marginaaleja; hidastus omana tiedostonaan.
+(Syy: omistaja ei saanut selvää 146-mallista, kun puhelimen ruutu oli pieni
+harmaan kankaan keskellä.) Savukierroksen kuvakaappaukset ovat jo pelkkää ruutua
+(simctl io screenshot) — älä koskaan aseta niitä kankaalle.
