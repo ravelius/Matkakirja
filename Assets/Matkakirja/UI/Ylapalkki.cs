@@ -133,7 +133,17 @@ namespace Matkakirja.Natiivi
             float pp = PuhelimenSkaala;
             foreach (var c in Screen.cutouts)
                 if (c.yMax >= Screen.height - 2f * pp && c.width < Screen.width * 0.8f)
-                    return new Rect(c.xMin / pp, (Screen.height - c.yMax) / pp, c.width / pp, c.height / pp);
+                {
+                    var saari = new Rect(c.xMin / pp, (Screen.height - c.yMax) / pp, c.width / pp, c.height / pp);
+                    // Löydös 73: Unity antaa Dynamic Islandin suorakulmion ruudun yläreunasta saaren alareunaan
+                    // (iPhone 17: y 0,3, korkeus 49,7). Saari itse on 126 × 37 pt (leveyden suhteessa), alareuna pitää.
+                    if (saari.yMin < 2f && saari.height > 40f && saari.width > 90f)
+                    {
+                        float korkeus = saari.width * 37f / 126f;
+                        saari = new Rect(saari.xMin, saari.yMax - korkeus, saari.width, korkeus);
+                    }
+                    return saari;
+                }
             float yla = (Screen.height - Screen.safeArea.yMax) / pp, w = Screen.width / pp;
             if (yla >= 55f) return new Rect((w - 126f) / 2f, 11f, 126f, 37f);
             if (yla >= 40f) return new Rect((w - 162f) / 2f, 0f, 162f, 32f);
