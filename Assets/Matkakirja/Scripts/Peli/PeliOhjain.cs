@@ -1092,17 +1092,14 @@ namespace Matkakirja.Natiivi
             if (kaupunkiKortti == null) return AvaaDialogi(kaupunki);
             if (Tila != SilmukanTila.Kartta) return "silmukka on tilassa " + Tila;
             if (!verkko.Kaupungit.ContainsKey(kaupunki)) return "tuntematon kaupunki " + kaupunki;
-            var p = matka.Tila.Pelaaja;
-            bool oma = p.Sijainti.Kaupungissa && p.Sijainti.Kaupunki == kaupunki;
-            bool mannerlento = oma && kaupat != null && kaupat.MannerLennot().Count > 0;
+            // Ei Mannerlento-riviä (liikkumisen pariteetti D13): webin kaupunkiliuskassa on vain Liiku tänne ja aiheet;
+            // mannerlento avataan Liiku → Lentäen -listasta (web ui.js 11407–11440), joka on natiivissakin.
             string siirto = SiirtoAvain(kaupunki);
             var t = new KaupunkiToiminnot
             {
                 LueLehti = LehtiOn ? () => LueLehti(kaupunki) : (Action)null,
                 Liiku = siirto != null ? () => { PiilotaKortti(); ValitseSiirto(siirto); } : (Action)null,
                 LiikuTeksti = siirto != null ? LiikuNimio : null,
-                Mannerlento = mannerlento ? () => { PiilotaKortti(); AvaaMannerlennot(); } : (Action)null,
-                MannerlentoTeksti = mannerlento ? $"Mannerlento ({Vakiot.LentoHinta} {PeliApu.Valuutta})" : null,
                 Sulje = () => PiilotaKortti(),
             };
             KorttiKaupunki = kaupunki;
@@ -1392,9 +1389,14 @@ namespace Matkakirja.Natiivi
         readonly HashSet<string> trailerinaytetty = new HashSet<string>();
         string traileriKaupunki;
 
-        /// <summary>Traileri kerran per kaupunki istunnossa, ei aarrekaupungeissa (web saapumistraileri).</summary>
+        /// <summary>
+        /// Traileri kerran per kaupunki istunnossa, kun kaupungilla on fokusvirran matkakirjamerkintä (web ui.js ~13577
+        /// fokusvirtaMatkakirja ja ~13790; kuvat tarkistaa näkymä). Laatta ei vaikuta: aarrekaupungissakin traileri näkyy
+        /// (liikkumisen pariteetti C4; ennen natiivi ohitti laattakaupungit ja näytti fokusvirrattomat).
+        /// </summary>
         bool TraileriTarjolla(string kaupunki) =>
-            PeliNakymat.Saapumistraileri != null && Kaytossa && !trailerinaytetty.Contains(kaupunki) && !matka.LaattaTassa(kaupunki);
+            PeliNakymat.Saapumistraileri != null && Kaytossa && !trailerinaytetty.Contains(kaupunki)
+            && !string.IsNullOrEmpty(Fokusvirrat.Hae(kaupunki)?.Teksti);
 
         /// <summary>Ohittaa trailerin ohjaimen puolelta (testikomento 'ohita-traileri'); näkymä piilottaa itsensä Tilan vaihtuessa.</summary>
         public string OhitaTraileri()
