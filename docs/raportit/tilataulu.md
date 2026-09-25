@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 22:43 EEST
+**Päivitetty:** 2026-09-25 22:55 EEST
 
 ## 1) Sessiot
 
@@ -14,12 +14,12 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 | Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 50% | running | — |
 | Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 54% | running | Nollattu ja palannut käyntiin |
 | Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 32% | idle (lepokäsky) | Nollattu ja jo uudelleenkäynnistetty (huomattu vasta jälkikäteen, 18.23–18.35 välillä) |
-| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 67% | running | Nollattu ja palannut käyntiin |
+| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 71% | running | Ylitti 70 %, ilmoitettu Fablelle 22:55 |
 | Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 21% | running | Nollattu ja palannut käyntiin |
 | Laitetestaaja | local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1 | 55% | idle | PR #3153 (savukierros B13) |
 | Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 38% | idle | PR #3155 |
-| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 36% | running | Nollattu ja palannut käyntiin |
-| Karttaseppä | local_37708e68-5a58-45ca-8dee-c13620993531 | 22% | running | Nollattu ja palannut käyntiin (8 %) |
+| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 37% | running | Nollattu ja palannut käyntiin |
+| Karttaseppä | local_37708e68-5a58-45ca-8dee-c13620993531 | 30% | running | Nollattu ja palannut käyntiin (8 %) |
 | Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu) |
 
 ## 2) Jumit ja avoimet kortit omistajalle
@@ -46,10 +46,9 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **5 h -kiintiö:** 13 % (uusi raja 00:30 EEST, 4 h 46 min). extraUsage pois päältä. **Viikko (kaikki mallit):** 56 %. **Viikko (Fable):** 22 %.
-- **Paikallinen levy:** 147 Gt vapaana (hälytysraja 60 Gt). **NAS:** 5,6 Ti vapaana (raja 500 Gt). **wt/-worktreet:** 36 kpl. **Swap:** 0 Gt.
-- **GLO-30-nouto:** VALMIS 22:10 (ei enää seurattavaa).
-- **Simulaattorit boottina:** 1 (pariteetti-iPad11-834). coreaudiod 4 %. **Chrome-GPU-prosesseja:** 0.
-- **Konteksti:** Linssiseppä 67 % (sai herätysviestin, aktiivinen; lähestyy 70), Laitetestaaja 55 %, Natiiviseppä 54 %, Julkaisija 50 %, Fable 43 %, Siirtoseppä 38 %, Pelikoodari 36 %, Natiivi-UI 32 %, Karttaseppä 22 %, Sisältökirjuri 21 %. Ei ylityksiä.
+- **5 h -kiintiö:** 16 % (raja 00:30 EEST, 4 h 35 min). extraUsage pois päältä. **Viikko (kaikki mallit):** 57 %. **Viikko (Fable):** 23 %.
+- **Paikallinen levy:** 146 Gt vapaana (hälytysraja 60 Gt). **NAS:** 5,6 Ti vapaana (raja 500 Gt). **wt/-worktreet:** 37 kpl. **Swap:** 0 Gt.
+- **Simulaattorit boottina:** 1 (pariteetti-iPad11-834). coreaudiod 5 %. **Chrome-GPU-prosesseja:** 0.
+- **KONTEKSTI 70 % YLITETTY:** Linssiseppä 71 % — ilmoitettu Fablelle. Laitetestaaja 55 %, Natiiviseppä 54 %, Julkaisija 50 %, Fable 43 %, Siirtoseppä 38 %, Pelikoodari 37 %, Natiivi-UI 32 %, Karttaseppä 30 %, Sisältökirjuri 21 %.
 - **Juna:** viimeisin KÄÄNNETTY 21:36 (7290562b), juna/b13 ac0aaadc ennallaan, ei odottavaa.
-- **Postilaatikko:** ei uutta (kärki 82c5c1d7f). **Avoimia PR:iä:** 8.
+- **Postilaatikko:** uusi commit 39141ee4a (Codex → Fable, miniatyyrien värikorjaus erä 1, 13 kuvaa), ilmoitettu Fablelle. **Avoimia PR:iä:** 9.
