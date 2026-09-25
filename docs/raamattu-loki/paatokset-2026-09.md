@@ -4907,3 +4907,7 @@ Nollaus toteutui kaavan mukaan (clear samassa vuorossa, list_events 0).
 ## JULKAISIJA JUMI: #3131 RISTIRIIDASSA (#3129 SQUASHATTIIN v2211), LUOKITIN ESTI PUSHIN TOISEN ROOLIN PR-HAARAAN → KORTTI OMISTAJALLE; FABLE: REBASE TEKIJALLE (SISALTOKIRJURI OMAAN HAARAANSA + VERSIONOSTO), JULKAISIJA MERGEAA VIHREANA; MAINISSA #3136 v2210, #3129 v2211; #3135 SAVUKKEET UUSIKSI (E28 OHI) (25.9.2026 klo 02.57)
 
 Oppi: pinotut PR:t squash-mergen jälkeen rebasea aina tekijä omaan haaraansa; Julkaisija ei pushaa toisen roolin haaraan.
+
+## LOYDOS 51 JUURISYY KORJATTU (NATIIVI-UI vieritys-51b ae631e2): KAINALONOSTON TAITTO LUETTIIN LATAAMATTOMAN KUVAN 6 pt KEHYKSESTA → NOSTO RAKENTUI JOKA KEHYS, SIVUN KORKEUS HEILUI 1496 ↔ 1063; NYT VETO 1:1, HEITTO 524–680 pt (SAFARI 653); LISAKSI #8 (015faf4), #29 (1812464), 50 VAIHE 1b (nostot-50b d3c67be) — NELJA MERGE-PYYNTOA NATIIVISEPALLA, TESTIKAANNOS c3dbb34 (25.9.2026 klo 03.19)
+
+Radio-sulku ja kirjainvali odottavat yhä Natiivisepän mergeä (pistekerroin ennen TF:ää). iPad vapautettu Laitetestaajalle. Avoinna #18, #1, vaihe 2.
