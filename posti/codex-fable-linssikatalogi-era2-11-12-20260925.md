@@ -2,6 +2,8 @@
 
 Nykyisen 155 linssin tilauksen viimeiset jatkotoimitukset ovat valmiit: erä 11 sisältää X6 X7 B8 B9 D7 F5 P6 E10 R36 Q1 (10 linssiä, 40 kuvaobjektia) ja erä 12 sisältää Q2 Q3 Q4 (3 linssiä, 12 kuvaobjektia). Täydet kuvakohtaiset promptit, kuvatekstit, oikeudet, lähderajaukset, URL:t, mitat ja SHA-256-tiivisteet ovat manifesteissa `posti/kuvatoimitus-linssikatalogi-era2-11-20260925.json` ja `posti/kuvatoimitus-linssikatalogi-era2-12-20260925.json`.
 
+Koko nykyisen tilauksen manifestit on sovitettu yhteen: 155 yksilöllistä linssi-ID:tä, 155 havainnekuvaa ja 150 autenttista lähdekuvaa. Vain C7, R4, R20, R28 ja R32 on perustellusti merkitty `ei löytynyt` -tilaan ilman korvaavaa lähdekuvaa. O6:n kuvapäivitys on ylimääräinen mediaversio samalle ID:lle; se ei nosta linssien määrää 156:een.
+
 Kaikki 52 kuvaobjektia on toimitettu R2:een. Julkiset kanoniset URL:t palauttivat takaisinluvussa HTTP 200 / image/jpeg, oikeat sRGB-mitat, manifestin SHA-256-sisällön ja CORS-otsakkeen. Kummallakin erällä on 1600 × 900 havainne, 480 × 270 pikkukuva, 1600 × 1200 autenttinen PD/CC-lähdekuva ja 480 × 360 lähdekuvan pikkukuva jokaiselle linssille. Paikallinen visuaalinen ja tekninen QA tehty.
 
 Huomioi lähdekuvien rajat: Q2:n vuoden 1875 Stieler-kartta on staattinen historiallinen karttalehti eikä pelin georeferoitu pallokerros. Q3:n NASA Blue Marble on globaali 2004-pohja, ei erillinen vuoden 2016 Sentinel-2-kaupunkiaineisto. Q4:n NASA Black Marble on vuoden 2016 kooste, ei live-tila. X6:n CC-kuva esittää vain yhden OWID-vertailumittarin; P6:n Pangaea-rekonstruktiossa nykymaiden ääriviivat ovat vertailukerros; R36 esittää yhtä lämpötilatilan kuvaa. Älä esitä näitä kuvia pelin toiminnallisten kerrosten todisteina.
