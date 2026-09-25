@@ -130,6 +130,14 @@ namespace Matkakirja.Natiivi
 
         void Kytke()
         {
+            // Ladottujen nimien laatikot (web nimet.laatikot()): uusi ladonta levossa → sovittelu uudelleen.
+            var nk = Nimikerros.Instanssi;
+            if (nk != nimikerros)
+            {
+                if (nimikerros != null) nimikerros.LaatikotMuuttuivat -= NimetMuuttuivat;
+                nimikerros = nk;
+                if (nimikerros != null) nimikerros.LaatikotMuuttuivat += NimetMuuttuivat;
+            }
             var k = NostoKerros.Instanssi;
             if (k != lahde)
             {
@@ -152,6 +160,25 @@ namespace Matkakirja.Natiivi
                 valot = p;
                 if (valot != null) valot.Muuttui += Paivita;
                 Paivita();
+            }
+        }
+
+        Nimikerros nimikerros;
+        readonly List<Rect> nimet = new List<Rect>();
+
+        void NimetMuuttuivat() { if (lepoKierto == null || lepoKierto.Levossa) Paivita(); }
+
+        /// <summary>Nimikerroksen laatikot (ruudun pikselit, origo vasen ala) paneelin pisteiksi (origo vasen ylä).</summary>
+        void LueNimet()
+        {
+            nimet.Clear();
+            var paneeli = juuri.panel;
+            if (nimikerros == null || paneeli == null) return;
+            foreach (var r in nimikerros.Laatikot)
+            {
+                var a = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(r.xMin, Screen.height - r.yMax));
+                var b = RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(r.xMax, Screen.height - r.yMin));
+                nimet.Add(Rect.MinMaxRect(a.x, a.y, b.x, b.y));
             }
         }
 
@@ -251,9 +278,10 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Web sovittelu.js: jono painon mukaan (kaupunki 0, taso 1 1000, taso 2 2000, taso 3 3000 + nimen pituus),
-        /// esteet = jo sijoitetut nimiöt, muiden merkkien ikonit (kaupunki ja taso 1 ohittavat ikonit) ja paneelin
-        /// reunat; ensin nykyinen kylki (näkyvä nimiö ei vaihda kylkeä), sitten datan kylki ja webin järjestys.
-        /// Ei vapaata → nimiö häipyy (180 ms), merkki jää. Hystereesi 6 px piilotetulle.
+        /// esteet = ladotut nimet (Nimikerros.Laatikot, kiinteä muste: estää kaikkia), jo sijoitetut nimiöt, muiden
+        /// merkkien ikonit (kaupunki ja taso 1 ohittavat ikonit) ja paneelin reunat; ensin nykyinen kylki (näkyvä nimiö
+        /// ei vaihda kylkeä), sitten datan kylki ja webin järjestys. Ei vapaata → nimiö häipyy (180 ms), merkki jää.
+        /// Taso 1 ei häivy muiden nimiöiden tieltä, vain nimien ja reunan (web sovittelu.js sääntö 4). Hystereesi 6 px.
         /// </summary>
         void Sovita(int n)
         {
@@ -270,6 +298,8 @@ namespace Matkakirja.Natiivi
                 ikonit.Add(new Rect(m.Piste.x - r, m.Piste.y - r, 2f * r, 2f * r));
             }
             var varatut = new List<Rect>(jono.Count);
+            LueNimet();
+            bool Musteeton(Rect a) { foreach (var e in nimet) if (e.Overlaps(a)) return false; return true; }
             foreach (var m in jono)
             {
                 string loytyi = null;
@@ -278,6 +308,7 @@ namespace Matkakirja.Natiivi
                 {
                     var a = new Rect(r.x + m.Piste.x - vara, r.y + m.Piste.y - vara, r.width + 2f * vara, r.height + 2f * vara);
                     if (a.xMin < 0 || a.yMin < 0 || a.xMax > W || a.yMax > H) return false;
+                    if (!Musteeton(a)) return false;
                     foreach (var v in varatut) if (v.Overlaps(a)) return false;
                     if (!m.Kiintea)
                         for (int i = 0; i < n; i++)
@@ -293,8 +324,18 @@ namespace Matkakirja.Natiivi
                 foreach (var ky in Kyljet) if (!ehdokkaat.Contains(ky)) ehdokkaat.Add(ky);
                 foreach (var ky in ehdokkaat)
                     if (Vapaa(NimionLaatikko(m, ky), vara0)) { loytyi = ky; break; }
-                // Taso 1 ei häivy muiden lappujen tieltä (sovittelu.js:311): pitää kylkensä.
-                if (loytyi == null && m.Taso1) { loytyi = m.Kylki ?? datasta ?? "oikea"; paikka = default; }
+                // Taso 1 ei häivy muiden lappujen tieltä (sovittelu.js sääntö 4): ensimmäinen reunan sisällä oleva
+                // nimistä vapaa ehdokas (nykyinen kylki ensin); jos sellaista ei ole, nimiö häipyy ja ikoni jää.
+                if (loytyi == null && m.Taso1)
+                    foreach (var ky in ehdokkaat)
+                    {
+                        var r = NimionLaatikko(m, ky);
+                        var a = new Rect(r.x + m.Piste.x, r.y + m.Piste.y, r.width, r.height);
+                        if (a.xMin < 0 || a.yMin < 0 || a.xMax > W || a.yMax > H || !Musteeton(a)) continue;
+                        loytyi = ky;
+                        paikka = default;
+                        break;
+                    }
                 m.NimioNakyy = loytyi != null;
                 if (loytyi != null)
                 {
