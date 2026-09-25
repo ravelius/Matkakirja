@@ -75,8 +75,10 @@ namespace Matkakirja
         /// Tosi, jos Karttaseppä on leiponut lämpimän valon painon (suunnitelma luku 3, w) jo polttoon: varjostin käyttää
         /// silloin näytteen luminanssia sellaisenaan (_radioYovalot.z = 1). Oletus epätosi: w lasketaan varjostimessa, mikä
         /// on myös suodatetulle sarjalle lähes neutraali (lämmin valo läpäisee, alle 48/255 himmenee pois).
+        /// Oletus tosi (Karttaseppä 25.9. klo 10.2x): sarja 2026-09-25 sisältää vain valot, Black Marblen sininen yöpohja
+        /// ja jää on poistettu polttoon (musta = ei valoa); alkuperäinen sininen versio on polussa …/2026-09-25-alkup/.
         /// </summary>
-        public static bool YovalotSuodatettu;
+        public static bool YovalotSuodatettu = true;
 
         /// <summary>Mastoa napautettiin (kaupungin id); ilmoitetaan myös PalloKierto.IlmoitaKaupunki-reittiä.</summary>
         public event Action<string> MastoNapautettu;
