@@ -2,7 +2,7 @@
 
 Päivittää Postivahti n. 10 min välein (haara `postivahti`). Ei käsin muokattava.
 
-**Päivitetty:** 2026-09-25 23:57 EEST
+**Päivitetty:** 2026-09-26 00:08 EEST
 
 ## 1) Sessiot
 
@@ -10,15 +10,15 @@ Kaikki roolisessiot luotu uudelleen 25.9. ~12.5x (uudet id:t). Konteksti-ikkuna 
 
 | Rooli | Session id | Konteksti | Tila | Odottaa |
 |---|---|---|---|---|
-| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 53% | running | — |
+| Fable | local_593b89a1-2514-4d74-b956-2a73db862382 | 55% | running | — |
 | Julkaisija | local_22b29f10-7af8-43fc-a974-1d666f716c97 | 53% | running | — |
 | Natiiviseppä | local_bf20055b-d582-4812-ba2b-b59c37a5e7b8 (kansio Matkakirja-3d-selvittaja) | 64% | running | Nollattu ja palannut käyntiin |
-| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 51% | idle (lepokäsky) | Nollattu ja jo uudelleenkäynnistetty (huomattu vasta jälkikäteen, 18.23–18.35 välillä) |
-| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 53% | running, RC päällä | Sai aloitusviestin ja RC kytketty 23.2x (Fable) |
+| Natiivi-UI | local_33ba1387-d688-4e44-8e05-10951e61efc0 | 52% | idle (lepokäsky) | Nollattu ja jo uudelleenkäynnistetty (huomattu vasta jälkikäteen, 18.23–18.35 välillä) |
+| Linssiseppä | local_45a869de-4d6b-4ed6-a6c9-30fd8442587e | 59% | running, RC päällä | Sai aloitusviestin ja RC kytketty 23.2x (Fable) |
 | Sisältökirjuri | local_256f6a15-b806-4259-97bd-b2ba8d342f86 | 30% | running | Nollattu ja palannut käyntiin |
 | Laitetestaaja | local_c22294e5-4f0f-46ce-b1d3-9d8f3da223b1 | 56% | idle | PR #3153 (savukierros B13) |
 | Siirtoseppä | local_b50bb32e-18e2-47c5-a597-8a18d56874e1 | 40% | idle | PR #3155 |
-| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 51% | running | Nollattu ja palannut käyntiin |
+| Pelikoodari | local_97810d35-a79c-484b-8573-660a4c40eaa6 | 52% | running | Nollattu ja palannut käyntiin |
 | Karttaseppä | local_37708e68-5a58-45ca-8dee-c13620993531 | 39% | running | Nollattu ja palannut käyntiin (8 %) |
 | Postivahti (self) | local_6f3d4c35-be83-4985-82c7-8d641ad18f1d (vanha; uusi id: get_usage "self") | 8% | running | (tämä taulu) |
 
@@ -48,9 +48,9 @@ Julkaisijan seuraava juna: tapahtumaohjattu (käännösjuna + sisältöjuna 4-PR
 
 ## 5) Resurssit
 
-- **Levy:** 141 Gt vapaana (vakaa; Fablen hälytysraja 80 Gt). **Swap:** 11,2 Gt / 12,3 Gt (hälytys >16 Gt). **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 34 kpl.
-- **5 h -kiintiö:** 59 % (raja 00:30 EEST, 3 h 34 min). extraUsage pois päältä. **Viikko (kaikki mallit):** 68 % (lähestyy 70 %, ilmoitettu Fablelle). **Viikko (Fable):** 26 %.
-- **Simulaattorit boottina:** 1 (pariteetti-iPhone). coreaudiod 7 %. **Chrome-GPU-prosesseja:** 8 (CI:n savukkeita, Fable: ei hälytystä).
-- **Konteksti:** Natiiviseppä 64 %, Laitetestaaja 56 %, Linssiseppä 53 %, Fable 53 %, Julkaisija 53 %, Pelikoodari 51 %, Natiivi-UI 51 %, Siirtoseppä 40 %, Karttaseppä 39 %, Sisältökirjuri 30 %. Ei ylityksiä.
-- **Juna:** yläraja laukesi 23:37, proto-kaanna.sh käynnissä (4 prosessia); viimeisin KÄÄNNETTY 21:36. Hälytys jos ei prosessia eikä KÄÄNNETTY-riviä klo 00:02 mennessä.
-- **Postilaatikko:** uusi commit 78e5a333e (Codex → Fable: 504 miniatyyrin värikorjaus, erä 1, 60 kuvaa), ilmoitettu Fablelle. **Avoimia PR:iä:** 11.
+- **5 h -kiintiö:** 65 % — nollautuu klo **03:30 EEST** (00:30 UTC; KORJAUS: aiemmat kirjaukset "00:30 EEST" olivat väärin, UTC-sekaannus). extraUsage pois päältä. **Viikko (kaikki mallit): 70 %** (saavutti 70 % 00:06, ilmoitettu Fablelle). **Viikko (Fable):** 26 %.
+- **Levy:** 141 Gt vapaana (Fablen hälytysraja 80 Gt). **Swap:** 10,3 Gt / 11,3 Gt (hälytys >16 Gt). **NAS:** 5,6 Ti vapaana. **wt/-worktreet:** 34 kpl.
+- **Simulaattorit boottina:** 0. coreaudiod 7 %. **Chrome-GPU-prosesseja:** 6 (CI:n savukkeita).
+- **Konteksti:** Natiiviseppä 64 %, Linssiseppä 59 %, Laitetestaaja 56 %, Fable 55 %, Julkaisija 53 %, Pelikoodari 52 %, Natiivi-UI 52 %, Siirtoseppä 40 %, Karttaseppä 39 %, Sisältökirjuri 30 %. Ei ylityksiä.
+- **Juna:** proto-kaanna.sh käynnissä (6 prosessia), yläraja laukesi 23:37 (erä työn alla 29 min); viimeisin KÄÄNNETTY 21:36. Ei hälytystä (prosessi elossa).
+- **Postilaatikko:** ei uutta (kärki 78e5a333e). **Avoimia PR:iä:** 11.
