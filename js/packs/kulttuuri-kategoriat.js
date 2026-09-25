@@ -126537,6 +126537,264 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Anggabuana, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Bali, Ngurah Rai International Airport, Trans Metro
+       * Dewata, Uluwatu Temple, Kecak, Ubud Monkey Forest, Tegallalang,
+       * Galungan, Penjor, Ngaben, Babi panggang, Sate lilit, Balinese
+       * cuisine, Denpasar) ja Wikivoyagen sivuilta Bali, Indonesia, Ubud,
+       * Bukit Peninsula, Kintamani ja Denpasar — teksti omaa. Maahantulo,
+       * matkailijamaksu ja bussilinjat muuttuvat usein, joten ne on
+       * kirjoitettu varauksin; hinnat ja aukioloajat on jätetty pois.
+       * Nostojen aiheita (Houtman, yhdeksän kuningaskuntaa, Kerta Gosa,
+       * Mads Lange, puputan, subak, Besakih, gamelan, Nyepin merkitys,
+       * canang sari), gallerian Nieuwenkamp-grafiikoita eikä ennen–nyt-
+       * kuvien aiheita (Kutan ranta, Jatiluwih) toisteta. Kuvien
+       * lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja
+       * kuvat katsottu silmin. Pystykuva: Uluwatun jyrkänne ja temppeli.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Cliffs of Uluwatu, Bali, Indonesia, 20220826 1006 1038.jpg',
+          lyhyt: 'Pura Luhur Uluwatu seisoo kalkkikivijyrkänteen laella Bukitin niemimaan kärjessä.',
+          selite: 'Uluwatun temppelin katot näkyvät korkean, kasvillisuuden '
+            + 'peittämän kalkkikivijyrkänteen laella, ja sen juurella Intian '
+            + 'valtameren aallot vaahtoavat turkoosina elokuussa 2022.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Bali ei ole kaupunki vaan tulivuorten saari, jolla '
+          + 'matkailijan päivät jakautuvat etelän rantojen, Ubudin '
+          + 'riisiterassien ja temppelien kesken. Lähes kaikki saapuvat '
+          + 'Kutan kupeessa olevalle lentoasemalle, ja etelän ruuhkissa '
+          + 'liikutaan kyytisovelluksella tai palkatun kuljettajan kanssa. '
+          + 'Temppeliin astutaan aina sarongissa, ja saaren juhlat seuraavat '
+          + '210 päivän kalenteria, joten Galungan-juhlan penjor-salot voivat '
+          + 'kaartua katujen yllä mihin vuodenaikaan tahansa. Warungeissa '
+          + 'syödään paahdettua porsasta ja sitruunaruohovartaita, hanavettä '
+          + 'ei juoda, ja läntinen monsuuni tuo sateet noin lokakuusta '
+          + 'huhtikuuhun. Vuonna 2025 saarella kävi lähes seitsemän miljoonaa '
+          + 'ulkomaista matkailijaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Bali',
+          teksti: 'Balilla sarong kulkee laukussa rantapyyhkeen vieressä.',
+          nosto: 'Uluwatun kalliolla kecak-kuoro toistaa rytmiään '
+            + 'auringonlaskun edessä, ja makakit vahtivat katsojien '
+            + 'aurinkolaseja.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lähes kaikki matkailijat saapuvat Ngurah Rain '
+                + 'kansainväliselle lentoasemalle. Sitä kutsutaan myös '
+                + 'Denpasarin kentäksi, vaikka se on Tubanissa Kutan ja '
+                + 'Jimbaranin välissä, noin 13 kilometriä pääkaupungista '
+                + 'etelään. Kentällä on vain yksi kiitotie, ja sitä on '
+                + 'suunniteltu laajennettavaksi mereen täytetylle maalle. '
+                + 'Indonesian 30 päivän turistiviisumin voi hakea verkosta '
+                + 'etukäteen, ja maahantulokortti täytetään sähköisesti ennen '
+                + 'lentoa; verkkoviisumilla pääsee Balilla automaattiporteista. '
+                + 'Vuonna 2024 maakunta alkoi periä ulkomaisilta matkailijoilta '
+                + 'omaa matkailijamaksua, mutta Wikivoyagen mukaan sitä ei '
+                + 'vuoden 2026 puolivälissä enää tarkastettu kentällä. Säännöt '
+                + 'muuttuvat usein, joten ne kannattaa tarkistaa viranomaisilta '
+                + 'juuri ennen matkaa. Tulohallista pääsee kiinteähintaisella '
+                + 'taksilla, jonka lipun saa kopista, tai Grab-kyytisovelluksen '
+                + 'omalta tiskiltä. Grab ja Gojek toimivat etelässä hyvin, mutta '
+                + 'Canggussa, Jimbaranissa ja Uluwatussa paikalliset taksikuskit '
+                + 'ovat pystyttäneet kylttejä, joiden mukaan sovelluskyydit eivät '
+                + 'saa ottaa siellä matkustajia. Julkinen Trans Metro Dewata '
+                + '-bussi kulkee kuudella linjalla Denpasarin seudulla ja Ubudiin '
+                + 'asti, mutta se on tehty työmatkalaisille: maksu hoidetaan '
+                + 'kortilla tai QR-koodilla, ja bussi jää usein ruuhkaan. Moni '
+                + 'palkkaa koko päiväksi auton ja kuljettajan. Skootterin saa '
+                + 'vuokralle helposti, mutta ajamiseen tarvitaan kansainvälinen '
+                + 'ajokortti moottoripyöräluokalla ja kypärä, eikä matkavakuutus '
+                + 'välttämättä korvaa onnettomuutta ilman niitä. Jaavalta pääsee '
+                + 'lautalla Ketapangista Gilimanukiin puolessa tunnissa ympäri '
+                + 'vuorokauden.',
+              kuva: [
+                {
+                  tiedosto: 'Terminal Internasional Bandara Ngurah Rai Bali.jpg',
+                  lyhyt: 'Matkailijat odottavat laukkuineen Ngurah Rain kansainvälisessä terminaalissa.',
+                  selite: 'Ngurah Rain lentoaseman kansainvälisen terminaalin '
+                    + 'korkean valkoisen kattokaaren alla matkailijat odottavat '
+                    + 'matkalaukkujensa kanssa lentotietotaulun edessä '
+                    + 'marraskuussa 2023.',
+                  lahde: 'Ardfeb, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Traffic on Monkey Forest Road in Ubud, Bali (15009547799).jpg',
+                  lyhyt: 'Skootterit ja autot jonottavat Jalan Monkey Forestilla Ubudin keskustassa.',
+                  selite: 'Ubudin Jalan Monkey Forest -kadulla skootterit '
+                    + 'pujottelevat autojen välissä, ja kadun reunaan on '
+                    + 'pysäköity moottoripyöriä rivissä elokuussa 2014.',
+                  lahde: 'Fabio Achilli, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Prom ze wschodniej Jawy na Bali, 20220821 1105 9802.jpg',
+                  lyhyt: 'Autolautta ylittää Balinsalmen Jaavan Ketapangin ja Balin Gilimanukin välillä.',
+                  selite: 'KMP Karya Maritim III -autolautta matkalla Itä-Jaavan '
+                    + 'Ketapangista Balin Gilimanukiin elokuussa 2022. Salmen '
+                    + 'ylitys kestää noin puoli tuntia, mutta lastaamista saa '
+                    + 'joskus odottaa pitkään.',
+                  lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Etelän rannat ja Bukitin kalliot',
+              teksti: 'Suurin osa matkailijoista asuu saaren etelässä. Kutan ja '
+                + 'Legianin pitkillä hiekkarannoilla aallot sopivat '
+                + 'surffikoulujen aloittelijoille, Seminyakissa rantaa pitkin '
+                + 'voi kävellä kahviloiden ohi, ja pohjoisempana Canggu on '
+                + 'kasvanut vuoden 2010 jälkeen riisipelloista surffaajien ja '
+                + 'etätyöläisten suosimaksi alueeksi. Etelässä '
+                + 'liikenne on kuitenkin pahimmillaan, ja jalkakäytävät ovat '
+                + 'monin paikoin vain kapeita sadevesiojien kansia. Lentokentän '
+                + 'eteläpuolella alkaa Bukitin niemimaa, kohonneesta '
+                + 'koralliriutasta syntynyt kuiva kalkkikiviylänkö, jossa sataa '
+                + 'selvästi vähemmän kuin muualla saarella. Sen jyrkänteiden '
+                + 'alla murtuvat saaren kovimmat aallot: Uluwatu, Padang-Padang '
+                + 'ja Bingin ovat kokeneiden surffaajien paikkoja. Niemen '
+                + 'lounaiskärjessä kallion reunalla seisoo Pura Luhur Uluwatu, '
+                + 'yksi Balia suojelevista yhdeksästä suuntatemppelistä. Sen '
+                + 'makakit ovat tunnettuja varkaita, jotka nappaavat '
+                + 'aurinkolaseja, sandaaleja ja puhelimia ja luopuvat saaliistaan '
+                + 'vasta hedelmää vastaan. Joka ilta auringonlaskun aikaan '
+                + 'temppelin kalliolla esitetään kecak-tanssi. Kymmenet miehet '
+                + 'istuvat piirissä ja toistavat rytmikästä "tšak"-huutoa ilman '
+                + 'soittimia, kun keskellä tanssijat esittävät Ramayana-eepoksen '
+                + 'kohtauksia. Esitys muokattiin 1930-luvulla vanhasta '
+                + 'transsirituaalista, ja liput voivat loppua kesken. Rannalla '
+                + 'katsotaan lippuja: punainen lippu varoittaa vaarallisista '
+                + 'repivistä virtauksista, ja uimaan mennään keltaisten lippujen '
+                + 'väliin.',
+              kuva: {
+                tiedosto: 'Ramayana Kecak Dancers.jpg',
+                lyhyt: 'Kecak-kuoro nostaa kätensä Uluwatun amfiteatterissa täyden katsomon edessä.',
+                selite: 'Paljasrintaiset, ruudullisiin lannevaatteisiin '
+                  + 'pukeutuneet kecak-laulajat nostavat kätensä ilmaan '
+                  + 'öljylampun ympärillä, ja heidän takanaan katsomo täyttyy '
+                  + 'ilta-auringossa Uluwatun temppelin amfiteatterissa.',
+                lahde: 'Johannnindito Adisuryo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ubud ja riisiterassit',
+              teksti: 'Ubud saaren keskiosassa on Balin taiteen ja käsityön '
+                + 'keskus. Matkailijasta se näyttää yhdeltä pikkukaupungilta, '
+                + 'mutta se on neljätoista kylää, joilla kullakin on oma '
+                + 'banjar-kyläneuvostonsa. Keskustan pääkadut ruuhkautuvat '
+                + 'päivittäin, mutta sivukujilla ja jokilaaksojen riisipelloilla '
+                + 'on yhä hiljaista, ja tanssia tai varjoteatteria esitetään '
+                + 'jossain joka ilta. Jalan Monkey Forestin päässä on pyhä '
+                + 'apinametsä, jossa eli vuonna 2023 noin 1 260 makakia ja '
+                + 'jonka alueella on kolme noin 1350 rakennettua temppeliä. '
+                + 'Apinat eivät pelkää ihmisiä, joten ruokaa ei oteta mukaan, ja '
+                + 'puremasta on hakeuduttava hoitoon raivotaudin takia. Noin '
+                + 'kymmenen kilometriä Ubudista pohjoiseen on Tegallalang, '
+                + 'jonka laaksoon porrastetut riisiterassit ovat saaren '
+                + 'kuvatuimpia. Kojuja ja kauppiaita on paljon, mutta aamulla '
+                + 'ennen kuumuutta ja väkijoukkoja terassien poluilla on vielä '
+                + 'tilaa. Campuhanin harjupolku alkaa Pura Gunung Lebahin '
+                + 'temppelin vierestä ja kulkee noin kaksi kilometriä harjannetta '
+                + 'pitkin; Wikivoyagen mukaan rakentaminen on vuoteen 2026 '
+                + 'mennessä vienyt osan sen maisemista. Ubud on noin 200 metrin '
+                + 'korkeudessa, joten illat ovat rannikkoa viileämpiä, mutta '
+                + 'tammi- ja helmikuussa sataa rankasti. Aikaiset herääjät '
+                + 'lähtevät Kintamanin puolelle Batur-tulivuorelle: noin 1 700 '
+                + 'metrin huipulle kiivetään pimeässä parissa tunnissa '
+                + 'katsomaan, kun aurinko nousee korkeamman Agungin takaa. '
+                + 'Paikallisen oppaan palkkaaminen on pakollista, vaikka reitti '
+                + 'on helppo.',
+              kuva: {
+                tiedosto: 'Rice terraces in Tegallalang 3.jpg',
+                lyhyt: 'Riisiterassit porrastuvat Tegallalangin rinteellä kookospalmujen alla.',
+                selite: 'Vihreät riisipellot nousevat kapeina penkereinä '
+                  + 'Tegallalangin laakson rinnettä ylös kookospalmujen juurelle '
+                  + 'Ubudin pohjoispuolella, ja rinteen laella liehuu värikkäitä '
+                  + 'lippuja.',
+                lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sarong, penjor ja juhlakalenteri',
+              teksti: 'Balilla on arviolta 20 000 temppeliä, ja jokaiseen '
+                + 'astutaan sarongissa ja vyötärölle sidotussa kangasvyössä. '
+                + 'Suurissa matkailijoiden temppeleissä ne saa pääsylipun '
+                + 'yhteydessä tai pientä vuokraa vastaan, mutta oma sarong '
+                + 'kannattaa ostaa heti ensimmäisenä päivänä, sillä '
+                + 'harvemmin käydyissä temppeleissä vuokrausta ei välttämättä '
+                + 'ole. Temppeli '
+                + 'jakautuu kolmeen pihaan. Uloin on ihmisten puoli, jonne muut '
+                + 'kuin hindut pääsevät lähes aina, mutta sisimpään pyhäkköön '
+                + 'pääsy riippuu temppelistä ja käynnissä olevista menoista. '
+                + 'Tavaroita annetaan ja otetaan oikealla kädellä, eikä '
+                + 'kenenkään päähän kosketa. Saaren juhlat seuraavat 210 päivän '
+                + 'pawukon-kalenteria, joten niiden päivämäärät vaeltavat '
+                + 'vuodesta toiseen, ja jokainen temppeli viettää '
+                + 'odalan-juhlaansa ainakin kahdesti vuodessa. Suurin juhlista '
+                + 'on Galungan, jolloin esi-isien henkien uskotaan käyvän '
+                + 'maan päällä. Perheet pystyttävät porttiensa eteen penjorin, '
+                + 'korkean kaarevan bambusalon, joka koristellaan kookoksen '
+                + 'lehdillä, hedelmillä, riisillä ja leivonnaisilla. Juhla '
+                + 'päättyy kymmenen päivää myöhemmin Kuninganiin, ja seuraavat '
+                + 'Galunganit osuvat 13. tammikuuta ja 11. elokuuta 2027. '
+                + 'Nyepi-päivänä, seuraavan kerran 9. maaliskuuta 2027, myös '
+                + 'lentoasema ja satamat ovat kiinni vuorokauden. Ulkomaalaisten '
+                + 'huonoon käytökseen suhtaudutaan nykyään tiukasti: Bali '
+                + 'perusti vuonna 2024 oman turistipoliisin, ja vuonna 2023 '
+                + 'saarelta karkotettiin 340 ulkomaalaista muun muassa '
+                + 'viisumirikkomusten, luvattoman työn ja pyhissä paikoissa '
+                + 'sopimattoman käytöksen vuoksi.',
+              kuva: {
+                tiedosto: 'Penjors (16850614797).jpg',
+                lyhyt: 'Koristellut penjor-salot kaartuvat Ubudin sivukadun yllä.',
+                selite: 'Kaksi korkeaa, kärjestään kaartuvaa bambusaloa on '
+                  + 'koristeltu kookoksenlehtinauhoin Ubudin sivukadulla '
+                  + 'marraskuussa 2013, ja kadun päässä näkyy lisää saloja.',
+                lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Warungista yötorille, kuivakaudesta sateisiin',
+              teksti: 'Balilaista ruokaa syödään edullisimmin ja usein '
+                + 'parhaiten warungeissa, pienissä perheravintoloissa, joista '
+                + 'moni on erikoistunut yhteen ruokalajiin. Nasi campur on '
+                + 'riisiä, jonka ympärille kootaan pieniä annoksia lihaa, '
+                + 'vihanneksia ja sambalia. Toisin kuin muualla '
+                + 'muslimienemmistöisessä Indonesiassa Balin keittiö suosii '
+                + 'sianlihaa. Babi guling on mausteilla täytetty ja vartaassa '
+                + 'pyöritetty porsas, joka oli alun perin juhlamenojen ruokaa. '
+                + 'Bebek betutu on banaaninlehtiin kääritty, hitaasti kypsennetty '
+                + 'ankka, lawar hienonnettua vihannesta, kookosta ja lihaa, ja '
+                + 'sate lilit sitruunaruohon tai bambun ympärille painettua ja '
+                + 'hiilloksella grillattua jauhelihaa. Kasvissyöjän kannattaa '
+                + 'kysyä sambalista, sillä siinä on yleensä katkaraputahnaa. '
+                + 'Pääkaupunki Denpasar jää monelta näkemättä, vaikka sen '
+                + 'Kereneng-yötorilla syödään kojuista aitoa indonesialaista '
+                + 'ruokaa. Hanavettä ei juoda, ja paikallisen arak-viinan '
+                + 'kanssa on syytä olla varovainen, sillä metanolilla jatketut '
+                + 'juomat ovat aiheuttaneet myrkytyksiä ja kuolemia. Päivän '
+                + 'lämpötila on ympäri vuoden noin 20–33 astetta. Läntinen '
+                + 'monsuuni tuo sateita suunnilleen lokakuusta huhtikuuhun, '
+                + 'rankimmin joulu–maaliskuussa, jolloin kuurot tulevat usein '
+                + 'iltapäivällä ja rannoille huuhtoutuu roskia. Kesäkuusta '
+                + 'syyskuuhun on kuivaa, ja heinä–elokuu on vilkkainta sesonkia. '
+                + 'Vuorilla Bedugulissa ja Kintamanissa illat ovat koleita, '
+                + 'joten villapaita kannattaa pakata mukaan.',
+              kuva: {
+                tiedosto: 'Lawar babi guling.jpg',
+                lyhyt: 'Lautasella on babi gulingin rapeaa nahkaa ja lihaa sekä lawar-salaattia.',
+                selite: 'Balilaisessa annoksessa on paahdetun porsaan rapeaa '
+                  + 'nahkaa ja lihaa, hienonnettua lawar-vihannessalaattia ja '
+                  + 'lautasen reunalla jauhelihavarras.',
+                lahde: 'ybs, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'kulttuuri',
