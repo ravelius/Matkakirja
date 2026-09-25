@@ -7679,4 +7679,1101 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Jurong Lake Gardens on Singaporen kolmas kansallispuutarha, ja sen järvenrannalle on ennallistettu makean veden suometsää.',
     },
   },
+  /*
+   * ARG (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6A). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.ARG:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti: 23 provinssia ja pääkaupunki
+   * avaimella "Ciudad de Buenos Aires" (nimiFi "Buenos Aires" kuten
+   * provinssillakin). Vain `lyhyt`. Vältetty maastokohteet-arg.js:n
+   * aiheet (Aconcagua, Río de la Plata, Cueva de las Manos, Quebrada de
+   * Humahuaca, Córdoban jesuiittakortteli, La Polvorilla, Península
+   * Valdés, Ushuaia, Ischigualasto, Perito Moreno). Lähteet (en-/es-
+   * Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Formosa        — Bañado La Estrella (champales, Pilcomayon tulvat)
+   *   La Pampa       — Parque Luro (Pedro Luron tuomat saksanhirvet,
+   *                    brama maalis–huhtikuussa; turismo.lapampa.gob.ar)
+   *   La Rioja       — Cable Carril Chilecito–La Mejicana (noin 35 km,
+   *                    valmis 1905; argentina.gob.ar, es-Wikipedia)
+   *   San Luis       — Sierra de las Quijadas / Pterodaustro
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  ARG: {
+    'Buenos Aires': {
+      lyhyt: 'Provinssin pääkaupunki La Plata rakennettiin tyhjästä 1880-luvulla, ja sen ruutukaavaa halkovat vinottaiset diagonaalikadut.',
+    },
+    'Ciudad de Buenos Aires': {
+      lyhyt: 'Avenida 9 de Julio on yksi maailman leveimmistä kaduista, ja sen keskellä kohoaa 67-metrinen valkoinen Obelisco.',
+    },
+    'Catamarca': {
+      lyhyt: 'El Peñónin lähellä Punan ylängöllä levittäytyy Campo de Piedra Pómez, tuulen veistämien vaaleiden hohkakivimuodostelmien kenttä.',
+    },
+    'Chaco': {
+      lyhyt: 'Campo del Cielon kraatterikentältä on löydetty maailman raskaimpiin kuuluvia rautameteoriitteja, kuten kymmenien tonnien El Chaco.',
+    },
+    'Chubut': {
+      lyhyt: 'Gaimanissa elää walesilaisten siirtolaisten perintö: teetaloissa tarjoillaan walesilaista kakkua, ja kappeleissa kuulee yhä kymriä.',
+    },
+    'Córdoba': {
+      lyhyt: 'Villa General Belgranossa, saksalaissiirtolaisten perustamassa vuoristokylässä, vietetään joka lokakuu Argentiinan kansallisia olutjuhlia.',
+    },
+    'Corrientes': {
+      lyhyt: 'Iberán kosteikoille on vuodesta 2021 palautettu jaguaareja, jotka olivat kadonneet maakunnasta yli puoli vuosisataa aiemmin.',
+    },
+    'Entre Ríos': {
+      lyhyt: 'Gualeguaychún karnevaali, Argentiinan suurin, täyttää kaupungin sambakulkueen katsomot joka tammi- ja helmikuun viikonloppuna.',
+    },
+    'Formosa': {
+      lyhyt: 'Bañado La Estrellan tulvakosteikossa vedestä nousee kuolleita puita, joiden rungot köynnökset ovat peittäneet vihreiksi pylväiksi.',
+    },
+    'Jujuy': {
+      lyhyt: 'Salinas Grandesin suola-aavikolla yli 3 400 metrin korkeudessa suolaa lohkotaan yhä käsin, ja keskeltä kulkee maantie.',
+    },
+    'La Pampa': {
+      lyhyt: 'Parque Luron vanhalla metsästystilalla voi maalis–huhtikuussa kuunnella Euroopasta tuotujen saksanhirvien kiima-ääntelyä.',
+    },
+    'La Rioja': {
+      lyhyt: 'Chilecitosta nousee La Mejicanan kaivokselle noin 35 kilometrin köysirata, joka valmistui 1905 ja on nyt kansallinen muistomerkki.',
+    },
+    'Mendoza': {
+      lyhyt: 'Mendoza tuottaa suurimman osan Argentiinan viineistä, ja sen tunnetuin rypäle on malbec.',
+    },
+    'Misiones': {
+      lyhyt: 'Iguazún putouksilla joki syöksyy U:n muotoiseen Garganta del Diablon kurkkuun, ja vesisumu nousee korkealle sademetsän ylle.',
+    },
+    'Neuquén': {
+      lyhyt: 'Villa El Chocónin museossa on esillä Giganotosaurus, yksi suurimmista tunnetuista lihansyöjädinosauruksista, joka löytyi läheltä.',
+    },
+    'Río Negro': {
+      lyhyt: 'San Carlos de Bariloche Nahuel Huapi -järven rannalla tunnetaan suklaapuodeistaan ja alppityylisistä kivi- ja puutaloistaan.',
+    },
+    'Salta': {
+      lyhyt: 'Cafayaten laakson viinitarhoilla viljellään torrontésia, Argentiinan omaa tuoksuvaa valkoista rypälettä.',
+    },
+    'San Juan': {
+      lyhyt: 'Vallecitossa on Difunta Correan pyhäkkö, jonne rekkakuskit ja pyhiinvaeltajat jättävät vesipulloja janoon kuolleen äidin muistoksi.',
+    },
+    'San Luis': {
+      lyhyt: 'Sierra de las Quijadasin kansallispuiston punaisista rotkoista on kaivettu esiin Pterodaustron, suodatinhampaisen lentoliskon, fossiileja.',
+    },
+    'Santa Cruz': {
+      lyhyt: 'El Chaltén on Argentiinan vaellusten pääkaupunki, ja sen yllä kohoaa Fitz Royn jyrkkä graniittihuippu.',
+    },
+    'Santa Fe': {
+      lyhyt: 'Rosariossa Paraná-joen rannalla seisoo lipun kansallismonumentti, koska Manuel Belgrano nosti Argentiinan lipun täällä ensi kertaa 1812.',
+    },
+    'Santiago del Estero': {
+      lyhyt: 'Santiago del Estero perustettiin 1553, ja maan vanhimpana yhä asuttuna kaupunkina sitä kutsutaan kaupunkien äidiksi.',
+    },
+    'Tierra del Fuego': {
+      lyhyt: 'Río Granden kaupungin nimikkojoki houkuttelee perhokalastajia ympäri maailmaa, sillä siihen nousee poikkeuksellisen suuria meritaimenia.',
+    },
+    'Tucumán': {
+      lyhyt: 'San Miguel de Tucumánin Casa Históricassa julistettiin Argentiinan itsenäisyys 9. heinäkuuta 1816, ja talo on nyt museo.',
+    },
+  },
+  /*
+   * COL (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.COL:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti:
+   * 32 departementtia, pääkaupunkipiiri "Bogota" (ilman aksenttia) ja
+   * "COL+99?" = Natural Earthin nimetön pikkusaari 3,98° N 81,60° W =
+   * Malpelon saari (julisteet/pallo/maakunnat/2026-09-25a/COL.json).
+   * Vain `lyhyt`. Vältetty maastokohteet-col.js:n aiheet (Pico Cristóbal
+   * Colón, Caño Cristales, Ciudad Perdida, San Agustín, Tierradentro,
+   * Cartagena, Mompox, Guatavita, Barranquillan karnevaali,
+   * kahvimaisema). Lähteet (en-/es-Wikipedia ja hakutarkistus
+   * 25.9.2026), epävarmimmat erikseen:
+   *   Atlántico      — Statue of Shakira (6,5 m, Gran Malecón, 2023)
+   *   Sucre          — Balsam of Tolu (nimi Santiago de Tolún mukaan);
+   *                    Santa Cruz del Islote hylätty, se kuuluu Bolívariin
+   *   Tolima         — Conservatorio del Tolima (1906), "capital musical"
+   *   Vichada        — Maipures (Humboldtin "maailman kahdeksas ihme";
+   *                    colombia.travel, The City Paper Bogotá)
+   *   Guaviare       — Nukak (Calamar, huhtikuu 1988; Survival)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  COL: {
+    'Amazonas': {
+      lyhyt: 'Leticia on kasvanut kiinni brasilialaiseen Tabatingaan niin, että kaupungista toiseen kävellään ilman rajatarkastusta.',
+    },
+    'Antioquia': {
+      lyhyt: 'Medellínissä köysiradat on liitetty metroon, ja ne kuljettavat asukkaita jyrkkien rinnekaupunginosien ja keskustan väliä.',
+    },
+    'Arauca': {
+      lyhyt: 'Arauca on Llanos-tasankojen karjamaata, ja sen Caño Limónin öljykentältä kulkee putki Karibian rannikolle asti.',
+    },
+    'Atlántico': {
+      lyhyt: 'Barranquillassa syntyi laulaja Shakira, ja Magdalena-joen rantabulevardilla tanssii hänen kuusimetrinen pronssipatsaansa.',
+    },
+    'Bogota': {
+      lyhyt: 'Bogotássa suljetaan joka sunnuntai yli sata kilometriä katuja autoilta, kun Ciclovía täyttyy pyöräilijöistä ja juoksijoista.',
+    },
+    'Bolívar': {
+      lyhyt: 'San Basilio de Palenquessa, karanneiden orjien perustamassa kylässä, puhutaan yhä espanjaan ja afrikkalaisiin kieliin pohjaavaa palenqueroa.',
+    },
+    'Boyacá': {
+      lyhyt: 'Villa de Leyvan mukulakivitori on yksi Amerikan suurimmista, ja valkoiset siirtomaa-ajan talot reunustavat sitä joka puolelta.',
+    },
+    'Caldas': {
+      lyhyt: 'Manizalesin kaakkoispuolella kohoaa Nevado del Ruiz, yksi Kolumbian aktiivisimmista tulivuorista.',
+    },
+    'Caquetá': {
+      lyhyt: 'Chiribiqueten kansallispuiston pöytävuorten seinämissä on kymmeniätuhansia muinaisia kalliomaalauksia, ja puisto on Unescon maailmanperintöä.',
+    },
+    'Casanare': {
+      lyhyt: 'Casanaren tasangoilla karjaa ajetaan yhä hevosella, ja llanero-paimenten työlaulut ovat Unescon suojeltavaa perintöä.',
+    },
+    'Cauca': {
+      lyhyt: 'Popayánin valkoisen vanhankaupungin pääsiäisviikon kulkueet ovat Unescon aineetonta kulttuuriperintöä.',
+    },
+    'Cesar': {
+      lyhyt: 'Valleduparissa pidetään joka huhtikuu vallenato-festivaali, jossa valitaan harmonikkamusiikin kuningas.',
+    },
+    'Chocó': {
+      lyhyt: 'Nuquín ja Bahía Solanon edustalle saapuu heinä–lokakuussa ryhävalaita synnyttämään poikasensa lämpimään veteen.',
+    },
+    'COL+99?': {
+      lyhyt: 'Malpelon kalliosaarella noin 500 km rannikolta asuu vain pieni sotilasvartiosto, mutta sen vesissä parveilee satoja vasarahaita.',
+    },
+    'Córdoba': {
+      lyhyt: 'Tuchínissa punotaan zenú-kansan sombrero vueltiaota, olkihattua josta on tullut Kolumbian kansallinen symboli.',
+    },
+    'Cundinamarca': {
+      lyhyt: 'Zipaquirán suolakaivokseen on kaiverrettu maanalainen katedraali, jonka ristit ja pylväät on hakattu vuorisuolaan.',
+    },
+    'Guainía': {
+      lyhyt: 'Inírida-joen varrelta kohoavat Mavecuren graniittikalliot, jotka nousevat jyrkkinä suoraan sademetsästä.',
+    },
+    'La Guajira': {
+      lyhyt: 'Punta Gallinas on Etelä-Amerikan mantereen pohjoisin kärki, ja sinne pääsee vain maastoautolla tai veneellä.',
+    },
+    'Guaviare': {
+      lyhyt: 'Guaviaren metsissä elävät nukakit, paimentolaiskansa, joka tuli kosketuksiin ulkomaailman kanssa vasta 1988 Calamarin kylässä.',
+    },
+    'Huila': {
+      lyhyt: 'Tatacoan autiomaa on punaisiksi ja harmaiksi uurtunutta kuivaa maata keskellä vehreää Kolumbiaa, ja sen öinä tähtiä katsellaan observatoriosta.',
+    },
+    'Magdalena': {
+      lyhyt: 'Aracatacassa syntyi Gabriel García Márquez, ja pikkukaupunki innoitti hänen kuvitteellista Macondoaan.',
+    },
+    'Meta': {
+      lyhyt: 'Villavicencio on Llanos-tasankojen portti, ja sen kansainvälisessä turnauksessa tanssitaan joropoa harpun ja cuatron tahdissa.',
+    },
+    'Nariño': {
+      lyhyt: 'Las Lajasin basilika on rakennettu sillaksi Guáitara-joen rotkon ylle Ipialesin lähellä.',
+    },
+    'Norte de Santander': {
+      lyhyt: 'Cúcutan Simón Bolívarin kansainvälinen silta on yksi Kolumbian ja Venezuelan vilkkaimmista rajanylityspaikoista.',
+    },
+    'Putumayo': {
+      lyhyt: 'Sibundoyn laaksossa kamëntšá- ja inga-kansat viettävät ennen paastoa Bëtscnatéa, anteeksiannon ja ystävyyden juhlaa.',
+    },
+    'Quindío': {
+      lyhyt: 'Salenton lähellä Cocoran laaksossa kasvaa vahapalmuja, maailman korkeimpia palmuja ja Kolumbian kansallispuu.',
+    },
+    'Risaralda': {
+      lyhyt: 'Pereiran pääaukiolla ratsastaa alaston Simón Bolívar, Rodrigo Arenas Betancourtin pronssiveistos.',
+    },
+    'San Andrés y Providencia': {
+      lyhyt: 'San Andrésin saarella puhutaan espanjan rinnalla englantipohjaista kreolia, ja ympäröivä meri hohtaa monina sinisen sävyinä.',
+    },
+    'Santander': {
+      lyhyt: 'Santanderissa herkutellaan paahdetuilla hormigas culonas -muurahaisilla, joiden kuningattaret kerätään sadekauden alussa keväällä.',
+    },
+    'Sucre': {
+      lyhyt: 'Santiago de Tolún rantakaupunki on antanut nimensä tolubalsamille, tuoksuvalle puun pihkalle, jota käytetään yskänlääkkeissä.',
+    },
+    'Tolima': {
+      lyhyt: 'Ibaguéta kutsutaan Kolumbian musiikin pääkaupungiksi, ja sen vuonna 1906 perustettu konservatorio on maan vanhimpia.',
+    },
+    'Valle del Cauca': {
+      lyhyt: 'Calia pidetään salsan maailmanpääkaupunkina, ja joulukuun Feria de Calissa kaupunki tanssii kaduilla.',
+    },
+    'Vaupés': {
+      lyhyt: 'Vaupésin jokikansojen perinteessä puoliso otetaan toisesta kieliryhmästä, joten moni lapsi kasvaa jo kotona monikieliseksi.',
+    },
+    'Vichada': {
+      lyhyt: 'El Tuparron kansallispuistossa ovat Orinocon Maipuresin kosket, joita Alexander von Humboldt kutsui maailman kahdeksanneksi ihmeeksi.',
+    },
+  },
+  /*
+   * ECU (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.ECU:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti:
+   * 24 provinssia, osa ilman aksentteja ("Bolivar", "Los Rios", "Manabi",
+   * "Sucumbios"). Vain `lyhyt`. Vältetty maastokohteet-ecu.js:n aiheet
+   * (Cotopaxi, Quilotoa, Napo-joki, Ingapirca, Cuenca, Guayaquil,
+   * Yasuní, Paholaisen nenä, panamahattu, Valdivian kulttuuri,
+   * Otavalo). Lähteet (en-/es-Wikipedia ja hakutarkistus 25.9.2026),
+   * epävarmimmat erikseen:
+   *   Cañar          — Laguna de Culebrillas (3 800 m, kañarien pyhä
+   *                    järvi, Qhapaq Ñan; El Mercurio 2024)
+   *   Cotopaxi       — Mama Negra (en-Wikipedia, El Universo)
+   *   Manabi         — Manta (IPS 2010: "world capital of tuna")
+   *   Napo           — Cavernas de Jumandy (4 km Archidonasta; 1578
+   *                    kapina, es-Wikipedia Archidona)
+   *   Pastaza        — Sápara (Unesco 2001; puhujia enää muutama)
+   *   Zamora Chinchipe — Mirador mine (tuotanto 2019, ECSA/CRCC-Tongguan)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  ECU: {
+    'Azuay': {
+      lyhyt: 'Cajasin kansallispuiston päramolla on satoja pieniä järviä, ja sieltä virtaavat joet antavat Cuencalle sen juomaveden.',
+    },
+    'Bolivar': {
+      lyhyt: 'Salinas de Guarandan vuoristokylä elää osuuskunnistaan, jotka valmistavat juustoa ja suklaata El Salinerito -nimellä.',
+    },
+    'Cañar': {
+      lyhyt: 'Culebrillasin järvi 3 800 metrissä on kañari-kansan pyhä paikka, ja sen rannalta kulkee inkojen kuninkaantie.',
+    },
+    'Carchi': {
+      lyhyt: 'Tulcánin hautausmaalla sypressit on leikattu eläinten, kasvojen ja rakennusten muotoon, ja puutarhaa hoidetaan kuin taideteosta.',
+    },
+    'Chimborazo': {
+      lyhyt: 'Chimborazon huippu on päiväntasaajan pullistuman takia maapallon pinnan kaukaisin kohta maan keskipisteestä.',
+    },
+    'Cotopaxi': {
+      lyhyt: 'Latacungan Mama Negra -kulkueessa ratsastaa mustiin kasvoihin maalattu naiseksi pukeutunut mies ja pirskottaa katsojiin maitoa.',
+    },
+    'El Oro': {
+      lyhyt: 'Machala kutsuu itseään maailman banaanipääkaupungiksi, ja siellä pidetään joka vuosi maailman banaanimessut.',
+    },
+    'Esmeraldas': {
+      lyhyt: 'Esmeraldasin afroecuadorilaisissa juhlissa soi marimba, jonka musiikki ja laulut ovat Unescon aineetonta kulttuuriperintöä.',
+    },
+    'Galápagos': {
+      lyhyt: 'Saaret ovat saaneet nimensä jättiläiskilpikonnistaan: galápago on vanha espanjan sana kilpikonnalle.',
+    },
+    'Guayas': {
+      lyhyt: 'Guayasin kostealla rannikkotasangolla kasvatetaan Nacional-kaakaota, josta saadaan kukkaistuoksuisena arvostettua Arriba-kaakaota.',
+    },
+    'Imbabura': {
+      lyhyt: 'Cotacachi-tulivuoren juurella olevan Cuicochan kraatterijärven keskellä kohoaa kaksi metsäistä saarta.',
+    },
+    'Loja': {
+      lyhyt: 'Vilcabamban laaksoa mainostetaan yhä satavuotiaiden laaksona, vaikka tutkijat ovat osoittaneet pitkäikäisyystarinat liioitelluiksi.',
+    },
+    'Los Rios': {
+      lyhyt: 'Los Ríos on tasaista jokimaata, jonka tulvatasangoilla viljellään suuri osa Ecuadorin riisistä ja banaaneista.',
+    },
+    'Manabi': {
+      lyhyt: 'Manta kutsuu itseään maailman tonnikalapääkaupungiksi, ja sen satamassa puretaan ja säilötään valtavat saaliit.',
+    },
+    'Morona Santiago': {
+      lyhyt: 'Macasista näkyy Sangay, yksi maailman jatkuvimmin purkautuvista tulivuorista, joka on ollut aktiivinen vuosisatoja.',
+    },
+    'Napo': {
+      lyhyt: 'Archidonan lähellä ovat Jumandín luolat, jotka on nimetty espanjalaisia vastaan 1578 kapinoineen kiikos-päällikön mukaan.',
+    },
+    'Orellana': {
+      lyhyt: 'Puerto Francisco de Orellana, tutummin Coca, kasvoi 1970-luvun öljybuumissa sademetsän reunan kylästä vilkkaaksi kaupungiksi.',
+    },
+    'Pastaza': {
+      lyhyt: 'Pastazan sademetsissä elää sápara-kansa, jonka kieltä osaa enää vain kourallinen vanhuksia; Unesco nosti sen kulttuurin esiin 2001.',
+    },
+    'Pichincha': {
+      lyhyt: 'Quiton pohjoispuolella Mitad del Mundo -muistomerkki merkitsee päiväntasaajaa, vaikka todellinen nollaleveys kulkee parinsadan metrin päästä.',
+    },
+    'Santa Elena': {
+      lyhyt: 'Montañita on surffaajien ja reppumatkaajien rantakylä, jonka aallot houkuttelevat lautailijoita ympäri vuoden.',
+    },
+    'Santo Domingo de los Tsáchilas': {
+      lyhyt: 'Tsáchila-miehet värjäävät hiuksensa achioten punaisella väriaineella ja muotoilevat ne kypärämäiseksi.',
+    },
+    'Sucumbios': {
+      lyhyt: 'Cuyabenon suojelualueen tulvametsän mustavesijärvissä voi nähdä vaaleanpunaisia jokidelfiinejä.',
+    },
+    'Tungurahua': {
+      lyhyt: 'Bañosin yläpuolella Casa del Árbolin puukeinu heilahtaa jyrkänteen yli Tungurahua-tulivuorta kohti.',
+    },
+    'Zamora Chinchipe': {
+      lyhyt: 'Mirador on Ecuadorin ensimmäinen suuren mittakaavan kuparikaivos, kiinalaisomisteinen avolouhos, joka aloitti tuotannon 2019.',
+    },
+  },
+  /*
+   * BOL (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.BOL:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti:
+   * yhdeksän departementtia ("El Beni" = Beni). Vain `lyhyt`. Vältetty
+   * maastokohteet-bol.js:n aiheet (Sajama, Illimani, Desaguadero,
+   * Tiwanaku, Cerro Rico, Sucre, Chiquitosin lähetysasemat, Yungas-tie,
+   * Salar de Uyuni, Oruron karnevaali, Samaipata). Lähteet (en-/es-
+   * Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   El Beni        — Casarabe culture (lidar, Nature 2022)
+   *   Pando          — Brazil nut (Bolivia suurin viejä; Pando ja Beni)
+   *   Tarija         — viinitarhat noin 1 850–2 400 m (matkailulähteet)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  BOL: {
+    'El Beni': {
+      lyhyt: 'Benin tasangoilta on laserkeilauksella löydetty Casarabe-kulttuurin kaupunkeja pengerteineen ja kanavineen sademetsän alta.',
+    },
+    'Chuquisaca': {
+      lyhyt: "Cal Orck'on kalkkikiviseinässä on tuhansia dinosaurusten jalanjälkiä, jotka painuivat aikanaan järven rantaliejuun.",
+    },
+    'Cochabamba': {
+      lyhyt: 'Cochabamban kukkulalla seisova Cristo de la Concordia on korkeampi kuin Rion Kristus, ja sen luo pääsee köysiradalla.',
+    },
+    'La Paz': {
+      lyhyt: 'La Pazin ja El Alton välillä kulkee Mi Teleférico, maailman laajin kaupunkiköysirataverkko, joka on osa arkista joukkoliikennettä.',
+    },
+    'Oruro': {
+      lyhyt: 'Poopó-järvi, aiemmin Bolivian toiseksi suurin, kuivui 2015 lähes kokonaan, ja kalastajakylät jäivät autiolle suolapohjalle.',
+    },
+    'Pando': {
+      lyhyt: 'Pandon sademetsissä kerääjät poimivat paraspähkinöitä maahan pudonneista kovista hedelmistä, ja Bolivia on maailman suurin niiden viejä.',
+    },
+    'Potosí': {
+      lyhyt: 'Laguna Coloradan vesi on levien värjäämää punaista, ja järven matalikoilla pesii harvinaisia jamesinflamingoja.',
+    },
+    'Santa Cruz': {
+      lyhyt: 'Santa Cruzin tasangoilla asuu kymmeniätuhansia mennoniitteja, jotka kulkevat hevoskärryillä ja puhuvat plautdietschiä.',
+    },
+    'Tarija': {
+      lyhyt: 'Tarijan laakson viinitarhat ovat lähes 2 000 metrissä maailman korkeimpien joukossa, ja rypäleistä tislataan myös singani-viinaa.',
+    },
+  },
+  /*
+   * PER (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6B). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.PER:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti: "Lima" = Liman alue (Natural
+   * Earthin PER-591, Department, metropolialueen ulkopuoli), "Lima
+   * Province" = Liman metropolialue (PER-587, Captial District). Vain
+   * `lyhyt`. Vältetty maastokohteet-per.js:n aiheet (Huascarán,
+   * Apurímac-joki, Ballestas/Paracas, Nazcan viivat, Chan Chan, Caral,
+   * Kuélap, Sipán, Chavín de Huántar, Arequipan kaupunki, Colcan kanjoni)
+   * sekä pelikaupunkien Titicaca (Uros) ja Iquitos ydinaiheet. Lähteet
+   * (en-/es-Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Amazonas      — Gocta Cataracts (771 m, retkikunta 2002, julki 2006)
+   *   Apurímac      — Sayhuite (Curahuasi, yli 200 hahmoa)
+   *   Arequipa      — Toro Muerto (noin 2 600 kaiverrettua lohkaretta, wari)
+   *   Callao        — Jorge Chávez International Airport (terminaali 1.6.2025)
+   *   Huancavelica  — Huancayo–Huancavelica Railway (128,7 km, 5–7 h)
+   *   Junín         — Junin grebe (endeeminen Junínjärvelle, EN)
+   *   La Libertad   — Huanchaco (World Surfing Reserve 2012)
+   *   Lambayeque    — Túcume (26 pyramidia, "Purgatorio")
+   *   Lima Province — Huaca Pucllana (200–700 jaa.)
+   *   Loreto        — Pacaya-Samiria (SERNANP; 80 % tulvii sadekaudella)
+   *   Madre de Dios — Tambopata National Reserve (Chunchon savitörmä)
+   *   Moquegua      — Cerro Baúl (noin 2 000 jalkaa ympäristön yläpuolella)
+   *   Pasco         — Cerro de Pasco (4 330 m)
+   *   Puno          — Candelaria (Unesco 2014, yli 40 000 tanssijaa)
+   *   Tacna         — Tacna (tullivapaa vyöhyke, ostajat Aricasta/Iquiquesta)
+   *   Ucayali       — kené (Patrimonio Cultural de la Nación, huhtikuu 2008)
+   *   Muut          — yleistietoa, tarkistettu vastaavista
+   *                   en-Wikipedia-artikkeleista.
+   */
+  PER: {
+    Amazonas: {
+      lyhyt: 'Goctan vesiputous syöksyy Bongarán vuorilta kahtena pudotuksena yhteensä 771 metriä, ja laajempi maailma kuuli siitä vasta 2000-luvulla.',
+    },
+    'Áncash': {
+      lyhyt: 'Huarazista kävellään päivässä Laguna 69:lle, turkoosille vuoristojärvelle noin 4 600 metrin korkeudessa, jota Chacrarajun sulamisvesi ruokkii.',
+    },
+    'Apurímac': {
+      lyhyt: 'Curahuasin lähellä Saywitessa on inkojen veistämä lohkare, jonka pintaan on kaiverrettu yli 200 hahmoa, pengerryksiä ja vesikanavia.',
+    },
+    Arequipa: {
+      lyhyt: 'Majesjoen laakson laidalla Toro Muertossa on tuhansia vulkaanisia lohkareita, joihin hakattiin kalliopiirroksia yli tuhat vuotta sitten.',
+    },
+    Ayacucho: {
+      lyhyt: 'Ayacuchon käsityöläiset rakentavat retabloja, puisia lippaita, joiden ovien takana kokonainen kyläjuhla on kuvattu pienin maalatuin hahmoin.',
+    },
+    Cajamarca: {
+      lyhyt: 'Cajamarcan laaksossa Baños del Incan kuumiin lähteisiin tullaan kylpemään, ja höyryävät altaat ovat aivan kaupungin kupeessa.',
+    },
+    Callao: {
+      lyhyt: 'Perun vilkkain lentoasema Jorge Chávez on Callaossa, ja sen uusi matkustajaterminaali avattiin kesäkuussa 2025.',
+    },
+    Cusco: {
+      lyhyt: 'Joka kesäkuun 24. päivä Sacsayhuamánin muurien edustalla esitetään Inti Raymi, inkojen auringonjuhla, tuhansien katsojien edessä.',
+    },
+    Huancavelica: {
+      lyhyt: 'Huancayosta Huancavelicaan ajaa Tren Macho -juna, jonka 129 kilometrin matka vuoristolaaksoissa kestää viidestä seitsemään tuntia.',
+    },
+    'Huánuco': {
+      lyhyt: 'Tingo Maríasta näkyy Bella Durmiente, vuorijono, jonka ääriviiva muistuttaa selällään nukkuvaa naista.',
+    },
+    Ica: {
+      lyhyt: 'Ican kaupungin laidalla Huacachinan keidas on pieni laguuni korkeiden hiekkadyynien keskellä, ja dyyneillä ajetaan hiekkavaunuilla.',
+    },
+    'Junín': {
+      lyhyt: 'Junínjärvellä elää lentokyvytön junínuikku, uhanalainen lintu, jota ei tavata missään muualla maailmassa.',
+    },
+    'La Libertad': {
+      lyhyt: 'Huanchacon kalastajat meloivat yhä caballitos de totora -ruokoveneillään aaltojen yli, ja kylä on ollut surffausreservaatti vuodesta 2012.',
+    },
+    Lambayeque: {
+      lyhyt: 'Túcumen tasangolla kohoaa 26 suurta savitiilipyramidia ja kumparetta, ja paikalliset kutsuvat aluetta nimellä Purgatorio.',
+    },
+    Lima: {
+      lyhyt: 'Cañetejoen laaksossa Lunahuanássa lasketaan koskia kumiveneillä, ja rinteillä viljellään viinirypäleitä piscoa varten.',
+    },
+    'Lima Province': {
+      lyhyt: 'Miraflorisin kerrostalojen keskellä kohoaa Huaca Pucllana, limakulttuurin savitiilipyramidi noin vuosilta 200–700.',
+    },
+    Loreto: {
+      lyhyt: 'Pacaya-Samirian suojelualueella metsä on sadekaudella suurimmaksi osaksi veden alla, ja sen joissa uivat vaaleanpunaiset jokidelfiinit.',
+    },
+    'Madre de Dios': {
+      lyhyt: 'Tambopatan suojelualueen Chunchon savitörmälle kokoontuu aamuisin arapapukaijojen parvia syömään kivennäispitoista savea.',
+    },
+    Moquegua: {
+      lyhyt: 'Moqueguan laaksossa kohoaa pöytävuori Cerro Baúl, jonka laelle wari-kulttuuri rakensi asutuksen noin 600 metriä ympäristöään korkeammalle.',
+    },
+    Pasco: {
+      lyhyt: 'Cerro de Pasco on noin 4 330 metrin korkeudessa yksi maailman korkeimmista kaupungeista, ja se elää kaivoksistaan.',
+    },
+    Piura: {
+      lyhyt: 'Máncoran kalastajakylästä on tullut Perun pohjoisrannikon surffikohde, jonka lämpimillä rannoilla surffataan ympäri vuoden.',
+    },
+    Puno: {
+      lyhyt: 'Punon Candelarian juhlassa helmikuussa tanssii yli 40 000 puvustettua tanssijaa, ja juhla on Unescon aineetonta kulttuuriperintöä.',
+    },
+    'San Martín': {
+      lyhyt: 'Moyobambaa kutsutaan orkideoiden kaupungiksi, sillä sen ympäristön kosteissa vuoristometsissä kasvaa lukuisia orkidealajeja.',
+    },
+    Tacna: {
+      lyhyt: 'Tacna on tullivapaa kauppakaupunki, jonne tullaan rajan yli ostoksille Chilen Aricasta ja Iquiquesta.',
+    },
+    Tumbes: {
+      lyhyt: 'Tumbesin rannikolla on Perun laajin mangrovemetsä, ja sen kanavissa pyydetään mustia simpukoita, conchas negras.',
+    },
+    Ucayali: {
+      lyhyt: 'Ucayalin shipibo-konibo-naiset kirjovat ja maalaavat kankaisiin kené-kuvioita, jotka Peru julisti kansalliseksi kulttuuriperinnöksi 2008.',
+    },
+  },
+  /*
+   * VEN (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.VEN:n tunnuksia TÄSMÄLLEEN: "Vargas" = La Guairan
+   * osavaltio (nimi vaihtui 2019), "VEN+99?" = Natural Earthin nimetön
+   * saari (iso_3166_2 VE-X01~, 15,7° N 63,6° W) = Isla de Aves;
+   * "Dependencias Federales" kattaa muut liittovaltion saaret. Vain
+   * `lyhyt`, neutraali sävy (ei politiikkaa). Vältetty
+   * maastokohteet-ven.js:n aiheet (Roraima, Maracaibojärvi ja Catatumbo,
+   * Los Roques, Salto Ángel, Coro, Ciudad Bolívar, Guácharon luola,
+   * Méridan köysirata, Colonia Tovar, Morrocoy, Ciudad Guayana). Lähteet
+   * (en-/es-Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Amazonas       — Casiquiare canal (bifurkaatio Orinoco–Rio Negro)
+   *   Anzoátegui     — Mochima National Park (32 saarta, Chimana Grande)
+   *   Aragua         — Henri Pittier National Park (13.2.1937, vanhin)
+   *   Barinas        — Barinas (state): "capital of the rivers"
+   *   Bolívar        — Unesco ICH: Carnival of El Callao (2016)
+   *   Carabobo       — Puerto Cabello (maan suurin satama)
+   *   Cojedes        — Unesco ICH: Venezuela's Dancing Devils (2012,
+   *                    Tinaquillo yksi 11 veljeskunnasta)
+   *   Dependencias   — La Tortuga Island (156,6 km², asumaton)
+   *   Falcón         — Paraguaná Refinery Complex (läntisen pallonpuoliskon
+   *                    suurin)
+   *   Lara           — Divina Pastora (14.1., Santa Rosa–Barquisimeto)
+   *   Mérida         — Humboldtin jäätikkö jääkentäksi 5/2024 (BBC, UPI)
+   *   Portuguesa     — Basílica Santuario Nacional de Coromoto (1996)
+   *   Distrito Cap.  — Ciudad Universitaria de Caracas (Unesco 2000)
+   *   Trujillo       — Monumento a la Virgen de la Paz (46,72 m)
+   *   VEN+99?        — Isla de Aves (375 m, tukikohta paaluilla 1978)
+   *   Yaracuy        — Cerro María Lionza (Sorte), 12.10.
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  VEN: {
+    Amazonas: {
+      lyhyt: 'Casiquiare-joki haarautuu Orinocosta ja virtaa Rio Negroon, joten se yhdistää luonnostaan Orinocon ja Amazonin vesistöt.',
+    },
+    'Anzoátegui': {
+      lyhyt: 'Puerto La Cruzin edustalta alkaa Mochiman kansallispuisto, jonka 32 saaresta suurin on Chimana Grande.',
+    },
+    Apure: {
+      lyhyt: 'Apuren tulvasavanneilla laiduntavat kapybarat, maailman suurimmat jyrsijät, joita venezuelalaiset kutsuvat chigüireiksi.',
+    },
+    Aragua: {
+      lyhyt: 'Henri Pittierin kansallispuisto on Venezuelan vanhin, perustettu 1937, ja sen Portachuelon solan kautta muuttaa kymmeniä lintulajeja.',
+    },
+    Barinas: {
+      lyhyt: 'Barinasia kutsutaan Venezuelan jokien pääkaupungiksi, sillä Andeilta laskevat joet halkovat osavaltion tasankoja.',
+    },
+    'Bolívar': {
+      lyhyt: 'El Callaon kaivoskaupungin karnevaalissa soi calypso, ja juhla merkittiin Unescon aineettoman kulttuuriperinnön luetteloon 2016.',
+    },
+    Carabobo: {
+      lyhyt: 'Puerto Cabello on Venezuelan suurin ja vilkkain satama Karibianmeren rannalla.',
+    },
+    Cojedes: {
+      lyhyt: 'Tinaquillon naamioidut paholaiset tanssivat Corpus Christinä, ja perinne kuuluu Unescon 2012 tunnustamaan Venezuelan paholaistanssiin.',
+    },
+    'Delta Amacuro': {
+      lyhyt: 'Orinocon suistossa asuvat warao-intiaanit, "kanoottien kansa", jotka liikkuvat suiston lukemattomissa haaroissa kanooteilla.',
+    },
+    'Dependencias Federales': {
+      lyhyt: 'La Tortuga on liittovaltion saarista suurin, noin 157 neliökilometriä, mutta asumaton: sen rannoilla käyvät vain kalastajat ja veneilijät.',
+    },
+    'Falcón': {
+      lyhyt: 'Paraguanán niemimaalla ovat Amuayn ja Cardónin öljynjalostamot, osa läntisen pallonpuoliskon suurinta jalostamokompleksia.',
+    },
+    'Guárico': {
+      lyhyt: 'San Juan de los Morrosin yllä kohoavat jyrkät Los Morros -kalliot, ja kaupungissa on rikkipitoisia kuumia lähteitä.',
+    },
+    Vargas: {
+      lyhyt: 'Venezuelan päälentoasema on Maiquetíassa La Guairan rannikolla, noin 20 kilometrin päässä Caracasista vuorten takana.',
+    },
+    Lara: {
+      lyhyt: 'Joka tammikuun 14. päivä Divina Pastoran kuvaa kannetaan Santa Rosasta Barquisimetoon kulkueessa, joka on Venezuelan suurin.',
+    },
+    'Mérida': {
+      lyhyt: 'Pico Humboldtin viimeinen jäätikkö kutistui 2024 jääkentäksi, ja Venezuelasta tuli ensimmäinen maa nykyaikana, joka on menettänyt jäätikkönsä.',
+    },
+    Miranda: {
+      lyhyt: 'Barloventon rannikkoseudulla kasvatetaan kaakaota, ja kesäkuun San Juan -juhlissa soivat afrovenezuelalaiset rummut.',
+    },
+    Monagas: {
+      lyhyt: 'Monagasin Morichal Largo -joen rantoja reunustavat tiheät morichepalmujen galleriametsät.',
+    },
+    'Nueva Esparta': {
+      lyhyt: 'Margaritan saaren La Restingan laguunissa ajetaan pienillä moottoriveneillä mangrovekanavien läpi hiekkasärkän rannalle.',
+    },
+    Portuguesa: {
+      lyhyt: 'Guanaren lähellä on Coromoton kansallinen pyhäkkö, Venezuelan suojeluspyhimyksen basilika, jonka avajaismessua johti paavi 1996.',
+    },
+    'Distrito Capital': {
+      lyhyt: 'Caracasin yliopistokaupunki on Unescon maailmanperintökohde, ja sen Aula Magnan katossa leijuvat Alexander Calderin akustiset pilvet.',
+    },
+    Sucre: {
+      lyhyt: 'Arayan niemimaalla suolaa kerätään yhä laguuneista, ja rannalla seisovat 1600-luvulla rakennetun Santiagon linnoituksen rauniot.',
+    },
+    'Táchira': {
+      lyhyt: 'San Cristóbalissa vietetään tammikuussa San Sebastiánin messuja, joiden ohjelmassa on maatalousnäyttelyitä ja konsertteja.',
+    },
+    Trujillo: {
+      lyhyt: 'Trujillon lähellä vuorella seisoo 46,7-metrinen Virgen de la Paz -patsas, jonka silmien korkeudelta avautuu näköala laaksoon.',
+    },
+    'VEN+99?': {
+      lyhyt: 'Isla de Aves on vain noin 375 metriä pitkä hiekkasärkkä Karibianmerellä, ja sen kupeeseen on rakennettu paaluille venezuelalainen tukikohta.',
+    },
+    Yaracuy: {
+      lyhyt: 'Chivacoan lähellä Sorten vuorella kokoontuvat María Lionzan palvojat, ja lokakuun 12. päivänä vuori täyttyy alttareista ja kynttilöistä.',
+    },
+    Zulia: {
+      lyhyt: 'Zulian gaita on joulun ajan kansanmusiikkia, jossa soivat furro-rumpu, cuatro-kitara ja maracas.',
+    },
+  },
+  /*
+   * URY (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.URY:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti.
+   * Vain `lyhyt`. Vältetty maastokohteet-ury.js:n aiheet (Cerro Catedral,
+   * Merínin laguuni, Colonia del Sacramento, Punta del Este, Cabo
+   * Polonio, Salto Granden pato, Santa Teresan linnoitus, Quebrada de los
+   * Cuervos, Tacuarembón kaupunki ja Patria Gaucha, Riveran
+   * kaksoiskaupunki). Lähteet (en-/es-Wikipedia ja hakutarkistus
+   * 25.9.2026), epävarmimmat erikseen:
+   *   Artigas        — Los Catalanes (IUGS:n 100 geologista kohdetta 2023)
+   *   Canelones      — noin 60 % Uruguayn viinistä (Wine-Searcher, Guru'Guay)
+   *   Cerro Largo    — Puente Barón de Mauá (1930)
+   *   Durazno        — Festival Nacional de Folklore (tammikuu)
+   *   Flores         — Grutas del Palacio (Unesco-geopuisto 2013)
+   *   Paysandú       — Semana de la Cerveza (vuodesta 1966)
+   *   Río Negro      — Fray Bentos Industrial Landscape (Unesco 2015)
+   *   Rocha          — Monte de Ombúes (noin 3 000 puuta)
+   *   Salto          — Termas del Daymán (2 000 m, 46 °C)
+   *   San José       — Teatro Macció (5.6.1912)
+   *   Soriano        — Villa Soriano (1624, vuosiluku kiistelty -> "1600-luku")
+   *   Tacuarembó     — Museo Carlos Gardel (Valle Edén)
+   *   Treinta y Tres — lähes neljännes Uruguayn riisistä (es-Wikipedia)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  URY: {
+    Artigas: {
+      lyhyt: 'Artigasin Los Catalanesin ametistiesiintymä tunnetaan jättigeodeistaan, joita louhitaan avolouhoksista ja hiotaan pienissä pajoissa.',
+    },
+    Canelones: {
+      lyhyt: 'Canelonesissa tuotetaan noin 60 prosenttia Uruguayn viinistä, ja sen viinitiloille on Montevideosta vain lyhyt ajomatka.',
+    },
+    'Cerro Largo': {
+      lyhyt: 'Río Brancon ja brasilialaisen Jaguarãon välillä kulkee vuonna 1930 avattu Mauán silta, jonka kaaret ylittävät Yaguarón-joen.',
+    },
+    Colonia: {
+      lyhyt: 'Nueva Helvecian perustivat sveitsiläiset siirtolaiset 1862, ja seutu on yhä yksi Uruguayn tärkeimmistä juustoalueista.',
+    },
+    Durazno: {
+      lyhyt: 'Duraznossa pidetään joka tammikuu Yí-joen rannalla kansallinen folkloremusiikin festivaali, yksi Uruguayn suurimmista.',
+    },
+    Flores: {
+      lyhyt: 'Grutas del Palacion luolien kattoa kannattelevat luonnon muovaamat pylväät, ja alue on Uruguayn ensimmäinen Unescon geopuisto.',
+    },
+    Florida: {
+      lyhyt: 'Floridan kaupungin laidalla on Piedra Alta, jonka luona julistettiin 25. elokuuta 1825 irtautuminen Brasilian keisarikunnasta.',
+    },
+    Lavalleja: {
+      lyhyt: 'Minasin lähteistä pullotetaan Salus-kivennäisvettä, ja merkin tunnuksena on legendan puuma, joka joi lähteestä.',
+    },
+    Maldonado: {
+      lyhyt: 'Punta Ballenan kallioilla seisoo Carlos Páez Vilarón valkoinen Casapueblo, jossa auringonlaskua saattelee joka ilta taiteilijan runo.',
+    },
+    Montevideo: {
+      lyhyt: 'Montevideon karnevaali kestää yli 40 päivää, ja sen murga-kuorot ja candombe-rummut soivat tammikuusta maaliskuuhun.',
+    },
+    'Paysandú': {
+      lyhyt: 'Paysandússa vietetään pääsiäisviikolla Semana de la Cervezaa, olutjuhlaa, jota on järjestetty Uruguayjoen rannalla vuodesta 1966.',
+    },
+    'Río Negro': {
+      lyhyt: 'Fray Bentosin entinen lihatehdas, josta lähti lihauutetta ja säilykelihaa Eurooppaan, on Unescon maailmanperintökohde.',
+    },
+    Rivera: {
+      lyhyt: 'Valle del Lunarejon suojellussa laaksossa basalttirinteet, rotkot ja vesiputoukset rikkovat Pohjois-Uruguayn loivan ruohotasangon.',
+    },
+    Rocha: {
+      lyhyt: 'Castillosin laguunin rannalla kasvaa noin 3 000 ombú-puun metsä, jonne mennään veneellä Valizas-puroa pitkin.',
+    },
+    Salto: {
+      lyhyt: 'Daymánin kylpylässä Salton lähellä kuuma vesi kumpuaa Guaraní-akviferista kahden kilometrin syvyydestä.',
+    },
+    'San José': {
+      lyhyt: 'San José de Mayon Teatro Macció avattiin 1912, ja se on kaupungin arkkitehtonisesti merkittävin rakennus.',
+    },
+    Soriano: {
+      lyhyt: 'Villa Soriano Río Negron suulla on Uruguayn vanhin taajama, jonka fransiskaanit perustivat intiaanireduktioksi 1600-luvulla.',
+    },
+    'Tacuarembó': {
+      lyhyt: 'Valle Edénin vanhassa kauppapuodissa on museo, joka esittelee todisteita siitä, että tangolaulaja Carlos Gardel syntyi Tacuarembóssa.',
+    },
+    'Treinta y Tres': {
+      lyhyt: 'Treinta y Tresissa viljellään lähes neljännes Uruguayn riisistä, ja pellot saavat vetensä Olimar-joen valuma-alueelta.',
+    },
+  },
+  /*
+   * PRY (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6B). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.PRY:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti.
+   * Vain `lyhyt`. Vältetty maastokohteet-pry.js:n aiheet (Cerro Tres
+   * Kandú, Apa, Tebicuary, Trinidad ja Jesús, San Cosme y Damián, Cerro
+   * Corá, Ybycuí, Filadelfia, Yaguarón, Concepciónin kaupunki, Guairán
+   * putoukset). Lähteet (en-/es-Wikipedia, visitparaguay.travel ja
+   * hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Alto Paraná      — Saltos del Monday (40–45 m)
+   *   Amambay          — Ojo de Mar (Bella Vista Norte, ABC Color 2025)
+   *   Asunción         — Loma San Jerónimo (matkailukaupunginosa 2013)
+   *   Boquerón         — Museo Histórico del Fortín Boquerón
+   *   Caaguazú         — "Capital de la Madera"
+   *   Caazapá          — Parque Nacional Caazapá (16 000 ha)
+   *   Canindeyú        — Mbaracayú (64 406 ha, laki 112/91)
+   *   Central          — ñandutí (Itauguá)
+   *   Concepción       — arroyo Tagatiyá (San Alfredo)
+   *   Cordillera       — Caacupé (yli 1,5 milj. pyhiinvaeltajaa)
+   *   Guairá           — Colonia Independencia (1919, viinit)
+   *   Itapúa           — Encarnación (sambadromi 2012)
+   *   Misiones         — Yacyretá (pato noin 65 km)
+   *   Ñeembucú         — ruinas de Humaitá (San Carlos Borromeo)
+   *   Paraguarí        — Museo Histórico del Ferrocarril de Sapucai (1894)
+   *   Presidente Hayes — Laudo Hayes (12.11.1878)
+   *   San Pedro        — seesami (ABC Color 2026), pinta-ala 20 002 km²
+   *   Muut             — yleistietoa, tarkistettu vastaavista
+   *                      en-Wikipedia-artikkeleista.
+   */
+  PRY: {
+    'Alto Paraguay': {
+      lyhyt: 'Bahía Negra on Paraguayn pohjoisin satama, ja sen ympärillä levittäytyy Paraguayn osuus Pantanalin kosteikosta.',
+    },
+    'Alto Paraná': {
+      lyhyt: 'Mondayjoki syöksyy Ciudad del Esten lähellä noin 40 metriä alas Saltos del Mondayn putouksina juuri ennen Paranájokea.',
+    },
+    Amambay: {
+      lyhyt: 'Bella Vista Norten maaseudulla on Ojo de Mar, smaragdinvihreä kalkkikivijärvi, jonka syvyyttä ei tiedetä.',
+    },
+    'Asunción': {
+      lyhyt: 'Loma San Jerónimo julistettiin 2013 Asunciónin ensimmäiseksi matkailukaupunginosaksi, ja sen mosaiikkiportaat nousevat näköalapaikalle.',
+    },
+    'Boquerón': {
+      lyhyt: 'Fortín Boquerónissa voi kulkea Chacon sodan 1932 taistelun juoksuhaudoissa, ja paikalla on museo ja molempien armeijoiden hautausmaat.',
+    },
+    'Caaguazú': {
+      lyhyt: 'Caaguazúta kutsutaan puun pääkaupungiksi, sillä sen lukuisissa puusepänverstaissa tehdään huonekaluja ja puukäsitöitä.',
+    },
+    'Caazapá': {
+      lyhyt: 'Caazapán kansallispuisto suojelee noin 16 000 hehtaaria subtrooppista metsää, ja sen poluilla tarkkaillaan lintuja.',
+    },
+    'Canindeyú': {
+      lyhyt: 'Mbaracayún metsäsuojelualue suojelee 64 000 hehtaaria Atlantin sademetsää, ja se oli 1991 Paraguayn ensimmäinen yksityinen suojelualue.',
+    },
+    Central: {
+      lyhyt: 'Itauguán naiset ompelevat ñandutí-pitsiä, jonka ympyräkuviot muistuttavat hämähäkinseittiä – nimikin tarkoittaa guaraniksi seittiä.',
+    },
+    'Concepción': {
+      lyhyt: 'Tagatiyá-puron vesi on kalkkikivipohjan ansiosta niin kirkasta, että siinä snorklataan kalaparvien seassa.',
+    },
+    Cordillera: {
+      lyhyt: 'Caacupén basilikaan vaeltaa joulukuun 7. ja 8. päivänä yli miljoona pyhiinvaeltajaa Paraguayn suojeluspyhimyksen juhlaan.',
+    },
+    'Guairá': {
+      lyhyt: 'Colonia Independencian perustivat saksalaiset siirtolaiset 1919, ja kylä tunnetaan yhä pientuottajien viineistään.',
+    },
+    'Itapúa': {
+      lyhyt: 'Encarnaciónia kutsutaan Paraguayn karnevaalipääkaupungiksi, ja kulkueita varten sen rantakadun varteen valmistui oma sambadromi 2012.',
+    },
+    Misiones: {
+      lyhyt: 'Ayolasin kohdalla Paranájoen patoaa Yacyretán vesivoimala, jonka maapato on yli 60 kilometriä pitkä.',
+    },
+    'Ñeembucú': {
+      lyhyt: 'Humaitássa seisoo tykkitulessa tuhoutuneen San Carlos Borromeon kirkon tornin jäänne, Kolmoisliiton sodan muistomerkki.',
+    },
+    'Paraguarí': {
+      lyhyt: 'Sapucain vanhoissa rautatiekorjaamoissa, jotka englantilaiset rakensivat 1894, on nyt museo höyrykäyttöisine koneineen.',
+    },
+    'Presidente Hayes': {
+      lyhyt: 'Presidente Hayes on nimetty Yhdysvaltain presidentin mukaan, jonka välitystuomio 1878 antoi alueen Paraguaylle.',
+    },
+    'San Pedro': {
+      lyhyt: 'San Pedro on Itä-Paraguayn laajin departementti, ja sen pienviljelijöille seesami on tärkeä vientikasvi.',
+    },
+  },
+  /*
+   * IDN (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6C). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.IDN:n tunnuksia
+   * TÄSMÄLLEEN, kopioitu koneellisesti: 33 provinssia vanhan jaon mukaan
+   * (ei Pohjois-Kalimantania eikä vuoden 2022 uusia Papuan provinsseja),
+   * joten Papua Barat kattaa myös Raja Ampatin ja Papua Baliemin laakson.
+   * Vältetty maastokohteet-idn.js:n aiheet (Borobudur, Prambanan,
+   * Trowulan, Sangiran, Sawahlunto, Tana Toraja, Bandasaaret, Besakih,
+   * Krakatau, Tobajärvi, Komodo). Vain `lyhyt`. Lähteet (en-Wikipedia ja
+   * hakutarkistus 25.9.2026):
+   *   Aceh                — PLTD Apung 1 (2004 tsunamin kantama voimalalaiva)
+   *   Gorontalo           — Botubaranin valashait (n. 100 m rannasta)
+   *   Sulawesi Barat      — Sandeq Race (vuodesta 1995, n. 300 mpk)
+   *   Sulawesi Tenggara   — Buton Palace Fortress (muuri 2 740 m)
+   *   Sulawesi Selatan    — pinisi, Unescon aineeton perintö 2017
+   *   Maluku              — Ambon, Unescon musiikkikaupunki 2019
+   *   Muut                — yleistietoa, tarkistettu vastaavista
+   *                         en-Wikipedia-artikkeleista.
+   */
+  IDN: {
+    Aceh: {
+      lyhyt: 'Banda Acehin asuinkorttelien keskellä seisoo yhä voimalalaiva, jonka vuoden 2004 tsunami kantoi kilometrien päähän rannasta.',
+    },
+    Bali: {
+      lyhyt: 'Balilla vietetään Nyepi-päivää hiljaisuudessa: kadut tyhjenevät, valot sammuvat ja jopa saaren lentoasema suljetaan vuorokaudeksi.',
+    },
+    'Bangka-Belitung': {
+      lyhyt: 'Bangkan ja Belitungin saarilla on louhittu tinaa vuosisatoja, ja hylätyt kaivoskuopat ovat täyttyneet kirkkaanvihreiksi järviksi.',
+    },
+    Banten: {
+      lyhyt: 'Ujung Kulonin kansallispuisto Jaavan länsikärjessä on jaavansarvikuonon viimeinen elinpaikka koko maailmassa.',
+    },
+    Bengkulu: {
+      lyhyt: 'Bengkulun sademetsissä kukkii Rafflesia arnoldii, maailman suurin yksittäinen kukka, jonka läpimitta voi olla lähes metri.',
+    },
+    Gorontalo: {
+      lyhyt: 'Botubaranin kylän edustalla uiskentelee nuoria valashaita vain sadan metrin päässä rannasta, joten niitä pääsee katsomaan snorklaten.',
+    },
+    'Jakarta Raya': {
+      lyhyt: 'Jakartan Merdeka-aukion keskellä kohoaa 132-metrinen Monas-muistomerkki, jonka huippua koristaa kullattu liekki.',
+    },
+    Jambi: {
+      lyhyt: 'Batanghari-joen varrella on Muaro Jambi, yksi Kaakkois-Aasian laajimmista muinaisista buddhalaisista temppelialueista.',
+    },
+    'Jawa Barat': {
+      lyhyt: 'Bandungin Gedung Merdekassa pidettiin vuonna 1955 Aasian ja Afrikan maiden konferenssi, ja rakennus on nyt sen muistomuseo.',
+    },
+    'Jawa Tengah': {
+      lyhyt: 'Semarangin Lawang Sewu, "tuhat ovea", rakennettiin hollantilaisen rautatieyhtiön pääkonttoriksi, ja nyt se on museo.',
+    },
+    'Jawa Timur': {
+      lyhyt: 'Bromon tulivuorelle noustaan ennen aamunkoittoa katsomaan, kun aurinko nousee Tenggerin kalderan hiekkameren yllä.',
+    },
+    'Kalimantan Barat': {
+      lyhyt: 'Pontianak on päiväntasaajalla: kun aurinko on päiväntasauksen aikaan suoraan yllä, päiväntasaajamonumentin varjo katoaa hetkeksi.',
+    },
+    'Kalimantan Selatan': {
+      lyhyt: 'Banjarmasinin lähellä Lok Baintanissa käydään aamuisin kauppaa kelluvalla torilla, jossa myyjät meloskelevat hedelmäveneissään.',
+    },
+    'Kalimantan Tengah': {
+      lyhyt: 'Tanjung Putingin kansallispuistoon matkataan klotok-jokiveneellä katsomaan orankeja, jotka tulevat metsästä ruokintapaikoille.',
+    },
+    'Kalimantan Timur': {
+      lyhyt: 'Itä-Kalimantanin metsien keskelle rakennetaan Nusantaraa, kaupunkia, josta on määrä tulla Indonesian uusi pääkaupunki.',
+    },
+    'Kepulauan Riau': {
+      lyhyt: 'Batamin, Rempangin ja Galangin saaria yhdistää kuuden sillan Barelang-ketju, jonka komein osa on vinoköysisilta.',
+    },
+    Lampung: {
+      lyhyt: 'Way Kambasin kansallispuistossa suojellaan sumatranelefantteja, ja puistossa toimii norsujen hoito- ja suojelukeskus.',
+    },
+    Maluku: {
+      lyhyt: 'Ambon nimettiin vuonna 2019 Unescon musiikkikaupungiksi, ja laulu kuuluu kaupungin kirkoista, kaduilta ja kodeista.',
+    },
+    'Maluku Utara': {
+      lyhyt: 'Ternaten saari on käytännössä yksi tulivuori, Gamalama, ja sen rinteillä kasvaa yhä neilikkapuita.',
+    },
+    'Nusa Tenggara Barat': {
+      lyhyt: 'Lombokin Rinjani kohoaa 3 726 metriin, ja sen kalderassa lepää kuunsirpin muotoinen Segara Anak -järvi.',
+    },
+    'Nusa Tenggara Timur': {
+      lyhyt: 'Floresin Kelimutu-tulivuoren huipulla on kolme kraatterijärveä, joiden värit vaihtelevat turkoosista ruskeaan ja lähes mustaan.',
+    },
+    Papua: {
+      lyhyt: 'Baliemin laakson festivaalissa Wamenan lähellä ylänköjen kansat esittävät joka elokuu perinteisiä taistelunäytöksiä ja tansseja.',
+    },
+    'Papua Barat': {
+      lyhyt: 'Raja Ampatin saarten riutoilla on yksi maailman runsaimmista koralli- ja kalalajistoista, ja kalkkikivisaaret nousevat merestä jyrkkinä.',
+    },
+    Riau: {
+      lyhyt: 'Kampar-joella vyöryy vuoroveden mukana Bono-aalto, joka voi kulkea kilometrikaupalla ylävirtaan ja jolla surffaajat ratsastavat.',
+    },
+    'Sulawesi Barat': {
+      lyhyt: 'Mandarilaiset kalastajat purjehtivat kapeilla sandeq-ulokeveneillä, ja joka vuosi niillä kisataan satojen merimailien kilpapurjehdus.',
+    },
+    'Sulawesi Selatan': {
+      lyhyt: 'Bulukumban rannoilla rakennetaan yhä käsin puisia pinisi-purjealuksia, ja niiden rakennustaito on Unescon aineetonta kulttuuriperintöä.',
+    },
+    'Sulawesi Tengah': {
+      lyhyt: 'Badan laakson niityillä seisoo ikivanhoja kivipatsaita, joiden tekijöistä ja tarkoituksesta ei tiedetä varmasti.',
+    },
+    'Sulawesi Tenggara': {
+      lyhyt: 'Butonin saaren Baubaussa on Wolion linnoitus, jonka kivimuuri kiertää kukkulan laen lähes kolmen kilometrin matkalta.',
+    },
+    'Sulawesi Utara': {
+      lyhyt: 'Manadon edustalla Bunakenin meripuiston riutat putoavat jyrkkinä seinäminä syvyyteen, ja sukeltajat uivat niiden vierellä.',
+    },
+    'Sumatera Barat': {
+      lyhyt: 'Minangkabaujen talojen katot kaartuvat ylös kuin puhvelin sarvet, ja suvun maat periytyvät äidiltä tyttärelle.',
+    },
+    'Sumatera Selatan': {
+      lyhyt: 'Palembangin tunnetuin ruoka on pempek, kalasta ja tapiokasta tehty kakku, joka kastetaan makeanhappamaan cuko-kastikkeeseen.',
+    },
+    'Sumatera Utara': {
+      lyhyt: 'Nias-saaren kylissä nuoret miehet hyppäävät yli kaksimetrisen kivimuurin yli; perinteen nimi on hombo batu.',
+    },
+    Yogyakarta: {
+      lyhyt: 'Yogyakarta on Indonesian erityisalue, jonka kuvernöörinä toimii hallitseva sulttaani, ja kraton-palatsi on yhä hänen kotinsa.',
+    },
+  },
+  /*
+   * PAK (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.PAK:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti
+   * (vanha jako: F.A.T.A. on liitetty Khyber Pakhtunkhwaan 2018,
+   * Northern Areas on nykyinen Gilgit-Baltistan). Azad Kashmir ja
+   * Northern Areas: neutraali, vain maisema. Vältetty maastokohteet-pak.js:n
+   * aiheet (K2, Indus, Mohenjo-daro, Taxila, Makli, Rohtas, Takht-i-Bahi,
+   * Khewra, Deosai, Mehrgarh). Vain `lyhyt`. Lähteet (en-Wikipedia ja
+   * hakutarkistus 25.9.2026):
+   *   Northern Areas — Attabad Lake (maanvyöry 2010)
+   *   F.C.T.         — Faisal Mosque (1986, beduiinitelttamainen katto)
+   *   Punjab         — Badshahi Mosque (1673)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  PAK: {
+    'Azad Kashmir': {
+      lyhyt: 'Neelumin laakso kiemurtelee metsäisten vuorten välissä, ja sen joki virtaa kirkkaan vihreänä kylien ohi.',
+    },
+    Baluchistan: {
+      lyhyt: 'Makranin rannikkotien varrella Hingolin kansallispuistossa tuuli on veistänyt kallioon hahmon, jota kutsutaan Toivon prinsessaksi.',
+    },
+    'F.A.T.A.': {
+      lyhyt: 'Entiset heimoalueet liitettiin Khyber Pakhtunkhwaan 2018, ja niiden halki Khyberin sola kiemurtelee Afganistanin rajalle.',
+    },
+    'F.C.T.': {
+      lyhyt: 'Islamabadin Faisal-moskeija valmistui 1986 Margalla-kukkuloiden juurelle, ja sen katon muoto muistuttaa beduiinitelttaa.',
+    },
+    'K.P.': {
+      lyhyt: 'Peshawarin Qissa Khwani -basaarin nimi tarkoittaa tarinankertojien basaaria: sen teehuoneissa kerrottiin ennen tarinoita kauppiaille.',
+    },
+    'Northern Areas': {
+      lyhyt: 'Hunzan laakson Attabadjärvi syntyi vuonna 2010, kun maanvyöry patosi joen, ja sen vesi hohtaa sinivihreänä vuorten välissä.',
+    },
+    Punjab: {
+      lyhyt: 'Lahoren Badshahi-moskeija valmistui 1673 punaisesta hiekkakivestä, ja sen pihalle mahtuu kymmeniä tuhansia rukoilijoita.',
+    },
+    Sind: {
+      lyhyt: 'Sindhissä painetaan yhä ajrak-huiveja puuleimasimilla syvänsinisin ja punaisin kuvioin, ja ajrak on sindhiläisten ylpeyden merkki.',
+    },
+  },
+  /*
+   * BGD (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.BGD:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti:
+   * seitsemän hallintoaluetta ennen Mymensinghin eroamista 2015 (Dinajpur
+   * kuuluu Rangpuriin). Vain `lyhyt`. Lähteet (en-Wikipedia ja
+   * hakutarkistus 25.9.2026):
+   *   Dhaka    — Rickshaws and rickshaw painting in Dhaka (Unesco 2023)
+   *   Rajshahi — Somapura Mahavihara, Paharpur
+   *   Rangpur  — Kantajew Temple, Dinajpur
+   *   Muut     — yleistietoa, tarkistettu vastaavista
+   *              en-Wikipedia-artikkeleista.
+   */
+  BGD: {
+    Barisal: {
+      lyhyt: 'Dhakasta Barisaliin matkataan usein yön yli suurilla jokilautoilla, jotka lipuvat aamuun mennessä suiston joenhaarojen halki.',
+    },
+    Chittagong: {
+      lyhyt: "Cox's Bazarin hiekkaranta jatkuu yhtäjaksoisesti noin 120 kilometriä, ja se on yksi maailman pisimmistä luonnonrannoista.",
+    },
+    Dhaka: {
+      lyhyt: 'Dhakan kaduilla ajaa satojatuhansia polkupyöräriksoja, ja niiden kirjavat maalaukset lisättiin Unescon listalle 2023.',
+    },
+    Khulna: {
+      lyhyt: 'Sundarbans on maailman laajin mangrovemetsä, ja sen vuorovesikanavien varrella elää bengalintiikereitä.',
+    },
+    Rajshahi: {
+      lyhyt: 'Paharpurissa ovat Somapuran luostarin rauniot, yksi Himalajan eteläpuolen suurimmista buddhalaisista luostareista.',
+    },
+    Rangpur: {
+      lyhyt: 'Dinajpurin lähellä seisoo Kantajewin temppeli, jonka seinät on peitetty tarinoita kuvaavilla terrakottalaatoilla.',
+    },
+    Sylhet: {
+      lyhyt: 'Sreemangalia kutsutaan Bangladeshin teepääkaupungiksi, ja sen kojuissa kaadetaan lasiin kerroksittain moniväristä teetä.',
+    },
+  },
+  /*
+   * LKA (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.LKA:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti:
+   * 25 piirikuntaa sinhalan translitteraatiolla diakriitteineen
+   * (Kŏḷamba = Colombo, Mahanuvara = Kandy, Yāpanaya = Jaffna). Vältetty
+   * maastokohteet-lka.js:n aiheet (Sigiriya, Anuradhapuran ja
+   * Polonnaruwan muinaiskaupungit, Yapahuwa, hammastemppeli, Gallen
+   * linnoitus, Nuwara Eliyan kaupunki, Yhdeksän kaaren silta, Sri Pada,
+   * Mahaweli, Palkinlahti). Vain `lyhyt`. Lähteet (en-Wikipedia ja
+   * hakutarkistus 25.9.2026):
+   *   Badulla     — Dunhinda Falls (64 m)
+   *   Kalutara    — Kalutara Chaitya (ontto, 74 seinämaalausta)
+   *   Kilinochchi — Iranamadu Tank (pohjoisen maakunnan suurin)
+   *   Kurunegala  — Ethagala / Athugala (27 m Buddha-patsas)
+   *   Mullaitivu  — Kokkilai Sanctuary (1951)
+   *   Muut        — yleistietoa, tarkistettu vastaavista
+   *                 en-Wikipedia-artikkeleista.
+   */
+  LKA: {
+    'Ampāra': {
+      lyhyt: 'Arugam Bayn aallot vetävät surffaajia ympäri maailmaa etenkin touko–syyskuussa, ja rannan kalastajakylä elää nyt myös lautailijoista.',
+    },
+    'Anurādhapura': {
+      lyhyt: 'Mihintalen vuorelle johtavat pitkät kiviportaat, ja kesäkuun Poson-täysikuulla sinne nousee suuri joukko pyhiinvaeltajia.',
+    },
+    Badulla: {
+      lyhyt: 'Badullan lähellä Dunhindan vesiputous syöksyy 64 metriä, ja sen juurelta nouseva vesiusva on antanut sille nimen.',
+    },
+    'Gālla': {
+      lyhyt: 'Koggalan rannalla kalastajat istuvat meressä pystyyn lyötyjen seipäiden päällä ja onkivat aallokon keskeltä.',
+    },
+    Gampaha: {
+      lyhyt: 'Useimmat matkailijat saapuvat Sri Lankaan Gampahan piirikuntaan, sillä maan päälentoasema on Katunayakessa Negombon kupeessa.',
+    },
+    'Hambantŏṭa': {
+      lyhyt: 'Yalan kansallispuistossa elää yksi maailman tiheimmistä leopardikannoista, ja kissoja etsitään pensaikosta safariautoista.',
+    },
+    'Kægalla': {
+      lyhyt: 'Kitulgalassa lasketaan Kelani-joen koskia kumiveneillä, ja joen rannalla kuvattiin vuonna 1957 elokuva Kwai-joen silta.',
+    },
+    'Kaḷutara': {
+      lyhyt: 'Kalutaran sillan kupeessa seisova valkoinen stupa on sisältä ontto, ja sen seinille on maalattu 74 kuvaa Buddhan elämästä.',
+    },
+    'Kilinŏchchi': {
+      lyhyt: 'Iranamadun tekojärvi on Sri Lankan pohjoisen maakunnan suurin, ja sen vesi kastelee tuhansia hehtaareja riisipeltoja.',
+    },
+    'Kŏḷamba': {
+      lyhyt: 'Colombon Galle Face Greenin merenrantanurmelle kokoonnutaan iltaisin syömään katuruokaa ja lennättämään leijoja.',
+    },
+    'Kuruṇægala': {
+      lyhyt: 'Kurunegalan kaupungin yllä kohoaa Ethagala, norsukallioksi kutsuttu kivimuodostelma, jonka laella istuu suuri Buddha-patsas.',
+    },
+    'Maḍakalapuva': {
+      lyhyt: 'Batticaloan laguunin kerrotaan "laulavan" tyyninä täysikuun öinä, ja kalastajat ovat kuunnelleet ääntä vedestä veneistään.',
+    },
+    Mahanuvara: {
+      lyhyt: 'Peradeniyan kasvitieteellinen puutarha Kandyn laitamilla on Sri Lankan suurin, ja sen orkideahuone houkuttelee kävijöitä.',
+    },
+    'Mannārama': {
+      lyhyt: 'Mannarin saarella kasvaa jättimäinen baobab-puu, jonka arabikauppiaiden arvellaan tuoneen Afrikasta satoja vuosia sitten.',
+    },
+    'Mātale': {
+      lyhyt: 'Dambullan luolatemppelin viisi kallioluolaa ovat täynnä Buddha-patsaita ja kattomaalauksia, ja paikka on Unescon maailmanperintöä.',
+    },
+    'Mātara': {
+      lyhyt: 'Dondra Headin majakka Sri Lankan eteläisimmässä kärjessä on 49 metrillään saaren korkein majakka.',
+    },
+    'Mŏṇarāgala': {
+      lyhyt: 'Buduruvagalan kallioon on hakattu seitsemän hahmoa, joista keskimmäinen seisova Buddha on noin 15 metriä korkea.',
+    },
+    Mulativ: {
+      lyhyt: 'Kokkilain laguuni on ollut lintujensuojelualue vuodesta 1951, ja sen matalikoissa kahlaa pelikaaneja ja flamingoja.',
+    },
+    'Nuvara Ĕliya': {
+      lyhyt: "Horton Plainsin ylätasangolla polku päättyy World's Endiin, jossa jyrkänne putoaa noin 870 metriä alas.",
+    },
+    'Pŏḷŏnnaruva': {
+      lyhyt: 'Minneriyan kansallispuistossa kuivakauden lopulla sadat norsut kokoontuvat tekojärven rannalle laiduntamaan.',
+    },
+    Puttalama: {
+      lyhyt: 'Kalpitiyan laguunilla tuulee tuulikaudella niin tasaisesti, että siitä on tullut Sri Lankan leijalautailun keskus.',
+    },
+    Ratnapura: {
+      lyhyt: 'Ratnapuran nimi tarkoittaa jalokivikaupunkia, ja sen ympäristön mutakuopista huuhdotaan yhä safiireja ja rubiineja.',
+    },
+    'Trikuṇāmalaya': {
+      lyhyt: 'Trincomaleen syvä luonnonsatama on yksi maailman suurimmista, ja sen suulle kohoaa Swami-kallio.',
+    },
+    'Vavuniyāva': {
+      lyhyt: 'Vavuniyaa kutsutaan pohjoisen portiksi: sen kautta kulkevat sekä Jaffnaan vievä A9-valtatie että pohjoisen rautatie.',
+    },
+    'Yāpanaya': {
+      lyhyt: 'Jaffnan Nallurin Kandaswamy-temppelissä vietetään joka kesä 25 päivän juhlaa, johon kerääntyy tamilipyhiinvaeltajia kaukaa.',
+    },
+  },
+  /*
+   * NPL (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 6C). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.NPL:n tunnuksia TÄSMÄLLEEN, kopioitu koneellisesti:
+   * 14 vanhaa vyöhykettä (lakkautettu 2015). "Bhojpur" vastaa Kosin
+   * vyöhykettä; teksti on kirjoitettu Bhojpurin piirikunnasta, joka
+   * kuuluu siihen kummin päin tahansa. Vältetty maastokohteet-npl.js:n
+   * aiheet ja Kathmandun kohdekartan kohteet (Lumbini, Bhaktapur, Gorkha,
+   * Janakpur, Muktinath, Lo Manthang, Nuwakot, Bardiya, Dhaulagiri, Koshi,
+   * Rara, Boudhanath, Pashupatinath). Vain `lyhyt`. Lähteet
+   * (en-Wikipedia ja hakutarkistus 25.9.2026):
+   *   Bagmati     — Langtang National Park (1976, ensimmäinen Himalajan)
+   *   Bhojpur     — Bhojpure khukuri
+   *   Dhawalagiri — Kushman benjisilta (228 m)
+   *   Rapti       — Swargadwari (2 200 m)
+   *   Muut        — yleistietoa, tarkistettu vastaavista
+   *                 en-Wikipedia-artikkeleista.
+   */
+  NPL: {
+    Bagmati: {
+      lyhyt: 'Langtangin laakso Kathmandun pohjoispuolella on suosittu vaellusreitti, ja sen kansallispuisto oli Nepalin ensimmäinen Himalajan puisto.',
+    },
+    Bheri: {
+      lyhyt: 'Nepalgunjin lentoasemalta lähtee pienkoneita Länsi-Nepalin vuoristokylien kiitoradoille, esimerkiksi Simikotiin.',
+    },
+    Bhojpur: {
+      lyhyt: 'Bhojpurin kylissä taotaan kukri-veitsiä, ja Bhojpuren kukri tunnetaan koko Nepalissa ja sen rajojen ulkopuolellakin.',
+    },
+    Dhawalagiri: {
+      lyhyt: 'Kushmassa hypätään benjihyppyjä Kali Gandakin rotkon ylle ripustetulta sillalta, joka kulkee 228 metrin korkeudella.',
+    },
+    Gandaki: {
+      lyhyt: 'Pokharan Phewa-järven tyynestä vedestä heijastuu aamuisin Machhapuchhren terävä, pyhänä pidetty huippu.',
+    },
+    Janakpur: {
+      lyhyt: 'Rolwalingin laaksossa on Tsho Rolpa, yksi Nepalin suurimmista jäätikköjärvistä; sen pintaa laskettiin 2000 tulvavaaran vuoksi.',
+    },
+    Karnali: {
+      lyhyt: 'Dolpan Phoksundo-järvi lepää yli 3 600 metrin korkeudessa, ja sen vesi on syvän sinistä.',
+    },
+    Lumbini: {
+      lyhyt: 'Palpan Tansenissa kudotaan dhaka-kangasta, josta tehdään nepalilaisten miesten tunnettu kuviollinen topi-lakki.',
+    },
+    Mahakali: {
+      lyhyt: 'Shuklaphantan kansallispuiston laajoilla ruohoniityillä laiduntaa suuria barasinga-peuralaumoja.',
+    },
+    Mechi: {
+      lyhyt: 'Taplejungin pohjoisosassa kohoaa Kanchenjunga, maailman kolmanneksi korkein vuori, jonka juurelle vaelletaan viikkoja.',
+    },
+    Narayani: {
+      lyhyt: 'Chitwan perustettiin vuonna 1973 Nepalin ensimmäiseksi kansallispuistoksi, ja sen jokivarsilla viihtyvät kapeakuonoiset gaviaalit.',
+    },
+    Rapti: {
+      lyhyt: 'Pyuthanin Swargadwari, "taivaan portti", on 2 200 metrin kukkulalla oleva temppeli, jolta näkyy Himalajan lumihuippuja.',
+    },
+    Sagarmatha: {
+      lyhyt: 'Namche Bazaar 3 440 metrissä on Everestin reitin sherpakylä, jossa vaeltajat totuttelevat ohueen ilmaan.',
+    },
+    Seti: {
+      lyhyt: 'Khaptadin kansallispuisto on noin 3 000 metrin korkeudessa aaltoileva ylätasanko, jonka niityt kukkivat kesällä.',
+    },
+  },
 };
