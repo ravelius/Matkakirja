@@ -113244,6 +113244,281 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Americo-Liberians',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on Kap Palmasin niemi ja
+       * sen kaupunki Harper, Marylandin piirikunnan pääkaupunki. Taustatiedot
+       * englannin Wikipediasta (Harper, Liberia; Cape Palmas; Maryland County;
+       * Cavalla River; Pleebo; William Tubman; William V. S. Tubman University;
+       * Cuttington University; Diocese of Cape Palmas; Cape Palmas Airport;
+       * J. J. Dossen; Partners In Health: Liberia) ja Wikivoyagesta (Harper,
+       * Liberia) — teksti omaa. Turvallisuus Wikivoyagen Liberia-artikkelin
+       * Stay safe- ja Stay healthy -osioista; osio on YK:n Liberian-operaation
+       * (päättyi 2018) ajalta ja koskee lähinnä Monroviaa, ja se sanotaan
+       * tekstissä suoraan. Hinnat, aikataulut ja aukioloajat jätetty pois, koska
+       * Wikivoyagen Harper-artikkeli on keskeneräinen ja tiedot vuosien takaa.
+       * Nostojen ja gallerioiden aiheita (grebot, siirtokunnan perustaminen,
+       * majakka, laguuni ja kalastajakanootit, vapaamuurarien maja ja New
+       * Orleansin kaltaiset talot, Russwurm, lippu, uudisraivaajien muistomerkki,
+       * vuosien 1856–57 sota, litografia 1853) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja wikitekstistä, ja kuvat
+       * katsottu silmin. Pystykuva: auringonlasku Harperin rannassa.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Harper River.jpg',
+          lyhyt: 'Poika katsoo auringonlaskua Harperin rannassa, ja kalastusvene kelluu lahdella.',
+          selite: 'Poika seisoo siluettina matalassa rantavedessä Harperissa, ja '
+            + 'auringonlaskun edessä kelluu puinen kalastusvene. Taustalla on '
+            + 'palmujen peittämä niemi. Kuvaaja on otsikoinut kuvan Harperin '
+            + 'kalastajista ja kalakaupasta. Kuva on otettu maaliskuussa '
+            + '2020.',
+          lahde: 'Iamchisom, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kap Palmas tarkoittaa nykyään käytännössä Harperia, Marylandin '
+          + 'piirikunnan pääkaupunkia Liberian kaakkoiskärjessä. Perille on '
+          + 'pitkä matka: pääkaupunki Monroviasta ajetaan tänne maanteitse '
+          + 'parikymmentä tuntia, ja Wikivoyage mainitsee vaihtoehtoina '
+          + 'veneen ja lähetyslentojärjestö MAF:n pienkoneet. '
+          + 'Norsunluurannikon puolelta kaupunkiin pääsee Taboun kautta. '
+          + 'Liberian viisumia haettaessa tarvitaan '
+          + 'keltakuumerokotustodistus. Paras matka-aika on kuiva kausi '
+          + 'marraskuusta huhtikuuhun, sillä toukokuusta lokakuuhun sataa '
+          + 'runsaasti ja matka-ajat venyvät. Kortilla ei pitkälle pääse, '
+          + 'joten mukaan otetaan Yhdysvaltain dollareita käteisenä. '
+          + 'Wikivoyagen Liberia-opas muistuttaa, että Monrovian '
+          + 'ulkopuolella matkustaminen on vaikeaa eikä sitä kannata tehdä '
+          + 'yksin, joten paikallinen yhteyshenkilö tai opas on tärkein '
+          + 'matkavaruste.',
+        artikkeli: {
+          nimi: 'Matkailijan Kap Palmas',
+          teksti: 'Liberian kaakkoiskärjen rantakaupunki palkitsee pitkän matkan tekijän.',
+          nosto: 'Kap Palmas on Guineanlahden länsiraja: kansainvälisen '
+            + 'hydrografisen järjestön mukaan lahti alkaa juuri tästä '
+            + 'niemestä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Rantoja niemen molemmin puolin',
+              teksti: 'Wikivoyage luonnehtii Harperia ennen kaikkea kauniiden '
+                + 'rantojensa ja rantatalojensa kaupungiksi. Monet talot ovat '
+                + 'rapistuneet, mutta rannat ovat ennallaan, ja ne ovat '
+                + 'kaupunkilaisten omaa vapaa-ajan aluetta. Sataman vieressä on '
+                + 'Cape Palmas Beach, ja niemen länsipuolella Hoffman-joki laskee '
+                + 'mereen suistona. Itään päin rannikkoa riittää noin 21 '
+                + 'kilometriä Cavalla-joen suulle, jossa Liberian ja '
+                + 'Norsunluurannikon raja kohtaa meren. Välissä vuorottelevat '
+                + 'kaartuvat hiekkalahdet, palmurivit ja tummat kalliolaatat, ja '
+                + 'Marylandin piirikunnan kylärannoilla, kuten Fishtownissa, '
+                + 'palmut kurottuvat lähes vesirajaan asti. Paikalliset '
+                + 'kokoontuvat rannoille uimaan ja leikkimään, ja rantavedessä '
+                + 'voi olla kymmeniä ihmisiä yhtä aikaa, kuten Change Beachilla '
+                + 'otetusta ilmakuvasta näkyy. Niemenkärjessä seisova on '
+                + 'maantieteellisessä kulmapisteessä: täällä Länsi-Afrikan '
+                + 'rannikko lakkaa kulkemasta etelään ja kääntyy itään, ja '
+                + 'kansainvälinen hydrografinen järjestö pitää niemeä '
+                + 'Guineanlahden länsirajana. Uimaan kannattaa silti mennä '
+                + 'harkiten. Wikivoyagen Liberia-opas varoittaa maan rannikon '
+                + 'voimakkaista virtauksista ja kovasta aallokosta, ja Monrovian '
+                + 'suosituimmillakin rannoilla uimapaikat on rajattu erikseen. '
+                + 'Harperin rannoista vastaavia tietoja ei ole, joten uimaan '
+                + 'mennään vain paikallisten neuvomiin kohtiin, ei yksin eikä '
+                + 'pimeällä. Paras rantasää osuu kuivalle kaudelle, mutta '
+                + 'marras–maaliskuussa puhaltava kuiva harmattan-tuuli voi tuoda '
+                + 'ilmaan pölyä.',
+              kuva: [
+                {
+                  tiedosto: 'Photo of Residents of Harper District playing in the Change Beach, Harper district, Maryland County, Liberia.jpg',
+                  lyhyt: 'Harperilaisia uimassa ja leikkimässä Change Beachin rantavedessä ylhäältä kuvattuna.',
+                  selite: 'Ilmakuvassa kymmenet ihmiset kahlaavat, uivat ja leikkivät '
+                    + 'aaltojen huuhtoessa hiekkarantaa, ja vesi vaihtuu rannan '
+                    + 'ruskeasta ulapan vihreään. Kuvaajan mukaan he ovat Harperin '
+                    + 'piirin asukkaita Change Beachilla. Kuva on otettu maaliskuussa '
+                    + '2020.',
+                  lahde: 'Iamchisom, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Photo of Fish town Beach and waves.jpg',
+                  lyhyt: 'Kookospalmut kaartuvat Fishtownin hiekkarannan ylle Marylandin piirikunnassa.',
+                  selite: 'Kookospalmut kaartuvat hiekkarannan ylle, ja matalat aallot '
+                    + 'huuhtovat rantaa. Kauempana rantaa reunustaa kivikko, ja '
+                    + 'horisontissa näkyy metsäinen rannikko. Kuva on otettu '
+                    + 'maaliskuussa 2020 Fishtownin rannalla Marylandin '
+                    + 'piirikunnassa.',
+                  lahde: 'Iamchisom, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'At Maryland County, Liberia.jpg',
+                  lyhyt: 'Tummat kalliolaatat ja palmumetsä reunustavat hiekkalahtea Marylandin piirikunnassa.',
+                  selite: 'Etualalla hiekkaan painuneita tummia kalliolaattoja, taustalla '
+                    + 'kaartuva lahti ja tiheä palmumetsä ukkospilvien alla. Oikealla '
+                    + 'rantaan laskee tyyni joensuu. Kuva on otettu helmikuussa 2020.',
+                  lahde: 'Bethel Anthony Chisom, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Parikymmentä tuntia tietä',
+              teksti: 'Harper on Liberian syrjäisimpiä kaupunkeja. Avustusjärjestö '
+                + 'Partners In Healthin mukaan Marylandin piirikuntaan on '
+                + 'Monroviasta noin 20 tunnin ajomatka, ja Wikivoyage varoittaa, '
+                + 'että sadekaudella matka-ajat pitenevät huomattavasti ja maan '
+                + 'huonokuntoisilla teillä nelivetoauto voi olla välttämätön. '
+                + 'Nopeammin pääsee meritse tai ilmateitse: Wikivoyage mainitsee '
+                + 'Monroviasta lähtevät veneet ja lähetyslentojärjestö MAF:n '
+                + 'lennot, ja kaupunkia palvelee Cape Palmasin lentokenttä. '
+                + 'Yhteydet ja aikataulut tarkistetaan paikan päällä, sillä '
+                + 'kirjalliset tiedot vanhenevat nopeasti. Idästä tultaessa '
+                + 'Harperiin pääsee Norsunluurannikon Taboun kautta. Raja kulkee '
+                + 'Cavalla-jokea pitkin: 515 kilometrin pituinen joki on Liberian '
+                + 'pisin, ja nimi on peräisin sen suulla elävästä '
+                + 'piikkimakrillista. Paikan päällä liikutaan '
+                + 'moottoripyörätakseilla, joita liberialaiset kutsuvat '
+                + 'pen-peniksi. Wikivoyagen mukaan Harperissa voi pysäyttää '
+                + 'käytännössä minkä tahansa moottoripyörän, jonka kyydissä ei '
+                + 'ole matkustajaa. Samat kuljettajat vievät myös Pleeboon, '
+                + 'piirikunnan suurimpaan kaupunkiin ja maaseudun kauppapaikkaan, '
+                + 'jonne kulkevat lisäksi yhteistaksit ja kuorma-autot. Valtion '
+                + 'liikennelaitos NTA ilmoitti vuonna 2024 avaavansa Harperin ja '
+                + 'Pleebon välisen linjansa uudelleen, ja paikallisen senaattorin '
+                + 'mukaan taksit kulkevat välin nykyään sadekaudellakin. Pimeällä '
+                + 'liikkumista kannattaa silti välttää, sillä Wikivoyage neuvoo, '
+                + 'ettei Liberiassa kuljeta jalan pimeän tultua.',
+              kuva: {
+                tiedosto: 'ASC Leiden - F. van der Kraaij Collection - 06 - 011 - An unpaved road from Zwedru to Harper. A white Renault 4 - Grand Gedeh County, Liberia, 1978.tiff',
+                lyhyt: 'Valkoinen Renault 4 hiekkatiellä Zwedrusta Harperiin vuonna 1978.',
+                selite: 'Päällystämätön tie ylittää pienen sillan tiheän metsän halki, '
+                  + 'ja tiellä ajaa valkoinen pikkuauto. Kuva on otettu vuonna 1978 '
+                  + 'Grand Gedehin piirikunnassa Zwedrun ja Harperin välisellä '
+                  + 'tiellä.',
+                lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Presidentin kotikaupunki',
+              teksti: 'Harper on Liberian pitkäaikaisimman presidentin, William V. S. '
+                + 'Tubmanin, kotikaupunki. Tubman syntyi täällä marraskuussa 1895 '
+                + 'ja kävi koulunsa Harperissa ja metodistien Cape Palmas '
+                + 'Seminaryssa. Hänen isoisänsä Alexander Tubman oli '
+                + 'kivenhakkaaja, kenraali, edustajainhuoneen puhemies ja '
+                + 'metodistisaarnaaja, ja hänen patsaansa on kuvattu kaupungissa '
+                + '1970-luvulla. Nuori Tubman valittiin vuonna 1923 Marylandin '
+                + 'piirikunnan senaattoriksi vain 28-vuotiaana, ja hän on yhä '
+                + 'Liberian historian nuorin senaattori. Presidenttinä vuosina '
+                + '1944–1971 hän houkutteli maahan ulkomaisia sijoituksia '
+                + 'avointen ovien politiikallaan, ja häntä kutsutaan modernin '
+                + 'Liberian isäksi. Hänen kaudellaan Liberia alkoi rekisteröidä '
+                + 'ulkomaisten varustamoiden laivoja, ja Wikivoyagen mukaan maan '
+                + 'laivarekisteri on yhä maailman toiseksi suurin '
+                + 'mukavuuslippurekisteri. Hallinto oli kuitenkin itsevaltainen, '
+                + 'ja poliittisia vastustajia vainottiin. Tubmanin kartano seisoo '
+                + 'meren rannalla South Baltimore Streetillä, jonka nimi '
+                + 'muistuttaa siirtokunnan juurista Yhdysvaltain Marylandissa. '
+                + 'Wikivoyage kuvaa taloa pahasti rapistuneeksi mutta yhä yhdeksi '
+                + 'kaupungin vaikuttavimmista rakennuksista, ja Wikipedian mukaan '
+                + 'raunioissa asui vuonna 2021 valtaajia. Koska talossa asutaan, '
+                + 'sisälle ei mennä kysymättä, eikä asukkaita kuvata ilman lupaa. '
+                + 'Tubman-ajan vauraus näkyy nykyään lähinnä raunioina: '
+                + 'Wikivoyagen mukaan vuosina 1989–2003 käydyt sisällissodat '
+                + 'tuhosivat lähes kaiken hänen aikanaan rakennetun '
+                + 'infrastruktuurin, ja ennen sotia tärkeä hallintokeskus Harper '
+                + 'toipuu yhä.',
+              kuva: {
+                tiedosto: 'ASC Leiden - F. van der Kraaij Collection - 06 - 018 - Tubman Mansion of William V. S. Tubman (Liberian president from 1944-1971), South Baltimore Street - Harper, Maryland County, Liberia, 1978.tiff',
+                lyhyt: 'Presidentti Tubmanin kartano palmujen keskellä Atlantin rannalla Harperissa vuonna 1978.',
+                selite: 'Vaalea, tasakattoinen kartano seisoo palmujen ja korkeiden '
+                  + 'puiden keskellä meren rannalla, ja sen ohi kulkee päällystetty '
+                  + 'tie, jolla on pysäköitynä valkoinen Renault 4. Kuva on otettu '
+                  + 'South Baltimore Streetillä vuonna 1978, jolloin Tubman oli '
+                  + 'kuollut seitsemän vuotta aiemmin.',
+                lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kirkontornit ja kampus',
+              teksti: 'Harperin keskustassa kirkot ovat yhä kaupunkikuvan '
+                + 'maamerkkejä. Wikivoyage nostaa nähtävyyksiksi episkopaalisen '
+                + 'Pyhän Markuksen kirkon ja Mount Scottin yhdistyneen '
+                + 'metodistikirkon, jotka ovat vain parinsadan metrin päässä '
+                + 'toisistaan ja Tubmanin kartanosta. Kaksitorninen Mount Scott '
+                + 'erottuu kauas, ja se seisoo korkealla pengerryksellä kadun '
+                + 'yläpuolella. Myös katolisella kirkolla on niemellä vahva '
+                + 'asema: Cape Palmasin hiippakunta on yksi Liberian kolmesta '
+                + 'katolisesta hiippakunnasta, ja se sai nykyisen asemansa vuonna '
+                + '1981. Kouluilla on Kap Palmasissa pitkät perinteet. '
+                + 'Episkopaalikirkko perusti tänne vuonna 1889 Cuttington '
+                + 'Collegen, jota pidetään Saharan eteläpuolisen Afrikan '
+                + 'vanhimpana yksityisenä, molemmille sukupuolille avoimena '
+                + 'nelivuotisena korkeakouluna. Se muutti myöhemmin Bongin '
+                + 'piirikuntaan Suacocoon, jossa se toimii yhä yliopistona. '
+                + 'Nykyään Harperin oma korkeakoulu on William V. S. Tubmanin '
+                + 'yliopisto noin neljän kilometrin päässä keskustasta '
+                + 'koilliseen. Se perustettiin vuonna 1978 teknilliseksi '
+                + 'opistoksi, mutta sisällissota sulki sen koko 1990-luvuksi. '
+                + 'Presidentti Ellen Johnson Sirleaf avasi opiston uudelleen '
+                + 'vuonna 2008, ja seuraavana vuonna se sai yliopiston aseman. Se '
+                + 'on yksi Liberian kahdesta julkisesta yliopistosta, ja sen '
+                + 'kuudessa tiedekunnassa opiskellaan esimerkiksi maataloutta, '
+                + 'terveystieteitä ja tekniikkaa. Ensimmäiset tutkinnot jaettiin '
+                + 'kesäkuussa 2014, ja vuonna 2016 yliopistosta valmistui '
+                + 'Liberian ensimmäinen naispuolinen koneinsinööri. Kampukselle '
+                + 'kannattaa sopia vierailu etukäteen.',
+              kuva: {
+                tiedosto: 'ASC Leiden - F. van der Kraaij Collection - 06 - 015 - Mount Scott United Methodist Church with palm trees - Harper, Maryland County, Liberia, 1978.tiff',
+                lyhyt: 'Mount Scottin metodistikirkon kaksoistornit siluettina Harperin taivasta vasten.',
+                selite: 'Kirkon kaksi suippoa, ristein kruunattua tornia ja päätykolmio '
+                  + 'erottuvat tummana siluettina pilvistä taivasta vasten, ja '
+                  + 'vasemmalla kohoaa hoikka palmu. Kirkko seisoo korkealla '
+                  + 'pengerryksellä. Kuva on otettu vuonna 1978.',
+                lahde: 'Fred van der Kraaij, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Palmuvoita, käteistä ja varovaisuutta',
+              teksti: 'Harperin ruokapaikat ovat pieniä ja yksinkertaisia. Wikivoyage '
+                + 'mainitsee kaupungin kahvikojut, joissa tarjotaan paikallisin '
+                + 'mausteisiin paistettuja munia ja leipää, pikakahvia, '
+                + 'säilykelihaa, sardiineja ja tulista spagettia. Liberialaisessa '
+                + 'keittiössä perusruokaa ovat riisi ja kastikkeet, kuten '
+                + 'öljypalmun hedelmistä keitetty palmuvoi, kassavanlehtikastike '
+                + 'ja bataatinlehdet, sekä kassavasta tehty fufu keiton kera. '
+                + 'Oluista yleisin on paikallinen Club. Juomavesi ostetaan '
+                + 'pullotettuna, sillä kaduilla myytävän pussiveden puhtaudesta '
+                + 'ei ole takeita. Wikivoyagen mukaan kortteja voi Liberiassa '
+                + 'käyttää vain vähän, joten mukaan otetaan Yhdysvaltain '
+                + 'dollareita ja pieniin ostoksiin Liberian dollareita. '
+                + 'Terveysasiat hoidetaan ennen lähtöä: malaria ja lavantauti '
+                + 'ovat maassa yleisiä, ja ulkomaalaisille sopivia lääkäreitä on '
+                + 'vähän. Harperin J. J. Dossenin muistosairaala on yksi '
+                + 'Kaakkois-Liberian sairaaloista, ja Partners In Health on '
+                + 'vuodesta 2015 auttanut rakentamaan piirikunnan '
+                + 'terveydenhuoltoa uudelleen ebolaepidemian jälkeen. '
+                + 'Turvallisuudesta on sanottava suoraan. Wikivoyagen '
+                + 'Liberia-oppaan turvallisuusosio on kirjoitettu YK:n '
+                + 'rauhanturvaoperaation aikaan, joka päättyi 2018, ja se koskee '
+                + 'lähinnä Monroviaa, mutta sen neuvot ovat selvät: pimeällä ei '
+                + 'kävellä, autonovet pidetään lukittuina, autioita paikkoja '
+                + 'vältetään ja liikutaan porukassa. Oppaan mukaan aseelliset '
+                + 'ryöstöt ja raiskaukset ovat yleisiä, ja Monrovian ulkopuolella '
+                + 'se ei suosittele liikkumaan yksin. Matkasta kannattaa '
+                + 'ilmoittaa oman maan edustustolle ja tarkistaa ajantasainen '
+                + 'matkustustiedote. Oppaan mukaan valtaosa liberialaisista on '
+                + 'silti ystävällisiä ja helposti lähestyttäviä: jokaista '
+                + 'tervehditään, suoraa kieltäytymistä pidetään töykeänä, eikä '
+                + 'sisällissodista kannata aloittaa keskustelua, koska ne '
+                + 'herättävät yhä kipeitä muistoja.',
+              kuva: {
+                tiedosto: 'A prepared dish of palm butter soup.jpg',
+                lyhyt: 'Kulhollinen riisiä ja palmuvoikastiketta kalan kera punaisella tarjottimella.',
+                selite: 'Punaisella tarjottimella on kulhollinen valkoista riisiä ja '
+                  + 'toinen kulho oranssinruskeaa palmuvoikastiketta, jossa on '
+                  + 'kalaa ja tomaattia. Kuva on otettu Liberiassa huhtikuussa 2025 '
+                  + 'koululaisten wikikilpailua varten.',
+                lahde: 'Foundation Digital Schools Liberia, Wikimedia Commons (CC0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
