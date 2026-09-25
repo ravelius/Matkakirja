@@ -76,6 +76,12 @@ namespace Matkakirja
             public string Iso3, Nimi;
             public readonly List<Maa> Alueet = new List<Maa>();
             public readonly List<(double Lon, double Lat)[]> Kaaret = new List<(double Lon, double Lat)[]>();
+            /// <summary>
+            /// Alueen sisäiset kaaret (molemmilla puolilla sama alue), eivät kuulu Kaariin: aineiston alue on koottu
+            /// Natural Earthin piirteistä (Ranskan 13 aluetta 96 departementista), ja departementtien väliset kaaret
+            /// ovat kokoelmassa mukana. Web ei piirrä niitä (täyttö kolmioittain samalla sävyllä, ei viivoja).
+            /// </summary>
+            public readonly List<(double Lon, double Lat)[]> SisaisetKaaret = new List<(double Lon, double Lat)[]>();
             public readonly List<Rypas> Rypaat = new List<Rypas>();
             /// <summary>Alueiden värinumerot 0…4 (indeksi = Alueet), web `vari` (ks. luokan kommentti TÄYTTÖ).</summary>
             public int[] Varit;
@@ -111,6 +117,8 @@ namespace Matkakirja
         public int Kaaria, KohdistamattomatKaaret, AlueitaYhteensa;
         /// <summary>Maat, joiden värinumerot laskettiin (kokoelmassa ei "vari"-kenttää).</summary>
         public int VaritLaskettu;
+        /// <summary>Alueiden sisäiset kaaret kaikista maista (karsittu rajaviivoista, <see cref="MaanAlueet.SisaisetKaaret"/>).</summary>
+        public int SisaisetKaaret;
         /// <summary>Suurin alueiden määrä yhdessä maassa ja sen maa (yli 255 → varoitus, katkaisu Rajaa-vaiheessa).</summary>
         public int AlueitaEnintaan;
         public string AlueitaEnintaanMaa;
@@ -162,6 +170,8 @@ namespace Matkakirja
                 j.AlueitaYhteensa++;
             }
             var maaLista = new List<MaanAlueet>(j.Maat.Values);
+            // Janojen omistajat maittain: sama tieto värityksen naapuruuteen ja sisäisten kaarien karsintaan.
+            var omistajat = new List<Dictionary<(long, long), List<int>>>(maaLista.Count);
             foreach (var m in maaLista)
             {
                 m.Alueet.Sort((x, y) => string.CompareOrdinal(x.Id, y.Id));
@@ -169,7 +179,9 @@ namespace Matkakirja
                 Ryhmittele(m);
                 m.VaritAineistosta = m.Alueet.TrueForAll(a => varit.ContainsKey(a.Id));
                 if (m.VaritAineistosta) m.Varit = m.Alueet.ConvertAll(a => varit[a.Id]).ToArray();
-                else { m.Varit = Varita(Naapurit(m.Alueet)); j.VaritLaskettu++; }
+                var om = JanaOmistajat(m.Alueet);
+                omistajat.Add(om);
+                if (!m.VaritAineistosta) { m.Varit = Varita(Naapurit(m.Alueet.Count, om)); j.VaritLaskettu++; }
             }
 
             // Kaaret maittain: jana → maat (enintään kaksi: raja on kahden alueen välissä).
@@ -203,8 +215,14 @@ namespace Matkakirja
                     for (int i = 0; i + 1 < pisteet.Count && v == 0; i++) janat.TryGetValue(JanaAvain(pisteet[i], pisteet[i + 1]), out v);
                     if (v == 0) { j.KohdistamattomatKaaret++; continue; }
                     var taulu = pisteet.ToArray();
-                    maaLista[(v & 0xffff) - 1].Kaaret.Add(taulu);
-                    if ((v >> 16) != 0) maaLista[(v >> 16) - 1].Kaaret.Add(taulu);
+                    void Lisaa(int mi)
+                    {
+                        var m = maaLista[mi];
+                        if (SisainenKaari(taulu, omistajat[mi])) { m.SisaisetKaaret.Add(taulu); j.SisaisetKaaret++; }
+                        else m.Kaaret.Add(taulu);
+                    }
+                    Lisaa((v & 0xffff) - 1);
+                    if ((v >> 16) != 0) Lisaa((v >> 16) - 1);
                 }
             return j;
         }
@@ -501,7 +519,24 @@ namespace Matkakirja
         /// Alueiden naapuruus jaetuista rajajanoista (web kolmioiMaa: "Naapuruus jaetuista rajasärmistä"). Renkaat on
         /// rakennettu samoista kaarista, joten yhteinen raja on kummassakin renkaassa samoin pistein (avain 1e-3°).
         /// </summary>
-        public static List<HashSet<int>> Naapurit(IList<Maa> alueet)
+        public static List<HashSet<int>> Naapurit(IList<Maa> alueet) => Naapurit(alueet.Count, JanaOmistajat(alueet));
+
+        static List<HashSet<int>> Naapurit(int n, Dictionary<(long, long), List<int>> omistajat)
+        {
+            var naapurit = new List<HashSet<int>>(n);
+            for (int i = 0; i < n; i++) naapurit.Add(new HashSet<int>());
+            foreach (var l in omistajat.Values)
+                for (int a = 0; a < l.Count; a++)
+                    for (int b = 0; b < l.Count; b++)
+                        if (l[a] != l[b]) naapurit[l[a]].Add(l[b]);
+            return naapurit;
+        }
+
+        /// <summary>
+        /// Jana → alueet, joiden renkaissa jana on (alueen indeksi kerran per rengas: saman alueen kaksi rengasta
+        /// yhteisellä janalla = alueen sisäinen raja, esim. kaksi departementtia samassa Ranskan alueessa).
+        /// </summary>
+        public static Dictionary<(long, long), List<int>> JanaOmistajat(IList<Maa> alueet)
         {
             var omistajat = new Dictionary<(long, long), List<int>>();
             for (int i = 0; i < alueet.Count; i++)
@@ -511,15 +546,27 @@ namespace Matkakirja
                         var avain = JanaAvain(r[k], r[(k + 1) % r.Length]);
                         if (avain.Item1 == avain.Item2) continue;
                         if (!omistajat.TryGetValue(avain, out var l)) omistajat[avain] = l = new List<int>(2);
-                        if (!l.Contains(i)) l.Add(i);
+                        l.Add(i);
                     }
-            var naapurit = new List<HashSet<int>>(alueet.Count);
-            for (int i = 0; i < alueet.Count; i++) naapurit.Add(new HashSet<int>());
-            foreach (var l in omistajat.Values)
-                for (int a = 0; a < l.Count; a++)
-                    for (int b = 0; b < l.Count; b++)
-                        if (a != b) naapurit[l[a]].Add(l[b]);
-            return naapurit;
+            return omistajat;
+        }
+
+        /// <summary>
+        /// Onko kaari alueen sisällä: sen jana on vähintään kahdessa renkaassa ja kaikki ne ovat samaa aluetta. Kaari
+        /// kulkee solmusta solmuun, joiden välillä omistajat eivät vaihdu (tools/vienti/maakuntarajat.mjs
+        /// kaariTopologia), joten ensimmäinen maan jana ratkaisee. Alueiden väliset rajat ja maan ulkoraja (yksi rengas)
+        /// jäävät.
+        /// </summary>
+        public static bool SisainenKaari((double Lon, double Lat)[] kaari, Dictionary<(long, long), List<int>> omistajat)
+        {
+            for (int i = 0; i + 1 < kaari.Length; i++)
+            {
+                if (!omistajat.TryGetValue(JanaAvain(kaari[i], kaari[i + 1]), out var l)) continue;
+                if (l.Count < 2) return false;
+                foreach (int x in l) if (x != l[0]) return false;
+                return true;
+            }
+            return false;
         }
 
         /// <summary>
@@ -641,13 +688,16 @@ namespace Matkakirja
             return kartta;
         }
 
-        /// <summary>Maan kaarien janat rajauksen sisältä (molemmat päät sisällä), asteina.</summary>
-        public List<((double Lon, double Lat) A, (double Lon, double Lat) B)> Janat(Rajaus rj)
+        /// <summary>
+        /// Maan kaarien janat rajauksen sisältä (molemmat päät sisällä), asteina. Alueiden sisäiset kaaret vain
+        /// vertailuun (<paramref name="sisaiset"/>; testit ja luvut ennen karsintaa).
+        /// </summary>
+        public List<((double Lon, double Lat) A, (double Lon, double Lat) B)> Janat(Rajaus rj, bool sisaiset = false)
         {
             var ulos = new List<((double Lon, double Lat), (double Lon, double Lat))>();
             var m = Hae(rj?.Iso3);
             if (m == null) return ulos;
-            foreach (var k in m.Kaaret)
+            foreach (var k in sisaiset ? m.SisaisetKaaret : m.Kaaret)
             {
                 bool edellinen = rj.Sisalla(k[0].Lon, k[0].Lat);
                 for (int i = 1; i < k.Length; i++)

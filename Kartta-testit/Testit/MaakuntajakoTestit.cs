@@ -265,6 +265,68 @@ namespace Matkakirja.Kartta.Testit
         }
 
         [Testi]
+        static void SisaisetKaaretPois()
+        {
+            // DDD:a = kaksi departementtia (kaksi rengasta, yhteinen jana x = 1), DDD:b vieressä (raja x = 2).
+            var j = Maakuntajako.Lue(new Dictionary<string, object>
+            {
+                ["alkiot"] = new List<object>
+                {
+                    new Dictionary<string, object>
+                    {
+                        ["id"] = "DDD:a", ["bbox"] = new List<object> { 0.0, 0.0, 2.0, 1.0 },
+                        ["renkaat"] = new List<object>
+                        {
+                            Kaari(P(0, 0), P(1, 0), P(1, 1), P(0, 1), P(0, 0)),
+                            Kaari(P(1, 0), P(2, 0), P(2, 1), P(1, 1), P(1, 0)),
+                        },
+                    },
+                    Alue("DDD:b", P(2, 0), P(3, 0), P(3, 1), P(2, 1), P(2, 0)),
+                },
+                ["kaaret"] = new List<object>
+                {
+                    Kaari(P(1, 0), P(1, 1)),                          // departementtien raja: pois
+                    Kaari(P(2, 0), P(2, 1)),                          // alueiden raja
+                    Kaari(P(1, 0), P(0, 0), P(0, 1), P(1, 1)),        // ulkoraja (a:n länsiosa)
+                    Kaari(P(1, 0), P(2, 0)), Kaari(P(1, 1), P(2, 1)), // ulkoraja (a:n itäosa)
+                    Kaari(P(2, 0), P(3, 0), P(3, 1), P(2, 1)),        // ulkoraja (b)
+                },
+            });
+            var m = j.Hae("DDD");
+            Oleta.Sama(5, m.Kaaret.Count);
+            Oleta.Sama(1, m.SisaisetKaaret.Count);
+            Oleta.Sama(1, j.SisaisetKaaret);
+            Oleta.Tosi(m.SisaisetKaaret[0][0] == (1.0, 0.0) && m.SisaisetKaaret[0][1] == (1.0, 1.0), "x = 1 pois");
+            // Väritys: a ja b naapureita (sama omistajatieto), a:n renkaat eivät tee siitä oman naapurinsa.
+            Oleta.Tosi(m.Varit[0] != m.Varit[1], "a ja b eri sävyissä");
+        }
+
+        [Testi]
+        static void OikeaSisaisetKaaret()
+        {
+            var j = Oikea();
+            if (j == null) return;
+            Console.WriteLine($"      sisäisiä kaaria yhteensä {j.SisaisetKaaret}");
+            foreach (var (iso, lat, lon) in new[] { ("FRA", 48.857, 2.352), ("JPN", 35.689, 139.692), ("RUS", 55.751, 37.617) })
+            {
+                var m = j.Hae(iso);
+                var r = j.Rajaa(iso, lat, lon, Tavoite, Budjetti, Sivu);
+                int jalkeen = j.Janat(r).Count, pois = j.Janat(r, true).Count;
+                Console.WriteLine($"      {iso}: kaaria {m.Kaaret.Count + m.SisaisetKaaret.Count} → {m.Kaaret.Count}, " +
+                                  $"rajajanoja {jalkeen + pois} → {jalkeen}");
+                if (iso == "FRA")
+                {
+                    // 96 departementtia 13 alueessa (+ merentakaiset): sisäisiä kaaria on paljon, alueiden rajat jäävät.
+                    Oleta.Tosi(m.SisaisetKaaret.Count > 50, $"FRA sisäisiä {m.SisaisetKaaret.Count}");
+                    Oleta.Tosi(m.Kaaret.Count > 20, $"FRA jäljellä {m.Kaaret.Count}");
+                    // Jokainen jäljelle jäänyt kaari on alueiden välinen raja tai ulkoraja.
+                    var om = Maakuntajako.JanaOmistajat(m.Alueet);
+                    foreach (var k in m.Kaaret) Oleta.Tosi(!Maakuntajako.SisainenKaari(k, om), "sisäinen jäi");
+                }
+            }
+        }
+
+        [Testi]
         static void OikeaUudetMaat()
         {
             if (Oikea() == null) return;

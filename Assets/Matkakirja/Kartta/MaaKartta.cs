@@ -311,7 +311,7 @@ namespace Matkakirja
             }
             jako = j;
             Debug.Log($"MATKAKIRJA maakunnat ({kokoelma}): {j.Maat.Count} maata, {j.AlueitaYhteensa} aluetta, {j.Kaaria} kaarta " +
-                      $"({j.KohdistamattomatKaaret} ilman maata), jäsennys {jasennys} ms, maittain {maittain} ms");
+                      $"({j.KohdistamattomatKaaret} ilman maata, {j.SisaisetKaaret} alueen sisäistä pois), jäsennys {jasennys} ms, maittain {maittain} ms");
             if (j.AlueitaEnintaan > Maakuntajako.AluetaEnintaan)
                 Debug.LogWarning($"MATKAKIRJA maakunnat: {j.AlueitaEnintaanMaa} {j.AlueitaEnintaan} aluetta, tunnuskartassa enintään " +
                                  $"{Maakuntajako.AluetaEnintaan} (loput jäävät pois)");
