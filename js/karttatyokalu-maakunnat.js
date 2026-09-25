@@ -41,6 +41,7 @@ import { kohteidenNykyinenIso } from './fokuskohteet.js';
 import { taytaLahderivi } from './tekijakortti.js';
 import { MAAKUNTIEN_LUONNEHDINNAT } from './packs/maakunnat-luonnehdinnat.js';
 import { MAAKUNTIEN_PULU } from './packs/maakunnat-pulu.js';
+import { MAAKUNNAT_KAIKKI, MAAKUNNAT_KAIKKI_MAAT } from './packs/maakunnat-nimet.js';
 
 /* ===========================================================================
    1. NIMISTÖ
@@ -56,8 +57,13 @@ import { MAAKUNTIEN_PULU } from './packs/maakunnat-pulu.js';
    avaimet.md-proosasta, koska yksi tunnus poikkeaa nimiFi:stä vain
    välimerkin osalta (ks. Ranskan kommentti alla) — sellainen eroaa
    huomaisi vain lähdettä vertaamalla.
+
+   MAAKUNNAT KAIKILLE MAILLE (löydös 105, Fable 25.9.2026): muiden pelin
+   maiden nimistö on generoitu (js/packs/maakunnat-nimet.js, tools/
+   tee-maakuntavektorit.mjs). Tämän tiedoston kahdeksan kuratoitua maata
+   korvaavat generoidun rivistön kokonaan; tunnukset ovat samat.
    =========================================================================== */
-export const MAAKUNTIEN_NIMET = {
+const KURATOIDUT_NIMET = {
   FRA: {
     "Hauts-de-France": "Hauts-de-France",
     "Grand Est": "Grand Est",
@@ -205,17 +211,20 @@ export const MAAKUNTIEN_NIMET = {
   },
 };
 
-/** Maat listausjärjestyksessä, suomenkielisin nimin (maaotsikkorivit). */
-export const MAAKUNTIEN_MAAT = [
-  { iso: 'FRA', nimi: 'Ranska' },
-  { iso: 'DEU', nimi: 'Saksa' },
-  { iso: 'ITA', nimi: 'Italia' },
-  { iso: 'ESP', nimi: 'Espanja' },
-  { iso: 'GBR', nimi: 'Britannia' },
-  { iso: 'POL', nimi: 'Puola' },
-  { iso: 'AUT', nimi: 'Itävalta' },
-  { iso: 'CHE', nimi: 'Sveitsi' },
-];
+/*
+ * iso → { tunnus: nimi } KAIKILLE pelin maille. TYHJÄ OLIO = maalla ei
+ * ole maakuntia (pienvaltiot, alueet ilman admin-1-jakoa); avain on
+ * silti olemassa, joten "ei maakuntia" ja "tuntematon maa" eroavat.
+ */
+export const MAAKUNTIEN_NIMET = { ...MAAKUNNAT_KAIKKI, ...KURATOIDUT_NIMET };
+
+/** Kuratoitujen maiden otsikkonimet (lyhyempi "Britannia" kuin paketin nimi). */
+const KURATOIDUT_MAANIMET = {
+  FRA: 'Ranska', DEU: 'Saksa', ITA: 'Italia', ESP: 'Espanja', GBR: 'Britannia', POL: 'Puola', AUT: 'Itävalta', CHE: 'Sveitsi',
+};
+
+/** Kaikki pelin maat suomalaisessa aakkosjärjestyksessä (maaotsikkorivit). */
+export const MAAKUNTIEN_MAAT = MAAKUNNAT_KAIKKI_MAAT.map(({ iso, nimi }) => ({ iso, nimi: KURATOIDUT_MAANIMET[iso] ?? nimi }));
 
 /** Alueen suomenkielinen nimi; tuntematon avainpari palauttaa tunnuksen itsensä. */
 export function maakunnanNimi(iso, tunnus) {
@@ -296,12 +305,22 @@ function tallennaValinta(avain) {
  */
 /*
  * EI ENÄÄ RANSKAA VARALLE (löydös 70, Fable 25.9.2026: Kreikassa
- * välilehti näytti Ranskan). Maassa, jolla ei ole maakuntia, yhtäkään
- * ryhmää ei avata; lista kertoo sen tekstillä ja muut maat jäävät
- * suljettuina sen alle. null = maa ei tiedossa (esim. ennen peliä).
+ * välilehti näytti Ranskan). Palauttaa maan vain, jos sillä on
+ * maakuntia; null = ei maakuntia tai maa ei tiedossa.
  */
 export function maakuntienMaa(iso) {
-  return MAAKUNTIEN_MAAT.some((m) => m.iso === iso) ? iso : null;
+  return Object.keys(MAAKUNTIEN_NIMET[iso] ?? {}).length > 0 ? iso : null;
+}
+
+/*
+ * VAIN NYKYINEN MAA LISTASSA (löydös 105, omistaja build 13): listassa ei
+ * koskaan näy muiden maiden maakuntia. Näytettävä maa on pelaajan maa;
+ * ennen peliä tallennetun valinnan maa. Maalla ilman maakuntia listassa on
+ * pelkkä maan nimi. null = ei näytettävää maata (lista tyhjä).
+ */
+export function naytettavaMaa(nykyIso, valittuAvain) {
+  const iso = nykyIso ?? (typeof valittuAvain === 'string' ? valittuAvain.split(':')[0] : null);
+  return iso && MAAKUNTIEN_NIMET[iso] !== undefined ? iso : null;
 }
 
 export const EI_MAAKUNTIA_TEKSTI = 'Tälle maalle ei ole vielä maakuntia';
@@ -358,10 +377,11 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
    * avataan valitun rivin ryhmä kuten ennen.
    */
   let nykyIso = kohteidenNykyinenIso(ui) ?? null;
-  const avoinIso = nykyIso
-    ? maakuntienMaa(nykyIso)
-    : (valittuAvain ? jaaAvain(valittuAvain).iso : null);
-  eiMaakuntia.hidden = !nykyIso || Boolean(avoinIso);
+  const naytettava = naytettavaMaa(nykyIso, valittuAvain);
+  const avoinIso = maakuntienMaa(naytettava);
+  // Teksti vain, jos pelaajan maa ei ole pelin maaluettelossa lainkaan;
+  // maalla ilman maakuntia näkyy pelkkä maan nimi (löydös 105).
+  eiMaakuntia.hidden = !nykyIso || Boolean(naytettava);
 
   /** Vain yksi maaryhmä auki kerrallaan — sama tila kuin karttaselitteen levyllä. */
   function vaihdaRyhma(iso) {
@@ -386,9 +406,11 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
     const iso = kohteidenNykyinenIso(ui) ?? null;
     if (!iso || iso === nykyIso) return;
     nykyIso = iso;
-    const auki = maakuntienMaa(iso);
-    eiMaakuntia.hidden = Boolean(auki);
+    const naytettava = naytettavaMaa(iso, valittuAvain);
+    const auki = maakuntienMaa(naytettava);
+    eiMaakuntia.hidden = Boolean(naytettava);
     for (const [muuIso, r] of ryhmat) {
+      r.ryhma.hidden = muuIso !== naytettava;
       r.otsikko.setAttribute('aria-expanded', String(muuIso === auki));
       r.rivitRyhma.hidden = muuIso !== auki;
     }
@@ -443,6 +465,7 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
 
     const rivitRyhma = html('div', 'maakunnat-rivit-ryhma');
     rivitRyhma.hidden = !auki;
+    ryhma.hidden = iso !== naytettava;
 
     for (const tunnus of Object.keys(tunnukset)) {
       const avain = `${iso}:${tunnus}`;
@@ -465,7 +488,7 @@ export function rakennaMaakunnat(paneeli, { levy, ui } = {}) {
 
     ryhma.append(otsikko, rivitRyhma);
     lista.appendChild(ryhma);
-    ryhmat.set(iso, { otsikko, rivitRyhma });
+    ryhmat.set(iso, { ryhma, otsikko, rivitRyhma });
   }
 
   /*
