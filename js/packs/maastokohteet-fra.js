@@ -448,6 +448,7 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'carcassonnen-linnoituskaupunki',
+    nimio: 'Carcassonne',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260912/fra-kohde-carcassonnen-linnoituskaupunki-25ec0b1e82ce.jpg',
       lyhyt: 'Carcassonnen kaksoismuurit ja pyöreät tornit ympäröivät kukkulan lakea.',
@@ -568,6 +569,7 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'chartresin-katedraali',
+    nimio: 'Chartres',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-chartresin-katedraali-13d8d62f.jpg',
       lyhyt: 'Chartresin katedraalin eri-ikäiset tornit kaupungin yllä.',

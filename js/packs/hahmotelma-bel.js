@@ -170,6 +170,7 @@ export const HAHMOTELMA_BEL = [
   },
   {
     id: 'hahmotelma-han-sur-lesse',
+    nimio: 'Han-sur-Lesse',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bel-nosto-han-sur-lesse-cb83d674.jpg',
       lyhyt: 'Lesse-joki virtaa Han-sur-Lessen luolan suuaukolta, ja vierailijat seisovat rannalla.',
@@ -376,6 +377,7 @@ export const HAHMOTELMA_BEL = [
   },
   {
     id: 'hahmotelma-lions-mound',
+    nimio: 'Leijonakumpu',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bel-nosto-lions-mound-321be4bb.jpg',
       lyhyt: 'Waterloon leijonakumpu kohoaa vihreänä kartiona pellon takaa, huipulla leijonapatsas.',
@@ -486,6 +488,7 @@ export const HAHMOTELMA_BEL = [
   },
   {
     id: 'hahmotelma-bastogne',
+    nimio: 'Bastogne',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bel-nosto-bastogne-cb7c31a3.jpg',
       lyhyt: 'Mardassonin muistomerkki Bastognessa aukion ja pilvisen taivaan alla.',
@@ -584,6 +587,7 @@ export const HAHMOTELMA_BEL = [
   },
   {
     id: 'hahmotelma-tournai',
+    nimio: 'Tournai',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bel-nosto-tournai-bf2f7e63.jpg',
       lyhyt: 'Tournain tuomiokirkon viisi romaanista tornia ja goottilainen kuori ylhäältä nähtynä.',
@@ -634,6 +638,7 @@ export const HAHMOTELMA_BEL = [
   },
   {
     id: 'hahmotelma-eben-emael',
+    nimio: 'Ében-Émael',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bel-nosto-eben-emael-d063314d.jpg',
       lyhyt: 'Ében-Émaelin linnakkeen betoninen sisäänkäyntirakennus, jonka seinässä on ampumaaukkoja ja päällä pieni panssarikupu.',
@@ -682,6 +687,7 @@ export const HAHMOTELMA_BEL = [
   },
   {
     id: 'hahmotelma-kortrijk',
+    nimio: 'Kortrijk 1302',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bel-nosto-kortrijk-88e1fd6d.jpg',
       lyhyt: 'Kultaisten kannusten taistelun Groeninge-muistomerkki Kortrijkissa: kullattu naishahmo kohottaa keihästä.',
@@ -1025,6 +1031,7 @@ export const HAHMOTELMA_BEL = [
   },
   {
     id: 'hahmotelma-tervuren',
+    nimio: 'Tervuren',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bel-nosto-tervuren-34ae7699.jpg',
       lyhyt: 'AfricaMuseumin päärakennus ja sen edessä oleva puutarhalampi Tervurenissa.',
@@ -1193,6 +1200,7 @@ export const HAHMOTELMA_BEL = [
   },
   {
     id: 'hahmotelma-canal-du-centre',
+    nimio: 'Canal du Centre',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bel-nosto-canal-du-centre-8e3f5b0f.jpg',
       lyhyt: 'Vanha hydraulinen laivanostin nro 1 Houdeng-Goegniesissa kanavan päästä nähtynä.',
@@ -1372,6 +1380,7 @@ export const HAHMOTELMA_BEL = [
   },
   {
     id: 'hahmotelma-seraing',
+    nimio: 'Seraing',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bel-nosto-seraing-f213a73a.jpg',
       lyhyt: 'Seraingin terästehtaan masuuni ja siirtohihnat Meuse-joen rannalla.',
@@ -1491,6 +1500,7 @@ export const HAHMOTELMA_BEL = [
   },
   {
     id: 'hahmotelma-coudenberg',
+    nimio: 'Coudenberg',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/bel-nosto-coudenberg-a7d3e25b.jpg',
       lyhyt: 'Coudenbergin palatsin kaivetun aula magnan rauniot Brysselissä.',
@@ -1540,6 +1550,7 @@ export const HAHMOTELMA_BEL = [
   },
   {
     id: 'hahmotelma-antwerpen-beurs',
+    nimio: 'Handelsbeurs',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/bel-nosto-antwerpen-beurs-53c32423.jpg',
       lyhyt: 'Antwerpenin pörssitalon uusgoottilainen päätyjulkisivu, jonka harjalla lukee ANNO 1872.',

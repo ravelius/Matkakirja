@@ -886,7 +886,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       id: 'tulppaanimania',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen.
-      nimio: 'Alkmaarin huutokauppa',
+      nimio: 'Alkmaar',
       otsikko: 'Yhdestä sipulista maksettiin kanavatalon hinta, ja '
         + 'kaksi päivää myöhemmin siitä ei maksettu mitään',
       lunastus: [

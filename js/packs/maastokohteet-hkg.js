@@ -100,6 +100,7 @@ export const MAASTOKOHTEET_HKG = [
   {
     id: 'kowloonin-muurikaupunki',
     nimi: 'Kowloonin muurikaupunki',
+    nimio: 'Muurikaupunki',
     tyyppi: 'historia',
     kysymykset: [
       'Miksi muurikaupunki jäi vuoden 1898 vuokrasopimuksen ulkopuolelle?',
@@ -149,6 +150,7 @@ export const MAASTOKOHTEET_HKG = [
   {
     id: 'tung-chungin-linnake',
     nimi: 'Tung Chungin linnake',
+    nimio: 'Tung Chung',
     tyyppi: 'historia',
     kysymykset: [
       'Ketä vastaan linnake alun perin rakennettiin?',

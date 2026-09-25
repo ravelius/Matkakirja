@@ -173,6 +173,7 @@ export const MAASTOKOHTEET_CUB = [
   {
     id: 'san-pedro-de-la-roca',
     nimi: 'San Pedro de la Roca',
+    nimio: 'El Morro',
     tyyppi: 'historia',
     kysymykset: [
       'Miksi linnoitus rakennettiin terasseille?',

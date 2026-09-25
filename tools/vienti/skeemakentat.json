@@ -18,10 +18,11 @@
   "1.37": "1f3dae321dc1fa92",
   "1.38": "8ecfeec7eec821e1",
   "1.39": "3c9e4ae05bfc9dcb",
-  "1.40": "3c9e4ae05bfc9dcb"
+  "1.40": "a6303d9592c8e80b",
+  "1.41": "a6303d9592c8e80b"
  },
  "uusin": {
-  "skeemaversio": "1.40",
+  "skeemaversio": "1.41",
   "kokoelmat": {
    "aanitaulut": [
     "ampari",
@@ -496,6 +497,7 @@
     "maa",
     "nappi",
     "nimi",
+    "nimio",
     "teksti",
     "tyyppi"
    ],

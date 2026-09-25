@@ -723,6 +723,7 @@ export const MAASTOKOHTEET_CZE = [
   },
   {
     id: 'olomouc',
+    nimio: 'Olomouc',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-olomouc-d63c404f.jpg',
       lyhyt: 'Pyhän Kolminaisuuden pylväs kohoaa Olomoucin ylätorilla.',

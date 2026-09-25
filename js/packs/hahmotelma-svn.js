@@ -950,6 +950,7 @@ export const HAHMOTELMA_SVN = [
   },
   {
     id: 'hahmotelma-kostanjevica',
+    nimio: 'Kostanjevica',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/svn-nosto-kostanjevica-bff369df.jpg',
       lyhyt: 'Krka-joki Kostanjevican kohdalla ja kirkon torni puiden takana.',

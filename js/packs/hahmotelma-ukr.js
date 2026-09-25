@@ -251,6 +251,7 @@ export const HAHMOTELMA_UKR = [
   },
   {
     id: 'hahmotelma-bakhchysarai',
+    nimio: 'Bakhchysarai',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/ukr-nosto-bakhchysarai-1f662a45.jpg',
       lyhyt: 'Hansarayn palatsin katolta kohoaa viisi minareettia.',
@@ -302,6 +303,7 @@ export const HAHMOTELMA_UKR = [
   },
   {
     id: 'hahmotelma-kolomyia',
+    nimio: 'Pysanka-museo',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/ukr-nosto-kolomyia-fab47be8.jpg',
       lyhyt: 'Pysanka-museon pyöreä sisätila täynnä näyttelyvitriinejä.',
@@ -758,6 +760,7 @@ export const HAHMOTELMA_UKR = [
   },
   {
     id: 'hahmotelma-medzhybizh',
+    nimio: 'Medzhybiž',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/ukr-nosto-medzhybizh-5f0f52c9.jpg',
       lyhyt: 'Medzhybižin linnoitus joen mutkassa, heijastuen tyyneen veteen.',
@@ -1062,6 +1065,7 @@ export const HAHMOTELMA_UKR = [
    */
   {
     id: 'hahmotelma-kultainen-portti',
+    nimio: 'Kultainen portti',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/ukr-nosto-kultainen-portti-668b3022.jpg',
       lyhyt: 'Kiovan Kultaisen portin säilyneet keskiaikaiset muurinpätkät rekonstruktiopaviljongin sisällä.',

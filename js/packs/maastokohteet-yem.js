@@ -33,6 +33,7 @@ export const MAASTOKOHTEET_YEM = [
   {
     id: 'jabalannabishuayb',
     nimi: 'Jabal an-Nabi Shu\'ayb',
+    nimio: 'An-Nabi Shu\'ayb',
     tyyppi: 'vuori',
     kysymykset: [
       'Miksi Arabian korkein vuori on Jemenissä?',
