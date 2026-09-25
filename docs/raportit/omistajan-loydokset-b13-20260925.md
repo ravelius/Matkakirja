@@ -74,3 +74,6 @@ Merkitse valmis rivi tähän tiedostoon ("→ KORJATTU <sha>") merge-pyynnön yh
 | 115 | Maakunnan mini-inforuutuun pieni kuva kyseisestä maakunnasta. Data: kuvat tilataan kuvaputkelta pelin maiden maakunnille ensin. | Sisältökirjuri (data) + Natiivi-UI (ruutu) |
 | 116 | Mini-inforuudun plusmerkki pois; tilalle tekstin loppuun "Lue lisää" (Fablen valinta omistajan kahdesta vaihtoehdosta). | Natiivi-UI |
 | 117 | Nostot (väripallojen kytkimet päälle/pois) saavat näkyä vain kohdemaassa (pelaajan maa), kuten maakunnat. | Pelikoodari (nostojen rajaus) + Natiivi-UI (kytkimet) |
+| 118 | "Vintiltä löytyi isoisän matkalaukku" -luenta ja teksti tulevat SAMAAN aloitusruutuun, jossa Aloita seikkailu -painike on: taustalla pyörii sama pallo- ja lentokoneanimaatio ja sama musiikki jatkuu, kun luenta alkaa (ei erillistä ruutua). | Natiivi-UI (ruutu) + Pelikoodari (luennan ajoitus) |
+| 119 | Pallossa on vieläkin todella paljon reikiä, joista näkyy maapallon läpi (build 14). | Natiiviseppä (Karttaseppä: laattojen/maaston kattavuus) |
+| 120 | Lentokonekohtaus on outo: kamera pomppii liian villisti eri paikkoihin. Opus miettii sen paremmaksi: vaihtelevat nopeudet säilyvät, mutta yksi yhtenäinen kamera-ajo ilman hyppyjä (KAMERA-AJOT: ease in/out, yhtenäinen spline). | Natiiviseppä |
