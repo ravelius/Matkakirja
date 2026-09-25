@@ -111107,6 +111107,243 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Basilica of Damous El Karita',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Carthage, Carthage (municipality), Carthage Palace,
+       * Carthage amphitheatre, Tophet, Tunis-Goulette-Marsa, International
+       * Festival of Carthage, Sidi Bou Said, Ennejma Ezzahra, Brik, Lablabi,
+       * Bambalouni, Tunisian cuisine), ranskan Wikipediasta (TGM, Festival
+       * international de Carthage, Site archéologique de Carthage),
+       * Wikivoyagesta (Carthage, Sidi Bou Said, Tunis), Unescon
+       * kohdesivulta 1769 (Village of Sidi Bou Saïd, 2026) ja AFP:n
+       * Al-Monitorissa tammikuussa 2026 julkaistusta maanvyöryjutusta —
+       * teksti omaa. Yhteislipun tieto on Wikivoyagesta (huhtikuu 2026);
+       * hinnat ja aukioloajat jätetty pois. Nostojen ja gallerian aiheita
+       * (Antoninuksen termit, puunilaiskortteli, satamat, Nathan Davis,
+       * Acropolium, Damous el Karita, Dido, Hannibal, tuho, vesijohto) ei
+       * toisteta. Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja kuvat katsottu silmin. Pystykuva: tofetin
+       * palmut ja stelat.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Tunisise Carthage Tophet Salambo 01.JPG',
+          lyhyt: 'Salammbôn tofetin puunilaiset hiekkakivistelat seisovat palmujen varjossa.',
+          selite: 'Karthagon Salammbôn tofet oli puunilaisten pyhäkkö ja '
+            + 'hautausmaa, jonne pystytettiin hiekkakivisiä muistostelia '
+            + 'noin 650 eaa. alkaen; nykyään se on yksi yhteislipun '
+            + 'kohteista.',
+          lahde: 'GIRAUD Patrick, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+        kappale: 'Karthago on nykyään Tunisin varakas esikaupunki, jonka '
+          + 'huviloiden, koulujen ja presidentin palatsin lomassa lepäävät '
+          + 'muinaisen suurkaupungin rauniot. Tunisin keskustasta sinne '
+          + 'pääsee TGM-junalla, joka pysähtyy Karthagossa kuudesti. '
+          + 'Raunioalueet ja museot kierretään yhdellä yhteislipulla, '
+          + 'kesäöinä antiikin teatterissa soi Karthagon kansainvälinen '
+          + 'festivaali, ja heti pohjoisempana odottaa sinivalkoinen '
+          + 'Sidi Bou Saïd, joka hyväksyttiin Unescon '
+          + 'maailmanperintöluetteloon vuonna 2026. Kesät ovat kuumia ja '
+          + 'kuivia, joten raunioilla kävellään mieluiten keväällä tai '
+          + 'syksyllä, ja illalla nälkään syödään harissalla maustettua '
+          + 'brikiä tai lablabia.',
+        artikkeli: {
+          nimi: 'Matkailijan Karthago',
+          teksti: 'Muinaisen suurkaupungin rauniot ovat Tunisin '
+            + 'paikallisjunan varrella.',
+          nosto: 'Rooma ja Karthago solmivat rauhan vasta vuonna 1985, kun '
+            + 'kaupunkien pormestarit allekirjoittivat symbolisen '
+            + 'sopimuksen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Junalla järven poikki',
+              teksti: 'Karthagoon ei tarvita autoa. Tunisin keskustan Tunis '
+                + 'Marine -asemalta lähtee TGM-juna, joka kulkee 19 '
+                + 'kilometrin matkan La Marsan rantaan. Rata on Tunisian '
+                + 'vanhin: ensimmäinen osuus Tunisista La Goulettin '
+                + 'satamaan avattiin vuonna 1872, vuotta ennen isoisän '
+                + 'matkaa, ja jatko La Marsaan kaksi vuotta myöhemmin. '
+                + 'Nykyinen suora reitti Tunisin järven poikki kulkee '
+                + 'kanavan viertä penkereellä, joka valmistui 1905, ja '
+                + 'samasta vuodesta linjaa on kutsuttu päätepisteidensä '
+                + 'alkukirjaimilla TGM: Tunis, Goulette, Marsa. Sähköjunat '
+                + 'korvasivat höyryvedon 1908, ja nykyiset saksalaisen '
+                + 'MAN:n junat tulivat liikenteeseen 1979. Karthagossa '
+                + 'juna pysähtyy kuudesti: Salammbô, Byrsa, Dermech, '
+                + 'Hannibal, Présidence ja Amilcar. Useimmille raunioille '
+                + 'on lyhyin kävelymatka Carthage Hannibalin asemalta, '
+                + 'Salammbôn ja Byrsan asemilta tofetille. Lippu ostetaan '
+                + 'asemalta ennen junaan nousua. Wikivoyagen mukaan Tunis Marinen '
+                + 'opasteet ovat niukat, eikä TGM-nimeä välttämättä näy '
+                + 'missään, ja junan omassa linjakartassa lähtöasema on '
+                + 'nimellä Tunis Nord, joten neuvoa kannattaa kysyä '
+                + 'rohkeasti.',
+              kuva: [
+                {
+                  tiedosto: 'TGM train R216 Apr 2025.jpg',
+                  lyhyt: 'MAN-juna Carthage Hannibalin asemalla, josta kävellään useimmille raunioille.',
+                  selite: 'Saksalaisen MAN:n valmistama TGM-juna Carthage '
+                    + 'Hannibalin asemalla huhtikuussa 2025; asemalta on '
+                    + 'lyhyin kävelymatka useimmille Karthagon '
+                    + 'raunioalueille.',
+                  lahde: 'Dirkjot, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'TGM carriage interior route and stations Apr 2025.jpg',
+                  lyhyt: 'TGM-vaunun linjakartassa ovat kaikki asemat Tunisista La Marsaan.',
+                  selite: 'TGM-vaunun oven yläpuolella oleva kartta luettelee '
+                    + 'linjan asemat arabiaksi ja ranskaksi; lähtöasema on '
+                    + 'merkitty nimellä Tunis Nord, ja Karthagon kuusi '
+                    + 'asemaa ovat kartan keskivaiheilla.',
+                  lahde: 'Dirkjot, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'Canal Tunis - Radès.jpg',
+                  lyhyt: 'TGM:n sähkörata kulkee Tunisin järven poikki kivetyn kanavanpenkereen vierellä.',
+                  selite: 'TGM-radan ajojohtopylväät ja kivetty penger '
+                    + 'Tunisin järven halki kulkevan kanavan varrella '
+                    + 'tammikuussa 2026; taustalla siintävät sataman '
+                    + 'nosturit ja kanavan ylittävä silta.',
+                  lahde: 'Smailtn, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Yksi lippu kymmeneen kohteeseen',
+              teksti: 'Muinainen Karthago ei ole yksi aidattu puisto vaan '
+                + 'joukko erillisiä kaivausalueita asuinkortteleiden ja '
+                + 'huviloiden välissä. Wikivoyagen mukaan huhtikuussa 2026 '
+                + 'myynnissä oli enää yksi yhteislippu, joka kattaa '
+                + 'kymmenen raunioaluetta ja museota; yksittäisiin '
+                + 'kohteisiin ei myyty omia lippuja. Kaikkea on vaikea '
+                + 'ehtiä nähdä yhdessä päivässä, eivätkä kaikki kohteet '
+                + 'ole aina auki. Opasteita on niukasti ja englanninkielisiä '
+                + 'kylttejä vielä vähemmän, joten opas tai etukäteen luettu '
+                + 'taustatieto auttaa. Byrsan kukkulan länsipuolella on '
+                + '100-luvun alussa valmistunut amfiteatteri, jonka katsomoihin arvioidaan '
+                + 'mahtuneen 30 000 ihmistä. Katsomoiden kivet vietiin '
+                + 'vuosisatojen mittaan rakennustarpeiksi, ja jäljelle jäi '
+                + 'mäntyjen ympäröimä, noin 65 metriä pitkä areena. '
+                + 'Salammbôn tofet on Karthagon vanhimpia paikkoja: '
+                + 'puunilaisten pyhäkkö ja hautausmaa, johon haudattiin '
+                + 'pienten lasten tuhkaa uurnissa. Tutkijat kiistelevät '
+                + 'yhä, kertovatko löydöt lapsiuhreista vai lasten '
+                + 'hautausmaasta. Byrsan kukkulan kansallismuseo on ollut '
+                + 'pitkiä aikoja osittain suljettuna, joten sen tilanne '
+                + 'kannattaa tarkistaa etukäteen. Varjoa on vähän, joten '
+                + 'mukaan tarvitaan vettä ja hattu. Rauniokierroksella '
+                + 'voi muistella, että Rooma ja Karthago solmivat rauhan '
+                + 'vasta 1985, kun kaupunkien pormestarit allekirjoittivat '
+                + 'symbolisen sopimuksen.',
+              kuva: {
+                tiedosto: 'Amphithéâtre de Carthage 1.JPG',
+                lyhyt: 'Karthagon amfiteatterista on jäljellä mäntymetsän ympäröimä areena.',
+                selite: 'Karthagon roomalaisen amfiteatterin katsomot '
+                  + 'purettiin aikojen kuluessa rakennuskiviksi, ja '
+                  + 'syyskuun iltavalossa näkyy lähinnä areena ja sen '
+                  + 'muurattu reunus mäntyjen keskellä.',
+                lahde: 'IssamBarhoumi, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kesäyö antiikin teatterissa',
+              teksti: 'Heinä- ja elokuussa Karthagon kansainvälinen '
+                + 'festivaali täyttää kesäyöt musiikilla. Se alkoi 1960-luvun '
+                + 'alussa kaksipäiväisenä jazztapahtumana, ja vuonna 1964 '
+                + 'Tunisian kulttuuriministeriö otti sen hoitaakseen. '
+                + 'Näyttämönä on 100-luvulla rakennettu roomalainen '
+                + 'teatteri, johon mahtui noin 5 000 katsojaa. Siitä oli '
+                + '1900-luvun alussa jäljellä vain vähäisiä raunioita, ja '
+                + 'nykyinen katsomo on suurelta osin entisöintiä. Toisen '
+                + 'maailmansodan aikana samassa teatterissa puhui Winston '
+                + 'Churchill. Festivaalin lavalla ovat esiintyneet '
+                + 'arabimaailman tähdet, kuten Warda ja Majida El Roumi, '
+                + 'sekä Louis Armstrong, Ray Charles, James Brown, Dalida ja '
+                + 'Stromae, ja ohjelmassa on myös teatteria, tanssia ja '
+                + 'kansanmusiikkia. Konsertit alkavat vasta, kun päivän '
+                + 'helle on hellittänyt, ja Wikivoyagen kävijävinkin mukaan '
+                + 'ne päättyvät usein vasta yhden jälkeen yöllä. '
+                + 'Kiviportailla istutaan tuntikausia, joten oma tyyny tai '
+                + 'huopa on moni paikallisen vakiovaruste. Esiintyjät '
+                + 'vaihtuvat vuosittain, joten ohjelma kannattaa katsoa '
+                + 'festivaalin omilta sivuilta.',
+              kuva: {
+                tiedosto: 'Festival de Carthage au théatre romain.JPG',
+                lyhyt: 'Orkesteri soittaa Karthagon festivaalilla roomalaisen teatterin valaistujen muurien edessä.',
+                selite: 'Karthagon kansainvälisen festivaalin konsertti '
+                  + 'roomalaisessa teatterissa elokuussa 2015: orkesteri ja '
+                  + 'laulajat esiintyvät punaisiksi valaistujen antiikin '
+                  + 'muurien edessä myöhään illalla.',
+                lahde: 'Noomen9, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sinivalkoinen Sidi Bou Saïd',
+              teksti: 'Karthagon pohjoisinta asemaa seuraa Sidi Bou '
+                + 'Saïd, meren yllä jyrkänteellä seisova kylä, joka '
+                + 'kasvoi 1200-luvulla kuolleen sufipyhimyksen Abu Said '
+                + 'al-Bajin haudan ympärille ja sai nimensä hänestä. '
+                + 'Valkoiset seinät ja siniset ovet, ikkunaristikot ja '
+                + 'parvekkeet vakiintuivat kylän tunnusmerkiksi 1920-luvulla '
+                + 'paroni Rodolphe d\'Erlangerin ansiosta. Hänen vuosina '
+                + '1912–1922 rakennuttamassaan Ennejma Ezzahran palatsissa '
+                + 'toimii vuodesta 1991 arabialaisen ja välimerellisen '
+                + 'musiikin keskus, jossa on soitinkokoelma ja jossa '
+                + 'pidetään konsertteja. Vuonna 2026 kylä hyväksyttiin '
+                + 'Unescon maailmanperintöluetteloon. Samana vuonna '
+                + 'tammikuussa Tunisiaan satoi rankimmin yli 70 vuoteen, ja '
+                + 'Sidi Bou Saïdin rinteessä alkoi maanvyöryjä: taloja '
+                + 'tyhjennettiin, raskaat ajoneuvot kiellettiin kylässä ja '
+                + 'Ennejma Ezzahran museo suljettiin. Ennen käyntiä '
+                + 'kannattaa tarkistaa, mikä on taas auki. Kahviloissa '
+                + 'juodaan minttuteetä pinjansiemenillä, ja kojuista saa '
+                + 'sokeroituja bambalouni-munkkeja. Hiljaisinta on '
+                + 'keväällä ja myöhäissyksyllä; kesällä pääkatu täyttyy, '
+                + 'mutta sivukujilla on väljempää.',
+              kuva: {
+                tiedosto: 'Sidi Bou Said Allee.jpg',
+                lyhyt: 'Sidi Bou Saïdin kivetty kuja päättyy siniseen, nastoilla koristeltuun oveen.',
+                selite: 'Sidi Bou Saïdin porraskuja valkoisten talojen '
+                  + 'välissä: siniset ikkunaristikot ja nastoin koristeltu '
+                  + 'ovi mustavalkoisen kaaren alla ovat kylän tunnusmerkki.',
+                lahde: 'Amy Keus, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Harissaa, brikiä ja käytännön vinkkejä',
+              teksti: 'Tunisialainen ruoka on Pohjois-Afrikan tulisimpia, ja '
+                + 'lähes kaikkea maustaa harissa, chilistä, valkosipulista '
+                + 'ja mausteista jauhettu tahna, joka hyväksyttiin Unescon '
+                + 'aineettoman kulttuuriperinnön luetteloon vuonna 2022. '
+                + 'Tunnetuin välipala on brik: ohueen malsouka-taikinaan '
+                + 'kolmioksi kääritty kananmuna, jonka seurana on usein '
+                + 'tonnikalaa, persiljaa ja harissaa, paistettuna '
+                + 'rapeaksi. Lablabi on kuminalla ja valkosipulilla '
+                + 'maustettua kikhernelientä kuivien leivänpalojen päällä; '
+                + 'se oli alun perin talviaamujen ruokaa, mutta nyt sitä '
+                + 'syödään mihin aikaan tahansa, myös myöhään illalla. '
+                + 'Kesät ovat kuumia ja kuivia, ja helle voi nousta yli 40 '
+                + 'asteen. Sateet osuvat talveen, mutta silloinkin '
+                + 'sadepäiviä on keskimäärin vain kahdeksan tai yhdeksän '
+                + 'kuussa. Tunisian dinaaria ei saa viedä maasta, joten '
+                + 'ylimääräiset dinaarit vaihdetaan ennen lähtöä. '
+                + 'Karthagossa on myös Tunisian presidentin palatsi, ja '
+                + 'Wikivoyagen mukaan sitä kohti kuvaaminen on kielletty, '
+                + 'myös raunioilta, joilta palatsi näkyy. Ramadanin aikana '
+                + 'moni ravintola on päivällä kiinni.',
+              kuva: {
+                tiedosto: 'Bol de Lablabi, Tunisie, décembre 2017.jpg',
+                lyhyt: 'Lablabi-kulhossa on kikherneitä, leipää, kananmunaa, kapriksia ja harissaa.',
+                selite: 'Tunisialaisen ravintolan lablabi-annos: kuivien '
+                  + 'leivänpalojen ja kikherneiden päällä on kananmuna, '
+                  + 'kapriksia ja punaista harissaa.',
+                lahde: 'Habib M\'henni, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
