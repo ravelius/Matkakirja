@@ -20,7 +20,12 @@
  *       koepyramidissa nostoja ei voinut klikata, koska nostotaso oli
  *       poltettu nimien kanssa): kohdemaan kirjaus kertoo nimet elävinä
  *       (js/laattapyramidi.js nostotasonNimetElavina) kuten tuotannossa,
- *       ja luettelossa on nimiötaso (alue- ja merinimet, koristeet).
+ *       ja luettelossa on nimiötaso (alue- ja merinimet, koristeet);
+ *   K6  OSOITINVAIHTO SIMULOITUNA: tuotannon pyramidi.json palvellaan
+ *       koeluettelona ilman lippua (sama kuin Julkaisijan kopio
+ *       koe/<sarja>/pyramidi.json → pyramidi.json). Pallon tuotantokansio
+ *       (js/pallo.js PALLO_LAATTAKANSIO) ja luettelo täsmäävät, joten
+ *       lepokerros latoo sarjan laatat ja nostot ovat napautettavia.
  *
  * Ämpäripyynnöt välitetään Noden kautta (ämpärin CORS ei päästä
  * paikallista palvelinta), joten koe näkee oikeat luettelot.
@@ -80,7 +85,7 @@ const selain = await chromium.launch({
 });
 
 /** Avaa pelin annetulla haulla ja palauttaa ämpäriin menneet polut. */
-async function kirjaa(haku) {
+async function kirjaa(haku, { osoitin = false } = {}) {
   const ctx = await selain.newContext({ serviceWorkers: 'block', viewport: { width: 1200, height: 800 } });
   await ctx.addInitScript((data) => {
     try { localStorage.setItem('matkakirja-save-v1', data); localStorage.removeItem('matkakirja-lauta'); } catch { /* yksityinen selaus */ }
@@ -90,8 +95,11 @@ async function kirjaa(haku) {
   await ctx.route('https://media.matkakirja.app/**', async (reitti) => {
     const url = new URL(reitti.request().url());
     polut.push(url.pathname);
+    // K6: osoitinvaihto simuloituna — tuotannon luettelo on koeluettelo.
+    const lahde = osoitin && url.pathname === '/julisteet/pyramidi/pyramidi.json'
+      ? new URL(`/julisteet/pyramidi/koe/${SARJA}/pyramidi.json`, url) : url;
     try {
-      const v = await fetch(url);
+      const v = await fetch(lahde);
       const runko = Buffer.from(await v.arrayBuffer());
       await reitti.fulfill({
         status: v.status, body: runko,
@@ -163,6 +171,17 @@ vaadi('K3 tuotannon luettelo ilman lippua', tLuettelot.includes('/julisteet/pyra
   JSON.stringify(tLuettelot));
 vaadi('K3 nykyinen pallokansio ilman lippua', tPallo.length > 0 && tPallo.every((p) => p.startsWith(`/julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`)),
   JSON.stringify([...new Set(tPallo.map((p) => p.split('/')[4]))]));
+
+const vaihto = await kirjaa('', { osoitin: true });
+const vLaatat = vaihto.filter((p) => p.startsWith('/julisteet/pyramidi/') && p.endsWith('.webp'));
+const vVersiot = [...new Set(vLaatat.map((p) => p.split('/')[3]))];
+const vPallo = vaihto.filter((p) => p.startsWith('/julisteet/pallo/laatat/'));
+console.log(`INFO  osoitinvaihto: pyramidilaattoja ${vLaatat.length}, versiot ${JSON.stringify(vVersiot)}, pallo ${JSON.stringify([...new Set(vPallo.map((p) => p.split('/')[4]))])}`);
+vaadi('K6 osoitinvaihdon jälkeen pallo ja luettelo samaa sarjaa', PALLO_LAATTAKANSIO === KOEKANSIO && vPallo.length > 0
+  && vPallo.every((p) => p.startsWith(`/julisteet/pallo/laatat/${KOEKANSIO}/`)), PALLO_LAATTAKANSIO);
+vaadi('K6 lepokerros latoo sarjan laatat', vVersiot.some((v) => v.startsWith(SARJA))
+  && vVersiot.every((v) => v.startsWith(SARJA) || variversiot.has(v)), JSON.stringify(vVersiot));
+vaadi('K6 nostot napautettavia ja nimiötaso mukana', vaihto.tila?.nimetElavina === true && Boolean(vaihto.tila?.nimiotaso), JSON.stringify(vaihto.tila));
 
 await selain.close();
 palvelin.close();
