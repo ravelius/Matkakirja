@@ -6662,4 +6662,362 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Powerscourtin vesiputous putoaa 121 metriä, ja sen ympärille 1858 perustettuun peurapuistoon tuotiin Irlannin ensimmäiset japaninpeurat.',
     },
   },
+  /*
+   * BRA (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5A). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.BRA:n tunnuksia
+   * TÄSMÄLLEEN (26 osavaltiota + liittovaltiopiiri "Distrito Federal").
+   * Vain `lyhyt` tässä erässä. Vältetty maastokohteet-bra.js:n aiheet
+   * (Pico da Neblina, Fernando de Noronha, Itaipu, Serra da Capivara,
+   * São Miguel das Missões, Olinda, Congonhas, Pantanal, Lençóis
+   * Maranhenses); Brasília mainitaan vain kaupunkina. Lähteet (en-/pt-
+   * Wikipedia ja hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Alagoas            — Braskemin suolakaivokset Maceiósta (viisi
+   *                        kaupunginosaa, noin 60 000 siirrettyä)
+   *   Amapá              — Estádio Zerão (keskiviiva linjattu Marco Zero
+   *                        -muistomerkin mukaan)
+   *   Espírito Santo     — Ofício das Paneleiras de Goiabeiras (IPHAN:n
+   *                        ensimmäinen aineeton perintö 2002, ei dreijaa)
+   *   Piauí              — Teresina (Koillis-Brasilian ainoa ei-rannikon
+   *                        pääkaupunki, Parnaíba ja Poti)
+   *   Rio Grande do Norte — Cajueiro de Pirangi (7 300–8 400 m²; Piauín
+   *                        Cajueiro da Praia kiistää ennätyksen)
+   *   Rondônia           — Madeira–Mamoré Railroad (1907–1912, "Devil's
+   *                        Railroad", kuolleita arviolta 6 000+)
+   *   Sergipe            — Aracaju (uusi pääkaupunki 17.3.1855)
+   *   Muut               — yleistietoa, tarkistettu vastaavista
+   *                        en-Wikipedia-artikkeleista.
+   */
+  BRA: {
+    Acre: {
+      lyhyt: 'Xapurissa voi käydä kumimetsien puolustajan Chico Mendesin kotitalossa, jonka ovella hänet ammuttiin 1988.',
+    },
+    Alagoas: {
+      lyhyt: 'Maceiósta on tyhjennetty viisi kaupunginosaa ja noin 60 000 asukasta, koska maa vajoaa vanhojen vuorisuolakaivosten päällä.',
+    },
+    'Amapá': {
+      lyhyt: 'Macapássa päiväntasaajan kohdalla seisoo Marco Zero -muistomerkki, ja viereisen stadionin keskiviiva on linjattu sen mukaan.',
+    },
+    Amazonas: {
+      lyhyt: 'Manausin lähellä musta Rio Negro ja savenruskea Solimões virtaavat kilometrien matkan rinnakkain sekoittumatta.',
+    },
+    Bahia: {
+      lyhyt: 'Salvadorissa Lacerdan hissi nostaa matkustajat alakaupungista 72 metriä jyrkänteen päälle yläkaupunkiin.',
+    },
+    'Ceará': {
+      lyhyt: 'Cearán rannoilta kalastajat lähtevät yhä merelle jangadoilla, matalilla puisilla purjelautoilla.',
+    },
+    'Distrito Federal': {
+      lyhyt: 'Brasília rakennettiin tyhjälle ylängölle ja vihittiin pääkaupungiksi 1960; ylhäältä sen asemakaava muistuttaa lentokonetta.',
+    },
+    'Espírito Santo': {
+      lyhyt: 'Vitórian Goiabeirasissa naiset muovailevat mustia savipatoja ilman dreijaa, ja niissä keitetään osavaltion kalamoqueca.',
+    },
+    'Goiás': {
+      lyhyt: 'Chapada dos Veadeirosin ylängöllä kanjonit, vesiputoukset ja cerrado-savanni ovat Unescon maailmanperintöä.',
+    },
+    'Maranhão': {
+      lyhyt: 'Alcântarassa on Brasilian rakettien laukaisukeskus, sillä päiväntasaajan läheisyys säästää laukaisuissa polttoainetta.',
+    },
+    'Mato Grosso': {
+      lyhyt: 'Mato Grosso tuottaa soijaa enemmän kuin mikään muu Brasilian osavaltio, ja pellot jatkuvat horisonttiin asti.',
+    },
+    'Mato Grosso do Sul': {
+      lyhyt: 'Boniton joet ovat niin kirkkaita, että niissä snorklataan kalaparvien seassa kuin akvaariossa.',
+    },
+    'Minas Gerais': {
+      lyhyt: 'Brumadinhon Inhotim on valtava ulkomuseo, jossa nykytaide on sijoitettu kasvitieteellisen puutarhan keskelle.',
+    },
+    'Pará': {
+      lyhyt: 'Belémin Ver-o-Peso-torilla myydään açaíta, jonka tummaa sosetta paikalliset syövät paistetun kalan kanssa.',
+    },
+    'Paraíba': {
+      lyhyt: 'João Pessoan kaupungissa oleva Ponta do Seixas -niemi on koko Amerikan mantereen itäisin kohta.',
+    },
+    'Paraná': {
+      lyhyt: 'Iguaçun putoukset jakautuvat noin 275 erilliseen putoukseen Brasilian ja Argentiinan rajajoella.',
+    },
+    Pernambuco: {
+      lyhyt: 'Recifen karnevaaleissa tanssitaan frevoa, nopeaa katutanssia, jossa tanssijat heiluttavat pieniä värikkäitä päivänvarjoja.',
+    },
+    'Piauí': {
+      lyhyt: 'Teresina on Koillis-Brasilian ainoa osavaltion pääkaupunki, joka ei ole rannikolla; se on Parnaíba- ja Potijoen välissä.',
+    },
+    'Rio de Janeiro': {
+      lyhyt: 'Kristus-patsas seisoo Corcovadon noin 700-metrisellä huipulla, ja sen levitetyt kädet näkyvät lähes kaikkialle Rioon.',
+    },
+    'Rio Grande do Norte': {
+      lyhyt: 'Pirangin kylässä Natalin lähellä kasvaa cashewpuu, jonka latvus peittää yli 7 000 neliömetriä; sitä pidetään maailman suurimpana.',
+    },
+    'Rio Grande do Sul': {
+      lyhyt: 'Gaúchot kantavat mukanaan chimarrãota, kuumaa mate-juomaa, jota imetään metallipillillä kurpitsakupista.',
+    },
+    'Rondônia': {
+      lyhyt: 'Porto Velhosta lähti Madeira–Mamoré-rata, jonka rakentaminen viidakkoon vei tuhansia henkiä; sitä kutsutaan paholaisen radaksi.',
+    },
+    Roraima: {
+      lyhyt: 'Roraima-vuori, jyrkkäseinäinen pöytävuori eli tepui, kohoaa Brasilian, Venezuelan ja Guyanan rajojen kohtaamispaikassa.',
+    },
+    'Santa Catarina': {
+      lyhyt: 'Blumenaussa vietetään joka lokakuu Oktoberfestiä, sillä kaupungin perustivat saksalaiset siirtolaiset.',
+    },
+    'São Paulo': {
+      lyhyt: 'Brasiliassa asuu eniten japanilaistaustaisia Japanin ulkopuolella, ja São Paulon Liberdadessa katuja valaisevat japanilaistyyliset lyhdyt.',
+    },
+    Sergipe: {
+      lyhyt: 'Sergipe on Brasilian pienin osavaltio, ja sen pääkaupunki Aracaju rakennettiin ruutukaavaan uudeksi pääkaupungiksi 1855.',
+    },
+    Tocantins: {
+      lyhyt: 'Tocantins on Brasilian nuorin osavaltio, ja sen pääkaupunki Palmas rakennettiin tyhjästä 1989 alkaen.',
+    },
+  },
+  /*
+   * MEX (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.MEX:n tunnuksia TÄSMÄLLEEN: "Distrito Federal" =
+   * Mexico City, "México" = México-osavaltio (molempien nimiFi on
+   * "México"), "MEX+99?" = Natural Earthin nimetön pikkusaari
+   * (iso_3166_2 MX-X01~, 22,4° N 89,7° W) = Alacranesin riutta. Vain
+   * `lyhyt`. Vältetty maastokohteet-mex.js:n ja fokuskohteet-mex.js:n
+   * aiheet (Popocatépetl, Cozumel, Usumacinta, Teotihuacán, Palenque,
+   * Chichén Itzá, Monte Albán, El Tajín, Guanajuaton kaupunki,
+   * Chihuahuan rata, Templo Mayor). Lähteet (en-/es-Wikipedia ja
+   * hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   MEX+99?        — Scorpion Reef / Arrecife Alacranes (CONANP;
+   *                    noin 130–140 km Progresosta, Meksikonlahden suurin)
+   *   Chihuahua      — Cave of the Crystals (11,4 m, luola täyttyi
+   *                    uudelleen vedellä 2015)
+   *   Coahuila       — Cuatro Ciénegas (stromatoliitit)
+   *   Querétaro      — Peña de Bernal (433 m)
+   *   Tamaulipas     — Kemp's ridley sea turtle (Rancho Nuevo, arribadat)
+   *   Zacatecas      — Mining in Mexico (Zacatecas 36 % Meksikon hopeasta
+   *                    2019; Meksiko maailman suurin tuottaja)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  MEX: {
+    Aguascalientes: {
+      lyhyt: 'Aguascalientesin San Marcosin messut, Meksikon kansallismessut, täyttävät kaupungin keväisin useaksi viikoksi.',
+    },
+    'Baja California': {
+      lyhyt: 'Tijuanan ja San Diegon välinen San Ysidron raja-asema on läntisen pallonpuoliskon vilkkain maarajan ylityspaikka.',
+    },
+    'Baja California Sur': {
+      lyhyt: 'San Ignacion laguunissa harmaavalaat synnyttävät talvisin, ja uteliaat emot uivat usein aivan veneiden viereen.',
+    },
+    Campeche: {
+      lyhyt: 'Campechen vanhaa kaupunkia kiertävät muurit ja bastionit, jotka rakennettiin aikoinaan suojaksi merirosvoja vastaan.',
+    },
+    Chiapas: {
+      lyhyt: 'Sumideron kanjonin seinämät kohoavat paikoin yli kilometrin korkeuteen Grijalvajoen yläpuolelle.',
+    },
+    Chihuahua: {
+      lyhyt: 'Naican kaivoksen Kristalliluolassa on yli 11 metrin kipsikiteitä, mutta luola on jälleen veden alla.',
+    },
+    Coahuila: {
+      lyhyt: 'Cuatro Ciénegasin aavikkoaltaissa elää stromatoliitteja, syanobakteerien rakentamia kivikumpuja, jotka ovat muualta lähes kadonneet.',
+    },
+    Colima: {
+      lyhyt: 'Colima-tulivuori on Meksikon aktiivisimpia, ja sen savupatsas näkyy usein osavaltion pääkaupunkiin asti.',
+    },
+    Durango: {
+      lyhyt: 'Durangon aavikkomaisemissa on kuvattu kymmeniä lännenelokuvia, ja vanhoja kuvauskyliä voi yhä kiertää.',
+    },
+    Guanajuato: {
+      lyhyt: 'San Miguel de Allenden vaaleanpunainen uusgoottilainen kirkko, Parroquia, on koko kaupungin tunnusmerkki.',
+    },
+    Guerrero: {
+      lyhyt: 'Acapulcon La Quebradan kallioilta hypätään noin 35 metristä mereen, ja hyppy ajoitetaan tulevan aallon mukaan.',
+    },
+    Hidalgo: {
+      lyhyt: 'Pachucassa syödään pastes-piirakoita, jotka toivat mukanaan Cornwallista tulleet kaivosmiehet.',
+    },
+    Jalisco: {
+      lyhyt: 'Tequilan kaupungin ympärillä sinisen agaven rivit peittävät rinteet, ja agavemaisema on Unescon maailmanperintöä.',
+    },
+    'MEX+99?': {
+      lyhyt: 'Tämä pieni saari kuuluu Alacranesin riuttaan noin 130 km Jukatanin rannikosta; se on Meksikonlahden suurin koralliriutta.',
+    },
+    'México': {
+      lyhyt: 'Nevado de Toluca -tulivuoren kraatterissa on kaksi järveä, Aurinko ja Kuu, yli 4 000 metrin korkeudessa.',
+    },
+    'Distrito Federal': {
+      lyhyt: 'Mexico City on rakennettu kuivatun järven pohjalle, ja osa kaupungista vajoaa kymmeniä senttimetrejä vuodessa.',
+    },
+    'Michoacán': {
+      lyhyt: 'Talvisin miljoonat monarkkiperhoset peittävät Michoacánin vuoristometsien kuuset oransseiksi.',
+    },
+    Morelos: {
+      lyhyt: 'Cuernavacaa kutsutaan ikuisen kevään kaupungiksi, ja pääkaupunkilaiset ajavat sinne viikonloppuisin lämpöön.',
+    },
+    Nayarit: {
+      lyhyt: 'Marietassaarten piilotettu ranta on kalliokuopan pohjalla, ja sinne pääsee vain uimalla tunnelin läpi.',
+    },
+    'Nuevo León': {
+      lyhyt: 'Monterreyn yllä kohoaa Cerro de la Silla, jonka kaksi huippua muodostavat satulan muodon.',
+    },
+    Oaxaca: {
+      lyhyt: 'Hierve el Aguassa kallion rinteellä on kivettyneitä vesiputouksia, jotka mineraalilähteet ovat valuttaneet kalkista.',
+    },
+    Puebla: {
+      lyhyt: 'Cholulan suuri pyramidi on tilavuudeltaan maailman suurin, mutta se on kasvanut umpeen, ja huipulla seisoo kirkko.',
+    },
+    'Querétaro': {
+      lyhyt: 'Bernalin kylän yllä kohoaa Peña de Bernal, yli 400 metriä korkea kalliomonoliitti, yksi maailman suurimmista.',
+    },
+    'Quintana Roo': {
+      lyhyt: 'Tulumin maya-rauniot seisovat kalkkikivijyrkänteellä aivan Karibianmeren turkoosin veden yllä.',
+    },
+    'San Luis Potosí': {
+      lyhyt: 'Xilitlan sademetsässä on Las Pozas, brittiläisen Edward Jamesin rakentama surrealistinen betonipuutarha.',
+    },
+    Sinaloa: {
+      lyhyt: 'Sinaloan banda-yhtyeissä pauhaavat vaskipuhaltimet ja tuuba, ja niiden musiikki soi melkein joka juhlassa.',
+    },
+    Sonora: {
+      lyhyt: 'El Pinacaten laavakentällä on valtavia pyöreitä kraattereita keskellä Altarin hiekka-aavikkoa.',
+    },
+    Tabasco: {
+      lyhyt: 'Villahermosan La Venta -puistossa on olmeekkien jättiläispäitä, basaltista hakattuja kasvoja noin 2 500 vuoden takaa.',
+    },
+    Tamaulipas: {
+      lyhyt: 'Harvinainen Kempin merikilpikonna pesii lähes kokonaan Tamaulipasin rannoilla, ja naaraat nousevat maihin joukolla.',
+    },
+    Tlaxcala: {
+      lyhyt: 'Tlaxcala on Meksikon pienin osavaltio, ja Cacaxtlan raunioilla on säilynyt yli tuhatvuotiaita kirkkaita seinämaalauksia.',
+    },
+    Veracruz: {
+      lyhyt: 'Veracruzin ja Pueblan rajalla kohoaa lumihuippuinen Pico de Orizaba, 5 636 metriä, Meksikon korkein vuori.',
+    },
+    'Yucatán': {
+      lyhyt: 'Chicxulubin kylän kohdalla on 66 miljoonan vuoden takainen törmäyskraatteri, jonka isku liitetään dinosaurusten tuhoon.',
+    },
+    Zacatecas: {
+      lyhyt: 'Zacatecas louhii hopeaa enemmän kuin mikään muu Meksikon osavaltio, ja Meksiko on maailman suurin hopeantuottaja.',
+    },
+  },
+  /*
+   * CAN (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.CAN:n tunnuksia TÄSMÄLLEEN (esim. "Québec"
+   * aksentilla, vaikka nimiFi on "Quebec"). Vain `lyhyt`. Vältetty
+   * maastokohteet-can.js:n aiheet (Mount Logan, Naha Dehé, Baffininsaari,
+   * L'Anse aux Meadows, Craigellachie, Rideaun kanava, Head-Smashed-In,
+   * Dinosaur Provincial Park, Vanha Québec, Louisbourg, Dawson City);
+   * Québecin teksti koskee Montrealia. Lähteet (en-Wikipedia ja
+   * hakutarkistus 25.9.2026), epävarmimmat erikseen:
+   *   Northwest Territories — Great Slave Lake (614 m, Dettahin jäätie)
+   *   Québec         — Underground City, Montreal (32 km)
+   *   Yukon          — Yukon River Quest (715 km, Whitehorse–Dawson)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  CAN: {
+    Alberta: {
+      lyhyt: 'Banff on Kanadan vanhin kansallispuisto, joka perustettiin 1885 Kalliovuorten kuumien lähteiden ympärille.',
+    },
+    'British Columbia': {
+      lyhyt: 'Great Bear -sademetsässä elää henkikarhu, mustakarhun harvinainen muoto, jonka turkki on kermanvalkoinen.',
+    },
+    'Northwest Territories': {
+      lyhyt: 'Iso Orjajärvi on 614 metrin syvyydellään Pohjois-Amerikan syvin järvi, ja talvella sen jäälle aurataan tie.',
+    },
+    Manitoba: {
+      lyhyt: 'Churchillissa jääkarhut kerääntyvät syksyisin Hudsoninlahden rannalle odottamaan meren jäätymistä.',
+    },
+    'New Brunswick': {
+      lyhyt: 'Fundynlahdella on maailman suurimmat vuorovedet, ja Hopewell Rocksin kivipilarien juurella kävellään laskuveden aikaan.',
+    },
+    'Newfoundland and Labrador': {
+      lyhyt: 'Keväisin Grönlannista ajelehtivia jäävuoria lipuu Newfoundlandin rannikon ohi niin läheltä, että ne näkee rannalta.',
+    },
+    'Nova Scotia': {
+      lyhyt: 'Sable Islandin hiekkasaarella elää villihevosia, joita kukaan ei ruoki eikä hoida.',
+    },
+    Nunavut: {
+      lyhyt: 'Nunavut perustettiin 1999 inuiittien alueeksi, ja inuktitut kirjoitetaan siellä omalla tavukirjoituksellaan.',
+    },
+    Ontario: {
+      lyhyt: 'Niagaran hevosenkengän muotoinen putous on suurimmaksi osaksi Ontarion puolella, ja sen vesipöly kastelee katsojat.',
+    },
+    'Prince Edward Island': {
+      lyhyt: 'Cavendishissa voi käydä Vihervaaran talossa, jonka L. M. Montgomeryn Anna-kirjat tekivät kuuluisaksi.',
+    },
+    'Québec': {
+      lyhyt: 'Montrealin maanalainen kaupunki yhdistää 32 kilometrin käytävillä metroasemat ja tuhannet kaupat, joten talvella pärjää ulos menemättä.',
+    },
+    Saskatchewan: {
+      lyhyt: 'Reginassa koulutetaan jokainen Kanadan ratsupoliisin uusi konstaapeli, ja kaupungissa on poliisin perinnekeskus.',
+    },
+    Yukon: {
+      lyhyt: 'Whitehorsesta Dawson Cityyn melotaan joka kesä Yukonjokea pitkin 715 km:n kilpailu, maailman pisin vuosittainen melontakisa.',
+    },
+  },
+  /*
+   * CHL (Sisältökirjuri 25.9.2026, Fablen tilaus, erä 5A). Avaimet ovat
+   * MAAKUNNAT_KAIKKI.CHL:n tunnuksia TÄSMÄLLEEN (koko viralliset nimet,
+   * esim. "Aisén del General Carlos Ibáñez del Campo"). Vain `lyhyt`.
+   * Vältetty maastokohteet-chl.js:n aiheet (Ojos del Salado, Chiloé,
+   * Chuquicamata, Humberstone, Chinchorro, Sewell, Paranal, Isla Negra,
+   * Valdivian maanjäristys). Lähteet (en-/es-Wikipedia ja hakutarkistus
+   * 25.9.2026), epävarmimmat erikseen:
+   *   Antofagasta    — Mano del Desierto (11 m, Irarrázabal, 1992)
+   *   Arica y Parinacota — Chungará Lake (4 517 m, Parinacotan sortuman
+   *                    patoama, chilenflamingo)
+   *   Bío-Bío        — Chiflón del Diablo (Lota, meren alle, entiset
+   *                    kaivosmiehet oppaina; chile.travel)
+   *   Maule          — Radal Siete Tazas National Park (Claro-joki)
+   *   Tarapacá       — Atacama Giant (119 m, Cerro Unita, 1000–1400 jaa.)
+   *   Valparaíso     — Easter Island (3 512 km mantereelta, Valparaíson
+   *                    alue)
+   *   Muut           — yleistietoa, tarkistettu vastaavista
+   *                    en-Wikipedia-artikkeleista.
+   */
+  CHL: {
+    'Aisén del General Carlos Ibáñez del Campo': {
+      lyhyt: 'Kenraali Carreran järven marmoriluolien seinät hehkuvat sinisinä, kun järven vesi heijastuu niihin.',
+    },
+    Antofagasta: {
+      lyhyt: 'Autiomaassa Antofagastan kaakkoispuolella nousee hiekasta 11-metrinen betonikäsi, Mario Irarrázabalin Mano del Desierto.',
+    },
+    'La Araucanía': {
+      lyhyt: 'Pucónin yllä savuaa Villarrica, yksi Chilen aktiivisimmista tulivuorista, jonka kraatterissa on laavajärvi.',
+    },
+    'Arica y Parinacota': {
+      lyhyt: 'Chungaránjärvi on 4 517 metrin korkeudessa Parinacotan tulivuoren juurella, ja sen rannoilla elää flamingoja.',
+    },
+    Atacama: {
+      lyhyt: 'Sateisina vuosina Atacaman autiomaa puhkeaa kukkaan, ja ilmiötä kutsutaan nimellä desierto florido.',
+    },
+    'Bío-Bío': {
+      lyhyt: 'Lotan hiilikaivokset ulottuivat meren alle, ja Chiflón del Diablo -kaivokseen vievät nyt kierroksia entiset kaivosmiehet.',
+    },
+    Coquimbo: {
+      lyhyt: 'Nobel-runoilija Gabriela Mistral kasvoi Elquin laaksossa, ja hänet on haudattu laakson Monte Granden kylään.',
+    },
+    "Libertador General Bernardo O'Higgins": {
+      lyhyt: 'Colchaguan laaksossa viljellään carménèreä, rypälettä jota luultiin kadonneeksi, kunnes se löydettiin Chilen viinitarhoista 1994.',
+    },
+    'Los Lagos': {
+      lyhyt: 'Osornon tulivuoren lähes täydellinen lumikartio kohoaa Llanquihuejärven itärannalla.',
+    },
+    'Los Ríos': {
+      lyhyt: 'Valdivian jokirannan kalatorilla merileijonat odottavat, että kauppiaat heittävät niille kalanperkeitä.',
+    },
+    'Magallanes y Antártica Chilena': {
+      lyhyt: 'Torres del Painen kolme graniittitornia nousevat jyrkkinä Patagonian aroilta ja järviltä.',
+    },
+    Maule: {
+      lyhyt: 'Radal Siete Tazasin puistossa Claro-joki virtaa seitsemän peräkkäisen kallioaltaan ja vesiputouksen läpi.',
+    },
+    'Ñuble': {
+      lyhyt: 'Ñuble erotettiin omaksi alueekseen vasta 2018, ja sen pääkaupungissa Chillánissa syntyi pianisti Claudio Arrau.',
+    },
+    'Región Metropolitana de Santiago': {
+      lyhyt: 'Santiagon Gran Torre on 300 metriä korkea, Latinalaisen Amerikan korkein rakennus, ja sen takana siintävät Andit.',
+    },
+    'Tarapacá': {
+      lyhyt: 'Cerro Unitan rinteessä on Atacaman jättiläinen, 119-metrinen esikolumbiaaninen maahan tehty ihmishahmo.',
+    },
+    'Valparaíso': {
+      lyhyt: 'Pääsiäissaari moai-patsaineen kuuluu hallinnollisesti Valparaíson alueeseen, vaikka se on yli 3 500 km mantereelta.',
+    },
+  },
 };
