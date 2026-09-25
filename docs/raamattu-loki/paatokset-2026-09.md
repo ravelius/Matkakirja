@@ -5427,3 +5427,7 @@ Peruste: natiivi ja web lukevat saman sisältöpaketin nostorakenteen; juuritaso
 ## BUILD 13 TESTFLIGHTISSA klo 13.3x: 1.0.13, CFBundleVersion 202609251020, PROTO ddb3cfb6 (PUU c168c2e4), AJO 36123399651, SISAINEN RYHMA, LASKURI 13, LuoPallo AJETTU (#3161); OMISTAJALLE RIVI JA KOKEILULISTA, LOYDOKSET 80 ALKAEN (25.9.2026 klo 13.29)
 
 Kokeilulista (luovutus -b kohta 2): kylmä käynnistys ilman Unityn logoa, äänet, kartta (vanha pohja — uusi peruskartta vasta build 14), kaupunkikortti ja kamera, liikkuminen (noppa → kohteet → matka → saapuminen), radio (veto, sulku, yövalot), ☰ iPadilla, yläpalkki 70/64 pt, Ihmisen matka, kahden sormen kallistus.
+
+## NATIIVI-UI: 72 VAAKUNAT JUNASSA b13 (e1c71a6c); RADIOPANEELI PEITTAA RANSKA-KYLTIN MYOS WEBISSA (pariteetti-b10/web-radio-ipad.jpg) → EI MUUTETA, LAITETESTAAJAN KOHTA HYVAKSYTTY; radio tila -KUORI PELIKOODARI 14956617 MERGE-PYYNNOSSA; FABLE: NATIIVI-UI:N SEURAAVAT BUILD 14:AAN — 63 LEHTINIMIO + MITTAKAAVA, 79 KAHVA, 78 KUVAPARI, 31 LinssiUi.Vaihtui, 74 d2 (25.9.2026 klo 13.34)
+
+Omistajan build 13 -löydökset 80+ ohjataan ensisijaisesti Natiivi-UI:lle; erät pieninä.
