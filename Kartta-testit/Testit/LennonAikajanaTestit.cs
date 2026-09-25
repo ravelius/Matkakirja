@@ -81,24 +81,20 @@ namespace Matkakirja.Kartta.Testit
         [Testi]
         static void AloituslentoDynaaminen()
         {
-            // Löydös 110: kiinteä 10 s, kaksi lähikäyntiä. Avaimet kasvavassa järjestyksessä, kone monotoninen 0 → 1,
-            // lähikäynneillä kone lähes paikallaan ja kaukana nopea.
+            // Löydös 120 v2 (omistaja 25.9. klo 19.0x): kiinteä 12 s, vaihejako Nappulan rajapinnalle (Liuku = matkan alku
+            // 7,6 s, Kierto = orbit 10,4 s), vaiheet Nousu → Matka (7,6 s) → Lasku (8,8 s). Kone etenee reitin omalla
+            // profiililla (AloitusReitti.KoneenOsuus, LennonKamerareittiTestit.KoneEteneeLevostaPerille).
             var j = LennonAikajana.JaaAloitus(LennonAikajana.AloituslennonKestoS);
-            Oleta.Tosi(j.Aloitus && Math.Abs(j.KestoS - 10) < 1e-9, "kesto 10 s");
-            var a = LennonAikajana.Laske(2_392_000, 400_000, LennonAikajana.EiMaisemaa, j, t => 120);
-            for (int i = 1; i < a.Length; i++) Oleta.Tosi(a[i].Osuus >= a[i - 1].Osuus, $"avain {i}: {a[i].Osuus} < {a[i - 1].Osuus}");
-            Oleta.Tosi(a[1].Kone >= 1.9 && a[1].Etaisyys <= 15_000, "lähikäynti 1: puolet koneesta");
-            double edellinen = 0;
-            for (int i = 1; i <= 200; i++)
-            {
-                double p = LennonAikajana.KoneenOsuus(i / 200.0, j);
-                Oleta.Tosi(p >= edellinen - 1e-12, $"kone taaksepäin t={i / 200.0}");
-                edellinen = p;
-            }
-            Oleta.Tosi(Math.Abs(edellinen - 1) < 1e-9, "kone perillä");
-            double V(double t) => LennonAikajana.KoneenOsuus(t + 0.01, j) - LennonAikajana.KoneenOsuus(t, j);
-            Oleta.Tosi(V(0.17) * 5 < V(0.38), $"lähi 1 hitaampi kuin kauko: {V(0.17):0.0000} / {V(0.38):0.0000}");
-            Oleta.Tosi(V(0.55) * 5 < V(0.66), $"lähi 2 hitaampi kuin pako 2: {V(0.55):0.0000} / {V(0.66):0.0000}");
+            Oleta.Tosi(j.Aloitus && Math.Abs(j.KestoS - 12) < 1e-9, "kesto 12 s");
+            var loput = Loput(j);
+            for (int i = 1; i < loput.Length; i++) Oleta.Tosi(loput[i] >= loput[i - 1], $"raja {i}: {loput[i]} < {loput[i - 1]}");
+            Oleta.Tosi(Math.Abs(j.Liuku * 12 - 7.6) < 1e-9 && Math.Abs(j.Kierto * 12 - 10.4) < 1e-9, "Liuku 7,6 s, Kierto 10,4 s");
+            Oleta.Tosi(LennonAikajana.Vaihe(7.5 / 12, j) == LennonVaihe.Nousu && LennonAikajana.Vaihe(8.0 / 12, j) == LennonVaihe.Matka
+                       && LennonAikajana.Vaihe(9.0 / 12, j) == LennonVaihe.Lasku, "vaiheet");
+            // Kone 10 km:n vähimmäiskorkeudessa ennen kuminauhan ylitystä (3,0 s) ja laskeutunut perillä (11,0 s).
+            Oleta.Tosi(LennonAikajana.KoneenMinimi(2.95 / 12, j, LennonAikajana.AloituksenNousu) >= LennonAikajana.MinKoneKorkeusM - 1e-6, "kone ylhäällä");
+            Oleta.Tosi(LennonAikajana.KoneenMinimi(LennonAikajana.AloitusLaskeutuminen, j, LennonAikajana.AloituksenNousu) < 1e-9
+                       && LennonAikajana.KoneenMinimi(1.0, j, LennonAikajana.AloituksenNousu) < 1e-9, "kone laskeutunut");
         }
 
         [Testi]
