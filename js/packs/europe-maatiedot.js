@@ -850,4 +850,153 @@ export const EUROPE_MAATIEDOT = {
       { teksti: 'Dobar dan', kieli: 'kroaatti', lippu: 'Flag of Croatia.svg', osuus: '2 %' },
     ],
   },
+
+  ALB: {
+    vakiluku: '2,4 milj.',
+    vakilukuSija: '145./217',
+    pintaAla: '28 750 km²',
+    pintaAlaSija: '141./215',
+    demokratia: {
+      arvo: '0,38',
+      sija: '79./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~ALB',
+      selitys: 'Albania on muodollinen demokratia, mutta oikeuslaitos on '
+        + 'altis poliittiselle painostukselle ja vaalien rehellisyydestä '
+        + 'on kiistelty — esimerkiksi vuoden 2023 paikallisvaaleissa '
+        + 'suurin oppositiopuolue ei saanut ehdokkaitaan rekisteröityä '
+        + 'kaikkialle. EU-jäsenyysneuvottelut etenevät, mutta '
+        + 'oikeusvaltion ja median riippumattomuuden puutteet pitävät '
+        + 'V-Demin luvun keskitasoa matalampana.',
+    },
+    keskitulo: { arvo: '9 910 $/v', sija: '90./198' },
+    tervehdykset: [
+      { teksti: 'Mirëdita', kieli: 'albania', lippu: 'Flag of Albania.svg', osuus: '97 %' },
+      { teksti: 'Καλημέρα', kieli: 'kreikka (Etelä-Albania)', lippu: 'Flag of Greece.svg', osuus: '0,9 %' },
+    ],
+  },
+
+  BLR: {
+    vakiluku: '9,1 milj.',
+    vakilukuSija: '98./217',
+    pintaAla: '207 629 km²',
+    pintaAlaSija: '85./215',
+    demokratia: {
+      arvo: '0,04',
+      sija: '167./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~BLR',
+      selitys: 'Valko-Venäjä on Euroopan autoritaarisimpia maita: '
+        + 'presidentti Aljaksandr Lukašenka on hallinnut vuodesta 1994, '
+        + 'vaalit ovat toistuvasti väärennettyjä ja parlamentti toimii '
+        + 'lähinnä hallinnon kumileimasimena. Riippumaton media on '
+        + 'tukahdutettu, oppositiota vainotaan ja Venetsian komissio on '
+        + 'todennut perustuslain rikkovan vallanjaon periaatetta — '
+        + 'tästä syntyy V-Demin lukujen häntäpään arvo.',
+    },
+    keskitulo: { arvo: '8 380 $/v', sija: '93./198' },
+    // Kotikielenä venäjä on Valko-Venäjällä yleisempi kuin valkovenäjä,
+    // vaikka molemmat ovat virallisia kieliä.
+    tervehdykset: [
+      { teksti: 'Добры дзень', kieli: 'valkovenäjä', lippu: 'Flag of Belarus.svg', osuus: '25 %' },
+      { teksti: 'Добрый день', kieli: 'venäjä', lippu: 'Flag of Russia.svg', osuus: '90 %' },
+    ],
+  },
+
+  MDA: {
+    vakiluku: '2,4 milj.',
+    vakilukuSija: '144./217',
+    pintaAla: '33 850 km²',
+    pintaAlaSija: '136./215',
+    demokratia: {
+      arvo: '0,45',
+      sija: '71./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~MDA',
+      selitys: 'Moldovan demokratia on paperilla toimiva, mutta '
+        + 'käytännössä hauras: korruptio on syvällä yhteiskunnassa, ja '
+        + 'puoluekenttä jakautuu jyrkästi EU-suuntautuneiden ja '
+        + 'Venäjä-mielisten leirien välillä. Presidentti Maia Sandun '
+        + 'uudelleenvalinta 2024 vahvisti EU-suuntausta, mutta '
+        + 'ratkaisematon Transnistrian kysymys ja oikeuslaitoksen heikko '
+        + 'täytäntöönpano pitävät lukua keskitason alapuolella.',
+    },
+    keskitulo: { arvo: '6 890 $/v', sija: '107./198' },
+    tervehdykset: [
+      { teksti: 'Bună ziua', kieli: 'romania', lippu: 'Flag of Moldova.svg', osuus: '80 %' },
+      { teksti: 'Добрый день', kieli: 'venäjä', lippu: 'Flag of Russia.svg', osuus: '9 %' },
+    ],
+  },
+
+  MKD: {
+    vakiluku: '1,8 milj.',
+    vakilukuSija: '151./217',
+    pintaAla: '25 710 km²',
+    pintaAlaSija: '146./215',
+    demokratia: {
+      arvo: '0,37',
+      sija: '83./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~MKD',
+      selitys: 'Pohjois-Makedoniassa järjestetään säännöllisesti '
+        + 'moniarvoisia vaaleja, ja vuoden 2001 konfliktin jälkeen '
+        + 'albaanivähemmistölle rakennettu vallanjakojärjestelmä on '
+        + 'vakauttanut maata. V-Demin lukua painavat kuitenkin '
+        + 'oikeuslaitoksen alttius toimeenpanovallan vaikutukselle, '
+        + 'median moniarvoisuuden puutteet ja hidas eteneminen '
+        + 'EU-jäsenyysneuvotteluissa.',
+    },
+    keskitulo: { arvo: '8 300 $/v', sija: '94./198' },
+    tervehdykset: [
+      { teksti: 'Добар ден', kieli: 'makedonia', lippu: 'Flag of North Macedonia.svg', osuus: '65 %' },
+      { teksti: 'Mirëdita', kieli: 'albania', lippu: 'Flag of Albania.svg', osuus: '25 %' },
+    ],
+  },
+
+  MNE: {
+    vakiluku: '624 000',
+    vakilukuSija: '169./217',
+    pintaAla: '13 888 km²',
+    pintaAlaSija: '157./215',
+    demokratia: {
+      arvo: '0,50',
+      sija: '65./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~MNE',
+      selitys: 'Montenegroa hallitsi yksi puolue, DPS, lähes 30 vuotta '
+        + 'ennen vuoden 2020 vaalitappiota, mikä kertoo pitkään '
+        + 'juurtuneesta vallankeskittymästä. Sen jälkeen maassa on '
+        + 'ollut kolme hyvin erilaista hallitusta kolmessa vuodessa, ja '
+        + 'poliittinen epävakaus sekä hidas edistyminen korruption ja '
+        + 'järjestäytyneen rikollisuuden torjunnassa pitävät V-Demin '
+        + 'luvun keskitasolla.',
+    },
+    keskitulo: { arvo: '12 210 $/v', sija: '80./198' },
+    // Crnogorski (montenegro) ja serbia ovat käytännössä sama kieli ja
+    // tervehdys on niissä sama.
+    tervehdykset: [
+      { teksti: 'Dobar dan', kieli: 'montenegro/serbia', lippu: 'Flag of Montenegro.svg', osuus: '80 %' },
+      { teksti: 'Mirëdita', kieli: 'albania', lippu: 'Flag of Albania.svg', osuus: '5 %' },
+    ],
+  },
+
+  SRB: {
+    vakiluku: '6,6 milj.',
+    vakilukuSija: '109./217',
+    pintaAla: '84 990 km²',
+    pintaAlaSija: '116./215',
+    demokratia: {
+      arvo: '0,21',
+      sija: '108./174',
+      linkki: 'https://ourworldindata.org/grapher/liberal-democracy-index?country=~SRB',
+      selitys: 'Serbiaa on vuodesta 2012 hallinnut presidentti '
+        + 'Aleksandar Vučićin SNS-puolue, ja Freedom House arvioi sen '
+        + 'kaventaneen järjestelmällisesti poliittisia oikeuksia ja '
+        + 'kansalaisvapauksia. Vaaleja järjestetään säännöllisesti, '
+        + 'mutta puolueen ylivalta, toimittajiin kohdistuva painostus '
+        + 'ja oikeuslaitoksen riippumattomuuden heikkeneminen '
+        + 'selittävät Serbian muita Balkanin maita matalamman '
+        + 'V-Dem-luvun.',
+    },
+    keskitulo: { arvo: '11 610 $/v', sija: '83./198' },
+    tervehdykset: [
+      { teksti: 'Добар дан', kieli: 'serbia', lippu: 'Flag of Serbia.svg', osuus: '88 %' },
+      { teksti: 'Jó napot', kieli: 'unkari (Vojvodina)', lippu: 'Flag of Hungary.svg', osuus: '3 %' },
+    ],
+  },
 };
