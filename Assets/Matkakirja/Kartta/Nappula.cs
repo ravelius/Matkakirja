@@ -640,8 +640,10 @@ namespace Matkakirja
         string[] lentoIdt;
         bool reititEnnen = true;
 
+        // Oletus pois (Fable 25.9. klo 05.3x, B25: LENNON ESITYS kaikille lennoille, hyväksytty poikkeama webistä;
+        // savujana korvaa punaisen viivan, kaari näkyy ennen lähtöä listassa). Kytkin kokeiluun.
         [Tooltip("Valitun lennon kaari liikkuvana katkoviivana lennon ajan (pariteetti B24); ei aloituslennolla.")]
-        public bool naytaLentokaari = true;
+        public bool naytaLentokaari = false;
         [Tooltip("Kaari häipyy, kun kone täyttää tätä suuremman osan ruudun leveydestä (lähikuvat).")]
         public float lentokaarenLahikuva = 0.08f;
 
