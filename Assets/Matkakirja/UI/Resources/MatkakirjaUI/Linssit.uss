@@ -1282,23 +1282,139 @@
     color: #3a2812;
 }
 
+/* --- aloituslaatikko (linssipariteetti rivi 11; web css/aikajana.css .aikajana-avaus*) ------------------ */
+.mk-aikajana-avaus {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* Keksinnöt: täysmusta peite (web .aikajana-avaus.musta .aikajana-avaus-peite #000). */
+.mk-aikajana-avaus--musta {
+    background-color: #000;
+}
+
+/* Web .aikajana-avaus-kehys: min(31rem, 88 %). */
+.mk-aikajana-avaus__kehys {
+    width: 88%;
+    max-width: 496px;
+    flex-shrink: 0;
+}
+
+.mk-aikajana-avaus__paperi {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+/* Web padding: calc(2,4rem + 4,4 %) calc(2rem + 5,6 %) — prosentit leveydestä (≈ 326 px: 14 / 18 px). */
+.mk-aikajana-avaus__laatikko {
+    padding: 52px 50px 48px 50px;
+    align-items: center;
+}
+
+/* Web .aikajana-avaus-otsikko: 1,46rem, 600, small-caps, 0,09 em (UITK em/100 → 9), #3a2812. */
+.mk-aikajana-avaus__otsikko {
+    font-size: 23.4px;
+    letter-spacing: 9px;
+    color: #3a2812;
+    -unity-text-align: upper-center;
+    white-space: normal;
+    margin: 0;
+}
+
+/* Web ::after: 6rem × 2 px, liukuvärinen, margin 0,55rem auto 0; otsikon alamarginaali 0,85rem. */
+.mk-aikajana-avaus__viiva {
+    width: 96px;
+    height: 2px;
+    margin: 8.8px 0 13.6px 0;
+    flex-direction: row;
+    -unity-background-scale-mode: stretch-to-fill;
+    background-size: 50% 100%;
+    background-repeat: no-repeat no-repeat;
+    background-position-x: left 0;
+}
+
+.mk-aikajana-avaus__viiva2 {
+    position: absolute;
+    left: 48px;
+    width: 48px;
+    top: 0;
+    bottom: 0;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-aikajana-avaus__teksti {
+    align-self: stretch;
+    margin-bottom: 19.2px;
+}
+
+/* Web .aikajana-avaus-teksti: 0,98rem, rivi 1,58, vasen liehu, #2b2116. */
+.mk-aikajana-avaus__kappale {
+    font-size: 15.7px;
+    color: #2b2116;
+    -unity-text-align: upper-left;
+    white-space: normal;
+    margin: 0;
+}
+
+/* Web ::first-letter: 2,55 em, 600, #3a2812. */
+.mk-aikajana-avaus__anfangi {
+    color: #3a2812;
+}
+
+.mk-aikajana-avaus__napit {
+    align-items: center;
+}
+
+/* Web .aikajana-lyhty: lämmin keila kummassakin yläkulmassa (keskus 17 % / 7 % laatikosta, joka on 98 % × 118 %). */
+/* Lyhtyjen valo on paperin kokoinen ja jo rajattu repaleiseen reunaan (RepaleinenPergamentti); sijainti C#:ssa. */
+.mk-aikajana-avaus__valo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.mk-aikajana-avaus__lyhty {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+/* Web .aikajana-avaus-nappi: 44 px, padding 0,62rem 2,1rem, pilleri, reuna 1,5 px kulta, liukuväri (C#). */
 .mk-aikajana-avausnappi {
     min-height: 44px;
-    padding: 8px 26px;
+    padding: 9.9px 33.6px;
     border-width: 1.5px;
     border-color: rgba(214, 168, 84, 0.92);
     border-radius: 22px;
-    background-color: rgb(58, 39, 16);
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-scale-mode: stretch-to-fill;
     color: #f6e6c2;
 }
 
 .mk-aikajana-avausnappi:active {
-    background-color: rgb(74, 51, 22);
+    border-color: rgba(240, 198, 118, 1);
 }
 
+/* 1,06rem small-caps (C# Kapiteelit), 0,17 em (UITK 17). */
 .mk-aikajana-avausnappi .mk-nappi__teksti {
-    font-size: 16px;
-    letter-spacing: 12.5px; /* web 2px */
+    font-size: 17px;
+    letter-spacing: 17px;
     color: #f6e6c2;
 }
 

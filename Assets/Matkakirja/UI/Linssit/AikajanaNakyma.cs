@@ -60,7 +60,11 @@ namespace Matkakirja.Natiivi
         readonly VisualElement[] havainneKuvat = new VisualElement[2];
         readonly Label hVuosi, hNimi, hKuvateksti;
         readonly SvgIkoni hErotin;
-        readonly Label eOtsikko, eTeksti;
+        readonly Label eOtsikko;
+        readonly VisualElement eTeksti, ePaperi, eKehys, eValo, eLyhtyV, eLyhtyO;
+        /// <summary>Paperin ja lyhtyjen tekstuurit tälle koolle (RepaleinenPergamentti); uudet vasta koon muuttuessa.</summary>
+        Vector2Int paperinKoko;
+        Texture2D paperi, lyhtyV, lyhtyO;
         readonly Button tauko, kaynnista, kahva, lueJuttu;
         readonly Aikaselain aikaselain;
         readonly Tiedeliitenakyma tiedeliite;
@@ -260,9 +264,19 @@ namespace Matkakirja.Natiivi
 
             // Esittelykortti: pergamentti keskellä kevyen himmennyksen päällä.
             var juuri = kerros.Juuri(LinssiUi.Kerros);
-            esittely = Laatikko(juuri, out eOtsikko, out eTeksti, out var eNapit);
-            kaynnista = Rakenne.Nappi("Käynnistä", "mk-aikajana-avausnappi", Kaynnista, eNapit);
+            esittely = Laatikko(juuri, out eOtsikko, out eTeksti, out var eNapit, out ePaperi, out eKehys);
+            eKehys.RegisterCallback<GeometryChangedEvent>(_ => PaivitaPaperi());
+            // Web min(31rem, 88 %) .aikajana-avaus-laatikon 1rem:n täytteen sisältä (UITK:n prosentti laski koko leveydestä).
+            esittely.RegisterCallback<GeometryChangedEvent>(_ =>
+            {
+                float w = esittely.layout.width;
+                if (!float.IsNaN(w) && w > 0) eKehys.style.width = Mathf.Min(496f, 0.88f * (w - 32f));
+            });
+            eValo = Lyhdyt(eKehys, out eLyhtyV, out eLyhtyO);
+            kaynnista = Rakenne.Nappi(Kapiteelit("Käynnistä"), "mk-aikajana-avausnappi", Kaynnista, eNapit);
             Kirjasimet.Aseta(kaynnista, Kirjasin.LukuLihava);
+            foreach (var l in kaynnista.Query<Label>().ToList()) l.enableRichText = true;
+            kaynnista.style.backgroundImage = new StyleBackground(Kuviot.Pysty("avausnappi", new Color(74 / 255f, 51 / 255f, 22 / 255f, 0.94f), new Color(44 / 255f, 28 / 255f, 10 / 255f, 0.96f)));
 
             // Ihmisen matkan musta: tilarivin (15) päällä, linssin tekstien (25) alla.
             musta = Rakenne.El("mk-aikajana-musta", kerros.Juuri(LinssiUi.MustaKerros));
@@ -308,17 +322,113 @@ namespace Matkakirja.Natiivi
             IhmisenMatkaKerros.ValittuKasittelija = tutkimus.Valittu;
         }
 
-        static VisualElement Laatikko(VisualElement juuri, out Label otsikko, out Label teksti, out VisualElement napit)
+        /// <summary>
+        /// Aloituslaatikko (linssipariteetti rivi 11; web .aikajana-avaus): musta peite (keksinnöt; ihmisen matkassa
+        /// Ken Burns -tausta sen alla), keskellä repaleinen pergamentti min(31rem, 88 %) kajoineen, kapiteeliotsikko ja
+        /// koristeviiva, anfangillinen leipäteksti ja kultareunainen Käynnistä.
+        /// </summary>
+        static VisualElement Laatikko(VisualElement juuri, out Label otsikko, out VisualElement teksti, out VisualElement napit,
+            out VisualElement paperi, out VisualElement kehys)
         {
-            var h = Rakenne.El("mk-himmennys mk-himmennys--kevyt mk-aikajana-laatikko", juuri);
+            var h = Rakenne.El("mk-aikajana-avaus", juuri);
             h.style.display = DisplayStyle.None;
-            var kortti = new Kortti("mk-aikajana-laatikko__kortti");
-            h.Add(kortti);
-            otsikko = Rakenne.Teksti("", "mk-kortti__otsikko mk-aikajana-laatikko__otsikko", kortti.Sisus);
+            kehys = Rakenne.El("mk-aikajana-avaus__kehys", h, PickingMode.Ignore);
+            paperi = Rakenne.El("mk-aikajana-avaus__paperi", kehys, PickingMode.Ignore);
+            var laatikko = Rakenne.El("mk-aikajana-avaus__laatikko", kehys, PickingMode.Ignore);
+            otsikko = Rakenne.Teksti("", "mk-aikajana-avaus__otsikko", laatikko);
+            otsikko.enableRichText = true;
             Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
-            teksti = Rakenne.Teksti("", "mk-kortti__teksti", kortti.Sisus);
-            napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
+            var viiva = Rakenne.El("mk-aikajana-avaus__viiva", laatikko, PickingMode.Ignore);
+            viiva.style.backgroundImage = new StyleBackground(Kuviot.Vaaka("avausviiva-vasen", new Color(90 / 255f, 64 / 255f, 32 / 255f, 0f), new Color(90 / 255f, 64 / 255f, 32 / 255f, 0.85f)));
+            var viiva2 = Rakenne.El("mk-aikajana-avaus__viiva2", viiva, PickingMode.Ignore);
+            viiva2.style.backgroundImage = new StyleBackground(Kuviot.Vaaka("avausviiva-oikea", new Color(90 / 255f, 64 / 255f, 32 / 255f, 0.85f), new Color(90 / 255f, 64 / 255f, 32 / 255f, 0f)));
+            teksti = Rakenne.El("mk-aikajana-avaus__teksti", laatikko, PickingMode.Ignore);
+            napit = Rakenne.El("mk-aikajana-avaus__napit", laatikko, PickingMode.Ignore);
             return h;
+        }
+
+        /// <summary>Web font-variant: small-caps: pienet kirjaimet versaaleina 80 %:n koossa, isot ja numerot ennallaan.</summary>
+        internal static string Kapiteelit(string t)
+        {
+            if (string.IsNullOrEmpty(t)) return "";
+            var sb = new System.Text.StringBuilder();
+            bool pieni = false;
+            foreach (char c in t)
+            {
+                bool p = char.IsLower(c);
+                if (p != pieni) { sb.Append(p ? "<size=80%>" : "</size>"); pieni = p; }
+                sb.Append(p ? char.ToUpperInvariant(c) : c);
+            }
+            if (pieni) sb.Append("</size>");
+            return sb.ToString();
+        }
+
+        /// <summary>Otsikko ja anfangillinen teksti laatikkoon (web .aikajana-avaus-otsikko ja -teksti::first-letter).</summary>
+        void AsetaLaatikko(string otsikko, string teksti, bool musta)
+        {
+            // Otsikon riviväli webin kuvasta: 33 px 23,4 px:n fontilla (UITK:n oletus antoi 29,5).
+            eOtsikko.text = "<line-height=1.41em>" + Kapiteelit(otsikko);
+            eTeksti.Clear();
+            if (!string.IsNullOrEmpty(teksti))
+                Lehtinakyma.AnfangiKappale(eTeksti, teksti, "mk-aikajana-avaus__kappale", 1.58f, Kirjasin.Luku, false,
+                    Kirjasin.LukuLihava, 2.55f, "mk-lehti__anfangi mk-aikajana-avaus__anfangi");
+            esittely.EnableInClassList("mk-aikajana-avaus--musta", musta);
+            // Web min(31rem, 88 %) 1rem:n täytteen sisältä; asetetaan ennen näyttöä (GeometryChanged ehti myöhässä).
+            float w = esittely.parent?.layout.width ?? float.NaN;
+            if (!float.IsNaN(w) && w > 0) eKehys.style.width = Mathf.Min(496f, 0.88f * (w - 32f));
+        }
+
+        /// <summary>Paperi uudelleen, kun laatikon koko muuttuu (web piirtää paperin 400 px:n leveyteen).</summary>
+        void PaivitaPaperi()
+        {
+            var r = eKehys.layout;
+            if (float.IsNaN(r.width) || r.width < 40f || r.height < 40f) return;
+            int w = 400, h = Mathf.RoundToInt(400f * r.height / r.width);
+            var koko = new Vector2Int(w, h);
+            if (koko == paperinKoko) return;
+            paperinKoko = koko;
+            RepaleinenPergamentti.Luo(w, h, 1765, (t, v, o, m) =>
+            {
+                if (t == null || paperinKoko != koko)
+                {
+                    if (t != null) { UnityEngine.Object.Destroy(t); UnityEngine.Object.Destroy(v); UnityEngine.Object.Destroy(o); }
+                    return;
+                }
+                if (paperi != null) { UnityEngine.Object.Destroy(paperi); UnityEngine.Object.Destroy(lyhtyV); UnityEngine.Object.Destroy(lyhtyO); }
+                paperi = t; lyhtyV = v; lyhtyO = o;
+                float reuna = r.width * m / w;
+                ePaperi.style.left = ePaperi.style.right = ePaperi.style.top = ePaperi.style.bottom = -reuna;
+                ePaperi.style.backgroundImage = new StyleBackground(t);
+                eValo.style.left = eValo.style.right = eValo.style.top = eValo.style.bottom = -reuna;
+                eLyhtyV.style.backgroundImage = new StyleBackground(v);
+                eLyhtyO.style.backgroundImage = new StyleBackground(o);
+            });
+        }
+
+        /// <summary>
+        /// Web .aikajana-lyhty.vasen/.oikea: kaksi lämmintä valokeilaa paperin yläkulmissa, jotka lepattavat rauhallisesti
+        /// (js/lyhty.js; kajo 0,85 ja ydin 0,9 vaihtelevat). UITK:ssa ei ole screen-sekoitusta: läpikuultava lämmin soikio.
+        /// </summary>
+        static VisualElement Lyhdyt(VisualElement kehys, out VisualElement vasen, out VisualElement oikea)
+        {
+            // Paperin päälle mutta tekstin alle (laatikko on kehyksen viimeinen lapsi). Webissä valo ei näy paperin
+            // ulkopuolella: keilat ovat paperin kokoisia tekstuureja, jotka on jo rajattu repaleiseen reunaan
+            // (PaivitaPaperi asettaa ne ja valoalueen paperin kohdalle).
+            var valo = Rakenne.El("mk-aikajana-avaus__valo", null, PickingMode.Ignore);
+            kehys.Insert(1, valo);
+            var v = vasen = Rakenne.El("mk-aikajana-avaus__lyhty", valo, PickingMode.Ignore);
+            var o = oikea = Rakenne.El("mk-aikajana-avaus__lyhty", valo, PickingMode.Ignore);
+            var arpa = new System.Random(7);
+            float va = 0.85f, oa = 0.85f;
+            kehys.schedule.Execute(() =>
+            {
+                if (kehys.resolvedStyle.display == DisplayStyle.None || kehys.panel == null) return;
+                va = Mathf.Clamp(va + ((float)arpa.NextDouble() - 0.5f) * 0.12f, 0.55f, 0.85f);
+                oa = Mathf.Clamp(oa + ((float)arpa.NextDouble() - 0.5f) * 0.12f, 0.55f, 0.85f);
+                v.style.opacity = va;
+                o.style.opacity = oa;
+            }).Every(140);
+            return valo;
         }
 
         void Asettele()
@@ -741,6 +851,7 @@ namespace Matkakirja.Natiivi
         public void VahdiValikkoa()
         {
             VahdiLappua();
+            linssit.AvausPeittaa(tila != Tila.Ei && esittely.style.display.value == DisplayStyle.Flex);
             bool kaytossa = tila != Tila.Ei
                 && ylarivi.style.display.value == DisplayStyle.Flex
                 && esittely.style.display.value != DisplayStyle.Flex;
@@ -812,8 +923,7 @@ namespace Matkakirja.Natiivi
 
         void NaytaEsittely()
         {
-            eOtsikko.text = keksinnot?.EsittelyOtsikko ?? keksinnot?.Otsikko ?? "Keksinnöt";
-            eTeksti.text = keksinnot?.EsittelyTeksti ?? "";
+            AsetaLaatikko(keksinnot?.EsittelyOtsikko ?? keksinnot?.Otsikko ?? "Keksinnöt", keksinnot?.EsittelyTeksti ?? "", musta: true);
             Rakenne.Nayta(esittely, true, 250);
         }
 
@@ -1067,8 +1177,7 @@ namespace Matkakirja.Natiivi
 
         void NaytaIhmisenAloitus()
         {
-            eOtsikko.text = ihmisenAloitus.Otsikko ?? "Ihmisen matka";
-            eTeksti.text = ihmisenAloitus.Teksti ?? "";
+            AsetaLaatikko(ihmisenAloitus.Otsikko ?? "Ihmisen matka", ihmisenAloitus.Teksti ?? "", musta: false);
             AsetaKaynnistaOdottaa(false);
             avausTausta.Nayta(ihmisenAloitus.Taustakuvat);
             Rakenne.Nayta(esittely, true, 250);
@@ -1112,7 +1221,7 @@ namespace Matkakirja.Natiivi
         void AsetaKaynnistaOdottaa(bool odottaa)
         {
             kaynnista.SetEnabled(!odottaa);
-            kaynnista.Q<Label>().text = odottaa ? "Hetki…" : "Käynnistä";
+            kaynnista.Q<Label>().text = Kapiteelit(odottaa ? "Hetki…" : "Käynnistä");
         }
 
         void Musta(bool paalla, double feidiMs)

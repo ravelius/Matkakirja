@@ -52,7 +52,15 @@ namespace Matkakirja.Natiivi
         readonly Button sulje;
         Linssirekisteri kuunneltu;
         // Sulkupillerin peittäjät: astronautin kuvanäkymä, vertailuarkki ja aikajanan hampurilainen.
-        bool kuvaPeittaa, arkkiPeittaa, valikkoKorvaa;
+        bool kuvaPeittaa, arkkiPeittaa, valikkoKorvaa, avausPeittaa;
+
+        /// <summary>Aikajanan aloituslaatikko auki (web: .aikajana-avaus peittää ✕:n): sulkupilleri piiloon.</summary>
+        public void AvausPeittaa(bool peittaa)
+        {
+            if (avausPeittaa == peittaa) return;
+            avausPeittaa = peittaa;
+            PaivitaSulku();
+        }
 
         /// <summary>Auki oleva linssi (null = ei mitään).</summary>
         public ILinssi Auki { get; private set; }
@@ -248,7 +256,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void PaivitaSulku()
         {
-            bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa;
+            bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa && !avausPeittaa;
             sulje.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (nakyy && !sulkuNakyi) Kutista();
             else if (!nakyy) { kutistus?.Pause(); kutistus = null; }

@@ -1480,8 +1480,11 @@ namespace Matkakirja.Natiivi
             return fi is UnityEngine.TextCore.FaceInfo f && f.pointSize > 0 ? f.ascentLine / f.pointSize : 0.8f;
         }
 
-        static VisualElement AnfangiKappale(VisualElement isa, string teksti, string luokka, float riviEm, Kirjasin kirjasin = Kirjasin.Luku,
-            bool tasaa = false)
+        /// <param name="anfangiKirjasin">Anfangin kirjasin (lehti: KoneBold; linssin avauslaatikko: LukuLihava).</param>
+        /// <param name="kerroin">Anfangin koko leipätekstin kokoon nähden (lehti 3,1 em; avauslaatikko 2,55 em).</param>
+        /// <param name="anfangiLuokka">Anfangin USS-luokka (väri).</param>
+        internal static VisualElement AnfangiKappale(VisualElement isa, string teksti, string luokka, float riviEm, Kirjasin kirjasin = Kirjasin.Luku,
+            bool tasaa = false, Kirjasin anfangiKirjasin = Kirjasin.KoneBold, float kerroin = 3.1f, string anfangiLuokka = "mk-lehti__anfangi")
         {
             // ::first-letter ottaa alkuvälimerkit (lainausmerkki) kirjaimen mukaan.
             int n = 0;
@@ -1493,22 +1496,22 @@ namespace Matkakirja.Natiivi
             var loppu = Rivitetty("", luokka, riviEm, kpl, kirjasin);
             alku.style.marginBottom = 0;
             loppu.style.marginBottom = 0;
-            var kirjain = Rakenne.Teksti(eka, "mk-lehti__anfangi", kpl);
+            var kirjain = Rakenne.Teksti(eka, anfangiLuokka, kpl);
             kirjain.enableRichText = false;
-            Kirjasimet.Aseta(kirjain, Kirjasin.KoneBold);
+            Kirjasimet.Aseta(kirjain, anfangiKirjasin);
             float leveys = -1f;
             void Lado()
             {
                 float w = kpl.contentRect.width, f = alku.resolvedStyle.fontSize;
                 if (w <= 0 || float.IsNaN(w) || f <= 0 || Mathf.Approximately(w, leveys)) return;
                 leveys = w;
-                float iso = 3.1f * f, rivi = riviEm * f;
+                float iso = kerroin * f, rivi = riviEm * f;
                 kirjain.style.fontSize = iso;
                 // Web: kellutuslaatikko 0,06 + 0,82 em; se varaa niin monta tekstiriviä kuin ulottuu.
                 int rivit = Mathf.Max(1, Mathf.CeilToInt(0.88f * iso / rivi - 0.05f));
                 float sisennys = kirjain.MeasureTextSize(eka, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x + 0.12f * iso;
                 // Anfangin perusviiva viimeisen viereisen rivin perusviivalle.
-                kirjain.style.top = Mathf.Round(Nousu(kirjasin) * f + (rivit - 1) * rivi - Nousu(Kirjasin.KoneBold) * iso);
+                kirjain.style.top = Mathf.Round(Nousu(kirjasin) * f + (rivit - 1) * rivi - Nousu(anfangiKirjasin) * iso);
                 alku.style.marginLeft = sisennys;
                 float palsta = Mathf.Max(1f, w - sisennys);
                 float Korkeus(string t) => alku.MeasureTextSize(Rivivali(t, riviEm, tasaa), palsta, VisualElement.MeasureMode.Exactly, 0, VisualElement.MeasureMode.Undefined).y;
