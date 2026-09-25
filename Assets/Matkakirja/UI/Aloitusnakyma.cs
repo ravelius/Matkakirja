@@ -876,9 +876,6 @@ namespace Matkakirja.Natiivi
             valintaPisteet = kk.pisteet;
             valintaKierto = kierto;
             ValitseePallolla = true;
-            // Build 16 (Natiiviseppä): lennon Blue Marble -pinta näkymättömänä valmiiksi valinnan aikana, jolloin musta ruutu
-            // lennon alussa lyhenee (idempotentti; käynnistyvä lento ottaa valmiin pinnan käyttöön).
-            kk.LentoPohjaValmiiksi();
 
             // Verho ja arkki häipyvät (web intro-fade); pallo saa syötteen.
             juuri.style.opacity = 0f;
@@ -933,7 +930,6 @@ namespace Matkakirja.Natiivi
         {
             if (!ValitseePallolla) return;
             ValitseePallolla = false;
-            KarttaKerrokset.Instanssi?.LentoPohjaValmiiksi(false);
             // Valmis lennon pinta pois, ellei aloituslento ala (Valitse käynnistää sen heti tämän jälkeen; KarttaKerrokset
             // odottaa lennon alkua ennen vapautusta, Natiiviseppä löydös 80/84).
             KarttaKerrokset.Instanssi?.LentoPohjaValmiiksi(false);
