@@ -1627,21 +1627,22 @@
     bottom: 0;
 }
 
-/* Merkin ankkuri on symbolin keskipiste (translate = ruutupiste); nimiö oikealle. */
+/* Merkin ankkuri on ikoniruudun keskipiste (translate = ruutupiste); koko, marginaalit ja nimiön paikka
+ * lasketaan NostotKartalla.Hae/AsetaNimio-metodeissa webin kaavoilla (löydös 50). */
 .mk-nosto-merkki {
     position: absolute;
     left: 0;
     top: 0;
-    flex-direction: row;
-    align-items: center;
-    height: 20px;
-    margin: -10px 0 0 -10px;
+    width: 11px;
+    height: 11px;
 }
 
 .mk-nosto-merkki__symboli {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .mk-nosto-merkki__symboli--kuva {
@@ -1667,6 +1668,18 @@
     color: #4b3a1c;
 }
 
+/* Web NOSTOSYM_PISTE_HARMAA #6f6a61, kiekon peitto 0,86 (css 25420); väri vain karttaselitteen valossa. */
+.mk-nosto-merkki__kiekko {
+    color: #6f6a61;
+    opacity: 0.86;
+}
+
+/* Web vektori-ikonit (vuori, aalto, tassu, huutomerkki, ruusu) musteella. */
+.mk-nosto-merkki__vektori {
+    color: rgb(58, 40, 25);
+    opacity: 0.86;
+}
+
 /* Ryhmämerkki (web css .pallolauta-aihemerkki-pohja/-lautanen/-keha): levy r 3,4 px ilman sisäsymbolia. */
 .mk-nosto-merkki__levy-pohja {
     color: #efdcb4;
@@ -1683,16 +1696,23 @@
     --mk-ikoni-viiva: 1.1;
 }
 
+/* Web .nostosym-nimio: --font-atlas (Liberation Serif) kursiivi, rgba(74, 52, 33, 0,92), ei haloa, ei harvennusta;
+ * koko 11 × mitta (C#). Häivytys 180 ms (web KYLKIVAIHDON_HAIVYTYS_MS). */
 .mk-nosto-merkki__nimio {
-    margin-left: 2px;
-    font-size: 11px;
+    position: absolute;
+    font-size: 8.5px;
     white-space: nowrap;
-    color: rgba(58, 40, 25, 0.9);
-    text-shadow: 0 0 3px rgb(244, 232, 205);
+    padding: 0;
+    margin: 0;
+    color: rgb(74, 52, 33);
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.18s;
 }
 
-.mk-nosto-merkki--tarkea .mk-nosto-merkki__nimio {
-    font-size: 13.5px;
+/* Web NOSTOSYM_TASO1_MUSTE rgba(46, 30, 14, 0,98). */
+.mk-nosto-merkki__nimio--taso1 {
+    color: rgb(46, 30, 14);
 }
 
 /* Viuhka (web .pallolauta-viuhka-pohja, VIUHKAN_POHJAN_VYOT): kehyksetön paperipohja, reuna pehmennetty
