@@ -5,6 +5,8 @@
 #   juna-ajo.sh vahti    tapahtumaohjattu (launchd fi.matkakirja.juna-vahti, 10 min kierros; omistaja 25.9. klo 04.1x):
 #                        lähtee heti, kun junaan on tullut uusi commit, mutta vasta kun kärki on ollut 10 min ennallaan
 #                        (peräkkäiset merget niputetaan), ja vain jos palvelun jono on vapaa (muuten seuraava kierros).
+#                        Yläraja (Fable 25.9. klo 13.5x): viimeistään 20 min vanhimmasta kääntämättömästä commitista
+#                        käännös lähtee uusista commiteista ja varatusta jonosta riippumatta (proto-kaanna.sh jonottaa).
 # Juna = uusin juna/b<N> (juna/b13 korvaa juna/b12 automaattisesti), ellei JUNA ole annettu.
 export PATH=/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin
 GIT=/Users/Shared/Claude/proto-3d/Matkakirja-proto
@@ -24,8 +26,16 @@ nyt=$(git -C $GIT rev-parse --short "$JUNA" 2>/dev/null) || { echo "$(aika) ei j
 [[ "$(cat $TILA 2>/dev/null)" == "$JUNA $nyt" || "$(cat $TILA 2>/dev/null)" == "$nyt" ]] && { [[ $1 == vahti ]] || echo "$(aika) $JUNA $nyt ennallaan"; exit 0; }
 if [[ $1 == vahti ]]; then
   ika=$(( $(date +%s) - $(git -C $GIT log -1 --format=%ct "$JUNA") ))
-  (( ika >= 600 )) || { echo "$(aika) vahti: $JUNA $nyt uusi, odotetaan niputusta ($ika s < 600 s)"; exit 0; }
-  [[ -d /tmp/matkakirja-kaannospalvelu.lukko ]] && { echo "$(aika) vahti: jono varattu ($(cat /tmp/matkakirja-kaannospalvelu.lukko/kuka 2>/dev/null)), seuraava kierros"; exit 0; }
+  # Vanhin kääntämätön: ensimmäinen commit edellisestä onnistuneesta käännöksestä kärkeen (ilman tilaa = kärki).
+  ed=$(awk '{print $NF}' $TILA 2>/dev/null)
+  vanhin=$(git -C $GIT log --first-parent --reverse --format=%ct "${ed:+$ed..}$JUNA" 2>/dev/null | head -1)
+  vika=$(( $(date +%s) - ${vanhin:-$(git -C $GIT log -1 --format=%ct "$JUNA")} ))
+  if (( vika < 1200 )); then
+    (( ika >= 600 )) || { echo "$(aika) vahti: $JUNA $nyt uusi, odotetaan niputusta ($ika s < 600 s, vanhin $vika s)"; exit 0; }
+    [[ -d /tmp/matkakirja-kaannospalvelu.lukko ]] && { echo "$(aika) vahti: jono varattu ($(cat /tmp/matkakirja-kaannospalvelu.lukko/kuka 2>/dev/null)), seuraava kierros"; exit 0; }
+  else
+    echo "$(aika) vahti: yläraja, vanhin kääntämätön $vika s ≥ 1200 s → käännös nyt"
+  fi
 fi
 tulos=$(/Users/Shared/Claude/proto-3d/tyokalut/proto-kaanna.sh "$JUNA" $SIMS 2>&1 | tail -1)
 echo "$(aika) ${1:-ajastin}: $tulos"
