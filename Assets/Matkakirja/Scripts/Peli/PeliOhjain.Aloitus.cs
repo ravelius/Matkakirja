@@ -83,8 +83,9 @@ namespace Matkakirja.Natiivi
             int tunnus = ++ajoTunnus;
             kameranOhitus = null;
             ajoValmis = () => AloituslentoPerilla(kohde);
-            // Varareitti: zoomi 2,5 s + lento + vara (valmis tulee Nappulalta).
-            ajoLoppuu = Time.unscaledTime + 2.5f + kesto + AjonVara + 2f;
+            // Varareitti: zoomi 2,5 s + lento + vara (valmis tulee Nappulalta); löydös 84: lisäksi musta verho (häivytys
+            // mustaan ja takaisin + latausodotus enintään Nappula.MustanKatto).
+            ajoLoppuu = Time.unscaledTime + 2.5f + kesto + AjonVara + 2f + Nappula.MustanKatto + 2f * Mustaverho.Haivytys;
             try
             {
                 nappula.AloitusLento(AloitusLat, AloitusLon, b.Value.Lat, b.Value.Lon, kesto,

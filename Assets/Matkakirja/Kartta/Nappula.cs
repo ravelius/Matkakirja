@@ -428,10 +428,15 @@ namespace Matkakirja
         /// </summary>
         public void PaataAloituslento()
         {
+            // Varareitti ehti ennen lennon loppua (PeliOhjaimen ajoLoppuu): lento keskeytetään ja esitys puretaan.
+            if (!AloituslentoPerilla && aloitusAjossa && liike != null) { Pysayta(); return; }
             if (!AloituslentoPerilla) return;
             AloituslentoPerilla = false;
             Paatalento();
         }
+
+        /// <summary>Aloituslennon Lento-ajo käynnissä (musta verho tai lento).</summary>
+        bool aloitusAjossa;
 
         /// <summary>Lennon vaihe (LENNON ESITYS): Pelikoodari ajoittaa äänet ja luennan, UI tekstit.</summary>
         public LennonVaihe Vaihe { get; private set; }
@@ -449,6 +454,7 @@ namespace Matkakirja
         {
             kesken = valmis;
             AloituslentoPerilla = false;
+            aloitusAjossa = aloitus;
             // Lähtözoomin korkeus (Lontoo ennen koneen lähtöä).
             double lahtoKorkeus = kierto != null ? kierto.KorkeusKaarelle(lahtoKaari) : 0;
             // KAMERAREITTI (build 11): vaihejako lennon keston mukaan (sivukylki ≥ 1,4 s, orbit ≥ 4 s).
@@ -493,15 +499,36 @@ namespace Matkakirja
                 pintaVaihdettu = true;
                 var pallo = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo : null;
                 float odotus = Time.unscaledTime;
-                // Vähintään muutama kehys, jotta Cesium ehtii pyytää uuden kerroksen laatat ennen latausasteen lukua.
-                int kehykset = 0;
-                while (Time.unscaledTime - odotus < MustanKatto)
+                // Ennen lähtösumu peitti koneen lähikuvan maan; nyt lähikuvan laatat ladataan mustan alla: kamera ensin
+                // lähikuvaan (Lontoo, koneen kylki 30 km, sama asento kuin syöksyn lopussa), sitten takaisin
+                // valintanäkymään, ja kummassakin odotetaan näkyvän pallon latausta (Cesium pitää laatat välimuistissa).
+                IEnumerator Lataa(float katto)
                 {
-                    bool reitti = esilataus == null || esilataus.Osuus >= 0.9f;
-                    bool nakyma = pallo == null || pallo.ComputeLoadProgress() >= 99f;
-                    if (++kehykset > 10 && reitti && nakyma) break;
-                    yield return null;
+                    float alku = Time.unscaledTime;
+                    // Vähintään muutama kehys, jotta Cesium ehtii pyytää uudet laatat ennen latausasteen lukua.
+                    int kehykset = 0;
+                    while (Time.unscaledTime - alku < katto)
+                    {
+                        bool reitti = esilataus == null || esilataus.Osuus >= 0.9f;
+                        bool nakyma = pallo == null || pallo.ComputeLoadProgress() >= MustanLataus;
+                        if (++kehykset > 10 && reitti && nakyma) yield break;
+                        yield return null;
+                    }
                 }
+                if (kierto != null)
+                {
+                    var (vLat, vLon, vKork, vKall, vSuunta, vKatse) =
+                        (kierto.leveys, kierto.pituus, kierto.korkeus, kierto.KaytettyKallistus, kierto.suuntima, kierto.katseKorkeus);
+                    double pohja0 = double.IsNaN(lentoPohja) ? KorkeusKerroin.Sovita(nosto) : lentoPohja;
+                    kierto.Kuvaa(lat0, lon0, LennonAikajana.LahiM, LennonAikajana.LahiKallistus,
+                        Suuntima(lat0, lon0, lat1, lon1, 0) + 90.0, pohja0 + LennonAikajana.MinKoneKorkeusM);
+                    yield return Lataa(MustanKatto * 0.6f);
+                    float lahi = Time.unscaledTime - odotus;
+                    kierto.Kuvaa(vLat, vLon, vKork, vKall, vSuunta, vKatse);
+                    yield return Lataa(MustanKatto - (Time.unscaledTime - odotus));
+                    Debug.Log($"MATKAKIRJA aloituslento: lähikuvan laatat {lahi:0.0} s");
+                }
+                else yield return Lataa(MustanKatto);
                 Debug.Log($"MATKAKIRJA aloituslento: musta {Time.unscaledTime - odotus:0.0} s, esilataus "
                           + (esilataus != null ? $"{esilataus.Valmis}+{esilataus.Epaonnistui}/{esilataus.Yhteensa}" : "-")
                           + $", pallo {(pallo != null ? pallo.ComputeLoadProgress().ToString("0") : "-")} %");
@@ -695,6 +722,7 @@ namespace Matkakirja
             kesken = null;
             lentoPohja = double.NaN;
             // Löydös 85: aloituslennon esitys jää kuvaan saapumiskortin alle (PaataAloituslento).
+            aloitusAjossa = false;
             if (aloitus) AloituslentoPerilla = true;
             else Paatalento();
             valmis?.Invoke();
@@ -702,6 +730,8 @@ namespace Matkakirja
 
         /// <summary>Löydös 84: pisin musta odotus (s) lennon pinnan latautumista, vaikka laatat eivät olisi valmiita.</summary>
         public const float MustanKatto = 5f;
+        /// <summary>Näkyvän pallon latausaste (%), jolla musta verho saa lähteä (Cesium3DTileset.ComputeLoadProgress).</summary>
+        public const float MustanLataus = 97f;
 
         /// <summary>Lennon esitys pois (perillä tai keskeytys): kamera palautuu, valo, sumu ja pilvet pois.</summary>
         KaupunkiMerkit aloitusMerkit;
@@ -954,6 +984,7 @@ namespace Matkakirja
         {
             lentoPohja = double.NaN;
             AloituslentoPerilla = false;
+            aloitusAjossa = false;
             Mustaverho.Pois();
             if (liike != null) StopCoroutine(liike);
             liike = null;
