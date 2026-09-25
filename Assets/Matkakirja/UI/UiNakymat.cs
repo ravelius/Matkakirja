@@ -332,7 +332,9 @@ namespace Matkakirja.Natiivi
             // Rahan muutos kupliksi (web buildToast kind stamp, "+10 puntaa · Lehden minitehtävä ratkesi").
             o.RahaMuuttui += (muutos, syy, _) => UiKerros.PaaSaikeessa(() => Leima.Raha(muutos, syy));
             // Noppa häipyy, kun nappula on perillä (web haivyta saapuessa).
-            o.MatkaPerilla += _ => UiKerros.PaaSaikeessa(() => Noppa.Haivyta());
+            // A11 (web ui.js piilotaNoppa): noppa häipyy vain kaupunkiin päättyneellä matkalla; reitin varrella se jää
+            // lepopaikalleen seuraavaan heittoon asti.
+            o.MatkaPerilla += k => { if (k != null) UiKerros.PaaSaikeessa(() => Noppa.Haivyta()); };
             // Livian sähkekuplat (johdanto, odotus, vinkki, linkin saate, oikein, paluu) puluun.
             o.LivianKuplat += (kaupunki, kentta, kuplat) => Sahkelomake.LivianKuplat(kaupunki, kentta, kuplat);
             // Sähkehakemisto valmiiksi, kun saavutaan sähkekaupunkiin (lehtien jäsennys ennen pisteen napautusta).
@@ -461,7 +463,15 @@ namespace Matkakirja.Natiivi
             float w = juuri.resolvedStyle.width, h = juuri.resolvedStyle.height;
             if (float.IsNaN(w) || w <= 0 || juuri.panel == null) { valmis?.Invoke(); return; }
             var arpa = new System.Random();
-            var loppu = new Vector2(w * (0.8f + (float)(arpa.NextDouble() - 0.5) * 0.06f), h * (0.74f + (float)(arpa.NextDouble() - 0.5) * 0.05f));
+            // A9 (web dieRestingSpot, packs/maailmankartta.js dieSpot): lepo vasemmassa reunassa puolivälissä (0,06; 0,5);
+            // jos matkakirjakortti on samassa (vasen ala) kulmassa, oikea reuna (dieSpotAlt 0,94; 0,5). Värinä ±0,03 / ±0,025.
+            float sx = 0.06f;
+            if (Matkakirja != null && Matkakirja.Nakyy)
+            {
+                var r = Matkakirja.Laatikko;
+                if (r.center.x < w * 0.5f && r.center.y >= h * 0.5f) sx = 0.94f;
+            }
+            var loppu = new Vector2(w * (sx + (float)(arpa.NextDouble() - 0.5) * 0.06f), h * (0.5f + (float)(arpa.NextDouble() - 0.5) * 0.05f));
             var alku = loppu;
             kierto ??= UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
             if (kierto != null && kierto.RuutuPiste(lat, lon, out var ruutu, 5000))

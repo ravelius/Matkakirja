@@ -79,6 +79,8 @@ namespace Matkakirja.Natiivi
         Action kirjoitettu;
 
         public bool Nakyy => kortti.style.display == DisplayStyle.Flex;
+        /// <summary>Kortin laatikko paneelissa (nopan lepopaikan kulmavalinta, web factCard.dataset.corner).</summary>
+        public Rect Laatikko => kortti.worldBound;
 
         /// <summary>Kortti on yhden rivin lappu (ei auki).</summary>
         public bool Lappuna => Nakyy && pieni;

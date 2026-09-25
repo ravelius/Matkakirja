@@ -139,6 +139,7 @@ namespace Matkakirja.Natiivi
 
         void Ruutu()
         {
+            SeuraaKertojaa();
             if (!nakyvissa) return;
             float nyt = Aika;
             SeuraaToimintaa(nyt);
@@ -470,7 +471,12 @@ namespace Matkakirja.Natiivi
         /// Pulun ja isoisän tekstit piilossa (löydös 21): iPhonella aina, muualla kertojan luennan ajan (web
         /// tekstitPiilossa). Testikomento ui pulu tekstit piiloon|nakyviin|auto.
         /// </summary>
-        public static bool TekstitPiilossa => PakotaTekstit ?? (Ylapalkki.Puhelin || Aanet.KertojaPuhuu);
+        public static bool TekstitPiilossa => PakotaTekstit ?? (Ylapalkki.Puhelin || Aanet.KertojaPuhuu || Aika - kertojaHiljeni < KertojanValirauha);
+
+        /// <summary>C13 (web ui.js tekstitPiilossa): tekstit piilossa vielä 1300 ms kertojan jälkeen (välirauha).</summary>
+        const float KertojanValirauha = 1300f; // ms (Aika)
+        static float kertojaHiljeni = float.NegativeInfinity;
+        static void SeuraaKertojaa() { if (Aanet.KertojaPuhuu) kertojaHiljeni = Aika; }
         public static bool? PakotaTekstit;
 
         string piilotettu;
