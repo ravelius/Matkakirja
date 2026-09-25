@@ -2186,4 +2186,56 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       ],
     },
   },
+  /*
+   * GRC (Sisältökirjuri 25.9.2026, Fablen tilaus löydös 115:n
+   * yhteydessä — omistaja pelaa Kreikkaa). Avaimet ovat
+   * js/packs/maakunnat-nimet.js:n MAAKUNNAT_KAIKKI.GRC:n tunnuksia
+   * (Natural Earthin `name`-kenttä latinaistettuna). Vain `lyhyt`
+   * tässä erässä, kuten muillakin mailla. `pikkukuva` (löydös 115)
+   * odottaa kuvaputken toimitusta erikseen.
+   */
+  GRC: {
+    Attiki: {
+      lyhyt: 'Ateenan Akropolis kohoaa yhä keskustan yllä, mutta rannikolla Ateenan Riviera houkuttelee uimaan aivan kaupungin kupeessa.',
+    },
+    'Kentriki Makedonia': {
+      lyhyt: 'Thessaloniki on Kreikan toiseksi suurin kaupunki, ja sen rantabulevardilla Valkoinen torni katsoo yhä Thermaisenlahdelle.',
+    },
+    Kriti: {
+      lyhyt: 'Kreeta on Kreikan suurin saari, ja sen vuoristoisella Samarian rotkolla vaeltaa tuhansia retkeilijöitä joka kesä.',
+    },
+    Peloponnisos: {
+      lyhyt: 'Korinton kanava halkaisee Peloponnesoksen niemimaan kapeasta kannaksesta, ja sillalta autoilijat katsovat yli 70 metriä alas.',
+    },
+    Thessalia: {
+      lyhyt: 'Thessalian pystyjen kalliopylväiden laella kohoavat Meteoran luostarit, joihin munkit kiipesivät ennen tikapuilla ja köysillä.',
+    },
+    Ipeiros: {
+      lyhyt: 'Epeiroksen Vikosin rotko on maailman syvimpiä suhteessa leveyteensä, ja sen reunoilla vanhat kivikylät ovat yhä asuttuja.',
+    },
+    'Dytiki Makedonia': {
+      lyhyt: 'Kastorian kaupunki kiertää turkiskaupasta vaurastuneen järven ympäri, ja talvisin sen kapea niemi peittyy usein usvaan.',
+    },
+    'Dytiki Ellada': {
+      lyhyt: 'Rio–Antirrion silta yhdistää Peloponnesoksen manner-Kreikkaan, ja Patran karnevaali on koko maan suurin katujuhla.',
+    },
+    'Stereá Elláda': {
+      lyhyt: 'Delfoin oraakkelin rauniot kohoavat Parnassosvuoren rinteellä – antiikin kreikkalaiset pitivät paikkaa maailman napana.',
+    },
+    'Anatoliki Makedonia kai Thraki': {
+      lyhyt: 'Traakiassa asuu Kreikan suurin muslimivähemmistö, ja rajajoki Evros erottaa alueen naapurimaasta Turkista.',
+    },
+    'Ionioi Nisoi': {
+      lyhyt: 'Korfun venetsialaistyylinen vanhakaupunki on Unescon listalla, ja Joonianmeren saaristo makaa Kreikan läntisimpänä.',
+    },
+    'Notio Aigaio': {
+      lyhyt: 'Etelä-Egean saariin kuuluvat sekä Santorinin tulivuorikaldera että Rodoksen keskiaikainen ritarilinnoitus.',
+    },
+    'Voreio Aigaio': {
+      lyhyt: 'Lesboksen saaren kivettynyt metsä on yli 20 miljoonaa vuotta vanha, ja saari tunnetaan yhä anisviina ouzon tislauksesta.',
+    },
+    'Ayion Oros': {
+      lyhyt: 'Athosvuoren munkkitasavaltaan pääsee vain erityisluvalla, eivätkä naiset saa astua sen maaperälle lainkaan.',
+    },
+  },
 };

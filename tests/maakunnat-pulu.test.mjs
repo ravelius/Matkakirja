@@ -3,8 +3,14 @@ import assert from 'node:assert/strict';
 import { MAAKUNTIEN_LUONNEHDINNAT } from '../js/packs/maakunnat-luonnehdinnat.js';
 import { MAAKUNTIEN_PULU } from '../js/packs/maakunnat-pulu.js';
 
+/*
+ * GRC on 25.9.2026 lähtien erässä 1 (vain lyhyt, ks.
+ * maakunnat-luonnehdinnat.js:n kommentti) — pulu tulee vasta erässä 3,
+ * joten se ei kuulu vielä tähän täydellisyystestiin.
+ */
 test('jokaisella luonnehdinta-avaimella on pulu 2-3 paria, ei ylimääräisiä avaimia', () => {
   for (const [iso, alueet] of Object.entries(MAAKUNTIEN_LUONNEHDINNAT)) {
+    if (iso === 'GRC') continue;
     assert.ok(MAAKUNTIEN_PULU[iso], `${iso} puuttuu MAAKUNTIEN_PULU:sta kokonaan`);
     for (const tunnus of Object.keys(alueet)) {
       const parit = MAAKUNTIEN_PULU[iso][tunnus];
