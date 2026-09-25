@@ -118093,6 +118093,238 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Red kangaroo',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Mount Isa, The Inlander (Queensland Rail), Mount Isa
+       * Airport, Barkly Highway, Lake Moondarra, Mary Kathleen, Boodjamulla
+       * National Park) ja Wikivoyagesta (Mount Isa, Boodjamulla National
+       * Park) — teksti omaa. Nostojen aiheita (joen nimi, kalkatungut ja
+       * ruohomaluri, malmio ja piiput, Milesin löytö, Riversleighin
+       * fossiilit, punajättikenguru, rodeon synty 1959 ja koko, kamelikuskit,
+       * Hard Times Mine, maanalainen sairaala, Landsborough) ei toisteta.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja
+       * kuvat katsottu silmin. Pystykuva: kuparisulaton piippu
+       * näköalapaikalta. Härkäveistoksen tarkkaa paikkaa Commons ei kerro,
+       * joten selite sanoo vain "Mount Isassa".
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Mount Isa Mine Stack.JPG',
+          lyhyt: 'Kuparisulaton punavalkoinen piippu kohoaa Mount Isan keskustan ja punaisten kukkuloiden yllä.',
+          selite: 'Näköalapaikalta katsottuna Mount Isan keskusta '
+            + 'levittäytyy kaivosalueen juurelle, ja kuparisulaton '
+            + 'punavalkoinen piippu puskee savua punaisten kukkuloiden '
+            + 'edessä. Kaupunki ja kaivos ovat niin kiinni toisissaan, ettei '
+            + 'kumpaakaan näe ilman toista.',
+          lahde: 'Scientificusrex, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Mount Isa on Luoteis-Queenslandin ainoa suuri kaupunki, '
+          + 'ja paikalliset kutsuvat sitä lyhyesti nimellä "The Isa". '
+          + 'Rannikolta tänne tullaan yöjunalla, lentäen tai ajaen Barkly '
+          + 'Highwayta, joka on Queenslandin ja Pohjoisterritorion ainoa '
+          + 'päällystetty maantieyhteys. Kaupungissa syödään seudun '
+          + 'naudanlihaa ja barramundia, ja elokuun rodeoviikonloppuna '
+          + 'kaduilla kulkee karnevaalikulkue. Päiväretkellä pääsee '
+          + 'uimaan ja kalastamaan tekojärvelle tai katsomaan purettua '
+          + 'uraanikaivoskaupunkia, ja kauempana luoteessa odottaa Lawn '
+          + 'Hillin vihreä rotko. Paras aika on kuiva kausi huhtikuusta '
+          + 'marraskuuhun, jolloin päivät ovat aurinkoisia ja yöt viileitä.',
+        artikkeli: {
+          nimi: 'Matkailijan Mount Isa',
+          teksti: 'Mount Isaan tullaan yöjunalla, pienkoneella tai road '
+            + 'trainien rinnalla aavikkotietä pitkin.',
+          nosto: 'Lake Moondarran hiekkaranta on tehty kaivosyhtiön '
+            + 'kuorma-autoilla, jotka kippasivat hiekan tekojärven rantaan.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Yöjunalla, koneella tai maantietä',
+              teksti: 'Townsvillestä Mount Isaan kulkee kahdesti viikossa '
+                + 'matkustajajuna The Inlander. Se lähtee rannikolta '
+                + 'keskiviikkoisin ja lauantaisin puolenpäivän jälkeen ja on '
+                + 'perillä seuraavana aamuna: 977 kilometriin kuluu noin 21 '
+                + 'tuntia. Juna aloitti liikenteen helmikuussa 1953, mutta '
+                + 'makuu- ja ravintolavaunut poistettiin vuoden 2014 lopussa, '
+                + 'joten yö istutaan, ja ruoka-aikoina matkustajille jaetaan '
+                + 'eväspakkaus. Nopeammin pääsee lentäen: kaupungin '
+                + 'pohjoispuolella noin kuuden kilometrin päässä olevalta '
+                + 'kentältä lennetään päivittäin Brisbaneen, Cairnsiin ja '
+                + 'Townsvilleen, ja samalla kentällä on lentävien lääkärien '
+                + 'Royal Flying Doctor Servicen tukikohta. Autoilija saapuu '
+                + 'Barkly Highwayta, jolla kulkevat myös road trainit eli '
+                + 'useaa perävaunua vetävät rekat. Idässä Townsvilleen on '
+                + 'noin 900 ja lännessä Tennant Creekiin 660 kilometriä. '
+                + 'Perillä kannattaa muistaa, että Leichhardtin joki jakaa '
+                + 'kaupungin kahtia: länsirannalla, mineside-puolella, ovat '
+                + 'kaivos, voimala, lentokenttä ja rautatieasema, itärannalla, '
+                + 'townside-puolella, keskusta ja suurin osa asunnoista.',
+              kuva: [
+                {
+                  tiedosto: 'The Inlander (Queensland Rail) train at Townsville station, preparing to depart for Mount Isa.jpg',
+                  lyhyt: 'The Inlander odottaa Townsvillen asemalla lähtöä yön yli kestävälle matkalle Mount Isaan.',
+                  selite: 'Keltainen dieselveturi ja The Inlander -junan '
+                    + 'vaunut odottavat Townsvillen aseman katoksen alla '
+                    + 'kesäkuussa 2025. Lauantaina iltapäivällä lähtenyt juna '
+                    + 'oli perillä Mount Isassa sunnuntaiaamuna.',
+                  lahde: 'Ridiculopathy, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Mount Isa Airport, Queensland, 2023, 01.jpg',
+                  lyhyt: 'QantasLinkin potkuriturbiinikone rullaa Mount Isan kentällä kivikkoisten kukkuloiden edessä.',
+                  selite: 'Qantasin punaisen kengurupyrstön tunnusta kantava '
+                    + 'Dash 8 -potkuriturbiinikone rullaa Mount Isan '
+                    + 'lentokentällä kesäkuussa 2023; kiitotien takana '
+                    + 'kohoavat kuivat, kivikkoiset kukkulat.',
+                  lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Barkly Highway at the outskirts of Mount Isa, Queensland, 2023.jpg',
+                  lyhyt: 'Barkly Highwayn viitta Mount Isan laidalla: Darwiniin on vielä 1 606 kilometriä.',
+                  selite: 'Mount Isan laitamilla Barkly Highwayn viitta '
+                    + 'kertoo, että Pohjoisterritorion rajan tuntumassa '
+                    + 'olevaan Camoowealiin on 185 kilometriä, Alice '
+                    + 'Springsiin 1 155 ja Darwiniin 1 606 kilometriä.',
+                  lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Pihviä, barramundia ja etiopialaista',
+              teksti: 'Mount Isa on kokoonsa nähden yllättävän monipuolinen '
+                + 'ruokakaupunki: keskustassa ja pääteiden varsilla on '
+                + 'intialaisia, italialaisia, kiinalaisia, saksalaisia ja '
+                + 'ranskalaisia ravintoloita. Seudun omat raaka-aineet ovat '
+                + 'ympäröivien karjatilojen naudanliha ja barramundi, '
+                + 'isokokoinen petokala, jota istutetaan myös kaupungin '
+                + 'tekojärveen. Keskustan Isa Hotelin grilliravintola on '
+                + 'rakentanut listansa juuri näiden kahden ympärille, ja '
+                + 'perjantai- ja lauantai-illoiksi pöytä kannattaa varata. '
+                + 'Erikoisuus on Marian Streetin Abyssinia Cafe, joka on '
+                + 'tarjonnut etiopialaista ruokaa jo vuosikymmenten ajan ja '
+                + 'päässyt esittelemään keittiötään myös SBS-kanavalla. '
+                + 'Kaivoskaupungin iltaelämä pyörii klubien ympärillä: Irish '
+                + 'Club, Buffs Club ja monet pubit tarjoavat aterioita ja '
+                + 'happy hour -tarjouksia, ja monella klubilla on oma '
+                + 'maksuton kuljetusbussi, joka ajaa seitsemänä päivänä '
+                + 'viikossa pikkutunneille asti. Syyskuun alussa kaupungissa '
+                + 'järjestetään lisäksi monikulttuurinen festivaali.',
+              kuva: {
+                tiedosto: 'Barramundi at Giuseppe\'s Cantina, Mount Isa, 2023.jpg',
+                lyhyt: 'Rapeaksi paistettu barramundifilee oliivien ja kuivattujen tomaattien kera.',
+                selite: 'Mount Isan Giuseppe\'s Cantinassa kesäkuussa 2023 '
+                  + 'tarjoiltu barramundifilee on paistettu nahka rapeaksi, ja '
+                  + 'sen päällä on vihreitä oliiveja ja kuivattuja tomaatteja; '
+                  + 'vieressä on kesäkurpitsanauhoja pinjansiementen kanssa ja '
+                  + 'alla tummanpunaista sosetta.',
+                lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Rodeoviikonloppu ja syrjäisin orkesteri',
+              teksti: 'Elokuun rodeo on Mount Isan vuoden kohokohta, mutta '
+                + 'viikonloppu on paljon muutakin kuin kilpailuareena. Samana '
+                + 'viikonloppuna kaupungin kaduilla kulkee Mardi Gras '
+                + '-karnevaalikulkue, ja ohjelmaan kuuluu katujuhlia, '
+                + 'konsertteja, markkinakojuja ja perheohjelmaa. '
+                + 'Rodeokuningattaren valintakilpailu kerää rahaa '
+                + 'hyväntekeväisyyteen, ja voittaja kruunataan '
+                + 'rodeotanssiaisissa. Kilpailut käydään nykyään vuonna 2007 '
+                + 'avatussa Buchanan Parkissa, johon mahtuu 6 000 katsojaa, '
+                + 'ja lajeja on villihevosratsastuksesta joukkuesuopungintiin '
+                + 'ja naisten tynnyriratsastukseen. Rohkeimmat voivat '
+                + 'osallistua rodeokouluun, jossa opetellaan '
+                + 'sonniratsastusta. Vuonna 2009 rodeo nimettiin yhdeksi '
+                + 'Queenslandin 150-vuotisjuhlan ikoneista. Muina aikoina '
+                + 'kulttuurista huolehtii esimerkiksi teatteriseura MITS, joka '
+                + 'esittää näytelmiä ja musikaaleja muutaman kuukauden '
+                + 'välein. Heinäkuussa 2015 kaupunki sai oman '
+                + 'sinfoniaorkesterin, jota kutsuttiin maailman '
+                + 'syrjäisimmäksi: avajaisissa esiintyi jazzmuusikko James '
+                + 'Morrison, ja tilaisuutta varten sävelletty Matthew Deweyn '
+                + 'Symphony of the Inland Sea sai kantaesityksensä.',
+              kuva: {
+                tiedosto: 'Sculpture in Mount Isa, Queensland, 2023, 01.jpg',
+                lyhyt: 'Ruostuneista teräslevyistä koottu härkä laskee päänsä puskuasentoon.',
+                selite: 'Kerroksittain leikatuista, ruostuneista '
+                  + 'teräslevyistä koottu härkäveistos seisoo rakennuksen '
+                  + 'edustalla Mount Isassa pää alas laskettuna ja sarvet '
+                  + 'eteenpäin, kuin valmiina rodeoareenalle.',
+                lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Järvi, aavekaupunki ja vihreä rotko',
+              teksti: 'Lähin retkikohde on Lake Moondarra vajaan '
+                + 'parinkymmenen kilometrin päässä pohjoisessa. Leichhardtin '
+                + 'joen pato valmistui vuonna 1958 kaupungin ja kaivoksen '
+                + 'vesilähteeksi, ja järvi sai nimensä 1962 paikallisen '
+                + 'asukkaan voittaman nimikilpailun jälkeen: alkuperäiskielen '
+                + 'sana moondarra tarkoittaa runsasta sadetta ja ukkosta. '
+                + 'Rannalla on piknikpaikkoja, laitureita ja '
+                + 'vesihiihtohyppyri, ja lintuharrastajat, purjehtijat ja '
+                + 'kalastajat viihtyvät järvellä. Siihen istutetaan vuosittain '
+                + 'noin 10 000 barramundin ja sooty grunter -kalan poikasta, '
+                + 'ja joka vuosi pidettävä kalastuskilpailu on Queenslandin '
+                + 'suurin makean veden kalastustapahtuma. Idässä, Mount Isan '
+                + 'ja Cloncurryn välillä Selwyn-vuoristossa, on Mary Kathleen, '
+                + 'uraanikaivoksen ympärille 1950-luvulla rakennettu '
+                + 'mallikaupunki, jossa asui parhaimmillaan noin 1 200 '
+                + 'ihmistä. Kaivos suljettiin 1982 ja kaupunki purettiin, ja '
+                + 'nyt paikalla ovat jäljellä vain kadut ja betonilaatat; '
+                + 'Barkly Highwaylta sinne pääsee yöpymään leiriin. Kauimpana, '
+                + 'noin 340 kilometriä luoteeseen, on Boodjamullan '
+                + 'kansallispuisto, jonka Lawn Hillin rotkossa melotaan '
+                + 'vihreän veden ja punaisten jyrkänteiden välissä. Puisto '
+                + 'suljettiin maaliskuun 2023 tulvien jälkeen ja avautuu '
+                + 'vaiheittain heinäkuusta 2025 alkaen, ja sinne johtavat '
+                + 'päällystämättömät tiet voivat olla sateen jälkeen '
+                + 'kulkukelvottomia.',
+              kuva: {
+                tiedosto: 'Lawn Hill Gorge.JPG',
+                lyhyt: 'Lawn Hillin rotkon tyyni vesi heijastaa punaiset hiekkakivijyrkänteet.',
+                selite: 'Boodjamullan kansallispuiston Lawn Hillin rotkossa '
+                  + 'ympäri vuoden virtaava puro on uurtanut tiensä '
+                  + 'hiekkakiviylängön läpi, ja vehreiden rantojen takana '
+                  + 'kohoavat punaiset jyrkänteet heijastuvat tyyneen veteen.',
+                lahde: 'DavidB601, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kuivan kauden kaupunki',
+              teksti: 'Mount Isan ilmasto on kuuma ja puolikuiva. Sadekausi '
+                + 'osuu joulu–maaliskuuhun, ja silloin helle ja kosteus '
+                + 'voivat tuntua yli 40 asteelta. Kuiva kausi huhtikuusta '
+                + 'marraskuuhun on matkailijalle mukavin: ilma on kuivaa ja '
+                + 'yöt viileitä, ja heinäkuussa alin lämpötila on keskimäärin '
+                + 'vajaat yhdeksän astetta. Mittaushistoriassa lämpötila on '
+                + 'vaihdellut 2,9 pakkasasteesta 45,9 helleasteeseen. '
+                + 'Sadekaudella tiet voivat tulvia yllättäen: vedenpeittämää '
+                + 'tieosuutta ei pidä koskaan ylittää, vaikka varoituskylttejä '
+                + 'tai puomeja ei olisi, ja Barkly Highwayn varren kyltit '
+                + 'kertovat, mitkä tiet ovat tulva-aikaan ajettavissa. '
+                + 'Tieoloista paikalliset tietävät usein parhaiten. '
+                + 'Kaupungissa liikutaan omalla tai vuokra-autolla, taksilla '
+                + 'tai klubien kuljetusbusseilla, ja lauantaiaamuisin kello '
+                + 'seitsemän Tharrapatha Waylta lähtee maksuton viiden '
+                + 'kilometrin parkrun-juoksu, johon osallistuu myös '
+                + 'matkailijoita. Kannattaa myös muistaa, että kaupungin '
+                + 'rajat ovat kaukana: Mount Isan kunta on yli 43 000 '
+                + 'neliökilometrin kokoinen, Australian toiseksi suurin, ja '
+                + 'siihen kuuluu Camoowealin kylä lähellä Pohjoisterritorion '
+                + 'rajaa.',
+              kuva: {
+                tiedosto: 'Leichhardt River from Sir James Foots Bridge at Mount Isa, 2023, 02.jpg',
+                lyhyt: 'Leichhardtin joki on kuivalla kaudella hiekkainen uoma eukalyptusten välissä.',
+                selite: 'Kesäkuussa 2023 Sir James Footsin sillalta kuvattu '
+                  + 'Leichhardtin joki on kuivalla kaudella pelkkä '
+                  + 'hiekkainen uoma eukalyptusten reunustamana; sadekaudella '
+                  + 'sama uoma voi täyttyä vedestä nopeasti.',
+                lahde: 'Kgbo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'arki',
