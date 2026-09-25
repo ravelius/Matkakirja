@@ -371,6 +371,15 @@ namespace Matkakirja.Natiivi
             var n = Rakenne.Teksti(nimi.ToUpperInvariant(), "mk-maakunnat__lnimi", kuvaus);
             Kirjasimet.Aseta(n, Kirjasin.Kone);
             var rivi = Rakenne.El("mk-maakunnat__lrivi", kuvaus, PickingMode.Ignore);
+            // Löydös 115 (omistaja, build 14): pieni kuva maakunnasta tekstin vasemmalle, kun datassa on kuva (nyt kortin
+            // ensimmäinen kuva; Sisältökirjuri voi tilata omat pikkukuvat samaan kenttään). Ilman kuvaa ruutu ennallaan.
+            string pikku = data != null && data.Kuvat.Count > 0 ? MiniJson.Teksti(data.Kuvat[0], "pikku") ?? MiniJson.Teksti(data.Kuvat[0], "osoite") : null;
+            if (!string.IsNullOrEmpty(pikku))
+            {
+                var kuva = Rakenne.El("mk-maakunnat__lkuva", rivi);
+                Kuvat.Hae(pikku, tx => { if (tx != null) kuva.style.backgroundImage = new StyleBackground(tx); });
+                kuva.RegisterCallback<ClickEvent>(_ => kortti.Avaa(nimi, data.Pitka ?? data.Lyhyt, data.Kuvat, HaePulu(avain)));
+            }
             var t = Rakenne.Teksti(data?.Lyhyt ?? "Luonnehdinta tulossa.", "mk-maakunnat__lteksti", rivi);
             Kirjasimet.Aseta(t, Kirjasin.Luku);
             if (data != null)
