@@ -33,9 +33,26 @@ namespace Matkakirja.Natiivi
         /// Ihmisen matkan löytökuva (web .aikajana-kertomuskuva img): 3:2, yksi soikio
         /// radial-gradient(ellipse 52% 52%, #000 34%, .72 58%, .2 78%, transparent 94%).
         /// </summary>
-        public static void HaeKertomuskuva(string osoite, Action<Texture2D> valmis) =>
-            Hae(osoite, "#kertomus", KertomusL, KertomusK,
-                () => new List<Soikio> { new Soikio { Cx = 50, Cy = 50, Rx = 52, Ry = 52, Asemat = KertomusAsemat, Arvot = KertomusArvot } }, valmis);
+        public static void HaeKertomuskuva(string osoite, Action<Texture2D> valmis) => HaeKertomuskuva(osoite, false, valmis);
+
+        /// <summary>
+        /// Ihmisen matka II (Linssisepän suunnitelma #3221): iso kuva ja peittävämpi maski, täysin peittävä noin 70 %:iin
+        /// säteestä ja sitten pehmeä reuna. Isompi resoluutio, koska kuva on puolen ruudun kokoinen.
+        /// </summary>
+        public static void HaeKertomuskuva(string osoite, bool versio2, Action<Texture2D> valmis)
+        {
+            if (!versio2)
+            {
+                Hae(osoite, "#kertomus", KertomusL, KertomusK,
+                    () => new List<Soikio> { new Soikio { Cx = 50, Cy = 50, Rx = 52, Ry = 52, Asemat = KertomusAsemat, Arvot = KertomusArvot } }, valmis);
+                return;
+            }
+            Hae(osoite, "#kertomus2", Kertomus2L, Kertomus2K,
+                () => new List<Soikio> { new Soikio { Cx = 50, Cy = 50, Rx = 52, Ry = 52, Asemat = Kertomus2Asemat, Arvot = Kertomus2Arvot } }, valmis);
+        }
+
+        public const int Kertomus2L = 960, Kertomus2K = 640;
+        static readonly float[] Kertomus2Asemat = { 0.70f, 0.82f, 0.92f, 1.0f }, Kertomus2Arvot = { 1f, 0.62f, 0.16f, 0f };
 
         static void Hae(string osoite, string muoto, int leveys, int korkeus, Func<List<Soikio>> soikiot, Action<Texture2D> valmis)
         {
