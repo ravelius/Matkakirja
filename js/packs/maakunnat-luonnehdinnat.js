@@ -9164,4 +9164,402 @@ export const MAAKUNTIEN_LUONNEHDINNAT = {
       lyhyt: 'Zaghouanin vuoren juurella on roomalaisten vesitemppeli, josta lähti 132 kilometriä pitkä akvedukti Karthagoon.',
     },
   },
+  /*
+   * IRN — nykymaakunnat (31). Faktat en-Wikipediasta 25.9.2026; Persepolis,
+   * Damavand, Kaspianmeri, Karun, Pasargadai, Bam, Yazdin kaupunki,
+   * Shushtar, Soltaniyeh, Takht-e Soleyman ja Gonbad-e Qabus ovat jo
+   * maastokohteina/fokuskohteina, joten niitä ei käytetty.
+   *   Alborz      — Alborz province (pienin pinta-ala, Karaj 40 km)
+   *   Ardebil     — Sheikh Safi al-Din Khānegāh and Shrine Ensemble (2010)
+   *   West Azarb. — Monastery of Saint Thaddeus
+   *   East Azarb. — Bazaar of Tabriz
+   *   Kohgiluyeh  — Dena (yli 40 huippua yli 4 000 m)
+   *   Bushehr     — Bandar Siraf
+   *   Chahar M.   — Zayanderud
+   *   Esfahan     — Naqsh-e Jahan Square (560 m)
+   *   Fars        — Tomb of Hafez (1935)
+   *   Golestan    — Golestan National Park (1957, vanhin)
+   *   Hamadan     — Ali-Sadr Cave
+   *   Hormozgan   — Qeshm Island (~1 500 km²)
+   *   Ilam        — Kabir Kuh (175 km, 2 790 m)
+   *   Kerman      — Lut Desert (70,7 °C)
+   *   Kermanshah  — Behistun inscription
+   *   S. Khorasan — Birjand + South Khorasan barberry (valtaosa maailman)
+   *   R. Khorasan — Imam Reza Shrine
+   *   N. Khorasan — Mofakham's House of Mirrors
+   *   Khuzestan   — Chogha Zanbil (1979, ensimmäinen)
+   *   Kordestan   — Uraman Takht; Hawraman/Uramanat (Unesco 2021)
+   *   Lorestan    — Falak-ol-Aflak
+   *   Markazi     — Sarouk carpet
+   *   Mazandaran  — Ramsar Convention (1971)
+   *   Qazvin      — Alamut Castle (1090)
+   *   Qom         — Sohan (confectionery)
+   *   Semnan      — Tarikhaneh
+   *   Sistan      — Shahr-e Sukhteh (Unesco 2014)
+   *   Tehran      — Milad Tower (435 m)
+   *   Yazd        — Chak Chak, Yazd (14.–18.6.)
+   *   Zanjan      — Chehrabad Saltmen (kuusi, akhaimenidi- ja
+   *                 parthialais-sasanidiaika)
+   *   Muut        — yleistietoa, tarkistettu vastaavista
+   *                 en-Wikipedia-artikkeleista.
+   */
+  IRN: {
+    Alborz: {
+      lyhyt: 'Alborz on Iranin pinta-alaltaan pienin maakunta, ja sen pääkaupunki Karaj on Alborz-vuorten juurella vain 40 kilometrin päässä Teheranista.',
+    },
+    Ardebil: {
+      lyhyt: 'Ardabilin keskustassa on sufimestari Safi ad-Dinin hauta- ja luostarikokonaisuus, joka liitettiin Unescon maailmanperintöluetteloon 2010.',
+    },
+    Bushehr: {
+      lyhyt: 'Bandar Sirafin kalastajakaupungin vieressä ovat muinaisen Sirafin rauniot, sataman josta laivat purjehtivat aikoinaan Intiaan asti.',
+    },
+    "Chahar Mahall and Bakhtiari": {
+      lyhyt: 'Iranin ylängön suurin joki Zayanderud saa alkunsa maakunnan Zagros-vuorilta ja virtaa sieltä kohti Isfahania.',
+    },
+    "East Azarbaijan": {
+      lyhyt: 'Tabrizin katettu basaari on yksi Lähi-idän vanhimmista, ja sen holvikäytävät kuuluvat Unescon maailmanperintöön.',
+    },
+    Esfahan: {
+      lyhyt: 'Isfahanin Naqsh-e Jahan -aukio on yli puoli kilometriä pitkä, ja sen etelälaidalla kohoaa sinikaakeloitu Shahin moskeija.',
+    },
+    Fars: {
+      lyhyt: 'Shirazin pohjoislaidalla puutarhassa on runoilija Hafezin marmorinen hauta, jonka nykyinen paviljonki rakennettiin 1935.',
+    },
+    Gilan: {
+      lyhyt: 'Masulehin vuoristokylässä talot nousevat rinnettä ylös niin tiiviisti, että alemman talon katto toimii ylemmän pihana ja kulkutienä.',
+    },
+    Golestan: {
+      lyhyt: 'Golestanin kansallispuisto perustettiin 1957, ja se on Iranin vanhin; sen metsissä elää yhä persianleopardeja.',
+    },
+    Hamadan: {
+      lyhyt: 'Ali-Sadrin luola Hamadanin pohjoispuolella on vesiluola, jonka maanalaisia käytäviä kierretään veneillä.',
+    },
+    Hormozgan: {
+      lyhyt: 'Qeshm on Persianlahden suurin saari, noin 1 500 neliökilometriä, ja mantereesta sen erottaa kapea salmi.',
+    },
+    Ilam: {
+      lyhyt: 'Kabir Kuh -vuorijono kulkee maakunnan halki 175 kilometrin matkan, ja sen korkein huippu kohoaa 2 790 metriin.',
+    },
+    Kerman: {
+      lyhyt: 'Lutin autiomaan hiekasta on mitattu 70,7 asteen pintalämpötila, korkein tunnettu maanpinnan lämpötila maapallolla.',
+    },
+    Kermanshah: {
+      lyhyt: 'Bisotunin kallioseinämään hakattu Dareios Suuren kolmikielinen kirjoitus auttoi tutkijoita avaamaan nuolenpääkirjoituksen.',
+    },
+    Khuzestan: {
+      lyhyt: 'Choga Zanbilin elamilainen zikkurat on harvoja Mesopotamian ulkopuolelle säilyneitä, ja se oli Iranin ensimmäinen maailmanperintökohde.',
+    },
+    "Kohgiluyeh and Buyer Ahmad": {
+      lyhyt: 'Maakunnan laidalla kohoavassa Dena-vuoristossa on yli neljäkymmentä yli 4 000 metrin huippua.',
+    },
+    Kordestan: {
+      lyhyt: 'Uraman Takhtin kylä on rakennettu portaittain jyrkkään rinteeseen, ja Hawramanin vuoriston kylämaisema on Unescon maailmanperintöä.',
+    },
+    Lorestan: {
+      lyhyt: 'Khorramabadin keskustassa kukkulan laella seisoo Falak-ol-Aflakin linna, joka rakennettiin jo sasanidien aikana.',
+    },
+    Markazi: {
+      lyhyt: 'Arakin ja Sarukin kylän seudulla solmitaan Saruk-mattoja, jotka tunnetaan maailmalla omana persialaismattojen tyyppinään.',
+    },
+    Mazandaran: {
+      lyhyt: 'Ramsarin rantakaupungissa allekirjoitettiin 1971 kansainvälinen kosteikkosopimus, joka tunnetaan yhä kaupungin nimellä.',
+    },
+    "North Khorasan": {
+      lyhyt: 'Bojnurdin Mofakhamin kartano on qajar-kaudelta, ja sen julkisivun värikkäät kaakelit kuvaavat ihmisiä ja eläimiä.',
+    },
+    Qazvin: {
+      lyhyt: 'Alamutin laakson kalliolla ovat Kotkanpesäksi kutsutun linnoituksen rauniot; Hasan-i Sabbah johti sieltä nizarilaisia vuodesta 1090.',
+    },
+    Qom: {
+      lyhyt: 'Qomista viedään tuliaisiksi sohania, sahramilla ja kardemummalla maustettua rapeaa makeista, jonka päällä on pistaasia ja mantelia.',
+    },
+    "Razavi Khorasan": {
+      lyhyt: 'Mashhadin imaami Rezan pyhäkkö on islamin vierailluimpia pyhiinvaelluspaikkoja; sinne saapuu vuosittain kymmeniä miljoonia ihmisiä.',
+    },
+    Semnan: {
+      lyhyt: 'Damghanin Tarikhanehin moskeija on yksi Iranin vanhimmista islamilaisista rakennuksista, arviolta 700-luvulta.',
+    },
+    "Sistan and Baluchestan": {
+      lyhyt: 'Shahr-e Sukhteh eli "palanut kaupunki" oli pronssikautinen kaupunki Helmand-joen varrella, ja nyt se on Unescon maailmanperintöä.',
+    },
+    "South Khorasan": {
+      lyhyt: 'Etelä-Khorasan tuottaa valtaosan maailman happomarjoista, joita iranilaiset kutsuvat zereshkiksi ja sirottelevat riisin päälle.',
+    },
+    Tehran: {
+      lyhyt: 'Teheranin Milad-torni kohoaa antennin kärkeen 435 metriin, ja se on Iranin korkein torni.',
+    },
+    "West Azarbaijan": {
+      lyhyt: 'Chaldiranin lähellä vuorilla seisoo armenialainen Pyhän Taddeuksen luostari, jonka kartiokatot näkyvät kauas ja jonne tehdään vuosittain pyhiinvaellus.',
+    },
+    Yazd: {
+      lyhyt: 'Chak Chak eli "tip-tip" on zarathustralaisten pyhin vuoristopyhäkkö Ardakanin lähellä, ja joka kesäkuu sinne saapuu tuhansia pyhiinvaeltajia.',
+    },
+    Zanjan: {
+      lyhyt: 'Chehrabadin suolakaivoksesta on löydetty kuuden kaivosmiehen suolan säilyttämät ruumiit; vanhimmat elivät jo akhaimenidien aikaan.',
+    },
+  },
+  /*
+   * IRQ — nykymaakunnat (18). Faktat en-Wikipediasta 25.9.2026; ei sotaa
+   * eikä politiikkaa. Babylon, Ishtarin portti, Niniven palatsi, Cheekha
+   * Dar, Tigris, Shatt al-Arab, Ur, Uruk, Samarra, Erbilin sitadelli ja
+   * Hatra ovat jo maasto-/fokuskohteina.
+   *   Al-Anbar      — Al Anbar Governorate (suurin pinta-ala)
+   *   Al-Muthannia  — Sawa Lake (kuivunut 2023 mennessä)
+   *   An-Najaf      — Wadi-us-Salaam (6 km², yli 6 miljoonaa)
+   *   Babil         — Borsippa
+   *   Baghdad       — Mutanabbi Street
+   *   Al-Basrah     — Basra (kolmanneksi suurin, yli 50 °C)
+   *   Dihok         — Amedi (mesa, Great Zab)
+   *   Dhi-Qar       — Mudhif; Ahwar of Southern Iraq (Unesco 2016)
+   *   Diyala        — Baqubah (appelsiinitarhat)
+   *   Arbil         — Geli Ali Beg Waterfall (5 dinaarin seteli)
+   *   Karbala'      — Arba'in pilgrimage
+   *   At-Ta'mim     — Baba Gurgur (Eternal Fire)
+   *   Maysan        — Ezra's Tomb
+   *   Ninawa        — Mor Mattai Monastery
+   *   Al-Qādisiyyah — Nippur
+   *   Sala ad-Din   — Saladin (Tikrit, n. 1137)
+   *   As-Sulaym.    — Sulaymaniyah (1784)
+   *   Wasit         — Wasit ("keskimmäinen")
+   */
+  IRQ: {
+    "Al-Anbar": {
+      lyhyt: 'Anbar on Irakin pinta-alaltaan suurin maakunta, ja lännessä se rajautuu Syyriaan, Jordaniaan ja Saudi-Arabiaan.',
+    },
+    "Al-Basrah": {
+      lyhyt: 'Basra on Irakin kolmanneksi suurin kaupunki ja yksi maailman kuumimmista: kesällä lämpötila nousee säännöllisesti yli 50 asteen.',
+    },
+    "Al-Muthannia": {
+      lyhyt: 'Samawan länsipuolella ollut Sawa-järvi, jolla ei ollut laskujokea, kuivui pohjaveden liikapumppauksen vuoksi kokonaan vuoteen 2023 mennessä.',
+    },
+    "Al-Qādisiyyah": {
+      lyhyt: 'Afakin lähellä ovat Nippurin rauniot; kaupunki oli sumerilaisten ylijumalan Enlilin pyhä paikka.',
+    },
+    "An-Najaf": {
+      lyhyt: 'Najafin Wadi as-Salaam on maailman suurin hautausmaa: se kattaa kuusi neliökilometriä, ja sinne on haudattu yli kuusi miljoonaa ihmistä.',
+    },
+    Arbil: {
+      lyhyt: 'Geli Ali Begin vesiputous kapeassa vuoristorotkossa oli aikoinaan Irakin viiden dinaarin setelin kuva-aiheena.',
+    },
+    "As-Sulaymaniyah": {
+      lyhyt: 'Sulaimaniyan perusti vuonna 1784 babanidiruhtinas Ibrahim Pasha, joka nimesi kaupungin isänsä Sulaiman Pashan mukaan.',
+    },
+    "At-Ta'mim": {
+      lyhyt: 'Kirkukin lähellä Baba Gurgurin öljykentällä palaa "ikuinen tuli", maan raoista purkautuva kaasuliekki.',
+    },
+    Babil: {
+      lyhyt: 'Birs Nimrudin kukkulalla seisoo muinaisen Borsippan zikkuratin rauniotorni, jota myöhemmin luultiin Baabelin torniksi.',
+    },
+    Baghdad: {
+      lyhyt: 'Bagdadin al-Mutanabbi-katu on kaupungin kirjakauppojen vanha keskus, ja sen katukojuilla on väkeä aamusta iltaan.',
+    },
+    "Dhi-Qar": {
+      lyhyt: 'Chibayishin soilla suoarabit rakentavat kaislasta suuria mudhif-vierastaloja, ja Etelä-Irakin suot ovat Unescon maailmanperintöä.',
+    },
+    Dihok: {
+      lyhyt: 'Amedin pikkukaupunki on rakennettu jyrkkäreunaisen, tasalakisen kallioylängön laelle Suuren Zab-joen laaksossa.',
+    },
+    Diyala: {
+      lyhyt: 'Diyala-joen varrella sijaitseva Baqubah tunnetaan Irakin kaupallisten appelsiinitarhojen keskuksena.',
+    },
+    "Karbala'": {
+      lyhyt: 'Arbain-päivänä Karbalaan saapuu miljoonia pyhiinvaeltajia, useimmat jalan; se on maailman suurin vuosittainen joukkokokoontuminen.',
+    },
+    Maysan: {
+      lyhyt: 'Tigrisin rannalla al-Uzairin kylässä on Esran hautana pidetty pyhäkkö, jota kunnioittavat sekä juutalaiset että muslimit.',
+    },
+    Ninawa: {
+      lyhyt: 'Mosulin koillispuolella Alfaf-vuorella on Mar Mattain luostari, yksi maailman vanhimmista yhä toimivista kristillisistä luostareista.',
+    },
+    "Sala ad-Din": {
+      lyhyt: 'Maakunta on nimetty Saladinin mukaan: hän syntyi Tikritissä noin vuonna 1137.',
+    },
+    Wasit: {
+      lyhyt: 'Maakunnan nimi tulee 700-luvulla perustetusta Wasitista; se tarkoittaa "keskimmäistä", sillä kaupunki oli Kufan ja Basran välissä.',
+    },
+  },
+  /*
+   * SAU — nykymaakunnat (13). Faktat en-Wikipediasta ja SPA:n/Unescon
+   * sivuilta 25.9.2026. Jabal Sawda, Rub al-Khali, Hegra, Al-Ahsa,
+   * Jubbah, Al-Ukhdud, Rijal Almaa, Qaryat al-Faw, Vanha Jedda ja
+   * Farasansaaret ovat jo maastokohteina.
+   *   Al Bahah      — Dhi Ayn (marmorikylä)
+   *   Hudud ash Sh. — Zubaydah Trail (Rafha)
+   *   Al Jawf       — Dumat al-Jandal
+   *   Al Madinah    — Al-Masjid an-Nabawi
+   *   Al Quassim    — Buraydah (taatelit, Unesco 2021)
+   *   Ash Sharqiyah — Dammam No. 7 (3.3.1938)
+   *   Ar Riyad      — At-Turaif District
+   *   `Asir         — Al-Qatt Al-Asiri (Unesco 2017)
+   *   Ha'il         — Hail (city): Aja ja Salma, Hatim al-Tai
+   *   Jizan         — Khawlani Coffee Beans (Unesco 2022)
+   *   Makkah        — Taif rose (yli 500 miljoonaa ruusua)
+   *   Najran        — Al-Aan Palace (SPA / Arab News)
+   *   Tabuk         — Jabal al-Lawz (2 580 m, lumi)
+   */
+  SAU: {
+    "`Asir": {
+      lyhyt: 'Asirin naiset maalaavat talojen vierashuoneisiin kirkkaita al-qatt-seinämaalauksia, jotka ovat Unescon aineetonta kulttuuriperintöä.',
+    },
+    "Al Bahah": {
+      lyhyt: 'Dhi Aynin kylän kivitalot on rakennettu valkoisen marmorikukkulan päälle, ja sen alla laaksossa kasvaa banaaneja ja sitruunoita.',
+    },
+    "Al Hudud ash Shamaliyah": {
+      lyhyt: 'Rafhan läheltä alkaa Darb Zubaydah, Kufasta Mekkaan johtanut pyhiinvaellustie, jonka kivisiä vesialtaita on yhä jäljellä.',
+    },
+    "Al Jawf": {
+      lyhyt: 'Sakakan lähellä on Dumat al-Jandal, muinainen keidas Wadi Sirhanin päässä, ja sitä ympäröi yhä vanha kivimuuri.',
+    },
+    "Al Madinah": {
+      lyhyt: 'Medinassa on profeetta Muhammadin moskeija, islamin toiseksi pyhin paikka, jonne profeetta on myös haudattu.',
+    },
+    "Al Quassim": {
+      lyhyt: 'Buraidahin taatelimarkkinat ovat maailman suurimpia, ja vuonna 2021 Unesco nimesi kaupungin gastronomian luovaksi kaupungiksi.',
+    },
+    "Ar Riyad": {
+      lyhyt: 'Riadin luoteislaidalla on Diriyahin at-Turaif, savitiilikortteli joka oli Saudien suvun alkuperäinen koti ja ensimmäinen pääkaupunki.',
+    },
+    "Ash Sharqiyah": {
+      lyhyt: 'Dammamin kaivosta numero 7 löytyi 3. maaliskuuta 1938 ensimmäisen kerran kaupallinen määrä Saudi-Arabian öljyä.',
+    },
+    "Ha'il": {
+      lyhyt: 'Hail sijaitsee Aja- ja Salma-vuorten välissä, ja seutu tunnetaan anteliaisuudestaan runoilija Hatim at-Tain kotiseutuna.',
+    },
+    Jizan: {
+      lyhyt: 'Jazanin vuorten pengerrinteillä viljellään khawlani-kahvia, ja sen viljelytaito on ollut Unescon aineetonta kulttuuriperintöä 2022 alkaen.',
+    },
+    Makkah: {
+      lyhyt: 'Taifin vuoristokaupungin ympärillä poimitaan keväisin yli 500 miljoonaa ruusua, jotka tislataan ruusuvedeksi ja -öljyksi.',
+    },
+    Najran: {
+      lyhyt: 'Najranin keitaassa kalliolla seisoo al-Aanin palatsi, jonka viisikerroksinen savitiilitorni hallitsee koko laaksoa.',
+    },
+    Tabuk: {
+      lyhyt: 'Jabal al-Lawz eli "mantelivuori" kohoaa 2 580 metriin, ja sen huipuille sataa lähes joka talvi lunta.',
+    },
+  },
+  /*
+   * SYR — nykymaakunnat (15). Faktat en-Wikipediasta 25.9.2026; ei sotaa
+   * eikä politiikkaa. Palmyran Belin temppeli, Hermon, Eufrat, Krak des
+   * Chevaliers, Bosra, Ugarit, Ebla, Apamea, Resafa ja Mari ovat jo
+   * maasto-/fokuskohteina, Dura-Europos skandaalina.
+   *   Aleppo       — Aleppo soap
+   *   Ar Raqqah    — Raqqa (Abbasidien pääkaupunki 796–809)
+   *   As Suwayda'  — Shahba; Philip the Arab
+   *   Damascus     — Umayyad Mosque
+   *   Dar`a        — Hauran ("granary of Rome")
+   *   Dayr Az Zawr — Halabiye (Zenobia)
+   *   Hamah        — Norias of Hama (17)
+   *   Hasaka       — Tell Brak (Eye Temple)
+   *   Homs         — Lake Homs (roomalainen pato)
+   *   Idlib        — Dead Cities
+   *   Lattakia     — Sahyun Castle (Castle of Saladin)
+   *   Quneitra     — Quneitra (ottomaanien karavaaniasema, 1 010 m)
+   *   Rif Dimashq  — Maaloula (länsiaramea)
+   *   Tartus       — Arwad
+   *   UNDOF        — United Nations Disengagement Observer Force (1974)
+   */
+  SYR: {
+    Aleppo: {
+      lyhyt: 'Aleppon saippua keitetään oliiviöljystä, ja siihen lisätty laakerinmarjaöljy antaa sille tuoksun ja arabiankielisen nimen.',
+    },
+    "Ar Raqqah": {
+      lyhyt: 'Raqqa oli Abbasidikalifaatin pääkaupunki vuosina 796–809, kun kalifi Harun ar-Rashid hallitsi sieltä.',
+    },
+    "As Suwayda'": {
+      lyhyt: 'Shahbassa syntyi noin vuonna 204 Rooman keisari Filippus Arabialainen, joka teki kotikaupungistaan Philippopoliksen.',
+    },
+    Damascus: {
+      lyhyt: 'Damaskoksen Umaijadien moskeijassa on pyhäkkö, jossa sekä kristityt että muslimit uskovat Johannes Kastajan pään lepäävän.',
+    },
+    "Dar`a": {
+      lyhyt: 'Hauranin tasangon basalttimaa on niin hedelmällistä, että seutua on kutsuttu Rooman vilja-aitaksi.',
+    },
+    "Dayr Az Zawr": {
+      lyhyt: 'Halabiyen linnoitus Eufratin rannalla sai antiikin nimensä Palmyran kuningatar Zenobialta, joka sen 200-luvulla linnoitti.',
+    },
+    Hamah: {
+      lyhyt: 'Hamassa Orontes-joen varrella on säilynyt 17 keskiaikaista noriaa, valtavia puisia vesipyöriä, jotka nostivat vettä puutarhoihin.',
+    },
+    "Hasaka (Al Haksa)": {
+      lyhyt: 'Tell Brakin kummulta on kaivettu alabasterisia silmäidoleita, suurisilmäisiä pikkuhahmoja noin vuodelta 3200 eaa.',
+    },
+    "Homs (Hims)": {
+      lyhyt: 'Qattinah-järvi Homsin lähellä on tekojärvi: sen synnytti roomalaisten Orontes-jokeen rakentama pato.',
+    },
+    Idlib: {
+      lyhyt: 'Idlibin kalkkikiviylängöllä on satoja hylättyjä myöhäisantiikin kyliä, niin sanottuja kuolleita kaupunkeja kirkkoineen ja kylpylöineen.',
+    },
+    Lattakia: {
+      lyhyt: 'Saladinin linna seisoo metsäisellä harjanteella kahden syvän rotkon välissä noin 30 kilometriä Latakiasta itään.',
+    },
+    Quneitra: {
+      lyhyt: 'Quneitra syntyi ottomaanien aikana Damaskokseen johtavan karavaanitien pysähdyspaikaksi korkeaan laaksoon noin 1 000 metriin.',
+    },
+    "Rif Dimashq": {
+      lyhyt: 'Maaloulan kylässä vuorenrinteellä puhutaan yhä länsiarameaa, kieltä joka on säilynyt elävänä vain muutamassa kylässä.',
+    },
+    Tartus: {
+      lyhyt: 'Arwad kolmen kilometrin päässä Tartuksesta on Syyrian ainoa asuttu saari, ja sitä kiertävät yhä foinikialaisaikaiset muurit.',
+    },
+    UNDOF: {
+      lyhyt: 'Tätä kapeaa erotusvyöhykettä Golanilla ovat valvoneet YK:n UNDOF-joukot vuodesta 1974, ja niiden valtuutus uusitaan puolen vuoden välein.',
+    },
+  },
+  /*
+   * JOR — nykymaakunnat (12). Faktat en-Wikipediasta 25.9.2026. Petra,
+   * Wadi Rum, Jabal Umm ad Dami, Kuollutmeri, Jordan, Jerash, Umm Qais,
+   * Umm el-Jimal, Madaba, Kerakin linna ja Ayla ovat jo maasto-/
+   * fokuskohteina, Azraq skandaalina.
+   *   Ajlun   — Ajloun Castle
+   *   Aqaba   — Aqaba (ainoa rannikkokaupunki)
+   *   Balqa   — As-Salt (Unesco 2021)
+   *   Karak   — Mujib Biosphere Reserve
+   *   Mafraq  — Qasr Burqu'
+   *   Amman   — Roman Theatre (Amman) (6 000)
+   *   Tafilah — Dana Biosphere Reserve (suurin)
+   *   Zarqa   — Qusayr 'Amra
+   *   Irbid   — Pella, Jordan
+   *   Jarash  — Dibbeen Forest Reserve
+   *   Ma`an   — Montreal (castle)
+   *   Madaba  — Mount Nebo
+   */
+  JOR: {
+    Ajlun: {
+      lyhyt: 'Ajlounin linna rakennettiin 1100-luvulla kukkulan laelle vartioimaan kolmea Jordaninlaaksoon laskeutuvaa wadia.',
+    },
+    Amman: {
+      lyhyt: 'Ammanin keskustan roomalainen teatteri rakennettiin 100-luvulla kukkulan rinteeseen, ja sen katsomoon mahtuu noin 6 000 ihmistä.',
+    },
+    Aqaba: {
+      lyhyt: 'Aqaba on Jordanian ainoa rannikkokaupunki, ja sen edustalla Aqabanlahdella sukelletaan koralliriutoilla.',
+    },
+    Balqa: {
+      lyhyt: 'Saltin kaupunki on rakennettu kolmen kukkulan kainaloon, ja sen keltakiviset talot liitettiin Unescon maailmanperintöön 2021.',
+    },
+    Irbid: {
+      lyhyt: 'Pellan rauniot Jordaninlaakson itäisillä kukkuloilla kertovat tuhansien vuosien asutuksesta, ja keväällä rinteet ovat kukkien peitossa.',
+    },
+    Jarash: {
+      lyhyt: 'Dibbeenin metsäsuojelualueella kasvavat Jordanian suurimmat aleponmännyt, ja siellä elää uhanalainen persianorava.',
+    },
+    Karak: {
+      lyhyt: 'Karakin pohjoispuolella Wadi Mujibin kapeassa hiekkakivirotkossa kahlataan ja kiipeillään vesiputousten ohi.',
+    },
+    "Ma`an": {
+      lyhyt: 'Shobakin kaupungin vieressä kartiomaisen vuoren rinteellä seisoo ristiretkeläisten rakentama Montréalin linna.',
+    },
+    Madaba: {
+      lyhyt: 'Nebovuorelta, jolta Mooseksen kerrotaan nähneen luvatun maan, näkyy Jeriko ja kirkkaalla säällä Jerusalem.',
+    },
+    Mafraq: {
+      lyhyt: 'Itäisellä basalttiaavikolla seisoo Qasr Burqu, varhainen umaijadilinna, jonka muuri katoaa suoraan pienen aavikkojärven veteen.',
+    },
+    Tafilah: {
+      lyhyt: 'Danan luonnonsuojelualue on Jordanian suurin, ja sen vanha kivikylä on Wadi Danan jyrkän laakson reunalla.',
+    },
+    Zarqa: {
+      lyhyt: 'Aavikkolinna Qusayr Amran kylpylän seiniä peittävät 700-luvun freskot, joissa on metsästyskohtauksia, eläimiä ja lintuja.',
+    },
+  },
 };
