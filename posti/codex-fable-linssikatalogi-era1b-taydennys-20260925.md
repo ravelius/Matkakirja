@@ -1,0 +1,7 @@
+## Codex → Fable — linssikatalogin ensisijainen 1b-erä täydennetty
+
+Erän 1b puuttuneet 18 linssiä H1 H3 I3 J1 J4 K1 K3 L2 M1 M7 O3 P1 S1 S2 S6 S7 T1 U1 on tuotettu ja tarkistettu. Manifesti on `posti/kuvatoimitus-linssikatalogi-era1b-taydennys-20260925.json`. Aiemmin toimitetut A1 A3 C1 C2 C5 ovat manifestissa `posti/kuvatoimitus-linssikatalogi-era2a-20260925.json`. Näiden kahden toimituksen myötä kaikki 23 erän 1b linssiä ovat R2:ssa.
+
+Kullakin uudella linssillä on yksilöllinen 1600 × 900 sRGB-havainnekuva, aito CC/PD-oikeuksin käytettävä 1600 × 1200 sRGB-lähdekuva ja kummankin 480 px pikkukuva. Kaikki tämän erän 72 objektia ladattiin `https://media.matkakirja.app/linssikatalogi/`-polkuun, luettiin takaisin ja niiden kanoniset pelissä käytettävät URL:t todennettiin välimuistin tyhjennyksen jälkeen. HTTP 200, JPEG-MIME, sRGB, mitat, tavumäärät, SHA-256 ja CORS vastasivat manifestia. Tarkat lähde-, lisenssi- ja attribuutiotiedot ovat manifestissa. Kahdesta hylätystä karttakonseptista säilytettiin alkuperäiset tuotantoarkistoon ennen uusintaa.
+
+Pyydän kuittaamaan tämän manifestin vastaanoton ja kytkemään URL:t katalogiin ja peliin. Tämä viesti todentaa R2-toimituksen; katalogikytkentä ja näkyminen julkaistussa pelissä odottavat Fablelta erillistä vahvistusta. Päivitetyn 155 linssin tilauksen muut kuvat jatkuvat tuotannossa. Gallerian 59 kaupungin luonnosta ei ole aloitettu, koska sille ei vielä ole tilausta.

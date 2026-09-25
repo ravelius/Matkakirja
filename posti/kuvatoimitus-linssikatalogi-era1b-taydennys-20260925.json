@@ -1,0 +1,1262 @@
+{
+  "erä": "linssikatalogi-era1b-taydennys-20260925",
+  "tila": "72 R2-objektia ja kanonista URL-osoitetta todennettu takaisinluvulla; katalogiin ja peliin kytkentä odottaa Fablea",
+  "tilaus": "posti/fable-kuvaputki-linssikatalogi-era1b-20260924.md@3576ee735273bca9a1611f88c3adc7e4ccad704a",
+  "count": {
+    "lenses": 18,
+    "concepts": 18,
+    "cc": 18,
+    "cc_not_found": 0,
+    "objects": 72
+  },
+  "entries": [
+    {
+      "id": "H1",
+      "nimi": "Kiinan keksinnöt",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Paperi, kompassi, ruuti, kirjapaino, kanava ja laivasto muodostavat Kiinan keksintöjen reitin.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "One original 16:9 painterly concept image for history-game lens H1, Chinese Inventions 105–1450. An antique cream and sepia parchment map focused entirely on China, lying on a scholar's desk. Fine golden timeline of luminous waypoints near Luoyang, Kaifeng, Grand Canal and Nanjing. Discrete small historically suggestive ink-and-watercolor motifs: a sheet of handmade paper, magnetic compass, early gunpowder spark, woodblock printing press, canal boat, and a great early fifteenth-century treasure ship at Nanjing. Keep motifs modest and geography dominant, no stereotyped fantasy. Brass clock arc barely visible at lower edge, elegant old map ink, warm light and soft vignette. No portrait people, no readable text/letters/numbers, no labels, logos, UI or buttons. High-resolution PNG.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/H1-havainne.jpg",
+            "objectKey": "linssikatalogi/H1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 248405,
+            "sha256": "955c4a27d4367e40854053b012b4b8807843a19306b4152b74d977076448e2a3"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/H1-havainne-480.jpg",
+            "objectKey": "linssikatalogi/H1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 55982,
+            "sha256": "2d3e58fed1e93b2c875a159edb4b611f20ee238990baf2dbe922a9f92824aebe"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuonna 868 puulaatoilla painetun Timanttisutran tekstiä; yksi varhaisimmista päivätyistä painetuista kirjoista.",
+        "creator": "Tuntemattomat Tang-kauden painajat",
+        "title": "Diamond Sutra, frontispiece and text",
+        "year": "868",
+        "collection": "British Library, Or. 8210/P.2",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Diamond_Sutra_of_868_AD_-_The_Diamond_Sutra_%28868%29%2C_frontispiece_and_text_-_BL_Or._8210-P.2.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Diamond_Sutra_of_868_AD_-_The_Diamond_Sutra_%28868%29%2C_frontispiece_and_text_-_BL_Or._8210-P.2.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "cropped original printed text; mounted without upscaling; centered on neutral canvas",
+        "source_context": "Historiallinen painotuote H1:n kirjapainotekniikan aiheesta. Rajaus kohdistuu painettuun tekstiin, ei uskonnolliseen henkilöhahmoon.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/H1-cc.jpg",
+            "objectKey": "linssikatalogi/H1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 205105,
+            "sha256": "91152ecf35eb5a9ed19153637a3fcb78310a36195d8272356680f12a3dae00f5"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/H1-cc-480.jpg",
+            "objectKey": "linssikatalogi/H1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 22514,
+            "sha256": "020fc2492b041c8d652804c2ab5187100997bb9b65117eeb0e72bf9298608439"
+          }
+        ]
+      }
+    },
+    {
+      "id": "H3",
+      "nimi": "Japanin aikakaudet",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Japanin aikakaudet kulkevat kartalla Naran ja Kioton kautta Kamakuraan, Edoon ja Meiji-kauteen.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "One original 16:9 painterly concept image for history-game lens H3, Eras of Japan 710–1868. A vertically oriented Japanese archipelago shown within a 16:9 landscape antique parchment map on an explorer's desk, with surrounding muted sea. Five luminous timeline nodes near Nara, Heian Kyoto, Kamakura, Edo and the Meiji transition. Tiny refined watercolor silhouettes of a Nara temple, Heian court architecture, Kamakura shrine, Edo town bridge, early Meiji rail engine, each attached to a map waypoint. A single gentle gold route follows Honshu, and a faint brass clock arc at bottom. Respectful historical style, not fantasy, restrained cream/brown ink, subtle red accent, readable geography. No close-up humans, no text, letters, numbers, labels, logos, UI or buttons. High-resolution PNG.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/H3-havainne.jpg",
+            "objectKey": "linssikatalogi/H3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 246696,
+            "sha256": "52f068eb37ba97d7ed3835fc23d6168de2cdc8398cbc743734a1ce4c09b91d90"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-04/H3-havainne-480.jpg",
+            "objectKey": "linssikatalogi/H3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 50442,
+            "sha256": "b48a9a6a775f5a9e055edbba132c5622c7fdf18533dabd488a7e702faace641d"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Hiroshigen puupiirros Nihonbashin aamusta Edossa, nykyisessä Tokiossa.",
+        "creator": "Utagawa Hiroshige",
+        "title": "Morning View of Nihonbashi (Tōkaidōn 53 asemaa)",
+        "year": "n. 1833–1834",
+        "collection": "The Metropolitan Museum of Art, 36922",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:%E6%9D%B1%E6%B5%B7%E9%81%93%E4%BA%94%E5%8D%81%E4%B8%89%E6%AC%A1%E4%B9%8B%E5%86%85_%E6%97%A5%E6%9C%AC%E6%A9%8B_%E6%9C%9D%E4%B9%8B%E6%99%AF-Stations_One-_Morning_View_of_Nihonbashi_MET_DP122174.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/%E6%9D%B1%E6%B5%B7%E9%81%93%E4%BA%94%E5%8D%81%E4%B8%89%E6%AC%A1%E4%B9%8B%E5%86%85_%E6%97%A5%E6%9C%AC%E6%A9%8B_%E6%9C%9D%E4%B9%8B%E6%99%AF-Stations_One-_Morning_View_of_Nihonbashi_MET_DP122174.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Japanilaisen taiteilijan Edo-kauden puupiirros, täsmällinen Edo-pysäkki.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/H3-cc.jpg",
+            "objectKey": "linssikatalogi/H3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 279782,
+            "sha256": "e08a9a9eabbfd5e9063943c15a3d333dfca832580afb004dd623e40ba4c63e7a"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-04/H3-cc-480.jpg",
+            "objectKey": "linssikatalogi/H3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/H3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 48942,
+            "sha256": "140de9dac5b1dd6664fb78a12fcc076523a87e2e8b899ccf538518adee22c7f3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "I3",
+      "nimi": "Osmanien valtakunta",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Osmanien valtakunnan aikajana yhdistää Anatolian, Balkanin ja Lähi-idän pysäkkejä.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens, one 16:9 landscape concept image. Ottoman Empire across Turkey, the Balkans and the Levant, 1299–1923. Oblique antique parchment relief map centered on the eastern Mediterranean and Black Sea with geographically recognizable coastlines, no modern political border grid. Six small warm brass nodes at Bursa, Constantinople, Vienna, Cairo, Suez and Ankara are joined by delicate chronological routes; the route is an interpretive timeline, not an army movement. Very subtle Ottoman architectural silhouettes near Bursa and Constantinople and an unlabeled brass time arc at the lower edge. Cream and sepia land, dark ink sea, cinematic painterly dimensional terrain and restrained vignette. Geography and illuminated nodes remain dominant at thumbnail size. No people, battles, weapons, UI, controls, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-02/I3-havainne.jpg",
+            "objectKey": "linssikatalogi/I3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249759,
+            "sha256": "045864b83eafa5de6881734882a9130a0132c743d99f7da1d227bec61f218c1f"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-02/I3-havainne-480.jpg",
+            "objectKey": "linssikatalogi/I3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 31913,
+            "sha256": "d28e69d2f6c0c555cc729ceeb7566f9e46d8f148cb27c0139e3cc0e9c68d53bc"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "1870-luvun kartta näyttää Osmanien valtakunnan alueita Mustanmeren, Balkanin ja itäisen Välimeren ympärillä.",
+        "creator": "Kartantekijää ei ilmoitettu; litografia: Otton Fleck (Litografia Ottona Flecka)",
+        "title": "Mappa Turcyi, Grecyi, i prowincyi rossyjskich nad Morzem Czarnem (z ostatniej edycyi Angielskiej)",
+        "year": "1870-luku; Polonan luettelossa aikaisintaan 1877",
+        "collection": "Polona (digitaalinen lähde; kokoelmaa ei yksilöidä Commons-sivulla)",
+        "license": "Public domain / Public Domain Mark 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:19th-century_map_of_the_Turkish_Empire,_Greece_and_the_Caucasus.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/19th-century_map_of_the_Turkish_Empire%2C_Greece_and_the_Caucasus.jpg",
+        "transform_note": "center-cropped to 4:3",
+        "source_archive_note": "Archived Commons full file.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-02/I3-cc.jpg",
+            "objectKey": "linssikatalogi/I3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 295857,
+            "sha256": "61e44939ed0de1354ffde7289a99bccdeba3925453977266649b5cfc19e9a894"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-02/I3-cc-480.jpg",
+            "objectKey": "linssikatalogi/I3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/I3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 62583,
+            "sha256": "32ae3d22d8bab74774f3a49f84db8f9504590eae383e35cb58da2a44d37b77a4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "J1",
+      "nimi": "Kultavaltakunnat",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Länsi-Afrikan kultavaltakuntien kaupungit ja karavaanireitit syttyvät Nigerjoen ympärille.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja history game's 16:9 timeline lens concept image, J1 West African gold empires, 700–1591. A beautifully composed antique parchment cartographic map focused on West Africa, with accurately recognizable Sahara, Niger bend, Atlantic coast and Sahel. A luminous ochre-gold historical route moves from medieval Ghana across the Niger bend to Timbuktu, Djenné, Songhai and Kano; small restrained map vignettes of a trans-Saharan camel caravan, mud-brick Sahelian architecture, river boats, and gold trade weights. Show Mansa Musa's 1324 pilgrimage as a discreet branching caravan path heading northeast toward Egypt and Arabia, with no portrait. Visually emphasize the wealth, scholarship and cities of West African societies with dignity; do not imply a single uninterrupted kingdom. Parchment cream and deep brown ink, muted blue-green Niger River, small brass time arc at bottom, elegant hand-engraved map texture, warm but controlled light. Map is the hero, objects small. No colonial borders, no European flags, no stereotyped tribal decoration, no legible text, labels, numbers, logos, buttons, UI, modern buildings, people close-up or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/J1-havainne.jpg",
+            "objectKey": "linssikatalogi/J1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 227106,
+            "sha256": "546810e3659127e7da1877875dad978a50bf856903e2ce7fd044ccbe921f3c56"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/J1-havainne-480.jpg",
+            "objectKey": "linssikatalogi/J1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 47931,
+            "sha256": "5d8ad79a0c40925f5d69afa7f5cf08b668920ee62c8d9164619bf592b5794a83"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Mansa Musa esitetään kultakolikon kanssa vuoden 1375 katalonialaisessa atlaksessa.",
+        "creator": "Abraham Cresques (attribuutio)",
+        "title": "Katalonialaisen atlaksen lehti 6: Mansa Musa",
+        "year": "1375",
+        "collection": "Bibliothèque nationale de France",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Catalan_Atlas_BNF_Sheet_6_Mansa_Musa.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Catalan_Atlas_BNF_Sheet_6_Mansa_Musa.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Eurooppalaisen kartantekijän aikalaisesitys Malin hallitsijasta, ei tämän muotokuva.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/J1-cc.jpg",
+            "objectKey": "linssikatalogi/J1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 275544,
+            "sha256": "2973f4816f2d13c728d47e5ac6aa5c6c2cbd8bb1910f3b0228f5683fce248257"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/J1-cc-480.jpg",
+            "objectKey": "linssikatalogi/J1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 55485,
+            "sha256": "634d2ad4c908d6a3b5a39db87ee56222363beaeeae2b9f3131aeb7e0e3fc2c5f"
+          }
+        ]
+      }
+    },
+    {
+      "id": "J4",
+      "nimi": "Tutkimusmatkat Afrikassa",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Afrikan jokien ja järvien äärelle syttyvät 1800-luvun tutkimusmatkojen erilliset reitit.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens J4, 1795–1877, 16:9 landscape concept art for a game catalogue. A dignified 19th-century ink-and-watercolor parchment map of the African continent, geographically recognizable with the Niger River in West Africa, Congo basin in Central Africa, Lake Tanganyika and Lake Victoria in East Africa, and Victoria Falls on the Zambezi in southern Africa. Distinct thin luminous exploration-route strands, not a single misleading line: Mungo Park along the Niger; Livingstone's journey to Victoria Falls; Burton and Speke around East African lakes; the Ujiji meeting by Tanganyika; Stanley's Congo River route. Small tasteful engraved riverboat, tent and notebook symbols, subordinate to geography; no portraits, no figures, no colonial flags or triumphal conquest tone. Warm cream parchment, muted brown relief and blue-green waterways, restrained brass timeline arc at bottom, strong readable composition, soft analogue texture. No legible text, city names, letters, numbers, legend, UI, logo, watermark, modern borders or modern transport.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/J4-havainne.jpg",
+            "objectKey": "linssikatalogi/J4-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J4-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 238250,
+            "sha256": "b2d51debeca443eea300c1785bd3e5e6e84a023cf8fba6e6d89ae0a7dc777600"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/J4-havainne-480.jpg",
+            "objectKey": "linssikatalogi/J4-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J4-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 41881,
+            "sha256": "62df2e36196a261b65ac71c407fc647ef1a37e6e50bc5218a537094ba2d0d4d1"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Mungo Parkin 1790-luvun Gambia–Niger-reitti vuoden 1800 matkakertomuksen kartalla.",
+        "creator": "James Rennell (kartoitus; attribuutio)",
+        "title": "Mungo Parkin reitti Gambiasta Nigerille",
+        "year": "1800",
+        "collection": "British Library, HMNTS 10096.f.18",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:PARK%281800%29_p359_Karte_mit_Mungo_Parks_Reiseroute_in_Westafrika_vom_Gambia_Fluss_zum_Niger_Fluss.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/PARK%281800%29_p359_Karte_mit_Mungo_Parks_Reiseroute_in_Westafrika_vom_Gambia_Fluss_zum_Niger_Fluss.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Eurooppalaisen tutkimusmatkailun kartta, ei Afrikan alueiden tyhjänä löytämistä kuvaava esitys.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/J4-cc.jpg",
+            "objectKey": "linssikatalogi/J4-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J4-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 293004,
+            "sha256": "9fd739eee7dc13220b42a34f2b8327f16f8e3dbe3564066fec58716d184e601d"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/J4-cc-480.jpg",
+            "objectKey": "linssikatalogi/J4-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/J4-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 50568,
+            "sha256": "78064c464281873e1911396cec7bd9e96bc2176adccf47a81256e04e0810a323"
+          }
+        ]
+      }
+    },
+    {
+      "id": "K1",
+      "nimi": "Mesoamerikka ja Andit",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Mesoamerikan kaupungit ja Andien kiviterassit muodostavat kaksi erillistä historian valoketjua.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens K1, Mesoamerica and Andes, 200–1532 CE, landscape 16:9 game-catalogue concept image. A dignified antique parchment map of Central America and the northern-to-central Andes with recognizable Mexico, Yucatán, Guatemala, Peru, Pacific and Caribbean. Two clearly separate luminous historical clusters, NOT one route joining them: Mesoamerican lights near Teotihuacán, Tikal, Chichén Itzá, Tenochtitlán; Andean lights near Cusco and Machu Picchu. Tiny architecturally grounded ink-and-watercolor vignettes of stepped pyramids and stone terraces subordinate to the geography; distinguish the highland Andean terrain from Yucatán rainforest. Narrow brass timeline arc along bottom, cream parchment, muted green and blue land and sea, restrained amber light and hand-engraved relief. Rich civilizations presented on their own terms, no conquistadors or conquest drama, no single fictitious travel path, no portraits or close-up people, no modern borders or buildings, no legible text, numbers, labels, logo, watermark or UI.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/K1-havainne.jpg",
+            "objectKey": "linssikatalogi/K1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 229522,
+            "sha256": "00513c92e63f0a3e09ac0c307ae0e352e9da0a9e088fce8ec568ad7179f62199"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/K1-havainne-480.jpg",
+            "objectKey": "linssikatalogi/K1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 47223,
+            "sha256": "2dbdfb6f0b058450e1bdaa37515c60ece9d84776b1c07271a72775c082ee0c4c"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Mendozan koodeksin ensimmäinen sivu kuvaa mexica-kaupungin Tenochtitlánin perustamista.",
+        "creator": "Tuntemattomat mexica-käsikirjoittajat ja kuvittajat",
+        "title": "Codex Mendoza, Tenochtitlánin perustamista kuvaava ensimmäinen sivu",
+        "year": "n. 1541",
+        "collection": "Bodleian Libraries, University of Oxford",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:CodexMendoza01.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/CodexMendoza01.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample; centered on neutral canvas",
+        "source_context": "Alkuperäiskansojen kuvakieltä käyttävä siirtomaa-ajan käsikirjoitus; tuotettu espanjalaisen hallinnon aikana.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/K1-cc.jpg",
+            "objectKey": "linssikatalogi/K1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 279625,
+            "sha256": "0acda14e66ed7dc2ad5c24fa61b90e6786db360edec86b66ba2abadd69d5293b"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/K1-cc-480.jpg",
+            "objectKey": "linssikatalogi/K1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 35590,
+            "sha256": "631121627301b20c3c103d05ee2f426a4bc36d9cb79f645f9bfbffcfc886b0b8"
+          }
+        ]
+      }
+    },
+    {
+      "id": "K3",
+      "nimi": "Yhdysvaltain synty ja länsi",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Itsenäistymisen, lännen reittien ja mannertenvälisen rautatien valot levittäytyvät Pohjois-Amerikan kartalle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens K3, formation of the United States and westward movement, 1776–1869; 16:9 landscape catalogue concept image. A recognizable continental United States and southern Canada on an antique cream parchment map, Atlantic at right and Pacific at left, with historically distinct glowing path fragments: Philadelphia on the eastern seaboard, Lewis and Clark toward the Pacific Northwest, the Oregon Trail across the interior, the 1849 California gold fields, and the 1869 transcontinental railroad meeting point in Utah. Tiny ink-and-watercolor motifs of a colonial city, riverboat, covered wagon and early steam locomotive. Present expansion as complex, with quiet unoccupied Indigenous homelands and older footpaths visible beneath new routes; no celebratory conquest, no battle or stereotyped depictions. Restrained brass-gold nodes, sepia and muted blue, gentle engraved terrain, narrow brass timeline arc at bottom. Map is dominant, route geometry coherent. No modern borders, highways, skyscrapers, modern vehicles, flags, close-up people, readable text, labels, letters, numbers, logos, UI or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/K3-havainne.jpg",
+            "objectKey": "linssikatalogi/K3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 242189,
+            "sha256": "cd7ea82e6871c0209909cff09ae3c6376f592bb7a0d68c0686501e1393906e21"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/K3-havainne-480.jpg",
+            "objectKey": "linssikatalogi/K3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 49542,
+            "sha256": "30b80c1de7296c1a5fa8da4a5a479a3a8bbc67d4891763dafd24d3dd161356a4"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Union Pacificin ja Central Pacificin edustajat kättelevät Promontory Summitissa rautateiden yhdistyessä 1869.",
+        "creator": "Andrew J. Russell",
+        "title": "East and West Shaking Hands at the Laying of the Last Rail",
+        "year": "10.5.1869",
+        "collection": "Yale Collection of Western Americana, Beinecke Rare Book and Manuscript Library",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:East_and_West_Shaking_hands_at_the_laying_of_last_rail_Union_Pacific_Railroad.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/East_and_West_Shaking_hands_at_the_laying_of_last_rail_Union_Pacific_Railroad.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Seremoniakuva ei näytä kaikkia rautatien rakentaneita työntekijöitä, kuten kiinalaisia siirtolaisia.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/K3-cc.jpg",
+            "objectKey": "linssikatalogi/K3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 270093,
+            "sha256": "eb472f3ca19e248d2cf26fa73d6d8705617da664cd34d5db66c875eb622a5861"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/K3-cc-480.jpg",
+            "objectKey": "linssikatalogi/K3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/K3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 44436,
+            "sha256": "8fbc0a5a7e1b860e258ba5c41a6b3110a688c286dc5356457fbca710d6720ae8"
+          }
+        ]
+      }
+    },
+    {
+      "id": "L2",
+      "nimi": "Cook ja Tyynimeri",
+      "tyyppi": "aikajana",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Tyynenmeren kartta yhdistää Cookin matkojen Havaijin, Tahitin, Aotearoan ja Australian rannikon.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical timeline lens L2, Cook's Pacific voyages 1768–1779, landscape 16:9 game catalogue image. A geographically plausible antique parchment chart centered on the vast Pacific Ocean: Tahiti in central South Pacific, Aotearoa/New Zealand southeast of Australia, Botany Bay on Australia's east coast, Hawai‘i far north. Thin luminous voyage-line segments connect these landfalls in the correct broad order, with a modest departure point at the western edge represented by a small engraved globe inset rather than a fictitious direct straight line from Plymouth. A tiny late-18th-century wooden sailing ship and subtle wind rose, restrained brass timeline at bottom. Pacific island cultures represented by the land and sea themselves, with no caricatures, no heroic conqueror portraits or people close-up. Cream aged maritime chart, quiet blue water, muted green coasts, hand-engraved bathymetric strokes, warm natural light, balanced negative space. No legible text, labels, letters, numbers, modern ships or airplanes, modern borders, flags, logos, buttons, UI or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/L2-havainne.jpg",
+            "objectKey": "linssikatalogi/L2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 226653,
+            "sha256": "1ca989b827ebf384c788ec5e2b20d3e697416f09f2573110f9bb061b44d3abd0"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/L2-havainne-480.jpg",
+            "objectKey": "linssikatalogi/L2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 39377,
+            "sha256": "6929a7e61419d61bfd160bed26a85bfa482652748b8e6675ea9cb7ec68797821"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Thomas Kitchinin vuoden 1780 Tyynenmeren kartta esittää Cookin ja muiden eurooppalaisten merimatkoja.",
+        "creator": "Thomas Kitchin",
+        "title": "A Chart of the Discoveries Made by the Late Capt. Cook ... in the Great Pacific Ocean",
+        "year": "1780",
+        "collection": "Boston Public Library, Norman B. Leventhal Map Center, G9230 1780 .K57",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:A_chart_of_the_discoveries_made_by_the_late_Capt._Cook%2C_%26_other_European_navigators%2C_in_the_great_Pacific_Ocean_between_Asia_and_America_%288249493337%29.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/ed/A_chart_of_the_discoveries_made_by_the_late_Capt._Cook%2C_%26_other_European_navigators%2C_in_the_great_Pacific_Ocean_between_Asia_and_America_%288249493337%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample; centered on neutral canvas",
+        "source_context": "Eurooppalaisen merenkulun kartta; Tyynenmeren saarilla oli omat asukkaansa, reittinsä ja paikannimensä ennen retkiä.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/L2-cc.jpg",
+            "objectKey": "linssikatalogi/L2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 281674,
+            "sha256": "e8d6f46fb98c924d024ce59b5f435b76d23e49732435b238f5adc4c0bb4f8738"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/L2-cc-480.jpg",
+            "objectKey": "linssikatalogi/L2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/L2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 32705,
+            "sha256": "4567c8952c447b1f5ec147134b5f064625024664ca71c5224e675392d7e6c009"
+          }
+        ]
+      }
+    },
+    {
+      "id": "M1",
+      "nimi": "Kiinan dynastiat",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Kiinan dynastioiden muuttuvat alueet piirtyvät kerroksina jokien ja vanhojen rajojen ympärille.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical region lens M1, Chinese dynasties from Qin and Han through Tang, Song, Yuan, Ming and Qing to 1912, 16:9 game catalogue concept image. A scholarly antique parchment map centered on East Asia and China with clearly recognizable Yellow River, Yangtze, eastern coastline, Korean peninsula, Tibetan plateau and surrounding seas. Several translucent nested historical territorial washes in subdued cinnabar red, indigo and antique gold suggest changing dynastic extents across centuries; fine boundary contours have imperfect historical edges rather than a single modern national outline. One dominant warm red-gold dynasty layer is visually strongest, while earlier/later layers gently recede. Small restrained engraved silhouettes of the Great Wall, river cities and a pagoda are subordinate to the map. A narrow brass time dial along the bottom indicates multiple eras without writing labels. Ink-and-watercolor relief, cream paper, subdued blue water, dignified and historically curious. No modern borders, no portraits or close-up people, no legible Chinese characters or any text, labels, numbers, legend, logos, buttons, UI or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/M1-havainne.jpg",
+            "objectKey": "linssikatalogi/M1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249591,
+            "sha256": "c58adaa347896d7ec57b73b65c5925312dd49cda5e458de60acd6663711994a1"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/M1-havainne-480.jpg",
+            "objectKey": "linssikatalogi/M1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 42951,
+            "sha256": "3e790a0eeb3761cdadd2aa35517edfe0dee8c9dd065ecc5d8d2b938bb6752bc7"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Zhang Zeduanin 1100-luvun Song-kauden kaupunkielämää kuvaavan käärön yksityiskohta.",
+        "creator": "Zhang Zeduan",
+        "title": "Along the River During the Qingming Festival (alkuperäinen käärö)",
+        "year": "1100-luku, Pohjoinen Song",
+        "collection": "The Palace Museum, Beijing, 新00087177",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Alongtheriver_QingMing.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/8/86/Alongtheriver_QingMing.jpg",
+        "transform_note": "crop to bridge/city section of original 12th-century handscroll",
+        "source_context": "Alkuperäinen kiinalainen Song-kauden maalaus; tuotantorajaus yhdestä laajan käärön jaksosta.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/M1-cc.jpg",
+            "objectKey": "linssikatalogi/M1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 285189,
+            "sha256": "633b13abf610aa80d6f23eb1d3ea669d9a3b659312e4b644dfaef78fc172c53c"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/M1-cc-480.jpg",
+            "objectKey": "linssikatalogi/M1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 49603,
+            "sha256": "dd2ed714473a642d06a0d0ab1b63bd0eee48b264310561d6d163843e529ca071"
+          }
+        ]
+      }
+    },
+    {
+      "id": "M7",
+      "nimi": "Osmanien nousu ja lasku",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Osmanien valtakunnan laajeneminen ja vetäytyminen näkyvät eri aikojen aluekerroksina.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Create a 16:9 antique cartographic illustration for a history lens about the Ottoman Empire's changing extent, 1299–1923. Geographic correctness is the highest priority. Use a simple, clear, north-up map base of the eastern Mediterranean and Black Sea. Italy lies far left, Greece and Balkans upper-left of Aegean, Anatolia occupies the center-right landmass, the Levant lies bottom-right, Egypt bottom-center. Mediterranean, Aegean, and Black Seas remain unmistakably uncolored muted blue-green WATER. Color ONLY land with transparent indigo washes: darkest Anatolia and Thrace, medium wash southeastern Europe and Levant, palest expansion contours farther out. Convey expansion and later contraction with three nested thin historically approximate boundary outlines; avoid pretending to show any exact present-day border. A tiny brass pin at the Bosphorus marks Constantinople exactly where the strait joins Marmara and Black Sea. A small old sailing ship may appear in the sea. Keep decorative elements very sparse, paper warm ivory but not orange, engraving and fine watercolor. Sober, educational, historically curious. Absolutely no city silhouettes floating in the sea, no colored territorial wash on water, no faux coastlines, no invented peninsula shapes. No text, labels, numerals, legend, portraits, flags, logos, UI, watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/M7-havainne.jpg",
+            "objectKey": "linssikatalogi/M7-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M7-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 214295,
+            "sha256": "5d5362f87b01848eed3d75fde6a324aff0f9ebda6374f6ee2d826e63686e2a72"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/M7-havainne-480.jpg",
+            "objectKey": "linssikatalogi/M7-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M7-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 35257,
+            "sha256": "2591af93e8642114e82cd3d945607c5e6f97a1030f0c34a65584ba7ca19ac633"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Matrakçı Nasuhin 1500-luvun osmanialainen kuvakartta Istanbulista.",
+        "creator": "Matrakçı Nasuh",
+        "title": "İstanbul / Konstantinopoli Menazilname-käsikirjoituksessa",
+        "year": "n. 1537",
+        "collection": "Istanbul University Library, T. 5964, fol. 8b–9a",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Matrak%C3%A7%C4%B1_Nasuh_-_%C4%B0stanbul.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Matrak%C3%A7%C4%B1_Nasuh_-_%C4%B0stanbul.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample; centered on neutral canvas",
+        "source_context": "Osmanivaltakunnan aikalaisen kuva pääkaupungista Suleiman I:n kaudella.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/M7-cc.jpg",
+            "objectKey": "linssikatalogi/M7-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M7-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 298660,
+            "sha256": "a9736307ccfcb525b98c1b384fbcad226e2feb3defc1645ba546e7933b8e6387"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/M7-cc-480.jpg",
+            "objectKey": "linssikatalogi/M7-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/M7-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 42413,
+            "sha256": "ec8b7d339a31524e8fd6063d0a3d6f32fe297ac0907cf6b992c738e3e1f86a6d"
+          }
+        ]
+      }
+    },
+    {
+      "id": "O3",
+      "nimi": "Afrikan jako",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Afrikan siirtomaajako piirsi maanosaan uusia rajoja 1800-luvun lopulla.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. 16:9 Matkakirja historical area lens O3, 'Partition of Africa' 1870–1914, for a 13+ history game. Create a sober scholarly antique map of the whole African continent with accurate coastline, Nile, Congo basin, Sahara, Cape, Madagascar, Mediterranean and Atlantic/Indian oceans. Overlay several subdued translucent territorial washes in dusty blue, rust, muted gold and gray that suggest the rapid colonial partition, but no readable labels and no falsely precise current country boundaries. A thin array of surveyor's straight line segments and faded diplomatic contour lines conveys the imposed borders; faint sea-route threads and tiny navigation pins at Suez, Congo mouth and Cape. Let the underlying varied geography and pre-existing African regions remain visible; the image should not glorify empire or depict suffering, conquest battles or colonial soldiers. Composition serious, reflective and beautiful, engraved relief and watercolor on weathered cream paper, strong readable continent silhouette with open margins. No flags, faces, people, text, letters, numerals, legend, stamps, logo, UI, watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/O3-havainne.jpg",
+            "objectKey": "linssikatalogi/O3-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O3-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 229894,
+            "sha256": "dba4d161fa1dd583864d008a629db8c087759059e80697cb7041c65f6c3df7eb"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/O3-havainne-480.jpg",
+            "objectKey": "linssikatalogi/O3-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O3-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 32255,
+            "sha256": "78e87a173d17f9e107cb6811e03e308a65c02f5c7209903ad953b4c5b0bcb90a"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1914 kartta merkitsee Afrikan alueet eurooppalaisten siirtomaavaltojen mukaan.",
+        "creator": "Tuntematon kartantekijä",
+        "title": "Map of European Possessions in Africa",
+        "year": "1914",
+        "collection": "Popular Science Monthly, vol. 85, s. 315",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:PSM_V85_D315_Map_of_european_possessions_in_africa.png",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/PSM_V85_D315_Map_of_european_possessions_in_africa.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample; centered on neutral canvas",
+        "source_context": "Aikakauden siirtomaakartta kuvaa eurooppalaisia valtapyrkimyksiä; rajat eivät kerro Afrikan kansojen omasta historiasta tai hyväksynnästä.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/O3-cc.jpg",
+            "objectKey": "linssikatalogi/O3-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O3-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 282682,
+            "sha256": "2af7a124bd0ea72a9042a7837209d81abb8d592911b7bdd3008f0f04ad737fcb"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/O3-cc-480.jpg",
+            "objectKey": "linssikatalogi/O3-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/O3-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 49372,
+            "sha256": "cee45b6fdeeaf5b9b05c7df8a92520849e5f10d774bc086689153a1840199e46"
+          }
+        ]
+      }
+    },
+    {
+      "id": "P1",
+      "nimi": "Uskontojen levinneisyys",
+      "tyyppi": "alue",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Uskontoperinteiden levinneisyys näkyy kartassa laajoina, toisiinsa sekoittuvina alueina.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "A 16:9 scholarly antique parchment world map for an educational history game lens about the geographical DISTRIBUTION of Buddhism, Christianity and Islam through 1900. Accuracy before decoration: recognizable continents and oceans, with three separate, broad, semi-transparent regional watercolor washes only. Muted saffron-gold centered across India, Tibet, East Asia and Southeast Asia suggests Buddhist traditions; muted deep blue across Europe and parts of the Americas suggests Christian traditions; muted green across Arabia, North Africa, southwest Asia and parts of Central and South Asia suggests Islamic traditions. Areas of overlap use soft blended paint, there are no routes, no arrows, no source pins, no exact boundary claims. The base is a beautiful but quiet 19th-century engraved atlas map: fine coastlines, subtle relief, weathered off-white paper, a restrained compass in an empty ocean corner. Keep it neutral and respectful, without visual hierarchy. No portraits, people, founders, religious icons, scriptures, flags, symbols on land, text, labels, letters, numbers, legend, UI, logo, watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/P1-havainne.jpg",
+            "objectKey": "linssikatalogi/P1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 236038,
+            "sha256": "aa4f3edd156367057122c0aca7d5796ce0be350010978704e1b5ded374375ce4"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/P1-havainne-480.jpg",
+            "objectKey": "linssikatalogi/P1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 35952,
+            "sha256": "06ce589b447eed9ba52a8c4cf98cff7e10109e0e6026aca49d11cad66ec3ea95"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1881 atlas esitti uskontojen maantieteellisen levinneisyyden ajan eurooppalaisen kartografian keinoin.",
+        "creator": "Richard Andree / Andrees Allgemeiner Handatlas; skannaus Grombo",
+        "title": "Religionskarte der Erde",
+        "year": "1881",
+        "collection": "Andrees Allgemeiner Handatlas, 1. painos, s. 9, kartta 2",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Andree9-2.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Andree9-2.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Aikakauden luokittelu on karkea ja eurooppakeskeinen; kartta ei kuvaa uskonnonharjoittajia eikä perustajien kasvoja.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/P1-cc.jpg",
+            "objectKey": "linssikatalogi/P1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 295036,
+            "sha256": "d8af2865d59dd47d318dd70f72ccae5e690d2bc468047ffc794d0d6eb599f892"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/P1-cc-480.jpg",
+            "objectKey": "linssikatalogi/P1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/P1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 60627,
+            "sha256": "2267f1a1557613acd2ac9e98e85f0469c84486a7db1680309c71411a51e02d87"
+          }
+        ]
+      }
+    },
+    {
+      "id": "S1",
+      "nimi": "Siirtomaat",
+      "tyyppi": "virta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Siirtomaavaltojen merireitit ja muuttuvat alueet muodostivat maailmanlaajuisen verkoston.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Create a 16:9 historical flow-map lens S1 for a 13+ educational travel game, topic: global colonial empires and long decolonization, 1415–1960. A sober 19th-century antique parchment WORLD MAP with accurate continent silhouettes, engraved coastlines and muted deep blue seas. Show several DIFFERENT, thin, semi-transparent maritime route arcs connecting Europe with the Americas, Africa, India, Southeast Asia and Australia; the arcs are restrained and non-directional, organized clearly rather than a dense tangle. Add a few faded territorial watercolor patches in muted ochre, grey, indigo and rust, with some edges dissolving to suggest changing control over time. Five tiny neutral port dots could mark Atlantic Iberian coast, Goa, Cape, Batavia/Indonesia, and Calcutta. The map should evoke historical systems and their eventual unraveling without glorifying conquest, without battle scenes, ships as heroic icons, colonizers or victims. A subtle time ribbon along one edge may be blank, no numerals. Strong readable world silhouette, spare elegant ink, cream weathered paper, nuanced dramatic atmosphere. No text, labels, flags, letters, numbers, logos, UI, portrait, people, watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/S1-havainne.jpg",
+            "objectKey": "linssikatalogi/S1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 237607,
+            "sha256": "41295aa0c3edacece5b7d9fe0176de15667963f9d20004f34ebbe02f9f2c20d5"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-01/S1-havainne-480.jpg",
+            "objectKey": "linssikatalogi/S1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 41676,
+            "sha256": "5cde0f464e1d9a2f7cb393d428acc3a9cd754130a3eb9efd23208f027d2b009b"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1912 maailmanatlas kuvaa vuoden 1910 siirtomaaomistuksia ja kauppareittejä.",
+        "creator": "Cambridge Modern History Atlasin toimitus: A. W. Ward, G. W. Prothero, S. M. Leathes, E. A. Benians",
+        "title": "The World: Colonial Possessions and Commercial Highways, 1910",
+        "year": "1912 (karttatilanne 1910)",
+        "collection": "University of Texas Libraries, Perry-Castañeda Library Map Collection",
+        "license": "Public domain",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:World_1910.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/World_1910.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+        "transform_note": "crop/downsample",
+        "source_context": "Aikakauden siirtomaakartta näyttää imperiumien väitteet, ei asukkaiden suostumusta eikä paikallisia valtarakenteita.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/S1-cc.jpg",
+            "objectKey": "linssikatalogi/S1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 288713,
+            "sha256": "1e0023b1f693bc089006ea5762887db65959f195ca70c1c3b65b331d6e6d02be"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-01/S1-cc-480.jpg",
+            "objectKey": "linssikatalogi/S1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 61666,
+            "sha256": "125881e887dc3d8b42f3354cd362f0a0f772311a8f508006250cf3ede9da258d"
+          }
+        ]
+      }
+    },
+    {
+      "id": "S2",
+      "nimi": "Kolmiokauppa",
+      "tyyppi": "virta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Atlantin kolmiokaupan historialliset merireitit yhdistävät satamia Euroopassa, Afrikassa ja Amerikassa.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical flow lens, one 16:9 landscape concept image. The transatlantic slave trade / triangular trade, 1500–1867, represented solely through historical maritime routes and ports in a sober educational tone suitable for age 13+. Antique parchment map of the Atlantic, with West Africa, western Europe, the Caribbean, eastern North America and Brazil geographically recognizable. Muted copper and deep indigo curved sea routes link Liverpool and Nantes to Elmina on the West African coast, then across the Atlantic to Caribbean ports, Bahia and Charleston, with a distinct return route to Europe. Tiny restrained port light nodes and subdued route arrows indicate direction. The map should communicate the scale and gravity of forced movement without any people, bodies, captives, ships, chains, commodities, celebratory glow or graphic suffering. Cream/sepia land, dark blue-brown sea, quiet low light and gentle vignette. No UI, controls, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-02/S2-havainne.jpg",
+            "objectKey": "linssikatalogi/S2-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S2-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 246560,
+            "sha256": "e30ca7cedbf5efd7469286fdc7d5315b8aaaf9b4717c827f1e3bfc37f4eeace0"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-02/S2-havainne-480.jpg",
+            "objectKey": "linssikatalogi/S2-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S2-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 21819,
+            "sha256": "f9181ae900a44abea776c0e8f378f8c38ea91b17c1c492b9bfeec31936994830"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Noin vuoden 1830 kaiverrus näyttää Elminan rannikkolinnan ja sataman, jotka kuuluivat Atlantin orjakaupan verkostoon.",
+        "creator": "Willem Bartels (alkuperäinen piirros); Charles Rosenberg (kaiverrus)",
+        "title": "Elmina, on the approach from Cape Coast",
+        "year": "noin 1830",
+        "collection": "Kokoelmaa ei ilmoiteta Commons-sivulla; kuva on välitetty Bonhamsin kautta",
+        "license": "Public domain / Public Domain Mark 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:W._Bartels_-_Elmina_on_the_approach_from_Cape_Coast.jpeg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/W._Bartels_-_Elmina_on_the_approach_from_Cape_Coast.jpeg",
+        "transform_note": "cropped source pixels x=750..3150, y=500..2300 to emphasize the port; no suffering scene",
+        "source_archive_note": "Archived Commons full file.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-02/S2-cc.jpg",
+            "objectKey": "linssikatalogi/S2-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S2-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 293623,
+            "sha256": "3cea71e56d4dc367346aaa4a6c7a397b9836debb7741186bcc45b2abc2fe1504"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-02/S2-cc-480.jpg",
+            "objectKey": "linssikatalogi/S2-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S2-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 31006,
+            "sha256": "1469a960d971288678cca701c23b6d214ec9102b49d24bbde3ead294a97ca5df"
+          }
+        ]
+      }
+    },
+    {
+      "id": "S6",
+      "nimi": "Luonnonvarat valuvat",
+      "tyyppi": "virta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Luonnonvarojen lähtöalueet ja merelliset kulkureitit piirtyvät maailman kartalle.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical flow lens, one 16:9 landscape concept image. Global movement of natural resources, 1850–2000. Antique parchment world map with recognizable geography and no political-border network. Several distinct restrained copper-gold flow arcs cross oceans from the Chincha Islands of Peru, the Amazon and Congo basins, northern Chile, Kimberley in southern Africa, Baku, Pennsylvania and Persia toward major receiving regions; small separate origin nodes evoke guano, rubber, copper, diamonds and oil through faint geological textures, without literal labels or wealth symbolism. Fine directional particles travel along only a few routes so the map remains legible. Cream/sepia land, deep ink sea, painterly dimensional relief and gentle vignette, sober historical tone. No people, exploitation scenes, UI, controls, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-02/S6-havainne.jpg",
+            "objectKey": "linssikatalogi/S6-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S6-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 245161,
+            "sha256": "49a2feb96aad73e3e39e7bc8ce3520c61552e08e17fe7035de58df88336e6f94"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-02/S6-havainne-480.jpg",
+            "objectKey": "linssikatalogi/S6-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S6-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 32283,
+            "sha256": "fbba3f535d0efb616ec8bccc00fcd9c4ac76f5a16993f29abb11b720233f766e"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Henry de Witt Moultonin valokuva tallentaa guanon lastauksen Perun Chinchasaarten louhinta-alueella ennen vuotta 1865.",
+        "creator": "Henry de Witt Moulton",
+        "title": "Loading cars with guano at the Great Heap, Chincha Islands.",
+        "year": "ennen vuotta 1865; julkaistu 1865",
+        "collection": "Bibliothèque nationale de France, Maps and Plans Department / Geographical Society, Sg Wf 252 (36)",
+        "license": "Public domain / Public Domain Mark 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Guano_Mining_in_Chincha_Islands_Peru_(1865)_Moulton.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Guano_Mining_in_Chincha_Islands_Peru_%281865%29_Moulton.jpg",
+        "transform_note": "center-cropped to 4:3",
+        "source_archive_note": "Archived Commons full file.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-02/S6-cc.jpg",
+            "objectKey": "linssikatalogi/S6-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S6-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 299992,
+            "sha256": "895e42e4a5b33cf6190540e1ee1e5aa49136a938cc549f139807e3a6b5a451fb"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-02/S6-cc-480.jpg",
+            "objectKey": "linssikatalogi/S6-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S6-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 63111,
+            "sha256": "f44af91e37bf888ad4a5908bf30b825c54ca3af483afa37c95a2cd6f9403c5d8"
+          }
+        ]
+      }
+    },
+    {
+      "id": "S7",
+      "nimi": "Lähi-itä ja musta kulta",
+      "tyyppi": "virta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Lähi-idän öljyalueiden solmut liittyvät toisiinsa ja Suezin kautta kulkeviin reitteihin.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical flow lens, one 16:9 landscape concept image. Middle Eastern oil and its routes, 1908–1973. Antique parchment relief map centered on Iran, Iraq, the Arabian Gulf, Bahrain, Saudi Arabia, Egypt and the Suez Canal, with accurate recognizable water and coastlines, no modern border grid. Dark amber and muted copper flow lines emerge from small restrained nodes near Masjed Soleyman, Kirkuk, Bahrain and Dammam, then curve through regional waterways and Suez toward wider markets; faint oil-field and pipeline engravings are integrated in land. One dominant amber layer suggests resource flow rather than a political empire. Warm cream/sepia earth, deep dark blue sea, cinematic grazing light and subtle vignette. Serious geographic history, no people, conflict scene, UI, controls, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-02/S7-havainne.jpg",
+            "objectKey": "linssikatalogi/S7-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S7-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 244388,
+            "sha256": "1c7e7b014cde9cb39454d9b5e0bf3fe4a3bd101b3c8c22a28791e60e89eb6173"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-02/S7-havainne-480.jpg",
+            "objectKey": "linssikatalogi/S7-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S7-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 35158,
+            "sha256": "c16dec430571fc8bd7e919f34d73fbb0b0a22693cc86e295b4364ad1c80b9afb"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Baba Gurgurin öljylähde purkautuu Kirkukin alueella noin vuonna 1932.",
+        "creator": "G. Eric ja Edith Matson",
+        "title": "Baba Gurgur",
+        "year": "noin 1932",
+        "collection": "Matson Photographic Collection, Library of Congress",
+        "license": "CC0 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Baba_Gurgur.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Baba_Gurgur.jpg",
+        "transform_note": "top-biased 4:3 crop to retain gusher",
+        "source_archive_note": "Archived Commons full file.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-02/S7-cc.jpg",
+            "objectKey": "linssikatalogi/S7-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S7-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 248079,
+            "sha256": "74f8c7a9c8e42a4fd05aad09791813ab8415da106bbc44c3e3d249f3796df24a"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-02/S7-cc-480.jpg",
+            "objectKey": "linssikatalogi/S7-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/S7-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 35235,
+            "sha256": "89deb75b3a3b210020c3f2db8fa314b1432fd7f6c081d3cf6355f61b4a8968bb"
+          }
+        ]
+      }
+    },
+    {
+      "id": "T1",
+      "nimi": "Siirtolaisuus Amerikkaan",
+      "tyyppi": "virta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Euroopasta Amerikkaan suuntautuneet siirtolaisuusreitit yhdistyvät New Yorkiin.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical flow lens, one 16:9 landscape concept image. Migration from Europe to the Americas, 1840–1914. Antique parchment map centered on the North Atlantic: Europe occupies the RIGHT side of the image and northeastern North America occupies the LEFT side. Four separate fine golden sea routes START at Ireland, Liverpool, Bremen and Hanko on the RIGHT and END together at New York's Ellis Island on the LEFT. Every visible arrowhead on every route points LEFT, from Europe toward America; never draw a reverse arrow. A tiny historic steamship is in the ocean without passengers shown. Distinct warm port nodes, subtle directional particles, sober humane historical mood. Recognizable coastlines, cream/sepia land, deep blue-brown sea, painterly cartographic relief and gentle vignette. No triumphal framing, people, UI, controls, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-02/T1-havainne.jpg",
+            "objectKey": "linssikatalogi/T1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/T1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 245154,
+            "sha256": "c5572b5c8fb53aa23eae325f32d4526abf713847077aade5d151389cddbb9607"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-02/T1-havainne-480.jpg",
+            "objectKey": "linssikatalogi/T1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/T1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 32552,
+            "sha256": "e97fcb2b05dea831177adea206757f0cb1808b93b75da2ed2a436df7bbd160b0"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1907 valokuvassa muuttajat saapuvat matkatavaroineen Ellis Islandin maahanmuuttoasemalle.",
+        "creator": "George Grantham Bain -kokoelma; yksittäistä kuvaajaa ei ilmoiteta",
+        "title": "Arriving at Ellis Island",
+        "year": "1907",
+        "collection": "George Grantham Bain Collection, Library of Congress, ppmsc.00157",
+        "license": "Public domain / Public Domain Mark 1.0",
+        "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Arriving_at_Ellis_Island_LCCN97519082.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Arriving_at_Ellis_Island_LCCN97519082.jpg/1920px-Arriving_at_Ellis_Island_LCCN97519082.jpg",
+        "transform_note": "center-cropped to 4:3; Commons bot image derives from lower-resolution LoC scan",
+        "source_archive_note": "Archived Commons 1920px derivative; complete full-resolution master was not downloaded because Wikimedia returned HTTP 429.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-02/T1-cc.jpg",
+            "objectKey": "linssikatalogi/T1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/T1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 299307,
+            "sha256": "3781f084aef75eb52c8d6ebe6ab44ed6ad80f0ad2fcad83478eb2d36b0d5ef00"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-02/T1-cc-480.jpg",
+            "objectKey": "linssikatalogi/T1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/T1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 43381,
+            "sha256": "6b7a52c9c9142646776c55a80f7b41936839d2dd7fad98b25bbf00d72aefcbcd"
+          }
+        ]
+      }
+    },
+    {
+      "id": "U1",
+      "nimi": "Sähkösanomakaapelit",
+      "tyyppi": "virta",
+      "havainnekuva": {
+        "status": "valmis",
+        "caption_fi": "Merenalaiset sähkösanomakaapelit muodostavat varhaisen maailmanlaajuisen verkon.",
+        "generation": "generoitu, Matkakirjan kuvaputki 2026",
+        "prompt": "Use case: stylized-concept. Asset type: Matkakirja historical flow lens, one 16:9 landscape concept image. Global submarine telegraph cables, 1851–1902. An antique parchment world map with recognizable continents and dark blue-brown oceans; the underwater network is the visual subject. Fine glowing brass cable lines connect Dover to Calais, cross the North Atlantic, extend from Europe toward India, onward to Australia, and across the Pacific by the early 1900s. Small coastal landing nodes and a few directional electric pulses travel along the submarine curves; a very faint cable cross-section engraving sits unobtrusively near an edge. Cream and sepia engraved land, cinematic depth and restrained vignette, clear multiple ocean routes without a modern digital network appearance. No people, UI, controls, panels, labels, letters, numbers, logos, screenshot or watermark.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-02/U1-havainne.jpg",
+            "objectKey": "linssikatalogi/U1-havainne.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/U1-havainne.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 900,
+            "tavut": 249646,
+            "sha256": "dfb12dbb68ba64b1eee9f1eaf6ccf4f4101a670b6b50fa39f21b45bea38b6e4e"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/concept-1b-02/U1-havainne-480.jpg",
+            "objectKey": "linssikatalogi/U1-havainne-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/U1-havainne-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 270,
+            "tavut": 32014,
+            "sha256": "90f8b9e91af27f4ceead209b3c18b46a042ef3465574a46793d24ce846400706"
+          }
+        ]
+      },
+      "cc_kuva": {
+        "status": "valmis",
+        "caption_fi": "Vuoden 1903 maailmankartta näyttää merikaapelien ja muiden sähkösanomalinjojen verkoston.",
+        "creator": "Bureau International des Administrations Télégraphiques (kartta); C. v. Hoven (piirros ja kaiverrus)",
+        "title": "Carte générale des grandes communications télégraphiques du monde",
+        "year": "1901/1903, toinen painos 1903",
+        "collection": "Boston Public Library map collection (maps.bpl.org; Commonsin lähde Flickr)",
+        "license": "CC BY 2.0",
+        "license_url": "https://creativecommons.org/licenses/by/2.0/",
+        "source_url": "https://commons.wikimedia.org/wiki/File:Carte_g%C3%A9n%C3%A9rale_des_grandes_communications_t%C3%A9l%C3%A9graphiques_du_monde.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Carte_g%C3%A9n%C3%A9rale_des_grandes_communications_t%C3%A9l%C3%A9graphiques_du_monde.jpg/1920px-Carte_g%C3%A9n%C3%A9rale_des_grandes_communications_t%C3%A9l%C3%A9graphiques_du_monde.jpg",
+        "transform_note": "center-cropped to 4:3; 1920px Wikimedia source derivative used because full scan returned HTTP 429",
+        "source_archive_note": "Archived Commons 1920px derivative; complete full-resolution master was not downloaded because Wikimedia returned HTTP 429.",
+        "files": [
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-02/U1-cc.jpg",
+            "objectKey": "linssikatalogi/U1-cc.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/U1-cc.jpg",
+            "mime": "image/jpeg",
+            "leveys": 1600,
+            "korkeus": 1200,
+            "tavut": 297766,
+            "sha256": "d652ce20ba7065a1885676a108e6e92f15d342bfd162617fb1fe8d289e209cba"
+          },
+          {
+            "localFile": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/fable-20260924/linssikatalogi/era2/cc-1b-02/U1-cc-480.jpg",
+            "objectKey": "linssikatalogi/U1-cc-480.jpg",
+            "url": "https://media.matkakirja.app/linssikatalogi/U1-cc-480.jpg",
+            "mime": "image/jpeg",
+            "leveys": 480,
+            "korkeus": 360,
+            "tavut": 58909,
+            "sha256": "f3c8d97de5999643b7891fbd89accfaf0f66e59c4706eee6b67134de12f2568f"
+          }
+        ]
+      }
+    }
+  ],
+  "r2_verified": {
+    "complete": true,
+    "canonicalUrlsVerified": true,
+    "objects": 72,
+    "receiptLocalPath": "output/fable-20260924/linssikatalogi/era2/ready-1b-20260925/r2-receipt.json"
+  }
+}
