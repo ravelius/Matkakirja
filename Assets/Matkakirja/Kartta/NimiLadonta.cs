@@ -615,7 +615,11 @@ namespace Matkakirja
             return a.Indeksi.CompareTo(b.Indeksi);
         }
 
-        /// <summary>Kaupungin ehdokas ladonnassa (KaupunkiMerkit): piste ja nimiö ruudulla.</summary>
+        /// <summary>
+        /// Kaupungin ehdokas ladonnassa (KaupunkiMerkit): piste ja nimiö ruudulla. Kaikki pikseleinä, y ylös.
+        /// Jos <see cref="Leveys"/> &gt; 0, nimi etsii paikkansa webin ehdokaskehästä (<see cref="NimenPaikat"/>);
+        /// muuten (ja pakollisella nimellä) <see cref="Nimio"/> on kiinteä laatikko.
+        /// </summary>
         public struct KaupunkiEhdokas
         {
             public Ruutulaatikko Piste, Nimio;
@@ -623,6 +627,105 @@ namespace Matkakirja
             public bool Pakko;
             /// <summary>Nimiöt ylipäätään sallittu (kerros "nimiot" tai linssinimet); false = vain piste.</summary>
             public bool Sallittu;
+            /// <summary>Pisteen paikka ruudulla.</summary>
+            public float X, Y;
+            /// <summary>Tekstin piirretty leveys ja korkeus (laatikon ydin, ilman rakoa).</summary>
+            public float Leveys, Korkeus;
+            /// <summary>Kirjasinkoko pikseleinä (webin kork = 1,15 × koko).</summary>
+            public float Kirjain;
+            /// <summary>Sivuehdokkaiden etäisyys pisteen keskeltä (webin d).</summary>
+            public float Sivu;
+            /// <summary>Lukittu paikka (web js/pallolauta/nimet.js LUKKO): kylki ei vaihdu vedossa eikä zoomissa.</summary>
+            public bool Lukittu;
+            public NimenPaikka Lukko;
+            /// <summary>Laudan oma asettelu (Sisalto.Kaupunki.nimionAnkkuri), jos <see cref="OnOma"/>; ks. <see cref="OmaPaikka"/>.</summary>
+            public bool OnOma;
+            public NimenPaikka Oma;
+        }
+
+        /// <summary>
+        /// Laudan oma asettelu (Sisalto.Kaupunki.nimionAnkkuri, skeema 1.31) ehdokkaaksi (web: dx = lx · 11/13 · k, perusviiva dy = ly · 11/13 · k, ank = la).
+        /// Muunnos tekstin keskipisteeksi y ylös kuten muissa ehdokkaissa: Dy = 0,35 · kork − ly · 11/13.
+        /// false, jos la puuttuu.
+        /// </summary>
+        public static bool OmaPaikka(string la, float lx, float ly, float kirjain, float kerroin, out NimenPaikka paikka)
+        {
+            paikka = default;
+            if (string.IsNullOrEmpty(la)) return false;
+            var ank = la == "end" ? NimenAnkkuri.Loppu : la == "middle" ? NimenAnkkuri.Keski : NimenAnkkuri.Alku;
+            float s = 11f / 13f * kerroin;
+            paikka = new NimenPaikka(lx * s, 0.35f * kirjain * 1.15f - ly * s, ank);
+            return true;
+        }
+
+        /// <summary>Nimen ankkuri kuten webin text-anchor: start = alkaa x:stä, end = päättyy x:ään, middle = keskellä.</summary>
+        public enum NimenAnkkuri : byte { Alku, Loppu, Keski }
+
+        /// <summary>Nimen paikka pisteen suhteen: Dx ankkurin x, Dy tekstin pystykeskipiste (pikseleinä, y ylös).</summary>
+        public struct NimenPaikka
+        {
+            public float Dx, Dy;
+            public NimenAnkkuri Ank;
+            public NimenPaikka(float dx, float dy, NimenAnkkuri ank) { Dx = dx; Dy = dy; Ank = ank; }
+            public override string ToString() => string.Format(CultureInfo.InvariantCulture, "({0:0.#}, {1:0.#} {2})", Dx, Dy, Ank);
+        }
+
+        /// <summary>Rako merkin (pelimerkkipinon) reunan ja nimiön välissä, pisteinä (web karttanimet.js NIMION_RAKO).</summary>
+        public const float NimionRako = 3f;
+        /// <summary>Kartografin kehän etäisyydet pisteinä (web KAUPUNGIN_KEHA [7, 13]).</summary>
+        public static readonly float[] KaupunginKeha = { 7f, 13f };
+        /// <summary>Pelimerkin varauksen lisävara pisteinä (web js/pallolauta/nimet.js PELIMERKIN_VARA_PX).</summary>
+        public const float PelimerkinVara = 4f;
+        /// <summary>Laatikon rako tekstin ympärillä pisteinä (vaaka, pysty).</summary>
+        public const float NimenRakoX = 2f, NimenRakoY = 2f;
+
+        /// <summary>
+        /// KAUPUNGIN NIMEN EHDOKKAAT (web js/karttanimet.js sijoitaKaupunginNimi) järjestyksessä: (laudan oma
+        /// asettelu lisätään kutsujassa eteen, <see cref="OmaPaikka"/>) pelimerkkipinon väistökehä, jos piste on
+        /// pinon sisällä (ylös, oikealle, vasemmalle, alas — omistaja 2.9.2026 "ensisijaisesti ylös"), sitten neljä
+        /// tavanomaista paikkaa (oikea, vasen, ylä, ala) ja kartografin kehä kahdeksaan suuntaan kahdella
+        /// etäisyydellä. Web mittaa perusviivasta y alas; tässä Dy on tekstin keskipiste y ylös, ja muunnos on
+        /// keskipiste = perusviiva − 0,35 × kork (webin oikea paikka dy = 0,35 × kork on pisteen korkeudella).
+        /// pino = pinon laatikko pisteen suhteen (null = ei pinoa), kerroin = pikseliä pisteelle.
+        /// </summary>
+        public static void NimenPaikat(float kirjain, float sivu, Ruutulaatikko? pino, float kerroin, List<NimenPaikka> ulos)
+        {
+            ulos.Clear();
+            float kork = kirjain * 1.15f, rako = NimionRako * kerroin, d = sivu;
+            if (pino is Ruutulaatikko p)
+            {
+                // Web: ylös dy = pino.y0 − y − 0,42k − rako, oikea/vasen pinon kyljestä rako + 1, alas pino.y1 + 0,62k + rako.
+                ulos.Add(new NimenPaikka(0, p.Y1 + 0.77f * kork + rako, NimenAnkkuri.Keski));
+                ulos.Add(new NimenPaikka(p.X1 + rako + kerroin, 0, NimenAnkkuri.Alku));
+                ulos.Add(new NimenPaikka(p.X0 - rako - kerroin, 0, NimenAnkkuri.Loppu));
+                ulos.Add(new NimenPaikka(0, p.Y0 - 0.27f * kork - rako, NimenAnkkuri.Keski));
+            }
+            // Tavanomaiset: web dy 0,35k / −0,75k / 1,35k perusviivasta.
+            ulos.Add(new NimenPaikka(d, 0, NimenAnkkuri.Alku));
+            ulos.Add(new NimenPaikka(-d, 0, NimenAnkkuri.Loppu));
+            ulos.Add(new NimenPaikka(0, 1.1f * kork, NimenAnkkuri.Keski));
+            ulos.Add(new NimenPaikka(0, -1.0f * kork, NimenAnkkuri.Keski));
+            foreach (float perus in KaupunginKeha)
+            {
+                float pituus = perus * kerroin, vino = pituus * 0.7f;
+                ulos.Add(new NimenPaikka(d + pituus, 0, NimenAnkkuri.Alku));
+                ulos.Add(new NimenPaikka(-(d + pituus), 0, NimenAnkkuri.Loppu));
+                ulos.Add(new NimenPaikka(0, 1.1f * kork + pituus, NimenAnkkuri.Keski));
+                ulos.Add(new NimenPaikka(0, -1.0f * kork - pituus, NimenAnkkuri.Keski));
+                ulos.Add(new NimenPaikka(d + vino, vino, NimenAnkkuri.Alku));
+                ulos.Add(new NimenPaikka(d + vino, -vino, NimenAnkkuri.Alku));
+                ulos.Add(new NimenPaikka(-(d + vino), vino, NimenAnkkuri.Loppu));
+                ulos.Add(new NimenPaikka(-(d + vino), -vino, NimenAnkkuri.Loppu));
+            }
+        }
+
+        /// <summary>Nimen laatikko ruudulla: teksti leveys × korkeus paikassa, rako ympärillä.</summary>
+        public static Ruutulaatikko NimenLaatikko(float x, float y, NimenPaikka p, float leveys, float korkeus, float kerroin)
+        {
+            float ax = x + p.Dx;
+            float x0 = p.Ank == NimenAnkkuri.Alku ? ax : p.Ank == NimenAnkkuri.Loppu ? ax - leveys : ax - leveys * 0.5f;
+            float cy = y + p.Dy, rx = NimenRakoX * kerroin, ry = NimenRakoY * kerroin;
+            return new Ruutulaatikko(x0 - rx, cy - korkeus * 0.5f - ry, x0 + leveys + rx, cy + korkeus * 0.5f + ry);
         }
 
         /// <summary>
@@ -642,6 +745,63 @@ namespace Matkakirja
                 naytetaan.Add(nakyy);
             }
         }
+
+        /// <summary>
+        /// KAUPUNKIEN LADONTA EHDOKASKEHÄLLÄ (web js/karttanimet.js ladoRuutunimet + js/pallolauta/nimet.js LUKKO):
+        /// 1) pelimerkkien pinot (<paramref name="pinot"/>, jo laajennettuina) ja kaikkien kaupunkien pisteet
+        /// varataan ensin; 2) nimet järjestyksessä: pakollinen kiinteään laatikkoonsa; lukittu vain lukittuun
+        /// paikkaansa (se ei vaihda kylkeä: jos paikka on varattu, nimi on tämän kehyksen piilossa); muut ottavat
+        /// ensimmäisen vapaan ehdokkaan (<see cref="NimenPaikat"/>), joka mahtuu ruutuun (web RUUDUN ULKOPUOLI ON
+        /// ESTE; lukittu saa leikkautua). Tulos: naytetaan[i] ja paikat[i] (uusi lukko, jos näytetään ehdokkaasta).
+        /// </summary>
+        public static void LadoKaupungit(List<KaupunkiEhdokas> ehdokkaat, IReadOnlyList<Ruutulaatikko> pinot, Ruutulaatikko ruutu,
+                                         float kerroin, Ruutuvaraukset varaukset, List<bool> naytetaan, List<NimenPaikka> paikat)
+        {
+            naytetaan.Clear();
+            paikat.Clear();
+            if (pinot != null) foreach (var r in pinot) varaukset.Varaa(r);
+            foreach (var e in ehdokkaat) varaukset.Varaa(e.Piste);
+            float sieto = kerroin;
+            var sisalla = new Ruutulaatikko(ruutu.X0 - sieto, ruutu.Y0 - sieto, ruutu.X1 + sieto, ruutu.Y1 + sieto);
+            foreach (var e in ehdokkaat)
+            {
+                var paikka = e.Lukko;
+                bool nakyy;
+                if (e.Pakko) nakyy = true;
+                else if (!e.Sallittu) nakyy = false;
+                else if (e.Leveys <= 0) nakyy = !varaukset.OsuuPaitsi(e.Nimio, e.Piste);
+                else if (e.Lukittu) nakyy = !varaukset.OsuuPaitsi(NimenLaatikko(e.X, e.Y, e.Lukko, e.Leveys, e.Korkeus, kerroin), e.Piste);
+                else
+                {
+                    nakyy = false;
+                    Ruutulaatikko? pino = null;
+                    if (pinot != null)
+                        foreach (var r in pinot)
+                        {
+                            if (e.X < r.X0 || e.X > r.X1 || e.Y < r.Y0 || e.Y > r.Y1) continue;
+                            var s = new Ruutulaatikko(r.X0 - e.X, r.Y0 - e.Y, r.X1 - e.X, r.Y1 - e.Y);
+                            pino = pino is Ruutulaatikko q ? new Ruutulaatikko(Math.Min(q.X0, s.X0), Math.Min(q.Y0, s.Y0), Math.Max(q.X1, s.X1), Math.Max(q.Y1, s.Y1)) : s;
+                        }
+                    NimenPaikat(e.Kirjain, e.Sivu, pino, kerroin, ehdokasPaikat);
+                    if (e.OnOma) ehdokasPaikat.Insert(0, e.Oma);
+                    foreach (var p in ehdokasPaikat)
+                    {
+                        var l = NimenLaatikko(e.X, e.Y, p, e.Leveys, e.Korkeus, kerroin);
+                        if (l.X0 < sisalla.X0 || l.Y0 < sisalla.Y0 || l.X1 > sisalla.X1 || l.Y1 > sisalla.Y1) continue;
+                        if (varaukset.OsuuPaitsi(l, e.Piste)) continue;
+                        paikka = p;
+                        nakyy = true;
+                        break;
+                    }
+                }
+                if (nakyy)
+                    varaukset.Varaa(e.Pakko || e.Leveys <= 0 ? e.Nimio : NimenLaatikko(e.X, e.Y, paikka, e.Leveys, e.Korkeus, kerroin));
+                naytetaan.Add(nakyy);
+                paikat.Add(paikka);
+            }
+        }
+
+        static readonly List<NimenPaikka> ehdokasPaikat = new List<NimenPaikka>();
 
         /// <summary>
         /// Noston merkki ja nimiö ruudulla (Natiivi-UI:n NostotKartalla.Laatikko samoin mitoin): symboli 20 × 20 pt
