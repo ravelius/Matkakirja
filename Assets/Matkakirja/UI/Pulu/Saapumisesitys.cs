@@ -291,7 +291,8 @@ namespace Matkakirja.Natiivi
             vaihto?.Pause();
             if (string.IsNullOrEmpty(k) || k != kaupunki) return;
             var v = Fokusvirrat.Hae(k);
-            if (v == null || kommentoitu.Contains(k) || v.PuluKommentit.Count == 0)
+            // Ohita tai lähtö (PeliOhjain.LuentoOhitettu, web luennanOhitus): pulun kommenttia ei aloiteta.
+            if (v == null || kommentoitu.Contains(k) || v.PuluKommentit.Count == 0 || ohjain?.LuentoOhitettu == true)
             {
                 kortti.Kuvat.Hiljeni();
                 return;

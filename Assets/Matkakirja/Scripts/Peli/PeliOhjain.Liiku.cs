@@ -148,6 +148,15 @@ namespace Matkakirja.Natiivi
         /// Heitto ilman tavoitetta (web doWalk/doRoll ja vaihe 'move'): noppa ensin (PeliNakymat.Noppa),
         /// sitten nopan siirrot kartalle (SiirtoKohteet). Ilman siirtoja vuoro päättyy (web 'stuck').
         /// </summary>
+        /// <summary>Web wait(260) nopan kallahduksen ja siirtokohteiden välissä.</summary>
+        const float KohteidenTaukoS = 0.26f;
+
+        static System.Collections.IEnumerator Viiveella(float s, Action a)
+        {
+            yield return new WaitForSecondsRealtime(s);
+            a();
+        }
+
         string HeitaJaValitse()
         {
             if (Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
@@ -155,6 +164,8 @@ namespace Matkakirja.Natiivi
             if (matka.Tila.Vaihe == Vaihe.Siirto) { if (Tila != SilmukanTila.Kartta) Kartalle(false); else PaivitaSiirtoKohteet(); return null; }
             var lahto = matka.Tila.Pelaaja.Sijainti;
             tapahtumat.Clear();
+            // Heitto vaientaa paikan puheen (web doRoll → vaiennaPaikanPuhe, löydökset 53–54).
+            VaiennaPaikanPuhe();
             var r = matka.Heita();
             if (!r.Ok) { Virhe(r.Virhe); Kartalle(false); return r.Virhe; }
             dialogi.Piilota();
@@ -178,7 +189,9 @@ namespace Matkakirja.Natiivi
                 Tila = SilmukanTila.Matkalla;
                 matkaKohde = a.Value;
                 int tunnus = ++noppaTunnus;
-                noppaLiike = jatko;
+                // Web ui.js ~23580: nopan kallahduksen jälkeen wait(260) ennen kohdemerkkejä ja sovitusta
+                // (liikkumisen pariteetti A10): silmäluku ehtii näkyä ennen kuin kartta liikkuu.
+                noppaLiike = () => StartCoroutine(Viiveella(KohteidenTaukoS, () => { if (tunnus == noppaTunnus) jatko(); }));
                 noppaLoppuu = Time.unscaledTime + NopanVaraS;
                 try { PeliNakymat.Noppa(noppa, a.Value.Lat, a.Value.Lon, () => { if (tunnus == noppaTunnus) NoppaValmis(); }); }
                 catch (Exception e) { Debug.LogException(e); NoppaValmis(); }
@@ -357,15 +370,18 @@ namespace Matkakirja.Natiivi
             var r = KarttaReitit;
             var sijainti = matka.Tila.Pelaaja.Sijainti;
             if (r == null || kohteet.Count == 0 || !sijainti.Kaupungissa) return;
-            try { r.Lentokaaret(sijainti.Kaupunki, kohteet); r.SovitaKohteet(kohteet); lentokaaretNakyvissa = true; }
+            try { r.Lentokaaret(sijainti.Kaupunki, kohteet); r.SovitaKohteet(kohteet); lentokaaretNakyvissa = true; lentoKohteet = kohteet; }
             catch (Exception e) { Debug.LogException(e); }
+            PaivitaPeliSuodatin();
         }
 
         void PiilotaLentokaaret()
         {
             if (!lentokaaretNakyvissa) return;
             lentokaaretNakyvissa = false;
+            lentoKohteet = null;
             try { KarttaReitit?.Lentokaaret(null, null); } catch (Exception e) { Debug.LogException(e); }
+            PaivitaPeliSuodatin();
         }
 
         /// <summary>Heittonappi; vaihda-kutsu vain IHeittoVaihto-näkymälle ja vain kun vaihto on tarjolla.</summary>

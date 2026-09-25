@@ -98,7 +98,11 @@ namespace Matkakirja.Peli
 
         string Tyyppi(string kaupunki) => kaupunki != null && t.Tyypit.TryGetValue(kaupunki, out var ty) ? ty : null;
 
-        bool JalkamatkaKaynnissa => liike == Kulkutapa.Maa && askeleita > 1;
+        /// <summary>
+        /// Web ui.js animatePawn: maitse &amp;&amp; path.length &gt; 1 → metsä-kori. maitse on tosi myös bussilla (autokyyti,
+        /// ui.js ~12911), joten bussimatka soi samaa jalkamatkan maisemaa (liikkumisen pariteetti B20).
+        /// </summary>
+        bool JalkamatkaKaynnissa => (liike == Kulkutapa.Maa || liike == Kulkutapa.Bussi) && askeleita > 1;
         bool LentoKaynnissa => liike == Kulkutapa.Lento;
 
         /// <summary>Ruudun lopussa: lähettää vain muuttuneet (paikka, avauksen purku, visamusiikki).</summary>
