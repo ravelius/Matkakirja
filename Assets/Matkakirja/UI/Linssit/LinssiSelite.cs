@@ -60,6 +60,7 @@ namespace Matkakirja.Natiivi
 
             kerros.TurvaMuuttui += Asettele;
             turva.RegisterCallback<GeometryChangedEvent>(_ => Asettele());
+            kortti.RegisterCallback<GeometryChangedEvent>(e => { if (!Mathf.Approximately(e.oldRect.height, e.newRect.height)) Asettele(); });
             Asettele();
         }
 
@@ -72,9 +73,26 @@ namespace Matkakirja.Natiivi
             s.left = levea ? 8 : StyleKeyword.Auto;
             s.bottom = levea ? 14 : StyleKeyword.Auto;
             s.right = levea ? StyleKeyword.Auto : 8;
-            // Taikalasit ja "Sulje linssi" ovat oikeassa yläkulmassa (Linssivalitsin, LinssiUi): kortti niiden alle.
+            // Taikalasit ja "Sulje linssi" ovat oikeassa yläkulmassa (Linssivalitsin, LinssiUi): auki oleva kortti niiden
+            // alle. Kutistettu nimilappu (web .linssi-selite.pieni, top 0,5 rem) samalle riville niiden vasemmalle
+            // puolelle (linssipariteetti rivit 30/31: lappu oli omalla rivillään ✕:n alla).
             s.top = levea ? StyleKeyword.Auto : Ylapalkki.Varaus + 8 + 48;
+            if (!levea && pieni && Vasen != null && kortti.parent != null)
+            {
+                float raja = Vasen();
+                if (!float.IsNaN(raja) && raja > 0f)
+                {
+                    s.right = Mathf.Max(8f, kortti.parent.worldBound.xMax - raja + 8f);
+                    s.top = Ylapalkki.Varaus + 8 + (40f - Mathf.Max(24f, kortti.layout.height)) / 2f;
+                }
+            }
         }
+
+        /// <summary>Yläkulman nappirivin vasen reuna maailmankoordinaateissa (✕ tai taikalasit); LinssiUi asettaa.</summary>
+        public System.Func<float> Vasen;
+
+        /// <summary>Nappirivi muuttui (✕:n teksti sulaa): nimilapun paikka uudelleen.</summary>
+        public void Uudelleen() { if (Nakyvissa) Asettele(); }
 
         /// <summary>Linssin selite näkyviin (null tai ei rivejä = kortti pois).</summary>
         public void Nayta(LinssiTiedot t)
@@ -117,6 +135,7 @@ namespace Matkakirja.Natiivi
             pieni = p;
             kortti.EnableInClassList("mk-pieni", p);
             runko.style.display = p ? DisplayStyle.None : DisplayStyle.Flex;
+            Asettele();
         }
     }
 }
