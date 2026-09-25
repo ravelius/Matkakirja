@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2234, teksti: 'Ranskan lukitut ankkurit uusille maastokohteille (#3235)' },
   { v: 2233, teksti: 'Peruskartta 2026-09-25 webin palloon (#3216)' },
   { v: 2232, teksti: 'Sisältöjuna: maakunnat erä 1, turistiopas 20, Pariisin kuvat' },
   { v: 2231, teksti: 'Leikatut kohtauskuvat: Luxemburg, Madrid, New Y… (#3215)' },
