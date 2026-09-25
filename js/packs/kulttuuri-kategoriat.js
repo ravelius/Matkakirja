@@ -117401,6 +117401,219 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Amazonindelfiini',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Porto Velho, Madeira River, Governador Jorge Teixeira
+       * de Oliveira International Airport, BR-364, BR-319, Tambaqui,
+       * Tacacá, Acmella oleracea, Santo Antônio Dam, Lago do Cuniã
+       * Extractive Reserve), Wikivoyagesta (Porto Velho, Manaus) sekä
+       * portugalin Wikipediasta (Porto Velho: ilmasto, kalat, satama ja
+       * juhlat; Tambaqui: Rondônian kasvatustilasto 2021–2022; Turismo em
+       * Rondônia: Três Caixas d'Água ja Arraial Flor do Maracujá; Reserva
+       * Extrativista do Lago do Cuniã) — teksti omaa. Nostojen aiheita
+       * (Madeira-joki, katedraali ja vanha keskusta, auringonlasku
+       * rantaraitilla, viljasatama, kaupungin kasvu, amazonindelfiini)
+       * eikä Perkeleen radan kategorian rautatietä ja rautatiemuseota
+       * toisteta. Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja kuvat katsottu silmin; Santo Antônion vanhan
+       * rajan kyltti luettu MTurin samalla käynnillä ottamasta kuvasta.
+       * Pystykuva: Três Caixas d'Água alhaalta kuvattuna.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: "Caixas d'água da ferrovia Madeira-Mamoré em Porto Velho - RO.jpg",
+          lyhyt: 'Kolme vanhaa vesitornia ovat Porto Velhon tunnetuin maamerkki.',
+          selite: 'Três Caixas d\'Água eli Kolme Mariaa seisovat ristikkojaloillaan '
+            + 'keskustan aukiolla. Säiliöt pystytettiin 1910 ja 1912, ja ne '
+            + 'jakoivat kaupungille vettä painovoimalla vuoteen 1957 asti.',
+          lahde: 'Sergio Del Giorno, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Porto Velho on nuori virkamies- ja kauppakaupunki Brasilian '
+          + 'länsilaidalla, eikä sillä ole siirtomaa-ajan vanhaa kaupunkia eikä '
+          + 'matkailutoimistoa. Uteliaalle se antaa silti paljon. Perille '
+          + 'pääsee lentäen, pitkän matkan bussilla tai riippumatossa '
+          + 'jokilaivan kannella, ja kaupungin postikorttikuva on kolme '
+          + 'ristikkojalkojen varaan nostettua vesitornia. Keittiö elää '
+          + 'Madeiran kaloista ja maniokista, kesäkuun juhlien aikaan '
+          + 'kaupungissa tanssitaan Amazonian suurimmassa festa juninassa, ja '
+          + 'alajuoksun suojelualueella kalastajat melovat yhä itse tehdyillä '
+          + 'kanooteilla. Kuivin aika on kesä–elokuussa, mutta sen lopulla '
+          + 'taivaan voi peittää kulojen savu.',
+        artikkeli: {
+          nimi: 'Matkailijan Porto Velho',
+          teksti: 'Porto Velhoon voi saapua riippumatossa jokilaivan kannella.',
+          nosto: 'Kun tacacán jambunlehdet osuvat kieleen, suu kihelmöi ja '
+            + 'puutuu kuin hammaslääkärin tuolissa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille lentäen, bussilla tai jokea pitkin',
+              teksti: 'Nopein reitti on lento. Governador Jorge Teixeira de '
+                + 'Oliveira -lentoasema on noin seitsemän kilometrin päässä '
+                + 'keskustasta, ja sieltä lennetään suoraan Brasilian suuriin '
+                + 'kaupunkeihin. Kenttä on nimetty Rondônian ensimmäisen '
+                + 'kuvernöörin mukaan, ja kansainvälisen aseman se sai vuonna '
+                + '2002. Maata pitkin kaupunkiin tuo BR-364, 1960-luvulla '
+                + 'avattu ja 1980-luvulla päällystetty valtatie, joka yhdistää '
+                + 'Rondônian São Pauloon ja Acreen: Rio Brancosta ajetaan 544 '
+                + 'kilometriä, Cuiabásta lähes 1 500. Linja-autoasemalta '
+                + 'lähtee vuoroja useimpiin suuriin kaupunkeihin, mutta matkat '
+                + 'ovat pitkiä: Cuiabáan noin vuorokausi ja São Pauloon noin '
+                + 'kaksi ja puoli. Madeiran ylittää nykyään silta, jonka takaa '
+                + 'alkaa pohjoiseen Manausiin vievä BR-319. Tie avattiin '
+                + '1970-luvulla mutta rapistui pian kulkukelvottomaksi, ja sitä '
+                + 'ajetaan yhä lähinnä kuivalla kaudella. Tunnelmallisin '
+                + 'tulotapa on joki: Manausin ja Porto Velhon väliä kulkee '
+                + 'matkustajalaivoja pari kolme kertaa viikossa, ja halvimmassa '
+                + 'luokassa nukutaan kannella omassa riippumatossa.',
+              kuva: [
+                {
+                  tiedosto: 'Ponte Rio Madeira.jpg',
+                  lyhyt: 'Silta vie Madeiran yli kohti Manausiin johtavaa BR-319-tietä.',
+                  selite: 'Ilmakuvassa silta kaartuu ruskean Madeiran yli, '
+                    + 'taustalla on Porto Velhon keskusta ja joella liikkuu '
+                    + 'proomuja. Ennen siltaa autot kuljetettiin joen yli '
+                    + 'lautoilla.',
+                  lahde: 'Silva Júnior / MTur, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Porto Velho - Bus station in Porto Velho (4088529479).jpg',
+                  lyhyt: 'Linja-autoasemalta São Pauloon on matkaa noin kaksi ja puoli vuorokautta.',
+                  selite: 'Porto Velhon linja-autoasema lokakuussa 2009. '
+                    + 'Katoksen alla on muun muassa alueen suurimman '
+                    + 'bussiyhtiön Eucaturin lipunmyynti.',
+                  lahde: 'Ben Sutherland, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Centro, Porto Velho - RO, Brazil - panoramio.jpg',
+                  lyhyt: 'Monikerroksiset jokilaivat odottavat Madeiran rannassa illan hämärässä.',
+                  selite: 'Matkustajalaivat ovat kiinnittyneet Porto Velhon '
+                    + 'keskustan rantaan. Niillä kuljetaan jokivarren kyliin ja '
+                    + 'Manausiin asti, ja halvimmassa luokassa matkustaja '
+                    + 'ripustaa oman riippumattonsa kannelle.',
+                  lahde: 'clsbezerra, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Tambaqui, tacacá ja sunnuntain tori',
+              teksti: 'Madeiran vesistössä on arvioitu elävän yli 900 '
+                + 'kalalajia, ja se näkyy lautasella. Tutuimpia ovat '
+                + 'tambaqui, piraijojen suurikokoinen sukulainen, jonka '
+                + 'poskihampaita muistuttavat hampaat murskaavat tulvametsään '
+                + 'pudonneita hedelmiä ja siemeniä, sekä petokala tucunaré, '
+                + 'monni surubim ja pienempi jatuarana. Tambaquita myös '
+                + 'kasvatetaan, ja Rondônia on viime vuosina ollut sen '
+                + 'suurin tuottaja koko Brasiliassa. Kalan rinnalla kulkee '
+                + 'maniokki. Sen puristemehusta keitetty kellertävä tucupi on '
+                + 'tacacán pohja: kuuma liemi kaadetaan kalebassikuppiin '
+                + 'tapiokatärkkelyksen, kuivattujen katkarapujen ja jambun '
+                + 'lehtien päälle. Jambu on kasvi, joka kihelmöi ja puuduttaa '
+                + 'kieltä, ja ensikertalaisen suu voi olla tunnottomana '
+                + 'pitkäänkin. Cai n\'Águan viikkotorilla myydään '
+                + 'sunnuntaisin jo aamuviideltä açaíta, tacacáta, vatapáta ja '
+                + 'tuoretta sokeriruokomehua. Açaí syödään täällä kulhollisena '
+                + 'guaranan, banaanin ja granolan kanssa.',
+              kuva: {
+                tiedosto: 'Henrique Fotografo Feira Tradicional PortoVelho RO (40222011644).jpg',
+                lyhyt: 'Torin kalapöydällä on hopeakylkisiä ja vihreäjuovaisia jokikaloja.',
+                selite: 'Tuoreita jokikaloja myynnissä Porto Velhon torilla '
+                  + 'maaliskuussa 2018. Madeiran vesistö on yksi maailman '
+                  + 'lajirikkaimmista makean veden alueista.',
+                lahde: 'Henrique Fotógrafo / MTur, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Vesitornit, käsityöt ja kesäkuun juhlat',
+              teksti: 'Keskustassa, omalla aukiollaan, seisoo Porto Velhon '
+                + 'tunnus: kolme ristikkojalkojen varaan nostettua '
+                + 'vesisäiliötä, joita kutsutaan myös Kolmeksi Mariaksi. '
+                + 'Ensimmäinen pystytettiin 1910 ja kaksi muuta 1912. Ne '
+                + 'valmisti chicagolainen Chicago Bridge & Iron Works, kuhunkin '
+                + 'mahtuu 200 000 litraa, ja kaupungin vesi tuli niistä '
+                + 'painovoimalla vuoteen 1957 asti. Aukion kupeessa on Casa da '
+                + 'Cultura Ivan Marrocos, jossa on vaihtuvia paikallisten '
+                + 'taiteilijoiden näyttelyitä, ja Casa do Artesão '
+                + '-käsityötalossa myydään alkuperäiskansojen ja paikallisten '
+                + 'tekijöiden töitä savesta, köynnöksistä, bambusta ja kumista. '
+                + 'Porto Velho on siirtolaisten kaupunki, ja sen juhlissa '
+                + 'kuuluu etenkin Koillis-Brasilian perintö. Kesäkuun juhlien '
+                + 'aikaan pidettävä Arraial Flor do Maracujá on Amazonian '
+                + 'suurin festa junina, jossa esiintyvät kansantanssiryhmät ja '
+                + 'boi-bumbá-härkänäytelmät. Karnevaalina kaduille lähtee '
+                + 'vuonna 1981 perustettu Banda do Vai Quem Quer, jonka perässä '
+                + 'kulkee yli 100 000 ihmistä.',
+              kuva: {
+                tiedosto: 'Henrique Fotografo Casa do Artesão e artesanto indígena PortoVelho RO (26057811257).jpg',
+                lyhyt: 'Casa do Artesão myy helmistä pujoteltuja kaimaaneja ja liskoja.',
+                selite: 'Helmistä pujoteltuja eläinhahmoja myynnissä Porto '
+                  + 'Velhon Casa do Artesão -käsityötalossa. Talo tukee '
+                  + 'alkuperäiskansojen ja paikallisten käsityöläisten työtä.',
+                lahde: 'Henrique Fotógrafo / MTur, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Kappeli koskella ja kalastajien järvi',
+              teksti: 'Lyhin retki vie seitsemän kilometriä ylävirtaan Santo '
+                + 'Antônioon, jossa kosken partaalla oli kylä jo ennen Porto '
+                + 'Velhoa. Santo Antônio do Madeira kuului silloin Mato '
+                + 'Grosson maakuntaan, ja kun kumibuumi hiipui, sen raitiotie '
+                + 'ja viikkolehti jäivät historiaan. Törmällä seisoo yhä pieni '
+                + 'valkoinen Pyhän Antonius Padovalaisen kappeli, ja lähellä '
+                + 'kyltti ja muistomerkki kertovat Amazonasin ja Mato Grosson '
+                + 'vanhasta rajasta. Koskea ei enää ole: vuonna 2012 '
+                + 'käynnistyneen Santo Antônion vesivoimalan allas peitti sen. '
+                + 'Toinen suunta on alavirta. Madeiran länsirannalla on vuonna '
+                + '1999 perustettu Lago do Cuniãn luonnonvarareservi, jossa '
+                + 'noin 400 asukasta elää kalastuksesta ja keräilystä. '
+                + 'Reservin nimikkojärvi on noin 18 000 hehtaarin kokoinen. '
+                + 'Alueella elää jalohaikaroita, jabirukurkia ja '
+                + 'mustakaimaaneja, ja pirarucua saa pyytää perinteisin '
+                + 'menetelmin vain touko–lokakuussa. Kanoottien rakentamisen '
+                + 'taito on opittu alkuperäisasukkailta. Kohteisiin kannattaa '
+                + 'lähteä paikallisen oppaan kanssa, sillä opasteita on vähän.',
+              kuva: {
+                tiedosto: 'Aurora amazônica no Lago do Cuniã.jpg',
+                lyhyt: 'Kalastaja meloo aamu-usvassa Lago do Cuniãn luonnonvarareservissä.',
+                selite: 'Auringonnousu Lago do Cuniãlla elokuussa 2013. '
+                  + 'Reservin asukkaat lähtevät aamuisin kalaan, ja kalastus on '
+                  + 'heidän tärkein elinkeinonsa.',
+                lahde: 'RodrigoErse, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sää, savu ja arjen varotoimet',
+              teksti: 'Porto Velho on Brasilian kuumimpia pääkaupunkeja: '
+                + 'keskilämpö pysyy ympäri vuoden 25 ja 26 asteen tienoilla. '
+                + 'Marras–huhtikuussa sataa keskimäärin parisataa millimetriä '
+                + 'kuussa, ja kuivin aika osuu kesä–elokuuhun. Kuivalla '
+                + 'kaudella on omat yllätyksensä. Etelästä saapuva kylmä '
+                + 'ilmamassa, friagem, voi pudottaa lämpötilan joinakin '
+                + 'päivinä alle 15 asteen, ja elo–syyskuussa taas mitataan '
+                + 'vuoden kovimmat helteet, kun ilman suhteellinen kosteus voi '
+                + 'laskea alle 30 prosentin. Samaan aikaan kulot voivat peittää '
+                + 'kaupungin savuun. Rondônia elää Amazonin aikaa, tunnin '
+                + 'Brasílian jäljessä. Hanavettä ei kannata juoda: alle puolet '
+                + 'asukkaista on kunnallisen vesijohdon piirissä, ja kaupunki '
+                + 'on vuosia jäänyt viimeiseksi Brasilian sadan suurimman '
+                + 'kaupungin vesihuoltovertailussa. Porto Velho kuuluu myös '
+                + 'Brasilian väkivaltaisimpiin pääkaupunkeihin, joten '
+                + 'arvoesineet jätetään majapaikkaan ja satamaan mennään vähin '
+                + 'tavaroin. Lähiseutua on helpointa tutkia vuokra-autolla, ja '
+                + 'auto kannattaa ottaa tunnetulta vuokraamolta, ei '
+                + 'yksityiseltä.',
+              kuva: {
+                tiedosto: 'Cidade defumada (4932168845).jpg',
+                lyhyt: 'Kulojen savu peitti Porto Velhon keskustan elokuussa 2010.',
+                selite: 'Näkymä Porto Velhon keskustaan elokuussa 2010, kun '
+                  + 'ympäristön kulot olivat sumentaneet taivaan. Savua voi '
+                  + 'esiintyä kuivan kauden lopulla, elo–syyskuussa.',
+                lahde: 'Luiz Alexandre, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'perkeleenrata',
