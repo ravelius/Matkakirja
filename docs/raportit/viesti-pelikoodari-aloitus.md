@@ -4,13 +4,11 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260925-ilta.md`](viesti-pelikoodari-luovutus-20260925-ilta.md) (25.9. klo 15.3x).
-   - Liikkumisen pariteettilista: ERI/PUUTTUU 0 (A13 junassa). Todennettu videolla A3, A9, A11, B22, B23, A13 ja D6.
-   - ENSIMMÄISENÄ: C16 (+ C10 ja C12). Edellinen A/B-testi oli virheellinen (väärä nollauskomento). Aja B uudelleen komennolla
-     **`ui livia paljastus nollaa`** (luovutus luku 5), ja hyvän tuloksen jälkeen lähetä merge-pyyntö
-     `natiivi-ui/paljastus-c16b` 30db4207 Natiivisepälle Natiivi-UI:n puolesta. Pyydä vuoro ensin Julkaisijalta.
-   - Omistajan b13-löydökset 93, 100, 101, 104 ja 109 ovat junassa. 100 ja 109 todennetaan Laitetestaajan b14-kierroksella.
-     111:n ja 112:n mitat ovat Natiivisepällä. Web #3188 (pariteettikuvat: reitit) on Julkaisijalla.
+   [`viesti-pelikoodari-luovutus-20260925-yo2.md`](viesti-pelikoodari-luovutus-20260925-yo2.md) (25.9. klo 19.1x).
+   - Junassa (build 16): 117, 118, Esilataaja erä 1, LÄMPÖERÄ (Ruudunpaivitys, Lampo, KehysMittari-rivi).
+   - ENSIMMÄISENÄ: Esilataaja erä 2 (`pelikoodari/esilataaja-2` eaf5b352, koodattu, mittaamatta) → verkko-savuke kylmä + lämmin,
+     raja "saapuminen 0 ms" PASS, raportti ja merge-pyyntö. Simulaattorivuoro A2FD9C9F noin klo 19.50 (Julkaisija).
+   - Avoinna: lepopiirto (PAIKALLAAN) odottaa Natiivi-UI:n UiRauhassa-korjausta ja Natiivisepän PallonLepoa; erät 3–4 suunnitelman mukaan.
 3. Merge-pyynnöt ja tilaukset: `/Users/Shared/Claude/proto-3d/lokit/merge-pyynto-pelikoodari-maisemakompressori.md`
    (Claude Desktopin 10 viestin raja: niputa viestit).
 
