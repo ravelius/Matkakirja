@@ -113,6 +113,9 @@ namespace Matkakirja.Natiivi
             var turva = kerros.Turva(UiKerros.Tilarivi);
             // Kuvapakka ensin: se jää kortin alle (webin z-index 3 < rail 4).
             Kuvat = new Luentakuvasarja(kerros, turva);
+            // Kuvien lennon maali (web lennataKuvatMatkakirjaan: .fact-card): näkyvän kortin laatikko, muuten ei lentoa.
+            Kuvat.Maali = () => kortti.panel != null && kortti.resolvedStyle.display != DisplayStyle.None
+                && kortti.resolvedStyle.opacity > 0.01f ? kortti.worldBound : default;
 
             kortti = Rakenne.El("mk-matkakirja", turva);
             kortti.style.display = DisplayStyle.None;
