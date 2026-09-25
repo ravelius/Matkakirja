@@ -1,0 +1,1022 @@
+[
+  {
+    "id": "aden-steamer-point",
+    "replacement_id": "aden-steamer-point-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/aden-steamer-point-vari2.png",
+    "sha256": "508691820fa7cf68486794d1a4f8e967c1f5ebc9f8e9197ad608364ad6a312e5",
+    "bytes": 1765055,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "aden-kansallismuseo",
+    "replacement_id": "aden-kansallismuseo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/aden-kansallismuseo-vari2.png",
+    "sha256": "d62758ba0f11c1ff211c2bec4ae246031507c4b1c0ab8e3a6ed031aff3708643",
+    "bytes": 1784903,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "aden-craterin-tori",
+    "replacement_id": "aden-craterin-tori-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/aden-craterin-tori-vari2.png",
+    "sha256": "f1f5e69f74eb6aca1cc544ee47055600d6cf269923eec625a49884304b93dc44",
+    "bytes": 2144328,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "aden-tawilan-altaat",
+    "replacement_id": "aden-tawilan-altaat-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/aden-tawilan-altaat-vari2.png",
+    "sha256": "acb8ab24f5a9b1a9545b6aa96027fc9148c0d978f6066162866694de86b4ddc7",
+    "bytes": 1674783,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "astana-astana-opera",
+    "replacement_id": "astana-astana-opera-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/astana-astana-opera-vari2.png",
+    "sha256": "53f75bb16ff1d203a2a3701fdbd360dfab3bee541bf05e8c00e87cb916a44f2b",
+    "bytes": 1479344,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "astana-khan-shatyr",
+    "replacement_id": "astana-khan-shatyr-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/astana-khan-shatyr-vari2.png",
+    "sha256": "9e3a721c55db4b319cf39fb357745760e508fedad853ae346920d6e53c38348f",
+    "bytes": 1497347,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "astana-bajterek",
+    "replacement_id": "astana-bajterek-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/astana-bajterek-vari2.png",
+    "sha256": "cc1ab21f4b5c945a6213e144cc0a4cd0be7166169a7e6f9ce4ba118b80f661ca",
+    "bytes": 1196208,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "astana-nurjol-bulevardi",
+    "replacement_id": "astana-nurjol-bulevardi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/astana-nurjol-bulevardi-vari2.png",
+    "sha256": "fb083e95e13911ee1b2727bc83b01aab7c38e74a490abd04e31ac5a0b0741ae9",
+    "bytes": 1744264,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "astana-akorda",
+    "replacement_id": "astana-akorda-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/astana-akorda-vari2.png",
+    "sha256": "cf04b76eedd4ce17a745aa083d2a228fd4527daeefec3baa0de299e568a5030a",
+    "bytes": 1485806,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "astana-hazrat-sultanin-moskeija",
+    "replacement_id": "astana-hazrat-sultanin-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/astana-hazrat-sultanin-moskeija-vari2.png",
+    "sha256": "3b8ba817cdd3ce9445aeb3e9fddad33b0b31063d0d82fa195eaeb920e6fbd4e8",
+    "bytes": 1746422,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "astana-rauhan-ja-sovinnon-palatsi",
+    "replacement_id": "astana-rauhan-ja-sovinnon-palatsi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/astana-rauhan-ja-sovinnon-palatsi-vari2.png",
+    "sha256": "42b3a2635a269977da4be76afabe5748f689c481f2ede712671e987f52d115f6",
+    "bytes": 1437485,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "astana-kansallismuseo",
+    "replacement_id": "astana-kansallismuseo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/astana-kansallismuseo-vari2.png",
+    "sha256": "881b3096fb77ceee6fa933193cc549551e93ceb777e02df236555de189cad55e",
+    "bytes": 1625761,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "auckland-ferry-building",
+    "replacement_id": "auckland-ferry-building-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/auckland-ferry-building-vari2.png",
+    "sha256": "844a5590150eabb5698eca35de2d92ee44e9457ea6e90b290e1f5bf223d8b950",
+    "bytes": 1203086,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "auckland-victoria-park-market",
+    "replacement_id": "auckland-victoria-park-market-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/auckland-victoria-park-market-vari2.png",
+    "sha256": "f4a978aee0c6a32426d87dab42400bd95f24b020a324f2a98f8d03a6a7442b48",
+    "bytes": 1330816,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "auckland-albert-park",
+    "replacement_id": "auckland-albert-park-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/auckland-albert-park-vari2.png",
+    "sha256": "1e28a4e9a181a2df077f809d0f3e4428d27e6f5e18894d2af57c2e6bf9d8ae46",
+    "bytes": 1721268,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "auckland-aucklandin-kaupungintalo",
+    "replacement_id": "auckland-aucklandin-kaupungintalo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/auckland-aucklandin-kaupungintalo-vari2.png",
+    "sha256": "13a72f19f5dbbb9f2cc642e9c302b879473ce57ea4b4444c46a9d352c7caa714",
+    "bytes": 1319933,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "auckland-karangahape-road",
+    "replacement_id": "auckland-karangahape-road-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/auckland-karangahape-road-vari2.png",
+    "sha256": "92dd176f1af9d0b28c4ed87b353f9ad05dee3b956c00151f09dace7cd69532bb",
+    "bytes": 1263234,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "auckland-symonds-streetin-hautausmaa",
+    "replacement_id": "auckland-symonds-streetin-hautausmaa-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/auckland-symonds-streetin-hautausmaa-vari2.png",
+    "sha256": "a101925272c1d11ed493da4bc01bc1c51b5bb51575640572bb7eef47f9b52381",
+    "bytes": 1669689,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "auckland-ewelme-cottage",
+    "replacement_id": "auckland-ewelme-cottage-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/auckland-ewelme-cottage-vari2.png",
+    "sha256": "541dbc9c8548f6fdb2fa0ba14fd472a27de31ae1a7f24736c51c528bce47a678",
+    "bytes": 789419,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "auckland-highwic",
+    "replacement_id": "auckland-highwic-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/auckland-highwic-vari2.png",
+    "sha256": "7a4b93435d8dad1d160f9e3513b5002e9d248861069fb482384636507afb25ea",
+    "bytes": 1592837,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "auckland-eden-park",
+    "replacement_id": "auckland-eden-park-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/auckland-eden-park-vari2.png",
+    "sha256": "2e8890301d7e0fe3b1810ac6e3fdc16d868400a74c78a2cc16a288b843cf01e4",
+    "bytes": 1543546,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "auckland-maungawhau",
+    "replacement_id": "auckland-maungawhau-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/auckland-maungawhau-vari2.png",
+    "sha256": "dadaaa898395bb64c3990f943f5ab73c781cf1b52ee2840facf31522a34f7ba5",
+    "bytes": 1398723,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "bangkok-sanam-luang",
+    "replacement_id": "bangkok-sanam-luang-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/bangkok-sanam-luang-vari2.png",
+    "sha256": "66e566483a01c41e3ad01e6d9ed60832d45f2ec612ba0ecc246c1755309deb9b",
+    "bytes": 1158747,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "bangkok-wat-saket-ja-kultainen-vuori",
+    "replacement_id": "bangkok-wat-saket-ja-kultainen-vuori-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/bangkok-wat-saket-ja-kultainen-vuori-vari2.png",
+    "sha256": "80a828e89f143df1aaafe61ca8d90375b7b995c27f3a1e4237b278131a04f1be",
+    "bytes": 1153051,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "bangkok-sao-ching-cha",
+    "replacement_id": "bangkok-sao-ching-cha-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/bangkok-sao-ching-cha-vari2.png",
+    "sha256": "e574d066f782d3533cf8b647014f58b124e6a501387caf059fdc83558d610e13",
+    "bytes": 623259,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "bangkok-wat-phra-kaew",
+    "replacement_id": "bangkok-wat-phra-kaew-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/bangkok-wat-phra-kaew-vari2.png",
+    "sha256": "177f5f9f7d3bdbbb5f34a6d268ba32a5271fc143a1ffb7d19e1aff4604a59075",
+    "bytes": 918599,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "bangkok-suurpalatsi",
+    "replacement_id": "bangkok-suurpalatsi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/bangkok-suurpalatsi-vari2.png",
+    "sha256": "b85f9c4cd7f8e6cfa9340e4c3efd94a6808de9f30ccdb0b81f37f5703a645df9",
+    "bytes": 1051729,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "bangkok-wat-pho",
+    "replacement_id": "bangkok-wat-pho-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/bangkok-wat-pho-vari2.png",
+    "sha256": "72da2f066d1ca9afc1dfa56f20da3d4d62aa2278120f67b5e06276b359be3f4b",
+    "bytes": 1276103,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "bangkok-wat-arun",
+    "replacement_id": "bangkok-wat-arun-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/bangkok-wat-arun-vari2.png",
+    "sha256": "4b4abde79e9fb7f158eb06fa57fdd11b2c6fa7299d7e78b4a9866b6e2c76c1a9",
+    "bytes": 909812,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "bangkok-yaowarat",
+    "replacement_id": "bangkok-yaowarat-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/bangkok-yaowarat-vari2.png",
+    "sha256": "1f98d70292f31b364a647d42499fb2483d9b60aa5a3c7b312725993ebed1cb91",
+    "bytes": 1335243,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "bangkok-hua-lamphong",
+    "replacement_id": "bangkok-hua-lamphong-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/bangkok-hua-lamphong-vari2.png",
+    "sha256": "9274c700912f714265ecc756c5f98b736656301f1a967bd4aded4e8e9e6993ad",
+    "bytes": 1109675,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "buenosaires-pilarin-basilika",
+    "replacement_id": "buenosaires-pilarin-basilika-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/buenosaires-pilarin-basilika-vari2.png",
+    "sha256": "3bd16aa7facbaeb1355d87c16543355013c124e2ae91d5141731f5fff0fc11c4",
+    "bytes": 906871,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "buenosaires-plaza-san-martin",
+    "replacement_id": "buenosaires-plaza-san-martin-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/buenosaires-plaza-san-martin-vari2.png",
+    "sha256": "210522e754f71d01df5f6a2fe409750c7ae4a1ae48b6d5812c711bb4908c8182",
+    "bytes": 1179807,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "buenosaires-palacio-de-aguas-corrientes",
+    "replacement_id": "buenosaires-palacio-de-aguas-corrientes-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/buenosaires-palacio-de-aguas-corrientes-vari2.png",
+    "sha256": "f1c1a0a2a97a55aac123c81ce6a9db3be3f6d46dc71eb371acf064f8fc9f16e7",
+    "bytes": 1328564,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "buenosaires-museo-mitre",
+    "replacement_id": "buenosaires-museo-mitre-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/buenosaires-museo-mitre-vari2.png",
+    "sha256": "9a405f0d0445c94e66b4a51c654385ed1986a3342b483ef1f9d059c8f852d834",
+    "bytes": 1097636,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "buenosaires-buenos-airesin-katedraali",
+    "replacement_id": "buenosaires-buenos-airesin-katedraali-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/buenosaires-buenos-airesin-katedraali-vari2.png",
+    "sha256": "8aec3803f0314be3099b5be960db7901f864d2bf322305303c4b50a145eaf280",
+    "bytes": 1048639,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "buenosaires-cafe-tortoni",
+    "replacement_id": "buenosaires-cafe-tortoni-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/buenosaires-cafe-tortoni-vari2.png",
+    "sha256": "9f8bf812aa994267adf6da8a646c62b6f2cbeed0ab13463134b6705731eb4eec",
+    "bytes": 1108437,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "buenosaires-palacio-barolo",
+    "replacement_id": "buenosaires-palacio-barolo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/buenosaires-palacio-barolo-vari2.png",
+    "sha256": "17bf24b61d5a3abe8c9023f2a1eb0fc2f7ee848900990d4195b0598b433de289",
+    "bytes": 660548,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "buenosaires-kongressipalatsi",
+    "replacement_id": "buenosaires-kongressipalatsi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/buenosaires-kongressipalatsi-vari2.png",
+    "sha256": "402f1792518df8f61c2aef87d427f31b0e31064a64c289d4934bf355860afded",
+    "bytes": 904077,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "buenosaires-manzana-de-las-luces",
+    "replacement_id": "buenosaires-manzana-de-las-luces-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/buenosaires-manzana-de-las-luces-vari2.png",
+    "sha256": "8d8d40c2af8c56d2671afa90d37b74ffd8d1e6c2f8cb99121c9c8e94e66e8e3e",
+    "bytes": 960993,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "buenosaires-santo-domingon-luostari",
+    "replacement_id": "buenosaires-santo-domingon-luostari-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/buenosaires-santo-domingon-luostari-vari2.png",
+    "sha256": "c4b0562af2a79c5ac2f89951730a5a0032d3fb3150b89107168d5a5a609266b6",
+    "bytes": 930789,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "chennai-chennai-centralin-asema",
+    "replacement_id": "chennai-chennai-centralin-asema-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/chennai-chennai-centralin-asema-vari2.png",
+    "sha256": "4a3d902783649648ac42af81b3c6a6576325d789fd4fa2af09eb1a411715b9c7",
+    "bytes": 863081,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "chennai-chennai-egmoren-asema",
+    "replacement_id": "chennai-chennai-egmoren-asema-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/chennai-chennai-egmoren-asema-vari2.png",
+    "sha256": "9db42f74892e862a52d69f23c264c4036b73c8e017205d9d6074b4a37d781675",
+    "bytes": 965736,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "chennai-chepaukin-palatsi",
+    "replacement_id": "chennai-chepaukin-palatsi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/chennai-chepaukin-palatsi-vari2.png",
+    "sha256": "537abb8ad9b1ae6edf5f3e9235b47c95c6e14481510f59eb79b31cb322ab34fb",
+    "bytes": 1076169,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "chennai-fort-st-george",
+    "replacement_id": "chennai-fort-st-george-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/chennai-fort-st-george-vari2.png",
+    "sha256": "c6a050429dd159060fb806752ad43e606f2463a99f9db4348a84718ab0402fd2",
+    "bytes": 630904,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "chennai-government-museum",
+    "replacement_id": "chennai-government-museum-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/chennai-government-museum-vari2.png",
+    "sha256": "a329c52781b62d3ba2a0b43ebc374e58f3a036129fd4e256be330e1a1c1f6ef8",
+    "bytes": 917787,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "chennai-kapaleeshwararin-temppeli",
+    "replacement_id": "chennai-kapaleeshwararin-temppeli-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/chennai-kapaleeshwararin-temppeli-vari2.png",
+    "sha256": "a3536044cc0bab4d74c2e9e5d2524413ff32e6cc4a5c856b8309d7b082e0407e",
+    "bytes": 1004029,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "chennai-madrasin-ylin-oikeus",
+    "replacement_id": "chennai-madrasin-ylin-oikeus-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/chennai-madrasin-ylin-oikeus-vari2.png",
+    "sha256": "cb6243bff4700f6925dde0178c64323b78cdc28968bb7101ea30010e3ea342e1",
+    "bytes": 982747,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "chennai-marina-beach",
+    "replacement_id": "chennai-marina-beach-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/chennai-marina-beach-vari2.png",
+    "sha256": "6246f65b7e2ea337b0fce0ba813d3ac8a013a0b9920d42e1f82d0b164d36177f",
+    "bytes": 983881,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "chennai-ripon-building",
+    "replacement_id": "chennai-ripon-building-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/chennai-ripon-building-vari2.png",
+    "sha256": "8f30465db81cab9ae2e699f828dda6121612ed5b1c485bc1f5df0f5fc52af9db",
+    "bytes": 722751,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "chennai-san-thomen-basilika",
+    "replacement_id": "chennai-san-thomen-basilika-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/chennai-san-thomen-basilika-vari2.png",
+    "sha256": "5c376090652d1a486a8881ec36c207e858a78afd48d0b7b7a01968cbdc6c4e8c",
+    "bytes": 606499,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "colombo-beira-jarvi",
+    "replacement_id": "colombo-beira-jarvi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/colombo-beira-jarvi-vari2.png",
+    "sha256": "c57fbb255681cc98fc12004d86890803c7b87dcf0c5c51cf46290d58c1b54784",
+    "bytes": 988565,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "colombo-colombon-kansallismuseo",
+    "replacement_id": "colombo-colombon-kansallismuseo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/colombo-colombon-kansallismuseo-vari2.png",
+    "sha256": "519f73ca5e360621e70aec23b45b789ef3eb3dd19d46feb0ae882f7a3f1a06ca",
+    "bytes": 901534,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "colombo-colombon-satama",
+    "replacement_id": "colombo-colombon-satama-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/colombo-colombon-satama-vari2.png",
+    "sha256": "45b801dee976625176a76908de19845108895e9ff9a4b6858b14057118c94f98",
+    "bytes": 746017,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "colombo-fortin-kellotorni",
+    "replacement_id": "colombo-fortin-kellotorni-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/colombo-fortin-kellotorni-vari2.png",
+    "sha256": "d9f248bb4676e25a719633e0e4db47df2a382782c41f0fca78ee344fd07b36ec",
+    "bytes": 670324,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "colombo-fortin-rautatieasema",
+    "replacement_id": "colombo-fortin-rautatieasema-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/colombo-fortin-rautatieasema-vari2.png",
+    "sha256": "84d0011af022dfed1448a73166fee1724d803b67e0d4a53f8a273cd914cd279c",
+    "bytes": 683880,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "colombo-galle-face-hotel",
+    "replacement_id": "colombo-galle-face-hotel-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/colombo-galle-face-hotel-vari2.png",
+    "sha256": "68809a00ba9b1f9ebde23732e1cf149b546269417ebdab7885085c484bd8ee08",
+    "bytes": 644307,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "colombo-gangaramayan-temppeli",
+    "replacement_id": "colombo-gangaramayan-temppeli-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/colombo-gangaramayan-temppeli-vari2.png",
+    "sha256": "425a82bc520985da3eb9390471c0e78be0124a91454b93554657d648e6abdf10",
+    "bytes": 902228,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "colombo-punainen-moskeija",
+    "replacement_id": "colombo-punainen-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/colombo-punainen-moskeija-vari2.png",
+    "sha256": "0c18ef56060fde60400c7bc1fe8f17f0685760d5fb2ad7410b397319b8676931",
+    "bytes": 1258258,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "colombo-wolvendaalin-kirkko",
+    "replacement_id": "colombo-wolvendaalin-kirkko-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/colombo-wolvendaalin-kirkko-vari2.png",
+    "sha256": "3be763157d1cbce0b9016b3db9a9c87fedc099ed9e22814f0cf96d9620d4eae0",
+    "bytes": 830253,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  }
+]
