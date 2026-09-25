@@ -58,6 +58,38 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>
+        /// Testikomento `vieritys koe`: jäljittelee hitausliikettä ilman kosketusta (simulaattoria ei voi pyyhkäistä
+        /// komennoilla) — näkyvän, vieritettävän ScrollView'n kohta liukuu 1,5 s hidastuen. Laskurit nollataan alussa.
+        /// </summary>
+        public static string Koe()
+        {
+            if (instanssi == null) return "ei käynnissä";
+            ScrollView kohde = null;
+            foreach (var s in instanssi.seuratut)
+                if (s != null && s.panel != null && s.resolvedStyle.display == DisplayStyle.Flex && s.contentContainer.layout.height > s.layout.height + 50)
+                { kohde = s; break; }
+            if (kohde == null) return "ei vieritettävää ScrollView'tä näkyvissä";
+            NollaaLaskurit();
+            instanssi.StartCoroutine(Liu(kohde));
+            return null;
+        }
+
+        static System.Collections.IEnumerator Liu(ScrollView s)
+        {
+            float alku = Time.realtimeSinceStartup, nopeus = 1400f; // pt/s, hidastuu kuten UI Toolkitin elastisuus
+            int kehyksia = 0;
+            while (Time.realtimeSinceStartup - alku < 1.5f && s.panel != null)
+            {
+                yield return null;
+                kehyksia++;
+                nopeus *= Mathf.Pow(0.135f, Time.unscaledDeltaTime); // ~135 ms aikavakio
+                var o = s.scrollOffset;
+                s.scrollOffset = new Vector2(o.x, o.y + nopeus * Time.unscaledDeltaTime);
+            }
+            Debug.Log($"MATKAKIRJA {Kuvaus()}; koe: {kehyksia} kehystä 1,5 s:ssa ({kehyksia / 1.5f:0} fps)");
+        }
+
         static void Kytke(ScrollView s)
         {
             s.verticalScroller.valueChanged += _ => Muuttui();

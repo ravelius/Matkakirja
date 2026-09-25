@@ -281,6 +281,7 @@ namespace Matkakirja.Natiivi
                     if (A(1) == "pois") VieritysHeratys.Paalla = false;
                     else if (A(1) == "paalle") VieritysHeratys.Paalla = true;
                     else if (A(1) == "nollaa") VieritysHeratys.NollaaLaskurit();
+                    else if (A(1) == "koe") return VieritysHeratys.Koe();
                     return "=" + VieritysHeratys.Kuvaus();
                 case "ruutu":
                     // Dynaaminen ruudunpäivitys ja lämpö (Kartta/Ruudunpaivitys.cs, lämpöerä 25.9.2026).
