@@ -1,0 +1,563 @@
+[
+  {
+    "id": "kanton-chenin-suvun-sali",
+    "replacement_id": "kanton-chenin-suvun-sali-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kanton-chenin-suvun-sali-vari2.png",
+    "sha256": "108e308905422a36f62ad5232bd1f8f00406517eb8452b4ab1289ecebfad6422",
+    "bytes": 1354476,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kanton-guangxiao-temppeli",
+    "replacement_id": "kanton-guangxiao-temppeli-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kanton-guangxiao-temppeli-vari2.png",
+    "sha256": "a02b8be0b4cd85a58d7690bf3947ce1775f5ae5d33b462c0e3b4bb1cd96f4960",
+    "bytes": 1129277,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kanton-huaisheng-moskeija",
+    "replacement_id": "kanton-huaisheng-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kanton-huaisheng-moskeija-vari2.png",
+    "sha256": "241ba9270d6e0f42bbe1d450d38f5ea76449eaac68cf6ed39906a1e02e6a2db2",
+    "bytes": 1112693,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kanton-kolmentoista-faktorian-paikka",
+    "replacement_id": "kanton-kolmentoista-faktorian-paikka-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kanton-kolmentoista-faktorian-paikka-vari2.png",
+    "sha256": "7d76c1fd323d2992913410de157255b37fd7b00b77aeede0f80057379cda22e8",
+    "bytes": 959764,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kanton-liurong-temppeli",
+    "replacement_id": "kanton-liurong-temppeli-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kanton-liurong-temppeli-vari2.png",
+    "sha256": "730136d9321da42ac7e78215549bc72dbe345b32719fb20e2639d0ff267d1f03",
+    "bytes": 889429,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kanton-pyhan-sydamen-katedraali",
+    "replacement_id": "kanton-pyhan-sydamen-katedraali-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kanton-pyhan-sydamen-katedraali-vari2.png",
+    "sha256": "71eb7775b6a3c203b5c1f09e8d88699ceea0aeac8d503a018a2ac4bc43ab4338",
+    "bytes": 938531,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kanton-shamianin-saari",
+    "replacement_id": "kanton-shamianin-saari-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kanton-shamianin-saari-vari2.png",
+    "sha256": "4e9c376102837bb0aa248afe0fa85fdb489f62bd836135ccd806be86eee0c4ef",
+    "bytes": 816644,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kanton-zhenhai-torni",
+    "replacement_id": "kanton-zhenhai-torni-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kanton-zhenhai-torni-vari2.png",
+    "sha256": "7ad99ad026a651d203dc3a24e0d025866b0d5f7fcfa1bc0724efd2d848d7aac3",
+    "bytes": 1130020,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "karachi-denso-hall",
+    "replacement_id": "karachi-denso-hall-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/karachi-denso-hall-vari2.png",
+    "sha256": "9f371e775a97b406ba06edbaa335515d54e9fda0c5dd9584084c0b17d1326e8d",
+    "bytes": 1277213,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "karachi-empress-market",
+    "replacement_id": "karachi-empress-market-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/karachi-empress-market-vari2.png",
+    "sha256": "e5f504525d4368283179232a7aeccf7d538865acd09f6f5d1f953ee6a6314c54",
+    "bytes": 938551,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "karachi-frere-hall",
+    "replacement_id": "karachi-frere-hall-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/karachi-frere-hall-vari2.png",
+    "sha256": "28f1bb553dfc56d5dc4b8de86e711ebc482396a4fbd06ad18b79c84a385055c2",
+    "bytes": 1034267,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "karachi-karachi-cityn-rautatieasema",
+    "replacement_id": "karachi-karachi-cityn-rautatieasema-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/karachi-karachi-cityn-rautatieasema-vari2.png",
+    "sha256": "b90a68b447034c999ba4806210247795359813cdc9c93b631e31f4343cdb584a",
+    "bytes": 1080488,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "karachi-karachin-kaupungintalo",
+    "replacement_id": "karachi-karachin-kaupungintalo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/karachi-karachin-kaupungintalo-vari2.png",
+    "sha256": "269ae6e52d161b92eeed2c35e2217858577f1fcde55438d58a3dd75469db3d09",
+    "bytes": 886543,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "karachi-merewetherin-kellotorni",
+    "replacement_id": "karachi-merewetherin-kellotorni-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/karachi-merewetherin-kellotorni-vari2.png",
+    "sha256": "3b91a0ebb940042854d47d191ffd60aa193360fe609dc668b165eb31a6c52743",
+    "bytes": 601921,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "karachi-mohatta-palace",
+    "replacement_id": "karachi-mohatta-palace-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/karachi-mohatta-palace-vari2.png",
+    "sha256": "eb5b81241b469b41ff86dcf71530accc0fdd57fc5c5427b7d8aec30ce3a57fbf",
+    "bytes": 1438221,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "karachi-pyhan-kolminaisuuden-katedraali",
+    "replacement_id": "karachi-pyhan-kolminaisuuden-katedraali-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/karachi-pyhan-kolminaisuuden-katedraali-vari2.png",
+    "sha256": "df164d1d2e8e980cc85c62e19fc8eaf7072f2d18343018d608424b22e83afd65",
+    "bytes": 1084220,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "karachi-satamahallinnon-talo",
+    "replacement_id": "karachi-satamahallinnon-talo-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/karachi-satamahallinnon-talo-vari2.png",
+    "sha256": "3655d0a6bdd5e433a64051ef254f5c14f5e30fc7aaf899e54bc8383cabb11aca",
+    "bytes": 1407333,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "karachi-wazir-mansion",
+    "replacement_id": "karachi-wazir-mansion-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/karachi-wazir-mansion-vari2.png",
+    "sha256": "c8a3bbf193715a74b9ca52b1f135aad6ecd0a7b82d5badfa5c9728982e9d5032",
+    "bytes": 1045807,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kashgar-afaq-khojan-mausoleumi",
+    "replacement_id": "kashgar-afaq-khojan-mausoleumi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kashgar-afaq-khojan-mausoleumi-vari2.png",
+    "sha256": "5d517b71f76d1408a2f690e6d72e2ad0015e57b4dcbd9a8f3c33ba4bb617dd29",
+    "bytes": 1433693,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kashgar-chini-bagh",
+    "replacement_id": "kashgar-chini-bagh-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kashgar-chini-bagh-vari2.png",
+    "sha256": "a24669b0275c51ec6e2af9e007963760c91d91db15925d091eeef48eefd00f41",
+    "bytes": 1471759,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kashgar-suuri-basaari",
+    "replacement_id": "kashgar-suuri-basaari-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kashgar-suuri-basaari-vari2.png",
+    "sha256": "24e129b440074263bec9c75ed4ef8aad862e80a0fa5e7d4cede5ca86a43a77c3",
+    "bytes": 1534825,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kashgar-id-kahin-moskeija",
+    "replacement_id": "kashgar-id-kahin-moskeija-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kashgar-id-kahin-moskeija-vari2.png",
+    "sha256": "a774c055af6186c233859e1b8163b9c2bf5171a999fd51382bbb1dbc50968d87",
+    "bytes": 1467126,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kashgar-vanhakaupunki",
+    "replacement_id": "kashgar-vanhakaupunki-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kashgar-vanhakaupunki-vari2.png",
+    "sha256": "4991438f0921a29e22103cb2494b2261a8e70289d97eff4d8d57138ec0da80cd",
+    "bytes": 1550509,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kashgar-kansanpuisto",
+    "replacement_id": "kashgar-kansanpuisto-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kashgar-kansanpuisto-vari2.png",
+    "sha256": "45a456ff6cc22ef90b46d420c8064df721c63c33f74fe5a85c85320c23f6c314",
+    "bytes": 1590576,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kashgar-yusuf-khass-hajibin-mausoleumi",
+    "replacement_id": "kashgar-yusuf-khass-hajibin-mausoleumi-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kashgar-yusuf-khass-hajibin-mausoleumi-vari2.png",
+    "sha256": "81c5cdb6143dcf893fbebc5df2146d89e88c713b99955a8035749ccff90aee59",
+    "bytes": 1293533,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kathmandu-boudhanath",
+    "replacement_id": "kathmandu-boudhanath-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kathmandu-boudhanath-vari2.png",
+    "sha256": "7657d56299e3e02fc11e294ec67ccdac2ca4d4c2604db2c8e9efceb1675d5098",
+    "bytes": 1478359,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kathmandu-swayambhunath",
+    "replacement_id": "kathmandu-swayambhunath-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kathmandu-swayambhunath-vari2.png",
+    "sha256": "2edda7343a6347b9156a0e61bfcdf926a7bd476da74394c4e4ee0b012623df13",
+    "bytes": 1579440,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kathmandu-unelmien-puutarha",
+    "replacement_id": "kathmandu-unelmien-puutarha-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kathmandu-unelmien-puutarha-vari2.png",
+    "sha256": "817a8258d9d8390305d9eff636cf5b345e28e6cb755f9941250de3d8ea007392",
+    "bytes": 1773600,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kathmandu-pashupatinath",
+    "replacement_id": "kathmandu-pashupatinath-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kathmandu-pashupatinath-vari2.png",
+    "sha256": "cebc608027394c1c20957491f1a86f698c1f6746d79a77f3b85d0a88fd168741",
+    "bytes": 1817267,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kathmandu-rani-pokhari",
+    "replacement_id": "kathmandu-rani-pokhari-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kathmandu-rani-pokhari-vari2.png",
+    "sha256": "fc83f66b328a6c4646208d191a1b0f8d38784d36f50ca9da912e4efdd3545e8c",
+    "bytes": 1607251,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kathmandu-kathmandun-durbar-aukio",
+    "replacement_id": "kathmandu-kathmandun-durbar-aukio-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kathmandu-kathmandun-durbar-aukio-vari2.png",
+    "sha256": "c34117f889252b7332e892b13ee4deb6f0f58d388061aff298d363b6f9d774a6",
+    "bytes": 1899833,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kathmandu-dharahara",
+    "replacement_id": "kathmandu-dharahara-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kathmandu-dharahara-vari2.png",
+    "sha256": "446328c0928f7ddcbe4b8e31dc70052bb286dfd6b4beeecbc6419dc7d7966a38",
+    "bytes": 1034915,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  },
+  {
+    "id": "kathmandu-patanin-durbar-aukio",
+    "replacement_id": "kathmandu-patanin-durbar-aukio-vari2",
+    "r2": "https://media.matkakirja.app/kohtaamiset/miniatyyrit/kathmandu-patanin-durbar-aukio-vari2.png",
+    "sha256": "f0877f07a845ad3e9ee9b882f9b801055860dbfccde901076738435186e8df29",
+    "bytes": 2074485,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "mode": "RGBA",
+    "icc": "sRGB",
+    "http": 200,
+    "mime": "image/png",
+    "cors": true,
+    "qa": "visually approved on pale game paper; public readback verified"
+  }
+]
