@@ -35,6 +35,9 @@ namespace Matkakirja.Linssit.Aikajana
         /// <summary>Seutusumun korkeus (km): matala, jotta laskeutumisissa (4 000 km) syntyy parallaksi maaston kanssa.</summary>
         public const double SeutuKm = 350;
 
+        /// <summary>Seutusumun tasainen pohja (alfa): pilvikartan aavikoilla ei ole pilviä, usva näkyy silti.</summary>
+        public const float SeutuPohja = 0.55f;
+
         /// <summary>Avauksen kuoren peitto-osuus 0–1 kameran korkeudesta (m) ja kuoren korkeudesta (m).</summary>
         public static double AvauksenOsuus(double kameraM, double kuoriM)
         {
@@ -56,19 +59,19 @@ namespace Matkakirja.Linssit.Aikajana
         public static Sumukuva Seutu(string jaksoId) => jaksoId switch
         {
             // Afrikka: ohut kuumuusutu.
-            "afrikka" or "jebel-irhoud" or "siirtyma-afrikka" or "omo" => new Sumukuva(1f, 0.86f, 0.66f, 0.18f, 0.02f),
+            "afrikka" or "jebel-irhoud" or "siirtyma-afrikka" or "omo" => new Sumukuva(1f, 0.86f, 0.66f, 0.26f, 0.02f),
             // Ulos Afrikasta: merisumu rannikolla.
-            "ranta" or "levantti" or "arabia" or "intian-rannat" or "australia" => new Sumukuva(0.96f, 0.95f, 0.92f, 0.26f, 0.03f),
+            "ranta" or "levantti" or "arabia" or "intian-rannat" or "australia" => new Sumukuva(0.96f, 0.95f, 0.92f, 0.34f, 0.03f),
             // Luolat: pöly valossa (lämmin, ohut).
-            "denisova" or "chauvet" => new Sumukuva(0.92f, 0.8f, 0.64f, 0.14f, 0.01f),
+            "denisova" or "chauvet" => new Sumukuva(0.92f, 0.8f, 0.64f, 0.2f, 0.01f),
             // Kylmä: jää-usva matalalla.
-            "napapiiri" or "beringia" or "white-sands" or "eurooppa" => new Sumukuva(0.86f, 0.93f, 1f, 0.34f, 0.03f),
+            "napapiiri" or "beringia" or "white-sands" or "eurooppa" => new Sumukuva(0.86f, 0.93f, 1f, 0.42f, 0.03f),
             // Amerikat: sadeusva.
-            "chile" => new Sumukuva(0.8f, 0.84f, 0.86f, 0.3f, 0.04f),
+            "chile" => new Sumukuva(0.8f, 0.84f, 0.86f, 0.38f, 0.04f),
             // Aikahyppy: harmaa pyörresumu (kello kelautuu).
-            "aikahyppy" => new Sumukuva(0.74f, 0.74f, 0.76f, 0.42f, 9f, pyorre: true),
+            "aikahyppy" => new Sumukuva(0.74f, 0.74f, 0.76f, 0.5f, 9f, pyorre: true),
             // Tyynimeri: matala merisumu kuunvalossa.
-            "meri" or "uusi-seelanti" => new Sumukuva(0.86f, 0.92f, 1f, 0.28f, 0.03f),
+            "meri" or "uusi-seelanti" => new Sumukuva(0.86f, 0.92f, 1f, 0.36f, 0.03f),
             _ => Sumukuva.Ei,
         };
 

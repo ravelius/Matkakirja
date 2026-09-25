@@ -157,6 +157,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Sävy: kertoo pilvikuvan värin ja alfan (valkoinen = ennallaan).</summary>
         public void Savy(Color vari) => materiaali.SetColor(IdVari, vari);
 
+        /// <summary>Tasainen usva 0–1: alfan pohja myös pilvettömillä alueilla (0 = pelkät pilvet, ennallaan).</summary>
+        public void Tasainen(float pohja) => materiaali.SetFloat(IdTasainen, Mathf.Clamp01(pohja));
+        static readonly int IdTasainen = Shader.PropertyToID("_Tasainen");
+
         /// <summary>
         /// Valokeila pilvissä kuten pallossa: keilojen ulkopuolella kirkkaus 1 − 0,95 · hämäryys. Keila maan keskipisteestä
         /// katsottuna: suunta georeferenssin avaruudessa (<see cref="Suunta"/>), cos ulko- ja sisäreuna, voimakkuus

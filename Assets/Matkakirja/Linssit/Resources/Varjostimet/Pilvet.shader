@@ -12,6 +12,7 @@ Shader "Matkakirja/Linssit/Pilvet"
         _Peitto("Peitto", Range(0, 1)) = 0.9
         _Vari("Sävy", Color) = (1, 1, 1, 1)
         _Hamara("Hämäryys keilojen ulkopuolella", Range(0, 1)) = 0
+        _Tasainen("Tasainen usva (alfan pohja, pilvettömällä valkoinen)", Range(0, 1)) = 0
         _Keskus("Maan keskipiste (maailma)", Vector) = (0, 0, 0, 0)
         _KeilaA("Pääkeila: suunta, cos ulkoreuna", Vector) = (0, 0, 1, 2)
         _KeilaAsisa("Pääkeila: cos sisäreuna, voimakkuus", Vector) = (2, 0, 0, 0)
@@ -42,6 +43,7 @@ Shader "Matkakirja/Linssit/Pilvet"
                 half _Peitto;
                 half4 _Vari;
                 half _Hamara;
+                half _Tasainen;
                 float4 _Keskus;
                 float4 _KeilaA, _KeilaAsisa, _KeilaB, _KeilaBsisa;
             CBUFFER_END
@@ -61,6 +63,13 @@ Shader "Matkakirja/Linssit/Pilvet"
             half4 frag(Vali i) : SV_Target
             {
                 half4 c = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv);
+                if (_Tasainen > 0.0h)
+                {
+                    // Seutusumu (II): pilvikartan aavikoilla ei ole pilviä, joten usva saa tasaisen pohjan (valkoinen,
+                    // sävy _Varista) ja pilvet piirtyvät sen päälle.
+                    c.rgb = lerp(1.0h, c.rgb, saturate(c.a * 4.0h));
+                    c.a = max(c.a, _Tasainen);
+                }
                 half valo = 1.0h;
                 if (_Hamara > 0.0h)
                 {

@@ -56,6 +56,8 @@ namespace Matkakirja.Natiivi
             }
             s.seutu = Pilvikuori.Luo(g);
             s.seutu?.Korkeus(IhmisenMatka2Sumukuva.SeutuKm * 1000.0);
+            // Pilvikartan aavikoilla (Sahara, Arabia) ei ole pilviä: usva saa tasaisen pohjan (simulaattori 25.9.).
+            s.seutu?.Tasainen(IhmisenMatka2Sumukuva.SeutuPohja);
             s.Paivita(0f);
             return s;
         }
@@ -115,13 +117,15 @@ namespace Matkakirja.Natiivi
 
             // SEUTU: vanha häipyy ennen uutta sävyä; sama sävy jatkuu katkeamatta.
             if (seutu == null) return;
+            // Avauksen aikana ei seutusumua: kerrallaan enintään kaksi kuorta (Natiivisepän ehto: kevyt).
             bool sama = Sama(nyt, tavoite);
-            float kohde = Pois || !sama ? 0f : tavoite.Peitto;
+            float kohde = Pois || !sama || avausPaalla ? 0f : tavoite.Peitto;
             seutuPeitto = Mathf.MoveTowards(seutuPeitto, kohde, dt / (SiirtymaS * 0.5f));
             if (!sama && seutuPeitto <= 0.001f)
             {
                 nyt = tavoite;
                 seutu.Savy(new Color(nyt.R, nyt.G, nyt.B, 1f));
+                seutuKulma += 137.5f;   // uusi seutu, uusi pilvikuvio
             }
             seutu.Peitto(seutuPeitto);
             if (seutuPeitto <= 0.001f) return;
