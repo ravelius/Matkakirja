@@ -40,6 +40,20 @@ namespace Matkakirja
 
         static readonly object lukko = new object();
         static readonly List<string> aktiiviset = new List<string>();
+        /// <summary>Aktiivisten odotusten alkuhetket (kello, s). Yli <see cref="OdotusKatto"/> vanhat karsitaan: coroutine
+        /// voi pysähtyä (StopCoroutine) ennen Loppua, eikä vaihe saa jäädä pinoon.</summary>
+        static readonly List<double> aktiivisetAlku = new List<double>();
+        const double OdotusKatto = 30;
+        static readonly System.Diagnostics.Stopwatch kello = System.Diagnostics.Stopwatch.StartNew();
+
+        /// <summary>Päällimmäinen voimassa oleva odotus tai null (lukon sisällä).</summary>
+        static string Paallimmainen()
+        {
+            double nyt = kello.Elapsed.TotalSeconds;
+            for (int i = aktiiviset.Count - 1; i >= 0; i--)
+                if (nyt - aktiivisetAlku[i] > OdotusKatto) { aktiiviset.RemoveAt(i); aktiivisetAlku.RemoveAt(i); }
+            return aktiiviset.Count > 0 ? aktiiviset[aktiiviset.Count - 1] : null;
+        }
         static readonly Dictionary<string, Summa> odotukset = new Dictionary<string, Summa>();
         static readonly Dictionary<string, Summa> haut = new Dictionary<string, Summa>();
         /// <summary>Osuma-% (Esilataaja erä 1): vaihe/lähde → N = pyyntöjä, Tavut = välimuistista (osumat).</summary>
@@ -54,7 +68,7 @@ namespace Matkakirja
         {
             PeliVaihe = null;
             tiedosto = null;
-            lock (lukko) { aktiiviset.Clear(); odotukset.Clear(); haut.Clear(); osumat.Clear(); hakuja = 0; }
+            lock (lukko) { aktiiviset.Clear(); aktiivisetAlku.Clear(); odotukset.Clear(); haut.Clear(); osumat.Clear(); hakuja = 0; }
             vaiheKopio = "kaynnistys";
         }
 
@@ -68,7 +82,7 @@ namespace Matkakirja
         public static void Osuma(string lahde, bool valimuistista)
         {
             string avain;
-            lock (lukko) avain = (aktiiviset.Count > 0 ? aktiiviset[aktiiviset.Count - 1] : vaiheKopio) + "/" + lahde;
+            lock (lukko) avain = (Paallimmainen() ?? vaiheKopio) + "/" + lahde;
             lock (lukko)
             {
                 if (!osumat.TryGetValue(avain, out var o)) osumat[avain] = o = new Summa();
@@ -82,7 +96,7 @@ namespace Matkakirja
         {
             get
             {
-                lock (lukko) if (aktiiviset.Count > 0) return aktiiviset[aktiiviset.Count - 1];
+                lock (lukko) { var p = Paallimmainen(); if (p != null) return p; }
                 try { return PeliVaihe?.Invoke() ?? "kaynnistys"; } catch (Exception) { return "?"; }
             }
         }
@@ -92,7 +106,7 @@ namespace Matkakirja
         /// <summary>Pelaaja alkaa odottaa (pääsäie).</summary>
         public static Odotus Alku(string vaihe, string mita)
         {
-            lock (lukko) { aktiiviset.Add(vaihe); return new Odotus(vaihe, mita, Nyt, hakuja); }
+            lock (lukko) { aktiiviset.Add(vaihe); aktiivisetAlku.Add(kello.Elapsed.TotalSeconds); return new Odotus(vaihe, mita, Nyt, hakuja); }
         }
 
         /// <summary>Odotus päättyi (näkymä tuli tai luovuttiin). Kutsu kerran jokaista Alkua kohden.</summary>
@@ -103,7 +117,7 @@ namespace Matkakirja
             lock (lukko)
             {
                 int i = aktiiviset.LastIndexOf(o.Vaihe);
-                if (i >= 0) aktiiviset.RemoveAt(i);
+                if (i >= 0) { aktiiviset.RemoveAt(i); aktiivisetAlku.RemoveAt(i); }
                 n = hakuja - o.Haut;
             }
             Kirjaa(o.Vaihe, o.Mita, (Nyt - o.Alku) * 1000.0, n, tulos);
@@ -134,7 +148,7 @@ namespace Matkakirja
         public static void Haku(string lahde, double ms, long tavut)
         {
             string vaihe;
-            lock (lukko) vaihe = aktiiviset.Count > 0 ? aktiiviset[aktiiviset.Count - 1] : vaiheKopio;
+            lock (lukko) vaihe = Paallimmainen() ?? vaiheKopio;
             lock (lukko)
             {
                 hakuja++;
@@ -172,7 +186,8 @@ namespace Matkakirja
                     sb.Append('"').Append(k).Append("\":{\"n\":").Append(o.N).Append(",\"osumia\":").Append(o.Tavut)
                       .Append(",\"pros\":").Append(o.N > 0 ? (100 * o.Tavut / o.N).ToString(CultureInfo.InvariantCulture) : "0").Append('}');
                 }
-                sb.Append("}}");
+                sb.Append("},\"esilataaja\":{\"kaynnissa\":").Append(Esilataaja.Kaynnissa).Append(",\"jonossa\":").Append(Esilataaja.Jonossa)
+                  .Append(",\"uusintoja\":").Append(Esilataaja.Uusintoja).Append("}}");
             }
             var json = sb.ToString();
             try { File.WriteAllText(Path.Combine(Application.persistentDataPath, "verkko-yhteenveto.json"), json); } catch (Exception) { }
