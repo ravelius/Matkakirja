@@ -32,10 +32,12 @@ namespace Matkakirja
         /// <summary>Alin huntutaso: sitä kauempana ei huntua (web kermaPaalla 0 maailmanäkymässä).</summary>
         public const int AlinTaso = 5;
         /// <summary>
-        /// Alin käytetty huntutaso (Fable 24.9.: Z3–Z4 ämpärissä, mutta ensin kokeillaan pelkkä zoomihäivytys Z5:stä;
-        /// komento "vari alin 3" ottaa Z3–Z4:n käyttöön vertailuun).
+        /// Alin käytetty huntutaso. Kotimaan korostus (Linssisepän kierros 3 rivi 39 ja omistajan build 13 -lista 25.9.):
+        /// webin kerma on päällä kaikilla zoomeilla, joten Euroopan näkymässäkin muut maat ovat pergamenttia ja reliefi
+        /// näkyy vain kotimaassa → Z3 (ämpärissä Z3–Z8, _maailma kattaa alueen ulkopuolen). Ennen Z5 (Fable 24.9.).
+        /// Komento "vari alin &lt;z&gt;" vertailuun.
         /// </summary>
-        public static int AlinKaytetty = AlinTaso;
+        public static int AlinKaytetty = 3;
         /// <summary>Cesiumin raster-paikka (pohja 0, linssit 1 ja 2).</summary>
         public const string MateriaaliAvain = "2";
 
@@ -60,7 +62,7 @@ namespace Matkakirja
         CesiumUrlTemplateRasterOverlay kerros;
         string haluttu, ladattu;
         bool linssit, piilossa, pelikerroksetPois;
-        int tasoMin = AlinTaso, tasoMax = 8;
+        int tasoMin = AlinKaytetty, tasoMax = 8;
         Coroutine haku;
 
         [System.Serializable] class Alue { public double lon0, lon1, lat0, lat1; }
@@ -73,7 +75,7 @@ namespace Matkakirja
         [Tooltip("Kameran korkeus (m), jonka yläpuolella huntu on pois (web: ei huntua maailmanäkymässä). Kaukana Cesium\n" +
                  "sekoittaa huntutasojen alimman tason ja sitä karkeammat (läpinäkyvät) laatat, jolloin huntu näkyi\n" +
                  "suorakulmioina (Laitetestaaja 24.9., Espanja–Sahara, f6de924). Paluu 85 %:ssa (hystereesi).")]
-        public double kaukoKorkeus = 6_000_000.0;
+        public double kaukoKorkeus = 15_000_000.0;
         PalloKierto kierto;
         bool kaukana;
 
@@ -84,12 +86,13 @@ namespace Matkakirja
             {
                 bool k = kaukana ? kierto.korkeus > kaukoKorkeus * 0.85 : kierto.korkeus > kaukoKorkeus;
                 if (k != kaukana) { kaukana = k; if (k) Poista(); else Luo(); }
-                // Fablen päätös 24.9.: huntu häivytetään koko näkymän zoomin funktiona (alfa 0 → 1 tasoilla 4,5…5,5),
-                // ei laattakohtaisesti; zoom on näkymän KAUKAISIMMAN maapisteen taso (ylälaita tai horisontti).
+                // Fablen päätös 24.9.: huntu häivytetään koko näkymän zoomin funktiona, ei laattakohtaisesti; zoom on
+                // näkymän KAUKAISIMMAN maapisteen taso (ylälaita tai horisontti). Kotimaan korostus 25.9.: häivytys
+                // alimman käytetyn tason alle (AlinKaytetty − 0,5 … + 0,5; Z3:lla 2,5…3,5, ennen 4,5…5,5).
                 if (kerros != null)
                 {
                     float z = NakymanAlinTaso();
-                    float t = Mathf.Clamp01((z - 4.5f) / 1.0f);
+                    float t = Mathf.Clamp01((z - (AlinKaytetty - 0.5f)) / 1.0f);
                     Alfa(t * t * (3f - 2f * t));
                 }
             }
