@@ -125405,6 +125405,231 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Machu Picchu: Tourist activity, Geography,
+       * Transportation; Inca Trail to Machu Picchu; Aguas Calientes, Peru;
+       * Huayna Picchu; Intipunku) ja Wikivoyagesta (Machu Picchu, Inca
+       * Trail, Aguas Calientes) — teksti omaa. Nostojen aiheita (historia,
+       * sijainti ja sademäärä, kuninkaan maatila, Binghamin löytö,
+       * maailmanperintö ja kävijäkatot, nimi, muurit, Intihuatana,
+       * terassit, Torreón) ei toisteta. Hinnat ja aukioloajat jätetty pois,
+       * koska lippujärjestelmä muuttuu usein (reittijako 1.6.2024
+       * Wikivoyagen mukaan). Machu Picchu -vuoren korkeus "yli 3 000
+       * metriä": Wikivoyage 3 040 m, huipun kyltti kuvassa 3 061 m.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta
+       * ja kuvat katsottu silmin. Pystykuva: Allard Schmidtin
+       * auringonnousukuva (tekijä luovuttanut PD).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Peru Machu Picchu Sunrise.jpg',
+          lyhyt: 'Aamu-usva kiertää Huayna Picchua, kun kaupungissa ei ole vielä kävijöitä.',
+          selite: 'Kuvaaja kiipesi auringonnousun aikaan ryhmänsä edellä '
+            + 'ja löysi kaupungin tyhjänä. Aamun ensimmäisinä tunteina '
+            + 'raunioilla on väljää, ennen kuin päiväretkeläiset ehtivät '
+            + 'junalla ja bussilla perille.',
+          lahde: 'Allard Schmidt, Wikimedia Commons (PD)',
+        },
+        kappale: 'Machu Picchuun ei ajeta autolla. Viimeinen osuus '
+          + 'kuljetaan junalla laakson pohjalle Aguas Calientesin kylään ja '
+          + 'sieltä bussilla tai portaita pitkin ylös, ellei tule neljän '
+          + 'päivän vaelluksella inkapolkua ja Aurinkoportin kautta. '
+          + 'Pääsylippu ostetaan etukäteen yhdelle reitille ja '
+          + 'kellonajalle, ja passi kulkee mukana. Kaupungin yllä kohoavat '
+          + 'Huayna Picchu ja Machu Picchu -vuori vaativat omat lippunsa, '
+          + 'ja inkojen vanha silta kallioseinämän kyljessä on lyhyen '
+          + 'kävelyn päässä. Kuivinta on toukokuusta syyskuuhun, mutta '
+          + 'silloin myös väkeä on eniten. Liput, reitit ja kiintiöt '
+          + 'muuttuvat usein, joten ne kannattaa tarkistaa ennen matkaa '
+          + 'viralliselta sivustolta.',
+        artikkeli: {
+          nimi: 'Matkailijan Machu Picchu',
+          teksti: 'Machu Picchun juurelle pääsee vain junalla tai jalan.',
+          nosto: 'Inkapolulle päästetään päivässä enintään 500 ihmistä, ja '
+            + 'heistä suurin osa on oppaita ja kantajia.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Junalla laakson pohjalle',
+              teksti: 'Useimmat matkailijat saapuvat junalla. PeruRail ja '
+                + 'Inca Rail ajavat Cuscon lähellä olevalta Poroyn asemalta '
+                + 'tai Ollantaytambon pikkukaupungista Urubamban laaksoa '
+                + 'alas Aguas Calientesiin, jonka virallinen nimi on '
+                + 'nykyään Machupicchu Pueblo. Kylään ei johda autotietä: '
+                + 'se syntyi 1920-luvun lopulla ratatyömaan leiriksi ja '
+                + 'alkoi palvella matkailijoita, kun rata valmistui 1931. '
+                + 'Ollantaytambosta junamatka kestää vajaat kaksi tuntia, '
+                + 'Poroysta lähes neljä, ja sadekaudella Cuscon puoleiset '
+                + 'vuorot voidaan korvata bussikuljetuksella '
+                + 'Ollantaytamboon. Kylästä raunioille kiemurtelee 8,6 '
+                + 'kilometrin serpentiinitie, jonka bussit ajavat noin '
+                + 'puolessa tunnissa; jalan portaita pitkin nousu vie '
+                + 'puolestatoista kahteen tuntiin. Halvempi takaovi kulkee '
+                + 'maanteitse Hidroeléctrican voimalan asemalle, josta '
+                + 'kävellään radan viertä kylään kahdesta kolmeen tuntia. '
+                + 'Sadekaudella reittiä ei suositella maanvyöryjen vuoksi, '
+                + 'ja kun voimalalle johtavaa tietä päällystetään, '
+                + 'matka-ajat voivat vielä muuttua.',
+              kuva: [
+                {
+                  tiedosto: 'Train going to Aguas Calientes (Machu Picchu City) at Inca Trail, Peru.jpg',
+                  lyhyt: 'Juna kulkee Urubamban vartta kohti Aguas Calientesia inkojen terassien ohi.',
+                  selite: 'Matkustajajuna matkalla Aguas Calientesiin '
+                    + 'kuohuvan Urubamba-joen rantaa pitkin. Kuva on '
+                    + 'otettu inkapolulta elokuussa 2022, ja vasemmalla '
+                    + 'näkyy inkojen terassimuureja.',
+                  lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Machu Picchu - train runs right through the center of Aguas Calientes - IMG 7789.jpg',
+                  lyhyt: 'PeruRailin veturi ajaa Aguas Calientesin keskustan läpi ravintoloiden vierestä.',
+                  selite: 'Aguas Calientesissa rata kulkee kylän '
+                    + 'kävelykadun keskellä, ja PeruRailin sininen '
+                    + 'dieselveturi ohittaa terassiravintolan pöydät '
+                    + 'muutaman metrin päästä. Kuva vuodelta 2011.',
+                  lahde: 'Bruce Tuten, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Buses on the switchback climb to Machu Picchu.jpg',
+                  lyhyt: 'Bussit kiipeävät soratien mutkia kylästä raunioiden portille.',
+                  selite: 'Kaksi bussia serpentiinitiellä, jota pitkin '
+                    + 'matkailijat ajetaan Aguas Calientesista Machu '
+                    + 'Picchun sisäänkäynnille. Tie kiemurtelee jyrkkää '
+                    + 'metsärinnettä ylös; kuva heinäkuulta 2009.',
+                  lahde: 'Jimmy Harris, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Lippu yhdelle reitille',
+              teksti: 'Pääsylippu ei ole vapaa kulkulupa koko kaupunkiin. '
+                + 'Kesäkuusta 2024 alkaen liput on jaettu kolmeen '
+                + 'kierrokseen ja niiden kymmeneen reittiin, ja yksi lippu '
+                + 'käy vain yhdelle reitille tiettynä kellonaikana. '
+                + 'Ensimmäinen kierros vie ainoastaan ylemmille ja '
+                + 'alemmille näköalapaikoille, toinen eli klassinen kierros '
+                + 'kulkee kaupunkialueen läpi ja kolmas, niin sanottu '
+                + 'kuninkaallinen kierros, kiertää alakaupungin '
+                + 'tärkeimmät rakennukset. Polut ovat pitkälti '
+                + 'yksisuuntaisia, joten ohi kävelty kohde jää helposti '
+                + 'näkemättä. Alueella ei ole vessoja eikä ruokamyyntiä, '
+                + 'eikä ulos pääse käymään ja palaamaan. Portilla kysytään '
+                + 'passia, ja isot reput jätetään säilöön. Lippuja myydään '
+                + 'viralliselta verkkosivustolta ja rajoitetusti Aguas '
+                + 'Calientesin lipputoimistosta, mutta paikan päältä '
+                + 'ostettu lippu kelpaa vasta seuraavana päivänä. '
+                + 'Järjestelmää on muutettu viime vuosina monta kertaa, '
+                + 'joten voimassa olevat säännöt kannattaa tarkistaa '
+                + 'juuri ennen matkaa.',
+              kuva: {
+                tiedosto: 'Machu Picchu, 2023 (035).jpg',
+                lyhyt: 'Köysiaidat ja kyltit ohjaavat kävijöitä polkua pitkin kaupungin keskiosaan.',
+                selite: 'Toukokuussa 2023 otetussa kuvassa matkailijaryhmät '
+                  + 'kulkevat kaupungin keskiosan halki Huayna Picchun '
+                  + 'juurella. Etualan köysiaita ja kyltti rajaavat '
+                  + 'polkua, jota kukin lippureitti seuraa.',
+                lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Inkapolkua Aurinkoportille',
+              teksti: 'Perinteinen tapa saapua on kävellä. Klassinen '
+                + 'inkapolku lähtee Urubamban varrelta rautatien '
+                + 'kilometrin 82 kohdalta ja kulkee runsaat 40 kilometriä '
+                + 'vuorten yli, tavallisesti neljässä päivässä ja kolmena '
+                + 'telttayönä. Toisena päivänä noustaan Warmi Wañusqan eli '
+                + 'Kuolleen naisen solaan 4 215 metrin korkeuteen, ja '
+                + 'viimeisenä aamuna kaupunki avautuu yläpuolelta Inti '
+                + 'Punkun, Aurinkoportin, kautta. Polulle pääsee vain '
+                + 'luvalla. Päivittäiseen 500 hengen kiintiöön lasketaan '
+                + 'myös oppaat ja kantajat, joten vaeltajia on vain '
+                + 'parisataa, ja kuivan kauden luvat loppuvat kuukausia '
+                + 'etukäteen. Jokaisen on kuljettava rekisteröidyn '
+                + 'matkanjärjestäjän ja oppaan kanssa, ja lupa on sidottu '
+                + 'passiin. Kantojuhdat eivät saa kulkea polun yläosilla, '
+                + 'joten leirivarusteet kantavat paikalliset kantajat. '
+                + 'Polku suljetaan joka helmikuu huoltoa ja siivousta '
+                + 'varten. Kiireisemmälle on kahden päivän versio '
+                + 'kilometriltä 104, ja ilman inkapolun lupaa voi lähteä '
+                + 'esimerkiksi viiden päivän Salkantay-vaellukselle.',
+              kuva: {
+                tiedosto: 'Machu Picchu seen from Intipunku (the Gate of the Sun), Peru.jpg',
+                lyhyt: 'Aurinkoportilta vaeltaja näkee kaupungin ensi kertaa, Huayna Picchu taustallaan.',
+                selite: 'Inkapolun viimeinen kivetty osuus Inti Punkun '
+                  + 'kohdalla. Alhaalla harjanteella näkyvät Machu Picchun '
+                  + 'terassit, takana kohoaa Huayna Picchu ja rinteessä '
+                  + 'erottuvat bussitien mutkat. Kuva elokuulta 2022.',
+                lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kaksi huippua ja inkasilta',
+              teksti: 'Lipun voi valita niin, että siihen kuuluu vuoren '
+                + 'nousu. Kaupungin pohjoispäässä kohoava Huayna Picchu '
+                + 'nousee 2 693 metriin, noin 260 metriä raunioita '
+                + 'korkeammalle. Jyrkällä polulla on kiviportaita ja '
+                + 'paikoin teräsvaijereita, joista otetaan tukea, ja '
+                + 'huipun alla kuljetaan ahtaan luolan läpi; reipas '
+                + 'kulkija on ylhäällä alle tunnissa. Polulle päästetään '
+                + 'päivittäin enintään 400 kävijää kahdessa aikaikkunassa, '
+                + 'ja marraskuusta huhtikuuhun märät kivet ovat liukkaita. '
+                + 'Werner Herzogin Aguirre – Jumalan viha (1972) kuvattiin '
+                + 'osin juuri näillä portailla. Kaupungin eteläpuolella '
+                + 'kohoaa Machu Picchu -vuori, jonka yli 3 000 metrin '
+                + 'huipulle noustaan Aurinkoportin polulta haarautuvaa '
+                + 'porraspolkua. Edestakaiseen matkaan kuluu pari–kolme '
+                + 'tuntia, ja väkeä on vähemmän. Lyhyin sivuretki johtaa '
+                + 'lounaaseen Inkasillalle: kapea polku on muurattu '
+                + 'pystysuoran kallioseinämän kylkeen, ja muurin aukon yli '
+                + 'on laskettu tukkeja. Ne poistamalla inkat saattoivat '
+                + 'sulkea toisen kaupunkiin johtaneista reiteistä.',
+              kuva: {
+                tiedosto: 'Inca bridge, Machu Picchu 2.jpg',
+                lyhyt: 'Inkasillan tukit peittävät muurin aukon pystysuoran kallion kyljessä.',
+                selite: 'Inkasillan kohdalla polku on muurattu '
+                  + 'kallioseinämän kylkeen, ja sen aukon yli on laskettu '
+                  + 'tukkeja. Ne poistamalla kulku kaupunkiin voitiin '
+                  + 'katkaista. Kuva syyskuulta 2009.',
+                lahde: 'Corey from Australia, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Sää, korkeus ja ruuhkat',
+              teksti: 'Kuivinta on toukokuusta syyskuuhun, ja sateisin aika '
+                + 'osuu marraskuusta maaliskuuhun. Päivälämpötila pysyy '
+                + 'ympäri vuoden lähes samana, mutta kuivan kauden yöt '
+                + 'ovat viileitä. Kuiva kausi on myös ruuhka-aikaa: eniten '
+                + 'väkeä on kesä–elokuussa, vähiten helmikuussa, kun '
+                + 'inkapolku on kiinni. Pakettimatkalaiset ovat raunioilla '
+                + 'enimmäkseen kymmenen ja kahden välillä, joten yö Aguas '
+                + 'Calientesissa antaa tilaisuuden kulkea aamulla tai '
+                + 'iltapäivällä väljemmin. Aamuisin näkymät peittyvät '
+                + 'usein pilveen. Korkeus yllättää väärässä järjestyksessä: '
+                + 'Cusco on noin 3 400 metrissä, yli kilometrin raunioita '
+                + 'ylempänä, joten moni totuttelee ohueen ilmaan ensin '
+                + 'matalammassa Pyhässä laaksossa. Korkealla aurinko '
+                + 'polttaa, joten hattu ja aurinkovoide kuuluvat mukaan. '
+                + 'Luonto ja politiikka voivat katkaista yhteydet: '
+                + 'tammikuussa 2010 tulvat saartoivat yli 4 000 ihmistä ja '
+                + 'raunioalue avattiin vasta huhtikuussa, ja alkuvuonna '
+                + '2023 mielenosoitukset sulkivat sen muutamaksi '
+                + 'viikoksi. Pitkän päivän jälkeen voi laskeutua kylän '
+                + 'kuumiin lähteisiin, joista Aguas Calientes on saanut '
+                + 'nimensä.',
+              kuva: {
+                tiedosto: 'Montaña Machu Picchu, 2023 (37).jpg',
+                lyhyt: 'Machu Picchu -vuoren huippu katoksineen on kokonaan pilven ympäröimä.',
+                selite: 'Toukokuussa 2023 kiviportaat ja huipun katos '
+                  + 'erottuivat, mutta pilvi peitti koko laakson. '
+                  + 'Pilvisellä säällä raunioiden kuuluisat näkymät '
+                  + 'voivat jäädä kokonaan näkemättä.',
+                lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'tiede',
