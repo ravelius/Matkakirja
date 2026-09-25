@@ -108364,6 +108364,247 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'German East Africa',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Mount Kilimanjaro: Tourism industry, Trekking
+       * routes, Marangu Route, Safety, Climate; Kilimanjaro National
+       * Park, Kilimanjaro International Airport, Marangu, Altitude
+       * sickness, Kilimanjaro Christian Medical Centre) ja Wikivoyagen
+       * sivuilta Mount Kilimanjaro, Moshi, Arusha, Tanzania, Dar es
+       * Salaam ja Altitude sickness — teksti omaa. Nostojen aiheita
+       * (näkymä savannilta, kolme tulivuorikartiota, Rebmann, Meyerin
+       * ensinousu, Saksan Itä-Afrikka) eikä luonto-kategorian aiheita
+       * (ilmastovyöhykkeet, jättiruusukoivu, jättiloopelia, norsut,
+       * sulava jäätikkö) toisteta. Hintoja ja maksujen summia ei
+       * kirjata, koska puiston maksut ja lentoyhteydet muuttuvat;
+       * Western Breachin sulkeminen tammikuussa 2024 on Wikipedian
+       * tieto, joka voi vanhentua. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Uhuru Peakin kyltin kuva on tekijän vapaaseen käyttöön
+       * luovuttama (PD-self). Pystykuva: vaeltajat Barrancon
+       * seinämällä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Climbers Barranco Wall Kilimanjaro Tanzania.jpg',
+          lyhyt: 'Vaeltajat kiipeävät käsin ja jaloin Barrancon seinämää Kilimanjaron etelärinteellä.',
+          selite: 'Retkeläiset ja oppaat nousevat reppuineen jyrkkää, '
+            + 'jäkälän laikuttamaa laavakivirinnettä Barrancon seinämällä, '
+            + 'jonka Machamen ja Lemoshon reitit ylittävät; yllä on '
+            + 'pilvien vaalentama taivas.',
+          lahde: 'Altezzatravel, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Kilimanjarolle ei nousta omin päin: kansallispuistoon '
+          + 'pääsee vain luvan saaneen oppaan kanssa, ja useimmat retket '
+          + 'lähtevät Moshista tai Arushasta, joiden puolivälissä on '
+          + 'Kilimanjaron kansainvälinen lentokenttä. Huipulle johtaa '
+          + 'seitsemän virallista reittiä, joista yhdellä nukutaan majoissa '
+          + 'ja muilla teltoissa. Vaikein osa ei ole kiipeily vaan ohut '
+          + 'ilma: liian nopea aikataulu on vuoristotaudin tavallisin syy, '
+          + 'ja jokainen lisäpäivä parantaa mahdollisuuksia päästä perille. '
+          + 'Retkikuntaan kuuluu oppaiden lisäksi kantajia ja kokki, ja '
+          + 'kuivimmat kiipeilykuukaudet osuvat kahden sadekauden väliin.',
+        artikkeli: {
+          nimi: 'Matkailijan Kilimanjaro',
+          teksti: 'Kilimanjarolla hitaasti kulkeva pääsee useimmiten pisimmälle.',
+          nosto: 'Huipulle lähdetään keskiyön tienoilla, kun sora on vielä '
+            + 'jäässä, ja kraatterin reunalla odottaa auringonnousu.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Moshin ja Arushan kautta',
+              teksti: 'Kilimanjaron kansainvälinen lentokenttä avattiin 1971, '
+                + 'ja se on Moshin ja Arushan kaupunkien puolivälissä: '
+                + 'Moshiin on noin puolen tunnin ja Arushaan noin 45 minuutin '
+                + 'ajomatka. Euroopasta sinne lennetään suoraan Amsterdamista, '
+                + 'ja vaihtoyhteyksiä on esimerkiksi Addis Abeban, Dohan ja '
+                + 'Nairobin kautta, mutta reitit muuttuvat. Halvemman lennon voi löytää Dar es '
+                + 'Salaamiin, josta bussimatka Moshiin kestää seitsemästä '
+                + 'kahdeksaan tuntia, tai Nairobiin, josta pääsee bussilla '
+                + 'rajan yli Arushaan ja Moshiin. Wikivoyage varoittaa '
+                + 'säästämästä bussiyhtiössä, sillä halvimpien turvallisuus '
+                + 'on usein heikko. Moshi on vuoren etelärinteen juurella, '
+                + 'ja kiipeily on sen ilmeisin syy matkustaa sinne. '
+                + 'Kaupungista pääsee vuoren kyliin, kuten Machameen ja '
+                + 'Maranguun, daladaloilla eli pienillä minibusseilla, joiden '
+                + 'rahastaja huutaa määränpään ohi ajaessa. Kansallispuiston '
+                + 'päämaja on Maranguissa noin 44 kilometrin päässä Moshista. '
+                + 'Retken voi varata kotimaasta tai paikan päältä, mutta '
+                + 'kannattaa asioida toimistossa eikä kadulla kaupustelevan '
+                + 'kanssa. Useimmat matkailijat tarvitsevat Tansaniaan viisumin, '
+                + 'jonka voi hakea verkossa etukäteen tai lentokentältä, ja '
+                + 'kansallispuistojen maksut peritään ulkomaalaisilta '
+                + 'Yhdysvaltain dollareina. Maksut ja viisumisäännöt '
+                + 'muuttuvat, joten ne kannattaa tarkistaa juuri ennen matkaa. '
+                + 'Rokotuksista ja malarian estolääkityksestä puhutaan '
+                + 'lääkärin kanssa hyvissä ajoin: keltakuumerokotustodistusta '
+                + 'voidaan kysyä, jos matka jatkuu naapurimaihin.',
+              kuva: [
+                {
+                  tiedosto: 'Kilimanjaro Airport Terminal Building.jpg',
+                  lyhyt: 'Kilimanjaron lentokentän terminaali on Moshin ja Arushan puolivälissä.',
+                  selite: 'Matkustajat kävelevät matalan terminaalirakennuksen '
+                    + 'edustalla lokakuussa 2014; asfaltilla seisoo '
+                    + 'matkatavaroiden lastausauto, ja julkisivun edessä kasvaa '
+                    + 'kukkivia pensaita.',
+                  lahde: 'Peter Makholm, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Mount Kilimanjaro from Moshi.jpg',
+                  lyhyt: 'Kibon lumihuippu näkyy kirkkaalla säällä Moshin kattojen yllä.',
+                  selite: 'Moshin keskustan talojen takana kohoaa Kilimanjaron '
+                    + 'loiva massiivi, jonka huipulla on lunta; kuva on otettu '
+                    + 'joulukuussa 2019.',
+                  lahde: 'Ganeshpednekar, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Daladala Moshi.jpg',
+                  lyhyt: 'Daladala-minibussi vie Moshista vuoren juurella oleviin kyliin.',
+                  selite: 'Tumma, vaaleanpunaraitainen minibussi ajaa Moshin '
+                    + 'kadulla lokakuussa 2007; tuulilasin yläreunassa on sen '
+                    + 'nimi ja keulassa reitin paikannimet.',
+                  lahde: 'Fanny Schertzer, Wikimedia Commons (CC BY 2.5)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Seitsemän reittiä huipulle',
+              teksti: 'Kilimanjaron kansallispuistossa saa kulkea vain '
+                + 'nimetyillä reiteillä ja luvan saaneen oppaan kanssa. '
+                + 'Suosituimpana pidetty Marangu on niin sanottu '
+                + 'Coca-Cola-reitti ja ainoa, jolla yövytään majoissa. '
+                + 'Portilta noustaan sademetsän läpi Mandaran majalle, sitten '
+                + 'nummen poikki Horomboon ja lopulta Mawenzin ja Kibon '
+                + 'välisen satulan yli Kibon majalle noin 4700 metriin. '
+                + 'Telttavarusteita ei tarvita, joten Marangu on usein '
+                + 'halvin, mutta lyhyen aikataulunsa vuoksi siltä pääsee '
+                + 'huipulle harvemmin kuin muilta reiteiltä. Machame, jota '
+                + 'sanotaan viskireitiksi, on lounaasta nouseva telttareitti '
+                + 'ja monen mielestä maisemiltaan kaunein. Lemosho lähtee '
+                + 'lännestä Londorossin portilta ja kulkee Shiran ylätasangon '
+                + 'yli; sen ensimmäisenä päivänä ryhmän mukana voi kulkea '
+                + 'aseistettu vartija, koska metsissä liikkuu puhveleita ja '
+                + 'norsuja. Rongai nousee koillisesta Kenian rajan tuntumasta, '
+                + 'ja sitä pidetään telttareiteistä helpoimpana. Lisäksi ovat '
+                + 'Umbwen ja Shiran reitit sekä vähintään seitsemän päivän '
+                + 'Northern Circuit, ja Mwekan reittiä pitkin vain '
+                + 'laskeudutaan. Jyrkkä Western Breach '
+                + 'suljettiin tammikuussa 2024, kun rankkasateet olivat '
+                + 'huuhtoneet rinnettä ja irrottaneet kiviä. Jos huippu ei '
+                + 'houkuttele, Maranguin portilta voi tehdä oppaan kanssa '
+                + 'päivävaelluksen sademetsän läpi Maundin kraatterille ja '
+                + 'nähdä matkalla apinoita ja lintuja.',
+              kuva: {
+                tiedosto: 'Horombo Huts (17053013102).jpg',
+                lyhyt: 'Maranguin reitillä yövytään majoissa, kuten näissä Horombon mökeissä.',
+                selite: 'Horombon tummat, jyrkkäkattoiset puumökit seisovat '
+                  + 'pensaikkoisella nummella noin 3700 metrin korkeudessa, ja '
+                  + 'taustalla kohoaa Kibon lumihuippu helmikuussa 2009.',
+                lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Hitaasti ylös, heti alas',
+              teksti: 'Kilimanjarolle ei tarvita köysiä, mutta 5895 metrin '
+                + 'korkeus koettelee hyväkuntoisiakin. Heinä- ja elokuussa '
+                + '2005 tehdyssä tutkimuksessa huipulle pääsi 61 prosenttia '
+                + 'yrittäjistä, ja 77 prosenttia sai äkillisen vuoristotaudin '
+                + 'oireita: päänsärkyä, pahoinvointia ja ruokahaluttomuutta. '
+                + 'Vakavimmat muodot, keuhko- ja aivoedeema, ovat '
+                + 'hengenvaarallisia, ja niiden riskiä kasvattavat liian '
+                + 'kiireiset aikataulut, joihin kalliit päivämaksut '
+                + 'houkuttelevat. Moshin Kilimanjaro Christian Medical Centren '
+                + 'mukaan tammikuun 1996 ja lokakuun 2003 välillä vuorella '
+                + 'kuoli 25 kiipeilijää, heistä 14 vuoristotautiin. Swahiliksi hitaasti '
+                + 'on pole pole, ja se on vuoren paras ohje. Yli 3000 metrissä '
+                + 'nukkumiskorkeutta suositellaan nostettavaksi vain noin 300 '
+                + 'metriä yössä, ja moni reitti noudattaa periaatetta nouse '
+                + 'korkealle, nuku alempana: Machamella käydään päivällä Lava '
+                + 'Towerilla 4630 metrissä ja yövytään Barrancossa noin '
+                + '650 metriä alempana. Oireiden alkaessa ei nousta '
+                + 'ylemmäs, ja jos olo pahenee, laskeudutaan heti, yölläkin — '
+                + 'jo sadan metrin lasku auttaa. Asetatsolamidi nopeuttaa '
+                + 'sopeutumista, mutta se on reseptilääke eikä korvaa hidasta '
+                + 'nousua. Huippuyönä lähdetään Barafun leiristä tai Kibon '
+                + 'majalta keskiyön tienoilla, koska jäätynyttä soraa on '
+                + 'helpompi nousta, ja aamulla kraatterin reunalta näkee '
+                + 'auringonnousun.',
+              kuva: {
+                tiedosto: 'Kilimanjaro Uhuru Peak Sign.jpg',
+                lyhyt: 'Uhuru Peakin kyltti onnittelee 5895 metriin ehtinyttä kulkijaa.',
+                selite: 'Huurteinen puukyltti Uhuru Peakilla kertoo englanniksi, '
+                  + 'että kulkija on Afrikan korkeimmassa kohdassa 5895 '
+                  + 'metrissä; laudoissa on retkikuntien tarroja, ja taustalla '
+                  + 'näkyy pilvimeri.',
+                lahde: 'Arne d, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Kantajat, oppaat ja kokki',
+              teksti: 'Ilman opasta vuorelle ei pääse: kiipeilyluvan saa vain '
+                + 'luvan saaneen oppaan kanssa, ja oppaan voi palkata ennen '
+                + 'matkaa tai perillä. Retkikuntaan kuuluu vaeltajien ja '
+                + 'oppaiden lisäksi kokki ja kantajia, jotka kuljettavat '
+                + 'teltat, ruoan ja vaeltajien isot laukut leiristä '
+                + 'toiseen. '
+                + 'Vuonna 2007 vuori antoi epäsäännöllistä, kausiluonteista '
+                + 'työtä noin 11 000 oppaalle, kantajalle ja kokille, ja '
+                + 'heidän huonoista työoloistaan ja palkoistaan on esitetty '
+                + 'huolta. Esimerkiksi Maranguun tulee nuoria eri puolilta '
+                + 'Tansaniaa kantajiksi ja oppaiksi. Kun valitsee '
+                + 'retkiyritystä, kannattaa kysyä, miten se kohtelee ja '
+                + 'varustaa kantajansa: Wikivoyagen mukaan monen kantajan '
+                + 'varusteet eivät riitä vuoren oloihin, ja moni on '
+                + 'kiitollinen, jos vaeltaja voi antaa omiaan. '
+                + 'Retken hinnan päälle maksetaan juomarahat oppaille, '
+                + 'kokeille ja kantajille, ja ne kannattaa antaa jokaiselle '
+                + 'itse eikä yhdelle ihmiselle jaettavaksi. Ruoan laatu '
+                + 'riippuu yrityksestä, joten omat pähkinät ja suklaa ovat '
+                + 'hyvä vara. Kiipeilylupaan on ikäraja kymmenen vuotta.',
+              kuva: {
+                tiedosto: 'Porter at Mount Kilimandjaro 01.jpg',
+                lyhyt: 'Kantaja kuljettaa retkikunnan tavaroita niskallaan sumuisella rinteellä.',
+                selite: 'Kantaja nousee soraista polkua kumarassa ison vihreän '
+                  + 'säkin ja retkituolien kanssa, ja hänen takanaan tulee '
+                  + 'lisää kantajia kuormineen; kuva on otettu marraskuussa '
+                  + '2017.',
+                lahde: 'MelissaW, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sadekaudet ja pakkasyö',
+              teksti: 'Päiväntasaajan tuntumassa ei ole kesää ja talvea vaan '
+                + 'kuivia ja sateisia kausia. Sadekausia on kaksi: '
+                + 'maaliskuusta toukokuuhun ja marraskuun tienoilla. '
+                + 'Tammi- ja helmikuu ovat lämpimimpiä, huhti- ja '
+                + 'toukokuu sateisimpia, kesä- ja heinäkuu viileimpiä ja '
+                + 'elo- ja syyskuu kuivimpia, ja Wikivoyage suosittelee '
+                + 'säänsä puolesta tammi-, helmi- ja syyskuuta. Vuori tekee '
+                + 'silti oman säänsä: lunta voi sataa mihin vuodenaikaan '
+                + 'tahansa, ja sadevaatteet kuuluvat mukaan kuivallakin '
+                + 'kaudella. Portilla voi olla helle, mutta huipun '
+                + 'keskilämpötila on noin seitsemän astetta pakkasta, ja '
+                + 'kirkkaina öinä ja tuulessa on paljon kylmempää, joten '
+                + 'huippuyötä varten tarvitaan lämpimiä vaatekerroksia, '
+                + 'pipo, lapaset ja otsalamppu. Juoda pitää paljon, ja kaikki '
+                + 'vuoren vesi keitetään tai puhdistetaan, koska ihmisjätteen '
+                + 'huolimaton hävittäminen on tehnyt vedestä terveysriskin. Yöpyä saa vain '
+                + 'merkityillä leiripaikoilla, ei luolissa. Sähköä vuorella ei '
+                + 'ole, mutta matkapuhelinverkko kuuluu monin paikoin jopa '
+                + 'huipun tuntumassa, joten varavirtalähde kannattaa pakata.',
+              kuva: {
+                tiedosto: 'Rainbow and Barranco wall, Barranco camp, Kilimanjaro region, Tanzania.jpg',
+                lyhyt: 'Sateenkaari kaartuu Barrancon leirin telttojen ja seinämän yllä.',
+                selite: 'Pilvien peittämän laakson reunalla kohoaa Barrancon jyrkkä '
+                  + 'kallioseinämä, ja sen edessä leiripaikalla on kymmeniä '
+                  + 'värikkäitä telttoja; kuva otettiin joulukuun 2016 '
+                  + 'lopulla illalla.',
+                lahde: 'KpokeJlJla, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -125267,6 +125508,253 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on kansallispuisto,
+       * ei kaupunki, joten opas käsittelee portit, tiestön, geysirialueiden
+       * turvallisuuden, eläinten välimatkat, sään ja käytännön asiat.
+       * Taustatiedot englannin Wikipediasta (Yellowstone National Park:
+       * osiot Recreation ja Climate and weather sekä vuoden 2022 tulva;
+       * Grand Loop Road Historic District, Roosevelt Arch, Beartooth
+       * Highway, Old Faithful Inn, Norris Geyser Basin, Death of Colin
+       * Scott, Lamar Valley, Hayden Valley, West Yellowstone, Gardiner,
+       * Snowcoach, Bison) ja Wikivoyagesta (Yellowstone National Park:
+       * Get in, Get around, Stay safe, Sleep) — teksti omaa. Hintoja ja
+       * aukioloaikoja ei kirjata, koska Wikivoyagen majoitus- ja
+       * leirintätiedot ovat vuosilta 2012–2020; tieolot ja talvikauden
+       * palvelut neuvotaan tarkistamaan puiston sivuilta. Boiling Riverin
+       * kylpypaikka jätetään pois, koska Wikivoyagen tieto on vuoden
+       * 2022 tulvaa vanhempi. Nostojen ja ennen–nyt-kuvien aiheita
+       * (puiston perustaminen, Colter, Washburnin ja Haydenin
+       * retkikunnat, Jackson, Moran, Old Faithful -geysiri, Grand
+       * Prismatic, Castle Geyser, kaldera, biisonien ja susien paluu) ei
+       * toisteta. Kaikki kuvat ovat Yellowstonen kansallispuiston (NPS)
+       * julkaisemia public domain -kuvia paitsi Beartooth Highway
+       * (tekijän PD-julistus); lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * Roosevelt Arch sateenkaaren kera.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Rainbow through Roosevelt Arch (48266871937).jpg',
+          lyhyt: 'Pohjoisportin Roosevelt Arch on toivottanut matkailijat tervetulleiksi vuodesta 1903.',
+          selite: 'Gardinerin pohjoisportin 16-metrinen holvi on muurattu '
+            + 'pylväsbasaltista, ja sen laatassa lukee "For the Benefit and '
+            + 'Enjoyment of the People", kansan hyödyksi ja iloksi. Portti '
+            + 'on puiston viidestä ainoa, joka on auki ympäri vuoden.',
+          lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+        },
+        kappale: 'Yellowstone ei ole kaupunki vaan kokonainen ylänkö: lähes '
+          + '9 000 neliökilometriä geysirialueita, laaksoja ja metsää '
+          + 'keskimäärin 2 400 metrin korkeudessa, ja sen halki kiertää '
+          + 'kahdeksikon muotoinen maantie. Vuonna 2023 puistossa kävi 4,5 '
+          + 'miljoonaa ihmistä, eniten heinäkuussa. Matkailija tulee '
+          + 'autolla jostakin viidestä portista, kulkee geysirialueilla '
+          + 'vain laudoituksia pitkin ja katselee biisoneita ja karhuja '
+          + 'kiikarilla kaukaa. Kesälläkin sää voi kääntyä lumisateeksi, ja '
+          + 'talvella lähes kaikki tiet ovat kiinni autoilta. Puiston '
+          + 'majapaikat varataan hyvissä ajoin, eikä kännykkä toimi '
+          + 'suuressa osassa puistoa.',
+        artikkeli: {
+          nimi: 'Matkailijan Yellowstone',
+          teksti: 'Yellowstone kierretään autolla, mutta parhaat hetket '
+            + 'koetaan laudoituksilla ja kiikarin takana.',
+          nosto: 'Puiston vaarallisin paikka ei ole kuuma lähde eikä karhu '
+            + 'vaan maantie.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Viisi porttia ja kahdeksikko',
+              teksti: 'Yellowstonen kansallispuisto on lähes 9 000 '
+                + 'neliökilometrin kokoinen, ja suurin osa siitä on Wyomingin '
+                + 'luoteiskulmassa; reunat ulottuvat Montanan ja Idahon '
+                + 'puolelle. Julkista liikennettä puiston sisällä ei ole, '
+                + 'joten useimmat tulevat omalla tai vuokra-autolla. Lähimmät '
+                + 'isot lentokentät ovat Bozemanissa Montanassa ja Jackson '
+                + 'Holessa Grand Tetonin kansallispuistossa, ja pienempiä '
+                + 'kenttiä on Codyssa, Idaho Fallsissa sekä kesäisin West '
+                + 'Yellowstonessa. Portteja on viisi: länsiportti avautuu West '
+                + 'Yellowstonen pikkukaupungista, eteläportti Grand Tetonin '
+                + 'suunnasta, itäportti Codyn tieltä ja koillisportti Cooke '
+                + 'Cityn kautta, jonne idästä kiipeää 3 337 metrin solaan '
+                + 'nouseva Beartooth Highway. Vain Gardinerin pohjoisportti on '
+                + 'auki ympäri vuoden. Sisällä tärkeimmät kohteet yhdistää '
+                + 'noin 230 kilometrin Grand Loop Road, joka piirtyy kartalle '
+                + 'kahdeksikkona: eteläinen lenkki on noin 140 ja pohjoinen '
+                + 'noin 110 kilometriä. Matkat kannattaa laskea tunteina eikä '
+                + 'kilometreinä, sillä tie kiemurtelee solien yli ja liikenne '
+                + 'pysähtyy usein tienvarren eläinten takia. Kesäkuussa 2022 '
+                + 'ennätystulva vei pohjoisportin tien paikoin kokonaan, ja '
+                + 'portti avattiin uudelleen vasta lokakuun lopussa. Tieolot '
+                + 'kannattaa siksi tarkistaa puiston sivuilta juuri ennen '
+                + 'lähtöä.',
+              kuva: [
+                {
+                  tiedosto: 'Traffic at West Entrance backing up into West Yellowstone, Montana (54642717364).jpg',
+                  lyhyt: 'Kesän autojono ulottuu länsiportin kopeilta West Yellowstonen kaupunkiin asti.',
+                  selite: 'Heinäkuussa 2025 kuvatussa ilmakuvassa autot '
+                    + 'jonottavat Yellowstonen länsiportille metsän halki '
+                    + 'West Yellowstonen kaupungista asti. Heinäkuu on '
+                    + 'puiston vilkkain kuukausi.',
+                  lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+                },
+                {
+                  tiedosto: 'Grand Loop Road through Golden Gate (35375950120).jpg',
+                  lyhyt: 'Grand Loop Road kiertää Golden Gaten jyrkänteen kylkeen rakennettua siltaa pitkin.',
+                  selite: 'Mammoth Hot Springsin eteläpuolella Grand Loop '
+                    + 'Road kulkee Golden Gaten rotkon kallion kylkeen '
+                    + 'rakennetulla sillalla. Suuri osa puiston tiestöstä '
+                    + 'suunniteltiin armeijan insinöörin Hiram Chittendenin '
+                    + 'johdolla puiston alkuvuosina.',
+                  lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+                },
+                {
+                  tiedosto: 'Beartooth Highway Showing Switchbacks.jpg',
+                  lyhyt: 'Beartooth Highway mutkittelee järvien täplittämällä ylätasangolla lähellä solaa.',
+                  selite: 'Näkymä Beartooth Passin läheltä lounaaseen: '
+                    + 'koillisportille vievä tie kiemurtelee ylätasangon '
+                    + 'järvien lomassa. Sola on runsaan lumen takia yleensä '
+                    + 'auki vain toukokuun puolivälistä lokakuun puoliväliin.',
+                  lahde: 'WizardFusion, Wikimedia Commons (Public domain)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Laudoitus on raja',
+              teksti: 'Geysirialueilla kuljetaan puisia laudoituksia ja '
+                + 'merkittyjä polkuja pitkin, eikä niiltä saa astua sivuun. '
+                + 'Vaalea, kova näköinen maa voi olla vain ohut kuori kiehuvan '
+                + 'veden päällä, ja monen lähteen vesi on kuuman lisäksi '
+                + 'hapanta. Kuumat lähteet ovat puiston luonnonvaaroista '
+                + 'vakavimpia: niihin on vuodesta 1890 kuollut ainakin 22 '
+                + 'ihmistä. Kesäkuussa 2016 nuori mies poistui sisarensa kanssa '
+                + 'laudoitukselta Norrisin geysirialueella, liukastui kuumaan '
+                + 'lähteeseen eikä pelastunut; kännykkäyhteyttä ei ollut, ja '
+                + 'apua piti lähteä hakemaan jalan. Norris on puiston kuumin '
+                + 'geysirialue, ja toisin kuin useimmissa muissa altaissa, sen '
+                + 'vedet ovat happamia. Uiminen ja kylpeminen kuumissa '
+                + 'lähteissä on kiellettyä, samoin kaiken heittäminen niihin: '
+                + 'Morning Glory Poolin värit ovat muuttuneet, kun turistien '
+                + 'sinne heittämät esineet ovat tukkineet lähteen. Geysirien hienoa '
+                + 'sumua ei tarvitse pelätä, sillä se ehtii jäähtyä ilmassa, '
+                + 'mutta sen mineraalit voivat naarmuttaa silmälaseja ja '
+                + 'kameran linssejä, jotka kannattaa huuhdella puhtaalla '
+                + 'vedellä ennen pyyhkimistä. Syrjäisillä geysirialueilla '
+                + 'laudoituksia ei ole lainkaan, ja niille lähdetään vain '
+                + 'kokeneen oppaan kanssa.',
+              kuva: {
+                tiedosto: 'Taking photos from the boardwalks at Porcelain Basin (50134535048).jpg',
+                lyhyt: 'Kävijät kuvaavat Norrisin Porcelain Basinia höyryävän maan yli kulkevalta laudoitukselta.',
+                selite: 'Porcelain Basin kuuluu Norrisin geysirialueeseen, '
+                  + 'puiston kuumimpaan. Laudoitus kantaa kulkijan maan yli, '
+                  + 'jonka ohuen kuoren alla voi olla kiehuvaa ja hapanta '
+                  + 'vettä.',
+                lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Sata jaardia karhuun',
+              teksti: 'Yellowstonessa elää Yhdysvaltain 48 yhtenäisen '
+                + 'osavaltion tihein nisäkäskeskittymä, ja moni eläin on '
+                + 'tottunut autoihin ja ihmisiin — mutta kesy se ei ole. '
+                + 'Puiston sääntö on selvä: karhuihin ja susiin pidetään '
+                + 'vähintään sadan jaardin eli 91 metrin ja kaikkiin muihin '
+                + 'eläimiin 25 jaardin eli 23 metrin välimatka. Jos eläin '
+                + 'siirtyy sinun takiasi, olet liian lähellä. Biisonit, '
+                + 'karhut ja wapitit ovat loukanneet ja tappaneet ihmisiä, ja '
+                + 'esimerkiksi vuonna 2015 biisonit vahingoittivat viittä '
+                + 'kävijää, jotka olivat menneet liian lähelle kuvaamaan. '
+                + 'Parhaat katseluajat ovat aamu- ja iltahämärä ja parhaat '
+                + 'paikat laajat laaksot: Hayden Valley kanjonin ja järven '
+                + 'välissä sekä koillisen Lamar Valley, joka on maailman '
+                + 'luotettavimpia paikkoja nähdä susia luonnossa. Kiikari tai '
+                + 'kaukoputki on tärkein varuste. Kun tienvarressa näkyy '
+                + 'karhu, liikenne voi seisoa pitkään, ja tällaisella '
+                + 'ruuhkalla on puistossa oma nimensä, bear jam. Auto ajetaan '
+                + 'levennykselle eikä jätetä keskelle tietä, eikä eläimiä '
+                + 'ruokita koskaan: ihmisten ruokaan tottunut eläin muuttuu '
+                + 'usein aggressiiviseksi. Leirissä ruoka, roskat ja '
+                + 'hajustetut tavarat säilytetään niin, etteivät karhut pääse '
+                + 'niihin käsiksi.',
+              kuva: {
+                tiedosto: 'Bear jam near Roaring Mountain (54641642107).jpg',
+                lyhyt: 'Karhua katsomaan pysähtyneet autot ruuhkauttivat tien Roaring Mountainin lähellä.',
+                selite: 'Heinäkuussa 2025 Grand Loop Roadille syntyi '
+                  + 'Roaring Mountainin lähellä ruuhka, kun autoilijat '
+                  + 'pysähtyivät katsomaan karhua. Puisto neuvoo ajamaan '
+                  + 'levennykselle ja katsomaan eläimiä kaukaa.',
+                lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Lunta mihin aikaan vuodesta tahansa',
+              teksti: 'Yellowstonen ylänkö on keskimäärin 2 400 metrin '
+                + 'korkeudessa, ja sää vaihtuu nopeasti. Kesäpäivinä lämpöä '
+                + 'on usein noin 25 astetta, mutta korkeimmilla paikoilla yöt '
+                + 'voivat olla pakkasella, ja iltapäivisin jyrisee ukkonen; '
+                + 'salama on puistossa tappanut ihmisiä. Lunta voi sataa '
+                + 'minä kuukautena tahansa, joten lämmin takki ja sadevaatteet '
+                + 'kuuluvat mukaan heinäkuussakin. Talvella päivälämpötila on '
+                + 'tyypillisesti 20 ja 5 pakkasasteen välillä, ja kylmin '
+                + 'puistossa mitattu lukema on −54 astetta. Marraskuun alusta '
+                + 'huhtikuun puoliväliin, osin toukokuulle asti, tiet ovat '
+                + 'kiinni pyörillä kulkevilta ajoneuvoilta; vain Gardinerista '
+                + 'Cooke Cityyn vievä tie pidetään auki. Muualle pääsee '
+                + 'joulukuun puolivälistä maaliskuun puoliväliin vain '
+                + 'opastetulla moottorikelkkaretkellä tai lumibussilla '
+                + '(snowcoach), jonka jättirenkaat tai telat kulkevat lumen '
+                + 'päällä, ja retkien päivittäinen määrä on rajoitettu. '
+                + 'Yellowstonejärvi on jäässä lähes puolet vuodesta, '
+                + 'tavallisesti vuodenvaihteesta touko–kesäkuun vaihteeseen. Keväällä '
+                + 'teitä on avattu ennen autokauden alkua ensin pyöräilijöille, '
+                + 'ja syyskuussa wapitiurosten kiimahuuto kaikuu niityillä. '
+                + 'Rauhallisinta on talvella, vilkkainta heinäkuussa.',
+              kuva: {
+                tiedosto: 'Snowcoach in front of Snow Lodge (49265891453).jpg',
+                lyhyt: 'Isorenkainen lumibussi odottaa matkustajia Old Faithful Snow Lodgen edessä.',
+                selite: 'Joulukuussa 2019 kuvattu lumibussi Old Faithful '
+                  + 'Snow Lodgen edessä. Talvella Old Faithfulin alueelle '
+                  + 'pääsee vain opastetulla lumibussilla tai '
+                  + 'moottorikelkalla, sillä tiet ovat lumen peitossa.',
+                lahde: 'NPS / Jacob W. Frank, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Yösija, polut ja katvealueet',
+              teksti: 'Puiston sisällä on yhdeksän hotellia ja lomakylää, '
+                + 'yhteensä noin 2 200 huonetta ja mökkiä, sekä '
+                + 'toistakymmentä leirintäaluetta, joilla on yli 2 000 '
+                + 'paikkaa. Kesällä ne täyttyvät, joten majoitus varataan '
+                + 'hyvissä ajoin; peruutuksia tulee usein, ja täyteen '
+                + 'varattua paikkaa kannattaa kysellä uudelleen. Kuuluisin '
+                + 'majapaikka on 1903–1904 rakennettu Old Faithful Inn, '
+                + 'maailman suurin hirsihotelli, jonka noin 20 metriä '
+                + 'korkeaa aulaa hallitsee 450-tonninen kivitakka. Jos '
+                + 'puistosta ei löydy tilaa, apuun tulevat porttikaupungit: '
+                + 'West Yellowstone on lähellä geysirialueita ja Gardiner '
+                + 'Mammothia. Kännykkä ei toimi suuressa osassa puistoa, '
+                + 'joten kartat kannattaa ladata puhelimeen etukäteen, eikä '
+                + 'hätätilanteessa voi luottaa verkkoon. Retkeilypolkuja on '
+                + 'noin 1 800 kilometriä, ja purovesi keitetään tai '
+                + 'suodatetaan ennen juomista, vaikka se näyttäisi kirkkaalta. '
+                + 'Moni yllättyy siitä, että puiston vaarallisin paikka on '
+                + 'maantie: vuosina 2007–2023 puistossa kuoli 74 ihmistä, ja '
+                + 'liikenne oli yleisin syy, yli 45 prosenttia kuolemista. '
+                + 'Huoltoasemat, kaupat ja ravintolat sulkeutuvat talveksi, '
+                + 'ja niiden kaudet vaihtelevat vuosittain, joten ajantasaiset '
+                + 'tiedot kannattaa katsoa puiston omilta sivuilta.',
+              kuva: {
+                tiedosto: 'Old Faithful Inn, lobby (9411170948).jpg',
+                lyhyt: 'Old Faithful Innin hirsiaulaa hallitsee katonrajaan asti nouseva kivitakka.',
+                selite: 'Old Faithful Inn valmistui 1904 ja on maailman '
+                  + 'suurin hirsihotelli. Arkkitehti Robert Reamer suunnitteli '
+                  + 'aulan, jonka parvia kiertävät kiemuraiset '
+                  + 'kontortamännyn oksat.',
+                lahde: 'NPS / Jim Peaco, Wikimedia Commons (Public domain)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -127709,6 +128197,266 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Karora, Wikimedia Commons (PD)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Milford Sound, New Zealand State Highway 94, Homer
+       * Tunnel, Transport in Milford Sound, Milford Track, Milford Sound
+       * Airport, Te Anau, Routeburn Track, Kea, Antipathella fiordensis,
+       * Austrosimulium ungulatum, Sandfly, Fiordland National Park) ja
+       * Wikivoyagen sivuilta Milford Sound, Milford Track ja Te Anau —
+       * teksti omaa. Hinnat ja aukioloajat jätetty pois, koska
+       * Wikivoyagen yritystiedot ovat osin vanhoja; observatorion
+       * aukiolo ja ulkomaalaisten pääsymaksuehdotus (2025) merkitty
+       * tarkistettaviksi. Nostojen aiheita (Grono, Piopiotahi-nimi,
+       * Tū-te-rakiwhanoa vuonojen veistäjänä, Sutherland ja Sutherland
+       * Falls, Mitre Peak, Kipling ja kävijämäärät, sademäärä ja
+       * tilapäiset putoukset, Bowen Falls, delfiinit, tawaki, Milford
+       * Trackin synty ja "maailman hienoin kävelyretki") eikä ennen–nyt-
+       * kuvien aiheita (photochrom, Stirling Falls, karvahylkeet,
+       * Homerin tunnelin rakentaminen) toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: autojono Homerin tunnelin itäsuulla.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Homer Tunnel, Milford Sound, New Zealand (18).JPG',
+          lyhyt: 'Autot jonottavat liikennevaloissa Homerin tunnelin itäsuulla Milford Roadilla.',
+          selite: 'Kesän vilkkaimpaan aikaan Homerin tunnelia ajetaan '
+            + 'liikennevalojen tahdissa vuorotellen yhteen suuntaan. Jonon '
+            + 'yllä kohoavat pystysuorat kallioseinät, joilta valuu ohuita '
+            + 'vesiputouksia, ja tunnelin suuta suojaa lumivyörykatos.',
+          lahde: 'Michal Klajban, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Milford Soundiin johtaa yksi ainoa maantie, ja lähes '
+          + 'jokainen kävijä tulee samaa reittiä päiväretkellä: Te Anausta '
+          + 'ajetaan noin 120 ja Queenstownista 291 kilometriä. Perillä '
+          + 'odottavat risteilyveneet, kajakit ja vedenalainen maailma, '
+          + 'jossa mustat korallit kasvavat tavallista paljon lähempänä '
+          + 'pintaa. Milford Trackin kävelijät saapuvat neljän päivän '
+          + 'vaelluksen päätteeksi veneellä, ja paikat reitille varataan '
+          + 'kuukausia etukäteen. Sadetakki ja hyönteiskarkote kuuluvat '
+          + 'jokaisen reppuun, ja tien tila tarkistetaan ennen lähtöä, '
+          + 'sillä vuoristotie voi sulkeutua lumivyöryvaaran, maanvyöryn '
+          + 'tai tulvan takia.',
+        artikkeli: {
+          nimi: 'Matkailijan Milford Sound',
+          teksti: 'Milford Soundiin on yksi tie, ja puolet elämyksestä on '
+            + 'sen varrella.',
+          nosto: 'Māorien tarinan mukaan hiekkakärpänen luotiin, jotta '
+            + 'ihmiset eivät jäisi toimettomina ihailemaan Fiordlandin '
+            + 'kauneutta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille yhtä tietä',
+              teksti: 'Milford Soundin kylään päättyy vain yksi maantie, '
+                + 'valtatie 94 eli Milford Road. Useimmat matkailijat '
+                + 'yöpyvät vajaan 3 000 asukkaan Te Anaussa, josta vuonolle '
+                + 'on noin 120 kilometriä: ajoaikaa kannattaa varata '
+                + 'vähintään kaksi tuntia, pysähdyksineen helposti kolme. '
+                + 'Queenstownista matkaa on 291 kilometriä suuntaansa, koska '
+                + 'tie kiertää Te Anaun kautta, ja sieltä lähtevä bussiretki '
+                + 'venyy noin kaksitoistatuntiseksi. Tankki täytetään Te '
+                + 'Anaussa, sillä myöhemmin polttoainetta saa vain hyvin '
+                + 'rajoitetusti. Tie seurailee ensin Te Anau -järven rantaa '
+                + 'ja nousee sitten Eglintonin laaksoon, jonka puolivälissä '
+                + 'Mirror Lakesin lammet heijastavat tyynellä säällä '
+                + 'vuorenhuiput. The Dividen pysäköintipaikalta alkaa '
+                + 'Routeburn Track, ja sen jälkeen tie kapuaa Homerin '
+                + 'tunnelille 945 metrin korkeuteen. Kesän ruuhka-aikaan '
+                + '1,27 kilometrin tunnelia ajetaan liikennevaloin '
+                + 'vuorotellen yhteen suuntaan, ja odotus voi venyä '
+                + 'parikymmentä minuuttia. Tunnelin suulla liikkuu usein '
+                + 'uteliaita kea-papukaijoja, joita ei saa ruokkia. '
+                + 'Kiireisempi voi lentää pienkoneella tai helikopterilla '
+                + 'Queenstownista, Wānakasta tai Te Anausta vuonon pienelle '
+                + 'lentokentälle, mutta huono sää voi perua lennon.',
+              kuva: [
+                {
+                  tiedosto: '015 City distances on a road sign in New Zealand - distance to Invercargill, Te Anau and Milford Sound.jpg',
+                  lyhyt: 'Valtatie 6:n viitta Queenstownin seudulla: Milford Soundiin on 291 kilometriä.',
+                  selite: 'Queenstownin seudulla valtatie 6:n viitta lupaa '
+                    + 'Milford Soundiin 291 kilometriä ja Te Anauhun 171. '
+                    + 'Matka on pitkä, koska vuorten läpi ei ole oikotietä '
+                    + 'ja tie kiertää Te Anaun kautta.',
+                  lahde: 'Marek Ślusarczyk (Tupungato), Wikimedia Commons (CC BY 3.0)',
+                },
+                {
+                  tiedosto: 'Mirror Lake, Fiordland 3.jpg',
+                  lyhyt: 'Mirror Lakesin lampi Milford Roadin varrella heijastaa lumihuippuisia vuoria.',
+                  selite: 'Eglintonin laaksossa, suunnilleen Te Anaun ja '
+                    + 'Milford Soundin puolivälissä, tien vieressä on '
+                    + 'pieniä lampia, joiden tyyni pinta heijastaa '
+                    + 'Earl-vuoriston huiput. Pysähdyspaikka on '
+                    + 'bussiretkien suosituimpia.',
+                  lahde: 'Robert Linsdell, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Kea 0A2A7264.jpg',
+                  lyhyt: 'Kea-papukaija Homerin tunnelin lähellä, jossa linnut liikkuvat autojen seassa.',
+                  selite: 'Kea on Eteläsaaren vuoristossa elävä papukaija, '
+                    + 'joka tutkii uteliaana reppuja, kenkiä ja autoja. '
+                    + 'Homerin tunnelin suulla ruokinta on houkutellut '
+                    + 'lintuja jonottavien autojen sekaan, ja vuonna 2017 '
+                    + 'tunnelin lähelle rakennettiin keoille oma '
+                    + 'kiipeilypaikka houkuttelemaan niitä pois tieltä.',
+                  lahde: 'JJ Harrison, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Laivalla, kajakilla ja pinnan alla',
+              teksti: 'Vuonolle lähdetään kylän satamaterminaalista, josta '
+                + 'usea yhtiö ajaa tavallisesti tunnista kahteen tuntiin '
+                + 'kestäviä risteilyjä. Monet niistä käyvät vuonon suulla '
+                + 'Tasmaninmerellä ja palaavat samaa reittiä, jota '
+                + 'varhaiset purjehtijat tulivat. Koska Queenstownin ja Te '
+                + 'Anaun bussit saapuvat keskipäivän tienoilla, veneet '
+                + 'ovat täysimmillään juuri silloin; aamun tai myöhäisen '
+                + 'iltapäivän lähdöllä väkeä on vähemmän, ja valokin on '
+                + 'usein kuvaamiseen parempi. Yön yli -risteilyillä '
+                + 'matkustajat syövät ja nukkuvat laivassa vuonolla. '
+                + 'Kajakilla pääsee kalliorannoille, joihin isot alukset '
+                + 'eivät mahdu, ja hiljaa liukuessa hylkeet ja pingviinit '
+                + 'näkyvät paremmin. Opastetut ryhmät ovat pieniä, mutta '
+                + 'melonta on raskasta, ja kylmään ja märkään on '
+                + 'varauduttava. Pinnan alla on oma maailmansa: sadevesi '
+                + 'muodostaa suolaisen meriveden päälle metsän '
+                + 'parkkihapoista ruskean makean kerroksen, joka pimentää '
+                + 'syvyydet. Siksi tavallisesti syvällä elävät mustat '
+                + 'korallit kasvavat täällä jo noin kymmenen metrin '
+                + 'syvyydessä. Harrison Covessa on toiminut kelluva '
+                + 'vedenalainen observatorio, josta korallit näkee lasin '
+                + 'läpi; sen aukiolo kannattaa tarkistaa ennen matkaa.',
+              kuva: {
+                tiedosto: 'Black coral at Milford Sound Underwater Observatory.jpg',
+                lyhyt: 'Elävä musta koralli näyttää vedenalaisen observatorion ikkunasta valkoiselta.',
+                selite: 'Harrison Coven vedenalaisesta observatoriosta '
+                  + 'kuvattu musta koralli on elävänä vaalea: nimensä '
+                  + 'korallit ovat saaneet tummasta tukirangastaan. '
+                  + 'Fiordlandin vuonoissa ne kasvavat poikkeuksellisen '
+                  + 'matalalla, koska ruskea makean veden pintakerros '
+                  + 'himmentää valon.',
+                lahde: 'Pseudopanax, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Milford Track: varaa ajoissa',
+              teksti: 'Milford Track on Uuden-Seelannin '
+                + 'luonnonsuojeluviraston DOC:n Great Walk -reitti, ja '
+                + 'pääkaudella lokakuun lopulta huhtikuun loppuun sitä '
+                + 'kävellään tarkkojen sääntöjen mukaan: vain yhteen '
+                + 'suuntaan, Te Anau -järven päästä Milford Soundiin, '
+                + 'neljässä päivässä. Telttailu on kielletty, ja jokainen '
+                + 'yö vietetään varatussa majassa. Itsenäiset kulkijat '
+                + 'nukkuvat DOC:n Clinton-, Mintaro- ja Dumpling-majoissa '
+                + 'ja kantavat itse ruokansa, makuupussinsa ja kattilansa; '
+                + 'opastetun retken ostaneet yöpyvät omissa majataloissaan, '
+                + 'joissa on suihkut ja valmiit ateriat. Reitille pääsee '
+                + 'päivittäin aloittamaan enintään 40 itsenäistä ja 50 '
+                + 'opastettua kävelijää, joten paikat menevät nopeasti: '
+                + 'toukokuussa 2022 koko kesä varattiin täyteen 13 '
+                + 'minuutissa. Vaellus alkaa veneellä Te Anau Downsista '
+                + 'Glade Wharfiin ja päättyy Sandfly Pointiin, jonne ei '
+                + 'johda tietä; sieltä noin varttitunnin venekyyti vie '
+                + 'Milford Soundin laiturille. Talvella rajoituksia ei ole, '
+                + 'mutta majojen varusteita viedään pois ja siltoja '
+                + 'puretaan lumivyöryjen tieltä, joten reitti sopii silloin '
+                + 'vain kokeneille. Säät voivat sotkea suunnitelmat '
+                + 'kesälläkin: vuonna 2025 kauden alku viivästyi '
+                + 'lumivyöryvaurioiden takia. Ilman varausta pääsee '
+                + 'tien varrelta The Dividesta päiväkävelylle Key '
+                + 'Summitille, jolta näkyy Hollyfordin laaksoon.',
+              kuva: {
+                tiedosto: 'Milford Track Sandfly Point Shelter.jpg',
+                lyhyt: 'Sandfly Pointin suojakatos Milford Trackin päässä, jossa kävelijät odottavat venettä.',
+                selite: 'Milford Trackin viimeinen päivä päättyy Sandfly '
+                  + 'Pointin puiseen suojakatokseen. Tietä ei ole, joten '
+                  + 'kävelijät odottavat täällä venettä, joka vie heidät '
+                  + 'vuonon poikki Milford Soundin laiturille.',
+                lahde: 'AlasdairW, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Sadevarusteet ja tien tila',
+              teksti: 'Sade on Milford Soundissa pikemmin sääntö kuin '
+                + 'poikkeus, joten sadetakki kuuluu päiväretkenkin '
+                + 'varusteisiin ja kameralle kannattaa ottaa sateenvarjo '
+                + 'tai vedenpitävä suoja. Sadepäivää ei silti tarvitse '
+                + 'surra: osa retkiyhtiöistä pitää sitä vuonon parhaana, '
+                + 'ja moni suosittelee näkemään paikan sekä poudalla että '
+                + 'sateella. Tien tila tarkistetaan ennen lähtöä. Milford '
+                + 'Road on korkea vuoristotie, jolla on kesäkuusta '
+                + 'marraskuuhun usein jäätä, ja lumiketjut ovat '
+                + 'lumiolosuhteissa pakolliset. Keskimäärin tie on '
+                + 'suljettuna noin kahdeksan päivää vuodessa, enimmäkseen '
+                + 'talvella, mutta maanvyöryt, kaatuneet puut ja tulvat '
+                + 'voivat katkaista sen mihin vuodenaikaan tahansa. '
+                + 'Lumivyöryalueilla pysähtyminen on kielletty pitkillä '
+                + 'matkoilla, eikä niille pidä jäädä kuvaamaankaan. '
+                + 'Talvella helikoptereista pudotetaan rinteille '
+                + 'räjähteitä, jotta kertynyt lumi saadaan vyörymään '
+                + 'hallitusti; viimeisin tiedossa oleva lumivyöryn '
+                + 'aiheuttama kuolema tiellä sattui vuonna 1983. '
+                + 'Tienvarren taulut kertovat sulkemisista, ja '
+                + 'vaarallisimpina aikoina Hollyfordin ja Cleddaun '
+                + 'laaksoissa lasketaan puomit. Omalla autolla ajavan on '
+                + 'hyvä tietää, että kapea ja mutkainen tie, jolla on '
+                + 'yksikaistaisia siltoja ja vähän ohituspaikkoja, oli '
+                + 'vuoden 2008 tilastossa maan kolmanneksi vaarallisin '
+                + 'valtatieosuus.',
+              kuva: {
+                tiedosto: 'Knobs Flat sgn.jpg',
+                lyhyt: 'Knobs Flatin tienvarsitaulu kertoo tien olevan auki ja lumivyöryvaaran pieni.',
+                selite: 'Eglintonin laakson Knobs Flatissa seisova taulu '
+                  + 'kertoo, onko Hollyfordin ja Milford Soundin välinen '
+                  + 'tieosuus auki ja kuinka suuri lumivyöryvaara '
+                  + 'vuorilla on. Kuvan ottopäivänä syyskuussa 2009 tie '
+                  + 'oli auki ja vaara pieni.',
+                lahde: 'Motorau, Wikimedia Commons (PD)',
+              },
+            },
+            {
+              otsikko: 'Hiekkakärpäset ja kylän palvelut',
+              teksti: 'Fiordlandin tunnetuin eläin ei ole delfiini eikä '
+                + 'pingviini vaan hiekkakärpänen, māoriksi namu. '
+                + 'Uudessa-Seelannissa hiekkakärpäsiksi kutsutaan pieniä '
+                + 'mäkäräisiä, ja länsirannikon laji Austrosimulium '
+                + 'ungulatum on niistä pahamaineisin. Verta imevät vain '
+                + 'naaraat, jotka tarvitsevat sitä munien kehittymiseen, ja '
+                + 'pahimmillaan ihmistä on laskettu purevan yli tuhat '
+                + 'kärpästä tunnissa, etenkin juuri ennen auringonlaskua '
+                + 'tai sadetta. Māorien tarinan mukaan kärpäsillä on '
+                + 'tehtävä: kun Tū-te-rakiwhanoa oli saanut vuonot '
+                + 'valmiiksi, maisema oli niin kaunis, että ihmiset '
+                + 'lakkasivat tekemästä töitä ja jäivät vain katselemaan, '
+                + 'ja jumalatar Hine-nui-te-pō loi hiekkakärpäsen pitämään '
+                + 'heidät liikkeessä. DEET- tai ikaridiinipitoinen '
+                + 'karkote, pitkät hihat ja lahkeet auttavat; kylän '
+                + 'vierailijakeskuksessa kärpäsille on pystytetty '
+                + 'veistoksiakin. Kylässä palveluja on vähän: '
+                + 'majoituspaikat täyttyvät helposti, ja ruokapaikkoja on '
+                + 'niukasti, joten eväät kannattaa ottaa mukaan. Siksi noin '
+                + 'yhdeksän kävijää kymmenestä tulee vain päiväksi. '
+                + 'Maan luonnonsuojeluministeri ehdotti vuonna 2025 '
+                + 'ulkomaisille kävijöille 20–40 Uuden-Seelannin dollarin '
+                + 'pääsymaksua muutamiin luontokohteisiin, Milford Sound '
+                + 'mukaan lukien. Maksu ei tulisi voimaan ainakaan ennen kesää '
+                + '2027, joten tilanne kannattaa tarkistaa ennen matkaa.',
+              kuva: {
+                tiedosto: 'Biting sandfly.jpg',
+                lyhyt: 'Hiekkakärpänen imee verta sormesta, luultavasti Te Anaun seudulla.',
+                selite: 'Uudessa-Seelannissa hiekkakärpäsiksi kutsutut '
+                  + 'mäkäräiset ovat vain muutaman millimetrin mittaisia, '
+                  + 'mutta niiden puremat kutiavat. Kuva on otettu '
+                  + 'todennäköisesti Te Anaun seudulla, Milford Roadin '
+                  + 'alkupäässä.',
+                lahde: 'Emilio Floris, Wikimedia Commons (PD)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
