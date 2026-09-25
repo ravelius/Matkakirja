@@ -458,6 +458,21 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(!nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Loppu, "varattu lukko piiloon, ei kyljenvaihtoa");
         }
 
+        [Testi] static void LaudanOmaAsetteluEnsin()
+        {
+            // Web europe.js marseille: la end, lx −16, ly 14 → vasemmalle ja hieman alas.
+            Oleta.Tosi(NimiLadonta.OmaPaikka("end", -16, 14, 13, 1f, out var p), "la annettu");
+            Oleta.Tosi(p.Ank == NimiLadonta.NimenAnkkuri.Loppu && Lahella(p.Dx, -16 * 11f / 13f) && p.Dy < 0, p.ToString());
+            Oleta.Tosi(!NimiLadonta.OmaPaikka(null, 0, 0, 13, 1f, out _), "ei la → ei ehdokasta");
+            var e = KE(500, 400); e.OnOma = true; e.Oma = p;
+            var v = new Ruutuvaraukset(); v.Aloita(1);
+            var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { e }, null, Ruutu, 1f, v, nayta, paikat);
+            Oleta.Tosi(nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Loppu, "oma ensin: " + paikat[0]);
+        }
+
+        static bool Lahella(float a, float b) => System.Math.Abs(a - b) < 1e-3f;
+
         [Testi] static void EhdokkaitaKahdeksanSuuntaanKahdellaEtaisyydella()
         {
             var p = new List<NimiLadonta.NimenPaikka>();

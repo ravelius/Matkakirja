@@ -52,6 +52,12 @@ namespace Matkakirja
             public int tarkeys = -1;
             /// <summary>Skeema 1.10: pintakorkeus metreinä merenpinnasta (null paketissa = 0).</summary>
             public double korkeus;
+            /// <summary>
+            /// Laudan oma nimen asettelu (web js/packs/*.js la/lx/ly, js/karttanimet.js sijoitaKaupunginNimi ehdokas 0):
+            /// ankkuri "start"/"end"/"middle" ja perusviivan siirtymä laudan yksiköinä (y alas). Tyhjä la = ei asettelua.
+            /// </summary>
+            public string la;
+            public float lx, ly;
         }
 
         [Serializable]

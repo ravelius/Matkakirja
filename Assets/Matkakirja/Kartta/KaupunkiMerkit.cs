@@ -700,6 +700,8 @@ namespace Matkakirja
                     Kirjain = m.nimio.fontSize * kerroin,
                     Sivu = (pp * 0.5f + valistys * kerroin),
                     Lukittu = m.lukittu, Lukko = m.lukko,
+                    OnOma = NimiLadonta.OmaPaikka(m.kaupunki.la, m.kaupunki.lx, m.kaupunki.ly, m.nimio.fontSize * kerroin, kerroin, out var oma),
+                    Oma = oma,
                 });
             }
 

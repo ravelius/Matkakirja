@@ -638,6 +638,24 @@ namespace Matkakirja
             /// <summary>Lukittu paikka (web js/pallolauta/nimet.js LUKKO): kylki ei vaihdu vedossa eikä zoomissa.</summary>
             public bool Lukittu;
             public NimenPaikka Lukko;
+            /// <summary>Laudan oma asettelu (Sisalto.Kaupunki la/lx/ly), jos <see cref="OnOma"/>; ks. <see cref="OmaPaikka"/>.</summary>
+            public bool OnOma;
+            public NimenPaikka Oma;
+        }
+
+        /// <summary>
+        /// Laudan oma asettelu ehdokkaaksi (web: dx = lx · 11/13 · k, perusviiva dy = ly · 11/13 · k, ank = la).
+        /// Muunnos tekstin keskipisteeksi y ylös kuten muissa ehdokkaissa: Dy = 0,35 · kork − ly · 11/13.
+        /// false, jos la puuttuu.
+        /// </summary>
+        public static bool OmaPaikka(string la, float lx, float ly, float kirjain, float kerroin, out NimenPaikka paikka)
+        {
+            paikka = default;
+            if (string.IsNullOrEmpty(la)) return false;
+            var ank = la == "end" ? NimenAnkkuri.Loppu : la == "middle" ? NimenAnkkuri.Keski : NimenAnkkuri.Alku;
+            float s = 11f / 13f * kerroin;
+            paikka = new NimenPaikka(lx * s, 0.35f * kirjain * 1.15f - ly * s, ank);
+            return true;
         }
 
         /// <summary>Nimen ankkuri kuten webin text-anchor: start = alkaa x:stä, end = päättyy x:ään, middle = keskellä.</summary>
@@ -663,7 +681,7 @@ namespace Matkakirja
 
         /// <summary>
         /// KAUPUNGIN NIMEN EHDOKKAAT (web js/karttanimet.js sijoitaKaupunginNimi) järjestyksessä: (laudan oma
-        /// asettelu lx/ly puuttuu sisältöpaketista, joten se jää pois) pelimerkkipinon väistökehä, jos piste on
+        /// asettelu lisätään kutsujassa eteen, <see cref="OmaPaikka"/>) pelimerkkipinon väistökehä, jos piste on
         /// pinon sisällä (ylös, oikealle, vasemmalle, alas — omistaja 2.9.2026 "ensisijaisesti ylös"), sitten neljä
         /// tavanomaista paikkaa (oikea, vasen, ylä, ala) ja kartografin kehä kahdeksaan suuntaan kahdella
         /// etäisyydellä. Web mittaa perusviivasta y alas; tässä Dy on tekstin keskipiste y ylös, ja muunnos on
@@ -765,6 +783,7 @@ namespace Matkakirja
                             pino = pino is Ruutulaatikko q ? new Ruutulaatikko(Math.Min(q.X0, s.X0), Math.Min(q.Y0, s.Y0), Math.Max(q.X1, s.X1), Math.Max(q.Y1, s.Y1)) : s;
                         }
                     NimenPaikat(e.Kirjain, e.Sivu, pino, kerroin, ehdokasPaikat);
+                    if (e.OnOma) ehdokasPaikat.Insert(0, e.Oma);
                     foreach (var p in ehdokasPaikat)
                     {
                         var l = NimenLaatikko(e.X, e.Y, p, e.Leveys, e.Korkeus, kerroin);
