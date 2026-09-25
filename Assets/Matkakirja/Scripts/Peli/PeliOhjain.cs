@@ -1328,6 +1328,7 @@ namespace Matkakirja.Natiivi
             saapumisKaupunki = t.Saapui;
             matkaKohde = b.Value;
             Tila = SilmukanTila.Matkalla;
+            if (t.Saapui != null) EsilataaSaapuminen(t.Saapui);
             // Reitit piirretään lähtöpaikasta koko siirron ajan (web siirtoKaynnissa, B8).
             siirtoLahto = t.Lahto;
             saapumisaaniSoi = false;

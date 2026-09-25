@@ -74,4 +74,9 @@ if os.path.exists(p):
         print("\nOSUMA-% (välimuistista / pyynnöt) VAIHEITTAIN JA LÄHTEITTÄIN")
         for k, o in y["osumat"].items(): print(f"  {k:<22} {o['osumia']:>5}/{o['n']:<5} {o['pros']:>3} %")
     if "esilataaja" in y: print("\nESILATAAJA", y["esilataaja"])
+# RAJA (Raamattu ESILATAUSPOLITIIKKA kohta 3, Fable 25.9.): saapumisessa nolla verkko-odotusta, kylmänä ja lämpimänä.
+# Odotus lasketaan verkko-odotukseksi, kun sen aikana valmistui verkkohaku (haut > 0) tai se on puheen lataus.
+saap = [r for r in rivit if r['vaihe'] == 'saapuminen' and (r.get('haut', 0) > 0 or r['mita'].startswith('puhe:'))]
+ms = sum(r['ms'] for r in saap)
+print(f"\nRAJA saapuminen 0 ms verkko-odotusta: {'PASS' if ms == 0 else 'FAIL'} ({ms} ms: " + ", ".join(f"{r['mita']} {r['ms']}" for r in saap) + ")")
 EOF

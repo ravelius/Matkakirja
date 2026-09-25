@@ -145,22 +145,22 @@ namespace Matkakirja.Natiivi
         /// joukon saapumismaalle taustalla, tiedosto kerrallaan ja kehys välissä (jäsennys pääsäikeessä). Kuvia ei esiladata,
         /// koska web ei esilataa tuntemattomien nostojen kuvia.
         /// </summary>
-        public static IEnumerator Esilataa(string iso)
+        public static IEnumerator Esilataa(string iso, Taso taso = Taso.TamaKaupunki)
         {
             if (string.IsNullOrEmpty(iso)) yield break;
             string pieni = iso.ToLowerInvariant(), suuri = iso.ToUpperInvariant();
             // Esilataaja: tämän kaupungin taso (näkyvä nosto ohittaa).
-            yield return ValojenMaat(Taso.TamaKaupunki);
+            yield return ValojenMaat(taso);
             foreach (var k in new[] { "skandaalit", "historianHetket", "elaintayt", "takynostot" })
             {
                 yield return null;
-                yield return LataaKokoelma(k, Taso.TamaKaupunki);
+                yield return LataaKokoelma(k, taso);
             }
             foreach (var (tiedosto, vienti) in new[] { ("fokuskohteet", "FOKUSKOHTEET"), ("maastokohteet", "MAASTOKOHTEET"),
                                                        ("hahmotelma", "HAHMOTELMA"), ("nakyvat-kaupungit", "NAKYVAT_KAUPUNGIT") })
             {
                 yield return null;
-                yield return ModuuliArvo($"moduulit/js/packs/{tiedosto}-{pieni}.json", $"{vienti}_{suuri}", _ => { }, Taso.TamaKaupunki);
+                yield return ModuuliArvo($"moduulit/js/packs/{tiedosto}-{pieni}.json", $"{vienti}_{suuri}", _ => { }, taso);
             }
             Debug.Log("MATKAKIRJA ui nostot: esiladattu " + suuri);
         }

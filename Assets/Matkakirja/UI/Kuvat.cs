@@ -85,6 +85,46 @@ namespace Matkakirja.Natiivi
             return new[] { PeiliJuuri + PeiliKuvaPolku(tiedostoTaiUrl, kansio), CommonsUrl(tiedostoTaiUrl, leveys) };
         }
 
+        static readonly HashSet<string> esiladataan = new HashSet<string>();
+
+        /// <summary>
+        /// Esilataa kuvan levyvälimuistiin purkamatta (Esilataaja erä 2, ESILATAUSPOLITIIKKA kohta 3: saapumisen kuvat
+        /// lennon aikana). Myöhempi Hae lukee sen levyltä ilman verkkoa. Ei tee mitään, jos kuva on muistissa, levyllä
+        /// tai jo haussa. Commons-varareittiä ei esiladata (vain ensimmäinen reitti).
+        /// </summary>
+        public static void Esilataa(string tiedostoTaiUrl, Taso taso = Taso.SeuraavaRuutu, string kansio = "kuvat")
+        {
+            var reitit = Reitit(tiedostoTaiUrl, kansio);
+            if (reitit.Length == 0) return;
+            string url = reitit[0];
+            if (muisti.ContainsKey(url) || kesken.ContainsKey(url) || esiladataan.Contains(url)) return;
+            string levy = Valimuisti(url);
+            if (File.Exists(levy)) return;
+            esiladataan.Add(url);
+            UiKerros.Hae().StartCoroutine(EsilataaLevylle(url, levy, taso));
+        }
+
+        static IEnumerator EsilataaLevylle(string url, string levy, Taso taso)
+        {
+            byte[] tavut = null;
+            yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(url); q.timeout = 30; return q; }, taso, "kuva",
+                p => { if (p.result == UnityWebRequest.Result.Success) tavut = p.downloadHandler.data; });
+            esiladataan.Remove(url);
+            if (tavut == null || tavut.Length < 16) yield break;
+            var tyo = System.Threading.Tasks.Task.Run(() =>
+            {
+                try
+                {
+                    Directory.CreateDirectory(Path.GetDirectoryName(levy));
+                    var valiaikainen = levy + ".esi";
+                    File.WriteAllBytes(valiaikainen, tavut);
+                    if (!File.Exists(levy)) File.Move(valiaikainen, levy); else File.Delete(valiaikainen);
+                }
+                catch (IOException e) { Debug.LogWarning("MATKAKIRJA ui kuva: esilataus " + e.Message); }
+            });
+            while (!tyo.IsCompleted) yield return null;
+        }
+
         // --- lataus --------------------------------------------------------------
 
         static string Valimuisti(string url)

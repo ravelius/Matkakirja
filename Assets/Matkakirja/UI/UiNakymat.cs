@@ -400,6 +400,8 @@ namespace Matkakirja.Natiivi
             // Löydös 104: maan karttanostojen data valmiiksi saapuessa (web sw.js), jotta kortti aukeaa heti.
             o.MatkaPerilla += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaNostot(kaupunki));
             EsilataaNostot(o.PelaajanKaupunki);
+            // Esilataaja erä 2 (ESILATAUSPOLITIIKKA kohta 3): kohdekaupungin kuvat ja nostodata jo lennon/matkan aikana.
+            o.SaapuminenTiedossa += kaupunki => UiKerros.PaaSaikeessa(() => EsilataaSaapuminen(kaupunki));
             // Huipennus vasta, kun viimeisen aarteen kysymys (ja sen paljastus) on suljettu: tapahtuma
             // tulee löytöhetkellä, ennen paljastusta, eikä huipennus saa jäädä paljastuksen alle.
             // Web: voittoikkuna aukeaa → sfx.play('win').
@@ -423,6 +425,37 @@ namespace Matkakirja.Natiivi
         }
 
         static string esiladattuMaa;
+
+        /// <summary>
+        /// Saapumisen kuvat levylle ennen perillä oloa (Pelikoodari, Esilataaja erä 2): isoisän luentakuvat ja PuluCam-kuvat
+        /// (Fokusvirrat), trailerin avaus- ja kansikuvat (UiSisalto) sekä maan nostodata heti (SeuraavaRuutu-taso: ei odota
+        /// lennon laattoja kuten taustataso).
+        /// </summary>
+        static void EsilataaSaapuminen(string kaupunki)
+        {
+            if (string.IsNullOrEmpty(kaupunki)) return;
+            Fokusvirrat.Lataa(() =>
+            {
+                var v = Fokusvirrat.Hae(kaupunki);
+                if (v == null) return;
+                foreach (var k in v.Luentakuvat) Kuvat.Esilataa(k.Osoite);
+                foreach (var k in v.PuluKuvat) Kuvat.Esilataa(k.Osoite);
+            });
+            var tiedot = UiSisalto.Kaupunki(kaupunki);
+            if (tiedot != null)
+            {
+                int n = 0;
+                foreach (var k in tiedot.Avauskuvat) { if (n++ >= 3) break; Kuvat.Esilataa(k.Tiedosto); }
+                if (tiedot.Kansikuvat.Count > 0) Kuvat.Esilataa(tiedot.Kansikuvat[0].Tiedosto);
+            }
+            var maa = tiedot?.Maa;
+            if (!string.IsNullOrEmpty(maa) && maa != esiladattuMaa)
+            {
+                esiladattuMaa = maa;
+                UiKerros.Hae().StartCoroutine(NostoSisalto.Esilataa(maa, Taso.SeuraavaRuutu));
+            }
+            Debug.Log("MATKAKIRJA ui: saapumisen esilataus " + kaupunki);
+        }
 
         /// <summary>Saapumismaan nostodata taustalla 2 s:n päästä (saapumisen animaatio ja luenta ensin); maa kerran.</summary>
         static void EsilataaNostot(string kaupunki)

@@ -52,6 +52,24 @@ namespace Matkakirja.Natiivi
         /// playIntroVoice). Kulkee pelin luentana, jotta avauksen äänisekoitus (musiikki ×0,6, etusivun
         /// maisema ×1,45) seuraa intron alkua ja loppua. Palauttaa virheen tai null.
         /// </summary>
+        /// <summary>
+        /// Kohdekaupunki tiedetään (aloituslennon tai matkan alku): ESILATAUSPOLITIIKKA kohta 3 (Esilataaja erä 2) —
+        /// kaikki saapumisen tarpeet ladataan lennon/matkan aikana. PeliOhjain esilataa puheet; UI (UiNakymat) kuvat
+        /// ja nostodatan.
+        /// </summary>
+        public event Action<string> SaapuminenTiedossa;
+
+        void EsilataaSaapuminen(string kaupunki)
+        {
+            if (string.IsNullOrEmpty(kaupunki)) return;
+            if (luennat != null && puhe != null)
+            {
+                puhe.Esilataa(luennat.Saapumispuhe(kaupunki)?.Url);
+                puhe.Esilataa(luennat.Luento(kaupunki)?.Url);
+            }
+            try { SaapuminenTiedossa?.Invoke(kaupunki); } catch (Exception e) { Debug.LogException(e); }
+        }
+
         public string SoitaIntro() => luennat?.Intro == null ? "introa ei ole" : SoitaLuento(luennat.Intro, 0f);
 
         /// <summary>
@@ -90,6 +108,7 @@ namespace Matkakirja.Natiivi
             AloituslentoKaynnissa = true;
             saapumiskorttiTunnus++;
             try { AloituslentoAlkoi?.Invoke(kohde); } catch (Exception e) { Debug.LogException(e); }
+            EsilataaSaapuminen(kohde);
             Debug.Log($"MATKAKIRJA peli: aloituslento Lontoo → {kohde}, {kesto:0.0} s");
 
             int tunnus = ++ajoTunnus;
