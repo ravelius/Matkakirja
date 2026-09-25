@@ -108739,6 +108739,235 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: "Devil's Pool (Victoria Falls)",
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Victoria Falls, Victoria Falls Zimbabwe, Livingstone
+       * Zambia, Victoria Falls Airport, Harry Mwaanga Nkumbula
+       * International Airport, Kazungula Bridge, Kasane, Victoria Falls
+       * Bridge, Visa policy of Zambia / of Zimbabwe (KAZA-viisumi),
+       * Mosi-oa-Tunya National Park, Zambezi National Park, Chobe National
+       * Park, Batoka Gorge Hydroelectric Power Station) ja Wikivoyagesta
+       * (Victoria Falls,
+       * Livingstone) — teksti omaa. Nostojen aiheita (Livingstonen löytö,
+       * putousten koko, vuosi 1873, patsas, sillan rakentaminen, sademetsä,
+       * kuunkaari, Veitsenterä-silta, Mosi-oa-Tunya-nimi) ei toisteta;
+       * Devil's Pool mainitaan vain kausi- ja lupatietona. Hinnat,
+       * viisumimaksut ja aikataulut jätetty pois, koska Wikivoyagen tiedot
+       * ovat vuosilta 2019–2026 ja muuttuvat. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin.
+       * Pystykuva: bungeehyppy sillalta (public domain).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'H15bungee.jpg',
+          lyhyt: 'Bungeehyppääjä syöksyy Victoria Falls -sillalta kohti Zambezin rotkoa.',
+          selite: 'Hyppääjä on juuri lähtenyt Victoria Falls -sillan '
+            + 'hyppylavalta, ja lavalla seisovat työntekijät seuraavat, kun '
+            + 'köysi kiristyy rotkon yllä. Sambian ja Zimbabwen rajasillalta '
+            + 'tehtävä bungeehyppy on 111 metriä korkea.',
+          lahde: 'John Walker, Wikimedia Commons (Public domain)',
+        },
+        kappale: 'Viktorian putouksille tullaan kahden maan kautta. '
+          + 'Zimbabwen puolella Victoria Fallsin pikkukaupunki on aivan '
+          + 'putousten vieressä, Sambian puolella Livingstone kymmenen '
+          + 'kilometrin päässä joesta, ja niiden välissä kulkee silta, jonka '
+          + 'yli rajan voi ylittää kävellen. Kummallakin rannalla on oma '
+          + 'kansallispuistonsa ja omat näköalapolkunsa, ja kokonaiskuvan saa, '
+          + 'kun käy molemmilla. Vesimäärä vaihtelee vuoden mittaan enemmän '
+          + 'kuin muissa suurissa putouksissa: huhtikuun tulvan aikaan sumu '
+          + 'peittää näkymän, marraskuussa osa kallioseinästä on kuivana. '
+          + 'Putousten alla lasketaan koskia, yläpuolella risteillään '
+          + 'virtahepojen keskellä, ja Botswanan norsulaumat ovat päiväretken '
+          + 'päässä.',
+        artikkeli: {
+          nimi: 'Matkailijan Viktorian putoukset',
+          teksti: 'Viktorian putouksia katsotaan kahdesta maasta, ja rajan voi '
+            + 'ylittää kävellen.',
+          nosto: 'Marraskuussa putouksen yli virtaa vain noin kymmenesosa '
+            + 'huhtikuun vesimäärästä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kaksi kaupunkia, kaksi lentoasemaa',
+              teksti: 'Putouksilla on kaksi porttikaupunkia. Zimbabwen '
+                + 'Victoria Falls on noin 35 000 asukkaan matkailukaupunki '
+                + 'putousten länsipäässä, ja useimmat hotellit ovat muutaman '
+                + 'kilometrin päässä putouksista. Sen lentoasema on 18 '
+                + 'kilometriä kaupungista etelään, ja terminaali ja kiitotie '
+                + 'uusittiin 2010-luvulla kiinalaisen pankin lainalla. Sambian '
+                + 'Livingstone on selvästi suurempi, lähes 180 000 asukkaan '
+                + 'kaupunki, ja se oli Pohjois-Rhodesian pääkaupunki vuosina '
+                + '1911–1935. Sen lentoasema, joka on nimetty '
+                + 'itsenäisyysliikkeen johtajan Harry Mwaanga Nkumbulan mukaan, '
+                + 'on kaupungin pohjoislaidalla noin 15 kilometrin päässä '
+                + 'putouksista. Suoria lentoja tulee kummallekin puolelle '
+                + 'ainakin Johannesburgista, Kapkaupungista ja Nairobista, mutta '
+                + 'reitit ja lentoyhtiöt vaihtuvat usein. Maata pitkin '
+                + 'Livingstoneen pääsee linja-autolla Lusakasta 470 kilometrin '
+                + 'päästä, ja Victoria Fallsiin kulkee Bulawayosta harvakseltaan '
+                + 'yöjuna. Botswanasta tullaan Kasanen kautta: Kazungulassa '
+                + 'Sambian ja Botswanan yhteistä rajaa on joella vain noin 135 '
+                + 'metriä, ja vanhan lautan korvasi toukokuussa 2021 avattu '
+                + 'silta, joka kaartuu kiertääkseen Zimbabwen ja Namibian rajat.',
+              kuva: [
+                {
+                  tiedosto: 'Victoria Falls International Airport 001.jpeg',
+                  lyhyt: 'Victoria Fallsin lentoasema on 18 kilometrin päässä kaupungista etelään.',
+                  selite: 'Victoria Fallsin kansainvälisen lentoaseman '
+                    + 'terminaalin kaarevaa kattoa kannattelevat vaaleat '
+                    + 'teräsristikot; kuva on otettu marraskuussa 2023.',
+                  lahde: 'Geraldshields11, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Livingstone, Zambia - panoramio (1).jpg',
+                  lyhyt: 'Livingstonen linja-autoasemalla myydään lippuja muun muassa Lusakaan ja Kazungulaan.',
+                  selite: 'Livingstonen linja-autoaseman lippukojun seinään '
+                    + 'on vuonna 2015 maalattu päivittäiset reitit muun muassa '
+                    + 'Lusakaan, Kazungulaan ja Sesheken kautta Monguun sekä '
+                    + 'Lusakasta Johannesburgiin.',
+                  lahde: 'cowbridgeguide.co.uk, Wikimedia Commons (CC BY 3.0)',
+                },
+                {
+                  tiedosto: 'Kazungula-Brücke mit Kapspurgleis in der Fahrbahnmitte.jpg',
+                  lyhyt: 'Kazungulan kaareva silta yhdistää Sambian ja Botswanan vuodesta 2021.',
+                  selite: 'Kazungulan sillan jalkakäytävältä näkyvät sillan '
+                    + 'kaari ja vinoköysipylonit. Ajoratojen väliin on '
+                    + 'rakennettu raide, jota ei vielä ole liitetty kummankaan '
+                    + 'maan rataverkkoon.',
+                  lahde: 'Matthias Hille, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kaksi rantaa ja raja sillan keskellä',
+              teksti: 'Putoukset näkyvät eri tavoin kummaltakin rannalta. '
+                + 'Zimbabwen puolella polku kulkee rotkon vastareunaa pitkin, '
+                + 'ja putouksen läntiset haarat, Paholaisen kaihi ja '
+                + 'Pääputous, näkyvät suoraan edestä. Sambian puolella pääsee '
+                + 'koskettamaan jokea muutaman metrin päässä putouksen '
+                + 'reunasta, ja jyrkkä polku laskeutuu rotkon pohjalle '
+                + 'Kiehuvaksi padaksi kutsutulle pyörteelle, josta '
+                + 'rautatiesilta näkyy alhaalta päin. Sambian puiston portilla '
+                + 'vuokrataan sadevarusteita, ja kamera kannattaa suojata '
+                + 'vesipölyltä. Rajan voi ylittää kävellen sillan yli: '
+                + 'kummassakin päässä on rajatarkastus, ja sillan keskeltä '
+                + 'näkyvät putoukset. Sambia ja Zimbabwe ottivat marraskuussa '
+                + '2014 käyttöön yhteisen KAZA-viisumin, joka kattaa molemmat '
+                + 'maat ja päiväretket Botswanan Choben puistoon. Järjestely '
+                + 'on kuitenkin välillä ollut tauolla, ja kelpoiset maat ja '
+                + 'maksut muuttuvat, joten viisumitilanne kannattaa tarkistaa '
+                + 'juuri ennen matkaa. Käteistä tarvitaan: Zimbabwessa '
+                + 'maksetaan yleensä Yhdysvaltain dollareilla ja Sambiassa '
+                + 'kwachoilla, eikä kwachoja voi vaihtaa Zimbabwen puolella.',
+              kuva: {
+                tiedosto: 'Livingstone, Zambia (48597799226).jpg',
+                lyhyt: 'Kävelijät ylittävät rajan Victoria Falls -sillalla Zimbabwesta Sambiaan.',
+                selite: 'Keltainen kyltti Victoria Falls -sillalla ilmoittaa, '
+                  + 'että kävelijät ovat saapumassa Sambiaan. Vasemmalla '
+                  + 'avautuu jyrkkä rotko, ja oikealla kulkee rautatie.',
+                lahde: 'Fabio Achilli, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Tulvan jylinä vai kuivan kauden kalliot',
+              teksti: 'Zambezin yläjuoksulla sataa marraskuun lopulta '
+                + 'huhtikuun alkuun, mutta vesi saapuu putouksille viiveellä: '
+                + 'tulva-aika kestää helmikuusta toukokuuhun, ja virtaama on '
+                + 'suurimmillaan huhtikuussa. Silloin putous on '
+                + 'voimakkaimmillaan, mutta sumu peittää sen juuren ja '
+                + 'seinämän, ja polulla kastuu läpimäräksi. Kuivan kauden '
+                + 'edetessä saaret putouksen reunalla levenevät, ja syyskuusta '
+                + 'tammikuuhun jopa puolet kallioseinästä voi olla kuivana. '
+                + 'Pienin virtaama osuu marraskuulle, ja se on vain noin '
+                + 'kymmenesosa huhtikuun huipusta, mikä on suurempi vaihtelu '
+                + 'kuin muissa suurissa putouksissa. Vähäisen veden aikaan näkee '
+                + 'tumman basalttiseinämän ja rotkon pohjan, ja Zimbabwen '
+                + 'puolella pääsee laskeutumaan ensimmäisen rotkon pohjalle. '
+                + 'Vain matalan veden aikaan veneet vievät myös '
+                + 'Livingstone-saarelle ja Devil\'s Poolille, ja sinne pääsee '
+                + 'ainoastaan luvallisten järjestäjien retkillä. Vuodet eivät '
+                + 'ole samanlaisia: vuonna 2019 vähäiset sateet painoivat '
+                + 'virtaaman pienimmäksi sataan vuoteen, ja kuivuusvuodet ovat '
+                + 'yleistyneet, joten kuukausien vesimäärät kannattaa tarkistaa '
+                + 'matkaa suunnitellessa.',
+              kuva: {
+                tiedosto: 'Victoria falls during dry season 2011.jpg',
+                lyhyt: 'Marraskuussa 2011 putouksen kallioseinä oli paikoin lähes kuiva.',
+                selite: 'Marraskuussa 2011 kuvatussa näkymässä putouksen tumma '
+                  + 'basalttiseinä on suurelta osin kuiva, ja vain muutama ohut '
+                  + 'vesinauha putoaa rotkoon; vasemmalla joki kuohuu rotkon '
+                  + 'pohjalla.',
+                lahde: 'BetterWORLDphoto, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Koskien rotko putousten alla',
+              teksti: 'Putouksen alapuolella koko Zambezi puristuu kapeisiin, '
+                + 'siksakkina kulkeviin rotkoihin, joiden kosket ovat '
+                + 'koskenlaskijoiden maailmassa kuuluisia. Laji yleistyi täällä '
+                + '1980-luvulla, kun Zimbabwen itsenäistyminen toi rauhan ja '
+                + 'matkailijat takaisin, ja nykyään päiväretkiä lähtee sekä '
+                + 'Sambian että Zimbabwen puolelta viidennen vaikeusluokan '
+                + 'koskiin. Rotkoissa joen pinta nousee ja laskee kausien '
+                + 'välillä jopa 20 metriä, joten sama koski on eri '
+                + 'vuodenaikoina hyvin erilainen. Laskut ovat fyysisesti '
+                + 'raskaita ja vaarallisia, ja järjestäjä kannattaa valita '
+                + 'huolella. Kosket ovat myös uhattuina: noin 54 kilometriä '
+                + 'putouksista alavirtaan on suunniteltu 181 metriä korkeaa '
+                + 'patoa ja vesivoimalaa, ja arvostelijoiden mukaan sen allas '
+                + 'voisi ulottua lähes putousten juurelle ja hukuttaa kosket. '
+                + 'Hanketta on vastustettu, ja sen sopimukset ovat kaatuneet '
+                + 'useaan kertaan, joten sen tulevaisuus on auki. Putousten '
+                + 'yläpuolella joki on tyyni: iltaisin risteilyveneet lähtevät '
+                + 'auringonlaskuun virtahepojen ja krokotiilien keskelle, ja '
+                + 'helikopterilennolla näkee koko rotkojen ketjun ylhäältä.',
+              kuva: {
+                tiedosto: 'Grade 5 Rafting op de Zambezi Rivier! (6573889969).jpg',
+                lyhyt: 'Kumivene syöksyy viidennen vaikeusluokan koskeen putousten alapuolisessa rotkossa.',
+                selite: 'Kypäräpäiset melojat pelastusliiveissä pitävät kiinni '
+                  + 'kumiveneestä, kun se syöksyy vaahtoavaan koskeen Zambezin '
+                  + 'rotkossa Viktorian putousten alapuolella.',
+                lahde: 'Martijn Munneke, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Sarvikuonoja ja norsuja päiväretkellä',
+              teksti: 'Putousten molemmin puolin on eläinpuistoja, joihin '
+                + 'pääsee puolen päivän retkellä. Sambian Mosi-oa-Tunyan '
+                + 'kansallispuiston luoteispäässä elää kirahveja, seeproja, '
+                + 'puhveleita ja antilooppeja sekä Etelä-Afrikasta tuotuja '
+                + 'valkosarvikuonoja. Kaksi ensimmäistä joutui salametsästäjien '
+                + 'ampumiksi kesäkuussa 2007: toinen kuoli, toinen selvisi '
+                + 'vakavasti haavoittuneena. Vuonna 2022 puistossa oli kymmenen '
+                + 'sarvikuonoa, ja niitä vartioidaan ympäri vuorokauden. '
+                + 'Zimbabwen puolella joen yläjuoksulla on Zambezin '
+                + 'kansallispuisto, jossa näkee norsuja, puhveleita ja '
+                + 'soopeliantilooppeja aivan Victoria Fallsin kaupungin '
+                + 'kupeessa. Pidemmälle ehtivä tekee päiväretken Botswanan '
+                + 'Choben kansallispuistoon, jonka noin 50 000 norsua '
+                + 'kerääntyvät kuivalla kaudella toukokuusta lokakuuhun Choben '
+                + 'joen rannoille. Villieläimet '
+                + 'liikkuvat myös kaupunkien laidoilla, joten kaupungin ja '
+                + 'putousten väliä ei suositella kävelemään pimeällä, ja apinat '
+                + 'vievät eväät valvomattomalta pöydältä. Mosi-oa-Tunyan '
+                + 'puistossa on myös Old Driftin hautausmaa, jonne haudattiin '
+                + 'seudun ensimmäisiä eurooppalaisia asukkaita: he kuolivat '
+                + 'malariaan ja luulivat kuumetautia puiden aiheuttamaksi. '
+                + 'Malarian ehkäisystä kannattaa yhä kysyä lääkäriltä ennen '
+                + 'matkaa.',
+              kuva: {
+                tiedosto: 'Rhinos, Mosi-oa-Tunya National Park, Zambia (48597918381) (cropped).jpg',
+                lyhyt: 'Mosi-oa-Tunyan kansallispuiston valkosarvikuonoja vartioidaan ympäri vuorokauden.',
+                selite: 'Valkosarvikuono seisoo puun varjossa Mosi-oa-Tunyan '
+                  + 'kansallispuistossa Livingstonen laidalla, ja sen takana '
+                  + 'lepää toinen sarvikuono. Puiston sarvikuonot on tuotu '
+                  + 'Etelä-Afrikasta.',
+                lahde: 'Fabio Achilli, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -109981,6 +110210,282 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Cape Horn',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Cape Horn, Hornos Island, Cabo de Hornos National
+       * Park, Cape Horn Biosphere Reserve, Drake Passage, Puerto Williams,
+       * Williwaw), espanjan Wikipediasta (Isla Hornos, Cabo de Hornos:
+       * Caleta León, Alcaldía de Mar, tuntemattoman merimiehen muistomerkki,
+       * FitzRoyn laatta, miinakenttä 1982 ja raivaus 2009–2010) sekä
+       * Wikivoyagen sivuilta Cabo de Hornos National Park (aukiolokausi),
+       * Puerto Williams (lennot, lautta, veneet Ushuaiasta,
+       * tuontirajoitukset), Ushuaia (retkiristeily), Antarctica
+       * (aallokko, alustyypit, vaatetus, lento-risteilyt) ja Motion
+       * sickness — teksti omaa. Wikivoyagen hinnat (2023–2025),
+       * lentojen viikkomäärät ja aikataulut on jätetty pois; opas kertoo,
+       * että reitit ja yhtiöt vaihtuvat. Wikipedian sääluvut ovat
+       * vuosien 1882–1883 mittauksista, ja ne on kerrottu sellaisina.
+       * Nostojen aiheita (nimen synty, tuulet ja jättiaallot,
+       * Panaman kanava, Diego Ramírezin saaret, majakan historia,
+       * albatrossimuistomerkki ja sen kaatuminen 2014, klipperit,
+       * korvarengas, albatrossiuskomus, Balclutha) eikä gallerian
+       * maalauksia toisteta. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * Kap Horn laivalta nähtynä (Jerzy Strzelecki, tammikuu 2000).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Cape Horn (js) 2.jpg',
+          lyhyt: 'Kap Hornin jyrkkä niemi kohoaa tuulen pieksemän meren takaa.',
+          selite: 'Laivalta kuvattu näkymä tammikuulta 2000: tuuli repii '
+            + 'vaahtoa aallonharjalta etualalla, ja kaukana taustalla '
+            + 'Kap Hornin tumma, jyrkkärinteinen niemi nousee merestä '
+            + 'raskaiden pilvien alla.',
+          lahde: 'Jerzy Strzelecki, Wikimedia Commons (CC BY 3.0)',
+        },
+        kappale: 'Kap Horniin ei kulje tietä eikä säännöllistä lauttaa, ja '
+          + 'useimmat matkailijat näkevät niemen vain laivan kannelta. '
+          + 'Lähtösatamia ovat Argentiinan Ushuaia, Chilen Punta Arenas ja '
+          + 'pieni Puerto Williams Beaglen kanaalin rannalla, josta '
+          + 'purjeveneet ja retkialukset lähtevät etelään. Maihin Hornosin '
+          + 'saarelle päästään vain tyynellä säällä ja vain kesäkaudella, '
+          + 'ja silloinkin retki on lyhyt: kulkuväylä rinnettä ylös, laivaston '
+          + 'asema, majakka ja muistomerkit. Saarella ei ole majoitusta, sillä se '
+          + 'kuuluu tiukasti suojeltuun kansallispuistoon. Etelässä avautuu '
+          + 'Drakensalmi, jonka yli Etelämantereen laivat keinuvat pari '
+          + 'vuorokautta, ja joulukuun lähes valkoisina öinä aurinko painuu '
+          + 'mailleen vasta myöhään illalla. Varaa aikaa, lämpimät vaatteet ja '
+          + 'kärsivällisyyttä: sää päättää täällä aikataulun.',
+        artikkeli: {
+          nimi: 'Matkailijan Kap Horn',
+          teksti: 'Perille pääsee vain meritse, ja maihinnousun ratkaisee aina sää.',
+          nosto: 'Kap Hornin majakka ja muistomerkki eivät ole itse '
+            + 'niemellä, vaan noin puolentoista kilometrin päässä siitä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille vain meritse',
+              teksti: 'Wikivoyagen mukaan Kap Hornin kansallispuisto on auki '
+                + 'vain lokakuusta huhtikuuhun, eikä sinne kulje yleistä '
+                + 'laivaliikennettä. Helpoin tapa nähdä niemi on risteily. '
+                + 'Suuret risteilyalukset kiertävät Hornin siirtyessään '
+                + 'valtamereltä toiselle ja pysähtyvät yleensä Ushuaiassa, '
+                + 'Punta Arenasissa tai Falklandinsaarten Stanleyssä, ja osa '
+                + 'Ushuaiasta Etelämantereelle lähtevistä pienistä aluksista '
+                + 'ohittaa niemen, jos aikaa ja säätä riittää. Maihin laskevat '
+                + 'matkustajia vain jotkin yksityiset toimijat, nekin satunnaisesti. Wikivoyage mainitsee '
+                + 'esimerkkinä Cruceros Australiksen neljän yön risteilyn '
+                + 'Punta Arenasista Ushuaiaan: reitti kulkee Beaglen ja '
+                + 'Murrayn kanavia pitkin Pían jäätikölle ja Wulaian lahdelle '
+                + 'ja pysähtyy myös Kap Hornin kansallispuistossa. '
+                + 'Purjehtijoiden tukikohta on Navarinon saaren Puerto '
+                + 'Williams, jonka satamassa laivaston entinen kuljetusalus '
+                + 'Micalvi toimii nykyään pursiseuran laiturina. Sieltä '
+                + 'puistoon on veneellä noin 12 tunnin matka. Puerto '
+                + 'Williamsiin lennetään Punta Arenasista, ja samalta '
+                + 'suunnalta kulkee noin 32 tunnin lautta, joka saapuu yöllä: '
+                + 'matkustajat nukkuvat laivassa ja nousevat maihin aamulla. '
+                + 'Ushuaiasta pääsee yksityisillä veneyhteyksillä, yleensä '
+                + 'veneellä Beaglen kanaalin yli Puerto Navarinoon ja sieltä '
+                + 'pikkubussilla saaren poikki. Silloin ylitetään Argentiinan ja '
+                + 'Chilen raja, joten passi tarvitaan, ja Chilen tuontirajoitukset '
+                + 'koskevat hedelmiä, lihaa ja maitotuotteita. Puerto Williamsista '
+                + 'voi myös lentää niemen yli tilauslennolla, ja Wikipedian '
+                + 'mukaan Hornin voi kiertää päiväretkellä helikopterilla. '
+                + 'Yhtiöt ja aikataulut vaihtuvat usein, joten tiedot '
+                + 'kannattaa tarkistaa juuri ennen matkaa.',
+              kuva: [
+                {
+                  tiedosto: 'Aerovías DAP en Puerto Williams 1.jpg',
+                  lyhyt: 'Aerovías DAP:n kone Puerto Williamsin lentokentällä vuorten juurella.',
+                  selite: 'Aerovías DAP -yhtiön valkoinen nelimoottorinen BAe '
+                    + '146 -matkustajakone seisoo Guardiamarina Zañartun '
+                    + 'lentokentällä Puerto Williamsissa, ja sen vieressä on '
+                    + 'autoja ja matkatavarakärryjä; taustalla metsäiset '
+                    + 'vuoret. Kuva helmikuulta 2016.',
+                  lahde: 'Janitoalevic, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Micalvi yacht club navarino chile.jpg',
+                  lyhyt: 'Purjeveneet ovat kiinnittyneet vanhan Micalvi-aluksen kylkeen.',
+                  selite: 'Puerto Williamsin Micalvi-pursiseuran laiturilla '
+                    + 'purjeveneiden mastot tungeksivat vanhan aluksen '
+                    + 'ympärillä; nurmikolta laiturille vie puinen kulkusilta '
+                    + 'valkoisten aitojen välistä, ja taustalla kohoavat '
+                    + 'metsäiset rinteet.',
+                  lahde: 'James Cadwell, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Cape Horn Coral Princess.jpg',
+                  lyhyt: 'Risteilyalukselta Kap Horn näkyy harmaana, sahalaitaisena siluettina.',
+                  selite: 'Kap Hornin jyrkkä, sahalaitainen huippu ja sen '
+                    + 'viereiset kalliot erottuvat utuisina tummansinisen, '
+                    + 'tuulen rypyttämän meren takaa; taivaalla ajelehtii '
+                    + 'valkoisia pilviä. Tiedostonimen mukaan kuva on otettu '
+                    + 'Coral Princess -risteilyalukselta joulukuussa 2019.',
+                  lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Maihin Hornosin saarelle',
+              teksti: 'Espanjankielisen Wikipedian mukaan matkustajia tuovat '
+                + 'alukset ankkuroivat Caleta Leónin poukamaan, josta maihin '
+                + 'noustaan pienveneellä. Moni yllättyy ylhäällä: laivaston '
+                + 'asema, majakka ja muistomerkit eivät ole itse Kap Hornilla, '
+                + 'vaan Punta Espolónin kärjessä noin puolentoista kilometrin '
+                + 'päässä niemestä itäkoilliseen. Varsinainen niemi on saaren '
+                + 'jyrkkä, noin 425 metriä korkea länsipää, jonne on vaikea '
+                + 'päästä sekä maalta että mereltä, ja sen pientä automaattista '
+                + 'valoa huolletaan omasta poukamastaan. Asemalla, Chilen '
+                + 'laivaston Alcaldía de Marilla, on vartijan perheen asunto, '
+                + 'radio- ja tutkahuone, sääasema, joka lähettää mittauksia '
+                + 'reaaliajassa, sekä pieni kappeli. Vuonna 2019 saarella asui '
+                + 'Wikipedian mukaan viisi ihmistä: majakanvartija, hänen '
+                + 'vaimonsa ja heidän kolme lastaan. Albatrossiveistoksen '
+                + 'lisäksi asemalta löytyy tuntemattoman merimiehen '
+                + 'muistomerkki sekä laatta, joka paljastettiin vuonna 2005 '
+                + 'Robert FitzRoyn syntymän 200-vuotisjuhlan kunniaksi. '
+                + 'Beaglen kapteeni nousi saarelle huhtikuussa 1830, kiipesi '
+                + 'sen huipulle ja hautasi sinne kirjallisen muistion, jonka '
+                + 'Chilen laivaston upseerit löysivät vuonna 1989. Saaren '
+                + 'rauhallinen nummi kätki pitkään myös rajakiistan jäljen: Chilen '
+                + 'laivasto miinoitti vuonna 1982 Beaglen kiistan aikana noin '
+                + '18 000 neliömetrin alueen, ja miinat raivattiin kokonaan '
+                + 'vuosina 2009–2010. Nykyään vaara on ohi, mutta nummi on '
+                + 'herkkä, joten kulje vain merkittyjä kulkureittejä.',
+              kuva: {
+                tiedosto: 'Horn Island Navy Base.jpg',
+                lyhyt: 'Laivaston asema ja majakka Hornosin saaren kärjessä, taustalla Drakensalmi.',
+                selite: 'Viereiseltä kukkulalta etelään kuvattu näkymä '
+                  + 'lokakuulta 2023: ruskean nummen takana niemekkeellä ovat '
+                  + 'laivaston punakattoiset rakennukset, majakka ja '
+                  + 'radiomasto, rinnettä nousee oranssi kulkuväylä, ja '
+                  + 'oikealla niemen reunalla erottuu albatrossimuistomerkin '
+                  + 'siluetti. Taustalla avautuu Drakensalmi.',
+                lahde: 'Mat Austro, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sää, valo ja vaatteet',
+              teksti: 'Kap Hornin ilmasto luokitellaan polaariseksi, ja suuri '
+                + 'osa sateesta tulee räntänä tai lumena. Wikipedian '
+                + 'sääluvut ovat vanhoja, vuosien 1882–1883 tutkimuksesta: '
+                + 'vuoden keskilämpötila oli noin viisi astetta, ja sadepäiviä '
+                + 'kertyi 278, niistä 70 lumisina. Kesän ja talven ero on '
+                + 'silti selvä. Myrskytuulta on '
+                + 'kesäisin enintään viisi prosenttia ajasta, '
+                + 'yleensä hyvällä näkyvyydellä, talvella jopa 30 prosenttia, '
+                + 'usein huonolla näkyvyydellä. Siksi matkat tehdään eteläisen '
+                + 'pallonpuoliskon kesällä. Valo on toinen yllätys: '
+                + 'joulukuun päivänseisauksen aikaan päivä kestää noin 17 ja '
+                + 'puoli tuntia, eikä yö ehdi pimetä kunnolla, kun taas '
+                + 'kesäkuussa valoisaa on vain vajaat seitsemän tuntia. '
+                + 'Saarten välisissä kanavissa purjehtijoita varoitetaan '
+                + 'williwaw-puuskista: vuorilta alas syöksyvä kylmä ilma voi '
+                + 'iskeä veneeseen lähes varoittamatta. Maissa tuuli tuntuu '
+                + 'heti, sillä puita kasvaa vain suojaisissa notkoissa. Etelämantereen '
+                + 'matkoille annettu Wikivoyagen neuvo sopii tännekin: '
+                + 'kannella seisominenkin vaatii lämpimät kerrokset, '
+                + 'lämpimät alusvaatteet, vedenpitävät housut, parkatakin, '
+                + 'hupun, käsineet ja saappaat. Ushuaiasta voi '
+                + 'ostaa tai vuokrata varusteita, mutta omaa kokoa ei aina '
+                + 'löydy. Retken ohjelma voi muuttua lyhyellä varoitusajalla, '
+                + 'ja maihinnousu voidaan perua, jos aallokko on liian kova.',
+              kuva: {
+                tiedosto: 'Horn Leve de soleil.JPG',
+                lyhyt: 'Aurinko nousee oranssina pilvien alta Kap Hornilta itään katsottaessa.',
+                selite: 'Kuvaajan mukaan Kap Hornilta kuvattu auringonnousu '
+                  + 'Deceitin saaren yllä huhtikuussa 2006: oranssi ja '
+                  + 'kultainen taivas heijastuu tyyneen mereen, ja '
+                  + 'horisontissa erottuvat saarten ja luotojen tummat '
+                  + 'ääriviivat.',
+                lahde: 'Rémi Jouan, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Drakensalmen yli',
+              teksti: 'Kap Hornin eteläpuolella alkaa Drakensalmi, noin 800 '
+                + 'kilometrin levyinen merialue, joka ulottuu Etelä-Shetlannin '
+                + 'Livingstoninsaarelle asti. Se on lyhin merimatka '
+                + 'Etelämantereelta muille mantereille, ja sen läpi virtaa '
+                + 'Etelämantereen ympärysvirta, maailman voimakkain '
+                + 'merivirta. Kansainvälinen merenmittausjärjestö IHO vetää '
+                + 'Atlantin ja Tyynen valtameren rajan Kap Hornin kautta '
+                + 'kulkevaa pituuspiiriä 67° 16′ W pitkin, joten niemen '
+                + 'kohdalla vaihdetaan valtamerta. Wikivoyagen mukaan '
+                + 'Etelämantereen laivakausi kestää marraskuusta helmikuuhun, '
+                + 'ja salmen aallot ovat tavallisesti noin neljän metrin '
+                + 'korkuisia, joskus jopa 12-metrisiä. Useimmat matkustaja-alukset '
+                + 'ovat jäävahvistettuja, sillä pyöreäpohjaiset jäänmurtajat '
+                + 'keinuvat aallokossa vielä enemmän. Jos parin vuorokauden '
+                + 'keinunta arveluttaa, jotkin yhtiöt tarjoavat '
+                + 'lento-risteilyjä, joissa salmen yli lennetään Chilestä. '
+                + 'Merisairauteen Wikivoyage neuvoo varautumaan ajoissa: '
+                + 'lääke otetaan ennen oireita, koska se voi alkaa vaikuttaa '
+                + 'vasta yli tunnin kuluttua, ja se väsyttää usein. '
+                + 'Runsasta ateriaa ja alkoholia kannattaa välttää, ja '
+                + 'hyvät yöunet auttavat. Laivassa paras paikka on keskellä '
+                + 'alusta, katse horisontissa ja raitista ilmaa kasvoilla, '
+                + 'ja jos olo pahenee, kannattaa käydä pitkälleen silmät '
+                + 'kiinni. Rauhallisina hetkinä kannelta kannattaa katsoa '
+                + 'merelle: salmessa elää valaita, delfiinejä, '
+                + 'jättiläisliitäjiä, albatrosseja ja pingviinejä.',
+              kuva: {
+                tiedosto: 'Drake2.JPG',
+                lyhyt: 'Valkoinen kuohu vyöryy laivan kylkeä vasten Drakensalmen aallokossa.',
+                selite: 'Laivan kannelta kuvattu näkymä tammikuulta 2014: '
+                  + 'vihreän kannen ja valkoisen kaiteen vieressä aalto '
+                  + 'murtuu valkoiseksi vaahdoksi, ja taustalla '
+                  + 'tummansininen meri jatkuu horisonttiin pilvisen taivaan '
+                  + 'alla.',
+                lahde: 'Lewnwdc77, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Luonto maailman laidalla',
+              teksti: 'Kap Horn kuuluu maailman eteläisimpään kansallispuistoon, '
+                + 'joka perustettiin vuonna 1945. Siihen kuuluvat Wollastonin '
+                + 'ja Hermiten saariryhmät, yhteensä noin 63 000 hehtaaria, '
+                + 'ja sitä hoitaa Chilen metsähallinto CONAF. Vuodesta 2005 '
+                + 'puisto on ollut osa Unescon Kap Hornin biosfäärialuetta, '
+                + 'jonka ydinvyöhykkeelle ei saa rakentaa majoitusta, joten '
+                + 'saarilla ei ole hotelleja eikä majoja. Maisema on lähes puutonta '
+                + 'turvenummea, jolla kasvaa matalia heinätupsuja, pensaita, '
+                + 'jäkäliä ja sammalia. Vuonna 2019 tutkijat löysivät '
+                + 'Hornosin saaren kaakkoiskulmasta maailman eteläisimmän '
+                + 'puun, Nothofagus betuloides -pyökin, joka kasvaa lähes '
+                + 'maata myöten taipuneena. Saaristossa elää viisi '
+                + 'prosenttia maailman sammal- ja maksasammallajeista, ja '
+                + 'Puerto Williamsin lähellä Omoran etnobotaanisessa '
+                + 'puistossa matkailijoita opastetaan katsomaan niitä suurennuslasilla. Kap Horn on '
+                + 'magellaninpingviinin levinneisyyden eteläraja, ja '
+                + 'rannikolla on pingviiniyhdyskuntia, eikä saarella ole '
+                + 'maapetoja. BirdLife on nimennyt puiston tärkeäksi '
+                + 'lintualueeksi muun muassa töyhtö- ja magellaninpingviinien '
+                + 'sekä nokiliitäjien vuoksi, ja vesillä '
+                + 'voi nähdä meriuttereita, chilendelfiinejä ja '
+                + 'ryhävalaita. Myös ihmisen jälki on vanha: yaganit ovat '
+                + 'meloneet näillä kanavilla tuhansia vuosia, ja vuonna 2019 '
+                + 'Hornosin saaren eteläosasta löytyi harppuunankärkiä ja '
+                + 'nuotiopaikka, maailman eteläisin esiteollisen ajan '
+                + 'metsästysleiri. Biosfäärialuetta uhkaavat vieraslajit, '
+                + 'lohenkasvatus ja kasvava matkailu, joten jätä nummelle '
+                + 'vain jalanjälkesi.',
+              kuva: {
+                tiedosto: 'PNCabodeHornos.JPG',
+                lyhyt: 'Kansallispuiston turvenummea Herschelin saarella Kap Hornin naapurissa.',
+                selite: 'Herschelin saaren nummella kasvaa korkeita, '
+                  + 'vaaleita heinätupsuja ja matalia vihreitä pensaita, ja '
+                  + 'taustalla kohoaa puuton, loiva vaara harmaan taivaan '
+                  + 'alla. Saari kuuluu samaan Hermiten saariryhmään kuin '
+                  + 'Hornosin saari. Kuva vuodelta 2007.',
+                lahde: 'Butterfly austral - Serge Ouachée, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'merenkulku',
@@ -110192,6 +110697,218 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'German South West Africa',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Sossusvlei, Deadvlei, Sesriem, Tsauchab River,
+       * Solitaire, Spreetshoogte Pass, Namib-Naukluft National Park,
+       * NamibRand Nature Reserve, Namib), Wikivoyagesta (Sossusvlei,
+       * Namib-Naukluft National Park) ja saksan Wikipediasta (Sossusvlei,
+       * Deadvlei, Sesriem-Canyon, Solitaire: Unescon luettelo 2013,
+       * leipomo ja Moose McGregor) — teksti omaa. Hinnat jätetty pois.
+       * Nostojen aiheita (aavikon ikä, Luurankorannikko, hylyt, dyynien
+       * väri ja korkeudet, Deadvlein puiden historia, Kuiseb, 1873,
+       * eläimet, sumu, puiston koko) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: Big Daddyn harjanne.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Climbing Big Daddy (3688096060).jpg',
+          lyhyt: 'Retkeilijät nousevat Big Daddyn harjannetta, Sossusvlein seudun korkeimmalle dyynille.',
+          selite: 'Retkeilijät kulkevat jonossa Big Daddyn kapeaa harjannetta '
+            + 'ylös lokakuun aamuna 2006, ja jalanjäljet painuvat pehmeään '
+            + 'hiekkaan. Big Daddy on Sossusvlein seudun korkein dyyni.',
+          lahde: 'Greg Willis, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Useimmille matkailijoille Namib tarkoittaa Sossusvleitä: '
+          + 'valkoisia savipannuja punaisten dyynien keskellä, osana '
+          + 'Namibin hiekkamerta, joka liitettiin Unescon '
+          + 'maailmanperintöluetteloon kesäkuussa 2013. Windhoekista ajetaan '
+          + 'suurin osa päivästä ylängöltä jyrkkiä soloja alas aavikolle, ja '
+          + 'viimeinen huoltopaikka on Solitairen leipomo ja huoltoasema. '
+          + 'Sesriemin portti aukeaa vasta auringon noustessa, joten aamun '
+          + 'ensimmäisen valon dyyneillä näkee vain portin sisäpuolella '
+          + 'yöpynyt. Asfaltin päästä jatketaan nelivedolla tai sukkulalla '
+          + 'Deadvleihin ja Big Daddyn juurelle, ja illaksi palataan '
+          + 'Sesriemin kapeaan kanjoniin. Kesäpäivinä lämpöä on usein 40 '
+          + 'astetta, talviöinä vain kymmenkunta, ja sade on harvinainen.',
+        artikkeli: {
+          nimi: 'Matkailijan Namib',
+          teksti: 'Namibin dyyneille päästään auringon tahdissa.',
+          nosto: 'Sesriemin portti aukeaa auringonnousussa, joten aamun '
+            + 'dyyneillä ovat ensimmäisinä ne, jotka nukkuivat portin '
+            + 'sisäpuolella.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Ylängöltä alas hiekkamereen',
+              teksti: 'Windhoekista Sesriemiin ajetaan suurin osa päivästä, '
+                + 'enimmäkseen soratietä. Ylängöltä aavikolle laskeudutaan '
+                + 'jyrkän reunaportaan yli, ja solan valinta on matkan '
+                + 'ensimmäinen päätös. Helpoin reitti kulkee Rehobothin kautta '
+                + 'Remhoogten solaan, näyttävin Spreetshoogten yli: siellä tie '
+                + 'laskeutuu noin tuhat metriä vain neljän kilometrin matkalla. '
+                + 'Solan rakensi toisen maailmansodan aikana farmari Nicolaas '
+                + 'Spreeth, joka raivasi sen lähes omin käsin ja räjäytti '
+                + 'esteet dynamiitilla. Rekat ja perävaunut ovat solassa '
+                + 'kiellettyjä, jyrkimmät kohdat on päällystetty '
+                + 'betonikivillä, ja alamäessä ajetaan ykkösvaihteella, '
+                + 'etteivät jarrut kuumene. Soratiellä nopeusrajoitus on 100 '
+                + 'kilometriä tunnissa, mutta Wikivoyage muistuttaa, että '
+                + 'turvallisesti sitä voi ajaa harvoin: puiston monet '
+                + 'onnettomuudet sattuvat lähes aina matkailijoille liian '
+                + 'kovassa vauhdissa, usein renkaan puhjettua. Viimeinen kunnon pysähdys on Solitaire, '
+                + 'kahden päätien risteykseen syntynyt farmikylä, jonka '
+                + 'huoltoasema, kauppa ja leipomo ovat ainoat dyynien ja '
+                + 'Walvis Bayn välillä. Leipomon omenapiirakan teki '
+                + 'kuuluisaksi sen perustaja Moose McGregor, joka kuoli '
+                + '2014 ja on haudattu Solitaireen.',
+              kuva: [
+                {
+                  tiedosto: 'D1275 Spreetshoogte Pass.jpg',
+                  lyhyt: 'Spreetshoogten solan jyrkimmät kohdat on päällystetty betonikivillä.',
+                  selite: 'Spreetshoogten solatie D1275 laskeutuu kohti '
+                    + 'Solitairea, ja jyrkimmällä osuudella soran tilalla '
+                    + 'on lukittuvia betonikiviä.',
+                  lahde: 'Olyon01, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Solitaire (2019).jpg',
+                  lyhyt: 'Solitaire ilmasta: rakennukset, puut ja hiekkainen kiitorata soratien varrella.',
+                  selite: 'Ilmakuvassa Solitairen rakennukset ja puut '
+                    + 'ryhmittyvät soratien varteen, ja niiden takana on '
+                    + 'pienkoneiden hiekkainen kiitorata.',
+                  lahde: 'Hp.Baumeler, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Solitaire-Tableau des précipitations.jpg',
+                  lyhyt: 'Solitairen liitutaululle on kirjattu vuosien 2009–2015 sademäärät.',
+                  selite: 'Solitairen seinätaulun mukaan vuonna 2011 satoi '
+                    + '479 millimetriä mutta vuonna 2013 vain 58: aavikon '
+                    + 'reunalla sademäärä vaihtelee vuodesta toiseen rajusti.',
+                  lahde: 'Ji-Elle, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Portti aukeaa auringon mukana',
+              teksti: 'Sossusvleihin mennään Sesriemin portista, jonka '
+                + 'toimistosta ostetaan myös puiston lupa. Portti aukeaa '
+                + 'auringonnousussa ja sulkeutuu auringonlaskussa, ja siitä '
+                + 'on vielä noin 60 kilometriä dyyneille. Ainoa tapa olla '
+                + 'perillä jo ennen aamun ensimmäistä valoa on yöpyä portin '
+                + 'sisäpuolella valtion Namibia Wildlife Resortsin '
+                + 'majoituksessa: Sesriemin leirintäalueella, jonka jokaisella '
+                + 'paikalla on varjona oma kameelipiikkipuu, tai Sossus Dune '
+                + 'Lodgessa. Sama koskee iltaa: auringonlaskun jälkeen '
+                + 'dyyneille jäävät vain portin sisällä yöpyvät. Wikivoyage varoittaa '
+                + 'yksityisistä majoista, jotka mainostavat olevansa lähempänä: '
+                + 'niiden vieraat jonottavat samaan porttiin kuin muutkin. '
+                + 'Portilta dyyneille kulkee 2000-luvun alussa rakennettu '
+                + 'asfalttitie, harvinaisuus Namibian maaseudulla, ja ajo '
+                + 'kestää noin tunnin. Tien 45. kilometrillä olevalle Dune '
+                + '45:lle kiivetään usein jo aamuhämärissä, ja huipulle '
+                + 'noustaan noin tunnissa. '
+                + 'Kuumailmapallot lähtevät Sesriemistä varhain aamulla, ja '
+                + 'pienkoneiden kierroslennot dyynien yli lähtevät '
+                + 'enimmäkseen rannikolta Swakopmundista ja Walvis Baysta.',
+              kuva: {
+                tiedosto: 'Sossusvlei, entrance - panoramio.jpg',
+                lyhyt: 'Sesriemin portin kyltti: sisään pääsee auringonnoususta auringonlaskuun.',
+                selite: 'Sesriemin portin punainen pyramidinmuotoinen kyltti ilmoittaa '
+                  + 'aukioloajaksi auringonnoususta auringonlaskuun; kuva '
+                  + 'on otettu syyskuussa 2006.',
+                lahde: 'Frans-Banja Mulder, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+            {
+              otsikko: 'Viimeiset viisi kilometriä',
+              teksti: 'Asfaltti päättyy parkkipaikalle, jota kutsutaan '
+                + 'nimellä 2x4: kaksivetoiset autot jätetään siihen. Loput '
+                + 'noin viisi kilometriä Sossusvleihin on syvää, pehmeää '
+                + 'hiekkaa, jossa pärjää vain nelivedolla. Wikivoyage neuvoo, '
+                + 'ettei tämä ole oikea paikka opetella maastoajoa: hiekkaan '
+                + 'juuttuneet vuokra-autot huvittavat oppaita, ja niiden '
+                + 'jäljet ovat myös ympäristöhaitta. Helpompi keino on '
+                + 'sukkula, joka ajaa säännöllisesti parkkipaikalta ja '
+                + 'pysähtyy kahdesti, Deadvlein ja Sossusvlein kohdalla. '
+                + 'Kävellenkin pääsee, noin kymmenen kilometriä edestakaisin, '
+                + 'mutta matkan varrella ei ole varjoa eikä palveluja. '
+                + 'Deadvlein reunalla kohoaa Big Daddy, jonka harjannetta pitkin voi '
+                + 'kiivetä koko seudun korkeimmalle huipulle; vastapäätä on '
+                + 'toinen jättiläinen, Big Mama. Rauhallisempaa on '
+                + 'Hiddenvleissä, joka on neljän kilometrin päässä 2x4:n '
+                + 'parkkipaikalta ja vähiten käyty alueen savipannuista.',
+              kuva: {
+                tiedosto: 'Sandpad zum Sossusvlei, Namibia (2017).jpg',
+                lyhyt: 'Asfaltin jälkeen Sossusvleihin johtaa pehmeä hiekkaura, jossa pärjää vain nelivedolla.',
+                selite: 'Renkaiden urat risteilevät pehmeässä hiekassa '
+                  + 'Sossusvleihin johtavalla tiellä, ja taustalla kohoavat '
+                  + 'punaiset dyynit ja vihreät puut.',
+                lahde: 'Olga Ernst & Hp.Baumeler, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kuuden nahkahihnan kanjoni',
+              teksti: 'Noin neljän kilometrin päässä Sesriemistä maa '
+                + 'halkeaa kapeaksi kanjoniksi. Tsauchab-joki on '
+                + 'kaivertanut sen noin kahden miljoonan vuoden aikana '
+                + 'vanhoista jokisoraikoista kovettuneeseen kiveen. Kanjoni '
+                + 'on noin kilometrin pituinen ja enimmillään 30 metriä syvä, '
+                + 'ja paikoin seinämien väli on vain kaksi metriä. Nimi on '
+                + 'afrikaansia ja tarkoittaa kuutta nahkahihnaa: '
+                + 'Dorsland-vaelluksen uudisasukkaat joutuivat solmimaan '
+                + 'yhteen kuusi hihnaa, ennen kuin sanko ylsi kanjonin '
+                + 'pohjalla olevaan veteen. Pohjalla on yhä kohta, jossa '
+                + 'vettä riittää ympäri vuoden ja jolla eläimet käyvät '
+                + 'juomassa. Kanjoniin on helppo laskeutua, ja kuivaa '
+                + 'uomaa voi kävellä seinämien välissä. '
+                + 'Alajuoksulla kanjoni madaltuu ja levenee puiden '
+                + 'reunustamaksi uomaksi, jonka Sossusvlein tie ylittää. '
+                + 'Wikivoyage suosittelee paikkaa auringonlaskun katsomiseen, '
+                + 'kun dyyneillä on käyty aamulla.',
+              kuva: {
+                tiedosto: 'Cañón Sesriem, Sossusvlei, Namibia, 2018-08-06, DD 176.jpg',
+                lyhyt: 'Sesriemin kanjonin pohjalla kulkijat näyttävät pieniltä korkeiden seinämien välissä.',
+                selite: 'Kolme kulkijaa seisoo Sesriemin kanjonin '
+                  + 'hiekkapohjalla, ja Tsauchab-joen kovettuneeseen '
+                  + 'soraan kovertamat seinämät kohoavat kapeana solana '
+                  + 'heidän ylleen.',
+                lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Helle, tulvavuodet ja pimeä taivas',
+              teksti: 'Sossusvlein vuoden keskilämpötila on noin 24 '
+                + 'astetta, mutta vuorokauden sisällä vaihtelu on suurta: '
+                + 'kesällä päivä kuumenee usein 40 asteeseen, talviöinä '
+                + 'lämpöä on vain kymmenkunta astetta. Dyyneille kannattaa '
+                + 'lähteä aamulla, ja vettä on juotava pitkin päivää. Sade '
+                + 'on harvinaista, mutta kun Naukluft-vuorille sataa '
+                + 'kunnolla, kuiva Tsauchab muuttuu tunneissa vuolaaksi '
+                + 'joeksi. Sossusvleihin asti vesi yltää vain joka viides '
+                + 'tai kymmenes vuosi, ja silloin savipannuun syntyy '
+                + 'lyhytaikainen järvi, jonka syvyys vaihtelee muutamasta '
+                + 'senttimetristä useaan metriin ja jolle lentää '
+                + 'muuttolintuja. Pimeän tultua aavikon suurin nähtävyys on '
+                + 'taivas. Kansallispuiston itärajalla on yksityinen '
+                + 'NamibRandin luonnonsuojelualue, joka on perustettu 1984 '
+                + 'ja rahoittaa itsensä pääosin vähäisen matkailun maksuilla. '
+                + 'Kansainvälinen Dark-Sky-järjestö nimesi sen vuonna 2012 '
+                + 'pimeän taivaan suojelualueeksi, jossa keinovalo ei '
+                + 'himmennä Linnunrataa.',
+              kuva: {
+                tiedosto: 'Sossusvlei with water, Namibia.jpg',
+                lyhyt: 'Sossusvlein savipannussa oli harvinaisesti vettä syyskuussa 2021.',
+                selite: 'Matala vesi lepää Sossusvlein pannussa punaisen '
+                  + 'dyynin juurella, ja etualalla kuivuva savi on '
+                  + 'halkeillut laatoiksi. Kuva on otettu syyskuussa 2021.',
+                lahde: 'Christoph Strässler, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'elaimet',
@@ -110380,6 +111097,261 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Alexander Selkirk',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Robinson Crusoe Island, San Juan Bautista, Chile,
+       * Juan Fernández Islands, Juan Fernández fur seal, SMS Dresden
+       * (1907), 2010 Chile earthquake), espanjan Wikipediasta (Isla
+       * Robinson Crusoe, San Juan Bautista (Chile), Aeródromo Robinson
+       * Crusoe, Aeródromo Eulogio Sánchez, Parque nacional Archipiélago
+       * de Juan Fernández, Juan Fernández (comuna), Terremoto de Chile
+       * de 2010, Sistema de Alerta de Emergencia) ja Wikivoyagen Juan
+       * Fernández Islands -sivulta (lennot, huoltolaiva, Selkirkin
+       * näköalapaikan reitti, kranaattien jäljet) — teksti omaa.
+       * Wikivoyagen hinnat (2021–2025) ja aikataulut on jätetty pois.
+       * Kuolonuhrien määrä vuoden 2010 tsunamissa vaihtelee lähteittäin,
+       * joten lukua ei kerrota. Nostojen aiheita (nimenvaihto 1966,
+       * tulivuoriperä ja El Yunquen korkeus, kylän asukasluku ja uudet
+       * evakuointitiet, langustinpyynti, liekkikolibri, kaalipuu ja
+       * vieraslajit, Selkirkin muistolaatta, Selkirk, Defoe, Anson,
+       * Liman aarre ja Keiser) eikä gallerian Ansonin leiriä toisteta.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja kuvat katsottu silmin. Pystykuva: kylän ainoa
+       * tie laskeutuu rantaan (PatHen3333, tammikuu 2013).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'L\'unique "route" de l\'unique village de l\'île.jpg',
+          lyhyt: 'Kapea tie laskeutuu eukalyptusten välistä San Juan Bautistan rantaan.',
+          selite: 'Kuvaajan mukaan kylän ainoa tie viettää eukalyptusten ja '
+            + 'sähkölinjojen alta rantaan, jossa näkyvät laituri ja lahden '
+            + 'sininen vesi; kuva tammikuulta 2013.',
+          lahde: 'PatHen3333, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Robinson Crusoen saarelle pääsee vain pienkoneella tai '
+          + 'huoltolaivalla, ja kumpikin matka riippuu säästä. Kone '
+          + 'laskeutuu saaren kuivaan lounaiskärkeen, josta kylään ei ole '
+          + 'tietä, joten viimeinen osuus kuljetaan veneellä rannikkoa '
+          + 'pitkin. San Juan Bautistassa kaikki on kävelymatkan päässä: '
+          + 'laituri, isänmaallisten luolat ja vanhan espanjalaisen '
+          + 'linnoituksen rauniot. Kylän takana alkaa kansallispuisto, '
+          + 'jonka polut nousevat pilvimetsään, ja laiturin kivillä '
+          + 'loikoilee merikarhuja, joita pidettiin aikanaan jo '
+          + 'sukupuuttoon kuolleina. Kylän pohjoispuolen kallioissa näkyvät yhä '
+          + 'vuoden 1915 meritaistelun ammusten jäljet. Vuoden 2010 '
+          + 'tsunamin opetus on otettu vakavasti, ja kylän kaduilla '
+          + 'vihreät viitat osoittavat pakoreitin ylös rinteeseen.',
+        artikkeli: {
+          nimi: 'Matkailijan Robinson Crusoe',
+          teksti: 'Kylään ei lennetä eikä ajeta: viimeinen matka kuljetaan aina meritse.',
+          nosto: 'Tsunamiyönä 2010 kylän naapureita varoitti 12-vuotias '
+            + 'tyttö, joka huomasi meren vetäytyvän rannasta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Pienkoneella Santiagosta',
+              teksti: 'Saarelle lennetään muutaman ilmataksiyhtiön pienillä '
+                + 'koneilla. Wikivoyagen mukaan tavallisin lähtöpaikka on '
+                + 'Tobalaban lentokenttä (Aeródromo Eulogio Sánchez) '
+                + 'Santiagon itäosassa, mutta lentoja on lähtenyt myös '
+                + 'Santiagon päälentoasemalta ja Valparaísosta. Koneet ovat '
+                + 'pieniä kaksimoottorisia, joihin mahtuu vain noin seitsemän '
+                + 'matkustajaa, joten matkatavaroiden on oltava kevyitä. '
+                + 'Lentoja on eniten tammi- ja helmikuussa, ja marraskuun ja '
+                + 'maaliskuun välisen kauden ulkopuolella niitä on harvoin. '
+                + 'Kiitotie on saaren lounaiskärjessä, ainoalla riittävän '
+                + 'tasaisella paikalla, jonka lentäjät ja saarelaiset '
+                + 'raivasivat kivistä vuonna 1966. Kentällä ei ole '
+                + 'lennonjohtotornia eikä valaistusta, joten sinne lennetään '
+                + 'vain päivällä ja hyvällä näkyvyydellä, ja sade tai kova '
+                + 'tuuli voi perua lähdön mihin vuodenaikaan tahansa. '
+                + 'Kentältä ei ole tietä kylään, vaan matkustajat jatkavat '
+                + 'kentän läheiseltä lahdelta moottoriveneellä noin '
+                + 'puolitoista tuntia rannikkoa pitkin San Juan Bautistaan. '
+                + 'Hitaampi vaihtoehto on Valparaísosta noin kahdesti kuussa '
+                + 'lähtevä huoltolaiva, jossa on muutama paikka matkailijoille. '
+                + 'Merimatka kestää lähes kaksi vuorokautta, ja paluu voi '
+                + 'viivästyä säiden takia, joten matkaan kannattaa varata '
+                + 'vähintään viikko. Wikivoyage varoittaa myös, että '
+                + 'lentohakukoneet ovat sekoittaneet saaren kentän mantereen '
+                + 'Concepciónin kaupunkiin.',
+              kuva: [
+                {
+                  tiedosto: 'Sector aerodromo Isla Robinson Crusoe.jpg',
+                  lyhyt: 'Lentokentän ympäristö saaren lounaiskärjessä on kuivaa ja lähes puutonta.',
+                  selite: 'Saaren lounaisosan kuivaa, ruohon ja kuivuneiden '
+                    + 'kasvien peittämää ylänköä lentokentän läheltä; '
+                    + 'taustalla näkyvät Punta de Isla ja Santa Claran saari. '
+                    + 'Kuva tammikuulta 2011.',
+                  lahde: 'Pato Novoa, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Baie près de l\'aérodrome .jpg',
+                  lyhyt: 'Lentokentän läheisestä lahdesta matka kylään jatkuu veneellä.',
+                  selite: 'Punaisen ja keltaisen tuliperäisen kiven '
+                    + 'kerrostamat rinteet kohoavat pienen lahden yllä '
+                    + 'lentokentän lähellä. Kuvaajan mukaan tästä lahdesta '
+                    + 'kylään pääsee vain meritse; kuva tammikuulta 2013.',
+                  lahde: 'PatHen3333, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'CI-Robinson-kai.jpg',
+                  lyhyt: 'San Juan Bautistan laiturilta kävellään suoraan kylän rantaan.',
+                  selite: 'Matkustajat kävelevät punakaiteista laituria '
+                    + 'pitkin San Juan Bautistaan, jonka talot nousevat '
+                    + 'metsäisten vuorten juurelle; kuva marraskuulta 2017.',
+                  lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kylä, luolat ja linnoitus',
+              teksti: 'San Juan Bautistan kiertää jalan, ja suurin osa sen '
+                + 'kaduista on yhä päällystämättömiä. Kylän '
+                + 'perustamisvuodeksi mainitaan yleensä 1877, jolloin '
+                + 'sveitsiläinen paroni Alfred von Rodt aloitti pysyvän '
+                + 'asutuksen, ja hänen nimeään kantaa yhä yksi kylän '
+                + 'kaduista. Pohjoispäässä ovat jalkapallokenttä ja '
+                + 'Dresden-koulu, joka on nimetty lahteen 1915 upotetun '
+                + 'saksalaisen risteilijän mukaan. Kylän yläpuolisessa '
+                + 'rinteessä näkyvät Cuevas de los Patriotas eli '
+                + 'isänmaallisten luolat. Kun espanjalaiset olivat lyöneet '
+                + 'Chilen itsenäisyysliikkeen Rancaguan taistelussa '
+                + 'lokakuussa 1814, he karkottivat saarelle 42 kreolien '
+                + 'johtohahmoa, muiden muassa Juan Egañan ja Manuel de '
+                + 'Salasin. Vangit elivät luolissa vuoteen 1817, ja paikka '
+                + 'julistettiin kansallismonumentiksi 1979. Samaa rinnettä '
+                + 'nousevan polun varrella ovat Santa Bárbaran linnoituksen '
+                + 'rauniot: espanjalaiset rakensivat linnoituksen 1700-luvulla '
+                + 'suojaamaan lahtea merirosvoilta. Kylässä on myös pieni '
+                + 'museo ja kirjasto, turisti-info ja muutama ravintola ja '
+                + 'baari. Nettiyhteydet ovat uusia: internet yleistyi kylässä '
+                + 'vasta vuonna 2020, kun saarelle pystytettiin '
+                + 'satelliittiantennit.',
+              kuva: {
+                tiedosto: 'Isla Robinson Crusoe y las Cuevas de los Patriotas..JPG',
+                lyhyt: 'Isänmaallisten luolien suuaukot näkyvät kylän yläpuolisessa rinteessä.',
+                selite: 'Mereltä kuvatussa näkymässä San Juan Bautistan '
+                  + 'rantaa ja laituria; paljaassa, punaruskeassa rinteessä '
+                  + 'talojen ja havupuiden keskellä ammottaa kaksi tummaa '
+                  + 'luolan suuta. Kuva helmikuulta 2011.',
+                lahde: 'Marisol Romero, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Merikarhut ja Dresdenin hylky',
+              teksti: 'Meri on kylmempi kuin leuto ilma antaa odottaa, sillä '
+                + 'saaren itäpuolella pohjoiseen virtaava Humboldtin virta '
+                + 'viilentää vettä, eikä valkoisia hiekkarantoja ole. '
+                + 'Sukeltajia ja snorklaajia houkuttelevat silti '
+                + 'Juan Fernándezin merikarhut. Lajia pyydettiin '
+                + 'turkiskaupan aikana 1800-luvun alussa niin armottomasti, '
+                + 'että sitä pidettiin kuolleena sukupuuttoon, kunnes '
+                + 'saarilta löydettiin 1960-luvulla noin 200 eläimen ryhmä. '
+                + 'Suojelun ansiosta merikarhuja on nyt yli kymmenentuhatta, '
+                + 'ja niitä makailee kymmenittäin laiturin lähellä '
+                + 'rantakivillä. Poikaset syntyvät marras–joulukuussa, ja emot '
+                + 'hakevat ruokansa öisin kaukana avomerellä. Kuuluisin '
+                + 'sukelluskohde on saksalaisen kevyen risteilijän SMS '
+                + 'Dresdenin hylky Cumberlandinlahdella. Brittiläiset '
+                + 'risteilijät Glasgow ja Kent yllättivät Chilen '
+                + 'puolueettomilla vesillä ankkurissa olleen aluksen 14. '
+                + 'maaliskuuta 1915, ja miehistö upotti sen itse '
+                + 'räjähteillä. Hylky makaa noin 70 metrin syvyydessä, joten '
+                + 'se on vain syväsukellukseen koulutettujen kohde. Sen kello '
+                + 'nostettiin vuonna 2006 ja vietiin Saksaan. Maalla '
+                + 'taistelun jäljet näkee helpommin: kylästä pohjoiseen '
+                + 'kulkevan polun varrella kallioon on jäänyt brittiläisten '
+                + 'ammusten iskemiä. Wikivoyage mainitsee saaren '
+                + 'harrastuksina myös urheilukalastuksen, lintujen '
+                + 'tarkkailun ja ratsastuksen.',
+              kuva: {
+                tiedosto: 'Lobo fino.jpg',
+                lyhyt: 'Juan Fernándezin merikarhu ui pinnalla turkoosissa vedessä evät koholla.',
+                selite: 'Juan Fernándezin merikarhun naaras tai nuori '
+                  + 'yksilö ui aivan pinnassa ja nostaa eväänsä vedestä; '
+                  + 'laji lisääntyy vain Juan Fernándezin ja Desventuradasin '
+                  + 'saarilla. Kuva tammikuulta 2011.',
+                lahde: 'Pato Novoa, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kansallispuiston polut',
+              teksti: 'Kylää lukuun ottamatta lähes koko saari kuuluu vuonna '
+                + '1935 perustettuun kansallispuistoon, johon kuuluvat myös '
+                + 'Alejandro Selkirkin ja Santa Claran saaret, ja puisto on '
+                + 'ollut Unescon maailmanperintöehdokkaiden listalla vuodesta '
+                + '1994. Suosituin retki nousee kylästä vuoriston satulaan, '
+                + 'josta näkee saaren molemmat puolet: vihreän kylänpuoleisen '
+                + 'rinteen ja toisella puolella kuivan, ruskean maaston '
+                + 'sahalaitaisine huippuineen. Liikkeelle kannattaa lähteä jo kahdeksan '
+                + 'maissa aamulla, ennen kuin sumu peittää vuoret. Polku '
+                + 'nousee istutetusta eukalyptusmetsästä alkuperäiseen '
+                + 'pilvimetsään, ja sivupolku vie kalliolle, johon merimiehet '
+                + 'kaiversivat vuonna 1866 laivan ja jättiläiskalan. Toinen '
+                + 'reitti johtaa El Yunquen alle Plazoleta El Yunquelle. '
+                + 'Siellä asui 1930-luvulla Hugo Weber, Dresdenin '
+                + 'entinen merimies, jota kyläläiset kutsuivat saksalaiseksi '
+                + 'Robinsoniksi ja josta tuli Chilen ensimmäinen saarten '
+                + 'puistonvartija. Toisen maailmansodan aikana häntä '
+                + 'syytettiin vakoilusta, ja hän pakeni saarelta vaimonsa '
+                + 'kanssa. Kasveista kannattaa etsiä Lactoris fernandeziana, '
+                + 'vaatimaton pensas, joka on koko kasviheimonsa ainoa laji ja '
+                + 'kasvaa luonnossa vain tällä saarella. Lintujen tarkkailija '
+                + 'voi nähdä pienen, töyhtöpäisen Anairetes fernandezianus '
+                + '-tyrannin, ja merilinnuista saarella elää viistäjälaji, joka '
+                + 'tunnetaan englanniksi saaren vanhan nimen mukaan nimellä '
+                + 'Masatierra petrel.',
+              kuva: {
+                tiedosto: 'Cerro el Yunque.jpg',
+                lyhyt: 'El Yunquen jyrkät seinämät katoavat puistolle tyypilliseen sumuun.',
+                selite: 'Cerro El Yunquen huippu on pilven peitossa, ja '
+                  + 'etualalla punaisessa maassa kasvaa ruohomättäitä ja '
+                  + 'pensaita; kuva marraskuulta 2014.',
+                lahde: 'Daniela HV, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sää, arki ja tsunamivaroitus',
+              teksti: 'Saari on samalla aikavyöhykkeellä kuin Manner-Chile. '
+                + 'Ilmasto on leuto, vuoden keskilämpö on noin 16 astetta, '
+                + 'ja sateet painottuvat talvikuukausiin. Yli 500 metrin '
+                + 'korkeudessa sataa lähes päivittäin, kun taas saaren '
+                + 'tuulensuojainen länsiosa on kuiva, joten sadetakki kuuluu '
+                + 'jokaiselle vaellukselle. Kylän sähkö tehdään '
+                + 'dieselgeneraattoreilla, joiden polttoaine tuodaan laivalla '
+                + 'mantereelta, ja juomavesi kerätään vuorten lähteistä. '
+                + 'Autoja on vähän, ja hevoset ovat yhä tavallinen kulkuneuvo. '
+                + 'Helmikuun 27. päivän 2010 maanjäristystä ei saarella '
+                + 'tuntunut lainkaan, sillä sen keskus oli yli 600 '
+                + 'kilometrin päässä mantereen edustalla. Hyökyaalto saapui '
+                + 'noin tunnin kuluttua keskellä yötä ja tunkeutui yli 300 '
+                + 'metriä kylän sisään. Laivasto ei antanut ajoissa '
+                + 'virallista varoitusta, ja monet juoksivat rantaan eivätkä '
+                + 'rinteille. Moni pelastui, koska 12-vuotias Martina '
+                + 'Maturana huomasi meren vetäytyvän ja varoitti naapureitaan. '
+                + 'Katastrofin jälkeen Chile rakensi SAE-järjestelmän, joka '
+                + 'lähettää hätävaroituksen tekstinä, omalla äänimerkillään '
+                + 'ja värinänä alueen matkapuhelimiin, ja vuodesta '
+                + '2017 kaikki Chilessä myydyt puhelimet ovat tukeneet sitä. '
+                + 'Vuonna 2013 kylän kaava kielsi rakentamasta asuntoja '
+                + 'rantaan. Matkailijan sääntö on yksinkertainen: jos meri '
+                + 'vetäytyy äkkiä tai puhelin hälyttää, lähde heti vihreiden '
+                + '"Vía de evacuación tsunami" -viittojen suuntaan ylös '
+                + 'rinteeseen äläkä jää rantaan katsomaan.',
+              kuva: {
+                tiedosto: 'CI-Robinson-dorfstrasse.jpg',
+                lyhyt: 'Vihreä kyltti Alfred von Rodtin kadulla osoittaa tsunamin pakoreitin.',
+                selite: 'Puisen Alfred von Rodt -kadunnimikyltin vieressä '
+                  + 'seisoo vihreävalkoinen "Vía de evacuación tsunami" '
+                  + '-kyltti; taustalla kylän puutalot ja metsäinen '
+                  + 'vuorenrinne. Kuva marraskuulta 2017.',
+                lahde: 'Balou46, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'kirjallisuus',
@@ -110937,6 +111909,278 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Verney Lovett Cameron',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on koko Angola,
+       * painopisteenä Luanda ja sen lähirannikko, kuten lehden
+       * nostoissakin. Taustatiedot englannin Wikipediasta (Dr. António
+       * Agostinho Neto International Airport, Visa policy of Angola,
+       * Angolan kwanza, Luanda, July 2025 Angolan protests, Luanda
+       * Railway, Ilha de Luanda, Mussulo, Mausoleum of António Agostinho
+       * Neto, Palácio de Ferro, Luanda International Jazz Festival, HALO
+       * Trust, Diana, Princess of Wales, Prince Harry, Duke of Sussex),
+       * portugalin Wikipediasta (Miradouro da Lua), Wikivoyagen Angola-
+       * ja Luanda-sivuilta sekä Britannian ulkoministeriön (FCDO)
+       * Angolan matkustustiedotteesta (päivitetty 28.5.2026) — teksti
+       * omaa. Hinnat ja aukioloajat jätetty pois: kwanza on heilunut
+       * voimakkaasti, ja lähteiden hinnat ovat vanhoja. Turvallisuus
+       * kerrotaan FCDO:n ja Wikivoyagen mukaan liioittelematta:
+       * Cabinda (separatistit), Lundan timanttialueet, miinat ja
+       * Luandan katurikollisuus.
+       *
+       * EI TOISTETA: nostojen aiheita (padrão, São Miguelin linnoitus,
+       * orjakauppa, Livingstone, Cameron, Bié-ylänkö, Kuanza, Kalandula,
+       * jättiläissapeliantilooppi), maalehden aiheita (funge, moamba,
+       * kalulu, cocada, berimbau, semba, kuduro, Tundavala, welwitschia,
+       * Tigres, nzimbu, Nzinga, tšokwe-taide) eikä maastokohteiden
+       * aiheita (Quiçama, Iona, Benguelan rata, Cuito Cuanavale).
+       *
+       * KUVAT: kahdeksan Commons-kuvaa, lisenssi ja tekijä tarkistettu
+       * extmetadatasta ja jokainen katsottu silmin. BAI-pankin kuva on
+       * pankin viestinnän itse lataama CC0-kuva. Huambon kuvan
+       * tekijämerkintä on MAG:n pyytämä (Sean Sutton/MAG). Mausoleumin
+       * kuva on vuodelta 2006, jolloin muistomerkki oli vielä kesken.
+       * HYLÄTYT: uuden lentokentän Yezzispapi-kuvat (videokuvakaappauksen
+       * näköisiä, alkuperä epävarma), "Construction site Angola
+       * International Airport1" (ei tunnistettavasti lentokenttä),
+       * seteli- ja kolikkokuvat, "Danger mines 1" (paikka epävarma) ja
+       * "A minefield digger" (virheellinen kuvaus). Palácio de Ferron
+       * ainoa kuva on liian epätarkka. Pystykuva: Miradouro da Lua.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Miradouro da Lua - 2.jpg',
+          lyhyt: 'Miradouro da Luan uurteiset savikalliot laskeutuvat kohti Atlanttia.',
+          selite: 'Tuulen ja sateen uurtamat punaiset ja vaaleat savikalliot '
+            + 'Miradouro da Luassa, noin 40 kilometriä Luandasta etelään. '
+            + 'Taustalla avautuvat rannikkotasanko ja harmaa Atlantti.',
+          lahde: 'Felipe Miguel, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Angola on yksi maailman vähiten matkailluista maista, ja se on '
+          + 'avautunut vierailijoille vasta hiljattain: suomalainen pääsee '
+          + 'maahan lomalle ilman viisumia syksystä 2023 lähtien, ja Luandan '
+          + 'uusi lentoasema otti kaukolennot vastaan vuosina 2025–2026. '
+          + 'Rahaa varten tarvitaan käteisiä kwanzoja, kaupungilla liikutaan '
+          + 'sinivalkoisilla candongueiroilla tai sovitulla autolla, ja '
+          + 'viikonloppuisin luandalaiset suuntaavat Ilhan ja Mussulon '
+          + 'rannoille. Kameran kanssa ollaan tarkkana, ja maaseudulla '
+          + 'pysytään vakiintuneilla teillä, koska miinoja on yhä jäljellä.',
+        artikkeli: {
+          nimi: 'Matkailijan Angola',
+          teksti: 'Angolassa käteinen, kärsivällisyys ja portugalin alkeet vievät pitkälle.',
+          nosto: 'Luandalaisten viikonloppu alkaa vesitaksista, joka vie lahden '
+            + 'yli Mussulon palmurannoille.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Maahan ilman viisumia',
+              teksti: 'Angola avautui matkailijoille syksyllä 2023, kun maa '
+                + 'poisti turistiviisumin lähes sadalta maalta, muun muassa '
+                + 'Suomelta ja muilta EU-mailta. Lomalle pääsee nyt ilman '
+                + 'viisumia enintään 30 päiväksi kerrallaan ja yhteensä 90 '
+                + 'päiväksi kalenterivuodessa. Passin on oltava voimassa vähintään '
+                + 'kuusi kuukautta saapumisesta, ja siinä on oltava kaksi tyhjää '
+                + 'sivua. Keltakuumerokotusta suositellaan, ja rokotustodistusta '
+                + 'voidaan kysyä maahan tullessa tai viimeistään jatkomatkalla '
+                + 'esimerkiksi Etelä-Afrikkaan. Kaukolennot laskeutuvat nykyään '
+                + 'Dr. António Agostinho Neton kansainväliselle lentoasemalle noin '
+                + '40 kilometriä Luandan keskustasta kaakkoon. Se on suurin '
+                + 'lentoasema, jonka kiinalainen yhtiö on rakentanut Kiinan '
+                + 'ulkopuolelle. Kenttä vihittiin marraskuussa 2023, mutta '
+                + 'reittilentojen siirto vanhalta, keskellä kaupunkia olevalta '
+                + 'Quatro de Fevereiron kentältä valmistui vasta maaliskuussa 2026. '
+                + 'Kaupunkiin kannattaa varata kuljetus etukäteen. Rahassa pärjää '
+                + 'vain käteisellä: useimmat ravintolat ja pienet hotellit '
+                + 'hyväksyvät angolalaisia maksukortteja mutta eivät ulkomaisia. '
+                + 'Pankkiautomaateille on usein jonoa, kerralla saa nostaa vain '
+                + 'rajatun summan ja käteinen voi loppua kesken, joten kwanzoja '
+                + 'kannattaa hankkia hyvissä ajoin. Kwanza menetti touko- ja '
+                + 'kesäkuussa 2023 lähes 40 prosenttia arvostaan dollariin nähden, '
+                + 'joten vanhojen matkaoppaiden hinnat eivät enää pidä. Maasta saa '
+                + 'viedä pois enintään 50 000 kwanzaa, ja sitä voidaan tarkastaa '
+                + 'lentoasemalla. Englantia puhutaan vähän. Luandan ulkopuolella '
+                + 'portugalin alkeet ovat lähes välttämättömät, ja kohtelias bom '
+                + 'dia aloittaa jokaisen kohtaamisen.',
+              kuva: [
+                {
+                  tiedosto: '1.Luanda Airport Aeroporto 4 de Fevereiro LAD.jpg',
+                  lyhyt: 'Vanha Quatro de Fevereiron lentoasema keskellä Luandaa vuonna 2009.',
+                  selite: 'Heinäkuussa 2009 kuvatulla Quatro de Fevereiron '
+                    + 'lentoasemalla seisovat Lufthansan Airbus ja TAAG Angola '
+                    + 'Airlinesin Boeing 747, ja kentän takana leviää Luandan '
+                    + 'asutus. Reittilennot siirtyivät uudelle kentälle 2026.',
+                  lahde: 'Manuel Dohmen, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Angola Entry Stamp.png',
+                  lyhyt: 'Luandan lentoaseman vihreä maahantuloleima elokuulta 2011.',
+                  selite: 'Rajaviranomaisen Migração e Estrangeiros vihreässä '
+                    + 'leimassa ovat päivämäärä 16. elokuuta 2011 ja paikka Luanda. '
+                    + 'Punainen lentokone kertoo, että matkustaja saapui ilmateitse.',
+                  lahde: 'Jimmielin, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Agência Sagrada Família - Banco Angolano de Investimentos.jpg',
+                  lyhyt: 'BAI-pankin Sagrada Família -konttorin asiakastila Luandassa vuonna 2018.',
+                  selite: 'Banco Angolano de Investimentosin konttorissa '
+                    + 'asiakkaat odottavat vuoroaan sinisillä raheilla. Ulkomaisella '
+                    + 'kortilla maksaminen onnistuu Angolassa harvoin, joten käteistä '
+                    + 'nostetaan pankkiautomaatista tai vaihdetaan pankissa.',
+                  lahde: 'BAI Comunicação Institucional, Wikimedia Commons (CC0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Sinivalkoinen candongueiro',
+              teksti: 'Luandan tärkein joukkoliikenne ei ole bussi eikä juna vaan '
+                + 'candongueiro: yksityinen, valkoiseksi ja siniseksi maalattu '
+                + 'pikkubussi, useimmiten Toyota Hiace. Autoon on tehty paikat '
+                + 'kahdelletoista, mutta kyytiin ahtautuu yleensä vähintään '
+                + 'viisitoista. Kuljettajat ovat kuuluisia siitä, että liikennesäännöt '
+                + 'joustavat: stop-merkeissä ei pysähdytä, ja ruuhkaa kierretään '
+                + 'jalkakäytävää pitkin. Paikalliset käyttävät candongueiroja joka '
+                + 'päivä, mutta esimerkiksi Britannian ulkoministeriö neuvoo '
+                + 'matkailijoita välttämään sekä pikkubusseja että kyytisovelluksia '
+                + 'ja liikkumaan etukäteen sovitulla autolla. Pikkubussien merkitys '
+                + 'koko kaupungille näkyi heinäkuussa 2025. Kun hallitus leikkasi '
+                + 'polttoainetukia ja dieselin hinta nousi kolmanneksen, '
+                + 'taksinkuljettajien liitto julisti Luandaan kolmen päivän lakon. '
+                + 'Lakko laajeni mielenosoituksiksi ja mellakoiksi muissakin '
+                + 'maakunnissa, ja virallisten lukujen mukaan 22 ihmistä kuoli ja '
+                + 'yli 1 200 pidätettiin. Ruuhka kuuluu Luandan arkeen, ja '
+                + 'marraskuusta huhtikuuhun kestävällä sadekaudella rankkasateet '
+                + 'voivat tulvia kaduille hetkessä. Hintataso yllättää: '
+                + 'ulkomaisten työntekijöiden elinkustannuksia vertailevissa '
+                + 'listoissa Luanda on noussut maailman kalleimpien kaupunkien '
+                + 'kärkeen, koska tuontitavara ja turvallisuus maksavat. Kaupungin '
+                + 'laidalle pääsee myös junalla: Luandan radan lähiliikenne kulkee '
+                + 'Vianaan, ja kaukojuna jatkaa sisämaahan Malanjeen.',
+              kuva: {
+                tiedosto: 'Candongueiros.jpg',
+                lyhyt: 'Sinivalkoisia candongueiro-pikkubusseja Luandan kadulla vuonna 2011.',
+                selite: 'Kolme sinivalkoista Toyota Hiace -pikkubussia keltaisen '
+                  + 'talon edessä Luandassa. Etualan autossa istuvat kuljettaja ja '
+                  + 'ensimmäiset matkustajat.',
+                lahde: 'Patyfessora, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ilha, Mussulo ja Kuun näköala',
+              teksti: 'Luandalaiset pakenevat kaupungin hälinää rannikolle. Lähin '
+                + 'pakopaikka on Ilha do Cabo, jota kutsutaan yleensä vain Ilhaksi: '
+                + 'matala hiekkasärkkä lahden edustalla, joka liittyy kaupunkiin '
+                + 'kapealla kannaksella. Sen rannoilla on ravintoloita hyvin '
+                + 'kalliista rentoihin, baareja, venesatamia ja vuonna 1924 '
+                + 'perustettu pursiseura Clube Náutico, jota Wikivoyage suosittelee '
+                + 'auringonlaskun katseluun. Ilhan omia ruokia ovat grillattu kala '
+                + 'eli mufete ja muzongué-liemi. Illalla ravintolasta toiseen ei '
+                + 'kannata kävellä, vaan siirtyä autolla. Etelämpänä on Mussulo, noin '
+                + '30 kilometriä pitkä hiekkaniemi, jonka Kuanza-joen tuoma hiekka '
+                + 'ja pohjoiseen virtaava Benguelan merivirta ovat kasanneet. Sinne '
+                + 'mennään usein vesitaksilla lahden yli. Lahden puoleiset rannat '
+                + 'ovat luandalaisten suosikkeja, mutta niemen Atlantin puolella '
+                + 'virtaukset ja aallot ovat niin voimakkaita, että siellä käy '
+                + 'harva. Noin 40 kilometriä Luandasta etelään rannikkotie kulkee '
+                + 'Miradouro da Luan eli Kuun näköalapaikan ohi. Tuuli ja sade ovat '
+                + 'uurtaneet punaisiin ja vaaleisiin savikallioihin harjanteita, '
+                + 'jotka muistuttavat kuumaisemaa, ja paikkaa pidetään Angolan '
+                + 'käydyimpänä nähtävyytenä. Se on luonteva pysähdys matkalla Barra '
+                + 'do Cuanzan tai Cabo Ledon rannoille, ja siellä kuvattiin vuonna '
+                + '1993 ensimmäinen portugalilais-angolalainen yhteiselokuva. '
+                + 'Luandan eteläpuolella on myös Benfican käsityötori, jolla '
+                + 'myydään veistoksia, maalauksia, koruja ja batiikkikankaita. '
+                + 'Tinkiminen kuuluu asiaan.',
+              kuva: {
+                tiedosto: 'Mussulo, Angola.jpg',
+                lyhyt: 'Mussulon palmujen reunustama ranta vesitaksista kuvattuna.',
+                selite: 'Luandasta Mussuloon kulkevasta vesitaksista kuvattu '
+                  + 'hiekkaranta, jonka takana palmujen keskellä on '
+                  + 'punakattoisia rantataloja.',
+                lahde: 'Juvenalia Brito, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Raketti, rautapalatsi ja kamera',
+              teksti: 'Luandan siluetin tunnistaa betonitornista, jota kutsutaan '
+                + 'nimellä Foguetão, raketti. Se on Angolan ensimmäisen presidentin '
+                + 'Agostinho Neton mausoleumi: 120 metriä korkea torni, jonka '
+                + 'juurella olevaan pyramidiin on haudattu Neto ja vuodesta 2022 '
+                + 'myös hänen seuraajansa José Eduardo dos Santos. Neuvostoliittolaiset '
+                + 'suunnittelijat aloittivat työn 1980, ja peruskivi muurattiin '
+                + '1982, mutta rakentaminen pysähtyi sodan ja Neuvostoliiton '
+                + 'hajoamisen vuoksi. Muistomerkin viimeisteli lopulta '
+                + 'pohjoiskorealainen Mansudae Overseas Projects, ja se vihittiin '
+                + 'Neton 90-vuotispäivänä syyskuussa 2012. Alueella on museo, '
+                + 'näyttelytila ja kirjasto, jotka ovat avoinna yleisölle. Toinen '
+                + 'kaupungin erikoisuus on Palácio de Ferro, keltainen '
+                + 'rautarakenteinen talo, jonka suunnittelu yhdistetään Gustave '
+                + 'Eiffeliin tai hänen työpajaansa. Asiakirjoja siitä ei ole, ja '
+                + 'tarina rannikolle ajaneen laivan lastista on legenda eikä '
+                + 'todennettua historiaa. Talo kunnostettiin 2009. Vuodesta 2009 '
+                + 'Luandassa on järjestetty myös kansainvälinen jazzfestivaali, '
+                + 'perinteisesti heinä- ja elokuun vaihteessa. Kameran kanssa on oltava tarkkana. '
+                + 'Hallintorakennusten, sotilasalueiden, poliisien, lentoasemien, '
+                + 'rautatieasemien ja siltojen kuvaaminen voi johtaa vakaviin '
+                + 'vaikeuksiin, ja viranomaiset voivat takavarikoida kameran. '
+                + 'Myös virkamiesten julkinen arvostelu voi olla rangaistavaa. '
+                + 'Mukana on aina oltava henkilöllisyystodistus: turvallisinta on '
+                + 'kantaa passin kuvasivun virallisesti oikeaksi todistettua kopiota '
+                + 'ja jättää alkuperäinen hotellin kassakaappiin. Ilman papereita '
+                + 'poliisi voi määrätä sakon heti.',
+              kuva: {
+                tiedosto: 'Agostinhonetomausoleu.jpg',
+                lyhyt: 'Agostinho Neton mausoleumin torni kohoaa Luandan kattojen yli.',
+                selite: 'Rinteeltä kuvatussa näkymässä Neton muistomerkin kapea '
+                  + 'torni nousee matalien talojen ja työmaiden yläpuolelle. Kuva '
+                  + 'on otettu 2006, jolloin muistomerkki oli vielä kesken; se '
+                  + 'valmistui 2011.',
+                lahde: 'Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Miinat, Cabinda ja pimeä',
+              teksti: 'Angolaa pidetään yhä yhtenä maailman eniten miinoitetuista '
+                + 'maista. HALO Trust -järjestö on raivannut maata vuodesta 1994, ja '
+                + 'sen työ tuli maailmankuuluksi tammikuussa 1997, kun prinsessa '
+                + 'Diana kulki suojavarusteissa raivattavalla miinakentällä '
+                + 'Huambossa. Hänen poikansa Harry kävi angolalaisella '
+                + 'miinanraivausalueella syyskuussa 2019. Työ on edennyt paljon, '
+                + 'mutta miinoja ja räjähtämättömiä ammuksia on edelleen teillä, '
+                + 'pientareilla ja siltojen luona etenkin maaseudulla. Sääntö on '
+                + 'yksinkertainen: pysy vakiintuneilla teillä ja poluilla, älä '
+                + 'astu punavalkoisten merkkipaalujen tai punaisilla kivillä '
+                + 'rajattujen alueiden toiselle puolelle, ja muista, että sadekauden '
+                + 'tulvat voivat siirtää miinoja myös paikkoihin, joita on pidetty '
+                + 'turvallisina. Britannian ulkoministeriö neuvoo välttämään kaikkea '
+                + 'muuta kuin välttämätöntä matkustamista Cabindan maakuntaan '
+                + 'Cabindan kaupunkia lukuun ottamatta: erillisalueella '
+                + 'separatistiryhmät ovat hyökänneet myös ulkomaalaisia vastaan, ja '
+                + 'sieppausten riski on todellinen. Lunda Norten ja Lunda Sulin '
+                + 'timanttialueilla viranomaiset voivat rajoittaa ulkomaalaisten '
+                + 'liikkumista, ja kaivoksille johtavilla teillä on rosvoja. Luandassa rikollisuus on '
+                + 'korkea ja osa ryöstöistä väkivaltaisia. Pimeän jälkeen ei '
+                + 'kävellä, arvoesineitä ja puhelinta ei näytetä, rahaa nostetaan '
+                + 'sovitun kuljettajan kanssa, ja ryöstäjälle annetaan heti mitä hän '
+                + 'pyytää. Mielenosoitukset voivat kärjistyä nopeasti, joten niitä '
+                + 'ei jäädä katsomaan eikä kuvaamaan. Pääkaupungin ulkopuolelle '
+                + 'lähdetään mieluiten paikallisen oppaan kanssa tai vähintään '
+                + 'kahdella autolla, eikä maanteillä ajeta pimeällä. Malaria on '
+                + 'yleinen, joten estolääkityksestä kannattaa kysyä ennen matkaa. '
+                + 'Vesijohtovettä ei juoda, ja hyviä yksityisklinikoita on lähinnä '
+                + 'Luandassa. Tilanne voi muuttua, joten tuoreet matkustustiedotteet '
+                + 'kannattaa tarkistaa juuri ennen lähtöä.',
+              kuva: {
+                tiedosto: 'Prince Harry, Duke of Sussex, in Huambo, Angola (2019).jpg',
+                lyhyt: 'Prinssi Harry kävelee Huambossa kadulla, jolla oli aiemmin miinakenttä.',
+                selite: 'Syyskuussa 2019 prinssi Harry kulki Huambossa äitinsä '
+                  + 'jalanjäljissä: kuvaajan mukaan kadun kohdalla oli aiemmin '
+                  + 'miinakenttä. Taustalla koululaiset odottavat vierasta tien '
+                  + 'varressa.',
+                lahde: 'Sean Sutton / Mines Advisory Group, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -111119,6 +112363,243 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Basilica of Damous El Karita',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Carthage, Carthage (municipality), Carthage Palace,
+       * Carthage amphitheatre, Tophet, Tunis-Goulette-Marsa, International
+       * Festival of Carthage, Sidi Bou Said, Ennejma Ezzahra, Brik, Lablabi,
+       * Bambalouni, Tunisian cuisine), ranskan Wikipediasta (TGM, Festival
+       * international de Carthage, Site archéologique de Carthage),
+       * Wikivoyagesta (Carthage, Sidi Bou Said, Tunis), Unescon
+       * kohdesivulta 1769 (Village of Sidi Bou Saïd, 2026) ja AFP:n
+       * Al-Monitorissa tammikuussa 2026 julkaistusta maanvyöryjutusta —
+       * teksti omaa. Yhteislipun tieto on Wikivoyagesta (huhtikuu 2026);
+       * hinnat ja aukioloajat jätetty pois. Nostojen ja gallerian aiheita
+       * (Antoninuksen termit, puunilaiskortteli, satamat, Nathan Davis,
+       * Acropolium, Damous el Karita, Dido, Hannibal, tuho, vesijohto) ei
+       * toisteta. Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja kuvat katsottu silmin. Pystykuva: tofetin
+       * palmut ja stelat.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Tunisise Carthage Tophet Salambo 01.JPG',
+          lyhyt: 'Salammbôn tofetin puunilaiset hiekkakivistelat seisovat palmujen varjossa.',
+          selite: 'Karthagon Salammbôn tofet oli puunilaisten pyhäkkö ja '
+            + 'hautausmaa, jonne pystytettiin hiekkakivisiä muistostelia '
+            + 'noin 650 eaa. alkaen; nykyään se on yksi yhteislipun '
+            + 'kohteista.',
+          lahde: 'GIRAUD Patrick, Wikimedia Commons (CC BY-SA 2.5)',
+        },
+        kappale: 'Karthago on nykyään Tunisin varakas esikaupunki, jonka '
+          + 'huviloiden, koulujen ja presidentin palatsin lomassa lepäävät '
+          + 'muinaisen suurkaupungin rauniot. Tunisin keskustasta sinne '
+          + 'pääsee TGM-junalla, joka pysähtyy Karthagossa kuudesti. '
+          + 'Raunioalueet ja museot kierretään yhdellä yhteislipulla, '
+          + 'kesäöinä antiikin teatterissa soi Karthagon kansainvälinen '
+          + 'festivaali, ja heti pohjoisempana odottaa sinivalkoinen '
+          + 'Sidi Bou Saïd, joka hyväksyttiin Unescon '
+          + 'maailmanperintöluetteloon vuonna 2026. Kesät ovat kuumia ja '
+          + 'kuivia, joten raunioilla kävellään mieluiten keväällä tai '
+          + 'syksyllä, ja illalla nälkään syödään harissalla maustettua '
+          + 'brikiä tai lablabia.',
+        artikkeli: {
+          nimi: 'Matkailijan Karthago',
+          teksti: 'Muinaisen suurkaupungin rauniot ovat Tunisin '
+            + 'paikallisjunan varrella.',
+          nosto: 'Rooma ja Karthago solmivat rauhan vasta vuonna 1985, kun '
+            + 'kaupunkien pormestarit allekirjoittivat symbolisen '
+            + 'sopimuksen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Junalla järven poikki',
+              teksti: 'Karthagoon ei tarvita autoa. Tunisin keskustan Tunis '
+                + 'Marine -asemalta lähtee TGM-juna, joka kulkee 19 '
+                + 'kilometrin matkan La Marsan rantaan. Rata on Tunisian '
+                + 'vanhin: ensimmäinen osuus Tunisista La Goulettin '
+                + 'satamaan avattiin vuonna 1872, vuotta ennen isoisän '
+                + 'matkaa, ja jatko La Marsaan kaksi vuotta myöhemmin. '
+                + 'Nykyinen suora reitti Tunisin järven poikki kulkee '
+                + 'kanavan viertä penkereellä, joka valmistui 1905, ja '
+                + 'samasta vuodesta linjaa on kutsuttu päätepisteidensä '
+                + 'alkukirjaimilla TGM: Tunis, Goulette, Marsa. Sähköjunat '
+                + 'korvasivat höyryvedon 1908, ja nykyiset saksalaisen '
+                + 'MAN:n junat tulivat liikenteeseen 1979. Karthagossa '
+                + 'juna pysähtyy kuudesti: Salammbô, Byrsa, Dermech, '
+                + 'Hannibal, Présidence ja Amilcar. Useimmille raunioille '
+                + 'on lyhyin kävelymatka Carthage Hannibalin asemalta, '
+                + 'Salammbôn ja Byrsan asemilta tofetille. Lippu ostetaan '
+                + 'asemalta ennen junaan nousua. Wikivoyagen mukaan Tunis Marinen '
+                + 'opasteet ovat niukat, eikä TGM-nimeä välttämättä näy '
+                + 'missään, ja junan omassa linjakartassa lähtöasema on '
+                + 'nimellä Tunis Nord, joten neuvoa kannattaa kysyä '
+                + 'rohkeasti.',
+              kuva: [
+                {
+                  tiedosto: 'TGM train R216 Apr 2025.jpg',
+                  lyhyt: 'MAN-juna Carthage Hannibalin asemalla, josta kävellään useimmille raunioille.',
+                  selite: 'Saksalaisen MAN:n valmistama TGM-juna Carthage '
+                    + 'Hannibalin asemalla huhtikuussa 2025; asemalta on '
+                    + 'lyhyin kävelymatka useimmille Karthagon '
+                    + 'raunioalueille.',
+                  lahde: 'Dirkjot, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'TGM carriage interior route and stations Apr 2025.jpg',
+                  lyhyt: 'TGM-vaunun linjakartassa ovat kaikki asemat Tunisista La Marsaan.',
+                  selite: 'TGM-vaunun oven yläpuolella oleva kartta luettelee '
+                    + 'linjan asemat arabiaksi ja ranskaksi; lähtöasema on '
+                    + 'merkitty nimellä Tunis Nord, ja Karthagon kuusi '
+                    + 'asemaa ovat kartan keskivaiheilla.',
+                  lahde: 'Dirkjot, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'Canal Tunis - Radès.jpg',
+                  lyhyt: 'TGM:n sähkörata kulkee Tunisin järven poikki kivetyn kanavanpenkereen vierellä.',
+                  selite: 'TGM-radan ajojohtopylväät ja kivetty penger '
+                    + 'Tunisin järven halki kulkevan kanavan varrella '
+                    + 'tammikuussa 2026; taustalla siintävät sataman '
+                    + 'nosturit ja kanavan ylittävä silta.',
+                  lahde: 'Smailtn, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Yksi lippu kymmeneen kohteeseen',
+              teksti: 'Muinainen Karthago ei ole yksi aidattu puisto vaan '
+                + 'joukko erillisiä kaivausalueita asuinkortteleiden ja '
+                + 'huviloiden välissä. Wikivoyagen mukaan huhtikuussa 2026 '
+                + 'myynnissä oli enää yksi yhteislippu, joka kattaa '
+                + 'kymmenen raunioaluetta ja museota; yksittäisiin '
+                + 'kohteisiin ei myyty omia lippuja. Kaikkea on vaikea '
+                + 'ehtiä nähdä yhdessä päivässä, eivätkä kaikki kohteet '
+                + 'ole aina auki. Opasteita on niukasti ja englanninkielisiä '
+                + 'kylttejä vielä vähemmän, joten opas tai etukäteen luettu '
+                + 'taustatieto auttaa. Byrsan kukkulan länsipuolella on '
+                + '100-luvun alussa valmistunut amfiteatteri, jonka katsomoihin arvioidaan '
+                + 'mahtuneen 30 000 ihmistä. Katsomoiden kivet vietiin '
+                + 'vuosisatojen mittaan rakennustarpeiksi, ja jäljelle jäi '
+                + 'mäntyjen ympäröimä, noin 65 metriä pitkä areena. '
+                + 'Salammbôn tofet on Karthagon vanhimpia paikkoja: '
+                + 'puunilaisten pyhäkkö ja hautausmaa, johon haudattiin '
+                + 'pienten lasten tuhkaa uurnissa. Tutkijat kiistelevät '
+                + 'yhä, kertovatko löydöt lapsiuhreista vai lasten '
+                + 'hautausmaasta. Byrsan kukkulan kansallismuseo on ollut '
+                + 'pitkiä aikoja osittain suljettuna, joten sen tilanne '
+                + 'kannattaa tarkistaa etukäteen. Varjoa on vähän, joten '
+                + 'mukaan tarvitaan vettä ja hattu. Rauniokierroksella '
+                + 'voi muistella, että Rooma ja Karthago solmivat rauhan '
+                + 'vasta 1985, kun kaupunkien pormestarit allekirjoittivat '
+                + 'symbolisen sopimuksen.',
+              kuva: {
+                tiedosto: 'Amphithéâtre de Carthage 1.JPG',
+                lyhyt: 'Karthagon amfiteatterista on jäljellä mäntymetsän ympäröimä areena.',
+                selite: 'Karthagon roomalaisen amfiteatterin katsomot '
+                  + 'purettiin aikojen kuluessa rakennuskiviksi, ja '
+                  + 'syyskuun iltavalossa näkyy lähinnä areena ja sen '
+                  + 'muurattu reunus mäntyjen keskellä.',
+                lahde: 'IssamBarhoumi, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kesäyö antiikin teatterissa',
+              teksti: 'Heinä- ja elokuussa Karthagon kansainvälinen '
+                + 'festivaali täyttää kesäyöt musiikilla. Se alkoi 1960-luvun '
+                + 'alussa kaksipäiväisenä jazztapahtumana, ja vuonna 1964 '
+                + 'Tunisian kulttuuriministeriö otti sen hoitaakseen. '
+                + 'Näyttämönä on 100-luvulla rakennettu roomalainen '
+                + 'teatteri, johon mahtui noin 5 000 katsojaa. Siitä oli '
+                + '1900-luvun alussa jäljellä vain vähäisiä raunioita, ja '
+                + 'nykyinen katsomo on suurelta osin entisöintiä. Toisen '
+                + 'maailmansodan aikana samassa teatterissa puhui Winston '
+                + 'Churchill. Festivaalin lavalla ovat esiintyneet '
+                + 'arabimaailman tähdet, kuten Warda ja Majida El Roumi, '
+                + 'sekä Louis Armstrong, Ray Charles, James Brown, Dalida ja '
+                + 'Stromae, ja ohjelmassa on myös teatteria, tanssia ja '
+                + 'kansanmusiikkia. Konsertit alkavat vasta, kun päivän '
+                + 'helle on hellittänyt, ja Wikivoyagen kävijävinkin mukaan '
+                + 'ne päättyvät usein vasta yhden jälkeen yöllä. '
+                + 'Kiviportailla istutaan tuntikausia, joten oma tyyny tai '
+                + 'huopa on moni paikallisen vakiovaruste. Esiintyjät '
+                + 'vaihtuvat vuosittain, joten ohjelma kannattaa katsoa '
+                + 'festivaalin omilta sivuilta.',
+              kuva: {
+                tiedosto: 'Festival de Carthage au théatre romain.JPG',
+                lyhyt: 'Orkesteri soittaa Karthagon festivaalilla roomalaisen teatterin valaistujen muurien edessä.',
+                selite: 'Karthagon kansainvälisen festivaalin konsertti '
+                  + 'roomalaisessa teatterissa elokuussa 2015: orkesteri ja '
+                  + 'laulajat esiintyvät punaisiksi valaistujen antiikin '
+                  + 'muurien edessä myöhään illalla.',
+                lahde: 'Noomen9, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sinivalkoinen Sidi Bou Saïd',
+              teksti: 'Karthagon pohjoisinta asemaa seuraa Sidi Bou '
+                + 'Saïd, meren yllä jyrkänteellä seisova kylä, joka '
+                + 'kasvoi 1200-luvulla kuolleen sufipyhimyksen Abu Said '
+                + 'al-Bajin haudan ympärille ja sai nimensä hänestä. '
+                + 'Valkoiset seinät ja siniset ovet, ikkunaristikot ja '
+                + 'parvekkeet vakiintuivat kylän tunnusmerkiksi 1920-luvulla '
+                + 'paroni Rodolphe d\'Erlangerin ansiosta. Hänen vuosina '
+                + '1912–1922 rakennuttamassaan Ennejma Ezzahran palatsissa '
+                + 'toimii vuodesta 1991 arabialaisen ja välimerellisen '
+                + 'musiikin keskus, jossa on soitinkokoelma ja jossa '
+                + 'pidetään konsertteja. Vuonna 2026 kylä hyväksyttiin '
+                + 'Unescon maailmanperintöluetteloon. Samana vuonna '
+                + 'tammikuussa Tunisiaan satoi rankimmin yli 70 vuoteen, ja '
+                + 'Sidi Bou Saïdin rinteessä alkoi maanvyöryjä: taloja '
+                + 'tyhjennettiin, raskaat ajoneuvot kiellettiin kylässä ja '
+                + 'Ennejma Ezzahran museo suljettiin. Ennen käyntiä '
+                + 'kannattaa tarkistaa, mikä on taas auki. Kahviloissa '
+                + 'juodaan minttuteetä pinjansiemenillä, ja kojuista saa '
+                + 'sokeroituja bambalouni-munkkeja. Hiljaisinta on '
+                + 'keväällä ja myöhäissyksyllä; kesällä pääkatu täyttyy, '
+                + 'mutta sivukujilla on väljempää.',
+              kuva: {
+                tiedosto: 'Sidi Bou Said Allee.jpg',
+                lyhyt: 'Sidi Bou Saïdin kivetty kuja päättyy siniseen, nastoilla koristeltuun oveen.',
+                selite: 'Sidi Bou Saïdin porraskuja valkoisten talojen '
+                  + 'välissä: siniset ikkunaristikot ja nastoin koristeltu '
+                  + 'ovi mustavalkoisen kaaren alla ovat kylän tunnusmerkki.',
+                lahde: 'Amy Keus, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Harissaa, brikiä ja käytännön vinkkejä',
+              teksti: 'Tunisialainen ruoka on Pohjois-Afrikan tulisimpia, ja '
+                + 'lähes kaikkea maustaa harissa, chilistä, valkosipulista '
+                + 'ja mausteista jauhettu tahna, joka hyväksyttiin Unescon '
+                + 'aineettoman kulttuuriperinnön luetteloon vuonna 2022. '
+                + 'Tunnetuin välipala on brik: ohueen malsouka-taikinaan '
+                + 'kolmioksi kääritty kananmuna, jonka seurana on usein '
+                + 'tonnikalaa, persiljaa ja harissaa, paistettuna '
+                + 'rapeaksi. Lablabi on kuminalla ja valkosipulilla '
+                + 'maustettua kikhernelientä kuivien leivänpalojen päällä; '
+                + 'se oli alun perin talviaamujen ruokaa, mutta nyt sitä '
+                + 'syödään mihin aikaan tahansa, myös myöhään illalla. '
+                + 'Kesät ovat kuumia ja kuivia, ja helle voi nousta yli 40 '
+                + 'asteen. Sateet osuvat talveen, mutta silloinkin '
+                + 'sadepäiviä on keskimäärin vain kahdeksan tai yhdeksän '
+                + 'kuussa. Tunisian dinaaria ei saa viedä maasta, joten '
+                + 'ylimääräiset dinaarit vaihdetaan ennen lähtöä. '
+                + 'Karthagossa on myös Tunisian presidentin palatsi, ja '
+                + 'Wikivoyagen mukaan sitä kohti kuvaaminen on kielletty, '
+                + 'myös raunioilta, joilta palatsi näkyy. Ramadanin aikana '
+                + 'moni ravintola on päivällä kiinni.',
+              kuva: {
+                tiedosto: 'Bol de Lablabi, Tunisie, décembre 2017.jpg',
+                lyhyt: 'Lablabi-kulhossa on kikherneitä, leipää, kananmunaa, kapriksia ja harissaa.',
+                selite: 'Tunisialaisen ravintolan lablabi-annos: kuivien '
+                  + 'leivänpalojen ja kikherneiden päällä on kananmuna, '
+                  + 'kapriksia ja punaista harissaa.',
+                lahde: 'Habib M\'henni, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -111836,6 +113317,267 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Freetown',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on Sierra Leone
+       * Freetownin ja sen niemimaan kautta: nostot kertovat Freetownista,
+       * joten opas pysyy pääkaupungissa, niemimaan rannoilla ja
+       * lentokentän matkalla. Taustatiedot englannin Wikipediasta
+       * (Freetown, Freetown International Airport, Tourism in Sierra
+       * Leone, Bureh Town, Banana Islands, Kent, Sierra Leone, Western
+       * Area Peninsula National Park, Wildlife of Sierra Leone, Pan
+       * African Sanctuary Alliance, Sierra Leonean cuisine, Sierra
+       * Leonean leone, 2017 Sierra Leone mudslides) ja Wikivoyagesta
+       * (Freetown, Sierra Leone, Banana Islands; hinnat, aukioloajat ja
+       * yritysten nimet jätetty pois, koska ne vanhenevat) — teksti omaa.
+       * Nostojen ja gallerian aiheita (puuvillapuu, Fourah Bay College,
+       * Horton, leijonavuorten nimi ja satama, The Graphic, Bunce-saari,
+       * vapautettujen turvakoti, Black Joke, Cuffee, Crowther) eikä
+       * africa-kulttuuri.js:n krioa ja riisiä tai maalehden (SLE)
+       * kassavanlehtiä, poyoa ja garia toisteta; Bai Bureh vain nimenä.
+       * Sisällissota mainitaan vain päättyneenä (2002). Kuvien lisenssit
+       * ja tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: River Number 2:n auringonlasku (2009).
+       * Lautan kuvan tekijä on CDC:n Flickr-tilin mukaan Katrin Kohl.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Sierra Leone River No 2 sunset.jpg',
+          lyhyt: 'Aurinko laskee Atlanttiin River Number 2:n rannalla Freetownin niemimaalla.',
+          selite: 'Palmunlehdet ja kaksi olkikattoista varjoa piirtyvät '
+            + 'mustina oranssia iltataivasta vasten, ja vesirajassa istuu '
+            + 'pariskunta aurinkovarjon alla; River Number 2:n ranta '
+            + 'joulupäivänä 2009.',
+          lahde: 'Niroshan, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Sierra Leonen sisällissota päättyi 2002, ja sen jälkeen '
+          + 'maa on ollut rauhallinen. Matkailu on toipunut tasaisesti, '
+          + 'ja eniten kävijöitä vetää Freetownin niemimaa, jonka '
+          + 'Atlantin puolta kiertää pitkä rivi vaaleita hiekkarantoja sademetsän peittämien vuorten '
+          + 'juurella. Lentokenttä on Lungissa suiston pohjoispuolella, '
+          + 'joten ensimmäinen matka tehdään yleensä veneellä lahden yli. '
+          + 'Kaupungin omalta Lumley Beachiltä ajetaan etelään River '
+          + 'Number 2:n, Tokehin ja Bureh Beachin rannoille ja Kentin '
+          + 'kylästä veneellä Banaanisaarille. Vuorten metsässä, lähellä '
+          + 'keskustaa, on Tacugaman simpanssien turvapaikka. Rannoilla '
+          + 'syödään tuoretta kalaa ja hummeria, ja kuivakausi joulukuusta '
+          + 'huhtikuuhun on myös vilkkainta matkailuaikaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Sierra Leone',
+          teksti: 'Lentokentältä kaupunkiin mennään veneellä, ja rannat alkavat kaupungin laidalta.',
+          nosto: 'Tacugaman simpanssien turvapaikka sai alkunsa, kun '
+            + 'pariskunta osti tienvarresta myytävänä olleen '
+            + 'simpanssinpoikasen 30 dollarilla.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lungista veneellä kaupunkiin',
+              teksti: 'Sierra Leonen ainoa kansainvälinen lentoasema, '
+                + 'Freetown International Airport, on Lungin kaupungissa '
+                + 'Sierra Leone -joen suiston pohjoisrannalla, noin 17 '
+                + 'kilometrin päässä pääkaupungista veden yli. Kiitotien '
+                + 'pohjoispuolelle rakennettu uusi terminaali avattiin '
+                + 'maaliskuussa 2023. Useimmat ulkomaiset matkailijat '
+                + 'ylittävät lahden vesitaksilla: pikaveneet lähtevät '
+                + 'kentän läheltä ja ajavat 30–40 minuutissa Freetownin '
+                + 'länsiosan Aberdeeniin tai Murray Towniin tai keskustan '
+                + 'Government Wharfiin. Liput myydään tuloaulan tiskeiltä, '
+                + 'ja usein ne voi varata myös verkossa. Halvin mutta '
+                + 'hitain vaihtoehto on valtion autolautta, joka kulkee '
+                + 'Lungin eteläkärjen Tagrinista Freetownin itäosan '
+                + 'Kissyyn; itse ylitys kestää noin tunnin, mutta lastaus ja '
+                + 'odotus voivat venyttää matkan tunneiksi. Maanteitse '
+                + 'Port Lokon kautta ajo kestää vähintään kolme tuntia. '
+                + 'Laskuveden aikaan kaikkiin laitureihin ei pääse '
+                + 'kuivin jaloin, ja kantajat nostavat matkustajat '
+                + 'matkatavaroineen veneeseen. Yöllä yksityisveneisiin ei '
+                + 'kannata nousta. Presidentti Julius Maada Bio julkisti '
+                + 'lahden ylittävän sillan hankkeen 2019, mutta toistaiseksi '
+                + 'kentältä kaupunkiin pääsee vain veneellä tai kiertotietä. '
+                + 'Tullessa tarkastetaan keltakuumerokotustodistus, joten '
+                + 'se kannattaa pitää käsimatkatavaroissa passin vieressä.',
+              kuva: [
+                {
+                  tiedosto: 'New Freetown International Airport airside.jpg',
+                  lyhyt: 'Lungin uusi terminaali avattiin 2023 kiitotien pohjoispuolelle.',
+                  selite: 'Freetown International Airportin kaareva '
+                    + 'terminaalirakennus ja keltaiset matkustajasillat '
+                    + 'utuisessa ilta-auringossa; kuva tammikuulta 2024.',
+                  lahde: 'Davidbstanley, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Aberdeen, Freetown, Sierra Leone - panoramio - Ghassan Mroue.jpg',
+                  lyhyt: 'Vesitaksit odottavat Aberdeenin sillan alla lähtöä Lungin lentokentälle.',
+                  selite: 'Valkoisia Sea Coach Express -pikaveneitä '
+                    + 'kelluvan puulaiturin vieressä Aberdeenin ja Murray '
+                    + 'Townin välisen sillan alla; taustalla Freetownin '
+                    + 'rinnetaloja. Kuva heinäkuulta 2011.',
+                  lahde: 'Ghassan Mroue, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Daily ferry commute in Sierra Leone (14794863188).jpg',
+                  lyhyt: 'Autolautta on halvin tapa ylittää suisto, mutta matka voi venyä tunneiksi.',
+                  selite: 'Ruosteinen matkustaja-autolautta on laskenut '
+                    + 'rampin betonirantaan, ja pakettiauto ajaa kannelta '
+                    + 'maihin; kuva elokuulta 2014.',
+                  lahde: 'Katrin Kohl / CDC Global, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Niemimaan rannat',
+              teksti: 'Freetownin niemimaan Atlantin puoleista rannikkoa '
+                + 'kiertää pitkä sarja hiekkarantoja, ja Wikivoyagen mukaan '
+                + 'ne ovat tavallisena arkipäivänä usein lähes tyhjiä. '
+                + 'Lähin on kaupungin oma Lumley Beach, joka ulottuu Cape '
+                + 'Sierra Leonen niemeltä Lumleyhin. Sen koko pituudelta '
+                + 'kulkee päällystetty kävelytie, hiekalla pelataan '
+                + 'jalkapalloa, ja viikonloppuisin ja pyhinä ranta täyttyy '
+                + 'väestä. Aberdeenin ja Lumleyn välisen rantatien baarit, '
+                + 'ravintolat ja yökerhot ovat kaupungin yöelämän keskus. '
+                + 'Etelään ajettaessa vastaan tulevat ensin Lakka ja sitten '
+                + 'River Number 2, jossa pieni joki kiemurtelee valkoisen '
+                + 'hiekan poikki mereen. Kylän asukkaat perustivat '
+                + 'yhteisöhankkeen, joka hoitaa rantaa, ja pieni baari myy '
+                + 'kylmää juotavaa ja tuoretta kalaa. Tokehin kohdalta alkaa '
+                + 'hyvä päällystetty tie. Bureh Beachin kylässä toimii '
+                + 'Sierra Leonen ainoa surffiklubi, ja John Obeyn ja Bureh '
+                + 'Beachin tienoilla ravintoloita on niin vähän, että eväät '
+                + 'kannattaa ottaa mukaan. Niemen eteläpäässä Kentin '
+                + 'kalastajakylästä pääsee paikallisella veneellä '
+                + 'Banaanisaarille, noin 40 kilometrin päähän Freetownista. '
+                + 'Saarilla ei ole autoja, Dublinin ja Rickettsin saaret '
+                + 'yhdistää kivipenger, ja edustan hylkyjen luona sukelletaan '
+                + 'ja snorklataan. Poda-poda-minibussit vievät vain Lakan '
+                + 'risteykseen, sieltä eteenpäin mennään okadalla eli '
+                + 'moottoripyörätaksilla. Rannoille johtavat sivutiet ovat '
+                + 'usein huonoja ja huonosti viitoitettuja.',
+              kuva: {
+                tiedosto: 'Hodroj Houssein-Tokey Beach (IMG 2218).jpg',
+                lyhyt: 'Kalastajien veneet ovat ankkurissa Tokehin rannan edustalla Freetownin niemimaalla.',
+                selite: 'Leveä, vaalea hiekkaranta kaartuu palmujen '
+                  + 'reunustamana, ja matalassa vedessä on ankkurissa puisia '
+                  + 'kalastus- ja kuljetusveneitä; horisontissa kaksi pientä '
+                  + 'saarta. Kuva tammikuulta 2016.',
+                lahde: 'Hodroj Houssein, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Tacugaman simpanssit',
+              teksti: 'Freetownin selän takana kohoavien vuorten metsä on '
+                + 'suojeltu jo vuodesta 1916, jolloin siitä tehtiin '
+                + 'metsäreservi, ja kansallispuisto Western Area Peninsula '
+                + 'National Parkista tuli 2012. Se on Sierra Leonen '
+                + 'läntisin yhtenäinen sademetsä, jossa elää muun muassa '
+                + 'kolme sukeltajakauriin lajia ja runsaasti lintuja, ja '
+                + 'puisto on Unescon maailmanperintöehdokkaiden listalla. '
+                + 'Metsän keskellä, vain muutaman kilometrin päässä '
+                + 'keskustasta, on Tacugaman simpanssien turvapaikka. Sen '
+                + 'tarina alkoi 1988, kun Bala Amarasekaran ja hänen '
+                + 'vaimonsa Sharmila näkivät tienvarressa Freetownin '
+                + 'pohjoispuolella myytävänä simpanssinpoikasen ja ostivat '
+                + 'sen 30 dollarilla. Pian he huomasivat, että simpansseja '
+                + 'pidettiin yleisesti lemmikkeinä ja kohdeltiin usein '
+                + 'huonosti, ja 1995 he perustivat turvapaikan orvoille ja '
+                + 'hylätyille eläimille. Noin 40 hehtaarin alueella käy '
+                + 'vuosittain yli 2 000 maaseudun koululaista oppimassa '
+                + 'simpanssien suojelusta. Vuoden 2010 laskennassa Sierra '
+                + 'Leonen luonnossa arvioitiin elävän yli 5 500 simpanssia, '
+                + 'mikä on Guinean jälkeen toiseksi suurin '
+                + 'länsiafrikansimpanssien kanta. Vierailut sovitaan '
+                + 'etukäteen, ja perille ajetaan Regent Roadia Hill '
+                + 'Stationin ja Leicesterin kautta; Wikivoyage suosittelee '
+                + 'nelivetoautoa. Suojelusta huolimatta kaupungin kasvu on '
+                + 'syönyt metsää, ja sisällissota pahensi hakkuita.',
+              kuva: {
+                tiedosto: 'Chimpas at Tacugama Sanctuary, near Freetown.jpg',
+                lyhyt: 'Kaksi simpanssia istuu puunrungolla Tacugaman turvapaikassa Freetownin lähellä.',
+                selite: 'Kaksi simpanssia istuu vastakkain köysin '
+                  + 'sidotulla puunrungolla, toinen kurottaa kohti toista '
+                  + 'ja toinen työntää huulensa esiin; taustalla vihreää '
+                  + 'metsää ja aitaus. Kuva kesäkuulta 2010.',
+                lahde: 'Jeremy Weate, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Kalaa, inkivääriä ja libanonilaista',
+              teksti: 'Freetown on Atlantin rannalla, ja kala on sen '
+                + 'ruokapöydän ylpeys. Barrakudaa, meriahventa ja hummeria '
+                + 'saa helposti, ja Lumley Beachillä voi nähdä kalastajien '
+                + 'vetävän nuottaa käsin rantaan täynnä rapuja, napsijoita '
+                + 'ja muuta saalista. Niemimaan rantaravintoloissa Lakassa '
+                + 'ja River Number 2:lla tarjotaan tuoretta kalaa ja '
+                + 'hummeria. Kaupungissa asuu suuri libanonilainen '
+                + 'yhteisö, ja siksi libanonilaista ruokaa saa useimmista '
+                + 'ravintoloista. Kadulla ja kodeissa syödään friteerattua '
+                + 'akaraa, paistettua plantainia, kanalla ja vihanneksilla haudutettua maapähkinäpataa ja '
+                + 'jollof-riisiä, ja jälkiruoaksi foorahia, makeita '
+                + 'riisijauhonyyttejä. Lumleyn rannalla kaupataan tuoreita '
+                + 'maapähkinöitä, ja hedelmiä myydään toreilla samana '
+                + 'päivänä poimittuina: mangoa, papaijaa, ananasta ja '
+                + 'guavaa. Juotavaksi kannattaa kokeilla kotitekoista '
+                + 'inkiväärijuomaa, ginger beeriä. Se tehdään pelkästä inkivääristä ja '
+                + 'sokerista, joskus mausteena on neilikkaa ja limettiä, eikä '
+                + 'siinä ole alkoholia. Oluista tunnetuin on paikallisen '
+                + 'panimon Star. Muoviastioissa myytäviin väkeviin '
+                + 'viinoihin ei kannata koskea, koska niiden laadusta ei ole '
+                + 'varmuutta. Juomavedeksi käy vain pullovesi, ja '
+                + 'Wikivoyage neuvoo syömään mieluummin tuoreeltaan '
+                + 'valmistettua paikallista ruokaa kuin pitkään säilytettyjä '
+                + 'länsimaisia annoksia.',
+              kuva: {
+                tiedosto: 'Zegenvisserij in Freetown, Sierra Leone, -2 oktober 2010 a.jpg',
+                lyhyt: 'Kalastajat vetävät nuottaa käsin rantaan Lumley Beachillä Freetownissa.',
+                selite: 'Rivi miehiä ja poikia vetää paljain jaloin '
+                  + 'nuotan köyttä pitkin Lumley Beachin märkää hiekkaa '
+                  + 'tyrskyjen reunassa; taustalla harmaa Atlantti.',
+                lahde: 'Ghassan Mroue, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Raha, sää ja arjen turvallisuus',
+              teksti: 'Useimmat ulkomaalaiset tarvitsevat viisumin, jonka '
+                + 'saa sähköisenä etukäteen tai lentokentällä. Leonesta '
+                + 'poistettiin heinäkuussa 2022 kolme nollaa, ja vanhat '
+                + 'setelit lakkasivat kelpaamasta maksuvälineeksi vuoden 2024 '
+                + 'alussa, joten vanhojen oppaiden hinnat näyttävät '
+                + 'tuhatkertaisilta. Pankkiautomaatteja on Freetownissa ja '
+                + 'suuremmissa kaupungeissa, ja kortti, useimmiten Visa, '
+                + 'käy yhä useammassa hotellissa, ravintolassa ja '
+                + 'supermarketissa. Sähkö on 220 volttia brittiläisillä '
+                + 'pistorasioilla, mutta katkoja on usein. Kuivakausi kestää '
+                + 'joulukuusta huhtikuuhun, ja silloin Saharasta puhaltaa '
+                + 'kuiva harmattan-tuuli. Toukokuusta marraskuuhun on '
+                + 'sadekausi, ja heinä- ja elokuussa sataa lähes joka päivä, '
+                + 'kumpanakin kuukautena Freetowniin keskimäärin yli metri. Elokuussa '
+                + '2017 kolmen päivän rankkasateet laukaisivat Regentissä '
+                + 'mutavyöryn, jossa 1 141 ihmistä kuoli tai katosi; '
+                + 'syyksi on arvioitu myös rinteiden metsäkatoa. Väkivaltarikokset '
+                + 'ovat Wikivoyagen mukaan harvinaisia, mutta taskuvarkaita '
+                + 'on, ja Aberdeenin ja Lumleyn yökerhojen lähellä on '
+                + 'sattunut välikohtauksia. Suurempi vaara on liikenne: '
+                + 'ylikuormatut poda-podat ja kiireiset okadat. Pimeällä '
+                + 'kannattaa kantaa taskulamppua, koska katuvaloja on vähän. '
+                + 'Jaetut taksit ajavat kiinteitä reittejä; sanomalla '
+                + '"no cha cha" kertoo haluavansa jakaa kyydin eikä '
+                + 'vuokrata koko autoa. Malaria on suurin terveysriski, joten '
+                + 'estolääkityksestä kannattaa kysyä lääkäriltä hyvissä '
+                + 'ajoin. Aidosti paikallisia käsitöitä ovat solmuvärjätty '
+                + 'gara-kangas, kudottu country cloth, batiikkikuvat ja '
+                + 'puuveistokset, ja niitä myyvät Wallace Johnson Streetin '
+                + 'Big Marketin kojut.',
+              kuva: {
+                tiedosto: 'An aisle at the Sierra Leone Big Market.jpg',
+                lyhyt: 'Freetownin Big Marketin käytävillä myydään koreja, kalebasseja ja helmikoruja.',
+                selite: 'Kapean käytävän molemmin puolin on hyllyt '
+                  + 'täynnä punottuja koreja, kalebasseja, savikulhoja ja '
+                  + 'helminauhoja, ja mies kävelee käytävää pitkin; kuva '
+                  + 'huhtikuulta 2025.',
+                lahde: 'ODC-SIERRA-LEONE, Wikimedia Commons (CC0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -112008,6 +113750,271 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Great Smoky Mountains National Park',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on vuoristo, ei
+       * kaupunki: opas keskittyy eteläisiin Appalakkeihin (Great Smoky
+       * Mountains, Blue Ridge Parkway, Shenandoah) ja niitä yhdistävään
+       * Appalachian Trailiin. Taustatiedot englannin Wikipediasta
+       * (Appalachian Trail, Great Smoky Mountains National Park, Blue
+       * Ridge Parkway, Linn Cove Viaduct, Skyline Drive, Kuwohi, Mount
+       * Le Conte, Photinus carolinus, Hot Springs (North Carolina),
+       * Crooked Road (Virginia), Floyd (Virginia), Galax (Virginia),
+       * Bristol sessions, Birthplace of Country Music Museum, Qualla
+       * Boundary, Museum of the Cherokee People, Unto These Hills,
+       * Pigeon Forge, Asheville) ja Wikivoyagesta (Appalachian Trail,
+       * Great Smoky Mountains National Park, Blue Ridge Parkway,
+       * Shenandoah National Park) — teksti omaa. Wikivoyagen hinnat ovat
+       * vuosilta 2020–2024, joten hinnat ja aukioloajat on jätetty pois;
+       * Helene-myrskyn tiesulkujen tila on Wikipedian mukaan kevään 2025
+       * tieto, ja se kerrotaan vanhenevana. Nostojen ja gallerian aiheita
+       * (vuorten geologia ja sininen usva, Mount Mitchell, puulajien
+       * runsaus, New River Gorge, karhut kirsikkapuussa, puiston
+       * kävijäennätys, Cumberlandin sola, Daniel Boone, Erämaantie,
+       * hirsimökit, hiilikaivokset) ei toisteta: karhuista kerrotaan vain
+       * retkeilijän turvaohjeet. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * Appalachian Trailin kyltti ja valkoinen merkki (Pennsylvania).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Flickr - Nicholas T - White Blaze.jpg',
+          lyhyt: 'Appalachian Trailin kyltti ja valkoinen reittimerkki tolpassa Delaware Water Gapissa.',
+          selite: 'Ruskea Appalachian Trail -kyltti Delaware Water Gapin '
+            + 'suojelualueella Pennsylvaniassa kertoo vaeltajien '
+            + 'leiriytymissäännöt, ja sen alla puutolpassa on reitin '
+            + 'valkoinen maalimerkki; kuva syyskuulta 2010.',
+          lahde: 'Nicholas A. Tonelli, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Appalakit eivät ole yksi nähtävyys vaan tuhansien '
+          + 'kilometrien vuorijono, joten matkailija valitsee yleensä yhden '
+          + 'alueen. Tämä opas keskittyy eteläisiin Appalakkeihin: Great '
+          + 'Smoky Mountainsin kansallispuistoon Tennesseen ja '
+          + 'Pohjois-Carolinan rajalla, sieltä pohjoiseen kiemurtelevaan '
+          + 'Blue Ridge Parkwayhin ja Virginian Shenandoahiin sekä niitä '
+          + 'kaikkia yhdistävään Appalachian Trailiin. Vuorille tarvitaan '
+          + 'auto, sillä julkista liikennettä ei juuri ole. Huipuilla on '
+          + 'selvästi viileämpää kuin laaksoissa, ja sää vaihtuu nopeasti. '
+          + 'Tiet, luvat ja säännöt muuttuvat usein — ja syyskuun 2024 '
+          + 'Helene-myrsky sulki osan teistä pitkäksi aikaa — joten tilanne '
+          + 'kannattaa tarkistaa kansallispuistojen sivuilta juuri ennen '
+          + 'matkaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Appalakit',
+          teksti: 'Vuorille ajetaan autolla, ja niiden halki kävellään valkoisten merkkien perässä.',
+          nosto: 'Mount LeConten majataloon ei vie yhtään tietä: tarvikkeet '
+            + 'kantavat ylös laamat ja helikopteri.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Great Smoky Mountainsia lähimmät lentoasemat ovat '
+                + 'Knoxvillessä noin 70 kilometriä lännessä ja Ashevillessä '
+                + 'noin 100 kilometriä idässä. Käytännössä vuorille '
+                + 'tarvitaan auto: esimerkiksi '
+                + 'Shenandoahiin ei kulje lainkaan julkista liikennettä. '
+                + 'Smokyjen läpi pohjoisesta etelään vie Newfound Gap Road, '
+                + 'joka yhdistää Tennesseen Gatlinburgin Pohjois-Carolinan '
+                + 'Cherokeehin. Puistoon ei peritä pääsymaksua, mutta yli '
+                + 'vartin pysäköintiin tarvitaan nykyään pysäköintilupa, ja '
+                + 'bensaa puiston sisältä ei saa. '
+                + 'Smokyjen itälaidalta alkaa Blue Ridge Parkway, 755 '
+                + 'kilometriä pitkä maisematie, joka seuraa Blue Ridgen '
+                + 'harjannetta Virginiaan asti. Tie on maksuton, kaupallinen '
+                + 'liikenne on siellä kielletty ilman erillistä lupaa, eikä '
+                + 'nopeusrajoitus ole missään yli 72 '
+                + 'km/h. Matkan varrella on 26 tunnelia, joista lähes kaikki '
+                + 'ovat Pohjois-Carolinan puolella, ja paikat merkitään '
+                + 'pohjoisesta alkavilla mailitolpilla. Tien viimeinen pala, '
+                + 'Grandfather Mountainin kylkeä kiertävä Linn Cove '
+                + 'Viaduct, valmistui vasta 1980-luvulla. Talvella tietä ei '
+                + 'aurata, ja korkeat osuudet ovat kiinni myöhäissyksystä '
+                + 'kevääseen. Helene-myrsky sulki syyskuussa 2024 koko '
+                + 'tien, ja osa siitä oli yhä suljettuna keväällä 2025, joten '
+                + 'reitti on tarkistettava ennen lähtöä. Parkwayn '
+                + 'pohjoispäästä matka jatkuu Skyline Drivena Shenandoahin '
+                + 'kansallispuiston läpi, ja siellä peritään pääsymaksu.',
+              kuva: [
+                {
+                  tiedosto: 'Linn Cove Viaduct in the Autumn.jpg',
+                  lyhyt: 'Linn Cove Viaduct kiertää Grandfather Mountainin kylkeä ruskan keskellä.',
+                  selite: 'Betoninen siltatie kaartuu S-mutkana oranssien '
+                    + 'ja punaisten lehtipuiden sekä tummien kuusten '
+                    + 'keskellä, ja taustalla siintää sinisiä '
+                    + 'vuorenhuippuja.',
+                  lahde: 'Goins, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Blue Ridge Parkway NC.jpg',
+                  lyhyt: 'Kivimuurattu tunneli Blue Ridge Parkwaylla Yanceyn piirikunnassa.',
+                  selite: 'Kaksikaistainen tie keltaisine keskiviivoineen '
+                    + 'katoaa kivimuuratun kaariportin kautta vuoren sisään '
+                    + 'tiheän lehtimetsän alla Pohjois-Carolinassa; kuva '
+                    + 'syyskuulta 2021.',
+                  lahde: 'Maria newengland, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Skyline Drive overlook view.jpg',
+                  lyhyt: 'Näköalapaikka Skyline Drivella Shenandoahin kansallispuistossa Virginiassa.',
+                  selite: 'Kivimuurin reunustamalta levennykseltä avautuu '
+                    + 'kesäinen näkymä metsäisten harjanteiden yli '
+                    + 'peltojen kirjomaan laaksoon; kuva heinäkuulta 2020.',
+                  lahde: 'APK, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Valkoisten merkkien polku',
+              teksti: 'Appalachian Trail kulkee noin 3 500 kilometriä '
+                + 'Georgian Springer Mountainilta Mainen Katahdinille ja '
+                + '14 osavaltion halki. Metsänhoitaja Benton MacKaye '
+                + 'ehdotti reittiä 1921, ja vapaaehtoiset saivat sen '
+                + 'yhtenäiseksi 1937. Polku on merkitty puihin ja kiviin '
+                + 'maalatuin valkoisin suorakaiteen muotoisin merkein; '
+                + 'siniset merkit vievät sivupoluille, laavuille ja '
+                + 'näköalapaikoille. '
+                + 'Koko matkan yrittää vuosittain yli 3 000 ihmistä, mutta '
+                + 'perille pääsee Appalachian Trail Conservancyn arvion '
+                + 'mukaan vain noin neljännes. Useimmat lähtevät Georgiasta '
+                + 'keväällä ja kulkevat lämmön mukana pohjoiseen viidestä '
+                + 'seitsemään kuukautta. Matkalla on yli 250 laavua ja '
+                + 'leiripaikkaa, ja laavujen vihkoihin kirjoitetaan '
+                + 'viestejä omalla retkinimellä. '
+                + 'Useimmat reitin käyttäjät kävelevät kuitenkin vain '
+                + 'päivän tai muutaman: osuuksia kulkee vuosittain yli '
+                + 'kolme miljoonaa ihmistä, eikä suurimmalle osalle '
+                + 'reitistä tarvita lupaa. Poikkeuksia ovat Smokyt, '
+                + 'Shenandoah ja Mainen Baxterin osavaltiopuisto. Monessa '
+                + 'pikkukaupungissa polku kulkee suoraan keskustan läpi, '
+                + 'kuten Pohjois-Carolinan Hot Springsissä. Länsi-Virginian '
+                + 'Harpers Ferryssä, reitin "henkisellä puolivälillä", '
+                + 'toimii ATC:n päämaja, jossa pitkän matkan vaeltajat '
+                + 'kuvataan vuoden vaeltaja-albumiin.',
+              kuva: {
+                tiedosto: 'Hiker being photographed at ATC for the thru-hiker album.jpg',
+                lyhyt: 'Vaeltaja poseeraa Harpers Ferryssä ATC:n talon edessä vuosialbumin kuvaa varten.',
+                selite: 'Punapaitainen vaeltaja nostaa kädet ilmaan '
+                  + 'Appalachian Trail Conservancyn kivitalon edessä, kun '
+                  + 'mies kuvaa häntä; seinustalla lepäävät rinkat ja '
+                  + 'vaellussauvat. Kuva heinäkuulta 2018.',
+                lahde: 'HLKirk, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Yö metsässä ja karhujen naapurina',
+              teksti: 'Great Smoky Mountainsin takamailla saa yöpyä vain '
+                + 'merkityillä leiripaikoilla ja laavuissa, ja jokaiseen '
+                + 'yöhön tarvitaan lupa ja varaus. Laavussa saa olla yhden '
+                + 'yön ja leiripaikalla enintään kolme. Autolla '
+                + 'saavutettavia leirintäalueita puistossa on kymmenen. '
+                + 'Mustakarhuja puistossa arvioidaan olevan noin 1 900, '
+                + 'vaikka luku vaihtelee, joten '
+                + 'ruokaa ei jätetä vartioimatta eikä koskaan viedä '
+                + 'telttaan: leirintäalueella se kuuluu suljettuun autoon '
+                + 'ja takamailla karhuvaijeriin ripustettuna tai '
+                + 'karhunkestävään rasiaan. Karhua ei lähestytä eikä '
+                + 'ruokita — jos eläimen käytös muuttuu, olet jo liian '
+                + 'lähellä. Puiston 23 käärmelajista vain kaksi on '
+                + 'myrkyllisiä, eikä kumpikaan ole hyökkäävä. '
+                + 'Vesiputouksille ei pidä kiivetä, sillä niillä on '
+                + 'sattunut kuolemantapauksia, ja puroveden saa juoda vain '
+                + 'keitettynä tai suodatettuna. Pohjoisempana '
+                + 'Appalachian Traililla vaivana ovat punkit ja niiden '
+                + 'levittämä borrelioosi. Kännykkäyhteys katkeaa usein, '
+                + 'joten reitti kannattaa kertoa jollekulle etukäteen. '
+                + 'Huipulla voi olla 5–10 astetta kylmempää kuin laaksossa. '
+                + 'Puiston ainoa majatalo, Mount LeConten huipun '
+                + 'hirsimökkimajatalo, on noin 50 vieraan kokoinen ja '
+                + 'tavoitettavissa vain kävellen, vähintään kahdeksan '
+                + 'kilometrin nousulla. Sen tarvikkeet kantavat ylös '
+                + 'laamakaravaanit ja helikopteri, ja paikat varataan '
+                + 'usein yli vuotta etukäteen.',
+              kuva: {
+                tiedosto: 'LeConte Lodge Llamas.jpg',
+                lyhyt: 'Laamat Trillium Gap Traililla, jota pitkin LeConten majatalon tarvikkeet kannetaan.',
+                selite: 'Sinitakkinen nainen taluttaa kahta laamaa, '
+                  + 'valkoista ja mustaa, joiden selässä on kantolaukut, '
+                  + 'kapealla metsäpolulla korkeiden puiden ja '
+                  + 'rododendronien keskellä; kuva toukokuulta 2018.',
+                lahde: 'ZachN 0421, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ruska, kukat ja tulikärpäset',
+              teksti: 'Appalakkien tunnetuin sesonki on ruska. Blue Ridge '
+                + 'Parkwaylla lehdet alkavat värittyä huipuilla syyskuun '
+                + 'lopulla, ja väri valuu laaksoihin lokakuun loppuun '
+                + 'mennessä. Lokakuun alkupuolella voi nähdä kolme '
+                + 'vuodenaikaa yhtä aikaa: kylmällä harjanteella puut ovat '
+                + 'jo paljaita, rinteet hehkuvat punaisina ja keltaisina, ja '
+                + 'laaksot ovat vielä vihreitä. Smokyissa syksy on myös vuoden kuivinta '
+                + 'aikaa, mutta suosio näkyy ruuhkina: Shenandoahin Skyline '
+                + 'Drivella ajaa lokakuun puolivälin jälkeen satojatuhansia '
+                + 'autoilijoita, joten näköalapaikoille kannattaa lähteä '
+                + 'aamulla ja arkena. Värien ajankohta vaihtelee vuosittain '
+                + 'sään mukaan. '
+                + 'Keväällä vuoret ovat rauhallisempia. Kesäkuussa '
+                + 'kukkivat violetit alppiruusut ensin Virginian Peaks of '
+                + 'Otterilla ja kesäkuun kolmannella viikolla Pohjois-'
+                + 'Carolinan Craggy Gardensissa. '
+                + 'Erikoisin näytös nähdään touko–kesäkuun vaihteessa '
+                + 'Smokyjen Elkmontissa, kun Photinus carolinus '
+                + '-tulikärpäset välkkyvät tahdissa: koiraat välähtävät '
+                + 'muutaman sekunnin ajan yhtä aikaa ja pimenevät sitten '
+                + 'noin kymmeneksi sekunniksi. Näytös kestää vain parisen '
+                + 'viikkoa, ja katsojamäärää säännöstellään. Kävijät on '
+                + 'viety alueelle kuljetuksella Sugarlandsin '
+                + 'vierailukeskukselta, ja järjestelyt kannattaa tarkistaa '
+                + 'puiston sivuilta hyvissä ajoin keväällä.',
+              kuva: {
+                tiedosto: 'Photinus carolinus Great Smoky Mountains.jpg',
+                lyhyt: 'Tahdissa välkkyvät tulikärpäset valaisevat metsänpohjan Great Smoky Mountainsissa.',
+                selite: 'Pitkä valotus tallentaa pimeään lehtimetsään '
+                  + 'satoja keltaisia valopisteitä ja -viiruja, kun '
+                  + 'Photinus carolinus -tulikärpäset välkkyvät; kuva '
+                  + 'toukokuulta 2017.',
+                lahde: 'Niemand für Polyphemus, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Porttikaupungit ja vuorten musiikki',
+              teksti: 'Smokyjen pohjoisportilla Tennesseessä Gatlinburg ja '
+                + 'Pigeon Forge ovat täynnä motelleja, ravintoloita ja '
+                + 'huvipuistoja, kuten läheisestä Seviervillestä '
+                + 'kotoisin olevan Dolly Partonin Dollywood. Pohjois-'
+                + 'Carolinan puolella majoitusta löytyy usein '
+                + 'helpommin ja edullisemmin, esimerkiksi Cherokeesta ja '
+                + 'Bryson Citystä. Cherokee on Itäisen tšerokiheimon '
+                + 'pääkaupunki Qualla Boundaryn alueella, jonka heimo osti '
+                + 'itselleen 1870-luvulla. Kaupungin museo uudistettiin ja '
+                + 'nimettiin 2023 Museum of the Cherokee Peopleksi, ja '
+                + 'kesäisin ulkoilmateatterissa esitetään vuodesta 1950 '
+                + 'pyörinyttä näytelmää Unto These Hills. Heimon '
+                + 'aloitteesta Smokyjen korkein huippu Clingmans Dome sai '
+                + 'syyskuussa 2024 virallisesti tšerokinkielisen nimen '
+                + 'Kuwohi. Idempänä Asheville tunnetaan taiteilijakortteleistaan '
+                + 'ja Biltmoren kartanostaan, mutta Helene-myrskyn tulvat '
+                + 'runtelivat kaupunkia pahoin syksyllä 2024. '
+                + 'Virginian lounaiskulmassa kiemurtelee noin 480 kilometrin '
+                + 'Crooked Road, vuoriston perinnemusiikin reitti. Floydin '
+                + 'kyläkaupassa paikalliset yhtyeet soittavat '
+                + 'perjantai-iltaisin, ja Galaxissa on pidetty old-time- ja '
+                + 'bluegrass-soittajien kokoontumista vuodesta 1935. '
+                + 'Bristolia kutsutaan kantrimusiikin syntysijaksi: '
+                + 'kaupungin museo kertoo vuoden 1927 äänityksistä, joilla '
+                + 'Carter Family ja Jimmie Rodgers tekivät '
+                + 'ensilevytyksensä.',
+              kuva: {
+                tiedosto: 'Kate and the Bubbatones Friday Night Jamboree Floyd Country Store Floyd VA October 2010.jpg',
+                lyhyt: 'Bluegrass-yhtye soittaa Floyd Country Storen perjantai-illan jamboreessa.',
+                selite: 'Kitaristi, viulisti ja banjonsoittaja soittavat '
+                  + 'mikrofonien edessä puupaneloidun salin lavalla '
+                  + 'Floydissa Virginiassa; kuva lokakuulta 2010.',
+                lahde: 'Bruce Tuten, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -113551,6 +115558,268 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Tilapia',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on koko järvi, joten
+       * opas kulkee rantakaupunkien kautta kolmessa maassa. Taustatiedot
+       * englannin Wikipediasta (Entebbe, Entebbe International Airport,
+       * National Botanical Gardens (Uganda), Uganda Wildlife Conservation
+       * Education Centre, Ngamba Island Chimpanzee Sanctuary, Mabamba Bay,
+       * Shoebill, Kisumu, Kisumu Impala Sanctuary, Kit-Mikayi, Rusinga
+       * Island, Mfangano Island, Abasuba Community Peace Museum, Tom Mboya,
+       * Proconsul, Mwanza, Saanane Island National Park, Rubondo Island
+       * National Park, Lake Victoria ferries, MV Victoria (1959),
+       * Kigongo–Busisi Bridge, Lake Victoria: bilharsian kotilot),
+       * Wikivoyagesta (Lake Victoria, Entebbe, Kisumu, Mwanza, Bukoba) ja
+       * saksan Wikipediasta (Mwanza: Bismarckin muistomerkki, Tampere
+       * ystävyyskaupunkina; Saanane-Nationalpark: Tansanian pienin
+       * kansallispuisto; Tampere myös suomen Wikipedian Mwanza-artikkelissa)
+       * — teksti omaa. Hinnat, aukioloajat ja laivojen aikataulut jätetty
+       * pois, koska lähteiden tiedot ovat vuosien takaa. Nostojen ja
+       * gallerioiden aiheita (Speke, Ripon Falls, Stanley, järven koko ja
+       * kolmen maan jako, Ssese-saaret, kalastus, kirjoahvenet, niiliahven,
+       * kalasääski, papyruksen ekologia) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja wikitekstistä, ja
+       * kuvat katsottu silmin. Pystykuva: Bismarckin kallio Mwanzassa.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Bismarck Rock (5385361213).jpg',
+          lyhyt: 'Bismarckin kallio nousee Viktorianjärvestä Mwanzan rannan edustalla.',
+          selite: 'Pyöreiden graniittilohkareiden kasa nousee järvestä '
+            + 'Mwanzan rannan edustalla, ja sen laella seisoo kapea '
+            + 'pystyssä oleva kivi. Etualalla rannalla kasvaa ruohoa. Kuva '
+            + 'on otettu joulukuussa 2010.',
+          lahde: 'Rahim.Lalani, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Viktorianjärvelle saavutaan useimmiten lentäen: Ugandan '
+          + 'ainoa kansainvälinen lentoasema on Entebben niemellä aivan '
+          + 'järven rannassa, ja Kenian Kisumussa ja Tansanian Mwanzassa on '
+          + 'omat kenttänsä. Järveä ei nykyään kierretä yhdellä laivalla, '
+          + 'sillä 1900-luvun reittilaivat ovat jääneet historiaan ja lautat '
+          + 'kulkevat enimmäkseen kunkin maan omilla vesillä. Matka kannattaa '
+          + 'siksi rakentaa rantakaupunkien varaan: Entebbestä veneellä '
+          + 'simpanssien saarelle, Kisumusta luo-kansan pyhälle kivelle, '
+          + 'Mbitasta Rusingan ja Mfanganon saarille ja Mwanzasta '
+          + 'kansallispuistosaarille. Noin 1 100 metrin korkeus pitää '
+          + 'ilmaston tasaisena, ja kuivimmat matkakuukaudet ovat Wikivoyagen '
+          + 'mukaan kesäkuusta syyskuuhun sekä joulukuusta helmikuuhun. '
+          + 'Järveen ei mennä uimaan: rantavesissä leviää bilharsia, ja '
+          + 'rannoilla liikkuu krokotiileja ja virtahepoja.',
+        artikkeli: {
+          nimi: 'Matkailijan Viktoria Nyanza',
+          teksti: 'Afrikan suurimman järven rannoille päästään kaupunki kerrallaan.',
+          nosto: 'Vuonna 1959 Glasgow\'ssa rakennettu Victoria-laiva '
+            + 'laivattiin järvelle 1 500 laatikossa, ja se kulkee yhä '
+            + 'Mwanzan ja Bukoban väliä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kiitotie järven niemellä',
+              teksti: 'Entebbe on useimmille ensimmäinen kosketus järveen, '
+                + 'sillä Ugandan ainoa kansainvälinen lentoasema on kaupungin '
+                + 'niemellä veden ympäröimänä. Kiitotietä pidennettiin '
+                + 'vuonna 1951 ensimmäisiä suihkumatkustajakoneita varten, ja '
+                + 'Kampalaan on kentältä tietä pitkin noin 40 kilometriä. Moni '
+                + 'viettää ensimmäisen tai viimeisen yönsä pääkaupungin sijaan '
+                + 'Entebbessä, jonka rauhallisia katuja ja puhdasta ilmaa '
+                + 'Wikivoyage kehuu. Kaupunki oli Ugandan protektoraatin '
+                + 'hallinnon keskus vuoteen 1962, ja siirtomaa-ajan puistot '
+                + 'reunustavat yhä rantaa. Kasvitieteellinen puutarha '
+                + 'perustettiin vuonna 1898, ja sen sademetsäosan kerrotaan '
+                + 'näkyvän 1940-luvun Tarzan-elokuvissa; puissa näkee '
+                + 'mustavalkoisia guerezoja ja sarvinokkia. Vieressä on '
+                + 'Ugandan luonnonsuojelun opetuskeskus, joka aloitti 1952 '
+                + 'loukkaantuneiden ja orpojen villieläinten vastaanottona ja '
+                + 'toimii nykyään maan kansallisena eläintarhana. Rannasta '
+                + 'lähtee veneitä noin 23 kilometrin päähän Ngamban saarelle, '
+                + 'jonka 40 hehtaarin sademetsä on vuodesta 1998 ollut '
+                + 'salametsästäjiltä pelastettujen orpojen simpanssien '
+                + 'turvapaikka; vierailijat seuraavat ruokintaa aidan takaa. '
+                + 'Aamuvarhaisella lintuharrastajat suuntaavat niemen '
+                + 'luoteispuolelle Mabamban lahdelle, vuodesta 2006 '
+                + 'Ramsar-sopimuksella suojellulle kosteikolle, jossa kapeilla '
+                + 'kanooteilla etsitään harvinaista kenkänokkaa. Kosteikko '
+                + 'tunnetaan keuhkokaloistaan, joita luganda-kielellä kutsutaan '
+                + 'mambaksi, ja Ugandassa kenkänokka ruokkii poikasiaan juuri '
+                + 'keuhkokaloilla.',
+              kuva: [
+                {
+                  tiedosto: 'Entebbe Aerial view.jpg',
+                  lyhyt: 'Entebben niemi ilmasta: lentoaseman kiitotie kulkee veden ympäröimällä kannaksella.',
+                  selite: 'Ilmakuvassa Entebben niemi työntyy '
+                    + 'Viktorianjärveen, ja sen poikki kulkee lentoaseman pitkä '
+                    + 'kiitotie. Kaupungin talot ja puut peittävät niemen '
+                    + 'kärkeä. Kuva on otettu toukokuussa 2012.',
+                  lahde: 'Niranjanoak, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Entebbe Botanical Gardens 4.jpg',
+                  lyhyt: 'Sammaloituneet kiviportaat nousevat Entebben kasvitieteellisen puutarhan lehväkatoksen alla.',
+                  selite: 'Leveät kiviportaat nousevat palmujen ja köynnösten '
+                    + 'muodostaman tunnelin läpi kohti valoisaa aukeaa '
+                    + 'Entebben kasvitieteellisessä puutarhassa. Kuva on '
+                    + 'otettu joulukuussa 2010.',
+                  lahde: 'Gotouganda.com, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Ngamba Island Chimpanzee Sanctuary - Pallet.jpg',
+                  lyhyt: 'Vierailijat seuraavat Ngamban saaren simpansseja aidan takaa puiselta laiturilta.',
+                  selite: 'Ngamban simpanssien turvapaikassa vierailijat '
+                    + 'seisovat puisella katselulaiturilla sähköaidan takana, '
+                    + 'ja nurmikolla liikkuu simpansseja. Kuva on otettu '
+                    + 'lokakuussa 2008.',
+                  lahde: 'Eduard Grebe (Maanscyn), Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kisumu ja ensimmäisen vaimon kivi',
+              teksti: 'Kenian puolen suurin kaupunki Kisumu on luo-kansan '
+                + 'keskus Winamin lahden pohjukassa. Mombasasta rakennettu '
+                + 'Ugandan rautatie saavutti sen laiturin joulukuussa 1901, '
+                + 'ja kaupunki kantoi hetken nimeä Port Florence, kunnes vanha '
+                + 'nimi palasi. Nimen arvellaan juontuvan vaihtokauppaa '
+                + 'tarkoittavasta sanasta. Kaupungin laidalla on alle '
+                + 'neliökilometrin kokoinen impalasuojelualue, jonka '
+                + 'rantapolulla kävellään impalojen keskellä ja jonka '
+                + 'viereisillä soilla elää uhanalainen sitatunga-antilooppi. '
+                + 'Sen eteläpuolella Hippo Pointissa kokoonnutaan katsomaan '
+                + 'auringonlaskua järven ylle, vaikka virtahepoja näkee '
+                + 'nimestä huolimatta harvoin. Viereisellä Dungan rannalla '
+                + 'papyrussuolle rakennettu pitkospuureitti vie lintujen '
+                + 'luo. Vuonna 1980 perustettu Kisumun museo on rakennettu '
+                + 'luo-talon pihapiirin muotoon, ja sen suurin näyttely on '
+                + 'täysikokoinen perinteinen pihapiiri isännän talon, '
+                + 'aittojen ja kolmen vaimon majojen kanssa. Noin 29 '
+                + 'kilometriä kaupungista länteen kohoaa Kit Mikayi, '
+                + 'toistensa päälle kasautuneista lohkareista syntynyt '
+                + 'kalliotorni, jonka nimi tarkoittaa luon kielellä '
+                + 'ensimmäisen vaimon kiveä. Tarinan mukaan Ngeso-niminen '
+                + 'mies vietti päivänsä kiven luolassa, ja hänen vaimonsa '
+                + 'kertoi kyselijöille miehen menneen ensimmäisen vaimonsa '
+                + 'luo. Kivellä rukoilevat ja paastoavat yhä Legio Maria '
+                + '-kirkon pyhiinvaeltajat, ja Unesco lisäsi pyhäkön '
+                + 'rituaalit kiireellisesti suojeltavan aineettoman perinnön '
+                + 'luetteloon vuonna 2019.',
+              kuva: {
+                tiedosto: 'KIT MIKAYI a.jpg',
+                lyhyt: 'Kit Mikayin lohkarepino kohoaa vehreän rinteen yläpuolelle Kisumun länsipuolella.',
+                selite: 'Kit Mikayin suuret, halkeilleet lohkareet ovat '
+                  + 'kasautuneet kahdeksi torniksi puuston yläpuolelle. Luon '
+                  + 'kielellä nimi tarkoittaa ensimmäisen vaimon kiveä. Kuva '
+                  + 'on otettu kesäkuussa 2021.',
+                lahde: 'Comondi, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Fossiilisaari ja kalliomaalaukset',
+              teksti: 'Winamin lahden suulla Kenian puolella Mbitan '
+                + 'pikkukaupungista pääsee sillalla Rusingan saarelle, joka on '
+                + 'noin 16 kilometriä pitkä ja enimmillään viisi leveä. Saari '
+                + 'on paleontologeille tuttu: sen tulivuorituhkan kerroksista '
+                + 'on kaivettu tuhansia noin 18 miljoonaa vuotta vanhoja '
+                + 'mioseenikauden nisäkkäiden fossiileja. Vuonna 1948 Mary '
+                + 'Leakey löysi saarelta ensimmäisen kokonaisen '
+                + 'Proconsul-kallon, apinan, jota pidettiin tuolloin '
+                + 'ihmisapinoiden varhaisena kantamuotona. Rantojen musta '
+                + 'hiekka kimaltelee, sillä se on rapautunut vanhan '
+                + 'tulivuoren laavasta, ja siinä on granaatti- ja '
+                + 'magnetiittikiteitä. Saarella on myös Tom Mboyan hauta. '
+                + 'Itsenäisen Kenian nouseva poliitikko, jota pidettiin '
+                + 'Jomo Kenyattan todennäköisenä seuraajana, murhattiin '
+                + '1969, ja hänen kartiokattoinen mausoleuminsa valmistui '
+                + 'seuraavana vuonna. Länsinaapuri Mfangano on syrjäisempi, '
+                + 'ja sinne mennään veneellä. Saarella asuu Kenian suurin '
+                + 'suban kieltä puhuva yhteisö, ja ensimmäinen auto ajoi '
+                + 'saarella vasta vuonna 2007. Mfanganon kalliosuojissa on '
+                + 'maalauksia, joiden on arveltu olevan jopa 2 000 vuotta '
+                + 'vanhoja ja varhaisten metsästäjä-keräilijöiden tekemiä. '
+                + 'Paikallinen Abasuba-yhteisön rauhanmuseo huolehtii '
+                + 'kolmesta maalauspaikasta ja opastaa kävijät niille.',
+              kuva: {
+                tiedosto: 'Tom Mboya Mausoleum.jpg',
+                lyhyt: 'Tom Mboyan mausoleumin valkoinen kartiokatto kohoaa Rusingan saarella.',
+                selite: 'Tom Mboyan mausoleumin valkoinen kartiokatto '
+                  + 'kohoaa pyöreän kivirakennuksen päällä, ja edessä on '
+                  + 'penkein kalustettu katos vierailijoille. Kuva on otettu '
+                  + 'kesäkuussa 2012.',
+                lahde: 'Wycondi, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Kalliokaupunki ja saaripuistot',
+              teksti: 'Järven etelärannalla oleva Mwanza on Tansanian '
+                + 'toiseksi suurin kaupunki, ja vuoden 2022 väestönlaskennassa '
+                + 'siellä asui yli miljoona ihmistä. Asukkaat kutsuvat sitä '
+                + 'kalliokaupungiksi, Rock Cityksi, sillä pyöreitä '
+                + 'graniittilohkareita on kaikkialla: kukkuloilla, pihoilla '
+                + 'ja rannan edustalla. Tunnetuin on vedestä nouseva '
+                + 'Bismarckin kallio, jonka nimi on jäänne Saksan '
+                + 'siirtomaavallasta. Kalliolla seisonut Bismarckin '
+                + 'muistomerkki poistettiin, kun britit valtasivat kaupungin '
+                + 'ensimmäisessä maailmansodassa. Capri Pointin niemeltä on '
+                + 'vain noin 500 metriä Saananen saarelle, joka on Tansanian '
+                + 'pienin kansallispuisto. Sen kallioilla elää seeproja, '
+                + 'kivikoita ja brazzanmarakatteja, joita ei Tansaniassa '
+                + 'tavata muualla. Maaliskuussa 1979, Ugandan–Tansanian sodan '
+                + 'aikana, Libyan pommikone yritti iskeä Mwanzaan mutta ohitti '
+                + 'kaupungin, ja sen raketit osuivat saaren silloiseen '
+                + 'riistansuojelualueeseen. Järven lounaiskulmassa on '
+                + 'Rubondon saaren kansallispuisto, jonne pääsee veneellä tai '
+                + 'pienkoneella. Saaresta noin neljä viidesosaa on metsää, ja '
+                + 'siellä elää simpansseja, joiden esi-isät olivat viettäneet '
+                + 'vuosia eurooppalaisissa eläintarhoissa ja sirkuksissa: '
+                + 'saksalainen eläintieteilijä Bernhard Grzimek vapautti '
+                + 'saarelle 17 simpanssia vuosina 1966–1969. Mwanzalla on '
+                + 'yhteys myös Suomeen, sillä Tampere on sen ystävyyskaupunki.',
+              kuva: {
+                tiedosto: 'Rubondo National Park.jpg',
+                lyhyt: 'Hiekkaranta ja palmu Rubondon saaren kansallispuistossa järven lounaiskulmassa.',
+                selite: 'Vaalea hiekkaranta kaartuu tyynen lahden reunalla '
+                  + 'Rubondon saarella, ja lahden takana kohoaa metsäinen '
+                  + 'kukkula. Rannalla on veneen muotoinen penkki ja '
+                  + 'etualalla palmu. Kuva on otettu elokuussa 2023.',
+                lahde: 'Asterlegorch367, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Laivalla, lautalla ja sillalla',
+              teksti: '1900-luvulla järveä kiersivät reittilaivat, jotka '
+                + 'yhdistivät Kenian, Ugandan ja Tansanian satamat ja '
+                + 'rautatiet. Nykyään lautat liikennöivät enimmäkseen kunkin '
+                + 'maan omilla vesillä, ja Wikivoyagen mukaan Kisumusta ei '
+                + 'kulje matkustajalauttaa muihin järven kaupunkeihin. '
+                + 'Laivoja on eniten Tansanian puolella. Mwanzan ja Bukoban '
+                + 'väliä kulkee yön yli New Victoria, entinen RMS Victoria: '
+                + 'se rakennettiin Glasgow\'ssa 1959, purettiin 1 500 '
+                + 'laatikkoon, laivattiin Mombasan kautta Kisumuun ja koottiin '
+                + 'uudelleen järven rannalla. Vuosien tauon jälkeen '
+                + 'kunnostettu laiva palasi reitille vuonna 2020. Mwanzan '
+                + 'länsipuolella lautta vaihtui kesällä 2025 siltaan: 3,2 '
+                + 'kilometrin Kigongo–Busisi-silta ylittää Mwanzan lahden, ja '
+                + 'ylitys, joka lautalla jonotuksineen saattoi kestää '
+                + 'tunteja, sujuu autolla muutamassa minuutissa. Siltaa on '
+                + 'kutsuttu Itä-Afrikan pisimmäksi. Vesillä kannattaa '
+                + 'käyttää vain rekisteröityjä veneitä, joissa on '
+                + 'pelastusliivit, sillä järvelle voi nousta äkillinen '
+                + 'myrsky. Uimaan ei mennä: rantavesien kotilot levittävät '
+                + 'bilharsiaa eli skistosomiaasia, ja rannoilla liikkuu '
+                + 'krokotiileja ja virtahepoja. Koko järven seutu on myös '
+                + 'malaria-aluetta, joten hyttysverkko ja karkotteet kuuluvat '
+                + 'matkatavaroihin.',
+              kuva: {
+                tiedosto: 'M.V. Sengerema.JPG',
+                lyhyt: 'Sengerema-lautta ylittää Mwanzan lahtea Geitaan johtavalla päätiellä vuonna 2014.',
+                selite: 'Sinivalkoinen autolautta Sengerema kulkee Mwanzan '
+                  + 'lahden poikki, ja sen takana kohoaa lohkareinen kukkula. '
+                  + 'Kuva on otettu tammikuussa 2014, ennen kuin reitin '
+                  + 'rinnalle valmistui Kigongo–Busisi-silta.',
+                lahde: 'Macabe5387, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'jarvielama',
@@ -114609,6 +116878,241 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Mozambique Island Bridge',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on Mosambikin saari
+       * (Ilha de Moçambique) Nampulan maakunnassa, ei koko maa.
+       * Taustatiedot englannin Wikipediasta (Island of Mozambique, Cidade
+       * de Pedra, Fort São Lourenço (Mozambique), Goa Island, Mozambique
+       * Island Bridge, Luís de Camões, Tufo (dance), Indians in
+       * Mozambique, Insurgency in Cabo Delgado, Cyclone Gombe,
+       * Mozambique), Wikivoyagesta (Ilha de Mozambique, Mozambique;
+       * saarisivun hinnat ja paikat ovat vuodelta 2015, joten hinnat ja
+       * aukioloajat on jätetty pois) sekä Global Voicesin mussiro-jutusta
+       * 1.8.2012 ja Chipenen iskun uutisoinnista (Vatican News, Zitamar,
+       * syyskuu 2022) — teksti omaa. Nostojen ja gallerian aiheita
+       * (São Sebastiãon linnoitus ja sen kirkko, Vasco da Gama ja São
+       * Paulon palatsi, vihreä moskeija, Makuti ja kalastajat, sillan
+       * historia, 1655 kartta, dhow't ja orjakauppa, pääkaupungin siirto,
+       * sairaala) eikä africa-kulttuuri.js:n marrabentaa ja piripiriä
+       * toisteta. Turvallisuus: Cabo Delgadon kapina ja sen 2022
+       * ulottuminen Nampulan pohjoisosaan kerrotaan, mutta saarelle
+       * konflikti ei ole ulottunut. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta ja kuvat katsottu silmin.
+       * Pystykuva: tufo-tanssijoiden capulanat (Wiki Loves Africa 2019).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Tofo danse - 1.jpg',
+          lyhyt: 'Tufo-tanssijoiden kirkkaat capulana-kankaat ja paljaat jalat Mosambikin saarella.',
+          selite: 'Tufoa tanssivat naiset liikkuvat paljain jaloin '
+            + 'terrakottalaatoilla samanlaisissa sinikuvioisissa '
+            + 'capulana-kankaissa; kuva heinäkuulta 2017.',
+          lahde: 'JCPBFerreira, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Mosambikin saari on vain kolme kilometriä pitkä ja '
+          + 'enimmillään puoli kilometriä leveä, joten sen päästä päähän '
+          + 'kävelee parissakymmenessä minuutissa. Matkailija saapuu '
+          + 'yleensä Nampulan lentoasemalta maantietä ja kapeaa siltaa '
+          + 'pitkin, joskus myös risteilyaluksella. Pohjoispään '
+          + 'kivikaupunkia kunnostettiin 2010-luvulla, ja vanhoissa '
+          + 'kauppiastaloissa toimii nyt majataloja ja ravintoloita. '
+          + 'Kaduilla elää makua-kulttuuri: naisten kasvoja peittää '
+          + 'valkoinen mussiro-naamio, ja juhlissa tanssitaan tufoa. '
+          + 'Lähisaarille ja mantereen rannoille pääsee purjeveneellä. '
+          + 'Saari on Nampulan maakunnassa, kaukana etelässä '
+          + 'Cabo Delgadon konfliktialueesta, mutta pohjoisen tilanne '
+          + 'kannattaa silti tarkistaa ennen matkaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Mosambikin saari',
+          teksti: 'Entinen pääkaupunki on nyt pikkukaupunki, jonka kiertää jalan.',
+          nosto: 'Kun Luís de Camões odotti täällä laivaa kotiin, hän oli '
+            + 'niin köyhä, että ystävät joutuivat ruokkimaan häntä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille Nampulasta',
+              teksti: 'Lähin säännöllisen matkustajaliikenteen lentoasema on '
+                + 'Nampulassa, Pohjois-Mosambikin suurimmassa kaupungissa, '
+                + 'jonne lennetään Maputosta ja muualta Mosambikista. '
+                + 'Nampulasta ajetaan ensin Nacalan tietä ja käännytään '
+                + 'Monapossa kohti rannikkoa; Wikivoyagen mukaan matka '
+                + 'kestää noin kaksi tuntia. '
+                + 'Halvimmin pääsee chapalla eli pikkubussilla, joka lähtee '
+                + 'Nampulan rautatieaseman läheltä. Mantereen puolella '
+                + 'Lumbossa alkaa yksikaistainen betonisilta, jota pitkin '
+                + 'saarelle ajetaan. Joskus saaren edustalle ankkuroi '
+                + 'risteilyalus, jonka matkustajat tuodaan veneillä maihin, '
+                + 'ja rannassa vastassa on laulava tanssiryhmä. Perillä '
+                + 'autoa ei tarvita: kivikaupunki on vain muutaman korttelin '
+                + 'levyinen. '
+                + 'Mosambikin laki velvoittaa kantamaan henkilöllisyys'
+                + 'todistusta, joten matkaoppaat neuvovat pitämään mukana '
+                + 'notaarin oikeaksi todistamaa kopiota passin kuvasivusta, '
+                + 'viisumista ja maahantuloleimasta. Itse passi kannattaa '
+                + 'jättää majapaikkaan, eikä sitä pidä luovuttaa '
+                + 'kenellekään kadulla.',
+              kuva: [
+                {
+                  tiedosto: 'Nampula Airport.jpg',
+                  lyhyt: 'Nampulan lentoasema on saarta lähin säännöllisen lentoliikenteen kenttä.',
+                  selite: 'Matkustajat kävelevät kentän poikki Nampulan '
+                    + 'lentoaseman terminaaliin, jonka katolla lukee '
+                    + 'kaupungin nimi; kuva toukokuulta 2012.',
+                  lahde: 'Gustavo Sugahara, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Mozambique Island Wharf (32679313634).jpg',
+                  lyhyt: 'Kivikaupungin laituri seisoo paksujen betonipilarien varassa.',
+                  selite: 'Mosambikin saaren laiturin tukevat pilarit '
+                    + 'jatkuvat rantaan asti; taustalla näkyvät kirkon '
+                    + 'kellotorni ja rannan keltainen talo.',
+                  lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Local Dancers (33540660425).jpg',
+                  lyhyt: 'Mussiro-naamioidut laulajat ottavat risteilymatkustajat vastaan saarella.',
+                  selite: 'Oranssiin pukeutuneet naiset laulavat '
+                    + 'mukulakivikadulla kasvoillaan valkoinen '
+                    + 'mussiro-tahna ja toivottavat risteilyaluksen '
+                    + 'matkustajat tervetulleiksi; kuva joulukuulta 2016.',
+                  lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kivikaupunki kävellen',
+              teksti: 'Saaren pohjoispään kivikaupunki rapistui '
+                + 'vuosikymmeniä, mutta vuosina 2010–2015 katuja ja '
+                + 'rakennuksia kunnostettiin, ja monessa vanhassa '
+                + 'kauppiastalossa toimii nyt majatalo tai ravintola. '
+                + 'Kävelykierroksen voi aloittaa Misericórdian kirkosta, '
+                + 'jonka yhteydessä toimii kirkkotaiteen museo; sen '
+                + 'tunnetuimpia esineitä on makonde-tyylinen krusifiksi. '
+                + 'Rua da Contra Costa -rantakadulla seisoo Luís de '
+                + 'Camõesin patsas. Portugalin kansallisrunoilija asui '
+                + 'saarella vuosina 1567–1569 odottaessaan kyytiä kotiin '
+                + 'ja viimeisteli täällä eepostaan Luusiadit. Hänen '
+                + 'ystävänsä, historioitsija Diogo do Couto, löysi hänet '
+                + 'niin köyhänä, että muut joutuivat ruokkimaan häntä ja '
+                + 'keräämään hänelle vaatteet kotimatkaa varten. Kaduilla '
+                + 'näkyy myös, kuinka monta uskontoa saarella on elänyt '
+                + 'rinnakkain: kirkkojen lisäksi siellä on useita '
+                + 'moskeijoita ja hindutemppeli, ja jo 1800-luvulla saarella '
+                + 'asui Intian Diusta tulleita hindukauppiaita. Saaren '
+                + 'eteläkärjestä näkyy merelle pieni kolmiomainen São '
+                + 'Lourençon linnake, joka rakennettiin 1690-luvun lopun ja '
+                + '1700-luvun alun välillä omalle luodolleen vartioimaan '
+                + 'sataman lounaista suuta.',
+              kuva: {
+                tiedosto: 'Misericórdia Church.jpg',
+                lyhyt: 'Misericórdian kirkon kyljessä toimii saaren kirkkotaiteen museo.',
+                selite: 'Misericórdian kirkon kalkittu barokkijulkisivu '
+                  + 'Mosambikin saarella; vasemmalla sivuovella on kyltti '
+                  + 'Museu de Arte Sacra.',
+                lahde: 'Erik Cleves Kristensen, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Mussiro ja tufo',
+              teksti: 'Saaren arkeen kuuluu kaksi makua-naisten perinnettä, '
+                + 'joihin matkailija törmää lähes varmasti. Ensimmäinen on '
+                + 'mussiro, valkoinen kasvonaamio, joka tehdään hieromalla '
+                + 'Olax dissitiflora -kasvin varsia kiveä vasten '
+                + 'vesitilkan kanssa. Pohjois-Mosambikin rannikolla ja '
+                + 'saarilla, erityisesti Nampulan maakunnassa, sitä '
+                + 'käytetään kauneudenhoitoon ja auringolta suojaamiseen. '
+                + 'Vanhempien naisten kertoman mukaan valkoiset kasvot '
+                + 'kertoivat aikoinaan myös, ettei tyttö ollut vielä '
+                + 'naimisissa. Toinen perinne on tufo, naisten ryhmätanssi, '
+                + 'jota esitetään islamilaisina juhlapäivinä ja muissakin '
+                + 'juhlissa. Tanssi tuli Mosambikiin luultavasti 1930-luvulla '
+                + 'Kilwasta. Ryhmässä on tavallisesti viidestätoista '
+                + 'kahteenkymmeneen naista, ja tahtia lyö neljä soittajaa '
+                + 'litteillä kehysrummuilla, joiden arabiankielisestä '
+                + 'nimestä ad-duff tanssin nimen arvellaan johtuvan. Laulut '
+                + 'ovat useimmiten makuaksi, joskus arabiaksi tai '
+                + 'portugaliksi, ja ne voivat käsitellä myös yhteiskunnallisia '
+                + 'aiheita. Tanssijat pukeutuvat samanlaisiin huiveihin ja '
+                + 'capulana-kankaisiin. Ennen tanssittiin polvillaan, '
+                + 'pelkkää ylävartaloa liikuttaen, mutta nykyään tanssijat '
+                + 'myös nousevat seisomaan. Ihmisiä kannattaa kuvata vain '
+                + 'luvalla.',
+              kuva: {
+                tiedosto: 'Beauty Masks (33565033415).jpg',
+                lyhyt: 'Mosambikin saaren naisten kasvoja peittää valkoinen mussiro-naamio.',
+                selite: 'Neljä naista punaruudullisissa asuissa istuu '
+                  + 'mukulakivikadulla kasvot valkoisen mussiro-tahnan '
+                  + 'peitossa; kuva joulukuulta 2016.',
+                lahde: 'David Stanley, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Purjeveneellä lahdelle',
+              teksti: 'Saaren rannoilla odottaa aina purjeveneitä, ja niillä '
+                + 'pääsee sekä lähisaarille että mantereen puolelle. Viiden '
+                + 'kilometrin päässä idässä on asumaton Goan saari, '
+                + 'paikalliselta nimeltään Watólofu: matala korallisaari, '
+                + 'jolla on valkoinen hiekkaranta ja kirkas, kalaisa vesi. '
+                + 'Saaren majakka rakennettiin 1870-luvulla, ja vuonna 1923 '
+                + 'sen torni korotettiin 12 metristä 31 metriin. Nykyään '
+                + 'valo toimii aurinkoenergialla, ja majakan huipulle voi '
+                + 'kiivetä katsomaan näkymiä Mossurilinlahden suulle. '
+                + 'Lahden toisella puolella, noin 40 kilometrin päässä '
+                + 'pohjoisessa, on Chocas-Marin pitkä hiekkaranta, joka on '
+                + 'usein lähes autio, ja purjeveneellä pääsee myös '
+                + 'Mossuriliin ja Cabaceirasin kyliin mantereen rannikolle. '
+                + 'Uimaan kannattaa lähteä nimenomaan retkillä, sillä '
+                + 'Wikivoyage ei suosittele uimista Mosambikin saaren omilla '
+                + 'rannoilla veden likaisuuden vuoksi. Veneen kuntoon ja '
+                + 'pelastusliiveihin kannattaa kiinnittää huomiota: '
+                + 'heinäkuussa 2011 veneonnettomuudessa kuoli kahdeksan '
+                + 'ihmistä, ja Goan ja Senan saaret suljettiin matkailulta '
+                + 'turvallisuusselvityksen ajaksi.',
+              kuva: {
+                tiedosto: 'Farol Ilha de Goa 2010.jpg',
+                lyhyt: 'Goan saaren punavalkoraitainen majakka opastaa laivoja Mossurilinlahdelle.',
+                selite: 'Goan saaren neliskulmainen, punavalkoraitainen '
+                  + 'majakkatorni kohoaa matalan valkoisen rakennuksen '
+                  + 'keskeltä rantapensaikon yllä; kuva joulukuulta 2010.',
+                lahde: 'Margarida Ferreira, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Turvallisuus, sää ja terveys',
+              teksti: 'Pohjoisessa Cabo Delgadon maakunnassa on lokakuusta '
+                + '2017 jatkunut islamistikapina, joka on levinnyt myös '
+                + 'Niassan maakuntaan. Syyskuussa 2022 kapinalliset iskivät '
+                + 'Nampulan maakunnan pohjoisosaan Memban piirikuntaan, '
+                + 'jossa Chipenen lähetysasemalla surmattiin iäkäs '
+                + 'italialainen nunna. Mosambikin saari on samassa '
+                + 'maakunnassa mutta paljon etelämpänä, eikä konflikti ole '
+                + 'ulottunut saarelle. Ennen matkaa kannattaa silti '
+                + 'tarkistaa Suomen ulkoministeriön matkustustiedote, eikä '
+                + 'pohjoiseen Cabo Delgadoon pidä lähteä omin päin. Saarella '
+                + 'riskit ovat arkisempia: Wikivoyage neuvoo tavallista '
+                + 'varovaisuutta ryöstöjen ja varkauksien varalta ja '
+                + 'kehottaa naisia välttämään yksin kulkemista rannoilla. '
+                + 'Malariaa esiintyy koko maassa, joten estolääkityksestä '
+                + 'kannattaa kysyä lääkäriltä hyvissä ajoin ennen matkaa. '
+                + 'Sadekausi kestää lokakuusta maaliskuuhun, ja se on myös '
+                + 'hirmumyrskyjen aikaa: maaliskuussa 2022 hirmumyrsky Gombe '
+                + 'tappoi saarella kuusi ihmistä ja kaatoi vuosisatoja '
+                + 'vanhoja puita. Kuivakausi huhtikuusta syyskuuhun on '
+                + 'vähäsateisempi, ja kesä- ja heinäkuussa illat voivat '
+                + 'olla rannikollakin viileitä.',
+              kuva: {
+                tiedosto: 'Beach cleaning.jpg',
+                lyhyt: 'Naiset siivoavat rantaa aamulla, taustalla Santo Antónion kappeli.',
+                selite: 'Aamuvalossa joukko naisia ja mies siivoaa '
+                  + 'hiekkarantaa haravoin ja luudin; merellä taustalla '
+                  + 'kohoaa valkoinen Santo Antónion kappeli pienen '
+                  + 'linnakkeen muurin päällä. Kuva elokuulta 2009.',
+                lahde: 'Rosino, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -117367,6 +119871,224 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Eyre Highway',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Eyre Highway, Indian Pacific, Cook South Australia,
+       * Rawlinna, Nullarbor Links, Head of Bight, Southern right whale,
+       * Yalata, Border Village, Time in Australia) ja Wikivoyagesta
+       * (Eyre Highway, Indian Pacific, Eucla, Western Australia) — teksti
+       * omaa. Nostojen aiheita (Eyren retki, Baxter, Wylie, Euclan
+       * lennätinasema, nimi ja pisimmät suorat, geologia, Bunda Cliffs,
+       * luolat, wombatti) ei toisteta. Hinnat ja aikataulut jätetty pois.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja
+       * kuvat katsottu silmin. Pystykuva: Balladonian eläinvaroituskyltti.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Beware sign, Balladonia, 2017 (01).jpg',
+          lyhyt: 'Kyltti varoittaa aitaamattomalla tiellä kulkevista kameleista, emuista ja kenguruista.',
+          selite: 'Balladonian tienvarsiaseman itäpuolella Eyre Highwayn '
+            + 'kyltti varoittaa, että seuraavat 150 kilometriä tielle voi '
+            + 'astella kameleita, emuja ja kenguruita.',
+          lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Nullarborin poikki pääsee nykyään kahta reittiä: autolla '
+          + 'rannikkoa seurailevaa Eyre Highwayta tai junalla sisämaan halki '
+          + 'kulkevaa rataa. Autoilija ajaa Norsemanista Cedunaan noin 1 200 '
+          + 'kilometriä, ja välillä ainoat asutut paikat ovat tienvarsiasemia, '
+          + 'joilla tankataan, syödään ja nukutaan. Indian Pacific -juna '
+          + 'ylittää tasangon kerran viikossa kumpaankin suuntaan ja pysähtyy '
+          + 'tankkaamaan aavekaupunkiin, jossa asuu enää neljä ihmistä. Pitkää '
+          + 'ajoa voi rytmittää maailman pisimmällä golfkentällä, ja kesäkuusta '
+          + 'lokakuuhun tasangon eteläreunan jyrkänteeltä näkee poikivia '
+          + 'valaita. Valtioiden rajalla odottavat hedelmätarkastus ja kello, '
+          + 'joka siirtyy 45 minuuttia.',
+        artikkeli: {
+          nimi: 'Matkailijan Nullarbor',
+          teksti: 'Nullarborin poikki ajetaan tienvarsiasemalta toiselle.',
+          nosto: 'Maantie on paikoin myös lentokenttä: asfalttiin on maalattu '
+            + 'kiitotien merkinnät lentävien lääkärien koneille.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Tienvarsiasemalta toiselle',
+              teksti: 'Eyre Highway on ainoa päällystetty tie Etelä- ja '
+                + 'Länsi-Australian välillä. Sen 1 664 kilometriä alkavat '
+                + 'Länsi-Australian Norsemanista ja päättyvät Port Augustaan, '
+                + 'ja itse tasanko ylitetään Norsemanin ja Cedunan välisellä '
+                + 'noin 1 200 kilometrin osuudella. Länsi-Australian puolella '
+                + 'tien varrella on 720 kilometrin matkalla vain yksi kylä, '
+                + 'Eucla, ja muuten pelkkiä tienvarsiasemia: Balladonia, '
+                + 'Caiguna, Cocklebiddy, Madura ja Mundrabilla, 65–180 '
+                + 'kilometrin välein. Ne ovat yhtä aikaa huoltoasemia, '
+                + 'kahviloita, motelleja ja leirintäalueita. Tavallisella '
+                + 'henkilöautolla pärjää, eikä ylimääräistä polttoainetta '
+                + 'tarvitse kuljettaa mukana, mutta kaikki asemat eivät ole '
+                + 'auki ympäri vuorokauden, joten yöajo kannattaa suunnitella. '
+                + 'Pisin väli on noin 190 kilometriä Balladonian ja Norsemanin '
+                + 'välillä. Nopeusrajoitus on enimmäkseen 110 km/h, ja vastaan '
+                + 'tulee jopa 42,5-metrisiä rekkajunia. Tie on aitaamaton, ja '
+                + 'kyltit varoittavat kameleista, wombateista ja kenguruista. '
+                + 'Syrjäisyyden takia muutama levennetty tieosuus on lentävien '
+                + 'lääkärien, Royal Flying Doctor Servicen, varakiitorata: '
+                + 'asfalttiin on maalattu kiitotien merkinnät, ja pienkoneille '
+                + 'on tehty kääntöpaikat.',
+              kuva: [
+                {
+                  tiedosto: 'Highway sign, Norseman, 2017 (04).jpg',
+                  lyhyt: 'Norsemanista on Balladoniaan 189, Euclaan 710 ja Adelaideen 1 986 kilometriä.',
+                  selite: 'Eyre Highwayn länsipäässä Norsemanin itäpuolella '
+                    + 'seisova opaste kertoo matkan mittakaavan: ensimmäiselle '
+                    + 'tienvarsiasemalle on 189 kilometriä ja Adelaideen lähes '
+                    + 'kaksituhatta.',
+                  lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Eyre Highway, Western Australia (near Balladonia) with RFDS landing sign.jpg',
+                  lyhyt: 'Kyltti merkitsee tieosuuden, jolle lentävien lääkärien kone voi laskeutua.',
+                  selite: 'Balladonian itäpuolella Eyre Highwayn varressa '
+                    + 'oleva keltainen kyltti kertoo, että edessä oleva '
+                    + 'levennetty tieosuus on Royal Flying Doctor Servicen '
+                    + 'hätälaskupaikka.',
+                  lahde: 'Chuq, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Caiguna Roadhouse, 2017 (02).jpg',
+                  lyhyt: 'Caigunan tienvarsiasema on huoltoasema, kahvila ja motelli keskellä tasankoa.',
+                  selite: 'Caigunan tienvarsiasema Länsi-Australiassa on '
+                    + 'yksi niistä harvoista paikoista, joissa Eyre Highwayn '
+                    + 'kulkija voi tankata, syödä ja yöpyä satojen kilometrien '
+                    + 'matkalla.',
+                  lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Indian Pacific ja aavekaupunki Cook',
+              teksti: 'Juna ylittää Nullarborin sisämaassa, kaukana '
+                + 'maantiestä. Indian Pacific kulkee Tyynenmeren rannalta '
+                + 'Sydneystä Intian valtameren rannalle Perthiin 4 352 '
+                + 'kilometriä, ja matka kestää noin kolme vuorokautta. '
+                + 'Ensimmäinen juna lähti Sydneystä 23. helmikuuta 1970, ja '
+                + 'nykyään vuoroja on kerran viikossa kumpaankin suuntaan. '
+                + 'Juna on elämysmatka: halvin istumaluokka lakkautettiin 2016, '
+                + 'ja matkustajat nukkuvat makuuvaunuosastoissa ja syövät '
+                + 'ravintolavaunussa. Autoja junaan ei enää oteta. Tasangon '
+                + 'keskellä juna pysähtyy Cookiin, joka perustettiin 1917 '
+                + 'radan huoltokyläksi ja jossa asui parhaimmillaan 200 '
+                + 'ihmistä; vuonna 2025 asukkaita oli neljä. Veturit tankataan '
+                + 'ja vesi täydennetään noin kahden tunnin pysähdyksellä, ja '
+                + 'sillä välin matkustajat saavat kävellä autioituneessa '
+                + 'kylässä. Entisen sairaalan kylteissä kehotetaan yhä '
+                + 'tulemaan Cookiin sairastamaan, ja kylässä on säilynyt '
+                + 'vanhat vankisellit. Perthiin päin matkaavat pysähtyvät myös '
+                + 'Rawlinnassa, Australian suurimman toimivan lammastilan '
+                + 'kupeessa, jossa kesäisin illallinen tarjoillaan '
+                + 'asemalaiturilla elävän musiikin soidessa.',
+              kuva: {
+                tiedosto: 'Cook (AU), Indian Pacific, NR Class Locomotive -- 2019 -- 0636.jpg',
+                lyhyt: 'Indian Pacificin veturi tankataan Cookissa keskellä Nullarboria.',
+                selite: 'Keltainen NR-sarjan veturi Indian Pacificin väreissä '
+                  + 'seisoo Cookin tankkauspaikalla: juna pysähtyy '
+                  + 'aavekaupunkiin täydentämään polttoainetta ja vettä.',
+                lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Maailman pisin golfkenttä',
+              teksti: 'Nullarbor Links on 18-reikäinen par 72 -golfkenttä, '
+                + 'joka on levitetty 1 365 kilometrin matkalle Eyre Highwayn '
+                + 'varteen Länsi-Australian Kalgoorliesta Etelä-Australian '
+                + 'Cedunaan. Ajatus syntyi punaviinipullon ääressä Balladonian '
+                + 'tienvarsiasemalla: kahden paikallisen yrittäjän mielestä '
+                + 'golf katkaisisi pitkän ajon, vähentäisi väsymyksen '
+                + 'aiheuttamia vaaratilanteita ja toisi asemille asiakkaita. '
+                + 'Kenttä avattiin virallisesti 22. lokakuuta 2009. Seitsemän '
+                + 'reikää on olemassa olevilla golfkentillä, ja loput '
+                + 'yksitoista on rakennettu tienvarsiasemien ja '
+                + 'levähdyspaikkojen viereen: aloitusalueet ja viheriöt ovat '
+                + 'tekonurmea, väylät paljasta aavikkoa. Reikien väli on '
+                + 'keskimäärin 66 kilometriä ja pisimmillään lähes 200. '
+                + 'Pelaaja ostaa tuloskortin Cedunasta tai Kalgoorliesta, '
+                + 'leimauttaa sen matkan varrella ja saa perillä todistuksen '
+                + 'maailman pisimmän golfkentän kiertämisestä. Esteinä ovat '
+                + 'varikset, emut, kengurut, myrkkykäärmeet ja wombattien '
+                + 'kolot, ja kesällä lämpötila voi nousta yli 50 asteen. '
+                + 'Vuoteen 2022 mennessä kentän oli virallisesti pelannut yli '
+                + '20 000 matkailijaa.',
+              kuva: {
+                tiedosto: 'Wombat Hole, Nundroo, 2017 (01).jpg',
+                lyhyt: 'Nullarbor Linksin neljäs reikä, Wombat Hole, sijaitsee Nundroossa.',
+                selite: 'Nundroossa Etelä-Australiassa olevan neljännen reiän '
+                  + 'alussa on katos ja opastaulu, ja väylä kulkee punaisen, '
+                  + 'matalan pensaikon peittämän maan halki.',
+                lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Valaat jyrkänteen juurella',
+              teksti: 'Siellä missä Suuri Australianlahti ulottuu '
+                + 'pohjoisimmilleen, Head of Bightissa, tasangon reuna laskee '
+                + 'jyrkänteenä mereen, ja joka vuosi sen alle uivat eteläiset '
+                + 'sileävalaat. Paikka on toinen niistä kahdesta Australian '
+                + 'etelärannikon kohdasta, joihin valaat tulevat poikimaan, ja '
+                + 'kesäkuusta lokakuuhun, eteläisen pallonpuoliskon talvella, '
+                + 'siellä nähdään vuosittain yli sata valasta. Jyrkänteen '
+                + 'päälle on rakennettu lankkupolkuja ja näköalatasanteita, '
+                + 'joilta valaita katsotaan lähes suoraan alapuolelta; '
+                + 'merialuetta voi katsella myös näköalalennolta. Tutkijoiden '
+                + 'mukaan valaat suosivat juuri tällaista rajun aallokon '
+                + 'rannikkoa, koska murtuvien aaltojen kohina peittää emon ja '
+                + 'vasan äänet miekkavalailta. Naaras palaa samaan '
+                + 'poikimispaikkaan tavallisesti kolmen vuoden välein. Maa '
+                + 'jyrkänteen päällä kuuluu Yalatan alkuperäiskansojen '
+                + 'suojelualueeseen, jonka keskellä on noin 300 asukkaan '
+                + 'aboriginaaliyhteisö, ja rannikon vedet ovat osa '
+                + 'merensuojelualuetta.',
+              kuva: {
+                tiedosto: 'Head of the Bight, Yalata, South Australia, July 2026 13.jpg',
+                lyhyt: 'Head of Bightin lankkupolut kulkevat jyrkänteen reunalla valaiden poikimisalueen yllä.',
+                selite: 'Heinäkuussa 2026 otetussa kuvassa Head of Bightin '
+                  + 'puiset lankkupolut kiertävät pensaikkoisen jyrkänteen '
+                  + 'reunaa, ja taustalla erottuvat rannikon vaaleat '
+                  + 'hiekkadyynit.',
+                lahde: 'Calistemon, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Rajalla hedelmät jäävät ja kello siirtyy',
+              teksti: 'Etelä- ja Länsi-Australian raja kulkee Border '
+                + 'Villagen kohdalla, 12 kilometriä Euclasta itään. Kylä on '
+                + 'pelkkä tienvarsiasema motelleineen ja leirintäalueineen, ja '
+                + 'sen tunnistaa jättimäisestä kenguruveistoksesta, joka '
+                + 'pitelee Vegemite-purkkia. Länteen ajavalle raja on myös '
+                + 'tarkastuspiste: Länsi-Australiaan ei saa tuoda tuoreita '
+                + 'hedelmiä, vihanneksia, siemeniä eikä hunajaa, ja kaikki '
+                + 'kasvit ja kasvikset on ilmoitettava tarkastajille. Sääntöjä '
+                + 'valvotaan tiukasti, ja tarkastajat nousevat myös juniin. '
+                + 'Itään ajavan seuraava karanteenipysähdys on vasta Cedunassa. '
+                + 'Rajalla muuttuu myös aika. Border Village ja Länsi-Australian '
+                + 'puolen kylät Caigunasta itään noudattavat epävirallista '
+                + 'keskistä läntistä aikaa, joka on 8 tuntia 45 minuuttia '
+                + 'UTC:tä edellä, puolivälissä Länsi- ja Etelä-Australian '
+                + 'aikojen välissä. Aikavyöhykkeellä ei ole laillista asemaa, '
+                + 'ja sitä noudattaa arviolta 200 ihmistä. Lännestä tuleva '
+                + 'siirtää kelloa 45 minuuttia eteenpäin Caigunassa ja toiset '
+                + '45 minuuttia rajalla; Etelä-Australian kesäaikana ero '
+                + 'rajalla on vielä tunnin suurempi.',
+              kuva: {
+                tiedosto: 'Checkpoint, Border Village, 2017 (01).jpg',
+                lyhyt: 'Länsi-Australian karanteenitarkastuspiste Border Villagessa valtioiden rajalla.',
+                selite: 'Kuva on otettu Länsi-Australian puolelta itään: '
+                  + 'oikealla on tarkastusaseman katos, jonka kyltti kertoo '
+                  + 'seuraavan karanteenipysähdyksen olevan Cedunassa, ja '
+                  + 'vasemmalla toivotetaan tervetulleeksi Etelä-Australiaan.',
+                lahde: 'Bahnfrend, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'geologia',
@@ -127164,6 +129886,221 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Lake Titicaca, PeruRail, Belmond Andean Explorer,
+       * Inca Manco Cápac International Airport, Sillustani, Altitude
+       * sickness, Coca tea, Candlemas/Peru, List of Intangible Cultural
+       * Heritage elements in Peru, Diablada, Taquile Island, Amantaní,
+       * Copacabana Bolivia, Basilica of Our Lady of Copacabana, Strait
+       * of Tiquina) ja Wikivoyagesta (Lake Titicaca, Puno, Copacabana,
+       * Isla del Sol, Isla Amantani, Isla Taquile, Sillustani) — teksti
+       * omaa. Hinnat ja aikataulut jätetty pois, koska lähteiden tiedot
+       * ovat osin vanhoja. Nostojen aiheita (korkein purjehduskelpoinen
+       * järvi, Yavari, inkojen luomistaru, Tiwanaku, Isla del Solin
+       * rauniot, järven nimi, Uros-saarten rakenne, totora,
+       * jättiläissammakko, uikku) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvasivuilta, ja
+       * kuvat katsottu silmin. Pystykuva: Taquilen neuloja.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Knitter of Taquile.jpg',
+          lyhyt: 'Taquilen saarella neulominen on miesten työtä, ja taitava neuloja on arvostettu.',
+          selite: 'Taquilen saaren mies neuloo kirjavaa lankaa '
+            + 'sukkapuikoilla, ja päässä hänellä on neulottu punainen myssy. '
+            + 'Saaren tekstiilitaide on UNESCOn aineettoman '
+            + 'kulttuuriperinnön luettelossa.',
+          lahde: 'Thomas Quine, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Titicaca-järvelle on kaksi porttia: Puno Perun puolella '
+          + 'ja Copacabana Bolivian puolella. Kummassakin ollaan lähes '
+          + 'neljän kilometrin korkeudessa, joten matkan tärkein vaihe on '
+          + 'hidas nousu ylös vuoristoon. Punossa järven avointa selkää ei '
+          + 'edes näe, sillä kaupunki on suljetun lahden pohjukassa; '
+          + 'suuri järvi avautuu vasta veneestä ja saarilta, joilla '
+          + 'matkailija voi yöpyä paikallisen perheen luona. Helmikuussa '
+          + 'Puno täyttyy kymmenistätuhansista tanssijoista, kun kaupunki '
+          + 'juhlii suojeluspyhimystään. Bolivian puolella Copacabanan '
+          + 'basilikan edessä siunataan autoja, ja La Paziin vievällä '
+          + 'tiellä bussit ylittävät järven salmen lautalla. Järven vettä '
+          + 'ei pidä juoda puhdistamatta.',
+        artikkeli: {
+          nimi: 'Matkailijan Titicaca-järvi',
+          teksti: 'Titicaca-järvellä matkailijan tärkein matkatavara on aika totutella korkeuteen.',
+          nosto: 'Taquilen saarella neulominen on miesten työtä, ja pojat '
+            + 'oppivat sen jo lapsina.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille Punon kautta',
+              teksti: 'Perun puolella matka järvelle kulkee Punon kautta. '
+                + 'Lähin lentoasema on Juliacassa, noin 45 minuutin '
+                + 'ajomatkan päässä: sen kiitotie on Perun pisin, mutta '
+                + 'säännöllisiä kansainvälisiä suoria lentoja kentälle ei '
+                + 'ole. Maisemallisempi tapa on PeruRailin Titicaca-juna, '
+                + 'joka ajaa Cuscosta Punoon noin kymmenessä tunnissa. '
+                + 'Radan korkein kohta on La Rayan sola 4 313 metrissä, ja '
+                + 'siellä juna pysähtyy hetkeksi, jotta matkustajat pääsevät '
+                + 'jaloittelemaan. Vuodesta 2017 samaa rataa on kulkenut '
+                + 'myös Belmond Andean Explorer, Etelä-Amerikan ensimmäinen '
+                + 'luksusmakuujuna, jonka vaunut ajoivat aiemmin Australiassa. '
+                + 'Bussit ajavat Cuscosta kuudessa–kahdeksassa tunnissa '
+                + 'enimmäkseen radan viertä. Punon satamasta lähtevät veneet '
+                + 'Uros-saarille sekä Taquilelle ja Amantanílle. Puolen päivän '
+                + 'retken voi tehdä myös 31 kilometrin päähän Sillustaniin, '
+                + 'jossa Umayo-järveen pistävällä niemellä seisoo 91 '
+                + 'kivistä hautatornia. Collat rakensivat niitä ylhäisilleen '
+                + 'ennen inkoja ja vielä inkavallan aikana.',
+              kuva: [
+                {
+                  tiedosto: 'PeruRail La Raya.jpg',
+                  lyhyt: 'Cuscon ja Titicacan välinen juna pysähtyy La Rayan solassa, radan korkeimmalla kohdalla.',
+                  selite: 'PeruRailin sininen juna seisoo La Rayan asemalla '
+                    + 'yli 4 300 metrin korkeudessa, ja taustalla kohoavat '
+                    + 'kuivan ylängön lumilaikkuiset huiput.',
+                  lahde: 'Unukorno, Wikimedia Commons (CC BY 3.0)',
+                },
+                {
+                  tiedosto: 'Muelle de Puno.jpg',
+                  lyhyt: 'Punon laiturilta lähtevät veneet Taquilen ja Amantanín saarille.',
+                  selite: 'Punon satamassa odottaa rivi matkustajaveneitä, ja '
+                    + 'rannan kyltit osoittavat kohti Taquilen ja Amantanín '
+                    + 'saaria järven avoimella selällä.',
+                  lahde: 'Ciudades, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Urnas funerarias, Sillustani, Perú, 2015-08-01, DD 100.JPG',
+                  lyhyt: 'Sillustanin kiviset hautatornit seisovat Umayo-järven rannalla Punon lähellä.',
+                  selite: 'Sillustanin hautatornit eli chullpat on muurattu '
+                    + 'tarkasti sovitetuista kivilohkareista; oikealla '
+                    + 'pilkottaa Umayo-järven sininen vesi.',
+                  lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Korkeus tulee ensin',
+              teksti: 'Titicaca on niin korkealla, että ohut ilma tuntuu jo '
+                + 'kävellessä. Vuoristotautiin sairastuu nopeasti '
+                + 'noustessa noin viidesosa ihmisistä jo 2 500 metrissä ja '
+                + 'kaksi viidestä 3 000 metrissä, ja järvi on vielä '
+                + 'kahdeksansataa metriä ylempänä. Hyvä kunto ei suojaa. '
+                + 'Tärkein oire on päänsärky, joka alkaa usein kymmenen '
+                + 'tunnin sisällä ja hellittää yleensä parissa päivässä; jos '
+                + 'olo pahenee, ainoa varma hoito on laskeutua alemmas. '
+                + 'Siksi reitti kannattaa rakentaa portaittain, esimerkiksi '
+                + 'Pyhän laakson ja Cuscon kautta, ja ottaa ensimmäiset päivät '
+                + 'Punossa rauhallisesti. Hotellien aamiaispöydissä on usein '
+                + 'kokanlehtiä ja kokateetä, jota paikalliset suosittelevat '
+                + 'vuoristotautiin. Tee on Perussa ja Boliviassa laillista, '
+                + 'mutta jo yksi kupillinen voi näkyä huumetestissä, eikä '
+                + 'lehtiä pidä tuoda kotiin. Päivällä ohut ilma päästää läpi '
+                + 'polttavan auringon: saarille vievän veneen katolle '
+                + 'torkahtanut matkailija voi palaa pahasti. Yöt taas ovat '
+                + 'kylmiä, ja kesä–elokuussa lämpötila voi laskea pakkasen '
+                + 'puolelle.',
+              kuva: {
+                tiedosto: '20150720 Puno Hotelbreakfast.jpg',
+                lyhyt: 'Punolaisen hotellin aamiaispöydässä on tarjolla kokanlehtiä ja kokateepusseja.',
+                selite: 'Punolaisen hotellin aamiaispöydässä on kulhollinen '
+                  + 'kuivattuja kokanlehtiä ja kokateepusseja kamomillateen '
+                  + 'vieressä hotellin vieraille.',
+                lahde: 'Hekaheka, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Helmikuu kuuluu Candelarialle',
+              teksti: 'Joka helmikuu Puno juhlii suojeluspyhimystään, '
+                + 'Candelarian Neitsyttä, ja kahden viikon ajan kaupunki on '
+                + 'täynnä musiikkia. Juhla on Riossa pidettävän karnevaalin ja '
+                + 'Bolivian Oruron karnevaalin ohella Etelä-Amerikan '
+                + 'suurimpia, ja UNESCO lisäsi sen aineettoman '
+                + 'kulttuuriperinnön luetteloon vuonna 2014. Kaikki alkaa '
+                + 'aamunkoiton messusta ja ikivanhasta puhdistusmenosta, '
+                + 'minkä jälkeen Neitsyen kuvaa kannetaan kulkueessa kaduilla '
+                + 'musiikin ja tanssin saattelemana. Sitten seuraavat kaksi '
+                + 'tanssikilpailua. Mukana on yli 200 eri tanssia: '
+                + 'alkuperäiskylien omia tansseja ja kaupunginosien '
+                + 'loisteliaita pukutansseja. Tanssijoita on noin 40 000 ja '
+                + 'muusikoita 5 000, ja välillisesti mukana on noin 25 000 '
+                + 'muuta, kuten brodeeraajia, naamiontekijöitä ja '
+                + 'soittokuntien väkeä. Tunnetuin on diablada, paholaistanssi, jonka '
+                + 'syntysijasta Peru ja Bolivia kiistelevät yhä. Juhlaviikoille '
+                + 'majoitus kannattaa varata hyvissä ajoin.',
+              kuva: {
+                tiedosto: 'Diablada Candelaria 2025.jpg',
+                lyhyt: 'Diablada-tanssijat kilpailevat Punon Candelaria-juhlassa helmikuussa 2025.',
+                selite: 'Sarvipäiset diablada-tanssijat kirjailluissa '
+                  + 'asuissaan esiintyvät Candelaria-juhlan tanssikilpailussa '
+                  + 'Punon stadionilla; taustalla katsomo ja kaupungin '
+                  + 'ympäröivät rinteet.',
+                lahde: 'Leyner MCG, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Yö saarella perheen luona',
+              teksti: 'Titicacan suurta selkää pääsee tuntemaan vasta, kun '
+                + 'jää saarelle yöksi. Perun puolen Amantanílla asuu noin '
+                + '4 000 ihmistä kymmenessä kylässä, eikä saarella ole autoja '
+                + 'eikä hotelleja. Sen sijaan perheet majoittavat vieraita '
+                + 'omiin huoneisiinsa ja kokkaavat heille. Tuliaisiksi sopivat '
+                + 'ruokatarvikkeet kuten riisi ja öljy tai koulutarvikkeet, '
+                + 'mutta ei makeiset, sillä hammashoitoa saarella on niukasti. '
+                + 'Iltapäivällä kiivetään Pachamaman ja Pachatatan huipuille, '
+                + 'Äiti Maan ja Isä Maan temppelien raunioille, ihailemaan '
+                + 'auringonlaskua. Pimeän tultua ilma kylmenee heti, ja '
+                + 'illalla isännät pukevat vieraat omiin juhla-asuihinsa '
+                + 'tanssiaisiin. Taskulamppu on tarpeen, koska sähköä on '
+                + 'vähän. Naapurisaari Taquilelle tulee vuosittain kymmeniä '
+                + 'tuhansia päiväkävijöitä, mutta veneet saapuvat vasta '
+                + 'aamupäivällä ja lähtevät iltapäivällä. Yöpyjä näkee '
+                + 'saaren hiljaisena, ja torilla hinnoista ei tingitä.',
+              kuva: {
+                tiedosto: 'Atardecer en el Apu Pachatata, 2023.jpg',
+                lyhyt: 'Aurinko laskee Titicacan saarten taakse Amantanín Pachatata-vuorelta nähtynä.',
+                selite: 'Satuloitu hevonen seisoo Pachatata-vuoren rinteellä '
+                  + 'Amantanín saarella, kun aurinko laskee järven ja sen '
+                  + 'pienten saarten taakse lokakuussa 2023.',
+                lahde: 'Abelchristian111, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Copacabana ja Bolivian ranta',
+              teksti: 'Punosta Bolivian Copacabanaan ajetaan noin kolme ja '
+                + 'puoli tuntia, ja raja ylitetään Kasanissa noin seitsemän '
+                + 'ja puolen kilometrin päässä kaupungista. Kellot siirretään '
+                + 'rajalla tunnilla eteenpäin. Noin 6 000 asukkaan kaupungin '
+                + 'nimi tulee aimarankielisestä ilmauksesta "näkymä '
+                + 'järvelle", ja siitä sai nimensä myös Rio de Janeiron '
+                + 'kuuluisa ranta. Kaupungin keskus on vuosina 1669–1679 '
+                + 'rakennettu valkoinen basilika. Sen kappelissa säilytetään '
+                + 'Copacabanan Neitsyen kuvaa, Bolivian suojeluspyhimystä, jonka '
+                + 'inkahallitsijoiden sukuun kuulunut Francisco Tito Yupanqui veisti '
+                + '1500-luvun lopulla. Basilikan edessä siunataan '
+                + 'autoja: kukilla koristellut ajoneuvot pirskotetaan '
+                + 'vihkivedellä. Illalla kiivetään puolessa '
+                + 'tunnissa Cerro Calvarion ristintien asemien ohi katsomaan '
+                + 'auringonlaskua, ja rannan kojuista syödään järven taimenta. '
+                + 'Satamasta veneet vievät Isla del Solille, jonka pohjois- ja '
+                + 'keskiosa olivat kylien kiistan vuoksi suljettuina matkailijoilta vuosina '
+                + '2019–2022; tilanne kannattaa tarkistaa. La Paziin '
+                + 'mennessä tie ylittää Tiquinan salmen, joka on '
+                + 'kapeimmillaan 850 metriä. Matkustajat ylittävät sen '
+                + 'veneellä, ja bussit kuljetetaan lautalla perässä.',
+              kuva: {
+                tiedosto: 'Bautismo de autos frente a Catedral de CC (4).JPG',
+                lyhyt: 'Munkki siunaa kukilla koristeltuja pikkubusseja Copacabanan basilikan edessä.',
+                selite: 'Ruskeakaapuinen munkki pirskottaa vihkivettä '
+                  + 'kukkaseppelein koristeltujen pikkubussien ylle '
+                  + 'Copacabanan basilikan edustalla, ja ihmiset seuraavat '
+                  + 'siunausta vieressä.',
+                lahde: 'Elemaki, Wikimedia Commons (CC BY 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
@@ -127348,6 +130285,254 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Jason Rollette, Wikimedia Commons (CC BY 3.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Mount Rushmore, Crazy Horse Memorial, Custer State
+       * Park, South Dakota Highway 87 eli Needles Highway, U.S. Route 16A
+       * eli Iron Mountain Road, Rapid City, Rapid City Regional Airport,
+       * Keystone, Black Hills Central Railroad, Jewel Cave National
+       * Monument, Wind Cave National Park, Sturgis Motorcycle Rally) ja
+       * Wikivoyagesta (Mount Rushmore National Memorial, Badlands and
+       * Black Hills, Rapid City, Custer) — teksti omaa. Hinnat ja
+       * aukioloajat jätetty pois, koska Wikivoyagen tiedot ovat osin
+       * vanhoja. Vuoden 2026 ilotulitus: Commonsin luokka "Donald Trump at
+       * the 2026 Mount Rushmore Fireworks Celebrations" (Valkoisen talon
+       * kuvat 3.7.2026). Nostojen aiheita (nimi, Robinsonin idea,
+       * louhinta, Jefferson, Borglumin kuolema ja Hall of Records,
+       * kävijämäärä ja graniitin kuluminen, Kuusi isoisää, Fort Laramie,
+       * Custer ja kultaryntäys, Crazy Horsen alkuvaiheet) ei toisteta.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta
+       * ja kuvat katsottu silmin. Pystykuva: Avenue of Flags.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Mount Rushmore and State Flags 1.jpg',
+          lyhyt: 'Osavaltioiden liput reunustavat kävelykatua presidenttien kasvojen alla.',
+          selite: 'Avenue of Flags -kävelykatu vie pysäköintialueelta '
+            + 'näköalaterassille, ja sen varrella liehuvat kaikkien '
+            + 'osavaltioiden ja alusmaiden liput. Vasemmalla näkyvät '
+            + 'valonheittimet, joilla kasvot valaistaan kesäiltaisin.',
+          lahde: 'Amaury Laporte, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Mount Rushmore ei ole kaupunki vaan kansallinen '
+          + 'muistomerkki Mustien vuorten mäntymetsissä, Keystonen '
+          + 'pikkukaupungin kupeessa. Lähin lentoasema on Rapid Cityssä '
+          + 'runsaan 50 kilometrin ajomatkan päässä, eikä seudulla pääse '
+          + 'ilman autoa pitkälle. Kasvot näkee lyhyellä kävelyllä, mutta '
+          + 'moni jää iltaan, sillä kesällä vuori valaistaan hämärän '
+          + 'laskeuduttua. Samaan retkeen mahtuvat lähistöllä yhä veistettävä '
+          + 'Crazy Horse -muistomerkki, Custerin osavaltiopuiston '
+          + 'biisonilaumat ja kapeat vuoristotiet, joiden tunneleista '
+          + 'presidentit näkyvät kuin kehyksissä. Vuoret ovat lakotoille '
+          + 'pyhää maata, ja muistomerkki kertoo nykyään myös heidän '
+          + 'tarinaansa. Paras aika on kesä: lokakuusta toukokuuhun '
+          + 'seudulla sataa lunta, ja osa maisemateistä suljetaan talveksi.',
+        artikkeli: {
+          nimi: 'Matkailijan Mount Rushmore',
+          teksti: 'Mount Rushmorelle tullaan autolla, ja moni jää vuoren juurelle pimeään asti.',
+          nosto: 'Iron Mountain Roadin tunnelit linjattiin niin, että '
+            + 'presidenttien kasvot näkyvät niiden suuaukossa kuin taulussa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Rapid Citystä vuorille',
+              teksti: 'Lähin liikennelentoasema on Rapid City Regional '
+                + 'Airport, jolle lennetään suurten vaihtokenttien kautta; '
+                + 'sieltä muistomerkille on ajomatkaa noin 51 kilometriä. '
+                + 'Kaukoliikenteen bussit pysähtyvät Rapid Cityssä, mutta '
+                + 'vuorille ne eivät vie, joten useimmat vuokraavat auton. '
+                + 'Moottoritieltä I-90 käännytään Rapid Cityssä valtatielle '
+                + '16, joka nousee Keystoneen, ja sieltä tie 244 kiipeää '
+                + 'muistomerkille. Rapid Cityn keskustassa kannattaa '
+                + 'pysähtyä: kadunkulmissa seisoo luonnollisen kokoinen '
+                + 'pronssipatsas jokaisesta entisestä presidentistä, ja '
+                + 'siksi kaupunkia kutsutaan presidenttien kaupungiksi. '
+                + 'Yksi heistä, Calvin Coolidge, piti kesällä 1927 '
+                + 'kesätoimistoaan Rapid Cityssä ja puhui Mount Rushmoren '
+                + 'vihkiäisissä. Keystone on vuonna 1883 syntynyt '
+                + 'kaivoskylä, jossa asuu vain parisataa ihmistä mutta '
+                + 'jonka pääkatu on täynnä matkamuistokauppoja ja '
+                + 'motelleja. Hill Cityn ja Keystonen väliä kulkee '
+                + 'höyryjuna radalla, jota pitkin aikanaan tuotiin '
+                + 'veistotöiden kalustoa. Idästä tai etelästä tulevan '
+                + 'kannattaa valita Iron Mountain Road: kuvernööri Peter '
+                + 'Norbeck suunnitteli sen hitaaksi maisematieksi, jonka '
+                + 'yksikaistaisista tunneleista presidentit näkyvät '
+                + 'suoraan edessä ja jonka kierresillat kiertyvät '
+                + 'itsensä yli.',
+              kuva: [
+                {
+                  tiedosto: 'Calvin Coolidge statue (54721038957).jpg',
+                  lyhyt: 'Calvin Coolidge nostaa hattuaan Rapid Cityn keskustan kadunkulmassa.',
+                  selite: 'Rapid Cityn keskustassa on pronssipatsas '
+                    + 'jokaisesta entisestä presidentistä. Calvin Coolidge '
+                    + 'vietti kesän 1927 Mustilla vuorilla ja puhui Mount '
+                    + 'Rushmoren vihkiäisissä.',
+                  lahde: 'Gage Skidmore, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Through a tunnel on Iron Mountain Road. (f5007327-155d-4519-3e33-b713ab24ae16).jpg',
+                  lyhyt: 'Iron Mountain Roadin tunnelin suulta presidentit näkyvät mäntymetsän takana.',
+                  selite: 'Iron Mountain Roadin yksikaistaiset tunnelit '
+                    + 'linjattiin niin, että Mount Rushmoren kasvot näkyvät '
+                    + 'niiden läpi kaukana metsän yllä.',
+                  lahde: 'NPS Photo, Wikimedia Commons (Public domain)',
+                },
+                {
+                  tiedosto: 'Black Hills Central 104 (12690981295).jpg',
+                  lyhyt: 'Höyryveturi 104 vetää museojunaa kohti Hill Cityä.',
+                  selite: 'Black Hills Central Railroad ajaa museojunaa '
+                    + 'Hill Cityn ja Keystonen välillä. Rata valmistui '
+                    + 'Keystoneen vuonna 1900, ja sitä pitkin tuotiin '
+                    + 'myöhemmin Mount Rushmoren veistotöiden kalustoa.',
+                  lahde: 'Drew Jacksich, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Lippukujalta Presidenttien polulle',
+              teksti: 'Pysäköintialueelta kasvojen eteen on vain lyhyt '
+                + 'kävely. Leveä Avenue of Flags -kävelykatu rakennettiin '
+                + 'Yhdysvaltain 200-vuotisjuhlavuonna 1976, ja sen varrella '
+                + 'liehuvat aakkosjärjestyksessä kaikkien 50 osavaltion, '
+                + 'pääkaupunkipiirin ja alusmaiden liput. Kadun päässä on '
+                + 'vuonna 1998 valmistunut Grand View -terassi, jonka alla '
+                + 'toimiva museo kertoo veistotyöstä ja neljästä '
+                + 'presidentistä. Terassille asti pääsee esteettä. '
+                + 'Kilometrin mittainen Presidential Trail -polku kiertää '
+                + 'kivikkorinteen reunalle, jolta kasvot näkyvät '
+                + 'lähimpää, ja sen varrella on Gutzon Borglumin vuonna '
+                + '1939 rakennuttama ateljee. Siellä kerrotaan kesäisin '
+                + 'veiston työkaluista, ja esillä on kipsimalli, jossa '
+                + 'presidentit ulottuvat vyötäröön asti, kuten ne alun '
+                + 'perin piti veistää. Ateljeelle ja takaisin kuljetaan yli '
+                + '400 porrasta. Rinteillä liikkuu usein vuorikauriita, '
+                + 'jotka eivät ole alueen alkuperäisiä asukkaita: ne '
+                + 'polveutuvat laumasta, jonka Kanada lahjoitti Custerin '
+                + 'osavaltiopuistoon vuonna 1924 ja joka pääsi karkuun. '
+                + 'Muistomerkille pääsee maksutta, mutta pysäköinti '
+                + 'maksaa, eikä kansallispuistojen vuosikortti kelpaa '
+                + 'siihen, koska pysäköintialueen rakensi ja omistaa '
+                + 'yksityinen yhteisö.',
+              kuva: {
+                tiedosto: 'Sculptors Studio Interior Mt Rushmore 2024.jpg',
+                lyhyt: 'Puistonvartija kertoo veistotyöstä ateljeessa kipsimallin edessä.',
+                selite: 'Gutzon Borglumin vuonna 1939 rakennuttamassa '
+                  + 'ateljeessa on veistoksen kipsimalli, jossa presidentit '
+                  + 'ulottuvat vyötäröön asti. Kesäisin puistonvartijat '
+                  + 'kertovat siellä, miten kasvot tehtiin.',
+                lahde: 'Larry D. Moore, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kun vuori syttyy valoon',
+              teksti: 'Kesäiltaisin kannattaa jäädä muistomerkille pimeän '
+                + 'tuloon asti. Terassin alla olevassa ulkoamfiteatterissa '
+                + 'puistonvartija puhuu ensin presidenteistä ja maan '
+                + 'historiasta, sitten näytetään lyhyt elokuva, ja lopuksi '
+                + 'valonheittimet sytytetään ja kasvot alkavat hohtaa '
+                + 'mustaa taivasta vasten. Ohjelma järjestetään vain '
+                + 'kesäkaudella ja sään salliessa, ja aikataulu on '
+                + 'nähtävillä vierailukeskuksessa. Itsenäisyyspäivän '
+                + 'ilotulitukset ovat sen sijaan harvinaisia: vuosina '
+                + '1998–2009 ammutut raketit sytyttivät '
+                + 'kansallispuistoviraston mukaan ainakin 27 maastopaloa, '
+                + 'ja geologian tutkimuslaitos löysi alueen vesistä '
+                + 'perkloraattia, jonka lähteeksi se arveli ilotulitukset. '
+                + 'Sen jälkeen niitä on ammuttu vain vuosina 2020 ja 2026. '
+                + 'Iltaohjelma kertoo presidenttien tarinaa, mutta '
+                + 'Presidential Trail -polun alkuosan lakota-, nakota- ja '
+                + 'dakotakylä esittelee niiden kansojen tapoja, joille '
+                + 'vuori oli pyhä jo ennen veistosta. Kansat eivät ole '
+                + 'hyväksyneet Mustien vuorten menetystä: kun Yhdysvaltain '
+                + 'korkein oikeus vuonna 1980 määräsi niille 102 miljoonan '
+                + 'dollarin korvauksen, ne kieltäytyivät rahasta ja '
+                + 'vaativat maata takaisin. Vuonna 2004 muistomerkin '
+                + 'johtajaksi nimitettiin ensimmäistä kertaa '
+                + 'alkuperäisamerikkalainen, Gerard Baker.',
+              kuva: {
+                tiedosto: 'Mount Rushmore Lighting Ceremony.jpg',
+                lyhyt: 'Valonheittimet nostavat presidenttien kasvot esiin yön pimeydestä.',
+                selite: 'Kesäkaudella muistomerkin iltaohjelma päättyy '
+                  + 'siihen, että valonheittimet sytytetään ja '
+                  + 'graniittikasvot alkavat hohtaa mustaa taivasta vasten.',
+                lahde: 'Hardy008, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Crazy Horse, keskeneräinen naapuri',
+              teksti: 'Noin 27 kilometrin päässä Mount Rushmoresta, '
+                + 'Custerin ja Hill Cityn välisen valtatien varrella, '
+                + 'veistetään yhä toista vuorta. Crazy Horse -muistomerkki '
+                + 'on yksityisellä maalla, eikä sen säätiö ota vastaan '
+                + 'valtion rahaa, joten pääsymaksu peritään autokunnittain '
+                + 'ja sillä rahoitetaan sekä veistotyötä että opetusta. '
+                + 'Vierailukeskuksesta näkee kallion, jossa oglalalakotojen '
+                + 'sotapäällikön kasvot ovat valmiina: ne ovat 26,7 metriä '
+                + 'korkeat, kun Rushmoren presidenttien päät ovat '
+                + '18-metrisiä. Samaan rakennuskokonaisuuteen kuuluu '
+                + 'Pohjois-Amerikan intiaanimuseo, ja paikalla toimiva '
+                + 'Indian University of North America on vuodesta 2011 '
+                + 'järjestänyt kesäopintoja alkuperäiskansoihin kuuluville '
+                + 'opiskelijoille. Vuoren kyljessä työ etenee nyt '
+                + 'nopeammin kuin ennen: vuoteen 2025 mennessä pystytetty '
+                + 'torninosturi siirtää louhittuja kivilohkareita ja '
+                + 'kalustoa, ja veistäjät ovat siirtyneet hevosen harjaan '
+                + 'ja ratsastajan oikeaan olkapäähän. Valmistumisvuotta ei '
+                + 'ole ilmoitettu. Kaikki lakotat eivät hanketta hyväksy: '
+                + 'osa pitää pyhän vuoren veistämistä loukkauksena, sillä '
+                + 'Crazy Horse ei antanut valokuvata itseään, ja hänet '
+                + 'haudattiin paikkaan, jota ei haluttu kenenkään '
+                + 'löytävän.',
+              kuva: {
+                tiedosto: 'Museum Crazy Horse Memorial South Dakota 2024.jpg',
+                lyhyt: 'Tiipii seisoo Crazy Horse -muistomerkin museon puupaneloidussa salissa.',
+                selite: 'Crazy Horse -muistomerkin vierailukeskuksen '
+                  + 'museossa on esillä alkuperäiskansojen esineitä ja '
+                  + 'maalauksia, ja keskelle salia on pystytetty tiipii.',
+                lahde: 'Larry D. Moore, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Biisoneita ja graniittineuloja',
+              teksti: 'Mount Rushmoren eteläpuolella, Iron Mountain Roadin '
+                + 'päässä, alkaa Custerin osavaltiopuisto, Etelä-Dakotan '
+                + 'ensimmäinen ja suurin: yli 280 neliökilometriä preeriaa '
+                + 'ja vuoristoa, jonne tarvitaan maksullinen ajolupa. '
+                + 'Puistossa elää noin 1 400 biisonin lauma, joka sai '
+                + 'alkunsa 36 eläimestä vuonna 1914. Wildlife Loop '
+                + '-kiertotieltä näkee biisonien lisäksi preeriakoirien '
+                + 'yhdyskuntia, hanka-antilooppeja ja villiintyneitä '
+                + 'aaseja. Vuodesta 1965 lähtien viitisenkymmentä '
+                + 'ratsastajaa on kerran vuodessa ajanut lauman yhteen '
+                + 'terveystarkastukseen, ja näytöstä on seurannut jopa '
+                + '20 000 katsojaa. Biisoneita katsotaan autosta tai '
+                + 'kaukaa, sillä kömpelön näköinen eläin ehtii yllättävän '
+                + 'nopeasti hyökätä, eikä preeriakoiriakaan pidä silittää: '
+                + 'ne purevat. Puiston halki kiemurtelee vuonna 1922 '
+                + 'valmistunut Needles Highway, 23 kilometriä kapeaa tietä '
+                + 'graniittineulojen lomassa ja kolmen kallioon louhitun '
+                + 'tunnelin läpi; talveksi se suljetaan. Mustien vuorten '
+                + 'alla on lisäksi kaksi maailman pisimpiin kuuluvaa '
+                + 'luolaa: Jewel Caven käytäviä on kartoitettu yli 350 '
+                + 'kilometriä, ja Wind Cavessa on valtaosa maailman '
+                + 'tunnetuista kennomaisista boxwork-kalsiittimuodostumista. '
+                + 'Elokuussa majoitus kannattaa varata ajoissa, sillä '
+                + 'Sturgisin moottoripyörätapahtuma tuo seudulle '
+                + 'satojatuhansia ajajia.',
+              kuva: {
+                tiedosto: 'Buffalo at Custer State Park, South Dakota.jpg',
+                lyhyt: 'Biisoni kävelee kohti kameraa Custerin osavaltiopuiston preerialla.',
+                selite: 'Custerin osavaltiopuiston noin 1 400 biisonin '
+                  + 'lauma laiduntaa vapaana preerialla. Lauma kootaan '
+                  + 'kerran vuodessa terveystarkastukseen, ja osa '
+                  + 'eläimistä myydään huutokaupassa.',
+                lahde: 'Jack Siebold, MyTown Black Hills, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'historia',
@@ -127993,6 +131178,264 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Anggabuana, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Bali, Ngurah Rai International Airport, Trans Metro
+       * Dewata, Uluwatu Temple, Kecak, Ubud Monkey Forest, Tegallalang,
+       * Galungan, Penjor, Ngaben, Babi panggang, Sate lilit, Balinese
+       * cuisine, Denpasar) ja Wikivoyagen sivuilta Bali, Indonesia, Ubud,
+       * Bukit Peninsula, Kintamani ja Denpasar — teksti omaa. Maahantulo,
+       * matkailijamaksu ja bussilinjat muuttuvat usein, joten ne on
+       * kirjoitettu varauksin; hinnat ja aukioloajat on jätetty pois.
+       * Nostojen aiheita (Houtman, yhdeksän kuningaskuntaa, Kerta Gosa,
+       * Mads Lange, puputan, subak, Besakih, gamelan, Nyepin merkitys,
+       * canang sari), gallerian Nieuwenkamp-grafiikoita eikä ennen–nyt-
+       * kuvien aiheita (Kutan ranta, Jatiluwih) toisteta. Kuvien
+       * lisenssit ja tekijät tarkistettu Commonsin extmetadatasta ja
+       * kuvat katsottu silmin. Pystykuva: Uluwatun jyrkänne ja temppeli.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Cliffs of Uluwatu, Bali, Indonesia, 20220826 1006 1038.jpg',
+          lyhyt: 'Pura Luhur Uluwatu seisoo kalkkikivijyrkänteen laella Bukitin niemimaan kärjessä.',
+          selite: 'Uluwatun temppelin katot näkyvät korkean, kasvillisuuden '
+            + 'peittämän kalkkikivijyrkänteen laella, ja sen juurella Intian '
+            + 'valtameren aallot vaahtoavat turkoosina elokuussa 2022.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Bali ei ole kaupunki vaan tulivuorten saari, jolla '
+          + 'matkailijan päivät jakautuvat etelän rantojen, Ubudin '
+          + 'riisiterassien ja temppelien kesken. Lähes kaikki saapuvat '
+          + 'Kutan kupeessa olevalle lentoasemalle, ja etelän ruuhkissa '
+          + 'liikutaan kyytisovelluksella tai palkatun kuljettajan kanssa. '
+          + 'Temppeliin astutaan aina sarongissa, ja saaren juhlat seuraavat '
+          + '210 päivän kalenteria, joten Galungan-juhlan penjor-salot voivat '
+          + 'kaartua katujen yllä mihin vuodenaikaan tahansa. Warungeissa '
+          + 'syödään paahdettua porsasta ja sitruunaruohovartaita, hanavettä '
+          + 'ei juoda, ja läntinen monsuuni tuo sateet noin lokakuusta '
+          + 'huhtikuuhun. Vuonna 2025 saarella kävi lähes seitsemän miljoonaa '
+          + 'ulkomaista matkailijaa.',
+        artikkeli: {
+          nimi: 'Matkailijan Bali',
+          teksti: 'Balilla sarong kulkee laukussa rantapyyhkeen vieressä.',
+          nosto: 'Uluwatun kalliolla kecak-kuoro toistaa rytmiään '
+            + 'auringonlaskun edessä, ja makakit vahtivat katsojien '
+            + 'aurinkolaseja.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Lähes kaikki matkailijat saapuvat Ngurah Rain '
+                + 'kansainväliselle lentoasemalle. Sitä kutsutaan myös '
+                + 'Denpasarin kentäksi, vaikka se on Tubanissa Kutan ja '
+                + 'Jimbaranin välissä, noin 13 kilometriä pääkaupungista '
+                + 'etelään. Kentällä on vain yksi kiitotie, ja sitä on '
+                + 'suunniteltu laajennettavaksi mereen täytetylle maalle. '
+                + 'Indonesian 30 päivän turistiviisumin voi hakea verkosta '
+                + 'etukäteen, ja maahantulokortti täytetään sähköisesti ennen '
+                + 'lentoa; verkkoviisumilla pääsee Balilla automaattiporteista. '
+                + 'Vuonna 2024 maakunta alkoi periä ulkomaisilta matkailijoilta '
+                + 'omaa matkailijamaksua, mutta Wikivoyagen mukaan sitä ei '
+                + 'vuoden 2026 puolivälissä enää tarkastettu kentällä. Säännöt '
+                + 'muuttuvat usein, joten ne kannattaa tarkistaa viranomaisilta '
+                + 'juuri ennen matkaa. Tulohallista pääsee kiinteähintaisella '
+                + 'taksilla, jonka lipun saa kopista, tai Grab-kyytisovelluksen '
+                + 'omalta tiskiltä. Grab ja Gojek toimivat etelässä hyvin, mutta '
+                + 'Canggussa, Jimbaranissa ja Uluwatussa paikalliset taksikuskit '
+                + 'ovat pystyttäneet kylttejä, joiden mukaan sovelluskyydit eivät '
+                + 'saa ottaa siellä matkustajia. Julkinen Trans Metro Dewata '
+                + '-bussi kulkee kuudella linjalla Denpasarin seudulla ja Ubudiin '
+                + 'asti, mutta se on tehty työmatkalaisille: maksu hoidetaan '
+                + 'kortilla tai QR-koodilla, ja bussi jää usein ruuhkaan. Moni '
+                + 'palkkaa koko päiväksi auton ja kuljettajan. Skootterin saa '
+                + 'vuokralle helposti, mutta ajamiseen tarvitaan kansainvälinen '
+                + 'ajokortti moottoripyöräluokalla ja kypärä, eikä matkavakuutus '
+                + 'välttämättä korvaa onnettomuutta ilman niitä. Jaavalta pääsee '
+                + 'lautalla Ketapangista Gilimanukiin puolessa tunnissa ympäri '
+                + 'vuorokauden.',
+              kuva: [
+                {
+                  tiedosto: 'Terminal Internasional Bandara Ngurah Rai Bali.jpg',
+                  lyhyt: 'Matkailijat odottavat laukkuineen Ngurah Rain kansainvälisessä terminaalissa.',
+                  selite: 'Ngurah Rain lentoaseman kansainvälisen terminaalin '
+                    + 'korkean valkoisen kattokaaren alla matkailijat odottavat '
+                    + 'matkalaukkujensa kanssa lentotietotaulun edessä '
+                    + 'marraskuussa 2023.',
+                  lahde: 'Ardfeb, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Traffic on Monkey Forest Road in Ubud, Bali (15009547799).jpg',
+                  lyhyt: 'Skootterit ja autot jonottavat Jalan Monkey Forestilla Ubudin keskustassa.',
+                  selite: 'Ubudin Jalan Monkey Forest -kadulla skootterit '
+                    + 'pujottelevat autojen välissä, ja kadun reunaan on '
+                    + 'pysäköity moottoripyöriä rivissä elokuussa 2014.',
+                  lahde: 'Fabio Achilli, Wikimedia Commons (CC BY 2.0)',
+                },
+                {
+                  tiedosto: 'Prom ze wschodniej Jawy na Bali, 20220821 1105 9802.jpg',
+                  lyhyt: 'Autolautta ylittää Balinsalmen Jaavan Ketapangin ja Balin Gilimanukin välillä.',
+                  selite: 'KMP Karya Maritim III -autolautta matkalla Itä-Jaavan '
+                    + 'Ketapangista Balin Gilimanukiin elokuussa 2022. Salmen '
+                    + 'ylitys kestää noin puoli tuntia, mutta lastaamista saa '
+                    + 'joskus odottaa pitkään.',
+                  lahde: 'Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Etelän rannat ja Bukitin kalliot',
+              teksti: 'Suurin osa matkailijoista asuu saaren etelässä. Kutan ja '
+                + 'Legianin pitkillä hiekkarannoilla aallot sopivat '
+                + 'surffikoulujen aloittelijoille, Seminyakissa rantaa pitkin '
+                + 'voi kävellä kahviloiden ohi, ja pohjoisempana Canggu on '
+                + 'kasvanut vuoden 2010 jälkeen riisipelloista surffaajien ja '
+                + 'etätyöläisten suosimaksi alueeksi. Etelässä '
+                + 'liikenne on kuitenkin pahimmillaan, ja jalkakäytävät ovat '
+                + 'monin paikoin vain kapeita sadevesiojien kansia. Lentokentän '
+                + 'eteläpuolella alkaa Bukitin niemimaa, kohonneesta '
+                + 'koralliriutasta syntynyt kuiva kalkkikiviylänkö, jossa sataa '
+                + 'selvästi vähemmän kuin muualla saarella. Sen jyrkänteiden '
+                + 'alla murtuvat saaren kovimmat aallot: Uluwatu, Padang-Padang '
+                + 'ja Bingin ovat kokeneiden surffaajien paikkoja. Niemen '
+                + 'lounaiskärjessä kallion reunalla seisoo Pura Luhur Uluwatu, '
+                + 'yksi Balia suojelevista yhdeksästä suuntatemppelistä. Sen '
+                + 'makakit ovat tunnettuja varkaita, jotka nappaavat '
+                + 'aurinkolaseja, sandaaleja ja puhelimia ja luopuvat saaliistaan '
+                + 'vasta hedelmää vastaan. Joka ilta auringonlaskun aikaan '
+                + 'temppelin kalliolla esitetään kecak-tanssi. Kymmenet miehet '
+                + 'istuvat piirissä ja toistavat rytmikästä "tšak"-huutoa ilman '
+                + 'soittimia, kun keskellä tanssijat esittävät Ramayana-eepoksen '
+                + 'kohtauksia. Esitys muokattiin 1930-luvulla vanhasta '
+                + 'transsirituaalista, ja liput voivat loppua kesken. Rannalla '
+                + 'katsotaan lippuja: punainen lippu varoittaa vaarallisista '
+                + 'repivistä virtauksista, ja uimaan mennään keltaisten lippujen '
+                + 'väliin.',
+              kuva: {
+                tiedosto: 'Ramayana Kecak Dancers.jpg',
+                lyhyt: 'Kecak-kuoro nostaa kätensä Uluwatun amfiteatterissa täyden katsomon edessä.',
+                selite: 'Paljasrintaiset, ruudullisiin lannevaatteisiin '
+                  + 'pukeutuneet kecak-laulajat nostavat kätensä ilmaan '
+                  + 'öljylampun ympärillä, ja heidän takanaan katsomo täyttyy '
+                  + 'ilta-auringossa Uluwatun temppelin amfiteatterissa.',
+                lahde: 'Johannnindito Adisuryo, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ubud ja riisiterassit',
+              teksti: 'Ubud saaren keskiosassa on Balin taiteen ja käsityön '
+                + 'keskus. Matkailijasta se näyttää yhdeltä pikkukaupungilta, '
+                + 'mutta se on neljätoista kylää, joilla kullakin on oma '
+                + 'banjar-kyläneuvostonsa. Keskustan pääkadut ruuhkautuvat '
+                + 'päivittäin, mutta sivukujilla ja jokilaaksojen riisipelloilla '
+                + 'on yhä hiljaista, ja tanssia tai varjoteatteria esitetään '
+                + 'jossain joka ilta. Jalan Monkey Forestin päässä on pyhä '
+                + 'apinametsä, jossa eli vuonna 2023 noin 1 260 makakia ja '
+                + 'jonka alueella on kolme noin 1350 rakennettua temppeliä. '
+                + 'Apinat eivät pelkää ihmisiä, joten ruokaa ei oteta mukaan, ja '
+                + 'puremasta on hakeuduttava hoitoon raivotaudin takia. Noin '
+                + 'kymmenen kilometriä Ubudista pohjoiseen on Tegallalang, '
+                + 'jonka laaksoon porrastetut riisiterassit ovat saaren '
+                + 'kuvatuimpia. Kojuja ja kauppiaita on paljon, mutta aamulla '
+                + 'ennen kuumuutta ja väkijoukkoja terassien poluilla on vielä '
+                + 'tilaa. Campuhanin harjupolku alkaa Pura Gunung Lebahin '
+                + 'temppelin vierestä ja kulkee noin kaksi kilometriä harjannetta '
+                + 'pitkin; Wikivoyagen mukaan rakentaminen on vuoteen 2026 '
+                + 'mennessä vienyt osan sen maisemista. Ubud on noin 200 metrin '
+                + 'korkeudessa, joten illat ovat rannikkoa viileämpiä, mutta '
+                + 'tammi- ja helmikuussa sataa rankasti. Aikaiset herääjät '
+                + 'lähtevät Kintamanin puolelle Batur-tulivuorelle: noin 1 700 '
+                + 'metrin huipulle kiivetään pimeässä parissa tunnissa '
+                + 'katsomaan, kun aurinko nousee korkeamman Agungin takaa. '
+                + 'Paikallisen oppaan palkkaaminen on pakollista, vaikka reitti '
+                + 'on helppo.',
+              kuva: {
+                tiedosto: 'Rice terraces in Tegallalang 3.jpg',
+                lyhyt: 'Riisiterassit porrastuvat Tegallalangin rinteellä kookospalmujen alla.',
+                selite: 'Vihreät riisipellot nousevat kapeina penkereinä '
+                  + 'Tegallalangin laakson rinnettä ylös kookospalmujen juurelle '
+                  + 'Ubudin pohjoispuolella, ja rinteen laella liehuu värikkäitä '
+                  + 'lippuja.',
+                lahde: 'Christophe95, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sarong, penjor ja juhlakalenteri',
+              teksti: 'Balilla on arviolta 20 000 temppeliä, ja jokaiseen '
+                + 'astutaan sarongissa ja vyötärölle sidotussa kangasvyössä. '
+                + 'Suurissa matkailijoiden temppeleissä ne saa pääsylipun '
+                + 'yhteydessä tai pientä vuokraa vastaan, mutta oma sarong '
+                + 'kannattaa ostaa heti ensimmäisenä päivänä, sillä '
+                + 'harvemmin käydyissä temppeleissä vuokrausta ei välttämättä '
+                + 'ole. Temppeli '
+                + 'jakautuu kolmeen pihaan. Uloin on ihmisten puoli, jonne muut '
+                + 'kuin hindut pääsevät lähes aina, mutta sisimpään pyhäkköön '
+                + 'pääsy riippuu temppelistä ja käynnissä olevista menoista. '
+                + 'Tavaroita annetaan ja otetaan oikealla kädellä, eikä '
+                + 'kenenkään päähän kosketa. Saaren juhlat seuraavat 210 päivän '
+                + 'pawukon-kalenteria, joten niiden päivämäärät vaeltavat '
+                + 'vuodesta toiseen, ja jokainen temppeli viettää '
+                + 'odalan-juhlaansa ainakin kahdesti vuodessa. Suurin juhlista '
+                + 'on Galungan, jolloin esi-isien henkien uskotaan käyvän '
+                + 'maan päällä. Perheet pystyttävät porttiensa eteen penjorin, '
+                + 'korkean kaarevan bambusalon, joka koristellaan kookoksen '
+                + 'lehdillä, hedelmillä, riisillä ja leivonnaisilla. Juhla '
+                + 'päättyy kymmenen päivää myöhemmin Kuninganiin, ja seuraavat '
+                + 'Galunganit osuvat 13. tammikuuta ja 11. elokuuta 2027. '
+                + 'Nyepi-päivänä, seuraavan kerran 9. maaliskuuta 2027, myös '
+                + 'lentoasema ja satamat ovat kiinni vuorokauden. Ulkomaalaisten '
+                + 'huonoon käytökseen suhtaudutaan nykyään tiukasti: Bali '
+                + 'perusti vuonna 2024 oman turistipoliisin, ja vuonna 2023 '
+                + 'saarelta karkotettiin 340 ulkomaalaista muun muassa '
+                + 'viisumirikkomusten, luvattoman työn ja pyhissä paikoissa '
+                + 'sopimattoman käytöksen vuoksi.',
+              kuva: {
+                tiedosto: 'Penjors (16850614797).jpg',
+                lyhyt: 'Koristellut penjor-salot kaartuvat Ubudin sivukadun yllä.',
+                selite: 'Kaksi korkeaa, kärjestään kaartuvaa bambusaloa on '
+                  + 'koristeltu kookoksenlehtinauhoin Ubudin sivukadulla '
+                  + 'marraskuussa 2013, ja kadun päässä näkyy lisää saloja.',
+                lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Warungista yötorille, kuivakaudesta sateisiin',
+              teksti: 'Balilaista ruokaa syödään edullisimmin ja usein '
+                + 'parhaiten warungeissa, pienissä perheravintoloissa, joista '
+                + 'moni on erikoistunut yhteen ruokalajiin. Nasi campur on '
+                + 'riisiä, jonka ympärille kootaan pieniä annoksia lihaa, '
+                + 'vihanneksia ja sambalia. Toisin kuin muualla '
+                + 'muslimienemmistöisessä Indonesiassa Balin keittiö suosii '
+                + 'sianlihaa. Babi guling on mausteilla täytetty ja vartaassa '
+                + 'pyöritetty porsas, joka oli alun perin juhlamenojen ruokaa. '
+                + 'Bebek betutu on banaaninlehtiin kääritty, hitaasti kypsennetty '
+                + 'ankka, lawar hienonnettua vihannesta, kookosta ja lihaa, ja '
+                + 'sate lilit sitruunaruohon tai bambun ympärille painettua ja '
+                + 'hiilloksella grillattua jauhelihaa. Kasvissyöjän kannattaa '
+                + 'kysyä sambalista, sillä siinä on yleensä katkaraputahnaa. '
+                + 'Pääkaupunki Denpasar jää monelta näkemättä, vaikka sen '
+                + 'Kereneng-yötorilla syödään kojuista aitoa indonesialaista '
+                + 'ruokaa. Hanavettä ei juoda, ja paikallisen arak-viinan '
+                + 'kanssa on syytä olla varovainen, sillä metanolilla jatketut '
+                + 'juomat ovat aiheuttaneet myrkytyksiä ja kuolemia. Päivän '
+                + 'lämpötila on ympäri vuoden noin 20–33 astetta. Läntinen '
+                + 'monsuuni tuo sateita suunnilleen lokakuusta huhtikuuhun, '
+                + 'rankimmin joulu–maaliskuussa, jolloin kuurot tulevat usein '
+                + 'iltapäivällä ja rannoille huuhtoutuu roskia. Kesäkuusta '
+                + 'syyskuuhun on kuivaa, ja heinä–elokuu on vilkkainta sesonkia. '
+                + 'Vuorilla Bedugulissa ja Kintamanissa illat ovat koleita, '
+                + 'joten villapaita kannattaa pakata mukaan.',
+              kuva: {
+                tiedosto: 'Lawar babi guling.jpg',
+                lyhyt: 'Lautasella on babi gulingin rapeaa nahkaa ja lihaa sekä lawar-salaattia.',
+                selite: 'Balilaisessa annoksessa on paahdetun porsaan rapeaa '
+                  + 'nahkaa ja lihaa, hienonnettua lawar-vihannessalaattia ja '
+                  + 'lautasen reunalla jauhelihavarras.',
+                lahde: 'ybs, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'kulttuuri',
@@ -130019,6 +133462,246 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Rod Waddington, Wikimedia Commons (CC BY-SA 2.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on koko saari;
+       * opas seuraa etelään vievää kansallistie 7:ää (Antsirabe,
+       * Fianarantsoa, Ambalavao, Anja, Isalo) ja FCE-rataa. Taustatiedot
+       * englannin Wikipediasta (Isalo National Park, Anja Community
+       * Reserve, Ring-tailed lemur, Ambalavao, Antemoro people, Route
+       * nationale 7 (Madagascar), Antsirabe, Ivato International Airport,
+       * Transport in Madagascar, Fianarantsoa-Côte Est railway, Malagasy
+       * ariary, Malagasy cuisine, Nosy Boraha), ranskan Wikipedian
+       * Ambalavao-artikkelista (antemoro-paperi, havoha) ja Wikivoyagen
+       * sivuilta Madagascar, Isalo National Park, Ambalavao, Antsirabe ja
+       * Île Sainte-Marie — teksti omaa. Hinnat, viisumimaksut ja
+       * aukioloajat jätetty pois, koska Wikivoyagen luvut ovat vuosilta
+       * 2014–2020; torin viikonpäivät on merkitty Wikivoyagen tiedoksi.
+       * Sebutorin kokoluokasta lähteet eroavat (Wikivoyage: suurin,
+       * fr-Wikipedia: toiseksi suurin), siksi "saaren suurimpia".
+       * Nostojen aiheita (tsingy, Rova, Andafiavaratra, Ranavalona II,
+       * lähetyskirkot, Toamasinan satama, indri ja Andasibe, baobabien
+       * kuja, pantterikameleontti, fossa, hiirimakit ja Ranomafana),
+       * gallerian ja ennen–nyt-kuvien aiheita (sikidy, Neljän tien
+       * risteys, punainen ylänkö), maalehden aiheita (kanootit, Radama,
+       * Rovan palo, ai-ai, elefanttilintu, katarantus, riisiateriat,
+       * romazava ja sakay, vanilja, koba ja mofo gasy, valiha,
+       * hira gasy, salegy, sorabe, Ibonia, kabary, Rabearivelo) eikä
+       * Afrikan kulttuurinostoja (baobab, valiha, fady) toisteta.
+       * Kuvien lisenssit ja tekijät tarkistettu Commonsin extmetadatasta
+       * ja kuvat katsottu silmin. Pystykuva: Isalon Canyon des Makis ja
+       * Canyon des Rats. Hotelyn liitutaulun hinnat ovat vuodelta 2008.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Canyon des Makis & Canyon des Rats - Isalo-Gebirge.jpg',
+          lyhyt: 'Isalon kanjonin jyrkät hiekkakiviseinät kohoavat vihreän vesialtaan yllä.',
+          selite: 'Canyon des Makis ja Canyon des Rats Isalon kansallispuistossa: '
+            + 'tuuli ja vesi ovat uurtaneet hiekkakiveen kapeita, jyrkkäseinäisiä '
+            + 'rotkoja, joiden pohjalla virtaa vesi ja kasvaa rehevä kasvillisuus.',
+          lahde: 'Andrea Schieber, Wikimedia Commons (CC BY 2.0)',
+        },
+        kappale: 'Madagaskar on niin suuri ja sen tiet niin huonoja, että '
+          + 'matkailija joutuu valitsemaan: lentää tai hyväksyä, että '
+          + 'taksibussi lähtee vasta, kun jokainen paikka on täynnä. Useimmat '
+          + 'tulevat makien vuoksi, ja kansallispuistoihin mennään paikallisen '
+          + 'oppaan kanssa. Etelään vievän kansallistie 7:n varrella ovat '
+          + 'riksakaupunki Antsirabe, sebutoristaan tunnettu Ambalavao ja '
+          + 'Isalon hiekkakivikanjonit, ja Fianarantsoasta itärannikolle '
+          + 'kulkee juna, joka ylittää matkansa lopussa lentokentän '
+          + 'kiitotien. Taskuun kannattaa varata pieniä ariary-seteleitä ja '
+          + 'muutama sana malagassia.',
+        artikkeli: {
+          nimi: 'Matkailijan Madagaskar',
+          teksti: 'Madagaskarilla makeja katsotaan oppaan kanssa, ja taksibussi lähtee vasta täynnä.',
+          nosto: 'Manakaran lentokentällä juna ja lentokone jakavat saman '
+            + 'asfaltin: rata ylittää kiitotien samassa tasossa.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Kissamakit ja kanjonit',
+              teksti: 'Useimmat Madagaskarin kävijät tulevat katsomaan makeja, '
+                + 'ja siihen tarvitaan paikallinen opas. Esimerkiksi Isalon '
+                + 'kansallispuistoon saaren lounaisosassa ei saa mennä ilman '
+                + 'opasta, ja oppaat ja kantajat palkataan läheisestä '
+                + 'Ranohiran kylästä. Isalo on hiekkakiviylänkö, jonka tuuli '
+                + 'ja vesi ovat uurtaneet jopa 200 metriä syviksi kanjoneiksi. '
+                + 'Retket kestävät muutamasta tunnista viikkoon, ja kanjonien '
+                + 'pohjalla on luonnonaltaita, joissa voi uida. Seudun '
+                + 'bara-kansa hautaa vainajansa vuorten luoliin, joita pidetään '
+                + 'pyhinä, eikä hautoja kuvata ilman lupaa. Kansallistie 7:n '
+                + 'varrella, 13 kilometriä Ambalavaosta etelään, on Anjan '
+                + 'kyläsuojelualue. Kyläläiset perustivat sen vuonna 2001, kun '
+                + 'metsää raivattiin maissipelloiksi ja makeja metsästettiin '
+                + 'ruoaksi. Nykyään alueella elää noin 300 kissamakia, jotka '
+                + 'ovat tottuneet ihmisiin ja päästävät kävijät muutaman metrin '
+                + 'päähän. Ruokkiminen on kuitenkin kielletty, ja '
+                + 'matkailutuloilla rahoitetaan kylän koulutus- ja '
+                + 'terveyshankkeita. Kissamaki, malagassiksi maky, viettää '
+                + 'maassa enemmän aikaa kuin yksikään muu maki, ja viileinä '
+                + 'aamuina lauma istuu yhdessä vatsa aurinkoa kohti '
+                + 'lämmittelemässä.',
+              kuva: [
+                {
+                  tiedosto: 'Ring-Tailed Lemur, Anja Reserve (3953827770).jpg',
+                  lyhyt: 'Kissamaki istuu graniittilohkareella Anjan suojelualueella.',
+                  selite: 'Kissamaki katsoo kameraan graniittilohkareen päältä '
+                    + 'Anjan kyläsuojelualueella; vasemmassa reunassa näkyy '
+                    + 'mustavalkoisesti rengastettua häntää.',
+                  lahde: 'Antony Stanley, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'Anja Reserve 01.jpg',
+                  lyhyt: 'Anjan lohkareiden takana on järvi, riisipeltoja ja kylä kallioisen kukkulan juurella.',
+                  selite: 'Näkymä Anjan kyläsuojelualueelta Ambalavaon lähellä: '
+                    + 'etualalla graniittilohkareita ja metsää, alempana järvi, '
+                    + 'vihreitä riisipeltoja ja kylä paljaan kalliokukkulan '
+                    + 'juurella.',
+                  lahde: 'Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Isalo - Namaza - piscine naturelle.jpg',
+                  lyhyt: 'Pieni putous laskee luonnonaltaaseen Isalon Namazan reitin varrella.',
+                  selite: 'Luonnonallas Namazan reitin varrella Isalon '
+                    + 'kansallispuistossa: pieni putous laskee kirkkaaseen '
+                    + 'veteen kallioiden, saniaisten ja puiden keskellä.',
+                  lahde: 'Hardscarf, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Taksibussilla etelään',
+              teksti: 'Useimmat kansainväliset lennot laskeutuvat Ivaton '
+                + 'lentokentälle 16 kilometriä Antananarivon keskustasta '
+                + 'luoteeseen, osa Nosy Been saarelle. Maan sisällä lentäminen '
+                + 'säästää päiviä, sillä useimmat tiet ovat kuoppaisia ja '
+                + 'sadekaudella moni muuttuu mutavelliksi. Kotimaan lentoja '
+                + 'kuitenkin perutaan ja siirretään, joten tiukkoja '
+                + 'jatkoyhteyksiä ei kannata varata, ja lähtöaika kannattaa '
+                + 'varmistaa edellisenä iltana. Malagassit itse matkustavat '
+                + 'taksibusseilla (taxi-brousse): noin viidentoista hengen '
+                + 'pikkubusseilla, jotka lähtevät vasta täynnä, joten odotus voi '
+                + 'venyä tunneiksi. Kyyti on ahdas, ilmastointia ei ole ja '
+                + 'kuivalla kaudella pöly tunkee sisään, mutta kuljettaja jättää '
+                + 'matkustajan pyynnöstä reitin varrelle, vaikkapa kansallispuiston '
+                + 'kohdalle. Suosituin reitti on kansallistie 7, joka kulkee '
+                + 'pääkaupungista lähes tuhat kilometriä lounaisrannikon '
+                + 'Toliaraan ja on maan paremmin hoidettuja teitä. Varrella ovat '
+                + 'viileä kylpyläkaupunki Antsirabe, jonka kaduilla kulkee '
+                + 'tuhansia värikkäitä pousse-pousse-riksoja, sekä Fianarantsoa, '
+                + 'Ambalavao ja Isalo. Auton voi vuokrata, mutta lähes aina '
+                + 'kuljettajan kanssa, ja kuljettaja toimii usein myös oppaana '
+                + 'ja tulkkina.',
+              kuva: {
+                tiedosto: 'Madagascar - Taxi brousse Nord Sud.jpg',
+                lyhyt: 'Taksibussi kansallistie 7:llä, katolla matkustajien tavarat.',
+                selite: 'Vihreävalkoinen, Nord-Sud-tekstillä merkitty taksibussi '
+                  + 'ajaa kansallistie 7:llä kesäkuussa 2007; matkatavarat on '
+                  + 'köytetty katolle, ja tien varressa ajaa pyöräilijä '
+                  + 'myyntikojun ohi.',
+                lahde: 'Jean-Louis Vandevivère, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Juna kiitoradan poikki',
+              teksti: 'Ylängön Fianarantsoasta itärannikon Manakaraan kulkee '
+                + '163 kilometrin FCE-rata (Fianarantsoa–Côte Est). Ranskalaiset '
+                + 'rakennuttivat sen vuosina 1926–1936 siirtomaan '
+                + 'pakkotyöjärjestelmällä, ja kiskot saatiin Saksalta '
+                + 'ensimmäisen maailmansodan sotakorvauksina; osassa näkyy yhä '
+                + 'valmistusvuosi 1893. Rata laskeutuu noin 1 100 metristä '
+                + 'meren tasolle maailman uhanalaisimpiin kuuluvien metsien '
+                + 'halki. Vuonna 2000 kaksi peräkkäistä hirmumyrskyä aiheutti '
+                + 'radalle 280 maanvyöryä ja katkaisi liikenteen kuukausiksi, '
+                + 'kunnes rata korjattiin ulkomaisella tuella. Samana vuonna '
+                + 'tehdyn selvityksen mukaan junan pitäminen liikenteessä '
+                + 'säästää 20 vuodessa noin 97 000 hehtaaria metsää: radanvarren '
+                + 'kylät vievät junalla torille puissa kasvavia satojaan, ja '
+                + 'ilman junaa ne joutuisivat kaatamaan puunsa ja viljelemään '
+                + 'riisiä tai maniokkia. Manakarassa rata ylittää lentokentän '
+                + 'kiitotien samassa tasossa, ja tällaisia paikkoja tunnetaan '
+                + 'maailmassa vain kolme. Kalusto on vanhaa, ja katkenneet '
+                + 'kiskot, vaunujen viat ja myrskyjen maanvyöryt keskeyttävät '
+                + 'liikenteen usein. Aikataulu kannattaa siksi tarkistaa paikan '
+                + 'päällä juuri ennen matkaa.',
+              kuva: {
+                tiedosto: 'Rail-run-way-crossing.jpg',
+                lyhyt: 'FCE-radan juna ja pienkone kohtaavat Manakaran lentokentän kiitotiellä.',
+                selite: 'Manakaran lentokentällä rata leikkaa kiitotien samassa '
+                  + 'tasossa: punainen FCE-veturi seisoo kiskoilla, kun '
+                  + 'yksimoottorinen potkurikone rullaa sateenmärällä '
+                  + 'kiitotiellä lokakuussa 2009.',
+                lahde: 'chirlula, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Sebutori ja kukkapaperi',
+              teksti: 'Ambalavao on pieni kaupunki keskiylängön eteläreunalla, '
+                + '56 kilometriä Fianarantsoasta etelään kansallistie 7:n '
+                + 'varrella, ja sen asukkaat ovat enimmäkseen betsileoja. '
+                + 'Kaupungissa pidetään kahdesti viikossa sebumarkkinat, '
+                + 'Wikivoyagen mukaan keskiviikko- ja torstaiaamuisin, ja ne '
+                + 'ovat saaren suurimpia karjatoreja. Kaupungin keskustassa voi '
+                + 'käydä antemoro-paperin pajassa. Paperimassa tehdään '
+                + 'havoha-pensaan, erään mulperilajin, kuoresta, ja vielä '
+                + 'märän arkin pintaan painetaan kukkia ja lehtiä ennen kuin '
+                + 'arkki kuivataan. Taito on peräisin kaakkoisrannikon '
+                + 'antemoro-kansalta, ja nykyään kukka-arkkeja myydään '
+                + 'etenkin matkailijoille ja ulkomaille. Kaupungin '
+                + 'pohjoisosassa voi käydä silkkikutomossa: Ambalavaon silkki '
+                + 'saadaan erityisestä silkkiperhoslajista, jonka toukat '
+                + 'syövät tapia-puun lehtiä. Samaa puuta kasvaa laajimpina '
+                + 'yhtenäisinä metsikköinä juuri Isalossa. Torilla ja kylissä '
+                + 'ihmisiä kuvataan vain luvan kanssa, ja syrjäiseen kylään '
+                + 'asialle tultaessa on tapana tervehtiä ensin kylän '
+                + 'päämiestä.',
+              kuva: {
+                tiedosto: 'Zebu Market Ambalavao Madagascar.jpg',
+                lyhyt: 'Sebukarjaa ja kauppiaita Ambalavaon karjatorilla punamultaisten kukkuloiden keskellä.',
+                selite: 'Ambalavaon sebutorilla karjaa pidetään ryhmissä '
+                  + 'ruohikolla, ja ihmisiä kulkee punamultaista polkua pitkin '
+                  + 'kohti torin keskustaa; monella on kädessään paimensauva.',
+                lahde: 'JialiangGao, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Pieniä seteleitä ja tompoko',
+              teksti: 'Madagaskarin raha on ariary. Se on toinen maailman '
+                + 'kahdesta valuutasta, joita ei jaeta sadasosiin tai '
+                + 'kymmenyksiin: ariary jakautuu viiteen iraimbilanjaan, mutta '
+                + 'pikkuyksiköllä ei ole enää käytännössä arvoa. '
+                + 'Pankkiautomaatteja on isommissa kaupungeissa, mutta ne ovat '
+                + 'usein epäkunnossa, joten euroja tai dollareita kannattaa '
+                + 'pitää varalla. Pieniä seteleitä tarvitaan: suurella setelillä '
+                + 'maksaminen herättää huomiota, eikä myyjällä usein ole '
+                + 'vaihtorahaa. Edullisimmin syö hotelyssä. Nimestään huolimatta '
+                + 'se on ruokapaikka eikä hotelli, ja riisin kanssa saa '
+                + 'päivän lisukkeen. Katukioskien kahvi juodaan '
+                + 'makeana kondensoidun maidon kanssa, mutta hanavettä ei '
+                + 'juoda. Koko saarella puhutaan malagassia, ja ranska on '
+                + 'toinen virallinen kieli. Muutama malagassin sana ilahduttaa, '
+                + 'ja vanhempia ihmisiä ja virkailijoita puhutellaan '
+                + 'kohteliaisuussanalla tompoko. Sadekausi kestää marraskuusta '
+                + 'huhtikuuhun, ja silloin itärannikolle iskee hirmumyrskyjä. '
+                + 'Toukokuusta lokakuuhun on kuivempaa ja viileämpää, ja '
+                + 'kesä–syyskuussa ryhävalaat saapuvat Sainte-Marien saaren ja '
+                + 'mantereen väliseen salmeen parittelemaan ja poikimaan. '
+                + 'Antananarivossa ei pidä kävellä pimeällä, ja hyttysiltä on '
+                + 'suojauduttava hämärän tultua. Verkon matkaoppaiden tiedot '
+                + 'vanhenevat nopeasti, joten turvallisuus- ja terveystiedot '
+                + 'kannattaa tarkistaa juuri ennen lähtöä.',
+              kuva: {
+                tiedosto: 'Hotely menu Madagascar.jpg',
+                lyhyt: 'Hotelyn liitutaululle on kirjoitettu päivän ruoat ja niiden hinnat ariaryinä.',
+                selite: 'Hotelyn taulussa lukee Sakafo anio, päivän ruoka: '
+                  + 'listalla on muun muassa kanaa, kalaa, pihviä ja keittoja '
+                  + 'riisin tai ranskalaisten kanssa. Kuva on vuodelta 2008, '
+                  + 'eivätkä hinnat enää päde.',
+                lahde: 'Hery Zo Rakotondramanana, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',

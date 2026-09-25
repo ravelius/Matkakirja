@@ -21,9 +21,11 @@
  * 20260925.md.
  *
  * TUNNETUT KOHTAUSKUVAT: 70 kuvaa odottaa kuvaputken (Codexin) leikattua
- * versiota. Ateenan 6 on pilotti build 14:ssä; loput tilataan, kun
- * omistaja on hyväksynyt pilotin. Kun kuva on korvattu, se PITÄÄ
- * poistaa alta — toinen testi kaatuu, jos lista kuvaa jo leikattua.
+ * versiota. Kaikki 70 on tilattu 25.9.2026 (Ateenan 6 ensin pilottina
+ * build 14:ään, loput 64 kaupungeittain samana päivänä — omistaja
+ * hyväksyi kaikki odottamatta pilotin tulosta). Kun kuva on korvattu,
+ * se PITÄÄ poistaa alta — toinen testi kaatuu, jos lista kuvaa jo
+ * leikattua.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
