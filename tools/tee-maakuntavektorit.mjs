@@ -4,6 +4,8 @@
  *   node tools/tee-maakuntavektorit.mjs --ne=<ne_10m_admin_1_states_provinces.geojson>
  *        [--ulos=<kansio>] [--maat=CHE,DEU,…] [--versio=2026-09-22a]
  *        [--harvennus=0.004] [--maxsarma=1.5] [--nykyalueet=<kansio>] [--kuiva]
+ *        [--wikidata=<json>] [--pelimaat=<json> --nimimoduuli=js/packs/maakunnat-nimet.js]
+ *        [--hae-wikidata=<json>]   hakee alueiden suomenkieliset nimet Wikidatasta
  *        [--taso=admin1|admin0]   admin0 = maapolygonit (ne_10m_admin_0_countries)
  *
  * OMISTAJAN TOIVE (maakuntalinssi, Karttasepän luovutus 21.9.2026 ilta,
@@ -91,11 +93,101 @@ export const maakuntienKansio = (versio) => `julisteet/pallo/maakunnat/${versio}
  */
 export const OHITA = new Set(['ATA']);
 
-/** Ryhmittely maittain — sama kuin nimiötason nykyalueilla. */
+/*
+ * POHJOIS-MAKEDONIAN TILASTOALUEET (maakunnat kaikille maille, löydös 105,
+ * 25.9.2026): NE:n `region` puuttuu 15 kunnalta ja Skopje on kahdesti
+ * ("Skopje", "Greater Skopje"). Puuttuvat on sijoitettu virallisiin
+ * kahdeksaan tilastoalueeseen kuntaluettelon mukaan.
+ */
+const MKD_ALUE = {
+  'Greater Skopje': 'Skopje', Strumitsa: 'Southeastern', Bosilovo: 'Southeastern', Gevgelija: 'Southeastern',
+  Jegunovce: 'Polog', Tearce: 'Polog', Tetovo: 'Polog', 'Vrapcište': 'Polog', 'Staro Nagoričane': 'Northeastern',
+  Oslomej: 'Southwestern', Drugovo: 'Southwestern', Plasnica: 'Southwestern', Mogila: 'Pelagonia',
+  Rosoman: 'Vardar', Skopje: 'Skopje', Zrnovci: 'Eastern',
+};
+
+/*
+ * Ryhmittely maittain — sama kuin nimiötason nykyalueilla (ITA/ESP/FRA
+ * `region`, GBR `geonunit`). MAAKUNNAT KAIKILLE MAILLE (löydös 105, Fable
+ * 25.9.2026): NE:n admin-1 on joissain maissa kunta- tai piiritaso
+ * (Slovenia 193, Latvia 119, Filippiinit 118, Uganda 112, Pohjois-
+ * Makedonia 84, Azerbaidžan 78, Malta 68, Burkina Faso 45, Unkari 43
+ * läänin ja kaupungin osaa). Niissä ryhmitellään NE:n oman seutukentän
+ * mukaan, jolloin listassa on maakunnan kokoisia alueita. Muut maat
+ * pysyvät `name`-tasolla (esim. Turkin 81 ja Thaimaan 77 maakuntaa ovat
+ * maan oikea ylätaso).
+ */
 const RYHMA = {
   ITA: (p) => p.region, ESP: (p) => p.region, FRA: (p) => p.region, GBR: (p) => p.geonunit,
+  SVN: (p) => p.region, LVA: (p) => p.region, PHL: (p) => p.region, UGA: (p) => p.region,
+  AZE: (p) => p.region, BFA: (p) => p.region, MLT: (p) => p.region_sub,
+  HUN: (p) => (p.name === 'Budapest' ? 'Budapest'
+    : p.region_sub === 'Gyor-Moson-Sopron' ? 'Győr-Moson-Sopron' : p.region_sub),
+  MKD: (p) => (p.region ? MKD_ALUE[p.region] ?? p.region : MKD_ALUE[p.name]),
 };
 export const ryhmanTunnus = (iso, p) => (RYHMA[iso]?.(p) || p.name || p.adm1_code);
+
+/*
+ * Seuturyhmien suomenkieliset nimet, kun seutu on suomeksi vakiintunut.
+ * Muut seuturyhmät (Filippiinien, Azerbaidžanin ja Burkina Fason alueet,
+ * Slovenian tilastoalueet) kulkevat NE:n nimellä; Sisältökirjuri voi
+ * suomentaa ne js/packs/maakunnat-nimet.js-tiedostossa.
+ */
+const SEUTU_FI = {
+  LVA: { Kurzeme: 'Kuramaa', Riga: 'Riika', Latgale: 'Latgale', Vidzeme: 'Vidzeme', Zemgale: 'Zemgale' },
+  UGA: { Central: 'Keskinen alue', Eastern: 'Itäinen alue', Northern: 'Pohjoinen alue', Western: 'Läntinen alue' },
+  MKD: {
+    Skopje: 'Skopje', Southwestern: 'Lounainen alue', Southeastern: 'Kaakkoinen alue', Northeastern: 'Koillinen alue',
+    Eastern: 'Itäinen alue', Polog: 'Polog', Vardar: 'Vardar', Pelagonia: 'Pelagonia',
+  },
+  MLT: {
+    'Southern Harbour': 'Eteläinen satama-alue', 'Northern Harbour': 'Pohjoinen satama-alue', Northern: 'Pohjoinen alue',
+    Western: 'Läntinen alue', 'South Eastern': 'Kaakkoinen alue', 'Gozo and Comino': 'Gozo ja Comino',
+  },
+};
+
+/*
+ * YLEISSANALLA PÄÄTTYVÄ WIKIDATA-NIMI EI KELPAA LISTAAN: "Badghisin
+ * maakunta", "Tukholman lääni" ja "Karjalan tasavalta" toistavat
+ * hallintotason ja jättävät nimen genetiiviin. Yleissanaa ei voi
+ * leikata pois, koska genetiivistä ei saa perusmuotoa säännöllä
+ * (sama linja kuin js/fokuskohteet.js v1224: morfologiaa ei arvata).
+ * Perusmuoto HAETAAN Natural Earthin omista nimistä (name, name_alt,
+ * gn_name, woe_name): kelpaa se, joka alkaa lähes samoin kuin genetiivi
+ * ilman yleissanaa ("Keski-Suomen" → "Keski-Suomi", "Lapin" → "Lappi").
+ * Jos sellaista ei ole, käytetään NE:n nimeä ("Stockholm").
+ */
+const YLEISSANA = /\s\(?(alue|maakunta|lääni|piiri|prefektuuri|piirikunta|provinssi|kunta|kreivikunta|kaupunginosa|departementti|departmentti|kuvernementti|kuvernoraatti|kantoni|aluepiiri|emiraatti|tasavalta|hallintoalue|osavaltio|oblasti|kraji?|voivodikunta|piirikunta|territorio|regioona|seutukunta)\)?$/u;
+
+/**
+ * Alueen näkyvä nimi: kuratoitu nykyalueet-nimi (8 maata) → seuturyhmän
+ * suomennos → Wikidatan suomenkielinen nimi (`name`-tason alueet, NE:n
+ * `wikidataid`), jos se ei pääty yleissanaan → NE:n nimi.
+ */
+export function alueenNimi(iso, tunnus, p, { kuratoidut = null, wikidata = null } = {}) {
+  if (kuratoidut?.[tunnus]) return kuratoidut[tunnus];
+  if (RYHMA[iso]) return SEUTU_FI[iso]?.[tunnus] ?? tunnus;
+  const fi = wikidata?.[p.wikidataid]?.fi;
+  if (fi && !YLEISSANA.test(fi)) return fi;
+  if (fi) {
+    const vartalo = fi.replace(YLEISSANA, '');
+    const ehdokkaat = [p.name, ...(p.name_alt ?? '').split('|'), p.gn_name, p.woe_name].filter(Boolean);
+    const osuma = ehdokkaat.find((e) => perusmuotoOsuu(vartalo, e));
+    if (osuma) return osuma;
+  }
+  return p.name ?? tunnus;
+}
+
+/** Genetiivivartalo ("Keski-Suomen") ja perusmuotoehdokas ("Keski-Suomi"). */
+export function perusmuotoOsuu(vartalo, ehdokas) {
+  if (!vartalo.endsWith('n') || /\s/u.test(ehdokas.replace(/-/g, '')) !== /\s/u.test(vartalo.replace(/-/g, ''))) return false;
+  // Genetiivi voi pidentää lyhyttä nimeä enemmän kuin kaksi merkkiä ("Troms" → "Tromssan").
+  if (ehdokas.length >= 3 && vartalo.toLowerCase().startsWith(ehdokas.toLowerCase())) return true;
+  if (ehdokas.length < vartalo.length - 2 || ehdokas.length > vartalo.length + 1) return false;
+  let yhteinen = 0;
+  while (yhteinen < ehdokas.length && ehdokas[yhteinen].toLowerCase() === vartalo[yhteinen].toLowerCase()) yhteinen += 1;
+  return yhteinen >= Math.max(3, vartalo.length - 3);
+}
 
 /*
  * ADMIN-0 SAMASTA PUTKESTA (Fable 22.9.2026: kerma tehdään GPU-
@@ -437,7 +529,8 @@ export function varita(naapurit) {
  * Yhden maan alueet NE-piirteistä kolmioverkoksi.
  *
  * @param {object[]} piirteet NE-piirteet (adm0_a3 = iso)
- * @param {{ harvennus?: number, maxsarma?: number, nimet?: Record<string,string> }} asetukset
+ * @param {{ harvennus?: number, maxsarma?: number, nimet?: Record<string,string>,
+ *   wikidata?: Record<string, { fi?: string }> }} asetukset
  */
 export function kolmioiMaa(iso, piirteet, asetukset = {}) {
   const harvennus = asetukset.harvennus ?? HARVENNUS;
@@ -446,7 +539,8 @@ export function kolmioiMaa(iso, piirteet, asetukset = {}) {
   const ryhmat = new Map();
   for (const f of piirteet) {
     const tunnus = admin0 ? iso : ryhmanTunnus(iso, f.properties);
-    const nimi = admin0 ? (f.properties.NAME ?? f.properties.name ?? iso) : (RYHMA[iso] ? tunnus : f.properties.name);
+    const nimi = admin0 ? (f.properties.NAME ?? f.properties.name ?? iso)
+      : alueenNimi(iso, tunnus, f.properties, { kuratoidut: asetukset.nimet, wikidata: asetukset.wikidata });
     if (!ryhmat.has(tunnus)) ryhmat.set(tunnus, { tunnus, nimi, polygonit: [] });
     const polys = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates;
     ryhmat.get(tunnus).polygonit.push(...polys);
@@ -457,7 +551,7 @@ export function kolmioiMaa(iso, piirteet, asetukset = {}) {
   for (const r of ryhmat.values()) {
     const indeksi = alueet.length;
     const alue = {
-      tunnus: r.tunnus, nimi: asetukset.nimet?.[r.tunnus] ?? r.nimi, vari: 0, renkaat: [],
+      tunnus: r.tunnus, nimi: r.nimi, vari: 0, renkaat: [],
       lon: 0, lat: 0, laatikko: [Infinity, Infinity, -Infinity, -Infinity],
     };
     let ala = 0; let cx = 0; let cy = 0;
@@ -616,7 +710,8 @@ export function lueNimet(kansio) {
 
 /**
  * @param {{ ne: string, ulos: string, versio: string, maat?: string[], harvennus?: number,
- *   maxsarma?: number, nykyalueet?: string, kuiva?: boolean, kerro?: (rivi: string) => void }} a
+ *   maxsarma?: number, nykyalueet?: string, wikidata?: string, nimimoduuli?: string,
+ *   pelimaat?: string, kuiva?: boolean, kerro?: (rivi: string) => void }} a
  */
 export function teeMaakuntavektorit(a) {
   const kerro = a.kerro ?? (() => {});
@@ -637,10 +732,15 @@ export function teeMaakuntavektorit(a) {
   };
   const taulukko = [];
   const nimet = lueNimet(a.nykyalueet);
+  const wikidata = a.wikidata ? JSON.parse(readFileSync(a.wikidata, 'utf8')) : null;
+  const nimisto = {};
   if (!a.kuiva) mkdirSync(a.ulos, { recursive: true });
   for (const [iso, piirteet] of [...maittain.entries()].sort()) {
     const alku = Date.now();
-    const maa = kolmioiMaa(iso, piirteet, { harvennus: luettelo.harvennus, maxsarma: luettelo.maxsarma, nimet: nimet.get(iso) ?? null, taso });
+    const maa = kolmioiMaa(iso, piirteet, {
+      harvennus: luettelo.harvennus, maxsarma: luettelo.maxsarma, nimet: nimet.get(iso) ?? null, wikidata, taso,
+    });
+    nimisto[iso] = maa.alueet.map((x) => [x.tunnus, x.nimi]);
     const puskuri = koodaaMaa(maa);
     const gz = gzipSync(puskuri).length;
     const alueet = maa.alueet.map((x) => ({
@@ -664,7 +764,78 @@ export function teeMaakuntavektorit(a) {
     writeFileSync(join(a.ulos, 'mitat.json'), JSON.stringify(taulukko, null, 1));
     writeFileSync(join(a.ulos, 'kansio.txt'), `${(taso === 'admin0' ? maapolygonienKansio : maakuntienKansio)(a.versio)}\n`);
   }
-  return { luettelo, taulukko };
+  if (a.nimimoduuli && a.pelimaat) {
+    const pelimaat = JSON.parse(readFileSync(a.pelimaat, 'utf8'));
+    writeFileSync(a.nimimoduuli, nimimoduulinTeksti(nimisto, pelimaat, a.versio));
+    kerro(`nimimoduuli ${a.nimimoduuli}: ${Object.keys(pelimaat).length} maata`);
+  }
+  return { luettelo, taulukko, nimisto };
+}
+
+/*
+ * MAAKUNTIEN NIMISTÖ KAIKILLE PELIN MAILLE (löydös 105, Fable 25.9.2026):
+ * js/packs/maakunnat-nimet.js = iso → { tunnus: nimi } jokaiselle maalle,
+ * jonka jokin paketti tuntee (countryShapes). Maa, jolla on alle kaksi
+ * aluetta (pienvaltiot, NE:ssä ei admin-1-jakoa), saa TYHJÄN olion:
+ * "ei maakuntia" ilmaistaan datassa aina näin, ei puuttuvalla avaimella.
+ * Rivit ovat suomalaisessa aakkosjärjestyksessä.
+ */
+const aakkos = new Intl.Collator('fi');
+export function nimimoduulinTeksti(nimisto, pelimaat, versio) {
+  const maat = Object.entries(pelimaat).sort((x, y) => aakkos.compare(x[1], y[1]) || aakkos.compare(x[0], y[0]));
+  const rivit = [];
+  for (const [iso] of maat) {
+    const alueet = (nimisto[iso] ?? []).slice().sort((x, y) => aakkos.compare(x[1], y[1]));
+    if (alueet.length < 2) { rivit.push(`  ${iso}: {},`); continue; }
+    rivit.push(`  ${iso}: {`);
+    for (const [tunnus, nimi] of alueet) rivit.push(`    ${JSON.stringify(tunnus)}: ${JSON.stringify(nimi)},`);
+    rivit.push('  },');
+  }
+  const maarivit = maat.map(([iso, nimi]) => `  { iso: '${iso}', nimi: ${JSON.stringify(nimi)} },`);
+  return `/*
+ * MAAKUNTIEN NIMISTÖ KAIKILLE PELIN MAILLE — GENEROITU, älä muokkaa käsin
+ * (paitsi nimien suomennoksia; seuraava ajo kirjoittaa tiedoston uudelleen).
+ *
+ *   node tools/tee-maakuntavektorit.mjs --ne=<ne_10m_admin_1_states_provinces.geojson> \\
+ *     --versio=${versio} --nykyalueet=docs/raportit/kaappaukset/maakuntavedos-20260921/vedos4 \\
+ *     --wikidata=<wikidata-admin1.json> --pelimaat=<pelimaat.json> --nimimoduuli=js/packs/maakunnat-nimet.js
+ *
+ * Avaimet: iso → { tunnus: nimi }, tunnus = maakuntavektorien alueen tunnus
+ * (julisteet/pallo/maakunnat/${versio}/<ISO>.json), joten "ISO:tunnus" on sama
+ * avain kuin kartan värjäyksessä ja Maakunnat-välilehdellä. Nimi: kuratoitu
+ * nykyalueet-nimi → seuturyhmän suomennos → Wikidatan suomenkielinen nimi →
+ * Natural Earthin nimi (public domain). TYHJÄ OLIO = maalla ei ole maakuntia.
+ */
+export const MAAKUNNAT_VERSIO = '${versio}';
+
+export const MAAKUNNAT_KAIKKI = {
+${rivit.join('\n')}
+};
+
+/** Pelin maat suomalaisessa aakkosjärjestyksessä (paketin countryShapes-nimi). */
+export const MAAKUNNAT_KAIKKI_MAAT = [
+${maarivit.join('\n')}
+];
+`;
+}
+
+/** Wikidatan nimet (fi, sv, en) NE:n wikidataid-tunnuksille; kerran ajettava haku. */
+export async function haeWikidata(ne, polku) {
+  const ids = [...new Set(JSON.parse(readFileSync(ne, 'utf8')).features
+    .map((f) => f.properties.wikidataid).filter(Boolean))].sort();
+  const ulos = {};
+  for (let i = 0; i < ids.length; i += 50) {
+    const q = new URLSearchParams({
+      action: 'wbgetentities', ids: ids.slice(i, i + 50).join('|'), props: 'labels', languages: 'fi|sv|en', format: 'json',
+    });
+    const vastaus = await fetch(`https://www.wikidata.org/w/api.php?${q}`, { headers: { 'User-Agent': 'Matkakirja-karttatyokalu/1.0' } });
+    const d = await vastaus.json();
+    for (const [k, v] of Object.entries(d.entities ?? {})) {
+      ulos[k] = Object.fromEntries(['fi', 'sv', 'en'].map((l) => [l, v.labels?.[l]?.value ?? null]));
+    }
+  }
+  writeFileSync(polku, JSON.stringify(ulos));
+  return ulos;
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
@@ -677,6 +848,11 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
     console.error('anna --ne=<ne_10m_admin_1_states_provinces.geojson>');
     process.exit(2);
   }
+  if (arg('hae-wikidata', null)) {
+    const w = await haeWikidata(NE, arg('hae-wikidata', null));
+    console.log(`wikidata: ${Object.keys(w).length} tunnusta, suomeksi ${Object.values(w).filter((x) => x.fi).length}`);
+    process.exit(0);
+  }
   const VERSIO = arg('versio', `${new Date().toISOString().slice(0, 10)}a`);
   const MAAT = arg('maat', null);
   const { taulukko } = teeMaakuntavektorit({
@@ -687,6 +863,9 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
     harvennus: Number(arg('harvennus', HARVENNUS)),
     maxsarma: Number(arg('maxsarma', MAXSARMA)),
     nykyalueet: arg('nykyalueet', null),
+    wikidata: arg('wikidata', null),
+    pelimaat: arg('pelimaat', null),
+    nimimoduuli: arg('nimimoduuli', null),
     taso: arg('taso', 'admin1'),
     kuiva: process.argv.includes('--kuiva'),
     kerro: (rivi) => console.log(rivi),
