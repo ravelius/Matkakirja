@@ -26,6 +26,12 @@ namespace Matkakirja
         MaterialPropertyBlock lohko;
         float peitto, tavoite, nopeus = 1f;
 
+        // LÄMPÖERÄ (PallonLepo): näkyvä levy animoituu aina (Usva-varjostimen ajelehdinta _Timella ja peiton häivytys);
+        // lennon jälkeen häivytys jatkuu 1,4 s Nappulan Paatalennon jälkeen.
+        void OnEnable() => PallonLepo.Animoi(Nakyy, "usvalevy");
+        void OnDisable() => PallonLepo.Poista(Nakyy);
+        bool Nakyy() => piirto != null && piirto.enabled;
+
         /// <summary>Kokeilu (komento "lentoharmaa usva pois"): levy ei piirry, vaikka peitto olisi päällä.</summary>
         public static bool Estetty;
 

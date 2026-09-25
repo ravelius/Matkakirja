@@ -17,6 +17,8 @@ namespace Matkakirja
     /// Paikallinen laattapalvelin (127.0.0.1) Cesiumin ja ämpärin väliin. Cesium hakee
     /// pallolaatat ja maaston osoitteesta http://127.0.0.1:portti/r/&lt;ämpärin polku&gt;, ja
     /// palvelin vastaa järjestyksessä:
+    ///   0. buildin laattapaketista (<see cref="Laattapaketti"/>, StreamingAssets/laattapaketti.bin: pallon kaukonäkymä
+    ///      Z0–Z5, maasto, vektorit, napakalotit, lennon Blue Marble Z0–Z4; esilatauspolitiikan kohta 1, löydös 80),
     ///   1. offline-kansiosta (Alueet: maittain ladattu, persistentDataPath/offline/, ei iCloud-varmuuskopiota),
     ///   2. välimuistista (temporaryCachePath/laatat/, iOS saa tyhjentää),
     ///   3. verkosta (UnityWebRequest pääsäikeessä, NSURLSession), joka tallentaa välimuistiin.
@@ -53,12 +55,47 @@ namespace Matkakirja
         /// näkyvän kartan paikkojen lisäksi, joten se etenee lennon aikana eikä viivästytä näkyviä laattoja.
         /// </summary>
         readonly ConcurrentQueue<Haku> kohdeJono = new ConcurrentQueue<Haku>();
+
+        /// <summary>
+        /// VERHON KEVENNYS (Fablen päätös BUILD 16, löydös 80; Valmius.KevennysAlku/Loppu): kun jokin verho odottaa pallon
+        /// latausta, näkyvän kartan jonolla on <see cref="VerhoRinnakkain"/> rinnakkaista hakua (muuten <see cref="rinnakkain"/>),
+        /// eikä taustan esilatausta (aloitusnäyttö, lennon kohdealue) palvella; verhon odottama lennon reitti
+        /// (<see cref="Esilataus.Verholle"/>) jatkuu. Tauolle jääneet palaavat jonoon, kun viimeinen verho lähtee.
+        /// Vain pääsäikeestä.
+        /// </summary>
+        public const int VerhoRinnakkain = 24;
+        static int verhot;
+        readonly List<Haku> tauolla = new List<Haku>();
+
+        /// <summary>Kevennystä pyytäviä verhoja (0 = normaali jono).</summary>
+        public static int Verhot => verhot;
+
+        /// <summary>Verho alkaa (true) tai lähtee (false). Viimeisen lähtiessä tauolla olleet haut jatkuvat.</summary>
+        public static void VerhoKevennys(bool alku)
+        {
+            verhot = Math.Max(0, verhot + (alku ? 1 : -1));
+            var p = Instanssi;
+            if (verhot > 0 || p == null || p.tauolla.Count == 0) return;
+            // Kohdealueen (Etusija) tauolla olleet tulivat kiirejonosta (Sentinel, Update); muut esilatausjonosta.
+            foreach (var h in p.tauolla) (h.Esi != null && h.Esi.Etusija ? p.kiireJono : p.esiJono).Enqueue(h);
+            p.tauolla.Clear();
+        }
         const int KohdePaikat = 4;
         int kaynnissa, kohdeKaynnissa;
         string offline, valimuisti;
 
-        /// <summary>Tilastot testaukseen: osumat offline / välimuisti / verkko, virheet, varakuvat.</summary>
-        public static int Offline, Valimuistista, Verkosta, Virheita, Varakuvia;
+        /// <summary>Tilastot testaukseen: osumat paketti / offline / välimuisti / verkko, virheet, varakuvat.</summary>
+        public static int Paketista, Offline, Valimuistista, Verkosta, Virheita, Varakuvia;
+
+        /// <summary>
+        /// Buildin laattapaketti (null = ei paketissa, rikki tai kehittäjälipulla pois). Avataan kerran; laatat luetaan
+        /// tiedostosta hakiessa (hakemisto muistissa, ~200 kt).
+        /// </summary>
+        public static Laattapaketti Paketti { get; private set; }
+        /// <summary>Kehittäjälippu A/B-mittaukseen: Documents/paketti-pois.txt → paketti ohitetaan (kylmä verkkoalku).</summary>
+        public const string PakettiPoisTiedosto = "paketti-pois.txt";
+        /// <summary>Maaston (layer.json) kansio ämpärin polkuna, OhjaaCesium asettaa (paketin sarjojen tarkistus).</summary>
+        public static string MaastoPolku;
 
         /// <summary>
         /// Näkyvän kartan laattoja haussa (jonossa tai käynnissä): Alueet hidastaa offline-latauksen,
@@ -172,6 +209,8 @@ namespace Matkakirja
             /// ovat perillä ajoissa.
             /// </summary>
             public bool Etusija { get; set; }
+            /// <summary>Verho odottaa tätä esilatausta (aloituslennon reitti, Nappula): sitä palvellaan verhon kevennyksen aikanakin.</summary>
+            public bool Verholle { get; set; }
             /// <summary>Käsitellyt (valmiit + epäonnistuneet) osuutena, 1 kun tyhjä tai peruttu.</summary>
             public float Osuus { get { int y = Yhteensa; return y == 0 || peruttu ? 1f : (float)(Valmis + Epaonnistui) / y; } }
             /// <summary>Jonossa odottavat haut vapautetaan ilman verkkoa; käynnissä olevat valmistuvat.</summary>
@@ -193,21 +232,87 @@ namespace Matkakirja
         public static string Paikallinen(string url) =>
             Juuri != null && url != null && url.StartsWith(Ampari) ? Juuri + url.Substring(Ampari.Length) : url;
 
-        /// <summary>Tiedostopolku ämpärin polulle (kysely mukaan, jotta ?v=-versiot eivät sekoitu).</summary>
-        public static string Tiedosto(string juuri, string polku)
+        /// <summary>
+        /// Tiedostopolku ämpärin polulle (kysely mukaan, jotta ?v=-versiot eivät sekoitu). Cesium lisää maastolaattoihin
+        /// extensions=…; staattinen tiedosto ei riipu siitä, joten avain on sama kuin Alueiden lataamalla (layer.jsonin
+        /// tiles-pohja) ja laattapaketissa (<see cref="Laattapaketti.Avain"/>).
+        /// </summary>
+        public static string Tiedosto(string juuri, string polku) =>
+            Path.Combine(juuri, Laattapaketti.Avain(polku).Replace('/', Path.DirectorySeparatorChar));
+
+        /// <summary>
+        /// Paketin polku: StreamingAssets (iOS: Data/Raw/, Rakennus kopioi paketin Xcode-projektiin); editorissa
+        /// myös projektin Build/laattapaketti/ (tyokalut/laattapaketti.mjs ja LaattapakettiRakennus kirjoittavat sinne).
+        /// </summary>
+        static string PakettiPolku()
         {
-            int q = polku.IndexOf('?');
-            string perus = q < 0 ? polku : polku.Substring(0, q);
-            if (q >= 0)
+            string p = Path.Combine(Application.streamingAssetsPath, Laattapaketti.Tiedostonimi);
+#if UNITY_EDITOR
+            if (!File.Exists(p))
+                p = Path.Combine(Path.GetDirectoryName(Application.dataPath), "Build", "laattapaketti", Laattapaketti.Tiedostonimi);
+#endif
+            return p;
+        }
+
+        /// <summary>
+        /// Sarjat (ämpärin kansiot), joita kartta nyt käyttää: paketin muut sarjat ohitetaan (paketti on tehty eri
+        /// sarjoista kuin tämä build, esim. uusi pohja ilman uutta pakettia).
+        /// </summary>
+        static HashSet<string> KaytossaOlevatSarjat()
+        {
+            var s = new HashSet<string>(StringComparer.Ordinal);
+            void Kansio(string url)
             {
-                // Cesium lisää maastolaattoihin extensions=…; staattinen tiedosto ei riipu siitä,
-                // joten avain on sama kuin Alueiden lataamalla (layer.jsonin tiles-pohja).
-                var osat = new System.Collections.Generic.List<string>();
-                foreach (var o in polku.Substring(q + 1).Split('&'))
-                    if (o.Length > 0 && !o.StartsWith("extensions=")) osat.Add(o);
-                if (osat.Count > 0) perus += "__" + string.Join("_", osat).Replace('/', '_').Replace('=', '-');
+                if (url == null) return;
+                if (url.StartsWith(Ampari, StringComparison.Ordinal)) url = url.Substring(Ampari.Length);
+                int z = url.IndexOf("{z}", StringComparison.Ordinal);
+                s.Add(z >= 0 ? url.Substring(0, z) : url);
             }
-            return Path.Combine(juuri, perus.Replace('/', Path.DirectorySeparatorChar));
+            if (PohjaPolku != null) s.Add(PohjaPolku);
+            Kansio(KarttaKerrokset.SileaUrl);
+            if (MaastoPolku != null) s.Add(MaastoPolku);
+            if (!string.IsNullOrEmpty(KarttaKerrokset.SatelliittiVersio))
+                Kansio(KarttaKerrokset.SatelliittiJuuri + KarttaKerrokset.SatelliittiVersio + "/" + KarttaKerrokset.SatelliittiMeri + "/");
+            s.Add(Vektorikerros.Juuri);
+            foreach (var k in NapaKannet.OfflinePolut()) s.Add(k.Substring(0, k.LastIndexOf('/') + 1));
+            return s;
+        }
+
+        static void AvaaPaketti()
+        {
+            if (Paketti != null) return;
+            try
+            {
+                if (File.Exists(Path.Combine(Application.persistentDataPath, PakettiPoisTiedosto)))
+                {
+                    Debug.Log("MATKAKIRJA laattapalvelin: paketti pois (kehittäjälippu " + PakettiPoisTiedosto + ")");
+                    return;
+                }
+            }
+            catch (Exception) { /* valinnainen */ }
+            string polku = PakettiPolku();
+            float alku = Time.realtimeSinceStartup;
+            var p = Laattapaketti.Avaa(polku, out string virhe);
+            if (p == null)
+            {
+                Debug.Log($"MATKAKIRJA laattapalvelin: ei pakettia ({virhe}): {polku}");
+                return;
+            }
+            var pois = p.Rajaa(KaytossaOlevatSarjat());
+            var sb = new StringBuilder();
+            long tavut = 0;
+            foreach (var s in p.Sarjat)
+            {
+                if (!s.Kaytossa) continue;
+                sb.Append(' ').Append(s.Nimi).Append(' ').Append(s.Laattoja);
+                tavut += s.Tavuja;
+            }
+            Debug.Log($"MATKAKIRJA laattapalvelin: paketti {p.Laattoja} laattaa, käytössä {tavut / 1048576.0:0.0} Mt ({sb.ToString().Trim()}), " +
+                      $"avaus {(Time.realtimeSinceStartup - alku) * 1000:0} ms");
+            if (pois.Count > 0)
+                Debug.LogWarning("MATKAKIRJA laattapalvelin: paketin sarjat ohitettu (kartta käyttää eri sarjaa, paketti on vanha): " +
+                                 string.Join(", ", pois));
+            Paketti = p;
         }
 
         void Awake()
@@ -250,6 +355,7 @@ namespace Matkakirja
                 _ = Task.Run(() => Kuuntele(lopetus.Token));
                 Debug.Log("MATKAKIRJA laattapalvelin: " + Juuri);
                 OhjaaCesium();
+                AvaaPaketti();
                 long raja = (long)valimuistiMt * 1048576;
                 _ = Task.Run(() => Karsi(valimuisti, raja));
             }
@@ -286,7 +392,12 @@ namespace Matkakirja
         static void OhjaaCesium()
         {
             foreach (var t in FindObjectsByType<CesiumForUnity.Cesium3DTileset>(FindObjectsSortMode.None))
-                t.url = Paikallinen(t.url);
+            {
+                string u = t.url;
+                if (u != null && u.StartsWith(Ampari) && u.EndsWith("/layer.json", StringComparison.Ordinal))
+                    MaastoPolku = u.Substring(Ampari.Length, u.Length - Ampari.Length - "layer.json".Length);
+                t.url = Paikallinen(u);
+            }
             foreach (var o in FindObjectsByType<CesiumForUnity.CesiumUrlTemplateRasterOverlay>(FindObjectsSortMode.None))
             {
                 // Pohjakerros (taso 0 alkaen) saa varalaatan; linssien ja alueiden kerrokset eivät.
@@ -406,16 +517,64 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Hakee ämpärin polun: offline → välimuisti → verkko (tallentaa välimuistiin). Satelliittikansion vastaukset
+        /// Hakee ämpärin polun: paketti → offline → välimuisti → verkko (tallentaa välimuistiin). Satelliittikansion vastaukset
         /// kirjataan (SatelliittiLoki) harmaiden suorakulmioiden selvitystä varten (build 11).
         /// </summary>
         async Task<(int, byte[])> Hae(string polku, Esilataus esilataus = null)
         {
             var lahde = new Lahde();
-            var tulos = await HaeSisalto(polku, esilataus, lahde);
-            if (esilataus == null && polku.IndexOf("/satelliitti/", StringComparison.Ordinal) >= 0)
-                SatelliittiLoki.Kirjaa(polku, tulos.Item1, tulos.Item2, lahde.Nimi);
-            return tulos;
+            // Valmiusdiagnostiikka: HTTP-pyynnöt (Cesium ja omat haut, ei esilatausta) luokittain kesken / valmiit / verkosta.
+            var luokka = esilataus == null ? Luokat.GetOrAdd(Luokka(polku), _ => new int[4]) : null;
+            if (luokka != null) Interlocked.Increment(ref luokka[0]);
+            try
+            {
+                var tulos = await HaeSisalto(polku, esilataus, lahde);
+                if (esilataus == null && polku.IndexOf("/satelliitti/", StringComparison.Ordinal) >= 0)
+                    SatelliittiLoki.Kirjaa(polku, tulos.Item1, tulos.Item2, lahde.Nimi);
+                return tulos;
+            }
+            finally
+            {
+                if (luokka != null)
+                {
+                    Interlocked.Decrement(ref luokka[0]);
+                    Interlocked.Increment(ref luokka[1]);
+                    if (lahde.Nimi == "verkko") Interlocked.Increment(ref luokka[2]);
+                    else if (lahde.Nimi == "paketti") Interlocked.Increment(ref luokka[3]);
+                }
+            }
+        }
+
+        /// <summary>
+        /// VALMIUSDIAGNOSTIIKKA (Valmius.cs, löydös 80): palvelimen HTTP-pyynnöt luokittain (<see cref="Luokka"/>):
+        /// [0] kesken (Cesium odottaa vastausta), [1] valmistuneet, [2] niistä verkosta, [3] niistä paketista.
+        /// Esilataus ei kuulu tähän.
+        /// </summary>
+        public static readonly ConcurrentDictionary<string, int[]> Luokat = new ConcurrentDictionary<string, int[]>();
+
+        /// <summary>
+        /// Ämpärin polun luokka diagnostiikkaan: pohja (pallo/laatat), maasto, kerma (väritaso), sat/&lt;sarja&gt;
+        /// (lennon pinta: bmng-bathy, s2-alkup …), muuten ensimmäinen kansio julisteet/-etuliitteen jälkeen.
+        /// </summary>
+        public static string Luokka(string polku)
+        {
+            if (string.IsNullOrEmpty(polku)) return "?";
+            int q = polku.IndexOf('?');
+            if (q >= 0) polku = polku.Substring(0, q);
+            if (polku.StartsWith("julisteet/", StringComparison.Ordinal)) polku = polku.Substring("julisteet/".Length);
+            var o = polku.Split('/');
+            if (o.Length >= 4 && o[0] == "pallo" && o[1] == "satelliitti") return "sat/" + o[3];
+            if (o.Length >= 2 && o[0] == "pallo") return o[1] == "laatat" ? "pohja" : o[1];
+            return o[0];
+        }
+
+        /// <summary>Verkkojonojen tila diagnostiikkaan (Valmius): käynnissä olevat haut ja jonojen pituudet.</summary>
+        public static string JonoTila()
+        {
+            var p = Instanssi;
+            if (p == null) return "-";
+            return $"käynnissä {p.kaynnissa} (kohde {p.kohdeKaynnissa}) jono {p.jono.Count} kiire {p.kiireJono.Count} " +
+                   $"esi {p.esiJono.Count} kohdejono {p.kohdeJono.Count} tauolla {p.tauolla.Count}";
         }
 
         sealed class Lahde { public string Nimi = "?"; }
@@ -425,7 +584,7 @@ namespace Matkakirja
         /// dekoodautuu Cesiumissa harmaaksi loppuosaltaan (puuttuvat lohkot = DC 0 = keskiharmaa, alfa 1), eikä
         /// lennon varakartta silloin laukea. Muut tiedostotyypit hyväksytään sellaisenaan.
         /// </summary>
-        internal static bool KuvaEhja(string polku, byte[] data)
+        public static bool KuvaEhja(string polku, byte[] data)
         {
             if (data == null || !polku.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase)) return true;
             if (data.Length < 4 || data[0] != 0xFF || data[1] != 0xD8) return false;
@@ -445,6 +604,23 @@ namespace Matkakirja
             {
                 varitasoa = true;   // virhe → läpinäkyvä, ei mustaa
                 if (kattavuusTyhja && tyhjakuva != null) { lahde.Nimi = "kattamaton"; return (200, tyhjakuva); }
+            }
+            // 0. Buildin laattapaketti (ei levyn tiedostohakua eikä verkkoa).
+            var paketti = Paketti;
+            if (paketti != null)
+            {
+                string avain = Laattapaketti.Avain(polku);
+                if (esi) { if (paketti.Onko(avain)) return (200, null); }
+                else
+                {
+                    var b = paketti.Hae(avain);
+                    if (b != null && KuvaEhja(polku, b))
+                    {
+                        Interlocked.Increment(ref Paketista);
+                        lahde.Nimi = "paketti";
+                        return (200, b);
+                    }
+                }
             }
             string f = Tiedosto(offline, polku);
             if (File.Exists(f))
@@ -478,7 +654,14 @@ namespace Matkakirja
             // Osuma-% (Esilataaja erä 1): näkyvän kartan laatta verkosta = huti (esilataus ei ole pyyntö).
             if (!esi) VerkkoOdotus.Osuma("laatta", false);
             var h = new Haku { Polku = polku, Esi = esilataus };
-            (varitasoa ? kiireJono : !esi ? jono : esilataus.Etusija ? kohdeJono : esiJono).Enqueue(h);
+            // Kiirejono on Cesiumin omille huntu- ja Sentinel-pyynnöille (varitasoa: myös harvat sarjat, KattavuusOhjaus).
+            // Harvan sarjan esilataus kulki ennen aina kiirejonoon, joten mustan verhon lähikuvan aikana näkyvän kartan
+            // haut jonottivat lennon kohteen Sentinel-esilatauksen takana (lokit/verho-jalkeen: kiire 171 → 47, näkyvä jono 6,
+            // käynnissä 28 = kiireen paikat). Nyt vain verhon odottama reitti (Verholle) ja kohdealue (Etusija, verhon ajan
+            // tauolla: Update) käyttävät kiirejonoa; aloitusnäytön Sentinel-esilataus kulkee esilatausjonossa muun listan tavoin.
+            (!esi ? (varitasoa ? kiireJono : jono)
+                : varitasoa && (esilataus.Verholle || esilataus.Etusija) ? kiireJono
+                : esilataus.Etusija ? kohdeJono : esiJono).Enqueue(h);
             var (tila, data) = await h.Valmis.Task;
             lahde.Nimi = "verkko";
             if (tila == 200 && !KuvaEhja(polku, data))
@@ -527,16 +710,27 @@ namespace Matkakirja
             SatelliittiLoki.Yhteenveto();
             // Huntulaatoille neljä lisäpaikkaa, jotta ne eivät jää suurten pohja- ja maastolaattojen taakse.
             // Kohdealueen paikat eivät vie näkyvän kartan paikkoja (muut rajat ilman niitä).
-            while (kaynnissa - kohdeKaynnissa < rinnakkain + 4 && kiireJono.TryDequeue(out var k)) StartCoroutine(Lataa(k));
-            while (kaynnissa - kohdeKaynnissa < rinnakkain && jono.TryDequeue(out var h)) StartCoroutine(Lataa(h));
-            while (kohdeKaynnissa < KohdePaikat && kohdeJono.TryDequeue(out var c))
+            // Verhon kevennys (BUILD 16): näkyvän kartan jonolle enemmän paikkoja, tausta tauolla.
+            int raja = verhot > 0 ? Math.Max(rinnakkain, VerhoRinnakkain) : rinnakkain;
+            while (kaynnissa - kohdeKaynnissa < raja + 4 && kiireJono.TryDequeue(out var k))
+            {
+                if (k.Esi != null && k.Esi.Peruttu) { k.Valmis.TrySetResult((499, null)); continue; }
+                // Verhon aikana kiirejonon esilatauksista vain verhon odottama (Verholle); kohdealueen Sentinel odottaa verhon
+                // lähtöä kuten kohdealueen muutkin laatat (kohdeJono) ja palaa sitten kiirejonoon (VerhoKevennys).
+                if (verhot > 0 && k.Esi != null && !k.Esi.Verholle) { tauolla.Add(k); continue; }
+                StartCoroutine(Lataa(k));
+            }
+            while (kaynnissa - kohdeKaynnissa < raja && jono.TryDequeue(out var h)) StartCoroutine(Lataa(h));
+            while (verhot == 0 && kohdeKaynnissa < KohdePaikat && kohdeJono.TryDequeue(out var c))
             {
                 if (c.Esi != null && c.Esi.Peruttu) { c.Valmis.TrySetResult((499, null)); continue; }
                 StartCoroutine(LataaKohde(c));
             }
-            while (kaynnissa - kohdeKaynnissa < rinnakkain - 2 && jono.IsEmpty && esiJono.TryDequeue(out var e))
+            while (kaynnissa - kohdeKaynnissa < raja - 2 && jono.IsEmpty && esiJono.TryDequeue(out var e))
             {
                 if (e.Esi != null && e.Esi.Peruttu) { e.Valmis.TrySetResult((499, null)); continue; }
+                // Verhon aikana vain verhon odottama esilataus (Esilataus.Verholle); muut odottavat verhon lähtöä.
+                if (verhot > 0 && (e.Esi == null || !e.Esi.Verholle)) { tauolla.Add(e); continue; }
                 StartCoroutine(Lataa(e));
             }
             if (!uusintaKesken && !varalla.IsEmpty && Time.unscaledTime >= seuraavaUusinta && !Kiireinen)
@@ -612,6 +806,8 @@ namespace Matkakirja
         {
             string f = Tiedosto(OfflineKansio, polku);
             if (File.Exists(f)) { valmis(new FileInfo(f).Length); yield break; }
+            // Buildin paketissa: offline-kansioon ei tarvitse kopiota (paketti on aina mukana).
+            if (Paketti != null && Paketti.Onko(Laattapaketti.Avain(polku))) { valmis(0); yield break; }
             string v = Tiedosto(ValimuistiKansio, polku);
             if (File.Exists(v))
             {
