@@ -114270,6 +114270,270 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Long Range Desert Group',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Murzuk, Murzuq District, Murzuq Desert, Idehan
+       * Ubari, Gaberoun, Dawada, Waw an Namus, Tourism in Libya, Libyan
+       * cuisine, Libyan dinar, Acacus Mountains, List of World Heritage
+       * Sites in Libya, 2019 Murzuq airstrike, Toubou people, Sabha
+       * Airport) ja Wikivoyagen Libya-, Ghat- ja Sabha-sivuilta,
+       * matkustusvaroitukset Britannian ulkoministeriön Libya-sivulta
+       * (päivitetty 21.7.2026) ja Yhdysvaltain ulkoministeriön tasolta 4
+       * (15.7.2025) — teksti omaa. Suomen ulkoministeriön tiedotteen
+       * tasoa ei mainita, koska sivua ei saatu luettua; lukija ohjataan
+       * sinne. Sebhan ja Murzukin etäisyys (noin 135 km, suunta 202°) on
+       * laskettu Wikipedian koordinaateista. Iskun päivä on otettu
+       * iskun omasta artikkelista (5.8.2019, kaupungintalo), koska
+       * Murzuk-artikkelin maininta (häät 2020) on sen kanssa ristiriidassa.
+       * Nostojen aiheita (linnoitus, garamantit, brittitutkijat,
+       * Nachtigal, Tinné, berberikorut, Italian valta ja LRDG,
+       * orjakauppa), africa-kulttuurin aiheita (Acacusin kalliomaalaukset
+       * vihreän Saharan todisteena, taatelipalmu, karavaanien kieli),
+       * Tripolin teetä pähkinöineen eikä Libyan maalehden aiheita (Waw an
+       * Namusin kaldera ja järvet, Suuri tekojoki ja fossiilivesi, asida,
+       * gideed, bourdeem, hiekkaleipä) toisteta. Galleriaa lohkossa ei
+       * ole. Kuvien lisenssit ja tekijät tarkistettu Commonsin
+       * extmetadatasta ja tiedostosivuilta, ja kuvat katsottu silmin.
+       * Pystykuva: Murzuqin hiekkameri avaruusasemalta (NASA, PD).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'ISS-42 Murzuq Desert in Libya.jpg',
+          lyhyt: 'Murzuqin hiekkameri avaruusasemalta: dyynikuvio peittää aavikon reunasta reunaan.',
+          selite: 'Astronautti Terry Virts kuvasi Murzuqin hiekkameren '
+            + 'avaruusasemalta helmikuussa 2015 näyttääkseen, kuinka valtava '
+            + 'se on. Oikeassa reunassa hiekka vaihtuu tummempaan kivikkoon, '
+            + 'jonka laidalla erottuu keitaiden ja kastelupeltojen täpliä.',
+          lahde: 'NASA/Terry Virts, Wikimedia Commons (Public domain)',
+        },
+        kappale: 'Murzuk on saman nimisen hiekkameren pohjoislaidalla, ja se '
+          + 'on yksi maailman kuivimmista paikoista: sadetta tulee '
+          + 'keskimäärin seitsemän millimetriä vuodessa, ja kesäkuusta '
+          + 'elokuuhun päivän keskimääräinen ylin lämpötila on yli 40 '
+          + 'astetta. Matkailijalle kaupunki on nyt suljettu, sillä Libyan '
+          + 'eteläosa kuuluu alueisiin, joille esimerkiksi Britannian ja '
+          + 'Yhdysvaltain ulkoministeriöt kehottavat olemaan matkustamatta '
+          + 'lainkaan. Tämä opas kertoo, '
+          + 'mitä Fezzan odottaa, kun matkaan joskus voi taas lähteä: '
+          + 'avaruudesta näkyviä hiekkaselänteitä, dyynien väliin kätkeytyviä '
+          + 'suolajärviä, lihakauppoja, joissa myydään kamelia, ja Ghatin '
+          + 'tuaregijuhlaa, johon väkeä tulee Murzukista asti.',
+        artikkeli: {
+          nimi: 'Matkailijan Murzuk',
+          teksti: 'Murzukiin ei nyt matkusteta, mutta hiekkameret odottavat.',
+          nosto: 'Murzukin kaduilla on yhä kanurin- ja kanembunkielisiä '
+            + 'nimiä, muistona ajasta, jolloin kaupunkia hallittiin Bornusta '
+            + 'Tšad-järven seudulta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Varoitukset ensin',
+              teksti: 'Murzuk on alueella, jonne suuret länsimaat kehottavat '
+                + 'olemaan matkustamatta. Britannian ulkoministeriö neuvoo '
+                + 'välttämään kaikkea matkustamista Libyaan lukuun ottamatta '
+                + 'Tripolia, Misrataa ja Benghazin seutua, eikä niihinkään '
+                + 'ilman välttämätöntä syytä, joten koko Fezzan jää '
+                + 'varoituksen piiriin. Yhdysvallat pitää Libyaa korkeimmalla '
+                + '"älä matkusta" -tasollaan ja mainitsee syinä rikollisuuden, '
+                + 'terrorismin, sieppaukset, räjähtämättömät miinat ja '
+                + 'aseelliset selkkaukset. Varoitukset eivät ole teoriaa: '
+                + 'elokuussa 2011 tubujen taistelijoiden kerrottiin vallanneen '
+                + 'Murzukin, helmikuussa 2019 sen ottivat Khalifa Haftarin '
+                + 'joukot, ja saman '
+                + 'vuoden elokuussa lennokki-isku kaupungintaloon surmasi 43 '
+                + 'ihmistä. Vuonna 2021 Isis ilmoitti tehneensä Fezzanissa kaksi '
+                + 'pommi-iskua turvallisuusjoukkoja vastaan. Suomen '
+                + 'ulkoministeriön matkustustiedote kannattaa lukea ennen kuin '
+                + 'matkaa edes harkitsee, sillä matkavakuutus voi raueta '
+                + 'varoituksen vastaisella matkalla, eikä ulkomainen '
+                + 'lääkintälento välttämättä saa lupaa hakea sairastunutta '
+                + 'Libyasta. Kun reitti joskus avautuu, Fezzanin portti on '
+                + 'Sebha, jonka lentokenttä avattiin uudelleen siviililiikenteelle '
+                + '2017. Sieltä Murzukiin on runsaat 130 kilometriä linnuntietä '
+                + 'etelälounaaseen. Libya otti sähköisen viisumin käyttöön '
+                + 'maaliskuussa 2024, ja ilman järjestettyä matkaa tai '
+                + 'libyalaista kutsujaa turistin on Wikivoyagen mukaan '
+                + 'vaihdettava maahan tullessaan tuhat dollaria. Poliisille on '
+                + 'ilmoittauduttava viikon kuluessa saapumisesta, ja passin on '
+                + 'oltava aina mukana. Etelässä Nigerin raja-asema on Tumussa, '
+                + 'mutta rajaseutua pidetään salakuljettajien ja aseellisten '
+                + 'ryhmien maana, jota valtio ei käytännössä valvo.',
+              kuva: [
+                {
+                  tiedosto: 'سبها المدينة القديمة.jpg',
+                  lyhyt: 'Sebhan vanha savikaupunki ja uusi keskusta: täältä Fezzanin matkat alkavat.',
+                  selite: 'Sebhan vanhan kaupungin tiiviisti rakennetut '
+                    + 'savitalot ja katetut kujat päättyvät leveään katuun, '
+                    + 'jonka takana alkaa betonitaloinen uusi kaupunki. Kuva on '
+                    + 'otettu ilmasta helmikuussa 2024.',
+                  lahde: 'Wesam alhmale, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Road from Sabha to Ubari - panoramio.jpg',
+                  lyhyt: 'Sebhasta länteen kulkeva maantie ohittaa savesta tehdyn rakennelman jäänteen.',
+                  selite: 'Päällystetty maantie Sebhasta Ubariin kulkee '
+                    + 'sähkölinjojen, palmujen ja matalien talojen ohi, ja tien '
+                    + 'laidalla seisoo savesta tehdyn rakennelman jäänne. '
+                    + 'Samalta tieltä erkanevat pistet Ubarin järville.',
+                  lahde: 'calind, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Erg Murzuk south of Tmissah.jpg',
+                  lyhyt: 'Maastoauton renkaisiin pumpataan ilmaa, kun Murzuqin hiekkameri on ylitetty.',
+                  selite: 'Maaliskuussa 2002 kuljettaja pumppaa käsipumpulla '
+                    + 'ilmaa maastoauton renkaisiin Tmissahin eteläpuolella: '
+                    + 'Murzuqin hiekkameren pehmeä hiekka on takana, ja edessä '
+                    + 'on taas kovempaa pistettä.',
+                  lahde: 'Bernhard Holub, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Kaksi hiekkamerta',
+              teksti: 'Murzuk on Idehan Murzuqin pohjoisreunalla. Noin 58 000 '
+                + 'neliökilometrin hiekkameri on nimetty kaupungin mukaan, ja '
+                + 'pohjoisempana on yhtä laaja Idehan Ubari; tuaregien '
+                + 'tamasheqin kielessä idehan tarkoittaa hienoa hiekkaa. '
+                + 'Etelässä Murzuqin erg rajautuu Tibestin ja Tassili '
+                + 'n’Ajjerin vuoristoihin. Ylhäältä katsottuna hiekkameri ei ole '
+                + 'tasaista dyynikenttää. Sen länsiosaa hallitsevat draat, '
+                + 'valtavat hiekkaselänteet, joiden välissä on sileäpohjaisia ja '
+                + 'lähes hiekattomia altaita. Nimi tulee arabian käsivartta '
+                + 'tarkoittavasta sanasta. Draojen selkään on kasautunut '
+                + 'pienempiä dyynejä kolmea lajia: tuulen suuntaisia '
+                + 'pitkittäisdyynejä, tuulta vastaan kaartuvia poikkidyynejä ja '
+                + 'tähtidyynejä, joiden sakarat kohtaavat yhdessä huipussa. '
+                + 'Suuret selänteet pysyvät lähes paikallaan, mutta pienet dyynit '
+                + 'vaeltavat niiden yli ja hajoavat alatuulen puolella '
+                + 'yksittäisiksi jyviksi, jotka tuuli kuljettaa altaiden poikki. '
+                + 'Geologit arvelevat, että draat syntyivät toisenlaisten '
+                + 'tuulten aikaan kuin nykyiset pohjoiskoillisesta puhaltavat. '
+                + 'Hiekan alla on öljyä: vuodesta 1957 Murzuqin altaasta on '
+                + 'löydetty yksitoista öljykenttää, joista kahta pidetään '
+                + 'jättiläisinä. Kauempana idässä, Sebhan ja Kufran vanhan '
+                + 'karavaanitien varrella, on Waw an Namusin tulivuori. Ennen '
+                + 'sisällissotaa matkailijat ajoivat sinne Sebhasta ja '
+                + 'jatkoivat Rebianan hiekkameren kautta Kufraan, mutta nyt '
+                + 'pitkät etäisyydet ja sota tekevät perille pääsystä vaikeaa.',
+              kuva: {
+                tiedosto: 'Sanddunes marzuq sandsea.jpg',
+                lyhyt: 'Avaruudesta näkyvät Murzuqin draat, ja hiekkaselänteiden välissä on sileitä altaita.',
+                selite: 'Avaruusasemalta otetun kuvan englanninkieliset '
+                  + 'merkinnät nimeävät draat, niiden väliset altaat sekä '
+                  + 'pitkittäis-, poikki- ja tähtidyynit, jotka ovat '
+                  + 'kasautuneet suurten hiekkamassojen selkään.',
+                lahde: 'NASA, Wikimedia Commons (Public domain)',
+              },
+            },
+            {
+              otsikko: 'Järvet dyynien välissä',
+              teksti: 'Murzukin vesi tulee maan alta, kuten koko Fezzanin, sillä '
+                + 'pysyviä jokia seudulla ei ole ja sadetta tulee tuskin '
+                + 'lainkaan. Näkyvimmin pohjavesi nousee pintaan pohjoisempana '
+                + 'Ubarin hiekkameressä, jonka dyynien väliin on kätkeytynyt '
+                + 'kourallinen järviä palmurenkaineen. Tunnetuin on Gaberoun, '
+                + 'suuri ja hyvin suolainen järvi, jossa uiminen voi silti '
+                + 'olla miellyttävää, vaikka vedessä elää pieniä suolavesiäyriäisiä. '
+                + 'Lähistöllä ovat myös Umm al-Maa eli veden äiti sekä Mandaran '
+                + 'ja Mafon järvet. Järville käännytään Sebhan ja Ubarin '
+                + 'välisen maantien varresta noin 150 kilometriä Sebhasta '
+                + 'länteen, ja viimeiset 36 kilometriä ajetaan nelivedolla '
+                + 'dyynien yli. Järvien hiekkaa kutsutaan nimellä Ramlat al-Dawada. '
+                + 'Dawadat keräsivät järvistä natronia ja suolakatkarapuja, '
+                + 'jotka he kuivasivat, murskasivat ja puristivat kakuiksi, '
+                + 'joskus taatelien kanssa, ja myivät karavaaneille; Fezzanissa '
+                + 'äyriäistä pidettiin lemmenrohtona. Nimi tarkoittaa '
+                + 'arabiaksi matokansaa. Gaberounin asukkaat muutettiin '
+                + '1980-luvulla hiekkameren ulkopuolelle rakennettuun '
+                + 'betonikylään, ja vanhan kylän rauniot ovat yhä palmujen '
+                + 'lomassa järven länsirannalla. Koillisrannalla on ollut '
+                + 'yksinkertainen leiri majoineen ja matkamuistokauppoineen. '
+                + 'Paras vierailuaika on lokakuusta toukokuuhun, sillä kesällä '
+                + 'on kuuma ja hyttysiä on paljon.',
+              kuva: {
+                tiedosto: 'Um el Ma.jpg',
+                lyhyt: 'Umm al-Maan järvi kiiltää dyynien keskellä, ja taustalla on kuivunut Mandara.',
+                selite: 'Ilmasta kuvattu Umm al-Maa on kapea, palmujen '
+                  + 'reunustama järvi Ubarin hiekkameressä. Taaempana näkyvän '
+                  + 'Mandaran järven pohja oli kuvaushetkellä marraskuussa 2010 '
+                  + 'kuivunut.',
+                lahde: 'Jürgen Büttner, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kamelia ja oikea käsi',
+              teksti: 'Lammas on Libyan yleisin liha, mutta etelässä syödään '
+                + 'tavallisemmin kamelia, ja Murzukin lihakaupoissa ruhot '
+                + 'roikkuvat koukuissa tiskin takana. Etelän keittiö on '
+                + 'rannikkoa arabialaisempi ja berberiläisempi: aterioiden '
+                + 'pohjana ovat säilötyt raaka-aineet, kuten kuivattu liha, '
+                + 'hapatettu maito, ohra ja kestävät palkokasvit. Libyassa '
+                + 'juodaan myös lagbia, joidenkin palmujen varresta laskettua '
+                + 'mahlaa. Lounaisen Ghatin tunnetuimmat ruoat ovat fitat, '
+                + 'tammasein ja Ghatin oma kuskus. Alkoholi on ollut Libyassa '
+                + 'kielletty vuodesta 1969, eikä sianlihaa syödä. Ramadanin '
+                + 'aikana julkisella paikalla ei syödä, juoda eikä tupakoida. '
+                + 'Kotiin kutsuttu vieras saa eteensä teetä, kahvia ja '
+                + 'naposteltavaa, eikä tarjoilusta kieltäytyminen ole '
+                + 'kohteliasta. Isäntä kehottaa ottamaan lisää yhä uudelleen, '
+                + 'ja lisän ottaminen jättää hyvän vaikutelman. Ruokaa, rahaa ja tavaroita '
+                + 'ojennetaan oikealla kädellä, koska vasenta pidetään '
+                + 'epäpuhtaana, ja vanhimmat tervehditään ensin. Sotilaita, '
+                + 'poliiseja ja heidän rakennuksiaan ei valokuvata, eikä '
+                + 'politiikasta kannata keskustella. Rahana on Libyan dinaari, '
+                + 'joka jakautuu tuhanteen dirhamiin. Puhekielessä kymmenen '
+                + 'dirhamia on garsh, ja lännessä dinaaria sanotaan jniksi '
+                + 'vanhan englantilaisen guinea-kolikon mukaan. Pankkikortin '
+                + 'toimivuus kannattaa varmistaa ennen kuin lähtee suurista '
+                + 'kaupungeista, sillä muualla pankkiautomaatit voivat olla '
+                + 'rikki tai puuttua kokonaan.',
+              kuva: {
+                tiedosto: 'Butcher at Murzuq Libya.jpg',
+                lyhyt: 'Murzukilainen lihakauppias esittelee kamelin päätä koukuissa roikkuvien ruhojen edessä.',
+                selite: 'Maaliskuussa 2002 kuvatussa murzukilaisessa '
+                  + 'lihakaupassa kamelinlihaa roikkuu koukuissa sinivalkoisen '
+                  + 'kaakeliseinän edessä, ja tiskin laidalla on sininen vaaka.',
+                lahde: 'Bernhard Holub, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Kun Fezzan oli retkeilijöiden',
+              teksti: 'Libyassa matkailua jarrutettiin vielä 1970- ja '
+                + '1980-luvuilla, ja vasta 1990-luvulla hallitus alkoi '
+                + 'houkutella matkailijoita. Vuosikymmenen lopulla omilla '
+                + 'maastoautoillaan liikkuvat eurooppalaiset pääsivät maahan '
+                + 'libyalaisten välittäjien kutsuilla, ja vuoteen 2002 asti '
+                + 'Fezzania sai kiertää ilman paikallisen matkatoimiston kallista '
+                + 'saattajaa. Polttoaine maksoi vain muutamia pennejä litralta. '
+                + 'Matkailijoita kävi vuonna 2004 noin 149 000 ja vuonna 2007 '
+                + 'jo 180 000. Aavikolle lähtevät tulivat katsomaan Acacusin ja '
+                + 'Messakin kalliotaidetta, Ubarin dyynijärviä, garamanttien '
+                + 'raunioita ja Murzukin ottomaaniaikaisia linnoituksia, ja '
+                + 'muutaman vuoden ajan Tumun kautta pääsi Nigeriin '
+                + 'salakuljettajien Marlboro-pistettä, Kanem-Bornun vanhaa '
+                + 'karavaanitietä. Bornun vallasta Murzukissa muistuttavat yhä '
+                + 'kadunnimet, joista osa on kanembuksi ja kanuriksi. Vuoden '
+                + '2011 sota katkaisi matkailun. Tadrart Acacusin kalliotaidetta '
+                + 'on turmeltu tahallaan ainakin vuodesta 2009, ja vuonna 2016 '
+                + 'Unesco siirsi kaikki Libyan viisi maailmanperintökohdetta '
+                + 'uhanalaisten luetteloon. Juhlat ovat silti jatkuneet: '
+                + 'Murzukissa pidettiin 2013 Libyan ensimmäinen tubujen '
+                + 'kansallinen festivaali, ja Ghatin tuaregijuhla järjestetään '
+                + 'joka vuosi joulukuun lopussa. Siihen on osallistunut väkeä '
+                + 'myös Murzukista, Ubarista ja Sebhasta. Vuonna 2025 Libyassa '
+                + 'kävi taas noin satatuhatta matkailijaa.',
+              kuva: {
+                tiedosto: 'Tuareg Tradition Dance.jpg',
+                lyhyt: 'Tuaregitanssija loikkaa ilmaan Ghatin tuaregifestivaalilla joulukuussa 2016.',
+                selite: 'Al-Barket-yhtyeen tanssija hyppää Ghatin 22. '
+                  + 'tuaregifestivaalilla, ja katsojat ja rumpalit seuraavat '
+                  + 'kehän laidalla. Taustalla kohoaa dyyni.',
+                lahde: 'Bashar Shglila, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'orjakauppa',
