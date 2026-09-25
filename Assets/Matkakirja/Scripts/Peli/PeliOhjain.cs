@@ -1284,6 +1284,7 @@ namespace Matkakirja.Natiivi
             Tila = SilmukanTila.Matkalla;
             // Reitit piirretään lähtöpaikasta koko siirron ajan (web siirtoKaynnissa, B8).
             siirtoLahto = t.Lahto;
+            saapumisaaniSoi = false;
             PaivitaMatkareitit();
             tilarivi.Aseta(PeliApu.TilaTeksti(verkko, matka.Tila));
             // Lennon alun repliikki kerran istunnossa; muuten saapumispuhe kohteeseen.
@@ -1343,6 +1344,7 @@ namespace Matkakirja.Natiivi
                         Pisteet = PeliApu.Matkapisteet(verkko, t.Lahto, t.Polku, t.Kohde), Tapa = t.Tapa,
                         Askelia = t.Polku?.Count ?? 0,
                     };
+                    TilaaNappulanVaiheet(); // Laskeutui → askel- ja saapumisääni (B21)
                     float matkanKesto = nappula.MatkanKesto(liike);
                     NappulaAjo(v => nappula.Aja(liike, v), matkanKesto, Perilla);
                 }
@@ -1368,7 +1370,9 @@ namespace Matkakirja.Natiivi
             PaivitaMatkareitit();
             // Liike päättyi (kaupunki tai null = reitin varrella): noppa häipyy (web saapuessa).
             try { MatkaPerilla?.Invoke(kaupunki); } catch (Exception e) { Debug.LogException(e); }
-            if (kaupunki != null) Aanita(Aanitunnukset.Saapuminen);
+            // Hyppyketju soitti saapumisäänen jo viimeisellä laskeutumisella (NappulaLaskeutui); muuten tässä.
+            if (kaupunki != null && !saapumisaaniSoi) Aanita(Aanitunnukset.Saapuminen);
+            saapumisaaniSoi = false;
             // Kaupunkiin päättynyt matka: kamera saapumisnäkymään (web ui.js palaaMaanRajaukseen ja siirto.js laske
             // → lauta.saavu; avauslento → kamera.kotiin ilman maan laatikkoa). Reitin varrella kamera jää paikalleen.
             if (kaupunki != null && !kameraPerilla) Saavu(maaRajaus: !aloituslento);

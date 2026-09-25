@@ -728,7 +728,7 @@ namespace Matkakirja.Natiivi
     {
         public const string Oikein = "correct", Vaarin = "wrong", Vihje = "hint", Puolitus = "swipe",
             KysymysAuki = "quizOpen", Tikitys = "tick", AikaLoppui = "timeout",
-            Saapuminen = "arrive", Noppa = "dieLand", Kolikot = "coin";
+            Saapuminen = "arrive", Askel = "step", Noppa = "dieLand", Kolikot = "coin";
 
         /// <summary>Web EVENT_SOUND[kind] ?? 'turn'; aarre kuuluu paljastukseen (null).</summary>
         public static string Tapahtuma(string laji)

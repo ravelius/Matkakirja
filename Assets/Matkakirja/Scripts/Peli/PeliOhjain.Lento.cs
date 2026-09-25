@@ -64,9 +64,23 @@ namespace Matkakirja.Natiivi
         {
             var n = Nappula;
             if (n == tilattuNappula) return;
-            if (tilattuNappula != null) tilattuNappula.VaiheVaihtui -= NappulanVaihe;
+            if (tilattuNappula != null) { tilattuNappula.VaiheVaihtui -= NappulanVaihe; tilattuNappula.Laskeutui -= NappulaLaskeutui; }
             tilattuNappula = n;
-            if (n != null) n.VaiheVaihtui += NappulanVaihe;
+            if (n != null) { n.VaiheVaihtui += NappulanVaihe; n.Laskeutui += NappulaLaskeutui; }
+        }
+
+        /// <summary>Viimeinen hyppy soitti jo saapumisäänen (Perilla ei soita toista).</summary>
+        bool saapumisaaniSoi;
+
+        /// <summary>
+        /// Hyppy osui maahan (liikkumisen pariteetti B21; web ui.js ~23419): 'step' jokaisella välihypyllä ja 'arrive'
+        /// viimeisellä, myös reitin varrelle pysähtyessä; bussilla Nappula kertoo vain viimeisen (web ~23387).
+        /// </summary>
+        void NappulaLaskeutui(int askel, bool viimeinen)
+        {
+            if (Tila != SilmukanTila.Matkalla) return;
+            Aanita(viimeinen ? Aanitunnukset.Saapuminen : Aanitunnukset.Askel);
+            if (viimeinen) saapumisaaniSoi = true;
         }
 
         /// <summary>Nappulan koreografian vaihe (Ei/Nousu/Matka/Lasku) → lennon vaihe. Perilla tulee saapumisesta.</summary>
