@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using CesiumForUnity;
 using TMPro;
@@ -76,10 +77,31 @@ namespace Matkakirja
         }
 
         /// <summary>Uudet kohteet (vanhat pois). Tyhjä tai null = renkaat pois.</summary>
+        /// <summary>
+        /// LÖYDÖS 56 (build 13): nopan heiton jälkeen kamera sovittaa pelaajan ja kaikki siirtokohteet ruutuun kuten web
+        /// (js/ui.js sovitaSiirtokohteet → sovitaKohteetNakyviin): vain jos ne eivät jo mahdu 14 %:n marginaaliin,
+        /// keskitys rajauksen keskelle, vain loitonnus, 720 ms pehmeä ajo (PalloKierto.SovitaPisteet). Sama joukko ei
+        /// aja uudestaan (kytkentä tai uusi piirto samoilla kohteilla).
+        /// </summary>
+        void Sovita(IReadOnlyList<Kohde> kohteet)
+        {
+            if (kohteet == null || kohteet.Count == 0) { sovitettu = null; return; }
+            var avain = string.Join("|", kohteet.Select(k => k.Avain));
+            if (avain == sovitettu) return;
+            sovitettu = avain;
+            if (kierto == null) kierto = FindAnyObjectByType<PalloKierto>();
+            if (kierto == null) return;
+            var n = FindAnyObjectByType<Nappula>();
+            kierto.SovitaPisteet(kohteet.Select(k => (k.Lat, k.Lon)).ToList(), PalloKierto.KohdesovitusMarginaali,
+                                 PalloKierto.KohdesovitusKesto, n != null && n.Nakyy ? (n.Lat, n.Lon) : null);
+        }
+        string sovitettu;
+
         public void Nayta(IReadOnlyList<Kohde> kohteet)
         {
             foreach (var m in merkit) Destroy(m.juuri.gameObject);
             merkit.Clear();
+            Sovita(kohteet);
             if (kohteet == null || georeferenssi == null || materiaali == null) return;
             nelio ??= Nelio();
             double3 keskus = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(double3.zero);
