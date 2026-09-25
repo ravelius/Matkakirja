@@ -41,13 +41,13 @@ ja LÄMPÖ JA VIRRANKULUTUS NATIIVISSA (uudet tänään).
 4. **natiiviseppa/lento-spline f9d785c9** (löydös 120, omistaja arvioi): yksi C2-spline 10 s (kvinttinen Hermite): syöksy
    etuviistoon P(100) kuminauhalla, lähi 1, kaarto nokan edestä P(125→180→235), lähi 2, kiihtyvä irtautuminen, matka, kierto.
    Videopari lähetetty omistajalle: lokit/lento-spline/videopari-ennen-jalkeen-20260925.mp4; käyrät kanavat-ennen-jalkeen.png.
-   Merge vasta omistajan/Fablen OK:n jälkeen (Raamatun "kone 2/3 ruudusta" vs löydös 110 "puolet koneesta": nyt 1,9).
+   Fable vei videoparin omistajalle arvioon: ÄLÄ mergeä ennen omistajan vastausta. Merge vasta omistajan/Fablen OK:n jälkeen (Raamatun "kone 2/3 ruudusta" vs löydös 110 "puolet koneesta": nyt 1,9).
 5. **natiiviseppa/reiat-119 2c8eafa9** (+ agentti työssä wt/proto-natiiviseppa-loydos46: POHJAPALLO eli pergamentinvärinen
    umpinainen varapinta −3 km maaston alle): maastolaattojen uusinta (`palvelin maastouusinta`, Cesium ei itse yritä uudelleen
    eikä aseta aikakatkaisua), laattarajojen laajennus (`pallo rajat`), `pallo tausta magenta`, `palvelin loki`. Koe
    `KYLMA=1 APP=… reiat.sh <kansio>`: lokit/reiat-119/koe1 — halkeama Alpeilla laattatasojen saumassa (reikarajaus.jpg);
    magentaprosentit sisältävät taivaan, laske pinnan sisäiset (skripti python-osa, taivaskaista pois). Pohjapallon jälkeen
-   uusi koe (magenta piilottaa pohjapallon) ja kuvapari.
+   uusi koe (magenta piilottaa pohjapallon) ja kuvapari. Fable hyväksyi varapallon (18.5x).
 6. **natiiviseppa/s2-orbit 517f3f5d** (pysäköity): pilvetön s2-orbit-sarja 19 kaupunkiin; orbitin laatat eivät ehdi Cesiumiin
    ~2 s:ssa (forbidHoles); agentin korjaus lämmitti mustan takana +3 s → ristiriidassa verhotavoitteen kanssa. Suunnittele
    pohja-buildiin-verhotyön jälkeen (esim. esilämmitys valintanäkymässä kuten Blue Marble).
@@ -59,8 +59,8 @@ ja LÄMPÖ JA VIRRANKULUTUS NATIIVISSA (uudet tänään).
   EI VERTAILUKELPOINEN: laite.sh tekee **Development**-käännöksen (MATKAKIRJA_KEHITYS=1) ja laite oli kuuma + kaapelissa.
 - Seuraavaksi: Release-laitekäännös (laite.sh ilman MATKAKIRJA_KEHITYS=1, tee muunnelma) build 15 + mittari ja build 16 +
   lämpöerät, laite jäähtyneenä (thermal 0–1 alussa), `lampojakso.sh lampo/<nimi>` (10 min: aloitus, Ateena, lehti 3 min,
-  radio 2 min, lepo). Rivit "MATKAKIRJA lampo {…}" konsolista. Tulos löydösraporttiin osioon "Lämpö". Fablelta kysytty, voiko
-  omistaja irrottaa kaapelin mittauksen ajaksi.
+  radio 2 min, lepo). Rivit "MATKAKIRJA lampo {…}" konsolista. Fable 18.5x: kaapeli saa jäädä, mittarit thermalState ja
+  kehysaika, akkuprosentti pois. Tulos: docs/raportit/lampo-mittaus-20260925.md (60–70 ms levossa kirjattu löydökseksi).
 
 ## Avoimet
 
