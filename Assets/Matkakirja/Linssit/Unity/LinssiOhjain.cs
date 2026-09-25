@@ -192,6 +192,8 @@ namespace Matkakirja.Natiivi
             StartCoroutine(LataaIsoisa());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
+            // ESILATAUSPOLITIIKKA kohdat 6 (linssi aukeaa) ja 4 (joutilaana): Linssisepän listat Esilataajan jonoon.
+            LinssienEsilataaja.Kytke(this, rekisteri);
             rekisteri.Vaihtui += _ =>
             {
                 bool nyt = rekisteri.EstaaKartan;
@@ -379,6 +381,8 @@ namespace Matkakirja.Natiivi
             public bool Auki => linssi?.Auki ?? false;
             /// <summary>Käynnissä oleva linssi (Natiivi-UI: Esitys.Tauko/Jatka/Valitse).</summary>
             public Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi Linssi => linssi;
+            /// <summary>Linssin aineisto (esilatauslistat, LinssienEsilataaja).</summary>
+            public Matkakirja.Linssit.Aikajana.IhmisenMatkaAineisto Aineisto => aineisto;
             /// <summary>Kertojan ääni (linssi-loki), null ennen avausta.</summary>
             public EsityksenAani Aani => aani;
             /// <summary>II:n kameran kääre (lähikuvan laskeutuminen, IhmisenMatka2Tehosteet.Kuva), null I:ssä ja suljettuna.</summary>
@@ -864,6 +868,8 @@ namespace Matkakirja.Natiivi
             public bool Auki => linssi?.Auki ?? false;
             /// <summary>Käynnissä oleva linssi (Natiivi-UI: Kaynnista, JatkaValinaytoksesta, Ajo.Tauko, Ajo.Siirry).</summary>
             public Matkakirja.Linssit.Aikajana.KeksinnotLinssi Linssi => linssi;
+            /// <summary>Linssin aineisto (esilatauslistat, LinssienEsilataaja).</summary>
+            public Matkakirja.Linssit.Aikajana.KeksinnotAineisto Aineisto => aineisto;
             public void Avaa(ILinssiYmparisto y)
             {
                 kerros = KeksinnotKerros.Luo(o.kierto, aineisto);
@@ -908,6 +914,8 @@ namespace Matkakirja.Natiivi
             public bool Auki => linssi?.Auki ?? false;
             /// <summary>Auki oleva linssi (Natiivi-UI), muuten null.</summary>
             public Matkakirja.Linssit.Astronautti.AstronauttiLinssi Linssi => linssi;
+            /// <summary>Linssin aineisto (esilatauslistat, LinssienEsilataaja).</summary>
+            public Matkakirja.Linssit.Astronautti.AstronauttiAineisto Aineisto => aineisto;
             /// <summary>Auki olevan linssin 3D-kerros (Natiivi-UI: kohteiden napautus), muuten null.</summary>
             public AstronauttiKerros Kerros => kerros;
             public void Avaa(ILinssiYmparisto y)
