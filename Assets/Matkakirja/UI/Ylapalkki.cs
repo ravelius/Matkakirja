@@ -364,12 +364,14 @@ namespace Matkakirja.Natiivi
             palkki.EnableInClassList("mk-ylapalkki--saari", !matala);
             palkki.EnableInClassList("mk-ylapalkki--matala", matala);
             palkki.style.paddingTop = yla;
-            palkki.style.paddingBottom = 0;
             palkki.style.paddingLeft = r.x + SaariReuna * yksikko;
             palkki.style.paddingRight = r.z + SaariReuna * yksikko;
             // Matala: ruskea tausta turva-alueen korkuisena, ja rivi + alavara, jos rivi ulottuu sen alle.
             float korkeus = matala ? Mathf.Max(r.y, yla + rivi + MatalaAla * yksikko) : yla + rivi;
             palkki.style.height = korkeus;
+            // Löydös 73: palkki keskittää rivin pystysuunnassa, joten turva-alueen korkuinen palkki valutti pillerin
+            // ja ☰:n 5,6 pt saaren alapuolelle (iPhone 17: pilleri y 19,6, saari y 14). Loppu alatäytteeksi.
+            palkki.style.paddingBottom = Mathf.Max(0f, korkeus - yla - rivi);
             // Pilleri ei ulotu saaren alle; ilman lovea puolet leveydestä.
             float oikea = saari.width > 0 ? ylakulma.x - SaariVali * yksikko : P(Screen.width / pp, 0f).x / 2f;
             pilleriMax = Mathf.Max(60f, oikea - r.x - SaariReuna * yksikko);
