@@ -110490,6 +110490,229 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Hudson Bay Railway',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Churchill, Manitoba; Winnipeg–Churchill train;
+       * Hudson Bay Railway (1997); Churchill station; Churchill Airport;
+       * Wapusk National Park; Beluga whale; Churchill Rocket Research
+       * Range; Itsanitaq Museum; List of accidents and incidents involving
+       * the Curtiss C-46 Commando) ja Wikivoyagesta (Churchill) — teksti
+       * omaa. Nostojen aiheita (turkiskauppa, linnoitus, Hearne, La
+       * Pérouse, radan rakentaminen, karhujen odotus ja uinti, merijää,
+       * karhuvankila, karhuhälytys) ei toisteta. Kuvien lisenssit ja
+       * tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin. Pystykuva: jääkarhu tundrabussin kyljessä (Ansgar Walk).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Tundra Buggy 2004-11-13.jpg',
+          lyhyt: 'Jääkarhu nousee takajaloilleen tundrabussin kylkeä vasten ja kurkistaa ikkunaan.',
+          selite: 'Marraskuussa 2004 kuvattu jääkarhu tutkii tundrabussia, '
+            + 'jonka matkustamo on nostettu jättimäisten pyörien varaan '
+            + 'korkealle maasta.',
+          lahde: 'Ansgar Walk, Wikimedia Commons (CC BY 2.5)',
+        },
+        kappale: 'Churchilliin ei johda yhtään maantietä: 870 asukkaan '
+          + 'kaupunkiin Hudsoninlahden rannalle tullaan joko lentäen '
+          + 'Winnipegistä tai lähes kaksi vuorokautta kestävällä '
+          + 'junamatkalla. Perillä kaupungin kävelee päästä päähän '
+          + 'kymmenessä minuutissa, mutta luontomatkailijoita saapuu '
+          + 'vuosittain 10 000–12 000. Vuodessa on kolme sesonkia: kesällä '
+          + 'joen suistoon uivat tuhannet maitovalaat, loka–marraskuussa '
+          + 'jääkarhuja katsotaan tundrabussien ikkunoista, ja sydäntalven '
+          + 'pitkät yöt ovat revontulien aikaa. Kaupungin laidoilla '
+          + 'odottavat maahan syöksynyt rahtikone, karille ajanut laiva ja '
+          + 'entinen rakettiasema, jonne tutkijat ovat tulleet revontulien '
+          + 'perässä jo 1950-luvulta asti.',
+        artikkeli: {
+          nimi: 'Matkailijan Churchill',
+          teksti: 'Churchilliin pääsee vain junalla tai lentokoneella.',
+          nosto: 'Tundralla lepää yhä vuonna 1979 maahan syöksynyt rahtikone, '
+            + 'jonka lastina oli moottorikelkka ja laatikoittain virvoitusjuomia.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ilman maantietä',
+              teksti: 'Churchill ei ole yhteydessä Kanadan maantieverkkoon, '
+                + 'joten autoilija pääsee enintään Thompsoniin, jonne auton '
+                + 'voi jättää parkkiin. Ainoa maitse kulkeva yhteys on rata. '
+                + 'Via Railin juna lähtee Winnipegin Union Stationilta kahdesti '
+                + 'viikossa ja ajaa noin 1 700 kilometriä Manitoban ja '
+                + 'Saskatchewanin halki noin 45 tunnissa; lisäksi kerran '
+                + 'viikossa kulkee vuoro The Pasista. Thompsonissa juna seisoo '
+                + 'tunteja, ja matkustajat ehtivät kauppaan ja syömään. '
+                + 'Makuuvaunussa matka on elämys, istumapaikalla kaksi yötä '
+                + 'käyvät pitkiksi. Toukokuussa 2017 tulvat huuhtoivat radan '
+                + 'poikki, ja kun kaikki tavara jouduttiin lentämään perille, '
+                + 'ruoan ja polttoaineen hinnat nousivat jyrkästi. Rata '
+                + 'myytiin 2018 Arctic Gateway Group -yhtiölle, jonka nykyään '
+                + 'omistavat pohjoisen Manitoban kunnat ja alkuperäiskansojen '
+                + 'yhteisöt, ja korjatulla radalla matkustajajunat palasivat '
+                + 'joulukuussa 2018. Nopeammin perille pääsee Calm Airin '
+                + 'lennolla Winnipegistä noin kahdessa ja puolessa tunnissa. '
+                + 'Kentän 2 803 metrin kiitotie on perua toisen maailmansodan '
+                + 'aikaisesta yhdysvaltalaisesta tukikohdasta, ja sille voi '
+                + 'hätätilanteessa laskeutua jumbojettikin. Churchillin '
+                + 'pienellä kentällä ei ole turvatarkastusta, joten '
+                + 'Winnipegissä jatkolennolle vaihtavan on varattava aikaa '
+                + 'tarkastukseen.',
+              kuva: [
+                {
+                  tiedosto: 'VIA Rail Winnipeg–Churchill Train at Churchill Railway Station 2024-09-17.jpg',
+                  lyhyt: 'Via Railin juna Winnipegistä on saapunut Churchillin asemalle radan päähän.',
+                  selite: 'Syyskuussa 2024 kuvattu juna 693 lähti Winnipegistä '
+                    + 'kaksi päivää aiemmin ja saapui Churchilliin aamulla '
+                    + 'noin tunnin etuajassa.',
+                  lahde: 'Phil Richards, Wikimedia Commons (CC BY-SA 2.0)',
+                },
+                {
+                  tiedosto: 'VIA Rail Canada Churchill Station.jpg',
+                  lyhyt: 'Matkustajat nousevat junasta Churchillin asemalaiturille heinäkuussa 2019.',
+                  selite: 'Churchillin suojeltu asemarakennus toimii myös Parks '
+                    + 'Canadan opastuskeskuksena, jossa kerrotaan seudun '
+                    + 'luonnosta ja historiasta.',
+                  lahde: 'Cjstepney, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Churchill Airport (11812003204).jpg',
+                  lyhyt: 'Churchillin lentoaseman pieni terminaali lentokoneen ikkunasta nähtynä.',
+                  selite: 'Lokakuussa 2013 kuvattu terminaali palvelee '
+                    + 'Winnipegin-lentoja ja toimii vaihtokenttänä Nunavutin '
+                    + 'Kivallikin yhteisöihin matkaaville.',
+                  lahde: 'Josh Campbell, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Karhukausi varataan ajoissa',
+              teksti: 'Loka–marraskuussa Churchillin hotellit, junat ja lennot '
+                + 'täyttyvät, ja karhuja katsomaan lähdetään lähes aina '
+                + 'tundrabussilla. Nämä jättipyöräiset ajoneuvot kulkevat '
+                + 'kaupungin itäpuolella Churchill Wildlife Management Arean '
+                + 'suojelualueella, jolla ajamiseen tarvitaan lupa, ja '
+                + 'retkipäivän hintaan kuuluvat opas, keitto ja kuuma kaakao. '
+                + 'Takaosan ulkotasanteelta kuvataan, mutta sisälläkin on '
+                + 'kylmä, koska kaikki avaavat ikkunat. Majoitus, kulkuyhteys '
+                + 'ja tundrabussi kannattaa varata samalla kertaa, sillä '
+                + 'sesongin varaukset maksetaan usein kokonaan etukäteen eikä '
+                + 'rahoja palauteta: muuten voi jäädä käsiin hotellihuone '
+                + 'ilman retkeä tai retki ilman huonetta. Innokkaimmat '
+                + 'yöpyvät tundralla Tundra Buggy Lodgessa, makuu-, ruoka- ja '
+                + 'oleskeluvaunuista kootussa junassa, joka on käytössä vain '
+                + 'karhukaudella. Etelämpänä alkavaan Wapuskin '
+                + 'kansallispuistoon, jonka nimi tulee jääkarhua tarkoittavasta '
+                + 'cree-kielen sanasta, pääsee vain helikopterilla tai '
+                + 'luvallisten retkien mukana. Sesongin viimeinen viikko osuu '
+                + 'yleensä marraskuun loppupuolelle: kun lahti jäätyy, karhut '
+                + 'lähtevät jäälle ja tundrabussit jäävät talliin.',
+              kuva: {
+                tiedosto: 'Tundra Buggy Lodge 2004-11-16.jpg',
+                lyhyt: 'Tundra Buggy Lodgen vaunujunaa kiertävät jääkarhut marraskuussa 2004.',
+                selite: 'Tundralle pysäköity Tundra Buggy Lodge on koottu '
+                  + 'makuu-, ruoka- ja oleskeluvaunuista, ja sen vieraat näkevät '
+                  + 'karhuja ikkunasta heti herättyään.',
+                lahde: 'Ansgar Walk, Wikimedia Commons (CC BY 2.5)',
+              },
+            },
+            {
+              otsikko: 'Maitovalaiden kesä',
+              teksti: 'Kun jäät lähtevät, Churchill-joen suistoon ui kesäkuun '
+                + 'puolivälistä elokuun puoliväliin tuhansia maitovalaita eli '
+                + 'belugoita. Ne kuuluvat Hudsoninlahden länsiosan noin '
+                + '55 000 valaan kantaan, joka talvehtii jään alla '
+                + 'Hudsoninsalmessa ja hakeutuu kesäksi lämpimämpiin '
+                + 'jokisuihin; Hudsoninlahdella poikaset syntyvät enimmäkseen '
+                + 'kesäkuun lopulla. Valkoisia valaita kutsutaan '
+                + 'merikanarioiksi niiden visertävän ääntelyn vuoksi. '
+                + 'Retkille lähdetään kumiveneillä, kajakeilla tai '
+                + 'suppilaudoilla, ja rohkeimmat laskeutuvat märkä- tai '
+                + 'kuivapuvussa snorklaamaan jokeen valaiden joukkoon. '
+                + 'Veneretki jatkuu usein joen toiselle rannalle linnoituksen '
+                + 'raunioille, joille pääsee vain vesitse tai helikopterilla. '
+                + 'Churchill-joen suisto oli vuosina 1967–1992 akvaarioiden '
+                + 'tärkein belugojen pyyntipaikka, kunnes pyynti kiellettiin; '
+                + 'nyt valaiden katselu on kasvanut niin suureksi, että '
+                + 'tutkijat seuraavat veneiden melun vaikutusta valaisiin. '
+                + 'Kesä on myös hyönteisten aikaa, ja heinäkuussa pistäviä '
+                + 'kärpäsiä ja hyttysiä on eniten: mukaan kannattaa pakata '
+                + 'pitkähihaiset vaatteet ja DEET-pitoista karkotetta.',
+              kuva: {
+                tiedosto: 'Belugaschule 1999-07-02.jpg',
+                lyhyt: 'Maitovalasparvi ui Hudsoninlahdella Churchillin edustalla heinäkuussa 1999.',
+                selite: 'Heinäkuun alussa ilmasta kuvatussa maitovalasparvessa '
+                  + 'pinnalla näkyvät valkoiset selät, syvemmällä uivat valaat '
+                  + 'hohtavat vihreinä veden läpi.',
+                lahde: 'Ansgar Walk, Wikimedia Commons (CC BY 2.5)',
+              },
+            },
+            {
+              otsikko: 'Revontulet ja raketit',
+              teksti: 'Churchill on vilkkaan revontulivyöhykkeen keskellä, ja '
+                + 'kirkkaana yönä vihreitä verhoja voi nähdä jo loppukesästä '
+                + 'karhukauteen. Paras aika on silti tammi–maaliskuu, kun yöt '
+                + 'ovat pisimmät ja pilviä vähiten; keskikesällä taivas ei '
+                + 'pimene tarpeeksi. Juuri revontulien takia kaupungin '
+                + 'itäpuolelle rakennettiin 1950-luvulla rakettiasema, josta '
+                + 'Kanada ja Yhdysvallat laukaisivat yli 3 500 luotainrakettia '
+                + 'tutkimaan yläilmakehää ja revontulien vaikutusta '
+                + 'radioyhteyksiin. Asema hiljeni 1980-luvulla, ja viimeinen '
+                + 'raketti lähti huhtikuussa 1998, kun Akjuit Aerospace yritti '
+                + 'tehdä paikasta kaupallisen avaruussataman. Nyt entisellä '
+                + 'rakettikentällä 23 kilometrin päässä kaupungista toimii '
+                + 'Churchill Northern Studies Centre, tutkimusasema, joka '
+                + 'järjestää helmi–maaliskuussa viiden päivän '
+                + 'revontulikursseja myös matkailijoille. Omatoimimatkailija '
+                + 'voi vuokrata auton ja ajaa kaupungin valojen ulkopuolelle, '
+                + 'jolloin auto toimii samalla lämmittelytupana. Suosittu '
+                + 'kuvauspaikka on inuksuk, ihmistä esittävä kivikummeli '
+                + 'Hudsoninlahden rannassa. Kuvaamiseen tarvitaan jalusta ja '
+                + 'pitkä valotus, ja pakkanen tyhjentää akut nopeasti, joten '
+                + 'varakennot kannattaa pitää lämpimässä lähellä vartaloa.',
+              kuva: {
+                tiedosto: 'Aurora Borealis - Churchill, Manitoba (41299224291).jpg',
+                lyhyt: 'Revontulet kaartuvat Churchillin laitamien yllä elokuun lopun yönä 2014.',
+                selite: 'Revontulia näkyy Churchillissa jo loppukesällä, kun '
+                  + 'yöt alkavat pimetä: kuva on otettu 30. elokuuta 2014 vähän '
+                  + 'ennen puoltayötä.',
+                lahde: 'TravelingOtter, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+            {
+              otsikko: 'Hylyt tundralla ja veistokset museossa',
+              teksti: 'Vapaapäivänä Churchillin ympäristöä voi kiertää '
+                + 'vuokra-autolla tai oppaan kanssa. Rantatien varressa '
+                + 'kaupungin itäpuolella lepää Miss Piggy, Lambairin Curtiss '
+                + 'C-46 -rahtikone, jonka vasemman moottorin öljynpaine katosi '
+                + 'pian nousun jälkeen 13. marraskuuta 1979. Miehistö yritti '
+                + 'palata kentälle, mutta kone syöksyi maahan muutama sata '
+                + 'metriä ennen kiitotietä, ja kolmesta miehistön jäsenestä '
+                + 'kaksi loukkaantui. Lastina oli moottorikelkka ja '
+                + 'laatikoittain virvoitusjuomia; nimensä kone sai pyöreästä '
+                + 'muodostaan ja huhusta, että se olisi joskus kuljettanut '
+                + 'sikoja. Hylky on jätetty paikalleen. Kauempana '
+                + 'vuorovesitasangolla ruostuu vuonna 1960 karille ajanut '
+                + 'Ithaka-laiva, jonne kävellään laskuveden aikaan paikallisen '
+                + 'oppaan kanssa. Kaupungissa kannattaa käydä '
+                + 'Itsanitaq-museossa, jonka katoliset lähetyssaarnaajat '
+                + 'perustivat vuonna 1944. Sen noin 1 300 esineen kokoelmassa '
+                + 'on kivestä, valaanluusta ja norsunluusta veistettyjä '
+                + 'inuiittiveistoksia, työkaluja ja kajakkeja. '
+                + 'Postitoimistosta saa matkamuistoksi koristeleiman, mutta '
+                + 'se kannattaa painattaa vanhaan passiin tai vihkoon: '
+                + 'voimassa olevan passin epävirallinen leima voi tehdä '
+                + 'passista kelvottoman.',
+              kuva: {
+                tiedosto: 'Miss Piggy - Curtiss C-46 (16620989048).jpg',
+                lyhyt: 'Vuonna 1979 maahan syöksyneen Miss Piggy -rahtikoneen hylky lepää Churchillin rantakallioilla.',
+                selite: 'Lambairin Curtiss C-46 menetti moottorinsa öljynpaineen '
+                  + 'pian nousun jälkeen ja syöksyi maahan ennen kiitotietä; '
+                  + 'taustalla häämöttää Hudsoninlahden jää.',
+                lahde: 'Mike Beauregard, Wikimedia Commons (CC BY 2.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'jaakarhut',
