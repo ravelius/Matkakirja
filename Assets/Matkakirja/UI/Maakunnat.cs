@@ -5,7 +5,10 @@
 //   Lista      maaotsikko (▸, yksi maa auki kerrallaan) + rivi per alue; rivin
 //              napautus valitsee (valinta muistetaan: PlayerPrefs
 //              matkakirja-karttatyokalu-maakunta, avain "ISO:tunnus").
-//              Oletuksena auki pelaajan nykyinen maa, muuten Ranska.
+//              Auki on pelaajan nykyisen maan ryhmä (löydös 70, Fablen linjaus
+//              25.9.2026); maassa ilman maakuntia yläpuolella teksti "Tälle maalle
+//              ei ole vielä maakuntia" ja kaikki ryhmät kiinni. Saapuminen toiseen
+//              maahan päivittää listan ilman uudelleenavausta (Matka.Saapui).
 //   Luonnehdinta  listan alla kiinteänä: nimi, lyhyt teksti ja ⊕ → kortti.
 //   Kortti     kuvat (1–2 rinnakkain, useampi vaakavieritteenä, lähderivi),
 //              pitkä teksti ja Pulun kysymykset (yksi vastaus auki kerrallaan).
@@ -40,13 +43,15 @@ namespace Matkakirja.Natiivi
         readonly UiKerros kerros;
         readonly VisualElement juuri, lista, kuvaus, peukalo;
         readonly ScrollView vieritys;
-        readonly Label tila;
+        readonly Label tila, eiMaakuntia;
         readonly MaakuntaKortti kortti;
         readonly Dictionary<string, Button> rivit = new Dictionary<string, Button>();
         readonly Dictionary<string, (Button Otsikko, VisualElement Rivit)> ryhmat = new Dictionary<string, (Button, VisualElement)>();
         List<Maa> maat;
         Dictionary<string, object> luonnehdinnat, pulu;
         bool haussa, rakennettu;
+        string sovellettuIso = "";
+        Matka kuunneltu;
 
         public bool KorttiAuki => kortti.Auki;
 
@@ -64,6 +69,8 @@ namespace Matkakirja.Natiivi
             peukalo.style.display = DisplayStyle.None;
             lista.RegisterCallback<GeometryChangedEvent>(_ => SiirraPeukalo());
             tila = Rakenne.Teksti("Ladataan…", "mk-maakunnat__tila", lista);
+            eiMaakuntia = Rakenne.Teksti("Tälle maalle ei ole vielä maakuntia", "mk-maakunnat__tila", lista);
+            eiMaakuntia.style.display = DisplayStyle.None;
 
             kuvaus = Rakenne.El("mk-maakunnat__luonnehdinta", juuri);
             kuvaus.style.display = DisplayStyle.None;
@@ -74,7 +81,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Välilehti avattiin: data haetaan ja lista rakennetaan ensimmäisellä kerralla.</summary>
         public void Avautui()
         {
-            if (rakennettu || haussa) { if (rakennettu) SiirraPeukalo(); return; }
+            if (rakennettu || haussa) { if (rakennettu) { SovitaMaa(); SiirraPeukalo(); } return; }
             haussa = true;
             tila.text = "Ladataan…";
             UiKerros.Hae().StartCoroutine(Lataa());
@@ -185,7 +192,6 @@ namespace Matkakirja.Natiivi
             rakennettu = true;
             tila.RemoveFromHierarchy();
             if (ValittuAvain != null && !maat.Any(m => m.Alueet.Any(a => m.Iso + ":" + a.Tunnus == ValittuAvain))) ValittuAvain = null;
-            string avoin = ValittuAvain != null ? Jaa(ValittuAvain).Iso : OletusIso();
             foreach (var m in maat)
             {
                 var ryhma = Rakenne.El("mk-maakunnat__ryhma", lista, PickingMode.Ignore);
@@ -207,9 +213,10 @@ namespace Matkakirja.Natiivi
                     rivit[avain] = rivi;
                 }
                 ryhmat[iso] = (otsikko, ryhmanRivit);
-                AsetaRyhma(iso, iso == avoin);
+                AsetaRyhma(iso, false);
             }
             if (ValittuAvain != null) rivit[ValittuAvain].AddToClassList("mk-valittu");
+            SovitaMaa();
             // Peukalo viimeiseksi, jotta se piirtyy rivien päälle.
             peukalo.BringToFront();
             PaivitaLuonnehdinta();
@@ -231,18 +238,44 @@ namespace Matkakirja.Natiivi
             if (!oliAuki) Rakenne.Vierita(vieritys, ryhmat[iso].Otsikko);
         }
 
-        /// <summary>Pelaajan nykyinen maa, jos se on listalla; muuten Ranska (web oletusIso).</summary>
-        string OletusIso()
+        /// <summary>Pelaajan nykyisen kaupungin maa tai null (matkalla / ei peliä).</summary>
+        static string NykyinenIso()
         {
-            string iso = null;
             var o = PeliOhjain.Instanssi;
-            if (o != null && o.Matka != null)
-            {
-                var s = o.Matka.Tila.Pelaaja.Sijainti;
-                if (s.Kaupungissa) iso = UiSisalto.Kaupunki(s.Kaupunki)?.Maa;
-            }
-            return maat.Any(m => m.Iso == iso) ? iso : "FRA";
+            if (o == null || o.Matka == null) return null;
+            var s = o.Matka.Tila.Pelaaja.Sijainti;
+            return s.Kaupungissa ? UiSisalto.Kaupunki(s.Kaupunki)?.Maa : null;
         }
+
+        /// <summary>
+        /// Nykyisen maan ryhmä auki, muut kiinni; maalle ilman maakuntia ilmoitus (löydös 70).
+        /// Sovelletaan vain, kun maa vaihtuu, jotta pelaajan omat avaukset säilyvät.
+        /// Matkalla (ei kaupungissa) lista pysyy ennallaan.
+        /// </summary>
+        void SovitaMaa()
+        {
+            KuunteleSaapumisia();
+            if (!rakennettu) return;
+            string iso = NykyinenIso();
+            if (iso == null || iso == sovellettuIso) return;
+            sovellettuIso = iso;
+            bool onMaakuntia = ryhmat.ContainsKey(iso);
+            eiMaakuntia.style.display = onMaakuntia ? DisplayStyle.None : DisplayStyle.Flex;
+            foreach (var muu in ryhmat.Keys.ToList()) AsetaRyhma(muu, muu == iso);
+            SiirraPeukalo();
+        }
+
+        /// <summary>Saapuminen päivittää listan (myös välilehti auki); Matka voi vaihtua (uusi peli / lataus).</summary>
+        void KuunteleSaapumisia()
+        {
+            var m = PeliOhjain.Instanssi?.Matka;
+            if (m == kuunneltu) return;
+            if (kuunneltu != null) kuunneltu.Saapui -= Saapui;
+            kuunneltu = m;
+            if (m != null) m.Saapui += Saapui;
+        }
+
+        void Saapui(Pelaaja p, string kaupunki, bool uusi) => SovitaMaa();
 
         public void Valitse(string avain)
         {
