@@ -22,7 +22,7 @@ namespace Matkakirja.Editori
         public const string PalloKohtaus = "Assets/Matkakirja/Scenes/Pallo.unity";
 
         /// <summary>
-        /// Pelin oma pallolaatasto (Web Mercator, z0–8, 256 px, jpg) ämpärissä.
+        /// Pelin oma pallolaatasto (Web Mercator, z0–9, 256 px, jpg) ämpärissä.
         /// Karttasepän peruskarttasarja 2026-09-25 (resepti löydös 46: viivaton, ei rantamustetta, meri sävyliukuna;
         /// rannat ja rajat natiivissa vektorina, Rannikko ja Rajat). Aiempi 23a-sarja poltti viivat laattoihin.
         /// Slippy-rivi 0 on pohjoisin,
@@ -30,7 +30,7 @@ namespace Matkakirja.Editori
         /// </summary>
         public const string LaattaUrl =
             "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-25-pohja-20260925/{z}/{x}/{reverseY}.jpg";
-        public const int LaattaMaxTaso = 8;
+        public const int LaattaMaxTaso = 9;
 
         /// <summary>
         /// Karttasepän maasto (quantized-mesh-1.0, EPSG:4326, Copernicus GLO-30/90), poltto 2026-09-24-maailma:

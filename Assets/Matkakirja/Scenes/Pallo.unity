@@ -374,7 +374,7 @@ MonoBehaviour:
   _rectangleEast: 180
   _rectangleNorth: 90
   _minimumLevel: 0
-  _maximumLevel: 8
+  _maximumLevel: 9
   _tileWidth: 256
   _tileHeight: 256
   _requestHeaders: []
