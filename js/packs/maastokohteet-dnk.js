@@ -199,6 +199,7 @@ export const MAASTOKOHTEET_DNK = [
    * ============================================================== */
   {
     id: 'roskilden-tuomiokirkko',
+    nimio: 'Roskilde',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-roskilden-tuomiokirkko-dbb66426.jpg',
       lyhyt: 'Roskilden tuomiokirkon punatiilinen länsipääty ja kaksi tornia.',
@@ -482,6 +483,7 @@ export const MAASTOKOHTEET_DNK = [
   },
   {
     id: 'frederiksborgin-linna',
+    nimio: 'Frederiksborg',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-frederiksborgin-linna-1a648f36.jpg',
       lyhyt: 'Frederiksborgin linna järven saarilla Hillerødissä.',

@@ -332,6 +332,7 @@ export const MAASTOKOHTEET_ETH = [
   {
     id: 'balenpuisto',
     nimi: 'Balen kansallispuisto',
+    nimio: 'Bale',
     tyyppi: 'elain',
     kysymykset: [
       'Mikä eläin on etiopiansusi?',

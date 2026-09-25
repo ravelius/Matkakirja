@@ -310,6 +310,7 @@ export const MAASTOKOHTEET_ESP = [
    * ============================================================== */
   {
     id: 'santiago-de-compostela',
+    nimio: 'Santiago',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-santiago-de-compostela-08aeadff.jpg',
       lyhyt: 'Santiago de Compostelan katedraalin tornit kohoavat vanhankaupungin katojen yläpuolelle.',
@@ -594,6 +595,7 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'cordoban-moskeijakatedraali',
+    nimio: 'Mezquita',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-cordoban-moskeijakatedraali-4f97b8f7.jpg',
       lyhyt: 'Córdoban moskeijakatedraalin koristeellinen mihrab-kaari.',
@@ -711,6 +713,7 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'meridan-roomalainen-teatteri',
+    nimio: 'Mérida',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-meridan-roomalainen-teatteri-d0a1dd51.jpg',
       lyhyt: 'Méridan roomalaisen teatterin pylväikköinen näyttämöseinä.',
@@ -766,6 +769,7 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'salamancan-yliopisto',
+    nimio: 'Salamanca',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-salamancan-yliopisto-9a4973f1.jpg',
       lyhyt: 'Salamancan yliopiston Escuelas Mayores -rakennuksen platereski-julkisivu.',

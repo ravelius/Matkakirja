@@ -1110,6 +1110,7 @@ export const HAHMOTELMA_MLT = [
   },
   {
     id: 'hahmotelma-victoria-cittadella',
+    nimio: 'Cittadella',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/mlt-nosto-victoria-cittadella-7a7d152d.jpg',
       lyhyt: 'Cittadellan bastionimuuri Victorian yllä, taustalla kaupungin kattoja ja Pyhän Yrjön basilikan kupoli.',

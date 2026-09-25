@@ -289,6 +289,7 @@ export const HAHMOTELMA_POL = [
   },
   {
     id: 'hahmotelma-wolin',
+    nimio: 'Wolin',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-wolin-7a59f6b3.jpg',
       lyhyt: 'Metsäinen jyrkänne kohoaa hiekkarannan yläpuolelle Wolinin kansallispuistossa.',
@@ -500,6 +501,7 @@ export const HAHMOTELMA_POL = [
   },
   {
     id: 'hahmotelma-grunwald',
+    nimio: 'Grunwald',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-grunwald-43060a2a.jpg',
       lyhyt: 'Grunwaldin muistomerkkikukkulan korkea teräspylväiden ryhmä ja graniittinen muistokivi sinistä taivasta vasten.',
@@ -740,6 +742,7 @@ export const HAHMOTELMA_POL = [
   },
   {
     id: 'hahmotelma-kalwaria',
+    nimio: 'Kalwaria',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-kalwaria-587dff91.jpg',
       lyhyt: 'Kalwaria Zebrzydowskan Neitsyt Marian basilika ja luostarin vihertävät tornit sinistä taivasta vasten.',
@@ -1420,6 +1423,7 @@ export const HAHMOTELMA_POL = [
   },
   {
     id: 'hahmotelma-bochnia',
+    nimio: 'Bochnia',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-bochnia-e1677404.jpg',
       lyhyt: 'Bochnian suolakaivoksen Campi-kuilun nostotorni ja kaivoksen hallintorakennukset.',
@@ -1480,6 +1484,7 @@ export const HAHMOTELMA_POL = [
   },
   {
     id: 'hahmotelma-tarnowskie-gory',
+    nimio: 'Tarnowskie Góry',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-tarnowskie-gory-bfc3494c.jpg',
       lyhyt: 'Vedellä täyttynyt kaivoskäytävä Sztolnia Czarnego Pstrąga -sisäänajotunnelissa Tarnowskie Górissa.',
@@ -1613,6 +1618,7 @@ export const HAHMOTELMA_POL = [
   },
   {
     id: 'hahmotelma-torun-zamek',
+    nimio: 'Toruń',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260921/pol-nosto-torun-59edb40e.jpg',
       lyhyt: 'Toruńin ristiritarilinnan raunioitunut käymälätorni (dansker) kaupungin kirkkojen edessä.',

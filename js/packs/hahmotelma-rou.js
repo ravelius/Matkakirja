@@ -71,6 +71,7 @@ export const HAHMOTELMA_ROU = [
   ...EUROOPAN_KADONNEET.ROU,
   {
     id: 'hahmotelma-retezat',
+    nimio: 'Retezat',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-retezat-66ba59a6.jpg',
       lyhyt: 'Pietrele-järven rantaa ja lumisia huippuja Retezat-vuoristossa.',
@@ -270,6 +271,7 @@ export const HAHMOTELMA_ROU = [
   },
   {
     id: 'hahmotelma-berca',
+    nimio: 'Berca',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-berca-c29f1054.jpg',
       lyhyt: 'Kuivuneita mutakartioita Pâclele Marin alueella.',
@@ -344,6 +346,7 @@ export const HAHMOTELMA_ROU = [
   },
   {
     id: 'hahmotelma-scarisoara',
+    nimio: 'Scărișoara',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-scarisoara-2d95de4e.jpg',
       lyhyt: 'Valaistuja jääpuikkoja Scărișoaran jääluolan seinämällä.',
@@ -758,6 +761,7 @@ export const HAHMOTELMA_ROU = [
   },
   {
     id: 'hahmotelma-alba-iulia',
+    nimio: 'Alba Carolina',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-alba-iulia-b82bc230.jpg',
       lyhyt: 'Alba Carolinan linnoituksen tiilinen bastioni ja muuri.',
@@ -961,6 +965,7 @@ export const HAHMOTELMA_ROU = [
   },
   {
     id: 'hahmotelma-curtea-de-arges',
+    nimio: 'Curtea de Argeș',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-curtea-de-arges-61553e8b.jpg',
       lyhyt: 'Curtea de Argeșin katedraali vaaleine kupoleineen puiston keskellä.',
@@ -1838,6 +1843,7 @@ export const HAHMOTELMA_ROU = [
   },
   {
     id: 'hahmotelma-slanic',
+    nimio: 'Slănic Prahova',
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-slanic-67a515f2.jpg',
       lyhyt: 'Unirea-tason valtava sali Slănicin Vanhassa suolakaivoksessa.',

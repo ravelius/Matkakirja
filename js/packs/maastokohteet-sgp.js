@@ -83,6 +83,7 @@ export const MAASTOKOHTEET_SGP = [
   {
     id: 'sgp-kasvitieteellinen-puutarha',
     nimi: 'Kasvitieteellinen puutarha',
+    nimio: 'Kasvitarha',
     tyyppi: 'kulttuuri',
     kysymykset: [
       'Miten puutarha vaikutti kumibuumiin?',

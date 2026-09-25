@@ -202,6 +202,7 @@ export const MAASTOKOHTEET_CHL = [
   {
     id: 'chinchorro',
     nimi: 'Chinchorron muumiot',
+    nimio: 'Chinchorro',
     tyyppi: 'historia',
     kysymykset: [
       'Kuinka paljon Chinchorron muumiot ovat egyptiläisiä vanhempia?',
@@ -258,6 +259,7 @@ export const MAASTOKOHTEET_CHL = [
   {
     id: 'paranal',
     nimi: 'Paranalin observatorio',
+    nimio: 'Paranal',
     tyyppi: 'tekniikka',
     kysymykset: [
       'Miksi neljää kaukoputkea käytetään yhtenä?',
@@ -314,6 +316,7 @@ export const MAASTOKOHTEET_CHL = [
   {
     id: 'valdivia1960',
     nimi: 'Valdivian maanjäristys',
+    nimio: 'Valdivia 1960',
     tyyppi: 'historia',
     kysymykset: [
       'Kuinka voimakas järistys oli?',
