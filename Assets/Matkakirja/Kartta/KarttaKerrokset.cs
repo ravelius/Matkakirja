@@ -686,8 +686,8 @@ namespace Matkakirja
 
         /// <summary>
         /// LINSSISIIRTO (Ihmisen matka II, "kartta väistää"): katsekohde siirtyy ruudulla dx (oikealle) ja dy (ylös) ruudun
-        /// osuuksina, esim. (0, −0,25) = kohde alaspäin havainnekuvan tieltä. Vain projektion pääpiste siirtyy
-        /// (<see cref="PalloKierto.Linssisiirto"/>), kamera ja eleet pysyvät. Liuku kestoS sekunnissa ease in/out.
+        /// osuuksina, esim. (0, −0,25) = kohde alaspäin havainnekuvan tieltä. Kamera kääntyy paikallaan
+        /// (<see cref="PalloKierto.Linssisiirto"/>); kallistus, etäisyys ja eleet pysyvät. Liuku kestoS sekunnissa ease in/out.
         /// </summary>
         public static void Linssisiirto(float dx, float dy, float kestoS) => PalloKierto.Linssisiirto(dx, dy, kestoS);
 

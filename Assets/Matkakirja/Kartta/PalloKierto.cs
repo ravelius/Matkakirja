@@ -465,6 +465,7 @@ namespace Matkakirja
             if (!Seurataan && ((lennonSuuntima && suuntima != 0) || katseKorkeus != 0)) Palauta(Time.unscaledDeltaTime);
             else if (!Seurataan) lennonSuuntima = false;
             if (Application.isPlaying) PaivitaMaasto();
+            if (Application.isPlaying) PaivitaLinssisiirto(Time.unscaledDeltaTime);
             Aseta();
             if (Application.isPlaying) PaivitaPorttiLinssi(Time.unscaledDeltaTime);
             var nakyma = new double4(pituus, leveys, korkeus, KaytettyKallistus + suuntima * 1000.0);
@@ -591,40 +592,32 @@ namespace Matkakirja
             var kamera = GetComponent<Camera>();
             if (kamera == null) return;
             porttiLinssi = Mathf.MoveTowards(porttiLinssi, porttiTila ? 1f : 0f, (float)dt / Mathf.Max(0.01f, porttiHaivytysS));
-            PaivitaLinssisiirto((float)dt);
-            if (porttiLinssi <= 0f && siirtoNyt == Vector2.zero)
+            if (porttiLinssi <= 0f)
             {
                 if (linssiAsetettu) { kamera.ResetProjectionMatrix(); linssiAsetettu = false; }
                 return;
             }
-            float fov = kamera.fieldOfView, m02 = 0f, m12 = 0f;
-            if (porttiLinssi > 0f)
-            {
-                float kerroin = Pistekerroin;
-                double lev = kamera.pixelWidth / kerroin, kork = kamera.pixelHeight / kerroin;
-                if (lev <= 0 || kork <= 0) return;
-                var sov = EtusivunLento.RuudulleSovitus(lev, kork);
-                float osuus = Mathf.SmoothStep(0f, 1f, porttiLinssi);
-                float fovWeb = (float)(2.0 * math.degrees(math.atan(kork / 2.0 / sov.F)));
-                fov = Mathf.Lerp(kamera.fieldOfView, fovWeb, osuus);
-                // Kuvakeskipisteen siirto (lens shift): x_ndc − m02, y_ndc − m12; ruudun y alas = NDC:n y alas.
-                m02 = -2f * (float)((sov.Cx - lev / 2.0) / lev) * osuus;
-                m12 = 2f * (float)((sov.Cy - kork / 2.0) / kork) * osuus;
-            }
-            // Linssisiirto: optisen akselin piste (katsekohde) siirtyy ruudulla dx oikealle ja dy ylös ruudun osuuksina,
-            // eli NDC:ssä 2·d (akselin piste on x_ndc = −m02, y_ndc = −m12).
-            m02 -= 2f * siirtoNyt.x;
-            m12 -= 2f * siirtoNyt.y;
-            var p = Matrix4x4.Perspective(fov, kamera.aspect, kamera.nearClipPlane, kamera.farClipPlane);
-            p[0, 2] = m02;
-            p[1, 2] = m12;
+            float kerroin = Pistekerroin;
+            double lev = kamera.pixelWidth / kerroin, kork = kamera.pixelHeight / kerroin;
+            if (lev <= 0 || kork <= 0) return;
+            var sov = EtusivunLento.RuudulleSovitus(lev, kork);
+            float osuus = Mathf.SmoothStep(0f, 1f, porttiLinssi);
+            float fovWeb = (float)(2.0 * math.degrees(math.atan(kork / 2.0 / sov.F)));
+            var p = Matrix4x4.Perspective(Mathf.Lerp(kamera.fieldOfView, fovWeb, osuus), kamera.aspect, kamera.nearClipPlane, kamera.farClipPlane);
+            // Kuvakeskipisteen siirto (lens shift): x_ndc − m02, y_ndc − m12; ruudun y alas = NDC:n y alas.
+            p[0, 2] = -2f * (float)((sov.Cx - lev / 2.0) / lev) * osuus;
+            p[1, 2] = 2f * (float)((sov.Cy - kork / 2.0) / kork) * osuus;
             kamera.projectionMatrix = p;
             linssiAsetettu = true;
         }
 
         // ---- LINSSISIIRTO (Ihmisen matka II, Linssisepän tilaus 25.9.2026: "kartta väistää") ----
-        // Isot havainnekuvat peittävät osan ruudusta, joten tarinan kohta siirretään vapaaseen osaan kameraa liikuttamatta:
-        // vain projektion pääpiste siirtyy (kuten portin linssissä), joten kallistus, etäisyys ja eleet pysyvät ennallaan.
+        // Isot havainnekuvat peittävät osan ruudusta, joten tarinan kohta siirretään vapaaseen osaan: kamera kääntyy
+        // paikallaan niin paljon, että katsekohde osuu ruudun kohtaan (dx, dy). Ensimmäinen versio (ecfe86b1) siirsi
+        // projektion pääpistettä kuten portin linssi, mutta ihmisen matkan tähtitaivaan kaukotaso (~2,6e9 m) ja
+        // off-center-matriisi saivat URP:n kirjaamaan joka kehys "Screen position out of view frustum" (Linssisepän
+        // video 25.9., p99 49,6 ms). Kierto ei koske projektioon, joten URP, Cesium ja säteet näkevät saman kameran.
+        // Kallistus, etäisyys, suuntima ja eleiden tila pysyvät; kierto lisätään vain kameran asentoon (Aseta).
         static Vector2 siirtoAlku, siirtoKohde, siirtoNyt;
         static float siirtoT = 1f, siirtoKestoS;
 
@@ -640,6 +633,21 @@ namespace Matkakirja
             siirtoKestoS = Mathf.Max(0f, kestoS);
             siirtoT = 0f;
             if (siirtoKestoS <= 0f) { siirtoNyt = siirtoKohde; siirtoT = 1f; }
+        }
+
+        /// <summary>
+        /// Kameran lisäkierto, jolla optisen akselin piste (katsekohde) näkyy ruudun kohdassa (dx, dy): pystykulma
+        /// atan(2·dy·tan(fov/2)) ja vaakakulma atan(2·dx·tan(fov/2)·aspect). Nollasiirrolla identiteetti.
+        /// </summary>
+        static Quaternion LinssisiirronKierto(Camera kamera)
+        {
+            if (siirtoNyt == Vector2.zero || kamera == null) return Quaternion.identity;
+            double tanPysty = math.tan(math.radians((double)kamera.fieldOfView) * 0.5);
+            double pysty = math.degrees(math.atan(2.0 * siirtoNyt.y * tanPysty));
+            double vaaka = math.degrees(math.atan(2.0 * siirtoNyt.x * tanPysty * kamera.aspect));
+            // Unityn kamera: +X-kierto kääntää katseen alas (kuva nousee), +Y oikealle (kuva siirtyy vasemmalle).
+            // Kohde alas (dy < 0) = katse ylös = −X; kohde oikealle (dx > 0) = katse vasemmalle = −Y.
+            return Quaternion.Euler((float)pysty, (float)-vaaka, 0f);
         }
 
         /// <summary>Nykyinen linssisiirto (ruudun osuuksina).</summary>
@@ -1516,10 +1524,10 @@ namespace Matkakirja
             var p = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(a.silma));
             var t = gt.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(a.kohde));
             var yl = gt.TransformDirection((float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(a.ylos));
-            transform.SetPositionAndRotation(p, Quaternion.LookRotation(t - p, yl));
+            var kamera = GetComponent<Camera>();
+            transform.SetPositionAndRotation(p, Quaternion.LookRotation(t - p, yl) * LinssisiirronKierto(kamera));
 
             // Leikkaustasot seuraavat korkeutta: lähellä pintaa tarkkuus riittää.
-            var kamera = GetComponent<Camera>();
             if (kamera != null)
             {
                 double r = CesiumWgs84Ellipsoid.GetMaximumRadius();
