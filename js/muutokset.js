@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2212, teksti: 'Linssikatalogi: nelja valilehtea' },
+  { v: 2212, teksti: 'Nostonimiöt kursiiviksi: asua ei lueta irrotetu… (#3135)' },
   { v: 2211, teksti: 'Linssikatalogi: ulkoasukorjaukset PR #3128:aan (#3129)' },
   { v: 2210, teksti: 'Kaupunkien nimet: lattiakertoimella ei lukita e… (#3136)' },
   { v: 2209, teksti: 'Linssikatalogi: esittelysivun vaihe 1 (#3128)' },
