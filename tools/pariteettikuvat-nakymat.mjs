@@ -761,7 +761,13 @@ const LINSSIEHDOT = {
     },
   },
   satelliitti: { nakyy: ['.satelliitti-linssikehys'] },
-  topografia: { nakyy: ['.linssi-selite'] },
+  topografia: {
+    nakyy: ['.linssi-selite'],
+    // Odotuspeite (js/linssit/topografia.js PEITTEEN_OSA) on tumma kalvo, kunnes relief on ladattu (Linssiseppä 25.9.:
+    // rivin 30 web-kuva oli tumma). Kuva vasta kun peite on purettu.
+    ehto2: () => (window.matkakirja.ui.pallolauta?.linssit?.paalla?.('topografia-peite')
+      ? 'topografian odotuspeite yhä päällä (relief latautuu)' : null),
+  },
   vertailu: {
     ehto2: () => {
       if (!document.body.classList.contains('vertailu-tila')) return 'body.vertailu-tila puuttuu';

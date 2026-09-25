@@ -32,7 +32,7 @@ export const NATIIVI_ALKU = ['peli:odota-tila Aloitus 30', `peli:uusi-peli ${SIE
  * Rivien välissä: kaikki kiinni eksplisiittisesti (oikea linssi, linssien testinäkymät, lehti, kortit).
  * tools/pariteetti-ajo.mjs vahvistaa sen jälkeen, että kartta on taas näkyvissä (PERUSTILA).
  */
-export const NATIIVI_SIIVOUS = ['linssi:linssi pois', 'ui:ui linssi pois', 'peli:sulje-lehti', 'ui:ui sulje', 'odota:1'];
+export const NATIIVI_SIIVOUS = ['ui:ui linssi selite kiinni', 'linssi:linssi pois', 'ui:ui linssi pois', 'peli:sulje-lehti', 'ui:ui sulje', 'odota:1'];
 
 /** Kartan perustila: tämä teksti näkyy natiivin UI-puussa vain, kun mikään näkymä ei ole auki. */
 export const PERUSTILA = 'Liiku';
@@ -50,8 +50,7 @@ export const RIVIT = [
   { rivi: '10', nimi: 'Matkakirja auki', web: 'matkakirjakortti-auki', peli: true, natiivi: [`ui:ui matkakirja ${KAUPUNKI}`, 'odota:1', 'ui:ui matkakirja auki', 'odota:1'] },
   { rivi: '11', nimi: 'Linssi: keksinnöt', web: 'linssi-keksinnot', peli: true, natiivi: ['linssi:linssi keksinnot', 'odota:4'], huom: 'aikajana: eri vuosi = eri hetki' },
   { rivi: '12', nimi: 'Linssi: selite', web: 'linssi-selite', peli: true, natiivi: ['linssi:linssi topografia', 'odota:3', 'ui:ui linssi selite auki', 'odota:2'], huom: 'linssin oma selite avattuna (ui linssi selite auki, natiivi-ui/linssikerrokset bf6e86c1)' },
-  { rivi: '12b', nimi: 'Linssi: selite (keksinnöt)', web: 'linssi-selite', peli: true, natiivi: ['linssi:linssi keksinnot', 'odota:4', 'ui:ui linssi selite auki', 'odota:2'] },
-  { rivi: '13', nimi: 'Linssi: ihmisen matka käynnissä', web: 'linssi-ihmisen-matka-kaynnissa', peli: true, natiivi: ['linssi:linssi ihmisen-matka', 'odota:4', 'linssi:esitys kaynnista', 'odota:16'], huom: 'esitys: alkukortti → Käynnistä (linssi-komento esitys kaynnista, juna/b13) → musta kysymys → pallo' },
+  { rivi: '13', nimi: 'Linssi: ihmisen matka käynnissä', web: 'linssi-ihmisen-matka-kaynnissa', peli: true, natiivi: ['linssi:linssi ihmisen-matka', 'odota:4', 'linssi:esitys alusta', 'odota:1', 'linssi:esitys kaynnista', 'odota:14'], huom: 'esitys alusta (muisti jatkaisi vanhasta kohdasta) → Käynnistä → jakso 1 (web: "Tämä on se maanosa…")' },
   { rivi: '14', nimi: 'Asetukset (ratas)', web: 'ratas', peli: true, natiivi: ['ui:ui asetukset', 'odota:2'] },
   { rivi: '15', nimi: 'Karttaselite', web: 'karttaselite', peli: true, natiivi: ['ui:ui selite', 'odota:2'] },
   { rivi: '16', nimi: 'Kysymys (kohtaamisen visa)', web: 'visa', peli: true, natiivi: ['peli:tutki', 'peli:odota-tila Kysymys 15', 'peli:aloita', 'odota:2'], nollaa: true },
