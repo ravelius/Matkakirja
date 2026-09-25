@@ -55,7 +55,8 @@ namespace Matkakirja
             if (k == null || string.IsNullOrEmpty(k.Osoite) || string.IsNullOrEmpty(k.KohdePolku)) return;
             Varmista();
             ryhma ??= "";
-            if (!ryhmat.TryGetValue(ryhma, out var r) || r.Peruttu) ryhmat[ryhma] = r = new Ryhma();
+            // Valmistunut ryhmä alkaa alusta (Siirtosepän uusi kierros samalla nimellä yrittää virheet uudelleen).
+            if (!ryhmat.TryGetValue(ryhma, out var r) || r.Peruttu || (r.Jaljella == 0 && r.Polut.Count > 0)) ryhmat[ryhma] = r = new Ryhma();
             string polku = Path.IsPathRooted(k.KohdePolku) ? k.KohdePolku
                 : Path.Combine(Application.persistentDataPath, "sisalto", k.KohdePolku.Replace('/', Path.DirectorySeparatorChar));
             if (!r.Polut.Add(polku)) return;
