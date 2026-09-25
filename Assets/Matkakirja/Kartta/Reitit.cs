@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using CesiumForUnity;
@@ -135,23 +136,114 @@ namespace Matkakirja
         }
 
         /// <summary>
-        /// Pelin matkareitit (web ui.matkareittienValinta → reittiTunnukset, js/ui.js:7885): annetut reitit
-        /// varjoineen ja askelhelmineen, vanhat pois (korostus jää). Tunnus "a|b" kumpaan suuntaan tahansa
-        /// (Reittiverkko). null tai tyhjä = matkareitit pois. Palauttaa piirrettyjen reittien määrän.
+        /// PELIN MATKAREITIT (pelitilan ainoa reittiohjaus; web ui.matkareittienValinta → reittiTunnukset,
+        /// js/ui.js:7885): täsmälleen annetut reitit tavallisella tyylillä (maa/meri-materiaali) pergamenttivarjon
+        /// ja askelhelmien kanssa, vanhat pois (korostus jää). Tunnus on pelin reittitunnus "a|b" (verkko.Reitit),
+        /// haku kumpaan suuntaan tahansa. null tai tyhjä = kaikki pois 250 ms:n häivytyksellä (web
+        /// pathTransitionDuration). PeliOhjain kutsuu vain muutoksessa.
         /// </summary>
-        public int NaytaReitit(IEnumerable<string> tunnukset)
+        public void NaytaPeli(IReadOnlyList<string> ids)
         {
-            Tyhjenna(false);
-            if (tunnukset == null) return 0;
-            var piirretyt = new HashSet<Reitti>();
-            foreach (var t in tunnukset)
+            if (ids == null || ids.Count == 0)
             {
-                int i = t == null ? -1 : t.IndexOf('|');
-                if (i <= 0) continue;
-                var r = Hae(t.Substring(0, i), t.Substring(i + 1));
+                if (naytetyt.Count == 0) return;
+                var pois = new List<GameObject>(naytetyt);
+                naytetyt.Clear();
+                haipuvat.AddRange(pois);
+                StartCoroutine(Haivyta(pois, haivytysKesto));
+                return;
+            }
+            Tyhjenna(false);
+            var piirretyt = new HashSet<Reitti>();
+            foreach (var t in ids)
+            {
+                var r = HaeTunnus(t, out _);
                 if (r != null && piirretyt.Add(r)) naytetyt.Add(PiirraMatka(r));
             }
-            return piirretyt.Count;
+        }
+
+        [Tooltip("Matkareittien poiston häivytys sekunteina (web pathTransitionDuration = lauta.js:682 MERKKIEN_SIIRTYMA_MS 250).")]
+        public float haivytysKesto = 0.25f;
+        readonly List<GameObject> haipuvat = new List<GameObject>();
+
+        /// <summary>Reitti tunnuksella "a|b" (kumpaan suuntaan tahansa) tai datan id:llä; kaanteinen = data on b→a.</summary>
+        Reitti HaeTunnus(string tunnus, out bool kaanteinen)
+        {
+            kaanteinen = false;
+            if (string.IsNullOrEmpty(tunnus)) return null;
+            int i = tunnus.IndexOf('|');
+            if (i > 0)
+            {
+                string a = tunnus.Substring(0, i);
+                var r = Hae(a, tunnus.Substring(i + 1));
+                if (r != null) { kaanteinen = r.a != a; return r; }
+            }
+            return reitit.Find(x => x.id == tunnus);
+        }
+
+        /// <summary>
+        /// REITIN ASKELPISTE samalta polulta kuin piirretty viiva (web siirto.js:264 pointAlong(reitit.poly(reitti),
+        /// idx / steps)): polku ReittiGeometria.LaudanPolku + Korjaa, piste ReittiMitat.PisteMatkalla. id "a|b"
+        /// (A = a), osuus 0–1 kaaren pituudesta a:sta b:hen; jos data on tallennettu b→a, osuus lasketaan silti
+        /// a:sta. Reitti ilman laudan pisteitä (tai lento): isoympyrä. null, jos reittiä ei ole tai data ei ole valmis.
+        /// Pelikoodari: PeliApu.ReittiPiste = reitit.ReittiPiste.
+        /// </summary>
+        public (double Lat, double Lon)? ReittiPiste(string id, double osuus)
+        {
+            if (!Valmis) return null;
+            var r = HaeTunnus(id, out bool kaanteinen);
+            if (r == null) return null;
+            double t = Math.Max(0.0, Math.Min(1.0, kaanteinen ? 1.0 - osuus : osuus));
+            Pisteet(r); // laskee r.polku maa- ja merireiteille
+            if (r.polku != null && r.polku.Count > 0)
+            {
+                var p = ReittiMitat.PisteMatkalla(r.polku, t);
+                var ll = ReittiGeometria.Asteiksi(p.X, p.Y);
+                return (ll.x, ll.y);
+            }
+            var A = kaupungit[r.a];
+            var B = kaupungit[r.b];
+            var g = ReittiGeometria.Isoympyra(A.lat, A.lon, B.lat, B.lon, t);
+            return (g.x, g.y);
+        }
+
+        /// <summary>Häivyttää reitit (viivat, varjot, helmet) peittävyydestä nollaan ja tuhoaa ne.</summary>
+        IEnumerator Haivyta(List<GameObject> pois, float kesto)
+        {
+            var levyt = new List<(Renderer r, MaterialPropertyBlock b, Color vari, Color reuna, bool helmi)>();
+            foreach (var g in pois)
+            {
+                if (g == null) continue;
+                foreach (var mr in g.GetComponentsInChildren<MeshRenderer>(true))
+                {
+                    var b = new MaterialPropertyBlock();
+                    mr.GetPropertyBlock(b);
+                    bool onHelmi = helmi != null && mr.sharedMaterial == helmi;
+                    var vari = onHelmi ? HelmenTaytto : mr.sharedMaterial != null ? mr.sharedMaterial.GetColor("_BaseColor") : Color.clear;
+                    levyt.Add((mr, b, vari, HelmenReuna, onHelmi));
+                }
+            }
+            for (float t = 0; t < kesto; t += Time.unscaledDeltaTime)
+            {
+                float k = 1f - Mathf.Clamp01(t / kesto);
+                foreach (var (r, b, vari, reuna, onHelmi) in levyt)
+                {
+                    if (r == null) continue;
+                    if (onHelmi)
+                    {
+                        b.SetColor("_Taytto", new Color(vari.r, vari.g, vari.b, vari.a * k));
+                        b.SetColor("_Viivavari", new Color(reuna.r, reuna.g, reuna.b, reuna.a * k));
+                    }
+                    else b.SetColor("_BaseColor", new Color(vari.r, vari.g, vari.b, vari.a * k));
+                    r.SetPropertyBlock(b);
+                }
+                yield return null;
+            }
+            foreach (var g in pois)
+            {
+                haipuvat.Remove(g);
+                if (g != null) Destroy(g);
+            }
         }
 
         /// <summary>Korostaa reitin a–b (valittu matka). Palauttaa false, jos reittiä ei ole.</summary>
@@ -209,6 +301,7 @@ namespace Matkakirja
         {
             nakyvat = nakyy;
             foreach (var g in naytetyt) g.SetActive(nakyy);
+            foreach (var g in haipuvat) if (g != null) g.SetActive(nakyy);
             foreach (var g in lentokaaret) g.SetActive(nakyy);
             if (korostettu != null) korostettu.SetActive(nakyy);
         }
@@ -217,7 +310,7 @@ namespace Matkakirja
         {
             foreach (var g in naytetyt) Destroy(g);
             naytetyt.Clear();
-            helmet.Clear(); // helmet ovat naytetyt-reittien lapsia
+            // Helmet ovat reittien lapsia: tuhotut karsitaan LateUpdatessa (häivytettävät elävät vielä hetken).
             if (myosKorostus && korostettu != null) { Destroy(korostettu); korostettu = null; }
         }
 
@@ -382,6 +475,7 @@ namespace Matkakirja
         // pisteinä kuten Siirtokohdemerkeissä: neliö tuodaan näkösädettä pitkin pinnan eteen.
 
         sealed class Helmi { public Transform juuri; public Vector3 pinta, normaali; }
+        static readonly Predicate<Helmi> OnTuhottu = h => h.juuri == null;
 
         readonly List<Helmi> helmet = new List<Helmi>();
         MaterialPropertyBlock helmiLohko;
@@ -440,6 +534,8 @@ namespace Matkakirja
 
         void LateUpdate()
         {
+            if (helmet.Count == 0) return;
+            if (helmet.Exists(OnTuhottu)) helmet.RemoveAll(OnTuhottu);
             if (helmet.Count == 0) return;
             if (kamera == null) kamera = Camera.main;
             if (kamera == null) return;

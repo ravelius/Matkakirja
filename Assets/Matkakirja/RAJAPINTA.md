@@ -48,7 +48,10 @@ korkeudet metreinä. Kaaret ovat asteina kapeammassa näyttösuunnassa.
 | `bool Korosta(string a, string b)` | valmis | Valittu reitti korostuu, ja katko liikkuu. |
 | `void Tyhjenna(bool myosKorostus = true)` | valmis | |
 | `bool OnReitti(a, b)` | valmis | |
-| `void Lentokaaret(string lahto, IReadOnlyCollection<string> kohteet)` | valmis | Lentolista auki: kirkkaat lentokaaret lähdöstä kohteisiin (web matkareittienValinta, lennot); null = pois. Ei napautusta. |
+| `void Lentokaaret(string lahto, IReadOnlyCollection<string> kohteet, string elava = null)` | valmis (build 13) | Lentolista auki: lentokaaret lähdöstä kohteisiin (web matkareittienValinta, lennot) värillä rgba(150,54,40,.6), katko paikallaan; vain `elava`-kohteen (valittu lento, web ui.lentoKaari.b) katko liikkuu. Huippu paraabelina 0,5 · clamp(kulma/180, 0,02…1) säteestä. null = pois. Ei napautusta. |
+| `void NaytaPeli(IReadOnlyList<string> ids)` | valmis (build 13) | Pelitilan ainoa reittiohjaus (web matkareittienValinta → reittiTunnukset): täsmälleen nämä reitit (pelin tunnukset "a|b", kumpaan suuntaan tahansa) tavallisella tyylillä, pergamenttivarjolla (B4) ja askelhelmillä (B5). Tyhjä/null = kaikki pois 250 ms:n häivytyksellä. Kutsu vain muutoksessa. |
+| `(double Lat, double Lon)? ReittiPiste(string id, double osuus)` | valmis (build 13) | Askelpiste samalta polulta kuin piirto (web siirto.js:264 pointAlong(poly, idx/steps); LaudanPolku + Korjaa). id "a|b" (A = a), osuus 0–1 a:sta b:hen myös, kun data on b→a. Ilman laudan pisteitä isoympyrä. null, jos reittiä ei ole tai data ei ole ladattu. Koukku: `PeliApu.ReittiPiste = reitit.ReittiPiste`. |
+| `Material helmi` | valmis (build 13) | Askelhelmen levy (Kohdemerkki-varjostin, Rakennus: Siirtokohde-materiaali); tyhjä = `Siirtokohdemerkit.materiaali`. |
 | `void SovitaKohteet(IEnumerable<string> kaupungit, marginaali = 0,12)` | valmis | Kamera loitontaa, jos kohteet eivät mahdu ruutuun (web sovitaKohteetNakyviin); ei lähennä. Pohja: `PalloKierto.SovitaPisteet`. |
 | `List<(lat, lon)> Polku(a, b)` | tulossa | Reitin polku kamera-ajoa ja nappulaa varten (sama kuin piirretty viiva). |
 
