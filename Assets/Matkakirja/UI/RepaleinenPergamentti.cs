@@ -103,8 +103,9 @@ namespace Matkakirja.Natiivi
                              + (Fbm(x * 0.04f / s, y * 0.075f / s, o4, 2) - 0.5f) * 2f * hieno * 0.44f;
                     float ex = x + nx, ey = y + ny;
                     // Sisennys laatikon reunasta: webin näkyvä paperi on 291/325 laatikosta (mitattu iPhone 402),
-                    // eli noin 5 % kummaltakin sivulta (MARGINAALI 12/400 + turbulenssin siirto sisäänpäin).
-                    float dist = Etaisyys(ex, ey, w, h, marg + 20f * s, v1, v2, v3, v4);
+                    // eli noin 5 % kummaltakin sivulta (MARGINAALI 12/400 + turbulenssin siirto sisäänpäin). Sivuilla
+                    // 28/400: 20/400:lla repaleinen reuna ulottui b13n:ssä 307 pt:n leveydelle (web 295); pystyssä ennallaan.
+                    float dist = Etaisyys(ex, ey, w, h, marg + 28f * s, marg + 20f * s, v1, v2, v3, v4);
                     float paperi = Mathf.Clamp01(0.5f - dist);
                     Color c = default;
                     if (paperi > 0f)
@@ -160,10 +161,10 @@ namespace Matkakirja.Natiivi
             return Mathf.Clamp01(1f - t / 0.75f);
         }
 
-        /// <summary>Etumerkillinen etäisyys viistekulmaiseen suorakaiteeseen (sisällä negatiivinen), reunavara marg.</summary>
-        static float Etaisyys(float x, float y, float w, float h, float marg, float v1, float v2, float v3, float v4)
+        /// <summary>Etumerkillinen etäisyys viistekulmaiseen suorakaiteeseen (sisällä negatiivinen), reunavarat sivuilla ja pystyssä.</summary>
+        static float Etaisyys(float x, float y, float w, float h, float margX, float margY, float v1, float v2, float v3, float v4)
         {
-            float l = marg, o = w - marg, t = marg, b = h - marg;
+            float l = margX, o = w - margX, t = margY, b = h - margY;
             float dx = Mathf.Max(l - x, x - o), dy = Mathf.Max(t - y, y - b);
             float laatikko = Mathf.Max(dx, dy);
             // Viisteet kulmissa: x + y -tasot (webin viiste 4–10 px 400 px:n paperilla).
