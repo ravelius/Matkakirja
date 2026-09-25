@@ -183,11 +183,14 @@ namespace Matkakirja.Natiivi
             // Web .start-gate: radial-gradient(ellipse at 50% 50%, rgba(36,26,18,.28) 40%, rgba(36,26,18,.6) 100%)
             // koko ruudun pallon päällä (omistaja 24.9., build 5 -löydös 17). Sumennus (web backdrop-filter 6px)
             // tulee kameran puolelta (Natiiviseppä); UI Toolkit ei sumenna 3D-kuvaa.
+            // Löydös 112 (Fable 25.9.): sävy mitattuna webin portista. UITK sekoittaa lineaarisessa väriavaruudessa, joten
+            // webin sRGB-peitot 0,28 / 0,6 vastaavat pallon vaalealla pinnalla (~sRGB 200) peittoja 0,45 / 0,8.
             Rakenne.Tausta(Rakenne.El("mk-aloitus__porttireuna", portti, PickingMode.Ignore),
-                Kuviot.Soikio("aloitus-portti", new Color(36 / 255f, 26 / 255f, 18 / 255f, 0.28f), new Color(36 / 255f, 26 / 255f, 18 / 255f, 0.6f), 0.4f));
-            // Juliste ja lause heti portissa; sama juliste jää avaukseen portin häipyessä.
+                Kuviot.Soikio("aloitus-portti-112", new Color(36 / 255f, 26 / 255f, 18 / 255f, PorttiPeitto), new Color(36 / 255f, 26 / 255f, 18 / 255f, PorttiPeittoReuna), 0.4f));
+            // Juliste ja lause heti portissa; sama juliste jää avaukseen portin häipyessä. Löydös 112: ei vaaleaa verhoa
+            // julisteen takana (web: portti on pelkkä tumma soikio), joten etusivulennon kone ja punainen viiva näkyvät
+            // otsikon takana kuten webin videossa.
             var porttiYla = Rakenne.El("mk-aloitus__ylaosa mk-aloitus__porttiyla", portti, PickingMode.Ignore);
-            Rakenne.Tausta(porttiYla, Kuviot.Pysty("aloitus-verho", Kuviot.Vari("#f7edd8", 0.86f), Kuviot.Vari("#f7edd8", 0f)));
             var porttiJuliste = Rakenne.El("mk-juliste", porttiYla, PickingMode.Ignore);
             Kapea(porttiJuliste);
             Viiva(porttiJuliste);
@@ -276,6 +279,9 @@ namespace Matkakirja.Natiivi
             kirjoitus?.Pause();
             LopetaLento(0);
         }
+
+        /// <summary>Portin tummennus keskellä ja reunoilla (web --portin-tummennus 0,28 / 0,6 sRGB-sekoituksena).</summary>
+        internal static float PorttiPeitto = 0.45f, PorttiPeittoReuna = 0.8f;
 
         // Fablen kaanonlause (23.9.2026); webin meta description päivitetään samaksi.
         const string PorttiLause = "Seuraa isoisän matkakirjaa vuodelta 1873 ja etsi Aarnin luettelon unohdetut aarteet.";
