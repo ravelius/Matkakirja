@@ -115084,6 +115084,241 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Battle Harbour',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Labrador, Trans-Labrador Highway, MV Northern Ranger,
+       * Nain, Nunatsiavut, Hopedale, Labradorite, Innu, Sheshatshiu,
+       * Natuashish, Innu tea doll, Churchill Falls Generating Station,
+       * Akami-Uapishku-KakKasuak-Mealy Mountains National Park Reserve,
+       * Wonderstrands, Point Amour Lighthouse, L'Anse Amour, HMS Raleigh
+       * (1919)) ja Wikivoyagesta (Labrador, Mealy Mountains National Park)
+       * — teksti omaa. Nostojen aiheita (Nainin lähetysasema, Torngatin
+       * vuoret, Red Bayn baskit, jäävuorten kuja, Rigolet'n turkiskauppa,
+       * Battle Harbour) ja Grenfellin/Bradfordin gallerioita ei toisteta.
+       * Hautakummun ikä 7 500 vuotta paikan kyltin ja Wikipedian
+       * L'Anse Amour -artikkelin nähtävyysosion mukaan (artikkelin
+       * historiaosio mainitsee 8 300 vuotta ihmisen toiminnasta seudulla).
+       * Kokoussalin labradoriittilattia ja ulun muotoinen pöytä kuvaajan
+       * Commons-kuvauksesta. Voimalakierrokset Wikivoyagen mukaan
+       * ennakkovarauksella; aikoja ja hintoja ei mainita. Kuvien lisenssit
+       * ja tekijät tarkistettu Commonsin extmetadatasta ja kuvat katsottu
+       * silmin.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Point Amour Lighthouse 1.jpg',
+          lyhyt: 'Point Amourin 33-metrinen majakka on Atlantin Kanadan korkein.',
+          selite: 'Vuonna 1857 valmistunut Point Amourin kalkkikivimajakka '
+            + 'vartioi Belle Islen salmea Labradorin etelärannikolla, ja sen '
+            + 'kupeessa olevassa entisessä vartijan asunnossa toimii nykyään '
+            + 'museo.',
+          lahde: 'Maciej, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kappale: 'Labrador on Newfoundland ja Labrador -provinssin '
+          + 'mannerosa: sen osuus provinssin pinta-alasta on 71 prosenttia, '
+          + 'asukkaista vain kuusi. Etelästä sinne tullaan lautalla Belle '
+          + 'Islen salmen yli, lännestä pitkää erämaatietä Québecista, ja '
+          + 'pohjoisrannikon inuiittikyliin pääsee vain laivalla tai '
+          + 'pienkoneella. Matkalla tapaa kaksi alkuperäiskansaa, inuiitit '
+          + 'ja innut, joiden kielet eivät ole toisilleen sukua. Itä-Kanadan '
+          + 'suurimpaan kansallispuistoon ei johda yhtään tietä, ja etelärannikolla '
+          + 'seisovat Atlantin Kanadan korkein majakka ja hautakumpu, joka on '
+          + 'tuhansia vuosia Egyptin pyramideja vanhempi. Matkakausi on '
+          + 'lyhyt: sesonki kestää kesäkuun puolivälistä elokuun loppuun, ja '
+          + 'tienvarren leirintäpaikat ovat auki vain kesän.',
+        artikkeli: {
+          nimi: 'Matkailijan Labrador',
+          teksti: 'Labradorin pohjoisrannikon kyliin ei johda yhtään tietä.',
+          nosto: 'Inuiittien kokoussalin lattia on laatoitettu '
+            + 'labradoriitilla, kivellä joka sai nimensä tästä maasta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille lautalla, laivalla tai pienkoneella',
+              teksti: 'Useimmat matkailijat tulevat Labradoriin etelästä. '
+                + 'Lautta ylittää Belle Islen salmen Newfoundlandin St. '
+                + 'Barbesta Québecin puolelle Blanc-Sabloniin, josta '
+                + 'Labradorin rajalle on vain muutama kilometri. Siitä alkaa '
+                + 'Trans-Labrador Highway, joka kulkee 1 149 kilometrin '
+                + 'kaarena rannikolta Happy Valley-Goose Bayhin ja sisämaan '
+                + 'halki Labrador Cityn kautta Québecin rajalle. Tie päällystettiin koko matkaltaan '
+                + 'vasta heinäkuussa 2022, mutta palveluja on yhä harvassa: '
+                + 'Goose Bayn eteläpuolella huoltoasemien väli on noin 400 '
+                + 'kilometriä, eikä matkapuhelin kuulu kuin paikoitellen. '
+                + 'Lännestä pääsee Québecin Route 389 -tietä, joka on osin '
+                + 'yhä soraa. Pohjoisrannikon inuiittikyliin ei johda tietä '
+                + 'lainkaan. Kesäkuun puolivälistä marraskuun puoliväliin, '
+                + 'jäiden salliessa, Goose Baysta lähtee kerran viikossa '
+                + 'rannikkolaiva Kamutik W, joka pysähtyy kylissä ja kääntyy '
+                + 'Nainista takaisin noin kolmen tunnin kuluttua. Muulloin '
+                + 'kylien yhteyden ulkomaailmaan hoitavat pienet potkurikoneet. '
+                + 'Kello kannattaa tarkistaa: suurin osa Labradorista elää '
+                + 'Atlantin aikaa, mutta Newfoundlandia lähin kaakkoiskulma '
+                + 'noudattaa saaren aikaa, joka on puoli tuntia edellä.',
+              kuva: [
+                {
+                  tiedosto: 'MV Qajaq W.jpg',
+                  lyhyt: 'Qajaq W -lautta saapuu Blanc-Sabloniin Belle Islen salmen yli.',
+                  selite: 'Qajaq W on ajanut St. Barben ja Blanc-Sablonin '
+                    + 'väliä Belle Islen salmen yli vuodesta 2019; kesäkuussa '
+                    + '2026 otetun kuvan taustalla ajelehtii pieni jäävuori.',
+                  lahde: 'Quintin Soloviev, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'Kamutik W at port in Makkovik, Labrador.jpg',
+                  lyhyt: 'Rannikkolaiva Kamutik W laiturissa Makkovikissa, jonne ei johda tietä.',
+                  selite: 'Kamutik W tuo kesäisin matkustajat ja rahdin '
+                    + 'Goose Baysta Nunatsiavutin tiettömiin rannikkokyliin, '
+                    + 'kuten Makkovikiin, ja kääntyy takaisin Nainista.',
+                  lahde: 'Quincy Morgan, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: '2017-10-02 Air Borealis (PAL Airlines) DHC-6-300 Twin Otter C-GIZF plane.jpg',
+                  lyhyt: 'Air Borealiksen Twin Otter nousee Nainin lentokentältä.',
+                  selite: 'Kaksimoottorinen Twin Otter nousi Nainin kentältä '
+                    + 'lokakuussa 2017; tällaiset pienkoneet ovat '
+                    + 'pohjoisrannikon kylien ainoa säännöllinen yhteys silloin, '
+                    + 'kun satamat ovat jäässä.',
+                  lahde: 'Gordon Leggett, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Nunatsiavut, inuiittien oma maa',
+              teksti: 'Hamilton Inletin suulta pohjoiseen rannikko on '
+                + 'Nunatsiavutia, Labradorin inuiittien itsehallintoaluetta. '
+                + 'Nimi tarkoittaa inuttitutiksi "kaunista maatamme". '
+                + 'Tammikuussa 2005 allekirjoitettu maasopimus kattaa yli '
+                + '72 000 neliökilometriä maata ja lisäksi merialueita, ja '
+                + 'saman vuoden joulukuussa inuiittien oma hallitus otti '
+                + 'vastuulleen muun muassa terveydenhoidon, koulutuksen ja '
+                + 'kulttuuriasiat. Alue kuuluu yhä provinssiin, ja se on '
+                + 'Kanadan eteläisin tunnustettu inuiittialue. Hallinnon '
+                + 'keskus on Nain, mutta edustajakokous istuu Hopedalessa, '
+                + 'jossa satamaan päin avautuva kokoustalo valmistui 2012. '
+                + 'Istuntosalin lattia on laatoitettu labradoriitilla, ja '
+                + 'edustajat istuvat pöydän ääressä, joka on muotoiltu ulun, '
+                + 'inuiittinaisten puolikuun muotoisen veitsen, malliin. '
+                + 'Labradoriitti sai nimensä tästä maasta, sillä mineraalin '
+                + 'tyyppipaikka on Paul\'s Island Nainin edustalla. '
+                + 'Suomalainen tuntee kiven ennestään: Ylämaan spektroliitti '
+                + 'on labradoriitin poikkeuksellisen värikäs muunnos. '
+                + 'Nunatsiavutin viidessä kylässä on pieniä majataloja, mutta '
+                + 'huoneita on vähän, joten yösija kannattaa varata ennen '
+                + 'lähtöä.',
+              kuva: {
+                tiedosto: 'Assembly Chambers in the Nunatsiavut Assembly Building in Hopedale, Nunatsiavut.jpg',
+                lyhyt: 'Nunatsiavutin edustajat kokoontuvat Hopedalessa ulun muotoisen pöydän ääreen.',
+                selite: 'Hopedalen kokoustalon istuntosalin lattia on '
+                  + 'laatoitettu labradoriitilla, ja ulun muotoisen pöydän '
+                  + 'keskellä lattialla lepää jääkarhuntalja.',
+                lahde: 'FranceRivet, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Innujen maa ja maanalainen voimala',
+              teksti: 'Labradorin toinen alkuperäiskansa, innut, on eri kansa '
+                + 'kuin inuiitit, vaikka nimet sekoittuvat helposti. Innu '
+                + 'tarkoittaa ihmistä, ja kansan kieli innu-aimun kuuluu '
+                + 'kriin sukuiseen murrejatkumoon eikä ole sukua inuiittien '
+                + 'kielille. '
+                + 'Kotimaataan innut kutsuvat nimellä Nitassinan, "maamme". '
+                + 'Labradorin innut elivät karibua ja hirveä metsästäen '
+                + 'liikkuvaa elämää niin pitkään, että asettuivat pysyviin '
+                + 'kyliin vasta 1960-luvulla, viimeisten joukossa Kanadassa. '
+                + 'Sheshatshiuun ajetaan Goose Baysta 40 kilometriä '
+                + 'päällystettyä tietä, mutta vuonna 2002 perustettuun '
+                + 'Natuashishiin pääsee vain lentäen tai meritse, ja siellä '
+                + 'alkoholin myynti, osto ja hallussapito on kielletty '
+                + 'kyläläisten omalla päätöksellä. Innujen perinteistä '
+                + 'käsityötä ovat maalatut karibunnahkavaatteet ja teenuket: '
+                + 'tytöt kantoivat pitkillä vaelluksilla nukkeja, joiden '
+                + 'täytteenä kulki perheen teevarasto. Sisämaassa innujen '
+                + 'Mishta-shipu, "suuri joki", on valjastettu Churchill '
+                + 'Fallsin voimalaksi, jonka konesali on louhittu graniittiin '
+                + 'noin 300 metrin syvyyteen. Tekoaltaan alle 1960-luvulla '
+                + 'jääneistä metsästysmaista sovittiin korvauksista vasta '
+                + 'vuonna 2008. Voimalaan voi tutustua, kun kierroksen varaa '
+                + 'etukäteen.',
+              kuva: {
+                tiedosto: 'Caribou skin coat, Innu, Quebec-Labrador Peninsula, c. 1805 - Royal Ontario Museum - DSC00317.JPG',
+                lyhyt: 'Innujen maalattu karibunnahkatakki noin vuodelta 1805.',
+                selite: 'Labradorin niemimaan innujen karibunnahkainen takki on '
+                  + 'koristeltu maalatuin kuvioin; noin vuodelta 1805 peräisin '
+                  + 'oleva takki on Royal Ontario Museumin kokoelmissa '
+                  + 'Torontossa.',
+                lahde: 'Daderot, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Mealy Mountains ja ihmeiden ranta',
+              teksti: 'Lake Melvillen eteläpuolella kohoavat Mealy Mountains, '
+                + 'joiden jäätikön pyöristämät paljaat laet nousevat 1 180 '
+                + 'metriin. Vuonna 2015 perustettu kansallispuistovaraus on '
+                + 'noin 10 700 neliökilometrin laajuinen, Itä-Kanadan suurin '
+                + 'kansallispuisto ja koko itäisen Pohjois-Amerikan suurin '
+                + 'suojelualue. Pitkä nimi Akami-Uapishkᵘ-KakKasuak-Mealy '
+                + 'Mountains yhdistää kolme kieltä: innuksi Akami-Uapishku '
+                + 'tarkoittaa "vastarannan valkoisia vuoria", ja KakKasuak on '
+                + 'inuiittien sana vuorelle. Puisto perustettiin varaukseksi, '
+                + 'koska innujen maavaatimusneuvottelut olivat kesken, ja '
+                + 'poikkeuksellisesti paikalliset saavat yhä metsästää, pyytää '
+                + 'ansoilla, kalastaa ja kaataa polttopuuta omiin tarpeisiinsa. '
+                + 'Metsissä elää uhanalainen metsäkaribulauma, susia ja '
+                + 'mustakarhuja, ja joissa nousee atlantinlohi. Puistoon ei '
+                + 'johda tietä eikä siellä ole palveluja: sinne mennään '
+                + 'veneellä Cartwrightista tai Rigolet\'sta tai tilauskoneella '
+                + 'Goose Baysta. Palkintona on noin 50 kilometrin '
+                + 'hiekkarantojen jakso Labradorinmeren rannalla. Sen on '
+                + 'arveltu olevan Eerik Punaisen saagan Furðustrandir, '
+                + 'ihmeiden ranta, jonka viikingit nimesivät, koska sen ohi '
+                + 'purjehtiminen tuntui loputtomalta. Tutkijat eivät ole '
+                + 'yksimielisiä paikasta.',
+              kuva: {
+                tiedosto: 'Mealy Mountains Labrador 1.jpg',
+                lyhyt: 'Memekueshu-nipi-järvi Mealy Mountainsin jyrkkien kallioseinien välissä.',
+                selite: 'Lentokoneesta kuvattu Memekueshu-nipi-järvi eli Gods '
+                  + 'Pocket halkoo Mealy Mountainsin kansallispuistovarauksen '
+                  + 'jyrkkiä kallioseiniä.',
+                lahde: 'Paul Gierszewski, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Majakka, hautakumpu ja hylky',
+              teksti: 'Parinkymmenen kilometrin päässä Blanc-Sablonin '
+                + 'lauttasatamasta mahtuu muutamalle kilometrille kolme '
+                + 'aikakautta. Point Amourin majakka valmistui 1857 yhtenä '
+                + 'neljästä majakasta, joilla turvattiin höyrylaivojen '
+                + 'kasvavaa liikennettä Euroopan ja Amerikan välillä. '
+                + 'Paikallisesta kalkkikivestä muurattu, 33 metrin torni on '
+                + 'Atlantin Kanadan korkein ja koko maan toiseksi korkein '
+                + 'majakka, ja vartijan kunnostetussa asunnossa toimii museo. '
+                + 'Viereisen pikkukylän nimi L\'Anse Amour, "rakkauden '
+                + 'poukama", on kaunisteltu muoto vanhasta nimestä Anse aux '
+                + 'Morts, "kuolleiden poukama". Kylän liepeillä on noin 7 500 '
+                + 'vuotta vanha hautakumpu, johon arkaaisen merikulttuurin '
+                + 'väki hautasi pojan kasvot alaspäin ja pää länteen. Kumpu '
+                + 'nimettiin Kanadan kansalliseksi historialliseksi kohteeksi '
+                + '1978, ja kaivauslöytöjen jäljennöksiä on esillä L\'Anse au '
+                + 'Loupin museossa. Point Amourin lähellä rantapolku johtaa '
+                + 'HMS Raleighin jäänteille: brittiläinen risteilijä ajoi '
+                + 'sumussa karille elokuussa 1922, ja kaksitoista miestä '
+                + 'menehtyi. Hylky räjäytettiin 1926 syvyyspommeilla '
+                + 'tunnistamattomaksi, mutta ruostuneita kappaleita on yhä '
+                + 'rannassa.',
+              kuva: {
+                tiedosto: 'Tumulus Anse Amour Labrador.jpg',
+                lyhyt: 'L\'Anse Amourin kivillä peitetty hautakumpu on noin 7 500 vuotta vanha.',
+                selite: 'Matala, kivillä peitetty kumpu L\'Anse Amourissa on '
+                  + 'Pohjois-Amerikan vanhimpia tunnettuja hautapaikkoja, ja '
+                  + 'se nimettiin kansalliseksi historialliseksi kohteeksi '
+                  + '1978.',
+                lahde: 'Pierre Gingras, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'elaimet',
