@@ -529,7 +529,8 @@ namespace Matkakirja.Natiivi
                 l.RegisterCallback<UnityEngine.UIElements.Experimental.PointerUpLinkTagEvent>(e =>
                 {
                     if (string.IsNullOrEmpty(e.linkID)) return;
-                    Sulje();
+                    // Löydös 136: nosto jää taustalle, chat aukeaa sen päälle (UiNakymat.ChatinKerros).
+                    lukija.Pysayta();
                     UiNakymat.Hae()?.Chat.Kysy($"Kerro lisää: {e.linkID} (kohteessa {nimi})");
                 });
             }
@@ -596,7 +597,10 @@ namespace Matkakirja.Natiivi
 
         // --- lajien lohkot ------------------------------------------------------------------
 
-        /// <summary>Web piirraNostonKysymykset / piirraKohdeKysymykset: napautus sulkee kortin ja kysyy pululta.</summary>
+        /// <summary>
+        /// Web piirraNostonKysymykset / piirraKohdeKysymykset: napautus kysyy pululta. Löydös 136 (omistaja, build 16):
+        /// kortti jää taustalle auki ja chat aukeaa sen päälle (UiNakymat.ChatinKerros); kortin luenta pysähtyy.
+        /// </summary>
         void KysyPululta(VisualElement isa, Nosto n)
         {
             if (n.Kysymykset.Count == 0) return;
@@ -606,7 +610,7 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < n.Kysymykset.Count; i++)
             {
                 string kk = n.Kysymykset[i];
-                Action kysy = () => { Sulje(); UiNakymat.Hae()?.Chat.Kysy(kk); };
+                Action kysy = () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.Kysy(kk); };
                 var b = Rakenne.Nappi(kk, "mk-nosto__kysymys", kysy, isa);
                 Kirjasimet.Aseta(b, Kirjasin.Luku);
                 napit["kysy" + i] = kysy;
