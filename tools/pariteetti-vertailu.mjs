@@ -639,7 +639,7 @@ const html = (t) => String(t ?? '').replace(/[&<>"']/g, (c) => ({
  */
 export function kontaktiarkki(rivit, otsikko = 'Pariteettiajo') {
   // VIRHE = tila ei täsmännyt (tilavartija tai webin todennus): ei ero vaan ajon ongelma.
-  const TILAT = ['SAMA', 'ERI', 'PUUTTUU', 'VIRHE'];
+  const TILAT = ['SAMA', 'ERI', 'PUUTTUU', 'VAIN-NATIIVISSA', 'VIRHE'];
   const maarat = Object.fromEntries(TILAT.map((t) => [t, rivit.filter((r) => r.tila === t).length]));
   const kuva = (polku, kuvaus) => (polku
     ? `<a href="${html(polku)}"><img src="${html(polku)}" alt="${html(kuvaus)}" loading="lazy"></a>`
@@ -684,7 +684,7 @@ h1 { font-size:20px; margin:0 0 12px; }
 .rivi header { display:flex; flex-wrap:wrap; gap:8px; align-items:baseline; margin-bottom:8px; }
 .nro, .koko, .ero { color:var(--himmea); }
 .tila { font-weight:700; padding:1px 8px; border-radius:6px; color:#fff; }
-.tila.t-SAMA { background:var(--sama); } .tila.t-ERI { background:var(--eri); } .tila.t-PUUTTUU { background:var(--puuttuu); } .tila.t-VIRHE { background:var(--virhe); }
+.tila.t-SAMA { background:var(--sama); } .tila.t-ERI { background:var(--eri); } .tila.t-PUUTTUU { background:var(--puuttuu); } .tila.t-VIRHE { background:var(--virhe); } .tila.t-VAIN-NATIIVISSA { background:#6b7280; }
 .kuvat { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
 figure { margin:0; min-width:0; }
 figure img { width:100%; height:auto; display:block; border:1px solid var(--raja); border-radius:6px; }
