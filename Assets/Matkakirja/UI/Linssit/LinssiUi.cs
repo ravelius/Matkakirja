@@ -85,6 +85,10 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(sulje, Kirjasin.Kone);
             sulje.tooltip = "Sulje linssi";
             sulje.style.display = DisplayStyle.None;
+            // Selitteen nimilappu samalle riville ✕:n vasemmalle (web .linssi-selite.pieni); ✕:n leveys muuttuu tekstin
+            // sulaessa, joten lappu seuraa sitä.
+            Selite.Vasen = () => sulje.resolvedStyle.display == DisplayStyle.None ? float.NaN : sulje.worldBound.xMin;
+            sulje.RegisterCallback<GeometryChangedEvent>(_ => Selite.Uudelleen());
             kerros.TurvaMuuttui += Asettele;
             Asettele();
 
