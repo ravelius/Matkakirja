@@ -27,10 +27,10 @@ export const MAAKUNTASALAISUUDET_GRC = {
     lyhyt: 'Tästä vuoresta piti tulla jättiläinen, jolla on kaupunki kämmenellä! '
       + 'Liidän huipun ohi ja yritän kuvitella sen kasvot.',
     teksti: 'Athos-vuori nousee niemimaan kärjessä jyrkkinä, metsäisinä rinteinä 2033 '
-      + 'metrin korkeuteen. Roomalainen arkkitehti Vitruvius kertoo, että Aleksanteri Suuren '
-      + 'arkkitehti Deinokrates ehdotti koko vuoren veistämistä valtavaksi miehen hahmoksi: '
+      + 'metrin korkeuteen. Roomalainen arkkitehti Vitruvius kertoo tarinan, jonka todenperäisyys on epävarma: Aleksanteri Suuren '
+      + 'arkkitehti Deinokrates olisi ehdottanut koko vuoren veistämistä valtavaksi miehen hahmoksi: '
       + 'toisessa kädessä olisi kaupunki ja toisesta virtaisi joki mereen. Aleksanteri '
-      + 'hylkäsi ajatuksen, koska Deinokrates ei ollut miettinyt, mistä kaupungin asukkaat '
+      + 'olisi hylännyt ajatuksen, koska Deinokrates ei ollut miettinyt, mistä kaupungin asukkaat '
       + 'saisivat ruokansa, ja kaupunki perustettiin sen sijaan Niilin hedelmälliseen '
       + 'suistoon – siitä tuli Aleksandria. Vuorella kasvaa ainakin 35 kasvilajia, joita ei '
       + 'ole missään muualla, ja useimmat niistä huipun tuntumassa.',
