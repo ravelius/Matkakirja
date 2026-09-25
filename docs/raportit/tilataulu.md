@@ -36,6 +36,8 @@ Ei avoimia kortteja tiedossa juuri nyt.
 
 **Postilaatikko:** viimeisin commit 7755d9c5a "Posti: kuittaa kahden kaupungin galleriakytkentä PR:ssä" — muuttumaton.
 
+**REBOOT-TARKISTUS (Fable-pyyntö, kone käynnistyi uudelleen ~11:3x):** launchd-agentit fi.matkakirja.juna, juna-vahti, siivous, app.matkakirja.natiivi-bundle kaikki ladattu ja toiminnassa (state "not running" normaalia StartInterval-ajolle, juna.log vahvistaa aktiivisuuden 12:00 asti). varmuuskopio-VIKA.txt tyhjä. **POIKKEAMA ilmoitettu Fablelle:** simulaattoreita jo 4 boottina (odotettiin 0), luultavasti roolisessiot käynnistyneet jo itse.
+
 ## 3) Avoimet PR:t
 
 Yhteensä ~40 avointa PR:tä (karkea jako, ei virallinen luokitus):
