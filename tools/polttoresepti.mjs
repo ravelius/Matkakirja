@@ -79,6 +79,13 @@ export const RESEPTIT = Object.freeze({
     kielletyt: ['--syvyyskayrat', '--vesiviivoitus', '--syvyysportaat', '--rantaleveys'],
     laatu: '0.9',
     patina: 'kevyt',
+    /*
+     * NOSTOTASO ILMAN NIMIÖITÄ kuten tuotannossa (23a): laattaan vain merkki,
+     * nimi elävänä ja napautettavana (omistajan löydös 25.9.2026: 25-sarjan
+     * nostoja ei voinut klikata, koska lippu puuttui; ks. polta-paikallisesti.sh
+     * NOSTOT ILMAN NIMIÖITÄ).
+     */
+    nostoliput: ['--nostot-ilman-nimioita'],
     /* Pallon sarja Z0–Z9: laatikkosuodatin, JPEG 90 ilman värin alinäytteistystä. */
     palloliput: ['--suodatin', 'laatikko', '--jpeg-laatu', '90', '--jpeg-444'],
     palloTasot: '0-9',
@@ -143,6 +150,7 @@ async function paa(argv) {
       R_YHTEISLIPUT: r.yhteisliput.join(' '),
       R_POHJALIPUT: r.pohjaliput.join(' '),
       R_PALLOLIPUT: r.palloliput.join(' '),
+      R_NOSTOLIPUT: (r.nostoliput ?? []).join(' '),
       R_PALLO_TASOT: r.palloTasot,
       R_LAATU: r.laatu,
       R_PATINA: r.patina,

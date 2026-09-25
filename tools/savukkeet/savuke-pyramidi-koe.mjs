@@ -15,7 +15,12 @@
  *       pallokansion (js/pallo.js PALLO_LAATTAKANSIO) — ei mitään koesta;
  *   K4  saapumisen jälkeen lepokerros hakee kokeessa sarjan omat
  *       pyramidilaatat (versiovahti js/pallolaatat.js
- *       lepokerroksenKerrokset päästää sarjan läpi) eikä tuotannon.
+ *       lepokerroksenKerrokset päästää sarjan läpi) eikä tuotannon;
+ *   K5  NOSTOT NÄKYVÄT JA OVAT NAPAUTETTAVIA (omistajan löydös 25.9.2026:
+ *       koepyramidissa nostoja ei voinut klikata, koska nostotaso oli
+ *       poltettu nimien kanssa): kohdemaan kirjaus kertoo nimet elävinä
+ *       (js/laattapyramidi.js nostotasonNimetElavina) kuten tuotannossa,
+ *       ja luettelossa on nimiötaso (alue- ja merinimet, koristeet).
  *
  * Ämpäripyynnöt välitetään Noden kautta (ämpärin CORS ei päästä
  * paikallista palvelinta), joten koe näkee oikeat luettelot.
@@ -117,7 +122,13 @@ async function kirjaa(haku) {
   // Saapuminen lähelle: lepokerros latoo pyramidin laatat (K4).
   await sivu.evaluate(() => window.matkakirja?.ui?.pallolauta?.saavu?.({ kesto: 0 })).catch(() => {});
   await sivu.waitForTimeout(8000);
+  const tila = await sivu.evaluate(async () => {
+    const lp = await import('/js/laattapyramidi.js');
+    const l = await lp.haePyramidinLuettelo();
+    return { nimetElavina: lp.nostotasonNimetElavina(), nimiotaso: l?.nimiotaso?.versio ?? null };
+  }).catch(() => ({}));
   await ctx.close();
+  polut.tila = tila;
   return polut;
 }
 
@@ -135,11 +146,16 @@ const koeVersiot = [...new Set(koeLaatat.map((p) => p.split('/')[3]))];
 console.log(`INFO  koe: pyramidilaattoja ${koeLaatat.length}, versiot ${JSON.stringify(koeVersiot)}`);
 // Väritaso on luettelon varitasot-kentän oma versio (kannetaan sarjasta toiseen), ei tuotannon pohja.
 const koeluettelo = await fetch(`https://media.matkakirja.app/julisteet/pyramidi/koe/${SARJA}/pyramidi.json`).then((v) => v.json());
-const variversiot = new Set(Object.values(koeluettelo.varitasot ?? {}).map((v) => v.versio));
+// Väri- ja nimiötaso kannetaan sarjasta toiseen (luettelon omat versiot), eivät ole tuotannon pohja.
+const variversiot = new Set([...Object.values(koeluettelo.varitasot ?? {}).map((v) => v.versio), koeluettelo.nimiotaso?.versio].filter(Boolean));
 vaadi('K4 lepokerros koesarjan laatoista', koeVersiot.some((v) => v.startsWith(SARJA))
   && koeVersiot.every((v) => v.startsWith(SARJA) || variversiot.has(v)), JSON.stringify(koeVersiot));
 
+vaadi('K5 kohdemaan nostojen nimet elävinä (napautettavat)', koe.tila?.nimetElavina === true, JSON.stringify(koe.tila));
+vaadi('K5 nimiötaso luettelossa', Boolean(koe.tila?.nimiotaso), JSON.stringify(koe.tila));
+
 const tuotanto = await kirjaa('');
+vaadi('K5 vertailu: tuotannossa samoin', tuotanto.tila?.nimetElavina === true && Boolean(tuotanto.tila?.nimiotaso), JSON.stringify(tuotanto.tila));
 const tLuettelot = tuotanto.filter((p) => p.startsWith('/julisteet/pyramidi/') && p.endsWith('.json'));
 const tPallo = tuotanto.filter((p) => p.startsWith('/julisteet/pallo/laatat/'));
 console.log(`INFO  tuotanto: luettelot ${JSON.stringify([...new Set(tLuettelot)])}, pallopyyntöjä ${tPallo.length}`);
