@@ -21,6 +21,29 @@ if [[ ! -f $VK ]] || (( $(date +%s) - $(stat -f %m $VK) > 3600 )); then
   touch $VK   # ei päällekkäisiä ajoja, jos edellinen on kesken
   /Users/Shared/Claude/proto-3d/tyokalut/varmuuskopioi-natiivi.sh >> /Users/Shared/Claude/proto-3d/tyokalut/varmuuskopiointi.log 2>&1
 fi
+# IL2CPP-JUMIVAHTI (Fable 26.9. klo 00.4x; 25.9. klo 23.39 il2cpp kuoli ja Unity + bee_backend jäivät odottamaan 0 %:ssa):
+# lukko yli 15 min, lukon käännöksen Unity-puussa ei il2cpp-prosessia, eikä Unity + jälkeläiset kuluta CPU-aikaa 20 s:ssa
+# → tapa Unity-puu (proto-kaanna.sh vapauttaa lukon trapillaan), kirjaa rivi. Juna käännetään uudelleen kerran: sama kärki ei
+# saa jumia toista kertaa (merkki kaannospalvelu/jumi-viimeisin.txt), muuten vain kirjaus.
+JUMI=/Users/Shared/Claude/proto-3d/lokit/kaannospalvelu/jumi-viimeisin.txt
+puu() { local q; for q in $(pgrep -P $1); do echo $q; puu $q; done; }
+cpuaika() { ps -o time= -p ${(j:,:)@} 2>/dev/null | awk -F'[:.]' '{ s += ($1 * 60 + $2) } END { print s + 0 }'; }
+LK=/tmp/matkakirja-kaannospalvelu.lukko
+if [[ $1 == vahti && -d $LK ]] && (( $(date +%s) - $(stat -f %m $LK) > 900 )); then
+  lp=$(cat $LK/pid 2>/dev/null); uni=$( [[ -n $lp ]] && pgrep -P $lp -f "Unity.app/Contents/MacOS/Unity" | head -1)
+  if [[ -n $uni ]]; then
+    kaikki=($uni $(puu $uni))
+    if ! ps -o command= -p ${(j:,:)kaikki} 2>/dev/null | grep -q "il2cpp"; then
+      c1=$(cpuaika $kaikki); sleep 20; c2=$(cpuaika $kaikki)
+      if (( c2 - c1 < 1 )); then
+        kuka=$(cat $LK/kuka 2>/dev/null)
+        kill ${(Oa)kaikki} 2>/dev/null; sleep 5; kill -9 $kaikki 2>/dev/null
+        echo "$(aika) jumivahti: käännös ($kuka) jumissa ilman il2cpp:tä ja CPU:ta → Unity-puu tapettu, lukko vapautuu"
+        [[ $kuka == juna/* ]] && echo "$kuka" > $JUMI.uusi
+      fi
+    fi
+  fi
+fi
 [[ -n $JUNA ]] || { echo "$(aika) ei junaa"; exit 0; }
 nyt=$(git -C $GIT rev-parse --short "$JUNA" 2>/dev/null) || { echo "$(aika) ei junaa $JUNA"; exit 0; }
 [[ "$(cat $TILA 2>/dev/null)" == "$JUNA $nyt" || "$(cat $TILA 2>/dev/null)" == "$nyt" ]] && { [[ $1 == vahti ]] || echo "$(aika) $JUNA $nyt ennallaan"; exit 0; }
@@ -37,6 +60,8 @@ if [[ $1 == vahti ]]; then
     echo "$(aika) vahti: yläraja, vanhin kääntämätön $vika s ≥ 1200 s → käännös nyt"
   fi
 fi
+if [[ -f $JUMI && "$(cat $JUMI)" == "$JUNA $nyt" ]]; then echo "$(aika) jumivahti: $JUNA $nyt jumittui jo kerran, ei uutta yritystä (tarkista käsin)"; exit 0; fi
+[[ -f $JUMI.uusi ]] && { echo "$JUNA $nyt" > $JUMI; rm -f $JUMI.uusi; echo "$(aika) jumivahti: $JUNA $nyt käännetään uudelleen (kerran)"; }
 tulos=$(/Users/Shared/Claude/proto-3d/tyokalut/proto-kaanna.sh "$JUNA" $SIMS 2>&1 | tail -1)
 echo "$(aika) ${1:-ajastin}: $tulos"
 [[ "$tulos" == KÄÄNNETTY* ]] && echo "$JUNA $nyt" > $TILA
