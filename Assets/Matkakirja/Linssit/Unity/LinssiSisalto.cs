@@ -14,10 +14,8 @@ namespace Matkakirja.Natiivi
 {
     public static class LinssiSisalto
     {
-        [Serializable] class Osoitin { public string polku; }
 
         static string versioPolku;
-        static bool haussa;
 
         static string Valimuisti(string polku) =>
             Path.Combine(Application.persistentDataPath, "sisalto", polku.Replace('/', Path.DirectorySeparatorChar));
@@ -41,42 +39,26 @@ namespace Matkakirja.Natiivi
 
         static IEnumerator HaeSisalto(string polku, Action<string> valmis)
         {
-            while (haussa) yield return null;
-            if (versioPolku == null)
-            {
-                haussa = true;
-                using (var p = UnityWebRequest.Get(Sisalto.Osoitin))
-                {
-                    p.timeout = 10;
-                    yield return p.SendWebRequest();
-                    if (p.result == UnityWebRequest.Result.Success)
-                        versioPolku = JsonUtility.FromJson<Osoitin>(p.downloadHandler.text).polku;
-                    else
-                    {
-                        string viimeisin = Path.Combine(Application.persistentDataPath, "sisalto", "viimeisin.txt");
-                        if (File.Exists(viimeisin)) versioPolku = File.ReadAllText(viimeisin).Trim();
-                    }
-                }
-                haussa = false;
-            }
+            // Versiopolku Sisallon kautta (uusin.json kerran istunnossa, Esilataaja erä 1).
+            if (versioPolku == null) yield return Sisalto.VersioPolku(v => versioPolku = v);
             if (versioPolku == null) { valmis(null); yield break; }
             string koko = versioPolku + polku;
             string tiedosto = Valimuisti(koko);
-            if (File.Exists(tiedosto)) { valmis(File.ReadAllText(tiedosto)); yield break; }
-            using var k = UnityWebRequest.Get(Sisalto.Juuri + koko);
-            k.timeout = 20;
-            float hakuAlku = Time.realtimeSinceStartup;
-            yield return k.SendWebRequest();
-            VerkkoOdotus.Haku("linssi", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)k.downloadedBytes);
-            if (k.result != UnityWebRequest.Result.Success)
+            bool valimuistissa = File.Exists(tiedosto);
+            VerkkoOdotus.Osuma("linssi", valimuistissa);
+            if (valimuistissa) { valmis(File.ReadAllText(tiedosto)); yield break; }
+            string teksti = null, virhe = null;
+            yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(Sisalto.Juuri + koko); q.timeout = 20; return q; }, Taso.Nakyva, "linssi",
+                k => { if (k.result == UnityWebRequest.Result.Success) teksti = k.downloadHandler.text; else virhe = k.error; });
+            if (teksti == null)
             {
-                Debug.LogWarning($"MATKAKIRJA linssit: {koko} epäonnistui: {k.error}");
+                Debug.LogWarning($"MATKAKIRJA linssit: {koko} epäonnistui: {virhe}");
                 valmis(null);
                 yield break;
             }
             Directory.CreateDirectory(Path.GetDirectoryName(tiedosto));
-            File.WriteAllText(tiedosto, k.downloadHandler.text);
-            valmis(k.downloadHandler.text);
+            File.WriteAllText(tiedosto, teksti);
+            valmis(teksti);
         }
 
         /// <summary>

@@ -442,24 +442,11 @@ namespace Matkakirja.Natiivi
         static string Valimuisti(string polku) =>
             Path.Combine(SisaltoKansio, polku.Replace('/', Path.DirectorySeparatorChar));
 
+        /// <summary>Versiopolku Sisallon kautta (uusin.json kerran istunnossa, Esilataaja erä 1).</summary>
         IEnumerator HaeVersio()
         {
             versioPolku = null;
-            using (var p = UnityWebRequest.Get(Sisalto.Osoitin))
-            {
-                p.timeout = 10;
-                yield return p.SendWebRequest();
-                if (p.result == UnityWebRequest.Result.Success)
-                {
-                    try { versioPolku = JsonUtility.FromJson<Sisalto.OsoitinTiedot>(p.downloadHandler.text)?.polku; }
-                    catch (Exception e) { Debug.LogWarning("MATKAKIRJA peli: uusin.json ei jäsenny: " + e.Message); }
-                }
-                if (string.IsNullOrEmpty(versioPolku) && File.Exists(ViimeisinPolku))
-                {
-                    versioPolku = File.ReadAllText(ViimeisinPolku).Trim();
-                    Debug.LogWarning($"MATKAKIRJA peli: osoitin ei vastaa ({p.error}), käytetään {versioPolku}");
-                }
-            }
+            yield return Sisalto.VersioPolku(v => versioPolku = v);
         }
 
         /// <summary>Kokoelma raakatekstinä välimuistista tai ämpäristä. valmis(null) = ei saatu.</summary>
@@ -471,24 +458,27 @@ namespace Matkakirja.Natiivi
         {
             string polku = versioPolku + suhteellinen;
             string tiedosto = Valimuisti(polku);
-            if (!ohitaValimuisti && File.Exists(tiedosto))
+            bool valimuistissa = !ohitaValimuisti && File.Exists(tiedosto);
+            VerkkoOdotus.Osuma("peli", valimuistissa);
+            if (valimuistissa)
             {
                 valmis(File.ReadAllText(tiedosto));
                 yield break;
             }
-            using var k = UnityWebRequest.Get(Sisalto.Juuri + polku);
-            k.timeout = 30;
-            float hakuAlku = Time.realtimeSinceStartup;
-            yield return k.SendWebRequest();
-            VerkkoOdotus.Haku("peli", (Time.realtimeSinceStartup - hakuAlku) * 1000.0, (long)k.downloadedBytes);
-            if (k.result != UnityWebRequest.Result.Success)
+            string teksti = null, virhe = null;
+            long koodi = 0;
+            yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(Sisalto.Juuri + polku); q.timeout = 30; return q; }, Taso.Nakyva, "peli", k =>
             {
-                if (hiljaa) Debug.Log($"MATKAKIRJA peli: {polku} ei saatavilla ({k.responseCode})");
-                else Debug.LogError($"MATKAKIRJA peli: {polku} epäonnistui: {k.error}");
+                koodi = k.responseCode;
+                if (k.result == UnityWebRequest.Result.Success) teksti = k.downloadHandler.text; else virhe = k.error;
+            });
+            if (teksti == null)
+            {
+                if (hiljaa) Debug.Log($"MATKAKIRJA peli: {polku} ei saatavilla ({koodi})");
+                else Debug.LogError($"MATKAKIRJA peli: {polku} epäonnistui: {virhe}");
                 valmis(null);
                 yield break;
             }
-            var teksti = k.downloadHandler.text;
             try
             {
                 // Atomisesti: Sisalto.cs lukee samaa välimuistia rinnakkain.
@@ -556,6 +546,8 @@ namespace Matkakirja.Natiivi
             KaynnistaSahke();
             yield return HaeKysymykset();
             yield return HaeLuennat();
+            EsilataaIntro();
+            TilaVaihtui += (_, uusi) => { if (uusi == SilmukanTila.Aloitus) EsilataaIntro(); };
         }
 
         /// <summary>

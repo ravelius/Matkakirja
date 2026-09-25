@@ -5,6 +5,9 @@
 // kuten webin three-globe polygonStrokeColor (LineBasicMaterial). Peittävyys muunnetaan
 // lineaarisessa väriavaruudessa webin sRGB-sekoitusta vastaavaksi (sama kuin Tummennus.shader).
 // Kuori piirretään ilman syvyystestiä ennen reittejä ja merkkejä (MaaKartta.cs).
+// Maakunnat (MaaKartta.maakohtainen, web js/pallomaakunnat.js): paletin täyttö on jo kompensoitu CPU:lla
+// (Maakuntajako.Taytto), joten _TayttoEksponentti = 1, ja _Haive (0–1) kertoo täytön peiton webin 260 ms:n
+// häiveessä. Oletukset (1,75 ja 1) pitävät maatilan ennallaan.
 Shader "Matkakirja/MaaTaytto"
 {
     Properties
@@ -13,6 +16,8 @@ Shader "Matkakirja/MaaTaytto"
         _Paletti("Paletti", 2D) = "black" {}
         _ReunaLeveys("Rajan leveys (px)", Float) = 0.5
         _Alue("Rajaus", Vector) = (-180, 90, 360, 180)
+        _TayttoEksponentti("Täytön peittävyyden eksponentti lineaarisessa tilassa", Float) = 1.75
+        _Haive("Täytön häive", Float) = 1
     }
     SubShader
     {
@@ -37,6 +42,8 @@ Shader "Matkakirja/MaaTaytto"
                 float _ReunaLeveys;
                 float4 _Tunnus_TexelSize;
                 float4 _Alue; // länsi, pohjoinen, pituusväli, leveysväli (asteina)
+                float _TayttoEksponentti;
+                float _Haive;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float2 uv : TEXCOORD0; };
@@ -58,13 +65,13 @@ Shader "Matkakirja/MaaTaytto"
                 return round(SAMPLE_TEXTURE2D_LOD(_Tunnus, sampler_point_repeat, uv, 0).r * 255.0);
             }
 
-            half4 Vari(float id, float rivi)
+            half4 Vari(float id, float rivi, float eksponentti)
             {
                 half4 c = SAMPLE_TEXTURE2D_LOD(_Paletti, sampler_point_clamp, float2((id + 0.5) / 256.0, rivi), 0);
             #if !defined(UNITY_COLORSPACE_GAMMA)
                 // Web sekoittaa rgba-täytön sRGB-arvoihin; lineaarisena sama 0,3 jäi iPadilla lähes
                 // näkymättömäksi (Linssisepän kontakti 24.9.). Eksponentti kuten Tummennus.shaderissa.
-                c.a = 1 - pow(max(1 - c.a, 0), 1.75);
+                c.a = 1 - pow(max(1 - c.a, 0), eksponentti);
             #endif
                 return c;
             }
@@ -92,11 +99,12 @@ Shader "Matkakirja/MaaTaytto"
                 if (raja)
                 {
                     // Rajalla maan oma reunaväri; meren puolella viereisen maan.
-                    half4 r = Vari(k > 0 ? k : naapuri, 0.75);
+                    half4 r = Vari(k > 0 ? k : naapuri, 0.75, 1.75);
                     if (r.a > 0) return r;
                 }
                 if (k <= 0) discard;
-                half4 t = Vari(k, 0.25);
+                half4 t = Vari(k, 0.25, _TayttoEksponentti);
+                t.a *= _Haive;
                 if (t.a <= 0) discard;
                 return t;
             }

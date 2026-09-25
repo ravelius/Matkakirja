@@ -174,8 +174,9 @@ namespace Matkakirja.Natiivi
 
         static string Kansio => Path.Combine(Application.persistentDataPath, "aanet");
 
+        /// <summary>Buildiin mukana oleva (Mukana, esim. etusivun musiikki, löydös 118) tai levyvälimuistin polku.</summary>
         static string LevyPolku(string url) =>
-            Path.Combine(Kansio, Aanilataus.LevyNimi(url).Replace('/', Path.DirectorySeparatorChar));
+            Mukana.Polku(url) ?? Path.Combine(Kansio, Aanilataus.LevyNimi(url).Replace('/', Path.DirectorySeparatorChar));
 
         // --- elinkaari ---------------------------------------------------------
 

@@ -16,6 +16,12 @@ namespace Matkakirja
     ///
     /// Natiivi-UI:n karttaselite käyttää tätä IKarttaValot-sillan kautta
     /// (Scripts/Kartta/KarttaValotSilta.cs, Assembly-CSharp).
+    ///
+    /// VAIN KOHDEMAASSA (omistajan build 14 -löydös 117, Pelikoodari): valot, laskurit ja napautus koskevat vain
+    /// pelaajan maan valoja (NostoKerros.NykyinenMaa), kuten maakunnat. Web: valot syttyvät nostokerroksen
+    /// osumien alle (js/pallolauta/nostot.js paivitaValot), ja osumissa on vain kohdemaan nostot
+    /// (NAYTA_VAIN_KOHDEMAAN_NOSTOT = true). Ilman maata (aloitus, lento) ei valoja; maan vaihtuessa verkot
+    /// rakennetaan uudelleen.
     /// </summary>
     public class AiheValot : MonoBehaviour
     {
@@ -47,7 +53,7 @@ namespace Matkakirja
         public event Action Muuttui;
         public bool Valmis { get; private set; }
 
-        struct Valo { public string Id, Aihe; public Vector3 Paikka; public Vector3 Normaali; }
+        struct Valo { public string Id, Aihe, Maa; public Vector3 Paikka; public Vector3 Normaali; }
 
         /// <summary>Näkyvän valon napautus: karttavalot.json:n id (esim. "kohde:thessaloniki").</summary>
         public event Action<string> Napautettu;
@@ -57,7 +63,11 @@ namespace Matkakirja
 
         readonly Dictionary<string, int> laskurit = new Dictionary<string, int>();
         readonly Dictionary<string, MeshRenderer> verkot = new Dictionary<string, MeshRenderer>();
+        readonly List<Valo> kaikkiValot = new List<Valo>();
+        /// <summary>Kohdemaan valot (löydös 117): piirto, laskurit ja napautus.</summary>
         readonly List<Valo> valot = new List<Valo>();
+        string maa;
+        Vector3 keskusUnity;
         bool nakyvat = true;
         bool portissa;
 
@@ -112,28 +122,53 @@ namespace Matkakirja
                 var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, korkeus));
                 double3 u = georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
                 string id = d.TryGetValue("id", out var iv) && iv is string ids ? ids : null;
-                valot.Add(new Valo { Id = id, Aihe = aihe, Paikka = (float3)u, Normaali = (float3)math.normalize(u - keskus) });
+                string maaKoodi = d.TryGetValue("maa", out var mv) && mv is string ms ? ms : null;
+                kaikkiValot.Add(new Valo { Id = id, Aihe = aihe, Maa = maaKoodi, Paikka = (float3)u, Normaali = (float3)math.normalize(u - keskus) });
             }
+            keskusUnity = (Vector3)(float3)keskus;
+            Valmis = true;
+            Debug.Log($"MATKAKIRJA valot: {kaikkiValot.Count} valoa");
+            maa = null;
+            RakennaMaalle(NostoKerros.Instanssi != null ? NostoKerros.Instanssi.NykyinenMaa : null);
+        }
+
+        /// <summary>Löydös 117: kohdemaan valot verkoiksi (yksi verkko aihetta kohden). null = ei valoja.</summary>
+        void RakennaMaalle(string uusi)
+        {
+            maa = uusi;
+            valot.Clear();
+            if (uusi != null) foreach (var v in kaikkiValot) if (v.Maa == uusi) valot.Add(v);
             float kerroin = PalloKierto.Pistekerroin;
             foreach (var (aihe, vari) in Aiheet)
             {
                 var omat = valot.FindAll(v => v.Aihe == aihe);
-                if (omat.Count == 0) continue;
-                var go = new GameObject("Valot " + aihe);
-                go.transform.SetParent(georeferenssi.transform, false);
-                go.AddComponent<MeshFilter>().sharedMesh = Verkko(omat, vari);
-                var r = go.AddComponent<MeshRenderer>();
-                r.sharedMaterial = new Material(materiaali);
-                r.sharedMaterial.SetFloat("_Koko", sade * kerroin);
-                r.sharedMaterial.SetVector("_Keskus", (Vector3)(float3)keskus);
-                r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
-                r.receiveShadows = false;
+                verkot.TryGetValue(aihe, out var r);
+                if (omat.Count == 0)
+                {
+                    if (r != null) { Destroy(r.GetComponent<MeshFilter>().sharedMesh); Destroy(r.gameObject); verkot.Remove(aihe); }
+                    continue;
+                }
+                if (r == null)
+                {
+                    var go = new GameObject("Valot " + aihe);
+                    go.transform.SetParent(georeferenssi.transform, false);
+                    go.AddComponent<MeshFilter>();
+                    r = go.AddComponent<MeshRenderer>();
+                    r.sharedMaterial = new Material(materiaali);
+                    r.sharedMaterial.SetFloat("_Koko", sade * kerroin);
+                    r.sharedMaterial.SetVector("_Keskus", keskusUnity);
+                    r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                    r.receiveShadows = false;
+                    verkot[aihe] = r;
+                }
+                var mf = r.GetComponent<MeshFilter>();
+                if (mf.sharedMesh != null) Destroy(mf.sharedMesh);
+                mf.sharedMesh = Verkko(omat, vari);
                 r.enabled = nakyvat && !PalloKierto.PorttiSumea && (Valittu == "kaikki" || Valittu == aihe);
-                verkot[aihe] = r;
             }
-            Valmis = true;
-            Debug.Log($"MATKAKIRJA valot: {valot.Count} valoa, {verkot.Count} aihetta");
+            Debug.Log($"MATKAKIRJA valot: maa {uusi ?? "-"}, {valot.Count} valoa, {verkot.Count} aihetta");
             nakymaMuuttui = true;
+            seuraavaLasku = 0;
         }
 
         static Mesh Verkko(List<Valo> omat, Color32 vari)
@@ -215,6 +250,11 @@ namespace Matkakirja
             {
                 portissa = PalloKierto.PorttiSumea;
                 foreach (var p in verkot) p.Value.enabled = !portissa && nakyvat && (Valittu == "kaikki" || Valittu == p.Key);
+            }
+            if (Valmis)
+            {
+                string nyt = NostoKerros.Instanssi != null ? NostoKerros.Instanssi.NykyinenMaa : null;
+                if (nyt != maa) RakennaMaalle(nyt);
             }
             if (!Valmis || !nakymaMuuttui || Time.unscaledTime < seuraavaLasku) return;
             nakymaMuuttui = false;
