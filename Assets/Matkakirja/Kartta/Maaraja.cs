@@ -75,17 +75,17 @@ namespace Matkakirja
         /// <summary>Kehä sallittu (komento "maaraja pois" = false; oletus true).</summary>
         public static bool Sallittu = true;
         /// <summary>
-        /// Kehä myös vektorirannan kanssa (komento "maaraja paalle", vertailuun). Oletus false: OMISTAJAN PÄÄTÖS 25.9.2026
-        /// klo 00.0x (peruskartta D2 + reliefi + vektorirannat): kehä pois, kun Rannikko piirtyy; kehä jää tilanteisiin,
-        /// joissa rannikko on piilossa (lennon satelliittipinta, Rannikko.Nakyvissa = false, luettelo lataamatta).
-        /// Linssien ajan kehä on piilossa kuten ennenkin (kaupungit-portti).
+        /// Kehä myös vektorirannan kanssa. Oletus true: KOTIMAAN KOROSTUS (omistajan build 13 -lista 25.9.2026 ja
+        /// Linssisepän kierros 3 rivi 39, web lauta.js paivitaPallonMaakorostus): kotimaa kehällä kuten webissä. Kehä
+        /// piirtyy rannan alle (Jono 2995 &lt; Rannikko.RantaJono 2997), joten rannikolla ei synny kaksoisviivaa.
+        /// Korvaa 25.9. klo 00.0x:n päätöksen (kehä pois, kun Rannikko piirtyy). Komento "maaraja pois" vertailuun.
         /// </summary>
-        public static bool Pakota;
+        public static bool Pakota = true;
         /// <summary>Kiinteä leveys pisteinä (komento "maaraja paksuus &lt;pt&gt;"); NaN tai ≤ 0 = webin laki [1,6; 3].</summary>
         public static float PaksuusPt = float.NaN;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        static void NollaaKokeilut() { Sallittu = true; Pakota = false; PaksuusPt = float.NaN; }
+        static void NollaaKokeilut() { Sallittu = true; Pakota = true; PaksuusPt = float.NaN; }
 
         public CesiumGeoreference georeferenssi;
         public PalloKierto kierto;
