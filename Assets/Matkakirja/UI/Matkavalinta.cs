@@ -49,6 +49,8 @@ namespace Matkakirja.Natiivi
         public bool Auki { get; private set; }
         /// <summary>Ei korttia, jonka yläpuolelle pulu hyppäisi: webissä pulu jää toimintorivin päälle (E5).</summary>
         public VisualElement KorttiAlue => null;
+        /// <summary>Liiku-napin laatikko paneelissa (kaluste, D17); tyhjä, kun nappi ei näy.</summary>
+        public Rect LiikuLaatikko => liikuNakyy && liikuNappi.panel != null ? liikuNappi.worldBound : default;
         public bool HeittoNakyy { get; private set; }
         public string Otsikko => Auki ? otsikko.text : null;
 

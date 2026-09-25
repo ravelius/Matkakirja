@@ -44,6 +44,8 @@ namespace Matkakirja.Natiivi
 
         readonly UiKerros kerros;
         readonly VisualElement alue, nayttamo, kosketus;
+        /// <summary>Pulun alue paneelissa (kalusteena kaupunkiliuskan kamera-ajolle, D17); tyhjä, kun piilossa.</summary>
+        public Rect Laatikko => nakyvissa && alue.panel != null ? alue.worldBound : default;
         readonly LiviaKuva kuva;
         readonly LiviaTila tila = new LiviaTila();
         public readonly PuluKuplat Kuplat;
