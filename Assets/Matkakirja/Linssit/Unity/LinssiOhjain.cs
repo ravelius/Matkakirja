@@ -15,7 +15,8 @@
 // "linssi <id>" (vaihtokytkin), "linssi pois", "linssit" (luettelo lokiin);
 // maatilan linsseille "maa <ISO3>" (napautus), "vertaa" ja "lehti" (maakyltti);
 // keksinnöille "keksinnot kaynnista | jatka | tauko | tila | <pysäkki 0–25>";
-// ihmisen matkalle "esitys <jakso-id> | kaynnista | alusta | tauko | jatka | tila" ja II:lle "sumu pois | paalle | tila"
+// ihmisen matkalle "esitys <jakso-id> | kaynnista | alusta | tauko | jatka | toista | alkuun | loppuun | tila" (toista, alkuun ja
+// loppuun = II:n soittimen ⏯ ⏮ ⏭, IhmisenMatkaLinssi.Ohjaus) ja II:lle "sumu pois | paalle | tila"
 // (kehysaikojen vertailu sumun kanssa ja ilman); kaikille
 // "kamera <lat> <lon> <korkeus km>" (hyppy kuvakaappausta varten), "tila" ja
 // "kyllaisyys 0.8|1" (astronautin reliefi) ja "kehittaja 0|1" (kaikki linssit auki);
@@ -438,6 +439,8 @@ namespace Matkakirja.Natiivi
                 // II: kohteiden jaksoissa laskeutuminen kallistettuna (IhmisenMatka2Ymparisto); muu ympäristö sellaisenaan.
                 // Kääre kirjaa ajonsa numeroineen lokiin (kuvan väistö kulkee niiden käyrällä, löydös 151).
                 kaare = Versio2 ? new Matkakirja.Linssit.Aikajana.IhmisenMatka2Ymparisto(y) { Kirjaa = o.Kirjaa } : null;
+                // Ohjauksen tila lokiin (löydös 148: ⏮ ▶/⏸ ⏭ videon ajoitukset).
+                linssi.OhjausMuuttui += t => o.Kirjaa($"{id}: ohjaus {t}");
                 linssi.Avaa(kaare ?? y);
                 if (vanat != null) o.StartCoroutine(VanatSeuraavassa(linssi));
             }
@@ -1236,16 +1239,25 @@ namespace Matkakirja.Natiivi
         void Esitys(string mita)
         {
             // "esitys kaynnista" = aloituskortin Käynnistä (Aloita avauksesta), "esitys alusta" = valikon Aloita alusta.
+            // Löydös 148 (II:n soitin): "toista" = ▶/⏸, "alkuun" = ⏮, "loppuun" = ⏭ (IhmisenMatkaLinssi.Ohjaus);
+            // "tauko" ja "jatka" kutsuvat Esitystä suoraan kuten UI:n Tauko-nappi (linssi seuraa tilaa kehyksittäin).
             var il = (rekisteri.Auki as IhmisenMatkaSovitin)?.Linssi;
             if (mita == "kaynnista" && il != null) Kirjaa("esitys: käynnistä " + il.Kaynnista());
             else if (mita == "alusta" && il != null) Kirjaa("esitys: alusta " + il.AloitaAlusta());
+            else if (mita == "alkuun" && il != null) Kirjaa("esitys: alkuun " + il.Alkuun());
+            else if (mita == "loppuun" && il != null) Kirjaa("esitys: loppuun " + il.Loppuun());
+            else if (mita == "toista" && il != null) Kirjaa("esitys: toista/tauko " + il.ToistaTaiTauko());
             var e = (rekisteri.Auki as IhmisenMatkaSovitin)?.Linssi?.Esitys;
             if (e == null) { Kirjaa("esitys: ihmisen matka ei ole auki tai ei käynnissä"); return; }
             if (mita == "tauko") e.Tauko();
             else if (mita == "jatka") e.Jatka();
-            else if (mita != "tila" && mita != "kaynnista" && mita != "alusta") e.Valitse(mita);
-            var aani = (rekisteri.Auki as IhmisenMatkaSovitin)?.Aani;
-            Kirjaa($"esitys: jakso {e.I}, kulunut {e.Kulunut / 1000:F1}/{e.Kesto / 1000:F1} s, vuosia {e.Vuosia:F0}, käynnissä {e.Kaynnissa}, ääni {aani?.Tila ?? "ei"}");
+            else if (mita != "tila" && mita != "kaynnista" && mita != "alusta" && mita != "alkuun" && mita != "loppuun" && mita != "toista")
+                e.Valitse(mita);
+            var sovitin = rekisteri.Auki as IhmisenMatkaSovitin;
+            var kaare = sovitin?.Kaare;
+            Kirjaa($"esitys: jakso {e.I}, kulunut {e.Kulunut / 1000:F1}/{e.Kesto / 1000:F1} s, vuosia {e.Vuosia:F0}, käynnissä {e.Kaynnissa}, " +
+                $"ohjaus {il?.Ohjaus}, ääni {sovitin?.Aani?.Tila ?? "ei"}" +
+                (kaare != null ? $", kääre {(kaare.Tauolla ? "tauolla" : "käy")} ajo #{kaare.Ajo?.Numero ?? 0}{(kaare.Saattaa ? " saattaa" : "")}" : ""));
         }
 
         /// <summary>Natiivin Kuvauksen loppu "VU <tila> <syy>" (Natiiviseppä 161fa35), muuten koko kuvaus.</summary>

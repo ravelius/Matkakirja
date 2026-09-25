@@ -541,5 +541,281 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(ii.Esitys.RauhallinenAvaus, "II:n esitys saa parametrin");
             ii.Sulje();
         }
+
+        // ── Esityksen ohjaus (löydös 148): kääreen tauko, jatko ja lopetus; linssin Ohjaus-rajapinta ──
+
+        [Testi] static void TaukoJaadyttaaAjonJaJatkoJatkaaSamallaKayralla()
+        {
+            var v = new ValeYmparisto();
+            var k = new IhmisenMatka2Ymparisto(v);
+            var kuminauha = Kamerakayrat.Funktio(Kayra.Kuminauha);
+            var kohde = new Nakyma(20, 40, 5_000_000);
+            k.AjaKamera(kohde, 8f, kuminauha);
+            var ajo = k.Ajo;
+            v.Kello = 2;   // t = 0,25
+            v.Asento = new Nakyma(14, 31, 7_000_000);
+            k.Tauko();
+            Oleta.Tosi(k.Tauolla, "tauolla");
+            Oleta.Tosi(v.AjonKesto == 0 && v.Ajo.Value.Lat == 14 && v.Ajo.Value.Lon == 31 && v.Ajo.Value.Korkeus == 7_000_000, "kamera pysähtyi paikalleen");
+            Oleta.Sama<double?>(null, v.AjonKallistus, "kallistus jää sellaiseksi kuin se oli");
+            v.Kello = 30;
+            Lahella(2, k.Kello, "kello seisoo tauon ajan");
+            Lahella(0.25, ajo.T(k.Kello), "ajo seisoo");
+            int ajoja = v.Loki.Count(r => r == "ajo");
+            k.Paivita();
+            Oleta.Sama(ajoja, v.Loki.Count(r => r == "ajo"), "tauolla ei kääreen omia ajoja");
+            k.Jatka();
+            Oleta.Tosi(!k.Tauolla);
+            Oleta.Tosi(v.Ajo.Value.Lat == 20 && v.Ajo.Value.Lon == 40, "jatko samaan kohteeseen");
+            Lahella(6, v.AjonKesto, "loppuosa ajosta", 1e-6);
+            Oleta.Sama(ajo.Numero, k.Ajo.Numero, "sama ajo jatkuu (kuvan väistö samassa tahdissa)");
+            double e0 = kuminauha(0.25);
+            foreach (var u in new[] { 0.1, 0.5, 0.9, 1.0 })
+                Lahella((kuminauha(0.25 + 0.75 * u) - e0) / (1 - e0), v.AjonPehmennys(u), $"sama käyrä loppuun ({u})", 1e-12);
+            // Nopeus jatkuu: alkuperäisen ajon nopeus tauon hetkellä = jatkon alkunopeus (matka × käyrän kulmakerroin / kesto).
+            double h = 1e-6;
+            double ennen = (kuminauha(0.25 + h) - kuminauha(0.25)) / h / 8;
+            double jalkeen = (1 - e0) * v.AjonPehmennys(h) / h / 6;
+            Lahella(ennen, jalkeen, "ei nykäystä jatkossa", 1e-4);
+            v.Kello = 33;
+            Lahella(0.25 + 3.0 / 8, ajo.T(k.Kello), "kello jatkaa siitä, mihin jäi", 1e-9);
+        }
+
+        [Testi] static void TaukoOdottaaLaskeutumistaJaSaattolentoa()
+        {
+            var v = new ValeYmparisto();
+            var k = new IhmisenMatka2Ymparisto(v);
+            k.Lahikuva((10, 20));
+            k.AjaKamera(Rajaus, 9f);
+            v.Kello = 8;
+            v.Asento = new Nakyma(11, 21, 9_500_000);
+            k.Tauko();
+            v.Kello = 60;
+            k.Paivita();
+            Oleta.Tosi(v.AjonKesto == 0, "ei laskeutumista tauolla");
+            k.Jatka();
+            Lahella(1, v.AjonKesto, "ajon loppu jatkuu", 1e-6);
+            v.Kello = 60 + 1 + IhmisenMatka2Ymparisto.LaskunViive + 0.01;
+            v.Asento = Rajaus;
+            k.Paivita();
+            Oleta.Sama((double)IhmisenMatka2Ymparisto.LaskuS, (double)v.AjonKesto, "laskeutuminen jatkon jälkeen");
+
+            var v2 = new ValeYmparisto();
+            var k2 = new IhmisenMatka2Ymparisto(v2) { Rintama = () => (33.0, -106.0) };
+            k2.Jakso(IhmisenMatka2Ymparisto.SaattoJakso);
+            k2.Paivita();
+            int ajoja = v2.Loki.Count(r => r == "ajo");
+            k2.Tauko();
+            v2.Kello = 10;
+            k2.Paivita();
+            Oleta.Sama(ajoja + 1, v2.Loki.Count(r => r == "ajo"), "saattolento seis (vain pysäytys)");
+        }
+
+        [Testi] static void PelaajanSiirtoTauollaJaUusiAjoTauolla()
+        {
+            // Pelaaja siirsi kameraa tauolla: loppumatka levosta pehmeästi, ei käyrän keskeltä.
+            var v = new ValeYmparisto();
+            var k = new IhmisenMatka2Ymparisto(v);
+            k.AjaKamera(new Nakyma(20, 40, 5_000_000), 8f, Kamerakayrat.Funktio(Kayra.Kuminauha));
+            v.Kello = 7.5;
+            v.Asento = new Nakyma(19, 39, 5_200_000);
+            k.Tauko();
+            v.Asento = new Nakyma(-5, 10, 12_000_000);
+            k.Jatka();
+            Oleta.Tosi(v.AjonKesto >= IhmisenMatka2Ymparisto.JatkonMinS, "vähintään 1,2 s: " + v.AjonKesto);
+            Lahella(0, v.AjonPehmennys(0), "levosta");
+            Oleta.Tosi(v.AjonPehmennys(0.02) < 0.01, "pehmeä lähtö");
+
+            // Esityksen uusi ajo tauolla (aikaselaimen valinta): kulkee heti, kello käy, eikä jatko toista vanhaa ajoa.
+            var v2 = new ValeYmparisto();
+            var k2 = new IhmisenMatka2Ymparisto(v2);
+            k2.AjaKamera(new Nakyma(20, 40, 5_000_000), 8f);
+            v2.Kello = 2;
+            k2.Tauko();
+            v2.Kello = 5;
+            k2.AjaKamera(new Nakyma(-30, 20, 6_000_000), 4f);
+            Oleta.Tosi(v2.Ajo.Value.Lat == -30 && v2.AjonKesto == 4, "uusi ajo kameraan heti");
+            v2.Kello = 6;
+            Lahella(0.25, k2.Ajo.T(k2.Kello), "kello käy uuden ajon ajan");
+            Oleta.Tosi(k2.Tauolla, "tauko jatkuu (ei laskeutumista)");
+            int ajoja = v2.Loki.Count(r => r == "ajo");
+            k2.Jatka();
+            Oleta.Sama(ajoja, v2.Loki.Count(r => r == "ajo"), "vanha ajo ei jatku");
+        }
+
+        [Testi] static void LopetaJaSulkuPaastavatAjonKameraan()
+        {
+            // ⏭ kesken Amerikkojen saattolennon: lopun ajo koko palloon ei saa jäädä kääreeseen.
+            var v = new ValeYmparisto();
+            var k = new IhmisenMatka2Ymparisto(v) { Rintama = () => (20.0, -100.0) };
+            k.Jakso(IhmisenMatka2Ymparisto.SaattoJakso);
+            k.Lahikuva(MonteVerde);
+            k.Tauko();
+            k.Lopeta();
+            Oleta.Tosi(!k.Saattaa && !k.Tauolla, "saattolento ja tauko pois");
+            k.AjaKamera(new Nakyma(0, -80, 25_000_000), 1.2f);
+            Oleta.Sama(25_000_000.0, v.Ajo.Value.Korkeus, "lopun ajo kameraan");
+            v.Kello = 30;
+            v.Asento = new Nakyma(0, -80, 25_000_000);
+            k.Paivita();
+            Oleta.Sama(25_000_000.0, v.Ajo.Value.Korkeus, "ei laskeutumista lopun jälkeen");
+
+            // Linssi suljetaan kesken saattolennon: paluuajo menee kameraan (ennen se jäi saattolennon talteen).
+            var v2 = new ValeYmparisto();
+            var k2 = new IhmisenMatka2Ymparisto(v2) { Rintama = () => (20.0, -100.0) };
+            k2.Jakso(IhmisenMatka2Ymparisto.SaattoJakso);
+            k2.Kallista = false;
+            k2.AjaKamera(new Nakyma(48.85, 2.35, 2_000_000), 0.9f);
+            Oleta.Sama(48.85, v2.Ajo.Value.Lat, "paluu pelaajan näkymään");
+        }
+
+        sealed class OhjausKoe
+        {
+            public ValeYmparisto V;
+            public IhmisenMatka2Ymparisto K;
+            public IhmisenMatkaLinssi L;
+            public EsitysAjoTestit.ValeNakyma N;
+            public EsitysAjoTestit.ValeAani A;
+            public Dictionary<string, JaksonLeimat> Leimat;
+            public readonly List<EsityksenOhjaus> Tapahtumat = new List<EsityksenOhjaus>();
+            public void Aja(double s) { double loppu = V.Kello + s; while (V.Kello < loppu) { V.Kello += 1 / 60.0; K.Paivita(); L.Paivita(); } }
+        }
+
+        static OhjausKoe Ohjattava()
+        {
+            var (virrat, vanat) = TutkimusTestit.Virrat();
+            var (_, _, leimat) = EsitysAjoTestitApu.Aineisto();
+            var o = new OhjausKoe { V = new ValeYmparisto(), Leimat = leimat };
+            o.K = new IhmisenMatka2Ymparisto(o.V) { Rintama = () => (20.0, -100.0) };
+            o.N = new EsitysAjoTestit.ValeNakyma(o.V);
+            o.A = new EsitysAjoTestit.ValeAani(o.V, leimat.Values.Max(x => x.Paattyy));
+            o.L = new IhmisenMatkaLinssi(NostoKentatTestit.Aineisto(), leimat, o.N, o.A, IhmisenMatkaLinssi.IhmisenMatka2Tiedot);
+            o.L.OhjausMuuttui += o.Tapahtumat.Add;
+            o.L.Avaa(o.K);
+            o.L.AsetaVanat(vanat, virrat.Virrat);
+            return o;
+        }
+
+        [Testi] static void OhjausToistaTaukoJaJatkoII()
+        {
+            var o = Ohjattava();
+            Oleta.Sama(EsityksenOhjaus.Soi, o.L.Ohjaus, "esitys alkoi itse");
+            Oleta.Sama(EsityksenOhjaus.Soi, o.Tapahtumat.Last(), "tapahtuma napeille");
+            o.Aja(50);
+            var e = o.L.Esitys;
+            Oleta.Tosi(e.I >= 2, "kohdejaksoissa: " + e.I);
+            Oleta.Tosi(o.K.Ajo != null, "kääre on ajanut");
+            Oleta.Tosi(o.L.ToistaTaiTauko(), "⏸");
+            Oleta.Sama(EsityksenOhjaus.Tauolla, o.L.Ohjaus);
+            Oleta.Tosi(o.K.Tauolla && !e.Kaynnissa, "esitys ja kamera tauolla");
+            Oleta.Sama(0.5, o.V.RaidanTaso, "raita puoleen");
+            double kulunut = e.Kulunut, kello = o.K.Kello, kohta = o.A.KohtaMs.Value;
+            o.Aja(5);
+            Oleta.Tosi(e.Kulunut == kulunut && o.K.Kello == kello && o.A.KohtaMs == kohta, "kertoja, kello ja kamera seis");
+            Oleta.Tosi(o.L.ToistaTaiTauko(), "▶");
+            Oleta.Sama(EsityksenOhjaus.Soi, o.L.Ohjaus);
+            Oleta.Tosi(!o.K.Tauolla && e.Kaynnissa, "jatkuu");
+            o.Aja(1);
+            Oleta.Tosi(e.Kulunut > kulunut && o.K.Kello > kello, "kello käy taas");
+            // UI:n Tauko-nappi kutsuu Esitystä suoraan: linssi huomaa sen seuraavassa kehyksessä, ja kamera seuraa.
+            e.Tauko();
+            o.Aja(1 / 60.0);
+            Oleta.Sama(EsityksenOhjaus.Tauolla, o.L.Ohjaus);
+            Oleta.Tosi(o.K.Tauolla, "kääre seuraa suoraa taukoa");
+            e.Jatka();
+            o.Aja(1 / 60.0);
+            Oleta.Tosi(!o.K.Tauolla, "ja jatkoa");
+            // Avaus ennen vanoja: Tauolla (ei vielä käynnissä), sitten esitys alkaa.
+            Oleta.Tosi(o.Tapahtumat.SequenceEqual(new[] { EsityksenOhjaus.Tauolla, EsityksenOhjaus.Soi, EsityksenOhjaus.Tauolla,
+                EsityksenOhjaus.Soi, EsityksenOhjaus.Tauolla, EsityksenOhjaus.Soi }), "tapahtumat: " + string.Join(",", o.Tapahtumat));
+            o.L.Sulje();
+        }
+
+        [Testi] static void OhjausLoppuunKeskenSaattolennonJaTauolta()
+        {
+            var o = Ohjattava();
+            o.Aja(1);
+            o.L.Esitys.Valitse(IhmisenMatka2Ymparisto.SaattoJakso);
+            // Unityssä IhmisenMatka2Tehosteet.Jakso ja Kuva kertovat kääreelle jakson ja kohteen.
+            o.K.Jakso(IhmisenMatka2Ymparisto.SaattoJakso);
+            o.K.Lahikuva(MonteVerde);
+            o.Aja(2);
+            Oleta.Tosi(o.K.Saattaa, "saattolento käynnissä");
+            o.L.ToistaTaiTauko();
+            Oleta.Tosi(o.K.Tauolla);
+            Oleta.Tosi(o.L.Loppuun(), "⏭");
+            Oleta.Sama(EsityksenOhjaus.Tutkimus, o.L.Ohjaus);
+            Oleta.Tosi(o.L.Tutkimus != null && o.L.Esitys.Paattynyt, "tutkimusvaihe");
+            Oleta.Tosi(!o.K.Saattaa && !o.K.Tauolla, "kääre lopetti saattolennon ja tauon");
+            Oleta.Sama(o.V.KokoPallonKorkeus, o.V.Ajo.Value.Korkeus, "lopun ajo koko palloon meni kameraan");
+            Oleta.Sama<double?>(null, o.A.KohtaMs, "kertoja vaiti");
+            Oleta.Tosi(o.N.Loki.Any(r => r.mita == "loppu") && o.N.Loki.Last(r => r.mita.StartsWith("kuva")).mita == "kuva pois", "kuva pois ja loppu");
+            Oleta.Tosi(!o.L.ToistaTaiTauko(), "▶ ei tee mitään tutkimusvaiheessa");
+            Oleta.Tosi(o.L.Loppuun(), "toinen ⏭ ei tee mitään");
+            int ajoja = o.V.Loki.Count(r => r == "ajo");
+            o.Aja(20);
+            Oleta.Sama(ajoja, o.V.Loki.Count(r => r == "ajo"), "ei ajoja tutkimusvaiheessa (ei saattolentoa, ei laskeutumista)");
+            o.L.Sulje();
+        }
+
+        [Testi] static void OhjausAlkuunKertojaAlustaJaUusiAvaus()
+        {
+            var o = Ohjattava();
+            o.Aja(60);
+            o.L.ToistaTaiTauko();
+            Oleta.Tosi(o.K.Tauolla);
+            int siirtoja = o.A.Siirrot.Count;
+            Oleta.Tosi(o.L.Alkuun(), "⏮");
+            var e = o.L.Esitys;
+            Oleta.Tosi(e.Kaynnissa && e.I == 0 && e.MustaPaalla, "uusi esitys alkoi mustasta");
+            Oleta.Tosi(e.RauhallinenAvaus, "152-avaus");
+            Oleta.Sama(EsityksenOhjaus.Soi, o.L.Ohjaus);
+            Oleta.Tosi(o.A.Siirrot.Count > siirtoja && o.A.Siirrot.Last() == o.Leimat["avaus"].Alku, "kertoja alusta (Raamattu)");
+            Oleta.Tosi(!o.K.Tauolla && o.V.Avaruus != null, "kamera avaruuteen mustan alla, tauko ohi");
+            int ajoja = o.V.Loki.Count(r => r == "ajo");
+            o.Aja((e.AvauksenAjat().Musta - 100) / 1000);
+            Oleta.Sama(ajoja, o.V.Loki.Count(r => r == "ajo"), "vanha ajo ei jatku mustan alla");
+            // Tutkimusvaiheesta alkuun samoin.
+            o.L.Loppuun();
+            Oleta.Sama(EsityksenOhjaus.Tutkimus, o.L.Ohjaus);
+            o.L.Alkuun();
+            Oleta.Tosi(o.L.Tutkimus == null && o.L.Esitys.Kaynnissa && o.L.Esitys.I == 0, "tutkimusvaiheesta alkuun");
+            Oleta.Sama(EsityksenOhjaus.Soi, o.L.Ohjaus);
+            o.L.Sulje();
+
+            // Esittelylaatikon kanssa (Itsestaan false) ⏮ käynnistää silti; valikon "Aloita alusta" jättää esittelyn.
+            var p = Ohjattava();
+            p.L.Itsestaan = false;
+            p.Aja(10);
+            p.L.AloitaAlusta();
+            Oleta.Tosi(!p.L.Esitys.Kaynnissa && p.L.Esitys.I < 0, "valikon Aloita alusta odottaa Käynnistä-nappia");
+            Oleta.Sama(EsityksenOhjaus.Tauolla, p.L.Ohjaus);
+            Oleta.Tosi(p.L.ToistaTaiTauko() && p.L.Esitys.Kaynnissa, "▶ käynnistää odottavan esityksen");
+            p.L.Alkuun();
+            Oleta.Tosi(p.L.Esitys.Kaynnissa && p.L.Esitys.I == 0, "⏮ alkaa heti");
+            p.L.Sulje();
+        }
+
+        [Testi] static void OhjausIlmanKaarettaI()
+        {
+            // I: sama rajapinta, mutta ympäristössä ei ole kääreen taukoa (kamera jatkaa ajoaan kuten ennen).
+            var (virrat, vanat) = TutkimusTestit.Virrat();
+            var y = new ValeYmparisto();
+            var l = new IhmisenMatkaLinssi(NostoKentatTestit.Aineisto(), null, new EsitysAjoTestit.ValeNakyma(y), null);
+            var tapahtumat = new List<EsityksenOhjaus>();
+            l.OhjausMuuttui += tapahtumat.Add;
+            Oleta.Tosi(!l.ToistaTaiTauko(), "suljettuna ei mitään");
+            l.Avaa(y);
+            l.AsetaVanat(vanat, virrat.Virrat);
+            Oleta.Sama(EsityksenOhjaus.Soi, l.Ohjaus);
+            l.ToistaTaiTauko();
+            Oleta.Sama(EsityksenOhjaus.Tauolla, l.Ohjaus);
+            Oleta.Tosi(!l.RauhallinenAvaus && !l.Esitys.RauhallinenAvaus, "I:n avaus ennallaan");
+            l.Loppuun();
+            Oleta.Sama(EsityksenOhjaus.Tutkimus, l.Ohjaus);
+            Oleta.Tosi(tapahtumat.SequenceEqual(new[] { EsityksenOhjaus.Tauolla, EsityksenOhjaus.Soi, EsityksenOhjaus.Tauolla, EsityksenOhjaus.Tutkimus }),
+                "tapahtumat: " + string.Join(",", tapahtumat));
+            l.Sulje();
+        }
     }
 }

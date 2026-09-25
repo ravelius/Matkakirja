@@ -132,7 +132,7 @@ namespace Matkakirja.Natiivi
         Tahtitaivas taivas;
         double vuosia = 300000;
         bool pito, valoissa;
-        float tahtienPeitto = 1f, valotAlkoi = -1f;
+        float tahtienPeitto = 1f, valotKulunut;
 
         public static IhmisenMatkaKerros Luo(PalloKierto kierto, IReadOnlyList<Loytopaikka> paikat, bool versio2 = false)
         {
@@ -190,6 +190,8 @@ namespace Matkakirja.Natiivi
             double nyt = Time.realtimeSinceStartupAsDouble * 1000;
             valot?.Paivita(nyt);
             vanat?.Paivita(vuosia, pito);
+            // II:n tauko (löydös 148): tähtien ajelehtiminen ja häipyminen odottavat esityksen jatkoa; I ennallaan.
+            float dt = Tehosteet != null && Tehosteet.Tauolla ? 0f : Time.unscaledDeltaTime;
             if (taivas != null)
             {
                 // II (löydös 152): tähdet nousevat mustasta samassa feidissä kuin musta laskee (Esitys.TahtienEsiin, esityksen
@@ -205,10 +207,11 @@ namespace Matkakirja.Natiivi
                     }
                 }
                 // Tähdet häipyvät, kun kartta valkenee (web: tähdet vain avausjaksossa).
-                float t = valoissa ? Mathf.Clamp01((Time.unscaledTime - valotAlkoi) / (float)(Esitysmatikka.ValojenMs / 1000)) : 0f;
+                if (valoissa) valotKulunut += dt;
+                float t = valoissa ? Mathf.Clamp01(valotKulunut / (float)(Esitysmatikka.ValojenMs / 1000)) : 0f;
                 tahtienPeitto = Mathf.Min(nousu, 1f - t);
             }
-            taivas?.Paivita(Time.unscaledDeltaTime, tahtienPeitto);
+            taivas?.Paivita(dt, tahtienPeitto);
         }
 
         bool feidiKirjattu;
@@ -223,8 +226,13 @@ namespace Matkakirja.Natiivi
             {
                 // Uusi esitys (myös Aloita alusta): tähtitaivas alusta, muuten edellisen esityksen valot jättivät sen piiloon.
                 valoissa = false;
+                valotKulunut = 0f;
                 tahtienPeitto = 1f;
                 feidiKirjattu = false;
+                // Löydös 148 (⏮): edellisen esityksen vanat ja lamput pois. Pito on yksisuuntainen maksimi (VanaPiirto), joten
+                // ilman nollausta koko reitti jäi piirretyksi uuden esityksen alle; lamput palaavat jakso kerrallaan.
+                pito = false;
+                valot?.Alusta();
             }
             else if (Versio2 && NykyinenEsitys() is { } e && e.I == 0 && !e.AvausOhi)
             {
@@ -242,7 +250,7 @@ namespace Matkakirja.Natiivi
         {
             LinssiOhjain.Instanssi?.Kirjaa($"esitys: valot ({feidiMs:F0} ms)");
             valoissa = true;
-            valotAlkoi = Time.unscaledTime;
+            valotKulunut = 0f;
             ValotKasittelija?.Invoke(feidiMs);
             Tehosteet?.Valot(feidiMs);
         }
@@ -319,6 +327,7 @@ namespace Matkakirja.Natiivi
 
         public void Loppu()
         {
+            LinssiOhjain.Instanssi?.Kirjaa("esitys: loppu");
             LoppuKasittelija?.Invoke();
             Tehosteet?.Loppu();
         }

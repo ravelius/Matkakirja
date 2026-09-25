@@ -23,10 +23,29 @@
 // kääre antaa kameralle (Esityksen ajo, laskeutuminen, saattolennon osa-ajo), kirjataan (Ajo: numero, alku ja kesto kääreen
 // kellossa, käyrä). IhmisenMatka2Tehosteet ajaa havainnekuvan väistön (Linssisiirto) saman ajon käyrällä samassa tahdissa,
 // jolloin kuvan väistö ja kameran ajo ovat yksi liike eivätkä kaksi päällekkäistä.
+//
+// TAUKO JA JATKO (löydös 148, IEsityksenKamera; IhmisenMatkaLinssi kertoo esityksen ohjauksen): tauko pysäyttää kesken olevan
+// ajon paikalleen ja kääreen kellon (Kello), joten laskeutuminen ja saattolento odottavat eikä väistö etene. Jatko ajaa
+// ajon loppuosan SAMALLA KÄYRÄLLÄ siitä, mihin se jäi (sama nopeus kuin ennen taukoa), tai pehmeästi levosta, jos pelaaja
+// siirsi kameraa tauolla. Esityksen uusi ajo tauolla (aikaselaimen valinta, avaruuszoomin jatko) kulkee heti, ja kello käy.
+// Lopeta (esitys loppuun, alkuun tai linssi kiinni) lopettaa saattolennon ja laskeutumisen: Esityksen lopun ajo kulkee
+// kameraan sellaisenaan.
 using System;
 
 namespace Matkakirja.Linssit.Aikajana
 {
+    /// <summary>
+    /// ESITYKSEN KAMERA, JOLLA ON TAUKO (Ihmisen matka II:n kääre, löydös 148): IhmisenMatkaLinssi kertoo sille esityksen
+    /// ohjauksen, jotta tauko jäädyttää kamera-ajon ja jatko jatkaa sitä, ja loppu, alkuun ja sulku lopettavat kääreen omat
+    /// liikkeet (laskeutuminen, saattolento). I:n ympäristö ei toteuta tätä: siellä ajo jatkuu tauon yli kuten ennen.
+    /// </summary>
+    public interface IEsityksenKamera
+    {
+        void Tauko();
+        void Jatka();
+        void Lopeta();
+    }
+
     /// <summary>
     /// KAMERA-AJO, jonka kääre antoi kameralle: numero (kasvava), alku ja kesto kääreen kellossa (IhmisenMatka2Ymparisto.Kello),
     /// käyrä, jolla PalloKierto sen ajaa (null → oletus smootherstep, kuten LinssiOhjain), kohde ja loppukallistus.
@@ -171,7 +190,7 @@ namespace Matkakirja.Linssit.Aikajana
         }
     }
 
-    public sealed class IhmisenMatka2Ymparisto : ILinssiYmparisto
+    public sealed class IhmisenMatka2Ymparisto : ILinssiYmparisto, IEsityksenKamera
     {
         /// <summary>Lähikuvan kallistus (°); PalloKierto rajaa sen korkeuden ja horisonttiusvan mukaan (4 000 km:ssä ≥ 35°).</summary>
         public const double Kallistus = 28.0;
@@ -212,8 +231,20 @@ namespace Matkakirja.Linssit.Aikajana
         public KameraAjo Ajo { get; private set; }
         int ajoja;
 
-        /// <summary>Kääreen kello (s): ajojen alut ja kestot, laskeutumisen ja saattolennon ajastimet.</summary>
-        public double Kello => y.Aika;
+        /// <summary>
+        /// Kääreen kello (s): ajojen alut ja kestot, laskeutumisen ja saattolennon ajastimet. Seisoo tauon ajan (Tauko), joten
+        /// jäädytetty ajo ja sen väistö jatkavat siitä, mihin jäivät.
+        /// </summary>
+        public double Kello => y.Aika - kelloSiirto - (seisAlku is double s ? y.Aika - s : 0);
+        double kelloSiirto;
+        double? seisAlku;
+
+        /// <summary>Esitys tauolla (löydös 148): ei laskeutumista eikä saattolentoa; kesken ollut ajo jäädytetty.</summary>
+        public bool Tauolla { get; private set; }
+        /// <summary>Tauon alla jäädytetty ajo, sen aikaosuus ja kameran paikka pysäytyshetkellä.</summary>
+        (KameraAjo ajo, Nakyma paikka)? jaatynyt;
+        /// <summary>Loppumatka levosta, jos pelaaja siirsi kameraa tauolla: vähimmäiskesto (s).</summary>
+        public const float JatkonMinS = 1.2f;
 
         /// <summary>Lokirivit (LinssiOhjain.Kirjaa): ajot numeroineen videon ajoitusten todentamiseen; null = ei lokia.</summary>
         public Action<string> Kirjaa;
@@ -258,7 +289,11 @@ namespace Matkakirja.Linssit.Aikajana
 
         public void AjaKamera(Nakyma kohde, float kestoS, Func<double, double> pehmennys = null, double? kallistukseen = null)
         {
-            if (Saattaa)
+            // Uusi ajo tauolla (aikaselaimen valinta, avaruuszoomin jatko, loppu, sulku): se näkyy heti, joten kello käy ja
+            // jäädytetty ajo unohtuu. Tauko jatkuu silti (ei laskeutumista eikä saattolentoa ennen jatkoa).
+            KelloKayntiin();
+            jaatynyt = null;
+            if (Saattaa && Kallista)
             {
                 // Saattolento ajaa kameraa itse: Esityksen jakson ajo vain talteen (sen kohde ei ole enää kameran asento).
                 ajonKohde = kohde;
@@ -281,6 +316,7 @@ namespace Matkakirja.Linssit.Aikajana
         /// <summary>Joka kehys (sovittimen Paivita): laskeutuminen, kun jakson ajo on perillä ja kamera on yhä sen kohteessa.</summary>
         public void Paivita()
         {
+            if (Tauolla) return;
             if (Saattaa) { PaivitaSaatto(); return; }
             if (lahikuva is not { } p || Kello < ajoPerilla + LaskunViive) return;
             lahikuva = null;
@@ -314,6 +350,84 @@ namespace Matkakirja.Linssit.Aikajana
             muutettu = true;
         }
 
+        // ── Tauko ja jatko (löydös 148) ──
+
+        void KelloKayntiin()
+        {
+            if (seisAlku is not double s) return;
+            kelloSiirto += y.Aika - s;
+            seisAlku = null;
+        }
+
+        /// <summary>
+        /// Esitys tauolle: kello seis, ja kesken oleva ajo pysähtyy paikalleen (kameran nykyinen asento, 0 s: PalloKierto korvaa
+        /// ajon). Vähennetyllä liikkeellä ajot ovat hyppyjä, joten pysäytettävää ei ole.
+        /// </summary>
+        public void Tauko()
+        {
+            if (Tauolla) return;
+            Tauolla = true;
+            seisAlku = y.Aika;
+            if (Ajo is { } a && a.T(Kello) < 1 && !y.VahennettyLiike)
+            {
+                var nyt = y.Kamera;
+                jaatynyt = (a, nyt);
+                y.AjaKamera(new Nakyma(nyt.Lat, nyt.Lon, nyt.Korkeus), 0f);
+                Kirjaa?.Invoke(System.FormattableString.Invariant($"kääre: tauko, ajo #{a.Numero} pysäytetty (t {a.T(Kello):0.00}, jäljellä {a.Jaljella(Kello):0.00} s)"));
+            }
+            else Kirjaa?.Invoke("kääre: tauko");
+        }
+
+        /// <summary>
+        /// Esitys jatkuu: kello käy, ja jäädytetty ajo jatkuu samalla käyrällä siitä, mihin se jäi (loppuosa uudeksi ajoksi,
+        /// joten nopeus on sama kuin ennen taukoa). Pelaajan siirtämästä kamerasta loppumatka levosta pehmeästi.
+        /// </summary>
+        public void Jatka()
+        {
+            if (!Tauolla) return;
+            Tauolla = false;
+            KelloKayntiin();
+            if (jaatynyt is not { } j) { Kirjaa?.Invoke("kääre: jatko"); return; }
+            jaatynyt = null;
+            var a = j.ajo;
+            double t0 = a.T(Kello), jaljella = a.Jaljella(Kello);
+            if (jaljella <= 0.02) return;
+            if (Paikallaan(y.Kamera, j.paikka))
+            {
+                double e0 = a.Kayra(t0);
+                Func<double, double> loput = Math.Abs(1 - e0) < 1e-6 ? null : u => (a.Kayra(t0 + u * (1 - t0)) - e0) / (1 - e0);
+                y.AjaKamera(a.Kohde, (float)jaljella, loput, a.Kallistukseen);
+                Kirjaa?.Invoke(System.FormattableString.Invariant($"kääre: jatko, ajo #{a.Numero} loput {jaljella:0.00} s samalla käyrällä (t {t0:0.00})"));
+                return;
+            }
+            // Pelaaja siirsi kameraa tauolla: loppumatka levosta, ei nykäystä kesken käyrän.
+            ajoPerilla = Kello + Math.Max(JatkonMinS, jaljella);
+            Aja(a.Kohde, (float)Math.Max(JatkonMinS, jaljella),
+                Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Kuminauha, Matkakirja.Linssit.Kamera.Kamerakayrat.PaluunYlitys),
+                a.Kallistukseen);
+        }
+
+        /// <summary>
+        /// Esitys loppuun, alkuun tai linssi kiinni: saattolento ja laskeutuminen pois ja tauko ohi (kamera jää paikalleen;
+        /// seuraava ajo, esim. Esityksen loppu tai sulun paluu, kulkee kameraan sellaisenaan).
+        /// </summary>
+        public void Lopeta()
+        {
+            Saattaa = false;
+            saattoAlkoi = false;
+            lahikuva = null;
+            Tauolla = false;
+            jaatynyt = null;
+            KelloKayntiin();
+        }
+
+        /// <summary>Kamera pysäytyskohdassa (pelaaja ei siirtänyt sitä tauolla): 0,01° ja 0,5 %.</summary>
+        static bool Paikallaan(Nakyma a, Nakyma b)
+        {
+            double dLon = Math.Abs(((a.Lon - b.Lon) % 360 + 540) % 360 - 180);
+            return Math.Abs(a.Lat - b.Lat) < 0.01 && dLon < 0.01 && Math.Abs(a.Korkeus - b.Korkeus) <= 0.005 * Math.Max(1.0, b.Korkeus);
+        }
+
         /// <summary>Isoympyräetäisyys (km).</summary>
         public static double Km((double Lat, double Lon) a, (double Lat, double Lon) b)
         {
@@ -330,7 +444,14 @@ namespace Matkakirja.Linssit.Aikajana
         }
 
         public void ZoomiKatto(double? maxKorkeus) => y.ZoomiKatto(maxKorkeus);
-        public void KameraAvaruuteen(double lat, double lon, double pallonSateita) => y.KameraAvaruuteen(lat, lon, pallonSateita);
+        public void KameraAvaruuteen(double lat, double lon, double pallonSateita)
+        {
+            // Uusi esitys: kamera hyppää avaruuteen mustan alla, joten mikään edellinen ajo ei jatku.
+            KelloKayntiin();
+            jaatynyt = null;
+            Ajo = null;
+            y.KameraAvaruuteen(lat, lon, pallonSateita);
+        }
         public double KokoPallonKorkeus => y.KokoPallonKorkeus;
         public double KorkeusLeveydelle(double leveysAsteina) => y.KorkeusLeveydelle(leveysAsteina);
         public double Kuvasuhde => y.Kuvasuhde;

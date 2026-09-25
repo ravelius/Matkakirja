@@ -6,6 +6,7 @@
 //   PÖLY   luolat (Denisova, Chauvet), vain keilan sisällä ja keilan ollessa ruudulla
 // Vaihto häivyttää vanhan pois ennen uutta (HaivytysS). Loppu, tutkimusvaihe ja vähennetty liike: ei hiukkasia.
 // Kustannus: yksi piirtokutsu, enintään LumiMaara × 6 kärkeä, pienet läpinäkyvät pisteet.
+// TAUKO (löydös 148): esityksen tauolla hiukkaset jäävät ilmaan (oma kello ei etene) ja häivytys odottaa.
 using System.Collections.Generic;
 using CesiumForUnity;
 using Matkakirja.Linssit.Aikajana;
@@ -38,10 +39,12 @@ namespace Matkakirja.Natiivi
         Camera kamera;
         CesiumGeoreference georeferenssi;
         Laji nyt = Laji.Ei, tavoite = Laji.Ei;
-        float voima, alku;
+        float voima, aika;   // aika: varjostimen kello (s), ei etene tauolla
 
         /// <summary>Testikomento "hiukkaset pois|paalle" (kehysaikojen vertailu).</summary>
         public static bool Pois;
+        /// <summary>Esitys tauolla (IhmisenMatka2Tehosteet asettaa): hiukkaset seisovat ilmassa.</summary>
+        public bool Tauolla;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa() => Pois = false;
@@ -56,7 +59,6 @@ namespace Matkakirja.Natiivi
             h.materiaali = new Material(varjostin) { name = "Hiukkaset", hideFlags = HideFlags.DontSave };
             h.kamera = kam;
             h.georeferenssi = kierto != null ? kierto.georeferenssi : null;
-            h.alku = Time.unscaledTime;
             return h;
         }
 
@@ -77,9 +79,11 @@ namespace Matkakirja.Natiivi
         {
             bool vahennetty = LinssiOhjain.Instanssi != null && LinssiOhjain.Instanssi.VahennettyLiike;
             var haluttu = Pois || vahennetty ? Laji.Ei : tavoite;
+            float dt = Tauolla ? 0f : Time.unscaledDeltaTime;
+            aika += dt;
             // Vanha laji häipyy ennen uutta; sama laji jatkuu katkeamatta.
             float kohde = haluttu == nyt && nyt != Laji.Ei ? 1f : 0f;
-            voima = Mathf.MoveTowards(voima, kohde, Time.unscaledDeltaTime / HaivytysS);
+            voima = Mathf.MoveTowards(voima, kohde, dt / HaivytysS);
             if (voima <= 0f && haluttu != nyt) nyt = haluttu;
             if (nyt == Laji.Ei || voima <= 0.001f || materiaali == null || kamera == null) return;
 
@@ -92,7 +96,7 @@ namespace Matkakirja.Natiivi
                 keila = KeilaRuudulla(w, h);
                 if (keila.w <= 0f) return;   // keila ei ruudulla (pallon takana tai sammunut)
             }
-            materiaali.SetVector(IdTila, new Vector4(nyt == Laji.Lumi ? 0f : 1f, voima, Time.unscaledTime - alku, w / h));
+            materiaali.SetVector(IdTila, new Vector4(nyt == Laji.Lumi ? 0f : 1f, voima, aika, w / h));
             materiaali.SetVector(IdKeila, keila);
             materiaali.SetVector(IdKoko, new Vector4(koko.x * pt, koko.y * pt, w, h));
             materiaali.SetVector(IdVari, nyt == Laji.Lumi

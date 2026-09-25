@@ -8,6 +8,12 @@
 // MUISTI (web aikajana.js tallennaMuisti/lueLinssimuisti/jatkaMuistista): jos edellinen sulku
 // jätti muistin, esitys tai tutkimusvaihe jatkuu siitä ilman avausta ja esittelylaatikkoa
 // (JatkuuMuistista), kun vanat ovat valmiit. Esityksen loppu aloittaa tutkimusvaiheen.
+//
+// OHJAUS (omistajan löydös 148, build 17; napit ⏮ ▶/⏸ ⏭ ovat Natiivi-UI:n): Ohjaus (Soi, Tauolla, Tutkimus),
+// ToistaTaiTauko, Alkuun (= Aloita alusta: kertoja alusta ja avaus mustasta) ja Loppuun (= tutkimusvaiheeseen) sekä
+// OhjausMuuttui-tapahtuma. Tila luetaan Esityksestä joka kehys, joten myös suorat Esitys.Tauko/Jatka-kutsut (UI,
+// aikaselain, testikomennot) näkyvät. II:n kameran kääre (IEsityksenKamera) seuraa: tauko jäädyttää kamera-ajon, jatko
+// jatkaa sitä, ja loppu, alkuun ja sulku lopettavat kääreen omat liikkeet.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +21,9 @@ using Matkakirja.Linssit.Virrat;
 
 namespace Matkakirja.Linssit.Aikajana
 {
+    /// <summary>Esityksen ohjauksen tila napeille (löydös 148): soi, tauolla (myös ennen käynnistystä) vai tutkimusvaiheessa.</summary>
+    public enum EsityksenOhjaus { Soi, Tauolla, Tutkimus }
+
     public sealed class IhmisenMatkaLinssi : ILinssi, ITiedeliitteenLahde
     {
         public static readonly LinssiTiedot IhmisenMatkaTiedot = new LinssiTiedot
@@ -115,6 +124,7 @@ namespace Matkakirja.Linssit.Aikajana
             {
                 if (muisti != null) Jatka();
                 else if (Itsestaan) Esitys.Aloita();
+                Tarkista();
             }
         }
 
@@ -136,7 +146,7 @@ namespace Matkakirja.Linssit.Aikajana
             m?.Invoke(Tiedot.Id, "Avaa.Esitys", true);
             Esitys = UusiEsitys();
             m?.Invoke(Tiedot.Id, "Avaa.Esitys", false);
-            if (!VanatValmiit) return;
+            if (!VanatValmiit) { Tarkista(); return; }
             m?.Invoke(Tiedot.Id, "Avaa.Jatka", true);
             try
             {
@@ -144,6 +154,7 @@ namespace Matkakirja.Linssit.Aikajana
                 else if (Itsestaan) Esitys.Aloita();
             }
             finally { m?.Invoke(Tiedot.Id, "Avaa.Jatka", false); }
+            Tarkista();
         }
 
         Esitys UusiEsitys()
@@ -184,15 +195,82 @@ namespace Matkakirja.Linssit.Aikajana
             if (Tutkimus != null) return true;
             var tutkimus = new LinssiMuistiTila { Vaihe = "tutkimus", Kamera = y.Kamera };
             if (!VanatValmiit) { muisti = tutkimus; return true; }
-            if (Esitys.I < 0 && !Esitys.Kaynnissa) { muisti = tutkimus; Jatka(); return Tutkimus != null; }
+            // II: saattolento, laskeutuminen ja tauko pois ENNEN loppua, jotta Esityksen lopun ajo (koko pallo) menee kameraan.
+            Kamera?.Lopeta();
+            if (Esitys.I < 0 && !Esitys.Kaynnissa) { muisti = tutkimus; Jatka(); Tarkista(); return Tutkimus != null; }
             Esitys.Loppuun();
+            Tarkista();
             return Tutkimus != null;
+        }
+
+        // ── Ohjaus (löydös 148: ⏮ ▶/⏸ ⏭, napit Natiivi-UI:n) ─────────────────
+
+        /// <summary>
+        /// Esityksen tila napeille: Soi (esitys käynnissä), Tauolla (tauko, aikaselaimen veto tai ei vielä käynnistetty) tai
+        /// Tutkimus (esitys päättyi, tutkimusvaihe; ⏭ pois käytöstä, ▶/⏸ ei tee mitään).
+        /// </summary>
+        public EsityksenOhjaus Ohjaus =>
+            Tutkimus != null || (Esitys?.Paattynyt ?? false) ? EsityksenOhjaus.Tutkimus
+            : Esitys?.Kaynnissa ?? false ? EsityksenOhjaus.Soi : EsityksenOhjaus.Tauolla;
+
+        /// <summary>Ohjaus muuttui (napin symboli ▶/⏸ ja ⏭:n käytettävyys). Kutsutaan pääsäikeessä linssin Paivitasta tai napin kutsusta.</summary>
+        public event Action<EsityksenOhjaus> OhjausMuuttui;
+
+        /// <summary>
+        /// ▶/⏸: soiva esitys tauolle, tauolla oleva jatkuu, käynnistämätön käynnistyy (kuten Käynnistä, odottaa vanoja).
+        /// Tutkimusvaiheessa ei mitään (false).
+        /// </summary>
+        public bool ToistaTaiTauko()
+        {
+            if (!Auki || Esitys == null) return false;
+            bool ok;
+            if (Ohjaus == EsityksenOhjaus.Tutkimus) ok = false;
+            else if (Esitys.Kaynnissa) { Esitys.Tauko(); ok = true; }
+            else if (Esitys.I < 0) ok = muisti == null && Kaynnista();
+            else { Esitys.Jatka(); ok = Esitys.Kaynnissa; }
+            Tarkista();
+            return ok;
+        }
+
+        /// <summary>
+        /// ⏮: esitys alusta ja heti soimaan (AloitaAlusta: muisti pois, kertoja alusta, avaus mustasta; Raamattu: uudelleenaloitus
+        /// aloittaa kertojan alusta). Soittimen nappi ohittaa esittelylaatikon; valikon "Aloita alusta" (AloitaAlusta) näyttää sen
+        /// kuten ennen. false, jos linssi ei ole auki; vanojen laskennan aikana esitys odottaa kuten Käynnistä.
+        /// </summary>
+        public bool Alkuun()
+        {
+            if (!AloitaAlusta()) return false;
+            if (Esitys.I < 0 && !Esitys.Kaynnissa) Kaynnista();
+            return true;
+        }
+
+        /// <summary>⏭: esitys loppuun ja tutkimusvaiheeseen (SiirryTutkimukseen: kertoja, äänimaisema, kamera-ajot ja tehosteet pois).</summary>
+        public bool Loppuun() => SiirryTutkimukseen();
+
+        /// <summary>II:n kameran kääre (tauko, jatko, lopetus); I:ssä null.</summary>
+        IEsityksenKamera Kamera => y as IEsityksenKamera;
+        EsityksenOhjaus? ilmoitettu;
+
+        /// <summary>
+        /// Ohjauksen muutos kääreelle ja napeille. Luetaan Esityksestä, joten myös suorat Esitys.Tauko/Jatka-kutsut (UI:n
+        /// Tauko-nappi, aikaselaimen veto, testikomennot) näkyvät viimeistään seuraavassa kehyksessä.
+        /// </summary>
+        void Tarkista()
+        {
+            var o = Ohjaus;
+            if (ilmoitettu == o) return;
+            var oli = ilmoitettu;
+            ilmoitettu = o;
+            if (o == EsityksenOhjaus.Tauolla && oli == EsityksenOhjaus.Soi) Kamera?.Tauko();
+            else if (o == EsityksenOhjaus.Soi) Kamera?.Jatka();
+            OhjausMuuttui?.Invoke(o);
         }
 
         /// <summary>Esitys päättyi (web ui.aloitaTutkimusvaihe).</summary>
         void AloitaTutkimus()
         {
             if (!Auki || Tutkimus != null) return;
+            Kamera?.Lopeta();
             Tutkimus = new Tutkimusvaihe(aineisto, vanaLista, virrat, y, TutkimuksenNakyma, () => TallennaMuisti());
             var m = muisti;
             muisti = null;
@@ -241,6 +319,7 @@ namespace Matkakirja.Linssit.Aikajana
         {
             if (!VanatValmiit || Esitys == null) return false;
             Esitys.Aloita();
+            Tarkista();
             return true;
         }
 
@@ -255,12 +334,15 @@ namespace Matkakirja.Linssit.Aikajana
             muistiLukittu = true;
             LinssiMuisti.Tyhjenna(Varasto, Tiedot.Id);
             muisti = null;
+            // II: jäädytetty ajo, saattolento ja laskeutuminen pois; uusi avaus vie kameran avaruuteen mustan alla.
+            Kamera?.Lopeta();
             Tutkimus?.Pura();
             Tutkimus = null;
             Esitys?.Pura();
             Esitys = UusiEsitys();
             muistiLukittu = false;
             if (VanatValmiit && Itsestaan) Esitys.Aloita();
+            Tarkista();
             return true;
         }
 
@@ -349,7 +431,11 @@ namespace Matkakirja.Linssit.Aikajana
             return pilkut.TryGetValue(aineisto.Paikat[i].Tunnus ?? "", out var v) ? v : null;
         }
 
-        public void Paivita() => Esitys?.Paivita();
+        public void Paivita()
+        {
+            Esitys?.Paivita();
+            Tarkista();
+        }
 
         public void Sulje()
         {
@@ -361,10 +447,12 @@ namespace Matkakirja.Linssit.Aikajana
             muistiLukittu = true;
             Auki = false;
             muisti = null;
+            Kamera?.Lopeta();
             Tutkimus?.Pura();
             Tutkimus = null;
             Esitys?.Pura();
             Esitys = null;
+            ilmoitettu = null;
             y.Pelikerrokset(true);
             y.MusiikkiPitoon(false);
             y.AjaKamera(talteen, y.VahennettyLiike ? 0f : 0.9f, Matkakirja.Linssit.Kamera.Kamerakayrat.Funktio(Matkakirja.Linssit.Kamera.Kayra.Kuminauha, Matkakirja.Linssit.Kamera.Kamerakayrat.PaluunYlitys));

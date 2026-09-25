@@ -11,6 +11,7 @@
 // söi siitä puolet, joten pyörre näkyi vain hetken. Pyörre tulee nopeasti (PyorreSisaanS), pyörii aluksi kiihkeästi
 // ja hidastuu kuin kelautuva kello (PyorreSyoksy, PyorreHidastusS) ja pysyy vähintään PyorreMinS seuraavan jakson alkuun.
 // Komento "sumu pois|paalle" (LinssiOhjain): kehysaikojen vertailu samasta jaksosta sumun kanssa ja ilman.
+// TAUKO (löydös 148): esityksen tauolla ajelehtiminen, pyörre ja häivytykset seisovat (oma kello), jatko jatkaa niitä.
 using CesiumForUnity;
 using Matkakirja.Linssit.Aikajana;
 using UnityEngine;
@@ -32,6 +33,11 @@ namespace Matkakirja.Natiivi
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Nollaa() => Pois = false;
 
+        /// <summary>Esitys tauolla (IhmisenMatka2Tehosteet asettaa): sumu seisoo.</summary>
+        public bool Tauolla;
+        /// <summary>Sumun oma kello (s): etenee vain, kun esitys ei ole tauolla (pyörteen hidastus ja vähimmäisaika).</summary>
+        float kello;
+
         PalloKierto kierto;
         CesiumGeoreference georeferenssi;
         Pilvikuori[] avaus;
@@ -39,7 +45,7 @@ namespace Matkakirja.Natiivi
         Pilvikuori seutu;
         bool avausPaalla;
         float avausVoima, seutuPeitto, seutuKulma, pyorreKulma, hamaryys;
-        float pyorreAlku = -1f;   // kun pyörre tuli näkyviin (Time.unscaledTime), muuten −1
+        float pyorreAlku = -1f;   // kun pyörre tuli näkyviin (sumun kello), muuten −1
         Sumukuva tavoite = Sumukuva.Ei, nyt = Sumukuva.Ei;
         string jaksoId;
 
@@ -88,10 +94,11 @@ namespace Matkakirja.Natiivi
             pyorreAlku = -1f;   // loppu ei odota pyörteen vähimmäisaikaa
         }
 
-        void Update() => Paivita(Time.unscaledDeltaTime);
+        void Update() => Paivita(Tauolla ? 0f : Time.unscaledDeltaTime);
 
         void Paivita(float dt)
         {
+            kello += dt;
             bool vahennetty = LinssiOhjain.Instanssi != null && LinssiOhjain.Instanssi.VahennettyLiike;
             hamaryys = Mathf.MoveTowards(hamaryys, KarttaKerrokset.KeilanHamaryys, dt / HamaraS);
             // Keilat lasketaan vain, kun jokin kuori näkyy (Cesium-muunnokset).
@@ -127,7 +134,7 @@ namespace Matkakirja.Natiivi
             if (seutu == null) return;
             // Avauksen aikana ei seutusumua: kerrallaan enintään kaksi kuorta (Natiivisepän ehto: kevyt).
             // Näkyvä pyörre pitää paikkansa vähimmäisajan, vaikka seuraava jakso jo alkoi.
-            bool pyorrePitaa = nyt.Pyorre && pyorreAlku >= 0f && Time.unscaledTime - pyorreAlku < PyorreMinS;
+            bool pyorrePitaa = nyt.Pyorre && pyorreAlku >= 0f && kello - pyorreAlku < PyorreMinS;
             bool sama = Sama(nyt, tavoite) || (pyorrePitaa && !Pois && !avausPaalla);
             float kohde = Pois || !sama || avausPaalla ? 0f : (pyorrePitaa ? nyt.Peitto : tavoite.Peitto);
             float vaihto = tavoite.Pyorre && !nyt.Pyorre || nyt.Pyorre && sama ? PyorreSisaanS : SiirtymaS * 0.5f;
@@ -137,7 +144,7 @@ namespace Matkakirja.Natiivi
                 nyt = tavoite;
                 seutu.Savy(new Color(nyt.R, nyt.G, nyt.B, 1f));
                 seutuKulma += 137.5f;   // uusi seutu, uusi pilvikuvio
-                pyorreAlku = nyt.Pyorre ? Time.unscaledTime : -1f;
+                pyorreAlku = nyt.Pyorre ? kello : -1f;
                 // Pyörteen kierto on kameran katseen akselilla: seuraava seutu ei saa periä sitä (kuvio liukuisi
                 // kameran mukana). Vaihto tapahtuu peiton ollessa 0, joten nollaus ei näy.
                 if (!nyt.Pyorre) pyorreKulma = 0f;
@@ -149,7 +156,7 @@ namespace Matkakirja.Natiivi
                 if (nyt.Pyorre)
                 {
                     // Kelautuva kello: kiihkeä alku, joka hidastuu ajelehtimisen nopeuteen.
-                    float t = pyorreAlku >= 0f ? Time.unscaledTime - pyorreAlku : PyorreMinS;
+                    float t = pyorreAlku >= 0f ? kello - pyorreAlku : PyorreMinS;
                     pyorreKulma += nyt.Ajelehtiminen * (1f + PyorreSyoksy * Mathf.Exp(-t / PyorreHidastusS)) * dt;
                 }
                 else seutuKulma += nyt.Ajelehtiminen * dt;

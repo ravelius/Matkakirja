@@ -13,6 +13,8 @@
 //   uusi kierros toisella lähteellä ja vanha häivytetään sen alta (web sama koneisto).
 //   TASO: Voima (web MAISEMAN_VOIMA 0,10) × pelaajan taustataso; kertojan puheen alla väistö (web lisaaVaistaja).
 //   Asetus "Äänimaisema" pois tai sovellus mykistetty → hiljaa. Puuttuva manifesti tai tiedosto on hiljaisuus, ei virhe.
+//   TAUKO (löydös 148): esityksen tauolla maisema hiljenee TaukoTasolle kuten linssin raita (Pysakkiajo.TaukoHimmennys)
+//   TaukoS:ssä ja palaa jatkossa; paikka ei vaikene kokonaan, mutta kertomus odottaa.
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,6 +34,11 @@ namespace Matkakirja.Natiivi
         public const float RistiS = 2.5f;
         /// <summary>Lopetuksen häivytys (s).</summary>
         public const float LoppuS = 1.2f;
+        /// <summary>Taso tauolla (osuus) ja siirtymä (s): sama puolitus kuin linssin raidalla tauolla.</summary>
+        public const float TaukoTaso = (float)Matkakirja.Linssit.Aikajana.Pysakkiajo.TaukoHimmennys, TaukoS = 0.6f;
+        /// <summary>Esitys tauolla (IhmisenMatka2Tehosteet asettaa).</summary>
+        public bool Tauolla;
+        float taukoKerroin = 1f;
 
         static Dictionary<string, string> tiedostot;   // tunnus → tiedosto (manifesti, istunnon välimuisti)
         static bool manifestiHaettu;
@@ -153,7 +160,7 @@ namespace Matkakirja.Natiivi
             // Vain Äänimaisema-kytkin (koko pelin mykistys, web sfx.enabled). EI EsityksenAani.Mykistetty: se on tosi myös,
             // kun pelaaja on ottanut pelkän kertojan pois, eikä kertojan poisto saa vaientaa paikkojen ääniä.
             if (!Asetukset.Paalla(Kytkin.Aanimaisema)) return 0f;
-            float t = MaisemanVoima * Asetukset.Taso(Voima.Tausta);
+            float t = MaisemanVoima * Asetukset.Taso(Voima.Tausta) * taukoKerroin;
             return KertojaSoi != null && KertojaSoi() ? t * Vaisto : t;
         }
 
@@ -162,6 +169,7 @@ namespace Matkakirja.Natiivi
 
         void Update()
         {
+            taukoKerroin = Mathf.MoveTowards(taukoKerroin, Tauolla ? TaukoTaso : 1f, Time.unscaledDeltaTime * (1f - TaukoTaso) / TaukoS);
             float dt = Time.unscaledDeltaTime, taso = Taso();
             if (karki != null)
             {
