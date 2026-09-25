@@ -87,3 +87,28 @@ Havainnot esilatauspolitiikalle:
    Natiivisepältä ja Linssisepältä.
 5. Kylmänä sisältöä ladataan 23,5 Mt ennen ensimmäistä kaupunkia (käynnistys 8 Mt, aloitusnäkymä 15,5 Mt), kahta
    väylää pitkin (Sisalto ja PeliOhjain, kumpikin hakee uusin.json:n). Väylät yhdistetään Esilataajan erässä 1.
+
+## 4. Esilataaja erä 1 (25.9. ilta): jono, uusinta, osuma-% — mittauspohja
+
+Proto `pelikoodari/esilataaja-1` (1c2c0d14 käännös; `Kartta/Esilataaja.cs`). Sisältö, peli, linssit, kuvat ja puhe
+kulkevat yhden jonon kautta (6 rinnakkaista, näkyvä ohittaa, tausta väistää näkyviä laattoja, uusinta 1/2/4/8 s);
+uusin.json kerran istunnossa (Sisalto.VersioPolku, ennen kolme väylää). Laatat pysyvät laattapalvelimen omassa
+jonossa (12 rinnakkaista + kiire- ja kohdejono, Natiiviseppä): suunnitelman "laatat taso Nakyva" toteutuu niin, että
+Esilataajan tausta odottaa, kun näkyviä laattoja on haussa. Mittarin vaihepino ei enää vuoda (yli 30 s vanhat karsitaan).
+
+Mittaus `proto-3d/lokit/verkko-odotus/{era1-kylma,era1-lammin}/RAPORTTI.txt` (vertailu kylma-2 ennen erää):
+
+| Odotus | kylma-2 (ennen) | erä 1 kylmä | erä 1 lämmin |
+|---|---|---|---|
+| Käynnistyksen sisältö | 1 267 ms (64 hakua) | 1 210 ms (56) | 447 ms (1) |
+| Aloitusverho | 8 004 ms | 8 013 ms | 2 764 ms |
+| Aloituslennon musta verho | 5 001 ms | 5 000 ms | 5 017 ms |
+| Aloituspuhe ennen ääntä | 531 ms | 515 ms | 0 |
+| Luenta ennen ääntä | 82 ms | 798 ms | 0 |
+| Nostot (3) | 99–115 ms, 0 hakua | 100–115 ms, 0 hakua | 99–116 ms, 0 hakua |
+
+Osuma-% (välimuistista / pyynnöt), kylmä → lämmin: sisältö 18–50 % → 83–100 %, kuvat 0–80 % → 100 %, puhe 0 % → 100 %,
+laatat lennolla 19 % → 54 %, kaupungissa 55 % → 72 %, linssissä 6 % → 94 %. Jonossa lopuksi 0, käynnissä 0, uusintoja 0.
+Erä 1 ei lisännyt esilatausta, joten odotukset pysyivät ennallaan (luennan 82/798 ms vaihtelee verkon mukaan); erä 2
+(kohta 3 lennon aikana) tähtää saapumisen puheisiin ja kuviin. Löydös 118: avausluenta ja etusivun musiikki buildissa
+(StreamingAssets/mukana), mittaus Natiivi-UI:n testikäännöksestä.
