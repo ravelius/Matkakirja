@@ -5643,3 +5643,7 @@ Build 15 leikataan ilman viivytystä.
 ## OMISTAJA klo 17.1x (SITOVA, BUILD 14): 117 NOSTOT (VARIPALLOJEN KYTKIMET) NAKYVAT VAIN KOHDEMAASSA KUTEN MAAKUNNAT → PELIKOODARI (RAJAUS) + NATIIVI-UI (KYTKIMET); SEURAAVA NUMERO 118 (25.9.2026 klo 17.08)
 
 Tarkista webin sääntö: näyttääkö web nostot vain kotimaassa vai kaikissa — web on malli, mutta omistajan linjaus voittaa natiivissa.
+
+## BUILD 15 = juna/b13 c7091b7c (VERHO-OHITA, KERMA-25, MAAKUNNAT-KAIKKI, VERKKO-ODOTUS, NATIIVI-UI 94/112/102/90/96c); KAANNOS ~17.17 → SAVUKIERROS → JULKAISIJA VIE; BUILD 16: MAAKUNTATAYTTO + 113, VERHOT (1)–(3), s2-orbit, 114–117 (25.9.2026 klo 17.09)
+
+Laitetestaajalle kierroksen lista lähetetty.
