@@ -32,7 +32,10 @@ namespace Matkakirja.Natiivi
         readonly VisualElement kortti, ehdotukset;
         readonly ScrollView virta;
         readonly TextField kentta;
+        readonly Button laheta;
         string tunnus;
+        /// <summary>Kysymys matkalla (web kysymysKesken): ↑ pois käytöstä, minipulun leijunta tauolla.</summary>
+        public bool Kesken { get; private set; }
         public bool Auki { get; private set; }
         public event Action<bool> AukiMuuttui;
 
@@ -69,8 +72,10 @@ namespace Matkakirja.Natiivi
                 e.StopPropagation();
             });
             syote.Add(kentta);
+            // Löydös 96: näppäimistön sulkeuduttua kosketukset osuvat taas pilleriin, ↑:hen ja ✕:ään.
+            Rakenne.VapautaNappaimistonSulkeutuessa(kentta);
             Kirjasimet.Aseta(kentta, Kirjasin.Luku);
-            var laheta = Rakenne.Nappi(null, "mk-minipuluKortti__laheta", () => KysyVapaasti(kentta.value), syote, Ikonit.NuoliYlos);
+            laheta = Rakenne.Nappi(null, "mk-minipuluKortti__laheta", () => KysyVapaasti(kentta.value), syote, Ikonit.NuoliYlos);
             laheta.tooltip = "Lähetä kysymys";
         }
 
@@ -118,7 +123,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Valmis kysymys: pilleri valituksi ja kysymys mallille kuten vapaa kysymys.</summary>
         void KysyValmis(Button pilleri, string kohde, string kysymys)
         {
-            if (kohde != tunnus) return;
+            if (kohde != tunnus || Kesken) return;
             foreach (var b in ehdotukset.Children()) b.RemoveFromClassList("mk-valittu");
             pilleri.AddToClassList("mk-valittu");
             Kupla(false, kysymys);
@@ -128,7 +133,7 @@ namespace Matkakirja.Natiivi
         void KysyVapaasti(string teksti)
         {
             teksti = (teksti ?? "").Trim();
-            if (teksti.Length == 0) return;
+            if (teksti.Length == 0 || Kesken) return;
             kentta.value = "";
             Kupla(false, teksti);
             Laheta(teksti);
@@ -139,12 +144,39 @@ namespace Matkakirja.Natiivi
             var odottaa = Kupla(true, "…", odottaa: true);
             var chat = UiNakymat.Hae()?.Chat;
             string oma = tunnus;
+            AsetaKesken(true);
             bool lahti = chat != null && chat.KysyUlkoisesti(kysymys, vastaus =>
             {
+                AsetaKesken(false);
                 if (oma != tunnus || odottaa.parent == null) return;
                 Valmis(odottaa, vastaus);
             });
-            if (!lahti) Valmis(odottaa, chat == null ? "Livia ei ole nyt tavoitettavissa." : "Hetkinen, mietin vielä edellistä kysymystä.");
+            // Web lahetaKysymys: virheen tekstit sanatarkasti.
+            if (!lahti)
+            {
+                AsetaKesken(false);
+                Valmis(odottaa, chat == null ? "Pulu ei saanut kysymyksestä kiinni. Yritä hetken päästä uudelleen." : "Pulu vastaa vielä edelliseen. Hetki vain.");
+            }
+        }
+
+        void AsetaKesken(bool k)
+        {
+            Kesken = k;
+            laheta.SetEnabled(!k);
+        }
+
+        /// <summary>
+        /// Web .satelliitti-pulukortti: leveys min(320, ruutu − 24), korkeus min(62vh, 500); pienellä ruudulla (≤ 620 × 500)
+        /// leveys min(280, ruutu − 24) ja virta enintään min(38vh, 240).
+        /// </summary>
+        public void Mitoita(float leveys, float korkeus)
+        {
+            if (float.IsNaN(leveys) || float.IsNaN(korkeus) || leveys <= 0 || korkeus <= 0) return;
+            bool pieni = leveys <= 620f || korkeus <= 500f;
+            kortti.style.width = Mathf.Min(pieni ? 280f : 320f, leveys - 24f);
+            kortti.style.maxHeight = Mathf.Min(korkeus * 0.62f, 500f);
+            virta.style.maxHeight = pieni ? Mathf.Min(korkeus * 0.38f, 240f) : StyleKeyword.Null;
+            kortti.EnableInClassList("mk-minipuluKortti--pieni", pieni);
         }
 
         Label Kupla(bool livia, string teksti, bool odottaa = false)

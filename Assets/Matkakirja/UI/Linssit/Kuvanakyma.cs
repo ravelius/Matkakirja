@@ -95,18 +95,44 @@ namespace Matkakirja.Natiivi
 
             nauha = Rakenne.El("mk-astrokuva__nauha", turva);
 
-            pulukulma = Rakenne.El("mk-astrokuva__pulu", turva);
+            // Web .satelliitti-pulukulma (löydös 96): sarake oikeassa alakulmassa, kortti pulun yläpuolella 8 pt:n välein.
+            pulukulma = Rakenne.El("mk-astrokuva__pulu", turva, PickingMode.Ignore);
+            pulukortti = new MinipulunKortti(pulukulma);
+            pulunappi = Rakenne.El("mk-astrokuva__pulunappi", pulukulma);
             minipulu = new LiviaKuva(mini: true);
-            pulukulma.Add(minipulu);
+            pulunappi.Add(minipulu);
             minipulu.Aseta(new LiviaTila { Astronautti = true });
-            pulukortti = new MinipulunKortti(turva);
-            pulukulma.RegisterCallback<PointerDownEvent>(e =>
+            pulunappi.RegisterCallback<PointerDownEvent>(e =>
             {
                 e.StopPropagation();
                 Aanet.PulunTehoste("pulu.kujerrus");
                 pulukortti.Vaihda(kohde);
             });
+            // Web minipulu koko 'auto': 84 pt, pieni ruutu (≤ 620 × 500) 56 pt; kortin mitat samasta ruudusta.
+            turva.RegisterCallback<GeometryChangedEvent>(e =>
+            {
+                float w = e.newRect.width, h = e.newRect.height;
+                if (float.IsNaN(w) || float.IsNaN(h) || w <= 0 || h <= 0) return;
+                minipulu.MiniKorkeus(w <= 620f || h <= 500f ? 56f : 84f);
+                pulukortti.Mitoita(w, h);
+            });
+            // Web satelliitti-pulu-leijuu (PAATOKSET 53): nappi leijuu 5 s:n kierroksella 5 pt ja ±3°, ja pysähtyy, kun pulu
+            // puhuu (kysymys matkalla). Pieni liike pois: ei leijuntaa.
+            pulunappi.schedule.Execute(t =>
+            {
+                if (!Auki || pulukortti.Kesken || LinssiUi.VahennettyLiike()) return;
+                leijunta += Mathf.Min(0.1f, t.deltaTime / 1000f);
+                float u = leijunta % 5f / 5f;
+                float puoli = u < .5f ? u * 2 : (u - .5f) * 2;
+                float e = puoli * puoli * (3 - 2 * puoli);
+                float k = u < .5f ? e : 1 - e;
+                pulunappi.style.translate = new Translate(0, -5 * k);
+                pulunappi.style.rotate = new Rotate(new Angle(-3 + 6 * k, AngleUnit.Degree));
+            }).Every(16);
         }
+
+        readonly VisualElement pulunappi;
+        float leijunta;
 
         static void AsetaTurva(VisualElement turva, UiKerros kerros)
         {
