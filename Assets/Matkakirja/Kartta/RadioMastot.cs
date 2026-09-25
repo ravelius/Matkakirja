@@ -174,6 +174,14 @@ namespace Matkakirja
 
         void Start() => Alusta();
 
+        // LÄMPÖERÄ (PallonLepo): lentoestevalot vilkkuvat Lentoestevalo-varjostimessa (_Time), renkaat laajenevat,
+        // mastot nousevat avauksessa (2 s) ja maavalo nousee valinnan vaihtuessa (0,8 s). Radiolinssin aikana pallo on jo
+        // hereillä (Ruudunpaivitys.Aktiivinen: linssi auki); tämä kattaa jälkiajon ja mastokokeen (komento mastot koe).
+        void OnEnable() => PallonLepo.Animoi(Elaa, "radiomastot");
+        void OnDisable() => PallonLepo.Poista(Elaa);
+        bool Elaa() => valmis && ((maara > 0 && (Valoja > 0 || Time.unscaledTime - mastotAika < 2f)) || renkaita > 0
+                                  || (valittu >= 0 && maavalo < 1f));
+
         bool alustettu;
 
         /// <summary>

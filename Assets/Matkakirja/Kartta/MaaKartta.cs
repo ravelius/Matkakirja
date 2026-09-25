@@ -135,6 +135,13 @@ namespace Matkakirja
             if (kierto != null) kierto.Napautettu -= Napautus;
         }
 
+        // LÄMPÖERÄ (PallonLepo): maakuntien täytön häive (260 ms) ja vektorirajojen häive tiheyden mukaan
+        // (Viivaleveys.AluerajaHaive) jatkuvat kameran pysähdyttyä; kuoren ja paletin vaihdot ovat yksittäisiä muutoksia.
+        void OnEnable() => PallonLepo.Animoi(Haivyttaa, kokoelma);
+        void OnDisable() => PallonLepo.Poista(Haivyttaa);
+        bool Haivyttaa() => (maakohtainen && haiveAlku >= 0f) || rajaHaiveLiikkuu;
+        bool rajaHaiveLiikkuu;
+
         // ---- IMaaKartta ----
 
         public void MaaTila(bool paalla)
@@ -170,6 +177,7 @@ namespace Matkakirja
         {
             bool nakyy = NakyyNyt;
             if (maakohtainen && nakyy && !nakyi) AloitaHaive();
+            if (nakyy != nakyi) PallonLepo.Muuttui(kokoelma);
             nakyi = nakyy;
             if (kuori != null) kuori.enabled = NakyyNyt;
             if (rajat != null && !NakyyNyt) { rajaHaive = 0f; rajat.enabled = false; }
@@ -563,6 +571,7 @@ namespace Matkakirja
             AsetaRajanVari();
             paletti.SetPixels32(px);
             paletti.Apply(false);
+            PallonLepo.Muuttui(kokoelma);
         }
 
         void TeeKuori()
@@ -735,6 +744,7 @@ namespace Matkakirja
         void LateUpdate()
         {
             if (maakohtainen) PaivitaHaive();
+            rajaHaiveLiikkuu = false;
             if (rajaOma == null || rajat == null || georeferenssi == null) return;
             bool sallittu = NakyyNyt;
             if (!sallittu && rajaHaive <= 0f && !rajat.enabled) return;
@@ -746,6 +756,7 @@ namespace Matkakirja
             double minTiheys = maakohtainen ? Math.Max(rajatMinTiheys, Viivaleveys.AluerajaMinTiheys) : rajatMinTiheys;
             float uusi = Viivaleveys.AluerajaHaive(rajaHaive, sallittu, rajaTiheys, minTiheys, Time.unscaledDeltaTime);
             bool muuttui = uusi != rajaHaive;
+            rajaHaiveLiikkuu = muuttui;
             rajaHaive = uusi;
             if (maakohtainen && rajaHaive > 0f && rajaTiheys > 0f)
             {

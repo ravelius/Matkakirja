@@ -43,6 +43,12 @@ namespace Matkakirja
             go.AddComponent<Aloitusverho>();
         }
 
+        // LÄMPÖERÄ (PallonLepo): verho näkyy = käynnistys (laatat latautuvat takana) ja häivytys 0,5 s; uGUI-kerros ei
+        // kuulu Natiivi-UI:n lepokyselyyn (UiRauhassa), joten verho pitää pallon hereillä, kunnes se on poistettu.
+        void OnEnable() => PallonLepo.Animoi(Nakyy, "aloitusverho");
+        void OnDisable() => PallonLepo.Poista(Nakyy);
+        bool Nakyy() => Instanssi == this;
+
         void Awake()
         {
             Instanssi = this;

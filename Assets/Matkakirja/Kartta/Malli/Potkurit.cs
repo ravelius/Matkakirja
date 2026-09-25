@@ -42,6 +42,12 @@ namespace Matkakirja
                 potkurit[i].Rotate(akseli, suunnat[i] * a, Space.Self);
         }
 
+        // LÄMPÖERÄ (PallonLepo): kone näkyy (malli aktiivinen) = lavat ja PotkuriKiekon haamulavat (_Time) pyörivät.
+        // Lennolla pallo on jo hereillä (Nappula.Liikkeessa, PalloKierto.Seurataan); tämä kattaa kaikki muut hetket.
+        void OnEnable() => PallonLepo.Animoi(Pyorii, "potkurit");
+        void OnDisable() => PallonLepo.Poista(Pyorii);
+        bool Pyorii() => potkurit.Count > 0;
+
         const string Kiekkopaate = "_kiekko";
 
         /// <summary>Kiekot potkurien tasoon (Nappula kutsuu mallin luonnin jälkeen). Toinen kutsu ei tee mitään.</summary>
