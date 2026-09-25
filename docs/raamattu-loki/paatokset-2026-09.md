@@ -5187,3 +5187,7 @@ Laitetestaaja sammutti omansa ja välitti säännön; iPad Pro 11:ssä peli yhä
 ## OMISTAJA AJOI sudo killall coreaudiod klo 08.2x: coreaudiod 320 % → 1,7 % CPU, KUORMAN 15 min KESKIARVO 2,7 — OPPI: SIMULAATTORIEN AANET (AudioListener-KORJAUKSEN JALKEEN) JUMITTAVAT coreaudiodin, KUN MONTA PELI-INSTANSSIA PYORII; PELIT SAMMUTETAAN KIERROSTEN JALKEEN JA AANET MYKISTETAAN TESTEISSA; JUMIN PURKU VAATII sudon (OMISTAJA) (25.9.2026 klo 08.15)
 
 Postivahti hälyttää, jos coreaudiod ylittää 100 % uudelleen.
+
+## OMISTAJA klo 08.4x: POLTTO JATKUU HETI TAYSILLA 16 YTIMELLA (EI TARVITSE KONETTA); TAUON SYY OLI KUORMA 500–1000, JONKA PAASYY OLI coreaudiod (KORJATTU sudo killall); JULKAISIJA AJAA SAVUKKEET JA JUNAN KUN KUORMA SALLII, EI TURHIA UUSINTOJA (25.9.2026 klo 08.34)
+
+Postivahdin 'poltto valmistunut' oli tauon väärintulkinta.
