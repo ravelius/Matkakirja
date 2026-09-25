@@ -5303,3 +5303,7 @@ Levylinjaus (ei tuplavarmuuskopioita) edellyttää, että työkalut ovat GitHubi
 ## NATIIVIN TYOKALUT VERSIONHALLINNASSA (PROTO-MASTER 3b95d8a8, tyokalut/palvelu/, GITHUB ravelius/Matkakirja-natiivi); LOYDOS: varmuuskopioi-natiivi.sh ON HYLANNYT PUSHIT 24.9. ILLASTA (NON-FAST-FORWARD + set -e) → PELILOGIIKKA-REPO EI VARMUUSKOPIOITU — FABLE: PEILI FORCE-PUSHINA ETULIITTEEN peili/ ALLE, master JA juna/* VAIN FAST-FORWARD (VIRHE → RIVI FABLELLE), EI set -e, MOLEMMAT REPOT, launchd TUNNIN VALEIN + post-merge (25.9.2026 klo 10.21)
 
 Paikallinen proto-git on totuus; GitHub-peili on varmuuskopio.
+
+## NATIIVIN VARMUUSKOPIOPEILI KORJATTU (NATIIVISEPPA 8b3660d0): ENSIMMAINEN AJO 10.22 — peili/proto/* 504 HAARAA FORCE, proto/master JA proto/juna/* FAST-FORWARD; HYLKAYKSET proto-3d/lokit/varmuuskopio-VIKA.txt (POSTIVAHTI LUKEE); TUNTIAJO JUNAVAHDIN KAUTTA + post-merge, EI UUTTA launchd-AGENTTIA; KORJAUS: ERILLISTA natiivi-peli-REPOA EI OLE, MITAAN EI JAANYT VARMUUSKOPIOIMATTA (25.9.2026 klo 10.23)
+
+Postivahdille lisätty peilin tarkistus.
