@@ -373,6 +373,12 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(RadioVaihe.Viritys, l.Tila.Vaihe);
             Oleta.Sama("tukholma", l.Tila.KaupunkiId);
             Oleta.Tosi(w.Soi && Math.Abs(w.V - RadioLinssi.OletusAani) < 1e-4, "rahina täysillä virityksessä");
+            Oleta.Sama(ViritysVaihe.Haku, l.Tila.Viritys, "siirtymä jää pois: sormi teki sen");
+            v.Kuuluu = true;
+            Aja(l, y, 1.1);
+            Oleta.Sama(ViritysVaihe.Lukittuu, l.Tila.Viritys, "lukitus hakuajan jälkeen, ei 2,28 s");
+            Aja(l, y, 0.4);
+            Oleta.Sama(RadioVaihe.Soi, l.Tila.Vaihe);
         }
 
         [Testi] static void HidasAsemaJaAikakatkaisu()

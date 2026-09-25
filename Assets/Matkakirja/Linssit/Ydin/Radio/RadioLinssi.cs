@@ -530,7 +530,11 @@ namespace Matkakirja.Linssit.Radio
         }
 
         /// <summary>Kaupungin napautus (web soitaKaupunki).</summary>
-        public void SoitaKaupunki(string kaupunki)
+        public void SoitaKaupunki(string kaupunki) => SoitaKaupunki(kaupunki, false);
+
+        /// <param name="vedetty">Viivaimen vedon irrotus: siirtymä jää pois, koska sormi teki sen (suunnitelma luku 7);
+        /// viritys alkaa haulla, ja lukitus tulee aikaisintaan hakuajan (1,03 s) jälkeen.</param>
+        void SoitaKaupunki(string kaupunki, bool vedetty)
         {
             if (!Auki || kaupunki == null) return;
             var k = aineisto.Kaupunki(kaupunki);
@@ -556,7 +560,7 @@ namespace Matkakirja.Linssit.Radio
 
             LopetaAani(RistihaivytysS, viritysJatkuu: true);
             soiva = kaupunki;
-            alkoi = Nyt;
+            alkoi = vedetty ? Nyt - SiirtymaMs : Nyt;
             kuuluu = false;
             lukittu = false;
             aanite = toiminto == Toiminto.Aanite;
@@ -564,7 +568,7 @@ namespace Matkakirja.Linssit.Radio
             if (virta != null) virta.Voimakkuus = 0;
             viritin?.Aloita();
             Korostus(kaupunki);
-            Aseta(RadioVaihe.Viritys, ViritysVaihe.Siirtyma, kaupunki, asema, null);
+            Aseta(RadioVaihe.Viritys, vedetty ? ViritysVaihe.Haku : ViritysVaihe.Siirtyma, kaupunki, asema, null);
             AloitaKameraAjo(k);
         }
 
@@ -614,7 +618,7 @@ namespace Matkakirja.Linssit.Radio
                 return;
             }
             if (viritin != null) viritin.Voimakkuus = aani;
-            if (lahin != null && lahin != soiva) { SoitaKaupunki(lahin); return; }
+            if (lahin != null && lahin != soiva) { SoitaKaupunki(lahin, true); return; }
             // Ei asemaa eikä soivaa: rahina pois. Sama asema kesken virityksen: viritys jatkuu.
             if (soiva == null) viritin?.Lopeta(PysaytyksenHaiveS);
         }

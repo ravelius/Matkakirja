@@ -407,11 +407,11 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < perPuoli * 2 + 1; i++)
             {
                 int sija = System.Math.Abs(i - perPuoli);
+                // Napautus ja veto: asteikko kaappaa osoittimen jo TrickleDownissa (KytkeVeto); nimi valitaan
+                // osumakohdasta. Nimen oma Clickable vei kaappauksen, eikä veto liikuttanut nauhaa.
                 var l = new Label("") { pickingMode = PickingMode.Position };
                 Rakenne.Luokat(l, "mk-radio__kaupunki" + (sija == 0 ? " mk-radio__kaupunki--keski" : sija >= 3 ? " mk-radio__kaupunki--kauka" : ""));
                 Kirjasimet.Aseta(l, sija == 0 ? Kirjasin.KoneLihava : Kirjasin.Kone);
-                int j = i;
-                l.AddManipulator(new Clickable(() => ValitsePaikka(j)));
                 nauha.Add(l);
                 paikat.Add(l);
                 naytetyt.Add(null);
@@ -486,6 +486,7 @@ namespace Matkakirja.Natiivi
         const float VedonKynnys = 6f;
         bool vetoAlkoi, painettu;
         float vetoX0, vetoDx;
+        Vector2 vetoAlku;
         int vetoOsoitin = -1;
         float? vetoJaannos;
 
@@ -493,12 +494,17 @@ namespace Matkakirja.Natiivi
         {
             asteikko.RegisterCallback<PointerDownEvent>(e =>
             {
-                if (linssi == null || !nakyvissa) return;
+                if (!nakyvissa || (linssi == null && !testi)) return;
                 painettu = true;
                 vetoAlkoi = false;
+                vetoAlku = e.position;
                 vetoX0 = e.position.x;
                 vetoDx = 0;
                 vetoOsoitin = e.pointerId;
+                // Kaappaus heti: ennen nimien Clickable kaappasi osoittimen, eikä asteikon PointerMove saanut
+                // liikettä (Laitetestaaja 25.9.: veto ei liikuttanut nauhaa).
+                asteikko.CapturePointer(vetoOsoitin);
+                e.StopPropagation();
             }, TrickleDown.TrickleDown);
             asteikko.RegisterCallback<PointerMoveEvent>(e =>
             {
@@ -507,7 +513,6 @@ namespace Matkakirja.Natiivi
                 if (!vetoAlkoi && Mathf.Abs(vetoDx) >= VedonKynnys)
                 {
                     vetoAlkoi = true;
-                    asteikko.CapturePointer(vetoOsoitin);
                     liike = Liike.Ei;
                     linssi?.VetoAlkaa();
                 }
@@ -521,8 +526,16 @@ namespace Matkakirja.Natiivi
                 }
                 e.StopPropagation();
             }, TrickleDown.TrickleDown);
-            asteikko.RegisterCallback<PointerUpEvent>(e => LopetaVeto(e.pointerId), TrickleDown.TrickleDown);
-            asteikko.RegisterCallback<PointerCaptureOutEvent>(_ => LopetaVeto(vetoOsoitin));
+            asteikko.RegisterCallback<PointerUpEvent>(e => LopetaVeto(e.pointerId, true), TrickleDown.TrickleDown);
+            asteikko.RegisterCallback<PointerCaptureOutEvent>(_ => LopetaVeto(vetoOsoitin, false));
+        }
+
+        /// <summary>Nimen indeksi paneelin kohdassa (worldBound), -1 = ei nimeä.</summary>
+        int PaikkaKohdassa(Vector2 kohta)
+        {
+            for (int i = 0; i < paikat.Count; i++)
+                if (naytetyt[i] != null && paikat[i].worldBound.Contains(kohta)) return i;
+            return -1;
         }
 
         float Paikka
@@ -534,12 +547,17 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        void LopetaVeto(int osoitin)
+        void LopetaVeto(int osoitin, bool irrotus)
         {
             if (!painettu || osoitin != vetoOsoitin) return;
             painettu = false;
             if (asteikko.HasPointerCapture(osoitin)) asteikko.ReleasePointer(osoitin);
-            if (!vetoAlkoi) return;   // lyhyt kosketus: nimen Clickable hoitaa napautuksen
+            if (!vetoAlkoi)
+            {
+                // Lyhyt kosketus: napautettu nimi soimaan (kaappauksen menetys ei ole napautus).
+                if (irrotus) ValitsePaikka(PaikkaKohdassa(vetoAlku));
+                return;
+            }
             vetoAlkoi = false;
             float paikka = Paikka;
             int askel = paikka > 0 ? Mathf.RoundToInt(vetoDx / paikka) : 0;
