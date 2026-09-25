@@ -379,10 +379,35 @@ export const AFRICA_SAAPUMISET = {
       + 'portaissa kuin vanhus, kunnes muistin seisovani lähes kahden ja '
       + 'puolen kilometrin korkeudessa. Ilma on viileää ja kirkasta, '
       + 'eukalyptus tuoksuu — ja kahviseremonian tunti meni kuin '
-      + 'siivillä.',
+      + 'siivillä. Isoisän kartalla tässä ei ollut kaupunkia '
+      + 'lainkaan: se perustettiin vasta kolmetoista vuotta hänen '
+      + 'matkansa jälkeen, 1886.',
     nosto: 'Isoisä kirjoitti keisarikunnasta, joka säilytti '
       + 'itsenäisyytensä: "Se hämmentää klubissani suuresti; minua se '
       + 'ei enää hämmennä." Minua ei hämmentänyt hetkeäkään.',
+  },
+  /*
+   * LALIBELA (Fable 8.9.2026, omistajan päätös kortilla: "Kirjoita
+   * saapumisteksti"): kaupunki poistui KAARETTOMAT-listalta
+   * (tests/vanha-maailma.test.mjs). Faktat kaupunkilehden faktapohjasta
+   * (docs/mantereet-tyoaineisto/faktapohja-lalibela.md): noin 2 500 m,
+   * yksitoista kallioon alaspäin hakattua kirkkoa, Bete Giyorgisin
+   * ristinmuotoinen katto maan tasalla ja noin 12 m syvyys; enkelitaru
+   * on kerrottu taruna. Keksittyä on vain kertojan oma hengästyminen ja
+   * askelmitta (tarina.md: keksitty saa olla vain kertojan oma kokemus).
+   */
+  lalibela: {
+    kuvaus: 'Lalibelaan noustaan kahden ja puolen kilometrin korkeuteen, ja '
+      + 'kirkot ovat alempana kuin katu: yksitoista kirkkoa on hakattu '
+      + 'alaspäin punaiseen kallioon, ja Pyhän Yrjön ristinmuotoinen katto '
+      + 'on jalkojen tasalla. Valkoisiin pukeutuneet pyhiinvaeltajat '
+      + 'kulkevat kirkosta toiseen kalliokäytäviä pitkin. Ohuessa ilmassa '
+      + 'minä hengästyin ennen heitä.',
+    nosto: 'Isoisä kirjoitti: "Kirkot on hakattu kallioon alaspäin, ja tarun '
+      + 'mukaan enkelit jatkoivat työtä öisin, kun ihmiset lepäsivät." '
+      + 'Mittasin hänen tapaansa Pyhän Yrjön syvyyden portaita laskien: '
+      + 'kaksitoista metriä alaspäin, eikä enkeleistä näy jälkeäkään — '
+      + 'vain taltan.',
   },
   rashafun: {
     kuvaus: 'Niemen kärjessä tuuli otti vastaan kuin vanha tuttu: tämä '

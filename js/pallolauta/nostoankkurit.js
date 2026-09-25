@@ -1,0 +1,361 @@
+/*
+ * NOSTOJEN KIINTEÄT KARTTA-ANKKURIT (omistaja 17.9.2026 klo 20.35
+ * Suomen aikaa, Raamattu KARTTAUUDISTUKSEN PAATOKSET 32 kohdat 1, 2 ja
+ * 5; kolme iPhone-kuvaa Pariisista v1933, sanatarkasti: *"Osa
+ * kohteista liikkuu zoomatessa, ei saisi. Kohteet ovat liian lähekkäin
+ * toisiaan. … Yksikään teksti ei saa mennä toisen päälle. Kohteita voi
+ * siirtää vapaasti tarpeen mukaan. Visuaalinen selkeys tärkeämpi kuin
+ * oikea sijoittelu kartalla."*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MIKSI MERKIT LIIKKUIVAT. Merkin oma paikka (lat/lng) ei ole koskaan
+ * liikkunut — liikkui kaikki muu, mikä ruudulla sen paikan määrää:
+ *
+ *   a) NIMIÖN VÄISTÖ ON ZOOMIN FUNKTIO. `sovitteleLaput`
+ *      (js/pallolauta/sovittelu.js) siirtää nimiön ruutupikseleinä
+ *      (SOVITTELUN_SIIRTO_PX 6) ja vaihtaa sen kylkeä sen mukaan,
+ *      mitä juuri sillä zoomilla on tiellä. Sama nosto sai eri
+ *      kyljen ja eri siirron joka zoomiportaassa — pelaajan silmissä
+ *      *Kaulanauhajuttu* ja *Braillen pisteet* vaihtoivat paikkaa.
+ *   b) AIHENOSTON PAIKKA ON JÄSENTENSÄ KESKIARVO, ja jäsenyys
+ *      laskettiin ruutumitoilla (js/pallolauta/aihemerkit.js
+ *      RYHMITYKSEN_ETAISYYS_PX 44 px, laatikoiden limitys). Kun
+ *      kamera zoomasi, kaupungin ulkopuoliset rykelmät hajosivat ja
+ *      syntyivät uudelleen, ja aihemerkin keskipiste hyppäsi.
+ *   c) NIMIÖN MITTA KASVOI KARTAN MUKANA (PAATOKSET 14), joten myös
+ *      laatikot — ja niiden myötä ryhmitys ja väistö — olivat eri
+ *      kokoisia joka zoomilla.
+ *
+ * RATKAISU on tässä tiedostossa kolmessa osassa:
+ *
+ *   1) SAAPUMISKEHYS. Kaikki ladonnan mitat lasketaan kehyksessä,
+ *      jossa kamera on uloimmassa sallitussa asennossaan: ruutupiste
+ *      × `uloinOsuus`. Kartan mittakaava on täsmälleen kääntäen
+ *      verrannollinen tähän lukuun (mitattu 16.9.2026: 2,12 px/yks ×
+ *      osuus = vakio), joten saapumiskehyksen etäisyydet ovat
+ *      MAANTIETEELLISIÄ eivätkä kameran. Ryhmitys ja levitys tehdään
+ *      siinä kehyksessä, jolloin kumpikaan ei enää riipu zoomista.
+ *   2) LEVITYS. Merkkejä työnnetään erilleen, kunnes jokaisen
+ *      laatikon (symboli + nimiö) välissä on ANKKURIN_VALJYYS_PX ja
+ *      kiinteät esteet (poltettu muste, kaupunkimerkit, pelinappula)
+ *      ovat vapaana. Omistajan sanoin *"Levitä merkit laajemmalle
+ *      alueelle"*: siirto on vapaa, maantieteellinen tarkkuus ei ole
+ *      vaatimus.
+ *   3) ANKKURI. Levityksen tulos käännetään takaisin asteiksi ja
+ *      TALLETETAAN muistiin kaupungin nostojoukon avaimella. Zoomi ei
+ *      lado uudelleen: sama nosto on samassa lat/lng-pisteessä
+ *      kaikilla zoomeilla, ja zoomi vain skaalaa ruutupaikan.
+ *      Uudelleen lasketaan vain, kun joukko tai ruutukoko vaihtuu —
+ *      ei tallennukseen, koska ankkuri on näkymän eikä pelin tila.
+ *
+ * MITTA EI OLE TÄSSÄ TIEDOSTOSSA: laatikot tulevat kutsujalta samasta
+ * kaavasta, jolla ne piirretään (`nostonLaatikko`, `aihemerkinLaatikko`),
+ * jotta levitys mittaa sitä, mikä ruudulla on.
+ */
+
+import { NOSTOANKKURIT_FRA } from '../packs/nostoankkurit-fra.js';
+import { NOSTOANKKURIT_ESP } from '../packs/nostoankkurit-esp.js';
+import { NOSTOANKKURIT_ITA } from '../packs/nostoankkurit-ita.js';
+import { NOSTOANKKURIT_DEU } from '../packs/nostoankkurit-deu.js';
+import { NOSTOANKKURIT_PRT } from '../packs/nostoankkurit-prt.js';
+import { NOSTOANKKURIT_GRC } from '../packs/nostoankkurit-grc.js';
+import { NOSTOANKKURIT_AUT } from '../packs/nostoankkurit-aut.js';
+import { NOSTOANKKURIT_NLD } from '../packs/nostoankkurit-nld.js';
+import { NOSTOANKKURIT_BEL } from '../packs/nostoankkurit-bel.js';
+import { NOSTOANKKURIT_POL } from '../packs/nostoankkurit-pol.js';
+import { NOSTOANKKURIT_CZE } from '../packs/nostoankkurit-cze.js';
+import { NOSTOANKKURIT_DNK } from '../packs/nostoankkurit-dnk.js';
+import { NOSTOANKKURIT_HUN } from '../packs/nostoankkurit-hun.js';
+import { NOSTOANKKURIT_SWE } from '../packs/nostoankkurit-swe.js';
+
+/** Pienin tyhjä väli kahden laatikon välissä saapumiskehyksessä (px). */
+export const ANKKURIN_VALJYYS_PX = 7;
+/**
+ * Suurin siirto omasta paikasta (px saapumiskehyksessä). Pariisin
+ * rykelmä on saapumisnäkymässä n. 27 × 135 px, ja 21 nostoa vaatii
+ * väljästi ladottuna reilusti enemmän tilaa; katto pitää levityksen
+ * silti kaupungin ympäristössä eikä naapurimaassa.
+ */
+export const ANKKURIN_SIIRTOKATTO_PX = 260;
+/** Levityksen kierrokset: kahdenkymmenen merkin rykelmä asettuu n. 40:ssä. */
+export const ANKKURIN_KIERROKSET = 80;
+
+/**
+ * LEVITYKSEN VASTAKOE: `?nostoankkurit=0` palauttaa vanhan ladonnan
+ * (paikka suoraan datasta, väistö joka zoomilla uudelleen), jolloin
+ * limitys palaa näkyviin. Lippu luetaan joka ladonnassa osoitteesta —
+ * sama tapa kuin `?aihemerkit=0`.
+ */
+export function nostoankkuritSallittu() {
+  try {
+    const arvo = new URLSearchParams(globalThis.location?.search ?? '').get('nostoankkurit');
+    return !/^(0|ei|off)$/.test(arvo ?? '');
+  } catch { return true; }
+}
+
+/**
+ * KARTAN MITAN VASTAKOE: `?nostokoko=0` palauttaa ruutuvakion (kerroin
+ * 1), jolloin nostot ovat saman kokoisia joka zoomilla.
+ *
+ * VIPU KÄÄNNETTIIN 18.9.2026 (Fablen päätös, Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 34 kohta 15 TILA): elävä nosto skaalautuu kartan mukana
+ * kuten laattaan poltettu muste, joten kartan mitta on NORMAALI polku
+ * ja yksi koko on vastakoe. Ennen tätä lippu oli toisin päin
+ * (`yksiKokoSallittu`, PAATOKSET 32 kohta 4).
+ */
+export function kartanMittaSallittu() {
+  try {
+    const arvo = new URLSearchParams(globalThis.location?.search ?? '').get('nostokoko');
+    return !/^(0|ei|off)$/.test(arvo ?? '');
+  } catch { return true; }
+}
+
+/*
+ * ══ LUKITUT ANKKURIT: POLTETTU PISTE ON YKSI, RUUTUJA ON MONTA ═════
+ * (PAATOKSET 33 TARKENNUS 2 kohta 5.)
+ *
+ * Levitys tehdään saapumiskehyksessä, jonka mitat tulevat RUUTUKOOSTA
+ * (`ankkurivarasto.tunnus` on juuri ruutukoko). 390 px puhelin ja
+ * 1400 px työpöytä saavat siis eri ankkurin. Se on aivan oikein niin
+ * kauan kuin merkki on elävä — mutta laattaan poltettu piste voi olla
+ * vain YHDESSÄ paikassa, ja jos elävä nimiö/osuma laskettaisiin
+ * kummallakin ruudulla erikseen, ne osuisivat poltetun päälle vain
+ * sillä ruudulla, jolla poltto ajettiin.
+ *
+ * Siksi poltettavan maan ankkurit ovat DATAA (js/packs/nostoankkurit-
+ * <iso>.js, viety puhelimen kehyksessä `tools/vie-nostoankkurit.mjs`:llä).
+ * Lukittu ankkuri OHITTAA levityksen kokonaan — ei laskentaa, ei
+ * esteen-alla-uudelleenladontaa — jolloin nimiö ja osumapinta ovat
+ * poltetun pisteen kohdalla joka ruudulla ja joka zoomilla.
+ */
+/*
+ * EU-MAIDEN HAHMOTELMANOSTOT (Fablen erä I 19.9.2026, PAATOKSET 48:n
+ * velka): sama lukitus kuin Ranskalla, jotta elävä merkki ei ladu
+ * itseään uudelleen panoroinnissa eikä maakohde ole merellä (saaret ja
+ * tyypin 'meri' nostot pitävät pisteensä). Maat EIVÄT ole
+ * LUKITUT_MAAT-listalla (paitsi ESP 23.9.2026): hahmotelmat pysyvät
+ * elävinä, poltto on oma päätöksensä. FRA ensin: sen piste voittaa
+ * yhteisessä taulussa, mutta poltto kysyy maan omasta taulusta.
+ */
+const MAIDEN_TAULUT = {
+  FRA: NOSTOANKKURIT_FRA, ESP: NOSTOANKKURIT_ESP, ITA: NOSTOANKKURIT_ITA,
+  DEU: NOSTOANKKURIT_DEU, PRT: NOSTOANKKURIT_PRT, GRC: NOSTOANKKURIT_GRC,
+  AUT: NOSTOANKKURIT_AUT, NLD: NOSTOANKKURIT_NLD, BEL: NOSTOANKKURIT_BEL,
+  POL: NOSTOANKKURIT_POL, CZE: NOSTOANKKURIT_CZE, DNK: NOSTOANKKURIT_DNK,
+  HUN: NOSTOANKKURIT_HUN, SWE: NOSTOANKKURIT_SWE,
+};
+/*
+ * MAAKOHTAINEN HAKU (19.9.2026, erä I). Sama nosto-id on usealla maalla
+ * ERI PAIKASSA — `valimeri` on Espanjalla 38,6/0,6 ja Ranskalla
+ * 42,6/5,5, samoin `pohjanmeri`, `itameri`, `tonava`, `rhone`
+ * (29 id:tä, mitattu). Avain `nosto:<id>` ei siis yksin kerro maata:
+ * yhteisestä taulusta Espanjan Välimeri sai Ranskan ankkurin
+ * Toulonista. Elävä rivi kysyy siksi OMAN maansa taulusta
+ * (`lukittuAnkkuri(avain, iso)`); maalla ilman taulua ei ole lukittua
+ * ankkuria, ja levitys toimii kuten ennen.
+ */
+const ANKKURIT_MAITTAIN = new Map(Object.entries(MAIDEN_TAULUT)
+  .map(([iso, taulu]) => [iso, new Map(Object.entries(taulu ?? {}))]));
+/** Yhteinen taulu (FRA voittaa): polttoketju kysyy ilman maata. */
+const LUKITUT_ANKKURIT = new Map();
+for (const taulu of ANKKURIT_MAITTAIN.values()) {
+  for (const [avain, a] of taulu) {
+    if (!LUKITUT_ANKKURIT.has(avain)) LUKITUT_ANKKURIT.set(avain, a);
+  }
+}
+
+/**
+ * VASTAKOE: `?lukitutankkurit=0` palauttaa lasketun levityksen myös
+ * poltetuille maille, jolloin ero poltettuun musteeseen palaa
+ * näkyviin (sama tapa kuin `?nostoankkurit=0`).
+ */
+export function lukitutAnkkuritSallittu() {
+  try {
+    const arvo = new URLSearchParams(globalThis.location?.search ?? '').get('lukitutankkurit');
+    return !/^(0|ei|off)$/.test(arvo ?? '');
+  } catch { return true; }
+}
+
+/**
+ * Nostorivin lukittu kartta-ankkuri tai null.
+ * @param {string} avain nostokerroksen rivin avain (`nosto:<id>` …)
+ * @param {string|null} [iso] rivin maa: haku vain sen taulusta (ks.
+ *   MAAKOHTAINEN HAKU). Ilman maata yhteinen taulu (polttoketju).
+ */
+export function lukittuAnkkuri(avain, iso = null) {
+  if (!avain || !LUKITUT_ANKKURIT.size) return null;
+  const a = iso
+    ? ANKKURIT_MAITTAIN.get(String(iso).toUpperCase())?.get(avain)
+    : LUKITUT_ANKKURIT.get(avain);
+  return (a && Number.isFinite(a.lat) && Number.isFinite(a.lng)) ? { lat: a.lat, lng: a.lng } : null;
+}
+
+/** Lukittujen ankkureiden määrä (mittarit ja testit). */
+export function lukittujaAnkkureita() { return LUKITUT_ANKKURIT.size; }
+
+/*
+ * MILLÄ MAALLA ON LUKITTU TAULU (18.9.2026, polttoketjun ehto).
+ *
+ * Polttoketju (tools/fokuskartta/nostot.mjs) tarvitsee tämän, koska
+ * sääntö on maakohtainen: maassa, jolla EI ole taulua, poltto toimii
+ * kuten ennen, ja maassa, jolla taulu ON, poltettu piste luetaan
+ * taulusta. Taulullisen maan merkki ILMAN ankkuria ei siis pala
+ * lainkaan — muuten sen muste jäisi laatassa siihen, minne vanha
+ * levitys sen jätti, eikä elävä nimiö osuisi siihen.
+ */
+/*
+ * ESP LUKITTU 23.9.2026 (Fable, nostotason poltto; 19.9. velka
+ * docs/raportit/viesti-fable-ankkurilukitus-20260919.md). Poltto kysyy
+ * ankkurin maan omasta taulusta (tools/fokuskartta/nostot.mjs).
+ */
+export const LUKITUT_MAAT = Object.freeze(['FRA', 'ESP']);
+export function onLukittuMaa(iso) { return LUKITUT_MAAT.includes(String(iso ?? '').toUpperCase()); }
+
+const limittyy = (a, b, vara) => a.x0 - vara < b.x1 && b.x0 - vara < a.x1
+  && a.y0 - vara < b.y1 && b.y0 - vara < a.y1;
+
+const siirra = (laatikko, dx, dy) => ({
+  x0: laatikko.x0 + dx, y0: laatikko.y0 + dy, x1: laatikko.x1 + dx, y1: laatikko.y1 + dy,
+});
+
+/**
+ * Levittää merkit erilleen saapumiskehyksessä.
+ *
+ * Jokainen merkki saa laatikkonsa kutsujalta (symboli + nimiö omassa
+ * paikassaan). Limittyvät parit työnnetään erilleen sitä akselia
+ * pitkin, jolla limitys on pienin — se on lyhin tie ulos ja pitää
+ * ladonnan lähellä alkuperäistä. Kiinteä este ei väisty, joten koko
+ * siirto menee liikkuvalle.
+ *
+ * @param {Array<{avain:string, x:number, y:number, laatikko:object}>} merkit
+ * @param {Array<object>} esteet  kiinteät laatikot (poltettu muste, nappula…)
+ * @param {object} [asetus]
+ * @returns {Map<string, {dx:number, dy:number}>} siirto saapumiskehyksen px
+ */
+export function levitaMerkit(merkit, esteet = [], {
+  vara = ANKKURIN_VALJYYS_PX,
+  kierrokset = ANKKURIN_KIERROKSET,
+  katto = ANKKURIN_SIIRTOKATTO_PX,
+} = {}) {
+  const n = merkit.length;
+  const dxs = new Array(n).fill(0);
+  const dys = new Array(n).fill(0);
+  const kelpo = (r) => r && Number.isFinite(r.x0) && Number.isFinite(r.y1);
+  const laatikot = merkit.map((m) => m.laatikko);
+  const kiinteat = esteet.filter(kelpo);
+  for (let k = 0; k < kierrokset; k += 1) {
+    let liikkui = false;
+    for (let i = 0; i < n; i += 1) {
+      if (!kelpo(laatikot[i])) continue;
+      const a = siirra(laatikot[i], dxs[i], dys[i]);
+      for (let j = i + 1; j < n; j += 1) {
+        if (!kelpo(laatikot[j])) continue;
+        const b = siirra(laatikot[j], dxs[j], dys[j]);
+        if (!limittyy(a, b, vara)) continue;
+        const ox = Math.min(a.x1, b.x1) - Math.max(a.x0, b.x0) + vara;
+        const oy = Math.min(a.y1, b.y1) - Math.max(a.y0, b.y0) + vara;
+        const keskiA = { x: (a.x0 + a.x1) / 2, y: (a.y0 + a.y1) / 2 };
+        const keskiB = { x: (b.x0 + b.x1) / 2, y: (b.y0 + b.y1) / 2 };
+        if (ox <= oy) {
+          const suunta = keskiA.x <= keskiB.x ? -1 : 1;
+          dxs[i] += (suunta * ox) / 2;
+          dxs[j] -= (suunta * ox) / 2;
+        } else {
+          const suunta = keskiA.y <= keskiB.y ? -1 : 1;
+          dys[i] += (suunta * oy) / 2;
+          dys[j] -= (suunta * oy) / 2;
+        }
+        liikkui = true;
+        break;
+      }
+    }
+    for (let i = 0; i < n; i += 1) {
+      if (!kelpo(laatikot[i])) continue;
+      const a = siirra(laatikot[i], dxs[i], dys[i]);
+      for (const e of kiinteat) {
+        if (!limittyy(a, e, vara)) continue;
+        const ox = Math.min(a.x1, e.x1) - Math.max(a.x0, e.x0) + vara;
+        const oy = Math.min(a.y1, e.y1) - Math.max(a.y0, e.y0) + vara;
+        const keskiA = { x: (a.x0 + a.x1) / 2, y: (a.y0 + a.y1) / 2 };
+        const keskiE = { x: (e.x0 + e.x1) / 2, y: (e.y0 + e.y1) / 2 };
+        if (ox <= oy) dxs[i] += (keskiA.x <= keskiE.x ? -1 : 1) * ox;
+        else dys[i] += (keskiA.y <= keskiE.y ? -1 : 1) * oy;
+        liikkui = true;
+        break;
+      }
+    }
+    // Siirtokatto: levitys saa hakea tilaa, muttei karata maasta.
+    for (let i = 0; i < n; i += 1) {
+      const pituus = Math.hypot(dxs[i], dys[i]);
+      if (pituus > katto) {
+        dxs[i] = (dxs[i] / pituus) * katto;
+        dys[i] = (dys[i] / pituus) * katto;
+      }
+    }
+    if (!liikkui) break;
+  }
+  const tulos = new Map();
+  for (let i = 0; i < n; i += 1) tulos.set(merkit[i].avain, { dx: dxs[i], dy: dys[i] });
+  return tulos;
+}
+
+/**
+ * ANKKURIVARASTO: kaupungin (tai näkymän) nostojoukon ankkurit
+ * muistissa. Avain kantaa joukon ja ruutukoon, joten ankkurit
+ * lasketaan uudelleen VAIN kun joukko tai ruutu vaihtuu — ei
+ * zoomissa eikä panoroinnissa (PAATOKSET 32 kohta 1).
+ */
+export function luoAnkkurivarasto() {
+  let avain = null;
+  const ankkurit = new Map();
+  return {
+    /**
+     * VARASTON TUNNUS ON RUUTU, EI NÄKYMÄ. Merkkijoukko kutistuu ja
+     * kasvaa kameran mukana (merkkiportti pudottaa kaukaiset), joten
+     * joukko avaimena olisi tarkoittanut uutta ladontaa joka zoomissa
+     * — täsmälleen se, mitä PAATOKSET 32 kohta 1 kieltää. Ruutukoon
+     * vaihtuessa mitat ovat toiset ja ankkurit lasketaan uudelleen.
+     */
+    tunnus(_avaimet, ruutu) {
+      return `${Math.round(ruutu?.leveys ?? 0)}x${Math.round(ruutu?.korkeus ?? 0)}`;
+    },
+    /** Uutta ladontaa ei tarvita, jos joka merkillä on jo ankkuri. */
+    tuore(tunnus, avaimet) {
+      if (avain !== tunnus) return false;
+      for (const a of avaimet) if (!ankkurit.has(a)) return false;
+      return true;
+    },
+    /** Uudet ankkurit varastoon; ruudun vaihtuessa vanhat unohtuvat. */
+    aseta(tunnus, uudet) {
+      if (avain !== tunnus) { ankkurit.clear(); avain = tunnus; }
+      for (const [k, v] of uudet) ankkurit.set(k, v);
+    },
+    lue(merkkiAvain) { return ankkurit.get(merkkiAvain) ?? null; },
+    get koko() { return ankkurit.size; },
+    tyhjenna() { avain = null; ankkurit.clear(); },
+  };
+}
+
+/**
+ * Paikallinen lineaarikuvaus asteista ruutupikseleiksi merkin
+ * ympäristössä: kaksi äärellistä erotusta riittää, koska levitys
+ * liikkuu korkeintaan muutaman sadan pikselin päähän.
+ *
+ * @returns {?function({dx:number,dy:number}): {lat:number, lng:number}}
+ */
+export function pikseleistaAsteiksi(ruudulla, lat, lng, askel = 0.05) {
+  const p0 = ruudulla(lat, lng);
+  const pLat = ruudulla(lat + askel, lng);
+  const pLng = ruudulla(lat, lng + askel);
+  if (!p0 || !pLat || !pLng) return null;
+  const a = (pLat.x - p0.x) / askel;
+  const b = (pLng.x - p0.x) / askel;
+  const c = (pLat.y - p0.y) / askel;
+  const d = (pLng.y - p0.y) / askel;
+  const det = a * d - b * c;
+  if (!Number.isFinite(det) || Math.abs(det) < 1e-9) return null;
+  return ({ dx, dy }) => ({
+    lat: lat + (d * dx - b * dy) / det,
+    lng: lng + (a * dy - c * dx) / det,
+  });
+}

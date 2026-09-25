@@ -1,0 +1,22 @@
+{
+  "verifiedAt": "2026-09-16T08:18:29.149Z",
+  "url": "https://media.matkakirja.app/matkakirja/aanet/linssit/astronautin-kamera-tausta.mp3",
+  "versionedUrl": "https://media.matkakirja.app/matkakirja/aanet/linssit/astronautin-kamera/20260916/93aaf7fb15092bac80abd1d740aa2a22a0fdb761558df2273673bc263fde2f2b.mp3",
+  "manifestUrl": "https://media.matkakirja.app/matkakirja/aanet/linssit/astronautin-kamera/20260916/manifest.json",
+  "workflowRunId": 35072965615,
+  "workflowConclusion": "success",
+  "sha256": "93aaf7fb15092bac80abd1d740aa2a22a0fdb761558df2273673bc263fde2f2b",
+  "bytes": 1345091,
+  "decodedDuration": 84,
+  "httpStatus": 200,
+  "contentType": "audio/mpeg",
+  "cors": "https://matkakirja.app",
+  "byteRangeStatus": 206,
+  "byteRange": "bytes 0-15/1345091",
+  "ownerApprovedBytesMatch": true,
+  "decodedPcmMatches": true,
+  "pcmSha256": "6b7edc77904d6879dc84861fd6ecd8eb310d89a2b38c214470b25bed3e8aae19",
+  "crossfadeSeconds": 1.5,
+  "gameIntegration": "pending-Fable-runtime-and-release",
+  "newPaidGenerationCalls": 0
+}

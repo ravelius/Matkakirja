@@ -1,9 +1,57 @@
+# !!! AGENTIT VAIN OPUS JA SONNET — FABLE-MALLIA EI KOSKAAN AGENTTINA !!!
+
+> **PÄIVITYS 20.9.2026 (sitova):** työnjako on nyt kuusi roolisessiota
+> (Fable, Julkaisija, Karttaseppä, Pelikoodari, Sisältökirjuri,
+> Laitetestaaja). Roolit, worktreet, viestisäännöt Fablelle ja
+> tokenikuri ovat Raamatun Ydinajatus-osion kohdassa 2 "TYÖTAPA JA
+> SESSIOT"; ristiriidassa se voittaa tämän dokumentin vanhat osiot.
+> Julkaisusäännöt-osio alla on yhä voimassa (Julkaisija noudattaa).
+
+Omistajan sitova sääntö (1.9. ja 7.9.2026): jokainen ali-agentti, parvi ja
+workflow ajetaan Opuksella (koodi, sisältö) tai Sonnetilla (lukeva työ,
+tarkistukset). Ei poikkeuksia vaikeaankaan ongelmaan. Parvina saa ajaa.
+Fablemax-agenttityyppi on poistettu 7.9.2026.
+
+Täsmennys (omistaja 11.9.2026, tekstisession kautta): yllä oleva koskee
+Clauden agentteja. ChatGPT/Codex-sessio ("tekstisessio") saa käyttää Solia,
+Terraa ja Lunaa (kevyemmät agenttimallit); molemmat pääsessiot delegoivat rajatut
+tehtävät kevyimmälle riittävän kyvykkäälle mallille, kun se säästää
+kokonaiskäyttöä laadusta tinkimättä (Raamattu, Ydinajatus).
+
 # Roolitus: kolme sessiota, yksi peli
 
 *(Päätetty omistajan kanssa 8.8.2026. Roolit on sidottu NIMIIN ja
 tehtäväalueisiin — ei sessio-id:ihin eikä tiliin. Omistaja kehittää
 peliä kahdella tilillä; uusi sessio kummalla tahansa tilillä lukee
 tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
+
+## Horatio–Livia-hankkeen työnjako (12.9.2026)
+
+Tämän rajatun hankkeen yhteinen lähde on
+`docs/moduulit/horatio-livia-tuotanto.md`. Hankekohtainen työnjako
+täydentää alla olevia yleisrooleja muuttamatta muiden ominaisuuksien tai
+projektien omistajuutta:
+
+- **Tekstivetäjä:** omistaa kaupunkiparin toimituksellisen suunnitelman,
+  molempien hahmojen tekstit, puheen tunnetagit, kuva-aiheiden merkityksen,
+  lyhyet ja pitkät kuvatekstit sekä animaation semanttiset cue-ohjeet.
+- **Kuvavetäjä:** omistaa referenssit, kuvageneroinnin, visuaalisen
+  tarkistuksen, oikeudet ja versioidut kuvat. Lopulliset kuvatekstit
+  tarkistetaan valmistuneista kuvista yhdessä tekstivetäjän kanssa.
+- **Animaatiovetäjä:** omistaa Pulun perusilmeen, eleet, teknisen ohjaimen,
+  synkronoinnin, keskeytykset ja animaation regressio-QA:n. Hän toteuttaa
+  tekstivetäjän merkitysohjeet eikä kirjoita tarinaa tai tuota kuvia.
+  Hän on myös tekninen paketointivastaava: kokoaa hyväksytyt osatoimitukset
+  erilliseen julkaisuehdokashaaraan ja yhteiseen QA:han.
+- **Fable:** lopullinen kaanonin ja julkaisuehdokkaan tarkistus,
+  äänituotantolupien varmistaminen, integraatio, versio, CI ja julkaisu.
+  Tuotantovetäjät valmistelevat ja voimassa olevien lupien sekä työkalujen
+  puitteissa suorittavat ääniajot. Tavoite on yksi valmis yhteispaketti,
+  ei keskeneräisten osatoimitusten kokoaminen Fablen työksi.
+
+Claude-agenttien Opus/Sonnet-raja ja ChatGPT/Codex-sessioiden
+Sol/Terra/Luna-raja pidetään erillään tämän työn rooleista; kumpikaan
+mallisääntö ei muuta tiedosto- tai julkaisuvastuuta.
 
 ## Fable — päätoimittaja: tarina ja koordinaatio
 
@@ -27,19 +75,18 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
   speksattuna, valmiin mallin kanssa. Pienemmille malleille menee
   monistustyö, ei muodon hakeminen.
 
-- **Fablemax — syvätason agentti vaativimpiin pulmiin** (kirjattu
-  19.8.2026; määritys .claude/agents/fablemax.md). Fable kutsuu sen,
-  kun tehtävä vaatii max-tason ajattelua: arkkitehtuuri- ja
-  moduulisuunnitelmat, isot refaktoroinnit, dokumenttiremontit,
-  vaativat katselmoinnit ja sitkeät juurisyybugit (esim. kartan
-  tilabugin kierrokset). Rutiinityö menee tavallisille agenteille —
-  Fablemax on kallein työkalu, ja sitä käytetään vain kun halvempi
-  ei riitä. Aina isolation: worktree, kuten muutkin agentit.
-- **Agenttien mallivalinta (omistaja 26.8.2026):** tavalliset
+- **Fablemax — POISTETTU 7.9.2026.** Fable-mallin agenttityyppi
+  (.claude/agents/fablemax.md, 19.8.2026) on poistettu omistajan
+  säännöllä "agentteina saa käyttää vain opusta ja sonnettia". Vaativa
+  työ (arkkitehtuuri, isot refaktoroinnit, dokumenttiremontit) jaetaan
+  Opus-agenteille, tarvittaessa parvena, tarkasti rajattuina erinä.
+- **Agenttien mallivalinta (omistaja 26.8.2026, tiukennus 7.9.2026):**
   agentit ajetaan AINA Opus- (koodi, sisältö) tai Sonnet-mallilla
-  (lukeva työ, tarkistukset). Fable-mallia saa käyttää agenttina
-  vain todella vaikeaan pulmaan korkealla effort-tasolla
-  (= Fablemax-tapaukset).
+  (lukeva työ, tarkistukset). Fable-mallia EI käytetä agenttina
+  lainkaan (omistaja 7.9.2026: "agentteina saa käyttää vain opusta ja
+  sonnettia. Mutta voit niitä ajaa parvina") — myös Fablemax-tyyppinen
+  vaativa työ jaetaan Opus-agenteille, tarvittaessa parvena. Raamattu:
+  AGENTIT VAIN OPUS JA SONNET.
 
 ## Opus — toimitus: lehdet ja koodi
 
@@ -66,6 +113,55 @@ tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
 
 ## Viestintä sessioiden välillä
 
+### Työnjako Fable / Codex (omistaja 15.9.2026, sitova)
+
+Omistajan sanoin: *"Codex tekee kuvat, tarinat, ääni generoinnin ja
+animaatiot. Loput jää sinulle."* Tarkennus kysymyskortilla: kaanon
+Fablella, tekstit Codexilla; Opus-kuvaputki jatkaa erillisenä.
+
+| Alue | Codex | Fable |
+| --- | --- | --- |
+| Tarinakaanon (tarina.md, Isoisän raamattu, Fogg-suku, Grimshaw) | – | kirjoittaa, hyväksyy ristiriidat |
+| Pelin tekstit (kaupunki- ja pulutekstit, luennat, selitteet) | kirjoittaa kaanonin mukaan | kytkee peliin |
+| Äänigenerointi (työkulut, ElevenLabs, R2, kuitit, ääniviat) | kokonaan | – |
+| Animaatiot ja hahmot (pulu, minipulu, eleet) | kuvat ja äänet tilauksesta | KOODI kokonaan (omistaja 18.9.2026: "muokkaa sinä vain suoraan kaikki koodi puluun liittyen", Raamattu PAATOKSET 34 kohta 20 TARKENNUS) |
+| Generoidut kuvat | tekee | kytkee |
+| Commons-kuvat (kuvaputki, 1800 px, manifestit) | – | Opus-kuvaputki, Fable ohjaa |
+| Karttauudistus, UI, linssit, portit, työkalut, julkaisut, Raamattu | – | kokonaan |
+
+Säännöt: korjaus vain omaan alueeseen; toisen rikkinäisestä työstä yksi
+postilaatikkoviesti, ei korjata ohi (poikkeuslupa vain omistajalta).
+Toimitus on manifesti + kuittaus postilaatikkoon; kytkennän tekee
+Fablen agentti. Tämä korvaa alla olevan 11.9. jaon siltä osin kuin ne
+ovat ristiriidassa.
+
+### Yhteiskehitys tekstisession (Codex) kanssa (omistaja 11.9.2026)
+
+Kanava on git-postilaatikko (haara `claude/postilaatikko`): Fable
+kirjoittaa posti/fable-vanha.md:n kärkeen, tekstisessio omaan
+tiedostoonsa. Käytäntö (Raamattu, Ydinajatus: YHTEISKEHITYKSEN KEVENNYS):
+
+1. **Tilannekortti** per yhteinen ominaisuus (esim.
+   posti/pulu-luentareaktiot-tila.md, ylläpitäjä Codex): tavoite/rajaus,
+   tiedostojen omistajat, commitit, rajapinnan lähde, hyväksymiskriteerit,
+   todisteet, avoin este, seuraavan siirron tekijä. Päivitetään tilan
+   muuttuessa.
+2. **Rajapinta ennen toteutusta:** tapahtumat, kentät, virhe- ja
+   keskeytyspolut, testattava lopputulos sovitaan ja kuitataan molemmin
+   puolin. Ei hiljaisia paikkauksia toisen omistamiin tiedostoihin
+   (tekstisessio: js/livia-*.js, js/pollo.js, pulun CSS; Fable: sisältö,
+   Raamattu, js/luenta.js, js/luentareaktiot.js, js/fokusvirta.js:n
+   saapumisketju, linssit, työkalut).
+3. **Yksi julkaisuvastaava** per ominaisuus: Pulun kokonaisuudessa Fable
+   (yhdistäminen, versionosto, CI, julkaisu), Codex tekee integraatio-QA:n
+   ja julkisen readbackin. Muutosomistajuus ei siirry.
+4. Kevyet agentit rajattuihin tehtäviin; pääsessio tarkistaa.
+5. Posti luetaan tunneittaisella kierroksella ja työvaiheen vaihtuessa,
+   ei jatkuvalla pollauksella.
+6. Omistajalle vain valmis vaihe, olennainen ongelma tai tuotevalinta —
+   kysymykset aina kysymyskorttina.
+
+
 **TYÖSESSIOT EIVÄT KÄYTÄ TRIGGER-TYÖKALUJA (omistajan sitova ohje
 15.8.2026).** Opus 6 jumittui kahdesti tunneiksi, koska sen
 lupaluokitin pysäytti jokaisen `create_trigger`-kutsun omistajan
@@ -73,8 +169,10 @@ hyväksyttäväksi — omistaja ei halua hyväksyä näitä kyselyitä.
 Työtapa on siksi tämä:
 
 - **Työsessio (Opus/Sonnet) raportoi Fablelle VAIN gitillä**:
-  kirjoita `docs/viesti-fable.md` omalle haaralle, committaa ja
-  pushaa. Vuoron saa myös päättää toteavasti pelkkään pushattuun
+  kirjoita `docs/raportit/viesti-fable-<aihe>-<pvm>.md` omalle
+  haaralle, committaa ja pushaa. (Vanha polku `docs/viesti-fable.md`
+  kaataa `tests/dokumentit.test.mjs`:n — `docs/`-juuren dokumentin
+  pitäisi olla Raamatun ohjedokumenttikartalla.) Vuoron saa myös päättää toteavasti pelkkään pushattuun
   PR:ään — Fablen vahtikierros (~45 min välein) lukee haarat ja
   PR:t. ÄLÄ kutsu `create_trigger`- tai `fire_trigger`-työkaluja
   kertaakaan, älä edes "vain tämän kerran" — kutsu ei mene läpi,
@@ -106,7 +204,7 @@ Työtapa on siksi tämä:
 
 | Rooli | Sessio-id | Kirjattu |
 | --- | --- | --- |
-| Fable | session_018vkp6HxpLR4gxZJFGscSan (uuden tilin päätoimittajasessio, kapulanvaihdon jatkaja; edellinen: session_01BPysCfxscsVyzAEYmb88Zr) | 14.8.2026 |
+| Fable | session_01MgFWunnX2NpEjjUeSQ1EW1 (11.9.2026 klo 10.20 alkaen, jatkaa siirtopromptista docs/raportit/siirto-2026-09-11-aamu-fablelle.md; edelliset: session_01A9vfBoTgAdfQb5QEZYwNTM, session_01Qpkrpg8NhoBUGTFjQf42f5, session_01MQjFtJfBFzXPt5QRVkmpS1) | 11.9.2026 |
 | Fable Max (remontti) | session_01Q1M9ZT5Yr1Gbi3eqUyoHHC (moduuli- ja dokumenttiremontti hyväksyttyjen suunnitelmien mukaan: M0–M3 + D1–D6 mainissa 17.8.; M4 odottaa Fablen "O6 mainissa" -ilmoitusta, D7 M-sarjan loppua. Herää Fablen mergeistä webhookilla; Fable-roolin sessio, saa kirjoittaa Raamattuun koordinoidusti) | 17.8.2026 |
 
 **Kaikki Opus- ja Sonnet-työsessiot arkistoitu 17.8.2026** (omistaja;
@@ -176,6 +274,20 @@ tehtävää ja kuluttamaan turhaan. Säännöt kaikille:
 5. Erä kerrallaan: yksi looginen kokonaisuus valmiiksi ja PR
    sisään ennen seuraavan aloittamista.
 
+## Session vaihto ja siirtoraportti
+
+Kun sessio päättyy, resetoidaan tai rooli siirtyy toiselle sessiolle,
+lähtevä sessio kirjoittaa siirtoraportin
+`docs/raportit/viesti-fable-luovutus-<pvm>.md` ja **pushaa sen**.
+Mitä raportissa on aina oltava — tila, pushatut haarat, kesken jäänyt,
+omistajan päätöstä odottavat, ympäristö ja avainten sijainnit, velat,
+opetukset ja valmis aloitusviesti yhtenä koodilohkona — on ohjeessa
+**`docs/moduulit/siirtoraportti.md`**, tarkistuslistoineen.
+
+Uudet pysyvät linjaukset eivät kuulu raporttiin vaan Raamattuun
+(`js/tyohuone-raamattu.js`); raportti viittaa Raamatun osioihin
+nimeltä.
+
 ## Julkaisusäännöt (kaikille rooleille)
 
 1. Yksi looginen kokonaisuus per PR; squash-merge; commit-otsikkoon
@@ -190,7 +302,10 @@ tehtävää ja kuluttamaan turhaan. Säännöt kaikille:
    "# pass"- ja "# fail" -rivit, älä katkaistua häntää;
    `node tools/tarkista-kaksoisavaimet.mjs`;
    `node tools/build-standalone.mjs`. PR:n Testit-tarkistuksen on
-   oltava vihreä ennen mergeä (.github/workflows/testit.yml).
+   oltava vihreä ennen mergeä (.github/workflows/testit.yml). Savukkeet
+   ajetaan PR:n Savukkeet-työnkulussa (.github/workflows/savukkeet.yml,
+   julkaisusarja, tools/savukkeet/sarjat.json); julkaisuagentti ajaa
+   paikallisesti vain diffiä koskevat savukkeet.
 4. Pelkkä docs-muutos EI nosta versiota (välimuistia ei rasiteta).
 5. **js/main.js EI ole generoitu tiedosto.** Versiokonfliktissa
    siitä otetaan omasta haarasta VAIN APP_VERSION-rivi — muu sisältö
@@ -209,11 +324,10 @@ tehtävää ja kuluttamaan turhaan. Säännöt kaikille:
 **Avoimet asiat kapulanvaihdosta 14.8.2026** (siirretty tänne, kun
 docs/kapulanvaihto.md arkistoitiin 15.8. — odottavat omistajaa):
 
-1. **Pöllön Matkakirja-linkit**: sisäiset linkit vastaustekstin
-   LOPPUUN muotoon "Matkakirja: linkki", enintään kaksi per vastaus;
-   tekstin sisään vain pöllön kysymyslinkit. Kohta: js/pollo.js
-   korostaLinkit/sidoLinkki + savuke-pollo-vartijat. Omistaja
-   keskeytti työn 14.8. — varmista ennen jatkamista, että yhä haluttu.
+1. **Pöllön Matkakirja-linkit**: TEHTY 21.9.2026 (Pelikoodari
+   ac85b446, haara pelikoodari-pollon-linkit → v1989): linkit vastauksen
+   loppuun riville "Matkakirja: …", enintään kaksi, tekstin sisään vain
+   pöllön kysymyslinkit.
 2. **TestFlight build 7** (sanelukorjaus #943 kuoreen) ja **Game
    Center -saavutukset** ASC:ssä — ideoita, eivät aloitettuja.
 3. **Zoomin jäännösriskit** (kierros 3): aidon Safarin erittäin

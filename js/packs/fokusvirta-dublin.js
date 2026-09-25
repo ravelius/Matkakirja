@@ -185,14 +185,9 @@ export const FOKUSVIRTA_DUBLIN = {
   /* ---------- 1. Matkakirja (isoisän ääni, ei kuvaa) ---------- */
   matkakirja: {
     /* KAANON (Fable 29.8.2026) — paikkarivi sellaisenaan. */
-    paikkarivi: 'Dublin, syyskuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Liffeyn rannalla tuoksuu mallas: panimo on täällä kokonainen '
-      + 'kaupunginosa, ja sen tummaa juomaa lastataan proomuihin kuin '
-      + 'kivihiiltä. Collegen kirjastossa näytettiin minulle kirjaa, jonka '
-      + 'munkit maalasivat tuhat vuotta sitten — sen sivuilla kiemurtelevat '
-      + 'kuviot ovat hienommat kuin yhdenkään kultasepän työ. Vahtimestari '
-      + 'käänsi sivua valkoisin käsinein ja katsoi minua kuin varasta.',
+    paikkarivi: 'Dublin, syyskuussa 1873. Tihkusadetta; puntari putoaa.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 331 merkkiä (yläraja 400). */
+    teksti: "Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.",
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md
      * luku 7). Vain tunnetagit on lisätty, neljä kappaletta, alku ja
@@ -200,47 +195,120 @@ export const FOKUSVIRTA_DUBLIN = {
      * Viimeinen tagi on kohdassa, jossa merkintä kääntyy epäilyksi —
      * juuri se lause kantaa koko kaupungin sävyn.
      */
-    luenta: '[curious] Liffeyn rannalla tuoksuu mallas: panimo on täällä '
-      + 'kokonainen kaupunginosa, ja sen tummaa juomaa lastataan proomuihin '
-      + 'kuin kivihiiltä. [warmly] Collegen kirjastossa näytettiin minulle '
-      + 'kirjaa, jonka munkit maalasivat tuhat vuotta sitten — sen sivuilla '
-      + 'kiemurtelevat kuviot ovat hienommat kuin yhdenkään kultasepän työ. '
-      + '[softly] Vahtimestari käänsi sivua valkoisin käsinein [whispers] ja '
-      + 'katsoi minua kuin varasta.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Portilla tuoksui lämmin mallas" ja "Mies
+     * pyyhki otsaansa hihalla" (havainnot).
+     */
+    reaktiot: [
+  {
+    "id": "dublin.r1",
+    "ankkuri": "vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "dublin.r2",
+    "ankkuri": "vaatii uskoa olueen tai janoon",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "dublin.r3",
+    "ankkuri": "mies vieritti tynnyreitä kärryille",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "dublin.r4",
+    "ankkuri": "loppuuko työ koskaan",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "dublin.r5",
+    "ankkuri": "vieritti seuraavan tynnyrin",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. [warmly] Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-dublin.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-dublin-r20260909-paper-v4;
+     * SHA-256 17f3644d1c5bbda00f445b0407e290af6dc257ff40f8370e0cf40e0698cb7cf6;
+     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
+     * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
+     * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
+     * toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-dublin-r20260909-paper-v4.jpg',
+      // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
+      // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
+      lyhyt: 'Dublin, 1873. Tynnyrit lähtivät, työ jäi.',
+      selite: 'Panimon pihassa mies pysähtyi tynnyrikärryn viereen pyyhkimään otsaansa. Yhdeksäntuhannen vuoden vuokrasta näkyi tässä vain yksi hikinen työhetki.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+      'https://www.dublincity.ie/sites/default/files/2020-10/hoyd-volume-1.pdf',
+      'https://www.dublincity.ie/sites/default/files/media/file-uploads/2018-05/Liberties_LAP.pdf',
+      ],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-dublin-r20260911-paper2-v1.jpg",
+      lyhyt: "Dublin, 1873. Kysymys pysäytti kärryt hetkeksi.",
+      selite: 'Kysymykseni pysäytti miehen tyhjien kärryjen viereen, kun tynnyrit odottivat ympärillä. Yhdeksäntuhannen vuoden vuokrasopimus teki pitkästä katseesta riittävän vastauksen.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.dublincity.ie/sites/default/files/2020-10/hoyd-volume-1.pdf","https://www.dublincity.ie/sites/default/files/media/file-uploads/2018-05/Liberties_LAP.pdf"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * KAANON (Fable) — Livian kuplateksti sellaisenaan. Aallon 4A
-     * kaanonissa Livialle on kirjoitettu YKSI teksti, joka tekee sekä
-     * maadoituksen että huomion: se vastaa isoisän merkintään kohta
-     * kohdalta (panimo, kirja, vahtimestari) ja kääntyy lopussa
-     * eteenpäin.
-     *
-     * INTEGROINNISSA TEKSTI ON JAETTU KAHTEEN KENTTÄÄN, EI MUUTETTU.
-     * Kortti lukee kaksi kenttää (js/fokusvirta.js piirraPollo):
-     * `maadoitus` piirtyy kuplan ensimmäiseksi kappaleeksi heti isoisän
-     * merkinnän perään ja `teksti` sen jälkeen. Lisäksi
-     * tests/fokusvirta.test.mjs vaatii jokaiselta fokuskaupungilta oman
-     * maadoituksen, joka ei ole sama merkkijono kuin huomio. Jako
-     * kulkee VIRKKEEN RAJAA pitkin (Edinburghin kaava): ensimmäinen
-     * virke kuittaa merkinnän panimon ja kirjan, jälkimmäinen ottaa
-     * vahtimestarit ja vie eteenpäin. Yhtäkään sanaa, välimerkkiä tai
-     * järjestystä ei ole muutettu — peräkkäin luettuna teksti on
-     * sanasta sanaan Fablen kaanonteksti.
-     *
-     * VIIMEINEN LAUSE ON AARTEEN LUPAUS EIKÄ SEN PALJASTUS. Livia
-     * sanoo, että vartijan epäluulo ei ole tässä maassa väärä vaisto —
-     * muttei sano mitään siitä, mitä Dublinin linnasta vietiin eikä
-     * milloin. Vastaus on aarteen omassa faktarivissä
-     * (js/packs/paikallisaarteet.js, IRL isoAarre), ja se on tarkoitus:
-     * lupaus ensin, palkinto vasta löydön yhteydessä.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era01; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-dublin-01-r20260909-euv1-v1.jpg.
      */
-    maadoitus: 'Dublinissa se panimo toimii edelleen, ja se tuhatvuotinen '
-      + 'kirja on edelleen näytillä — sivu käännetään nykyään harvemmin kuin '
-      + 'isoisäsi aikaan, se kuluu..',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-dublin-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Dublin: vuokrasopimus kesti, minun pysähdykseni ei.',
+        selite: 'St James’s Gaten portista on tullut myös matkalaisten kuvauspaikka, ja puhelimet osoittavat harppumerkkiä kohti. Annoin märälle reunakivelle yhden hetken ennen kuin jatkoin matkalaukun rinnalla matkaa.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.visitdublin.com/see-do/details/guinness-storehouse',
+          'https://assets-eu-01.kc-usercontent.com/aa24ba70-9a12-01ae-259b-7ef588a0b2ef/777408eb-dc0c-4197-8878-328a7e76c1b3/Guinness%20Storehouse%20Gates%20%282%29.jpg',
+          'https://www.visitdublin.com/guides/art-of-brewing',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["St James’s Gaten panimolle jonotetaan nyt kameroiden kanssa. Asetuin matkalaukun viereen kuvaan ja kohotin leukaa. Kuvaaja tähtäsi harppumerkkiin. Otin askeleen lähemmäs. Ihan vain sommittelun vuoksi."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'hammastys', voimakkuus: 0.5 },
     teksti: 'Vahtimestarit katsovat kaikkia edelleen kuin varkaita, ja kohta '
       + 'ymmärrät miksi se ei ole ihan väärä vaisto tässä maassa..',
     /*
@@ -252,6 +320,7 @@ export const FOKUSVIRTA_DUBLIN = {
      */
     kuva: {
       ampari: 'herokoe/hero-dublin-aamu.png',
+      lyhyt: 'Trinity Collegen kellotorni valmistui 1853; takana Vanha kirjasto ja Kellsin kirja.',
       selite: 'Trinity Collegen kellotorni valmistui 1853 Charles Lanyonin '
         + 'suunnitelmien mukaan, ja sen takana Vanhassa kirjastossa '
         + 'säilytetään Kellsin kirjaa.',
@@ -319,6 +388,8 @@ export const FOKUSVIRTA_DUBLIN = {
         + 'sen siis aivan laillisesti, vaikka häntä katsottiinkin nurjasti. '
         + 'Nykyään esillä on yksi nide neljästä, kaksi sivua kerrallaan, ja '
         + 'sivu käännetään noin kahdentoista viikon välein.',
+      lahde: 'en-Wikipedia "Book of Kells" ja en-Wikipedia "Cumdach". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1123×1558, public domain, Restrictions tyhjä.
        * Folio 34r eli khi-rho-monogrammi, kirjan tunnetuin sivu.
@@ -327,6 +398,7 @@ export const FOKUSVIRTA_DUBLIN = {
        */
       kuva: {
         tiedosto: 'KellsFol034rChiRhoMonogram.jpg',
+        lyhyt: 'Kellsin kirjan tunnetuin aukeama on folio 34r, jossa yksi kirjainyhdistelmä täyttää koko sivun.',
         selite: 'Kellsin kirjan tunnetuin aukeama on folio 34r, jossa yksi '
           + 'ainoa kirjainyhdistelmä täyttää koko sivun kiemuroineen.',
         lahde: 'Wikimedia Commons (public domain)',
@@ -397,6 +469,8 @@ export const FOKUSVIRTA_DUBLIN = {
         + 'täyteen: yhtiö osti tontin lopulta omakseen, ja sopimus '
         + 'raukesi. Se on epäromanttisin mahdollinen tapa päättää '
         + 'yhdeksäntuhannen vuoden sopimus.',
+      lahde: 'en-Wikipedia "Guinness Brewery" ja en-Wikipedia "Guinness". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4896×3264, CC BY 2.0, Metro Centric, kuvaus
        * "Guinness brewery, Dublin". Restrictions tyhjä. SILMÄTARKISTUS
@@ -406,6 +480,7 @@ export const FOKUSVIRTA_DUBLIN = {
        */
       kuva: {
         tiedosto: 'Guinness brewery, Dublin.jpg',
+        lyhyt: 'Panimo on yhä samalla tontilla, jonka Arthur Guinness vuokrasi St James’s Gaten portilta 1759.',
         selite: 'Panimo toimii yhä samalla tontilla St James’s Gaten '
           + 'portin luona, jonka Arthur Guinness vuokrasi vuonna 1759.',
         lahde: 'Metro Centric, Wikimedia Commons (CC BY 2.0)',
@@ -480,6 +555,8 @@ export const FOKUSVIRTA_DUBLIN = {
         + 'karjaise. Slats kuoli 1936 seitsemäntoistavuotiaana, ja hänen '
         + 'kouluttajansa hautasi hänet omalle tilalleen tavallisen '
         + 'graniittilohkareen alle — ilman nimeä, ilman vuosilukuja.',
+      lahde: 'en-Wikipedia "Dublin Zoo" ja en-Wikipedia "Leo the Lion (MGM)". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1432×1078, public domain, tekijä
        * Metro-Goldwyn-Mayer, kuvaus "1080p quality screencap of 1926
@@ -498,6 +575,7 @@ export const FOKUSVIRTA_DUBLIN = {
        */
       kuva: {
         tiedosto: 'Metro-Goldwyn-Mayer — Slats the Lion (1926).png',
+        lyhyt: 'Dublinissa syntynyt Slats katsoo MGM:n tunnuksesta vuoden 1926 elokuvassa, muttei koskaan karjaise.',
         selite: 'Dublinissa syntynyt Slats katsoo MGM:n tunnuksesta vuoden '
           + '1926 elokuvassa. Hän ei karjaise siinä eikä missään muussa.',
         lahde: 'Metro-Goldwyn-Mayer 1926, Wikimedia Commons (public domain)',
@@ -605,6 +683,7 @@ export const FOKUSVIRTA_DUBLIN = {
        * lainausmerkeissä eikä heittomerkeissä.
        */
       tiedosto: "The Ha'Penny Bridge Dublin - Samuel Frederick Brocas.jpg",
+      lyhyt: 'Brocasin näkymä sillasta ensivuosilta, kun maksu oli voimassa ja joella soudettiin.',
       selite: 'Samuel Frederick Brocasin näkymä sillasta sen ensimmäisiltä '
         + 'vuosilta: maksu oli silloin voimassa ja joella soudettiin yhä.',
       lahde: 'Samuel Frederick Brocas, Wikimedia Commons (public domain)',
@@ -978,6 +1057,7 @@ export const FOKUSVIRTA_DUBLIN = {
        */
       kuva: {
         tiedosto: 'Entrance to Newgrange passage tomb.jpg',
+        lyhyt: 'Newgrangen sisäänkäynnin yläpuolella on aukko, josta talvipäivänseisauksen aurinko yltää kammioon.',
         selite: 'Newgrangen sisäänkäynnin yläpuolella on aukko, '
           + 'kattolaatikko, jonka läpi talvipäivänseisauksen aurinko '
           + 'yltää käytävää pitkin kammioon.',

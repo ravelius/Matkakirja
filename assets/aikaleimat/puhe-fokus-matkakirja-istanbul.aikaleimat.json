@@ -1,0 +1,174 @@
+{
+  "versio": 2,
+  "kaupunki": "istanbul",
+  "teksti": "Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.",
+  "tekstiSha256": "2a67e6209f9cfa164df41c3f3c6ffd24a948c5874d31f94d206072bf6ff3dcc1",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-istanbul.mp3",
+    "versio": 2,
+    "tavut": 337755,
+    "sha256": "cbc0aa7c7fdadd863a49a74b5abc3f739c5ead8491b016ab68c589f29e777500"
+  },
+  "kesto": 21020,
+  "sanat": [
+    {
+      "sana": "Galatan",
+      "alku": 120,
+      "loppu": 560
+    },
+    {
+      "sana": "mäessä",
+      "alku": 620,
+      "loppu": 1020
+    },
+    {
+      "sana": "kantaja",
+      "alku": 1080,
+      "loppu": 1500
+    },
+    {
+      "sana": "laski",
+      "alku": 1540,
+      "loppu": 1860
+    },
+    {
+      "sana": "arkkuni",
+      "alku": 1940,
+      "loppu": 2360
+    },
+    {
+      "sana": "kivelle",
+      "alku": 2420,
+      "loppu": 3000
+    },
+    {
+      "sana": "Pyysin",
+      "alku": 3980,
+      "loppu": 4260
+    },
+    {
+      "sana": "kiirehtimään",
+      "alku": 4300,
+      "loppu": 5160
+    },
+    {
+      "sana": "Hän",
+      "alku": 6640,
+      "loppu": 6760
+    },
+    {
+      "sana": "osoitti",
+      "alku": 6800,
+      "loppu": 7180
+    },
+    {
+      "sana": "tunnelityömaata",
+      "alku": 7220,
+      "loppu": 8200
+    },
+    {
+      "sana": "pian",
+      "alku": 9240,
+      "loppu": 9500
+    },
+    {
+      "sana": "mäen",
+      "alku": 9560,
+      "loppu": 9800
+    },
+    {
+      "sana": "voisi",
+      "alku": 9860,
+      "loppu": 10120
+    },
+    {
+      "sana": "nousta",
+      "alku": 10160,
+      "loppu": 10500
+    },
+    {
+      "sana": "istualtaan",
+      "alku": 10580,
+      "loppu": 11240
+    },
+    {
+      "sana": "Minusta",
+      "alku": 12640,
+      "loppu": 13020
+    },
+    {
+      "sana": "se",
+      "alku": 13060,
+      "loppu": 13100
+    },
+    {
+      "sana": "oli",
+      "alku": 13140,
+      "loppu": 13300
+    },
+    {
+      "sana": "paljon",
+      "alku": 13340,
+      "loppu": 13820
+    },
+    {
+      "sana": "työtä",
+      "alku": 13900,
+      "loppu": 14260
+    },
+    {
+      "sana": "työn",
+      "alku": 14320,
+      "loppu": 14540
+    },
+    {
+      "sana": "välttämiseksi",
+      "alku": 14580,
+      "loppu": 15440
+    },
+    {
+      "sana": "Sitten",
+      "alku": 17600,
+      "loppu": 17840
+    },
+    {
+      "sana": "yritin",
+      "alku": 17920,
+      "loppu": 18180
+    },
+    {
+      "sana": "nostaa",
+      "alku": 18220,
+      "loppu": 18600
+    },
+    {
+      "sana": "arkkuni",
+      "alku": 18680,
+      "loppu": 19160
+    },
+    {
+      "sana": "Annoin",
+      "alku": 20100,
+      "loppu": 20360
+    },
+    {
+      "sana": "hänen",
+      "alku": 20400,
+      "loppu": 20600
+    },
+    {
+      "sana": "levätä",
+      "alku": 20640,
+      "loppu": 21020
+    }
+  ],
+  "lauseet": [
+    120,
+    3980,
+    6640,
+    12640,
+    17600,
+    20100
+  ],
+  "luotu": "2026-09-23T15:35:26.678Z"
+}

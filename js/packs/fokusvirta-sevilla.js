@@ -164,65 +164,110 @@ export const FOKUSVIRTA_SEVILLA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Sevilla, huhtikuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Guadalquivir tuo meren hajun kolmekymmentä peninkulmaa '
-      + 'sisämaahan, ja sen rannalla seisoo kultainen torni, jonka nimi '
-      + 'on suurempi kuin sen kunto. Tupakkatehtaassa työskentelee '
-      + 'tuhansia naisia — heidän sormensa kääntävät lehtiä nopeammin '
-      + 'kuin pankkiirin sormet seteleitä. Espanja on tänä keväänä '
-      + 'tasavalta, eikä kukaan osaa sanoa, kuinka kauan. Appelsiinipuut '
-      + 'kukkivat siitä huolimatta.',
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 11002a403fe9dbeac5d72fe957d08fe1a85697b4e75dfce49ccf28ab25d0b9a4. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sevilla-r20260909-paper-v4.jpg",
+      lyhyt: "Sevilla, 1873. Palatsimainen tehdas odotti työväkeään.",
+      selite: 'Tupakkatehtaan suuri portti odottaa työväkeä, mutta etualan nainen on ehtinyt istua hetkeksi leipänsä kanssa. Tahdoin säilyttää myös tauon, sillä ilman sen jälkeen alkavaa työtä talo olisi pelkkä komea kuori.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://idus.us.es/bitstreams/c159e9ed-623c-49bb-af82-28de9d825634/download"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sevilla-r20260911-paper2-v1.jpg",
+      lyhyt: "Sevilla, 1873. Huivi solmittiin ennen paluuta työn ääreen.",
+      selite: 'Nainen sitoo huivinsa ja palaa appelsiinipuiden läpi työpöytien ääreen. Suuri rakennus käynnistyy monista tällaisista aamuista.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://personales.us.es/alporu/fabricatabaco/cigarreras_sevilla.htm","https://idus.us.es/bitstreams/c159e9ed-623c-49bb-af82-28de9d825634/download"],
+    },
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Sevilla, huhtikuussa 1873. Appelsiinipuut kukassa; puntari '
+      + 'korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
+    teksti: "Sevillan tupakkatehdas näytti palatsilta, mutta portista kulki työväkeä. Nainen sitoi huivinsa, haukkasi leipää ja katosi sisään. Pihalta tuli appelsiininkukkien tuoksu. Aioin kirjoittaa suuresta rakennuksesta; kirjoitinkin pienestä aamiaisesta, joka piti sitä käynnissä.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[curious] Guadalquivir tuo meren hajun kolmekymmentä '
-      + 'peninkulmaa sisämaahan, ja sen rannalla seisoo kultainen torni, '
-      + 'jonka nimi on suurempi kuin sen kunto. [excited] '
-      + 'Tupakkatehtaassa työskentelee tuhansia naisia — heidän sormensa '
-      + 'kääntävät lehtiä nopeammin kuin pankkiirin sormet seteleitä. '
-      + '[softly] Espanja on tänä keväänä tasavalta, eikä kukaan osaa '
-      + 'sanoa, kuinka kauan. [whispers] Appelsiinipuut kukkivat siitä '
-      + 'huolimatta.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Olin aikonut kirjoittaa suuresta
+     * rakennuksesta" (aikeen toteaminen).
+     */
+    reaktiot: [
+  {
+    "id": "sevilla.r1",
+    "ankkuri": "näytti palatsilta, mutta portista kulki työväkeä",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "sevilla.r2",
+    "ankkuri": "haukkasi leipää ja katosi sisään",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "sevilla.r3",
+    "ankkuri": "appelsiininkukkien tuoksu",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "sevilla.r4",
+    "ankkuri": "pienestä aamiaisesta, joka piti sitä käynnissä",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Sevillan tupakkatehdas näytti palatsilta, mutta portista kulki työväkeä. Nainen sitoi huivinsa, haukkasi leipää ja katosi sisään. Pihalta tuli appelsiininkukkien tuoksu. [thoughtfully] Aioin kirjoittaa suuresta rakennuksesta; kirjoitinkin pienestä aamiaisesta, joka piti sitä käynnissä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-sevilla.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
-     * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo); kanoninen `teksti` seuraa
-     * sen jälkeen.
-     *
-     * PUHEKIELIPASSI (Raamattu, "LIVIAN PUHEKIELI", sääntö 1 PAINOPISTE
-     * REUNOILLA): lyhentymät ovat vain alussa ("Kääk") ja lopussa
-     * ("mut"), keskellä sanat ovat auki; pronominit kokonaisina; ei
-     * huutomerkkejä.
-     *
-     * MIKSI TEHDAS EIKÄ TASAVALTA: Madridin Livia laskee jo tasavallan
-     * neljä johtajaa yhdentoista kuukauden sisään (js/packs/
-     * fokusvirta-madrid.js), ja sama havainto kahdessa saman maan
-     * kaupungissa olisi kaava. Tämä maadoitus vastaa siihen isoisän
-     * lauseeseen, jota Madrid ei koske: naisten sormiin.
-     *
-     * FAKTAKURI: kolme väitettä, kaikki pelin omasta jo hyväksytystä
-     * Sevilla-aineistosta (js/packs/kulttuuri-kategoriat.js, nosto
-     * "Tehdas, jossa vauvat nukkuivat työpöytien vieressä" ja sen
-     * selite). (1) Rakennus oli Espanjan toiseksi suurin El Escorialin
-     * jälkeen. (2) Sikarintyö siirtyi naisille vuoden 1811 sulkemisen
-     * jälkeen, ja 1880-luvun huipussaan siellä työskenteli noin 6 000
-     * naista. (3) Talossa toimii nykyään Sevillan yliopisto.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-sevilla-01-r20260909-euv1-v1.jpg.
      */
-    maadoitus: 'Kääk. Isoisäsi katsoi oikeaan suuntaan: se tehdas oli '
-      + 'niin iso, että Espanjassa vain Escorial voitti sen, ja '
-      + 'sikarintyö oli siellä kokonaan naisten. Parhaimmillaan '
-      + '1880-luvulla samassa talossa käänsi lehtiä noin kuusituhatta '
-      + 'naista yhtä aikaa. Nyt siinä on yliopisto, eli riveissä '
-      + 'istutaan yhä — mut nykyään kaikki katsovat samaan suuntaan.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-sevilla-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Sevilla: sama portti, toisenlainen työpäivä.',
+        selite: 'Entisen tupakkatehtaan portista kuljetaan nyt yliopistoon, ja etualan opiskelija tasapainottaa leipää, puhelinta ja muistikirjaa. Korkeampi koulutus näyttää vaativan kolmannen käden.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.us.es/laUS/secretaria-general/patrimonio-historico-artistico/edificios/real-fabrica-de-tabacos',
+          'https://www.diariodesevilla.es/sevilla/antigua-fabrica-tabacos-sevilla-edificio-industrial-adquirido-Hispalense-1953_0_1540346167.html',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Entinen tupakkatehdas on nyt yliopisto. Näin opiskelijalla niin suuren paperipinon, että lähdin vaistosta perään. Ne eivät olleet kirjeitä. Hyvä yritys."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.55 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      *
@@ -245,6 +290,7 @@ export const FOKUSVIRTA_SEVILLA = {
       ampari: 'herokoe/hero-sevilla-aamu.png',
       /* Selite on lehden oman avauskuvan selite lyhennettynä yhdeksi
        * virkkeeksi; yksikään luku ei muutu. */
+      lyhyt: 'Sevillan Giralda rakennettiin minareetiksi 1184–1198, huipulla pronssinen Giraldillo vuodesta 1568.',
       selite: 'Sevillan Giralda rakennettiin almohadien minareetiksi '
         + '1184–1198, ja sen huipulle nostettiin 1568 nelimetrinen, '
         + '1 500 kilon pronssinen tuuliviiri Giraldillo.',
@@ -306,6 +352,7 @@ export const FOKUSVIRTA_SEVILLA = {
         + 'kadonnut siksi, että laiva oli kiertänyt maapallon länteen, '
         + 'samaan suuntaan kuin aurinko näyttää kulkevan taivaalla. Sitä '
         + 'ei ollut osannut odottaa kukaan.',
+      lahde: 'en-Wikipedia "Magellan expedition". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4001×2771, public domain, Abraham Ortelius,
        * päiväys 1589, Restrictions tyhjä. SILMÄTARKISTUS tehty: painettu
@@ -318,6 +365,7 @@ export const FOKUSVIRTA_SEVILLA = {
        */
       kuva: {
         tiedosto: 'Ortelius - Maris Pacifici 1589.jpg',
+        lyhyt: 'Orteliuksen Maris Pacifici 1589 on ensimmäinen painettu Tyynenmeren kartta, keskellä Victoria.',
         selite: 'Abraham Orteliuksen Maris Pacifici vuodelta 1589 on '
           + 'ensimmäinen painettu kartta Tyynestämerestä, ja sen keskellä '
           + 'purjehtii Victoria.',
@@ -390,6 +438,7 @@ export const FOKUSVIRTA_SEVILLA = {
         + 'herrasväen mailla vuosisatoja; kansallispuisto siitä tuli '
         + 'vasta 1969. Sen suojissa elää yhä yksi Euroopan '
         + 'harvinaisimmista kissaeläimistä.',
+      lahde: 'en-Wikipedia "Doñana National Park". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4896×2760, CC BY-SA 4.0, tekijä "Birding In
        * Spain", kuvattu 26.10.2018, kuvaus "Coto Doñana marshes after
@@ -398,6 +447,7 @@ export const FOKUSVIRTA_SEVILLA = {
        */
       kuva: {
         tiedosto: 'Coto Doñana marshes.jpg',
+        lyhyt: 'Doñanan suot kevätsateiden jälkeen: Guadalquivirin suisto täyttyy, talvella jopa 200 000 vesilintua.',
         selite: 'Doñanan suot kevätsateiden jälkeen: Guadalquivirin '
           + 'suisto täyttyy vedellä, ja talvella alueella voi olla '
           + 'kaksisataatuhatta vesilintua yhtä aikaa.',
@@ -468,6 +518,7 @@ export const FOKUSVIRTA_SEVILLA = {
         + 'viikoissa. Isoisäsi käveli täällä huhtikuussa, kun messut '
         + 'olivat jo kuudenkolmatta vuoden ikäiset, eikä kirjoittanut '
         + 'niistä riviäkään. Hän katsoi tehdasta ja tornia.',
+      lahde: 'en-Wikipedia "Seville Fair". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4500×3583, public domain, Andrés Cortés y
        * Aguilar (1810–1879), päiväys "1800-luvun puoliväli", omistaja
@@ -482,6 +533,7 @@ export const FOKUSVIRTA_SEVILLA = {
        */
       kuva: {
         tiedosto: 'La feria de Sevilla, de Andrés Cortés y Aguilar (Ayuntamiento de Sevilla).jpg',
+        lyhyt: 'Andrés Cortés y Aguilarin maalaus Sevillan feriasta 1800-luvun puolivälistä, taustalla katedraali.',
         selite: 'Andrés Cortés y Aguilarin maalaus Sevillan feriasta '
           + '1800-luvun puolivälistä: taustalla katedraali, Giralda ja '
           + 'vuonna 1868 purettu Puerta de San Fernando.',
@@ -577,6 +629,7 @@ export const FOKUSVIRTA_SEVILLA = {
      */
     kuva: {
       tiedosto: 'Monte Testaccio Particolare.jpg',
+      lyhyt: 'Monte Testaccion kylki on kerroksittain ladottuja amforan sirpaleita, joista kukkula tehty.',
       selite: 'Monte Testaccion kylki: kerros kerroksen päälle ladottuja '
         + 'amforan sirpaleita, joista kukkula on kokonaan tehty.',
       lahde: 'Flazaza, Wikimedia Commons (CC BY-SA 4.0)',
@@ -817,6 +870,7 @@ export const FOKUSVIRTA_SEVILLA = {
        */
       kuva: {
         tiedosto: 'Tomb of Christopher Columbus - Cathedral of Seville.JPG',
+        lyhyt: 'Sevillan katedraalin hautamonumentissa neljä airutta kantaa arkkua; hauta kaupungissa vuodesta 1899.',
         selite: 'Sevillan katedraalin hautamonumentissa neljä airutta '
           + 'kantaa arkkua olkapäillään; hauta on ollut kaupungissa '
           + 'vuodesta 1899.',
@@ -915,6 +969,7 @@ export const FOKUSVIRTA_SEVILLA = {
        */
       kuva: {
         tiedosto: 'Anfiteatro de Itálica (32833418441).jpg',
+        lyhyt: 'Itálican amfiteatterin katsomoa Santiponcessa; jäljellä osa jota ei louhittu rakennuskiveksi.',
         selite: 'Itálican amfiteatterin katsomorakenteita Santiponcessa: '
           + 'jäljellä on se osa, jota ei louhittu rakennuskiveksi.',
         lahde: 'Emilio J. Rodríguez Posada, Wikimedia Commons (CC BY-SA 2.0)',
@@ -937,95 +992,30 @@ export const FOKUSVIRTA_SEVILLA = {
         },
       },
     },
-    {
-      /*
-       * FAKTAT (en-Wikipedia "Carmen (opera)" johdanto ja
-       * "Georges Bizet" osiot Carmenista, sairaudesta ja kuolemasta;
-       * haettu 29.8.2026):
-       *   - Bizet aloitti Carmenin säveltämisen kesällä 1873, ja työ
-       *     keskeytyi, koska Opéra-Comiquen johto piti aihetta
-       *     sopimattomana talolle;
-       *   - ensi-ilta oli Opéra-Comiquessa 3.3.1875; arvostelut olivat
-       *     enimmäkseen kielteisiä ja yleisö välinpitämätön, ja Bizet
-       *     oli vakuuttunut epäonnistumisesta;
-       *   - hän oli sairastellut kurkkuvaivoja vuosia, sairastui
-       *     uudelleen toukokuussa, sai 1. kesäkuuta kuumeen ja
-       *     ilmeisen sydänkohtauksen ja kuoli aamuyöllä 3. kesäkuuta
-       *     1875, hääpäivänsä vuosipäivänä, 36-vuotiaana;
-       *   - kuolema tuli 33. esityksen jälkeen; sen illan esitys
-       *     peruttiin, koska nimiroolin laulaja Galli-Marié ei kyennyt
-       *     esiintymään, ja tilalle vaihdettiin toinen ooppera;
-       *   - hautajaisissa 5. kesäkuuta oli yli 4 000 ihmistä; saman
-       *     illan erikoisesityksen jälkeen lehdistö, joka oli kolme
-       *     kuukautta aiemmin tuominnut teoksen, julisti Bizet'n
-       *     mestariksi;
-       *   - Pariisissa Carmen otettiin uudelleen ohjelmistoon vasta
-       *     1883; siitä on tullut yksi maailman esitetyimmistä
-       *     oopperoista.
-       *
-       * MIKSI TÄMÄ ON SEVILLAN NOSTO: Carmen sijoittuu tähän kaupunkiin
-       * ja sen nimihenkilö tekee työtä siinä tupakkatehtaassa, jonka
-       * isoisä näki. Kaupunkilehti kertoo tehtaan ja mainitsee oopperan;
-       * tämä nosto kertoo sen, mitä lehti ei kerro — miten säveltäjän
-       * kävi.
-       */
-      id: 'carmenin-ensi-ilta',
-      nimio: 'Carmenin ensi-ilta',
-      otsikko: 'Säveltäjä kuoli kolme kuukautta ensi-illan jälkeen '
-        + 'uskoen kirjoittaneensa epäonnistuneen oopperan',
-      lunastus: [
-        'Georges Bizet aloitti Carmenin säveltämisen kesällä 1873, samana '
-          + 'vuonna kun isoisäsi käveli Sevillassa. Työ takkusi heti: '
-          + 'Opéra-Comique oli talo, johon vietiin perheitä, eikä sen '
-          + 'johto pitänyt tarinaa sopivana. Ensi-ilta tuli lopulta 3. '
-          + 'maaliskuuta 1875. Arvostelut olivat enimmäkseen kielteisiä '
-          + 'ja yleisö välinpitämätön, ja Bizet oli vakuuttunut siitä, '
-          + 'että hän oli epäonnistunut. Ooppera sijoittuu Sevillaan, ja '
-          + 'sen nimihenkilö tekee sikareita siinä samassa tehtaassa, '
-          + 'jonka ohi isoisäsi käveli.',
-        'Bizet oli sairastellut kurkkuaan vuosia. Hän sairastui '
-          + 'uudelleen toukokuussa, sai ensimmäisenä kesäkuuta korkean '
-          + 'kuumeen ja sydänkohtauksen ja kuoli aamuyöllä kolmantena '
-          + 'kesäkuuta 1875 — hääpäivänsä vuosipäivänä, 36-vuotiaana. '
-          + 'Kuolema tuli oopperan kolmannenkymmenennenkolmannen '
-          + 'esityksen jälkeen. Sen illan esitys peruttiin, koska '
-          + 'nimiroolin laulaja ei kyennyt nousemaan lavalle. '
-          + 'Hautajaisiin tuli yli neljätuhatta ihmistä, ja saman illan '
-          + 'erikoisesityksen jälkeen sama lehdistö, joka oli '
-          + 'kolme kuukautta aiemmin tyrmännyt teoksen, julisti Bizet’n '
-          + 'mestariksi. Pariisiin Carmen palasi ohjelmistoon vasta '
-          + '1883. Siitä tuli yksi maailman esitetyimmistä oopperoista, '
-          + 'eikä sen tekijä ehtinyt kuulla siitä sanaakaan.',
-      ],
-      lahde: 'en-Wikipedia "Carmen (opera)" (johdanto) ja "Georges Bizet" '
-        + '(osiot Carmenista sekä sairaudesta ja kuolemasta); tarkistettu '
-        + '29.8.2026.',
-      /*
-       * Commons 29.8.2026: 6536×8944, public domain, Prudent-Louis Leray
-       * (1820–1879), restaurointi Adam Cuerden, päiväys 1875, kuvaus
-       * "1875 lithographic poster for the première of Georges Bizet's
-       * Carmen". Restrictions tyhjä. SILMÄTARKISTUS tehty: litografoitu
-       * juliste, ei valokuvattuja ihmisiä.
-       */
-      kuva: {
-        tiedosto: "Prudent-Louis Leray - Poster for the première of Georges Bizet's Carmen.jpg",
-        selite: 'Prudent-Louis Lerayn litografia on Carmenin ensi-illan '
-          + 'juliste vuodelta 1875 — samasta esityksestä, jonka '
-          + 'säveltäjä uskoi epäonnistuneen.',
-        lahde: 'Prudent-Louis Leray 1875, Wikimedia Commons (public domain)',
-      },
-      kysymykset: [
-        'Miksi Carmenia pidettiin ensi-illassaan sopimattomana?',
-        'Miten ooppera nousi epäonnistumisesta maailmanmaineeseen?',
-        'Millainen kaupunki Sevilla oli oopperoiden tapahtumapaikkana?',
-      ],
-      /*
-       * PAIKKAA EI OLE: ensi-ilta oli Pariisissa, mutta nosto kertoo
-       * Sevillaan sijoittuvasta oopperasta, ja pisteen paikka on siksi
-       * kaupunki, jossa pelaaja seisoo (nostonPaikka). Pariisin piste
-       * veisi kartalla huomion väärään maahan.
-       */
-    },
+    /*
+     * ── CARMENIN ENSI-ILTA ON SIIRRETTY RANSKAN POOLIIN (1.9.2026) ──
+     *
+     * Nosto `carmenin-ensi-ilta` asui tässä listassa 29.8.2026 alkaen,
+     * ja se oli sisältöauditin ainoa vahvistettu väärän maan tarina:
+     * KAIKKI kortin tapahtumat ovat Pariisissa — sävellystyö,
+     * Opéra-Comiquen johdon vastustus, ensi-ilta 3.3.1875, arviot,
+     * Bizet'n kuolema ja se, että teos palasi Pariisiin vasta 1883.
+     * Sevilla on vain oopperan tapahtumapaikka, ja kortti sanoi sen
+     * itse. Koska nostolla ei myöskään ollut `paikka`-kenttää, merkki
+     * asettui siihen Espanjan kaupunkiin, jossa pelaaja sattui
+     * olemaan (js/fokusnosto.js nostonPaikka).
+     *
+     * Nostoa EI POISTETTU: se on nyt js/packs/fokusvirta-pariisi.js:n
+     * `takynostot`-poolin kolmas rivi samalla tunnuksella
+     * `carmenin-ensi-ilta`, samalla Commons-kuvalla (Lerayn ensi-illan
+     * juliste 1875) ja omilla koordinaateillaan Salle Favartissa.
+     * Teksti on kirjoitettu uudelleen Ranska-kontekstiin; Sevilla on
+     * siinä yhä mukana siinä roolissa, joka sille kuuluu — paikkana,
+     * jota teos kuvaa.
+     *
+     * SEVILLAN KAUPUNKILEHTI EI MENETÄ MITÄÄN: tupakkatehdas ja sen
+     * oopperakytkös ovat lehden omaa sisältöä, eivät tämän noston.
+     */
     {
       /*
        * ELÄINNOSTO (Raamattu, ELÄINTÄYT-linjaus).
@@ -1080,9 +1070,8 @@ export const FOKUSVIRTA_SEVILLA = {
           + 'yhdeksässäkymmenessä vuodessa laji ehti kadota melkein '
           + 'kokonaan ja tulla takaisin.',
       ],
-      lahde: 'en-Wikipedia "Iberian lynx", johdanto ja osio "Taxonomy" '
-        + '(tarkistettu 29.8.2026; sama aineisto docs/'
-        + 'mantereet-tyoaineisto/takynostot-espanja.md, ehdokas 10).',
+      lahde: 'en-Wikipedia "Iberian lynx", johdanto ja osio "Taxonomy" (tarkistettu '
+        + '29.8.2026).',
       /*
        * Commons 29.8.2026: 3888×2592, CC BY-SA 4.0, Fernando Diz,
        * kuvattu 12.5.2018, kuvaus "Un lince fotografiado en el Parque
@@ -1092,6 +1081,7 @@ export const FOKUSVIRTA_SEVILLA = {
        */
       kuva: {
         tiedosto: 'Lince iberico.jpg',
+        lyhyt: 'Iberianilves Doñanan kansallispuistossa elää vain Iberiassa; vuonna 2002 niitä oli 94.',
         selite: 'Iberianilves Doñanan kansallispuistossa: laji elää vain '
           + 'Iberian niemimaalla, ja vuonna 2002 niitä oli jäljellä 94.',
         lahde: 'Fernando Diz, Wikimedia Commons (CC BY-SA 4.0)',
@@ -1177,7 +1167,8 @@ export const FOKUSVIRTA_SEVILLA = {
       ],
       lahde: 'en-Wikipedia "Diego Velázquez", osiot syntymästä, '
         + 'oppivuosista, varhaisista töistä ja hovimaalariksi '
-        + 'pääsemisestä; tarkistettu 29.8.2026.',
+        + 'pääsemisestä (tarkistettu 29.8.2026); kastekirkon sijainti '
+        + 'en-Wikipedia "Church of San Pedro" (tarkistettu 1.9.2026).',
       /*
        * Commons 29.8.2026: 2371×3200, public domain, Diego Velázquez,
        * päiväys "circa 1620". Restrictions tyhjä. SILMÄTARKISTUS tehty:
@@ -1185,6 +1176,7 @@ export const FOKUSVIRTA_SEVILLA = {
        */
       kuva: {
         tiedosto: 'El aguador de Sevilla, por Diego Velázquez.jpg',
+        lyhyt: 'Sevillan vedenmyyjä on Velázquezin nuoruuden keittiökuvien huippu, maalattu ennen 25 vuoden ikää.',
         selite: 'Sevillan vedenmyyjä on Velázquezin sevillalaiskauden '
           + 'keittiökuvien huippu: savi, lasi ja vesipisara maalattuina '
           + 'ennen kuin tekijä oli täyttänyt kahtakymmentäviittä.',
@@ -1196,9 +1188,31 @@ export const FOKUSVIRTA_SEVILLA = {
         'Mitä Velázquez maalasi Madridissa?',
       ],
       /*
-       * PAIKKAA EI OLE: syntymä- ja oppivuodet ovat tässä kaupungissa,
-       * joten piste ottaa paikakseen kaupungin (nostonPaikka).
+       * PAIKKA LISÄTTIIN 1.9.2026 (nostojen sisältöaudit). Kenttä
+       * puuttui, koska "tässä kaupungissa" tuntui riittävän — mutta
+       * ilman sitä merkki asettuu siihen kaupunkiin, jossa pelaaja
+       * seisoo (js/fokusnosto.js nostonPaikka), eikä sellaista merkkiä
+       * voi polttaa laattaan lainkaan (tools/fokuskartta/nostot.mjs,
+       * TÄKYN EHTO). Kortin oma tarina alkaa yhdestä dokumentoidusta
+       * pisteestä, joten pistettä ei tarvinnut arvata.
+       *
+       * 37,39283611 N / −5,99138889 E — en-Wikipedia "Church of San
+       * Pedro", prop=coordinates (haettu 1.9.2026). Sama artikkeli
+       * sanoo johdannossaan suoraan, että Diego Velázquez kastettiin
+       * juuri siellä vuonna 1599 — se on tämän kortin ensimmäinen
+       * virke. Kirkko seisoo San Pedron aukiolla Sevillassa.
+       *
+       * Sama kaava ja samat vakiot kuin muillakin nostoilla
+       * (js/fokusnosto.js, PAIKKA LAUDALLA): maailmankartta Millerin
+       * lieriönä, europe tasavälinä.
        */
+      paikka: {
+        nimi: 'San Pedron kirkko',
+        laudat: {
+          maailmankartta: { x: 5633.6, y: 1904.2 },
+          europe: { x: 96.2, y: 910.2 },
+        },
+      },
     },
   ],
 

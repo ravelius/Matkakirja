@@ -1,3 +1,4 @@
+import { merkitseLivianNosto } from './livia-tilanteet.js';
 /*
  * SYVENNYSTARINAT KARTALLA — fokusvirran täkytarinat kohdemerkkeinä.
  *
@@ -45,18 +46,22 @@
  * SYVENNYS_/syvennys-etuliitteellä.
  */
 import {
-  fokusmoodiPaalla, html, jaaKappaleiksi, nielaiseSulkevaNapautus, TOAST_MS,
+  fokusmoodiPaalla, html, jaaKappaleiksi, nielaiseSulkevaNapautus, TOAST_MS, lehtipalstaKotelo,
 } from './ui-apurit.js';
 import { natiiviVastaus } from './natiivi.js';
 import { kaupunginJuliste } from './packs/julisteet.js';
 import { FOKUSVIRRAT } from './packs/fokusvirrat.js';
 import { SYVENNYSPAIKAT } from './packs/syvennyspaikat.js';
-import { rekisteroiLisakohteet, suljeKohdeSuurennos } from './fokuskohteet.js';
+import {
+  avaaKohdeSuurennos, rekisteroiLisakohteet, rekisteroiMaanKohteet, suljeKohdeSuurennos,
+} from './fokuskohteet.js';
 import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
-import { piirraNostonKuva } from './fokusnosto.js';
+import { asetaNostonKuva, piirraNostonKuva } from './fokusnosto.js';
+import { nostokuvaAloita } from './nostokuva.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { sfx } from './sound.js';
+import { lisaaLukijanappi } from './lukija.js';
 
 /*
  * KAKSI TYYLITIEDOSTOA, MOLEMMAT LAINASSA: kortin kuori ja sisus ovat
@@ -116,6 +121,9 @@ export function syvennysKarttarivit(iso, lauta, cityCountry) {
           nimio: tiedot.nimio ?? null,
           tyyppi: 'syvennys',
           symboli: tiedot.symboli,
+          // Kaupunkinostojen katto ei koske kaupungin ulkopuolista
+          // tarinaa (js/fokuskohteet.js, osio KATTOVAPAA).
+          ...(tiedot.kattoVapaa ? { kattoVapaa: true } : {}),
         },
         paikka: { x: paikka.x, y: paikka.y },
       });
@@ -147,17 +155,6 @@ function syvennysLisakohteet(ui) {
       kohde: {
         ...kohde,
         avaa: (kaytto) => avaaSyvennys(kaytto ?? ui, cityId, taky, tiedot),
-        /*
-         * OSIO YHDISTETYLLE LEHDELLE (js/fokusryhmat.js): kun saman
-         * kaupungin samanlajiset kohteet ovat yhden merkin alla,
-         * tarina latoutuu osiona kohdekortin sisään eikä omaksi
-         * kortikseen. Sisältö on TÄSMÄLLEEN SAMA kuin omassa
-         * kortissa — sama funktio latoo molemmat. Takaisinkutsu on
-         * tässä samasta syystä kuin `avaa`: ladonta asuu tässä
-         * moduulissa, joka on niputusjärjestyksessä kohteiden
-         * jäljessä.
-         */
-        osio: (kaytto, sailio) => piirraSyvennysSisus(kaytto ?? ui, sailio, cityId, taky),
       },
       paikka,
     }));
@@ -193,13 +190,42 @@ export function avaaSyvennys(ui, cityId, taky, tiedot) {
   kortti.appendChild(sulje);
 
   const sisalto = html('div', 'fokusnosto-sisalto');
-  // Kohdemallin yhteinen ylärivi: aihesymboli ja luokan nimi.
-  sisalto.appendChild(nostosymKortinYlarivi(tiedot?.symboli, 'fokusnosto-ylarivi'));
-  piirraSyvennysSisus(ui, sisalto, cityId, taky);
+  const latoSyvennys = (kotelo, kuvakehys) => {
+    // Kohdemallin yhteinen ylärivi: aihesymboli ja luokan nimi.
+    kotelo.appendChild(nostosymKortinYlarivi(tiedot?.symboli, 'fokusnosto-ylarivi'));
+    piirraSyvennysSisus(ui, kotelo, cityId, taky, kuvakehys);
+  };
 
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
+  merkitseLivianNosto(kerros,{...taky,symboli:tiedot?.symboli});
+  /*
+   * KERROS DOMIIN ENNEN KUVAESITTELYÄ: js/nostokuva.js mittaa kortin ja
+   * kuvan oikeista ruutulaatikoista, eikä irrallisella elementillä ole
+   * laatikkoa lainkaan.
+   */
   document.body.appendChild(kerros);
+  /*
+   * KUVA EDELLÄ (omistaja 11.9.2026, js/nostokuva.js). Kuvallinen
+   * tarina avautuu ensin pelkkänä isona kuvana, ja "Lisää" latoo
+   * varsinaisen kortin SAMAN kuvan ympärille. Kuvaton tarina aukeaa
+   * suoraan tekstikorttina kuten ennenkin.
+   */
+  const kaksivaihe = taky.kuva ? nostokuvaAloita({
+    kortti,
+    sisalto,
+    kuva: taky.kuva,
+    aseta: (img, leveys, onVirhe) => asetaNostonKuva(img, taky.kuva, leveys, onVirhe),
+    avaaSuurennos: (nappi) => avaaKohdeSuurennos(ui, taky.kuva, () => nappi, 'syvennysZoom'),
+    latoNosto: latoSyvennys,
+    // Kaksi palstaa leveällä kuten nostokortilla (omistaja 22.9.2026 klo
+    // 23.06, js/nostokuva.js nostoPalstoiksi): iso kuva ensin, sitten
+    // kuva pienenee vasemmalle ja teksti tulee oikealle.
+    kaksipalstaTaitto: true,
+  }) : null;
+  if (!kaksivaihe) latoSyvennys(sisalto, undefined);
+  // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
+  lisaaLukijanappi(kortti, { otsikko: 'Kuuntele tarina' });
 
   const kiinni = () => {
     sfx.play('paper');
@@ -241,16 +267,26 @@ export function avaaSyvennys(ui, cityId, taky, tiedot) {
  * TYYLI LADATAAN TÄSSÄ, koska osiona kutsuttaessa korttia ei avata
  * lainkaan eikä avaaSyvennys ehdi ladata sitä: luokat ovat samat
  * (fokusnosto.css, fokusvirta.css), joten myös tyylin on oltava.
+ *
+ * @param {Element|null} [valmisKuva] KUVA EDELLÄ -avauksen valmis
+ *   kuvakehys (js/nostokuva.js): `undefined` piirtää kuvan kuten ennen,
+ *   elementti sijoittaa juuri sen kehyksen (sama kuva, sama elementti,
+ *   ei uutta latausta), ja `null` jättää kuvan pois — se on peruttu
+ *   kuvaesittely, jonka kuva ei latautunut.
  */
-function piirraSyvennysSisus(ui, sailio, cityId, taky) {
+function piirraSyvennysSisus(ui, sailio, cityId, taky, valmisKuva) {
   syvennysLataaTyyli();
   sailio.appendChild(html('h3', 'fokusnosto-kortti-otsikko', taky.otsikko ?? taky.nappi));
-  if (taky.kuva) piirraNostonKuva(ui, sailio, taky.kuva, 'fokusnosto-kuva', 800, 'syvennysZoom');
+  if (valmisKuva) sailio.appendChild(valmisKuva);
+  else if (taky.kuva && valmisKuva === undefined) {
+    piirraNostonKuva(ui, sailio, taky.kuva, 'fokusnosto-kuva', 800, 'syvennysZoom');
+  }
   const teksti = html('div', 'fokusnosto-teksti');
   for (const kappale of jaaKappaleiksi(taky.teksti ?? '')) {
     teksti.appendChild(html('p', '', kappale));
   }
-  sailio.appendChild(teksti);
+  // Pitkä teksti lehtipalstoihin (ui-apurit lehtipalstaKotelo).
+  sailio.appendChild(lehtipalstaKotelo(teksti, taky.teksti));
   piirraSyvennysVisa(ui, sailio, cityId, taky);
 }
 
@@ -274,6 +310,11 @@ function piirraSyvennysVisa(ui, sisalto, cityId, taky) {
     sisalto.appendChild(laatikko);
     return;
   }
+  // Palkkio näkyviin ennen vastaamista, mutta ei enää maksetulle
+  // visalle (omistaja 1.9.2026: "lopussa oleva kysymys ei mainitse,
+  // mitä siitä voi voittaa").
+  laatikko.appendChild(html('p', 'fokusvirta-visa-palkkio',
+    `Oikeasta vastauksesta saat ${TAKY_PALKKIO} puntaa.`));
   const vaihtoehdot = html('div', 'fokusvirta-vaihtoehdot');
   visa.vaihtoehdot.forEach((tekstiRivi, i) => {
     const nap = html('button', '', tekstiRivi);
@@ -323,7 +364,12 @@ export function suljeSyvennys(ui) {
   // täkynostolla (js/fokusnosto.js suljeNostonKortti).
   suljeKohdeSuurennos(ui, 'syvennysZoom');
   if (typeof document === 'undefined') return;
-  for (const vanha of document.querySelectorAll('.syvennys-kerros')) vanha.remove();
+  for (const vanha of document.querySelectorAll('.syvennys-kerros')) {
+    // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js): kortti
+    // katoaa DOMista, mutta resize-kuuntelija jäisi elämään.
+    vanha.querySelector('.nostokuva-kortti')?.nostokuvaPurku?.();
+    vanha.remove();
+  }
 }
 
 /* ==================== KYTKENTÄ ==================== */
@@ -336,6 +382,18 @@ export function suljeSyvennys(ui) {
  */
 export function kytkeSyvennys() {
   rekisteroiLisakohteet(syvennysLisakohteet);
+  /*
+   * SAMA AINEISTO MYÖS NAAPURIMAALLE (2.9.2026, js/fokuskohteet.js
+   * naapurienPoltetutVaraukset): yllä oleva lähde tuntee vain sen maan,
+   * jossa pelaaja seisoo, mutta naapurin poltetut nostot on ladottava
+   * samasta aineistosta kuin ne laattaan poltettiin. Rivit tulevat
+   * samasta funktiosta kuin generaattorilla (tools/fokuskartta/nostot.mjs)
+   * — kortin `avaa` ei kuulu tähän, koska naapurin merkkiä ei piirretä
+   * eikä siitä avata mitään; siitä lasketaan vain ladonnan laatikko.
+   */
+  rekisteroiMaanKohteet((iso, lauta, kaupungit, cityCountry) => syvennysKarttarivit(
+    iso, lauta, cityCountry,
+  ).map(({ kohde, paikka }) => ({ kohde, paikka })), 1);
 }
 
 /** Laudan vaihto tai uusi peli: kortti pois. */

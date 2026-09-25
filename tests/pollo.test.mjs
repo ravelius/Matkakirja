@@ -22,10 +22,16 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import {
+  Pollo,
   KONTEKSTIN_ENIMMAISPITUUS,
+  LINSSIJONON_KATTO,
+  LIVIAN_LOKIN_KATTO,
+  LIVIAN_LOKI_AVAIN,
   LIVIAN_MIETINNAT,
   MIETINNAN_JATKOVIIVE,
   arvoMietinta,
+  linssijonoLisaa,
+  lisaaLokiin,
   jasennaKasitteet,
   kehysLaji,
   kokoaKonteksti,
@@ -37,14 +43,34 @@ import {
   tekstiIlmanSpoilereita,
   tunnistaPuhuttelu,
   valitseSisainenSyote,
+  puhdistaWikiPutket,
   vastauskuvanAihe,
 } from '../js/pollo.js';
+
+test('Pulun piilotetun napin vara-ankkuri vastaa uutta alaoikeaa paikkaa',()=>{
+  const pollo=Object.create(Pollo.prototype),ikkuna={innerWidth:390,innerHeight:844};
+  const piilossa={getBoundingClientRect:()=>({left:0,top:0,width:0,height:0})};
+  assert.deepEqual(pollo.ankkuriLaatikko(piilossa,ikkuna),{
+    left:284,right:332,width:48,top:738,bottom:786,height:48,
+  });
+  const nakyva={left:50,right:98,top:700,bottom:748,width:48,height:48};
+  assert.equal(pollo.ankkuriLaatikko({getBoundingClientRect:()=>nakyva},ikkuna),nakyva);
+});
 // Kuplan napautusnielu asuu ui-apureissa: sama vuoto koskee kaikkia
-// kelluvia kuplia (ks. tämän tiedoston loppu).
-import { nielaiseSulkevaNapautus } from '../js/ui-apurit.js';
+// kelluvia kuplia (ks. tämän tiedoston loppu). Puheenvuoron jako osiin
+// asuu samassa tiedostossa (kuplapino, 3.9.2026).
+import { jaaPuheenvuoroksi, linssiEstaa, nielaiseSulkevaNapautus } from '../js/ui-apurit.js';
+// Puheenvuoron jaon testi lukee tekstinsä paketista eikä kopioi sitä
+// tänne. Uuden kulun kaupungeissa repliikit on 7.9.2026 alkaen
+// KIRJOITETTU kupliksi, joten jaon esimerkkinä on Lontoon maadoitus —
+// se on yhä yksi pitkä merkkijono, jonka peli pilkkoo ruudulla.
+import { FOKUSVIRTA_LONTOO } from '../js/packs/fokusvirta-lontoo.js';
+import { FOKUSVIRTA_SOFIA } from '../js/packs/fokusvirta-sofia.js';
 
 import {
   KYSYMYKSEN_KATTO,
+  LIVIA_EI_TULLUT,
+  LIVIA_KIELTAYTYY,
   lueLista,
   lueLuku,
   luoJatkoSuodatin,
@@ -55,10 +81,18 @@ import {
   sahkeKehote,
   sahkeViesti,
   sallittuOrigin,
+  sallittuNatiivi,
+  natiivilleSallittu,
+  NATIIVIT_OLETUS,
+  NATIIVIN_TEHTAVAT,
   siivoaHistoria,
   siivoaTeksti,
   siivoaVapaaVastaus,
   tarkistaRajat,
+  tyhjanSyy,
+  tyhjanTeksti,
+  ajatteluKentat,
+  katkaiseKokonaiseen,
   vertaaSalaisuus,
   SAHKE_VASTAUKSEN_KATTO,
   SAHKE_VASTAUKSET,
@@ -356,6 +390,32 @@ test('lueNakyma: koko paketti on spoilerivapaa ja mahtuu kattoon', () => {
   assert.ok(konteksti.includes('kaupungin lehti auki'));
   assert.ok(konteksti.includes('Saavuin Dohaan'));
   assert.ok(konteksti.includes(JUTUN_TEKSTI));
+});
+
+/*
+ * ASTRONAUTIN KAMERASSA EI OLE SIJAINTIA (Sonnet 1, kierros 16,
+ * 20.9.2026): pulun vastaus alkoi *"…ei mitään tekemistä Brysselin
+ * kanssa"*, eli pelaajan kaupunki vuoti avaruuskuvan kontekstiin.
+ */
+test('lueNakyma astronautin kamerassa: ei kaupunkia, maata eikä matkapäivää', () => {
+  const doc = teeDoc({ lehti: teeLehti({ auki: false }) });
+  const kartalla = lueNakyma({ game: teeGame(), ui: {}, doc });
+  assert.ok(kartalla.includes('Doha'), 'kartalla sijainti kuuluu kontekstiin');
+  for (const ui of [
+    { pallolinssi: { tunnus: 'satelliitti' } },
+    { linssiValittu: 'satelliitti' },
+  ]) {
+    const avaruudessa = lueNakyma({ game: teeGame(), ui, doc });
+    assert.ok(!avaruudessa.includes('Doha'), `kaupunki vuoti: ${avaruudessa}`);
+    assert.ok(!avaruudessa.includes('Qatar'), `maa vuoti: ${avaruudessa}`);
+    assert.ok(!/Matkapäivä/.test(avaruudessa), `matkapäivä vuoti: ${avaruudessa}`);
+    assert.ok(avaruudessa.includes('Astronautin kamera'), avaruudessa);
+  }
+  // Sama myös ilman ui-oliota, pelkän valokuvanäkymän luokan perusteella.
+  const luokat = new Set(['satelliitti-kuva-auki']);
+  const kuvaDoc = { ...doc, body: { classList: { contains: (l) => luokat.has(l) } } };
+  const kuvassa = lueNakyma({ game: teeGame(), ui: null, doc: kuvaDoc });
+  assert.ok(!kuvassa.includes('Doha'), kuvassa);
 });
 
 test('lueNakyma kartalla: ei lehtitekstiä, ei kaatumista ilman peliä', () => {
@@ -893,12 +953,14 @@ const {
 } = await import('../js/pollo-haku.js');
 
 /** Koko pelin aineistosta rakennettu indeksi. Jaetaan testien kesken. */
+const indeksinCpu = process.cpuUsage();
 const INDEKSI = rakennaIndeksi({
   kulttuuri: KULTTUURI_KATEGORIAT,
   maat: MAA_KATEGORIAT,
   nahtavyydet: NAHTAVYYSJUTUT,
   kohdekartat: KAUPUNKIKARTAT,
 });
+const INDEKSIN_CPU_MS = (({ user, system }) => (user + system) / 1000)(process.cpuUsage(indeksinCpu));
 
 test('indeksi rakentuu ja on kokoluokaltaan järkevä', () => {
   assert.ok(INDEKSI.merkinnat.length > 100,
@@ -908,9 +970,21 @@ test('indeksi rakentuu ja on kokoluokaltaan järkevä', () => {
    * avauksella. Jos tämä alkaa lähestyä 200 ms, indeksointi on
    * siirrettävä taustalle (omistajan raja 12.8.2026).
    */
+  /*
+   * RAJA ON CPU-AIKAA, EI SEINÄKELLOA (Opus 19.9.2026, erä
+   * opus-local-pollotesti). Seinäkelloraja 2000 ms kaatui Macin
+   * Testit-runnerilla, kun Savukkeet ajoi rinnalla (2584 ms), ja meni
+   * läpi uusinnassa. Mittaus samalla koneella: yksin seinä 227–410 ms /
+   * CPU 174–220 ms, 20 kuormaprosessin rinnalla seinä 965–1730 ms / CPU
+   * 152–198 ms. Prosessin CPU-aika ei kasva vieraasta kuormasta, joten
+   * raja pysyy merkityksellisenä: 1000 ms on noin viisinkertainen
+   * nykyiseen nähden ja kaatuu, jos indeksointi muuttuu neliölliseksi.
+   * Seinäkello tulostetaan yhä tiedoksi.
+   */
   console.log(`  indeksi: ${INDEKSI.merkinnat.length} merkintää, `
-    + `${INDEKSI.sanoja} sanaa, ${INDEKSI.kesto.toFixed(1)} ms`);
-  assert.ok(INDEKSI.kesto < 2000, `indeksointi kesti ${INDEKSI.kesto} ms`);
+    + `${INDEKSI.sanoja} sanaa, ${INDEKSI.kesto.toFixed(1)} ms seinää, `
+    + `${INDEKSIN_CPU_MS.toFixed(1)} ms CPU`);
+  assert.ok(INDEKSIN_CPU_MS < 1000, `indeksointi vei ${INDEKSIN_CPU_MS} ms CPU-aikaa`);
 });
 
 test('haku löytää tunnetun noston avainsanalla', () => {
@@ -930,8 +1004,13 @@ test('haku löytää tunnetun noston avainsanalla', () => {
 });
 
 test('haku on nopea myös koko aineistolla', () => {
+  // CPU-aikaa kuten indeksoinnissa: seinäkello venyy rinnakkaiskuormassa.
+  const alku = process.cpuUsage();
   const { kesto } = haeKatkelmat(INDEKSI, 'Millainen ilmasto Egyptissä on ja mitä siellä kasvaa?');
-  assert.ok(kesto < 250, `haku kesti ${kesto} ms`);
+  const { user, system } = process.cpuUsage(alku);
+  const cpuMs = (user + system) / 1000;
+  console.log(`  haku: ${kesto.toFixed(1)} ms seinää, ${cpuMs.toFixed(1)} ms CPU`);
+  assert.ok(cpuMs < 250, `haku vei ${cpuMs} ms CPU-aikaa`);
 });
 
 test('visakysymykset eivät ole indeksissä', () => {
@@ -1040,7 +1119,9 @@ test('yleinen sana ei enää riitä osumaksi', () => {
 });
 
 test('kysymys, johon aineistossa ei ole vastausta, ei tuota yhtään linkkiä', () => {
-  for (const kysymys of ['Kuka oli Napoleon?', 'Kuinka vanha ihmiskunta on?', 'Onko Syyriassa sotaa?']) {
+  // "Kuka oli Napoleon?" vaihdettiin pois 24.9.2026: St. Helenan
+  // Napoleon-aihesivu (sisältöerä N10) antaa sille nyt oikean osuman.
+  for (const kysymys of ['Mikä on suurin alkuluku?', 'Kuinka vanha ihmiskunta on?', 'Onko Syyriassa sotaa?']) {
     const { katkelmat } = haeKatkelmat(INDEKSI, kysymys, { maara: 4, sijainti: LONTOOSSA });
     assert.deepEqual(katkelmat.map((k) => k.leima), [],
       `heikko osuma pääsi läpi: ${kysymys}`);
@@ -1105,7 +1186,8 @@ test('yhdyssana ei putoa yleissanan rungon mukana', () => {
 });
 
 test('pelkistä yleissanoista koostuva merkintä ei saa yhtään ankkuria', () => {
-  // Ankkuriton merkintä ei saa linkkiä lainkaan (js/pollo.js sidoLinkki):
+  // Ankkurisanat ovat haun laatua (js/pollo-haku.js); linkit itse
+  // luetellaan vastauksen loppuun (js/pollo.js liitaMatkakirjalinkit):
   // mieluummin ei linkkiä kuin outo linkki.
   const sanat = ankkuriSanat({ otsikko: 'Kaupungin historia', aiheNimi: 'Kaupunki' });
   assert.deepEqual(sanat, []);
@@ -1373,6 +1455,40 @@ test('vastauskuvanAihe poimii ensimmäisen käsitteen perusmuodossa', () => {
   assert.equal(vastauskuvanAihe(teksti, 'Kerro Baikalista'), 'Baikal');
 });
 
+test('vastauskuvanAihe ohittaa pelkän vuosiluvun (Košice 20.9.2026)', () => {
+  // Ochtinskán vastauksessa ensimmäinen käsite oli "1954", ja vuoden
+  // wikiartikkelista tuli mustavalkoinen sotakuva vastauksen viereen.
+  const teksti = 'Luola löydettiin [[1954]] ja se on kuuluisa [[aragoniitti]]kiteistään.';
+  assert.equal(vastauskuvanAihe(teksti, 'Milloin luola löydettiin?'), 'aragoniitti');
+  // Pelkkä vuosiluku ilman muita käsitteitä putoaa kysymykseen.
+  assert.equal(vastauskuvanAihe('Vastaus on [[1954]].', 'Milloin luola löydettiin?'),
+    'Milloin luola löydettiin');
+  // Luku osana nimeä EI ole pelkkä luku.
+  assert.equal(vastauskuvanAihe('Kohde on [[Apollo 11]].', 'Mikä?'), 'Apollo 11');
+});
+
+test('aineiston wikiputket puretaan ennen mallia (Košice 20.9.2026)', () => {
+  // Sonnet 1 näki pulun vastauksessa raakana "luolat|Aggtelekin ja
+  // Slovakian karstin luolia" — merkintä tuli aineistosta kontekstin
+  // kautta. Pelaaja ei saa nähdä pystyviivaa missään muodossa.
+  assert.equal(puhdistaWikiPutket('osa [[luolat|Aggtelekin ja Slovakian karstin luolia]] listaa'),
+    'osa Aggtelekin ja Slovakian karstin luolia listaa');
+  assert.equal(puhdistaWikiPutket('se on luolat|Aggtelekin karstin luolia, sanoi opas.'),
+    'se on Aggtelekin karstin luolia, sanoi opas.');
+  assert.equal(puhdistaWikiPutket('[[Ochtinská]] on luola'), 'Ochtinská on luola');
+  // Välilyönnillinen erotin ei ole merkintä eikä sitä kosketa.
+  assert.equal(puhdistaWikiPutket('taulukko a | b ja c'), 'taulukko a | b ja c');
+  assert.equal(puhdistaWikiPutket(null), '');
+  // Konteksti on se paikka, jossa puhdistus oikeasti tapahtuu.
+  const konteksti = kokoaKonteksti({
+    kohde: { nimi: 'Ochtinská aragoniittiluola', teksti: 'osa [[luolat|Aggtelekin luolia]]' },
+    aineisto: [{ leima: 'Slovakian maalehti', teksti: 'aragoniitti|aragoniittimuodostelmistaan kuuluisa' }],
+  });
+  assert.ok(!konteksti.includes('|'), konteksti);
+  assert.ok(konteksti.includes('Aggtelekin luolia'), konteksti);
+  assert.ok(konteksti.includes('aragoniittimuodostelmistaan kuuluisa'), konteksti);
+});
+
 test('vastauskuvanAihe: ilman käsitteitä aihe on siistitty kysymys', () => {
   assert.equal(vastauskuvanAihe('Vastaus ilman merkintöjä.', ' Mikä on Eiffel-torni? '),
     'Mikä on Eiffel-torni');
@@ -1496,12 +1612,165 @@ test('kauempana osuva napautus kulkee nielun läpi', () => {
   assert.equal(doc.kuulijat.length, 0, 'nielua ei saa purettua');
 });
 
-test('pöllön molemmat kuplat sitovat napautusnielun', () => {
+/*
+ * KUPLAPINO (omistajan tilaus 3.9.2026) siirsi kuplat yhdestä
+ * elementistä pinoon, jossa jokainen kupla on oma solmunsa. Nielu ei
+ * saa jäädä sitomatta yhdeltäkään: siksi vartija vaatii, että kaikki
+ * pinon kuplat syntyvät YHDESSÄ tehtaassa (luoKupla), joka sitoo
+ * nielun — ja että pinon ulkopuolinen valikkovihje sitoo sen yhä itse.
+ * Myös sulkuruksi nielaisee oman napautuksensa, koska sekin hävittää
+ * kosketuspinnan sormen alta.
+ */
+test('pöllön kaikki kuplat sitovat napautusnielun', () => {
   const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
-  assert.match(lahde, /this\.sidoKuplanNapautus\(this\.vihje\);/, 'vihjekupla ilman nielua');
-  assert.match(lahde, /this\.sidoKuplanNapautus\(this\.vihjeLisa\);/, 'toinen kupla ilman nielua');
+  const tehdas = lahde.match(/\n {2}luoKupla\(laji\) \{[\s\S]*?\n {2}\}/);
+  assert.ok(tehdas, 'kuplatehdasta luoKupla ei löydy');
+  assert.match(tehdas[0], /this\.sidoKuplanNapautus\(kupla\);/,
+    'pinon kuplat syntyvät ilman nielua');
+  assert.match(lahde, /this\.sidoKuplanNapautus\(this\.vihje\);/, 'valikkovihje ilman nielua');
   assert.match(lahde, /nielaiseSulkevaNapautus\(tapahtuma, \{ doc: this\.doc \}\);/,
     'sulkeva napautus ei kuluta clickiä');
+  // Kuplat luodaan vain tehtaan kautta: uusi kuplalaji ei saa ohittaa
+  // sitä omalla polloElementti-kutsullaan.
+  const suorat = lahde.match(/polloElementti\('div', 'pollo-vihje'\)/g) ?? [];
+  assert.equal(suorat.length, 1, 'kupla luodaan tehtaan ohi');
+});
+
+/*
+ * PELKÄT PUHEKUPLAT (omistajan tarkennus 3.9.2026: *"tässä ei tarvita
+ * ollenkaan tuota kuvaketta eikä tuota riviä, missä lukee viisas pöllö
+ * yliviivattuna pulu. Eli pelkät puhekuplat."*).
+ *
+ * Kupla kantoi kaksi ylimääräistä osaa: yliviivatun nimilappurivin
+ * (ui-apurit polloNimilappu) ja avauskuplan pyöreän pöllökuvakkeen.
+ * Molemmat toistuivat pinossa kuplasta toiseen, söivät tilaa puheelta
+ * eivätkä kertoneet mitään uutta — puhuja tunnistuu paikasta pöllön
+ * vierellä, ja nimi näkyy yhä chatissa. Väite lukee LÄHTEEN, koska
+ * kumpikin palaisi yhdellä rivillä eikä yksikään muu portti huomaisi.
+ */
+test('puhekuplissa ei ole nimilappua eikä pöllökuvaketta', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  const koodi = lahde
+    // Kommentit kertovat poistosta nimeltä: proosa ei saa laukaista.
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/^\s*\/\/.*$/gm, '');
+  assert.doesNotMatch(koodi, /pollo-vihje-nimilappu/,
+    'nimilappurivi on palannut puhekuplaan');
+  assert.doesNotMatch(koodi, /pollo-vihje-kuvapaikka|pollo-vihje-kasvot/,
+    'kuvake on palannut puhekuplaan');
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8')
+    .replace(/\/\*[\s\S]*?\*\//g, '');
+  assert.doesNotMatch(css, /\.pollo-vihje-nimilappu\s*\{/, 'nimilapun tyyli on palannut');
+  assert.doesNotMatch(css, /\.pollo-vihje-kuvapaikka\s*\{/, 'kuvapaikan tyyli on palannut');
+});
+
+test('Pulun näkymätön osuma-alue ei saa painikelaattaa dialogissa eikä kartalla', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  const saanto = css.match(
+    /\.dialog button\.pollo-nappi\.pollo-kelluu\.livia-kasvot-valmis:is\(([^)]*)\),\nbutton\.pollo-nappi\.pollo-kelluu\.pollo-kelluu-kartalla\.livia-kasvot-valmis:is\(([^)]*)\) \{([^}]*)\}/,
+  );
+  assert.ok(saanto, 'Pulun dialogi- ja karttatilojen rajattua nollausta ei löydy');
+  for (const tila of [':hover', ':active', ':focus', ':focus-visible']) {
+    assert.ok(saanto[1].includes(tila) && saanto[2].includes(tila),
+      `Pulun ${tila}-tila puuttuu dialogin tai kartan nollauksesta`);
+  }
+  assert.match(saanto[3], /background:\s*transparent;/);
+  assert.match(saanto[3], /border-color:\s*transparent;/);
+  assert.match(saanto[3], /box-shadow:\s*none;/);
+  assert.match(css,
+    /\.pollo-nappi\.livia-kasvot-valmis:focus-visible \{ outline: 2px solid var\(--accent\); outline-offset: 2px; \}/,
+    'näppäimistöfokuksen näkyvä rengas puuttuu');
+});
+
+/*
+ * PINOON MAHTUU USEA KUPLA (omistajan tilaus 3.9.2026: *"puhekuplien
+ * korkeutta pitää kasvattaa, jotta useampi kupla mahtuu kerralla
+ * näkyviin"*). Tavallinen kupla on noin 5 rem, joten työpöydän katon
+ * on kannettava vähintään neljä ja puhelimen vähintään kolme. Väite
+ * lukee CSS:n luvun, koska katto on kahdessa paikassa (perussääntö ja
+ * kapean ruudun media) ja pelkkä toisen nosto jäisi huomaamatta.
+ */
+test('kuplapinon katto on kahdeksan tekstiriviä', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  const lohko = css.match(/\n\.pollo-kuplapino \{([^}]*)\}/);
+  assert.ok(lohko, 'pinon perussääntöä ei löydy');
+  const tyopoyta = lohko[1].match(/max-height: min\(\d+vh, ([\d.]+)rem\)/);
+  const kapea = css.match(/\.pollo-kuplapino \{ max-height: min\(\d+vh, ([\d.]+)rem\); \}/);
+  assert.ok(tyopoyta, 'työpöydän max-height ei löydy');
+  assert.ok(kapea, 'kapean ruudun max-height ei löydy');
+  // Omistaja 4.9.2026: katto on noin kahdeksan tekstiriviä (≈ 12.5 rem),
+  // ylivuoto häipyy yläreunasta ja on vieritettävissä — ei enää 34 rem.
+  assert.ok(Number(tyopoyta[1]) >= 12 && Number(tyopoyta[1]) <= 15, `työpöydän katto ${tyopoyta[1]}rem — ei kahdeksaa riviä`);
+  assert.ok(Number(kapea[1]) >= 12 && Number(kapea[1]) <= 15, `puhelimen katto ${kapea[1]}rem — ei kahdeksaa riviä`);
+});
+
+/* ---------------------------------------------------------------- */
+/* Puheenvuoron jako osiin (kuplapino)                                */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJAN TILAUS 3.9.2026: *"pulu voisi kommentoida sitä muutamissa
+ * osissa. huudahtaa vaikka ensin sen 'kääk, onpa hurja juttu' ja sitten
+ * vähän ajan päästä jatkaa."*
+ *
+ * Tärkein väite on SANOJEN SÄILYMINEN: jako on esitystapa, ei
+ * sisältömuutos, joten osat yhdistettynä on täsmälleen alkuperäinen
+ * kaanonteksti.
+ *
+ * JAKO KOSKEE ENÄÄ YHTENÄ MERKKIJONONA KIRJOITETTUJA KENTTIÄ (omistaja
+ * 7.9.2026): hyväksytyt Euroopan repliikit kirjoitetaan valmiiksi
+ * kupliksi, eikä niitä pilkota. Sofian `teksti` on yhä yksi merkkijono
+ * ja kelpaa siksi jaon mitaksi.
+ */
+test('puheenvuoro jakautuu osiin sanoja hukkaamatta', () => {
+  // Lontoon maadoitus korvattiin kommenttikuplalla 8.9.2026 illalla, joten
+  // jaon mittana on nyt vaiheen huomio `pollo.teksti` — se on yhä yksi
+  // pitkä merkkijono, jonka peli pilkkoo ruudulla.
+  const teksti = FOKUSVIRTA_LONTOO.pollo.teksti;
+  const osat = jaaPuheenvuoroksi(teksti);
+  assert.ok(osat.length >= 2, `osia ${osat.length}`);
+  assert.equal(osat.join(' '), teksti, 'sanat muuttuivat jaossa');
+  assert.equal(osat[0], teksti.slice(0, osat[0].length));
+});
+
+/*
+ * KUPLIKSI KIRJOITETTU REPLIIKKI EI KULJE JAON KAUTTA (omistaja
+ * 7.9.2026): jokainen alkio on oma kupla ja oma äänitiedosto, joten
+ * osien määrä on tasan taulukon pituus.
+ */
+test('pitkäkin yhden osan kommentti säilyy yhtenä ja on mobiilissa vieritettävä', () => {
+  const kuplat = FOKUSVIRTA_SOFIA.pollo.kommentti;
+  // YKSI KUPLA PER KAUPUNKI (omistaja 8.9.2026 ilta: "olisiko parempi jos
+  // pululla olisi vain yksi kupla per kaupunki") — kaksi lyhyttä virkettä.
+  assert.ok(Array.isArray(kuplat) && kuplat.length === 1, 'Sofian kommentti on yksi kupla');
+  // Huudahdus poistettiin 9.9.2026 (omistajan tekstipaketti): kenttää ei ole.
+  assert.equal(FOKUSVIRTA_SOFIA.pollo.huudahdus, undefined);
+  for (const kupla of kuplat) {
+    assert.ok(kupla.trim().length > 0, 'kirjoittajan kommenttikupla ei saa olla tyhjä');
+  }
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  assert.match(css, /\.pollo-kuplapino-kehys \{[\s\S]*?max-width: min\(23rem, calc\(100vw - 1\.6rem\)\);/,
+    'kuplakehys ei väistä puhelimen sivureunoja');
+  assert.match(css, /@media \(max-width: 599px\) \{\s*\.pollo-kuplapino \{ max-height: min\(45vh, 14rem\); \}/,
+    'puhelimen kuplapinon korkeuskatto puuttuu');
+  assert.match(css, /\.pollo-kuplapino \{[\s\S]*?overflow-y: auto;/,
+    'katon ylittävä pitkä kupla ei ole vieritettävä');
+  assert.match(css,
+    /\.pollo-kuplapino\.pollo-kuplapino-yksin,[\s\S]*?--kuplapino-haive: 0px;/,
+    'ainoan pitkän kuplan alun pitää säilyä näkyvänä ilman häivytystä');
+  // Alustus on poistettu joka kaupungista (omistaja 8.9.2026).
+  assert.equal(FOKUSVIRTA_SOFIA.pollo.alustus, undefined);
+});
+
+test('kirjoittajan kappalerajat voittavat puheenvuoron jaossa', () => {
+  assert.deepEqual(jaaPuheenvuoroksi('Eka pala.\n\nToka pala tässä.'),
+    ['Eka pala.', 'Toka pala tässä.']);
+});
+
+test('yhden virkkeen puheenvuoro on yksi osa', () => {
+  assert.deepEqual(jaaPuheenvuoroksi('Kuule, tämä on yksi virke.'),
+    ['Kuule, tämä on yksi virke.']);
+  assert.deepEqual(jaaPuheenvuoroksi('   '), []);
 });
 
 /* ==================================================================== */
@@ -1691,4 +1960,879 @@ test('vanha peli ei kutsu sähkereittiä — muut tehtävät ovat ennallaan', ()
   assert.match(lahde, /runko\?\.tehtava === 'puhe'/, 'puhehaara katosi');
   assert.match(lahde, /runko\?\.tehtava === 'ehdotukset' \? 'ehdotukset' : 'vastaus'/,
     'chat-reitin oletus muuttui');
+});
+
+/* ---------------------------------------------------------------- */
+/* Linssin portti: kuplat odottavat vuoroaan                         */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJAN TILAUS 4.9.2026: *"Pöllön kommentit saattavat tulla vielä
+ * kesken linssin. Tosin itse käynnistin linssin kesken kaiken mutta
+ * silti pitää kaikki muu blokata varmuuden vuoksi kun linssi alkaa."*
+ *
+ * Tämä rikkoutuu hiljaa kahdella tavalla, eikä kumpikaan näy diffistä:
+ * kupla tulee linssin päälle (omistajan kuvakaappaus: kuplapino peitti
+ * keksintölinssin) tai — pahempi — kupla ei tule KOSKAAN, koska se
+ * pudotettiin näyttämättä. Jono on siksi vartioitu kummaltakin
+ * puolelta: portti estää näyttämisen ja purku palauttaa puheenvuoron.
+ */
+
+/** Bodyn luokka on portin ainoa tieto — tynkä riittää sen mittaamiseen. */
+function linssitynka(paalla) {
+  return { body: { classList: { contains: (nimi) => paalla && nimi === 'aikajana-paalla' } } };
+}
+
+test('linssiEstaa lukee bodyn luokan eikä kaadu ilman dokumenttia', () => {
+  assert.equal(linssiEstaa(linssitynka(true)), true);
+  assert.equal(linssiEstaa(linssitynka(false)), false);
+  assert.equal(linssiEstaa(null), false);
+  assert.equal(linssiEstaa({}), false);
+});
+
+test('lykätyt puheenvuorot purkautuvat samassa järjestyksessä, katto pitää', () => {
+  const jono = [];
+  const sanotut = [];
+  for (const sana of ['eka', 'toka', 'kolmas']) {
+    linssijonoLisaa(jono, () => sanotut.push(sana));
+  }
+  // Muu kuin funktio ei mene jonoon: purku kutsuu alkioita sellaisenaan.
+  linssijonoLisaa(jono, null);
+  assert.equal(jono.length, 3);
+  for (const tekija of jono) tekija();
+  assert.deepEqual(sanotut, ['eka', 'toka', 'kolmas'], 'järjestys ei säilynyt');
+
+  // Katto: pitkä linssiajo ei kasaa seinää, vaan vanhin putoaa.
+  const pitka = [];
+  const numerot = [];
+  for (let i = 0; i < LINSSIJONON_KATTO + 3; i += 1) {
+    linssijonoLisaa(pitka, () => numerot.push(i));
+  }
+  assert.equal(pitka.length, LINSSIJONON_KATTO);
+  for (const tekija of pitka) tekija();
+  assert.equal(numerot[0], 3, 'kattoon osunut jono ei pudottanut vanhinta');
+  assert.equal(numerot.at(-1), LINSSIJONON_KATTO + 2, 'uusin puheenvuoro katosi');
+});
+
+test('linssin aikana puhekuplat menevät jonoon ja ohjekuplat pudotetaan', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  // Puhe odottaa vuoroaan: saapumiskupla, puheenvuoro (osineen yhtenä)
+  // ja onnittelu lykätään.
+  assert.match(lahde, /return this\.lykkaaLinssiin\(\(\) => this\.naytaSaapumiskupla\(/);
+  // Rytmi (viive) kulkee jonoon lykätyn puheenvuoron mukana: äänitetty
+  // repliikki puhuu linssin jälkeen samalla tahdilla kuin ilman linssiä.
+  // (Lisäluokka `luokka` kulkee samassa mukana 7.9.2026: Ihmisen matkan
+  // kertomuksessa pulun välihuomio on kapea välihuuto, ja luokan on
+  // seurattava kuplaa myös jonon läpi.)
+  assert.match(lahde, /this\.naytaPuheenvuoro\(palat, \{\n\s*kuittaus, jatkuuko, viive, aani, luokka,\n\s*\}\),/);
+  assert.match(lahde, /this\.lykkaaLinssiin\(\(\) => this\.naytaOnnittelu\(/);
+  // Portti on ENNEN chattiin kirjaamista: muuten virran järjestys olisi
+  // eri kuin se, jossa repliikit lopulta sanotaan.
+  const saapumis = lahde.slice(lahde.indexOf("naytaSaapumiskupla(teksti, { kuittaus = null, linssinOma = false, luokka = '' }"));
+  assert.ok(
+    saapumis.indexOf('linssiEstaa') < saapumis.indexOf('kirjaaKuplaViestiin'),
+    'kupla kirjataan chattiin ennen linssiporttia',
+  );
+  // Ohjekupla ei jää jonoon (tilanne on linssin jälkeen jo toinen).
+  assert.match(lahde, /naytaVihje\(teksti, kohde\) \{[\s\S]{0,600}?if \(linssiEstaa\(this\.doc\)\) return;/);
+  assert.match(lahde, /naytaLisavihje\(teksti\) \{[\s\S]{0,400}?if \(linssiEstaa\(this\.doc\)\) return;/);
+  // Chatti ei aukea linssin päälle, vaikka pöllönappi jää näkyviin.
+  // Välinäytöksessä chat saa aueta (js/ui-apurit.js linssiEstaaChatin, 4.9.2026).
+  assert.match(lahde, /avaa\(\) \{[\s\S]{0,900}?if \(linssiEstaaChatin\(this\.doc\)\) return;/);
+  // Purku ei puhu linssin päälle eikä katkaise kesken olevaa puheenvuoroa.
+  assert.match(lahde, /if \(linssiEstaa\(this\.doc\) \|\| !this\.linssijono\.length\) return;/);
+  assert.match(lahde, /if \(!this\.puheenvuoro\) this\.linssijono\.shift\(\)\?\.\(\);/);
+  // Linssin alkaessa pino ja chatti kiinni, ja jonon purku peruuntuu.
+  assert.match(lahde, /linssiAlkoi\(\) \{[\s\S]{0,300}?if \(this\.auki\) this\.sulje\(\);\s*\n\s*this\.tyhjennaPino\(\);/);
+});
+
+test('linssin oma kupla ohittaa portin — mutta vain linssin kutsumana', () => {
+  /*
+   * Merkkipaalun välinäytös on linssin OMA kohtaus (omistajan tilaus
+   * 4.9.2026 aamu: *"Pulu voi kommentoida isoisän kohdalla jotain siitä
+   * mitä hänen aikana oli ja mitä puuttui"*), joten sen kupla tulee
+   * ruudulle vaikka linssi on päällä. Kaikki muu menee yhä jonoon —
+   * ohitus saa asua tasan yhdessä vientifunktiossa.
+   */
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  assert.match(lahde, /export function polloLinssikupla\(osat, asetukset = \{\}\) \{\n\s*return Boolean\(nykyinenPollo\?\.naytaPuheenvuoro\(osat, \{ \.\.\.asetukset, linssinOma: true \}\)\);/);
+  // Portti kysyy lipun kummassakin kuplafunktiossa.
+  assert.match(lahde, /if \(!linssinOma && linssiEstaa\(this\.doc\)\) \{\n\s*return this\.lykkaaLinssiin\(\(\) => this\.naytaSaapumiskupla\(/);
+  assert.match(lahde, /if \(!linssinOma && linssiEstaa\(this\.doc\)\) \{\n\s*return this\.lykkaaLinssiin\(\n?\s*\(\) => this\.naytaPuheenvuoro\(/);
+  // Osiin jaettu puheenvuoro puhuu loppuun: lippu kulkee jatko-osiin.
+  // (7.9.2026: sarjan tilassa on myös soivan äänitteen kahva, jotta
+  // kupla osaa odottaa puheen loppuun — js/liviapuhe.js livianKuplanAika —
+  // sekä kuplan luokka, jolla kertomusesitys merkitsee välihuomionsa.)
+  assert.match(lahde, /this\.puheenvuoro = \{\n\s*palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive, aani, aaniKahva, luokka,\n\s*\};/);
+  assert.match(lahde, /linssinOma: nyt\.linssinOma,/);
+  // Muut vientifunktiot EIVÄT saa lippua: ohitus on vain linssin.
+  for (const nimi of ['polloSaapumiskupla', 'polloPuheenvuoro', 'polloAvauskupla']) {
+    const lohko = lahde.match(new RegExp(`export function ${nimi}\\([\\s\\S]*?\\n\\}`))[0];
+    assert.ok(!lohko.includes('linssinOma'), `${nimi} ei saa ohittaa linssiporttia`);
+  }
+  // Kutsuja on aikajanamoottori ja vain se.
+  const aikajana = readFileSync(new URL('../js/aikajana.js', import.meta.url), 'utf8');
+  assert.match(aikajana, /polloLinssikupla\(osat\);/);
+});
+
+/*
+ * VIERITYS EI OLE NAPAUTUS, JA PINO LIIKKUU YHTENÄ (omistaja 5.9.2026:
+ * *"Kun yritän scrollata pöllön puhekuplia, niin se avaakin pöllön
+ * chatti-ikkunan"* ja *"uudet puhekuplat edelleen tulevat vähän
+ * räpsähtäen, kun niiden pitäisi liukua sieltä alhaalta ylös. Nostain
+ * vanhoja puhekuplia pehmeästi samalla ylöspäin"*).
+ */
+test('kuplan napautus päätetään pointerupissa liikerajalla; pino vieritetään luonnolliseen pohjaan ennen FLIP-siirtoa', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  const sopimus = lahde.slice(lahde.indexOf('  sidoKuplanNapautus(kupla) {'), lahde.indexOf('  naytaOnnittelu('));
+  assert.match(sopimus, /kupla\.addEventListener\('pointercancel'/, 'vieritykseksi muuttunut ele ei ole napautus');
+  assert.match(sopimus, /kupla\.addEventListener\('pointerup', \(tapahtuma\) => \{/);
+  assert.match(sopimus, /if \(dx > KUPLAN_NAPAUTUSSADE_PX \|\| dy > KUPLAN_NAPAUTUSSADE_PX\) return;/);
+  // Nielu ja chatin avaus vasta pointerupissa, ei pointerdownissa.
+  const alas = sopimus.slice(sopimus.indexOf("addEventListener('pointerdown'"), sopimus.indexOf("addEventListener('pointercancel'"));
+  assert.doesNotMatch(alas, /nielaiseSulkevaNapautus|this\.avaa\(\)/);
+  const ylos = sopimus.slice(sopimus.indexOf("addEventListener('pointerup'"));
+  assert.match(ylos, /nielaiseSulkevaNapautus\(tapahtuma, \{ doc: this\.doc \}\);/);
+  assert.match(ylos, /this\.avaa\(\);/);
+  assert.match(lahde, /const KUPLAN_NAPAUTUSSADE_PX = 8;/);
+  // Lisäys: vieritys heti luonnolliseen pohjaan (animaatio pois mittauksen ajaksi), sitten FLIP.
+  const lisays = lahde.slice(lahde.indexOf('  lisaaPinoon(kupla) {'), lahde.indexOf('  vierita('));
+  assert.match(lisays, /kupla\.style\.animation = 'none';[\s\S]*pohja = pino\.scrollHeight;[\s\S]*kupla\.style\.animation = '';/);
+  assert.match(lisays, /pino\.scrollTop = Math\.max\(0, pohja - pino\.clientHeight\);/);
+  assert.ok(lisays.indexOf('pino.scrollTop = Math.max') < lisays.indexOf('const ero = ennen[i]'), 'vieritys ennen FLIP-mittausta');
+  assert.doesNotMatch(lisays, /this\.vierita\(\)/, 'pehmeä vieritys ei saa kilpailla FLIP-liikkeen kanssa');
+});
+
+/* ---------------------------------------------------------------- */
+/* Tyhjä vastaus: syy kerrotaan, ei keksitä                          */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJAN VIKAILMOITUS 6.9.2026: Livia kertoi Spartasta pitkästi,
+ * mutta jatkokysymykseen "Kerro siitä" tuli pelkkä "En osaa vastata
+ * tähän. Kysytkö jotain muuta?". Malli EI sanonut niin — se oli
+ * workerin varateksti, joka näytettiin aina kun poiminnan jälkeen jäi
+ * tyhjä. Syyt (virran ylikuormavirhe, kieltäytyminen, pelkkä
+ * JATKOT-lohko) eivät eronneet toisistaan mitenkään.
+ *
+ * Nämä testit kiinnittävät kolme asiaa:
+ *   1. tekninen tyhjä yritetään KERRAN uudelleen kertavastauksena,
+ *   2. kieltäytymistä ei yritetä uudelleen (se kuluttaisi päivärajan),
+ *   3. pelaajalle ei koskaan valehdella osaamattomuutta, ja lokiin ei
+ *      päädy pelaajan eikä mallin tekstiä.
+ */
+
+const CHAT_KYSYMYS = 'Kerro siitä';
+
+function chatPyynto(runko) {
+  return new Request('https://pollo.testi/', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', origin: SAHKE_ORIGIN },
+    body: JSON.stringify({ tehtava: 'vastaus', kysymys: CHAT_KYSYMYS, ...runko }),
+  });
+}
+
+/** Anthropicin SSE-virta merkkijonoksi. */
+function sseVirta(tapahtumat) {
+  return tapahtumat
+    .map((t) => `event: ${t.laji}\ndata: ${JSON.stringify(t.data)}\n\n`)
+    .join('');
+}
+
+/** Workerin oma SSE takaisin tapahtumiksi. */
+function lueSse(teksti) {
+  return teksti.split('\n\n').filter(Boolean).map((lohko) => {
+    const laji = /^event: (.+)$/m.exec(lohko)?.[1] ?? '';
+    const data = /^data: (.+)$/m.exec(lohko)?.[1] ?? 'null';
+    return { laji, data: JSON.parse(data) };
+  });
+}
+
+/** Mallin kertavastaus JSONina (sama muoto kuin rajapinnalla). */
+function malliVastaus(teksti, stop = 'end_turn') {
+  return {
+    content: teksti ? [{ type: 'text', text: teksti }] : [],
+    stop_reason: stop,
+  };
+}
+
+/**
+ * Ajaa yhden chat-pyynnön workerin läpi rajapintakutsut tyngättyinä.
+ *
+ * @param {object} asetukset `virta` = SSE-tapahtumat striimipyynnölle,
+ *   `kerta` = mallin JSON kertavastaukselle — taulukkona peräkkäiset
+ *   kertavastaukset (ensimmäinen, sitten uusinta) — tai `kertaVirhe` =
+ *   tilakoodi, jolla kertavastaus kaatuu.
+ */
+async function ajaChat({ virta = null, kerta = null, kertaVirhe = 0, runko = {} } = {}) {
+  const alkuperainenFetch = globalThis.fetch;
+  const alkuperainenLoki = console.log;
+  const kutsut = [];
+  const lokit = [];
+  const kertavastaukset = Array.isArray(kerta) ? [...kerta] : [kerta ?? malliVastaus('')];
+  let kertaNro = 0;
+  globalThis.fetch = async (osoite, asetukset) => {
+    const pyydetty = JSON.parse(asetukset.body);
+    kutsut.push(pyydetty);
+    if (pyydetty.stream) {
+      return new Response(sseVirta(virta ?? []), {
+        status: 200, headers: { 'content-type': 'text/event-stream' },
+      });
+    }
+    if (kertaVirhe) return new Response('{}', { status: kertaVirhe });
+    const data = kertavastaukset[Math.min(kertaNro, kertavastaukset.length - 1)];
+    kertaNro += 1;
+    return new Response(JSON.stringify(data), {
+      status: 200, headers: { 'content-type': 'application/json' },
+    });
+  };
+  console.log = (...osat) => { lokit.push(osat.join(' ')); };
+  try {
+    const vastaus = await polloWorker.fetch(chatPyynto(runko), SAHKE_ENV, {});
+    const teksti = await vastaus.text();
+    const sse = /event-stream/.test(vastaus.headers.get('content-type') ?? '');
+    return {
+      tila: vastaus.status,
+      tapahtumat: sse ? lueSse(teksti) : [],
+      data: sse ? null : JSON.parse(teksti),
+      kutsut,
+      lokit,
+    };
+  } finally {
+    globalThis.fetch = alkuperainenFetch;
+    console.log = alkuperainenLoki;
+  }
+}
+
+/** Striimin loppu-tapahtuma. */
+const loppu = (ajo) => ajo.tapahtumat.find((t) => t.laji === 'loppu')?.data ?? null;
+
+test('tyhjän syyluokka ratkaisee, yritetäänkö uudelleen', () => {
+  assert.deepEqual(tyhjanSyy({ virhe: 'overloaded_error' }),
+    { syy: 'virta', loki: 'virta: overloaded_error', uusinta: true });
+  assert.deepEqual(tyhjanSyy({ stop: 'refusal' }),
+    { syy: 'kieltaytyi', loki: 'stop=refusal', uusinta: false });
+  assert.deepEqual(tyhjanSyy({ stop: 'max_tokens' }),
+    { syy: 'tyhja', loki: 'stop=max_tokens', uusinta: true });
+  assert.deepEqual(tyhjanSyy({}), { syy: 'tyhja', loki: 'stop=tuntematon', uusinta: true });
+
+  // Teksti kertoo totuuden kummassakin tapauksessa — "en osaa vastata"
+  // on valhe, jos syy on tekninen.
+  assert.equal(tyhjanTeksti('kieltaytyi'), LIVIA_KIELTAYTYY);
+  assert.equal(tyhjanTeksti('virta'), LIVIA_EI_TULLUT);
+  assert.equal(tyhjanTeksti('tyhja'), LIVIA_EI_TULLUT);
+  for (const teksti of [LIVIA_KIELTAYTYY, LIVIA_EI_TULLUT]) {
+    assert.ok(!/en osaa vastata/i.test(teksti), `varateksti valehtelee: ${teksti}`);
+  }
+});
+
+test('striimin virhetapahtuma johtaa yhteen uusintaan kertavastauksena', async () => {
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [
+      { laji: 'message_start', data: { type: 'message_start' } },
+      { laji: 'error', data: { type: 'error', error: { type: 'overloaded_error' } } },
+    ],
+    kerta: malliVastaus('Sparta oli Lakonian kaupunkivaltio.\nJATKOT:\nKuka oli Lykurgos?'),
+  });
+  assert.equal(ajo.kutsut.length, 2, 'uusintaa ei tehty tai niitä tehtiin useampi');
+  assert.equal(ajo.kutsut[0].stream, true);
+  assert.equal(ajo.kutsut[1].stream, undefined, 'uusinta pitää tehdä kertavastauksena');
+  // Sama kehote ja samat viestit: uusinta ei ole uusi kysymys.
+  assert.equal(ajo.kutsut[1].system, ajo.kutsut[0].system);
+  assert.deepEqual(ajo.kutsut[1].messages, ajo.kutsut[0].messages);
+
+  assert.deepEqual(loppu(ajo), {
+    vastaus: 'Sparta oli Lakonian kaupunkivaltio.',
+    jatkot: ['Kuka oli Lykurgos?'],
+    syy: null,
+  });
+});
+
+test('striimin kieltäytymistä ei yritetä uudelleen, ja se sanotaan suoraan', async () => {
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [
+      { laji: 'message_delta', data: { type: 'message_delta', delta: { stop_reason: 'refusal' } } },
+    ],
+  });
+  assert.equal(ajo.kutsut.length, 1, 'kieltäytyminen ei ansaitse uusintaa');
+  assert.deepEqual(loppu(ajo), { vastaus: LIVIA_KIELTAYTYY, jatkot: [], syy: 'kieltaytyi' });
+});
+
+test('pelkkä JATKOT-lohko on tyhjä vastaus ja johtaa uusintaan', async () => {
+  const palat = ['JATKOT:\n', 'Mikä oli Sparta?\n', 'Kuka oli Lykurgos?\n'].map((teksti) => ({
+    laji: 'content_block_delta',
+    data: { type: 'content_block_delta', delta: { type: 'text_delta', text: teksti } },
+  }));
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [...palat,
+      { laji: 'message_delta', data: { type: 'message_delta', delta: { stop_reason: 'end_turn' } } }],
+    kerta: malliVastaus('Sparta oli Lakonian kaupunkivaltio.'),
+  });
+  assert.equal(ajo.kutsut.length, 2, 'pelkkä JATKOT-lohko jäi uusimatta');
+  assert.equal(loppu(ajo).vastaus, 'Sparta oli Lakonian kaupunkivaltio.');
+  assert.equal(loppu(ajo).syy, null);
+  // Jatkosuodatin piti huolen siitä, ettei merkintä näkynyt ruudulla.
+  assert.equal(ajo.tapahtumat.filter((t) => t.laji === 'pala').length, 0);
+});
+
+test('kun uusintakin epäonnistuu, pelaajalle kerrotaan totuus', async () => {
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [{ laji: 'error', data: { type: 'error', error: { type: 'overloaded_error' } } }],
+    kertaVirhe: 529,
+  });
+  assert.equal(ajo.kutsut.length, 2);
+  assert.deepEqual(loppu(ajo), { vastaus: LIVIA_EI_TULLUT, jatkot: [], syy: 'virta' });
+  // Vanha valhe ei saa palata mistään.
+  assert.ok(!/En osaa vastata/i.test(JSON.stringify(loppu(ajo))));
+});
+
+test('kertavastauspolku käsittelee tyhjän samalla tavalla', async () => {
+  // Kieltäytyminen: yksi kutsu, rehellinen teksti.
+  const kielto = await ajaChat({ kerta: malliVastaus('', 'refusal') });
+  assert.equal(kielto.tila, 200);
+  assert.equal(kielto.kutsut.length, 1);
+  assert.deepEqual(kielto.data, { vastaus: LIVIA_KIELTAYTYY, jatkot: [], syy: 'kieltaytyi' });
+
+  // Tuntematon tyhjä: uusinta, ja sen teksti kelpaa vastaukseksi.
+  const onnistui = await ajaChat({
+    kerta: [malliVastaus(''), malliVastaus('Sparta oli Lakonian kaupunkivaltio.')],
+  });
+  assert.equal(onnistui.kutsut.length, 2, 'tyhjää kertavastausta ei yritetty uudelleen');
+  assert.deepEqual(onnistui.data, {
+    vastaus: 'Sparta oli Lakonian kaupunkivaltio.', jatkot: [], syy: null,
+  });
+
+  // Kaksi tyhjää peräkkäin: rehellinen teksti, ei osaamattomuutta.
+  const tyhja = await ajaChat({ kerta: malliVastaus('') });
+  assert.equal(tyhja.kutsut.length, 2);
+  assert.deepEqual(tyhja.data, { vastaus: LIVIA_EI_TULLUT, jatkot: [], syy: 'tyhja' });
+});
+
+test('tyhjästä lokitetaan vain syyluokka — ei pelaajan eikä mallin tekstiä', async () => {
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [{ laji: 'error', data: { type: 'error', error: { type: 'overloaded_error' } } }],
+    kerta: malliVastaus('Sparta oli Lakonian kaupunkivaltio.'),
+  });
+  assert.ok(ajo.lokit.length >= 1, 'tyhjä vastaus jäi kokonaan lokittamatta');
+  const loki = ajo.lokit.join(' | ');
+  assert.match(loki, /pollo: tyhjä vastaus \(virta: overloaded_error\)/);
+  assert.ok(!loki.includes(CHAT_KYSYMYS), `pelaajan teksti vuoti lokiin: ${loki}`);
+  assert.ok(!/Sparta/.test(loki), `mallin teksti vuoti lokiin: ${loki}`);
+});
+
+/*
+ * Pelin puoli luetaan lähdekoodista: kysy() elää DOMissa, striimissä ja
+ * puhesynteesissä, eikä sitä voi ajaa tässä pikku puumallissa. Nämä
+ * kaksi asiaa ovat silti niin helppo rikkoa vahingossa, että ne
+ * kiinnitetään koneellisesti.
+ */
+test('varateksti ei mene historiaan, ja tekninen tyhjä tarjoaa uusinnan', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  // Historiaan vain aito ja kokonainen vastaus: muuten mallille lähtisi
+  // seuraavan kysymyksen kontekstiksi workerin oma varateksti.
+  assert.match(lahde, /if \(!varateksti && !tulos\?\.katkesi\) \{\s*\n\s*this\.historia\.push/,
+    'historian ehto puuttuu — varateksti voi taas päätyä kontekstiksi');
+  assert.match(lahde, /if \(tekninen\) this\.naytaUusinta\(kysymys, jatko\)/,
+    'uusintanappia ei tarjota tekniselle epäonnistumiselle');
+  assert.match(lahde, /naytaUusinta\(kysymys, jatko = false\)/, 'naytaUusinta puuttuu');
+});
+
+test('vanha varateksti "En osaa vastata" ei ole enää missään', () => {
+  for (const tiedosto of ['../tools/pollo/worker.js', '../js/pollo.js']) {
+    const lahde = readFileSync(new URL(tiedosto, import.meta.url), 'utf8');
+    // Kommentit saavat kertoa vanhasta viasta; koodissa merkkijonoa ei
+    // enää ole (rivit, joilla on heittomerkein rajattu teksti).
+    const koodissa = lahde.split('\n')
+      .filter((rivi) => /'[^']*En osaa vastata/.test(rivi));
+    assert.deepEqual(koodissa, [], `varateksti elää yhä: ${tiedosto}`);
+  }
+});
+
+/* ---------------------------------------------------------------- */
+/* Kuplat: vain viimeisin, historia kelattavissa (7.9.2026)          */
+/* ---------------------------------------------------------------- */
+
+/*
+ * OMISTAJAN LINJAUS 7.9.2026 (Raamattu, "PULUN KUPLAT: VAIN VIIMEISIN,
+ * HISTORIA CHATISSA"): *"ruudulla näkyvät kuplat voisi vaihtaa niin,
+ * että siinä näkyisi kerrallaan vain viimeisin kupla. Mutta jos
+ * käyttäjä menee scrollaamaan viestejä niin näkymä laajenee ylöspäin
+ * 10 riiviin. Mutta sitten kun käyttäjä liikuttaa karttaa niin näkymä
+ * palaa taas siihen yhteen kuplaan. Nämä kaikki pehmeästi animoiden."*
+ *
+ * TÄYDENNYS 8.9.2026 (Raamattu, "PULUN HUUDAHDUS EI KESKEYTA LUKIJAA,
+ * JA KUPLAPINO NAKYY KAHDEKSAAN RIVIIN ASTI KUNNES KARTTA LIIKKUU"),
+ * sanatarkasti: *"pulun puhekuplat voivat näkyä sittenkin 8 riviin
+ * asti, mutta kun karttaa liikutetaan ne saavat pienentyä nykyisellä
+ * tavalla."* Oletus kääntyi siis päinvastoin: pino on AUKI kattoon asti
+ * (ilman lokin historiaa), kartan liike ja Escape supistavat sen
+ * entiseen tapaan, ja seuraava kupla avaa sen taas.
+ *
+ * Näkymän mitat ja liikkeet mitataan selaimessa
+ * (tools/savukkeet/savuke-pulun-kuplat.mjs); täällä vartioidaan ne
+ * kohdat, jotka voi hukata hiljaa: lokin katto, supistuksen kutsupaikat
+ * ja se, ettei supistettu pino häivytä ainoaa näkyvää kuplaansa.
+ */
+
+test('lokin katto pudottaa vanhimman eikä uusinta', () => {
+  let loki = [];
+  for (let i = 0; i < LIVIAN_LOKIN_KATTO + 25; i += 1) {
+    loki = lisaaLokiin(loki, { r: 'kupla', t: `rivi ${i}` });
+  }
+  assert.equal(loki.length, LIVIAN_LOKIN_KATTO);
+  assert.equal(loki.at(-1).t, `rivi ${LIVIAN_LOKIN_KATTO + 24}`);
+  assert.equal(loki[0].t, 'rivi 25', 'karsinta osui väärään päähän');
+  // Katto on omistajan mitta: neljäsataa puheenvuoroa on
+  // "mahdollisimman pitkälle" ilman että laitteen muisti täyttyy.
+  assert.equal(LIVIAN_LOKIN_KATTO, 400);
+  // Oma avain eikä pelitallennus: loki saa kadota ilman että peli
+  // menettää mitään.
+  assert.equal(LIVIAN_LOKI_AVAIN, 'matkakirja-livia-loki');
+});
+
+test('kartan kosketus, Escape ja nuoli ylös ohjaavat kuplanäkymää', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  // Supistus tulee dokumentin pointerdownista (kartan vedon alku), ja
+  // pinon oma alue on rajattu pois — muuten kelaus supistaisi itsensä.
+  // Ehto koskee KAIKKEA muuta kuin supistettua tilaa, koska oletus on
+  // 8.9.2026 alkaen auki (ennen: vain pelaajan laajentama pino).
+  assert.match(
+    lahde,
+    /this\.pinoTila !== 'supistettu' && !e\.target\?\.closest\?\.\('\.pollo-kuplapino-kehys'\)/,
+  );
+  assert.match(lahde, /if \(!this\.auki && this\.pinoTila !== 'supistettu'\) \{/);
+  // Näppäimistöllä laajennus: nuoli ylös kuplassa.
+  assert.match(lahde, /tapahtuma\.key === 'ArrowUp'/);
+  assert.match(lahde, /this\.laajennaPino\(\);/);
+  // …ja Escape pinon omasta kohdistuksesta supistaa saman ehdon mukaan.
+  assert.match(lahde, /tapahtuma\.key === 'Escape' && this\.pinoTila !== 'supistettu'/);
+});
+
+/*
+ * KUPLAPINO ON OLETUKSENA AUKI KAHDEKSAAN RIVIIN (omistaja 8.9.2026).
+ *
+ * Tila on kolmiarvoinen, koska ruudulla samalta näyttävät 'auki' ja
+ * 'laaja' eroavat yhdessä asiassa: pelaajan oma laajennus hakee lokin
+ * historian pinoon, oletus ei. Näitä vartioita ei voi mitata Nodessa
+ * (ei DOMia), joten ne luetaan lähteestä; mitat mittaa savuke.
+ */
+test('pino on oletuksena auki, ja vain pelaajan laajennus hakee historian', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  // Oletus: 'auki'. Sama arvo palautuu, kun pino tyhjenee kokonaan.
+  assert.match(lahde, /this\.pinoTila = 'auki';/);
+  assert.equal([...lahde.matchAll(/this\.pinoTila = 'auki';/g)].length, 3,
+    'oletustilan asetuspaikkoja pitäisi olla kolme: uusi pollo, tyhjä pino ja avautuminen');
+  // Laajennus = pelaajan ele: tila 'laaja' JA lokin historia.
+  assert.match(lahde,
+    /laajennaPino\(\) \{\n\s*if \(this\.pinoTila === 'laaja' \|\| !this\.pino\) return;\n\s*this\.pinoTila = 'laaja';\n\s*this\.taytaPinoHistorialla\(\);/);
+  // Historiaa EI haeta mistään muualta: oletustilassa kartan päällä
+  // näkyy vain tämän saapumisen omat kuplat.
+  const historiakutsut = [...lahde.matchAll(/this\.taytaPinoHistorialla\(/g)];
+  assert.equal(historiakutsut.length, 1,
+    `taytaPinoHistorialla-kutsuja on ${historiakutsut.length} — historia vuotaa oletukseen`);
+  // Supistus on oma tilansa, ja siitä noustaan uudella kuplalla.
+  assert.match(lahde,
+    /supistaPino\(\) \{\n\s*if \(this\.pinoTila === 'supistettu'\) return;\n\s*this\.pinoTila = 'supistettu';/);
+  assert.match(lahde,
+    /const avautui = this\.pinoTila === 'supistettu';\n\s*if \(avautui\) this\.pinoTila = 'auki';/);
+  // Katto tulee css:stä aina kun pino ei ole supistettu (sekä 'auki'
+  // että 'laaja'), ja luokka .pollo-kuplapino-laaja kertoo sen css:lle.
+  assert.match(lahde, /const kattoon = this\.pinoTila !== 'supistettu';/);
+  assert.match(lahde, /pino\.classList\.toggle\('pollo-kuplapino-laaja', kattoon\);/);
+  assert.match(lahde, /if \(kattoon\) pino\.style\.maxHeight = '';/);
+  // Pohjaan pinnaaminen kuuluu VAIN supistukseen: auki olevaa pinoa ei
+  // napata pelaajan käsistä kesken kelauksen.
+  assert.match(lahde, /if \(!ilman && !kattoon\) this\.pidaPinoPohjassa\(\);/);
+  assert.match(lahde, /if \(!this\.pino \|\| this\.pinoTila !== 'supistettu'\) \{/);
+  // Vanha kaksitilainen lippu on kokonaan poissa.
+  assert.doesNotMatch(lahde, /pinoLaaja/, 'pinoLaaja elää yhä — tiloja on nyt kolme');
+});
+
+test('supistettu pino ei häivytä ainoaa kuplaansa, ja katto liukuu', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  // Häivytys kuuluu laajennetun pinon ylivuotoon…
+  assert.match(css, /\.pollo-kuplapino-yli \.pollo-kuplapino\.pollo-kuplapino-laaja \{/);
+  // …ja supistetussa pinossa VAIN kurkistuksen mittaan (edellisen
+  // kuplan alaosa). Ainoa kupla ei saa häivytystä: luokan asettaa
+  // js/pollo.js vasta kun pinossa on edellinen kupla.
+  assert.match(css, /\.pollo-kuplapino\.pollo-kuplapino-kurkistus \{\s*--kuplapino-haive: 2\.2rem;/);
+  // Korkeuden liuku on se "pehmeästi animoiden", jota omistaja pyysi —
+  // ja häivytyksen mitta liukuu sen rinnalla (rekisteröity muuttuja).
+  assert.match(css, /transition: max-height 300ms var\(--liike-pehmea\),/);
+  assert.match(css, /--kuplapino-haive 300ms var\(--liike-pehmea\);/);
+  assert.match(css, /@property --kuplapino-haive \{[^}]*syntax: '<length>';/);
+  // Maski on aina paikallaan (mittana muuttuja), jotta se voi liukua;
+  // iOS-Safari tarvitsee prefiksin.
+  assert.match(css, /-webkit-mask-image: linear-gradient\(to bottom, transparent 0, #000 var\(--kuplapino-haive\)\);/);
+  // Häipyvä sliveri ei ota napautusta vastaan.
+  assert.match(
+    css,
+    /\.pollo-kuplapino:not\(\.pollo-kuplapino-laaja\) \.pollo-vihje:not\(:last-child\) \{\s*pointer-events: none;/,
+  );
+  // Puhelimen katto on enintään 45 % ruudusta (omistajan linjaus).
+  const kapea = css.match(/\.pollo-kuplapino \{ max-height: min\((\d+)vh, ([\d.]+)rem\); \}/);
+  assert.ok(kapea && Number(kapea[1]) <= 45, `puhelimen katto ${kapea?.[1]}vh`);
+  /*
+   * KAHDEKSAN RIVIN KATTO ON NYT OLETUS (omistaja 8.9.2026: *"pulun
+   * puhekuplat voivat näkyä sittenkin 8 riviin asti"*). Rivi on
+   * 0.92 rem × 1.35 ≈ 1.24 rem, joten kahdeksan riviä pehmusteineen on
+   * noin 14 rem — sama luku molemmilla ruutukoilla.
+   */
+  const katto = css.match(/max-height: min\(60vh, ([\d.]+)rem\);/);
+  assert.ok(katto && Math.abs(Number(katto[1]) - 14) < 0.6,
+    `työpöydän katto ${katto?.[1]}rem — ei kahdeksaa tekstiriviä`);
+  assert.equal(kapea[2], katto[1], 'puhelimen ja työpöydän rem-katto ovat eri mittaa');
+});
+
+/*
+ * KURKISTUS ON MITTA, EI ARVAUS (omistaja 7.9.2026 ilta: *"kuplan
+ * alaosa näkyy ja sitten se feidautuu läpinäkyväksi"*). Supistetun
+ * pinon katto lasketaan js:ssä, joten vartioidaan että lisäys on
+ * sidottu kuplien määrään: yksi kupla → ei lisäystä eikä häivytystä.
+ */
+test('supistetun pinon katto jättää edellisen kuplan alaosan näkyviin', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  const kurkistus = lahde.match(/const PINON_KURKISTUS_REM = ([\d.]+);/);
+  assert.ok(kurkistus, 'kurkistuksen mittaa ei löydy');
+  // Noin 1–1,5 tekstiriviä (rivi ≈ 1.24 rem) ja kuplien väli.
+  assert.ok(Number(kurkistus[1]) >= 1.6 && Number(kurkistus[1]) <= 3,
+    `kurkistus ${kurkistus[1]}rem — ei noin puoltatoista riviä`);
+  // Lisäys vain kun edellinen kupla on olemassa.
+  assert.match(lahde, /kuplat\.length > 1 \? PINON_KURKISTUS_REM \* this\.remPikseleina\(\) : 0/);
+  assert.match(lahde, /korkeus \+ pehmuste \+ kurkistus/);
+  // …ja häivytys kulkee katon mukana samasta ehdosta.
+  assert.match(lahde, /classList\.toggle\('pollo-kuplapino-kurkistus', kurkistaa\)/);
+});
+
+/*
+ * ENSIMMAISEN PULUKUPLAN YLAREUNAA EI HAIVYTETA (omistaja 10.9.2026:
+ * *"pulun puhekuplan yläreunaan ei saisi tulla varjostusta kun on
+ * kyse ensimmäisestä kuplasta"*). Ainoa kupla voi olla kattoa (8 riviä)
+ * korkeampi, jolloin ylivuoto on totta ja maski leikkaisi juuri sen
+ * ensimmäiset rivit. Vartio pitää huolen, että nollaus on olemassa,
+ * että se voittaa sekä ylivuodon että kurkistuksen, ja että luokka
+ * seuraa kuplien määrää.
+ */
+test('yksin jäävän kuplan yläreunaa ei häivytetä', () => {
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  // Nollaus on olemassa ja koskee myös molempia häivyttäviä tiloja.
+  const lohko = css.match(
+    /((?:\.pollo-kuplapino[^{]*pollo-kuplapino-yksin[^{]*,\s*)*[^{]*pollo-kuplapino-yksin[^{]*)\{\s*--kuplapino-haive: 0px;/,
+  );
+  assert.ok(lohko, 'yksin jäävän kuplan häivytyksen nollausta ei löydy css:stä');
+  const valitsimet = lohko[1];
+  assert.match(valitsimet, /\.pollo-kuplapino-yli \.pollo-kuplapino\.pollo-kuplapino-laaja\.pollo-kuplapino-yksin/,
+    'ylivuodon häivytys jää voimaan yksinäiselle kuplalle');
+  assert.match(valitsimet, /\.pollo-kuplapino\.pollo-kuplapino-kurkistus\.pollo-kuplapino-yksin/,
+    'kurkistuksen häivytys jää voimaan yksinäiselle kuplalle');
+  // Järjestys ratkaisee: nollaus on häivyttävien sääntöjen JÄLKEEN,
+  // joten yhtä painava valitsin voittaa.
+  assert.ok(css.indexOf('--kuplapino-haive: 0px;\n}') > css.indexOf('--kuplapino-haive: 2.6rem;'),
+    'nollaus on ennen ylivuodon häivytystä — sääntöjärjestys kumoaisi sen');
+  assert.ok(css.indexOf('--kuplapino-haive: 0px;\n}') > css.indexOf('--kuplapino-haive: 2.2rem;'),
+    'nollaus on ennen kurkistuksen häivytystä — sääntöjärjestys kumoaisi sen');
+  // Luokka seuraa kuplien määrää ja asetetaan samassa mittauksessa kuin
+  // ylivuoto, joten häivytys palaa heti toisen kuplan saapuessa.
+  assert.match(
+    lahde,
+    /this\.pinoKehys\.classList\.toggle\('pollo-kuplapino-yli', yli\);\n\s*pino\.classList\.toggle\('pollo-kuplapino-yksin', this\.pinonKuplat\(\)\.length === 1\);/,
+    'yksin-luokkaa ei aseteta ylivuodon mittauksen yhteydessä',
+  );
+});
+
+test('tervehdys on lyhyt ja sen ydin lihavoidaan', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  const ydin = lahde.match(/const TERVEHDYS_YDIN = '([^']+)'/)?.[1] ?? '';
+  const loppu = lahde.match(/const TERVEHDYS_LOPPU = '([^']+)'/)?.[1] ?? '';
+  const alku = [...lahde.matchAll(/const TERVEHDYS_ALKU = ([\s\S]*?);\n/g)][0]?.[1] ?? '';
+  const alkuTeksti = [...alku.matchAll(/'([^']*)'/g)].map((m) => m[1]).join('');
+  assert.match(ydin, /Kysy mitä vain/, 'ydintä ei löydy');
+  // Omistaja 7.9.2026: avaus lyhennetään, koska sen yläpuolella on nyt
+  // kuplien ja aiempien keskustelujen loki.
+  const teksti = alkuTeksti + ydin + loppu;
+  assert.ok(teksti.length > 40 && teksti.length < 220, `tervehdys on ${teksti.length} merkkiä`);
+  // Ydin ladotaan omaksi elementikseen, jotta lihavointi ei vaadi
+  // HTML:ää viestivirtaan.
+  assert.match(lahde, /polloElementti\('b', 'pollo-tervehdys-ydin', TERVEHDYS_YDIN\)/);
+});
+
+test('lokista ladattu rivi ei estä tervehdystä eikä laske keskusteluksi', () => {
+  const lahde = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  assert.match(
+    lahde,
+    /'\.pollo-viesti:not\(\.pollo-kuplaviesti\):not\(\.pollo-historiaviesti\)'/,
+  );
+  // Loki ladataan kerran, vanhimmasta uusimpaan ja istunnon omien
+  // viestien yläpuolelle.
+  assert.match(lahde, /this\.virta\.insertBefore\(viesti, eka\);/);
+  assert.match(lahde, /if \(this\.lokiLadattu \|\| !this\.virta\) return 0;/);
+});
+
+/*
+ * VASTAUS EI JÄÄ KESKEN (omistaja 7.9.2026 ilta: "Pulun vastaus jäi
+ * kesken"): sanarajaan pysähtynyt striimi saa yhden jatkokutsun samaan
+ * kuplaan, ja raja on 900.
+ */
+test('sanarajaan pysähtynyt vastaus jatketaan kerran samaan kuplaan', () => {
+  const kehote = readFileSync(new URL('../tools/pollo/worker.js', import.meta.url), 'utf8');
+  assert.match(kehote, /const MAX_TOKENS = 900;/);
+  assert.match(kehote, /const JATKON_MAX_TOKENS = 350;/);
+  assert.match(kehote, /let kesken = stop === 'max_tokens';\s*if \(kesken\) \{\s*const \{ teksti: jatko, stop: jatkonStop \} = await jatkaKeskenJaanyt\(/);
+  assert.match(kehote, /async function jatkaKeskenJaanyt\(env, \{ jarjestelma, viestit \}, raaka\)/);
+  assert.match(kehote, /kolmessa virkkeessä\.'/);
+});
+
+/*
+ * LÖYDÖS 67 (omistajan kuva 25.9.2026: vastaus loppui "…muurin alta, n").
+ * Sonnet 5 ajatteli oletuksena, ja ajattelu söi sanarajan. Pyyntö sulkee
+ * ajattelun mallin mukaan, eikä kesken sanan loppuvaa tekstiä lähetetä
+ * koskaan valmiina vastauksena.
+ */
+const palaksi = (teksti) => ({
+  laji: 'content_block_delta',
+  data: { type: 'content_block_delta', delta: { type: 'text_delta', text: teksti } },
+});
+const pysahdys = (syy) => ({ laji: 'message_delta', data: { type: 'message_delta', delta: { stop_reason: syy } } });
+
+test('ajattelu suljetaan mallin mukaan, eikä se syö vastauksen sanarajaa', async () => {
+  assert.deepEqual(ajatteluKentat('claude-sonnet-5'), { thinking: { type: 'disabled' } });
+  assert.deepEqual(ajatteluKentat('claude-opus-5'), { thinking: { type: 'disabled' } });
+  assert.deepEqual(ajatteluKentat('claude-haiku-4-5-20251001'), {});
+  // Näillä `disabled` on 400: pienin vaiva on ainoa säädin.
+  for (const malli of ['claude-fable-5-1', 'claude-mythos-5-1', 'claude-opus-5-5']) {
+    assert.deepEqual(ajatteluKentat(malli), { output_config: { effort: 'low' } }, malli);
+  }
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [palaksi('Sparta oli kaupunkivaltio.'), pysahdys('end_turn')],
+  });
+  const sonnet = await (async () => {
+    const vanha = SAHKE_ENV.POLLO_MALLI;
+    SAHKE_ENV.POLLO_MALLI = 'claude-sonnet-5';
+    try {
+      return await ajaChat({ runko: { striimi: true }, virta: [palaksi('Sparta.'), pysahdys('end_turn')] });
+    } finally {
+      if (vanha === undefined) delete SAHKE_ENV.POLLO_MALLI; else SAHKE_ENV.POLLO_MALLI = vanha;
+    }
+  })();
+  assert.equal(ajo.kutsut[0].thinking, undefined, 'Haiku-oletus ei saa thinking-kenttää');
+  assert.deepEqual(sonnet.kutsut[0].thinking, { type: 'disabled' });
+  assert.equal(sonnet.kutsut[0].model, 'claude-sonnet-5');
+});
+
+test('kesken sanan katkennut teksti leikataan viimeiseen kokonaiseen virkkeeseen', () => {
+  assert.equal(katkaiseKokonaiseen('Hän kaivoi. Löytö herätti kysymyksen, joka on seurannut sitä siit'),
+    'Hän kaivoi.');
+  assert.equal(katkaiseKokonaiseen('Hän huusi: "Troija!" Sitten [[Hisarlık]], n'), 'Hän huusi: "Troija!"');
+  assert.equal(katkaiseKokonaiseen('Seinämästä, muurin alta, n'), 'Seinämästä, muurin alta…');
+  assert.equal(katkaiseKokonaiseen('Versio 1.5 on hyvä'), 'Versio 1.5 on…');
+  assert.equal(katkaiseKokonaiseen('Valmis.'), 'Valmis.');
+  assert.equal(katkaiseKokonaiseen(''), '');
+});
+
+test('jos jatkokin pysähtyy sanarajaan, loppu ei pääty kesken sanan', async () => {
+  const ajo = await ajaChat({
+    runko: { striimi: true },
+    virta: [palaksi('Schliemann kaivoi Hisarlıkissa. Aarre löytyi muurin alta, n'), pysahdys('max_tokens')],
+    kerta: malliVastaus('ja löytö herätti kysymyksen, joka on seurannut sitä siit', 'max_tokens'),
+  });
+  assert.equal(ajo.kutsut.length, 2, 'jatkokutsu puuttui');
+  assert.equal(loppu(ajo).vastaus, 'Schliemann kaivoi Hisarlıkissa.');
+  assert.equal(loppu(ajo).syy, null);
+
+  // Jatko, joka lopettaa ajatuksen, kelpaa sellaisenaan.
+  const ehja = await ajaChat({
+    runko: { striimi: true },
+    virta: [palaksi('Aarre löytyi muurin alta, '), pysahdys('max_tokens')],
+    kerta: malliVastaus('aivan kivijalan vierestä.'),
+  });
+  assert.equal(loppu(ehja).vastaus, 'Aarre löytyi muurin alta, aivan kivijalan vierestä.');
+});
+
+test('kertavastaus ja uusinta leikkaavat sanarajaan pysähtyneen tekstin', async () => {
+  const kerta = await ajaChat({ kerta: malliVastaus('Troija löytyi. Muurin alta, n', 'max_tokens') });
+  assert.equal(kerta.data.vastaus, 'Troija löytyi.');
+  const uusinta = await ajaChat({
+    kerta: [malliVastaus(''), malliVastaus('Sparta oli valtio. Sen kunin', 'max_tokens')],
+  });
+  assert.equal(uusinta.data.vastaus, 'Sparta oli valtio.');
+});
+
+/*
+ * ASTROPULUN KUVA (omistajan tilaus 20.9.2026): astronauttitilassa
+ * pulun pitää saada valokuvan otsikko ja kuvaus kontekstiin.
+ *
+ * Sijainti riisuttiin avaruudesta tarkoituksella (edellinen testi),
+ * mutta samalla pulu jäi ilman tietoa siitä, MITÄ kuvaa pelaaja
+ * katsoo: kysymys "mikä tuo vaalea rengas on?" meni mallille ilman
+ * sanaa Richat. Selite luetaan ruudulta, koska juuri se on se, minkä
+ * pelaaja näkee.
+ */
+function teeSeliteDoc({ nimi = 'Saharan silmä', seutu = 'Mauritania', teksti = '' } = {}) {
+  const osat = {
+    '.satelliitti-seutu': seutu ? { textContent: ` — ${seutu}` } : null,
+  };
+  const otsikko = {
+    textContent: `${nimi}${seutu ? ` — ${seutu}` : ''}`,
+    querySelector: (v) => osat[v] ?? null,
+  };
+  const selite = {
+    querySelector: (v) => {
+      if (v === '.satelliitti-selite-otsikko') return otsikko;
+      if (v === '.satelliitti-selite-teksti') return teksti ? { textContent: teksti } : null;
+      return null;
+    },
+  };
+  return {
+    getElementById: () => null,
+    querySelector: (v) => (v === '.satelliitti-katselu .satelliitti-selite' ? selite : null),
+    body: { classList: { contains: (l) => l === 'satelliitti-kuva-auki' } },
+  };
+}
+
+test('lueNakyma astronautin kamerassa: avatun valokuvan nimi ja selite ovat mukana', () => {
+  const SELITE = 'Richat-rakenne eli Saharan silmä on kohonnut kalliokupoli, '
+    + 'jonka kerrokset tuuli ja vesi ovat kuluttaneet paljaaksi renkaiksi.';
+  const konteksti = lueNakyma({
+    game: teeGame(), ui: { pallolinssi: { tunnus: 'satelliitti' } },
+    doc: teeSeliteDoc({ teksti: SELITE }),
+  });
+  assert.match(konteksti, /Avattu valokuva avaruudesta: Saharan silmä \(Mauritania\)/);
+  assert.ok(konteksti.includes(SELITE), konteksti);
+  // Seutu on KUVAN paikka; pelaajan oma sijainti ei silti palaa mukaan.
+  assert.ok(!konteksti.includes('Doha'), konteksti);
+  assert.ok(!/Matkapäivä/.test(konteksti), konteksti);
+});
+
+test('lueNakyma astronautin kamerassa: suljettu kuva ei jää kontekstiin', () => {
+  // VASTAKOE: sama tila ilman selitettä ruudulla — nimeä ei keksitä.
+  const tyhja = lueNakyma({
+    game: teeGame(),
+    ui: { pallolinssi: { tunnus: 'satelliitti' } },
+    doc: { getElementById: () => null, querySelector: () => null },
+  });
+  assert.ok(!/Avattu valokuva/.test(tyhja), tyhja);
+  assert.ok(tyhja.includes('Astronautin kamera'), tyhja);
+  // Ja ilman seutua otsikko kelpaa sellaisenaan.
+  const ilmanSeutua = lueNakyma({
+    game: teeGame(), ui: { linssiValittu: 'satelliitti' },
+    doc: teeSeliteDoc({ nimi: 'Betsibokan suisto', seutu: '' }),
+  });
+  assert.match(ilmanSeutua, /Avattu valokuva avaruudesta: Betsibokan suisto$/m);
+});
+
+test('natiivi sovellus tunnistetaan otsakkeesta ja User-Agentista (vain oma bundle id)', () => {
+  const h = (o) => new Headers(o);
+  const ua = 'Matkakirja/1 CFNetwork/1568 Darwin/25.0 app.matkakirja.proto3d';
+  assert.equal(sallittuNatiivi(h({ 'x-matkakirja-natiivi': 'app.matkakirja.proto3d', 'user-agent': ua })), true);
+  assert.equal(sallittuNatiivi(h({ 'user-agent': ua })), false, 'otsake puuttuu');
+  assert.equal(sallittuNatiivi(h({ 'x-matkakirja-natiivi': 'app.matkakirja.proto3d', 'user-agent': 'curl/8' })), false, 'UA ei täsmää');
+  assert.equal(sallittuNatiivi(h({ 'x-matkakirja-natiivi': 'com.paha', 'user-agent': 'com.paha' })), false, 'vieras bundle id');
+  assert.equal(sallittuNatiivi(h({ 'x-matkakirja-natiivi': 'x', 'user-agent': 'x' }), ['x']), true, 'ympäristön lista');
+  assert.ok(NATIIVIT_OLETUS.includes('app.matkakirja.proto3d'));
+  assert.ok(NATIIVIT_OLETUS.includes('fi.matkakirja.peli'), 'TestFlight-buildin bundle (löydös 16)');
+  assert.ok(NATIIVIT_OLETUS.includes('fi.matkakirja.peli.kehitys'), 'kehityskäännöksen App ID (Fable 24.9.2026)');
+});
+
+test('worker: natiivi pääsee puheeseen, chattiin ja sähkeeseen, ei kuvaan eikä tilaan', async () => {
+  const { default: worker } = await import('../tools/pollo/worker.js');
+  const env = { POLLO_ORIGINIT: 'https://matkakirja.app' };
+  const otsakkeet = {
+    'content-type': 'application/json',
+    'x-matkakirja-natiivi': 'app.matkakirja.proto3d',
+    'user-agent': 'Matkakirja app.matkakirja.proto3d',
+  };
+  const pyynto = (runko, o = otsakkeet) => worker.fetch(new Request('https://pollo.example/', {
+    method: 'POST', headers: o, body: JSON.stringify(runko),
+  }), env, {});
+  assert.deepEqual([...NATIIVIN_TEHTAVAT], ['puhe', 'vastaus', 'ehdotukset', 'sahke']);
+  assert.equal(natiivilleSallittu(undefined), true, 'puuttuva tehtävä = vastaus');
+  for (const tehtava of ['kuva', 'tila']) {
+    const v = await pyynto({ tehtava });
+    assert.equal(v.status, 403, tehtava);
+    assert.equal(await v.text(), 'Tehtävä ei ole natiiville sallittu');
+  }
+  const vieras = await pyynto({ tehtava: 'puhe', teksti: 'Hei.' }, { 'content-type': 'application/json' });
+  assert.equal(vieras.status, 403, 'ilman originia ja tunnistetta kiinni');
+  const puhe = await pyynto({ tehtava: 'puhe', teksti: 'Hei.', persoona: 'merkinnat' });
+  assert.notEqual(puhe.status, 403, 'natiivi läpi puheen käsittelyyn (ilman avainta 503)');
+  const chat = await pyynto({ kysymys: 'Mikä on Pariisi?' });
+  assert.notEqual(chat.status, 403, 'natiivi läpi chattiin (ilman avainta 503)');
+  const sahke = await pyynto({ tehtava: 'sahke', id: 'sofia-varna', vastaus: 'Varna 1972' });
+  assert.notEqual(sahke.status, 403, 'natiivi läpi sähketuomioon (ilman avainta 503)');
+});
+
+test('worker: natiivin sähketuomio toimii ilman Originia ja kuluttaa samaa rajaa kuin selain', async () => {
+  const { default: worker } = await import('../tools/pollo/worker.js');
+  const kvData = new Map();
+  const kv = { get: async (k) => kvData.get(k) ?? null, put: async (k, v) => { kvData.set(k, v); } };
+  const env = {
+    ANTHROPIC_API_KEY: 'testiavain', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KV: kv, POLLO_PAIVARAJA: '2',
+  };
+  const alkuperainen = globalThis.fetch;
+  globalThis.fetch = async () => new Response(JSON.stringify({
+    content: [{ type: 'text', text: '{"kohde_oikein":true,"vuosi_oikein":false}' }],
+  }), { status: 200, headers: { 'content-type': 'application/json' } });
+  const runko = JSON.stringify({ tehtava: 'sahke', id: 'sofia-varna', vastaus: 'Varna, joskus 70-luvulla' });
+  try {
+    const natiivi = () => worker.fetch(new Request('https://pollo.example/', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json', 'cf-connecting-ip': '203.0.113.7',
+        'x-matkakirja-natiivi': 'app.matkakirja.proto3d', 'user-agent': 'Matkakirja/1 (app.matkakirja.proto3d)',
+      },
+      body: runko,
+    }), env, {});
+    const selain = () => worker.fetch(new Request('https://pollo.example/', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'cf-connecting-ip': '203.0.113.7', origin: 'https://matkakirja.app' },
+      body: runko,
+    }), env, {});
+    const eka = await natiivi();
+    assert.equal(eka.status, 200, 'natiivin sähketuomio vastaa');
+    assert.deepEqual(await eka.json(), { tulkittu: true, kohde: true, vuosi: false });
+    assert.equal(eka.headers.get('access-control-allow-origin'), null, 'natiiville ei kaiuteta originia');
+    assert.equal((await selain()).status, 200, 'sama IP selaimesta');
+    assert.equal((await natiivi()).status, 429, 'päiväraja yhteinen: kolmas tuomio samasta IP:stä torjutaan');
+  } finally {
+    globalThis.fetch = alkuperainen;
+  }
+});
+
+test('worker: natiivin chat kuluttaa samaa 30/vrk per IP -rajaa kuin selain', async () => {
+  const { default: worker } = await import('../tools/pollo/worker.js');
+  const kvData = new Map();
+  const kv = { get: async (k) => kvData.get(k) ?? null, put: async (k, v) => { kvData.set(k, v); } };
+  const env = {
+    ANTHROPIC_API_KEY: 'testiavain', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KV: kv, POLLO_PAIVARAJA: '2',
+  };
+  const alkuperainen = globalThis.fetch;
+  globalThis.fetch = async () => new Response(JSON.stringify({ content: [{ type: 'text', text: 'Pariisi on Ranskan pääkaupunki.' }] }),
+    { status: 200, headers: { 'content-type': 'application/json' } });
+  try {
+    const natiivi = () => worker.fetch(new Request('https://pollo.example/', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json', 'cf-connecting-ip': '203.0.113.9',
+        'x-matkakirja-natiivi': 'app.matkakirja.proto3d', 'user-agent': 'Matkakirja/1 (app.matkakirja.proto3d)',
+      },
+      body: JSON.stringify({ kysymys: 'Mikä on Pariisi?' }),
+    }), env, {});
+    const selain = () => worker.fetch(new Request('https://pollo.example/', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'cf-connecting-ip': '203.0.113.9', origin: 'https://matkakirja.app' },
+      body: JSON.stringify({ kysymys: 'Mikä on Pariisi?' }),
+    }), env, {});
+    assert.equal((await natiivi()).status, 200, 'natiivin chat vastaa');
+    assert.equal((await selain()).status, 200, 'sama IP selaimesta');
+    assert.equal((await natiivi()).status, 429, 'päiväraja yhteinen: kolmas pyyntö samasta IP:stä torjutaan');
+  } finally {
+    globalThis.fetch = alkuperainen;
+  }
 });

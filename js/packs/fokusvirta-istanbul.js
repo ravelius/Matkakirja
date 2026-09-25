@@ -183,24 +183,100 @@ export const FOKUSVIRTA_ISTANBUL = {
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
-    paikkarivi: 'Konstantinopoli, syyskuussa 1873. Sumua salmella; '
-      + 'sarvet soivat.',
-    teksti: 'Hippodromin laidalla seisoo pronssipylväs, jollaisen näin '
-      + 'piirroksissa Delfoissa — keisari siirsi sen tänne puolitoista '
-      + 'vuosituhatta sitten. Kolmen käärmeen päät ovat poissa. Vartija '
-      + 'kohautti olkiaan: kaupunki ottaa mitä haluaa, ja pitää minkä '
-      + 'ottaa.',
+    paikkarivi: 'Konstantinopoli, syyskuussa 1873. Sumua salmella; puntari '
+      + 'korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 341 merkkiä (yläraja 400). */
+    teksti: "Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.",
     /*
      * Luenta on kaanonin oma (kohta 1), tunnetageineen. Äänite on
      * generoitu samalla reseptillä kuin Ateenalle
      * (tools/generoi-luennat.mjs), ja kaanon nimeää tiedoston.
      */
-    luenta: '[curious] Hippodromin laidalla seisoo pronssipylväs, '
-      + 'jollaisen näin piirroksissa Delfoissa — keisari siirsi sen tänne '
-      + 'puolitoista vuosituhatta sitten. [whispers] Kolmen käärmeen päät '
-      + 'ovat poissa. [softly] Vartija kohautti olkiaan: kaupunki ottaa '
-      + 'mitä haluaa, ja pitää minkä ottaa.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Alhaalla salmi oli täynnä laivoja" ja kantajan
+     * paluu arkun ääreen (havainto ja selitys).
+     */
+    reaktiot: [
+  {
+    "id": "istanbul.r1",
+    "ankkuri": "kantaja laski arkkuni kivelle",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "istanbul.r2",
+    "ankkuri": "pian mäen voisi nousta istualtaan",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "istanbul.r3",
+    "ankkuri": "paljon työtä työn välttämiseksi",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "istanbul.r4",
+    "ankkuri": "Sitten yritin nostaa arkkuni",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "istanbul.r5",
+    "ankkuri": "Annoin hänen levätä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. [softly] Sitten yritin nostaa arkkuni. Annoin hänen levätä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-istanbul.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-istanbul-r20260909-paper-v4;
+     * SHA-256 fd53e0b7288f6df4c5f479577f7f36b839a60a308757b0f9fab428851ddf973c;
+     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
+     * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
+     * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
+     * toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-istanbul-r20260909-paper-v4.jpg',
+      // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
+      // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
+      lyhyt: 'Konstantinopoli, 1873. Kantajan tauko ja mäen koko paino.',
+      selite: 'Kantaja antoi Galatan mäen odottaa ja lepäsi arkkunsa vieressä, kun sataman mastot täyttivät näkymän alhaalla. Tuleva tunneli lupasi istumapaikan mäen läpi; toivoin sitä myös hänen kuormalleen.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+      'https://www.metmuseum.org/art/collection/search/263021',
+      'https://archives.saltresearch.org/handle/123456789/204674',
+      ],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-istanbul-r20260911-paper2-v1.jpg",
+      lyhyt: "Konstantinopoli, 1873. Kantaja ehti matkaan ennen kuin mastot tulivat lasketuiksi.",
+      selite: 'Aloin laskea Galatan mäeltä näkyviä mastoja, mutta kantaja nosti arkun selkäänsä ja lähti. Hän ehti alas ennen varmaa lukua, ja satama kasvatti sillä välin omaansa.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.metmuseum.org/art/collection/search/263021","https://archives.saltresearch.org/handle/123456789/204674"],
+    },
     /*
      * AIKALAISPIIRROS, HAETTU JA VARMENNETTU ERIKSEEN (ks. tiedoston
      * alku). Commonsin imageinfo 25.8.2026: 800×591, public domain
@@ -220,6 +296,7 @@ export const FOKUSVIRTA_ISTANBUL = {
      */
     kuva: {
       tiedosto: 'At Meydani square, Hippodrome of Constantinople, Serpent Column, Obelisk of Theodosius - Aubry de la Mottraye, Constantinople, 1727.jpg',
+      lyhyt: 'At Meydanın aukio hippodromilla de La Motrayen kuvassa 1727: Käärmepylväs ja obeliski.',
       selite: 'At Meydanın aukio entisellä hippodromilla ranskalaisen '
         + 'matkaajan Aubry de La Motrayen kuvassa vuodelta 1727. Aukiolla '
         + 'näkyvät Käärmepylväs ja Theodosiuksen obeliski.',
@@ -264,6 +341,27 @@ export const FOKUSVIRTA_ISTANBUL = {
    */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era01; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-istanbul-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-istanbul-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Istanbul: mäen voi voittaa myös istumalla.',
+        selite: 'Galatan mäkeä kiivetään yhä päivän kuormien kanssa, vaikka Tünel kuljettaa matkustajia maan alla. Lepäävä lähettikuljettaja tiesi saman kuin isoisän kantaja: välillä mäen on annettava odottaa.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.metro.istanbul/en/Hatlarimiz/HatDetay?hat=T1',
+          'https://visit.istanbul/galata-tower',
+          'https://commons.wikimedia.org/wiki/Category:Galata_Tower_from_the_B%C3%BCy%C3%BCk_Hendek_Street',
+          'https://commons.wikimedia.org/wiki/File:Galata_Kulesi_Street,_viewed_from_Galata_Tower_in_2024.jpg',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS + SIVUPOLKU (Fablen kaanon 27.8.2026,
      * TUURAAJA-KEHYS). Tämä on se yksi kuudesta, jossa Livia ajautuu
      * sivupolulle: hän aloittaa maadoituksesta, karkaa suvun
@@ -290,19 +388,33 @@ export const FOKUSVIRTA_ISTANBUL = {
      * asiaan. Pois jäi isoäidin kolme ohilaukausta — sivupolku kestää
      * kaksi esimerkkiä yhtä hyvin kuin kolme.
      */
-    maadoitus: 'Vartija sanoo ton jokaiselle, joka pysähtyy pylvään '
-      + 'kohdalle ennen puoltapäivää. Ja mitä ottamiseen tulee — meidän '
-      + 'sukua on otettu ja pidetty kaksituhatta vuotta, eikä siitä ole '
-      + 'sepitetty yhtään aforismia. Isoäitini kantoi mikrofilmiä saarretun '
-      + 'Pariisin yli. Setäni vei pörssikursseja Aachenista Brysseliin, ja '
-      + 'hänet korvattiin kuparilangalla. Meidän puolesta ei kukaan '
-      + 'kohautellut olkiaan kauniisti. — Niin. Se pylväs. Se seisoo yhä '
-      + 'siin, mihin se aikanaan siirrettiin. Se oli tän pointti.',
-    teksti: 'Pylväästä puuttuu kolme päätä, ja yks niistä makaa '
-      + 'parinsadan metrin päässä museossa. Pylvään jalusta kaivettiin '
-      + 'esiin 1855. Paikalla minä en ollut, mut sukuni kantoi siihen '
-      + 'aikaan uutisia Aachenista Brysseliin — uutisen kulusta minä siis '
-      + 'tiedän jotain.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Tünel kulkee yhä mäen alla. Minä kuljen yllä! Kisasin vaunun kanssa. Voitin, mutta matkustajat eivät hengästyneet. Myönnetään: kätevä laite."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*
      * Commons (takyt-istanbul.md, täky 1, varmennettu 25.8.2026):
      * 640×480, CC BY-SA 4.0, Gryffindor. Juuri se säilynyt käärmeenpää,
@@ -362,6 +474,7 @@ export const FOKUSVIRTA_ISTANBUL = {
         + 'Vuonna 1855 pylvään jalusta kaivettiin esiin, ja kierteistä '
         + 'paljastui kaiverrus: kolmenkymmenenyhden kreikkalaisen '
         + 'kaupungin nimet.',
+      lahde: 'en-Wikipedia "Serpent Column". Tarkistettu 1.9.2026.',
       /*
        * Commons (takyt-istanbul.md, täky 1, varmennettu 25.8.2026):
        * 1521×3061, public domain, Gryffindor. Pystykuva pylväästä
@@ -369,6 +482,7 @@ export const FOKUSVIRTA_ISTANBUL = {
        */
       kuva: {
         tiedosto: 'Snake column Hippodrome Constantinople 2007.jpg',
+        lyhyt: 'Käärmepylväs Sultanahmetin aukiolla: kiertyneistä pronssikäärmeistä tehty, seissyt vuodesta 324.',
         selite: 'Käärmepylväs Sultanahmetin aukiolla. Kiertyneistä '
           + 'pronssikäärmeistä tehty pylväs on seissyt kaupungissa '
           + 'vuodesta 324.',
@@ -415,6 +529,8 @@ export const FOKUSVIRTA_ISTANBUL = {
         + 'nousevat yhä hänen mukaansa nimetyt, 1870-luvulla rakennetut '
         + 'portaat siltä kadulta, jolla hän asui, sille kadulle, jolla '
         + 'hän teki työnsä.',
+      lahde: 'en-Wikipedia "Abraham Salomon Camondo" ja en-Wikipedia "Camondo '
+        + 'Stairs". Tarkistettu 1.9.2026.',
       /*
        * Commons (takyt-istanbul.md, täky 7, varmennettu 25.8.2026):
        * 2565×2388, public domain, muotokuva noin vuodelta 1860 — eli
@@ -422,6 +538,7 @@ export const FOKUSVIRTA_ISTANBUL = {
        */
       kuva: {
         tiedosto: 'Abraham Salomon de Camondo.jpg',
+        lyhyt: 'Kreivi Camondo noin 1860; ottomaanihallituksen pankkiiri ja juutalaisyhteisön patriarkka.',
         selite: 'Kreivi Abraham Salomon Camondo noin vuonna 1860. Hän oli '
           + 'ottomaanihallituksen pankkiiri ja kaupungin juutalaisen '
           + 'yhteisön patriarkka.',
@@ -473,6 +590,7 @@ export const FOKUSVIRTA_ISTANBUL = {
         + 'kunnalla on kissoille oma eläinlääkintäosastonsa ja ilmainen '
         + 'sterilointi, ja kun yksityisklinikka hoitaa katukissan '
         + 'alennushintaan, naapurit jakavat laskun keskenään.',
+      lahde: 'en-Wikipedia "Cats in Istanbul". Tarkistettu 1.9.2026.',
       /*
        * Commons (takyt-istanbul.md, täky 16, varmennettu 25.8.2026):
        * 4000×3000, CC BY-SA 4.0, Matti Blume, 2019. Saman kuvaajan
@@ -713,6 +831,24 @@ export const FOKUSVIRTA_ISTANBUL = {
         + 'osoitti myöhemmin Troija VI:n todennäköisemmäksi, ja '
         + 'Schliemann oli yksityisesti samaa mieltä. Hän ei koskaan '
         + 'julkaissut sitä.',
+      /*
+       * LÄHDERIVI LISÄTTY 1.9.2026 (nostojen sisältöaudit). Kortti oli
+       * yksi viidestä täkynostosta ilman `lahde`-riviä, vaikka
+       * faktapohja oli tarkistettu työaineistoon asti — Perustuslain
+       * totuudellisuuspilari edellyttää, että pelaaja näkee lähteen.
+       * Väitteet ja niiden osiot: kaivausmenetelmien arvostelu jo
+       * omana aikanaan ("Heinrich Schliemann"), Troija III–V:n
+       * tuhoutuminen dokumentoimatta ("Troy III–V") ja Dörpfeldin
+       * Troija VI sekä Schliemannin yksityinen myöntyminen, jota hän
+       * ei julkaissut ("Wilhelm Dörpfeld").
+       *
+       * TYÖNJAKO KAHDEN KREIKAN SCHLIEMANN-KORTIN KANSSA: tämä on
+       * KAIVAUS, Ateenan syvennystäky on TALO ja Kreikan täkynosto
+       * `sofia-korut` on SEURAUKSET (js/fokusnosto.js NOSTO_MAAT.GRC).
+       */
+      lahde: 'en-Wikipedia "Troy", osiot "Heinrich Schliemann", "Troy III–V" ja '
+        + '"Wilhelm Dörpfeld" (tarkistettu 25.8.2026; lähderivi kirjattu korttiin '
+        + '1.9.2026).',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
        * areenalla ja Kreikan kahdella nostolla): repon oma generoitu

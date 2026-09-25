@@ -1,0 +1,722 @@
+import { html } from './ui-apurit.js';
+import { julisteUrl, asetaKuva, haeSaapumispuhe } from './media.js';
+import { soitaSaapumispuhe, pysaytaSaapumispuhe } from './luenta.js';
+import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
+import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
+import { ISKULAUSEET } from './packs/iskulauseet.js';
+import { ilmoitaLivianTilanne } from './livia-tilanteet.js';
+import { sfx } from './sound.js';
+
+/*
+ * KAUPUNGIN MINITRAILERI — kolme herokuvaa ja nimi ennen isoisän ääntä.
+ *
+ * Raamattu: SAAPUMISEN UUSI JARJESTYS: KAUPUNGIN MINITRAILERI, ISOT
+ * KUVAT KESKELLA, LYHENNETTY MERKINTA (omistaja 11.9.2026 klo 12.40,
+ * sanatarkasti: *"kun saavutaan uuteen kaupunkiin niin ennen kuin
+ * matkakirjan luenta alkaa naytolle tulee samaan tapaan kuin
+ * matkakirjan kuvat kolme hero kuvaa kaupunki lehdesta nopeilla 2sek
+ * vaihtovaleilla siten etta kuvien paalle animoidaan kaupungin nimi
+ * harvennetuilla kapitaaleilla kirjain kerrallaan nakyville. … Jos
+ * mahdollista kirjaimet voisivat lentaa ruudun keskelta kaukaa
+ * horisontista tullen oikeille paikoilleen kuin kaukaisuudesta ammutut
+ * kirjaimet. Kun kuvat ovat ohi ne voisivat syoksya samaa lentorataa
+ * kaikki lahes yhtaaikaa samaa lentoreittia ulos ruudusta. … Ne kolme
+ * kuvaa voisivat liukua oikealta vasemmalle pysahtyen keskelle ruutua
+ * kahden sekunnin ajaksi. Liut menisi tutulla nopeutus hidastus
+ * kiihdytyksilla"*).
+ *
+ * KOLME ASIAA, JOTKA EIVÄT NÄY DIFFISTÄ:
+ *
+ *  1. KUVAT OVAT LEHDEN OMAT, EIVÄT UUSI KUVASTO. Trailerin kuvat ovat
+ *     kaupunkilehden avauskuvat (kulttuuri-kategoriat, kansilohko
+ *     `avauskuvat`) ja niiden puuttuessa kansikuvat — sama kuvasto,
+ *     sama osoiteporrastus (ämpäri tai Commons) kuin lehdellä
+ *     (js/lehti.js piirraLehtiKuvat). Kuvaton kaupunki ei saa traileria
+ *     eikä sen saapuminen muutu millään tavalla.
+ *
+ *  2. LUPAUS ON SOPIMUS KUTSUJAN KANSSA. Kirjoituskone, luenta,
+ *     välihuuto ja luentakuva alkavat VASTA kun tämä lupaus ratkeaa
+ *     (js/ui.js renderFact) — muuten kertoja puhuisi trailerin alta.
+ *     Lupaus ratkeaa myös ohituksesta ja siivouksesta, jottei mikään
+ *     jää odottamaan traileria, joka on jo poissa.
+ *
+ *  3. TEHOSTEET, ISKULAUSE JA PULUN TILANNETAPAHTUMAT OVAT SAMAA
+ *     TILAUSTA (Raamattu: MINITRAILERIN LISAYKSET: PULUN VAISTO,
+ *     KAMERAN KLIK, SUHINA JA ISKULAUSE, omistaja 11.9.2026 klo 12.55,
+ *     sanatarkasti: *"Kirjainten tullessa pulu voisi tehda
+ *     vaistoliikkeen pois ruudulta ja palata varovaisen tunnustellen
+ *     takaisin naytolle kun isoisan kertomus alkaa. … Kuville tarvitaan
+ *     kameran KLIK aani tehoste ja kirjaimille jokin lento suhina
+ *     efekti. Kaupungin nimen alle voisi feidautua kaupungin isku
+ *     lause"*). Pulun oma vaisto on tekstisession puolella: traileri
+ *     vain KERTOO tilanteensa (ilmoitaLivianTilanne 'trailer'), eikä
+ *     tiedä mitään pulun eleistä.
+ *
+ *  5. SAAPUMISÄÄNI ON HORATION YKSIN (omistaja 15.9.2026: *"Kokeile
+ *     tehdä pelkästään isoisän äänellä… Nyt hyvä. Tee kaikkiin ja vie
+ *     peliin"*). Kun nimi lähtee lentoon, isoisä sanoo kaupungin nimen
+ *     ja nykyisen iskulauseen YHTENÄ ottona (js/packs/saapumispuheet.js,
+ *     soitto js/luenta.js soitaSaapumispuhe). Pulu ei puhu eikä näy
+ *     saapumisäänessä, eikä traileriin tullut omaa Audio-koneistoa.
+ *     Matkakirjaluenta odottaa puheen loppuun: trailerin LUPAUS (kohta
+ *     2) ratkeaa vasta kun puhe on ohi — tai heti, jos pelaaja ohittaa.
+ *
+ *  4. LIIKE ON VAIN TRANSFORMIA JA OPACITYÄ. Sama sääntö kuin kartan
+ *     kamera-ajossa ja kuvasuurennoksessa: asettelu tehdään kerran ja
+ *     liike jätetään kompositorille. Kirjainten lento on perspektiivi-
+ *     kehyksen sisällä translate3d:llä, jolloin ne suurenevat
+ *     perspektiivin mukaan lähestyessään ilman omaa skaalauslaskua.
+ */
+
+/** Kuinka monta kuvaa traileriin enintään otetaan. */
+/**
+ * Rungon luokka trailerin ajan: matkakirjapaneeli ja pulun puhekupla
+ * piiloon (css/saapumistraileri.css). Ks. naytaSaapumistraileri.
+ */
+export const TRAILERIN_RUNKOLUOKKA = 'saapumistraileri-paalla';
+
+export const TRAILERIN_KUVIA = 3;
+
+/** Kuvan liuku sisään ruudun oikealta reunalta (ms). */
+export const TRAILERIN_LIUKU_MS = 700;
+/** Kuinka kauan kuva seisoo keskellä (ms). */
+export const TRAILERIN_PYSAHDYS_MS = 2000;
+/** Kuvan liuku ulos vasemmalle (ms). */
+export const TRAILERIN_ULOS_MS = 600;
+/** Kuinka paljon seuraava kuva limittyy edellisen lähtöön (ms). */
+export const TRAILERIN_LIMITYS_MS = 200;
+
+/** Kirjainten porrastus sisään lennettäessä (ms). */
+export const NIMEN_PORRAS_MS = 90;
+/** Yhden kirjaimen lento horisontista (ms). */
+export const NIMEN_LENTO_MS = 650;
+/** Kirjainten porrastus ulos syöksyttäessä (ms). */
+export const NIMEN_ULOS_PORRAS_MS = 20;
+/** Kirjainten syöksy katsojan ohi ulos ruudusta (ms). */
+export const NIMEN_ULOS_MS = 450;
+
+/** Iskulauseen häivytys näkyviin viimeisen kirjaimen laskeuduttua (ms). */
+export const ISKULAUSEEN_VIIVE_MS = 500;
+/** Iskulauseen oma häivytys (ms) — se ei lennä, se vain feidaa. */
+export const ISKULAUSEEN_FEIDI_MS = 600;
+
+/**
+ * Kauanko lupaus korkeintaan odottaa saapumispuheen loppua (ms).
+ *
+ * VARMUUSRAJA, EI AJASTUS: pisin otto on 5,6 s, joten tähän ei osuta
+ * kuin silloin kun soitin jää jumiin (verkko poikki kesken latauksen).
+ * Ilman rajaa matkakirjaluenta jäisi odottamaan 'ended'-tapahtumaa,
+ * jota ei tule.
+ */
+export const SAAPUMISPUHEEN_KATTO_MS = 20000;
+
+/** Ohituksen häivytys (ms). */
+export const TRAILERIN_OHITUS_MS = 200;
+
+/** Yhden kuvan oma vuoro: sisään, seisonta ja seuraavan limitys. */
+const KUVAN_VUORO_MS = TRAILERIN_LIUKU_MS + TRAILERIN_PYSAHDYS_MS;
+
+/**
+ * Trailerin kokonaiskesto annetulle kuvamäärälle (ms).
+ *
+ * Testin ja kutsujan on voitava laskea sama luku kuin moduulin
+ * ajastimien — siksi kesto on funktio eikä käsin kirjoitettu vakio.
+ */
+export function trailerinKesto(kuvia) {
+  const n = Math.max(0, Number(kuvia) || 0);
+  return n ? n * KUVAN_VUORO_MS + TRAILERIN_ULOS_MS : 0;
+}
+
+/*
+ * Onko liike vähennetty (sama tarkistus kuin fokusvirran suurennoksella).
+ * Nimet ovat tässä moduulissa omat (traileri-etuliite), koska yhden
+ * tiedoston versio ketjuttaa moduulit samaan näkyvyysalueeseen eikä
+ * kahta samannimistä ylätason julistusta saa olla
+ * (tools/tarkista-niputus.mjs sääntö 1).
+ */
+function trailerinLiikeVahennetty() {
+  return Boolean(globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
+}
+
+/**
+ * TRAILERIN KUVAT: AVAUSKUVAT ENSIN, KANSIKUVAT VARALLA.
+ *
+ * Avauskuvat ovat lehden yleisnäkymiä ("laadukas vaakakuva jossa näkyy
+ * itse kaupunkia enemmän", omistaja 15.8.2026) ja siksi juuri sitä,
+ * mitä minitraileri tarvitsee. Kaupungit, joille avauskuvia ei ole
+ * vielä tehty, saavat trailerin kansikuvista; ilman kumpiakaan
+ * traileria ei ole.
+ *
+ * @param {{id:string}} city
+ * @returns {Array<object>} enintään kolme kuvaa
+ */
+export function trailerinKuvat(city) {
+  const kategoriat = KULTTUURI_KATEGORIAT[city?.id] ?? [];
+  const kansi = [...kategoriat].find((k) => k?.id === 'kaupunki') ?? null;
+  const avaus = Array.isArray(kansi?.avauskuvat) ? kansi.avauskuvat : [];
+  const kannet = Array.isArray(kansi?.kansikuvat) ? kansi.kansikuvat : [];
+  const lista = avaus.length ? avaus : kannet;
+  return lista.slice(0, TRAILERIN_KUVIA);
+}
+
+/** Kuvan osoite samasta porrastuksesta kuin lehden herokuvilla. */
+function trailerinKuvanOsoite(kuva) {
+  return kuva?.ampari ? julisteUrl(kuva.ampari) : valokuvaUrl(kuva?.tiedosto, 1280);
+}
+
+/** Kuvan varareitti (vain Commonsin tiedostolla on sellainen). */
+function trailerinKuvanVara(kuva) {
+  return kuva?.ampari ? null : valokuvaVara(kuva?.tiedosto, 1280);
+}
+
+/**
+ * Kaupungin nimi kirjain kerrallaan omiin spaneihinsa.
+ *
+ * Välilyönti on oma spaninsa eikä tyhjä merkki: harvennetuissa
+ * kapitaaleissa sanaväli on muuten olematon, ja kirjainten porrastus
+ * lasketaan spanien järjestyksestä.
+ */
+function nimenKirjaimet(nimi) {
+  const kotelo = html('div', 'saapumistraileri-nimi');
+  kotelo.setAttribute('aria-label', String(nimi ?? ''));
+  /*
+   * KIRJAINMÄÄRÄ CSS:LLE: nimi ladotaan yhdelle riville, ja
+   * kirjasinkoko lasketaan sen pituudesta (css/saapumistraileri.css).
+   * Ilman tätä pitkä nimi rivittyi ja viimeinen kirjain putosi omalle
+   * rivilleen (mitattu Chromiumilla 11.9.2026).
+   */
+  kotelo.style.setProperty('--nimen-merkit', String([...String(nimi ?? '')].length || 1));
+  [...String(nimi ?? '')].forEach((merkki, i) => {
+    const span = html('span', merkki.trim() ? 'saapumistraileri-kirjain' : 'saapumistraileri-kirjain saapumistraileri-vali');
+    span.textContent = merkki === ' ' ? ' ' : merkki;
+    span.setAttribute('aria-hidden', 'true');
+    span.style.setProperty('--kirjaimen-viive', `${i * NIMEN_PORRAS_MS}ms`);
+    span.style.setProperty('--kirjaimen-ulosviive', `${i * NIMEN_ULOS_PORRAS_MS}ms`);
+    kotelo.appendChild(span);
+  });
+  return kotelo;
+}
+
+/**
+ * KAUPUNGIN ISKULAUSE NIMEN ALLE (js/packs/iskulauseet.js).
+ *
+ * Puuttuva avain ei ole virhe vaan hiljaisuus: silloin trailerissa on
+ * pelkkä nimi, kuten ennenkin.
+ *
+ * @param {{id:string}} city
+ * @returns {string} iskulause tai tyhjä
+ */
+export function trailerinIskulause(city) {
+  const rivi = ISKULAUSEET[city?.id];
+  return typeof rivi === 'string' ? rivi.trim() : '';
+}
+
+/**
+ * MILLOIN ISKULAUSE FEIDAUTUU: puoli sekuntia VIIMEISEN kirjaimen
+ * laskeuduttua. Viimeinen kirjain lähtee porrastuksensa verran muita
+ * myöhemmin ja lentää oman lentoaikansa — siksi viive lasketaan nimen
+ * pituudesta eikä käsin kirjoitetusta luvusta.
+ *
+ * @param {string} nimi
+ * @returns {number} ms trailerin alusta
+ */
+export function iskulauseenViive(nimi) {
+  const merkkeja = Math.max(1, [...String(nimi ?? '')].length);
+  return (merkkeja - 1) * NIMEN_PORRAS_MS + NIMEN_LENTO_MS + ISKULAUSEEN_VIIVE_MS;
+}
+
+/*
+ * TEHOSTEET SAMALLA PORTILLA KUIN PULUN OMAT ÄÄNET (js/sound.js sfx,
+ * taulu PULUN_TEHOSTEET). Portti kunnioittaa mykistystä, äänitilaa ja
+ * taustataukoa itsestään, ja lataamaton äänite on hiljaisuus eikä
+ * virhe. try/catch on tässä siksi, että traileri on tervehdys: ääni ei
+ * saa koskaan kaataa saapumista (eikä testiajoa, jossa WebAudiota ei
+ * ole).
+ */
+function trailerinTehoste(nimi) {
+  try {
+    sfx.play(nimi);
+  } catch {
+    /* hiljaisuus riittää */
+  }
+}
+
+/**
+ * KAMERAN LAUKAISIMEN KLIK yhdelle keskelle pysähtyneelle kuvalle.
+ *
+ * Sama tehoste soi trailerin kolmelle kuvalle ja isoisän/PuluCamin
+ * isolle kuvasarjalle (js/fokusvirta.js), joten portti on yksi ja
+ * sama — omistaja tilasi KLIKin "kuville", ei yhdelle näkymälle.
+ */
+export function soitaKameranKlik() {
+  trailerinTehoste('pulu.kamera-klik');
+}
+
+/** Kirjainten lennon suhina (sisään kerran, ulos kerran). */
+function soitaKirjaintenSuhina() {
+  trailerinTehoste('pulu.kirjain-suhina');
+}
+
+/** Trailerin oma tyylitiedosto sivulle (sama kaava kuin fokusvirralla). */
+const TRAILERIN_TYYLIN_TUNNUS = 'saapumistraileri-tyyli';
+
+function lataaTrailerinTyyli() {
+  if (typeof document === 'undefined') return;
+  if (document.getElementById(TRAILERIN_TYYLIN_TUNNUS)) return;
+  const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
+  // Yhden tiedoston versiossa tyylit ovat jo sivun <style>-lohkossa.
+  if (!peruslinkki) return;
+  const linkki = document.createElement('link');
+  linkki.id = TRAILERIN_TYYLIN_TUNNUS;
+  linkki.rel = 'stylesheet';
+  linkki.href = new URL('saapumistraileri.css', peruslinkki.href).href;
+  document.head.appendChild(linkki);
+}
+
+/**
+ * TRAILERI POIS — ohitus, kaupungin vaihto ja laudan vaihto.
+ *
+ * Kehittäjän hyppy kaupungista toiseen ei saa jättää traileria
+ * ruudulle, joten tämä on se yksi siivouskohta, jota fokusvirran
+ * poistumistiet kutsuvat (suljeFokusvirta, piilotaLuentakuva).
+ *
+ * @returns {boolean} oliko traileri ruudulla
+ */
+export function piilotaSaapumistraileri(ui, { peru = false, odotaPuhe = false } = {}) {
+  const tila = ui?.saapumistraileri;
+  /*
+   * Luokka pois myös silloin, kun tilaa ei enää ole: se on ruudun
+   * näkyvä tila eikä saa jäädä roikkumaan yhdessäkään haarassa.
+   * Poistumistiet kutsutaan myös ilman DOMia (yksikkötestit kutsuvat
+   * vaiennaLivianKaupunkipuheen kautta), joten haku on varovainen.
+   */
+  globalThis.document?.body?.classList?.remove?.(TRAILERIN_RUNKOLUOKKA);
+  if (!tila) return false;
+  ui.saapumistraileri = null;
+  for (const t of tila.ajastimet) clearTimeout(t);
+  tila.irrota?.();
+  tila.kehys?.remove?.();
+  /*
+   * LOPPU ILMOITETAAN TASAN KERRAN (sopimus tekstisession kanssa).
+   * Kaikki kolme poistumistietä — traileri loppuun asti, napautuksen
+   * ohitus ja kaupungin vaihdon siivous — kulkevat tämän saman
+   * funktion kautta, joten portti kuuluu tänne eikä kutsupaikkoihin.
+   */
+  /*
+   * PERU EROTETAAN LOPUSTA (tekstisession pyyntö 11.9.2026): kaupungin
+   * vaihto, virran sulkeminen tai tuho keskeyttää esityksen, eikä pulun
+   * 3 s:n varapaluu saa ilmestyä uuteen kaupunkiin vanhasta trailerista.
+   * Pelaajan napautusohitus on tavallinen loppu. Sama tunnus kaikissa
+   * vaiheissa; vanhan tunnuksen loppu ei vaikuta uudempaan.
+   */
+  if (!tila.loppuIlmoitettu) {
+    tila.loppuIlmoitettu = true;
+    ilmoitaLivianTilanne('trailer', {
+      vaihe: peru ? 'peru' : 'loppu', tunnus: tila.tunnus, kaupunki: tila.kaupunki,
+    });
+  }
+  /*
+   * MATKAKIRJALUENTA ALKAA VASTA SAAPUMISPUHEEN JÄLKEEN.
+   *
+   * Luonnollisessa kulussa (odotaPuhe) kuvat ja nimi ovat jo poissa,
+   * mutta isoisä voi olla vielä kesken lauseen: lupaus jää odottamaan
+   * puheen omaa 'ended'-tapahtumaa, eikä puhetta leikata kellon
+   * perusteella. Kaikissa muissa poistumisteissä — napautusohitus,
+   * kaupungin vaihto, virran sulkeminen — puhe vaietaan heti, koska
+   * pelaaja on jo lähtenyt tästä hetkestä.
+   */
+  if (odotaPuhe && tila.puheKesken) {
+    const katko = setTimeout(() => {
+      tila.puheKesken = false;
+      tila.puheValmis = null;
+      pysaytaSaapumispuhe(ui);
+      tila.ratkaise?.(true);
+    }, SAAPUMISPUHEEN_KATTO_MS);
+    tila.puheValmis = () => {
+      clearTimeout(katko);
+      tila.ratkaise?.(true);
+    };
+    return true;
+  }
+  pysaytaSaapumispuhe(ui);
+  // Lupaus ratkeaa aina: kutsuja odottaa sitä ennen luentaa.
+  tila.ratkaise?.(true);
+  return true;
+}
+
+/**
+ * KUVAN OMA KUVASUHDE KOTELON MUUTTUJAAN (--traileri-kuvasuhde).
+ *
+ * Luku kirjoitetaan heti, jos kuva on jo välimuistissa, ja uudestaan
+ * latauksen valmistuttua. Varareitin kuva laukaisee oman load-tapahtumansa,
+ * joten kuuntelija jää paikalleen koko trailerin ajaksi.
+ *
+ * @param {HTMLElement} kotelo
+ * @param {HTMLImageElement} img
+ * @returns {() => void} sama merkintä uudelleen ajettavaksi (paluuvahti)
+ */
+function merkitseKuvasuhde(kotelo, img) {
+  const merkitse = () => {
+    const leveys = Number(img.naturalWidth) || 0;
+    const korkeus = Number(img.naturalHeight) || 0;
+    if (!leveys || !korkeus) return;
+    kotelo.style.setProperty('--traileri-kuvasuhde', String(leveys / korkeus));
+  };
+  img.addEventListener('load', merkitse);
+  merkitse();
+  return merkitse;
+}
+
+/**
+ * RUUDUN OIKEA MITTA PIKSELEINÄ — EI vw/vh.
+ *
+ * JUURISYY (omistaja 11.9.2026 klo 23.18, iPad-kaappaus Bukarestin
+ * trailerista, sanatarkasti: *"Nyt taas näkyy kuvat pienempänä vaikka
+ * välissä näkyi isompana. Syy on ilmeisesti siinä jos käyn toisessa
+ * apissa ja palaan matkakirjaan niin sitten kuvien koko muuttuu
+ * pienemmäksi"*).
+ *
+ * WKWebView jättää toisesta sovelluksesta palatessa ASETTELUVIEWPORTIN
+ * vanhaan, kapeampaan mittaan, kunnes joku pakottaa laskennan uusiksi.
+ * Sama vika on raportoitu ja paikattu pelissä jo kolmesti muualla
+ * (js/ui.js mittaaNakyma 13.8.2026, vahdiNakymanKokoa 18.8.2026 ja
+ * 23.8.2026) — ja juuri siksi lehti ja kartta MITTAAVAT näkymänsä
+ * sen sijaan että luottaisivat vw/vh-yksiköihin. Traileri oli ainoa
+ * koko ruudun päällys, joka luotti: `96vw` on 96 % VIEWPORTISTA, ei
+ * ruudusta, joten vanhentunut viewportti kutisti koko trailerin.
+ *
+ * Mittaus on sama ristiintarkistus kuin js/ui.js:ssä: zoomaamattomana
+ * visuaalinen viewportti kertoo laitteen todellisen koon, ja suurempi
+ * kahdesta voittaa — vanhentunut asetteluviewportti on aina PIENEMPI
+ * kuin ruutu. Nipistyszoomissa (scale ≠ 1) visuaalinen mitta on
+ * tarkoituksella pienempi, joten se jätetään silloin huomiotta.
+ *
+ * @param {object} [ikkuna] vain testejä varten
+ * @returns {{leveys:number, korkeus:number}} 0 = ei kelvollista mittaa
+ */
+export function trailerinNakyma(ikkuna = globalThis) {
+  const juuri = ikkuna?.document?.documentElement ?? null;
+  const nakyva = ikkuna?.visualViewport ?? null;
+  const zoomaton = !nakyva || Math.abs((nakyva.scale ?? 1) - 1) < 0.05;
+  const asetteluL = Math.round(Number(juuri?.clientWidth) || 0);
+  const asetteluK = Math.round(Number(juuri?.clientHeight) || 0);
+  const visuaaliL = Math.round(
+    (zoomaton ? Number(nakyva?.width) || 0 : 0) || Number(ikkuna?.innerWidth) || 0);
+  const visuaaliK = Math.round(
+    (zoomaton ? Number(nakyva?.height) || 0 : 0) || Number(ikkuna?.innerHeight) || 0);
+  return {
+    leveys: Math.max(asetteluL, visuaaliL),
+    korkeus: Math.max(asetteluK, visuaaliK),
+  };
+}
+
+/**
+ * MITATTU RUUTU TRAILERIN MUUTTUJIIN (css/saapumistraileri.css).
+ *
+ * Kaikki trailerin mitat — päällyksen koko, kuvan katot, nimen
+ * kirjasinkoko ja liukujen matka — lasketaan näistä kahdesta luvusta,
+ * joten yksi kirjoitus riittää koko esitykseen. Mittaamaton ruutu
+ * (0 × 0, esimerkiksi testin DOM-mallissa) jätetään kirjoittamatta:
+ * silloin css:n oma vw/vh-varamitta jää voimaan.
+ *
+ * @param {HTMLElement} kehys
+ * @returns {boolean} kirjoitettiinko mitta
+ */
+export function paivitaTrailerinMitat(kehys, ikkuna = globalThis) {
+  const { leveys, korkeus } = trailerinNakyma(ikkuna);
+  if (!kehys?.style || !leveys || !korkeus) return false;
+  kehys.style.setProperty('--traileri-ruutu-leveys', `${leveys}px`);
+  kehys.style.setProperty('--traileri-ruutu-korkeus', `${korkeus}px`);
+  return true;
+}
+
+/**
+ * MINITRAILERI RUUDULLE (js/ui.js renderFact, ennen kirjoituskonetta).
+ *
+ * @param {object} ui
+ * @param {{id:string, name:string}} city
+ * @returns {Promise<boolean>} ratkeaa kun traileri on ohi tai ohitettu;
+ *   false = traileria ei ollut (ei kuvia tai ei dokumenttia)
+ */
+export function naytaSaapumistraileri(ui, city) {
+  if (typeof document === 'undefined' || !ui || !city) return Promise.resolve(false);
+  piilotaSaapumistraileri(ui);
+  /*
+   * EDELLISEN KAUPUNGIN PUHE VAIKENEE AINA. Puhe voi elää trailerinsa
+   * jälkeen (lupaus odottaa sen loppua), joten kehittäjän hyppy tai
+   * nopea kaupunginvaihto ei saa jättää vanhaa nimeä soimaan uuden
+   * kaupungin päälle.
+   */
+  pysaytaSaapumispuhe(ui);
+  const kuvat = trailerinKuvat(city);
+  if (!kuvat.length) return Promise.resolve(false);
+  lataaTrailerinTyyli();
+
+  const vahennetty = trailerinLiikeVahennetty();
+  const kehys = html('div', vahennetty
+    ? 'saapumistraileri liike-vahennetty' : 'saapumistraileri');
+  kehys.setAttribute('role', 'presentation');
+  const kuvatila = html('div', 'saapumistraileri-kuvat');
+  const ajastimet = [];
+
+  /*
+   * RUUDUN MITTA HETI ENSIMMÄISEEN PIIRTOON. Ilman tätä ensimmäinen
+   * ruutu piirtyisi css:n vw/vh-varamitalla — eli juuri sillä
+   * vanhentuneella viewportilla, jota vastaan tämä on tehty.
+   */
+  paivitaTrailerinMitat(kehys);
+  const kuvasuhteet = [];
+
+  const kuvaKotelot = kuvat.map((kuva) => {
+    const kotelo = html('div', 'saapumistraileri-kuva');
+    const img = document.createElement('img');
+    img.decoding = 'async';
+    img.draggable = false;
+    img.alt = '';
+    asetaKuva(img, trailerinKuvanOsoite(kuva), trailerinKuvanVara(kuva));
+    /*
+     * KUVASUHDE CSS:LLE (omistaja 11.9.2026 klo 22.26: *"herokuva on
+     * yhä liian pieni"*). Css laskee kuvan leveyden pienempänä kahdesta
+     * — leveyskatto tai korkeuskattoon mahtuva leveys — ja tarvitsee
+     * siihen kuvan oman suhteen. Ilman tätä lukua css käyttää lehden
+     * herokuvien 3:2-oletusta, jolloin poikkeava kuva jäisi joko
+     * korkeuskaton yli tai turhan pieneksi.
+     */
+    kuvasuhteet.push(merkitseKuvasuhde(kotelo, img));
+    kotelo.appendChild(img);
+    kuvatila.appendChild(kotelo);
+    return kotelo;
+  });
+  const nimi = nimenKirjaimet(city.name);
+  /*
+   * NIMI JA ISKULAUSE SAMAAN PYSTYRIVIIN. Päällys on keskittävä flex,
+   * joten ilman omaa koteloa iskulause asettuisi nimen VIEREEN eikä
+   * sen alle.
+   */
+  const teksti = html('div', 'saapumistraileri-teksti');
+  teksti.appendChild(nimi);
+  const iskulause = trailerinIskulause(city);
+  const iskurivi = iskulause
+    ? html('div', 'saapumistraileri-iskulause', iskulause) : null;
+  if (iskurivi) {
+    iskurivi.setAttribute('aria-hidden', 'true');
+    teksti.appendChild(iskurivi);
+  }
+  kehys.append(kuvatila, teksti);
+  /*
+   * KOTI ON BODY, EI KARTTAPINTA. Traileri on koko ruudun päällys
+   * (position: fixed), ja karttapinnalla on omat muunnoksensa —
+   * muunnettu esi-isä tekisi fixed-elementistä sen sisäisen, jolloin
+   * traileri asettuisi kartan mukana vinoon eikä ruudun keskelle.
+   */
+  document.body.appendChild(kehys);
+  /*
+   * MATKAKIRJA JA PULUN KUPLA POIS TRAILERIN AJAKSI (omistaja
+   * 20.9.2026 klo 11.15, kaappaus
+   * docs/raportit/kaappaukset/omistaja-20260920/saapuminen-pariisi-v1974.webp).
+   *
+   * Sääntö muuttui: kartta saa jäädä teräväksi, mutta vasemman
+   * yläkulman matkakirjapaneeli ja pulun puhekupla eivät saa näkyä
+   * saapumiskuvien päällä. v1974:ssä molemmat olivat ruudulla koko
+   * trailerin ajan.
+   *
+   * LUOKKA RUNGOLLE, EI TYYLI ELEMENTILLE: piilotus koskee kahta eri
+   * pintaa, joilla on omat elinkaarensa (paneeli piirtyy uudelleen
+   * saapumisessa, kuplapino syntyy ja katoaa pulun tahtiin). Runkoluokka
+   * pätee molempiin riippumatta siitä, kumpi on olemassa juuri nyt, ja
+   * palautuu yhdellä rivillä kaikissa poistumisteissä, koska ne kaikki
+   * kulkevat piilotaSaapumistrailerin kautta.
+   */
+  document.body.classList.add(TRAILERIN_RUNKOLUOKKA);
+
+  let ratkaise = null;
+  const lupaus = new Promise((ok) => { ratkaise = ok; });
+  /*
+   * TUNNUS ON OLIO, EI MERKKIJONO: sama traileri voi alkaa samassa
+   * kaupungissa uudestaan, ja kuulijan (pulun sovitin) on tunnistettava
+   * ALKU ja LOPPU pareiksi ilman laskuria.
+   */
+  const tunnus = {};
+  /*
+   * ESITYKSEN KELLO. Ajastimet eivät ole kello: taustalla ne eivät
+   * laukea lainkaan ja paluussa ne laukeavat kerralla. Alkuhetki ja
+   * kesto kertovat, onko esitys oikeasti jo ohi (paluuNakyviin).
+   */
+  const tila = {
+    kehys, ajastimet, ratkaise, irrota: null,
+    tunnus, kaupunki: city.id, loppuIlmoitettu: false,
+    puheKesken: false, puheValmis: null,
+    alku: Date.now(), kesto: trailerinKesto(kuvat.length),
+  };
+  ui.saapumistraileri = tila;
+
+  /*
+   * NAPAUTUS OHITTAA HETI (omistaja: traileri on tervehdys, ei este).
+   * Kuuntelija on kehyksessä itsessään — se peittää koko ruudun, joten
+   * jokainen napautus osuu siihen eikä kartalle.
+   */
+  const ohita = () => {
+    if (ui.saapumistraileri !== tila) return;
+    // Ohitus vaientaa isoisän heti eikä vasta häivytyksen lopussa:
+    // pelaaja pyysi eteenpäin, ja matkakirjaluenta odottaa lupausta.
+    tila.puheKesken = false;
+    pysaytaSaapumispuhe(ui);
+    kehys.classList.add('ohitettu');
+    for (const t of ajastimet) clearTimeout(t);
+    ajastimet.length = 0;
+    ajastimet.push(setTimeout(() => piilotaSaapumistraileri(ui), TRAILERIN_OHITUS_MS));
+  };
+  kehys.addEventListener('pointerdown', ohita);
+  kehys.addEventListener('click', ohita);
+
+  const aja = (viive, tyo) => ajastimet.push(setTimeout(() => {
+    if (ui.saapumistraileri === tila) tyo();
+  }, Math.max(0, viive)));
+
+  /*
+   * NÄKYMÄN UUSINTAMITTAUS (omistajan bugiraportti 11.9.2026 klo 23.18:
+   * *"jos käyn toisessa apissa ja palaan matkakirjaan niin sitten
+   * kuvien koko muuttuu pienemmäksi"*).
+   *
+   * Mitta luetaan uudestaan aina kun näkymä voi olla toinen kuin
+   * hetki sitten: kääntö, ikkunan koon muutos, visuaalisen viewportin
+   * asettuminen, bfcache-paluu (pageshow) ja paluu näkyviin. Sama
+   * kirjoitus on idempotentti, joten turha ajo on halpa ja ajamatta
+   * jättäminen kallis.
+   *
+   * Samalla kuvasuhteet merkitään uudelleen: jos kuva ehti vaihtua
+   * varareitille tai purkautua muistista taustassa, suhde on nyt
+   * kuvan oma eikä css:n 3:2-oletus.
+   */
+  const paivitaMitat = () => {
+    if (ui.saapumistraileri !== tila) return;
+    paivitaTrailerinMitat(kehys);
+    for (const merkitse of kuvasuhteet) merkitse();
+  };
+
+  /*
+   * PALUU NÄKYVIIN: MITTA UUSIKSI JA KELLO TARKISTETAAN.
+   *
+   * a) WKWebView oikaisee viewporttinsa vasta hetken päästä, joten
+   *    mitta otetaan heti ja uudestaan 400 ja 1600 ms päästä — sama
+   *    pari kuin js/ui.js:n taustapaluun sovituksessa.
+   * b) Taustalla ajastimet eivät laukea. Jos traileri on kellon
+   *    mukaan jo ohi, se päätetään heti eikä jätetä ruudulle
+   *    odottamaan jäätyneitä ajastimiaan — luenta odottaa lupausta.
+   */
+  const paluuNakyviin = () => {
+    if (ui.saapumistraileri !== tila) return;
+    if (document.hidden) return;
+    if (Date.now() - tila.alku >= tila.kesto) {
+      piilotaSaapumistraileri(ui);
+      return;
+    }
+    paivitaMitat();
+    aja(400, paivitaMitat);
+    aja(1600, paivitaMitat);
+  };
+
+  const ikkuna = globalThis;
+  ikkuna.addEventListener?.('resize', paivitaMitat);
+  ikkuna.addEventListener?.('orientationchange', paivitaMitat);
+  ikkuna.addEventListener?.('pageshow', paluuNakyviin);
+  ikkuna.visualViewport?.addEventListener?.('resize', paivitaMitat);
+  document.addEventListener('visibilitychange', paluuNakyviin);
+
+  tila.irrota = () => {
+    kehys.removeEventListener('pointerdown', ohita);
+    kehys.removeEventListener('click', ohita);
+    ikkuna.removeEventListener?.('resize', paivitaMitat);
+    ikkuna.removeEventListener?.('orientationchange', paivitaMitat);
+    ikkuna.removeEventListener?.('pageshow', paluuNakyviin);
+    ikkuna.visualViewport?.removeEventListener?.('resize', paivitaMitat);
+    document.removeEventListener('visibilitychange', paluuNakyviin);
+  };
+
+  // Nimi lähtee lentoon heti ensimmäisen kuvan mukana ja jää paikalleen
+  // kaikkien kuvien ajaksi (omistaja: yksi nimi, kolme kuvaa).
+  let kirjaimetLahtivat = false;
+  /*
+   * ISOISÄN SAAPUMISPUHE SAMASTA HETKESTÄ KUIN NIMI (ks. kohta 5).
+   * Sama `kirjaimetLahtivat`-lippu suojaa kaksoissoitolta: rAF ja 50 ms
+   * :n varakutsu nostavat saman nimen, mutta puhe lähtee kerran.
+   * Puhumaton kaupunki (Euroopan ulkopuoli) jättää trailerin ennalleen.
+   */
+  const aloitaSaapumispuhe = () => {
+    const puhe = haeSaapumispuhe(city);
+    if (!puhe?.url) return;
+    tila.puheKesken = true;
+    let soitin = null;
+    try {
+      soitin = soitaSaapumispuhe(ui, puhe.url, {
+        onLoppu: () => {
+          tila.puheKesken = false;
+          const valmis = tila.puheValmis;
+          tila.puheValmis = null;
+          valmis?.();
+        },
+      });
+    } catch {
+      /*
+       * Traileri on tervehdys: ääni ei saa koskaan kaataa saapumista
+       * (sama sääntö kuin tehosteilla, trailerinTehoste) eikä
+       * testiajoa, jossa Audio-elementtiä ei ole.
+       */
+      soitin = null;
+    }
+    // Kertoja pois päältä, radiotila tai äänetön ajo: ei odotusta.
+    if (!soitin) tila.puheKesken = false;
+  };
+  const nostaNimi = () => {
+    nimi.classList.add('nakyy');
+    // Kaksi herätystä (rAF ja 50 ms) nostavat saman nimen; suhina,
+    // saapumispuhe ja tilannetapahtuma kuuluvat silti vain
+    // ensimmäiselle kirjaimelle.
+    if (kirjaimetLahtivat) return;
+    kirjaimetLahtivat = true;
+    soitaKirjaintenSuhina();
+    aloitaSaapumispuhe();
+    ilmoitaLivianTilanne('trailer', {
+      vaihe: 'kirjaimet', tunnus, kaupunki: city.id,
+    });
+  };
+  globalThis.requestAnimationFrame?.(nostaNimi);
+  aja(50, nostaNimi);
+
+  // Iskulause feidautuu nimen alle vasta kun viimeinen kirjain on
+  // laskeutunut (omistaja: *"Kaupungin nimen alle voisi feidautua
+  // kaupungin isku lause"*) ja häipyy kirjainten syöksyn mukana.
+  if (iskurivi) aja(iskulauseenViive(city.name), () => iskurivi.classList.add('nakyy'));
+
+  kuvaKotelot.forEach((kotelo, i) => {
+    const alku = i * KUVAN_VUORO_MS;
+    let klikattu = false;
+    const keskita = () => {
+      kotelo.classList.add('keskella');
+      // Kuva on nyt paikallaan keskellä: kameran laukaisin.
+      if (klikattu) return;
+      klikattu = true;
+      soitaKameranKlik();
+    };
+    if (alku <= 0) {
+      globalThis.requestAnimationFrame?.(keskita);
+      aja(50, keskita);
+    } else aja(alku, keskita);
+    // Ulos vasemmalle hitusen ennen seuraavan tuloa (limitys).
+    aja(alku + KUVAN_VUORO_MS - TRAILERIN_LIMITYS_MS, () => {
+      kotelo.classList.remove('keskella');
+      kotelo.classList.add('ulos');
+    });
+  });
+
+  // Viimeisen kuvan lähtiessä kirjaimet syöksyvät samaa rataa ulos.
+  aja(kuvat.length * KUVAN_VUORO_MS - TRAILERIN_LIMITYS_MS, () => {
+    nimi.classList.add('ulos');
+    // Iskulause ei lennä mukana, se vain feidaa pois.
+    iskurivi?.classList.add('ulos');
+    soitaKirjaintenSuhina();
+  });
+  aja(trailerinKesto(kuvat.length), () => piilotaSaapumistraileri(ui, { odotaPuhe: true }));
+
+  return lupaus;
+}

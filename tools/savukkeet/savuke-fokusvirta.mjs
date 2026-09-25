@@ -100,6 +100,13 @@ import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { MERKINNAN_TAUKO_MS } from '../../js/fokusvirta.js';
 
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
+
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -114,7 +121,7 @@ const palvelin = http.createServer((req, res) => {
   res.end(readFileSync(polku));
 });
 await new Promise((ok) => palvelin.listen(0, ok));
-const osoite = `http://localhost:${palvelin.address().port}/`;
+const osoite = `http://localhost:${palvelin.address().port}/?lauta=kartta`;
 
 let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => { kaikki += 1; if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`); };
@@ -327,14 +334,26 @@ const paina = async (osuma, mista = '.fokusvirta-napit', kohde = sivu) => {
   await kohde.waitForTimeout(350);
 };
 
-/* --- 1: Tutki avaa virran, ei saapumiskorttia --- */
+/* --- 1: kaupungin napautus avaa AINA kaupunkilehden (omistaja
+ * 2.9.2026 ilta: "Kohdekaupunki avaa aina kaupunkilehden ei mitään
+ * muuta") — lehtilukko on purettu, virran kortti ei kaappaa avausta. --- */
 await sivu.evaluate(() => {
   const ui = window.matkakirja.ui;
   ui.openArrival(ui.game.cityOf());
 });
 await sivu.waitForTimeout(500);
 const lehtiAuki = await sivu.evaluate(() => document.getElementById('arrival-dialog').open);
-vaadi('lehtilukko: saapumiskortti pysyy kiinni', !lehtiAuki);
+vaadi('kaupungin napautus avaa kaupunkilehden, ei virran korttia', lehtiAuki
+  && await sivu.evaluate(() => !document.querySelector('.fokusvirta-kortti')));
+await sivu.evaluate(() => document.getElementById('arrival-dialog').close());
+await sivu.waitForTimeout(300);
+
+/** Virran kortti avataan savukkeessa suoraan moduulista, ei lehden kautta. */
+const avaaVirta = (kohde = sivu) => kohde.evaluate(async () => {
+  const { avaaFokusvirta } = await import('/js/fokusvirta.js');
+  const ui = window.matkakirja.ui;
+  avaaFokusvirta(ui, ui.game.cityOf());
+});
 
 /* --- 2: vaihe 1 on ylävasen matkakirjakortti, ei virran oma kortti --- */
 // Tutki kuittasi merkinnän jo luetuksi, joten tila palautetaan alkuun.
@@ -601,10 +620,7 @@ await sivu.evaluate(() => {
 });
 await sivu.waitForTimeout(300);
 vaadi('napautus pintaan sulkee sen', (await kortti()) === null);
-await sivu.evaluate(() => {
-  const ui = window.matkakirja.ui;
-  ui.openArrival(ui.game.cityOf());
-});
+await avaaVirta();
 await sivu.waitForTimeout(400);
 tila = await kortti();
 vaadi('uusi avaus jatkaa samasta vaiheesta, ei alusta',
@@ -636,14 +652,15 @@ vaadi('oppituntikortti pohjustaa laattakysymystä',
 vaadi('kartalla ei ole kuvavinjettejä oppitunnilla',
   (await vinjetit()).maara === 0, JSON.stringify(await vinjetit()));
 
-await paina('Nikos');
+// Ateenan kohtaamishenkilö vaihtui 5.9.2026: Nikos → Dafni.
+await paina('Dafni');
 tila = await kortti();
 vaadi('kohtaaminen esittelee paikallisen',
-  tila?.vaihe === 'kohtaaminen' && tila.otsikko.includes('Nikos'), JSON.stringify(tila?.vaihe));
+  tila?.vaihe === 'kohtaaminen' && tila.otsikko.includes('Dafni'), JSON.stringify(tila?.vaihe));
 
 /*
  * KOHTAAMISEEN TULI KYLLÄ/EI-VARMISTUS 26.8.2026 (js/fokusvirta.js,
- * "KYLLÄ JA EI OVAT OIKEITA NAPPEJA"): "Tapaa Nikos" avaa varmistuksen,
+ * "KYLLÄ JA EI OVAT OIKEITA NAPPEJA"): "Tapaa Dafni" avaa varmistuksen,
  * ja luovutus laattamekaniikalle tapahtuu vasta Kyllä-napista. Väite
  * päivitettiin 29.8.2026 kortit päälle -päätöksen yhteydessä.
  */
@@ -855,10 +872,7 @@ vaadi('kuplan tekstin veto ei panoroi karttaa',
  * oppituntikortti: sama kehys, sama vieritettävä sisus (piirraKehys),
  * joten vartio ei riipu siitä kummasta vaiheesta kortti tulee.
  */
-await puhelin.evaluate(() => {
-  const ui = window.matkakirja.ui;
-  ui.openArrival(ui.game.cityOf());
-});
+await avaaVirta(puhelin);
 await puhelin.waitForTimeout(500);
 await paina('Jatka', '.fokusvirta-napit', puhelin);
 await puhelin.waitForTimeout(400);

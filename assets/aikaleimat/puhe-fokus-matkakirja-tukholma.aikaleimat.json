@@ -1,0 +1,162 @@
+{
+  "versio": 2,
+  "kaupunki": "tukholma",
+  "teksti": "Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.",
+  "tekstiSha256": "c7316f2c98ea26a305c0a013f85ab59a1e3db0e4a336dd7b7684e97385e09e20",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-tukholma.mp3",
+    "versio": 2,
+    "tavut": 312259,
+    "sha256": "a9ee9a7efddc78f6174c875ee6b55393b81f69d43b94e50899752ed855cf8c69"
+  },
+  "kesto": 19420,
+  "sanat": [
+    {
+      "sana": "Tukholmassa",
+      "alku": 100,
+      "loppu": 760
+    },
+    {
+      "sana": "kruunattiin",
+      "alku": 800,
+      "loppu": 1440
+    },
+    {
+      "sana": "Oskar",
+      "alku": 1580,
+      "loppu": 1980
+    },
+    {
+      "sana": "mutta",
+      "alku": 2620,
+      "loppu": 2880
+    },
+    {
+      "sana": "näin",
+      "alku": 2920,
+      "loppu": 3140
+    },
+    {
+      "sana": "lähinnä",
+      "alku": 3180,
+      "loppu": 3500
+    },
+    {
+      "sana": "hattuja",
+      "alku": 3560,
+      "loppu": 4140
+    },
+    {
+      "sana": "Pieni",
+      "alku": 5420,
+      "loppu": 5700
+    },
+    {
+      "sana": "tyttö",
+      "alku": 5760,
+      "loppu": 6080
+    },
+    {
+      "sana": "nousi",
+      "alku": 6120,
+      "loppu": 6420
+    },
+    {
+      "sana": "isänsä",
+      "alku": 6500,
+      "loppu": 6880
+    },
+    {
+      "sana": "hartioille",
+      "alku": 6920,
+      "loppu": 7720
+    },
+    {
+      "sana": "ja",
+      "alku": 7780,
+      "loppu": 7840
+    },
+    {
+      "sana": "selosti",
+      "alku": 7900,
+      "loppu": 8340
+    },
+    {
+      "sana": "hevoset",
+      "alku": 8400,
+      "loppu": 8900
+    },
+    {
+      "sana": "kukat",
+      "alku": 9300,
+      "loppu": 9820
+    },
+    {
+      "sana": "ja",
+      "alku": 9880,
+      "loppu": 9980
+    },
+    {
+      "sana": "yhden",
+      "alku": 10100,
+      "loppu": 10420
+    },
+    {
+      "sana": "kadonneen",
+      "alku": 10460,
+      "loppu": 11020
+    },
+    {
+      "sana": "kengän",
+      "alku": 11080,
+      "loppu": 11560
+    },
+    {
+      "sana": "Kuningas",
+      "alku": 13340,
+      "loppu": 13760
+    },
+    {
+      "sana": "jäi",
+      "alku": 13820,
+      "loppu": 13980
+    },
+    {
+      "sana": "sivulauseeseen",
+      "alku": 14040,
+      "loppu": 15020
+    },
+    {
+      "sana": "Suosittelisin",
+      "alku": 16320,
+      "loppu": 17000
+    },
+    {
+      "sana": "samaa",
+      "alku": 17080,
+      "loppu": 17380
+    },
+    {
+      "sana": "selostajaa",
+      "alku": 17440,
+      "loppu": 18200
+    },
+    {
+      "sana": "valtakunnan",
+      "alku": 18240,
+      "loppu": 18880
+    },
+    {
+      "sana": "asioihin",
+      "alku": 18960,
+      "loppu": 19420
+    }
+  ],
+  "lauseet": [
+    100,
+    5420,
+    13340,
+    16320
+  ],
+  "luotu": "2026-09-23T15:39:23.885Z"
+}

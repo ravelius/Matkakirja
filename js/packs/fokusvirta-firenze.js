@@ -173,83 +173,125 @@ export const FOKUSVIRTA_FIRENZE = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Firenze, toukokuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Tämä kaupunki oli vielä äsken kuningaskunnan pääkaupunki, '
-      + 'ja nyt hovi on muuttanut Roomaan ja jättänyt jälkeensä '
-      + 'hiljaisuuden, joka sopii sille paremmin. Sillalla, jonka päälle '
-      + 'on rakennettu puoteja, on käyty samaa kimaltavaa kauppaa '
-      + 'neljäsataa vuotta. Signorian '
-      + 'aukiolla seisoin Davidin edessä niin kauan, että kyyhkyset '
-      + 'ehtivät vaihtaa vahtivuoroa — mutta patsas seisoi kauemmin. '
-      + 'Sitä aiotaan kuulemma siirtää sisälle sateilta suojaan; toivon '
-      + 'että se ehtii nähdä vielä yhden kesän. '
-      + 'Joki on ruskea ja kärsimätön; '
-      + 'sanotaan että se on ennenkin noussut kaduille ja nousee vielä.',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Firenze, toukokuussa 1873. Lämmintä; joki matalalla; puntari '
+      + 'korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 358 merkkiä (yläraja 400). */
+    teksti: "Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[softly] Tämä kaupunki oli vielä äsken kuningaskunnan '
-      + 'pääkaupunki, ja nyt hovi on muuttanut Roomaan ja jättänyt '
-      + 'jälkeensä hiljaisuuden, joka sopii sille paremmin. [curious] '
-      + 'Sillalla, jonka päälle on rakennettu puoteja, on käyty samaa '
-      + 'kimaltavaa kauppaa neljäsataa vuotta. '
-      + '[warmly] Signorian aukiolla seisoin Davidin edessä niin '
-      + 'kauan, että kyyhkyset ehtivät vaihtaa vahtivuoroa — mutta '
-      + 'patsas seisoi kauemmin. Sitä aiotaan kuulemma siirtää sisälle '
-      + 'sateilta suojaan; toivon että se ehtii nähdä vielä yhden '
-      + 'kesän. [whispers] Joki on ruskea ja kärsimätön; sanotaan '
-      + 'että se on ennenkin noussut kaduille ja nousee vielä.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Patsas aiotaan siirtää sisälle" ja "Palasin
+     * illalla" (selitys ja siirtymä).
+     */
+    reaktiot: [
+  {
+    "id": "firenze.r1",
+    "ankkuri": "David seisoi aukiolla ilman rihman kiertämää",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "firenze.r2",
+    "ankkuri": "Patsas aiottiin siirtää sateelta suojaan",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "firenze.r3",
+    "ankkuri": "minun käteni osasi lähinnä piirtää käden",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "firenze.r4",
+    "ankkuri": "kivi vaikutti vielä enemmän ihmiseltä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. [thoughtfully] Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-firenze.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-firenze-kasi-v6.jpg;
+     * omistajan hyväksymä tarinakorjaus ISOISA-TARINAKORJAUKSET-4, promptId
+     * ISOISA-TARINA-V4-firenze-kasi). Kuvatekstit tekstisession sanasta sanaan: lyhyt
+     * kartalle, pitkä suurennokseen. Lähde on pelin oma havainnekuvamerkintä;
+     * lahteet on toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-firenze-kasi-v6.jpg',
+      lyhyt: 'Firenze, 1873. Kivinen käsi näytti osaavan jotakin, mitä omani ei.',
+      selite: 'Rajasin kuvaan Davidin suuren käden, jonka rystyset näyttivät levossakin melkein liikkuvilta. Palatsin kivi pysyi selvästi kivenä, mutta marmorisessa kädessä asia ei tuntunut yhtä yksinkertaiselta.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://catalogo.beniculturali.it/detail/PhotographicHeritage/0800635892',
+        'https://www.lombardiabeniculturali.it/fotografie/schede/IMM-3a010-0012052/',
+        'https://www.galleriaaccademiafirenze.it/opere/david-michelangelo/',
+        'https://www.galleriaaccademiafirenze.it/la-galleria/',
+        'https://www.visittuscany.com/en/ideas/michelangelos-david-some-facts-you-might-not-know/',
+      ],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-firenze-r20260911-paper2-v1.jpg",
+      lyhyt: "Firenze, 1873. Illan hiljaisuudessa katsoin Davidin suuntaan.",
+      selite: 'Palasin aukiolle illalla ja jäin katsomaan Davidin suuntaan kuvan ulkopuolelle. Vähäinen väki ja pitkät varjot tekivät kivestä mielessäni entistä enemmän ihmisen.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.galleriaaccademiafirenze.it/opere/david-michelangelo/","https://www.galleriaaccademiafirenze.it/la-galleria/"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
-     * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo); kanoninen `teksti` seuraa
-     * sen jälkeen.
-     *
-     * PARIPERIAATE: merkintä on haikea muttei synkkä — kaupunki, josta
-     * juhla lähti pois. Livia ei naljaile isoisälle vaan tekee sen,
-     * minkä välittäjä tekee: antaa hiljaisuudelle mitan ja päivämäärän.
-     *
-     * PUHEKIELIPASSI (Raamattu, "LIVIAN PUHEKIELI", sääntö 1 PAINOPISTE
-     * REUNOILLA): lyhentymät ovat vain alussa ("Kääk") ja lopussa
-     * ("mut"), keskellä sanat ovat auki; pronominit kokonaisina; ei
-     * huutomerkkejä.
-     *
-     * MIKSI PÄÄKAUPUNKIVUODET EIKÄ JOKI TAI DAVID: kanoninen `teksti`
-     * alla hoitaa jo joen (1966) ja Davidin, eikä sama asia saa tulla
-     * kahdesti samassa kuplassa. Merkinnän ensimmäinen virke — se, joka
-     * peliruudulla lihavoidaan — on hovin lähdöstä, eikä siihen vastaa
-     * kukaan muu.
-     *
-     * FAKTAKURI: viisi väitettä, kaikki it-Wikipedian artikkelista
-     * "Firenze capitale" (johdanto ja osio "Storia"; haettu 29.8.2026).
-     * (1) Firenze oli Italian pääkaupunki 3.2.1865–3.2.1871. (2) Kuningas
-     * Vittorio Emanuele II matkusti Torinosta junalla ja saapui
-     * Firenzeen 3.2.1865. (3) Palazzo Vecchion Cinquecenton sali oli
-     * edustajainhuone, (4) Uffizin Teatro Mediceo senaatti ja Palazzo
-     * Medici Riccardi pääministerin ja sisäministeriön talo. (5) Vuoden
-     * 1865 alkukuukausina kaupunkiin muutti 30 000 uutta asukasta, kun
-     * asukkaita oli 118 000.
+     * PULUCAM (kuvatoimitus 9.9.2026, pulu-cam-firenze-01-r20260909-14mm-v4.jpg, tilaus
+     * PULU-CAM-EUROOPPA-20260909-OHJAUS-01; omistaja: "ne voi hyvaksya
+     * sellaisenaan suoraan peliin"). Kuvatekstit tekstisession sanasta
+     * sanaan: lyhyt kuvan alle, pitka karuselliin. Lahteet on
+     * tausta-aineisto (ei nay pelaajalle).
      */
-    maadoitus: 'Kääk. Se hovi oli täällä tasan kuusi vuotta: kolmantena '
-      + 'helmikuuta 1865 kuningas tuli junalla Torinosta, ja kolmantena '
-      + 'helmikuuta 1871 hallitus oli jo Roomassa. Ne vuodet asuivat '
-      + 'vanhoissa taloissa niin kuin osasivat — kansanedustajat '
-      + 'istuivat Palazzo Vecchion isossa salissa, senaatti Uffizin '
-      + 'teatterissa ja pääministeri Medicien palatsissa. Pelkästään '
-      + 'alkuvuonna 1865 tänne muutti kolmekymmentätuhatta ihmistä '
-      + 'satakahdeksantoistatuhannen päälle, ja kuuden vuoden kuluttua '
-      + 'sama väki pakkasi laukkunsa. Isoisäsi kuuli oikean '
-      + 'hiljaisuuden — mut se oli vasta muuton jälkeinen hiljaisuus, '
-      + 'ei vanha.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-firenze-01-r20260909-14mm-v4.jpg',
+        lyhyt: 'Firenze: Davidin kopio osaa pitää ilmeensä myös lähikuvassa.',
+        selite: 'Piazza della Signorian David on kopio, mutta lähikuvassa sen keskittynyt ilme pitää joka suunnasta. Malli ei räpäyttänyt eikä ehdottanut uutta otosta; arvostan sellaista ammattitaitoa.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.galleriaaccademiafirenze.it/opere/david-michelangelo/',
+          'https://portalegiovani.comune.fi.it/urlnews/webzine/46183.html',
+          'https://en.wikipedia.org/wiki/Palazzo_Vecchio',
+          'https://cdn.getyourguide.com/img/tour/11e6e1a6fa1ad3deaf35396de0c298da7dd3862d37ef8ec733486d6204ed13b9.jpg/148.jpg',
+          'https://a.storyblok.com/f/291714/4032x3024/fbdd6c78dd/20220428_104442.jpg',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Firenzessä pääsiäisen ilotulituksen sytyttää kyyhkynmuotoinen raketti. Se kiitää kirkosta vaijeria pitkin! Minä jännitin paluuta. Oli kone tai ei, omia kannustetaan."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      */
@@ -269,6 +311,7 @@ export const FOKUSVIRTA_FIRENZE = {
      */
     kuva: {
       ampari: 'herokoe/hero-firenze-ilta.png',
+      lyhyt: 'Palazzo Vecchio nousi 1299 kaupunkivaltion raatihuoneeksi; 94-metrinen torni hallitsee siluettia.',
       selite: 'Palazzo Vecchio nousi 1299 alkaen kaupunkivaltion '
         + 'linnoitetuksi raatihuoneeksi, ja sen 94-metrinen torni '
         + 'hallitsee yhä Firenzen siluettia.',
@@ -351,6 +394,9 @@ export const FOKUSVIRTA_FIRENZE = {
         + 'härkäparilla pronssinen jäljennös Davidista. Se seisoo '
         + 'siellä yhä ja katsoo kaupunkia, joka rakennettiin '
         + 'pääkaupungiksi kuudeksi vuodeksi.',
+      lahde: 'it-Wikipedia "Risanamento di Firenze", it-Wikipedia "Piazzale '
+        + 'Michelangelo", en-Wikipedia "David (Michelangelo)" ja it-Wikipedia '
+        + '"Firenze capitale". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 3456×2736, CC0, Rijksmuseum, päiväys "ca.
        * 1870 – ca. 1890", Restrictions tyhjä. SILMÄTARKISTUS tehty
@@ -366,6 +412,7 @@ export const FOKUSVIRTA_FIRENZE = {
        */
       kuva: {
         tiedosto: 'Gezicht op Florence vanaf de Monte alle Croci FIRENZE Panorama preso dal Monte alle Croci. (titel op object), RP-F-F01093-AV.jpg',
+        lyhyt: 'Monte alle Crocin terassi vuodesta 1869 ja sen alla Firenze albumiinivedoksessa 1800-luvun lopulta.',
         selite: 'Monte alle Crocin rinteelle vuodesta 1869 rakennettu '
           + 'terassi ja sen alla Firenze: joki, sillat, kupoli ja '
           + 'Palazzo Vecchion torni 1800-luvun lopun albumiinivedoksessa.',
@@ -451,6 +498,7 @@ export const FOKUSVIRTA_FIRENZE = {
         + 'paikalleen 2008; Taccan oma pronssi on suojassa museossa '
         + 'joen toisella puolella. Kopiota hangataan tarkalleen yhtä '
         + 'ahkerasti.',
+      lahde: 'en-Wikipedia "Il Porcellino". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1817×2726, CC BY-SA 2.5, tekijä Thermos,
        * kuvattu 9.6.2006, kuvaus nimeää Taccan ja kertoo veistoksen
@@ -462,6 +510,7 @@ export const FOKUSVIRTA_FIRENZE = {
        */
       kuva: {
         tiedosto: 'PorcellinoFlorence.jpg',
+        lyhyt: 'Mercato Nuovon villisian kuono on hankautunut kirkkaaksi, muu pronssi tummanruskeanvihreää.',
         selite: 'Mercato Nuovon villisian kuono on hankaamisesta '
           + 'kirkas, vaikka muu pronssi on patinoitunut '
           + 'tummanruskeanvihreäksi.',
@@ -546,6 +595,8 @@ export const FOKUSVIRTA_FIRENZE = {
         + 'mailia liian lähelle. Kaksi mittausta, sata vuotta '
         + 'käytännön kokemusta, ja toinen niistä pahasti pielessä — '
         + 'ja juuri se väärä oli se, jonka mukaan lähdettiin.',
+      lahde: 'en-Wikipedia "Paolo dal Pozzo Toscanelli" ja it-Wikipedia '
+        + '"Paolo dal Pozzo Toscanelli". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1990×1215, public domain, tekijä John
        * George Bartholomew, päiväys 1884, kuvaus "The map of the
@@ -562,6 +613,7 @@ export const FOKUSVIRTA_FIRENZE = {
        */
       kuva: {
         tiedosto: 'Atlantic Ocean, Toscanelli, 1474.jpg',
+        lyhyt: 'Toscanellin vuoden 1474 Atlantti nykyisen rannikon päällä: Cathay ja Cippangu Amerikan kohdalla.',
         selite: 'Toscanellin vuoden 1474 Atlantti nykyisen rannikon '
           + 'päälle asetettuna: Cathay ja Cippangu ovat siinä kohdassa, '
           + 'jossa on Amerikka.',
@@ -694,6 +746,7 @@ export const FOKUSVIRTA_FIRENZE = {
      */
     kuva: {
       tiedosto: 'Michelino DanteAndHisPoem.jpg',
+      lyhyt: 'Michelinon maalaus 1465 Firenzen tuomiokirkossa: runoilija, oma kaupunki, helvetin portti.',
       selite: 'Domenico di Michelinon maalaus vuodelta 1465 Firenzen '
         + 'tuomiokirkossa: runoilija pitelee avointa runoelmaansa, '
         + 'oikealla oma kaupunki, vasemmalla helvetin portti.',

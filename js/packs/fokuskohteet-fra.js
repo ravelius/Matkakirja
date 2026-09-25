@@ -78,7 +78,7 @@ export const FOKUSKOHTEET_FRA = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Tuileries',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi palatsia ei rakennettu uudelleen, vaikka muurit jäivät pystyyn?',
@@ -107,6 +107,18 @@ export const FOKUSKOHTEET_FRA = [
       + 'osio "Destruction during the Paris Commune" (tarkistettu '
       + '27.8.2026).',
     /*
+     * TYÖNJAKO SYVENNYSTARINAN KANSSA (1.9.2026, nostojen sisältöaudit).
+     * Samasta palatsista, samasta vuoden 1871 palosta ja samasta
+     * pisteestä kertoi kaksi korttia: tämä kohde ja Pariisin
+     * syvennystäky `tuileriat` (js/packs/fokusvirta-pariisi.js).
+     * Kumpaakaan ei poistettu. TÄMÄ KORTTI ON PALATSI — mikä se oli ja
+     * miten se poltettiin — eikä sen tekstiä ole muutettu, koska
+     * `korostukset`, `kysymykset` ja alempi kadonneen ihmeen kortti
+     * nojaavat siihen. SYVENNYS ON RAUNIO: ne yksitoista vuotta, jotka
+     * isoisä näki, ja se mihin palatsin kivet hajosivat. Palon resepti
+     * (petroli, terva, tärpätti, 48 tuntia) on nyt vain täällä.
+     */
+    /*
      * MATKAKIRJAN IHME (kadonnut) — säännöt js/packs/fokuskohteet-grc.js:n
      * samannimisessä lohkossa. Palatsia ei ole, joten `kadonnut: true`:
      * kartalla tähti ja kortissa tämä kuva ensimmäisenä — ja ainoana.
@@ -116,22 +128,24 @@ export const FOKUSKOHTEET_FRA = [
      * 1873 täsmälleen sen välitilan, jota ei ole enää kummassakaan
      * päässä — mustuneet muurit keskellä Pariisia. Selite sanoo sen
      * ääneen.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-tuileries.webp',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-tuileries-loistoaika-v2.jpg',
       kadonnut: true,
-      selite: 'Tuileries\'n palatsi sulki Louvren pihan lännestä yli '
-        + 'kolmensadan vuoden ajan, ja sen julkisivu oli 266 metriä '
-        + 'pitkä. Se oli Ranskan hallitsijoiden koti: täällä Ludvig XVI '
-        + 'eli vallankumouksen vartioimana vuodesta 1789 ja täällä '
-        + 'Napoleon III:n hovi tanssi talvikausien loistokkaimmat '
-        + 'tanssiaiset. Kommuuni poltti sen toukokuussa 1871 ja viimeiset '
-        + 'muurit purettiin 30. syyskuuta 1883 — isoisä ehti nähdä '
-        + 'matkallaan 1873 juuri nuo mustuneet rauniot. Paikalla on nyt '
-        + 'avoin terassi Tuileries\'n puutarhan ja Louvren pihan '
-        + 'välissä.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      lyhyt: 'Palatsin ompelijan tytär ihastelee kristallikruunua; neljä vuotta myöhemmin palatsi palaa poroksi.',
+      selite: 'Palatsin ompelija kiirehtii iltavastaanoton pukua sisään, mutta '
+        + 'hänen tyttärensä pysähtyy katsomaan palvelijoiden kantamaa '
+        + 'kristallikruunua. Lapselle pitkä kivijulkisivu on satulinna; '
+        + 'äidille se on työpaikka, jossa myöhästyminen huomataan. Neljä '
+        + 'vuotta myöhemmin palatsi palaa, eikä tästä keisarillisesta '
+        + 'kodista jää puutarhan ja Louvren väliin muuta kuin avoin tila.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: Musée du Louvre — From Royal Garden to Public '
+        + 'Park, tarkistettu 5.9.2026.',
+      url: 'https://www.louvre.fr/en/explore/the-palace/from-royal-garden-to-public-park',
     },
   },
   /*
@@ -164,7 +178,7 @@ export const FOKUSKOHTEET_FRA = [
   {
     id: 'bastilji',
     nimi: 'Bastilji',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi juuri Bastiljista tuli vallankumouksen vertauskuva?',
@@ -200,24 +214,24 @@ export const FOKUSKOHTEET_FRA = [
      * alkuperäistä kiveä (artikkelin tietolaatikko: "limited stonework
      * survives"), mutta linnoitusta itseään ei ole. Selite sanoo, mitä
      * paikalla NYT on, eikä väitä paikkaa tyhjäksi.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-bastilji.webp',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-bastilji-loistoaika-v2.jpg',
       kadonnut: true,
-      selite: 'Bastilji vartioi Pariisin itäistä porttia yli neljäsataa '
-        + 'vuotta ja oli viimeiset puolitoista vuosisataansa '
-        + 'valtionvankila: kuningas saattoi sulkea sinne kenet tahansa '
-        + 'pelkällä kirjeellä, ja ylhäiset vangit toivat mukanaan omat '
-        + 'huonekalunsa ja palvelijansa. Voltaire istui täällä kahdesti. '
-        + 'Väkijoukko valtasi linnoituksen 14. heinäkuuta 1789, vaikka '
-        + 'sisällä oli enää seitsemän vankia, '
-        + 'ja purkutyöt alkoivat samana kesänä. Paikalla on nyt Place '
-        + 'de la Bastille, jonka keskellä kohoaa vuoden 1830 '
-        + 'vallankumouksen muistoksi pystytetty heinäkuun pylväs — '
-        + 'sekin oli jo paikallaan, kun isoisä kulki Pariisin läpi '
-        + '1873.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      lyhyt: 'Käsityöläinen katsoo Bastillin kahdeksaa tornia, jotka symboloivat kuninkaan rajatonta valtaa.',
+      selite: 'Faubourg Saint-Antoinen käsityöläinen pysäyttää kärrynsä '
+        + 'vallihaudan reunalle ja nostaa katseensa vankilan kahdeksaan '
+        + 'torniin. Linnoituksessa oli tuolloin vain vähän vankeja, mutta '
+        + 'tavalliselle pariisilaiselle suljetut portit merkitsivät silti '
+        + 'kuninkaan valtaa, joka saattoi ulottua ihmisen elämään ilman '
+        + 'julkista oikeudenkäyntiä.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: Musée Carnavalet — La Bastille au XVIIIe '
+        + 'siècle, tarkistettu 5.9.2026.',
+      url: 'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/la-bastille-au-xviiie-siecle',
     },
   },
 ];

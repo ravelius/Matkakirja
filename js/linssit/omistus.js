@@ -28,6 +28,25 @@ import { LINSSIT } from './rekisteri.js';
  * etuliite pitää linssit erillään lautaleimoista ilman uutta varastoa.
  */
 export const LEIMA_ETULIITE = 'linssi:';
+/*
+ * HIOMASSA-LINSSIN KIRJANPITO PASSISSA (omistaja 21.9.2026, Raamatun loki
+ * "HIOMASSA-LINSSI JA OPTIKON HYVITYS: MEKANIIKKA HYVAKSYTTY"):
+ *   hyvitys:<tunnus>  optikon hyvitys on maksettu — kerran per linssi,
+ *                     ei uudestaan uudessa pelissä;
+ *   nahty:<tunnus>    valmistunut linssi on nähty laukussa (merkki pois).
+ * Passi on litteä avaintaulu (ks. LEIMA_ETULIITE), joten etuliitteet
+ * riittävät eikä uutta varastoa tarvita. Passia ei listata pelaajalle
+ * avaimittain, joten kirjanpitorivit eivät näy missään.
+ */
+export const HYVITYS_ETULIITE = 'hyvitys:';
+export const NAHTY_ETULIITE = 'nahty:';
+/**
+ * OPTIKON HYVITYS: keskeneräisen linssin löytäjä saa rahaa odotuksesta.
+ * Mittakaava pelin palkkioista (js/tokens.js): iso paikallisaarre
+ * 500–800, mantereen aarre 1000. Hyvitys ei anna tietäjäpisteitä —
+ * odotus ei ole ansaittua tietoa. Kiinteä, kerran per linssi.
+ */
+export const OPTIKON_HYVITYS = 500;
 
 /*
  * Tietäjäpisteiden löytöreitti: neljä kynnystä, neljä linssiä, jotka
@@ -53,6 +72,21 @@ function passinLinssit() {
 /** Rekisterin rivi tunnuksella, tai null jos linssiä ei ole olemassa. */
 function rivi(tunnus) {
   return LINSSIT.find((r) => r.tunnus === tunnus) ?? null;
+}
+
+/** Onko linssi rekisterissä vasta hiomassa (ei toimi vielä). */
+export function hiomassa(tunnus) {
+  return rivi(tunnus)?.tila === 'hiomassa';
+}
+
+/** Hiomassa-linssin näyttönimi rekisteristä (moduulia ei ole). */
+export function hiomassaNimi(tunnus) {
+  const r = rivi(tunnus);
+  return r?.tila === 'hiomassa' ? (r.nimi ?? r.tunnus) : null;
+}
+
+function passissa(avain) {
+  return Boolean(readStamps()[avain]);
 }
 
 /**
@@ -100,10 +134,22 @@ function kehittajaTila() {
   }
 }
 
+/*
+ * PERUSVARUSTEET: omistettu heti, ei kynnyksen takana (omistaja
+ * 4.9.2026: "Lisää pallo yhdeksi linssiksi matkalaukkuun"). Karttapallo
+ * on navigointiväline, jota ilman uusi pelaaja ei näe, missä päin
+ * maailmaa lauta on; tarkistaKynnys ohittaa jo omistetun, joten
+ * kynnyslinssien järjestys ei muutu.
+ */
+export const PERUSLINSSIT = ['pallo'];
+
 export function omistetut(game, player = game?.player) {
   const ulos = passinLinssit();
+  for (const tunnus of PERUSLINSSIT) ulos.add(tunnus);
   for (const tunnus of player?.linssit ?? []) ulos.add(tunnus);
-  if (kehittajaTila()) for (const r of LINSSIT) ulos.add(r.tunnus);
+  // Kehittäjätila antaa vain TOIMIVAT linssit (omistaja 4.8.2026), ei
+  // hiomassa olevia — ne ovat lupaus, jota ei vielä voi kokeilla.
+  if (kehittajaTila()) for (const r of LINSSIT) if (r.tila !== 'hiomassa') ulos.add(r.tunnus);
   return ulos;
 }
 
@@ -129,6 +175,41 @@ export function myonna(game, player, tunnus) {
   return { uusi, tunnus };
 }
 
+/**
+ * OPTIKON HYVITYS hiomassa olevasta linssistä: maksetaan kerran per
+ * linssi (passi `hyvitys:<tunnus>`), vain jos linssi on rekisterissä
+ * hiomassa. Palauttaa maksetun summan tai 0.
+ */
+export function hyvitaHiomassa(game, player, tunnus) {
+  if (!hiomassa(tunnus) || !player) return 0;
+  const avain = `${HYVITYS_ETULIITE}${tunnus}`;
+  if (passissa(avain)) return 0;
+  if (!stampBoard(avain, `Optikon hyvitys: ${hiomassaNimi(tunnus)}`)) return 0;
+  player.money = (player.money ?? 0) + OPTIKON_HYVITYS;
+  return OPTIKON_HYVITYS;
+}
+
+/** Pelaajan omistamat linssit, jotka ovat vielä hiomassa (laukun harmaa rivi). */
+export function hiomassaOlevat(game, player = game?.player) {
+  return [...omistetut(game, player)].filter((tunnus) => hiomassa(tunnus));
+}
+
+/**
+ * VALMISTUNEET: linssi, josta on maksettu hyvitys ja joka on nyt
+ * rekisterissä valmis, mutta jota ei ole vielä nähty laukussa. Laukku
+ * näyttää kerran "valmistui"-merkin ja kuittaa sen merkitseLinssiNahdyksi.
+ */
+export function valmistuneet(game, player = game?.player) {
+  const leimat = readStamps();
+  return [...omistetut(game, player)].filter((tunnus) => !hiomassa(tunnus)
+    && Boolean(leimat[`${HYVITYS_ETULIITE}${tunnus}`])
+    && !leimat[`${NAHTY_ETULIITE}${tunnus}`]);
+}
+
+export function merkitseLinssiNahdyksi(tunnus) {
+  return stampBoard(`${NAHTY_ETULIITE}${tunnus}`, `Linssi nähty: ${tunnus}`);
+}
+
 /*
  * Passileima haetaan linssin omalla nimellä, ja se vaatii moduulin
  * tuonnin — nimi asuu linssimoduulissa, ei rekisterissä (suunnitelma
@@ -143,9 +224,10 @@ export function myonna(game, player, tunnus) {
  * omistus katoaisi pelin päättyessä — mutta tunnuksella nimen sijaan.
  */
 async function leimaaPassiin(r) {
-  let nimi = r.tunnus;
+  let nimi = r.nimi ?? r.tunnus;
   try {
-    const moduuli = await r.tuo();
+    // Hiomassa-rivillä ei ole tuontia: nimi tulee rekisteristä.
+    const moduuli = typeof r.tuo === 'function' ? await r.tuo() : null;
     nimi = moduuli?.LINSSI?.nimi ?? nimi;
   } catch {
     // Linssimoduulia ei ole saatavilla; leima menee tunnuksella.

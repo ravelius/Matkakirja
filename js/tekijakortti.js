@@ -28,6 +28,7 @@
  */
 
 import { EHDOTUS_OSOITE, ehdotusKaytossa } from './ehdotukset.js';
+import { merkitseHavainnekuva } from './havainnekuva.js';
 import { html } from './ui-apurit.js';
 
 /*
@@ -81,6 +82,53 @@ function ulkoinenLinkki(linkki) {
   a.target = '_blank';
   a.rel = 'noopener noreferrer';
   return a;
+}
+
+/** Havainnekuvan oma lisenssi, kun jokin pohjakuva on BY-SA. */
+const HAVAINNEKUVA_BY_SA = {
+  nimi: 'CC BY-SA 4.0', url: 'https://creativecommons.org/licenses/by-sa/4.0/',
+};
+
+/**
+ * POHJAKUVIEN ATTRIBUUTIO havainnekuvan lähderivin perään (omistaja
+ * 23.9.2026: kaikki 394 heroa pidetään, viitteet näkyviin).
+ *
+ * Osa kaupunkilehden herokuvista generoitiin 2–4 Commons-valokuvan
+ * pohjalta (tools/hero-ajuri.mjs, `tarkkaKohde`). Kuvalla on silloin
+ * kenttä `viitteet: [{ nimi, tekija, lisenssi, lisenssiUrl, sivu }]`,
+ * ja rivi saa perään "· Pohjana Wikimedia Commons -kuvat: Tekijä (CC BY
+ * 4.0), …" — tekijä linkkinä kuvasivulle ja lisenssi lisenssin sivulle,
+ * samoin kuin tavallisen Commons-kuvan lähderivillä. Jos yksikin pohja
+ * on BY-SA, havainnekuva lisensoidaan CC BY-SA 4.0:lla (ShareAlike
+ * periytyy muunneltuun kuvaan); maininta tulee rivin loppuun.
+ *
+ * Viitteet on rekonstruoitu ja varmistettu ajonaikaista Commonsia vasten
+ * (docs/raportit/herokuvien-viitteet-20260923-varmistus.md);
+ * uusissa ajoissa hero-ajuri kirjaa ne repoon (tools/hero-viiteloki.tsv).
+ *
+ * @param {HTMLElement} el täytetty lähderivi
+ * @param {object} kohde kuva-olio
+ * @returns {HTMLElement} sama elementti
+ */
+function lisaaPohjaviitteet(el, kohde = {}) {
+  const viitteet = kohde?.viitteet;
+  if (!el || !Array.isArray(viitteet) || !viitteet.length || typeof document === 'undefined') return el;
+  el.appendChild(document.createTextNode(' · Pohjana Wikimedia Commons -kuvat: '));
+  viitteet.forEach((v, i) => {
+    if (i) el.appendChild(document.createTextNode(', '));
+    el.appendChild(v.sivu ? ulkoinenLinkki({ nimi: v.tekija, url: v.sivu })
+      : document.createTextNode(v.tekija));
+    el.appendChild(document.createTextNode(' ('));
+    el.appendChild(v.lisenssiUrl ? ulkoinenLinkki({ nimi: v.lisenssi, url: v.lisenssiUrl })
+      : document.createTextNode(v.lisenssi));
+    el.appendChild(document.createTextNode(')'));
+  });
+  if (viitteet.some((v) => /BY-SA/.test(v.lisenssi ?? ''))) {
+    el.appendChild(document.createTextNode('; havainnekuva '));
+    el.appendChild(ulkoinenLinkki(HAVAINNEKUVA_BY_SA));
+  }
+  el.appendChild(document.createTextNode('.'));
+  return el;
 }
 
 /**
@@ -171,6 +219,30 @@ export function avaaTekijaKortti(id, nimi = '') {
   return dialogi;
 }
 
+/*
+ * KUVAN LÄHDE JA HAVAINNEKUVAMERKINTÄ VAIN SUURENNOKSESSA (omistaja
+ * 19.9.2026 klo 19.04 Suomen aikaa, Loire-kohdekortin laitekuva,
+ * sanatarkasti: *"Havainnekuva ja lähteet saa näkyä vasta kun kuva
+ * klikataan isoksi. Tsekkaa kaikkialta läpi"*).
+ *
+ * Yksi apuri kaikille kortin ja lehden kuville: rivi täytetään samalla
+ * `taytaLahderivi`llä kuin ennen (gallerioiden kuvanvaihto kirjoittaa
+ * siihen yhä, eikä elementtiä saa poistaa), mutta luokka
+ * KUVALAHDE_VAIN_SUURENNOKSESSA piilottaa sen kortilla
+ * (css/styles.css). Suurennokset (fokuskohteet.js avaaKohdeSuurennos,
+ * ui.js openLightbox, fokusvirta.js avaaSuurennos) rakentavat oman
+ * rivinsä `taytaLahderivi`llä, joten lähde ja CC BY -maininta näkyvät
+ * siellä kerran linkkeineen.
+ */
+export const KUVALAHDE_VAIN_SUURENNOKSESSA = 'kuvalahde-vain-suurennoksessa';
+
+/** Kortin kuvan lähderivi: täytetty, mutta näkyy vain suurennoksessa. */
+export function kortinKuvalahde(el, lahde, kohde = {}) {
+  const rivi = taytaLahderivi(el, lahde, kohde) ?? el;
+  rivi.classList?.add(KUVALAHDE_VAIN_SUURENNOKSESSA);
+  return rivi;
+}
+
 /**
  * Täyttää kuvan lähderivin niin, että tekijän nimi on painettava, jos
  * kuvalla on `tekijaId`.
@@ -178,6 +250,13 @@ export function avaaTekijaKortti(id, nimi = '') {
  * Ilman kenttää elementti saa pelkän tekstin täsmälleen kuten ennen —
  * tämä on siis turvallinen korvaaja `el.textContent = lahde`:lle
  * kaikkialla, missä lähderivi piirretään.
+ *
+ * KAKSI ASIAA SAMASSA APURISSA. Tekijänapin lisäksi tämä on se yksi
+ * paikka, jossa "Matkakirjan havainnekuva" -maininta muuttuu
+ * painettavaksi selitteeksi (js/havainnekuva.js). Molemmat koskevat
+ * lähderiviä, molemmat pitää tehdä joka piirtokerralla, ja
+ * kutsupaikkoja on yli kymmenen — siksi ne ovat täällä eivätkä
+ * hajallaan renderöijissä.
  *
  * @param {HTMLElement} el lähderivin elementti (tyhjennetään)
  * @param {string} lahde lähderivin teksti
@@ -188,8 +267,26 @@ export function taytaLahderivi(el, lahde, kohde = {}) {
   const teksti = String(lahde ?? '');
   const id = kohde?.tekijaId;
   if (!id || !ehdotusKaytossa()) {
-    el.textContent = teksti;
-    return el;
+    const linkit = [
+      { nimi: 'Wikimedia Commons', url: kohde?.lahdeUrl },
+      { nimi: String(kohde?.lisenssi ?? '').trim(), url: kohde?.lisenssiUrl },
+    ].filter(({ nimi, url }) => nimi && url && teksti.includes(nimi));
+    if (!linkit.length) {
+      el.textContent = teksti;
+      return lisaaPohjaviitteet(merkitseHavainnekuva(el, teksti, kohde), kohde);
+    }
+    linkit.sort((a, b) => teksti.indexOf(a.nimi) - teksti.indexOf(b.nimi));
+    el.replaceChildren();
+    let alku = 0;
+    for (const linkki of linkit) {
+      const kohta = teksti.indexOf(linkki.nimi, alku);
+      if (kohta < alku) continue;
+      if (kohta > alku) el.appendChild(document.createTextNode(teksti.slice(alku, kohta)));
+      el.appendChild(ulkoinenLinkki(linkki));
+      alku = kohta + linkki.nimi.length;
+    }
+    if (alku < teksti.length) el.appendChild(document.createTextNode(teksti.slice(alku)));
+    return lisaaPohjaviitteet(merkitseHavainnekuva(el, teksti, kohde), kohde);
   }
 
   const avaa = (nappiTeksti) => {
@@ -217,5 +314,5 @@ export function taytaLahderivi(el, lahde, kohde = {}) {
     if (teksti) el.appendChild(document.createTextNode(`${teksti} `));
     el.appendChild(avaa('Tekijästä'));
   }
-  return el;
+  return lisaaPohjaviitteet(merkitseHavainnekuva(el, teksti, kohde), kohde);
 }

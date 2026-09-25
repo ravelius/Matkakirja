@@ -1,3 +1,5 @@
+import { ilmoitaLivianKasvopuhe } from './livia-puhetila.js';
+import { luoLivianKuunteluvuoro } from './livia-tilanteet.js';
 /*
  * PUHE — lukijaääni lennossa generoituna (omistajan päätös 14.8.2026).
  *
@@ -33,8 +35,10 @@
  * lähtien laitteen oman äänen. Verkoton laite ei edes yritä.
  */
 
+import { PUHEVOIMA_OLETUS, puheVoima } from './aani-ehdokkaat.js';
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
+import { akustiikka, tehosteketju } from './tehosteketju.js';
 
 /** Persoonat, jotka worker tuntee. Muu arvo lukee kertojan äänellä. */
 export const PUHE_PERSOONAT = ['kertoja', 'merkinnat', 'pollo'];
@@ -383,8 +387,52 @@ export function asetaPuheenVoima(arvo) {
   try {
     window.localStorage?.setItem(VOIMA_AVAIN, String(voima));
   } catch { /* ei tallennu — istunnon ajan silti voimassa gainissa */ }
-  if (vahvistin) vahvistin.gain.value = voima;
+  paivitaLukijanVoima();
   return voima;
+}
+
+/*
+ * ── LUKIJA-LIUKU OHJAA MYÖS STRIIMATTUA LUKIJAA ─────────────────────
+ *
+ * OMISTAJAN VIKAILMOITUS 12.9.2026: *"äänien voimakkuussäädin ei muuten
+ * toimi."*
+ *
+ * MITATTU JUURISYY: asetusvalikon Lukija-liuku (index.html
+ * #voima-lukija) kirjoitti vain avaimeen `matkakirja-puhevoima`, jota
+ * lukevat pelkät ÄÄNITTEET (js/luenta.js, js/linssipuhe.js, js/ui.js).
+ * Tämän moduulin striimattu lukija — pelin ENSISIJAINEN lukija, se joka
+ * lukee lehdet ja artikkelit — sai tasonsa yksinomaan työhuoneen omasta
+ * kertoimesta (`matkakirja-puhe-voima`, oletus 2,0), eikä liuku koskenut
+ * siihen millään asennolla. Pelaajan näkökulmasta "Lukija"-niminen
+ * säädin ei siis tehnyt lukijalle mitään.
+ *
+ * LIUKU ON SUHDE, EI KORVAAJA. Työhuoneen kerroin on kalibrointi
+ * (omistajan puhelimellaan hakema 2,0) ja liuku on pelaajan säädin.
+ * Kertomalla suhteella (liuku / liu'un oletusasento) OLETUSTASO SÄILYY
+ * TÄSMÄLLEEN ENNALLAAN: 90 % antaa kertoimen 1,0, 0 % hiljaisuuden ja
+ * 100 % hitusen oletusta enemmän. Suora korvaaminen olisi pudottanut
+ * lukijan tason 2,0:sta 0,9:ään eli hiljentänyt pelin lukijan yli
+ * puolella — korjaus ei saa kuulua siltä, että jokin muu meni rikki.
+ *
+ * KATTO ON VAHVISTIMESSA, EI TÄSSÄ: ketjussa on kompressori juuri siksi,
+ * että yli yhden nouseva vahvistus ei leikkaisi säröksi.
+ */
+/** Lukija-liu'un osuus: 1,0 liu'un oletusasennossa. */
+const liuunOsuus = () => (PUHEVOIMA_OLETUS > 0 ? puheVoima() / PUHEVOIMA_OLETUS : 1);
+
+/** Vahvistimeen menevä taso: työhuoneen kerroin × Lukija-liuku. */
+export function lukijanTaso() {
+  return puheenVoima() * liuunOsuus();
+}
+
+/**
+ * Lukija-liuku liikkui: soiva luenta saa uuden tason heti eikä vasta
+ * seuraavasta luennasta (js/main.js AANIVOIMAT). Ilman vahvistinta
+ * (äänipiiri ei ole käynnissä) ei ole mitään säädettävää — seuraava
+ * viritys lukee arvon itse.
+ */
+export function paivitaLukijanVoima() {
+  if (vahvistin) vahvistin.gain.value = lukijanTaso();
 }
 
 /*
@@ -463,7 +511,7 @@ function kytkeVahvistin() {
       // pidetään ketjussa varmuuden vuoksi.
       const lahteet = elementit.map((a) => piiri.createMediaElementSource(a));
       vahvistin = piiri.createGain();
-      vahvistin.gain.value = puheenVoima();
+      vahvistin.gain.value = lukijanTaso();
       /*
        * Kompressori vahvistimen perään: yli yhden nouseva vahvistus voi
        * leikata äänekkäimmät kohdat säröksi, ja kompressori pyöristää
@@ -843,7 +891,55 @@ export function luoPuheSoitin({
   let kello = null;
   let aikataulutus = null;
 
+  /*
+   * PUHUJAN AKUSTIIKKA (omistajan päätös 5.9.2026, Tuna: *"Livian ääni
+   * luolassa saa luolan kaiun"*). Kohdekortti asettaa tilan
+   * (js/tehosteketju.js asetaAkustiikka), ja jokainen pala kysyy sen
+   * aikataulutuksessa: kun luolan kortti on auki, palat kulkevat
+   * luolaketjun läpi vahvistimeen; kun kortti sulkeutuu, seuraavat palat
+   * menevät suoraan ja vanha ketju liukuu kuivaksi 200 ms:ssa (pura).
+   * Ilman kirjastoa tehosteketju palauttaa null ja ääni kulkee suoraan
+   * kuten ennen — tämä ei muuta luentaa millään laitteella, jolla
+   * kirjasto ei lataudu.
+   */
+  let ketju = null;
+  const puraKetju = () => {
+    ketju?.pura();
+    ketju = null;
+  };
+  const paate = () => {
+    const suora = vahvistin ?? piiri.destination;
+    const nimi = akustiikka();
+    if (!nimi) {
+      puraKetju();
+      return suora;
+    }
+    if (!ketju || ketju.nimi !== nimi) {
+      puraKetju();
+      ketju = tehosteketju(piiri, nimi, suora);
+    }
+    return ketju ? ketju.input : suora;
+  };
+
+  const kasvoTunnus = {};
+  const kuuntelu = persoona === 'pollo' ? null : luoLivianKuunteluvuoro(kasvoTunnus, { lahde: 'lukija' });
+  const ilmoitaKasvopuhe = () => {
+    const nyt = piiri.currentTime;
+    const kay = !tila.peruttu && !tila.tauolla && piiri.state === 'running';
+    const i = kay
+      ? aloitusajat.findIndex(a => a && nyt >= a.alku && nyt < a.loppu) : -1;
+    if (persoona === 'pollo') ilmoitaLivianKasvopuhe(kasvoTunnus, i >= 0, palat[i]?.teksti);
+    else if (tila.peruttu) kuuntelu.lopeta();
+    else {
+      // Suunnitellut virke-/otsikkotauot kuuluvat samaan luentaan.
+      // Puskurin loppuminen tai pysähtynyt piiri sen sijaan vapauttaa.
+      const eka = aloitusajat.find(Boolean), vika = aloitusajat.findLast(Boolean);
+      kuuntelu.paivita(Boolean(kay && eka && nyt >= eka.alku && nyt < vika.loppu),
+        nyt, palat[i >= 0 ? i : tila.soiva]?.teksti ?? '');
+    }
+  };
   const ilmoita = () => {
+    ilmoitaKasvopuhe();
     if (!onTila || tila.peruttu) return;
     const pala = palat[tila.soiva]
       ?? palat[Math.min(vuorossa, palat.length - 1)] ?? null;
@@ -903,8 +999,10 @@ export function luoPuheSoitin({
   const loppu = () => {
     if (tila.peruttu) return;
     tila.peruttu = true;
+    ilmoitaKasvopuhe();
     clearInterval(kello);
     kello = null;
+    puraKetju();
     onLoppu?.();
   };
 
@@ -936,9 +1034,11 @@ export function luoPuheSoitin({
           // koko tekstille; myöhempi virhe päättää luennan siististi.
           const vaihe = tila.soiva < 0 && !lahteet.size ? 'alku' : 'kesken';
           tila.peruttu = true;
+          ilmoitaKasvopuhe();
           clearInterval(kello);
           kello = null;
           pysaytaLahteet();
+          puraKetju();
           onVirhe?.(vaihe);
           return;
         }
@@ -953,7 +1053,7 @@ export function luoPuheSoitin({
         verho.gain.setValueAtTime(1, Math.max(alkuAika + HAIVYTYS, alkuAika + kesto - HAIVYTYS));
         verho.gain.linearRampToValueAtTime(0, alkuAika + kesto);
         lahde.connect(verho);
-        verho.connect(vahvistin ?? piiri.destination);
+        verho.connect(paate());
         lahde.start(alkuAika, pala.alku, kesto);
         lahde.onended = () => {
           lahteet.delete(lahde);
@@ -980,6 +1080,7 @@ export function luoPuheSoitin({
         return;
       }
       if (!tila.tauolla) aikatauluta();
+      ilmoitaKasvopuhe();
       const nyt = piiri.currentTime;
       let soiva = tila.soiva;
       for (let i = 0; i < aloitusajat.length; i += 1) {
@@ -1069,9 +1170,11 @@ export function luoPuheSoitin({
     pysayta() {
       if (tila.peruttu) return;
       tila.peruttu = true;
+      ilmoitaKasvopuhe();
       clearInterval(kello);
       kello = null;
       pysaytaLahteet();
+      puraKetju();
     },
     tauko() {
       if (tila.peruttu || tila.tauolla) return;

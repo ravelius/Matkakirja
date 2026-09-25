@@ -106,6 +106,7 @@ export const MAAKARTAT = {
         + 'siksi, että sen hallussa on suojelukirje, jonka kerrotaan '
         + 'olevan profeetta Muhammadin antama — pihalla on myös '
         + 'moskeija.',
+      lyhyt: 'Pyhän Katariinan luostari 500-luvulta Siinain vuorten kainalossa.',
       selite: 'Pyhän Katariinan luostari Siinain paljaiden vuorten '
         + 'kainalossa. Muurit ovat 500-luvulta, keisari Justinianuksen '
         + 'rakennuttamat.',
@@ -156,6 +157,7 @@ export const MAAKARTAT = {
         + 'jättiläisen kanssa. Skotlannin puolella Staffan saarella on '
         + 'samanlaisia pylväitä — tarina ja geologia osoittavat samaan '
         + 'suuntaan.',
+      lyhyt: 'Kuusikulmaiset basalttipylväät laskeutuvat mereen Antrimin rannikolla.',
       selite: 'Kuusikulmaiset basalttipylväät laskeutuvat mereen Antrimin '
         + 'rannikolla. Korkeimmat pylväät ovat kaksitoistametrisiä.',
       lahde: 'Chmee2, Wikimedia Commons (CC BY 3.0)',
@@ -662,6 +664,7 @@ export const MAAKARTAT = {
         + 'yli vie tavallinen maantiesilta, jolta pyörteitä katsotaan '
         + 'kaiteen takaa. Virta on nuori: se syntyi vasta pari kolme '
         + 'tuhatta vuotta sitten, kun maa nousi jääkauden jälkeen.',
+      lyhyt: 'Saltstraumenin salmi ilmasta: vuorovesivirta piirtää veteen vaahtoisia pyörteitä.',
       selite: 'Saltstraumenin salmi ilmasta: maantiesilta ylittää '
         + 'kapean väylän, ja vuorovesivirta piirtää veteen vaahtoisia '
         + 'pyörteitä.',
@@ -716,6 +719,7 @@ export const MAAKARTAT = {
         + 'vetämällä matkustajavaunulla. Kieleke ei ole valmis: meri '
         + 'kuljettaa hiekkaa pitkin länsirannikkoa pohjoiseen, ja kärki '
         + 'kasvaa noin kymmenen metriä vuodessa kohti Ruotsia.',
+      lyhyt: 'Grenenin hiekkakärki ilmasta: aallot murtuvat kielekkeen kummallakin puolella.',
       selite: 'Grenenin hiekkakärki ilmasta: kävijät kulkevat jonossa '
         + 'kapeaa kielekettä pitkin, ja aallot murtuvat kummallakin '
         + 'puolella.',
@@ -765,6 +769,7 @@ export const MAAKARTAT = {
         + 'kalat putosivat koreihin. Kuldīgaa sanottiin kaupungiksi, '
         + 'jossa lohta saa ilmasta. Lohet ovat kadonneet, mutta '
         + 'vimpoja hyppää yhä joka kevät.',
+      lyhyt: 'Vimpoja hyppää Ventas rumban leveän mutta matalan putouksen yli Kuldīgassa.',
       selite: 'Vimpoja hyppää ilmaan Ventas rumban yli Kuldīgassa: '
         + 'putous on matala mutta leveä, ja kalojen on noustava sen '
         + 'yli päästäkseen kutupaikoille.',
@@ -814,6 +819,7 @@ export const MAAKARTAT = {
         + 'heitä asuu Trakaissa yhä. Sotien jälkeen linna seisoi '
         + 'raunioina lähes kolmesataa vuotta, ja se rakennettiin '
         + 'uudelleen vasta 1950- ja 1960-luvulla.',
+      lyhyt: 'Trakain saarilinna Galvė-järvellä nousee muureineen suoraan vedestä.',
       selite: 'Trakain saarilinna Galvė-järvellä: punatiiliset muurit '
         + 'ja punakattoiset tornit nousevat suoraan vedestä.',
       lahde: 'Diliff, Wikimedia Commons (CC BY-SA 3.0)',
@@ -875,6 +881,7 @@ export const MAAKARTAT = {
         + 'Posoaapa, joka oli siihen asti Suomen ja Euroopan suurin '
         + 'aapasuo. Kaikkia puita ei ehditty kaataa ennen tulvitusta, '
         + 'ja kantoja on nostettu pohjasta vielä 2000-luvulla.',
+      lyhyt: 'Lokan tekojärvi patotieltä nähtynä; horisontissa siintävät Nattaset.',
       selite: 'Lokan tekojärvi patotieltä nähtynä; horisontissa '
         + 'siintävät Nattaset. Veden alla ovat vanhat kylänpaikat ja '
         + 'suo.',
@@ -971,6 +978,7 @@ export const MAAKARTAT = {
         + 'mahtuakseen kapeasta uomasta mereen. Monessa on mustia '
         + 'raitoja — tuhkaa tulivuorenpurkauksista, joka jäi jään '
         + 'sisään.',
+      lyhyt: 'Tuhkaraitainen jäävuori Jökulsárlónin jäätikköjärvessä.',
       selite: 'Tuhkaraitainen jäävuori Jökulsárlónin jäätikköjärvessä. '
         + 'Mustat juovat ovat vanhojen purkausten tuhkakerroksia.',
       lahde: 'Snowolf, Wikimedia Commons (CC BY-SA 4.0)',
@@ -1025,6 +1033,7 @@ export const MAAKARTAT = {
         + 'noin 17 minuutiksi. Sisään ei pääse ostamalla lippua: paikat '
         + 'arvotaan, ja kymmenistä tuhansista hakijoista valitaan '
         + 'kuusikymmentä vuodessa.',
+      lyhyt: 'Newgrangen sisäänkäynti: kierrekuvioitu porttikivi ja kattolaatikon aukko.',
       selite: 'Newgrangen sisäänkäynti: oven yläpuolella on '
         + 'kattolaatikon aukko, ja edessä makaa kierrekuvioitu '
         + 'porttikivi. Valkoinen kvartsiseinä on 1970-luvun '
@@ -1079,6 +1088,7 @@ export const MAAKARTAT = {
         + 'se kaiversi Zêzere-joelle laakson, jonka U-kirjaimen muoto '
         + 'on niin tarkka, että sitä käytetään oppikirjaesimerkkinä '
         + 'siitä, mitä jää tekee maisemalle.',
+      lyhyt: 'Cântaro-kalliot Serra da Estrelan luonnonpuistossa.',
       selite: 'Cântaro-kalliot Serra da Estrelan luonnonpuistossa. '
         + 'Alarinteet ovat kesäkuussa keltaisenaan kukkivia pensaita.',
       lahde: 'Raquel Rosa, Wikimedia Commons (CC BY-SA 4.0)',
@@ -1131,6 +1141,7 @@ export const MAAKARTAT = {
         + 'rakennustarpeet nostettiin ylös pitkillä tikkailla tai '
         + 'vinssillä ja nostokorissa. Rappuset hakattiin kallioon vasta '
         + '1920-luvulla. Kuusi luostaria toimii yhä.',
+      lyhyt: 'Metéoran kalliopylväillä Thessaliassa luostari kohoaa pylvään laella.',
       selite: 'Metéoran kalliopylväitä Thessaliassa. Kahden pylvään '
         + 'laella näkyy luostari, alhaalla mutkittelee tie ja takana '
         + 'kohoaa Píndos-vuoristo.',
@@ -1182,6 +1193,7 @@ export const MAAKARTAT = {
         + 'omilla paikoillaan. Patsaiden takana kohoaa 49 metriä korkea '
         + 'kivikumpu, jonka sisään ei ole päästy — irtonainen sora '
         + 'valuu takaisin jokaiseen kaivantoon.',
+      lyhyt: 'Nemrutin huipulla aamuauringossa rivi päättömiä jumalpatsaita kivikummun juurella.',
       selite: 'Nemrutin huippu aamuauringossa: kivikummun juurella '
         + 'istuu rivi päättömiä jumalpatsaita, ja irronneet kivipäät '
         + 'on aseteltu niiden eteen.',
@@ -1236,6 +1248,7 @@ export const MAAKARTAT = {
         + 'Yhdeksänkaarinen silta: 167 metriä kiveä, valmiina 1833. '
         + 'Helteellä pustalla näkee kangastuksia, joissa puut '
         + 'näyttävät kelluvan ilmassa.',
+      lyhyt: 'Yhdeksänkaarinen kivisilta Hortobágyn pustalla keskellä tasaista maisemaa.',
       selite: 'Yhdeksänkaarinen kivisilta Hortobágyn pustalla: '
         + 'valkoinen kaide jatkuu kaaresta toiseen, alla kasvaa '
         + 'ruovikko ja ympärillä maa on tasaista joka suuntaan.',
@@ -1281,6 +1294,7 @@ export const MAAKARTAT = {
         + 'uuden vartijan: kallioon hakattiin daakialaisten viimeisen '
         + 'kuninkaan Decebaluksen kasvot, jotka ovat yli neljäkymmentä '
         + 'metriä korkeat.',
+      lyhyt: 'Decebaluksen kasvot hakattuna kalliojyrkänteeseen Tonavan yläpuolella.',
       selite: 'Decebaluksen kasvot hakattuna kalliojyrkänteeseen '
         + 'Tonavan yläpuolella; leuan alla lukee latinaksi '
         + '"DECEBALUS REX".',
@@ -1326,6 +1340,7 @@ export const MAAKARTAT = {
         + 'vuosikymmenistä. Sää on kuluttanut yksityiskohtia, joten '
         + 'ratsastajan vaatteet erottuvat huonosti. Kun Bulgaria otti '
         + 'euron käyttöön, ratsastaja päätyi sentin kolikoihin.',
+      lyhyt: 'Madaran ratsastaja kalliopinnassa: hevonen, ratsastaja ja kaatunut leijona.',
       selite: 'Madaran ratsastaja kalliopinnassa: hevonen keskellä, '
         + 'ratsastaja sen selässä, koira vasemmalla alhaalla ja '
         + 'kaatunut leijona hevosen jalkojen alla.',
@@ -1384,6 +1399,7 @@ export const MAAKARTAT = {
         + 'Rakentaminen kesti neljä vuotta ja maksoi noin 420 '
         + 'miljoonaa euroa. Ensimmäisenä elokuunaan silta kantoi noin '
         + '455 000 autoa.',
+      lyhyt: 'Pelješacin silta kaartaa köysipylonein Mali Stonin lahden yli.',
       selite: 'Pelješacin silta kaartaa Mali Stonin lahden yli; '
         + 'köysipylonit kannattavat viittä 285 metrin jännettä, ja '
         + 'taustalla nousevat karstivuoret.',
@@ -1435,6 +1451,7 @@ export const MAAKARTAT = {
         + 'vanha. Nisäkäslajeja on 36, muun muassa karhu, susi ja '
         + 'gemssi. Laakson pohjalla putoaa Skakavacin vesiputous noin '
         + '75 metriä.',
+      lyhyt: 'Perućican aarniometsä täyttää laakson, ja keskellä siintää Skakavacin vesiputous.',
       selite: 'Perućican aarniometsä täyttää koko laakson pohjasta '
         + 'harjanteille asti, ja keskellä erottuu ohuena valkoisena '
         + 'juovana Skakavacin vesiputous.',
@@ -1480,6 +1497,7 @@ export const MAAKARTAT = {
         + 'vanhaankaupunkiin silta rotkon yli. Kaupungissa asuu noin '
         + '98 000 ihmistä, ja kanjoni on suojeltu geologisena '
         + 'luonnonmuistomerkkinä.',
+      lyhyt: 'Näkymä Armenialaiselta bastionilta: kallio putoaa kanjoniin, Linnansilta johtaa kaupunkiin.',
       selite: 'Näkymä Armenialaiselta bastionilta linnoitukseen: '
         + 'kallio putoaa pystysuorana kanjoniin, ja Linnansilta '
         + 'johtaa kaupunkiin.',
@@ -1640,6 +1658,7 @@ export const MAAKARTAT = {
         + 'huipulle asti — pehmeä hiekka syö vauhdin, ja auto valuu '
         + 'takaisin alas. Kuvan suorat urat rinteessä ovat renkaiden '
         + 'jälkiä.',
+      lyhyt: 'Moreebin dyyni Liwan eteläpuolella; hiekkaseinämässä kilpa-ajojen jättämät urat.',
       selite: 'Moreebin dyyni Liwan eteläpuolella. Hiekkaseinämän yli '
         + 'nousee kolme suoraa uraa — kilpa-ajojen jälkiä. Alhaalla '
         + 'näkyy kisa-alueen aita, valonheitinmastot ja tasainen '
@@ -1711,6 +1730,7 @@ export const MAAKARTAT = {
         + 'rakensivat vuonna 1864 lennätinaseman — kuumuus oli niin '
         + 'sietämätöntä, että asema hylättiin runsaassa kymmenessä '
         + 'vuodessa.',
+      lyhyt: 'Dhow-vene kuljettaa matkustajia Khor Ash Shamin poukamassa Musandamissa.',
       selite: 'Matkustajia kuljettava dhow-vene Khor Ash Shamin '
         + 'poukamassa Musandamissa, Omanin lippu perässä. Paljaat '
         + 'kalliot laskeutuvat suoraan veteen ilman rantakaistaletta, '
@@ -1784,6 +1804,7 @@ export const MAAKARTAT = {
         + 'ennen vuotta 1990 Failakalla asui noin 5 800 ihmistä, mutta '
         + 'Irakin miehityksen jälkeen vain harvat palasivat. Juomavesi '
         + 'tulee saarelle yhä mantereelta merenalaista putkea pitkin.',
+      lyhyt: 'Kaivausaluetta Failakan länsipäässä: kivimuureja ja kynnyksiä Persianlahden rannalla.',
       selite: 'Kaivausaluetta Failakan länsipäässä: kivimuurien '
         + 'rajaamia huoneita ja kynnyksiä, ja aivan takana '
         + 'Persianlahti.',
@@ -1855,6 +1876,7 @@ export const MAAKARTAT = {
         + 'ainoa Unescon maailmanperintökohde; listalle se pääsi '
         + 'vuonna 2013.',
       tiedosto: 'Ruins in Zubarah on a cloudy day.jpg',
+      lyhyt: 'Kaivettuja talonseiniä al-Zubarahin rauniokaupungissa Persianlahden rannalla.',
       selite: 'Kaivettuja talonseiniä al-Zubarahin rauniokaupungissa. '
         + 'Vasemmalla siintää Persianlahti, ja aavikon yli työntyy '
         + 'sadekuuron tumma rintama.',
@@ -1938,6 +1960,7 @@ export const MAAKARTAT = {
         + 'rata jäi hiekkaan: asemarakennuksia ja vetureita seisoo yhä '
         + 'paikoillaan. Ratapenkkaa myös kaivellaan yhä, koska '
         + 'kerrotaan, että radalta jäi maahan piilotettua kultaa.',
+      lyhyt: 'Kunnostettu höyryveturi ja vaunurivi Hijazin radan vanhalla asemalla Al-Ulassa.',
       selite: 'Kunnostettu höyryveturi ja vaunurivi Hijazin radan '
         + 'vanhalla asemalla Al-Ulassa. Veturin edessä on kiiloiksi '
         + 'taivutettu puskin, savupiipun takana vihreä höyrykupu, ja '
@@ -2034,6 +2057,7 @@ export const MAAKARTAT = {
         + 'kuin pullo. Saarelaisia on noin 50 000, ja he puhuvat '
         + 'arabian lisäksi omaa kieltään sokotraa. Unesco otti saaren '
         + 'maailmanperintöluetteloon vuonna 2008.',
+      lyhyt: 'Kaksi sokotrantraakkipuuta kivisellä ylätasangolla.',
       selite: 'Kaksi sokotrantraakkipuuta kivisellä ylätasangolla. '
         + 'Etummaisen paksu vaalea runko jakautuu ylhäällä sadoiksi '
         + 'ruskeiksi oksiksi, ja vain niiden kärjissä on vihreää — '
@@ -2118,6 +2142,7 @@ export const MAAKARTAT = {
         + 'kutakin, joten merimiehiä oli luultavasti neljä. Laiva on '
         + 'nyt esillä Kyrenian linnan hylkymuseossa, ja sen kuva on '
         + 'Kyproksen 10, 20 ja 50 sentin kolikoissa.',
+      lyhyt: 'Kyrenialaisen laivan runko hylkymuseossa puisten pukkien päällä.',
       selite: 'Kyrenialaisen laivan runko hylkymuseossa puisten '
         + 'pukkien päällä. Kaaret ja lankut ovat mustuneet, mutta '
         + 'kylki ja pohja ovat lähes kokonaisia; taustalla '
@@ -2203,6 +2228,7 @@ export const MAAKARTAT = {
         + 'vuoden välein. Kääntyessään rattaat narisevat ja voihkivat '
         + 'niin että ääni kuuluu kauas. Haman nuoret ovat vanhastaan '
         + 'kiivenneet rattaan kyytiin ja hypänneet ylhäältä jokeen.',
+      lyhyt: 'Yksi Haman suurista vesirattaista Orontesjoen rannalla.',
       selite: 'Yksi Haman suurista vesirattaista Orontesjoen '
         + 'rannalla. Puinen kehä kohoaa kivimuurin takaa korkeammalle '
         + 'kuin viereisen rakennuksen holvikaaret, ja joen vihreässä '
@@ -2317,6 +2343,7 @@ export const MAAKARTAT = {
         + 'samanlainen kaarikattoinen ruokotalo. Talo tehdään '
         + 'uudestaan noin kymmenen vuoden välein, eikä se haittaa — '
         + 'ruoko kasvaa suolla joka kesä uudelleen.',
+      lyhyt: 'Mudhif-ruokomaja nousee Etelä-Irakin soille; miehet sitovat ruokokimppuja katolle.',
       selite: 'Mudhif nousee Etelä-Irakin soilla. Ruokokaaret on jo '
         + 'pystytetty riviin ja seinät verhottu punotuilla matoilla; '
         + 'katolla kaksi miestä sitoo suoria ruokokimppuja '
@@ -2432,6 +2459,7 @@ export const MAAKARTAT = {
         + '427 kuilua ja tunnelia 33 kilometriä. Se kaivettiin noin '
         + '2 700 vuotta sitten ja antaa yhä vetensä lähes '
         + '40 000 ihmiselle.',
+      lyhyt: 'Gonabadin Qasabeh-qanatin tunneli pitkällä valotusajalla kuvattuna.',
       selite: 'Gonabadin Qasabeh-qanatin tunneli pitkällä '
         + 'valotusajalla kuvattuna. Käsin hakattu kallioholvi kaartuu '
         + 'korkealle, seinien kuopat ja iskunjäljet näkyvät '
@@ -2543,6 +2571,7 @@ export const MAAKARTAT = {
         + '1859–1898, ja Mark Twain kirjoitti juuri näistä vuosista '
         + 'kirjansa Elämää Mississippillä. St. Louis oli solmukohta, '
         + 'jossa joen laivat ja lännen rautatiet kohtasivat.',
+      lyhyt: 'Mississippi virtaa Itascajärvestä Meksikonlahteen 3 766 kilometriä.',
       selite: 'Mississippi virtaa Itascajärvestä Meksikonlahteen 3 766 '
         + 'kilometriä ja oli ennen rautateitä maan valtaväylä, jonka '
         + 'höyrylaivakausi kesti 1830-luvulta 1870-luvulle; painoksen '
@@ -2625,6 +2654,7 @@ export const MAAKARTAT = {
         + 'Wai Pounamu, vihreän kiven vedet. James Cook antoi '
         + 'vuoristolle nimen todennäköisesti 23. maaliskuuta 1770, '
         + 'vaikka ei sumun takia nähnyt korkeinta huippua.',
+      lyhyt: 'Aoraki hohtaa auringonlaskun valossa Hooker Valleyn perällä.',
       selite: 'Aoraki hohtaa auringonlaskun valossa Hooker Valleyn '
         + 'perällä, ja sen edessä jyrkät rinteet putoavat jäätikön '
         + 'uurtamaan laaksoon.',
@@ -2776,6 +2806,7 @@ export const MAAKARTAT = {
         + 'Blaxland, William Lawson ja William Charles Wentworth '
         + 'lähtivät 11. toukokuuta 1813 ja pääsivät yli kuukauden '
         + 'lopulla. Vasta silloin siirtokunta pääsi mantereen sisään.',
+      lyhyt: 'Wentworth Fallsilta katsottuna Jamisonin laakson jyrkänteet laskeutuvat portaina.',
       selite: 'Wentworth Fallsilta katsottuna Jamisonin laakson '
         + 'hiekkakivijyrkänteet laskeutuvat portaina metsän peittämään '
         + 'pohjaan, ja kaukaisuus siintää sinisenä.',
@@ -2858,6 +2889,7 @@ export const MAAKARTAT = {
         + 'rautateitä joki oli ainoa nopea reitti sisämaahan: '
         + 'jokilaivat kulkivat Buenos Airesista Asunciónin satamaan '
         + 'asti. Suistossa joki hajoaa sadoiksi saariksi ja haaroiksi.',
+      lyhyt: 'Paraná levittäytyy Argentiinan halki niin leveänä, että vastaranta jää metsäviivaksi.',
       selite: 'Paraná levittäytyy Argentiinan halki niin leveänä, että '
         + 'vastaranta jää matalaksi metsäviivaksi taivaanrannassa.',
       lahde: 'Luis Argerich from Buenos Aires, Argentina, Wikimedia '
@@ -2901,6 +2933,32 @@ export const MAAKARTAT = {
  * niin, että ydinrajaus täyttää kehyksen (ui.js: ydinAla), joten
  * lepotilan näkymä pysyy pikselilleen entisenä ja reunus paljastuu
  * vasta zoomatessa.
+ *
+ * KOHTEEN KENTÄT: `nimi`, `lat`, `lon` ja valinnaiset `wiki`
+ * (fi-Wikipedian artikkeli) ja `nimiPuoli` ('vasen' | 'oikea', nimiön
+ * väistö ahtaassa paikassa). Kaksi lisää tuli 2.9.2026, kun
+ * kaupunkikaton (v1419) pudottamat karttanostot palautettiin kartalle:
+ *
+ *   nosto   PUDOTETUN KARTTANOSTON TUNNUS, jota tämä piste kantaa —
+ *           merkkijono tai lista, jos sama kohde on kartalla yhtenä
+ *           pisteenä ja pääkartalla kahtena nostona. Kenttä on
+ *           KONEELLINEN LINKKI (tools/tarkista-nostopaikat.mjs,
+ *           tests/nostot-kartalla.test.mjs): nimivertailu ei kelpaisi,
+ *           koska sama sisältö kulkee kartalla eri nimellä kuin
+ *           nostona (`moskeijat` on täällä "Banja Bashin moskeija").
+ *           Omistajan sääntö 2.9.2026: *"lisää kaikki historian hetket
+ *           ja muut karttanostot myös joko pääkarttanäkymään tai sitten
+ *           kaupunkilehden kaupunkikartalle, ellei näin ole jo tehty."*
+ *   siirto  MERKIN VÄISTÖ `{ x, y }` kartan lavan pikseleinä, kun
+ *           piste osuisi naapurinsa alle (peitto yli 50 %,
+ *           tools/tarkista-karttapisteet.mjs). Koordinaattia EI
+ *           siirretä — väistö on piirtoasia kuten `nimiPuoli`, ja se
+ *           tehdään js/nahtavyydet.js:ssä pisteen asemoinnissa.
+ *
+ * NOSTO KELPAA TÄNNE VAIN, JOS SE ON LEPOTILAN NÄKYMÄSSÄ (`rajat`).
+ * Reunukselle (piirtoRajat) osuva merkki näkyisi vasta zoomatessa, ja
+ * tests/karttareunus.test.mjs kieltää sen. Wienin Praterin näyttely ja
+ * Rooman Avaimenreikä jäivät siksi pääkartalle kaupunkikaton ohi.
  */
 export const KAUPUNKIKARTAT = {
   /*
@@ -2982,6 +3040,359 @@ export const KAUPUNKIKARTAT = {
    * kulttuurijuttua ilman että lähde vie sotaan. Valitut kuusi
    * kohdetta ovat sellaisia, joista on kerrottavaa rakennuksena.
    */
+  /*
+   * Gao (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä. Peli ei käsittele
+   * nykykonflikteja — molemmat kohteet ja niiden tekstit koskevat vain
+   * Songhain valtakunnan aikaa (1400–1500-luvut).
+   */
+  gao: {
+    polku: 'assets/kartat/gao-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 16.3014, etela: 16.2673, lansi: -0.0613, ita: -0.0325,
+    },
+    esittely: 'Kartan alue on Gaon ydinkeskusta Nigerjoen rannalla. '
+      + 'Askian mausoleumi, savesta rakennettu pyramidinmuotoinen '
+      + 'hautamonumentti, kohoaa yhä keskustassa; se on Gaon suurin '
+      + 'esikolonialistinen rakennus ja Unescon maailmanperintökohde.',
+    kohteet: [
+      {
+        nimi: 'Askian mausoleumi', lat: 16.2894, lon: -0.0445,
+        teksti: 'Songhain valtakunnan hallitsija Askia Muhammad '
+          + 'rakennutti oman hautamonumenttinsa Gaohon 1495. Pyramidin '
+          + 'muotoinen, 17 metriä korkea savirakennelma on Gaon suurin '
+          + 'esikolonialistinen monumentti ja toimii yhä rukouspaikkana '
+          + '— Unesco liitti sen maailmanperintöluetteloon 2004.',
+      },
+      {
+        nimi: 'Gaon suurmoskeija', lat: 16.2793494, lon: -0.0493098,
+        teksti: 'Kaupungin suurmoskeija sijaitsee Askian mausoleumista '
+          + 'reilun kilometrin päässä, samalla Askia-nimisellä '
+          + 'kadulla — molemmat muistuttavat Gaon asemasta islamilaisen '
+          + 'oppineisuuden ja hallinnon keskuksena Songhain valtakunnan '
+          + 'aikana.',
+      },
+    ],
+  },
+  /*
+   * Cayenne (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä.
+   */
+  cayenne: {
+    polku: 'assets/kartat/cayenne-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 4.947, etela: 4.930, lansi: -52.343, ita: -52.326,
+    },
+    esittely: 'Kartan alue on Cayennen vanha kaupunki kapealla '
+      + 'niemellä. Cépéroun kukkulalle nousi 1643 linnoitus, jonka '
+      + 'juurelle koko kaupunki kasvoi; kaupungin puolustusmuurin '
+      + 'paikalle raivattiin 1810-luvulla kuningaspalmuaukio, joka on '
+      + 'yhä keskustan tärkein kohtaamispaikka.',
+    kohteet: [
+      {
+        nimi: 'Fort Cépérou', lat: 4.9377244, lon: -52.3368014,
+        teksti: 'Ranskalaiset kauppiaat pystyttivät linnoituksen '
+          + 'alkuperäiskansan päällikön, Cépéroun, mukaan nimetylle '
+          + 'kukkulalle 1643. Paikka vaihtoi omistajaa moneen kertaan '
+          + 'hollantilaisten, englantilaisten ja portugalilaisten '
+          + 'välillä, ennen kuin Ranska vakiinnutti asemansa '
+          + '1600-luvun lopulla.',
+      },
+      {
+        nimi: 'Place des Palmistes', lat: 4.9395938, lon: -52.3338290,
+        teksti: 'Kun Cayennea ympäröinyt puolustusmuuri purettiin '
+          + '1810-luvulla, sen paikalle raivattiin aukio ja istutettiin '
+          + 'komeita kuningaspalmuja. Aukiosta tuli nopeasti '
+          + 'siirtokunnan tärkein kohtaamispaikka, ja se on sitä yhä.',
+      },
+    ],
+  },
+  /*
+   * Macapá (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä. Rajaus on tavallista leveämpi,
+   * koska ainoat kaksi paikannettavaa kohdetta ovat kaupungin eri
+   * laidoilla (tools/piirra-kaupunkikartta.mjs macapa-rivin kommentti).
+   */
+  macapa: {
+    polku: 'assets/kartat/macapa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 0.043, etela: -0.011, lansi: -51.090, ita: -51.037,
+    },
+    esittely: 'Kartan alue kattaa Macapán vanhan linnoituksen ja '
+      + 'Marco Zero -muistomerkin, jotka sijaitsevat kaupungin eri '
+      + 'laidoilla Amazon-joen suiston partaalla. Macapá on ainoa '
+      + 'Brasilian osavaltion pääkaupunki, jonka halki päiväntasaaja '
+      + 'kulkee.',
+    kohteet: [
+      {
+        nimi: 'Fortaleza de São José de Macapá', lat: 0.0310513, lon: -51.0487588,
+        teksti: 'Tähdenmuotoinen, nelibastioninen linnoitus valmistui '
+          + '1782 lähes kaksikymmentä vuotta kestäneen rakennustyön '
+          + 'jälkeen ja suojasi Amazonin suiston rajaseutua Ranskan ja '
+          + 'Alankomaiden pyrkimyksiltä. Linnoitusta pidetään nykyisin '
+          + 'kaupungin symbolisena syntymäpaikkana.',
+      },
+      {
+        nimi: 'Marco Zero -muistomerkki', lat: 0.0007167, lon: -51.0779419,
+        teksti: 'Vuonna 1987 avattu 30-metrinen betoniobeliski merkitsee '
+          + 'tarkasti pisteen 0°0′0″, jossa voi seisoa yhtä aikaa '
+          + 'pohjoisella ja eteläisellä pallonpuoliskolla. Tästä '
+          + 'Macapá tunnetaan lempinimellä "Keskimaailman pääkaupunki".',
+      },
+    ],
+  },
+  /*
+   * João Pessoa (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä. Farol do Cabo Branco/Ponta do
+   * Seixas (Amerikan mantereen itäisin kärki) on muutaman km päässä
+   * keskustasta, ei samassa rajauksessa.
+   */
+  joaopessoa: {
+    polku: 'assets/kartat/joaopessoa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -7.108, etela: -7.128, lansi: -34.895, ita: -34.876,
+    },
+    esittely: 'Kartan alue on João Pessoan historiallinen keskusta '
+      + 'Paraíban joen mutkan yllä — Brasilian kolmanneksi vanhin '
+      + 'kaupunki, perustettu 1585. São Franciscon luostari ja Teatro '
+      + 'Santa Roza ovat molemmat vanhan kaupungin ydinalueella.',
+    kohteet: [
+      {
+        nimi: 'São Franciscon luostari', lat: -7.1145883, lon: -34.8825453,
+        teksti: 'Fransiskaanimunkit aloittivat luostarin ja kirkon '
+          + 'rakentamisen 1589; koko kokonaisuus täydentyi vasta 1788. '
+          + 'Sisätiloja koristavat kullatut puuveistokset ja Unescon '
+          + 'ainutlaatuiseksi nostama saarnastuoli — Etelä-Amerikan '
+          + 'suurin barokkimonumentti.',
+      },
+      {
+        nimi: 'Teatro Santa Roza', lat: -7.1177565, lon: -34.8866680,
+        teksti: 'Vaaleanpunainen, uusklassinen teatteri avattiin 3. '
+          + 'marraskuuta 1889 Parahyban maakunnan tärkeimpänä '
+          + 'teatterina. Rakennus seisoo yhä samalla paikalla '
+          + 'muutaman korttelin päässä joenrannasta.',
+      },
+    ],
+  },
+  /*
+   * Santarém (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä.
+   */
+  santarem: {
+    polku: 'assets/kartat/santarem-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -2.408, etela: -2.430, lansi: -54.735, ita: -54.705,
+    },
+    esittely: 'Kartan alue on Santarémin vanha keskusta siinä kohtaa, '
+      + 'jossa tumma Tapajós-joki ja sameanruskea Amazon virtaavat '
+      + 'vierekkäin sekoittumatta — ilmiö tunnetaan nimellä Vesien '
+      + 'kohtaaminen. Rantaraitilta avautuu paras näköala ilmiöön; '
+      + 'lähellä on kaupungin vanha keskusaukio.',
+    kohteet: [
+      {
+        nimi: 'Vesien kohtaamisen näköalapaikka (Orla)', lat: -2.4179024, lon: -54.7172252,
+        teksti: 'Santarémin edustalla Amazonin sameanruskea vesi kohtaa '
+          + 'Tapajós-joen tumman, kirkkaan veden, ja kaksi väriä virtaa '
+          + 'vierekkäin kilometrien matkan sekoittumatta juuri lainkaan. '
+          + 'Ilmiötä kutsutaan nimellä Encontro das Águas, ja rantaraitilta '
+          + 'sen näkee parhaiten.',
+      },
+      {
+        nimi: 'Praça Tiradentes', lat: -2.4194012, lon: -54.7235362,
+        teksti: 'Santarémin vanhan kaupunginosan keskusaukio lähellä '
+          + 'paikkaa, jossa jesuiittapappi João Felipe Bettendorff '
+          + 'perusti lähetysaseman 1661 — kaupungin virallisen '
+          + 'syntyhetken. Ympäröivät talot on perinteisesti '
+          + 'päällystetty portugalilaistyylisillä atsulejo-kaakeleilla.',
+      },
+    ],
+  },
+  /*
+   * Porto Velho (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä.
+   */
+  portovelho: {
+    polku: 'assets/kartat/portovelho-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -8.75, etela: -8.7785, lansi: -63.924, ita: -63.889,
+    },
+    esittely: 'Kartan alue on Porto Velhon vanha keskusta Rio Madeiran '
+      + 'rannalla. Kaupunki syntyi 1907 kuolonuhreja vaatineen Madeira-'
+      + 'Mamoré-rautatien leirinä; vanha rautatieasema seisoo yhä joen '
+      + 'varrella, ja lähellä kohoaa kaupungin ensimmäinen kivikirkko.',
+    kohteet: [
+      {
+        nimi: 'Sagrado Coração de Jesus -katedraali', lat: -8.7620468, lon: -63.9040348,
+        teksti: 'Porto Velhon ensimmäinen katolinen kivikirkko: peruskivi '
+          + 'muurattiin 1917, mutta rakentaminen käynnistyi kunnolla '
+          + 'vasta kymmenen vuotta myöhemmin. Ulkoa kaksitorninen '
+          + 'katedraali on roomalaistyylinen, mutta sisällä holvit '
+          + 'nousevat goottilaisittain terävinä.',
+      },
+      {
+        nimi: 'Madeira-Mamoré-rautatien vanha asema', lat: -8.7664873, lon: -63.9090431,
+        teksti: 'Porto Velho syntyi 1907 tämän rautatien '
+          + 'rakennusleirinä — hanke vaati satoja työläisten henkiä '
+          + 'malariaan ja muihin sairauksiin. Vanha asemarakennus joen '
+          + 'varrella on säilytetty, ja sen pihalla seisoo yhä ratahankkeen '
+          + 'vanhoja vetureita.',
+      },
+    ],
+  },
+  /*
+   * Broome (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä.
+   */
+  broome: {
+    polku: 'assets/kartat/broome-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -17.9424, etela: -17.9749, lansi: 122.2189, ita: 122.2633,
+    },
+    esittely: 'Kartan alue on Broomen ydinkeskusta, joka kasvoi '
+      + '1880-luvulla maailman johtavaksi helmisatamaksi. Bedford '
+      + 'Parkissa muistetaan naisia, jotka pakotettiin sukeltamaan '
+      + 'helmiäissimpukkaa; Chinatownin kapeat kujat syntyivät '
+      + 'aikanaan Aasiasta saapuneiden sukeltajien ja kauppiaiden '
+      + 'korttelina.',
+    kohteet: [
+      {
+        nimi: 'Women of Pearling -patsas', lat: -17.9628799, lon: 122.2388728,
+        teksti: 'Bedford Parkiin, paikkaan jossa perheet aikoinaan '
+          + 'odottivat lugger-veneiden palaavan merten takaa, '
+          + 'pystytettiin 2010 kolmimetrinen pronssipatsas '
+          + 'aboriginaalinaisesta, joka nousee vedestä helmiäissimpukka '
+          + 'kädessään — muistomerkki naisille, joita pakotettiin '
+          + 'sukeltamaan simpukoita 1800-luvulla ilman korvausta.',
+      },
+      {
+        nimi: 'Chinatown', lat: -17.9544454, lon: 122.2433213,
+        teksti: 'Helmisatama veti Broomeen sukeltajia ja kauppiaita '
+          + 'Japanista, Kiinasta, Malesiasta ja Filippiineiltä, ja '
+          + 'satamalaitureiden ympärille kasvanut kortteli sai lopulta '
+          + 'nimen Chinatown. Vuoteen 1910 mennessä noin 3 500 kaupungin '
+          + '5 000 asukkaasta sai leipänsä helmiteollisuudesta.',
+      },
+    ],
+  },
+  /*
+   * Kalgoorlie (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Kohteet
+   * käyttävät plain `teksti`-kenttää, EI `nosto:`-linkkiä — tämä on
+   * uutta, vielä olemassa olevaan nostoon linkittämätöntä sisältöä eikä
+   * kytkeydy pelin globaaliin nosto-sijoittelusääntöön
+   * (tests/nostot-kartalla.test.mjs). Vain kaksi nähtävyyttä on aidosti
+   * paikannettavissa; loput kaupungin kulttuurinostoista (kamelikaravaanit,
+   * Boulder-kaksoiskaupunki, piikkipiru) ovat teemallisia eivätkä
+   * osoitteellisia, siksi ne eivät ole kartalla.
+   */
+  kalgoorlie: {
+    polku: 'assets/kartat/kalgoorlie-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -30.723, etela: -30.756, lansi: 121.443, ita: 121.492,
+    },
+    esittely: 'Kartan alue on Kalgoorlien ydinkeskusta, joka kasvoi '
+      + 'kultaryntäyksen mukana 1890-luvulla Hannan Streetin ympärille. '
+      + 'Pääkadulla seisoo Paddy Hannanin patsas, jonka löytö sytytti koko '
+      + 'ryntäyksen; muutaman kilometrin päässä pohjoisessa on Hannans '
+      + 'North, yksi Golden Milen vanhoista kultakaivoksista.',
+    kohteet: [
+      {
+        nimi: 'Paddy Hannanin patsas', lat: -30.7490175, lon: 121.4705657,
+        teksti: 'Paddy Hannanin pronssipatsas seisoo yhä Kalgoorlien '
+          + 'pääkadulla vesileili sylissään ja toimii juomalähteenä. '
+          + 'Hänen hevosensa kengän irtoaminen tällä paikalla kesäkuussa '
+          + '1893 johti kultalöytöön, joka synnytti koko kaupungin.',
+      },
+      {
+        nimi: 'Hannans North -kaivos', lat: -30.7268005, lon: 121.4716290,
+        teksti: 'Hannans North oli yksi kymmenistä kaivoksista Golden '
+          + 'Milella, maailman rikkaimmalla kultaneliömailin, jonka alla '
+          + 'kulki yli kolmetuhatta kilometriä käytäviä. Kaivos on '
+          + 'nykyään museo: sen nostotornit seisovat yhä punaisella '
+          + 'hiekalla.',
+      },
+    ],
+  },
+  /*
+   * Mount Isa (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä. Lake Moondarra, jota
+   * kulttuurinosto kuvaa "aivan kaupungin kupeessa", jätettiin pois: se
+   * on todellisuudessa n. 18 km kaupungista eikä mahdu samaan
+   * rajaukseen kuin kaivos ja lookout (tools/piirra-kaupunkikartta.mjs
+   * mountisa-rivin kommentti).
+   */
+  mountisa: {
+    polku: 'assets/kartat/mountisa-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -20.709, etela: -20.743, lansi: 139.463, ita: 139.518,
+    },
+    esittely: 'Kartan alue on Mount Isan ydinkeskusta Leichhardtin joen '
+      + 'molemmin puolin. Joen länsipuolella kohoavat Mount Isa Minesin '
+      + 'piiput ja louhokset, jotka hallitsevat koko kaupungin '
+      + 'taivaanrantaa; keskustan lounaispuolella oleva City Lookout '
+      + 'tarjoaa parhaan näköalan kaivosalueelle.',
+    kohteet: [
+      {
+        nimi: 'Mount Isa Mines', lat: -20.7279113, lon: 139.4830884,
+        teksti: 'Mount Isa Minesin lyijy-, sinkki-, hopea- ja '
+          + 'kuparimalmiot ovat maailman suurimpia. Kaupungin '
+          + 'taivaanrantaa hallitsevat kaksi piippua — korkeampi '
+          + 'lyijysulatolle, punavalkoraidallinen kuparisulatolle — ja '
+          + 'niiden juurella vanha, jo käytöstä poistettu nostotorni '
+          + 'seisoo yhä kaupungin symbolina.',
+      },
+      {
+        nimi: 'City Lookout', lat: -20.7235054, lon: 139.4984195,
+        teksti: 'Kaupungin lounaisreunalla kohoava City Lookout on '
+          + 'paikallisten ja matkailijoiden näköalapaikka, josta avautuu '
+          + 'näkymä koko Mount Isaan ja sen kaivosalueen piippuihin '
+          + 'Leichhardtin joen yli.',
+      },
+    ],
+  },
+  /*
+   * Geraldton (sisältöinventaario #3045 kohta 5.5, 24.9.2026). Plain
+   * `teksti`-kenttä, ei `nosto:`-linkkiä. Houtman Abrolhosin haaksirikko
+   * on 80 km ulkona merellä, ei kartalla.
+   */
+  geraldton: {
+    polku: 'assets/kartat/geraldton-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: -28.7548, etela: -28.7977, lansi: 114.5644, ita: 114.6283,
+    },
+    esittely: 'Kartan alue on Geraldtonin ydinkeskusta Champion Bayn '
+      + 'rannalla. Länsikärjessä kohoaa Point Mooren majakka, Länsi-'
+      + 'Australian vanhin yhä pystyssä oleva liittovaltion majakka; '
+      + 'kauempana idässä on kaupungin rautatieasema, joka avasi '
+      + 'sisämaan kaivosseudun satamalle 1879.',
+    kohteet: [
+      {
+        nimi: 'Point Mooren majakka', lat: -28.7827109, lon: 114.5793925,
+        teksti: 'Point Mooren punavalkoraidallinen majakka valmistui '
+          + '1878 opastamaan laivat turvallisesti Champion Bayhin. Se on '
+          + 'Länsi-Australian vanhin yhä pystyssä oleva liittovaltion '
+          + 'majakka, lähes 35 metriä korkea, ja sen valo näkyy '
+          + 'avomerelle kymmenien kilometrien päähän.',
+      },
+      {
+        nimi: 'Geraldtonin rautatieasema', lat: -28.7697728, lon: 114.6132638,
+        teksti: 'Vuonna 1879 valmistunut rautatie yhdisti Geraldtonin '
+          + 'sataman sisämaan kaivosseutuun ja moninkertaisti '
+          + 'satamaliikenteen käytännössä yhdessä yössä. Nykyinen '
+          + 'koristeellinen asemarakennus samalla paikalla toimii yhä '
+          + 'matkailijoiden lähtöpisteenä.',
+      },
+    ],
+  },
   /*
    * Damaskoksen vanhakaupunki (nippu 2, 13.8.2026). Sama rajaus kuin
    * Aleppossa: peli ei käsittele nykykonflikteja, ja syyrialaiset
@@ -3412,7 +3823,19 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Sfinksikuja', lat: 25.7084, lon: 32.6485 },
       { nimi: 'Mutin temppeli', lat: 25.7111, lon: 32.656 },
       { nimi: 'Khonsun temppeli', lat: 25.7168, lon: 32.6559 },
-      { nimi: 'Karnakin suuri pylvässali', lat: 25.7186, lon: 32.6579 },
+      /*
+       * KARTAN OMA KOHDE NOSTONA (omistajan päätös 2.9.2026 illalla:
+       * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+       * kaupunkilehden omalla kartalla."*). Piste oli jo kartalla; kenttä
+       * `nosto` on koneellinen linkki samaa paikkaa tarkoittavaan
+       * pääkartan fokuskohteeseen, joka putoaa sen myötä pääkartalta
+       * (js/fokuskohteet.js karsiKaupunkikartanNostot). Pisteen oma juttu
+       * on ennallaan — sisältöä ei kopioitu mistään.
+       */
+      {
+        nimi: 'Karnakin suuri pylvässali', lat: 25.7186, lon: 32.6579,
+        nosto: 'karnakin-pylvassali',
+      },
     ],
   },
   halab: {
@@ -3766,10 +4189,13 @@ export const KAUPUNKIKARTAT = {
        * Hagia Sofiasta ja Sinisestä moskeijasta — kirjaimellisesti
        * naapuritontteja, joten ne eivät voi olla omia numeroitaan.
        */
-      { nimi: 'Suuri basaari', lat: 41.011, lon: 28.9683 },
+      { nimi: 'Suuri basaari', lat: 41.011, lon: 28.9683, nosto: 'kapalicarsi' },
       { nimi: 'Sininen moskeija', lat: 41.0054, lon: 28.9768, wiki: 'Sulttaani Ahmedin moskeija' },
       { nimi: 'Hagia Sofia', lat: 41.0085, lon: 28.98, wiki: 'Hagia Sofia' },
-      { nimi: 'Topkapın palatsi', lat: 41.0128, lon: 28.984, wiki: 'Topkapın palatsi' },
+      {
+        nimi: 'Topkapın palatsi', lat: 41.0128, lon: 28.984, wiki: 'Topkapın palatsi',
+        nosto: 'skandaali-kasikci-elmasi-legenda',
+      },
       { nimi: 'Galatan torni', lat: 41.0256, lon: 28.9742, wiki: 'Galatan torni' },
       { nimi: 'Üsküdar', lat: 41.0254, lon: 29.0156, wiki: 'Üsküdar' },
       /*
@@ -3785,6 +4211,56 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Galatan silta', lat: 41.0201, lon: 28.9731 },
       { nimi: 'Sirkecin asema', lat: 41.0152, lon: 28.9764 },
       { nimi: 'Neitsyttorni', lat: 41.0211, lon: 29.0041 },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki istanbul).
+       */
+      {
+        nimi: 'Vararikko 1875', lat: 41.0122, lon: 28.9739,
+        nosto: 'skandaali-osmanien-vararikko-1875',
+      },
+      {
+        nimi: 'Camondon portaat', lat: 41.0255, lon: 28.9742,
+        nosto: 'syvennys-istanbul-camondo', nimiPuoli: 'oikea',
+        siirto: { x: 2, y: 26 },
+      },
+      /*
+       * KAKSI NOSTOA SAMASSA PAIKASSA. Pääkartan fokuskohde `hippodromi`
+       * (js/packs/fokuskohteet-tur.js) on tämä sama paikka: käärmepylväs
+       * seisoo yhä radan keskiselänteellä siinä, mihin Konstantinus Suuri
+       * sen pystytti, joten kahta merkkiä ei voi olla. Lista on
+       * `nosto`-kentän toinen sallittu muoto
+       * (tools/tarkista-nostopaikat.mjs kohdekarttojenNostot).
+       */
+      {
+        nimi: 'Käärmepylväs', lat: 41.0058, lon: 28.9758,
+        nosto: ['syvennys-istanbul-kaarmepylvas', 'hippodromi'], nimiPuoli: 'vasen',
+        siirto: { x: -18, y: -19 },
+      },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Hagia Sofia, johon 29.5.1453 aamu päättyi; Theodosiuksen muuri on kartan
+      // rajauksen länsipuolella.
+      {
+        nimi: 'Konstantinopoli 1453', lat: 41.0085, lon: 28.98,
+        nosto: 'hetki-konstantinopoli-1453',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
     ],
   },
   lissabon: {
@@ -3823,6 +4299,57 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Tuomiokirkko', lat: 38.7098, lon: -9.1326, wiki: 'Lissabonin tuomiokirkko' },
       { nimi: 'Kauppatori', lat: 38.7076, lon: -9.1365, wiki: 'Praça do Comércio' },
       { nimi: 'Kansallispanteoni', lat: 38.715, lon: -9.1247 },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki lissabon).
+       */
+      {
+        // Nimiö oikealle eikä siirron suuntaan: vasemmalla on Glórian
+        // köysiradan nimi, oikealla tyhjää korttelia (kaappaus 2.9.2026).
+        nimi: 'Calçada', lat: 38.7139, lon: -9.1394,
+        nosto: 'syvennys-lissabon-calcada', nimiPuoli: 'oikea',
+        siirto: { x: -14, y: -22 },
+      },
+      {
+        nimi: 'Largo da Severa', lat: 38.7161, lon: -9.1344, nosto: 'syvennys-lissabon-severa',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * lissabon); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Alves dos Reis', lat: 38.7085, lon: -9.139,
+        nosto: 'skandaali-alves-dos-reis-setelihuijaus',
+      },
+      {
+        nimi: 'Ultimaatum 1890', lat: 38.716, lon: -9.1414,
+        nosto: 'skandaali-vaaleanpunainen-kartta-1890',
+      },
+      // Historian hetki kaupungin laatan päältä (omistaja 3.9.2026):
+      // Juhana II:n hovi istui Paço da Ribeirassa nykyisen Kauppatorin
+      // paikalla; hetken oma sivu on lehdessä, tämä on sen karttapaikka.
+      {
+        nimi: 'Kolumbus 1484', lat: 38.7066, lon: -9.1352,
+        nosto: 'hetki-kolumbus-portugali-1484',
+      },
     ],
   },
   barcelona: {
@@ -3860,6 +4387,27 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Musiikkipalatsi', lat: 41.3876, lon: 2.1752, wiki: 'Palau de la Música Catalana' },
       { nimi: 'Boquerian kauppahalli', lat: 41.3817, lon: 2.1716 },
       { nimi: 'Kolumbuksen patsas', lat: 41.3758, lon: 2.1778 },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * barcelona); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Font de Canaletes', lat: 41.3853, lon: 2.1701,
+        nosto: 'syvennys-barcelona-rambla',
+      },
+      {
+        nimi: 'Roviran aukio', lat: 41.4076, lon: 2.1584,
+        nosto: 'syvennys-barcelona-kilpailu',
+      },
     ],
   },
   granada: {
@@ -3895,6 +4443,44 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Granadan katedraali', lat: 37.1765, lon: -3.5992 },
       { nimi: 'Alhambra', lat: 37.1761, lon: -3.589, wiki: 'Alhambra' },
       { nimi: 'Manuel de Fallan talo', lat: 37.1734, lon: -3.5888, wiki: 'Manuel de Falla' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki granada).
+       */
+      {
+        nimi: 'Leijonain piha', lat: 37.1771, lon: -3.5893,
+        nosto: 'syvennys-granada-kupoli', nimiPuoli: 'vasen',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * granada); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Irvingin huoneet', lat: 37.1775, lon: -3.59,
+        nosto: 'syvennys-granada-irving',
+      },
+      {
+        nimi: 'Alcaicería', lat: 37.1759, lon: -3.5984,
+        nosto: 'syvennys-granada-alcaiceria',
+      },
     ],
   },
   edinburgh: {
@@ -3928,9 +4514,29 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Charlotte Square', lat: 55.9514, lon: -3.2086 },
       { nimi: 'Edinburghin linna', lat: 55.9487, lon: -3.2004, wiki: 'Edinburghin linna' },
       { nimi: 'St Gilesin katedraali', lat: 55.9495, lon: -3.1909, wiki: 'St Gilesin katedraali' },
-      { nimi: 'Greyfriars Bobby', lat: 55.9469, lon: -3.1913, wiki: 'Greyfriars Bobby' },
+      {
+        nimi: 'Greyfriars Bobby', lat: 55.9469, lon: -3.1913, wiki: 'Greyfriars Bobby',
+        nosto: 'syvennys-edinburgh-bobby',
+      },
       { nimi: 'Calton Hill', lat: 55.9553, lon: -3.1828, wiki: 'Calton Hill' },
       { nimi: 'Holyroodin palatsi', lat: 55.9527, lon: -3.1716, wiki: 'Holyroodin palatsi' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki edinburgh).
+       */
+      {
+        nimi: 'Scott-monumentti', lat: 55.9524, lon: -3.1933,
+        nosto: 'syvennys-edinburgh-scott-monumentti',
+      },
     ],
   },
   marseille: {
@@ -3968,7 +4574,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Marseillen katedraali', lat: 43.2998, lon: 5.3649, wiki: 'Marseillen katedraali' },
       { nimi: 'Saint-Victorin kirkko', lat: 43.2903, lon: 5.3656 },
       { nimi: 'Vanhasatama', lat: 43.2946, lon: 5.3693, wiki: 'Marseillen vanha satama' },
-      { nimi: 'Notre-Dame de la Garde', lat: 43.2839, lon: 5.3712, wiki: 'Notre-Dame de la Garde' },
+      {
+        nimi: 'Notre-Dame de la Garde', lat: 43.2839, lon: 5.3712, wiki: 'Notre-Dame de la Garde',
+        nosto: 'syvennys-marseille-exvotot',
+      },
       { nimi: 'Saint-Charlesin asema', lat: 43.3032, lon: 5.3816 },
     ],
   },
@@ -4079,6 +4688,53 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Johanneksenkirkko', lat: 60.1618, lon: 24.9447, wiki: 'Johanneksenkirkko (Helsinki)' },
       // Kainalossa oikeassa alanurkassa.
       { nimi: 'Suomenlinna', lat: 60.1472, lon: 24.9864, wiki: 'Suomenlinna' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * helsinki); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Löyly ja avanto', lat: 60.18647, lon: 24.95728,
+        nosto: 'syvennys-helsinki-sauna',
+      },
+      {
+        nimi: 'Kantele', lat: 60.1699, lon: 24.9384,
+        nosto: 'syvennys-helsinki-kantele',
+      },
+      {
+        nimi: 'Finlandia', lat: 60.16722, lon: 24.94333,
+        nosto: 'syvennys-helsinki-finlandia',
+      },
+      {
+        nimi: 'Pirtukuningas', lat: 60.1676, lon: 24.9547,
+        nosto: 'skandaali-kieltolaki-ja-pirtukuningas',
+      },
+      {
+        nimi: 'Nurmen kohu', lat: 60.1875, lon: 24.9272,
+        nosto: 'skandaali-nurmen-amatoorikohu',
+      },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Ruotsalainen teatteri; sama piste kuin syvennys Finlandia, nimiö oikealle.
+      {
+        nimi: 'Suomi herää 1899', lat: 60.16722, lon: 24.94333,
+        nosto: 'hetki-sibelius-finlandia-1899',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
     ],
   },
   ateena: {
@@ -4115,12 +4771,114 @@ export const KAUPUNKIKARTAT = {
        * se on 9,5 prosenttiyksikköä Antiikin agorasta — numerot
        * menisivät päällekkäin, joten agora voitti.
        */
-      { nimi: 'Antiikin agora', lat: 37.975, lon: 23.7225, wiki: 'Agora (Ateena)' },
-      { nimi: 'Akropolis', lat: 37.9715, lon: 23.7266, wiki: 'Akropolis (Ateena)' },
-      { nimi: 'Zeuksen temppeli', lat: 37.9694, lon: 23.7331, wiki: 'Olympoksen Zeuksen temppeli' },
+      /*
+       * KARTAN OMAT KOHTEET NOSTOINA (omistajan päätös 2.9.2026 illalla:
+       * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+       * kaupunkilehden omalla kartalla."*). Nämä pisteet olivat jo
+       * kartalla, mutta pääkartan fokuskohde (js/packs/fokuskohteet-*.js)
+       * seisoi yhä saman paikan päällä. Kenttä `nosto` on koneellinen
+       * linkki fokuskohteen tunnukseen: se pudottaa merkin pääkartalta
+       * (js/fokuskohteet.js karsiKaupunkikartanNostot) ja kirjaa noston
+       * paikaksi tämän pisteen (tools/tarkista-nostopaikat.mjs). Pisteen
+       * oma juttu on ennallaan — sisältöä ei kopioitu mistään.
+       */
+      {
+        nimi: 'Antiikin agora', lat: 37.975, lon: 23.7225,
+        wiki: 'Agora (Ateena)', nosto: 'antiikin-agora',
+      },
+      {
+        nimi: 'Akropolis', lat: 37.9715, lon: 23.7266,
+        wiki: 'Akropolis (Ateena)', nosto: 'akropolis',
+      },
+      /*
+       * KARSITTU KARTTANOSTO KOHDEKARTALLE (omistajan tilaus 2.9.2026:
+       * *"niitä nostoja joita oli paljon ateenassa ja sofiassa … voisi
+       * sijoittaa suoraan sinne kaupunkilehden nähtävyyden osioon …
+       * siis tähän kartalle"*).
+       *
+       * Kaupunkinostojen katto (v1419, js/fokuskohteet.js
+       * karsiKaupunkiruuhka) pudottaa pääkartalta Ateenan viereltä
+       * kuusi merkkiä. Kahdella niistä on kaupungin sisällä OMA paikka,
+       * joka ei osu minkään entisen kohteen päälle, ja ne kaksi tulevat
+       * tähän: `akropolis-museo` (23,7283 E / 37,9691 N —
+       * js/packs/fokuskohteet-grc.js) ja syvennystarina
+       * `syvennys-ateena-schliemann` eli Iliou Melathron (23,7328 E /
+       * 37,9808 N — js/packs/syvennyspaikat.js).
+       *
+       * NELJÄ MUUTA JÄI POIS, ja syy on sama kuin Tuulten tornilla
+       * alla: ne seisovat täsmälleen kartalla jo olevan kohteen päällä
+       * (tools/tarkista-karttapisteet.mjs, peittoprosentit 71–97):
+       * Niken temppeli ja Elginin marmorit Akropoliin, Diogeneen astia
+       * Antiikin agoran ja maratonhuijaus Kallimarmaron päällä. Niiden
+       * sisältö on lehden Historia-sivulla (v1421, v1451).
+       */
+      // Nimiö vasemmalle: keskitettynä "Akropolis-museo" osui
+      // "Zeuksen temppeli" -nimeen, joka on 68 px oikealla samalla
+      // rivillä. Merkki pysyy koordinaatissaan (ks. .kohde-nimi-vasen).
+      {
+        nimi: 'Akropolis-museo', lat: 37.9691, lon: 23.7283, nimiPuoli: 'vasen',
+        nosto: 'akropolis-museo',
+      },
+      /*
+       * Zeuksen temppeli kantaa fokuskohteen `olympieion` (sama
+       * rakennus, eri nimi kartalla ja lehdessä) — ks. edellinen lohko.
+       */
+      {
+        nimi: 'Zeuksen temppeli', lat: 37.9694, lon: 23.7331,
+        wiki: 'Olympoksen Zeuksen temppeli', nosto: 'olympieion',
+      },
       { nimi: 'Sýntagman aukio', lat: 37.9756, lon: 23.7347, wiki: 'Sýntagma' },
+      { nimi: 'Iliou Melathron', lat: 37.9808, lon: 23.7328, nosto: 'syvennys-ateena-schliemann' },
       { nimi: 'Lykavittós', lat: 37.9819, lon: 23.7432, wiki: 'Lykavittós' },
       { nimi: 'Kallimarmaro', lat: 37.9683, lon: 23.7411, wiki: 'Panathinaïkó-stadion' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki ateena).
+       */
+      {
+        nimi: 'Maratonhuijaus', lat: 37.9683, lon: 23.7410,
+        nosto: 'skandaali-belokas-maratonhuijaus-1896', nimiPuoli: 'vasen',
+        siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Elginin marmorit', lat: 37.9715, lon: 23.7267,
+        nosto: 'skandaali-elginin-marmorit', nimiPuoli: 'oikea',
+        siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Diogeneen astia', lat: 37.9750, lon: 23.7233,
+        nosto: 'syvennys-ateena-diogenes', nimiPuoli: 'oikea',
+        siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Niken temppeli', lat: 37.9717, lon: 23.7258,
+        nosto: 'syvennys-ateena-nike', nimiPuoli: 'vasen',
+        siirto: { x: -19, y: -18 },
+      },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // sama piste kuin Kallimarmaro ja Maratonhuijaus (siirto vasemmalle): nimiö
+      // oikealle.
+      {
+        nimi: 'Louis 1896', lat: 37.9683, lon: 23.7411,
+        nosto: 'hetki-olympia-ateena-1896',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
     ],
   },
   amsterdam: {
@@ -4161,10 +4919,66 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Keskusrautatieasema', lat: 52.379, lon: 4.9006, wiki: 'Amsterdamin keskusrautatieasema' },
       { nimi: 'Anne Frankin talo', lat: 52.3752, lon: 4.8841, wiki: 'Anne Frankin talo' },
-      { nimi: 'Kuninkaanpalatsi', lat: 52.3731, lon: 4.8913, wiki: 'Amsterdamin kuninkaallinen palatsi' },
+      {
+        nimi: 'Kuninkaanpalatsi', lat: 52.3731, lon: 4.8913,
+        wiki: 'Amsterdamin kuninkaallinen palatsi',
+        nosto: 'syvennys-amsterdam-haikarat',
+      },
       { nimi: 'Rembrandtin talo', lat: 52.3693, lon: 4.9012 },
       { nimi: 'Artis-eläintarha', lat: 52.367, lon: 4.913, wiki: 'Artis (eläintarha)' },
       { nimi: 'Rijksmuseum', lat: 52.3599, lon: 4.885, wiki: 'Rijksmuseum' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * amsterdam); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Timanttihiomo', lat: 52.3696, lon: 4.904,
+        nosto: 'syvennys-amsterdam-timantit',
+      },
+      {
+        nimi: 'Amsterdam-laiva', lat: 52.3714, lon: 4.9147,
+        nosto: 'syvennys-amsterdam-voc-hylky',
+      },
+      /*
+       * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 10, 13.9.2026).
+       * 5 uutta pistettä.
+       *
+       * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on siellä,
+       * missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
+       * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js).
+       */
+      {
+        nimi: 'Kapein talo', lat: 52.3712, lon: 4.8977,
+        nosto: 'nosto-amsterdamin-kapein-talo',
+      },
+      {
+        nimi: 'Maitotyttö', lat: 52.3599, lon: 4.885,
+        nosto: 'nosto-amsterdamin-maitotytto',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Kissalaiva', lat: 52.3781, lon: 4.8931,
+        nosto: 'nosto-amsterdamin-kissalaiva',
+      },
+      {
+        nimi: 'Herengracht 537', lat: 52.3649, lon: 4.8946,
+        nosto: 'nosto-amsterdamin-puupaalut',
+      },
+      {
+        nimi: 'Yövartio', lat: 52.3731, lon: 4.8913,
+        nosto: 'nosto-amsterdamin-yovartio',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
     ],
   },
   dublin: {
@@ -4206,6 +5020,44 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Ha’penny-silta', lat: 53.3463, lon: -6.2631 },
       { nimi: 'Spire', lat: 53.3498, lon: -6.2603, wiki: 'Spire of Dublin' },
       { nimi: 'Trinity College', lat: 53.3437, lon: -6.2545, wiki: 'Trinity College (Dublin)' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki dublin).
+       */
+      {
+        nimi: 'St James’s Gate', lat: 53.3419, lon: -6.2867, nosto: 'syvennys-dublin-vuokrakirja',
+        siirto: { x: 0, y: 26 },
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * dublin); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Kellsin kirja', lat: 53.3444, lon: -6.2577,
+        nosto: 'syvennys-dublin-kellsinkirja',
+      },
+      {
+        nimi: 'Ouzel Galley', lat: 53.3485, lon: -6.2531,
+        nosto: 'skandaali-ouzel-galleyn-mysteeri',
+      },
     ],
   },
   pariisi: {
@@ -4269,7 +5121,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Eiffel-torni', lat: 48.8583, lon: 2.2945, wiki: 'Eiffel-torni' },
       { nimi: 'Riemukaari', lat: 48.8738, lon: 2.295, wiki: 'Riemukaari (Pariisi)' },
       { nimi: 'Concorden aukio', lat: 48.8656, lon: 2.3212, wiki: 'Place de la Concorde' },
-      { nimi: 'Louvre', lat: 48.861, lon: 2.3358, wiki: 'Louvre' },
+      {
+        nimi: 'Louvre', lat: 48.861, lon: 2.3358, wiki: 'Louvre',
+        nosto: 'skandaali-mona-lisan-varkaus-1911',
+      },
       // Puiston keskipiste on suuri kahdeksankulmainen allas
       // (vesitarkistin nappasi) — piste seisoo länsinurmikoilla.
       { nimi: 'Luxembourgin puisto', lat: 48.8467, lon: 2.3352, wiki: 'Luxembourgin puisto' },
@@ -4293,6 +5148,168 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Orsayn taidemuseo', lat: 48.86, lon: 2.3266, wiki: 'Orsayn taidemuseo' },
       { nimi: 'Palais Garnier', lat: 48.8719, lon: 2.3317, wiki: 'Palais Garnier' },
       { nimi: 'Place des Vosges', lat: 48.8556, lon: 2.3656, wiki: 'Place des Vosges' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki pariisi).
+       */
+      {
+        nimi: 'Carmenin ensi-ilta', lat: 48.8709, lon: 2.3378, nosto: 'nosto-carmenin-ensi-ilta',
+      },
+      {
+        nimi: 'Kirahvin kävelymatka', lat: 48.8447, lon: 2.3597,
+        nosto: 'nosto-kirahvin-kavelymatka',
+      },
+      {
+        nimi: 'Torni romuraudaksi', lat: 48.85822, lon: 2.2945,
+        nosto: 'nosto-lustig-eiffel', nimiPuoli: 'vasen',
+        siirto: { x: -6, y: -25 },
+      },
+      {
+        nimi: 'Vrain-Lucas', lat: 48.8573, lon: 2.3372,
+        nosto: 'skandaali-vrain-lucas-kirjevaarennokset',
+      },
+      {
+        nimi: 'Impressionistit', lat: 48.8705, lon: 2.3280,
+        nosto: 'syvennys-pariisi-impressionistit', nimiPuoli: 'vasen',
+      },
+      {
+        nimi: 'Kyyhkyposti', lat: 48.8566, lon: 2.3522, nosto: 'syvennys-pariisi-kyyhkyposti',
+      },
+      /*
+       * KAKSI NOSTOA SAMASSA PAIKASSA. Syvennystarina `syvennys-pariisi-
+       * tuileriat` ja pääkartan fokuskohde `tuileries`
+       * (js/packs/fokuskohteet-fra.js) ovat samaa palanutta palatsia,
+       * joten ne eivät voi olla kahtena merkkinä kolmenkymmenen metrin
+       * päässä toisistaan. Lista on `nosto`-kentän toinen sallittu muoto
+       * (tools/tarkista-nostopaikat.mjs kohdekarttojenNostot).
+       */
+      {
+        nimi: 'Tuileriain rauniot', lat: 48.8622, lon: 2.3325,
+        nosto: ['syvennys-pariisi-tuileriat', 'tuileries'], nimiPuoli: 'vasen',
+      },
+      /*
+       * BASTILJI — UUSI PISTE PÄÄKARTAN FOKUSKOHTEELLE (omistajan päätös
+       * 2.9.2026 illalla: *"Otetaan pois pääkartalta ja varmista, että ne
+       * näkyvät kunkin kaupunkilehden omalla kartalla."*).
+       *
+       * 2,36917 E / 48,85333 N — en-Wikipedia "Bastille" (tietolaatikon
+       * coordinates), sama luku kuin kohteen omassa pakissa
+       * (js/packs/fokuskohteet-fra.js). Piste on Place de la Bastille,
+       * aukio joka kattaa suurimman osan linnoituksen vanhasta paikasta,
+       * ja se osuu tämän kartan rajaukseen. Lähin naapuri on Place des
+       * Vosges 250 metrin päässä luoteessa, joten numeroympyrät eivät
+       * mene päällekkäin (tools/tarkista-karttapisteet.mjs).
+       *
+       * Juttu on kohteen OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki pariisi).
+       */
+      {
+        nimi: 'Bastilji', lat: 48.85333, lon: 2.36917,
+        nosto: 'bastilji',
+      },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // ESPCI:n piha, rue Lhomond 42 — Curieiden vaja.
+      {
+        nimi: 'Curie 1898', lat: 48.842, lon: 2.3476,
+        nosto: 'hetki-marie-curie-hangaari-1898', nimiPuoli: 'oikea',
+      },
+      // Arsenaali: Lavoisierin koti ja laboratorio 1775–1792.
+      {
+        nimi: 'Lavoisier 1780', lat: 48.8503, lon: 2.3635,
+        nosto: 'hetki-lavoisier-laboratorio-1780',
+      },
+      // École normale supérieure, rue d'Ulm.
+      {
+        nimi: 'Pasteur 1862', lat: 48.8419, lon: 2.3444,
+        nosto: 'hetki-pasteur-pullot-1862', nimiPuoli: 'vasen',
+      },
+      // sama piste kuin Eiffel-torni ja Torni romuraudaksi: nimiö alas oikealle.
+      {
+        nimi: 'Torni 1888', lat: 48.85822, lon: 2.2945,
+        nosto: 'hetki-eiffel-torni-1888',
+        nimiPuoli: 'oikea', siirto: { x: 6, y: 25 },
+      },
+      // sama piste kuin kohde Bastilji: nimiö oikealle.
+      {
+        nimi: 'Bastilji 1789', lat: 48.85333, lon: 2.36917,
+        nosto: 'hetki-ranskan-vallankumous-bastilji-1789',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      // Grand Café, 14 boulevard des Capucines; Impressionistit on 100 m päässä,
+      // nimiö oikealle.
+      {
+        nimi: 'Lumière 1895', lat: 48.8703, lon: 2.3294,
+        nosto: 'hetki-lumiere-elokuva-1895',
+        nimiPuoli: 'oikea', siirto: { x: 24, y: 10 },
+      },
+      /*
+       * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 5, 13.9.2026;
+       * suunnitelman luku 4.7, omistajan hyväksymä jakotaulukko). Lehden
+       * sivut "Pariisi", "Musiikki" ja "Historia" purettiin klikattaviksi
+       * karttapaloiksi: viisi niistä on tällä kartalla, ja kuudes
+       * ("Paras patonki") jäi pääkartalle kaupungin viereen.
+       *
+       * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on
+       * siellä, missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
+       * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki pariisi).
+       */
+      // Eiffel-tornin neljäs merkki: torni, Torni romuraudaksi ja
+      // Torni 1888 ovat samassa pisteessä, joten nimiö suoraan vasemmalle.
+      {
+        nimi: '72 nimeä', lat: 48.85822, lon: 2.2945,
+        nosto: 'nosto-pariisin-72-nimea',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      // Abbesses'n asema, yksi jäljellä olevista Guimardin
+      // sisäänkäynneistä (48,8844 N / 2,3382 E). Oma piste, ei naapureita.
+      {
+        nimi: 'Metron sisäänkäynti', lat: 48.8844, lon: 2.3382,
+        nosto: 'nosto-guimardin-metro',
+      },
+      // Sama piste kuin kartan oma Notre-Dame: nimiö oikealle.
+      {
+        nimi: 'Notre-Damen kukko', lat: 48.853, lon: 2.3499,
+        nosto: 'nosto-notre-damen-kukko',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      // Palais Garnier (suunnitelman luku 4.7: "kohdekartta (Opéra)");
+      // sama piste kuin kartan oma Palais Garnier, nimiö vasemmalle.
+      {
+        nimi: 'Pariisi soi', lat: 48.8719, lon: 2.3317,
+        nosto: 'nosto-pariisi-soi',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 12 },
+      },
+      // Élysée-palatsi: kortin oma teksti nimeää presidentinpalatsin
+      // leivät patonkikilpailun palkinnoksi (48,8703 N / 2,3167 E).
+      {
+        nimi: 'Paras patonki', lat: 48.8703, lon: 2.3167,
+        nosto: 'nosto-pariisin-patonki',
+      },
+      // Panthéon: kummankaan tarinan oma osoite ei ollut vapaana
+      // (Vrain-Lucasilla on jo piste, kaulanauhan Versailles on rajauksen
+      // ulkopuolella), joten kortin ankkuri on kartan oma historiakohde.
+      {
+        nimi: 'Pariisin vuosisadat', lat: 48.8462, lon: 2.3464,
+        nosto: 'nosto-pariisin-vuosisadat',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 12 },
+      },
     ],
   },
   budapest: {
@@ -4337,6 +5354,31 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Suuri kauppahalli', lat: 47.4866, lon: 19.059 },
       // Kainalossa oikeassa ylänurkassa.
       { nimi: 'Sankarien aukio', lat: 47.5153, lon: 19.0781, wiki: 'Sankarien aukio (Budapest)' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * budapest); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Maanalainen', lat: 47.5057, lon: 19.0631,
+        nosto: 'syvennys-budapest-kisfoldalatti',
+      },
+      {
+        nimi: 'Elmyr de Hory', lat: 47.4979, lon: 19.0402,
+        nosto: 'skandaali-elmyr-de-hory-vaarentaja',
+      },
+      {
+        nimi: 'Seuson hopeat', lat: 47.4912, lon: 19.0625,
+        nosto: 'skandaali-seuso-aarteen-kiista',
+      },
     ],
   },
   praha: {
@@ -4376,7 +5418,52 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kaarlensilta', lat: 50.0866, lon: 14.4106, wiki: 'Kaarlensilta' },
       { nimi: 'Vanhauusi synagoga', lat: 50.09, lon: 14.4186, wiki: 'Vanhauusi synagoga' },
       { nimi: 'Astronominen kello', lat: 50.087, lon: 14.4207, wiki: 'Prahan astronominen kello' },
-      { nimi: 'Kansallismuseo', lat: 50.0789, lon: 14.4308, wiki: 'Prahan kansallismuseo' },
+      /*
+       * Kuninkaanhovin käsikirjoitukset (`skandaali-...`) LIITETTIIN
+       * TÄHÄN pisteeseen eikä omaksi merkikseen: väärennökset löytyivät
+       * Dvůr Královésta mutta niitä säilytetään tässä museossa, ja oma
+       * merkki peittäisi museon numeron 81-prosenttisesti
+       * (tools/tarkista-karttapisteet.mjs). Sama ratkaisu kuin Sofian
+       * Serdican areenalla.
+       */
+      {
+        nimi: 'Kansallismuseo', lat: 50.0789, lon: 14.4308,
+        wiki: 'Prahan kansallismuseo',
+        nosto: 'skandaali-kuninkaanhovin-kasikirjoitukset',
+      },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki praha).
+       */
+      {
+        nimi: 'Klementinum', lat: 50.0867, lon: 14.4164, nosto: 'syvennys-praha-klementinum',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * praha); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Tycho Brahe', lat: 50.0876, lon: 14.4227,
+        nosto: ['syvennys-praha-tycho', 'skandaali-tycho-brahen-kuolinmysteeri'],
+      },
     ],
   },
   wien: {
@@ -4438,6 +5525,90 @@ export const KAUPUNKIKARTAT = {
       // Kainalossa. Koordinaatti on päärajauksen ulkopuolella, ja
       // karttapiste() sijoittaa sen minikarttaan sen perusteella.
       { nimi: 'Schönbrunn', lat: 48.1845, lon: 16.3119, wiki: 'Schönbrunnin linna' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki wien).
+       */
+      {
+        nimi: 'Vuoristovesijohto', lat: 48.1984, lon: 16.3760, nosto: 'syvennys-wien-vesijohto',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * wien); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Klimtin maalaukset', lat: 48.2131, lon: 16.3597,
+        nosto: 'skandaali-klimtin-tiedekuntamaalaukset',
+      },
+      {
+        nimi: 'Saliera', lat: 48.2036, lon: 16.3619,
+        nosto: 'skandaali-salieran-varkaus',
+      },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Kärntnertor-teatterin paikka Valtionoopperan takana, nimiö oikealle.
+      {
+        nimi: 'Yhdeksäs 1824', lat: 48.2033, lon: 16.3708,
+        nosto: 'hetki-beethoven-yhdeksas-1824',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      // vanha Burgtheater Michaelerplatzilla Hofburgin vieressä, nimiö vasemmalle.
+      {
+        nimi: 'Figaro 1786', lat: 48.2078, lon: 16.3665,
+        nosto: 'hetki-mozart-wien-1786',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      /*
+       * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 10, 13.9.2026).
+       * 4 uutta pistettä.
+       *
+       * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on siellä,
+       * missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
+       * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js).
+       */
+      {
+        nimi: 'Rattaan kulmat', lat: 48.2167, lon: 16.3959,
+        nosto: 'nosto-praterin-ratas',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Lipizzanit', lat: 48.2064, lon: 16.3657,
+        nosto: 'nosto-lipizzanit',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Taikahuilu', lat: 48.1981, lon: 16.3653,
+        nosto: 'nosto-taikahuilu-wiedenissa',
+      },
+      {
+        nimi: 'Tonava kaunoinen', lat: 48.2046, lon: 16.3793,
+        nosto: 'nosto-tonava-kaunoinen',
+      },
     ],
   },
   kairo: {
@@ -4622,17 +5793,153 @@ export const KAUPUNKIKARTAT = {
         lon: -0.1191,
         wiki: 'London Eye',
       },
+      /*
+       * KARTAN OMA KOHDE NOSTONA (omistajan päätös 2.9.2026 illalla:
+       * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+       * kaupunkilehden omalla kartalla."*). Piste oli jo kartalla; kenttä
+       * `nosto` pudottaa pääkartan fokuskohteen `st-paulin-katedraali`
+       * (js/packs/fokuskohteet-gbr.js) tähän. Sama kukkula, sama kirkko —
+       * fokuskohde kertoo keskiaikaisesta edeltäjästä, pisteen oma juttu
+       * Wrenin kupolikirkosta.
+       */
       {
         nimi: 'Pyhän Paavalin katedraali',
         lat: 51.5138,
         lon: -0.0984,
         wiki: 'Pyhän Paavalin katedraali',
+        nosto: 'st-paulin-katedraali',
       },
       {
         nimi: 'Tower Bridge',
         lat: 51.5055,
         lon: -0.0754,
         wiki: 'Tower Bridge',
+      },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki lontoo).
+       */
+      {
+        nimi: 'Etelämeren kupla', lat: 51.5146, lon: -0.0837, nosto: 'skandaali-etelameren-kupla',
+      },
+      {
+        nimi: 'Cheapsiden kätkö', lat: 51.5141, lon: -0.0937,
+        nosto: 'syvennys-lontoo-cheapside', nimiPuoli: 'oikea',
+      },
+      {
+        nimi: 'Thamesin vuorovesi', lat: 51.5102, lon: -0.0984, nosto: 'syvennys-lontoo-vuorovesi',
+      },
+      /*
+       * VANHA LONDON BRIDGE — UUSI PISTE PÄÄKARTAN FOKUSKOHTEELLE
+       * (omistajan päätös 2.9.2026 illalla).
+       *
+       * −0,08778 E / 51,50806 N — en-Wikipedia "London Bridge"
+       * (tietolaatikon coordinates), sama luku kuin kohteen omassa
+       * pakissa (js/packs/fokuskohteet-gbr.js). Piste on nykyisen sillan
+       * paikka; keskiaikainen silta seisoi noin 30 metriä siitä itään,
+       * mikä ei erotu omaksi pisteekseen tälläkään kartalla. Piste on
+       * määritelmän mukaan vedellä — silta ylittää joen, ks.
+       * tools/tarkista-karttapisteet.mjs:n otsake.
+       *
+       * Juttu on kohteen OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki lontoo).
+       */
+      {
+        nimi: 'Vanha London Bridge', lat: 51.50806, lon: -0.08778,
+        nosto: 'vanha-london-bridge',
+      },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Royal Institution, Albemarle Street.
+      {
+        nimi: 'Faraday 1831', lat: 51.5098, lon: -0.1425,
+        nosto: 'hetki-faraday-luento-1831',
+      },
+      // St Mary's, Praed Street — kartan länsireunassa, nimiö oikealle.
+      {
+        nimi: 'Fleming 1928', lat: 51.5174, lon: -0.172,
+        nosto: 'hetki-fleming-malja-1928', nimiPuoli: 'oikea',
+      },
+      // Rotherhithen kuilu (Brunel Museum).
+      {
+        nimi: 'Tunneli 1827', lat: 51.5031, lon: -0.0544,
+        nosto: 'hetki-brunel-thames-tunnel-1827',
+      },
+      // Pudding Lane; Vanha London Bridge ja Etelämeren kupla vieressä, nimiö
+      // oikealle.
+      {
+        nimi: 'Palo 1666', lat: 51.5102, lon: -0.0853,
+        nosto: 'hetki-lontoon-palo-1666', nimiPuoli: 'oikea',
+      },
+      // alkuperäisen Globen tontti Southwarkissa.
+      {
+        nimi: 'Globe 1599', lat: 51.5067, lon: -0.0947,
+        nosto: 'hetki-shakespeare-globe-1599',
+      },
+      /*
+       * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 10, 13.9.2026).
+       * 9 uutta pistettä.
+       *
+       * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on siellä,
+       * missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
+       * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js).
+       */
+      {
+        nimi: 'Metron höyryveturi', lat: 51.5226, lon: -0.1571,
+        nosto: 'nosto-lontoon-metro-1863',
+      },
+      {
+        nimi: 'Exchange Alley', lat: 51.5131, lon: -0.0871,
+        nosto: 'nosto-exchange-alleyn-kupla',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Canaletto Lontoossa', lat: 51.501, lon: -0.1219,
+        nosto: 'nosto-canaletto-lontoossa',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Dickensin pubi', lat: 51.5042, lon: -0.09,
+        nosto: 'nosto-the-george-pubi',
+      },
+      {
+        nimi: 'Abbey Roadin suojatie', lat: 51.5117, lon: -0.1403,
+        nosto: 'nosto-abbey-roadin-suojatie',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Leake Streetin tunneli', lat: 51.501, lon: -0.1145,
+        nosto: 'nosto-leake-streetin-tunneli',
+      },
+      {
+        nimi: 'Neljäs jalusta', lat: 51.508, lon: -0.1281,
+        nosto: 'nosto-neljas-jalusta',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Turbiinihalli', lat: 51.5076, lon: -0.0994,
+        nosto: 'nosto-tate-modernin-turbiinihalli',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Liukumäkiveistos', lat: 51.504, lon: -0.135,
+        nosto: 'nosto-orbitin-liukumaki',
       },
     ],
   },
@@ -4701,11 +6008,99 @@ export const KAUPUNKIKARTAT = {
        * fi.wikipedian artikkeli.
        */
       { nimi: 'Valtiopäivätalo', lat: 52.5186, lon: 13.3762, wiki: 'Valtiopäivätalo (Saksa)' },
-      { nimi: 'Brandenburgin portti', lat: 52.5163, lon: 13.3777, wiki: 'Brandenburgin portti' },
+      {
+        nimi: 'Brandenburgin portti', lat: 52.5163, lon: 13.3777, wiki: 'Brandenburgin portti',
+        nosto: 'brandenburgin-portti',
+      },
       { nimi: 'Checkpoint Charlie', lat: 52.5076, lon: 13.3904, wiki: 'Checkpoint Charlie' },
       { nimi: 'Museosaari', lat: 52.5169, lon: 13.401, wiki: 'Museumsinsel' },
       { nimi: 'Tv-torni', lat: 52.5208, lon: 13.4094, wiki: 'Berliinin televisiotorni' },
       { nimi: 'East Side Gallery', lat: 52.505, lon: 13.4399, wiki: 'East Side Gallery' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki berliini).
+       */
+      {
+        nimi: 'Lehmän hinnalla', lat: 52.53, lon: 13.37944, nosto: 'nosto-archaeopteryx',
+      },
+      {
+        nimi: 'Berliinin karhu', lat: 52.5099, lon: 13.4143, nosto: 'syvennys-berliini-karhu',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * berliini); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Kulta-Liisa', lat: 52.5145, lon: 13.3501,
+        nosto: 'syvennys-berliini-kultaliisa',
+      },
+      {
+        nimi: 'Hobrechtin putket', lat: 52.5219, lon: 13.4132,
+        nosto: 'syvennys-berliini-viemarit',
+      },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Bernauer Straße, muurin muistomerkki.
+      {
+        nimi: 'Muuri 1961', lat: 52.5375, lon: 13.3933,
+        nosto: 'hetki-berliinin-muuri-1961',
+      },
+      /*
+       * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 10, 13.9.2026).
+       * 5 uutta pistettä.
+       *
+       * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on siellä,
+       * missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
+       * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js).
+       */
+      {
+        nimi: 'Hattupäinen ukkeli', lat: 52.505, lon: 13.335,
+        nosto: 'nosto-hattupainen-ukkeli',
+      },
+      {
+        nimi: 'Gaertnerin Berliini', lat: 52.5175, lon: 13.4022,
+        nosto: 'nosto-gaertnerin-berliini',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Marlene Dietrich', lat: 52.5075, lon: 13.3728,
+        nosto: 'nosto-marlene-dietrich',
+      },
+      {
+        nimi: 'Paavin kosto', lat: 52.5208, lon: 13.4094,
+        nosto: 'nosto-paavin-kosto',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Maailmankello', lat: 52.5219, lon: 13.4132,
+        nosto: 'nosto-maailmankello',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
     ],
   },
   madrid: {
@@ -4748,6 +6143,86 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Cibeleen aukio', lat: 40.4192, lon: -3.6931, wiki: 'Plaza de Cibeles' },
       { nimi: 'Prado-museo', lat: 40.4138, lon: -3.6921, wiki: 'Museo del Prado' },
       { nimi: 'Alcalán portti', lat: 40.42, lon: -3.6889, wiki: 'Puerta de Alcalá' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki madrid).
+       */
+      {
+        nimi: 'Tasavallan vuosi', lat: 40.4153, lon: -3.6971, nosto: 'syvennys-madrid-tasavalta',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * madrid); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Casa de Fieras', lat: 40.4105, lon: -3.678,
+        nosto: 'syvennys-madrid-casadefieras',
+      },
+      {
+        nimi: 'Filipin patsas', lat: 40.418538, lon: -3.71224,
+        nosto: 'syvennys-madrid-felipe',
+      },
+      {
+        nimi: 'Baldomera', lat: 40.4089, lon: -3.7009,
+        nosto: 'skandaali-baldomera-larra-pyramidi',
+      },
+      /*
+       * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 10, 13.9.2026).
+       * 6 uutta pistettä.
+       *
+       * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on siellä,
+       * missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
+       * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js).
+       */
+      {
+        nimi: 'Tapaskierros', lat: 40.4154, lon: -3.7089,
+        nosto: 'nosto-madridin-tapaskierros',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Goyan kansankuvat', lat: 40.4138, lon: -3.6921,
+        nosto: 'nosto-goyan-kansankuvat',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Chotis', lat: 40.4172, lon: -3.6968,
+        nosto: 'nosto-chotis-laatalla',
+        nimiPuoli: 'oikea',
+      },
+      {
+        nimi: 'Kaksi joukkuetta', lat: 40.4192, lon: -3.6931,
+        nosto: 'nosto-madridin-kaksi-joukkuetta',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Palamaton linna', lat: 40.418, lon: -3.7143,
+        nosto: 'nosto-palamaton-linna',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Gran Vía', lat: 40.4191, lon: -3.6967,
+        nosto: 'nosto-gran-vian-murto',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
     ],
   },
   tukholma: {
@@ -4797,6 +6272,51 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kuninkaanlinna', lat: 59.3268, lon: 18.0717, wiki: 'Tukholman kuninkaanlinna' },
       { nimi: 'Vasa-museo', lat: 59.328, lon: 18.0915, wiki: 'Vasa-museo' },
       { nimi: 'Skansen', lat: 59.3255, lon: 18.1035, wiki: 'Skansen' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki tukholma).
+       */
+      {
+        nimi: 'Vädersolstavlan', lat: 59.3258, lon: 18.0703,
+        nosto: 'syvennys-tukholma-aurinkotaulu', nimiPuoli: 'vasen',
+      },
+      {
+        nimi: 'Norrström', lat: 59.3286, lon: 18.0713, nosto: 'syvennys-tukholma-lohi',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * tukholma); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Setelipankki', lat: 59.3225, lon: 18.0739,
+        nosto: 'skandaali-palmstruchin-setelipankki',
+      },
+      {
+        nimi: 'Naamiaislaukaus', lat: 59.3297, lon: 18.0706,
+        nosto: 'skandaali-naamiaisten-laukaus',
+      },
+      {
+        nimi: 'Kreuger', lat: 59.3318, lon: 18.0696,
+        nosto: 'skandaali-kreugerin-romahdus',
+      },
     ],
   },
   venetsia: {
@@ -4841,6 +6361,31 @@ export const KAUPUNKIKARTAT = {
       // Portin edusta eikä altaan reuna: entinen piste osui
       // telakka-altaaseen (vesitarkistin 9.8.2026).
       { nimi: 'Arsenaali', lat: 45.4344, lon: 12.3506, wiki: 'Arsenale' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * venetsia); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Markuksen hevoset', lat: 45.4345, lon: 12.3394,
+        nosto: 'syvennys-venetsia-hevoset',
+      },
+      {
+        nimi: 'Dogen palatsi', lat: 45.4337, lon: 12.3405,
+        nosto: 'syvennys-venetsia-plebiskiitti',
+      },
+      {
+        nimi: 'Aldon paino', lat: 45.439, lon: 12.3287,
+        nosto: 'syvennys-venetsia-aldus',
+      },
     ],
   },
   rooma: {
@@ -4882,7 +6427,123 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Espanjalaiset portaat', lat: 41.9061, lon: 12.4828, wiki: 'Espanjalaiset portaat' },
       { nimi: 'Trevin suihkulähde', lat: 41.9008, lon: 12.4831, wiki: 'Fontana di Trevi' },
       { nimi: 'Pantheon', lat: 41.8986, lon: 12.4769, wiki: 'Pantheon (Rooma)' },
-      { nimi: 'Colosseum', lat: 41.8902, lon: 12.4922, wiki: 'Colosseum' },
+      /*
+       * KARTAN OMAT KOHTEET NOSTOINA (omistajan päätös 2.9.2026 illalla:
+       * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+       * kaupunkilehden omalla kartalla."*). Colosseumin piste oli jo
+       * kartalla, joten se saa vain kentän `nosto`: se pudottaa
+       * samannimisen fokuskohteen pääkartalta (js/packs/fokuskohteet-ita.js,
+       * js/fokuskohteet.js karsiKaupunkikartanNostot) ja kirjaa noston
+       * paikaksi tämän pisteen. Pisteen oma juttu on ennallaan.
+       *
+       * FORUM ROMANUM on uusi piste: sitä ei ollut kartalla lainkaan.
+       * 12,4852 E / 41,8922 N — en-Wikipedia "Roman Forum", sama luku kuin
+       * kohteen omassa pakissa. Lähin naapuri on Colosseum 600 metriä
+       * kaakossa, joten numeroympyrät eivät mene päällekkäin
+       * (tools/tarkista-karttapisteet.mjs). Juttu on kohteen OMA teksti ja
+       * kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki rooma).
+       */
+      {
+        nimi: 'Forum Romanum', lat: 41.8922, lon: 12.4852,
+        nosto: 'forum-romanum',
+      },
+      { nimi: 'Colosseum', lat: 41.8902, lon: 12.4922, wiki: 'Colosseum', nosto: 'colosseum' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki rooma).
+       */
+      /*
+       * YKSI PISTE, KAKSI NOSTOA. Täkynosto `nosto-kissat` (Caesarin
+       * kissat) ja syvennystarina `syvennys-rooma-kissat` seisovat
+       * SAMASSA pisteessä: molemmat ovat Largo di Torre Argentinan
+       * kissakolonia, ja koordinaatit eroavat kolmannessa desimaalissa
+       * (peitto 97 %). Kahta merkkiä ei tehdä samaan paikkaan — piste
+       * kantaa molempien tunnukset, ja sen juttu on syvennystarinan
+       * pidempi kertomus. Täkynoston oma näkökulma on kaupunkilehden
+       * sivulla (v1421).
+       */
+      {
+        nimi: 'Torre Argentina', lat: 41.8953, lon: 12.4769,
+        nosto: ['syvennys-rooma-kissat', 'nosto-kissat'],
+      },
+      {
+        nimi: 'Vatikaanin palatsi', lat: 41.9036, lon: 12.4564, nosto: 'syvennys-rooma-vatikaani',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoi pääkartalla kaupungin merkin
+       * päällä; nyt sen paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa sen pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * rooma); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Banca Romana', lat: 41.9009, lon: 12.4785,
+        nosto: 'skandaali-banca-romana-1893',
+      },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Sikstuksen kappeli; Pietarinkirkko ja Vatikaanin palatsi ovat 150 m päässä,
+      // nimiö vasemmalle.
+      {
+        nimi: 'Sikstus 1510', lat: 41.9029, lon: 12.4545,
+        nosto: 'hetki-michelangelo-sikstus-1510',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      /*
+       * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 10, 13.9.2026).
+       * 5 uutta pistettä.
+       *
+       * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on siellä,
+       * missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
+       * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js).
+       */
+      {
+        nimi: 'Kolikko olan yli', lat: 41.9008, lon: 12.4831,
+        nosto: 'nosto-rooman-kolikko',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Areenan kellari', lat: 41.8902, lon: 12.4922,
+        nosto: 'nosto-colosseumin-kellari',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Norsu ja obeliski', lat: 41.898, lon: 12.4776,
+        nosto: 'nosto-minervan-norsu',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 12 },
+      },
+      {
+        nimi: 'Aqua Virgo', lat: 41.9008, lon: 12.4831,
+        nosto: 'nosto-aqua-virgo',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Nasone', lat: 41.8986, lon: 12.4769,
+        nosto: 'nosto-rooman-nasone',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
     ],
   },
   krakova: {
@@ -4917,10 +6578,30 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Barbakaani', lat: 50.0655, lon: 19.9417 },
       { nimi: 'Collegium Maius', lat: 50.0617, lon: 19.9337, wiki: 'Jagellon yliopisto' },
-      { nimi: 'Mariankirkko', lat: 50.0617, lon: 19.9392, wiki: 'Mariankirkko (Krakova)' },
+      {
+        nimi: 'Mariankirkko', lat: 50.0617, lon: 19.9392, wiki: 'Mariankirkko (Krakova)',
+        nosto: 'syvennys-krakova-hejnal',
+      },
       { nimi: 'Wawelin linna', lat: 50.0544, lon: 19.9366, wiki: 'Wawelin linna' },
       { nimi: 'Wawelin lohikäärme', lat: 50.053, lon: 19.9336 },
       { nimi: 'Kazimierz', lat: 50.0517, lon: 19.9449, wiki: 'Kazimierz' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki krakova).
+       */
+      {
+        nimi: 'Wawel', lat: 50.0539, lon: 19.9347,
+        nosto: ['syvennys-krakova-wawel', 'skandaali-szczerbiec-odysseia'],
+      },
     ],
   },
   varsova: {
@@ -4956,7 +6637,10 @@ export const KAUPUNKIKARTAT = {
        * tästä rakennuksesta — älä linkitä siihen.
        */
       { nimi: 'Vanhankaupungin tori', lat: 52.2498, lon: 21.0122 },
-      { nimi: 'Varsovan linna', lat: 52.2479, lon: 21.0152, wiki: 'Varsovan linna' },
+      {
+        nimi: 'Varsovan linna', lat: 52.2479, lon: 21.0152, wiki: 'Varsovan linna',
+        nosto: 'syvennys-varsova-canaletto',
+      },
       { nimi: 'Kopernikuksen tiedekeskus', lat: 52.2419, lon: 21.0286 },
       {
         nimi: 'Pyhän ristin kirkko',
@@ -4970,6 +6654,23 @@ export const KAUPUNKIKARTAT = {
         lat: 52.2318,
         lon: 21.0062,
         wiki: 'Kulttuurin ja tieteen palatsi',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoi pääkartalla kaupungin merkin
+       * päällä; nyt sen paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa sen pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * varsova); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Wienin asema', lat: 52.2297, lon: 21.0094,
+        nosto: 'syvennys-varsova-raideleveys',
       },
     ],
   },
@@ -5008,7 +6709,10 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Paksu Margareeta', lat: 59.4426, lon: 24.7496 },
       { nimi: 'Olevisten kirkko', lat: 59.4413, lon: 24.7479, wiki: 'Olevisten kirkko' },
-      { nimi: 'Raatihuoneentori', lat: 59.4369, lon: 24.7453, wiki: 'Tallinnan raatihuone' },
+      {
+        nimi: 'Raatihuoneentori', lat: 59.4369, lon: 24.7453, wiki: 'Tallinnan raatihuone',
+        nosto: 'syvennys-tallinna-kama',
+      },
       {
         nimi: 'Nevskin katedraali',
         lat: 59.4357,
@@ -5017,6 +6721,31 @@ export const KAUPUNKIKARTAT = {
       },
       { nimi: 'Virun portti', lat: 59.4365, lon: 24.7503 },
       { nimi: 'Matkustajasatama', lat: 59.4448, lon: 24.7618, wiki: 'Tallinnan satama' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * tallinna); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'E-valtio', lat: 59.4358, lon: 24.7372,
+        nosto: ['syvennys-tallinna-e-valtio', 'skandaali-rummu-jyri-mestarikarkuri'],
+      },
+      {
+        nimi: 'Lyhyen jalan torni', lat: 59.436, lon: 24.741,
+        nosto: 'syvennys-tallinna-kaksi-kaupunkia',
+      },
+      {
+        nimi: 'Pirtulaivat', lat: 59.4433, lon: 24.7511,
+        nosto: 'skandaali-pirtukauppa-suomenlahdella',
+      },
     ],
   },
   sofia: {
@@ -5058,6 +6787,45 @@ export const KAUPUNKIKARTAT = {
        * menisivät päällekkäin.
        */
       { nimi: 'Mineraalikylpylä', lat: 42.69923, lon: 23.3238 },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan tilaus
+       * 2.9.2026, sama erä kuin Ateenassa — ks. sen kohteet).
+       *
+       * Kaupunkinostojen katto pudottaa pääkartalta Sofian viereltä
+       * seitsemän merkkiä. Kaksi niistä on kaupungin sisällä ja saa
+       * kartalla oman paikkansa: `moskeijat` eli jäljelle jäänyt Banja
+       * Bashi (23,3219 E / 42,6977 N —
+       * js/packs/fokuskohteet-bgr.js) ja syvennystarina
+       * `syvennys-sofia-areena` (23,3283 E / 42,6972 N —
+       * js/packs/syvennyspaikat.js).
+       *
+       * VIISI MUUTA JÄI POIS kahdesta syystä. Vitoša, Boyanan kirkko ja
+       * eläintarha ovat kartan rajauksen ULKOPUOLELLA (Boyana 42,6437 ja
+       * tarha 42,6581, kun kartan eteläraja on 42,681); täkynosto
+       * `nosto-areena` kertoo saman tarinan kuin areena; ja
+       * `syvennys-sofia-pollopatsas` eli Sofia-patsas seisoo 77 %:n
+       * peitolla Banja Bashin päällä (tools/tarkista-karttapisteet.mjs),
+       * joten kahdesta valittiin rakennus. Kaikkien sisältö on lehdessä.
+       */
+      // Nimiö vasemmalle: keskitettynä kaksirivinen "Banja Bashin
+      // moskeija" laskeutui Pyhän Yrjön rotundan piirroksen päälle,
+      // joka on 33 px oikealla alaviistossa.
+      {
+        nimi: 'Banja Bashin moskeija', lat: 42.6977, lon: 23.3219, nimiPuoli: 'vasen',
+        nosto: 'moskeijat',
+      },
+      /*
+       * YKSI PISTE, KAKSI NOSTOA (sama ratkaisu kuin Rooman Torre
+       * Argentinalla): syvennystarina `syvennys-sofia-areena` ja
+       * täkynosto `nosto-areena` ovat sama amfiteatteri samassa
+       * pisteessä (peitto 97 %). Pisteen juttu on syvennystarinan
+       * kertomus löytymisestä; täkynoston näkökulma vuoden 1919
+       * mainoslaattaan on kaupunkilehden Historia-sivulla (v1421).
+       */
+      {
+        nimi: 'Serdican areena', lat: 42.6972, lon: 23.3283,
+        nosto: ['syvennys-sofia-areena', 'nosto-areena'],
+      },
       { nimi: 'Pyhän Yrjön rotunda', lat: 42.69689, lon: 23.32288 },
       {
         nimi: 'Sofian katedraali',
@@ -5068,6 +6836,49 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Sofian yliopisto', lat: 42.69354, lon: 23.33528, wiki: 'Sofian yliopisto' },
       { nimi: 'Borisovan puutarha', lat: 42.6893, lon: 23.3372 },
       { nimi: 'Kansalliskulttuuripalatsi', lat: 42.68476, lon: 23.31894 },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki sofia).
+       */
+      {
+        nimi: 'Sofia-patsas', lat: 42.6978, lon: 23.3215,
+        nosto: 'syvennys-sofia-pollopatsas', nimiPuoli: 'vasen',
+        siirto: { x: -25, y: -9 },
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * sofia); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Levski', lat: 42.6967, lon: 23.3353,
+        nosto: 'syvennys-sofia-levski',
+      },
+      {
+        nimi: 'Ruhtinaskaappaus', lat: 42.6965, lon: 23.3268,
+        nosto: 'skandaali-battenbergin-ruhtinaskaappaus',
+      },
+      {
+        nimi: 'Vihellyskonsertti', lat: 42.6942, lon: 23.3264,
+        nosto: 'skandaali-kansallisteatterin-vihellyskohu',
+      },
     ],
   },
   bukarest: {
@@ -5121,7 +6932,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Cișmigiun puutarha', lat: 44.4372, lon: 26.0906 },
       { nimi: 'Yliopiston aukio', lat: 44.43497, lon: 26.10088 },
       { nimi: 'Stavropoleoksen kirkko', lat: 44.43178, lon: 26.09883 },
-      { nimi: 'Vanha ruhtinaanhovi', lat: 44.43011, lon: 26.10131, wiki: 'Vlad III' },
+      {
+        nimi: 'Vanha ruhtinaanhovi', lat: 44.43011, lon: 26.10131, wiki: 'Vlad III',
+        nosto: 'hahmotelma-curtea-veche',
+      },
       {
         nimi: 'Parlamenttipalatsi',
         lat: 44.42751,
@@ -5130,6 +6944,55 @@ export const KAUPUNKIKARTAT = {
       },
       // Kainalossa vasemmassa ylänurkassa.
       { nimi: 'Antipan museo', lat: 44.4526, lon: 26.0858 },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki bukarest).
+       */
+      /*
+       * TÄKYNOSTO `nosto-dracula` EI TULLUT TÄNNE, vaikka se on
+       * karsittujen joukossa. Sillä ei ole omaa paikkaa: sen ankkuri on
+       * Bukarestin laatta itse (js/packs/fokusvirta-bukarest.js, "MIKSI
+       * SE SILTI KIRJOITETAAN") — juttu syntyi Britanniassa Wilkinsonin
+       * kirjan alaviitteestä. Mikä tahansa piste tällä kartalla olisi
+       * keksitty osoite, ja kartan lupaus on, että piste on siellä
+       * missä kohde on. Nosto jää siksi pääkartalle kaupunkikaton ohi
+       * (kattoVapaa).
+       */
+      {
+        nimi: 'Szathmárin studio', lat: 44.4305, lon: 26.1010,
+        nosto: 'syvennys-bukarest-szathmari', nimiPuoli: 'vasen',
+        siirto: { x: -13, y: -22 },
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * bukarest); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Colțean torni', lat: 44.43515, lon: 26.10298,
+        nosto: 'syvennys-bukarest-coltea',
+      },
+      {
+        nimi: 'Kultakana', lat: 44.4313, lon: 26.0973,
+        nosto: 'skandaali-kultakanan-ryosto-1875',
+      },
     ],
   },
   sarajevo: {
@@ -5183,9 +7046,32 @@ export const KAUPUNKIKARTAT = {
         wiki: 'Gazi Husrev-begin moskeija',
       },
       { nimi: 'Baščaršija', lat: 43.85972, lon: 18.43122 },
-      { nimi: 'Vijećnica', lat: 43.85917, lon: 18.43335, wiki: 'Vijećnica' },
+      {
+        nimi: 'Vijećnica', lat: 43.85917, lon: 18.43335, wiki: 'Vijećnica',
+        nosto: 'skandaali-bosnian-kriisi-1908',
+        // Nimi vasemmalle: Inat kuća on 90 metriä kaakkoon (4.9.2026).
+        nimiPuoli: 'vasen',
+      },
       { nimi: 'Latinalaissilta', lat: 43.85763, lon: 18.42893 },
       { nimi: 'Keltainen linnake', lat: 43.86146, lon: 18.43772 },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoi pääkartalla kaupungin merkin
+       * päällä; nyt sen paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa sen pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * sarajevo); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Inat kuća', lat: 43.8585, lon: 18.4343,
+        nosto: 'syvennys-sarajevo-inat-kuca',
+        nimiPuoli: 'oikea',
+      },
     ],
   },
   kiova: {
@@ -5225,7 +7111,10 @@ export const KAUPUNKIKARTAT = {
        * omasta palatsista ei ole artikkelia. Pyhän Andreaksen kirkko
        * ilman täsmennettä ohjautuu täsmennyssivulle.
        */
-      { nimi: 'Kontraktovan aukio', lat: 50.4636, lon: 30.5178 },
+      {
+        nimi: 'Kontraktovan aukio', lat: 50.4636, lon: 30.5178,
+        nosto: 'syvennys-kiova-tsumakit',
+      },
       {
         nimi: 'Andreaksen kirkko',
         lat: 50.4589,
@@ -5243,6 +7132,7 @@ export const KAUPUNKIKARTAT = {
         lat: 50.4528,
         lon: 30.5144,
         wiki: 'Pyhän Sofian katedraali (Kiova)',
+        nosto: 'nosto-sofian-mosaiikit',
       },
       {
         nimi: 'Itsenäisyyden aukio',
@@ -5297,6 +7187,7 @@ export const KAUPUNKIKARTAT = {
         lat: 59.95,
         lon: 30.317,
         wiki: 'Pietari-Paavalin linnoitus',
+        nosto: 'skandaali-prinsessa-tarakanova',
       },
       { nimi: 'Talvipalatsi', lat: 59.9404, lon: 30.3139, wiki: 'Talvipalatsi' },
       {
@@ -5305,9 +7196,48 @@ export const KAUPUNKIKARTAT = {
         lon: 30.3286,
         wiki: 'Kristuksen ylösnousemuksen katedraali',
       },
-      { nimi: 'Vaskiratsastaja', lat: 59.9364, lon: 30.3022, wiki: 'Vaskiratsastaja' },
+      {
+        nimi: 'Vaskiratsastaja', lat: 59.9364, lon: 30.3022, wiki: 'Vaskiratsastaja',
+        nosto: 'syvennys-pietari-ukkoskivi',
+      },
       { nimi: 'Kazanin katedraali', lat: 59.9343, lon: 30.3245, wiki: 'Kazanin katedraali' },
       { nimi: 'Mariinski-teatteri', lat: 59.9256, lon: 30.2961, wiki: 'Mariinski-teatteri' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoi pääkartalla kaupungin merkin
+       * päällä; nyt sen paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa sen pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * pietari); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Fabergé-museo', lat: 59.9349, lon: 30.3435,
+        nosto: 'syvennys-pietari-faberge',
+      },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Jänissaaren länsipää; Pietari-Paavalin linnoituksen piste on saman saaren
+      // keskellä.
+      {
+        nimi: 'Jänissaari 1703', lat: 59.9515, lon: 30.312,
+        nosto: 'hetki-pietari-perustus-1703', nimiPuoli: 'vasen',
+      },
+      // Pietarin yliopisto, Vasilinsaari.
+      {
+        nimi: 'Mendelejev 1869', lat: 59.942, lon: 30.299,
+        nosto: 'hetki-mendelejev-kortit-1869',
+      },
     ],
   },
   moskova: {
@@ -5356,7 +7286,10 @@ export const KAUPUNKIKARTAT = {
         lon: 37.6231,
         wiki: 'Pyhän Vasilin katedraali',
       },
-      { nimi: 'Moskovan Kreml', lat: 55.7517, lon: 37.6178, wiki: 'Moskovan Kreml' },
+      {
+        nimi: 'Moskovan Kreml', lat: 55.7517, lon: 37.6178, wiki: 'Moskovan Kreml',
+        nosto: 'skandaali-iivanan-kadonnut-kirjasto',
+      },
       {
         nimi: 'Vapahtajan katedraali',
         lat: 55.7444,
@@ -5368,6 +7301,39 @@ export const KAUPUNKIKARTAT = {
         lat: 55.7414,
         lon: 37.6209,
         wiki: 'Tretjakovin galleria',
+      },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki moskova).
+       */
+      {
+        nimi: 'Näyttely 1872', lat: 55.7577, lon: 37.6295, nosto: 'syvennys-moskova-nayttely1872',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoi pääkartalla kaupungin merkin
+       * päällä; nyt sen paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa sen pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * moskova); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Perlovin teetalo', lat: 55.7626, lon: 37.636,
+        nosto: 'syvennys-moskova-karavaanitee',
       },
     ],
   },
@@ -5414,9 +7380,27 @@ export const KAUPUNKIKARTAT = {
         lat: 46.4854,
         lon: 30.7413,
         wiki: 'Odessan kansallinen akateeminen ooppera- ja balettiteatteri',
+        nosto: 'syvennys-odessa-ooppera',
       },
       { nimi: 'Kaupunginpuisto', lat: 46.4848, lon: 30.7344 },
       { nimi: 'Privozin tori', lat: 46.4699, lon: 30.7368 },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoi pääkartalla kaupungin merkin
+       * päällä; nyt sen paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa sen pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * odessa); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Potjomkin-portaat', lat: 46.4892, lon: 30.7433,
+        nosto: 'syvennys-odessa-portaat',
+      },
     ],
   },
   oslo: {
@@ -5433,8 +7417,8 @@ export const KAUPUNKIKARTAT = {
       + 'loppuu ja metsäiset kukkulat alkavat. Keskusta rakennettiin '
       + 'suoraviivaiseksi ruuduksi 1600-luvulla, kun vanha puukaupunki oli '
       + 'palanut ja Tanskan kuningas Kristian IV käski rakentaa uuden '
-      + 'linnoituksen suojaan; kaupunki kantoi hänen nimeään Kristianiana '
-      + 'aina vuoteen 1925. Alueella ovat kuninkaanlinna, sieltä '
+      + 'linnoituksen suojaan; kaupunki kantoi hänen nimeään — Christiania, '
+      + 'vuodesta 1877 Kristiania — aina vuoteen 1925. Alueella ovat kuninkaanlinna, sieltä '
       + 'tuomiokirkolle ja rautatieasemalle vievä Karl Johans gate, '
       + 'kaupungintalo, 1300-luvulta paikallaan seissyt Akershusin '
       + 'linnoitus sataman kupeessa sekä oopperatalo, jonka katolle voi '
@@ -5455,6 +7439,49 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kaupungintalo', lat: 59.912, lon: 10.7335, wiki: 'Oslon kaupungintalo' },
       { nimi: 'Akershusin linnoitus', lat: 59.9075, lon: 10.7365, wiki: 'Akershusin linnoitus' },
       { nimi: 'Oopperatalo', lat: 59.9075, lon: 10.7522, wiki: 'Oslon oopperatalo' },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki oslo).
+       */
+      {
+        nimi: 'Akershus', lat: 59.9067, lon: 10.7361, nosto: 'syvennys-oslo-unionilippu',
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * oslo); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Huudon varkaus', lat: 59.9163, lon: 10.7373,
+        nosto: 'skandaali-huudon-varkaus',
+      },
+      {
+        nimi: 'Boheemikirja', lat: 59.9135, lon: 10.741,
+        nosto: 'skandaali-boheemikirjan-takavarikko',
+      },
+      // Historian hetki kaupungin laatan päältä (omistaja 3.9.2026): Fram
+      // lähti Pipervikasta, nykyisen kaupungintalon edustalta.
+      {
+        nimi: 'Fram 1893', lat: 59.9098, lon: 10.7318,
+        nosto: 'hetki-nansen-fram-1893',
+      },
     ],
   },
   /*
@@ -5472,12 +7499,25 @@ export const KAUPUNKIKARTAT = {
    * kohdekartoilla.
    *
    * `wiki` on VAIN NIILLÄ, JOILLA ARTIKKELI ON OIKEASTI OLEMASSA
-   * (tarkistettu fi.wikipedian rajapinnasta 29.8.2026). Erityisesti
-   * Plaza de España EI saa wiki-kenttää: fi.wikipedian samanniminen
-   * sivu on täsmennyssivu, joka luettelee Madridin, Barcelonan ja
-   * Palman aukiot — linkki veisi lukijan väärään kaupunkiin. Samasta
-   * syystä ilman linkkiä ovat Maestranza ja Trianan silta, joista ei
-   * ole fi-artikkelia lainkaan.
+   * (tarkistettu fi.wikipedian rajapinnasta 29.8.2026).
+   *
+   * KOLME VIIMEISTÄ SAIVAT ENGLANNINKIELISEN OTSIKON (6.9.2026).
+   * Maestranza, Trianan silta ja Plaza de España jäivät 29.8. ilman
+   * wiki-kenttää, koska fi-artikkelia ei ole ja fi:n samanniminen
+   * "Plaza de España" on täsmennyssivu (Madrid, Barcelona, Palma).
+   * Ilman juttua ja ilman wikiä merkki ei kuitenkaan ole napautettava
+   * (js/nahtavyydet.js: `avattava = Boolean(k.teksti || k.wiki)`), ja
+   * nämä kolme olivat koko kartastossa ainoat sellaiset — vastoin
+   * sääntöä, että jokainen kartan näkyvä merkki on nimetty ja
+   * napautettava.
+   *
+   * Otsikko saa siis olla englanninkielinen: js/wiki.js fetchSummary
+   * kokeilee fi:n ensin ja siirtyy englantiin, kun fi vastaa 404:llä
+   * tai täsmennyssivulla (parseSummary hylkää `disambiguation`-tyypin).
+   * Kaikki kolme tarkistettiin rajapinnasta 6.9.2026: fi 404, en
+   * `standard` ja tiivistelmä 290–361 merkkiä eli yli MIN_EXTRACTin.
+   * Täsmennyssivu ei voi tulla väliin, koska otsikkoa
+   * "Plaza de España, Seville" ei ole fi:ssä lainkaan.
    *
    * TRIANAN SILTA ON VEDESSÄ, JA SE ON OIKEIN.
    * tools/tarkista-karttapisteet.mjs merkitsee sen vesipisteeksi, mutta
@@ -5509,9 +7549,26 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Katedraali ja Giralda', lat: 37.3862, lon: -5.9924, wiki: 'Sevillan katedraali' },
       { nimi: 'Alcázar', lat: 37.385, lon: -5.9924, wiki: 'Sevillan Alcázar' },
       { nimi: 'Torre del Oro', lat: 37.3824, lon: -5.9965, wiki: 'Torre del Oro' },
-      { nimi: 'Maestranzan areena', lat: 37.386, lon: -5.9983 },
-      { nimi: 'Trianan silta', lat: 37.3862, lon: -6.0023 },
-      { nimi: 'Plaza de España', lat: 37.3769, lon: -5.9869 },
+      { nimi: 'Maestranzan areena', lat: 37.386, lon: -5.9983, wiki: 'Maestranza (Seville)' },
+      { nimi: 'Trianan silta', lat: 37.3862, lon: -6.0023, wiki: 'Puente de Isabel II' },
+      { nimi: 'Plaza de España', lat: 37.3769, lon: -5.9869, wiki: 'Plaza de España, Seville' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoi pääkartalla kaupungin merkin
+       * päällä; nyt sen paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa sen pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * sevilla); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Victorian laituri', lat: 37.3801, lon: -5.9969,
+        nosto: 'syvennys-sevilla-victoria',
+      },
     ],
   },
   /*
@@ -5603,7 +7660,49 @@ export const KAUPUNKIKARTAT = {
        */
       { nimi: 'Vapahtajan kirkko', lat: 55.6729, lon: 12.594, wiki: 'Vapahtajamme kirkko' },
       { nimi: 'Rosenborgin linna', lat: 55.6859, lon: 12.5773, wiki: 'Rosenborgin linna' },
-      { nimi: 'Kastellet', lat: 55.6912, lon: 12.5938, wiki: 'Kastellet (Kööpenhamina)' },
+      {
+        nimi: 'Kastellet', lat: 55.6912, lon: 12.5938, wiki: 'Kastellet (Kööpenhamina)',
+        nosto: 'skandaali-struensee-kuninkaan-laakari',
+      },
+      /*
+       * KARSITUT KARTTANOSTOT KOHDEKARTALLE (omistajan sääntö 2.9.2026:
+       * *"lisää kaikki historian hetket ja muut karttanostot myös joko
+       * pääkarttanäkymään tai sitten kaupunkilehden kaupunkikartalle,
+       * ellei näin ole jo tehty."*). Kaupunkinostojen katto (v1419,
+       * js/fokuskohteet.js karsiKaupunkiruuhka) pudotti nämä pääkartalta;
+       * jokainen niistä osuu tämän kartan rajaukseen, joten se saa täältä
+       * oman pisteen. Kenttä `nosto` on koneellinen linkki karsittuun
+       * merkkiin (tools/tarkista-nostopaikat.mjs) — nimet eivät riitä,
+       * koska sama sisältö kulkee kartalla eri nimellä kuin lehdessä.
+       * Juttu on noston OMA teksti ja kuva sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki kobenhavn).
+       */
+      {
+        nimi: 'Tivolin portti', lat: 55.6736, lon: 12.5683,
+        nosto: 'syvennys-kobenhavn-tivoli', nimiPuoli: 'oikea',
+        siirto: { x: 18, y: 19 },
+      },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * kobenhavn); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Vararikko 1813', lat: 55.6756, lon: 12.5839,
+        nosto: 'skandaali-tanskan-valtionvararikko-1813',
+      },
+      {
+        nimi: 'Alberti', lat: 55.6772, lon: 12.5731,
+        nosto: 'skandaali-alberti-skandaali',
+      },
     ],
   },
   tampere: {
@@ -5655,7 +7754,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Näsinneula', lat: 61.5052, lon: 23.7422, wiki: 'Näsinneula' },
       { nimi: 'Finlaysonin tehdasalue', lat: 61.4996, lon: 23.753, wiki: 'Finlaysonin tehdasalue' },
       { nimi: 'Museokeskus Vapriikki', lat: 61.5022, lon: 23.7657, wiki: 'Museokeskus Vapriikki' },
-      { nimi: 'Hämeensilta', lat: 61.4979, lon: 23.7626, wiki: 'Hämeensilta' },
+      {
+        nimi: 'Hämeensilta', lat: 61.4979, lon: 23.7626, wiki: 'Hämeensilta',
+        nosto: 'syvennys-tampere-koski',
+      },
       { nimi: 'Tampereen tuomiokirkko', lat: 61.4966, lon: 23.7744, wiki: 'Tampereen tuomiokirkko' },
       { nimi: 'Pyynikin näkötorni', lat: 61.4936, lon: 23.7208, wiki: 'Pyynikin näkötorni' },
       // Kuninkaankatu 4, Finlaysonin tehdasalueen pohjoisreunassa
@@ -5664,6 +7766,757 @@ export const KAUPUNKIKARTAT = {
       // Satakunnankatu 49; sama piste kuin fi-Wikipedian
       // koordinaatti (61,4993 / 23,7434) kymmenen metrin sisällä.
       { nimi: 'Amurin työläismuseokortteli', lat: 61.4993, lon: 23.7434, wiki: 'Amurin museokortteli' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * tampere); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Finlayson', lat: 61.5008, lon: 23.7585,
+        nosto: 'syvennys-tampere-finlayson',
+      },
+      {
+        nimi: 'Tuomiokirkko', lat: 61.5025, lon: 23.7697,
+        nosto: 'syvennys-tampere-kaarme',
+      },
+    ],
+  },
+  /*
+   * BRYSSEL (20.9.2026, pilotti; omistajan päätös 19.9.2026: Belgian
+   * pelikaupunki Bryssel). Kohdekartta on piirretty
+   * tools/piirra-kaupunkikartta.mjs bryssel (paperi) ja --vari
+   * (värikartta), OpenStreetMapin aineistosta. Seitsemän kohdetta,
+   * järjestys lännestä itään; koordinaatit Overpassista (ei
+   * Wikipediasta). Atomium (5,4 km pohjoiseen) ja Cinquantenaire
+   * (2,5 km itään) jäävät rajauksen ulkopuolelle tarkoituksella
+   * (Fable 20.9.2026: ydinalue riittää, Atomium on jo lehdessä).
+   * Mont des Arts ja Oikeuspalatsi eivät ole fi-Wikipediassa (haku
+   * 20.9.2026), joten niillä on oma tiivis `teksti` en-Wikipedian
+   * pohjalta.
+   */
+  /*
+   * LUXEMBURG (21.9.2026, samalla kaavalla kuin Bryssel, Ljubljana ja
+   * Košice; omistajan päätös 21.9.2026: Kypros, Luxemburg ja Malta
+   * saavat pelikaupungin). Kohdekartta piirretty
+   * tools/piirra-kaupunkikartta.mjs luxemburg (paperi) ja --vari
+   * (värikartta), OpenStreetMapin aineistosta. Kuusi kohdetta,
+   * järjestys lännestä itään; koordinaatit en-Wikipediasta
+   * (tarkistettu 21.9.2026). Kaikilla kuudella on oma `teksti`, koska
+   * fi-Wikipediassa ei ole artikkelia yhdestäkään näistä kohteista
+   * erikseen (haku 21.9.2026) — sama ratkaisu kuin Košicella.
+   *
+   * Tämän kartan lisäys ratkaisee samalla nostoräikän: Bock-kalliolla
+   * on kolme lähizoomi-hahmotelmanostoa (hahmotelma-luxembourg,
+   * -mondorf, -altmunster; ks. js/packs/hahmotelma-lux.js), jotka
+   * olivat "kaupungin kohdalla" syyllä "kohdekarttaa ei ole" ennen
+   * tätä lisäystä — nyt kartta on olemassa, ja lahi:true-lippu vie ne
+   * takaisin lähizoomi-luokkaan (tools/tarkista-nostopaikat.mjs
+   * kaupunginKohdallaSyy tarkistaa kartan ennen lahi-lippua).
+   */
+  luxemburg: {
+    polku: 'assets/kartat/luxemburg-keskusta.png',
+    numeroympyrat: true,
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 49.6128, etela: 49.6065, lansi: 6.1245, ita: 6.139 },
+    piirtoRajat: { pohjoinen: 49.61469, etela: 49.60461, lansi: 6.12015, ita: 6.14335 },
+    varikartta: 'assets/kartat/luxemburg-varikartta.png',
+    esittely: 'Luxemburgin vanhakaupunki seisoo kalliolla, jonka Alzette- '
+      + 'ja Pétrusse-joet ovat kaivaneet syviksi rotkoiksi — juuri tämä '
+      + 'muoto teki siitä niin vahvan linnoituksen, että sitä kutsuttiin '
+      + 'Pohjoisen Gibraltariksi. Isoisän matkan aikaan linnoitusta '
+      + 'puretaan Lontoon sopimuksen vaatimuksesta: Bock-kallion '
+      + 'kasemattikäytäviä louhitaan auki, ja entiset muurinreunat ovat '
+      + 'juuri muuttumassa kävelyteiksi. Suurherttuallinen palatsi ja '
+      + 'Notre-Damen katedraali ovat kaupungin hallinnollinen ja '
+      + 'hengellinen keskus, ja Guillaume II:n aukio niiden välissä on '
+      + 'kaupungin sydän. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Adolphe-silta', lat: 49.6083, lon: 6.1270,
+        aika: '1900–1903',
+        teksti: 'Adolphe-silta yhdistää vanhankaupungin ja asema-alueen '
+          + 'Pétrussen laakson yli. Isoisän matkan aikaan siltaa ei vielä '
+          + 'ole: laakson ylitti tuolloin vain kapeampi, vuosina '
+          + '1859–1861 rakennettu Passerelle. Insinöörit Paul Séjourné ja '
+          + 'Albert Rodange suunnittelivat Adolphe-sillan, joka '
+          + 'nimettiin suurherttua Adolphelle ja valmistui vuonna 1903; '
+          + 'valmistuessaan sen 84,65 metrin kivikaari oli maailman '
+          + 'suurin.'
+          + '\n\n'
+          + 'Sillasta tuli nopeasti Luxemburgin itsenäisyyden '
+          + 'tunnuskuva, ja paikalliset kutsuvat sitä yhä Uudeksi '
+          + 'sillaksi erotukseksi vanhasta Passerellesta. Ajoradan alle '
+          + 'rakennettiin vuonna 2018 toinen kansi pyöräilijöille, ja '
+          + 'vuodesta 2020 sillan yli on kulkenut myös raitiovaunu.',
+        kuvat: [
+          {
+            tiedosto: 'Luxembourg Adolphe Bridge over Petrusse valley.jpg',
+            lyhyt: 'Adolphe-sillan kivikaari kaartuu korkealla Pétrussen laakson yli.',
+            selite: 'Adolphe-sillan kivikaari kaartuu Pétrussen laakson '
+              + 'yli; valmistuessaan 1903 kaari oli maailman suurin.',
+            lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Guillaume II:n aukio', lat: 49.6108, lon: 6.1303,
+        teksti: 'Guillaume II:n aukio eli kansanomaisesti Knuedler on '
+          + 'vanhankaupungin pääaukio. Paikalla seisoi keskiajalta asti '
+          + 'fransiskaaniluostari, jonka Ranskan vallankumoussotilaat '
+          + 'ottivat haltuunsa vuonna 1797; Napoleon lahjoitti tontin '
+          + 'kaupungille 1804. Nykyinen raatihuone rakennettiin '
+          + 'vuosina 1829–1838 belgialaisen arkkitehti Justin Remontin '
+          + 'piirustusten mukaan, ja suurherttua Vilhelm II paljasti '
+          + 'sekä raatihuoneen että oman ratsastajapatsaansa aukiolla '
+          + 'heinäkuussa 1844.'
+          + '\n\n'
+          + 'Aukio on isoisän matkan aikaan jo vakiintunut kaupungin '
+          + 'kokoontumispaikka, ja sen laidalla raatihuone edustaa '
+          + 'kaupungin omaa hallintoa suurherttuan hallinnon rinnalla.',
+        kuvat: [
+          {
+            tiedosto: 'Luxembourg City Square Guillaume II towards Notre-Dame Cathedral April 2011.jpg',
+            lyhyt: 'Guillaume II:n aukio ja ratsastajapatsas, taustalla Notre-Damen katedraalin tornit.',
+            selite: 'Guillaume II:n aukio raatihuoneineen ja '
+              + 'ratsastajapatsaineen; taustalla näkyvät Notre-Damen '
+              + 'katedraalin tornit.',
+            lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Notre-Damen katedraali', lat: 49.6097, lon: 6.1316,
+        aika: '1613–',
+        teksti: 'Notre-Damen kirkon peruskivi muurattiin vuonna 1613 '
+          + 'jesuiittakirkoksi, ja rakennus yhdistää myöhäisgoottilaisia '
+          + 'muotoja renessanssin koristeisiin. Kirkossa säilytetään '
+          + 'Lohduttajan Neitsyt Marian kunnioitettua kuvaa, jolle paavi '
+          + 'Pius IX myönsi kruunaamisluvan vuonna 1866 — kruunajaiset '
+          + 'pidettiin seuraavana vuonna, aivan isoisän matkaa edeltävinä '
+          + 'vuosina. Kirkko korotettiin hiippakunnan '
+          + 'pääkirkoksi vasta 1870, joten isoisän matkan aikaan se on '
+          + 'tuoreeltaan katedraali.'
+          + '\n\n'
+          + 'Kirkon krypta on kaupungin hallitsijasuvun hautapaikka, ja '
+          + 'sinne on haudattu muun muassa kreivi Johan Sokea 1300-'
+          + 'luvulta. Nykyistä laajennettua muotoaan katedraali ei '
+          + 'vielä 1873 ole: sivulaivat ja kuori kasvavat vasta '
+          + '1930-luvulla.',
+        kuvat: [
+          {
+            tiedosto: 'Luxembourg Cathedrale Notre-Dame.jpg',
+            lyhyt: 'Notre-Damen katedraalin kaksi suippotornia ja pääjulkisivu.',
+            selite: 'Notre-Damen katedraalin pääjulkisivu ja kaksi '
+              + 'suippotornia; peruskivi muurattiin vuonna 1613.',
+            lahde: 'Wolfgang Staudt, Wikimedia Commons (CC BY 2.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Suurherttuallinen palatsi', lat: 49.6109, lon: 6.1328,
+        aika: '1572–',
+        teksti: 'Rakennus, joka tunnetaan nykyään Suurherttuallisena '
+          + 'palatsina, rakennettiin vuonna 1572 kaupungintaloksi ja '
+          + 'sitä laajennettiin useaan otteeseen. Isoisän matkan aikaan '
+          + 'se toimii suurherttuakunnan hallintorakennuksena '
+          + 'henkilöunionin ajan käytäntöjen mukaan: varsinainen '
+          + 'hallitsija, Alankomaiden kuningas Vilhelm III, asuu '
+          + 'Haagissa, ja paikan päällä maata edustaa kuvernööri.'
+          + '\n\n'
+          + 'Julkisivun maureilaisvaikutteinen koristelu ja kaiverretut '
+          + 'ikkunapielet ovat renessanssiajalta, ja rakennus on '
+          + 'vaihtanut käyttötarkoitustaan moneen kertaan vuosisatojen '
+          + 'varrella — se on ollut myös kaupungin oikeustalo. Vasta '
+          + 'vuodesta 1890, kun Luxemburgista tulee itsenäisen '
+          + 'suvun hallitsema, siitä tulee virallisesti hallitsijan oma '
+          + 'palatsi.',
+        kuvat: [
+          {
+            tiedosto: 'Luxembourg Grand Ducal Palace 01.jpg',
+            lyhyt: 'Suurherttuallisen palatsin renessanssijulkisivu kadulta nähtynä.',
+            selite: 'Suurherttuallisen palatsin renessanssijulkisivu; '
+              + 'rakennus on alun perin vuodelta 1572.',
+            lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Chemin de la Corniche', lat: 49.6098, lon: 6.1345,
+        teksti: 'Chemin de la Corniche kulkee entisten muurien harjalla '
+          + 'Bock-kalliolta Pyhän Hengen linnoituksen suuntaan, ja siltä '
+          + 'avautuu näkymä alas Alzette-joen mutkaan, Grundin '
+          + 'alakaupunkiin ja Rhamin tasanteelle. Käytävä oli vielä '
+          + '1860-luvulla jyrkkine portaineen hankala kulkea, mutta '
+          + 'linnoituksen purku on juuri tasoittanut sen — muureista '
+          + 'irrotettuja ampuma-aukkoja ja harjannetta muutetaan '
+          + 'kävelytieksi samaa vauhtia kuin muutakin kaupunkia.'
+          + '\n\n'
+          + 'Myöhemmin, 1900-luvulla, kirjailija Batty Weber antaa '
+          + 'kulkutielle lempinimen "Euroopan kaunein parveke" — isoisän '
+          + 'matkan aikaan se on vielä tuore, äskettäin avattu näköalapaikka.',
+        kuvat: [
+          {
+            tiedosto: 'Chemin de la Corniche, Luxembourg City (5809014418).jpg',
+            lyhyt: 'Chemin de la Corniche seuraa entistä muurinharjaa Alzette-joen laakson yllä.',
+            selite: 'Chemin de la Corniche seuraa entistä muurinharjaa '
+              + 'korkealla Alzette-joen laakson yllä.',
+            lahde: 'yeowatzup, Wikimedia Commons (CC BY 2.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Bockin kasematit', lat: 49.6117, lon: 6.1369,
+        aika: '963',
+        teksti: 'Bock-kallio on koko Luxemburgin kaupungin syntypaikka: '
+          + 'kreivi Siegfried hankki paikan vuonna 963 ja rakensi '
+          + 'sille Lucilinburhuc-nimisen linnansa. Kallion sisään '
+          + 'louhittiin vuosisatojen kuluessa yli kaksikymmentä '
+          + 'kilometriä maanalaisia käytäviä, kasemattteja, joihin '
+          + 'mahtui tykkiasemia, varastoja ja jopa leipomoita — ne '
+          + 'tekivät linnoituksesta niin vahvan, että ranskalainen '
+          + 'sotilasinsinööri Lazare Carnot kutsui sitä maailman '
+          + 'parhaaksi heti Gibraltarin jälkeen.'
+          + '\n\n'
+          + 'Isoisän matkan aikaan käytäviä puretaan Lontoon sopimuksen '
+          + '1867 vaatimuksesta: purkutyö on kesken ja jatkuu vielä '
+          + 'vuosia. Kaikkea ei silti hävitetä — osa kasemateista '
+          + 'jätetään paikalleen kaupungin historian muistona.',
+        kuvat: [
+          {
+            tiedosto: 'Bock casemates, Luxembourg - panoramio.jpg',
+            lyhyt: 'Bock-kallion kasemattien louhittu käytävä ja ampuma-aukko.',
+            selite: 'Bock-kallion kasemattien louhittu käytävä; kallion '
+              + 'sisään on louhittu yli kaksikymmentä kilometriä '
+              + 'maanalaisia käytäviä.',
+            lahde: 'Николай Максимович, Wikimedia Commons (CC BY 3.0)',
+          },
+        ],
+      },
+    ],
+  },
+  bryssel: {
+    polku: 'assets/kartat/bryssel-keskusta.png',
+    // Numeroidut ympyrät kartalla ilman miniatyyrejä (omistaja 20.9.2026).
+    numeroympyrat: true,
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 50.851, etela: 50.8335, lansi: 4.342, ita: 4.376 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, 20.9.2026).
+    piirtoRajat: { pohjoinen: 50.85625, etela: 50.82825, lansi: 4.3318, ita: 4.3862 },
+    varikartta: 'assets/kartat/bryssel-varikartta.png',
+    esittely: 'Brysselin sydän on Grand-Place, keskiaikainen kiltatori, jonka '
+      + 'ympärille vanhakaupunki kasvoi. Isoisän matkan aikaan kaupunki on '
+      + 'juuri uudistunut: Senne-joki katettiin vuosina 1867–1871 ja sen '
+      + 'päälle nousivat leveät bulevardit, uusi pörssipalatsi rakennettiin '
+      + 'vuosina 1868–1873 ja valtava Oikeuspalatsi on yhä rakenteilla '
+      + '(1866–1883). Kuninkaanpalatsi seisoo vanhakaupungin itäpuolella '
+      + 'kukkulalla, jonka rinteellä on vielä tiheää vanhaa asutusta: '
+      + 'Mont des Artsin puisto ja museot tulevat vasta 1900-luvulla. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      { nimi: 'Brysselin pörssi', lat: 50.84795, lon: 4.34916, wiki: 'Brysselin pörssi' },
+      { nimi: 'Manneken Pis', lat: 50.84499, lon: 4.34999, wiki: 'Manneken Pis' },
+      {
+        nimi: 'Oikeuspalatsi', lat: 50.83667, lon: 4.35162,
+        aika: '1866–1883',
+        teksti: 'Brysselin oikeuspalatsi on Belgian tärkein oikeustalo, ja se seisoo '
+          + 'Marollesin kaupunginosan reunalla ylä- ja alakaupungin välissä. '
+          + 'Isoisän matkan aikaan se on vielä rakenteilla: arkkitehti Joseph '
+          + 'Poelaertin suunnittelemat työt alkoivat vuonna 1866, ja rakennus '
+          + 'valmistuu vasta 1883. Kreikkalais-roomalaisvaikutteisen, '
+          + 'eklektisen jättipalatsin pohja-ala on yli 26 000 neliömetriä, ja '
+          + 'sitä pidetään 1800-luvun suurimpana rakennuksena.'
+          + '\n\n'
+          + 'Kupoli romahti myöhemmin tulipalossa sodan lopussa ja '
+          + 'rakennettiin uudelleen entistä korkeammaksi. Kunnostustyöt '
+          + 'alkoivat 1984, ja telineet ovat yhä paikoillaan.',
+        kuvat: [
+          {
+            tiedosto: 'Coupole du Palais de Justice de Bruxelles 04.jpg',
+            lyhyt: 'Oikeuspalatsin kupoli katsottuna suuren aulan lattialta.',
+            selite: 'Oikeuspalatsin kupoli suuren sisääntuloaulan lattialta '
+              + 'katsottuna: kassettikatto kaartuu kohti keskellä olevaa '
+              + 'pyöreää kattoikkunaa.',
+            lahde: 'M0tty, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      { nimi: 'Grand-Place', lat: 50.8467, lon: 4.3525, wiki: 'Grand-Place' },
+      {
+        nimi: 'Galeries Royales Saint-Hubert', lat: 50.84774, lon: 4.35506,
+        wiki: 'Galeries Royales Saint-Hubert',
+      },
+      {
+        nimi: 'Mont des Arts', lat: 50.84377, lon: 4.3569,
+        aika: '1910',
+        teksti: 'Mont des Arts eli Kunstberg on Brysselin keskustan kukkulaan '
+          + 'rakennettu kulttuurikortteli. Isoisän matkan aikaan sitä ei ole '
+          + 'vielä olemassa: kukkulan rinnettä peittää vanha, tiheästi '
+          + 'rakennettu kaupunginosa. Kuningas Leopold II halusi siitä '
+          + 'taiteiden kaupunginosan, osti korttelit ja antoi purkaa vanhat '
+          + 'talot vuosina 1897–1898. Ensimmäinen puisto vihittiin käyttöön '
+          + 'vuonna 1910.'
+          + '\n\n'
+          + 'Nykyisen ilmeensä alue sai vuosina 1956–1969, kun sinne '
+          + 'rakennettiin kuninkaallinen kirjasto ja kongressipalatsi. '
+          + 'Puutarhan suunnitteli maisema-arkkitehti René Pechère, ja '
+          + 'ylhäältä näkyy kaupungintalon torni.',
+        kuvat: [
+          {
+            tiedosto: 'Mont des Arts, Brussels, Belgium.jpg',
+            lyhyt: 'Mont des Artsin geometrinen puutarha ja kaupungintalon torni taustalla.',
+            selite: 'Mont des Artsin geometrinen puutarha, jonka päässä '
+              + 'näkyy kaupungintalon torni. Nykyisen puutarhan suunnitteli '
+              + 'René Pechère.',
+            lahde: 'Julian Lupyan, Wikimedia Commons (CC0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Kuninkaanpalatsi', lat: 50.84193, lon: 4.36245,
+        wiki: 'Brysselin kuninkaallinen palatsi',
+      },
+    ],
+  },
+  /*
+   * LJUBLJANA (20.9.2026, samalla kaavalla kuin Bryssel; omistajan
+   * päätös 19.9.2026: Slovenian pelikaupunki). Kohdekartta piirretty
+   * tools/piirra-kaupunkikartta.mjs ljubljana (paperi) ja --vari
+   * (värikartta), OpenStreetMapin aineistosta. Kahdeksan kohdetta,
+   * järjestys lännestä itään; koordinaatit Overpassista. fi-Wikipediassa
+   * on artikkeli vain linnasta, Tromostovjesta ja tuomiokirkosta (haku
+   * 20.9.2026); muille viidelle on oma tiivis `teksti` en-Wikipedian
+   * pohjalta 1873-katseella ja yksi Commons-kuva.
+   */
+  ljubljana: {
+    polku: 'assets/kartat/ljubljana-keskusta.png',
+    // Numeroidut ympyrät kartalla ilman miniatyyrejä (omistaja 20.9.2026).
+    numeroympyrat: true,
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 46.056, etela: 46.0455, lansi: 14.493, ita: 14.513 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, 20.9.2026).
+    piirtoRajat: { pohjoinen: 46.05915, etela: 46.04235, lansi: 14.487, ita: 14.519 },
+    varikartta: 'assets/kartat/ljubljana-varikartta.png',
+    esittely: 'Ljubljanan vanhakaupunki mahtuu Ljubljanica-joen mutkaan '
+      + 'Linnavuoren juurelle, ja kaupunki on pieni: vielä vuonna 1895 '
+      + 'asukkaita on vasta noin 31 000. Isoisän matkan aikaan, vuonna '
+      + '1873, Wienistä kulkee jo juna (1849), linna toimii läänin '
+      + 'vankilana ja Tromostovje on vasta yksi kivisilta. Prešernin '
+      + 'aukio on suppilomainen katujen risteys eikä Lohikäärmesiltaa '
+      + 'ole vielä lainkaan: moni kartan kohde saa nykyisen ilmeensä '
+      + 'vasta vuoden 1895 maanjäristyksen jälkeen. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Tivoli-puisto', lat: 46.05404, lon: 14.49574,
+        aika: '1813',
+        teksti: 'Tivoli on Ljubljanan suurin puisto. Sen suunnitteli ranskalainen '
+          + 'insinööri Jean Blanchard vuonna 1813, kun kaupunki oli Napoleonin '
+          + 'Illyrian maakuntien pääkaupunki, ja nimi tulee Pariisin Tivolista. '
+          + 'Puiston perällä seisoo Tivolin linna, joka rakennettiin '
+          + '1600-luvulla aiemman renessanssilinnan raunioille ja jonka omisti '
+          + 'aluksi jesuiittajärjestö.'
+          + '\n\n'
+          + '1800-luvun puolivälissä marsalkka Joseph Radetzky kunnosti linnan '
+          + 'uusklassiseen asuunsa, ja vuonna 1864 sen eteen pystytettiin neljä '
+          + 'valurautakoiraa. Linnalle johtava Jakopičin kävelykatu tulee '
+          + 'vasta 1920-luvulla, kun Jože Plečnik uudisti puistoa.',
+        kuvat: [
+          {
+            tiedosto: 'Lauterbach, H. - Ljubljana iz Tivolija (jeklorez, ok. 1855).jpg',
+            lyhyt: 'Näkymä Tivolin puistosta Ljubljanaan ja linnaan noin vuonna 1855.',
+            selite: 'Teräskaiverros noin vuodelta 1855: Tivolin puistosta näkyy kaupunki ja Linnavuoren linna, eli likimain sama näkymä, jonka isoisä olisi nähnyt.',
+            lahde: 'Lauterbach ja W. French, Wikimedia Commons (PD)',
+          },
+        ],
+      },
+      {
+        nimi: 'Križanke', lat: 46.04636, lon: 14.5032,
+        aika: '1228',
+        teksti: 'Križanken luostarin rakentamisen uskotaan alkaneen vuonna 1228 '
+          + 'saksalaisen ritarikunnan käyttöön. Vuoden 1511 maanjäristys '
+          + 'vaurioitti rakennuksia, ja ne rakennettiin osin uudelleen '
+          + '1567–1579. Barokkikirkko valmistui vuosina 1714–1715 venetsialaisen '
+          + 'Domenico Rossin suunnittelemana kreikkalaisen ristin muotoisena, ja '
+          + 'se oli ensimmäinen laatuaan Sloveniassa.'
+          + '\n\n'
+          + 'Isoisän matkan aikaan luostari on yhä olemassa. Vasta 1950-luvulla '
+          + 'Jože Plečnik muutti sen pihat Ljubljanan festivaalin kesäteatteriksi.',
+        kuvat: [
+          {
+            tiedosto: 'Križanke (1).JPG',
+            lyhyt: 'Križanken barokkikirkko ja luostarin rakennukset talvipäivänä.',
+            selite: 'Križanken barokkikirkko, jonka kupoli kohoaa luostarin rakennusten yläpuolelle.',
+            lahde: 'Ljuba brank, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Prešernin aukio', lat: 46.05165, lon: 14.50575,
+        aika: '1646–1660',
+        teksti: 'Prešernin aukio on Ljubljanan keskeinen aukio. Isoisän aikaan se '
+          + 'on vanhankaupungin porttien edessä sijaitseva suppilomainen '
+          + 'katujen risteys: etelään Tromostovje vie Ljubljanica-joen yli '
+          + 'vanhaankaupunkiin ja pohjoiseen Miklošičeva-katu kohti '
+          + 'rautatieasemaa. Aukion laidalla seisoo punainen Ilmestyksen '
+          + 'fransiskaanikirkko, joka rakennettiin vuosina 1646–1660.'
+          + '\n\n'
+          + 'Aukion nykyinen ilme on myöhäisempi: vuoden 1895 maanjäristyksen '
+          + 'jälkeen Max Fabiani suunnitteli sen neljän kadun ja neljän '
+          + 'pankin solmukohdaksi, ja pyöreäksi aukion muotoili Edvard '
+          + 'Ravnikar vuosina 1987–88.',
+        kuvat: [
+          {
+            tiedosto: 'Ljubljana, Prešernov trg (1).jpg',
+            lyhyt: 'Prešernin aukio ja punainen Ilmestyksen fransiskaanikirkko.',
+            selite: 'Prešernin aukiolla kohoaa punainen fransiskaanikirkko, ja aukion muut talot ovat myöhemmältä ajalta.',
+            lahde: 'Palickap, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Tromostovje', lat: 46.0511, lon: 14.50621,
+        wiki: 'Tromostovje',
+      },
+      { nimi: 'Ljubljanan tuomiokirkko', lat: 46.05076, lon: 14.50825, wiki: 'Ljubljanan tuomiokirkko' },
+      { nimi: 'Ljubljanan linna', lat: 46.04885, lon: 14.50857, wiki: 'Ljubljanan linna' },
+      {
+        nimi: 'Keskustori', lat: 46.0512, lon: 14.50966,
+        aika: '1940–1942',
+        teksti: 'Vodnikin aukiolla ei ole isoisän aikaan toria. Paikalla seisoo '
+          + 'vanha luostari, jossa toimii hiippakunnan tyttökoulu. Se tuhoutuu '
+          + 'vuoden 1895 maanjäristyksessä, ja tyhjentyneelle aukiolle syntyy '
+          + 'ulkotori.'
+          + '\n\n'
+          + 'Nykyisen torihallin suunnitteli Jože Plečnik vuosina 1931–1939, ja '
+          + 'se rakennettiin 1940–1942: kaksikerroksinen halli seuraa joen '
+          + 'kaarta, jokipuolella on suuret puolipyöreät ikkunat ja '
+          + 'katupuolella pylväskäytävä. Vuodesta 2021 tori kuuluu Plečnikin '
+          + 'perintönä UNESCOn maailmanperintöön.',
+        kuvat: [
+          {
+            tiedosto: 'Ljubljana - Central Market.jpg',
+            lyhyt: 'Keskustorin kojut Plečnikin torihallin edessä ylhäältä nähtynä.',
+            selite: 'Ljubljanan keskustori linnan suunnasta katsottuna: kojuja puiden alla ja Plečnikin pitkä torihalli joen rannassa.',
+            lahde: 'Tiia Monto, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Lohikäärmesilta', lat: 46.05181, lon: 14.51047,
+        aika: '1901',
+        teksti: 'Isoisän aikaan tässä ei ole vielä Lohikäärmesiltaa. Jokea ylittää '
+          + 'vanha tammisilta, Teurastajien silta, joka rakennettiin vuonna 1819 '
+          + 'ja vaurioitui pahoin vuoden 1895 maanjäristyksessä. Sen tilalle '
+          + 'rakennettiin pormestari Ivan Hribarin aikana teräsbetonisilta, '
+          + 'jonka työt alkoivat 1. heinäkuuta 1900.'
+          + '\n\n'
+          + 'Silta valmistui 1901 keisari Frans Joosefin jubileumisiltana, ja '
+          + 'lohikäärmeiden mukaan se nimettiin uudelleen heinäkuussa 1919. Se '
+          + 'on yksi parhaista Wienin secession-tyylisistä teräsbetonisilloista.',
+        kuvat: [
+          {
+            tiedosto: 'Dragons Bridge, Ljubljana 2.jpg',
+            lyhyt: 'Lohikäärmesilta ja sen vihreä lohikäärmepatsas Ljubljanica-joen yllä.',
+            selite: 'Lohikäärmesillan kaari ja vihreä lohikäärmepatsas sillan kulmassa.',
+            lahde: 'Thomas Ledl, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+    ],
+  },
+  kosice: {
+    polku: 'assets/kartat/kosice-keskusta.png',
+    // Numeroidut ympyrät kartalla ilman miniatyyrejä (omistaja 20.9.2026).
+    numeroympyrat: true,
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 48.7238, etela: 48.7188, lansi: 21.2545, ita: 21.265 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
+    // --vari, 20.9.2026).
+    piirtoRajat: { pohjoinen: 48.7253, etela: 48.7173, lansi: 21.25135, ita: 21.26815 },
+    varikartta: 'assets/kartat/kosice-varikartta.png',
+    esittely: 'Košicen vanha ydin kasvaa Hlavná-kadun eli Pääkadun ympärille, '
+      + 'joka on syntynyt keskiaikaisena toriaukiona ja jonka keskellä '
+      + 'seisoo Slovakian suurin kirkko. Isoisän matkan aikaan vuonna 1873 '
+      + 'kaupunki on unkarilaisittain Kassa, ja moni kartan kohde on vielä '
+      + 'vanha: Pyhän Elisabetin tuomiokirkko, Urbanin torni, Immaculata, '
+      + 'Pyövelin bastioni ja Miklušin vankila, joka toimii kaupungin '
+      + 'vankilana vuoteen 1909. Valtionteatteri ja Jakabin palatsi '
+      + 'valmistuvat vasta 1800-luvun lopussa. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Pyhän Elisabetin tuomiokirkko', lat: 48.72027, lon: 21.2582,
+        wiki: 'Pyhän Elisabetin katedraali (Košice)',
+      },
+      {
+        nimi: 'Urbanin torni', lat: 48.72067, lon: 21.25814,
+        teksti: 'Urbanin torni on Pyhän Elisabetin tuomiokirkon kellotorni. Se on '
+          + 'omistettu pyhälle Urbanille, viinitarhurien suojeluspyhimykselle, ja '
+          + 'sen lähellä seisoo myös Pyhän Mikaelin kappeli. Vuonna 1970 torni, '
+          + 'tuomiokirkko ja kappeli julistettiin yhdessä kansalliseksi '
+          + 'kulttuurimonumentiksi.'
+          + '\n\n'
+          + 'Isoisän aikaan torni on jo vanha maamerkki keskellä Hlavná-katua. '
+          + 'Tornin nykyinen kaariholvillinen asu on myöhempi: vielä noin vuonna '
+          + '1900 otetussa kuvassa tornin juurella ei ole kaariholvia.',
+        kuvat: [
+          {
+            tiedosto: 'Kaschau Dom um 1900.jpg',
+            lyhyt: 'Tuomiokirkko ja Urbanin torni noin 1900: tornin ympärillä ei vielä ollut kaariholvia.',
+            selite: 'Värillinen valokuvapainate esittää Pyhän Elisabetin tuomiokirkkoa ja Urbanin tornia noin vuonna 1900. Tornin juurella ei vielä ole kaariholvia, ja kirkon edustalla on hiekkainen katu ja nuorten puiden reunustama puisto.',
+            lahde: 'Tuntematon, Library of Congress / Wikimedia Commons (PD)',
+          },
+        ],
+      },
+      {
+        nimi: 'Hlavná-katu', lat: 48.72118, lon: 21.25762,
+        teksti: 'Hlavná eli Pääkatu on Košicen keskuskatu, ja lähes koko katu on '
+          + 'nykyään kävelyaluetta. Se on syntynyt keskiaikaisena toriaukiona, ja '
+          + 'siksi sen pohjapiirros on kara: keskeltä leveä ja päistä kapea. '
+          + 'Katua reunustavat kaupungin tärkeimmät historialliset rakennukset, ja '
+          + 'sen keskellä seisoo tuomiokirkko.'
+          + '\n\n'
+          + 'Kadun puistoissa on kolme suihkulähdettä, ja suurin niistä, '
+          + 'laulava suihkulähde tuomiokirkon ja teatterin välissä, on vasta '
+          + 'vuodelta 1986. Isoisän aikaan tässä kohdassa ei siis vielä kuulu '
+          + 'musiikkia, vaan Hlavná on kaupungin tori ja kulkureitti.',
+        kuvat: [
+          {
+            tiedosto: 'Košice Hlavná.jpg',
+            lyhyt: 'Tuomiokirkon tornista näkee Hlavná-kadun, valtionteatterin ja kaupungin takaiset kukkulat.',
+            selite: 'Tuomiokirkon tornista katse kulkee kadun ja punakattoisten talojen yli valtionteatteriin, ja horisontissa kohoavat kukkulat. Kuvan etualalla näkyy suihkulähteen puisto.',
+            lahde: 'Patrick Hendriksen, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Valtionteatteri', lat: 48.72175, lon: 21.25731,
+        aika: '1879–1899',
+        teksti: 'Isoisän matkan aikaan Hlavná-kadun pohjoispäässä ei ole vielä '
+          + 'teatteria. Uusbarokkinen valtionteatteri rakennettiin Adolf Langin '
+          + 'suunnitelmien mukaan vuosina 1879–1899, ja rakennus on nykyään '
+          + 'Košicen kansallisteatterin päänäyttämö. Se vihittiin käyttöön '
+          + 'syyskuussa 1899.'
+          + '\n\n'
+          + 'Sisätilat on koristeltu runsaasti stukkityöllä, näyttämö on '
+          + 'lyyran muotoinen ja katossa on kohtauksia Shakespearen näytelmistä. '
+          + 'Teatterilla on oma näytelmä-, ooppera- ja balettiryhmänsä.',
+        kuvat: [
+          {
+            tiedosto: 'National Theatre Kosice.jpg',
+            lyhyt: 'Valtionteatterin historiallinen rakennus ja laulava suihkulähde puistossa Hlavná-kadun varrella.',
+            selite: 'Košicen valtionteatterin uusbarokkinen julkisivu ja sen edessä laulava suihkulähde Hlavná-kadun puistossa.',
+            lahde: 'Ladislav Luppa, Wikimedia Commons (CC0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Immaculata', lat: 48.7228, lon: 21.2568,
+        aika: '1723',
+        teksti: 'Immaculata on barokkinen Neitsyt Marian kuvaryhmä eli ruttopylväs '
+          + 'Hlavná-kadun varrella. Se on pystytetty vuonna 1723, joten isoisän '
+          + 'aikaan se on ollut paikallaan jo 150 vuotta ja kuuluu kaupungin '
+          + 'vanhoihin katukuvan tuttuihin kohtiin.'
+          + '\n\n'
+          + 'Pylvään juurella on veistoksia, ja se on tehty muistoksi ajasta, jolloin '
+          + 'ruttoa vastaan rukoiltiin suojelusta Neitsyt Marialta.',
+        kuvat: [
+          {
+            tiedosto: 'Košice - Immaculata 01.jpg',
+            lyhyt: 'Immaculatan barokkinen Neitsyt Marian kuvaryhmä Hlavná-kadulla.',
+            selite: 'Immaculatan barokkipylväs edestä nähtynä; kuvaryhmä on vuodelta 1723.',
+            lahde: 'IDD5000, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Miklušin vankila', lat: 48.72281, lon: 21.25963,
+        aika: '1400-luvun alkupuoli',
+        teksti: 'Miklušin vankila koostuu kahdesta toisiinsa liitetystä gotiikan '
+          + 'ajan porvarintalosta, jotka rakennettiin 1400-luvun alkupuoliskolla. '
+          + '1600-luvun alussa ne muutettiin kaupungin vankilaksi ja '
+          + 'kidutushuoneeksi.'
+          + '\n\n'
+          + 'Isoisän aikaan vankila on yhä käytössä: se palveli tehtävässään aina '
+          + 'vuoteen 1909 asti. Sen jälkeen rakennukset siirrettiin '
+          + 'Ylä-Unkarin museon hoitoon, ja näyttely avattiin vasta 1940-luvun '
+          + 'alun peruskorjauksen jälkeen. Katu, jonka varrella talot seisovat, '
+          + 'on saanut nimensä niistä.',
+        kuvat: [
+          {
+            tiedosto: 'Kosice (Slovakia) - Miklus\'s Prison.jpg',
+            lyhyt: 'Miklušin vankilan gotiikan ajan rakennus Pri Miklušovej väznici -kadun varrella.',
+            selite: 'Miklušin vankilan rakennukset ovat entisiä gotiikan ajan porvarintaloja, jotka toimivat kaupungin vankilana vuoteen 1909.',
+            lahde: 'Maros M r a z, Wikimedia Commons (CC BY-SA 3.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Pyövelin bastioni', lat: 48.72263, lon: 21.26019,
+        aika: '1400-luku',
+        teksti: 'Pyövelin bastioni on Slovakian suurin ja parhaiten säilynyt '
+          + 'keskiaikaisen kaupunkilinnoituksen rakennus. Sen alkuperä ulottuu '
+          + '1400-luvulle, ja nimi tulee lähellä sijainneesta pyövelin talosta. '
+          + 'Puolipyöreässä rakennuksessa on kahdeksan tykkikammiota, ja se '
+          + 'rakennettiin kaupungin puolustukseksi.'
+          + '\n\n'
+          + 'Isoisän aikaan bastioni on vielä vanha puolustusrakennus. Sen '
+          + 'vieressä seisoo Miklušin vankila, ja vasta 1920–1930-luvuilla '
+          + 'bastioni muutettiin Itä-Slovakian museon käyttöön.',
+        kuvat: [
+          {
+            tiedosto: 'Košice - Hrnčiarska 7 - Katova bašta a Rodošto-1.jpg',
+            lyhyt: 'Pyövelin bastionin puolipyöreä muuri ja Rodoston muistotalo Hrnčiarska-kadun varrella.',
+            selite: 'Pyövelin bastioni on kaupunginmuurin säilynyt osa, ja sen vieressä on Rákóczin muistotalo.',
+            lahde: 'Ladislav Luppa, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Jakabin palatsi', lat: 48.72195, lon: 21.26273,
+        aika: '1899',
+        teksti: 'Jakabin palatsi on uusgoottilainen rakennus Mlynská- ja '
+          + 'Štefánikova-kadun kulmassa, lähellä entistä Mlynský náhon '
+          + '-myllykanavaa. Se valmistui vuonna 1899, joten isoisän matkan '
+          + 'aikaan paikalla ei ole vielä tornillista, vihertäväkattoista '
+          + 'linnamaista taloa.'
+          + '\n\n'
+          + 'Palatsi on nykyään yksi vanhankaupungin tunnetuimmista '
+          + 'rakennuksista, ja sen tornit ja vihertävät katot erottuvat '
+          + 'kaupunkikuvassa.',
+        kuvat: [
+          {
+            tiedosto: 'Košice - Jakabov palác (1).jpg',
+            lyhyt: 'Jakabin palatsi Mlynská-kadun varrella on tornillinen ja vihertäväkattoinen linnamainen talo.',
+            selite: 'Jakabin palatsi kuuluu vanhankaupungin historiallisiin rakennuksiin ja seisoo Mlynská-kadun varrella. Sen tornit ja vihertävät katot erottuvat kaupunkikuvassa, ja kävelysilta johtaa aivan sen viereen.',
+            lahde: 'Ladislav Luppa, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+    ],
+  },
+  /*
+   * VALLETTA (21.9.2026; omistajan päätös 19.9.2026: Maltan pelikaupunki
+   * Valletta). Numeroidut ympyrät kartalla ilman miniatyyrejä (sama
+   * ratkaisu kuin Košicella 20.9.2026) — pienoismalleja ei ole vielä
+   * piirretty. Koordinaatit haettu en-Wikipedian ja Wikidatan
+   * rajapinnoista (action=query&prop=coordinates, wbgetentities P625)
+   * 21.9.2026. Piirityskello-muistomerkki on 1900-lukua eikä ollut
+   * olemassa isoisän matkan aikaan — teksti selittää tämän suoraan,
+   * samaan tapaan kuin Košicen Valtionteatterilla.
+   */
+  valletta: {
+    polku: 'assets/kartat/valletta-keskusta.png',
+    numeroympyrat: true,
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 35.9035, etela: 35.8925, lansi: 14.5085, ita: 14.5205 },
+    // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta --vari).
+    piirtoRajat: { pohjoinen: 35.9068, etela: 35.8892, lansi: 14.5049, ita: 14.5241 },
+    varikartta: 'assets/kartat/valletta-varikartta.png',
+    esittely: 'Vallettan koko vanhakaupunki mahtuu kapealle niemelle Grand '
+      + 'Harbourin ja Marsamxett-sataman välissä. Ritarikunta rakensi '
+      + 'kaupungin ruutukaavaan suuren piirityksen 1565 jälkeen, ja '
+      + 'isoisän matkan aikaan vuonna 1873 kaupunki on brittiläisen '
+      + 'Maltan pääkaupunki: paksut kalkkikivimuurit, Suurmestarin '
+      + 'palatsi ja Pyhän Johanneksen konkatedraali ovat yhä samat, '
+      + 'mutta ritarikunnan majataloista on tullut sotilashallinnon '
+      + 'virastoja. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        nimi: 'Auberge de Castille', lat: 35.895833, lon: 14.511389,
+        aika: '1744',
+        teksti: 'Auberge de Castille on rakennettu vuonna 1744 arkkitehti '
+          + 'Andrea Bellin suunnitelmien mukaan Kastilian, Leónin ja '
+          + 'Portugalin ritarikieliryhmän majataloksi, ja sen '
+          + 'koristeellinen barokkijulkisivu on Vallettan komeimpia.'
+          + '\n\n'
+          + 'Ritarikunta lähti saarelta vuonna 1798 eikä palannut, ja '
+          + 'isoisän matkan aikaan rakennus toimii jo Britannian armeijan '
+          + 'Maltan-joukkojen päämajana. Sotilashallinto pitää siitä '
+          + 'kiinni pitkään: rakennus siirtyy vasta 1900-luvulla Maltan '
+          + 'omalle hallitukselle.',
+        kuvat: [
+          {
+            tiedosto: 'Auberge de Castille, Valletta, Malta.jpg',
+            lyhyt: 'Auberge de Castillen koristeellinen barokkijulkisivu Vallettassa.',
+            selite: 'Auberge de Castillen barokkijulkisivu, jonka Andrea '
+              + 'Belli suunnitteli 1744. Rakennus toimi 1800-luvulla '
+              + 'Britannian armeijan Maltan-joukkojen päämajana.',
+            lahde: 'Jaakko.kulta, Wikimedia Commons (CC BY 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Pyhän Johanneksen ko-katedraali', lat: 35.897778, lon: 14.512778,
+        wiki: "St John's Co-Cathedral",
+      },
+      {
+        nimi: 'Suurmestarin palatsi', lat: 35.898611, lon: 14.514167,
+        wiki: 'Suurmestarin palatsi (Valletta)',
+      },
+      {
+        nimi: 'Yläbarrakan puutarhat', lat: 35.894722, lon: 14.512222,
+        aika: '1661',
+        teksti: 'Yläbarrakan puutarha rakennettiin vuonna 1661 Italian '
+          + 'ritarikieliryhmän yksityiseksi puistoksi Grand Harbourin '
+          + 'yllä kohoavalle bastionille. Puisto avattiin yleisölle '
+          + 'vuonna 1824, joten isoisän matkan aikaan se on jo suosittu '
+          + 'kävelypaikka.'
+          + '\n\n'
+          + 'Puutarhan alapuolella, Alabarrakan tasanteella, on '
+          + 'tervehdyspatteri, josta ammutaan kunnialaukauksia laivojen '
+          + 'saapuessa satamaan — perinne, joka jatkuu vielä nykyäänkin '
+          + 'joka päivä keskipäivällä.',
+        kuvat: [
+          {
+            tiedosto: 'Malta - Valletta - Upper Barrakka Gardens 15 Terraced Arches 1661 - Saluting Battery.jpg',
+            lyhyt: 'Yläbarrakan puutarhan kaariholvit ja tervehdyspatteri Grand Harbourin yllä.',
+            selite: 'Yläbarrakan puutarhan vuoden 1661 kaariholvit ja '
+              + 'niiden alla oleva tervehdyspatteri Grand Harbourin yllä.',
+            lahde: 'Txllxt TxllxT, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Piirityskello-muistomerkki', lat: 35.897592, lon: 14.518283,
+        aika: '1992',
+        teksti: 'Piirityskello-muistomerkki ei ole vielä isoisän matkan '
+          + 'aikaan olemassa: pyöreä pylväikkö ja sen sisällä riippuva '
+          + 'pronssikello paljastettiin vasta 1992, ja ne muistavat '
+          + 'toista maailmansotaa, ei ritarikunnan aikoja. Vuosina '
+          + '1940–1942 Malta kesti raskaan ilmapiirityksen, josta koko '
+          + 'saari palkittiin Yrjön ristillä.'
+          + '\n\n'
+          + 'Kello soi joka päivä keskipäivällä muistoksi piirityksessä '
+          + 'kuolleista. Muistomerkki seisoo Alabarrakan puutarhan alla, '
+          + 'samalla kalliolla, josta ritarikunnan aikainen '
+          + 'tervehdyspatteri tähtää satamaan.',
+        kuvat: [
+          {
+            tiedosto: 'Siege Bell War Memorial, Valletta.jpg',
+            lyhyt: 'Piirityskello-muistomerkin pylväikkö Grand Harbourin yllä.',
+            selite: 'Piirityskello-muistomerkin pyöreä pylväikkö Grand '
+              + 'Harbourin yllä. Muistomerkki paljastettiin 1992 toisen '
+              + 'maailmansodan Maltan-piirityksen muistoksi.',
+            lahde: 'Kikku33, Wikimedia Commons (CC BY-SA 4.0)',
+          },
+        ],
+      },
+      {
+        nimi: 'Pyhän Elmon linnake', lat: 35.902, lon: 14.5188,
+        wiki: 'Fort Saint Elmo',
+      },
     ],
   },
   firenze: {
@@ -5708,7 +8561,10 @@ export const KAUPUNKIKARTAT = {
        *  - `Bargello` yksinään puuttuu; rakennuksesta ja museosta
        *    kertoo `Bargellon palatsi`.
        */
-      { nimi: 'Duomo', lat: 43.7731, lon: 11.256, wiki: 'Santa Maria del Fiore' },
+      {
+        nimi: 'Duomo', lat: 43.7731, lon: 11.256, wiki: 'Santa Maria del Fiore',
+        nosto: 'syvennys-firenze-toscanelli',
+      },
       { nimi: 'Palazzo Vecchio', lat: 43.7694, lon: 11.2558, wiki: 'Palazzo Vecchio' },
       { nimi: 'Uffizi', lat: 43.7676, lon: 11.2553, wiki: 'Uffizi' },
       // Silta saa olla vedellä (tarkista-karttapisteet.mjs): piste on
@@ -5724,6 +8580,27 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Galleria dell\'Accademia', lat: 43.7769, lon: 11.2589 },
       { nimi: 'Santa Maria Novella', lat: 43.7746, lon: 11.2494, wiki: 'Santa Maria Novella' },
       { nimi: 'Bargello', lat: 43.7704, lon: 11.2583, wiki: 'Bargellon palatsi' },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * firenze); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Poggin terassi', lat: 43.7628, lon: 11.2651,
+        nosto: 'syvennys-firenze-paakaupunki',
+      },
+      {
+        nimi: 'Porcellino', lat: 43.7699, lon: 11.2542,
+        nosto: 'syvennys-firenze-porcellino',
+      },
     ],
   },
   dubrovnik: {
@@ -5760,11 +8637,14 @@ export const KAUPUNKIKARTAT = {
        * vain katedraali ja Lokrumin saari, joka jää kartan
        * ulkopuolelle.
        */
-      { nimi: 'Minčetan torni', lat: 42.643, lon: 18.1082 },
+      { nimi: 'Minčetan torni', lat: 42.643, lon: 18.1082, nosto: 'syvennys-dubrovnik-tornit' },
       { nimi: 'Pilen portti', lat: 42.6415, lon: 18.1067 },
       // Rektorinpalatsi jätettiin pois: se on parikymmentä metriä
       // katedraalista, ja kaksi numeroympyrää olisi mennyt päällekkäin.
-      { nimi: 'Sponzan palatsi', lat: 42.6414, lon: 18.1101 },
+      {
+        nimi: 'Sponzan palatsi', lat: 42.6414, lon: 18.1101,
+        nosto: 'syvennys-dubrovnik-sponza',
+      },
       // Laiturille eikä altaaseen (vesitarkistin).
       { nimi: 'Vanhasatama', lat: 42.6416, lon: 18.1113 },
       // Linnake seisoo omalla kalliollaan; aineiston piste osui
@@ -5806,7 +8686,10 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kolme veljestä', lat: 56.9497, lon: 24.103 },
       { nimi: 'Riian tuomiokirkko', lat: 56.9494, lon: 24.1042, wiki: 'Riian tuomiokirkko' },
       { nimi: 'Pyhän Pietarin kirkko', lat: 56.9475, lon: 24.1094, wiki: 'Pyhän Pietarin kirkko (Riika)' },
-      { nimi: 'Mustapäiden talo', lat: 56.9472, lon: 24.1063, wiki: 'Mustapäiden talo (Riika)' },
+      {
+        nimi: 'Mustapäiden talo', lat: 56.9472, lon: 24.1063, wiki: 'Mustapäiden talo (Riika)',
+        nosto: ['syvennys-riika-balsami', 'skandaali-riian-kalenterikahakat'],
+      },
       { nimi: 'Keskustori', lat: 56.944, lon: 24.1146, wiki: 'Riian keskustori' },
     ],
   },
@@ -5841,6 +8724,31 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Vilnan yliopisto', lat: 54.6819, lon: 25.2867, wiki: 'Vilnan yliopisto' },
       { nimi: 'Užupis', lat: 54.681, lon: 25.2977, wiki: 'Užupis' },
       { nimi: 'Aamuportti', lat: 54.6733, lon: 25.2896 },
+      /*
+       * KAUPUNGIN KOHDALLA OLEVAT KARTTANOSTOT (omistajan sääntö
+       * 2.9.2026 illalla, kolmatta kertaa sanottuna): *"nuo
+       * karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+       * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+       * kaupunkikartalle."* Nämä seisoivat pääkartalla kaupungin merkin
+       * päällä; nyt niiden paikka on täällä, ja js/fokuskohteet.js
+       * (karsiKaupunkikartanNostot) pudottaa ne pääkartalta juuri
+       * tämän `nosto`-linkin perusteella. Juttu on noston OMA teksti
+       * ja kuva sanatarkasti (js/packs/nahtavyysjutut.js, kaupunki
+       * vilna); tests/nostot-kartalla.test.mjs vertaa ne merkki
+       * merkiltä.
+       */
+      {
+        nimi: 'Kirjankantajat', lat: 54.6825, lon: 25.2872,
+        nosto: 'syvennys-vilna-knygnesiai',
+      },
+      {
+        nimi: 'Salattu avioliitto', lat: 54.6862, lon: 25.289,
+        nosto: 'skandaali-barbora-salainen-avioliitto',
+      },
+      {
+        nimi: 'Boratynka', lat: 54.6861, lon: 25.2833,
+        nosto: 'skandaali-boratynka-kuparikohu',
+      },
     ],
   },
   tromssa: {
@@ -6088,7 +8996,16 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Suuri temppeli', lat: 30.3288, lon: 35.4423 },
       { nimi: 'Teatteri', lat: 30.3248, lon: 35.447 },
       { nimi: 'Siq', lat: 30.3232, lon: 35.4567 },
-      { nimi: 'Al-Khazneh', lat: 30.3221, lon: 35.4515 },
+      /*
+       * KARTAN OMA KOHDE NOSTONA (omistajan päätös 2.9.2026 illalla:
+       * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+       * kaupunkilehden omalla kartalla."*). Piste oli jo kartalla; kenttä
+       * `nosto` on koneellinen linkki samaa paikkaa tarkoittavaan
+       * pääkartan fokuskohteeseen, joka putoaa sen myötä pääkartalta
+       * (js/fokuskohteet.js karsiKaupunkikartanNostot). Pisteen oma juttu
+       * on ennallaan — sisältöä ei kopioitu mistään.
+       */
+      { nimi: 'Al-Khazneh', lat: 30.3221, lon: 35.4515, nosto: 'al-khazneh' },
       { nimi: 'Uhripaikka', lat: 30.3215, lon: 35.447 },
     ],
   },
@@ -6146,7 +9063,16 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Kaikkien kansojen portti', lat: 29.93618, lon: 52.889078 },
       { nimi: 'Artakserkses III:n hauta', lat: 29.935872, lon: 52.892459 },
       { nimi: 'Sadan pylvään sali', lat: 29.9353, lon: 52.891028 },
-      { nimi: 'Apadana', lat: 29.935107, lon: 52.88951 },
+      /*
+       * KARTAN OMA KOHDE NOSTONA (omistajan päätös 2.9.2026 illalla:
+       * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+       * kaupunkilehden omalla kartalla."*). Piste oli jo kartalla; kenttä
+       * `nosto` on koneellinen linkki samaa paikkaa tarkoittavaan
+       * pääkartan fokuskohteeseen, joka putoaa sen myötä pääkartalta
+       * (js/fokuskohteet.js karsiKaupunkikartanNostot). Pisteen oma juttu
+       * on ennallaan — sisältöä ei kopioitu mistään.
+       */
+      { nimi: 'Apadana', lat: 29.935107, lon: 52.88951, nosto: 'apadana' },
       { nimi: 'Kolmen oven sali', lat: 29.934664, lon: 52.890555 },
       { nimi: 'Aarrekammio', lat: 29.934446, lon: 52.891737 },
       { nimi: 'Tachara', lat: 29.934382, lon: 52.889554 },
@@ -6533,7 +9459,25 @@ export const KAUPUNKIKARTAT = {
       + 'pääsee lukemaan lisää napauttamalla.',
     kohteet: [
       /* Numerointi pohjoisesta etelään, kuten Medinassa ja Mekassa. */
-      { nimi: 'Kuyunjikin kumpu', lat: 36.3594, lon: 43.1528 },
+      /*
+       * KARTAN OMA KOHDE NOSTONA (omistajan päätös 2.9.2026 illalla:
+       * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
+       * kaupunkilehden omalla kartalla."*). Piste oli jo kartalla; kenttä
+       * `nosto` on koneellinen linkki samaa paikkaa tarkoittavaan
+       * pääkartan fokuskohteeseen, joka putoaa sen myötä pääkartalta
+       * (js/fokuskohteet.js karsiKaupunkikartanNostot). Pisteen oma juttu
+       * on ennallaan — sisältöä ei kopioitu mistään.
+       */
+      /*
+       * Kuyunjikin kumpu kantaa fokuskohteen `niniven-lounaispalatsi`:
+       * Sanheribin "palatsi vailla vertaa" on juuri tämän kummun alla
+       * (js/packs/fokuskohteet-irq.js), ja pisteen oma juttu kertoo
+       * kummusta ja sen palatseista.
+       */
+      {
+        nimi: 'Kuyunjikin kumpu', lat: 36.3594, lon: 43.1528,
+        nosto: 'niniven-lounaispalatsi',
+      },
       { nimi: 'Bash Tapian linna', lat: 36.3554, lon: 43.1216 },
       { nimi: 'Qara Saray', lat: 36.3528, lon: 43.1257 },
       { nimi: 'Nabi Yunusin kumpu', lat: 36.3481, lon: 43.1594 },
@@ -8911,6 +11855,19 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Washington Squaren riemukaari', lat: 40.73124, lon: -73.9971 },
       { nimi: 'New Yorkin kaupungintalo', lat: 40.7127, lon: -74.0059 },
       { nimi: 'Trinity Church', lat: 40.70806, lon: -74.01222 },
+      /*
+       * HISTORIAN HETKET KAUPUNGIN LAATAN PÄÄLTÄ (omistaja 3.9.2026, kuten
+       * Kolumbus 1484 Lissabonissa): laatan päälle tai kohdekartan
+       * rajaukseen osuva hetki ei ole pääkartalla vaan tässä. Hetken oma
+       * sivu on lehdessä (js/packs/historian-hetket.js), tämä on sen
+       * karttapaikka; juttu on sanatarkasti hetken teksti
+       * (js/packs/nahtavyysjutut.js, tools ei generoi — 5.9.2026:n erä).
+       */
+      // Brooklyn Bridge, Manhattanin puoleinen torni.
+      {
+        nimi: 'Brooklyn 1883', lat: 40.7061, lon: -73.9969,
+        nosto: 'hetki-brooklyn-bridge-1883',
+      },
     ],
   },
   /*
@@ -8977,6 +11934,457 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Highwic', lat: -36.8718, lon: 174.7749 },
       { nimi: 'Eden Park', lat: -36.875, lon: 174.744722 },
       { nimi: 'Maungawhau', lat: -36.877, lon: 174.764 },
+    ],
+  },
+  /*
+   * DUNEDIN (6.9.2026). Rajaus on 5,0 kilometriä kanttiinsa Baldwin
+   * Streetiltä Queens Gardensiin — perustelu ja hylätyt vaihtoehdot
+   * ovat tools/piirra-kaupunkikartta.mjs:n dunedin-lohkossa.
+   *
+   * NIEMIMAA EI MAHDU RUUTUUN. Larnach Castle on 9,7 ja Taiaroa Head
+   * 20,5 kilometrin päässä Octagonista; molemmat ovat kaupunkilehden
+   * omia nostoja (kulttuuri-kategoriat.js: dunedin, nostot L2 ja L4),
+   * eivätkä ne siksi kuulu kartalle kummallakaan perusteella.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * skotlantilainen perustaminen Robert Burnsin patsaalla, kulta ja
+   * Otagon yliopiston kellotorni, vuoden 1873 kolmikko First Churchin
+   * kuvalla, Toitū Otago Settlers Museum, Ōtākou, Taiaroa Head, hoiho
+   * ja Larnach Castle — yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe. Octagon itse jätettiin pois samasta syystä: se on
+   * lehden ennen–nyt-parin nykykuva.
+   *
+   * KAHDEKSAN KOHDETTA, EI KYMMENTÄ. Karsinnan teki 200 metrin
+   * vähimmäisväli (Petran, Mekan ja Karachin oppi): Dunedinin
+   * kaupungintalo, St Paulsin kirkko, taidegalleria ja Lan Yuan ovat kaikki
+   * alle 150 metrin päässä jo valitusta kohteesta tai toisistaan.
+   * Taidegalleriasta ei myöskään löytynyt Commonsista kuvaa, jossa ei
+   * olisi tunnistettavia kasvoja tai näyttelyjulisteita.
+   */
+  dunedin: {
+    polku: 'assets/kartat/dunedin-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -45.8411, etela: -45.8861, lansi: 170.4785, ita: 170.5432 },
+    esittely: 'Kartan alue ulottuu Baldwin Streetiltä North East '
+      + 'Valleyn suulta Queens Gardensiin vanhan sataman rannalla. '
+      + 'Keskellä on Octagon, josta George Street ja Princes Street '
+      + 'haarautuvat, lännessä rinteet nousevat jyrkästi ja '
+      + 'koillisessa on Otago Harbourin perukka. Larnach Castle ja '
+      + 'Taiaroa Head jäävät kauas kartan itäpuolelle Otagon '
+      + 'niemimaalle. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Aucklandissa ja New Yorkissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026.
+       */
+      { nimi: 'Baldwin Street', lat: -45.84944, lon: 170.53472 },
+      { nimi: 'Kasvitieteellinen puutarha', lat: -45.8575, lon: 170.5225 },
+      { nimi: 'Otagon museo', lat: -45.86568, lon: 170.51084 },
+      { nimi: 'Knoxin kirkko', lat: -45.867152, lon: 170.507083 },
+      { nimi: 'Otago Boys High School', lat: -45.871597, lon: 170.495051 },
+      { nimi: 'Dunedinin rautatieasema', lat: -45.87528, lon: 170.50889 },
+      { nimi: 'Speightsin panimo', lat: -45.876374, lon: 170.499959 },
+      { nimi: 'Queens Gardens', lat: -45.87778, lon: 170.50417 },
+    ],
+  },
+  /*
+   * SUVA (6.9.2026). Rajaus on 3,1 kilometriä kanttiinsa niemen
+   * kärjessä — perustelu, hylätty laajempi rajaus ja kohdemäärän syy
+   * ovat tools/piirra-kaupunkikartta.mjs:n suva-lohkossa.
+   *
+   * NELJÄ KOHDETTA, JA SE ON LÄHDETILANNE EIKÄ VALINTA. Suvan
+   * alueelta löytyy en-Wikipediasta kahdeksan koordinaatillista
+   * kohdetta. Kolme niistä (Grand Pacific Hotel, Fidžin museo ja
+   * Albert Park) on kaupunkilehden omien nostojen aihe, ja stadion on
+   * 2,8 kilometrin päässä idässä eikä sillä ole Commonsissa omaa
+   * kuvakategoriaa. Jäljelle jäävät nämä neljä. Kohdekartta on
+   * Adenin kokoluokkaa.
+   */
+  suva: {
+    polku: 'assets/kartat/suva-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -18.1329, etela: -18.1605, lansi: 178.418, ita: 178.447 },
+    esittely: 'Kartan alue on Suvan niemen kärki. Lännessä on Suva '
+      + 'Harbour, pohjoisessa kauppakadut ja purosuu, keskellä '
+      + 'siirtomaa-ajan hallintokortteli rantabulevardin varrella ja '
+      + 'etelässä puutarhat ja valtionpäämiehen talo. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026; hallintorakennuksilla ja
+       * parlamentilla on sama piste, koska parlamentti toimii samassa
+       * talossa.
+       */
+      { nimi: 'Pyhän sydämen katedraali', lat: -18.1416, lon: 178.442 },
+      { nimi: 'Hallintorakennukset', lat: -18.145858, lon: 178.424413 },
+      { nimi: 'Thurston Gardens', lat: -18.1491, lon: 178.4247 },
+      { nimi: 'Valtionpäämiehen talo', lat: -18.151892, lon: 178.42614 },
+    ],
+  },
+  /*
+   * CAIRNS (6.9.2026). Rajaus on 2,4 × 2,6 kilometriä vanhan
+   * keskustan ympärillä — perustelu ja hylätty laiturikeskitys ovat
+   * tools/piirra-kaupunkikartta.mjs:n cairns-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat Gimuy ja
+   * yidinjit, Dalrymplen vuoden 1873 leiri ja kaupungin synty 1876,
+   * Kurandan rata sekä Grafton Streetin kiinalaiskaupunki; teemasivu
+   * kertoo riutasta ja Daintreestä. Yksikään kartan kahdeksasta
+   * kohteesta ei ole niiden aihe.
+   *
+   * KAKSI FAKTAPOHJAN KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-cairns.md, kohta G): Cairns School of Arts on 178
+   * metrin päässä valtuuston talosta ja Barrier Reef Hotel 161 metrin
+   * päässä tullitalosta. Tilalle katedraali, vapaamuurarien temppeli
+   * ja rautatieasema.
+   *
+   * KURANDA, BARRON FALLS, RIUTTA JA DAINTREE OVAT KAUKANA: rata
+   * nousee 19 kilometriä luoteeseen, riutan lähinkin kohde on
+   * kymmenien ja Daintree runsaan sadan kilometrin päässä. Ne ovat
+   * lehden ja matkaoppaan puolella, eivät kartalla.
+   */
+  cairns: {
+    polku: 'assets/kartat/cairns-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -16.9110, etela: -16.9330, lansi: 145.7640, ita: 145.7855 },
+    esittely: 'Kartan alue on Cairnsin vanha keskusta Trinity Bayn ja '
+      + 'Trinity Inletin rannalla. Pohjoisessa ovat katedraali ja '
+      + 'sotamuistomerkki, keskellä ruutukaava kauppakatuineen ja '
+      + 'etelässä rautatieasema ja vanha laiturialue, josta kaupunki '
+      + 'lähti kasvamaan 1876. Idässä avautuu Trinity Bay. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Dunedinissa ja Aucklandissa. Koordinaatit en-Wikipedian
+       * geosearch- ja coordinates-rajapinnoista 6.9.2026, ja kaikki
+       * välit on mitattu uudelleen: pienin on 236 metriä
+       * (vapaamuurarien temppeli–katedraali).
+       */
+      { nimi: 'St Monican katedraali', lat: -16.9171, lon: 145.7726 },
+      { nimi: 'Vapaamuurarien temppeli', lat: -16.9174, lon: 145.7704 },
+      { nimi: 'Sotamuistomerkki', lat: -16.9172, lon: 145.7752 },
+      { nimi: 'Kaupunginvaltuuston talo', lat: -16.9204, lon: 145.7752 },
+      { nimi: 'Oikeustalojen kortteli', lat: -16.9213, lon: 145.7777 },
+      { nimi: 'Cairnsin rautatieasema', lat: -16.92528, lon: 145.77222 },
+      { nimi: 'Tullitalo', lat: -16.9235, lon: 145.7791 },
+      { nimi: 'Vanha satamalaituri', lat: -16.9273, lon: 145.78 },
+    ],
+  },
+  /*
+   * HONIARA (6.9.2026). Rajaus on 2,1 × 2,7 kilometriä Point Cruzin
+   * satamasta Matanikaun länsipuolelle — perustelu, hylätty laajempi
+   * itäraja ja meri-lippu ovat tools/piirra-kaupunkikartta.mjs:n
+   * honiara-lohkossa.
+   *
+   * VIISI KOHDETTA, JA SE ON LÄHDETILANNE. Honiaran keskusta on
+   * poikkeuksellisen tiivis: tori (179 m), keskuspankki (126 m) ja
+   * kansallisarkisto (150 m) ovat kaikki alle kahdensadan metrin
+   * päässä kansallismuseosta, eivätkä niiden numeroympyrät mahtuisi
+   * erilleen (tarkistus-honiara.md, kohta I). Seitsemän muuta
+   * artikkelia jakaa saman geosearch-varakoordinaatin
+   * −9,435092/159,951239, joka ei ole minkään niistä oikea sijainti.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN KIRJOITUSVAIHEESSA: Red House on
+   * pääministerin virka-asunto (ei nykypolitiikkaa) eikä siitä ole
+   * Commonsissa kuvaa, ja Lawson Taman stadionin kolme
+   * kuvasäännöt täyttävän kokoista tiedostoa ovat kaikki hylättäviä
+   * (kaksi haalistunutta filmikuvaa väkijoukosta, yksi näyttelyn
+   * filmiruutu).
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat vuoden
+   * 1873 tilanne ja blackbirding, kaupungin nimi ja Point Cruzin oma
+   * nimi, keskustori, pijin, Mendañan nimet, Henderson Field,
+   * Rautapohja ja kaupungin synty 1952. Point Cruz ja parlamentti
+   * ovat kartalla eri asiana kuin lehdessä: nimen sijaan satama ja
+   * synnyn sijaan arkkitehtuuri.
+   */
+  honiara: {
+    polku: 'assets/kartat/honiara-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -9.4270, etela: -9.4460, lansi: 159.9450, ita: 159.9700 },
+    esittely: 'Kartan alue on Honiaran keskusta Ironbottom Soundin '
+      + 'rannalla. Lännessä on Point Cruzin satamaniemi, keskellä '
+      + 'Mendana Avenuen varsi museoineen ja parlamentteineen, idässä '
+      + 'Matanikaujoen laakso ja etelässä kukkulat, joille kaupunki '
+      + 'kiipeää. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään. Koordinaatit en-Wikipedian
+       * geosearch-rajapinnasta 6.9.2026; Point Cruzin piste on
+       * pyöristetty minuutin tarkkuuteen (9°26′S 159°57′E) eikä siksi
+       * osu laiturin päähän vaan niemen keskelle.
+       */
+      { nimi: 'Salomonsaarten kansallismuseo', lat: -9.431111, lon: 159.954167 },
+      { nimi: 'Point Cruz', lat: -9.433333, lon: 159.950000 },
+      { nimi: 'Parlamenttitalo', lat: -9.433611, lon: 159.955833 },
+      { nimi: 'Holy Crossin katedraali', lat: -9.436252, lon: 159.963472 },
+      { nimi: 'Guadalcanalin muistomerkki', lat: -9.442609, lon: 159.957515 },
+    ],
+  },
+  /*
+   * PORT VILA (6.9.2026). Rajaus on 2,9 × 3,7 kilometriä Vilan
+   * sataman itärannalla — perustelu, itärajan laajennus ja meri-lippu
+   * ovat tools/piirra-kaupunkikartta.mjs:n portvila-lohkossa.
+   *
+   * VIISI KOHDETTA. Faktapohja ehdotti kuudenneksi Vanuatun
+   * kansallista yliopistoa, mutta se perustettiin vasta 2019 ja sen
+   * kampus on lähteen omien sanojen mukaan yhä rakenteilla — eikä
+   * Commonsissa ole siitä yhtään kuvaa (tarkistus-portvila.md,
+   * kohta A). Iririkin ja Ifiran saaret jätettiin pois, koska
+   * en-Wikipedian koordinaatit osoittavat 3–5 kilometriä väärään
+   * paikkaan Mele Bayn suuntaan (kohta M).
+   *
+   * KULTTUURIKESKUS JA PARLAMENTTI OVAT 210 METRIN PÄÄSSÄ toisistaan
+   * eli niukasti yli 200 metrin säännön. Ne ovat Saralana Parkin
+   * kahdella laidalla ja kertovat kartalla eri asian.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat vuoden
+   * 1873 tilanne, Franceville 1889, kondominio, bislama, Teouman
+   * lapita-hautausmaa, Roi Mata, Cookin nimet sekä kulttuurikeskus ja
+   * sandroing. Kulttuurikeskus on kartalla rakennuksena ja
+   * kokoelmana, lehdessä kastomin tallentajana.
+   */
+  portvila: {
+    polku: 'assets/kartat/portvila-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -17.7240, etela: -17.7500, lansi: 168.3050, ita: 168.3400 },
+    esittely: 'Kartan alue on Port Vilan keskusta Vilan sataman '
+      + 'itärannalla. Lännessä on satama ja sen edessä Iririkin saari, '
+      + 'keskellä kauppakadut ja Independence Park, etelässä Saralana '
+      + 'Parkin kulttuurikeskus ja parlamentti ja idässä laguuni. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * Numerointi pohjoisesta etelään. Koordinaatit en-Wikipedian
+       * geosearch- ja coordinates-rajapinnoista 6.9.2026.
+       */
+      { nimi: 'Kormanin stadion', lat: -17.733909, lon: 168.337374 },
+      { nimi: 'Pyhän sydämen katedraali', lat: -17.734722, lon: 168.315278 },
+      { nimi: 'Independence Park', lat: -17.740000, lon: 168.317000 },
+      { nimi: 'Vanuatun kulttuurikeskus', lat: -17.745200, lon: 168.317500 },
+      { nimi: 'Vanuatun parlamenttitalo', lat: -17.745556, lon: 168.315556 },
+    ],
+  },
+  /*
+   * PANAMÁ (6.9.2026). Rajaus on 4,4 × 4,8 kilometriä Casco Viejosta
+   * Ancónin kukkulan yli Amadorin aallonmurtajalle — perustelu ja
+   * hylätty laajempi rajaus ovat tools/piirra-kaupunkikartta.mjs:n
+   * panama-lohkossa.
+   *
+   * CASCO VIEJO KANTAA VAIN YHDEN KOHTEEN. Katedraali, Casco Viejon
+   * oma piste, kanavamuseo ja historian museo ovat 22–83 metrin
+   * päässä toisistaan ja presidentinlinna 187 metrin päässä
+   * katedraalista (tarkistus-panama.md, kohta F) — koko vanhakaupunki
+   * on kolmensadan metrin levyinen niemi. Kartalle otettiin
+   * presidentinlinna, ja loput seitsemän kohdetta ovat ytimen
+   * ulkopuolelta.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat vuoden
+   * 1519 perustaminen ja Panamá Viejo, Morganin hyökkäys 1671, Casco
+   * Viejon jälleenrakennus, Panama-hattu, Camino Real, cimarronit,
+   * rautatie 1855 ja kanava; Panamá Viejo ja Miraflores jäävät siksi
+   * kartan ulkopuolelle myös aiheena, eivät vain etäisyyden takia.
+   */
+  panama: {
+    polku: 'assets/kartat/panama-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 8.9680, etela: 8.9280, lansi: -79.5720, ita: -79.5280 },
+    esittely: 'Kartan alue ulottuu Casco Viejon niemeltä idässä '
+      + 'Ancónin kukkulan yli Amadorin aallonmurtajalle etelässä. '
+      + 'Keskellä kohoaa metsäinen kukkula, sen pohjoispuolella ovat '
+      + 'entisen kanava-alueen väljät korttelit ja idässä vanhan '
+      + 'kaupungin tiivis ruutukaava. Etelään työntyvä kapea kieleke '
+      + 'on kanavan kaivumassoista rakennettu aallonmurtaja. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Rio de Janeirossa. Koordinaatit en-Wikipedian geosearch- ja
+       * coordinates-rajapinnoista 6.9.2026; pienin väli on 383 metriä
+       * (nykytaiteen museo–kansallisinstituutti).
+       *
+       * WAY ONIN KIINALAINEN HAUTAUSMAA (8,9533 / −79,5461) OLI
+       * LISTALLA MUTTA PUDOTETTIIN: sille ei löydy Commonsista
+       * yhtään kuvaa (tarkistettu hakusanoilla ja kategorioilla
+       * 6.9.2026), eikä kartan kohde saa jäädä ilman juttukuvaa.
+       * Kannaksen kiinalaisten rautatietyöläisten tarina kerrotaan
+       * sen sijaan lehden nostossa H3.
+       */
+      { nimi: 'Afroantillilainen museo', lat: 8.963, lon: -79.5392 },
+      { nimi: 'Nykytaiteen museo', lat: 8.96092, lon: -79.54304 },
+      { nimi: 'Kansallisinstituutti', lat: 8.957583, lon: -79.542944 },
+      { nimi: 'Ancónin kukkula', lat: 8.957278, lon: -79.549444 },
+      { nimi: 'Presidentinlinna', lat: 8.953966, lon: -79.534364 },
+      { nimi: 'Smithsonianin tutkimuslaitos', lat: 8.9624308, lon: -79.5525621 },
+      { nimi: 'Fort Amador', lat: 8.938056, lon: -79.547778 },
+      { nimi: 'Biomuseo', lat: 8.9325, lon: -79.5449 },
+    ],
+  },
+  /*
+   * PORTO ALEGRE (6.9.2026). Rajaus on 3,0 kilometriä kanttiinsa
+   * Guaíban rannasta Redenção-puiston laitaan — perustelu ja hylätty
+   * tiiviimpi rajaus ovat tools/piirra-kaupunkikartta.mjs:n
+   * portoalegre-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Mercado Público, Grenal-derby ja Beira-Rio, Usina do Gasômetro,
+   * Iberê Camargon säätiö, kuusikymmentä atsoorilaisparia ja
+   * kaupungin perustaminen, Farroupilha-kapina ja charque, kaksi
+   * siirtolaisaaltoa, Mauán muuri, Redençãon kirpputori, Guaíban
+   * nimikiista, guaranit ja kaingangit sekä vuoden 2024 tulva.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * PRAÇA DA MATRIZILTA MAHTUU VAIN YKSI KOHDE. Tuomiokirkon ja
+   * Palácio Piratinin väli on 86 metriä, tuomiokirkon ja Theatro São
+   * Pedron 178 ja Piratinin ja teatterin 211 — numeroympyrät menisivät
+   * päällekkäin (Petran, Mekan ja Karachin oppi). Kartalle otettiin
+   * Theatro São Pedro, koska se on kolmesta ainoa, joka oli olemassa
+   * isoisän matkan aikaan: teatteri avattiin 1858. Aukio itse on
+   * lehden oman noston kuva-aihe. Tuomiokirkko olisi sitä paitsi
+   * pudonnut joka tapauksessa: se on 198 metrin päässä Otávio Rochan
+   * viaduktista.
+   *
+   * ATSOORILAISTEN MUISTOMERKKI OLI LISTALLA MUTTA PUDOTETTIIN. Se
+   * on pystytetty 1974 juuri niiden kuudenkymmenen atsoorilaisparin
+   * muistoksi, joista lehden ensimmäinen historianosto kertoo —
+   * sama aihe kahdesti ei kelpaa. Tilalle Joaquim Felizardon museo,
+   * joka asuu vuosina 1845–1853 rakennetussa Lopo Gonçalvesin
+   * kartanossa.
+   */
+  portoalegre: {
+    polku: 'assets/kartat/portoalegre-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -30.0195, etela: -30.0465, lansi: -51.2405, ita: -51.2095 },
+    esittely: 'Kartan alue on Porto Alegren vanha keskusta. Luoteessa '
+      + 'ja lännessä on Guaíba, jonka rannalle kaupunki rakennettiin, '
+      + 'keskellä 1700-luvun ruutukaava kukkuloineen ja idässä '
+      + 'Redenção-puiston vihreä laita. Kaupunki mahtuu kapealle '
+      + 'kaistalle veden ja puiston väliin. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Cairnsissa ja Dunedinissa. Koordinaatit en-Wikipedian
+       * coordinates- ja geosearch-rajapinnoista 6.9.2026; pienin
+       * väli on 293 metriä (Theatro São Pedro–Otávio Rochan
+       * viadukti).
+       */
+      { nimi: 'Vanha kaupungintalo', lat: -30.028199, lon: -51.228586 },
+      { nimi: 'Rio Grande do Sulin taidemuseo', lat: -30.0291, lon: -51.2317 },
+      { nimi: 'Nosso Senhor dos Passosin kappeli', lat: -30.03028, lon: -51.22249 },
+      { nimi: 'Theatro São Pedro', lat: -30.032039, lon: -51.230356 },
+      { nimi: 'Rio Grande do Sulin liittovaltionyliopisto', lat: -30.032439, lon: -51.219313 },
+      { nimi: 'Dores-kirkko', lat: -30.0325, lon: -51.235556 },
+      { nimi: 'Otávio Rochan viadukti', lat: -30.03364, lon: -51.22794 },
+      { nimi: 'Joaquim Felizardon museo', lat: -30.04204, lon: -51.224926 },
+    ],
+  },
+  /*
+   * ASUNCIÓN (6.9.2026). Rajaus on 5,0 × 3,2 kilometriä lahden
+   * rannasta stadionille ja taidemuseolle — perustelu ja hylätty
+   * kansalliskirjasto ovat tools/piirra-kaupunkikartta.mjs:n
+   * asuncion-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Cabildo ja kaupungin perustaminen, vuoden 1871 raitiovaunu,
+   * guaranin kieli, Casa de la Independencia, kolmoisliiton sota ja
+   * miehitys, Palacio de los López, Panteón, tereré, ñandutí,
+   * Costanera-rantabulevardi ja Asunciónin lahti. Yksikään kartan
+   * seitsemästä kohteesta ei ole niiden aihe.
+   *
+   * KOHTEITA ON SEITSEMÄN EIKÄ KAHDEKSAA, ja se on lähdetilanne
+   * eikä valinta (Suvan malli). Asunciónin ytimestä löytyy
+   * en-Wikipediasta kilometrin säteellä seitsemäntoista
+   * koordinaatillista kohdetta, mutta neljä niistä on lehden omien
+   * nostojen aihe, kaksi (Universidad Católica ja Colegio Nacional)
+   * on 70 ja 163 metrin päässä katedraalista, ja loput ovat
+   * artikkeleita, joista ei saa juttua kirjoitettua ilman arvailua:
+   * kansalliskirjaston artikkeli on yhden virkkeen tynkä,
+   * kongressitalosta kertova artikkeli käsittelee vain
+   * lainsäätäjää eikä rakennusta, ja Encarnaciónin nimellä on
+   * en-Wikipediassa vain kaupunginosan tynkä, jonka koordinaatti
+   * on pyöristetty kokonaisiin minuutteihin. Kaksi kohdetta
+   * haettiin ytimen ulkopuolelta, ja ne venyttivät ruudun viiteen
+   * kilometriin.
+   */
+  asuncion: {
+    polku: 'assets/kartat/asuncion-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -25.271, etela: -25.3, lansi: -57.665, ita: -57.615 },
+    esittely: 'Kartan alue on Asunciónin vanha keskusta ja sen ranta. '
+      + 'Pohjoisessa avautuu Asunciónin lahti ja Paraguayjoki, '
+      + 'keskellä on siirtomaa-ajan ruutukaava, jonka korttelit '
+      + 'laskeutuvat suorina linjoina rantaan, lännessä stadion ja '
+      + 'kaakossa kansallinen taidemuseo. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * SEITSEMÄN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates- ja
+       * geosearch-rajapinnoista 6.9.2026; pienin väli on 257 metriä
+       * (kaupunginteatteri–katedraali).
+       */
+      { nimi: 'Museo Memoria de la Ciudad', lat: -25.2782, lon: -57.6375 },
+      { nimi: 'Chacaritan stadion', lat: -25.2797, lon: -57.6255 },
+      { nimi: 'Kaupunginteatteri', lat: -25.2811, lon: -57.6349 },
+      { nimi: 'Asunciónin katedraali', lat: -25.2816, lon: -57.6324 },
+      { nimi: 'Ateneo Paraguayo', lat: -25.286225, lon: -57.637222 },
+      { nimi: 'Kansallinen taidemuseo', lat: -25.2887, lon: -57.6212 },
+      { nimi: 'Defensores del Chacon stadion', lat: -25.292072, lon: -57.657381 },
+    ],
+  },
+  /*
+   * MONTREAL (6.9.2026). Rajaus on 3,5 × 3,1 kilometriä taidemuseon
+   * korttelista Habitat 67:lle ja Plateaun eteläkulmasta
+   * Lachine-kanavan suulle — perustelu ja ulkopuolelle jätetyt
+   * kohteet ovat tools/piirra-kaupunkikartta.mjs:n montreal-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Notre-Damen basilika,
+   * Place Jacques-Cartier, Bonsecours-halli, Victoria-silta, Mont
+   * Royal, vanha satama, McGill, Place Ville Marie, Jean-Drapeaun
+   * saaret, Maisonneuven patsas ja kaupungintalo ovat kaupunkilehden
+   * nostojen ja matkaoppaan kuvien aiheita, joten yksikään niistä ei
+   * ole kartan kohde, vaikka kaikki mahtuisivat ruutuun.
+   * Saint-Sulpicen seminaari seisoo basilikan seinänaapurina, mutta
+   * se on eri rakennus ja eri tarina: talo valmistui 1687 ja on
+   * kaupungin toiseksi vanhin rakennus, ja lehti kertoo basilikasta.
+   *
+   * ORATORIO, OLYMPIAPUISTO JA JEAN-TALONIN HALLI OVAT KAUKANA:
+   * 5,3 kilometriä länteen, 6,1 koilliseen ja 4,5 pohjoiseen. Ne
+   * eivät mahdu samaan ruutuun keskustan kanssa ilman, että kartasta
+   * tulee New Yorkin kokoinen ja sen keskiosasta tyhjä.
+   */
+  montreal: {
+    polku: 'assets/kartat/montreal-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 45.5205, etela: 45.493, lansi: -73.585, ita: -73.539 },
+    esittely: 'Kartan alue ulottuu Plateaun eteläkulmasta '
+      + 'Saint Lawrencen rantaan. Luoteessa on keskustan ruutukaava, '
+      + 'jonka kadut nousevat Mont Royalin rinnettä, keskellä Vanhan '
+      + 'Montrealin vinot korttelit sulpitiaanien 1600-luvulla '
+      + 'vetämien katujen varrella, koillisessa Vanhan sataman '
+      + 'laiturit ja kaakossa joki. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * New Yorkissa ja Karachissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026; pienin väli on 257 metriä
+       * (Saint-Sulpicen seminaari–Pointe-à-Callière).
+       */
+      { nimi: 'Saint-Louis’n aukio', lat: 45.517015, lon: -73.569968 },
+      { nimi: 'Château Ramezay', lat: 45.508611, lon: -73.553333 },
+      { nimi: 'Kiinalaiskaupunki', lat: 45.50759, lon: -73.5608 },
+      { nimi: 'Saint-Sulpicen seminaari', lat: 45.503889, lon: -73.556944 },
+      { nimi: 'Pyhän Patrickin basilika', lat: 45.5035, lon: -73.5647 },
+      { nimi: 'Pointe-à-Callièren museo', lat: 45.5026, lon: -73.5542 },
+      { nimi: 'Habitat 67', lat: 45.5, lon: -73.543889 },
+      { nimi: 'Montrealin taidemuseo', lat: 45.4987, lon: -73.5801 },
     ],
   },
   /*
@@ -9250,6 +12658,3741 @@ export const KAUPUNKIKARTAT = {
       { nimi: 'Maracanãn stadion', lat: -22.9122, lon: -43.2303 },
       { nimi: 'Lapan akvedukti', lat: -22.91259444, lon: -43.17985 },
       { nimi: 'Passeio Público', lat: -22.91379722, lon: -43.17598611 },
+    ],
+  },
+  /*
+   * DENVER (6.9.2026). Rajaus on 3,6 × 4,1 kilometriä keskustan ja
+   * Capitol Hillin ympärillä — perustelu, kahden ruutukaavan sauma ja
+   * hylätty osavaltiotalokeskitys ovat tools/piirra-kaupunkikartta.mjs:n
+   * denver-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * tšeijennit ja arapahot, vuoden 1858 kultalöytö ja kaupungin
+   * perustaminen jokien yhtymäkohtaan, rautatien tulo 1870 ja mailin
+   * merkki osavaltiotalon portaissa; teemasivu kertoo Front Rangesta,
+   * ohuesta ilmasta, Red Rocksista ja puistoista. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-denver.md, kohta E): Denver Public Library on 190
+   * metrin ja Byers–Evans House 137 metrin päässä taidemuseosta,
+   * ja Denver Civic Center 251 metrin päässä mutta aiheena sama
+   * museokortteli. Ne mainitaan matkaoppaan jaksossa 2.
+   *
+   * OSAVALTIOTALO, UNION STATION, CONFLUENCE PARK JA LARIMER SQUARE
+   * JÄÄVÄT POIS AIHESYISTÄ, eivät etäisyyden takia: kolme ensimmäistä
+   * ovat lehden nostojen ja etusivun ennen–nyt-parin aihe, ja Larimer
+   * Square kertoisi saman perustamistarinan kuin nosto K2. Red Rocks
+   * on 16 kilometriä lounaaseen ja teemasivun oma nosto.
+   */
+  denver: {
+    polku: 'assets/kartat/denver-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 39.7600, etela: 39.7280, lansi: -105.0030, ita: -104.9550 },
+    esittely: 'Kartan alue on Denverin keskusta ja Capitol Hill. '
+      + 'Vasemmalla erottuu vanha vino ruutukaava, joka kääntyi 1858 '
+      + 'South Platten mutkan mukaan, ja oikealla ilmansuuntien '
+      + 'mukainen myöhempi kaava; niiden sauma on leveä Colfax '
+      + 'Avenue. Pohjoisreunassa on LoDon vanha varastokortteli ja '
+      + 'idässä puistojen vyöhyke. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Cairnsissa ja Rio de Janeirossa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026, ja kaikki välit on
+       * mitattu uudelleen: pienin on 471 metriä (Daniels & Fisherin
+       * torni – esittävän taiteen keskus).
+       */
+      { nimi: 'Coors Field', lat: 39.75611111, lon: -104.99416667 },
+      { nimi: 'Daniels & Fisherin torni', lat: 39.74833333, lon: -104.99527778 },
+      { nimi: 'Esittävän taiteen keskus', lat: 39.74444444, lon: -104.9975 },
+      { nimi: 'Brown Palace -hotelli', lat: 39.74416667, lon: -104.98722222 },
+      { nimi: 'Katedraalibasilika', lat: 39.74028056, lon: -104.98193889 },
+      { nimi: 'Denverin taidemuseo', lat: 39.73718806, lon: -104.989345 },
+      { nimi: 'Molly Brownin talo', lat: 39.7375, lon: -104.98072222 },
+      { nimi: 'Kasvitieteellinen puutarha', lat: 39.7325, lon: -104.96083333 },
+    ],
+  },
+  /*
+   * HOUSTON (6.9.2026). Rajaus on 5,9 × 5,3 kilometriä keskustasta
+   * museokorttelin läpi Hermann Parkiin — perustelu ja keskipisteen
+   * valinta ovat tools/piirra-kaupunkikartta.mjs:n houston-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat ishakit
+   * ja karankawat, Allenin veljesten kaupunkikauppa 1836, vuoden
+   * 1873 puuvilla ja radat sekä laivaväylä; teemasivu kertoo
+   * suolakupoleista, Spindletopista, avaruuskeskuksesta ja tulvista.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ TAI SEN
+   * TUNTUMASSA (tarkistus-houston.md, kohta F): Rothkon kappeli on
+   * 243 metriä Menilin kokoelmasta, Houston City Hall 250 metriä Sam
+   * Houstonin puistosta ja luonnontieteen museo 150 metriä Hermann
+   * Parkin keskipisteestä.
+   *
+   * KAHDEKSAS KOHDE VAIHDETTIIN KUVASYYSTÄ. Faktapohja ehdotti
+   * kuvataiteen museota, mutta sen kaikissa Commonsin
+   * julkisivukuvissa on joko iso jäsenhankintabanderolli tai
+   * tunnistettava henkilö, eikä kartan kohde saa jäädä ilman
+   * juttukuvaa (Panamán ennakkotapaus: Way Onin hautausmaa
+   * pudotettiin samasta syystä). Tilalle Hermann Park samassa
+   * museokorttelissa; museo mainitaan matkaoppaan jaksossa 2.
+   *
+   * ALLEN'S LANDING, LAIVAVÄYLÄ JA JOHNSON SPACE CENTER JÄÄVÄT POIS
+   * AIHESYISTÄ tai etäisyyden takia: kaksi ensimmäistä ovat nostojen
+   * H2 ja H4 aihe, ja avaruuskeskus on 40 kilometrin päässä
+   * kaakossa Clear Lakessa.
+   */
+  houston: {
+    polku: 'assets/kartat/houston-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 29.7680, etela: 29.7150, lansi: -95.4050, ita: -95.3500 },
+    esittely: 'Kartan alue ulottuu Buffalo Bayoun mutkasta '
+      + 'pohjoisessa museokorttelin läpi Hermann Parkiin etelässä. '
+      + 'Yläreunassa kiemurtelee puro, sen oikealla puolella on '
+      + 'keskustan vinoon kääntynyt ruutukaava, ja moottoritiekehä '
+      + 'kiertää sen ympäri. Etelässä erottuu puiston pitkä '
+      + 'heijastusallas. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * 6.9.2026, ja kaikki välit on mitattu uudelleen: pienin on
+       * 300 metriä (Sam Houstonin puisto – Julia Idesonin talo).
+       */
+      { nimi: 'Market Squaren puisto', lat: 29.76266, lon: -95.36234 },
+      { nimi: 'Buffalo Bayoun puisto', lat: 29.761, lon: -95.384 },
+      { nimi: 'Sam Houstonin puisto', lat: 29.76, lon: -95.372 },
+      { nimi: 'Julia Idesonin kirjastotalo', lat: 29.75888889, lon: -95.36916667 },
+      { nimi: 'Astrosin stadion', lat: 29.75694444, lon: -95.35555556 },
+      { nimi: 'Kongressikeskus', lat: 29.75222222, lon: -95.35777778 },
+      { nimi: 'Menilin kokoelma', lat: 29.73722222, lon: -95.39861111 },
+      { nimi: 'Hermann Park', lat: 29.721, lon: -95.391 },
+    ],
+  },
+  /*
+   * KAPKAUPUNKI (6.9.2026). Rajaus on 3,7 x 2,9 kilometriä
+   * Victoria & Alfredin satama-altaista Company's Gardenin
+   * museokorttelin eteläpuolelle — perustelu, merentäyttö ja
+   * hylätty laajennus ovat tools/piirra-kaupunkikartta.mjs:n
+   * kapkaupunki-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat khoe-
+   * ja san-kansat lahdella, yhtiön vihannestarha ja orjuus, vuoden
+   * 1873 satama ja timantit sekä Bo-Kaap ja arabialainen afrikaans;
+   * teemasivu kertoo Pöytävuoresta, fynbosista, Maclearin
+   * kiviröykkiöstä ja pöytäliinapilvestä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-kapkaupunki.md, kohta E): Groote Kerk on 55 metrin,
+   * St George's Cathedral 88 metrin ja Grand Parade 99 metrin
+   * päässä lähimmästä kohteesta, ja Koopmans-de Wet House 185
+   * metriä Greenmarket Squaresta. Iziko South African National
+   * Gallery on tasan 200 metriä Etelä-Afrikan museosta eikä ylitä
+   * sääntöä. Ne mainitaan matkaoppaassa tai jäävät pois.
+   *
+   * RAUTATIEASEMA PUDOTETTIIN KUVASYYSTÄ, ei etäisyyden takia:
+   * Commonsista ei löytynyt kuvasäännöt täyttävää kuvaa (ainoa
+   * sisäkuva on täynnä mainoksia). Tilalle otettiin Rust en Vreugd
+   * (Panamán ja Houstonin ennakkotapaus). Aseman historia kerrotaan
+   * lehden nostossa K3 ja matkaoppaan jaksossa 1.
+   *
+   * PÖYTÄVUORI, BO-KAAP JA COMPANY'S GARDEN EIVÄT OLE KARTALLA
+   * AIHESYISTÄ: ne ovat lehden omien nostojen ja teemasivun aihe.
+   * Robben Island on 6,9 kilometriä Bloubergstrandista eikä mahtuisi
+   * ruutuun.
+   */
+  kapkaupunki: {
+    polku: 'assets/kartat/kapkaupunki-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -33.899, etela: -33.932, lansi: 18.406, ita: 18.437 },
+    esittely: 'Kartan alue on Kapkaupungin vanha ydin meren ja '
+      + 'vuoren välissä. Yläreunassa ovat Victoria & Alfredin '
+      + 'satama-altaat ja niiden takana Taffelinlahti; keskellä '
+      + 'kulkee 1800-luvun ruutukaava, jonka pitkät kadut osoittavat '
+      + 'satamasta vuorelle. Vasemmalla oleva tyhjä rinne on Signal '
+      + 'Hill, ja oikeassa alakulmassa erottuu viisikulmainen '
+      + 'linnoitus. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Denverissä ja Houstonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026, ja kaikki 28 väliä on
+       * mitattu uudelleen haversinilla: pienin on 273 metriä
+       * (kaupungintalo – District Six -museo).
+       */
+      { nimi: 'V&A Waterfront', lat: -33.903056, lon: 18.422778 },
+      { nimi: 'Greenmarket Square', lat: -33.922222, lon: 18.42 },
+      { nimi: 'Iziko Slave Lodge', lat: -33.92506, lon: 18.420393 },
+      { nimi: 'Kaupungintalo', lat: -33.925278, lon: 18.423889 },
+      { nimi: 'Hyväntoivonlinnoitus', lat: -33.9259, lon: 18.4278 },
+      { nimi: 'District Six -museo', lat: -33.927723, lon: 18.423673 },
+      { nimi: 'Iziko Etelä-Afrikan museo', lat: -33.928889, lon: 18.415 },
+      { nimi: 'Rust en Vreugd', lat: -33.9304, lon: 18.4205 },
+    ],
+  },
+  /*
+   * NAIROBI (6.9.2026). Rajaus on 3,1 x 2,7 kilometriä Museum
+   * Hilliltä rautatiealueelle — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n nairobi-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * maasait ja paikka ennen kaupunkia, Ugandan radan rakentaminen,
+   * ruttovuosi ja pääkaupungiksi tulo sekä matatu-kulttuuri;
+   * teemasivu kertoo kansallispuistosta, sarvikuonoista,
+   * Kitengelan muuttokäytävästä ja Wangari Maathain kahdesta
+   * kamppailusta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe. Lähimpänä on rautatiemuseo, jonka juttu kertoo
+   * museon omista vetureista eikä radan rakentamisesta.
+   *
+   * UHURU PARK JA KARURAN METSÄ EIVÄT OLE NUMEROITUINA KOHTEINA:
+   * ne ovat teemasivun noston L4 aihe. Uhuru Park näkyy kartalla
+   * puistona ruudun lounaisosassa; Karura on 5,5 kilometriä
+   * pohjoisreunan yläpuolella. Kansallispuisto on noin 11
+   * kilometriä ruudun keskeltä kaakkoon.
+   *
+   * PARLAMENTTITALO PUDOTETTIIN, vaikka etäisyys riittää (374 m
+   * kongressikeskuksesta): sen artikkelin ainoa laaja historiaosuus
+   * koskee vuoden 2024 mielenosoituksia ja niiden uhreja, eikä
+   * juttu mahtuisi lehden linjaukseen "ei nykypolitiikkaa" ilman
+   * että rakennuksen tarina jää tyhjäksi (tarkistus-nairobi.md,
+   * kohta F). Times Tower on 208 metriä kongressikeskuksesta eikä
+   * kanna juttua.
+   *
+   * ARBORETUM JA KANSALLISMUSEO OVAT 216 METRIN PÄÄSSÄ toisistaan
+   * eli niukasti yli 200 metrin säännön. Ne ovat Museum Hillin
+   * vastakkaisilla puolilla ja eri juttujen aiheita.
+   */
+  nairobi: {
+    polku: 'assets/kartat/nairobi-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -1.27, etela: -1.2975, lansi: 36.808, ita: 36.832 },
+    esittely: 'Kartan alue ulottuu Museum Hilliltä pohjoisessa '
+      + 'rautatiealueelle etelässä. Yläreunassa mutkittelee '
+      + 'Nairobi-joki, keskellä kulkee Uhuru Highway leveänä '
+      + 'vinottaisena nauhana, ja sen oikealla puolella on '
+      + 'liikekeskustan tiivis ruutukaava. Vasemmalla laidalla '
+      + 'levittäytyy vihreä vyöhyke arboretumista Uhuru Parkiin, ja '
+      + 'oikeassa alakulmassa haarautuvat ratapihan raiteet. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * 6.9.2026, ja kaikki 28 väliä on mitattu uudelleen
+       * haversinilla: pienin on 216 metriä (arboretum –
+       * kansallismuseo).
+       */
+      { nimi: 'Nairobin arboretum', lat: -1.2743, lon: 36.8131 },
+      { nimi: 'Kenian kansallismuseo', lat: -1.273889, lon: 36.815 },
+      { nimi: 'Nairobin yliopisto', lat: -1.279722, lon: 36.816667 },
+      { nimi: 'Jeevanjeen puutarha', lat: -1.281014, lon: 36.819476 },
+      { nimi: 'Kenian kansallisarkisto', lat: -1.2849, lon: 36.8259 },
+      { nimi: 'Nairobi Gallery', lat: -1.286789, lon: 36.817833 },
+      { nimi: 'Kenyattan kongressikeskus', lat: -1.288611, lon: 36.823056 },
+      { nimi: 'Nairobin rautatiemuseo', lat: -1.293725, lon: 36.822194 },
+    ],
+  },
+  /*
+   * MIAMI (6.9.2026). Rajaus on 3,8 × 4,9 kilometriä Wynwoodista
+   * Miami-joen suulle — perustelu ja itäreunan valinta ovat
+   * tools/piirra-kaupunkikartta.mjs:n miami-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * tequestat ja Miami Circle, vuoden 1873 kourallinen perheitä
+   * lahden rannalla, Julia Tuttle ja rautatie 1896 sekä South Beachin
+   * art deco; teemasivu kertoo Evergladesista, Biscayne Baystä,
+   * kahdesta vuodenajasta ja kalkkikivestä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * MIAMI CIRCLE JÄÄ POIS AIHESYISTÄ, ei etäisyyden takia: se
+   * mahtuisi ruutuun (25,76947 / −80,188961) mutta on noston M1 aihe.
+   * Samasta syystä ruudun ulkopuolelle jäävät Little Havanan
+   * Máximo Gómez Park ja South Beachin art deco -korttelit.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ TAI SEN
+   * TUNTUMASSA (tarkistus-miami.md, kohta F): Frost Science on 128
+   * metrin päässä Pérezin museosta ja Bayside Marketplace 378 metrin
+   * päässä Vapaudentornista mutta on ostoskeskus eikä kohde.
+   * Vizcaya on 3,5 kilometriä etelässä. Kaikki mainitaan
+   * matkaoppaassa.
+   */
+  miami: {
+    polku: 'assets/kartat/miami-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 25.8060, etela: 25.7620, lansi: -80.2160, ita: -80.1780 },
+    esittely: 'Kartan alue ulottuu Wynwoodin varastokortteleista '
+      + 'pohjoisessa Miami-joen suulle etelässä. Oikeassa reunassa on '
+      + 'Biscayne Bay, keskellä keskustan ruutukaava ja vasemmalla '
+      + 'moottoritie, joka erottaa keskustan lännen kaupunginosista. '
+      + 'Alaosassa joki mutkittelee lahteen. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Denverissä ja Houstonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026; Pérezin museon koordinaatti
+       * luettiin artikkelin coord-mallineesta, koska rajapinta ei
+       * palauta sille koordinaattia. Pienin väli on 462 metriä
+       * (Bayfront Park – Olympia-teatteri).
+       */
+      { nimi: 'Wynwoodin muraalikorttelit', lat: 25.804, lon: -80.199 },
+      { nimi: 'Esittävän taiteen keskus', lat: 25.7876332, lon: -80.1920912 },
+      { nimi: 'Pérezin taidemuseo', lat: 25.785894, lon: -80.186705 },
+      { nimi: 'Lyric-teatteri', lat: 25.78188889, lon: -80.198 },
+      { nimi: 'Vapaudentorni', lat: 25.78, lon: -80.18972222 },
+      { nimi: 'Bayfront Park', lat: 25.775, lon: -80.186 },
+      { nimi: 'Olympia-teatteri', lat: 25.7742, lon: -80.19051683 },
+      { nimi: 'Piirikunnan oikeustalo', lat: 25.77461111, lon: -80.19513889 },
+    ],
+  },
+  /*
+   * HALIFAX (6.9.2026). Rajaus on 3,3 × 4,2 kilometriä
+   * linnoituskukkulalta niemimaan eteläkärkeen — perustelu ja ruudun
+   * pystysuunta ovat tools/piirra-kaupunkikartta.mjs:n
+   * halifax-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * mi'kmaqit ja Kjipuktuk, vuoden 1749 perustaminen, isoisän
+   * matkavuoden 1873 purjelaivasatama ja vuoden 1917 räjähdys;
+   * teemasivu kertoo satamasta, säästä, hurrikaaneista ja
+   * graniittirannikosta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe. Lähimpänä on Pyhän Paavalin kirkko, joka näkyy
+   * noston H2 kuvassa vuoden 1759 kaiverruksessa — juttu kertoo
+   * kuitenkin rakennuksesta ja sen esikuvasta Lontoossa, mitä lehti
+   * ei käsittele lainkaan.
+   *
+   * NELJÄ KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-halifax.md, kohta E): Province House on 115 metriä
+   * Pyhän Paavalin kirkosta, Nova Scotian taidegalleria 59 metriä
+   * Province Housesta ja 131 metriä merimuseosta, ja
+   * kaupunginkirjasto 206 metriä vanhasta hautausmaasta. Ne
+   * mainitaan matkaoppaan jaksossa 2, ja kirjastolle on siellä oma
+   * kuva.
+   *
+   * FORT NEEDHAM, AFRICVILLE JA FAIRVIEW LAWN JÄÄVÄT POIS: kaksi
+   * jälkimmäistä ovat ruudun ulkopuolella pohjoisessa, ja
+   * muistokellotorni on noston H4 aihe.
+   */
+  halifax: {
+    polku: 'assets/kartat/halifax-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 44.6560, etela: 44.6180, lansi: -63.6000, ita: -63.5580 },
+    esittely: 'Kartan alue kattaa Halifaxin niemimaan koko leveyden: '
+      + 'oikealla on satama, vasemmalla Northwest Armin kapea vuono ja '
+      + 'väliin jää keskustan ruutukaava. Yläreunassa erottuu '
+      + 'linnoituskukkulan tähtimäinen muoto ja alareunassa niemen '
+      + 'metsäinen kärki. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 6.9.2026,
+       * ja kaikki välit on mitattu uudelleen: pienin on 222 metriä
+       * (linnoitus – kellotorni), toiseksi pienin 238 metriä
+       * (kellotorni – Pyhän Paavalin kirkko).
+       */
+      { nimi: 'Halifaxin linnoitus', lat: 44.6475, lon: -63.58027778 },
+      { nimi: 'Vanha kellotorni', lat: 44.64722222, lon: -63.5775 },
+      { nimi: 'Pyhän Paavalin kirkko', lat: 44.6475, lon: -63.57472222 },
+      { nimi: 'Atlantin merimuseo', lat: 44.64769444, lon: -63.57105556 },
+      { nimi: 'Julkinen puutarha', lat: 44.64277778, lon: -63.58222222 },
+      { nimi: 'Vanha hautausmaa', lat: 44.6434, lon: -63.5728 },
+      { nimi: 'Pier 21', lat: 44.63777778, lon: -63.56583333 },
+      { nimi: 'Point Pleasant Park', lat: 44.62277778, lon: -63.56916667 },
+    ],
+  },
+  /*
+   * WELLINGTON (6.9.2026). Rajaus on 3,3 × 3,4 kilometriä Thorndonin
+   * rautatieasemalta Basin Reservelle — perustelu ja itäreunan valinta
+   * ovat tools/piirra-kaupunkikartta.mjs:n wellington-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * pääkaupungin siirto, Lambton Quay vanhan meren päällä, köysirata
+   * ja satavuotisnäyttely; historiasivu kertoo Te Papasta, Old
+   * St Paul'sista, parlamentista ja kuvernöörin residenssistä ja
+   * luontosivu Zealandiasta, vihervyöhykkeestä, maanjäristyksistä ja
+   * sataman saarista. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Te Papa,
+   * parlamentti, Old St Paul's ja köysiradan alaasema mahtuisivat
+   * kaikki ruutuun (faktapohja-wellington.md, osio 4 antaa niille
+   * koordinaatit), mutta ne ovat lehden omien nostojen aihe. Samasta
+   * syystä kartalla ei ole kasvitieteellistä puutarhaa: se on
+   * köysiradan noston määränpää.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN MUISTA SYISTÄ: City Gallery on 102
+   * metriä kaupungintalosta eli 200 metrin säännön alle, ja
+   * Wellingtonin nykyinen katedraali menisi lukijalta sekaisin lehden
+   * Old St Paul's -noston kanssa. Molemmat mainitaan matkaoppaassa.
+   */
+  wellington: {
+    polku: 'assets/kartat/wellington-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -41.2740, etela: -41.3050, lansi: 174.7620, ita: 174.8010 },
+    esittely: 'Kartan alue kattaa koko sen kapean kannaksen, jolle '
+      + 'Wellingtonin keskusta mahtuu: yläreunassa on Thorndon ja '
+      + 'rautatieasema, oikealla satama ja Oriental Bayn kaari, '
+      + 'vasemmalla nousevat Kelburnin ja Mount Cookin rinteet ja '
+      + 'alareunassa on Basin Reserven pyöreä aukio. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Halifaxissa ja Miamissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 6.9.2026. Pienin väli on 524 metriä
+       * (Circa-teatteri – Embassy-teatteri), toiseksi pienin 602
+       * metriä (Wellingtonin museo – Circa-teatteri).
+       */
+      { nimi: 'Rautatieasema', lat: -41.27861111, lon: 174.78083333 },
+      { nimi: 'Bolton Streetin hautausmaa', lat: -41.27888889, lon: 174.77305556 },
+      { nimi: 'Wellingtonin museo', lat: -41.2853, lon: 174.7781 },
+      { nimi: 'Circa-teatteri', lat: -41.29041, lon: 174.78048 },
+      { nimi: 'Oriental Bay', lat: -41.29166667, lon: 174.79444444 },
+      { nimi: 'Embassy-teatteri', lat: -41.294277, lon: 174.784066 },
+      { nimi: 'Nairn Streetin mökki', lat: -41.2993, lon: 174.7699 },
+      { nimi: 'Basin Reserve', lat: -41.30027778, lon: 174.78027778 },
+    ],
+  },
+  /*
+   * CHRISTCHURCH (6.9.2026). Rajaus on 2,4 × 1,9 kilometriä eli pelin
+   * tiiviimpiä — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * christchurch-lohkossa: kaupungin ruutukaava on neljän puistokadun
+   * sisällä, ja kaikki kahdeksan kohdetta mahtuvat sen pohjoisosaan.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Canterbury Associationin etukäteen piirretty kaupunki, kolme
+   * kansaa ennen ensimmäistä laivaa, pyöräilykaupunki ja vuoden 1998
+   * anteeksipyyntö; järistyssivu kertoo vuosien 2010 ja 2011
+   * järistyksistä, katedraalista ja pahvikatedraalista, luontosivu
+   * kasvitieteellisestä puutarhasta, Avon-joesta, Riccarton Bushista
+   * ja punaisesta vyöhykkeestä. Yksikään kartan kohteista ei ole
+   * niiden aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Victoria Square
+   * on 94 metriä kaupungintalosta, Isaac-teatteri 64 metriä New
+   * Regent Streetistä ja Tūrangan kirjasto 110 metriä
+   * Isaac-teatterista. Latimer Square jätettiin pois aihesyistä eikä
+   * etäisyyden takia — se on pahvikatedraalin naapuri ja siten lehden
+   * noston tausta.
+   *
+   * MUISTOSILTA ON SILTA, JA SE NÄKYY TARKISTIMESSA. Kohde on Avonin
+   * yli kulkevan Cashel Streetin sillan muistoholvi, ja
+   * tools/tarkista-karttapisteet.mjs raportoi sille 15 prosentin
+   * vesiosuuden pisteen ympäriltä — itse piste on maalla holvin
+   * kohdalla, ja vesi ympärillä on oikein samalla perusteella kuin
+   * Rialtolla ja Ha'pennyllä.
+   */
+  christchurch: {
+    polku: 'assets/kartat/christchurch-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -43.5200, etela: -43.5375, lansi: 172.6215, ita: 172.6510 },
+    esittely: 'Kartta näyttää Christchurchin ruutukaavan pohjoisosan: '
+      + 'suorat kadut leikkaavat toisensa suorassa kulmassa, ja niiden '
+      + 'lomassa mutkittelee Avon-joki. Vasemmassa reunassa alkaa '
+      + 'Hagley Parkin nurmi, keskellä on Katedraalitori ja oikeassa '
+      + 'reunassa vanha hautausmaa. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 6.9.2026.
+       * Pienin väli on 278 metriä, ja se toistuu kahdesti
+       * (kaupungintalo – provinssineuvoston talo ja
+       * provinssineuvoston talo – taidegalleria).
+       */
+      { nimi: 'Barbadoes Streetin hautausmaa', lat: -43.5243, lon: 172.6455 },
+      { nimi: 'Victorian kellotorni', lat: -43.52473611, lon: 172.63075 },
+      { nimi: 'Kaupungintalo', lat: -43.52695, lon: 172.63549444 },
+      { nimi: 'Provinssineuvoston talo', lat: -43.5292, lon: 172.634 },
+      { nimi: 'New Regent Street', lat: -43.52926389, lon: 172.63871944 },
+      { nimi: 'Taidegalleria', lat: -43.53055556, lon: 172.63111111 },
+      { nimi: 'Canterburyn museo', lat: -43.5309, lon: 172.6271 },
+      { nimi: 'Muistosilta', lat: -43.5331, lon: 172.6334 },
+    ],
+  },
+  /*
+   * MELBOURNE (7.9.2026). Rajaus on 1,9 × 1,8 kilometriä eli koko
+   * Hoddlen ruudukko ja vähän yli — perustelu ja Yarran yli vedetty
+   * eteläreuna ovat tools/piirra-kaupunkikartta.mjs:n
+   * melbourne-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat Yarran
+   * nimi, kultaryntäys, raitiovaunu ja kiinalainen kortteli;
+   * matkaopas kertoo Southern Crossista, ruudukon mitoista, Queen
+   * Victoria Marketista ja räjäytetystä koskesta; historiasivu
+   * kaupungin perustamisesta, parlamenttitalosta, vanhasta
+   * valtiovarainrakennuksesta ja Wurundjerin maasta; taidesivu
+   * taidekokoelman alkuvuosista, von Guérardista, Buvelot'sta ja
+   * Berukista; luontosivu kasvitieteellisestä puutarhasta,
+   * Guilfoylesta, puistokehästä ja seitsemästä vuodenajasta.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Flinders
+   * Streetin asema, kuninkaallinen näyttelyrakennus ja Melbourne
+   * Cricket Ground ovat kaikki lehden omien juttujen aihe;
+   * ensimmäinen on 300 metrin päässä katedraalista ja mahtuisi
+   * ruutuun vaivatta. Samasta syystä kartalla ei ole yleistä
+   * kirjastoa: sen eteläsiipi ja lukusali ovat noston "Kokoelma
+   * ilman omaa taloa" aihe.
+   *
+   * KAUPUNGINTALO PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: se on 197 metriä
+   * Pyhän Paavalin katedraalista. Molemmat ovat Swanston Streetin
+   * varrella, ja katedraali valittiin, koska sen tontilla on
+   * vanhempi tarina.
+   */
+  melbourne: {
+    polku: 'assets/kartat/melbourne-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -37.8040, etela: -37.8215, lansi: 144.9540, ita: 144.9745 },
+    esittely: 'Kartta näyttää koko sen ruutukaavan, jonka Robert '
+      + 'Hoddle merkitsi maastoon vuonna 1837. Kadut kulkevat joen '
+      + 'suuntaisesti eivätkä ilmansuuntien mukaan, ja siksi ruudukko '
+      + 'on kuvassa vinossa. Alareunassa mutkittelee Yarra, '
+      + 'vasemmalla alkaa Flagstaff Gardensin nurmi ja oikeassa '
+      + 'yläkulmassa näkyy Carlton Gardensin tähtikuvio. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Christchurchissa. Koordinaatit
+       * en-Wikipedian coordinates-rajapinnasta 7.9.2026. Pienin väli
+       * on 214 metriä (ammattiyhdistystalo – vanha vankila),
+       * toiseksi pienin 261 metriä (katedraali – siirtolaisuusmuseo).
+       */
+      { nimi: 'Ammattiyhdistystalo', lat: -37.8063, lon: 144.9663 },
+      { nimi: 'Vanha vankila', lat: -37.80805556, lon: 144.96527778 },
+      { nimi: 'Coopin haulitorni', lat: -37.810301, lon: 144.962947 },
+      { nimi: 'Princess-teatteri', lat: -37.810725, lon: 144.972169 },
+      { nimi: 'Rahapaja', lat: -37.812153, lon: 144.956794 },
+      { nimi: 'Pääposti', lat: -37.81384, lon: 144.963028 },
+      { nimi: 'Pyhän Paavalin katedraali', lat: -37.816853, lon: 144.967384 },
+      { nimi: 'Siirtolaisuusmuseo', lat: -37.8191, lon: 144.9604 },
+    ],
+  },
+  /*
+   * BRISBANE (7.9.2026). Rajaus on 1,5 × 1,4 kilometriä ja se on
+   * valittu joen eikä katujen mukaan — perustelu ja Kangaroo
+   * Pointille ulottuva itäreuna ovat tools/piirra-kaupunkikartta.mjs:n
+   * brisbane-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * siirtolan muutto Redcliffestä, Meanjinin ja Brisbanen nimet,
+   * pääkaupungin ensimmäiset talot ja turrbal ja jagera tänään;
+   * matkaopas kertoo lentokentästä, kaupungin rakenteesta,
+   * tolppatalosta ja satamasta; historiasivu vanhasta
+   * tuulimyllystä, parlamenttitalosta, pääpostista ja vuoden 1893
+   * tulvasta; luontosivu kasvitieteellisestä puutarhasta,
+   * Maiwar-joesta, Kangaroo Pointin kallioista ja Mount Coot-thasta;
+   * kaupunkikuvasivu Story-sillasta, tullikamarista, Queen Streetin
+   * kävelykadusta ja Expo 88:sta. Yksikään kartan kohteista ei ole
+   * niiden aihe.
+   *
+   * VIISI ILMEISTÄ KOHDETTA ON RUUDUN SISÄLLÄ MUTTA EI KARTALLA.
+   * Kaupungintalo, valtiovarainrakennus, muonavarasto, vanha
+   * tuulimylly ja parlamenttitalo mahtuisivat kaikki mukaan, mutta
+   * ne ovat lehden omien juttujen aihe (New Yorkin sääntö). Ne
+   * antavat kuitenkin kartalle sen tutut kortteliaukot.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Regent-teatteri
+   * on 162 metriä MacArthurin talosta ja Brisbanen synagoga 126
+   * metriä The Mansionsista. Kumpikin olisi ollut hyvä juttu, ja
+   * kumpikin jäi naapurinsa alle.
+   */
+  brisbane: {
+    polku: 'assets/kartat/brisbane-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -27.4625, etela: -27.4760, lansi: 153.0190, ita: 153.0335 },
+    esittely: 'Brisbanen keskusta istuu jyrkässä joenmutkassa, ja '
+      + 'kartta ottaa mutkan kokonaan: joki kiertää ruutukaavan '
+      + 'vasemmalta, alhaalta ja oikealta, ja niemi jää kolmelta '
+      + 'sivulta veden ympäröimäksi. Yläkulmassa nousee Spring '
+      + 'Hillin rinne, oikeassa reunassa on Kangaroo Pointin ranta '
+      + 'ja alhaalla vasemmalla South Bank. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * 7.9.2026. Pienin väli on 222 metriä (ANZAC-aukio –
+       * MacArthurin talo), toiseksi pienin 281 metriä (MacArthurin
+       * talo – Wheat Creekin holvi).
+       */
+      { nimi: 'St Johnin katedraali', lat: -27.46398, lon: 153.030061 },
+      { nimi: 'Spring Hillin vesisäiliöt', lat: -27.4661, lon: 153.0231 },
+      { nimi: 'ANZAC-aukio', lat: -27.4665, lon: 153.0266 },
+      { nimi: 'MacArthurin talo', lat: -27.4684, lon: 153.0273 },
+      { nimi: 'Wheat Creekin holvi', lat: -27.4689, lon: 153.0245 },
+      { nimi: 'Naldham House', lat: -27.4701, lon: 153.0301 },
+      { nimi: 'Vanha kirjastotalo', lat: -27.4727, lon: 153.0237 },
+      { nimi: 'The Mansions', lat: -27.4744, lon: 153.0266 },
+    ],
+  },
+  /*
+   * VANCOUVER (7.9.2026). Rajaus on 1,9 × 1,5 kilometriä niemen
+   * keskustassa: yläreunassa satama, alareunassa Georgia Streetin
+   * eteläpuoli, oikeassa reunassa Chinatown. Rajauksen perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n vancouver-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Hastings Millin saha ja Gastown, vuoden 1886 suurpalo, rautatien
+   * tuoma nimi ja veturi 374 sekä satama; historiasivu kertoo
+   * kahdeksantuhannen vuoden asutuksesta, sademetsästä ja
+   * Granvillen kylästä, kasvusta sataantuhanteen ja Tyynenmeren
+   * postilaivoista, alkuperäiskansasivu musqueamista, squamishista,
+   * Sen̓áḵwista ja vuoden 2010 kisoista. Matkaopas käsittelee
+   * höyrykellon, maailmannäyttelyn 1986 ja SkyTrainin. Yksikään
+   * kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Gastownin
+   * höyrykello, Canada Place, Stanley Park, Granville Islandin tori
+   * ja Science World mahtuisivat joko ruutuun tai sen viereen, mutta
+   * ne ovat kaikki lehden oman aineiston aihe — kolme nostossa,
+   * kaksi kansi- tai avauskuvan selitteessä. Sama koskee Dominion
+   * Buildingia, joka on noston "Tuhannesta sataantuhanteen"
+   * lähdeartikkeli ja seisoo Sun Towerin naapurikorttelissa.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ. Hotel Vancouver
+   * on 61 metriä Christ Churchin katedraalista ja 144 metriä
+   * taidegalleriasta, ja Christ Church itse on 144 metriä
+   * galleriasta; kolmesta valittiin taidegalleria, koska se on
+   * ainoa, jonka tarina ei ole kirkko tai hotelli. Samalla säännöllä
+   * jäi pois Sam Kee Building, joka on 140 metriä Sun Yat-senin
+   * puutarhasta; kahdesta valittiin puutarha, koska se on kartalla
+   * kokonainen kortteli eikä yksi kapea julkisivu.
+   *
+   * WATERFRONT STATION EI OLE KARTALLA, vaikka se on komea ja
+   * lähellä. Se on CPR:n kolmas pääteasema, ja lehden nosto "Nimi
+   * tuli rautatien mukana" kertoo juuri siitä, miten rautatie tuli
+   * Vancouveriin. Harbour Centre on sen naapurikorttelissa ja
+   * kelpaa kartalle, koska sen tarina alkaa vasta 1977.
+   */
+  vancouver: {
+    polku: 'assets/kartat/vancouver-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 49.2900, etela: 49.2755, lansi: -123.1250, ita: -123.0990 },
+    esittely: 'Kartta näyttää sen kapean niemen kärjen, jolle '
+      + 'Vancouverin keskusta on rakennettu. Oikeassa yläkulmassa on '
+      + 'Burrard Inletin satamavesi ja sen alla laiturien rivi; '
+      + 'kaupunki itse on kahta ruutukaavaa, jotka kohtaavat vinosti '
+      + 'kuvan halki kulkevalla saumalla. Oikeassa reunassa on '
+      + 'Chinatown, vasemmalla liikekeskustan korttelit ja '
+      + 'alareunassa stadionin soikio. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Halifaxissa ja Wellingtonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta ja geosearchista 7.9.2026. Pienin
+       * väli on 256 metriä (katedraali – keskuskirjasto), toiseksi
+       * pienin 310 metriä (taidegalleria – Orpheum).
+       */
+      { nimi: 'Harbour Centre', lat: 49.2846, lon: -123.1123 },
+      { nimi: 'Hotel Europe', lat: 49.28339722, lon: -123.10364722 },
+      { nimi: 'Vancouverin taidegalleria', lat: 49.282875, lon: -123.120464 },
+      { nimi: 'Pyhän ruusukon katedraali', lat: 49.28194444, lon: -123.11472222 },
+      { nimi: 'Sun Tower', lat: 49.281, lon: -123.1084 },
+      { nimi: 'Orpheum-teatteri', lat: 49.280096, lon: -123.120196 },
+      { nimi: 'Keskuskirjasto', lat: 49.279719, lon: -123.115625 },
+      /*
+       * PUUTARHAN PISTE ON SIIRRETTY 33 METRIÄ LOUNAASEEN.
+       * en-Wikipedian koordinaatti (49,279551 / −123,103416) osuu
+       * puutarhan omaan lampeen, ja tools/tarkista-karttapisteet.mjs
+       * raportoi sille 80 prosentin vesiosuuden. Vesi on tässä
+       * oikeaa vettä eikä työkalun vika, mutta numeroympyrä peittäisi
+       * juuri sen lammen, jonka takia kohde on kartalla. Piste on
+       * siirretty puutarhan lounaiskulmaan Carrall Streetin portille
+       * (osoite 578 Carrall Street); siirto on lyhyempi kuin
+       * numeroympyrän halkaisija, eikä se muuta kohteen paikkaa
+       * korttelin tarkkuudella.
+       */
+      { nimi: 'Sun Yat-senin puutarha', lat: 49.2794, lon: -123.1038 },
+    ],
+  },
+  /*
+   * TORONTO (7.9.2026). Rajaus on 2,5 × 3,2 kilometriä ja
+   * poikkeuksellisesti pystysuuntainen: kohteet asettuvat
+   * yliopistokorttelista rautatieasemalle University Avenuen
+   * suuntaiselle nauhalle. Perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n toronto-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat Fort
+   * York ja kaupungin nimi, vuosien 1849 ja 1904 palot, Distillery
+   * District, CN-torni, Yorkin taistelu, St. Lawrence Hall ja
+   * kuuden kaupungin yhdistyminen; alkuperäiskansasivu kertoo
+   * mississauga-kansasta, Toronton kaupasta ja Peter Jonesista.
+   * Matkaopas käsittelee St. Lawrencen torin, Scarborough'n
+   * jyrkänteet ja Niagaran. Yksikään kartan kohteista ei ole
+   * niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN POIS AIHESYISTÄ. CN-torni,
+   * Distillery District, St. Lawrencen tori ja St. Lawrence Hall
+   * ovat kaikki lehden nostoja. Casa Loma ja parlamenttitalo
+   * jätettiin samasta syystä pois: molemmat ovat lehden
+   * kansikuvan selitteen aihe, ja Casa Loma on lisäksi ruudun
+   * ulkopuolella pohjoisessa.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ, ja kaikki
+   * kolme ovat samassa kaupungintalojen ryppäässä: vanha
+   * kaupungintalo on 201 metriä uudesta, Osgoode Hall 182 metriä
+   * ja Nathan Phillipsin aukio on osa uuden kaupungintalon
+   * suunnitelmaa. Massey Hall taas on 124 metriä Elginin
+   * teattereista. Kummastakin parista valittiin se, jonka tarina
+   * kantaa kauimmas — Viljo Revellin kaupungintalo ja maailman
+   * viimeinen päällekkäinen teatteripari.
+   */
+  toronto: {
+    polku: 'assets/kartat/toronto-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 43.6705, etela: 43.6415, lansi: -79.4045, ita: -79.3735 },
+    esittely: 'Kartta kulkee pohjois-eteläsuunnassa yliopiston '
+      + 'kortteleista rautatieasemalle. Yläreunassa on Queen’s '
+      + 'Parkin puisto ja sen ympärillä yliopistoalue, keskellä '
+      + 'liikekeskustan ruutukaava ja alareunassa ratapiha, joka '
+      + 'katkaisee kaupungin poikkisuunnassa. Vasemmassa reunassa '
+      + 'on Kensingtonin torin pieni kortteliverkko. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta ja
+       * geosearchista 7.9.2026. Pienin väli on 369 metriä
+       * (jääkiekkomuseo – rautatieasema), toiseksi pienin 381
+       * metriä (kaupungintalo – Elgin ja Winter Garden).
+       */
+      { nimi: 'Ontarion kuninkaallinen museo', lat: 43.667679, lon: -79.394809 },
+      { nimi: 'University College', lat: 43.66277778, lon: -79.39555556 },
+      { nimi: 'Kensingtonin tori', lat: 43.65477222, lon: -79.40067778 },
+      { nimi: 'Ontarion taidegalleria', lat: 43.65361111, lon: -79.39277778 },
+      { nimi: 'Kaupungintalo', lat: 43.65333333, lon: -79.38388889 },
+      { nimi: 'Elgin ja Winter Garden', lat: 43.653056, lon: -79.379167 },
+      { nimi: 'Jääkiekkomuseo', lat: 43.6469, lon: -79.3772 },
+      { nimi: 'Rautatieasema', lat: 43.64444444, lon: -79.38027778 },
+    ],
+  },
+  /*
+   * CHICAGO (7.9.2026). Rajaus on 2,98 × 2,72 kilometriä eli Loopin
+   * ympärys kolmelta suunnalta — perustelu ja itäreunan valinta ovat
+   * tools/piirra-kaupunkikartta.mjs:n chicago-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * villisipulin nimi ja du Sable, vuoden 1871 suurpalo ja vesitorni,
+   * Home Insurance Building ja teräsrunko, Union Stock Yards,
+   * Home Insurance Buildingin purku, Chicago-ikkuna ja Rookery,
+   * joen kääntö, vuoden 1893 maailmannäyttely, Fort Dearborn,
+   * Chicago Portage, vuoden 1833 sopimus ja American Indian Center;
+   * matkaopas kertoo lisäksi kohoradasta, Loopista, Millennium
+   * Parkista ja arkkitehtuuriristeilystä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Vesitorni,
+   * Rookery, Home Insurance Buildingin tontti ja Millennium Park
+   * mahtuisivat kaikki ruutuun (faktapohja-chicago.md, osio 4 antaa
+   * niille koordinaatit), mutta ne ovat lehden omien nostojen aihe.
+   * Samasta syystä kartalla ei ole Wrigley Buildingia, Marina Cityä,
+   * Buckinghamin suihkulähdettä eikä Chicago Board of Traden taloa:
+   * ne ovat lehden kuvien aiheita.
+   *
+   * MONADNOCK BUILDING PUDOTETTIIN 200 METRIN SÄÄNNÖN RAJALTA: se on
+   * 229 metriä Marquette Buildingista eli juuri ja juuri säännön
+   * oikealla puolella, mutta niin lähellä, että kaksi numeroympyrää
+   * asettuisi vierekkäin samaan kortteliin.
+   *
+   * MUUT LOOPIN TALOT JÄIVÄT POIS AIHEIDEN VUOKSI EIKÄ ETÄISYYDEN.
+   * Chicago Union Station, Auditorium Building ja Reliance Building
+   * mahtuvat kaikki ruutuun, mutta kartalla on tilaa kahdeksalle
+   * kohteelle, ja kolme pilvenpiirtäjää lisää olisi kaventanut
+   * aiheiden kirjoa — nyt mukana on kauppa, työväenliike, elokuva,
+   * kirjasto, taide, arkkitehtuuri, korkeus ja sosiaalityö.
+   */
+  chicago: {
+    polku: 'assets/kartat/chicago-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 41.8915, etela: 41.8670, lansi: -87.6530, ita: -87.6170 },
+    esittely: 'Kartta näyttää Loopin ja sen laidat: yläreunassa '
+      + 'Chicago-joen haarat kohtaavat, keskellä on kohoradan '
+      + 'silmukan rajaama ruutukaava, oikeassa reunassa alkaa Grant '
+      + 'Parkin nurmi järveä kohti ja vasemmassa alakulmassa ovat '
+      + 'Near West Siden korttelit joen länsipuolella. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Halifaxissa ja Wellingtonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 277 metriä
+       * (Chicago Theatre – kulttuurikeskus), toiseksi pienin 480
+       * metriä (Marquette Building – Willis Tower).
+       */
+      { nimi: 'Merchandise Mart', lat: 41.8884, lon: -87.6355 },
+      { nimi: 'Chicago Theatre', lat: 41.88527778, lon: -87.62777778 },
+      { nimi: 'Haymarketin aukio', lat: 41.88488889, lon: -87.64413889 },
+      { nimi: 'Kulttuurikeskus', lat: 41.88388889, lon: -87.625 },
+      { nimi: 'Marquette Building', lat: 41.8795, lon: -87.63006944 },
+      { nimi: 'Taideinstituutti', lat: 41.87944444, lon: -87.62388889 },
+      { nimi: 'Willis Tower', lat: 41.8789, lon: -87.6358 },
+      { nimi: 'Hull House', lat: 41.87166667, lon: -87.6475 },
+    ],
+  },
+  /*
+   * LOS ANGELES (7.9.2026). Rajaus on 2,26 × 2,50 kilometriä eli
+   * keskustan kortteliruudukko Bunker Hillistä Broadwaylle —
+   * perustelu on tools/piirra-kaupunkikartta.mjs:n losangeles-
+   * lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat vuoden
+   * 1781 pueblo ja Zanja Madre, Pico House, rautatie ja öljy,
+   * akvedukti, vuoden 1815 tulva ja vanha plaza, San Pedron satama,
+   * Hollywood, maanjäristykset, tongvat ja Yaanga, pyhät lähteet,
+   * tongvien hallinto ja Mission San Gabriel; matkaopas kertoo
+   * lisäksi Union Stationista, Olvera Streetistä, Ávila-adobesta,
+   * Bradbury Buildingista, Griffithin observatoriosta ja Venicestä,
+   * ja kuvatekstit Watts Towersista, Getty Centeristä ja Coliseumin
+   * olympialaisista. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * PLAZAN KORTTELI JÄTETTIIN KOKONAAN POIS. El Pueblo, Ávila-adobe,
+   * Pico House, plazan kirkko ja Olvera Street ovat kaikki noin
+   * kilometrin päässä koillisessa ja mahtuisivat väljempään ruutuun,
+   * mutta ne ovat lehden neljän noston ja matkaoppaan aihe — koko
+   * kortteli on siis lehden aluetta eikä kartan.
+   *
+   * BILTMORE-HOTELLI PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: se on 78
+   * metriä Pershing Squaresta, koska se on aukion naapuritalo kadun
+   * yli. Grand Central Market jäi pois toisesta syystä: sen
+   * en-Wikipedia-artikkelilla ei ole koordinaatteja lainkaan (haku
+   * 7.9.2026), eikä kartalle panna pistettä, jonka paikka on arvattu.
+   *
+   * ANGELS FLIGHT ON KÖYSIRATA, JA SEN PISTE ON ALAASEMALLA. Rata on
+   * 91 metriä pitkä, eli sen kaksi asemaa eivät mahtuisi kartalle
+   * kahtena merkkinä; en-Wikipedian koordinaatti osoittaa Hill
+   * Streetin puoleiseen alapäähän, ja piste on siinä.
+   */
+  losangeles: {
+    polku: 'assets/kartat/losangeles-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 34.0610, etela: 34.0385, lansi: -118.2595, ita: -118.2350 },
+    esittely: 'Kartta kattaa Los Angelesin keskustan ruutukaavan: '
+      + 'yläreunassa on hallintokortteleiden Civic Center, vasemmalla '
+      + 'kohoaa Bunker Hillin rinne, keskellä kulkevat Grand Avenue '
+      + 'ja Hill Street ja alaoikealla jatkuu Broadwayn vanha '
+      + 'liikekatu. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 291 metriä (pääkirjasto – Pershing Square),
+       * toiseksi pienin 430 metriä (Angels Flight – Pershing Square).
+       */
+      { nimi: 'Fort Mooren muistomuuri', lat: 34.05833333, lon: -118.24194444 },
+      { nimi: 'Walt Disney -konserttitalo', lat: 34.05527778, lon: -118.25 },
+      { nimi: 'Kaupungintalo', lat: 34.0536, lon: -118.243 },
+      { nimi: 'Angels Flight', lat: 34.05133889, lon: -118.25021111 },
+      { nimi: 'Pääkirjasto', lat: 34.05027778, lon: -118.255 },
+      { nimi: 'Japanilaisamerikkalainen museo', lat: 34.04963889, lon: -118.23858333 },
+      { nimi: 'Pershing Square', lat: 34.04825, lon: -118.25301 },
+      { nimi: 'Eastern Columbia', lat: 34.0428, lon: -118.2555 },
+    ],
+  },
+  /*
+   * MONTEVIDEO (7.9.2026). Rajaus on 3,7 × 1,9 kilometriä Ciudad
+   * Viejan niemenkärjestä kaupungintalolle — perustelu ja kuvasuhteen
+   * mittaus ovat tools/piirra-kaupunkikartta.mjs:n montevideo-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat niemen
+   * perustaminen, luonnonsatama, isoisän matkavuoden tekniikka ja
+   * rambla; historiasivu kertoo Cabildosta, katedraalista, Ciudad
+   * Viejan muureista, brittimiehityksestä ja Teatro Solísista;
+   * musiikkisivu candombesta, Barrio Surista, Palacio Salvosta ja
+   * karnevaalista, ja matkaopas Estadio Centenariosta. Yksikään
+   * kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KUUSI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Cabildo,
+   * katedraali, Teatro Solís, Palacio Salvo, Mercado del Puerto ja
+   * Puerta de la Ciudadela ovat kaikki ruudussa (faktapohja-
+   * montevideo.md, osio 4 antaa niille koordinaatit), mutta ne ovat
+   * lehden omien juttujen aihe. Samasta syystä kartalla ei ole
+   * satamaa eikä Estadio Centenarioa — jälkimmäinen on sitä paitsi
+   * 4,7 kilometriä idässä.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Palacio Taranco
+   * on 188 metriä MAPI-museosta, Hospital Maciel 176 metriä ja Correo
+   * Uruguayo 162 metriä pörssistä. Ne mainitaan matkaoppaassa.
+   */
+  montevideo: {
+    polku: 'assets/kartat/montevideo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -34.8955, etela: -34.9130, lansi: -56.2200, ita: -56.1800 },
+    esittely: 'Kartan vasemmassa reunassa on Ciudad Viejan niemi, jolla '
+      + 'vesi kaartaa kolmelta sivulta: pohjoisessa sataman laiturit, '
+      + 'etelässä Río de la Plata. Niemeltä lähtee itään yksi '
+      + 'yhtenäinen ruutukaava, ja sen keskellä kulkee suorana 18 de '
+      + 'Julio -katu kaupungintalolle asti. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Halifaxissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 238 metriä
+       * (Torres Garcían museo – Estévez-palatsi), toiseksi pienin 329
+       * metriä (Estévez-palatsi – Sodren auditorio).
+       */
+      { nimi: 'Keskusasema', lat: -34.90027778, lon: -56.19444444 },
+      { nimi: 'Sodren auditorio', lat: -34.9042, lon: -56.1987 },
+      { nimi: 'Kaupungintalo', lat: -34.90555556, lon: -56.18416667 },
+      { nimi: 'Lapidon talo', lat: -34.90638889, lon: -56.19583333 },
+      { nimi: 'Torres Garcían museo', lat: -34.9065, lon: -56.20138889 },
+      { nimi: 'Estévez-palatsi', lat: -34.90711111, lon: -56.19938889 },
+      { nimi: 'Montevideon pörssi', lat: -34.90714722, lon: -56.20612778 },
+      { nimi: 'Alkuperäiskansojen taiteen museo', lat: -34.907525, lon: -56.21027778 },
+    ],
+  },
+  /*
+   * VALPARAÍSO (7.9.2026). Rajaus on 2,8 × 1,7 kilometriä: satama ja
+   * el plan yläreunassa, kukkuloiden mutkittelevat kadut alareunassa
+   * — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * valparaiso-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat Kap
+   * Hornin pysähdyspaikka, ascensorit, muraalit ja Unesco-status sekä
+   * Panaman kanava; historiasivu kertoo Alimapusta ja Iglesia de la
+   * Matrizista, brittiyhteisöstä ja British Archista, tekniikan
+   * ensimmäisistä ja vuoden 1906 järistyksestä; kirjallisuussivu
+   * El Mercuriosta, La Sebastianasta, Paseo Gervasonista ja Santiago
+   * Severínin kirjastosta, ja matkaopas kongressitalosta ja
+   * sähköbusseista. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KARTALLA EI OLE YHTÄÄN ASCENSORIA, vaikka ruudussa on neljä
+   * (Concepción, Reina Victoria, El Peral, Cordillera). Hissit ovat
+   * lehden oman noston K2 aihe, ja sama koskee Polancon hissiä ruudun
+   * ulkopuolella.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: pörssitalo on
+   * 116 metriä Baburizzan palatsista, oikeustalo 151 metriä Plaza
+   * Sotomayorista ja Cementerio N:o 1 vain 77 metriä
+   * toisinajattelijoiden hautausmaasta.
+   *
+   * NELJÄ KOHDETTA KAHDEKSASTA ON USKONNON HISTORIAA, ja se on
+   * tietoinen valinta eikä sattuma: satamakaupungissa, jossa laki
+   * salli vuoteen 1865 vain katolisen uskon, anglikaanien ikkunaton
+   * kirkko, toisinajattelijoiden hautausmaa, ranskalaisen
+   * sääntökunnan koulukirkko ja vasta 1950 valmistunut katolinen
+   * katedraali kertovat yhdessä yhden tarinan.
+   */
+  valparaiso: {
+    polku: 'assets/kartat/valparaiso-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -33.0355, etela: -33.0505, lansi: -71.6320, ita: -71.6020 },
+    esittely: 'Kartan yläreunaa täyttää lahti, jonka ympäri kaupunki '
+      + 'kaartuu. Rannan ja kukkuloiden väliin jää kapea tasanko, el '
+      + 'plan, jossa kadut kulkevat suorina riveinä; heti sen '
+      + 'eteläpuolella katuverkko alkaa mutkitella rinteitä ylös. '
+      + 'Vasemmassa yläkulmassa on satama ja oikeassa reunassa '
+      + 'El Almendralin kaupunginosa. Kartan kohteista pääsee lukemaan '
+      + 'lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 215 metriä (Plaza Sotomayor – Baburizzan
+       * palatsi), toiseksi pienin 266 metriä (Baburizzan palatsi –
+       * anglikaaninen katedraali).
+       */
+      { nimi: 'Plaza Sotomayor', lat: -33.03846667, lon: -71.62876667 },
+      { nimi: 'Baburizzan palatsi', lat: -33.0404, lon: -71.6289 },
+      { nimi: 'Anglikaaninen katedraali', lat: -33.04234, lon: -71.62723 },
+      { nimi: 'Valparaíson yliopisto', lat: -33.04388889, lon: -71.6175 },
+      { nimi: 'Katolinen yliopisto', lat: -33.04472222, lon: -71.60555556 },
+      { nimi: 'Toisinajattelijoiden hautausmaa', lat: -33.04526111, lon: -71.62503889 },
+      { nimi: 'Valparaíson katedraali', lat: -33.0462, lon: -71.619 },
+      { nimi: 'Pyhien sydänten kirkko', lat: -33.0484, lon: -71.6155 },
+    ],
+  },
+  /*
+   * NEW ORLEANS (7.9.2026). Rajaus on 2,2 × 3,2 kilometriä Tremésta
+   * Lafayette Squarelle — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * neworleans-lohkossa: Ranskan Kortteli yksin olisi liian kapea
+   * ruutu, ja liikekeskustan reuna tuo mukaan sen puolen kaupunkia,
+   * jota lehti ei näytä.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat joen
+   * puolikuun mutka, Louisianan kauppa, merenpinnan alapuolinen
+   * kaupunki, Katrina, espanjalainen tiili ja Pontalba-talot,
+   * höyrylaiva, vapaiden värillisten yhteisö, kuvernööri Pinchback,
+   * Congo Square, jazzin synty, Black Masking Indianit ja karnevaalin
+   * värit; matkaopas kertoo raitiovaunusta, beignet-munkeista Ranskan
+   * Korttelin torin laidalla, Tremésta ja Garden Districtistä sekä
+   * Superdomesta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe.
+   *
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS: Jackson
+   * Square, St. Louis -katedraali, Cabildo, Congo Square ja
+   * Preservation Hall mahtuisivat kaikki ruutuun
+   * (faktapohja-neworleans.md, osio 4 antaa niille koordinaatit),
+   * mutta ne ovat lehden omien nostojen aihe. Samasta syystä kartalla
+   * ei ole Ranskan Korttelin toria: Café du Monde sen laidalla on
+   * matkaoppaan ruokajakson aihe. Superdome, Garden District ja
+   * Lower Ninth Ward ovat sekä lehden aihe että ruudun ulkopuolella.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. Beauregard-Keyesin talo
+   * on 61 metriä Gallier Housesta eli 200 metrin säännön alle.
+   * Lafayette Square jätettiin pois aihesyistä eikä etäisyyden takia
+   * (244 metriä): se on Gallier Hallin oma aukio ja siten saman
+   * kohteen tausta. Vanha ursuliiniluostari jäi pois kolmannesta
+   * syystä: sen en-Wikipedian artikkelilla ei ole coordinates-arvoa
+   * (haku 7.9.2026), eikä koordinaattia arvata.
+   */
+  neworleans: {
+    polku: 'assets/kartat/neworleans-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 29.9685, etela: 29.9400, lansi: -90.0775, ita: -90.0545 },
+    esittely: 'Ruutu on pysty, ja Mississippi kaartaa sen oikeassa '
+      + 'reunassa penkereen takana. Yläosassa ovat Ranskan Korttelin '
+      + 'ja Tremén tiheät korttelit, keskeltä kulkee vinosti alas '
+      + 'oikealle leveä Canal Street, ja alaosassa liikekeskustan '
+      + 'korttelit kasvavat suuremmiksi. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Halifaxissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 348 metriä
+       * (vanha rahapaja – Gallier House), toiseksi pienin 460 metriä
+       * (Saenger-teatteri – puuvillapörssi).
+       */
+      { nimi: 'St. Augustinen kirkko', lat: 29.9652, lon: -90.0662 },
+      { nimi: 'Vanha rahapaja', lat: 29.96138889, lon: -90.05777778 },
+      { nimi: 'Gallier House', lat: 29.96132222, lon: -90.06139167 },
+      { nimi: 'Hermann-Griman talo', lat: 29.957125, lon: -90.06773056 },
+      { nimi: 'Saenger-teatteri', lat: 29.95579722, lon: -90.07284444 },
+      { nimi: 'Puuvillapörssi', lat: 29.95188611, lon: -90.07130278 },
+      { nimi: 'Tullitalo', lat: 29.95177222, lon: -90.06623056 },
+      { nimi: 'Gallier Hall', lat: 29.94632222, lon: -90.07139167 },
+    ],
+  },
+  /*
+   * BOGOTÁ (7.9.2026). Rajaus on 2,2 × 3,3 kilometriä
+   * Keskushautausmaalta Casa de Nariñolle — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n bogota-lohkossa: kaupungin
+   * vanha ydin on kapea nauha Itäkukkuloiden juurella, ja ruutu
+   * seuraa sitä pohjois–eteläsuunnassa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat kaupungin
+   * kolme nimeä, korkeus, ciclovía, eristys, Chorro de Quevedo, Plaza
+   * de Bolívar patsaineen ja katedraaleineen, Kansallismuseo, La
+   * Lechuga, muiscat, kultalautta, Guatavita ja nykyiset
+   * muisca-neuvostot; matkaopas kertoo TransMileniosta, ajiacosta ja
+   * Zipaquirán suolakatedraalista. Yksikään kartan kohteista ei ole
+   * niiden aihe.
+   *
+   * KOLME KOHDETTA JÄTETTIIN POIS LEHDEN TAKIA. Museo del Oro,
+   * Kansallismuseo ja Monserrate mahtuisivat ruutuun tai sen
+   * laitaan (faktapohja-bogota.md, osio 4), mutta ne ovat lehden
+   * omien nostojen ja kansikuvien aihe. Sama koskee Torre Colpatriaa:
+   * se on lehden avauskuvan aihe, ja siksi se ei ole kartan kohde,
+   * vaikka torni seisoo keskellä ruudun yläosaa.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN ETÄISYYDEN TAKIA: Luis Ángel Arangon
+   * kirjasto on 81 metriä Museo Boterosta, San Bartolomén koulu 214
+   * metriä oikeuspalatsista ja planetaario 225 metriä nykytaiteen
+   * museosta. Kaksi jälkimmäistä ylittävät 200 metrin rajan niukasti,
+   * mutta niin niukasti että numeroympyrät menisivät päällekkäin
+   * tämän kokoisessa ruudussa.
+   *
+   * SANTAMARÍAN AREENA (344 metriä nykytaiteen museosta) jäi pois
+   * lähdesyystä: sen en-Wikipedian artikkeli on tynkä, jossa on
+   * katsomon koko ja kaksi päätöstä härkätaisteluista, eikä siitä
+   * kirjoita juttua sortumatta arvailuun.
+   */
+  bogota: {
+    polku: 'assets/kartat/bogota-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 4.6195, etela: 4.5895, lansi: -74.0815, ita: -74.0620 },
+    esittely: 'Kartta seuraa vanhan Bogotán nauhaa Itäkukkuloiden '
+      + 'juurella: oikeassa reunassa rinteen vihreä alkaa ja '
+      + 'katuverkko loppuu kuin viivaimella vedettynä, keskellä '
+      + 'kulkevat pitkät pohjois–eteläsuuntaiset valtakadut ja '
+      + 'yläreunassa ne yhtyvät moottoritieksi. Alaosan tiheä '
+      + 'korttelikudos on La Candelarian siirtomaakaavaa. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 363 metriä (oikeuspalatsi – Museo Botero),
+       * toiseksi pienin 462 metriä (Hotel Tequendama – nykytaiteen
+       * museo).
+       */
+      { nimi: 'Keskushautausmaa', lat: 4.61638889, lon: -74.07527778 },
+      { nimi: 'Hotel Tequendama', lat: 4.61277778, lon: -74.07277778 },
+      { nimi: 'Nykytaiteen museo', lat: 4.61027778, lon: -74.06944444 },
+      { nimi: 'Andesin yliopisto', lat: 4.601613, lon: -74.065173 },
+      { nimi: 'Oikeuspalatsi', lat: 4.5989, lon: -74.0756 },
+      { nimi: 'Museo Botero', lat: 4.59665, lon: -74.07323 },
+      { nimi: 'Externadon yliopisto', lat: 4.595803, lon: -74.06836 },
+      { nimi: 'Casa de Nariño', lat: 4.59555556, lon: -74.0775 },
+    ],
+  },
+  /*
+   * PERTH (7.9.2026). Rajaus on 1,8 × 1,7 kilometriä eli pelin
+   * tiiviimpiä — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * perth-lohkossa: kaupungin vanha ydin on kapea nauha Wellington
+   * Streetin ja Swan-joen välissä, ja kaikki kahdeksan kohdetta
+   * mahtuvat siihen.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Goonininupin lähde, nimet Perth ja Boorloo, vankeja pyytänyt
+   * siirtokunta ja kullan tuoma rahapaja; historiasivu kertoo
+   * kaupungintalosta, kuvernöörintalosta, kuljetusten päättymisestä
+   * ja vankitaustan häpeästä, luontosivu Kings Parkista,
+   * Derbarl Yerriganista, kuudesta vuodenajasta ja joen ruoppauksesta,
+   * ja whadjukit-sivu Yaganista, pään palusta ja Yagan Squaresta.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS.
+   * Kaupungintalo, kuvernöörintalo, rahapaja, Kings Park ja
+   * Heirisson Island ovat kaikki faktapohja-perth.md:n osion 4
+   * kymmenen kohteen listalla ja mahtuisivat ruutuun tai sen viereen,
+   * mutta ne ovat lehden omien nostojen aihe. Samasta syystä kartalla
+   * ei ole Yagan Squarea eikä Elizabeth Quayta: edellinen on
+   * whadjukit-sivun Y4-noston aihe, jälkimmäinen lehden kansikuva ja
+   * matkaoppaan lauttalaiturin osoite.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. Länsi-Australian
+   * taidegalleria on 174 metriä museosta ja Council House 114 metriä
+   * St George'n katedraalista eli 200 metrin säännön alle, ja
+   * Perthin kasarmin holvi (Barracks Arch) on lehden H4-noston
+   * kuva-aihe. Kaikki kolme mainitaan matkaoppaassa.
+   *
+   * SWAN BELLS ON KARTAN AINOA RANTAPISTE. Kellotorni seisoo Barrack
+   * Squaren täyttömaalla aivan Perth Waterin reunassa, ja
+   * tools/tarkista-karttapisteet.mjs voi raportoida sen ympäriltä
+   * vesiosuutta — itse piste on maalla laiturin juurella samalla
+   * perusteella kuin Marseillen satama-allas.
+   */
+  perth: {
+    polku: 'assets/kartat/perth-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -31.9470, etela: -31.9620, lansi: 115.8510, ita: 115.8700 },
+    esittely: 'Kartta näyttää Perthin vanhan ytimen sellaisena kuin se '
+      + 'mahtuu kahden viivan väliin: yläreunassa kulkee Wellington '
+      + 'Street ratapihoineen ja alareunassa Swan-joki, jonka '
+      + 'pohjoisrantaa myöten kaupunki levisi. Keskellä kulkevat '
+      + 'itä–länsi-suuntaiset Hay Street ja St Georges Terrace, joiden '
+      + 'varrella ovat kaupungin vanhimmat julkiset talot. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Christchurchissa. Koordinaatit
+       * en-Wikipedian coordinates-rajapinnasta 7.9.2026. Pienin väli
+       * on 219 metriä (St George'n katedraali – vanha oikeustalo),
+       * toiseksi pienin 224 metriä (His Majesty's -teatteri –
+       * Wesleyn kirkko).
+       */
+      { nimi: 'Länsi-Australian museo', lat: -31.949629, lon: 115.862402 },
+      { nimi: "His Majesty's -teatteri", lat: -31.95308, lon: 115.85444 },
+      { nimi: 'Wesleyn kirkko', lat: -31.9533, lon: 115.8568 },
+      { nimi: 'London Court', lat: -31.954815, lon: 115.858945 },
+      { nimi: "St Mary's -katedraali", lat: -31.9556, lon: 115.8665 },
+      { nimi: "St George'n katedraali", lat: -31.955753, lon: 115.861292 },
+      { nimi: 'Vanha oikeustalo', lat: -31.9576, lon: 115.8605 },
+      { nimi: 'Swan Bells', lat: -31.958903, lon: 115.858243 },
+    ],
+  },
+  /*
+   * ADELAIDE (7.9.2026). Rajaus on 2,0 × 2,2 kilometriä ja se on
+   * tarkoituksella pystysuuntainen: kohteet ovat nauhassa, joka
+   * alkaa North Adelaiden katedraalilta ja päättyy kaupungintalolle
+   * King William Streetin varrella. Perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n adelaide-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * vankiton siirtokunta, päänsä pitänyt piirtäjä, autoilta suljettu
+   * Rundle Mall ja kaurnat; historiasivu kertoo Adelaide Ovalista,
+   * julistuspuusta, vankilasta ja lamasta, luontosivu
+   * puistorenkaasta, Torrensista, kasvitieteellisestä puutarhasta ja
+   * Victoria Squaresta, ja saksalaisperintösivu Hahndorfista sekä
+   * Barossasta. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * KOLME ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Adelaide
+   * Oval, Adelaide Gaol ja kasvitieteellinen puutarha ovat kaikki
+   * faktapohja-adelaide.md:n osion 4 listalla ja mahtuisivat ruutuun
+   * tai sen viereen, mutta ne ovat lehden omien nostojen aihe.
+   * Samasta syystä kartalla ei ole Rundle Mallia, Victoria Squarea
+   * eikä Keskustoria: kaksi ensimmäistä ovat nostoja ja kolmas
+   * matkaoppaan arjen ilmiö.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: parlamenttitalo
+   * on 194 metriä kuvernöörintalosta ja 196 metriä rautatieasemasta,
+   * ja Etelä-Australian taidegalleria on 83 metriä museosta.
+   * Molemmat mainitaan matkaoppaassa.
+   *
+   * PÄÄPOSTITALON KOORDINAATTI ON SAMA KUIN KAUPUNGINTALON. Kumpikin
+   * artikkeli antaa en-Wikipedian coordinates-rajapinnassa pisteen
+   * -34,9261 / 138,60018 (haettu 7.9.2026), vaikka talot ovat eri
+   * kortteleissa. Karttaan otettiin vain kaupungintalo — kahta
+   * kohdetta ei voi merkitä samaan pisteeseen.
+   */
+  adelaide: {
+    polku: 'assets/kartat/adelaide-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -34.9110, etela: -34.9310, lansi: 138.5930, ita: 138.6145 },
+    esittely: 'Kartta näyttää Adelaiden ruutukaavan pohjoisosan ja sen '
+      + 'yli North Adelaiden puolelle: keskellä kaartaa Torrens-joki, '
+      + 'sen molemmin puolin levittäytyy puistorengas, ja alaosassa '
+      + 'alkavat suorat kadut. Pystysuora keskilinja on King William '
+      + 'Street, ja poikittain kulkee North Terrace, jonka varrella '
+      + 'ovat museo, kuvernöörintalo ja rautatieasema. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026;
+       * Tandanyan piste on artikkelin raakatekstin coord-mallineesta,
+       * koska rajapinta ei palauta sille koordinaattia. Pienin väli
+       * on 223 metriä (festivaalikeskus – rautatieasema), toiseksi
+       * pienin 244 metriä (festivaalikeskus – kuvernöörintalo).
+       */
+      { nimi: 'St Peterin katedraali', lat: -34.91277778, lon: 138.59805556 },
+      { nimi: 'Eläintarha', lat: -34.91416667, lon: 138.60583333 },
+      { nimi: 'Festivaalikeskus', lat: -34.91944444, lon: 138.59777778 },
+      { nimi: 'Kuvernöörintalo', lat: -34.920126, lon: 138.600321 },
+      { nimi: 'Etelä-Australian museo', lat: -34.920783, lon: 138.603017 },
+      { nimi: 'Rautatieasema', lat: -34.9211, lon: 138.5964 },
+      { nimi: 'Tandanya', lat: -34.9241, lon: 138.6105 },
+      { nimi: 'Kaupungintalo', lat: -34.9261, lon: 138.60018333 },
+    ],
+  },
+  /*
+   * HAVANNA (7.9.2026). Rajaus on 2,3 × 1,8 kilometriä vanhan
+   * kaupunginmuurin alalta Pradon reunaan — perustelu ja itäreunan
+   * valinta ovat tools/piirra-kaupunkikartta.mjs:n havanna-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * kaupungin kaksi siirtoa, Uuden maailman avain, kaupunginmuurin
+   * purkaminen ja Havanna–Bejucal-rata; historiasivu kertoo de Soresin
+   * hyökkäyksestä ja Real Fuerzasta, 1700-luvun väkiluvusta, vuoden
+   * 1762 brittivalloituksesta ja USS Mainen tuhosta; linnoitussivu
+   * vaakunasta, Morrosta, La Cabañasta ja maailmanperinnöstä; opas
+   * amerikanautoista, Malecónista, sonista ja ilmastosta. Yksikään
+   * kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Castillo de
+   * la Real Fuerza (23,1414 / -82,3487), Morro, La Cabaña ja Punta
+   * mahtuisivat kolmea jälkimmäistä lukuun ottamatta ruutuun, mutta ne
+   * ovat lehden linnoitussivun neljän noston aihe. Malecón jätettiin
+   * pois samasta syystä: se on matkaoppaan jakson 2 aihe.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Gran Teatro on
+   * 181 metriä Capitoliosta ja Museo Nacional de Bellas Artes 147
+   * metriä Bacardí-talosta. Kummastakin parista valittiin se, jonka
+   * juttu kertoo enemmän kaupungin omasta historiasta.
+   *
+   * EL TEMPLETE EI OLE OMA KOHTEENSA VAAN OSA PLAZA DE ARMASIA. Se on
+   * 140 metriä kuvernöörin palatsista eli säännön alle, ja se on
+   * kirjoitettu Plaza de Armasin juttuun.
+   */
+  havanna: {
+    polku: 'assets/kartat/havanna-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 23.1450, etela: 23.1290, lansi: -82.3645, ita: -82.3430 },
+    esittely: 'Kartan alue on se, jonka sisällä Havanna eli kolmesataa '
+      + 'vuotta muurien takana: oikeassa reunassa on satamalahti, '
+      + 'keskellä vanhankaupungin ahdas ruudukko neljine aukioineen ja '
+      + 'vasemmalla se leveä kaari, jonka muurien purkaminen jätti '
+      + 'jälkeensä — Prado ja Capitolion aukio. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Halifaxissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 201 metriä
+       * (San Franciscon basilika – Plaza Vieja), toiseksi pienin 249
+       * metriä (El Capitolio – Intiaanittaren lähde).
+       */
+      { nimi: 'Katedraaliaukio', lat: 23.140892, lon: -82.351628 },
+      { nimi: 'Plaza de Armas', lat: 23.14, lon: -82.349167 },
+      { nimi: 'Bacardí-talo', lat: 23.1389, lon: -82.3571 },
+      { nimi: 'San Franciscon basilika', lat: 23.136944, lon: -82.348333 },
+      { nimi: 'Plaza Vieja', lat: 23.136078, lon: -82.350061 },
+      { nimi: 'El Capitolio', lat: 23.135278, lon: -82.359444 },
+      { nimi: 'Intiaanittaren lähde', lat: 23.133272, lon: -82.358361 },
+      { nimi: 'Pyhän Hengen kirkko', lat: 23.1325, lon: -82.3504 },
+    ],
+  },
+  /*
+   * MEXICO CITY (7.9.2026). Rajaus on 2,2 × 2,2 kilometriä eli lähes
+   * neliö historiallisen keskustan pohjoispuoliskosta — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n mexico-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat kotka ja
+   * kaktus, vuoden 1521 piiritys, vajoava kaupunki ja Zócalon nimi;
+   * historiasivu kertoo palatsien kaupungista, Chapultepecin linnasta,
+   * Reforman bulevardista ja Alameda Centralista; atsteekkisivu Templo
+   * Mayorista, nahuatlista, chinampoista ja nykyisestä perinnöstä.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS, ja kaikki
+   * viisi ovat ruudun sisällä: Zócalo, katedraali, kansallispalatsi,
+   * Templo Mayor ja Alameda Centralin itäpää. Ne näkyvät kartalla
+   * katuverkkona ja puistona mutta ilman numeroa, koska niiden tarina
+   * on jo lehdessä.
+   *
+   * PALACIO DE BELLAS ARTES ON KUUDES POISJÄTETTY. Sitä ei jätetty
+   * etäisyyden takia vaan siksi, että lehden vajoamisnostossa
+   * marmoripalatsi on nimenomaisena esimerkkinä; kartan piste kertoisi
+   * saman rakennuksen uudelleen.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Casa de los
+   * Azulejos on 86 metriä San Franciscon luostarikirkosta,
+   * Iturbiden palatsi 144 metriä samasta, ja Museo Nacional de Arte
+   * 127 metriä Palacio de Correosista.
+   */
+  mexico: {
+    polku: 'assets/kartat/mexico-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 19.445, etela: 19.425, lansi: -99.1475, ita: -99.1265 },
+    esittely: 'Kartta näyttää sen ruutukaavan, jonka espanjalaiset '
+      + 'piirsivät Tenochtitlanin raunioiden päälle: kadut kohtaavat '
+      + 'suorassa kulmassa, ja korttelit ovat lähes samankokoisia. '
+      + 'Oikeassa alakulmassa on Zócalon aukea, keskellä kulkee Madero '
+      + 'ja vasemmassa reunassa alkaa Alameda Centralin puisto. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 250 metriä (Palacio de Correos – San Franciscon
+       * luostarikirkko), toiseksi pienin 310 metriä (San Ildefonso –
+       * Kansojen museo).
+       */
+      { nimi: 'Plaza Garibaldi', lat: 19.441, lon: -99.139 },
+      { nimi: 'Santo Domingon aukio', lat: 19.438378, lon: -99.133717 },
+      { nimi: 'Kaupunginteatteri', lat: 19.436561, lon: -99.137267 },
+      { nimi: 'San Ildefonson kollegio', lat: 19.43605, lon: -99.130658 },
+      { nimi: 'Postipalatsi', lat: 19.435686, lon: -99.1404 },
+      { nimi: 'San Franciscon luostarikirkko', lat: 19.43345, lon: -99.140197 },
+      { nimi: 'Kansojen museo', lat: 19.433269, lon: -99.130464 },
+      { nimi: 'Vizcaínas-koulu', lat: 19.428433, lon: -99.140711 },
+    ],
+  },
+  /*
+   * HOBART (7.9.2026). Rajaus on 1,8 × 1,8 kilometriä eli pelin
+   * tiiviimpiä: Hobartin vanha ruutukaava mahtuu kokonaan Campbell
+   * Streetin vankilalta Anglesean kasarmille, ja perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n hobart-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * siirtokunnan siirto Sullivans Coveen, valaanpyynnin satama,
+   * palawa-kansan jatkuvuus ja Kellyn portaat; historiasivu kertoo
+   * Mustasta linjasta, Theatre Royalista, Cascaden panimosta ja Port
+   * Arthurista, luontosivu kunanyista, valaista, Etelämanner-portista
+   * ja Hobart Rivuletin vesinokkaeläimistä, nykytaidesivu MONAsta,
+   * Dark Mofosta, Salamanca Arts Centrestä ja Sidney Nolanin
+   * Käärmeestä. Yksikään kartan kahdeksasta kohteesta ei ole niiden
+   * aihe.
+   *
+   * NELJÄ KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ. Macquarie- ja
+   * Argyle-katujen kulmassa seisoo viisi kohdetta sadan metrin
+   * säteellä: kaupungintalo on 105 metriä Tasmanian museosta,
+   * merimuseo 84 metriä kaupungintalosta, Ingle Hall 53 metriä ja
+   * vanhan kuvernöörintalon paikka 56 metriä samasta. Kartalle jäi
+   * museo, koska sen tarina alkaa 1846 ja kantaa mukanaan sekä vuoden
+   * 1810 muonavaraston että vuoden 1902 tullitalon.
+   *
+   * PARLAMENTTITALON KOORDINAATIT LUETTIIN ARTIKKELISTA "Parliament of
+   * Tasmania", koska rakennuksen omassa artikkelissa "Parliament
+   * House, Hobart" ei ole coordinates-lohkoa (haku 7.9.2026). Sama
+   * talo, sama piste; juttu on kirjoitettu rakennuksen artikkelista.
+   *
+   * KAKSI KATEDRAALIA ON TARKOITUKSELLINEN PARI eikä toistoa: St Mary
+   * on katolinen ja purettiin kerran kokonaan rakennusvirheiden takia,
+   * St David on anglikaaninen ja rakentui 1868–1936. Molemmat ovat
+   * Henry Hunterin ja George Frederick Bodleyn kaupunkia, ja
+   * jälkimmäinen antaa kartan länsireunalle ainoan kohteen.
+   */
+  hobart: {
+    polku: 'assets/kartat/hobart-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -42.8750, etela: -42.8910, lansi: 147.3165, ita: 147.3385 },
+    esittely: 'Kartta näyttää Hobartin vanhan ruutukaavan sellaisena '
+      + 'kuin se piirrettiin rinteeseen: kadut laskevat lännen mäiltä '
+      + 'itään satamaan, ja oikeassa reunassa avautuu Sullivans Coven '
+      + 'poukama. Yläreunassa on Queens Domainin nurmi, alareunassa '
+      + 'Battery Pointin niemi. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Christchurchissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 245 metriä
+       * (St Davidin katedraali – parlamenttitalo), toiseksi pienin
+       * 259 metriä (Campbell Streetin vankila – synagoga).
+       */
+      { nimi: 'Campbell Streetin vankila', lat: -42.8774, lon: 147.3270 },
+      { nimi: 'Sotamuistomerkki', lat: -42.8775, lon: 147.33611111 },
+      { nimi: 'Hobartin synagoga', lat: -42.879628, lon: 147.327939 },
+      { nimi: 'St Maryn katedraali', lat: -42.88111, lon: 147.31926 },
+      { nimi: 'Tasmanian museo', lat: -42.8819, lon: 147.3319 },
+      { nimi: 'St Davidin katedraali', lat: -42.8835, lon: 147.3285 },
+      { nimi: 'Parlamenttitalo', lat: -42.88527778, lon: 147.33027778 },
+      { nimi: 'Anglesean kasarmi', lat: -42.888745, lon: 147.325496 },
+    ],
+  },
+  /*
+   * DARWIN (7.9.2026). Rajaus on 1,6 × 1,6 kilometriä ja kattaa koko
+   * sen törmän, jolle keskusta mahtuu — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n darwin-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Palmerstonin nimenvaihto, yleislennätin, larrakia-kansa, neljä
+   * jälleenrakennusta, Mindil Beachin markkinat, vuoden 1918 kapina,
+   * vuoden 1942 pommitus, hirmumyrsky Tracy, Pine Creekin rata,
+   * Government House, sademäärä, suolavesikrokotiilit, kasvitieteel-
+   * linen puutarha, Charles Darwinin kansallispuisto, Fannie Bayn
+   * vankila, MAGNT, katutaidefestivaali ja Christ Church -katedraali.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * FORT HILL JÄTETTIIN POIS, vaikka se olisi ruudun paras itäkohde:
+   * lehden nosto K4 kantaa jo kuvan "Fort Hill 1870.jpg" ja
+   * wiki-otsikon "Fort Hill (Darwin)", eli kartta toistaisi lehden
+   * oman linkin. Samasta syystä pois jäivät vanhan kaupungintalon
+   * rauniot (lehden nosto K4:n kuva) ja Government House (nosto H4).
+   *
+   * BROWN'S MART PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: se on 182 metriä
+   * Star-teatterista, ja parista jäi teatteri, koska sen tarina
+   * (Jeddan ensi-ilta 1955 ja parven jako) ei ole missään muualla
+   * pelissä. Supreme Court on 167 metriä Brown's Martista ja 126
+   * metriä parlamenttitalosta, joten State Squarelta mahtui kartalle
+   * vain yksi talo. Esplanadin kolmikosta (Lyons Cottage, Lameroon
+   * ranta, Hotel Darwin) mahtui kaksi: Lyons Cottage on 144 metriä
+   * rannasta ja 194 metriä Hotel Darwinista.
+   *
+   * PARLAMENTTITALO ON LEHDESSÄ VAIN KUVANA (matkailijan sivun
+   * kuvituskuva), ei jutun aiheena, joten se saa olla kartalla —
+   * Wellingtonin sääntö: sama kohde saa esiintyä molemmissa, sama
+   * tiedosto ei.
+   */
+  darwin: {
+    polku: 'assets/kartat/darwin-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -12.4565, etela: -12.4705, lansi: 130.8337, ita: 130.8480 },
+    esittely: 'Kartta kattaa Darwinin niemen kärjen: vasemmalla ja '
+      + 'ylhäällä on avomeri, oikealla Darwin Harbour ja niiden '
+      + 'välissä kapea törmä, jolle koko keskusta mahtuu. Vasenta '
+      + 'reunaa kulkee Esplanadin puistokaista, keskellä on Smith '
+      + 'Streetin ruutukaava ja alhaalla State Squaren hallintokortteli. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 216 metriä (Hotel Darwin – parlamenttitalo),
+       * toiseksi pienin 237 metriä (Meren tähden katedraali –
+       * Bicentennial-puisto).
+       */
+      { nimi: 'Meren tähden katedraali', lat: -12.45913, lon: 130.838199 },
+      { nimi: 'Bicentennial-puisto', lat: -12.460945, lon: 130.837061 },
+      { nimi: 'Vic-hotelli', lat: -12.46199444, lon: 130.84261944 },
+      { nimi: 'Star-teatteri', lat: -12.46409, lon: 130.84306 },
+      { nimi: 'Lameroon ranta', lat: -12.4652, lon: 130.8386 },
+      { nimi: 'Hotel Darwin', lat: -12.465814, lon: 130.840987 },
+      { nimi: 'Parlamenttitalo', lat: -12.46666667, lon: 130.84277778 },
+      { nimi: 'Mutamaja', lat: -12.46776, lon: 130.844704 },
+    ],
+  },
+  /*
+   * LIMA (7.9.2026). Rajaus on 1,9 × 1,8 kilometriä eli pelin
+   * tiiviimpiä — Christchurchia pienempi. Perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n lima-lohkossa: Pizarron 1535
+   * mittaama ruutukaava mahtui muurien sisään, ja kaikki kahdeksan
+   * kohdetta ovat yhä sen sisällä.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * kaupungin perustaminen ja Plaza Mayor, kaupunginmuurin
+   * purkaminen, sateeton ilmasto ja Huaca Pucllana; historiasivu
+   * kertoo Ichman laaksosta, vuoden 1746 järistyksestä, guanosta ja
+   * Andien radasta, ruokasivu gastronomiasta, cevichestä, Barrio
+   * Chinon chifasta ja Misturasta. Matkaopas käsittelee lentokentän,
+   * alueen rakenteen, Mirafloresin kallionreunan ja Callaon 1866.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME FAKTAPOHJAN EHDOTUSTA JÄTETTIIN POIS. Plaza Mayor,
+   * hallituksen palatsi ja Desamparadosin rautatieasema ovat kaikki
+   * ruudun sisällä (faktapohja-lima.md, osio 4 antaa niille
+   * koordinaatit). Kaksi ensimmäistä ovat lehden noston K1 aihe;
+   * kolmas jätettiin pois, koska Andien rata on noston H4 aihe eikä
+   * lukija erottaisi asemaa radasta.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Santo Domingon
+   * luostari on 77 metriä Casa de Osambelasta ja Teatro Segura 152
+   * metriä San Agustínin kirkosta. Molemmat mainitaan matkaoppaassa.
+   */
+  lima: {
+    polku: 'assets/kartat/lima-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -12.0400, etela: -12.0570, lansi: -77.0400, ita: -77.0235 },
+    esittely: 'Kartta näyttää Liman vanhankaupungin ruutukaavan '
+      + 'kokonaisuudessaan: yläreunassa mutkittelee Rímac-joki, '
+      + 'keskellä kadut leikkaavat toisensa suorassa kulmassa niin '
+      + 'kuin ne mitattiin 1535, ja alaoikealla kaartaa leveä '
+      + 'valtaväylä, joka kulkee vanhan kaupunginmuurin linjaa. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Halifaxissa ja Wellingtonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026. Pienin väli on 309 metriä
+       * (San Franciscon luostari – Inkvisition museo), toiseksi
+       * pienin 327 metriä (Santa Rosan pyhäkkö – Casa de Osambela).
+       */
+      { nimi: 'Santa Rosan pyhäkkö', lat: -12.0426, lon: -77.0353 },
+      { nimi: 'Casa de Osambela', lat: -12.0439, lon: -77.0326 },
+      { nimi: 'San Franciscon luostari', lat: -12.04549722, lon: -77.02739444 },
+      { nimi: 'Las Nazarenasin pyhäkkö', lat: -12.04556389, lon: -77.03736694 },
+      { nimi: 'Inkvisition museo', lat: -12.04808, lon: -77.02634 },
+      { nimi: 'Torre Taglen palatsi', lat: -12.04884, lon: -77.02931 },
+      { nimi: 'Plaza San Martín', lat: -12.0515, lon: -77.0345 },
+      { nimi: 'Casona de San Marcos', lat: -12.0545, lon: -77.0322 },
+    ],
+  },
+  /*
+   * QUITO (7.9.2026). Rajaus on 2,4 kilometriä korkea ja 2,1 leveä,
+   * ja pystysuuntainen venytys on tahallinen: Quiton vanhakaupunki on
+   * pitkä pohjois–eteläsuuntainen nauha kahden rinteen välissä.
+   * Perustelu on tools/piirra-kaupunkikartta.mjs:n quito-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat inkojen
+   * ja espanjalaisten Quito, korkeus ja päiväntasaaja, vanhankaupungin
+   * maailmanperintöasema ja Pichinchan tulivuori; historiasivu kertoo
+   * San Franciscosta, La Compañíasta, Pichinchan taistelusta ja
+   * observatoriosta, tiedesivu astemittausretkestä, heilurikokeesta,
+   * Cotopaxista ja observatorion perinnöstä. Yksikään kartan
+   * kohteista ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. San
+   * Franciscon luostari, La Compañían kirkko, Quiton observatorio ja
+   * Mitad del Mundo ovat kaikki faktapohja-quito.md:n osion 4
+   * ehdotuksia, ja kolme ensimmäistä mahtuisi tähän ruutuun — mutta
+   * ne ovat lehden omien nostojen aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: Sucren
+   * talomuseo on 111 metriä El Sagrariosta, Alberto Mena Caamañon
+   * museo 99 metriä samasta kirkosta ja Teatro Bolívar 164 metriä San
+   * Agustínista.
+   */
+  quito: {
+    polku: 'assets/kartat/quito-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -0.2120, etela: -0.2340, lansi: -78.5230, ita: -78.5045 },
+    esittely: 'Kartan yläosassa on Quiton vanhankaupungin tiheä '
+      + 'ruutukaava, joka kallistuu vinoon laakson suunnan mukana. '
+      + 'Alavasemmalla kohoaa Panecillon kukkula omine '
+      + 'korkeuskäyrineen, oikeassa reunassa laskee Machángara-joen '
+      + 'uoma, ja niiden välissä kaupunki loppuu rinteeseen. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026.
+       * Pienin väli on 220 metriä (Casa del Alabado – Kaupunkimuseo),
+       * toiseksi pienin 262 metriä (San Agustínin luostari – El
+       * Sagrarion kirkko).
+       */
+      { nimi: 'Voto Nacionalin basilika', lat: -0.2150, lon: -78.5074 },
+      { nimi: 'La Mercedin basilika', lat: -0.2182, lon: -78.5137 },
+      { nimi: 'San Agustínin luostari', lat: -0.22033325, lon: -78.51047644 },
+      { nimi: 'El Sagrarion kirkko', lat: -0.2207, lon: -78.5128 },
+      { nimi: 'Casa del Alabado', lat: -0.221258, lon: -78.515822 },
+      { nimi: 'Kaupunkimuseo', lat: -0.22305556, lon: -78.515 },
+      { nimi: 'El Panecillo', lat: -0.22861111, lon: -78.51861111 },
+      { nimi: 'Vuoden 1909 näyttelypalatsi', lat: -0.2310, lon: -78.5123 },
+    ],
+  },
+  /*
+   * PORT MORESBY (7.9.2026). Rajaus on 7,5 × 7,4 kilometriä eli
+   * paketin väljimpiä — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * portmoresby-lohkossa: kaupunki jakautuu kolmeen osaan, jotka ovat
+   * kuuden ja seitsemän kilometrin päässä toisistaan, ja vanhassa
+   * keskustassa on en-Wikipedian koordinaattirajapinnassa vain yksi
+   * kelvollinen kohde.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat sataman
+   * nimi 1873, motut ja koitat, Hanuabada ja pääkaupungiksi tulo;
+   * matkaopas kertoo Jacksonsin lentoasemasta, kaupungin kolmesta
+   * osasta, Kokin torista ja sadevarjosta; historiasivu Basiliskista,
+   * lähetysseuran neljästä opettajasta, tulematta jääneestä
+   * kultaryntäyksestä ja kahdesti nostetusta lipusta; hirisivu
+   * lakatoi-purjehduksista; taidesivu kansallismuseosta ja
+   * palautetuista esineistä. Yksikään kartan kahdeksasta kohteesta ei
+   * ole niiden aihe.
+   *
+   * KANSALLISMUSEO JÄTETTIIN TARKOITUKSELLA POIS, vaikka se on
+   * kolmensadan metrin päässä parlamenttitalosta ja mahtuisi ruutuun
+   * vaivatta: sille on lehden taidesivulla neljä nostoa. Samasta
+   * syystä kartalla ei ole Kokin toria eikä Hanuabadaa.
+   *
+   * PARLAMENTTITALO JA KANSALLISKIRJASTO OVAT KARTALLA, vaikka
+   * matkaoppaan jakso "Alueen rakenne" mainitsee ne nimeltä. Maininta
+   * on luettelo siitä, mitä Waiganissa on ("siellä ovat parlamentti,
+   * kansallismuseo ja kansalliskirjasto"); kummankaan tarinaa lehti ei
+   * kerro, ja New Yorkin sääntö koskee lehden juttujen aiheita, ei
+   * jokaista siinä esiintyvää nimeä. Museon kohdalla raja ylittyisi,
+   * ja siksi museo jäi pois.
+   *
+   * BISININ URHEILUPUISTO ON KARTALLA VAIN KERRAN. Puiston neljästä
+   * kentästä PMRL Stadium ja PNG Football Stadium ovat 93 metrin
+   * päässä toisistaan eli 200 metrin säännön alla; kartalle valittiin
+   * Amini Park, koska se on krikettiliiton kotikenttä ja ainoa, jonka
+   * tarina ei ole toisen kentän tarina.
+   */
+  portmoresby: {
+    polku: 'assets/kartat/portmoresby-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -9.4235, etela: -9.4905, lansi: 147.1429, ita: 147.2109 },
+    esittely: 'Kartan alue kattaa kaupungin kaikki kolme osaa. '
+      + 'Vasemmassa alanurkassa on Townin niemi, vanha keskusta, jonka '
+      + 'toisella puolella on Fairfax Harbourin satamavesi ja toisella '
+      + 'Papuanlahti; keskellä ovat kuivat kukkulat, joiden yli päätiet '
+      + 'kaartavat; oikealla on Boroko ja oikeassa ylänurkassa Waigani, '
+      + 'itsenäistymisen jälkeen rakennettu hallintokaupunki. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Halifaxissa ja Wellingtonissa. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta ja geosearchista 7.9.2026. Pienin
+       * väli on 472 metriä (parlamenttitalo – kansalliskirjasto),
+       * toiseksi pienin 762 metriä (St Josephin koulu – Amini Park).
+       */
+      { nimi: 'Parlamenttitalo', lat: -9.42805556, lon: 147.19166667 },
+      { nimi: 'Kansalliskirjasto', lat: -9.43222, lon: 147.19083 },
+      { nimi: 'Sir John Guisen stadion', lat: -9.44089, lon: 147.18535 },
+      { nimi: 'Hoholan moskeija', lat: -9.4585, lon: 147.17725 },
+      { nimi: 'Sir Hubert Murrayn stadion', lat: -9.46632, lon: 147.15667 },
+      { nimi: 'St Josephin koulu', lat: -9.46694, lon: 147.20417 },
+      { nimi: 'Amini Park', lat: -9.47333333, lon: 147.20166667 },
+      { nimi: 'Pyhän Marian katedraali', lat: -9.48081, lon: 147.14963 },
+    ],
+  },
+  /*
+   * MANAUS (7.9.2026). Rajaus on 7,5 × 7,4 kilometriä — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n manaus-lohkossa: vanha keskusta
+   * on tiivis, mutta kaksi kohdetta on viisi ja puoli kilometriä
+   * pohjoisessa ja yksi viisi kilometriä idässä, eikä keskustasta saa
+   * kahdeksaa kohdetta sen jälkeen kun lehden omat aiheet on karsittu.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat kaupungin
+   * kolme nimeä, vetten kohtaaminen, kaupunki ennen kumibuumia ja
+   * vapaakauppa-alue; matkaopas kertoo jokiliikenteestä, Mindú-puistosta,
+   * armeijan eläintarhasta, Palácio Rio Negrosta ja Ponta Negrasta;
+   * kumibuumisivu oopperatalosta, sähköstä, tullitalosta ja Wickhamin
+   * siemenistä; alkuperäiskansasivu alueen kansoista, Ajuricabasta,
+   * barésta ja kabanaosta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe.
+   *
+   * OOPPERATALO JA TULLITALO OVAT RUUDUN SISÄLLÄ MUTTA EIVÄT KARTALLA.
+   * Teatro Amazonas olisi kartan keskeisin kohde, ja se on lehden
+   * kumibuumisivun ensimmäinen nosto; tullitalo on saman sivun kolmas
+   * ja Palácio Rio Negro matkaoppaan neljäs jakso. New Yorkin sääntö
+   * pitää ne kaikki pois kartalta.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. Amadeu Teixeiran halli
+   * on 245 metriä Amazonas-areenasta eli sääntöjen mukaan kelpaisi,
+   * mutta kaksi urheilupaikkaa vierekkäin olisi kartalla sama piste
+   * kahdesti. Rakentamaton yksiraiteinen rata (-3,1260 / -60,0207) on
+   * en-Wikipedian koordinaattirajapinnassa, ja sen tarina olisi ollut
+   * kartan kiinnostavin — mutta kohde on suunnitellun linjan piste
+   * eikä paikka, ja numeroympyrä olisi seissyt tyhjän kadun päällä.
+   * Manausin Brasilia-temppeli ja Rio Negron silta ovat kahdeksan ja
+   * kuuden kilometrin päässä lännessä ruudun ulkopuolella.
+   */
+  manaus: {
+    polku: 'assets/kartat/manaus-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -3.078, etela: -3.145, lansi: -60.0473, ita: -59.9802 },
+    esittely: 'Kartta ulottuu Rio Negron rannasta pohjoiseen. '
+      + 'Vasemmassa alanurkassa on joki ja siitä kaupunkiin työntyvä '
+      + 'kapea lahti; sen yläpuolella on vanhan keskustan tiivis '
+      + 'ruutukaava, ja siitä nousee suoraan ylös se valtaväylä, jonka '
+      + 'varrelle kaupunki kasvoi 1900-luvulla. Oikealle levittäytyvät '
+      + 'uudemmat kaupunginosat, ja ylhäällä on Floresin urheilu- ja '
+      + 'hallintokortteli. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta ja
+       * geosearchista 7.9.2026. Pienin väli on 259 metriä
+       * (osavaltion kirjasto – katedraali), toiseksi pienin 416
+       * metriä (instituutti – katedraali).
+       */
+      { nimi: 'Amazonas-areena', lat: -3.08305556, lon: -60.02805556 },
+      { nimi: 'Osavaltion parlamentti', lat: -3.08361111, lon: -60.02194444 },
+      { nimi: 'Amazonin tutkimuslaitos', lat: -3.09577, lon: -59.98975 },
+      { nimi: 'Colinan stadion', lat: -3.12194444, lon: -60.03777778 },
+      { nimi: 'Beit Yaacovin synagoga', lat: -3.12598, lon: -60.02592 },
+      { nimi: 'Maantieteen ja historian instituutti', lat: -3.13361, lon: -60.02889 },
+      { nimi: 'Osavaltion kirjasto', lat: -3.13433333, lon: -60.02333333 },
+      { nimi: 'Katedraali', lat: -3.1352, lon: -60.0255 },
+    ],
+  },
+  /*
+   * SÃO PAULO (7.9.2026). Rajaus on 2,4 × 2,7 kilometriä Luzin
+   * puistosta Largo de São Franciscoon — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n saopaulo-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * jesuiittojen lähetyskoulu, Santosin rata, väkiluvun kasvu ja
+   * nykyinen suurkaupunki; historiasivu kertoo katedraalista,
+   * siirtokunnan köyhyydestä, Avenida Paulistasta sekä modernismin
+   * viikosta ja Martinellin pilvenpiirtäjästä; siirtolaissivu
+   * majatalosta, italialaisista, Liberdadesta ja Rua 25 de Marçosta;
+   * matkaopas Mercadãosta ja Ibirapuerasta. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * VIISI ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Pátio do
+   * Colégio, Praça da Sén katedraali, Theatro Municipal, Martinellin
+   * talo ja Mercado Municipal mahtuisivat kaikki ruutuun (kaksi
+   * ensimmäistä ovat sen itäreunassa), mutta ne ovat lehden omien
+   * juttujen aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. Edifício Itália on 144
+   * metriä Copanista eli 200 metrin säännön alle; Largo de São
+   * Franciscon kirkko ja luostari on 47 metriä oikeustieteellisestä
+   * tiedekunnasta, ja tiedekunta valittiin niistä kahdesta; Estação
+   * da Luz jäi pois, koska lehden rata-noston kuvateksti kertoo jo
+   * aseman vaiheet. Pinacoteca on aseman naapurissa ja kertoo eri
+   * tarinan.
+   */
+  saopaulo: {
+    polku: 'assets/kartat/saopaulo-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -23.5300, etela: -23.5545, lansi: -46.6490, ita: -46.6255 },
+    esittely: 'Kartta kattaa São Paulon vanhan ytimen kukkulan '
+      + 'harjalla: yläreunassa on Luzin puisto asemineen ja '
+      + 'museoineen, keskellä Anhangabaún laakso, jonka yli Viaduto '
+      + 'do Chá kaartaa, ja alareunassa Largo de São Francisco. '
+      + 'Kaupungin ensimmäiset korttelit ovat kartan oikeassa '
+      + 'alanurkassa kahden joenuoman välissä. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Wellingtonissa ja Christchurchissa. Koordinaatit
+       * en-Wikipedian coordinates-rajapinnasta 7.9.2026. Pienin väli
+       * on 393 metriä (Viaduto do Chá – oikeustieteellinen
+       * tiedekunta), toiseksi pienin 400 metriä (mustien
+       * veljeskunnan kirkko – Viaduto do Chá).
+       */
+      { nimi: 'Sala São Paulo', lat: -23.53416667, lon: -46.63972222 },
+      { nimi: 'Pinacoteca', lat: -23.5344, lon: -46.6339 },
+      { nimi: 'Mustien veljeskunnan kirkko', lat: -23.54305556, lon: -46.63805556 },
+      { nimi: 'São Benton luostari', lat: -23.54361111, lon: -46.63388889 },
+      { nimi: 'Edifício Copan', lat: -23.54661667, lon: -46.644375 },
+      { nimi: 'Viaduto do Chá', lat: -23.546647, lon: -46.6378 },
+      { nimi: 'Solar da Marquesa de Santos', lat: -23.54856, lon: -46.63214 },
+      { nimi: 'Oikeustieteellinen tiedekunta', lat: -23.5501, lon: -46.637 },
+    ],
+  },
+  /*
+   * SALVADOR (7.9.2026). Rajaus on 2,4 × 2,9 kilometriä
+   * Kauppakamarin talolta Campo Grandelle — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n salvador-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * kaupungin nimi, kaksikerroksinen kaupunki, Kaikkien pyhien lahti
+   * ja Barran majakka; historiasivu kertoo Pelourinhosta,
+   * orjasatamasta, malêjen kapinasta ja Lacerdan hissistä; Musta
+   * Rooma -sivu candomblésta, capoeirasta, Bonfimin pesujuhlasta ja
+   * karnevaalista; ruokasivu acarajésta ja vanhoista toreista.
+   * Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS: Lacerdan
+   * hissi, katedraali, Mercado Modelo ja Largo do Pelourinho ovat
+   * kaikki ruudussa, mutta ne ovat lehden omien juttujen aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN MUISTA SYISTÄ. São Franciscon kirkko
+   * ja luostari — kaupungin kuuluisin — EI OLE KARTALLA, koska
+   * en-Wikipedian artikkelilla ei ole koordinaattia (haku 7.9.2026),
+   * eikä koordinaatteja arvata; sama koski Rosário dos Pretosia ja
+   * Conceição da Praiaa. Praça Rio Branco 35 on 15 metriä Sobrado
+   * Azulejadosta ja São Pedro dos Clérigos 188 metriä Jorge Amadon
+   * talosta eli 200 metrin säännön alle.
+   *
+   * ANGLIKAANINEN KAPPELI PURETTIIN 1975, ja piste merkitsee sen
+   * paikan Campo Granden laidalla. Kohde on kartalla samalla
+   * perusteella kuin Wellingtonin Bolton Streetin hautausmaa, josta
+   * moottoritie vei valtaosan: paikka on yhä olemassa ja kertoo
+   * asian, jota mikään säilynyt talo ei kerro.
+   */
+  salvador: {
+    polku: 'assets/kartat/salvador-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -12.9668, etela: -12.9932, lansi: -38.5252, ita: -38.5028 },
+    esittely: 'Kartta näyttää Salvadorin kärjen, jossa kaupunki on '
+      + 'kahdessa kerroksessa: vasemmassa reunassa on Kaikkien pyhien '
+      + 'lahti ja sen rannassa Alakaupungin satamakortteli, ja siitä '
+      + 'oikealle nousee jyrkänteen päällä Yläkaupungin vanha '
+      + 'ruutukaava kirkkoineen. Alaosassa kadut suoristuvat '
+      + 'Campo Granden puistoaukiolle. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * 7.9.2026. Pienin väli on 294 metriä (Kauppakamarin talo –
+       * Jorge Amadon talo), toiseksi pienin 301 metriä (Jorge Amadon
+       * talo – São Miguelin kirkko).
+       */
+      { nimi: 'Kauppakamarin talo', lat: -12.97027778, lon: -38.51083333 },
+      { nimi: 'Jorge Amadon talo', lat: -12.97150722, lon: -38.50842788 },
+      { nimi: 'Sobrado Azulejado', lat: -12.973086, lon: -38.513235 },
+      { nimi: 'São Miguelin kirkko', lat: -12.97414, lon: -38.50779 },
+      { nimi: 'Mourarian Santo Antônio', lat: -12.980625, lon: -38.51068611 },
+      { nimi: 'Solar do Unhão', lat: -12.9826, lon: -38.5206 },
+      { nimi: 'Vila Velhan teatteri', lat: -12.98556, lon: -38.52176 },
+      { nimi: 'Anglikaanisen kappelin paikka', lat: -12.9897305, lon: -38.5220999 },
+    ],
+  },
+  /*
+   * CARACAS (7.9.2026). Rajaus on 2,8 × 2,1 kilometriä eli Toronton
+   * kokoluokkaa — perustelu ja itäreunan valinta ovat
+   * tools/piirra-kaupunkikartta.mjs:n caracas-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Guaicaipuro, Ávila meren ja laakson välissä, vuoden 1812 järistys
+   * ja Bolívarin arvonimi; historiasivu kertoo Plaza Bolívarista,
+   * Capitoliosta, Panteón Nacionalista ja Guzmán Blancosta;
+   * luontosivu Ávilan kansallispuistosta, Angelin putouksesta,
+   * Catatumbon salamoinnista ja öljystä; musiikkisivu El Sistemasta,
+   * Simón Bolívar -orkesterista, Aula Magnasta ja joropasta.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Plaza
+   * Bolívar, Capitolio, Panteón Nacional ja katedraali mahtuisivat
+   * kaikki ruutuun — kolme ensimmäistä ovat historiasivun nostojen
+   * aihe ja katedraali noston K3 aihe. Samasta syystä kartalla ei ole
+   * Ciudad Universitariaa eikä Bolívarin syntymätaloa: edellinen on
+   * noston M3, jälkimmäinen noston K4 aihe.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN MUISTA SYISTÄ: Palacio de las
+   * Academias on lehden noston H4 leipätekstissä omana asianaan
+   * (yliopiston muutto 1876 ja uusgoottilainen julkisivu), ja
+   * Iglesia de San Francisco on sen naapurina vain 30 metrin päässä
+   * eli reilusti 200 metrin säännön alle.
+   *
+   * SISÄLTÖLINJAUS ON SAMA KUIN LEHDESSÄ: ei nykypolitiikkaa.
+   * Miraflores, kansalliskokous ja keskuspankki jäivät siksi pois,
+   * vaikka niillä on omat artikkelinsa ja koordinaattinsa. Keltainen
+   * talo on mukana rakennuksena, jonka oma tarina päättyy 1912.
+   */
+  caracas: {
+    polku: 'assets/kartat/caracas-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 10.5145, etela: 10.4955, lansi: -66.9210, ita: -66.8955 },
+    esittely: 'Kartan alue kattaa vanhan kaupungin ruutukaavan ja sen '
+      + 'itäpuolelle 1900-luvulla kasvaneen museo- ja tornikaupungin. '
+      + 'Vasemmalla ovat siirtomaa-ajan korttelit kirkkoineen, '
+      + 'oikeassa yläkulmassa Los Caobosin puisto ja sen alapuolella '
+      + 'Parque Centralin kortteli, ja oikeassa alakulmassa kaartaa '
+      + 'moottoritien eritasoliittymä. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta ja
+       * geosearchista 7.9.2026. Pienin väli on 202 metriä
+       * (kaupunginteatteri – Santa Teresan basilika), toiseksi
+       * pienin 213 metriä (ensimmäisten kirjainten talo –
+       * keltainen talo).
+       */
+      { nimi: 'Quinta de Anauco', lat: 10.51194444, lon: -66.89972222 },
+      { nimi: 'Las Mercedesin kirkko', lat: 10.5105, lon: -66.91415 },
+      { nimi: 'Ensimmäisten kirjainten talo', lat: 10.50805556, lon: -66.91388889 },
+      { nimi: 'Keltainen talo', lat: 10.50656944, lon: -66.91511944 },
+      { nimi: 'Kaupunginteatteri', lat: 10.50207, lon: -66.9174 },
+      { nimi: 'Santa Teresan basilika', lat: 10.50175, lon: -66.91558 },
+      { nimi: 'Kansallinen taidegalleria', lat: 10.50055556, lon: -66.9025 },
+      { nimi: 'Parque Centralin tornit', lat: 10.49830556, lon: -66.90130556 },
+    ],
+  },
+  /*
+   * BERGEN (7.9.2026). Rajaus on 2,1 × 1,8 kilometriä, ja se on
+   * leveämpi kuin kohteet vaatisivat: länsireuna on vedetty
+   * Nordnesin kärjen yli, jotta Vågen ylipäänsä täyttyy vedellä.
+   * Perustelu ja koeajot ovat tools/piirra-kaupunkikartta.mjs:n
+   * bergen-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Bryggenin varastot, Håkonshallen, kaupungin laajeneminen 1876 ja
+   * Bryggenin riimulöytö; historiasivu kertoo hansakonttorista,
+   * sen etuoikeuksista, suurpaloista ja Bergenhusin linnoituksesta
+   * ja tuomiokirkosta; musiikkisivu Ole Bullista, Det Norske
+   * Theaterista, Griegistä ja Peer Gyntistä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * VIISI KOHDETTA JÄTETTIIN POIS, VAIKKA NE MAHTUISIVAT RUUTUUN.
+   * Bryggen ja Bergenhus näkyvät kuvassa rakennuksina, mutta ne
+   * ovat nostojen K1, K2 ja H4 aihe. Mariakirken ja Johanneksen
+   * kirkko ovat lehden omien kuvien aihe (kansikuva ja avauskuva
+   * kumpikin faktateksteineen), ja Fløibanen on matkaoppaan jakson
+   * aihe. Bryggens Museum ja hansamuseo jäivät pois, koska ne
+   * kertovat samaa asiaa kuin nostot K1, K4 ja H1.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ: rautatieasema
+   * on 81 metriä kaupunginkirjastosta ja Nonneseterin luostarin
+   * rauniot 44 metriä asemasta. Christi Krybben koulu — Pohjoismaiden
+   * vanhin yhä toimiva alakoulurakennus — jätettiin pois toisesta
+   * syystä: en-Wikipedian artikkelissa on vain yksi kappale, eikä
+   * siitä saa kolmen kappaleen juttua ilman keksimistä.
+   *
+   * VUODEN 1814 VAALIKIRKOT: Nykirken, Korskirken ja Pyhän Yrjänän
+   * kirkko olivat kaikki kolme vaalikirkkoja, mutta yksikään juttu
+   * ei kerro siitä. Vaalikirkko on lehden noston H4 aihe
+   * (tuomiokirkko), eikä kohdekartta toista sitä kolmeen kertaan.
+   */
+  bergen: {
+    polku: 'assets/kartat/bergen-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 60.4010, etela: 60.3850, lansi: 5.2990, ita: 5.3375 },
+    esittely: 'Kartta näyttää Vågenin lahden ja sen ympärille '
+      + 'kiertyvän vanhan Bergenin. Vasemmalla työntyy veteen '
+      + 'Nordnesin kapea niemi, lahden itärannalla erottuvat '
+      + 'Bryggenin laiturit, lahden pohjukassa on tori, oikealla '
+      + 'nousevat Fløyenin rinteen kadut ja oikealla alhaalla on '
+      + 'Lille Lungegårdsvannetin monikulmainen lampi. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta ja
+       * geosearchista 7.9.2026. Pienin väli on 216 metriä (Pyhän
+       * Yrjänän kirkko – kaupunginkirjasto), toiseksi pienin 247
+       * metriä (Nykirken – Fredriksbergin linnake).
+       */
+      { nimi: 'Nykirken', lat: 60.39708899, lon: 5.31336781 },
+      { nimi: 'Fredriksbergin linnake', lat: 60.3964, lon: 5.3091 },
+      { nimi: 'Munkelivin luostari', lat: 60.395, lon: 5.315 },
+      { nimi: 'Korskirken', lat: 60.39488615, lon: 5.32774794 },
+      { nimi: 'Pyhän Yrjänän kirkko', lat: 60.39175567, lon: 5.33271164 },
+      { nimi: 'Permanenten', lat: 60.39062694, lon: 5.32414694 },
+      { nimi: 'Kaupunginkirjasto', lat: 60.38986389, lon: 5.33184444 },
+      { nimi: 'Yliopistomuseo', lat: 60.38762222, lon: 5.32158056 },
+    ],
+  },
+  /*
+   * TANGER (7.9.2026). Rajaus on 2,2 × 1,6 kilometriä Marshanin
+   * tasangolta sataman suulle — perustelu ja ruudun vaakasuunta
+   * ovat tools/piirra-kaupunkikartta.mjs:n tanger-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * antiikin Tingis, Englannin Tanger 1661–1684, vuoden 1873
+   * diplomaattikunta ja Matisse; teemasivu kertoo Ibn Battutasta,
+   * kansainvälisestä vyöhykkeestä, Bowlesista ja Choukrista sekä
+   * Burroughsin Interzonesta. Yksikään kartan kahdeksasta
+   * kohteesta ei ole niiden aihe. Lähimpänä on Amerikan lähetystö,
+   * jonka talon sulttaani lahjoitti 1821 — lehden 1873-nosto
+   * kertoo diplomaattikunnasta lukuina eikä mainitse taloa.
+   *
+   * VIISI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-tanger.md, kohta E): Petit Socco on 158 metriä
+   * Amerikan lähetystöstä, Immaculate Conceptionin kirkko 156
+   * metriä, Beit Yehudan synagoga 68 metriä Petit Soccosta,
+   * kasbahin moskeija 66 metriä kasbahin palatsista ja
+   * Abdelhafidin palatsi 167 metriä Pyhän Andreaksen kirkosta.
+   * Petit Socco ja medinan muuri mainitaan matkaoppaan jaksossa 2.
+   *
+   * CAP SPARTEL, HERKULEEN LUOLAT JA TANGER MED JÄÄVÄT POIS: ne
+   * ovat 14–40 kilometrin päässä eivätkä mahdu ruutuun. Kaikki
+   * kolme ovat matkaoppaassa.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 7.9.2026
+   * (lisenssi ja tekijä extmetadatasta) ja katsottu silmin.
+   * Yksikään tiedosto ei ole sama kuin kaupunkilehden
+   * tanger-lohkossa (kulttuuri-kategoriat.js) eikä
+   * africa-valokuvat.js:n tanger-lohkossa.
+   */
+  tanger: {
+    polku: 'assets/kartat/tanger-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 35.794,
+      etela: 35.78,
+      lansi: -5.828,
+      ita: -5.804,
+    },
+    esittely: 'Kartan alue kattaa Tangerin vanhan ytimen: oikeassa yläkulmassa '
+      + 'on satama, sen vasemmalla puolella medina, joka nousee rinnettä '
+      + 'kasbahiin, ja vasemmalla Marshanin tasanko meren yllä. '
+      + 'Alareunassa alkavat muurien ulkopuoliset uuden keskustan suorat '
+      + 'kadut. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        /*
+         * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+         * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+         * ja kaikki välit on mitattu uudelleen: pienin on 207 metriä
+         * (suurmoskeija – Amerikan lähetystö), toiseksi pienin 216
+         * metriä (hotelli Continental – suurmoskeija).
+         */
+        nimi: 'Mendoubin residenssi',
+        lat: 35.791386,
+        lon: -5.824858,
+      },
+      {
+        nimi: 'Café Hafa',
+        lat: 35.7915,
+        lon: -5.8218,
+      },
+      {
+        nimi: 'Kasbahin palatsi',
+        lat: 35.788611,
+        lon: -5.812778,
+      },
+      {
+        nimi: 'Hotelli Continental',
+        lat: 35.7875,
+        lon: -5.809444,
+      },
+      {
+        nimi: 'Tangerin suurmoskeija',
+        lat: 35.785556,
+        lon: -5.809444,
+      },
+      {
+        nimi: 'Pyhän Andreaksen kirkko',
+        lat: 35.784722,
+        lon: -5.823056,
+      },
+      {
+        nimi: 'Amerikan lähetystö',
+        lat: 35.78398,
+        lon: -5.81068,
+      },
+      {
+        nimi: 'Gran Teatro Cervantes',
+        lat: 35.782,
+        lon: -5.8107,
+      },
+    ],
+  },
+  /*
+   * MARRAKECH (7.9.2026). Rajaus on 1,7 × 2,3 kilometriä Ben
+   * Youssefin medresasta kasbahin porttiin — perustelu ja ruudun
+   * pystysuunta ovat tools/piirra-kaupunkikartta.mjs:n
+   * marrakech-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * kaupungin perustaminen ja nimi, punainen muuri ja Koutoubia,
+   * seitsemän pyhimystä ja vuoden 1867 avautuminen sekä Jemaa
+   * el-Fna; teemasivu kertoo khettarasta, Menarasta, Agdalista,
+   * Majorellesta ja ilmastosta. Yksikään kartan kahdeksasta
+   * kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ ILMEISTÄ KOHDETTA JÄTETTIIN TARKOITUKSELLA POIS. Jemaa
+   * el-Fna ja Koutoubian moskeija ovat ruudussa ja niillä on
+   * koordinaatit, mutta ne ovat lehden omien nostojen aihe. Menara
+   * ja Agdal ovat teemasivun aihe ja lisäksi ruudun ulkopuolella.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-marrakech.md, kohta F): Ben Youssefin moskeija on
+   * 54 metriä medresasta, Marrakechin museo 96 metriä ja
+   * Almoravidien qubba 107 metriä — koko kortteli on yhtä
+   * rakennusryhmää, josta otetaan vain medresa. Mellahin Slat
+   * al-Azaman synagoga on 165 metriä Bahian palatsista.
+   *
+   * PIENIN VÄLI ON 190 METRIÄ (Saadilaisten haudat – Bab Agnaou)
+   * eli alle Halifaxin 200 metrin nyrkkisäännön. Poikkeus on
+   * harkittu: tämä ruutu on pinta-alaltaan noin kuudesosa
+   * Halifaxin ruudusta, joten sama metrimäärä on kuvassa yli kaksi
+   * kertaa niin monta pikseliä. Numeroympyrät on katsottu
+   * valmiista kuvasta silmin.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 7.9.2026 ja
+   * katsottu silmin. Yksikään tiedosto ei ole sama kuin
+   * kaupunkilehden marrakech-lohkossa eikä africa-valokuvat.js:n
+   * marrakech-lohkossa.
+   */
+  marrakech: {
+    polku: 'assets/kartat/marrakech-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: {
+      pohjoinen: 31.635,
+      etela: 31.6145,
+      lansi: -7.9965,
+      ita: -7.9785,
+    },
+    esittely: 'Kartan alue on Marrakechin medina: yläreunassa Ben Youssefin '
+      + 'kortteli, keskellä sukien kujaverkko ja Jemaa el-Fnan aukio, '
+      + 'alareunassa kasbah muureineen. Ruudun vasemmalla laidalla erottuu '
+      + 'medinan muuri ja sen takana suorat uudet kadut. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      {
+        /*
+         * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+         * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+         * ja välit on mitattu uudelleen: pienin 190 metriä
+         * (Saadilaisten haudat – Bab Agnaou), toiseksi pienin 244
+         * metriä (Bahian palatsi – Dar Si Said).
+         */
+        nimi: 'Ben Youssefin medresa',
+        lat: 31.631944,
+        lon: -7.986194,
+      },
+      {
+        nimi: 'Dar el Bacha',
+        lat: 31.631573,
+        lon: -7.992403,
+      },
+      {
+        nimi: 'Mouassinen suihkulähde',
+        lat: 31.63,
+        lon: -7.989444,
+      },
+      {
+        nimi: 'Dar Si Said',
+        lat: 31.623333,
+        lon: -7.983806,
+      },
+      {
+        nimi: 'Bahian palatsi',
+        lat: 31.621592,
+        lon: -7.982231,
+      },
+      {
+        nimi: 'El Badin palatsi',
+        lat: 31.6183,
+        lon: -7.9858,
+      },
+      {
+        nimi: 'Saadilaisten haudat',
+        lat: 31.6173,
+        lon: -7.988702,
+      },
+      {
+        nimi: 'Bab Agnaou',
+        lat: 31.6175,
+        lon: -7.9907,
+      },
+    ],
+  },
+  /*
+   * ADDIS ABEBA (7.9.2026). Rajaus on 2,5 x 2,5 kilometriä
+   * yliopistokampukselta Kolminaisuuden katedraalille — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n addisabeba-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * kaupungin perustaminen ja Taytu Betulin valinta, eukalyptus ja
+   * Entoton metsä, rata Djiboutiin sekä ethio-jazz; teemasivu kertoo
+   * kahviseremoniasta, injerasta, Merkatosta ja Piazzasta. Yksikään
+   * kartan kahdeksasta kohteesta ei ole niiden aihe. Lähimpänä on
+   * Taitu-hotelli, joka seisoo Piazzassa — juttu kertoo kuitenkin
+   * hotellista ja sen perustajasta, ei korttelista.
+   *
+   * MERKATO EI OLE NUMEROITU KOHDE: se on teemasivun noston aihe ja
+   * jää myös ruudun länsipuolelle (9,0306 / 38,7389, noin 1,7 km
+   * lännempänä kuin ruudun länsireuna).
+   *
+   * AFRICA HALL JA MESKEL-AUKIO JÄTETTIIN POIS RAJAUKSEN TAKIA: ne
+   * ovat 9,0147 ja 9,0103 eli 1,8 ja 2,2 kilometriä eteläreunan
+   * alapuolella, ja mukaan ottaminen olisi venyttänyt ruudun 4,5
+   * kilometriä korkeaksi mutta alle kolmen kilometrin levyiseksi.
+   * Molemmat kerrotaan matkaoppaassa (jakso 4).
+   */
+  addisabeba: {
+    polku: 'assets/kartat/addisabeba-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 9.0500, etela: 9.0270, lansi: 38.7460, ita: 38.7690 },
+    esittely: 'Kartan alue ulottuu yliopiston kampukselta pohjoisessa '
+      + 'Kolminaisuuden katedraalille etelässä. Keskellä kulkee '
+      + 'Churchill Road, jonka pohjoispäässä on Piazzan tiheä '
+      + 'kortteliverkko, ja idässä levittäytyy Arat Kilon aukioiden '
+      + 'seutu. Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta 7.9.2026,
+       * ja kaikki 28 väliä on mitattu haversinilla: pienin on 360
+       * metriä (Hager Fikir -teatteri – Pyhän Yrjön katedraali),
+       * toiseksi pienin 388 metriä (kansallismuseo – Menelik II:n
+       * koulu).
+       */
+      { nimi: 'Etnologinen museo', lat: 9.0467, lon: 38.7578 },
+      { nimi: 'Etiopian kansallismuseo', lat: 9.03833333, lon: 38.76194444 },
+      { nimi: 'Hager Fikir -teatteri', lat: 9.03769167, lon: 38.75453611 },
+      { nimi: 'Pyhän Yrjön katedraali', lat: 9.036691, lon: 38.751415 },
+      { nimi: 'Menelik II:n koulu', lat: 9.0352, lon: 38.7635 },
+      { nimi: 'Taitu-hotelli', lat: 9.030649, lon: 38.7542562 },
+      { nimi: 'Kolminaisuuden katedraali', lat: 9.030799, lon: 38.766562 },
+      { nimi: 'Abrehot-kirjasto', lat: 9.0303, lon: 38.7624 },
+    ],
+  },
+  /*
+   * GUATEMALA CITY (7.9.2026). Rajaus on 2,6 x 1,9 kilometriä koko
+   * historiallisen keskustan yli — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n guatemala-lohkossa. AVAIN ON
+   * guatemala, koska laudan kaupunki-id on se (js/packs/
+   * northamerica.js); wiki-nimi 'Guatemala (kaupunki)' ei kelpaa
+   * avaimeksi (Aleppo/halab-ennakkotapaus tämän tiedoston alussa).
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Kaminaljuyú, pääkaupungin siirto 1776, vyöhykejärjestelmä ja
+   * järistykset; teemasivu kertoo Mapa en Relievestä, Carlos
+   * Méridasta, kansallisteatterista ja Popol Vuh -museosta. Yksikään
+   * kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KATEDRAALI JÄTETTIIN POIS 200 METRIN SÄÄNNÖLLÄ: se on 191 metrin
+   * päässä kansallispalatsista (14,641686 / −90,512029). Kirkko näkyy
+   * kartalla rakennuksena, ja sen tarina kerrotaan kansisivun
+   * nostossa kaksi.
+   *
+   * MAPA EN RELIEVE JA TORRE DEL REFORMADOR OVAT RUUDUN ULKOPUOLELLA:
+   * edellinen on 2,1 km pohjoiseen (ja teemasivun noston aihe),
+   * jälkimmäinen 3,3 km etelään. Molemmat mainitaan matkaoppaassa.
+   *
+   * VIIDEN KOHTEEN LÄHDE ON ES-WIKIPEDIA, koska englanninkielistä
+   * artikkelia ei ole lainkaan; se sanotaan jokaisen jutun
+   * lähderivillä (tarkistus-guatemalacity.md, kohta C).
+   */
+  guatemala: {
+    polku: 'assets/kartat/guatemala-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 14.6505, etela: 14.6330, lansi: -90.5250, ita: -90.5010 },
+    esittely: 'Kartan alue kattaa vyöhykkeen 1 eli historiallisen '
+      + 'keskustan: pohjoisessa Carmenin kukkula, keskellä Plaza de '
+      + 'la Constitución ja etelässä 12. kadun postipalatsi. '
+      + 'Ruutukaava on tiheä ja säännöllinen, ja idässä maasto '
+      + 'putoaa rotkoon. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en- ja es-Wikipedian coordinates-rajapinnasta
+       * 7.9.2026, ja kaikki 28 väliä on mitattu haversinilla: pienin
+       * on 219 metriä (kansallispalatsi – kansalliskirjasto), toiseksi
+       * pienin 372 metriä (Instituto Central – postipalatsi). Nairobin
+       * 216 metrin ennakkotapaus tukee tätä.
+       */
+      { nimi: 'La Recolecciónin kirkko', lat: 14.64689, lon: -90.5171 },
+      { nimi: 'Cerrito del Carmen', lat: 14.64681, lon: -90.50583 },
+      { nimi: 'Kansallispalatsi', lat: 14.64294167, lon: -90.51322778 },
+      { nimi: 'Kansalliskirjasto', lat: 14.641974, lon: -90.514997 },
+      { nimi: 'San Juan de Diosin sairaala', lat: 14.639523, lon: -90.520740 },
+      { nimi: 'Instituto Nacional Central', lat: 14.639512, lon: -90.510715 },
+      { nimi: 'Santo Domingon kirkko', lat: 14.637526, lon: -90.506576 },
+      { nimi: 'Postipalatsi', lat: 14.637, lon: -90.513 },
+    ],
+  },
+  /*
+   * LAGOS (7.9.2026). Rajaus on noin 2,0 × 1,7 kilometriä Lagosin
+   * saaren pohjoislaidalta Onikanin puistoihin — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n lagos-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat aworien
+   * perustamistaru ja oban palatsi, Benin ja nimi Eko, vuoden 1861
+   * luovutussopimus, saro- ja aguda-paluumuuttajat sekä Shitta-Beyn
+   * moskeija ja Eyo-kulkue; teemasivu kertoo laguunista, Makokosta,
+   * silloista, täyttömaasta ja Lekin luonnonsuojelukeskuksesta.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-lagos.md, kohta G): Holy Cross -katedraali on 112
+   * metrin päässä Vapauden puistosta, John Randle -keskus 145 metrin
+   * päässä kansallismuseosta, Bookshop House 163 metrin päässä
+   * Kristuksen katedraalista ja Ilojo Bar 63 metrin päässä Tinubun
+   * aukiosta.
+   */
+  lagos: {
+    polku: 'assets/kartat/lagos-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 6.4585, etela: 6.4435, lansi: 3.3865, ita: 3.4045 },
+    esittely: 'Kartan alue kattaa Lagosin saaren ytimen. Vasemmassa '
+      + 'alakulmassa on vettä: sataman pääväylä, joka erottaa saaren '
+      + 'mantereesta. Rantaviivaa myötäilee Marina vinona nauhana '
+      + 'luoteesta kaakkoon, ja sen yläpuolella on liikekeskustan '
+      + 'tiivis kortteliverkko. Yläreunassa kadut haarautuvat vanhan '
+      + 'kaupungin epäsäännölliseksi kuvioksi, ja oikeassa '
+      + 'alakulmassa erottuvat Onikanin puistot ja aukio. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+       * ja kaikki 28 väliä on mitattu haversinilla: pienin on 293
+       * metriä (Vapauden puisto – King's College).
+       */
+      { nimi: 'Lagosin keskusmoskeija', lat: 6.457222, lon: 3.388056 },
+      { nimi: 'Tinubun aukio', lat: 6.4538, lon: 3.3894 },
+      { nimi: 'Ajelen hautausmaa', lat: 6.4515, lon: 3.3942 },
+      { nimi: 'Kristuksen katedraali', lat: 6.4508, lon: 3.3902 },
+      { nimi: 'King\'s College', lat: 6.44961, lon: 3.39905 },
+      { nimi: 'Vapauden puisto', lat: 6.4489, lon: 3.3965 },
+      { nimi: 'Tafawa Balewan aukio', lat: 6.447222, lon: 3.401389 },
+      { nimi: 'Nigerian kansallismuseo', lat: 6.444444, lon: 3.403333 },
+    ],
+  },
+  /*
+   * SANSIBAR (7.9.2026). Rajaus on noin 1,6 × 1,0 kilometriä
+   * Kivikaupungin niemeltä Creek Roadin yli Ngʼamboon — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n sansibar-lohkossa. Vasemmassa
+   * laidassa on Sansibarin kanaali, ja kuvan halki kulkee vinosti
+   * Creek Road, joka erottaa vanhan ja uuden kaupungin.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Shanganin arkeologia, Omanin sulttaanien pääkaupunki, vuoden
+   * 1873 sopimus ja Kristuksen katedraali, Sayyida Salme sekä vanha
+   * linnake ja elokuvajuhla; teemasivu kertoo monsuunista,
+   * dhow-aluksista, Changuusta ja merilevästä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-sansibar.md, kohta H): Malindin moskeija on 155
+   * metrin päässä vanhasta apteekista, Ijumaan moskeija 95 metrin
+   * päässä samasta ja Ihmeiden talo 151 metrin päässä sulttaanin
+   * palatsista. Ihmeiden talo kerrotaan matkaoppaassa; Forodhanin
+   * puisto jää pois, koska se on Tansanian maalehden aihe.
+   */
+  sansibar: {
+    polku: 'assets/kartat/sansibar-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -6.1575, etela: -6.1665, lansi: 39.1855, ita: 39.2000 },
+    esittely: 'Vasemmassa laidassa on meri, ja siihen työntyy '
+      + 'Kivikaupungin niemi, jonka kujaverkko on niin tiheää, että '
+      + 'se näyttää kaukaa kudokselta. Niemen juuresta kaartaa '
+      + 'vinosti ylhäältä alas leveä katu — Creek Road, joka kulkee '
+      + 'täytetyn salmen paikalla ja erottaa vanhan kaupungin '
+      + 'Ngʼambosta. Oikealla puolella korttelit ovat suurempia ja '
+      + 'suoraviivaisempia, ja alaoikealla erottuu liikenneympyrä. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+       * ja kaikki 28 väliä on mitattu haversinilla: pienin on 239
+       * metriä (Hamamnin kylpylä – Pyhän Joosefin katedraali).
+       */
+      { nimi: 'Vanha apteekki', lat: -6.1584, lon: 39.1926 },
+      { nimi: 'Sulttaanin palatsi', lat: -6.1599, lon: 39.1905 },
+      { nimi: 'Darajanin tori', lat: -6.1621, lon: 39.1935 },
+      { nimi: 'Hamamnin kylpylä', lat: -6.1623, lon: 39.1910 },
+      { nimi: 'Pyhän Joosefin katedraali', lat: -6.162778, lon: 39.188889 },
+      { nimi: 'Tippu Tipin talo', lat: -6.1640, lon: 39.1870 },
+      { nimi: 'Michenzanin korttelit', lat: -6.16526, lon: 39.1988 },
+      { nimi: 'Sansibarin valtionyliopisto', lat: -6.165833, lon: 39.191667 },
+    ],
+  },
+  /*
+   * FÈSIN MEDINA (Opus 7.9.2026, paketti O9). Ruutu on 1,75 × 1,78
+   * kilometriä ja kattaa Fes el-Balin muurit: lännessä Bab Bou
+   * Jeloud ja Dar Batha, keskellä kujaverkko medresoineen ja
+   * funduqeineen, pohjoisessa marinidien hautojen kukkula.
+   * Piirtoperustelut ja rajauksen historia
+   * tools/piirra-kaupunkikartta.mjs:n fes-lohkossa (kartta vaati
+   * sekä jalkakaydat- että palvelutiet-lipun, koska medinan kujat
+   * ovat OSM:ssä footway- ja service-teitä).
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö).
+   * Lehden nostot kertovat kahden kaupungin synnystä, Hassan I:n
+   * muurikäytävästä 1873, autottomasta medinasta ja fetsihatusta;
+   * teemasivu kertoo kirjapainosta ja kirjoituksesta. Kartan
+   * kahdeksan kohdetta ovat rakennuksia, joista lehti ei kerro.
+   *
+   * KAKSI KOHDETTA ON TARKOITUKSELLA JÄTETTY POIS, vaikka ne ovat
+   * ruudussa ja ovat kaupungin tunnetuimpia: Chouaran
+   * nahkurialtaat ja al-Qarawiyyinin moskeija-yliopisto. Molemmat
+   * ovat MAROKON MAALEHDEN nostoja (maa-kategoriat.js MAR:
+   * "Altaat, joissa väri on kasvia" ja "Yliopisto, jonka perusti
+   * kauppiaan tytär"), eikä kohdekartta toista maalehden juttuja
+   * enempää kuin kaupunkilehdenkään. Sama koskee Dar al-Maganan
+   * vesikelloa Bou Inanian medresaa vastapäätä ("Kello, jota
+   * kukaan ei enää osaa korjata") — medresan juttu ei mainitse
+   * kelloa lainkaan.
+   *
+   * WIKI-KENTTIÄ EI OLE YHDELLÄKÄÄN. Suomenkielisiä artikkeleita ei
+   * ole näistä kohteista, joten ne ovat pelkkiä merkkejä — se on
+   * sallittua (vrt. Kairon torni ja Egyptin museo).
+   */
+  fes: {
+    polku: 'assets/kartat/fes-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 34.073, etela: 34.057, lansi: -4.988, ita: -4.969 },
+    esittely: 'Fèsin vanhakaupunki Fes el-Bali on arabimaailman vanhin '
+      + 'yhtäjaksoisesti asuttu muurikaupunki ja yksi maailman '
+      + 'suurimmista autottomista kaupunkialueista. Kujat ovat '
+      + 'kapeammat kuin vaunun akseliväli, joten tavara kulkee yhä '
+      + 'aasin selässä. Muurien sisällä on medresoja, karavaaniserajeja '
+      + 'ja pyhäkköjä 1200-luvulta 1700-luvulle, ja pohjoisen kukkulalla '
+      + 'seisovat marinidisulttaanien haudat. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään ja lopuksi
+       * pohjoiseen kukkulalle. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026.
+       *
+       * VÄLIT OVAT PELIN PIENIMPIÄ ja se on tässä oikein: medina on
+       * niin tiheä, ettei 200 metrin väljyyteen pääse ilman että
+       * puolet kohteista putoaa pois. Kolme pienintä väliä ovat
+       * zawiya – al-Attarinen medresa 98 m, Bab Bou Jeloud – Bou
+       * Inanian medresa 107 m ja Nejjarinen funduq – zawiya 114 m.
+       * Ruutu on siksi tiivistetty 1,75 kilometrin levyiseksi
+       * (1,09 m/px), jolloin nuo välit ovat 89, 98 ja 104 pikseliä
+       * eivätkä numeroympyrät mene päällekkäin;
+       * tarkista-karttapisteet.mjs vahvistaa sen.
+       */
+      { nimi: 'Bab Bou Jeloud', lat: 34.06167, lon: -4.98389 },
+      { nimi: 'Dar Batha', lat: 34.0605, lon: -4.9828 },
+      { nimi: 'Bou Inanian medresa', lat: 34.06194, lon: -4.98278 },
+      { nimi: 'Nejjarinen funduq', lat: 34.06476, lon: -4.97595 },
+      { nimi: 'Moulay Idris II:n zawiya', lat: 34.06485, lon: -4.97472 },
+      { nimi: 'Al-Attarinen medresa', lat: 34.06508, lon: -4.97369 },
+      { nimi: 'Saffarinin medresa', lat: 34.06415, lon: -4.97257 },
+      { nimi: 'Marinidien haudat', lat: 34.06977, lon: -4.97924 },
+    ],
+  },
+  /*
+   * DAKARIN NIEMENKÄRKI (Opus 7.9.2026, paketti O9). Ruutu on
+   * 5,1 × 4,3 kilometriä: etelässä Pasteur-instituutti ja
+   * katedraali, keskellä Plateaun ruutukaava ja rautatieasema,
+   * pohjoisessa Médinan suurmoskeija, Soumbédiounen ranta ja
+   * yliopiston kampus. Perustelut piirra-kaupunkikartta.mjs:n
+   * dakar-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA EIVÄTKÄ KARTTANOSTOJA.
+   * Lehden nostot kertovat lebu-kylistä, Lebu-tasavallasta, vuoden
+   * 1873 maapähkinäsatamasta ja kahdesta kukkulasta; teemasivu
+   * kertoo taiteesta. Gorée on jo karttanosto
+   * (maastokohteet-sen.js) eikä siksi ole kartalla.
+   *
+   * KOLME EHDOKASTA HYLÄTTIIN LÄHTEEN PUUTTEESSA: Kermelin
+   * kauppahalli, Sandagan tori ja presidentinpalatsi omana
+   * kohteenaan. Yhdelläkään ei ole en-Wikipedian artikkelia, eikä
+   * nähtävyysjuttua kirjoiteta ilman katetta. Presidentinpalatsi
+   * mainitaan Riippumattomuuden aukion jutussa, jolla on kate
+   * ("Dakar" › Notable sites: rakennettu 1907).
+   */
+  dakar: {
+    polku: 'assets/kartat/dakar-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 14.6905, etela: 14.652, lansi: -17.472, ita: -17.4245 },
+    esittely: 'Dakar on rakennettu Cap-Vertin niemelle, Manner-Afrikan '
+      + 'läntisimpään kärkeen, ja meri on kartan kolmella reunalla. '
+      + 'Eteläkärki on Plateau, siirtomaa-ajan hallintokaupunginosa, '
+      + 'jossa ovat ministeriöt, katedraali ja museot. Pohjoisempana '
+      + 'alkaa Médina, joka perustettiin 1914 ja on nykyään kaupungin '
+      + 'tihein kaupunginosa. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi etelästä pohjoiseen.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * (katedraali, suurmoskeija, yliopisto) ja Nominatimista
+       * (muut) 7.9.2026. Pienin väli on 210 metriä (Théodore Monod
+       * -museo – katedraali, jotka ovat saman korttelin
+       * vastakkaisilla puolilla), toiseksi pienin 750 metriä
+       * (katedraali – Riippumattomuuden aukio).
+       */
+      { nimi: 'Pasteur-instituutti', lat: 14.65618, lon: -17.43503 },
+      { nimi: 'Théodore Monod -museo', lat: 14.66367, lon: -17.43828 },
+      { nimi: 'Dakarin katedraali', lat: 14.66545, lon: -17.43761 },
+      { nimi: 'Riippumattomuuden aukio', lat: 14.66953, lon: -17.43206 },
+      { nimi: 'Dakarin rautatieasema', lat: 14.67646, lon: -17.43368 },
+      { nimi: 'Suuri moskeija', lat: 14.67821, lon: -17.44246 },
+      { nimi: 'Soumbédiounen käsityökylä', lat: 14.67685, lon: -17.45781 },
+      { nimi: 'Cheikh Anta Diop -yliopisto', lat: 14.68694, lon: -17.46333 },
+    ],
+  },
+  /*
+   * SALTAN VANHAKAUPUNKI (Opus 7.9.2026, parvierä). Ruutu on noin
+   * 2,1 × 1,6 kilometriä: lännessä kuvataidemuseo Belgrano-kadulla,
+   * keskellä Plaza 9 de Julio laitoineen, idässä Güemesin
+   * muistomerkki Cerro San Bernardon juurella. Kaupunki on 1 200
+   * metrin korkeudessa eikä ruudussa ole vettä.
+   *
+   * KOLME KOHDETTA ON ALLE 200 METRIN PÄÄSSÄ TOISISTAAN, ja se on
+   * tietoinen valinta. MAAM–katedraali on 107 m, MAAM–cabildo 110 m
+   * ja katedraali–cabildo 164 m: kaikki kolme seisovat saman aukion
+   * laidoilla, ja aukio on kaupungin perustamispaikka vuodelta 1582.
+   * Numeroympyrä on tällä rajauksella noin 141 metriä, joten pahin
+   * peitto on 22 % (MAAM–katedraali) eli tarkista-karttapisteet.mjs:n
+   * asteikolla "tavallista, ei toimenpidettä".
+   *
+   * NELJÄS AUKION KOHDE JÄTETTIIN POIS: Centro Cultural América on
+   * vain 60 metriä MAAM:sta, ja sen numeroympyrä olisi peittänyt
+   * naapurinsa lähes kokonaan. Talo kerrotaan matkaoppaan toisessa
+   * jaksossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö). Lehti
+   * kertoo perustamisesta, Milagro-hartaudesta, vuodesta 1873,
+   * kaupunkikuvasta, Cerro San Bernardosta ja musiikista; kartta
+   * kertoo kunkin rakennuksen oman historian.
+   *
+   * Koordinaatit es-Wikipedian list=geosearch- ja
+   * prop=coordinates-rajapinnasta 7.9.2026; etäisyydet laskettu
+   * haversinilla (docs/mantereet-tyoaineisto/tarkistus-salta.md).
+   */
+  salta: {
+    polku: 'assets/kartat/salta-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -24.783, etela: -24.7975, lansi: -65.418, ita: -65.397 },
+    esittely: 'Saltan keskusta on yhä se yhdeksän kertaa viiden '
+      + 'korttelin ruudukko, joka mitattiin 1582. Kartan keskellä on '
+      + 'Plaza 9 de Julio, kaupungin perustamispaikka, ja sen '
+      + 'laidoilla kolme kartan kohdetta. Idässä maasto nousee Cerro '
+      + 'San Bernardoksi. Kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään.
+       */
+      { nimi: 'Saltan kuvataidemuseo', lat: -24.7867625, lon: -65.4161626 },
+      { nimi: 'La Merced -kirkko', lat: -24.789778, lon: -65.414444 },
+      { nimi: 'Korkean vuoriston arkeologian museo', lat: -24.78899602, lon: -65.41104066 },
+      { nimi: 'Saltan katedraali', lat: -24.788333, lon: -65.410278 },
+      { nimi: 'Saltan cabildo', lat: -24.7898, lon: -65.4104 },
+      { nimi: 'San Franciscon basilika', lat: -24.79025, lon: -65.408167 },
+      { nimi: 'San Bernardon luostari', lat: -24.790389, lon: -65.403833 },
+      { nimi: 'Güemesin muistomerkki', lat: -24.78675, lon: -65.39929 },
+    ],
+  },
+  /*
+   * ANTOFAGASTAN HISTORIALLINEN KORTTELI (Opus 7.9.2026, parvierä).
+   * Ruutu on noin 1,4 × 1,2 kilometriä: pohjoisessa salpietarilaituri
+   * ja vanha tullitalo, keskellä Colónin aukio, etelässä Giménezin
+   * talo. Rannikko kulkee ruudun läpi, ja länsireuna on merta.
+   *
+   * MERI-LIPPU PÄÄLLÄ, koska koko länsireuna on Antofagastan lahtea.
+   *
+   * SALPIETARILAITURIN PISTE ON LAITURIN ALKUPÄÄSSÄ RANNALLA, EI
+   * KÄRJESSÄ. es-Wikipedian koordinaatti (−23,64306 / −70,39833)
+   * osoittaa laiturin ulkopäähän, ja tarkista-karttapisteet.mjs
+   * ilmoitti sen sadan prosentin vetenä. Laituri on 198 metriä
+   * pitkä ja lähtee historiallisen korttelin rannasta vanhan
+   * tullitalon vierestä, joten alkupää on yhtä lailla kohde —
+   * ja numeroympyrä osuu nyt sille rannalle, josta kävelijä
+   * laiturille menee. Ero kärkeen on noin 50 metriä.
+   *
+   * KAKSI LÄHIKOHDETTA JÄTETTIIN POIS: FCAB:n asema on 26 metriä
+   * museosta ja Muelle Miraflores 130 metriä salpietarilaiturista.
+   * Molemmat kerrotaan toisen kohteen jutussa tai matkaoppaassa.
+   * HUANCHACAN RAUNIOT eivät mahdu ruutuun (4,5 km etelään), ja ne
+   * ovat lehden noston A5 aihe.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö).
+   * Erityisesti vuoden 1879 maihinnousu on lehden noston aihe, joten
+   * laiturin juttu kertoo laiturin rakenteen, omistajat ja
+   * kunnostuksen.
+   *
+   * Koordinaatit es-Wikipedian list=geosearch- ja
+   * prop=coordinates-rajapinnasta 7.9.2026; etäisyydet laskettu
+   * haversinilla (docs/mantereet-tyoaineisto/tarkistus-antofagasta.md).
+   */
+  antofagasta: {
+    polku: 'assets/kartat/antofagasta-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -23.6415, etela: -23.652, lansi: -70.406, ita: -70.3925 },
+    esittely: 'Antofagasta on kapea nauha meren ja aavikon välissä, '
+      + 'ja sen vanhin osa on tässä ruudussa. Pohjoisessa on '
+      + 'historiallinen kortteli laitureineen ja tullitaloineen, '
+      + 'keskellä Colónin aukio kellotorneineen. Länsireuna on merta. '
+      + 'Kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       */
+      { nimi: 'Salpietarilaituri', lat: -23.6435, lon: -70.3977 },
+      { nimi: 'Antofagastan museo', lat: -23.64416667, lon: -70.39777778 },
+      { nimi: 'Bolivian kauppapankin talo', lat: -23.64502, lon: -70.397358 },
+      { nimi: 'Colónin aukio', lat: -23.64611111, lon: -70.39777778 },
+      { nimi: 'Gibbsin talo', lat: -23.64611111, lon: -70.40055556 },
+      { nimi: 'Kaupunginteatteri', lat: -23.64654167, lon: -70.39658333 },
+      { nimi: 'Antofagastan katedraali', lat: -23.64716667, lon: -70.39738889 },
+      { nimi: 'Giménezin talo', lat: -23.650041, lon: -70.39665 },
+    ],
+  },
+  /*
+   * VANHA NUUK JA KESKUSTA (Opus 7.9.2026). Ruutu on 1,28 × 1,06
+   * kilometriä eli pelin tiiviimpiä: lännessä siirtomaasataman
+   * Vanha Nuuk, keskellä Nuuk Centrum ja idässä taidemuseo.
+   * Perustelut tools/piirra-kaupunkikartta.mjs:n nuuk-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA EIVÄTKÄ KARTTANOSTOJA.
+   * Lehden nostot kertovat niemen asuttajista, vuoden 1728 siirrosta,
+   * kahdesta lähetysasemasta 1873 ja kaupungin tieverkosta; teemasivu
+   * kertoo jääkairauksista, Isuan kivistä, Ameralikin ylityksestä ja
+   * Ilisimatusarfikista. Grönlannin maalehden aiheet
+   * (maa-kategoriat.js GRL) ja karttanostot (maastokohteet-grl.js)
+   * on luettu, eikä yksikään niistä ole kartalla.
+   *
+   * KAKSI EHDOKASTA HYLÄTTIIN. Atuagkat, Grönlannin ainoa
+   * kirjakauppa, oli listalla, kunnes sen oma artikkeli osoitti sen
+   * lopettaneen 15.1.2025 — kohdekartta on nykyisten kohteiden
+   * kävelykartta. Blok P purettiin 19.10.2012, ja se kerrotaan
+   * matkaoppaassa. Kirjakaupan tilalle otettiin kansalliskirjasto.
+   */
+  nuuk: {
+    polku: 'assets/kartat/nuuk-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 64.1825, etela: 64.173, lansi: -51.751, ita: -51.7245 },
+    esittely: 'Nuuk on maailman pohjoisin pääkaupunki, ja sen vanhin '
+      + 'osa on kilometrin levyinen niemenkärki. Siellä ovat Grönlannin '
+      + 'vanhin talo vuodelta 1728, vuonna 1849 vihitty katedraali ja '
+      + 'maan suurin tuoretori, ja kilometrin päässä idässä on '
+      + 'nykyinen keskusta parlamentteineen ja kulttuuritaloineen. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään. Koordinaatit
+       * en-Wikipedian geosearch-rajapinnasta 7.9.2026 ja
+       * ristiintarkistettu artikkelien coord-malleista.
+       *
+       * VÄLIT OVAT PELIN PIENIMPIÄ ja se on tässä oikein: Vanha Nuuk
+       * on niin tiivis, ettei 200 metrin väljyyteen pääse ilman että
+       * puolet kohteista putoaa pois. Kolme pienintä väliä ovat
+       * Kalaaliaraq-tori – Inatsisartut 98 m, Hans Egeden talo –
+       * Kalaaliaraq-tori 120 m ja kansallismuseo – Hans Egeden talo
+       * 130 m. Ruutu on siksi tiivistetty 1,28 kilometrin
+       * levyiseksi (0,80 m/px), jolloin nuo välit ovat 122, 150 ja
+       * 163 pikseliä eivätkä numeroympyrät mene päällekkäin;
+       * tarkista-karttapisteet.mjs vahvistaa sen. Sama ratkaisu kuin
+       * Fèsin medinassa (v1670).
+       *
+       * KOORDINAATIT ON VAHVISTETTU RIIPPUMATTOMASTI: "Kalaaliaraq
+       * Market" sanoo torin olevan noin 150 metriä katedraalista
+       * kaakkoon, ja näistä koordinaateista haversinilla laskettu
+       * väli on 148 metriä kaakkoon.
+       */
+      { nimi: 'Grönlannin kansallismuseo', lat: 64.1772, lon: -51.7462 },
+      { nimi: 'Hans Egeden talo', lat: 64.1782, lon: -51.7448 },
+      { nimi: 'Nuukin katedraali', lat: 64.17972, lon: -51.74417 },
+      { nimi: 'Kalaaliaraq-tori', lat: 64.17861, lon: -51.7425 },
+      { nimi: 'Inatsisartut', lat: 64.1783, lon: -51.7406 },
+      { nimi: 'Katuaq', lat: 64.17722, lon: -51.73889 },
+      { nimi: 'Grönlannin kansalliskirjasto', lat: 64.17556, lon: -51.73917 },
+      { nimi: 'Nuukin taidemuseo', lat: 64.17786, lon: -51.72922 },
+    ],
+  },
+  /*
+   * ANCHORAGEN KESKUSTA (Opus 7.9.2026). Ruutu on 2,47 × 1,61
+   * kilometriä: pohjoisessa rautatieasema Ship Creekin törmän
+   * yläpuolella, keskellä vuoden 1915 kaupunkitonttien ruutukaava,
+   * lännessä Elderberry Park ja etelässä Delaney Park Strip.
+   * Perustelut tools/piirra-kaupunkikartta.mjs:n anchorage-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA. Lehden nostot kertovat
+   * dena'inoista, Cookin kymmenestä päivästä 1778, Alaskan kaupasta
+   * 1867 ja vuoden 1964 järistyksestä; teemasivu kertoo hirvistä,
+   * karhuista, Ship Creekin lohesta ja Chugachin vuorista. Ship
+   * Creek on ruudussa mutta ei numeroitu, koska se on teemasivun
+   * nosto. Yhdysvaltain maalehden ja karttanostojen
+   * (maastokohteet-usa.js) aiheet on luettu — yksikään ei ole
+   * Alaskasta.
+   *
+   * KAIKKI 28 KOHDEVÄLIÄ YLITTÄVÄT 200 METRIÄ, pienin on 279 metriä
+   * (rautatieasema – A.E.C.:n mökki 23). Anchorage kaavoitettiin
+   * leveisiin kortteleihin, joten tässä ei tarvita Nuukin eikä
+   * Fèsin kaltaista poikkeusta.
+   */
+  anchorage: {
+    polku: 'assets/kartat/anchorage-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 61.2245, etela: 61.21, lansi: -149.916, ita: -149.87 },
+    esittely: 'Anchoragen keskusta on yhä se ruutukaava, joka '
+      + 'mitattiin 1915 telttakaupungin eteläpuolelle korkeammalle '
+      + 'maalle. Pohjoisreunalla virtaa Ship Creek, jonka rannalta '
+      + 'kaupunki alkoi, ja eteläreunaa myötäilee Delaney Park Strip '
+      + '— entinen paloaukea, joka oli kaupungin ensimmäinen '
+      + 'lentokenttä. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään ja
+       * lopuksi länteen. Koordinaatit en-Wikipedian artikkelien
+       * coord-malleista ja geosearch-rajapinnasta 7.9.2026; viisi
+       * kahdeksasta täsmäsi molemmissa.
+       */
+      { nimi: 'Anchoragen rautatieasema', lat: 61.22167, lon: -149.89056 },
+      { nimi: 'A.E.C.:n mökki 23', lat: 61.22, lon: -149.89444 },
+      { nimi: 'Wendlerin talo', lat: 61.21833, lon: -149.88972 },
+      { nimi: 'Alaska Center for the Performing Arts', lat: 61.21707, lon: -149.89439 },
+      { nimi: 'Anchorage Museum', lat: 61.2161, lon: -149.8845 },
+      { nimi: 'Anchoragen vanha hautausmaa', lat: 61.215, lon: -149.87611 },
+      { nimi: 'Oscar Andersonin talo', lat: 61.21861, lon: -149.90611 },
+      { nimi: 'Delaney Park Strip', lat: 61.21333, lon: -149.90167 },
+    ],
+  },
+  /*
+   * PUNTA ARENAS (7.9.2026). Rajaus on 1,86 × 2,13 kilometriä
+   * lampuripatsaalta rantabulevardille — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n puntaarenas-lohkossa. Ruutu on
+   * pystysuuntainen, koska kaupunki on: se on kasvanut kapealle
+   * rantakaistaleelle kukkuloiden ja Magalhãesinsalmen väliin.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN JUTTUJA. Lehden nostot ovat nimi
+   * Sandy Point, kuunari Ancud ja Fuerte Bulnes, rangaistussiirtola ja
+   * vuosi 1873 sekä lammastalous ja selkʼnamit; teemasivu kertoo
+   * salmesta, tuulesta ja ilmastosta, otsonikadosta ja Etelämantereen
+   * portista. Yksikään kartan kahdeksasta kohteesta ei ole niiden
+   * aihe. Hiilenottopaikka ja Panaman kanava on tarkoituksella
+   * jätetty lehdestä pois ja annettu rantabulevardin jutulle.
+   *
+   * MAGALHÃESIN PATSAS JA MUÑOZ GAMERON AUKIO EIVÄT OLE NUMEROITUJA
+   * KOHTEITA, vaikka ne ovat ruudun keskellä: patsaan varpaan
+   * koskettaminen on jo saapumistekstin aihe
+   * (southamerica-saapumiset.js, puntaarenas), eikä kohdekartta toista
+   * sitä. Aukio näkyy kartalla katedraalin vieressä.
+   *
+   * SARA BRAUNIN PALATSI PUDOTETTIIN ETÄISYYDEN TAKIA, ei aiheen: se
+   * on 121 metrin päässä Braun-Menéndezin palatsista, ja kaksi
+   * saman suvun palatsia vierekkäin olisi sekä liian lähellä että
+   * saman jutun toisinto. Se kerrotaan matkaoppaassa.
+   *
+   * ARTURO PRATIN LAITURI JA KAUPUNGINTORI PUDOTETTIIN
+   * ENSIMMÄISESTÄ LUONNOKSESTA: laituri osoittautui
+   * tarkista-karttapisteet.mjs:n mukaan 84-prosenttisesti vedeksi, ja
+   * kaupungintorille ei löytynyt lähdeartikkelia. Tilalle tulivat
+   * merisotamuseo ja rantabulevardi.
+   */
+  puntaarenas: {
+    polku: 'assets/kartat/puntaarenas-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -53.1478, etela: -53.1670, lansi: -70.9201, ita: -70.8923 },
+    esittely: 'Oikeassa laidassa on Magalhãesinsalmi, ja rantaviiva '
+      + 'kulkee kuvan halki vinosti oikeasta yläkulmasta alas '
+      + 'keskelle. Rannan ja kukkuloiden väliin jää tiivis ruutukaava, '
+      + 'jonka poikki kulkee kolme leveämpää väylää. Vasemmassa '
+      + 'laidassa korttelit harvenevat ja maa nousee. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit Nominatimista 7.9.2026, katedraali en-Wikipedian
+       * coord-mallista. Kaikki 28 väliä on mitattu haversinilla:
+       * pienin on 188 metriä (Braun-Menéndezin palatsi –
+       * merisotamuseo), toiseksi pienin 208 metriä.
+       */
+      { nimi: 'Lampuripatsas', lat: -53.149764, lon: -70.896575 },
+      { nimi: 'Sara Braunin hautausmaa', lat: -53.152999, lon: -70.897648 },
+      { nimi: 'Salesiaanien museo', lat: -53.155612, lon: -70.902287 },
+      { nimi: 'Cerro de la Cruz', lat: -53.160112, lon: -70.915813 },
+      { nimi: 'Sagrado Corazónin katedraali', lat: -53.162000, lon: -70.909000 },
+      { nimi: 'Braun-Menéndezin palatsi', lat: -53.162177, lon: -70.905893 },
+      { nimi: 'Merisotamuseo', lat: -53.163581, lon: -70.904302 },
+      { nimi: 'Salmen rantabulevardi', lat: -53.164567, lon: -70.900459 },
+    ],
+  },
+  /*
+   * SANTA CRUZ DE LA SIERRA (7.9.2026). Rajaus on 3,12 × 2,88
+   * kilometriä ja kattaa vanhan ruutukaavan, ensimmäisen kehäkadun ja
+   * sen molemmat laidat — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n santacruz-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN JUTTUJA. Lehden nostot ovat chanét ja
+   * Grigotá, kaupungin kolme muuttoa 1561–1622, vuoden 1810 kapina ja
+   * Warnesin vuodet sekä Andrés Ibáñez ja igualitaarit 1872—1877;
+   * teemasivu kertoo camba-sanasta, taquiraritanssista, chovenasta ja
+   * karnevaalista. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe. Hautausmaan juttu mainitsee Ibáñezin haudan yhdellä
+   * lauseella ja viittaa lehteen, kuten Lagosin Ajele-juttu viittaa
+   * Kristuksen katedraaliin.
+   *
+   * PLAZA 24 DE SEPTIEMBRE JA KATEDRAALI OVAT 114 METRIN PÄÄSSÄ
+   * toisistaan, ja se on tietoinen poikkeus 200 metrin
+   * nyrkkisäännöstä samalla perusteella kuin Fèsin medinassa: tässä
+   * mittakaavassa (1,95 m/px) väli on 58 pikseliä eivätkä
+   * numeroympyrät mene päällekkäin. Aukiolla ja kirkolla on eri
+   * tarina — aukiolla nimihistoria, katedraalilla rakennus ja
+   * Moxosin hopeaverhoilu.
+   */
+  santacruz: {
+    polku: 'assets/kartat/santacruz-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -17.7729, etela: -17.7988, lansi: -63.1988, ita: -63.1693 },
+    esittely: 'Kartan keskellä on vanha ruutukaava, jonka ympäri '
+      + 'kaartaa ensimmäinen kehäkatu — se on kartan selvin muoto ja '
+      + 'näkyy lähes täytenä renkaana. Renkaasta lähtee säteittäisiä '
+      + 'katuja joka suuntaan, ja niiden välit ovat kortteleita. '
+      + 'Vasemmassa laidassa on yliopiston kampus, oikeassa laidassa '
+      + 'hautausmaan kortteli ja alalaidassa toinen kehä. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit Nominatimista 7.9.2026, katedraali en-Wikipedian
+       * coord-mallista ja hautausmaa en-Wikipedian geosearchista.
+       * Kaikki 28 väliä on mitattu haversinilla: pienin on 114 metriä
+       * (aukio – katedraali), toiseksi pienin 433 metriä.
+       */
+      { nimi: 'Avión Pirata', lat: -17.775674, lon: -63.174000 },
+      { nimi: 'Gabriel René Moreno -yliopisto', lat: -17.775749, lon: -63.195902 },
+      { nimi: 'El Arenalin puisto', lat: -17.778800, lon: -63.180600 },
+      { nimi: 'Yleinen hautausmaa', lat: -17.781409, lon: -63.172133 },
+      { nimi: 'Plaza 24 de Septiembre', lat: -17.783255, lon: -63.182119 },
+      { nimi: 'San Lorenzon katedraali', lat: -17.784200, lon: -63.181700 },
+      { nimi: 'Noel Kempff Mercadon museo', lat: -17.792713, lon: -63.181884 },
+      { nimi: 'Tahuichi Aguileran stadion', lat: -17.796100, lon: -63.183900 },
+    ],
+  },
+  /*
+   * MONTERREY (7.9.2026). Rajaus on noin 4,3 × 2,8 kilometriä
+   * Obispadon kukkulalta Barrio Antiguoon — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n monterrey-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat kolme
+   * perustamisyritystä ja Santa Lucían lähde, nimen alkuperä,
+   * Cerro de la Silla ja Fundidoran puisto; teemasivu kertoo
+   * Cumbres de Monterreyn kansallispuistosta, Chipinquestä,
+   * Grutas de Garcíasta ja Santa Catarina -joesta. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * NELJÄ KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-monterrey.md, kohta E): Faro del Comercio on
+   * 70 metrin päässä katedraalista, MARCO 110 metrin päässä,
+   * Museo Metropolitano 175 metrin päässä ja Explanada de los
+   * Héroes 102 metrin päässä hallintopalatsista. Kaikki neljä
+   * mainitaan matkaoppaassa.
+   *
+   * VIIDEN KOHTEEN LÄHDE ON ES-WIKIPEDIA, koska englanninkielistä
+   * artikkelia ei ole lainkaan; se sanotaan jokaisen jutun
+   * lähderivillä (tarkistus-monterrey.md).
+   */
+  monterrey: {
+    polku: 'assets/kartat/monterrey-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 25.6820, etela: 25.6570, lansi: -100.3470, ita: -100.3040 },
+    esittely: 'Kartan alue ulottuu lännessä Obispadon kukkulalta '
+      + 'idässä Barrio Antiguoon. Alareunassa kaartaa Santa Catarina '
+      + '-joki, joka on pinnalta kuiva suurimman osan vuotta ja jakaa '
+      + 'kaupungin kahtia. Sen pohjoispuolella on tiivis ruutukaava, '
+      + 'jonka itäosassa kadut levenevät Macroplazan aukioksi. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta
+       * (katedraali), es-Wikipedian coordinates-rajapinnasta
+       * (Dulces Nombres) ja Nominatimista (muut) 7.9.2026, ja kaikki
+       * 28 väliä on mitattu haversinilla: pienin on 287 metriä
+       * (hallintopalatsi – Meksikon historian museo), toiseksi
+       * pienin 302 metriä (katedraali – Barrio Antiguo).
+       */
+      { nimi: 'Museo del Obispado', lat: 25.673324, lon: -100.342248 },
+      { nimi: 'La Purísiman kirkko', lat: 25.669728, lon: -100.326297 },
+      { nimi: 'Colegio Civil', lat: 25.674141, lon: -100.315768 },
+      { nimi: 'Nuevo Leónin hallintopalatsi', lat: 25.672615, lon: -100.308978 },
+      { nimi: 'Meksikon historian museo', lat: 25.671478, lon: -100.306412 },
+      { nimi: 'Dulces Nombresin kappeli', lat: 25.668333, lon: -100.308889 },
+      { nimi: 'Monterreyn katedraali', lat: 25.665600, lon: -100.309800 },
+      { nimi: 'Barrio Antiguo', lat: 25.665527, lon: -100.306786 },
+    ],
+  },
+  /*
+   * MÉRIDA (7.9.2026). Rajaus on noin 2,7 × 2,7 kilometriä Santa
+   * Anasta Santa Isabelin ermitaan — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n merida-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat Tʼhó
+   * ja katedraalin kivet, Valkoisen kaupungin kaksi selitystä,
+   * kastisota ja Chan Santa Cruz sekä heneken ja Paseo de Montejo;
+   * teemasivu kertoo Yucatánin keittiöstä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KATEDRAALI, PASEO DE MONTEJO JA LUCAS DE GÁLVEZIN TORI OVAT
+   * RUUDUSSA MUTTA EIVÄT NUMEROITUJA: katedraali on noston 1
+   * loppuhuipennus, Paseo de Montejo noston 4 aihe ja tori
+   * etusivun ennen–nyt-parin aihe (New Yorkin sääntö).
+   *
+   * KOLME KOHDETTA JÄI POIS (tarkistus-merida.md, kohta F):
+   * kaupungintalo on 103 metrin päässä Casa de los Montejosta ja
+   * Santa Lucían puisto 188 metrin päässä Peón Contrerasin
+   * teatterista — molemmat alle 200 metrin säännön. Yucatánin
+   * hallintopalatsi mahtuisi juuri (206 ja 211 metriä), mutta
+   * Plaza Grandelta otetaan kartalle vain yksi kohde. Kaikki kolme
+   * mainitaan matkaoppaassa.
+   *
+   * KAIKKIEN KAHDEKSAN LÄHDE ON ES-WIKIPEDIA, koska
+   * englanninkielisiä artikkeleita ei ole; se sanotaan jokaisen
+   * jutun lähderivillä.
+   */
+  merida: {
+    polku: 'assets/kartat/merida-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 20.9790, etela: 20.9520, lansi: -89.6375, ita: -89.6085 },
+    esittely: 'Kartan alue kattaa koko siirtomaa-ajan Méridan. '
+      + 'Ruutukaava on poikkeuksellisen säännöllinen: parittomat '
+      + 'kadut kulkevat idästä länteen ja parilliset pohjoisesta '
+      + 'etelään, ja keskellä on Plaza Grande. Ainoa vino viiva on '
+      + 'Paseo de Montejo, joka lähtee ruudukosta luoteeseen. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit es-Wikipedian coordinates-rajapinnasta
+       * (Casa de los Montejo, Peón Contreras), artikkelin omasta
+       * koordinaattimallineesta (Santa Ana) ja Nominatimista (muut)
+       * 7.9.2026, ja kaikki 28 väliä on mitattu haversinilla:
+       * pienin on 368 metriä (Casa de los Montejo –
+       * kaupunginmuseo), toiseksi pienin 417 metriä.
+       */
+      { nimi: 'Santa Anan kirkko', lat: 20.975846, lon: -89.621209 },
+      { nimi: 'Peón Contrerasin teatteri', lat: 20.969489, lon: -89.622476 },
+      { nimi: 'La Mejoradan puisto', lat: 20.968346, lon: -89.616398 },
+      { nimi: 'Casa de los Montejo', lat: 20.966195, lon: -89.624388 },
+      { nimi: 'Méridan kaupunginmuseo', lat: 20.964452, lon: -89.621377 },
+      { nimi: 'San Juanin puisto ja kaari', lat: 20.962616, lon: -89.626035 },
+      { nimi: 'San Cristóbalin kirkko', lat: 20.961151, lon: -89.617410 },
+      { nimi: 'Santa Isabelin ermita', lat: 20.957247, lon: -89.629632 },
+    ],
+  },
+  /*
+   * WINNIPEG (7.9.2026). Rajaus on noin 2,3 × 2,2 kilometriä
+   * keskustan ympärillä — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * winnipeg-lohkossa. Kuvan oikeassa laidassa kaartaa Punainen joki,
+   * ja alhaalta siihen yhtyy Assiniboine; niiden välinen kärki on
+   * The Forks.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN JUTTUJA. Lehden nostot ovat kahden
+   * joen risteys ja sen linnakkeet, Selkirkin siirtokunta ja
+   * Seitsemän tammen taistelu, vuosi 1873 ja Winnie-karhu; teemasivu
+   * kertoo talvesta, tulvista, preeriasta ja kesän ukkosista.
+   * Yksikään kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * THE FORKS JA ESPLANADE RIEL OVAT RUUDUSSA MUTTA EIVÄT
+   * NUMEROITUJA: The Forks on noston W1 koko aihe, ja Esplanade Riel
+   * on matkakirjan valokuvataulun uusi puoli (northamerica-valokuvat.js,
+   * winnipeg). Sama koskee Upper Fort Garryn porttia Main Streetin ja
+   * Broadwayn kulmassa — se on noston W1 loppu.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-winnipeg.md, kohta H): Pantages Playhouse on 149
+   * metrin päässä Manitoban museosta ja Royal Manitoba Theatre
+   * Centre 112 metrin päässä Pantagesista.
+   *
+   * PÖRSSIKORTTELIN KOKO on kohteen oman artikkelin mukaan
+   * kaksikymmentä korttelia ja noin 150 perintörakennusta;
+   * "Winnipeg"-artikkeli sanoo kolmekymmentä korttelia.
+   * Nähtävyysjuttu käyttää kohdeartikkelin lukuja
+   * (tarkistus-winnipeg.md, kohta A).
+   */
+  winnipeg: {
+    polku: 'assets/kartat/winnipeg-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 49.902, etela: 49.8805, lansi: -97.152, ita: -97.118 },
+    esittely: 'Kartan oikeaa laitaa kaartaa Punainen joki, ja alhaalta '
+      + 'siihen yhtyy Assiniboine. Jokien väliin jäävä kärki on The '
+      + 'Forks. Vasemmalla puolella on keskustan ruutukaava, jonka '
+      + 'halki kulkee vinosti kaksi leveää katua — Portage Avenue ja '
+      + 'Main Street — ja niiden risteys on kuvan keskellä. Joen '
+      + 'toisella puolella oikealla ovat Saint-Bonifacen korttelit. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian coordinates- ja
+       * geosearch-rajapinnasta 7.9.2026, ja kaikki 28 väliä on
+       * mitattu haversinilla: pienin on 309 metriä (Manitoban museo
+       * – pörssikortteli), toiseksi pienin 311 metriä (Union Station
+       * – ihmisoikeusmuseo).
+       */
+      { nimi: 'Manitoban museo', lat: 49.9, lon: -97.136667 },
+      { nimi: 'Pörssikortteli', lat: 49.8985, lon: -97.1403 },
+      { nimi: 'Burton Cummings -teatteri', lat: 49.895833, lon: -97.143611 },
+      { nimi: 'Manitoba Hydro Place', lat: 49.892397, lon: -97.1464 },
+      { nimi: 'Kanadan ihmisoikeusmuseo', lat: 49.890797, lon: -97.130997 },
+      { nimi: 'Saint-Bonifacen katedraali', lat: 49.8893, lon: -97.122 },
+      { nimi: 'Union Station', lat: 49.888889, lon: -97.134167 },
+      { nimi: 'Manitoban parlamenttitalo', lat: 49.8844, lon: -97.1469 },
+    ],
+  },
+  /*
+   * ST. JOHN'S (7.9.2026). Rajaus on noin 2,9 × 1,7 kilometriä ja se
+   * on tarkoituksella vaaka: kaupungin koko juoni on kapea
+   * itä–länsi-suuntainen satama-allas ja sen portti kallioiden
+   * välissä. Perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * stjohns-lohkossa.
+   *
+   * meri: 'maa' EIKÄ true, ja molemmat on kokeiltu 7.9.2026.
+   * Tavallinen vesipuolen täyttö varoitti "meri peittäisi 126 %
+   * rajauksesta" ja putosi rantanauhaan, jolloin satama jäi paperin
+   * väriseksi — se olisi ollut harhaanjohtavaa, koska kartan koko
+   * keskiosa on vettä. Maapuolitapa maalaa ruudun mereksi ja
+   * maamassat paperilla päälle, ja silloin satama, Narrows ja
+   * avomeri erottuvat oikein (Istanbulin ja Kööpenhaminan
+   * ennakkotapaus).
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN JUTTUJA. Lehden nostot ovat nimi ja
+   * ensimmäiset purjehdukset, satamansuun puolustus, turska ja öljy
+   * sekä viisi suurpaloa; teemasivu kertoo merikaapelista,
+   * Marconista, Alcockista ja Brownista sekä Newfoundlandin omasta
+   * aikavyöhykkeestä. Yksikään kartan kohteista ei ole niiden aihe.
+   *
+   * CABOT TOWERIN JUTUSTA ON TARKOITUKSELLA JÄTETTY POIS MARCONI,
+   * joka on teemasivun oma aihe — sama ratkaisu kuin Tangerin Pyhän
+   * Andreaksen kirkossa ja Matissessa (v1670). Samasta syystä
+   * vuoden 1762 Signal Hillin taistelu kerrotaan vain lehden
+   * nostossa, ei kartalla.
+   *
+   * VIISI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-stjohns.md, kohta H): Government House on 190 metrin
+   * päässä Colonial Buildingista, Bannerman Park 75 metrin päässä
+   * samasta, The Rooms 180 metrin päässä basilikasta, LSPU Hall 146
+   * metrin ja George Street 187 metrin päässä lähimmästä valitusta
+   * kohteesta. Quidi Vidin järvi jäi pois vesisäännöllä: sen piste
+   * osuisi vesialueelle. Regatta kerrotaan matkaoppaassa.
+   */
+  stjohns: {
+    polku: 'assets/kartat/stjohns-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 47.5745, etela: 47.5595, lansi: -52.716, ita: -52.677 },
+    esittely: 'Kartan keskellä on satama-allas, joka kapenee oikealla '
+      + 'kallioiden väliseksi portiksi ja avautuu siitä Atlantille. '
+      + 'Vasemmassa laidassa nousee keskusta: rinnakkaiset kadut '
+      + 'seuraavat rantaa, ja niiden takana rinne kohoaa jyrkästi. '
+      + 'Oikeassa yläkulmassa on Signal Hillin paljas kukkula, '
+      + 'oikeassa alakulmassa sataman eteläpuolen kalliorannikko. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit artikkelien omista coord-mallineista 7.9.2026
+       * (asteminuuttisekunnit muunnettu desimaaleiksi) ja
+       * ristiintarkistettu geosearchista; kaikki 28 väliä on mitattu
+       * haversinilla, ja pienin on 251 metriä (basilika –
+       * anglikaaninen katedraali).
+       */
+      { nimi: 'Colonial Building', lat: 47.570928, lon: -52.706789 },
+      { nimi: 'Fort William', lat: 47.5708, lon: -52.7006 },
+      { nimi: 'Cabot Tower', lat: 47.570014, lon: -52.681772 },
+      { nimi: 'The Battery', lat: 47.568892, lon: -52.690414 },
+      { nimi: 'Kansallinen sotamuistomerkki', lat: 47.567578, lon: -52.703797 },
+      { nimi: 'Pyhän Johannes Kastajan basilika', lat: 47.567356, lon: -52.7101 },
+      { nimi: 'Anglikaaninen katedraali', lat: 47.5655, lon: -52.7082 },
+      { nimi: 'Water Street', lat: 47.562581, lon: -52.708647 },
+    ],
+  },
+  /*
+   * KUMASI (Opus 7.9.2026, paketti O9). Ruutu on noin 2,4 × 3,3
+   * kilometriä ja kattaa Kumasin ytimen: pohjoisessa kulttuurikeskus,
+   * eläintarha ja Kejetian tori, keskellä Adumin linnake ja
+   * Ramseyerin kirkko, etelässä Rattrayn puisto ja Baba Yaran
+   * stadion. Piirtoperustelut tools/piirra-kaupunkikartta.mjs:n
+   * kumasi-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA (New Yorkin sääntö). Lehden
+   * nostot kertovat nimen synnystä kum-puun alla, kultajakkarasta ja
+   * Asanten liitosta, vuodesta 1873 ja Wolseleyn retkestä,
+   * jälleenrakennuksesta ja Kumawoodista; teemasivu kertoo
+   * Bosumtwe-järvestä, kahdesta sadekaudesta, puutarhakaupungin
+   * kaavasta, Owabin lintusuosta ja metsätaloudesta. Kartan
+   * kahdeksan kohdetta ovat paikkoja, joista lehti ei kerro.
+   *
+   * MANHYIAN PALATSI (6,70348 / −1,61579) ON JÄTETTY TARKOITUKSELLA
+   * POIS, vaikka se mahtuu ruutuun ja on kaupungin tunnetuin
+   * rakennus: se on GHANAN MAALEHDEN nosto (maa-kategoriat.js GHA,
+   * "Palatsi, jossa oli Timesin numero vuodelta 1843") ja lisäksi
+   * africa-questions.js:n AFRICA_FACTS-sähkeen aihe (palautetut 32
+   * esinettä 2024). Kohdekartta ei toista maalehteä sen enempää kuin
+   * kaupunkilehteäkään — sama ratkaisu kuin Fèsissä, josta jätettiin
+   * pois al-Qarawiyyin ja Chouaran altaat.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN LÄHDESYYSTÄ (tarkistus-kumasi.md,
+   * kohta G): Wesleyn metodistikatedraali ja St Peterin
+   * katedraalibasilika ovat molemmat yhden virkkeen tynkiä
+   * en-Wikipediassa, eikä niistä saa nähtävyysjuttua ilman arvailua.
+   * Kansallinen kulttuurikeskus ja Prempeh II:n museo ovat sama
+   * piste — museo on keskuksen alueella — ja ne on siksi yhdistetty
+   * yhdeksi kohteeksi.
+   */
+  kumasi: {
+    polku: 'assets/kartat/kumasi-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 6.7035, etela: 6.6755, lansi: -1.6345, ita: -1.6025 },
+    esittely: 'Kartta kattaa Kumasin keskustan harjanteen. Ylhäällä '
+      + 'kadut kiertävät kulttuurikeskuksen ja eläintarhan viheralaa, '
+      + 'keskellä kortteliverkko tiivistyy Adumin liikekeskustaksi, ja '
+      + 'alalaidassa erottuvat stadionin soikio ja puiston vihreä '
+      + 'kaistale. Kaupungin läpi mutkittelevat Subin ja Wiwi, joiden '
+      + 'vesiuomat näkyvät ohuina viivoina. Kartan kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit 7.9.2026: ensisijaisesti artikkelin oma
+       * {{coord}} en-Wikipedian raakatekstistä, ja Wikidatan P625
+       * silloin kun artikkelissa ei ole koordinaattia (Prempeh II:n
+       * museo, Ramseyerin kirkko, Rattrayn puisto). Kaikki 28 väliä
+       * on mitattu haversinilla: pienin on 355 metriä (Prempeh II:n
+       * museo – eläintarha), seuraavat 422 ja 447 metriä.
+       */
+      { nimi: 'Prempeh II:n museo', lat: 6.700639, lon: -1.629194 },
+      { nimi: 'Kumasin eläintarha', lat: 6.701000, lon: -1.626000 },
+      { nimi: 'Kejetian tori', lat: 6.698639, lon: -1.619139 },
+      { nimi: 'Komfo Anokyen sairaala', lat: 6.697479, lon: -1.631690 },
+      /*
+       * LINNAKE KANTAA MYÖS KULTAJAKKARAN SODAN KARTTANOSTON
+       * (omistajan sääntö 2.9.2026: jokaisella karttanostolla on
+       * paikka joko pääkartalla tai kohdekartalla). GHA-skandaalin
+       * merkki (skandaalit.js, kultajakkaran-sota, 6,7 / −1,6258)
+       * osuu tämän kartan rajaukseen, joten se ei enää kuulu
+       * pääkartalle. Piste ei saa omaa numeroaan, koska se olisi 112
+       * metrin päässä eläintarhasta ja numeroympyrät menisivät
+       * päällekkäin; linkki on sen sijaan linnakkeessa, jossa sota
+       * oikeasti käytiin — kaksikymmentäyhdeksän brittiä pidettiin
+       * täällä vangittuina maaliskuussa 1900. Sama ratkaisu kuin
+       * Istanbulin Topkapılla, joka kantaa Kaşıkçı-timantin
+       * skandaalin oman juttunsa rinnalla.
+       */
+      {
+        nimi: 'Kumasin linnake', lat: 6.691367, lon: -1.624872,
+        nosto: 'skandaali-kultajakkaran-sota',
+      },
+      { nimi: 'Ramseyerin muistokirkko', lat: 6.689400, lon: -1.621600 },
+      { nimi: 'Baba Yaran stadion', lat: 6.682681, lon: -1.605111 },
+      { nimi: 'Rattrayn puisto', lat: 6.681781, lon: -1.626117 },
+    ],
+  },
+  /*
+   * KANO (Opus 7.9.2026, paketti O9). Ruutu on noin 3,3 × 4,0
+   * kilometriä eli pelin väljempiä kohdekarttoja, ja syy on
+   * kaupungin oma mittakaava: Heinrich Barth mittasi 1851 muurin
+   * noin kymmenen mailin pituiseksi, joten pelkkä vanhakaupunki on
+   * kilometrejä leveä. Ruutu kattaa Dala-kukkulan luoteessa,
+   * emiirin palatsin ja suurmoskeijan keskellä sekä Sabon Garin
+   * koillisessa. Piirtoperustelut tools/piirra-kaupunkikartta.mjs:n
+   * kano-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA. Lehden nostot kertovat
+   * Kanon kronikasta, islamin tulosta ja sultanaatista, Rumfan
+   * vuosisadasta, vuodesta 1873 Sokoton kalifaatin emiirikuntana ja
+   * durbar-ratsastuksesta; teemasivu kertoo Kurmin torista,
+   * marokkonahasta, maapähkinästä ja rautatiestä sekä hausasta
+   * kauppakielenä. Rajapinnat on selvitetty tarkistus-kano.md:n
+   * kohdassa G: Rumfa-nosto ei kerro palatsista eikä torista
+   * rakennuksina, kronikkanosto ei kerro Barbushea, ja teemasivun
+   * kauppanosto mainitsee indigokankaan vain kauppatavarana.
+   *
+   * KURMIN TORI JÄI POIS KOORDINAATTISYYSTÄ, ei aiheen
+   * (tarkistus-kano.md, kohta F). en-Wikipedian Kurmi Market
+   * -artikkelin {{coord}} on täsmälleen sama piste kuin Wikidatan
+   * Gidan Rumfa, Wikidatan oma Kurmi-arvo on kaupungin karkea
+   * keskipiste, jonka jakaa yhdeksän muuta kohdetta, eikä OSM:ssä
+   * ole nimettyä Kurmi-kohdetta koko vanhassa kaupungissa. Tori on
+   * siksi teemasivun nosto.
+   *
+   * KAHDEN ARTIKKELIN KOORDINAATIT OLIVAT IDENTTISET: Gidan Rumfa
+   * ja suurmoskeija antavat kumpikin 11,99472 / 8,51750. Kartalla
+   * on Wikidatan arvot, jotka ovat 335 metrin päässä toisistaan ja
+   * joista moskeijan vahvistaa OSM kahden metrin tarkkuudella.
+   * Kofar Nassarawan portin piste on Overpassista, koska portilla
+   * ei ole omaa artikkelia (ennakkotapaukset: Persepoliksen
+   * Kaikkien kansojen portti ja Kabulin Chihil Sutun).
+   */
+  kano: {
+    polku: 'assets/kartat/kano-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 12.0170, etela: 11.9870, lansi: 8.5050, ita: 8.5420 },
+    esittely: 'Vasemmassa yläkulmassa kohoaa Dala-kukkula, ja siitä '
+      + 'kaakkoon levittäytyy vanhankaupungin tiheä kujaverkko. '
+      + 'Kuvan keskellä isot korttelit ovat emiirin palatsin '
+      + 'muurien sisäpuolta, ja oikeassa yläkulmassa kadut '
+      + 'suoristuvat ruudukoksi — se on Sabon Gari. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit 7.9.2026: artikkelin oma {{coord}} (Sabon
+       * Garin tori, stadion), Wikidatan P625 (Dala, Kofar Mata,
+       * suurmoskeija, Gidan Rumfa, Gidan Makama) ja Overpass
+       * (Kofar Nassarawa). Kaikki 28 väliä on mitattu haversinilla:
+       * pienin on 335 metriä (suurmoskeija – Gidan Rumfa),
+       * toiseksi pienin 357 metriä (Kofar Mata – stadion).
+       */
+      { nimi: 'Sabon Garin tori', lat: 12.015400, lon: 8.539900 },
+      { nimi: 'Dala-kukkula', lat: 12.009280, lon: 8.506980 },
+      { nimi: 'Kofar Matan värjäämöt', lat: 12.000853, lon: 8.526099 },
+      { nimi: 'Sani Abachan stadion', lat: 11.999722, lon: 8.529167 },
+      { nimi: 'Kanon suurmoskeija', lat: 11.994855, lon: 8.517640 },
+      { nimi: 'Gidan Rumfa', lat: 11.992300, lon: 8.516000 },
+      { nimi: 'Kofar Nassarawan portti', lat: 11.990889, lon: 8.530678 },
+      { nimi: 'Gidan Makaman museo', lat: 11.988802, lon: 8.521058 },
+    ],
+  },
+  /*
+   * DILI (7.9.2026). Rajaus on 1,9 × 1,4 kilometriä vanhan kaupungin
+   * ja sataman ympärillä — perustelu, meri-lippu ja pudotetut
+   * kohteet ovat tools/piirra-kaupunkikartta.mjs:n dili-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat kaupungin
+   * perustaminen Motaelin kuningaskunnan maalle 1769, vuoden 1873
+   * jälleenrakennus ruutukaavaan, toinen maailmansota ja Tetun Prasa;
+   * teemasivu kertoo maastosta, ilmastosta, suojelualueista ja
+   * merenelävistä. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe. Lähimpänä ovat satama ja hallituspalatsi, joita
+   * lehti sivuaa: satama esiintyy K2:ssa kaupungin keskipisteenä ja
+   * oppaassa lauttalaiturina, ja kartan juttu kertoo sen sijaan
+   * ankkuripaikan historiasta ja vuoden 1964 laiturista.
+   *
+   * KOLME KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-dili.md, kohta E): Casa Europa on 178 metrin päässä
+   * hallituspalatsista, vastarintamuseo 182 metrin päässä samasta ja
+   * Liceu Dr. Francisco Machado 112 metrin päässä BNU-pankkitalosta.
+   * Casa Europa on lisäksi lehden noston K3 aihe.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN SISÄLTÖSYISTÄ: Palácio das Cinzas on
+   * kokonaan presidentin virkatoimitilojen tarina eli nykypolitiikkaa,
+   * ja Toko Layn artikkeli on lähes kokonaan vuoden 1975
+   * joukkosurman silminnäkijäkertomus (Myanmar-linja, pilari 4).
+   *
+   * CRISTO REI EI OLE KARTALLA. Se on kuusi kilometriä itään
+   * rajauksen ulkopuolella ja lisäksi jo pelin karttanosto
+   * (js/packs/maastokohteet-tls.js, kohde cristo-rei).
+   */
+  dili: {
+    polku: 'assets/kartat/dili-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -8.5495, etela: -8.5625, lansi: 125.5655, ita: 125.5825 },
+    esittely: 'Kartan alue on Dilin vanha kaupunki ja hallintokortteli '
+      + 'Dilin lahden rannalla. Pohjoisessa on satama, jonka ympärille '
+      + 'kaupunki rakennettiin uudelleen 1830-luvulla, idässä '
+      + 'hallituspalatsi ja kansallisstadion, lännessä Motaelin '
+      + 'vanha kaupunginosa ja tuomiokirkko, etelässä torihalli ja '
+      + 'kansallisarkisto. Yläreunassa aukeaa Ombain salmi. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään kuten
+       * Cairnsissa ja Dunedinissa. Koordinaatit en-Wikipedian
+       * geosearch-rajapinnasta 7.9.2026, ja kaikki välit on mitattu
+       * uudelleen: pienin on 285 metriä (hallituspalatsi–BNU-pankkitalo).
+       */
+      { nimi: 'Motaelin kirkko', lat: -8.550833, lon: 125.570556 },
+      /*
+       * SATAMAN PISTE ON SIIRRETTY LAITURIN JUUREEN.
+       * En-Wikipedian koordinaatti −8,551667/125,576389 osuu laiturin
+       * päähän eli veteen, ja tools/tarkista-karttapisteet.mjs
+       * hylkäsi sen (vain sillat ja majakat saavat olla vedellä —
+       * Lontoon silmän ja Venetsian Arsenaalin oppi). Piste on
+       * siirretty rantaviivalle laiturialueen juureen, 250 metriä
+       * lounaaseen. Kaikki välit on mitattu uudelleen siirron
+       * jälkeen: lähin on BNU-pankkitalo 211 metrin päässä eli yhä
+       * yli kahdensadan metrin.
+       */
+      { nimi: 'Dilin satama', lat: -8.5537, lon: 125.5745 },
+      { nimi: 'Hallituspalatsi', lat: -8.554310, lon: 125.578600 },
+      { nimi: 'BNU-pankkitalo', lat: -8.554811, lon: 125.576053 },
+      { nimi: 'Kansallisstadion', lat: -8.558056, lon: 125.580556 },
+      { nimi: 'Tuomiokirkko', lat: -8.558333, lon: 125.567500 },
+      { nimi: 'Kansallisarkisto', lat: -8.559444, lon: 125.573889 },
+      { nimi: 'Kaupungin torihalli', lat: -8.560110, lon: 125.579060 },
+    ],
+  },
+  /*
+   * ALICE SPRINGS (7.9.2026). Rajaus on 1,7 × 1,8 kilometriä
+   * ANZAC Hilliltä Olive Pinkin puutarhaan — perustelu ja pudotetut
+   * kohteet ovat tools/piirra-kaupunkikartta.mjs:n
+   * alicesprings-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat Mparntwe
+   * ja arrernte-kansa, vuoden 1873 lennätinasema ja kaupungin
+   * nimenvaihto, afgaanikameliajajat sekä Flynn, poljettu radio ja
+   * School of the Air; teemasivu kertoo Namatjirasta, Hermannsburgin
+   * koulusta, Papunya Tulasta ja Araluenin korttelista. Yksikään
+   * kartan kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * KESKUSTA ON POIKKEUKSELLISEN TIIVIS, ja se on mitattu eikä
+   * arvattu (tarkistus-alicesprings.md, kohta F): The Residency on 88
+   * metrin, Griffiths House 127 metrin, Hartley Streetin koulu 159
+   * metrin, Adelaide House 174 metrin ja Stuart Arms Hotel 189 metrin
+   * päässä Stuart Town Gaolista, ja Griffiths House ja koulu ovat 58
+   * metrin päässä toisistaan. Koko perintökortteli mahtuu siis
+   * kahdensadan metrin ympyrään, ja siitä otettiin kartalle kolme
+   * pistettä. Adelaide House on lisäksi lehden noston K4 aihe ja
+   * Todd Mall (137 m Pioneer-teatterista) teemasivun aihe.
+   *
+   * LENNÄTINASEMA ON KOLME KILOMETRIÄ POHJOISEEN eikä siis mahdu
+   * rajaukseen. Se on myös jo kolmen muun pelin osan aihe:
+   * saapumisteksti, matkakirjan valokuvataulun ennen–nyt-pari ja
+   * AUS-maalehden lennätinnosto.
+   */
+  alicesprings: {
+    polku: 'assets/kartat/alicesprings-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -23.6925, etela: -23.7085, lansi: 133.8705, ita: 133.8875 },
+    esittely: 'Kartan alue on Alice Springsin keskusta tavallisesti '
+      + 'kuivan Todd-joen länsipuolella. Pohjoisessa kohoaa ANZAC '
+      + 'Hill, keskellä on kaupungin ruutukaava vanhoine taloineen, '
+      + 'lännessä radan varsi ja etelässä joen mutka, jossa ovat '
+      + 'vanha vankila ja kasvitieteellinen puutarha. Kartan '
+      + 'kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+       * ja kaikki välit on mitattu uudelleen: pienin on 271 metriä
+       * (Pioneer-teatteri–kaupunginkirjasto).
+       */
+      { nimi: 'ANZAC Hill', lat: -23.694730, lon: 133.882110 },
+      { nimi: 'Totem-teatteri', lat: -23.694852, lon: 133.885016 },
+      { nimi: 'Rautatieasema', lat: -23.697417, lon: 133.873389 },
+      { nimi: 'Stuart Town Gaol', lat: -23.698470, lon: 133.881290 },
+      { nimi: 'Pioneer-teatteri', lat: -23.699357, lon: 133.883917 },
+      { nimi: 'Kaupunginkirjasto', lat: -23.701667, lon: 133.883056 },
+      { nimi: 'Australian naisten museo', lat: -23.704100, lon: 133.876900 },
+      { nimi: 'Olive Pinkin puutarha', lat: -23.706400, lon: 133.884900 },
+    ],
+  },
+  /*
+   * TIMBUKTUN VANHAKAUPUNKI (Opus 7.9.2026, paketti O9). Ruutu on
+   * 1,09 x 1,09 kilometriä: lounaassa Djinguereberin moskeija,
+   * keskellä Sidi Yahyan moskeija ja sen ympärillä kolme
+   * tutkimusmatkailijan taloa sekä al-Wangarin sukukirjasto,
+   * koillisessa Sankorén moskeija ja Ahmed Baba -instituutti.
+   * Perustelut piirra-kaupunkikartta.mjs:n timbuktu-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA, MALIN MAALEHTEÄ EIVÄTKÄ
+   * SKANDAALINOSTOA. Lehden nostot kertovat kaupungin nimestä,
+   * suolakaravaanista, vuoden 1873 valtatilanteesta ja kaupungin
+   * suhteesta jokeen; teemasivu kertoo Sankorén opetustavasta,
+   * käsikirjoituksista, Ahmad Babasta ja Leo Africanuksesta.
+   * Kohdekartta kertoo rakennukset ja niissä asuneet ihmiset.
+   * Vuosien 2012–2013 tapahtumia ei käsitellä missään: ne ovat jo
+   * skandaalinostona (skandaalit.js MLI).
+   *
+   * KOLME EHDOKASTA HYLÄTTIIN LÄHTEEN PUUTTEESSA: Grand Marché
+   * (kaupungin päätori), Bibliothèque Fondo Kati ja Musée
+   * d'Archéologie. Yhdelläkään ei ole kerrottavaa katetta
+   * en-Wikipediassa, eikä nähtävyysjuttua kirjoiteta ilman katetta.
+   * Rauhan liekin monumentti hylättiin siksi, että artikkelin
+   * päiväys sille on mahdoton (kapina päättyi 1996, seremonia
+   * "29.3.2007") — ks. tarkistus-timbuktu.md kohta H.
+   * Mamma Haidara -muistokirjastolle ei löytynyt sijaintia
+   * Wikipediasta, Overpassista eikä Nominatimista.
+   */
+  timbuktu: {
+    polku: 'assets/kartat/timbuktu-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 16.7791, etela: 16.7693, lansi: -3.0128, ita: -3.0026 },
+    esittely: 'Timbuktun vanhakaupunki on savea ja hiekkaa: kolme '
+      + 'suurta moskeijaa ja kuusitoista mausoleumia ovat olleet '
+      + 'maailmanperintökohteena vuodesta 1988. Kaupunki oli '
+      + 'islamilaisen oppineisuuden keskus 1200-luvulta 1600-luvulle, '
+      + 'ja moskeijat toimivat kouluina. 1800-luvulla samojen kujien '
+      + 'varrella asui kolme eurooppalaista, jotka olivat matkanneet '
+      + 'tänne vuosikausia. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään ja lopuksi
+       * koilliseen. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta (moskeijat ja instituutti) ja
+       * Overpassista (kolme taloa ja kirjasto) 7.9.2026.
+       *
+       * VÄLIT OVAT PELIN PIENIMPIÄ ja se on tässä oikein:
+       * vanhakaupunki on niin tiheä, ettei 200 metrin väljyyteen
+       * pääse ilman että puolet kohteista putoaa pois. Kolme
+       * pienintä väliä ovat al-Wangarin kirjasto – Barthin talo
+       * 41 m, Sankoré – Ahmed Baba 68 m ja Caillién talo – Sidi
+       * Yahya 71 m (mitattu haversinilla, ks.
+       * docs/mantereet-tyoaineisto/tarkistus-timbuktu.md). Ruutu on
+       * siksi tiivistetty 1,09 kilometrin levyiseksi (3,0 m/px);
+       * tarkista-karttapisteet.mjs vahvistaa peittoasteet.
+       */
+      { nimi: 'Djinguereberin moskeija', lat: 16.77139, lon: -3.01 },
+      { nimi: 'Gordon Laingin talo', lat: 16.77244, lon: -3.00873 },
+      { nimi: 'René Cailliéen talo', lat: 16.77233, lon: -3.00779 },
+      { nimi: 'Sidi Yahyan moskeija', lat: 16.77224, lon: -3.00713 },
+      { nimi: 'al-Wangarin kirjasto', lat: 16.77272, lon: -3.00659 },
+      { nimi: 'Heinrich Barthin talo', lat: 16.77255, lon: -3.00625 },
+      { nimi: 'Sankorén moskeija', lat: 16.77589, lon: -3.00564 },
+      { nimi: 'Ahmed Baba -instituutti', lat: 16.77639, lon: -3.00528 },
+    ],
+  },
+  /*
+   * LALIBELAN KALLIOKIRKOT (Opus 7.9.2026, paketti O9). Ruutu on
+   * 1,07 x 0,89 kilometriä: lännessä erillinen Biete Giyorgis,
+   * keskellä pohjoinen kaivantoryhmä ja idässä eteläinen ryhmä.
+   * Perustelut piirra-kaupunkikartta.mjs:n lalibela-lohkossa.
+   *
+   * KOHTEET EIVÄT TOISTA LEHDEN JUTTUJA EIVÄTKÄ ETIOPIAN
+   * MAALEHTEÄ. Maalehden nosto "Yksitoista kirkkoa, jotka
+   * kaivettiin alaspäin" (maa-kategoriat.js ETH) kertoo
+   * louhintatavan, kirkkojen määrän ja Jerusalem-symboliikan;
+   * kaupunkilehti kertoo kuningas Lalibelan tarinan, veden, vuoden
+   * 1873 ja asuintalot; teemasivu kertoo aksumilaisen perinnön,
+   * Lalibelan ristin, ajoituskiistan ja Yemrehana Krestosin.
+   * Kohdekartta kertoo kunkin kirkon oman tarinan.
+   *
+   * KOLME KIRKKOA JÄTETTIIN POIS VÄLIN TAKIA: Biete Meskel on
+   * 27 metriä Biete Maryamista, Biete Qeddus Mercoreus 29 metriä
+   * Biete Amanuelista, ja Biete Denagelilta puuttuu sekä artikkeli
+   * että koordinaatti. Yemrehana Krestos on 12,2 km koilliseen
+   * eli ruudun ulkopuolella; se on lehden teemasivun nosto.
+   */
+  lalibela: {
+    polku: 'assets/kartat/lalibela-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 12.0365, etela: 12.0285, lansi: 39.0385, ita: 39.0483 },
+    esittely: 'Lalibelan yksitoista kirkkoa on louhittu kalliosta '
+      + 'ylhäältä alaspäin, ja niiden väliin on hakattu kaivannot ja '
+      + 'tunnelit. Kirkot jakautuvat kolmeen: viisi Jordan-puron '
+      + 'pohjoispuolella, viisi eteläpuolella ja yksi erillään. Kohde '
+      + 'on ollut maailmanperintöluettelossa vuodesta 1978, ja '
+      + 'kirkoissa pidetään yhä jumalanpalveluksia. Kartan kohteista '
+      + 'pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään. Koordinaatit
+       * en-Wikipedian "Rock-Hewn Churches, Lalibela" -artikkelin
+       * coord-malleista; Biete Golgotha Mikael Overpassista, koska
+       * kirkolla ei ole omaa artikkelia eikä koordinaattia.
+       *
+       * TÄMÄ ON PELIN TIIVEIN KOHDEKARTTA, ja se on kaupungin
+       * totuus eikä kartan vika: kaikki kahdeksan mahtuvat
+       * 0,28 x 0,48 kilometrin alalle, ja pienimmät välit ovat 36 m
+       * (Golgotha Mikael – Maryam) ja 40 m (Maryam – Medhane Alem).
+       * Yksitoista kirkkoa on louhittu saman kalliopaljastuman
+       * kahteen kaivantoryhmään, joten tiiviimpää ei ole
+       * olemassakaan. Mitat haversinilla, ks.
+       * docs/mantereet-tyoaineisto/tarkistus-lalibela.md.
+       */
+      { nimi: 'Biete Giyorgis', lat: 12.03174, lon: 39.04113 },
+      { nimi: 'Biete Golgotha Mikael', lat: 12.03356, lon: 39.04304 },
+      { nimi: 'Biete Maryam', lat: 12.03371, lon: 39.04333 },
+      { nimi: 'Biete Medhane Alem', lat: 12.0337, lon: 39.0437 },
+      { nimi: 'Biete Gabriel-Rufael', lat: 12.0312, lon: 39.04464 },
+      { nimi: 'Biete Lehem', lat: 12.03169, lon: 39.04451 },
+      { nimi: 'Biete Abba Libanos', lat: 12.03141, lon: 39.04518 },
+      { nimi: 'Biete Amanuel', lat: 12.03182, lon: 39.04556 },
+    ],
+  },
+  /*
+   * TOWNSVILLEN KESKUSTA (Opus 7.9.2026, parvierä). Ruutu on noin
+   * 2,0 × 1,7 kilometriä: luoteessa Queens Gardens Castle Hillin
+   * juurella, pohjoisessa The Strandin uimala, keskellä Melton Hill ja
+   * Flinders Street, kaakossa Ross Creekin mutka. Cleveland Bay tulee
+   * kuvan koilliskulmaan.
+   *
+   * MERI-LIPPU PÄÄLLÄ, koska sekä lahti että Ross Creek ovat ruudussa.
+   *
+   * KAKSI KOHDETTA ON 201 METRIN PÄÄSSÄ TOISISTAAN (tullitalo ja
+   * museo), ja se on tietoinen valinta: molemmat seisovat saman Ross
+   * Creekin rannan päissä ja kummallakin on oma tarina. Kaikki muut
+   * 27 väliä ovat yli 300 metriä; suurin on 1 357 m.
+   *
+   * FLINDERS STREETIN TIHEYS RATKAISTIIN VALITSEMALLA YKSI.
+   * Perc Tucker Regional Gallery on 60 m postitalosta, Queensland
+   * National Bank 107 m ja Buchanan's Hotel alle 140 m — kaikki
+   * jäivät pois, koska numeroympyrät olisivat peittäneet toisensa.
+   * Postitalo valittiin, koska sen kellotornilla on oma tarina.
+   * Victoria Bridge on tasan 200 m postitalosta ja jäi siksi pois.
+   * Sacred Heart -katedraali jätettiin pois, jotta kartalla ei ole
+   * kahta katedraalia.
+   *
+   * CASTLE HILL ON RUUDUSSA MUTTA EI NUMEROITU: kukkula on lehden
+   * teemasivun nosto, eikä kohdekartta toista lehden juttuja
+   * (New Yorkin sääntö). Sama koskee Magnetic Islandia, joka on
+   * kahdeksan kilometrin päässä eikä mahdu ruutuun lainkaan.
+   *
+   * Koordinaatit en-Wikipedian list=geosearch-rajapinnasta 7.9.2026;
+   * etäisyydet laskettu haversinilla
+   * (docs/mantereet-tyoaineisto/tarkistus-townsville.md).
+   */
+  townsville: {
+    polku: 'assets/kartat/townsville-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -19.2505, etela: -19.266, lansi: 146.807, ita: 146.826 },
+    esittely: 'Townsvillen keskusta on Ross Creekin mutkan ja Castle '
+      + 'Hillin väliin puristettu ruutukaava, ja sen halki kulkee '
+      + 'Flinders Street, kaupungin vanhin katu. Pohjoisessa on The '
+      + 'Strandin ranta, koillisessa Cleveland Bay. Kohteista pääsee '
+      + 'lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       */
+      { nimi: 'Queens Gardens', lat: -19.2531, lon: 146.81 },
+      { nimi: 'Tobruk Memorial Baths', lat: -19.2533, lon: 146.8198 },
+      { nimi: 'Vanha tullitalo', lat: -19.2556, lon: 146.8219 },
+      { nimi: 'St James -katedraali', lat: -19.2555, lon: 146.8167 },
+      { nimi: 'Tropiikin museo', lat: -19.2574, lon: 146.8221 },
+      { nimi: 'Vanha postitalo', lat: -19.2586, lon: 146.8183 },
+      { nimi: 'School of Arts', lat: -19.2603, lon: 146.8137 },
+      { nimi: 'Great Northern Hotel', lat: -19.263, lon: 146.8147 },
+    ],
+  },
+  /*
+   * IQUITOSIN MONUMENTTIVYÖHYKE (Opus 7.9.2026, parvierä). Ruutu on
+   * noin 1,44 × 1,44 kilometriä: pohjoisessa Casa Morey ja
+   * yliopistokortteli, keskellä Plaza de Armas ja katedraali, idässä
+   * Malecón Tarapacá Itaya-joen yllä, etelässä Plaza 28 de Julio.
+   *
+   * MERI-LIPPU PÄÄLLÄ, koska Itaya-joki kulkee ruudun itälaidassa.
+   *
+   * MONUMENTTIKORTTELIN TIHEYS RATKAISTIIN VALITSEMALLA YKSI.
+   * Plaza de Armas on 67 m katedraalista ja Obelisco de los Héroes
+   * 12 m aukiosta — kaikki kolme ovat sama paikka, ja kartalle
+   * valittiin katedraali, koska sillä on oma rakennushistoria. Casa
+   * Pinasco on 125 m katedraalista, Hotel de Turistas 80 m Hotel
+   * Palacesta, Museo de Culturas Indígenas Amazónicas 139 m
+   * Palacesta, Biblioteca Amazónica 121 m ja Casa Cohen 102 m
+   * Malecónista. Kaikki kuusi jäivät pois liian lähelle osuvina.
+   * Pienin käytetty väli on 210 m (katedraali—Hotel Palace).
+   *
+   * CASA DE FIERRO EI OLE KARTALLA KAHDESTA SYYSTÄ: se on lehden
+   * noston aihe (New Yorkin sääntö) ja lisäksi vain 126 metriä
+   * katedraalista. Sen sijaan kartalla on Mercado Central, joka on
+   * saman rautatalon toinen puolikas — mutta jutussa kerrotaan torin
+   * oma tarina eikä rautatalon lähderistiriitaa.
+   *
+   * BELÉN JÄÄ ULKOPUOLELLE (1,4 km etelään): se on lehden teemasivun
+   * noston aihe, ja mukaan otettuna puolet ruudusta olisi tulvamaata
+   * ilman katuverkkoa.
+   *
+   * Koordinaatit es-Wikipedian list=geosearch-rajapinnasta 7.9.2026;
+   * etäisyydet laskettu haversinilla
+   * (docs/mantereet-tyoaineisto/tarkistus-iquitos.md).
+   */
+  iquitos: {
+    polku: 'assets/kartat/iquitos-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: -3.744, etela: -3.757, lansi: -73.253, ita: -73.238 },
+    esittely: 'Iquitosin monumenttivyöhyke on kymmenkunta korttelia '
+      + 'Plaza de Armasin ympärillä, ja se laskeutuu idässä Malecón '
+      + 'Tarapacálle Itaya-joen rantatörmälle. Kumikauden talot ovat '
+      + 'tässä ruudussa lähes kaikki. Kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       */
+      { nimi: 'Casa Morey', lat: -3.7468295, lon: -73.2420001 },
+      { nimi: 'Kuvataidekoulu', lat: -3.7477222, lon: -73.2510278 },
+      { nimi: 'Mercado Central', lat: -3.7488446, lon: -73.248452 },
+      { nimi: 'Iquitosin katedraali', lat: -3.749266, lon: -73.244968 },
+      { nimi: 'Hotel Palace', lat: -3.750688, lon: -73.243716 },
+      { nimi: 'Malecón Tarapacá', lat: -3.7525346, lon: -73.2464037 },
+      { nimi: 'Casa Strassberger', lat: -3.7528833, lon: -73.2444139 },
+      { nimi: 'Plaza 28 de Julio', lat: -3.7545969, lon: -73.2493161 },
+    ],
+  },
+  /*
+   * WHITEHORSE (7.9.2026). Rajaus on noin 4,0 × 2,7 kilometriä
+   * Yukonjoen laaksossa — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n whitehorse-lohkossa.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat Kwanlin
+   * Dünin nimi ja kausileirit, vuosi 1873 ja kullan löytyminen,
+   * kosket ja Miles Canyon, White Pass -rata ja nimi Closeleigh sekä
+   * Robert Servicen näkemä pankkilomake; teemasivu kertoo
+   * kuninkuuslohesta, Kanadan kuivimmasta kaupungista, Yukon
+   * Questistä ja laakson vuorista. Yksikään kartan kahdeksasta
+   * kohteesta ei ole niiden aihe.
+   *
+   * KAKSI KOHDETTA PUDOTETTIIN 200 METRIN SÄÄNNÖLLÄ
+   * (tarkistus-whitehorse.md, kohta F): Downtown Whitehorse on 105
+   * metrin ja Whitehorse Waterfront Trolleyn pysäkki 75 metrin
+   * päässä MacBride-museosta. Molemmat kerrotaan matkaoppaassa.
+   */
+  whitehorse: {
+    polku: 'assets/kartat/whitehorse-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 60.725, etela: 60.7005, lansi: -135.088, ita: -135.015 },
+    esittely: 'Kartan halki kulkee Yukonjoki pohjoisesta etelään, ja '
+      + 'sen alaosassa se levenee saarten sekaan. Vasemmalla ylhäällä '
+      + 'on keskustan ruutukaava joen länsirannalla, ja siitä '
+      + 'länteen nousee jyrkkä penger, jonka päällä ovat lentoaseman '
+      + 'kiitoradat pitkinä suorina. Oikeassa alakulmassa on '
+      + 'Riverdale joen itärannalla, ja vasemmassa laidassa kaartaa '
+      + 'Alaska Highway. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+       * ja kaikki 28 väliä on mitattu haversinilla: pienin on 366
+       * metriä (Yukonin liikennemuseo – Beringia-keskus).
+       */
+      { nimi: 'MacBride-museo', lat: 60.72111, lon: -135.05167 },
+      { nimi: 'Kristuksen katedraali', lat: 60.71807, lon: -135.05512 },
+      { nimi: 'Yukonin parlamenttitalo', lat: 60.7169, lon: -135.0488 },
+      { nimi: 'SS Klondike', lat: 60.71333, lon: -135.0475 },
+      { nimi: 'Yukonin liikennemuseo', lat: 60.7119, lon: -135.0792 },
+      { nimi: 'Whitehorsen lentoasema', lat: 60.70944, lon: -135.06722 },
+      { nimi: 'Beringia-keskus', lat: 60.70861, lon: -135.07889 },
+      { nimi: 'Riverdale', lat: 60.70694, lon: -135.02358 },
+    ],
+  },
+  /*
+   * YELLOWKNIFE (7.9.2026). Rajaus on noin 2,7 × 3,0 kilometriä Old
+   * Townin kalliokärjestä Frame Laken rannalle — perustelu on
+   * tools/piirra-kaupunkikartta.mjs:n yellowknife-lohkossa.
+   * Oikeassa laidassa on Yellowknife Bay, ja kuvan halki kulkee
+   * Franklin Avenue eli 50th Avenue, joka yhdistää vanhan ja uuden
+   * kaupungin.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * Yellowknives Dene ja nimi Sǫǫ̀mbak'è, vuosi 1873 ja Old Fort
+   * Providence, kullan löytyminen ja Con Mine, pääkaupungiksi tulo
+   * 1967 sekä timantit ja Giant Minen arseeni; teemasivu kertoo
+   * Isonorjajärvestä, jäätiestä, asuntolaivoista, ilmastosta ja
+   * lumilinnasta. Yksikään kartan kahdeksasta kohteesta ei ole
+   * niiden aihe.
+   *
+   * KOLME KOHDETTA JÄTETTIIN POIS (tarkistus-yellowknife.md, kohta
+   * G): Hudson's Bay Warehouse ja Canadian Pacific Airlines
+   * floatbase ovat 70 metrin päässä Wildcat Cafésta, ja The Gold
+   * Range on baari, joka jätetään pois sävysyistä. Ndilǫ ja
+   * asuntolaivat näkyvät kartalla mutta eivät ole numeroituja
+   * kohteita, koska ne ovat lehden omia juttuja.
+   */
+  yellowknife: {
+    polku: 'assets/kartat/yellowknife-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 62.474, etela: 62.447, lansi: -114.392, ita: -114.339 },
+    esittely: 'Oikeassa yläkulmassa on Yellowknife Bay, ja siihen '
+      + 'työntyy Old Townin kallioinen niemi kapeine mutkittelevine '
+      + 'katuineen. Niemeltä lähtee suora väylä vinosti alas '
+      + 'vasemmalle — Franklin Avenue — ja sen päässä alkaa New '
+      + 'Townin ruutukaava kuvan alalaidassa. Muualla on vettä joka '
+      + 'suunnassa: Frame Lake ja tusina pienempää lampea katkovat '
+      + 'kalliomaastoa, ja niiden rannalla ovat hallinnon '
+      + 'rakennukset. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi pohjoisesta etelään.
+       * Koordinaatit en-Wikipedian geosearch-rajapinnasta 7.9.2026,
+       * ja kaikki 28 väliä on mitattu haversinilla: pienin on 242
+       * metriä (Wildcat Cafe – Weaver & Devoren kauppa).
+       */
+      { nimi: 'Bank of Toronton hirsimökki', lat: 62.47, lon: -114.344 },
+      { nimi: 'Back Bayn hautausmaa', lat: 62.4691, lon: -114.3626 },
+      { nimi: 'Wildcat Cafe', lat: 62.46652, lon: -114.34889 },
+      { nimi: 'Weaver & Devoren kauppa', lat: 62.46444, lon: -114.35028 },
+      { nimi: 'Ragged Ass Road', lat: 62.46063, lon: -114.35256 },
+      { nimi: 'Luoteisterritorioiden parlamenttitalo', lat: 62.45944, lon: -114.38194 },
+      { nimi: 'Prince of Walesin pohjoinen perintökeskus', lat: 62.45611, lon: -114.38 },
+      { nimi: 'Hirsikoulu', lat: 62.45194, lon: -114.37667 },
+    ],
+  },
+  /*
+   * IQALUIT (7.9.2026). Rajaus on 6,5 × 4,0 kilometriä ja kattaa
+   * KOKO kaupungin — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * iqaluit-lohkossa: Nunavutin pääkaupungin koko tieverkko ulottuu
+   * Sylvia Grinnellin puistosta Apexiin, eikä sieltä johda tietä
+   * minnekään muualle.
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat
+   * kalapaikan nimi ja dorset–thule-menneisyys, Frobisherin
+   * arvoton malmi 1576–1578, Charles Francis Hallin matka 1861 ja
+   * inuiittien perimätieto sekä kaupungin tie sotilastukikohdasta
+   * Nunavutin pääkaupungiksi; teemasivu kertoo vuorovedestä,
+   * puurajasta, ilmastosta ja jäästä kulkuväylänä. Yksikään kartan
+   * kahdeksasta kohteesta ei ole niiden aihe.
+   *
+   * LENTOASEMA ON KARTALLA, VAIKKA LEHTI KERTOO VUODEN 1942
+   * TUKIKOHDASTA. Nosto K4 kertoo kaupungin synnyn ja nimen —
+   * kartan juttu kertoo nykyisestä lentoasemasta (terminaali 2018,
+   * kiitotie 2 623 m, polaarireittien varalentokenttä). Sama
+   * mittakaavaero kuin Houstonissa maalehden ja jutun välillä.
+   *
+   * NUNAVUT ARCTIC COLLEGE JÄTETTIIN POIS, koska en-Wikipedian
+   * koordinaatti (63,72761 / −68,44456) osoittaa Apexin suuntaan
+   * eikä keskustan Nunatta-kampukselle; epävarmaa pistettä ei
+   * merkitä kartalle (tarkistus-iqaluit.md, kohta G).
+   *
+   * QAUMMAARVIIT JA KATANNILIK JÄÄVÄT POIS AIHESYISTÄ: ne ovat
+   * teemasivun noston L4 aihe ja lisäksi lahden toisella puolella.
+   */
+  iqaluit: {
+    polku: 'assets/kartat/iqaluit-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 63.7610, etela: 63.7250, lansi: -68.5720, ita: -68.4390 },
+    esittely: 'Kartalla näkyy koko Iqaluit. Vasemmalla laskee Sylvia '
+      + 'Grinnellin joki, keskellä on kaupunki Koojesse Inletin '
+      + 'pohjukassa, ja oikeassa alakulmassa erottuu Apexin niemi. '
+      + 'Tiet loppuvat kuvan reunoihin, koska niitä ei ole enempää. '
+      + 'Kartan kohteista pääsee lukemaan lisää napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi luoteesta kaakkoon.
+       * Koordinaatit en-Wikipedian coordinates-rajapinnasta ja
+       * artikkelien tietolaatikoiden coord-merkinnöistä 7.9.2026.
+       * Kaikki välit on mitattu uudelleen: pienin on 207 metriä
+       * (Inuksuk-lukio – Astro Hill), seuraavat 230 ja 276 metriä.
+       */
+      { nimi: 'Iqaluitin lentoasema', lat: 63.75667, lon: -68.55611 },
+      { nimi: 'Sylvia Grinnellin puisto', lat: 63.74861, lon: -68.56389 },
+      { nimi: 'Nunavutin parlamenttitalo', lat: 63.75028, lon: -68.52306 },
+      { nimi: 'Inuksuk-lukio', lat: 63.74917, lon: -68.51389 },
+      { nimi: 'Pyhän Juudaksen katedraali', lat: 63.7475, lon: -68.51667 },
+      { nimi: 'Astro Hill', lat: 63.74778, lon: -68.51111 },
+      { nimi: 'Nunatta Sunakkutaangit -museo', lat: 63.7435, lon: -68.5138 },
+      { nimi: 'Apex eli Niaqunngut', lat: 63.73, lon: -68.44583 },
+    ],
+  },
+  /*
+   * SANTA FE (7.9.2026). Rajaus on 4,5 x 3,7 kilometria aukiolta
+   * Museum Hillille — perustelu on tools/piirra-kaupunkikartta.mjs:n
+   * santafe-lohkossa. Ruutua EI keskitetty en-Wikipedian
+   * kaupunkipisteeseen (35,66722 / -105,96444), joka on noin kolme
+   * kilometria aukiolta lounaaseen: kartta ankkuroidaan
+   * historialliseen ytimeen (spec-mantereet.md linjaus 4, San
+   * Franciscon ennakkotapaus).
+   *
+   * KOHDEKARTTA EI TOISTA LEHDEN NOSTOJA. Lehden nostot ovat tewojen
+   * kyla ja nimi, kaupungin perustaminen ja aukiokaava, pueblokapina
+   * 1680 ja vuoden 1873 vaunureitti; teemasivu kertoo Pueblo Revival
+   * -rakennussaannosta, sen hinnasta, Indian Marketista ja
+   * Zozobrasta. Siksi POIS kartalta jaivat kuvernoorien palatsi
+   * (nostot K3 ja T1 seka matkakirjan valokuvataulu), Santa Fen aukio
+   * (nostot K2 ja T3), Canyon Road (nosto T2) ja Fort Marcy
+   * (nosto T4).
+   *
+   * KAHDEN KOHTEEN VALI ALITTAA 200 METRIA: katedraali ja Loreton
+   * kappeli ovat noin 170 metrin paassa toisistaan saman korttelin
+   * kulmissa. Molemmat pidetaan Nuukin ja Iqaluitin
+   * ennakkotapauksen mukaisesti — tools/tarkista-karttapisteet.mjs
+   * ei ilmoita numeroympyroiden paallekkaisyydesta, ja kuva on
+   * katsottu silmin. Mittaukset ovat tarkistus-santafe.md:n
+   * kohdassa C.
+   */
+  santafe: {
+    polku: 'assets/kartat/santafe-keskusta.png',
+    lahde: '© OpenStreetMap-tekijät (ODbL)',
+    rajat: { pohjoinen: 35.6930, etela: 35.6600, lansi: -105.9620, ita: -105.9120 },
+    esittely: 'Kartan pohjoisosassa on vanha keskusta aukioineen: '
+      + 'kadut lähtevät siitä säteittäin, kuten vuoden 1573 '
+      + 'kaavoitussäännöt vaativat. Alempana kaartaa Santa Fe -joki, '
+      + 'ja sen eteläpuolelta alkaa Barrio de Analco. Kaakkoiskulmaan '
+      + 'jää Museum Hill. Kartan kohteista pääsee lukemaan lisää '
+      + 'napauttamalla.',
+    kohteet: [
+      /*
+       * KAHDEKSAN KOHDETTA, numerointi lännestä itään ja
+       * pohjoisesta etelään. Koordinaatit en-Wikipedian
+       * coordinates-rajapinnasta 7.9.2026; taidemuseon ja
+       * O'Keeffe-museon luvut luettiin artikkelien tietolaatikoiden
+       * coord-merkinnöistä, koska niissä on display=inline eivätkä ne
+       * siksi näy rajapinnassa. Välit on mitattu uudelleen: pienin on
+       * noin 170 metriä (katedraali – Loreton kappeli), seuraavat
+       * 204 ja 223 metriä.
+       */
+      { nimi: 'Guadalupen pyhäkkö', lat: 35.68694, lon: -105.945 },
+      { nimi: 'Georgia O\'Keeffen museo', lat: 35.688961, lon: -105.94119 },
+      { nimi: 'New Mexicon taidemuseo', lat: 35.6881, lon: -105.9392 },
+      { nimi: 'Pyhän Franciscuksen katedraali', lat: 35.6865, lon: -105.9363 },
+      { nimi: 'Loreton kappeli', lat: 35.68556, lon: -105.93778 },
+      { nimi: 'San Miguelin kirkko', lat: 35.68343, lon: -105.93767 },
+      { nimi: 'New Mexicon osavaltiotalo', lat: 35.6823, lon: -105.9397 },
+      { nimi: 'Kansantaiteen museo', lat: 35.66406, lon: -105.92618 },
     ],
   },
 };

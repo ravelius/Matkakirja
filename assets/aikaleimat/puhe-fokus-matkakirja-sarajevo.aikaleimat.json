@@ -1,0 +1,152 @@
+{
+  "versio": 2,
+  "kaupunki": "sarajevo",
+  "teksti": "Sarajevon kupariseppä naputti kahvipannua vasaralla, jonka olisin hukannut taskuun. Aamulla olin juonut kahvini samanlaisesta pannusta vilkaisematta sitä. Nyt näin jokaisen vasaranjäljen. Basaarin kilkutuksessa aamiainen muuttui käsityöksi.",
+  "tekstiSha256": "dbf521c52add93cb8daa8c90a74ae472116ebcb0cb3e1c0a09c87c272176e546",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-sarajevo.mp3",
+    "versio": 2,
+    "tavut": 321036,
+    "sha256": "158662238e670e321ba413be98188018d1a15b6d29137ec7b5246906252481b3"
+  },
+  "kesto": 19980,
+  "sanat": [
+    {
+      "sana": "Sarajevon",
+      "alku": 160,
+      "loppu": 680
+    },
+    {
+      "sana": "kupariseppä",
+      "alku": 740,
+      "loppu": 1440
+    },
+    {
+      "sana": "naputti",
+      "alku": 1480,
+      "loppu": 1860
+    },
+    {
+      "sana": "kahvipannua",
+      "alku": 1920,
+      "loppu": 2640
+    },
+    {
+      "sana": "vasaralla",
+      "alku": 2680,
+      "loppu": 3220
+    },
+    {
+      "sana": "jonka",
+      "alku": 3820,
+      "loppu": 4080
+    },
+    {
+      "sana": "olisin",
+      "alku": 4120,
+      "loppu": 4400
+    },
+    {
+      "sana": "hukannut",
+      "alku": 4440,
+      "loppu": 4880
+    },
+    {
+      "sana": "taskuun",
+      "alku": 4940,
+      "loppu": 5600
+    },
+    {
+      "sana": "Aamulla",
+      "alku": 7280,
+      "loppu": 7640
+    },
+    {
+      "sana": "olin",
+      "alku": 7660,
+      "loppu": 7860
+    },
+    {
+      "sana": "juonut",
+      "alku": 7920,
+      "loppu": 8220
+    },
+    {
+      "sana": "kahvini",
+      "alku": 8280,
+      "loppu": 8660
+    },
+    {
+      "sana": "samanlaisesta",
+      "alku": 8720,
+      "loppu": 9420
+    },
+    {
+      "sana": "pannusta",
+      "alku": 9460,
+      "loppu": 10060
+    },
+    {
+      "sana": "vilkaisematta",
+      "alku": 10120,
+      "loppu": 10880
+    },
+    {
+      "sana": "sitä",
+      "alku": 10940,
+      "loppu": 11300
+    },
+    {
+      "sana": "Nyt",
+      "alku": 12840,
+      "loppu": 13060
+    },
+    {
+      "sana": "näin",
+      "alku": 13120,
+      "loppu": 13340
+    },
+    {
+      "sana": "jokaisen",
+      "alku": 13400,
+      "loppu": 14000
+    },
+    {
+      "sana": "vasaranjäljen",
+      "alku": 14040,
+      "loppu": 15040
+    },
+    {
+      "sana": "Basaarin",
+      "alku": 16720,
+      "loppu": 17220
+    },
+    {
+      "sana": "kilkutuksessa",
+      "alku": 17280,
+      "loppu": 18160
+    },
+    {
+      "sana": "aamiainen",
+      "alku": 18260,
+      "loppu": 18800
+    },
+    {
+      "sana": "muuttui",
+      "alku": 18860,
+      "loppu": 19280
+    },
+    {
+      "sana": "käsityöksi",
+      "alku": 19340,
+      "loppu": 19980
+    }
+  ],
+  "lauseet": [
+    160,
+    7280,
+    12840,
+    16720
+  ],
+  "luotu": "2026-09-23T15:35:32.869Z"
+}

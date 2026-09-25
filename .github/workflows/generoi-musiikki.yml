@@ -1,7 +1,14 @@
 # Generoi pelin musiikkipaletti suoraan secretistä — avainta ei
 # liikutella chatissa eikä koneelta toiselle (omistajan linjaus
-# 28.8.2026, Raamattu → "Äänet ja luennat": ELEVEN-AVAIN ON
-# GITHUB-SECRETISSA). Sama malli kuin generoi-luennat.yml.
+# 28.8.2026, Raamattu → "Äänet ja luennat": AVAIN ON GITHUB-SECRETISSA).
+# Sama malli kuin generoi-luennat.yml ja generoi-siirtymamusiikki.yml.
+#
+# MOOTTORI ON LYRIA (omistajan linjaus 5.9.2026 illalla, sanatarkasti:
+# *"kaikki musiikki lyrialla"*). Lyrian raidat saavat päätteen `-lyria`,
+# ElevenLabsin (`moottori: eleven`) paljaan nimen — näin molemmat voi
+# generoida ja kuunnella rinnakkain ilman että toinen ylikirjoittaa
+# toisen. Avain on Lyrialla GOOGLE_API_KEY ja ElevenLabsilla
+# ELEVEN_API_KEY, kuten siirtymämusiikin työnkulussa.
 #
 # Ajo on KÄSIAJETTAVA (workflow_dispatch): musiikki maksaa rahaa ja
 # raidat ovat pysyviä — automaattinen ajo joka pushista polttaisi
@@ -13,31 +20,89 @@
 #   aarre     assets/audio/musa-aarre.mp3     tavallisen aarteen aihe
 #   paaaarre  assets/audio/musa-paaaarre.mp3  sama aihe pääaarteelle
 #
+# (Lyrialla samat nimet päätteellä -lyria, esim. musa-pohja-lyria.mp3.)
+#
+# KAUPUNKIRAIDAT OVAT OMA RYHMÄNSÄ (omistaja 5.9.2026 klo 00.35:
+# *"ateenaan saavuttaessa voisi vaihtua kappale. generoi sinne oma
+# musiikki."*). Kaupungin oma kappale korvaa pohjavireen niin kauan kuin
+# pelaaja on siinä kaupungissa:
+#
+#   ateena    assets/audio/musa-kaupunki-ateena.mp3   Ateenan oma kappale
+#
+# Ne EIVÄT sisälly valintaan "kaikki" — raidat-inputiin kirjoitetaan
+# joko kaupungin nimi (ateena) tai ryhmä "kaupungit". Syy on sama kuin
+# siirtymämusiikin linssiraidalla: valmista raitaa ei generoida
+# vahingossa uudestaan, ja jokainen kutsu maksaa. Pelin puoli on
+# js/kaupunkimusiikki.js (taulukko) ja js/ambience-stream.js (soitto).
+#
+# ALUERAIDAT JA NÄKYMIEN RAIDAT (omistaja 5.9.2026 yö: *"generoi
+# musiikkeja kaikkiin kohtiin peliä, ne tuovat paljon lisää
+# tunnelmaa."*). Kaupunki, jolla ei ole omaa kappaletta, saa ALUEENSA
+# raidan, ja näkymillä on omansa. Kaikki soivat samassa paikassa
+# sekoituksessa — pohjavireen sijaisina, ristihäivytyksellä:
+#
+#   ryhmä "alueet"  musa-kaupunki-britteinsaaret.mp3
+#                   musa-kaupunki-pohjola.mp3
+#                   musa-kaupunki-keski-eurooppa.mp3
+#                   musa-kaupunki-valimeri.mp3
+#                   musa-kaupunki-balkan.mp3
+#                   musa-kaupunki-ita-eurooppa.mp3
+#   ryhmä "tilat"   musa-lehti.mp3         lehti auki
+#                   musa-matkalaukku.mp3   matkalaukku auki
+#                   musa-etusivu.mp3       etusivu ja pallon selailu
+#
+# Ryhmä "kaupungit" tarkoittaa kaupunkien omia kappaleita JA alueita;
+# "alueet" ja "tilat" pyytävät vain oman joukkonsa. Valitsin on
+# js/musiikkivalitsin.js (ketju kaupunki → alue → pohjavire ja tilat
+# sen päällä).
+#
 # AARRE JA PAAAARRE OVAT PARI. Ne ovat sama sävelaihe kahdessa asussa,
 # ja jos toinen generoidaan uusiksi, kannattaa generoida molemmat —
 # muuten musiikillinen sukulaisuus katoaa (ks. tools/generoi-musiikki.mjs).
 #
 # MITÄ AJO TEKISI, ILMAN APIA:
-#   ELEVEN_KUIVA=1 node tools/generoi-musiikki.mjs kaikki
+#   node tools/generoi-musiikki.mjs kaikki --kuiva
 # — tulostaa jokaisen raidan kohdetiedoston, keston ja koko promptin.
 # Avainta ei tarvita. Kannattaa ajaa, kun promptia on muutettu.
 #
-# TUOTOS EI MENE SUORAAN MAINIIN. Ajo committoi uudet mp3:t omalle
-# haaralleen (claude/musiikki-<ajonumero>) ja jättää ne PR:ää varten:
-# musiikki KUUNNELLAAN ennen julkaisua (looppiraidoilta sauma,
-# aarreraidoilta se että aihe on kuultavasti sama). Kun PR mergetään,
-# vie-aanet.yml vie tiedostot R2:een automaattisesti — musiikkia ei
-# esiladata service workerissa, joten mp3 ei kasvata asennusta.
+# TUOTOS MENEE SUORAAN ÄMPÄRIIN, EI REPOON (omistajan linjaus
+# 11.9.2026: *"repossa ei saa olla äänitiedostoja, kaikki vain
+# ämpärissä"*). Ajo generoi raidat, vie ne ämpärin `audio/`-kansioon ja
+# liittää samat tiedostot ajon artefaktiksi — kuuntelu tehdään siitä
+# artefaktista, ei PR:stä. mp3:ia ei committoida mihinkään.
+#
+# KUUNTELUSÄÄNTÖ. UUSI raita ei kuulu pelissä ennen kuin pelidata
+# viittaa siihen (esim. js/media.js MUSIIKIN_PAATE tai
+# js/kaupunkimusiikki.js), joten sen voi viedä huoletta ja kuunnella
+# rauhassa. SAMANNIMISEN raidan uusinta sen sijaan korvaa ämpärin
+# tiedoston heti ja kuuluu pelaajille — siksi uusinnat tehdään harkiten,
+# ja niiden yhteydessä nostetaan js/media.js UUSITUT_AANET -kyselyversio
+# samassa PR:ssä, jossa pelidata muuttuu (muuten välimuistit soittavat
+# vanhaa raitaa viikkoja).
+#
+# PELIN POLKU RATKAISEE KANSION (ero generoi-siirtymamusiikki.yml:ään).
+# Paletin neljä soittokohtaa pyytävät polkua `assets/audio/musa-*.mp3`,
+# jonka js/media.js `aaniUrl` kääntää ämpärin `audio/`-kansioksi — sinne
+# tämä ajo vie. Siirtymäraidat taas kokeilevat ensin ämpärin
+# `aanet/`-kansiota. Kansio `aanet/` olisi paletille umpikuja: yksikään
+# paletin soittokohta ei kysy sitä. Musiikkia ei esiladata service
+# workerissa, joten mp3 ei kasvata asennusta.
+#
+# KUN RAIDAT OVAT ÄMPÄRISSÄ (HTTP 200 osoitteesta
+# <ämpäri>/audio/musa-pohja-lyria.mp3 ja kolme muuta), käännä pelin
+# kytkin: js/media.js `MUSIIKIN_PAATE = ''` → `'-lyria'`. Se on yksi
+# rivi ja koskee kaikkia neljää polkua sekä työhuoneen kuuntelulehteä.
 #
 # JOS MUSIIKKIRAJAPINTA EI OLE AUKI TÄLLÄ AVAIMELLA, ajo kaatuu
-# työkalun tulostamaan HTTP-virheeseen (401/403) eikä committoi mitään.
+# työkalun tulostamaan HTTP-virheeseen (401/403) eikä vie mitään.
 # Pelikytkennät ovat silloinkin jo paikallaan ja hiljenevät siististi:
 # puuttuva mp3 ei riko yhtään äänipolkua.
 #
-# Salaisuus on tämän repon Actions-asetuksissa: ELEVEN_API_KEY.
-# Avain ei koskaan tulostu lokiin (työkalu ei tulosta sitä, eikä tämä
-# ajo echoa sitä) — GitHub peittää secretit lokista joka tapauksessa,
-# mutta siihen ei nojata.
+# Salaisuudet ovat tämän repon Actions-asetuksissa: GOOGLE_API_KEY
+# (Lyria), ELEVEN_API_KEY (vertailu) ja R2:n neljä (R2_ACCOUNT_ID,
+# R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET). Avain ei koskaan tulostu lokiin
+# (työkalu ei tulosta sitä, eikä tämä ajo echoa sitä) — GitHub peittää
+# secretit lokista joka tapauksessa, mutta siihen ei nojata.
 
 name: Generoi musiikki
 
@@ -47,12 +112,27 @@ on:
       raidat:
         description: >-
           Raitojen avaimet välilyönnein (pohja visa aarre paaaarre) tai
-          "kaikki" koko paletille.
+          "kaikki" koko paletille. Kaupunki- ja alueraidat pyydetään
+          nimeltä ("ateena", "valimeri") tai ryhmänä "kaupungit" /
+          "alueet", näkymien raidat ryhmänä "tilat" (lehti matkalaukku
+          etusivu) — ne EIVÄT sisälly "kaikkiin".
         required: true
         default: 'kaikki'
+      moottori:
+        description: >-
+          Musiikkimoottori: lyria = Google Lyria 3.5 (pelin raidat,
+          pääte -lyria; omistajan linjaus 5.9.2026 "kaikki musiikki
+          lyrialla"), eleven = ElevenLabs Music (vertailuraidat
+          paljaalla nimellä).
+        required: false
+        type: choice
+        default: 'lyria'
+        options: ['lyria', 'eleven']
 
+# Ajo ei kirjoita enää repoon (mp3:t menevät ämpäriin), joten
+# lukuoikeus riittää.
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: generoi-musiikki
@@ -69,42 +149,86 @@ jobs:
         with:
           node-version: 22
 
+      # Puuttuva salaisuus tulisi muuten vastaan vasta 401:nä — ja vasta
+      # sen jälkeen, kun ensimmäinen kutsu on jo maksettu. Arvoa ei
+      # tulosteta, vain onko se asetettu.
       - name: Tarkista että avain on tallessa
         env:
-          AVAIN: ${{ secrets.ELEVEN_API_KEY }}
+          AVAIN: ${{ inputs.moottori == 'eleven' && secrets.ELEVEN_API_KEY || secrets.GOOGLE_API_KEY }}
         run: |
           set -euo pipefail
           if [ -z "$AVAIN" ]; then
-            echo "::error::ELEVEN_API_KEY-salaisuutta ei löydy tästä reposta."
+            echo "::error::${{ inputs.moottori == 'eleven' && 'ELEVEN_API_KEY' || 'GOOGLE_API_KEY' }}-salaisuutta ei löydy tästä reposta."
             echo "Lisää se: Settings > Secrets and variables > Actions."
             exit 1
           fi
           echo "Avain löytyy."
 
-      # Kuiva ajo ensin: väärä raita-avain paljastuu ennen kuin
-      # yhtäkään maksullista kutsua on tehty.
+      # Kuiva ajo ensin: väärä raita-avain ja väärä moottori paljastuvat
+      # ennen kuin yhtäkään maksullista kutsua on tehty.
       - name: Kuiva ajo (mitä generoitaisiin)
-        env:
-          ELEVEN_KUIVA: '1'
-        run: node tools/generoi-musiikki.mjs ${{ inputs.raidat }}
+        run: node tools/generoi-musiikki.mjs ${{ inputs.raidat }} --moottori ${{ inputs.moottori || 'lyria' }} --kuiva
 
       - name: Generoi musiikki
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
-        run: node tools/generoi-musiikki.mjs ${{ inputs.raidat }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          # RAAKAVIENTI tarvitsee R2:n jo generointivaiheessa (omistajan
+          # sääntö 14.9.2026): mallin tuotos menee ämpäriin ennen mitään
+          # käsittelyä, joten salaisuudet eivät voi enää olla vain
+          # myöhemmän vientiaskeleen ympäristössä.
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        run: node tools/generoi-musiikki.mjs ${{ inputs.raidat }} --moottori ${{ inputs.moottori || 'lyria' }}
 
-      - name: Committoi tuotos omalle haaralleen
+      # Kuuntelukopio ajon liitteenä. Tämä on ENNEN vientiä: jos vienti
+      # kaatuu, raidat ovat silti kuunneltavissa eikä kallista
+      # generointia tarvitse toistaa.
+      - name: Liitä raidat ajoon kuuntelua varten
+        uses: actions/upload-artifact@v4
+        with:
+          name: musiikki-${{ github.run_number }}
+          path: assets/audio/*.mp3
+          retention-days: 14
+          if-no-files-found: error
+
+      - name: Vie raidat ämpäriin
+        env:
+          # Samat nimet ja sama endpoint-tyyli kuin muissakin
+          # ääniajoissa (generoi-tehosteet.yml, generoi-pulu.yml).
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          # R2 ei hyväksy AWS:n uudempia tarkistussummaotsakkeita, jotka
+          # aws-cli 2.23:sta alkaen lähtevät oletuksena mukaan.
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
         run: |
           set -euo pipefail
-          git add assets/audio
-          if git diff --cached --quiet; then
-            echo "::error::Yhtään tiedostoa ei syntynyt eikä muuttunut."
+          # Kansio on tyhjä checkoutissa (assets/audio ei ole repossa),
+          # joten jokainen täällä oleva mp3 on tämän ajon tuotos. Tyhjä
+          # kansio menisi sync-komennosta läpi vihreänä eikä veisi
+          # mitään — ja vihreä ajo, joka ei vienyt mitään, on pahempi
+          # kuin punainen.
+          maara=$(find assets/audio -type f -name '*.mp3' | wc -l)
+          echo "Vietäviä raitoja: $maara"
+          if [ "$maara" -eq 0 ]; then
+            echo "::error::Yhtään raitaa ei syntynyt — ei vietävää."
             exit 1
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          haara="claude/musiikki-${{ github.run_number }}"
-          git checkout -b "$haara"
-          git commit -m "Musiikki: ${{ inputs.raidat }}"
-          git push -u origin "$haara"
-          echo "Valmis. Haara: $haara — kuuntele raidat ja tee PR."
+          # SAMANNIMINEN RAITA KORVAUTUU ÄMPÄRISSÄ HETI, ks. ajon alun
+          # kuuntelusääntö: uusi nimi on vaaraton, uusinta ei.
+          aws s3 sync assets/audio \
+            "s3://${{ secrets.R2_BUCKET }}/audio" \
+            --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+            --no-progress \
+            --content-type audio/mpeg \
+            --cache-control "public, max-age=2592000"
+          echo "Valmis. Raidat ovat ämpärin audio/-kansiossa ja ajon artefaktissa."
+          echo "Kuuntele artefaktista; kun raidat kelpaavat, käännä"
+          echo "js/media.js MUSIIKIN_PAATE = '-lyria'."

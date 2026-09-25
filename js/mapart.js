@@ -251,6 +251,71 @@ export function drawPaperPohja(svg, map = null, defs = null) {
   }, svg);
 }
 
+/*
+ * ============ PERGAMENTTI LAUDAN ULKOPUOLELLE ======================
+ *
+ * Omistaja 2.9.2026, sanatarkasti: *"jos kartta alkaisi näkyä liiasta
+ * leveydestä johtuen kaksi kertaa, niin sivuilla voisi silloin olla
+ * tyhjää. mieluiten itseasiassa jos siinnekin pystyisi generoimaan
+ * samanlaista vaaleampaa paperipohjaa kuin ylhäällä ja alhaalla on.
+ * periaatteessa pystyruuduille voisi tehdä saman ja silloin ylös ja
+ * alas generoituisi vain lisää valkoista kartan tyhjää paperia
+ * jatkeeksi."*
+ *
+ * Ylä- ja alapuolella tuo pohja on jo (paperinPohja): kiertävällä
+ * laudalla se on laudan levyinen ja yhdeksän ruudullista korkea.
+ * Sivuille se ei ulotu, koska <use>-kopio toisi oman pergamenttinsa
+ * päällekkäin. Uloimmalla zoomilla kopio kuitenkin leikataan pois
+ * (js/kartta.js paivitaLaudanKierto), ja juuri silloin sivuille
+ * tarvitaan sama pohja.
+ *
+ * SAUMATTOMUUS TULEE LIUKUVÄRISTÄ, EI TEKSTUURISTA. #paper-pohja-grad
+ * on userSpaceOnUse-yksiköissä (paperiPohjanLiukuvari), joten se on
+ * laudan koordinaateissa täsmälleen sama väri joka pisteessä kuin
+ * arkin alla — ja arkin ulkopuolella liukuväri on jo päättynyt
+ * reunaväriinsä ja jatkuu sinä. Uutta kuvadataa ei siis tarvita:
+ * sama liukuväri, isompi suorakaide.
+ *
+ * Kaksi elementtiä syntyy tässä:
+ *
+ *   1. `rect.paperi-ulkopuoli` — koko näkyvän alan kattava pohja
+ *      LAUDAN JUURIRYHMÄN ULKOPUOLELLA, jotta laudan leikkaus ei
+ *      leikkaa sitä. Se on piilossa (css) kunnes lauta mahtuu
+ *      kokonaan ruudulle.
+ *   2. `clipPath#lauta-rajaus` — arkin levyinen leikkaus, jolla
+ *      laudan sisältö (myös laudan leveyden päähän monistetut merkit)
+ *      pysyy arkilla eikä vuoda paperille.
+ */
+export const LAUDAN_RAJAUS = 'lauta-rajaus';
+
+/** Pergamentin pohja joka suuntaan — myös kiertävällä laudalla. */
+export function paperinUlkopuoli(map) {
+  return paperinPohja({ ...(map ?? {}), kiertava: false });
+}
+
+/**
+ * Ulkopuolen pohja ja laudan leikkaus. Kutsutaan SVG:n juuressa ENNEN
+ * laudan juuriryhmää, jotta pohja jää kaiken alle.
+ *
+ * Liukuväriä ei luoda tässä: sen tekee drawPaperPohja samaan
+ * määrittelylohkoon (id-viittaus ei välitä järjestyksestä).
+ */
+export function drawPaperUlkopuoli(svg, map = null, defs = null) {
+  const maar = defs ?? el('defs', {}, svg);
+  const arkki = paperinPohja(map);
+  const rajaus = el('clipPath', { id: LAUDAN_RAJAUS, clipPathUnits: 'userSpaceOnUse' }, maar);
+  el('rect', {
+    x: arkki.x, y: arkki.y, width: arkki.w, height: arkki.h,
+  }, rajaus);
+  const ulko = paperinUlkopuoli(map);
+  el('rect', {
+    x: ulko.x, y: ulko.y, width: ulko.w, height: ulko.h,
+    class: 'paperi-ulkopuoli',
+    fill: `url(#${POHJAN_LIUKUVARI})`,
+    'pointer-events': 'none',
+  }, svg);
+}
+
 /**
  * Deterministinen 0–1 -arvo merkkijonosta (FNV-1a). Sama piirre saa aina saman
  * pienen poikkeaman, joten kartta näyttää käsin piirretyltä mutta ei väreile.
@@ -2207,6 +2272,30 @@ export function drawTokenIcon(parent, type) {
       el('path', { d: 'M3.2,2.2 L9.6,8.8', class: 'icon-linssi-varsi' }, g);
       // Valon kajo lasissa: sama pieni kaari kuin isoisän kiikarissa.
       el('path', { d: 'M-6.6,-4.4 A5,5 0 0 1 -2.8,-7.8', class: 'icon-linssi-kajo' }, g);
+      break;
+
+    case 'linssi-satelliitti':
+      /*
+       * ASTRONAUTIN KAMERA -linssin OMA varasolu (omistaja 15.9.2026:
+       * *"tee astronauttilinssille oma kuvake matkalaukkuun ... SVG
+       * inline samassa viivapaksuudessa ja värissä"*). Ennen tätä
+       * matkalaukussa näkyi jaettu 'linssi'-taikalasi (yllä), koska
+       * varuste-satelliitti.jpg ei ole olemassa (js/ui.js linssiLiuska
+       * pyytää tämän tyypin nimenomaan tälle tunnukselle).
+       *
+       * SAMAT LUOKAT KUIN TAIKALASILLA: Maa on lasin väriä (sininen,
+       * läpikuultava) — se on planeetta, ei täysin väritetty aarre —
+       * ja pieni kamera kiertoradalla käyttää samaa paksua tummaa
+       * viivaa kuin lasin varsi.
+       */
+      el('circle', { cx: 0, cy: 3.2, r: 7.6, class: 'icon-linssi-lasi' }, g);
+      // Ilmakehän kajo Maan reunalla, sama tyyli kuin taikalasin lasissa.
+      el('path', { d: 'M-5.6,0.4 A7.6,7.6 0 0 1 0.4,-4.2', class: 'icon-linssi-kajo' }, g);
+      // Pieni kamera kiertoradalla: runko ja objektiivi.
+      el('rect', {
+        x: -3.4, y: -11.6, width: 6.8, height: 4.8, rx: 1.2, class: 'icon-satelliitti-kamera',
+      }, g);
+      el('circle', { cx: 3.6, cy: -9.2, r: 1.3, class: 'icon-linssi-kajo' }, g);
       break;
 
     case 'pieniAarre':

@@ -9,7 +9,8 @@ sanomalehdestä tieto." Vapaat kädet raamattuun annettu samana päivänä.)*
 Tämä dokumentti LAAJENTAA `docs/tarina.md`:tä, ei korvaa sitä: Foggien
 nimistö, Aarnin luettelo, kaksi ääntä, sävysäännöt ja revitty viimeinen
 sivu pysyvät sitovina. Tähän on kirjattu se, mikä tekee merkinnöistä
-dekkarin.
+dekkarin. Horatio–Livia-kaupunkiparien ajantasainen hahmo-, teksti-, kuva-,
+ääni- ja animaatiolinja on `docs/moduulit/horatio-livia-tuotanto.md`.
 
 ## Työnjako (sitova)
 
@@ -36,15 +37,12 @@ Mitä tämä tarkoittaa käytännössä:
   teksteissä. Hiekkamyrsky saa nielaista karavaanin jäljet, kaivo
   saa olla kuiva, yö saa yllättää väärässä paikassa, ja Horatio saa
   pelätä henkensä edestä — ja kirjoittaa siitä.
-- **Jännitteen lähteet:** luonto ja sen mittakaava, jano ja aika,
-  pimeys, korkeus, syvyys, eksyminen, kilpajuoksu, se että joku on
-  ehtinyt ensin. EI väkivaltaa, ei graafista kärsimystä, ei
-  ihmisryhmien välistä uhkaa — jännite tulee maailmasta ja
-  kilpajuoksusta, ei ihmisten pahuudesta.
-- **Kunnioitussäännöt eivät hellitä:** piikki osoittaa yhä Foggiin
-  ja hänen vanhaan maailmaansa; paikalliset ovat edelleen niitä,
-  jotka pelastavat, tietävät ja osaavat. Ei sotasisältöä -linja
-  pysyy (ml. Lähi-idän erityisherkkyydet).
+- **Rajaus jännitteen lähteistä POISTETTU 8.9.2026** (omistaja,
+  sanatarkasti: *"tuon kaanonin rajauksen pahuudesta yms. voi poistaa
+  myös kokonaan"*). Vanha rajaus ("ei ihmisten pahuutta, jännite vain
+  maailmasta ja kilpajuoksusta") ei ole enää voimassa: vieras ihminen
+  saa olla uhkaava, vaara saa tulla ihmisistä. Kunnioitussääntö
+  paikallisia kohtaan (tarina.md) pysyy.
 - **Euroopan valmiita merkintöjä ei kirjoiteta uusiksi** tämän
   linjauksen takia ilman omistajan erillistä tilausta — linjaus
   koskee uusia lautoja ja uusia tekstejä.
@@ -56,6 +54,19 @@ Kuninkaallisen laivaston kartanpiirtäjä, joka erosi virastaan keväällä
 1873. Hänen oma perustelunsa matkakirjan alkulehdellä: *"He käskivät
 piirtää rannikon. Minä halusin tietää, mitä rannikon takana on."*
 
+**Sukulaisuus (omistajan päätös 15.9.2026, sitova):** Horatio on
+Jules Vernen **Phileas Foggin nuorempi veli**. Phileas kiersi maailman
+loka–joulukuussa 1872 (Reform Clubin veto, 20 000 puntaa, mattolaukku,
+Passepartout, Aouda) ja antoi palattuaan veljelleen mattolaukkunsa ja
+vuoden 1872 maailmankartan. Siksi ne ovat nuoren Foggin perinnössä.
+Horatio erosi laivastosta keväällä 1873 ja lähti omalle matkalleen
+Eurooppaan Aarnin luettelon jäljille — ei maailman ympäri eikä vedon
+vuoksi, vaan siksi että halusi tietää, mitä rannikon takana on.
+Käyttösäännöt: Phileas mainitaan harvoin ja vain Horation kynästä
+("veljeni"), ei pelin kertojan äänellä; Vernen tapahtumia ei kerrota
+uudelleen, niihin viitataan. Horation persoona, nimi ja äänitteet
+pysyvät ennallaan.
+
 Persoona paperilla — nämä piirteet toistuvat, koska niistä hahmo
 tunnistetaan:
 
@@ -66,45 +77,34 @@ tunnistetaan:
 - **Pelkää hevosia, ei myrskyjä.** Nousee mihin tahansa laivaan missä
   tahansa kelissä, mutta kiertää hevosrattaat kadun toista laitaa.
   Tästä ei tehdä numeroa joka kaupungissa; se välähtää harvakseltaan.
-- **Kohtelias kaikille, kärsimätön vain itselleen.** Ei koskaan
-  ivaa paikallisia (tarina.md:n pääsääntö) — ironia osuu häneen
-  itseensä ja hänen pelkoihinsa.
+- **Kohtelias kaikille, kärsimätön itselleen — mutta ei virheetön.**
+  Ei koskaan ivaa paikallisia (tarina.md:n pääsääntö) — ironia osuu
+  häneen itseensä ja hänen pelkoihinsa. Hän voi silti olla itsepäinen,
+  turhamainen, itseään puolusteleva ja aikansa sokeuttama, ja tehdä
+  aidosti kyseenalaisen valinnan (omistaja 13.9.2026; ks. Raamatun
+  kohta HORATION INHIMILLINEN EPATAYDELLISYYS). Epätäydellisyys näkyy
+  teossa tai seurauksessa, ei joka merkinnässä, eikä katumus tule
+  välttämättä saman kappaleen lopussa.
 - **Rakastaa arvoituksia, ei ratkaisuja.** "Hyvä kysymys on parempi
-  matkatoveri kuin vastaus." Hän jättää lukijalle langanpäitä, ei
+  matkatoveri kuin vastaus." Hän jättää kirjaansa langanpäitä, ei
   selityksiä.
-- **Kirjoittaa aina jollekulle.** Merkinnöissä toistuu puhuttelu
-  *"sinä, joka tätä luet"*. Horatio ei tiennyt kenelle kirjoitti —
-  perillinen tajuaa matkalla, että se tarkoittaa häntä. Tämä on koko
-  tarinan tunneydin, ja luennoissa juuri nämä kohdat luetaan
-  lämpimimmin.
+- **Ei kirjoita kenellekään.** Horatio kirjoittaa itselleen, ei oleta
+  lukijaa eikä puhuttele tai selitä tälle.
+  Tunneydin tulee siitä, että perillinen lukee yksityistä kirjaa,
+  jota ei ollut tarkoitettu hänelle.
+- **Oma kieli.** Rajattu sanasto on peilaus, painolasti, K3, yövahti ja
+  lakkipiste. G. on Grimshawin nimilyhenne. Käyttö ja rajat kuvataan
+  Horatio–Livia-tuotantomoduulissa; sanastoa ei laajenneta omin päin.
 
-### Varallisuus ja jälkien mittakaava (kaanon 10.8.2026, omistajan linjaus)
+## Horatio ja Livia: kuuntelun rytmi (omistaja 12.9.2026)
 
-Horatio **ei ollut rikas**. Kartanpiirtäjän palkka ja pieni eroraha —
-matka tehtiin säästöillä, ja moni yösija maksettiin taidolla: kartta
-kylänvanhimmalle, oikaistu rajariita, korjattu vesiränni. Tästä
-seuraa sitova mittakaavasääntö uusiin teksteihin (Euroopan valmiita
-korjataan vain omistajan tilauksesta):
-
-- Horation jäljet ovat **pieniä tekoja ja ihmissuhteita**: rivi
-  vieraan vihkoon, korjattu juotos, nimi viimeisellä sivulla. Ne
-  kestävät, koska joku piti niistä kiinni — ei siksi, että niistä
-  olisi maksettu.
-- Horatio **ei perusta eikä rahoita mitään**: ei tilattuja
-  kirjaussarjoja, ei säätiöitä, ei palkattuja vartijoita. Jos suku
-  jatkaa jotain vuosikymmeniä, syy on suvun oma tapa — Horatio
-  enintään aloitti rivin tai jätti kysymyksen.
-- Mahtipontisuus on motiivibudjetin kallein rivi: "vuosisadan
-  mittainen järjestely" rahalla ostettuna on kielletty; perittynä
-  tapana sitä käytetään korkeintaan kerran laudalla.
-
-**Horation jälki maailmassa: tähtäinristi.** Horatio merkitsi
-kulkemiaan paikkoja pienellä liidulla piirretyllä tähtäinristillä
-(ympyrä ja risti) — *"että löytäisin takaisin, tai että joku löytäisi
-minun jälkeensä"*. Sama merkki on matkalaukun kyljessä ja siellä
-täällä matkakirjan marginaaleissa. Teksteissä merkistä puhutaan
-sanoilla ("tähtäinristi", "liituristi") — ei erikoismerkillä, jonka
-kirjasin voisi hukata.
+Voimassa oleva kokonaisohje on
+`docs/moduulit/horatio-livia-tuotanto.md`. Se määrittää Horatio–Livia-parin
+persoonat, toimituksellisen kuuntelurytmin, kuvaparit ja kuvatekstit,
+ääni- ja tunnetagit, animaation merkitysohjeet, työnjaon sekä etenemisen
+Euroopasta seuraaville mantereille. Omistajan 12.9.2026 JATKA-lupa on
+voimassa tämän rajatun työn osalta; kaanonin integraatio, CI, julkaisu ja
+oikean pelin tarkistus ovat edelleen omat porttinsa Fablen vastuulla.
 
 ## Vastavoima: herra Grimshaw
 
@@ -118,11 +118,8 @@ ja aina yhden laivavuoron myöhässä.
 **Grimshaw ei ole koskaan vaarallinen.** Hän on kilpailija, ei rosvo:
 mahtipontinen, pikkumainen, hieman surkuhupaisa. Jännitys tulee
 kilpajuoksusta ja siitä, ettei koskaan tiedä, kuinka lähellä hän on —
-ei uhasta. Euroopan laudan mitta oli *askeleet sumussa kyllä, vaara
-ei* — uusissa teksteissä sen korvaa "Imu aikuiselle" -osion linjaus
-(10.8.2026): vaara saa tuntua, mutta se tulee maailmasta ja
-kilpajuoksusta, ei ihmisten pahuudesta. Grimshaw itse pysyy
-kilpailijana, ei roistona.
+ei hänen aiheuttamastaan uhasta. Tämä rajaus koskee Grimshaw’ta:
+yleinen vaara saa tulla myös ihmisistä "Imu aikuiselle" -osion mukaan.
 
 Horation sävy Grimshawista kehittyy: ensin huvittunut, sitten
 varovainen, ja myöhäisissä merkinnöissä melkein haikea — *"Ilman herra
@@ -166,23 +163,20 @@ saa olla ketju. Säännöt:
 5. **Revitty viimeinen sivu pysyy pyhänä:** mitä Horatio löysi, ei
    paljasteta koskaan (tarina.md).
 
-## Mitat
+## Rytmi ja mitta
 
-*(Kiristetty 7.8.2026, omistajan palaute ensimmäisistä viidestä:
-"aivan liian pitkiä. Ottaisin alun kuvauksen pois kokonaan ja
-aloittaisin suoraan tarinasta. Ja loppukin kannattaa lyhentää.")*
-
-- **kuvaus:** 2–3 virkettä, enintään ~170 merkkiä. EI kuvailevaa
-  avausta ("Kaupunki seisoo...", "Kaupungissa tuoksui...") —
-  ensimmäinen virke on jo tarinassa: jotain tapahtuu, löytyy tai
-  ojennetaan.
-- **nosto:** Horation sitaatti + korkeintaan yksi lyhyt nuoren Foggin
-  virke, enintään ~160 merkkiä. Loppu on yksi isku, ei kahta.
-- tarina.md:n vaihtelusäännöt voimassa: korkeintaan kolmasosa
-  merkinnöistä alkaa isoisällä, aloitustapoja kierrätetään, sama
-  tehokeino ei toistu vierekkäisissä kaupungeissa. Sama koskee
-  dekkarimotiiveja: sateenvarjo, sähke ja liituristi eivät saa olla
-  joka kaupungissa — harvuus tekee niistä pelottavia.
+Horatio–Livia-kaupunkiparin mitta ratkaistaan toimituksellisesti ja
+kuuntelemalla `docs/moduulit/horatio-livia-tuotanto.md`:n mukaan, ei
+vanhoilla merkki- tai virkekiintiöillä. Omistaja 13.9.2026: kaupunkiparin
+pituudet saavat elää — jos tarina vaatii, yhteispituus voi joissakin
+kaupungeissa olla pidempi, eivätkä kaikki kaupungit saa samaa sana-,
+virke- tai merkkimittaa. Luontevasti lyhyt pysyy lyhyenä; kuunneltavuus,
+merkitys ja rytmi ratkaisevat, ja sana- ja merkkimäärät ovat katselmuksen
+tietoa, eivät ehdottomia rajoja. Tämä kumoaa aiemman säännön
+"kaupunkikohtainen kokonaispituus ei kasva". `docs/tarina.md`:n vaihtelu- ja
+motiivisäännöt säilyvät: aloitustapoja kierrätetään, eikä sama tehokeino
+toistu vierekkäisissä kaupungeissa. Sateenvarjon, sähkeen ja liituristin
+harvuus tekee niistä vaikuttavia.
 
 ## Luentaohjeet (ElevenLabs v3)
 
@@ -198,8 +192,8 @@ vaihteluarvoa kannattaa ottaa takaisinpäin, hyppii vähän liikaa".)
   SUURAAKKOSET pienennetään, ettei malli huuda niitä), mutta ei
   sanoissa.
 - Tagipaletti: `[whispers]` salaisuudet, liituristi, seuraaja;
-  `[excited]` vauhti ja oivallus; `[warmly]` muistot ja "sinä, joka
-  tätä luet"; `[softly]` Horation sitaattien oletus; `[curious]`
+  `[excited]` vauhti ja oivallus; `[warmly]` muistot;
+  `[softly]` Horation sitaattien oletus; `[curious]`
   ihmettely. Tauot rytmitetään ajatusviivalla ja kolmella pisteellä.
 - **2–5 tagia per luenta, ei joka virkkeeseen.** Tunnelmakaari: luennan
   alku ja loppu eri sävyssä (esim. utelias → kuiskaus, tai kuiskaus →
@@ -243,8 +237,9 @@ ei seuraa missään.
    kauppias. Isoisä jätti jälkeensä ystäviä, ei vain arvoituksia.
 4. **Huumori** — Horation kuivat huomiot, nuoren Foggin kömmähdykset,
    ajan patina (Horatio ei tiennyt tulevasta).
-5. **Haikeus** — paikat, jonne isoisä ei ehtinyt; "sinulle, joka
-   tätä luet". Tunnelmista arvokkain — säästetään oikeisiin kohtiin.
+5. **Haikeus** — paikat, jonne isoisä ei ehtinyt, ja yksityisen kirjan
+   jäljelle jääneet aukot. Tunnelmista arvokkain — säästetään oikeisiin
+   kohtiin.
 6. **Ihmetys** — matkan riemu: maisema, valo, mittakaava. Tämä oli
    vanhojen tekstien vahvuus — se EI katoa dekkarista.
 7. **Hengähdys** — rauhallinen merkintä ilman koukkua. Dekkari
@@ -459,7 +454,7 @@ Suleiman, hämmästyvä Elias):
 | Kohde | Sävel | Kohtaamisteema (odotuksen syy) | Beat | Aisti / 1873 |
 |---|---|---|---|---|
 | Mekka | lämpö/hengähdys | oppaan suvun perintökysymys | hiljainen | kahvin tuoksu satamassa |
-| Medina | lämpö | vieraanvaraisuuden vastalahja kaivolla | tuore | leirisavun tuoksu |
+| Medina | lämpö | kesken jäänyt punos — kommellus palmujen varjossa (henkilövaihto 7.9.2026: punoja Safa, kaivo ja Omar poistuivat omistajan palautteesta) | tuore (rauhallinen) | leirisavun ja taatelien tuoksu |
 | Jerusalem | kunnioitus/arvoitus | vartija EI tiedä miksi piirtää — hämmästyy itse | vartijan salaisuus | — |
 | Petra | ihmetys | isoisä katsoi kalliota, ei uurnaa | tuore | — |
 | Aden | arvoitus | kysymys jätetty perässä tuleville | tuore | 1873: hiilisatama (jo tekstissä) |
@@ -499,7 +494,7 @@ epäuskoinen Zahra, hämmästyvä Dariush):
 | Ankara | arvoitus | sinetöity paali; noutamisen ehto | ajaton (merimiehen solmu ylängöllä) | villan lanoliini |
 | Izmir | huumori/lämpö | oikea hinta on vastaus | tuore | viikunan maku |
 | Kapadokia | jännitys | käytävä pelasti suvun — valoa pidetään omasta syystä | **VANHA** (lyhty ennen isoisää) | — |
-| Nikosia | arvoitus | talletus jota ei voinut torjua | ajaton | — |
+| Nikosia | arvoitus | piirros kahteen suuntaan — kirjan kääntynyt sivu (henkilövaihto 7.9.2026: seripainotaiteilija Marios, harkko ja Andreas poistuivat; saapuminen ei enää sano bastionien lukua) | ajaton | — |
 | Tabriz | arvoitus | keskeneräinen matto (teeman 2/2 Lissabonin kanssa) | esine muualla | basaarin mausteet |
 | Teheran | ihmetys | mestarien tapa: himmeä pala muistaa | ajaton | 1873: šaahi paraikaa Euroopassa |
 | Isfahan | ihmetys/lämpö | holvin laulu ja vartijan oma salaisuus | tuore | — |
@@ -584,15 +579,8 @@ Nämä ovat kaanonpäätöksiä, jotka tehdään OMISTAJAN KANSSA ennen kuin
 niitä koskevaa sisältöä kirjoitetaan. Uusi sessio: älä ratkaise näitä
 itse.
 
-1. **Matkakirjamerkintöjen tekstityyli.** Omistaja 14.8.2026:
-   *"tekstityyli on vielä määrittämättä"* — uusia saapumismerkintöjä
-   EI generoida ennen kuin tyyli on määritelty omistajan kanssa
-   (esim. 2–3 näytemerkintää Lähi-idän "Imu aikuiselle" -mitalla,
-   omistajan hyväksyntä, vasta sitten erät). Tämä kielto annettiin,
-   koska lehtisessio oli alkanut generoida merkintöjä ohi kaanontyön.
-   Merkinnät ovat päätoimittajasession (Fable) kaanontyötä.
-2. **Grimshaw'n sateenvarjon paljastus** maailmankartalla — päätetään
+1. **Grimshaw'n sateenvarjon paljastus** maailmankartalla — päätetään
    omistajan kanssa (kirjattu jo yllä maailmankartan kohdassa).
-3. **Lautakohtaiset kaupunkijakotaulut** (Lähi-itä ja siitä
+2. **Lautakohtaiset kaupunkijakotaulut** (Lähi-itä ja siitä
    eteenpäin) tehdään tähän dokumenttiin ENNEN merkintöjen
    kirjoittamista — ei siis myöskään näitä ilman omistajaa.

@@ -89,7 +89,7 @@ export const FOKUSKOHTEET_EGY = [
      */
     id: 'faroksen-majakka',
     nimi: 'Faroksen majakka',
-    tyyppi: 'muu',
+    tyyppi: 'merenkulku',
     symboli: 'merenkulku',
     kysymykset: [
       'Miten majakan valo saatiin näkymään näin kauas?',
@@ -118,21 +118,23 @@ export const FOKUSKOHTEET_EGY = [
      * samannimisessä lohkossa. Majakkaa ei ole, joten `kadonnut: true`:
      * kartalla tähti ja kortissa tämä kuva ensimmäisenä — ja ainoana,
      * sillä kadonneesta majakasta ei ole valokuvaa.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-faros.webp',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-faros-loistoaika-v2.jpg',
       kadonnut: true,
-      selite: 'Faroksen majakka seisoi sataman suulla runsaat tuhat '
-        + 'vuotta ja opasti viljalaivat Aleksandrian satamaan: sen tuli '
-        + 'näkyi merelle noin 47 kilometrin päähän. Keskiaikaisten '
-        + 'arabimatkaajien kuvausten mukaan polttoaine vedettiin ylös '
-        + 'tornin sisällä kiertävää ramppia, joka oli kyllin leveä '
-        + 'kahdelle kuormajuhdalle rinnakkain. '
-        + 'Saaren kärjessä on nyt Qaitbayn linnoitus, joka muurattiin '
-        + 'vuonna 1480 majakan omista kivistä — loput lohkareet makaavat '
-        + 'sataman pohjassa.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      lyhyt: 'Viljalaivan kansipoika näkee Faroksen majakan ensi kertaa turvallisen väylän merkkinä.',
+      selite: 'Viljalaivan kansipoika näkee Faroksen ensimmäistä kertaa ja '
+        + 'kuulee vanhemman merimiehen osoittavan turvallisen väylän. '
+        + 'Majakan tuli ei ole heille vain ihme, vaan lupaus siitä, että '
+        + 'pitkä merimatka päättyy satamaan; rannalla kuormajuhdat alkavat '
+        + 'jo kuljettaa uutta polttoainetta tornin leveää ramppia kohti.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: UNESCO World Heritage Centre — Cordouan '
+        + 'Lighthouse nomination and Pharos tradition, tarkistettu 5.9.2026.',
+      url: 'https://whc.unesco.org/en/list/1625/',
     },
   },
   {
@@ -149,7 +151,7 @@ export const FOKUSKOHTEET_EGY = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Suuri kirjasto',
-    tyyppi: 'muu',
+    tyyppi: 'sana',
     symboli: 'sana',
     kysymykset: [
       'Mistä kirjasto sai käsikirjoituksensa?',
@@ -179,6 +181,7 @@ export const FOKUSKOHTEET_EGY = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-aleksandrian-kirjasto.webp',
       kadonnut: true,
+      lyhyt: 'Aleksandrian kirjasto keräsi papyruskääröjä ja työllisti satoja oppineita; paikkaa ei enää tunneta.',
       selite: 'Aleksandrian kirjasto kokosi papyruskääröjä koko '
         + 'tunnetusta maailmasta, ja sen saleissa työskenteli aikanaan '
         + 'yli sata oppinutta valtion palkkaamana. Keruu oli '
@@ -215,7 +218,7 @@ export const FOKUSKOHTEET_EGY = [
      */
     id: 'gizan-suuri-pyramidi',
     nimi: 'Kheopsin pyramidi',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Mihin pyramidin valkoinen kuori joutui?',
@@ -248,6 +251,7 @@ export const FOKUSKOHTEET_EGY = [
      */
     kuva: {
       tiedosto: 'Great Pyramid of Giza - Pyramid of Khufu.jpg',
+      lyhyt: 'Kheopsin pyramidi Gizassa; sileä kalkkikivikuori on louhittu pois rakenteen sisuksesta.',
       selite: 'Kheopsin pyramidi Gizan tasangolla. Porrastettu pinta on '
         + 'rakenteen sisus: sileä kalkkikivikuori on louhittu pois.',
       lahde: 'Douwe C. van der Zee, Wikimedia Commons (CC BY-SA 4.0)',
@@ -256,23 +260,24 @@ export const FOKUSKOHTEET_EGY = [
      * MATKAKIRJAN IHME (yhä olemassa) — säännöt js/packs/
      * fokuskohteet-grc.js:n samannimisessä lohkossa. `kadonnut: false`,
      * joten "Koe ihme" -nappi tulee yllä olevan valokuvan alle.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-gizan-pyramidi.webp',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-gizan-pyramidi-loistoaika-v2.jpg',
       kadonnut: false,
-      selite: 'Kheopsin pyramidin ulkopinta oli valmiina sileä ja '
-        + 'valkoinen: Turasta tuotua hiottua kalkkikiveä, joka nousi '
-        + '146,6 metriin ja hohti aavikolla kuin peili. Se oli hauta: '
-        + 'faaraon ruumis tuotiin jokea pitkin laaksotemppeliin ja '
-        + 'kannettiin katettua, lähes kilometrin mittaista pengertietä '
-        + 'ylös, ja pyramidin kupeeseen rakennetussa temppelissä papit '
-        + 'toivat kuolleelle kuninkaalle ruoka- ja juomauhreja vielä '
-        + 'satoja vuosia hautajaisten jälkeen. Kuori louhittiin '
-        + 'myöhempien vuosisatojen aikana rakennusaineeksi, ja jäljelle '
-        + 'jäi 138,5 metriä korkea porrastettu sisus, joka seisoo '
-        + 'Gizan tasangolla nyky-Kairon laidalla.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      lyhyt: 'Kivenhioja viimeistelee saumaa: 2,3 miljoonaa lohkaretta vaati valtavan määrän työtä ja käsiä.',
+      selite: 'Kuvituksen kivenhioja tunnustelee sauman sileyttä samalla kun '
+        + 'lapsi tuo hänelle vettä. Näkymä palauttaa jättimäisen luvun '
+        + 'ihmisen kokoiseksi: 2,3 miljoonaa lohkaretta on tarkoittanut '
+        + 'lukemattomia työvuoroja, aterioita, loukkaantumisia ja '
+        + 'ammattitaitoisia käsiä — ja työn valmistuessa kaksi myöhempää '
+        + 'suurpyramidia eivät vielä olleet olemassa.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: Harvard University — Digital Giza, tarkistettu '
+        + '5.9.2026.',
+      url: 'https://giza.fas.harvard.edu/faq/',
     },
   },
   {
@@ -296,7 +301,7 @@ export const FOKUSKOHTEET_EGY = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Pylvässali',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miten sali valaistiin, kun katto oli paikallaan?',
@@ -332,6 +337,7 @@ export const FOKUSKOHTEET_EGY = [
      */
     kuva: {
       tiedosto: 'Karnak Temple Great Hypostyle Hall 2014.jpg',
+      lyhyt: 'Karnakin pylvässalin pylväät kannattelevat nykyään vain taivasta, katon sorruttua.',
       selite: 'Karnakin pylvässalin keskikäytävän pylväät. Katto on '
         + 'sortunut, joten pylväät kannattelevat nykyään vain taivasta.',
       lahde: 'Tsyganov Sergey, Wikimedia Commons (CC0)',
@@ -341,6 +347,7 @@ export const FOKUSKOHTEET_EGY = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-karnak.webp',
       kadonnut: false,
+      lyhyt: 'Karnakin 134 pylvästä kannattivat kattoa hämärässä salissa, jonne pääsivät vain papit.',
       selite: 'Karnakin suuressa pylvässalissa on 134 pylvästä '
         + 'kuudessatoista rivissä, ja aikanaan niiden päällä oli katto: '
         + 'sali oli hämärä sisätila, jonka kaikki pinnat oli kaiverrettu '

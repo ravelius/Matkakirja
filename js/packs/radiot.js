@@ -21,7 +21,22 @@
  *   node tools/kirjoita-radiot.mjs
  * Radio Browserin aineistosta. Älä muokkaa käsin: aja haku uudelleen.
  *
- * 110 maata, joista 72 maan yleisradion kanava.
+ * 113 maata, joista 75 maan yleisradion kanava. SVK (20.9.2026) on
+ * käsin lisätty: Rádio Slovensko (Slovenský rozhlas), osoite tarkistettu
+ * hakemalla (HTTP 200, audio/mpeg; CORS-otsaketta ei lähetetä, joten
+ * VU-mittari ei mittaa tätä lähetystä). SVN (20.9.2026) on
+ * käsin lisätty: Radio Prvi, RTV Slovenijan ykköskanava, osoite
+ * tarkistettu hakemalla (HTTP 200, audio/aac, CORS *). BEL (19.9.2026) on
+ * käsin lisätty: VRT Radio 1 -osoite tarkistettu hakemalla (302-uudelleen-
+ * ohjaus quantumcast.vrtcdn.be:hen, content-type audio/mpeg, CORS *).
+ * LUX (21.9.2026) on käsin lisätty: radio 100,7 (ERSL, Luxemburgin
+ * julkinen yleisradio), osoite tarkistettu hakemalla (302-uudelleenohjaus
+ * radiohost.de-peiliin, content-type audio/mpeg, CORS *).
+ * MLT (21.9.2026) on käsin lisätty: Calypso Radio 101.8 (calypsomalta.com),
+ * osoite tarkistettu hakemalla (HTTP 200, audio/aac, icy-name "Calypso
+ * Radio 101.8", CORS *). PBS:n (julkinen yleisradio) suoratoisto-osoitetta
+ * ei löytynyt Radio Browserista eikä sen omalta sivustolta ilman
+ * selaimen JS-soitinta, joten maalla ei ole `virallinen`-lippua.
  *
  * Avaimena ISO-3-maatunnus, sama jota map.cityCountry käyttää.
  */
@@ -32,6 +47,7 @@ export const RADIOT = {
   ARG: { url: 'https://sa.mp3.icecast.magma.edge-access.net/sc_rad1', asema: 'LRA1 Radio Nacional Argentina', virallinen: true },
   AUS: { url: 'https://abc.streamguys1.com/live/rnnsw/icecast.audio', asema: 'ABC Radio National', virallinen: true },
   AUT: { url: 'https://orf-live.ors-shoutcast.at/oe1-q2a', asema: 'Ö1 | ORF | HQ', virallinen: true },
+  BEL: { url: 'https://icecast.vrtcdn.be/radio1-high.mp3', asema: 'VRT Radio 1 (Vlaanderen)', virallinen: true },
   BGR: { url: 'https://play.global.audio/testb.aac?dist=RADIOPLAY', asema: 'BNR Horizont', virallinen: true },
   BIH: { url: 'https://s2.free-shoutcast.com/stream/18170', asema: 'Federalni radio (RTVFBiH)', virallinen: true },
   BOL: { url: 'https://stream.zeno.fm/pnwpbyfambruv', asema: 'Radio Panamericana', virallinen: true },
@@ -82,11 +98,13 @@ export const RADIOT = {
   LBY: { url: 'https://stream.zeno.fm/z9wfrdpmgg0uv', asema: 'Radio Funun Tripoli (راديو فنون طرابلس)' },
   LKA: { url: 'https://stream-32.zeno.fm/xekhrn4zetzuv?zs=KXT1gTNYSemcxyslV6-vdA', asema: 'SLBC Tamil National Service', virallinen: true },
   LTU: { url: 'https://netradio.ziniur.lt/ziniur.mp3', asema: 'Žinių radijas' },
+  LUX: { url: 'https://stream.100komma7.lu/100komma7/live/mp3/128/stream.mp3', asema: 'radio 100,7 (ERSL)', virallinen: true },
   LVA: { url: 'https://live.radioswh.lv/plusmp3', asema: 'Radio SWH+' },
   MAR: { url: 'https://stream.zeno.fm/une3a02mb', asema: 'MA:-Hit Radio Maroc', virallinen: true },
   MDG: { url: 'https://direct.radiomadagasikara.com/listen/rnm/radio.mp3', asema: 'RNM', virallinen: true },
   MEX: { url: 'https://playerservices.streamtheworld.com/api/livestream-redirect/W_RADIOAAC.aac', asema: 'W Radio Ciudad de México - 96.9 FM / 900 AM -', virallinen: true },
   MLI: { url: 'https://stream-157.zeno.fm/yerp85sughwtv?zs=bzqHawb1Rha3gGg97iW8xg', asema: 'Radio Malijet', virallinen: true },
+  MLT: { url: 'https://s4.radio.co/sf3aa4c25a/listen', asema: 'Calypso Radio 101.8 (Malta)' },
   MMR: { url: 'https://listen.radioking.com/radio/681745/stream/746185', asema: 'Shwe FM (valtakunnallinen FM-verkko, Yangon)' },
   MNG: { url: 'https://c2.radioboss.fm/stream/394', asema: 'Гэр бүлийн радио 104.5 (Family Radio, Ulaanbaatar)' },
   MOZ: { url: 'https://stream.zeno.fm/tskpv4vscv8uv', asema: 'Rádio Moçambique', virallinen: true },
@@ -136,6 +154,8 @@ export const RADIOT = {
   SLB: { url: 'https://listen.mixlr.com/e1e2be07dfce2a18e8ee3cdd0dd2d437', asema: 'SIBC Solomon Islands Broadcasting (Honiara)', virallinen: true },
   SLE: { url: 'https://stream.zeno.fm/jetj7igyezmtv', asema: 'Culture Radio FM 104.5 (Freetown)' },
   SOM: { url: 'https://stream.zeno.fm/m7p996vfec9uv', asema: 'Radio Shabelle 101.5 (Mogadishu)' },
+  SVK: { url: 'https://icecast.stv.livebox.sk/slovensko_128.mp3', asema: 'Rádio Slovensko (Slovenský rozhlas)', virallinen: true },
+  SVN: { url: 'https://mp3.rtvslo.si/ra1', asema: 'Radio Prvi (RTV Slovenija)', virallinen: true },
   SWE: { url: 'https://live1.sr.se/p1-aac-32', asema: 'Sveriges Radio P1', virallinen: true },
   SYR: { url: 'https://asima.out.airtime.pro/asima_a', asema: 'Al Asemeh FM / العاصمة إف إم (Damaskos)' },
   TCD: { url: 'https://strhls.streamakaci.tv/str_tchad_radio/str_tchad_radio/icecast.audio', asema: 'Radiodiffusion Nationale Tchadienne', virallinen: true },

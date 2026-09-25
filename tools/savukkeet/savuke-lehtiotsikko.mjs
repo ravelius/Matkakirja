@@ -16,6 +16,13 @@ import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
 
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
+
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -39,7 +46,7 @@ const kaynnista = async (viewport) => {
   // Pöllöpalvelin katkaistaan: saapuminen esihakee lukijaäänen
   // ensimmäisen palan, eikä savuke saa kuluttaa generointikiintiötä.
   await sivu.route('**samireivinen.workers.dev/**', (route) => route.abort());
-  await sivu.goto(`http://localhost:${palvelin.address().port}/`, { waitUntil: 'load' });
+  await sivu.goto(`http://localhost:${palvelin.address().port}/?lauta=kartta`, { waitUntil: 'load' });
   await sivu.waitForTimeout(1800);
   // Peli käyntiin: muodot ja maalehdet latautuvat vasta pelin alettua.
   await sivu.evaluate(() => {

@@ -1,0 +1,32 @@
+### Porto Alegre / Asunción / Montreal (kohdekartat, v1636)
+- Joaquim Felizardon museo, Porto Alegre — Solar Lopo Gonçalves eli Casa Lopo Gonçalves, valkoinen 1840–50-luvun yksikerroksinen kartano tiilikatolla ja korkealla kivijalalla, edessä iso magnoliapuu.
+- (parempi kuva toivottu) Ateneo Paraguayo, Asunción — talon julkisivu ilman autoja ja kylttejä.
+- (parempi kuva toivottu) Asunciónin kaupunginteatteri — julkisivu ilman etualan liikennemerkkiä.
+### Honiara / Port Vila (kaupunkilehdet, v1636)
+- honiara / Salomonsaarten kansallismuseo — matala museorakennus, jonka seinässä kala- ja kilpikonnakuvio, edessä veistettyjä puupaaluja
+- honiara / Point Cruz — satamaniemi ja laituri, rahtilaivoja redillä
+- honiara / Parlamenttitalo — vaalea kartiomainen katto, jonka huipulla porrastettu rengas
+- honiara / Holy Crossin katedraali — jyrkkä A-kattoinen kirkko kukkulalla, kivijalka
+- honiara / Guadalcanalin muistomerkki — valkoinen kaareva muuripiha ja tumma pyloni kukkulalla
+- portvila / Kormanin stadion — nurmikenttä ja pitkä vaalea katsomorakennus rinteen alla
+- portvila / Pyhän sydämen katedraali — valkoinen A-kattoinen kirkko, päädyssä tumma risti
+- portvila / Independence Park — nurmikenttä, punakattoinen katettu katsomo, suuret sadepuut
+- portvila / Vanuatun kulttuurikeskus — lehtikattoinen sisäänkäynti, veistetty puupaalu, iso varjopuu
+- portvila / Vanuatun parlamenttitalo — punakattoinen matala talo, valkoinen kolmiokatos, pyöreä suihkulähde
+### Denver / Houston (kaupunkilehdet, v1636)
+- denver / Coors Field — punatiilinen stadion ja sen kaareva sisäänkäyntiholvi
+- denver / Daniels & Fisherin torni — kapea kampanile kellotauluineen kadun yllä
+- denver / Esittävän taiteen keskus — lasiholvi salien välisen kulkuaukion yllä
+- denver / Brown Palace -hotelli — kolmiomainen hiekkakivihotelli korttelin kärjessä
+- denver / Katedraalibasilika — valkoiset kaksoistornit puiden yllä
+- denver / Denverin taidemuseo — Libeskindin titaanikärki ja lasirotunda
+- denver / Molly Brownin talo — kaksivärinen viktoriaaninen kivitalo torniaiheineen
+- denver / Kasvitieteellinen puutarha — Boettcherin betoni- ja pleksikupoli
+- houston / Market Squaren puisto — toriaukion kahvilapaviljonki 1800-luvun talojen keskellä
+- houston / Buffalo Bayoun puisto — puron mutka metsäisine törmineen ja kävelytie
+- houston / Sam Houstonin puisto — Kellum-Noblen valkoinen kuistitalo
+- houston / Julia Idesonin kirjastotalo — espanjalaisrenessanssin julkisivu kaari-ikkunoineen
+- houston / Astrosin stadion — kaareva kattoristikko vanhan aseman tiilijulkisivun takana
+- houston / Kongressikeskus — valkoinen halli punaisine putkitorneineen ja sinisine ristikkoineen
+- houston / Menilin kokoelma — matala harmaa paviljonki valkoisten valonohjainten alla
+- houston / Hermann Park — Sam Houstonin ratsastajapatsas kaariportin päällä

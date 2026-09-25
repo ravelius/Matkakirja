@@ -32,11 +32,21 @@
 export const MAASTOKOHTEET_ROU = [
   {
     id: 'negoiu',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-negoiu-b0a2ec06.jpg',
+      lyhyt: 'Negoiun terävä huippu Fagarasvuorilla.',
+      selite: 'Tumma kallioinen huippu kohoaa vihreiden rinteiden ja lumilaikkujen yläpuolelle Fagarasvuoristossa.',
+      lahde: 'Valokuva: Civilistul at English Wikipedia, Wikimedia Commons (public domain).',
+      tekija: 'Civilistul at English Wikipedia',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Negoiu.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
     nimi: 'Negoiu',
     tyyppi: 'vuori',
     kysymykset: [
-      'Mitkä ovat Făgărașin vuoret?',
-      'Kuinka lähellä toisiaan Negoiu ja Moldoveanu ovat?',
+      'Mikä Transfăgărășan on?',
+      'Miksi Negoiuta sanotaan säänvaihtelun navaksi?',
     ],
     korostukset: ['Făgăraș|Făgărașin'],
     nappi: 'Romanian toiseksi korkein',
@@ -45,13 +55,41 @@ export const MAASTOKOHTEET_ROU = [
       maailmankartta: { x: 6651.9, y: 1577.5 },
       europe: { x: 682.7, y: 694.7 },
     },
-    teksti: 'Negoiu on 2 535 metriä korkea huippu Făgărașin vuorilla Eteläisissä Karpaateissa '
-      + 'Sibiun piirikunnassa. Se on Romanian toiseksi korkein huippu heti 2 544-metrisen '
-      + 'Moldoveanun jälkeen — yhdeksän metrin ero erottaa maan kaksi korkeinta.',
-    lahde: 'en-Wikipedia "Negoiu", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Ennen maailmansotien välistä aikaa Negoiuta pidettiin koko Karpaattien korkeimpana '
+      + 'huippuna Tatroja lukuun ottamatta. Uudet mittaukset siirsivät sen toiseksi: 2 535 '
+      + 'metriä, yhdeksän metriä matalampi kuin Moldoveanu. Romaniassa se tunnetaan yhä maan '
+      + 'säänvaihtelun napana — sää kääntyy siellä nopeammin kuin missään muualla. Făgărașin '
+      + 'vuoret sen ympärillä ovat Etelä-Karpaattien korkeimmat eikä niissä ole yhtään suurta '
+      + 'asutusta; ainoa kunnollinen tie yli, Transfăgărășan, on auki vain kesä—syyskuussa. '
+      + 'Negoiun lähellä harjannepolku muuttuu jyrkäksi ja avoimeksi, ja yhtä sen pahinta '
+      + 'kohtaa kutsutaan nimellä Kolme askelta kuolemasta.',
+    lahde: 'ro-Wikipedia "Vârful Negoiu, Munții Făgăraș" ja en-Wikipedia "Făgăraș Mountains", '
+      + 'osiot "Geography" ja "Access and tourism" (tarkistettu 1.9.2026).',
   },
   {
     id: 'mustameri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-mustameri-503342f9.jpg',
+      lyhyt: 'Mustanmeren aallot iskeytyvät Constanţan kasinon rantapromenadin kiviin.',
+      selite: 'Aallot murtuvat rantakiviin, ja vanha kasinorakennus kohoaa merenrantabulevardin päässä sinisen taivaan alla.',
+      lahde: 'Valokuva: Julian Nyča, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Julian Nyča',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Constanta_Casino.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-mustameri-4d6d6856.jpg',
+        lyhyt: 'Mustanmeren rannikko ja hiekkaranta Constanţassa ylhäältä katsottuna.',
+        selite: 'Hiekkaranta ja aallonmurtajat kaartuvat sinisen meren äärellä, etualalla on puiden varjo.',
+        lahde: 'Valokuva: Trecătorul răcit, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Trecătorul răcit',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Constanța_5.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Mustameri',
     tyyppi: 'meri',
     kysymykset: [
@@ -70,9 +108,42 @@ export const MAASTOKOHTEET_ROU = [
       + 'Georgia, Romania, Venäjä, Turkki ja Ukraina — mutta valuma-alue ulottuu 24 Euroopan '
       + 'maahan, koska meren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.',
     lahde: 'en-Wikipedia "Black Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Kuinka moneen maahan Mustanmeren valuma-alue ulottuu?',
+      vaihtoehdot: [
+        '24 maahan',
+        '6 maahan',
+        '10 maahan',
+        '3 maahan',
+      ],
+      oikea: 0,
+      fakta: 'Mustanmeren suurimmat tulojoet ovat Tonava, Dnepr ja Dnestr.',
+    },
   },
   {
     id: 'tonava',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-tonava-b3d2d724.jpg',
+      lyhyt: 'Tonavan suiston vesiväylä syksyn värittämien pajujen välissä.',
+      selite: 'Kapea vesiväylä kulkee keltaisenruskeiden puiden ja kaislojen keskellä Tonavan suistossa.',
+      lahde: 'Valokuva: Raff, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Raff',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Danube_Delta,_autumn.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-tonava-06c68dcb.jpg',
+        lyhyt: 'Aurinko laskee Tonavan suiston tyynen vesialueen taakse.',
+        selite: 'Iltataivas heijastuu rauhallisesta vedestä, ja puiden siluetit reunustavat rantaa Tonavan suistossa.',
+        lahde: 'Valokuva: Pyretus, Wikimedia Commons (public domain).',
+        tekija: 'Pyretus',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Danube_Delta_oct_2006_120.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Tonava',
     tyyppi: 'joki',
     kysymykset: [
@@ -92,6 +163,17 @@ export const MAASTOKOHTEET_ROU = [
       + 'pitkän pätkän Bulgarian vastaista rajaa ja päättyy suistoon, joka on koko matkan '
       + 'viimeinen ja laajin osa.',
     lahde: 'en-Wikipedia "Danube", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mistä Tonava saa alkunsa?',
+      vaihtoehdot: [
+        'Ranskan Alpeilta',
+        'Saksan Schwarzwaldista',
+        'Sveitsin Juralta',
+        'Itävallan metsästä',
+      ],
+      oikea: 1,
+      fakta: 'Joki virtaa 2 850 kilometriä Saksasta Mustallemerelle.',
+    },
   },
 ];
 

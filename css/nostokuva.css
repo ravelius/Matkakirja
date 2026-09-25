@@ -1,0 +1,303 @@
+/*
+ * NOSTO AUKEAA KUVA EDELLÄ (js/nostokuva.js).
+ *
+ * Omistaja 11.9.2026: nosto avautuu ensin pelkkänä lähes koko ruudun
+ * kokoisena kuvana, jonka alla on lyhyt kuvateksti ja "Lisää"-nappi.
+ * Napista varsinainen nosto latoutuu SAMAN kuvan ympärille — kuva ei
+ * saa liikkua pikseliäkään.
+ *
+ * TÄMÄN TIEDOSTON TEHTÄVÄ ON OLLA TIELTÄ POIS. Kuvan laatikko tulee
+ * inline-pikseleinä js/nostokuva.js:stä, ja kortin paikka samoin;
+ * tässä varmistetaan vain, ettei mikään ladonta (flex, margin,
+ * max-height) pääse muuttamaan kuvan mittaa vaiheiden välillä.
+ */
+
+/* ── KORTTI ─────────────────────────────────────────────────────── */
+
+/*
+ * Kortti irrotetaan sekä kohdemerkin ankkuroinnista (.fokuskohde-popup
+ * position: absolute) että nostokerroksen flex-keskityksestä: paikka
+ * on ruudun koordinaateissa, ja vain js/nostokuva.js kirjoittaa sen.
+ */
+.nostokuva-kortti {
+  position: fixed;
+  z-index: 47;
+  /* Leveys, korkeuskatto, left ja top tulevat js/nostokuva.js:stä. */
+  margin: 0;
+  animation: none;
+  transform: none;
+  opacity: 1;
+}
+
+/*
+ * Avausliike jää pois: kortti on kuvan kehys, ja kuvan on oltava
+ * paikallaan ensimmäisestä kehyksestä alkaen (transform/opacity
+ * -siirtymä .fokusnosto-kortissa liikuttaisi kuvaa 12 px).
+ */
+.fokusnosto-kortti.nostokuva-kortti,
+.syvennys-kortti.nostokuva-kortti,
+.skandaali-kortti.nostokuva-kortti,
+.hetki-kortti.nostokuva-kortti,
+.elaintaky-kortti.nostokuva-kortti { transition: none; }
+
+/*
+ * VIERITYSPALKIN KAISTA VARATAAN JO VAIHEESSA 1. Vaiheessa 2 sisältö
+ * vierittyy, ja klassinen vierityspalkki kaventaisi sisältöä juuri
+ * vaiheenvaihdossa — keskitetty kuva liukuisi vasemmalle. Kaista on
+ * nyt yhtä leveä molemmissa vaiheissa, ja js/nostokuva.js laskee sen
+ * kortin leveyteen.
+ */
+/*
+ * VIERITYS VAIN PYSTYSUUNTAAN (omistaja 12.9.2026, iPhone-kaappaus
+ * Scheuchzerin skandaalikortista: *"iPhonella pitäisi estää vieritys
+ * sivusuunnassa. Nimittäin nyt kun sivua vierittää ylös-alas, niin se
+ * heiluu myös hieman sivuttaissuunnassa turhaan."*).
+ *
+ * Juurisyy on css:n oma sääntö: kun toinen akseli on `auto`, toisen
+ * `visible` laskeutuu `auto`:ksi. Kortissa oli vain `overflow-y: auto`,
+ * joten vaakavieritys oli päällä — ja koska kuva mitoitetaan
+ * pikselilleen ja vierityspalkin kaista varataan erikseen, sisältö on
+ * ajoittain murto-osapikselin leveämpi kuin kotelo. Se riittää iOS:n
+ * kumitukseen: pystyveto heiluttaa korttia sivusuunnassa.
+ *
+ * `overflow-x: hidden` sulkee akselin ja `touch-action: pan-y` kertoo
+ * sen selaimelle jo eleen alussa, jottei ele ehdi alkaa vaakaliikkeenä.
+ * Kortin oma `touch-action: pan-y` (css/fokusnosto.css) ei riitä, koska
+ * vierittävä elementti on sen sisällä.
+ */
+.nostokuva-kortti .fokusnosto-sisalto,
+.nostokuva-kortti .fokuskohde-sisalto {
+  scrollbar-gutter: stable;
+  overflow-x: hidden;
+  touch-action: pan-y;
+}
+
+/*
+ * YLÄRIVI JA OTSIKKO OVAT KUVA EDELLÄ -KORTISSA VIERITYSPINTAA, EIVÄT
+ * RAAHAUSKAHVAA (omistaja 12.9.2026: *"Nosto häviää edelleen
+ * näkyvistä, jos vieritän mistään muualta kohdasta kuin kuvaa
+ * painamalla."*).
+ *
+ * Tavallisessa tietoruudussa ylärivi ja otsikko ovat kahva
+ * (css/fokuskohteet.css: `touch-action: none`, `cursor: grab`), koska
+ * kortista saa vetää. Kuva edellä -korttia EI raahata — sen paikan
+ * omistaa js/nostokuva.js — joten `none` jätti otsikon eleen
+ * tyhjän päälle: selain ei vierittänyt eikä lähettänyt
+ * pointercancelia, ja ele jäi roikkumaan napautuksen ja vedon väliin.
+ * `pan-y` antaa otsikon päältä alkavan pystyvedon kortin omalle
+ * vieritykselle, kuten leipätekstin päältä.
+ */
+.nostokuva-kortti .fokuskohde-ylarivi,
+.nostokuva-kortti .fokuskohde-otsikko {
+  touch-action: pan-y;
+  cursor: default;
+}
+
+/*
+ * VAIHEESSA 1 NÄKYY VAIN KUVA, KUVATEKSTI JA "LISÄÄ" — ja sulku.
+ * Lukijan kaiutin (js/lukija.js) lisätään korttiin sisällön jälkeen,
+ * eikä se ole vaiheen 1 hallintapainike.
+ */
+.nostokuva-vaihe1 .lukija-nappi { display: none; }
+
+/* Kerros ei tummene vaiheessa 1: kartan pitää näkyä kuvan takaa. */
+.nostokuva-kortti .fokusnosto-ylarivi { margin-top: 0; }
+
+/* ── KUVAKEHYS ──────────────────────────────────────────────────── */
+
+.nostokuva-kehys {
+  /* Kehys kutistuu kuvan levyiseksi, joten kuvateksti alkaa ja
+     päättyy kuvan reunoihin (sama sääntö kuin .fokusnosto-kuva). */
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 0.55rem;
+}
+
+.nostokuva-nappi {
+  display: block;
+  /*
+   * GALLERIAN NUOLET JA LASKURI ASEMOITUVAT TÄHÄN. Skandaalikortti ja
+   * historian hetki saavat vaiheessa 2 selailunuolet ja laskurin saman
+   * kuvan päälle (.skandaali-kuvanuoli, .hetki-kuvanuoli,
+   * css/fokusnosto.css osio 8), ja ne ovat `position: absolute` —
+   * ilman tätä ne hakeutuisivat kortin reunoihin.
+   */
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nostokuva-nappi-zoom { cursor: zoom-in; }
+
+button.nostokuva-nappi:hover:not(:disabled),
+button.nostokuva-nappi:focus-visible { background: transparent; }
+
+.nostokuva-nappi:focus { outline: none; }
+
+.nostokuva-nappi:focus-visible {
+  outline: 2px solid #9c6b17;
+  outline-offset: 2px;
+}
+
+/*
+ * KUVAN LAATIKKO ON LUKOSSA. Leveys ja korkeus tulevat inline-tyylinä
+ * js/nostokuva.js:stä; mikään tässä ei saa rajata niitä (ei
+ * max-width: 100%, ei max-height: 42vh), koska rajaus laskisi
+ * ladonnasta ja voisi muuttua vaiheiden välillä.
+ */
+.nostokuva-img {
+  display: block;
+  margin: 0;
+  border-radius: 6px;
+  border: 1px solid rgba(122, 85, 20, 0.3);
+  object-fit: contain;
+  background: rgba(122, 85, 20, 0.1);
+}
+
+.nostokuva-nappi:hover .nostokuva-img,
+.nostokuva-nappi:focus-visible .nostokuva-img {
+  border-color: rgba(122, 85, 20, 0.62);
+}
+
+/*
+ * KUVA PYSYY SAMANKOKOISENA LISÄÄ-TILASSA MYÖS KUVASARJANA (omistaja
+ * 20.9.2026, kaappaukset nosto-pieni-kortti-kuva-v1980.webp ja
+ * nosto-lisaa-kuva-pienenee-v1980.webp, Chaîne des Puys 1400 px:
+ * pienessä kortissa kuva täytti kortin, LISÄÄ-tilassa se kutistui
+ * noin puoleen). SYY: kahden kuvan nosto rakentaa vaiheessa 2 sarjan
+ * SAMAN kehyksen ympärille ja antaa sille luokat `fokusnosto-kuva
+ * nostosarja-kuva` — ja `.fokusnosto-kuva img { max-height: 42vh }`
+ * (css/fokusnosto.css, 1.9.2026 piirraNostonKuva-korteille) leikkasi
+ * lukitun laatikon. Yhden kuvan nosto ei koskaan saanut luokkaa, joten
+ * se pysyi oikean kokoisena. Lukittu laatikko (inline width/height,
+ * ks. KUVAN LAATIKKO ON LUKOSSA) voittaa nyt myös sarjassa; teksti
+ * tulee kuvan alle ja kortti vierittyy (js/nostokuva.js avaaLisaa).
+ */
+.nostokuva-kortti .nostokuva-kehys.fokusnosto-kuva .nostokuva-img {
+  max-height: none;
+  max-width: none;
+}
+
+/* ── KUVATEKSTI JA "LISÄÄ" ──────────────────────────────────────── */
+
+.nostokuva-selite {
+  display: block;
+  /* Teksti ei saa määrätä kehyksen leveyttä: kehys on kuvan levyinen
+     (fit-content), ja teksti taittuu sen sisään. */
+  width: 0;
+  min-width: 100%;
+  margin: 0.35rem 0 0;
+  color: rgba(33, 29, 24, 0.82);
+  font-family: var(--font-luku);
+  font-size: 0.84rem;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.nostokuva-lahde {
+  display: block;
+  margin-top: 0.1rem;
+  color: rgba(33, 29, 24, 0.56);
+  font-size: 0.72rem;
+}
+
+.nostokuva-lisaa {
+  display: block;
+  margin: 0.55rem auto 0.1rem;
+  min-height: 40px;
+  padding: 0.35rem 1.6rem;
+  border: 1px solid rgba(122, 85, 20, 0.45);
+  border-radius: 8px;
+  background: rgba(250, 246, 235, 0.96);
+  color: #5c3f0e;
+  font-family: var(--font-type);
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nostokuva-lisaa:hover:not(:disabled),
+.nostokuva-lisaa:focus-visible {
+  background: #fffaf0;
+  color: #3d2a07;
+}
+
+/*
+ * ELÄINKORTIN PISTEET KUVATEKSTIN ALLE (js/elaintaky.js
+ * elaintakyValmisKaruselli). Pisteiden oma ilme tulee
+ * css/fokusnosto.css:stä; tässä varataan vain väli kuvatekstiin.
+ */
+.nostokuva-kehys .elaintaky-karuselli-pisteet { margin-top: 0.3rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .nostokuva-kortti { animation: none; transition: none; }
+}
+
+/*
+ * VAIHEESSA 1 EI SULKURISTIÄ EIKÄ LÄHDERIVIÄ (omistaja 12.9.2026:
+ * *"Ota yläkulman ruksi ja lähde merkintä pois kaikista nostoista.
+ * Riittää kun lähde näkyy jutussa."*).
+ *
+ * Kuva sulkeutuu kartan napautuksesta — se on sama sääntö, jonka
+ * omistaja antoi jo avausta tilatessaan, joten erillistä ruksia ei
+ * tarvita eikä se saa peittää kuvan kulmaa. Vaiheessa 2 kortti on
+ * tavallinen nostokortti ja sen oma sulku palaa näkyviin.
+ */
+.nostokuva-vaihe1 .fokusnosto-kortti-sulje,
+.nostokuva-vaihe1 .fokuskohde-sulje,
+.nostokuva-vaihe1 .nostokuva-lahde { display: none; }
+
+/*
+ * KAKSI PALSTAA KAIKILLE KUVA EDELLÄ -KORTEILLE ≥ 1100 PX (omistaja
+ * 22.9.2026 klo 23.06: *"Kaikkiin nostoihin kaksi palstaa. Ja niin että
+ * ensin Kuva avautuu isona ja kun klikkaa niin sitten kuva pienenee ja
+ * tulee teksti palsta mukaan oikealle."*).
+ *
+ * Sama taitto kuin nostokortilla (css/fokusnosto.css osio 13), mutta
+ * luokkaan `.nostokuva-kortti` sidottuna, jonka js/nostokuva.js antaa
+ * JOKAISELLE kuorelle — nostokortti, kohdekortti (.fokuskohde-popup),
+ * skandaali, eläintäky, historian hetki, syvennys. Palstat rakentaa
+ * js/nostokuva.js nostoPalstoiksi (tai nostokortilla js/fokusnosto.js
+ * itse), ja kuvan pikselileveys tulee JS:stä; max-width alla on vain
+ * varmistus. Alle rajan rivi on tavallinen lohko: pino kuten ennen.
+ *
+ * Flexbox eikä grid (osio 13, TOINEN YRITYS): palstat ovat toisistaan
+ * riippumattomia, joten leipäteksti alkaa aina tekstipalstan yläreunasta.
+ */
+@media (min-width: 1100px) {
+  .nostokuva-kortti .fokusnosto-rivi {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .nostokuva-kortti .fokusnosto-kuvapalsta {
+    flex: 0 0 auto;
+    min-width: 0;
+    max-width: 50%;
+  }
+  .nostokuva-kortti.fokusnosto-pysty .fokusnosto-kuvapalsta {
+    max-width: 34%;
+  }
+  .nostokuva-kortti .fokusnosto-tekstipalsta {
+    flex: 1 1 0%;
+    min-width: 0;
+  }
+  /* Lööpin kaksipalstateksti (skandaali on lööppi) yhteen palstaan:
+     tekstipalsta on jo kapea. */
+  .nostokuva-kortti .fokusnosto-tekstipalsta .looppi-leipa {
+    column-count: 1;
+  }
+  /* Kuvapalstan kuva ei saa venyä palstan levyiseksi: JS antaa sille
+     tarkan mitan, eikä vaiheen 1 keskitys (margin auto) kuulu tänne. */
+  .nostokuva-kortti.nostokuva-vaihe2 .fokusnosto-kuvapalsta .nostokuva-kehys {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

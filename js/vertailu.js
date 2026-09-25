@@ -6,9 +6,19 @@
  * kutsuvat sen julkisia metodeja, mutta KIRJOITTAVAT vain oman
  * piirteensä kenttiä (ui.vertailu*, ui.maatiedot*) — tämä on mallin
  * B omistajuussääntö.
+ *
+ * MOLEMMAT TILAT OSAAVAT MYÖS PALLOLAUDAN (aalto 1C,
+ * docs/moduulit/karttapallo.md luku 10). Kun pallo on lauta, maita ei
+ * piirretä SVG-kerrokseen vaan pallon pinnalle laudan linssiapurin
+ * kautta (`ui.pallolauta.linssit`): muodot monikulmioina
+ * (`polygonit`), nimet CSS2D-merkkeinä (`merkit`) ja tilan sammuessa
+ * `pura`. Napautus, valinta, alapalkki ja maakyltti ovat samat
+ * molemmilla laudoilla — vain piirtotapa vaihtuu, ja se vaihtuu
+ * yhdessä haarassa piirtofunktion alussa.
  */
 
 import { el } from './mapart.js';
+import { lataaMaapolygonit, puraMaanRenkaat, rengasAsteiksi } from './maanaariviivat.js';
 import { sfx } from './sound.js';
 import { MAATIEDOT } from './sisaltotaulut.js';
 import { TOAST_MS, html } from './ui-apurit.js';
@@ -23,6 +33,262 @@ import { TOAST_MS, html } from './ui-apurit.js';
 const VERTAILUVARIT = [
   'maakayra-viiva', 'maakayra-toinen', 'maakayra-kolmas', 'maakayra-neljas',
 ];
+
+/*
+ * ===================================================================
+ * MAAT PALLOLLE (aalto 1C)
+ * ===================================================================
+ *
+ * Laudan maamuodot (map.countryShapes[iso].renkaat) ovat LAUDAN
+ * yksiköissä; pallo puhuu asteita. Käännös tehdään kerran pakkaa
+ * kohti (välimuisti alempana) ja se on tässä omana puhtaana
+ * funktionaan, jotta sen voi ajaa Nodessa ilman selainta
+ * (tests/maapolygonit-pallolla.test.mjs).
+ *
+ * KIERTÄVÄN LAUDAN SAUMA puretaan `rengasAsteiksi`-apurissa, joka
+ * MUUTTI js/maanaariviivat.js:ään 11.9.2026: pelaajan maan korostus
+ * pallolla kääntää täsmälleen samanlaisia laudan renkaita asteiksi,
+ * eikä sauman purkua saa kirjoittaa kahdesti. Perustelut ja mittaus
+ * ovat siellä.
+ *
+ * JOKAINEN RENGAS ON OMA MONIKULMIONSA (MultiPolygon), koska laudan
+ * aineisto ei erottele saaria ja reikiä: renkaat piirretään
+ * tasokartallakin toisistaan riippumatta (`M…Z` kukin erikseen).
+ */
+
+/*
+ * TARKAT RAJAT PALLOLLA (Fable 24.9.2026, natiivin pariteettikierros):
+ * laudan `countryShapes` on tasokartan tyylitelty sävytysrengas, joka
+ * loppuu laudan pohjoisreunaan (76° N) — Huippuvuoret puuttuivat Norjalta,
+ * ja karkeat vuonorenkaat kolmioituivat Finnmarkissa valkoisiksi
+ * kolmioiksi. Pallon pohja on oikeaa maantiedettä, joten pallolla
+ * piirretään sama Natural Earth 10m -aineisto kuin pelaajan maan
+ * korostuskehässä (assets/data/maapolygonit.json, lataaMaapolygonit),
+ * harvennettuna. Nimi, keskus ja leveys tulevat yhä laudan muodosta,
+ * ja maa, jota aineistossa ei ole, piirtyy laudan muodosta kuten ennen.
+ *
+ * HARVENNUS ON ETÄISYYSSEULA LAUDAN YKSIKÖISSÄ ennen asteiksi kääntöä:
+ * piste pidetään, kun se on vähintään TARKKA_ASKEL yksikön (8 ≈ 26 km)
+ * päässä edellisestä, ja rengas, jonka laatikko on alle 1,5 askelta,
+ * jätetään pois (luodot). Mitattu 24.9.: 497 000 → 41 000 pistettä ja
+ * 2 627 → 754 rengasta (countryShapes 26 000), 57 ms Macilla koko
+ * maailmalle; Douglas–Peucker olisi vienyt 370 ms. Huippuvuorilta jää
+ * 12 rengasta (pääsaaret).
+ */
+export const TARKKA_ASKEL = 8;
+
+/** Maan tarkat renkaat asteina (GeoJSON-renkaat) tai tyhjä lista. */
+export function tarkatRenkaatPallolle(data, iso, asteet, askel = TARKKA_ASKEL) {
+  const ulos = [];
+  for (const r of puraMaanRenkaat(data, iso)) {
+    let w = Infinity; let e = -Infinity; let s = Infinity; let n = -Infinity;
+    for (const [x, y] of r) {
+      if (x < w) w = x; if (x > e) e = x; if (y < s) s = y; if (y > n) n = y;
+    }
+    if (Math.max(e - w, n - s) < askel * 1.5) continue;
+    const pidetyt = [r[0]];
+    let [px, py] = r[0];
+    for (let i = 1; i < r.length; i += 1) {
+      const [x, y] = r[i];
+      if (Math.hypot(x - px, y - py) >= askel) { pidetyt.push(r[i]); px = x; py = y; }
+    }
+    if (pidetyt.length < 4) continue;
+    const kaannetty = rengasAsteiksi(pidetyt, asteet);
+    if (!kaannetty) continue;
+    /*
+     * KIERTOSUUNTA: pallon monikulmio tulkitsee vastapäivään kiertävän
+     * renkaan koko maapallon komplementiksi (koko pallo maan värissä).
+     * Laudan renkaat kiertävät kaikki myötäpäivään; Natural Earthin
+     * reiät ja harvennuksen kääntämät renkaat käännetään samoin.
+     */
+    let ala = 0;
+    for (let i = 0; i + 1 < kaannetty.length; i += 1) {
+      ala += (kaannetty[i + 1][0] - kaannetty[i][0]) * (kaannetty[i + 1][1] + kaannetty[i][1]);
+    }
+    if (ala < 0) kaannetty.reverse();
+    ulos.push(kaannetty);
+  }
+  return ulos;
+}
+
+/** Onko tarkka aineisto samalla laudalla kuin pakka (maailmankartta)? */
+function samaLauta(map, tarkat) {
+  return Boolean(tarkat?.maat && tarkat.lauta
+    && tarkat.lauta.leveys === map?.width && tarkat.lauta.korkeus === map?.height);
+}
+
+/** Maakerroksen korkeus pallon pinnasta — pelin merkkien tasalla. */
+export const MAAPOLYGONIN_KORKEUS = 0.004;
+
+/**
+ * Laudan maamuodot pallon monikulmioiksi.
+ *
+ * `asteet` on laudan oma käännös ({ x, y } → { lat, lon }), eli
+ * pallolaudalla `ui.pallolauta.asteet` (js/pallolauta/lauta.js
+ * pallonAsteet). Palauttaa Mapin iso → { nimi, geometry, keskus:
+ * { lat, lng }, leveys }, jossa `geometry` on GeoJSON Polygon tai
+ * MultiPolygon asteina ja `leveys` on yhä LAUDAN yksiköissä — nimen
+ * piirtoehto (leveys >= 60) on sama luku molemmilla laudoilla.
+ */
+export function maapolygonitPallolle(map, asteet, tarkat = null) {
+  const tulos = new Map();
+  const muodot = map?.countryShapes;
+  if (!muodot || typeof asteet !== 'function') return tulos;
+  const tarkka = samaLauta(map, tarkat);
+  for (const [iso, maa] of Object.entries(muodot)) {
+    if (!maa?.renkaat?.length) continue;
+    let renkaat = tarkka ? tarkatRenkaatPallolle(tarkat, iso, asteet) : [];
+    if (!renkaat.length) {
+      renkaat = [];
+      for (const rengas of maa.renkaat) {
+        const kaannetty = rengasAsteiksi(rengas, asteet);
+        if (kaannetty) renkaat.push(kaannetty);
+      }
+    }
+    if (!renkaat.length) continue;
+    const k = asteet({ x: maa.keskus?.[0], y: maa.keskus?.[1] });
+    tulos.set(iso, {
+      nimi: maa.nimi,
+      leveys: maa.leveys ?? 0,
+      keskus: k ? { lat: k.lat, lng: k.lon ?? k.lng } : null,
+      geometry: renkaat.length === 1
+        ? { type: 'Polygon', coordinates: [renkaat[0]] }
+        : { type: 'MultiPolygon', coordinates: renkaat.map((r) => [r]) },
+    });
+  }
+  return tulos;
+}
+
+/*
+ * Käännös on sama koko pelin ajan (lauta ei muutu kesken pakan), ja
+ * maailmankartalla se on 26 000 pistettä — se tehdään kerran pakkaa
+ * kohti. WeakMap eikä Map: kartta-olio saa kadota tallenteen mukana.
+ */
+const polygoniMuisti = new WeakMap();
+/** Tarkka aineisto (maapolygonit.json), kun se on saapunut; haku kerran. */
+let tarkatMaat = null;
+let tarkatHaussa = false;
+
+/** Onko pallo lauta juuri nyt (tasokartta nukkuu)? */
+function pallolautaPaalla(ui) {
+  return ui.pallolautaPaalla ? ui.pallolautaPaalla() : Boolean(ui.pallolauta);
+}
+
+/** Pakan maat pallon muodossa (välimuistista). */
+function pallonMaat(ui) {
+  const map = ui.game.pack.map;
+  if (!map) return new Map();
+  const valmis = polygoniMuisti.get(map);
+  if (valmis && (valmis.tarkka || !tarkatMaat)) return valmis.maat;
+  /*
+   * Tarkka aineisto on laiska ja jaettu korostuskehän kanssa: kunnes se
+   * saapuu, piirretään laudan muodoista, ja saapuessa auki oleva tila
+   * piirretään kerran uudestaan (Globe.gl vaihtaa geometrian).
+   */
+  if (!tarkatMaat && !tarkatHaussa) {
+    tarkatHaussa = true;
+    Promise.resolve(lataaMaapolygonit()).then((data) => {
+      tarkatHaussa = false;
+      if (!data) return;
+      tarkatMaat = data;
+      if (!pallolautaPaalla(ui)) return;
+      if (vertailuPaalla()) piirraVertailuMaat(ui);
+      if (document.body.classList.contains('maatiedot-tila')) piirraMaatiedotMaat(ui);
+    }).catch(() => { tarkatHaussa = false; });
+  }
+  const tulos = maapolygonitPallolle(map, ui.pallolauta?.asteet, tarkatMaat);
+  // Tyhjää tulosta ei muisteta: se tarkoittaa, ettei laudalla ollut
+  // vielä käännöstä, ja seuraava piirto saa yrittää uudestaan.
+  if (tulos.size) polygoniMuisti.set(map, { maat: tulos, tarkka: Boolean(tarkatMaat) });
+  return tulos;
+}
+
+/*
+ * MAAN SÄVYT PALLOLLA — samat värit kuin css:n .vertailu-maa ja
+ * .maatiedot-maa, koska sama tila ei saa näyttää kahdelta. Globe.gl
+ * ottaa värin merkkijonona (rgba käy), ei luokkana: pallon pinnalla ei
+ * ole css:ää, jolla maan täytön voisi vaihtaa.
+ *
+ * Kolmas sävy `himmea` on pallon oma lisä samasta musteesta: kartalla
+ * hiiren osoitin kertoo, mitkä maat ovat napautettavia, mutta pallolla
+ * osoitinta ei ole — kun vertailu on täynnä (VERTAILU_MAX), valitsematta
+ * jääneet himmenevät, jotta täysi lista näkyy ennen kuin sitä yrittää
+ * kasvattaa.
+ */
+export const VERTAILUN_SAVYT = {
+  valittu: { vari: 'rgba(176, 58, 43, 0.3)', reuna: '#b03a2b' },
+  valittavissa: { vari: 'rgba(120, 96, 62, 0.06)', reuna: 'rgba(70, 51, 31, 0.55)' },
+  himmea: { vari: 'rgba(120, 96, 62, 0.03)', reuna: 'rgba(70, 51, 31, 0.25)' },
+};
+export const MAATIETOJEN_SAVYT = {
+  valittu: { vari: 'rgba(176, 34, 34, 0.16)', reuna: 'rgba(140, 30, 30, 0.9)' },
+  valittavissa: { vari: 'rgba(140, 110, 70, 0.05)', reuna: 'rgba(70, 51, 31, 0.55)' },
+};
+
+/**
+ * Maan nimi pallolle: yksi kevyt tekstielementti, jonka kirjasin ja
+ * muste tulevat css:stä (.pallolauta-maanimi). Koko on RUUTUVAKIO
+ * kuten muillakin pallon merkeillä — CSS2D-elementti ei skaalaudu
+ * pallon mukana, joten tasokartan leveydestä laskettu kirjasinkoko ei
+ * käänny tänne.
+ */
+function maanimiElementti(d) {
+  const teksti = document.createElement('span');
+  teksti.className = 'pallolauta-maanimi';
+  teksti.textContent = d.nimi;
+  return teksti;
+}
+
+/**
+ * Maat pallon pinnalle. `osa` on linssiapurin osarekisterin avain,
+ * `savy(iso)` antaa maan sävyn ja `napautus(iso)` sen teon.
+ *
+ * Palauttaa true, jos MAAT KUULUVAT PALLOLLE — myös silloin, kun
+ * laudalta puuttuu vielä linssiapuri: tasokartta nukkuu pallon alla,
+ * eikä sen kerrokseen ole mitään mieltä piirtää.
+ */
+function piirraMaatPallolle(ui, { osa, savy, napautus, nimienOsa = null }) {
+  if (!pallolautaPaalla(ui)) return false;
+  const linssit = ui.pallolauta?.linssit;
+  if (!linssit) return true;
+  const maat = pallonMaat(ui);
+  const polygonit = [];
+  const nimet = [];
+  for (const [iso, maa] of maat) {
+    const s = savy(iso);
+    polygonit.push({
+      avain: iso,
+      geometry: maa.geometry,
+      vari: s.vari,
+      reuna: s.reuna,
+      korkeus: MAAPOLYGONIN_KORKEUS,
+      napautus: () => napautus(iso),
+    });
+    // Nimi vain tarpeeksi leveälle maalle — sama ehto kuin
+    // tasokartalla, ettei pallo täyty pikkuvaltioiden nimistä.
+    if (nimienOsa && maa.keskus && maa.leveys >= 60) {
+      nimet.push({
+        avain: `${nimienOsa}:${iso}`,
+        laji: 'linssi',
+        lat: maa.keskus.lat,
+        lng: maa.keskus.lng,
+        nimi: maa.nimi,
+        elementti: maanimiElementti,
+      });
+    }
+  }
+  linssit.polygonit(osa, polygonit);
+  if (nimienOsa) linssit.merkit(nimienOsa, nimet);
+  return true;
+}
+
+/** Maakerros pallolta pois (tilan sammuessa). */
+function puraMaatPallolta(ui, osat) {
+  const linssit = ui.pallolauta?.linssit;
+  if (!linssit) return;
+  for (const osa of osat) linssit.pura(osa);
+}
+
 /*
  * ===================================================================
  * VERTAILUTILA (v321)
@@ -71,6 +337,8 @@ export function tahdistaVertailu(ui, halutaan) {
   } else {
     ui.vertailuKerros?.remove();
     ui.vertailuKerros = null;
+    // Pallolaudalla maat ja nimet ovat laudan omissa kerroksissa.
+    puraMaatPallolta(ui, ['vertailu', 'vertailu-nimet']);
     ui.vertailuPalkki?.remove();
     ui.vertailuPalkki = null;
     suljeVertailuNakyma();
@@ -89,7 +357,25 @@ export function tahdistaVertailu(ui, halutaan) {
 export function piirraVertailuMaat(ui) {
   const map = ui.game.pack.map;
   const muodot = map?.countryShapes;
-  if (!muodot || !ui.svg) return;
+  if (!muodot) return;
+  /*
+   * PALLOLAUDALLA MAAT OVAT PALLON PINNALLA. Valinnan vaihtuessa
+   * lista asetetaan uudestaan (värit vaihtuvat) — kerrosta ei pureta,
+   * jotta Globe.gl siirtää olemassa olevat monikulmiot eikä rakenna
+   * niitä uudestaan joka napautuksella.
+   */
+  const valinnat = ui.vertailuValinnat ?? [];
+  const taynna = valinnat.length >= VERTAILU_MAX;
+  const pallolla = piirraMaatPallolle(ui, {
+    osa: 'vertailu',
+    nimienOsa: 'vertailu-nimet',
+    savy: (iso) => {
+      if (valinnat.includes(iso)) return VERTAILUN_SAVYT.valittu;
+      return taynna ? VERTAILUN_SAVYT.himmea : VERTAILUN_SAVYT.valittavissa;
+    },
+    napautus: (iso) => valitseVertailuMaa(ui, iso),
+  });
+  if (pallolla || !ui.svg) return;
   ui.vertailuKerros?.remove();
   ui.vertailuKerros = el('g', { class: 'vertailu-maat' }, ui.boardRoot ?? ui.svg);
   for (const [iso, maa] of Object.entries(muodot)) {
@@ -147,6 +433,7 @@ export function tahdistaMaatiedot(ui, halutaan) {
   } else {
     ui.maatiedotKerros?.remove();
     ui.maatiedotKerros = null;
+    puraMaatPallolta(ui, ['maatiedot']);
     ui.maatiedotValittu = null;
     // Maakyltti on maaselaimen oma kaluste: tilan sulkeutuessa se
     // katoaa kartalta kokonaan.
@@ -174,7 +461,30 @@ export function palautaPilleriPelaajalle(ui) {
 /** Maiden muodot napautettavina; valitulle nimi ja "i". */
 export function piirraMaatiedotMaat(ui) {
   const muodot = ui.game.pack.map?.countryShapes;
-  if (!muodot || !ui.svg) return;
+  if (!muodot) return;
+  /*
+   * PALLOLAUDALLA sama tila pallon pinnalla. Ele on kaksivaiheinen
+   * kuten kartalla: napautus valitsee maan (rajat korostuvat ja
+   * maakyltti kertoo nimen), ja lehden avaa kyltti — kyltti on
+   * kartan ja pallon yhteinen kaluste (ui.paivitaMaaPilleri asuu
+   * mapPanessa, ei laudassa), joten sen koodi on alla yhteinen.
+   * Nimiä ei ladota: maaselaimessa nimen kertoo kyltti (14.8.2026).
+   */
+  if (piirraMaatPallolle(ui, {
+    osa: 'maatiedot',
+    savy: (iso) => (ui.maatiedotValittu === iso
+      ? MAATIETOJEN_SAVYT.valittu
+      : MAATIETOJEN_SAVYT.valittavissa),
+    napautus: (iso) => {
+      ui.maatiedotValittu = ui.maatiedotValittu === iso ? null : iso;
+      sfx.play('paper');
+      piirraMaatiedotMaat(ui);
+    },
+  })) {
+    naytaMaakyltti(ui, muodot);
+    return;
+  }
+  if (!ui.svg) return;
   ui.maatiedotKerros?.remove();
   ui.maatiedotKerros = el('g', { class: 'maatiedot-maat' }, ui.boardRoot ?? ui.svg);
   for (const [iso, maa] of Object.entries(muodot)) {
@@ -196,14 +506,17 @@ export function piirraMaatiedotMaat(ui) {
       piirraMaatiedotMaat(ui);
     });
   }
-  /*
-   * Valitun maan nimi ja lippu MAAKYLTTIIN, ei kartalle (omistaja
-   * 14.8.2026: "oikealla saisi näkyä sama maakyltti kuin normaali-
-   * tilassa"). Kartalle jää vain rajakorostus; kyltti kertoo mihin
-   * osui, ja kyltin napautus avaa maan lehden — sama nappi, sama
-   * ele kuin normaalitilassa. Ilman valintaa kyltti näyttää pelaajan
-   * oman maan kuten muulloinkin.
-   */
+  naytaMaakyltti(ui, muodot);
+}
+
+/**
+ * Valitun maan nimi ja lippu MAAKYLTTIIN, ei kartalle (omistaja
+ * 14.8.2026: "oikealla saisi näkyä sama maakyltti kuin normaali-
+ * tilassa"). Laudalle jää vain rajakorostus; kyltti kertoo mihin osui,
+ * ja kyltin napautus avaa maan lehden — sama nappi, sama ele kuin
+ * normaalitilassa. Ilman valintaa kyltti katoaa.
+ */
+function naytaMaakyltti(ui, muodot) {
   const valittuIso = ui.maatiedotValittu;
   if (valittuIso) ui.paivitaMaaPilleri(muodot[valittuIso], valittuIso);
   else palautaPilleriPelaajalle(ui);

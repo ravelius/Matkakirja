@@ -177,70 +177,151 @@ export const FOKUSVIRTA_MARSEILLE = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Marseille, syyskuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Vanha satama haisee kalalta, tervalta ja saippualta — täällä '
-      + 'keitetään saippuaa, jota myydään koko maailmalle vihreinä '
-      + 'harkkoina kuin kultaa. Laivoja tulee Afrikasta ja idästä; kanava '
-      + 'Suezissa on tehnyt tästä kaupungista Ranskan portin itään. '
-      + 'Kalliolla lahden suulla on linnoitussaari, josta eräs kirjailija '
-      + 'teki vankilan kuuluisammaksi kuin yksikään vanginvartija. Söin '
-      + 'illalla kalakeittoa, johon pantiin kaloja joiden nimiä en oppinut.',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Marseille, syyskuussa 1873. Mistral puhaltaa; puntari '
+      + 'putoaa.',
+    /* HYVÄKSYTTY TEKSTIPILOTTI r2 13.9.2026: yhteinen Horatio–Livia-
+     * paribudjetti alittaa julkaistun lähtöparin. Sanat on hyväksytty
+     * tekniseen RC-jatkoon; uusi luenta ja aikaleimat vaaditaan ennen
+     * julkaisua. */
+    teksti: "Marseillen satamassa saippuaa myytiin tiiliskivinä, kuulemma koko maailman pesuun. Kauppiaan mustat kynnet kertoivat köysitöistä. Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. Maailma jäi likaiseksi; käteni olivat jo toista mieltä.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[curious] Vanha satama haisee kalalta, tervalta ja saippualta '
-      + '— täällä keitetään saippuaa, jota myydään koko maailmalle '
-      + 'vihreinä harkkoina kuin kultaa. [excited] Laivoja tulee Afrikasta '
-      + 'ja idästä; kanava Suezissa on tehnyt tästä kaupungista Ranskan '
-      + 'portin itään. [softly] Kalliolla lahden suulla on linnoitussaari, '
-      + 'josta eräs kirjailija teki vankilan kuuluisammaksi kuin yksikään '
-      + 'vanginvartija. [warmly] Söin illalla kalakeittoa, johon pantiin '
-      + 'kaloja joiden nimiä en oppinut.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT — PILOTTI (omistaja 11.9.2026, Raamattu
+     * PULU REAGOI TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot").
+     * Ankkuri on katkelma luentatekstistä sanasta sanaan; hetki lasketaan
+     * äänitteen sanakohtaisista aikaleimoista (forced alignment), ei
+     * merkkimäärästä. Tarkoitus: myotailee | epailee | torjuu | huvittuu |
+     * hammastyy | vakavoituu. siirtyma = ms ankkurin viimeisen sanan
+     * lopusta. Hiljainen osuus: köysityön syy kuunnellaan ilman omaa
+     * lisäreaktiota.
+     */
+    reaktiot: [
+  {
+    "id": "marseille.r1",
+    "ankkuri": "saippuaa myytiin tiiliskivinä",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "marseille.r2",
+    "ankkuri": "mustat kynnet kertoivat köysitöistä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "marseille.r3",
+    "ankkuri": "terva, kala ja suolavesi seurasivat majataloon",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "marseille.r4",
+    "ankkuri": "Maailma jäi likaiseksi",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "marseille.r5",
+    "ankkuri": "käteni olivat jo toista mieltä",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
+     * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
+    luenta: "[curious] Marseillen satamassa saippuaa myytiin tiiliskivinä, kuulemma koko maailman pesuun. Kauppiaan mustat kynnet kertoivat köysitöistä. Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. [warmly] Maailma jäi likaiseksi; käteni olivat jo toista mieltä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-marseille.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-marseille-r20260909-paper-v4;
+     * SHA-256 82573139b14028c311c7047989381593b366e51b7462eb220087d4eae88db1b5;
+     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
+     * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
+     * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
+     * toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-marseille-r20260909-paper-v4.jpg',
+      // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
+      // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
+      lyhyt: 'Marseille, 1873. Saippuaa merelle lähtevän kaupungin tarpeisiin.',
+      selite: 'Saippuaharkot oli ladottu pöydälle köysien ja kalan viereen kuin pienet rakennuskivet. Kauppiaan tummat kynnet kertoivat sataman työstä paremmin kuin myyntipuhe.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+      'https://collections.musees.marseille.fr/',
+      'https://www.musee-orsay.fr/sites/default/files/2021-10/feuilletage_cinema_2.pdf',
+      ],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-marseille-r20260911-paper2-v1.jpg",
+      lyhyt: "Marseille, 1873. Sataman jäljet irtosivat käsistä vasta majatalossa.",
+      selite: 'Laskin uuden saippuapalan majatalon pesuvadin reunalle ja käärin hihat. Terva, kala ja suolavesi jäivät köyteen ja laukkuun, mutta käsissä muutos näkyi.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://collections.musees.marseille.fr/","https://www.musee-orsay.fr/sites/default/files/2021-10/feuilletage_cinema_2.pdf"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
-     * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo); kanoninen `teksti` seuraa
-     * sen jälkeen.
-     *
-     * MIKSI SAIPPUA EIKÄ KEITTO, SATAMA TAI SAARI: kaanoninen `teksti`
-     * ottaa heti perään kaikki kolme muuta (kalakeitto nimeämättä,
-     * saippuan nykytila yhdellä lauseella, saari ja kirja nimeämättä),
-     * ja oppitunti ottaa
-     * Suezin. Merkinnän ensimmäinen virke — se haju ja ne vihreät harkot
-     * — jää muuten kokonaan vastaamatta. Maadoitus vastaa siihen ja
-     * luovuttaa vuoron keitolle viimeisellä virkkeellään, jotta kaanonin
-     * avaus jatkaa suoraan siitä.
-     *
-     * PUHEKIELIPASSI (Raamattu, "LIVIAN PUHEKIELI", sääntö 1 PAINOPISTE
-     * REUNOILLA): lyhentymät ovat vain alussa ("Kääk") ja lopussa
-     * ("mut", "tainnut"), keskellä sanat ovat auki; pronominit
-     * kokonaisina; ei huutomerkkejä.
-     *
-     * FAKTAKURI: kolme väitettä, kaikki pelin omasta jo hyväksytystä
-     * Ranska-aineistosta (js/packs/maa-kategoriat.js, FRA/arki, nosto
-     * "Saippuassa lukee 72"). (1) Lokakuun 5. päivänä 1688 kuninkaan
-     * asetus kielsi käyttämästä marseillelaiseen saippuaan rasvaa tai
-     * voita. (2) Perinteinen kuutio painaa 600 grammaa. (3) Kylkeen
-     * leimataan valmistajan nimi ja luku 72, joka kertoo öljyn osuuden
-     * prosentteina.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era01; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-marseille-01-r20260909-euv1-v2.jpg.
      */
-    maadoitus: 'Kääk. Se haju on yhä tallella, tosin nykyään enemmän '
-      + 'saippuan kuin tervan puolella. Ja tässä isoisäsi osui: ne vihreät '
-      + 'harkot olivat ihan oikeasti säädeltyä tavaraa. Kuninkaan asetus '
-      + 'viideltä lokakuuta 1688 kielsi panemasta marseillelaiseen '
-      + 'saippuaan rasvaa tai voita, ja kuution kylkeen leimataan vieläkin '
-      + 'valmistajan nimi ja luku 72 — se kertoo öljyn osuuden '
-      + 'prosentteina. Kuusisataa grammaa ja yksi luku, siinä koko takuu. '
-      + 'Mut siitä keitosta hän ei tainnut ymmärtää puoliakaan.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-marseille-01-r20260909-euv1-v2.jpg',
+        lyhyt: 'Marseille: sataman lokki tarkasti myös pöydän alapuolen.',
+        selite: 'Vanhassa satamassa syödään ja käydään yhä kauppaa veneiden ympärillä. Lokki tarkasti pöydän alustan, kun seurasin sen reittiä kengän ja tuolin välistä.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/discover-the-sites-and-monuments-in-marseille/the-old-port/',
+          'https://provence-alpes-cotedazur.com/en/things-to-do/nature-outdoor-activities/in-the-footsteps-of-saint-mary-magdalene/marseille-lestaque-marseille-city-centre-saint-victor/',
+          'https://woody.cloudly.space/app/uploads/crt-paca/2021/06/thumbs/esplanade-vieux-port-marseille-exclu-mm-otcm-1920x960.jpg',
+        ],
+      },
+      {
+        /*
+         * PULUCAM P2 (eu-hl-pilot-20260912-r1, toimitus 12.9.2026).
+         * Mediareadback: 200, image/jpeg, 1536x1024, sRGB, full decode,
+         * CORS https://matkakirja.app. SHA-256:
+         * 5218c67d5b3868d83854107900a88da7acd1597efc8d035a52401255daf52464.
+         */
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/20260912/pulu-cam-marseille-02-v2-5218c67d5b38.jpg',
+        lyhyt: 'Marseille: veneiden vaaleat vanat halkovat Vieux-Portin sinistä väylää.',
+        selite: 'Veneiden perään jää vaaleita vanoja Vieux-Portin tummalle vedelle. '
+          + 'Ilmasta näkyy, kuinka pitkä satama-allas ulottuu keskelle Marseillea.',
+        lahde: 'Matkakirjan havainnekuva; OpenAI. Maantieteellinen lähdevalokuva: '
+          + 'Olivier Cleynen / Wikimedia Commons, CC BY-SA 4.0. Uusi generoitu '
+          + 'näkymä ja kuvitteellinen veneiden kulkuhetki.',
+        lahteet: [
+          'https://commons.wikimedia.org/wiki/File:Aerial_view_of_Marseille_04.jpg',
+          'https://www.marseille-tourisme.com/decouvrez-marseille/culture-et-patrimoine/sites-et-monuments/le-vieux-port/',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* TEKSTIPILOTTI 12.9.2026: yksi sisältöön sidottu virke lisää. */
+    kommentti: ["Vieux-Portin tunnistan äänestä ja suolasta höyhenissä. Seurasin lokkien kierrosta sataman pöydillä. Yksi nyökkäsi minulle. Työlupa myönnetty, ajattelin — ja pidin silti vähän etäisyyttä sen nokkaan."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. Kaksi
      * pistettä ensimmäisen virkkeen lopussa on kaanonin oma kirjoitusasu.
@@ -264,6 +345,7 @@ export const FOKUSVIRTA_MARSEILLE = {
      */
     kuva: {
       ampari: 'herokoe/hero-marseille-aamu.jpg',
+      lyhyt: 'MuCEM avattiin 2013; kävelysilta yhdistää sen Ludvig XIV:n 1660 rakennuttamaan Fort Saint-Jeaniin.',
       selite: 'MuCEM eli Euroopan ja Välimeren sivilisaatioiden museo '
         + 'avattiin 7. kesäkuuta 2013, ja kävelysilta yhdistää sen Ludvig '
         + 'XIV:n vuonna 1660 rakennuttamaan Fort Saint-Jeaniin.',
@@ -355,6 +437,8 @@ export const FOKUSVIRTA_MARSEILLE = {
         + '1985, mutta maalaukset huomattiin vasta heinäkuussa 1991. '
         + 'Yleisölle sinne ei pääse: sisäänkäynti on suljettu, ja '
         + 'Marseillen satamassa on sen sijaan jäljennös.',
+      lahde: 'fr-Wikipedia "Grotte Cosquer" ja en-Wikipedia "Cosquer Cave". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4000×3000, image/jpeg, CC BY-SA 4.0, tekijä
        * Lu-xin, kuvattu 1.12.2017, kuvaus "Cap Morgiou with old
@@ -371,6 +455,7 @@ export const FOKUSVIRTA_MARSEILLE = {
        */
       kuva: {
         tiedosto: 'Cap-Morgiou.jpg',
+        lyhyt: 'Cap Morgiou ja Triperien lahti: Cosquerin luolan ainoa sisäänkäynti aukeaa 37 metrin syvyydessä.',
         selite: 'Cap Morgiou ja Triperien kalliolahti Marseillen '
           + 'edustalla: Cosquerin luolan ainoa sisäänkäynti aukeaa tämän '
           + 'veden alla 37 metrin syvyydessä.',
@@ -466,6 +551,9 @@ export const FOKUSVIRTA_MARSEILLE = {
         + 'vettä kolmekymmentä kertaa enemmän henkeä kohti kuin ennen '
         + 'kanavaa. Veden tuloa juhlittiin rakentamalla sille palatsi: '
         + 'Palais Longchamp, vihittiin elokuussa 1869.',
+      lahde: 'fr-Wikipedia "Aqueduc de Roquefavour", en-Wikipedia '
+        + '"Roquefavour Aqueduct", fr-Wikipedia "Canal de Marseille" ja '
+        + 'fr-Wikipedia "Histoire de Marseille". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4000×2672, image/jpeg, CC BY-SA 3.0, tekijä
        * Borvan53, kuvattu 19.10.2013, kuvaus "View of the Roquefavour
@@ -478,6 +566,7 @@ export const FOKUSVIRTA_MARSEILLE = {
        */
       kuva: {
         tiedosto: 'Aqueduc de Roquefavour 2013.JPG',
+        lyhyt: 'Roquefavourin akvedukti kuljettaa Durance-vettä Arc-laakson yli, maailman korkein kiviakvedukti.',
         selite: 'Roquefavourin akvedukti kantaa Durance-joen vettä '
           + 'Marseilleen Arc-joen laakson yli, ja se on kolmine '
           + 'kerroksineen maailman korkein kiviakvedukti.',
@@ -577,6 +666,9 @@ export const FOKUSVIRTA_MARSEILLE = {
         + 'kiitoslaatat on kiinnitetty ulos terassien seiniin. Kirkko on '
         + 'siis kaupungin ainoa arkisto, jonka jokainen rivi on jonkun '
         + 'oma ja jonka jokainen tarina päättyy hyvin.',
+      lahde: 'fr-Wikipedia "Basilique Notre-Dame-de-la-Garde"; pelin oma '
+        + 'tarkistettu aineisto js/packs/maa-kategoriat.js (FRA/arki). '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4546×3410, image/jpeg, CC BY-SA 4.0, tekijä
        * Zairon, kuvattu 29.9.2021, kuvaus "Ex-Votos at the Basilica of
@@ -589,6 +681,7 @@ export const FOKUSVIRTA_MARSEILLE = {
        */
       kuva: {
         tiedosto: 'Marseille Basilique Notre-Dame-de-la-Garde Intérieure Nef Ex-Voto.jpg',
+        lyhyt: 'Notre-Dame de la Garden seinä täynnä merimiesten kiitoslahjoja, alla marmoriset kiitoslaatat.',
         selite: 'Notre-Dame de la Garden seinä on täynnä merimiesten '
           + 'kiitoslahjoja: pieniä maalauksia myrskyistä ja '
           + 'haaksirikoista, alla marmoriset kiitoslaatat.',
@@ -716,6 +809,7 @@ export const FOKUSVIRTA_MARSEILLE = {
      */
     kuva: {
       tiedosto: 'L\'inauguration du canal de Suez, 17 November 1869 Gal18 riou 001f.jpg',
+      lyhyt: 'Suezin kanavan avajaiset Port Saidissa 17.11.1869 Édouard Riou\'n aikalaiskuvassa.',
       selite: 'Suezin kanavan avajaiset Port Saidissa 17. marraskuuta '
         + '1869 Édouard Riou\'n aikalaiskuvassa; taustalla vieraiden '
         + 'laivojen mastot.',
@@ -732,28 +826,35 @@ export const FOKUSVIRTA_MARSEILLE = {
    * kohtaamisen oma repliikki ovat tarinakaaren paketissa
    * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, 'marseille'): soutaja
    * Baptiste kuljettaa kalastajia satamasta ja tuntee Ifin saaren
-   * virtaukset, ja hänen isänsä isä souti isoisän saarelle ja odotti
-   * kaksi vuorokautta. Luonnos käyttää samaa hahmoa, koska kaupungilla
-   * on jo hänet — uusi nimi tekisi kaupunkiin kaksi eri vartijaa.
+   * virtaukset. Luonnos käyttää samaa hahmoa, koska kaupungilla on jo
+   * hänet — uusi nimi tekisi kaupunkiin kaksi eri vartijaa.
+   *
+   * KAANONIRIKE KORJATTU 5.9.2026 (Fable tarkistanut 5.9.2026). Kaaren
+   * kohtaaminen sanoi ennen, että *"isäni isä souti isoisäsi saarelle ja
+   * odotti häntä kaksi vuorokautta"*, ja aarre jatkoi samaa muistoa.
+   * Horatiota ei tunnisteta missään (docs/isoisan-raamattu.md), joten
+   * molemmat kirjoitettiin uusiksi ja tämä kortti seuraa perässä: myös
+   * täältä poistui suvun muisto ulkomaalaisesta, jota odotettiin
+   * kalliolla. Baptisten oma suhde työhön ja reittiin säilyy
+   * sellaisenaan.
    *
    * MITÄ LUONNOS EI TEE: se ei kertaa Baptisten repliikkiä eikä toista
-   * sen yksityiskohtaa ylimääräisestä arkusta, koska se on aarteen
-   * palkinto eikä kortin sisältö. Se ei myöskään nimeä kirjaa, jota
-   * laattakysymys kysyy — vaikka kaanoninen pollo.teksti sen jo tekee
-   * (ks. SPOILERIHUOMIO tiedoston alussa), tämä paketti ei syvennä
-   * spoileria yhdelläkään sanalla.
+   * aarteen yksityiskohtaa, koska se on löydön palkinto eikä kortin
+   * sisältö. Se ei myöskään nimeä kirjaa, jota laattakysymys kysyy —
+   * vaikka kaanoninen pollo.teksti sen jo tekee (ks. SPOILERIHUOMIO
+   * tiedoston alussa), tämä paketti ei syvennä spoileria yhdelläkään
+   * sanalla.
    *
    * MITÄ LUONNOS YRITTÄÄ (docs/moduulit/tarinakaari.md, luku 3 ja 5):
-   *   - SUVUN JATKUMO ilman ostettua järjestelyä. Baptiste soutaa samaa
-   *     matkaa kuin isänsä ja isänsä isä, ja syy jatkaa on suvun oma:
-   *     vene ja reitti ovat hänen elantonsa, ei kenenkään toivomus.
-   *   - ÄÄNIPROFIILI ON EPÄUSKOINEN. Baptiste pitää sukunsa tarinaa
-   *     satamajuttuna — jokainen soutaja väittää sukunsa kuljettaneen
-   *     jotakuta — mutta airot ovat hänen kädessään.
+   *   - AMMATIN JATKUMO ilman ostettua järjestelyä ja ilman lupausta.
+   *     Baptiste soutaa samaa matkaa kuin isänsä ja isänsä isä, ja syy
+   *     jatkaa on hänen omansa: vene ja reitti ovat hänen elantonsa.
+   *   - ÄÄNIPROFIILI ON EPÄUSKOINEN. Baptiste pitää koko aarrepuhetta
+   *     laiturin tavallisena hulluutena — hän kuulee sitä joka päivä —
+   *     mutta airot ovat silti hänen kädessään.
    *   - VARALLISUUSSÄÄNTÖ tarkistettu virke virkkeeltä: isoisä ei maksa
-   *     mitään, ei tilaa mitään eikä käske ketään. Ainoa hänen jälkensä
-   *     on kaksi vuorokautta odotusta, ja sekin on Baptisten suvun oma
-   *     muisto eikä sopimus.
+   *     mitään ylimääräistä, ei tilaa mitään eikä käske ketään, eikä
+   *     kukaan odota perillistä.
    *   - PORTINVARTIJAKYSYMYS: Baptiste ei soudan sitä, joka ei tiedä
    *     miksi kaikki muutkin haluavat samalle kalliolle. Lupaus on
    *     käsin kosketeltava teko — hän irrottaa köyden — ja se lunastuu
@@ -782,13 +883,11 @@ export const FOKUSVIRTA_MARSEILLE = {
     vihjeOsio: 'kaupunki',
     teksti: 'Baptiste soutaa vieraita sataman suulle samaa matkaa, jota '
       + 'hänen isänsä ja isänsä isä soutivat, ja hän tietää ulkoa, missä '
-      + 'kohdassa virta kääntää veneen keulan itsestään. Suvussa '
-      + 'kerrotaan, että hänen isoisänsä isä odotti kerran erästä '
-      + 'ulkomaalaista kalliolla kaksi vuorokautta ja ettei kukaan '
-      + 'maksanut siitä ylimääräistä. Baptiste sanoo suoraan pitävänsä '
-      + 'juttua satamapuheena: jokaisella tämän laiturin soutajalla on '
-      + 'sukutarina jostakusta, jonka hän muka kuljetti. Airot hänellä on '
-      + 'silti, ja sama reitti. Vieraita hän vie mielellään, mutta ei '
+      + 'kohdassa virta kääntää veneen keulan itsestään. Aarteista hän '
+      + 'kuulee laiturilla joka viikko ja pitää koko puhetta '
+      + 'satamahulluutena: jokaisella tämän laiturin soutajalla on oma '
+      + 'juttunsa siitä, mitä kalliolta on muka löydetty. Airot hänellä '
+      + 'on silti, ja sama reitti. Vieraita hän vie mielellään, mutta ei '
       + 'ketä tahansa eikä kysymättä. Ennen kuin hän irrottaa köyden, hän '
       + 'haluaa tietää, tietääkö tulija ylipäätään, miksi puolet '
       + 'maailmasta haluaa juuri tuolle kalliolle.',

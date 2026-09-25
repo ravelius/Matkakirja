@@ -59,7 +59,7 @@ export const FOKUSKOHTEET_IRQ = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Riippupuutarhat',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miten vesi olisi saatu nostettua puutarhojen huipulle?',
@@ -92,6 +92,7 @@ export const FOKUSKOHTEET_IRQ = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-babylonin-puutarhat.webp',
       kadonnut: true,
+      lyhyt: 'Riippuvat puutarhat olivat legendaarinen terassipuutarha Babylonissa; paikkaa ei ole varmistettu.',
       selite: 'Riippuvat puutarhat olivat antiikin kirjoittajien mukaan '
         + 'terassi terassin päälle istutettu vihreä vuori savitiilistä '
         + 'keskellä Mesopotamian tasankoa. Samojen kertomusten mukaan '
@@ -153,7 +154,7 @@ export const FOKUSKOHTEET_IRQ = [
      */
     id: 'ishtarin-portti',
     nimi: 'Ishtarin portti',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi sininen väri oli babylonialaisille niin tärkeä?',
@@ -190,6 +191,7 @@ export const FOKUSKOHTEET_IRQ = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-ishtarin-portti.webp',
       kadonnut: true,
+      lyhyt: 'Ishtarin portti oli sinisiä lasitettuja tiiliä; alkuperäinen on Berliinissä, Babylonissa jäljennös.',
       selite: 'Ishtarin portti oli Babylonin loistoportti: '
         + 'syvänsiniseksi lasitettuja tiiliä, joiden pintaan oli '
         + 'muotoiltu kultaisia lohikäärmeitä ja härkiä, ja portista '
@@ -225,7 +227,7 @@ export const FOKUSKOHTEET_IRQ = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Sanheribin palatsi',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Mitä George Smith löysi Niniven savitauluista?',
@@ -267,6 +269,7 @@ export const FOKUSKOHTEET_IRQ = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-niniven-palatsi.webp',
       kadonnut: true,
+      lyhyt: 'Sanheribin palatsissa oli kahdeksankymmentä reliefihuonetta; Isis tuhosi valtaistuinsalin 2016.',
       selite: 'Sanheribin lounaispalatsi oli Assyrian mahdin '
         + 'näyteikkuna: kahdeksankymmentä huonetta, joiden seinät oli '
         + 'verhottu kivireliefeillä, ja porteilla siivekkäät '

@@ -1,0 +1,76 @@
+/* Native dialogien top layer seuraa avausjärjestystä, ei DOM-järjestystä.
+ * Sama tilanne ohjaa napin kotia ja kaikkia eleitä, myös odotusta/ääntä.
+ * Omistajan T1-päätös v1748: muut dialogit ovat reaktioille hiljaisia. */
+const LIVIAN_REAKTIODIALOGIT = new Set(['arrival-dialog', 'passport-dialog', 'quiz-dialog']);
+const LIVIAN_NAPPIDIALOGIT = new Set([...LIVIAN_REAKTIODIALOGIT, 'wiki-dialog', 'nahtavyys-dialog']);
+const dialogitilat = new WeakMap();
+/* PULUN OMAT IKKUNAT EIVÄT OLE NÄKYMÄN VAIHDOS (mitattu 20.9.2026,
+ * savuke-pollo "nähtävyyslinkki avaa kevyen kuvapopupin"). Pulun oma
+ * kuvakortti on <dialog>, joka avataan showModalilla — vahti näki sen
+ * vieraana ikkunana, js/pollo.js seuraaNakymaa sulki koko chatin, ja
+ * suljeKuvapopup vei kortin mukanaan. Kortti siis välähti ja katosi
+ * samassa napautuksessa, joka sen avasi. Pulun omat dialogit merkitään
+ * data-livia-oma-attribuutilla, eivätkä ne kuulu tähän pinoon. */
+const LIVIAN_OMA = 'data-livia-oma';
+const onDialogi = el => el?.localName === 'dialog' && !el.hasAttribute?.(LIVIAN_OMA);
+
+function dialogitila(doc) {
+ if (dialogitilat.has(doc)) return dialogitilat.get(doc);
+ const avoimet = () => [...(doc.querySelectorAll?.(`dialog[open]:not([${LIVIAN_OMA}])`) || [])].filter(onDialogi);
+ let pino = avoimet();
+ const kuuntelijat = new Set();
+ function paivita(tietueet = []) {
+  const ennen = pino.at(-1) || null;
+  pino = pino.filter(el => el.open && el.isConnected);
+  // Saman mikrotehtävän sulje/avaa nostaa dialogin uudelleen päällimmäiseksi.
+  for (const r of tietueet) {
+   if (r.type === 'attributes' && onDialogi(r.target) && r.target.open && r.oldValue === null) {
+    pino = pino.filter(el => el !== r.target);
+    if (r.target.isConnected) pino.push(r.target);
+   }
+  }
+  for (const el of avoimet()) if (!pino.includes(el)) pino.push(el);
+  const nyt = pino.at(-1) || null;
+  if (nyt !== ennen) for (const fn of kuuntelijat) fn(nyt, ennen);
+  return nyt;
+ }
+ const sisaltaaDialogin = el => onDialogi(el) || Boolean(el.querySelector?.('dialog'));
+ const vahti = typeof MutationObserver === 'function' ? new MutationObserver(rs => {
+  if (rs.some(r => onDialogi(r.target) && r.attributeName === 'open' ||
+    r.type === 'childList' && [...r.addedNodes, ...r.removedNodes].some(sisaltaaDialogin))) paivita(rs);
+ }) : null;
+ vahti?.observe(doc.documentElement || doc.body, { subtree: true, childList: true,
+  attributes: true, attributeFilter: ['open'], attributeOldValue: true });
+ const tila = {
+  ylin: () => paivita(vahti?.takeRecords?.() || []),
+  kuuntele(fn) {
+   kuuntelijat.add(fn);
+   return () => {
+    kuuntelijat.delete(fn);
+    if (!kuuntelijat.size) { vahti?.disconnect(); dialogitilat.delete(doc); }
+   };
+  },
+ };
+ dialogitilat.set(doc, tila);
+ return tila;
+}
+
+/** Pulun oma ikkuna pois dialogipinosta (ks. LIVIAN_OMA). */
+export function merkitseLivianOmaDialogi(el) {
+ el?.setAttribute?.(LIVIAN_OMA, '');
+ return el;
+}
+
+export function livianYlinDialogi(doc) { return dialogitila(doc).ylin(); }
+export function seuraaLivianDialogeja(doc, fn) { return dialogitila(doc).kuuntele(fn); }
+export function livianDialogikoti(doc) {
+ const ylin = livianYlinDialogi(doc);
+ return LIVIAN_NAPPIDIALOGIT.has(ylin?.id) ? ylin : null;
+}
+export function livianDialogiSalliiReaktion(doc, nappi, chatAuki=false) {
+ const ylin = livianYlinDialogi(doc);
+ // Hiljainen artikkeli ei hiljennä pelaajan omaa keskustelua Pulun kanssa.
+ // Poikkeus koskee vain ikkunoita, joissa chat on jo käytettävissä.
+ return !ylin || (LIVIAN_REAKTIODIALOGIT.has(ylin.id) || chatAuki && LIVIAN_NAPPIDIALOGIT.has(ylin.id))
+  && nappi.closest?.('dialog[open]') === ylin;
+}

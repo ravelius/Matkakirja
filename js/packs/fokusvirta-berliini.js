@@ -98,19 +98,31 @@ export const FOKUSVIRTA_BERLIINI = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 b4fdaf1a8bce9cc8371dc837ff71ed4ca62fcdfa50ae8eb43a13c819944fcac7. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-berliini-r20260909-paper-v4.jpg",
+      lyhyt: "Berliini, 1873. Pylväs katsoi voittoja, poika maahan.",
+      selite: 'Voitonpylväs nousi korkealle, kun lehtipoika keräsi numeroitaan mudasta. Kameraan mahtuivat sekä suuri juhlan kohde että pieni työ sen juurella.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://search.smb.museum/object/obj-968409?involved=Anton+von+Werner&page=2","https://www.smb.museum/nachrichten/detail/schenkung-von-alicja-kwade-skulptur-goldelse-fuer-den-skulpturengarten-der-neuen-nationalgalerie/"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-berliini-r20260911-paper2-v1.jpg",
+      lyhyt: "Berliini, 1873. Mudasta noussut lehti vaihtui kolikkoon.",
+      selite: 'Poika ojensi minulle mudan tahriman lehden, ja annoin kolikon. Suuret otsikot jäivät paperiin, mutta tärkein uutinen mahtui kahden käden väliin.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://search.smb.museum/object/obj-968409?involved=Anton+von+Werner&page=2"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma; sääkommentti on isoisän havainto
      * eikä mitattu väite. Kuukausi sopii merkinnän työmaakuvaan:
      * viemärien pääputkien rakentaminen alkoi 1873 (takyt-berliini.md,
      * täky 5).
      */
-    paikkarivi: 'Berliini, syyskuussa 1873. Pilvistä; laastin ja '
-      + 'kivipölyn haju.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Berliini on nuoren keisarikunnan työmaa: joka kadulla '
-      + 'lyödään perustuksia ja puhutaan rahasta. Vanha kirjastonhoitaja '
-      + 'luki minulle Nibelungein laulua ja sanoi: aarre on Reinissä, '
-      + 'herra, mutta Rein ei kerro missä.',
+    paikkarivi: 'Berliini, syyskuussa 1873. Pilvistä; laastin ja kivipölyn '
+      + 'haju; puntari matalalla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 324 merkkiä (yläraja 400). */
+    teksti: "Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.",
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -119,36 +131,93 @@ export const FOKUSVIRTA_BERLIINI = {
      * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
      * kaatamatta mitään (js/luenta.js playDiaryVoice).
      */
-    luenta: '[curious] Berliini on nuoren keisarikunnan työmaa: joka '
-      + 'kadulla lyödään perustuksia ja puhutaan rahasta. [softly] '
-      + 'Vanha kirjastonhoitaja luki minulle Nibelungein laulua ja '
-      + 'sanoi: [whispers] aarre on Reinissä, herra, mutta Rein ei '
-      + 'kerro missä.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: ei erikseen hiljaisia osuuksia (jokainen virke
+     * saa reaktion).
+     */
+    reaktiot: [
+  {
+    "id": "berliini.r1",
+    "ankkuri": "sähkösanoma suljettiin kapseliin",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "berliini.r2",
+    "ankkuri": "Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "berliini.r3",
+    "ankkuri": "oliko minulla jotakin lähetettävää",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "berliini.r4",
+    "ankkuri": "Ei vielä",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "berliini.r5",
+    "ankkuri": "Halusin nähdä seuraavankin kapselin lähtevän",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. [thoughtfully] Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-berliini.mp3',
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * LIVIAN MAADOITUS — VÄLITTÄJÄOTE. Yksi kupla per saapuminen.
-     *
-     * FAKTAKURI: kaksi väitettä, molemmat tarkistettavia.
-     * (1) Wienin toukokuinen romahdus levisi Berliiniin
-     * (docs/mantereet-tyoaineisto/takynostot-itavalta.md, ehdokas 1;
-     * sama tapaus on takyt-berliini.md:n täkynä 2).
-     * (2) Viemärien pääputkien rakentaminen alkoi 1873 ja viimeinen
-     * valmistui 1893 (takyt-berliini.md, täky 5).
-     *
-     * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kääk", "Mut"),
-     * keskellä sanat auki — kaivettiin, kaksikymmentä, kirjastonhoitaja.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era02; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-berliini-01-r20260909-euv1-v2.jpg.
      */
-    maadoitus: 'Kääk. Isoisäsi kuuli puhuttavan rahasta, ja siinä hän '
-      + 'oli oikeaan aikaan: raha oli kaatunut keväällä Wienissä ja '
-      + 'romahdus tuli Berliiniin perässä. Silti kaupunki kaivoi. '
-      + 'Viemärien pääputkia alettiin rakentaa juuri sinä vuonna, ja '
-      + 'viimeinen niistä valmistui vasta kahdenkymmenen vuoden '
-      + 'päästä. Siitä aarteesta minä en tiedä mitään. Mut se joki on '
-      + 'kyllä yhä siellä.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-berliini-01-r20260909-euv1-v2.jpg',
+        lyhyt: 'Berliini: siipien omistaja voi silti viettää koko päivän '
+          + 'paikallaan.',
+        selite: 'Kultainen Victoria katsoo nykyään Tiergartenin ja liikenteen yli siivet levällään. Kiersin patsaan tasalla tarkistamassa siivet ja muistin alhaalla isoisän lehtipojan.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.visitberlin.de/en/siegessaule',
+          'https://upload.wikimedia.org/wikipedia/commons/3/32/Siegess%C3%A4ule-Berlin-Tiergarten.jpg',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Tempelhofin vanhalla lentokentällä lensin punaisen leijan rinnalla. Se pysyi ilmassa räpäyttämättä siipeäkään. Hiukan ärsyttävää. Sitten katsoin alas: narun toisessa päässä mies juoksi hiki hatussa. Helpotukseni oli suuri. Joku tässä sentään teki töitä."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'vakava', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (valtiopäivätalo). Faktat
      * ovat lehden oman avauskuvan selitteestä (js/packs/
@@ -162,6 +231,7 @@ export const FOKUSVIRTA_BERLIINI = {
       + 'Katso ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-berliini-keskipaiva.png',
+      lyhyt: 'Valtiopäivätalo valmistui 1894; Fosterin lasikupoli nousi katolle 1999 istuntosalin yläpuolelle.',
       selite: 'Valtiopäivätalo valmistui 1894, ja Norman Fosterin '
         + 'lasikupoli nousi sen katolle 1999 — kävijät kiertävät '
         + 'spiraaliramppia istuntosalin yläpuolella.',
@@ -198,6 +268,7 @@ export const FOKUSVIRTA_BERLIINI = {
         + 'vuosina 1938–39 se siirrettiin Großer Sternille ja '
         + 'korotettiin samalla kuudella ja puolella metrillä, kun '
         + 'keskustaa suunniteltiin uusiksi.',
+      lahde: 'en-Wikipedia "Berlin Victory Column". Tarkistettu 1.9.2026.',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (29.8.2026, aalto 1). Sama malli kuin
        * täkynostoilla v1307:stä alkaen: repon oma generoitu kuva, jolla
@@ -219,6 +290,7 @@ export const FOKUSVIRTA_BERLIINI = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-voitonpylvas-loistoaika.webp',
+        lyhyt: 'Voitonpylvään vihkiäiset Königsplatzilla: kullattu Victoria harjalla, sotaväkeä ja juhlayleisöä.',
         selite: 'Voitonpylvään vihkiäiset Königsplatzilla: kullattu '
           + 'Victoria harjalla, sotaväkeä rivissä ja juhlayleisöä koko '
           + 'kentän ympärillä.',
@@ -235,6 +307,7 @@ export const FOKUSVIRTA_BERLIINI = {
        */
       valokuva: {
         tiedosto: 'Einweihung Siegessaeule Berlin.jpg',
+        lyhyt: 'Voitonpylvään vihkiäiset 2.9.1873; pylväs seisoo vielä alkuperäisellä paikallaan Königsplatzilla.',
         selite: 'Voitonpylvään vihkiäiset 2. syyskuuta 1873. Kuvassa '
           + 'pylväs seisoo vielä alkuperäisellä paikallaan '
           + 'Königsplatzilla.',
@@ -283,6 +356,7 @@ export const FOKUSVIRTA_BERLIINI = {
         + 'viimeinen valmistui 1893. Samalta mieheltä tilattiin sen '
         + 'jälkeen viemärit kolmeenkymmeneen saksalaiseen kaupunkiin '
         + 'sekä Moskovaan, Tokioon ja Kairoon.',
+      lahde: 'en-Wikipedia "James Hobrecht". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 3600×2945, public domain, James Hobrecht,
        * 1884, kuvaus: lehti 10 Berliinin viemäröinnin atlaksesta,
@@ -291,6 +365,7 @@ export const FOKUSVIRTA_BERLIINI = {
        */
       kuva: {
         tiedosto: 'Canalisation von Berlin. Blatt 10.png',
+        lyhyt: 'Lehti Hobrechtin viemäriatlaksesta 1884: mallikuva berliiniläisen vuokratalon viemäröinnistä.',
         selite: 'Lehti Hobrechtin omasta viemäriatlaksesta vuodelta '
           + '1884: mallikuva berliiniläisen vuokratalon viemäröinnistä.',
         lahde: 'James Hobrecht 1884, Wikimedia Commons (public domain)',
@@ -342,6 +417,7 @@ export const FOKUSVIRTA_BERLIINI = {
         + 'Viimeinen kaupunginkarhu Schnute lopetettiin vaikean '
         + 'nivelrikon takia lokakuussa 2015, ja tarhasta tehtiin 2017 '
         + 'taidetila.',
+      lahde: 'de-Wikipedia "Berliner Bär". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 6000×4000, CC0, Singlespeedfahrer, kuvattu
        * 21.8.2022, kuvaus "Bear sculpture in Köllnischer Park in
@@ -415,6 +491,7 @@ export const FOKUSVIRTA_BERLIINI = {
      */
     kuva: {
       tiedosto: 'NHP 1879 Berlin Sternwarte Nordseite Tafel VI.jpg',
+      lyhyt: 'Berliinin kuninkaallinen tähtitorni pohjoisesta, piirros isoisän ajoilta; talo purettiin 1913.',
       selite: 'Berliinin kuninkaallinen tähtitorni pohjoisesta '
         + 'nähtynä, piirros isoisän ajoilta. Talo purettiin 1913.',
       lahde: 'Trigonometrische Abteilung der Landesaufnahme 1880, '
@@ -528,6 +605,12 @@ export const FOKUSVIRTA_BERLIINI = {
        */
       id: 'kopenickin-kapteeni',
       nimio: 'Köpenickin kapteeni',
+      /*
+       * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+       * Köpenick on Berliinin kaakkoislaidalla eikä osu kaupunkilehden
+       * kohdekartan rajaukseen (Mitte), joten merkki kuuluu pääkartalle.
+       */
+      kattoVapaa: true,
       otsikko: 'Suutari osti univormun palasina ja valtasi kaupungintalon '
         + '— keisari armahti hänet',
       lunastus: [
@@ -550,10 +633,9 @@ export const FOKUSVIRTA_BERLIINI = {
           + 'jälkeen hän oli jo vahakabinetissa Unter den Lindenillä '
           + 'signeeraamassa kuviaan.',
       ],
-      lahde: 'en-Wikipedia "Wilhelm Voigt", johdanto ja osiot "Early life", '
-        + '"Captain of Köpenick", "Unraveling and capture" ja "Aftermath" '
-        + '(tarkistettu 25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
-        + 'takynostot-saksa.md, ehdokas 1).',
+      lahde: 'en-Wikipedia "Wilhelm Voigt", johdanto ja osiot "Early life", "Captain '
+        + 'of Köpenick", "Unraveling and capture" ja "Aftermath" (tarkistettu '
+        + '25.8.2026).',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin Sofian
        * areenalla ja v1307:n neljällä nostolla): repon oma generoitu
@@ -626,9 +708,7 @@ export const FOKUSVIRTA_BERLIINI = {
           + 'Siemens — sama mies, jonka yhtiö oli rakentanut Berliinin '
           + 'putkipostin.',
       ],
-      lahde: 'en-Wikipedia "Archaeopteryx", osio yksilöistä (tarkistettu '
-        + '25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
-        + 'takynostot-saksa.md, ehdokas 2).',
+      lahde: 'en-Wikipedia "Archaeopteryx", osio yksilöistä (tarkistettu 25.8.2026).',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin yllä):
        * repon oma generoitu kuva, joten kenttä on `osoite` eikä
@@ -641,6 +721,7 @@ export const FOKUSVIRTA_BERLIINI = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-archaeopteryx-loistoaika.webp',
+        lyhyt: 'Archaeopteryx lii​tää matalan laguunin yllä, siivissa kynnet ja pitkä höyhenhäntä.',
         selite: 'Archaeopteryx liitämässä matalan laguunin yllä: siivissä '
           + 'kynnet ja perässä pitkä höyhenpeitteinen häntä.',
         lahde: 'Matkakirjan havainnekuva: eläin jurakauden laguunilla',
@@ -701,9 +782,8 @@ export const FOKUSVIRTA_BERLIINI = {
           + 'yleisölle pian sen jälkeen. Sen jälkeen siellä on käynyt yli '
           + '61 miljoonaa ihmistä.',
       ],
-      lahde: 'en-Wikipedia "Neuschwanstein Castle", johdanto ja osio '
-        + '"Construction" (tarkistettu 25.8.2026 työaineistoon '
-        + 'docs/mantereet-tyoaineisto/takynostot-saksa.md, ehdokas 7).',
+      lahde: 'en-Wikipedia "Neuschwanstein Castle", johdanto ja osio "Construction" '
+        + '(tarkistettu 25.8.2026).',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin yllä):
        * repon oma generoitu kuva, joten kenttä on `osoite` eikä
@@ -744,6 +824,340 @@ export const FOKUSVIRTA_BERLIINI = {
         laudat: {
           maailmankartta: { x: 6191.6, y: 1495 },
           europe: { x: 417.6, y: 642.8 },
+        },
+      },
+    },
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): BERLIININ KAUPUNKILEHDEN SIVUT
+     * NOSTOIKSI.
+     *
+     * Sama jako kuin Pariisissa erässä 5
+     * (docs/raportit/viesti-fable-karttauudistus-era5-20260913.md,
+     * suunnitelman luku 4.7): lehden aihesivujen nostot ovat nyt
+     * klikattavia karttapaloja kaupungin kohdekartalla. Kaikki tämän erän
+     * nostot ovat KOHDEKARTALLA, eivät pääkartalla — omistajan sääntö
+     * 2.9.2026 (tests/nostot-kartalla.test.mjs).
+     *
+     * TEKSTIÄ EI OLE KIRJOITETTU UUDESTAAN. Jokainen `lunastus`-kappale on
+     * lehden oman noston `teksti` SANATARKASTI
+     * (js/packs/kulttuuri-kategoriat.js, kaupunki `berliini`), ja `kuva` on
+     * lehden oma kuvarivi kenttineen. Siirto on tehty ohjelmallisesti ja
+     * todennettu ===-vertailulla
+     * (tools/savukkeet/savuke-kaupunkien-nostot.mjs vartio 4b avaa jokaisen
+     * kortin selaimessa ja vertaa merkki merkiltä).
+     *
+     * MINIKYSYMYKSET (erän 6 datamalli, kiintiö joka kolmas nosto):
+     * `hattupainen-ukkeli`, `paavin-kosto`.
+     * ══════════════════════════════════════════════════════════════
+     */
+    {
+      id: 'hattupainen-ukkeli',
+      nimio: 'Hattupäinen ukkeli',
+      otsikko: 'Hattupäinen ukkeli sai jäädä',
+      symboli: 'kaupunki',
+      lunastus: [
+        'Liikennepsykologi Karl Peglau piirsi vuonna 1961 Itä-Saksalle '
+          + 'oman jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, koska '
+          + 'valopintaa on paljon. Ensimmäiset syttyivät Itä-Berliinissä 1969. '
+          + 'Kun Saksat yhdistyivät, ukkelia alettiin vaihtaa lännen '
+          + 'tikku-ukkoon — kunnes kansalaiskampanja "Pelastakaa '
+          + 'Ampelmännchen" nousi vastaan ja voitti. Nykyään hattupäinen '
+          + 'ukkeli ohjaa kulkijoita myös monessa Länsi-Berliinin '
+          + 'risteyksessä, ja siitä on tullut koko kaupungin maskotti, jota '
+          + 'myydään matkamuistona.',
+      ],
+      lahde: 'Berliinin kaupunkilehden nosto "Hattupäinen ukkeli sai jäädä" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Ampelmännchen go.jpg',
+        lyhyt: 'Keisari Vilhelmin muistokirkon pommitettu torso on jätetty muistutukseksi sodasta.',
+        selite: 'Keisari Vilhelmin muistokirkon torso jätettiin pommituksissa '
+          + 'saamaansa asuun muistutukseksi sodasta, ja sen risteyksissä ohjaa '
+          + 'nykyään itäberliiniläinen Ampelmännchen.',
+        lahde: 'Wikimedia Commons (CC0)',
+      },
+      kysymykset: [
+        'Miksi leveä hahmo erottuu risteyksessä kauempaa kuin kapea?',
+        'Miksi berliiniläiset halusivat pitää juuri tämän hahmon?',
+        'Mitä muuta Itä-Saksasta on jäänyt yhdistyneen Berliinin arkeen?',
+      ],
+      visa: {
+        kysymys: 'Saksojen yhdistyttyä hattupäistä ukkelia alettiin vaihtaa pois '
+          + 'risteyksistä. Miksi se sai jäädä?',
+        vaihtoehdot: [
+          'Vaihtotyö kävi liian kalliiksi ja jäi kesken',
+          'Uusia valoja ei saatu tilattua ajoissa',
+          'Kansalaiskampanja nousi vastaan ja voitti',
+        ],
+        oikea: 2,
+        fakta: 'Nykyään hattupäinen ukkeli ohjaa kulkijoita myös monessa '
+          + 'Länsi-Berliinin risteyksessä, ja siitä on tullut koko kaupungin '
+          + 'maskotti, jota myydään matkamuistona.',
+      },
+      paikka: {
+        nimi: 'Hattupäinen ukkeli',
+        laudat: {
+          maailmankartta: { x: 6277.8, y: 1279.5 },
+          europe: { x: 467.2, y: 512.7 },
+        },
+      },
+    },
+    {
+      id: 'gaertnerin-berliini',
+      nimio: 'Gaertnerin Berliini',
+      otsikko: 'Gaertner maalasi Berliinin talo talolta',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin '
+          + 'kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin '
+          + 'tarkasti, että taloista voi laskea ikkunaruudut ja kylttien '
+          + 'tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei '
+          + 'maalannut vain paraatinäkymiä: hänen kaduillaan korjataan '
+          + 'kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. '
+          + 'Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä '
+          + 'nähdään, miltä kadonnut Berliini oikeasti näytti.',
+      ],
+      lahde: 'Berliinin kaupunkilehden nosto "Gaertner maalasi Berliinin talo '
+        + 'talolta" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: '1856 Gaertner Unter den Linden anagoria.JPG',
+        lyhyt: 'Gaertnerin 1856 näkymässä Unter den Lindenin perällä on vielä kuninkaanlinna, joka purettiin 1950.',
+        selite: 'Gaertnerin vuoden 1856 näkymässä Unter den Lindenin perällä on '
+          + 'vielä kuninkaanlinna, joka purettiin 1950.',
+        lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+      },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Eduard Gaertner Berlin Klosterstrasse 1830.jpg',
+          selite: 'Gaertner maalasi Klosterstraßen vuonna 1830 niin tarkasti, että '
+            + 'talojen kylttien tekstit voi lukea.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Eduard Gaertner - Die Parochialstraße - Google Art Project.jpg',
+          lyhyt: 'Vuonna 1831 Gaertner maalasi Parochialstraßen katutyömaan ja kupariastiat arkea, ei paraatia.',
+          selite: 'Vuoden 1831 Parochialstraßeen Gaertner maalasi myös katutyömaan '
+            + 'ja kauppiaan kylttinä roikkuvat kupariastiat — arkea, jota '
+            + 'paraatikuvista ei löydy.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Eduard Gaertner - Rear view of the Houses at Schloßfreiheit - Google Art Project.jpg',
+          lyhyt: 'Gaertner maalasi 1855 myös kuninkaanlinnan naapuritalojen takapihat, ei vain juhlajulkisivuja.',
+          selite: 'Gaertner maalasi vuonna 1855 myös kuninkaanlinnan '
+            + 'naapuritalojen takapihat, ei vain juhlajulkisivuja.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Eduard Gaertner (1801-1877) - The Friedrichsgracht, Berlin - NG6524 - National Gallery.jpg',
+          lyhyt: 'Friedrichsgrachtin lastaavat proomut muistuttavat, että Berliini oli 1800-luvulla satamakaupunki.',
+          selite: 'Friedrichsgracht kattojen yli nähtynä, ja kanavassa lastaavat '
+            + 'proomut muistuttavat, että Berliini oli 1800-luvulla '
+            + 'satamakaupunki.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Eduard Gaertner - Ansicht der Königlichen Oper und Unter den Linden, Berlin (1845).jpg',
+          selite: 'Vuonna 1845 maalattu kuninkaallinen ooppera seisoo Unter den '
+            + 'Lindenillä yhä.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+      ],
+      kysymykset: [
+        'Mitä maalaus voi kertoa kaupungista, mitä valokuva ei kerro?',
+        'Miksi Gaertner maalasi myös katutyömaat ja ikkunoissa kuivuvat '
+          + 'pyykit?',
+        'Mikä Gaertnerin maalaamasta Berliinistä on kadonnut kokonaan?',
+      ],
+      paikka: {
+        nimi: 'Gaertnerin Berliini',
+        laudat: {
+          maailmankartta: { x: 6280.1, y: 1279 },
+          europe: { x: 468.5, y: 512.4 },
+        },
+      },
+    },
+    {
+      id: 'marlene-dietrich',
+      nimio: 'Marlene Dietrich',
+      otsikko: 'Tyttö Schönebergistä lauloi maailman ympäri',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Marlene Dietrich syntyi 1901 Schönebergin kaupunginosassa ja '
+          + 'nousi maailmantähdeksi berliiniläisen elokuvan Sininen enkeli '
+          + '(1930) myötä — samana vuonna hän muutti Hollywoodiin. Kun '
+          + 'natsihallinto houkutteli häntä takaisin mainoskasvokseen, hän '
+          + 'kieltäytyi, otti Yhdysvaltain kansalaisuuden ja lauloi sen sijaan '
+          + 'rintamalla sotilaille — tunnetuimpana laulun Lili Marleen, jota '
+          + 'kuunneltiin juoksuhaudoissa molemmin puolin. Berliiniin hän '
+          + 'palasi viimeisen kerran arkussa: hauta on Schönebergissä, äidin '
+          + 'haudan vieressä.',
+      ],
+      lahde: 'Berliinin kaupunkilehden nosto "Tyttö Schönebergistä lauloi '
+        + 'maailman ympäri" (js/packs/kulttuuri-kategoriat.js). Teksti '
+        + 'siirretty sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'My Child Speaks Marlene Dietrich 1930, Erich Salomon.jpg',
+        lyhyt: 'Marlene Dietrich soittaa Hollywoodista Berliiniin tyttärelleen 1930 Erich Salomonin kuvassa.',
+        selite: 'Marlene Dietrich soittaa Hollywoodista Berliiniin tyttärelleen '
+          + '1930, yöpöydällä tyttären valokuva; Erich Salomonin kuuluisa otos.',
+        lahde: 'Erich Salomon, Wikimedia Commons (Public domain)',
+      },
+      /*
+       * MUSIIKKI JA ÄÄNI KORTILLE (avoin kohta 11.1, 14.9.2026). Erässä 10
+       * tämä nosto jäi lehden sivulle kaksoiskappaleeksi vain siksi, että
+       * musiikkilinkille ja ääninäytteelle ei ollut paikkaa kortilla.
+       * Kortti piirtää ne nyt SAMOILLA napeilla kuin lehti (js/ui.js
+       * lisaaNostonNapit), joten sivulta jäänyt kaksoiskappale purkautui.
+       */
+      musiikki: 'https://music.apple.com/fi/album/lili-marleen/724182416?i=724182571',
+      musiikkiNimi: 'Marlene Dietrichin lauluja Apple Musicissa',
+      esikuuntelu: 'Marlene Dietrich Lili Marleen',
+      kysymykset: [
+        'Miksi natsihallinto halusi juuri hänet mainoskasvokseen?',
+        'Miksi Lili Marleenia kuunneltiin molemmin puolin rintamaa?',
+        'Mitä kansalaisuuden vaihtaminen merkitsi 1930-luvun lopulla?',
+      ],
+      paikka: {
+        nimi: 'Marlene Dietrich',
+        laudat: {
+          maailmankartta: { x: 6279.1, y: 1279.4 },
+          europe: { x: 468, y: 512.7 },
+        },
+      },
+    },
+    {
+      id: 'paavin-kosto',
+      nimio: 'Paavin kosto',
+      otsikko: 'Aurinko piirsi torniin ristin',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Itä-Saksa rakensi televisiotornin vuosina 1965–1969 ja vihki sen '
+          + 'käyttöön 3. lokakuuta 1969. Tornin pallo koottiin maassa 120 '
+          + 'teräslohkosta ja nostettiin vasta sitten betonipylvään päähän. '
+          + 'Sen jälkeen tapahtui jotain, mitä kukaan ei ollut piirtänyt '
+          + 'kuviin: kun aurinko osuu kiiltävään palloon, heijastus muodostaa '
+          + 'ristin. Valtio oli virallisesti uskonnoton, joten muurin '
+          + 'länsipuolella keksittiin ilmiölle nimi — paavin kosto. Nimi jäi.',
+      ],
+      lahde: 'Berliinin kaupunkilehden nosto "Aurinko piirsi torniin ristin" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'The Pope\'s Revenge.jpg',
+        lyhyt: 'Auringon heijastus tv-tornin pallosta muodostaa ristin, jota kutsuttiin paavin kostoksi.',
+        selite: 'Auringon heijastus tornin teräspallosta muodostaa ristin, jolle '
+          + 'keksittiin muurin länsipuolella nimi paavin kosto.',
+        lahde: 'Tobi85, Wikimedia Commons (Public domain)',
+      },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Bundesarchiv Bild 183-G0521-0005-001, Berlin, Fernsehturm, Bau.jpg',
+          lyhyt: 'Televisiotornia rakennettiin 1965–1969, ja pallo koottiin maassa 120 teräslohkosta ennen nostoa.',
+          selite: 'Televisiotornia rakennettiin vuosina 1965–1969, ja pallo '
+            + 'koottiin maassa 120 teräslohkosta ennen nostoa.',
+          lahde: 'Hans-Joachim Spremberg, Bundesarchiv / Wikimedia Commons (CC '
+            + 'BY-SA 3.0 DE)',
+        },
+      ],
+      kysymykset: [
+        'Miksi Itä-Saksa halusi rakentaa juuri tornin?',
+        'Miksi kukaan ei osannut ennakoida ristin heijastusta?',
+        'Miten pilkkanimi levisi kaupungissa, jonka halki kulki muuri?',
+      ],
+      visa: {
+        kysymys: 'Miten televisiotornin pallo saatiin betonipylvään päähän?',
+        vaihtoehdot: [
+          'Se koottiin maassa 120 teräslohkosta ja nostettiin vasta sitten',
+          'Se muurattiin paikalleen telineiden varassa',
+          'Se hinattiin huipulle valmiina puolikkaina',
+        ],
+        oikea: 0,
+        fakta: 'Valtio oli virallisesti uskonnoton, joten muurin länsipuolella '
+          + 'keksittiin ilmiölle nimi — paavin kosto. Nimi jäi.',
+      },
+      paikka: {
+        nimi: 'Paavin kosto',
+        laudat: {
+          maailmankartta: { x: 6280.3, y: 1278.8 },
+          europe: { x: 468.7, y: 512.3 },
+        },
+      },
+    },
+    {
+      id: 'maailmankello',
+      nimio: 'Maailmankello',
+      otsikko: 'Kelloa pyöritti Trabantin vaihteisto',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Muutama päivä ennen tornia, 30. syyskuuta 1969, samalle aukiolle '
+          + 'pystytettiin kymmenmetrinen maailmankello. Erich Johnin '
+          + 'suunnittelemassa alumiinirummussa on 24 sivua, yksi jokaista '
+          + 'aikavyöhykettä kohti, ja niihin on jyrsitty 146 paikannimeä '
+          + 'Reykjavíkista Kinshasaan. Rummun ympäri kiertää tuntirengas, ja '
+          + 'katolla pyörii kerran minuutissa pieni aurinkokunta. Koneisto on '
+          + 'kadun alla kellarissa, ja tuntirengasta pyöritti Trabantista '
+          + 'purettu vaihteisto.',
+      ],
+      lahde: 'Berliinin kaupunkilehden nosto "Kelloa pyöritti Trabantin '
+        + 'vaihteisto" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Urania-Weltzeituhr auf dem Alexanderplatz in Berlin 2015.jpg',
+        lyhyt: 'Maailmankellon 24-sivuisen rummun katolla pyörii kerran minuutissa pieni aurinkokunta.',
+        selite: 'Maailmankellon alumiinirummussa on 24 sivua, yksi kutakin '
+          + 'aikavyöhykettä kohti, ja sen katolla pyörii kerran minuutissa '
+          + 'pieni aurinkokunta.',
+        lahde: 'Christian Wolf (www.c-w-design.de), Wikimedia Commons (CC BY-SA '
+          + '3.0 DE)',
+      },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Weltzeituhr Detail Alexanderplatz.jpg',
+          selite: 'Rumpuun on jyrsitty 146 paikannimeä Reykjavíkista Kinshasaan.',
+          lahde: 'Gryffindor, Wikimedia Commons (Public domain)',
+        },
+      ],
+      kysymykset: [
+        'Miksi maailman ajat haluttiin näkyviin juuri torille?',
+        'Miksi kellon koneistoon kelpasi auton vaihteisto?',
+        'Mitä 146 paikannimen valinta kertoo Itä-Saksasta?',
+      ],
+      paikka: {
+        nimi: 'Maailmankello',
+        laudat: {
+          maailmankartta: { x: 6280.4, y: 1278.8 },
+          europe: { x: 468.7, y: 512.3 },
         },
       },
     },

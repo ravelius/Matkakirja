@@ -5,16 +5,59 @@
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import vm from 'node:vm';
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const JUURI = new URL('..', import.meta.url).pathname;
+const JUURI = fileURLToPath(new URL('..', import.meta.url));
 const sw = readFileSync(join(JUURI, 'sw.js'), 'utf8');
 const SHELL = [...sw.matchAll(/'\.\/([^']+)'/g)].map((m) => m[1]);
 
 test('kaikki SHELLin tiedostot ovat olemassa', () => {
   const puuttuu = SHELL.filter((p) => p !== '' && !existsSync(join(JUURI, p)));
   assert.deepEqual(puuttuu, [], 'SHELL viittaa tiedostoihin joita ei ole');
+});
+
+/*
+ * SAMA OSOITE EI SAA OLLA SHELL-LISTALLA KAHDESTI.
+ *
+ * Asennus tekee `cache.addAll(YDIN...)`, ja selaimen Cache.addAll
+ * HYLKÄÄ koko erän, jos samassa listassa on kaksi pyyntöä samaan
+ * osoitteeseen. Chromiumin virhe sanatarkasti (mitattu 14.9.2026):
+ *
+ *   InvalidStateError: Failed to execute 'addAll' on 'Cache':
+ *   Cache.addAll(): duplicate requests (…/js/linssit/…)
+ *
+ * Kun addAll hylkää, install-käsittelijän waitUntil-lupaus hylkää,
+ * eikä `self.skipWaiting()` ehdi ajoon: palvelutyöntekijä EI ASENNU
+ * EIKÄ AKTIVOIDU LAINKAAN. Ensiasennuksessa selain hylkää koko
+ * rekisteröinnin (mitattu: `getRegistration()` palauttaa undefined ja
+ * versiokoriin jää nolla avainta), ja laitteella, jolla on jo vanha
+ * työntekijä, vanha jää ohjaksiin ikuisiksi ajoiksi — peli tarjoillaan
+ * silloin vanhasta korista, joka päivittyy tiedosto kerrallaan
+ * taustalla. Kaksoiskappale on siis hiljainen ja iso vika, jota ei
+ * näe mistään muusta kuin tästä testistä.
+ *
+ * Rivit luetaan VAIN SHELL-listasta: sw.js:n muualla oleva
+ * `caches.match('./index.html')` ei ole listarivi.
+ */
+test('SHELL-listalla ei ole kaksoiskappaleita', () => {
+  const alku = sw.indexOf('const SHELL = [');
+  const loppu = sw.indexOf('\n];', alku);
+  assert.ok(alku >= 0 && loppu > alku, 'sw.js:stä ei löydy SHELL-listaa');
+  // Kommentit pois ensin: listan perustelut kertovat poistetuista
+  // riveistä polkuineen, eikä proosa saa näkyä kaksoiskappaleena.
+  const koodi = sw.slice(alku, loppu)
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/\/\/[^\n]*/g, '');
+  const rivit = [...koodi.matchAll(/'\.\/([^']*)'/g)].map((m) => m[1]);
+  const laskuri = new Map();
+  for (const p of rivit) laskuri.set(p, (laskuri.get(p) ?? 0) + 1);
+  const kahdesti = [...laskuri].filter(([, n]) => n > 1).map(([p, n]) => `${p} (${n}×)`);
+  assert.deepEqual(kahdesti, [],
+    'sama osoite on SHELL-listalla useammin kuin kerran — Cache.addAll hylkää '
+    + 'koko asennuksen, eikä palvelutyöntekijä asennu lainkaan');
 });
 
 /*
@@ -39,7 +82,31 @@ test('kaikki SHELLin tiedostot ovat olemassa', () => {
  *
  * Kun tänne syntyy uusi js-alihakemisto, se lisätään tähän listaan.
  */
-const SKANNATTAVAT = ['js', 'js/packs', 'js/linssit'];
+const SKANNATTAVAT = ['js', 'js/packs', 'js/linssit', 'js/pallolauta'];
+
+/*
+ * VANHA KARTTA POIS KÄYTÖSTÄ, VÄLIAIKAISESTI (omistaja 7.9.2026,
+ * sanatarkasti: *"Voisiko vanhan kartan ottaa pelistä ainakin
+ * väliaikaisesti kokonaan pois, eli että se ei lataisi sitä millään
+ * lailla, eikä se olisi myöskään kytkettävissä päälle?"*).
+ *
+ * Nämä neljä moduulia ovat tasokartan omia: ne tulivat aina yhdestä
+ * portista (js/kartta-lataus.js lataaTasokartta), joka ei enää tuo
+ * mitään (js/ui-apurit.js VANHA_KARTTA_KAYTOSSA = false). SHELLissä ne
+ * olisivat pelkkää esilatausta — palvelutyöntekijä hakisi js/kartta.js:n
+ * joka asennuksessa, vaikka peli ei sitä koskaan pyydä.
+ *
+ * TIEDOSTOT JÄÄVÄT REPOON. Tämä on VÄLIAIKAINEN vartio: kun vanha kartta
+ * palaa käyttöön, rivit palaavat sw.js:n SHELLiin ja tämä lista tyhjenee.
+ * Lista on nimeltä, jotta poisjättö on aina tietoinen päätös eikä
+ * unohdus — sama sääntö kuin NIPUTTAMATTOMAT-listalla alempana.
+ */
+const VANHA_KARTTA_POIS = new Set([
+  'js/kartta.js',
+  'js/packs/maailmankartta-varjostus.js',
+  'js/packs/maasto-tekstit-malli.js',
+  'js/packs/maasto-tekstit.js',
+]);
 
 /**
  * Hakemiston .js-tiedostot repon juuresta laskettuina polkuina.
@@ -59,10 +126,19 @@ function moduulitLevylla(hakemisto) {
 
 test('kaikki js-moduulit ovat SHELLissä', () => {
   const levy = SKANNATTAVAT.flatMap(moduulitLevylla);
-  const unohtui = levy.filter((p) => !SHELL.includes(p));
+  const unohtui = levy.filter((p) => !SHELL.includes(p) && !VANHA_KARTTA_POIS.has(p));
   assert.deepEqual(unohtui, [],
     'nämä moduulit puuttuvat sw.js:n SHELL-listalta — offline hajoaisi. Korjaus on '
     + `sw.js:n SHELL-listaan: ${unohtui.map((p) => `'./${p}',`).join(' ')}`);
+
+  // Symmetria: pois jätetty moduuli ei saa olla myös SHELLissä — muuten
+  // lista valehtelisi siitä, mitä palvelutyöntekijä hakee.
+  const tuplana = [...VANHA_KARTTA_POIS].filter((p) => SHELL.includes(p));
+  assert.deepEqual(tuplana, [],
+    'tasokartan moduuli on sekä SHELLissä että VANHA_KARTTA_POIS-listalla — poista toisesta');
+  const kadonneet = [...VANHA_KARTTA_POIS].filter((p) => !existsSync(join(JUURI, p)));
+  assert.deepEqual(kadonneet, [],
+    'VANHA_KARTTA_POIS viittaa tiedostoihin joita ei enää ole — siivoa lista');
 });
 
 /*
@@ -98,11 +174,29 @@ const SUODATINSAANNOT = [
 /** Kokonaan kommentiksi kirjoitettu rivi — sääntöä saa selittää sanoin. */
 const kommenttirivi = (rivi) => /^\s*(\/\/|\/?\*)/.test(rivi);
 
+/*
+ * KANKAAN OMA SUODATIN EI OLE SVG-SUODATIN (16.9.2026).
+ *
+ * Sääntö on olemassa iOS:n webapp-vian takia: SVG-suodatin ELÄVÄN
+ * kerroksen päällä palauttaa kerroksen tyhjänä taustalta palatessa.
+ * `ctx.filter` on eri asia — se on 2D-kankaan piirto-ominaisuus, joka
+ * vaikuttaa YHTEEN drawImage-kutsuun ja on valmis siinä samassa;
+ * lopputulos on tavallinen bittikartta ilman elävää suodatinta.
+ * Astronautin kamera vie sillä reliefin kylläisyyden 0,8:aan
+ * (js/linssit/satelliitti-avaruus.js), ja sillä on lisäksi
+ * sekoitustilavarareitti selaimille, jotka eivät sitä tue.
+ *
+ * Poikkeus on TÄSMÄLLINEN: vain `ctx.filter = …`. SVG:n
+ * `filter="url(#…)"`, tyyliolion `{ filter: … }` ja `<filter>` jäävät
+ * kiinni kuten ennenkin.
+ */
+const kankaanSuodatin = (rivi) => /\bctx\.filter\s*=/.test(rivi);
+
 test('linssimoduuleissa ei ole SVG-suodattimia', () => {
   const loydot = [];
   for (const polku of moduulitLevylla('js/linssit')) {
     readFileSync(join(JUURI, polku), 'utf8').split('\n').forEach((rivi, i) => {
-      if (kommenttirivi(rivi)) return;
+      if (kommenttirivi(rivi) || kankaanSuodatin(rivi)) return;
       for (const { nimi, saanto } of SUODATINSAANNOT) {
         const osuma = rivi.match(saanto);
         if (osuma) loydot.push(`${polku}:${i + 1} ${nimi}: ${osuma[0]}`);
@@ -144,6 +238,16 @@ test('linssimoduuleissa ei ole SVG-suodattimia', () => {
  * moduuli jää ilman tuojaa.
  */
 const NIPUTTAMATTOMAT = new Set([
+  // Vanha PNG-B-sovitin säilyy vertailuun; pelissä käytetään pikselikasvoa.
+  'js/livia-kasvot.js',
+  // Poltto-koe (20.9.2026): 1873-nimistön aineisto tools/generoi-laattapyramidi.mjs:lle
+  // (Node-generaattori), ei minkään selainmoduulin tuoma.
+  'js/packs/nimisto-1873.js',
+  // Maakuntien luonnehdinnat JA pulu-kysymykset: ensimmäinen tuoja
+  // ilmestyi 22.9.2026 (js/karttatyokalu-maakunnat.js, Karttatyökalun
+  // Maakunnat-runko) — molemmat paketit ovat siis MODULES-listalla
+  // (tools/build-standalone.mjs) eikä enää tässä. Rivit jätetty tähän
+  // muistiksi listan historiasta.
   // Linssien aineistopaketit: vain linssimoduulit (js/linssit/) tuovat
   // näitä, ja ne jäävät listalta pois yllä kerrotusta syystä.
   'js/packs/linssi-historia.js',
@@ -157,6 +261,40 @@ const NIPUTTAMATTOMAT = new Set([
   'js/packs/linssi-topografia.js',
   'js/packs/linssi-tuulet.js',
   'js/packs/linssi-yokartta.js',
+  // Etelämantereen nostot: ainoa tuoja on js/pallolauta/nostot.js, ja
+  // koko pallolauta on niputuksen ulkopuolella (yhden tiedoston versio
+  // pelaa tasokartalla). Paketti jää siis samalla perusteella pois kuin
+  // linssien aineistot — SHELLissä se on, jotta pallolauta saa sen
+  // verkosta ja välimuistista kuten muutkin moduulinsa.
+  'js/packs/maastokohteet-ata.js',
+  // Arktisen alueen nostot: sama peruste kuin Etelämantereella yllä —
+  // ainoa tuoja on js/pallolauta/nostot.js, ja pallolauta on
+  // niputuksen ulkopuolella. SHELLissä paketti on.
+  'js/packs/maastokohteet-ark.js',
+  // Vedon seuranta (valikko poistettu 22.9.2026, "Poista kaikki
+  // ylimääräiset vivut valikosta"): js/main.js:n staattinen tuonti
+  // hävisi menun mukana. Ainoat jäljellä olevat tuojat, js/pallo.js ja
+  // js/pallolauta/lauta.js, ovat itse niputuksen ulkopuolella (pallo.js
+  // ladataan dynaamisesti) — sama peruste kuin pallolaudan paketeilla
+  // yllä. Liput (?koe=, ratasvalikon Kartta-osio) toimivat yhä.
+  'js/vedon-seuranta.js',
+  // Ranskan nostojen lukitut ankkurit: ainoa tuoja on
+  // js/pallolauta/nostoankkurit.js, ja pallolauta on niputuksen
+  // ulkopuolella (sama peruste kuin yllä). SHELLissä paketti on.
+  'js/packs/nostoankkurit-fra.js',
+  'js/packs/nostoankkurit-esp.js',
+  'js/packs/nostoankkurit-ita.js',
+  'js/packs/nostoankkurit-deu.js',
+  'js/packs/nostoankkurit-prt.js',
+  'js/packs/nostoankkurit-grc.js',
+  'js/packs/nostoankkurit-aut.js',
+  'js/packs/nostoankkurit-nld.js',
+  'js/packs/nostoankkurit-bel.js',
+  'js/packs/nostoankkurit-pol.js',
+  'js/packs/nostoankkurit-cze.js',
+  'js/packs/nostoankkurit-dnk.js',
+  'js/packs/nostoankkurit-hun.js',
+  'js/packs/nostoankkurit-swe.js',
   // Koelaudat poistettiin pelin rekisteristä (js/pack.js) — tiedostot
   // jäävät repoon mahdollista myöhempää käyttöä varten.
   'js/packs/istanbul-questions.js',
@@ -169,10 +307,22 @@ const NIPUTTAMATTOMAT = new Set([
   'js/packs/maasto-nimet-vedet.js',
   'js/packs/maasto-nimet-vuoret.js',
   'js/packs/maasto-vedet.js',
+  // Etusivun pinon kuvat: ainoa tuoja on js/etusivupallo.js, joka
+  // ladataan dynaamisesti eikä ole niputuksessa (etusivun pallo jää
+  // yhden tiedoston versiosta pois kuten linssit ja valokuvat).
+  'js/packs/etusivun-isoisakuvat.js',
   // Radiosoittimen ja päivän kuvien aineistot: tuojat (viritin.js,
   // työhuone) eivät ole niputuksessa.
   'js/packs/viritysaanet.js',
   'js/packs/paivan-kuvat.js',
+  /*
+   * Merisyvyysvyöhykkeet: EI YHTÄÄN TUOJAA (5.9.2026, laiskoituserä 5b).
+   * Kerros on ollut pois käytöstä (js/ui.js drawBoard kertoo mittaukset),
+   * mutta js/ui.js toi pakan yhä staattisesti — 260 kt jokaisessa
+   * käynnistyksessä. Tuonti poistettiin; tiedosto jää repoon ja SHELLiin
+   * siltä varalta, että vyöhykkeet vielä palaavat.
+   */
+  'js/packs/maailmankartta-syvyys.js',
 ]);
 
 test('yhden tiedoston versio niputtaa kaikki karttapaketit', () => {
@@ -214,6 +364,29 @@ test('välimuistin nimi seuraa sovelluksen versiota', () => {
 });
 
 /*
+ * VALMIIT KIRJASTOT SÄILYVÄT OMASSA, PYSYVÄSSÄ KORISSAAN (Raamattu
+ * 5.9.2026, VALMIIT KIRJASTOT: STPAGEFLIP ENSIN): vendor/-polku
+ * ämpärissä on versionimetty, joten kori ei saa tyhjentyä
+ * versionvaihdossa (activate-siivous ohittaa sen), ja noudon on
+ * oltava cors-tilassa varareitteineen kuten kuvilla — muuten
+ * <script>-tagin opaakki vastaus ei kelpaa koriin eikä kirjasto
+ * toimi lentokoneessa. Testi lukee lähdekoodia (ks. peilikuvatesti).
+ */
+test('vendor-kirjastoilla on pysyvä kori, jota versionvaihto ei tyhjennä', () => {
+  const kori = sw.match(/const VENDORCACHE = '([^']+)'/)?.[1];
+  assert.ok(kori && kori.startsWith('matkakirja-vendor-'), 'VENDORCACHE puuttuu sw.js:stä');
+  const siivous = sw.slice(sw.indexOf("addEventListener('activate'"), sw.indexOf("addEventListener('fetch'"));
+  assert.match(siivous, /k !== VENDORCACHE/, 'activate-siivous tyhjentäisi vendor-korin');
+  const haara = sw.indexOf("osoite.pathname.startsWith('/vendor/')");
+  assert.ok(haara > 0, 'sw.js ei tunne vendor/-polkua');
+  const lohko = sw.slice(haara, haara + 900);
+  assert.match(lohko, /caches\.open\(VENDORCACHE\)/);
+  const corsRivi = lohko.indexOf("mode: 'cors'");
+  const varaRivi = lohko.indexOf('fetch(event.request)');
+  assert.ok(corsRivi > 0 && varaRivi > corsRivi, 'vendor-noudossa on oltava cors-nouto ja sen jälkeen tavallinen varareitti');
+});
+
+/*
  * PEILIKUVAN NOUDOSSA ON OLTAVA VARAREITTI ILMAN CORSIA.
  *
  * Historia: R2:n julkinen pub-*.r2.dev-osoite ei aluksi lähettänyt
@@ -236,15 +409,93 @@ test('välimuistin nimi seuraa sovelluksen versiota', () => {
  * jonka poisto rikkoisi kuvat uudelleen.
  */
 test('peilikuvalla on cors-noudon jälkeen varareitti ilman corsia', () => {
-  const kohta = sw.indexOf('r2.dev');
+  // Ankkuri on kuvalähteen ehto (medianIsanta + kuvat/liput/kohtaamiset),
+  // ei ensimmäinen 'r2.dev'-sana: 6.9.2026 tiedoston alkuun tuli
+  // medianIsanta-apuri kommentteineen (oma verkkotunnus media.matkakirja.app).
+  const kohta = sw.indexOf('medianIsanta(osoite.hostname)');
   assert.ok(kohta > 0, 'sw.js ei enää tunne peiliä — onko ehto poistettu?');
-  const lohko = sw.slice(kohta, kohta + 3200);
+  // Ikkuna on reilu: haaran yläpuolella on pitkä selityslohko, ja
+  // varareitti (fetch(event.request)) on vasta ok-ehdon jälkeen.
+  const lohko = sw.slice(kohta, kohta + 6000);
   const rivit = lohko.split('\n').filter((r) => !/^\s*(\*|\/\/|\/\*)/.test(r));
   const corsRivi = rivit.findIndex((r) => /mode:\s*'cors'/.test(r));
   const varaRivi = rivit.findIndex((r) => /fetch\(event\.request\)/.test(r));
   assert.ok(corsRivi >= 0, 'cors-nouto on ainoa tapa saada kuva koriin');
   assert.ok(varaRivi > corsRivi,
     'cors-noudon jälkeen on oltava tavallinen fetch(event.request) varareittinä');
+});
+
+/*
+ * 429 EI SAA JÄÄDÄ VÄLIMUISTIIN (omistajan bugiraportti 6.9.2026 klo
+ * 01.09: *"Kartalla pisteitä jotka eivät toimi"*).
+ *
+ * Ämpärin julkinen r2.dev-osoite on Cloudflaren rajoitettu
+ * kehitysosoite: kohdekartan 12 miniatyyriä yhtenä purskeena sai
+ * vastaukseksi 429 Too Many Requests. Jos sellainen vastaus päätyisi
+ * koriin, kohdekartta jäisi rikki pysyvästi — kori palauttaisi 429:n
+ * silloinkin, kun ämpäri on jo pitkään vastannut normaalisti.
+ *
+ * Sääntö on koko tiedoston laajuinen: JOKAINEN korin kirjoitus on
+ * vastauksen `ok`-ehdon sisällä (2xx). Testi lukee jokaisen put-rivin
+ * ympäriltä lähimmän ehdon.
+ */
+test('vain onnistunut vastaus menee välimuistiin (429 ja 5xx eivät)', () => {
+  const rivit = sw.split('\n');
+  const putRivit = rivit
+    .map((rivi, i) => ({ rivi, i }))
+    .filter(({ rivi }) => /\.put\(/.test(rivi) && !/^\s*(\*|\/\/)/.test(rivi));
+  assert.ok(putRivit.length >= 5, 'korin kirjoituksia pitäisi olla useita');
+  for (const { rivi, i } of putRivit) {
+    const ymparilla = rivit.slice(Math.max(0, i - 6), i + 1).join('\n');
+    assert.match(ymparilla, /\.ok\b|status === 200/,
+      `sw.js rivi ${i + 1} kirjoittaa koriin ilman ok-ehtoa: ${rivi.trim()}`);
+  }
+});
+
+/*
+ * MEDIA ON CACHE-FIRST. Kerran nähty kuva palautetaan aina korista
+ * ennen verkkoa — se on ainoa asia, joka pitää kohdekartan ehjänä
+ * silloinkin, kun ämpäri rajoittaa pyyntöjä juuri sillä hetkellä.
+ */
+test('media palvellaan välimuistista ensin', () => {
+  for (const tunniste of ['KUVACACHE', 'LAATTACACHE', 'AANICACHE', 'VENDORCACHE']) {
+    const kohta = sw.indexOf(`caches.open(${tunniste})`);
+    assert.ok(kohta > 0, `${tunniste}: koria ei avata missään`);
+    const lohko = sw.slice(kohta, kohta + 900);
+    const matchKohta = lohko.search(/(kuvat|kori|osuma)[\s\S]{0,40}\.match\(/);
+    const fetchKohta = lohko.search(/await fetch\(|fetch\(url|fetch\(pyynto/);
+    assert.ok(matchKohta >= 0, `${tunniste}: korista ei haeta osumaa`);
+    assert.ok(fetchKohta < 0 || matchKohta < fetchKohta,
+      `${tunniste}: verkko ennen koria — media on cache-first`);
+  }
+});
+
+/*
+ * Pelin omat generoidut kuvat (kohdekartan miniatyyrit, eläinlähikuvat,
+ * aarrekuvat, havainnekuvat) siirtyivät ämpäriin 2.9.2026 polkuun
+ * `kohtaamiset/` (js/media.js assetOsoite). Ne jäivät ensin
+ * palvelutyöntekijän kuvahaaran ulkopuolelle, joten yksikään niistä ei
+ * mennyt koriin ja jokainen kohdekartan avaus oli uusi purske.
+ */
+test('ämpärin kohtaamiset/-kuvat kuuluvat kuvakoriin', () => {
+  assert.match(sw, /\/\^\\\/\(kuvat\|liput\|kohtaamiset\)\\\/\//,
+    'sw.js:n r2.dev-kuvaehto ei tunne kohtaamiset/-polkua');
+});
+
+/*
+ * VALMIIT KIRJASTOT VÄLIMUISTIIN (Raamattu, VALMIIT KIRJASTOT: STPAGEFLIP
+ * ENSIN, sääntö 1–2). Ämpärin vendor/-polun tiedostot (Globe.gl, Tuna,
+ * ilmepaketin Vivus, Rough.js ja rough-notation) ovat versionumeroituja
+ * ja muuttumattomia, joten niillä on oma pysyvä korinsa: versionvaihto
+ * ei saa tyhjentää sitä. Ilman tätä peli menettäisi ilmeensä (ja
+ * pallon) heti kun verkko katkeaa. Yksityiskohdat vartioidaan alempana
+ * ("ämpärin vendor/-kirjastot säilyvät omassa korissaan").
+ */
+test('vendor-kirjastot: kaikki ladatut kirjastot kulkevat samasta haarasta', () => {
+  for (const tiedosto of ['js/pallo.js', 'js/tehosteketju.js', 'js/ilme.js']) {
+    const src = readFileSync(new URL(`../${tiedosto}`, import.meta.url), 'utf8');
+    assert.match(src, /vendor\//, `${tiedosto}: kirjasto ei tule vendor/-polusta`);
+  }
 });
 
 /*
@@ -262,7 +513,7 @@ test('peilikuvalla on cors-noudon jälkeen varareitti ilman corsia', () => {
  */
 test('yhdistämismerkkejä ei ole jäänyt tiedostoihin', () => {
   const merkki = /^(<{7}|={7}|>{7})(\s|$)/m;
-  const kansiot = ['js', 'js/packs', 'js/linssit', 'css', 'tools', 'tests'];
+  const kansiot = ['js', 'js/packs', 'js/linssit', 'js/pallolauta', 'css', 'tools', 'tests'];
   const loydot = [];
   for (const kansio of kansiot) {
     const polku = join(JUURI, kansio);
@@ -280,4 +531,289 @@ test('yhdistämismerkkejä ei ole jäänyt tiedostoihin', () => {
   }
   assert.deepEqual(loydot, [],
     'näihin tiedostoihin on jäänyt purkamaton yhdistämisristiriita');
+});
+
+/*
+ * Valmiit kirjastot (Raamattu 5.9.2026 "VALMIIT KIRJASTOT"): ämpärin
+ * vendor/-polku on välimuisti ensin -haara omassa korissaan, jota
+ * versionvaihto ei tyhjennä — Globe.gl ja Tuna toimivat offline, kun ne
+ * on kerran nähty. Testi lukee sw.js:ää tekstinä, kuten SHELL-testit.
+ */
+test('ämpärin vendor/-kirjastot säilyvät omassa korissaan versionvaihdon yli', () => {
+  assert.match(sw, /const VENDORCACHE = 'matkakirja-vendor-v\d+'/, 'VENDORCACHE puuttuu');
+  assert.match(sw, /osoite\.pathname\.startsWith\('\/vendor\/'\)/, 'vendor/-haara puuttuu fetch-käsittelijästä');
+  assert.match(sw, /caches\.open\(VENDORCACHE\)/, 'vendor/-haara ei käytä omaa koriaan');
+  const activate = sw.slice(sw.indexOf("addEventListener('activate'"));
+  assert.match(activate, /k !== VENDORCACHE/, 'activate-siivous tyhjentäisi vendor-korin');
+});
+
+/*
+ * PALLON LAATAT OFFLINE (pallolauta vaihe 5c, docs/moduulit/karttapallo.md
+ * luku 6: *"SW-välimuisti vendorille ja laatoille"*). Karttapallo on pelin
+ * lauta, ja ilman laattakoria lentokoneessa avattu peli näyttäisi tyhjän
+ * pallon. Testi lukee sw.js:ää tekstinä (palvelutyöntekijää ei voi ajaa
+ * Nodessa, ks. peilikuvatesti); ajonaikaisen käytöksen mittaa
+ * tools/savukkeet/savuke-pallolaatat-offline.mjs.
+ */
+test('pallon laatat: oma pysyvä kori, katto, esilataus ja vanhan kansion siivous', () => {
+  const kori = sw.match(/const LAATTACACHE = '([^']+)'/)?.[1];
+  assert.ok(kori && /^matkakirja-pallolaatat-v\d+$/.test(kori), 'LAATTACACHE puuttuu sw.js:stä');
+  // Kori ei tyhjene versionvaihdossa — laatta ei vanhene pelin mukana.
+  const activate = sw.slice(sw.indexOf("addEventListener('activate'"), sw.indexOf("addEventListener('fetch'"));
+  assert.match(activate, /k !== LAATTACACHE/, 'activate-siivous tyhjentäisi laattakorin');
+  assert.match(activate, /siivoaVanhatLaatat\(\)/, 'vanhan laattakansion siivous puuttuu activatesta');
+  // Laattahaara on välimuisti ensin, luettelo verkko ensin.
+  assert.match(sw, /const LAATTAPOLKU = '\/julisteet\/pallo\/laatat\/'/);
+  assert.match(sw, /PALLOLAATTA\(osoite\)/, 'fetch ei tunne laattapolkua');
+  const haara = sw.indexOf('async function laattaPeilista');
+  assert.ok(haara > 0, 'laattaPeilista puuttuu');
+  const lohko = sw.slice(haara, haara + 900);
+  assert.ok(lohko.indexOf('kori.match(pyynto.url)') < lohko.indexOf("mode: 'cors'"),
+    'laatta on haettava korista ennen verkkoa (immutable, versio kansiossa)');
+  const luettelo = sw.slice(sw.indexOf('function laattaluettelo'), sw.indexOf('async function esilataaLaatat'));
+  assert.match(luettelo, /event\.waitUntil\(paivitys\)/,
+    'laatat.json: korin kappale heti ja päivitys taustalla — pallo ei saa odottaa verkkoa');
+  // Taustapäivitys ei saa tulla selaimen välimuistista: luettelo muuttuu
+  // saman nimen alla (ämpärin max-age 3600), laatat eivät koskaan.
+  assert.match(luettelo, /const paivitys = fetch\(url, \{ mode: 'cors', cache: 'no-cache' \}\)/);
+  assert.match(sw, /const vastaus = await fetch\(pyynto\.url, \{ mode: 'cors' \}\)/,
+    'laatta on immutable — sitä ei revalidoida');
+  // Katto ja siivous ilman IndexedDB:tä: keys() antaa kirjoitusjärjestyksen.
+  const katto = Number(sw.match(/const LAATTAKATTO = (\d+)/)?.[1]);
+  assert.ok(katto >= 500 && katto <= 5000, `laattakatto ${katto} ei ole järkevä (≈ 30 Mt)`);
+  assert.match(sw, /async function siivoaLaatat\(kori\)/);
+  assert.match(sw, /const avaimet = await kori\.keys\(\);/);
+  assert.match(sw, /avaimet\.length <= LAATTAKATTO/, 'katto ei rajaa mitään');
+  assert.match(sw, /arvio \+ LAATTASIIVOUS < LAATTAKATTO && laattojaMittauksesta < LAATTASIIVOUS/,
+    'korin todellinen koko on mitattava erän välein — arvio voi olla vanha');
+  // Esilataus: sivu lähettää osoitteet, työntekijä hakee ne taustalla.
+  assert.match(sw, /addEventListener\('message'/, 'esilatausviestiä ei kuunnella');
+  assert.match(sw, /viesti\.tyyppi !== 'esilataa-pallolaatat'/);
+  assert.match(sw, /async function esilataaLaatat\(osoitteet, portti\)/);
+  // Laattakansio on sama kuin pelissä (kaksoiskappale, ks. sw.js).
+  const swKansio = sw.match(/const LAATTAKANSIO = '([^']+)'/)?.[1];
+  const pallo = readFileSync(join(JUURI, 'js/pallo.js'), 'utf8');
+  const versio = pallo.match(/PALLO_LAATTAVERSIO = '([^']+)'/)?.[1];
+  const tunniste = pallo.match(/PALLO_LAATTATUNNISTE = '([^']*)'/)?.[1] ?? '';
+  // Sarja voi olla poltettu ilman nostoja (PALLO_SARJASSA_NOSTOT = false,
+  // 18.9.2026): silloin kansiossa ei ole '-nostot'-osaa (tools/tee-pallolaatat.mjs
+  // laattojenKansio).
+  const sarjassaNostot = pallo.match(/PALLO_SARJASSA_NOSTOT = (true|false)/)?.[1] === 'true';
+  assert.match(pallo, /PALLO_LAATTAKANSIO = `\$\{PALLO_LAATTAVERSIO\}\$\{PALLO_SARJASSA_NOSTOT \? '-nostot' : ''\}-\$\{PALLO_LAATTATUNNISTE\}`/);
+  assert.equal(swKansio, `${versio}${sarjassaNostot ? '-nostot' : ''}-${tunniste}`,
+    'sw.js:n LAATTAKANSIO ja js/pallo.js:n PALLO_LAATTAKANSIO ovat eri kansiot — '
+    + 'activate siivoaisi juuri käytössä olevat laatat');
+});
+
+/*
+ * ÄÄNTEN YDINSETTI ON SW:N JA MEDIA.JS:N YHTEINEN ASIA.
+ *
+ * Repossa ei ole äänitiedostoja (omistajan linjaus 11.9.2026), joten
+ * palvelutyöntekijä esilataa ydinsetin ämpärin osoitteista omaan
+ * äänikoriinsa. Osoite lasketaan sw.js:ssä omasta vakiostaan, koska
+ * klassinen worker-skripti ei voi tuoda js/media.js:ää — ja juuri
+ * siksi juuret voisivat eriytyä huomaamatta: peli pyytäisi yhtä
+ * osoitetta ja esilataus täyttäisi toisen. Nämä testit vartioivat, että
+ * ne pysyvät samana.
+ */
+test('sw.js:n äänijuuri on sama kuin js/media.js AANI_JUURI', async () => {
+  const { AANI_JUURI, aaniUrl } = await import('../js/media.js');
+  const osuma = /^const AANI_JUURI = '([^']+)';$/m.exec(sw);
+  assert.ok(osuma, 'sw.js:stä ei löydy AANI_JUURI-vakiota');
+  assert.equal(osuma[1], `${AANI_JUURI}audio/`);
+  // Ja osoite on tasan se, jonka peli itse laskee.
+  assert.equal(`${osuma[1]}efekti-klik.mp3`, aaniUrl('assets/audio/efekti-klik.mp3'));
+});
+
+test('ydinsetti esiladataan ämpäristä eikä repon polusta', () => {
+  const lista = /const YDINAANET = \[([^\]]+)\]/.exec(sw);
+  assert.ok(lista, 'sw.js:stä ei löydy YDINAANET-listaa');
+  const nimet = [...lista[1].matchAll(/'([^']+)'/g)].map((m) => m[1]);
+  assert.ok(nimet.length >= 20, `ydinsetissä on vain ${nimet.length} ääntä`);
+  assert.ok(nimet.every((n) => /^(efekti|huudahdus)-[\w-]+\.mp3$/.test(n)),
+    'ydinsetissä on muuta kuin tehosteita ja huudahduksia');
+  // Nouto on cors-fetch omaan koriin: cache.addAll kaatuisi koko erään
+  // yhdestä virheestä, eikä opaakki vastaus kelpaisi koriin lainkaan.
+  assert.match(sw, /async function esilataaYdinaanet\(katkoMs = AANI_ESILATAUS_KATKO_MS\)/);
+  assert.match(sw, /caches\.open\(AANICACHE\)/);
+  assert.match(sw, /fetch\(osoite, \{ mode: 'cors', signal: vahti\.signal \}\)/);
+  // Asennus ei saa kaatua ydinsettiin: se on nopeutta varten.
+  assert.match(sw, /await esilataaYdinaanet\(\)\.catch\(\(\) => \{\}\);/);
+  // Eikä yksikään äänitiedosto saa palata SHELL-listalle.
+  assert.deepEqual(SHELL.filter((p) => /\.(mp3|wav|ogg|m4a)$/i.test(p)), [],
+    'SHELLissä on äänitiedostoja — ne eivät ole enää repossa');
+});
+
+test('ämpärin audio/-pyynnöt palvellaan äänikorista ensin', () => {
+  // Kerran kuultu ääni toimii offline: fetch-käsittelijä ohjaa sekä
+  // audio/ (pelin oma) että aanet/ (peilattu maisema) äänikoriin.
+  assert.match(sw, /medianIsanta\(osoite\.hostname\) && \/\^\\\/\(\?:audio\|aanet\)\\\/\/\.test\(osoite\.pathname\)/);
+  assert.match(sw, /event\.respondWith\(aaniPeilista\(event\.request\)\)/);
+});
+
+/*
+ * SÄÄNTÖ: ESTETTY TAI HIDAS ÄÄNIHAKU EI SAA ESTÄÄ KÄYNNISTYSTÄ.
+ *
+ * Ääni on koriste, peli on pääasia. `esilataaYdinaanet()` ajetaan
+ * asennuksen sisällä (`install` → `waitUntil`), joten jos se ei palaa,
+ * `self.skipWaiting()` jää ajamatta eikä palvelutyöntekijä koskaan
+ * aktivoidu. Mitattu 14.9.2026 selaimessa ennen korjausta: kun
+ * media.matkakirja.app otti TCP-yhteyden vastaan muttei vastannut,
+ * työntekijä oli tilassa `installing` vielä 89,7 s kohdalla (versiokori
+ * oli ollut täysi jo 51,8 s kohdalla), ja verkon katkaisun jälkeen
+ * sivu ei auennut lainkaan (net::ERR_INTERNET_DISCONNECTED) — peli ei
+ * siis käynnistynyt offline ollenkaan.
+ *
+ * Nämä testit ajavat sw.js:n oikean install-käsittelijän hiekkalaatikossa
+ * (node:vm) niin, että jokainen äänihaku jää roikkumaan ikuisesti.
+ * Vakio korvataan lähteestä lyhyeksi, jotta testi ei odota kuutta
+ * sekuntia — mitattava sääntö on "palaa katkon kuluessa", ei
+ * "palaa tasan kuudessa sekunnissa".
+ */
+
+/** Rakentaa sw.js:lle hiekkalaatikon, jossa äänihaku käyttäytyy halutusti. */
+function lataaSw({ katkoMs = 200, aani = 'jumi' } = {}) {
+  const lahde = sw.replace(
+    /const AANI_ESILATAUS_KATKO_MS = \d+;/,
+    `const AANI_ESILATAUS_KATKO_MS = ${katkoMs};`,
+  );
+  const korit = new Map();
+  const haut = [];
+  const teeKori = (nimi) => {
+    if (!korit.has(nimi)) korit.set(nimi, new Map());
+    const varasto = korit.get(nimi);
+    return {
+      match: async (avain) => varasto.get(String(avain)),
+      put: async (avain, arvo) => { varasto.set(String(avain), arvo); },
+      keys: async () => [...varasto.keys()],
+      addAll: async () => {},
+      add: async () => {},
+      delete: async () => true,
+    };
+  };
+  let skipWaitingAjettu = false;
+  const ctx = {
+    console, setTimeout, clearTimeout, AbortController, URL,
+    // Request-tynkä: sw.js rakentaa suhteellisia osoitteita, joita
+    // Noden oikea Request ei suostu jäsentämään.
+    Request: class { constructor(osoite) { this.url = String(osoite); } },
+    caches: {
+      open: async (nimi) => teeKori(nimi),
+      keys: async () => [...korit.keys()],
+      match: async () => undefined,
+      delete: async () => true,
+    },
+    fetch: (osoite, asetukset = {}) => {
+      haut.push({ osoite: String(osoite), signal: asetukset.signal });
+      if (aani === 'nopea') return Promise.resolve({ ok: true, status: 200, runko: String(osoite) });
+      // jumi: ei vastausta koskaan — paitsi jos nouto keskeytetään.
+      return new Promise((_, hylkaa) => {
+        asetukset.signal?.addEventListener('abort', () => hylkaa(new Error('AbortError')));
+      });
+    },
+    clients: { claim: async () => {}, matchAll: async () => [] },
+    skipWaiting: () => { skipWaitingAjettu = true; return Promise.resolve(); },
+    registration: {},
+    location: new URL('https://ravelius.github.io/Matkakirja/sw.js'),
+  };
+  ctx.self = ctx;
+  ctx.globalThis = ctx;
+  const kuuntelijat = new Map();
+  ctx.addEventListener = (nimi, fn) => { kuuntelijat.set(nimi, fn); };
+  vm.createContext(ctx);
+  vm.runInContext(lahde, ctx, { filename: 'sw.js' });
+  return {
+    ctx, korit, haut, kuuntelijat,
+    onSkipWaiting: () => skipWaitingAjettu,
+    aja: (nimi) => {
+      let lupaus = Promise.resolve();
+      kuuntelijat.get(nimi)({ waitUntil: (p) => { lupaus = p; } });
+      return lupaus;
+    },
+  };
+}
+
+test('äänten esilatauksen aikakatkaisu on kirjattu ja järkevä', () => {
+  const osuma = /^const AANI_ESILATAUS_KATKO_MS = (\d+);$/m.exec(sw);
+  assert.ok(osuma, 'sw.js:stä ei löydy AANI_ESILATAUS_KATKO_MS-vakiota');
+  const ms = Number(osuma[1]);
+  // Mitattu normaaliaika 0,43 s (26/26 ääntä): katko ei saa alittaa
+  // hitaan mutta toimivan ämpärin tarvetta eikä venyä niin pitkäksi,
+  // ettei asennus enää valmistuisi järkevässä ajassa.
+  assert.ok(ms >= 3000 && ms <= 12000, `aikakatkaisu ${ms} ms on mitatun alueen ulkopuolella`);
+});
+
+test('esilataus palaa vaikka yksikään äänihaku ei koskaan vastaisi', async () => {
+  const pesa = lataaSw({ katkoMs: 200, aani: 'jumi' });
+  const alku = Date.now();
+  await pesa.ctx.esilataaYdinaanet();
+  const kesto = Date.now() - alku;
+  assert.ok(kesto < 3000, `esilataus kesti ${kesto} ms — aikakatkaisu ei laukennut`);
+  assert.ok(pesa.haut.length >= 20, `hakuja lähti vain ${pesa.haut.length}`);
+  // Jokainen nouto sai keskeytyssignaalin, ja se todella laukesi:
+  // jumittunut soketti vapautuu eikä jää roikkumaan.
+  assert.ok(pesa.haut.every((h) => h.signal), 'osa hauista lähti ilman keskeytyssignaalia');
+  assert.ok(pesa.haut.every((h) => h.signal.aborted), 'keskeytyssignaali ei laukennut');
+});
+
+test('asennus valmistuu ja skipWaiting ajetaan, vaikka äänihaut jumittaisivat', async () => {
+  const pesa = lataaSw({ katkoMs: 200, aani: 'jumi' });
+  const alku = Date.now();
+  await pesa.aja('install');
+  const kesto = Date.now() - alku;
+  assert.ok(kesto < 3000, `asennus kesti ${kesto} ms — ääni esti asennuksen valmistumisen`);
+  assert.ok(pesa.onSkipWaiting(),
+    'skipWaiting jäi ajamatta — palvelutyöntekijä ei aktivoituisi eikä peli käynnistyisi offline');
+  // Äänikoriin ei jäänyt mitään: ääni haetaan ensimmäisellä soitolla.
+  assert.equal(pesa.korit.get('matkakirja-aanet-v1')?.size ?? 0, 0);
+});
+
+test('kun ämpäri vastaa, koko ydinsetti päätyy äänikoriin kuten ennenkin', async () => {
+  const pesa = lataaSw({ katkoMs: 5000, aani: 'nopea' });
+  await pesa.aja('install');
+  assert.ok(pesa.onSkipWaiting(), 'skipWaiting jäi ajamatta');
+  const kori = pesa.korit.get('matkakirja-aanet-v1');
+  const lista = /const YDINAANET = \[([^\]]+)\]/.exec(sw);
+  const maara = [...lista[1].matchAll(/'([^']+)'/g)].length;
+  assert.equal(kori?.size ?? 0, maara,
+    `äänikoriin päätyi ${kori?.size ?? 0}/${maara} ääntä — esilataus ei enää toimi`);
+  // Ja osoitteet ovat ämpärin audio/-polusta, eivät repon poluista.
+  assert.ok([...kori.keys()].every((o) => o.startsWith('https://media.matkakirja.app/audio/')));
+});
+
+/*
+ * REKISTERÖINTI EI SAA JÄÄDÄ SIVUN `load`IN VARAAN (mitattu 14.9.2026).
+ *
+ * `load` odottaa jokaista alipyyntöä, myös kuvia. Kun ämpäri
+ * (media.matkakirja.app) ottaa yhteyden vastaan muttei vastaa, pelin
+ * omat kuvapyynnöt jäävät roikkumaan, ja mitattuna (Chromium, 4 ajoa,
+ * jumittuva ämpäri) `load` laukesi vasta 45,98–46,59 s kohdalla —
+ * täsmälleen silloin myös palvelutyöntekijä rekisteröitiin, eli koko
+ * offline-tuki odotti estynyttä mediaa. Terveellä ämpärillä sama
+ * lukema on 1,31–1,51 s.
+ *
+ * Korjaus on yksi katto: `load` jää ensisijaiseksi (normaalitilanne ei
+ * muutu, mitattu 1,28–1,47 s myös korjauksen jälkeen), mutta ajastin
+ * rekisteröi viimeistään katon kuluttua. Mitattu jumittuvalla
+ * ämpärillä korjauksen jälkeen: 4,89–5,04 s.
+ *
+ * Testi lukee js/main.js:n tekstinä, koska moduulia ei voi ajaa ilman
+ * DOMia. Se vahtii kolmea asiaa, joista mikä tahansa yksin katoaisi
+ * hiljaa: että katto on olemassa, että se on järkevän kokoinen, ja
+ * että rekisteröinti tapahtuu vain kerran.
+ */
+test('palvelutyöntekijä rekisteröidään myös ilman `load`-tapahtumaa', () => {
+  const main = readFileSync(join(JUURI, 'js/main.js'), 'utf8');
+  const katto = /const REKISTEROINNIN_KATTO_MS = (\d+);/.exec(main);
+  assert.ok(katto, 'REKISTEROINNIN_KATTO_MS puuttuu — rekisteröinti jäisi `load`in varaan');
+  const ms = Number(katto[1]);
+  assert.ok(ms >= 2000 && ms <= 10000,
+    `katto ${ms} ms: alle 2 s kilpailisi käynnistyksen kaistasta, yli 10 s ylittäisi `
+    + 'index.html:n varaventtiilin');
+  assert.match(main, /setTimeout\(rekisteroiTyontekija, REKISTEROINNIN_KATTO_MS\)/,
+    'kattoa ei ajasteta — vakio olisi pelkkä luku');
+  assert.match(main, /window\.addEventListener\('load', rekisteroiTyontekija, \{ once: true \}\)/,
+    '`load` ei enää rekisteröi — normaalitilanteessa rekisteröinnin pitää tapahtua siellä');
+  assert.match(main, /if \(rekisteroity\) return;\s*\n\s*rekisteroity = true;/,
+    'kaksoisvahti puuttuu — sama sw.js rekisteröitäisiin kahdesti');
 });

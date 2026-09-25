@@ -97,8 +97,22 @@
  *   K3  laatta: mikä tekee merestä epätavallisen → *lähes hapeton syvyys*
  *   K4  laatta: mitä satamasta viedään → *viljaa*
  *   K5  laatta: mitä vietetään 1. huhtikuuta → *Humorina*
- *   K6  kaari: montako askelmaa portaikossa → *vajaat kaksisataa*
+ *   K6  kaari: mitä vapaasataman tullietu tarkoitti → *tuontitavaran
+ *       sai vastaanottaa ja varastoida tullitta*
  *   K7  kulttuurivisa: miten käytävät syntyivät → *oma louhos alla*
+ *
+ * K6 VAIHTUI 5.9.2026 (Fable tarkistanut 5.9.2026). Vanha K6 kysyi
+ * portaikon askelmien määrää; kaari kirjoitettiin uusiksi (torimyyjä
+ * Iryna, vapaasataman kuitti), ja uusi kysymys saa vastauksensa TÄMÄN
+ * PAKETIN OPPITUNNISTA — se on tarkoitus, ei vuoto: Raamatun
+ * fokusmoodilinjaus haluaa laattakysymyksen kytkeytyvän merkintään ja
+ * oppituntiin, ja tarinakaari.md sääntö 6 kieltää vain sanatarkan
+ * vastausrivin toistumisen. Oppitunnin sanamuoto ("tavaran sai purkaa,
+ * varastoida, pakata uudelleen ja jalostaa maksamatta tullia") ei ole
+ * vastausrivi. VANHA RAJOITUS EI PALAA: askelmien luvut ja portaikon
+ * optinen temppu voisivat nyt periaatteessa esiintyä tässä paketissa,
+ * mutta tässä luonnoksessa niitä EI ole lisätty mihinkään — muutos on
+ * poisto, ei avaus.
  *
  * MITÄ TÄSTÄ SEURAA, KOHTA KOHDALTA:
  *
@@ -107,12 +121,14 @@
  *     hapetonta syvyyttä ja antiikin hylkyjä (K3): niistä ei ole tässä
  *     paketissa riviäkään, vaikka aihe olisi hyvä täky — se on varattu.
  *   - PORTAIDEN ASKELMIA EI LASKETA EIKÄ NIIDEN OPTISTA TEMPPUA
- *     SELITETÄ (K6). Portaikkotäky kertoo nimistä, kivestä ja
- *     elokuvasta; luvut 200 ja 192 sekä "alhaalta vain askelmat,
- *     ylhäältä vain tasanteet" jäävät kaarikysymyksen palkinnoksi.
- *     TÄMÄ RATKAISI MYÖS PÖLLÖN KUVAN: kaupunkilehden portaikkohero
- *     olisi ollut luonteva valinta, mutta sen selite sanoo molemmat
- *     asiat ääneen, joten heroksi valittiin Vorontsovin kolonnadi.
+ *     SELITETÄ. Portaikkotäky kertoo nimistä, kivestä ja elokuvasta;
+ *     luvut 200 ja 192 sekä "alhaalta vain askelmat, ylhäältä vain
+ *     tasanteet" jäävät pois. TÄMÄ RATKAISI MYÖS PÖLLÖN KUVAN:
+ *     kaupunkilehden portaikkohero olisi ollut luonteva valinta, mutta
+ *     sen selite sanoo molemmat asiat ääneen, joten heroksi valittiin
+ *     Vorontsovin kolonnadi. (Uudistus 5.9.2026: rajoitus ei enää seuraa
+ *     K6:sta vaan K2:sta ja siitä, että ratkaisu on jo tehty — kuvaa ja
+ *     täkyä ei kirjoiteta uusiksi kysymyksen vaihtumisen takia.)
  *   - KATAKOMBEISTA EI OLE TÄKYÄ (K7), vaikka aihe on kaupungin
  *     kuuluisin: kulttuurivisa kysyy juuri sen, ja js/fokustehtavat.js
  *     pukee sen sivun 1 AARTEEN AVAUS -laatikoksi.
@@ -214,32 +230,105 @@ export const FOKUSVIRTA_ODESSA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Odessa, elokuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Satama on täynnä vehnää ja kieliä: kreikkalainen laskee lastia '
-      + 'italiaksi, juutalainen kirjuri kääntää sen venäjäksi ja ranskaksi, '
-      + 'ja kaikki ymmärtävät toisiaan rahasta puhuttaessa. Rannasta '
-      + 'kaupunkiin nousevat portaat, joiden päästä ei näe alas satamaan — '
-      + 'vain meren. Oopperatalo paloi talvella, ja siitä puhutaan kuin '
-      + 'kuolleesta sukulaisesta: joka päivä, ja aina hyvää.',
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 b9e4b3ce330402d3b7a4504c7f1bb16333076b755adad6142768650b5ed3b911. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-odessa-r20260909-paper-v4.jpg",
+      lyhyt: "Odessa, 1873. Portailla kuorma näytti todellisen painonsa.",
+      selite: 'Leveät portaat nostivat kaupungin sataman ylle, mutta säkkien vieressä istuva mies näytti työn tauon. Jätin kuormat kuvaan, sillä pelkkä komeus olisi kertonut paikasta liian vähän.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://whc.unesco.org/document/196047","https://whc.unesco.org/en/list/1703"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-odessa-r20260911-paper2-v1.jpg",
+      lyhyt: "Odessa, 1873. Merituuli nousi portaat ilman lepoa tai tullia.",
+      selite: 'Kaksi herrasmiestä katsoo portaiden yläpäästä alas satamaan, jossa mastot ja laiturit täyttävät rannan. Merituuli saa kulkea tämän matkan ilman lepoa tai tullia.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://whc.unesco.org/en/list/1703","https://whc.unesco.org/document/196047"],
+    },
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Odessa, elokuussa 1873. Kuumaa; merituuli vasta illalla; '
+      + 'puntari korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 353 merkkiä (yläraja 400). */
+    teksti: "Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[excited] Satama on täynnä vehnää ja kieliä: kreikkalainen '
-      + 'laskee lastia italiaksi, juutalainen kirjuri kääntää sen venäjäksi '
-      + 'ja ranskaksi, ja kaikki ymmärtävät toisiaan rahasta puhuttaessa. '
-      + '[curious] Rannasta kaupunkiin nousevat portaat, joiden päästä ei '
-      + 'näe alas satamaan — vain meren. [softly] Oopperatalo paloi '
-      + 'talvella, ja siitä puhutaan kuin kuolleesta sukulaisesta: joka '
-      + 'päivä, ja aina hyvää.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: ei erikseen hiljaisia osuuksia (jokainen virke
+     * saa reaktion).
+     */
+    reaktiot: [
+  {
+    "id": "odessa.r1",
+    "ankkuri": "sahattiin kiveä kaupungin alta",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "odessa.r2",
+    "ankkuri": "alhaalle jäi käytävien verkosto",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "odessa.r3",
+    "ankkuri": "sammutti lampun näyttääkseen täydellisen pimeyden",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "odessa.r4",
+    "ankkuri": "en ollut pyytänyt todistetta",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. [warmly] Minä en ollut pyytänyt todistetta.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-odessa.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era03; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-odessa-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-odessa-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Odessa: portaat jatkuvat kuvan ulkopuolelle.',
+        selite: 'Odessan leveät portaat nousevat niin pitkälle, että alimmalta askelmalta yläpää näyttää jo omalta kaupunginosaltaan. Kivipinta on kulunut, mutta valo kiipeää sen yli edelleen vaivatta.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://whc.unesco.org/en/list/1703/',
+          'https://www.unesco.org/en/articles/odesa-unesco-condemns-renewed-attack-world-heritage-property',
+        ],
+      },
+    ],
     /*
      * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
      * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
@@ -274,23 +363,37 @@ export const FOKUSVIRTA_ODESSA = {
      * EI SPOILERIA: perustajan nimeä eikä syntymäkaupunkia ei sanota,
      * koska juuri se on sivun 3 JULISTE-tehtävän kysymys (DERIBAS_VISA).
      */
-    maadoitus: 'Hei että. Ne kielet eivät ole kadonneet minnekään, ne ovat '
-      + 'vaan siirtyneet katukilpiin: kaupungin kartalla on yhä Kreikan '
-      + 'tori ja Ranskan bulevardi, ja vilkkain kävelykatu kantaa '
-      + 'perustajansa nimeä. Väkeä muutti tänne aikoinaan kymmenistä '
-      + 'maista, ja jokainen jätti jälkeensä osoitteen. Isoisäsi kuuli ne '
-      + 'kielet työssä, sinä luet ne kilvistä. Ja siitä palaneesta talosta '
-      + 'sinun kannattaa kuulla tarkemmin.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Odessan Privozin torilla kaupankäyntiin kuuluu sanailu. Minä tuijotin kirsikoita. Myyjä kysyi, ostanko vai vartioinko. Pörhistin höyheniäni. Vartioin, tietenkin."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'vakava', voimakkuus: 0.6 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. Kaksi
      * pistettä ensimmäisen virkkeen lopussa on kaanonin oma kirjoitusasu.
      */
-    teksti: 'Isoisäsi osui suoraan kaupungin haavaan — se palanut ooppera '
-      + 'rakennettiin uusiksi vasta parikymmentä vuotta myöhemmin, ja '
-      + 'uudesta tuli niin komea että sitä käydään katsomassa vaikkei '
-      + 'menisi näytökseen.. Ne portaat ovat nykyään maailmankuuluja, '
-      + 'tosin eri syystä kuin hän arvasi — sen tarinan kuulet kohta. '
-      + 'Satamaan ensin.',
     /*
      * PÖLLÖN KUVA ON KAUPUNKILEHDEN HEROKUVA (omistajan linjaus): tämä
      * on Odessan avauskarusellin kolmas generoitu hero
@@ -314,6 +417,7 @@ export const FOKUSVIRTA_ODESSA = {
      */
     kuva: {
       ampari: 'herokoe/hero-odessa-keskipaiva.jpg',
+      lyhyt: 'Vorontsovin palatsi rakennettiin 1827–1830 Boffon piirustuksin turkkilaisen linnoituksen paikalle.',
       selite: 'Vorontsovin palatsi ja sen kaareva kolonnadi rakennettiin '
         + '1827–1830 ruhtinas Mihail Vorontsoville sardinialaissyntyisen '
         + 'Francesco Boffon piirustusten mukaan turkkilaisen Hacıbeyn '
@@ -424,6 +528,9 @@ export const FOKUSVIRTA_ODESSA = {
         + 'vaihdu: heinäkuussa 2015 Euroopan elokuva-akatemia kiinnitti '
         + 'portaisiin muistolaatan, jonka mukaan tämä on eurooppalaisen '
         + 'elokuvan aarre.',
+      lahde: 'en-Wikipedia "Potemkin Stairs", uk-Wikipedia "Потьомкінські '
+        + 'сходи", en-Wikipedia "Battleship Potemkin" ja uk-Wikipedia '
+        + '"Одеса". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 5018×3165, image/jpeg, CC BY-SA 4.0, tekijä
        * Oleksandr Malyon, kuvattu 16.8.2020, kuvaus "Potemkin Stairs in
@@ -442,6 +549,7 @@ export const FOKUSVIRTA_ODESSA = {
        */
       kuva: {
         tiedosto: 'Потьомкінські сходи 11.jpg',
+        lyhyt: 'Portaikko nousee satamasta kaupunkiin; yläpäässä herttua Richelieun patsas vuoden 1933 graniitista.',
         selite: 'Portaikko nousee satamasta kaupunkiin, ja sen yläpäässä '
           + 'seisoo herttua Richelieun patsas; kivi on vuoden 1933 '
           + 'graniittia, ei alkuperäistä.',
@@ -561,6 +669,10 @@ export const FOKUSVIRTA_ODESSA = {
         + 'nestemäistä lasia 1950-luvulla, ja vuonna 2007 valmistuneessa '
         + 'restauroinnissa sen alle ajettiin tuhat kahdeksansataa paalua. '
         + 'Kaupunki on korjannut tätä taloa pidempään kuin se odotti sitä.',
+      lahde: 'en-Wikipedia "Odesa Opera and Ballet Theatre" ja ru-Wikipedia '
+        + '"Одесский театр оперы и балета"; pelin oma tarkistettu aineisto '
+        + 'js/packs/kulttuuri-kategoriat.js (odessa/kaupunki). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Commons 30.8.2026: 3717×3808, image/jpeg, CC BY-SA 3.0, tekijä
        * Alex Levitsky & Dmitry Shamatazhi, kuvattu 29.1.2013, kuvaus
@@ -581,6 +693,7 @@ export const FOKUSVIRTA_ODESSA = {
        */
       kuva: {
         tiedosto: 'Театр оперы и балета. Зал.jpg',
+        lyhyt: 'Vuonna 1887 avatun oopperatalon hevosenkengän katsomo kantaa kuiskauksen viimeiselle riville.',
         selite: 'Vuonna 1887 avatun oopperatalon hevosenkengän muotoinen '
           + 'katsomo kantaa kuiskauksen lavalta viimeiselle riville asti.',
         lahde: 'Alex Levitsky & Dmitry Shamatazhi, Wikimedia Commons '
@@ -684,6 +797,8 @@ export const FOKUSVIRTA_ODESSA = {
         + 'kylpylä perustettiin vuonna 1834, eli isoisäsi käydessä se oli '
         + 'jo kolmenkymmenenyhdeksän vuoden ikäinen laitos. Vuoden 2022 '
         + 'alusta koko lahti ympäristöineen on ollut kansallispuistoa.',
+      lahde: 'uk-Wikipedia "Куяльницький лиман" ja ru-Wikipedia "Куяльницкий '
+        + 'лиман". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 2592×1944, image/jpeg, CC BY-SA 3.0, tekijä
        * Yuriy Kvach, kuvattu 5.8.2013, kuvaus "Солева пустеля у
@@ -701,6 +816,7 @@ export const FOKUSVIRTA_ODESSA = {
        */
       kuva: {
         tiedosto: 'Desert in the Kuyalnik Estuary valley.jpg',
+        lyhyt: 'Kuyalnykin lahden yläpää kuivuu kesäisin suolaerämaaksi, kaupungin tulonlähde keskiajalta asti.',
         selite: 'Kuyalnykin lahden yläpää kuivuu kesäisin suolaerämaaksi, '
           + 'ja pohjalle jäävä suola on ollut kaupungin tulonlähde '
           + 'keskiajalta asti.',
@@ -846,6 +962,7 @@ export const FOKUSVIRTA_ODESSA = {
      */
     kuva: {
       tiedosto: 'The Port Practique, Odessa, Russia, (i.e., Ukraine)-LCCN2001697471.jpg',
+      lyhyt: 'Odessan satama 1890-luvulla: laiturille rakennettu rautatie toi vaunut laivojen viereen.',
       selite: 'Odessan käytännön satama 1890-luvulla: laiturille rakennettu '
         + 'rautatie toi vaunut laivojen viereen, ja kuvan oma kuvateksti '
         + 'on painettu kahdella kielellä.',
@@ -857,72 +974,57 @@ export const FOKUSVIRTA_ODESSA = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * FABLE KATSELMOI: kohtaamisluonnos
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
    *
-   * TÄMÄ TEKSTI ON EHDOTUS EIKÄ KAANONIA. Hahmo, laattakysymys ja
-   * kohtaamisen oma repliikki ovat tarinakaaren paketissa
-   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, 'odessa'):
-   * lyhdynsytyttäjä Fjodor sytyttää portaikon lyhdyt joka ilta alhaalta
-   * ylös ja sammuttaa ne aamulla ylhäältä alas. Luonnos käyttää samaa
-   * hahmoa, koska kaupungilla on jo hänet — uusi nimi tekisi kaupunkiin
-   * kaksi eri vartijaa.
+   * HAHMO VAIHDETTU: lyhdynsytyttäjä Fjodor → torimyyjä Iryna
+   * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 19:05 UTC:
+   * *"Fjodor, lyhtylupaus ja 192 askelman visa poistuvat"*). Hahmo,
+   * laattakysymys ja kohtaamisen oma repliikki ovat tarinakaaren
+   * paketissa (js/tyohuone-kehitys-data.js KAARI_PAKETIT, 'odessa').
+   * Aikuinen tytär Solomiia on kuvan ja kaaren toinen ihminen; tämä
+   * kortti ei kertaa kummankaan repliikkiä.
    *
-   * MITÄ LUONNOS EI TEE: se ei kertaa Fjodorin repliikkiä, ei mainitse
-   * merimiessolmua eikä sytyttämättä jätettyä lyhtyä, koska ne ovat
-   * kaaren oma juoni ja aarteen palkinto (kätkö on juuri sen lyhdyn
-   * jalustassa). Se ei myöskään laske askelmia eikä selitä portaiden
-   * optista temppua: ne ovat laattakysymyksen vastaus ja faktarivi
-   * (ks. SPOILERIT, K6).
+   * MITÄ TÄMÄ KORTTI EI TEE: se ei mainitse kuittia, sen nurjaa puolta,
+   * kirjan takakannen taskua eikä vaakahuonetta — ne ovat kaaren oma
+   * juoni ja aarteen palkinto. Se ei myöskään selitä vapaasataman
+   * tullietua: se on nyt laattakysymyksen vastaus (SPOILERIT, K6), ja
+   * sen opettaminen kuuluu oppitunnille.
    *
-   * MITÄ LUONNOS YRITTÄÄ (docs/moduulit/tarinakaari.md, luku 3 ja 5):
-   *   - SUVUN JATKUMO ilman ostettua järjestelyä. Fjodor kiertää samaa
-   *     reittiä kuin isänsä ja tämän isä, ja syy jatkaa on suvun oma:
-   *     kierros on hänen työnsä, ei kenenkään toivomus, eikä siitä ole
-   *     koskaan maksettu ylimääräistä.
-   *   - ÄÄNIPROFIILI ON PUHELIAS. Aallon vartijoista Marseillen
-   *     Baptiste on epäuskoinen ja Odessan Fjodor on se, joka puhuu
-   *     liikaa ja mielellään — hän tuntee lyhtynsä äänestä ja kertoo
-   *     sen kysymättä.
-   *   - VARALLISUUSSÄÄNTÖ tarkistettu virke virkkeeltä: isoisä ei maksa
-   *     mitään, ei tilaa mitään eikä käske ketään.
-   *   - PORTINVARTIJAKYSYMYS johtaa kaaren omaan laattakysymykseen
-   *     paljastamatta sitä: Fjodor haluaa tietää, onko tulija laskenut
-   *     askelmat vai vain katsonut niitä. Lupaus on käsin kosketeltava
-   *     teko — hän raapaisee tulen — ja se lunastuu aarteessa.
+   * ÄÄNIPROFIILI: Iryna on se, joka HÄMMÄSTYY ITSEKIN. Fjodor oli
+   * puhelias kertoja; Iryna on ammattilainen, joka ei usko tarinaa
+   * mutta uskoo paperia — ja yllättyy siitä, mitä paperissa lukee.
    *
-   * KUVAA EI OLE (aallon 4C rajaus). Kortti rakennetaan ilman kuvaa
-   * aivan kuten Marseillessa, Sevillassa ja Amsterdamissa.
+   * VARALLISUUSSÄÄNTÖ tarkistettu virke virkkeeltä: isoisä ei maksa
+   * mitään, ei tilaa mitään eikä käske ketään. Irynan syy auttaa on
+   * hänen oma ammattiylpeytensä.
    */
   kohtaaminen: {
-    hahmo: 'Lyhdynsytyttäjä Fjodor',
-    nappi: 'Tapaa lyhdynsytyttäjä',
+    hahmo: 'Torimyyjä Iryna',
+    nappi: 'Tapaa Iryna',
     /*
      * VARMISTUSKYSYMYS (omistajan pelitestipalaute v1119): lause on
      * datassa, koska suomen genetiivi ei taivu koneellisesti jokaisesta
      * nimestä.
      */
-    varmistus: 'Haluatko varmasti tavata Fjodorin juuri nyt?',
+    varmistus: 'Haluatko varmasti tavata Irynan juuri nyt?',
     /*
      * VIHJELINKIN OSIO on kaupunkilehden osion id (js/packs/
      * kulttuuri-kategoriat.js): Odessan lehdessä on kaksi osiota,
-     * 'kaupunki' ("Odessa") ja 'arki' ("Arki ja tavat"). Fjodorin
-     * kysymys koskee portaikkoa, ja sen tuki on kaupunkisivun puolella —
-     * lehden kansi ja kaupunkisivu ovat ne, joissa portaikko esiintyy.
-     * Rivi kertoo suunnan, ei vastausta.
+     * 'kaupunki' ("Odessa") ja 'arki' ("Arki ja tavat"). Irynan kysymys
+     * koskee vapaasatamaa, ja sen tuki on kaupunkisivun puolella —
+     * "Matkailijan Odessa" -artikkelin jakso "Neljäkymmentä vuotta
+     * vapaasatamana" on siellä. Rivi kertoo suunnan, ei vastausta.
      */
     vihjeOsio: 'kaupunki',
-    teksti: 'Fjodor kiertää portaikon lyhdyt joka ilta alhaalta ylös ja '
-      + 'sammuttaa ne aamulla ylhäältä alas, samaa reittiä kuin hänen '
-      + 'isänsä ja tämän isä ennen häntä. Hän puhuu paljon ja mielellään: '
-      + 'jokaisella lyhdyllä on hänen mukaansa oma äänensä, ja hän '
-      + 'väittää erottavansa ne toisistaan pimeässä pelkästä kolahduksesta. '
-      + 'Kierrosta ei ole kukaan tilannut suvulta eikä siitä ole koskaan '
-      + 'maksettu ylimääräistä — se vain jatkuu, koska Fjodor pitää sitä '
-      + 'työnään ja koska joku nousee portaat aina myöhään. Vieraita hän '
-      + 'kestää hyvin. Sen sijaan hän ei pidä siitä, että portaikosta '
-      + 'puhutaan kuin se olisi elokuvan lavaste. Ennen kuin hän raapaisee '
-      + 'tulen, hän haluaa kuulla, onko tulija laskenut askelmat vai vain '
-      + 'katsonut niitä.',
+    teksti: 'Iryna punnitsee samoilla vaaoilla kuin hänen äitinsä ja '
+      + 'tuntee tavaran painon kädestä ennen kuin osoitin pysähtyy. '
+      + 'Tarinoita hän kuulee torilla joka päivä eikä usko niistä '
+      + 'yhtäkään, mutta vanhaa paperia hän käsittelee huolella: '
+      + 'kaupankäynnin merkinnät ovat hänen ammattinsa, ja hän lukee '
+      + 'niitä mielellään ääneen. Tytär Solomiia laskee laatikot ja '
+      + 'nauraa äitinsä puheelle. Ennen kuin Iryna lukee vieraan '
+      + 'paperin loppuun, hän haluaa tietää, ymmärtääkö tulija, '
+      + 'millaisessa satamassa se on kirjoitettu.',
   },
 
   /*
@@ -932,44 +1034,47 @@ export const FOKUSVIRTA_ODESSA = {
    */
 
   /*
-   * KOHTAAMISPAIKKA: PORTAIKON PUOLIVÄLIN TASANNE. Fjodor on
-   * lyhdynsytyttäjä, ja tarinakaaren paketti sijoittaa hänet
-   * nimenomaan tasanteelle ("Tasanteella Fjodor nojaa
-   * lyhtytankoonsa"; "Puolivälin tasanteella lyhtypylvääseen oli
-   * sidottu köydenpätkä").
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
    *
-   * 46,48917 N / 30,74333 E — en-Wikipedia "Potemkin Stairs",
-   * prop=coordinates (haettu 30.8.2026). Muunnos on sama kaava ja samat
+   * KOHTAAMISPAIKKA VAIHDETTU: PORTAIKON PUOLIVÄLIN TASANNE → PRIVOZIN
+   * TORI. Vanha piste kuului lyhdynsytyttäjä Fjodorille, jonka koko
+   * kertomus poistui; uusi kaari sijoittaa Irynan ja Solomiian torin
+   * katoksen alle, ja kätkö löytyy torin vanhan vaakahuoneen kohdalta.
+   * Vaakahuone on kaaren fiktiota, joten pistettä EI ole ankkuroitu
+   * siihen vaan itse toriin. Privoz on kuvaputken ehdotuksessa
+   * paikkaehdokas; myyntiympäristö ja nykyinen pääsy varmistetaan
+   * kuvausvaiheessa.
+   *
+   * 46,46972222 N / 30,7325 E — uk-Wikipedia "Привоз (Одеса)",
+   * prop=coordinates (haettu 5.9.2026). Muunnos on sama kaava ja samat
    * vakiot kuin fokuskohteilla: maailmankartalla Millerin lieriö
    * LEVEYS 12000 / LON0 −175 / POHJOINEN 76 (tools/fokuskartta/piirto.js
    * laudanProjektio), Euroopan laudalla x = (lon + 11) × 19,2 ja
    * y = (72 − lat) × 26,3.
    *
-   * LASKU (ajettu tools/fokuskartta/piirto.js:n omalla kaavalla):
-   *   maailmankartta  x = ((30,74333 − (−175)) mod 360) × (12000/360)
-   *                     = 205,74333 × 33,3333… = 6858,1
-   *                   y = (millerY(46,48917) − millerY(76)) × 12000/2π
-   *                     = 1539,9
-   *   europe          x = (30,74333 + 11) × 19,2 = 801,5
-   *                   y = (72 − 46,48917) × 26,3 = 670,9
+   * LASKU (ajettu laudanProjektion omalla kaavalla; sama ajo toisti
+   * vanhan portaikkopisteen lukemat 6858,1 / 1539,9 ja 801,5 / 670,9,
+   * eli kaava on varmasti sama kuin tässä tiedostossa ennenkin):
+   *   maailmankartta  x = ((30,7325 − (−175)) mod 360) × (12000/360)
+   *                     = 205,7325 × 33,3333… = 6857,8
+   *                   y = (millerY(76) − millerY(46,46972222)) × 12000/2π
+   *                     = 1540,8
+   *   europe          x = (30,7325 + 11) × 19,2 = 801,3
+   *                   y = (72 − 46,46972222) × 26,3 = 671,4
    *
    * TARKISTUS ODESSAN LAATTAA VASTEN. Laatta on Euroopan laudalla
    * 800 / 669 (js/packs/europe.js) ja maailmankartalla 6855,6 / 1536,9
-   * (js/packs/maailmankartta.js). Portaikko on kaupungin laatan
-   * vieressä molemmilla laudoilla — Euroopan laudalla noin 2,4 ja
-   * maailmankartalla noin 3,9 yksikön päässä — eli selvästi
-   * js/fokuspiste.js:n PISTE_ERO_MIN -rajan (14) sisällä, ja piirtopuoli
-   * siirtää merkin itse koilliseen laatan vierestä. Sama tilanne kuin
-   * Tukholmassa ja Marseillessa, ja se on oikein: portaikko ON
-   * kaupungin keskusta, eikä pistettä ole vedetty kauemmas vain siksi,
-   * että se erottuisi. Kumpaakaan lukua ei ole vedetty laatan mukaan:
-   * piste on laskettu maastoa vasten kuten muissakin paketeissa.
+   * (js/packs/maailmankartta.js). Tori on laatan vieressä molemmilla
+   * laudoilla — Euroopan laudalla noin 2,7 ja maailmankartalla noin 4,4
+   * yksikön päässä — eli selvästi js/fokuspiste.js:n PISTE_ERO_MIN
+   * -rajan (14) sisällä, ja piirtopuoli siirtää merkin itse laatan
+   * vierestä. Lukuja ei ole vedetty laatan mukaan.
    */
   kohtaamispiste: {
-    nimi: 'Portaikon puolivälin tasanne',
+    nimi: 'Privozin tori',
     laudat: {
-      maailmankartta: { x: 6858.1, y: 1539.9 },
-      europe: { x: 801.5, y: 670.9 },
+      maailmankartta: { x: 6857.8, y: 1540.8 },
+      europe: { x: 801.3, y: 671.4 },
     },
   },
 

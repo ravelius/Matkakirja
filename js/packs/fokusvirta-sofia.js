@@ -156,13 +156,18 @@ const SAHKE_SOFIA = {
 
   hahmo: 'Pöllöltä, jostain maan alta',
 
+  /*
+   * SÄHKE ON LYHYT JA KYSYMYS ENSIN (omistaja 2.9.2026 ilta: "Tässä
+   * tehtävässä on vaikea ymmärtää mitä tässä kysytään. Ja vähän turhan
+   * pitkä teksti lukea joka tapauksessa"): enintään viisi riviä,
+   * kysymys heti tervehdyksen jälkeen, sitten mitä vastataan ja mistä
+   * vastaus löytyy. Ei kehyskertomusta sähkeessä — se on Livian
+   * saatteessa, ja sekin on kaksi virkettä.
+   */
   sahke: 'LIVIALLE STOP\n'
-    + 'OLEN KAIVANUT SOFIAN ALLA KOLME PÄIVÄÄ STOP\n'
-    + 'TÄÄLTÄ LÖYTYY KAIKKEA MUTTA EI SITÄ MITÄ ETSIN STOP\n'
-    + 'ENNEN KUIN KERRON PAIKAN HALUAN TIETÄÄ ETTÄ VIERAASI OSAA LUKEA KARTTAA STOP\n'
-    + 'MISSÄ BULGARIASSA NOUSI MAASTA MAAILMAN VANHIN KULTA STOP\n'
-    + 'JA MINÄ VUONNA SE LÖYTYI STOP\n'
-    + 'KOHDE ON KARTALLE MERKITTY STOP\n'
+    + 'MISSÄ BULGARIASSA LÖYTYI MAAILMAN VANHIN KULTA JA MINÄ VUONNA STOP\n'
+    + 'VASTAA KOHDE JA VUOSI STOP\n'
+    + 'PAIKKA ON KARTAN KOHTEISSA STOP\n'
     + 'PÖLLÖ STOP',
 
   /*
@@ -173,14 +178,16 @@ const SAHKE_SOFIA = {
    * SAATE SITOO TEHTÄVÄN AARREMERKINTÄÄN kertomatta merkintää:
    * isoisä punnitsi lapiota ja lähti, pöllö osti lapion.
    */
-  johdanto: 'No. Isoisäsi seisoi tässä samassa kaupungissa ja mietti '
-    + 'lapion ostamista, eikä ostanut. Pöllö osti. Nyt se istuu jossain '
-    + 'kuopassa ja vaatii tunnussanan ennen kuin kertoo, mihin se on '
-    + 'päätynyt.\n\n'
-    + 'Kaksi aukkoa: yksi kohde Bulgarian luettelosta ja yksi vuosiluku. '
-    + 'Kumpikin lukee kartan omissa kohteissa — ne merkit, joita sinä '
-    + 'olet napautellut auki. Väärä vastaus ei sulje mitään, mut se syö '
-    + 'palkkiota ja minä lennän turhaan.',
+  /*
+   * KUPLINA, EI YHTENÄ SEINÄNÄ (omistajan hyväksymä teksti 7.9.2026,
+   * Fablen ehdotus): jokainen alkio on OMA KUPLA ja oma äänitiedosto
+   * (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET). Sanamuotoja ei muotoilla
+   * uusiksi — ne ovat omistajan hyväksymää kaanonia sellaisinaan.
+   */
+  johdanto: [
+    'Pöllö istuu kuopassa eikä kerro löytöään ennen tunnussanaa.',
+    'Vastaa kaksi aukkoa: kartan kohde Bulgariasta ja vuosiluku.',
+  ],
 
   hakemistoMaa: 'BGR',
 
@@ -224,28 +231,50 @@ const SAHKE_SOFIA = {
   lahetaVapaa: 'Lähetä omin sanoin',
   vaarinSahke: 'EI TÄSMÄÄ STOP TARKISTA KOHDE JA VUOSILUKU STOP',
 
-  vinkki: 'Kato, minä sanon sen nyt suoraan: se kohde on kartalla '
-    + 'Mustanmeren rannalla, ja sen kortin otsikkona lukee maailman '
-    + 'vanhin kulta. Vuosiluku on saman kortin ensimmäisessä '
-    + 'kappaleessa.',
+  /*
+   * LIVIAN VINKKI (Fable 3.9.2026). Sama teksti palvelee kahta tietä:
+   * se tulee itsestään kahden ohilyönnin jälkeen JA se on se, minkä
+   * kokonainen pulla ostaa (Raamattu, SÄHKETEHTÄVÄ LEHTIMÄISEKSI JA
+   * PULLA VINKIKSI). Vinkki kertoo MISTÄ vastaus löytyy — se ei sano
+   * kohteen nimeä eikä vuosilukua, joten ostajakin kaivaa itse.
+   */
+  vinkki: [
+    'Se kulta ei ole Sofiassa vaan Mustanmeren rannalla.',
+    'Katso rannikkokaupungin kortti. Vuosiluku on siinä, seitkytluvulla.',
+  ],
+
+  /*
+   * PUOLIKAS PULLA = SUORA LINKKI (omistaja 3.9.2026). Livia ei kerro
+   * vastausta vaan avaa sen kortin, jolta se luetaan — tässä kartan
+   * kohde 'varna' Bulgarian luettelosta (js/packs/fokuskohteet-bgr.js).
+   * Saate on lyhyt, koska palvelus on puolikas.
+   */
+  linkkiSaate: 'No. Puolikas pulla, puolikas palvelus. Tossa on suora '
+    + 'linkki, lue itse.',
+  vastauslinkki: { tyyppi: 'kohde', maa: 'BGR', kohde: 'varna' },
 
   vastaussahke: 'PÖLLÖLLE STOP\nTUNNUSSANA TÄSMÄÄ STOP\nLIVIA TULEE STOP',
-  oikein: 'Se on se. Yli kolmetuhatta kultaesinettä yhdestä '
-    + 'hautausmaasta, ja ne olivat maassa ennen kuin kukaan oli keksinyt '
-    + 'kirjoittamista. Minä vien tämän pöllölle nyt heti. Älä sinä jää '
-    + 'tähän seisomaan, minä palaan kyllä.',
+  // Lyhennetty ja jaettu kahteen kuplaan 7.9.2026 (omistajan hyväksymä
+  // teksti): kumpikin kupla on oma äänitiedostonsa, ja sähkelento
+  // odottaa niiden yhteenlasketun lukuajan (js/fokusvirta.js
+  // aloitaSahkelento).
+  oikein: [
+    'Se on se. Yli kolmetuhatta kultaesinettä, ennen kuin kukaan osasi kirjoittaa.',
+    'Minä vien tämän pöllölle. Palaan kyllä.',
+  ],
   fakta: 'Varnan nekropoli löytyi 1974, ja siitä on kaivettu esiin yli '
     + '3 000 kultaesinettä. Löytö on ajoitettu vuosille 4600–4200 eaa., '
     + 'eli se on maailman vanhin tunnettu kulta-aarre.',
   lento: 'Anna Livian mennä',
 
   lahetetty: 'SÄHKE LÄHETETTY STOP\nODOTA VASTAUSTA STOP',
-  odotus: 'Livia on matkalla. Se palaa kun se palaa — ja sillä välin '
-    + 'sinä saat tehdä mitä huvittaa.',
+  odotus: 'Livia on matkalla. Se palaa kun se palaa — sillä välin sinä '
+    + 'saat tehdä mitä huvittaa.',
 
-  paluu: 'Perillä oltiin. Pöllö oli kuoppansa pohjalla mullassa ja '
-    + 'sanoi, että lapio oli hyvä sijoitus. Sitten se kertoi paikan. Se '
-    + 'on tässä, sinun jalkojesi alla — katso alas.',
+  paluu: [
+    'Perillä oltiin. Pöllö oli kuopan pohjalla mullassa: lapio oli hyvä sijoitus.',
+    'Sitten se kertoi paikan: se on tässä, jalkojesi alla. Katso alas.',
+  ],
 };
 
 export const FOKUSVIRTA_SOFIA = {
@@ -253,12 +282,26 @@ export const FOKUSVIRTA_SOFIA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 26d68fc28ff609aa856198a12e8a0d81f619c7ec210579a0d4ab0d8d02940f67. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sofia-r20260909-paper-v4.jpg",
+      lyhyt: "Sofia, 1873. Maa oli ehtinyt lämmittää veden.",
+      selite: 'Nainen täyttää kannua lämpimästä lähteestä, kun minareetti ja Vitošan rinne jäävät taakse. Majataloni kylmä pesuvesi oli maksanut enemmän, joten matkailun epäjohdonmukaisuus oli valmis.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://visitsofia.bg/catalog/en/discover_sofiaEN/Discover_SofiaEN.pdf"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sofia-r20260911-paper2-v1.jpg",
+      lyhyt: "Sofia, 1873. Majatalon kylmä vesi sai vuoren näyttämään viisaammalta.",
+      selite: 'Kokeilin majatalon pesuvettä kädellä ja katsoin avoimesta ikkunasta Vitošan suuntaan. Kaupungin lämmin lähde oli jälleen järjestänyt mukavuudet väärään osoitteeseen.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://visitsofia.bg/catalog/en/discover_sofiaEN/Discover_SofiaEN.pdf"],
+    },
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
-    paikkarivi: 'Sofia, elokuussa 1873. Helteistä; tomu ei laskeudu.',
-    teksti: 'Sofiassa kukaan ei sano ääneen sen miehen nimeä, joka '
-      + 'hirtettiin täällä helmikuussa — mutta majatalon isäntä jätti '
-      + 'ikkunalaudalle kynttilän palamaan. Kysyin kenelle. Hän sanoi: '
-      + '"Sille, jonka hautaa ei kukaan tunne."',
+    paikkarivi: 'Sofia, elokuussa 1873. Helteistä; tomu ei laskeudu; puntari '
+      + 'korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 336 merkkiä (yläraja 400). */
+    teksti: "Sofiassa maa lämmitti veden ilman halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. Palasin hakemaan oman astian. Majatalon isäntä ei ilahtunut, kun neuvoin muitakin lähtemään lähteelle.",
     /*
      * Luenta generoitu 25.8.2026 samalla reseptillä kuin muut
      * matkakirjaluennat (Viisas Kertoja, eleven_v3, stability 0.5).
@@ -269,14 +312,66 @@ export const FOKUSVIRTA_SOFIA = {
      * tuntematon, Category:Vasil Levski. Merkintä ei mainitse nimeä —
      * kuva mainitsee, ja juuri siitä syntyy vaiheen 2 jatko.
      */
-    luenta: '[curious] Sofiassa kukaan ei sano ääneen sen miehen nimeä, '
-      + 'joka hirtettiin täällä helmikuussa — mutta majatalon isäntä '
-      + 'jätti ikkunalaudalle kynttilän palamaan. [whispers] Kysyin '
-      + 'kenelle. [softly] Hän sanoi: Sille, jonka hautaa ei kukaan '
-      + 'tunne.',
+    /*
+     * LUENTA = RUUTUTEKSTI SANASTA SANAAN, kolme tunnetagia.
+     * ÄÄNITE ON VANHENTUNUT (8.9.2026): assets/audio/puhe-fokus-
+     * matkakirja-sofia.mp3 on generoitu 25.8.2026 edellisestä tekstistä
+     * ja on generoitava uudelleen tästä luennasta (sama tilanne kuin
+     * Ateenassa) ennen kuin kertoja lukee saman kuin ruudulla lukee.
+     */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Lähteellä nainen täytti kannua" ja "Minareetin
+     * takana kohosi Vitoša" (havainnot, pulu kuuntelee).
+     */
+    reaktiot: [
+  {
+    "id": "sofia.r1",
+    "ankkuri": "maa lämmitti veden ilman halkoja",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "sofia.r2",
+    "ankkuri": "olin maksanut majatalossa kylmästä pesuvedestä",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "sofia.r3",
+    "ankkuri": "Palasin hakemaan oman astian",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "sofia.r4",
+    "ankkuri": "Majatalon isäntä ei ilahtunut",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Sofiassa maa lämmitti veden ilman halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. Palasin hakemaan oman astian. [softly] Majatalon isäntä ei ilahtunut, kun neuvoin muitakin lähtemään lähteelle.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-sofia.mp3',
     kuva: {
       tiedosto: 'BASA-713K-1-52-4-Vasil Levski.JPG',
+      lyhyt: 'Vasil Levski, Vapauden apostoli, hirtettiin Sofiassa 18. helmikuuta 1873.',
       selite: 'Vasil Levski. Bulgarialaiset kutsuvat häntä Vapauden '
         + 'apostoliksi; hänet hirtettiin Sofiassa 18. helmikuuta 1873.',
       lahde: 'Tuntematon kuvaaja, Bulgarian kansallinen arkisto, '
@@ -299,6 +394,24 @@ export const FOKUSVIRTA_SOFIA = {
    * pöllön sanamuodon — päätoimittaja päättää, palautetaanko se.
    */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-sofia-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-sofia-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Sofia: kuuma vesi, viileä harkinta.',
+        selite: 'Sofian lähteillä vettä lasketaan yhä mukana tuotuihin astioihin, vaikka muovipulloja on enemmän kuin isoisän kannuja. Minä pysyin viileällä kivellä ja jätin lämpötilan kokeilemisen ihmisille.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.sofiacityguide.com/visit-the-sofia-mineral-springs/',
+        ],
+      },
+    ],
     /*
      * LIVIAN MAADOITUS — VÄLITTÄJÄOTE (Raamattu v1262 "LIVIA
      * AIKASIIRTYMÄN VÄLITTÄJÄNÄ — PARIPERIAATE", omistaja 28.8.2026
@@ -340,17 +453,52 @@ export const FOKUSVIRTA_SOFIA = {
      * puhekielisen lopun, joten kumpaankin suuntaan lipsuminen kaataa
      * savukkeen.
      */
-    maadoitus: 'Kääk. No johan oli hurja juttu — luin sen kahdesti. '
-      + 'Sitten minä katsoin vuosilukua: helmikuu 1873, siitä on yli '
-      + 'sataviisikymmentä vuotta. Laki oli silloin ihan eri, ja '
-      + 'kuolemantuomioita jaettiin melkein joka maassa. Sofiaakin '
-      + 'komennettiin toisesta pääkaupungista, ja omansa siitä tuli vasta '
-      + 'kuusi vuotta myöhemmin. Ei se juttua pienennä. Mut kyllä sen '
-      + 'kestää lukea, kun muistaa miten kaukana se on.',
-    teksti: 'Hirttopaikalla seisoo nyt kolmentoista metrin '
-      + 'graniittipatsas, ja sitä hautaa etsitään vieläkin. Etsintöjä on '
-      + 'jatkunut sataviisikymmentä vuotta — se kynttilä ikkunalla oli '
-      + 'lähempänä totuutta kuin yksikään lapio.',
+    /*
+     * LYHENNETTY PUHETTA VARTEN (omistaja 6.9.2026: Sofian repliikit
+     * lyhennetään ennen äänen generointia). Kolmesta faktasta jäi kaksi
+     * (vuosiluku ja etäisyys; kuolemantuomiot); Sofian pääkaupunkiasia
+     * on täkyissä. Savukkeen ja testin vartioimat kohdat säilyvät:
+     * "Kääk", "hurja juttu", 1873, "sataviisikymmentä vuotta" auki ja
+     * "Mut kyllä sen kestää lukea" lopussa.
+     */
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
+    /*
+     * TOINEN "Kääk." POIS (omistaja 8.9.2026, sanatarkasti: *"ota
+     * jälkimmäinen kääk pois pulun sofian tekstissä, muuten se tulee
+     * kaksi kertaa peräkkäin"*). Välihuuto luennan aikana on jo "Kääk.",
+     * ja kommentti tuli heti sen perään samalla sanalla.
+     *
+     * ÄÄNITE ODOTTAA AJOA: ämpärin `livia-sofia-3.mp3` on generoitu
+     * vanhalla tekstillä, joten tiivistevartio (js/liviapuhe.js
+     * livianAaniAjanTasalla) vaientaa sen kunnes ääni generoidaan
+     * uudestaan. Kupla näkyy ja etenee kuten ennen.
+     */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Sofian lähteeltä haetaan yhä kuumaa vettä. Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. Arvokkuus palasi vasta seuraavalla räystäällä."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.45 },
     /*
      * Commons 25.8.2026: 1000×667, CC BY-SA 3.0, Edal Anton Lefterov,
      * kuvattu 30.4.2011, kuvaus "Vasil Levski Boulevard with Monument to
@@ -359,6 +507,7 @@ export const FOKUSVIRTA_SOFIA = {
      */
     kuva: {
       tiedosto: 'Monument-to-Vasil-Levski.jpg',
+      lyhyt: 'Vasil Levskin muistomerkki seisoo teloituspaikalla, 13 metriä korkea balkanilaista graniittia.',
       selite: 'Vasil Levskin muistomerkki Sofiassa. Se seisoo '
         + 'teloituspaikalla ja on 13 metriä korkea, harmaata balkanilaista '
         + 'graniittia.',
@@ -403,6 +552,7 @@ export const FOKUSVIRTA_SOFIA = {
         + 'talvena kuin isoisäsi sulki matkalaukkunsa Lontoossa. Sillä '
         + 'kohdalla seisoo nyt kolmentoista metrin muistomerkki harmaata '
         + 'balkanilaista graniittia. Hautaa ei ole löydetty.',
+      lahde: 'en-Wikipedia "Vasil Levski". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 509×344, CC0, "unknown photographers, 1879",
        * kuvaus "Old Turkish dungeon where Vasil Levski was kept prisoner,
@@ -432,7 +582,19 @@ export const FOKUSVIRTA_SOFIA = {
       id: 'areena',
       nappi: 'Hotelli, jonka lattian alla taisteltiin',
       otsikko: 'Serdican amfiteatteri',
-      /* Faktat: takyt-sofia.md, täky 6 (merkitty VARMAKSI). */
+      /*
+       * Faktat: takyt-sofia.md, täky 6 (merkitty VARMAKSI).
+       *
+       * TYÖNJAKO TÄKYNOSTON KANSSA (1.9.2026, nostojen sisältöaudit):
+       * tämä syvennys on PIDEMPI TARINA ja kertoo LÖYTYMISEN — sen
+       * avaus (hotellin perustuskuoppa 2004) on myös alempana olevan
+       * minivisan vastaus, joten sitä ei ole muutettu. Saman aiheen
+       * täkynosto (`takynostot`, tunnus 'areena') kirjoitettiin sen
+       * sijaan uusiksi: sen avaus oli tähän asti sanasta sanaan tämä
+       * sama virke, ja nyt se aloittaa vuoden 1919 mainoslaatasta ja
+       * kertoo, mitä areena oli. Kaksi korttia, kaksi näkökulmaa,
+       * yksi piste kartalla.
+       */
       teksti: 'Vuonna 2004 kaivettiin Sofian keskustassa hotellin '
         + 'perustuksia, ja maasta paljastui roomalainen amfiteatteri — '
         + 'Bulgarian suurin ja yksi Rooman valtakunnan itäosan '
@@ -444,6 +606,7 @@ export const FOKUSVIRTA_SOFIA = {
         + 'löytyi kivilaatta, joka aikoinaan mainosti täkäläisiä '
         + 'taisteluja: siihen on kuvattu krokotiileja, karhuja, härkiä ja '
         + 'villikissoja.',
+      lahde: 'en-Wikipedia "Amphitheatre of Serdica". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 1185×822, CC BY-SA 4.0, Epaunov72, kuvaus
        * "General view of the Amphitheatre of Serdica, from north."
@@ -493,6 +656,7 @@ export const FOKUSVIRTA_SOFIA = {
         + '2000, ja se on nimetty kaupungin mukaan — kaupunki taas on '
         + 'nimetty Pyhän Sofian kirkosta, jonka nimi tarkoittaa kreikaksi '
         + 'Pyhää Viisautta. Minulla ei ole tähän mitään lisättävää.',
+      lahde: 'en-Wikipedia "Statue of Sofia". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 2356×3141, CC BY-SA 4.0, Matti Blume, kuvattu
        * 11.11.2018, kuvaus "Sofia statue, Sofia, Bulgaria". Sama tiedosto,
@@ -501,6 +665,7 @@ export const FOKUSVIRTA_SOFIA = {
        */
       kuva: {
         tiedosto: 'Sofia statue, Sofia (P1070773).jpg',
+        lyhyt: 'Sofia-patsas Nezavisimost-aukiolla on kahdeksan metriä korkea kuparihahmo 16 metrin jalustalla.',
         selite: 'Sofia-patsas Nezavisimost-aukiolla. Kuparinen hahmo on '
           + 'kahdeksan metriä korkea ja seisoo 16 metrin jalustalla.',
         lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',
@@ -537,6 +702,7 @@ export const FOKUSVIRTA_SOFIA = {
         + 'lahjoitti eläintarhalle uuden maa-alueen entisen '
         + 'kasvitieteellisen puutarhan paikalta. Sinne se jäi, runsaan '
         + 'neljän kilometrin päähän keskustasta etelään.',
+      lahde: 'en-Wikipedia "Sofia Zoo". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 4160×3120, CC BY-SA 4.0, tekijä Κλυτίος,
        * kuvattu 24.6.2025, kuvaus "Азиатски слон в софийската
@@ -814,25 +980,48 @@ export const FOKUSVIRTA_SOFIA = {
         + 'taistelivat krokotiilit ja karhut',
       /*
        * LUNASTUS KAHTENA KAPPALEENA (omistajan päätös 28.8.2026:
-       * *"Lisäksi vähän enemmän juttua"*). Kappaleet ovat kertojan
-       * yleiskieltä, eivät puhekieltä, ja jokainen väite on täkyn 6
-       * lähteestä (docs/mantereet-tyoaineisto/takyt-sofia.md, VARMA;
-       * en-Wikipedia "Amphitheatre of Serdica") — sama faktapohja kuin
-       * tämän tiedoston täyllä 'areena'. Uusia väittämiä ei ole.
+       * *"Lisäksi vähän enemmän juttua"*).
+       *
+       * AVAUS KIRJOITETTU UUSIKSI 1.9.2026 (nostojen sisältöaudit).
+       * Ensimmäinen kappale oli sanasta sanaan sama teksti kuin tämän
+       * tiedoston syvennystäyn 'areena' avaus — kaksi korttia samassa
+       * pisteessä, sama aihe, sama virke. Kumpaakaan ei poistettu,
+       * vaan TYÖNJAKO SELVITETTIIN: syvennys on pidempi tarina ja
+       * kertoo löytymisen (hotellin perustuskuoppa 2004, ja sen visa
+       * kysyy juuri sitä), tämä nosto on kartan täky ja kertoo, mitä
+       * areena oli — alkaen laatasta, joka mainosti sitä kahdeksankymmentä-
+       * viisi vuotta ennen kuin itse rakennus löytyi.
+       *
+       * Jokainen väite on samasta lähteestä kuin ennenkin (en-Wikipedia
+       * "Amphitheatre of Serdica", osiot "History", "Discovery" ja
+       * "Physical description"; faktapohja docs/mantereet-tyoaineisto/
+       * takyt-sofia.md, täky 6, VARMA). Uutta aineistoa ei ole haettu
+       * muualta; osiot vain luettiin loppuun asti.
        */
       lunastus: [
-        'Vuonna 2004 kaivettiin Sofian keskustassa hotellin perustuksia, '
-          + 'ja maasta paljastui roomalainen amfiteatteri — Bulgarian '
-          + 'suurin ja yksi Rooman valtakunnan itäosan suurimmista. Se oli '
-          + 'rakennettu 300–400-luvulla vanhan teatterin päälle, jonka '
-          + 'gootit olivat polttaneet vuonna 268.',
-        'Vuonna 1919 löytyi kivilaatta, joka aikoinaan mainosti täkäläisiä '
-          + 'taisteluja: siihen on kuvattu krokotiileja, karhuja, härkiä ja '
-          + 'villikissoja. Löytöä ei peitetty umpeen. Kuudesosa areenasta '
-          + 'säilytettiin ja liitettiin hotellin pohjakerrokseen, ja sinne '
-          + 'kävelee päivisin sisään kuka tahansa maksutta katsomaan '
-          + 'kolikko- ja keramiikkanäyttelyä.',
+        'Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, johon '
+          + 'oli kuvattu amfiteatterin julkisivu ja sen ohjelma: '
+          + 'krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli '
+          + 'aikoinaan seissyt roomalaisen Serdican portilla '
+          + 'mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli '
+          + 'täytynyt olla areena — mutta ei sitä, missä. Vastausta '
+          + 'odotettiin kahdeksankymmentäviisi vuotta.',
+        'Kun rakennus lopulta löytyi, laatan lupaus osoittautui '
+          + 'kirjaimelliseksi. Maasta nousivat portit liukuovineen, '
+          + 'joista eläimet päästettiin kentälle, karhun ja villisian '
+          + 'luita, satoja pronssikolikoita ja savitiiliä, joihin oli '
+          + 'painunut vuohien, koirien ja kissojen tassunjälkiä. '
+          + 'Katsomoon oli mitoitettu yli kahdellekymmenelletuhannelle '
+          + 'ihmiselle, ja areena oli noussut kahdessa vaiheessa '
+          + 'Diocletianuksen ja Konstantinus Suuren aikana kaupunginmuurin '
+          + 'ulkopuolelle. Käytössä se ehti olla alle sadan vuoden ajan: '
+          + '400-luvulla se hylättiin, ja seuraavalla vuosisadalla '
+          + 'tulijat rakensivat kotinsa keskelle kenttää. Loppu on '
+          + 'hotellin pohjakerroksessa — aukko lattiassa, ja sen alla se '
+          + 'kuudesosa, joka säilyi.',
       ],
+      lahde: 'en-Wikipedia "Amphitheatre of Serdica", osiot "History", "Discovery" '
+        + 'ja "Physical description" (tarkistettu 1.9.2026).',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (omistajan päätös 28.8.2026). Sama sarja
        * kuin assets/kartat/ihmeet/: repon oma generoitu havainnekuva,

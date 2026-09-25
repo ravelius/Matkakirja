@@ -1,0 +1,212 @@
+{
+  "versio": 2,
+  "kaupunki": "dubrovnik",
+  "teksti": "Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.",
+  "tekstiSha256": "451813de50984d4272582eac62d4df7ba5292ac952862c514e8cda98770a2849",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-dubrovnik.mp3",
+    "versio": 2,
+    "tavut": 401702,
+    "sha256": "ad07b0c41047938f5d5b45789ecdd8e9ef1992d346d7cb57b80315b6e1253cee"
+  },
+  "kesto": 25020,
+  "sanat": [
+    {
+      "sana": "Ragusan",
+      "alku": 140,
+      "loppu": 660
+    },
+    {
+      "sana": "itäportin",
+      "alku": 740,
+      "loppu": 1320
+    },
+    {
+      "sana": "vieressä",
+      "alku": 1360,
+      "loppu": 1880
+    },
+    {
+      "sana": "katselin",
+      "alku": 1920,
+      "loppu": 2400
+    },
+    {
+      "sana": "vanhoja",
+      "alku": 2440,
+      "loppu": 2860
+    },
+    {
+      "sana": "karanteenirakennuksia",
+      "alku": 2900,
+      "loppu": 4360
+    },
+    {
+      "sana": "Niissä",
+      "alku": 5720,
+      "loppu": 5980
+    },
+    {
+      "sana": "merimiehet",
+      "alku": 6020,
+      "loppu": 6580
+    },
+    {
+      "sana": "olivat",
+      "alku": 6620,
+      "loppu": 6920
+    },
+    {
+      "sana": "joutuneet",
+      "alku": 6960,
+      "loppu": 7440
+    },
+    {
+      "sana": "odottamaan",
+      "alku": 7500,
+      "loppu": 8080
+    },
+    {
+      "sana": "etteivät",
+      "alku": 8420,
+      "loppu": 8840
+    },
+    {
+      "sana": "toisi",
+      "alku": 8880,
+      "loppu": 9180
+    },
+    {
+      "sana": "tautia",
+      "alku": 9220,
+      "loppu": 9640
+    },
+    {
+      "sana": "kaupunkiin",
+      "alku": 9700,
+      "loppu": 10380
+    },
+    {
+      "sana": "Olin",
+      "alku": 12380,
+      "loppu": 12560
+    },
+    {
+      "sana": "aina",
+      "alku": 12620,
+      "loppu": 12800
+    },
+    {
+      "sana": "pitänyt",
+      "alku": 12840,
+      "loppu": 13180
+    },
+    {
+      "sana": "satamaan",
+      "alku": 13220,
+      "loppu": 13680
+    },
+    {
+      "sana": "saapumista",
+      "alku": 13740,
+      "loppu": 14420
+    },
+    {
+      "sana": "matkan",
+      "alku": 14460,
+      "loppu": 14880
+    },
+    {
+      "sana": "loppuna",
+      "alku": 14920,
+      "loppu": 15480
+    },
+    {
+      "sana": "Täällä",
+      "alku": 17000,
+      "loppu": 17320
+    },
+    {
+      "sana": "sen",
+      "alku": 17360,
+      "loppu": 17540
+    },
+    {
+      "sana": "jälkeen",
+      "alku": 17580,
+      "loppu": 18040
+    },
+    {
+      "sana": "oli",
+      "alku": 18080,
+      "loppu": 18220
+    },
+    {
+      "sana": "voinut",
+      "alku": 18260,
+      "loppu": 18560
+    },
+    {
+      "sana": "alkaa",
+      "alku": 18640,
+      "loppu": 18960
+    },
+    {
+      "sana": "vaikein",
+      "alku": 19020,
+      "loppu": 19480
+    },
+    {
+      "sana": "osuus",
+      "alku": 19560,
+      "loppu": 20000
+    },
+    {
+      "sana": "nähdä",
+      "alku": 21440,
+      "loppu": 21740
+    },
+    {
+      "sana": "kaupungin",
+      "alku": 21800,
+      "loppu": 22360
+    },
+    {
+      "sana": "katot",
+      "alku": 22420,
+      "loppu": 22840
+    },
+    {
+      "sana": "joka",
+      "alku": 22900,
+      "loppu": 23200
+    },
+    {
+      "sana": "aamu",
+      "alku": 23320,
+      "loppu": 23760
+    },
+    {
+      "sana": "pääsemättä",
+      "alku": 23820,
+      "loppu": 24400
+    },
+    {
+      "sana": "niiden",
+      "alku": 24460,
+      "loppu": 24740
+    },
+    {
+      "sana": "alle",
+      "alku": 24840,
+      "loppu": 25020
+    }
+  ],
+  "lauseet": [
+    140,
+    5720,
+    12380,
+    17000
+  ],
+  "luotu": "2026-09-23T15:39:19.635Z"
+}

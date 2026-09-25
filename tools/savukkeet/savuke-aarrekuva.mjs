@@ -23,6 +23,15 @@ import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
 
+import { ASSET_KANSIOT } from '../../js/media.js';
+
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
+
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
@@ -47,7 +56,7 @@ const palvelin = http.createServer((req, res) => {
   res.end(readFileSync(polku));
 });
 await new Promise((ok) => palvelin.listen(0, ok));
-const osoite = `http://127.0.0.1:${palvelin.address().port}/`;
+const osoite = `http://127.0.0.1:${palvelin.address().port}/?lauta=kartta`;
 
 let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => {
@@ -58,6 +67,30 @@ const vaadi = (nimi, ehto, lisa = '') => {
 mkdirSync(KAAPPAUKSET, { recursive: true });
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 const sivu = await selain.newPage({ viewport: { width: 900, height: 900 } });
+/*
+ * ÄMPÄRIN OSOITTEET PEILATAAN REPON TIEDOSTOIHIN (2.9.2026, assetit
+ * ämpäriin): kontin selain ei pääse oikeaan R2-ämpäriin, joten siirto-
+ * lipun kääntö (js/media.js R2_ASSETIT) muuttaisi kuvan latauksen aina
+ * epäonnistuvaksi ilman tätä. Sama juoni kuin savuke-elaintaky.mjs:ssä,
+ * mutta pikselin sijaan täytetään OIKEA tiedosto ASSET_KANSIOT-taulun
+ * kautta — leveysväitteet (esim. "leveys 640") mittaavat siis yhä
+ * oikean kuvan oikeaa kokoa, ei paikkamerkkiä.
+ */
+await sivu.route(/\/kohtaamiset\//, (route) => {
+  const { pathname } = new URL(route.request().url());
+  const osuma = pathname.match(/\/kohtaamiset\/([^/]+)\/(.+)$/);
+  const kansio = osuma && ASSET_KANSIOT[osuma[1]];
+  const paikallinen = kansio && join(JUURI, kansio, decodeURIComponent(osuma[2]));
+  if (paikallinen && existsSync(paikallinen)) {
+    route.fulfill({
+      status: 200,
+      contentType: TYYPIT[extname(paikallinen)] ?? 'application/octet-stream',
+      body: readFileSync(paikallinen),
+    });
+    return;
+  }
+  route.fulfill({ status: 404, body: '' });
+});
 await sivu.goto(osoite, { waitUntil: 'domcontentloaded' });
 
 /** Yksi paljastuskortti pelin omalla koodilla; palauttaa mitatut tiedot. */

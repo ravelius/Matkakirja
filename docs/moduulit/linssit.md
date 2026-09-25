@@ -13,6 +13,19 @@ suunnitteluhistoria (luvut 0, 7 ja 8) jäi arkistoon
 docs/arkisto/linssit-suunnitelma.md. Tiivis tekijän polku on
 CONTRIBUTING.md:n "Uuden linssin lisääminen".)*
 
+**PELILAUTA VAIHTUI 5.9.2026 — TÄMÄN OHJEEN "KARTTA" ON LINSSIKARTTA.**
+Pelin lauta on karttapallo (Raamattu › KARTTAPALLO ON PELILAUTA;
+docs/moduulit/karttapallo.md), ja tässä dokumentissa kuvattu tasokartta
+(js/kartta.js, `svg#board`, `g.board-root`) herää enää LINSSIN AJAKSI:
+linssin valinta matkalaukusta avaa sen kuoreen pallon päälle, ja
+valinnan purku nukuttaa sen takaisin. Omistajan linjaus sanatarkasti:
+*"Linssit voi olla vanhalla kartalla."* Jokainen luku 1–5 pätee siis
+sellaisenaan — kerrosjärjestys, rajaus, suodatinkiellot ja selite ovat
+ennallaan — mutta kartta ei ole enää pelin pohja vaan linssin oma
+näyttämö. Sama tasokartta on myös pelaajan PALAUTUSOPTIO: päävalikon
+Pelilauta-rivi (tai `?lauta=kartta`) palauttaa sen laudaksi tälle
+laitteelle, jolloin linssit toimivat kuten ennenkin.
+
 ## 1. Linssikerroksen arkkitehtuuri
 
 ### 1.1 DOM-kohta: oma **elävä** kerros juuriryhmän sisällä
@@ -862,7 +875,409 @@ turhaa).
 
 ---
 
-## 9. Tarkistuslista ennen kuin linssi on valmis
+## 7. Aikajanalinssin ilmiökuvista on pieni versio (3.9.2026)
+
+Omistajan havainto 3.9.2026: *"kaikki kuvat pitää ladata ennakkoon
+taustalle ainakin tuossa pienemmässä koossa mikä näkyy linssin
+animaation aikana. pitäisikö näille linssikuville generoida oma
+pienempi versio, joka latautuisi nopeammin?"* — kyllä. Kuvaputken
+ilmiökuvat ovat ämpärissä alkuperäisinä 1536×1024 ja painavat 400–760
+kt kappale; ilmiöpaneelissa kuva näkyy noin 450 px leveänä. Koko kaaren
+kuvat alkuperäisinä olisi yli 14 Mt, mikä ei lataudu taustalle
+animaation aikana millään yhteydellä.
+
+Siksi jokaisesta ilmiökuvasta ja muotokuvasta tehdään pieni versio:
+
+| | alkuperäinen | pieni |
+|---|---|---|
+| polku ämpärissä | `aikajana/keksinnot/<nimi>.jpg` | `aikajana/keksinnot/pieni/<nimi>.webp` |
+| polku ämpärissä (muotokuva) | `aikajana/keksinnot/muotokuva/<nimi>.jpg` | `aikajana/keksinnot/muotokuva/pieni/<nimi>.webp` |
+| mitat | 1536×1024 | leveys 640 px, korkeus suhteessa |
+| muoto ja laatu | JPEG, kuvaputken tuotos | WebP, laatu 78 |
+| koko | 400–760 kt | alle 90 kt (ajo kaatuu, jos ylittyy) |
+| milloin ladataan | vasta "Lue juttu" -napista | esilataus linssin avautuessa |
+
+Tiedostonimen runko on sama kummassakin, joten pienen version osoitteen
+saa alkuperäisestä ilman omaa listaa. Työkalu on
+`tools/tee-pienet-kuvat.mjs` ja ajo
+`.github/workflows/tee-pienet-kuvat.yml` (käsiajettava, `vain`- ja
+`kuiva`-valinnat). Kumpikaan ei kanna kuvalistaa: osoitteet luetaan
+linssin datasta (`js/linssit/keksinnot.js`, kentät `ilmio`, `ilmioLisa`,
+`kuva` ja `kuvaToinen`), joten uusi hyväksytty kuva tulee mukaan
+seuraavalla ajolla. Pieni versio menee aina saman alikansion
+`pieni/`-hakemistoon, joten muotokuvien pienennykset eivät sekoitu
+ilmiökuviin. Pienet versiot eivät mene repoon — työkalu kirjoittaa
+`media/`-kansioon (.gitignore) ja vie sieltä ämpäriin, kuten kaikki
+muukin media. Ämpärissä ovat nyt (tarkistettu 3.9.2026 HEADilla)
+kaikki 54 pientä versiota: 26 ilmiökuvaa ja 28 muotokuvaa.
+
+**Pelin puoli lukee nyt pienet.** Sopimus on tämä:
+
+- `js/aikajana.js` vie puhtaan apurin **`pieniOsoite(osoite)`**, joka
+  tekee saman muunnoksen kuin työkalu: viimeinen polkusegmentti
+  `nimi.jpg` → `pieni/nimi.webp` samaan kansioon. Kelvoton syöte (ei
+  URL, ei päätettä, jo `pieni/`-kansiossa) palautuu sellaisenaan.
+  Yhtenevyys työkalun kanssa on testattu kaikilla datan osoitteilla
+  (`tests/aikajana.test.mjs`), koska sääntö asuu kahdessa paikassa.
+- **Kortin muotokuvat ja ilmiöpaneelin kuva** (pyyntöleveys ≤ 640,
+  `PIENEN_KATTO`) ladataan pienenä, ja `onerror` hakee **kerran**
+  alkuperäisen. Kertaluontoinen kuuntelija estää silmukan: jos
+  varakin kaatuu, uutta yritystä ei tule. Puuttuva pieni versio ei
+  siis koskaan jätä kuvaa näkymättä.
+- **"Lue juttu" -galleria käyttää yhä alkuperäisiä** — se on ainoa
+  paikka, jossa kuva näkyy isona.
+- **Esilataus:** linssin avautuessa (`kaynnista` → `esilataaPienet`)
+  pyydetään taustalle KAIKKIEN pysäkkien pienet muotokuvat ja
+  ilmiökuvat kerralla, ei enää kolmea pysäkkiä edellä. Koko sarja
+  pieninä on 3–5 Mt ja ehtii latautua kamera-ajon aikana; isoja ei
+  esiladata lainkaan.
+
+---
+
+## 8. Keksijöiden muotokuvat ovat pelin henkilökuva (3.9.2026)
+
+Omistajan tilaus 3.9.2026: yhtenäiset, pelkistetyt mutta karaktääriset
+studiorintakuvat kaikille kaaren keksijöille (toimitettu ja hyväksytty
+mustavalkoisina). Kuvaputki toimitti
+28 hyväksyttyä pystykuvaa kansioon `aikajana/keksinnot/muotokuva/`
+(vienti `.github/workflows/vie-hyvaksytyt-28-keksijamuotokuvaa-2026-09-03.yml`).
+Pysäkin kuvakentät ovat sen jälkeen nämä:
+
+| kenttä | mitä | missä näkyy |
+|---|---|---|
+| `kuva` | generoitu studiomuotokuva (`osoite`) | filminauhan kortti, ilmiöpaneelin henkilörivi, juttu |
+| `kuvaToinen` | saman pysäkin toinen keksijä | kortilla ja henkilörivillä ensimmäisen vierellä |
+| `kuvaAito` | aito Commons-kuva (`tiedosto`, PD) | ei enää kortissa; jutun kuvissa ja myöhemmin Tiedeliitteessä |
+| `ilmio`, `ilmioLisa` | keksintöä selittävä generoitu kuva | ilmiöpaneeli, juttu |
+
+Kolmella pysäkillä on kaksi tekijää (Montgolfier'n veljekset, Cooke ja
+Wheatstone, Lumière'n veljekset). Moottori piirtää heidät **vierekkäin
+pienempinä** samaan kehykseen (`.aikajana-kuvakehys.kaksi`) — ei
+päällekkäin, koska kortti on kapea ja päällimmäinen peittäisi toisen
+kasvot. Kortin muotokuvakehys on 4:5 ja `object-position: center top`,
+ja filminauhan korkeus on laskettu kehyksestä ja tekstirivien lukituista
+rivikorkeuksista: suurennettu kortti mahtuu nauhaan kokonaan (omistajan
+havainto *"suurennettu kuva näyttää leikkautuvan yläosasta"*).
+
+Muotokuvat esiladataan pieninä koko kaaresta kerralla linssin
+avautuessa (`esilataaPienet`, js/ui-apurit.js `esilataaKuvat`), samalla
+kertaa ilmiökuvien kanssa — ks. luku 7.
+
+---
+
+## 9. Alarivi on karuselli (3.9.2026)
+
+Omistajan tilaus 3.9.2026, sanatarkasti: *"nuo henkiloiden kuvat voisi
+tayttaa koko alarivin niin etta nykyinen henkilo on aina keskella
+ruutua ja kaikki vasemmalla ja oikealla puolella olevat ovat
+merkittavasti pienempia ja kaikki vasemmalla puolella ovat kevyesti
+blurattuja."* Tämä korvasi 2.9.2026 illan filminauhan, jossa seuraava
+kortti oli vasemmassa reunassa sumeana ja menneet oikealla.
+
+**Järjestys on kronologinen vasemmalta oikealle.** Menneet vasemmalla,
+nykyinen keskellä ruutua täydessä mitassa, tulevat oikealla. Vuoden
+vaihtuessa koko rivi liukuu yhden askeleen vasemmalle.
+
+| | mitta | sumennus | himmeys |
+|---|---|---|---|
+| nykyinen (keskellä) | 1 | — | 1 |
+| naapuri | 0,62 | menneet 1,5 px | 0,82 / 0,90 |
+| toinen naapuri | 0,52 | menneet 1,75 px | 0,68 / 0,78 |
+| kauempana | 0,44 | menneet 2 px | pohja 0,4 / 0,5 |
+
+Tulevia **ei sumenneta** — ne erottuvat pelkällä koolla ja
+vaimeudella, kuten omistajan sanamuoto edellyttää.
+
+**Laskenta on puhdas funktio** `karusellinPaikat(i, nyt,
+leveysKortteina)` (js/aikajana.js), joka palauttaa `paikka`
+(etäisyys keskeltä kortin leveyksinä, negatiivinen vasemmalle),
+`mitta`, `luokka`, `himmeys`, `sumennus` ja `jarjestys`. `asettele()`
+vie ne CSS-muuttujiin `--paikka`, `--mitta`, `--himmeys` ja
+`--sumennus`; tyylitiedosto (css/aikajana.css) hoitaa liikkeen yhdellä
+siirtymällä (transform + opacity + filter, `--aikajana-kesto` 0,62 s
+ja nopeutus–hidastus; `prefers-reduced-motion` nollaa keston, jolloin
+jää pelkkä vaihto). Ei ajastimia eikä kehyskohtaista JS:ää — asettelu
+lasketaan vain pysäkin vaihtuessa ja ikkunan koon muuttuessa.
+
+**Etäisyys kertyy, ei askella.** Kahden vierekkäisen kortin väli on
+niiden mittojen keskiarvo (+ 5 % rakoa), joten karuselli pakkautuu
+tasaisesti reunaa kohti eikä ulkoreunoille jää ammottavia rakoja.
+
+**Ruudulle mahtuu niin monta kuin leveys sallii.** Nauhan leveys
+mitataan kortin leveyksinä (`nauhanLeveysKortteina`, `--aikajana-kortti-w`
+on clamp-arvo), ja kortti on `piilossa`, jos se ei mahdu kokonaan:
+läpinäkyvyys 0, ei osoitintapahtumia, `aria-hidden="true"`,
+`tabIndex = -1` — mutta **oikealla paikallaan**, jotta reunan takaa
+saapuva kortti liukuu sisään oikeasta suunnasta. Nykyinen kortti on
+aina näkyvissä, vaikka ruutu olisi korttia kapeampi. Käytännössä
+1280 px:n ruudulla näkyy noin 8 korttia kummallakin puolella ja
+390 px:n puhelimella kaksi.
+
+**Napautukset:** mennyt kortti näyttää itsensä paneelissa (kello ei
+kelaa taaksepäin), nykyinen pysäyttää ja avaa jutun, tuleva hyppää
+siihen. Näppäimistöfokus vain näkyvillä korteilla.
+
+**Kortti ei saa leikkautua nauhan yläreunasta** (omistajan havainto
+3.9.2026). Nauhan korkeus on laskettu: kortin leveys × 1,25
+(muotokuvan 4:5-kehys) + 5,2 rem (lukitut tekstirivit + tila
+kultarenkaalle ja varjolle). Savuke mittaa tämän
+(`tools/savukkeet/savuke-aikajana.mjs`, väite 3b) yhdessä sen kanssa,
+että nykyinen kortti on nauhan keskellä, menneet vasemmalla sumeina ja
+tulevat oikealla tarkkoina.
+
+### 9.1 Karuselli vieritetään sormella (8.9.2026)
+
+Raamattu **"KEKSINTOLINSSIN KARUSELLI ON SEN AIKASELAIN, JA SE
+VIERITETAAN SORMELLA"** (omistaja 8.9.2026). Alarivi ei ole enää pelkkä
+näyttö, jota nuolinäppäimet ja napautukset askeltavat: **sormi tarttuu
+keksijäriviin ja selaa sitä liukuen** — sama ele kuin Ihmisen matkan
+aikaselaimessa (js/linssit/aikaselain.js, docs/moduulit/ihmisen-matka-
+vanat.md luku 15), mutta viivojen sijaan kasvot.
+
+**Sormi vetää pikseleitä, karuselli elää korttinumeroina.** Muunnos ei
+ole vakiokerroin, koska kortit kutistuvat ulospäin: naapurin tuominen
+keskelle vaatii 1,09 kortin leveyden matkan, mutta kaukaisemmat
+askeleet ovat 0,46. Muunnos on siksi `karusellinEtaisyys`-funktion
+**käänteisfunktio**:
+
+| funktio (js/aikajana.js) | tehtävä |
+|---|---|
+| `karusellinMitta(d)` | kortin mitta, nyt **jatkuva** — kokonaisluvuilla entiset arvot, väliarvot interpoloituina |
+| `karusellinEtaisyys(d)` | kortin etäisyys keskeltä kortin leveyksinä, murtoluvuilla |
+| `karusellinEtaisyysKaanteinen(x)` | pikselimatka → korttinumeroita (vedon koko matematiikka) |
+| `karusellinVedonPaikka(alku, dx, w, maara)` | sormen paikka korttinumeroina, rajattuna nauhan päihin |
+| `karusellinHeitto(nopeus)` | pyyhkäisyn jatke kortteina, katto `KARUSELLIN_HEITON_KATTO` = 3 |
+| `karusellinKohde(nyt, heitto, maara)` | irrotuksen asettumiskohta (lähin kortti) |
+| `karusellinPaikat(i, nyt, leveys)` | ottaa keskikohdan **murtolukuna**; "nykyinen" on lähin kortti |
+
+Kaikki ovat puhtaita funktioita, koska veto rikkoutuu hiljaa: väärä
+muunnos veisi karusellin sormen alta pois eikä mikään kaatuisi
+(tests/aikajana.test.mjs, kuusi uutta testiä).
+
+**Kytkentä on `kytkeKarusellinVeto()`.** Kuuntelijat ovat NAUHASSA:
+nauha on `pointer-events: none`, joten tapahtumat tulevat korteilta ja
+kuplivat sinne, ja yksi kuuntelijasarja riittää kaikille korteille.
+Osoitin otetaan kiinni **kortilta** (`setPointerCapture`), jotta veto
+pysyy karusellilla, vaikka sormi lipsahtaisi kartan päälle.
+
+1. **Alku.** Painallus kortin päällä. Alle `KARUSELLIN_VEDON_KYNNYS`
+   (8 px) jäävä liike on napautus, ja pystysuora liike jätetään
+   kartalle — karuselli on vaakasuora ohjain.
+2. **Liike.** Sormen paikka menee `vetoNyt`-kenttään murtolukuna, ja
+   `asettele()` lukee sen kellon tilan sijaan. Nauha saa luokan
+   `vedossa`, joka katkaisee CSS-siirtymän: 0,6 s:n siirtymä laahaisi
+   sormesta jäljessä eikä rivi tuntuisi tarttuvan. Korttikuvia **ei
+   vaihdeta** vedon aikana (dekoodaus maksaa moninkerroin sen, mitä
+   transformin päivitys).
+3. **Esikatselu.** Kello rullaa lähimmän keksijän vuoteen ja paikkarivi
+   näyttää hänen tietonsa, mutta **vain kun lähin vaihtuu** — ajo ei
+   hyppää joka kehyksellä (omistajan ehto). Rullaus on sama kuin
+   selailussa (`siirry`, nuolinäppäimet), joten esikatselukin liikkuu
+   pehmeästi. Paneeli, lamput ja kamera eivät liiku kesken vedon.
+4. **Irrotus.** Karuselli asettuu pehmeästi lähimpään keksijään ja
+   linssi siirtyy sen pysäkille **moottorin omalla `siirry`-polulla** —
+   sama kuin kortin napautuksessa ja nuolinäppäimissä. Pyyhkäisyn
+   liikemäärä kuljettaa enintään kolme keksijää hidastuen; loputonta
+   rullausta ei ole. **Esitys jää aina tauolle** — kelaus on tauko
+   (luku 9.2; 8.9.2026 asti käynnissä ollut ajo jatkoi irrotuksesta).
+
+**Hiiri tarvitsi oman lukkonsa.** Ensimmäisessä savukeajossa (8.9.2026)
+kosketus veti karusellia moitteetta, mutta **hiirellä rivi ei liikkunut
+lainkaan**: kortin muotokuva on selaimelle raahattava kuva ja nimi
+valittavaa tekstiä, joten Chromium aloitti niistä oman natiivin
+raahauksensa heti ensimmäisestä liikkeestä ja **perui osoittimen**
+kesken vedon. Lukkoja on nyt kaksi: tyylissä `user-select: none`
+kortille ja `-webkit-user-drag: none; pointer-events: none` sen
+kuvalle (jolloin vedon kohde on aina itse kortti), ja moottorissa
+`dragstart`-kuuntelija, joka peruu raahauksen.
+
+**Kuka omistaa kosketuksen.** Sama rajaus kuin aikaselaimella:
+tapahtumat pysäytetään (`stopPropagation`) ja `touch-action: none`
+(css `.aikajana-kortti`) estää selainta tulkitsemasta vetoa
+vieritykseksi — **pallo ei panoroi karusellin vedosta**. Kuuntelijat
+ovat vain nauhassa, joten **pallon kosketus ei vedä karusellia**.
+
+**Mikä ei muutu.** Nuolinäppäimet ja korttien napautus säilyvät
+(`vedettiin`-lippu estää irrotusta laukaisemasta napautusta yhden
+tapahtumakierroksen ajan, sama kaava kuin paneelin raahauksen
+`raahattiin`). Kertomuskaari (Ihmisen matka) ei saa vetoa lainkaan: sen
+nauha on `display: none`, ja veto kieltäytyy myös avausjakson ja
+välinäytöksen aikana. Välinäytös ja Tiedeliite ovat ennallaan.
+`prefers-reduced-motion` nollaa heiton ja `--aikajana-kesto` on jo
+0,01 s, joten asettuminen on suora.
+
+**Vartio:** `tools/savukkeet/savuke-aikajana.mjs` osio K
+(`ajaKarusellinVeto`) vetää karusellia ruutukoordinaateilla kahdessa
+näkymässä — tabletti 834 × 1100 hiirellä ja puhelin 390 × 844
+CDP-kosketuksella — ja mittaa, että rivi liukuu sormen mukana, ajo ei
+hyppää kesken vedon, pallon `pointOfView` on vedon aikana muuttumaton,
+irrotus vaihtaa pysäkin ja kellon, kelaus jättää esityksen tauolle ja
+napautus toimii yhä.
+
+---
+
+### 9.2 Kelaus sytyttää kaikki valot ja pysäyttää esityksen (8.9.2026)
+
+Omistaja 8.9.2026, sanatarkasti:
+
+> *"jos keksintölinssissä kelaa alhaalta eri keksintöjä niin silloin
+> kaikki valot kartalla saisi syttyä, jotta pelaaja voi klikkailla
+> kohtia myös kartalla. tällöin esitys menee automaattisesti tauko
+> tilaan. jos pelaaja painaa uudestaan jatka, niin tulevat pisteet
+> häviävät kartalta ja esitys jatkuu normaalisti."*
+
+**Kelaus on oma tilansa: SELAUS.** Karuselli on linssin aikaselain
+(luku 9.1), ja kun pelaaja tarttuu siihen, hän lakkaa katsomasta
+esitystä ja alkaa etsiä. Silloin kartta ei saa olla puoliksi pimeä:
+koko kaari syttyy, ja pelaaja voi valita seuraavan kohteen yhtä hyvin
+kartalta kuin alariviltä.
+
+| mikä aloittaa selauksen | mikä ei |
+|---|---|
+| karusellin veto (kynnyksen ylitys) | Tauko-nappi (`pysayta`) |
+| toisen keksijän kortin napautus | nykyisen kortin napautus (avaa Tiedeliitteen) |
+| kartan lampun napautus | nykyisen lampun napautus (pelkkä tauko) |
+| nuolinäppäimet ← → | avausjakso, välinäytös, kertomuskaari |
+
+**Yksi sääntö, yksi paikka.** Lampun tila lasketaan puhtaassa
+funktiossa `lampunTila(k, i, selaus)` (js/aikajana.js), ja moottorin
+`asetaValot(i)` ajaa sen koko kaarelle. `siirry` ei enää laske
+lamppuja itse.
+
+| tila | esitys (`selaus` epätosi) | selaus (`selaus` tosi) |
+|---|---|---|
+| `k < i` | palaa (jälki) | palaa (jälki) |
+| `k === i` | palaa + `nykyinen` | palaa + `nykyinen` |
+| `k > i` | sammuksissa | palaa + **`tuleva`** |
+
+**Tuleva lamppu erottuu nykyisestä.** Luokka `tuleva`
+(css/aikajana.css) kutistaa merkin 0,56-kokoiseksi ja himmentää sen
+(pallolla sama tehdään canvas-liekille), joten nykyinen pysäkki on yhä
+kirkkain ja sykkii yksin. Tummennuksen maskireikää tuleva **ei** saa:
+kartta pysyy tummana, vaikka koko kaari hehkuu. Napautuksia tuleva
+ottaa kuten palava (`.aikajana-valo.tuleva { pointer-events: auto }`,
+napautus → `napautaValoa` → `siirry`); pallolla osumat lasketaan
+pallon omasta napautuksesta lähimpään merkkiin (`lahinLinssimerkki`),
+joka ei ole koskaan katsonut lampun tilaa.
+
+**Selaus pysyy päällä koko tauon ajan.** Lampusta toiseen hyppiminen
+kartalla tai karusellilla ei sammuta valoja välissä: `siirry` pitää
+lipun ja piirtää lamput uudelleen uuden pysäkin ympärille.
+
+**Jatka sammuttaa tulevat** (`jatka` → `paataSelaus`): kartalle jäävät
+vain nykyiseen pysäkkiin asti syttyneet, ja loput syttyvät taas
+vuorollaan kellon mukana. Sama koskee näppäimistön väliä ja Enteriä,
+jotka kulkevat saman `taukoTaiJatka`-napin kautta. **Aloita alusta**
+(↺, `alusta`) ja linssin sulku palauttavat normaalitilan.
+
+**Kelaus pysäyttää aina.** Ennen tätä (v1687) käynnissä ollut ajo
+jatkoi irrotuksen jälkeen; nyt omistajan sääntö on toinen — vedon
+jälkeen nappi on **Jatka**, ja pelaaja päättää itse, milloin esitys
+jatkuu.
+
+**Ihmisen matka ei muutu.** `aloitaSelaus` kieltäytyy, kun kaarella on
+kertomusesitys (`this.esitys`): siellä ei ole selattavia pysäkkejä,
+karusellin nauhaa ei ole lainkaan ja tutkimusvaihe hoitaa omat
+hehkunsa (js/linssit/ihmisen-matka-tutkimus.js).
+
+**Vartiot:** puhtaan funktion ja moottorin kytkennät
+tests/aikajana.test.mjs (kolme testiä: `lampunTila`, kelauksen
+kytkennät, tulevan lampun tyyli), ja selaimessa
+`tools/savukkeet/savuke-aikajana.mjs` osio K.7 (kelaus → kaikki lamput
+palavat ja ottavat osumia, Jatka → tulevat sammuvat ja kello jatkaa).
+
+---
+
+## 10. Tiedeliite — keksijän oma lehtisivu (3.9.2026)
+
+Raamattu KEKSIJAT LINSSIN ALARIVILLA JA TIEDELIITE, kohta 3: nykyisen
+kortin napautus ja ilmiöpaneelin "Lue juttu" avaavat keksijän sivun
+**Lisälehden taittoperheessä** (js/tiedeliite.js, kuori css/aikajana.css
+osio TIEDELIITE, rivit css/fokusnosto.css osio 9). Sivu ei ole
+nähtävyyskortti (js/nahtavyydet.js) eikä kaupunkilehden sivu: se on
+linssin oma lehti, joka elää aikajanan päällä ja katoaa sen mukana.
+
+| rivi | luokka | sisältö |
+|---|---|---|
+| nimiörivi | `tiedeliite-ylarivi` | ☰ · nimiö `looppi-nimio` ja paikkarivi `looppi-paivays` · kaiutin ja ✕ (`tiedeliite-ylanapit`); kaksoisviiva rivin alla |
+| pääotsikko | `looppi-otsikko` | keksintö (`otsikko`) |
+| keksijä | `tiedeliite-henkilo` | `henkilo` harvennettuna versaalina |
+| ingressi | `looppi-ingressi` | `selite` |
+| leipäteksti | `looppi-leipa` | `juttu` kappaleittain, anfangi, YKSI palsta |
+| muotokuva | `tiedeliite-kasvot` | `kuva`, `kuvaToinen` leipätekstin oikealla (15 rem) |
+| ilmiökuvat | `tiedeliite-ilmiokuva` | `ilmio`, `ilmioLisa` — palstan levyisenä reunasta reunaan, useampi karusellina |
+| keksijä itse | `tiedeliite-keksija` | `henkilojuttu` ja aito Commons-kuva `kuvaAito` |
+| lähderivi | `fokusnosto-lahde` | `lahde` |
+| alanapit | `tiedeliite-navi` | ‹ edellinen keksijä · seuraava keksijä › |
+
+Nimiörivi asuu KORTISSA eikä vierivässä sivussa: masto pysyy paikallaan,
+kun juttu vierii, ja sivunvaihdossa vaihtuu vain paikkarivin teksti.
+
+Liikkuminen: alanapit ja nuolinäppäimet vievät edelliseen ja
+seuraavaan keksijään, hampurilainen (kortin vasen yläkulma) avaa
+sisällyksen, jossa kaikki keksijät vuosineen. Merkkipaalu (1873)
+ohitetaan — sillä ei ole keksijää eikä juttua
+(`onTiedeliitteenSivu`). Sivun vaihto on ristihäivytys samassa
+kortissa (Raamattu: KAIKKI LIIKE ANIMOIDAAN PEHMEASTI); moottori saa
+vaihdosta tiedon (`kunVaihtuu`) ja näyttää saman keksijän
+ilmiöpaneelissa kuten menneen kortin napautuksessa — kello ja valot
+eivät liiku. Linssin musiikki väistyy sivun ajaksi ja palaa
+sulkukoukusta (`kunSuljetaan`).
+
+Kuvat ovat sivulla ALKUPERÄISINÄ (ei pieniä versioita): sivu on
+lukunäkymä, jossa kuvaa katsotaan isona ja napautus suurentaa sen
+(js/fokuskohteet.js avaaKohdeSuurennos, ui-avain `tiedeliiteZoom`).
+Latautumaton kuva pudotetaan riviltä, jottei paperille jää tyhjää
+laatikkoa.
+
+### Yläreunan ja kuvatekstien remontti (omistaja 8.9.2026)
+
+Omistajan iPad-kaappauksesta (1897 Augsburg) tuli kuusi korjausta,
+Raamattu "TIEDELIITTEEN ULKOASU":
+
+1. **Nimiörivi on yksi rivi** (`tiedeliite-ylarivi`, ristikko
+   `1fr auto 1fr`): hampurilainen vasemmalla, nimiö ja paikkarivi
+   keskellä, kaiutin ja ✕ oikealla. Kaksoisviiva on rivin alareuna,
+   ei päiväysrivin yläreuna — mikään teksti ei jää viivan alle eikä
+   nappi valu kortin pyöristetyn kulman yli.
+2. **Kortissa lyhyt kuvateksti, avatussa kuvassa pitkä.** Datassa on
+   `kuva.lyhyt` (yksi virke, ≤ 90 merkkiä, muotoa NIMI + luonnehdinta)
+   ja entinen pitkä `selite`. Kortti näyttää lyhyen ILMAN lähderiviä;
+   suurennos näyttää pitkän ja sen perässä "Matkakirjan havainnekuva"
+   pisteviivalinkkinä (omistaja: *"Riittää myös, että havainnekuva
+   mainitaan vasta kun kuvan klikkaa isommaksi"*). Ilman `lyhyt`-kenttää
+   kortissa on entinen selite (esim. Ihmisen matka).
+3. **Yksi palsta, isompi muotokuva**: leipäteksti yhtenä virtana,
+   muotokuva 9,5 rem → 15 rem (puhelimella tekstin yllä 13,5 rem).
+4. **Vieritys ei soita napsautusta**: js/main.js soittaa `click`-äänen
+   sormella vasta, kun kosketus osoittautuu napautukseksi (nousu saman
+   napin päältä alle 10 px:n liikkeellä). Kortin kuvat ovat nappeja,
+   joten jokainen vieritys alkoi ennen klikkauksella.
+5. **Alanapeille päälle hyppäävä väri**: hover, focus ja **:active**
+   kääntävät napin kullanruskeaksi (#7a5514) ja tekstin vaaleaksi.
+6. **Havainnekuva reunasta reunaan**: `.tiedeliite-kortti
+   .tiedeliite-ilmiokuva img` täyttää palstan (`width: 100%`,
+   `object-fit: cover`, 16/10).
+
+Kolme näistä oli TYYLIEN JÄRJESTYSKILPAILU: css/fokusnosto.css ja
+css/aikajana.css sisälsivät yhtä tarkat valitsimet (`.fokusnosto-kuva
+img` vs. `.tiedeliite-ilmiokuva img`, `.fokusnosto-looppi .looppi-leipa`
+vs. `.tiedeliite-palsta .tiedeliite-leipa`), joten voittaja riippui
+latausjärjestyksestä — omistajan laitteessa contain ja kaksi palstaa.
+Nyt Tiedeliitteen omat säännöt käyttävät kolmatta luokkaa
+(`.tiedeliite-kortti`), joka ratkaisee kilpailun aina. Sama koskee
+yhden kuvan kehystä: se piirretään `piirraIlmiokuva`-funktiolla eikä
+yhteisellä `piirraNostonKuvalla`.
+
+Testit: tests/tiedeliite.test.mjs (puhtaat apurit, datan sopivuus,
+yläreuna, lyhyet kuvatekstit, yksi palsta, täysleveä havainnekuva,
+alanapin väri, vierityksen äänettömyys), tests/kuvasuurennos.test.mjs
+(suurennoksen yleinen linjaus) ja tests/aikajana.test.mjs (kytkentä
+moottoriin).
+
+---
+
+## 11. Tarkistuslista ennen kuin linssi on valmis
 
 - [ ] `js/linssit/<tunnus>.js` vie `LINSSI`-vakion, jossa on `tunnus`,
       `nimi`, `lyhyt`, `ikoni`, `laudat`, `lahde` ja `piirra`.
@@ -885,3 +1300,683 @@ turhaa).
 - [ ] `tools/mittaa-kartta.mjs` ajettu linssi päällä ja ms/kehys kirjattu.
 - [ ] Kaikki kommentit, muuttujat ja tulosteet suomeksi, ja kommentit
       kertovat **miksi** eivät mitä.
+
+## Tumma asu, lamput ja vapaa selaus (omistaja 3.9.2026, v1504)
+
+- **Tummennus**: linssi lisää SVG:hen kartan kokoisen tummennuspinnan
+  (`.aikajana-tummennus`, maski `#aikajana-maski`), joka liukuu sisään ja
+  ulos. Jokaisella palavalla lampulla on maskissa reunoille vaaleneva
+  reikä (`.aikajana-reika`), joten tummennettu kartta vaalenee lampun
+  ympäriltä. Lamppu itse on reunaviivaton liukuväripallo
+  (`#aikajana-lamppu`) ja sen kajo (`.aikajana-valo-kajo`, screen-
+  sekoitus) valaisee kartan pintaa.
+- **Tumma asu**: kello, ilmiöpaneeli ja keksijäkortit tummalla pohjalla
+  (`--aikajana-paperi`), Tiedeliite pysyy paperina. Matkakirja ja
+  karttaselite ovat piilossa (`body.aikajana-paalla`, styles.css), ja
+  ilmiöpaneeli nousee ylemmäs ja leventyy isolla näytöllä.
+- **Äänet**: linssin auetessa kaupungin äänimaisema pysäytetään
+  (`stopPlaceStream`, `ui.syncAmbience` pitää sen poissa) ja luenta
+  lopetetaan (`stopDiaryVoice`, `pysaytaLukija`); sulkiessa maisema
+  palaa. Keksinnön ääni on yksi pehmeä kilahdus (`SOUNDS.keksinto`) —
+  tähti ja kohahdus ovat pois.
+- **Vapaa selaus**: minkä tahansa kortin napautus (tai nuolinäppäin)
+  pysäyttää kellon ja siirtyy pysäkkiin (`siirry`): lamput palavat
+  pysäkkiin asti, paneeli ja vuosiluku vaihtuvat, ja ajo jatkuu vasta
+  Jatka-napista. Nähdyt keksijät ovat tarkkoja, tulevat sumeita;
+  valittu kortti on 1,45-kertainen (`KARUSELLIN_MITAT[0]`).
+
+## Tiedeliitteen taitto (omistaja 3.9.2026, pilotti Watt, v1508; yläreuna ja palsta uusittu 8.9.2026)
+
+Järjestys: nimiörivi (☰ · nimiö ja paikkarivi · kaiutin ja ✕, kortin oma
+rivi joka ei vieri) → otsikko, keksijä, ingressi → `.tiedeliite-palsta`
+(leipäteksti YHTENÄ palstana vasemmalla, generoitu muotokuva 15 rem
+oikealla, kaksoispysäkillä kaksi) → havainnekuva(t) palstan levyisenä →
+`.tiedeliite-keksija` (väliotsikko = nimi, henkilöteksti kentästä
+`henkilojuttu`, aito Commons-kuva `kuvaAito` oikealla) → lähderivi. Ilman
+`henkilojuttu`-kenttää henkilöosio ja aito kuva jäävät pois. Kapealla
+ruudulla (≤560 px) kuva siirtyy tekstin ylle (13,5 rem).
+
+## Matkamittari, napautettavat lamput ja raahattava paneeli (omistaja 3.9.2026 ilta, v1512)
+
+Raamattu: LINSSIN VUOSILUKU JUOKSEE JATKUVASTI, PISTEET KLIKATTAVIA,
+HAVAINNEKUVA SIIRRETTAVA.
+
+- **Kello on matkamittari.** `asetaMatkamittari(rullat, vuosi, {liuku, heti})`
+  (js/aikajana.js) saa käyvältä kellolta murto-osavuoden joka kehyksellä:
+  ykkösrulla nousee osuuden verran, ylemmät rullat vain kun kaikki alemmat
+  ovat 9:ssä. Tapahtuman tauolla `aikajanaAskel` ei seisota kelloa vaan
+  hiipii `AIKAJANA_TAUON_OSUUS`:n (0,6 digitiä) koko tauon aikana ja jatkaa
+  tauon jälkeen normaalia tahtia; tila kantaa `viiveTaysi`-kentän. Saman
+  vuoden ketju (1895 kahdesti) ei peruuta mittaria. Pysäytetyn kellon hyppy
+  (`siirry`) rullaa vaihtuvat numerot yhdellä liu'ulla (`liuku`), avaus ja
+  prefers-reduced-motion asettavat numerot paikoilleen (`heti`).
+- **Lamput ovat napautettavia.** Palava lamppu (`.aikajana-valo.palaa`)
+  ottaa osumia; napautus kutsuu `napautaValoa(i)` → `siirry(i)` ja jää
+  tauolle, nykyisen lampun napautus vain pysäyttää. Lampulla on `<title>`
+  ja aria-label (vuosi: keksintö, keksijä).
+- **Ilmiöpaneeli on raahattava.** `kytkeRaahaus` kuuntelee paneelin
+  pointerdownia ja ikkunan pointermovea/-upia; alle `PANEELIN_RAAHAUSKYNNYS`
+  (6 px) jäävä liike on napautus (kuva avaa jutun kuten ennen). Siirto on
+  CSS-muuttujina `--aikajana-paneeli-dx/-dy` (`rajaaPaneelinSiirto` pitää
+  paneelin linssin alueella) ja muistetaan istunnon ajan. Kartta ei lähde
+  mukaan: `.aikajana-ilmio` on js/kartta.js KELLUVA_UI-listassa.
+- Testit: tests/aikajana.test.mjs (matkamittari, hiipimä, rajaus,
+  kytkennät); savuke scratchpadissa (kaappaa-linssi2.mjs).
+
+## Geo-apuri: maailmanaineisto laudalle (js/geo.js, 5.9.2026)
+
+Omistajan päätös 5.9.2026 (kirjastokartoituksen TOP 6, kohta 3):
+**d3-geo 3.1.1 + d3-geo-projection 4.0.0 + topojson-client 3.1.0** (ISC)
+ämpärin `vendor/`-polusta. Uuden linssin ei siis tarvitse enää kirjoittaa
+omaa projisointiaan — **rajapinta ja kaikki säännöt ovat `js/geo.js`:n
+alkukommentissa** (omaa ohjedokumenttia ei tehty: Raamatun
+dokumenttikartta on Fablen kirjoitettava, ks. tests/dokumentit.test.mjs).
+
+Lyhyesti:
+
+- `await lataaGeo()` lataa kirjaston laiskasti ja palauttaa `null`, jos
+  sitä ei saada. **Kaikki apurin funktiot palauttavat silloin `null`, ja
+  kutsujan on käytettävä vanhaa polkuaan** (`projisoiLaudalle` piste
+  kerrallaan) — yhden tiedoston versio (`dist/`) jää ilman kirjastoa
+  kuten se jää ilman linssejä (luku 2.1).
+- `laudanProjektio(lauta)` antaa d3-projektion, joka vastaa pelin omaa
+  `projisoiLaudalle`-funktiota (mitattu ero 261 kaupungilla 3,6e-12
+  lautayksikköä; tests/geo.test.mjs vartioi rajaa 0,01).
+- `geojsonLaudalle(geojson, lauta, { rajaus })` antaa valmiin
+  SVG-polkudatan laudan yksiköissä. `rajaus` leikkaa polun laudan
+  suorakaiteeseen — ilman sitä esimerkiksi Etelämanner jää laudan
+  alareunan alle (lauta kattaa 76° P … n. 57,6° E).
+- `isokaari`, `etaisyysKm`, `nakyvyysympyra` ja `pallolle` ovat samaa
+  pakettia: reitti kaartuu oikein, kantama on ympyrä pallolla eikä
+  kartalla, ja sama aineisto kelpaa myös pallolaudalle.
+- Elementtikatto (luku 1) pätee ennallaan: yksi `<path>` on yksi
+  elementti, joten rajaviivasto kannattaa antaa kerroksen rasteroitavaksi
+  aivan kuten ennenkin.
+- Savuke: `tools/savukkeet/savuke-geo.mjs` (kirjasto ämpäristä, 261
+  kaupunkia, isokaari, Natural Earthin rajat laudan sisällä, varapolku).
+
+
+## Linssit pallolla (5.9.2026)
+
+*(Omistajan linjaus, Raamattu KAIKKI PALLOLLE, VANHA KARTTA SULJETAAN,
+sanatarkasti: "Käännä kaikki pallolle, niin voidaan sulkea vanha kartta
+kokonaan" / "Käytä agenttia parvia". Sopimus ja aallot:
+docs/moduulit/karttapallo.md luku 10 — se voittaa ristiriidassa tämän
+luvun, joka kertoo MITEN moottori toimii.)*
+
+Karttapallo on pelin lauta, ja tasokartta suljetaan. Linssit eivät siis
+jää tasokartalle: jokainen linssi saa toisen piirtotavan `piirra`:n
+rinnalle.
+
+**Sopimus.** `pallolle(lauta, tila)` piirtää linssin pallon pinnalle ja
+palauttaa kahvan `{ pura() }`. `tila` on täsmälleen sama jäädytetty olio
+kuin `piirra(ryhma, tila)`:lla (`packId`, `map`, `leveys`, `korkeus`,
+`kiertava`, `askel`). Pallolaudalla `ui.sytytaLinssi` kutsuu
+`pallolle`-funktiota **eikä avaa linssikarttaa**; kun linssi vaihtuu tai
+sammuu, `ui.sammutaPallolinssi` kutsuu kahvan `pura()`:n. Linssi, jolla
+ei vielä ole `pallolle`-funktiota, herättää tasokartan linssikartaksi
+kuten ennen (`ui.pallolinssiKelpaa` on se yksi portti, joka päättää
+kummin päin mennään). `lataa()`:a EI kutsuta pallopolulla — pallolle
+piirtävä linssi vastaa itse aineistostaan, jottei tasokartan raskasta
+kuvaa haeta turhaan.
+
+**Moottori.** Piirto tapahtuu vain `lauta.linssit`-apurin kautta
+(`js/pallolauta/linssit.js`, `luoLinssit`) — linssi ei koske
+Globe.gl-instanssiin. Rajapinta on luvun 10.1 taulukko:
+
+| kutsu | mitä tekee |
+|---|---|
+| `kalvo(osa, { kuva, peittavyys })` | tasavälinen (equirectangular, 2:1) rasteri omana pallokuorenaan pinnan päällä |
+| `polut(osa, lista)` | `pathsData` reittikerroksen osarekisterin kautta (`reitit.aseta`) |
+| `polygonit(osa, lista)` | `polygonsData` (linssin oma kerros; peli ei piirrä sinne) |
+| `merkit(osa, lista)` | `htmlElementsData` merkkirekisterin kautta (`merkit.aseta`, laji `linssi`) |
+| `kalvoRuudulle(osa, { reika })` | CSS-kalvo kotelon päälle, reikä pinnan pisteessä (`lauta.ruudulla`) |
+| `pura(osa)` | kaikki osan kerrokset pois siirtymällä (ilman nimeä: kaikki) |
+
+Kolme sääntöä, jotka moottori pitää yllä:
+
+1. **Yksi kerros, monta osaa.** Globe.gl:llä on kutakin lajia tasan yksi
+   kerros. Jokainen kutsu kirjaa listansa OSAN nimellä, ja kerros
+   kootaan osista — peli omistaa osan `peli`, linssit lisäävät omansa
+   perään. Linssi ei voi pyyhkiä pelin reittejä eikä merkkejä.
+2. **Kaikki liike animoidaan.** Kalvo häivytetään sisään ja ulos
+   `siirtyma` millisekunnissa (peittävyysanimaatio
+   requestAnimationFramella, sama tapa kuin lennon harsolla); polut,
+   polygonit ja merkit saavat kirjaston omat siirtymät. Reduced motion
+   tulee laudalta nollana, jolloin kaikki tapahtuu heti.
+3. **Kalvo jää pelin viivojen alle.** Sopimus sanoi säteen × 1,002, mutta
+   reittiviivat piirretään korkeudelle 0,002 — kaksi samassa pinnassa
+   olevaa kerrosta välkkyisi toistensa läpi. Kalvon kerroin on siksi
+   `KALVON_SADE = 1,0015`: silmälle sama paikka, mutta reitit,
+   askelhelmet (0,0025) ja kaupunkipisteet (0,003) jäävät kalvon päälle
+   kuten tasokartalla linssin päällä.
+
+**Kolme three.js-luokkaa heijastuksella.** Globe.gl kantaa three.js:n
+sisällään eikä vie sitä ulos, joten kalvon Mesh, materiaali ja Texture
+haetaan pallon omasta näyttämöstä: pinnan pallomesh (säde lähinnä
+`getGlobeRadius()`:ia, kokonainen pallo) antaa Meshin ja geometrian —
+sama säde, samat UV:t ja sama kierto kuin pinnalla — ja jonkin
+materiaalin `map` antaa Texturen. Kalvo lisätään pinnan SISARUKSEKSI,
+koska laattamoottori pitää pinnan oman meshin piilotettuna. Sivulle ei
+siis ladata toista three.js:ää. Jos luokkia ei löydy, kalvo jää pois ja
+lokiin tulee varoitus — peli ei kaadu.
+
+**Kuvat pallolle.** Pallo lukee pinnan tekstuurin tasavälisenä, eikä
+laudan Milleriin projisoitu linssikuva kelpaa sinne sellaisenaan (se
+työntäisi mantereet pohjoiseen). Topografialinssin kuva on siksi
+uudelleenprojisoitu kerran rakennusaikana:
+`node tools/tee-pallotopografia.mjs` → Cloudflare R2:
+`https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-20260915.webp`
+(4096 × 2048, 768 kt; uudelleenrenderöity 1′-korkeusdatasta 15.9.2026,
+mediaa ei säilytetä repossa). Lauta
+kattaa 76° P … 58° E, joten navat jäävät kuvassa läpinäkyviksi ja pallon
+oma laattapinta näkyy niiden kohdalla läpi. Sama kuvio kelpaa muillekin
+rasterilinsseille: uusi kuva, ei uutta aineistoa.
+
+**Vartijat.** `tests/pallolinssit.test.mjs` (rajapinta, osarekisterit,
+topografian `pallolle`, ui:n portti) ja `tests/pallolauta.test.mjs`
+(sallitut Globe.gl-kerrokset).
+
+## Laukussa napautus selittää, Aktivoi-nappi kytkee (5.–6.9.2026)
+
+Omistajan tilaus sanatarkasti (5.9.2026 ilta):
+
+> *"muuta: kun linssi klikataan matkalaukussa niin silloin päivittyy
+> vasta selite teksti ja tekstin loppuun tulee "aktivoi", mitä
+> klikkaamalla linssi menee päälle ja matkalaukku sulkeutuu"*
+
+Varusteruudukon napautus oli siihen asti sama asia kuin linssin
+kytkeminen (`nappi.addEventListener('click', () => valitseLinssi(...))`).
+Nyt se on **kaksivaiheinen**, ja luku 5.1:n kuvaus valitsimesta pätee
+muuten ennallaan:
+
+1. **Ruudun napautus ei kytke mitään.** `ui.esikatseleLinssi(tunnus)`
+   kirjaa napautetun linssin kenttään `ui.linssiEsikatselu` ja piirtää
+   selitelohkon (`.linssi-tiedot`) uudelleen. Kenttä on tarkoituksella
+   `undefined`, kun mitään ei ole napautettu — `null` on kelvollinen
+   arvo ("Ei linssiä"), joten tyhjä tila ei voi olla null. Laukun avaus
+   (`openPassport`) ja kytketty linssi (`valitseLinssi`) nollaavat sen.
+2. **Selite kertoo napautetusta linssistä** — nimi ja `lyhyt` — ja sen
+   ALLA on `button.linssi-aktivoi`, jossa lukee **Aktivoi**. Päällä
+   olevan linssin kohdalla napissa lukee **Ota pois** (luokka `.pois`)
+   ja se kytkee linssin pois (`valitseLinssi(null)`). "Ei linssiä"
+   -ruutu toimii kuten linssit: otsikko "Paljain silmin", sama selite
+   kuin ennen ja Aktivoi-nappi. Napilla on aria-label "Aktivoi linssi
+   *nimi*" / "Ota linssi *nimi* pois käytöstä".
+
+   **Nappi vaihtoi muotoa 6.9.2026** (omistaja: *"Tee aktivoi tekstistä
+   nappi."*). Sana oli siihen asti ladottu selitekappaleen perään
+   tekstilinkin näköisenä ja oli yhden tekstirivin korkuinen — laukun
+   ainoa varsinainen toiminto ei näyttänyt napilta eikä osunut sormeen.
+   Nyt se on oma lohkonsa selitteen alla: messinkireunus,
+   pergamenttitäyte, kapiteeliteksti ja `min-height: 44px`
+   (`.dialog .linssi-aktivoi` voittaa `.dialog button`-napin asun).
+3. **Aktivoi kytkee ja sulkee laukun.** `ui.aktivoiLinssi(tunnus)`
+   kutsuu `valitseLinssi`ä ja sen jälkeen `suljeLaukku()`:n, joka on
+   ainoa paikka, josta laukku suljetaan koodista (`pallo`-linssi käyttää
+   samaa metodia).
+
+**Kaksi korostusta, kaksi eri asiaa.** `.paalla` on messinkirengas
+kartalla olevan linssin ympärillä; uusi `.esikatselu` on kevyempi
+rengas juuri napautetun ruudun ympärillä. Ne voivat olla eri ruuduissa
+yhtä aikaa — juuri se on tilauksen ydin. Selitteen vaihto häivytetään
+sisään (`.linssi-tiedot.vaihtui`, `@keyframes linssiSelitteenVaihto`;
+reduced motion nollaa animaation), eikä ruudukossa ole hyppäystä.
+
+Kytkennän jälkeinen käytös on ennallaan: pallolaudalla `pallolle`-linssi
+piirtyy pallon pinnalle ja kääntämätön herättää linssikartan, ja vanha
+kartta (`?lauta=kartta`) toimii kuten ennen. Molemmat laudat käyttävät
+tätä samaa ruudukkoa.
+
+**Vartija.** `tests/matkalaukun-linssit.test.mjs`: ruudun napautus ei
+kutsu `valitseLinssi`ä eikä sulje laukkua, selitteen ALLE tulee
+Aktivoi-nappi (ei kappaleen sisään), ja se kutsuu `valitseLinssi`ä ja
+sulkee laukun ("Ota pois" kytkee pois). Testi lukee myös CSS:stä, että
+napilla on `min-height: 44px`.
+
+## Aikajanan ajon dynamiikka: kaari, kasvava viiva, vilisevä kello (omistaja 6.9.2026 keskipäivä)
+
+Omistajan palaute iPhone-kuvakaappauksesta (Ihmisen matka ajossa,
+pysäkki Pinnacle Point) sanatarkasti:
+
+> *"Kartta on liian kaukana ja se saisi liikkua jo aiemmin ja pidemmän
+> aikaa piirtäen viivaa seuraavaan paikkaan. Lisää dynamiikka tällä.
+> Vuosinumerot saisivat vilistää yksittäisistä numeroista alkaen
+> vuosituhansien läpi."*
+
+Kolme muutosta `js/aikajana.js`:ään (moottori, siis myös keksinnöt) ja
+yksi mitta `js/linssit/ihmisen-matka.js`:ään.
+
+**1. Pysäkillä ollaan aina lähikuvassa.** Ennen pitkä hyppy näytettiin
+NOSTAMALLA kamera: pysäkin näkyvä leveys laskettiin edellisen pysäkin
+etäisyydestä (`pysakinLahikuva`, 2,2 × väli, katto 3 600 lautayksikköä)
+ja kamera jäi siihen korkeuteen myös perillä. Mitattuna 390 × 844:
+**2 149 yksikköä = 7 176 km ruudun leveydellä** — koko eteläinen
+Afrikka ja Madagaskar ruudulla, lamppu pisteenä. Nyt kaaren oma
+`lahikuva` on **560** (1,3 × keksintöjen 434, mitattu 1 870 km) ja se
+pätee JOKA pysäkillä. Sama luku 390 × 844:llä ja työpöydällä, koska
+pyydetty leveys on lautayksiköitä ruudun leveydellä.
+
+**2. Pitkä hyppy näytetään liikkeellä.** Pysäkkiväli ajetaan yhtenä
+kaarena (`ajaValia`): kamera lähtee edellisen lampun lähikuvasta,
+kulkee ISOYMPYRÄÄ pitkin (sama viiva, jota reitti piirtää), nousee
+matkan puolivälissä korkeintaan `AIKAJANAN_HYPYN_KATTOON` (3 600 →
+**1 600**) ja laskeutuu perille takaisin lähikuvaan. Nousun profiili on
+`aikajananHypynKaari` = sin²(πe): nolla ja nolladerivaatta molemmissa
+päissä, huippu puolivälissä; leveys interpoloidaan geometrisesti
+(`hypynLeveys`), koska kameran korkeus on logaritminen. Lyhyellä
+välillä (alle 255 yksikköä) nousua ei tule lainkaan.
+
+**Liike alkaa aiemmin ja kestää pidempään.**
+`AIKAJANAN_KAMERAN_ENNAKKO_OSUUS` 0,4 → **0,8**: ajo kesti ennen 1 540
+ms pysäkkivälin 7 200 ms:sta (21 %) ja kartta seisoi loput; nyt ajo on
+noin 3 400 ms eli lähes puolet välistä. Loppu on ennallaan: ajo
+pysähtyy `AIKAJANAN_KAMERAN_JALKIJATTO_MS` (−300 ms) ennen syttymistä,
+ja saapumishetki lasketaan yhä `aikaSeuraavaan`-funktiolla, joten
+kello, karuselli (`KARUSELLIN_ENNAKKO_MS`) ja kamera pysyvät samassa
+tahdissa. Luenta pidättää tauon loppua (`pidataTaukoaLuennalle`), joten
+pitkän selostuksen jälkeen ajo lähtee heti kun selostaja on vaiennut.
+Vähennetty liike (`prefers-reduced-motion`) hyppää kuten ennen.
+
+**Reittiviiva piirtyy matkalla.** Sama kehyssilmukka kasvattaa viivan
+kärkeä `REITIN_KARJEN_ENNAKON` (0,08) verran kameran edellä, joten
+kamera seuraa viivan päätä eikä toisin päin; perillä viiva on valmis.
+Geometria lasketaan kerran ja kasvu tehdään **katkoviivalla** — sama
+ratkaisu ja sama mittaus kuin avauslennon jäljessä
+(`js/pallolauta/reitit.js jalki`, karttapallo.md 10.3): kasvava
+pistelista jää Globe.gl:n interpolK-tweenin taakse, katkon luvut eivät.
+Mitattu kuorma kehystä kohti Chromiumilla: **0,05–0,28 ms**
+`paivitaReitti`ssä.
+
+**Valokeila kulkee viivan mukana.** Viiva piirtyy pallon PINTAAN eli
+tummennuskalvon alle (kalvo on kotelon päällä, lamput sen päällä), ja
+mitattuna kalvo syö siitä 86 % — sama kuva kalvon kanssa ja ilman
+(`scratchpad/aikajana-ajo/kuvat/viiva-kalvon-kanssa.png` ja
+`viiva-ilman-kalvoa.png`) näyttää, että viiva oli käytännössä
+näkymätön. Kaksi korjausta: `REITIN_VARI` 0,72 → **0,95** (kuljettu
+matka jää hennoksi jäljeksi myös keilan ulkopuolella) ja reikä seuraa
+ajon aikana viivan kärkeä (`siirraReikaMatkalla`), jolloin piirtyvä
+pää on aina kirkkaassa kohdassa. Keila myös laajenee kaaren huipulla
+`AJON_REIAN_KERROIN` (1,8) verran, koska silloin kamera on kauimpana ja
+matkaa näkyy ruudulla eniten. Syttymishetkellä reikä siirtyy uuden
+lampun kohdalle kuten ennen (`siirraReika`). Tasokartalla (`?lauta=kartta`) sama viiva on
+SVG-polku omassa kerroksessaan (`.aikajana-reitti`, `pathLength=1`,
+kasvu `stroke-dasharray`); isoympyrän pisteet projisoidaan laudalle
+`reitinKuvio`-funktiolla samalla kaavalla kuin pysäkit, ja
+päivämääräraja katkaisee polun osiin. Kaari kertoo laudan kentässä
+`aikajana.lauta`.
+
+**3. Kello vilisee.** Aamun toteutus pyöristi NÄYTETYN lukeman
+pysäkkivälin askeleeseen (`kellonAskel`, 1 000 tai 10 000 vuotta),
+jolloin kello luki "165 000" ja kaksi tai kolme viimeistä nollaa
+seisoivat koko kaaren ajan — mitattuna nolla numeromuutosta kolmessa
+sekunnissa. Nyt `naytaVuosi` antaa mittarille lukeman **yhden vuoden
+tarkkuudella** (`askel: 1`, murto-osa päällä myös syvässä ajassa), ja
+mekaanisen matkamittarin kuljetussääntö tekee lopun: mitattuna 3
+sekunnissa ykkösrulla 25, kymmenet 20, sadat 3 ja tuhannet 1 vaihdosta.
+Kello näyttää siis joka hetki oikean lukeman (164 371) ja pysähtyy
+pysäkillä aineiston omaan tasalukuun.
+
+`KELLON_ASKELEET` ja `kellonAskel` jäivät **sisäiseksi tahdiksi**:
+niistä tulee naksahdus (`AIKAJANA_NAKSU_VALI_MS` — 60 naksahdusta
+sekunnissa olisi rätinää) ja etunollien piilotus, jota ei kannata
+laskea joka kehyksellä. Kaaren loppupään vuosilukutila
+(`KELLON_JAA_RAJA`) juoksee samalla periaatteella: `KELLON_VUOSI_TARKKUUS`
+50 → **1**, ja koska aineiston luvut ovat kokonaisia vuosia
+nykyhetkestä, kello päätyy yhä tasan siihen lukuun, jonka pysäkki sanoo
+(750 → "n. 1250 jaa.").
+
+**Vartijat.** `tests/aikajana.test.mjs` (ennakko 80 %, ajon osuus
+välistä, perillä perusmitta, mittarille askel 1),
+`tests/ihmisen-matka.test.mjs` (kaaren profiili ja `hypynLeveys`,
+väliajon kytkennät, `reitinKuvio` ja päivämääräraja, ja uusi vartija
+"kellon lukema on jatkuva: kaikki neljä alinta numeroa vilisevät", joka
+ajaa oikean pysäkkivälin läpi ja laskee rullien vaihdot),
+`tests/aikajanamerkit.test.mjs` (naksahdus lukee askelta, ei näytettyä
+lukemaa).
+
+---
+
+## Pergamentin repaleinen reuna — yhteinen osa (omistaja 7.9.2026 ilta, v1671)
+
+Omistaja iPadilla, Ihmisen matkan avauslaatikko, sanatarkasti:
+
+> *"Paperin rosoiset reunat ovat aivan liian geometrisiä ja niiden
+> takaa näkyy täysin mustaa, vaikka paperin ympärillä on sitten kevyt
+> hehku. Saisiko sen paperin ääriviivan tehtyä luonnollisemmin? Tämä on
+> kuitenkin monessa paikkaa toistuva osa, niin voi tehdä huolella."*
+
+**Kaksi vikaa, yksi juuri.** Reuna oli `clip-path`-monikulmio, jossa oli
+kahdeksan pistettä reunaa kohti **tasavälein** — silmä lukee sen
+kuviona, ei repeämänä. Ja koska `clip-path` leikkaa myös elementin oman
+varjon, kajo jouduttiin piirtämään leikkaamattoman KEHYKSEN
+suorakulmaisena `box-shadow`'na: jokaisen loven pohjalla, leikatun
+paperin ja suorakulmaisen hehkun välissä, näkyi puhdasta mustaa.
+
+**Ratkaisu: `js/pergamentti.js` + `css/styles.css` osio "PERGAMENTIN
+REPALEINEN REUNA".** Sama siemen tuottaa KAKSI kuvaa, joilla on sama
+ääriviiva:
+
+```js
+repaleinenPaperi(laatikko, { siemen: siemenNimesta(otsikko), hehku });
+```
+
+1. **Maski** (`--pergamentti-maski`, luokka `.pergamentti-repale`):
+   valkoinen arkki, jonka reunaa rikkoo kaksi `feTurbulence` +
+   `feDisplacementMap` -paria — karkea aalto (baseFrequency 0,022,
+   2 oktaavia, scale 12) antaa pitkän epäsäännöllisen mutkan ja hieno
+   kohina (0,075, 3 oktaavia, scale 4,5) kuidun. `feGaussianBlur 0,8`
+   pehmentää leikkauksen, jottei reuna ole veitsellä leikattu.
+   Pohjapolun kulmat ovat viistetyt (arvottu 7–19 yksikköä), joten ne
+   kuluvat enemmän kuin suorat sivut.
+2. **Kajo** (`--pergamentti-hehkukuva`, luokka `.pergamentti-hehku`):
+   SAMA polku ja samat siemenet lämpimänä täyttönä, kahdesti
+   sumennettuna (σ 9 ja 18) SVG:n sisällä. Kerros asuu paperin ALLA
+   sisarelementtinä ja on `inset: -15%`. Kajo on siis paperin oman
+   muodon sumennus — se myötäilee jokaista lovea, eikä mustaa rakoa jää.
+
+**Sumennus on leivottu KUVAAN eikä CSS-suodattimeen.** Sama mittaus kuin
+paperin kohinakerroksissa (`css/aikajana.css` AVAUSJAKSO, 4.9.2026):
+iOS-kuoressa `filter: blur(...)` ja `backdrop-filter` jäivät
+piirtymättä, mutta SVG-suodatin taustakuvana on piirtynyt joka
+kuoressa. Kuvat lasketaan kerran; lyhtyjen syke muuttaa VAIN
+kajokerroksen `opacity`-arvoa (`--lyhty-ulko`, `js/lyhty.js`
+`laatikonValo`). `prefers-reduced-motion` ei vaikuta — reuna ei liiku.
+
+**Sivusuhde mitataan.** Kumpikin kuva venytetään elementin kokoon
+(`100% 100%`), joten viewBoxin korkeus lasketaan laatikon omasta
+sivusuhteesta (leveys aina 400 yksikköä, korkeus 400 / suhde). Ilman
+tätä puhelimen korkea laatikko sai sileät pystyreunat ja rypistyneet
+vaakareunat. `repaleinenPaperi` mittaa suhteen elementistä, joten kutsu
+tehdään VASTA kun laatikko on asettunut (`js/aikajana.js`
+`avaaAvausjakso`, pakotetun asettelun jälkeen). Kajokuvan viewBox on
+1,3-kertainen ja polku sen keskellä, jolloin kerros ja paperi saavat
+akseleittain saman venytyksen ja muodot osuvat päällekkäin laatikon
+koosta riippumatta.
+
+**Käytössä.** Aikajanan avauslaatikko (`.aikajana-avaus-laatikko` ja
+sen kajokerros `.aikajana-avaus-hehku`) — sama koodi kaikilla
+aikajanalinsseillä, siemen kaaren otsikosta, joten Ihmisen matka ja
+keksinnöt saavat eri arkin mutta sama kaari aina saman. Paperin
+kellastunut reunavyö (`inset`-varjot) kasvatettiin 10/26/62 → **22/46/92
+px**, koska `inset`-varjo piirtyy elementin suoraan reunaan ja maski syö
+siitä ulomman noin 3 %. Muut pergamenttipinnat eivät käytä tätä:
+kaupunki- ja maalehden arkki on omistajan päätöksellä 5.8.2026 **suora
+leikattu reuna** (`css/styles.css` sanomalehtipohja), ja `.isoisa-rajattu`
+on valokuvan `inset`-rajaus, ei paperin reuna.
+
+**Vartijat.** `tests/pergamentti.test.mjs` (siemenen vakaus, polun
+mahtuminen marginaaliin, maskin ja kajon yhteinen ääriviiva, sivusuhteen
+mitat, ei CSS-suodatinta), `tests/aikajana.test.mjs` ("avauslaatikon
+kajo saa saman repaleisen muodon kuin paperi") ja
+`tools/savukkeet/savuke-pergamentti.mjs`, joka lukee kuvakaappauksen
+pikselit itse (oma pieni PNG-purku). Vanhaa monikulmiota vasten ajettuna
+se antaa **6/16**, ja ratkaiseva mittari on kajo: vanhassa versiossa
+kirkkaus 3 px reunan ulkopuolella oli **0,0** (juuri se musta rako,
+jonka omistaja näki) ja kajo oli 24 px:n päässä kirkkaampi kuin reunan
+vieressä — suorakulmainen `box-shadow` alkoi vasta lovien ulkopuolelta.
+Nyt lukemat ovat 3 px:n päässä keskimäärin ~50/255 ja 24 px:n päässä
+~20/255. Reunan JAKSOLLISUUS raportoidaan mutta siitä ei väitetä:
+mittaus osoitti, ettei tasavälistä sahalaitaa erota pikselitasolla, kun
+poikkeama on kummassakin noin 14 px — muodon alkuperää vartioi sen
+sijaan maskikuvan sisältö (kaksi turbulenssia ja pehmennys).
+
+## Lappu väistyy kartan kosketuksesta (omistaja 7.9.2026 ilta, v1672)
+
+Omistaja 7.9.2026 ilta (Ihmisen matkan "Matka päättyy" -kortti,
+sanatarkasti): *"Tuo lappu saisi hävitä, kun pelaaja alkaa tutkimaan
+karttaa, tai se saisi vain rullautua ylös piiloon ja otetaan pois tuo
+suljen nappi siitä ja siirretään se kartan oikeaan yläkulmaan, mistä
+tämän linssin voi sitten sulkea milloin vain."*
+
+Kolme muutosta, kaikki aikajanamoottorissa (js/aikajana.js,
+css/aikajana.css) ja siksi voimassa JOKAISESSA aikajanalinssissä —
+Ihmisen matkan loppulapussa, sen matkan varren korteissa ja
+keksintölinssin havainnekuvissa, koska ne ovat sama paneeli
+(`.aikajana-ilmio`).
+
+- **Lappu rullautuu ylös piiloon.** `kytkeKartanKosketus` kuuntelee
+  kartta-alueen (`ui.mapPane`) `pointerdown`- ja `wheel`-tapahtumia
+  **kaappausvaiheessa ja passiivisina**: pallon oma ohjaus kuluttaa
+  vedon alun, joten kuplivaa tapahtumaa ei tulisi lainkaan, eikä
+  tarkkailija saa estää tai kuluttaa mitään. Kartaksi lasketaan kaikki,
+  mikä ei ole `.aikajana`-juuren sisällä, joten lapun oma raahaus ja
+  nipistys, karusellin kortit ja palkin napit eivät piilota lappua.
+  Piilotus on luokka `piilossa`, joka kutistaa paneelin `scaleY(0.02)`
+  yläreunansa ympäri ja häivyttää sen 300 ms:ssa
+  (`--aikajana-lappu-kesto`; prefers-reduced-motionissa 0,01 s).
+  KORKEUTTA EI KOSKETA: `height` on js:n hallussa (vaihdaPaneeli
+  lukitsee sen ristihäivytyksen ajaksi), ja `max-height`-liuku olisi
+  taistellut samasta arvosta. Pelaajan raahaama siirto
+  (`--aikajana-paneeli-dx/-dy`) kirjoitetaan piilotusluokkaan uudestaan,
+  joten lappu rullautuu siitä kohtaa, johon se jätettiin.
+- **Kahva jää otsikkoriviin.** `.aikajana-kahva` on olemassa vain lapun
+  ollessa piilossa, ja siinä lukee lapun nimi ja ▾ ("Matka päättyy ▾").
+  Nimi ja nuoli ovat omat solmunsa, koska kapealla ruudulla nimi jää
+  pois ja jäljelle jää ▾ (nimi on `aria-label`- ja `title`-tiedossa).
+  Nimi (`lapunNimi`) päivittyy jokaisen paneelisivun myötä myös
+  rullattuna, joten pelaaja näkee palkista, mikä kortti kartan takana
+  odottaa. Napautus (`naytaLappu`) avaa lapun samalla liu'ulla.
+  Loppusanat avaavat lapun aina (`lopeta`), ja Alusta nollaa tilan.
+- **Sulje-nappi pois lapusta, ✕ kartan oikeaan yläkulmaan.**
+  `lisaaLoppunapit` tekee enää yhden napin ("Katso löydöt").
+  Sulkeva ✕ (`.aikajana-sulje`) on nyt linssin juuren suora lapsi
+  eikä otsikkorivin ohjain: `position: absolute; top: 0.6rem; right:
+  1.25rem`, osumapinta 44 × 44 px, tyyli entinen. Tauko/Jatka jää
+  palkkiin. Kartta-alueen oikeassa yläkulmassa ei ole linssin aikana
+  muuta näkyvää eikä painettavaa: karttaselitteen nappi on siellä,
+  mutta linssin ajan `opacity: 0; pointer-events: none`
+  (css/styles.css `body.aikajana-paalla`), ja maakyltti elää vain
+  maaselaimessa (js/ui.js `paivitaMaaPilleri`). Savuke mittaa
+  päällekkäisyyden joka ajolla ja ohittaa vain näkymättömät.
+  **Päivitys 8.9.2026 (omistaja, Raamattu "KEKSINTOLINSSIN YLAPALKKI
+  IHMISEN MATKAN TYYLIIN, JA ALOITA ALUSTA"):** kun linssi saa palkin
+  Matkakirjan yläpalkin tilalle — nyt kumpikin kaari, sekä Ihmisen
+  matka että keksinnöt — ✕ siirtyy palkin oikeaan laitaan
+  (`.aikajana.palkki .aikajana-sulje { position: static }`) Tauko/Jatka-
+  ja ↺-nappien viereen, kaikki samankorkuisina (`--palkin-nappi`).
+  Kulman paikka jäi hetkeksi perusasuksi.
+  **Päivitys 8.9.2026 ilta (omistaja, Raamattu "LINSSIEN HAMPURILAINEN
+  OIKEASSA YLAKULMASSA"):** ✕ ja ↺ POISTETTIIN kokonaan — myös
+  `.aikajana-sulje`-tyyli kulmineen — ja niiden teot ovat nyt palkin
+  hampurilaisvalikon kaksi ensimmäistä riviä (Poistu, Aloita alusta).
+  Ks. luku "Linssin valikko" tämän tiedoston lopussa.
+- **Aloita alusta (↺) palkissa.** Sama nappi kummallakin kaarella,
+  kaksi haaraa (`js/aikajana.js aloitaAlusta`): kertomuskaarella se
+  tyhjentää linssin muistin ja käynnistää linssin uudestaan
+  avausjaksosta, pysäkkiajossa (keksinnöt, ei muistia) se ajaa
+  `alusta()`:n eli palauttaa kaaren alkuun paikan päällä — kello
+  alkuvuoteen, valot sammuksiin, ilmiöpaneeli kiinni, keksijäkaruselli
+  ja kamera kaaren alkuun. Vartiot: `tests/aikajanamerkit.test.mjs`
+  ("keksintölinssin pysäkkiajo saa saman palkin ja Aloita alusta
+  -napin") ja `tests/ihmisen-matka-tutkimus.test.mjs`. Nappi itse
+  siirtyi 8.9.2026 illalla valikon riviksi (ks. "Linssin valikko");
+  teko ja sen kaksi haaraa ovat ennallaan.
+- **Kapea ruutu (alle 600 px).** Kulma varataan napille: palkin
+  keskitys lasketaan ✕:n vasemmalle puolelle jäävästä tilasta
+  (`left: calc(50% - 1.8rem)`, `max-width: calc(100% - 4.8rem)`).
+  Pelkkä `max-width` ei riitä, koska flex-kohde ei kutistu
+  sisältömittansa alle: kahva sai `min-width: 0` (mitattu savukkeella
+  390 px:llä — ilman sitä "Matka päättyy ▾" työnsi palkin ✕:n päälle),
+  ja kahvan ajaksi paikkarivi väistyy
+  (`.aikajana-ylarivi:has(.aikajana-kahva:not([hidden]))`).
+
+**Vartijat.** `tests/aikajana.test.mjs` ("lappu rullautuu ylös kartan
+kosketuksesta ja palaa otsikkorivin kahvasta": kuuntelijat kaappaus-
+vaiheessa, purku irrottaa ne, luokat, kahvan teksti, ✕:n paikka ja
+44 px) ja uusi selainsavuke
+`tools/savukkeet/savuke-linssin-lappu.mjs` (Ihmisen matka loppuun asti
+kahdessa näkymässä, 834 × 1100 ja 390 × 844: loppulappu näkyviin →
+pallon veto piilottaa → kahva palauttaa → rulla piilottaa → ✕ kulmassa
+ilman päällekkäisyyttä sulkee linssin). `savuke-aikajana --linssi
+ihmisen-matka` päivitettiin samalla: nappirivillä on vain "Katso
+löydöt", ja linssi suljetaan kulman ✕:stä.
+
+### Toinen kierros: ylä- ja alareuna rauhalliseksi (omistaja 7.9.2026 ilta)
+
+Ensimmäisen version jälkeen omistaja sanoi sanatarkasti:
+
+> *"tuo näyttää ihan kamalalta, tuo paperi tuolla tavalla. Sivut ovat
+> ihan ok, mutta ylä- ja alareuna on, kuin paperi olisi tulessa, eli saa
+> liikkua rauhallisemmin ja toiseksi ei saa olla leikannut noin lähelle
+> tekstiä."*
+
+Kolme korjausta.
+
+**1. Akselit erotetaan.** Siirtymä oli molemmilla akseleilla sama, ja
+koska laatikko on leveä ja matala, sama amplitudi luki vaakareunalla
+tiheänä liekkinä ja pystyreunalla rauhallisena repeämänä. Nyt:
+
+- **Amplitudi**: kohinan G-kanava (= y-siirtymä = ylä- ja alareunan
+  liike) vaimennetaan `feColorMatrix`illa kertoimeen 0,38 (karkea) ja
+  0,44 (hieno); R-kanava eli sivujen liike jää ennalleen. Matriisi myös
+  **pakottaa alfan ykköseksi**: suodatinketju kuljettaa kuvia
+  esikerrottuina, ja ilman tätä vaimennus laimeni mitatusti olemattomiin.
+- **Taajuus**: `baseFrequency` annetaan akseleittain — `0.012 0.022`
+  (karkea) ja `0.04 0.075` (hieno). Ylä- ja alareunan aaltoilun tiheys
+  tulee kohinan X-taajuudesta, sivujen Y-taajuudesta.
+- Pohjapolun väliaallot: sivuilla entinen ±3,5 yksikköä, vaakareunoilla
+  ±1,2. Kulmien viisteet 7–19 → **4–10** yksikköä.
+
+Mitattuna (maski eristettynä, 600 × 450 px): ylä- ja alareunan syvyys
+vaihtelee **3–4 px**, sivujen **9–12 px**.
+
+**2. Kajo ei ole tuli.** Peittävyys `0,14 + 1,15 ×` →
+**`0,08 + 0,6 × --lyhty-ulko`**, säde σ 9/18 → **6/12**, väri kylläinen
+oranssi `#ff9c3c` → himmeä okra **`#d9ae74`**. Paperin sisäreunan
+kellastuma pidettiin säteiltään maskin ulottuvilla (20/44/86 px) mutta
+peittävyys palautettiin lähelle entistä (0,55/0,34/0,28 →
+**0,38/0,22/0,17**) — tumma vyö ja oranssi kajo lukivat yhdessä nokena.
+Kajon kirkkaus 3 px reunan ulkopuolella: 58 → **noin 32**/255.
+
+**3. Teksti irti reunasta.** Pehmuste on nyt **vapaa tila + maskin syömä
+vyöhyke**:
+
+```css
+--avaus-pehmuste-y: 2.4rem;
+--avaus-pehmuste-x: 2rem;
+padding: calc(var(--avaus-pehmuste-y) + 4.4%) calc(var(--avaus-pehmuste-x) + 5.6%);
+```
+
+Prosenttiosa on välttämätön. Repeämä syö elementin reunasta osuuden,
+joka on **aina sama murto-osa laatikon LEVEYDESTÄ** — maski venytetään
+sivusuhteen mukaan, joten yksi maskiyksikkö on yhtä monta pikseliä
+kummallakin akselilla. CSS laskee kaikki pehmusteprosentit laatikon
+leveydestä, joten sama sääntö pitää niin kapealla puhelinlaatikolla kuin
+leveällä kuvapaperilla (`.aikajana-avaus-kehys.on-kuva`, min(52rem, 92%))
+— pehmustetta ei tarvitse säätää käsin, kun paperi kasvaa. **Jos laatikon
+muunnelma tarvitsee oman pehmusteensa, se kasvattaa VAIN muuttujia; koko
+`padding`-lyhenteen korvaaminen toisi tekstin takaisin repeämän kylkeen.**
+Kapealla ruudulla (max-width 640px) vapaa tila on 1,9 / 1,5 rem, koska
+työpöydän mitat kasvattivat puhelinlaatikon ruudun yli.
+
+**Isompi kuvapaperi ei syö sivureunan repeämää (mitattu 7.9.2026).**
+Kun tämä yhdistettiin `.on-kuva`-paperiin (min(52rem, 92%) eli iPadilla
+718 px), savuke raportoi sivureunan vaihteluksi 4 px. **Vika oli
+mittarissa, ei paperissa**: reunanhaun ikkuna oli kiinteä ±30
+laitepikseliä, ja koska repeämän purema on osuus laatikon leveydestä,
+718 px:n paperilla se on 26–46 px — ikkuna katkaisi mittauksen. Maski
+eristettynä mitattuna sivujen vaihtelu on **16 px** (720 × 470) ja
+7 px (320 × 600), eli purema kasvaa leveyden mukana kuten pitääkin.
+Vaakasuunnan ikkuna sidottiin leveyteen samalla kaavalla kuin
+pystysuunnan (`0,075 × leveys × dpr`), ja korjattu mittaus antaa iPadilla
+21 px.
+
+Kuvapaperin muunnelma asettaa **vain pehmustemuuttujat**: työpöydällä
+2,6 / 2,2 rem ja kapealla ruudulla 1,7 / 1,55 rem. Kapean ruudun luvut
+ovat suuremmat kuin tekstipaperilla, koska kuvapaperi on siellä yhtä
+palstaa ja siis korkea, ja korkealla laatikolla repeämä puree suhteessa
+syvimmältä (4,4 % leveydestä, kun leveällä paperilla 3,8 %). Savuke
+laskee pehmusteen riittävyyden **syvemmästä** näistä kahdesta.
+
+**Vartijat.** `savuke-pergamentti` mittaa nyt myös **maskin eristettynä**
+(valkoinen laatta mustaa vasten) KAHDELLA sivusuhteella — leveä
+kuvapaperi ja korkea puhelinlaatikko: vaakareunojen aaltoilu on
+korkeintaan puolet sivujen aaltoilusta kummallakin, sivut pysyvät
+revittyinä, ja syvin puraisu on alle 6 % paperin leveydestä. Tekstin väli mitataan kertomalla tämä
+syvyys laatikon leveydellä ja vähentämällä se DOMista luetusta
+pehmusteesta — pikselihaku ei siihen kelpaa, koska repeämän kohdalla
+kontrasti on pieni (ulkona himmeä kajo, sisällä tumma reunavyö) ja
+jyrkimmän muutoksen haku löytää sisäreunan kellastuman rinteen. Kajolle
+on nyt myös YLÄRAJA (keskimäärin ≤ 45/255 reunan vieressä), joka
+vartioi juuri sitä liekkiä, jonka omistaja hylkäsi.
+
+
+## Linssin valikko — hampurilainen palkin oikeassa laidassa (omistaja 8.9.2026)
+
+Omistajan linjaus (Raamattu "LINSSIEN HAMPURILAINEN OIKEASSA
+YLAKULMASSA"), sanatarkasti: *"Kummankin linssin ja myös tulevien
+linssien oikeaan yläreunaan voisi laittaa hampurilaisen, mistä löytyisi
+järjestyksessä ylhäältä alas: poistu, aloita alusta, kertoja (on/off) ja
+taustamusiikki (on/off). Poistu ja aloita alusta napit voi ottaa
+yläpalkista siten pois näkyvistä."*
+
+**Kaikki linssit saavat valikon ilman omaa työtä.** Se rakennetaan
+moottorissa — `js/aikajana.js rakennaPalkki`, sama metodi, joka antaa
+kummallekin kaarelle yhden palkin — eikä linssikohtaisesti. Uusi linssi
+saa siis valikon samalla hetkellä kun se saa palkin, eikä sen datassa
+tai moduulissa tarvitse olla siitä mitään.
+
+**Pinta on `js/aikajana-valikko.js`** (`luoLinssivalikko`). Se ei tiedä
+kaaresta mitään: moottori antaa sille kaksi tekoa (Poistu, Aloita
+alusta) ja yhden koukun (musiikkikytkimen uusi tila), ja loput valikko
+hoitaa itse. Ikoni ja pudotuksen kaava ovat Matkakirjan päävalikosta
+(`#menu-btn`, `.viiva-ikoni`, `.paavalikko`), mutta toteutus on oma,
+koska Matkakirjan yläpalkki on linssin ajan piilossa
+(`body.aikajana-palkki-auki .topbar`).
+
+### Neljä riviä, yksi järjestys
+
+| # | Rivi | Rooli | Teko |
+| --- | --- | --- | --- |
+| 1 | Poistu | `menuitem` | `ui.pysaytaAikajana()` — entinen ✕, sama purku ja sama muistin tallennus kertomuskaarella |
+| 2 | Aloita alusta | `menuitem` | `ajo.aloitaAlusta()` — entinen ↺, kaksi haaraa (muistin tyhjennys + uusi ajo / `alusta()` paikan päällä) |
+| 3 | Kertoja | `menuitemcheckbox` | `js/luenta.js luentaKytkinPaalla` / `asetaLuentaKytkin`; pois kytkettäessä `pysaytaLinssiluenta` + `pysaytaLukija` vaientavat kesken olevan luennan heti |
+| 4 | Taustamusiikki | `menuitemcheckbox` | `js/musiikkivalitsin.js musiikkiPaalla` / `asetaMusiikkiPaalla`; koukku ajaa linssin oman raidan (`aloitaMusiikki` / `lopetaMusiikki`) samaan tilaan |
+
+**Kytkimet ovat PELIN kytkimiä, eivät linssin omia.** Sama kertoja
+vaikenee matkakirjan merkinnöissä ja sama musiikki hiljenee kartalla —
+valikko on vain toinen kahva samaan asiaan, kuten matkakirjakortin
+kaiutin on kertojan toinen kahva. Tila luetaan uudestaan joka avauksella
+(`paivita`), joten muualta käännetty kytkin näkyy oikein. Rivillä lukee
+nimi ja tila ("päällä" / "pois"), ja `aria-checked` seuraa perässä.
+
+**Kaikki rivit sulkevat valikon valinnasta** — myös kytkimet, joiden
+tila kirjoitetaan riville ennen sulkua. Muut sulkutiet: napautus
+valikon ulkopuolelle (moduulin oma dokumenttikuuntelija) ja **Esc**,
+jonka moottori antaa valikolle ENNEN linssiä (`js/aikajana.js nappain`:
+avoin valikko syö Escin, ilman valikkoa Esc käyttäytyy kuten ennen).
+
+**Kartan napautus sulkee valikon avaamatta kohdetta.** Valikko on
+kartoitettu yhteiseen sulkuvartijaan (`js/ui-apurit.js`
+`VALIKKOKERROKSET`: `#aikajana-valikko` / `.aikajana-valikko-nappi`),
+joten sama napautus, joka sulkee valikon, nielaistaan eikä valu laudan
+osumatestiin — sama sopimus kuin päävalikolla ja kehittäjän rattaalla
+(docs/moduulit/karttapallo.md luku 13).
+
+### Mitä poistui
+
+`✕` (`.aikajana-sulje`) ja `↺` (`.aikajana-alusta`) **poistettiin
+kokonaan** — sekä palkista että kartan oikeasta yläkulmasta, jossa ✕
+ehti asua 7.–8.9.2026. Niiden teot elävät valikon kahtena ensimmäisenä
+rivinä, ja moottorin omat kahvat (`ajo.suljeNappi`, `ajo.alustaNappi`)
+osoittavat nyt niihin riveihin. Pimeässä avausjaksossa
+(`.aikajana.esitys-pimea`) palkista jää näkyviin **vain hampurilainen**
+— ennen poikkeus oli ✕.
+
+**Mitat.** Nappi on palkin muiden nappien korkuinen neliö
+(`--palkin-nappi`: 36 px, alle 600 px:n ruudulla 32 px). Pudotus
+ankkuroituu napin oikeaan reunaan ja kasvaa vasemmalle; puhelimella sen
+katto on `calc(100vw - 1.4rem)`, joten se ei työnny ruudun laidan yli.
+
+**Vartijat.** `tests/aikajanamerkit.test.mjs` ("hampurilaisvalikossa
+neljä kohtaa oikeassa järjestyksessä, kytkimet ja Esc": järjestys,
+roolit, avaus/sulku, Escin etuoikeus, kummankin kytkimen kytkeytyminen
+pelin omaan kytkimeen, Poistun purku) ja tekstitason vartiot
+`tests/aikajana.test.mjs`, `tests/ihmisen-matka-esitys.test.mjs` ja
+`tests/ihmisen-matka-tutkimus.test.mjs`. Selaimessa: `savuke-aikajana`
+(V.7 sulkee linssin valikosta), `savuke-ihmisen-tutkimus` (palkissa
+hampurilainen ja neljä kohtaa oikeassa järjestyksessä; Aloita alusta ja
+Poistu valikosta), `savuke-ihmisen-esitys` (pimeässä valikon nappi on
+ainoa näkyvä) ja `savuke-linssin-lappu` (napin paikka ja
+päällekkäisyydet kartan oikeassa yläkulmassa).

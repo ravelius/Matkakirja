@@ -89,6 +89,17 @@
  */
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
+import {
+  ASTRONAUTIN_SAVY, ASTRONAUTIN_SUODATIN, JAARAJA_LAT, astronautinValoliuunPysakit,
+  haeReliefinLuettelo, merkitseLinssiketju, reliefiAstronautilla, reliefiKaytossa,
+  reliefinLaattaUrl, reliefinSyvinTaso, reliefinTaso, reliefinTaustavari, reliefinVaraLahde,
+  reliefinVersio,
+  reliefipyramidiPaalla,
+} from './reliefipyramidi.js';
+import { NOSTOLADONTA_SAANTO } from './nostoladonta.js';
+import {
+  lataaMaapolygonit, maanAluevesiPolku, maanAluevesiRenkaat, puraMaanRenkaat,
+} from './maanaariviivat.js';
 
 /*
  * === NOUTAMINEN JA KIINNITTÄMINEN OVAT ERI ASIOITA =================
@@ -368,15 +379,163 @@ export function laatoissaOnNimet() {
  * @param {string} tiiviste  merkin nykyinen sisältötiiviste
  */
 export function nostoOnPoltettu(tunnus, tiiviste) {
-  const nostot = luettelo?.nostotaso?.nostot ?? luettelo?.nostot;
+  const nostot = poltetutNostot();
   if (!nostot || !tunnus || !tiiviste) return false;
   return nostot[tunnus] === tiiviste;
 }
 
 /** Onko luettelossa lainkaan poltettuja nostoja? */
 export function laatoissaOnNostoja() {
-  const nostot = luettelo?.nostotaso?.nostot ?? luettelo?.nostot;
+  const nostot = poltetutNostot();
   return Boolean(nostot && Object.keys(nostot).length);
+}
+
+/*
+ * === KOLMAS MALLI: NOSTOTASO MAITTAIN (18.9.2026) ==================
+ *
+ * Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta 17 d: *"muiden maiden
+ * nostot piiloon"*. Elävä kerros osasi jo vaieta naapureista
+ * (js/pallolauta/nostot.js NAYTA_VAIN_KOHDEMAAN_NOSTOT), mutta
+ * MAAILMANLAAJUISESSA nostolaatastossa naapurin muste on poltettu
+ * samaan kuvaan kuin kohdemaan — eikä kerros voi piilottaa sitä.
+ * Mitattu 18.9.2026 (kerma 0,85 päällä): Gotthard-nimiön kontrasti
+ * 14,8 / 13,9, tavoite < 10.
+ *
+ * KORJAUS ON SAMA KUIN VÄRITASOLLA: taso on maakohtainen. Luettelon
+ * `nostotasot[ISO]` kertoo, kenen laatat ämpärissä ovat, laatan osoite
+ * kantaa ISO-koodin (`<versio>/nostot/<ISO>/z…`, nostotasonKansio), ja
+ * peli hakee VAIN kohdemaan laataston. Kohdemaa on sama yksi luku kuin
+ * väritasolla (`variMaaNyt`) — kaksi päättelyä ehtisi olla eri mieltä,
+ * ja silloin kartalla olisi Ranskan nostot Belgian kohdalla.
+ *
+ * TIIVISTELUETTELO SEURAA LAATASTOA. Kun taso on maakohtainen, vain
+ * kohdemaan merkit ovat laatoissa, joten vain niistä saa vaieta.
+ * Naapurin merkin tiiviste ei ole taulussa lainkaan → se piirtyisi
+ * elävänä, ja elävä kerros piilottaa sen omalla säännöllään.
+ *
+ * VANHA LUETTELO (maailmanlaajuinen `nostotaso`) toimii ennallaan:
+ * taulua ei ole, ja funktiot putoavat vanhaan haaraan. Vanha peli
+ * uuden luettelon kanssa ei tunne `nostotasot`-taulua eikä löydä
+ * `nostotaso`-oliota → se piirtää jokaisen noston elävänä, mikä on
+ * oikein, koska pohjalaatoissa ei ole nostoja.
+ */
+
+/** Kohdemaan nostotason kirjaus (`nostotasot[ISO]`) tai null. */
+function nostotasonKirjaus() {
+  if (!luettelo?.nostotasot) return null;
+  if (!variMaaNyt) return null;
+  return luettelo.nostotasot[variMaaNyt] ?? null;
+}
+
+/**
+ * MAAKOHTAISEN nostotason tunnus→tiiviste-taulu, tai null kun
+ * luettelossa ei ole `nostotasot`-taulua tai kohdemaalla ei ole
+ * kirjausta.
+ *
+ * PALLO LUKEE TÄMÄN (js/pallo.js pallonNostoOnPoltettu). Pallon oma
+ * sarja voidaan ajaa ILMAN nostoja (laatat.json `nostot: null`),
+ * jolloin liikkuvassa pallossa ei ole mustetta lainkaan ja lepokerros
+ * latoo kohdemaan nostolaatat tästä samasta pyramidista
+ * (js/pallolaatat.js nostotMaittain). Silloin myös VAIKENEMISEN on
+ * tultava tästä taulusta — muuten peli piirtäisi jokaisen noston
+ * elävänä poltetun musteen päälle, ja CSS2D-katto (NOSTOJEN_KATTO 40)
+ * pudottaisi osan merkeistä kokonaan pois osumalistalta.
+ */
+/*
+ * ══ KOHDEMAAN KAIKKI NIMIÖT ELÄVINÄ (Fable 20.9.2026, omistajan
+ * päätös nimiöt-erän jatkoksi: *"KOHDEMAAN KAIKKI NIMIÖT ELÄVIKSI
+ * (myös musteeksi poltetut ja maan merinimiöt), muiden maiden nimiöt
+ * jäävät laattoihin"*) ═════════════════════════════════════════════
+ *
+ * Poltettu nimiö on laatan tekstuurissa, eikä sovittelu (ruudun reuna,
+ * kaupungin nimi, rantaviiva) voi siirtää sitä — 240 poltettua ylitystä
+ * 32 maassa (docs/raportit/viesti-fable-nimiot-reuna-20260920.md).
+ * Kytkimen ollessa päällä pallo ei pidä yhtään kohdemaan nostoa
+ * poltettuna (js/pallo.js pallonNostoOnPoltettu: kaikki piirtyvät
+ * elävinä sovittelun läpi) eikä maakohtaista nostolaatastoa ladota
+ * (js/pallolaatat.js nostotMaittain) — muuten elävä nimiö piirtyisi
+ * poltetun päälle. Muiden maiden nostot pysyvät poissa kuten ennenkin
+ * (js/pallolauta/nostot.js NAYTA_VAIN_KOHDEMAAN_NOSTOT). Vaatii pallon
+ * sarjan ILMAN --nostot-lippua (nykytila); jos sarjaan on poltettu
+ * nostot koko maailmasta, kytkin ei voi ottaa niitä pois. Elävien
+ * määrä nostaa CSS2D-budjettia (js/pallolauta/nostot.js
+ * NOSTOJEN_KATTO, js/pallolauta/lauta.js HTML_MERKKIEN_KATTO).
+ */
+export const KOHDEMAAN_NIMIOT_ELAVINA = true;
+
+/*
+ * NIMIÖTASON METADATA (Karttasepän uusintapoltto 20.9.2026, luettelon
+ * kenttä `nimiotaso.nimiot`: id → { luokka, teksti, lon, lat, iso, meri,
+ * laatikot }). Meren nimiöillä on `meri`-avain (= id). Elävä nostokerros
+ * lukee tästä, mitkä meret laatta jo nimeää, jottei sama meri tuplaannu
+ * elävänä maastonimenä (js/pallolauta/nostot.js poltetutMerinimet).
+ * Vanha luettelo ilman kenttää = null = ei mitään piilotettavaa.
+ */
+export function pyramidinNimiot() {
+  return luettelo?.nimiotaso?.nimiot ?? null;
+}
+
+/**
+ * Nimiötason meren nimien avaimet (id-tunnukset, esim. 'biskajanlahti',
+ * 'valimeri'). Tyhjä joukko ennen polttoa.
+ */
+export function pyramidinMerinimet() {
+  const nimiot = pyramidinNimiot();
+  const ulos = new Set();
+  for (const n of Object.values(nimiot ?? {})) if (n?.meri) ulos.add(String(n.meri));
+  return ulos;
+}
+
+export function nostotasonPoltetut() {
+  if (!luettelo?.nostotasot) return null;
+  return nostotasonKirjaus()?.nostot ?? null;
+}
+
+/*
+ * NIMET ELÄVINÄ, MERKIT LAATASSA (Fable 23.9.2026, koe `poltetutnostot`):
+ * kohdemaan nostotaso on poltettu ilman nimiä (tools/generoi-
+ * laattapyramidi.mjs --nostot-ilman-nimioita → kirjauksen `nimiot:
+ * false`). Silloin laatta kantaa pisteen tai kuvamerkin ja peli piirtää
+ * vain nimen elävänä. Vanha kirjaus ilman kenttää = nimet laatassa =
+ * false (kerros pysyy poissa kuten KOHDEMAAN_NIMIOT_ELAVINA vaatii).
+ */
+export function nostotasonNimetElavina() {
+  const kirjaus = luettelo?.nostotasot ? nostotasonKirjaus() : null;
+  return Boolean(kirjaus?.versio && kirjaus.tasot?.length && kirjaus.nimiot === false);
+}
+
+/** Tunnus→tiiviste-taulu, josta elävä kerros saa vaieta. */
+function poltetutNostot() {
+  if (luettelo?.nostotasot) return nostotasonKirjaus()?.nostot ?? null;
+  return luettelo?.nostotaso?.nostot ?? luettelo?.nostot;
+}
+
+/**
+ * Nostotason laattojen kansio (ilman `z/sarake/rivi`-osaa).
+ *
+ * TÄMÄ ON POLUN AINOA KAAVA — sekä peli (laattaUrl) että generaattori
+ * (tools/generoi-laattapyramidi.mjs) lukevat sen tästä, kuten
+ * väritasolla (varitasonKansio). Kaksi kopiota ehtisi eriytyä, ja
+ * lopputulos olisi 404 tai pahempi: oikean näköinen mutta väärän maan
+ * laatta.
+ *
+ * @param {object|null} kirjaus `pyramidi.nostotasot[ISO]` tai null.
+ * @param {{versio?: boolean}} [asetukset] `versio: false` jättää
+ *   version pois — generaattori kirjoittaa laatat ajokansioon, jonka
+ *   alle versio tulee vasta ämpärissä.
+ */
+export function nostotasonKansio(kirjaus, asetukset = {}) {
+  if (!kirjaus) return '';
+  const osat = [];
+  if (asetukset.versio !== false) osat.push(kirjaus.versio ?? '');
+  osat.push('nostot');
+  if (kirjaus.maa) osat.push(kirjaus.maa);
+  return osat.join('/');
+}
+
+/** Yhden nostotason laatan polku ämpärissä (ilman ämpärin etuliitettä). */
+export function nostotasonLaattapolku(kirjaus, z, sarake, rivi, muoto = 'webp', asetukset = {}) {
+  return `${nostotasonKansio(kirjaus, asetukset)}/z${z}/${sarake}/${rivi}.${muoto}`;
 }
 
 /*
@@ -419,6 +578,29 @@ export function pyramidinArkki(lauta) {
 /* ------------------------------------------------------------ luettelo */
 
 /*
+ * PELIN SYVIN TASO (Karttaseppä 23.9.2026). Ämpärin luettelo voi kuvata
+ * tasot z9–z10: ne poltetaan vain alueelle (Ranska) 30 metrin
+ * korkeusaineistosta natiivipelin pallosarjaa Z9–Z11 varten
+ * (tools/generoi-laattapyramidi.mjs SYVÄT TASOT). Selainpeli EI käytä
+ * niitä — pallo pysyy Z8:ssa, eikä tasokartan tason valinta
+ * (valitseTaso) saa hypätä alueen laattoihin, joiden ulkopuolella
+ * laatastossa on pelkkiä nollia. Siksi luettelon tasot rajataan tähän
+ * kattoon HETI haettaessa, yhdessä paikassa: jokainen kuluttaja
+ * (tasokartta, pallon lepokerros, pallolauta) saa luettelonsa
+ * haePyramidinLuettelo()-kutsusta ja näkee vain tasot z0–z8.
+ */
+export const PELIN_SYVIN_TASO = 8;
+
+/**
+ * Luettelo pelin käyttöön: tasot, joiden z ylittää PELIN_SYVIN_TASO:n,
+ * jätetään pois. Palauttaa saman olion, jos rajattavaa ei ole.
+ */
+export function pelinLuettelo(j, katto = PELIN_SYVIN_TASO) {
+  if (!Array.isArray(j?.tasot) || !j.tasot.some((t) => t.z > katto)) return j;
+  return { ...j, tasot: j.tasot.filter((t) => t.z <= katto) };
+}
+
+/*
  * Luettelo haetaan kerran istuntoa kohti. Moduulitasolla eikä
  * UI-oliossa: tiedosto ei muutu kesken istunnon, eikä uusi peli saa
  * aloittaa hakua alusta.
@@ -434,18 +616,55 @@ let edellinenKeskus = null;
 let edellinenTaso = null;
 let luetteloHaku = null;
 
+/*
+ * LUETTELO TARKISTETAAN AINA, LAATAT EI KOSKAAN.
+ *
+ * Laatan osoitteessa on ajon versio, joten se kelpaa ikuiseen
+ * välimuistiin (`immutable`, 1 vuosi). LUETTELON osoitteessa ei ole
+ * versiota — se on se tiedosto, joka KERTOO version — ja ämpärissä
+ * sillä on `max-age=300`.
+ *
+ * Viisi minuuttia on juuri se ikkuna, jossa omistaja katsoi karttaa
+ * uuden nostopolton jälkeen (2.9.2026 ilta, *"välillä tulee tällaisia
+ * tuplanäkymiä … ne onneksi häviävät jonkun ajan kuluttua"*): selain
+ * tarjosi vanhan luettelon, peli pyysi sen mukana EDELLISEN
+ * nostoversion laatat ja laski tiivisteet uudella koodilla, jolloin
+ * jokainen muuttunut merkki oli kartalla kahdesti — vanha poltettuna
+ * laatassa ja uusi elävänä sen päällä.
+ *
+ * `cache: 'no-cache'` ei ohita välimuistia vaan TARKISTAA sen
+ * (If-None-Match): osuma on 304 ilman tavuakaan runkoa, joten hinta on
+ * yksi kättely istuntoa kohti. VARAREITTI ON PAKOLLINEN: verkotta
+ * tarkistus epäonnistuu, ja silloin tavallinen nouto saa yhä vastata
+ * välimuistista — muuten koko kartta katoaisi lentokonetilassa.
+ */
+function noudaLuettelo() {
+  return fetch(pyramidiUrl('pyramidi.json'), { cache: 'no-cache' })
+    .then((v) => (v.ok ? v : Promise.reject(new Error('luettelo'))))
+    .catch(() => fetch(pyramidiUrl('pyramidi.json')));
+}
+
 async function haeLuettelo() {
   if (luettelo) return luettelo;
+  /*
+   * RELIEFIN LUETTELO HAETAAN SAMALLA, mutta ERIKSEEN eikä tätä
+   * odottaen (`void`): reliefi on kytkimen takana, eikä pohjakartan
+   * ensimmäinen piirto saa jäädä odottamaan toista tiedostoa. Kun
+   * vastaus saapuu, `pyramidinKerrostasot` alkaa palauttaa
+   * reliefitason seuraavassa päivityksessä. Kytkimen ollessa pois
+   * kutsu palaa heti nullilla eikä hae mitään.
+   */
+  if (reliefipyramidiPaalla()) void haeReliefinLuettelo();
   if (!luetteloHaku) {
-    luetteloHaku = fetch(pyramidiUrl('pyramidi.json'))
+    luetteloHaku = noudaLuettelo()
       .then((v) => (v.ok ? v.json() : null))
       .then((j) => {
         // Kelpaa vain, jos siinä on se, mitä piirto lukee — versio
         // mukaan lukien, koska laatan osoite rakennetaan siitä.
         if (!j?.arkki?.w || !j?.laatta || !j?.versio
           || !Array.isArray(j.tasot) || !j.tasot.length) return null;
-        luettelo = j;
-        return j;
+        luettelo = pelinLuettelo(j);
+        return luettelo;
       })
       .catch(() => null);
   }
@@ -472,6 +691,17 @@ async function haeLuettelo() {
  * (js/kartta.js zoomiTasot) eikä sitä sovitella laattatasoihin —
  * portaikko kertoo mihin nipistys napsahtaa, tämä kertoo mikä tarkkuus
  * levyltä ladataan.
+ *
+ * SYVIMMÄN TASON YLI EI OLE MITÄÄN VALITTAVAA, ja siitä seuraa koko
+ * syvän zoomin ilme: kun tarve ylittää syvimmän tason tiheyden (z7,
+ * 7,2 laitepikseliä lautayksikköä kohti), tämä palauttaa yhä sen saman
+ * tason ja selain VENYTTÄÄ laattaa. Elävät merkkikerrokset seuraavat
+ * venytystä samalla luvulla — se lasketaan yhdessä paikassa
+ * (js/nostoladonta.js nostoladontaVenytys) omistajan päätöksestä
+ * 2.9.2026: *"kun zoomataan z7:n yli, piirretyt merkit kasvavat samassa
+ * suhteessa kuin suurennettu karttakuva — koko kartta kuin yksi paperi
+ * suurennuslasin alla."* Ilman sitä poltettu nosto (laatan pikseleitä)
+ * kasvaisi ja elävä ei.
  *
  * @param {number} tarve laitepikseliä yhtä lautayksikköä kohti
  */
@@ -502,6 +732,13 @@ const mittarit = {
   karkeita: 0,
   nostoja: 0,
   viivoja: 0,
+  rantoja: 0,
+  /* Kohdemaan värilaatat (karttauudistus, erä 1). Erän valmis-kriteeri
+   * luetaan tästä: nakymassa + varillisia ei saa olla yli kaksinkertainen
+   * entiseen nakymassa-lukuun nähden. */
+  varillisia: 0,
+  /* Mihin maahan väritaso on juuri nyt rajattu (ISO A3) tai null. */
+  variMaa: null,
   ladattu: 0,
   epaonnistui: 0,
   esiladattu: 0,
@@ -549,8 +786,43 @@ export function pyramidinMittarit() {
  * kantoi kierroksen, sauman yli panoroitaessa samasta tiedostosta
  * syntyi toinen elementti — ja se elementti oli juuri se, jonka laudan
  * kopio peitti.
+ *
+ * AJON VERSIO ON AVAIMESSA, koska se on laatan osoitteessa
+ * (`<versio>/nostot/z6/…`, laattaUrl). Kaksi ajoa on kaksi eri
+ * tiedostoa samassa ruudussa, ja jos avain ei erottaisi niitä, kerros
+ * pitäisi vanhaa kuvaa uutena eikä pyytäisi uutta lainkaan. Yhden
+ * istunnon aikana versio ei vaihdu, joten tämä on vakuutus eikä
+ * viritys — mutta juuri se vakuutus, jonka puuttuminen näkyi
+ * tuplanäkymänä 2.9.2026.
  */
-const avain = (z, sarake, rivi) => `${z}:${sarake}:${rivi}`;
+const tasonVersio = (taso) => {
+  /*
+   * NOSTOTASOLLA AVAIN ON KOKO POLKU, kun taso on maakohtainen —
+   * samasta syystä kuin väritasolla alla: kahdella maalla voi olla
+   * sama `versio`, ja pelkkä versio antaisi Ranskan ja Belgian
+   * nostolaatalle saman avaimen samassa ruudussa.
+   */
+  if (taso.nosto) {
+    const nk = nostotasonKirjaus();
+    return nk ? nostotasonKansio(nk) : (luettelo?.nostotaso?.versio ?? '');
+  }
+  if (taso.viiva) return luettelo?.viivataso?.versio ?? '';
+  if (taso.joki) return luettelo?.jokitaso?.versio ?? '';
+  if (taso.nimio) return luettelo?.nimiotaso?.versio ?? '';
+  if (taso.ranta) return luettelo?.rantataso?.versio ?? '';
+  if (taso.reliefi) return reliefinVersio();
+  /*
+   * VÄRITASOLLA AVAIN ON KOKO POLKU EIKÄ PELKKÄ VERSIO. Maa on
+   * 14.9.2026 alkaen osoitteessa (ks. varitasonKansio), ja kahdella
+   * maalla voi olla sama `versio`-merkkijono — silloin pelkkä versio
+   * antaisi Ranskan ja Espanjan laatalle SAMAN avaimen samassa
+   * ruudussa, ja maata vaihdettaessa kerros pitäisi naapurin kuvaa
+   * omanaan. Polku eroaa aina, koska ISO-koodi on siinä.
+   */
+  if (taso.vari) return varitasonKansio(varitasonKirjaus());
+  return luettelo?.versio ?? '';
+};
+const avain = (taso, sarake, rivi) => `${tasonVersio(taso)}:${taso.z}:${sarake}:${rivi}`;
 
 /**
  * Onko laatta olemassa levyllä?
@@ -583,12 +855,78 @@ function laattaOlemassa(taso, sarake, rivi) {
   return t === undefined ? false : ((t >> (i & 7)) & 1) === 1;
 }
 
+/*
+ * ===== VÄRITASON LAATTAPOLKU — MAA ON OSOITTEESSA (14.9.2026) =======
+ *
+ * MITATTU VIKA (kaistat-raportti 13.9.2026, luku 5). Ennen tätä laatan
+ * osoite oli `<versio>/vari/z<taso>/<sarake>/<rivi>.webp`, eikä siinä
+ * ollut maata. Kaikkien 27 maan tasoitusajot kirjoittivat samaan
+ * ämpärin avaimeen samalla `versio`-merkkijonolla
+ * (`2026-09-13-tasoitus`), ja koska maiden laatikot menevät
+ * päällekkäin, peräkkäiset ajot YLIKIRJOITTIVAT toisensa: Ranskan
+ * laatastossa oli Espanjan ajon jättämä reikä Pohjois-Espanjassa
+ * (todiste: kolme eri Last-Modified-aikaa saman laataston laatoissa ja
+ * kuva docs/raportit/kuvat/kaistat-laatan-alfa.png).
+ *
+ * KORJAUS ON ISO-KOODI POLUSSA: `<versio>/vari/<ISO>/z…`. Kaksi maata
+ * ei voi enää kirjoittaa samaan avaimeen, oli versio sama tai ei.
+ *
+ * SIIRTYMÄ EI RIKO JULKAISTUA PELIÄ MISSÄÄN VÄLIVAIHEESSA. Kenttä
+ * `maaPolussa` on kirjauksessa se yksi tieto, joka kertoo kummasta
+ * laatastosta on kyse: ämpärissä nyt olevissa kirjauksissa sitä ei ole,
+ * ja niille tämä funktio palauttaa TÄSMÄLLEEN vanhan polun. Kirjaus saa
+ * kentän vasta kun maa on ajettu uudestaan, eli laatat ovat ämpärissä
+ * ENNEN kuin yksikään peli pyytää uutta polkua — luettelo viedään
+ * työnkulussa vasta laattojen jälkeen.
+ */
+
+/**
+ * Väritason laattojen kansio (ilman `z/sarake/rivi`-osaa).
+ *
+ * @param {object|null} kirjaus `pyramidi.varitasot[ISO]` tai null.
+ * @param {{versio?: boolean}} [asetukset] `versio: false` jättää
+ *   version pois — generaattori kirjoittaa laatat ajokansioon, jonka
+ *   alle versio tulee vasta ämpärissä.
+ * @returns {string} esim. `2026-09-14-tasoitus/vari/FRA` tai vanhalla
+ *   kirjauksella `2026-09-13-tasoitus/vari`.
+ */
+export function varitasonKansio(kirjaus, asetukset = {}) {
+  if (!kirjaus) return '';
+  const osat = [];
+  if (asetukset.versio !== false) osat.push(kirjaus.versio ?? '');
+  osat.push('vari');
+  if (kirjaus.maaPolussa && kirjaus.maa) osat.push(kirjaus.maa);
+  return osat.join('/');
+}
+
+/**
+ * Yhden väritason laatan polku ämpärissä (ilman ämpärin etuliitettä).
+ *
+ * TÄMÄ ON POLUN AINOA KAAVA. Sekä peli (laattaUrl alla) että
+ * generaattori (tools/generoi-laattapyramidi.mjs) ja työnkulun
+ * vientiaskel lukevat sen tästä — kaksi kopiota samasta kaavasta
+ * ehtisi eriytyä, ja lopputulos olisi 404 tai pahempi: oikean
+ * näköinen mutta väärän maan laatta.
+ */
+export function varitasonLaattapolku(kirjaus, z, sarake, rivi, muoto = 'webp', asetukset = {}) {
+  return `${varitasonKansio(kirjaus, asetukset)}/z${z}/${sarake}/${rivi}.${muoto}`;
+}
+
 /** Laatan osoite ämpärissä. Sama merkkijono sekä kuvalle että noudolle. */
 function laattaUrl(taso, sarake, rivi) {
   // Nostotason laatta asuu oman versionsa alla pohjan rinnalla:
   // <nostoversio>/nostot/z…. Oma versio on koko mallin päähyöty —
   // nostojen uusintapoltto ei koske pohjan ikuista välimuistia.
   if (taso.nosto) {
+    // MAAKOHTAINEN LAATASTO: ISO on polussa (nostotasonKansio), joten
+    // kohdemaan laatta ei voi olla naapurin laatta. Vanhalla
+    // maailmanlaajuisella luettelolla polku on täsmälleen entinen.
+    const nk = nostotasonKirjaus();
+    if (nk) {
+      return pyramidiUrl(nostotasonLaattapolku(
+        nk, taso.z, sarake, rivi, luettelo.muoto ?? 'webp',
+      ));
+    }
     return pyramidiUrl(`${luettelo.nostotaso.versio}/nostot/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
@@ -597,6 +935,38 @@ function laattaUrl(taso, sarake, rivi) {
     return pyramidiUrl(`${luettelo.viivataso.versio}/viivat/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
+  // Jokitaso on viivatason generaattorin tuote ilman reittejä, joten
+  // sen laatat asuvat samassa alipolussa: <jokiversio>/viivat/z…
+  // (ks. JOKITASO alempana).
+  if (taso.joki) {
+    return pyramidiUrl(`${luettelo.jokitaso.versio}/viivat/z${taso.z}/${sarake}/${rivi}`
+      + `.${luettelo.muoto ?? 'webp'}`);
+  }
+  // Nimiötaso: <nimioversio>/nimiot/z… (ks. NIMIÖTASO alempana).
+  if (taso.nimio) {
+    return pyramidiUrl(`${luettelo.nimiotaso.versio}/nimiot/z${taso.z}/${sarake}/${rivi}`
+      + `.${luettelo.muoto ?? 'webp'}`);
+  }
+  // Rantataso samoin: <rantaversio>/ranta/z… (omistaja 6.9.2026 ilta).
+  if (taso.ranta) {
+    return pyramidiUrl(`${luettelo.rantataso.versio}/ranta/z${taso.z}/${sarake}/${rivi}`
+      + `.${luettelo.muoto ?? 'webp'}`);
+  }
+  // Väritaso samoin omassa polussaan, ja MAA ON POLUSSA: ks.
+  // varitasonKansio. Polku tulee KOHDEMAAN kirjauksesta, joten yhden
+  // maan uusintapoltto ei koske toisen maan laattoihin.
+  if (taso.vari) {
+    return pyramidiUrl(varitasonLaattapolku(
+      varitasonKirjaus(), taso.z, sarake, rivi, luettelo.muoto ?? 'webp',
+    ));
+  }
+  /*
+   * Reliefitaso asuu OMASSA LUETTELOSSAAN ja omassa ämpärin
+   * polussaan (js/reliefipyramidi.js). Se ei ole pohjan versio
+   * eikä pohjan muoto — laatat ovat aina webp — joten osoite
+   * kysytään sieltä eikä rakenneta tässä.
+   */
+  if (taso.reliefi) return reliefinLaattaUrl(taso, sarake, rivi);
   return pyramidiUrl(`${luettelo.versio}/z${taso.z}/${sarake}/${rivi}`
     + `.${luettelo.muoto ?? 'webp'}`);
 }
@@ -607,7 +977,20 @@ function laattaUrl(taso, sarake, rivi) {
  * etuliitteensä — muuten kerroksen kiinnitys merkitsisi pohjalaatan
  * noudetuksi ja esilataus ohittaisi sen.
  */
-const noutoEtuliite = (taso) => (taso.nosto ? 'n' : (taso.viiva ? 'v' : ''));
+const noutoEtuliite = (taso) => {
+  if (taso.nosto) return 'n';
+  if (taso.viiva) return 'v';
+  // j = joki; jokitaso on eri tiedosto kuin saman ruudun viivataso.
+  if (taso.joki) return 'j';
+  // t = teksti; nimiötaso.
+  if (taso.nimio) return 't';
+  if (taso.ranta) return 'r';
+  // f = reliefi; r on jo rantatasolla.
+  if (taso.reliefi) return 'f';
+  // c = color/väri; v on jo viivatasolla, r rantatasolla.
+  if (taso.vari) return 'c';
+  return '';
+};
 const noutoAvain = (taso, sarake, rivi) => `${noutoEtuliite(taso)}${taso.z}:${sarake}:${rivi}`;
 
 /**
@@ -812,6 +1195,13 @@ function jonotaEsilataus(taso, laatta, arkki, nakyva, suunta) {
  * ja ulospäin kasvaa samassa suhteessa — molemmissa päissä laattoja on
  * suunnilleen saman verran kuin nyt (~25), eli kaksi tasoa on noin
  * megatavu. Ilman tätä rajausta z+1 olisi nelinkertainen määrä.
+ *
+ * MYÖS MERKKITASOT (2.9.2026 ilta). Lista sisältää nyt pohjan tasojen
+ * lisäksi nosto- ja viivatason omat tasot, koska nostotaso ei enää pidä
+ * vanhaa tasoa uuden alla (paivitaKerros, "LÄPINÄKYVÄ MERKKIKERROS"):
+ * juuri se hetki, jolloin merkit ovat poissa, on tämän lämmityksen
+ * mitta. Nostolaattoja on vain siellä missä merkkejä on (luettelon
+ * laatasto), joten erä on murto-osa pohjan laatoista.
  */
 function jonotaTasovaihto(tasot, taso, laatta, arkki, nakyva) {
   const kx = nakyva.x + nakyva.w / 2;
@@ -862,6 +1252,53 @@ function varmistaKerrokset(ui) {
     && ui.pyramidiTarkkaKerros?.parentNode === ui.pyramidiKerros) return;
   ui.pyramidiPohjaKerros = el('g', { class: 'pyramidi-pohjataso' }, ui.pyramidiKerros);
   ui.pyramidiTarkkaKerros = el('g', { class: 'pyramidi-tarkkataso' }, ui.pyramidiKerros);
+  /*
+   * RANTATASO — VIIDES KERROS, JA SEN PAIKKA ON POHJAN JA VIIVATASON
+   * VÄLISSÄ (omistaja 6.9.2026 ilta: *"joo poltetaan vain uudestaan
+   * ilman viivaa nyt kun on mac studio viritetty"*). Järjestys
+   * pohja → RANTA → viiva → nosto on täsmälleen se, jossa muste oli
+   * ennenkin: rantaviiva oli pohjapiirron osiossa 4 eli reittien,
+   * rajojen ja nostojen alla. Kun se poltetaan omalle tasolleen,
+   * kerroksen on tultava samaan väliin — muuten reitti kulkisi
+   * rantaviivan ALTA.
+   *
+   * MIKSI OMA TASO: karttapallo piirtää rantaviivan vektorina
+   * (js/pallovektorit.js) ja jättää tämän kerroksen lataamatta;
+   * tasokartalla kuva ei muutu, koska kerros on pohjan päällä.
+   *
+   * EI HÄIVYTYSTÄ, samasta syystä kuin viivatasolla: rantaviiva on
+   * kartalla joka tasolla (z0–z8), joten opacity-haara olisi sääntö,
+   * joka ei koskaan laukea.
+   */
+  /*
+   * VÄRITASO — KOHDEMAAN VÄRILLINEN TOPOGRAFIA (karttauudistus, erä 1;
+   * omistaja 13.9.2026: *"Onko se mahdollista? Siis etta vain
+   * kohdemaassa on varillinen topografia nakyvissa?"*).
+   *
+   * PAIKKA ON HETI POHJAN PÄÄLLÄ JA RANNAN ALLA. Värilaatta on KARTTA
+   * eikä merkintä: se on sama maasto ja sama meri toisella paletilla,
+   * ja se korvaa alta löytyvän seepiakartan siellä, missä leikkuri sen
+   * päästää läpi. Rantaviiva, reitit ja nostojen symbolit ovat kartan
+   * MERKINTÖJÄ, ja ne kuuluvat sen päälle — muuten kohdemaan rannikko,
+   * reitit ja merkit katoaisivat värin alle.
+   *
+   * LEIKKURI ON RYHMÄSSÄ, EI LAATOISSA. Laatat ovat suorakaiteita maan
+   * laatikon alalla (tools/generoi-laattapyramidi.mjs, VÄRITASO), ja
+   * `clip-path` rajaa ne kohdemaan aluevesirajaan. Näin raja on yksi
+   * luku pelin puolella eikä poltettu tuhanteen tiedostoon — ja juuri
+   * siksi erän savuke voi riisua leikkurin ja nähdä Belgian värittyvän
+   * (vastakoe).
+   *
+   * EI MASKIA EIKÄ SUODATINTA. tests/rules.test.mjs: iOS:n
+   * webapp-tilassa suodattimelliset kartan kerrokset katosivat, kun
+   * sovellus kävi taustalla. `clipPath` on geometriaa eikä
+   * pikselipassia, ja se on tämän erän tietoinen valinta.
+   */
+  ui.pyramidiVariKerros = el('g', { class: 'pyramidi-varitaso' }, ui.pyramidiKerros);
+  ui.pyramidiVariKerros.style.transition = 'opacity 0.35s ease';
+  ui.pyramidiVariRajaus = null;
+  ui.pyramidiVariRajattuIso = null;
+  ui.pyramidiRantaKerros = el('g', { class: 'pyramidi-rantataso' }, ui.pyramidiKerros);
   /*
    * VIIVATASO — NELJÄS KERROS, JA SEN PAIKKA ON PERUSTELTU (omistaja
    * 31.8.2026 ilta). Järjestys pohja → tarkka → VIIVA → nosto:
@@ -920,9 +1357,16 @@ function peruLaatta(kuva) {
   kuva.remove();
 }
 
-/** Yhden kerroksen tila: mikä taso siinä on ja mitkä laatat. */
-const tyhjaTila = (kerros, alin = false) => ({
-  kerros, alin, z: null, laatat: new Map(), vanhat: null, ajastin: 0,
+/**
+ * Yhden kerroksen tila: mikä taso siinä on ja mitkä laatat.
+ *
+ * `alin`       kerroksen alla ei ole mitään — ruudulla olevaa laattaa
+ *              ei saa heittää pois (ks. paivitaKerros).
+ * `lapinakyva` kerros on MERKINTÖJÄ pergamentin päällä, ei karttaa:
+ *              vanha taso ei jää uuden alle (ks. paivitaKerros).
+ */
+const tyhjaTila = (kerros, alin = false, lapinakyva = false) => ({
+  kerros, alin, lapinakyva, z: null, laatat: new Map(), vanhat: null, ajastin: 0,
   nakyva: null, jakso: 0,
 });
 
@@ -939,6 +1383,100 @@ function kaikkiRuudullaLadattu(tila) {
     if (kuva.dataset.odottaa === '1' && kuva.dataset.ladattu !== '1') return false;
   }
   return true;
+}
+
+/* ------------------------------------------------- kartta valmiiksi ennen */
+
+/**
+ * Montako RUUDULLA olevaa laattaa on yhä matkalla?
+ *
+ * Sama kysely kuin kaikkiRuudullaLadattu, mutta koko pyramidin yli ja
+ * lukuna: kutsuja (avauslento) tarvitsee määrän mittariinsa, ja
+ * savuke (tools/savukkeet/savuke-avauslento.mjs) lukee sen samasta
+ * paikasta kuin peli — muuten mittari ja odotus voisivat olla eri
+ * mieltä siitä, milloin kartta on valmis.
+ *
+ * VAIN KAKSI KARTTAKERROSTA. Karkea pohja ja tarkka taso OVAT se
+ * kartta, jonka puuttuminen näkyy tyhjänä pergamenttina. Viiva- ja
+ * nostotaso ovat merkintöjä kartan päällä ja ne haetaan matalalla
+ * prioriteetilla; niiden odottaminen venyttäisi avauksen ilman että
+ * ruudulla olisi mitään puuttuvaa.
+ */
+export function pyramidinKesken(ui) {
+  let kesken = 0;
+  for (const tila of [ui?.pyramidiKarkea, ui?.pyramidiTarkka]) {
+    if (!tila?.laatat) continue;
+    for (const kuva of tila.laatat.values()) {
+      if (kuva.dataset.odottaa === '1' && kuva.dataset.ladattu !== '1') kesken += 1;
+    }
+  }
+  return kesken;
+}
+
+/**
+ * Onko näkyvä kartta VALMIS — luettelo kädessä, laatat kiinnitetty ja
+ * ruudulla olevista jokainen perillä?
+ *
+ * Kolme ehtoa eikä yksi, koska kaksi ensimmäistä ovat juuri ne, joissa
+ * pelkkä "ei keskeneräisiä" valehtelisi: ennen luettelon saapumista
+ * pyramidi ei ole pyytänyt mitään, ja tyhjässä kerroksessa ei ole
+ * yhtään keskeneräistä laattaa. Molemmissa vastaus olisi "valmis",
+ * vaikka ruudulla on tyhjä pergamentti.
+ */
+export function pyramidiValmisRuudulla(ui) {
+  if (!luettelo) return false;
+  if (!ui?.pyramidiTarkka?.laatat?.size) return false;
+  return pyramidinKesken(ui) === 0;
+}
+
+/**
+ * Odottaa, että näkyvän alueen laatat ovat ruudulla.
+ *
+ * === MIKSI TÄMÄ ON OLEMASSA ========================================
+ *
+ * Omistajan tilaus 3.9.2026 (Raamattu, AVAUSLENTO VALMIIKSI LADATTUNA):
+ * *"kartta pitää ladata etukäteen, nyt se rakentui pikkuhiljaa
+ * taustalla valmiiksi."* Mitattuna (savuke-avauslento, Chromium):
+ * pergamenttiarkin väistyessä kiinnitettyjä laattoja oli NOLLA, ja
+ * kartta täydentyi 103 laatan verran vasta seuraavan kahden sekunnin
+ * aikana — siis koneen lennon alla, kuten omistaja sen näki.
+ *
+ * ODOTUS ON KELLOSTA EIKÄ AJASTIMISTA. Katto luetaan
+ * performance.now():sta samasta syystä kuin pohjatason odotuksessa
+ * (js/ui.js ALOITUSLENNON_POHJA_ODOTUS_MS): laattojen purku jumittaa
+ * pääsäiettä satojen millisekuntien erissä, ja ajastimien laskemiseen
+ * perustuva katto venyisi moninkertaiseksi juuri silloin kun sen
+ * pitäisi pitää.
+ *
+ * KATTO ON PAKOLLINEN. Hitaalla verkolla tai yhden laatan jäädessä
+ * saapumatta lento ei saa jäädä odottamaan ikuisesti: katon täyttyessä
+ * lähdetään joka tapauksessa, ja kartta täydentyy silloin kuten ennen.
+ *
+ * ODOTUKSEN SAA KESKEYTTÄÄ. Avauslennossa tämä odotus tapahtuu
+ * pergamenttiarkin takana, ja juuri siihen ikkunaan osuu pelaajan
+ * napautus, jos hän haluaa kiirehtiä (omistajan tilaus 26.8.2026:
+ * *"napauttamalla ruutua animaatio katkeaa kesken"*). `keskeytys` on
+ * kutsuja, joka palauttaa true silloin kun odotuksella ei ole enää
+ * kohdetta: kartta saa täydentyä loppuun taustalla, mutta kukaan ei
+ * jää katsomaan arkkia sen takia.
+ *
+ * @returns {Promise<boolean>} oliko kartta valmis kun odotus päättyi
+ */
+export async function odotaPyramidi(ui, { katto = 6000, askel = 60, keskeytys = null } = {}) {
+  const takaraja = performance.now() + katto;
+  while (!ui?.dead && !keskeytys?.() && !pyramidiValmisRuudulla(ui)
+    && performance.now() < takaraja) {
+    // eslint-disable-next-line no-await-in-loop
+    await new Promise((valmis) => { setTimeout(valmis, askel); });
+  }
+  /*
+   * KIINNITETTY EI OLE VIELÄ MAALATTU. Viimeisenkin laatan load-tapahtuma
+   * kertoo vain, että kuva on purettavissa; ruudulle se tulee vasta
+   * seuraavassa maalauksessa. Kaksi kehystä on sama varmistus, jota
+   * lento käyttää muutenkin ennen koneen animaatiota.
+   */
+  await new Promise((valmis) => requestAnimationFrame(() => requestAnimationFrame(valmis)));
+  return pyramidiValmisRuudulla(ui);
 }
 
 /**
@@ -1045,6 +1583,39 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
     // Vain YKSI vanha taso kerrallaan: sitä edellinen on jo tarpeeton.
     poistaVanhaTaso(tila);
     /*
+     * ── LÄPINÄKYVÄ MERKKIKERROS EI JÄTÄ VANHAA TASOA ALLE ──────────
+     *
+     * Omistaja 2.9.2026 ilta, kuvakaappaus Sofiasta (mittajana 100 km):
+     * *"välillä tulee tällaisia tuplanäkymiä … ne onneksi häviävät
+     * jonkun ajan kuluttua"* — sumea, venytetty ja hieman eri kohdassa
+     * oleva poltettu nimi ("Boyanan kirkko", "Rila-vuoristo") terävän
+     * nimen vieressä.
+     *
+     * ALLA OLEVA SÄÄNTÖ ON POHJAN SÄÄNTÖ, EI TÄMÄN. Pohjalaatta on
+     * LÄPINÄKYMÄTÖN: uusi laatta maalaa vanhan kokonaan yli, ja vanha
+     * jää alle vain siksi ajaksi, ettei ruutu ole tyhjä. Nostotaso on
+     * merkintöjä läpinäkyvällä lasilla, joten vanha muste EI katoa
+     * uuden alle — se jää näkyviin sen läpi, ja kartalla on kaksi
+     * kertaa sama nimi.
+     *
+     * KAKSOISKUVA ON MYÖS ERIKOKOINEN. Nostojen ruutukatto lasketaan
+     * TASON omalla tiheydellä (js/nostoladonta.js
+     * nostoladontaKattoSuhde), joten sama merkki on karkeammalla
+     * tasolla suurempi lautayksiköissä ja sen nimiö kauempana
+     * ankkurista. Ruudulla se on juuri se, minkä omistaja näki: venynyt
+     * ja siirtynyt haamu terävän merkin vieressä.
+     *
+     * HINTA ON PIENI JA TIEDOSSA: kerros on hetken ilman merkkejä,
+     * kunnes uuden tason laatat saapuvat — kartta itse ei vilku, koska
+     * pohja ja karkea pohja ovat omissa kerroksissaan. Naapuritasojen
+     * nostolaatat lämmitetään esilatauksessa (jonotaTasovaihto), joten
+     * tavallisella yhteydellä ne ovat jo selaimen välimuistissa.
+     */
+    if (tila.lapinakyva) {
+      for (const kuva of tila.laatat.values()) peruLaatta(kuva);
+      tila.laatat = new Map();
+    }
+    /*
      * ALIN KERROS EI HEITÄ POIS SITÄ, MIKÄ ON RUUDULLA. YLEMPI SAA.
      *
      * Katkaisu on oikea keksintö — se teki zoomauksesta nopean, koska
@@ -1094,7 +1665,7 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
   const uudet = new Map();
   let ruudulla = 0;
   const kasittele = (sarake, rivi) => {
-    const k = avain(taso.z, sarake, rivi);
+    const k = avain(taso, sarake, rivi);
     if (uudet.has(k)) return;
     // Paikka on laatan OMA paikka arkilla, ei näkymän kierros (sääntö 3).
     const lx = arkki.x + (sarake * laatta) / taso.pikseliaPerYksikko;
@@ -1165,6 +1736,24 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
         mittarit.epaonnistui += 1;
         // Saapumaton laatta ei saa jäädä odottajaksi ikuisesti.
         delete kuva.dataset.odottaa;
+        /*
+         * === SININEN KYSYMYSMERKKI KARTALLA (omistaja 4.9.2026) ===
+         *
+         * Omistaja näki keksintölinssin päällä *"ison sumean sinisen
+         * suorakulmion"* ja *"kysymysmerkkejä"* kartalla. Ne olivat
+         * TÄMÄ laatta: kun tiedosto ei tule (mitattu puuttuva
+         * `.../viivat/z5/18/5.webp`), WebKit maalaa <image>-elementin
+         * paikalle oman rikkinäisen kuvan merkkinsä — sinisen laatikon
+         * ja valkoisen kysymysmerkin — venytettynä laatan koko alaan,
+         * eli sumeana ja suurena. Chromium ei piirrä mitään, joten
+         * vika näkyi vain omistajan iPhonella ja iPadilla.
+         *
+         * Osoitteen poisto vie merkin: laatta jää tyhjäksi kuten
+         * lataamaton laatta, ja alla oleva karkeampi taso näkyy läpi.
+         * Uutta hakua ei tule (osoite asetetaan vain kerran, luonnissa),
+         * joten tämä ei myöskään jää yrittämään uudelleen.
+         */
+        kuva.removeAttribute('href');
       }
       if (!nakyy || !tila.vanhat) return;
       // Uusi taso on ruudulla kokonaan: vanha saa mennä (sääntö 2).
@@ -1217,8 +1806,36 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
  * mukanaan, ja laattaOlemassa lukisi väärää laatastoa.
  */
 function nostotasonTasot() {
-  const nt = luettelo?.nostotaso;
+  /*
+   * MAAKOHTAINEN TAULU VOITTAA (18.9.2026, ks. KOLMAS MALLI yllä).
+   * Kun luettelossa on `nostotasot`, maailmanlaajuista laatastoa ei
+   * ole olemassa: kerros rakennetaan VAIN kohdemaan kirjauksesta, ja
+   * ilman kohdemaata (maailmanäkymä, matka) kerrosta ei ole
+   * lainkaan — sama sääntö kuin väritasolla.
+   */
+  const maittain = Boolean(luettelo?.nostotasot);
+  const nt = maittain ? nostotasonKirjaus() : luettelo?.nostotaso;
   if (!nt?.tasot?.length || !nt.laatastot) return null;
+  /*
+   * VANHALLA SÄÄNNÖLLÄ PIIRRETTY TASO PIILOTETAAN KOKONAAN (1.9.2026,
+   * js/nostoladonta.js NOSTOLADONTA_SAANTO).
+   *
+   * Tiiviste hoitaa yhden merkin: kun sen sisältö muuttuu, peli piirtää
+   * sen elävänä ja laatassa oleva vanha kuva jää sen alle. Se on halpa
+   * hinta yhdestä merkistä. PIIRTOSÄÄNNÖN muuttuessa se koskee jokaista
+   * merkkiä yhtä aikaa — 1.9.2026 merkin ruutukatto ja nimiöväistön
+   * neljä kylkeä — ja kartalle jäisi koko maan verran kaksoismustetta:
+   * vanha, liian iso poltettu nimiö ja sen päällä uusi elävä.
+   *
+   * Kun tunnus ei ole tämän koodin oma, nostotasoa ei siis ole
+   * olemassa: yhtään nostolaattaa ei pyydetä (kerros saa opacityn 0,
+   * paivitaNostotaso) ja jokainen merkki piirtyy elävänä — täsmälleen
+   * se tila, jossa peli oli ennen ensimmäistä nostopolttoa. Seuraava
+   * ajo kirjoittaa uuden tunnuksen ja taso palaa käyttöön.
+   */
+  if (nt.saanto !== NOSTOLADONTA_SAANTO) return null;
+  // Maakohtainen tasolista on maakohtainen myös muistissa: maan
+  // vaihtuessa se on laskettava uudestaan (asetaVaritasonMaa).
   if (!luettelo.__nostoTasot) {
     luettelo.__nostoTasot = luettelo.tasot
       .filter((t) => nt.tasot.includes(t.z) && nt.laatastot[t.z])
@@ -1242,6 +1859,657 @@ function nostotasonTasot() {
  * tason nostolliset laatat, ja seuraava syvä näkymä siivoaa ne
  * paivitaKerroksen omalla kirjanpidolla.
  */
+/* ------------------------------------------------------------ väritaso */
+
+/*
+ * VÄRITASO — KOHDEMAAN VÄRILLINEN TOPOGRAFIA (karttauudistus, erä 1).
+ *
+ * Omistaja 13.9.2026, sanatarkasti: *"Maan korkeuserot muutetaan
+ * varilliseksi ja vedetkin nakyvat sinisena syyvyyserot huomioiden.
+ * Pohjana pelissa jo oleva korkeuserolinssi, renderoidaan se vain
+ * mahdollisimman tarkaksi uudessa versiossa. … Muiden maiden kartat ja
+ * valtion ulkopuoliset vedet ja meret ennallaan ruskean savyissa."*
+ *
+ * Kerros on rakenteeltaan sama kuin ranta- ja viivataso: pohjan
+ * tasogeometria toisella laatastolla ja toisella juuripolulla. Kaksi
+ * asiaa on eri:
+ *
+ *   1. TASO ON MAAKOHTAINEN. Luettelon `varitasot[ISO]` kertoo, kenen
+ *      laatat ämpärissä ovat, ja kerros piirretään VAIN kun pelaaja on
+ *      siinä maassa. Muuten Ranskan värit olisivat kartalla myös
+ *      Belgiassa — juuri se, mitä omistajan ehto *"vain kohdemaassa"*
+ *      kieltää.
+ *   2. KERROS ON RAJATTU. `clip-path` on kohdemaan aluevesiraja
+ *      (js/maanaariviivat.js maanAluevesiPolku, 12 mpk = 6,7
+ *      lautayksikköä). Laatat itse ovat suorakaiteita maan laatikon
+ *      alalla, joten leikkuri on se ja ainoa asia, joka pitää värit
+ *      Ranskassa.
+ */
+
+/*
+ * KOHDEMAA ON YKSI MODUULITASON LUKU, EI KAHTA PÄÄTTELYÄ (erä 1b).
+ *
+ * Väritaso on maakohtainen, ja kaksi lautaa kysyy sitä eri suunnista:
+ * tasokartta pelin UI:sta (`varitasonIso`) ja pallo laudan omasta
+ * maanvaihdosta (js/pallolauta/lauta.js, sama hetki kuin punaisen
+ * kehän päivitys). Jos kumpikin päättelisi maan itse, ne ehtisivät
+ * olla eri mieltä — ja pallolla se näkyisi Ranskan vuorina Belgian
+ * kohdalla, koska väri on osa LAATAN KANGASTA eikä kerros, jonka voi
+ * piilottaa. Luku asetetaan siis yhteen paikkaan, ja osoite,
+ * laatasto ja versio luetaan siitä.
+ */
+let variMaaNyt = null;
+
+/**
+ * Väritason kohdemaa (ISO A3) tai null. Palauttaa true, jos maa
+ * vaihtui — kutsuja (pallon laattakerros) mitätöi silloin laattansa,
+ * koska laatan avaimessa on versio mutta ei maata.
+ */
+export function asetaVaritasonMaa(iso) {
+  const uusi = iso || null;
+  // Liikkeessä lähtömaa pysyy (ks. HUNTU PYSYY LIIKKEEN AJAN).
+  if (!uusi && variLiike && variMaaNyt) return false;
+  if (uusi === variMaaNyt) return false;
+  variMaaNyt = uusi;
+  // Johdettu tasolista on maakohtainen: se on laskettava uudestaan.
+  // NOSTOTASO ON SAMAN LUVUN VARASSA (18.9.2026): sen laatasto,
+  // versio ja osoite tulevat kohdemaan kirjauksesta, joten sekin
+  // johdettu lista mitätöidään tässä yhdessä paikassa.
+  if (luettelo) { luettelo.__variTasot = null; luettelo.__nostoTasot = null; }
+  return true;
+}
+
+/** Mille maalle väritaso on juuri nyt asetettu (pallo, savukkeet, testit). */
+export function pyramidinVaritasonMaa() {
+  return variMaaNyt;
+}
+
+/** Luettelon väritaso kohdemaalle, tai null. */
+function varitasonKirjaus() {
+  if (!variMaaNyt) return null;
+  return luettelo?.varitasot?.[variMaaNyt] ?? null;
+}
+
+/*
+ * ====== TASOITUS LAATASTON ULKOPUOLELLA (kaistat, 13.9.2026) ========
+ *
+ * VIKA, JONKA TÄMÄ POISTAA (mitattu 2560 × 1352, Pariisi, v1856).
+ * Tasoituslaatasto ajetaan vain kohdemaan LAATIKON alalle
+ * (`--laatikko-nakyma`), ja laatikko on mitoitettu kuvasuhteille
+ * 390 × 844 … 1920 × 1080. Leveämmällä ruudulla kamera näkee laatikon
+ * ohi, ja kartalla on kaksi lajia TERÄVIÄ SUORIA REUNOJA:
+ *
+ *   1. LAATTARUUDUKON REUNA. Laatasto kattaa kokonaisia laattoja, ja
+ *      z4:llä laatta on 569 lautayksikköä eli 17° pituuspiiriä. Ranskan
+ *      laatikon (lon −10,25…14,67) ympärille jää siis TÄYDEN kerman
+ *      marginaali lon −21,40…29,80 asti, ja siitä ulos kerma loppuu
+ *      kesken: mitattu porras 41 luminanssiyksikköä.
+ *   2. FEIDAUKSEN HÄIVE. Häive (tools/fokuskartta/maailmapiirto.js
+ *      polttaVariLeikkuri) pyyhkii kerman NOLLAAN laatikon reunalla ja
+ *      nostaa sen täyteen vasta sisempänä — mutta laatikon
+ *      ULKOPUOLELLA, samassa laatassa, kerma on taas täysi. Mitattu
+ *      laatasta z4/9/4: alfa 217 (board 5422) → 20 (5440) → 217 (5529).
+ *      Toinen porras, 36–45 yksikköä, ja sekin suora viiva.
+ *
+ * KORJAUS ON ASIAKKAASSA EIKÄ UUDESSA LAATTA-AJOSSA: peli maalaa saman
+ * kerman samalla peitolla kaikkialle SUOJATUN SUORAKAITEEN ulkopuolelle
+ * — myös laatoille, joita ei ole olemassa — ja piirtää laataston kuvan
+ * vain suorakaiteen sisään. Silloin jokainen pikseli saa peiton
+ * täsmälleen kerran ja sauma on kahden saman värin välissä.
+ *
+ * SUOJATTU SUORAKAIDE ON KOHDEMAAN OMIEN RENKAIDEN LAATIKKO, ei
+ * laataston laatikko. Se on pienin suorakaide, joka varmasti sisältää
+ * kaiken sen, mitä laatan leikkuri jätti alkuperäiseksi — ja koska
+ * häive on maan ULKOPUOLELLA, se jää maalauksen alle ja katoaa.
+ *
+ * RENKAAT, EI `maanLautalaatikko`. Se palauttaa yhden renkaan (pelaajan
+ * tai pistein suurimman), eli Ranskalla mantereen ILMAN KORSIKAA —
+ * ja Korsika on erän 1c erokartassa nimenomaan säilynyt alkuperäisenä.
+ * Suoja kootaan siis kaikista renkaista, joiden laatikko osuu
+ * laatastoon: merentakaiset osat (Guyana, Réunion) jäävät pois, koska
+ * niille ei ole laattoja eikä niiden takia saa venyttää suojaa.
+ *
+ * ILMAN POLYGONEJA SUOJA ON KOKO LAATASTON LAATIKKO. Aineisto (1,4 Mt)
+ * on laiska ja jaettu punaisen kehän kanssa; ennen sen saapumista
+ * maalaus poistaa laattaruudukon reunan mutta jättää häiveen. Se ei voi
+ * koskaan osua kohdemaahan, ja pallo mitätöi laattansa kun suoja
+ * tarkentuu (js/pallolaatat.js `tasoitusAvain`).
+ */
+let variSuojaIso = null;
+let variSuoja = null;
+let variSuojaHaku = false;
+let variSuojaPolygonit = null;
+
+/*
+ * ====== MAAILMANÄKYMÄSSÄ EI KERMAA (omistaja 15.9.2026) =============
+ *
+ * Raamattu, KARTTAUUDISTUKSEN PAATOKSET 23, sanatarkasti: *"maailma
+ * tilan ollessa paalla huntua ei pitanyt nakya. eli korkeuserot
+ * kaikkialle nakyviin"*. Kehittäjän maailmanäkymän ollessa päällä
+ * tasoituksen kerma ei siis peitä kohdemaan ulkopuolta lainkaan.
+ *
+ * KERMA ON KAHDESSA PAIKASSA, JA VAIN TOINEN ON ASIAKKAAN KÄDESSÄ:
+ *   1. laatan KANKAASEEN poltettu peite (tools/fokuskartta/
+ *      maailmapiirto.js polttaVariLeikkuri) kohdemaan renkaiden
+ *      ULKOPUOLELLA — sitä ei voi pyyhkiä laatasta pois;
+ *   2. pelin oma maalaus suojatun suorakaiteen ulkopuolelle
+ *      (js/pallolaatat.js maalaaTasoitus).
+ * Siksi maailmanäkymässä ei riitä, että maalaus jätetään tekemättä:
+ * VÄRILAATAN KUVA PIIRRETÄÄN VAIN KOHDEMAAN RENKAIDEN SISÄÄN, ja
+ * kaikkialla muualla jää näkyviin se pohjalaatta, joka on jo piirretty
+ * saman laatan kankaalle — koko maailman topografia varjostuksineen ja
+ * korkeuseroineen. Kohdemaan sisällä kuva on pikselilleen sama kuin
+ * ennen, joten korostus ja ääriviiva pysyvät paikallaan.
+ *
+ * RENKAAT OVAT SAMAT KUIN LAATTAAN POLTETTU REIKÄ: `maanAluevesiRenkaat`
+ * puskurilla 0 (tools/generoi-laattapyramidi.mjs LEIKKURIN_PUSKURI),
+ * eli sama raja samasta aineistosta — ei toista totuutta rannikolle.
+ *
+ * TILA ON `avain`-OSANA, joten laattakerros mitätöi kankaansa itse, kun
+ * maailmanappi kytketään päälle tai pois (js/pallolaatat.js
+ * MAANVAIHTO MITÄTÖI LAATAT).
+ */
+let variMaailma = false;
+
+/**
+ * Onko kehittäjän maailmanäkymä päällä (kerma pois)? Asetetaan samassa
+ * hetkessä kuin väritason maa (js/pallolauta/lauta.js).
+ *
+ * @returns {boolean} true, jos tila vaihtui
+ */
+export function asetaTasoituksenMaailma(paalla) {
+  const uusi = Boolean(paalla);
+  if (uusi === variMaailma) return false;
+  variMaailma = uusi;
+  return true;
+}
+
+/** Onko tasoituksen maailmanäkymä päällä (savukkeet, testit). */
+export function tasoituksenMaailma() {
+  return variMaailma;
+}
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KERMA POIS MATKAN AJAKSI (omistaja 16.9.2026, Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 29 kohta 2)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Sanatarkasti: *"pitaisi ottaa ainakin kaikkien maiden paalta pois
+ * minka lapi liike menee… Jos se on vaikea toteuttaa niin otetaan
+ * sitten huntu kaikkialta pois liikkeen ajaksi ja palautetaan takaisin
+ * sitten kun pelaaja on paassyt uuteen kohde kaupunkiin."*
+ *
+ * REITIN MAAT EIVÄT OLE HALPA VALINTA. Kerma on kahdessa paikassa
+ * (ks. yllä), ja vain toinen on asiakkaan kädessä: laatan kankaaseen
+ * POLTETTU peite katoaa ainoastaan niin, ettei värilaattaa piirretä
+ * lainkaan kohdemaan renkaiden ulkopuolelle. Yhden maan vapauttaminen
+ * vaatisi siis sen maan omat renkaat leikkuriksi — eli
+ * maa-aineiston haun ja renkaiden laskennan jokaiselle reitin maalle
+ * KESKEN ANIMAATION. Kaikkialta pois on sama yksi leikkuri, joka on jo
+ * olemassa (maailmanäkymä), joten se on omistajan jälkimmäinen
+ * vaihtoehto ja tämä lippu.
+ *
+ * ILMAN RENKAITA EI KYTKETÄ. Jos kohdemaan rengasaineisto on vielä
+ * haussa, maailmaleikkuri jättäisi koko värilaatan pois ja KOHDEMAAN
+ * topografia katoaisi matkan ajaksi. Silloin kerma jää — matka ei ole
+ * hetki, jolla kartta saa muuttua vääräksi kuvaksi.
+ */
+let variLiike = false;
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * HUNTU PYSYY LIIKKEEN AJAN — LÄHTÖ- JA KOHDEMAA AUKKOINA (omistaja
+ * 21.9.2026, Fablen erä "huntu liikkeen ajan")
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Aiempi sääntö (16.9.) otti hunnun kaikkialta pois liikkeen ajaksi.
+ * Omistaja: huntu pysyy päällä myös nappulan etenemisen ajan, mutta
+ * liikkeen ajaksi SEKÄ lähtömaa ETTÄ kohdemaa ovat hunnun ulkopuolella
+ * (kaksi aukkoa maapolygonien mukaan); perillä aukko on vain
+ * kohdemaassa kuten ennenkin. Koskee liftausta, bussia, laivaa ja
+ * lentoa.
+ *
+ * MIKSI SE ON NYT HALPA, VAIKKA 16.9. EI OLLUT: kerma maalataan
+ * pelin omalla maamaskilla koko laatalle ja kohdemaan renkaat ovat
+ * REIKÄ (PAATOKSET 37 TARKENNUS, js/pallolaatat.js maalaaTasoitus) —
+ * värilaatan kuvaa ei piirretä lainkaan, joten laattaan poltettu peite
+ * ei ole enää tiellä. Kaksi reikää on sama maski kahdella rengasjoukolla,
+ * ja kohdemaan renkaat tulevat samasta aineistosta
+ * (maanAluevesiRenkaat) kuin lähtömaan.
+ *
+ * LÄHTÖMAA PYSYY VÄRITASON MAANA LIIKKEEN AJAN. Liikkeessä pelaajalla
+ * ei ole kaupunkia (cityOf on null), joten lauta pyytäisi maaksi
+ * nullin ja koko tasoitus katoaisi — juuri se "huntu katoaa kokonaan",
+ * jonka omistaja näki. Nollapyyntö jätetään liikkeen ajaksi huomiotta
+ * (asetaVaritasonMaa); perillä lauta antaa kohdemaan, ja se vaihtuu
+ * normaalisti.
+ *
+ * ILMAN RENKAITA EI TOISTA AUKKOA: jos maa-aineisto on vielä haussa,
+ * kohdemaan aukko jää pois ja huntu on kuten perillä lähtömaan
+ * ympärillä — kartta ei ole koskaan väärä kuva.
+ */
+let variLiikeKohde = null;
+
+/*
+ * LÖYTÄMISEN SUMU — MAAN SISÄINEN SUMU (js/pallolauta/sumu.js,
+ * prototyyppi): lauta antaa käytyjen kaupunkien aukot laudan
+ * yksiköissä (sisasumunAukot) ja peiton; tasoitus kantaa ne laatoille
+ * (js/pallolaatat.js maalaaSisasumu). Avaimessa mukana, jotta laatat
+ * kootaan uudelleen kun käyntien joukko muuttuu.
+ */
+let variSisasumu = null;
+
+/**
+ * @param {{ aukot: Array, peitto: number, avain: string }|null} tiedot
+ * @returns {boolean} true, jos tila vaihtui
+ */
+export function asetaSisasumu(tiedot) {
+  const uusi = tiedot?.aukot ? tiedot : null;
+  if ((uusi?.avain ?? null) === (variSisasumu?.avain ?? null)) return false;
+  variSisasumu = uusi;
+  return true;
+}
+
+/**
+ * Liikkeen huntu päälle (true, `kohdeIso` = matkan kohdemaa) ja pois
+ * perillä (false).
+ *
+ * @returns {boolean} true, jos tila vaihtui
+ */
+export function asetaTasoituksenLiike(paalla, kohdeIso = null) {
+  const uusi = Boolean(paalla);
+  const kohde = uusi ? (kohdeIso || null) : null;
+  if (uusi === variLiike && kohde === variLiikeKohde) return false;
+  variLiike = uusi;
+  variLiikeKohde = kohde;
+  return true;
+}
+
+/** Liikkeen kohdemaa (ISO A3) tai null (savukkeet, testit). */
+export function tasoituksenLiikkeenKohde() {
+  return variLiikeKohde;
+}
+
+/** Onko matkan kermattomuus pyydetty (savukkeet, testit). */
+export function tasoituksenLiike() {
+  return variLiike;
+}
+
+/**
+ * Kohdemaan renkaat laudan yksiköissä maailmanäkymän leikkuria varten,
+ * tai null, jos aineistoa ei vielä ole. Muisti on `maanAluevesiRenkaat`:n
+ * omassa välimuistissa, joten tämä on maakohtainen haku eikä uusi
+ * laskenta joka laatalle.
+ */
+function variMaanRenkaat() {
+  if (!variSuojaPolygonit || !variMaaNyt) return null;
+  const renkaat = maanAluevesiRenkaat(variSuojaPolygonit, variMaaNyt, 0);
+  return renkaat?.length ? renkaat : null;
+}
+
+/**
+ * Liikkeen kohdemaan renkaat (toinen aukko), tai null jos liikettä ei
+ * ole, kohde on sama maa tai aineisto puuttuu. Sama välimuisti kuin
+ * lähtömaalla (maanAluevesiRenkaat).
+ */
+function variLiikkeenKohteenRenkaat() {
+  if (!variLiike || !variLiikeKohde || variLiikeKohde === variMaaNyt) return null;
+  if (!variSuojaPolygonit) return null;
+  const renkaat = maanAluevesiRenkaat(variSuojaPolygonit, variLiikeKohde, 0);
+  return renkaat?.length ? renkaat : null;
+}
+
+/**
+ * Kohdemaan renkaiden yhteinen laatikko laudan yksiköissä, rajattuna
+ * laataston laatikkoon — tai null, jos aineisto on vielä haussa.
+ */
+function variMaanSuoja(iso, L) {
+  if (!variSuojaPolygonit) {
+    if (!variSuojaHaku) {
+      variSuojaHaku = true;
+      lataaMaapolygonit().then((d) => {
+        variSuojaPolygonit = d ?? null;
+        // Suoja on laskettu ilman renkaita: se on laskettava uudestaan.
+        variSuojaIso = null;
+      }).catch(() => { /* aineistoa ei saatu: suoja jää laatikoksi */ });
+    }
+    return null;
+  }
+  const renkaat = puraMaanRenkaat(variSuojaPolygonit, iso);
+  if (!renkaat?.length) return null;
+  let x0 = Infinity;
+  let y0 = Infinity;
+  let x1 = -Infinity;
+  let y1 = -Infinity;
+  for (const rengas of renkaat) {
+    let rx0 = Infinity;
+    let ry0 = Infinity;
+    let rx1 = -Infinity;
+    let ry1 = -Infinity;
+    for (const [x, y] of rengas) {
+      if (x < rx0) rx0 = x;
+      if (x > rx1) rx1 = x;
+      if (y < ry0) ry0 = y;
+      if (y > ry1) ry1 = y;
+    }
+    // Laataston ulkopuolinen rengas ei voi olla laatassa alkuperäisenä.
+    if (rx1 < L.x || rx0 > L.x + L.w || ry1 < L.y || ry0 > L.y + L.h) continue;
+    if (rx0 < x0) x0 = rx0;
+    if (ry0 < y0) y0 = ry0;
+    if (rx1 > x1) x1 = rx1;
+    if (ry1 > y1) y1 = ry1;
+  }
+  if (!(x1 > x0) || !(y1 > y0)) return null;
+  const k0x = Math.max(x0, L.x);
+  const k0y = Math.max(y0, L.y);
+  const k1x = Math.min(x1, L.x + L.w);
+  const k1y = Math.min(y1, L.y + L.h);
+  if (!(k1x > k0x) || !(k1y > k0y)) return null;
+  return {
+    x: k0x, y: k0y, w: k1x - k0x, h: k1y - k0y, tarkka: true,
+  };
+}
+
+/**
+ * Tasoituksen asiakasmaalauksen parametrit, tai null jos väritaso ei ole
+ * tasoitusta (vanha luettelo, murrettu paletti) tai laatikko puuttuu.
+ *
+ * `avain` muuttuu, kun suoja tarkentuu renkaiden saavuttua — pallon
+ * lepokerros mitätöi laattansa siitä (js/pallolaatat.js).
+ *
+ * @returns {{kerma: string, peitto: number, suoja: object, maailma: boolean,
+ *   renkaat: Array|null, avain: string}|null}
+ */
+/** Kerman peiton lattia (ks. pyramidinTasoitus). */
+/*
+ * OMISTAJAN KOE 20.9.2026 klo 15.40: "huntu, joka peittaa muiden maiden
+ * korkeuserot, olisikin lapinakyva ... muuta lapinakyvyys arvoksi
+ * viisikymmenta prosenttia. Ei haittaa, jos samalla paljastuu myos muiden
+ * maiden karttanostot." Kiintea 0,5 ohittaa luettelon peiton (0,85) ja
+ * 18.9. lattian 0,95 (PAATOKSET 34 kohta 17 d jaa taltioon).
+ */
+export const KERMAN_PEITTO_VAHINTAAN = 0.5;
+export const KERMAN_PEITTO_KIINTEA = 0.8; // omistaja 20.9.2026 klo 16.05: "Julkaise 80% peitolla"
+
+export function pyramidinTasoitus() {
+  const vt = varitasonKirjaus();
+  if (!vt?.tasoitus || !(vt.laatikko?.w > 0) || !(vt.laatikko?.h > 0)) return null;
+  /*
+   * KERMA PEITTÄÄ MYÖS MUSTEEN (omistaja 18.9.2026, Raamattu PAATOKSET 34
+   * kohta 17 d: "huntukerros ylimpänä peittäisi karttanostot itsestään"):
+   * luettelon peitto 0,85 päästi naapurin poltetun nostomusteen läpi
+   * (Gotthard kontrasti 14,8, raportti viesti-fable-kerma-reuna-20260918).
+   * Lattia 0,95 peittää musteen ja reliefin samalla siveltimellä ilman
+   * lisäkuormaa; kohdemaan sisus palautetaan renkaista ennallaan.
+   */
+  const peitto = KERMAN_PEITTO_KIINTEA; // omistajan koe 20.9.2026: 50 %
+  if (!(peitto > 0)) return null;
+  if (variSuojaIso !== variMaaNyt) {
+    const L = vt.laatikko;
+    const tarkka = variMaanSuoja(variMaaNyt, L);
+    variSuoja = tarkka ?? {
+      x: L.x, y: L.y, w: L.w, h: L.h, tarkka: false,
+    };
+    if (tarkka) variSuojaIso = variMaaNyt;
+  }
+  if (!variSuoja) return null;
+  const s = variSuoja;
+  /*
+   * RENKAAT AINA, EIVÄT VAIN MAAILMANÄKYMÄSSÄ (omistaja 18.9.2026,
+   * Raamattu PAATOKSET 37 TARKENNUS kohdat 3–5).
+   *
+   * Maailmanäkymässä renkaat olivat kuvan LEIKKURI; nyt ne ovat myös
+   * pelin oman kartan kerman REIKÄ: peli maalaa kerman maamaskilla koko
+   * laatalle ja palauttaa kohdemaan renkaiden sisuksen alkuperäiseksi
+   * (js/pallolaatat.js maalaaTasoitus). Silloin kerman rajana ei ole
+   * suojasuorakaide vaan maan oma ääriviiva, eikä laatikon reuna voi
+   * näkyä kartalla missään zoomissa.
+   *
+   * SUOJA JÄÄ: se kertoo yhä, onko aineisto saapunut (`tarkka`) ja se
+   * on maalauksen varapolun raja, jos pikselimaski ei ole käytettävissä.
+   * Renkaat tulevat samasta aineistosta kuin suoja, joten ne ovat
+   * valmiina täsmälleen silloin kun suoja on tarkka.
+   */
+  const omat = variMaanRenkaat();
+  /*
+   * LIIKKEESSÄ KAKSI AUKKOA (ks. HUNTU PYSYY LIIKKEEN AJAN): lähtömaan
+   * ja kohdemaan renkaat samaan reikälistaan. Huntu itse pysyy —
+   * `maailma` on tosi vain kehittäjän maailmanäkymässä.
+   */
+  const kohteen = omat ? variLiikkeenKohteenRenkaat() : null;
+  const renkaat = kohteen ? [...omat, ...kohteen] : omat;
+  const tila = variMaailma ? 'M' : (variLiike ? 'L' : 'K');
+  return {
+    kerma: vt.kerma || '#faf4d6',
+    peitto,
+    suoja: s,
+    maailma: variMaailma,
+    renkaat,
+    liikkeenKohde: kohteen ? variLiikeKohde : null,
+    // Löytämisen sumu vain levossa kohdemaassa (ei liikkeessä, ei maailmanäkymässä).
+    sumu: variSisasumu && !variLiike && !variMaailma && omat ? variSisasumu : null,
+    avain: `${variMaaNyt}|${tila}|${kohteen ? variLiikeKohde : '-'}|${renkaat ? renkaat.length : 0}`
+      + `|${s.tarkka ? 'T' : 'L'}|${Math.round(s.x)}|${Math.round(s.y)}`
+      + `|${Math.round(s.w)}|${Math.round(s.h)}`
+      + (variSisasumu && !variLiike && !variMaailma ? `|sumu:${variSisasumu.avain}` : ''),
+  };
+}
+
+/**
+ * Väritason tasot — pohjan tasogeometria väritason laatastolla.
+ *
+ * VANHA LUETTELO ILMAN `varitasot`-TAULUA palauttaa nullin, kerros jää
+ * tyhjäksi eikä yksikään pyyntö lähde — kartta on täsmälleen se
+ * seepiakartta, joka se oli ennen tätä erää. Sama koskee maata, jolle
+ * laatastoa ei ole ajettu.
+ */
+function varitasonTasot() {
+  const vt = varitasonKirjaus();
+  if (!vt?.tasot?.length || !vt.laatastot || !vt.maa) return null;
+  if (!luettelo.__variTasot) {
+    luettelo.__variTasot = luettelo.tasot
+      .filter((t) => vt.tasot.includes(t.z) && vt.laatastot[t.z])
+      .map((t) => ({
+        ...t, laatasto: vt.laatastot[t.z], __bitit: undefined, vari: true,
+      }));
+  }
+  return luettelo.__variTasot.length ? luettelo.__variTasot : null;
+}
+
+/**
+ * Missä maassa pelaaja on.
+ *
+ * SAMA LUKU KUIN PUNAISELLA KEHÄLLÄ, EIKÄ OMAA PÄÄTTELYÄ. Maan
+ * vahvistettu ääriviiva (js/maatummennus.js) ratkaisee kohdemaan
+ * kahdesta lähteestä — maan ikkunataulusta ja laudan kaupunki–maa-
+ * taulusta — ja kirjoittaa tuloksen kenttään `maatummennusAvain`.
+ * Väritaso lukee sen sieltä, jolloin väri ja kehä eivät voi olla eri
+ * mieltä siitä, missä maassa ollaan; oma kopio päättelystä olisi juuri
+ * se paikka, jossa Ranska värittyy mutta kehä on Belgian ympärillä.
+ *
+ * KENTTÄÄ EI IMPORTOIDA FUNKTIONA, koska js/fokuskohteet.js tuo tämän
+ * moduulin (nostoOnPoltettu) — vastakkainen tuonti tekisi noista
+ * kahdesta kehän, ja yhden tiedoston niputus (tools/build-standalone)
+ * järjestää moduulit riippuvuuksien mukaan.
+ *
+ * AVAUSLENTO EI SAA VÄREJÄ, samoin kuin se ei saa kehää: lento on
+ * kartan niukin hetki (js/kartta.js aloituslennonNiukkuus).
+ */
+function varitasonIso(ui) {
+  if (ui.aloituslentoKesken) return null;
+  return ui.fokuskarttaAvain || ui.maatummennusAvain || null;
+}
+
+/** Tyhjentää väritason kerroksen ja mittarit. */
+function tyhjennaVaritaso(ui) {
+  if (ui.pyramidiVariKerros) ui.pyramidiVariKerros.style.opacity = '0';
+  if (ui.pyramidiVari?.laatat.size) {
+    poistaVanhaTaso(ui.pyramidiVari);
+    for (const kuva of ui.pyramidiVari.laatat.values()) peruLaatta(kuva);
+    ui.pyramidiVari.laatat = new Map();
+    ui.pyramidiVari.z = null;
+  }
+  mittarit.varillisia = 0;
+  mittarit.variMaa = null;
+}
+
+/*
+ * LEIKKURIN ID ON VAKIO, KOSKA KERROKSIA ON YKSI. Laudalla on kerrallaan
+ * yksi pyramidikerros (nollaaPyramidi purkaa edellisen), joten yksi
+ * tunnus riittää eikä juokseva numero jätä puuhun kuolleita clipPathejä.
+ */
+const VARI_RAJAUS_ID = 'pyramidi-vari-rajaus';
+
+/**
+ * Rakentaa leikkurin kohdemaan aluevesirajasta — kerran maata kohti.
+ *
+ * AINEISTO ON LAISKA JA JAETTU (lataaMaapolygonit): sama 1,4 megatavua
+ * palvelee maan vahvistettua ääriviivaa, pallon korostusta ja tätä
+ * leikkuria. Ennen kuin se on perillä, kerros on piilossa — EI
+ * rajaamaton, koska rajaamaton kerros olisi juuri se virhe, jonka
+ * omistaja näkisi: Ranskan värit Belgian päällä.
+ *
+ * @returns {boolean} onko leikkuri valmiina tälle maalle
+ */
+function varmistaVariRajaus(ui, iso) {
+  if (ui.pyramidiVariRajattuIso === iso) return true;
+  const kerros = ui.pyramidiVariKerros;
+  if (!kerros) return false;
+  const data = ui.pyramidiVariPolygonit ?? null;
+  if (!data) {
+    /*
+     * Haku käynnistetään kerran; lupaus on jaettu, joten odottaminen ei
+     * tee uutta pyyntöä. Kun aineisto on perillä, seuraava asettunut
+     * näkymä rakentaa leikkurin — ja jotta sellainen varmasti tulee,
+     * pyydetään päivitys heti.
+     */
+    if (!ui.pyramidiVariHaku) {
+      ui.pyramidiVariHaku = true;
+      lataaMaapolygonit().then((d) => {
+        if (ui.dead) return;
+        ui.pyramidiVariPolygonit = d ?? null;
+        paivitaPyramidi(ui);
+      }).catch(() => { /* aineistoa ei saatu: väritaso jää pois */ });
+    }
+    return false;
+  }
+  const map = ui.game?.pack?.map;
+  const leveys = map?.kiertava ? (data.lauta?.leveys ?? map.width) : 0;
+  const d = maanAluevesiPolku(data, iso, leveys);
+  if (!d) return false;
+  if (!ui.pyramidiVariRajaus) {
+    const defs = el('defs', {}, kerros);
+    kerros.prepend(defs);
+    ui.pyramidiVariRajaus = el('clipPath', { id: VARI_RAJAUS_ID }, defs);
+    ui.pyramidiVariPolku = el('path', { d: '' }, ui.pyramidiVariRajaus);
+    kerros.setAttribute('clip-path', `url(#${VARI_RAJAUS_ID})`);
+  }
+  ui.pyramidiVariPolku.setAttribute('d', d);
+  ui.pyramidiVariRajattuIso = iso;
+  return true;
+}
+
+/**
+ * Päivittää väritason kerroksen — tai piilottaa sen, kun pelaaja ei ole
+ * siinä maassa, jonka laatat ämpärissä ovat.
+ *
+ * TYHJÄ KERROS ON KOKO YHTEENSOPIVUUS, kuten ranta- ja viivatasolla:
+ * vanha luettelo ei tunne `varitasot`-taulua, kerros jää tyhjäksi eikä
+ * yhtäkään pyyntöä lähde — kartta on täsmälleen se seepiakartta, joka
+ * se oli ennen tätä erää.
+ *
+ * VANHA TASO EI JÄÄ UUDEN ALLE (`lapinakyva: true`). Värilaatta on
+ * läpinäkymätön kartta, mutta se ELÄÄ LEIKKURIN SISÄLLÄ: zoomatessa
+ * edellisen tason laatta jäisi uuden alle eikä sitä näkisi — paitsi
+ * siellä, missä uusi taso on vielä vajaa, ja siellä se näkyisi
+ * sumeana haamuna kahdella eri tarkkuudella. Karkea pohja on jo
+ * pohjakerroksessa, joten alla on aina jotain.
+ */
+function paivitaVaritaso(ui, taso, laatta, arkki, alue, nakyva) {
+  const kerros = ui.pyramidiVariKerros;
+  if (!kerros) return;
+  // Kohdemaa YHTEEN paikkaan ennen tasojen hakua (ks. variMaaNyt):
+  // laatasto, osoite ja versio luetaan siitä eikä ui:sta uudestaan.
+  const iso = varitasonIso(ui);
+  asetaVaritasonMaa(iso);
+  const tasot = varitasonTasot();
+  const oma = tasot?.find((t) => t.z === taso.z) ?? null;
+  if (!oma || !iso) { tyhjennaVaritaso(ui); return; }
+  if (!varmistaVariRajaus(ui, iso)) { tyhjennaVaritaso(ui); return; }
+  kerros.style.opacity = '1';
+  ui.pyramidiVari ??= tyhjaTila(kerros, false, true);
+  ui.pyramidiVari.kerros = kerros;
+  paivitaKerros(ui.pyramidiVari, oma, laatta, arkki, alue, nakyva, 'high');
+  mittarit.varillisia = ui.pyramidiVari.laatat.size;
+  mittarit.variMaa = iso;
+}
+
+/* ------------------------------------------------------------ rantataso */
+
+/**
+ * Rantatason tasot — pohjan tasogeometria rantatason laatastolla.
+ *
+ * Sama rakenne kuin viivatasonTasot ja samasta syystä: laattaruudukko
+ * on TÄSMÄLLEEN pohjan ruudukko samalla z:lla. Vaihtuu `laatasto`
+ * (rantatason bittikartta — sisämaan laattoja EI OLE OLEMASSA) ja
+ * `ranta: true`, joka ohjaa osoitteen ranta-alipolkuun (laattaUrl) ja
+ * noutokirjanpidon omalle avaimelleen (noutoAvain). `__bitit: undefined`
+ * on pakollinen: levityskopio toisi pohjan tason valmiiksi puretun
+ * bittikartan mukanaan.
+ *
+ * VANHA LUETTELO ILMAN `rantataso`-KENTTÄÄ palauttaa nullin, kerros jää
+ * tyhjäksi eikä yksikään pyyntö lähde — rantaviiva tulee silloin
+ * pohjalaatoista kuten ennenkin.
+ */
+function rantatasonTasot() {
+  const rt = luettelo?.rantataso;
+  if (!rt?.tasot?.length || !rt.laatastot) return null;
+  if (!luettelo.__rantaTasot) {
+    luettelo.__rantaTasot = luettelo.tasot
+      .filter((t) => rt.tasot.includes(t.z) && rt.laatastot[t.z])
+      .map((t) => ({
+        ...t, laatasto: rt.laatastot[t.z], __bitit: undefined, ranta: true,
+      }));
+  }
+  return luettelo.__rantaTasot.length ? luettelo.__rantaTasot : null;
+}
+
+/**
+ * Päivittää rantatason kerroksen.
+ *
+ * TYHJÄ KERROS ON KOKO YHTEENSOPIVUUS, kuten viivatasolla: vanha
+ * luettelo ei tunne kenttää, kerros jää tyhjäksi ja peli on
+ * täsmälleen se, mikä se oli ennen tätä erää. SIKSI TÄMÄ SELAINMUUTOS
+ * ON JULKAISUKELPOINEN YKSIN, ja siksi julkaisujärjestys on selain
+ * ensin, rantatason laatat toisena ja rannaton pohja vasta
+ * kolmantena.
+ *
+ * VANHA TASO SAA JÄÄDÄ UUDEN ALLE, kuten viivatasolla: rantaviiva on
+ * karttavakiota ja samassa kohdassa joka tasolla, joten edellisen
+ * tason laatta osuu uuden PÄÄLLE eikä viereen.
+ */
+function paivitaRantataso(ui, taso, laatta, arkki, alue, nakyva) {
+  const kerros = ui.pyramidiRantaKerros;
+  if (!kerros) return;
+  const tasot = rantatasonTasot();
+  const oma = tasot?.find((t) => t.z === taso.z) ?? null;
+  if (!oma) {
+    if (ui.pyramidiRanta?.laatat.size) {
+      poistaVanhaTaso(ui.pyramidiRanta);
+      for (const kuva of ui.pyramidiRanta.laatat.values()) peruLaatta(kuva);
+      ui.pyramidiRanta.laatat = new Map();
+      ui.pyramidiRanta.z = null;
+    }
+    mittarit.rantoja = 0;
+    return;
+  }
+  ui.pyramidiRanta ??= tyhjaTila(kerros);
+  ui.pyramidiRanta.kerros = kerros;
+  paivitaKerros(ui.pyramidiRanta, oma, laatta, arkki, alue, nakyva, 'low');
+  mittarit.rantoja = ui.pyramidiRanta.laatat.size;
+}
+
 /* ------------------------------------------------------------ viivataso */
 
 /**
@@ -1268,6 +2536,99 @@ function viivatasonTasot() {
   }
   return luettelo.__viivaTasot.length ? luettelo.__viivaTasot : null;
 }
+
+/*
+ * ═══════════════════════════════════════════════════════════════════
+ * JOKITASO — JOET JA RAJAT ILMAN REITTEJÄ, PALLON LEPOKERROKSELLE
+ * ═══════════════════════════════════════════════════════════════════
+ *
+ * OMISTAJA 20.9.2026 (kaappaus docs/raportit/kaappaukset/omistaja-
+ * 20260920/pariisi-ei-jokia-v1980.webp): Ranskan kartalla "Loire"-nimiö
+ * mutta ei jokiviivaa. MITATTU (Karttaseppä, tuotannon polut): pohja
+ * 2026-09-20-pohja on poltettu ILMAN jokia (z7/82/35 tyhjä paperi),
+ * joet ovat viivatasolla 2026-09-20d (sama laatta: Loiren uoma) — ja
+ * pallon lepokerros jättää viivatason tietoisesti pois, koska sillä on
+ * reittiviuhka (js/pallolaatat.js lepokerroksenKerrokset `viiva:
+ * false`, Raamattu PAATOKSET 8). Liikkeessä pallon sarja k (poltettu
+ * viivat d:n kanssa) näyttää joen; levossa — juuri kun pelaaja katsoo
+ * — se katoaa.
+ *
+ * FABLEN PÄÄTÖS (20.9.2026, vaihtoehto A): viivatason generaattori
+ * polttaa toisen laataston ILMAN REITTEJÄ (`--eireitit`: joet + rajat),
+ * ja luettelo kantaa sen omassa kentässään `jokitaso` (versio, tasot,
+ * laatastot). Pallon lepokerros latoo jokitason siihen väliin, jossa
+ * viivataso olisi (ranta → JOKI → nosto); tasokartta ja linssikartta
+ * EIVÄT lataa sitä, koska niillä on viivataso jokineen — kaksi kertaa
+ * sama uoma olisi tuplamuste. Sarja k pysyy, pallosarjaa ei polteta
+ * (sääntö koskee pohjan ja VIIVATASON vaihtoa; tämä on lisäkenttä).
+ *
+ * VANHA KOODI SIETÄÄ UUDEN KENTÄN: luettelon lukijat poimivat tunnetut
+ * kentät nimeltä, ja ylimääräinen `jokitaso` on niille pelkkä
+ * tuntematon avain — siksi luettelo voidaan viedä ämpäriin vasta kun
+ * tämä osoitin on mainissa, mutta vanha peli ei kaadu, jos se ehtii
+ * ennen (tests/laattapyramidi.test.mjs).
+ *
+ * VANHA LUETTELO ILMAN `jokitaso`-KENTTÄÄ palauttaa nullin ja kerros
+ * jää pois — peli on täsmälleen v1980.
+ */
+function jokitasonTasot() {
+  const jt = luettelo?.jokitaso;
+  if (!jt?.versio || !jt.tasot?.length || !jt.laatastot) return null;
+  if (!luettelo.__jokiTasot) {
+    luettelo.__jokiTasot = luettelo.tasot
+      .filter((t) => jt.tasot.includes(t.z) && jt.laatastot[t.z])
+      .map((t) => ({
+        ...t, laatasto: jt.laatastot[t.z], __bitit: undefined, joki: true,
+      }));
+  }
+  return luettelo.__jokiTasot.length ? luettelo.__jokiTasot : null;
+}
+
+/** Jokitason kirjaus (savukkeet, testit) tai null. */
+export function pyramidinJokitaso() {
+  const jt = luettelo?.jokitaso;
+  return jt?.versio ? jt : null;
+}
+
+/*
+ * ═══════════════════════════════════════════════════════════════════
+ * NIMIÖTASO — POLTETUT NIMIÖT OMANA LÄPINÄKYVÄNÄ TASONA
+ * ═══════════════════════════════════════════════════════════════════
+ *
+ * Omistajan kortti 20.9.2026 ilta (uusintapoltto): nimiöt omaksi
+ * tasoksi, jotta Pelikoodari voi piilottaa kohdemaan poltetut tekstit
+ * (maapolygonimaski) ja piirtää ne elävinä; 1873-maakunnat ja meret
+ * harvennetuin kapiteelein (js/packs/nimisto-1873.js). Generaattori
+ * tools/generoi-laattapyramidi.mjs `--nimiotaso`; luettelokenttä
+ * `nimiotaso: { versio, tasot, laatastot, nimiot }`, jossa `nimiot`
+ * on Pelikoodarin rajapinta (luokka, teksti, lon, lat, iso, meri,
+ * koko, laatikot tasoittain asteina).
+ *
+ * PAIKKA: viivatason (tai jokitason) PÄÄLLÄ, nostojen ALLA — nosto
+ * merkitsee paikan ja sen nimiö on ladottu väistämään; alueen nimi
+ * on taustan typografiaa. Pallon lepokerros latoo tason; tasokartan
+ * kerrospäivitys on oma eränsä (Pelikoodarin elävä sovittelu on
+ * pallolla). Vanha luettelo ilman kenttää = ei tasoa.
+ */
+function nimiotasonTasot() {
+  const nt = luettelo?.nimiotaso;
+  if (!nt?.versio || !nt.tasot?.length || !nt.laatastot) return null;
+  if (!luettelo.__nimioTasot) {
+    luettelo.__nimioTasot = luettelo.tasot
+      .filter((t) => nt.tasot.includes(t.z) && nt.laatastot[t.z])
+      .map((t) => ({
+        ...t, laatasto: nt.laatastot[t.z], __bitit: undefined, nimio: true,
+      }));
+  }
+  return luettelo.__nimioTasot.length ? luettelo.__nimioTasot : null;
+}
+
+/** Nimiötason kirjaus (Pelikoodarin elävä sovittelu, savukkeet) tai null. */
+export function pyramidinNimiotaso() {
+  const nt = luettelo?.nimiotaso;
+  return nt?.versio ? nt : null;
+}
+// pyramidinNimiot (metadata Pelikoodarille) on ylempänä, Pelikoodarin erässä.
 
 /**
  * Päivittää viivatason kerroksen.
@@ -1302,6 +2663,14 @@ function paivitaViivataso(ui, taso, laatta, arkki, alue, nakyva) {
     mittarit.viivoja = 0;
     return;
   }
+  /*
+   * VIIVATASO SAA PITÄÄ VANHAN TASON, TOISIN KUIN NOSTOTASO. Sekin on
+   * läpinäkyvä, mutta sen sisältö on karttavakiota (reittimuste, rajat)
+   * eikä ruutukaton alaista: sama viiva on joka tasolla samassa
+   * kohdassa ja samanlevyinen, joten edellisen tason laatta osuu uuden
+   * PÄÄLLE eikä viereen — haamua ei synny, ja reitti pysyy näkyvissä
+   * koko zoomin ajan.
+   */
   ui.pyramidiViiva ??= tyhjaTila(kerros);
   ui.pyramidiViiva.kerros = kerros;
   paivitaKerros(ui.pyramidiViiva, oma, laatta, arkki, alue, nakyva, 'low');
@@ -1315,7 +2684,8 @@ function paivitaNostotaso(ui, taso, laatta, arkki, alue, nakyva) {
   const oma = tasot?.find((t) => t.z === taso.z) ?? null;
   kerros.style.opacity = oma ? '1' : '0';
   if (!oma) return;
-  ui.pyramidiNosto ??= tyhjaTila(kerros);
+  // Läpinäkyvä merkkikerros: vanha taso ei jää uuden alle (paivitaKerros).
+  ui.pyramidiNosto ??= tyhjaTila(kerros, false, true);
   ui.pyramidiNosto.kerros = kerros;
   paivitaKerros(ui.pyramidiNosto, oma, laatta, arkki, alue, nakyva, 'low');
   mittarit.nostoja = ui.pyramidiNosto.laatat.size;
@@ -1467,7 +2837,23 @@ export function paivitaPyramidi(ui) {
   ui.pyramidiLaatat = ui.pyramidiTarkka.laatat;
 
   /*
-   * VIIVATASO TARKAN PÄÄLLE JA NOSTOJEN ALLE. Kiinnitysalue on sama
+   * RANTATASO ENSIN, HETI POHJAN PÄÄLLE: rantaviiva oli pohjapiirron
+   * osiossa 4 eli reittien ja rajojen alla, ja sama järjestys pätee
+   * omalla tasollaan.
+   */
+  /*
+   * VÄRITASO ENSIN, HETI POHJAN PÄÄLLE: se on KARTTA eikä merkintä, ja
+   * rantaviiva, reitit ja nostot kuuluvat sen päälle (ks. väritaso).
+   * Prioriteetti on 'high' kuten pohjalla — kohdemaan kartta on juuri
+   * se, mitä pelaaja katsoo, eikä se saa jäädä merkintöjen jälkeen
+   * jonoon.
+   */
+  paivitaVaritaso(ui, taso, laatta, arkki, kiinnitys, nakyva);
+
+  paivitaRantataso(ui, taso, laatta, arkki, kiinnitys, nakyva);
+
+  /*
+   * VIIVATASO RANNAN PÄÄLLE JA NOSTOJEN ALLE. Kiinnitysalue on sama
    * kuin tarkalla tasolla, ja prioriteetti matala samasta syystä kuin
    * nostoilla: pohjakartta menee aina merkintöjen edelle.
    */
@@ -1496,7 +2882,9 @@ export function paivitaPyramidi(ui) {
    * Viereiset zoomtasot tulevat jonon perälle.
    */
   jonotaEsilataus(taso, laatta, arkki, nakyva, suunta);
-  jonotaTasovaihto(tasot, taso, laatta, arkki, nakyva);
+  jonotaTasovaihto([...tasot, ...(nostotasonTasot() ?? []), ...(viivatasonTasot() ?? []),
+    ...(rantatasonTasot() ?? []), ...(mittarit.variMaa ? (varitasonTasot() ?? []) : [])],
+  taso, laatta, arkki, nakyva);
 }
 
 /** Tyhjentää laatat (laudan vaihto, pelin loppu). */
@@ -1514,16 +2902,24 @@ export function nollaaPyramidi(ui) {
   if (!ui?.pyramidiKerros) return;
   clearTimeout(ui.pyramidiTarkka?.ajastin);
   clearTimeout(ui.pyramidiKarkea?.ajastin);
+  clearTimeout(ui.pyramidiVari?.ajastin);
+  clearTimeout(ui.pyramidiRanta?.ajastin);
   clearTimeout(ui.pyramidiViiva?.ajastin);
   clearTimeout(ui.pyramidiNosto?.ajastin);
   while (ui.pyramidiKerros.firstChild) ui.pyramidiKerros.firstChild.remove();
   // Kerrokset ja niiden tilat rakennetaan seuraavassa päivityksessä.
   ui.pyramidiPohjaKerros = null;
   ui.pyramidiTarkkaKerros = null;
+  ui.pyramidiVariKerros = null;
+  ui.pyramidiVariRajaus = null;
+  ui.pyramidiVariRajattuIso = null;
+  ui.pyramidiRantaKerros = null;
   ui.pyramidiViivaKerros = null;
   ui.pyramidiNostoKerros = null;
   ui.pyramidiTarkka = null;
   ui.pyramidiKarkea = null;
+  ui.pyramidiVari = null;
+  ui.pyramidiRanta = null;
   ui.pyramidiViiva = null;
   ui.pyramidiNosto = null;
   ui.pyramidiLaatat = new Map();
@@ -1531,6 +2927,239 @@ export function nollaaPyramidi(ui) {
   mittarit.nakymassa = 0;
   mittarit.ruudulla = 0;
   mittarit.karkeita = 0;
+  mittarit.varillisia = 0;
+  mittarit.rantoja = 0;
   mittarit.viivoja = 0;
   mittarit.nostoja = 0;
 }
+
+/* ------------------------------------------------------------ pallon lepokerros */
+
+/*
+ * PALLON LEPOKERROS LUKEE SAMAA PYRAMIDIA (Raamattu 6.9.2026, PALLO
+ * LEVOSSA YHTA TERAVA KUIN TASOKARTTA): kun karttapallon kamera
+ * pysähtyy, pallo kokoaa näkyvän alueen päälle kerroksen suoraan tämän
+ * pyramidin laatoista (js/pallo.js asennaLepokerros). Pallon Z8 on
+ * 182 px/aste ja se on poltettu tämän pyramidin z7:stä (240 px/aste),
+ * joten laatan matka Milleristä Mercatoriin ja jpeg:ksi maksaa
+ * terävyyttä, jonka lepokerros saa takaisin lukemalla alkuperäisen.
+ *
+ * NÄMÄ OVAT AINOAT OVET LUETTELOON JA OSOITTEISIIN. Pallo ei rakenna
+ * laatan osoitetta itse eikä arvaa laataston bittikarttaa: se kysyy
+ * tästä moduulista samat vastaukset, jotka tasokartta itse käyttää
+ * (laattaUrl, laattaOlemassa, nosto- ja viivatason tasot). Jos osoite-
+ * kaava tai luettelon muoto joskus vaihtuu, pallo seuraa perässä
+ * ilman omaa muutosta — ja kahta eriytynyttä kopiota ei synny.
+ */
+
+/** Pyramidin luettelo (sama nouto ja välimuisti kuin tasokartalla) tai null. */
+export function haePyramidinLuettelo() {
+  return haeLuettelo();
+}
+
+/**
+ * Tason z kerrokset piirtojärjestyksessä pohja → väri → ranta → viiva → nosto
+ * (sama järjestys kuin varmistaKerrokset: rantaviiva kartan päällä,
+ * reitti sen päällä, noston symboli ylimpänä). Puuttuva kerros jää
+ * listasta pois: ranta-, viiva- ja nostotasoa ei ole joka tasolla eikä
+ * joka luettelossa. Null, jos luetteloa ei ole tai tasoa z ei ole.
+ *
+ * RANTA-TASO TUNNISTUU KENTÄSTÄ `ranta: true`, jotta pallon lepokerros
+ * voi joko käyttää tai OHITTAA sen: kun pallon vektorikerros piirtää
+ * rantaviivan (js/pallovektorit.js), poltettu muste jäisi sen alle
+ * venytettynä usvana.
+ */
+export function pyramidinKerrostasot(z) {
+  const pohja = luettelo?.tasot?.find((t) => t.z === z) ?? null;
+  if (!pohja) return null;
+  const kerrokset = [pohja];
+  /*
+   * RELIEFITASO ON HETI POHJAN PÄÄLLÄ (topografialinssi, 18.9.2026).
+   *
+   * Reliefi on MAASTOA kuten väritasokin, ei merkki kartan päällä —
+   * rantaviiva, reitti ja noston symboli kuuluvat sen päälle. Se
+   * tulee ennen väritasoa, koska väritaso on kohdemaan oma tasoitus
+   * ja saa peittää reliefin siinä maassa.
+   *
+   * KYTKIN ON OLETUKSENA POIS (`?reliefipyramidi=1`): ilman sitä
+   * `reliefinTaso` palauttaa nullin, kerros jää listasta pois eikä
+   * yksikään pyyntö lähde. Peli on silloin täsmälleen se, mikä se
+   * oli ennen tätä erää — topografialinssin yksi kuva ja laastari.
+   */
+  const reliefi = reliefiKaytossa() ? reliefinTaso(z) : null;
+  /*
+   * RELIEFI KORVAA POHJAN, EI PEITÄ SITÄ (omistajan lisäys 18.9.2026,
+   * Raamattu LISAYS 16 kohta 49).
+   *
+   * Kaksi karttaa päällekkäin olisi kaksi hakua, kaksi kangasta ja
+   * kaksi kertaa muistia jokaisesta laatasta — ja näkyvä välähdys:
+   * seepialaatta saapuu ensin, reliefi vasta sen jälkeen, ja pelaaja
+   * näkee vaalean pelikartan ennen maastoa. Kun reliefi on pohja, ei
+   * ole mitään mikä välähtäisi: paikanpitäjä on laattakoneen oma
+   * karkea kerros eli SAMAN pyramidin ylemmän tason laatta
+   * skaalattuna, kuten pohjakartallakin.
+   *
+   * VÄRITASO JÄÄ MYÖS POIS: se on kohdemaan tasoitus seepiakartalle
+   * eikä tarkoitettu maaston päälle. Ranta-, viiva- ja nostotaso
+   * säilyvät — ne ovat MERKKEJÄ kartan päällä, ja omistajan lisäys
+   * sanoo ne nimenomaan reliefin päälle.
+   */
+  if (reliefi) {
+    /*
+     * ASTRONAUTIN KAMERASSA EI OLE PELIN MUSTETTA (PAATOKSET 41 kohta
+     * 4, LISAYS 16 kohta 47). Sama laatasto, sama laattakone — mutta
+     * astronautin ikkunasta ei näy rantaviivaa, reittiverkkoa eikä
+     * poltettuja nimiöitä, vaan pelkkä maasto, jonka päälle linssi
+     * piirtää omat kerroksensa (ISS, varjo, kohdepisteet). Merkkitasot
+     * ovat myös kolme hakua ja kolme drawImagea laattaa kohti, eli
+     * niiden jättäminen pois on suoraan puhelimen muistia ja aikaa.
+     */
+    if (reliefiAstronautilla()) return [reliefi];
+    const merkit = [];
+    const ranta0 = rantatasonTasot()?.find((t) => t.z === z);
+    if (ranta0) merkit.push(ranta0);
+    const viiva0 = viivatasonTasot()?.find((t) => t.z === z);
+    if (viiva0) merkit.push(viiva0);
+    const joki0 = jokitasonTasot()?.find((t) => t.z === z);
+    if (joki0) merkit.push(joki0);
+    const nimio0 = nimiotasonTasot()?.find((t) => t.z === z);
+    if (nimio0) merkit.push(nimio0);
+    const nosto0 = nostotasonTasot()?.find((t) => t.z === z);
+    if (nosto0) merkit.push(nosto0);
+    return [reliefi, ...merkit];
+  }
+  /*
+   * VÄRITASO ON MAASTOA, JOTEN SE TULEE POHJAN PÄÄLLE MUTTA RANNAN
+   * ALLE (erä 1b). Rantaviiva, reitti ja noston symboli ovat MERKKEJÄ
+   * kartan päällä; värillinen topografia on se kartta itse. Jos väri
+   * piirtyisi rannan päälle, poltettu rantaviiva katoaisi kohdemaan
+   * alta ja maa näyttäisi leijuvan.
+   *
+   * TASO TUNNISTUU KENTÄSTÄ `vari: true`, jotta pallon lepokerros voi
+   * portittaa sen erikseen (js/pallolaatat.js `kerrokset.vari`) —
+   * ilman omaa porttia se menisi suodattimen `: true`-haaraan ja
+   * piirtyisi myös väärässä maassa.
+   */
+  const vari = varitasonTasot()?.find((t) => t.z === z);
+  if (vari) kerrokset.push(vari);
+  const ranta = rantatasonTasot()?.find((t) => t.z === z);
+  if (ranta) kerrokset.push(ranta);
+  const viiva = viivatasonTasot()?.find((t) => t.z === z);
+  if (viiva) kerrokset.push(viiva);
+  // JOKITASO viivatason paikalle pallolle (ks. JOKITASO): kutsuja
+  // suodattaa viivatason pois ja jokitason mukaan — ei koskaan molempia.
+  const joki = jokitasonTasot()?.find((t) => t.z === z);
+  if (joki) kerrokset.push(joki);
+  // NIMIÖTASO viivojen päälle, nostojen alle (ks. NIMIÖTASO).
+  const nimio = nimiotasonTasot()?.find((t) => t.z === z);
+  if (nimio) kerrokset.push(nimio);
+  const nosto = nostotasonTasot()?.find((t) => t.z === z);
+  if (nosto) kerrokset.push(nosto);
+  return kerrokset;
+}
+
+/** Laatan osoite tasokartan omalla kaavalla (pohja, viiva tai nosto). */
+export function pyramidinLaattaUrl(taso, sarake, rivi) {
+  return laattaUrl(taso, sarake, rivi);
+}
+
+/** Onko laatta olemassa levyllä (harvan tason bittikartta)? */
+export function pyramidinLaattaOlemassa(taso, sarake, rivi) {
+  return laattaOlemassa(taso, sarake, rivi);
+}
+
+/*
+ * RELIEFIN PORTTI KULKEE TÄMÄN OVEN KAUTTA, kuten luettelo ja
+ * osoitteetkin. Pallo ei tuo js/reliefipyramidi.js:ää itse —
+ * tasokartta ja pallo lukevat saman vastauksen samasta paikasta, eikä
+ * kahta eriytynyttä porttia synny (tests/pallolepokerros.test.mjs
+ * vartioi tuontilistaa koneellisesti).
+ */
+export function pyramidinReliefiKaytossa() {
+  return reliefiKaytossa();
+}
+
+/**
+ * Piirtääkö Astronautin kamera laatastoa (eikä topografialinssi)?
+ * Sama ovi kuin muillakin reliefipyramidin kysymyksillä — pallo ei tuo
+ * js/reliefipyramidi.js:ää itse.
+ */
+export function pyramidinReliefiAstronautilla() {
+  return reliefiAstronautilla();
+}
+
+/**
+ * Kankaan suodatin Astronautin kameran laastarille (kylläisyys alas)
+ * tai null. Sama kerroin kuin linssin omalla pallotekstuurilla, jotta
+ * laastarin ja 4k-pohjan välillä ei näy sävyrajaa.
+ */
+export function pyramidinReliefinSuodatin() {
+  return reliefiAstronautilla() ? ASTRONAUTIN_SUODATIN : null;
+}
+
+/**
+ * Astronautin laastarin valoliu'un pysäkit laatan kankaalle tai tyhjä
+ * taulukko (ei astronauttitila, tai rivin leveysastetta ei saada).
+ *
+ * Sama ovi kuin kylläisyyssuodattimella: pallo ei tuo
+ * js/reliefipyramidi.js:ää itse. Perustelu ja kaava ovat siellä
+ * (VALON VASTAKAAVA MYÖS LAASTARILLE).
+ *
+ * @param {number} korkeus      kankaan korkeus pikseleinä
+ * @param {function} latRivilla kankaan y (px) → leveysaste
+ */
+export function pyramidinReliefinValoliuku(korkeus, latRivilla) {
+  if (!reliefiAstronautilla()) return [];
+  return astronautinValoliuunPysakit(korkeus, latRivilla);
+}
+
+/**
+ * Laastarin materiaalin sävy (0x999999) tai null. Sama tummennus kuin
+ * linssin omalla pallolla (`PALLON_SAVY`); ilman sitä laastari on
+ * 1,68-kertaisesti kirkkaampi kuin pohja samassa kohdassa.
+ */
+export function pyramidinReliefinSavy() {
+  return reliefiAstronautilla() ? ASTRONAUTIN_SAVY : null;
+}
+
+/**
+ * Reliefilaataston syvin taso (z) tai null. Laattakone ei saa valita
+ * tätä syvempää tasoa linssin ajan: sitä ei ole poltettu.
+ */
+export function pyramidinReliefinSyvinTaso() {
+  return reliefinSyvinTaso();
+}
+
+/*
+ * LINSSIKETJUN MERKKI SAMAN OVEN KAUTTA. Pallon lepokerros ei tuo
+ * js/reliefipyramidi.js:ää itse (ks. yllä, tests/pallolepokerros.test.mjs
+ * vartioi tuontilistaa), joten avauksen vaihemerkinnät kulkevat tästä
+ * kuten luettelo ja osoitteetkin.
+ */
+export function pyramidinLinssiketju(vaihe) {
+  merkitseLinssiketju(vaihe);
+}
+
+/*
+ * PUUTTUVAN RELIEFILAATAN PAIKANPITÄJÄ SAMAN OVEN KAUTTA
+ * (PAATOKSET 41 kohdat 1–3). Pallon lepokerros ei tuo
+ * js/reliefipyramidi.js:ää itse, joten karkean varalaatan haku, sen
+ * tason luenta ja aukon tasainen väri kulkevat tästä kuten luettelo ja
+ * osoitteetkin.
+ */
+export function pyramidinReliefinVaraLahde(z, sarake, rivi, laatta) {
+  return reliefinVaraLahde(z, sarake, rivi, laatta);
+}
+
+/** Reliefin taso z laattakoneen muodossa (varalaatan osoitetta varten). */
+export function pyramidinReliefinTaso(z) {
+  return reliefinTaso(z);
+}
+
+/** Aukon tasainen väri leveysasteen mukaan (meri tai napajää). */
+export function pyramidinReliefinTaustavari(lat) {
+  return reliefinTaustavari(lat);
+}
+
+/** Leveysaste, jonka eteläpuolella aukko on jäätä eikä merta. */
+export const PYRAMIDIN_JAARAJA_LAT = JAARAJA_LAT;

@@ -44,12 +44,33 @@
  */
 export function kytkeKarttaZoom(ui, kehys, lava, napit, ydin = { x: 0, y: 0, leveys: 100, korkeus: 100 }, ohjain = {}) {
   const PIENIN = 1;
-  // Yläraja on kolme: piirretty PNG on 1600 px leveä ydinrajausta
-  // kohden ja näkyy noin 600 pikselin palstalla, joten
-  // kolminkertaisenakin näytetään yhä kuvan omia pikseleitä eikä
-  // selaimen venytystä. Reunus ei muuta tätä: laajennettu kuva on
-  // piirretty samassa suhteessa leveämpänä (1600 × laajennus).
-  const SUURIN = 3;
+  const PERUSKATTO = 3;
+  /*
+   * KOKORUUDULLA KATTO TULEE KUTSUJALTA (PAATOKSET 34 kohta 18 h,
+   * omistaja 18.9.2026: *"Yla ja alaosa taytyy kun kayttaja zoomaa
+   * sisaan"*).
+   *
+   * Kohdekartta on vaakakuva (Pariisi 1,57:1). Kokoruudulla se
+   * avautuu leveyteen sovitettuna, joten pystyruudulla kartan ylle ja
+   * alle jaa mustaa — ja kolminkertainen suurennos ei valttamatta
+   * riita peittamaan sita. 390x844 px:lla kartan lepokorkeus on noin
+   * 291 px, jolloin ruudun taytto vaatii kertoimen 844/291 = 2,9; jo
+   * 430x932 px:n puhelimella vaadittu kerroin on yli kolmen. Kutsuja
+   * (js/nahtavyydet.js: avaaKarttaSuurennos) tietaa seka nakyvan alan
+   * etta kartan lepokorkeuden, joten se laskee katon — FUNKTIONA,
+   * koska ruudun kaanto muuttaa molempia kesken katselun.
+   *
+   * ARKIN KARTTA EI ANNA KATTOA, joten sen yllaraja on yha tasan 3:
+   * piirretty PNG on 1600 px leveä ydinrajausta kohden ja nakyy noin
+   * 600 pikselin palstalla, joten kolminkertaisenakin naytetaan yha
+   * kuvan omia pikseleita eika selaimen venytysta. Kokoruudulla
+   * palsta on koko ruutu ja katsomisetaisyys sama, joten pieni
+   * ylitys on parempi kuin musta reunus.
+   */
+  const ylaraja = () => {
+    const arvo = typeof ohjain.suurin === 'function' ? ohjain.suurin() : ohjain.suurin;
+    return Number.isFinite(arvo) && arvo > PERUSKATTO ? arvo : PERUSKATTO;
+  };
   const ASKEL = 1.5;
   /*
    * REUNUS AUKEAA HETI ZOOMATESSA MUTTA EI YHDELLÄ LOIKALLA.
@@ -77,7 +98,7 @@ export function kytkeKarttaZoom(ui, kehys, lava, napit, ydin = { x: 0, y: 0, lev
   const piirra = (silea = false) => {
     const W = lava.offsetWidth;
     const H = lava.offsetHeight;
-    k = rajaa(k, PIENIN, SUURIN);
+    k = rajaa(k, PIENIN, ylaraja());
     /*
      * PANOROINNIN RAJAT. Kehys näyttää lepotilassa ydinrajauksen,
      * joka on lavalla kohdassa (x0, y0) ja kokoa (kW, kH) — koko
@@ -133,8 +154,14 @@ export function kytkeKarttaZoom(ui, kehys, lava, napit, ydin = { x: 0, y: 0, lev
     // jottei numeroympyrä paisu kolminkertaiseksi zoomatessa.
     lava.style.setProperty('--zoom', k.toFixed(4));
     kehys.classList.toggle('zoomattu', zoomattu);
-    napit.lahenna.disabled = k >= SUURIN - 0.001;
-    napit.loitonna.disabled = !zoomattu;
+    /*
+     * NAPIT OVAT VALINNAISET (PAATOKSET 34 kohta 18 g, 18.9.2026):
+     * nähtävyyskartalla ei ole enää plussaa eikä miinusta, ja zoom
+     * elää nipistyksessä, rullassa ja tuplanapautuksessa. Vanhat
+     * kutsujat antavat napit kuten ennen.
+     */
+    if (napit.lahenna) napit.lahenna.disabled = k >= ylaraja() - 0.001;
+    if (napit.loitonna) napit.loitonna.disabled = !zoomattu;
     /*
      * KERTOIMEN MUUTOS KUTSUJALLE (22.8.2026, kokoruudun levitys).
      * Kutsuja saa muuttaa kehyksen kokoa, joten rajat lasketaan sen
@@ -163,7 +190,7 @@ export function kytkeKarttaZoom(ui, kehys, lava, napit, ydin = { x: 0, y: 0, lev
 
   /** Zoomaa niin, että annettu näytön piste pysyy paikallaan. */
   const zoomaa = (uusi, asiakasX, asiakasY, silea = false) => {
-    const kohde = rajaa(uusi, PIENIN, SUURIN);
+    const kohde = rajaa(uusi, PIENIN, ylaraja());
     if (Math.abs(kohde - k) < 0.0005) return;
     const m = lavalle(asiakasX, asiakasY);
     const suhde = kohde / k;
@@ -196,8 +223,8 @@ export function kytkeKarttaZoom(ui, kehys, lava, napit, ydin = { x: 0, y: 0, lev
     setTimeout(() => kehys.removeEventListener('click', nielu, true), 350);
   };
 
-  napit.lahenna.addEventListener('click', () => keskelta(k * ASKEL));
-  napit.loitonna.addEventListener('click', () => keskelta(k / ASKEL));
+  napit.lahenna?.addEventListener('click', () => keskelta(k * ASKEL));
+  napit.loitonna?.addEventListener('click', () => keskelta(k / ASKEL));
 
   /*
    * RULLA. Kartan yli rullaaminen zoomaa, mutta rajalla tapahtuma
@@ -208,7 +235,7 @@ export function kytkeKarttaZoom(ui, kehys, lava, napit, ydin = { x: 0, y: 0, lev
    */
   kehys.addEventListener('wheel', (e) => {
     const sisaan = e.deltaY < 0;
-    if (sisaan ? k >= SUURIN - 0.001 : k <= PIENIN + 0.001) return;
+    if (sisaan ? k >= ylaraja() - 0.001 : k <= PIENIN + 0.001) return;
     e.preventDefault();
     // deltaMode: 0 = pikseliä, 1 = riviä, 2 = sivua.
     const kerroin = e.deltaMode === 1 ? 16 : (e.deltaMode === 2 ? 400 : 1);
@@ -323,7 +350,7 @@ export function kytkeKarttaZoom(ui, kehys, lava, napit, ydin = { x: 0, y: 0, lev
     e.preventDefault();
     e.stopPropagation();
     const { etaisyys, keski } = kaksiSormea(e);
-    k = rajaa((nipistys.kerroin * etaisyys) / nipistys.etaisyys, PIENIN, SUURIN);
+    k = rajaa((nipistys.kerroin * etaisyys) / nipistys.etaisyys, PIENIN, ylaraja());
     const m = lavalle(keski.x, keski.y);
     tx = m.x - nipistys.piste.x * k;
     ty = m.y - nipistys.piste.y * k;

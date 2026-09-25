@@ -1,9 +1,11 @@
 /*
  * Savuke: kehittäjän liitteet (omistajan tilaus 15.8.2026).
- *  1. Kehittäjä-kotelo näkyy valikossa vain kehittäjätilassa.
+ *  1. Työhuoneen kaksi nappia ovat hammasratasvalikossa (11.9.2026:
+ *     hampurilainen on sama kehittäjätilassa ja ilman).
  *  2. Raamattu aukeaa lehtenä: sivuja johdanto + jokainen osio,
  *     sisältö oikeasta datasta, sivunvaihto toimii.
- *  3. Tilannelehti aukeaa: Tilanne- ja Testattavaa-sivut riveineen.
+ *  3. Kehittäjälehti aukeaa ja sen Tilannelehti-rivi vie
+ *     Tilannelehteen: Tilanne- ja Testattavaa-sivut riveineen.
  *  4. Tilastot-lehti (18.8.2026, korvaa poistetun tyohuone.html:n
  *     kaupunkitaulusavukkeen): mannerrivit aukeavat ja sulkeutuvat,
  *     maan alla ovat sen kaupungit, ja leveä taulu vierittyy omassa
@@ -14,6 +16,13 @@
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
+
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
 
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -38,21 +47,31 @@ const sivu = await konteksti.newPage();
 await sivu.addInitScript(() => {
   window.localStorage.setItem('matkakirja-kehittaja', '1');
 });
-await sivu.goto(`http://localhost:${palvelin.address().port}/`, { waitUntil: 'load' });
+await sivu.goto(`http://localhost:${palvelin.address().port}/?lauta=kartta`, { waitUntil: 'load' });
 await sivu.waitForTimeout(1800);
 await sivu.evaluate(() => {
   [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
 });
 await sivu.waitForTimeout(1200);
 
-// 1. Kotelo näkyy kehittäjätilassa; ilman sitä ei (tarkistetaan
-//    piilottamalla vipu hetkeksi).
+// 1. Työhuoneen napit ovat rattaassa, eivät hampurilaisessa
+//    (omistaja 11.9.2026).
 const kotelo = await sivu.evaluate(() => {
   document.getElementById('menu-btn')?.click();
-  const nakyy = !document.getElementById('kehittaja-kotelo')?.hidden;
-  return { nakyy };
+  const hampurilainen = document.getElementById('paavalikko')?.innerHTML ?? '';
+  document.getElementById('menu-btn')?.click();
+  document.getElementById('kehittaja-valikko-btn')?.click();
+  const ratas = document.getElementById('kehittaja-valikko');
+  return {
+    hampurilaisessaEiKehittajaa: !/kehittaja-kotelo|lehti-btn/.test(hampurilainen),
+    ratasAuki: Boolean(ratas && !ratas.hidden),
+    kaksiNappia: Boolean(document.getElementById('raamattu-lehti-btn')
+      && document.getElementById('kehittajalehti-btn')),
+  };
 });
-vaadi('Kehittäjä-kotelo näkyy valikossa kehittäjätilassa', kotelo.nakyy, JSON.stringify(kotelo));
+vaadi('Työhuone on hammasratasvalikossa, ei hampurilaisessa',
+  kotelo.hampurilaisessaEiKehittajaa && kotelo.ratasAuki && kotelo.kaksiNappia,
+  JSON.stringify(kotelo));
 
 // 2. Raamattu -lehti.
 const raamattu = await sivu.evaluate(async () => {
@@ -64,7 +83,9 @@ const raamattu = await sivu.evaluate(async () => {
   const dialogi = document.getElementById('arrival-dialog');
   const otsikko = document.getElementById('arrival-city')?.textContent ?? '';
   const eka = document.querySelector('#arrival-dialog .aihe-nimi')?.textContent ?? '';
-  const runko = document.querySelector('#arrival-dialog .leipa')?.textContent ?? '';
+  // Kohdat ovat 11.9.2026 alkaen muokattavia kenttiä, eivät leipää.
+  const runko = document.querySelector('#arrival-dialog textarea.raamattu-kentta')?.value ?? '';
+  const lahetaNappi = Boolean(document.querySelector('#arrival-dialog .raamattu-laheta-btn'));
   ui.vaihdaTutkiSivu(1);
   await odota(400);
   const toinen = document.querySelector('#arrival-dialog .aihe-nimi')?.textContent ?? '';
@@ -83,6 +104,7 @@ const raamattu = await sivu.evaluate(async () => {
     sisaltoOk: runko.includes('Koko pelin idea yhdessä dokumentissa'),
     toinenOk: /Ydinajatus/.test(toinen),
     tagiOk: tagi === 'valmis',
+    lahetaNappi,
   };
 });
 vaadi('Raamattu aukeaa lehtenä ja sivuja on johdanto + osiot',
@@ -91,15 +113,19 @@ vaadi('Raamattu aukeaa lehtenä ja sivuja on johdanto + osiot',
 vaadi('Raamatun sisältö tulee datasta ja sivunvaihto toimii',
   raamattu.ekaOk && raamattu.sisaltoOk && raamattu.toinenOk && raamattu.tagiOk,
   JSON.stringify(raamattu));
+vaadi('Raamatun sivulla on Lähetä muutokset -nappi',
+  raamattu.lahetaNappi, JSON.stringify(raamattu));
 
 // 3. Tilannelehti.
 const tilanne = await sivu.evaluate(async () => {
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
   document.querySelector('#arrival-dialog [aria-label="Sulje"], #arrival-dialog .dialog-close')?.click();
   await odota(400);
-  document.getElementById('menu-btn')?.click();
+  document.getElementById('kehittaja-valikko-btn')?.click();
   await odota(200);
-  document.getElementById('tilanne-lehti-btn')?.click();
+  document.getElementById('kehittajalehti-btn')?.click();
+  await odota(600);
+  document.getElementById('kehittajalehti-rivi-tilanne')?.click();
   await odota(700);
   const m = await import('/js/tyohuone-tilanne.js');
   const { ui } = window.matkakirja;
@@ -131,9 +157,11 @@ const avaaTilastot = async () => sivu.evaluate(async () => {
   const odota = (ms) => new Promise((r) => setTimeout(r, ms));
   document.querySelector('#arrival-dialog [aria-label="Sulje"], #arrival-dialog .dialog-close')?.click();
   await odota(400);
-  document.getElementById('menu-btn')?.click();
+  document.getElementById('kehittaja-valikko-btn')?.click();
   await odota(200);
-  document.getElementById('tilastot-lehti-btn')?.click();
+  document.getElementById('kehittajalehti-btn')?.click();
+  await odota(600);
+  document.getElementById('kehittajalehti-rivi-tilastot')?.click();
   await odota(900);
 });
 await avaaTilastot();

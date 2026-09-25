@@ -1,0 +1,326 @@
+name: Tee etusivun pallo
+
+# ETUSIVUN ESIRENDERÖITY PALLO ÄMPÄRIIN (omistaja 5.9.2026: "etusivun
+# kartan voi pitää aluksi vielä vanhassa mutta sitten kun ehditään tehdä
+# uusi, niin siihen kannattaa varmaan renderöidä oma spesifi zoomattu
+# pallo joka pyörii hitaasti lontoosta kohti aasiaa, mutta on jo
+# renderöity blurrattuna"). Ajo polttaa Globe.gl:llä ja pelin omilla
+# pallolaatoilla sumennetun kuvasarjan, pakkaa sen kahdeksi videoksi
+# (VP9/WebM ja H.264/MP4) sekä yhdeksi pysäytyskuvaksi, ja vie ne
+# ämpäriin polkuun julisteet/etusivu/<versio>/ luettelon (etusivu.json)
+# kanssa. VERSIO LUETAAN js/etusivupallo.js:n ETUSIVUPALLO_VERSIO-vakiosta,
+# ellei syötettä `versio` anneta: työkalu kirjoittaa polun tiedostoon
+# avain.txt, jonka vientivaihe lukee — tässä tiedostossa ei siis ole
+# versionumeroa lainkaan.
+#
+# VALMIISEEN KANSIOON EI KIRJOITETA. Videot ovat vuoden välimuistissa
+# (immutable), joten työkalu kieltäytyy, jos kohdekansion etusivu.json on
+# jo ämpärissä — silloin annetaan uusi `versio` (ja päivitetään vakio,
+# ks. yhteenveto) tai pakotetaan syötteellä `korvaa`. Koe tehdään heti
+# kuivassa ajossa, ennen kuin yhtään kehystä on poltettu.
+#
+# KIERROS ON 360° (omistaja 5.9.2026 ilta: "animaatio pitää mennä koko
+# maapallon ympäri niin että se voi loopata"): kehykset jaetaan tasan
+# kierroksen kestolle (noin 50 s) ja ffmpeg saa murtolukuisen taajuuden,
+# jolloin videon viimeisen kehyksen jälkeen tulee tasan ensimmäinen.
+# Oletuksella 15 fps kehyksiä on noin 744 — jos ajo uhkaa venyä, aja
+# fps 12 (noin 595 kehystä).
+#
+# === AJO ON MACILLA JA KAIKILLA YTIMILLÄ ============================
+#
+# Raamattu, MAC GITHUBIN AJOKONEENA (omistaja 6.9.2026 ilta) ja
+# tarkennukset 7.9.2026 aamu, sanatarkasti: *"No Tee loputkin macilla
+# sitten"* ja *"Macilla voi tehdä lyhyempiäkin nyt kun työnkulku
+# automatisoitu"*. Ajokone valitaan syötteellä (oletus mac, vara
+# actions), ja kuvasarja poltetaan KAISTOINA rinnakkain koneen ytimien
+# mukaan: kehys hetkellä t ei riipu muista kehyksistä, joten kaistat
+# kirjoittavat samaan kehyskansioon ja videot tehdään vasta kokoavassa
+# ajossa (tools/tee-etusivupallo.mjs --osa k/n ja --kokoa).
+#
+# Mitattu: Actionsissa (4 vCPU, peräkkäin) ajo kesti 20–22 min
+# (run 33958982573, 33964409525, 33987642916). Kaistoitus jakaa
+# renderöinnin lähes lineaarisesti; Macilla kaistoja on ytimet/2.
+#
+# Kehyksen tavut EIVÄT riipu kaistojen määrästä: kaappaus toistetaan,
+# kunnes kuva ei enää muutu, ja ämpärinouto uusitaan. Todennettu
+# kontissa 7.9.2026: kuuden kehyksen sarja peräkkäin ja kahtena
+# kaistana antoi bitilleen samat PNG:t ja saman julisteen.
+#
+# TURVA (repo on julkinen): laukaisu vain käsin, ja Mac-ajo vain
+# omistajan käynnistämänä — muuten ulkopuolinen pääsisi omistajan
+# koneelle. Sama ehto kuin polta-macilla.yml:ssä.
+#
+# Repoon ei viedä kuvia eikä videoita (CLAUDE.md).
+# Sama neljän salaisuuden R2-kaava kuin tee-pallotekstuuri.yml:ssä.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ajokone:
+        description: 'Missä ajetaan (mac = omistajan Mac Studio kaikilla ytimillä)'
+        required: false
+        type: choice
+        default: 'mac'
+        options: ['mac', 'actions']
+      kaistoja:
+        description: 'Rinnakkaisia kaistoja (0 = ytimien mukaan; 1 = peräkkäin)'
+        required: false
+        type: string
+        default: '0'
+      fps:
+        description: 'Kuvataajuus (15 = sulava; 12 pienentää kehysmäärää ja ajoa)'
+        required: false
+        type: string
+        default: '15'
+      lava:
+        description: 'Renderöidyn kankaan sivu pikseleinä (kuva rajataan tämän keskeltä)'
+        required: false
+        type: string
+        default: '900'
+      kuva:
+        description: 'Valmiin videon sivu pikseleinä (800 = puhelimelle riittävä)'
+        required: false
+        type: string
+        default: '800'
+      sumennus:
+        description: 'Sumennus pikseleinä (6 = omistajan "blurrattuna"; 0 = terävä)'
+        required: false
+        type: string
+        default: '6'
+      taso:
+        description: 'Pallolaattojen taso (5 = 1024 px päiväntasaajalla; 6 tarkempi ja hitaampi)'
+        required: false
+        type: string
+        default: '5'
+      versio:
+        description: 'Kansio ämpärissä (tyhjä = js/etusivupallo.js ETUSIVUPALLO_VERSIO; uusi sarja esim. 2026-09-07a)'
+        required: false
+        type: string
+        default: ''
+      korvaa:
+        description: 'Kirjoita kansioon, jossa on jo valmis etusivu.json (hävittää vanhan sisällön)'
+        required: false
+        type: choice
+        default: 'ei'
+        options: ['ei', 'kylla']
+      kuiva:
+        description: 'Kuiva ajo: laske reitti ja luettelo, älä renderöi äläkä vie'
+        required: true
+        type: choice
+        default: 'ei'
+        options: ['ei', 'kylla']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tee-etusivupallo
+  cancel-in-progress: false
+
+jobs:
+  tee:
+    # Self-hosted-kone on omistajan oma (repo on julkinen), joten
+    # Mac-ajon saa käynnistää vain omistaja. Actions-vara on auki
+    # kaikille, joilla on oikeus käynnistää työnkulku.
+    if: inputs.ajokone != 'mac' || github.actor == github.repository_owner
+    runs-on: ${{ fromJSON(inputs.ajokone == 'mac' && '["self-hosted","macOS"]' || '["ubuntu-latest"]') }}
+    timeout-minutes: 150
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      # Syötteet lippuina ympäristön kautta (ei suoraan run-lohkoihin):
+      # tyhjä merkkijono katoaa komennolta, ja työkalu tarkistaa muodon.
+      VERSIOLIPPU: ${{ inputs.versio != '' && format('--versio {0}', inputs.versio) || '' }}
+      KORVAALIPPU: ${{ inputs.korvaa == 'kylla' && '--korvaa' || '' }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        if: inputs.ajokone != 'mac'
+        with:
+          node-version: 22
+
+      # Macilla node@22, awscli, Chromium ja ffmpeg tulevat koneelta;
+      # skripti tarkistaa ne ja kertoo ytimien määrän (YTIMET).
+      - name: Mac-ajokoneen valmistelu
+        if: inputs.ajokone == 'mac'
+        run: tools/mac-ajovalmis.sh --chromium --ffmpeg
+
+      - name: Tarkista että salaisuudet ovat tallessa
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "${R2_ACCOUNT_ID:-}" ]         || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ]     || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "${R2_BUCKET:-}" ]             || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            exit 1
+          fi
+
+      # NODE tulee Mac-valmistelusta (tools/mac-ajovalmis.sh kiinnittää
+      # node@22:n); Actionsissa muuttujaa ei ole ja polun node kelpaa.
+      # Tämä askel on myös ylikirjoitussuojan koe: se ajetaan aina.
+      - name: Kuiva ajo (reitti, kesto ja kohdeavain)
+        run: |
+          set -euo pipefail
+          # shellcheck disable=SC2086
+          "${NODE:-node}" tools/tee-etusivupallo.mjs --kuiva \
+            --fps "${{ inputs.fps }}" $VERSIOLIPPU $KORVAALIPPU
+
+      - name: Asenna Chromium ja varmista ffmpeg (Actions)
+        if: inputs.kuiva != 'kylla' && inputs.ajokone != 'mac'
+        run: |
+          set -euo pipefail
+          npm install --no-save --no-fund --no-audit playwright
+          npx playwright install --with-deps chromium
+          ffmpeg -version >/dev/null 2>&1 || {
+            sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg; }
+          ffmpeg -hide_banner -encoders | grep -E 'libvpx-vp9|libx264' || {
+            echo "::error::ffmpegistä puuttuu libvpx-vp9 tai libx264"; exit 1; }
+
+      # Kaistoja on oletuksena PUOLET ytimistä: yksi kaista on oma
+      # Chromiuminsa, joka käyttää itsekin useaa säiettä (piirto,
+      # purku, verkko). Ytimien verran kaistoja hidastaisi jokaista
+      # kaistaa enemmän kuin lisäisi läpimenoa.
+      - name: Kaistojen määrä
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          pyydetty="${{ inputs.kaistoja }}"
+          if [ "${pyydetty:-0}" -gt 0 ] 2>/dev/null; then
+            kaistoja="$pyydetty"
+          else
+            ytimet="${YTIMET:-}"
+            if [ -z "$ytimet" ]; then ytimet="$(nproc 2>/dev/null || echo 4)"; fi
+            kaistoja=$(( ytimet / 2 ))
+            [ "$kaistoja" -ge 2 ] || kaistoja=2
+            [ "$kaistoja" -le 12 ] || kaistoja=12
+          fi
+          echo "KAISTOJA=$kaistoja" >> "$GITHUB_ENV"
+          echo "Kaistoja: $kaistoja (ytimiä ${YTIMET:-tuntematon})"
+
+      - name: Polta kuvasarja kaistoina
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          # Kehyskansio tyhjennetään KERRAN täältä: kaistat kirjoittavat
+          # samaan kansioon eivätkä siksi tyhjennä sitä itse.
+          rm -rf etusivupallo-ulos/kehykset etusivupallo-ulos/lokit
+          mkdir -p etusivupallo-ulos/lokit
+          pidit=()
+          for k in $(seq 0 $((KAISTOJA - 1))); do
+            # shellcheck disable=SC2086
+            "${NODE:-node}" tools/tee-etusivupallo.mjs \
+              --osa "$k/${KAISTOJA}" \
+              --fps "${{ inputs.fps }}" --lava "${{ inputs.lava }}" \
+              --kuva "${{ inputs.kuva }}" --sumennus "${{ inputs.sumennus }}" \
+              --taso "${{ inputs.taso }}" --ulos etusivupallo-ulos \
+              $VERSIOLIPPU $KORVAALIPPU \
+              > "etusivupallo-ulos/lokit/kaista-$k.log" 2>&1 &
+            pidit+=($!)
+          done
+          # Jokaisen kaistan paluuarvo katsotaan erikseen: taustaprosessin
+          # kaatuminen ei näy `set -e`:lle, ja kokoava ajo huomaisi vain
+          # puuttuvat kehykset, ei sitä miksi ne puuttuvat.
+          tila=0
+          for p in "${pidit[@]}"; do wait "$p" || tila=1; done
+          if [ "$tila" -ne 0 ]; then
+            echo "::error::vähintään yksi kaista kaatui — lokit alla ja artefaktissa"
+            exit 1
+          fi
+
+      - name: Kaistojen lokit näkyviin
+        if: always() && inputs.kuiva != 'kylla'
+        run: |
+          set +e
+          for l in etusivupallo-ulos/lokit/*.log; do
+            [ -f "$l" ] || continue
+            echo "::group::$l"
+            tail -n 40 "$l"
+            echo "::endgroup::"
+          done
+          exit 0
+
+      - name: Kokoa videot ja luettelo
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          # shellcheck disable=SC2086
+          "${NODE:-node}" tools/tee-etusivupallo.mjs --kokoa \
+            --fps "${{ inputs.fps }}" --lava "${{ inputs.lava }}" \
+            --kuva "${{ inputs.kuva }}" --sumennus "${{ inputs.sumennus }}" \
+            --taso "${{ inputs.taso }}" --ulos etusivupallo-ulos \
+            $VERSIOLIPPU $KORVAALIPPU
+
+      - name: Vie ämpäriin
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          # Rinnakkainen vienti omaan asetustiedostoon: koneen omaa
+          # ~/.aws-asetusta ei muuteta (Mac on omistajan työkone).
+          export AWS_CONFIG_FILE="$PWD/.aws-vienti.conf"
+          aws configure set default.s3.max_concurrent_requests 32
+          aws configure set default.s3.max_queue_size 10000
+          avain="$(cat etusivupallo-ulos/avain.txt)"
+          paate="https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
+          vie() {
+            aws s3 cp "etusivupallo-ulos/$1" "s3://${R2_BUCKET}/${avain}$1" \
+              --endpoint-url "$paate" --no-progress --content-type "$2" \
+              --cache-control "$3"
+            echo "Viety: ${avain}$1"
+          }
+          # Videot ja juliste ovat muuttumattomia versionsa sisällä;
+          # luettelo on lyhytikäinen, jotta korjattu ajo näkyy pelissä.
+          # Kolme muuttumatonta rinnakkain, luettelo vasta niiden jälkeen.
+          pidit=()
+          vie pallo.webm      video/webm  'public, max-age=31536000, immutable' & pidit+=($!)
+          vie pallo.mp4       video/mp4   'public, max-age=31536000, immutable' & pidit+=($!)
+          vie juliste.jpg     image/jpeg  'public, max-age=31536000, immutable' & pidit+=($!)
+          tila=0
+          for p in "${pidit[@]}"; do wait "$p" || tila=1; done
+          [ "$tila" -eq 0 ] || { echo "::error::vienti epäonnistui"; exit 1; }
+          # Luettelo VASTA tavujen jälkeen: se lupaa pelille, että
+          # videot ovat ämpärissä.
+          vie etusivu.json    application/json 'public, max-age=300'
+
+      - name: Yhteenveto
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          # Versio luetaan työkalun kirjoittamasta avaimesta, ei syötteestä:
+          # tyhjä syöte tarkoittaa vakion versiota, ja muistutuksessa on
+          # oltava se versio, joka oikeasti vietiin.
+          avain="$(cat etusivupallo-ulos/avain.txt)"
+          versio="$(basename "$avain")"
+          {
+            echo '### Etusivun pallo'
+            echo ''
+            echo "- ajokone: ${{ inputs.ajokone }}, kaistoja: ${KAISTOJA:-1}"
+            echo "- ämpärin kansio: \`$avain\`"
+            ls -l etusivupallo-ulos/pallo.webm etusivupallo-ulos/pallo.mp4 \
+              etusivupallo-ulos/juliste.jpg | awk '{print "- " $9 ": " int($5/1024) " kt"}'
+            echo ''
+            # PELI EI NÄE UUTTA SARJAA ENNEN TÄTÄ: js/etusivupallo.js
+            # hylkää luettelon, jonka versio ei ole vakion versio.
+            echo "**Muista:** päivitä js/etusivupallo.js ETUSIVUPALLO_VERSIO = '$versio'"
+            echo ''
+            echo 'Näkyy pallolaudalla oletuksena; poiskytkin: vipu "etusivupallo" tai ?etusivupallo=0'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Lokit talteen
+        if: always() && inputs.kuiva != 'kylla'
+        uses: actions/upload-artifact@v4
+        with:
+          name: etusivupallo-lokit-${{ github.run_id }}
+          path: etusivupallo-ulos/lokit/
+          if-no-files-found: ignore
+          retention-days: 14

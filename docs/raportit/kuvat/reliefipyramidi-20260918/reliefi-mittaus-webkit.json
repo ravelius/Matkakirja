@@ -1,0 +1,1089 @@
+[
+ {
+  "nimi": "paalla",
+  "selain": "webkit",
+  "ensimmainenMs": 1318,
+  "seepiapyyntoja": 0,
+  "reliefipyyntoja": 0,
+  "teravyys": 0.37,
+  "fps": 60.2,
+  "meri": {
+   "n": 1296,
+   "hajonta": 12.2,
+   "reikia": 0,
+   "keski": [
+    207,
+    201,
+    181
+   ],
+   "eroMerivarista": 211.8
+  },
+  "pohjaL": 93.5,
+  "asettunutL": 22.4,
+  "valahdysL": 82.7,
+  "reliefipyramidiLipussa": true,
+  "peiteMs": 15042,
+  "peiteLoki": [
+   {
+    "ms": 91,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 240,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 331,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 423,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 516,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 607,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 723,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 814,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 905,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 996,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 1092,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 1186,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 1279,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 1370,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 1482,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 1574,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 1666,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 1757,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 1851,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 1942,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 2033,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 2153,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 2246,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 2338,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 2429,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 2545,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 2637,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 2729,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 2822,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 2928,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 3022,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 3113,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 3205,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 3308,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 3402,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 3494,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 3586,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 3688,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 3784,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 3878,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 3969,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 4062,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 4156,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 4250,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 4342,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 4434,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 4527,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 4619,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 4711,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 4804,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 4921,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 5014,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 5106,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 5198,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 5293,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 5408,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 5502,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 5594,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 5687,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 5787,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 5879,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 5973,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 6067,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 6158,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 6251,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 6342,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 6437,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 6530,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 6624,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 6719,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 6812,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 6906,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 6998,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 7090,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 7182,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 7274,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 7367,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 7457,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 7551,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 7648,
+    "tila": "purettu",
+    "taso": null,
+    "nakyvia": 0,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   }
+  ],
+  "kerrostila": {
+   "tila": "purettu",
+   "syy": "pallon sarja ja pyramidi eri versiota",
+   "taso": null,
+   "laattoja": 0,
+   "valmiita": 0,
+   "pyyntoja": 0,
+   "lukossa": false
+  },
+  "virheet": [],
+  "sarja": [
+   {
+    "ms": 4,
+    "L": 93.5
+   },
+   {
+    "ms": 178,
+    "L": 85.4
+   },
+   {
+    "ms": 354,
+    "L": 83
+   },
+   {
+    "ms": 513,
+    "L": 82.7
+   },
+   {
+    "ms": 676,
+    "L": 78.5
+   },
+   {
+    "ms": 823,
+    "L": 32.4
+   },
+   {
+    "ms": 962,
+    "L": 3.5
+   },
+   {
+    "ms": 1086,
+    "L": 3.2
+   },
+   {
+    "ms": 1205,
+    "L": 3.2
+   },
+   {
+    "ms": 1318,
+    "L": 22.4
+   },
+   {
+    "ms": 1452,
+    "L": 22.4
+   },
+   {
+    "ms": 1587,
+    "L": 22.4
+   },
+   {
+    "ms": 1715,
+    "L": 22.4
+   },
+   {
+    "ms": 1847,
+    "L": 22.4
+   },
+   {
+    "ms": 1990,
+    "L": 22.4
+   },
+   {
+    "ms": 2122,
+    "L": 22.4
+   },
+   {
+    "ms": 2252,
+    "L": 22.4
+   },
+   {
+    "ms": 2384,
+    "L": 22.4
+   },
+   {
+    "ms": 2513,
+    "L": 22.4
+   },
+   {
+    "ms": 2643,
+    "L": 22.4
+   },
+   {
+    "ms": 2772,
+    "L": 22.4
+   },
+   {
+    "ms": 2897,
+    "L": 22.4
+   },
+   {
+    "ms": 3025,
+    "L": 22.4
+   },
+   {
+    "ms": 3150,
+    "L": 22.4
+   },
+   {
+    "ms": 3279,
+    "L": 22.4
+   },
+   {
+    "ms": 3406,
+    "L": 22.4
+   },
+   {
+    "ms": 3532,
+    "L": 22.4
+   },
+   {
+    "ms": 3659,
+    "L": 22.4
+   },
+   {
+    "ms": 3782,
+    "L": 22.4
+   },
+   {
+    "ms": 3907,
+    "L": 22.4
+   },
+   {
+    "ms": 4028,
+    "L": 22.4
+   },
+   {
+    "ms": 4153,
+    "L": 22.4
+   },
+   {
+    "ms": 4276,
+    "L": 22.4
+   },
+   {
+    "ms": 4397,
+    "L": 22.4
+   },
+   {
+    "ms": 4525,
+    "L": 22.4
+   },
+   {
+    "ms": 4646,
+    "L": 22.4
+   },
+   {
+    "ms": 4769,
+    "L": 22.4
+   },
+   {
+    "ms": 4894,
+    "L": 22.4
+   },
+   {
+    "ms": 5017,
+    "L": 22.4
+   },
+   {
+    "ms": 5139,
+    "L": 22.4
+   },
+   {
+    "ms": 5261,
+    "L": 22.4
+   },
+   {
+    "ms": 5381,
+    "L": 22.4
+   },
+   {
+    "ms": 5504,
+    "L": 22.4
+   },
+   {
+    "ms": 5629,
+    "L": 22.4
+   },
+   {
+    "ms": 5760,
+    "L": 22.4
+   },
+   {
+    "ms": 5889,
+    "L": 22.4
+   },
+   {
+    "ms": 6038,
+    "L": 22.4
+   },
+   {
+    "ms": 6164,
+    "L": 22.4
+   },
+   {
+    "ms": 6285,
+    "L": 22.4
+   },
+   {
+    "ms": 6408,
+    "L": 22.4
+   },
+   {
+    "ms": 6531,
+    "L": 22.4
+   },
+   {
+    "ms": 6659,
+    "L": 22.4
+   },
+   {
+    "ms": 6782,
+    "L": 22.4
+   },
+   {
+    "ms": 6907,
+    "L": 22.4
+   },
+   {
+    "ms": 7029,
+    "L": 22.4
+   },
+   {
+    "ms": 7152,
+    "L": 22.4
+   },
+   {
+    "ms": 7276,
+    "L": 22.4
+   },
+   {
+    "ms": 7399,
+    "L": 22.4
+   },
+   {
+    "ms": 7522,
+    "L": 22.4
+   },
+   {
+    "ms": 7646,
+    "L": 22.4
+   },
+   {
+    "ms": 7768,
+    "L": 22.4
+   },
+   {
+    "ms": 7892,
+    "L": 22.4
+   }
+  ]
+ }
+]

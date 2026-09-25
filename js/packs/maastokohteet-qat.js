@@ -28,6 +28,42 @@
  * koskea eikä yhtään sen kohdetta ole toistettu täällä.
  *
  * Qatarin maastokohteet. Faktat en-Wikipediasta 30.8.2026. Qatar on matala aavikkoniemimaa ilman vuoria ja jokia, joten molemmat kohteet ovat merta: niemimaata joka puolelta ympäröivä Persianlahti ja kuuluisa "sisämeri" Khawr al-Udayd.
+ *
+ * ── MAAILMAN ERÄ M6, LÄHI-ITÄ (6.9.2026) ───────────────────────────
+ *
+ * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+ * Qatarilla oli kaksi karttamerkkiä eikä yhtään kohdetta. Erä tuo viisi
+ * KOHDETTA ja kolmannen MAASTOKOHTEEN (Bahraininlahti). Koordinaatit
+ * koneella (`import { laudat } from tools/johda-maastokohteet.mjs`,
+ * lon/lat en-Wikipedian coordinates-propista), tekstit käsin
+ * raakatekstistä. Kuvaton erä, vain maailmankartan rivi.
+ *
+ * VIISI KOHDETTA EIKÄ KAHDEKSAA — SYY ON MITATTU. Qatarin fokuslehden
+ * rajaus on 68,9 × 99,5 lautayksikköä (js/packs/fokus-grc.js
+ * FOKUS_POHJAT.QAT), ja Doha istuu itärannalla keskellä sitä.
+ * Kahdeksan yksikön kaupunkikaton (KAUPUNKIKATON_SADE,
+ * js/fokuskohteet.js) ja rajauksen jälkeen käyttökelpoista tilaa jää
+ * noin 25 × 25 yksikköä pohjoiseen ja kapea kaistale länteen. Kolme
+ * ilmeistä ehdokasta karsiutui juuri tähän: Al Wakrah (5,0
+ * lautayksikköä Dohasta), Al Wajbahin linnake (4,2) ja Barzanin tornit
+ * (5,7) — ne ovat kaupungin kohdalla ja kuuluvat Dohan kohdekartalle,
+ * eivät pääkartalle. Al Khor jäi pois, koska se on 0,8 yksikön päässä
+ * Jassasiyasta. Nimiölimitys (`node tools/tarkista-nimiolimitys.mjs`)
+ * pysyy nollassa viidellä kohteella.
+ *
+ * ELÄINTÄKY ON QATARISSA MAHDOTON, ja se on mitattu eikä arvattu.
+ * tests/elaintakyt.test.mjs vaatii merkiltä vähintään 35 lautayksikön
+ * etäisyyden jokaiseen kaupunkimerkkiin. Koko Qatarin maa-alue
+ * haravoitiin kahden sadasosa-asteen ruudukolla (maan rengas +
+ * js/mapart.js isOnLand): kaukaisin maapiste Dohasta on niemimaan
+ * pohjoiskärki, ja sekin vain 31,8 yksikön päässä. Sama tilanne kuin
+ * Hongkongissa erässä M3. Ehdokas odottaa valmiina: arabianoryksi,
+ * jota Al Reemin biosfäärialue suojelee.
+ *
+ * VARTIO 7a. tools/savukkeet/savuke-maastokohteet.mjs vaatii, että
+ * jokainen kohde osuu maan fokuslehden rajaukseen (`osuuLehteen`);
+ * Qatarilla rajaus on olemassa, joten vartio pätee ja jokainen piste on
+ * tarkistettu sitä vasten. Vartiota ei ole muutettu.
  */
 export const MAASTOKOHTEET_QAT = [
   {
@@ -59,8 +95,9 @@ export const MAASTOKOHTEET_QAT = [
     tyyppi: 'meri',
     kysymykset: [
       'Miten meri pääsee keskelle hiekkadyynejä?',
-      'Mikä on luonnonsuojelualue?',
+      'Keitä Bani Yas olivat?',
     ],
+    korostukset: ['Bani Yas|Bani Yasin'],
     nappi: 'Aavikon sisämeri',
     // 51.296 E / 24.63 N — en-Wikipedia "Khor Al Adaid"
     laudat: {
@@ -68,12 +105,301 @@ export const MAASTOKOHTEET_QAT = [
       // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
       // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
     },
-    teksti: 'Khawr al-Udayd on Persianlahden poukama Qatarin kaakkoiskulmassa Saudi-Arabian '
-      + 'rajalla, noin 78 kilometriä Dohasta etelään. Englanniksi sitä kutsutaan sisämereksi '
-      + '(Inland Sea), sillä vesi työntyy siinä syvälle aavikon sisään. Alue rauhoitettiin '
-      + 'luonnonsuojelualueeksi 2007, ja Qatar on esittänyt sitä Unescon '
-      + 'maailmanperintöluetteloon.',
-    lahde: 'en-Wikipedia "Khor Al Adaid", johdanto-osa (tarkistettu 30.8.2026).',
+    teksti: 'Isoisäsi matkaa edeltävänä vuonna, 1869, Khawr al-Udaydiin muutti kolmannen kerran '
+      + 'joukko Bani Yasin heimolaisia, jotka irtautuivat Abu Dhabista. Heitä oli noin '
+      + 'kaksisataa, ja kylässä oli kolmekymmentä helmenpyyntialusta ja kaksitorninen linnake. '
+      + 'Kaksi edellistä yritystä oli päättynyt huonosti: 1836 brittilaivasto tuli hätistämään '
+      + 'paikan merirosvot ja poltti yhden aluksista, ja 1837 Abu Dhabin šeikin joukot '
+      + 'hävittivät kylän — viisikymmentä asukasta sai surmansa. Paikan nimi tulee sanasta '
+      + 'adad, joukko: siellä asui laivankorjaajien yhteisö, ja siksi helmenpyyntialukset '
+      + 'tulivat sinne huoltoon. Nykyään yhdeksän kilometrin pituinen, dyynien väliin '
+      + 'kiemurteleva vuono on luonnonsuojelualue ja Qatarin sisämeri.',
+    lahde: 'en-Wikipedia "Khor Al Adaid", johdanto-osa sekä osiot "Etymology", "Settlement and '
+      + 'subsequent conflicts" ja "Geography" (tarkistettu 1.9.2026).',
+  },
+
+  /* ================================================================
+   * ERÄ M6, LÄHI-ITÄ (6.9.2026) — viisi kohdetta ja Bahraininlahti.
+   * ============================================================== */
+  {
+    id: 'bahraininlahti',
+    nimi: 'Bahraininlahti',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mikä erottaa Bahraininlahden Persianlahdesta?',
+      'Mikä on King Fahdin pengertie?',
+    ],
+    korostukset: ['Bahrain|Bahrainin'],
+    nappi: 'Lahti niemimaan länsipuolella',
+    // 50.72 E / 25.95 N — ulappa Qatarin luoteispuolella; artikkelin oma
+    // keskipiste on 50,534 / 25,697. Lähin kaupunki Doha 35,5.
+    laudat: {
+      maailmankartta: { x: 7524, y: 2326.9 },
+      // Euroopan laudan kaavan ulkopuolella (lon −11…41, lat 34…72):
+      // rivi jätetään pois, jottei merkki päädy laudan reunan taakse.
+    },
+    teksti: 'Bahraininlahti on Persianlahden poukama Saudi-Arabian itärannikolla, ja juuri Qatarin '
+      + 'niemimaa erottaa sen muusta lahdesta. Se ympäröi Bahrainin saaria. Lahden länsiosan '
+      + 'yli kulkee King Fahdin pengertie, joka yhdistää Saudi-Arabian ja Bahrainin. Qatarin '
+      + 'puolelta katsottuna tämä on se matala meri, jonka helmimatalikoilla niemimaan vauraus '
+      + 'lepäsi ennen öljyä.',
+    lahde: 'en-Wikipedia "Gulf of Bahrain", johdanto-osa (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'zubarah',
+    nimi: 'Zubarah',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Miksi Zubarah on niin hyvin säilynyt?',
+      'Mikä oli Qal’at Murair?',
+    ],
+    korostukset: ['Bani Utbah|Bani Utbahin'],
+    nappi: 'Autio helmenpyyntikaupunki',
+    // 51.02639 E / 25.97861 N — en-Wikipedia "Zubarah"
+    // Lähin pelikaupunki: Doha 29,5 lautayksikköä.
+    laudat: {
+      maailmankartta: { x: 7534.2, y: 2325.9 },
+      // Euroopan laudan kaavan ulkopuolella: rivi jätetään pois.
+    },
+    teksti: 'Zubarah on autioitunut kaupunki Qatarin pohjoisrannikolla. Bani Utbahin heimoja '
+      + 'asettui sinne 1760-luvulla, ja satama tunnettiin taloudellisesti merkittävänä jo '
+      + 'vuoden 1766 käsikirjoituksessa. Kun Al Khalifan suvun vaikutusvalta kasvoi, se '
+      + 'rakennutti kaupungin turvaksi linnakkeen: vuonna 1768 valmistunut Qal’at Murair sai '
+      + 'muurit, vartiotornit ja kanavan merelle asti. Unesco liitti Zubarahin '
+      + 'maailmanperintöluetteloon 22. kesäkuuta 2013 ja perusteli valintaa sillä, kuinka '
+      + 'poikkeuksellisen hyvin kaupunki on säilynyt ja kuinka selvästi siitä näkee, että se eli '
+      + 'helmenpyynnistä ja kaupasta. Kaivauksia on tehty vuodesta 2009 qatarilais-tanskalaisena '
+      + 'yhteistyönä.',
+    lahde: 'en-Wikipedia "Zubarah", osiot "Initial development" ja "World Heritage Site" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'jassasiya',
+    nimi: 'Jassasiya',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mitä kalliopiirroksissa esitetään?',
+      'Mikä on fossiilinen dyyni?',
+    ],
+    korostukset: ['kalliopiirroksia|kalliopiirroksia'],
+    nappi: 'Yhdeksänsataa kuvaa kiveen',
+    // 51.3833 E / 25.8167 N — en-Wikipedia "Jebel Jassassiyeh"
+    // Lähin pelikaupunki: Doha 19,2 lautayksikköä.
+    laudat: {
+      maailmankartta: { x: 7546.1, y: 2331.7 },
+      // Euroopan laudan kaavan ulkopuolella: rivi jätetään pois.
+    },
+    teksti: 'Jebel Jassassiyeh on Qatarin koillisrannikolla oleva alue, jonka fossiloituneisiin '
+      + 'hiekkadyyneihin on hakattu kalliopiirroksia. Kuvia on yli yhdeksänsataa, ja ne '
+      + 'jakautuvat 580 numeroituun kohtaan — Qatarin laajin kalliotaidekohde. Aiheina ovat '
+      + 'geometriset kuviot, eläimet ja ennen kaikkea veneet, joita on piirretty sekä sivulta '
+      + 'että ylhäältä katsottuina. Piirrokset muistuttavat Luxorin Karnakin temppelistä '
+      + 'löytyviä. Samalla alueella on raunioituneita asumuksia ja 1400-luvun keramiikkaa.',
+    lahde: 'en-Wikipedia "Jebel Jassassiyeh", johdanto-osa (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'alreem',
+    nimi: 'Al Reem',
+    // Suojelualue ei ole vuori eikä meri: tyyppi 'muu' + symboli 'luonto'.
+    symboli: 'luonto',
+    tyyppi: 'elain',
+    kysymykset: [
+      'Mikä on biosfäärialue?',
+      'Miksi kasvillisuus on täällä tiheämpää kuin muualla?',
+    ],
+    korostukset: ['biosfäärialue|biosfäärialue'],
+    nappi: 'Kymmenesosa maasta suojelussa',
+    // 51.0 E / 25.75 N — en-Wikipedia "Al Reem Biosphere Reserve"
+    // Lähin pelikaupunki: Doha 23,8 lautayksikköä.
+    laudat: {
+      maailmankartta: { x: 7533.3, y: 2334 },
+      // Euroopan laudan kaavan ulkopuolella: rivi jätetään pois.
+    },
+    teksti: 'Al Reemin biosfäärialue on 120 000 hehtaarin asuttu suojelualue Luoteis-Qatarissa, '
+      + 'kuudenkymmenenviiden kilometrin päässä Dohasta luoteeseen. Puolikuivassa aavikko'
+      + 'maisemassa elää gasellien ja arabianoryksien kaltaisia lajeja. Alue perustettiin 2005, '
+      + 'ja Unesco tunnusti sen 2007; se on yksi Lähi-idän kahdestakymmenestäneljästä '
+      + 'biosfäärialueesta. Suojelualue kattaa noin kymmenesosan koko Qatarin maapinta-alasta, ja '
+      + 'sen tavallista tiheämpi kasvillisuus tekee siitä maalle poikkeuksellisen tärkeän.',
+    lahde: 'en-Wikipedia "Al Reem Biosphere Reserve", johdanto-osa (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'dukhan',
+    nimi: 'Dukhan',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Mitä Dukhan tarkoittaa?',
+      'Miksi öljytyöt keskeytyivät 1940-luvulla?',
+    ],
+    korostukset: ['Zekreetin satama|Zekreetin sataman'],
+    nappi: 'Paikka, josta öljy löytyi',
+    // 50.79222 E / 25.41944 N — en-Wikipedia "Dukhan" (tietolaatikko)
+    // Lähin pelikaupunki: Doha 24,7 lautayksikköä.
+    laudat: {
+      maailmankartta: { x: 7526.4, y: 2345.8 },
+      // Euroopan laudan kaavan ulkopuolella: rivi jätetään pois.
+    },
+    teksti: 'Dukhan on Qatarin länsirannikolla oleva öljykaupunki noin kahdeksankymmenen '
+      + 'kilometrin päässä Dohasta. Nimi tarkoittaa savua: se viittaa Jebel Dukhanin huipun '
+      + 'ympärille kerääntyviin pilviin ja arkikielessä myös leirin soihtujen savuun. Etsintä '
+      + 'alkoi 1935, ja 1937 täältä löytyi Qatarin ensimmäinen suuri öljyesiintymä. Ensimmäistä '
+      + 'kaivoa alettiin porata 1939, ja se valmistui seuraavana vuonna — sitten toinen '
+      + 'maailmansota pysäytti työt. Vesi, ruoka ja koneet tuotiin Bahrainista matalan Zekreetin '
+      + 'sataman kautta, ja ensimmäinen tynnyri lähti vientiin 31. joulukuuta 1949. Löytö käänsi '
+      + 'maan helmitaloudesta öljytalouteen.',
+    lahde: 'en-Wikipedia "Dukhan", johdanto-osa sekä osiot "Etymology" ja "Early operations" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'althakhira',
+    nimi: 'Al Thakhira',
+    // Mangrovelahti ei ole vuori eikä meri: 'muu' + 'luonto'.
+    symboli: 'luonto',
+    tyyppi: 'meri',
+    kysymykset: [
+      'Mihin mangrovemetsää tarvitaan?',
+      'Mitä Lorimerin luettelo oli?',
+    ],
+    korostukset: ['mangrove|mangrovemetsien'],
+    nappi: 'Mangrovelahti helmenpyytäjien kylässä',
+    // 51.5475 E / 25.73472 N — en-Wikipedia "Al Thakhira"
+    // Lähin pelikaupunki: Doha 15,7 lautayksikköä.
+    laudat: {
+      maailmankartta: { x: 7551.6, y: 2334.6 },
+      // Euroopan laudan kaavan ulkopuolella: rivi jätetään pois.
+    },
+    teksti: 'Al Thakhira on kylä Qatarin itärannikolla, mangrovemetsien suojaamassa poukamassa, '
+      + 'ja se toimi pienenä ankkuripaikkana. Kylän perustivat Al Muhannadi -heimoliiton jäsenet, '
+      + 'jotka muuttivat sinne läheisestä Al Khorista. J. G. Lorimerin Persianlahden luettelo '
+      + 'kuvasi paikan vuonna 1908: kolmesataa taloa kolmenkymmenen mailin päässä Dohasta '
+      + 'pohjoiseen, ja kaikki asukkaat helmisukeltajia, jotka eivät harjoittaneet muuta kuin '
+      + 'kalastusta eivätkä omistaneet karjaa. Kylällä oli viisitoista helmivenettä ja niissä '
+      + 'satakahdeksankymmentä miestä, ja juomavesi haettiin kahden mailin päästä '
+      + 'Lubwairdahista.',
+    lahde: 'en-Wikipedia "Al Thakhira", historiaosio ja siinä lainattu J. G. Lorimerin '
+      + '"Gazetteer of the Persian Gulf" (tarkistettu 6.9.2026).',
+  },
+  /* ================================================================
+   * ERÄ M20, 7.9.2026 — KAKSI KOHDETTA LISÄÄ.
+   *
+   * Erän M6 vaje oli kohteita −3 ja perusteena maan pieni koko. Vaje
+   * on nyt mitattu uudelleen merkki kerrallaan, ja kaksi kohdetta
+   * mahtui vielä: pohjoisrannikon Fuwayrit ja sisämaan Al-Shahaniya.
+   * `node tools/tarkista-nimiolimitys.mjs QAT` sanoo yhä
+   * "NIMIÖ NIMIÖN PÄÄLLÄ: 0". Molemmat ovat lehden rajauksen
+   * (x 7505,03…7573,88, y 2297,98…2397,50) sisällä ja yli kymmenen
+   * lautayksikön päässä Dohasta — raja KAUPUNGIN_KOHDALLA_SADE on 7 ja
+   * kaupunkikaton säde 8.
+   *
+   * KOLMAS LÖYTYI MITTAAMALLA. Ilmeiset ehdokkaat kaatuivat: Umm Salal
+   * Mohammed on 5,9 lautayksikön päässä Dohasta eli kaupunkikaton alla,
+   * Simaisma 4,5 yksikköä Al Thakhirasta, Umm Bab 3,3 yksikköä
+   * Dukhanista, Ras Laffan 5,9 yksikköä Al Thakhirasta ja Al Jumail
+   * 1,3 yksikköä skandaalista "Zubarahin loppu". Kolmanneksi kelpasi
+   * niemimaan eteläkärjen Mesaieed (11,1 yksikköä Dohasta), jolla
+   * nimiölimitys pysyy nollassa. Qatarin kohdetavoite (8) on siis nyt
+   * täynnä.
+   *
+   * ELÄINTÄKY ON YHÄ MAHDOTON, ja mittaus on toistettu 7.9.2026:
+   * koko maan monikulmion sisään osuu 2 456 ruudukkopistettä (0,02°),
+   * ja kaukaisinkin niistä on vain 32,3 lautayksikön päässä Dohasta,
+   * kun tests/elaintakyt.test.mjs vaatii 35. Kaupunkisädettä ei kierretä
+   * poikkeuksella — Fidžin, Salomonsaarten ja Vanuatun poikkeus koskee
+   * vain laudan rantaviivaa (MAATESTIN_POIKKEUS), ei tätä vartiota.
+   * Ehdokas odottaa yhä: arabianoryksi, jota Al Reemin biosfäärialue
+   * suojelee.
+   * ============================================================== */
+  {
+    id: 'fuwayrit',
+    nimi: 'Fuwayrit',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mistä Al Thanin suku muutti Fuwayritiin?',
+      'Miltä kylä näytti brittien 1820-luvun mittauksessa?',
+    ],
+    korostukset: ['Affeeraat|Affeeraat'],
+    nappi: 'Kylä, josta hallitsijasuku lähti',
+    // 51.36694 E / 26.02167 N — en-Wikipedia "Fuwayrit".
+    // Lähin pelikaupunki Doha 26,4 lautayksikköä.
+    laudat: {
+      maailmankartta: { x: 7545.6, y: 2324.4 },
+      // Euroopan laudan kaavan ulkopuolella: rivi jätetään pois.
+    },
+    teksti: 'Fuwayrit on rannikkokylä Qatarin pohjoisosassa, noin yhdeksänkymmentä kilometriä '
+      + 'Dohasta pohjoiseen. Arkeologisen aineiston mukaan paikalla on saatettu asua jo '
+      + '1500-luvulla, ja se oli aikanaan yksi niemimaan pohjoisosan tärkeimmistä '
+      + 'kaupungeista. Al Thanin suku muutti perimätiedon mukaan Zubarahista Fuwayritiin '
+      + '1700-luvun lopulla ja piti sitä valtansa istuimena, kunnes siirtyi 1847 Al Biddaan '
+      + 'eli nykyiseen Dohaan; saman perimätiedon mukaan Mohammed bin Thani, jota pidetään '
+      + 'nyky-Qatarin ensimmäisenä hallitsijana, syntyi täällä. 1820-luvulla George Barnes '
+      + 'Brucks teki Persianlahden ensimmäisen brittiläisen mittauksen ja kirjasi kylän '
+      + 'nimellä Affeeraat: pieni kalastuskaupunki, jossa asui noin sataviisikymmentä '
+      + 'Abookaran ja Uttoobeen heimojen miestä Bahrainin alaisuudessa, ja josta sai '
+      + 'karjaa ja vettä. Tuntomerkiksi hän merkitsi kylän lähellä olevat pienet kukkulat.',
+    lahde: 'en-Wikipedia "Fuwayrit", johdanto-osa sekä osiot "History" (18th century) ja '
+      + '"First British survey" (tarkistettu 7.9.2026).',
+  },
+  {
+    id: 'alshahaniya',
+    nimi: 'Al-Shahaniya',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Mistä kasvista paikan nimi tulee?',
+      'Mitä rawda tarkoittaa?',
+    ],
+    korostukset: ['sheeh|sheeh-kasvista'],
+    nappi: 'Kamelikilpailujen ja painanteiden maa',
+    // 51.20472 E / 25.37222 N — en-Wikipedia "Al-Shahaniya".
+    // Lähin pelikaupunki Doha 10,9 lautayksikköä.
+    laudat: {
+      maailmankartta: { x: 7540.2, y: 2347.5 },
+      // Euroopan laudan kaavan ulkopuolella: rivi jätetään pois.
+    },
+    teksti: 'Al-Shahaniya on Keski-Qatarin kunta ja sen keskuskaupunki puolimatkassa Dohan ja '
+      + 'Dukhanin välillä. Nimi tulee sheeh-kasvista, jota arvostettiin tulehdusta '
+      + 'hillitsevänä lääkkeenä; kasvin tieteellinen nimi on Artemisia inculta, ja se on '
+      + 'Lähi-idässä ja Pohjois-Afrikassa tavallinen mutta Qatarissa harvinainen, koska maa '
+      + 'ei sovi sille. Seutu tunnetaan painuneista maanpinnoistaan ja laajoista '
+      + 'tasangoistaan: ministeriön luettelossa on yli neljäkymmentä tasankoa ja 487 rawdaa '
+      + 'eli painannetta, lisäksi 169 jeriä, 71 kukkulaa, kolmetoista sabkhaa ja '
+      + 'viisitoista nientä. Suuri osa kunnasta kuuluu Al Reemin biosfäärialueeseen, ja sen '
+      + 'valtatien varressa on pieniä, usein alle sadan asukkaan kyliä, jotka on rakennettu '
+      + 'harvojen vesipaikkojen ääreen — mikä näkyy niiden nimissä. Qatarin '
+      + 'kamelikilpailuista ja oryksien kasvatuksesta valtaosa tapahtuu juuri täällä.',
+    lahde: 'en-Wikipedia "Al-Shahaniya", johdanto-osa sekä osiot "Etymology" ja "Geography" '
+      + '(tarkistettu 7.9.2026).',
+  },
+  {
+    id: 'mesaieed',
+    nimi: 'Mesaieed',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Miksi tankkeriterminaali rakennettiin juuri tähän?',
+      'Mistä paikan nimi tulee?',
+    ],
+    korostukset: ['sead|sead-kasvista'],
+    nappi: 'Syväsatama tyhjälle rannalle',
+    // 51.55 E / 24.98 N — en-Wikipedia "Mesaieed".
+    // Lähin pelikaupunki Doha 11,1 lautayksikköä eli yli
+    // kaupunkikaton säteen (8).
+    laudat: {
+      maailmankartta: { x: 7551.7, y: 2361.4 },
+      // Euroopan laudan kaavan ulkopuolella: rivi jätetään pois.
+    },
+    teksti: 'Mesaieed, toiselta kirjoitusasultaan Umm Sa’id, on teollisuuskaupunki Qatarin '
+      + 'kaakkoisrannikolla kolmenkymmenenkuuden kilometrin päässä Dohasta etelään. Nimi '
+      + 'tulee paikallisesta sead-kasvista, jota alueella kasvoi ennen runsaasti. Paikka oli '
+      + 'asumaton, kun öljy-yhtiö perusti sinne vuonna 1949 tankkeriterminaalin: valinnan '
+      + 'ratkaisivat läheisyys Dohan ja Al Wakrahin työvoimaan sekä veden syvyys. Yli '
+      + 'kahdenkymmenen vuoden ajan se oli Qatarin ainoa syväsatama, ja sinne johdettiin '
+      + 'Dukhanin öljy laivattavaksi. Antropologi Henry Field kirjasi kenttätyössään 1950, '
+      + 'että paikallinen šeikki Mansur bin Khalil nimesi Al Hibabin alueen '
+      + 'pääheimoryhmäksi ja arvioi sen leirin noin sadaksi teltaksi. Öljy-yhtiö siirsi '
+      + 'pääkonttorinsa Dukhanista Mesaieediin 1956, ja kaupungin kasvua rajasivat '
+      + 'etelässä teollisuusalue, lännessä dyynit ja energiakäytävä ja idässä sabkha eli '
+      + 'suolatasanko — joten se kasvoi pohjoiseen.',
+    lahde: 'en-Wikipedia "Mesaieed", johdanto-osa sekä osiot "Etymology", "History" ja '
+      + '"Administration" (tarkistettu 7.9.2026).',
   },
 ];
 

@@ -1,0 +1,891 @@
+/*
+ * Savuke: NOSTOJEN LAPUT VÄISTÄVÄT KAUPUNGIN NIMEÄ.
+ *
+ * Omistajan vikailmoitus 7.9.2026 (kuvakaappaus Bukarestista,
+ * sanatarkasti): *"kaupungin nimi menee nostojen päälle"*. Kuvassa
+ * kaupunkipiste on keskellä, nimi BUKAREST harvennettuna sen alla ja
+ * nostot molemmin puolin — ja oikean noston lappu makasi nimen päällä.
+ *
+ * Fablen linjaus (Raamattu, KAUPUNGIN NIMI NOSTOJEN PAALLA): pallolla
+ * kaupungin nimi ja nostojen nimilaput eivät saa mennä päällekkäin.
+ * Kaupungin nimi on ensisijainen; laput väistävät (vaihtoehtoinen
+ * kylki → pieni siirto → lappu piiloon). Toteutus:
+ * js/pallolauta/sovittelu.js, kutsu js/pallolauta/lauta.js ladoLevossa.
+ *
+ * ── VARTIOT ───────────────────────────────────────────────────────
+ *
+ *   1. LAPPU EI OLE NIMEN PÄÄLLÄ. Yksikään elävän noston nimilappu ei
+ *      leikkaa yhdenkään kaupunkinimen laatikkoa kahdessa tiheässä
+ *      KOHDEMAAN paikassa (Bukarest, Transilvania). Kohdemaa on tässä
+ *      Romania, ja v1942:sta alkaen nostoja on vain kohdemaassa —
+ *      muualta mitattu näkymä ei väitä mitään (ks. NAKYMAT).
+ *   2. NIMI EI OLE LIIKKUMATTOMAN MUSTEEN PÄÄLLÄ. Poltettu nosto ja
+ *      elävän noston ikoni eivät voi väistää, joten ne ovat nimen
+ *      varauksia — yksikään nimi ei leikkaa niitä.
+ *   3. NIMET EIVÄT KADONNEET SOVITTELUUN. Jokaisessa näkymässä on
+ *      nimiä — väistön hinta ei saa olla mykkä kartta.
+ *   6. LAPUN TEKSTI OTTAA NAPAUTUKSEN (Raamattu, VIAT v1672;
+ *      omistaja 7.9.2026: *"Karttanostoissa teksti ei ota klikkausta
+ *      ainoastaan kuvake. Saisiko myös tekstit klikattaviksi?"*).
+ *      Oikea napautus lapun ulkokolmannekseen avaa saman noston —
+ *      sekä elävällä (CSS2D-elementti) että poltetulla musteella.
+ *   7. LAPPU ON KOSKETUSKOKOINEN (vika v1680; omistaja 7.9.2026 ilta,
+ *      iPad: *"Symboli ottaa klikkauksen mutta teksti ei."*). Sama
+ *      napautus KOSKETUSPOIKKEAMA_PX:n päässä musteen keskiviivasta —
+ *      musteen ulkopuolelta, mutta sieltä mistä sormi tähtää — avaa
+ *      saman noston. Vaakalapun muste on vain 11,4 px korkea, joten
+ *      ilman osumatestin kosketusvaraa (js/pallolauta/lauta.js
+ *      LAPUN_KOSKETUSVARA_PX) tämä napautus ei avaa mitään.
+ *
+ *   4. LAPPU LIUKUU, EI HYPPÄÄ. Sovittelun siirto kirjoitetaan
+ *      `.pallolauta-nosto-siirto`-ryhmän CSS-muunnokseen, ja ryhmällä
+ *      on 200 ms:n transform-siirtymä. ON INFO 18.9.2026 (perustelu
+ *      vartion kohdalla: kohdemaassa ei ole enää elävää lappua).
+ *
+ *   RAPORTIN TIETOJA: kuinka moni lappu vaihtoi kyljen, kuinka moni
+ *   siirtyi ja kuinka moni jäi ilman nimeä kussakin näkymässä.
+ *
+ * MITTA TULEE KAAVASTA, EI RUUDULTA. Merkin oma <svg> on 1 x 1 px ja
+ * ylivuotava, joten getBoundingClientRect ei kerro lapusta mitään;
+ * kerros antaa laatikkonsa itse (nostot.lappuLaatikot, nostot.laatikot,
+ * nimet.laatikot) samasta kaavasta, jolla sovittelu ne laski.
+ *
+ * ÄMPÄRI KULKEE NODEN KAUTTA (CLAUDE.md: NODE_USE_ENV_PROXY=1).
+ *
+ * Aja:  NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-pallo-nostolaput.mjs [kuvakansio]
+ */
+import http from 'node:http';
+import { readFileSync, existsSync, mkdirSync } from 'node:fs';
+import { extname, join } from 'node:path';
+
+import { Game } from '../../js/game.js';
+import { packById } from '../../js/pack.js';
+
+const paketti = await import('playwright')
+  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
+const chromium = paketti.chromium ?? paketti.default?.chromium;
+
+const JUURI = new URL('../..', import.meta.url).pathname;
+const KUVAKANSIO = process.argv[2] ?? null;
+if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
+
+/*
+ * Näkymät: omistajan Bukarest ja kaupunkien välinen Transilvania.
+ *
+ * NÄKYMÄN ON OLTAVA KOHDEMAASSA (18.9.2026, velka 6). Tässä savukkeessa
+ * tallenne on Fogg Bukarestissa, joten kohdemaa on ROMANIA — ja v1942:sta
+ * alkaen nostot ovat vain kohdemaan omia (`nostotasot[ISO]`, Raamattu
+ * PAATOKSET 34 kohta 17 b–d; js/laattapyramidi.js nostotasonPoltetut).
+ * Listalla oli siihen asti kolme kohdemaan ULKOPUOLISTA paikkaa —
+ * Ateena, Helsinki ja Istanbul — ja niistä mitattiin 18.9.2026 nolla
+ * lappua ja nolla poltettua mustetta (docs/raportit/viesti-fable-
+ * nostolaput-67-20260918.md). Väitteet 1–2 olivat niissä siis tyhjiä:
+ * "yksikään lappu ei leikkaa nimeä" on tosi ilman lappuja. Ne on
+ * poistettu ja tilalle otettu Transilvania, joka on samassa
+ * kohdemaassa ja jossa poltettua mustetta on ruudulla (Bran,
+ * Sighișoara, Peleș, Transfăgărășan) — sama näkymä, jota vartiot 6–7 jo
+ * käyttävät. EI UUSIA VÄITTEITÄ: vartiot ovat samat, vain näkymät
+ * osuvat nyt paikkaan, jossa on mitattavaa.
+ */
+const NAKYMAT = [
+  { nimi: 'Bukarest', lat: 44.43, lng: 26.10 },
+  { nimi: 'Transilvania', lat: 45.52, lng: 25.37 },
+];
+/** Korkeudet, joilla jokainen näkymä mitataan (lähikuva ja maan mitta). */
+const KORKEUDET = [0.05, 0.12];
+
+const TYYPIT = {
+  '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
+  '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg',
+  '.geojson': 'application/json',
+};
+const palvelin = http.createServer((req, res) => {
+  const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
+  if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
+  res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
+  res.end(readFileSync(polku));
+});
+await new Promise((ok) => palvelin.listen(0, ok));
+const osoite = `http://localhost:${palvelin.address().port}/`;
+
+let lapi = 0;
+let kaikki = 0;
+const vaadi = (nimi, ehto, lisa = '') => {
+  kaikki += 1;
+  if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
+};
+const tieto = (nimi, arvo) => console.log(`INFO  ${nimi}: ${arvo}`);
+
+const AMPARI = 'https://media.matkakirja.app/';
+const valimuisti = new Map();
+async function ampariHaku(url) {
+  if (valimuisti.has(url)) return valimuisti.get(url);
+  const lupaus = fetch(url).then(async (v) => (v.ok
+    ? { status: 200, body: Buffer.from(await v.arrayBuffer()), tyyppi: v.headers.get('content-type') }
+    : { status: v.status, body: Buffer.alloc(0), tyyppi: 'text/plain' }))
+    .catch(() => null);
+  valimuisti.set(url, lupaus);
+  return lupaus;
+}
+const kirjasto = await ampariHaku(`${AMPARI}vendor/globe.gl-2.46.2.min.js`);
+if (kirjasto?.status !== 200) {
+  console.log('OHITUS  ämpäri ei vastaa — palloa ei voi avata; savuke ohitetaan');
+  palvelin.close();
+  process.exit(0);
+}
+
+/* Tallenne: Fogg Bukarestissa (omistajan näkymä), aarre löydetty. */
+const peli = new Game({
+  players: [{ name: 'Fogg', color: '#c9a227', start: 'bukarest' }],
+  pack: packById('maailmankartta'),
+  seed: 5,
+});
+peli.phase = 'action';
+peli.tokens.delete('bukarest');
+const tallenne = JSON.stringify(peli.toJSON());
+
+const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const ctx = await selain.newContext({
+  viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, serviceWorkers: 'block',
+});
+await ctx.addInitScript((data) => {
+  try {
+    localStorage.setItem('matkakirja-save-v1', data);
+    localStorage.removeItem('matkakirja-lauta');
+    localStorage.setItem('matkakirja-kehittaja', '1');
+  } catch { /* yksityinen tila */ }
+}, tallenne);
+const sivu = await ctx.newPage();
+const virheet = [];
+sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
+await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
+await sivu.route(/wikimedia\.org/, (r) => r.abort());
+await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
+  const v = await ampariHaku(route.request().url());
+  if (!v || v.status !== 200) { route.abort(); return; }
+  route.fulfill({
+    status: 200,
+    contentType: v.tyyppi ?? 'application/octet-stream',
+    body: v.body,
+    headers: { 'access-control-allow-origin': '*' },
+  });
+});
+await sivu.goto(`${osoite}?lauta=pallo&glnimiot=0`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+await sivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: 90000 });
+const auki = await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 60000 })
+  .then(() => true).catch(() => false);
+vaadi('pallolauta aukesi', auki, virheet.join(' | '));
+
+if (auki) {
+  await sivu.waitForTimeout(3500);
+
+  /** Yksi näkymä: kamera paikalleen, ladonta heti, laatikot talteen. */
+  const mittaa = (nakyma, korkeus) => sivu.evaluate(async ({ lat, lng, alt }) => {
+    const l = window.matkakirja.ui.pallolauta;
+    l.pallo.pointOfView({ lat, lng, altitude: alt }, 0);
+    await new Promise((v) => setTimeout(v, 1600));
+    l.ladoHeti();
+    await new Promise((v) => setTimeout(v, 400));
+    const limittyy = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
+    const nimet = l.nimet.laatikot();
+    const laput = l.nostot.lappuLaatikot();
+    const kiinteat = l.nostot.laatikot();
+    const lappuNimi = [];
+    for (const lappu of laput) {
+      for (const n of nimet) if (limittyy(lappu, n)) lappuNimi.push(lappu.nimi || lappu.id);
+    }
+    const nimiKiintea = [];
+    for (const n of nimet) {
+      for (const k of kiinteat) if (limittyy(n, k)) nimiKiintea.push(`${n.x0.toFixed(0)},${n.y0.toFixed(0)}`);
+    }
+    /*
+     * Piirtyikö sovittelun asento myös elementtiin (muunnos ja kylki)?
+     *
+     * KAKSI SIIRTORYHMÄÄ, YKSI VÄITE. Nostolla siirto on
+     * `.pallolauta-nosto-siirto`, aihenostolla (PAATOKSET 27
+     * TARKENNUS 2, js/pallolauta/aihemerkit.js) oma
+     * `.pallolauta-aihemerkki-siirto` — molemmat ovat samaa sovittelua
+     * ja molempien datumin `laji` on 'nosto', joten kumpikin luetaan
+     * omasta ryhmästään. Aihenoston nimiö piirretään elävänä tekstinä
+     * eikä rasterina, joten kyljen vertailu koskee vain rasteria.
+     */
+    let elementitTasmaa = true;
+    for (const d of l.pallo.htmlElementsData()) {
+      if (d.laji !== 'nosto' || !d.el?.isConnected || d.poistuu) continue;
+      const g = d.el.querySelector('.pallolauta-nosto-siirto, .pallolauta-aihemerkki-siirto');
+      if (!g) { elementitTasmaa = false; continue; }
+      // Selain normalisoi muunnoksen tekstin (0.00px -> 0px), joten
+      // luvut luetaan eikä merkkijonoa verrata.
+      const luvut = /translate\((-?[\d.]+)px,\s*(-?[\d.]+)px\)/.exec(g.style.transform || '');
+      if (!luvut || Math.abs(Number(luvut[1]) - (d.dx ?? 0)) > 0.01
+        || Math.abs(Number(luvut[2]) - (d.dy ?? 0)) > 0.01) elementitTasmaa = false;
+      const kuva = g.querySelector('.nostosym-rasteri');
+      if (kuva && d.nimioNakyy && d.nimi && kuva.dataset.puoli !== d.puoli) elementitTasmaa = false;
+    }
+    /*
+     * PAKOTETTU VÄISTÖ: kaupungin nimen laatikko asetetaan lapun
+     * ULKOPÄÄHÄN ja sovittelu ajetaan uudelleen. Oikeassa näkymässä
+     * törmäyksiä on harvoin (laattaladonta on jo hyvä), joten ilman
+     * pakotusta vartio ei todistaisi väistöstä mitään.
+     *
+     * ESTE ON LAPUN PÄÄ, EI KOKO LAATIKKO. Lapun laatikko on ikonin ja
+     * nimiön YHDISTE, joten koko laatikon kokoinen este peittäisi myös
+     * ikonin ruudun — ja koska ikoni on joka kyljellä samassa kohdassa,
+     * yksikään vaihtoehto ei kelpaisi ja sovittelu menisi suoraan
+     * piilotukseen. Nimen laatikko on oikeasti nimiön mittainen, joten
+     * este on lapun uloin kolmannes sillä kyljellä, jolla nimiö on.
+     *
+     * Väistön jälkeen yksikään NÄKYVÄ lappu ei saa enää olla esteen
+     * päällä — piiloon mennyt lappu ei ole enää näkyvä lappu.
+     */
+    // Todellisen näkymän luvut TALTEEN ennen pakotusta: pakotettu ajo
+    // kirjoittaa saman mittarin yli.
+    const sovitteluTodellinen = l.nostot.sovittelunTulos();
+    const ennen = l.nostot.lappuLaatikot();
+    const pakoteEsteet = ennen.map((r) => {
+      const w = (r.x1 - r.x0) * 0.3;
+      const h = (r.y1 - r.y0) * 0.3;
+      if (r.puoli === 'vasen') return { x0: r.x0, x1: r.x0 + w, y0: r.y0, y1: r.y1 };
+      if (r.puoli === 'yla') return { x0: r.x0, x1: r.x1, y0: r.y0, y1: r.y0 + h };
+      if (r.puoli === 'ala') return { x0: r.x0, x1: r.x1, y0: r.y1 - h, y1: r.y1 };
+      return { x0: r.x1 - w, x1: r.x1, y0: r.y0, y1: r.y1 };
+    });
+    let pakoteLimityksia = 0;
+    let pakoteTulos = { siirretty: 0, piilotettu: 0, kylkiVaihtui: 0 };
+    if (pakoteEsteet.length) {
+      pakoteTulos = l.nostot.sovittele({ nimet: pakoteEsteet });
+      for (const r of l.nostot.lappuLaatikot()) {
+        for (const e of pakoteEsteet) if (limittyy(r, e)) pakoteLimityksia += 1;
+      }
+    }
+    const g0 = document.querySelector('.pallolauta-nosto-siirto');
+    return {
+      pakotettuja: pakoteEsteet.length,
+      pakoteLimityksia,
+      pakoteTulos,
+      nimia: nimet.length,
+      lappuja: laput.length,
+      kiinteita: kiinteat.length,
+      lappuNimi,
+      nimiKiintea,
+      elementitTasmaa,
+      sovittelu: sovitteluTodellinen,
+      siirtyma: g0 ? getComputedStyle(g0).transitionDuration : null,
+    };
+  }, { lat: nakyma.lat, lng: nakyma.lng, alt: korkeus });
+
+  let lappuNimiYht = 0;
+  let lappujaYht = 0;
+  let nimiKiinteaYht = 0;
+  let nimettomia = 0;
+  let tasmaa = true;
+  let siirtyma = null;
+  let pakotettuja = 0;
+  let pakoteLimityksia = 0;
+  let pakoteKasitellyt = 0;
+  for (const nakyma of NAKYMAT) {
+    for (const korkeus of KORKEUDET) {
+      // eslint-disable-next-line no-await-in-loop
+      const m = await mittaa(nakyma, korkeus);
+      lappuNimiYht += m.lappuNimi.length;
+      lappujaYht += m.lappuja;
+      nimiKiinteaYht += m.nimiKiintea.length;
+      if (!(m.nimia > 0)) nimettomia += 1;
+      if (!m.elementitTasmaa) tasmaa = false;
+      pakotettuja += m.pakotettuja;
+      pakoteLimityksia += m.pakoteLimityksia;
+      pakoteKasitellyt += m.pakoteTulos.siirretty + m.pakoteTulos.piilotettu;
+      siirtyma = m.siirtyma ?? siirtyma;
+      tieto(`${nakyma.nimi} (korkeus ${korkeus})`,
+        `nimiä ${m.nimia}, lappuja ${m.lappuja}, kiinteää mustetta ${m.kiinteita}, `
+        + `kylki vaihtui ${m.sovittelu.kylkiVaihtui}, siirtoja ${m.sovittelu.siirretty}, `
+        + `lappu piilossa ${m.sovittelu.piilotettu}, limityksiä ${m.lappuNimi.length}`);
+      if (m.pakotettuja) {
+        tieto(`  pakotettu väistö ${nakyma.nimi}`,
+          `${m.pakotettuja} lappua: kylki ${m.pakoteTulos.kylkiVaihtui}, `
+          + `siirto ${m.pakoteTulos.siirretty - m.pakoteTulos.kylkiVaihtui}, `
+          + `piiloon ${m.pakoteTulos.piilotettu}`);
+      }
+      if (m.lappuNimi.length) tieto(`  limittyvät laput ${nakyma.nimi}`, m.lappuNimi.join(', '));
+      if (KUVAKANSIO && korkeus === KORKEUDET[0]) {
+        // eslint-disable-next-line no-await-in-loop
+        await sivu.screenshot({ path: join(KUVAKANSIO, `pallo-nostolaput-${nakyma.nimi.toLowerCase()}.png`) });
+      }
+    }
+  }
+  /*
+   * VARTIO 1 ON TYHJÄ POLTETUSSA MAAILMASSA (mitattu 18.9.2026, velka
+   * Fablelle): kohdemaassa ROU ei ole yhtään elävää lappua, joten
+   * "yksikään lappu ei leikkaa nimeä" on tosi ilman lappuja. Väite on
+   * yhä oikein eikä sitä muuteta tässä erässä, mutta lappujen määrä
+   * tulostetaan viereen, jotta tyhjä otos näkyy lukijalle. Sama
+   * sääntö poltetulle musteelle on vartio 2, joka EI ole tyhjä.
+   */
+  vaadi('1. yksikään nostolappu ei leikkaa kaupungin nimen laatikkoa',
+    lappuNimiYht === 0, `limityksiä ${lappuNimiYht}`);
+  tieto('1 · otoksen koko', `eläviä lappuja yhteensä ${lappujaYht} `
+    + `(0 = väite on tosi ilman mitattavaa, velka Fablelle)`);
+  vaadi('2. yksikään kaupunkinimi ei leikkaa liikkumatonta mustetta (poltettu nosto, elävän ikoni)',
+    nimiKiinteaYht === 0, `limityksiä ${nimiKiinteaYht}`);
+  vaadi('3. jokaisessa näkymässä on nimiä (väistön hinta ei ole mykkä kartta)',
+    nimettomia === 0, `nimettömiä näkymiä ${nimettomia}`);
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * 4. ON INFO 18.9.2026 (poltto kohdemaan säännöllä; Raamattu
+   *    KARTTAUUDISTUKSEN PAATOKSET 34 kohta 17 d ja AGENTIT
+   *    TARKENNUS 10 kohta 21: savuke päivitetään samassa erässä kuin
+   *    käytös muuttuu, ja kohta 21 hyväksyy poltetun otoksen)
+   * ══════════════════════════════════════════════════════════════
+   *
+   * MITATTU TILA (18.9.2026, 390 × 844 dpr 2, tämä savukkeen oma
+   * tallenne — Fogg Bukarestissa, kohdemaa ROU — molemmat näkymät
+   * molemmilla korkeuksilla):
+   *
+   *   Bukarest 0,05: nimiä 1, lappuja 0, kiinteää mustetta 4
+   *   Bukarest 0,12: nimiä 1, lappuja 0, kiinteää mustetta 10
+   *   Transilvania 0,05: nimiä 1, lappuja 0, kiinteää mustetta 8
+   *   Transilvania 0,12: nimiä 1, lappuja 0, kiinteää mustetta 13
+   *   `.pallolauta-nosto-siirto`-elementtejä: 0 kaikissa neljässä
+   *
+   * Romanian kaikki kartan nostot ovat kohdemaan säännöllä poltettuja
+   * (docs/raportit/viesti-fable-poltto-kohdemaa-20260918.md), ja
+   * kaupungin sisäiset elävät ovat liuskassa eivätkä piirry kartalle
+   * millään zoomilla (PAATOKSET 34 kohdat 2–3). Kohdemaassa ei siis
+   * ole yhtään elävää lappua, jonka LIUKUA mitata: `siirtyma` oli
+   * `null` (ei elementtiä, josta lukea `transitionDuration`) ja
+   * `tasmaa` oli tosi tyhjästä silmukasta. Väite meni siis punaiseksi
+   * mittaamatta mitään — ja vihreäksi se olisi mennyt yhtä tyhjänä.
+   *
+   * ELÄVÄ LAPPU ON VAIN RANSKASSA (lisäkaupunkien pisteet,
+   * js/packs/nakyvat-kaupungit-fra.js), eikä tämän savukkeen näkymää
+   * voi siirtää sinne: kohdemaa seuraa PELAAJAA (js/fokuskohteet.js
+   * kohteidenNykyinenIso), ei kameraa, joten Ranskan merkit eivät
+   * herää Bukarestin tallenteella. Sovittelun asennon ja 200 ms:n
+   * liu'un vartiointi kuuluu siksi savukkeeseen, joka ajaa Ranskan
+   * tallenteella — ei tähän. Luku jää INFOksi, jotta se ei katoa
+   * näkyvistä, ja palaa vartioksi jos kohdemaahan tulee eläviä
+   * lappuja takaisin.
+   */
+  tieto('4. sovittelun asento elementissä ja lapun 200 ms:n liuku (INFO: kohdemaassa '
+    + 'ei ole yhtään elävää lappua, ks. yllä)',
+    `tasmaa=${tasmaa} siirtyma=${siirtyma} — eläviä siirtoryhmiä ${siirtyma === null ? 0 : '≥1'}`);
+  /*
+   * 5. VANHENTUNUT (Fable 18.9.2026, Raamattu PAATOKSET 34 kohta 13 c):
+   *    sovittelu ajetaan vain kun lappujoukko tai ruutukoko muuttuu —
+   *    nostot ja nimiöt PYSYVÄT PAIKALLAAN, eikä kesken levon istutettu
+   *    keinotekoinen este saa enää siirtää lappua. Vartio mittasi juuri
+   *    sitä käytöstä, jonka omistaja kumosi, joten se on INFO.
+   */
+  tieto('5. pakotettu väistö (vanhentunut, kohta 13 c: ei uudelleensovittelua levossa)',
+    `pakotettuja ${pakotettuja}, käsiteltyjä ${pakoteKasitellyt}, limityksiä ${pakoteLimityksia}`);
+  /*
+   * 6. NAPAUTUS LAPUN TEKSTIIN AVAA SAMAN NOSTON (Raamattu, VIAT v1672;
+   *    omistaja 7.9.2026 illalla sanatarkasti: *"Karttanostoissa teksti
+   *    ei ota klikkausta ainoastaan kuvake. Saisiko myös tekstit
+   *    klikattaviksi?"*).
+   *
+   *    NAPAUTUS ON OIKEA HIIREN NAPAUTUS KANKAALLE, ei kutsu laudan
+   *    metodiin: sama polku kuin sormella (Globe.gl onGlobeClick →
+   *    js/pallolauta/lauta.js napautaPintaan → lahinMerkki →
+   *    lappuunOsunut).
+   *
+   *    MITTA ON OSUMAN OHJAUTUMINEN, EI KORTIN AUKEAMINEN. Kortin
+   *    sisältö (skandaalikortti, nähtävyyskortti) syntyy pakan ja
+   *    ämpärin datasta, jota tämä savuke ei tarjoile; vika ja korjaus
+   *    ovat osumatestissä. Siksi jokaisen ruudulla olevan noston oma
+   *    `avaa` kääritään mittariin, ja vartio lukee, KENELLE napautus
+   *    meni.
+   *
+   *    KOLME LAPPUA KUSTAKIN NÄKYMÄSTÄ:
+   *      a) omistajan nimeämä lappu (Bukarest "Strousberg",
+   *         Transilvania "Bran") tekstin keskeltä;
+   *      b) ensimmäinen ELÄVÄ lappu (polttamaton nosto, jolla on oma
+   *         CSS2D-elementti) — poltettu ja elävä muste kulkevat eri
+   *         polkua, ja molempien on otettava napautus;
+   *      c) lappu, jonka ULOMPI PÄÄ jäi vanhan säännön (lähin merkki
+   *         44 px) ulottumattomiin tai osui TOISEEN nostoon — juuri se
+   *         tilanne, josta omistaja kirjoitti. Mitattu 7.9.2026:
+   *         Bukarestissa yhdeksän lappua yhdestätoista, mm. "Draculan
+   *         alaviite" ja "Nadia Comăneci", eivät saaneet ulkopäästään
+   *         mitään; "Branin linna" ja "Balkanvuoret" avasivat naapurin.
+   *
+   *    JOKAINEN LAPPU NAPAUTETAAN KAHDESTI: täsmälleen musteen
+   *    keskiviivalta JA SORMEN POIKKEAMALLA (KOSKETUSPOIKKEAMA_PX
+   *    kohtisuoraan tekstistä ulos). Poikkeama on se, mikä vian
+   *    v1680 paljasti (omistaja 7.9.2026 ilta, iPad: *"Symboli ottaa
+   *    klikkauksen mutta teksti ei."*): vaakalapun muste on vain
+   *    11,4 px korkea, ja siitä meni jopa 3,9 px napautuksen oman
+   *    ruutupisteen projektioeroon — sormelle jäi pari pikseliä.
+   *    Osumatestin kosketusvara (js/pallolauta/lauta.js
+   *    LAPUN_KOSKETUSVARA_PX) antaa tekstille saman 44 px:n
+   *    kosketuspinnan, joka kuvakkeella on säteenään; ilman sitä
+   *    poikkeamanapautukset eivät avaa mitään.
+   */
+  const LAPPUNAKYMAT = [
+    { nimi: 'Bukarest', lat: 44.43, lng: 26.10, etsi: 'strousberg' },
+    /*
+     * TRANSILVANIA ON POLTETUN MUSTEEN NÄKYMÄ (18.9.2026). Bukarestin
+     * omat nostot ovat kaupungin sisäisiä eivätkä enää pala laattaan
+     * (PAATOKSET 33 TARKENNUS 2), joten poltettu muste haetaan
+     * kaupunkien VÄLISTÄ: Bran, Transfăgărășan ja Balkanvuoret ovat
+     * nostotasossa 2026-09-18-nostot poltettuja.
+     */
+    { nimi: 'Transilvania', lat: 45.52, lng: 25.37, etsi: 'bran' },
+    /*
+     * HELSINKI JA ISTANBUL POISTETTU (18.9.2026, velka 6). Hakusanat
+     * "kirjasota" ja "mustameri" osoittivat Suomen ja Turkin nostoihin,
+     * joita ei enää ole ruudulla: nostot tulevat vain kohdemaasta
+     * (tässä Romania), ja 18.9.2026 mitattuna molemmista näkymistä tuli
+     * otos 0 lappua — vartiot 6–7 saivat aineistonsa jo silloin
+     * kokonaan Romaniasta. Kaksi tyhjää näkymää maksoi neljä
+     * kamera-ajoa eikä väittänyt mitään.
+     */
+  ];
+  /** Sormen poikkeama tekstin keskiviivasta kohtisuoraan ulos (px). */
+  const KOSKETUSPOIKKEAMA_PX = 8;
+  /** Yksi näkymä: kamera, ladonta ja napautuskohteet lapuista. */
+  const lappukohteet = (nakyma, korkeus) => sivu.evaluate(async ({
+    lat, lng, alt, etsi, poikkeama,
+  }) => {
+    const l = window.matkakirja.ui.pallolauta;
+    l.pallo.pointOfView({ lat, lng, altitude: alt }, 0);
+    await new Promise((v) => setTimeout(v, 1600));
+    l.ladoHeti();
+    await new Promise((v) => setTimeout(v, 400));
+    const p = l.pallo;
+    const koti = l.kotelo.getBoundingClientRect();
+    /*
+     * OSUMALAATIKOT, EI VAIN ELÄVÄT LAPUT: tiheässä näkymässä nostot
+     * ovat jo POLTETTU laattaan eikä niillä ole elementtiä — mutta
+     * niiden nimiö on yhtä lailla ruudulla ja sormen alla. Kerros
+     * antaa saman laatikon, jota osumatesti käyttää.
+     */
+    const laput = l.nostot.osumaLaatikot().filter((r) => r.perhe === 'nosto' && r.nimi);
+    /**
+     * Napautuspiste lapun tekstistä: `osuus` 0,5 = keskeltä, 1 =
+     * ulkopää; `sivuun` siirtää pistettä kohtisuoraan tekstistä ulos
+     * (sormen poikkeama).
+     */
+    const kohta = (r, osuus, sivuun = 0) => {
+      const puoli = r.puoli ?? 'oikea';
+      const w = (r.x1 - r.x0) * 0.3;
+      const h = (r.y1 - r.y0) * 0.3;
+      const ky = (r.y0 + r.y1) / 2 + sivuun;
+      const kx = (r.x0 + r.x1) / 2 + sivuun;
+      if (puoli === 'vasen') return { x: r.x0 + w * (1 - osuus) + 2, y: ky };
+      if (puoli === 'yla') return { x: kx, y: r.y0 + h * (1 - osuus) + 2 };
+      if (puoli === 'ala') return { x: kx, y: r.y1 - h * (1 - osuus) - 2 };
+      return { x: r.x1 - w * (1 - osuus) - 2, y: ky };
+    };
+    /** Kenelle VANHA sääntö (lähin merkki 44 px) antaisi tämän pisteen? */
+    const vanhaVoittaja = (piste) => {
+      let paras = null;
+      let matka = 44;
+      for (const o of l.nostot.osumat()) {
+        const s = p.getScreenCoords(o.lat, o.lng, 0);
+        if (!s) continue;
+        const d = Math.hypot(s.x - piste.x, s.y - piste.y);
+        if (d < matka) { matka = d; paras = o.id; }
+      }
+      return paras;
+    };
+    const rivi = (r, osuus, sivuun, laji) => {
+      const piste = kohta(r, osuus, sivuun);
+      const vanha = vanhaVoittaja(piste);
+      return {
+        laji,
+        id: r.id,
+        nimi: r.nimi,
+        poltettu: r.poltettu,
+        sormella: sivuun !== 0,
+        vanha: vanha === r.id ? 'sama' : (vanha ? 'toinen' : 'ei mitään'),
+        x: koti.left + piste.x,
+        y: koti.top + piste.y,
+      };
+    };
+    /**
+     * Valitut laput: nimetty, ensimmäinen elävä, ulottumaton pää ja
+     * POLTETTU muste. Jokainen laji haetaan omalla haullaan, ja jo
+     * valittu lappu OHITETAAN eikä katkaise hakua — muuten yksi lappu
+     * söisi toisen lajin otoksesta (18.9.2026: Bukarestin "Strousberg"
+     * oli sekä nimetty että ensimmäinen elävä, jolloin ulottumattoman
+     * haku katkesi ensimmäiseen ehdokkaaseen ja vartio 6 näki nolla
+     * ulottumatonta).
+     */
+    const valitut = [];
+    /*
+     * SORMI YLTÄÄ VAIN PALJAALLE KARTALLE (mitattu 19.9.2026, Mac
+     * Studio; docs/raportit/viesti-fable-savukkeet-kohta8-20260919.md).
+     *
+     * Kartan päällä on pelin omia kalusteita, ja tärkein niistä on
+     * PÄIVÄKIRJAKORTTI (`.fact-card`), joka asettuu sille kartan
+     * nurkalle, jossa on eniten merta (js/kartta.js placeFactCard).
+     * Bukarestin näkymässä se istuu vasemmassa yläkulmassa — ja juuri
+     * siellä on "Sighișoara"n nimilappu. Mitattu kulku oli aina sama:
+     * `viimeinenNapautus` ei muuttunut lainkaan (napautus ei tullut
+     * pallon pinnalle) ja päällimmäisenä oli `P.fact-text`.
+     *
+     * PELI ON OIKEASSA: oikean pelaajan sormikin osuu päiväkirjaan
+     * eikä karttaan, eikä vartio 6–7 väitä mitään kalusteen alta.
+     * Väite koskee sitä, ottaako lapun TEKSTI napautuksen — siis
+     * lappua, joka on pelaajan ulottuvilla. Ehdokas, jonka
+     * napautuspiste (tai sormen poikkeama) on kalusteen alla,
+     * ohitetaan ja haku jatkuu seuraavaan; ohitetut kirjataan.
+     */
+    const kalusteenAlla = [];
+    /*
+     * TOISEN NOSTON LAPUN PÄÄLLÄ EI MITATA (23.9.2026, nimiölukko):
+     * Transilvaniassa Karhusanktuaarin nimiö on piilossa ja sen ikoni
+     * jää ykköstason "Branin linna" -nimiön alle (ykköstaso ei väistä
+     * ikonia, js/pallolauta/sovittelu.js). Poikkeamanapautus osui siis
+     * Branin TEKSTIIN ja avasi Branin — oikein. Piste, joka on toisen
+     * noston lapun sisällä, ei mittaa tämän lapun kosketusvaraa, joten
+     * ehdokas ohitetaan kuten kalusteen alla oleva.
+     */
+    const toisenLapulla = (r, p) => laput.find((m) => m.id !== r.id
+      && p.x >= m.x0 && p.x <= m.x1 && p.y >= m.y0 && p.y <= m.y1) ?? null;
+    const ulottuvilla = (r, osuus) => {
+      for (const sivuun of [0, poikkeama]) {
+        const p = kohta(r, osuus, sivuun);
+        const toinen = toisenLapulla(r, p);
+        if (toinen) {
+          kalusteenAlla.push(`${r.nimi}: toisen noston lappu ${toinen.nimi}`);
+          return false;
+        }
+        const el = document.elementFromPoint(koti.left + p.x, koti.top + p.y);
+        const paljas = Boolean(el) && (el.tagName === 'CANVAS'
+          || el.classList?.contains('pallolauta-kotelo'));
+        if (!paljas) {
+          kalusteenAlla.push(`${r.nimi}: ${el
+            ? `${el.tagName}.${(typeof el.className === 'string' ? el.className : el.className?.baseVal) || ''}`.trim()
+            : 'ei mitään'}`);
+          return false;
+        }
+      }
+      return true;
+    };
+    const lisaa = (r, laji, osuus) => {
+      if (!r || valitut.some((v) => v.r.id === r.id)) return false;
+      if (!ulottuvilla(r, osuus)) return false;
+      valitut.push({ r, laji, osuus });
+      return true;
+    };
+    for (const r of laput) {
+      if (!r.nimi.toLowerCase().includes(etsi)) continue;
+      if (lisaa(r, 'nimetty', 0.5)) break;
+    }
+    for (const r of laput) {
+      if (r.poltettu) continue;
+      if (lisaa(r, 'elävä', 0.5)) break;
+    }
+    // Ensimmäinen, jonka ULKOPÄÄ jäi vanhalta säännöltä saamatta —
+    // ja jota ei vielä valittu (haku jatkuu, kunnes yksi kelpaa).
+    for (const r of laput) {
+      if (rivi(r, 1, 0, 'ulottumaton').vanha === 'sama') continue;
+      if (lisaa(r, 'ulottumaton', 1)) break;
+    }
+    /*
+     * POLTETTU MUSTE OMANA LAJINAAN (18.9.2026, Raamattu PAATOKSET 33
+     * TARKENNUS 2 ja PAATOKSET 34): uusi polttoketju polttaa vain
+     * KAUPUNGIN ULKOPUOLISET nostot, joten kaupungin sisäiset nostot
+     * (Bukarestin "Strousberg", "Draculan alaviite") ovat nykyään
+     * ELÄVIÄ. Vanha otos sai poltetun musteensa vahingossa juuri
+     * niistä; nyt se haetaan nimenomaisesti. Ellei yhdessäkään
+     * näkymässä ole poltettua mustetta ruudulla, vartio 7 mittaa
+     * elävällä ja kirjaa siitä INFO-rivin — ei hiljaista vanhenemista.
+     */
+    for (const r of laput) {
+      if (!r.poltettu) continue;
+      if (lisaa(r, 'poltettu', 0.5)) break;
+    }
+    // Kumpikin: muste keskeltä ja sormen poikkeamalla musteen ulkopuolelta.
+    const ulos = [];
+    for (const v of valitut) {
+      ulos.push(rivi(v.r, v.osuus, 0, v.laji));
+      ulos.push(rivi(v.r, v.osuus, poikkeama, `${v.laji}+sormi`));
+    }
+    /*
+     * OTOKSEN LUETTELO RAPORTTIIN: kun vartio kaatuu otoksen puutteeseen
+     * (ei poltettua, ei ulottumatonta), raportista on nähtävä MITÄ
+     * ruudulla oli — muuten seuraava lukija arvaa.
+     */
+    const inventaario = {
+      kalusteenAlla,
+      kaikki: laput.length,
+      poltettuja: laput.filter((v) => v.poltettu).length,
+      elavia: laput.filter((v) => !v.poltettu).length,
+      nimet: laput.slice(0, 12).map((v) => `${v.nimi}${v.poltettu ? '*' : ''}`),
+    };
+    return { ulos, inventaario };
+  }, {
+    lat: nakyma.lat,
+    lng: nakyma.lng,
+    alt: korkeus,
+    etsi: nakyma.etsi,
+    poikkeama: KOSKETUSPOIKKEAMA_PX,
+  });
+
+  // Musteen napautukset (vartio 6) ja sormen poikkeamat (vartio 7)
+  // lasketaan erikseen, jotta vartiot mittaavat eri asiaa.
+  let lappuKokeita = 0;
+  let lappuOsui = 0;
+  let ulottumattomia = 0;
+  let sormiKokeita = 0;
+  let sormiOsui = 0;
+  let sormiElavia = 0;
+  let sormiPoltettuja = 0;
+  for (const nakyma of LAPPUNAKYMAT) {
+    // eslint-disable-next-line no-await-in-loop
+    const { ulos: kohteet, inventaario } = await lappukohteet(nakyma, KORKEUDET[1]);
+    tieto(`  otos ${nakyma.nimi}`,
+      `nimettyjä lappuja ${inventaario.kaikki} (poltettuja ${inventaario.poltettuja}, `
+      + `eläviä ${inventaario.elavia})`
+      + (inventaario.nimet.length ? `: ${inventaario.nimet.join(', ')}` : ''));
+    if (inventaario.kalusteenAlla?.length) {
+      tieto(`  otoksen ulkopuolelle jäi kalusteen alta ${nakyma.nimi}`,
+        inventaario.kalusteenAlla.join(' · '));
+    }
+    for (const kohde of kohteet) {
+      /*
+       * MITTARI JOKAISEN NOSTON `avaa`:iin. Osumat pysyvät samoina,
+       * koska kamera ei liiku napautusten välissä (ladonta ajetaan vain
+       * levossa kameran liikuttua).
+       */
+      // eslint-disable-next-line no-await-in-loop
+      await sivu.evaluate(async () => {
+        const { suljeFokuskohde } = await import('/js/fokuskohteet.js');
+        suljeFokuskohde(window.matkakirja.ui);
+        // Auki jäänyt kortti nielaisisi seuraavan napautuksen
+        // (js/pallolauta/lauta.js korttivahti).
+        for (const el of document.querySelectorAll(
+          '.fokuskohde-popup, .elaintaky-kerros, .skandaali-kerros, .hetki-kerros,'
+          + ' .fokusnosto-kerros, .syvennys-kerros, .minipopup, .kaupunkipopup',
+        )) el.remove();
+        window.__avattu = [];
+        for (const o of window.matkakirja.ui.pallolauta.nostot.osumat()) {
+          if (o.__mittari) continue;
+          const alkuperainen = o.avaa;
+          o.__mittari = true;
+          o.avaa = (ankkuri) => { window.__avattu.push(o.id); return alkuperainen(ankkuri); };
+        }
+      });
+      /*
+       * SORMI ODOTTAA, ETTÄ KARTTA ON PALJAANA (mitattu 19.9.2026,
+       * Mac Studio; docs/raportit/viesti-fable-savukkeet-kohta8-20260919.md).
+       *
+       * Vartiot 6–7 olivat punaisia sillä, että Bukarestin
+       * "Sighișoara" ei avautunut — ja probe näytti syyn: EDELLISEN
+       * napautuksen avaama kortti oli yhä napautuspisteen päällä, kun
+       * sormi painoi. Kortti suljetaan yllä, mutta sulku on
+       * animoitu: `suljeFokuskohde` käynnistää poistumisen, ja
+       * kortin kuori jää vielä sadoiksi millisekunneiksi DOMiin
+       * ottamaan napautuksen vastaan. Mitattu kulku oli aina sama:
+       * `viimeinenNapautus` EI muuttunut lainkaan (napautus ei
+       * koskaan tullut pallon pinnalle), eikä mitään avautunut. Sama
+       * kaatoi probe-ajossa Comănecin, eli kyse ei ole yhdestä
+       * lapusta vaan järjestyksestä: aina se napautus, joka seuraa
+       * korttia avannutta napautusta.
+       *
+       * PELI ON OIKEASSA, MITTARI ODOTTAA. Oikea sormikin napauttaisi
+       * korttia eikä karttaa, joten savuke odottaa, kunnes
+       * napautuspisteen päällimmäinen elementti on pallon oma kangas
+       * (tai laudan kotelo). Odotus on katkaiseva: jos este ei
+       * väisty kahdessa sekunnissa, napautus tehdään silti ja este
+       * kirjataan lokiin — vartio ei saa muuttua hiljaiseksi
+       * odotukseksi.
+       */
+      // eslint-disable-next-line no-await-in-loop
+      const este = await sivu.evaluate(async ([x, y]) => {
+        const kuvaa = (el) => (el
+          ? `${el.tagName}.${(typeof el.className === 'string' ? el.className : el.className?.baseVal) || ''}`.trim()
+          : 'ei mitään');
+        const paljas = (el) => Boolean(el) && (el.tagName === 'CANVAS'
+          || el.classList?.contains('pallolauta-kotelo'));
+        const { suljeFokuskohde } = await import('/js/fokuskohteet.js');
+        /*
+         * SULKU TOISTUU, KOSKA KORTTI RAKENTUU ASYNKRONISESTI. Kortin
+         * kuvat ja teksti liitetään vasta, kun ne ovat valmiit, joten
+         * kertasulku poistaa sen, mitä DOMissa sillä hetkellä on — ja
+         * keskeneräinen rakennus liittää kortin takaisin heti perään.
+         * Siksi sulku ja poisto ajetaan uudestaan jokaisella
+         * kierroksella, kunnes napautuspiste on paljas.
+         */
+        let el = document.elementFromPoint(x, y);
+        for (let i = 0; i < 20 && !paljas(el); i += 1) {
+          suljeFokuskohde(window.matkakirja.ui);
+          for (const vanha of document.querySelectorAll(
+            '.fokuskohde-popup, .elaintaky-kerros, .skandaali-kerros, .hetki-kerros,'
+            + ' .fokusnosto-kerros, .syvennys-kerros, .minipopup, .kaupunkipopup',
+          )) vanha.remove();
+          // eslint-disable-next-line no-await-in-loop
+          await new Promise((ok) => setTimeout(ok, 100));
+          el = document.elementFromPoint(x, y);
+        }
+        return paljas(el) ? null : kuvaa(el);
+      }, [kohde.x, kohde.y]);
+      if (este) {
+        /*
+         * KALUSTEEN ALLE JÄÄNYT LAPPU EI OLE TÄMÄN VARTION ASIA.
+         * Päiväkirjakortti täyttyy juuri avatun noston tekstillä ja
+         * asettuu kartan merisimpään nurkkaan (js/kartta.js
+         * placeFactCard) — Bukarestissa vasempaan yläkulmaan, jossa
+         * "Sighișoara"n lappu on. Sitä ei siis voi valita
+         * etukäteenkään: este syntyy VASTA edellisestä napautuksesta.
+         * Oikea pelaaja napauttaisi samasta pisteestä päiväkirjaa eikä
+         * karttaa, joten napautusta ei tehdä eikä lasketa — se
+         * kirjataan, jotta otoksen koko näkyy lukijalle.
+         */
+        tieto(`  napautus jäi tekemättä ${nakyma.nimi} ("${kohde.nimi}", ${kohde.laji})`,
+          `napautuspisteen päällä ${este} — pelin oma kaluste, ei väistynyt kahdessa sekunnissa`);
+        // eslint-disable-next-line no-continue
+        continue;
+      }
+      if (kohde.sormella) {
+        sormiKokeita += 1;
+        if (kohde.poltettu) sormiPoltettuja += 1; else sormiElavia += 1;
+      } else {
+        lappuKokeita += 1;
+        if (kohde.laji === 'ulottumaton') ulottumattomia += 1;
+      }
+      // eslint-disable-next-line no-await-in-loop
+      /*
+       * SORMI LIIKKUU ENNEN KUIN SE PAINAA (17.9.2026, Mac).
+       * MITATTU (tools/savukkeet/savuke-pariisi-lahizoom.mjs): kun
+       * siirto ja painallus tulevat samassa kehyksessä, globe.gl
+       * antaa pelille VIIMEKSI säteitetyn pisteen eli EDELLISEN
+       * napautuksen kohdan — Transfăgărășanin napautus avasi
+       * Strousbergin, koska Strousberg oli edellinen kohde. Oikea
+       * sormi liikkuu ensin ja painaa vasta sitten.
+       */
+      await sivu.mouse.move(kohde.x, kohde.y);
+      await sivu.evaluate(() => new Promise((ok) => {
+        requestAnimationFrame(() => requestAnimationFrame(ok));
+      }));
+      await sivu.waitForTimeout(120);
+      /*
+       * KÄÄRE UUDESTAAN JUURI ENNEN NAPAUTUSTA (v1985, 21.9.2026):
+       * osumarivit rakennetaan joka ladonnassa uusiksi, ja GSHHG-
+       * rantaviivan (nostot maakuntanimien esteiksi) myötä ladonta
+       * ehti ajaa sormen liikkeen ja napautuksen välissä — kääre jäi
+       * vanhoille riveille ja kortti aukesi "ei mitään" -kirjauksella.
+       * Varana luetaan avoin kohdekortti (ui.fokuskohdeAuki.id).
+       */
+      // eslint-disable-next-line no-await-in-loop
+      await sivu.evaluate(() => {
+        for (const o of window.matkakirja.ui.pallolauta.nostot.osumat()) {
+          if (o.__mittari) continue;
+          const alkuperainen = o.avaa;
+          o.__mittari = true;
+          o.avaa = (ankkuri) => { window.__avattu.push(o.id); return alkuperainen(ankkuri); };
+        }
+      });
+      await sivu.mouse.click(kohde.x, kohde.y);
+      // eslint-disable-next-line no-await-in-loop
+      await sivu.waitForTimeout(500);
+      // eslint-disable-next-line no-await-in-loop
+      const avattu = await sivu.evaluate(() => {
+        const a = window.__avattu ?? [];
+        if (a.length) return a;
+        const auki = window.matkakirja.ui.fokuskohdeAuki?.id;
+        return auki ? [auki] : [];
+      });
+      const oikein = avattu.length === 1 && avattu[0] === kohde.id;
+      if (oikein && kohde.sormella) sormiOsui += 1;
+      else if (oikein) lappuOsui += 1;
+      /*
+       * MIKÄ MUU VEI NAPAUTUKSEN? Pelkkä *"ei mitään"* ei kerro,
+       * nielaisiko sen turisti-infon kyltti, aihemerkin viuhka vai
+       * auki jäänyt dialogi — eikä sitä, onko seuraava rivi enää oma
+       * mittauksensa. MITATTU 17.9.2026: kyltti asettui Bukarestissa
+       * nimilapun viereen, sormen poikkeamanapautus avasi
+       * matkustusoppaan, ja auki jäänyt dialogi nielaisi loput
+       * napautukset (vartiot 6 ja 7 punaisina, kaikki rivit
+       * *"ei mitään"*).
+       */
+      // eslint-disable-next-line no-await-in-loop
+      const sijaan = avattu.length ? '' : await sivu.evaluate(([x, y]) => {
+        const l = window.matkakirja.ui.pallolauta;
+        const koti = l.kotelo.getBoundingClientRect();
+        const dialogit = [...document.querySelectorAll('dialog[open]')]
+          .map((d) => d.id || d.className).filter(Boolean);
+        const viuhka = l.nostot?.viuhkaAuki?.() ?? null;
+        const kyltti = (l.turistiLaatikot?.() ?? [])[0] ?? null;
+        /*
+         * TULIKO NAPAUTUS EDES PINNALLE (19.9.2026)? `viimeinenNapautus`
+         * on ainoa paikka, josta sen näkee: jos se on sama kuin
+         * edellisellä rivillä, napautuksen söi jokin ruudulla oleva
+         * elementti eikä osumasääntö. `napautusselitys` kertoo
+         * jälkimmäisessä tapauksessa, kenelle sääntö pisteen antoi.
+         */
+        const vn = l.viimeinenNapautus?.() ?? null;
+        const selitys = vn && Number.isFinite(vn.lat) ? l.napautusselitys(vn.lat, vn.lng) : null;
+        const alla = document.elementFromPoint(x, y);
+        return [
+          `sormi ${Math.round(x - koti.left)},${Math.round(y - koti.top)}`,
+          `päällimmäisenä ${alla ? `${alla.tagName}.${(typeof alla.className === 'string' ? alla.className : alla.className?.baseVal) || ''}`.trim() : 'ei mitään'}`,
+          `pinnalle tullut napautus ${vn ? `${vn.lat?.toFixed?.(3)},${vn.lng?.toFixed?.(3)} (${Date.now() - vn.hetki} ms sitten)` : 'ei yhtään'}`,
+          selitys ? `sääntö antaisi ${selitys.voittaja ?? '-'} (muste ${selitys.muste ?? '-'})` : '',
+          dialogit.length ? `dialogit ${dialogit.join(' ')}` : '',
+          viuhka ? `viuhka ${viuhka}` : '',
+          kyltti ? `kyltti ${Math.round(kyltti.x0)},${Math.round(kyltti.y0)} → `
+            + `${Math.round(kyltti.x1)},${Math.round(kyltti.y1)}` : 'ei kylttiä',
+        ].filter(Boolean).join(' · ');
+      }, [kohde.x, kohde.y]);
+      tieto(`  napautus ${nakyma.nimi} (${kohde.laji})`,
+        `"${kohde.nimi}"${kohde.poltettu ? ' (poltettu)' : ''}, vanha sääntö: ${kohde.vanha} `
+        + `→ avautui ${avattu.join(', ') || `ei mitään — ${sijaan}`}`);
+    }
+  }
+  vaadi('6. napautus nimilapun tekstiin avaa saman noston (myös kuvakkeen ulottumattomissa)',
+    lappuKokeita >= 3 && ulottumattomia >= 1 && lappuOsui === lappuKokeita,
+    `napautuksia ${lappuKokeita} (joista vanhan säännön ulottumattomissa ${ulottumattomia}), `
+    + `oikein ${lappuOsui}`);
+  /*
+   * 7. LAPUN TEKSTI ON KOSKETUSKOKOINEN (vika v1680; omistaja 7.9.2026
+   *    ilta, iPad: *"Symboli ottaa klikkauksen mutta teksti ei."*).
+   *    Napautus KOSKETUSPOIKKEAMA_PX:n päässä musteen keskiviivasta —
+   *    eli musteen ulkopuolelta, mutta sieltä mistä sormi lappua
+   *    tähtää — avaa saman noston kuin muste itse, sekä elävällä että
+   *    poltetulla musteella. Ennen kosketusvaraa (js/pallolauta/lauta.js
+   *    LAPUN_KOSKETUSVARA_PX) nämä napautukset eivät avanneet mitään:
+   *    vaakalapun muste on vain 11,4 px korkea.
+   */
+  /*
+   *    OTOKSEN POLTETTU MUSTE EI OLE ENÄÄ ITSESTÄÄNSELVYYS (18.9.2026,
+   *    Raamattu PAATOKSET 33 TARKENNUS 2 / PAATOKSET 34): kaupungin
+   *    sisäiset nostot eivät enää pala laattaan, joten tiheässä
+   *    kaupunkinäkymässä voi olla pelkkää elävää mustetta. Silloin
+   *    vartio mittaa sen, mitä ruudulla on, JA kirjaa erillisen
+   *    INFO-rivin siitä, että poltettu muste jäi otoksen ulkopuolelle —
+   *    vartio ei saa vanhentua hiljaa vihreänä.
+   */
+  const poltettuaOtoksessa = sormiPoltettuja >= 1;
+  /*
+   * ELÄVÄÄ MUSTETTA EI ENÄÄ VAADITA (Fable 18.9.2026, v1942): nostotaso
+   * 2026-09-19-maittain polttaa kaikki kaupungin ulkopuoliset nostot
+   * lukituista ankkureista (PAATOKSET 33 TARKENNUS 2, 34 kohta 17 a-b), joten
+   * Romanian otoksessa on 0 elävää lappua. Vartio vaatii vähintään yhden
+   * lajin (elävä tai poltettu) ja kaikkien poikkeamanapautusten osuvan;
+   * kumpi laji puuttui, kirjataan tekstiin.
+   */
+  vaadi('7. lapun teksti ottaa napautuksen myös sormen poikkeamalla '
+    + `(${KOSKETUSPOIKKEAMA_PX} px musteen ulkopuolelta), `
+    + (poltettuaOtoksessa && sormiElavia >= 1 ? 'elävällä ja poltetulla musteella'
+      : poltettuaOtoksessa ? 'poltetulla musteella (eläviä ei otoksessa)' : 'elävällä musteella'),
+    sormiKokeita >= 3 && (sormiElavia >= 1 || sormiPoltettuja >= 1) && sormiOsui === sormiKokeita,
+    `poikkeamanapautuksia ${sormiKokeita} (eläviä ${sormiElavia}, poltettuja `
+    + `${sormiPoltettuja}), oikein ${sormiOsui}`);
+  if (!poltettuaOtoksessa) {
+    tieto('7. poltettu muste otoksen ulkopuolella',
+      'yhdessäkään näkymässä ei ollut nimettyä POLTETTUA nostoa ruudulla '
+      + '(uusi polttoketju polttaa vain kaupungin ULKOPUOLISET nostot) — '
+      + 'poikkeamanapautus mitattiin pelkällä elävällä musteella');
+  }
+
+  tieto('sivun virheet', virheet.length ? virheet.join(' | ') : 'ei yhtään');
+}
+
+await selain.close();
+palvelin.close();
+console.log(`\n${lapi}/${kaikki} vartiota läpi`);
+process.exit(lapi === kaikki ? 0 : 1);

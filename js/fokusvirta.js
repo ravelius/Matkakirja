@@ -1,3 +1,4 @@
+import { ilmoitaLivianTilanne, ilmoitaLivianTunne } from './livia-tilanteet.js';
 /*
  * FOKUSMOODIN ANNOSTELUVIRTA — kaupungin esittely kortteina kartan päällä.
  *
@@ -83,12 +84,48 @@
  */
 
 import {
-  fokusmoodiPaalla, html, jaaKappaleiksi, lehtivinkkiPiilotettu, nielaiseSulkevaNapautus,
-  piilotaLehtivinkki, polloNimilappu,
+  fokusmoodiPaalla, html, jaaKappaleiksi, jaaPuheenvuoroksi,
+  linssiEstaa, nielaiseSulkevaNapautus, onkoKartanLiike, polloNimilappu,
+  suurennoksenMitat,
 } from './ui-apurit.js';
-import { asetaTehtavakuittaus, fokusAarreAvattu, fokusAarreVastattu } from './fokustehtavat.js';
+import {
+  asetaTehtavakuittaus, fokusAarreAvattu,
+  // Sähketehtävän oma pullakauppa käyttää samaa nimitaulua ja samaa
+  // kaksoisnapautuskaavaa kuin aarteen pullavinkki (ks. PULLA SÄHKEESSÄ).
+  pullaOstosnappi, pullanNimi,
+} from './fokustehtavat.js';
 import { asetaKuva, julisteUrl } from './media.js';
+import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
+// Ilmepaketti (omistaja 5.9.2026): kynän korostus pöllön vinkkiin ja sähkeen kysymysriviin.
+import { korostaSana, korostaSisalto } from './ilme.js';
 import { el } from './mapart.js';
+/*
+ * MATKAKIRJAN TILAPÄINEN LYHENNYS (omistaja 11.9.2026, Raamattu
+ * SAAPUMISEN UUSI JARJESTYS…): kortin teksti päättyy kaksi lausetta
+ * ennen pakin tekstin loppua. Sääntö asuu omassa moduulissaan, koska
+ * myös luenta tarvitsee sen (js/luenta.js lopetaOsuuteen).
+ */
+import { MATKAKIRJAN_LYHENNYS_LAUSEITA, lyhennaLauseita } from './lausejako.js';
+/*
+ * KAUPUNGIN MINITRAILERI (omistaja 11.9.2026): kolme herokuvaa ja nimi
+ * ennen isoisän ääntä. Fokusvirta ei näytä traileria itse — js/ui.js
+ * odottaa sen lupauksen — mutta se SIIVOAA sen: kaupungista lähtö on
+ * täällä, ja ruudulle jäänyt traileri peittäisi uuden kaupungin.
+ */
+import { piilotaSaapumistraileri, soitaKameranKlik } from './saapumistraileri.js';
+/*
+ * Luentakuvan paikka ja ankkuri ovat puhtaita funktioita omassa
+ * moduulissaan (js/saapumisasento.js): sama kaava palvelee kameran
+ * saapumisasentoa, ja sijainti on testattavissa ilman DOMia.
+ */
+import {
+  laudaltaRuudulle, luentakuvanPerusleveys, luentakuvanSijainti,
+  onRaahaus, ruudultaLaudalle, pienenKuvanParinPaikat, LUENTAKUVAN_KUVASUHDE,
+  PIENEN_KUVAN_KORKEUS_PX, PIENEN_KUVAN_NOSTO_PX, PARIN_RAKO_PX,
+} from './saapumisasento.js';
+// Pallon tarkka ruutupaikka kääntyy takaisin laudan pisteeksi laudan
+// omalla projektiolla (ks. pallonProjektio alempana).
+import { projisoiLaudalle } from './fokusmitat.js';
 import { valokuvaUrl, valokuvaVara, valokuvaSuurennos } from './packs/africa-valokuvat.js';
 // Vihjelinkin osiotunniste ja sen näyttönimi (ks. piirraVihjelinkki).
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
@@ -98,8 +135,26 @@ import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 // Rekisteri myös kokonaisena: sähketehtävän sisältöhakemisto kerää
 // maan kaupunkien virroista täkyjen ja nostojen otsikot.
 import { FOKUSVIRRAT, fokusvirtaKaupungille } from './packs/fokusvirrat.js';
-import { livianPaljastusOdottaa } from './livia.js';
-import { luennanLoppuun } from './luenta.js';
+import {
+  LIVIAN_LEHTIVINKIN_SANA, LIVIAN_LEHTIVINKKI, livianKuplanLukuaika,
+  livianLehtivinkkiOdottaa, livianPaljastusKesken, merkitseLehtivinkkiNahdyksi,
+} from './livia.js';
+/*
+ * PULUN ÄÄNI EUROOPAN KAUPUNGEISSA (Raamattu: VAIN EUROOPPA TYÖN ALLA).
+ * Kupla tulee ensin, ääni seuraa sitä — sama sopimus kuin avauksessa
+ * (js/livia.js naytaRepliikki). Muut kaupungit ovat hiljaisia ilman
+ * ehtoja kutsupaikoissa: livianKaupunkiIndeksi palauttaa niille null.
+ *
+ * YKSI KUPLA = YKSI ÄÄNITIEDOSTO (omistaja 7.9.2026): pakkauksen kenttä
+ * voi olla taulukko, jonka jokainen alkio on oma kupla ja oma äänite.
+ * livianKentanKuplat normalisoi kummankin muodon samaksi listaksi.
+ */
+import {
+  livianAanenKesto, livianKaupunkiAanitetty, livianKentanKuplat, livianKenttaPinoutuu,
+  livianKuplanAika, livianKuplanAjastin, livianKuplat, pysaytaLivianAani,
+  soitaLivianAani, soitaLivianKaupunkiAani,
+} from './liviapuhe.js';
+import { aaniKuuluu, luennanLoppuun, stopDiaryVoice } from './luenta.js';
 import { natiiviVastaus } from './natiivi.js';
 // Sähketehtävän vapaa vastaus lainaa pöllöltä kaksi asiaa: odotusrivin
 // mietintärepliikit ja saman välityspalvelinosoitteen kuin chat.
@@ -108,10 +163,30 @@ import {
   POLLO_KEHITTAJAKOODI_AVAIN,
   POLLO_KEHITTAJA_OTSAKE,
   arvoMietinta,
-  polloSaapumiskupla,
+  polloPuheenvuoro,
+  polloVihje,
 } from './pollo.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
+/*
+ * PULU-CAM (Raamattu 9.9.2026): pulun nykyajan kuvat nousevat pakaksi
+ * isoisän luentakuvan päälle kommentin alkaessa, ja päällimmäisen
+ * napautus avaa yhteisen karusellin. Pakan piirto ja ajastin asuvat
+ * omassa moduulissaan; osoitteet ja karuselli tulevat täältä
+ * takaisinkutsuina, jottei kehää synny (js/pulucam.js).
+ */
+import {
+  naytaPuluCamPakka, nostaPuluCamKortti, piilotaPuluCamPakka, pulunKuvat, puluCamMerkki,
+  puluCamPakassa, PULUCAM_POHJA,
+} from './pulucam.js';
 import { sfx } from './sound.js';
+import { lisaaLukijanappi } from './lukija.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
+/*
+ * HAVAINNEKUVA-LINKKI PITKÄN KUVATEKSTIN PERÄÄN (omistaja 9.9.2026 klo
+ * 18.50). Lähderivin oma maininta säilyy ennallaan; tämä on sen rinnalle
+ * tuleva erillinen linkki, joka avaa saman selitteen (js/havainnekuva.js).
+ */
+import { havainnekuvaLinkki } from './havainnekuva.js';
 
 /*
  * MINIVISAN PALKKIO. Raamatun osio "Aarteet ja eteneminen" antaa pienen
@@ -186,8 +261,33 @@ export const TAKY_PALKKIO = 50;
  * vapaassa tutkinnassa. Lehtilukko pitää huolen siitä, ettei kahta
  * annostelijaa ole yhtä aikaa auki: lehti — ja sen tehtävät — aukeaa
  * vasta laatan käännyttyä.
+ *
+ * ── KORTIT POIS (omistaja 2.9.2026 ilta: *"Mikä tuo koko kortti edes
+ *    on? Ei tuollaisia pitäisi olla ollenkaan."*) ──────────────────
+ *
+ * Pelitesti v1466–v1467 päätti kysymyksen: korttiannostelua (matkakirja
+ * → Livian kupla → oppitunti → kohtaamiskortti) EI näytetä missään
+ * kaupungissa — ei saapumisesta, ei Tutki-napista, ei laatasta eikä
+ * vihreästä pisteestä. Lippu on `false`, ja kulku on kevyen kulun oma:
+ *
+ *   kaupunkilehti aukeaa suoraan → lehden nimetyt tehtävät →
+ *   kohtaaminen ja laattakysymys lehden tehtävänapista, laatasta tai
+ *   vihreästä pisteestä → aarre
+ *
+ * Kohtaaminen (paikallisen kuva ja repliikki) elää laattakysymyksen
+ * kortissa (js/visa.js, js/kohtaamiskuvat-data.js), ei tämän moduulin
+ * kortilla. Vihreä piste avaa siksi laattakysymyksen SUORAAN
+ * (avaaFokusKohtaaminen) — ainoa poikkeus on pöllön sähketehtävä
+ * (Tukholma), jonka vastauslomake on oma pintansa eikä esittelykortti.
+ * Lehden tehtävänappi ei enää väisty pistettä (js/ui.js
+ * tehtavaNapinTila): Raamatun 2.9.2026 linjaus sanoo, että
+ * laattakysymykseen pääsee lehden tehtävänapista ja laatasta.
+ *
+ * Koodi säilyy lipun takana Raamatun 24.8.2026 kirjauksen mukaan
+ * ("lipun taakse, ei poisteta") — mutta sitä ei käännetä enää päälle
+ * ilman omistajan uutta päätöstä. Alla oleva 29.8. kirjaus on historiaa.
  */
-export const FOKUSVIRTA_KORTIT = true;
+export const FOKUSVIRTA_KORTIT = false;
 
 /**
  * Virran vaiheet. Viimeinen on "virta pelattu läpi".
@@ -305,6 +405,43 @@ export function fokusvirtaLukitseeLehden(ui, city) {
 }
 
 /**
+ * SAAKO LIIKU-NAPPI NÄKYÄ JUURI NYT? — VASTAUS ON AINA KYLLÄ.
+ *
+ * Omistajan linjaus 13.9.2026 (Raamattu, KARTTAUUDISTUS, sanatarkasti:
+ * *"Alareunassa onkin kokojan nakyvilla pieni 'liiku' nappi."* ja
+ * *"Pelaaja voi myos halutessaan jatkaa matkaa ilman loytamatta
+ * aarretta."*). Nappi on siis PYSYVÄ eikä palkinto.
+ *
+ * KUMOAA 25.8.2026 LAATTAPORTIN. Silloin nappi ilmestyi vasta kun
+ * kaupungin laatta oli käännetty (`game.tokens.has(city.id)` pois).
+ * Portti oli tehty TÄYDELLE fokusvirtapakille, jossa laatan kääntävä
+ * ketju on aina olemassa: matkakirja → täky → kohtaaminen →
+ * aarrekysymys. KEVYELLÄ PAKILLA (js/packs/fokusvirrat.js
+ * KEVYET_FOKUSVIRRAT: alpit, islanti, kreeta, lappi, sisilia, tromssa)
+ * sitä ketjua ei ole — ei kohtaamispistettä, ei lehtitehtävää, ei
+ * aarteen avaavaa kysymystä — mutta laatta on. Portti jäi siis
+ * ikuisesti kiinni ja pelaaja jäi kohteeseen ilman ainuttakaan tapaa
+ * jatkaa matkaa (Codexin pelitesti v1855, Alpit).
+ *
+ * TURVARAJAT EIVÄT OLE TÄSSÄ. Vuoron vaihe (botti, 'move', 'event',
+ * 'quiz', 'offer', 'pickstart'), saapumistraileri ja intro ratkaistaan
+ * js/ui.js:n renderActionsissa, joka ei piirrä riviä lainkaan; liu'un
+ * estot (ei matkustustapoja, linssikartan kuori) asettavat napin
+ * `disabled`-tilan piirraToimintorivissä. Tämä sääntö vastaa vain
+ * siihen, onko nappi OLEMASSA — ja se on.
+ *
+ * Funktio ottaa `ui`:n vastaan, jotta kytkentä js/ui.js:ssä pysyy
+ * yhtenä kutsuna, jos linjaus joskus saa ehtoja takaisin.
+ *
+ * @param {object} _ui Pelin käyttöliittymä (ei luettavia ehtoja nyt).
+ * @returns {boolean} aina true
+ */
+// eslint-disable-next-line no-unused-vars
+export function liikuNappiNakyvissa(_ui) {
+  return true;
+}
+
+/**
  * ONKO KAUPUNGIN LAATTA JO ANSAINNUT PAIKKANSA LEHDEN PÄÄLLÄ?
  *
  * Omistajan pelitestipalaute v1097 (iPad): *"Ota pallot pois"* —
@@ -362,18 +499,26 @@ export function fokusvirtaLaattaNakyy(ui, city) {
  */
 export function fokusvirtaOhittaaLehden(ui, city) {
   /*
-   * LEHTILUKKO POIS KEVYESSÄ KULUSSA. Kokeilun koko idea on, että
-   * kaupunkilehti AUKEAA SUORAAN myös fokusmoodissa: lehti on nyt se
-   * pinta, joka annostelee (nimetyt minitehtävät sivuilla 2 ja 3), eikä
-   * sitä vastaan ole enää mitään lukittavaa.
+   * LEHTILUKKO ON PURETTU LOPULLISESTI (omistaja 2.9.2026 ilta:
+   * *"Kohdekaupunki avaa aina kaupunkilehden ei mitään muuta"*).
+   *
+   * Korttien ollessa päällä (FOKUSVIRTA_KORTIT) tämä funktio kaappasi
+   * kaupungin napautuksen laatan kääntöön asti ja avasi lehden sijasta
+   * virran kortin — Sofiassa oppitunnin "Serdica — kaupunki lähteiden
+   * päällä". Pelaajalle se näytti siltä, ettei kaupunkia saa auki.
+   *
+   * Nyt kaupungin napautus avaa AINA kaupunkilehden. Virran kortti
+   * aukeaa vain saapumisen omasta kytkennästä (fokusvirtaSaapuminen:
+   * kerran tutki-sykkeen jälkeen) ja etenee matkakirjakortin ja Livian
+   * kuplan kautta (fokusvirtaMerkintaLuettu). Kortin sulkeminen ei
+   * lukitse mitään: laattakysymykseen pääsee lehden tehtävänapista ja
+   * laatasta kuten muissakin kaupungeissa.
+   *
+   * Parametrit jäävät allekirjoitukseen, koska ui.js openArrival kutsuu
+   * tätä kytkentäkohtana; paluuarvo on aina false = lehti aukeaa.
    */
-  if (!FOKUSVIRTA_KORTIT) return false;
-  if (!fokusvirtaLukitseeLehden(ui, city)) return false;
-  const data = fokusvirtaSisalto(ui, city);
-  const tila = fokusvirtaTila(ui.game, city);
-  if (tila.vaihe === 'matkakirja') siirry(ui, city, data, 'jatka');
-  else avaaFokusvirta(ui, city);
-  return true;
+  void ui; void city;
+  return false;
 }
 
 /* ==================== VAIHE 1: YLÄVASEN MATKAKIRJAKORTTI ============ */
@@ -427,9 +572,30 @@ export function fokusvirtaMatkakirja(ui, city) {
   return {
     avain: `fokus:${ui.game.pack.id}:${city.id}`,
     paikkarivi: merkinta.paikkarivi ?? city.name,
-    teksti: merkinta.teksti,
+    ...lyhennettyMerkinta(merkinta.teksti),
     kuva: merkinta.kuva ?? null,
   };
+}
+
+/**
+ * TILAPÄINEN LYHENNYS YHDESTÄ PAIKASTA (omistaja 11.9.2026,
+ * sanatarkasti: *"lyhenna tilapaisesti matkakirjojen tekstista ja
+ * luennasta kaksi viimeista lausetta pois"*).
+ *
+ * KOKO TEKSTI KULKEE MUKANA (`tekstiKoko`), koska luenta ei katkea
+ * tekstistä vaan äänitteestä: kutsuja laskee merkkiosuuden ja
+ * pysäyttää luennan siihen lauserajaan (js/ui.js renderFact →
+ * js/luenta.js playDiaryVoice `lopetaOsuuteen`). Pakkien tekstejä,
+ * luentareaktioiden ankkureita eikä äänitteitä ei kosketa — ne lukevat
+ * pakista suoraan, ja paluu entiseen on yhden luvun vaihto
+ * (js/lausejako.js MATKAKIRJAN_LYHENNYS_LAUSEITA = 0).
+ *
+ * @param {string} teksti pakin koko merkintä
+ * @returns {{teksti:string, tekstiKoko:string, lyhennetty:boolean}}
+ */
+function lyhennettyMerkinta(teksti) {
+  const lyhyt = lyhennaLauseita(teksti, MATKAKIRJAN_LYHENNYS_LAUSEITA);
+  return { teksti: lyhyt, tekstiKoko: teksti, lyhennetty: lyhyt !== teksti };
 }
 
 /**
@@ -511,17 +677,20 @@ export function fokusvirtaMerkintaLuettu(ui, city) {
  * saapumisrepliikki ovat sama puheenvuoro eri sisällöllä, ja muisti
  * (ui.saapumiskuplaNaytetty) on niille yhteinen.
  *
- * ATEENA VAIKENEE YHÄ. Aloituskaupungin saapumissekvenssillä on jo
- * kaksi ohjekuplaa ("Tervetuloa Kreikkaan…" ja "Klikkaa kaupungin
- * kultaista merkkiä", js/ui.js saapumisenKuplat), ja ne opettavat
- * pelin — kolmas kupla veisi tilaa juuri siltä ohjeelta, jota pelaaja
- * siinä hetkessä eniten tarvitsee. Sama kuplaperhe kun on kyseessä,
- * kolmas kupla myös KORVAISI ohjeen ruudulla. Ateenan maadoitusteksti
- * jää odottamaan fokusvirran kytkintä eikä sitä poisteta.
+ * ATEENAN VAIENNUS PURETTU (omistaja 8.9.2026: "ateena on ainut
+ * kaupunki jossa on saapumiskupla eli sen voi palauttaa"). Ateena
+ * vaikeni 28.8.–8.9.2026 aloituskaupungin kahden ohjekuplan tieltä
+ * ("Tervetuloa Kreikkaan…", "Klikkaa kaupungin kultaista merkkiä",
+ * js/ui.js saapumisenKuplat). Kun Ateena siirtyi 8.9.2026 samaan
+ * kulkuun kuin muut kaupungit (yksi kommenttikupla luennan jälkeen,
+ * js/packs/fokusvirta-ateena.js), kupla palautettiin: se tulee vasta
+ * isoisän luennan päätyttyä, ei ohjekuplien päälle. Joukko on jätetty
+ * paikoilleen tyhjänä, jotta vaiennus on yksi rivi, jos sitä joskus
+ * taas tarvitaan.
  */
 
-/** Kaupungit, joissa saapumiskupla vaikenee (ks. yllä). */
-const SAAPUMISKUPLA_VAITI = new Set(['ateena']);
+/** Kaupungit, joissa saapumiskupla vaikenee (ks. yllä). Nyt tyhjä. */
+const SAAPUMISKUPLA_VAITI = new Set();
 
 /*
  * ------------------------------------------------------------------
@@ -562,7 +731,7 @@ const SAAPUMISKUPLA_VAITI = new Set(['ateena']);
  *     sä. Kevyet täytesanat (no, niin, kato) säästellen, ja Kääk vain
  *     aidossa säikähdyksessä. Kirjakielinen abstraktio on tässä virhe.
  */
-const LIVIAN_SAAPUMISET = {
+export const LIVIAN_SAAPUMISET = {
   /* (b) pröystäily — Venetsian torilla suku on kotonaan. */
   venetsia: 'Venetsia. Täs kaupungissa minun sukuni istuu torilla '
     + 'kuin virkamiehet: Columba Livia, jos joku kysyy — ja täällä '
@@ -628,6 +797,342 @@ const LIVIAN_SAAPUMISET = {
  * kertoja saa lopettaa lauseensa ennen kuin Livia aloittaa omansa.
  */
 const SAAPUMISKUPLAN_TAUKO_MS = 900;
+/** Kuinka usein kommentti kysyy, onko Livian paljastussarja ohi. */
+const SAAPUMISKUPLAN_PALJASTUSVALI_MS = 500;
+/** Enimmäisodotus paljastukselle; sen jälkeen kommentti tulee joka tapauksessa. */
+const SAAPUMISKUPLAN_PALJASTUSKATTO_MS = 90_000;
+/** Kuinka usein kommentti kysyy, onko lykätty luenta jo lähtenyt. */
+const SAAPUMISKUPLAN_LUENTAVALI_MS = 400;
+/** Enimmäisodotus lykätylle luennalle (varoventtiili). */
+const SAAPUMISKUPLAN_LUENTAKATTO_MS = 30_000;
+
+/**
+ * ÄÄNITETYN REPLIIKIN KUPLARYTMI.
+ *
+ * Osiin jaettu puheenvuoro (js/pollo.js naytaPuheenvuoro) etenee
+ * oletuksena sanamäärään sidotulla lukurytmillä, joka on selvästi
+ * nopeampi kuin pulun puhe. Kun repliikki on äänitetty, osat odottavat
+ * kuplan LUKUAIKAA — sama sääntö kuin avauksessa (js/livia.js
+ * livianKuplanLukuaika), jonka vakiot on mitoitettu juuri puheen
+ * mittaan. Kuplat pinoutuvat eivätkä korvaa toisiaan, joten koko
+ * repliikki jää ruudulle siksi aikaa kun se puhutaan.
+ *
+ * KUPLA ODOTTAA PUHEEN LOPPUUN (7.9.2026). Lukuaika on arvio tekstin
+ * pituudesta, ja osa generoiduista repliikeistä puhuu sitä pidempään.
+ * Siksi rytmi kysyy myös SOIVALTA ÄÄNITTEELTÄ sen todellisen keston
+ * (js/liviapuhe.js livianKuplanAika): kupla vaihtuu vasta kun puhe on
+ * ohi. Soittimen antaa js/pollo.js ajastaPuheenvuoro `aani`-
+ * takaisinkutsun paluuarvona.
+ *
+ * Kaupunki, jota ei ole äänitetty, saa tyhjän asetusolion — rytmi
+ * pysyy ennallaan eikä kutsupaikkaan tarvita ehtoa.
+ *
+ * @param {string} kaupunkiId kaupungin tunnus
+ * @param {string} kentta pakkauksen kentän nimi
+ * @returns {object} lisäasetukset polloPuheenvuorolle
+ */
+function livianPuherytmi(kaupunkiId, kentta) {
+  return livianKaupunkiAanitetty(kaupunkiId, kentta)
+    ? { viive: (teksti, aani) => livianKuplanAika(livianKuplanLukuaika(teksti), aani) } : {};
+}
+
+/**
+ * PUHEENVUORON OSAT JA NIIDEN ÄÄNET (omistaja 7.9.2026).
+ *
+ * Kaksi muotoa, yksi kutsupaikka. Kun kenttä on KIRJOITETTU KUPLIKSI
+ * (taulukko, tai jokin LIVIAN_KUPLAKENTAT-kentistä), jokainen alkio on
+ * oma kupla ja oma äänitiedosto — osat tulevat sellaisinaan ja jokainen
+ * soittaa oman äänensä. Kun kenttä on yhä yksi pitkä merkkijono (esim.
+ * Ateenan maadoitus), jako virkkeisiin on entinen (jaaPuheenvuoroksi) ja
+ * koko kenttä on yksi äänite, joka soi ensimmäisen osan kohdalla.
+ *
+ * @param {object} ui pelin käyttöliittymä
+ * @param {string} kaupunkiId kaupungin tunnus
+ * @param {string} kentta pakkauksen kentän nimi ('' = ei äänitetty)
+ * @param {string[]} kuplat kentän kuplat (livianKentanKuplat)
+ * @returns {{osat:string[], aani:(i:number, teksti:string) => void}}
+ */
+function livianOsatJaAani(ui, kaupunkiId, kentta, kuplat) {
+  if (!livianKenttaPinoutuu(kentta, kuplat.length)) {
+    return {
+      osat: kuplat,
+      aani: (i, teksti) => soitaLivianKaupunkiAani(ui, kaupunkiId, kentta,
+        { kupla: i, teksti }),
+    };
+  }
+  const teksti = kuplat[0] ?? '';
+  return {
+    osat: jaaPuheenvuoroksi(teksti),
+    // Paluuarvo on soitin: js/pollo.js antaa sen rytmille, joka odottaa
+    // puheen loppuun (livianPuherytmi).
+    aani: (i) => (i === 0
+      ? soitaLivianKaupunkiAani(ui, kaupunkiId, kentta, { teksti })
+      : null),
+  };
+}
+
+/**
+ * KUPLASARJAN NÄKYVÄ AIKA: osien lukuaikojen summa.
+ *
+ * Kuplat eivät korvaa toisiaan vaan seuraavat toisiaan omalla
+ * lukuajallaan (js/pollo.js ajastaPuheenvuoro), joten koko repliikin
+ * mitta on niiden summa. Sitä tarvitaan siellä, missä jokin muu odottaa
+ * puheen loppuun (sähkelento ja aarteen paljastus).
+ */
+function livianSarjanKesto(kuplat) {
+  return kuplat.reduce((summa, teksti) => summa + livianKuplanLukuaika(teksti), 0);
+}
+
+/* ============ KAUPUNGIN KULKU: LUENTA — PULU =======================
+ *
+ * Raamattu, KAUPUNGIN KULKU: EI KUVIA, PULU - LUENTA - PULU (omistaja
+ * 7.9.2026) — ja sen kavennus 8.9.2026, sanatarkasti: *"ota kaikki
+ * pulun alustukset pois."* Saapuminen on nyt kaksi pulun hetkeä, ja
+ * kumpikin lukee pakkauksen `pollo`-lohkosta:
+ *
+ *   1. HUUDAHDUS (`pollo.huudahdus`) — enintään yksi lyhyt välihuuto
+ *      LUENNAN AIKANA siinä kohdassa, jonka `kohta` nimeää.
+ *   2. KOMMENTTI (`pollo.kommentti`) — 1-2 kuplaa luennan jälkeen.
+ *
+ * ISOISÄ ALOITTAA. Alustuskupla ennen luentaa on poistettu joka
+ * kaupungista, eikä luentaa siksi enää lykätä pulun takia: se lähtee
+ * liikkeelle heti merkinnän piirrosta (js/ui.js renderFact →
+ * asetaMerkinnanLuenta). Ainoa lykkäys on yhä Ateenan ensisaapumisen
+ * tuurauspaljastus (js/livia.js odotaLuenta), ja välihuuto odottaa
+ * senkin (fokusvirtaHuudahdus).
+ *
+ * VARAPOLKU: kaupunki, jota ei ole vielä kirjoitettu uusiksi, käyttää
+ * yhä `pollo.maadoitus`-kenttää, ja se piirtyy kommenttina eli
+ * luennan jälkeen kuten ennenkin. Kulku ei siis vaadi kaikkien
+ * kaupunkien uudelleenkirjoitusta yhdellä kertaa.
+ */
+
+/**
+ * EDELLISEN KAUPUNGIN PUHEENVUORO PÄÄTTYY LÄHTÖÖN (omistaja 8.9.2026,
+ * sanatarkasti: *"pulun ja kertojan äänet menevät päällekkäin ja pulu
+ * selittää ensin jotain ihan väärää juttua"*).
+ *
+ * Kaupungin kulku on ketju ajastimia (luenta → huudahdus →
+ * kommentti), ja jokainen niistä kysyy kaupunkia vasta lauetessaan.
+ * Kesken jäänyt ÄÄNITE ei kysy mitään: se soi loppuun, vaikka pelaaja
+ * on jo toisessa kaupungissa. Kehittäjän hyppy (js/ui.js
+ * doKehittajaSiirto) tekee juuri sen — ja silloin uuden kaupungin
+ * kertoja alkaa edellisen kaupungin repliikin päälle.
+ *
+ * Tämä on se yksi paikka, joka katkaisee ketjun lähdettäessä: kaikki
+ * pulun kaupunkiajastimet ja soiva repliikki. Kuplat jäävät ruudulle
+ * kuten ennenkin — ne ovat tekstiä, eivät ääntä, ja pelaaja saa lukea
+ * ne loppuun.
+ *
+ * Paljastussarjaa (js/livia.js) EI tarvitse listata: se vartioi
+ * kaupunkiaan itse jokaisessa repliikissä (paljastusRepliikki cityId).
+ */
+export function vaiennaLivianKaupunkipuhe(ui) {
+  if (!ui) return;
+  for (const ajastin of [
+    'saapumiskuplaAjastin', 'huudahdusAjastin', 'huudahdusLykkaysAjastin',
+    'huudahdusVaraAjastin', 'huudahdusPoisAjastin', 'polloKuplasarjaAjastin',
+    'livianKorttiSarja', 'fokusvinkkiAjastin',
+  ]) {
+    clearTimeout(ui[ajastin]);
+    ui[ajastin] = null;
+  }
+  pysaytaLivianAani(ui);
+  /*
+   * LUENTAKUVA LÄHTEE SAMASSA (omistaja 9.9.2026): kartan päällä oleva
+   * kuva kuuluu sen kaupungin luentaan, jonka ajaksi se nousi, ja tämä
+   * on se yksi paikka, joka päättää kaupungin puheenvuoron
+   * lähdettäessä. Kuva häipyy pehmeästi kuten kuplatkin.
+   */
+  piilotaLuentakuva(ui);
+  /*
+   * OHITA LÄHTEE KAUPUNGIN MUKANA (PAATOKSET 43 kohta 10). Nappi ei
+   * ole päällyksen lapsi eikä siis lähde piilotaLuentakuvan mukana —
+   * ja juuri se on koko korjauksen idea. Kaupungista lähtö on silti
+   * sen puheenvuoron loppu, jonka ajaksi nappi nousi, joten tämä yksi
+   * kohta vie sen. Kartan liike ja lapun napautus EIVÄT kulje täältä.
+   */
+  piilotaOhitaNappi(ui, { heti: true });
+  // Kesken jäänyt minitraileri ei saa jäädä uuden kaupungin päälle.
+  piilotaSaapumistraileri(ui, { peru: true });
+}
+
+/** Kaupungin uuden kulun kentät yhtenä oliona (tyhjät listat, jos ei ole). */
+function kulunKuplat(ui, city) {
+  const data = fokusvirtaSisalto(ui, city);
+  const kommentti = livianKentanKuplat(data, 'kommentti');
+  const maadoitus = livianKentanKuplat(data, 'maadoitus');
+  return {
+    huudahdus: data?.pollo?.huudahdus ?? null,
+    // Uusi kenttä voittaa; vanha maadoitus on varapolku samassa paikassa.
+    jalkeen: kommentti.length ? kommentti : maadoitus,
+    jalkeenKentta: kommentti.length ? 'kommentti' : (maadoitus.length ? 'maadoitus' : ''),
+  };
+}
+
+/**
+ * ONKO TÄSSÄ KAUPUNGISSA UUSI KULKU? (js/ui.js renderFact.)
+ *
+ * Uuden kulun kaupungissa matkakirjakortille EI piirretä kuvaa
+ * (omistaja 7.9.2026: kuvat kuuluvat kaupunkilehteen), vaikka
+ * pakkauksessa olisi vanha `matkakirja.kuva`.
+ */
+export function fokusvirtaUusiKulku(ui, city) {
+  if (FOKUSVIRTA_KORTIT || !city) return false;
+  return kulunKuplat(ui, city).jalkeenKentta === 'kommentti';
+}
+
+/**
+ * VÄLIHUUTO LIIKKEELLE (js/ui.js renderFact).
+ *
+ * Kutsutaan HETI luennan rekisteröinnin jälkeen: huudahduksen ajoitus
+ * lasketaan luennan kestosta ja se lasketaan siitä hetkestä, jona
+ * kertoja aloittaa — sama hetki, jona tämä kutsutaan.
+ *
+ * KERRAN PER SAAPUMINEN. Kortti voi piirtyä uudelleen samassa
+ * kaupungissa (aikataulurivi, laatan ratkeaminen), eikä välihuutoa saa
+ * ajastaa kahdesti; muisti on sama avain kuin saapumiskuplalla.
+ *
+ * LYKÄTTY LUENTA ODOTETAAN. Ensisaapumisen tuurauspaljastus (js/livia.js)
+ * pitää luentaa lykkäyksessä, ja ilman odotusta välihuuto ajastettaisiin
+ * luennasta, joka ei ole vielä alkanut. Katto on varoventtiili, jottei
+ * välihuuto jää roikkumaan, jos luenta ei koskaan lähde.
+ *
+ * @returns {boolean} ajastettiinko välihuuto tässä saapumisessa
+ */
+export function fokusvirtaHuudahdus(ui, city) {
+  if (FOKUSVIRTA_KORTIT || !city || !ui?.game?.pack) return false;
+  if (SAAPUMISKUPLA_VAITI.has(city.id)) return false;
+  const kulku = kulunKuplat(ui, city);
+  if (!livianKuplat(kulku.huudahdus)[0]) return false;
+  const avain = `${ui.game.pack.id}:${city.id}`;
+  ui.huudahdusNaytetty ??= new Set();
+  if (ui.huudahdusNaytetty.has(avain)) return false;
+  ui.huudahdusNaytetty.add(avain);
+  const merkinta = fokusvirtaSisalto(ui, city)?.matkakirja?.teksti ?? '';
+  const kaynnista = (jaljella = HUUDAHDUKSEN_LYKKAYSKATTO_MS) => {
+    if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return;
+    if (luentaOhitettu(ui, city)) return;
+    if (ui.luennanLykkays && jaljella > 0) {
+      clearTimeout(ui.huudahdusLykkaysAjastin);
+      ui.huudahdusLykkaysAjastin = setTimeout(
+        () => kaynnista(jaljella - HUUDAHDUKSEN_LYKKAYSVALI_MS),
+        HUUDAHDUKSEN_LYKKAYSVALI_MS,
+      );
+      return;
+    }
+    ajastaHuudahdus(ui, city, kulku.huudahdus, merkinta);
+  };
+  kaynnista();
+  return true;
+}
+
+/** Kuinka usein kysytään, onko lykätty luenta jo lähtenyt. */
+const HUUDAHDUKSEN_LYKKAYSVALI_MS = 500;
+/** Kuinka kauan lykättyä luentaa enintään odotetaan. */
+const HUUDAHDUKSEN_LYKKAYSKATTO_MS = 90000;
+
+/** Huudahduskuplan elinaika: se on välihuuto, ei repliikki. */
+const HUUDAHDUS_NAKYY_MS = 2000;
+/** Huudahdus soi kertojan päälle hiljempaa eikä kertoja väisty. */
+const HUUDAHDUKSEN_VAIMENNUS = 0.7;
+/** Kirjoituskoneen tahti matkakirjakortilla (js/ui.js TYPE_MS). */
+const KIRJOITUSKONE_MS = 50;
+/** Kuinka kauan luennan metatietoja odotetaan ennen varapolkua. */
+const HUUDAHDUKSEN_VARAODOTUS_MS = 1200;
+
+/**
+ * VÄLIHUUTO KESKELLÄ LUENTAA.
+ *
+ * Ajoitus tulee ENSISIJAISESTI luennan äänitteestä: kohdan merkkipaikka
+ * suhteessa tekstin pituuteen kertoo, kuinka pitkälle kertoja on
+ * ehtinyt. Ilman äänitettä (mykistys, kertojatila 'ei') varapolku on
+ * kirjoituskoneen eteneminen, joka on saman tekstin sama osuus.
+ *
+ * Kupla on pieni ja häipyy itsestään kahdessa sekunnissa, ja ääni soi
+ * kertojan PÄÄLLE hiljempaa ilman kertojan väistöä — välihuuto ei saa
+ * katkaista isoisää.
+ */
+function ajastaHuudahdus(ui, city, huudahdus, merkinta) {
+  const kupla = livianKuplat(huudahdus)[0];
+  const kohta = String(huudahdus?.kohta ?? '');
+  const teksti = String(merkinta ?? '');
+  if (!kupla || !kohta || !teksti) return;
+  const paikka = teksti.indexOf(kohta);
+  if (paikka < 0) return;
+  const osuus = paikka / teksti.length;
+  const nayta = () => {
+    if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return;
+    // Ohitettu luenta ei saa välihuutoa: sen kello käy luennan ajassa.
+    if (luentaOhitettu(ui, city)) return;
+    if (!naytaPolloKupla(ui, kupla, { luokka: 'fokusvirta-huudahdus' })) return;
+    soitaLivianKaupunkiAani(ui, city.id, 'huudahdus', {
+      teksti: kupla,
+      vaimennus: HUUDAHDUKSEN_VAIMENNUS,
+      vaista: false,
+    });
+    clearTimeout(ui.huudahdusPoisAjastin);
+    ui.huudahdusPoisAjastin = setTimeout(() => {
+      if (!ui.dead) suljeFokusvirta(ui);
+    }, HUUDAHDUS_NAKYY_MS);
+  };
+  let ajastettu = false;
+  const ajasta = (kestoMs) => {
+    if (ajastettu) return;
+    ajastettu = true;
+    clearTimeout(ui.huudahdusAjastin);
+    ui.huudahdusAjastin = setTimeout(nayta, Math.max(0, kestoMs * osuus));
+  };
+  const audio = ui.diaryVoice;
+  const kesto = () => (Number.isFinite(audio?.duration) && audio.duration > 0
+    ? audio.duration * 1000 : 0);
+  if (kesto()) { ajasta(kesto()); return; }
+  // Kesto tiedetään vasta metatiedoista.
+  audio?.addEventListener('loadedmetadata', () => {
+    if (ui.diaryVoice === audio && kesto()) ajasta(kesto());
+  }, { once: true });
+  /*
+   * VARAPOLKU: KIRJOITUSKONEEN ETENEMINEN. Metatiedot voivat jäädä
+   * tulematta (mykistys, kertojatila 'ei', verkko poikki, puuttuva
+   * äänite), eikä välihuuto saa silloin jäädä kokonaan pois — se on osa
+   * kulkua, ei äänen lisuke. Sama osuus tekstistä, eri kello.
+   */
+  ui.huudahdusVaraAjastin = setTimeout(
+    () => ajasta(teksti.length * KIRJOITUSKONE_MS),
+    HUUDAHDUKSEN_VARAODOTUS_MS,
+  );
+}
+
+/**
+ * KORTILLA OLEVAN REPLIIKIN ÄÄNI KUPLA KERRALLAAN.
+ *
+ * Sähkeen kuittaus (`oikein`) piirtyy KORTILLE eikä kuplapinoon, mutta
+ * teksti on silti Livian puhetta ja jaettu kupliksi — jokainen niistä
+ * on oma äänitiedostonsa. Kortti ei anna rytmiä, joten se otetaan
+ * kuplan lukuajasta: seuraava äänite alkaa, kun edellisen kuplan
+ * lukuaika on kulunut.
+ */
+function soitaLivianKaupunkiSarja(ui, kaupunkiId, kentta, kuplat, i = 0) {
+  const teksti = kuplat[i];
+  if (!teksti) return;
+  // Sarjan loppu kuuluu vain siihen kaupunkiin, jossa se alkoi — sama
+  // vahti kuin kuplasarjoilla (omistaja 8.9.2026).
+  if (ui?.game?.cityOf?.()?.id !== kaupunkiId) return;
+  const aani = soitaLivianKaupunkiAani(ui, kaupunkiId, kentta, { kupla: i, teksti });
+  if (i + 1 >= kuplat.length) return;
+  clearTimeout(ui.livianKorttiSarja);
+  // KUPLA ODOTTAA PUHEEN LOPPUUN: lukuaikaansa pidempi äänite venyttää
+  // ajastinta (js/liviapuhe.js livianKuplanAjastin), joten seuraava
+  // repliikki ei häivytä edellistä kesken lauseen.
+  ui.livianKorttiSarja = livianKuplanAjastin(
+    livianKuplanLukuaika(teksti), aani,
+    () => {
+      if (ui.dead) return;
+      soitaLivianKaupunkiSarja(ui, kaupunkiId, kentta, kuplat, i + 1);
+    },
+    (id) => { ui.livianKorttiSarja = id; },
+  );
+}
 
 /**
  * Livian saapumispuheenvuoro kuplana, kerran per saapuminen.
@@ -660,42 +1165,163 @@ export function fokusvirtaSaapumiskupla(ui, city) {
   if (!city || SAAPUMISKUPLA_VAITI.has(city.id)) return false;
   if (!ui?.game?.pack) return false;
   /*
-   * ENSISAAPUMISEN TUURAUSPALJASTUS VOITTAA (omistaja 29.8.2026).
-   * Livian kahden kuplan paljastus ON sen saapumisen puheenvuoro, ja
-   * yksi puheenvuoro per saapuminen on kuplien sääntö — maadoitus
-   * väistyy sen tieltä ja palaa seuraavissa kaupungeissa
-   * (js/livia.js livianPaljastusOdottaa).
+   * ENSISAAPUMISEN TUURAUSPALJASTUS ENSIN, KOMMENTTI SEN JÄLKEEN.
+   * 29.8.2026 paljastus VOITTI ja maadoitus jäi ensimmäisessä
+   * kaupungissa kokonaan pois ("yksi puheenvuoro per saapuminen").
+   * Omistaja 3.9.2026 (Sarajevo ensimmäisenä kaupunkina): *"pulu ei
+   * vieläkään kommentoi isoisän matkakirjan tekstiä kun saavutaan
+   * uuteen kaupunkiin"*. Kuplapinon (v1489) jälkeen sääntö on
+   * tarpeeton: paljastus tulee ensin, ja kommentti odottaa sen
+   * päättymistä (odotaPaljastus alla) ja tulee samaan pinoon.
    */
-  if (livianPaljastusOdottaa(ui)) return false;
-  const maadoitus = fokusvirtaSisalto(ui, city)?.pollo?.maadoitus ?? null;
+  const kulku = kulunKuplat(ui, city);
   /*
-   * Korttivirrassa maadoitus on jo pöllökortin ensimmäinen kappale
-   * (piirraPollo) — kupla toistaisi sen sanasta sanaan. Saapumisrepliikki
-   * ei ole millään kortilla, joten se tulee kuplaan kummallakin virralla.
+   * Korttivirrassa pöllön puhe on jo kortilla (piirraPollo) — kupla
+   * toistaisi sen sanasta sanaan. Saapumisrepliikki ei ole millään
+   * kortilla, joten se tulee kuplaan kummallakin virralla.
    */
-  if (FOKUSVIRTA_KORTIT && maadoitus) return false;
-  const teksti = maadoitus ?? LIVIAN_SAAPUMISET[city.id] ?? '';
-  if (!teksti) return false;
+  if (FOKUSVIRTA_KORTIT && kulku.jalkeen.length) return false;
+  const kentta = kulku.jalkeenKentta;
+  const kuplat = kulku.jalkeen.length
+    ? kulku.jalkeen : livianKuplat(LIVIAN_SAAPUMISET[city.id]);
+  if (!kuplat.length) return false;
   const avain = `${ui.game.pack.id}:${city.id}`;
   ui.saapumiskuplaNaytetty ??= new Set();
   if (ui.saapumiskuplaNaytetty.has(avain)) return false;
   ui.saapumiskuplaNaytetty.add(avain);
+  /*
+   * Paljastus on kuplasarja, joka alkaa vasta luennan ja viiveen
+   * jälkeen (js/ui.js saapumisenKuplat) ja etenee napautuksin tai
+   * lukuajoin. Kommentti kysyy puolen sekunnin välein, onko sarja ohi;
+   * katto pitää huolen, ettei kommentti jää ikuisesti odottamaan, jos
+   * sarja ei jostain syystä koskaan ala (esim. katselutila).
+   */
+  const odotaPaljastus = (jatka, jaljella = SAAPUMISKUPLAN_PALJASTUSKATTO_MS) => {
+    if (ui.dead || luentaOhitettu(ui, city)) return;
+    /*
+     * LINSSI PYSÄYTTÄÄ KELLON (omistajan tilaus 4.9.2026: linssin
+     * aikana kaikki muu on kiinni). Paljastussarja odottaa linssin
+     * sulkeutumista (js/livia.js paljastusRepliikki), joten myös
+     * kommentin katto pysähtyy siksi aikaa: muuten 90 sekunnin katto
+     * laukeaisi pelkän linssiajon takia ja kommentti tulisi
+     * paljastuksen PÄÄLLE heti kun linssi sulkeutuu.
+     */
+    const linssissa = linssiEstaa();
+    if (!linssissa && (!livianPaljastusKesken(ui) || jaljella <= 0)) { jatka(); return; }
+    ui.saapumiskuplaAjastin = setTimeout(
+      () => odotaPaljastus(jatka, linssissa ? jaljella : jaljella - SAAPUMISKUPLAN_PALJASTUSVALI_MS),
+      SAAPUMISKUPLAN_PALJASTUSVALI_MS,
+    );
+  };
   const nayta = () => {
+    // Ohitettu luenta ei avaa pulun puheenvuoroa (ohitaSaapumisluenta).
+    if (luentaOhitettu(ui, city)) return;
     clearTimeout(ui.saapumiskuplaAjastin);
-    ui.saapumiskuplaAjastin = setTimeout(() => {
-      if (ui.dead) return;
+    ui.saapumiskuplaAjastin = setTimeout(() => odotaPaljastus(() => {
+      if (ui.dead || luentaOhitettu(ui, city)) return;
       // Pelaaja on voinut lähteä kaupungista tai aloittaa uuden pelin
       // luennan aikana: puheenvuoro kuuluu vain tähän kaupunkiin.
       if (ui.game?.cityOf?.()?.id !== city.id) return;
-      polloSaapumiskupla(teksti);
-    }, SAAPUMISKUPLAN_TAUKO_MS);
+      /*
+       * PUHEENVUORO OSISSA (omistajan tilaus 3.9.2026): maadoitus on
+       * pisin kupla pelissä, ja yhtenä seinänä se jää lukematta. Sama
+       * ehto vartioi myös jatko-osia — kaupungista lähtenyt pelaaja ei
+       * kuule tämän kaupungin puheenvuoron loppua.
+       */
+      /*
+       * ÄÄNI VAIN PAKKAUKSEN KENTÄSTÄ. Kaupunkien omia
+       * saapumisrepliikkejä (LIVIAN_SAAPUMISET) ei ole äänitetty —
+       * niissä kupla toimii ilman ääntä täsmälleen kuten ennen.
+       *
+       * Kupla ensin, ääni sen jälkeen (js/livia.js naytaRepliikki):
+       * `aani` kutsutaan jokaisen osan ilmestyttyä (js/pollo.js
+       * naytaPuheenvuoro), koska jokainen kupla on oma äänitiedostonsa.
+       */
+      if (!kuplat.length) return;
+      /*
+       * PULUN REAKTIOTAGI (Raamattu, PULUN REAKTIOREKISTERI; taulukko
+       * docs/pulu-reaktiot.md). Tagi laukeaa KUPLAN ALUSSA eikä kesken
+       * puheen: tästä hetkestä kupla oikeasti nousee ruudulle, ja
+       * ilmoitus on pelkkä kuvasignaali — se ei koske kuplan tekstiin,
+       * ääneen eikä ajoitukseen.
+       *
+       * VAIN OMA KOMMENTTI. Vanha `maadoitus`-varapolku ja kaupungin
+       * oma saapumisrepliikki (LIVIAN_SAAPUMISET) jäävät ilman tagia:
+       * tunne on kirjoitettu kommenttitekstin sävystä.
+       */
+      const tunnetagi = kentta === 'kommentti'
+        ? fokusvirtaSisalto(ui, city)?.pollo?.tunne : null;
+      if (tunnetagi) ilmoitaLivianTunne(tunnetagi, { lahde: 'fokusvirta', tunnus: city.id });
+      const { osat, aani } = livianOsatJaAani(ui, city.id, kentta, kuplat);
+      polloPuheenvuoro(osat, {
+        jatkuuko: () => !ui.dead && ui.game?.cityOf?.()?.id === city.id,
+        aani,
+        ...livianPuherytmi(city.id, kentta),
+      });
+      /*
+       * ETSI AARRE -NAPPI ON POISTETTU (karttauudistus erä 9, omistaja
+       * 13.9.2026: *"Ota Etsi aarre nappi pois."*). Aarteeseen mennään
+       * nyt kartan VIHREÄSTÄ PISTEESTÄ (erä 7, js/fokuspiste.js), joka
+       * on kartalla alusta asti — tähän kohtaan ei siis tule napin
+       * tilalle mitään.
+       */
+      /*
+       * PULU-CAM-PAKKA ISOISÄN KUVAN PÄÄLLE (omistaja 9.9.2026,
+       * Raamattu PULU-CAM: PULUN NYKYAJAN KUVAT PAKKANA ISOISAN KUVAN
+       * PAALLE: kuvat nousevat *"pulun kommentin alkaessa"*). Sama yksi
+       * kohta kuin Etsi aarre -napilla — kutsuhetki ei kelpaa, koska
+       * ketju odottaa luentaa ja paljastussarjaa. Ilman `pollo.kuvat`
+       * -kenttää tämä ei tee mitään.
+       */
+      naytaPulunKuvapakka(ui, city);
+    }), SAAPUMISKUPLAN_TAUKO_MS);
   };
-  const luenta = luennanLoppuun(ui);
-  if (luenta) {
-    void luenta.then(() => { if (!ui.dead) nayta(); });
-    return true;
-  }
-  nayta();
+  /*
+   * KOMMENTTI VASTA LUENNAN JÄLKEEN. Ilman luentaa (mykistys,
+   * kertojatila 'ei', puuttuva äänite) kupla tulee heti tauon jälkeen.
+   */
+  /*
+   * LUENTA VOI OLLA VASTA LÄHDÖSSÄ (omistaja 8.9.2026).
+   *
+   * Tämä kutsu tulee kirjoituskoneen lopusta, ja kone voi ehtiä maaliin
+   * ennen kertojaa — ensisaapumisessa luenta odottaa vielä
+   * tuurauspaljastuksen kuplia (js/livia.js odotaLuenta). Silloin
+   * `ui.diaryVoice` on vielä tyhjä, luennanLoppuun
+   * vastaa "ei luentaa" — ja kommentti tulisi juuri alkavan kertojan
+   * päälle. Lykkäyslippu kertoo, että luenta on tulossa: sitä
+   * odotetaan, ei ohiteta. Katto on varoventtiili, jottei kommentti
+   * jää roikkumaan, jos luenta ei koskaan lähde.
+   */
+  const kommenttiLuennanJalkeen = (jaljella = SAAPUMISKUPLAN_LUENTAKATTO_MS) => {
+    if (luentaOhitettu(ui, city)) return;
+    const luenta = luennanLoppuun(ui);
+    if (luenta) {
+      /*
+       * LUPAUS TAYTTYY MYOS OHITUKSESTA: `stopDiaryVoice` nollaa
+       * luennan, ja odotus lukee sen "luenta loppui" -merkiksi. Ohitus
+       * ei ole loppu vaan keskeytys, joten kommentti jää tulematta.
+       */
+      void luenta.then(() => { if (!ui.dead && !luentaOhitettu(ui, city)) nayta(); });
+      return;
+    }
+    if (ui.luennanLykkays && jaljella > 0 && !ui.dead) {
+      clearTimeout(ui.saapumiskuplaAjastin);
+      ui.saapumiskuplaAjastin = setTimeout(
+        () => kommenttiLuennanJalkeen(jaljella - SAAPUMISKUPLAN_LUENTAVALI_MS),
+        SAAPUMISKUPLAN_LUENTAVALI_MS,
+      );
+      return;
+    }
+    nayta();
+  };
+
+  /*
+   * VÄLIHUUTO ON JO AJASTETTU (fokusvirtaHuudahdus, kutsuttu
+   * renderFactista): tämä kutsu tulee kirjoituskoneen lopusta ja hoitaa
+   * vain luennan JÄLKEISEN kommentin. Ilman luentaa kommentti tulee
+   * heti tauon jälkeen kuten ennenkin.
+   */
+  kommenttiLuennanJalkeen();
   return true;
 }
 
@@ -715,6 +1341,15 @@ export function fokusvirtaSaapuminen(ui) {
   // renderin kytkentäkohta kuitenkin kelpaa aarteen löytymisen
   // huomaamiseen — se on kevyen kulun oma hetki.
   aarreLoytyi(ui);
+  /*
+   * LUENTAKUVAN ESILATAUS (omistaja 9.9.2026). Luenta alkaa sekunnin
+   * sisällä saapumisesta, joten kuva pyydetään jo tässä eikä vasta
+   * luennan alkaessa — muuten se nousisi ruudulle kertojan jo puhuttua
+   * hetken (sama havainto kuin aikajanan havainnekuvilla 5.9.2026).
+   * Kirjanpito on esilataajan omassa varastossa, joten toistuva render
+   * ei tee toista pyyntöä.
+   */
+  esilataaLuentakuva(ui, ui?.game?.cityOf?.());
   if (!FOKUSVIRTA_KORTIT) return;
   const city = ui?.game?.cityOf?.();
   if (!city || !fokusvirtaLukitseeLehden(ui, city)) return;
@@ -760,7 +1395,7 @@ function lataaTyyli() {
  * Kuplan asemointi kuuntelee ikkunan kokoa; kuuntelija purkautuu tässä,
  * jottei suljettu kupla jää mittaamaan itseään jokaisesta kierrosta.
  */
-export function suljeFokusvirta(ui) {
+export function puraFokusvirtaKortti(ui) {
   ui.fokusvirtaKortti?.remove();
   ui.fokusvirtaKortti = null;
   if (ui.fokusvirtaAsemointi) {
@@ -768,6 +1403,26 @@ export function suljeFokusvirta(ui) {
     globalThis.removeEventListener?.('orientationchange', ui.fokusvirtaAsemointi);
     ui.fokusvirtaAsemointi = null;
   }
+}
+
+/**
+ * Purkaa lähtökaupungin kuplan ja sen vielä odottavat viivekuplat vasta,
+ * kun paikanvaihto on varmasti onnistunut. Yleinen suljeFokusvirta ei saa
+ * tehdä tätä: sitä käytetään myös saman kaupungin kuplien vaihtamiseen.
+ */
+export function puraFokusvirtaPaikanvaihdossa(ui) {
+  for (const avain of ['fokusKuittausAjastin', 'fokusaarreAjastin']) {
+    clearTimeout(ui[avain]);
+    ui[avain] = null;
+  }
+  puraFokusvirtaKortti(ui);
+}
+
+export function suljeFokusvirta(ui) {
+  // Minitraileri on kartan päällys eikä kortti, mutta sama sulku vie
+  // senkin: fokusvirran sulkeminen on aina paluu karttaan.
+  piilotaSaapumistraileri(ui, { peru: true });
+  puraFokusvirtaKortti(ui);
   /*
    * Täkynoston alalaidan liuska väisti ennen kuplaa tässä kohdassa
    * (nostoPinta). Yhtenäinen kohdemalli (Raamattu 29.8.2026) purki
@@ -885,6 +1540,18 @@ function piirraKehys(ui, city, data, tila) {
   koti.appendChild(kortti);
   ui.fokusvirtaKortti = kortti;
   piirraSisalto(ui, city, data, tila, sisalto);
+  /*
+   * KAIUTIN VAIN KOHTAAMISKORTILLE (omistaja 6.9.2026: "Kaikissa missä
+   * on tekstiä, saisi olla striimi lukijan symboli"). Kohtaaminen on
+   * kortin ainoa oma leipäteksti — oppitunti ja sähketehtävä ovat PULUN
+   * repliikkejä, eikä pulun puhetta lueta (Raamattu, PULUN AANI). Kortin
+   * lukija lukee siis vain hahmon nimen ja kohtaamisen kuvauksen;
+   * varmistuslause, varoitus ja napit jäävät ulos (js/lukija.js
+   * LUKIJAN_OHITETTAVAT).
+   */
+  if (!data.sahketehtava && (tila.vaihe === 'kohtaaminen' || tila.vaihe === 'valmis')) {
+    lisaaLukijanappi(kortti, { otsikko: 'Kuuntele kohtaaminen' });
+  }
 }
 
 /**
@@ -1099,7 +1766,8 @@ function piirraKuva(ui, kohde, kuva, luokka = 'fokusvirta-viite') {
   nappi.title = 'Katso kuva suurempana';
   const kuvateksti = html('p', 'fokusvirta-kuvateksti');
   const img = document.createElement('img');
-  img.alt = kuva.selite ?? '';
+  // Kortilla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+  img.alt = kuvatekstiLyhyt(kuva);
   // EI `lazy`: kuva on kortin ensimmäinen asia ja näkyvissä heti, joten
   // laiska lataus vain viivyttäisi sitä.
   img.decoding = 'async';
@@ -1116,8 +1784,8 @@ function piirraKuva(ui, kohde, kuva, luokka = 'fokusvirta-viite') {
   nappi.appendChild(img);
   nappi.addEventListener('click', () => avaaSuurennos(ui, [kuva], 0, () => nappi));
   kuvateksti.append(
-    html('span', 'fokusvirta-kuvaselite', kuva.selite ?? ''),
-    html('span', 'fokusvirta-kuvalahde', kuva.lahde ?? ''),
+    html('span', 'fokusvirta-kuvaselite', kuvatekstiLyhyt(kuva)),
+    kortinKuvalahde(html('span', 'fokusvirta-kuvalahde'), kuva.lahde ?? '', kuva),
   );
   viite.append(nappi, kuvateksti);
   kohde.appendChild(viite);
@@ -1136,6 +1804,2919 @@ function piirraKuva(ui, kohde, kuva, luokka = 'fokusvirta-viite') {
  */
 function piirraJalkikuva(ui, kohde, kuva) {
   piirraKuva(ui, kohde, kuva, 'fokusvirta-viite fokusvirta-jalkikuva');
+}
+
+/* ==================== LUENTAKUVA KARTAN PÄÄLLE ======================
+ *
+ * Omistaja 9.9.2026 klo 09.10 (Raamattu, POSTILAATIKOSTA TULEE
+ * LUENTAKUVIA KARTAN PAALLE, sanatarkasti: *"Postilaatikkoon pitäisi
+ * alkaa tulla ainakin uusia kuvia, jotka voidaan näyttää sitten kartan
+ * päällä matkakirjan luennon yhteydessä."*).
+ *
+ * KAKSI ERI SÄÄNTÖÄ, JOTKA EIVÄT OLE RISTIRIIDASSA. Uuden kulun
+ * kaupungissa matkakirjaKORTILLE ei piirretä kuvaa (omistaja 7.9.2026,
+ * fokusvirtaUusiKulku) — kortti on isoisän tekstiä, ja kuvat kuuluvat
+ * kaupunkilehteen. Luentakuva on eri asia: se ei ole kortilla vaan
+ * KARTAN PÄÄLLÄ ja vain luennan ajan. Kortti pysyy kuvattomana.
+ *
+ * MITÄ TÄMÄ EI OLE: se ei ole kortti eikä kupla, siinä ei ole
+ * sulkurastia eikä nappeja eikä kehyslaatikkoa. Kuva on kartalla
+ * YKSINÄÄN, hieman vinossa — kuvan oma paperireuna riittää ääriviivaksi
+ * (omistaja 9.9.2026 klo 13.50, Raamattu LUENTAKUVA ISOMPANA, VINOSSA
+ * JA ILMAN LAATIKKOA, sanatarkasti: *"kuva saisi näkyä isompana ainakin
+ * tässä työpöytänäkymässä ja kuva saisi näkyä yksinään ilman laatikkoa
+ * hieman vinoon käännettynä. kuvan omat ääriviivat riittävät."*).
+ * Kuvan ALLA on erillinen vaalea laatikko ilman ääriviivoja, ja siinä
+ * VAIN LYHYT kuvateksti: lähderivi ("Matkakirjan havainnekuva") näkyy
+ * vasta suurennoksessa pitkän kuvatekstin kanssa (js/kuvatekstit.js).
+ *
+ * KAKSI KOKOA, EI KATOAMISTA KESKEN KAUPUNGIN (sama merkintä: *"jos
+ * karttaa liikuttaa kuva saisi pienentyä pienemmäksi mutta jäädä
+ * kartalle niin kauan kuin kyseisessä kaupungissa ollaan"*). Kuva nousee
+ * ISONA luennan alkaessa ja PIENENEE kahdesta syystä — kartan liike
+ * (sama pointerdown, joka supistaa kuplapinon, js/pollo.js
+ * seuraaSulkemista) ja luennan loppu. Pienenä se jää kartalle, ja sen
+ * napautus avaa yhä suurennoksen. VAIN LÄHTÖ KAUPUNGISTA POISTAA SEN
+ * (vaiennaLivianKaupunkipuhe); paluu samaan kaupunkiin nostaa ison
+ * uudelleen.
+ *
+ * PAIKKA RUUDULLA. Paneeli on karttapinnan keskivyöhykkeellä alalaidan
+ * puolella (css .fokusvirta-luentakuva): matkakirjakortti on
+ * ylävasemmalla ja pulun kuplat nousevat oikeasta alanurkasta, joten
+ * ankkuri on alareunassa prosentteina — kortti kasvaa ylhäältä alas ja
+ * kuplat alhaalta ylös, ja väliin jää se kaista, jossa kuva ei peitä
+ * kumpaakaan. Pienennys kutistuu samaa alareunaa kohti
+ * (transform-origin), joten pieni kuva jää siihen, mistä iso lähti.
+ *
+ * KENTTÄ ON VAPAAEHTOINEN. Ilman `matkakirja.luentakuva`-kenttää
+ * kaupungin kulku on täsmälleen ennallaan — mitään ei piirretä eikä
+ * ladata. Kuvat tulevat kuvatoimituksen postista, eikä tämä erä lisää
+ * niitä yhteenkään pakkiin.
+ */
+
+/**
+ * Luentakuvan leveys pikseleinä. Sama mitta kuin kortin isolla kuvalla
+ * (KORTIN_KUVA_PX): paneeli on kapeampi, mutta retinalla sama tiedosto
+ * kelpaa molempiin — ja silloin suurennos avautuu välimuistista.
+ */
+const LUENTAKUVAN_PX = 800;
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * LUENTAKUVAPAKKA POIS KARTALTA TOISTAISEKSI (omistaja 16.9.2026 klo
+ * 16.05 UTC, Raamattu KARTTAUUDISTUKSEN PAATOKSET 31 kohta 1,
+ * sanatarkasti: *"Piilotetaan nuo kuvat kartalta toistaiseksi. Täytyy
+ * miettiä niille joku parempi paikka."*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MIKÄ PIILOTETAAN: se PIENI KUVAPAKKA, joka jäi luennan jälkeen
+ * kartalle pelinappulan viereen (`.fokusvirta-luentakuva.pieni` ja sen
+ * päällä olevat PuluCam-kortit). Omistajan iPhone-kuvassa se peitti
+ * Pariisin nostoja.
+ *
+ * MIKÄ JÄÄ: isot luentakuvat LUENNAN AIKANA (isoisän sarja keskellä
+ * ruutua ja ankkuroitu iso kuva) sekä Pulu Cam omine sarjoineen —
+ * ne eivät ole kartalle jäävää tavaraa vaan hetkiä, jotka menevät ohi.
+ *
+ * KYTKIN EIKÄ POISTO, koska omistaja sanoi *"toistaiseksi"*: kun
+ * kuville löytyy parempi paikka, tämä palautetaan yhdellä rivillä.
+ * `true` tuo pakan takaisin sellaisenaan.
+ *
+ * KAKSI PORTTIA, JOTTA ELEMENTTIÄ EI EDES RAKENNETA:
+ *   1. `nostaPieniPakka` ei nosta pakkaa eikä ankkuroi luentakuvaa
+ *      sarjan jälkeen — kartalle ei jää mitään rakennettavaa.
+ *   2. `pienennaLuentakuva` PIILOTTAA paneelin sen sijaan että
+ *      kutistaisi sen. Tämä on se polku, jolla kartan liike ennen
+ *      jätti peukalonkynnen kartalle myös silloin, kun sarjaa ei ollut
+ *      (yksi luentakuva, ei pulun kuvia).
+ * Kolmas varmistus on CSS (css/fokusvirta.css: .fokusvirta-luentakuva
+ * .pieni { display: none }) niitä polkuja varten, joita nämä kaksi
+ * eivät kata.
+ */
+export const LUENTAKUVAPAKKA_KARTALLA = false;
+
+/** Nousun ja häipymisen kesto (css .fokusvirta-luentakuva transition). */
+const LUENTAKUVAN_HAIVE_MS = 400;
+
+/** Kuinka usein kysytään, onko luenta jo lähtenyt. */
+const LUENTAKUVAN_ODOTUSVALI_MS = 400;
+
+/** Kuinka kauan luentaa enintään odotetaan ennen varapolkua. */
+const LUENTAKUVAN_ODOTUSKATTO_MS = 6000;
+
+/** Kuinka kauan kuva jää vielä kirjoituskoneen viimeisen lyönnin jälkeen. */
+const LUENTAKUVAN_HANNANVARA_MS = 1200;
+
+/** Montako esiladattua luentakuvaa pidetään muistissa. */
+const LUENTAKUVAVARASTON_KATTO = 8;
+
+/**
+ * KALLISTUKSEN HAARUKKA ASTEINA (omistaja 9.9.2026: *"hieman vinoon
+ * käännettynä"*). Kuva on kartalla ilman kehystä, ja pieni kierto tekee
+ * siitä pöydälle jätetyn valokuvan eikä käyttöliittymän elementin.
+ *
+ * Kulma on DETERMINISTINEN kaupungin tunnuksesta: sama kaupunki
+ * kallistuu joka kerta samoin (satunnaisluku vaihtaisi kuvan asentoa
+ * kesken pelin, ja ruutukaappaus näyttäisi joka ajolla eriltä), mutta
+ * kaupungit eivät ole samassa asennossa. Mitat asuvat css-muuttujassa
+ * `--luentakuva-kallistus`; tämä vain valitsee luvun haarukasta.
+ */
+const LUENTAKUVAN_KALLISTUS = { alku: -3.2, loppu: -1.4 };
+
+/**
+ * Kaupungin oma kallistuskulma asteina (deterministinen tiiviste).
+ *
+ * @param {string} tunnus kaupungin id
+ * @returns {string} css-kulma, esim. '-2.4deg'
+ */
+export function luentakuvanKallistus(tunnus) {
+  let tiiviste = 0;
+  for (const merkki of String(tunnus ?? '')) {
+    tiiviste = (tiiviste * 31 + merkki.codePointAt(0)) % 100000;
+  }
+  const { alku, loppu } = LUENTAKUVAN_KALLISTUS;
+  return `${(alku + (tiiviste % 19) * ((loppu - alku) / 18)).toFixed(2)}deg`;
+}
+
+/**
+ * Kaupungin luentakuva pakista, tai null.
+ *
+ * Kuva kelpaa vain jos sillä on jokin kolmesta osoitelähteestä
+ * (`osoite`, `ampari`, `tiedosto`) — pelkkä selite ilman kuvaa jättäisi
+ * kartalle tyhjän kehyksen.
+ */
+export function fokusvirtaLuentakuva(ui, city) {
+  return fokusvirtaLuentakuvat(ui, city)[0] ?? null;
+}
+
+/**
+ * KAUPUNGIN ISOISÄN KUVAT JÄRJESTYKSESSÄ (`luentakuva`, `luentakuva2`).
+ *
+ * Omistaja 11.9.2026 klo 14.35, sanatarkasti: *"isoisan kertomuksiin
+ * voisi generoida toisen kuvan lisaa kaikkiin euroopan kaupunkeihin …
+ * kuva saisi vaihtua uuden lyhennetyn puheen puolivalissa"*. Toinen
+ * kenttä on VAPAAEHTOINEN ja täsmälleen samaa muotoa kuin ensimmäinen;
+ * ilman sitä lista on yhden mittainen ja kaikki toimii kuten ennen.
+ *
+ * Kuva kelpaa vain jos sillä on jokin kolmesta osoitelähteestä
+ * (`osoite`, `ampari`, `tiedosto`) — pelkkä selite ilman kuvaa jättäisi
+ * kartalle tyhjän kehyksen.
+ *
+ * @returns {Array<object>} 0–2 kuvaa
+ */
+export function fokusvirtaLuentakuvat(ui, city) {
+  const matkakirja = fokusvirtaSisalto(ui, city)?.matkakirja;
+  return [matkakirja?.luentakuva, matkakirja?.luentakuva2]
+    .filter((kuva) => kuva && (kuva.osoite || kuva.ampari || kuva.tiedosto));
+}
+
+/** Kaupungin TOINEN isoisän luentakuva, tai null. */
+export function fokusvirtaLuentakuva2(ui, city) {
+  return fokusvirtaLuentakuvat(ui, city)[1] ?? null;
+}
+
+/**
+ * Luentakuvan osoite — SAMA PORRASTUS kuin kortin kuvilla ja pöllön
+ * kuvalla (kuvanOsoite): repon oma `osoite`, ämpärin `ampari`
+ * (julisteUrl) tai Commonsin `tiedosto` (valokuvaUrl). Erillistä
+ * osoitelogiikkaa ei kirjoiteta, jottei uusi kenttä ala ajautua
+ * omaan suuntaansa.
+ */
+export function luentakuvanOsoite(kuva) {
+  return kuva ? kuvanOsoite(kuva, LUENTAKUVAN_PX) : null;
+}
+
+/** Luentakuvan varaosoite (vain Commons-tiedostolla on sellainen). */
+export function luentakuvanVara(kuva) {
+  return kuva ? kuvanVara(kuva, LUENTAKUVAN_PX) : null;
+}
+
+/**
+ * ESILATAUS SAAPUMISESTA, EI LUENNAN ALUSTA (sama oppi kuin aikajanan
+ * havainnekuvilla, js/aikajana.js PANEELIN_ESILATAUS_PYSAKKEJA:
+ * omistaja 5.9.2026: *"havainnekuvat pitää esiladata, nyt tulivat
+ * vähän perässä"*).
+ *
+ * Luenta alkaa sekunnin sisällä saapumisesta, ja verkosta haettu kuva
+ * nousisi ruudulle vasta kun kertoja on jo puhunut hetken. Kuva
+ * pyydetään siis heti saapumisrenderissä, ja valmis Image-olio jää
+ * muistiin — paneeli saa sen selaimen välimuistista.
+ *
+ * Kutsutaan joka renderissä (fokusvirtaSaapuminen), joten kirjanpito on
+ * pakko: yksi pyyntö per kaupunki, ja varasto pysyy pienenä.
+ */
+export function esilataaLuentakuva(ui, city) {
+  if (typeof Image === 'undefined' || !city || !ui?.game?.pack) return false;
+  /*
+   * MOLEMMAT ISOISÄN KUVAT SAMALLA KERTAA (omistaja 11.9.2026 klo
+   * 14.35). Kakkoskuva vaihtuu ruudulle yhdeksän sekunnin kohdalla
+   * luennasta — verkosta haettuna se ilmestyisi vasta kauan sen
+   * jälkeen, joten se pyydetään samassa saapumisrenderissä kuin
+   * ensimmäinen.
+   */
+  const kuvat = fokusvirtaLuentakuvat(ui, city);
+  if (!kuvat.length) return false;
+  const avain = `${ui.game.pack.id}:${city.id}`;
+  ui.luentakuvaVarasto ??= new Map();
+  if (ui.luentakuvaVarasto.has(avain)) return false;
+  ui.luentakuvaVarasto.set(avain, kuvat.map((kuva) => {
+    const esi = new Image();
+    esi.decoding = 'async';
+    esi.src = luentakuvanOsoite(kuva);
+    return esi;
+  }));
+  // Vanhimmat pois katon ylittyessä: nekin ovat jo selaimen omassa
+  // välimuistissa, eikä peli tarvitse niitä enää oliona.
+  while (ui.luentakuvaVarasto.size > LUENTAKUVAVARASTON_KATTO) {
+    const vanhin = ui.luentakuvaVarasto.keys().next().value;
+    ui.luentakuvaVarasto.delete(vanhin);
+  }
+  return true;
+}
+
+/**
+ * KUVA KARTAN PÄÄLLE LUENNAN AJAKSI (js/ui.js renderFact, heti
+ * välihuudon rekisteröinnin perässä — sama hetki, jona kertoja
+ * aloittaa).
+ *
+ * Napautus kuvaan avaa saman suurennoksen kuin kortin kuvat
+ * (avaaSuurennos): kuva kasvaa paikaltaan kartan päälle, ja kartta
+ * näkyy yhä taustalla.
+ *
+ * @returns {boolean} nousiko kuva ruudulle
+ */
+export function naytaLuentakuva(ui, city, { kuva: valittu = null } = {}) {
+  if (typeof document === 'undefined' || !ui || !city) return false;
+  // Edellinen kuva pois ilman häivytystä: uusi luenta ei odota vanhan
+  // poistumista, eikä kahta paneelia saa olla yhtä aikaa.
+  piilotaLuentakuva(ui, { heti: true });
+  /*
+   * KARTALLE JÄÄ VIIMEKSI NÄYTETTY ISOISÄN KUVA (omistaja 11.9.2026 klo
+   * 14.35: kuva vaihtuu luennan puolivälissä). Sarja kertoo lopettaessaan,
+   * kumpi kuva oli ruudulla; ilman valintaa tämä on entinen ensimmäinen.
+   */
+  const kuva = valittu ?? fokusvirtaLuentakuva(ui, city);
+  if (!kuva) return false;
+  ui.luentakuvaNyt = kuva;
+  return Boolean(rakennaLuentakuvanPaneeli(ui, city, kuva));
+}
+
+/**
+ * PANEELIN RAKENNUS — YKSI PAIKKA KAHDELLE TAPAUKSELLE.
+ *
+ * `kuva` on isoisän luentakuva, tai NULL. Null on PULU-CAMin
+ * pohjattoman pakan tapaus (Raamattu: *"Jos kaupungilla ei ole
+ * luentakuvaa mutta on pollo.kuvat, pakka nousee samaan paikkaan ilman
+ * pohjakuvaa"*): silloin paneelissa on vain läpinäkyvä pohjalaatikko,
+ * jonka mitat tulevat samasta laskennasta kuin kuvallisella paneelilla
+ * — ankkuri, raahaus ja pienennys ovat siis TÄSMÄLLEEN samat.
+ *
+ * Erillinen "pakan oma paneeli" olisi toinen ankkurointi, toinen
+ * raahaus ja toinen kehyssilmukka; niitä ei kirjoiteta kahdesti.
+ *
+ * @returns {?Element} paneeli, tai null jos dokumenttia ei ole
+ */
+function rakennaLuentakuvanPaneeli(ui, city, kuva) {
+  if (typeof document === 'undefined') return null;
+  lataaTyyli();
+
+  const koti = document.querySelector('.map-pane') ?? document.body;
+  const paneeli = html('div', kuva
+    ? 'fokusvirta-luentakuva' : 'fokusvirta-luentakuva pulucam-pohjaton');
+  paneeli.setAttribute('role', 'group');
+  paneeli.setAttribute('aria-label', kuva
+    ? `${city.name}: matkakirjan kuva` : `${city.name}: pulun kuvat`);
+  // Kallistus on kaupungin oma, mutta mitta asuu css-muuttujassa: css
+  // päättää miten kulmaa käytetään (nousu, pienennys, liikevähennys).
+  paneeli.style.setProperty('--luentakuva-kallistus', luentakuvanKallistus(city.id));
+
+  /*
+   * POHJATON PAKKA: paneelissa on vain läpinäkyvä laatikko, johon
+   * pakka ladotaan. Ei nappia eikä isoisän kuvaa — ja siksi myöskään
+   * ei luennan jälkeistä pienennystä, joka on isoisän kuvan oma kello.
+   *
+   * KUVATEKSTILAATIKKO ON SILTI MUKANA, TYHJÄNÄ. Se on ISOISÄN kuvan
+   * lappu (omistaja 10.9.2026 klo 23.37), ja pohjattomassa pakassa
+   * isoisän kuvaa ei ole — kappale jää siis tyhjäksi eikä näy (css
+   * :has-sääntö). Pohjattoman pakan kuvatekstit tulevat korttien
+   * OMISTA lapuista (js/pulucam.js pakanKortti), jotka ovat kiinni
+   * kunkin kortin alalaidassa. Kappale pidetään silti rakenteessa,
+   * jotta kuvallinen ja pohjaton paneeli ovat sama paneeli.
+   */
+  if (!kuva) {
+    const kuvatila = html('div', 'fokusvirta-kuvatila');
+    kuvatila.appendChild(html('div', 'fokusvirta-kuva pulucam-pohja'));
+    const tyhjaTeksti = html('p', 'fokusvirta-kuvateksti fokusvirta-luentateksti');
+    tyhjaTeksti.appendChild(html('span', 'fokusvirta-kuvaselite'));
+    paneeli.append(kuvatila, tyhjaTeksti);
+    koti.appendChild(paneeli);
+    ui.luentakuva = paneeli;
+    const naytaPohja = () => { if (paneeli.parentNode) paneeli.classList.add('nakyy'); };
+    globalThis.requestAnimationFrame?.(naytaPohja);
+    setTimeout(naytaPohja, 50);
+    kytkeLuentakuvanPienennys(ui, paneeli);
+    ankkuroiLuentakuva(ui, city, paneeli, null);
+    return paneeli;
+  }
+
+  const nappi = html('button', 'fokusvirta-kuva');
+  nappi.type = 'button';
+  nappi.title = 'Katso kuva suurempana';
+  const img = document.createElement('img');
+  // Kartan päällä lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+  img.alt = kuvatekstiLyhyt(kuva);
+  img.decoding = 'async';
+  img.draggable = false;
+  /*
+   * PUUTTUVA KUVA VIE KOKO PANEELIN, kuten kortilla (piirraKuva):
+   * rikkinäinen kuva jättäisi kartalle tyhjän kehyksen ja selitteen,
+   * joka selittää kuvaa jota ei ole. Luenta jatkuu häiriöttä.
+   */
+  asetaKuva(img, luentakuvanOsoite(kuva), luentakuvanVara(kuva),
+    () => piilotaLuentakuva(ui, { heti: true }));
+  nappi.appendChild(img);
+  /*
+   * NAPAUTUS AVAA SUURENNOKSEN, RAAHAUS EI (omistaja 9.9.2026 klo 16.15,
+   * Raamattu LUENTAKUVAA VOI ITSE LIIKUTTAA). Selain lähettää klikin
+   * myös raahauksen päätteeksi, ja ilman tätä lippua jokainen siirto
+   * päättyisi suurennokseen. Lippu nollautuu heti, joten seuraava
+   * napautus toimii normaalisti.
+   */
+  nappi.addEventListener('click', (tapahtuma) => {
+    /*
+     * NAPAUTUS EI OLE KARTAN LIIKETTÄ (omistaja 10.9.2026: *"matkakirja
+     * ei saisi hävitä näkyvistä jos käyttäjä klikkaa kuvapakasta toisen
+     * kuvan näkyville"*). Klikki kuplii karttapinnalle asti, jossa se
+     * kutistaisi matkakirjakortin (js/ui.js mapPane click) — pakan
+     * selaus ei saa viedä tekstiä pelaajan silmistä.
+     */
+    tapahtuma?.stopPropagation?.();
+    const naytto = ui.luentakuvaAnkkuri;
+    if (naytto?.paneeli === paneeli && naytto.raahattu) { naytto.raahattu = false; return; }
+    /*
+     * PAKAN OLLESSA PÄÄLLÄ SAMA KARUSELLI (omistaja 9.9.2026): isoisän
+     * kuvan napautus avaa täsmälleen sen karusellin, jonka päällimmäinen
+     * pulun kuva avaa — yksi sarja, yksi järjestys, isoisä ensin.
+     * Ilman pakkaa tämä on nykyinen yhden kuvan suurennos, riviltä
+     * riville ennallaan.
+     */
+    avaaLuentakuvanKaruselli(ui, city, kuva, nappi);
+  });
+
+  /*
+   * LYHYT KUVATEKSTI OMASSA VAALEASSA LAATIKOSSAAN, EI LÄHDERIVIÄ
+   * (omistaja 9.9.2026: *"kuvan alle voisi tehdä oman vaalean laatikon
+   * ilman ääriviivoja, missä olisi lyhennetty kuvateksti. lyhennetystä
+   * kuvatekstistä pitää ottaa havainnekuva teksti pois ja jättää se
+   * vain pidempään kuvatekstiin näkyville."*).
+   *
+   * LÄHDE EI KATOA PELISTÄ: se näkyy suurennoksessa pitkän kuvatekstin
+   * kanssa (avaaSuurennos → taytaLahderivi), joka on tämän kuvan ainoa
+   * "avattu" muoto — sama sääntö kuin kaikkialla muualla pelissä
+   * (js/kuvatekstit.js). Kartalla oleva pikkuteksti ei ole kuvan
+   * julkaisupaikka vaan sen otsikko.
+   *
+   * TÄMÄ LAPPU ON ISOISÄN KUVAN LAPPU JA VAIN SEN (omistaja 10.9.2026
+   * klo 23.37). Se näkyy silloin, kun isoisän kuva on kartalla
+   * päällimmäisenä; pulun korteilla on omat lappunsa omissa
+   * kierretyissä lohkoissaan (js/pulucam.js pakanKortti), kiinni
+   * kunkin kortin omassa alalaidassa.
+   */
+  const kuvateksti = html('p', 'fokusvirta-kuvateksti fokusvirta-luentateksti');
+  kuvateksti.appendChild(html('span', 'fokusvirta-kuvaselite', kuvatekstiLyhyt(kuva)));
+
+  /*
+   * KUVATILA ON PULU-CAM-PAKAN SIJOITUSKEHYS (js/pulucam.js). Kaksi
+   * syytä, kumpikin pakottava:
+   *
+   *   - `.fokusvirta-kuva` on NAPPI, eikä nappiin saa latoa nappeja
+   *     (pakan kortit ovat nappeja);
+   *   - sillä on `overflow: hidden`, joka leikkaisi juuri ne pakan
+   *     reunat, joiden pitää näkyä.
+   *
+   * Kuori on nollan kokoinen lisäys ulkoasuun (block, koko napin
+   * mukaan), joten pakaton paneeli näyttää täsmälleen entiseltä.
+   */
+  const kuvatila = html('div', 'fokusvirta-kuvatila');
+  kuvatila.appendChild(nappi);
+
+  paneeli.append(kuvatila, kuvateksti);
+  koti.appendChild(paneeli);
+  ui.luentakuva = paneeli;
+
+  /*
+   * NOUSU ON LUOKANVAIHTO, EI ANIMAATIO. Paneeli ladotaan
+   * läpinäkyvänä ja saa `nakyy`-luokan seuraavassa kehyksessä, jolloin
+   * css:n siirtymä (400 ms) hoitaa nousun — ja sama luokka pois vie
+   * sen ulos. Varmistus ajastimella siltä varalta, ettei
+   * requestAnimationFrame ole käytössä (testiympäristö, taustavälilehti).
+   */
+  const nayta = () => { if (paneeli.isConnected) paneeli.classList.add('nakyy'); };
+  globalThis.requestAnimationFrame?.(nayta);
+  setTimeout(nayta, 50);
+
+  kytkeLuentakuvanPienennys(ui, paneeli);
+  // Ankkurointi kartan kohtaan ja saapumisasento (ks. seuraava osio).
+  ankkuroiLuentakuva(ui, city, paneeli, nappi);
+  pienennaLuennanJalkeen(ui, city, paneeli,
+    fokusvirtaSisalto(ui, city)?.matkakirja?.teksti ?? '');
+  return paneeli;
+}
+
+/* =================== PULU-CAM: PAKKA JA KARUSELLI ==================
+ *
+ * Omistaja 9.9.2026 klo 15.20–15.30 (Raamattu, PULU-CAM: PULUN
+ * NYKYAJAN KUVAT PAKKANA ISOISAN KUVAN PAALLE, YHTEINEN KARUSELLI).
+ * Piirto ja ajastin ovat js/pulucam.js:ssä; täällä on se kolme asiaa,
+ * jotka kuuluvat fokusvirtaan eivätkä pakan piirtäjälle:
+ *
+ *   1. MISTÄ KUVAT TULEVAT — pakin kenttä `pollo.kuvat` luetaan samasta
+ *      sisällöstä kuin luentakuva (fokusvirtaSisalto).
+ *   2. MILLOIN PAKKA NOUSEE — siitä yhdestä kohdasta, jossa pulun
+ *      kommenttikupla oikeasti nousee ruudulle (fokusvirtaSaapumiskupla
+ *      → nayta), sama koukku kuin Etsi aarre -napilla.
+ *   3. MIHIN NAPAUTUS VIE — yhteiseen karuselliin, joka on tämän
+ *      moduulin oma suurennos (avaaSuurennos) yhdellä listalla:
+ *      isoisän kuva ensin, sitten pulun kuvat toimituksen
+ *      järjestyksessä.
+ */
+
+/** Kaupungin pulun kuvat pakista (tyhjä lista ilman kenttää). */
+export function fokusvirtaPulunKuvat(ui, city) {
+  return pulunKuvat(fokusvirtaSisalto(ui, city));
+}
+
+/**
+ * KARUSELLIN LISTA: ISOISÄ ENSIN, PULUN KUVAT PERÄSSÄ.
+ *
+ * Järjestys on omistajan sanoma järjestys eikä napautuskohdan mukainen:
+ * *"isoisän kuva isona sekä kaikki muut pulun kuvat"*. Ilman isoisän
+ * kuvaa (pohjaton pakka) lista alkaa suoraan pulun kuvista.
+ *
+ * @returns {{lista: Array<object>, pulusta: number}} `pulusta` on
+ *   ensimmäisen pulun kuvan indeksi listalla (0 tai 1).
+ */
+function pulucamKaruselli(ui, city, pohjakuva) {
+  const kuvat = fokusvirtaPulunKuvat(ui, city);
+  /*
+   * KAKSI ISOISÄN KUVAA, JOS NIITÄ ON (omistaja 11.9.2026 klo 14.35).
+   * Karuselli näyttää molemmat samassa järjestyksessä kuin luenta:
+   * kuva 1, kuva 2, sitten pulun kuvat. Kartalla päällimmäisenä on
+   * viimeksi näytetty, mutta lista on aina koko sarja.
+   */
+  const pohjat = pohjakuva ? fokusvirtaLuentakuvat(ui, city) : [];
+  const isoisa = pohjat.length ? pohjat : (pohjakuva ? [pohjakuva] : []);
+  return { lista: [...isoisa, ...kuvat], pulusta: isoisa.length };
+}
+
+/*
+ * KOLME VAIHETTA: PIENI PAKKA → LEVITETTY VIUHKA → KOKO RUUTU
+ * (omistaja 11.9.2026, sanatarkasti: *"Kuvapino saisi näkyä vielä
+ * paljon pienempänä ja sitten kun sitä klikkaa, kuvapino saisi
+ * suurentua jotta sopiva kuva olisi helpompi valita pinosta ja sitten
+ * kun kuvaa klikkaa se tulisi vasta täydelle ruudulle. Jos karttaa
+ * vierittää niin kuvapino pienentäisi taas varsin pieneksi, vain vähän
+ * pelinappulaa korkeammaksi"*).
+ *
+ * Ensimmäinen napautus pieneen pakkaan EI enää avaa suurennosta vaan
+ * levittää pakan: peukalonkynnen kokoisesta pinosta ei voi valita
+ * kuvaa, ja koko ruudun suurennos oli siihen liian iso askel. Vasta
+ * levitetyssä viuhkassa kortin napautus vie karuselliin.
+ *
+ * Levitys on luokka paneelissa, ei oma mittakaavansa: kartan
+ * mittakaava (--luentakuva-karttaskaala) kertautuu siihen kuten
+ * pienennykseenkin, joten viuhka on kartan kokoinen.
+ *
+ * @returns {boolean} otettiinko napautus levitykseen
+ */
+export function levitaPuluCamPakka(ui) {
+  const paneeli = ui?.luentakuva;
+  if (!paneeli?.classList) return false;
+  if (!paneeli.classList.contains('pieni')) return false;
+  if (paneeli.classList.contains('levitetty')) return false;
+  paneeli.classList.add('levitetty');
+  return true;
+}
+
+/** Viuhka kiinni: kartan liike ja kaupungin vaihto kokoavat pakan. */
+export function kokoaPuluCamPakka(ui) {
+  ui?.luentakuva?.classList?.remove?.('levitetty');
+}
+
+/**
+ * Isoisän luentakuvan napautus: yhteinen karuselli, jos pakka on
+ * päällä — muuten entinen yhden kuvan suurennos.
+ */
+function avaaLuentakuvanKaruselli(ui, city, kuva, nappi) {
+  // Pieni pakka aukeaa ensin viuhkaksi (ks. KOLME VAIHETTA yllä).
+  if (levitaPuluCamPakka(ui)) return;
+  if (!puluCamPakassa(ui)) {
+    // Ilman pakkaa karusellissa ovat isoisän omat kuvat (yksi tai kaksi),
+    // ja se aukeaa siitä kuvasta, joka kartalla oli näkyvissä.
+    const pohjat = fokusvirtaLuentakuvat(ui, city);
+    const lista = pohjat.length ? pohjat : [kuva];
+    avaaSuurennos(ui, lista, Math.max(0, lista.indexOf(kuva)), () => nappi,
+      { lyhytTeksti: true });
+    return;
+  }
+  /*
+   * ISOISÄN KUVA ON PAKASSA YKSI KORTTI MUIDEN JOUKOSSA (omistaja
+   * 10.9.2026). Alla ollessaan sen näkyvän reunan napautus NOSTAA sen
+   * päälle — karuselli aukeaa vasta päällimmäisen kortin napautuksesta,
+   * ja silloin siitä samasta kuvasta.
+   */
+  if (nostaPuluCamKortti(ui, PULUCAM_POHJA)) return;
+  const { lista, pulusta } = pulucamKaruselli(ui, city, kuva);
+  avaaSuurennos(ui, lista, Math.max(0, lista.indexOf(kuva)), () => nappi,
+    { pulunKuvasta: pulusta, lyhytTeksti: true });
+}
+
+/**
+ * PAKKA NOUSEE PULUN KOMMENTIN MYÖTÄ.
+ *
+ * KAKSI ASIAA, JOTKA EIVÄT NÄY DIFFISTÄ:
+ *
+ *  1. PIENENNYS PERUUNTUU PAKAN AJAKSI. Luennan loppu on ehtinyt jo
+ *     kutistaa isoisän kuvan (pienennaLuentakuva), ja kommentti tulee
+ *     heti sen perässä. Pakka peukalonkynnen kokoisen kuvan päällä
+ *     olisi lukukelvoton — ja omistajan kuvaus ("niin että siinä
+ *     hahmottaa, että pakassa on useampi kuva") edellyttää, että
+ *     kuvien reunat oikeasti näkyvät. Kuva nousee siis takaisin isoksi
+ *     pakan mukana, ja kartan seuraava liike pienentää ne YHDESSÄ.
+ *  2. POHJATON PAKKA SAA OMAN PANEELINSA. Ilman luentakuvaa paneelia
+ *     ei ole vielä olemassa, joten se rakennetaan tässä samoilla
+ *     mitoilla ja samaan ankkuriin (rakennaLuentakuvanPaneeli, kuva
+ *     null).
+ *
+ * @returns {boolean} nousiko pakka
+ */
+export function naytaPulunKuvapakka(ui, city, { heti = false } = {}) {
+  if (typeof document === 'undefined' || !ui || !city) return false;
+  // Ohitettu luenta ei nosta pulun kuvia — ei isoina eikä pakkana.
+  if (luentaOhitettu(ui, city)) return false;
+  /*
+   * ISO KESKISARJA OMISTAA PAKAN NOSTON (omistaja 11.9.2026, Raamattu
+   * SAAPUMISEN UUSI JARJESTYS…). Kuvat käydään ensin läpi isoina keskellä
+   * ruutua, ja pakka nousee kartalle vasta sarjan lopuksi — pieneen
+   * kokoon (naytaLuentakuvasarja → nostaPieniPakka).
+   *
+   * TÄMÄ SAMA HETKI ALOITTAA PULUCAM-KUVAT (omistaja 11.9.2026 klo
+   * 14.35, sanatarkasti: *"pulcam kuvat tulevat vasta kun pulun oma
+   * repliikki alkaa"*). Kesken sarjan kutsu ei siis nosta pakkaa
+   * etuajassa vaan käynnistää pulun oman kuvasarjan keskellä ruutua;
+   * pakka nousee vasta sen jälkeen. Jo noussutta pakkaa ei nosteta
+   * toista kertaa (nosto purkaisi `pieni`-tilan ja kuva pomppaisi
+   * isoksi).
+   */
+  /*
+   * SARJA ENSIN, PAKKA VASTA SEN JÄLKEEN (12.9.2026). Kesken olevalle
+   * sarjalle tämä hetki on PuluCam-kuvien alku; jo päättyneelle
+   * sarjalle se avaa pulun kuville oman päällyksen
+   * (aloitaMyohastynytPuluSarja). `heti` tulee sarjan omasta lopusta
+   * (nostaPieniPakka) eikä saa siis käynnistää uutta sarjaa.
+   */
+  if (!heti) {
+    if (ui.luentakuvasarja) return aloitaPuluCamSarja(ui, city);
+    if (aloitaPuluCamSarja(ui, city)) return true;
+  }
+  if (puluCamPakassa(ui) && !heti) return false;
+  /*
+   * PAKKAA EI RAKENNETA KARTALLE (ks. LUENTAKUVAPAKKA_KARTALLA).
+   * Tähän asti on jo ehditty tarjota pulun oma ISO sarja (yllä), joka
+   * jää voimaan — vain kartalle jäävä pieni pakka jää nostamatta.
+   */
+  if (!LUENTAKUVAPAKKA_KARTALLA) return false;
+  const kuvat = fokusvirtaPulunKuvat(ui, city);
+  if (!kuvat.length) return false;
+  // Kartalla on viimeksi näytetty isoisän kuva (kuva 2, jos sellainen on).
+  const pohjakuva = ui.luentakuvaNyt ?? fokusvirtaLuentakuva(ui, city);
+  const paneeli = ui.luentakuva ?? rakennaLuentakuvanPaneeli(ui, city, pohjakuva);
+  if (!paneeli) return false;
+  // Pakan koti on kuvatila (nappi ja sen `overflow: hidden` eivät kelpaa).
+  const pohja = paneeli.querySelector?.('.fokusvirta-kuvatila');
+  if (!pohja) return false;
+  // Ks. kohta 1 yllä: pakka ei nouse kutistetun kuvan päälle.
+  paneeli.classList.remove('pieni');
+  if (ui.luentakuvaAnkkuri?.paneeli === paneeli) mitoitaLuentakuva(ui.luentakuvaAnkkuri);
+  const { lista, pulusta } = pulucamKaruselli(ui, city, pohjakuva);
+  return naytaPuluCamPakka(ui, {
+    pohja,
+    kuvat,
+    /*
+     * SARJAN JÄLKEEN KAIKKI KORTIT OVAT JO NÄHTY (11.9.2026): kuvat on
+     * katsottu yksitellen isoina keskellä ruutua, joten pakka nousee
+     * kartalle kerralla — pulpahdusviiveet olisivat toisto.
+     */
+    heti,
+    osoite: (k) => kuvanOsoite(k, LUENTAKUVAN_PX),
+    vara: (k) => kuvanVara(k, LUENTAKUVAN_PX),
+    /*
+     * ISOISÄN KUVA PAKAN KORTTINA (omistaja 10.9.2026): pakan piirtäjä
+     * saa sen elementin ja kuvaolion, jotta se voi nostaa sen muiden
+     * päälle ja kirjoittaa sen lyhyen kuvatekstin lappuun. Pohjaton
+     * pakka (kaupungilla ei ole luentakuvaa) ei anna kumpaakaan —
+     * paikanvaraajaa ei voi nostaa eikä selittää.
+     */
+    pohjakortti: pohjakuva ? paneeli.querySelector?.('.fokusvirta-kuva') ?? null : null,
+    pohjakuva,
+    /*
+     * KARUSELLI ALKAA SIITÄ KUVASTA, JOKA OLI PÄÄLLIMMÄISENÄ
+     * (omistajan täsmennys 10.9.2026, sanatarkasti: *"kun kuvaa
+     * klikkaa, niin juuri se kuva pitää tulla näkyviin täysikokoisena.
+     * eli riippuen siitä mikä kuva on pakan päällimmäisenä pitää aueta
+     * ensimmäisenä karusellissa täydessä koossa"*). Lista on yhä sama
+     * ja samassa järjestyksessä (isoisä ensin) — vain aloituskohta
+     * seuraa pelaajan valintaa.
+     */
+    /* Ankkuriksi napautettu kortti: kasvu lähtee siitä kuvasta, jota
+       pelaaja kosketti. */
+    avaa: (i) => avaaSuurennos(ui, lista, pulusta + i,
+      () => ui.pulucamPakka?.kortit?.[i] ?? pohja, { pulunKuvasta: pulusta, lyhytTeksti: true }),
+    /*
+     * LYHYT KUVATEKSTI KERTOO PÄÄLLIMMÄISESTÄ KUVASTA (omistaja
+     * 9.9.2026 klo 18.50). Isoisän kuvan teksti jää pakan alle yhdessä
+     * kuvansa kanssa, joten kartalla luetaan aina sen kuvan lyhyt
+     * teksti, joka on ruudulla päällimmäisenä. LINKKIÄ EI TÄNNE TULE:
+     * havainnekuvaselitys kuuluu vain avattuun kuvaan.
+     */
+    kuvateksti: (k) => {
+      if(k&&k!==pohjakuva)ilmoitaLivianTilanne('photo',{cityId:city.id,index:kuvat.indexOf(k)});
+      /*
+       * ISOISÄN LAPPU ON ISOISÄN LAPPU (omistaja 10.9.2026 klo 23.37,
+       * Raamattu "PULUN KORTIN KUVATEKSTI KIINNI KORTIN OMASSA
+       * ALALAIDASSA"). Paneelin kappale on isoisän KUVAN oma jatke —
+       * se on kiinni isoisän paperin alareunassa — joten siihen ei
+       * enää kirjoiteta pulun kuvan tekstiä: pulun kortilla on oma
+       * lappunsa omassa kierretyssä lohkossaan (js/pulucam.js
+       * pakanKortti). Tässä ratkeaa vain, NÄKYYKÖ isoisän lappu:
+       * näkyy silloin ja vain silloin, kun isoisän kuva on
+       * päällimmäisenä — muuten ruudulla olisi kaksi lappua.
+       *
+       * TEKSTI JÄÄ PAIKALLEEN, VAIN NÄKYVYYS VAIHTUU. Tyhjäksi
+       * kirjoitettu kappale katoaisi taitosta (css :has-sääntö), ja
+       * paneelin korkeus muuttuisi joka nostolla — ankkuri on
+       * paneelin alareunassa, joten kuva hyppisi kartalla.
+       */
+      const selite = paneeli.querySelector?.('.fokusvirta-kuvaselite');
+      if (selite) selite.textContent = pohjakuva ? kuvatekstiLyhyt(pohjakuva) : '';
+      const lappu = paneeli.querySelector?.('.fokusvirta-luentateksti');
+      if (pohjakuva && k !== pohjakuva) lappu?.classList?.add?.('pulucam-alla');
+      else lappu?.classList?.remove?.('pulucam-alla');
+    },
+    raahattu: () => {
+      const naytto = ui.luentakuvaAnkkuri;
+      if (naytto?.paneeli !== paneeli || !naytto.raahattu) return false;
+      naytto.raahattu = false;
+      return true;
+    },
+  });
+}
+
+/* ============ LUENTAKUVA ANKKUROITUNA KARTAN KOHTAAN ==============
+ *
+ * OMISTAJA 9.9.2026 klo 16.10 ja 16.15 (Raamattu, SAAPUMISESSA KAMERA
+ * ASETTUU NIIN, ETTA KAUPUNKI ON ALIMMASSA KOLMANNEKSESSA JA LUENTAKUVA
+ * SEN YLAPUOLELLA HIEMAN OIKEALLA sekä LUENTAKUVAA VOI ITSE LIIKUTTAA,
+ * JA SE ON ANKKUROITU KARTAN KOHTAAN, sanatarkasti: *"kuva tulee sen
+ * yläpuolelle ja vähän oikealle, niin että se ei jää matkakirjan tekstin
+ * peittoon varsinkin pienillä näytöillä"* ja *"kuvaa pitää myös voida
+ * itse liikuttaa ja se saisi jäädä paikalleen sen kohdan päälle karttaa
+ * missä se on jos karttaa liikutetaan"*).
+ *
+ * KOLME ASIAA, JOTKA EIVÄT NÄY DIFFISTÄ:
+ *
+ *  1. PAIKKA ON LAUDAN PISTE, EI RUUTUPISTE. Paneelin ankkuri
+ *     (alareunan keskipiste) muunnetaan laudan koordinaateiksi, ja
+ *     kehyssilmukka kirjoittaa siitä ruutupaikan joka kehyksellä —
+ *     TÄSMÄLLEEN sama kaava kuin Etsi aarre -napilla ja pulun
+ *     paikkamerkillä (js/saapumisasento.js laudaltaRuudulle). Kartan
+ *     panorointi ja zoomi siirtävät siis kuvaa kartan mukana.
+ *
+ *  2. KOKO LASKETAAN, EI SANELLA. css:n `--luentakuva-leveys` on
+ *     perusmitta; ankkuroitu kuva pienenee siitä niin paljon kuin
+ *     matkakirjakortti vaatii (js/saapumisasento.js luentakuvanSijainti).
+ *     Kortin päälle tai alle kuva ei mene KOSKAAN — mieluummin pieni
+ *     kuva kuin peitetty teksti.
+ *
+ *  3. ILMAN NÄKYVÄÄ ALUETTA EI ANKKUROIDA. Testiympäristössä ja ennen
+ *     laudan mitoitusta `ui.nakyvaAlue()` on tyhjä; silloin paneeli jää
+ *     css:n omaan paikkaansa (alareunan kaista) eikä mikään hajoa.
+ */
+
+/** Kuinka usein ankkurin mitat ja kortin paikka tarkistetaan. */
+const LUENTAKUVAN_TARKISTUSVALI = 12;
+
+/**
+ * Kuvatekstilaatikon arvioitu korkeus ennen mittausta (px): yksi rivi
+ * 0,85 rem, padding 0,8 rem ja väli kuvaan. Mitattu arvo korvaa tämän
+ * heti ensimmäisen ladonnan jälkeen.
+ */
+const LUENTAKUVAN_TEKSTIVARA = 52;
+
+/**
+ * PAKAN ALIN KORTTI ULOTTUU KUVAN ALAPUOLELLE.
+ *
+ * PULU-CAM-pakan asennot siirtävät kortteja enintään 10 % kortin
+ * omasta koosta (js/pulucam.js PULUCAM_ASENNOT), ja alaspäin siirtyvä
+ * kortti roikkuu siis kuvan alareunan alla. Ilman tätä varaa juuri se
+ * kortti laskeutuisi kaupungin laatalle, vaikka paneeli itse jää sen
+ * yläpuolelle (omistaja 10.9.2026: *"kuva saisi tulla ylemmäs"*).
+ */
+const PAKAN_YLITYS_OSUUS = 0.10;
+
+/**
+ * PÄÄLLIMMÄISEN KORTIN LAPPU ROIKKUU KORTIN ALAPUOLELLA.
+ *
+ * Omistaja 10.9.2026 klo 23.37: pulun kortin lyhyt kuvateksti on
+ * kiinni JUURI SEN kortin alalaidassa (js/pulucam.js pakanKortti), eli
+ * se on kortin kääreen sisällä absoluuttisena eikä kasvata paneelin
+ * omaa korkeutta (paneeli.offsetHeight). Ilman tätä varaa ankkuri
+ * jättäisi laatan yläpuolelle vain kuvan ja pakan — ja lappu
+ * laskeutuisi kaupungin laatalle.
+ *
+ * MITTA LUETAAN NÄKYVÄSTÄ LAPUSTA. Piilotetut laput ovat
+ * `display: none`, joten niiden korkeus on 0; vara on siis aina sen
+ * kokoinen kuin ruudulla oikeasti näkyvä lappu. Kun isoisän kuva on
+ * päällimmäisenä, näkyvä lappu on paneelin oma kappale, joka on jo
+ * mitatussa `lisakorkeus`-luvussa — silloin tämä on nolla.
+ */
+function pakanLapunKorkeus(ui) {
+  let suurin = 0;
+  for (const kortti of ui?.pulucamPakka?.kortit ?? []) {
+    const lappu = kortti?.querySelector?.('.pulucam-lappu');
+    suurin = Math.max(suurin, lappu?.offsetHeight ?? 0);
+  }
+  return suurin;
+}
+
+/*
+ * PALLON OMA PROJEKTIO ENNEN ARVIOTA (mitattu Chromiumilla 9.9.2026).
+ *
+ * `ui.nakyvaAlue()` on LAUDAN yksiköitä, ja se kohtelee niitä ruudulla
+ * lineaarisina. Pallolla se on likiarvo: laudan projektio on Millerin
+ * lieriö, jonka y venyy leveysasteen mukana (Lontoossa 1,34-kertaiseksi)
+ * ja jonka x on pituusastetta eikä kaarta (Lontoossa 1/cos 51,5° =
+ * 1,61-kertainen). Lontoon piste laskettiin siis 88 px liian alas ja
+ * 84 px liian vasemmalle — luentakuva olisi noussut kaupungin PÄÄLLE
+ * eikä sen yläpuolelle.
+ *
+ * Pallolauta osaa saman muunnoksen tarkasti (js/pallolauta/lauta.js
+ * `asteet` + Globe.gl `getScreenCoords`/`toGlobeCoords`, sama kaava kuin
+ * kartan merkeillä, karttapallo.md luku 12). Käytetään sitä, kun pallo
+ * on hereillä, ja `nakyvaAlue`-arviota vasta sen puuttuessa
+ * (tasokartta, testit, laudan avaus kesken).
+ */
+
+/** Pallon lauta on aina maailmankartta (js/pallo.js PALLO_LAUTA). */
+const PALLON_LAUTA = 'maailmankartta';
+
+/** Pallolauta, jos sen projektio on käytettävissä juuri nyt. */
+function pallonProjektio(ui) {
+  const lauta = ui?.pallolauta;
+  if (!ui?.pallolautaPaalla?.() || !lauta?.pallo || !lauta.asteet) return null;
+  return lauta;
+}
+
+/** Laudan piste → karttapinnan pikselit (pallo tarkasti, muuten arvio). */
+function lautaRuudulle(ui, piste, mitat) {
+  const lauta = pallonProjektio(ui);
+  if (lauta?.pallo?.getScreenCoords) {
+    const asteet = lauta.asteet(piste);
+    const p = asteet ? lauta.pallo.getScreenCoords(asteet.lat, asteet.lon, 0) : null;
+    if (p && Number.isFinite(p.x) && Number.isFinite(p.y)) return { x: p.x, y: p.y };
+  }
+  return laudaltaRuudulle(piste, ui?.nakyvaAlue?.(), mitat.w, mitat.h, ui?.contentBox?.w ?? 0);
+}
+
+/** Karttapinnan pikselit → laudan piste (edellisen käänteinen). */
+function ruutuLaudalle(ui, paikka, mitat) {
+  const lauta = pallonProjektio(ui);
+  if (lauta?.pallo?.toGlobeCoords) {
+    const asteet = lauta.pallo.toGlobeCoords(paikka.x, paikka.y);
+    if (asteet && Number.isFinite(asteet.lat) && Number.isFinite(asteet.lng)) {
+      const piste = projisoiLaudalle(PALLON_LAUTA, asteet.lng, asteet.lat);
+      if (piste) return piste;
+    }
+  }
+  return ruudultaLaudalle(paikka, ui?.nakyvaAlue?.(), mitat.w, mitat.h);
+}
+
+/** Matkakirjakortin suorakulmio karttapinnan koordinaateissa, tai null. */
+function matkakirjakortinLaatikko(pane) {
+  const kortti = document.querySelector?.('.fact-card');
+  if (!kortti?.getBoundingClientRect || !pane?.getBoundingClientRect) return null;
+  const k = kortti.getBoundingClientRect();
+  if (!(k.width > 0) || !(k.height > 0)) return null;
+  const p = pane.getBoundingClientRect();
+  return { x: k.left - p.left, y: k.top - p.top, w: k.width, h: k.height };
+}
+
+/**
+ * Paneelin koko ja aloitusankkuri kaupungin pisteen yläpuolelle.
+ *
+ * KAKSI MITTAUSTA: kuvateksti ei kutistu leveyden mukana, joten
+ * ensimmäinen sovitus tehdään oletussuhteella, ja mitatusta paneelista
+ * luetaan kuvan oma kuvasuhde ja kuvatekstin osuus — sitten sovitus
+ * uudestaan. Toinen kierros on halpa (kaksi asettelunlukua) ja se on
+ * ainoa tapa tietää, mahtuuko kuva oikeasti kortin viereen.
+ */
+function mitoitaLuentakuva(naytto) {
+  const {
+    ui, city, paneeli, nappi, pane,
+  } = naytto;
+  const w = pane?.clientWidth ?? 0;
+  const h = pane?.clientHeight ?? 0;
+  if (!(w > 0) || !(h > 0)) return null;
+  naytto.mitat = { w, h };
+  /*
+   * KARTTAPANEELIN SIIRTO IKKUNASSA. Luentakuva elää karttapinnan
+   * koordinaatistossa, pulun kelluva nappi ikkunan (position: fixed) —
+   * pari saadaan vierekkäin vain, kun välissä on tämä siirto.
+   */
+  const pr = pane?.getBoundingClientRect?.();
+  naytto.paneSiirto = pr ? { x: pr.left, y: pr.top } : { x: 0, y: 0 };
+  const kaupunki = lautaRuudulle(ui, { x: city.x, y: city.y }, { w, h });
+  if (!kaupunki) return null;
+  const yhteiset = {
+    paneW: w,
+    paneH: h,
+    kaupunki,
+    kortti: matkakirjakortinLaatikko(pane),
+    /*
+     * PORTAAN RATKAISEE IKKUNAN LEVEYS, EI PANEELIN. Sama mitta kuin
+     * css:n media-ehdoissa (puhelin < 900, tabletti 700–1400 →
+     * LUENTAKUVAN_TABLETTIKERROIN, työpöytä > 1400), jotta ankkuroitu
+     * kuva ja css:n vara-arvo ovat samaa kokoa. Karttapaneeli voi olla
+     * ikkunaa kapeampi (sivupalkki, matkakirjan palsta), ja sen mukaan
+     * porrastaminen antaisi iPadille puhelimen mitat.
+     */
+    perusleveys: luentakuvanPerusleveys(w, globalThis.innerWidth ?? w),
+    // Kaupungin oma kallistuskulma: kierretty kuva ulottuu
+    // alakulmastaan alemmas kuin suora (ks. luentakuvanSijainti).
+    kallistus: Number.parseFloat(luentakuvanKallistus(city.id)) || 0,
+    /*
+     * PAKKA ROIKKUU MYÖS SIVUILLE — JA TILA VARATAAN ETUKÄTEEN.
+     *
+     * Pystysuunnan ylitys menee `lisakorkeus`-varana kaupungin
+     * laatalle (pakanYlitys alla), mutta pakan uloin kortti työntyy
+     * yhtä lailla kuvan VASEMMALLE puolelle: juuri se laskeutui
+     * matkakirjakortin kulmalle iPadin vaakaruudulla, kun kuva kasvoi
+     * 1,5-kertaiseksi (mitattu Chromiumilla 10.9.2026).
+     *
+     * EHTO ON KAUPUNGIN KUVALUETTELO, EI RUUDUN TILANNE. Pakka nousee
+     * vasta pulun repliikin jälkeen, sekunteja tämän mittauksen
+     * jälkeen (`puluCamPakassa` on nyt vielä false), mutta ANKKURI
+     * lyödään lukkoon tässä eikä myöhempi uusintamittaus enää siirrä
+     * kuvaa kortin ohi. Sivuttaisvara on siis varattava heti, kun
+     * kaupungilla ylipäätään on pulun kuvia.
+     */
+    pakka: fokusvirtaPulunKuvat(ui, city).length ? PAKAN_YLITYS_OSUUS : 0,
+  };
+  /*
+   * KUVASUHDE ON KUVAN OMA, EI MITATTU LAATIKKO. Mitattu suhde
+   * (paneelin korkeus / leveys) johtaisi takaisinkytkentään: leveyden
+   * kirjoitus muuttaa korkeutta, joka muuttaa suhdetta, joka muuttaa
+   * leveyttä. `naturalHeight / naturalWidth` on vakio ja tarkka;
+   * ennen latausta käytetään oletusta.
+   */
+  const img = nappi?.querySelector?.('img') ?? null;
+  const suhde = img?.naturalWidth > 0 && img?.naturalHeight > 0
+    ? img.naturalHeight / img.naturalWidth
+    : LUENTAKUVAN_KUVASUHDE;
+  /* Pakan alin kortti roikkuu kuvan alapuolella (ks. PAKAN_YLITYS_OSUUS). */
+  const pakanYlitys = (korkeus) => (puluCamPakassa(ui)
+    ? korkeus * PAKAN_YLITYS_OSUUS + pakanLapunKorkeus(ui) : 0);
+  const kirjoita = (sijainti) => {
+    paneeli.style.setProperty('--luentakuva-leveys', `${Math.round(sijainti.leveys)}px`);
+    // Kuvan korkeuskatto on TÄSMÄLLEEN sen luonnollinen korkeus tällä
+    // leveydellä: css:n oma katto ei saa rajata kuvaa, jonka tila on
+    // jo laskettu (object-fit: cover leikkaisi muuten reunoja).
+    paneeli.style.setProperty('--luentakuva-korkeus', `${Math.ceil(sijainti.leveys * suhde)}px`);
+  };
+  kirjoita(luentakuvanSijainti({
+    ...yhteiset,
+    kuvasuhde: suhde,
+    lisakorkeus: (naytto.lisakorkeus ?? LUENTAKUVAN_TEKSTIVARA)
+      + pakanYlitys(yhteiset.perusleveys * suhde),
+  }));
+  /*
+   * KUVATEKSTILAATIKON KORKEUS MITATAAN, koska se EI kutistu leveyden
+   * mukana: laatikossa on rem-mittainen teksti ja sen padding. Mitta
+   * otetaan vasta kun leveys on kirjoitettu, jotta rivitys on oikea.
+   */
+  const kuvanKorkeus = img?.offsetHeight ?? 0;
+  if (kuvanKorkeus > 0 && (paneeli.offsetHeight ?? 0) > 0) {
+    naytto.lisakorkeus = Math.max(0, paneeli.offsetHeight - kuvanKorkeus);
+  }
+  const sijainti = luentakuvanSijainti({
+    ...yhteiset,
+    kuvasuhde: suhde,
+    lisakorkeus: (naytto.lisakorkeus ?? LUENTAKUVAN_TEKSTIVARA)
+      + pakanYlitys(kuvanKorkeus > 0 ? kuvanKorkeus : yhteiset.perusleveys * suhde),
+  });
+  kirjoita(sijainti);
+  naytto.kuvasuhde = suhde;
+  naytto.sijainti = sijainti;
+  kirjoitaPienennys(naytto, suhde);
+  /*
+   * ANKKURI SEURAA UUTTA SOVITUSTA — PAITSI PELAAJAN OMAA SIIRTOA.
+   *
+   * Ensimmäinen sovitus tehdään heti saapumisessa, jolloin
+   * matkakirjakortti on vasta avautumassa (max-height liukuu, teksti
+   * kirjoittuu) eikä pulun pakka ole vielä noussut. Kortin lopullinen
+   * laatikko on siis isompi kuin se, jonka mukaan kuva asetettiin —
+   * ja ilman tätä ankkuri jäisi vanhaan kohtaan, jolloin pakan uloin
+   * kortti laskeutui matkakirjan kulmalle (mitattu Chromiumilla
+   * 10.9.2026, 1280 × 800: kuva jäi 28 px liian vasemmalle).
+   *
+   * Uusintamittaus tehdään kuvan latauduttua, pakan noustessa ja
+   * ruudun koon muuttuessa — joka kerta ankkuri siirtyy sovituksen
+   * mukana. RAAHATTUA KUVAA EI SIIRRETÄ: pelaajan oma valinta voittaa
+   * (Raamattu, LUENTAKUVAA VOI ITSE LIIKUTTAA).
+   */
+  if (naytto.ankkuri && !naytto.raahattu) {
+    /*
+     * PIENEN KUVAN PAIKKA ON KAUPUNGIN YLÄPUOLELLA, EI ISON KUVAN
+     * PAIKKA. Uusintamittaus (kuvan lataus, pakan nousu, ruudun koko)
+     * veisi ankkurin takaisin siihen kohtaan, johon ISO kuva mahtui —
+     * ja juuri se kohta oli tiukassa saapumisnäkymässä kaupungin
+     * alapuolella (ks. saapumisasento.js PIENEN_KUVAN_KORKEUS_PX).
+     */
+    if (naytto.kaupunginYlla) asetaParinAnkkuri(naytto);
+    else {
+      const uusi = ruutuLaudalle(ui, { x: sijainti.x, y: sijainti.y }, naytto.mitat);
+      if (uusi) naytto.ankkuri = uusi;
+    }
+  }
+  return sijainti;
+}
+
+/**
+ * Kirjoittaa ankkurin ruutupaikan css-muuttujiin.
+ *
+ * PAIKKA ON ANKKURISOLMUSSA, EI PANEELISSA (mitattu Chromiumilla
+ * 9.9.2026). Paneelilla on 400 ms:n transform-siirtymä (nousu,
+ * pienennys), ja siirtymä alkaa alusta joka kerta, kun transformin
+ * arvo muuttuu — myös muuttujan kautta. Kehyssilmukka kirjoittaa
+ * paikan 60 kertaa sekunnissa, joten paneeli ei ehtinyt koskaan
+ * maaliin: kuva jäi kartan vasempaan ylänurkkaan. Nollan kokoinen
+ * ankkurisolmu ilman siirtymää hoitaa paikan, paneeli sen sisällä
+ * hoitaa animaatiot — sama työnjako kuin Etsi aarre -napilla.
+ */
+function paivitaLuentakuvanPaikka(naytto) {
+  const { ui, ankkuri, solmu } = naytto;
+  const { w, h } = naytto.mitat ?? {};
+  if (!ankkuri || !solmu || !(w > 0) || !(h > 0)) return;
+  const paikka = lautaRuudulle(ui, ankkuri, { w, h });
+  if (!paikka) return;
+  solmu.style.setProperty('--luentakuva-x', `${paikka.x.toFixed(1)}px`);
+  solmu.style.setProperty('--luentakuva-y', `${paikka.y.toFixed(1)}px`);
+  const kartta = kartanMittakaava(naytto);
+  solmu.style.setProperty('--luentakuva-karttaskaala', kartta.toFixed(3));
+  paivitaPulunPaikka(naytto);
+}
+
+/**
+ * PULUN HAHMO PYSYY OIKEASSA ALAKULMASSA (omistaja 15.9.2026 klo 15.15
+ * UTC, Raamattu "KARTTAUUDISTUKSEN PAATOKSET 12 TARKENNUS: PULUN HAHMO
+ * PYSYY KULMASSA").
+ *
+ * 14.9.2026 PAATOKSET 12 kohta 2 ("isoisan ja pulun kuvat hieman
+ * kaupungin ylapuolelle") toteutettiin niin, etta TAMA funktio siirsi
+ * myos pulun HAHMON ja sen kelluvan kuplanapin kartalle isoisan pienen
+ * kuvapakan viereen — se ei ollut tarkoitus: "kuvat" tarkoitti isoisan
+ * luentakuvaa ja pulu-cam-valokuvaa, ei pulun hahmoa. Omistaja huomasi
+ * tuloksen Budapestissa ("miksi pulu hyppaa tuonne keskelle?") ja
+ * Fable linjasi 15.9.2026, etta kuvapakka jaa kaupungin ylapuolelle
+ * kartalle (asetaParinAnkkuri, ennallaan), mutta pulun hahmo ja
+ * kuplanappi pysyvat AINA css:n omassa kulma-asemassa
+ * (.pollo-kelluu-kartalla, right/bottom).
+ *
+ * Funktio jatetaan paikoilleen KUTSUPAIKKANA (paivitaLuentakuvanPaikka
+ * kutsuu sita edelleen) mutta se ei enaa tee mitaan: se varmistaa
+ * vain, etta body.pulu-kaupungin-paalla ei koskaan jaa paalle (esim.
+ * kesken jaanyt raahaus tai vanha tila). --pulu-kartalla-x/y -muuttujia
+ * ei kirjoiteta, joten css/styles.css:n
+ * `body.pulu-kaupungin-paalla .pollo-nappi...` -saanto ei koskaan
+ * laukea kaytannossa — se jatetaan kommentoituna kuolleena varana eika
+ * poisteta, koska se on ainoa paikka, jossa aiempi 14.9. paatos on
+ * kirjattu nakyviin.
+ */
+function paivitaPulunPaikka(naytto) {
+  const body = globalThis.document?.body;
+  // Kevyt testi-DOM tarjoaa bodyn ilman classListia: silloin napin
+  // paikka jää css:n omaan sääntöön eikä mikään hajoa.
+  if (typeof body?.classList?.remove !== 'function') return;
+  body.classList.remove('pulu-kaupungin-paalla');
+}
+
+/**
+ * PIENI KUVA ON KARTAN KOKOINEN (omistaja 11.9.2026, kaappaus
+ * Madridista: *"pienennetyt kuvat saisi jäädä kartalla pienemmiksi ja
+ * pysyä kartan kokoon suhteutettuna, eli pienenevät jos zoomataan ulos
+ * kartalla"*).
+ *
+ * ISO KUVA EI SKAALAUDU. Luennan ajan kuva on merkintä, jota luetaan —
+ * sen pitää pysyä luettavan kokoisena riippumatta siitä, mihin kartta
+ * on zoomattu. Vasta pienennetty kuva on kartan esine (valokuva, joka
+ * jäi sen kaupungin päälle), ja se kutistuu ja kasvaa kartan mukana.
+ *
+ * SUHDE, EI ABSOLUUTTINEN MITTA: vertailukohta on se mittakaava, jolla
+ * kartta oli kuvan noustessa, joten kuva näyttää silloiselta itseltään
+ * niin kauan kuin zoomiin ei kosketa.
+ *
+ * ALARAJA ON MATALA, KOSKA KUVAN PITÄÄ PIENENTYÄ KARTAN TAHDISSA
+ * (omistaja 11.9.2026, kaappaus maailmanäkymästä: *"Valokuvat ja etsi
+ * aarre teksti eivät pienene kartan kanssa samaa tahtia ja jäävät liian
+ * isoiksi zoomatessa ulos"*). Ensimmäinen raja 0,4 tuli vastaan jo
+ * mannernäkymässä, ja siitä eteenpäin kuva kasvoi kartan rinnalla
+ * suhteessa suuremmaksi — juuri se, mistä omistaja huomautti. Nyt
+ * alaraja on 0,12: maailmanäkymässä kuva on peukalonkynsi kaupunkinsa
+ * päällä, mutta ei katoa pisteeksi eikä lakkaa olemasta napautettava.
+ */
+const KARTTASKAALAN_RAJAT = Object.freeze({ alin: 0.12, ylin: 1.8 });
+
+function kartanMittakaava(naytto) {
+  const paneeli = naytto?.paneeli;
+  if (!paneeli?.classList?.contains('pieni')) return 1;
+  const nyt = naytto.ui?.nakyvaAlue?.()?.skaala;
+  const perus = naytto.perusSkaala;
+  if (!(nyt > 0) || !(perus > 0)) return 1;
+  return Math.min(KARTTASKAALAN_RAJAT.ylin,
+    Math.max(KARTTASKAALAN_RAJAT.alin, nyt / perus));
+}
+
+/**
+ * PIENEN KUVAN KOKO ON MITTA, EI SATTUMA (omistaja 14.9.2026:
+ * *"liian pienella"*).
+ *
+ * Ennen pienennys oli kiinteä osuus (0,16) ISON kuvan leveydestä, ja
+ * ison kuvan leveys on se, mikä sattuu mahtumaan matkakirjakortin ja
+ * kaupungin laatan väliin — mitattu 14.9.2026: sama valokuva oli
+ * Pariisissa 11 px ja Marseillessa 88 px korkea, kahdeksankertainen ero. Nyt KORKEUS on
+ * annettu (PIENEN_KUVAN_KORKEUS_PX) ja pienennys lasketaan siitä, eli
+ * kuva on saman kokoinen jokaisessa kaupungissa ja jokaisella ruudulla.
+ *
+ * MITTA ON VALOKUVA, EI PANEELI. Paneelin taittolaatikossa on myös
+ * kuvatekstilappu, joka on pienenä läpinäkyvä mutta VARAA YHÄ TILAA
+ * (css `.pieni .fokusvirta-luentateksti`: opacity 0, ei display none —
+ * ankkuri on alareunassa, ja katoava kappale nykäisisi kuvaa). Luvattu
+ * 40 px on siis sen VALOKUVAN korkeus, jonka pelaaja näkee.
+ *
+ * LUKU LASKETAAN, EI MITATA. `paneeli.offsetHeight` on tässä kohtaa
+ * vasta kirjoitetun leveyden varassa eikä kuva ole välttämättä vielä
+ * latautunut; mitattu 14.9.2026, Marseille 1400 × 900: mittaus antoi
+ * pienennykseksi 1,0 ja kuva jäi kartalle täysikokoisena. Sijainnin
+ * oma leveys ja kuvan oma kuvasuhde ovat molemmat tiedossa jo nyt.
+ */
+function kirjoitaPienennys(naytto, suhde) {
+  const { paneeli, sijainti } = naytto;
+  if (!paneeli?.style || !(sijainti?.leveys > 0)) return;
+  const kuvasuhde = suhde > 0 ? suhde : LUENTAKUVAN_KUVASUHDE;
+  const kuvanKorkeus = sijainti.leveys * kuvasuhde;
+  if (!(kuvanKorkeus > 0)) return;
+  const pienennys = PIENEN_KUVAN_KORKEUS_PX / kuvanKorkeus;
+  paneeli.style.setProperty('--luentakuva-pienennys', pienennys.toFixed(4));
+  naytto.pienennys = pienennys;
+  /*
+   * LAPUN KORKEUS TALTEEN ERIKSEEN. Ankkuri on PANEELIN alareuna, ja
+   * paneelin alareunassa on läpinäkyvä kuvatekstilappu — ilman tätä
+   * lukua valokuva jäisi lapun korkeuden verran liian ylös kaupungista
+   * (mitattu 14.9.2026, Pariisi/puhelin: 55 px).
+   */
+  const lappu = Math.max(0, (sijainti.korkeus ?? kuvanKorkeus) - kuvanKorkeus) * pienennys;
+  naytto.pieniKoko = {
+    leveys: sijainti.leveys * pienennys,
+    korkeus: PIENEN_KUVAN_KORKEUS_PX,
+    lappu,
+  };
+}
+
+/**
+ * Pienen kuvan NÄKYVÄT mitat ruudulla (karttaskaala mukana).
+ *
+ * LAPPU MITATAAN, MUU LASKETAAN. Kuvatekstilaatikon korkeus riippuu
+ * rivityksestä eikä skaalaudu leveyden mukana, ja `luentakuvanSijainti`
+ * tuntee siitä vain ARVION (`lisakorkeus`), joka tarkentuu vasta
+ * mittausten myötä. Mitattu 14.9.2026 (Ateena, 1400 × 900): arvio
+ * heilui 2,4 ja 55,6 pikselin välillä, ja valokuva laskeutui sen
+ * mukana nimikyltin päälle. Paneelin ja kuvan omat korkeudet ovat
+ * tässä kohtaa tiedossa, joten erotus on tarkka.
+ */
+function pienenKuvanMitat(naytto, kartta = kartanMittakaava(naytto)) {
+  const perus = naytto.pieniKoko ?? {
+    leveys: PIENEN_KUVAN_KORKEUS_PX / LUENTAKUVAN_KUVASUHDE,
+    korkeus: PIENEN_KUVAN_KORKEUS_PX,
+    lappu: 0,
+  };
+  const img = naytto.nappi?.querySelector?.('img');
+  const paneeliH = naytto.paneeli?.offsetHeight ?? 0;
+  const kuvaH = img?.offsetHeight ?? 0;
+  const lappu = paneeliH > 0 && kuvaH > 0 && naytto.pienennys > 0
+    ? Math.max(0, paneeliH - kuvaH) * naytto.pienennys
+    : (perus.lappu ?? 0);
+  return {
+    leveys: perus.leveys * kartta,
+    korkeus: perus.korkeus * kartta,
+    lappu: lappu * kartta,
+  };
+}
+
+/**
+ * PARI KAUPUNGIN YLÄPUOLELLE: isoisän kuva vasemmalle, pulu oikealle.
+ *
+ * Ankkuri on LAUDAN piste, joten pari pysyy kaupunkinsa päällä myös
+ * panoroitaessa ja zoomatessa — sama kiinnitys kuin ennenkin, vain eri
+ * kohta. Pelaajan omaa siirtoa ei kumota (Raamattu: LUENTAKUVAA VOI
+ * ITSE LIIKUTTAA), ja silloin pulu kulkee kuvan mukana sinne, mihin se
+ * raahattiin.
+ */
+/**
+ * KAUPUNGIN YLÄPUOLELLE LADOTTU NIMIKYLTTI ON TIELLÄ.
+ *
+ * Nimen ladonta (js/karttanimet.js) valitsee kaupungille kyljen sen
+ * mukaan, mitä muuta kartalla on — Ateenassa kyltti oli mitattuna
+ * 14.9.2026 juuri kaupungin YLÄPUOLELLA (55 px), eli tasan siinä, mihin
+ * pari asettuu. Kyltti on kartan omaa mustetta eikä väisty DOM-kerroksen
+ * tieltä, joten pari nousee sen yli.
+ *
+ * @returns {?number} kyltin yläreuna karttapinnalla, tai null
+ */
+function nimikyltinYlaraja(naytto, kaupunki) {
+  const nimi = naytto.city?.name;
+  const doc = globalThis.document;
+  if (!nimi || typeof doc?.querySelectorAll !== 'function') return null;
+  const siirto = naytto.paneSiirto ?? { x: 0, y: 0 };
+  let ylin = null;
+  for (const el of doc.querySelectorAll('.karttanimi-kaupunki')) {
+    if ((el.textContent ?? '').trim().toLowerCase() !== nimi.trim().toLowerCase()) continue;
+    const r = el.getBoundingClientRect?.();
+    if (!r || !(r.width > 0) || !(r.height > 0)) continue;
+    // Vain kaupungin YLÄPUOLELLE ladottu kyltti on parin tiellä.
+    if (r.bottom - siirto.y > kaupunki.y) continue;
+    const ylaosa = r.top - siirto.y;
+    ylin = ylin === null ? ylaosa : Math.min(ylin, ylaosa);
+  }
+  return ylin;
+}
+
+/**
+ * PALJONKO VALOKUVA VIELÄ PEITTÄÄ NIMIKYLTTIÄ (px)?
+ *
+ * Laskettu nosto perustuu kyltin paikkaan ja lapun arvioon; molemmat
+ * elävät (ladonta ajaa viisi kertaa sekunnissa, lapun korkeus tarkentuu
+ * kuvan latatessa). Tämä mittaa PIIRRETYT laatikot ja kertoo, montako
+ * pikseliä kuvan on vielä noustava — takaisinkytkentä, joka korjaa
+ * arvion virheen sen sijaan että arvioon lisättäisiin varmuusvaraa.
+ */
+function kyltinPeitto(naytto) {
+  const img = naytto.nappi?.querySelector?.('img');
+  const kuva = img?.getBoundingClientRect?.();
+  if (!kuva || !(kuva.width > 0) || !(kuva.height > 0)) return 0;
+  const nimi = naytto.city?.name;
+  const doc = globalThis.document;
+  if (!nimi || typeof doc?.querySelectorAll !== 'function') return 0;
+  let tarve = 0;
+  for (const el of doc.querySelectorAll('.karttanimi-kaupunki')) {
+    if ((el.textContent ?? '').trim().toLowerCase() !== nimi.trim().toLowerCase()) continue;
+    const r = el.getBoundingClientRect?.();
+    if (!r || !(r.width > 0) || !(r.height > 0)) continue;
+    if (r.left >= kuva.right || r.right <= kuva.left) continue;
+    if (r.top >= kuva.bottom || r.bottom <= kuva.top) continue;
+    tarve = Math.max(tarve, kuva.bottom - r.top + PARIN_RAKO_PX);
+  }
+  return tarve;
+}
+
+function asetaParinAnkkuri(naytto) {
+  const { w, h } = naytto.mitat ?? {};
+  if (!(w > 0) || !(h > 0)) return false;
+  const city = naytto.city ?? {};
+  if (!Number.isFinite(city.x) || !Number.isFinite(city.y)) return false;
+  const kaupunki = lautaRuudulle(naytto.ui, { x: city.x, y: city.y }, { w, h });
+  if (!kaupunki) return false;
+  const mitat = pienenKuvanMitat(naytto);
+  const kyltti = nimikyltinYlaraja(naytto, kaupunki);
+  /*
+   * NOSTO EI LASKE KESKEN KAUPUNGIN. Nimen ladonta ajetaan viisi kertaa
+   * sekunnissa ja kyltti voi vaihtaa kylkeä; jos pari seuraisi sitä
+   * molempiin suuntiin, kuva nykisi ylös alas koko ajan. Nosto ottaa
+   * siis aina suurimman tähän asti tarvitun arvon ja jää siihen —
+   * kuva asettuu kerran eikä enää liiku.
+   */
+  /*
+   * KATTO ON RUUDUN OMA MITTA. Takaisinkytkentä kasvattaa nostoa, ja
+   * jos kyltti seuraisi kuvaa (tai mittaus osuisi väärään kylttiin),
+   * pari karkaisi ruudulta. Neljännes näkymän korkeudesta riittää
+   * kaikkiin mitattuihin väistöihin (suurin 65 px 900 px:n ruudulla).
+   */
+  const katto = Math.max(PIENEN_KUVAN_NOSTO_PX, h * 0.25);
+  const nosto = Math.min(katto, Math.max(
+    PIENEN_KUVAN_NOSTO_PX,
+    (naytto.pariNosto ?? 0) + kyltinPeitto(naytto),
+    kyltti === null ? 0 : kaupunki.y - kyltti + PARIN_RAKO_PX,
+  ));
+  naytto.pariNosto = nosto;
+  const paikat = pienenKuvanParinPaikat({ kaupunki, ...mitat, nosto });
+  if (!paikat) return false;
+  // Ankkuri on paneelin alareuna, ladonta laski VALOKUVAN alareunan.
+  const kartalla = ruutuLaudalle(
+    naytto.ui, { x: paikat.isoisa.x, y: paikat.isoisa.y + mitat.lappu }, naytto.mitat,
+  );
+  if (!kartalla) return false;
+  naytto.ankkuri = kartalla;
+  naytto.kaupunginYlla = true;
+  return true;
+}
+
+/**
+ * RAAHAUS SORMELLA TAI HIIRELLÄ.
+ *
+ * Ele katkaistaan paneeliin (stopPropagation): kartta ei saa panoroida
+ * kuvan alta, eikä dokumentin pienennyskuuntelija (kartan liike) saa
+ * kutistaa kuvaa, jota pelaaja juuri siirtää. Napautus tunnistetaan
+ * LIIKEKYNNYKSESTÄ (js/saapumisasento.js onRaahaus): sen alle jäävä ele
+ * on napautus ja avaa suurennoksen.
+ *
+ * Uusi ankkuri lasketaan siirrosta suoraan laudan yksiköissä
+ * (px / skaala), joten kuva jää sen kartan kohdan päälle, johon se
+ * jätettiin.
+ */
+function kytkeLuentakuvanRaahaus(naytto) {
+  const { paneeli } = naytto;
+  if (typeof paneeli.addEventListener !== 'function') return;
+  let veto = null;
+  paneeli.addEventListener('pointerdown', (t) => {
+    if (t.button > 0) return;
+    veto = {
+      x: t.clientX,
+      y: t.clientY,
+      id: t.pointerId,
+      // Kuvan ruutupaikka vedon alussa: siirto lasketaan siitä, ei
+      // sormesta, jotta kuva ei hyppää sormen alle.
+      paikka: lautaRuudulle(naytto.ui, naytto.ankkuri, naytto.mitat ?? { w: 0, h: 0 })
+        ?? { x: t.clientX, y: t.clientY },
+      liike: false,
+    };
+    naytto.raahattu = false;
+    /*
+     * OSOITINTA EI OTETA KIINNI VIELÄ TÄSSÄ. Kaapattu osoitin siirtää
+     * myös `pointerup`- ja `click`-tapahtuman kaappaajalle (paneelille),
+     * jolloin paneelin SISÄLLÄ olevien nappien (isoisän `.fokusvirta-kuva`
+     * ja PULU-CAM-pakan `.pulucam-kuva`) omat kuuntelijat eivät saa
+     * napautusta lainkaan — kuva ei siis avautunut suurennokseksi
+     * oikealla sormella tai hiirellä, vaikka ohjelmallinen `click()`
+     * (savukkeet) toimi. Sama havainto on kirjattu jo js/karttazoom.js:ään.
+     * Kiinniotto siirtyy siksi liikekynnyksen ylitykseen: napautus jää
+     * napautukseksi ja raahaus saa kaappauksensa silloin, kun sitä
+     * oikeasti tarvitaan.
+     */
+    t.stopPropagation?.();
+  });
+  paneeli.addEventListener('pointermove', (t) => {
+    if (!veto) return;
+    const dx = t.clientX - veto.x;
+    const dy = t.clientY - veto.y;
+    if (!veto.liike && !onRaahaus(dx, dy)) return;
+    if (!veto.liike) {
+      // Vasta tästä eteenpäin ele on raahaus: nyt osoitin otetaan kiinni,
+      // jotta veto jatkuu vaikka sormi karkaisi paneelin ulkopuolelle.
+      try { paneeli.setPointerCapture?.(veto.id); veto.kaapattu = true; } catch { /* veto toimii ilman kaappausta */ }
+    }
+    veto.liike = true;
+    naytto.raahattu = true;
+    t.preventDefault?.();
+    t.stopPropagation?.();
+    // Uusi ankkuri on se KARTAN KOHTA, jonka päälle kuva raahattiin.
+    const paikka = { x: veto.paikka.x + dx, y: veto.paikka.y + dy };
+    const kartalla = ruutuLaudalle(naytto.ui, paikka, naytto.mitat ?? { w: 0, h: 0 });
+    if (!kartalla) return;
+    naytto.ankkuri = kartalla;
+    paivitaLuentakuvanPaikka(naytto);
+  });
+  const lopeta = () => {
+    if (!veto) return;
+    if (veto.kaapattu) {
+      try { paneeli.releasePointerCapture?.(veto.id); } catch { /* jo vapautettu */ }
+    }
+    veto = null;
+  };
+  paneeli.addEventListener('pointerup', lopeta);
+  paneeli.addEventListener('pointercancel', lopeta);
+}
+
+/**
+ * Kehyssilmukka: kuva seuraa karttaa ja mitat tarkistetaan harvakseltaan.
+ *
+ * Ilman requestAnimationFramea (testit, taustavälilehti) kuva jää
+ * aloituspaikkaansa — se on oikea paikka siihen asti, kunnes karttaa
+ * liikutetaan.
+ */
+function seuraaKarttaaLuentakuvalla(naytto) {
+  let laskuri = 0;
+  const askel = () => {
+    if (naytto.ui?.luentakuvaAnkkuri !== naytto) return;
+    if (laskuri % LUENTAKUVAN_TARKISTUSVALI === 0) {
+      const w = naytto.pane?.clientWidth ?? 0;
+      const h = naytto.pane?.clientHeight ?? 0;
+      // Ruudun koko vaihtui (kääntö, ikkunan veto): mitat uusiksi, mutta
+      // ANKKURI JÄÄ — kuva pysyy sen kartan kohdan päällä, jossa se on.
+      if (w !== naytto.mitat?.w || h !== naytto.mitat?.h) mitoitaLuentakuva(naytto);
+      /*
+       * KYLTTI VOI SIIRTYÄ PARIN ALLE VASTA MYÖHEMMIN (ks.
+       * nimikyltinYlaraja): ladonta ajaa viisi kertaa sekunnissa, ja
+       * pelkkä kertatarkistus pienennyshetkellä jäisi vanhentuneeksi.
+       * Tarkistus on samassa harvassa tahdissa kuin mittojen tarkistus.
+       */
+      else if (naytto.kaupunginYlla && !naytto.raahattu) asetaParinAnkkuri(naytto);
+    }
+    paivitaLuentakuvanPaikka(naytto);
+    laskuri += 1;
+    naytto.kehys = globalThis.requestAnimationFrame?.(askel) ?? 0;
+  };
+  naytto.kehys = globalThis.requestAnimationFrame?.(askel) ?? 0;
+}
+
+/**
+ * Ankkuroi paneelin kartan kohtaan ja asettaa sen saapumisasentoon.
+ *
+ * @returns {boolean} ankkuroitiinko (false = css:n oma paikka jää voimaan)
+ */
+export function ankkuroiLuentakuva(ui, city, paneeli, nappi) {
+  if (!ui || !city || !paneeli) return false;
+  if (!Number.isFinite(city.x) || !Number.isFinite(city.y)) return false;
+  const pane = ui.mapPane ?? document.querySelector?.('.map-pane') ?? null;
+  if (!pane) return false;
+  const naytto = {
+    ui, city, paneeli, nappi, pane, mitat: null, ankkuri: null, kehys: 0, raahattu: false,
+    // Kartan mittakaava kuvan noustessa: pienen kuvan vertailukohta.
+    perusSkaala: ui?.nakyvaAlue?.()?.skaala ?? 0,
+  };
+  const sijainti = mitoitaLuentakuva(naytto);
+  if (!sijainti) return false;
+  const ankkuri = ruutuLaudalle(ui, { x: sijainti.x, y: sijainti.y }, naytto.mitat);
+  if (!ankkuri) return false;
+  naytto.ankkuri = ankkuri;
+  /*
+   * ANKKURISOLMU PANEELIN YMPÄRILLE: nollan kokoinen piste, jota
+   * kehyssilmukka siirtää. Paneeli jää sen lapseksi omine
+   * animaatioineen (ks. paivitaLuentakuvanPaikka).
+   */
+  const solmu = html('div', 'fokusvirta-luentakuva-ankkuri');
+  paneeli.parentNode?.insertBefore(solmu, paneeli);
+  solmu.appendChild(paneeli);
+  naytto.solmu = solmu;
+  paneeli.classList.add('ankkuroitu');
+  ui.luentakuvaAnkkuri = naytto;
+  paivitaLuentakuvanPaikka(naytto);
+  kytkeLuentakuvanRaahaus(naytto);
+  seuraaKarttaaLuentakuvalla(naytto);
+  /*
+   * KUVAN LATATTUA MITAT UUSIKSI: ennen latausta kuvasuhde on oletus,
+   * ja pystykuva tarvitsee kapeamman laatikon mahtuakseen kortin ali.
+   * Ankkuri EI muutu — paneeli kasvaa alareunastaan ylöspäin.
+   */
+  nappi?.querySelector?.('img')?.addEventListener?.('load', () => {
+    if (ui.luentakuvaAnkkuri === naytto) mitoitaLuentakuva(naytto);
+  });
+  return true;
+}
+
+/** Ankkurin kehyssilmukka seis (piilotaLuentakuva kutsuu). */
+export function irrotaLuentakuvanAnkkuri(ui) {
+  const naytto = ui?.luentakuvaAnkkuri;
+  if (!naytto) return;
+  ui.luentakuvaAnkkuri = null;
+  if (naytto.kehys) globalThis.cancelAnimationFrame?.(naytto.kehys);
+  /*
+   * PULU PALAA KULMAANSA. Kehyssilmukka on nyt seis, eikä kukaan enää
+   * kirjoita napin paikkaa — ilman tätä nappi jäisi seuraavassa
+   * näkymässä viimeisen kaupungin kohdalle.
+   */
+  const body = globalThis.document?.body;
+  if (typeof body?.classList?.remove === 'function') body.classList.remove('pulu-kaupungin-paalla');
+}
+
+
+/**
+ * KARTAN LIIKE PIENENTÄÄ KUVAN — EI POISTA SITÄ (omistajan korjaus
+ * 9.9.2026 klo 13.50: *"jos karttaa liikuttaa kuva saisi pienentyä
+ * pienemmäksi mutta jäädä kartalle niin kauan kuin kyseisessä
+ * kaupungissa ollaan"*). Ensimmäinen versio (aamu) vei kuvan pois, ja
+ * silloin kartan pieninkin nykäisy hävitti kuvan, jota pelaaja oli
+ * juuri katsomassa.
+ *
+ * Signaali on sama kuin kuplapinon supistuksessa (v1694): vedon alku on
+ * `pointerdown` kartalla — pallolaudalla ja tasokartalla sama tapahtuma
+ * — ja se kulkee dokumenttiin asti, joten paneeli ei tarvitse omaa
+ * kytköstä kartan sisälle.
+ *
+ * Paneeli itse ja auki oleva suurennos rajataan pois: napautus kuvaan
+ * on suurennoksen avaus eikä kartan liike, ja suurennoksen taustan
+ * napautus sulkee suurennoksen — ei kuvaa sen alta.
+ *
+ * Kuuntelija jää paikalleen pienennyksen jälkeenkin (pienennä on
+ * idempotentti) ja irtoaa vasta piilotaLuentakuvassa: se on yhä sama
+ * yksi paikka, joka siivoaa paneelin jäljet.
+ */
+function kytkeLuentakuvanPienennys(ui, paneeli) {
+  if (typeof document?.addEventListener !== 'function') return;
+  const kasittele = (tapahtuma) => {
+    if (tapahtuma.target?.closest?.('.fokusvirta-luentakuva, .fokuszoom')) return;
+    if (ui.luentakuva !== paneeli) return;
+    /*
+     * VIUHKA KIINNI MYÖS SILLOIN, KUN PAKKA ON JO PIENI. pienennaLuentakuva
+     * on idempotentti eikä tee toisella kutsulla mitään, joten levityksen
+     * purku on tässä erikseen — muuten avattu viuhka jäisi auki kartan
+     * liikkuessa (omistaja 11.9.2026).
+     */
+    kokoaPuluCamPakka(ui);
+    pienennaLuentakuva(ui);
+  };
+  document.addEventListener('pointerdown', kasittele);
+  ui.luentakuvaSulku = () => document.removeEventListener('pointerdown', kasittele);
+}
+
+/**
+ * ISO KUVA PIENEKSI, PAIKALLEEN JÄÄDEN.
+ *
+ * Pienennys on pelkkä luokanvaihto: css skaalaa paneelin
+ * (`--luentakuva-pienennys`) alareunaansa kohti ja häivyttää
+ * kuvatekstilaatikon, joten pieni kuva on kartalla peukalonkynnen
+ * kokoinen valokuva ilman tekstiä. Liike on transformia eikä
+ * asettelua, jotta kartan rasterointi ei kilpaile animaation kanssa
+ * (sama sääntö kuin nousulla ja suurennoksella).
+ *
+ * IDEMPOTENTTI: kartan jokainen veto kutsuu tätä, ja toinen kutsu ei
+ * saa tehdä mitään.
+ *
+ * @returns {boolean} pieneniko kuva tällä kutsulla
+ */
+export function pienennaLuentakuva(ui) {
+  const paneeli = ui?.luentakuva;
+  if (!paneeli || paneeli.classList.contains('pieni')) return false;
+  /*
+   * PIENENNYS ON PIILOTUS, KUN PAKKA EI OLE KARTALLA (ks.
+   * LUENTAKUVAPAKKA_KARTALLA). Pienennys on juuri se hetki, jossa
+   * kuva lakkaa olemasta luennan iso kuva ja muuttuu kartalle jääväksi
+   * peukalonkynneksi — ja juuri se omistaja pyysi pois.
+   */
+  if (!LUENTAKUVAPAKKA_KARTALLA) {
+    clearTimeout(ui.luentakuvaAjastin);
+    ui.luentakuvaAjastin = null;
+    /*
+     * ANKKUROITU KUVA LENTÄÄ SAMAA TIETÄ (PAATOKSET 38 kohta 2). Tämä
+     * on ankkuroidun paneelin poistumishetki — luennan loppu
+     * (pienennaLuennanJalkeen) ja kartan liike (kytkeLuentakuvanPienennys)
+     * — eli täsmälleen se sama tapahtuma, jossa iso keskisarja lentää.
+     * Lento vie kuvan, joten paneeli puretaan heti eikä häivytyksellä.
+     */
+    const lentoja = lennataKuvatMatkakirjaan(ui,
+      [...paneeli.querySelectorAll('.fokusvirta-kuva')]);
+    piilotaLuentakuva(ui, { heti: Boolean(lentoja) });
+    return true;
+  }
+  /*
+   * LUENNAN ODOTUS PÄÄTTYY TÄHÄN. Jos kartta liikahti kesken luennan,
+   * kuva on jo pienenä eikä luennan loppu tee sille enää mitään —
+   * ajastin jäisi muuten kysymään turhaan luennan loppua.
+   */
+  clearTimeout(ui.luentakuvaAjastin);
+  ui.luentakuvaAjastin = null;
+  paneeli.classList.add('pieni');
+  // Kartan liike kokoaa myös levitetyn viuhkan (omistaja 11.9.2026:
+  // *"Jos karttaa vierittää niin kuvapino pienentäisi taas varsin
+  // pieneksi"*).
+  paneeli.classList.remove('levitetty');
+  /*
+   * PIENI KUVA SAA OMAN PAIKKANSA: kaupungin yläpuolelle, pulu
+   * vierelleen (omistaja 14.9.2026, ks. asetaParinAnkkuri). Iso kuva
+   * jää sinne, minne se mahtui — pieni ei enää peri sitä kohtaa.
+   */
+  const naytto = ui.luentakuvaAnkkuri;
+  if (naytto?.paneeli === paneeli && !naytto.raahattu && asetaParinAnkkuri(naytto)) {
+    paivitaLuentakuvanPaikka(naytto);
+  }
+  return true;
+}
+
+/**
+ * KUVA PIENENEE LUENNAN PÄÄTTYESSÄ — EI POISTU (omistaja 9.9.2026:
+ * kuva jää kartalle *"niin kauan kuin kyseisessä kaupungissa
+ * ollaan"*). Luennan loppu on siis sama tapahtuma kuin kartan liike:
+ * iso kuva kutistuu pieneksi ja jää.
+ *
+ * Ensisijainen kello on äänite (js/luenta.js luennanLoppuun) — sama
+ * lupaus, jota pulun kommentti odottaa (fokusvirtaSaapumiskupla).
+ * Luenta voi kuitenkin olla vasta lähdössä (viive, ensisaapumisen
+ * tuurauspaljastus), joten sitä kysytään hetken aikaa uudestaan.
+ *
+ * VARAPOLKU: KIRJOITUSKONEEN TAHTI. Ilman äänitettä (mykistys,
+ * kertojatila 'ei', puuttuva mp3) luenta on se, mitä kortille
+ * kirjoittuu — sama osuus tekstistä, eri kello, kuten välihuudolla
+ * (ajastaHuudahdus).
+ *
+ * KAUPUNGINVAIHTO ON EDELLEEN POISTO: odotuksen aikana ehtii lähteä,
+ * ja toisen kaupungin kartalla tämä kuva ei kuulu edes pienenä.
+ */
+function pienennaLuennanJalkeen(ui, city, paneeli, teksti) {
+  const alku = Date.now();
+  /*
+   * PULU-CAM-PAKKA VOITTAA LUENNAN KELLON (mitattu Chromiumilla
+   * 9.9.2026, puhelinajo). Kommentti tulee luennan JÄLKEEN, ja pakka
+   * nousee sen mukana — mutta tämä sama luennan loppu on myös
+   * pienennyksen kello, ja kellojen järjestys vaihtelee (äänite vs.
+   * 400 ms:n kysely). Väärässä järjestyksessä pakka nousi ja kutistui
+   * heti perään peukalonkynneksi. Kun pakka on kartalla, luennan luku
+   * on ohi eikä sen ajastin enää kutista mitään; KARTAN LIIKE kutistaa
+   * yhä molemmat yhdessä (kytkeLuentakuvanPienennys).
+   */
+  const lopeta = () => {
+    if (ui.luentakuva === paneeli && !puluCamPakassa(ui)) pienennaLuentakuva(ui);
+  };
+  const kysy = (jaljella = LUENTAKUVAN_ODOTUSKATTO_MS) => {
+    if (ui.dead || ui.luentakuva !== paneeli) return;
+    // Pelaaja siirtyi toiseen kaupunkiin: kuva kuuluu vain siihen
+    // kaupunkiin, jonka luennan ajaksi se nousi — ja silloin se
+    // POISTUU, ei pienene.
+    if (ui.game?.cityOf?.()?.id !== city.id) { piilotaLuentakuva(ui); return; }
+    const luenta = luennanLoppuun(ui);
+    if (luenta) { void luenta.then(lopeta); return; }
+    if (jaljella > 0) {
+      clearTimeout(ui.luentakuvaAjastin);
+      ui.luentakuvaAjastin = setTimeout(
+        () => kysy(jaljella - LUENTAKUVAN_ODOTUSVALI_MS),
+        LUENTAKUVAN_ODOTUSVALI_MS,
+      );
+      return;
+    }
+    const kesto = String(teksti).length * KIRJOITUSKONE_MS + LUENTAKUVAN_HANNANVARA_MS;
+    clearTimeout(ui.luentakuvaAjastin);
+    ui.luentakuvaAjastin = setTimeout(lopeta, Math.max(0, kesto - (Date.now() - alku)));
+  };
+  kysy();
+}
+
+/**
+ * Luentakuva pois kartalta.
+ *
+ * TÄMÄ ON KAUPUNGISTA LÄHDÖN TIE (vaiennaLivianKaupunkipuhe) sekä
+ * uuden luennan ja rikkinäisen kuvan siivous. Kartan liike ja luennan
+ * loppu EIVÄT enää kulje täältä — ne pienentävät (pienennaLuentakuva).
+ *
+ * @param {object} ui
+ * @param {object} [asetukset]
+ * @param {boolean} [asetukset.heti] ilman häivytystä (laudan vaihto,
+ *   uusi luenta, rikkinäinen kuva)
+ */
+export function piilotaLuentakuva(ui, { heti = false } = {}) {
+  if (!ui) return;
+  /*
+   * ISO KESKISARJA LÄHTEE SAMAA TIETÄ. Sarja elää kartan ulkopuolella
+   * (koko ruudun päällys), joten se ei katoa paneelin mukana — ja sen
+   * ajastimet nostaisivat pakan seuraavassa kaupungissa.
+   */
+  piilotaLuentakuvasarja(ui);
+  /*
+   * ODOTTAVA SARJA LÄHTEE MYÖS (12.9.2026). Kuva odottaa isoisän
+   * luennan alkua (odotaLuennanAlku), eikä sitä ajastinta ole vielä
+   * missään tilassa — ilman tätä edellisen kaupungin kuva ilmestyisi
+   * jälkijunassa seuraavan kaupungin päälle.
+   */
+  clearTimeout(ui.luentakuvaOdotus);
+  ui.luentakuvaOdotus = null;
+  /*
+   * PULU-CAM-PAKKA LÄHTEE PANEELIN MUKANA (Raamattu: *"Kaupungista
+   * lähtö poistaa pakan"*). Pakka asuu paneelin sisällä, joten sen
+   * solmut lähtisivät joka tapauksessa — mutta pulpahdusajastimet
+   * eivät, ja ne herättäisivät pakan seuraavassa kaupungissa.
+   */
+  piilotaPuluCamPakka(ui);
+  ui.luentakuvaSulku?.();
+  ui.luentakuvaSulku = null;
+  irrotaLuentakuvanAnkkuri(ui);
+  clearTimeout(ui.luentakuvaAjastin);
+  ui.luentakuvaAjastin = null;
+  const paneeli = ui.luentakuva;
+  ui.luentakuva = null;
+  // Viimeksi näytetty isoisän kuva on paneelin oma tieto: se lähtee
+  // paneelin mukana, tai seuraava kaupunki perisi edellisen valinnan.
+  ui.luentakuvaNyt = null;
+  if (!paneeli) return;
+  // Ankkurisolmu lähtee paneelin mukana: tyhjä piste jäisi muuten
+  // karttapinnalle jokaisen luennan jäljiltä.
+  const poista = () => {
+    const solmu = paneeli.parentNode;
+    paneeli.remove();
+    if (solmu?.classList?.contains('fokusvirta-luentakuva-ankkuri')) solmu.remove();
+  };
+  if (heti || liikeVahennetty()) { poista(); return; }
+  paneeli.classList.remove('nakyy');
+  setTimeout(poista, LUENTAKUVAN_HAIVE_MS);
+}
+
+/* ============ ISOT KUVAT KESKELLÄ RUUTUA, SARJANA =================
+ *
+ * OMISTAJA 11.9.2026 klo 12.40 (Raamattu, SAAPUMISEN UUSI JARJESTYS:
+ * KAUPUNGIN MINITRAILERI, ISOT KUVAT KESKELLA, LYHENNETTY MERKINTA),
+ * sanatarkasti: *"isoisan kuva saisi aueta keskelle sivua niin isolla
+ * kuin mahdollista ja haivyta kuvan reunat lapinakyviksi ja kulmista
+ * hieman enemman pyoristetysti. Pulucamin kuvat tulisivat samalla
+ * tavalla. Jos niita on useampi, pida neljan sekunnin tauko jokaisen
+ * valissa. Viimeinen kuva feidautuisi naytolta 6 sekunnin kuluttua
+ * jolloin kartalle jaisi nakyviin kuva pakka pienessa koossa josta
+ * pelaaja voisi viela klikata kuvia koko ruudulle entiseen tapaan."*
+ *
+ * NELJÄ ASIAA, JOTKA EIVÄT NÄY DIFFISTÄ:
+ *
+ *  1. SARJA ON OMA PÄÄLLYKSENSÄ, EI ANKKUROITU PANEELI. Kartan
+ *     luentakuva on sidottu laudan pisteeseen ja sen koko lasketaan
+ *     niin, ettei se koskaan peitä matkakirjakorttia
+ *     (js/saapumisasento.js). Ison keskikuvan sääntö on päinvastainen:
+ *     se SAA peittää kortin (Raamattu 11.9.), ja siksi se on oma koko
+ *     ruudun päällyksensä. Ankkuroitu paneeli rakennetaan vasta
+ *     sarjan päätteeksi — silloin kun kuva jää kartalle pieneksi.
+ *
+ *  2. KORTTI JÄÄ AUKI ALLE. Päällys ei koske matkakirjakorttiin: se
+ *     pysyy DOMissa auki ja paljastuu sellaisenaan, kun sarja häipyy.
+ *
+ *  3. PÄÄLLYS EI OTA NAPAUTUKSIA (`pointer-events: none`). Kartan
+ *     liike on omistajan tahdonilmaus: *"käyttäjä haluaa kartan"* —
+ *     silloin sarja hypätään loppuun ja pakka nostetaan heti pieneen
+ *     kokoon. Ilman läpäisyä napautus jäisi päällykseen eikä kartta
+ *     liikkuisi lainkaan.
+ *
+ *  4. PAKKA NOUSEE VAIN KERRAN, JA VASTA SARJAN JÄLKEEN. Pulun kommentti
+ *     ei enää nosta pakkaa kartalle (fokusvirtaSaapumiskupla →
+ *     naytaPulunKuvapakka), vaan ALOITTAA PuluCam-kuvien ison sarjan
+ *     (aloitaPuluCamSarja) — omistaja 11.9.2026 klo 14.35: *"pulcam
+ *     kuvat tulevat vasta kun pulun oma repliikki alkaa"*. Pakka nousee
+ *     pienenä vasta sarjan lopuksi. Portti on nostossa itsessään, ei
+ *     kutsupaikoissa — muuten järjestys ratkaisisi lopputuloksen.
+ *
+ *  5. ISOISÄN KUVALLA ON KAKSI KELLOA. Luennan ajan se pysyy suurena;
+ *     puolivälissä (LUENTAKUVAN_VAIHTO_MS) se vaihtuu kakkoskuvaksi, jos
+ *     pakissa on `matkakirja.luentakuva2`. Ilman PuluCam-kuvia sarja
+ *     päättyy 6 s luennan päättymisestä, ei 6 s kuvan avautumisesta.
+ */
+
+/** Kuinka kauan yksi iso kuva on ruudulla ennen seuraavaa (omistaja: 4 s). */
+export const ISON_KUVAN_VAIHTO_MS = 4000;
+
+/** Kuinka kauan viimeinen iso kuva jää ruudulle ennen häipymistä (6 s). */
+export const ISON_KUVAN_LOPPU_MS = 6000;
+
+/**
+ * PAKAN KATTO: enintään näin monta korttia kerralla ruudulla. Isoisän
+ * kaksi kuvaa ja PuluCamin viisi (PULUCAM_KATTO) mahtuvat, eikä
+ * mahdollinen pidempi tuleva sarja kasvata pinoa loputtomiin.
+ *
+ * Tämä korvaa vakion ISON_KUVAN_RISTIHAIVE_MS: kuvat eivät enää häivy
+ * toistensa tieltä, vaan ne jäävät pakaksi (omistaja 15.9.2026).
+ */
+const ISON_PAKAN_KATTO = 7;
+
+/** Koko sarjan häipyminen ruudulta. */
+export const ISON_KUVAN_POISTUMA_MS = 700;
+
+/**
+ * ISOISÄN KUVA VAIHTUU LUENNAN PUOLIVÄLISSÄ (omistaja 11.9.2026 klo
+ * 14.35, sanatarkasti: *"kuva saisi vaihtua uuden lyhennetyn puheen
+ * puolivalissa. voi kayttaa keskimaaraista aikaa, niin ei tarvitse
+ * jokaiselle luennalle laskea aikaa erikseen"*).
+ *
+ * YKSI VAKIO KAIKILLE, EI LUENTAKOHTAISTA LASKENTAA. Marseillen
+ * lyhennetty luenta päättyy 17,8 s kohdalla, joten puoliväli on noin
+ * 9 s — ja se on omistajan päätöksellä kaikkien kaupunkien mitta.
+ * Ajastin lähtee isoisän kuvan avautumisesta eli luennan alusta.
+ */
+export const LUENTAKUVAN_VAIHTO_MS = 9000;
+
+/** Kuinka usein sarja kysyy, onko luenta yhä kesken. */
+const SARJAN_LUENTAVAHTI_MS = 250;
+
+/**
+ * Kuinka kauan luennan annetaan KÄYNNISTYÄ ennen kuin sarja tulkitsee,
+ * ettei luentaa tule lainkaan (mykistys, kertojatila 'ei', puuttuva
+ * äänite). Luenta lähtee sekunnin viiveellä, joten katto on reilusti
+ * sen yli.
+ */
+const SARJAN_LUENNAN_ALKUKATTO_MS = 4000;
+
+/** Varoventtiili: luentaa ei odoteta tätä pidempään. */
+const SARJAN_LUENNAN_KATTO_MS = 180000;
+
+/**
+ * PAKAN KALLISTUS ASTEINA (omistaja 15.9.2026: *"hieman vinottain"*).
+ * Ensimmäinen kortti 2,0°, ja jokainen seuraava 0,4° enemmän — viides
+ * on siis 3,6°. Omistajan mitta on "hieman", joten kulma pysyy
+ * kahden ja neljän asteen välissä.
+ */
+const PAKAN_KALLISTUS_MIN = 2.0;
+const PAKAN_KALLISTUS_ASKEL = 0.4;
+
+/** Pakan vaakasiirto: kortti väistää kallistuksensa suuntaan. */
+const PAKAN_SIIRTO_PX = 14;
+
+/** Pakan pystysiirto korttia kohti: pino laskeutuu hitusen alaspäin. */
+const PAKAN_SIIRTO_Y_PX = 8;
+
+/**
+ * Sarjan yksi ruutu: kuva, PULU-CAM-sinetti ja lyhyt kuvateksti.
+ *
+ * Kuvateksti on kiinni kuvan alalaidassa kuten kartallakin (omistaja
+ * 9.9.2026), ja sinetti on pulun kuvien oikeassa yläkulmassa samalla
+ * merkillä kuin pakan korteissa (js/pulucam.js puluCamMerkki) — merkkiä
+ * ei polteta kuviin.
+ */
+function isonKuvanRuutu(kuva, pulusta, jarjestys = 0) {
+  const ruutu = html('div', 'fokusvirta-isokuva-ruutu');
+  /*
+   * PAKAN ASENTO: VUOROTELLEN VASEMMALLE JA OIKEALLE (omistaja
+   * 15.9.2026, sanatarkasti: *"lado ne hieman vinottain toistensa
+   * paalle vuorotellen vasemmalle ja oikealle kallistettuina"*).
+   * Ensimmäinen kortti kallistuu vasemmalle, toinen oikealle, ja
+   * kulman itseisarvo kasvaa hitusen syvemmälle pakkaan — muuten
+   * kolmas ja neljäs kortti peittäisivät kaksi ensimmäistä täysin.
+   * Siirto on saman verran vastakkaiseen suuntaan, jotta pakka levittyy
+   * eikä kasva yhteen suuntaan.
+   */
+  const merkki = jarjestys % 2 === 0 ? -1 : 1;
+  const kulma = (PAKAN_KALLISTUS_MIN + Math.min(jarjestys, 4) * PAKAN_KALLISTUS_ASKEL) * merkki;
+  ruutu.style.setProperty('--pakka-kallistus', `${kulma.toFixed(2)}deg`);
+  ruutu.style.setProperty('--pakka-siirto-x', `${(merkki * PAKAN_SIIRTO_PX).toFixed(0)}px`);
+  ruutu.style.setProperty('--pakka-siirto-y',
+    `${(Math.min(jarjestys, 4) * PAKAN_SIIRTO_Y_PX).toFixed(0)}px`);
+  const kotelo = html('figure', 'fokusvirta-isokuva-kotelo');
+  const img = document.createElement('img');
+  /*
+   * OMA LUOKKA, EI PELKKÄ `img`. Koteloon tulee myös PULU-CAM-sinetin
+   * oma kuva (puluCamMerkki), ja `.fokusvirta-isokuva-kotelo img`
+   * -sääntö olisi venyttänyt ja maskannut senkin (mitattu Chromiumilla
+   * 11.9.2026: sinetti 92 × 599 px kuvan reunan yli).
+   */
+  img.className = 'fokusvirta-isokuva-kuva';
+  img.decoding = 'async';
+  img.draggable = false;
+  // Isossa kuvassa lyhyt teksti, kuten kartalla (js/kuvatekstit.js).
+  img.alt = kuvatekstiLyhyt(kuva);
+  asetaKuva(img, kuvanOsoite(kuva, LUENTAKUVAN_PX), kuvanVara(kuva, LUENTAKUVAN_PX));
+  kotelo.appendChild(img);
+  if (pulusta) kotelo.appendChild(puluCamMerkki({ luokka: 'pulucam-merkki-iso' }));
+  const teksti = kuvatekstiLyhyt(kuva);
+  if (teksti) {
+    /*
+     * KUVATEKSTI PAPERILLA (omistaja 17.9.2026, PAATOKSET 35 kohta 2).
+     * `figcaption` ON se valkoinen paperi, joka jatkuu kuvan alta;
+     * teksti itse on sen sisällä omana lohkonaan, jotta ladonta
+     * (leveysrajaus, keskitys) ei ole sama asia kuin paperin mitta.
+     */
+    const lappu = html('figcaption', 'fokusvirta-isokuva-teksti');
+    lappu.appendChild(html('span', 'fokusvirta-isokuva-selite', teksti));
+    kotelo.appendChild(lappu);
+  }
+  ruutu.appendChild(kotelo);
+  return ruutu;
+}
+
+/**
+ * PÄÄLLYKSEN KOTI ON `.stage`, EI `document.body` (omistaja 12.9.2026,
+ * sanatarkasti: *"kuva saisi jäädä matkakirjan alle"*).
+ *
+ * Matkakirjakortti asuu `.railissa` (z-index 4) `.app`-kerroksen
+ * sisällä, ja `.app` on `position: fixed` eli oma pinonsa. Rungon
+ * tasolla oleva päällys olisi siis kortin päällä MILLÄ TAHANSA
+ * z-indexillä — luku ei riitä, pinon on oltava sama. `.stage` on se
+ * yhteinen vanhempi, jossa kartta (`.map-pane`, auto) ja kortin rail
+ * (4) kilpailevat keskenään; päällys saa väliltä luvun 3
+ * (css/fokusvirta.css .fokusvirta-isokuva).
+ */
+function isokuvanKoti() {
+  return document.querySelector('.stage')
+    ?? document.querySelector('.app')
+    ?? document.body;
+}
+
+/**
+ * Yksi iso keskipäällys: kehys, ajastimet ja kuvanvaihto — ilman
+ * sisältöä. Kutsujat päättävät, mitkä kuvat siihen ladotaan: isoisän
+ * luentasarja (naytaLuentakuvasarja) tai pulun oma sarja, joka alkaa
+ * vasta kommentista (aloitaPuluCamSarja).
+ */
+function avaaIsokuvaPaallys(ui, city, pohjakuva) {
+  /*
+   * OHITETTU LUENTA EI AVAA UUTTA PAALLYSTA (omistaja 17.9.2026 klo
+   * 22.10, PAATOKSET 35 TARKENNUS: *"Ohita PYSAYTTAA luennan - aani ja
+   * kuvat loppuvat heti, kartta nakyy; pulun luentareaktiot eivat enaa
+   * tule."*). Pulun oma sarja alkaa OMASTA kellostaan luennan lopusta,
+   * joten pelkkä nykyisen päällyksen poisto ei riittäisi: se nousisi
+   * sekunteja myöhemmin kartalle. Lippu on kaupungin tunnus, joten
+   * seuraava kaupunki alkaa puhtaalta pöydältä ilman omaa nollausta.
+   */
+  if (luentaOhitettu(ui, city)) return null;
+  lataaTyyli();
+  const kehys = html('div', 'fokusvirta-isokuva');
+  kehys.setAttribute('role', 'group');
+  kehys.setAttribute('aria-label', `${city.name}: matkakirjan kuva`);
+  isokuvanKoti().appendChild(kehys);
+  /*
+   * OHITA-TEKSTI KUVAN JA KUVATEKSTIN ALLA (PAATOKSET 35 kohta 3) —
+   * MUTTA EI PÄÄLLYKSEN LAPSENA (PAATOKSET 43 kohta 10, omistaja
+   * 18.9.2026). Nappi oli ennen tässä kehyksessä, ja päällyksen purku
+   * (kartan liike, kuvien lento lappuun) vei sen mukanaan kesken
+   * luennan. Nyt se on oma kelluva solmunsa samassa kodissa ja
+   * samassa kohdassa ruutua — ks. naytaOhitaNappi. Päällyksen JÄLKEEN
+   * ladottuna se jää kuvien päälle, vaikka nappi eläisi useamman
+   * päällyksen yli (isoisä, pulun oma sarja).
+   */
+  naytaOhitaNappi(ui, city);
+
+  const ajastimet = [];
+  const tila = {
+    kehys, ajastimet, city,
+    // Kartalle jäävä kuva: vaihtuu kakkoskuvaan puolivälissä.
+    pohjakuva: pohjakuva ?? null,
+    puluAlkoi: false,
+    loppuAjastin: 0,
+  };
+  ui.luentakuvasarja = tila;
+  if (pohjakuva) ui.luentakuvaNyt = pohjakuva;
+  const aja = (viive, tyo) => {
+    const ajastin = setTimeout(() => {
+      if (ui.luentakuvasarja === tila) tyo();
+    }, Math.max(0, viive));
+    ajastimet.push(ajastin);
+    return ajastin;
+  };
+
+  const nayta = () => { if (kehys.isConnected) kehys.classList.add('nakyy'); };
+  globalThis.requestAnimationFrame?.(nayta);
+  ajastimet.push(setTimeout(nayta, 50));
+
+  /*
+   * PAKKA EIKÄ RISTIHÄIVYTYS (omistaja 15.9.2026, sanatarkasti: *"lado
+   * ne hieman vinottain toistensa paalle vuorotellen vasemmalle ja
+   * oikealle kallistettuina"*).
+   *
+   * Ennen tämä oli kuvan VAIHTO: uusi kortti tuli näkyviin ja vanha
+   * häivytettiin pois ja poistettiin DOM:ista. Nyt vanha JÄÄ — kortit
+   * kasaantuvat pakaksi, ja järjestysnumero päättää kortin kallistuksen
+   * (isonKuvanRuutu). Nimi `vaihda` säilyy, koska kutsupaikkoja on
+   * neljä eikä niiden merkitys muutu: se on yhä "seuraava kuva esiin".
+   *
+   * PAKAN KATTO: kortteja on enintään kaksi isoisän kuvaa ja viisi
+   * PuluCam-kuvaa (PULUCAM_KATTO), eli seitsemän. Vanhimmat poistetaan
+   * vasta sen yli, jottei mahdollinen tuleva pidempi sarja kasvattaisi
+   * pinoa loputtomiin.
+   */
+  const kortit = [];
+  const vaihda = (kuva, pulusta) => {
+    const ruutu = isonKuvanRuutu(kuva, pulusta, kortit.length);
+    /*
+     * KAMERAN KLIK JOKAISELLE SARJAN KUVALLE (omistaja 11.9.2026 klo
+     * 12.55: *"Kuville tarvitaan kameran KLIK aani tehoste"*) — sama
+     * portti kuin minitrailerilla, jotta isoisän kuva ja PuluCamin
+     * kuvat kuulostavat samalta laukaisimelta.
+     */
+    soitaKameranKlik();
+    kehys.appendChild(ruutu);
+    /*
+     * PEITTYNEEN KORTIN KUVATEKSTI PIILOON. Kuvateksti kulkee kortin
+     * mukana (figcaption on kortin oma lapsi), mutta pakassa alempien
+     * korttien tekstit osuivat päällekkäin ja kartan päälle jäi kolme
+     * riviä sekaisin (mitattu 390 × 844, kolme korttia). Näkyvissä on
+     * siis PÄÄLLIMMÄISEN kortin teksti — sen kuvan, jota katsotaan.
+     */
+    for (const vanha of kortit) vanha.classList.add('alla');
+    kortit.push(ruutu);
+    const esiin = () => { if (ruutu.isConnected) ruutu.classList.add('nakyy'); };
+    globalThis.requestAnimationFrame?.(esiin);
+    ajastimet.push(setTimeout(esiin, 50));
+    while (kortit.length > ISON_PAKAN_KATTO) kortit.shift()?.remove();
+  };
+  tila.vaihda = vaihda;
+  tila.aja = aja;
+  kytkeSarjanKartanLiike(ui, tila);
+  return tila;
+}
+
+/**
+ * ISOISÄN SARJA RUUDULLE — VASTA KUN ISOISÄN LUENTA ALKAA (omistaja
+ * 12.9.2026, sanatarkasti: *"kun tullaan ateenaan niin isoisän kuvat
+ * saisi tulla vasta kun isoisän luenta alkaa. nyt ne tulivat heti kun
+ * ateenaan oli saavuttu ja pulun aloituskommentit vasta alkoivat"*).
+ */
+function avaaIsoisanSarja(ui, city, pohjakuvat) {
+  if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return false;
+  /*
+   * MERKINTÄ SIITÄ, ETTÄ SARJA ON OIKEASTI OLLUT RUUDULLA. Pulun
+   * myöhästynyt sarja (aloitaMyohastynytPuluSarja) saa avata oman
+   * päällyksensä VAIN saapumisen kulussa — eli kun isoisän kuvat on
+   * jo nähty. Ilman tätä porttia jokainen suora pakan nosto
+   * (naytaPulunKuvapakka ilman sarjaa) avaisi ison keskisarjan, ja
+   * kartan oma pakka jäisi nousematta.
+   */
+  ui.isoisanSarjaAjettu ??= new Set();
+  ui.isoisanSarjaAjettu.add(sarjanAvain(ui, city));
+  const tila = avaaIsokuvaPaallys(ui, city, pohjakuvat[0]);
+  const { aja, vaihda, ajastimet } = tila;
+
+  vaihda(pohjakuvat[0], false);
+
+  /*
+   * TOINEN KUVA PUOLIVÄLISSÄ. Kuvateksti vaihtuu kuvan mukana, koska
+   * koko ruutu (kuva + figcaption) rakennetaan uudestaan — ja kartalle
+   * jäävä kuva on tästä eteenpäin kakkoskuva.
+   */
+  if (pohjakuvat[1]) {
+    aja(LUENTAKUVAN_VAIHTO_MS, () => {
+      /*
+       * EI ISOISÄN KAKKOSKUVAA PULUN KUVIEN PÄÄLLE. Ennen pakkaa kuvat
+       * vaihtuivat toistensa tilalle, joten myöhässä laukeava
+       * kakkoskuva vain korvasi soivan PuluCam-kuvan hetkeksi. Pakassa
+       * se jäisi ruudulle väärään kohtaan järjestystä: isoisä, pulu,
+       * isoisä. Jos pulun sarja on jo alkanut, kakkoskuva jää pois —
+       * karusellissa se on yhä mukana (pulucamKaruselli lukee kuvat
+       * pakista).
+       */
+      if (tila.puluAlkoi) return;
+      tila.pohjakuva = pohjakuvat[1];
+      ui.luentakuvaNyt = pohjakuvat[1];
+      vaihda(pohjakuvat[1], false);
+    });
+  }
+
+  /*
+   * LUENNAN LOPPU ON ISOISÄN KUVAN KELLO (omistaja 11.9.2026 klo 14.35:
+   * *"Ilman PuluCam-kuvia isoisan kuva pienenee 6 s luennan
+   * paattymisesta"*). Vahti kysyy ui.luentaKeskeniltä eikä ota
+   * luennanLoppuun-lupausta: luenta lähtee vasta sekunnin viiveellä,
+   * joten sarjan alkaessa soitinta ei vielä ole. Ilman luentaa (mykistys,
+   * kertojatila 'ei', puuttuva äänite) alkukatto päästää kellon käyntiin.
+   */
+  const vahtiLuennanLoppua = (kulunut = 0, alkanut = false) => {
+    if (ui.luentakuvasarja !== tila || tila.puluAlkoi) return;
+    const kesken = ui.luentaKesken?.() === true;
+    const onAlkanut = alkanut || kesken;
+    const loppui = (onAlkanut && !kesken)
+      || (!onAlkanut && kulunut >= SARJAN_LUENNAN_ALKUKATTO_MS)
+      || kulunut >= SARJAN_LUENNAN_KATTO_MS;
+    if (loppui) {
+      tila.loppuAjastin = aja(ISON_KUVAN_LOPPU_MS, () => paataLuentakuvasarja(ui));
+      return;
+    }
+    ajastimet.push(setTimeout(
+      () => vahtiLuennanLoppua(kulunut + SARJAN_LUENTAVAHTI_MS, onAlkanut),
+      SARJAN_LUENTAVAHTI_MS,
+    ));
+  };
+  vahtiLuennanLoppua();
+  return true;
+}
+
+/**
+ * SARJA RUUDULLE (js/ui.js renderFact, merkinnän alkaessa).
+ *
+ * KULKU (omistaja 11.9.2026 klo 14.35, sanatarkasti: *"pulcam kuvat
+ * tulevat vasta kun pulun oma repliikki alkaa"*; tarkennus 12.9.2026:
+ * *"isoisän kuvat saisi tulla vasta kun isoisän luenta alkaa"*):
+ *
+ *   1. Isoisän luentakuva avautuu keskelle ruutua VASTA KUN ISOISÄN
+ *      LUENTA OIKEASTI ALKAA (odotaLuennanAlku) ja PYSYY suurena koko
+ *      luennan ajan.
+ *   2. Kakkoskuva (`matkakirja.luentakuva2`) vaihtuu tilalle
+ *      LUENTAKUVAN_VAIHTO_MS:n kohdalla — ristihäivytyksellä, kuvateksti
+ *      kuvan mukana. Ilman kenttää ensimmäinen kuva jää.
+ *   3. PuluCam-kuvien sarja alkaa VASTA pulun oman kommentin alkaessa
+ *      (fokusvirtaSaapumiskupla → naytaPulunKuvapakka → aloitaPuluCamSarja),
+ *      4 s välein, ja viimeinen häipyy 6 s kuluttua pieneksi pakaksi.
+ *   4. Ilman PuluCam-kuvia isoisän kuva pienenee 6 s LUENNAN
+ *      PÄÄTTYMISESTÄ (vahtiLuennanLoppua, ui.luentaKesken).
+ *
+ * ── MIKÄ TAPAHTUMA LAUKAISEE MINKÄKIN VAIHEEN ──────────────────────
+ *
+ * Kutsu tulee merkinnän alusta (js/ui.js aloitaMerkinta), mutta LUENTA
+ * EI ALA SIITÄ HETKESTÄ. Ensisaapumisella se on lykkäyksessä
+ * (`ui.luennanLykkays`) siihen asti, että pulun kaksi aloituskuplaa on
+ * sanottu (js/livia.js odotaLuenta → ui.aloitaLykattyLuenta).
+ * Aiemmin kuva avautui kutsuhetkestä, ja Ateenassa se oli ruudulla jo
+ * ennen kuin pulu oli ehtinyt aloittaa — juuri se oli omistajan
+ * havainto 12.9.2026. Nyt kuva odottaa sitä yhtä tapahtumaa, joka sen
+ * kuuluu laukaista: `ui.luentaKesken()` kääntyy todeksi.
+ *
+ * ILMAN LUENTAA KUVA TULEE SILTI. Mykistys, kertojatila 'ei' ja
+ * puuttuva äänite eivät saa jättää kuvaa tulematta: kun lykkäystä ei
+ * ole eikä luenta ole alkanut alkukatossa, sarja lähtee sellaisenaan.
+ * Lykkäyskatto on varoventtiili sille, ettei kuplasarja koskaan päästä
+ * luentaa liikkeelle.
+ *
+ * @returns {boolean} alkoiko sarja (tai sen odotus)
+ */
+export function naytaLuentakuvasarja(ui, city) {
+  if (typeof document === 'undefined' || !ui || !city) return false;
+  const pohjakuvat = fokusvirtaLuentakuvat(ui, city);
+  if (!pohjakuvat.length) return naytaLuentakuva(ui, city);
+  // Edellisen kaupungin jäljet pois (myös kesken jäänyt sarja ja odotus).
+  piilotaLuentakuva(ui, { heti: true });
+  odotaLuennanAlku(ui, city, () => avaaIsoisanSarja(ui, city, pohjakuvat));
+  return true;
+}
+
+/** Sarjan muistiavain: lauta ja kaupunki, kuten saapumiskuplalla. */
+function sarjanAvain(ui, city) {
+  return ui?.game?.pack ? `${ui.game.pack.id}:${city.id}` : city.id;
+}
+
+/** Kuinka usein kysytään, onko isoisän luenta jo alkanut. */
+const SARJAN_ALKUVAHTI_MS = 200;
+
+/**
+ * Kuinka kauan lykätyn luennan (pulun aloituskuplat) annetaan päästää
+ * kertoja ääneen ennen kuin kuva tulee ilman sitä. Kuplasarja on
+ * napautuksin etenevä, joten katto on reilu.
+ */
+const SARJAN_LYKKAYSKATTO_MS = 120000;
+
+/**
+ * Kuinka kauan kuva odottaa isoisän äänen 'playing'-tapahtumaa, kun luenta
+ * on jo käynnistetty (Fable 24.9.2026, löydös 45 kohta B varaventtiilillä).
+ */
+const SARJAN_AANIVARA_MS = 1500;
+
+/**
+ * Odota, että isoisän luenta oikeasti alkaa — ja vasta sitten kuva.
+ * Odotus on peruttavissa: `ui.luentakuvaOdotus` nollataan
+ * piilotaLuentakuvassa, joten kaupungista lähtö ei jätä kuvaa
+ * ilmestymään jälkijunassa.
+ *
+ * KUVA ÄÄNEN MUKANA, EI PLAY()-KUTSUN (löydös 45, Fablen päätös B
+ * 24.9.2026). `ui.luentaKesken()` kääntyy todeksi jo, kun soitin on
+ * luotu ja play() kutsuttu; ääni alkoi kuulua mitattuna noin 1,1 s
+ * myöhemmin (Ateena, tuotanto), ja sen ajan iso kuva ja Ohita olivat
+ * ruudulla Liiku-napin kanssa, koska Liiku piiloutuu vasta kuuluvasta
+ * äänestä (15.9.2026: epäonnistunut play() ei saa piilottaa mitään).
+ * Nyt kuva odottaa äänen 'playing'-tapahtumaa, jolloin kuva, ääni ja
+ * Liikun piilo alkavat yhdessä.
+ *
+ * VARAVENTTIILI: kuva ei saa koskaan jäädä tulematta äänen takia. Se
+ * avautuu heti ennallaan, jos luenta on striimattu lukija (ei <audio>-
+ * soitinta), soitin kaatuu ('error') tai loppuu, ja viimeistään
+ * SARJAN_AANIVARA_MS:n kuluttua, jos 'playing' ei tule (play() hylätty,
+ * hidas verkko). Äänet pois päältä -tilassa luenta ei ala lainkaan, ja
+ * kuva tulee alkukaton polulla kuten ennenkin.
+ */
+function odotaLuennanAlku(ui, city, aloita) {
+  clearTimeout(ui.luentakuvaOdotus);
+  ui.luentakuvaOdotus = null;
+  const odotaAanta = (aani) => {
+    let valmis = false;
+    const ajastin = setTimeout(() => avaa(), SARJAN_AANIVARA_MS);
+    const avaa = () => {
+      if (valmis) return;
+      valmis = true;
+      clearTimeout(ajastin);
+      aani.removeEventListener('playing', avaa);
+      aani.removeEventListener('error', avaa);
+      aani.removeEventListener('ended', avaa);
+      // Peruttu (piilotaLuentakuva nollasi kahvan) tai kaupunki vaihtui.
+      if (ui.luentakuvaOdotus !== ajastin) return;
+      ui.luentakuvaOdotus = null;
+      if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return;
+      aloita();
+    };
+    ui.luentakuvaOdotus = ajastin;
+    aani.addEventListener('playing', avaa);
+    aani.addEventListener('error', avaa);
+    aani.addEventListener('ended', avaa);
+  };
+  const vahti = (kulunut = 0) => {
+    if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return;
+    if (ui.luentaKesken?.() === true) {
+      const aani = ui.diaryVoice;
+      const soitin = typeof aani?.addEventListener === 'function';
+      if (!soitin || aaniKuuluu(aani) || aani.error || aani.ended) { aloita(); return; }
+      odotaAanta(aani);
+      return;
+    }
+    const lykkays = ui.luennanLykkays === true;
+    const katko = lykkays ? SARJAN_LYKKAYSKATTO_MS : SARJAN_LUENNAN_ALKUKATTO_MS;
+    if (kulunut >= katko) { aloita(); return; }
+    ui.luentakuvaOdotus = setTimeout(() => vahti(kulunut + SARJAN_ALKUVAHTI_MS),
+      SARJAN_ALKUVAHTI_MS);
+  };
+  vahti();
+}
+
+/**
+ * PULUCAM-KUVAT KESKELLE RUUTUA — PULUN OMASTA REPLIIKISTÄ.
+ *
+ * Omistaja 11.9.2026 klo 14.35, sanatarkasti: *"pulcam kuvat tulevat
+ * vasta kun pulun oma repliikki alkaa"*. Kutsupaikka on se yksi kohta,
+ * jossa kommentti oikeasti nousee ruudulle (fokusvirtaSaapumiskupla →
+ * naytaPulunKuvapakka), joten sarja ja kupla lähtevät samasta hetkestä.
+ *
+ * Ensimmäinen pulun kuva tulee heti kommentin alkaessa, loput 4 s
+ * välein, ja viimeinen häipyy 6 s kuluttua pieneksi pakaksi. Isoisän
+ * kuvan oma kello (6 s luennan lopusta) perutaan tässä: kuvia on vielä
+ * katsottavana. Jos kommentti alkaisi luennan ollessa kesken, sarja
+ * alkaa silti kommentista — se on omistajan hetki.
+ *
+ * @returns {boolean} alkoiko pulun sarja
+ */
+export function aloitaPuluCamSarja(ui, city) {
+  if (typeof document === 'undefined' || !ui) return false;
+  const kesken = ui.luentakuvasarja;
+  if (kesken?.puluAlkoi) return false;
+  const kaupunki = city ?? kesken?.city;
+  if (!kaupunki) return false;
+  if (kesken && kesken.city?.id !== kaupunki.id) return false;
+  const kuvat = fokusvirtaPulunKuvat(ui, kaupunki);
+  if (!kuvat.length) return false;
+  /*
+   * KERRAN PER SAAPUMINEN. Kommenttikupla voi pyytää sarjaa useammin
+   * kuin kerran (pakan nosto kutsuu samaa funktiota), ja ilman muistia
+   * pulun kuvat lähtisivät toiselle kierrokselle pakan noston jälkeen.
+   */
+  const avain = sarjanAvain(ui, kaupunki);
+  ui.puluCamSarjaNaytetty ??= new Set();
+  if (ui.puluCamSarjaNaytetty.has(avain)) return false;
+  /*
+   * MYÖHÄSTYNYT SARJA VAIN SAAPUMISEN KULUSSA. Jos isoisän sarjaa ei
+   * ole ollut ruudulla, tämä kutsu on tavallinen pakan nosto (kartan
+   * oma polku) eikä pulun kuvien iso vuoro — silloin ei avata mitään.
+   */
+  const tila = kesken
+    ?? (ui.isoisanSarjaAjettu?.has(avain) ? aloitaMyohastynytPuluSarja(ui, kaupunki) : null);
+  if (!tila) return false;
+  tila.puluAlkoi = true;
+  ui.puluCamSarjaNaytetty.add(avain);
+  // Isoisän kuvan pienennyskello pois: pulun kuvat vievät sarjan loppuun.
+  clearTimeout(tila.loppuAjastin);
+  tila.loppuAjastin = 0;
+  kuvat.forEach((kuva, i) => {
+    if (i === 0) tila.vaihda(kuva, true);
+    else tila.aja(i * ISON_KUVAN_VAIHTO_MS, () => tila.vaihda(kuva, true));
+  });
+  /*
+   * VARAKELLO, EI ENSISIJAINEN. Jos ääni ei koskaan kerro kestoaan
+   * (mykistys, teksti-ilman-ääntä-tila, puuttuva äänite),
+   * vahtiPulunLoppua ei koskaan löydä äänitettä eikä siis koskaan
+   * lyhennä tätä — sarja päättyy silloin täsmälleen kuten ennenkin.
+   * Ääntä KUULEVA sarja korvaa tämän lyhyemmällä ajastimella heti kun
+   * kesto on tiedossa (ks. vahtiPulunLoppua).
+   */
+  tila.loppuAjastin = tila.aja(
+    (kuvat.length - 1) * ISON_KUVAN_VAIHTO_MS + ISON_KUVAN_LOPPU_MS,
+    () => paataLuentakuvasarja(ui),
+  );
+  vahtiPulunLoppua(ui, tila);
+  return true;
+}
+
+/** Kuinka kauan ennen puheen LASKETTUA loppua kuva alkaa hipua pois. */
+const PULUN_KUVAN_ENNAKKO_MS = 1000;
+
+/**
+ * Kuinka pitkän hiljaisuuden vahti sietää kahden pulun OMAN repliikin
+ * välissä ennen kuin päättelee koko puheenvuoron oikeasti loppuneeksi.
+ * Osiin jaettu puheenvuoro (js/pollo.js naytaPuheenvuoro) vaihtaa
+ * äänitettä osasta toiseen pienen tauon yli — sillä välin
+ * `ui.liviaAani` on hetken null, eikä se saa näyttää sarjan lopulta.
+ */
+const PULUN_KUVAN_HILJAISUUSKATTO_MS = 1500;
+
+/**
+ * PULUN KUVIEN POISTUMA SEURAA OIKEAA ÄÄNTÄ, EI KIINTEÄÄ AJASTUSTA
+ * (omistaja: Pulu Cam -kuva ja huntu jäivät iPhonella katoamaan liian
+ * aikaisin/myöhään verrattuna oikeaan puheeseen, koska sarjan loppu
+ * laskettiin pelkästä kuvien lukumäärästä × kiinteä ISON_KUVAN_VAIHTO_MS
+ * — ei siitä, kuinka pitkä pulun ääninauha oikeasti on).
+ *
+ * Vahti lukee `ui.liviaAani`-elementin (js/liviapuhe.js
+ * soitaLivianAani, joka vaihtuu joka osan mukana) ja sen todellisen
+ * keston heti kun selain on ehtinyt hakea metatiedot. Kun ääntä on
+ * jäljellä enää PULUN_KUVAN_ENNAKKO_MS, sarjan varakello korvataan
+ * täsmällisemmällä — kuva siis häipyy VASTA juuri ennen viimeistä
+ * sanaa, ei aiemmin.
+ *
+ * ILMAN ÄÄNTÄ (mykistys, puuttuva äänite, tekstitila) `ui.liviaAani`
+ * ei koskaan kerro kestoa, ja vahti jättää alkuperäisen varakellon
+ * (kuvien lukumäärään perustuva ajastus, ks. aloitaPuluCamSarja)
+ * koskemattomaksi — sama sopimus kuin luennan tekstiaikataululla
+ * muuallakin (js/liviapuhe.js livianKuplanAika).
+ *
+ * Kahden osan välinen tauko ei saa näyttää sarjan lopulta: jos ääni on
+ * juuri nyt hiljaa, vahti odottaa PULUN_KUVAN_HILJAISUUSKATTO_MS ajan
+ * ennen kuin päättelee puheen oikeasti loppuneen.
+ */
+function vahtiPulunLoppua(ui, tila, hiljaisuus = 0) {
+  if (ui.dead || ui.luentakuvasarja !== tila) return;
+  const audio = ui.liviaAani;
+  if (audio) {
+    // Ääni on ainakin kerran kuultu: hiljaisuuskatto saa alkaa mitata.
+    tila.puluAaniNahty = true;
+    const kesto = livianAanenKesto(audio);
+    if (kesto !== null) {
+      /*
+       * KORVAA VARAKELLO HETI, EI VASTA LOPUSSA. `aloitaPuluCamSarja`
+       * asetti alussa kiinteän varakellon (kuvien lukumäärä ×
+       * ISON_KUVAN_VAIHTO_MS), joka voi laueta ENNEN oikeaa puheen
+       * loppua, jos äänite on pidempi kuin se kiinteä arvio (mitattu:
+       * 5 kuvaa → varakello 22 s, oikea äänite 26,07 s — kuva ja huntu
+       * katosivat 4 s liian aikaisin). Heti kun kesto on tiedossa,
+       * ajastin lasketaan UUDELLEEN todellisesta jäljellä olevasta
+       * ajasta joka kyselyllä, jotta pidempi äänite ei koskaan jää
+       * kiinteän varakellon armoille.
+       */
+      const jaljella = kesto - (Number(audio.currentTime) || 0) * 1000;
+      const poistumaan = Math.max(0, jaljella - PULUN_KUVAN_ENNAKKO_MS);
+      clearTimeout(tila.loppuAjastin);
+      tila.loppuAjastin = tila.aja(poistumaan, () => paataLuentakuvasarja(ui));
+      if (jaljella <= PULUN_KUVAN_ENNAKKO_MS) return;
+    }
+    tila.ajastimet.push(setTimeout(
+      () => vahtiPulunLoppua(ui, tila, 0), SARJAN_LUENTAVAHTI_MS,
+    ));
+    return;
+  }
+  /*
+   * ÄÄNI EI OLE VIELÄ KOSKAAN ALKANUT (soitaLivianAani odottaa vielä
+   * kuplan omaa viivettä) — tämä ei ole tauko osien välissä eikä
+   * puheen loppu, joten hiljaisuuskatto ei saa laueta tästä.
+   */
+  if (!tila.puluAaniNahty) {
+    tila.ajastimet.push(setTimeout(
+      () => vahtiPulunLoppua(ui, tila, 0), SARJAN_LUENTAVAHTI_MS,
+    ));
+    return;
+  }
+  if (hiljaisuus + SARJAN_LUENTAVAHTI_MS < PULUN_KUVAN_HILJAISUUSKATTO_MS) {
+    tila.ajastimet.push(setTimeout(
+      () => vahtiPulunLoppua(ui, tila, hiljaisuus + SARJAN_LUENTAVAHTI_MS),
+      SARJAN_LUENTAVAHTI_MS,
+    ));
+    return;
+  }
+  // Ääntä ei ole kuulunut pitkään aikaan: puhe on aidosti ohi.
+  clearTimeout(tila.loppuAjastin);
+  tila.loppuAjastin = tila.aja(0, () => paataLuentakuvasarja(ui));
+}
+
+/**
+ * PULUN SARJA OMANA PÄÄLLYKSENÄÄN, KUN ISOISÄN SARJA ON JO EHTINYT
+ * PÄÄTTYÄ (omistajan vikailmoitus 12.9.2026: *"pulun kuvat eivät tule
+ * jostain syystä isoisän kuvien jälkeen näkyville"*).
+ *
+ * JUURISYY, JOKA EI NÄY DIFFISTÄ. Isoisän kuvalla on kello, joka
+ * pienentää sen 6 s LUENNAN PÄÄTTYMISESTÄ (vahtiLuennanLoppua). Pulun
+ * kommentti taas odottaa luennan loppua, 0,9 s taukoa JA mahdollista
+ * paljastussarjaa — mitattuna Venetsiassa 12.9.2026 kommentti nousi
+ * ruudulle 9 sekuntia sen jälkeen, kun sarja oli jo purkautunut.
+ * Silloin `ui.luentakuvasarja` oli null, aloitaPuluCamSarja palasi
+ * heti ja PuluCam-kuvat eivät tulleet koskaan isoina — pakka vain
+ * nousi kartalle. Ketju katkesi siis kellojen välissä, ei kutsuissa.
+ *
+ * Korjaus ei ole kellon pidentäminen (silloin isoisän kuva jäisi
+ * roikkumaan kaupungeissa, joissa kommenttia ei tule lainkaan) vaan
+ * se, että pulun hetki avaa tarvittaessa OMAN päällyksensä. Sarjan
+ * pohjaksi jää se isoisän kuva, joka on kartalla — niin pakka palaa
+ * lopuksi ennalleen (paataLuentakuvasarja → nostaPieniPakka).
+ */
+function aloitaMyohastynytPuluSarja(ui, city) {
+  if (ui.dead) return null;
+  if (ui.game?.cityOf?.()?.id !== city.id) return null;
+  // Kartalla oleva isoisän kuva talteen ENNEN siivousta: piilotaLuentakuva
+  // nollaa ui.luentakuvaNyt-kentän.
+  const pohjakuva = ui.luentakuvaNyt ?? fokusvirtaLuentakuva(ui, city);
+  piilotaLuentakuva(ui, { heti: true });
+  return avaaIsokuvaPaallys(ui, city, pohjakuva);
+}
+
+/**
+ * KARTAN LIIKE VIE SARJAN LOPPUUN (omistajan sääntö kuvalle ja kortille:
+ * kartan liike on pelaajan tahdonilmaus). Sarjaa ei jäädytetä eikä
+ * jatketa taustalla — se hyppää suoraan siihen tilaan, johon se olisi
+ * päätynyt: pieni kuvapakka kartalla.
+ *
+ * PÄÄLLYSIKKUNAN AVAAMINEN EI OLE KARTAN LIIKE (omistaja 15.9.2026,
+ * Raamattu "VIKA: ASETUSTEN AVAAMINEN KESKEN LUENNAN KUTISTAA
+ * LUENTAKUVAT"). Vartija kuunteli koko dokumentin pointerdownia ja
+ * luki myös hammasrattaan, hampurilaisen ja matkalaukun napautuksen
+ * kartan liikkeeksi — iso luentakuva kutistui pakaksi heti, vaikka
+ * luenta jatkoi soimistaan ikkunan alla (mitattu 1400 × 900,
+ * Dubrovnik: `paused === false`, currentTime 0,93 → 2,97 s). Ääni ei
+ * siis pysähdy asetusikkunan ajaksi, joten näkymänkään ei kuulu
+ * purkautua: sarja jatkuu ikkunan alla entiseen tahtiin ja päättyy
+ * omaan kelloonsa tai oikeaan kartan liikkeeseen.
+ *
+ * Rajaus tehdään yhdellä ehdolla (js/ui-apurit.js onkoKartanLiike),
+ * jota myös valikon sulkuvartija käyttää: kartta-alueen sisällä, ei
+ * sen päällä kelluvissa napeissa eikä valikoissa. Isokuvan ja
+ * suurennoksen oma poikkeus jää näkyviin, vaikka ne asuvatkin
+ * `.map-panen` ulkopuolella — se on ehdon ydin, ei sattuma.
+ */
+function kytkeSarjanKartanLiike(ui, tila) {
+  if (typeof document?.addEventListener !== 'function') return;
+  const kasittele = (tapahtuma) => {
+    // Ohita on oma kelluva solmunsa (PAATOKSET 43 kohta 10), ei enää
+    // päällyksen lapsi: sen oma napautus ei ole kartan liike.
+    if (tapahtuma.target?.closest?.(
+      '.fokusvirta-isokuva, .fokusvirta-ohitanappi, .fokuszoom',
+    )) return;
+    if (!onkoKartanLiike(tapahtuma)) return;
+    if (ui.luentakuvasarja === tila) paataLuentakuvasarja(ui, { heti: true });
+  };
+  document.addEventListener('pointerdown', kasittele);
+  tila.irrota = () => document.removeEventListener('pointerdown', kasittele);
+}
+
+/** Pikkukuvan tilattu leveys: rivin kuvat ovat 3,1 rem levaita. */
+const MATKAKIRJAN_PIKKUKUVA_PX = 240;
+
+/**
+ * SAAPUMISMERKINNAN KUVAT YHTENA LISTANA: isoisa ensin, pulu perassa.
+ *
+ * Sama järjestys kuin isossa sarjassa ja karusellissa — yksi järjestys,
+ * ei kahta.
+ *
+ * @returns {Array<object>} 0–7 kuvaa
+ */
+export function matkakirjanPikkukuvat(ui, city) {
+  if (!ui || !city) return [];
+  return [
+    ...fokusvirtaLuentakuvat(ui, city),
+    ...pulunKuvat(fokusvirtaSisalto(ui, city)),
+  ];
+}
+
+/**
+ * PIKKUKUVAT ISOISAN MATKAKIRJAN TEKSTIN LOPPUUN.
+ *
+ * Omistaja 17.9.2026 klo 22.05 (Raamattu KARTTAUUDISTUKSEN PAATOKSET 35
+ * kohta 4), sanatarkasti: *"Isoisan ja pulun kuvat voisi olla pienella
+ * isoisan matkakirjan tekstin lopussa ja ne voisi siella klikata auki
+ * (pikkukuvat eivat nay kun matkakirja on pienennettyna)."*
+ *
+ * KOLME ASIAA, JOTKA EIVAT NAY DIFFISTA:
+ *
+ *  1. RIVI ON KORTIN OMA LAPSI, ei tekstirivin (.fact-teksti-rivi)
+ *     sisus. Kortin kutistuminen lappuun piilottaa kaikki lapsensa
+ *     yhdellä olemassa olevalla säännöllä (`.fact-card.pieni > *`,
+ *     css/styles.css), joten pienennetyn matkakirjan vaatimus täyttyy
+ *     ilman omaa sääntöä. Paikka on silti tekstin JÄLKEEN: rivi
+ *     ladotaan `.fact-teksti-rivin` perään.
+ *  2. NAPAUTUS AVAA SAMAN SUURENNOKSEN kuin kartan luentakuva-nappi
+ *     (avaaSuurennos, lyhytTeksti) — ei toista kuvakatselinta.
+ *  3. KARTALLA OLEVA PAKKA PYSYY POISSA (PAATOKSET 31,
+ *     LUENTAKUVAPAKKA_KARTALLA): tämä rivi on KORTISSA, ei kartalla,
+ *     eikä kytkin koske siihen.
+ *
+ * @param {object} ui
+ * @param {?object} city kaupunki, tai null (rivi pois)
+ * @returns {number} riville ladottujen pikkukuvien määrä
+ */
+export function paivitaMatkakirjanPikkukuvat(ui, city) {
+  if (typeof document === 'undefined') return 0;
+  const kortti = document.querySelector('.fact-card');
+  if (!kortti) return 0;
+  kortti.querySelector('.fact-pikkukuvat')?.remove();
+  const kuvat = matkakirjanPikkukuvat(ui, city);
+  if (!kuvat.length) return 0;
+  lataaTyyli();
+  const puluAlkaa = fokusvirtaLuentakuvat(ui, city).length;
+  const rivi = document.createElement('div');
+  rivi.className = 'fact-pikkukuvat';
+  rivi.setAttribute('role', 'group');
+  rivi.setAttribute('aria-label', 'Merkinnän kuvat');
+  kuvat.forEach((kuva, i) => {
+    const nappi = html('button', 'fact-pikkukuva');
+    nappi.type = 'button';
+    nappi.title = 'Katso kuva suurempana';
+    const img = document.createElement('img');
+    img.alt = kuvatekstiLyhyt(kuva);
+    img.decoding = 'async';
+    img.draggable = false;
+    /*
+     * PUUTTUVA KUVA VIE OMAN NAPPINSA, ei koko riviä: yksi rikkinäinen
+     * osoite ei saa viedä muiden kuvien avausta.
+     */
+    asetaKuva(img, kuvanOsoite(kuva, MATKAKIRJAN_PIKKUKUVA_PX),
+      kuvanVara(kuva, MATKAKIRJAN_PIKKUKUVA_PX), () => nappi.remove());
+    nappi.appendChild(img);
+    nappi.addEventListener('click', (tapahtuma) => {
+      // Kortin napautus kutistaisi kortin lapuksi (js/ui.js): kuvan
+      // avaus ei ole kortin napautus.
+      tapahtuma?.stopPropagation?.();
+      avaaSuurennos(ui, kuvat, i, () => nappi,
+        { lyhytTeksti: true, pulunKuvasta: puluAlkaa });
+    });
+    rivi.appendChild(nappi);
+  });
+  const tekstirivi = kortti.querySelector('.fact-teksti-rivi');
+  if (tekstirivi) tekstirivi.after(rivi);
+  else kortti.appendChild(rivi);
+  return kuvat.length;
+}
+
+/**
+ * OHITA: LUENTA PYSAHTYY, KARTTA NAKYY HETI.
+ *
+ * Omistaja 17.9.2026 klo 22.05 ja 22.10 (Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 35 kohta 3 ja sen TARKENNUS), sanatarkasti: *"pieni 'ohita'
+ * teksti joka hyppaa suoraan isoisan ja pulun tekstien yli ja nayttaa
+ * kartan heti"* ja *"Ohita PYSAYTTAA luennan - aani ja kuvat loppuvat
+ * heti, kartta nakyy; isoisan ja pulun tekstit jaavat luettaviksi
+ * matkakirjaan, pulun luentareaktiot eivat enaa tule."*
+ *
+ * EI UUTTA RINNAKKAISTA TILAA. Pysäytys on luennan oma polku
+ * (js/luenta.js stopDiaryVoice): se purkaa pulun luentareaktiot
+ * (`audio.puraReaktiot`), pysäyttää jokaisen soivan luennan, vapauttaa
+ * puhevuoron ja pysäyttää laitteen lukijan. Kuvat viedään sarjan omalla
+ * siivouksella (piilotaLuentakuvasarja), joka ei jätä kartalle pakkaa —
+ * sama kuin kaupungista lähdettäessä.
+ *
+ * TEKSTIT JAAVAT MATKAKIRJAAN: korttiin ei kosketa lainkaan, joten
+ * merkintä ja sen pikkukuvat pysyvät luettavina.
+ *
+ * @param {object} ui
+ * @param {?object} [city] kaupunki, jonka luenta ohitetaan
+ * @returns {boolean} tehtiinkö ohitus
+ */
+export function ohitaSaapumisluenta(ui, city = null) {
+  if (!ui) return false;
+  const kohde = city ?? ui.game?.cityOf?.() ?? null;
+  /*
+   * LIPPU ENSIN, PYSAYTYS VASTA SEN JALKEEN. `stopDiaryVoice` nollaa
+   * `ui.diaryVoicen`, ja juuri se laukaisee pulun kommentin oman
+   * odotuksen (luennanLoppuun → nayta) — lipun on oltava pystyssä
+   * ennen sitä, tai kommentti lähtisi matkaan pysäytyksen omasta
+   * kädestä.
+   */
+  if (kohde?.id) ui.luennanOhitus = kohde.id;
+  /*
+   * NAPPI POIS SAMASSA HETKESSÄ KUIN ÄÄNI (PAATOKSET 43 kohta 10).
+   * Nappi ei ole enää päällyksen lapsi, joten päällyksen siivous ei
+   * vie sitä mukanaan — poisto on oma rivinsä, eikä sitä jätetä
+   * vahdin varaan (vahti kysyisi vasta 250 ms:n päästä).
+   */
+  piilotaOhitaNappi(ui, { heti: true });
+  /*
+   * OHITA LAUKAISEE SAMAN LENNON (PAATOKSET 38 kohta 2: *"sarjan loppu,
+   * Ohita, kartan liike"*).
+   *
+   * LENTO ON ENNEN VAIENNUSTA, EI SEN JÄLKEEN. `vaiennaLivianKaupunkipuhe`
+   * on kaupungista lähdön tie, ja se vie luentakuvan mukanaan
+   * (piilotaLuentakuva → piilotaLuentakuvasarja) — sen jälkeen ei ole
+   * enää mitään, mistä lento lähtisi. Mitattu 18.9.2026: siivouksen
+   * perässä lentoja 0. Kuvat luetaan siis tässä, ruudulta, ja
+   * siivous purkaa jo tyhjän päällyksen.
+   */
+  lennataKuvatMatkakirjaan(ui, [
+    ...(ui.luentakuvasarja?.kehys?.querySelectorAll?.('.fokusvirta-isokuva-ruutu') ?? []),
+    ...(ui.luentakuva?.querySelectorAll?.('.fokusvirta-kuva') ?? []),
+  ]);
+  /*
+   * PULUN PUHEENVUORO KIINNI SAMALLA (omistaja 18.9.2026, PAATOKSET 35
+   * TARKENNUS 2 kohta 6: *"Ohita ei lopeta pulun luentaa"*).
+   *
+   * Ohita pysäytti vain isoisän luennan (stopDiaryVoice). Pulun oma
+   * kommentti ei ole luenta vaan puheenvuoro, joka odottaa luennan
+   * LOPPUA (fokusvirtaSaapumiskupla → kommenttiLuennanJalkeen): kun
+   * Ohita lopetti isoisän, odotus täyttyi ja pulu alkoi puhua noin
+   * sekunnin päästä — juuri se ääni, joka jäi soimaan. Sama piti
+   * välihuudosta, jonka oma ajastin kävi yhä.
+   *
+   * Tämä on kaupungista lähdön oma polku (vaiennaLivianKaupunkipuhe):
+   * se tyhjentää kaikki pulun kaupunkiajastimet ja pysäyttää soivan
+   * repliikin. Uutta rinnakkaista pysäytystä ei siis synny.
+   */
+  vaiennaLivianKaupunkipuhe(ui);
+  // Ääni ja pulun luentareaktiot kiinni yhdellä olemassa olevalla polulla.
+  stopDiaryVoice(ui);
+  // Kesken oleva odotus pois: muuten kuva ilmestyisi jälkijunassa.
+  clearTimeout(ui.luentakuvaOdotus);
+  ui.luentakuvaOdotus = null;
+  piilotaLuentakuvasarja(ui);
+  piilotaLuentakuva(ui, { heti: true });
+  return true;
+}
+
+/**
+ * ONKO TAMAN KAUPUNGIN SAAPUMISLUENTA OHITETTU?
+ *
+ * Yksi lippu (`ui.luennanOhitus`, kaupungin tunnus) ja yksi kysely.
+ * Ajastimien tyhjennys ei yksin riitä, koska osa saapumisen ketjusta
+ * roikkuu LUPAUKSESSA (luennanLoppuun): se täyttyy vasta pysäytyksen
+ * jälkeen ja asettaa uuden ajastimen tyhjennetyn tilalle. Siksi jokainen
+ * ketjun askel kysyy tästä ennen kuin jatkaa.
+ *
+ * @param {object} ui
+ * @param {?object} city
+ * @returns {boolean}
+ */
+export function luentaOhitettu(ui, city = null) {
+  const tunnus = city?.id ?? ui?.game?.cityOf?.()?.id ?? null;
+  return Boolean(tunnus && ui?.luennanOhitus === tunnus);
+}
+
+/* ========== OHITA PYSYY KUNNES KUMPIKIN LUENTA ON LOPPU ============
+ *
+ * Omistaja 18.9.2026 klo 22.50 (Raamattu KARTTAUUDISTUKSEN PAATOKSET
+ * 43 kohta 10), sanatarkasti: *"Ohita nappi ei saisi havita vaikka
+ * pelaaja painaa jostain muualta ennen kuin kumpikin luenta on
+ * loppu."*
+ *
+ * JUURISYY, JOKA EI NÄY DIFFISTÄ. Ohita oli ison kuvan päällyksen
+ * (`.fokusvirta-isokuva`) lapsi, joten sen elinkaari oli KUVAN
+ * elinkaari eikä LUENNAN. Päällys purkautuu kolmesta asiasta, joista
+ * yksikään ei ole luennan loppu: kartan liike (kytkeSarjanKartanLiike
+ * → paataLuentakuvasarja), ankkuroidun paneelin pienennys
+ * (pienennaLuentakuva) ja kuvien lento lappuun (PAATOKSET 38).
+ * Napautus karttaan, lappuun tai puluun vei siis Ohitan mukanaan,
+ * vaikka isoisän ääni ja pulun luenta jatkoivat — eikä pelaajalla
+ * ollut enää mitään, mistä pysäyttää.
+ *
+ * KORJAUS ON IRROTUS, EI UUSI EHTO. Nappi on oma kelluva solmunsa
+ * samassa kodissa (isokuvanKoti, `.stage`) ja TÄSMÄLLEEN samassa
+ * kohdassa ruutua kuin ennen: vanha sääntö oli `position: absolute` +
+ * `bottom` koko ruudun kokoisessa päällyksessä, uusi on sama luku
+ * `position: fixed`-solmussa. Kuvat lentävät sen ylitse pois eikä
+ * nappi liikahda — pelaajan sormen alta ei siis katoa eikä siirry
+ * mitään, ja se on luontevin paikka juuri siksi (lapun alle siirtyvä
+ * nappi hyppäisi kesken luennan ruudun toiseen laitaan).
+ *
+ * POISTUMISIA ON VAIN KAKSI: Ohitan oma painallus (ohitaSaapumisluenta)
+ * ja molempien luentojen loppu (vahtiOhitanLoppua). Kaupungista lähtö
+ * on kolmas, mutta se ei ole napautus vaan koko puheenvuoron loppu
+ * (vaiennaLivianKaupunkipuhe).
+ */
+
+/** Ohitan vahdin kysely: sama tahti kuin sarjan omalla vahdilla. */
+const OHITAN_VAHTI_MS = SARJAN_LUENTAVAHTI_MS;
+
+/**
+ * Kuinka kauan pulun vuorolle annetaan aikaa ALKAA sen jälkeen, kun
+ * isoisän luenta on loppunut. Sama luku kuin isoisän kuvan omalla
+ * kellolla (ISON_KUVAN_LOPPU_MS): pulun kommentti nousee normaalisti
+ * 0,9 s tauon jälkeen (SAAPUMISKUPLAN_TAUKO_MS), joten kuusi sekuntia
+ * kattaa tavallisen kulun reilusti. Jos pulun vuoro alkaa vasta
+ * myöhemmin (paljastussarja, linssi), se avaa oman päällyksensä
+ * (aloitaMyohastynytPuluSarja → avaaIsokuvaPaallys) ja Ohita palaa
+ * sen mukana — kuten ennenkin.
+ */
+const OHITAN_PULUN_ODOTUS_MS = ISON_KUVAN_LOPPU_MS;
+
+/**
+ * ONKO PULUN OMA VUORO KÄYNNISSÄ JUURI NYT?
+ *
+ * Kaksi merkkiä, molemmat olemassa olevia: soiva repliikki
+ * (`ui.liviaAani`, js/liviapuhe.js soitaLivianAani) ja pulun oma
+ * kuvasarja (`puluAlkoi`, aloitaPuluCamSarja). Uutta rinnakkaista
+ * tilaa ei synny.
+ */
+function pulunVuoroKesken(ui) {
+  if (!ui) return false;
+  return Boolean(ui.liviaAani) || ui.luentakuvasarja?.puluAlkoi === true;
+}
+
+/**
+ * VAHTI, JOKA PÄÄTTÄÄ OHITAN ELINKAAREN.
+ *
+ * Sama kaksivaiheinen luku kuin sarjan omalla vahdilla
+ * (vahtiLuennanLoppua): ensin odotetaan, että isoisän luenta ylipäätään
+ * alkaa (SARJAN_LUENNAN_ALKUKATTO_MS — mykistys ja kertojatila 'ei'
+ * eivät saa jättää nappia roikkumaan), sitten hiljaisuutta mitataan.
+ * Pulun osien välinen tauko ei ole loppu (PULUN_KUVAN_HILJAISUUSKATTO_MS,
+ * sama luku kuin vahtiPulunLoppua käyttää).
+ */
+function vahtiOhitanLoppua(ui, tila) {
+  clearTimeout(ui.ohitaVahti);
+  ui.ohitaVahti = setTimeout(() => {
+    ui.ohitaVahti = null;
+    // Nappi on jo vaihtunut tai poistunut: tämä vahti on vanha.
+    if (ui.ohitaNappi !== tila.nappi) return;
+    const { city } = tila;
+    const lahti = ui.dead || luentaOhitettu(ui, city)
+      || ui.game?.cityOf?.()?.id !== city.id;
+    if (lahti) { piilotaOhitaNappi(ui, { heti: true }); return; }
+    tila.kulunut += OHITAN_VAHTI_MS;
+    if (ui.luentaKesken?.() === true) {
+      tila.alkanut = true;
+      tila.hiljaisuus = 0;
+    } else if (pulunVuoroKesken(ui)) {
+      tila.puluNahty = true;
+      tila.hiljaisuus = 0;
+    } else if (tila.alkanut || tila.kulunut >= SARJAN_LUENNAN_ALKUKATTO_MS) {
+      tila.hiljaisuus += OHITAN_VAHTI_MS;
+      const katto = tila.puluNahty
+        ? PULUN_KUVAN_HILJAISUUSKATTO_MS : OHITAN_PULUN_ODOTUS_MS;
+      if (tila.hiljaisuus >= katto) { piilotaOhitaNappi(ui); return; }
+    }
+    // Varoventtiili: mikään yllä olevista ei saa jäädä ikuisuudeksi.
+    if (tila.kulunut >= SARJAN_LUENNAN_KATTO_MS) { piilotaOhitaNappi(ui); return; }
+    vahtiOhitanLoppua(ui, tila);
+  }, OHITAN_VAHTI_MS);
+}
+
+/**
+ * OHITA RUUDULLE (avaaIsokuvaPaallys). Idempotentti: saman kaupungin
+ * toinen kutsu (pulun oma päällys) ei rakenna uutta nappia eikä
+ * nollaa vahtia — muuten pulun sarjan avaus aloittaisi odotuksen
+ * alusta.
+ *
+ * @returns {?Element} nappi, tai null jos sitä ei voitu rakentaa
+ */
+export function naytaOhitaNappi(ui, city) {
+  if (typeof document === 'undefined' || !ui || !city) return null;
+  if (ui.ohitaNappi?.isConnected && ui.ohitaKaupunki === city.id) {
+    /*
+     * TOINEN PÄÄLLYS EI SAA JÄÄDÄ NAPIN PÄÄLLE (mitattu 19.9.2026,
+     * Sonnetin puhelintestin löydös 2: *"saavuttaessa Amsterdamiin
+     * ensimmainen napautus kartalle toi luentakuvan OHITAN PAALLE"*).
+     *
+     * Päällys ja nappi ovat SAMASSA pinossa SAMALLA luvulla (z-index 3,
+     * `.stage`), joten järjestyksen ratkaisee DOM — ja vain ENSIMMÄINEN
+     * päällys ladotaan ennen nappia (avaaIsokuvaPaallys). Pulun oma
+     * sarja, myöhästynyt sarja ja kartan liikkeen jälkeen nouseva uusi
+     * päällys tulevat kaikki napin JÄLKEEN, eli sen päälle: mitattu
+     * 390 ja 1400 px, toisen päällyksen jälkeen "päällys ennen Ohitaa"
+     * oli false, kun sen kuuluu olla true.
+     *
+     * Siirto on `appendChild` samalle solmulle: nappi säilyy samana
+     * elementtinä (sama vahti, sama kuuntelija, sama `nakyy`-luokka eli
+     * sama opacity), se vain palaa kodin viimeiseksi. Vahtia EI nollata
+     * — idempotenssi on tämän haaran koko idea.
+     */
+    isokuvanKoti().appendChild(ui.ohitaNappi);
+    return ui.ohitaNappi;
+  }
+  piilotaOhitaNappi(ui, { heti: true });
+  lataaTyyli();
+  const nappi = html('button', 'fokusvirta-isokuva-ohita fokusvirta-ohitanappi', 'Ohita');
+  nappi.type = 'button';
+  nappi.title = 'Ohita luenta ja palaa kartalle';
+  nappi.addEventListener('click', (tapahtuma) => {
+    // Napautus ei saa kuplia kartalle: kartan liike päättäisi sarjan
+    // omaa polkuaan (kytkeSarjanKartanLiike) ja jättäisi äänen soimaan.
+    tapahtuma?.stopPropagation?.();
+    ohitaSaapumisluenta(ui, city);
+  });
+  isokuvanKoti().appendChild(nappi);
+  ui.ohitaNappi = nappi;
+  ui.ohitaKaupunki = city.id;
+  // Sama häivytys kuin päällyksellä ennen: nappi ei ilmesty kuvia ennen.
+  const nayta = () => { if (nappi.isConnected) nappi.classList.add('nakyy'); };
+  globalThis.requestAnimationFrame?.(nayta);
+  ui.ohitaNakyviin = setTimeout(nayta, 50);
+  vahtiOhitanLoppua(ui, {
+    nappi, city, alkanut: false, kulunut: 0, hiljaisuus: 0, puluNahty: false,
+  });
+  return nappi;
+}
+
+/**
+ * OHITA POIS. `heti` on pelaajan oma teko (Ohitan painallus,
+ * kaupungista lähtö): silloin nappi katoaa samassa hetkessä kuin ääni.
+ * Luentojen luonnollinen loppu saa häivytyksen, ettei sana katoa
+ * ruudulta napsahtaen.
+ *
+ * @returns {boolean} oliko nappi ruudulla
+ */
+export function piilotaOhitaNappi(ui, { heti = false } = {}) {
+  if (!ui) return false;
+  clearTimeout(ui.ohitaVahti);
+  ui.ohitaVahti = null;
+  clearTimeout(ui.ohitaNakyviin);
+  ui.ohitaNakyviin = null;
+  const nappi = ui.ohitaNappi;
+  ui.ohitaNappi = null;
+  ui.ohitaKaupunki = null;
+  if (!nappi) return false;
+  if (heti || liikeVahennetty()) { nappi.remove(); return true; }
+  nappi.classList.remove('nakyy');
+  setTimeout(() => nappi.remove(), ISON_KUVAN_POISTUMA_MS);
+  return true;
+}
+
+/* ========== KUVAT LENTÄVÄT PIENENNETTYYN MATKAKIRJAAN ==============
+ *
+ * Omistaja 18.9.2026 klo 20.10 (Raamattu KARTTAUUDISTUKSEN PAATOKSET
+ * 38 kohta 2), sanatarkasti: *"kun kuvat siirtyvat matkakirjaan, niin
+ * se pitaisi vain nakya animaationa, missa kuvat lentavat matkakirjan
+ * ylareunaan, mutta matkakirja itse pysyy pienennettyna."*
+ *
+ * KOLME ASIAA, JOTKA EIVÄT NÄY DIFFISTÄ:
+ *
+ *  1. LENTO EI KOSKE MATKAKIRJAAN. Lappu (.fact-card.pieni) luetaan
+ *     vain maalin laskemiseksi (getBoundingClientRect) — kokoa,
+ *     luokkaa eikä avaustilaa ei muuteta. Jos pelaaja on avannut
+ *     kortin itse, kuva lentää auki olevan kortin yläreunaan
+ *     sellaisenaan: avaaminen ja sulkeminen ovat pelaajan omia
+ *     tekoja (PAATOKSET 38 kohta 1).
+ *
+ *  2. KLOONI OMASSA KERROKSESSAAN, EI ALKUPERÄINEN KUVA. Isot kuvat
+ *     asuvat `.stage`-päällyksessä, joka puretaan samalla hetkellä
+ *     (paataLuentakuvasarja) — animoitava elementti katoaisi kesken
+ *     lennon. Klooni on kevyt `img` omassa kiinteässä kerroksessaan,
+ *     joten päällyksen purku ja lento eivät kilpaile keskenään. Siksi
+ *     päällys myös poistetaan HETI, kun lento lähti: muuten sama kuva
+ *     sekä häipyisi paikalleen että lentäisi.
+ *
+ *  3. SAMA FLIP KUIN SUURENNOKSELLA (avaaSuurennos → ankkuriMuunnos):
+ *     lähtölaatikko luetaan ruudulta, maali lasketaan lapusta, ja
+ *     matka tehdään yhdellä `transform`-siirtymällä samalla
+ *     pehmennyksellä (SUURENNOS_PEHMENNYS). Toista animaatiokonetta ei
+ *     synny.
+ */
+
+/** Yhden kuvan lento: omistajan mitta on "animaatio", n. 0,6 s. */
+const KUVALENNON_MS = 600;
+
+/** Kuvat lähtevät vuorotellen: seuraava tämän verran myöhemmin. */
+const KUVALENNON_PORRAS_MS = 120;
+
+/** Häipymä perillä: kuva sulaa lapun yläreunaan eikä jää siihen. */
+const KUVALENNON_HAIVE_MS = 220;
+
+/**
+ * Pikkukuvan leveys pikseleinä (css .fact-pikkukuva: 3,1 rem). Mitta
+ * luetaan juuren fonttikoosta, jotta selaimen oma tekstikoko ei jätä
+ * lennon maalia eri kokoon kuin kortin pikkukuvarivi.
+ */
+function matkakirjanPikkukuvanLeveys() {
+  const juuri = globalThis.document?.documentElement;
+  const koko = Number.parseFloat(
+    globalThis.getComputedStyle?.(juuri)?.fontSize ?? '',
+  );
+  return 3.1 * (Number.isFinite(koko) && koko > 0 ? koko : 16);
+}
+
+/** Lentävien kuvien oma kerros (kiinteä, ei ota napautuksia). */
+function lentokerros() {
+  const olemassa = document.querySelector('.fokusvirta-lentokerros');
+  if (olemassa) return olemassa;
+  const kerros = html('div', 'fokusvirta-lentokerros');
+  kerros.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(kerros);
+  return kerros;
+}
+
+/**
+ * KUVAT LENTÄVÄT MATKAKIRJALAPUN YLÄREUNAAN.
+ *
+ * @param {object} ui
+ * @param {Array<Element>} elementit lähtevät kuvat siinä järjestyksessä,
+ *   jossa ne lentävät (ensimmäinen ensin, muut porrastettuna)
+ * @returns {number} montako kuvaa lähti lentoon
+ */
+export function lennataKuvatMatkakirjaan(ui, elementit = []) {
+  if (typeof document === 'undefined' || ui?.dead) return 0;
+  /*
+   * VÄHEMMÄN LIIKETTÄ: EI LENTOA (omistajan päätös, PAATOKSET 38).
+   * Kutsuja saa nollan ja häivyttää kuvan paikalleen entiseen tapaan.
+   */
+  if (liikeVahennetty()) return 0;
+  const lahteet = [...elementit].filter((e) => typeof e?.getBoundingClientRect === 'function');
+  if (!lahteet.length) return 0;
+  // Maali luetaan lapusta LENNON ALUSSA. Jos lappua ei ole DOMissa tai
+  // se on piilossa, lentoa ei ole — kuva häipyy paikalleen.
+  const maali = document.querySelector('.fact-card')?.getBoundingClientRect?.();
+  if (!maali?.width || !maali?.height) return 0;
+  const leveys = matkakirjanPikkukuvanLeveys();
+  const kerros = lentokerros();
+  let lentoja = 0;
+  for (const lahde of lahteet) {
+    const kuva = lahde.querySelector?.('img') ?? lahde;
+    const alkuun = kuva.getBoundingClientRect();
+    if (!alkuun.width || !alkuun.height) continue;
+    const osoite = kuva.currentSrc || kuva.src || '';
+    if (!osoite) continue;
+    const klooni = html('div', 'fokusvirta-lento');
+    const img = document.createElement('img');
+    img.src = osoite;
+    img.alt = '';
+    img.decoding = 'async';
+    img.draggable = false;
+    klooni.appendChild(img);
+    klooni.style.left = `${alkuun.left.toFixed(1)}px`;
+    klooni.style.top = `${alkuun.top.toFixed(1)}px`;
+    klooni.style.width = `${alkuun.width.toFixed(1)}px`;
+    klooni.style.height = `${alkuun.height.toFixed(1)}px`;
+    /*
+     * KUTISTUS PIKKUKUVAN KOKOON, EI KOSKAAN KASVATUS: lähtölaatikko on
+     * aina isompi kuin kortin pikkukuva, mutta pulun pieni kortti voi
+     * kapeimmalla ruudulla olla jo valmiiksi sitä pienempi.
+     */
+    const skaala = Math.min(1, leveys / alkuun.width);
+    // Lapun YLÄREUNAN KESKELLE: kuvan vasen reuna keskitetään lapun
+    // keskilinjaan ja yläreuna lapun yläreunaan.
+    const dx = maali.left + maali.width / 2 - (alkuun.width * skaala) / 2 - alkuun.left;
+    const dy = maali.top - alkuun.top;
+    const viive = lentoja * KUVALENNON_PORRAS_MS;
+    klooni.style.transition = `transform ${KUVALENNON_MS}ms ${SUURENNOS_PEHMENNYS} ${viive}ms, `
+      + `opacity ${KUVALENNON_HAIVE_MS}ms linear ${viive + KUVALENNON_MS - KUVALENNON_HAIVE_MS}ms`;
+    kerros.appendChild(klooni);
+    // Lähtöasento selaimen tietoon ennen maalia, tai siirtymää ei synny.
+    void klooni.offsetWidth;
+    const lennata = () => {
+      if (!klooni.isConnected) return;
+      klooni.style.transform = `translate(${dx.toFixed(1)}px, ${dy.toFixed(1)}px) `
+        + `scale(${skaala.toFixed(4)})`;
+      klooni.style.opacity = '0';
+    };
+    globalThis.requestAnimationFrame?.(lennata);
+    setTimeout(lennata, 32);
+    setTimeout(() => {
+      klooni.remove();
+      if (!kerros.childElementCount) kerros.remove();
+    }, viive + KUVALENNON_MS + 120);
+    lentoja += 1;
+  }
+  return lentoja;
+}
+
+/**
+ * SARJA POIS ILMAN PAKKAA — kaupungista lähtö, laudan vaihto, uusi
+ * luenta. Tämä on siivous, ei päätös: kartalle ei jää mitään.
+ *
+ * @returns {boolean} oliko sarja käynnissä
+ */
+export function piilotaLuentakuvasarja(ui) {
+  const tila = ui?.luentakuvasarja;
+  if (!tila) return false;
+  ui.luentakuvasarja = null;
+  for (const t of tila.ajastimet) clearTimeout(t);
+  tila.irrota?.();
+  tila.kehys?.remove?.();
+  return true;
+}
+
+/**
+ * SARJA LOPPUUN: ISO KUVA HÄIPYY, PIENI PAKKA JÄÄ KARTALLE.
+ *
+ * @param {object} ui
+ * @param {object} [asetukset]
+ * @param {boolean} [asetukset.heti] ilman häivytystä (kartan liike)
+ * @returns {boolean} päättyikö sarja tällä kutsulla
+ */
+export function paataLuentakuvasarja(ui, { heti = false } = {}) {
+  const tila = ui?.luentakuvasarja;
+  if (!tila) return false;
+  const { kehys, city, pohjakuva, puluAlkoi } = tila;
+  // Nollaus ENNEN paneelin rakennusta: naytaLuentakuva siivoaa vanhan
+  // paneelin piilotaLuentakuvalla, joka muuten veisi tämän sarjan
+  // mukanaan kesken päätöksen.
+  ui.luentakuvasarja = null;
+  for (const t of tila.ajastimet) clearTimeout(t);
+  tila.irrota?.();
+  /*
+   * KUVAT LENTÄVÄT MATKAKIRJAAN (PAATOKSET 38 kohta 2). Tämä on sarjan
+   * loppu KAIKILLA sen kelloilla: isoisän ja pulun luennan päättyminen
+   * (ISON_KUVAN_LOPPU_MS) sekä kartan liike (heti). Jos lento lähti,
+   * päällys puretaan heti — häivytys paikalleen näyttäisi muuten saman
+   * kuvan kahtena.
+   */
+  const lentoja = lennataKuvatMatkakirjaan(ui,
+    [...kehys.querySelectorAll('.fokusvirta-isokuva-ruutu')]);
+  const poista = () => kehys.remove();
+  if (heti || liikeVahennetty() || lentoja) poista();
+  else {
+    kehys.classList.remove('nakyy');
+    setTimeout(poista, ISON_KUVAN_POISTUMA_MS);
+  }
+  nostaPieniPakka(ui, city, pohjakuva, { pakka: puluAlkoi });
+  return true;
+}
+
+/**
+ * Sarjan jälkeinen asento kartalla: ankkuroitu luentakuva, koko pakka
+ * kerralla päälle ja kaikki pienessä koossa. Napautus avaa yhä
+ * karusellin koko ruudulle entiseen tapaan (avaaSuurennos).
+ */
+function nostaPieniPakka(ui, city, pohjakuva = null, { pakka = true } = {}) {
+  if (!ui || ui.dead || !city) return false;
+  // Pelaaja on voinut lähteä kaupungista sarjan aikana.
+  if (ui.game?.cityOf?.()?.id !== city.id) return false;
+  /*
+   * PAKKA EI PALAA KARTALLE (ks. LUENTAKUVAPAKKA_KARTALLA). Elementtiä
+   * ei rakenneta lainkaan: sarja on jo purkanut isot kuvat, ja kartalle
+   * jäisi muuten juuri se peukalonkynsi, jonka omistaja pyysi pois.
+   */
+  if (!LUENTAKUVAPAKKA_KARTALLA) return false;
+  // Kartalle jää se isoisän kuva, joka oli viimeksi ruudulla (kuva 2,
+  // jos vaihto ehti tapahtua) — karuselli näyttää silti molemmat.
+  if (!naytaLuentakuva(ui, city, { kuva: pohjakuva })) return false;
+  /*
+   * PAKKA KUULUU PULUN HETKEEN (Raamattu: pakka nousee *"pulun
+   * kommentin alkaessa"*). Jos isoisän sarja päättyy ENNEN kommenttia,
+   * pakkaa ei vielä nosteta: se nousisi ennen kuin pulu on sanonut
+   * sanaakaan, ja sen jälkeen pulun kuvat olisi jo nähty pikkukuvina
+   * ennen omaa sarjaansa. Kommentti nostaa pakan omalla vuorollaan
+   * (aloitaPuluCamSarja → paataLuentakuvasarja → tämä, pakka: true).
+   */
+  if (pakka) naytaPulunKuvapakka(ui, city, { heti: true });
+  pienennaLuentakuva(ui);
+  return true;
 }
 
 /* ==================== KUVAN SUURENNOS KARTAN PÄÄLLE ==================
@@ -1169,20 +4750,15 @@ function piirraJalkikuva(ui, kohde, kuva) {
 
 /** Suurennoksen kasvun ja kutistuksen kesto. */
 const SUURENNOS_MS = 320;
-/**
- * Suuren kuvan osuus ruudun PIENEMMÄSTÄ sivusta.
- *
- * ALKUPERÄINEN MITTA OLI 0,82 (*"~80 % ruudun pienemmästä sivusta"*),
- * mutta omistajan pelitesti iPadilla 24.8.2026 osoitti sen liian
- * vaatimattomaksi: *"KUVA ISOMMAKSI … kasvata niin että kuva täyttää
- * ruudun selvästi"*. Kartta jää yhä joka reunalta näkyviin — juuri se
- * on pienemmän sivun mittaamisen syy — mutta marginaalit ovat nyt
- * kapeat.
+/*
+ * SUUREN KUVAN KOKO TULEE YHTEISESTÄ LINJAUKSESTA (js/ui-apurit.js
+ * suurennoksenMitat, omistaja 8.9.2026): kuvan suuntaa verrataan
+ * ruudun suuntaan, ja vastakkainen suunta täyttää ruudun lyhyemmän
+ * sivun, sama suunta jättää laidoista jotain näkyviin. Tämän
+ * moduulin omat osuudet (0,94 pienemmästä sivusta, 0,88 korkeudesta)
+ * poistuivat: kohdekortilla oli oma kaavansa, ja ero näkyi
+ * pelaajalle.
  */
-const SUURENNOS_OSUUS = 0.94;
-/** Katot leveydelle ja korkeudelle, ettei kuva puske reunaan asti. */
-const SUURENNOS_LEVEIN = 0.94;
-const SUURENNOS_KORKEIN = 0.88;
 /**
  * Kuvatekstipalkille varattava pystytila pikseleinä.
  *
@@ -1201,8 +4777,14 @@ const SUURENNOS_TEKSTIPALKKI = 120;
  * kutistettu kortti antaisi FLIP-animaatiolle väärän maalilaatikon.
  */
 const SUURENNOS_KEHYS_PX = 26;
-/** Kuvasuhde, jota käytetään ennen kuin kuvan omat mitat tiedetään. */
-const SUURENNOS_OLETUSSUHDE = 4 / 3;
+/**
+ * Kerroksen oma reunus pikseleinä (css .fokuszoom padding 0,5 rem
+ * molemmilla puolilla). Se on vähennettävä samalla tavalla kuin
+ * kehyksen tila: muuten flex kutistaisi kortin ja FLIP-animaatio
+ * saisi väärän maalilaatikon juuri silloin, kun kuva täyttää ruudun
+ * lyhyemmän sivun (omistajan linjaus 8.9.2026).
+ */
+const SUURENNOS_KERROS_PX = 16;
 /** Kiihtyy alussa, jarruttaa lopussa — kartan kamera-ajon sukulainen. */
 const SUURENNOS_PEHMENNYS = 'cubic-bezier(0.22, 0.9, 0.24, 1)';
 /** Pyyhkäisyn vähimmäismatka, jotta se erottuu napautuksesta. */
@@ -1229,8 +4811,14 @@ export function suljeSuurennos(ui) {
  * @param {(i:number)=>Element|null} ankkuri mistä ruudun kohdasta kuva
  *   kasvaa ja mihin se kutistuu — indeksin mukaan, koska selaus voi
  *   vaihtaa kuvaa ja silloin myös paluupaikka vaihtuu.
+ * @param {object} [asetukset]
+ * @param {boolean} [asetukset.lyhytTeksti] albumissa lyhyt myös suurennoksessa
+ * @param {number} [asetukset.pulunKuvasta] listan indeksi, josta alkaen
+ *   kuvat ovat PULUN kuvia ja saavat PULU-CAM-merkin (js/pulucam.js).
+ *   Ilman tätä suurennos on riviltä riville entinen — merkkiä ei ole,
+ *   eikä kuvatila saa ylimääräistä kuorta.
  */
-function avaaSuurennos(ui, lista, alku, ankkuri) {
+function avaaSuurennos(ui, lista, alku, ankkuri, { pulunKuvasta = -1, lyhytTeksti = false } = {}) {
   if (typeof document === 'undefined' || !lista?.length) return;
   suljeSuurennos(ui);
   lataaTyyli();
@@ -1250,13 +4838,33 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
   const lahde = html('span', 'fokuszoom-lahde');
   const laskuri = html('span', 'fokuszoom-laskuri');
   teksti.append(selite, lahde, laskuri);
-  kehys.append(img, teksti);
+  /*
+   * PULU-CAM-SINETTI MYÖS SUURENNOKSESSA (Raamattu kohta 3): sinettiä
+   * ei ole poltettu kuvaan, joten sen on seurattava kuvaa myös isona.
+   * Kuva saa siksi ohuen kuoren, jonka mitat ovat täsmälleen kuvan
+   * mitat — sinetti asettuu sen oikeaan YLÄKULMAAN. KUORI SYNTYY VAIN
+   * KARUSELLISSA JA VAIN JOS SINETTI ON OLEMASSA: yhden kuvan suurennos
+   * (kaikki muut kutsupaikat) pysyy rakenteeltaan ennallaan, ja ennen
+   * omistajan merkkivalintaa (js/pulucam.js PULU_CAM_TARRA_OSOITE) niin
+   * pysyy karusellikin — kuvat näkyvät puhtaina.
+   */
+  const puluCam = pulunKuvasta >= 0 ? puluCamMerkki({ luokka: 'pulucam-suuri' }) : null;
+  if (puluCam) {
+    const kuvatila = html('div', 'fokuszoom-kuvatila');
+    kuvatila.append(img, puluCam);
+    kehys.append(kuvatila, teksti);
+  } else {
+    kehys.append(img, teksti);
+  }
   kerros.appendChild(kehys);
 
   /** Kuvan sisältö paikalleen; iso versio vaihtuu tilalle kun se on. */
   const nayta = () => {
     const kuva = lista[i];
-    img.alt = kuva.selite ?? '';
+    // Merkki kuuluu vain pulun kuviin, ei isoisän kuvaan.
+    if (puluCam) puluCam.hidden = i < pulunKuvasta;
+    // Pitkä kuvaus säilyy saavutettavana vaihtoehtotekstinä.
+    img.alt = kuvatekstiPitka(kuva);
     asetaKuva(img, kuvanOsoite(kuva, 320), kuvanVara(kuva, 320), null);
     /*
      * PIKKUKUVA ENSIN, ISO PERÄSSÄ. Kortin pikkukuva on jo selaimen
@@ -1270,8 +4878,39 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
       if (kerros.isConnected && lista[i] === kuva) img.src = iso.src;
     }, { once: true });
     iso.src = kuvanSuurennos(kuva);
-    selite.textContent = kuva.selite ?? '';
-    lahde.textContent = kuva.lahde ?? '';
+    // Isoisän ja Pulun albumissa lyhyt myös suurennoksessa (omistaja 10.9.).
+    // Muiden tietokorttien pitkien selitteiden sääntö ei muutu.
+    selite.textContent = lyhytTeksti ? kuvatekstiLyhyt(kuva) : kuvatekstiPitka(kuva);
+    /*
+     * HAVAINNEKUVA-LINKKI KUULUU VAIN PITKÄÄN KUVATEKSTIIN (omistaja
+     * 9.9.2026 kartan lapusta, sama sääntö ulotettu suurennokseen
+     * 12.9.2026, sanatarkasti: *"tässä lyhyessä kuvatekstissä ei saa
+     * olla tuota havainnekuvalinkkiä. Se näkyy vasta pidemmässä
+     * kuvatekstissä."*).
+     *
+     * Sääntö on siis yksi ja sama kaikkialla: lyhyt kuvateksti on
+     * kuvan OTSIKKO, pitkä on sen avattu muoto — ja selitys kuuluu
+     * avattuun muotoon. Albumin karuselli näyttää lyhyen tekstin
+     * (lyhytTeksti), joten linkkiä ei sinne rakenneta; muissa
+     * kutsupaikoissa teksti on pitkä ja linkki tulee entiseen tapaan.
+     *
+     * LÄHDERIVI EI KATOA: tekijä-, lisenssi- ja lähdetiedot
+     * kirjoitetaan yhä omalle rivilleen (taytaLahderivi) riippumatta
+     * siitä, kumpi kuvateksti on näkyvissä.
+     */
+    const pelkkaMerkinta = !kuva.tekijaId && /^\s*Matkakirjan\s+(?:havainnekuva|kuvitus)\s*[.]?\s*$/iu.test(kuva.lahde ?? '');
+    const linkki = pelkkaMerkinta && !lyhytTeksti ? havainnekuvaLinkki(kuva.lahde ?? '', kuva) : null;
+    if (linkki) {
+      selite.appendChild(document.createTextNode(' '));
+      selite.appendChild(linkki);
+    }
+    // Lähderivi kirjoitetaan uudestaan joka kuvanvaihdossa, joten
+    // havainnekuvaselite on rakennettava samalla — taytaLahderivi
+    // tyhjentää elementin ja kokoaa sen uudelleen.
+    // Pelkkä havainnekuvamerkintä ei toistu linkin alla. Varsinaiset
+    // tekijä-, lisenssi- ja lähdetiedot säilyvät omalla rivillään.
+    taytaLahderivi(lahde, pelkkaMerkinta ? '' : kuva.lahde ?? '', kuva);
+    lahde.hidden = Boolean(pelkkaMerkinta);
     laskuri.textContent = lista.length > 1 ? `${i + 1} / ${lista.length}` : '';
   };
   nayta();
@@ -1282,39 +4921,35 @@ function avaaSuurennos(ui, lista, alku, ankkuri) {
    * vaihtuminen isoksi ei liikuta mitään.
    */
   const mitoita = () => {
-    const leveys = globalThis.innerWidth || 0;
-    const korkeus = globalThis.innerHeight || 0;
-    if (!leveys || !korkeus) return;
-    const pienempi = Math.min(leveys, korkeus);
-    const enintaanW = Math.min(leveys * SUURENNOS_LEVEIN, pienempi * SUURENNOS_OSUUS)
-      - SUURENNOS_KEHYS_PX;
+    const ruutuLeveys = globalThis.innerWidth || 0;
+    const ruutuKorkeus = globalThis.innerHeight || 0;
+    if (!ruutuLeveys || !ruutuKorkeus) return;
     /*
-     * KORKEUS MITATAAN RUUDUN KORKEUDESTA, EI PIENEMMÄSTÄ SIVUSTA.
-     * Ennen molemmat sivut rajattiin pienempään sivuun, jolloin PYSTY
-     * kuva jäi puhelimella ja tabletilla puolityhjäksi: leveyttä olisi
-     * ollut, mutta korkeuskatto tuli lyhyemmästä sivusta. Omistajan
-     * pelitesti 24.8.2026 osoitti juuri tämän (*"KUVA ISOMMAKSI"*).
-     * Leveys pysyy pienemmän sivun mitassa, joten kartta erottuu yhä
-     * kuvan sivuilta.
-     *
-     * Kuvatekstipalkki on kehyksen sisällä: sen tila varataan ennen kuin
-     * kuvalle jaetaan korkeutta. Alaraja pitää huolen siitä, ettei
-     * hyvin matalalla ruudulla jää pelkkää palkkia.
+     * Kehyksen oma tila (reunus ja sisennys) sekä kuvatekstipalkki
+     * varataan ennen kuin kuvalle jaetaan mittoja — muuten kortti
+     * kasvaisi ruutua isommaksi ja teksti jäisi laidan taakse.
+     * Loppu on yhteistä linjausta (ks. SUURENNOS_MS:n yllä oleva
+     * lohko ja js/ui-apurit.js suurennoksenMitat).
      */
-    const enintaanH = Math.max(
-      korkeus * SUURENNOS_KORKEIN - SUURENNOS_TEKSTIPALKKI,
-      korkeus * 0.3,
-    );
-    const suhde = (img.naturalWidth && img.naturalHeight)
-      ? img.naturalWidth / img.naturalHeight : SUURENNOS_OLETUSSUHDE;
-    let w = enintaanW;
-    let h = w / suhde;
-    if (h > enintaanH) { h = enintaanH; w = h * suhde; }
-    img.style.width = `${Math.round(w)}px`;
-    img.style.height = `${Math.round(h)}px`;
+    const { leveys, korkeus } = suurennoksenMitat({
+      kuvaLeveys: img.naturalWidth,
+      kuvaKorkeus: img.naturalHeight,
+      ruutuLeveys,
+      ruutuKorkeus,
+      vaakaVara: SUURENNOS_KEHYS_PX + SUURENNOS_KERROS_PX,
+      pystyVara: SUURENNOS_TEKSTIPALKKI + SUURENNOS_KERROS_PX,
+    });
+    img.style.width = `${leveys}px`;
+    img.style.height = `${korkeus}px`;
     // Palkki on täsmälleen kuvan levyinen: kehys kutistuu kuvan
     // mittoihin, ja teksti taittuu sen sisään eikä kartan päälle.
-    kehys.style.width = `${Math.round(w)}px`;
+    kehys.style.width = `${leveys}px`;
+    /*
+     * PULU-CAM-merkin koko skaalautuu KUVAN LEVEYDEN mukaan (omistajan
+     * tilaus): kartalla mitta tulee css-muuttujasta `--luentakuva-leveys`,
+     * suurennoksessa tästä laskennasta. Yksi muuttuja, kaksi lähdettä.
+     */
+    puluCam?.parentNode?.style?.setProperty?.('--pulucam-mitta', `${leveys}px`);
   };
 
   /**
@@ -1549,8 +5184,8 @@ function piirraPollo(ui, city, data, kohde) {
    * täsmälleen kuten ennenkin. Kappalejako syntyy tyhjästä rivistä
    * (ui-apurit.js jaaKappaleiksi).
    */
-  const puhe = [data.pollo.maadoitus, data.pollo.teksti]
-    .filter(Boolean).join('\n\n');
+  const puhe = [...livianKuplat(data.pollo.maadoitus), ...livianKuplat(data.pollo.teksti)]
+    .join('\n\n');
   piirraTeksti(kohde, puhe);
   piirraNapit(kohde, [nappi('Jatka', 'primary', () => {
     sfx.play('paper');
@@ -1774,6 +5409,120 @@ const SAHKE_LENTO_MS = 6500;
 /** Paluukuplan ja aarteen paljastuksen väli: kupla ehditään lukea. */
 const SAHKE_PALUU_MS = 3200;
 
+/* ============ SÄHKE KIRJOITTUU RUUDULLE ==========================
+ *
+ * Omistaja 3.9.2026 (Raamattu, SÄHKETEHTÄVÄ LEHTIMÄISEKSI JA PULLA
+ * VINKIKSI): *"tekstit saisi tulla siihen animoidusti. Rivi kerrallaan
+ * ja taustalla saisi kuulua kirjoituskoneen äänet ja lopussa aina se
+ * bling, kun rivi vaihtuu"*.
+ *
+ * KOLME LUKUA JA YKSI KATTO. Merkkiväli on kirjoituskoneen tahti,
+ * rivikatto estää pitkää riviä venymästä (pitkä rivi vain nopeutuu:
+ * merkkiväli lasketaan uudelleen, ei pätkitä tekstiä) ja rivien väli
+ * on se hengähdys, johon lennättimen kello osuu. Viiden rivin sähke
+ * kirjoittuu näillä alle kahdeksassa sekunnissa — mitattuna
+ * yksikkötestissä (tests/sahketehtava.test.mjs), koska se on lupaus
+ * pelaajalle eikä makuasia.
+ */
+export const SAHKE_MERKKI_MS = 28;
+export const SAHKE_RIVI_KATTO_MS = 1400;
+export const SAHKE_RIVIVALI_MS = 350;
+
+/*
+ * PALUUSÄHKEET KIRJOITTUVAT NOPEAMMIN. "TUNNUSSANA TÄSMÄÄ" on kuittaus
+ * eikä tehtävä: pelaaja on jo vastannut ja odottaa, että peli etenee.
+ * Sama animaatio hitaana olisi tässä kohtaa pelkkä hidaste.
+ */
+const SAHKE_PALUU_MERKKI_MS = 16;
+const SAHKE_PALUU_KATTO_MS = 700;
+const SAHKE_PALUU_RIVIVALI_MS = 220;
+
+/** Naputus soi enintään 20 kertaa sekunnissa (omistajan mitta). */
+const SAHKE_NAKSU_VALI_MS = 50;
+
+/**
+ * KIRJOITUKSEN AIKATAULU YHTENÄ PUHTAANA FUNKTIONA.
+ *
+ * Ajoitus on erotettu piirrosta, jotta sen voi mitata ilman selainta:
+ * testi laskee kokonaiskeston ja tarkistaa, ettei yksikään rivi ylitä
+ * kattoa. Funktio ei kosketa DOM:iin eikä ääniin.
+ *
+ * @param {string[]|string} rivit sähkeen rivit (tai koko teksti)
+ * @returns {{rivit: object[], valiMs: number, kesto: number}}
+ *   `rivit` on rivikohtainen aikataulu (teksti, merkit, merkkiväli,
+ *   kesto, alku millisekunteina sähkeen alusta) ja `kesto` koko
+ *   kirjoituksen pituus rivivälit mukaan lukien.
+ */
+export function sahkeKirjoitusAikataulu(rivit, {
+  merkkiMs = SAHKE_MERKKI_MS,
+  kattoMs = SAHKE_RIVI_KATTO_MS,
+  valiMs = SAHKE_RIVIVALI_MS,
+} = {}) {
+  const lista = (Array.isArray(rivit) ? rivit : String(rivit ?? '').split(/\s*\n\s*/))
+    .map((rivi) => String(rivi ?? '')).filter(Boolean);
+  let kello = 0;
+  const osat = lista.map((teksti, i) => {
+    const merkit = teksti.length;
+    // Pitkä rivi NOPEUTUU kattoon asti: rivi ei koskaan kestä yli
+    // kattoMs, eikä tekstistä jätetä mitään pois.
+    const merkkivali = merkit > 0 ? Math.min(merkkiMs, kattoMs / merkit) : merkkiMs;
+    const kesto = Math.round(merkkivali * merkit);
+    const osa = {
+      teksti, merkit, merkkivali, kesto, alku: Math.round(kello),
+    };
+    kello += kesto + (i < lista.length - 1 ? valiMs : 0);
+    return osa;
+  });
+  return { rivit: osat, valiMs, kesto: Math.round(kello) };
+}
+
+/**
+ * LOMAKEPOHJA ON KUVA, KUN SELLAINEN ON — MUUTEN CSS.
+ *
+ * Omistaja 3.9.2026: *"tähän voisi generoida pohjalle oikean
+ * sähkösanoman paperin"*. Pohja on kuvaputken generoima 1870-luvun
+ * lennätinlomake (pysty 3:4 JPG/sRGB, EI painettua tekstiä — peli
+ * piirtää leiman, otsakkeen ja rivit sen päälle).
+ *
+ * KUVA EI OLE PAKOLLINEN. Peli on offline-PWA ja lomake on jo tehty
+ * CSS:llä (css/fokusvirta.css, PÖLLÖN SÄHKETEHTÄVÄ). Kuvaa siis vain
+ * KOKEILLAAN kerran istunnossa (new Image): jos se latautuu, sähke saa
+ * luokan `lomakekuva` ja CSS vaihtaa koristelun kuvaan; jos ei, mikään
+ * ei muutu eikä pelaaja huomaa mitään. Näin kuva voidaan lisätä
+ * ämpäriin milloin tahansa ilman koodimuutosta.
+ */
+export const SAHKE_LOMAKE_OSOITE =
+  'https://media.matkakirja.app/kohtaamiset/kuvitus/sahke-lomake-1873-v1.jpg';
+
+/** null = kysymättä, true/false = tiedetään; kysytään kerran istunnossa. */
+let sahkeLomakekuva = null;
+let sahkeLomakekuvaHaku = null;
+
+function varmistaSahkeLomakekuva(laatikko) {
+  const merkitse = () => {
+    if (!laatikko?.isConnected) return;
+    laatikko.classList.add('lomakekuva');
+    // Osoite on JS:n vakio (yksi totuus), joten CSS saa sen muuttujana.
+    laatikko.style.setProperty('--sahke-lomakekuva', `url("${SAHKE_LOMAKE_OSOITE}")`);
+  };
+  if (sahkeLomakekuva === true) { merkitse(); return; }
+  if (sahkeLomakekuva === false || typeof Image === 'undefined') return;
+  if (!sahkeLomakekuvaHaku) {
+    sahkeLomakekuvaHaku = new Promise((valmis) => {
+      const kuva = new Image();
+      kuva.onload = () => { sahkeLomakekuva = true; valmis(true); };
+      kuva.onerror = () => { sahkeLomakekuva = false; valmis(false); };
+      kuva.src = SAHKE_LOMAKE_OSOITE;
+    });
+  }
+  void sahkeLomakekuvaHaku.then((ok) => { if (ok) merkitse(); });
+}
+
+/** Kunnioitetaanko liikettä vähentävää järjestelmäasetusta? */
+function liikeRajoitettu() {
+  return Boolean(globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
+}
+
 /** Palkkio ohilyöntien jälkeen — neljännes kerrallaan, lattia 0. */
 export function sahkePalkkio(ohi, pohja = SAHKE_PALKKIO) {
   return Math.max(0, Math.round(pohja * (1 - SAHKE_VAHENNYS * (ohi ?? 0))));
@@ -1791,6 +5540,27 @@ let kohdehakemisto = null;
 
 export function asetaKohdehakemisto(fn) {
   kohdehakemisto = typeof fn === 'function' ? fn : null;
+}
+
+/*
+ * KARTAN KOHDEKORTIN AVAUS — sama takaisinkutsutemppu, sama syy.
+ *
+ * Puolikas pulla ostaa Livialta SUORAN LINKIN vastauskohteeseen
+ * (Raamattu, SÄHKETEHTÄVÄ LEHTIMÄISEKSI JA PULLA VINKIKSI). Kun linkki
+ * osoittaa kartan kohteeseen, kortin avaa js/fokuskohteet.js
+ * (avaaFokuskohde) — mutta se moduuli on niputusjärjestyksessä VASTA
+ * tämän jälkeen ja tuo tästä (asetaKohdehakemisto). Suora import
+ * kääntäisi järjestyksen väärin päin, joten kytkentä tulee sieltä
+ * tänne päin takaisinkutsuna.
+ */
+let kohdeavaus = null;
+
+/**
+ * @param {(ui: object, iso: string, tunnus: string) => boolean} fn
+ *   avaa maan kohdelistalta kohteen tunnuksella; palauttaa löytyikö.
+ */
+export function asetaKohdeavaus(fn) {
+  kohdeavaus = typeof fn === 'function' ? fn : null;
 }
 
 /**
@@ -2002,13 +5772,436 @@ function sahkeAvain(ui, city) {
   return `${ui.game.pack.id}:${city.id}`;
 }
 
-/** Sähkeen oma tekstipinta: versaalit rivit STOP-välein. */
-function piirraSahke(kohde, teksti, luokka = '') {
-  const laatikko = html('div', luokka ? `fokusvirta-sahke ${luokka}` : 'fokusvirta-sahke');
-  for (const rivi of String(teksti).split(/\s*\n\s*/).filter(Boolean)) {
-    laatikko.appendChild(html('p', 'fokusvirta-sahkerivi', rivi));
+/* ============ LIVIA PUHUU KUPLASSA, EI KORTILLA ==================
+ *
+ * Omistaja 3.9.2026: *"Nuo pulun kommentit voisi siirtää pulun
+ * puhekuplaan."* Sähkekortin sininen kursiivi (Livian saate) oli
+ * kortilla kilpailemassa lomakkeen kanssa samasta silmäyksestä. Nyt
+ * saate menee LIVIAN KUPLAPINOON (js/pollo.js, Raamattu: LIVIAN
+ * KUPLAPINO), jolloin kortti on pelkkää sähkettä ja lomaketta ja
+ * Livian ääni kuuluu sieltä mistä muutkin hänen repliikkinsä.
+ *
+ * MIKSI polloPuheenvuoro EIKÄ polloSaapumiskupla: puheenvuoro pilkkoo
+ * pitkän saatteen luettaviksi kupliksi ja pinoaa ne (sama kohtelu kuin
+ * maadoituksella), ja se on juuri se pinta, joka toimii kortin ollessa
+ * auki. Kortti asuu karttaruudussa (.map-pane, z-index 6) ja kuplapino
+ * document.bodyssa kiinteänä kerroksena (z-index 40), joten pino
+ * piirtyy kortin PÄÄLLE eikä sen alle — kuplaa ei siis tarvitse
+ * siirtää kortin sulkemisen jälkeen.
+ *
+ * KERRAN PER TEHTÄVÄ PER ISTUNTO. Kortti piirretään uudelleen joka
+ * ohilyönnistä, eikä sama saate saa toistua joka kerta.
+ */
+function sahkeSaateKuplaan(ui, city, avain, teksti, kentta) {
+  // Kenttä voi olla yksi merkkijono tai kuplien taulukko (7.9.2026).
+  const kuplat = livianKuplat(teksti);
+  if (!kuplat.length) return false;
+  ui.sahkeSaateSanottu ??= new Set();
+  if (ui.sahkeSaateSanottu.has(avain)) return false;
+  ui.sahkeSaateSanottu.add(avain);
+  /*
+   * Pieni viive: kortti ehtii ilmestyä ensin, ja kupla tulee sen päälle
+   * omana tapahtumanaan. Yhtä aikaa ilmestyvät pinnat lukisivat yhtenä
+   * ryöpsähdyksenä.
+   */
+  clearTimeout(ui.sahkeSaateAjastin);
+  ui.sahkeSaateAjastin = setTimeout(() => {
+    if (ui.dead) return;
+    const { osat, aani } = livianOsatJaAani(ui, city?.id, kentta, kuplat);
+    // Sofian sähkevaiheet on äänitetty (js/liviapuhe.js
+    // LIVIAN_KAUPUNKILAHTEET); muut kaupungit vaikenevat itsestään.
+    polloPuheenvuoro(osat, {
+      jatkuuko: () => !ui.dead,
+      aani,
+      ...livianPuherytmi(city?.id, kentta),
+    });
+  }, SAHKE_SAATE_VIIVE_MS);
+  return true;
+}
+
+/** Kortti ehtii ensin, Livia puhuu heti perään. */
+const SAHKE_SAATE_VIIVE_MS = 450;
+
+/* ==================== PULLA SÄHKEESSÄ ============================
+ *
+ * Omistajan tilaus 3.9.2026 (Raamattu, SÄHKETEHTÄVÄ LEHTIMÄISEKSI JA
+ * PULLA VINKIKSI): *"tässäkin tehtävässä voisi olla mahdollisuus ostaa
+ * pulla pululle ja saada vinkki, joka helpottaa oleellisesti. Tämä
+ * olisi 50 puntaa. Lisäksi pelaaja voisi ostaa 25 punnalla puolikkaan
+ * pullan, mistä vastineeksi pulu suostuisi näyttämään vain suoran
+ * linkin, mistä pääsisi lukemaan juuri tämän kysymyksen vastauksen
+ * kaupunkilehden sivulta."*
+ *
+ * KAKSI ERI TAVARAA, EI KAKSI HINTAA SAMASTA. Kokonainen pulla ostaa
+ * SANAT (Livia kertoo vinkin omalla äänellään), puolikas ostaa PELKÄN
+ * OSOITTEEN (kortti tai lehden sivu aukeaa, mitään ei sanota ääneen).
+ * Kumpikin voidaan ostaa erikseen ja kumpikin säilyy tallennuksen yli,
+ * koska kirjanpito on pelitilassa (js/game.js pullaVinkit).
+ *
+ * MIKSI PUOLIKAS ON HALVEMPI: se on työläämpi. Pelaaja saa oikean
+ * sivun mutta lukee vastauksen itse — vinkki on oikotie, linkki on
+ * lapio.
+ */
+const SAHKE_PULLA_VINKKI_HINTA = 50;
+const SAHKE_PULLA_LINKKI_HINTA = 25;
+
+/** Kirjanpidon avain: 'sahke:<tehtäväId>:vinkki|linkki'. */
+function sahkePullaAvain(tehtava, laji) {
+  return tehtava?.id ? `sahke:${tehtava.id}:${laji}` : '';
+}
+
+/** Mitä linkkinapissa lukee — linkin laji kertoo sen itse. */
+function vastauslinkinNappi(linkki) {
+  if (linkki?.tyyppi === 'lehtisivu') return 'Avaa Livian linkki: lehden sivu';
+  if (linkki?.tyyppi === 'kohde') return 'Avaa Livian linkki: kartan kohde';
+  return 'Avaa Livian linkki';
+}
+
+/**
+ * LIVIAN SUORA LINKKI AUKI.
+ *
+ * Kaksi lajia, koska pelin kaksi vastausaineistoa ovat eri paikoissa:
+ * Sofian vastaus lukee KARTAN KOHTEESSA (Varna) ja Tukholman
+ * KAUPUNKILEHDEN SIVULLA (Vasa-juttu). Sähkekortti suljetaan
+ * avautumisen alta — kaksi pintaa päällekkäin olisi juuri se sekasotku,
+ * jota kohdemalli välttää — ja pelaaja palaa sähkeeseen kartan
+ * pisteestä kuten ennenkin.
+ *
+ * @returns {boolean} aukesiko jokin.
+ */
+function avaaVastauslinkki(ui, city, linkki) {
+  if (!linkki) return false;
+  if (linkki.tyyppi === 'kohde') {
+    if (!kohdeavaus) return false;
+    suljeFokusvirta(ui);
+    return Boolean(kohdeavaus(ui, linkki.maa, linkki.kohde));
   }
+  if (linkki.tyyppi === 'lehtisivu') {
+    const kaupunki = ui.game?.pack?.cities?.find((c) => c.id === linkki.kaupunki) ?? city;
+    if (!kaupunki || typeof ui.avaaTutkinta !== 'function') return false;
+    suljeFokusvirta(ui);
+    ui.avaaTutkinta(kaupunki);
+    /*
+     * Lehti rakentaa sivunsa avautuessaan ja jää etusivulle
+     * (js/lehti.js rakennaSivut → naytaTutkiSivu(0)); haluttu sivu
+     * pyydetään heti sen perään, samassa tehtäväjonossa.
+     */
+    ui.naytaTutkiSivu?.(linkki.sivu ?? 0, { heti: true });
+    return true;
+  }
+  return false;
+}
+
+/**
+ * KAKSI PULLANAPPIA VASTAUSLOMAKKEEN ALLE.
+ *
+ * Kaava — kaksi napautusta, kassaportti, −N puntaa -kelluke ja
+ * kuittausrivi napin tilalle — on aarretehtävän pullavinkin oma
+ * (js/fokustehtavat.js pullaOstosnappi). Sitä ei kopioida tänne, se
+ * tuodaan: yksi kaava, yksi paikka.
+ */
+function piirraSahkePullat(ui, city, data, kohde) {
+  const tehtava = data.sahketehtava ?? {};
+  if (!tehtava.id) return;
+  const nimi = pullanNimi(ui, city);
+  const kotelo = html('div', 'fokusvirta-sahkepullat');
+  kohde.appendChild(kotelo);
+
+  /* ---------- 50 £: kokonainen pulla, Livia vinkkaa ---------- */
+  if (tehtava.vinkki) {
+    const avain = sahkePullaAvain(tehtava, 'vinkki');
+    pullaOstosnappi(ui, kotelo, {
+      hinta: SAHKE_PULLA_VINKKI_HINTA,
+      teksti: `Osta ${nimi} Livialle (${SAHKE_PULLA_VINKKI_HINTA} £) — vinkki`,
+      varmistus: `Varmista: ${nimi} Livialle, ${SAHKE_PULLA_VINKKI_HINTA} £`,
+      koyha: `Kassa ei riitä: ${nimi} ${SAHKE_PULLA_VINKKI_HINTA} £`,
+      kelluke: `${nimi} Livialle`,
+      tehty: `Livia sai kokonaisen pullan (${nimi}) ja sanoi vinkkinsä.`,
+      ostettu: ui.game.pullaOstettu?.(avain) === true,
+      osta: () => ui.game.actionPullaOstos(avain, SAHKE_PULLA_VINKKI_HINTA,
+        'sai vinkin sähkeen vastaukseen'),
+      // Vinkki tulee KUPLAAN eikä kortille: se on Livian puhetta, ja
+      // kuplasta se jää myös chat-historiaan (js/pollo.js).
+      jalkeen: () => {
+        const kuplat = livianKuplat(tehtava.vinkki);
+        const { osat, aani } = livianOsatJaAani(ui, city.id, 'vinkki', kuplat);
+        polloPuheenvuoro(osat, {
+          jatkuuko: () => !ui.dead,
+          aani,
+          ...livianPuherytmi(city.id, 'vinkki'),
+        });
+      },
+    });
+  }
+
+  /* ---------- 25 £: puolikas pulla, pelkkä linkki ---------- */
+  if (!tehtava.vastauslinkki) return;
+  const avain = sahkePullaAvain(tehtava, 'linkki');
+  const linkkiNappi = () => {
+    const rivi = html('div', 'fokusvirta-sahkelinkki');
+    piirraNapit(rivi, [
+      nappi(vastauslinkinNappi(tehtava.vastauslinkki), 'primary',
+        () => {
+          sfx.play('paper');
+          avaaVastauslinkki(ui, city, tehtava.vastauslinkki);
+        }),
+    ], 'fokusvirta-varmistusnapit');
+    kotelo.appendChild(rivi);
+  };
+  const ostettuJo = ui.game.pullaOstettu?.(avain) === true;
+  pullaOstosnappi(ui, kotelo, {
+    hinta: SAHKE_PULLA_LINKKI_HINTA,
+    teksti: `Osta puolikas ${nimi} (${SAHKE_PULLA_LINKKI_HINTA} £) — suora linkki`,
+    varmistus: `Varmista: puolikas ${nimi}, ${SAHKE_PULLA_LINKKI_HINTA} £`,
+    koyha: `Kassa ei riitä: puolikas ${nimi} ${SAHKE_PULLA_LINKKI_HINTA} £`,
+    kelluke: `puolikas ${nimi} Livialle`,
+    tehty: `Livia sai puolikkaan pullan (${nimi}) ja näytti linkin.`,
+    ostettu: ostettuJo,
+    osta: () => ui.game.actionPullaOstos(avain, SAHKE_PULLA_LINKKI_HINTA,
+      'sai suoran linkin sähkeen vastaukseen'),
+    jalkeen: () => {
+      const saate = livianKuplat(tehtava.linkkiSaate);
+      if (saate.length) {
+        const { osat, aani } = livianOsatJaAani(ui, city.id, 'linkkiSaate', saate);
+        polloPuheenvuoro(osat, {
+          jatkuuko: () => !ui.dead,
+          aani,
+          ...livianPuherytmi(city.id, 'linkkiSaate'),
+        });
+      }
+      linkkiNappi();
+    },
+  });
+  // Kortti avattiin uudelleen jo ostetun linkin jälkeen: nappi kuuluu
+  // sinne edelleen, muuten ostos katoaisi kortin sulkemisen mukana.
+  if (ostettuJo) linkkiNappi();
+}
+
+/* ==================== SÄHKE ON LOMAKE, EI LAATIKKO ==================
+ *
+ * Omistaja 2.9.2026 ilta: sähketehtävän kortti *"visuaalisesti
+ * herkullisemmaksi"*. Sisältö ja sanamuodot ovat ennallaan — vain asu
+ * muuttui, ja se muuttui 1870-luvun sähkösanomalomakkeen suuntaan:
+ * painettu otsake ja lomakenumero, sähköaseman pyöreä musteleima,
+ * liimatut paperiliuskat ja rei'itetyt reunat. Kaikki on CSS:ää
+ * (css/fokusvirta.css, osio PÖLLÖN SÄHKETEHTÄVÄ) — yhtään kuvaa ei
+ * ladata, koska peli on offline-PWA.
+ *
+ * TÄMÄ FUNKTIO RAKENTAA VAIN NE KOUKUT, JOITA CSS EI VOI TEHDÄ:
+ * otsakerivin, jokaisen rivin oman liuskan, STOPin oman jänteen ja
+ * kysymysrivin korostusluokan. Sanoja se ei lisää muualle kuin
+ * painettuun otsakkeeseen ja leimaan, jotka ovat lomakkeen painatusta
+ * eivätkä pöllön puhetta.
+ */
+
+/**
+ * KYSYMYSRIVI EROTTUU (omistajan valitus 2.9.2026: *"tässä tehtävässä
+ * on vaikea ymmärtää mitä tässä kysytään"*).
+ *
+ * Rivi tunnistetaan kysymyssanasta eikä järjestysnumerosta: sähkeen
+ * rivijärjestys on datan asia (js/packs/fokusvirta-*.js), ja
+ * kiinteä "toinen rivi" korostaisi väärän rivin heti, kun jokin
+ * sähke alkaa toisin. Paluusähkeissä (TUNNUSSANA TÄSMÄÄ) ei ole
+ * kysymyssanaa, joten niissä ei korostu mikään.
+ *
+ * SANARAJA \b EI KELPAA TÄSSÄ: ääkkönen ei ole JavaScriptin regexissä
+ * sanamerkki, joten "MISSÄ " jäisi tunnistamatta (havaittu savukkeella
+ * 2.9.2026). Kysymyssanan perässä vaaditaan siksi väli tai rivin loppu.
+ */
+const SAHKE_KYSYMYSRIVI = /^(MIK[ÄA]|MISS[ÄA]|MIST[ÄA]|MIHIN|MILLOIN|MIN[ÄA] VUONNA|KUKA|KENEN|KUINKA|MITEN|MONTAKO|PALJONKO)(\s|$)/i;
+
+/**
+ * Lomakenumero: sama sähke saa aina saman numeron.
+ *
+ * Koriste, ei tieto — mutta arvottu numero vaihtuisi joka piirrolla ja
+ * näyttäisi vialta, kun kortti piirretään ohilyönnin jälkeen uudelleen.
+ */
+function sahkeNumero(teksti) {
+  let summa = 0;
+  for (const merkki of String(teksti)) summa = (summa * 31 + merkki.codePointAt(0)) % 9000;
+  return 1000 + summa;
+}
+
+/** Lomakkeen painettu otsake: nimiö, sähköaseman leima ja numero. */
+function sahkeOtsake(teksti, leima) {
+  const otsake = html('div', 'fokusvirta-sahke-otsake');
+  if (leima) {
+    // Leima on koristetta: ruudunlukija lukisi siitä vain kaupungin
+    // nimen toiseen kertaan, ja sähkeen sisältö on rivien vastuulla.
+    const merkki = html('span', 'fokusvirta-sahke-leima');
+    merkki.setAttribute('aria-hidden', 'true');
+    merkki.appendChild(html('span', 'fokusvirta-sahke-leima-nimi', leima));
+    merkki.appendChild(html('span', 'fokusvirta-sahke-leima-asema', 'Sähköasema'));
+    otsake.appendChild(merkki);
+  }
+  otsake.appendChild(html('span', 'fokusvirta-sahke-nimio', 'Sähkösanoma'));
+  otsake.appendChild(html('span', 'fokusvirta-sahke-numero', `N:o ${sahkeNumero(teksti)}`));
+  return otsake;
+}
+
+/**
+ * Liuskan sisältö annetusta tekstistä.
+ *
+ * STOP on sähkösanoman välimerkki eikä sana: se jää haaleammaksi, jotta
+ * silmä lukee sisällön eikä välimerkkejä. Teksti itse ei muutu
+ * (textContent on yhä sama rivi).
+ *
+ * OMA FUNKTIO, KOSKA SAMA LADONTA TEHDÄÄN MONESTI: kirjoitusanimaatio
+ * latoo rivin uudestaan joka merkillä (ks. kirjoitaSahke), eikä
+ * puolivalmis "STO" saa silloin poimia STOP-tyyliä — split tekee sen
+ * itsestään oikein, koska sanaraja ei täsmää keskeneräiseen sanaan.
+ */
+function taytaLiuska(liuska, teksti) {
+  liuska.replaceChildren();
+  for (const osa of String(teksti).split(/(\bSTOP\b)/g)) {
+    if (!osa) continue;
+    if (osa === 'STOP') liuska.appendChild(html('span', 'fokusvirta-sahke-stop', osa));
+    else liuska.appendChild(document.createTextNode(osa));
+  }
+}
+
+/** Yksi liimattu liuska: teksti, haalea STOP ja kysymysrivin korostus. */
+function sahkeLiuska(rivi) {
+  const liuska = html('p', 'fokusvirta-sahkerivi');
+  if (SAHKE_KYSYMYSRIVI.test(rivi)) liuska.classList.add('fokusvirta-sahkekysymys');
+  taytaLiuska(liuska, rivi);
+  return liuska;
+}
+
+/**
+ * SÄHKE KIRJOITTUU RIVI KERRALLAAN (omistajan tilaus 3.9.2026).
+ *
+ * KOLME ASIAA, JOTKA TÄSSÄ ON RATKAISTU JA JOTKA EIVÄT OLE ITSESTÄÄN
+ * SELVIÄ:
+ *
+ *   1. KORTTI EI SAA KASVAA KIRJOITTAESSA. Liuskapinon korkeus
+ *      mitataan VALMIISTA tekstistä ja lukitaan (min-height) ennen kuin
+ *      rivit tyhjennetään. Ilman tätä kortti venyisi rivi riviltä ja
+ *      napit hyppisivät alaspäin — juuri sitä nykimistä, jonka
+ *      Arkkikirjaston animaatiosääntö kieltää.
+ *   2. TULEVAT RIVIT VARAAVAT PAIKKANSA MUTTA EIVÄT NÄY. Ne ovat
+ *      tyhjiä eivätkä piilotettuja: piilotettu mutta täysi liuska
+ *      näkyisi tyhjänä paperilappuna, ja se näyttäisi vialta.
+ *   3. HYPPY LOPPUUN ON AINA MAHDOLLINEN. Napautus sähkeeseen tai mihin
+ *      tahansa kortin nappiin täyttää kaikki rivit heti ja vaientaa
+ *      äänet — pelaajaa ei koskaan pakoteta katsomaan animaatiota
+ *      loppuun (sama sopimus kuin matkakirjan kirjoituskoneella).
+ *
+ * @returns {() => void} `ohita`: täyttää sähkeen heti.
+ */
+function kirjoitaSahke(laatikko, liuskat, rivit, {
+  merkkiMs, kattoMs, valiMs, aanet = true, valmis,
+} = {}) {
+  const aikataulu = sahkeKirjoitusAikataulu(rivit, { merkkiMs, kattoMs, valiMs });
+  const kentat = [...liuskat.children];
+  const korkeus = liuskat.getBoundingClientRect?.().height ?? 0;
+  if (korkeus > 0) liuskat.style.minHeight = `${Math.ceil(korkeus)}px`;
+  /*
+   * TYHJÄ LIUSKA EI SAA NÄKYÄ TYHJÄNÄ LAPPUNA. Rivi varaa paikkansa
+   * (min-height yllä) mutta on maalaamatta, kunnes sen vuoro tulee —
+   * muuten lomakkeella olisi valmiiksi viisi tyhjää paperiliuskaa ja
+   * "rivi kerrallaan" näyttäisi pelkältä tekstin ilmestymiseltä.
+   */
+  for (const kentta of kentat) {
+    kentta.replaceChildren();
+    kentta.classList.add('fokusvirta-sahkerivi-odottaa');
+  }
+  laatikko.classList.add('kirjoittaa');
+
+  let ajastin = 0;
+  let viimeNaksu = 0;
+  let ohi = false;
+
+  const ohita = () => {
+    if (ohi) return;
+    ohi = true;
+    clearTimeout(ajastin);
+    kentat.forEach((kentta, i) => {
+      kentta.classList.remove('fokusvirta-sahkerivi-odottaa');
+      taytaLiuska(kentta, aikataulu.rivit[i]?.teksti ?? '');
+    });
+    liuskat.style.minHeight = '';
+    laatikko.classList.remove('kirjoittaa');
+    valmis?.();
+  };
+
+  /* Naksu enintään joka toisesta merkistä JA enintään 20 kertaa
+     sekunnissa: nopealla rivillä jälkimmäinen katto puree ensin. */
+  const naksu = () => {
+    if (!aanet) return;
+    const nyt = Date.now();
+    if (nyt - viimeNaksu < SAHKE_NAKSU_VALI_MS) return;
+    viimeNaksu = nyt;
+    // Sävy vaihtelee hitusen: jokainen kirjain osuu eri kohtaan telaa.
+    sfx.play('kirjoituskone', { vire: 0.94 + Math.random() * 0.12 });
+  };
+
+  const kirjoitaRivi = (i) => {
+    const tila = aikataulu.rivit[i];
+    const kentta = kentat[i];
+    if (ohi || !tila || !kentta) { ohita(); return; }
+    kentta.classList.remove('fokusvirta-sahkerivi-odottaa');
+    let merkki = 0;
+    const askel = () => {
+      if (ohi) return;
+      // Kortti on voitu sulkea tai piirtää uudelleen kesken kirjoituksen.
+      if (!kentta.isConnected) { ohi = true; clearTimeout(ajastin); return; }
+      merkki += 1;
+      taytaLiuska(kentta, tila.teksti.slice(0, merkki));
+      if (merkki % 2 === 1) naksu();
+      if (merkki < tila.merkit) {
+        ajastin = setTimeout(askel, tila.merkkivali);
+        return;
+      }
+      if (aanet) sfx.play('bling');
+      if (i + 1 >= aikataulu.rivit.length) { ohita(); return; }
+      ajastin = setTimeout(() => kirjoitaRivi(i + 1), aikataulu.valiMs);
+    };
+    ajastin = setTimeout(askel, tila.merkkivali);
+  };
+
+  kirjoitaRivi(0);
+  return ohita;
+}
+
+/**
+ * Sähkeen oma tekstipinta: lomakepaperi, jolle rivit on liimattu
+ * versaaleina liuskoina STOP-välein.
+ *
+ * @param {string} leima Sähköaseman leimaan painettava paikannimi
+ *   (kaupungin nimi). Tyhjä = ei leimaa.
+ */
+function piirraSahke(kohde, teksti, luokka = '', leima = '', asetukset = {}) {
+  const laatikko = html('div', luokka ? `fokusvirta-sahke ${luokka}` : 'fokusvirta-sahke');
+  varmistaSahkeLomakekuva(laatikko);
+  laatikko.appendChild(sahkeOtsake(teksti, leima));
+  const liuskat = html('div', 'fokusvirta-sahkeliuskat');
+  const rivit = String(teksti).split(/\s*\n\s*/).filter(Boolean);
+  for (const rivi of rivit) liuskat.appendChild(sahkeLiuska(rivi));
+  laatikko.appendChild(liuskat);
   kohde.appendChild(laatikko);
+  /*
+   * KYSYMYSRIVIN KYNÄALLEVIIVAUS (ilmepaketti, omistaja 5.9.2026): kynä
+   * vetää viivan kysymyksen alle vasta, kun rivi on kirjoitettu loppuun
+   * — ennen sitä rivi on kesken eikä alleviivattavaa ole. Ilman
+   * kirjastoa CSS-korostus jää voimaan (js/ilme.js korosta).
+   */
+  const korostaKysymys = () => korostaSisalto(laatikko.querySelector('.fokusvirta-sahkekysymys'),
+    { tyyppi: 'underline', kesto: 500, tayte: [0, 1] });
+  /*
+   * ANIMAATIO ON VALINNAINEN JA KERTALUONTOINEN. Kutsuja päättää
+   * (`animoi`), ja liikettä vähentävä järjestelmäasetus kumoaa päätöksen
+   * — silloin rivit ovat valmiina kuten ennenkin.
+   */
+  if (asetukset.animoi && rivit.length && !liikeRajoitettu()) {
+    const ohita = kirjoitaSahke(laatikko, liuskat, rivit, { ...asetukset, valmis: korostaKysymys });
+    kohde.addEventListener('pointerdown', (tapahtuma) => {
+      if (!tapahtuma.target?.closest?.('.fokusvirta-sahke, button')) return;
+      ohita();
+    }, true);
+  } else {
+    korostaKysymys();
+  }
   return laatikko;
 }
 
@@ -2033,15 +6226,42 @@ function piirraSahketehtava(ui, city, data, kohde) {
    * toista kertaa. Sama pinta palvelee myös tilannetta, jossa pelaaja
    * poistui kaupungista kesken lennon: paluunappi jatkaa siitä.
    */
+  ui.sahkeKirjoitettu ??= new Set();
+  /* Sama sähke kirjoittuu kerran istunnossa; toisella avauksella rivit
+     ovat valmiina (omistajan animaatiosääntö: liike on tapahtuma, ei
+     tapa piirtää). */
+  const kirjoita = (tunnus) => {
+    if (ui.sahkeKirjoitettu.has(tunnus)) return false;
+    ui.sahkeKirjoitettu.add(tunnus);
+    return true;
+  };
+
   if (ui.sahkeVastattu.has(avain)) {
-    piirraSahke(kohde, tehtava.lahetetty ?? 'SÄHKE LÄHETETTY STOP ODOTA VASTAUSTA STOP');
-    piirraTeksti(kohde, tehtava.odotus ?? 'Livia on matkalla. Se palaa kun se palaa.');
+    piirraSahke(kohde, tehtava.lahetetty ?? 'SÄHKE LÄHETETTY STOP ODOTA VASTAUSTA STOP',
+      '', city.name, {
+        animoi: kirjoita(`${avain}:lahetetty`),
+        merkkiMs: SAHKE_PALUU_MERKKI_MS,
+        kattoMs: SAHKE_PALUU_KATTO_MS,
+        valiMs: SAHKE_PALUU_RIVIVALI_MS,
+      });
+    // Odotusteksti on Livian puhetta: se kuuluu kuplaan kuten saatekin.
+    sahkeSaateKuplaan(ui, city, `${avain}:odotus`,
+      tehtava.odotus ?? 'Livia on matkalla. Se palaa kun se palaa.', 'odotus');
     piirraNapit(kohde, [nappi('Selvä', 'primary', () => suljeKasin(ui))]);
     return;
   }
 
-  piirraSahke(kohde, tehtava.sahke ?? '');
-  piirraTeksti(kohde, tehtava.johdanto ?? '');
+  piirraSahke(kohde, tehtava.sahke ?? '', '', city.name, { animoi: kirjoita(avain) });
+  /*
+   * LIVIAN SAATE MENI KUPLAAN (omistaja 3.9.2026). Kortilla se oli
+   * sinistä kursiivia sähkeen alla (.fokusvirta-livian-saate) ja
+   * kilpaili lomakkeen kanssa samasta silmäyksestä; nyt Livia sanoo sen
+   * omassa kuplassaan, ja kortille jää pelkkä sähke ja lomake. Luokan
+   * tyylit jäävät css/fokusvirta.css:ään varalle (ne ovat Livian
+   * marginaalimerkinnän asu), mutta yksikään kutsupaikka ei enää
+   * aseta sitä — savuke vahtii sitä (tools/savuke-sahketehtava.mjs).
+   */
+  sahkeSaateKuplaan(ui, city, avain, tehtava.johdanto ?? '', 'johdanto');
 
   const ohi = ui.sahkeOhi.get(avain) ?? 0;
   const lomake = html('div', 'fokusvirta-sahkelomake');
@@ -2050,7 +6270,14 @@ function piirraSahketehtava(ui, city, data, kohde) {
 
   for (const aukko of tehtava.aukot ?? []) {
     const rivi = html('div', 'fokusvirta-sahkeaukko');
-    const nimio = html('label', 'fokusvirta-sahkeotsake', `${aukko.otsake} `);
+    const nimio = html('label', 'fokusvirta-sahkeotsake');
+    /*
+     * KENTÄN NIMI ON OMASSA JÄNTEESSÄÄN, jotta se voi olla lomakkeeseen
+     * PAINETTU sana kentän vasemmalla puolella ("KOHDE ______") eikä
+     * selainkentän yläpuolinen tekstirivi. Tyhjä väli jää perään, koska
+     * nimiön textContent luetaan ääneen yhtenä pätkänä.
+     */
+    nimio.appendChild(html('span', 'fokusvirta-sahkekentannimi', `${aukko.otsake} `));
     if (aukko.tyyppi === 'luku') {
       const kentta = document.createElement('input');
       kentta.type = 'number';
@@ -2093,8 +6320,9 @@ function piirraSahketehtava(ui, city, data, kohde) {
   let vapaaLohko = null;
   if (tehtava.aukot?.length) {
     vapaaLohko = html('div', 'fokusvirta-sahkevapaa');
-    const vapaaNimio = html('label', 'fokusvirta-sahkeotsake',
-      `${tehtava.vapaaOtsake ?? 'Tai kirjoita vastaus omin sanoin'} `);
+    const vapaaNimio = html('label', 'fokusvirta-sahkeotsake');
+    vapaaNimio.appendChild(html('span', 'fokusvirta-sahkekentannimi',
+      `${tehtava.vapaaOtsake ?? 'Tai kirjoita vastaus omin sanoin'} `));
     vapaaKentta.className = 'fokusvirta-sahkevapaakentta';
     vapaaKentta.rows = 2;
     vapaaKentta.placeholder = tehtava.vapaaVihje ?? 'Yhdellä lauseella, omin sanoin';
@@ -2114,9 +6342,23 @@ function piirraSahketehtava(ui, city, data, kohde) {
   if (ohi >= SAHKE_VINKKI_OHI && tehtava.vinkki) {
     kohde.appendChild(html('p', 'fokusvirta-varmistus', tehtava.vinkki));
   }
-  kohde.appendChild(html('p', 'fokusvirta-varoitus',
+  /*
+   * PALKKIORIVI ON LOMAKKEEN ALAREUNAN MAKSUKOHTA: sama teksti kuin
+   * ennen, mutta lomakkeen pikkupränttinä (oma luokka, ohut yläviiva)
+   * eikä kortin varoituksena. Vanha luokka jää, koska savukkeet lukevat
+   * palkkion juuri siitä.
+   */
+  kohde.appendChild(html('p', 'fokusvirta-varoitus fokusvirta-sahkemaksu',
     `Sähkeen palkkio nyt ${sahkePalkkio(ohi, tehtava.palkkio ?? SAHKE_PALKKIO)} puntaa. `
     + 'Jokainen ohilyönti pienentää sitä — mutta aarre ei lukitu koskaan.'));
+
+  /*
+   * PULLAT PALKKIORIVIN ALLE, NAPPIRIVIN YLLE. Paikka on sama kuin
+   * lehden aarretehtävässä: raha-asiat ovat yhdessä nipussa lomakkeen
+   * jälkeen, eikä ostosnappi joudu sekaan sen napin kanssa, joka
+   * lähettää vastauksen.
+   */
+  piirraSahkePullat(ui, city, data, kohde);
 
   /** Ohilyönti: sama kirjanpito ja sama paluusähke kummallakin tavalla. */
   const ohilyonti = (vaarat) => {
@@ -2188,7 +6430,7 @@ function piirraSahketehtava(ui, city, data, kohde) {
       ohilyonti(vaarat);
     }),
     nappi('Myöhemmin', '', () => suljeKasin(ui)),
-  ], 'fokusvirta-varmistusnapit');
+  ], 'fokusvirta-varmistusnapit fokusvirta-sahkenapit');
 }
 
 /**
@@ -2212,8 +6454,36 @@ function sahkeOsui(ui, city, data) {
   if (sisalto) {
     sisalto.replaceChildren();
     otsikko(sisalto, 'Sähke', tehtava.hahmo ?? 'Pöllöltä');
-    piirraSahke(sisalto, tehtava.vastaussahke ?? 'VASTAUS LÄHETETTY STOP');
-    piirraTeksti(sisalto, [tehtava.oikein, tehtava.fakta].filter(Boolean).join('\n\n'));
+    ui.sahkeKirjoitettu ??= new Set();
+    const vastausAvain = `${avain}:vastaus`;
+    const animoi = !ui.sahkeKirjoitettu.has(vastausAvain);
+    ui.sahkeKirjoitettu.add(vastausAvain);
+    piirraSahke(sisalto, tehtava.vastaussahke ?? 'VASTAUS LÄHETETTY STOP', '', city.name, {
+      animoi,
+      merkkiMs: SAHKE_PALUU_MERKKI_MS,
+      kattoMs: SAHKE_PALUU_KATTO_MS,
+      valiMs: SAHKE_PALUU_RIVIVALI_MS,
+    });
+    /*
+     * KUITTAUSKORTIN TEKSTI EI OLE MARGINAALIMERKINTÄ: siinä on Livian
+     * repliikin PERÄSSÄ faktakappale (tehtava.fakta), eikä faktaa saa
+     * esittää kynällä raapustettuna huomautuksena. Sinistä mustetta
+     * käytetään vain siellä, missä puhuu pelkkä Livia.
+     */
+    const kuittaus = livianKuplat(tehtava.oikein);
+    piirraTeksti(sisalto, [...kuittaus, tehtava.fakta].filter(Boolean).join('\n\n'));
+    /*
+     * KUITTAUS ON LIVIAN REPLIIKKI, VAIKKA SE ON KORTILLA. Äänite
+     * kattaa vain `oikein`-osan (js/liviapuhe.js
+     * LIVIAN_KAUPUNKILAHTEET); faktakappale on kertojan asiaa eikä
+     * sitä lueta pulun äänellä. Kortti piirtyy oikeasta vastauksesta
+     * kerran, joten ääni ei toistu.
+     *
+     * KUPLAT PERÄKKÄIN (7.9.2026): kuittaus on jaettu kupliksi, ja
+     * jokainen on oma äänitiedostonsa — kortilla ne ovat kappaleita,
+     * äänessä peräkkäisiä repliikkejä (soitaLivianKaupunkiSarja).
+     */
+    soitaLivianKaupunkiSarja(ui, city.id, 'oikein', kuittaus);
     piirraNapit(sisalto, [nappi(tehtava.lento ?? 'Anna Livian mennä', 'primary', () => {
       sfx.play('paper');
       suljeFokusvirta(ui);
@@ -2225,17 +6495,60 @@ function sahkeOsui(ui, city, data) {
 /** Ajastin, joka tuo Livian takaisin — ja aarteen mukanaan. */
 function aloitaSahkelento(ui, city, data) {
   clearTimeout(ui.sahkeLentoAjastin);
+  /*
+   * LENTO ODOTTAA KUITTAUKSEN PUHEEN LOPPUUN.
+   *
+   * Kun `oikein` on äänitetty (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET),
+   * paluukupla katkaisisi sen kesken: uusi repliikki häivyttää aina
+   * edellisen (soitaLivianAani). Odotus venytetään siksi kuplan
+   * lukuaikaan — sama sääntö kuin avauksessa (js/livia.js
+   * livianKuplanLukuaika) — mutta lento ei koskaan lyhene siitä, mitä
+   * se oli. Äänettömissä kaupungeissa tahti on entinen.
+   */
+  const kuittaus = livianKuplat(data.sahketehtava?.oikein);
+  const lento = livianKaupunkiAanitetty(city.id, 'oikein')
+    ? Math.max(SAHKE_LENTO_MS, livianSarjanKesto(kuittaus))
+    : SAHKE_LENTO_MS;
   ui.sahkeLentoAjastin = setTimeout(() => {
     if (ui.dead) return;
-    // Pelaaja on voinut lähteä kaupungista tai laatta on jo käännetty
-    // muuta tietä: paluu odottaa silloin seuraavaa pisteen napautusta.
-    if (ui.game?.cityOf?.()?.id !== city.id) return;
-    if (!ui.game.tokens?.has(city.id)) return;
-    const tehtava = data.sahketehtava ?? {};
-    naytaPolloKupla(ui, tehtava.paluu ?? 'Perillä oltiin. Pöllö kertoi paikan.');
-    clearTimeout(ui.sahkeAarreAjastin);
-    ui.sahkeAarreAjastin = setTimeout(() => paljastaSahkeAarre(ui, city, data), SAHKE_PALUU_MS);
-  }, SAHKE_LENTO_MS);
+    // Laatta käännetty muuta tietä: Livialla ei ole enää mitään tuotavaa.
+    if (!ui.game?.tokens?.has(city.id)) return;
+    // Pelaaja lähti kaupungista lennon aikana: paluu odottaa seuraavaa
+    // pisteen napautusta (sahkePaluuOdottaa, avaaFokusKohtaaminen).
+    if (ui.game?.cityOf?.()?.id !== city.id) {
+      ui.sahkePaluuOdottaa ??= new Set();
+      ui.sahkePaluuOdottaa.add(sahkeAvain(ui, city));
+      return;
+    }
+    sahkePaluu(ui, city, data);
+  }, lento);
+}
+
+/**
+ * LIVIA PALAA JA AARRE PALJASTUU (lennon ajastin tai, jos pelaaja oli
+ * poissa, pisteen napautus paluun jälkeen — omistaja 23.9.2026: lennon
+ * aikana lähtenyt saa aarteen, kun palaa pisteelle, eikä vasta uudessa
+ * istunnossa; sama kuin natiivissa).
+ */
+function sahkePaluu(ui, city, data) {
+  const tehtava = data.sahketehtava ?? {};
+  const kuplat = livianKuplat(tehtava.paluu);
+  // Ainoa kaupunkirepliikki, jossa Livia palaa lennolta ja aloittaa
+  // jo ilmasta. Ääni on silti kuiva: kaiku otettiin pois pulun
+  // alusta omistajan päätöksellä 6.9.2026 ilta (js/liviapuhe.js
+  // LIVIAN_KAIKU).
+  polloKuplasarja(ui, city, 'paluu',
+    kuplat.length ? kuplat : ['Perillä oltiin. Pöllö kertoi paikan.']);
+  /*
+   * AARRE ODOTTAA KOKO SARJAN. Paluu on 7.9.2026 alkaen kaksi kuplaa,
+   * ja ne tulevat samaan paikkaan peräkkäin (polloKuplasarja). Aarre
+   * paljastuu vasta viimeisen kuplan päälle, joten odotukseen lisätään
+   * niiden edeltäjien lukuajat — yhden kuplan kaupungeissa tahti on
+   * entinen.
+   */
+  clearTimeout(ui.sahkeAarreAjastin);
+  ui.sahkeAarreAjastin = setTimeout(() => paljastaSahkeAarre(ui, city, data),
+    SAHKE_PALUU_MS + livianSarjanKesto(kuplat.slice(0, -1)));
 }
 
 /**
@@ -2271,6 +6584,118 @@ function paljastaSahkeAarre(ui, city, data) {
  * Lisäksi lehden avautuessa näytettävä pöllön vinkki (alempana).
  */
 
+/* ============ AARREPISTE: LUKKO JA SEN AVAIN (erä 7) ==============
+ *
+ * Raamattu (KARTTAUUDISTUS, omistaja 13.9.2026 sanatarkasti):
+ * *"Aarretehtava voi olla jatkossa suoraan kartalla nakyvissa
+ * vihreana pisteena ja sita voi heti yrittaa, kunhan on ratkaissut
+ * vahintaan kaksi mita tahansa mini tehtavaa nostoissa. Ensimmaisen
+ * kaupungin kohdalla pulu voisi kertoa etta 'loytamalla kartalta
+ * kaksi kysymysta ja vastaamalla niihin oikein saat vihjeen aarteen
+ * sijainnista' tms. Pelaaja voi myos halutessaan jatkaa matkaa ilman
+ * loytamatta aarretta."*
+ *
+ * KAKSI AVAINTA SAMAAN LUKKOON (TAI-ehto), ei yhtä:
+ *
+ *   1. UUSI — kaksi ratkaistua NOSTON minikysymystä koko matkalla
+ *      (game.nostotehtavatRatkaistu, erä 6). Laskuri on GLOBAALI eikä
+ *      kaupunkikohtainen: omistajan sana on *"kaksi mita tahansa mini
+ *      tehtavaa"*, ja kaupunkikohtainen laskuri lukitsisi pelaajan
+ *      kaupunkiin, jossa nostoja ei satu olemaan kahta.
+ *   2. VANHA — lehden aarteen avaava kysymys tai Livialle ostettu
+ *      pulla (fokusAarreAvattu). Tämä EI poistu: vanha tallennus, jossa
+ *      aarre on jo avattu lehden kautta mutta laskuri on 0, pysyy
+ *      auki — muuten kesken oleva peli jumittuisi taaksepäin.
+ *
+ * Kumpi tahansa riittää, eikä kumpikaan sammuta toista. Aarteen oma
+ * kysymys, laatan palkkio ja lehtipalkintoketju ovat ennallaan; erä 7
+ * koskee VAIN sitä, milloin vihreä piste on napautettavissa.
+ */
+
+/** Montako noston minikysymystä avaa aarrepisteen (Raamattu: kaksi). */
+export const NOSTOTEHTAVIA_AARREPISTEESEEN = 2;
+
+/**
+ * Lukitun pisteen ruudunlukijalappu ja napautuksen vastaus.
+ * Sama lause molemmissa, jotta kuultu ja luettu peli kertovat saman.
+ */
+export const AARREPISTEEN_LUKKOLAPPU = 'ratkaise kaksi kysymystä kartalta';
+
+/** Lukitun pisteen napautuksen vastaus pulun kuplassa. */
+export const AARREPISTEEN_LUKKOVIESTI = 'Ratkaise kaksi kysymystä kartalta.';
+
+/** Pulun ohje ensimmäisessä kaupungissa (omistajan sanamuoto, ks. yllä). */
+export const AARREPISTEEN_OHJE = 'Löytämällä kartalta kaksi kysymystä ja '
+  + 'vastaamalla niihin oikein saat vihjeen aarteen sijainnista.';
+
+/** Kuinka kauan ohje odottaa saapumisen rauhoittumista. */
+const AARREPISTEEN_OHJE_VIIVE_MS = 2500;
+
+/**
+ * LUKITUN PISTEEN NAPAUTUS SANOO, MIKSI SE ON LUKOSSA.
+ *
+ * Napautus ei saa olla mykkä: himmeä piste ilman vastausta näyttäisi
+ * rikkinäiseltä. Kupla on sama pulun ohjekupla kuin karttaohjeella
+ * (polloVihje) — ei kertalippua, koska tämän pyytää pelaaja itse.
+ *
+ * @returns {boolean} näkyikö kupla
+ */
+export function fokusvirtaAarrepisteLukko(ui) {
+  if (typeof document === 'undefined' || !polloNappi()) return false;
+  polloVihje(AARREPISTEEN_LUKKOVIESTI);
+  return true;
+}
+
+/**
+ * SAAKO AARREPISTEEN NAPAUTTAA JUURI NYT (ks. lohko yllä).
+ *
+ * Luetaan yhdestä paikasta, jotta piirto (js/fokuspiste.js,
+ * js/pallolauta/nostot.js) ja napautus ovat aina samaa mieltä.
+ */
+export function fokusAarrepisteAuki(ui, city) {
+  if (fokusAarreAvattu(ui, city)) return true;
+  const ratkaistu = Number(ui?.game?.nostotehtavatRatkaistu);
+  return Number.isFinite(ratkaistu) && ratkaistu >= NOSTOTEHTAVIA_AARREPISTEESEEN;
+}
+
+/**
+ * PULUN KARTTAOHJE KERRAN PER TALLENNUS.
+ *
+ * Portit järjestyksessä — kertalippu VIIMEISENÄ, kuten lehtivinkillä
+ * (fokusvirtaLehtivinkki): ohje, joka ei koskaan näkynyt, kuuluu yhä
+ * ensi kerralle.
+ *
+ *   1. selain on olemassa ja kertalippu on käyttämättä,
+ *   2. kaupungissa on lukittu aarrepiste juuri nyt (eli ohjeella on
+ *      kohde, jota osoittaa) — tämä tekee "ensimmäisestä kaupungista"
+ *      itsestään sen ensimmäisen kaupungin, jossa asia on ajankohtainen,
+ *   3. pulun nappi on ruudulla (polloVihje piirtää kuplan sen viereen).
+ *
+ * Ohje ei ole portti mihinkään: se ei estä napautusta, matkaa eikä
+ * mitään muutakaan. Siksi se saa myös jäädä väliin ilman seurauksia.
+ *
+ * @returns {boolean} näytettiinkö ohje nyt
+ */
+export function fokusvirtaAarrepisteOhje(ui, city) {
+  if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return false;
+  if (!ui?.game || ui.game.aarrepisteOhjeNahty) return false;
+  const piste = city ? fokusvirtaKohtaamispiste(ui, city) : null;
+  if (!piste?.lukittu) return false;
+  if (ui.aarrepisteOhjeAjastin) return false;
+  ui.aarrepisteOhjeAjastin = setTimeout(() => {
+    ui.aarrepisteOhjeAjastin = null;
+    // Tilanne on voinut vaihtua viiveen aikana: toinen kaupunki, avattu
+    // piste tai kadonnut pulu — silloin lippu ei kulu.
+    if (ui.dead || ui.game?.aarrepisteOhjeNahty) return;
+    if (ui.game?.cityOf?.()?.id !== city.id) return;
+    if (!fokusvirtaKohtaamispiste(ui, city)?.lukittu) return;
+    if (!polloNappi()) return;
+    polloVihje(AARREPISTEEN_OHJE);
+    ui.game.merkitseAarrepisteOhje();
+  }, AARREPISTEEN_OHJE_VIIVE_MS);
+  return true;
+}
+
 /**
  * KOHTAAMISPAIKKA KARTALLA — ja saako piste palaa juuri nyt.
  *
@@ -2281,34 +6706,54 @@ function paljastaSahkeAarre(ui, city, data) {
  *
  * Paikka on siis oma datakenttänsä (`kohtaamispiste`, js/packs/
  * fokusvirta-ateena.js) eikä kaupungin laattakoordinaatti: Ateenassa
- * Nikos on Akropoliilla, ei torilla. Kenttä on laudoittain sama malli
+ * Dafni on Akropoliilla, ei torilla. Kenttä on laudoittain sama malli
  * kuin kohdenostoilla — lauta, jolta koordinaatteja ei ole, ei saa
  * pistettä (mieluummin piirtämättä kuin väärään paikkaan).
  *
- * NELJÄ EHTOA, KAIKKI PAKOLLISET:
+ * KOLME EHTOA NÄKYMISELLE, KAIKKI PAKOLLISET:
  *   1. kevyt kulku päällä (raskaassa virrassa kohtaaminen on kortissa),
  *   2. kaupungilla on virtasisältö ja kohtaamispiste tälle laudalle,
- *   3. laatta on yhä kääntämättä (piste sammuu kun aarre on avattu),
- *   4. jokin lehden aarteen avaavista kysymyksistä on ratkaistu oikein
- *      (nimetty tehtävä TAI kulttuurivisa — omistaja 25.8.2026).
+ *   3. laatta on yhä kääntämättä (piste sammuu kun aarre on löydetty).
  *
- * @returns {{x:number,y:number,nimi:string}|null}
+ * ── NELJÄS EHTO EI ENÄÄ PIILOTA, VAAN LUKITSEE (erä 7, 13.9.2026) ──
+ *
+ * Raamattu (KARTTAUUDISTUS, omistaja 13.9.2026 sanatarkasti):
+ * *"Aarretehtava voi olla jatkossa suoraan kartalla nakyvissa
+ * vihreana pisteena ja sita voi heti yrittaa, kunhan on ratkaissut
+ * vahintaan kaksi mita tahansa mini tehtavaa nostoissa."*
+ *
+ * Piste oli ennen NÄKYMÄTÖN, kunnes lehden aarteen avaava kysymys
+ * ratkesi. Nyt se on kartalla alusta asti ja kertoo itse, mitä siltä
+ * puuttuu: lukittuna se on himmeä eikä tuiki, ja napautus sanoo, mitä
+ * pelaajan pitää tehdä (js/fokuspiste.js avaaFokuspiste). Näin
+ * aarretehtävä on osa karttaa eikä lehden takana oleva yllätys — ja
+ * pelaaja saa jatkaa matkaa ilman sitä, koska Liiku-nappi ei kysy
+ * pisteeltä mitään.
+ *
+ * `lukittu` on siis PINNAN tieto: piirto ja napautus lukevat sen, eikä
+ * kukaan muu joudu laskemaan ehtoa uudestaan (fokusAarrepisteAuki).
+ *
+ * @returns {{x:number,y:number,nimi:string,teko:string,lukittu:boolean}|null}
  */
 export function fokusvirtaKohtaamispiste(ui, city) {
   if (!fokusvirtaKohtaaminenPisteessa(ui, city)) return null;
-  if (!fokusAarreAvattu(ui, city)) return null;
   const data = fokusvirtaSisalto(ui, city);
   const paikka = data.kohtaamispiste?.laudat?.[ui.game?.pack?.id];
+  const lukittu = !fokusAarrepisteAuki(ui, city);
   /*
    * TEKO KERTOO, MITÄ PISTEEN TAKANA ON. Ruudunlukija sanoo pisteestä
    * "tapaa paikallinen" — sähkekaupungissa (Tukholma) sen takana ei
    * ole ketään tavattavaa vaan pöllön sähke, ja lappu kertoo sen.
+   * Lukittuna lappu kertoo lukon eikä lupaa kohtaamista, jota napautus
+   * ei vielä avaa.
    */
+  const teko = data.sahketehtava ? 'lue pöllön sähke' : 'tapaa paikallinen';
   return {
     x: paikka.x,
     y: paikka.y,
     nimi: data.kohtaamispiste?.nimi ?? city.name,
-    teko: data.sahketehtava ? 'lue pöllön sähke' : 'tapaa paikallinen',
+    teko: lukittu ? AARREPISTEEN_LUKKOLAPPU : teko,
+    lukittu,
   };
 }
 
@@ -2319,16 +6764,19 @@ export function fokusvirtaKohtaamispiste(ui, city) {
  * pääsi tapaamaan henkilön) POIS"*. Kun kohtaaminen tavataan kartalta,
  * lehden alanappi olisi toinen ovi samaan huoneeseen — ja se ohittaisi
  * koko kokeilun: AARTEEN AVAUS -tehtävää ei tarvitsisi tehdä lainkaan.
- * Lehden alanappi luetaan siksi tästä (js/ui.js tehtavaNapinTila).
+ * Lehden alanappi luettiin tästä (js/ui.js tehtavaNapinTila) kokeilun
+ * ajan; KORTIT POIS -linjaus (2.9.2026) palautti napin näkyviin, koska
+ * laattakysymykseen pääsee lehden tehtävänapista ja laatasta — piste on
+ * nyt kolmas ovi samaan huoneeseen, ei ainoa.
  *
- * UMPIKUJAN ESTO. Lehden kysymykseen vastataan kerran, joten VÄÄRIN
- * vastannut ei voi enää sytyttää pistettä siitä kysymyksestä. Vasta kun
- * KAIKKI kaupungin aarteen avaavat kysymykset on käytetty eikä yksikään
- * osunut (js/fokustehtavat.js fokusAarreVastattu), lehden alanappi
- * palaa — jottei yksi väärä vastaus jättäisi aarretta ikuisesti
- * tavoittamattomiin. Mitta on "kuunneltu", ei "osattu" — sama oppi
- * kuin minitehtävillä (js/game.js actionMinitehtava: vastataan kerran,
- * raha vain oikeasta).
+ * UMPIKUJAN ESTO — ERÄ 7 PURKI SEN JUURESTA (13.9.2026). Lehden
+ * kysymykseen vastataan kerran, joten VÄÄRIN vastannut ei voinut enää
+ * sytyttää pistettä siitä kysymyksestä, ja kun kaikki kaupungin
+ * avaajat oli käytetty (js/fokustehtavat.js fokusAarreVastattu), piste
+ * katosi kokonaan. Nyt aarteen avaa myös kaksi NOSTON minitehtävää
+ * (fokusAarrepisteAuki), joten umpikujaa ei ole: piste jää kartalle
+ * lukittuna ja aukeaa kartalta, ei lehdestä. Lehden oma alanappi on
+ * ennallaan (js/ui.js tehtavaNapinTila) eikä lue tätä.
  */
 export function fokusvirtaKohtaaminenPisteessa(ui, city) {
   if (FOKUSVIRTA_KORTIT) return false;
@@ -2339,7 +6787,16 @@ export function fokusvirtaKohtaaminenPisteessa(ui, city) {
   if (!fokusvirtaLukitseeLehden(ui, city)) return false;
   const paikka = data.kohtaamispiste?.laudat?.[ui.game?.pack?.id];
   if (!Number.isFinite(paikka?.x) || !Number.isFinite(paikka?.y)) return false;
-  return fokusAarreAvattu(ui, city) || !fokusAarreVastattu(ui, city);
+  /*
+   * ERÄ 7 (13.9.2026): AVAUSEHTO EI ENÄÄ PÄÄTÄ NÄKYMISESTÄ. Tässä luki
+   * `fokusAarreAvattu(ui, city) || !fokusAarreVastattu(ui, city)` —
+   * piste oli poissa, kunnes lehden kysymys ratkesi, ja katosi
+   * lopullisesti, jos kaikkiin avaajiin oli vastattu väärin. Nyt piste
+   * on kartalla myös lukittuna, ja umpikuja on siksi purettu ihan
+   * itsestään: kaksi nostotehtävää avaa aarteen silloinkin, kun lehden
+   * kysymykset on jo käytetty (fokusAarrepisteAuki).
+   */
+  return true;
 }
 
 /**
@@ -2355,52 +6812,70 @@ export function avaaFokusKohtaaminen(ui, city) {
   const data = fokusvirtaSisalto(ui, city);
   // Sähketehtävä kelpaa kohtaamisen sijaan (ks. PÖLLÖN SÄHKETEHTÄVÄ).
   if (!data?.kohtaaminen && !data?.sahketehtava) return false;
+  /*
+   * KORTIT POIS (omistaja 2.9.2026 ilta, ks. lipun kirjaus): pisteen
+   * napautus avaa laattakysymyksen SUORAAN — sama kutsu kuin lehden
+   * tehtävänapilla (js/ui.js arrival-yes) ja kuin kohtaamiskortin
+   * Kyllä-napilla ennen. Paikallisen kuva ja repliikki ovat
+   * laattakysymyksen omassa kortissa (js/visa.js), joten esittely ei
+   * jää kertomatta. Sähketehtävän vastauslomake on ainoa kortti, joka
+   * yhä piirretään: se on tehtävän pinta, ei esittely.
+   */
+  if (!data.sahketehtava) {
+    if (ui.busy) return false;
+    suljeFokusvirta(ui);
+    const pulmaOdottaa = ui.game.pendingPuzzle?.();
+    ui.doAction(() => ui.game.actionQuiz(pulmaOdottaa ? {} : { form: 'quiz' }));
+    return true;
+  }
+  // Livia palasi lennolta pelaajan ollessa poissa: napautus tuo aarteen.
+  const avain = sahkeAvain(ui, city);
+  if (ui.sahkePaluuOdottaa?.has(avain) && ui.game?.tokens?.has(city.id)) {
+    ui.sahkePaluuOdottaa.delete(avain);
+    suljeFokusvirta(ui);
+    sahkePaluu(ui, city, data);
+    return true;
+  }
   lataaTyyli();
   piirraKortti(ui, city, data, { vaihe: 'kohtaaminen' });
   return true;
 }
 
-/* ---------- pöllön vinkki lehden avautuessa ---------- */
+/* ---------- pulun vinkki lehden avautuessa ---------- */
 
 /**
- * MAHDOLLISIMMAN LYHYT VINKKI (Raamattu, KEVYT KULKU -KOKEILU: *"kun
- * kaupunkilehti AUKEAA, pöllö vinkkaa MAHDOLLISIMMAN LYHYESTI
- * minitehtävästä (vinkissä ruksi 'älä näytä jatkossa')"*).
+ * MAHDOLLISIMMAN LYHYT VINKKI — JA VAIN KERRAN (omistaja 7.9.2026,
+ * Raamattu PULUN UUSI RYTMI ATEENASSA: lehden avautuessa pulu sanoo
+ * *"Etsi lehdestä aarrekysymys."* — vain ENSIMMÄISELLÄ kerralla
+ * koskaan, ei enää missään kaupungissa sen jälkeen).
  *
- * Yksi lause, ei otsikkoa, ei jatkonappia: kupla katoaa napautuksesta
- * kuten pöllön kuplat aina. Ruksi kirjoittaa laitteen oman muistiavaimen
- * (js/ui-apurit.js lehtivinkkiPiilotettu) — sama try/catch-kaava kuin
- * kehittäjätilalla ja fokusmoodilla, eikä riviäkään pelitallennukseen:
- * tämä on lukijan asetus, ei pelitilanne.
+ * Yksi lause, ei otsikkoa, ei jatkonappia, EI RUKSIA: kupla katoaa
+ * napautuksesta kuten pöllön kuplat aina. Vanha "Älä näytä jatkossa"
+ * -ruksi (Raamatun KEVYT KULKU -KOKEILU, 24.8.2026) poistui samalla
+ * päätöksellä — kertaluontoinen opastus ei tarvitse asetusta.
+ * Kertalippu on Livian omien lippujen seurassa (js/livia.js
+ * livianLehtivinkkiOdottaa: laitelippu + istuntolippu).
  *
- * SANAMUOTO ON OMISTAJAN (26.8.2026) — ohjaava kehotus voittaa tässä
- * pöllön kuivan toteavuuden, koska kyse on opastuksesta eikä
- * repliikistä. Silminnäkijäheittoa EI ole tässä: sen kiintiö (kerran
- * per maa) menee aarrekuittauksiin, jotka ovat isompia hetkiä.
+ * TEKSTI ON KAANONIA JA ASUU js/livia.js:SSÄ. Se on pulun repliikki
+ * kuten avaus ja paljastus, se luetaan pulun äänellä (js/liviapuhe.js
+ * soitaLivianAani) ja tools/generoi-pulu.mjs äänittää sen samasta
+ * lähteestä — tämä moduuli on vain sen pinta.
  */
-const LEHTIVINKKI_TEKSTI = 'Etsi minitehtävä lehdestä ja ratkaise se, '
-  + 'niin saat vinkin aarteen paikasta kartalla.';
 /* Kupla tulee vasta hengähdyksen jälkeen (omistaja 26.8.2026). */
 const LEHTIVINKKI_VIIVE_MS = 1400;
-
-/** Vinkki näkyy kerran per saapuminen; avain on sama kuin virralla. */
-function vinkkiAvain(ui, city) {
-  return `${ui.game.pack.id}:${city.id}`;
-}
 
 /**
  * YHDEN LAUSEEN KUPLA PÖLLÖNAPISTA — kevyen kulun oma pikkupinta.
  *
- * Sama kupla palvelee kahta hetkeä: lehden avautuessa näytettävää
- * vinkkiä (`ruksi: true`, "Älä näytä jatkossa") ja tehtävän ratkettua
- * tulevaa kuittausta (`ruksi: false`). Kuittaus on kertaluontoinen
- * palaute pelaajan omasta teosta, joten sitä ei saa vaientaa asetuksella
- * — muuten palkinto jäisi kertomatta juuri niiltä, jotka ruksin joskus
- * painoivat.
+ * Sama kupla palvelee kahta hetkeä: lehden avautuessa sanottavaa
+ * vinkkiä ja tehtävän ratkettua tulevaa kuittausta. Kummassakaan ei
+ * ole enää ruksia eikä asetusta (omistaja 7.9.2026): vinkki sanotaan
+ * kerran koskaan ja kuittaus on kertaluontoinen palaute pelaajan
+ * omasta teosta.
  *
  * @returns {boolean} näkyikö kupla
  */
-function naytaPolloKupla(ui, teksti, { ruksi: ruksillinen = false } = {}) {
+function naytaPolloKupla(ui, teksti, { luokka = '' } = {}) {
   const nappi = polloNappi();
   // Ilman kelluvaa pöllöä kuplalla ei ole kärkeä eikä paikkaa; teksti
   // jää silloin väliin — se on vihje, ei pelin portti.
@@ -2409,11 +6884,10 @@ function naytaPolloKupla(ui, teksti, { ruksi: ruksillinen = false } = {}) {
   suljeFokusvirta(ui);
 
   const koti = nappi.parentNode ?? document.body;
-  const kupla = html('div', 'fokusvirta-kupla fokusvirta-vinkki');
+  const kupla = html('div', `fokusvirta-kupla fokusvirta-vinkki${luokka ? ` ${luokka}` : ''}`);
   kupla.setAttribute('role', 'note');
   kupla.setAttribute('aria-label', 'Livia vinkkaa');
   kupla.addEventListener('pointerdown', (tapahtuma) => {
-    if (tapahtuma.target?.closest?.('label, input')) return;
     // Sama nielu kuin ison kuplan sulussa: napautus loppuu vinkkiin
     // eikä valu kartalle sen alta.
     nielaiseSulkevaNapautus(tapahtuma);
@@ -2423,17 +6897,6 @@ function naytaPolloKupla(ui, teksti, { ruksi: ruksillinen = false } = {}) {
 
   const sisalto = html('div', 'fokusvirta-sisalto');
   sisalto.appendChild(html('p', 'fokusvirta-vinkkiteksti', teksti));
-  if (ruksillinen) {
-    const rivi = html('label', 'fokusvirta-vinkkiruksi');
-    const ruksi = document.createElement('input');
-    ruksi.type = 'checkbox';
-    ruksi.addEventListener('change', () => {
-      piilotaLehtivinkki(ruksi.checked);
-      if (ruksi.checked) suljeFokusvirta(ui);
-    });
-    rivi.append(ruksi, html('span', '', 'Älä näytä jatkossa'));
-    sisalto.appendChild(rivi);
-  }
   kupla.appendChild(sisalto);
   koti.appendChild(kupla);
   ui.fokusvirtaKortti = kupla;
@@ -2451,24 +6914,67 @@ function naytaPolloKupla(ui, teksti, { ruksi: ruksillinen = false } = {}) {
   return true;
 }
 
+/**
+ * SAMA KUPLAPAIKKA, MONTA KUPLAA PERÄKKÄIN (omistaja 7.9.2026).
+ *
+ * Virran oma kupla (.fokusvirta-vinkki) on YKSI solmu: uusi kupla
+ * korvaa edellisen samassa kohdassa. Kun repliikki on jaettu kupliksi
+ * (esim. Sofian `paluu`), ne tulevat siis peräkkäin samaan paikkaan
+ * kuplan lukuajan välein — ja jokainen soittaa oman äänitiedostonsa.
+ *
+ * @returns {boolean} näkyikö ensimmäinen kupla
+ */
+function polloKuplasarja(ui, city, kentta, kuplat, i = 0) {
+  const teksti = kuplat[i];
+  if (!teksti) return false;
+  if (!naytaPolloKupla(ui, teksti)) return false;
+  const aani = soitaLivianKaupunkiAani(ui, city?.id, kentta, { kupla: i, teksti });
+  if (i + 1 < kuplat.length) {
+    clearTimeout(ui.polloKuplasarjaAjastin);
+    // KUPLA ODOTTAA PUHEEN LOPPUUN (js/liviapuhe.js livianKuplanAjastin).
+    ui.polloKuplasarjaAjastin = livianKuplanAjastin(
+      livianKuplanLukuaika(teksti), aani,
+      () => {
+        // Pelaaja on voinut lähteä kaupungista: sarjan loppu kuuluu vain
+        // siihen käyntiin, jossa se alkoi.
+        if (ui.dead || ui.game?.cityOf?.()?.id !== city?.id) return;
+        polloKuplasarja(ui, city, kentta, kuplat, i + 1);
+      },
+      (id) => { ui.polloKuplasarjaAjastin = id; },
+    );
+  }
+  return true;
+}
+
+/**
+ * VINKKI KERRAN KOSKAAN (omistaja 7.9.2026).
+ *
+ * Portit järjestyksessä: kevyt kulku päällä, lehdessä on sisältöä,
+ * aarre on vielä löytymättä — ja vasta sitten kertalippu. Lippua ei
+ * kuluteta ennen kuin kupla oikeasti näkyy: pöllönappi voi olla
+ * piilossa, ja silloin vinkki kuuluu yhä ensi kerralle.
+ */
 export function fokusvirtaLehtivinkki(ui, city) {
   if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return false;
   if (!city || !fokusvirtaSisalto(ui, city)) return false;
   // Aarre jo löytynyt: lehti on vapaata tutkintaa eikä vinkattavaa ole.
   if (!fokusvirtaLukitseeLehden(ui, city)) return false;
-  if (lehtivinkkiPiilotettu()) return false;
-  ui.fokusvinkkiNaytetty ??= new Set();
-  const avain = vinkkiAvain(ui, city);
-  if (ui.fokusvinkkiNaytetty.has(avain)) return false;
+  if (!livianLehtivinkkiOdottaa()) return false;
   if (!polloNappi()) return false;
-  ui.fokusvinkkiNaytetty.add(avain);
   clearTimeout(ui.fokusvinkkiAjastin);
   ui.fokusvinkkiAjastin = setTimeout(() => {
     // Pöllö on voinut kadota (lehti kiinni, näkymä vaihtui) —
-    // myöhästynyt kupla ilman kärkeä jää silloin näyttämättä.
-    if (!ui.dead && polloNappi()) {
-      naytaPolloKupla(ui, LEHTIVINKKI_TEKSTI, { ruksi: true });
-    }
+    // myöhästynyt kupla ilman kärkeä jää silloin näyttämättä, eikä
+    // kertalippu kulu.
+    if (ui.dead || !polloNappi()) return;
+    if (!naytaPolloKupla(ui, LIVIAN_LEHTIVINKKI)) return;
+    merkitseLehtivinkkiNahdyksi();
+    // Avainsana kynällä ympyröitynä (js/ilme.js); ilman kirjastoa pelkkä lause.
+    korostaSana(ui.fokusvirtaKortti?.querySelector('.fokusvirta-vinkkiteksti'),
+      LIVIAN_LEHTIVINKIN_SANA, { tyyppi: 'circle', kesto: 700, tayte: [2, 4] });
+    // Vinkki on pulun repliikki kuten muutkin: sama soitin, sama
+    // kytkin, ja puuttuva tai vanhentunut äänite on hiljainen.
+    soitaLivianAani(ui, 'lehtivinkki', 0, { teksti: LIVIAN_LEHTIVINKKI });
   }, LEHTIVINKKI_VIIVE_MS);
   return true;
 }
@@ -2719,7 +7225,8 @@ export function fokusvirtaAarremerkinta(ui, city) {
   return {
     avain: `fokusaarre:${lippu.avain}`,
     paikkarivi: merkinta.paikkarivi ?? `Isoisän merkintä · ${city.name}`,
-    teksti: merkinta.teksti,
+    // Sama tilapäinen lyhennys kuin saapumismerkinnällä (11.9.2026).
+    ...lyhennettyMerkinta(merkinta.teksti),
     kuva: merkinta.kuva ?? null,
   };
 }

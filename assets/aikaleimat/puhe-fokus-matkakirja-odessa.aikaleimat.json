@@ -1,0 +1,147 @@
+{
+  "versio": 2,
+  "kaupunki": "odessa",
+  "teksti": "Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.",
+  "tekstiSha256": "9f81b01ee465e14b8a1f98d12212f83824c83362516cc1444300338d2937d61a",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-odessa.mp3",
+    "versio": 2,
+    "tavut": 286346,
+    "sha256": "009f2b189bfa054d955ebac3af33ab45bb198883b9c22fe3c9a05ae3bd08d517"
+  },
+  "kesto": 17800,
+  "sanat": [
+    {
+      "sana": "Odessan",
+      "alku": 180,
+      "loppu": 580
+    },
+    {
+      "sana": "taloihin",
+      "alku": 620,
+      "loppu": 1040
+    },
+    {
+      "sana": "sahattiin",
+      "alku": 1100,
+      "loppu": 1620
+    },
+    {
+      "sana": "kiveä",
+      "alku": 1680,
+      "loppu": 2040
+    },
+    {
+      "sana": "kaupungin",
+      "alku": 2100,
+      "loppu": 2580
+    },
+    {
+      "sana": "alta",
+      "alku": 2720,
+      "loppu": 3020
+    },
+    {
+      "sana": "Ylhäällä",
+      "alku": 4380,
+      "loppu": 4740
+    },
+    {
+      "sana": "nousivat",
+      "alku": 4780,
+      "loppu": 5220
+    },
+    {
+      "sana": "seinät",
+      "alku": 5280,
+      "loppu": 5700
+    },
+    {
+      "sana": "alhaalle",
+      "alku": 6340,
+      "loppu": 6760
+    },
+    {
+      "sana": "jäi",
+      "alku": 6820,
+      "loppu": 6960
+    },
+    {
+      "sana": "käytävien",
+      "alku": 7020,
+      "loppu": 7540
+    },
+    {
+      "sana": "verkosto",
+      "alku": 7600,
+      "loppu": 8280
+    },
+    {
+      "sana": "Louhoksessa",
+      "alku": 10220,
+      "loppu": 10840
+    },
+    {
+      "sana": "oppaani",
+      "alku": 10920,
+      "loppu": 11320
+    },
+    {
+      "sana": "sammutti",
+      "alku": 11380,
+      "loppu": 11800
+    },
+    {
+      "sana": "lampun",
+      "alku": 11840,
+      "loppu": 12180
+    },
+    {
+      "sana": "näyttääkseen",
+      "alku": 12220,
+      "loppu": 12900
+    },
+    {
+      "sana": "täydellisen",
+      "alku": 12940,
+      "loppu": 13520
+    },
+    {
+      "sana": "pimeyden",
+      "alku": 13580,
+      "loppu": 14080
+    },
+    {
+      "sana": "Minä",
+      "alku": 16040,
+      "loppu": 16260
+    },
+    {
+      "sana": "en",
+      "alku": 16300,
+      "loppu": 16379
+    },
+    {
+      "sana": "ollut",
+      "alku": 16440,
+      "loppu": 16640
+    },
+    {
+      "sana": "pyytänyt",
+      "alku": 16700,
+      "loppu": 17100
+    },
+    {
+      "sana": "todistetta",
+      "alku": 17160,
+      "loppu": 17800
+    }
+  ],
+  "lauseet": [
+    180,
+    4380,
+    10220,
+    16040
+  ],
+  "luotu": "2026-09-23T15:34:40.748Z"
+}

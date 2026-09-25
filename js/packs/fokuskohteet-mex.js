@@ -71,7 +71,7 @@ export const FOKUSKOHTEET_MEX = [
      */
     id: 'templo-mayor',
     nimi: 'Templo Mayor',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi temppeli rakennettiin seitsemän kertaa päällekkäin?',
@@ -105,26 +105,24 @@ export const FOKUSKOHTEET_MEX = [
      * nykypäivä: 21.2.1978 sähkölaitoksen kaivuumiehet osuivat runsaan
      * kahden metrin syvyydessä 3,25-metriseen kivikiekkoon, jonka
      * reliefi esittää Coyolxauhquia — ja se käynnisti koko kaivauksen.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-templo-mayor.webp',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-templo-mayor-loistoaika-v2.jpg',
       kadonnut: true,
-      selite: 'Templo Mayor oli Tenochtitlánin kaksoispyhäkkö: yksi '
-        + 'pyramidi, kaksi portaikkoa ja huipulla kaksi temppeliä, '
-        + 'Huitzilopochtlin ja Tlálocin. Juhlissa portaita nousivat '
-        + 'kulkueet, ja huipulla uhrattiin jumalille myös sotavankeja. '
-        + 'Pyramidin perustusten sisään haudattiin uhrikätköjä, joihin '
-        + 'ladottiin verolahjoja valtakunnan joka kolkasta: koralleja, '
-        + 'simpukoita sekä jaguaarien ja kotkien luita. '
-        + 'Espanjalaiset purkivat temppelin '
-        + 'vuonna 1521, ja paikan sijainti unohtui vuosisadoiksi. '
-        + 'Vuonna 1978 sähkötyömiehet osuivat kaivaessaan valtavaan '
-        + 'kivikiekkoon, ja siitä alkaneissa kaivauksissa löytyi yli '
-        + 'kaksisataa kätköä ja temppelin perustukset: ne ovat nyt '
-        + 'nähtävissä '
-        + 'katutason alapuolella Zócalon kulmassa katedraalin vieressä.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      lyhyt: 'Kukkakauppiaan tytär näkee kaksoispyhäkön ensi kertaa, jonka ovet kuuluvat kahdelle jumalalle.',
+      selite: 'Kuvituksen kukkakauppias pitää tytärtään hartioista, kun tämä '
+        + 'näkee kaksoispyhäkön ensimmäisen kerran. Tavalliset '
+        + 'kaupunkilaiset pääsevät pyhälle alueelle vain suurina '
+        + 'juhlapäivinä; lapsi puristaa kehäkukkia, haistaa kopaalisavun ja '
+        + 'yrittää muistaa, kumpi huipun ovista kuuluu sateen Tlálocille ja '
+        + 'kumpi sodan Huitzilopochtlille.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: INAH Museo del Templo Mayor — archaeological '
+        + 'zone, tarkistettu 5.9.2026.',
+      url: 'https://www.templomayor.inah.gob.mx/historia/zona-arqueologica-del-templo-mayor',
     },
   },
 ];

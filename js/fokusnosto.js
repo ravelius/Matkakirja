@@ -1,3 +1,4 @@
+import { merkitseLivianNosto } from './livia-tilanteet.js';
 /*
  * TÄKYNOSTO — kartan kohdemerkistä aukeava lunastuskortti.
  *
@@ -58,8 +59,8 @@
  * ── LUETUT LAITTEEN MUISTIIN ───────────────────────────────────────
  *
  * Luettu nosto merkitään laitteen muistiin (localStorage) — sama
- * try/catch-kaava kuin lehtivinkin ruksilla (js/ui-apurit.js
- * lehtivinkkiPiilotettu). Merkki EI muutu siitä: kohde pysyy kartalla
+ * try/catch-kaava kuin Livian kertalipuilla (js/livia.js
+ * LIVIA_LEHTIVINKKI_TALLE). Merkki EI muutu siitä: kohde pysyy kartalla
  * ja kortin saa auki uudelleen, kuten muillakin kohteilla. Muisti jää
  * dataksi mahdollista myöhempää käyttöä varten (esim. Livian
  * satunnainen vinkki lukemattomasta sisällöstä — Raamattu, YHTENÄINEN
@@ -72,15 +73,22 @@
  * NOSTO_/nosto-etuliitteellä.
  */
 import {
-  fokusmoodiPaalla, html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu,
+  arvonimenPaikkaMaalle, fokusmoodiPaalla, html, jaaKappaleiksi,
+  kuunteleSulkevaNapautus, linssiEstaa, nielaiseSulkevaNapautus,
+  polloNimilappu, TOAST_MS, lehtipalstaKotelo,
 } from './ui-apurit.js';
-import { asetaKuva } from './media.js';
+import { asetaKuva, assetOsoite } from './media.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
+import { piirraKuvasarja } from './kuvasarja.js';
+import { lisaaHavainnekuvaMerkki } from './havainnekuva.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import {
-  asetaKohdeNostot, avaaFokuskohde, avaaKohdeSuurennos, rekisteroiLisakohteet,
-  suljeFokuskohde, suljeKohdeSuurennos,
+  asetaKohdeNostot, asetaKohdeVisa, avaaFokuskohde, avaaKohdeSuurennos, rekisteroiLisakohteet,
+  rekisteroiMaanKohteet, suljeFokuskohde, suljeKohdeSuurennos,
 } from './fokuskohteet.js';
 import { NOSTOSYM_TYYPIT, nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
+import { piirraVisanVastaukset } from './fokustehtavat.js';
+import { nostokuvaAloita } from './nostokuva.js';
 import { fokuskohteet } from './packs/fokuskohteet-grc.js';
 /*
  * NELJÄN MAAN POOLIT ASUVAT NYT KAUPUNKIEN OMISSA PAKETEISSA (v1301).
@@ -127,6 +135,10 @@ import { fokusvirtaSisalto } from './fokusvirta.js';
 import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
+import { lisaaLukijanappi } from './lukija.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
+/** Kuvan tekijä- tai lisenssirivi (ei tekstin lähde). */
+const KUVAN_TEKIJARIVI = /Wikimedia Commons|Valokuva:|havainnekuva|\bCC[ -](?:BY|0)|public domain/i;
 
 /* ==================== POOLI ==================== */
 
@@ -196,34 +208,102 @@ import { sfx } from './sound.js';
  * Lauta, jota rivillä ei ole, saa pisteensä kaupunkiin (nostonPaikka):
  * väärään paikkaan ankkuroitu merkki olisi pahempi kuin maan osoite.
  */
-const NOSTO_MAAT = {
+export const NOSTO_MAAT = {
   GRC: [
     {
+      /*
+       * ── KOLME SCHLIEMANN-KORTTIA, KOLME PAIKKAA (1.9.2026) ────────
+       *
+       * Nostojen sisältöaudit löysi pelistä kolme Schliemann-korttia,
+       * joista KAKSI istui samassa osoitteessa: tämä nosto ja Ateenan
+       * syvennystäky `schliemann` (js/packs/fokusvirta-ateena.js +
+       * js/packs/syvennyspaikat.js) olivat molemmat Iliou
+       * Melathronissa, 0,1 laudayksikön päässä toisistaan. Yhtään
+       * korttia ei poistettu; TYÖNJAKO ON NYT PAIKAN MUKAINEN:
+       *
+       *   TUR `schliemann`  = KAIVAUS. Hisarlıkin kumpu ja se, että
+       *     hän kaivoi läpi juuri sen Troijan, jota etsi. Piirtyy
+       *     Troijan kohteesta (`kohde: 'troija'`).
+       *   GRC syvennys `schliemann` = TALO. Iliou Melathron, jonka hän
+       *     rakennutti Ateenaan, ja sen friisi, jossa hän kaivaa
+       *     ikuisesti. Ei muutettu.
+       *   tämä nosto = SEURAUKSET. Valokuva, keksitty huivitarina ja
+       *     se, mitä paljastumisesta seurasi — päätepisteenään Mykene,
+       *     jonne hän siirtyi ja jonne Kreikan arkeologinen seura
+       *     lähetti hänen peräänsä valvojan. Piste siirtyi siksi
+       *     Ateenasta Mykeneen: kortti kertoo nyt sen kohtauksen,
+       *     joka tapahtui siellä, ja Mykene on samalla maan kartalla
+       *     kokonaan uusi nimi.
+       *
+       * TEKSTIIN LISÄTTY KÄÄNNE ON LÄHTEEN OMA eikä uutta aineistoa:
+       * en-Wikipedia "Heinrich Schliemann" (osio Troijan kaivauksista)
+       * ja "Priam's Treasure" (osiot "Art collection" ja
+       * "Authenticity") kertovat, että Schliemann myönsi keksineensä
+       * tarinan huivissa kannetusta aarteesta ja että Sofia oli
+       * löytöhetkellä Ateenassa oman perheensä luona isänsä kuoltua.
+       * Sama osio kertoo myös Mykenen valvojasta ja siitä, että aarre
+       * on Puškin-museossa, joka myönsi omistavansa sen vasta 1994.
+       *
+       * IKÄSOPIVUUS (13+, Perustuslaki): Sofian tarinasta on yhä
+       * jätetty pois aineistossa erikseen hylätty avioliittokulma.
+       */
       id: 'sofia-korut',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen (omistajan
-      // lisätilaus 28.8.2026 ilta). Otsikko on lause, nimiö on nimi.
-      nimio: 'Helenan korut',
+      // lisätilaus 28.8.2026 ilta). Otsikko on lause, nimiö on nimi —
+      // ja nimen on oltava sen paikan nimi, jossa merkki seisoo.
+      nimio: 'Mykene',
       otsikko: 'Valokuva paljasti aarrevarkauden — rouva poseerasi Troijan koruissa',
-      teksti: 'Heinrich Schliemann salakuljetti Priamoksen aarteen ulos '
-        + 'Ottomaanien valtakunnasta. Viranomaisille asia paljastui vasta, kun '
-        + 'hänen vaimonsa Sofia esiintyi julkisesti yllään "Helenan korut" — '
-        + 'kultainen otsapanta ja kaulakorut.\n\n'
-        + 'Kaivausta valvomaan määrätty ottomaanivirkamies Amin Effendi sai '
-        + 'vankeustuomion, Schliemannin kaivauslupa peruttiin ja Ottomaanien '
-        + 'hallitus haastoi hänet oikeuteen osuudestaan kultaan.',
-      lahde: 'en-Wikipedia "Priam\'s Treasure", osio "Art collection" '
-        + '(tarkistettu 25.8.2026).',
       /*
-       * Iliou Melathron, Schliemannin oma talo Ateenassa (23,7342 E /
-       * 37,9814 N — en-Wikipedia "Iliou Melathron"). Juuri siitä talosta
-       * Sofia lähti korut yllään, ja se on kadun päässä siitä
-       * kansallismuseosta, jonne Troijan löydöt lopulta päätyivät.
+       * LÖÖPPITAITTO, PILOTTI (omistaja 3.9.2026): tämä nosto taitetaan
+       * lehden muotoon — nimiö, päiväysrivi, pääotsikko isolla, ingressi,
+       * kuva, leipäteksti anfangilla ja kahdessa palstassa (js/fokusnosto.js
+       * piirraNostonSisus, css/fokusnosto.css osio 9). Kun pilotti on
+       * hyväksytty, sama taitto monistetaan muihin skandaalinostoihin.
+       * Ingressi on Fablen kirjoittama tiivistys jutun omista faktoista.
+       */
+      taitto: 'lehti',
+      paivays: 'Ateena · Mykene · 1873–1876',
+      ingressi: 'Kun Sofia Schliemann asettui valokuvaajan eteen kullassa, '
+        + 'jonka piti olla yhä Troijan maassa, Ottomaanien viranomaiset '
+        + 'tiesivät vihdoin, minne Priamoksen aarre oli kadonnut.',
+      teksti: 'Heinrich Schliemann salakuljetti Priamoksen aarteen ulos '
+        + 'Ottomaanien valtakunnasta Kreikkaan. Viranomaisille asia '
+        + 'paljastui vasta, kun hänen vaimonsa Sofia esiintyi julkisesti '
+        + 'yllään "Helenan korut" — kultainen otsapanta ja kaulakorut. '
+        + 'Tarinan kuuluisin kohta on silti keksitty: Schliemann kertoi '
+        + 'yhä uudelleen, että Sofia oli kantanut kullan pois '
+        + 'kaivaukselta huivissaan, ja myönsi myöhemmin sepittäneensä '
+        + 'sen. Löytöhetkellä Sofia oli Ateenassa oman perheensä luona, '
+        + 'isänsä kuoleman takia.\n\n'
+        + 'Seuraukset osuivat muihin. Kaivausta valvomaan määrätty '
+        + 'ottomaanivirkamies Amin Effendi sai vankeustuomion, '
+        + 'Schliemannin kaivauslupa peruttiin ja Ottomaanien hallitus '
+        + 'haastoi hänet oikeuteen osuudestaan kultaan. Schliemann '
+        + 'siirtyi Mykeneen — ja Kreikan arkeologinen seura lähetti '
+        + 'hänen peräänsä oman miehensä valvomaan, mitä maasta nousee. '
+        + 'Aarre itse on nykyään Moskovassa Puškin-museossa, joka '
+        + 'myönsi omistavansa sen vasta vuonna 1994.',
+      lahde: 'en-Wikipedia "Priam\'s Treasure", osiot "Art collection" ja '
+        + '"Authenticity", sekä "Heinrich Schliemann", osio Troijan '
+        + 'kaivauksista (tarkistettu 1.9.2026); pisteen paikka '
+        + 'en-Wikipedia "Mycenae", prop=coordinates (1.9.2026).',
+      /*
+       * 37,73027778 N / 22,7575 E — en-Wikipedia "Mycenae",
+       * prop=coordinates (haettu 1.9.2026). Piste on kortin oman
+       * loppukäänteen paikka: sinne Schliemann siirtyi, ja sinne
+       * Kreikan arkeologinen seura lähetti valvojansa. Aiempi piste
+       * oli Iliou Melathron (23,7342 E / 37,9814 N), joka on Ateenan
+       * syvennystäyn oma osoite — kaksi merkkiä samassa kohdassa.
+       *
+       * Piste on Kreikan fokuslehden ikkunassa (lat 34,4–41,95,
+       * tools/fokuskartta/maat.mjs GRC). Sama kaava ja samat vakiot
+       * kuin muillakin nostoilla, ks. tiedoston alku, PAIKKA LAUDALLA.
        */
       paikka: {
-        nimi: 'Ateena',
+        nimi: 'Mykene',
         laudat: {
-          maailmankartta: { x: 6624.5, y: 1881.6 },
-          europe: { x: 666.9, y: 894.7 },
+          maailmankartta: { x: 6591.9, y: 1891.3 },
+          europe: { x: 648.1, y: 901.3 },
         },
       },
       kuva: {
@@ -629,7 +709,7 @@ function nostoMaanPooli(ui, city) {
  * ajetaan siksi kummallekin lähteelle. Valmis `teksti` voittaa yhä,
  * joten Kreikan rivit kulkevat läpi koskemattomina.
  */
-function nostoLevitaLunastus(pooli) {
+export function nostoLevitaLunastus(pooli) {
   return pooli.map((n) => (n.teksti ? n : { ...n, teksti: nostonLunastusteksti(n.lunastus) }));
 }
 
@@ -706,6 +786,25 @@ function nostoMerkinKentat(nosto, paikka) {
     nimio: nosto.nimio ?? paikka.nimi ?? null,
     tyyppi: 'nosto',
     symboli: NOSTOSYM_TYYPIT.has(nosto.symboli) ? nosto.symboli : 'huuto',
+    // Kaupunkinostojen katto ei koske kaupungin ulkopuolista täkyä
+    // (js/fokuskohteet.js, osio KATTOVAPAA).
+    ...(nosto.kattoVapaa ? { kattoVapaa: true } : {}),
+    /*
+     * LÄHIZOOMIPORTTI (js/pallolauta/nostot.js merkkiPortti, v1867).
+     * Kenttä luetaan merkkiriviltä eikä nostosta, joten se on
+     * vietävä läpi tässä — muuten `lahi: true` jäisi datan omaksi
+     * tiedoksi eikä portti näkisi sitä lainkaan. Sama kenttä kulkee
+     * KOHDE_MAAT-riveillä suoraan, koska ne OVAT kohdeolioita.
+     */
+    ...(nosto.lahi ? { lahi: true } : {}),
+    /*
+     * NOSTON TASO 1|2|3 (Sisältökirjuri 20.9.2026, maalehtinostot-fra
+     * `taso: 1`): kulkee merkkiriville kuten `lahi`, jotta poltto
+     * (tools/fokuskartta/nostot.mjs `r.kohde?.taso`) ja elävä kerros
+     * näkevät saman tason. Ilman tätä Versailles'n peilisali jäi
+     * vedoksessa kakkostasolle (docs/raportit/poltto-koe-20260920.md).
+     */
+    ...(nosto.taso ? { taso: Number(nosto.taso) } : {}),
   };
 }
 
@@ -771,14 +870,6 @@ function nostoLisakohteet(ui) {
         // tiivisteen syötettä, eivätkä ne saa erota kahdessa polussa.
         ...nostoMerkinKentat(nosto, paikka),
         avaa: (kaytto) => avaaNosto(kaytto ?? ui, nosto),
-        // Osio yhdistetylle lehdelle — sama sopimus ja sama perustelu
-        // kuin syvennystarinalla (js/syvennys.js, js/fokusryhmat.js).
-        // Luetuksi merkintä tehdään myös osiona, koska tarina on siinä
-        // luettavissa aivan kuten omassa kortissaan.
-        osio: (kaytto, sailio) => {
-          nostoMerkitseLuetuksi(nosto.id);
-          piirraNostonSisus(kaytto ?? ui, sailio, nosto);
-        },
       },
       paikka: { x: paikka.x, y: paikka.y },
     });
@@ -802,10 +893,40 @@ function nostoKohteelle(ui, kohdeId) {
  * tiedoston alku); kortti aukeaa aina, myös luettuna.
  */
 function avaaNosto(ui, nosto) {
-  if (!nosto) return;
+  if (!nosto) return false;
+  /*
+   * LINSSIN PORTTI (omistaja 4.9.2026: *"pitää kaikki muu blokata …
+   * kun linssi alkaa"*): kortti ei nouse tummennetun kartan päälle,
+   * eikä paperi kahahda — napautus jää siihen. Sama portti kuin
+   * kohdekortilla (js/ui-apurit.js linssiEstaa).
+   */
+  if (linssiEstaa()) return false;
   sfx.play('paper');
   nostoMerkitseLuetuksi(nosto.id);
-  avaaNostonKortti(ui, nosto);
+  return avaaNostonKortti(ui, nosto);
+}
+
+/**
+ * NOSTON KORTTI AUKI TUNNUKSESTA — sama polku kuin kartan merkistä.
+ *
+ * Kartan merkki, kohteen tietoruudun leikekirjanappi ja tämä päätyvät
+ * kaikki `avaaNosto`on; ero on vain siinä, MISTÄ nosto löydetään.
+ * Tunnus riittää, koska poolissa ne ovat yksikäsitteisiä
+ * (tests/nostot-kartalla.test.mjs).
+ *
+ * MIKSI TÄMÄ ON OLEMASSA (karttauudistuksen erä 6). Nostolla ei aina
+ * OLE kartalla merkkiä: kaupunkilehden kohdekartalla asuvat nostot
+ * karsitaan pääkartalta (js/fokuskohteet.js karsiKaupunkikartanNostot,
+ * omistajan sääntö 2.9.2026), ja Pariisin koko pooli on sellainen.
+ * Kortin sisus on silti sama komponentti, ja erän 6 minikysymyksen
+ * savuke (tools/savukkeet/savuke-nostovisa.mjs) ajaa sen tästä —
+ * merkin napautusta mittaa oma vartionsa (savuke-pallo-nostolaput).
+ *
+ * @returns {boolean} aukesiko kortti
+ */
+export function avaaNostonTunnuksella(ui, nostoId) {
+  const nosto = nostoPooli(ui).find((n) => n.id === nostoId) ?? null;
+  return avaaNosto(ui, nosto);
 }
 
 /* ==================== LUNASTUSKORTTI ==================== */
@@ -832,21 +953,100 @@ function avaaNosto(ui, nosto) {
  * osiona, koska se palaa tyhjentäneenä eikä ui.fokusnostoKortti ole
  * silloin asetettu.
  */
-function piirraNostonSisus(ui, sisalto, nosto) {
+/** Kortin taitto: 'lehti' = lööppitaitto (osio 9), muuten oletuskortti. */
+export function nostonTaitto(nosto) {
+  return nosto?.taitto === 'lehti' ? 'lehti' : 'kortti';
+}
+
+/**
+ * @param {Element|null} [valmisKuva] KUVA EDELLÄ -AVAUKSEN valmis
+ *   kuvakehys (js/nostokuva.js): `undefined` piirtää kuvan kuten ennen,
+ *   elementti sijoittaa juuri sen kehyksen (sama kuva, sama elementti,
+ *   ei uutta latausta), ja `null` jättää kuvan pois — se on peruttu
+ *   kuvaesittely, jonka kuva ei latautunut.
+ */
+function piirraNostonSisus(ui, sisalto, nosto, valmisKuva) {
   nostoLataaTyyli();
-  sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko', nosto.otsikko));
-  if (nosto.kuva) piirraNostonKuva(ui, sisalto, nosto.kuva);
-  const teksti = html('div', 'fokusnosto-teksti');
+  const looppi = nostonTaitto(nosto) === 'lehti';
+  if (looppi) {
+    /*
+     * LÖÖPPITAITTO (omistaja 3.9.2026, pilotti GRC sofia-korut): nimiö,
+     * päiväysrivi kaksoisviivoin, pääotsikko isolla ja ingressi ennen
+     * kuvaa — sama muoto kuin kaupunkilehden etusivulla mutta kortin
+     * mitassa (css/fokusnosto.css osio 9). Datassa `taitto: 'lehti'`,
+     * `ingressi` ja `paivays`; ilman lippua kortti on ennallaan.
+     */
+    // Nimiö "Lisälehti" (omistaja 3.9.2026 kortilla): 1800-luvulla
+    // skandaaliuutinen tuli lisälehtenä varsinaisen numeron väliin;
+    // "lööppi" on 1900-luvun sana ja nimeäisi formaatin, ei lehteä.
+    sisalto.appendChild(html('p', 'looppi-nimio', 'Lisälehti'));
+    const paivays = nosto.paivays ?? [nosto.paikka?.nimi, nosto.vuosi].filter(Boolean).join(' · ');
+    if (paivays) sisalto.appendChild(html('p', 'looppi-paivays', paivays));
+    sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko looppi-otsikko', nosto.otsikko));
+    if (nosto.ingressi) sisalto.appendChild(html('p', 'looppi-ingressi', nosto.ingressi));
+  } else {
+    sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko', nosto.otsikko));
+  }
+  /*
+   * MEDIANAPIT OTSIKON ALLE, ENNEN KUVAA — sama paikka kuin lehden
+   * nostossa, jossa ne ovat otsikkorivillä (js/maalehti.js). Kortilla
+   * otsikko on oma rivinsä, joten napit saavat rivin heti sen alle.
+   */
+  piirraNostonMedia(ui, sisalto, nosto);
+
+  /*
+   * KAKSIPALSTATAITTO ≥ 1100 PX (omistaja 21.9.2026, css/fokusnosto.css
+   * osio 13): kuva ja sen kuvateksti KUVAPALSTAAN (vasemmalle, entinen
+   * pari koskemattomana — kuvateksti on kuvan ALLA, ei sen vierellä),
+   * kaikki muu TEKSTIPALSTAAN (oikealle). Kaksi ERILLISTÄ koteloa eikä
+   * yhteinen grid-rivi: kokeiltu aiemmin `display: contents` -kikalla
+   * (kuvateksti irti kuvasta suoraan palstaan 2), mutta silloin
+   * gridin rivikorkeus periytyi kuvan korkeudesta myös tekstipalstalle
+   * — kuvateksti jäi ylälaitaan ja leipäteksti valahti kuvan
+   * alareunan tasalle, tyhjä kaista väliin (omistajan hylkäys 21.9.2026,
+   * kaappaus nosto-1400.png). Kaksi omaa koteloa (flex, align-items:
+   * flex-start) pitävät palstat toisistaan riippumattomina: kumpikin
+   * alkaa yhtä korkealta eikä kummankaan korkeus periydy toisesta.
+   *
+   * ILMAN KUVAA EI KOTELOIDA (alla `kuvapalsta.childElementCount`):
+   * tekstipalstan lapset liitetään silloin suoraan `sisalto`iin kuten
+   * ennen tätä ominaisuutta — sama DOM-muoto kuin kuvattomalla nostolla
+   * aina, riippumatta ruudun leveydestä.
+   */
+  const kuvapalsta = html('div', 'fokusnosto-kuvapalsta');
+  const tekstipalsta = html('div', 'fokusnosto-tekstipalsta');
+  piirraNostonKuvat(ui, kuvapalsta, nosto, valmisKuva);
+
+  const teksti = html('div', looppi ? 'fokusnosto-teksti looppi-leipa' : 'fokusnosto-teksti');
   for (const kappale of jaaKappaleiksi(nosto.teksti)) {
     teksti.appendChild(html('p', '', kappale));
   }
-  sisalto.appendChild(teksti);
-  if (nosto.valokuva) piirraNostonValokuva(ui, sisalto, nosto.valokuva);
-  if (nosto.lahde) sisalto.appendChild(html('p', 'fokusnosto-lahde', nosto.lahde));
+  // Pitkä teksti lehtipalstoihin (ui-apurit lehtipalstaKotelo) — paitsi
+  // lööpissä, jolla on omat palstansa (.looppi-leipa, osio 9).
+  tekstipalsta.appendChild(looppi ? teksti : lehtipalstaKotelo(teksti, nosto.teksti));
+  if (nosto.valokuva) piirraNostonValokuva(ui, tekstipalsta, nosto.valokuva);
+  /*
+   * KORTIN LÄHDERIVI POIS (omistaja 20.9.2026, kaappaus nosto-lahderivi-
+   * pois-v1980.webp: *"Maalehden sivu 'ruoka', nosto '…' (js/packs/
+   * maa-kategoriat.js FRA, pelin omaa tarkistettua aineistoa). Teksti ja
+   * kuva luetaan lehdestä ajon aikana…"* on pelin sisäistä
+   * työpolkutekstiä, ei pelaajan lukemista). Fablen päätös: kortin
+   * alaosan lähderivi pois KAIKISTA nostotyypeistä (myös js/elaintaky.js,
+   * js/tiedeliite.js). `lahde`-kenttä säilyy datassa tarkistuksen
+   * kirjanpitona (tests/nostolahteet.test.mjs, tests/tyopolut.test.mjs).
+   *
+   * KUVAN TEKIJÄRIVI SÄILYY (omistaja 19.9.2026 klo 19.04): lehden
+   * nostoissa `lahde` voi olla kuvan tekijä- ja lisenssirivi, ja
+   * lisenssi vaatii sen näkyviin — se ladotaan kuvalähteenä
+   * (kortinKuvalahde, suurennoksessa), ei tekstin lähderivinä.
+   */
+  if (nosto.lahde && KUVAN_TEKIJARIVI.test(nosto.lahde) && Boolean(nosto.kuva || nosto.tiedosto)) {
+    tekstipalsta.appendChild(kortinKuvalahde(html('p', 'fokusnosto-lahde'), nosto.lahde, nosto));
+  }
   // Karttaliite tulee jutun JÄLKEEN, myös lähderivin jälkeen: se ei ole
   // jutun kuvitusta vaan erillinen arkki jutun välissä (ks.
   // piirraNostonKarttaliite).
-  if (nosto.kartta) piirraNostonKarttaliite(ui, sisalto, nosto.kartta);
+  if (nosto.kartta) piirraNostonKarttaliite(ui, tekstipalsta, nosto.kartta);
 
   /*
    * KOHDENAPPI, KUN KARTALLA ON SAMA PAIKKA. Nosto *"houkuttelee
@@ -855,6 +1055,16 @@ function piirraNostonSisus(ui, sisalto, nosto) {
    * pinnalla. Kortti sulkeutuu samalla: kaksi korttia päällekkäin olisi
    * juuri sitä raskautta, jota kevyt kulku purkaa.
    */
+  /*
+   * MINIKYSYMYS ON JUTUN VIIMEINEN OSA, MUTTA EI KORTIN VIIMEINEN RIVI
+   * (karttauudistuksen erä 6). Sen jälkeen tulevat vain kohdenappi ja
+   * pulun valmiit kysymykset, ja NE MOLEMMAT SULKEVAT KORTIN — kysymys
+   * niiden alapuolella jäisi puolelta pelaajalta vastaamatta, koska
+   * kortti ehtisi kadota. Järjestys on siis: juttu, lähde, karttaliite,
+   * kysymys, ja vasta sitten ne napit, joista lähdetään pois.
+   */
+  piirraNostonVisa(ui, tekstipalsta, nosto);
+
   const kohde = nostonKarttakohde(ui, nosto);
   if (kohde) {
     const nappi = html('button', 'fokusnosto-kohdenappi', `Katso ${kohde.nimi} kartalla`);
@@ -863,18 +1073,54 @@ function piirraNostonSisus(ui, sisalto, nosto) {
       suljeNostonKortti(ui);
       avaaFokuskohde(ui, kohde);
     });
-    sisalto.appendChild(nappi);
+    tekstipalsta.appendChild(nappi);
   }
 
-  piirraNostonKysymykset(ui, sisalto, nosto);
+  piirraNostonKysymykset(ui, tekstipalsta, nosto);
+
+  if (kuvapalsta.childElementCount) {
+    const rivi = html('div', 'fokusnosto-rivi');
+    rivi.append(kuvapalsta, tekstipalsta);
+    sisalto.appendChild(rivi);
+  } else {
+    // Kuvaton nosto: sama DOM-muoto kuin ennen tätä ominaisuutta.
+    while (tekstipalsta.firstChild) sisalto.appendChild(tekstipalsta.firstChild);
+  }
+}
+
+/*
+ * PYSTYKUVASSA KUVAPALSTA KAPEAMPI (omistaja 21.9.2026, nostokortin
+ * kaksipalstataitto ≥ 1100 px, css/fokusnosto.css): CSS ei tiedä kuvan
+ * omaa muotosuhdetta, joten se pieni tieto tuodaan luokkana. `.fokusnosto-
+ * pysty` kortilla kaventaa kuvapalstaa (ks. tyylitiedosto); kortti ilman
+ * luokkaa saa oletuksen (vaakakuva, ~58 %).
+ *
+ * SEURAA KUVAA KOKO SEN ELINKAAREN (myös galleria): sama <img> vaihtaa
+ * src:ää selauksessa (js/kuvasarja.js), ja jokainen vaihto laukaisee
+ * uuden 'load'-tapahtuman — luokka päivittyy siis kuvan mukana, jos
+ * sarjassa on sekä pysty- että vaakakuvia.
+ */
+function nostoSeuraaKuvanSuuntaa(kortti, kehys) {
+  const img = kehys?.querySelector?.('img') ?? null;
+  if (!img) return;
+  const paivita = () => {
+    if (!img.naturalWidth || !img.naturalHeight) return;
+    kortti.classList.toggle('fokusnosto-pysty', img.naturalHeight > img.naturalWidth);
+  };
+  if (img.complete) paivita();
+  img.addEventListener('load', paivita);
 }
 
 function avaaNostonKortti(ui, nosto) {
+  // Sama portti kuin avaaNostossa: kortin voi avata muualtakin
+  // (kohdekortin nappi), eikä linssin päälle nouse mitään.
+  if (linssiEstaa()) return false;
   nostoLataaTyyli();
   suljeNostonKortti(ui);
 
   const kerros = html('div', 'fokusnosto-kerros');
   const kortti = html('div', 'fokusnosto-kortti');
+  if (nostonTaitto(nosto) === 'lehti') kortti.classList.add('fokusnosto-looppi');
   kortti.setAttribute('role', 'dialog');
   kortti.setAttribute('aria-modal', 'false');
   kortti.setAttribute('aria-label', nosto.otsikko);
@@ -889,14 +1135,53 @@ function avaaNostonKortti(ui, nosto) {
   // Ylärivi on kohdemallin yhteinen: aihesymboli ja luokan nimi —
   // sama rivi kuin kartan kohdekortissa ja eläintäyllä (YHTENÄINEN
   // KOHDEMALLI: erot ovat sisällön laajuus ja aihesymboli).
-  sisalto.appendChild(nostosymKortinYlarivi(
+  const ylarivi = () => nostosymKortinYlarivi(
     NOSTOSYM_TYYPIT.has(nosto.symboli) ? nosto.symboli : 'huuto', 'fokusnosto-ylarivi',
-  ));
-  piirraNostonSisus(ui, sisalto, nosto);
-
+  );
+  const latoNosto = (kotelo, kuvakehys) => {
+    kotelo.appendChild(ylarivi());
+    piirraNostonSisus(ui, kotelo, nosto, kuvakehys);
+  };
   kortti.appendChild(sisalto);
   kerros.appendChild(kortti);
+  merkitseLivianNosto(kerros, nosto);
+  /*
+   * KERROS DOMIIN ENNEN KUVAESITTELYÄ: js/nostokuva.js mittaa kortin
+   * ja kuvan oikeista ruutulaatikoista, eikä irrallisella elementillä
+   * ole laatikkoa lainkaan.
+   */
   document.body.appendChild(kerros);
+  /*
+   * KUVA EDELLÄ (omistaja 11.9.2026, js/nostokuva.js). Kuvallinen
+   * nosto avautuu ensin pelkkänä isona kuvana, ja "Lisää" latoo
+   * varsinaisen noston SAMAN kuvan ympärille. Kuvaton nosto aukeaa
+   * suoraan tekstikorttina kuten ennenkin.
+   */
+  let kuvakehysRef = null;
+  const kaksivaihe = nosto.kuva ? nostokuvaAloita({
+    kortti,
+    sisalto,
+    kuva: nosto.kuva,
+    aseta: (img, leveys, onVirhe) => asetaNostonKuva(img, nosto.kuva, leveys, onVirhe),
+    // Suurennos näyttää sen kuvan, joka on kohdalla, ja selaa koko
+    // sarjaa (js/kuvasarja.js kirjoittaa valintansa kuvakehykseen).
+    avaaSuurennos: (nappi) => avaaKohdeSuurennos(
+      ui, kuvakehysRef?.nostokuvaKuva ?? nosto.kuva, () => nappi, 'fokusnostoZoom',
+      kuvakehysRef?.nostokuvaSarja?.(),
+    ),
+    latoNosto,
+    // KAKSIPALSTATAITTO ≥ 1100 px (css/fokusnosto.css osio 13): alle
+    // rajan kortti ei saa levetä kuvan ehdoilla ~760 px:ä leveämmäksi, ja
+    // rajan yläpuolella kuva kapenee palstaansa (omistaja 21.9.2026, ks.
+    // js/nostokuva.js NOSTOKUVA_LEVEA_RAJA).
+    kaksipalstaTaitto: true,
+    onKuvatta: () => kortti.classList.remove('fokusnosto-pysty'),
+  }) : null;
+  kuvakehysRef = kaksivaihe?.kehys ?? null;
+  if (!kaksivaihe) latoNosto(sisalto, undefined);
+  nostoSeuraaKuvanSuuntaa(kortti, kaksivaihe?.kehys ?? null);
+  // Kaiutin kortin otsikkoriville (js/lukija.js lisaaLukijanappi).
+  lisaaLukijanappi(kortti, { otsikko: 'Kuuntele kortti' });
 
   const kiinni = () => {
     sfx.play('paper');
@@ -908,15 +1193,21 @@ function avaaNostonKortti(ui, nosto) {
    * jotta tekstiä voi valita ja nappeja painaa.
    *
    * Sulkeva napautus jää tähän kerrokseen: kerros katoaa jo
-   * pointerdownissa, ja ilman nielua selain etsisi saman napautuksen
-   * click-kohteen vasta sormen noustessa — kartalta kerroksen alta
+   * sulkevasta napautuksesta, ja ilman nielua selain etsisi saman
+   * napautuksen click-kohteen vasta sen jälkeen — kartalta kerroksen alta
    * (sama vuoto kuin pöllön kuplissa, ks. ui-apurit
    * nielaiseSulkevaNapautus).
    */
-  kerros.addEventListener('pointerdown', (tapahtuma) => {
-    if (tapahtuma.target?.closest?.('.fokusnosto-kortti')) return;
-    nielaiseSulkevaNapautus(tapahtuma);
-    kiinni();
+  /*
+   * VETO EI OLE NAPAUTUS (omistaja 12.9.2026: *"Nosto häviää näkyvistä
+   * jos yrittää scrollata."*). Kortti sulkeutuu vasta, kun sormi nousee
+   * kynnyksen sisällä ja ajoissa — pystyveto kortin ulkopuolelta on
+   * vieritystä tai kartan panorointia, ei sulkemista (ui-apurit
+   * kuunteleSulkevaNapautus, kynnys RAAHAUKSEN_KYNNYS).
+   */
+  const puraNapautus = kuunteleSulkevaNapautus(kerros, {
+    kelpaa: (tapahtuma) => !tapahtuma.target?.closest?.('.fokusnosto-kortti'),
+    napautus: (tapahtuma) => { nielaiseSulkevaNapautus(tapahtuma); kiinni(); },
   });
   const nappain = (tapahtuma) => {
     if (tapahtuma.key !== 'Escape') return;
@@ -935,11 +1226,15 @@ function avaaNostonKortti(ui, nosto) {
 
   ui.fokusnostoKortti = {
     kerros,
-    purku: () => document.removeEventListener('keydown', nappain, true),
+    purku: () => {
+      document.removeEventListener('keydown', nappain, true);
+      puraNapautus();
+    },
   };
   void kerros.offsetWidth;
   kerros.classList.add('fokusnosto-kortti-auki');
   sfx.play('paper');
+  return true;
 }
 
 /**
@@ -979,7 +1274,12 @@ export function suljeNostonKortti(ui) {
   // kartan päälle, kun kortti sen alta katoaa.
   suljeKohdeSuurennos(ui, 'fokusnostoZoom');
   if (typeof document !== 'undefined') {
-    for (const vanha of document.querySelectorAll('.fokusnosto-kerros')) vanha.remove();
+    for (const vanha of document.querySelectorAll('.fokusnosto-kerros')) {
+      // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js): kortti
+      // katoaa DOMista, mutta resize-kuuntelija jäisi elämään.
+      vanha.querySelector('.nostokuva-kortti')?.nostokuvaPurku?.();
+      vanha.remove();
+    }
   }
 }
 
@@ -992,11 +1292,19 @@ export function suljeNostonKortti(ui) {
  * palvelimelle. `osoite` on repon oma generoitu havainnekuva
  * (assets/kartat/nostot/), jolla ei ole varareittiä: se joko on tai ei
  * ole, joten uusinta vain jättäisi kortille tyhjän kehyksen.
+ *
+ * VIETY ULOS 2.9.2026 (skandaalikortin kuvagalleria): skandaalilla on
+ * kuvalista, jossa on sekä havainnekuva (`osoite`) että Commons-kuvia
+ * (`tiedosto`), ja galleria vaihtaa kuvaa samaan img-elementtiin. Sama
+ * kahden lähteen sääntö kuuluu sinnekin — kopio olisi kaksi paikkaa,
+ * joissa varareitti voi erota.
  */
-function asetaNostonKuva(img, kuva, leveys, onVirhe) {
+export function asetaNostonKuva(img, kuva, leveys, onVirhe) {
   if (kuva.osoite) {
     img.addEventListener('error', () => onVirhe(), { once: true });
-    img.src = kuva.osoite;
+    // Repon polku tai ämpäriosoite sen mukaan, onko laji jo siirretty
+    // (js/media.js R2_ASSETIT) — kutsupaikka ei muutu siirrosta.
+    img.src = assetOsoite('nostot', kuva.osoite);
     return;
   }
   asetaKuva(img, valokuvaUrl(kuva.tiedosto, leveys),
@@ -1021,9 +1329,10 @@ export function piirraNostonKuva(
   const nappi = html('button', 'fokusnosto-kuvanappi');
   nappi.type = 'button';
   nappi.title = 'Katso kuva suurempana';
-  nappi.setAttribute('aria-label', `${kuva.selite ?? 'Kuva'} — avaa suurena`);
+  // Kortilla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+  nappi.setAttribute('aria-label', `${kuvatekstiLyhyt(kuva) || 'Kuva'} — avaa suurena`);
   const img = document.createElement('img');
-  img.alt = kuva.selite ?? '';
+  img.alt = kuvatekstiLyhyt(kuva);
   img.decoding = 'async';
   img.draggable = false;
   const piilota = () => { kehys.hidden = true; };
@@ -1038,8 +1347,8 @@ export function piirraNostonKuva(
   kehys.appendChild(nappi);
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');
   teksti.append(
-    html('span', 'fokusnosto-kuvaselite', kuva.selite ?? ''),
-    html('span', 'fokusnosto-kuvalahde', kuva.lahde ?? ''),
+    lisaaHavainnekuvaMerkki(html('span', 'fokusnosto-kuvaselite', kuvatekstiLyhyt(kuva)), kuva),
+    kortinKuvalahde(html('span', 'fokusnosto-kuvalahde'), kuva.lahde ?? '', kuva),
   );
   kehys.appendChild(teksti);
   kohde.appendChild(kehys);
@@ -1057,6 +1366,112 @@ export function piirraNostonKuva(
  */
 function piirraNostonValokuva(ui, kohde, kuva) {
   piirraNostonKuva(ui, kohde, kuva, 'fokusnosto-kuva fokusnosto-valokuva', NOSTO_MINI_PX * 3);
+}
+
+/* ==================== KUVASARJA: NOSTON GALLERIA ==================== */
+
+/**
+ * KORTIN KUVAT YHTENÄ LISTANA — `kuva` ensin, `galleria` perään.
+ *
+ * `galleria` on sama kenttä ja sama muoto kuin lehden nostolla
+ * (js/ui.js kaariNostoGalleria): lista kuvatietueita
+ * `{ tiedosto | osoite, lyhyt, selite, lahde }`. Kortti lukee sen nyt
+ * suoraan, joten lehden nostosta kartalle siirtyvä galleria ei enää
+ * tarvitse kiertotietä kohdekartan jutun `kuvat`-listaan
+ * (karttauudistuksen erä 10, avoin kohta 11.1).
+ *
+ * Kuvaton alkio karsitaan tässä, jottei laskuri lupaa kuvaa, jota ei
+ * ole — sama sääntö kuin skandaalikortilla (js/skandaalit.js
+ * skandaalinKuvat).
+ *
+ * @param {object} nosto noston tietue
+ * @returns {object[]} kuvat piirtojärjestyksessä
+ */
+export function nostonKuvat(nosto) {
+  const galleria = Array.isArray(nosto?.galleria) ? nosto.galleria : [];
+  return [nosto?.kuva, ...galleria].filter((kuva) => kuva?.osoite || kuva?.tiedosto);
+}
+
+/**
+ * SELATTAVA KUVASARJA KORTILLE — runko on js/kuvasarja.js (siirretty
+ * 20.9.2026, kun kohdekortti sai saman karusellin). Tämä kääre antaa
+ * nostojen omat riippuvuudet: lataaja (assetOsoite('nostot') /
+ * valokuvaUrl) ja suurennos (avaaKohdeSuurennos zoomavaimella).
+ * Skandaalikortti (js/skandaalit.js) kutsuu tätä samaa käärettä omilla
+ * luokillaan ja omalla zoomiavaimellaan, kuten ennenkin.
+ *
+ * @param {object} ui pelin ui
+ * @param {Element} sailio kortin sisus
+ * @param {object[]} kuvat sarjan kuvat (vähintään kaksi)
+ * @param {object} asetukset ks. js/kuvasarja.js piirraKuvasarja;
+ *   `zoomAvain` on suurennoksen ui-kenttä
+ */
+export function piirraNostonKuvasarja(ui, sailio, kuvat, { zoomAvain, ...asetukset }) {
+  return piirraKuvasarja(ui, sailio, kuvat, {
+    ...asetukset,
+    lataa: asetaNostonKuva,
+    avaaSuurennos: (u, kuva, ankkuri, sarja) => avaaKohdeSuurennos(u, kuva, ankkuri, zoomAvain, sarja),
+  });
+}
+
+/**
+ * NOSTON KUVAT KORTILLE: yksi kuva entiseen tapaan, useampi selailunuolin.
+ *
+ * Yhden kuvan reitti on tarkoituksella muuttumaton — sama kutsu, sama
+ * leveys ja sama zoomiavain kuin ennen `galleria`-tukea, joten kuvaton
+ * ja yhden kuvan nosto piirtyvät merkilleen kuten aiemmin.
+ */
+function piirraNostonKuvat(ui, sisalto, nosto, valmisKuva) {
+  const kaikki = nostonKuvat(nosto);
+  /*
+   * PERUTTU KUVAESITTELY VIE VAIN PÄÄKUVAN (js/nostokuva.js peru):
+   * sarjan loput kuvat ovat silti olemassa, joten ne ladotaan
+   * tavalliseen tapaan eikä koko sarja katoa yhden puuttuvan tiedoston
+   * takia.
+   */
+  const kuvat = valmisKuva === null ? kaikki.slice(1) : kaikki;
+  if (!kuvat.length) return;
+  if (kuvat.length === 1) {
+    if (valmisKuva) sisalto.appendChild(valmisKuva);
+    else piirraNostonKuva(ui, sisalto, kuvat[0]);
+    return;
+  }
+  piirraNostonKuvasarja(ui, sisalto, kuvat, {
+    otsikko: nosto.otsikko,
+    valmisKehys: valmisKuva ?? undefined,
+    kehysLuokka: 'fokusnosto-kuva nostosarja-kuva',
+    nuoliLuokka: 'nostosarja-kuvanuoli',
+    laskuriLuokka: 'nostosarja-kuvalaskuri',
+    leveys: NOSTO_KUVA_PX,
+    zoomAvain: 'fokusnostoZoom',
+  });
+}
+
+/**
+ * MUSIIKKI JA ÄÄNINÄYTE KORTILLE — SAMA TOTEUTUS KUIN LEHDESSÄ.
+ *
+ * Lehden nostolla on neljä mediakenttää: `aani` (vapaa ääninäyte),
+ * `musiikki` (Apple Music -linkki), `musiikkiNayte` (vapaasti
+ * lisensoitu musiikkinäyte) ja `esikuuntelu` (Applen 30 sekunnin
+ * esikatselu). Kortti kutsuu niille SAMAA apuria kuin lehden sivu
+ * (js/ui.js lisaaNostonNapit) — kopio ajautuisi erilleen
+ * ensimmäisellä muutoksella, ja juuri siitä syntyi erän 10 kiertotie
+ * (musiikkikenttäinen nosto jäi lehteen kaksoiskappaleeksi, koska
+ * kortilla ei ollut sille paikkaa; avoin kohta 11.1).
+ *
+ * RIVI SYNTYY VAIN JOS JOKIN KENTISTÄ ON. Kuvaton, musiikiton nosto
+ * on entisellään merkilleen: tyhjää riviä ei lisätä.
+ *
+ * APURI VOI PUUTTUA. Kortin voi avata myös ilman koko pelin ui:ta
+ * (laattageneraattori, testit), ja silloin mediakentät jäävät pois
+ * kuten kaikki muukin ui:n varassa oleva.
+ */
+function piirraNostonMedia(ui, sisalto, nosto) {
+  if (!nosto.aani && !nosto.musiikki && !nosto.musiikkiNayte && !nosto.esikuuntelu) return;
+  if (typeof ui?.lisaaNostonNapit !== 'function') return;
+  const rivi = html('div', 'fokusnosto-media');
+  ui.lisaaNostonNapit(rivi, nosto);
+  if (rivi.childElementCount) sisalto.appendChild(rivi);
 }
 
 /**
@@ -1088,10 +1503,11 @@ function piirraNostonKarttaliite(ui, kohde, kartta) {
   const nappi = html('button', 'fokusnosto-liitenappi');
   nappi.type = 'button';
   nappi.title = 'Avaa kartta suurena';
-  nappi.setAttribute('aria-label', `${kartta.selite ?? 'Kartta'} — avaa suurena`);
+  nappi.setAttribute('aria-label', `${kuvatekstiLyhyt(kartta) || 'Kartta'} — avaa suurena`);
   const img = document.createElement('img');
   img.className = 'fokusnosto-liitekuva';
-  img.alt = kartta.selite ?? '';
+  // Liitteessä lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+  img.alt = kuvatekstiLyhyt(kartta);
   img.decoding = 'async';
   img.draggable = false;
   asetaNostonKuva(img, kartta, NOSTO_KUVA_PX, () => liite.remove());
@@ -1111,12 +1527,141 @@ function piirraNostonKarttaliite(ui, kohde, kartta) {
   // samalla rivillä (v1040), jotta PD/CC-merkintä kulkee aina mukana.
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');
   teksti.append(
-    html('span', 'fokusnosto-kuvaselite', kartta.selite ?? ''),
-    html('span', 'fokusnosto-kuvalahde', kartta.lahde ?? ''),
+    html('span', 'fokusnosto-kuvaselite', kuvatekstiLyhyt(kartta)),
+    taytaLahderivi(html('span', 'fokusnosto-kuvalahde'), kartta.lahde ?? '', kartta),
   );
   kehys.appendChild(teksti);
   liite.appendChild(kehys);
   kohde.appendChild(liite);
+}
+
+/* ==================== MINIKYSYMYS NOSTON LOPUSSA ==================== */
+
+/**
+ * Palkkio oikeasta vastauksesta.
+ *
+ * 25 puntaa, Raamattu KARTTAUUDISTUKSEN PAATOKSET 1 (Fablen päätös
+ * 13.9.2026): PUOLET lehtitehtävän 50:stä, koska nostojen kysymyksiä
+ * tulee vastaan moninkertaisesti — jokainen kartan nosto voi kantaa
+ * yhden, kun lehdessä niitä on kaksi kaupunkia kohti.
+ */
+const NOSTON_VISA_PALKKIO = 25;
+
+/**
+ * KIRJANPIDON PSEUDOKAUPUNKI: avain on 'pakka:nosto:tunnus'.
+ *
+ * `actionMinitehtava` (js/game.js) muodostaa avaimen kolmesta osasta
+ * `pakka:kaupunki:aihe`, ja erä 6 ei saa muuttaa sen rajapintaa. Nosto
+ * EI OLE KAUPUNGIN OMAISUUTTA: sama täky näkyy maan jokaisessa
+ * kaupungissa (NOSTO_MAAT, nostoMaanPooli), joten kaupunkikohtainen
+ * avain maksaisi saman kysymyksen uudelleen Marseillessa. Kiinteä
+ * 'nosto' tekee avaimesta maailmanlaajuisesti yhden — ja koska
+ * maailmankartalla ei ole kaupunkia tällä tunnuksella, se ei voi
+ * törmätä lehtitehtävän avaimeen.
+ */
+const NOSTON_VISA_KAUPUNKI = 'nosto';
+
+/** Laatikon otsake ja vihjerivi, kun data ei anna omaansa. */
+const NOSTON_VISA_OTSAKE = 'LUKIJAN KYSYMYS';
+const NOSTON_VISA_VIHJE = `vastaus löytyy tästä jutusta · +${NOSTON_VISA_PALKKIO} puntaa`;
+
+/**
+ * Onko tässä nostossa kelvollinen minikysymys?
+ *
+ * DATAMALLI (erä 6): valinnainen kenttä `visa` fokusvirtapakan
+ * `takynostot`-rivillä, TÄSMÄLLEEN samassa muodossa kuin lehden
+ * tehtävällä (`lehtitehtavat[].visa`, js/packs/fokusvirta-*.js):
+ *
+ *     visa: { kysymys, vaihtoehdot: [...], oikea, fakta?, otsake?, vihje? }
+ *
+ * Yksi muoto kahteen paikkaan on tarkoituksellinen: tekstivetäjä
+ * kirjoittaa kysymyksen samalla kaavalla kummalle pinnalle tahansa
+ * eikä koodia tarvitse koskea. Puuttuva tai vajaa `visa` jättää
+ * kysymyksen pois hiljaa — vanha nosto on yhä kelvollinen nosto.
+ */
+function nostonVisa(nosto) {
+  const visa = nosto?.visa;
+  if (!visa || typeof visa.kysymys !== 'string' || !visa.kysymys.trim()) return null;
+  if (!Array.isArray(visa.vaihtoehdot) || visa.vaihtoehdot.length < 2) return null;
+  if (!Number.isInteger(visa.oikea) || visa.oikea < 0 || visa.oikea >= visa.vaihtoehdot.length) {
+    return null;
+  }
+  return visa;
+}
+
+/**
+ * MINIKYSYMYS KORTIN LOPPUUN (karttauudistuksen erä 6, suunnitelman
+ * luku 5.1; omistajan tilaus: *"keskimäärin joka kolmanteen nostoon
+ * pieni kysymys"*).
+ *
+ * Laatikko on lehden minitehtävän oma (.minitehtava-luokat), koska se
+ * ON sama asia toisella pinnalla — vain palkkio on pienempi. Lipukkeet
+ * ja tulosrivi tulevat jaetusta komponentista
+ * (js/fokustehtavat.js piirraVisanVastaukset), joten palautteen
+ * sanamuoto ei voi ajautua erilleen lehden kysymyksestä.
+ *
+ * SAMA KYSYMYS EI MAKSA KAHDESTI. Portti on `actionMinitehtava`n oma
+ * kirjanpito: ensimmäinen vastaus — oikea tai väärä — kuluttaa avaimen,
+ * ja toinen yritys palaa `{ ok: false }`:llä eikä komponentti piirrä
+ * mitään. Kortti voidaan avata uudelleen kuinka monta kertaa tahansa,
+ * mutta silloin laatikossa on vastaus eikä lipukkeita.
+ *
+ * LASKURI KASVAA VAIN OIKEASTA. Väärä vastaus ei lisää kassaan eikä
+ * laskuriin (game.kirjaaNostotehtava) — se vain sulkee kysymyksen.
+ */
+function piirraNostonVisa(ui, sisalto, nosto) {
+  const visa = nostonVisa(nosto);
+  if (!visa || !ui?.game?.actionMinitehtava) return;
+  const avain = `${ui.game.pack?.id}:${NOSTON_VISA_KAUPUNKI}:${nosto.id}`;
+  const laatikko = html('div', 'minitehtava fokusnosto-visa');
+  laatikko.appendChild(html('p', 'minitehtava-otsikko', visa.otsake ?? NOSTON_VISA_OTSAKE));
+
+  if (ui.game.minitehtavatVastatut?.has(avain)) {
+    // Jo vastattu: laatikko kertoo faktan eikä tarjoa lipukkeita.
+    // Palkkio on tässä vaiheessa joko maksettu tai menetetty, ja
+    // kumpaakaan ei voi enää muuttaa avaamalla kortti uudelleen.
+    laatikko.appendChild(html('p', 'minitehtava-kysymys',
+      visa.fakta ?? 'Tähän kysymykseen on jo vastattu.'));
+    sisalto.appendChild(laatikko);
+    return;
+  }
+
+  const vihjeteksti = visa.vihje ?? NOSTON_VISA_VIHJE;
+  const vihjerivi = vihjeteksti ? html('p', 'fokusnosto-visa-vihje', vihjeteksti) : null;
+  if (vihjerivi) laatikko.appendChild(vihjerivi);
+  laatikko.appendChild(html('p', 'minitehtava-kysymys', visa.kysymys));
+  piirraVisanVastaukset(laatikko, {
+    visa,
+    palkkio: NOSTON_VISA_PALKKIO,
+    kirjaa: (oikein) => ui.game.actionMinitehtava(
+      NOSTON_VISA_KAUPUNKI, nosto.id, oikein, NOSTON_VISA_PALKKIO,
+    ),
+    // Vihjerivi oli lupaus vastaamattomalle; tulos korvaa sen.
+    ennen: () => vihjerivi?.remove(),
+    jalkeen: (oikein) => {
+      if (oikein) {
+        /*
+         * LASKURI VASTA KIRJAUKSEN JÄLKEEN. Jaettu komponentti ajaa
+         * `jalkeen`in vain, kun `kirjaa` palautti `ok` — eli tänne ei
+         * tulla toisella yrityksellä, eikä laskuri voi kasvaa kahdesti
+         * samasta kysymyksestä.
+         */
+        ui.game.kirjaaNostotehtava();
+        const box = ui.buildToast?.({
+          kind: 'stamp',
+          icon: 'kukkaro',
+          text: `+${NOSTON_VISA_PALKKIO} puntaa`,
+          sub: 'Lukijan kysymys ratkesi',
+        });
+        if (box) setTimeout(() => ui.removeToast(box), TOAST_MS.default);
+      }
+      // Kortti on kartan päällä: koko render() sulkisi sen. Riittää
+      // tallentaa ja päivittää rahapilleri (sama syy kuin lehdessä).
+      ui.onChange?.(ui.game);
+      ui.renderTurnPill?.();
+    },
+  });
+  sisalto.appendChild(laatikko);
 }
 
 /**
@@ -1135,6 +1680,40 @@ function piirraNostonKarttaliite(ui, kohde, kartta) {
  * kirjoittamalla kysymyksellä, eikä se riipu chatin omien
  * avausvalmiskysymysten lipusta.
  */
+/*
+ * NOSTON MAA (Sonnet 1, kierros 18, 20.9.2026: Padisen luostarin
+ * kortissa luki *"Pariisin salonkien pöllöltä"*, vaikka kohdekortin
+ * sama vika oli korjattu kierroksella 16b). Nostokortti oli TOINEN
+ * polku samaan arvonimeen, eikä se kertonut kohteen maata lainkaan —
+ * silloin `arvonimenPaikka` luki PELAAJAN sijainnin.
+ *
+ * Maa haetaan samalla kaavalla kuin kohteen (js/fokuskohteet.js
+ * kohteenIso): ensin noston oma `iso`, sitten maakohtainen pooli
+ * NOSTO_MAATista tunnuksen perusteella. Kaupungin omat täkynostot
+ * (fokusvirtaSisalto) eivät ole poolissa, ja niille oikea maa ON
+ * pelaajan kaupunki — kortti kertoo juuri siitä kaupungista, jossa
+ * pelaaja seisoo. Silloin paluuarvo on null ja arvonimi menee entistä
+ * reittiä.
+ */
+let nostonIsoHakemisto = null;
+let nostonIsoMaita = 0;
+
+export function nostonIso(nosto) {
+  if (!nosto) return null;
+  if (typeof nosto.iso === 'string' && nosto.iso.length === 3) return nosto.iso;
+  const maat = Object.keys(NOSTO_MAAT);
+  if (!nostonIsoHakemisto || maat.length !== nostonIsoMaita) {
+    nostonIsoHakemisto = new Map();
+    for (const iso of maat) {
+      for (const n of NOSTO_MAAT[iso] ?? []) {
+        if (n?.id && !nostonIsoHakemisto.has(n.id)) nostonIsoHakemisto.set(n.id, iso);
+      }
+    }
+    nostonIsoMaita = maat.length;
+  }
+  return nostonIsoHakemisto.get(nosto.id) ?? null;
+}
+
 function piirraNostonKysymykset(ui, sisalto, nosto) {
   const kysymykset = (Array.isArray(nosto.kysymykset) ? nosto.kysymykset : [])
     .map((k) => String(k ?? '').trim()).filter(Boolean).slice(0, 3);
@@ -1142,8 +1721,14 @@ function piirraNostonKysymykset(ui, sisalto, nosto) {
   // Sama nimilappuvitsi kuin kartan kohdekortissa (omistaja 27.8.2026,
   // muoto tarkennettu 31.8.2026): "Kysy viisaalta pöllöltä pululta:",
   // koko nimi yhden vedon alla.
+  // Arvonimi noston omasta maasta, ei pelaajan sijainnista (ks. nostonIso).
+  const paikka = arvonimenPaikkaMaalle(nostonIso(nosto), ui?.game ?? null);
   sisalto.appendChild(polloNimilappu(html('p', 'fokusnosto-kysy-otsikko'), {
     ennen: 'Kysy ', yli: 'viisaalta pöllöltä', tilalle: 'pululta', jalkeen: ':',
+    // Arvonimi vaihtuu joka avauksella (Raamattu VIISAAN POLLON ARVONIMET).
+    arvonimi: true,
+    maanosa: paikka.maanosa,
+    iso: paikka.iso,
   }));
   const rivi = html('div', 'fokusnosto-kysymykset');
   rivi.setAttribute('role', 'group');
@@ -1180,7 +1765,27 @@ function piirraNostonKysymykset(ui, sisalto, nosto) {
  */
 export function kytkeFokusnosto() {
   rekisteroiLisakohteet(nostoLisakohteet);
+  /*
+   * SAMA TÄKYPOOLI MYÖS NAAPURIMAALLE (2.9.2026, js/fokuskohteet.js
+   * naapurienPoltetutVaraukset). Täky ei ole poltettavissa, mutta se ON
+   * ladonnassa: se menee samaan sarakkeeseen kuin muut merkit ja
+   * työntää naapureitaan erottelusiirrolla, joten ILMAN sitä naapurin
+   * ladonta eroaisi poltetusta eikä yksikään maan tiiviste täsmäisi.
+   *
+   * POOLI LUETAAN MAAN ENSIMMÄISESTÄ KAUPUNGISTA, kuten
+   * laattageneraattorilla (tools/fokuskartta/nostot.mjs maanTakyt).
+   * Maassa, jonka täkyjoukko vaihtuu kaupungeittain (ESP, GBR),
+   * valinta voi olla toinen kuin pelissä — mutta juuri sellaista maata
+   * ei ole poltettu lainkaan, joten varaus jää silloin tyhjäksi eikä
+   * väärään paikkaan.
+   */
+  rekisteroiMaanKohteet((iso, lauta, kaupungit) => (kaupungit?.length
+    ? nostoKarttarivit(nostoKaupunginPooli(iso, kaupungit[0].id), lauta).rivit
+      .map(({ kohde, paikka }) => ({ kohde, paikka }))
+    : []), 4);
   asetaKohdeNostot(nostoKohteelle);
+  // Kohdekortin lukijan kysymys (hahmotelmanostot, ks. js/fokuskohteet.js).
+  asetaKohdeVisa(piirraNostonVisa);
 }
 
 /**

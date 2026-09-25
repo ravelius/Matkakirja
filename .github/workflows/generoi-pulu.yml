@@ -1,0 +1,379 @@
+# Generoi pulun (Livian) repliikit puheeksi ja vie ne ämpäriin.
+#
+# Omistajan tilaus 6.9.2026 aamupäivä, sanatarkasti: *"Pululle täytyy
+# etsiä eleveniltä oma ääni joka vähän käheä ja nopea puhumaan.
+# Generoidaan kaikki valmiiksi kirjoitetut repliikit puheeksi."* …
+# *"Tehdään pulusta hyvin vokaalinen ja elävä vastakohta kertojan
+# monotoonisuuteen. Paljon elävöitystageja elevenin generointiin."*
+#
+# KOLME TOIMINTOA, YKSI TYÖKALU (tools/generoi-pulu.mjs):
+#
+#   aanet    Hakee ElevenLabsin äänet (omat /v1/voices ja jaetut
+#            /v1/shared-voices) ja tulostaa ne, joiden kuvaus osuu
+#            piirteisiin raspy/gravelly/energetic/quirky… Nimi,
+#            voice_id, labelit ja esikuuntelu-URL menevät lokiin.
+#            EI generoi eikä vie mitään — äänen valinta on
+#            kuuntelupäätös, jota kone ei tee (sama linja kuin
+#            aanihaku.yml). TÄMÄ AJETAAN ENSIN.
+#   kuiva    Tulostaa jokaisen repliikin, sen tagitetun puhemuodon,
+#            kohdetiedoston ja arvioidun keston. Ei APIa, ei avainta.
+#            Kannattaa ajaa aina ennen generointia: kaanonin muutos
+#            (js/livia.js) kaatuu tässä eikä maksullisen kutsun
+#            jälkeen.
+#   generoi  Generoi repliikit valitulla äänellä (syöte `aani`) ja vie
+#            ne ämpärin kansioon aanet/pulu/ manifesteineen.
+#
+# PYSYVÄ OLETUS 12.9.2026: flicker / piI8Kku0DcvcL6TTSeQt,
+# eleven_v3, Natural 0,5. `aanet` säilyy tietoista myöhempää koestusta
+# varten; tavallinen järjestys on kuiva → erillinen maksullisen ajon lupa
+# → generoi.
+#
+# JO OLEMASSA OLEVAA EI GENEROIDA UUDELLEEN: ennen kutsua tehdään HEAD
+# julkiseen osoitteeseen, ja 200 ohittaa repliikin. `pakota` kirjoittaa
+# yli — sitä tarvitaan äänen vaihtuessa, jolloin koko sarja on
+# äänitettävä uudelleen.
+#
+# TÄMÄ AJO EI COMMITTOI MITÄÄN. Äänet ovat mediaa ja media kuuluu
+# ämpäriin, ei repoon (Raamattu: "kaikki aina ämpäriin"). Työkalu
+# kirjoittaa media/-kansioon, joka on .gitignoressa — se tarkistetaan
+# koneellisesti ennen ensimmäistäkään maksullista kutsua — ja vie
+# tiedostot sieltä samalla aws s3 cp -komennolla kuin muutkin ääniajot.
+# Peli hakee tasan sen polun (js/liviapuhe.js LIVIAN_AANIJUURI), joten
+# pulu puhuu heti ajon jälkeen ilman julkaisua.
+#
+# KUUNTELE ÄÄNET AJON JÄLKEEN. Ajo tarkistaa koneellisesti keston ja
+# tason (−17 LUFS, sama perhe kuin muut puheäänitteet), muttei sitä,
+# kuulostaako pulu käheältä ja nopealta tai häipyykö saapumisrepliikin
+# kaiku ajoissa pois — se kuullaan.
+#
+# FFMPEG asennetaan apt:llä: ubuntu-latest-ajurissa sitä ei ole, ja
+# hiljaisuuden leikkaus, nopeutus, kaiku ja tason mittaus ovat sen
+# varassa.
+#
+# Salaisuudet ovat tämän repon Actions-asetuksissa eivätkä koskaan
+# täällä: ELEVEN_API_KEY (sama kuin generoi-luennat.yml) sekä neljä
+# R2-salaisuutta (samat kuin generoi-linssiluennat.yml ja muut ääniajot):
+#   R2_ACCOUNT_ID  R2_ACCESS_KEY_ID  R2_SECRET_ACCESS_KEY  R2_BUCKET
+# Avain ei tulostu lokiin: työkalu ei tulosta sitä eikä tämä ajo echoa
+# sitä — GitHub peittää secretit joka tapauksessa, mutta siihen ei nojata.
+
+name: Generoi pulun ääni
+
+on:
+  workflow_dispatch:
+    inputs:
+      toiminto:
+        description: >-
+          aanet = hae ääniehdokkaat (aja ensin), kuiva = tulosta
+          repliikit ja kestot ilman APIa, generoi = generoi ja vie
+          ämpäriin, kohdista = tee valmiin versionoidun erän cue-data,
+          kohdista-elava = kohdista kanoninen ääni ilman kuittia
+          (kattavuus- ja kestovartioitu, ks. tools/kohdista-pulu-eleet.mjs
+          otsikkokommentti 23.9.2026 löydöksestä).
+        required: true
+        type: choice
+        default: 'aanet'
+        options: ['aanet', 'kuiva', 'generoi', 'kohdista', 'kohdista-elava']
+      aani:
+        description: >-
+          Pulun voice_id (ElevenLabs). Oletus on omistajan 12.9.2026
+          lukitsema flicker; muuta vain uudella nimenomaisella päätöksellä.
+        required: false
+        default: 'piI8Kku0DcvcL6TTSeQt'
+      haku:
+        description: >-
+          aanet: listaa vain äänet, joiden nimessä tämä sana on
+          (esim. "Dr. Von"). Voi olla myös voice_id, jolloin haetaan
+          sen nimi suoraan. Tyhjä = piirrehaku (käheä, nopea).
+        required: false
+        default: ''
+      repliikit:
+        description: >-
+          Vain nämä repliikit pilkuin TAI välilyönnein (avaus-1,
+          paljastus-1, mannerivihje-1). Maksullinen generointi vaatii
+          eksplisiittisen 1–10 repliikin erän; tyhjä sallitaan vain kuivassa ajossa.
+        required: false
+        default: ''
+      retry_reason:
+        description: >-
+          Täytä vain hyväksytyssä uusinnassa. Perustelu muuttaa erätunnuksen,
+          jotta aiemmin aloitettua maksullista erää ei veloiteta vahingossa uudelleen.
+        required: false
+        default: ''
+      kuitti:
+        description: >-
+          Vain kohdista-toiminnolle: versionoidun valmiin tuotantokuitin
+          julkinen HTTPS-osoite. Kuitti määrää kaupungit ja MP3-avaimet.
+        required: false
+        default: ''
+      malli:
+        description: >-
+          ElevenLabsin malli. Omistajan 12.9.2026 lukitsema oletus on v3,
+          joka ymmärtää hakasulkutagit ([excited], [breathless]).
+        required: true
+        type: choice
+        default: 'eleven_v3'
+        options: ['eleven_multilingual_v2', 'eleven_v3']
+      vakaus:
+        description: >-
+          Vakaus samalla sanalla kuin ElevenLabsin sivulla. Omistajan
+          lukitsema oletus on Natural (0,5).
+        required: false
+        type: choice
+        default: 'natural'
+        options: ['', 'creative', 'natural', 'robust']
+      pakota:
+        description: >-
+          Generoi uudelleen, vaikka tiedosto on jo ämpärissä. Tarvitaan
+          kun ääni vaihtuu tai repliikin teksti on lyhennetty.
+        required: true
+        type: choice
+        default: 'ei'
+        options: ['ei', 'kyllä']
+
+permissions:
+  contents: read
+
+# Yksi ajo kerrallaan: kaksi rinnakkaista kirjoittaisi ämpärin samoihin
+# avaimiin.
+concurrency:
+  group: generoi-pulu
+  cancel-in-progress: false
+
+jobs:
+  generoi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      # Vienti on työkalun sisällä, mutta salaisuudet tulevat tästä —
+      # samat nimet ja sama endpoint-tyyli kuin muissakin ääniajoissa.
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      # R2 ei hyväksy AWS:n uudempia tarkistussummaotsakkeita.
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Tarkista että ääni on annettu
+        if: ${{ inputs.toiminto == 'generoi' && inputs.aani == '' }}
+        run: |
+          echo "::error::Toiminto generoi vaatii syötteen aani (voice_id)."
+          echo "Aja ensin toiminto 'aanet', kuuntele esikuuntelut ja valitse ääni."
+          exit 1
+
+      - name: Tarkista maksullisen erän rajaus
+        if: ${{ inputs.toiminto == 'generoi' && inputs.repliikit == '' }}
+        run: |
+          echo "::error::Generointi vaatii eksplisiittisen 1–10 repliikin listan."
+          exit 1
+
+      - name: Tarkista kohdistuksen kuitti
+        if: ${{ inputs.toiminto == 'kohdista' && inputs.kuitti == '' }}
+        run: |
+          echo "::error::Kohdistus vaatii valmiin tuotantokuitin HTTPS-osoitteen."
+          exit 1
+
+      # Puuttuva salaisuus tulisi muuten vastaan vasta ElevenLabsin
+      # 401:nä tai aws-clin virheenä — pahimmassa järjestyksessä vasta
+      # sen jälkeen, kun kutsut on jo maksettu. Arvoja ei tulosteta,
+      # vain onko ne asetettu.
+      - name: Tarkista että salaisuudet ovat tallessa
+        if: ${{ inputs.toiminto == 'generoi' || inputs.toiminto == 'kohdista' || inputs.toiminto == 'kohdista-elava' }}
+        env:
+          AVAIN: ${{ secrets.ELEVEN_API_KEY }}
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "$AVAIN" ]                        || puuttuu="$puuttuu ELEVEN_API_KEY"
+          [ -n "${R2_ACCOUNT_ID:-}" ]            || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ]        || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ]    || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "${R2_BUCKET:-}" ]                || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            echo "Lisää ne: Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+          echo "Kaikki viisi salaisuutta löytyvät."
+
+      - name: Tarkista että avain on tallessa (ääniehdokkaat)
+        if: ${{ inputs.toiminto == 'aanet' }}
+        env:
+          AVAIN: ${{ secrets.ELEVEN_API_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "$AVAIN" ]; then
+            echo "::error::ELEVEN_API_KEY-salaisuutta ei löydy tästä reposta."
+            exit 1
+          fi
+          echo "Avain löytyy."
+
+      # 14.9.2026 alkaen tästä käytetään enää FFPROBEA, joka vain LUKEE
+      # valmiin mp3:n keston validointia varten. Livian ääntä ei enää
+      # pureta eikä koodata uudelleen (omistaja, Raamattu: "PULUN AANI:
+      # ELEVENLABSIN OLETUSASETUKSET, EI FFMPEG-KASITTELYA") — juuri se
+      # toinen 128 kbps sukupolvi oli kuultu "digitaalinen häiriö".
+      - name: Asenna ffmpeg (vain ffprobe lukee keston)
+        if: ${{ inputs.toiminto == 'generoi' || inputs.toiminto == 'kohdista-elava' }}
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          ffmpeg -version | head -1
+
+      - name: Hae ääniehdokkaat
+        if: ${{ inputs.toiminto == 'aanet' }}
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          HAKU: ${{ inputs.haku }}
+        run: |
+          set -euo pipefail
+          if [ -n "$HAKU" ]; then
+            node tools/generoi-pulu.mjs --aanet --haku "$HAKU"
+          else
+            node tools/generoi-pulu.mjs --aanet
+          fi
+
+      # Kuiva ajo AINA ennen generointia: jokainen repliikki, sen
+      # tagitettu puhemuoto ja kohdetiedosto tulostuvat lokiin ennen
+      # kuin yhtäkään maksullista kutsua on tehty. Syöte kulkee
+      # ympäristömuuttujan kautta, ei ${{ }}-sijoituksena komentoriville
+      # — käsin kirjoitettu kenttä ei saa päätyä shellin tulkittavaksi.
+      - name: Kuiva ajo (repliikit ja kestot)
+        if: ${{ inputs.toiminto == 'kuiva' || inputs.toiminto == 'generoi' }}
+        env:
+          REPLIIKIT: ${{ inputs.repliikit }}
+          PULU_MALLI: ${{ inputs.malli }}
+          PULU_VAKAUS: ${{ inputs.vakaus }}
+        run: |
+          set -euo pipefail
+          if [ -n "$REPLIIKIT" ]; then
+            node tools/generoi-pulu.mjs --kuiva --repliikit "$REPLIIKIT"
+          else
+            node tools/generoi-pulu.mjs --kuiva
+          fi
+
+      - name: Kohdista valmiin erän puhe-eleet versionoitujen MP3-tiedostojen viereen
+        if: ${{ inputs.toiminto == 'kohdista' }}
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          KUITTI: ${{ inputs.kuitti }}
+          REPLIIKIT: ${{ inputs.repliikit }}
+        run: |
+          set -euo pipefail
+          case "$KUITTI" in https://media.matkakirja.app/aanet/pulu/kuitit/*.completed.json) ;; *)
+            echo "::error::Kuitti ei ole Matkakirjan valmistunut Pulu-tuotantokuitti."
+            exit 1
+          esac
+          liput=(--kuitti "$KUITTI" --vie)
+          if [ -n "$REPLIIKIT" ]; then
+            kaupungit=()
+            while IFS= read -r avain; do
+              [ -z "$avain" ] && continue
+              if [[ ! "$avain" =~ ^[a-z0-9]+-3$ ]]; then
+                echo "::error::Kohdistuksen repliikin pitää olla exact city-3-avain: $avain"
+                exit 1
+              fi
+              kaupungit+=("${avain%-3}")
+            done < <(printf '%s\n' "$REPLIIKIT" | tr ',[:space:]' '\n')
+            if [ "${#kaupungit[@]}" -eq 0 ]; then
+              echo "::error::Kohdistuksen repliikkirajaus on tyhjä."
+              exit 1
+            fi
+            valitut=$(IFS=,; printf '%s' "${kaupungit[*]}")
+            liput+=(--kaupungit "$valitut")
+          fi
+          node tools/kohdista-pulu-eleet.mjs "${liput[@]}"
+
+      - name: Tallenna kohdistukset tarkastettavaksi
+        if: ${{ inputs.toiminto == 'kohdista' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: pulu-eleet-${{ github.run_id }}
+          path: assets/aikaleimat/livia-*.eleet.json
+          if-no-files-found: error
+
+      # ELÄVÄ KOHDISTUS: ei kuittia, kanoninen aanet/pulu/livia-<kaupunki>-3.mp3
+      # sellaisenaan. Turvana kattavuus (>=95 % sanoista) ja kestovarmistus
+      # (ffprobe vs. alignment) tools/kohdista-pulu-eleet.mjs:ssä — löydöksen
+      # tausta on työkalun otsikkokommentissa. Osa kaupungeista voi hylätä
+      # itsensä (kattavuus tai kesto ei riitä); loppuosa kirjoitetaan silti.
+      - name: Kohdista kanoninen ääni ilman kuittia (elävä, kattavuusvartioitu)
+        if: ${{ inputs.toiminto == 'kohdista-elava' }}
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          REPLIIKIT: ${{ inputs.repliikit }}
+        run: |
+          set -euo pipefail
+          liput=(--elava --vie)
+          if [ -n "$REPLIIKIT" ]; then
+            kaupungit=()
+            while IFS= read -r avain; do
+              [ -z "$avain" ] && continue
+              if [[ ! "$avain" =~ ^[a-z0-9]+-3$ ]]; then
+                echo "::error::Kohdistuksen repliikin pitää olla exact city-3-avain: $avain"
+                exit 1
+              fi
+              kaupungit+=("${avain%-3}")
+            done < <(printf '%s\n' "$REPLIIKIT" | tr ',[:space:]' '\n')
+            if [ "${#kaupungit[@]}" -eq 0 ]; then
+              echo "::error::Kohdistuksen repliikkirajaus on tyhjä."
+              exit 1
+            fi
+            valitut=$(IFS=,; printf '%s' "${kaupungit[*]}")
+            liput+=(--kaupungit "$valitut")
+          fi
+          node tools/kohdista-pulu-eleet.mjs "${liput[@]}"
+
+      # !cancelled(): tallenna hyväksytyt tiedostot tarkastettavaksi, VAIKKA
+      # osa kaupungeista hylättiin (edellinen askel palautti silloin 1:n).
+      - name: Tallenna elävän kohdistuksen tulokset tarkastettavaksi
+        if: ${{ !cancelled() && inputs.toiminto == 'kohdista-elava' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: pulu-eleet-elava-${{ github.run_id }}
+          path: assets/aikaleimat/livia-*.eleet.json
+          if-no-files-found: warn
+
+      - name: Generoi ja vie ämpäriin
+        if: ${{ inputs.toiminto == 'generoi' }}
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          AANI: ${{ inputs.aani }}
+          REPLIIKIT: ${{ inputs.repliikit }}
+          PAKOTA: ${{ inputs.pakota }}
+          PULU_MALLI: ${{ inputs.malli }}
+          PULU_VAKAUS: ${{ inputs.vakaus }}
+          RETRY_REASON: ${{ inputs.retry_reason }}
+        run: |
+          set -euo pipefail
+          liput=""
+          if [ "$PAKOTA" = "kyllä" ]; then liput="--pakota"; fi
+          retry_liput=()
+          if [ -n "$RETRY_REASON" ]; then retry_liput=(--retry-reason "$RETRY_REASON"); fi
+          if [ -n "$REPLIIKIT" ]; then
+            node tools/generoi-pulu.mjs --aani "$AANI" $liput --repliikit "$REPLIIKIT" "${retry_liput[@]}"
+          else
+            node tools/generoi-pulu.mjs --aani "$AANI" $liput
+          fi
+
+      # Vartija sille, mitä tämä ajo lupaa: repoon ei jää mitään.
+      - name: Varmista ettei repoon jäänyt mitään
+        if: ${{ inputs.toiminto != 'kohdista' && inputs.toiminto != 'kohdista-elava' }}
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "::error::Ajo muutti työhakemistoa — media kuuluu ämpäriin, ei repoon."
+            git status --porcelain
+            exit 1
+          fi
+          echo "Työhakemisto on siisti."

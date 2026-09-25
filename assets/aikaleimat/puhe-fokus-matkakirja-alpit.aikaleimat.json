@@ -1,0 +1,198 @@
+{
+  "versio": 2,
+  "kaupunki": "alpit",
+  "teksti": "Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.",
+  "tekstiSha256": "53c582513ec17b7bb6db19b0fbc22bbcee6ff66aadb227e7547fe2eb66f91ac9",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-alpit.mp3",
+    "versio": 2,
+    "tavut": 389999,
+    "sha256": "046cbcc1e100d2e587d74953e5f48f2995d21b6e64bd7b1d8b6fe74b09502e33"
+  },
+  "kesto": 24300,
+  "sanat": [
+    {
+      "sana": "Grindelwaldin",
+      "alku": 220,
+      "loppu": 920
+    },
+    {
+      "sana": "jäätikössä",
+      "alku": 1000,
+      "loppu": 1640
+    },
+    {
+      "sana": "oli",
+      "alku": 1720,
+      "loppu": 1880
+    },
+    {
+      "sana": "sinistä",
+      "alku": 1940,
+      "loppu": 2560
+    },
+    {
+      "sana": "niin",
+      "alku": 2640,
+      "loppu": 2860
+    },
+    {
+      "sana": "syvällä",
+      "alku": 2960,
+      "loppu": 3400
+    },
+    {
+      "sana": "ettei",
+      "alku": 3820,
+      "loppu": 4100
+    },
+    {
+      "sana": "taivas",
+      "alku": 4160,
+      "loppu": 4520
+    },
+    {
+      "sana": "ylettynyt",
+      "alku": 4580,
+      "loppu": 5100
+    },
+    {
+      "sana": "siihen",
+      "alku": 5160,
+      "loppu": 5640
+    },
+    {
+      "sana": "Opas",
+      "alku": 7220,
+      "loppu": 7460
+    },
+    {
+      "sana": "sanoi",
+      "alku": 7500,
+      "loppu": 7860
+    },
+    {
+      "sana": "jään",
+      "alku": 7920,
+      "loppu": 8220
+    },
+    {
+      "sana": "liikkuvan",
+      "alku": 8280,
+      "loppu": 9000
+    },
+    {
+      "sana": "Kivi",
+      "alku": 10380,
+      "loppu": 10640
+    },
+    {
+      "sana": "ei",
+      "alku": 10700,
+      "loppu": 10800
+    },
+    {
+      "sana": "suostunut",
+      "alku": 10860,
+      "loppu": 11320
+    },
+    {
+      "sana": "todistajaksi",
+      "alku": 11360,
+      "loppu": 12080
+    },
+    {
+      "sana": "mutta",
+      "alku": 12620,
+      "loppu": 12820
+    },
+    {
+      "sana": "jäätiköstä",
+      "alku": 12880,
+      "loppu": 13440
+    },
+    {
+      "sana": "kuului",
+      "alku": 13520,
+      "loppu": 13960
+    },
+    {
+      "sana": "pitkä",
+      "alku": 14020,
+      "loppu": 14520
+    },
+    {
+      "sana": "rasahdus",
+      "alku": 14600,
+      "loppu": 15280
+    },
+    {
+      "sana": "Siirsin",
+      "alku": 17040,
+      "loppu": 17420
+    },
+    {
+      "sana": "kiven",
+      "alku": 17480,
+      "loppu": 17840
+    },
+    {
+      "sana": "ja",
+      "alku": 17880,
+      "loppu": 17980
+    },
+    {
+      "sana": "itseni",
+      "alku": 18060,
+      "loppu": 18420
+    },
+    {
+      "sana": "kauemmas",
+      "alku": 18460,
+      "loppu": 19160
+    },
+    {
+      "sana": "Hiljaisuus",
+      "alku": 20980,
+      "loppu": 21680
+    },
+    {
+      "sana": "ei",
+      "alku": 21760,
+      "loppu": 21880
+    },
+    {
+      "sana": "tarkoittanut",
+      "alku": 21920,
+      "loppu": 22640
+    },
+    {
+      "sana": "että",
+      "alku": 22720,
+      "loppu": 23020
+    },
+    {
+      "sana": "vuori",
+      "alku": 23100,
+      "loppu": 23540
+    },
+    {
+      "sana": "olisi",
+      "alku": 23640,
+      "loppu": 23920
+    },
+    {
+      "sana": "vaiti",
+      "alku": 23980,
+      "loppu": 24300
+    }
+  ],
+  "lauseet": [
+    220,
+    7220,
+    10380,
+    17040,
+    20980
+  ],
+  "luotu": "2026-09-23T15:36:36.054Z"
+}

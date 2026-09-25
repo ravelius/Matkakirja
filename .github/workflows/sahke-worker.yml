@@ -41,7 +41,9 @@ env:
   # Mistä peli tulee. Worker vertaa tätä pyynnön Origin-otsakkeeseen,
   # joka on aina pelkkä alkuosa ILMAN polkua. Useampi arvo erotetaan
   # pilkulla. Localhost kelpaa aina ilman listausta.
-  SAHKE_ORIGINIT: 'https://ravelius.github.io'
+  # 6.9.2026: peli siirtyy osoitteeseen matkakirja.app (omistaja: "Siirrä
+  # vain peli"); vanha Pages-origin jää siirtymän ajaksi.
+  SAHKE_ORIGINIT: 'https://ravelius.github.io,https://matkakirja.app,https://www.matkakirja.app'
   WRANGLER_VERSIO: 'wrangler@4'
   WRANGLER_SEND_METRICS: 'false'
   CI: 'true'

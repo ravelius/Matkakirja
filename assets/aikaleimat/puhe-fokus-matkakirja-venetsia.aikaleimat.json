@@ -1,0 +1,183 @@
+{
+  "versio": 2,
+  "kaupunki": "venetsia",
+  "teksti": "San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.",
+  "tekstiSha256": "3a88cfb0e91e8daad484c53fd87b50faf9a649bf08cbb8ced08b33f7a9cb87a5",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-venetsia.mp3",
+    "versio": 2,
+    "tavut": 373699,
+    "sha256": "bd406f392075e1e22d896ca36862576f2b4b78cf93ccb61016f69312798e33d8"
+  },
+  "kesto": 23260,
+  "sanat": [
+    {
+      "sana": "San",
+      "alku": 180,
+      "loppu": 340
+    },
+    {
+      "sana": "Marcon",
+      "alku": 380,
+      "loppu": 800
+    },
+    {
+      "sana": "kirkossa",
+      "alku": 840,
+      "loppu": 1340
+    },
+    {
+      "sana": "opas",
+      "alku": 1420,
+      "loppu": 1660
+    },
+    {
+      "sana": "kertoi",
+      "alku": 1720,
+      "loppu": 2140
+    },
+    {
+      "sana": "kuinka",
+      "alku": 2500,
+      "loppu": 2780
+    },
+    {
+      "sana": "Pyhän",
+      "alku": 2840,
+      "loppu": 3080
+    },
+    {
+      "sana": "Markuksen",
+      "alku": 3140,
+      "loppu": 3660
+    },
+    {
+      "sana": "ruumis",
+      "alku": 3760,
+      "loppu": 4180
+    },
+    {
+      "sana": "oli",
+      "alku": 4240,
+      "loppu": 4400
+    },
+    {
+      "sana": "tuotu",
+      "alku": 4440,
+      "loppu": 4740
+    },
+    {
+      "sana": "Egyptistä",
+      "alku": 4840,
+      "loppu": 5700
+    },
+    {
+      "sana": "sianlihan",
+      "alku": 5800,
+      "loppu": 6460
+    },
+    {
+      "sana": "alla",
+      "alku": 6600,
+      "loppu": 6860
+    },
+    {
+      "sana": "Muslimivartijat",
+      "alku": 8660,
+      "loppu": 9640
+    },
+    {
+      "sana": "olivat",
+      "alku": 9700,
+      "loppu": 9960
+    },
+    {
+      "sana": "jättäneet",
+      "alku": 10020,
+      "loppu": 10540
+    },
+    {
+      "sana": "korin",
+      "alku": 10600,
+      "loppu": 10900
+    },
+    {
+      "sana": "tutkimatta",
+      "alku": 10960,
+      "loppu": 11760
+    },
+    {
+      "sana": "Katselin",
+      "alku": 12960,
+      "loppu": 13420
+    },
+    {
+      "sana": "kultaisia",
+      "alku": 13480,
+      "loppu": 14060
+    },
+    {
+      "sana": "mosaiikkeja",
+      "alku": 14100,
+      "loppu": 14960
+    },
+    {
+      "sana": "Minun",
+      "alku": 16700,
+      "loppu": 16940
+    },
+    {
+      "sana": "laivastossani",
+      "alku": 16980,
+      "loppu": 17760
+    },
+    {
+      "sana": "tällaisesta",
+      "alku": 17820,
+      "loppu": 18500
+    },
+    {
+      "sana": "olisi",
+      "alku": 18560,
+      "loppu": 18800
+    },
+    {
+      "sana": "seurannut",
+      "alku": 18860,
+      "loppu": 19320
+    },
+    {
+      "sana": "kuulustelu",
+      "alku": 19400,
+      "loppu": 20100
+    },
+    {
+      "sana": "Venetsiassa",
+      "alku": 21580,
+      "loppu": 22180
+    },
+    {
+      "sana": "oli",
+      "alku": 22220,
+      "loppu": 22360
+    },
+    {
+      "sana": "rakennettu",
+      "alku": 22400,
+      "loppu": 22960
+    },
+    {
+      "sana": "kirkko",
+      "alku": 23020,
+      "loppu": 23260
+    }
+  ],
+  "lauseet": [
+    180,
+    8660,
+    12960,
+    16700,
+    21580
+  ],
+  "luotu": "2026-09-23T15:37:34.616Z"
+}

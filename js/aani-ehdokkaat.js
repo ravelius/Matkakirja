@@ -10,6 +10,10 @@
 // tarkoittaa, että ilman valintaa soi syntetisoitu ambienssi.
 
 import { PACKS } from './pack.js';
+// Musiikkipaletin polku tulee yhdestä paikasta (js/media.js
+// MUSIIKIN_PAATE), jotta moottorin vaihto on yhden kytkimen vaihto.
+import { musaPolku } from './media.js';
+import { aaniLisenssiSallittu } from './lisenssi.js';
 
 const AVAIN = 'matkakirja-aanivalinnat';
 
@@ -83,19 +87,17 @@ export const TYYPPI_EHDOKKAAT = {
     { url: 'https://cdn.freesound.org/previews/677/677253_9756914-lq.mp3#voima=0.47', nimi: 'Ouakamin piha illalla (Dakar) — LaureC, CC0' },
     { url: 'https://cdn.freesound.org/previews/677/677252_9756914-lq.mp3#voima=2.9', nimi: 'Ouakamin piha aamulla (Dakar) — LaureC, CC0' },
     { url: 'https://cdn.freesound.org/previews/683/683118_8105512-lq.mp3#voima=0.21', nimi: 'Katukauppiaat (Kairo) — AhmadAiuby, CC0' },
-    { url: 'https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3#voima=0.55', nimi: 'Kaupungin yö (Kairo) — rucisko, CC BY-NC' },
   ],
   aavikko: [
     { url: 'https://cdn.freesound.org/previews/714/714271_14696146-lq.mp3#voima=0.98', nimi: 'Aavikon äänimaisema — Metris, CC BY' },
     { url: 'https://cdn.freesound.org/previews/411/411774_1910728-lq.mp3#voima=5.85', nimi: 'Aavikon yön hiljaisuus — Diegolar, CC BY' },
     { url: 'https://cdn.freesound.org/previews/565/565015_12186594-lq.mp3#voima=0.16', nimi: 'Hiekkamyrsky — blackatomproductions, CC0' },
     { url: 'https://cdn.freesound.org/previews/438/438877_2524442-lq.mp3#voima=0.52', nimi: 'Hiekkamyrskyn tuuli — craigsmith, CC0' },
-    { url: 'https://cdn.freesound.org/previews/635/635912_2247456-lq.mp3#voima=4.31', nimi: 'Kiuruja tuulisten dyynien yllä — Kinoton, CC0' },
+    { url: 'https://cdn.freesound.org/previews/635/635912_2247456-lq.mp3#voima=4.32', nimi: 'Kiuruja tuulisten dyynien yllä — Kinoton, CC0' },
     { url: 'https://cdn.freesound.org/previews/579/579250_2977885-lq.mp3#voima=0.27', nimi: 'Tuuli puissa — Danjocross, CC0' },
   ],
   meri: [
     { url: 'https://cdn.freesound.org/previews/635/635103_10065335-lq.mp3#voima=0.15', nimi: 'Tyyni aallokko — Eatyourburger, CC0' },
-    { url: 'https://cdn.freesound.org/previews/848/848927_17398983-lq.mp3#voima=0.82', nimi: 'Rantatyrsky — Benson_Arizona, CC BY-NC' },
     { url: 'https://archive.org/download/aporee_8703_10524/CityCountryMeSassnitzFischereihafenFender.mp3#voima=0.33', nimi: 'Kalasatama (Sassnitz) — henrik schröder, CC BY-SA' },
     { url: 'https://cdn.freesound.org/previews/411/411509_1661766-lq.mp3#voima=0.15', nimi: 'Aallot lyövät kallioihin — felix.blume, CC0' },
     { url: 'https://cdn.freesound.org/previews/573/573187_97550-lq.mp3#voima=0.54', nimi: 'Kirkas rantahyöky — TRP, CC0' },
@@ -117,7 +119,6 @@ export const TYYPPI_EHDOKKAAT = {
     { url: 'https://cdn.freesound.org/previews/504/504694_778707-lq.mp3#voima=2.4', nimi: 'Masai-leirin luontoäänet — selcukartut, CC0' },
     { url: 'https://cdn.freesound.org/previews/612/612318_13563349-lq.mp3#voima=0.3', nimi: 'Virtahevot joella (Kruger) — noisymichael, CC BY' },
     { url: 'https://cdn.freesound.org/previews/764/764981_15688695-lq.mp3#voima=0.86', nimi: 'Sirkat yöllä (Etelä-Afrikka) — Christian.Combrinck, CC0' },
-    { url: 'https://cdn.freesound.org/previews/411/411996_7037-lq.mp3#voima=0.92', nimi: 'Ukkosmyrsky Etelä-Afrikassa — tim.kahn, CC BY-NC' },
   ],
   ylanko: [
     { url: 'https://archive.org/download/aporee_68991_80056/almaporeejochbergalm12uhr30.mp3#voima=0.5', nimi: 'Alppilaidun (Reit im Winkl, Baijeri) — sam auinger, CC BY-SA' },
@@ -136,7 +137,6 @@ export const TYYPPI_EHDOKKAAT = {
    * aiemmin puuttuneet raitiovaunu, kirkonkellot ja katusoittaja.
    */
   kaupunki: [
-    { url: 'https://cdn.freesound.org/previews/723/723081_2978883-lq.mp3#voima=0.55', nimi: 'Kaupungin yö — rucisko, CC BY-NC' },
     { url: 'https://cdn.freesound.org/previews/677/677253_9756914-lq.mp3#voima=0.47', nimi: 'Piha illalla — LaureC, CC0' },
     { url: 'https://cdn.freesound.org/previews/511/511005_571436-lq.mp3#voima=1.23', nimi: 'Kaupungin hälinä — 3bagbrew, CC0' },
   ],
@@ -211,9 +211,9 @@ export const EHDOKKAAT = {
      * tools/mittaa-aanet.mjs). Jos se kuulostaa liian hiljaiselta tai
      * kovalta, kerroin lisätään tähän muodossa #voima=1.2.
      */
-    oletus: 'assets/audio/musa-visa-2.mp3',
+    oletus: musaPolku('musa-visa-2'),
     ehdokkaat: [
-      { url: 'assets/audio/musa-visa-2.mp3', nimi: 'Tikittävä uteliaisuus — ElevenLabs-luuppi' },
+      { url: musaPolku('musa-visa-2'), nimi: 'Tikittävä uteliaisuus — pelin oma visaluuppi' },
       { url: 'https://cdn.freesound.org/previews/176/176134_334810-lq.mp3#voima=0.32', nimi: '6_drums_luangprabang.WAV — LukeIRL, CC BY' },
       { url: 'https://cdn.freesound.org/previews/713/713120_14632469-lq.mp3#voima=0.27', nimi: 'Arabialainen huilu — DYEKHO, CC0' },
       { url: 'https://cdn.freesound.org/previews/466/466570_197130-lq.mp3#voima=0.46', nimi: 'Kalimba-luuppi — CarlosCarty, CC BY' },
@@ -602,6 +602,33 @@ const POISTETUT = new Set([
   'https://cdn.freesound.org/previews/160/160461_1-lq.mp3#voima=0.17',
 ]);
 
+/*
+ * LISENSSIPORTTI (Fable 23.9.2026: pelistä tulee maksullinen; sama sääntö
+ * kuin kuvilla, js/lisenssi.js). NC- ja ND-ehtoinen äänite ei soi, vaikka
+ * se olisi oletuskorissa tai studiossa valittuna — se putoaa korista, ja
+ * tyhjä kaupunkikori putoaa maan tai maiseman koriin kuten ennenkin.
+ * Lisenssi luetaan ehdokkaan `nimi`-kentästä; vertailu ilman #-merkintöjä,
+ * koska korit kantavat voima- ja alkumerkintöjä. Inventaario:
+ * docs/raportit/lisenssi-inventaario-20260923.md.
+ */
+const perusOsoite = (url) => String(url ?? '').split('#')[0];
+let estetytMuisti = null;
+/** NC/ND-äänitteiden perusosoitteet kaikista ehdokastauluista. */
+export function lisenssiEstetytAanet() {
+  if (estetytMuisti) return estetytMuisti;
+  const ulos = new Set();
+  const lisaa = (e) => { if (e?.url && !aaniLisenssiSallittu(e.nimi)) ulos.add(perusOsoite(e.url)); };
+  for (const lista of Object.values(TYYPPI_EHDOKKAAT)) lista.forEach(lisaa);
+  for (const osa of Object.values(KAUPUNKI_EHDOKKAAT)) for (const lista of Object.values(osa)) lista.forEach(lisaa);
+  for (const slot of Object.values(EHDOKKAAT)) (slot?.ehdokkaat ?? []).forEach(lisaa);
+  estetytMuisti = ulos;
+  return ulos;
+}
+/** Saako osoitteen soittaa (lisenssiportti)? */
+export function aaniSallittu(url) {
+  return !lisenssiEstetytAanet().has(perusOsoite(url));
+}
+
 // Kategoriakohtaiset arvontakorit maanosittain: maisematyypille voi
 // valita studiossa jokaiselle maanosalle omat äänensä, joista peli arpoo
 // yhden joka käynnillä. Talletusmuoto on { tyyppi: { lauta: [urlit] } };
@@ -629,7 +656,7 @@ const OLETUSKORIT = {
     'https://cdn.freesound.org/previews/714/714271_14696146-lq.mp3#voima=0.98',
     'https://cdn.freesound.org/previews/411/411774_1910728-lq.mp3#voima=5.85',
     'https://cdn.freesound.org/previews/565/565015_12186594-lq.mp3#voima=0.16',
-    'https://cdn.freesound.org/previews/635/635912_2247456-lq.mp3#voima=4.31',
+    'https://cdn.freesound.org/previews/635/635912_2247456-lq.mp3#voima=4.32',
     'https://cdn.freesound.org/previews/579/579250_2977885-lq.mp3#voima=0.27',
   ],
   meri: [
@@ -688,11 +715,11 @@ export function tyyppiKori(tyyppi, lauta) {
     const kaikki = JSON.parse(localStorage.getItem(TYYPPIKORI_AVAIN) ?? '{}');
     const merkinta = kaikki[tyyppi];
     const lista = Array.isArray(merkinta) ? merkinta : merkinta?.[lauta];
-    if (Array.isArray(lista)) return lista.filter(Boolean);
+    if (Array.isArray(lista)) return lista.filter(Boolean).filter(aaniSallittu);
   } catch {
     /* yksityinen selaustila — oletuskori kelpaa */
   }
-  return OLETUSKORIT[tyyppi] ?? [];
+  return (OLETUSKORIT[tyyppi] ?? []).filter(aaniSallittu);
 }
 
 /** Tallentaa tyypin arvontakorin yhdelle maanosalle (laudalle). */
@@ -763,8 +790,8 @@ export const KAUPUNKI_EHDOKKAAT = {
         nimi: 'Rue Montorgueil — Adi W, CC BY-SA' },
     ],
     marseille: [
-      { url: 'https://archive.org/download/aporee_40436_46176/201855QuaiduPortseafluxboatmurmur1737.mp3#voima=0.25',
-        nimi: 'Vanha satama: veneiden narinaa ja puheensorinaa — OR poiesis, CC BY-NC-ND' },
+      { url: 'https://archive.org/download/aporee_5735_7211/MarseilleHafendampferundMwen.mp3#voima=0.35',
+        nimi: 'Promenade Louis Braquier, satama-äänet ja lokit — Frank Schulte, CC BY-SA' },
     ],
     lissabon: [
       { url: 'https://archive.org/download/aporee_60580_69616/20160705004glisedeSantaLuisaPCMD100.mp3#voima=0.51',
@@ -775,14 +802,12 @@ export const KAUPUNKI_EHDOKKAAT = {
         nimi: 'Plaza de la Corrala, Lavapiés — Kamen Nedev, public domain' },
     ],
     barcelona: [
-      { url: 'https://archive.org/download/aporee_41792_47644/MD220006RD01.mp3#voima=0.15',
-        nimi: 'La Rambla ja lintutori — Andrzej Maciejewski, CC BY-NC-SA' },
+      { url: 'https://archive.org/download/aporee_21584_25098/mercadobarcelona01.mp3#voima=0.84',
+        nimi: 'Ramblas, ruokatori — Carlos Santos, public domain' },
     ],
     granada: [
-      { url: 'https://archive.org/download/aporee_61524_70763/230214020BPlazaNuevaPilardelToro.mp3#voima=0.49',
-        nimi: 'Plaza de Santa Ana — Paz Tornero, CC BY-NC-ND' },
-      { url: 'https://archive.org/download/aporee_61541_70780/230516002CatedralfrentealtarmasvolumenFadeAadido.mp3#voima=4.78',
-        nimi: 'Plaza de las Pasiegas tuomiokirkon vieressä — Paz Tornero, CC BY-NC-ND' },
+      { url: 'https://archive.org/download/aporee_21765_25301/GranadaCalleCaldereraNuevacaminando.mp3#voima=1.06',
+        nimi: 'Calle Calderería Nueva, kävely — andresdiezblanco, public domain' },
     ],
     amsterdam: [
       { url: 'https://archive.org/download/aporee_9337_11221/BInterieurtramAdam.mp3#voima=0.67',
@@ -813,14 +838,10 @@ export const KAUPUNKI_EHDOKKAAT = {
         nimi: 'Raitiovaunumatka — Piotrek Zyla, public domain' },
     ],
     varsova: [
-      { url: 'https://archive.org/download/aporee_71588_83518/2503101259.mp3#voima=0.43',
-        nimi: 'Plac Zbawiciela, raitiovaunut ohittavat — Andrzej Maciejewski, CC BY-NC' },
-      { url: 'https://archive.org/download/aporee_71577_83505/2503081558.mp3#voima=0.34',
-        nimi: 'Leikkipuisto ja katu — Andrzej Maciejewski, CC BY-NC' },
+      { url: 'https://archive.org/download/aporee_13075_15305/110804152036Warsawda16bit224.mp3#voima=6',
+        nimi: 'Kaupungin äänimaisema — damir.kustic, public domain' },
     ],
     krakova: [
-      { url: 'https://archive.org/download/aporee_71560_83484/2502221312.mp3#voima=0.35',
-        nimi: 'Kahvila vanhassakaupungissa — Andrzej Maciejewski, CC BY-NC' },
       { url: 'https://archive.org/download/aporee_11573_13626/hejnal.mp3#voima=1.85',
         nimi: 'Suuri tori (Rynek Główny) — Anna Nacher, CC BY-SA' },
     ],
@@ -831,8 +852,6 @@ export const KAUPUNKI_EHDOKKAAT = {
         nimi: 'Cavianon kujat, Ticino — maboart ja ursula bohren, CC BY-SA' },
     ],
     venetsia: [
-      { url: 'https://archive.org/download/aporee_52547_60044/20180524PlaceSazintMarcr1session20210316.mp3#voima=0.68',
-        nimi: 'Piazza San Marco: väkeä ja kelloja — Flavien Gillié, CC BY-NC-SA' },
       { url: 'https://archive.org/download/aporee_27844_32090/201556veniceNightWalk2246.mp3#voima=0.31',
         nimi: 'Yökävely Venetsian kujilla — OR poiesis, CC BY-SA' },
     ],
@@ -843,8 +862,6 @@ export const KAUPUNKI_EHDOKKAAT = {
     sisilia: [
       { url: 'https://archive.org/download/aporee_13977_16297/bambino.mp3#voima=0.36',
         nimi: 'Vuohilauma ja paimenten huudot, Geraci Siculo — hatoriyumi, public domain' },
-      { url: 'https://archive.org/download/aporee_61268_70466/AMBRoccazzelleSicilybeachpeoplewavesaugust.mp3#voima=3.23',
-        nimi: 'Roccazzellen ranta — Andrea Gianessi, CC BY-NC-SA' },
     ],
     ateena: [
       { url: 'https://archive.org/download/aporee_30592_35195/hackny.mp3#voima=0.46',
@@ -864,9 +881,21 @@ export const KAUPUNKI_EHDOKKAAT = {
       { url: 'https://archive.org/download/aporee_59836_68692/wallsofdubrovnik.mp3#voima=2.42',
         nimi: 'Dubrovnikin muurit — Roberto Vodanović Čopor, public domain' },
     ],
+    /*
+     * Sarajevo (omistaja 3.9.2026): *"sarajevon taustaäänimaisema pitää
+     * vaihtaa koska siinä kilkattaa kokoajan kirkonkello"*. Aiempi
+     * äänite (aporee_72320_84455, Pyhän Joosefin kirkon kellot) oli
+     * nimetty Baščaršijaksi, mutta se on kolme minuuttia kellonsoittoa.
+     * Tilalla saman tallentajan kaksi äänitettä samasta vanhasta
+     * kaupungista: Ferhadija-kadun kävelykadun hälinä ja Gazi
+     * Husrev-begin moskeijan edustan suihkulähde. Voimat mitattu
+     * tools/mittaa-aanet.mjs:n kaavalla (−31,3 ja −33,9 LUFS).
+     */
     sarajevo: [
-      { url: 'https://archive.org/download/aporee_72320_84455/stjosephchurchsarajevo.mp3#voima=0.33',
-        nimi: 'Baščaršijan äänimaisema — Haris Sahačić, public domain' },
+      { url: 'https://archive.org/download/aporee_72317_84452/bianuralsoundwalksarajevoferhadijastreet.mp3#voima=0.77',
+        nimi: 'Ferhadija-kadun kävelykatu — Haris Sahačić, public domain' },
+      { url: 'https://archive.org/download/aporee_72314_84448/soundoftheshadrvaninfrontofthemosque.mp3#voima=1.11',
+        nimi: 'Suihkulähde Gazi Husrev-begin moskeijan edustalla — Haris Sahačić, public domain' },
     ],
     sofia: [
       { url: 'https://archive.org/download/aporee_15487_18036/LS111000kopor.mp3#voima=0.17',
@@ -950,8 +979,8 @@ export const KAUPUNKI_EHDOKKAAT = {
         nimi: 'Åboulevardin liikenne myöhään illalla — Adi W, CC BY-SA' },
     ],
     lappi: [
-      { url: 'https://archive.org/download/aporee_32161_36945/patrickmcginley20160505kemijokibridge.mp3#voima=0.22',
-        nimi: 'Kemijoen ranta sillan alla, Rovaniemi — patrick mcginley, CC BY-NC-SA' },
+      { url: 'https://archive.org/download/aporee_49673_56640/torinranta.mp3#voima=0.56',
+        nimi: 'Torinranta perjantai-iltana, Oulu — dthundr, public domain' },
     ],
     tromssa: [
       { url: 'https://archive.org/download/aporee_65563_75724/Harbour20241014174716.mp3#voima=0.82',
@@ -962,8 +991,6 @@ export const KAUPUNKI_EHDOKKAAT = {
     islanti: [
       { url: 'https://archive.org/download/aporee_1475_2022/neoscenes0924074birdstreet2is.mp3#voima=0.24',
         nimi: 'Lintu kadun varrella — John Hopkins, CC BY-SA' },
-      { url: 'https://archive.org/download/aporee_61946_71274/231021Trollafoss.mp3#voima=0.18',
-        nimi: 'Tröllafossin vesiputous — john grzinich, CC BY-NC-ND' },
     ],
   },
 };
@@ -1024,12 +1051,13 @@ export function kaupunkiKori(lauta, cityId) {
   try {
     const kaikki = JSON.parse(localStorage.getItem(KAUPUNKIKORI_AVAIN) ?? '{}');
     const lista = kaikki[lauta]?.[cityId];
-    if (Array.isArray(lista)) return lista.filter(Boolean);
+    if (Array.isArray(lista)) return lista.filter(Boolean).filter(aaniSallittu);
   } catch {
     /* yksityinen selaustila — oletus kelpaa */
   }
   return (laudanKaupungit(lauta)[cityId] ?? [])
-    .map((e) => (e.alku ? `${e.url}#alku=${e.alku}` : e.url));
+    .map((e) => (e.alku ? `${e.url}#alku=${e.alku}` : e.url))
+    .filter(aaniSallittu);
 }
 
 /**
@@ -1053,7 +1081,7 @@ export function maaKori(lauta, cityId, cityCountry) {
     if (muu === cityId || cityCountry[muu] !== iso) continue;
     for (const e of lista) ulos.push(e.alku ? `${e.url}#alku=${e.alku}` : e.url);
   }
-  return ulos;
+  return ulos.filter(aaniSallittu);
 }
 
 /** Tallentaa yhden kaupungin arvontakorin. Tyhjä lista = tyyppikoriin. */
@@ -1071,6 +1099,8 @@ export function valittuAani(slot) {
   try {
     const arvo = JSON.parse(localStorage.getItem(AVAIN) ?? '{}')[slot] ?? null;
     if (arvo && POISTETUT.has(jaaAlku(arvo).url ?? '')) return null;
+    // Lisenssiportti: NC/ND-valinta ohjataan oletukseen kuten poistettu.
+    if (arvo && !aaniSallittu(arvo)) return null;
     return arvo;
   } catch {
     return null;
@@ -1107,16 +1137,25 @@ export function valitseAani(slot, url) {
 }
 
 // Kertojan tila (omistajan toive, yläpalkin valikko): 'pitka' lukee
-// kaiken kuten ennenkin, 'lyhyt' vain matkakirjan nuoren Foggin
-// osuuden, 'ei' mykistää kertojan mutta jättää muut äänet soimaan
+// kaiken, 'ei' mykistää kertojan mutta jättää muut äänet soimaan
 // (matkakirjan kaiutinnappi yliajaa hetkellisesti). Täysi mykistys on
 // erikseen sound.js:n enabled-tilassa.
+//
+// 'LYHYT' POISTETTU (omistajan päätös 3.9.2026 kortilla): tila ei ollut
+// valikossa enää valittavissa (js/main.js KERTOJA: pitka tai ei), mutta
+// vanha localStorage-arvo olisi yhä katkaissut lentorepliikin ja
+// saapumisluennat ensimmäiseen virkkeeseen. Vanha arvo luetaan
+// täydeksi ja kirjoitetaan yli, jottei kuollut tila jää kummittelemaan.
 const KERTOJA_AVAIN = 'matkakirja-kertoja';
 
 export function kertojaTila() {
   try {
     const t = localStorage.getItem(KERTOJA_AVAIN);
-    return ['ei', 'lyhyt', 'pitka'].includes(t) ? t : 'pitka';
+    if (t === 'lyhyt') {
+      localStorage.setItem(KERTOJA_AVAIN, 'pitka');
+      return 'pitka';
+    }
+    return ['ei', 'pitka'].includes(t) ? t : 'pitka';
   } catch {
     return 'pitka';
   }
@@ -1153,26 +1192,92 @@ export function asetaKertojaTila(tila) {
   ilmoitaAanitila();
 }
 
-// Puheen voimakkuus: yksi yleinen säätö kaikkiin luentoihin (intro,
-// saapumiset, kuuntele-napit) — luentoja ei eritellä (omistajan päätös).
+/*
+ * KOLME ÄÄNEN VOIMAKKUUTTA: LUKIJA, ÄÄNITEHOSTEET JA PULU (omistaja
+ * 11.9.2026 klo 13.30, sanatarkasti: *"ja ääni säätimiin voisi tuoda
+ * mukaan äänitehosteet pulun ja lukijan omat äänen voimakkuus
+ * säätimet"*).
+ *
+ * KOLME ERILLISTÄ AVAINTA, KOLME ERILLISTÄ LIUKUA (päävalikon Äänet).
+ * Jokainen on 0–1 ja jokainen vaikuttaa omaan lajiinsa:
+ *
+ *   lukija       matkakirja-puhevoima (entinen yksi yleinen säätö,
+ *                oletus 0,9): kertojan luennat ja kuuntele-napit
+ *                (js/luenta.js, js/linssipuhe.js, js/ui.js).
+ *   tehosteet    matkakirja-voima-tehosteet (oletus 1): js/sound.js
+ *                masterketju — kaikki tehosteet ja pulun tehosteet.
+ *   pulu         matkakirja-voima-pulu (oletus 1): pulun omat
+ *                puheäänitteet (js/liviapuhe.js soitaLivianAani).
+ *
+ * Nolla on sallittu arvo (täysi hiljaisuus), joten lukemassa ei enää
+ * ole 0,1:n alarajaa — tyhjä tai kelvoton arvo palauttaa oletuksen.
+ * Jokainen asetus ilmoittaa muutoksesta AANITILA_TAPAHTUMAlla, jotta
+ * soiva ääni ja valikon lukema päivittyvät heti.
+ */
 const PUHEVOIMA_AVAIN = 'matkakirja-puhevoima';
+export const TEHOSTEVOIMA_AVAIN = 'matkakirja-voima-tehosteet';
+export const PULUNVOIMA_AVAIN = 'matkakirja-voima-pulu';
 
-export function puheVoima() {
+/** Luettu 0–1; tyhjä, kelvoton tai lukukelvoton avain = oletus. */
+function lueVoima(avain, oletus) {
   try {
-    const arvo = Number(localStorage.getItem(PUHEVOIMA_AVAIN));
-    if (Number.isFinite(arvo) && arvo > 0) return Math.min(1, Math.max(0.1, arvo));
+    const raaka = localStorage.getItem(avain);
+    if (raaka === null || raaka === '') return oletus;
+    const arvo = Number(raaka);
+    if (!Number.isFinite(arvo)) return oletus;
+    return Math.min(1, Math.max(0, arvo));
   } catch {
-    /* yksityinen selaustila — oletus kelpaa */
+    return oletus; // yksityinen selaustila — oletus kelpaa
   }
-  return 0.9;
 }
 
-export function asetaPuheVoima(arvo) {
+/** Tallennus rajoihin 0–1 ja heräte kuuntelijoille. */
+function tallennaVoima(avain, arvo) {
+  const rajattu = Math.min(1, Math.max(0, Number(arvo) || 0));
   try {
-    localStorage.setItem(PUHEVOIMA_AVAIN, String(arvo));
+    localStorage.setItem(avain, String(rajattu));
   } catch {
     /* ei säily */
   }
+  ilmoitaAanitila();
+  return rajattu;
+}
+
+/**
+ * Lukija-liu'un OLETUSASENTO (index.html #voima-lukija value="90").
+ *
+ * Vietiin vakioksi 12.9.2026, kun striimattu lukija (js/puhe.js)
+ * kytkettiin tähän liukuun: sen oma vahvistus on työhuoneen kerroin, ja
+ * liuku kertoo siihen SUHTEENSA oletusasentoon. Ilman tätä lukua
+ * kytkentä olisi muuttanut lukijan oletustason, ja juuri sitä ei saa
+ * tapahtua — liu'un piti alkaa toimia, ei pelin kuulostaa toiselta.
+ */
+export const PUHEVOIMA_OLETUS = 0.9;
+
+export function puheVoima() {
+  return lueVoima(PUHEVOIMA_AVAIN, PUHEVOIMA_OLETUS);
+}
+
+export function asetaPuheVoima(arvo) {
+  return tallennaVoima(PUHEVOIMA_AVAIN, arvo);
+}
+
+/** Äänitehosteiden voimakkuus (js/sound.js masterketju). */
+export function tehosteVoima() {
+  return lueVoima(TEHOSTEVOIMA_AVAIN, 1);
+}
+
+export function asetaTehosteVoima(arvo) {
+  return tallennaVoima(TEHOSTEVOIMA_AVAIN, arvo);
+}
+
+/** Pulun puheäänitteiden voimakkuus (js/liviapuhe.js). */
+export function pulunVoima() {
+  return lueVoima(PULUNVOIMA_AVAIN, 1);
+}
+
+export function asetaPulunVoima(arvo) {
+  return tallennaVoima(PULUNVOIMA_AVAIN, arvo);
 }
 
 /** Kaikki valinnat kerralla (Kopioi valinnat -nappia varten). */

@@ -1,0 +1,163 @@
+{
+  "versio": 2,
+  "kaupunki": "lissabon",
+  "teksti": "Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.",
+  "tekstiSha256": "679364484f7277d51631beb57eddd3bf0295c79a1cff18e21c5acd8a77aa00e3",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-lissabon.mp3",
+    "versio": 2,
+    "tavut": 356981,
+    "sha256": "60286af7d6b3d0b249417c6f042267d699401e9468ac20241983784c19e346e6"
+  },
+  "kesto": 22220,
+  "sanat": [
+    {
+      "sana": "Lissabonin",
+      "alku": 100,
+      "loppu": 660
+    },
+    {
+      "sana": "Carmon",
+      "alku": 780,
+      "loppu": 1220
+    },
+    {
+      "sana": "kirkon",
+      "alku": 1300,
+      "loppu": 1740
+    },
+    {
+      "sana": "katto",
+      "alku": 1800,
+      "loppu": 2260
+    },
+    {
+      "sana": "oli",
+      "alku": 2560,
+      "loppu": 2700
+    },
+    {
+      "sana": "sortunut",
+      "alku": 2760,
+      "loppu": 3280
+    },
+    {
+      "sana": "vuoden",
+      "alku": 3420,
+      "loppu": 3700
+    },
+    {
+      "sana": "1755",
+      "alku": 3960,
+      "loppu": 5860
+    },
+    {
+      "sana": "maanjäristyksessä",
+      "alku": 5920,
+      "loppu": 7060
+    },
+    {
+      "sana": "Rauniot",
+      "alku": 8900,
+      "loppu": 9300
+    },
+    {
+      "sana": "oli",
+      "alku": 9360,
+      "loppu": 9460
+    },
+    {
+      "sana": "säilytetty",
+      "alku": 9520,
+      "loppu": 10060
+    },
+    {
+      "sana": "muistomerkkinä",
+      "alku": 10120,
+      "loppu": 11060
+    },
+    {
+      "sana": "Riisuin",
+      "alku": 12540,
+      "loppu": 12920
+    },
+    {
+      "sana": "ovella",
+      "alku": 12980,
+      "loppu": 13300
+    },
+    {
+      "sana": "hattuni",
+      "alku": 13340,
+      "loppu": 13780
+    },
+    {
+      "sana": "vanhasta",
+      "alku": 13840,
+      "loppu": 14260
+    },
+    {
+      "sana": "tottumuksesta",
+      "alku": 14300,
+      "loppu": 15240
+    },
+    {
+      "sana": "Kun",
+      "alku": 16780,
+      "loppu": 16900
+    },
+    {
+      "sana": "sade",
+      "alku": 16960,
+      "loppu": 17200
+    },
+    {
+      "sana": "alkoi",
+      "alku": 17260,
+      "loppu": 17660
+    },
+    {
+      "sana": "panin",
+      "alku": 17960,
+      "loppu": 18220
+    },
+    {
+      "sana": "sen",
+      "alku": 18260,
+      "loppu": 18400
+    },
+    {
+      "sana": "takaisin",
+      "alku": 18440,
+      "loppu": 19100
+    },
+    {
+      "sana": "Toivoin",
+      "alku": 20360,
+      "loppu": 20820
+    },
+    {
+      "sana": "että",
+      "alku": 20880,
+      "loppu": 21040
+    },
+    {
+      "sana": "tämä",
+      "alku": 21080,
+      "loppu": 21300
+    },
+    {
+      "sana": "ymmärrettäisiin",
+      "alku": 21380,
+      "loppu": 22220
+    }
+  ],
+  "lauseet": [
+    100,
+    8900,
+    12540,
+    16780,
+    20360
+  ],
+  "luotu": "2026-09-23T15:37:26.969Z"
+}

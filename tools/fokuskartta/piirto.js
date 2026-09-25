@@ -363,6 +363,212 @@ function monotoninenRamppi(ankkurit, askel) {
  */
 export const SYVYYS = monotoninenRamppi(SYVYYS_ANKKURIT, 25);
 
+/* ------------------------------------------- värillinen topografia */
+
+/*
+ * KOHDEMAAN VÄRIPALETTI — toinen väriasteikkopari samalle moottorille
+ * (karttauudistus, erä 1; omistaja 13.9.2026: *"Maan korkeuserot
+ * muutetaan varilliseksi ja vedetkin nakyvat sinisena syyvyyserot
+ * huomioiden. … Muiden maiden kartat ja valtion ulkopuoliset vedet ja
+ * meret ennallaan ruskean savyissa."*).
+ *
+ * KAKSI ASTEIKKOA, YKSI MOOTTORI. Yllä olevat ASTEIKKO ja SYVYYS ovat
+ * pelin seepiakartta, ja ne EIVÄT MUUTU tästä erästä pikseliäkään:
+ * jokainen maa maailmassa piirtyy niillä kuten ennenkin. Nämä kaksi
+ * ovat sama asia toisella paletilla, ja moottori valitsee parin
+ * asetuksesta `variPaletti` (tools/fokuskartta/maailmapiirto.js).
+ * Toinen moottori tai toinen piirtopolku olisi juuri se tapa, jolla
+ * seepiakartta ja värikartta ehtivät ajautua eri geometriaan — sama
+ * perustelu kuin sillä, miksi asteikot asuvat ylipäätään tässä
+ * tiedostossa yhtenä kappaleena.
+ *
+ * LUVUT EIVÄT OLE UUSIA. Ne on otettu SANASTA SANAAN pelin omasta
+ * topografialinssistä (tools/tee-reliefikartta.mjs, MAA ja MERI), jotta
+ * kohdemaan värit ovat täsmälleen ne, jotka omistaja on jo nähnyt ja
+ * hyväksynyt linssissä — *"Pohjana pelissa jo oleva korkeuserolinssi"*.
+ * Uutta on vain tarkkuus: linssi on 0,30 px/lautayksikkö, nämä laatat
+ * 7,2 px/lautayksikkö syvimmällä tasolla eli 24-kertaisia.
+ *
+ * MAA: fyysisen kartan perinteinen hypsometria — matala vihreä, korkea
+ * ruskea, korkein valkoinen. Väri EI kerro kasvillisuudesta (Sahara on
+ * vihertävän keltainen, koska se on 300 metrissä).
+ */
+export const VARI_ASTEIKKO = [
+  { m: 0, v: [62, 110, 66] },
+  { m: 150, v: [104, 145, 72] },
+  { m: 400, v: [152, 174, 84] },
+  { m: 800, v: [205, 196, 112] },
+  { m: 1400, v: [208, 170, 100] },
+  { m: 2200, v: [182, 132, 82] },
+  { m: 3200, v: [148, 98, 62] },
+  { m: 4200, v: [152, 112, 84] },
+  { m: 5200, v: [186, 164, 152] },
+  { m: 6000, v: [232, 232, 235] },
+  { m: 7000, v: [255, 255, 255] },
+];
+
+/*
+ * MERI: sama logiikka toisin päin — matala vaalea, syvä tumma. Portaat
+ * ovat merenpohjan omia muotoja eivätkä tasavälein: −200 m on
+ * mannerjalustan reuna, −4000 m valtamerten pohjan yleiskorkeus ja
+ * −6000 m syvänteiden alku.
+ *
+ * RAMPPI SILOTETAAN SAMALLA KUUTIOLLA KUIN SEEPIAN SYVYYS. Ankkurit
+ * ovat linssin omat, mutta linssi näyttää ne 0,30 px/yksikkö
+ * -tarkkuudella, jossa vyöhykeraja on alle pikselin levyinen. Näissä
+ * laatoissa sama raja on 24 kertaa leveämpi, ja lineaaristen jaksojen
+ * liitoskohdat lukisivat juuri sinä renkaana, jonka omistaja tunnisti
+ * bandingiksi 29.8.2026. Fritsch–Carlson kulkee samojen ankkurien
+ * kautta eikä ylitä niitä, joten yksikään väri ei muutu — vain
+ * jaksojen väliset taitteet katoavat.
+ *
+ * ANKKURIT OVAT MONOTONISET kaikilla kolmella kanavalla (176→10,
+ * 214→28, 240→78), joten rannan ulkopuolelle ei synny vaaleaa
+ * rengasta.
+ */
+const VARI_SYVYYS_ANKKURIT = [
+  { m: 0, v: [176, 214, 240] },
+  { m: -200, v: [140, 190, 228] },
+  { m: -1000, v: [100, 155, 208] },
+  { m: -2500, v: [62, 112, 176] },
+  { m: -4000, v: [38, 78, 145] },
+  { m: -6000, v: [22, 50, 112] },
+  { m: -11000, v: [10, 28, 78] },
+];
+
+/** Näyteväli 25 m kuten seepian syvyydellä; 0…−11 000 m = 441 pistettä. */
+export const VARI_SYVYYS = monotoninenRamppi(VARI_SYVYYS_ANKKURIT, 25);
+
+/*
+ * ======== MURRETTU PALETTI (KARTTAUUDISTUKSEN PÄÄTÖKSET 2) =========
+ *
+ * Omistaja 13.9.2026 klo 10.25 UTC: *"kohdemaan korkeuserot seepiaan
+ * sointuvilla MURRETUILLA savyilla (kellertava alanko, ruskehtava
+ * ylanko, harmaanvihrea vuoristo, savunsininen vesi), MUUT MAAT
+ * FEIDATAAN vaaleammiksi; ei taysvaria pelinakymassa"*. Yllä oleva
+ * täysväriasteikko on erän 1 putken oletus, ja se JÄÄ TÄHÄN — mutta
+ * vain vertailukuvia ja topografialinssiä varten (`--paletti
+ * taysvari`). Pelinäkymän laatat ajetaan murretulla.
+ *
+ * MITATTU PERUSTELU (kroma = suurimman ja pienimmän kanavan ero,
+ * L = BT.709-luminanssi; suunnitelman luku 2.3):
+ *
+ *   seepia (peli nyt)   kroma ka. 68,4   H 54° → 12°   L 214 → 80
+ *   täysväri (erä 1)    kroma ka. 77,8   H 125° → 21°  L 97 → 168
+ *   MURRETTU (tämä)     kroma ka. 39,1   H 48° → 83°   L 202 → 116
+ *
+ * Murrettu paletti on siis VÄHEMMÄN KYLLÄINEN KUIN PELIN NYKYINEN
+ * SEEPIAKARTTA (39 vs. 68): se ei voi rikkoa ilmettä värikkyydellä,
+ * vain sävyllä. Uutta on sävykulmien vaihtelu (48° → 83°) eikä
+ * kirkkaus, ja luminanssi laskee monotonisesti lumirajaan asti, joten
+ * korkeuslukema säilyy myös mustavalkona.
+ *
+ * SÄVYKULMAN HYPPY 3200 → 4200 m (33° → 75°) ON TARKOITUKSELLINEN JA
+ * SILMÄLLE HARMAANTUMINEN: kroma putoaa samassa kohdassa 36:sta
+ * 16:een, joten porras lukee värittömyytenä eikä värinvaihtona. Juuri
+ * siinä kohdassa vuoristo alkaa, ja harmaanvihreä on sen sävy.
+ */
+export const VARI_ASTEIKKO_MURRETTU = [
+  { m: 0, v: [214, 203, 158] },      // kellertävä alanko
+  { m: 150, v: [206, 195, 146] },
+  { m: 400, v: [196, 183, 134] },
+  { m: 800, v: [183, 166, 122] },
+  { m: 1400, v: [168, 148, 110] },   // ruskehtava ylänkö
+  { m: 2200, v: [151, 130, 100] },
+  { m: 3200, v: [134, 118, 98] },
+  { m: 4200, v: [114, 118, 102] },   // harmaanvihreä vuoristo
+  { m: 5200, v: [134, 140, 124] },
+  { m: 6000, v: [186, 188, 180] },   // lumi harmaan kautta
+  { m: 7000, v: [214, 214, 208] },
+];
+
+/*
+ * SAVUNSININEN VESI. Ankkurit ovat samat merenpohjan muodot kuin
+ * täysvärillä (−200 m mannerjalustan reuna, −4000 m valtamerten
+ * pohja, −6000 m syvänteiden alku), mutta kroma on 91 → 32: vesi on
+ * savun läpi nähtyä eikä atlaksen sinistä. Kanavat ovat monotonisia
+ * (178→70, 192→84, 196→104), joten rannan ulkopuolelle ei synny
+ * vaaleaa rengasta — sama ehto kuin täysvärillä.
+ */
+const VARI_SYVYYS_MURRETTU_ANKKURIT = [
+  { m: 0, v: [178, 192, 196] },
+  { m: -200, v: [160, 177, 185] },
+  { m: -1000, v: [138, 157, 171] },
+  { m: -2500, v: [116, 136, 154] },
+  { m: -4000, v: [98, 117, 138] },
+  { m: -6000, v: [84, 100, 122] },
+  { m: -11000, v: [70, 84, 104] },
+];
+
+/** Murrettu syvyysramppi samalla 25 m:n näytevälillä. */
+export const VARI_SYVYYS_MURRETTU = monotoninenRamppi(VARI_SYVYYS_MURRETTU_ANKKURIT, 25);
+
+/*
+ * PALETTI ON NIMI, EI KYTKIN (karttauudistus, erä 1b). Asteikkopari ja
+ * veden peittävyys asuvat yhdessä taulussa, jonka sekä generaattori
+ * (`--paletti`, `--vesi`) että moottori lukevat: sävyjen vaihto on
+ * silloin yksi ajon valitsin eikä koodimuutos — täsmälleen se, mitä
+ * omistaja tilasi (*"vaihto = asteikon muutos + laattojen uusi ajo,
+ * ei koodimuutos"*).
+ *
+ * VEDEN PEITTÄVYYS ON PALETIN OMINAISUUS. Täysvärin 0,9 litistää
+ * murretun syvyyden, koska murrettu sininen on jo vaalea ja vähän
+ * kylläinen: paperin rae ei enää näy läpi eikä laatta lue painetuksi.
+ * 0,72 on murretun oletus, ja se on MITATTU pilottikuvasta eikä
+ * päätetty paperilla (kolme vaihtoehtoa omistajalle: 0,60 · 0,72 ·
+ * 0,85).
+ */
+/*
+ * === KERMA: TASOITUSKERROKSEN VÄRI (karttauudistus, erä 1c) =========
+ *
+ * Omistaja 13.9.2026 klo 14.10 UTC, nähtyään erän 1b kolme
+ * vaihtoehtokuvaa, sanatarkasti: *"Jätä ranska alkuperäiseen. Kaikki
+ * muut ihan kamalia. Poistetaan muista maista korkeus erot kokonaan
+ * tai lähes kokonaan."* Feidausväriksi omistaja valitsi kysymyskortilla
+ * *"Kerma, paperia vaaleampi"* (Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 4).
+ *
+ * MIKSI PAPERI EI KELPAA FEIDAUSVÄRIKSI. Erän 1b raportti (luku 7.2)
+ * mittasi sen: feidaus vetää naapurin sävyä kohti feidausväriä, ja
+ * missä naapurin seepia on JO paperia vaaleampi — Belgian alanko
+ * rgb(246,243,204) vs. paperi rgb(232,220,188) — paperinsävy
+ * TUMMENTAA pikseliä. Tasoituskerroksen on vaalennettava joka kohdassa,
+ * myös tasaisilla alangoilla, tai kohdemaa ei eroa naapuristaan.
+ *
+ * MIKSI JUURI (250,244,214) EIKÄ ERÄN 1b EHDOTTAMA (246,237,198).
+ * Laskettu ehdosta "naapurit selvästi vaaleampia kuin Ranska":
+ * peitolla 0,85 naapurin seepiasta jää läpi 15 %, joten tulos on
+ * 0,15·A + 0,85·kerma. Ranskan alanko on mitattu rgb(241,232,184)
+ * (erän 1b luku 4.1, vaihe A). Kermalla (246,237,198) tyypillinen
+ * naapuripikseli (220,205,165) päätyy arvoon (242,232,193) — samaan
+ * kirkkauteen kuin Ranska, eli ero katoaa. Kermalla (250,244,214) sama
+ * pikseli on (246,238,207), joka on Ranskan alangosta selvästi
+ * vaaleampi (ΔL noin +11) mutta jättää rantaviivan musteesta yhä
+ * 15 % kontrastia eli hennon mutta luettavan viivan.
+ *
+ * Tämä on RAKENNUSAIKAINEN LUKU: vaihto on yksi ajon valitsin
+ * (`--kerma`) ja laattojen uusi ajo, ei koodimuutos.
+ */
+export const KERMA = '#faf4d6';
+
+export const VARIPALETIT = {
+  taysvari: { asteikko: VARI_ASTEIKKO, syvyys: VARI_SYVYYS, vesi: 0.9 },
+  murrettu: { asteikko: VARI_ASTEIKKO_MURRETTU, syvyys: VARI_SYVYYS_MURRETTU, vesi: 0.72 },
+  /*
+   * TASOITUS EI OLE ASTEIKKO VAAN SEN PUUTTUMINEN. Kohdemaa jää
+   * alkuperäiseksi seepiareliefiksi (laatan alfa 0), ja kaikki muu saa
+   * kerma-peiton, joka häivyttää reliefin lähes kokonaan. Siksi tässä
+   * paletissa ei ole `asteikko`- eikä `syvyys`-kenttää: sillä ei ole
+   * maastoa piirrettävänä. `peitto` on feidauksen alfa laatikon
+   * sisällä (oletus 0,85 = 85 % kermaa, 15 % alkuperäistä reliefiä).
+   */
+  tasoitus: { tasoitus: true, peitto: 0.85, vari: KERMA },
+};
+
+/** Paletin nimi → asteikkopari ja veden peittävyys; tuntematon → null. */
+export function variPaletista(nimi) {
+  return VARIPALETIT[nimi] ?? null;
+}
+
 export const PAPERI = '#e8dcbc';
 export const MUSTE = '#4a3421';
 
@@ -441,12 +647,20 @@ export function lerpVari(asteikko, m) {
   return asteikko[asteikko.length - 1].v;
 }
 
-/** Sama LASKEVALLE asteikolle: syvyys menee nollasta alaspäin. */
-export function lerpSyvyys(m) {
-  if (m >= 0) return SYVYYS[0].v;
-  for (let i = 1; i < SYVYYS.length; i++) {
-    if (m >= SYVYYS[i].m) {
-      const a = SYVYYS[i - 1]; const b = SYVYYS[i];
+/**
+ * Sama LASKEVALLE asteikolle: syvyys menee nollasta alaspäin.
+ *
+ * ASTEIKKO ON PARAMETRI, KOSKA NIITÄ ON KAKSI (karttauudistus, erä 1).
+ * Seepiakartan SYVYYS ja kohdemaan VARI_SYVYYS ovat sama taulukkomuoto
+ * ja sama haku; kopioitu silmukka olisi juuri se paikka, jossa toinen
+ * paletti ehtisi saada oman pyöristyksensä. `lerpSyvyys` säilyy
+ * entisellään, jotta yksikään vanha kutsuja ei muutu.
+ */
+export function lerpSyvyysAsteikolla(asteikko, m) {
+  if (m >= 0) return asteikko[0].v;
+  for (let i = 1; i < asteikko.length; i++) {
+    if (m >= asteikko[i].m) {
+      const a = asteikko[i - 1]; const b = asteikko[i];
       const t = (m - a.m) / (b.m - a.m);
       return [
         a.v[0] + (b.v[0] - a.v[0]) * t,
@@ -455,7 +669,12 @@ export function lerpSyvyys(m) {
       ];
     }
   }
-  return SYVYYS[SYVYYS.length - 1].v;
+  return asteikko[asteikko.length - 1].v;
+}
+
+/** Seepiakartan syvyyssävy — entinen rajapinta, entinen tulos. */
+export function lerpSyvyys(m) {
+  return lerpSyvyysAsteikolla(SYVYYS, m);
 }
 
 /* -------------------------------------------------------- projektiot */

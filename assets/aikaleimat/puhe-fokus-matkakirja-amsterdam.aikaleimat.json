@@ -1,0 +1,198 @@
+{
+  "versio": 2,
+  "kaupunki": "amsterdam",
+  "teksti": "Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.",
+  "tekstiSha256": "1413b21f7c0fa9a45f29e0e60cd691e4e5ec666ef3c35b688d7e720138c7db31",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-amsterdam.mp3",
+    "versio": 2,
+    "tavut": 382476,
+    "sha256": "e4c08e02304904724f8b119cfdd1fafccdcf39666f9560339590a4678279138c"
+  },
+  "kesto": 23820,
+  "sanat": [
+    {
+      "sana": "Amsterdamin",
+      "alku": 220,
+      "loppu": 820
+    },
+    {
+      "sana": "kanavatalon",
+      "alku": 860,
+      "loppu": 1480
+    },
+    {
+      "sana": "ullakolta",
+      "alku": 1580,
+      "loppu": 2360
+    },
+    {
+      "sana": "löysin",
+      "alku": 2440,
+      "loppu": 2760
+    },
+    {
+      "sana": "kokonaisen",
+      "alku": 2800,
+      "loppu": 3380
+    },
+    {
+      "sana": "kirkon",
+      "alku": 3440,
+      "loppu": 3980
+    },
+    {
+      "sana": "urkuineen",
+      "alku": 4080,
+      "loppu": 4880
+    },
+    {
+      "sana": "Se",
+      "alku": 6200,
+      "loppu": 6220
+    },
+    {
+      "sana": "oli",
+      "alku": 6260,
+      "loppu": 6380
+    },
+    {
+      "sana": "rakennettu",
+      "alku": 6440,
+      "loppu": 6960
+    },
+    {
+      "sana": "aikana",
+      "alku": 7060,
+      "loppu": 7400
+    },
+    {
+      "sana": "jolloin",
+      "alku": 7480,
+      "loppu": 7880
+    },
+    {
+      "sana": "katoliset",
+      "alku": 7920,
+      "loppu": 8480
+    },
+    {
+      "sana": "eivät",
+      "alku": 8520,
+      "loppu": 8760
+    },
+    {
+      "sana": "saaneet",
+      "alku": 8820,
+      "loppu": 9200
+    },
+    {
+      "sana": "pitää",
+      "alku": 9260,
+      "loppu": 9560
+    },
+    {
+      "sana": "messua",
+      "alku": 9620,
+      "loppu": 10040
+    },
+    {
+      "sana": "julkisesti",
+      "alku": 10100,
+      "loppu": 10860
+    },
+    {
+      "sana": "Kysyin",
+      "alku": 12400,
+      "loppu": 12780
+    },
+    {
+      "sana": "papilta",
+      "alku": 12820,
+      "loppu": 13240
+    },
+    {
+      "sana": "kuiskaten",
+      "alku": 13300,
+      "loppu": 13900
+    },
+    {
+      "sana": "tiesivätkö",
+      "alku": 14260,
+      "loppu": 14820
+    },
+    {
+      "sana": "viranomaiset",
+      "alku": 14860,
+      "loppu": 15640
+    },
+    {
+      "sana": "Olivat",
+      "alku": 17400,
+      "loppu": 17700
+    },
+    {
+      "sana": "tienneet",
+      "alku": 17760,
+      "loppu": 18180
+    },
+    {
+      "sana": "jo",
+      "alku": 18200,
+      "loppu": 18280
+    },
+    {
+      "sana": "kauan",
+      "alku": 18340,
+      "loppu": 18860
+    },
+    {
+      "sana": "Sitten",
+      "alku": 20380,
+      "loppu": 20760
+    },
+    {
+      "sana": "urut",
+      "alku": 20860,
+      "loppu": 21120
+    },
+    {
+      "sana": "alkoivat",
+      "alku": 21200,
+      "loppu": 21660
+    },
+    {
+      "sana": "soida",
+      "alku": 21720,
+      "loppu": 21980
+    },
+    {
+      "sana": "niin",
+      "alku": 22100,
+      "loppu": 22320
+    },
+    {
+      "sana": "että",
+      "alku": 22720,
+      "loppu": 22960
+    },
+    {
+      "sana": "penkki",
+      "alku": 23020,
+      "loppu": 23460
+    },
+    {
+      "sana": "värisi",
+      "alku": 23500,
+      "loppu": 23820
+    }
+  ],
+  "lauseet": [
+    220,
+    6200,
+    12400,
+    17400,
+    20380
+  ],
+  "luotu": "2026-09-23T15:37:18.085Z"
+}

@@ -72,9 +72,13 @@
  * jonotetaan" tekstiä (js/packs/kulttuuri-kategoriat.js). Uusia
  * faktaväitteitä ei ole kummassakaan.
  *
- * MIKSI EI SUMUKYSYMYSTÄ: kaupungin laattakysymys koskee sumua (ks.
- * KOHTAAMINEN alempana). Jos lehden aarteen avaava tehtävä kysyisi
- * samasta sumusta, kysymys olisi ratkaistu ennen kuin Ned on tavattu.
+ * MIKSI EI SAVUKYSYMYSTÄ (Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10):
+ * kaupungin laattakysymys koskee savua ja vuoden 1956 Clean Air Actia
+ * (ks. KOHTAAMINEN alempana). Jos lehden aarteen avaava tehtävä kysyisi
+ * samasta savusta, kysymys olisi ratkaistu ennen kuin Leila on tavattu.
+ * Sama rajaus kuin ennen — vain kysymyksen aikakausi vaihtui, kun
+ * kaaren visa siirtyi vuoden 1873 sumusta sen loppuun johtaneeseen
+ * lakiin.
  */
 const JALUSTA_VISA = {
   kysymys: 'Trafalgar Squaren luoteiskulman jalusta jäi 1841 tyhjäksi, '
@@ -123,53 +127,155 @@ export const FOKUSVIRTA_LONTOO = {
      * Alpeille ja sallii sille vain 1–2 paluuta, ja paluu on käytetty
      * Wienissä (js/packs/fokusvirta-wien.js paikkarivi).
      */
-    paikkarivi: 'Lontoo, joulukuussa 1873. Sumu niin sakea, ettei kadun '
-      + 'toista puolta erota.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Lontoossa sumu syö äänet ja kaupunki puhuu silti. Kirjasin '
-      + 'ensimmäiselle sivulle säännön, jonka annan sinullekin: älä usko '
-      + 'ketään, joka väittää, ettei aarteita ole. Piirsin kulmaan pienen '
-      + 'ristin liidulla — merkiksi itselleni, että tarkoitan sitä.',
-    luenta: '[curious] Lontoossa sumu syö äänet ja kaupunki puhuu silti. '
-      + '[softly] Kirjasin ensimmäiselle sivulle säännön, jonka annan '
-      + 'sinullekin: älä usko ketään, joka väittää, ettei aarteita ole. '
-      + '[whispers] Piirsin kulmaan pienen ristin liidulla — merkiksi '
-      + 'itselleni, että tarkoitan sitä.',
+    paikkarivi: "Lontoo, joulukuussa 1873. Sumu niin sakea, ettei kadun toista puolta erota; puntari matalalla.",
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 328 merkkiä (yläraja 400). */
+    teksti: "Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.",
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: ei erikseen hiljaisia osuuksia (jokainen virke
+     * saa reaktion).
+     */
+    reaktiot: [
+  {
+    "id": "lontoo.r1",
+    "ankkuri": "höyryveturi pantiin maan alle ja matkustajat sen savuun",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "lontoo.r2",
+    "ankkuri": "katosi välillä näkyvistä",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "lontoo.r3",
+    "ankkuri": "pehmustettuja penkkejä",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "lontoo.r4",
+    "ankkuri": "herra Grimshaw’n, kilpakumppanini aarrejahdissa",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "lontoo.r5",
+    "ankkuri": "Palautuksesta emme sopineet",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. [warmly] Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-lontoo.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-lontoo-story-v2.jpg;
+     * omistajan hyväksymä tarinakorjaus ISOISA-TARINAKORJAUKSET-4, promptId
+     * ISOISA-TARINA-V2-lontoo). Kuvatekstit tekstisession sanasta sanaan: lyhyt
+     * kartalle, pitkä suurennokseen. Lähde on pelin oma havainnekuvamerkintä;
+     * lahteet on toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lontoo-story-v2.jpg',
+      lyhyt: 'Lontoo, 1873. Vastapäinen herra pysyi lehden puolella savustakin.',
+      selite: 'Metropolitanin maanalaista junaa veti höyryveturi, ja vastapäinen herra jatkoi lehtensä lukemista hiilensavussa. Kumpikaan meistä ei näyttänyt pitävän yskää syynä keskeyttää työtään.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://www.ltmuseum.co.uk/collections/stories/transport/metropolitan-line',
+        'https://collection.sciencemuseumgroup.org.uk/objects/co8031819/henry-flather-collection-photographs',
+        'https://www.heritagefund.org.uk/news/worlds-oldest-known-underground-carriage-be-restored',
+      ],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lontoo-r20260911-paper2-v1.jpg",
+      lyhyt: "Lontoo, 1873. Perille päästiin nopeasti; yskä astui laiturille mukana.",
+      selite: 'Metropolitanin höyryjuna jäi puhkumaan laiturille, ja savu seurasi matkustajia kaasulamppujen alle. Matka oli nopea, mutta keuhkot tahtoivat antaa oman lausuntonsa.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.ltmuseum.co.uk/collections/stories/transport/metropolitan-line","https://library.ltmuseum.co.uk/portal/Default/en-GB/RecordView/Index/97","https://library.ltmuseum.co.uk/portal/Default/en-GB/RecordView/Index/33362"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
+  /*
+   * PULU-CAM: PULUN NYKYAJAN KUVAT (vapaaehtoinen kenttä `pollo.kuvat`,
+   * omistaja 9.9.2026, Raamattu "PULU-CAM: PULUN NYKYAJAN KUVAT PAKKANA
+   * ISOISAN KUVAN PAALLE, YHTEINEN KARUSELLI").
+   *
+   * Kaupungilla voi olla 1–3 pulun nykyajan värivalokuvaa (pulun silmien
+   * tasolta, laajakulma). Ne nousevat kartalla isoisän luentakuvan PÄÄLLE
+   * pakaksi silloin, kun pulun kommenttikupla alkaa, ja päällimmäisen
+   * napautus avaa yhteisen karusellin (isoisän kuva ensin, sitten pulun
+   * kuvat toimituksen järjestyksessä). Kenttä on TOIMITUKSEN JÄRJESTYS:
+   * lista latautuu ja pulpahtaa siinä järjestyksessä kuin se on kirjoitettu.
+   *
+   *   kuvat: [
+   *     {
+   *       // Osoite ratkeaa samalla porrastuksella kuin luentakuvalla ja
+   *       // pollo.kuvalla: osoite → ampari → Commonsin tiedosto.
+   *       osoite: 'https://media.matkakirja.app/pulucam/…jpg',
+   *       lyhyt: 'Yksi virke kartalle.',
+   *       selite: 'Pidempi kuvateksti karuselliin.',
+   *       lahde: 'Pulun kamera',           // CC BY vaatii maininnan
+   *       lahteet: ['https://…'],          // toimituksen tausta-aineisto
+   *     },
+   *   ],
+   *
+   * PULU-CAM-merkki (piirretty selfie + teksti "PULU-CAM") on
+   * käyttöliittymän elementti eikä kuuluu kuvatiedostoon: merkkiä EI
+   * polteta kuvaan (js/pulucam.js puluCamMerkki).
+   *
+   * EI DATAA TÄSSÄ ERÄSSÄ. Kokeiluerä (Lontoo 1, Pariisi 1, Venetsia 3)
+   * tulee kuvatoimitukselta omistajan arvioon; ilman kenttää kaupungin
+   * kulku on täsmälleen ennallaan.
+   */
   pollo: {
     /*
-     * LIVIAN MAADOITUS — VÄLITTÄJÄOTE (Raamattu, "LIVIA AIKASIIRTYMÄN
-     * VÄLITTÄJÄNÄ — PARIPERIAATE"). Merkintä ei ole synkkä vaan luja:
-     * isoisä antaa säännön ja vannoo sen liidulla. Livia ei siis
-     * pehmennä vaan asettuu säännön puolelle — ja ottaa aikaeron
-     * hoitaakseen faktalla.
-     *
-     * FAKTAKURI: kolme väitettä, kaikki tarkistettavia. (1) Lontoon
-     * sumu oli kivihiilen savua (js/packs/maa-kategoriat.js, GBR/
-     * luonto, "Sumu, joka ei ollutkaan sumua"). (2) Pahin savusumu
-     * alkoi 5.12.1952 ja neljä vuotta myöhemmin säädettiin laki, jonka
-     * nojalla kaupunginosia voitiin määrätä savuttomiksi (sama nosto).
-     * (3) Joulukuusta 1873 on yli sataviisikymmentä vuotta.
-     *
-     * ISOISÄ OSOITTAUTUU OIKEAKSI, ja se on tässä tarkoitus:
-     * tests/fokusvirta.test.mjs vaatii, että ainakin yhdessä
-     * kaupungissa Livia myöntää isoisän olleen oikeassa — Lontoo on
-     * paras paikka siihen, koska merkintä on nimenomaan uskomisesta.
-     *
-     * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kääk", "Mut"),
-     * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-lontoo-01-r20260909-paikka-v2.jpg.
      */
-    maadoitus: 'Kääk. Sumu, joka syö äänet — meidän suku ei sellaisesta '
-      + 'pidä, kirjettä ei kanneta korva edellä. Ja isoisäsi oli '
-      + 'oikeassa siinä, mitä hän nenällään haistoi: se ei ollut säätä '
-      + 'vaan kivihiilen savua. Siitä joulukuusta on yli '
-      + 'sataviisikymmentä vuotta. Pahin savusumu tuli vasta 1952, ja '
-      + 'neljä vuotta myöhemmin säädettiin laki, jolla kaupunginosia '
-      + 'voitiin määrätä savuttomiksi. Siitä liiturististä ei ole '
-      + 'jäljellä mitään. Mut sen säännön minä kyllä pidän.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-lontoo-01-r20260909-paikka-v2.jpg',
+        lyhyt: 'Lontoo: parlamentti jäi taustalle, sillä penkillä oli tärkeämpää.',
+        selite: 'Thamesin rantapenkiltä näkyvät parlamentti ja Elizabeth Tower, mutta nokkani edessä oleva muru ei löydy yhdeltäkään kartalta. Isoisä valitsi maanalaisen vaunun; tässä on parempi ilmanvaihto ja oma tarjoilu.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://southbank.london/see-and-do/queens-walk',
+          'https://www.parliament.uk/about/living-heritage/building/palace-westmister-at-150/external-architecture-/',
+          'https://commons.wikimedia.org/wiki/File:London_-_Albert_Embankment_path_-_Lambeth_Palace_Road_-_South_Bank_-_Jubilee_Walkway_-_Panorama_view_on_Victoria_Tower_Gardens,_Houses_of_Parliament,_Westminster_Bridge_%26_Saint_Thomas_Medical_School_01.jpg',
+          'https://commons.wikimedia.org/wiki/File:London_-_Albert_Embankment_path_-_Lambeth_Palace_Road_-_South_Bank_-_Jubilee_Walkway_-_View_North_along_St_Thomas%27_Hospital.jpg',
+          'https://memoirsofametrogirl.com/2015/01/13/swan-benches-albert-embankment-lambeth-london-history/',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Nyt metron junat kulkevat sähköllä. Minä pysyttelen mieluummin Thamesin yllä: näen, kuka tulee perässä. Kerran tarkistin saman varjon kolmesti. Omahan se oli."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ylpea', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (Westminsterin palatsi).
      * Faktat ovat lehden oman avauskuvan selitteestä (js/packs/
@@ -186,6 +292,7 @@ export const FOKUSVIRTA_LONTOO = {
       + 'kolmentoista ja puolen tonnin kello. Katso ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-lontoo-westminster-thames.jpg',
+      lyhyt: 'Westminsterin palatsi rakennettiin uudelleen 1834 palon jälkeen; Big Ben on lyönyt vuodesta 1859.',
       selite: 'Westminsterin palatsi rakennettiin uudelleen vuoden 1834 '
         + 'palon jälkeen, ja sen kellotornin Big Ben on lyönyt tunteja '
         + 'vuodesta 1859.',
@@ -197,10 +304,13 @@ export const FOKUSVIRTA_LONTOO = {
   takyt: [
     {
       /*
-       * MIKSI TÄMÄ TÄKY: kohtaamisen hahmo on jokilöytäjä Ned, ja
-       * tämä on hänen työnsä. Täky on myös aarremerkinnän vastapari —
-       * merkintä kertoo vuorovedestä, joka hautaa, tämä täky
-       * vuorovedestä, joka paljastaa.
+       * MIKSI TÄMÄ TÄKY (Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10): täky
+       * kytkeytyi ennen kohtaamisen hahmoon, jokilöytäjä Nediin. Hahmo
+       * vaihtui Leilaksi (js/tyohuone-kehitys-data.js, KAARI_PAKETIT
+       * 'lontoo'), mutta täky JÄÄ paikalleen: se on yhä
+       * aarremerkinnän vastapari — merkintä kertoo vuorovedestä, joka
+       * hautaa, tämä täky vuorovedestä, joka paljastaa. Mudlarkit ovat
+       * kaupungin oma ilmiö eivätkä yhden hahmon omaisuutta.
        *
        * FAKTAT: js/packs/maa-kategoriat.js, GBR/luonto, nosto "Joki,
        * joka laskee joka päivä" (jo hyväksyttyä pelidataa) —
@@ -228,6 +338,8 @@ export const FOKUSVIRTA_LONTOO = {
         + 'mutta lupia jaetaan enintään 4 000. Yli kolmesataa vuotta '
         + 'vanhat löydöt on ilmoitettava Lontoon museolle — joki antaa, '
         + 'mutta se mitä se antaa, ei aina jää löytäjälle.',
+      lahde: 'pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
+        + '(GBR/luonto). Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 5184×3456, CC BY 2.0, Tim Sheerman-Chase,
        * kuvattu 23.9.2023, kuvaus "Mudlarks by Millennium Bridge".
@@ -288,6 +400,8 @@ export const FOKUSVIRTA_LONTOO = {
         + '1876 puistosta lähetettiin kuusipeuroja laivalla '
         + 'Uuteen-Seelantiin, ja ne olivat koko maan ensimmäiset '
         + 'kuusipeurat.',
+      lahde: 'pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
+        + '(GBR/luonto). Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1600×1430, CC BY-SA 2.0, Russel Wills,
        * kuvattu 5.10.2013, kuvaus "Red deer stag roaring in Richmond
@@ -297,6 +411,7 @@ export const FOKUSVIRTA_LONTOO = {
        */
       kuva: {
         tiedosto: 'Red deer stag roaring in Richmond Park - geograph.org.uk - 3711560.jpg',
+        lyhyt: 'Saksanhirven uros karjuu Richmond Parkissa kiima-aikaan; aidatussa laumassa noin 630 eläintä.',
         selite: 'Saksanhirven uros karjuu Richmond Parkissa kiima-aikaan '
           + 'syksyllä. Aidatun puiston laumassa on noin 630 eläintä.',
         lahde: 'Russel Wills, Wikimedia Commons (CC BY-SA 2.0)',
@@ -320,8 +435,10 @@ export const FOKUSVIRTA_LONTOO = {
        * MIKSI TÄMÄ TÄKY: isoisän sääntö on "älä usko ketään, joka
        * väittää, ettei aarteita ole". Tämä on Lontoon oma todiste —
        * kellarista kaivettu laatikko, jota kukaan ei osannut odottaa.
-       * Sattumalta myös kellotarina: aarteen omituisin esine on kello,
-       * ja Nedin löytö kaaressa on taskukello.
+       * Sattumalta myös kellotarina: aarteen omituisin esine on kello.
+       * (Uudistus 5.9.2026: rivin toinen puolisko viittasi Nedin
+       * taskukelloon, joka poistui kaaresta — kytkös on nyt vain
+       * kätkettyyn laatikkoon, ja se riittää.)
        *
        * FAKTAT (EI PELIDATASSA — tarkistettu 29.8.2026 kahdesta
        * riippumattomasta lähteestä):
@@ -363,6 +480,7 @@ export const FOKUSVIRTA_LONTOO = {
         + 'ollut talo paloi Lontoon suurpalossa syyskuussa 1666. Jossain '
         + 'noiden kahden päivän välissä joku kaivoi laatikon lattiaansa '
         + 'eikä koskaan palannut hakemaan sitä.',
+      lahde: 'en-Wikipedia "Cheapside Hoard". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4252×2329, CC0, Vassil, kuvattu 11.4.2019,
        * kuvaus "Necklace with interlinking lovers knots, gold with
@@ -396,9 +514,26 @@ export const FOKUSVIRTA_LONTOO = {
   /*
    * ---------- 4. Oppitunti ----------
    * Pohjustaa kohtaamisen laattakysymyksen (js/tyohuone-kehitys-data.js
-   * KAARI_PAKETIT, lontoo): mistä isoisän sumu oikeasti syntyi.
-   * Visasääntö täyttyy — vastaus on tekstissä, mutta kysymyksen
-   * sanamuoto ei toistu siinä sellaisenaan.
+   * KAARI_PAKETIT, lontoo). Visasääntö täyttyy — vastaus on tekstissä,
+   * mutta kysymyksen sanamuoto ei toistu siinä sellaisenaan.
+   *
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10: OPPITUNTIIN ON LISÄTTY VIIMEINEN
+   * KAPPALE vuoden 1956 Clean Air Actista, koska kaaren kysymys vaihtui
+   * sumun synnystä sen loppuun johtaneeseen lakiin (Fablen päätös
+   * 5.9.2026 klo 19:05 UTC: *"Kysymys … nousee Leilan puheesta ja
+   * oppitunnista"*). Vanha osuus — mistä sumu oli tehty ja mitä se
+   * teki — jää sanatarkasti ennalleen, koska se on yhä merkinnän oma
+   * vastapari. Kappale EI kirjoita vastausvaihtoehdon sanamuotoa
+   * ("rakennusten ja tulisijojen savupäästöihin") tekstiin.
+   *
+   * LISÄKAPPALEEN FAKTAT: Clean Air Act 1956 (legislation.gov.uk,
+   * ukpga/1956/52 — tumman savun kielto piipusta ja savuttomiksi
+   * määrättävät alueet; kuvaputken faktantarkistuksen tarkistama lähde
+   * 5.9.2026) sekä pelin oma tarkistettu aineisto js/packs/
+   * maa-kategoriat.js, GBR/luonto, nosto "Sumu, joka ei ollutkaan
+   * sumua" (savusumu alkoi 5.12.1952; neljä vuotta myöhemmin säädettiin
+   * laki, jonka nojalla kaupunginosia voitiin määrätä savuttomiksi).
+   * Teksti ei väitä ilmansaasteen kadonneen.
    *
    * FAKTAT (tarkistettu 29.8.2026 kahdesta riippumattomasta lähteestä):
    *   - en-Wikipedia "19th-century London", sumua käsittelevä osio
@@ -446,7 +581,15 @@ export const FOKUSVIRTA_LONTOO = {
       + 'hukkui pudottuaan sumussa jokeen, kanavaan tai satama-altaaseen. '
       + 'Charles Dickensin poika kirjoitti kuusi vuotta myöhemmin '
       + 'Lontoon-sanakirjassaan, että sellaisena päivänä onnellisin on '
-      + 'se, joka voi jäädä kotiin.',
+      + 'se, joka voi jäädä kotiin. Sumu ei loppunut isoisäsi eläessä '
+      + 'eikä sadassa vuodessa. Pahin savusumu tuli vasta 5. joulukuuta '
+      + '1952, ja neljä vuotta myöhemmin säädettiin laki, joka puuttui '
+      + 'siihen mistä savu tuli: piipusta ei enää saanut päästää tummaa '
+      + 'savua, ja kunnat saivat oikeuden määrätä kokonaisia alueita '
+      + 'savuttomiksi, jolloin kodin tulisijassa sai polttaa vain '
+      + 'savutonta polttoainetta. Ilma parani vuosikymmenessä enemmän '
+      + 'kuin edellisenä sadassa vuodessa. Puhdasta se ei ole '
+      + 'vieläkään — se vain ei enää näy.',
     /*
      * Commons 29.8.2026: 2323×1586, public domain, George Du Maurier
      * (1834–1896), julkaistu Punch-lehdessä 1889, kuvaus "Window
@@ -460,6 +603,7 @@ export const FOKUSVIRTA_LONTOO = {
      */
     kuva: {
       tiedosto: 'Du Maurier London fog.jpg',
+      lyhyt: 'Hiilikärry ja nuohooja lontoolaisessa sumussa 1889 Punch-lehdessä, isoisän käynnin jälkeen.',
       selite: 'Hiilikärry ja nuohooja lontoolaisessa sumussa vuoden 1889 '
         + 'Punch-lehden kaiverruksessa, kuusitoista vuotta isoisän '
         + 'käynnin jälkeen.',
@@ -469,67 +613,81 @@ export const FOKUSVIRTA_LONTOO = {
 
   /*
    * ---------- 5. Kohtaaminen ----------
-   * Hahmo, kohtaamiskuva ja kysymys ovat tarinakaaren paketissa
-   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'lontoo'):
-   * jokilöytäjä Ned etsii laskuveden liejusta sitä, minkä joki
-   * pudottaa. Kysymys on v1308:ssa vaihdettu sumuun (ks. paketin oma
-   * kommentti), jotta aarretehtävän AIHE kytkeytyy merkintään ja
-   * oppituntiin — tämä kortti ei kertaa Nedin repliikkiä eikä paljasta
-   * vastausta.
    *
-   * LONTOON VANHA KOHTAAMINEN JÄÄ ENNALLEEN. js/packs/kohtaamiset.js
-   * antaa Lontoolle jokietsijä Nedin, ja se rivi on pelin vanhan polun
-   * kohtaaminen (js/visa.js). Hahmo on sama mies kuin kaaressa, joten
-   * tässä ei ole kahta lupausta samasta ovesta — vain sama Ned kahdella
-   * pinnalla. Kaaren kirjoitusasu "Jokilöytäjä" voittaa täällä, koska
-   * kaari on fokusmoodin lähde.
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
+   *
+   * HAHMO VAIHDETTU: jokilöytäjä Ned → muotialan opiskelija Leila
+   * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 19:05 UTC:
+   * *"Molemmat Ned-versiot (kaari + vanha KOHTAAMISET) poistuvat;
+   * fokusvirran Ned-viittaukset ja luennat synkronoidaan"*). Hahmo,
+   * kohtaamiskuva ja kysymys ovat tarinakaaren paketissa
+   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'lontoo'), ja
+   * kysymys koskee nyt vuoden 1956 Clean Air Actia, jonka vastauksen
+   * antaa tämän paketin oppitunti. Tämä kortti ei kertaa Leilan
+   * repliikkiä eikä paljasta vastausta.
+   *
+   * KAKSI PINTAA, SAMA IHMINEN. js/packs/kohtaamiset.js antaa
+   * Lontoolle nyt Leilan (nappi "Tapaa Leila", kehysrivi "Leila nostaa
+   * katseensa vanhasta katukuvasta ja kysyy" sekä löytö-, tyhjä- ja
+   * väärin-repliikit). Kirjoitusasu "muotialan opiskelija" on sama
+   * molemmilla pinnoilla.
+   *
+   * EI SUKUSALAISUUTTA. Leila ei tunne Horatiota eikä odota
+   * perillistä: hän tunnistaa katukulman muodosta, koska kuvasi sen
+   * eilen. Sama sääntö kuin kaaressa.
    */
   kohtaaminen: {
-    hahmo: 'Jokilöytäjä Ned',
-    nappi: 'Tapaa jokilöytäjä',
-    teksti: 'Ned lukee jokea kuin aikataulua: hän tietää tuntia tarkasti, '
-      + 'milloin ranta paljastuu ja mistä kohtaa kannattaa aloittaa. '
-      + 'Suvussa on etsitty samalta rannalta sata vuotta, ja hän tunnistaa '
-      + 'savipiipun katkelmasta vuosisadan. Kiirettä hän ei pidä, koska '
-      + 'joki ei pidä. Ennen kuin hän ojentaa löytönsä, hän haluaa '
-      + 'tietää, onko vieras ymmärtänyt, mistä isoisän sumu oikeasti '
-      + 'oli tehty.',
+    hahmo: 'Muotialan opiskelija Leila',
+    nappi: 'Tapaa Leila',
+    teksti: 'Leila lukee kaupunkia valon mukaan: hän tietää minuutin '
+      + 'tarkkuudella, milloin aurinko osuu lasijulkisivuun ja heittää '
+      + 'sen varjoiselle kadulle. Kuvia hän ottaa satoja ja säilyttää '
+      + 'kolme. Vanhoja katupiirroksia hän katsoo kuin muotilehteä: '
+      + 'ensin muoto, sitten vuosiluku. Ennen kuin hän kertoo, mistä '
+      + 'suunnasta kulmaa kannattaa katsoa, hän haluaa tietää, tunteeko '
+      + 'vieras kadun oman historian.',
   },
 
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * KOHTAAMISPAIKKA: MILLENNIUM BRIDGEN LASKUVESIRANTA. Kaaren teksti
-   * vie isoisän laskuveden paljastamalle rannalle, ja pelin oma
-   * Lontoo-aineisto osoittaa saman paikan: maalehden vuorovesinoston
-   * kuva on nimeltään "Mudlarks by Millennium Bridge".
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
    *
-   * 51,510173 N / −0,098438 E — en-Wikipedia "Millennium Bridge,
-   * London", prop=coordinates (haettu 29.8.2026). Muunnos on sama kaava
-   * ja samat vakiot kuin fokuskohteilla: maailmankartalla Millerin
-   * lieriö LEVEYS 12000 / LON0 −175 / POHJOINEN 76
+   * KOHTAAMISPAIKKA VAIHDETTU: MILLENNIUM BRIDGEN LASKUVESIRANTA →
+   * LEADENHALL MARKETIN KULMA. Vanha piste kuului jokilöytäjä Nedille;
+   * uusi kohtaaminen tapahtuu Bankin ja Leadenhallin seudun
+   * varjoisalla kadulla, jonne aurinko pääsee vain lasijulkisivun
+   * kautta (kuvaputken tarinaehdotus 5.9.2026, Fablen hyväksyntä klo
+   * 19:05 UTC). SEUTU ON PAIKKAEHDOKAS: tarkka katu ja heijastuksen
+   * geometria tarkistetaan kuvausvaiheessa, joten piste on ankkuroitu
+   * seudun tunnettuun kiinnepisteeseen eikä väitettyyn kuvauspaikkaan.
+   *
+   * 51,5128 N / −0,0835 E — en-Wikipedia "Leadenhall Market",
+   * prop=coordinates (haettu 5.9.2026). Muunnos on sama kaava ja samat
+   * vakiot kuin fokuskohteilla: maailmankartalla Millerin lieriö
+   * LEVEYS 12000 / LON0 −175 / POHJOINEN 76
    * (tools/fokuskartta/piirto.js laudanProjektio), Euroopan laudalla
    * x = (lon + 11) × 19,2 ja y = (72 − lat) × 26,3.
    *
-   * LASKU:
-   *   maailmankartta  x = ((−0,098438 − (−175)) mod 360) × (12000/360)
-   *                     = 174,901562 × 33,3333… = 5830,1
-   *                   y = (millerY(76) − millerY(51,510173)) × 12000/2π
-   *                     = 1323,9
-   *   europe          x = (−0,098438 + 11) × 19,2 = 209,3
-   *                   y = (72 − 51,510173) × 26,3 = 538,9
+   * LASKU (ajettu laudanProjektion omalla kaavalla):
+   *   maailmankartta  x = ((−0,0835 − (−175)) mod 360) × (12000/360)
+   *                     = 174,9165 × 33,3333… = 5830,6
+   *                   y = (millerY(76) − millerY(51,5128)) × 12000/2π
+   *                     = 1323,8
+   *   europe          x = (−0,0835 + 11) × 19,2 = 209,6
+   *                   y = (72 − 51,5128) × 26,3 = 538,8
    *
    * TARKISTUS LAATTAA VASTEN: Lontoon laatta on Euroopan laudalla
    * 209 / 539 ja maailmankartalla 5829,5 / 1324,1, eli piste osuu
-   * käytännössä laatan päälle. Niin pitääkin — silta on kaupungin
-   * keskellä, ja laudan yksikkö on maailmankartalla noin kolme
-   * kilometriä.
+   * käytännössä laatan päälle — kuten ennenkin. Niin pitääkin: kortteli
+   * on kaupungin keskellä, ja laudan yksikkö on maailmankartalla noin
+   * kolme kilometriä.
    */
   kohtaamispiste: {
-    nimi: 'Millennium Bridgen laskuvesiranta',
+    nimi: 'Leadenhall Marketin kulma',
     laudat: {
-      maailmankartta: { x: 5830.1, y: 1323.9 },
-      europe: { x: 209.3, y: 538.9 },
+      maailmankartta: { x: 5830.6, y: 1323.8 },
+      europe: { x: 209.6, y: 538.8 },
     },
   },
 
@@ -650,6 +808,7 @@ export const FOKUSVIRTA_LONTOO = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-sutton-hoo-loistoaika.webp',
+        lyhyt: 'Laivan muoto paljastuu kummun alla puun poissa; hiekka ja niittirivit pitävät mitat tallessa.',
         selite: 'Laivan muoto paljaana kummun alla: puu on poissa, '
           + 'mutta hiekka ja niittirivit pitävät aluksen mitat '
           + 'tallessa.',
@@ -681,6 +840,461 @@ export const FOKUSVIRTA_LONTOO = {
         laudat: {
           maailmankartta: { x: 5878.0, y: 1298.1 },
           europe: { x: 236.9, y: 523.6 },
+        },
+      },
+    },
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): LONTOON KAUPUNKILEHDEN SIVUT
+     * NOSTOIKSI.
+     *
+     * Sama jako kuin Pariisissa erässä 5
+     * (docs/raportit/viesti-fable-karttauudistus-era5-20260913.md,
+     * suunnitelman luku 4.7): lehden aihesivujen nostot ovat nyt
+     * klikattavia karttapaloja kaupungin kohdekartalla. Kaikki tämän erän
+     * nostot ovat KOHDEKARTALLA, eivät pääkartalla — omistajan sääntö
+     * 2.9.2026 (tests/nostot-kartalla.test.mjs).
+     *
+     * TEKSTIÄ EI OLE KIRJOITETTU UUDESTAAN. Jokainen `lunastus`-kappale on
+     * lehden oman noston `teksti` SANATARKASTI
+     * (js/packs/kulttuuri-kategoriat.js, kaupunki `lontoo`), ja `kuva` on
+     * lehden oma kuvarivi kenttineen. Siirto on tehty ohjelmallisesti ja
+     * todennettu ===-vertailulla
+     * (tools/savukkeet/savuke-kaupunkien-nostot.mjs vartio 4b avaa jokaisen
+     * kortin selaimessa ja vertaa merkki merkiltä).
+     *
+     * MINIKYSYMYKSET (erän 6 datamalli, kiintiö joka kolmas nosto):
+     * `exchange-alleyn-kupla`, `abbey-roadin-suojatie`,
+     * `tate-modernin-turbiinihalli`.
+     * ══════════════════════════════════════════════════════════════
+     */
+    {
+      id: 'lontoon-metro-1863',
+      nimio: 'Metron höyryveturi',
+      otsikko: 'Metron tunnelissa savusi höyryveturi',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Lontoon metro avattiin 10. tammikuuta 1863 maailman ensimmäisenä '
+          + 'maanalaisena matkustajaratana. Vaunut olivat puuta ja niitä '
+          + 'valaistiin kaasulyhdyillä, ja maan alla junaa veti höyryveturi — '
+          + 'savu johdettiin ulos tunneliin jätetyistä aukoista. Ensimmäisenä '
+          + 'vuonna radalla tehtiin 9,5 miljoonaa matkaa. Nykyään asemia on '
+          + '272 ja rataa 400 kilometriä. Kadun pinnassa muistuttaa yhä '
+          + 'pronssilaatta, jonka London Transport pystytti sadan vuoden '
+          + 'kunniaksi vuonna 1963.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Metron tunnelissa savusi höyryveturi" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'World\'s First Underground (5025945153).jpg',
+        lyhyt: 'Pronssilaatta muistaa vuonna 1963 sadan vuoden takaista maailman ensimmäistä maanalaista rataa.',
+        selite: 'London Transport pystytti pronssilaatan vuonna 1963 sadan vuoden '
+          + 'kunniaksi maailman ensimmäisestä maanalaisesta matkustajaradasta, '
+          + 'jonka Metropolitan Railway Company avasi yleisölle 10. tammikuuta '
+          + '1863.',
+        lahde: 'Simon Harriyott from Uckfield, England, Wikimedia Commons (CC BY '
+          + '2.0)',
+      },
+      kysymykset: [
+        'Miksi rataa lähdettiin ylipäätään kaivamaan maan alle?',
+        'Millaista matkustaminen oli puuvaunussa kaasulyhtyjen valossa?',
+        'Miten savu saatiin pois tunnelista ennen sähköveturia?',
+      ],
+      paikka: {
+        nimi: 'Metron höyryveturi',
+        laudat: {
+          maailmankartta: { x: 5828.1, y: 1323.3 },
+          europe: { x: 208.2, y: 538.6 },
+        },
+      },
+    },
+    {
+      id: 'exchange-alleyn-kupla',
+      nimio: 'Exchange Alley',
+      otsikko: 'Kupla, joka puhkesi Exchange Alleyssä',
+      symboli: 'kauppa',
+      lunastus: [
+        'Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden '
+          + 'kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että '
+          + 'se otti kantaakseen osan valtionvelasta. Kauppaa ei juuri '
+          + 'syntynyt, mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes '
+          + 'koko velan ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta '
+          + 'nousi tammikuun runsaasta sadasta punnasta kesällä lähes '
+          + 'tuhanteen ja romahti syyskuun loppuun mennessä noin '
+          + 'sataanviiteenkymmeneen. Kauppa käytiin Cornhillin takana '
+          + 'kulkevalla Exchange Alleyn kujalla ja sen kahviloissa. '
+          + 'Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja '
+          + 'valtiovarainministeri John Aislabie erotettiin alahuoneesta ja '
+          + 'suljettiin Toweriin.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Kupla, joka puhkesi Exchange '
+        + 'Alleyssä" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kysymykset: [
+        'Miksi niin moni uskoi yhtiöön, joka ei käynyt kauppaa?',
+        'Miten valtionvelan vaihtaminen osakkeiksi oli tarkoitus toimia?',
+        'Mitä kujan kahviloissa tapahtui, kun kurssi kääntyi laskuun?',
+      ],
+      visa: {
+        kysymys: 'Etelämeren yhtiön osake oli vuoden 1720 puheenaihe. Miten sen '
+          + 'hinta liikkui sinä vuonna?',
+        vaihtoehdot: [
+          'Se nousi sadasta punnasta lähes tuhanteen ja romahti syksyyn '
+            + 'mennessä',
+          'Se pysyi lähes samana koko vuoden',
+          'Sen kauppa keskeytettiin heti keväällä',
+        ],
+        oikea: 0,
+        fakta: 'Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja '
+          + 'valtiovarainministeri John Aislabie erotettiin alahuoneesta ja '
+          + 'suljettiin Toweriin.',
+      },
+      paikka: {
+        nimi: 'Exchange Alley',
+        laudat: {
+          maailmankartta: { x: 5830.4, y: 1323.7 },
+          europe: { x: 209.5, y: 538.8 },
+        },
+      },
+    },
+    {
+      id: 'canaletto-lontoossa',
+      nimio: 'Canaletto Lontoossa',
+      otsikko: 'Canaletto maalasi myös Lontoon',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian '
+          + 'lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia '
+          + 'yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen '
+          + 'kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan '
+          + 'parhaiten venetsialaisen silmin.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Canaletto maalasi myös Lontoon" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Canaletto - Westminster Bridge, with the Lord Mayor\'s Procession on the Thames - Google Art Project.jpg',
+        lyhyt: 'Canaletton maalaus 1747 kuvaa lordimayorin kulkuetta vastavalmistuneella Westminster Bridgellä.',
+        selite: 'Canaletton vuoden 1747 maalauksessa lordimayorin juhlakulkue '
+          + 'kulkee Thamesilla vastavalmistuneen Westminster Bridgen editse.',
+        lahde: 'Canaletto, Wikimedia Commons (PD)',
+      },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'The Thames and the City Canaletto 46-47 National Gallery Prague.jpg',
+          selite: 'Canaletto muutti Lontooseen vuonna 1746 ja maalasi kaupunkia '
+            + 'yhdeksän vuoden ajan.',
+          lahde: 'Canaletto, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Canaletto - The City Seen Through an Arch of Westminster Bridge.JPG',
+          selite: 'Vuoden 1747 maalaus on tehty rakenteilla olleen Westminster '
+            + 'Bridgen puutelineiltä.',
+          lahde: 'Canaletto, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Northumberland House by Canaletto (1752).JPG',
+          lyhyt: 'Canaletton vuoden 1752 maalaus on tarkin muistikuva 1874 puretusta Northumberland Housesta.',
+          selite: 'Charing Crossin Northumberland House purettiin 1874, ja '
+            + 'Canaletton vuoden 1752 maalaus on sen tarkin muistikuva.',
+          lahde: 'Canaletto, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Canaletto Ranelegh 1754.jpg',
+          lyhyt: 'Ranelagh Gardensin pyörösalissa kahdeksanvuotias Mozart esiintyi musiikin soidessa hienostolle.',
+          selite: 'Ranelagh Gardensin rotundassa hienosto kierteli pyörösalin '
+            + 'lattialla musiikin soidessa, ja Mozart esiintyi siellä '
+            + 'kahdeksanvuotiaana.',
+          lahde: 'Canaletto, Wikimedia Commons (PD)',
+        },
+      ],
+      kysymykset: [
+        'Miksi Canaletto muutti Venetsiasta Lontooseen juuri 1746?',
+        'Mitä hänen maalauksensa kertovat 1700-luvun Thamesista?',
+        'Miten venetsialaisen katse erosi lontoolaisten omasta?',
+      ],
+      paikka: {
+        nimi: 'Canaletto Lontoossa',
+        laudat: {
+          maailmankartta: { x: 5829.3, y: 1324.3 },
+          europe: { x: 208.9, y: 539.1 },
+        },
+      },
+    },
+    {
+      id: 'the-george-pubi',
+      nimio: 'Dickensin pubi',
+      otsikko: 'Pubi, jossa Dickens istui',
+      symboli: 'historia',
+      lunastus: [
+        'The George on Lontoon viimeinen parvekekäytävällinen majatalo: '
+          + 'tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen '
+          + 'aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä '
+          + 'istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan '
+          + 'Pikku Dorrit. Talo on niin arvokas, että sen omistaa National '
+          + 'Trust — olutta myydään silti joka päivä.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Pubi, jossa Dickens istui" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'The George at Southwark (8553233399).jpg',
+        lyhyt: 'The George Southwark on Lontoon viimeinen parvekekäytävällinen majatalo, nykyisin vuodelta 1677.',
+        selite: 'The George Southwarkissa on Lontoon viimeinen '
+          + 'parvekekäytävällinen majatalo, ja nykyinen rakennus on vuodelta '
+          + '1677.',
+        lahde: 'It\'s No Game, Wikimedia Commons (CC BY 2.0)',
+      },
+      kysymykset: [
+        'Miltä näytelmän katsominen majatalon parvelta tuntui?',
+        'Miksi juuri The George säilyi, kun muut parvekemajatalot katosivat?',
+        'Mitä Pikku Dorrit kertoo pubista?',
+      ],
+      paikka: {
+        nimi: 'Dickensin pubi',
+        laudat: {
+          maailmankartta: { x: 5830.3, y: 1324.1 },
+          europe: { x: 209.5, y: 539 },
+        },
+      },
+    },
+    {
+      id: 'abbey-roadin-suojatie',
+      nimio: 'Abbey Roadin suojatie',
+      otsikko: 'Suojatie, jota jonotetaan',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli '
+          + 'kahdeksan kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli '
+          + 'The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman '
+          + 'kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen '
+          + 'samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. '
+          + 'Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa '
+          + 'äänitetään musiikkia edelleen.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Suojatie, jota jonotetaan" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Abbey Road Zebra.jpg',
+        lyhyt: 'Abbey Roadin suojatiellä on virallinen suojelumerkintä, ja viereisessä studiossa äänitetään yhä.',
+        selite: 'Abbey Roadin suojatiellä on virallinen suojelumerkintä, ja '
+          + 'viereisessä studiossa äänitetään musiikkia edelleen.',
+        lahde: 'Misterweiss, Wikimedia Commons (PD)',
+      },
+      /*
+       * MUSIIKKI JA ÄÄNI KORTILLE (avoin kohta 11.1, 14.9.2026). Erässä 10
+       * tämä nosto jäi lehden sivulle kaksoiskappaleeksi vain siksi, että
+       * musiikkilinkille ja ääninäytteelle ei ollut paikkaa kortilla.
+       * Kortti piirtää ne nyt SAMOILLA napeilla kuin lehti (js/ui.js
+       * lisaaNostonNapit), joten sivulta jäänyt kaksoiskappale purkautui.
+       */
+      musiikki: 'https://music.apple.com/fi/album/come-together-2019-mix/1474815798?i=1474815799',
+      musiikkiNimi: 'The Beatles Apple Musicissa',
+      esikuuntelu: 'The Beatles Come Together',
+      kysymykset: [
+        'Miksi juuri tästä suojatiestä tuli maailman kuuluisin?',
+        'Millaista kadulla on, kun turistit jonottavat ylitystä ja autot '
+          + 'odottavat?',
+        'Mitä taustan studiossa äänitetään nykyään?',
+      ],
+      visa: {
+        kysymys: 'Abbey Roadin levynkannen kuva otettiin elokuussa 1969. Miten se '
+          + 'syntyi?',
+        vaihtoehdot: [
+          'Kuva otettiin salaa parvekkeelta yhtyeen tietämättä',
+          'Suojatie ylitettiin kahdeksan kertaa, ennen kuin kuva onnistui',
+          'Suojatie maalattiin kuvausta varten uudelleen',
+        ],
+        oikea: 1,
+        fakta: 'Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa '
+          + 'äänitetään musiikkia edelleen.',
+      },
+      paikka: {
+        nimi: 'Abbey Roadin suojatie',
+        laudat: {
+          maailmankartta: { x: 5828.7, y: 1323.8 },
+          europe: { x: 208.5, y: 538.8 },
+        },
+      },
+    },
+    {
+      id: 'leake-streetin-tunneli',
+      nimio: 'Leake Streetin tunneli',
+      otsikko: 'Tunneli, jossa saa maalata',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Waterloon aseman laiturien alla kulkee noin kolmesataa metriä '
+          + 'pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla '
+          + 'Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui '
+          + 'taiteelle toukokuussa 2008, kun Banksy järjesti siellä '
+          + 'kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman '
+          + 'vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät '
+          + 'maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla '
+          + 'iltaan mennessä kadonnut toisen alle.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Tunneli, jossa saa maalata" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: '2024-09-26 Leake Street, London graffiti tunnel 01.jpg',
+        lyhyt: 'Leake Streetin tunneli avautui katutaiteelle toukokuussa 2008 Banksyn Cans Festivalissa.',
+        selite: 'Leake Streetin noin kolmesataa metriä pitkässä tunnelissa seinien '
+          + 'maalaaminen on sallittua, ja se avautui taiteelle toukokuussa '
+          + '2008 Banksyn Cans Festivalissa.',
+        lahde: 'Ted Potters, Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miksi juuri tässä tunnelissa maalaaminen sallittiin?',
+        'Miltä tuntuu maalata teos, joka voi kadota samana iltana?',
+        'Mikä Cans Festival oli?',
+      ],
+      paikka: {
+        nimi: 'Leake Streetin tunneli',
+        laudat: {
+          maailmankartta: { x: 5829.5, y: 1324.3 },
+          europe: { x: 209, y: 539.1 },
+        },
+      },
+    },
+    {
+      id: 'neljas-jalusta',
+      nimio: 'Neljäs jalusta',
+      otsikko: 'Tyhjä jalusta ja 2 400 ihmistä',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, '
+          + 'mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat '
+          + 'loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, '
+          + 'ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan '
+          + 'vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat '
+          + 'ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista '
+          + 'ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä '
+          + 'halusi.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Tyhjä jalusta ja 2 400 ihmistä" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Gormley-OneandOther-4thPlinth-TrafalgarSq-20090706.jpg',
+        lyhyt: 'One & Other -teoksessa 2 400 ihmistä sai vuorollaan tunnin Trafalgar Squaren jalustalla 2009.',
+        selite: 'One & Other -teoksessa 2 400 tavallista ihmistä sai kukin tunnin '
+          + 'Trafalgar Squaren neljännellä jalustalla sadan päivän ajan '
+          + 'kesällä 2009.',
+        lahde: 'Simon Lee, Wikimedia Commons (CC BY 2.0)',
+      },
+      kysymykset: [
+        'Mitä ihmiset tekivät sillä tunnilla, jonka saivat jalustan päällä?',
+        'Miksi neljännelle jalustalle ei koskaan tullut pysyvää patsasta?',
+        'Kuka valitsee jalustan seuraavan teoksen?',
+      ],
+      paikka: {
+        nimi: 'Neljäs jalusta',
+        laudat: {
+          maailmankartta: { x: 5829.1, y: 1324 },
+          europe: { x: 208.7, y: 538.9 },
+        },
+      },
+    },
+    {
+      id: 'tate-modernin-turbiinihalli',
+      nimio: 'Turbiinihalli',
+      otsikko: 'Voimalasta tuli taidesali',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Tate Modern on entinen hiilivoimala Thamesin etelärannalla. Sen '
+          + 'turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo '
+          + 'tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 '
+          + 'kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa '
+          + 'auringonkukansiementä. Jokainen siemen oli muotoiltu käsin '
+          + 'posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä '
+          + 'Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon '
+          + 'pääsee sisään ilmaiseksi.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Voimalasta tuli taidesali" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Turbine Hall - Tate Modern - geograph.org.uk - 7509077.jpg',
+        lyhyt: 'Tate Modernin 155-metrinen turbiinihalli täyttyy kerrallaan yhdellä jättimäisellä teoksella.',
+        selite: 'Tate Modernin turbiinihalli on 155 metriä pitkä ja 35 metriä '
+          + 'korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen '
+          + 'teoksen.',
+        lahde: 'Mr Ignavy, Wikimedia Commons (CC BY-SA 2.0)',
+      },
+      kysymykset: [
+        'Miltä sadan miljoonan siemenen päällä käveleminen tuntui?',
+        'Miksi voimalaa ei purettu vaan siitä tehtiin museo?',
+        'Miten yhtä teosta varten löydetään 1 600 käsityöläistä?',
+      ],
+      visa: {
+        kysymys: 'Ai Weiwei täytti Tate Modernin turbiinihallin lattian vuonna '
+          + '2010. Millä?',
+        vaihtoehdot: [
+          'Mustalla hiekalla, jonka läpi sai kävellä',
+          'Kymmenillätuhansilla lasihelmillä',
+          'Sadalla miljoonalla käsin tehdyllä auringonkukansiemenellä',
+        ],
+        oikea: 2,
+        fakta: 'Jokainen siemen oli muotoiltu käsin posliinista ja maalattu '
+          + 'yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa '
+          + 'teki niitä yli kaksi vuotta.',
+      },
+      paikka: {
+        nimi: 'Turbiinihalli',
+        laudat: {
+          maailmankartta: { x: 5830, y: 1324 },
+          europe: { x: 209.3, y: 539 },
+        },
+      },
+    },
+    {
+      id: 'orbitin-liukumaki',
+      nimio: 'Liukumäkiveistos',
+      otsikko: 'Veistos, jonka sisällä on liukumäki',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen '
+          + 'teräsvyyhti, Britannian suurin julkinen taideteos. Sen '
+          + 'suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil '
+          + 'Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi '
+          + 'näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna '
+          + '2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin '
+          + '178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. '
+          + 'Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Veistos, jonka sisällä on liukumäki" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'ArcelorMittal Orbit - geograph.org.uk - 6402522.jpg',
+        lyhyt: 'ArcelorMittal Orbit on Britannian suurin taideteos, ja sen ympäri kiertyy pisin tunneliliukumäki.',
+        selite: 'ArcelorMittal Orbit on 114,5 metriä korkea ja Britannian suurin '
+          + 'julkinen taideteos, ja sen ympäri kiertyy maailman pisin '
+          + 'tunneliliukumäki.',
+        lahde: 'Ian S, Wikimedia Commons (CC BY-SA 2.0)',
+      },
+      kysymykset: [
+        'Miksi olympialaisille haluttiin oma maamerkki?',
+        'Millaista alas laskeutuminen kaksitoista kertaa kiertyvässä '
+          + 'putkessa on?',
+        'Mitä teräsvyyhdille tehdään kisojen jälkeen?',
+      ],
+      paikka: {
+        nimi: 'Liukumäkiveistos',
+        laudat: {
+          maailmankartta: { x: 5828.8, y: 1324.1 },
+          europe: { x: 208.6, y: 539 },
         },
       },
     },

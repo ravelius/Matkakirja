@@ -1,0 +1,208 @@
+{
+  "versio": 2,
+  "kaupunki": "moskova",
+  "teksti": "Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.",
+  "tekstiSha256": "55373c0e8c0b43e87c60719250969cea0aed635b838561ffce349bee48ba2f78",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-moskova.mp3",
+    "versio": 2,
+    "tavut": 407972,
+    "sha256": "37fd488d47ce949f1850727cf56fb8df4f794be3559ddccb57e02f9d465560fd"
+  },
+  "kesto": 25420,
+  "sanat": [
+    {
+      "sana": "Kremlissä",
+      "alku": 180,
+      "loppu": 680
+    },
+    {
+      "sana": "seisoi",
+      "alku": 740,
+      "loppu": 1120
+    },
+    {
+      "sana": "valtava",
+      "alku": 1160,
+      "loppu": 1640
+    },
+    {
+      "sana": "kello",
+      "alku": 1700,
+      "loppu": 2020
+    },
+    {
+      "sana": "joka",
+      "alku": 2320,
+      "loppu": 2520
+    },
+    {
+      "sana": "ei",
+      "alku": 2560,
+      "loppu": 2620
+    },
+    {
+      "sana": "ollut",
+      "alku": 2680,
+      "loppu": 2860
+    },
+    {
+      "sana": "soinut",
+      "alku": 2920,
+      "loppu": 3300
+    },
+    {
+      "sana": "kertaakaan",
+      "alku": 3340,
+      "loppu": 4120
+    },
+    {
+      "sana": "Se",
+      "alku": 5360,
+      "loppu": 5460
+    },
+    {
+      "sana": "halkesi",
+      "alku": 5520,
+      "loppu": 6000
+    },
+    {
+      "sana": "ennen",
+      "alku": 6060,
+      "loppu": 6280
+    },
+    {
+      "sana": "ensimmäistä",
+      "alku": 6360,
+      "loppu": 6920
+    },
+    {
+      "sana": "lyöntiä",
+      "alku": 6960,
+      "loppu": 7500
+    },
+    {
+      "sana": "Irronnut",
+      "alku": 8980,
+      "loppu": 9420
+    },
+    {
+      "sana": "pala",
+      "alku": 9480,
+      "loppu": 9700
+    },
+    {
+      "sana": "näytti",
+      "alku": 9740,
+      "loppu": 10060
+    },
+    {
+      "sana": "huonettani",
+      "alku": 10120,
+      "loppu": 10620
+    },
+    {
+      "sana": "suuremmalta",
+      "alku": 10680,
+      "loppu": 11480
+    },
+    {
+      "sana": "Vartija",
+      "alku": 13120,
+      "loppu": 13500
+    },
+    {
+      "sana": "kertoi",
+      "alku": 13540,
+      "loppu": 13940
+    },
+    {
+      "sana": "painon",
+      "alku": 14000,
+      "loppu": 14420
+    },
+    {
+      "sana": "kuin",
+      "alku": 14500,
+      "loppu": 14740
+    },
+    {
+      "sana": "hiljaisuus",
+      "alku": 14780,
+      "loppu": 15560
+    },
+    {
+      "sana": "olisi",
+      "alku": 15640,
+      "loppu": 15880
+    },
+    {
+      "sana": "sillä",
+      "alku": 15940,
+      "loppu": 16180
+    },
+    {
+      "sana": "voitettu",
+      "alku": 16219,
+      "loppu": 16920
+    },
+    {
+      "sana": "Illalla",
+      "alku": 18980,
+      "loppu": 19360
+    },
+    {
+      "sana": "pieni",
+      "alku": 19420,
+      "loppu": 19700
+    },
+    {
+      "sana": "käsikello",
+      "alku": 19740,
+      "loppu": 20340
+    },
+    {
+      "sana": "kutsui",
+      "alku": 20400,
+      "loppu": 20740
+    },
+    {
+      "sana": "minut",
+      "alku": 20760,
+      "loppu": 20980
+    },
+    {
+      "sana": "syömään",
+      "alku": 21040,
+      "loppu": 21520
+    },
+    {
+      "sana": "vähemmän",
+      "alku": 22640,
+      "loppu": 23020
+    },
+    {
+      "sana": "mainetta",
+      "alku": 23080,
+      "loppu": 23600
+    },
+    {
+      "sana": "enemmän",
+      "alku": 24160,
+      "loppu": 24500
+    },
+    {
+      "sana": "vaikutusvaltaa",
+      "alku": 24560,
+      "loppu": 25420
+    }
+  ],
+  "lauseet": [
+    180,
+    5360,
+    8980,
+    13120,
+    18980
+  ],
+  "luotu": "2026-09-23T15:34:38.671Z"
+}

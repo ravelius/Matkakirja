@@ -80,7 +80,7 @@ export const FOKUSKOHTEET_GBR = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'St Paulin kirkko',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi torninhuippua ei rakennettu takaisin?',
@@ -122,6 +122,7 @@ export const FOKUSKOHTEET_GBR = [
      */
     kuva: {
       tiedosto: 'St Paul\'s Cathedral Dome 2020 Exterior Ground.jpg',
+      lyhyt: 'Christopher Wrenin kupolikirkko Ludgate Hillillä valmistui 1710 palaneen edeltäjänsä paikalle.',
       selite: 'Christopher Wrenin kupolikirkko Ludgate Hillillä. Se '
         + 'valmistui 1710 palaneen keskiaikaisen edeltäjänsä paikalle.',
       lahde: 'Julian Herzog, Wikimedia Commons (CC BY 4.0)',
@@ -132,27 +133,29 @@ export const FOKUSKOHTEET_GBR = [
      * kartalla säilyy historian pylväs ja valokuvan alle tulee "Koe
      * ihme" -nappi.
      *
-     * SELITE SANOO ENSIMMÄISESSÄ VIRKKEESSÄÄN, ETTÄ KUVAN KIRKKO ON
-     * EDELTÄJÄ. Tämä on erän ainoa ihme, jossa kuvan rakennus ja
-     * pääkuvan rakennus ovat eri rakennuksia, joten pelaajalle on
-     * kerrottava se ennen kuin hän ehtii luulla muuta.
+     * KUVATEKSTIN VIERESSÄ SANOTAAN, ETTÄ KUVAN KIRKKO ON EDELTÄJÄ.
+     * Tämä on erän ainoa ihme, jossa kuvan rakennus ja pääkuvan
+     * rakennus ovat eri rakennuksia, joten pelaajalle on kerrottava se
+     * ennen kuin hän ehtii luulla muuta. 4.9.2026 selite vaihtui
+     * kuvaputken sanatarkkaan kuvatekstiin, joka ei sano sitä — siksi
+     * edeltäjämaininta on nyt LÄHDERIVILLÄ, jonka kortti piirtää heti
+     * selitteen perään (js/fokuskohteet.js piirraKohdeKuva). Vartio
+     * lukee molemmat (tests/fokusvirta.test.mjs).
      */
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-vanha-st-paul.webp',
       kadonnut: false,
-      selite: 'Kuvan kirkko on nykyisen katedraalin EDELTÄJÄ: '
-        + 'keskiaikainen St Paul, joka tuhoutui Lontoon suuressa '
-        + 'palossa 1666. Sen torninhuippu oli keskiajan Euroopan '
-        + 'korkeimpia — perinteisen mitan mukaan noin 149 metriä — ja '
-        + 'huippu paloi salamaniskussa jo 1561 eikä sitä rakennettu '
-        + 'takaisin. Kirkon keskilaiva oli Lontoon uutistori: "Paul\'s '
-        + 'Walk" -nimellä tunnetulla käytävällä herrasmiehet, kauppiaat '
-        + 'ja taskuvarkaat kävelivät edestakaisin, sopivat kauppoja ja '
-        + 'kuulivat päivän juorut aikana ennen sanomalehtiä. '
-        + 'Samalla Ludgate Hillin tontilla seisoo nyt '
-        + 'Christopher Wrenin kupolikirkko.',
+      lyhyt: 'Kirjapainon oppipoika kuiskaa uutisen toritytölle; sana kulkee nopeammin kuin painokone.',
+      selite: 'Kirjapainon oppipoika kuiskaa tuoreen uutisarkin sisällön '
+        + 'toritytölle, joka ei osaa lukea mutta tietää heti, kenelle '
+        + 'tieto kannattaa myydä. Katedraalin varjossa uutinen kulkee '
+        + 'suusta suuhun nopeammin kuin painokone ehtii tehdä seuraavan '
+        + 'arkin.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+        + 'omana aikanaan. Kuvan kirkko on nykyisen katedraalin '
+        + 'EDELTÄJÄ: keskiaikainen St Paul, joka tuhoutui Lontoon '
+        + 'suuressa palossa 1666. Faktat: St Paul’s Cathedral — Our '
+        + 'timeline.',
     },
   },
   /*
@@ -187,7 +190,7 @@ export const FOKUSKOHTEET_GBR = [
      */
     id: 'crystal-palace',
     nimi: 'Crystal Palace',
-    tyyppi: 'muu',
+    tyyppi: 'tekniikka',
     symboli: 'tekniikka',
     kysymykset: [
       'Miten näin suuri lasirakennus saatiin pystyyn 39 viikossa?',
@@ -223,24 +226,24 @@ export const FOKUSKOHTEET_GBR = [
      * Tuileries se osuu siihen ONNEKKAASTI: Sydenhamin lasipalatsi
      * seisoi 1854–1936, joten isoisä olisi vuonna 1873 voinut kävellä
      * sen sisään. Selite sanoo sen ääneen.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-crystal-palace.webp',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-crystal-palace-loistoaika-v2.jpg',
       kadonnut: true,
-      selite: 'Crystal Palace oli aikansa suurin lasirakennus: vuoden '
-        + '1851 maailmannäyttelyn halli, joka koottiin näyttelyn '
-        + 'jälkeen uudelleen Sydenham Hillin laelle Etelä-Lontooseen. '
-        + 'Siellä siitä tuli pysyvä ihmeiden näyttämö: saleihin oli '
-        + 'rakennettu jäljennöksiä muinaisen Egyptin, Assyrian ja '
-        + 'Alhambran arkkitehtuurista, ja Händel-juhlilla lauloi '
-        + 'parhaimmillaan tuhansien laulajien kuoro. '
-        + 'Talo seisoi kesäkuusta 1854 aina 30. marraskuuta 1936 '
-        + 'asti, jolloin tulipalo tuhosi sen — isoisä ehti siis nähdä '
-        + 'sen matkallaan 1873. Mäellä on nyt Crystal Palace Park, '
-        + 'jonka pengerrykset ja vuoden 1854 dinosauruspatsaat ovat '
-        + 'edelleen paikallaan.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      lyhyt: 'Lapsi näkee Crystal Palacen valosta tehtynä rakennuksena, jonka sisällä on koko maailmannäyttely.',
+      selite: 'Kuvituksen perheen nuorin näkee mäen laelta rakennuksen, joka '
+        + 'näyttää olevan tehty lähes kokonaan valosta. Vanhemmille päivä '
+        + 'Crystal Palacessa maksaa aikaa ja rahaa, mutta sisällä odottavat '
+        + 'Egypti, Assyria, Alhambra ja kokonainen maailmannäyttely samojen '
+        + 'lasiseinien alla — juuri sellainen ihme, jonka isoisäkin olisi '
+        + 'vuonna 1873 voinut kokea.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: Victoria and Albert Museum — Philip Henry '
+        + 'Delamotte and Crystal Palace, tarkistettu 5.9.2026.',
+      url: 'https://www.vam.ac.uk/info/collection-selection-boxes-photography-processes-and-techniques',
     },
   },
   {
@@ -257,7 +260,7 @@ export const FOKUSKOHTEET_GBR = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'London Bridge',
-    tyyppi: 'muu',
+    tyyppi: 'tekniikka',
     symboli: 'tekniikka',
     kysymykset: [
       'Millaista oli asua sillalla?',
@@ -297,15 +300,15 @@ export const FOKUSKOHTEET_GBR = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-vanha-london-bridge.webp',
       kadonnut: true,
-      selite: 'Keskiaikainen London Bridge valmistui 1209 ja kantoi '
-        + 'yli kuudensadan vuoden ajan kokonaista katua: parhaimmillaan '
-        + '140 taloa, joista jokainen oli myös kauppa. Talot purettiin '
-        + '1761 ja itse silta 1831. Samassa kohdassa jokea menee yhä '
-        + 'silta, mutta se on eri silta: isoisä kulki 1873 John '
-        + 'Rennien graniittisillan yli, joka myytiin 1968 ja pystytettiin '
-        + 'uudelleen Arizonaan, ja nykyinen betonisilta on vuodelta 1973.',
+      lyhyt: 'Vesimiehen oppipoika ohjaa venettä sillan alitse, jonka päällä ihmiset asuvat ja käyvät kauppaa.',
+      selite: 'Vesimiehen oppipoika huomaa virran vetävän venettä kohti '
+        + 'liian kapeaa kaarta ja yrittää jäljitellä mestarinsa '
+        + 'airoliikettä puoli tahtia myöhässä. Heidän yläpuolellaan '
+        + 'ihmiset asuvat, käyvät kauppaa ja syövät päivällistä '
+        + 'keskellä siltaa — mutta joella yksi väärä veto voi päättää '
+        + 'työpäivän.',
       lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+        + 'omana aikanaan. Faktat: London Museum — London Bridge.',
     },
   },
 ];

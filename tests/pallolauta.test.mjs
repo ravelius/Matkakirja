@@ -1,0 +1,1310 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync, readdirSync } from 'node:fs';
+
+/*
+ * PALLOLAUTA, VAIHEET 1–2 (omistaja 5.9.2026, Raamattu KARTTAPALLO ON
+ * PELILAUTA; docs/moduulit/karttapallo.md luku 7). Vartioi vaiheiden
+ * hyväksymisehdot: (c) yksi kytkin ja yksi vakio, pelitila sama
+ * kummallakin laudalla; (b) tasokartta pois tieltä yhdestä portista;
+ * kaava leveys ↔ korkeus; "kartta laatoissa, peli päällä" — pallolla
+ * vain sallitut kerrokset; ja vaihe 2: siirrot pallolla yhdellä
+ * koreografialla, Liiku ei herätä tasokarttaa.
+ */
+
+const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
+
+/* Selaimen varastot ja osoite testiä varten: ui-apurit lukee molempia
+ * try/catchin takaa, joten puuttuva on sama kuin tyhjä. */
+const varasto = new Map();
+globalThis.localStorage = {
+  getItem: (k) => (varasto.has(k) ? varasto.get(k) : null),
+  setItem: (k, v) => varasto.set(k, String(v)),
+  removeItem: (k) => varasto.delete(k),
+};
+globalThis.location = { search: '' };
+
+const apurit = await import('../js/ui-apurit.js');
+const {
+  LAUTA_OLETUS, VANHA_KARTTA_KAYTOSSA, lautaValinta, asetaLautaValinta, unohdaKehittajaKytkimet,
+} = apurit;
+const kamera = await import('../js/pallolauta/kamera.js');
+const {
+  korkeusLeveydesta, leveysKorkeudesta, PALLO_KORKEUS_MAX, PALLO_KORKEUS_MIN,
+  PALLOLAUDAN_SAAPUMISLEVEYS,
+} = kamera;
+const {
+  PALLOLAUDAN_KERROKSET, KAUPUNKIPISTEEN_HALKAISIJA_PX, PISTEEN_SADE_MAX, PISTEEN_SKAALA,
+  kaupunkipisteenSade, kaupunkipisteenVari,
+} = await import('../js/pallolauta/lauta.js');
+const { PALLO_FOV } = await import('../js/pallolauta/kamera.js');
+const { Game } = await import('../js/game.js');
+const { packById } = await import('../js/pack.js');
+const { PALLO_SUKELLUSLEVEYS } = await import('../js/pallo.js');
+const { MERKIN_KORKEUS } = await import('../js/pallolauta/merkit.js');
+
+/*
+ * VÄLIAIKAISESTI POIS -VARTIO (omistaja 7.9.2026 aamu, sanatarkasti:
+ * *"Voisiko vanhan kartan ottaa pelistä ainakin väliaikaisesti kokonaan
+ * pois, eli että se ei lataisi sitä millään lailla, eikä se olisi
+ * myöskään kytkettävissä päälle?"*).
+ *
+ * Ennen tämä testi vartioi kolmen lähteen ketjua URL › muisti › oletus
+ * KAHDELLA laudalla. Ketju on ennallaan, mutta kelpaavia lautoja on enää
+ * yksi: 'kartta' ohitetaan kuin mikä tahansa tuntematon arvo. Testi
+ * vartioi nyt sitä, ETTEI vanhaa karttaa saa millään kytkettyä päälle.
+ */
+test('laudan valinta: vanhaa karttaa ei voi kytkeä päälle millään lähteellä', () => {
+  assert.equal(LAUTA_OLETUS, 'pallo', 'pallo on oletuslauta (omistaja 5.9.2026: "Ota vanha kartta jo heti kokonaan pois ja korvaa pallolla")');
+  assert.equal(VANHA_KARTTA_KAYTOSSA, false, 'vanha kartta on väliaikaisesti pois käytöstä (omistaja 7.9.2026)');
+  unohdaKehittajaKytkimet();
+  assert.equal(lautaValinta(), 'pallo');
+  // 1. MUISTI: 'kartta' ei enää kelpaa, joten avainta ei edes kirjoiteta.
+  asetaLautaValinta('kartta');
+  assert.equal(varasto.has('matkakirja-lauta'), false, 'kelpaamatonta lautaa ei talleteta');
+  assert.equal(lautaValinta(), 'pallo');
+  // Laitteelle aiemmin jäänyt vanha arvo ohitetaan kuten tuntematon arvo.
+  varasto.set('matkakirja-lauta', 'kartta');
+  unohdaKehittajaKytkimet();
+  assert.equal(lautaValinta(), 'pallo', 'vanha muistiarvo ei herätä tasokarttaa');
+  varasto.delete('matkakirja-lauta');
+  // 2. OSOITE: ?lauta=kartta on nyt yhtä tuntematon kuin ?lauta=maailmankartta.
+  globalThis.location = { search: '?lauta=kartta' };
+  unohdaKehittajaKytkimet();
+  assert.equal(lautaValinta(), 'pallo', '?lauta=kartta ei vaihda lautaa');
+  globalThis.location = { search: '?lauta=maailmankartta' };
+  unohdaKehittajaKytkimet();
+  assert.equal(lautaValinta(), 'pallo', 'tuntematon URL-arvo ei ole laudan valinta');
+  globalThis.location = { search: '?lauta=pallo' };
+  unohdaKehittajaKytkimet();
+  assert.equal(lautaValinta(), 'pallo');
+  // 3. MUISTI EI OLE LEVYLUKU: arvo pysyy, kunnes joku unohtaa sen.
+  globalThis.location = { search: '' };
+  unohdaKehittajaKytkimet();
+  varasto.set('matkakirja-lauta', 'kartta');
+  assert.equal(lautaValinta(), 'pallo', 'muistettu arvo pysyy, kunnes joku unohtaa sen');
+  varasto.delete('matkakirja-lauta');
+  asetaLautaValinta('pallo');
+  unohdaKehittajaKytkimet();
+});
+
+/*
+ * PELITILA EI TUNNE LAUTAA. Vanha kartta on väliaikaisesti pois käytöstä
+ * (omistaja 7.9.2026), joten `asetaLautaValinta('kartta')` ei enää vaihda
+ * lautaa — sääntö itse on silti voimassa ja tärkeä: tallenne on laudasta
+ * riippumaton, ja niin sen on oltava myös silloin, kun vanha kartta
+ * palaa. Testi lataa saman tallenteen kahdesti ja vartioi js/game.js:n.
+ */
+test('sama tallenne latautuu identtiseksi pelitilaksi; pelitila ei tunne lautaa', () => {
+  const peli = new Game({
+    players: [{ name: 'Fogg', color: '#c9a227', start: 'ateena' }],
+    pack: packById('maailmankartta'),
+    seed: 7,
+  });
+  peli.phase = 'action';
+  const tallenne = JSON.stringify(peli.toJSON());
+  const lataa = (lauta) => {
+    asetaLautaValinta(lauta);
+    unohdaKehittajaKytkimet();
+    return JSON.stringify(Game.fromJSON(JSON.parse(tallenne)).toJSON());
+  };
+  assert.equal(lataa('kartta'), lataa('pallo'), 'pelitila on sama laudan valinnasta riippumatta');
+  assert.equal(lautaValinta(), 'pallo', 'vanha kartta ei kytkeydy päälle valinnasta');
+  assert.ok(!/"lauta"|pallolauta/.test(tallenne), 'tallenteessa ei ole laudan valintaa');
+  const game = lue('../js/game.js');
+  assert.ok(!/lautaValinta|matkakirja-lauta|pallolauta/.test(game), 'js/game.js ei muutu riviäkään (karttapallo.md luku 1)');
+  asetaLautaValinta('pallo');
+  unohdaKehittajaKytkimet();
+});
+
+test('näkyvä leveys ↔ korkeus: suunnitelman kaava, katot ja käänteisyys', () => {
+  // korkeus = (leveys · 360/12000) / (2·tan(25°)·180/π) ≈ leveys / 1780.
+  const kerroin = 2 * Math.tan((25 * Math.PI) / 180) * (180 / Math.PI);
+  assert.ok(Math.abs(kerroin - 53.44) < 0.05, `tasokuvan kerroin ${kerroin}`);
+  assert.ok(Math.abs(korkeusLeveydesta(PALLO_SUKELLUSLEVEYS) - 0.348) < 0.348 * 0.05, 'sukellusleveys 620 → ≈ 0,35');
+  assert.ok(Math.abs(korkeusLeveydesta(88) - 0.0494) < 0.0494 * 0.05, 'kaupunkiporras 88 → ≈ 0,05');
+  assert.equal(korkeusLeveydesta(12000), PALLO_KORKEUS_MAX, 'koko lauta → kaukaisin korkeus');
+  assert.equal(korkeusLeveydesta(1), PALLO_KORKEUS_MIN, 'lähin korkeus sidottu laattatarkkuuteen');
+  // Suurilla leveyksillä kasvu on yhä tasokuvan mukainen kattoon asti
+  // (pallon geometrian kaari ylittää tasokuvan vasta ~150°:ssa, joka on
+  // katon 2,5 yläpuolella); 120° = 4000 yksikköä on vielä katon alla.
+  const iso = korkeusLeveydesta(4000);
+  assert.ok(Math.abs(iso - 4000 / kerroin * (360 / 12000)) < 0.01 && iso < PALLO_KORKEUS_MAX, `120°: ${iso}`);
+  assert.equal(korkeusLeveydesta(5200), PALLO_KORKEUS_MAX, '156° ei mahdu: katto');
+  assert.ok(korkeusLeveydesta(4000) < korkeusLeveydesta(4400), 'kasvava');
+  // Käänteinen tasokuvan alueella ±0,1 %.
+  for (const leveys of [88, PALLOLAUDAN_SAAPUMISLEVEYS, PALLO_SUKELLUSLEVEYS, 1500, 3000]) {
+    const takaisin = leveysKorkeudesta(korkeusLeveydesta(leveys));
+    assert.ok(Math.abs(takaisin - leveys) < leveys * 0.001, `${leveys} → ${takaisin}`);
+  }
+  // Korkeuden kasvaessa leveys ei koskaan ylitä lautaa.
+  assert.ok(leveysKorkeudesta(PALLO_KORKEUS_MAX) <= 12000);
+  assert.ok(leveysKorkeudesta(100) <= 12000);
+});
+
+/*
+ * KUVASUHDE ON OSA KAAVAA (korjattu 5.9.2026 yöllä; omistaja: *"kartan
+ * zoom taso heti aloituksessa lähemmäksi"*). Globe.gl:n fov on
+ * PYSTYSUUNNAN avauskulma, joten ilman kuvasuhdetta pyydetty leveys
+ * asettui ruudun KORKEUDELLE: sama pyyntö näytti työpöydällä 1,67-
+ * kertaisen ja puhelimella 0,48-kertaisen kaistan, ja bbox-rajaus laski
+ * korkeusehdon väärinpäin. Oletus 1 (neliöruutu) pitää vanhat kutsut
+ * ennallaan; laudan kamera antaa kotelon oman suhteen.
+ */
+test('kuvasuhde: pyydetty leveys on ruudun LEVEYS, ei korkeus', () => {
+  // Leveä ruutu tarvitsee matalamman kameran kuin neliö samalle
+  // leveydelle — kaksinkertainen kuvasuhde puolittaa korkeuden.
+  const neliö = korkeusLeveydesta(1000, { min: 0 });
+  const leveä = korkeusLeveydesta(1000, { min: 0, kuvasuhde: 2 });
+  const kapea = korkeusLeveydesta(1000, { min: 0, kuvasuhde: 0.5 });
+  assert.ok(Math.abs(leveä - neliö / 2) < neliö * 0.001, `${leveä} vs ${neliö / 2}`);
+  assert.ok(Math.abs(kapea - neliö * 2) < neliö * 0.002, `${kapea} vs ${neliö * 2}`);
+  // Käänteinen on käänteinen samalla kuvasuhteella.
+  for (const kuvasuhde of [0.46, 1, 1.67]) {
+    const takaisin = leveysKorkeudesta(korkeusLeveydesta(900, { min: 0, kuvasuhde }), { kuvasuhde });
+    assert.ok(Math.abs(takaisin - 900) < 0.9, `${kuvasuhde}: ${takaisin}`);
+  }
+  // Kamera lukee suhteen kotelosta joka kutsulla (kääntyvä ruutu) ja
+  // vie sen kaikkiin kolmeen suuntaan: leveys → korkeus, korkeus →
+  // leveys ja laattojen tarkkuusraja.
+  const kamera = lue('../js/pallolauta/kamera.js');
+  assert.match(kamera, /const kuvasuhde = \(\) => ruudunLeveys\(\) \/ ruudunKorkeus\(\);/);
+  // Lähin korkeus lukee kuvasuhteen JA laitteen syvennyksen kutsuttaessa
+  // (PAATOKSET 34 kohta 15 c: puhelin pääsee portaan syvemmälle).
+  assert.match(kamera, /const korkeusMin = \(\) => lahinKorkeus\(\{\n\s*laudanLeveys,\n\s*kuvasuhde: kuvasuhde\(\),/);
+  assert.match(kamera, /syvennys: lahizoominSyvennys\(\{ leveysPx: ruudunLeveys\(\), dpr \}\),/);
+  assert.match(kamera, /const korkeus = \(leveysYks\) => korkeusLeveydesta\(leveysYks, \{\n\s*laudanLeveys, kuvasuhde: kuvasuhde\(\), min: korkeusMin\(\),\n\s*\}\);/);
+  assert.match(kamera, /const leveys = \(korkeusArvo\) => leveysKorkeudesta\(korkeusArvo, \{ laudanLeveys, kuvasuhde: kuvasuhde\(\) \}\);/);
+  // Bbox mahtuu molempiin suuntiin: korkeusehto muutetaan leveydeksi.
+  assert.match(kamera, /leveys = Math\.max\(bbox\.w \* vara, \(bbox\.h \* vara \* ruudunLeveys\(\)\) \/ ruudunKorkeus\(\)\);/);
+});
+
+test('pallolla vain pelin merkit: sallitut kerrokset lueteltu, kartan kerrokset kiellettyjä', () => {
+  // Vaihe 2: pisteet (kaupungit, askelhelmet), html-merkit (nappula,
+  // kohteet), polut (naapurireitit) ja kaaret (lennot) — täsmälleen nämä.
+  // LINSSIT 5.9.2026 (karttapallo.md luku 10, aalto 1A): monikulmiot
+  // (polygonsData) tulivat listalle LINSSIN kerroksena — peli ei piirrä
+  // sinne mitään, ja kerros on tyhjä aina kun linssiä ei ole päällä.
+  /*
+   * AVARUUS 7.9.2026: particlesData tuli listalle tähtitaivaalle
+   * (js/pallolauta/tahdet.js). Se ei riko sääntöä "ei mitään pinnoitteen
+   * päälle": pisteet ovat 2,6–6,5 pallonsädettä pinnan YLÄPUOLELLA, ja
+   * kerros on tyhjä aina kun kertomusesityksen avaus ei ole käynnissä.
+   */
+  assert.deepEqual(PALLOLAUDAN_KERROKSET, [
+    'pointsData', 'htmlElementsData', 'pathsData', 'arcsData', 'polygonsData', 'particlesData',
+  ]);
+  const kansio = new URL('../js/pallolauta/', import.meta.url);
+  const kielletyt = ['labelsData', 'ringsData', 'hexBinPointsData', 'tilesData', 'customLayerData', 'objectsData', 'heatmapsData'];
+  for (const nimi of readdirSync(kansio)) {
+    const src = readFileSync(new URL(nimi, kansio), 'utf8');
+    for (const k of kielletyt) {
+      assert.ok(!src.includes(`.${k}(`), `${nimi}: ${k} — pinnoitteen päälle ei piirretä karttaa (Raamattu 5.9.2026)`);
+    }
+    const kaytetyt = [...src.matchAll(/\.(\w+Data)\(/g)].map((m) => m[1]);
+    for (const k of kaytetyt) assert.ok(PALLOLAUDAN_KERROKSET.includes(k), `${nimi}: ${k} ei ole sallittu kerros`);
+  }
+  // Käydyt ja aloituskaupungit erottuvat muista.
+  const kaydyn = kaupunkipisteenVari({ kayty: true, alku: false });
+  const alun = kaupunkipisteenVari({ kayty: false, alku: true });
+  const muun = kaupunkipisteenVari({ kayty: false, alku: false });
+  assert.ok(kaydyn !== muun && alun !== muun && kaydyn !== alun);
+  // Käymätön piste on vaalea ruskea, ei musta (omistaja 8.9.2026:
+  // "mustat pisteet saisivat näkyä selvästi vaaleampina").
+  const luma = (hex) => { const n = parseInt(hex.slice(1), 16); return (0.2126 * (n >> 16) + 0.7152 * ((n >> 8) & 255) + 0.0722 * (n & 255)); };
+  assert.ok(luma(muun) >= 100, `käymättömän pisteen luminanssi ${luma(muun).toFixed(0)} — musta täplä palasi`);
+  assert.ok(luma(muun) < luma(alun) && luma(alun) < luma(kaydyn), 'käymätön on kolmesta tummin');
+  // Kaikki liike animoitua, reduced motion kunnioitetaan.
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /const siirtyma = ui\.reducedMotion \? 0 : MERKKIEN_SIIRTYMA_MS;/);
+  /*
+   * PISTEKERROS ON POIKKEUS (omistaja 12.9.2026: *"pisteet edelleen
+   * liikahtavat liikkeen loputtua"*): kirjaston pistesiirtymä kirjoittaa
+   * PINNAN paikan, ja meidän pisteemme ovat katsesäteellä, joten sen
+   * siirtymä on nolla. Vartija on tests/pallopiste.test.mjs.
+   */
+  assert.match(lauta, /\.pointsTransitionDuration\(PISTEIDEN_SIIRTYMA_MS\)/);
+  assert.match(lue('../js/pallolauta/merkit.js'), /\.htmlTransitionDuration\(siirtyma\)/);
+  assert.match(lue('../js/pallolauta/reitit.js'), /\.pathTransitionDuration\(siirtyma\)/);
+  assert.match(lue('../js/pallolauta/reitit.js'), /\.arcsTransitionDuration\(siirtyma\)/);
+  assert.match(lue('../js/pallolauta/kamera.js'), /if \(ui\?\.reducedMotion \|\| !\(kesto > 0\)\)/);
+  // Render-silmukka lepää lehden takana ja piilossa.
+  assert.match(lauta, /pallo\.pauseAnimation\?\.\(\)/);
+  assert.match(lauta, /attributeFilter: \['open'\]/);
+});
+
+test('merkit ovat pinnalla: CSS2D-korkeus on nolla, eikä ruutupaikkaa lasketa muualla', () => {
+  /*
+   * MERKIT LUKITTU KAMERAAN (omistajan vikailmoitus 7.9.2026, iPad:
+   * *"kohdepisteet ja pelaajan nappula ei pysy paikallaan, kun karttaa
+   * vierittää"*). Kohotettu CSS2D-merkki projisoituu ruudun
+   * keskipisteestä ULOSPÄIN, ja siirtymä kasvaa etäisyyden mukana —
+   * siitä heiluminen. Nolla on ainoa korkeus, jolla merkki osuu
+   * täsmälleen sen pinnan pisteeseen, jonka päällä laatat ja rantaviiva
+   * ovat (js/pallovektorit.js VEKTORIT_KORKEUS = 0).
+   */
+  assert.equal(MERKIN_KORKEUS, 0, 'merkin korkeus ei ole nolla — merkit heiluvat panoroitaessa');
+  const merkit = lue('../js/pallolauta/merkit.js');
+  assert.match(merkit, /\.htmlAltitude\(MERKIN_KORKEUS\)/);
+  /*
+   * YKSI KORKEUS, EI KOPIOITA. Nappulan ja kohteiden ruutupaikka
+   * lasketaan kolmessa paikassa (kortin ankkuri, liikkuva nappula,
+   * lentokaari) — jokaisen on luettava sama vakio, tai merkki ja sen
+   * ankkuri erkanevat seuraavassa säädössä.
+   */
+  assert.match(lue('../js/pallolauta/lauta.js'), /getScreenCoords\(lat, lng, MERKIN_KORKEUS\)/);
+  const siirto = lue('../js/pallolauta/siirto.js');
+  assert.match(siirto, /const ruutu = \(kohta, korkeus = MERKIN_KORKEUS\) =>/);
+  for (const tiedosto of ['../js/pallolauta/merkit.js', '../js/pallolauta/siirto.js']) {
+    assert.ok(!/getScreenCoords\([^)]*0\.00\d/.test(lue(tiedosto)),
+      `${tiedosto}: merkin korkeus kovakoodattuna — vakio on MERKIN_KORKEUS`);
+  }
+});
+
+test('tasokartta pois tieltä yhdestä portista; kamera kulkee delegaatin kautta', () => {
+  const ui = lue('../js/ui.js');
+  const kartta = lue('../js/kartta.js');
+  /*
+   * Lepotila ja sen portit (karttapallo.md luku 3). Lepotilan rakennin,
+   * nuku ja sijaisolio muuttivat 5.9.2026 js/kartta-lataus.js:ään
+   * (laiskoituserä 5b): tasokartan moduulia ei enää ladata pallolaudalla
+   * lainkaan, joten nukkuvan kartan rajapinta on omassa moduulissaan ja
+   * Kartta perii sen. Portit itse ovat entisellään.
+   */
+  const lataus = lue('../js/kartta-lataus.js');
+  assert.match(lataus, /^  nuku\(\) \{/m);
+  assert.match(lataus, /this\.lepotila = true;/, 'sijainen syntyy nukkuvana');
+  assert.match(kartta, /export class Kartta extends NukkuvaKartta \{/);
+  assert.match(kartta, /this\.lepotila = false;/);
+  assert.match(kartta, /^  heraa\(\) \{/m);
+  for (const metodi of ['fitViewBox', 'ajastaMannerZoom', 'tarkistaFokusZoom']) {
+    const runko = kartta.slice(kartta.indexOf(`\n  ${metodi}() {`));
+    assert.ok(runko.slice(0, 400).includes('this.lepotila'), `${metodi}: portti metodin alussa`);
+  }
+  assert.match(kartta, /if \(this\.ui\.mannerZoom \|\| this\.lepotila\) return;/);
+  assert.match(kartta, /if \(this\.lepotila\) return Promise\.resolve\(false\);/, 'ajaKamera raukeaa lepotilassa');
+  assert.match(kartta, /const pane = new Proxy\(ruutu, \{/, 'karttaruudun eleet yhdestä portista');
+  // ui.render: yksi portti, drawBoardFor ei aja pallolaudalla.
+  assert.match(ui, /if \(this\.kartta\.lepotila\) \{\n      this\.paivitaPallolauta\(\);\n    \} else \{\n/);
+  // Aalto 1D: myös avausnäkymä on pallolla, joten lepotila alkaa jo
+  // lähtövalinnassa (etusivunPalloKaytossa) eikä vasta pelin laudasta.
+  // Erä 5b: karttahaara kulkee latausportin kautta (heraaTasokartta →
+  // varmistaKartta → kartta.heraa → drawBoardFor), pallohaara ei lataa
+  // eikä piirrä mitään.
+  /*
+   * VÄLIAIKAISESTI POIS (omistaja 7.9.2026): karttahaaran EDESSÄ on nyt
+   * yksi portti — tasokartta jää lepotilaan kaikilla poluilla, myös kun
+   * etusivun pallo on kytketty pois. Vanha kaksihaarainen ehto jää
+   * paikalleen sen alle paluuta varten.
+   */
+  assert.match(ui, /if \(!VANHA_KARTTA_KAYTOSSA\) this\.kartta\.lepotila = true;\n\s*else if \(this\.pallolautaHalutaan\(\) \|\| this\.etusivunPalloKaytossa\(\)\) this\.kartta\.lepotila = true;\n\s*else void this\.heraaTasokartta\(\);/);
+  // Delegaatti ja sen käyttö: kartta-oliota ei enää haeta suoraan ajoihin.
+  assert.match(ui, /^  kamera\(\) \{\n    return this\.pallolautaPaalla\(\) \? this\.pallolauta\.kamera : this\.kartta;/m);
+  assert.ok(!ui.includes('const kartta = this.kartta;'), 'ajot kulkevat this.kamera():n kautta');
+  assert.ok((ui.match(/const kartta = this\.kamera\(\);/g) ?? []).length >= 3);
+  assert.match(ui, /if \(this\.pallolautaPaalla\(\)\) return this\.pallolauta\.kamera\.nakyvaAlue\(\);/);
+  // Vaihe 2: Liiku EI avaa linssikarttaa — siirrot tehdään pallolla, ja
+  // linssikartta jää vain linsseille (valitseLinssi).
+  const liiku = ui.match(/ {2}vaihdaLiuku\(\) \{[\s\S]*?\n {2}\}\n/)[0];
+  assert.doesNotMatch(liiku, /avaaLinssikartta/, 'Liiku herättää yhä tasokartan');
+  // Aalto 1A: pallolle käännetty linssi ei avaa kuorta lainkaan
+  // (tests/pallolinssit.test.mjs vartioi sopimuksen).
+  assert.match(ui, /if \(tunnus && this\.pallolautaPaalla\(\) && !pallolle\) this\.avaaLinssikartta\(\{ linssi: true \}\);/);
+  assert.match(ui, /^  tarkistaLinssikartta\(\) \{/m);
+  /*
+   * VARAPOLKU EI AVAA VANHAA KARTTAA (omistaja 7.9.2026): kaatunut pallo
+   * yritetään uudelleen kevennettynä, ja vasta toisesta kaatumisesta
+   * pelaaja saa selkeän virheilmoituksen. Laitteen valintaa ei kirjoiteta
+   * kummassakaan tapauksessa.
+   */
+  assert.doesNotMatch(ui, /asetaLautaValinta\(/);
+  assert.match(ui, /this\.pallolautaEpaonnistui = true;/);
+  assert.match(ui, /Karttapallo kaatui — avataan kevennettynä\./);
+  assert.match(ui, /Karttapalloa ei saatu auki tällä laitteella\./);
+  assert.doesNotMatch(ui, /pelataan kartalla/, 'vanha kartta ei ole enää varapolku');
+  // Kytkin: nappi jää paikalleen mutta on piilossa, kunnes vanha kartta palaa.
+  const html = lue('../index.html');
+  assert.match(html, /id="kehittaja-pallolauta-btn"/);
+  const main = lue('../js/main.js');
+  assert.match(main, /if \(pallolautaNappi\) pallolautaNappi\.hidden = !VANHA_KARTTA_KAYTOSSA;/);
+  assert.match(main, /asetaLautaValinta\(halutaan \? 'pallo' : 'kartta'\);/);
+  assert.match(main, /osoite\.searchParams\.delete\('lauta'\);/);
+  const sw = lue('../sw.js');
+  for (const nimi of ['lauta', 'kamera', 'merkit', 'nimet', 'nostot', 'reitit', 'siirto']) {
+    assert.match(sw, new RegExp(`'\\./js/pallolauta/${nimi}\\.js'`), `${nimi}.js puuttuu SHELListä`);
+  }
+  // Yhden tiedoston versio ei niputa palloa: dynaaminen tuonti kaatuu
+  // siellä hallitusti varapolkuun (karttapallo.md luku 6).
+  assert.ok(!lue('../tools/build-standalone.mjs').includes('js/pallolauta/'));
+  assert.match(ui, /await import\('\.\/pallolauta\/lauta\.js'\)/);
+});
+
+/*
+ * VAIHE 2: SIIRROT PALLOLLA (karttapallo.md luku 7, rivi 2). Koreografia
+ * on yhdessä paikassa (animatePawnSisalla) ja vain nappulan käsittely
+ * haarautuu laudan mukaan kuljettajalle; noppa ja lento haarautuvat
+ * samoin; pallo ei enää tuo ui.js:ää (kehäriippuvuus poistui).
+ */
+test('vaihe 2: siirto haarautuu laudan mukaan kuljettajalle, koreografia pysyy yhtenä', () => {
+  const ui = lue('../js/ui.js');
+  const siirto = ui.match(/async animatePawnSisalla\([\s\S]*?\n {2}\}\n/)[0];
+  // Kuljettaja valitaan laudan mukaan; sama sopimus molemmilla.
+  assert.match(ui, /^  nappulanKuljettaja\(player, \{ lento = false, omaKamera = false \} = \{\}\) \{/m);
+  assert.match(ui, /return this\.pallolauta\.nappulanKuljettaja\(player, \{ lento, omaKamera \}\);\n\s+\}\n\s+return this\.tasokartanKuljettaja\(player\);/);
+  for (const kutsu of ['kuljettaja.nosta()', 'kuljettaja.aseta(from)', 'await kuljettaja.hyppaa(paikka, pos, stepMs)', 'kuljettaja.laske()']) {
+    assert.ok(siirto.includes(kutsu), `animatePawnSisalla ei kutsu ${kutsu}`);
+  }
+  // Musiikin, äänten ja kameran koukut ovat yhä siirrossa TÄSMÄLLEEN
+  // entiseen tapaan (musiikin sammutus kahdesti: kuollut peli ja perillä).
+  const koukut = {
+    'this.aloitaSiirronMusiikki(musiikki)': 1,
+    'this.lopetaSiirronMusiikki()': 2,
+    'this.ennakoiSiirtoZoomi(': 1,
+    'this.aloitaSaattavaKamera(': 1,
+    'this.aloitaJalkamatkanAani()': 1,
+    "sfx.play(viimeinen ? 'arrive' : 'step')": 1,
+    'this.piilotaNoppa()': 1,
+  };
+  for (const [koukku, maara] of Object.entries(koukut)) {
+    assert.equal(siirto.split(koukku).length - 1, maara, `${koukku} ei ole siirrossa ${maara} kertaa`);
+  }
+  const pallolauta = ['lauta', 'avaus', 'kamera', 'merkit', 'nimet', 'nostot', 'reitit', 'siirto'].map((n) => lue(`../js/pallolauta/${n}.js`)).join('\n');
+  for (const koukku of ['aloitaSiirronMusiikki', 'lopetaSiirronMusiikki', 'aloitaJalkamatkanAani', 'sfx.play(', 'ennakoiSiirtoZoomi', 'aloitaSaattavaKamera']) {
+    assert.ok(!pallolauta.includes(koukku), `pallolauta kutsuu ${koukku} itse — ui.js:n kutsut kahdentuisivat`);
+  }
+  // Ennakkozoomi ja saatto eivät vaadi pallolta yleiskuvan porrasta.
+  for (const metodi of ['ennakoiSiirtoZoomi', 'aloitaSaattavaKamera']) {
+    const alku = ui.search(new RegExp(`^  (?:async )?${metodi}\\(`, 'm'));
+    assert.ok(alku > 0, `${metodi} puuttuu`);
+    const runko = ui.slice(alku, alku + 900);
+    assert.match(runko, /if \(!this\.pallolautaPaalla\(\) && !this\.mannerZoom\) return;/, `${metodi}: pallolla ei ole yleiskuvaa`);
+  }
+  // Lento: doFly ja mannerlento kertovat kuljettajalle lennosta; pallolla kone.
+  assert.ok((ui.match(/MANNER_LENTO_MS, \{ lento: true \}\)/g) ?? []).length >= 2, 'doFly ja mannerlento eivät kerro lennosta');
+  assert.match(lue('../js/pallolauta/siirto.js'), /el = lento\n\s+\? koneElementti\(\)\n\s+: nappulaElementti\(/);
+  // Noppa: pallolla lähtö on nappulan ruutupiste, lepopaikka ruudulta.
+  assert.match(ui, /const from = pallolla\n\s+\? \(this\.pallolauta\.ruutupiste\(player\.pos\) \?\? to\)/);
+  assert.match(ui, /if \(!pallolla\) this\.kartta\.merkitseNopanPaikka\(to\);/);
+  // Reitit: yksi sääntö (matkareittienValinta), kaksi piirtäjää.
+  assert.match(ui, /^  matkareittienValinta\(\) \{/m);
+  assert.match(ui, /if \(this\.kartta\.lepotila\) \{ this\.pallolauta\?\.paivita\(\); return; \}/);
+  // Helmet samalla kaavalla kuin pixelOf, mutta reitin KORJATULTA
+  // polylta (kaupungin oma pallopiste siirtää polyn päät) — sama
+  // viiva, jota nappula kulkee (js/pallolauta/siirto.js hypynKohta).
+  const reititLahde = lue('../js/pallolauta/reitit.js');
+  assert.match(reititLahde, /const poly = korjattuPoly\(reitti\);/);
+  assert.match(reititLahde, /pointAlong\(poly, i \/ askelia\)/, 'helmet eivät ole samalla kaavalla kuin pixelOf');
+  assert.match(lue('../js/pallolauta/siirto.js'), /pointAlong\(lauta\.reitit\.poly\(h\.reitti\), h\.ta \+ \(h\.tb - h\.ta\) \* e\)/,
+    'nappula ei kulje samaa korjattua polya kuin helmet');
+  assert.match(lue('../js/pallolauta/lauta.js'), /\(lento \? lento\.valinta : ui\.matkareittienValinta\(\)\);/);
+  // Kehäriippuvuus poistui: pallolauta ei tuo ui.js:ää; koreografian
+  // luvut tulevat kummallekin laudalle samasta moduulista.
+  assert.ok(!pallolauta.includes("from '../ui.js'"), 'js/pallolauta tuo ui.js:ää');
+  assert.match(lue('../js/pallolauta/kamera.js'), /import \{ siirtoajonPehmennys, sovitaAjonKesto \} from '\.\.\/siirtokoreografia\.js';/);
+  assert.match(ui, /from '\.\/siirtokoreografia\.js';/);
+  // Kohteet napautettavissa: lähin kohde 44 px → doMove; R-malli, ei elementin click.
+  const lauta = lue('../js/pallolauta/lauta.js');
+  /*
+   * SIIRTO TEHDÄÄN YHDESTÄ FUNKTIOSTA (Raamattu, KARTTAUUDISTUKSEN
+   * PAATOKSET 42): kohdemerkki, liuskan "Liiku tänne" -rivi ja
+   * siirtovaiheessa kohteena olevan kaupungin merkki kutsuvat samaa
+   * `valitseSiirto`a, joka kutsuu `ui.doMove`n. Ennen tätä päätöstä
+   * kohdemerkki kutsui doMovea itse; kolmen kopion sijaan kutsuja on
+   * yksi, ja tämä väite lukee sen.
+   */
+  assert.match(lauta, /return valitseSiirto\(kohde\.key\);/);
+  assert.match(lauta, /const valitseSiirto = \(avain\) => \{[\s\S]{0,200}?ui\.doMove\(avain\);/);
+  assert.equal(lauta.split('ui.doMove(').length - 1, 2,
+    'siirto lähtee useammasta kuin yhdestä funktiosta (valitseSiirto + varapolku)');
+  // Kohdekaupungin merkki valitsee siirron eikä avaa liuskaa; pelaajan
+  // oma kaupunki ja katselutila jäävät liuskalle (PAATOKSET 42).
+  assert.match(lauta, /if \(siirto && !ui\.katselu && !\(oma && oma\.id === city\.id\)\) \{\s*\n\s+return valitseSiirto\(siirto\.key\);/);
+  assert.match(lauta, /const kohde = lahinKohde\(lat, lng\);/);
+  assert.match(lue('../css/styles.css'), /\.pallolauta-kohde \{\n  pointer-events: none;/);
+  // Kamera seuraa teleporttia, ei siirtoa: kuljettaja kirjaa paikkansa perillä.
+  assert.match(lue('../js/pallolauta/siirto.js'), /lauta\.merkitseNappulanPaikka\(perilla\)/);
+});
+
+/*
+ * VAIHE 6: PELAAJAN LAUTAKYTKIN (omistaja 5.9.2026, sanatarkasti:
+ * *"pelissä periaatteessa voisi olla lopulta kytkin, millä pelaaja voisi
+ * valita haluaako pelata pallonäkymässä vai sillä meidän vanhalla
+ * kartalla sitten kun ollaan saatu pallo toimimaan."* — karttapallo.md
+ * luku 0 kohta 4 ja luku 7 rivi 6). Vartioi, että valinta on PELAAJAN
+ * asetusvalikossa (ei kehittäjätilassa), käyttää samaa avainta ja samaa
+ * kaavaa kuin ratasvalikon vipu, ja että oletus on pallo.
+ */
+test('vaihe 6: pelaajan asetusrivi on päävalikossa, samalla avaimella ja samalla kaavalla', () => {
+  const html = lue('../index.html');
+  const main = lue('../js/main.js');
+  // Rivi on PELAAJAN valikossa (#paavalikko), ei kehittäjävalikossa.
+  // Loppuraja oli #kehittaja-kotelo, kunnes se poistettiin
+  // hampurilaisesta 11.9.2026 (työhuoneen napit siirtyivät rattaaseen).
+  // Pohjarivi on valikon viimeinen lohko, joten se rajaa saman alueen.
+  const paavalikko = html.slice(html.indexOf('id="paavalikko"'),
+    html.indexOf('class="valikko-pohjarivi"'));
+  assert.ok(paavalikko.includes('id="lauta-valikko"'), 'lauta-valikko puuttuu päävalikosta');
+  assert.ok(paavalikko.includes('id="lauta-vihje"'), 'vaihdon vihjerivi puuttuu');
+  assert.match(paavalikko, /<p class="valikko-otsikko">Pelilauta<\/p>/);
+  // Asu tulee ääniasetusten riveistä: sama valikko, sama typografia.
+  assert.match(paavalikko, /class="kertoja-valikko lauta-valikko"/);
+  const kehittaja = html.slice(html.indexOf('id="kehittaja-valikko"'), html.indexOf('id="paavalikko"'));
+  assert.ok(!kehittaja.includes('lauta-valikko'), 'pelaajan rivi ei kuulu kehittäjävalikkoon');
+  assert.ok(html.includes('id="kehittaja-pallolauta-btn"'), 'kehittäjävipu jää paikalleen');
+  // Kaksi vaihtoehtoa, pallo ensin (oletus).
+  const rivit = [...main.matchAll(/avain: '(pallo|kartta)',\n\s+nimi: '([^']+)'/g)].map((m) => [m[1], m[2]]);
+  assert.deepEqual(rivit, [['pallo', 'Karttapallo'], ['kartta', 'Vanha kartta']]);
+  // Sama avain ja sama kaava kuin vivulla: asetaLautaValinta + ?lauta= pois
+  // + sivun lataus. Rivi ei kirjoita omaa avainta eikä koske tallenteeseen.
+  const kytkin = main.slice(main.indexOf('const LAUTAKYTKIMET'), main.indexOf('// --- päävalikko'));
+  assert.match(kytkin, /asetaLautaValinta\(lauta\);/);
+  assert.match(kytkin, /osoite\.searchParams\.delete\('lauta'\);/);
+  assert.match(kytkin, /location\.href = osoite\.href;/);
+  assert.match(kytkin, /Vaihdetaan lautaa…/);
+  assert.ok(!/localStorage|matkakirja-save/.test(kytkin), 'rivi ei kirjoita varastoa itse eikä koske tallennukseen');
+  assert.equal((main.match(/asetaLautaValinta\(/g) ?? []).length, 2, 'valinnan kirjoittaa vain asetusrivi ja vipu');
+});
+
+test('vaihe 6: valinta on laitteen asetus — oletus poistaa avaimen, kelpaamaton ei kirjoita', () => {
+  unohdaKehittajaKytkimet();
+  /*
+   * VÄLIAIKAISESTI POIS (omistaja 7.9.2026): kytkimet kirjoittavat yhä
+   * saman avaimen, mutta ainoa kelpaava arvo on oletus 'pallo', joka
+   * POISTAA avaimen. Kelpaamaton 'kartta' ei kirjoita mitään — laite ei
+   * jää puolitilaan, jossa vanha kartta odottaisi paluutaan muistissa.
+   */
+  asetaLautaValinta('kartta');
+  assert.equal(varasto.has('matkakirja-lauta'), false, 'kelpaamatonta lautaa ei talleteta');
+  unohdaKehittajaKytkimet();
+  assert.equal(lautaValinta(), LAUTA_OLETUS);
+  // Laitteelle aiemmin jäänyt arvo pyyhkiytyy, kun kytkintä käytetään.
+  varasto.set('matkakirja-lauta', 'kartta');
+  asetaLautaValinta('pallo');
+  assert.equal(varasto.has('matkakirja-lauta'), false);
+  unohdaKehittajaKytkimet();
+  assert.equal(lautaValinta(), LAUTA_OLETUS);
+  // Turvatilan kaatumislaskuri nollautuu, kun pallo valitaan itse.
+  varasto.set('matkakirja-pallo-kaatumiset', '2');
+  asetaLautaValinta('pallo');
+  assert.equal(varasto.has('matkakirja-pallo-kaatumiset'), false, 'pallon valinta nollaa turvatilalaskurin');
+  varasto.delete('matkakirja-pallo-kaatumiset');
+  unohdaKehittajaKytkimet();
+});
+
+/*
+ * VAIHE 5b: ALOITUSLENTO PALLOLLA (karttapallo.md luku 4 rivi
+ * "Aloituslento Lontoosta", luku 7 vaihe 5).
+ *
+ * Uusi peli pallolaudalla lentää Lontoosta aloituskaupunkiin PALLOLLA:
+ * kaari ja kone ovat vaiheen 2 lennon omat, niukkuusharso on pallon oma
+ * kalvo, ja avauksen koreografia — arkki, kertoja, kabiiniääni,
+ * repliikki, ohitus, saapumiskortti — pysyy YHDESSÄ paikassa
+ * (aloituslentoSisalla) kummallekin laudalle. Nämä vartiot ovat
+ * lähdekoodista, koska kahdennus ei näkyisi virheenä: peli vain
+ * lukisi repliikin kahdesti tai lentäisi kaksi konetta.
+ */
+test('vaihe 5b: aloituslento pallolla — pallo ottaa laudan ja kohtaus delegoidaan', () => {
+  const ui = lue('../js/ui.js');
+  // 1. Pallolauta ei enää odota aloituslennon loppumista; ainoa vaihe-
+  //    ehto on aloitusnäyttö (pickstart).
+  const halutaan = ui.match(/^ {2}pallolautaHalutaan\(\) \{[\s\S]*?\n {2}\}/m)[0];
+  assert.doesNotMatch(halutaan, /aloituslentoKesken/,
+    'pallolauta odottaa yhä aloituslennon loppumista');
+  // Aalto 3A: lähtövalinta on pallolla, joten pickstart ei enää sulje
+  // palloa pois — se odottaa napin nostamaa aloitusZoom-lippua, ja
+  // muissa vaiheissa portti on laudan pakka.
+  assert.match(halutaan, /if \(this\.game\.phase === 'pickstart'\) return this\.aloitusvalintaPallolla;/);
+  assert.match(halutaan, /return this\.game\.pack\?\.id === 'maailmankartta';/);
+  // 2. Tasokartta nukkuu ENNEN actionPickStartia, jottei maailmankartta
+  //    ehdi piirtyä eikä pyramidi pyytää yhtään laattaa arkin takana.
+  assert.match(ui, /if \(kartalento && this\.aloituslentoPallolla\(\)\) this\.kartta\.nuku\(\);/);
+  assert.match(ui, /^ {2}aloituslentoPallolla\(\) \{[\s\S]*?return lautaValinta\(\) === 'pallo';/m);
+  // 3. Kohtaus delegoidaan laudalle samalla mallilla kuin kuljettaja.
+  assert.match(ui, /^ {2}aloituslennonKohtaus\(\{ lahto, kohde \}\) \{\n {4}if \(this\.pallolautaPaalla\(\)\) \{\n {6}return this\.pallolauta\.aloituslennonKohtaus\(\{ lahto, kohde \}\);\n {4}\}\n {4}return this\.tasokartanLentokohtaus\(/m);
+  // 4. Koreografia ei kahdennu: lennon tekstit, äänet, kertoja, ohitus
+  //    ja saapumiskortti ovat yhä VAIN aloituslentoSisalla-metodissa.
+  const lento = ui.match(/async aloituslentoSisalla\([\s\S]*?\n {2}\}\n/)[0];
+  for (const koukku of ['this.lueLennonRepliikki();', 'this.showFlightLine(line, alaosa)',
+    'this.syncAmbience();', 'this.naytaSaapumiskortti(kohde)', 'this.saapumisenKuplat(kohde)']) {
+    assert.ok(lento.includes(koukku), `${koukku} ei ole avauslennon koreografiassa`);
+  }
+  const avaus = lue('../js/pallolauta/avaus.js');
+  for (const koukku of ['lueLennonRepliikki', 'showFlightLine', 'naytaSaapumiskortti',
+    'saapumisenKuplat', 'aloitusverho', 'syncAmbience']) {
+    assert.ok(!avaus.includes(koukku), `pallon kohtaus tekee itse ${koukku} — koreografia kahdentuisi`);
+  }
+  // 5. Kohtauksen sopimus: rajaus, valmistele, rakenna, lenna, poistuma, pura.
+  for (const kutsu of ['kohtaus.valmistele();', 'kohtaus.rakenna();',
+    'kohtaus.lenna(lennonKesto)', 'kohtaus.poistuma();', 'kohtaus.pura();']) {
+    assert.ok(lento.includes(kutsu), `aloituslentoSisalla ei kutsu ${kutsu}`);
+  }
+  for (const nimi of ['valmistele()', 'rakenna()', 'lenna(kesto)', 'poistuma()', 'pura()']) {
+    assert.ok(avaus.includes(nimi), `pallon kohtaus ei täytä sopimusta: ${nimi}`);
+  }
+  // Rajaus on kentta (lyhennysmuoto kelpaa: se lasketaan nyt etukateen,
+  // koska avauslennolla on oma marginaali ja pyorinnan siirto).
+  assert.match(avaus, /^ {4}rajaus(,|:)$/m, 'pallon kohtaus ei täytä sopimusta: rajaus');
+  // 6. Kamera-ajo kulkee laudan delegaatin kautta (ui.kamera()).
+  assert.match(lento, /await this\.kamera\(\)\.ajaKamera\(\n {6}rajaus,/);
+});
+
+test('vaihe 5b: kone on vaiheen 2 kuljettaja, kaari vaiheen 2 kaari', () => {
+  const avaus = lue('../js/pallolauta/avaus.js');
+  const siirto = lue('../js/pallolauta/siirto.js');
+  // Kuljettaja pyydetään samalla sopimuksella kuin siirrossa.
+  /*
+   * `omaKamera` (6.9.2026 ilta): kuljettaja ei aja lennon omaa
+   * kamera-ajoaan, koska kohtaus ajaa yhden kaaren itse.
+   */
+  assert.match(avaus, /kuljettaja = ui\.nappulanKuljettaja\(ui\.game\.player, \{ lento: true, omaKamera: true \}\);/);
+  for (const kutsu of ['kuljettaja.nosta();', 'kuljettaja.aseta(lahtoPos, lentokaari());',
+    'kuljettaja.hyppaa(lahtoPos, kohdePos, kesto, { vaihe: lennonVaihe })', 'kuljettaja?.laske();']) {
+    assert.ok(avaus.includes(kutsu), `avauslento ei kutsu kuljettajalta ${kutsu}`);
+  }
+  // Ohitus vie rAF-lennon loppuun samalla sanalla kuin selaimen animaation
+  // — ja päättää samalla kasvavan jäljen (5.9.2026).
+  assert.match(avaus, /finish: \(\) => \{\n\s+paataJalki\(\);\n\s+kuljettaja\?\.paata\?\.\(\);/);
+  assert.match(siirto, /^ {4}paata: \(\) => \{/m);
+  /*
+   * RAJAUS ON LÄHTÖKAUPUNKI JA ALKULEVEYS (omistaja 6.9.2026: kamera
+   * seuraa konetta). Kaupunkiparin laatikko (siirto.js lennonRajaus) on
+   * yhä TAVALLISEN lennon rajaus, mutta avaus ei enää käytä sitä — eikä
+   * saa käyttää, koska kuva ei enää mahduta molempia päitä.
+   */
+  assert.match(siirto, /^export function lennonRajaus\(board, a, b\) \{/m);
+  assert.match(siirto, /\{ bbox: lennonRajaus\(board, a, b\), marginaali: LENNON_RAJAUKSEN_MARGINAALI, kokonaan: true \}/);
+  assert.doesNotMatch(avaus, /lennonRajaus\(/, 'avauslento ei enää rajaa kaupunkiparia');
+  assert.doesNotMatch(avaus, /import[^;]*lennonRajaus/, 'kuollut tuonti siirrosta');
+  assert.match(avaus, /\{ \.\.\.pixelOf\(board, lahtoPos\), leveys: AVAUSLENNON_ALKULEVEYS \}/);
+  // Kaari on reittikerroksen arcsData, ei uusi kerros.
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.ok(!PALLOLAUDAN_KERROKSET.includes('objectsData') && PALLOLAUDAN_KERROKSET.includes('arcsData'),
+    'avauslento ei saa tarvita uutta Globe.gl-kerrosta');
+  assert.match(avaus, /ui\.lentoKaari = \{ a: lahto\.id, b: kohde\.id \};/);
+  // Niukkuus: ei nappulaa, ei kohteita, ei nostoja, kaksi nimeä.
+  assert.match(lauta, /merkit\.paivita\(\{ nappula: liikkuu \|\| lento \|\| linssiPaalla\(\) \? null : nappulanKohta, kohteet \}\);/);
+  // Paikallaan oleva nappula on ennakkozoomin ajan LÄHTÖruudussaan
+  // (PAATOKSET 40): `player.pos` on jo määränpää, koska actionMove ajetaan
+  // ennen animaatiota.
+  assert.match(lauta, /const nappulanKohta = !liikkuu && ui\.siirtoKaynnissa\n\s*\? \(pallonKohta\(ui\.siirtoKaynnissa\) \?\? kohta\)\n\s*: kohta;/);
+  assert.match(lauta, /const kohteet = lento \|\| linssiPaalla\(\) \? \[\] : kohdevalinta\(\);/);
+  assert.match(lauta, /katto: lento \? 0 : Math\.min\(NOSTOJEN_KATTO/);
+  assert.ok(!lauta.includes('objectsData'), 'lentotila lisäisi three.js-objektin');
+  /*
+   * Kamera ei sukella nappulan perään lennon aikana (peli on jo
+   * perillä) — ei avauslennolla (`lento`), ei pelin omalla lennolla
+   * (`ui.lentoKaari`, KARTTAUUDISTUKSEN PAATOKSET 30) eikä maa- tai
+   * merimatkan koreografian aikana (`ui.siirtoKaynnissa`, PAATOKSET 40:
+   * tämä saapumisajo keskeytti ennakkozoomin ensimmäisellä
+   * millisekunnilla).
+   */
+  assert.match(lauta, /if \(!liikkuu && !lento && !ui\.lentoKaari && !ui\.siirtoKaynnissa && pos\) \{/);
+});
+
+test('matkakirja on vasemmassa ylänurkassa myös pallolla (omistaja 5.9.2026)', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /ui\.factCard\.dataset\.corner = 'tl';/);
+  assert.match(lue('../index.html'), /class="card fact-card" data-corner="tl"/, 'HTML:n oletusnurkka on sama kuin kartan päätös');
+});
+
+test('päiväkirja on laatikossa ja kutistuu vedosta myös pallolla (omistaja 5.9.2026)', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /doc\.body\.classList\.add\('pallolauta-paalla'\);/);
+  assert.match(lauta, /doc\.body\.classList\.remove\('pallolauta-paalla'\);/);
+  assert.match(lauta, /ui\.kutistaKortinLiikkeesta\?\.\(\);/);
+  const css = lue('../css/styles.css');
+  assert.match(css, /body\.pallolauta-paalla \.fact-card::before \{/);
+  assert.match(css, /body\.pallolauta-paalla \.fact-card\.pieni::before \{ opacity: 0; \}/);
+});
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * AVAUSLENTO: PAKSU VIIVA (5.9.2026) JA KAMERAN SEURANTA (6.9.2026)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Työpöytäkaappauksesta 5.9.2026 klo 23.10: *"lentokone saisi tehdä
+ * saman paksun viivan kuin etusivulla. näkymä saisi olla zoomautunut
+ * hieman lähemmäs. pallo voisi pyöriä hitaasti lennon aikana."*
+ *
+ * Ja 6.9.2026 aamupäivä, joka korvasi kaksi jälkimmäistä:
+ * *"Lentokonekohtauksessa paljon lähempi zoom aste ja kamera seuraa
+ * konetta. Kartta myös zoomaa koko ajan pikkuhiljaa lähemmäs konetta.
+ * Pallon ei tarvitse siis liikkua lentokohtauksessa."*
+ */
+const avausModuuli = await import('../js/pallolauta/avaus.js');
+const {
+  AVAUSLENNON_ALKULEVEYS, AVAUSLENNON_HUIPPULEVEYS, AVAUSLENNON_HUIPUN_KOHTA,
+  AVAUSLENNON_VIIVAN_PX, lennonKorkeus, lennonSuunnitelma, lennonVaihe, liukuPehmennys,
+} = avausModuuli;
+const siirtoModuuli = await import('../js/pallolauta/siirto.js');
+const reittiModuuli = await import('../js/pallolauta/reitit.js');
+
+/** Kameran näkyvä leveys lautayksikköinä (kamera.js kameranKohde). */
+const nakyvaLeveys = (bbox, marginaali, ruutuW, ruutuH) => {
+  const vara = 1 + 2 * marginaali;
+  return Math.max(bbox.w * vara, (bbox.h * vara * ruutuW) / ruutuH);
+};
+const RUUDUT = [{ nimi: 'työpöytä', w: 1400, h: 900 }, { nimi: 'puhelin', w: 390, h: 844 }];
+
+test('avauslento: kamera lähtee lähtökaupungin yltä ja päätyy saapumisnäkymään', () => {
+  const peli = new Game({
+    players: [{ name: 'Fogg', color: '#c9a227', start: 'lontoo' }],
+    pack: packById('maailmankartta'),
+    seed: 7,
+  });
+  const { board } = peli;
+  const bbox = siirtoModuuli.lennonRajaus(
+    board, { type: 'city', city: 'lontoo' }, { type: 'city', city: 'ateena' },
+  );
+  const asteina = (yks) => kamera.asteetLeveydesta(yks);
+  assert.ok(Math.abs(asteina(bbox.w) - 23.86) < 0.2, `Lontoo → Ateena ${asteina(bbox.w).toFixed(2)}°`);
+  /*
+   * PALJON LÄHEMPÄNÄ KUIN VANHA RAJAUS (omistaja 6.9.2026). Vanha kuva
+   * oli kaupunkiparin laatikko marginaalilla 0,2 — se lasketaan tässä
+   * samalla kaavalla kuin kamera (kameranKohde) molemmille ruuduille, ja
+   * uuden alkuleveyden on oltava selvästi sen alle. Mitattu Chromiumilla
+   * 6.9.2026 (1280 × 800): näkymä lähtee 600 yksiköstä ja päätyy 240:een.
+   */
+  const vanhaLeveys = (ruutuW, ruutuH) => {
+    const vara = 1 + 2 * 0.2;
+    return Math.max(bbox.w * vara, (bbox.h * vara * ruutuW) / ruutuH);
+  };
+  for (const { nimi, w, h } of RUUDUT) {
+    const ennen = vanhaLeveys(w, h);
+    assert.ok(AVAUSLENNON_ALKULEVEYS < ennen * 0.6,
+      `${nimi}: zoom ei ole paljon lähempänä (${asteina(ennen).toFixed(1)}° → ${asteina(AVAUSLENNON_ALKULEVEYS).toFixed(1)}°)`);
+  }
+  /*
+   * ZOOMI KULKEE YHTEEN SUUNTAAN JA PÄÄTTYY SAAPUMISNÄKYMÄÄN: alkuleveys
+   * on suurempi kuin saapumisleveys (kamera lähestyy koko lennon), ja
+   * loppu on TÄSMÄLLEEN sama luku, jonka laskeutuminen ajaa
+   * (siirto.js laske → kamera.kotiin, PALLOLAUDAN_SAAPUMISLEVEYS).
+   */
+  assert.ok(AVAUSLENNON_ALKULEVEYS > PALLOLAUDAN_SAAPUMISLEVEYS * 1.8,
+    'zoomille ei jää matkaa lennon mitalle');
+  assert.ok(AVAUSLENNON_ALKULEVEYS < PALLOLAUDAN_SAAPUMISLEVEYS * 4,
+    'alkukuva on niin kaukana, ettei kone erotu');
+  for (const { nimi, w, h } of RUUDUT) {
+    const alku = korkeusLeveydesta(AVAUSLENNON_ALKULEVEYS, { kuvasuhde: w / h });
+    const loppu = korkeusLeveydesta(PALLOLAUDAN_SAAPUMISLEVEYS, { kuvasuhde: w / h });
+    assert.ok(alku > loppu, `${nimi}: kamera ei laskeudu lennon aikana`);
+  }
+  const avaus = lue('../js/pallolauta/avaus.js');
+  /*
+   * Reduced motion: kamera hyppää suoraan kohdekaupungin
+   * saapumisnäkymään — ja SAAPUMISASENTOON (omistaja 9.9.2026,
+   * Raamattu SAAPUMISESSA KAMERA ASETTUU NIIN, ETTA KAUPUNKI ON
+   * ALIMMASSA KOLMANNEKSESSA): `saapuminen: true` kertoo kameralle,
+   * että kaupunki viedään ruudun alimpaan kolmannekseen. Ilman lippua
+   * liikeherkkä pelaaja saisi eri kuvan kuin muut.
+   */
+  assert.match(avaus, /const rajaus = ui\.reducedMotion\n\s+\? \{ \.\.\.pixelOf\(board, kohdePos\), leveys: PALLOLAUDAN_SAAPUMISLEVEYS, saapuminen: true \}\n\s+: \{ \.\.\.pixelOf\(board, lahtoPos\), leveys: AVAUSLENNON_ALKULEVEYS \};/);
+});
+
+test('avauslento: kamera ajaa yhden suunnitelman, ei seuraa konetta kehys kerrallaan', () => {
+  const avaus = lue('../js/pallolauta/avaus.js');
+  // Pallon oma pyörintä on poissa (omistaja: *"Pallon ei tarvitse siis
+  // liikkua lentokohtauksessa"*).
+  assert.equal(avausModuuli.AVAUSLENNON_PYORINTA_AST, undefined,
+    'lennon pyörintä on korvattu kameran suunnitelmalla');
+  assert.equal(avausModuuli.AVAUSLENNON_RAJAUKSEN_MARGINAALI, undefined,
+    'avauslento ei enää rajaa kaupunkiparia');
+  /*
+   * SEURANTA ON POISSA (omistaja 6.9.2026 ilta: *"kartta liikuu siinä
+   * liian pikkutarkasti seuraten koneen alku ja loppu nykäisyjä"*).
+   * Silotus aikavakioineen ja koneen nosto olivat kaksi eri liikettä
+   * samassa kuvassa; nyt kamera lukee suunnitelman arvon sellaisenaan.
+   */
+  assert.equal(avausModuuli.AVAUSLENNON_SEURANNAN_VIIVE_MS, undefined,
+    'eksponentiaalinen seuranta on palannut');
+  assert.equal(avausModuuli.AVAUSLENNON_KONEEN_NOSTO, undefined,
+    'koneen nosto on palannut (isoisän kortti on poissa lennolta)');
+  assert.equal(avausModuuli.nostonOsuus, undefined, 'noston trapetsi on palannut');
+  assert.doesNotMatch(avaus, /Math\.exp\(-dt \//, 'silotus on palannut');
+  assert.doesNotMatch(avaus, /hypynVaihe\(/, 'kone ja kamera eri käyrillä');
+  // Silmukka on oma rAF:nsa, ja se kirjoittaa suunnitelman sellaisenaan.
+  assert.match(avaus, /const ajaKamerasuunnitelma = \(kaari, kesto, alkuhetki\) => \{/);
+  assert.match(avaus, /kamera\.pysaytaKameraAjo\(\);/);
+  assert.match(avaus, /if \(!ui\.reducedMotion && kaari\) ajaKamerasuunnitelma\(kaari, kesto, alkuhetki\);/);
+  assert.match(avaus, /const kohta = suunnitelma\(t\);/);
+  assert.match(avaus, /\{ lat: kohta\.lat, lng: kohta\.lng, altitude: kohta\.altitude \}, 0,/);
+  /*
+   * Kolme korkeutta lasketaan kerran kameran omalla kaavalla.
+   * `saapuminen` on kolmas argumentti (9.9.2026): vain lennon MAALI
+   * pyytää saapumisasennon, lähtö ja huippu katsovat kaupunkia keskeltä.
+   */
+  assert.match(avaus, /const nakyma = \(pos, leveys, saapuminen = false\) => lauta\.kamera\.kameranKohde\(\n\s+\{ \.\.\.pixelOf\(board, pos\), leveys, saapuminen \},\n\s+\);/);
+  assert.match(avaus, /const maali = nakyma\(kohdePos, PALLOLAUDAN_SAAPUMISLEVEYS, true\);/);
+  for (const leveys of ['AVAUSLENNON_ALKULEVEYS', 'AVAUSLENNON_HUIPPULEVEYS', 'PALLOLAUDAN_SAAPUMISLEVEYS']) {
+    assert.match(avaus, new RegExp(`nakyma\\((lahtoPos|kohdePos), ${leveys}\\)`), leveys);
+  }
+  // Ohitus ja purku vievät kameran maaliin, ettei kuva jää kesken.
+  assert.match(avaus, /paataKameraAjo\(true\);/);
+  // Pehmennys: nollasta ykköseen, kasvava, pehmeät päät.
+  assert.equal(liukuPehmennys(0), 0);
+  assert.equal(liukuPehmennys(1), 1);
+  let edellinen = -1;
+  for (let t = 0; t <= 1.0001; t += 0.05) {
+    const arvo = liukuPehmennys(t);
+    assert.ok(arvo > edellinen, `pehmennys ei kasva kohdassa ${t.toFixed(2)}`);
+    edellinen = arvo;
+  }
+  assert.ok(liukuPehmennys(0.05) < 0.05, 'liikkeellelähtö on pehmeä');
+  assert.ok(liukuPehmennys(0.95) > 0.95, 'pysähdys on pehmeä');
+  // Lennon vaihe on TÄSMÄLLEEN tämä käyrä: kamera, kone ja jälki samasta.
+  for (let t = 0; t <= 1.0001; t += 0.1) {
+    assert.equal(lennonVaihe(t), liukuPehmennys(t), `vaihe eroaa kohdassa ${t.toFixed(1)}`);
+  }
+});
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KAMERAN KAARI: YKSI HUIPPU, EI MIKROLIIKETTÄ (omistaja 6.9.2026 ilta)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Sanatarkasti: *"kartta saisi lentää yhden tasaisen reitin ja zoom
+ * muutoksen alusta loppuun"*. Suunnitelma on puhdas funktio, joten sen
+ * muoto mitataan tässä ilman selainta: näytteet 30 kertaa sekunnissa
+ * 12 sekunnin lennolta ja niistä ensimmäinen ja toinen derivaatta.
+ */
+test('avauslento: kamerasuunnitelman korkeuskäyrällä on yksi maksimi ja pehmeä kiihtyvyys', () => {
+  // Huippu on päiden yläpuolella mutta selvästi lähempänä kuin vanha
+  // kaupunkiparin rajaus (1 113–1 306 lautayksikköä).
+  assert.ok(AVAUSLENNON_HUIPPULEVEYS > AVAUSLENNON_ALKULEVEYS,
+    'kaari ei nouse: huippu ei ole alkua ylempänä');
+  assert.ok(AVAUSLENNON_HUIPPULEVEYS < AVAUSLENNON_ALKULEVEYS * 1.6,
+    'nousu vie kuvan liian kauas koneesta');
+  assert.ok(AVAUSLENNON_HUIPUN_KOHTA > 0.2 && AVAUSLENNON_HUIPUN_KOHTA < 0.5,
+    'huippu ei ole lennon alkupuolella');
+
+  const korkeudet = { alku: 0.34, huippu: 0.43, loppu: 0.135 };
+  const naytteita = 361; // 12 s × 30 näytettä sekunnissa
+  const h = 1 / (naytteita - 1);
+  const y = [];
+  for (let i = 0; i < naytteita; i += 1) y.push(lennonKorkeus(i * h, korkeudet));
+  assert.ok(Math.abs(y[0] - korkeudet.alku) < 1e-12, 'lähtö ei ole lähtökorkeus');
+  assert.ok(Math.abs(y[y.length - 1] - korkeudet.loppu) < 1e-12, 'maali ei ole saapumisnäkymä');
+
+  // YKSI MAKSIMI: derivaatta vaihtaa merkkiä tasan kerran, ja huippu
+  // osuu AVAUSLENNON_HUIPUN_KOHTAan.
+  let vaihtoja = 0;
+  let huipulla = 0;
+  for (let i = 1; i < y.length; i += 1) {
+    if (y[i] > y[huipulla]) huipulla = i;
+    const d = y[i] - y[i - 1];
+    const edellinenD = i > 1 ? y[i - 1] - y[i - 2] : d;
+    if (d * edellinenD < 0) vaihtoja += 1;
+  }
+  assert.equal(vaihtoja, 1, `korkeuskäyrällä ${vaihtoja + 1} ääriarvoa, pitäisi olla yksi`);
+  assert.ok(Math.abs(huipulla * h - AVAUSLENNON_HUIPUN_KOHTA) < 0.02,
+    `huippu kohdassa ${(huipulla * h).toFixed(3)}, odotus ${AVAUSLENNON_HUIPUN_KOHTA}`);
+  // Monotoninen molemmin puolin huippua.
+  for (let i = 1; i <= huipulla; i += 1) {
+    assert.ok(y[i] >= y[i - 1], `nousu ei ole monotoninen kohdassa ${(i * h).toFixed(3)}`);
+  }
+  for (let i = huipulla + 1; i < y.length; i += 1) {
+    assert.ok(y[i] <= y[i - 1], `lasku ei ole monotoninen kohdassa ${(i * h).toFixed(3)}`);
+  }
+
+  /*
+   * EI MIKROLIIKETTÄ. Toinen derivaatta mitataan LOGARITMISESTA
+   * korkeudesta (silmä lukee zoomista suhteen) ja suhteutetaan koko
+   * lennon zoomimatkaan: kiihtyvyys pysyy murto-osassa siitä, mitä
+   * yksikään nykäisy olisi.
+   */
+  const ln = y.map((v) => Math.log(v));
+  const matka = Math.abs(Math.log(korkeudet.loppu / korkeudet.alku));
+  let suurinKiihtyvyys = 0;
+  for (let i = 2; i < ln.length; i += 1) {
+    const kiihtyvyys = Math.abs((ln[i] - 2 * ln[i - 1] + ln[i - 2]) / (h * h)) / 144; // 1/s²
+    suurinKiihtyvyys = Math.max(suurinKiihtyvyys, kiihtyvyys);
+  }
+  assert.ok(suurinKiihtyvyys < matka * 0.5,
+    `zoomin kiihtyvyys ${suurinKiihtyvyys.toFixed(3)} 1/s² on nykäisy`);
+
+  /*
+   * PAIKKA KULKEE YHTENÄ KAARENA. Sama mittaus suunnitelman lat/lng:lle:
+   * askel ei koskaan käänny taaksepäin, ja askelpituuden muutos vaihtaa
+   * merkkiä enintään kerran (lennon puolivälissä).
+   */
+  const kaari = { alku: { lat: 51.5, lng: -0.13 }, loppu: { lat: 37.98, lng: 23.73 }, korkeus: 0.067 };
+  const suunnitelma = lennonSuunnitelma(kaari, korkeudet);
+  const paikat = [];
+  for (let i = 0; i < naytteita; i += 1) paikat.push(suunnitelma(i * h));
+  assert.ok(Math.abs(paikat[0].lat - kaari.alku.lat) < 1e-9);
+  assert.ok(Math.abs(paikat[naytteita - 1].lng - kaari.loppu.lng) < 1e-9);
+  const askel = paikat.map((p, i) => (i === 0 ? 0
+    : Math.hypot(p.lat - paikat[i - 1].lat, p.lng - paikat[i - 1].lng)));
+  let paikanVaihtoja = 0;
+  for (let i = 2; i < askel.length - 1; i += 1) {
+    const a = askel[i] - askel[i - 1];
+    const b = askel[i + 1] - askel[i];
+    if (a * b < 0) paikanVaihtoja += 1;
+  }
+  assert.ok(paikanVaihtoja <= 1,
+    `paikan kiihtyvyys vaihtaa merkkiä ${paikanVaihtoja} kertaa — liike nykii`);
+});
+
+/*
+ * KONE PIIRTYY KAMERAN SUUNNITELMAN PÄÄLLE (omistaja 6.9.2026 ilta).
+ *
+ * Ennen kone kulki siirron omalla käyrällä (hypynVaihe) ja kamera
+ * hakeutui sen perään; nyt molemmat lukevat saman vaiheen, joten kone on
+ * aina siinä pisteessä, jota kamera katsoo. Sen mukana lähti koneen
+ * nosto keskilinjan yläpuolelle: se oli isoisän valokuvakortin
+ * (.lento-valokuva) väistöä, ja kortti poistui lennolta samana iltana.
+ */
+test('avauslento: kone kulkee kameran vaiheella, ei omalla käyrällään', () => {
+  const avaus = lue('../js/pallolauta/avaus.js');
+  const siirto = lue('../js/pallolauta/siirto.js');
+  // Kuljettaja ottaa vaiheen vastaan ja käyttää sitä koneen paikkaan.
+  assert.match(siirto, /hyppaa: \(a, b, kesto, \{ vaihe = null \} = \{\}\) => new Promise/);
+  assert.match(siirto, /const e = hyppy\.vaihe \? hyppy\.vaihe\(t\) : hypynVaihe\(t\)\.e;/);
+  assert.match(siirto, /hyppy = \{ a, b, kaari, vaihe, alku: performance\.now\(\), kesto, valmis \};/);
+  // Avauslento antaa vaiheen; tavallinen lento (doFly, mannerlento) ei.
+  assert.match(avaus, /kuljettaja\.hyppaa\(lahtoPos, kohdePos, kesto, \{ vaihe: lennonVaihe \}\)/);
+  // Kuljettaja ei aja omaa kameraansa avauslennolla.
+  assert.match(siirto, /export function luoNappulanKuljettaja\(\{ ui, lauta, player, lento = false, omaKamera = false \}\)/);
+  assert.match(siirto, /if \(omaKamera\) \{ lahde\(\); return; \}/);
+  /*
+   * KARTTAUUDISTUKSEN PAATOKSET 30: tavallisen lennon rajausajo
+   * ODOTETAAN loppuun ennen kuin kone lähtee, ja laatikko sovitetaan
+   * kokonaan ruutuun (`kokonaan: true`). Avauslento ohittaa ajon
+   * kokonaan kuten ennenkin.
+   */
+  assert.match(siirto, /\{ bbox: lennonRajaus\(board, a, b\), marginaali: LENNON_RAJAUKSEN_MARGINAALI, kokonaan: true \}/);
+  assert.match(siirto, /\)\.then\(lahde, lahde\);/);
+});
+
+test('avauslento: kone piirtää etusivun paksun punaisen viivan, ei uutta kerrosta', () => {
+  const avaus = lue('../js/pallolauta/avaus.js');
+  const reitit = lue('../js/pallolauta/reitit.js');
+  const css = lue('../css/styles.css');
+  // Sama sinooperi kuin etusivun viivalla (css .etusivupallo-viiva).
+  assert.match(css, /\.etusivupallo-viiva \{[\s\S]*?stroke: #c2452f;/);
+  assert.equal(reittiModuuli.REITIN_VARIT.avauslennonJalki, 'rgba(194, 69, 47, 0.92)');
+  // Katkoviivakaari jää hennoksi suunnitteluviivaksi viivan alle.
+  assert.match(lue('../js/pallolauta/lauta.js'), /kaarenVari: REITIN_VARIT\.avauslennonSuunnitelma,/);
+  assert.match(reittiModuuli.REITIN_VARIT.avauslennonSuunnitelma, /rgba\(194, 69, 47, 0\.3\)/);
+  /*
+   * PAKSUUS ON SAMA LUKU KUIN ETUSIVULLA. Globe.gl:n pathStroke on tässä
+   * versiossa RUUTUPIKSELEITÄ (Line2, worldUnits epätosi) eikä asteita —
+   * mitattu Chromiumilla 5.9.2026, ks. avaus.js. Siksi luku on sama 11
+   * kuin css .etusivupallo-viivan stroke-width, eikä sitä muunneta.
+   */
+  assert.equal(AVAUSLENNON_VIIVAN_PX, 11, 'sama paksuus kuin etusivun viivalla');
+  assert.match(css, /\.etusivupallo-viiva \{[\s\S]*?stroke-width: 11;/);
+  assert.match(avaus, /const paksuus = AVAUSLENNON_VIIVAN_PX;/);
+  // Viiva on viivakerroksen OSA (osarekisteri) eikä uusi Globe.gl-kerros.
+  assert.match(reitit, /^ {4}aseta\('avauslento', \[jalkiDatum\]\);$/m);
+  assert.ok(!/objectsData|tubesData/.test(reitit), 'jälki ei saa tuoda uutta kerrosta');
+  // Kasvava jälki kirjoitetaan ilman siirtymää, ja siirtymä palautuu poistossa.
+  assert.match(reitit, /pallo\.pathTransitionDuration\(0\);/);
+  assert.match(reitit, /pallo\.pathTransitionDuration\(siirtyma\);/);
+  /*
+   * GEOMETRIA KERRAN, KASVU KATKOVIIVALLA (mitattu Chromiumilla
+   * 5.9.2026): joka kehyksen pistelistan kirjoitus jätti viivan lennon
+   * ensimmäisen pätkän mittaiseksi Lontoon viereen, koska Globe.gl
+   * rakentaa Line2:n geometrian interpolK-tweenin kautta. Katkoviivan
+   * luvut menevät materiaaliin joka päivityksellä.
+   */
+  assert.match(reitit, /\.pathDashLength\(\(d\) => d\.viiva \?\? d\.katko \?\? 1\)/);
+  assert.match(reitit, /\.pathDashGap\(\(d\) => d\.vali \?\? d\.katko \?\? 0\)/);
+  assert.match(reitit, /jalkiDatum\.viiva = Math\.max\(0, Math\.min\(1, osuus\)\);/);
+  assert.match(avaus, /lauta\.reitit\.jalki\(pisteet, \{ paksuus, osuus: e \}\)/);
+  // Jälki jää näkyviin lennon jälkeen ja katoaa vasta purussa.
+  assert.match(avaus, /^\s+lauta\.reitit\.jalki\(null\);$/m);
+});
+
+test('avauslento: viiva kulkee tasan koneen alla — yksi kaava, yksi kello', () => {
+  const avaus = lue('../js/pallolauta/avaus.js');
+  const siirto = lue('../js/pallolauta/siirto.js');
+  // Kone ja jälki lukevat saman kaaripisteen (reitit.js lentokaarenKohta).
+  assert.match(siirto, /const kohta = lentokaarenKohta\(kaari, e, MERKIN_KORKEUS\);/);
+  assert.match(siirto, /piste = kaarenRuutu\(hyppy\.kaari, e\);/);
+  assert.match(avaus, /lentokaarenKohta\(kaari, i \/ AVAUSLENNON_JALJEN_PISTEET, REITIN_KORKEUS\)/);
+  assert.ok(!/isoympyranPiste/.test(siirto), 'koneen paikka lasketaan vain yhdessä paikassa');
+  // Sama pehmennys ja sama kello kuin koneella (hypynVaihe).
+  assert.match(avaus, /piirraJalki\(lennonVaihe\(t\)\);/);
+  // Kaaripiste: korkeusparaabeli ja kolmiluku [lat, lng, korkeus].
+  const kaari = { alku: { lat: 51.5, lng: -0.1 }, loppu: { lat: 38, lng: 23.7 }, korkeus: 0.0667 };
+  const puolivali = reittiModuuli.lentokaarenKohta(kaari, 0.5, 0.002);
+  assert.ok(Math.abs(puolivali.korkeus - (0.0667 + 0.002)) < 1e-9, 'huippu on puolivälissä');
+  assert.ok(Math.abs(reittiModuuli.lentokaarenKohta(kaari, 0, 0.002).korkeus - 0.002) < 1e-9);
+  assert.ok(Math.abs(reittiModuuli.lentokaarenKohta(kaari, 1, 0.002).korkeus - 0.002) < 1e-9);
+  // Viivakerros lukee korkeuden pisteestä, kun se on annettu.
+  assert.match(lue('../js/pallolauta/reitit.js'),
+    /\.pathPointAlt\(\(p\) => \(p\.length > 2 \? p\[2\] : REITIN_KORKEUS\)\)/);
+});
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * AVAUSLENNON KOLME KORJAUSTA (omistaja 5.9.2026 klo 00.35)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Uusi kaappaus avauslennolta (v1601), sanatarkasti: *"lentokone-
+ * kohtauksessa kartta voi näkyä ilman sumennusta. lentokoneen ei
+ * tarvitse kääntyä alussa vaan voi lehtää heti oikeaan suuntaa ja
+ * jättää paksun punaisen viivan. isoisän kuva pitää häivyttää joka
+ * reunastaan läpinäkyväksi ja tehdä vähän isommaksi"* (kolmas kohta:
+ * tests/isoisan-valokuvat.test.mjs).
+ */
+test('avauslento: pallolla ei ole sumennusta lennon aikana', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  const css = lue('../css/styles.css');
+  // Kalvo on poistettu kokonaan: ei elementtiä, ei luokkaa, ei sääntöä.
+  assert.ok(!lauta.includes("'pallolauta-harso'"), 'harsoelementti on palannut laudalle');
+  assert.doesNotMatch(css, /^\.pallolauta-harso[\s.,{]/m, 'harson tyylit ovat palanneet');
+  // Lentotila ei saa tuoda mitään muutakaan sumentavaa: ei suodatinta
+  // eikä kalvoa (iOS-sääntö, ks. tests/lento-ajoitus).
+  const lennossa = css.match(/\.pallolauta-lennossa[^{]*\{[^}]*\}/g) ?? [];
+  assert.ok(lennossa.length > 0, 'lennon pinontatason sääntö puuttuu');
+  for (const saanto of lennossa) {
+    assert.doesNotMatch(saanto, /filter:/, `lentotila sumentaa: ${saanto}`);
+    assert.doesNotMatch(saanto, /backdrop-filter/, `lentotila sumentaa: ${saanto}`);
+  }
+  // Merkit jäävät pelin kerrosten päälle, vaikka kalvo lähti.
+  assert.match(lauta, /kuori\.classList\.add\('pallolauta-lennossa'\);/);
+  assert.match(css, /\.pallolauta-lennossa \.pallolauta-kone \{ z-index: 3; \}/);
+});
+
+test('avauslento: terävä laatutila pakotetaan lennon ajaksi ja vapautetaan laskeutumisessa', () => {
+  const avaus = lue('../js/pallolauta/avaus.js');
+  assert.match(avaus, /import \{ esilataaLentoreitti, pakotaPallonLaatu \} from '\.\.\/pallo\.js';/);
+  // Pyyntö valmistelussa, vapautus purussa — ja kumpikin kerran, koska
+  // js/pallo.js laskee pyytäjiä.
+  assert.match(avaus, /valmistele\(\) \{[\s\S]*?pakotaPallonLaatu\(true\);/);
+  assert.match(avaus, /pura\(\) \{[\s\S]*?pakotaPallonLaatu\(false\);/);
+  assert.match(avaus, /if \(!laatuPyydetty\) \{/, 'pyyntö voisi tulla kahdesti');
+  assert.match(avaus, /if \(laatuPyydetty\) \{[\s\S]*?laatuPyydetty = false;/,
+    'vapautus voisi tulla ilman pyyntöä');
+  assert.equal((avaus.match(/pakotaPallonLaatu\(/g) ?? []).length, 2);
+});
+
+test('avauslento: kone on heti lentosuunnassa — käännöksen kesto on nolla', () => {
+  const siirto = lue('../js/pallolauta/siirto.js');
+  const avaus = lue('../js/pallolauta/avaus.js');
+  const css = lue('../css/styles.css');
+  // Vakio on nolla ja se menee elementin tyyliin, josta transformin
+  // siirtymä luetaan — selain ei voi animoida kiertoa.
+  assert.equal(siirtoModuuli.KONEEN_KAANNOKSEN_MS, 0, 'alkukäännös animoituisi');
+  assert.ok(siirtoModuuli.KONEEN_ILMESTYS_MS > 0, 'kone ei häivyttyisi näkyviin');
+  assert.match(siirto, /kone\.style\.setProperty\('--koneen-kaannos-ms', `\$\{KONEEN_KAANNOKSEN_MS\}ms`\);/);
+  assert.match(siirto, /kone\.style\.setProperty\('--koneen-ilmestys-ms', `\$\{KONEEN_ILMESTYS_MS\}ms`\);/);
+  assert.match(css, /transition: transform var\(--koneen-kaannos-ms, 0ms\) linear,/);
+  assert.match(css, /\.pallo-kotelo > \.pallolauta-kone\.nakyy \{ opacity: 1; \}/);
+  // Kulma luetaan KAARESTA eikä edellisestä kehyksestä.
+  assert.match(siirto, /const koneenKulma = \(kaari, e\) => \{/);
+  assert.match(siirto, /const kulma = koneenKulma\(koneenKaari, koneenOsuus\);/);
+  assert.ok(!siirto.includes('edellinenRuutu'), 'kulma tulee yhä edellisestä kehyksestä');
+  // Kone saa kaarensa jo seistessään Lontoon yllä (aseta), ja jälki
+  // alkaa piirtyä samalla kehyksellä kuin lento.
+  assert.match(siirto, /aseta: \(pos, kaari = null\) => \{/);
+  assert.match(avaus, /kuljettaja\.aseta\(lahtoPos, lentokaari\(\)\);/);
+  assert.match(avaus, /piirraJalki\(lennonVaihe\(0\)\);/);
+});
+
+/* ================================================================== *
+ * Kaupunkipiste on ruudun vakio (omistaja 7.9.2026: iso musta ympyrä
+ * Tampereen kohdalla) — docs/moduulit/karttapallo.md luku 12.3
+ * ================================================================== */
+
+test('kaupunkipisteen ruutuhalkaisija on sama joka zoomilla ja joka ruudulla', () => {
+  // Kirjaston mitta: yksi pointRadius-yksikkö on 2π·R/360 pallon yksikköä.
+  const ruudulla = (korkeus, ruutuPx) => {
+    const sade = kaupunkipisteenSade(korkeus, ruutuPx);
+    const yksikot = 2 * sade * PISTEEN_SKAALA;
+    // Kamera on pinnasta R·korkeus yksikön päässä ja näkee siinä
+    // 2·R·korkeus·tan(fov/2) yksikköä ruudun korkeudella.
+    const pxPerYksikko = ruutuPx / (2 * 100 * korkeus * Math.tan((PALLO_FOV / 2) * (Math.PI / 180)));
+    return yksikot * pxPerYksikko;
+  };
+  for (const ruutuPx of [844, 1180, 826]) {
+    for (const korkeus of [0.04, 0.08, 0.35, 1.2, 2.5]) {
+      const px = ruudulla(korkeus, ruutuPx);
+      assert.ok(Math.abs(px - KAUPUNKIPISTEEN_HALKAISIJA_PX) < 0.01,
+        `korkeus ${korkeus}, ruutu ${ruutuPx}: ${px.toFixed(2)} px`);
+    }
+  }
+  // Vanha karttavakio 0,03 antoi puhelimella 2,7 px korkeudella 0,35 ja
+  // 13,7 px lähimmällä zoomilla — juuri se, mistä vika tuli.
+  assert.ok(Math.abs(kaupunkipisteenSade(0.35, 844, { halkaisijaPx: 2.7 }) - 0.03) < 0.0005);
+  // Kelvottomat luvut eivät päädy kirjastolle, eikä katto ylity.
+  assert.equal(kaupunkipisteenSade(0, 844), 0);
+  assert.equal(kaupunkipisteenSade(0.35, 0), 0);
+  assert.equal(kaupunkipisteenSade(1e9, 844), PISTEEN_SADE_MAX);
+});
+
+test('kaupunkipisteen koko seuraa kameraa ilman uutta pistedataa', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  // Luenta antaa kameran mukaisen säteen (ei enää karttavakiota) — ja
+  // PISTEKOHTAISESTI (8.9.2026 ilta): lattia vain pelaajan kaupungille.
+  assert.match(lauta, /return pisteenSade\(d\);/);
+  assert.match(lauta, /const pisteenSade = \(d\) => sadeRuudulta\(/);
+  assert.doesNotMatch(lauta, /KAUPUNKIPISTEEN_SADE/);
+  // Zoomin muuttuessa skaala kirjoitetaan olioon: ei pointsData-kutsua,
+  // joten 261 pistettä ei synny uudestaan eikä siirtymä nykäise.
+  assert.match(lauta, /const tahdistaPisteidenKoko = \(\) => \{/);
+  assert.match(lauta, /const skaala = asetettuLinssi \? 0 : sade \* PISTEEN_SKAALA;/);
+  // Linssin ajaksi kaupunkipisteet piiloon (omistaja 7.9.2026): body.aikajana-paalla → skaala 0.
+  assert.match(lauta, /linssiPaalla = \(\) => document\.body\.classList\.contains\('aikajana-paalla'\)/);
+  assert.match(lauta, /linssivahti\.observe\(document\.body/);
+  assert.match(lauta, /ohjaimet\.addEventListener\('change', tahdistaPisteidenKoko\);/);
+  assert.match(lauta, /ohjaimet\.removeEventListener\('change', tahdistaPisteidenKoko\);/);
+  // Ruudun koko on osa vakiota, joten koon muutos päivittää säteen.
+  assert.match(lauta, /tahdistaZoomirajat\(\);\n\s*\/\/ Ruudun korkeus on osa kaupunkipisteen ruutuvakiota\.\n\s*tahdistaPisteidenKoko\(\);/);
+  // Aihevalo on yhä kartan mitta; askelhelmi on PAATOKSET 39:n jälkeen
+  // ruudun vakio (pergamentti + tumma reunus) ja skaalataan tässä myös.
+  assert.match(lauta, /if \(d\.laji === 'valo'\) continue;/);
+  assert.match(lauta, /const helmiSkaala = sadeRuudulta\(REITTIHELMEN_TAYTE_PX\) \* PISTEEN_SKAALA;/);
+  assert.match(lauta, /const helmiReunaSkaala = sadeRuudulta\(REITTIHELMEN_HALKAISIJA_PX\) \* PISTEEN_SKAALA;/);
+  assert.match(lauta, /if \(d\.laji === 'helmi'\) s = d\.reuna \? helmiReunaSkaala : helmiSkaala;/);
+  // Punainen jää päätepisteelle: helmen reunus on mustetta, ei --mark.
+  assert.doesNotMatch(lue('../js/pallolauta/reitit.js'), /HELMEN_REUNAN_VARI = 'rgba\(1[0-9][0-9]/);
+});
+
+test('kaupungin oma pallopiste kulkee kaikkiin merkkeihin yhdestä paikasta', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  // Asteet: oma piste ensin, lauta vasta sitten.
+  assert.match(lauta, /const oma = omatPisteet\.get\(laudanPisteenAvain\(kohta\.x, kohta\.y\)\);\n\s*if \(oma\) return \{ lat: oma\.lat, lon: oma\.lon \};/);
+  assert.match(lauta, /const \{ pisteet: laudanOmatPisteet, siirtymat \} = pallonOmatPisteet\(pack\);/);
+  // Purku palauttaa moduulin tilan: seuraava lauta ei peri edellisen pisteitä.
+  assert.match(lauta, /if \(omatPisteet === laudanOmatPisteet\) omatPisteet = new Map\(\);/);
+  // Reittikerros saa siirtymät, jotta viivan pää päätyy samaan pisteeseen.
+  assert.match(lauta, /luoReitit\(\{\n\s*pallo, ui, siirtyma, asteet: pallonAsteet, siirtymat,\n\s*\}\)/);
+  // Nappulan kuljettaja lukee siirtymät laudalta.
+  assert.match(lauta, /^\s*siirtymat,$/m);
+  const siirto = lue('../js/pallolauta/siirto.js');
+  assert.match(siirto, /const d = lauta\.siirtymat\?\.get\(pos\.city\);/);
+  assert.match(siirto, /return pointAlong\(lauta\.reitit\.poly\(reitti\), pos\.idx \/ reitti\.steps\);/);
+  // Lentokaari lukee asteet kaupunkioliosta, joten se osuu samaan pisteeseen.
+  const reitit = lue('../js/pallolauta/reitit.js');
+  assert.match(reitit, /const alku = asteet\(a\);\n\s*const loppu = asteet\(b\);/);
+  /*
+   * Poly korjataan kaarenpituuden mukaan: pää tarkalleen, väli
+   * pehmeästi. Kaava muutti js/pallo.js:ään 7.9.2026 illalla, koska
+   * SAMA viiva poltetaan myös laattapyramidin viivatasoon
+   * (tools/fokuskartta/sisalto.mjs) — kaksi kaavaa kahdessa paikassa
+   * tarkoitti, että elävä reitti päättyi kaupungin pallopisteeseen ja
+   * poltettu verkko laudan vanhaan pisteeseen.
+   */
+  assert.match(reitit, /import \{ pallonKorjattuPoly \} from '\.\.\/pallo\.js';/);
+  assert.match(reitit, /const korjattu = pallonKorjattuPoly\(/);
+  const pallo = lue('../js/pallo.js');
+  assert.match(pallo, /const t = yhteensa > 0 \? kertyma \/ yhteensa : Math\.min\(1, i\);/);
+  const sisalto = lue('../tools/fokuskartta/sisalto.mjs');
+  assert.match(sisalto, /const polyPallolle = \(e\) => pallonReitinPoly\(e, siirtymat\);/);
+});
+
+/*
+ * NAAPURIVIUHKA ON MATKASESSIO (Raamattu KARTTAUUDISTUKSEN PAATOKSET 8,
+ * omistaja 14.9.2026, sanatarkasti: *"reittiviuhka tulee nakyviin heti
+ * kun pelaaja painaa 'liiku' nappia ja on kokoajan nakyvissa kunnes
+ * pelaaja saapuu uuteen kaupunkiin tai peruuttaa liikkumisen eli jaakin
+ * nykyiseen kaupunkiin"*).
+ *
+ * MIKSI SÄÄNTÖ MITATAAN AJAMALLA EIKÄ LUKEMALLA. Näkyvyys on yksi
+ * funktio kahdelle laudalle (js/ui.js matkareittienValinta), ja sen
+ * ehdot ovat sanoja, jotka on helppo kirjoittaa uusiksi ilman että
+ * mikään kaatuu. Siksi tässä kutsutaan itse funktiota oikealla pelillä
+ * ja luetaan sen päätös, ei etsitä lähteestä lauseita.
+ *
+ * MITÄ TÄMÄ PITÄÄ ERILLÄÄN:
+ *   1. kaupungissa ennen Liikua ei viuhkaa — myöskään vaiheessa 'roll',
+ *      johon vuoro alkaa kun matkustustapa on esivalittu (autoTravel);
+ *   2. Liiku-napin painallus aloittaa matkan → viuhka;
+ *   3. viuhka pysyy heiton yli, vaikka liuku sulkeutuu (vaihe 'move');
+ *   4. viuhka pysyy kohdelistan yli (bussi, laiva, lento);
+ *   5. kesken reittiä tasan se yksi reitti, myös sivunlatauksen jälkeen
+ *      kun sessiota ei ole tallessa;
+ *   6. perillä uudessa kaupungissa tyhjä;
+ *   7. peruutus (jäädään lähtökaupunkiin) tyhjä — kaikki peruutustavat
+ *      päätyvät samaan tilaan, ja ehto tunnistaa tilan eikä nappeja;
+ *   8. katselutila ja botin vuoro ennallaan tyhjiä;
+ *   9. lentokaarten oma sääntö (omistaja 1.9.2026) ei muutu.
+ */
+test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peruutukseen', async () => {
+  const { UI } = await import('../js/ui.js');
+  const peli = new Game({
+    players: [{ name: 'Fogg', color: '#c9a227', start: 'varsova' }],
+    pack: packById('maailmankartta'),
+    seed: 5,
+  });
+  const naapurit = [...(peli.board.adj.get('varsova') ?? [])];
+  assert.ok(naapurit.length >= 3, 'Varsovalla pitää olla viuhka mitattavaksi');
+
+  /** UI:n jäljitelmä, jossa vain näkyvyyssäännön tuntemat kentät. */
+  const luoUi = (tila = {}) => ({
+    katselu: false,
+    liukuAuki: false,
+    travelExpanded: false,
+    travelSuodatin: null,
+    lentoKaari: null,
+    matkaSessio: null,
+    game: peli,
+    matkaSessioKesken: UI.prototype.matkaSessioKesken,
+    matkareittienValinta: UI.prototype.matkareittienValinta,
+    tarjotutLennot: UI.prototype.tarjotutLennot,
+    ...tila,
+  });
+  const valinta = (tila) => luoUi(tila).matkareittienValinta();
+  const kaupunkiin = (id) => { peli.player.pos = { type: 'city', city: id }; };
+
+  // 1. kaupungissa ennen Liikua: yksikään vaihe ei riitä.
+  kaupunkiin('varsova');
+  peli.autoTravel = true;
+  for (const phase of ['action', 'roll', 'move']) {
+    peli.phase = phase;
+    const v = valinta();
+    assert.deepEqual(v.reittiTunnukset, [], `vaihe ${phase}: viuhka ei saa näkyä ennen Liikua`);
+    assert.equal(v.avain, '', `vaihe ${phase}: tyhjä valinta tyhjentää kerroksen`);
+    assert.equal(v.verkko, false, `vaihe ${phase}: himmeä verkko ei saa näkyä ennen Liikua`);
+  }
+
+  // 2. Liiku painettu: matkasessio alkaa lähtökaupungista.
+  peli.phase = 'roll';
+  const liikuPainettu = luoUi({ liukuAuki: true, matkaSessio: 'varsova' });
+  const auki = liikuPainettu.matkareittienValinta();
+  assert.deepEqual(auki.reittiTunnukset, naapurit, 'Liiku-napin painallus tuo viuhkan');
+  assert.notEqual(auki.avain, '');
+  // Himmeä reittiverkko (omistaja 20.9.2026) syttyy samalla ehdolla kuin viuhka.
+  assert.equal(auki.verkko, true, 'himmeä verkko ei syttynyt Liikusta');
+  assert.match(auki.avain, /:verkko$/, 'verkon lippu ei ole avaimessa');
+
+  /*
+   * 3. HEITON JÄLKEEN VIUHKA PYSYY, vaikka liuku sulkeutuu: liu'un oma
+   * sulkija ajetaan jokaisesta matkanapista (js/ui.js piirraToimintorivi),
+   * joten `liukuAuki` on epätosi heti heiton jälkeen. Juuri tämä hetki on
+   * se, jonka omistaja päätti 14.9.2026.
+   */
+  peli.phase = 'move';
+  peli.die = 6;
+  const heiton = luoUi({ liukuAuki: false, matkaSessio: 'varsova' });
+  assert.deepEqual(heiton.matkareittienValinta().reittiTunnukset, naapurit,
+    'viuhka katosi nopanheiton jälkeen');
+  assert.equal(heiton.matkareittienValinta().verkko, true, 'himmeä verkko sammui heittoon');
+  assert.equal(heiton.matkaSessio, 'varsova', 'sessio ei saa päättyä heittoon');
+
+  // 4. kohdelista (bussi, laiva) pitää viuhkan vaikka liuku sulkeutui.
+  peli.phase = 'action';
+  const lista = luoUi({ liukuAuki: false, travelExpanded: true, travelSuodatin: 'sea', matkaSessio: 'varsova' });
+  assert.deepEqual(lista.matkareittienValinta().reittiTunnukset, naapurit,
+    'viuhka katosi kohdelistan ajaksi');
+  /*
+   * 4b. LENTONÄKYMÄSSÄ EI LIFTAUSKAARIA (omistaja 20.9.2026 klo 14.40:
+   * *"lentonäkymässä liftausreitit pitää piilottaa ja lentoreittien kohde
+   * kaupungit pitää näkyä"*). Berliinillä on lentokenttä: LENTÄEN-lista
+   * tarjoaa lennot, kaaret piirtyvät niihin ja viuhka jää pois. Kohteet
+   * tulevat samasta apurista (tarjotutLennot), josta pallon
+   * kaupunkirajaus lukee näytettävät merkit.
+   */
+  kaupunkiin('berliini');
+  const berliininLennot = peli.airportDestinations();
+  assert.ok(berliininLennot.length > 0, 'Berliinistä pitää olla lentoja mitattavaksi');
+  const lentonakymaUi = luoUi({ liukuAuki: false, travelExpanded: true, travelSuodatin: 'air', matkaSessio: 'berliini' });
+  const lentonakyma = lentonakymaUi.matkareittienValinta();
+  assert.deepEqual(lentonakyma.reittiTunnukset, [], 'liftauskaaret näkyvät lentonäkymässä');
+  assert.deepEqual(lentonakyma.lennot, berliininLennot, 'lentokaaret puuttuvat lentonäkymästä');
+  assert.deepEqual(lentonakymaUi.tarjotutLennot(), berliininLennot);
+  assert.notEqual(lentonakyma.avain, '');
+  // Ilman lentosuodatinta apuri on tyhjä, eikä katselija tai botti saa lentoja.
+  assert.deepEqual(lista.tarjotutLennot(), []);
+  assert.deepEqual(luoUi({ travelExpanded: true, travelSuodatin: 'air', katselu: true }).tarjotutLennot(), []);
+  kaupunkiin('varsova');
+
+  // 5. kesken reittiä: se yksi reitti — sessiolla ja ilman (sivunlataus).
+  peli.phase = 'move';
+  peli.player.pos = { type: 'edge', edge: naapurit[0], idx: 1 };
+  for (const sessio of ['varsova', null]) {
+    const v = valinta({ matkaSessio: sessio });
+    assert.deepEqual(v.reittiTunnukset, [naapurit[0]],
+      `kesken matkaa (matkaSessio ${sessio}) nappula kulkisi tyhjän päällä`);
+    assert.notEqual(v.avain, '');
+  }
+  // Sessio ei nollaudu kesken reittiä — matka voi kulkea monta vuoroa.
+  const matkalla = luoUi({ matkaSessio: 'varsova' });
+  matkalla.matkareittienValinta();
+  assert.equal(matkalla.matkaSessio, 'varsova', 'sessio nollautui kesken matkaa');
+
+  // 6. perillä uudessa kaupungissa: sessio päättyy ja viuhka katoaa.
+  kaupunkiin('krakova');
+  peli.phase = 'move';
+  const perilla = luoUi({ matkaSessio: 'varsova' });
+  assert.deepEqual(perilla.matkareittienValinta().reittiTunnukset, [],
+    'viuhka jäi päälle uuteen kaupunkiin saavuttaessa');
+  assert.equal(perilla.matkareittienValinta().verkko, false, 'himmeä verkko jäi päälle perillä');
+  assert.equal(perilla.matkaSessio, null, 'sessio ei päättynyt perillä');
+
+  /*
+   * 7. PERUUTUS. Kaikki tavat jäädä lähtökaupunkiin (liu'un sulku
+   * napista tai kartalta, kohdelistan "Takaisin", "Vaihda
+   * matkustustapa", linssikartan avaus, pöllö) päätyvät samaan tilaan:
+   * lähtökaupunki, ei liukua, ei listaa, ei aitoa heittovaihetta.
+   */
+  kaupunkiin('varsova');
+  for (const [phase, autoTravel] of [['action', false], ['roll', true]]) {
+    peli.phase = phase;
+    peli.autoTravel = autoTravel;
+    const peruttu = luoUi({ matkaSessio: 'varsova' });
+    assert.deepEqual(peruttu.matkareittienValinta().reittiTunnukset, [],
+      `peruutus (vaihe ${phase}, autoTravel ${autoTravel}) jätti viuhkan päälle`);
+    assert.equal(peruttu.matkaSessio, null, 'peruutus ei päättänyt sessiota');
+  }
+  /*
+   * Pelaajan ITSE valitsema matkustustapa ei ole peruutus: `autoTravel`
+   * on silloin epätosi, ja heittovaihe jatkuu vaikka liuku sulkeutui.
+   */
+  peli.phase = 'roll';
+  peli.autoTravel = false;
+  const tapaValittu = luoUi({ matkaSessio: 'varsova' });
+  assert.deepEqual(tapaValittu.matkareittienValinta().reittiTunnukset, naapurit,
+    'itse valittu matkustustapa tulkittiin peruutukseksi');
+
+  // 8. katselutila ja botin vuoro ennallaan.
+  peli.phase = 'roll';
+  peli.autoTravel = true;
+  assert.equal(valinta({ liukuAuki: true, matkaSessio: 'varsova', katselu: true }).avain, '',
+    'katselutilassa ei reittejä');
+  peli.player.isBot = true;
+  assert.equal(valinta({ liukuAuki: true, matkaSessio: 'varsova' }).avain, '',
+    'botin vuorolla ei reittejä');
+  peli.player.isBot = false;
+
+  // 9. lentokaaret: oma sääntö, omat kohteet (omistaja 1.9.2026).
+  kaupunkiin('ateena');
+  peli.phase = 'action';
+  const lennot = peli.airportDestinations();
+  assert.ok(lennot.length > 0, 'Ateenassa pitää olla lentokohde mitattavaksi');
+  const lentolista = valinta({
+    liukuAuki: true, travelExpanded: true, travelSuodatin: 'air', matkaSessio: 'ateena',
+  });
+  assert.deepEqual(lentolista.lennot, lennot, 'lentolista piirtää kaikki kohteensa');
+  assert.deepEqual(valinta({ liukuAuki: true, matkaSessio: 'ateena' }).lennot, [],
+    'ilman lentolistaa ei kaaria');
+
+  /*
+   * SÄÄNTÖ ON YHDESSÄ PAIKASSA. Sessio alkaa Liiku-napin painalluksesta
+   * (vaihdaLiuku) ja päättyy yhdessä ehdossa (matkaSessioKesken); piirtäjä
+   * ei saa toistaa kumpaakaan.
+   */
+  const ui = lue('../js/ui.js');
+  const liikuNappi = ui.match(/ {2}vaihdaLiuku\(\) \{[\s\S]*?\n {2}\}\n/)[0];
+  assert.match(liikuNappi, /if \(this\.liukuAuki\) this\.matkaSessio = this\.game\.cityOf\?\.\(\)\?\.id \?\? 'kesken';/,
+    'matkasessio ei ala Liiku-napin painalluksesta');
+  /*
+   * KANTAMAN KAARET (omistajan päätös 20.9.2026 klo 13.45): viuhka on
+   * heiton kantama, ei enää pelkkä oman kaupungin naapurusto. Sääntö on
+   * yhä yhdessä paikassa ja yhä matkasession takana; muuttunut on vain
+   * se, MITKÄ kaaret sessio näyttää. Kantama luetaan pelin omasta
+   * laskelmasta (game.moves, js/rules.js findMoves), ja ennen heittoa
+   * varareittinä on entinen naapurusto.
+   */
+  assert.match(ui, /const kantamanKaaret = \(\) => \{/);
+  assert.match(ui, /const liikkeet = game\.phase === 'move' \? game\.moves : null;/);
+  assert.match(ui, /\? \(matkalla\s*\n\s*\? \(kantamanKaaret\(\) \?\? \[\.\.\.\(game\.board\.adj\.get\(kaupunki\.id\) \?\? \[\]\)\]\)\s*\n\s*: \[\]\)/);
+  // Kommentit pois: piirtäjän tiedostokommentti SAA kertoa säännön, koodi ei toteuttaa sitä.
+  const piirtajat = lue('../js/pallolauta/reitit.js').replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, '');
+  for (const kentta of ['liukuAuki', 'matkaSessio']) {
+    assert.ok(!piirtajat.includes(kentta), `pallon piirtäjä ei saa tuntea ${kentta}:a — sääntö on ui.js:ssä`);
+  }
+});

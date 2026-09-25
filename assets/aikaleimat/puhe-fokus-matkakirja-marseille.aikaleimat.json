@@ -1,0 +1,177 @@
+{
+  "versio": 2,
+  "kaupunki": "marseille",
+  "teksti": "Marseillen satamassa saippuaa myytiin tiiliskivinä, kuulemma koko maailman pesuun. Kauppiaan mustat kynnet kertoivat köysitöistä. Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. Maailma jäi likaiseksi; käteni olivat jo toista mieltä.",
+  "tekstiSha256": "3655157ea05577588eaf53815031a4fd6c90f45443ea82c85c403f83abcd70f7",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-marseille.mp3",
+    "versio": 2,
+    "tavut": 360742,
+    "sha256": "afd153e66cff610f77838ceb8c581c79aefa5bfdb8c4698453bdf6352ff342f0"
+  },
+  "kesto": 22440,
+  "sanat": [
+    {
+      "sana": "Marseillen",
+      "alku": 100,
+      "loppu": 580
+    },
+    {
+      "sana": "satamassa",
+      "alku": 640,
+      "loppu": 1200
+    },
+    {
+      "sana": "saippuaa",
+      "alku": 1260,
+      "loppu": 1740
+    },
+    {
+      "sana": "myytiin",
+      "alku": 1800,
+      "loppu": 2200
+    },
+    {
+      "sana": "tiiliskivinä",
+      "alku": 2260,
+      "loppu": 3060
+    },
+    {
+      "sana": "kuulemma",
+      "alku": 3900,
+      "loppu": 4260
+    },
+    {
+      "sana": "koko",
+      "alku": 4300,
+      "loppu": 4540
+    },
+    {
+      "sana": "maailman",
+      "alku": 4600,
+      "loppu": 5040
+    },
+    {
+      "sana": "pesuun",
+      "alku": 5100,
+      "loppu": 5700
+    },
+    {
+      "sana": "Kauppiaan",
+      "alku": 7340,
+      "loppu": 7800
+    },
+    {
+      "sana": "mustat",
+      "alku": 7860,
+      "loppu": 8200
+    },
+    {
+      "sana": "kynnet",
+      "alku": 8260,
+      "loppu": 8620
+    },
+    {
+      "sana": "kertoivat",
+      "alku": 8680,
+      "loppu": 9200
+    },
+    {
+      "sana": "köysitöistä",
+      "alku": 9260,
+      "loppu": 10040
+    },
+    {
+      "sana": "Ostin",
+      "alku": 11580,
+      "loppu": 11860
+    },
+    {
+      "sana": "palan",
+      "alku": 11920,
+      "loppu": 12220
+    },
+    {
+      "sana": "mutta",
+      "alku": 12780,
+      "loppu": 13020
+    },
+    {
+      "sana": "terva",
+      "alku": 13100,
+      "loppu": 13440
+    },
+    {
+      "sana": "kala",
+      "alku": 13680,
+      "loppu": 14080
+    },
+    {
+      "sana": "ja",
+      "alku": 14140,
+      "loppu": 14220
+    },
+    {
+      "sana": "suolavesi",
+      "alku": 14280,
+      "loppu": 15020
+    },
+    {
+      "sana": "seurasivat",
+      "alku": 15100,
+      "loppu": 15600
+    },
+    {
+      "sana": "majataloon",
+      "alku": 15640,
+      "loppu": 16340
+    },
+    {
+      "sana": "Maailma",
+      "alku": 18320,
+      "loppu": 18720
+    },
+    {
+      "sana": "jäi",
+      "alku": 18780,
+      "loppu": 18940
+    },
+    {
+      "sana": "likaiseksi",
+      "alku": 18980,
+      "loppu": 19700
+    },
+    {
+      "sana": "käteni",
+      "alku": 20800,
+      "loppu": 21180
+    },
+    {
+      "sana": "olivat",
+      "alku": 21240,
+      "loppu": 21540
+    },
+    {
+      "sana": "jo",
+      "alku": 21580,
+      "loppu": 21660
+    },
+    {
+      "sana": "toista",
+      "alku": 21700,
+      "loppu": 22040
+    },
+    {
+      "sana": "mieltä",
+      "alku": 22080,
+      "loppu": 22440
+    }
+  ],
+  "lauseet": [
+    100,
+    7340,
+    11580,
+    18320
+  ],
+  "luotu": "2026-09-23T15:37:36.175Z"
+}

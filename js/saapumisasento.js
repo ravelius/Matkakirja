@@ -1,0 +1,578 @@
+/*
+ * SAAPUMISASENTO — MISSÄ KAUPUNKI JA LUENTAKUVA OVAT RUUDULLA, KUN
+ * UUTEEN KAUPUNKIIN TULLAAN.
+ *
+ * Omistaja 9.9.2026 klo 16.10 (Raamattu, SAAPUMISESSA KAMERA ASETTUU
+ * NIIN, ETTA KAUPUNKI ON ALIMMASSA KOLMANNEKSESSA JA LUENTAKUVA SEN
+ * YLAPUOLELLA HIEMAN OIKEALLA, sanatarkasti): *"kun tullaan uuteen
+ * kaupunkiin, kamera saisi asettua niin että kaupunki jää alimpaan
+ * kolmannekseen ja kuva tulee sen yläpuolelle ja vähän oikealle, niin
+ * että se ei jää matkakirjan tekstin peittoon varsinkin pienillä
+ * näytöillä"*.
+ *
+ * ── MIKSI OMA MODUULI ─────────────────────────────────────────────
+ *
+ * Sama asento tarvitaan KOLMESSA paikassa, jotka eivät saa ajautua
+ * erilleen: pallolaudan kamera (js/pallolauta/kamera.js), tasokartan
+ * kamera (js/kartta.js — nukkuu, VANHA_KARTTA_KAYTOSSA false) ja
+ * kartan päälle nouseva luentakuva (js/fokusvirta.js). Kaava on siis
+ * TÄSSÄ kerran, puhtaina funktioina ilman DOMia ja ilman lautaa —
+ * kumpikin lauta soveltaa sitä omissa yksiköissään.
+ *
+ * ── KAMERA: OSUUS RUUDUSTA, EI PIKSELEITÄ ─────────────────────────
+ *
+ * Kaupungin piste halutaan kohtaan (0,42 · leveys, 0,78 · korkeus) eli
+ * alimpaan kolmannekseen ja hitusen keskeltä vasemmalle. Kamera
+ * keskittää AINA näkymän keskipisteen, joten asento toteutetaan
+ * KOHDISTUSPISTEEN SIIRTONA: kamera katsoo pistettä, joka on kaupungin
+ * pohjois-/itäpuolella juuri sen verran, että kaupunki asettuu
+ * pyydettyyn kohtaan. Laudan pisteitä EI liikuteta.
+ *
+ * Poikkeama annetaan OSUUKSINA näkymästä (saapumisenPoikkeama), koska
+ * lautojen yksiköt ovat eri: tasokartalla siirto on lautayksiköitä
+ * (linaarinen ruudulla), pallolla asteita (kameran korkeus ja
+ * kuvasuhde määräävät näkyvän kaaren). Sama osuus, kaksi soveltamista.
+ *
+ * PELAAJAN OMA ELE EI VEDÄ TAKAISIN: siirto lasketaan vain
+ * saapumisajon kohdetta rakennettaessa, eikä mikään kehyssilmukka
+ * korjaa kameraa jälkikäteen. Panorointi ja zoomi jäävät voimaan
+ * sellaisinaan.
+ *
+ * ── LUENTAKUVA: KAUPUNGIN YLLE, HIEMAN OIKEALLE ───────────────────
+ *
+ * Kuvan ALAREUNA jää kaupungin pisteen yläpuolelle ja kuvan keskilinja
+ * pisteestä oikealle (LUENTAKUVAN_SIVUSIIRTO · näkymän leveys). Kuva ei
+ * saa mennä matkakirjakortin päälle EIKÄ ALLE: kortin suorakulmio
+ * annetaan mittana, ja jos kuva ei mahdu sen viereen tai alle, KUVAA
+ * PIENENNETÄÄN — tekstiä ei peitetä. Tämä on koko tilauksen ydin
+ * ("varsinkin pienillä näytöillä").
+ */
+
+/* ==================== KAMERAN SAAPUMISASENTO ==================== */
+
+/**
+ * KAUPUNGIN PAIKKA RUUDULLA SAAPUMISESSA, osuuksina näkymän leveydestä
+ * ja korkeudesta.
+ *
+ * y = 0,78 on alimman kolmanneksen puolivälin alapuoli: kolmannes alkaa
+ * 0,667:stä, ja 0,78 jättää pisteen alle vielä viidenneksen ruutua eli
+ * tilaa kaupungin nimelle, Etsi aarre -napille ja pulun kuplalle.
+ * x = 0,42 on "hieman vasemmalla keskeltä": luentakuva nousee oikealle,
+ * joten kaupunki väistyy sen alta vasemmalle.
+ */
+export const SAAPUMISEN_KAUPUNKI = Object.freeze({ x: 0.42, y: 0.78 });
+
+/**
+ * Kaupungin poikkeama näkymän KESKIPISTEESTÄ osuuksina.
+ *
+ * Positiivinen x = oikealle, positiivinen y = alas. Saapumisasennossa
+ * { x: −0,08, y: +0,28 }.
+ *
+ * @param {{x: number, y: number}} [osuus] kaupungin paikka ruudulla
+ * @returns {{x: number, y: number}} poikkeama keskeltä
+ */
+export function saapumisenPoikkeama(osuus = SAAPUMISEN_KAUPUNKI) {
+  return { x: (osuus.x ?? 0.5) - 0.5, y: (osuus.y ?? 0.5) - 0.5 };
+}
+
+/**
+ * KAMERAN KOHDISTUSPISTE TASOLAUDALLA (lautayksiköitä).
+ *
+ * Kaupunki on pisteessä (x, y); kamera katsoo pistettä, joka on siitä
+ * poikkeaman verran vastakkaiseen suuntaan. Näkyvä korkeus lasketaan
+ * leveydestä ruudun kuvasuhteella, joten sama kaava kelpaa
+ * puhelimelle ja työpöydälle.
+ *
+ * @param {object} kohde
+ * @param {number} kohde.x kaupungin x lautayksiköissä
+ * @param {number} kohde.y kaupungin y lautayksiköissä
+ * @param {number} kohde.leveys näkyvä leveys lautayksiköissä
+ * @param {number} kohde.paneW karttapaneelin leveys pikseleinä
+ * @param {number} kohde.paneH karttapaneelin korkeus pikseleinä
+ * @param {{x: number, y: number}} [kohde.osuus] kaupungin paikka ruudulla
+ * @returns {{x: number, y: number}|null} kameran keskipiste laudalla
+ */
+export function saapumisenKameranKohta({
+  x, y, leveys, paneW, paneH, osuus = SAAPUMISEN_KAUPUNKI,
+} = {}) {
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
+  if (!(leveys > 0) || !(paneW > 0) || !(paneH > 0)) return { x, y };
+  const poikkeama = saapumisenPoikkeama(osuus);
+  const korkeus = leveys * (paneH / paneW);
+  return { x: x - poikkeama.x * leveys, y: y - poikkeama.y * korkeus };
+}
+
+/**
+ * KAMERAN KOHDISTUSPISTE PALLOLLA (asteita).
+ *
+ * Pallolla näkymä on kulmamitta: `leveysAst` on ruudun leveydellä
+ * näkyvä KAARI asteina (js/pallolauta/kamera.js asteetLeveydesta), ja
+ * pystysuunnassa sama kaari kerrottuna ruudun kuvasuhteella. Pituusaste
+ * on kaarta ahtaampi napoja kohti, joten sivusiirto jaetaan
+ * kosinilla — muuten kuva liukuisi Lontoossa liian vähän.
+ *
+ * @param {object} kohde
+ * @param {number} kohde.lat kaupungin leveysaste
+ * @param {number} kohde.lng kaupungin pituusaste
+ * @param {number} kohde.leveysAst näkyvä kaari asteina ruudun leveydellä
+ * @param {number} kohde.paneW karttapaneelin leveys pikseleinä
+ * @param {number} kohde.paneH karttapaneelin korkeus pikseleinä
+ * @param {{x: number, y: number}} [kohde.osuus] kaupungin paikka ruudulla
+ * @returns {{lat: number, lng: number}} kameran katsomispiste asteina
+ */
+export function saapumisenPallonKohta({
+  lat, lng, leveysAst, paneW, paneH, osuus = SAAPUMISEN_KAUPUNKI,
+} = {}) {
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+  if (!(leveysAst > 0) || !(paneW > 0) || !(paneH > 0)) return { lat, lng };
+  const poikkeama = saapumisenPoikkeama(osuus);
+  const korkeusAst = leveysAst * (paneH / paneW);
+  // Ruudun ALASPÄIN on etelään, joten kaupungin siirto alaspäin nostaa
+  // KAMERAN leveysastetta — vastakkainen etumerkki kuin tasolaudan
+  // y-akselilla, joka kasvaa alaspäin.
+  const uusiLat = Math.max(-89.5, Math.min(89.5, lat + poikkeama.y * korkeusAst));
+  // Napojen lähellä kosini menee nollaan; kerroin katkaistaan, jottei
+  // siirto räjähdä äärettömäksi (sama vartio kuin mittajanalla).
+  const kavennys = Math.max(0.2, Math.cos((uusiLat * Math.PI) / 180));
+  return { lat: uusiLat, lng: lng - (poikkeama.x * leveysAst) / kavennys };
+}
+
+/* ==================== LUENTAKUVAN SIJAINTI ==================== */
+
+/**
+ * Kuvan keskilinjan siirto kaupungin pisteestä OIKEALLE, osuutena
+ * näkymän leveydestä (omistaja: *"vähän oikealle"*, tilaus 10–20 %).
+ */
+export const LUENTAKUVAN_SIVUSIIRTO = 0.15;
+
+/**
+ * KUVA NOUSEE LAATAN YLÄPUOLELLE, EI SEN VIEREEN (omistaja 10.9.2026,
+ * työpöytäkaappaus Marseillesta, sanatarkasti: *"kuva saisi tulla
+ * ylemmäs, ei näin kiinni kaupungin laattaa"*).
+ *
+ * Kaupungin piste on LAATAN KESKIPISTE: laatta (js/ui.js city-ellipsi
+ * kehineen) ulottuu siitä ylöskin, ja kaappauksessa kuvatekstilappu
+ * lepäsi suoraan sen päällä. Alareunan väli lasketaan siksi kahdesta
+ * osasta — laatan oma korkeus ja sen päälle jäävä ilmarako — eikä
+ * yhdestä luvusta, jotta laatan koon muuttuessa väli muuttuu mukana.
+ */
+export const KAUPUNGIN_LAATTA_PX = 34;
+
+/** Kuvan alareunan ilmarako laatan yläpuolelle pikseleinä. */
+export const LUENTAKUVAN_VALI_PX = 12;
+
+/** Reunusta, jota kuva ei ylitä missään suunnassa. */
+export const LUENTAKUVAN_MARGINAALI_PX = 12;
+
+/**
+ * Pienin leveys, johon kuva vielä kutistetaan ennen kuin se saa
+ * painua alemmas. Tätä pienempi kuva ei enää näyttäisi miltään.
+ */
+export const LUENTAKUVAN_VAHIN_PX = 96;
+
+/** Paneelin korkeus / leveys, kun kuvan omaa mittasuhdetta ei tiedetä. */
+export const LUENTAKUVAN_KUVASUHDE = 0.72;
+
+/*
+ * TABLETILLA KUVA ON PUOLTA ISOMPI (omistaja 10.9.2026 klo 23.30,
+ * iPad-kaappaus Krakovasta, Raamattu LUENTAKUVA IPADILLA PUOLTA
+ * ISOMPANA, sanatarkasti: *"Kuvat saisivat tulla ipadilla puolta
+ * isompana"*).
+ *
+ * MIKSI OMA PORRAS EIKÄ ISOMPI OSUUS KAIKILLE. Puhelimella kuva on jo
+ * 80 % ruudusta ja työpöydällä 38 % riittää, koska ruutu on leveä —
+ * väliin jäävä tabletti sai molemmista huonoimman puolen: media-ehto
+ * `min-width: 900px` antoi sille työpöydän KAPEAN osuuden ilman
+ * työpöydän leveyttä, joten 1024 px:n iPadilla kuva jäi pieneksi
+ * lapuksi keskelle karttaa. Kerroin koskee siis VAIN tablettikaistaa;
+ * puhelin (< 700 px) ja työpöytä (> 1400 px) pysyvät entisellään.
+ *
+ * KERROIN ON TOIVE, EI LUPAUS. `luentakuvanSijainti` rajaa leveyden
+ * kaistaan, joka jää matkakirjakortin ja kaupungin laatan väliin: jos
+ * 1,5× ei mahdu, kuva skaalautuu alas mahtuvaan. Kortin tekstiä ei
+ * peitetä missään koossa.
+ */
+
+/** Tablettikaistan rajat pikseleinä (molemmat päät mukaan luettuina). */
+export const LUENTAKUVAN_TABLETTI_PX = Object.freeze({ alku: 700, loppu: 1400 });
+
+/** Kuinka moninkertainen luentakuva on tabletin kokoisella ruudulla. */
+export const LUENTAKUVAN_TABLETTIKERROIN = 1.5;
+
+/**
+ * Onko ruutu tabletin kokoinen (700–1400 px)? Sama ehto kuin
+ * css/fokusvirta.css:n `@media (min-width: 700px) and (max-width: 1400px)`.
+ *
+ * @param {number} ruudunLeveys näkyvän alueen leveys pikseleinä
+ * @returns {boolean}
+ */
+export function onTablettiruutu(ruudunLeveys) {
+  return ruudunLeveys >= LUENTAKUVAN_TABLETTI_PX.alku
+    && ruudunLeveys <= LUENTAKUVAN_TABLETTI_PX.loppu;
+}
+
+/**
+ * Luentakuvan TOIVOTTU leveys pikseleinä — sama porras kuin
+ * css/fokusvirta.css:n `--luentakuva-leveys`, mutta laskettuna, koska
+ * ankkuroitu kuva mitoitetaan js:stä (kortin alle mahtuminen).
+ *
+ * Tablettikerroin kerrotaan porrasta VASTEN eikä sen tilalle: sekä
+ * osuus että katto kasvavat 1,5-kertaisiksi, jolloin iPadin pysty
+ * (1024) ja vaaka (1366) saavat saman puolitoistakertaistuksen —
+ * pelkän osuuden kasvattaminen olisi jäänyt vaakaruudulla kattoon
+ * kiinni ja kuva olisi kasvanut vain 1,2-kertaiseksi.
+ *
+ * @param {number} paneW karttapaneelin leveys
+ * @param {number} [ruudunLeveys] ikkunan leveys (css-media-ehto)
+ * @returns {number} leveys pikseleinä
+ */
+export function luentakuvanPerusleveys(paneW, ruudunLeveys = paneW) {
+  if (!(paneW > 0)) return 0;
+  const porras = ruudunLeveys >= 900
+    ? Math.min(paneW * 0.38, 640)
+    : Math.min(paneW * 0.8, 352);
+  return onTablettiruutu(ruudunLeveys) ? porras * LUENTAKUVAN_TABLETTIKERROIN : porras;
+}
+
+/** Laatikko { x, y, w, h } sijainnista (ankkuri on ALAREUNAN keskellä). */
+export function luentakuvanLaatikko(sijainti) {
+  if (!sijainti) return null;
+  return {
+    x: sijainti.x - sijainti.leveys / 2,
+    y: sijainti.y - sijainti.korkeus,
+    w: sijainti.leveys,
+    h: sijainti.korkeus,
+  };
+}
+
+/**
+ * PULU-CAM-PAKKA ROIKKUU KUVAN REUNOJEN YLI JOKA SUUNTAAN.
+ *
+ * Pakan kortit ovat isoisän kuvan kokoisia ja siirtyvät enintään
+ * `osuus` verran omasta koostaan (js/pulucam.js PULUCAM_ASENNOT,
+ * enimmillään 9 % ja pieni kierto), joten pakallinen kuva peittää
+ * paneelin laatikkoa isomman alan. Matkakirjakortin väistö lasketaan
+ * TÄSTÄ laatikosta — muuten pakan uloin kortti asettuisi kortin
+ * kulman päälle, vaikka paneeli itse jää siitä sivuun (mitattu
+ * Chromiumilla 10.9.2026, iPadin vaakaruutu 1366 × 1024: paneeli jäi
+ * 4 px kortista oikealle, pakka roikkui 70 px sen päällä).
+ *
+ * @param {object} laatikko luentakuvanLaatikko-tulos
+ * @param {number} [osuus] pakan ylitys kuvan omasta koosta
+ * @returns {{x, y, w, h}|null}
+ */
+export function pakanLaatikko(laatikko, osuus = 0) {
+  if (!laatikko) return null;
+  const vx = Math.max(0, osuus || 0) * laatikko.w;
+  const vy = Math.max(0, osuus || 0) * laatikko.h;
+  return {
+    x: laatikko.x - vx, y: laatikko.y - vy, w: laatikko.w + 2 * vx, h: laatikko.h + 2 * vy,
+  };
+}
+
+/** Osuvatko kaksi laatikkoa toisiinsa (marginaali mukaan luettuna). */
+export function laatikotOsuvat(a, b, marginaali = 0) {
+  if (!a || !b) return false;
+  return a.x < b.x + b.w + marginaali
+    && a.x + a.w > b.x - marginaali
+    && a.y < b.y + b.h + marginaali
+    && a.y + a.h > b.y - marginaali;
+}
+
+/**
+ * LUENTAKUVAN PAIKKA JA KOKO KARTTAPINNALLA.
+ *
+ * Palauttaa ANKKURIN eli paneelin ALAREUNAN KESKIPISTEEN (x, y)
+ * karttapinnan pikseleinä sekä paneelin mitat. Alareuna siksi, että
+ * kartan liike kutistaa kuvan juuri sitä kohti (css transform-origin:
+ * bottom center) — pieni kuva jää siihen kartan kohtaan, josta iso
+ * lähti.
+ *
+ * KORTIN VÄISTÖ LASKETAAN PAKALLISESTA LAATIKOSTA (`pakka`): PULU-CAM
+ * roikkuu kuvan reunojen yli joka suuntaan (pakanLaatikko).
+ *
+ * KOLME YRITYSTÄ, TÄSSÄ JÄRJESTYKSESSÄ:
+ *   1. Toivottu paikka: kaupungin yläpuolella, keskilinja oikealla.
+ *   2. Jos kortti on tiellä: sama korkeus, mutta kortin OIKEALLE
+ *      puolelle (työpöydällä kortti on kapea ja kartta jatkuu sen
+ *      vierestä).
+ *   3. Muuten kortin ali tai yli — kumpi kaista antaa isomman kuvan.
+ *      Kuva kutistuu; jos se ei mahdu vähimmäiskoossakaan, se painuu
+ *      alemmas kaupungin päälle. KORTIN TEKSTIÄ EI PEITETÄ.
+ *
+ * @param {object} p
+ * @param {number} p.paneW karttapaneelin leveys
+ * @param {number} p.paneH karttapaneelin korkeus
+ * @param {{x: number, y: number}} p.kaupunki kaupungin piste pinnalla
+ * @param {{x: number, y: number, w: number, h: number}|null} [p.kortti]
+ *   matkakirjakortin suorakulmio samassa koordinaatistossa
+ * @param {number} [p.perusleveys] toivottu leveys (luentakuvanPerusleveys)
+ * @param {number} [p.kuvasuhde] paneelin korkeus / leveys
+ * @param {number} [p.marginaali] reunavara
+ * @param {number} [p.vali] ilmarako laatan yläreunan ja kuvan väliin
+ * @param {number} [p.laatta] kaupungin laatan korkeus ruudulla; kuvan
+ *   alareuna jää tämän ja `vali`:n verran kaupungin pisteen yläpuolelle
+ * @param {number} [p.sivusiirto] keskilinjan siirto oikealle (osuus)
+ * @param {number} [p.vahinLeveys] pienin leveys ennen alas painumista
+ * @param {number} [p.lisakorkeus] kuvan alle jäävä kiinteä osa (lyhyen
+ *   kuvatekstin laatikko) — se ei kasva leveyden mukana, joten se
+ *   vähennetään korkeusbudjetista ennen leveyden ratkaisua
+ * @param {number} [p.kallistus] kuvan kierto asteina: kallistettu
+ *   laatikko ulottuu alakulmastaan alemmas kuin suora, ja ilman tätä
+ *   kulma laskeutuisi kaupungin nimen päälle
+ * @param {number} [p.pakka] PULU-CAM-pakan ylitys osuutena kuvan
+ *   koosta: kortin väistö lasketaan tämän verran isommasta
+ *   laatikosta (ks. pakanLaatikko)
+ * @returns {{x, y, leveys, korkeus, mahtuu, katto}} ankkuri (alareunan
+ *   keskipiste), paneelin leveys ja KOKO korkeus (kuva + kuvateksti)
+ */
+export function luentakuvanSijainti({
+  paneW, paneH, kaupunki, kortti = null,
+  perusleveys, kuvasuhde = LUENTAKUVAN_KUVASUHDE,
+  marginaali = LUENTAKUVAN_MARGINAALI_PX,
+  vali = LUENTAKUVAN_VALI_PX,
+  laatta = KAUPUNGIN_LAATTA_PX,
+  sivusiirto = LUENTAKUVAN_SIVUSIIRTO,
+  vahinLeveys = LUENTAKUVAN_VAHIN_PX,
+  lisakorkeus = 0,
+  kallistus = 0,
+  pakka = 0,
+} = {}) {
+  const W = Math.max(1, paneW || 0);
+  const H = Math.max(1, paneH || 0);
+  const suhde = kuvasuhde > 0 ? kuvasuhde : LUENTAKUVAN_KUVASUHDE;
+  const toivottu = perusleveys > 0 ? perusleveys : luentakuvanPerusleveys(W, W);
+  const kx = Number.isFinite(kaupunki?.x) ? kaupunki.x : W / 2;
+  const ky = Number.isFinite(kaupunki?.y) ? kaupunki.y : H * SAAPUMISEN_KAUPUNKI.y;
+  // Kuvan alareuna kaupungin LAATAN yläpuolelle (ks. KAUPUNGIN_LAATTA_PX).
+  const pohja = Math.min(H - marginaali, ky - Math.max(0, laatta || 0) - vali);
+  const toivottuX = kx + sivusiirto * W;
+  const leveysKatto = Math.min(toivottu, W - 2 * marginaali);
+  const vahin = Math.min(vahinLeveys, leveysKatto);
+
+  const lisa = Math.max(0, lisakorkeus || 0);
+  /*
+   * KALLISTUKSEN VARA. Kierretty laatikko ulottuu alakulmastaan
+   * `leveys · sin(kulma) / 2` alemmas ja ylemmäs kuin suora, eli
+   * yhteensä `leveys · sin(kulma)` pystysuunnassa. Ilman tätä kuvan
+   * alakulma laskeutui kaupungin nimen päälle (mitattu Chromiumilla
+   * 9.9.2026: 600 px leveä kuva, kierto −2,2° → 11 px).
+   */
+  const kulma = Math.abs(Math.sin(((kallistus || 0) * Math.PI) / 180));
+
+  /** Yksi ehdokas: kaista `katto`…`ala`, keskilinja `keskiX`. */
+  const sovita = (katto, ala, keskiX) => {
+    const vara = Math.max(0, ala - katto);
+    let leveys = Math.max(vahin, Math.min(leveysKatto, (vara - lisa) / (suhde + kulma)));
+    if (!(leveys > 0)) leveys = vahin;
+    const korkeus = leveys * suhde + lisa;
+    const kulmavara = (leveys * kulma) / 2;
+    const puoli = leveys / 2;
+    const minX = Math.min(puoli + marginaali, W / 2);
+    const maxX = Math.max(W - puoli - marginaali, W / 2);
+    const x = Math.min(maxX, Math.max(minX, keskiX));
+    const mahtuu = korkeus + 2 * kulmavara <= vara + 0.5;
+    // Jos kaista on liian matala vähimmäiskuvallekin, kuva painuu
+    // alemmas — se saa mennä kaupungin päälle, ei kortin.
+    const y = mahtuu
+      ? ala - kulmavara
+      : Math.min(H - marginaali, katto + korkeus + kulmavara);
+    return { x, y, leveys, korkeus, mahtuu, katto };
+  };
+
+  /* Kortin väistössä kuvan laatikko on pakan verran isompi. */
+  const yli = Math.max(0, pakka || 0);
+  const varjo = (sijainti) => pakanLaatikko(luentakuvanLaatikko(sijainti), yli);
+
+  const vapaa = sovita(marginaali, pohja, toivottuX);
+  const kortinLaatikko = kortti && kortti.w > 0 && kortti.h > 0 ? kortti : null;
+  if (!kortinLaatikko) return vapaa;
+  if (!laatikotOsuvat(varjo(vapaa), kortinLaatikko, marginaali)) return vapaa;
+
+  /*
+   * 2. Kortin oikealle puolelle samaan korkeuteen (pakan ylitys mukaan).
+   *
+   * PUOLEN PIKSELIN HIUS: siirto lasketaan niin, että laatikon reuna
+   * osuu TÄSMÄLLEEN kortin reunaan vaadittuine väleineen, ja
+   * liukuluvun pyöristys päättäisi muuten kolikonheitolla, tulkitaanko
+   * kosketus törmäykseksi. Hius vie tulkinnan aina samalle puolelle.
+   */
+  const oikealle = sovita(marginaali, pohja,
+    Math.max(toivottuX, kortinLaatikko.x + kortinLaatikko.w + marginaali + 0.5
+      + vapaa.leveys * (0.5 + yli)));
+  if (!laatikotOsuvat(varjo(oikealle), kortinLaatikko, marginaali)) return oikealle;
+
+  // 3. Kortin ali tai yli — kumpi kaista antaa isomman kuvan.
+  const alle = sovita(kortinLaatikko.y + kortinLaatikko.h + marginaali, pohja, toivottuX);
+  const ylle = sovita(marginaali, Math.min(pohja, kortinLaatikko.y - marginaali), toivottuX);
+  return ylle.leveys > alle.leveys + 0.5 ? ylle : alle;
+}
+
+/* ==================== ANKKURI KARTAN KOHTAAN ==================== */
+
+/*
+ * LUENTAKUVAA VOI ITSE LIIKUTTAA, JA SE ON ANKKUROITU KARTAN KOHTAAN
+ * (omistaja 9.9.2026 klo 16.15, sanatarkasti: *"kuvaa pitää myös voida
+ * itse liikuttaa ja se saisi jäädä paikalleen sen kohdan päälle karttaa
+ * missä se on jos karttaa liikutetaan"*).
+ *
+ * Kuvan paikka EI ole ruutupiste vaan LAUDAN piste: kartan panorointi
+ * ja zoomi siirtävät kuvaa kartan mukana, ja raahaus vaihtaa ankkurin
+ * uuteen kartan kohtaan. Muunnos on sama kaava kuin pulun
+ * paikkamerkillä (js/pulu-paikka.js), tässä molempiin suuntiin ja
+ * ilman DOMia.
+ *
+ *     ruutuX = paneW/2 + (lautaX − keskus.x) · skaala
+ *
+ * `jakso` on kiertävän laudan leveys: maailmankartta toistuu, ja
+ * ankkuri kuuluu siihen kopioon, joka on lähinnä näkymän keskipistettä.
+ */
+
+/** Näkyvän alueen keskipiste ja mittakaava (ui.nakyvaAlue → keskus). */
+export function nakymanKeskus(alue) {
+  if (!alue || !(alue.w > 0) || !(alue.skaala > 0)) return null;
+  if (!Number.isFinite(alue.x) || !Number.isFinite(alue.y)) return null;
+  return { x: alue.x + alue.w / 2, y: alue.y + alue.h / 2, skaala: alue.skaala };
+}
+
+/** Laudan piste → karttapinnan pikselit. */
+export function laudaltaRuudulle(piste, alue, paneW, paneH, jakso = 0) {
+  const keskus = nakymanKeskus(alue);
+  if (!keskus || !Number.isFinite(piste?.x) || !Number.isFinite(piste?.y)) return null;
+  let dx = piste.x - keskus.x;
+  if (jakso > 0) dx -= Math.round(dx / jakso) * jakso;
+  return {
+    x: paneW / 2 + dx * keskus.skaala,
+    y: paneH / 2 + (piste.y - keskus.y) * keskus.skaala,
+  };
+}
+
+/** Karttapinnan pikselit → laudan piste (laudaltaRuudulle käänteisenä). */
+export function ruudultaLaudalle(piste, alue, paneW, paneH) {
+  const keskus = nakymanKeskus(alue);
+  if (!keskus || !Number.isFinite(piste?.x) || !Number.isFinite(piste?.y)) return null;
+  return {
+    x: keskus.x + (piste.x - paneW / 2) / keskus.skaala,
+    y: keskus.y + (piste.y - paneH / 2) / keskus.skaala,
+  };
+}
+
+/**
+ * RAAHAUS: napautus vai siirto?
+ *
+ * Sormi liikkuu napautuksessakin muutaman pikselin, ja kosketuslaite
+ * liikkuu enemmän kuin hiiri. Kynnyksen alle jäävä ele on napautus
+ * (suurennos aukeaa), sen ylittävä on raahaus (ankkuri vaihtuu).
+ */
+export const RAAHAUKSEN_KYNNYS_PX = 6;
+
+/** Ylittikö ele raahauskynnyksen? */
+export function onRaahaus(dx, dy, kynnys = RAAHAUKSEN_KYNNYS_PX) {
+  return Math.hypot(dx || 0, dy || 0) > kynnys;
+}
+
+/* ============ PIENI KUVA JA PULU KAUPUNGIN YLÄPUOLELLE ============
+ *
+ * OMISTAJA 14.9.2026 (Raamattu PAATOKSET 12, kohta 2, sanatarkasti):
+ * *"isoisan ja pulun kuvat ovat liian pienella ja vaarassa paikassa
+ * (pitaisi olla hieman pariisin ylapuolella)."*
+ *
+ * KAKSI ERI VIKAA, YKSI PAIKKA:
+ *
+ *  1. KOKO OLI SATTUMAN VARASSA. Pieni kuva oli ISON kuvan leveys
+ *     kerrottuna kiinteällä `--luentakuva-pienennys`-luvulla (0,16), ja
+ *     ison kuvan leveys on se, mikä sattuu mahtumaan matkakirjakortin ja
+ *     kaupungin laatan väliin. Mitattu Chromiumilla 14.9.2026: sama
+ *     pieni kuva oli Pariisissa 25 px ja Marseillessa 86 px korkea —
+ *     kolminkertainen ero, jota kukaan ei ollut valinnut. Nyt pienen
+ *     kuvan KORKEUS on mitta ja pienennys lasketaan siitä, joten kuva on
+ *     yhtä suuri kaikissa kaupungeissa ja kaikilla ruuduilla.
+ *
+ *  2. PAIKKA OLI ISON KUVAN PAIKKA. Ankkuri jäi siihen, mihin ISO kuva
+ *     mahtui — saapumisnäkymän ollessa tiukka (v1872) se oli kaupungin
+ *     ALAPUOLELLA ja sivussa (Pariisi, puhelin: +48 px oikealle,
+ *     +28 px alas). Pieni kuva saa nyt oman paikkansa: pari (isoisän
+ *     kuva ja pulu vierekkäin) keskitetään kaupungin pisteen päälle.
+ *
+ * MITTA ON KARTAN MITTA. Luvut ovat karttapinnan pikseleitä siinä
+ * hetkessä, jolloin kuva pienenee; `--luentakuva-karttaskaala` kertautuu
+ * niihin kuten ennenkin (omistaja 11.9.2026: *"pienenevät jos zoomataan
+ * ulos kartalla"*).
+ */
+
+/**
+ * Pienen kuvan KORKEUS karttapinnan pikseleinä (ennen karttaskaalaa).
+ *
+ * MITATTU VALINTA (Chromium 14.9.2026, Pariisi, saapumisnäkymä).
+ * Vanha kuva oli puhelimella 25,2 px korkea. Kaksi ehdokasta mitattiin:
+ *   1,6 × → 40 px   (valittu)
+ *   2,0 × → 50 px
+ * Tehtävän sääntö on valita pienempi, ellei se jää puhelimella alle
+ * 24 css-pikselin — 40 px ei jää. 40 px on myös omistajan aiemman
+ * linjauksen mukainen (11.9.2026: pieni pino on *"vain vähän
+ * pelinappulaa korkeampi"*; pelinappula on 36 px).
+ */
+export const PIENEN_KUVAN_KORKEUS_PX = 40;
+
+/**
+ * Parin alareunan ilmarako kaupungin pisteen yläpuolelle.
+ *
+ * Kaupungin piste on LAATAN KESKIPISTE (ks. KAUPUNGIN_LAATTA_PX), joten
+ * laatan yläreuna on puolet laatasta pisteen yläpuolella; sen päälle
+ * jää sama ilmarako kuin isolla kuvalla. Yhteensä 29 px eli *"hieman
+ * yläpuolella"* — ei kiinni laatassa eikä irti siitä.
+ */
+export const PIENEN_KUVAN_NOSTO_PX = KAUPUNGIN_LAATTA_PX / 2 + LUENTAKUVAN_VALI_PX;
+
+/**
+ * Pulun kelluvan napin halkaisija pikseleinä (css/styles.css
+ * `.pollo-nappi.pollo-kelluu`: 2,9rem 16 px:n juurikoolla = 46 px).
+ *
+ * Luku on VAIN parin leveysbudjetissa: napin oma koko tulee yhä
+ * css:stä, ja se keskitetään laskettuun pisteeseen (translate −50 %),
+ * joten puolen pikselin ero ei siirrä mitään.
+ */
+export const PULUN_NAPIN_KOKO_PX = 46;
+
+/** Isoisän kuvan ja pulun väliin jäävä rako pikseleinä. */
+export const PARIN_RAKO_PX = 10;
+
+/**
+ * ISOISÄ JA PULU VIERETYSTEN KAUPUNGIN YLÄPUOLELLE.
+ *
+ * Pari (kuva + rako + pulu) keskitetään kaupungin pystylinjalle, ja
+ * sen alareuna jää `nosto` verran kaupungin pisteen yläpuolelle.
+ * Isoisän kuva on vasemmalla, pulu oikealla (omistajan sana: pulu
+ * isoisän viereen), ja molemmat ovat samalla korkeudella.
+ *
+ * PALAUTUSARVOT OVAT ERI PISTEITÄ, koska kiinnitystavat ovat eri:
+ * luentakuvan ankkuri on paneelin ALAREUNAN KESKIPISTE (css
+ * transform-origin: bottom center), pulun nappi keskitetään
+ * KESKIPISTEESEENSÄ (css translate −50 % −50 %).
+ *
+ * @param {object} p
+ * @param {{x: number, y: number}} p.kaupunki kaupungin piste pinnalla
+ * @param {number} p.leveys pienen kuvan näkyvä leveys
+ * @param {number} p.korkeus pienen kuvan näkyvä korkeus
+ * @param {number} [p.pulunKoko] pulun napin halkaisija
+ * @param {number} [p.rako] kuvan ja pulun väli
+ * @param {number} [p.nosto] parin alareunan nosto kaupungin pisteestä
+ * @returns {{isoisa: {x, y}, pulu: {x, y}}|null}
+ */
+export function pienenKuvanParinPaikat({
+  kaupunki, leveys, korkeus,
+  pulunKoko = PULUN_NAPIN_KOKO_PX,
+  rako = PARIN_RAKO_PX,
+  nosto = PIENEN_KUVAN_NOSTO_PX,
+} = {}) {
+  const ylos = Number.isFinite(nosto) ? nosto : PIENEN_KUVAN_NOSTO_PX;
+  if (!Number.isFinite(kaupunki?.x) || !Number.isFinite(kaupunki?.y)) return null;
+  const w = Math.max(0, leveys || 0);
+  const h = Math.max(0, korkeus || 0);
+  const yhteensa = w + rako + pulunKoko;
+  const pohja = kaupunki.y - ylos;
+  return {
+    isoisa: { x: kaupunki.x - yhteensa / 2 + w / 2, y: pohja },
+    pulu: { x: kaupunki.x + yhteensa / 2 - pulunKoko / 2, y: pohja - h / 2 },
+  };
+}

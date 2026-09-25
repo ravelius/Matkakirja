@@ -172,13 +172,26 @@ export const FOKUSVIRTA_ROOMA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 9593b80d1767f1094356307caa157412837bb9be2a7631bd1a1b1e2e35003469. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-rooma-r20260909-paper-v4.jpg",
+      lyhyt: "Rooma, 1873. Katto antoi sateelle luvan.",
+      selite: 'Pantheonin avoimesta kattoaukosta sade putoaa suoraan marmorilattialle ja löytää tiensä viemäriin. Asetin kameran kuivalle kohdalle; näin vanhalle talolle en tohtinut huomauttaa katosta.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.pantheonroma.com/en/pantheon-history/"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-rooma-r20260911-paper2-v1.jpg",
+      lyhyt: "Rooma, 1873. Uusi virkamies kulki vanhan keisarin ohi.",
+      selite: 'Uusi virkamies kantoi paperinsa kuivina vanhan keisarin ohi. Rooma oli vaihtanut tehtävää, mutta kaikki hallitsijat eivät olleet poistuneet — osa vain hoiti virkaansa kivestä.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.pantheonroma.com/en/pantheon-history/"],
+    },
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
-    paikkarivi: 'Rooma, lokakuussa 1873. Sadetta; katukivet kiiltävät.',
-    teksti: 'Koko kaupunki puhuu miehestä, joka ei suostu tulemaan '
-      + 'ulos: paavi ei ole kolmeen vuoteen ylittänyt Vatikaanin '
-      + 'muuria. Kadulla sanotaan, että hän katselee Roomaansa vain '
-      + 'ikkunoista. Seisoin muurin alla ja mietin, kumpi meistä on '
-      + 'vanki.',
+    paikkarivi: 'Rooma, lokakuussa 1873. Sadetta; katukivet kiiltävät; '
+      + 'puntari matalalla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 344 merkkiä (yläraja 400). */
+    teksti: "Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.",
     /*
      * Luenta ja äänite: kaanon, kohta 1. Teksti on sama kuin yllä —
      * vain tunnetagit on lisätty, samoin kuin Ateenassa ja Sofiassa.
@@ -191,11 +204,63 @@ export const FOKUSVIRTA_ROOMA = {
      * eikä mikään muu hajoa (js/fokusvirta.js lukee kentän vain
      * kytkintä varten).
      */
-    luenta: '[curious] Koko kaupunki puhuu miehestä, joka ei suostu '
-      + 'tulemaan ulos: paavi ei ole kolmeen vuoteen ylittänyt '
-      + 'Vatikaanin muuria. [whispers] Kadulla sanotaan, että hän '
-      + 'katselee Roomaansa vain ikkunoista. [softly] Seisoin muurin '
-      + 'alla ja mietin, kumpi meistä on vanki.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Rooma on nyt Italian pääkaupunki..."
+     * (selittävä sivulause, pulu kuuntelee).
+     */
+    reaktiot: [
+  {
+    "id": "rooma.r1",
+    "ankkuri": "kattoaukosta satoi sisään",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "rooma.r2",
+    "ankkuri": "Vesi katosi lattian pieniin reikiin",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "rooma.r3",
+    "ankkuri": "ei kai tohtinut huomauttaa katosta",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "rooma.r4",
+    "ankkuri": "Kaupungin hallitsijat olivat vaihtuneet monta kertaa",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "rooma.r5",
+    "ankkuri": "taivaan sisään kysymättä nimeä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. [thoughtfully] Pantheon päästi yhä taivaan sisään kysymättä nimeä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-rooma.mp3',
     /*
      * KUVA: kaanonin ensisijainen valinta — Ludovico Tuminellon
@@ -207,6 +272,7 @@ export const FOKUSVIRTA_ROOMA = {
      */
     kuva: {
       tiedosto: 'Ludovico Tuminello - Veduta panoramica della breccia di Porta Pia scattata il 21 settembre 1870.jpg',
+      lyhyt: 'Aukko Aurelianuksen muurissa Porta Pian vieressä; kuva otettiin päivä valtauksen jälkeen 21.9.1870.',
       selite: 'Aukko Aurelianuksen muurissa Porta Pian vieressä. '
         + 'Valokuva on otettu päivä valtauksen jälkeen, 21. syyskuuta '
         + '1870.',
@@ -221,29 +287,33 @@ export const FOKUSVIRTA_ROOMA = {
    */
   pollo: {
     /*
-     * LIVIAN MAADOITUS (Fablen kaanon 27.8.2026, TUURAAJA-KEHYS).
-     *
-     * Rooman merkintä päättyy koko kuuden kaupungin ylevimpään
-     * lauseeseen ("mietin, kumpi meistä on vanki"), joten maadoitus on
-     * täällä suorin: nuori matkaaja tekee itsestään vertaisen paaville
-     * seisomalla sateessa muurin alla. Livia purkaa vertauksen — ja
-     * vain vertauksen.
-     *
-     * FAKTAKURI: paavin vetäytymiseen, vuoteen 1929 tai muurin
-     * tapahtumiin ei kosketa; ne ovat seuraavassa kappaleessa ja
-     * täyissä. Muurin sisäpuolen elämä on Livian omaa postiperimätietoa
-     * ("meikäläisillä on siitä muistiinpanoja") eikä nimeä yhtäkään
-     * laitosta, vuosilukua tai postijärjestelmää — kaanonin sääntö 2
-     * on tässä nimenomaan siksi, ettei Vatikaanin postista väitetä
-     * mitään tarkistamatonta.
+     * PULUCAM (kuvatoimitus 9.9.2026, pulu-cam-rooma-01-r20260909-14mm-text1-v2.jpg, tilaus
+     * PULU-CAM-EUROOPPA-20260909-OHJAUS-01; omistaja: "ne voi hyvaksya
+     * sellaisenaan suoraan peliin"). Kuvatekstit tekstisession sanasta
+     * sanaan: lyhyt kuvan alle, pitka karuselliin. Lahteet on
+     * tausta-aineisto (ei nay pelaajalle).
      */
-    maadoitus: '"Kumpi meistä on vanki." Kaunis kysymys, ja siihen on tylsä '
-      + 'vastaus: ei kumpikaan. Isoisäsi käveli muurin alta pois heti kun '
-      + 'sade yltyi. Ja muurin sisäpuolella oli puutarha, palvelusväkeä ja '
-      + 'posti, joka kulki portista niin kuin ennenkin — meikäläisillä on '
-      + 'siitä muistiinpanoja, koska sitäkin postia kannettiin. Sellanen '
-      + 'vankeus, jonka voi itse valita ja jonka ohi kulkee kirjeposti, on '
-      + 'kyl vähän eri sana kun vankeus.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-rooma-01-r20260909-14mm-text1-v2.jpg',
+        lyhyt: 'Rooma: isoisä katsoi aukosta ylös, minä katsoin alas.',
+        selite: 'Ylhäältä Pantheonin avoin kattoaukko näyttää valtavalta silmältä, jonka pohjalla lattian kuviot pienenevät. Isoisä katsoi siitä ylös; minä kurkistin varovasti alas.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.pantheonroma.com/en/pantheon-history/',
+          'https://www.pantheonroma.com/en/2025/04/24/the-oculus-of-the-pantheon/',
+          'https://www.vigilfuoco.tv/eventi/lancio-di-petali-dalla-cupola-del-pantheon',
+          'https://hrtprikazuje.hrt.hr/hrt1/rimski-panteon-anticka-megastruktura-0-12197405',
+          'https://www.flickr.com/photos/escriteur/28753433533',
+          'https://www.rainews.it/video/2025/06/pantheon-vigili-del-fuoco-pioggia-di-petali-in-occasione-della-pentecoste-d7ec84a1-0da1-4b59-8a0a-831713e71490.html',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Pantheoniin ostetaan nyt pääsylippu. Minä kiersin kattoaukkoa juuri, kun sade alkoi. Alhaalla ihmiset siirtyivät kuivaan. Löysin itsekin suojan räystäältä — mutta ensin oli pakko katsoa, mihin sade sisällä menee."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'miettiva', voimakkuus: 0.45 },
     teksti: 'Muurin sisällä pysyttiin viisikymmentäyhdeksän vuotta — vasta '
       + '1929 paavi astui taas Rooman puolelle. Ikkunat on yhä ihan '
       + 'samat.',
@@ -255,6 +325,7 @@ export const FOKUSVIRTA_ROOMA = {
      */
     kuva: {
       tiedosto: 'Obelisk Saint Peter square Vatican.jpg',
+      lyhyt: 'Pietarinaukion obeliski Vatikaanissa on ainoa Rooman muinaisobeliskeista, joka ei koskaan kaatunut.',
       selite: 'Pietarinaukion obeliski Vatikaanissa. Se on ainoa Rooman '
         + 'muinaisobeliskeista, joka ei ole koskaan kaatunut.',
       lahde: 'Jebulon, Wikimedia Commons (CC0)',
@@ -305,6 +376,7 @@ export const FOKUSVIRTA_ROOMA = {
         + 'sisäpihalle. Isoisäsi matkavuonna asia oli tuore ja päällä: '
         + 'Rooma oli ollut Italian pääkaupunki kaksi vuotta ja paavi '
         + 'Vatikaanin vanki kolme.',
+      lahde: 'en-Wikipedia "Prisoner in the Vatican". Tarkistettu 1.9.2026.',
       /*
        * Takyt-rooma.md, täky 4: 3172×4000, public domain, Adolphe
        * Braun, kuvattu 13.5.1875 — valokuva paavista kaksi vuotta
@@ -350,6 +422,15 @@ export const FOKUSVIRTA_ROOMA = {
        * kirjoiteta (en-artikkelit sanovat 350 ja 150), ja Caesarin
        * murhapaikasta sanotaan "uskotaan", koska lähde itse sanoo "is
        * believed to have been".
+       *
+       * TYÖNJAKO TÄKYNOSTON KANSSA (1.9.2026, nostojen sisältöaudit):
+       * tämä syvennys kertoo KAIVAUKSEN JA HOITAJAT — sen minivisan
+       * vastaus on avain, joka kulki näyttelijältä toiselle, joten
+       * tekstiä ei ole muutettu. Saman aiheen täkynosto
+       * (`takynostot`, tunnus 'kissat') oli tähän asti tämän kortin
+       * tiivistelmä samassa kartan pisteessä; se kirjoitettiin uusiksi
+       * ja kertoo nyt TEMPPELIN JA LAIN eli sen, missä suoja seisoo ja
+       * millä oikeudella kissat siellä ovat.
        */
       teksti: 'Kun Roomaa rakennettiin uusiksi Italian yhdistymisen '
         + 'jälkeen ja korttelia purettiin vuonna 1927, maasta tuli '
@@ -364,6 +445,7 @@ export const FOKUSVIRTA_ROOMA = {
         + 'suoja. Vuonna 2012 arkeologiviranomaiset vaativat suojan '
         + 'häätöä raunioiden suojelemiseksi; vetoomukseen kerättiin yli '
         + '30 000 nimeä, ja kissat jäivät.',
+      lahde: 'en-Wikipedia "Largo di Torre Argentina". Tarkistettu 1.9.2026.',
       /*
        * Takyt-rooma.md, täky 1 (ja takynostot-italia.md, ehdokas 1):
        * 5760×3840, CC BY 2.0, Andy Rusch, 2015 — kissat raunioilla.
@@ -418,12 +500,15 @@ export const FOKUSVIRTA_ROOMA = {
         + 'itseään ennen kaikkea arkkitehtina. Puutarha sai '
         + 'eksterritoriaalisen asemansa 1869 — neljä vuotta ennen kuin '
         + 'isoisäsi seisoi portin edessä.',
+      lahde: 'en-Wikipedia "Villa del Priorato di Malta". Tarkistettu '
+        + '1.9.2026.',
       /*
        * Takyt-rooma.md, täky 12: 1536×2150, CC0, Galen Crout, 2016 —
        * näkymä reiän läpi, eli tasan se, mistä teksti puhuu.
        */
       kuva: {
         tiedosto: 'Knights of Malta Keyhole, Aventine Hill, Rome (cropped).jpg',
+        lyhyt: 'Näkymä Maltan ritarikunnan avaimenreiästä: sypressikäytävä ja Pietarinkirkon kupoli päässä.',
         selite: 'Näkymä Maltan ritarikunnan portin avaimenreiästä: '
           + 'sypressikäytävä ja sen päässä Pietarinkirkon kupoli.',
         lahde: 'Galen Crout, Wikimedia Commons (CC0)',
@@ -508,33 +593,40 @@ export const FOKUSVIRTA_ROOMA = {
    * laattakysymyksen — EI vaihdeta."*
    *
    * TARKISTETTU 25.8.2026: js/packs/kohtaamiset.js:ssä EI ole Rooman
-   * riviä (tiedostossa on kuusi kaupunkia: Lontoo, Kairo, Tukholma,
-   * Madrid, Venetsia, Berliini). Rooman hahmo on silti olemassa ja
-   * pelissä käytössä: tarinakaaren paketti js/tyohuone-kehitys-data.js
-   * (KAARI_PAKETIT, id 'rooma') antaa hahmon JA sen kysymyksen, jonka
-   * game.actionQuiz esittää laatalla (js/game.js kaariTarina). Hahmo on
-   * siis Suihkulähteenhoitaja Enzo, eikä tämä paketti kosketa
-   * kysymystä millään tavalla — sama suhde kuin Ateenan Nikoksella ja
-   * Sofian Nadialla.
+   * riviä. Rooman hahmo on silti olemassa ja pelissä käytössä:
+   * tarinakaaren paketti js/tyohuone-kehitys-data.js (KAARI_PAKETIT,
+   * id 'rooma') antaa hahmon JA sen kysymyksen, jonka game.actionQuiz
+   * esittää laatalla (js/game.js kaariTarina); tämä paketti ei kosketa
+   * kysymystä millään tavalla.
    *
-   * KOHTAAMISKUVAA EI OLE. Ateenalla ja Sofialla on generoitu kuva
-   * (assets/kohtaamiset/kohtaaminen-*.jpg); Roomalle sellaista ei ole
-   * kansiossa, eikä tänne kirjoiteta polkua, jota ei ole.
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. HENKILÖ VAIHTUI:
+   * suihkulähteenhoitaja Enzo → pasunisti Nico (kuvaputken
+   * tarinaehdotus 5.9.2026, Fablen päätös samana iltana klo 20:05 UTC:
+   * *"Rooma (pasunisti Nico, Trevi, ilta, juhla kaupungilla)"*). Isältä
+   * ja isoisältä peritty kolikonnosto ja huoltoluukun avaaminen ovat
+   * poissa; kukaan ei tunne Horatiota eikä odota ketään.
+   *
+   * KOHTAAMISKUVA on kaaren paketissa (assets/kohtaamiset/
+   * kohtaaminen-rooma.jpg) ja esittää yhä Enzoa — se vaihtuu, kun
+   * kuvaputken uusi kuva on hyväksytty. Tähän pakettiin ei kirjoiteta
+   * omaa kuvapolkua.
    *
    * Esittely on tämän kortin omaa tekstiä ja kirjoitettu niin, ettei se
-   * kertaa Enzon omaa repliikkiä eikä paljasta vastausta.
+   * kertaa Nicon omaa repliikkiä eikä paljasta vastausta.
    */
   kohtaaminen: {
-    hahmo: 'Suihkulähteenhoitaja Enzo',
-    nappi: 'Tapaa Enzo',
-    teksti: 'Enzo nostaa Trevin kolikot talteen joka viikko, kuten '
-      + 'hänen isänsä ja isoisänsä nostivat ennen häntä. Hansikas '
-      + 'kädessä hän tunnistaa kolikon maan ja vuoden pelkästä reunasta, '
-      + 'ja hän on nähnyt altaan pohjalta kaiken, mitä ihminen voi '
-      + 'pudottaa. Matkustajaa hän ei kiirehdi. Ennen kuin hän avaa '
-      + 'huoltoluukun, hän haluaa tietää, ymmärtääkö vieras miksi '
-      + 'kolikko ylipäänsä heitetään: tavan tuntee jokainen tulija, '
-      + 'mutta harva osaa sanoa, mitä se lupaa.',
+    hahmo: 'Pasunisti Nico',
+    nappi: 'Tapaa Nico',
+    teksti: 'Nico soittaa iltakeikkoja siellä, missä kaupungissa '
+      + 'sattuu olemaan juhla: aukioilla, sivukaduilla, kerran '
+      + 'hautajaisissakin väärän osoitteen takia. Nuotteja hän ei kanna '
+      + 'mukanaan, koska ohjelmisto on päässä ja koska pasuunan kanssa '
+      + 'on muutenkin tarpeeksi kannettavaa. Vanhat katusävelmät hän '
+      + 'tunnistaa parista tahdista, ja siitä hän on hiljaisesti ylpeä. '
+      + 'Turistien kysymyksiin hän vastaa kohteliaasti ja lyhyesti — '
+      + 'tauko on kymmenen minuuttia. Vieraan kirjaa hän katsoo vasta '
+      + 'sitten, kun tämä osaa sanoa, mitä altaaseen heitetty kolikko '
+      + 'oikeastaan lupaa.',
   },
 
   /*
@@ -544,14 +636,20 @@ export const FOKUSVIRTA_ROOMA = {
    */
 
   /*
-   * KOHTAAMISPAIKKA: AVENTINUKSEN AVAIMENREIKÄ, ei kaupungin laatta.
-   * Kaanon, kohta 4, määrää paikan.
+   * KOHTAAMISPAIKKA: TREVIN SUIHKULÄHDE (5.9.2026; ennen Aventinuksen
+   * avaimenreikä), ei kaupungin laatta.
    *
-   * 12,4775 E / 41,8836 N — en-Wikipedia "Villa del Priorato di Malta"
-   * (takyt-rooma.md, täky 12). Kaanon antoi luvut muistinvaraisesti
-   * hitusen toisin (41,8827 N / 12,4783 E) ja käski rakentajan
-   * tarkistaa: raportin tarkistetut luvut ovat nämä, ja ero on laudalla
-   * alle kymmenesosayksikkö — kumpi tahansa piirtyisi samaan pisteeseen.
+   * SIIRRON SYY on Fablen päätös 5.9.2026 klo 20:05 UTC: *"Rooma
+   * (pasunisti Nico, Trevi, ilta, juhla kaupungilla): fokusvirran
+   * kohtaamispiste siirtyy Aventinuksen avaimenreiästä Trevin luo,
+   * jotta kaupungissa on yksi kohtaamispaikka."* Kaaren kohtaaminen on
+   * Trevin laidalla, joten kartan pisteen on osoitettava sinne.
+   * Avaimenreikä ei katoa pelistä: se on yhä kaupungin oma
+   * syvennystarina ja karttamerkki (js/packs/syvennyspaikat.js, rooma/
+   * avaimenreika, sama koordinaatti 41,8836 / 12,4775).
+   *
+   * 12,48305556 E / 41,90083333 N — en-Wikipedia "Trevi Fountain",
+   * prop=coordinates (haettu 5.9.2026).
    *
    * Muunnos on sama kaava ja samat vakiot kuin fokuskohteilla
    * (js/packs/fokuskohteet-ita.js): maailmankartalla Millerin lieriö
@@ -560,27 +658,29 @@ export const FOKUSVIRTA_ROOMA = {
    * ja y = (72 − lat) × 26,3.
    *
    * LASKU:
-   *   maailmankartta  x = ((12,4775 − (−175)) mod 360) × (12000/360)
-   *                     = 187,4775 × 33,3333… = 6249,3
-   *                   y = (millerY(41,8836) − millerY(76)) × 12000/2π
-   *                     = 1728,2
-   *   europe          x = (12,4775 + 11) × 19,2 = 450,8
-   *                   y = (72 − 41,8836) × 26,3 = 792,1
+   *   maailmankartta  x = ((12,48305556 − (−175)) mod 360) × (12000/360)
+   *                     = 187,48305556 × 33,3333… = 6249,4
+   *                   y = (millerY(76) − millerY(41,90083333)) × 12000/2π
+   *                     = 1727,5
+   *   europe          x = (12,48305556 + 11) × 19,2 = 450,9
+   *                   y = (72 − 41,90083333) × 26,3 = 791,6
    *
    * TARKISTUS ROOMAN LAATTAA VASTEN: laatta on maailmankartalla
    * 6249,7 / 1728,1 (js/packs/maailmankartta.js) ja Euroopan laudalla
-   * 451 / 792 (js/packs/europe.js). Avaimenreikä on laudalla siis
-   * alle puolen yksikön päässä laatasta — juuri niin kuin pitääkin,
-   * sillä Aventinus on keskustan kukkuloita runsaan parin kilometrin
-   * päässä kaupungin keskipisteestä, ja laudan yksikkö on
-   * maailmankartalla noin kolme kilometriä. Piste piirtyy laatan
-   * viereen eikä naapurimaahan.
+   * 451 / 792 (js/packs/europe.js). Trevi on laudalla siis alle puolen
+   * yksikön päässä laatasta — juuri niin kuin pitääkin, sillä lähde on
+   * keskustassa runsaan kilometrin päässä kaupungin keskipisteestä, ja
+   * laudan yksikkö on maailmankartalla noin kolme kilometriä.
+   * Piirtopuoli siirtää merkin laatan viereen itse (js/fokuspiste.js
+   * PISTE_ERO_MIN = 14), kuten se teki avaimenreiällekin. Vanha piste
+   * oli 6249,3 / 1728,2 ja 450,8 / 792,1 — siirtymä on laudalla alle
+   * yhden yksikön, joten kartan yleisilme ei muutu.
    */
   kohtaamispiste: {
-    nimi: 'Aventinuksen avaimenreikä',
+    nimi: 'Trevin suihkulähde',
     laudat: {
-      maailmankartta: { x: 6249.3, y: 1728.2 },
-      europe: { x: 450.8, y: 792.1 },
+      maailmankartta: { x: 6249.4, y: 1727.5 },
+      europe: { x: 450.9, y: 791.6 },
     },
   },
 
@@ -646,16 +746,68 @@ export const FOKUSVIRTA_ROOMA = {
       id: 'kissat',
       // Kartan nimiö täkypisteen kylkeen (päätoimittaja 28.8.2026).
       nimio: 'Caesarin kissat',
-      /* Kaanon, kohta 6, nosto 1 (eläin). */
-      otsikko: 'Kissat asuvat paikassa, jossa Caesar murhattiin — ja '
-        + 'arkeologit yrittivät häätää ne',
-      /* Faktat: takynostot-italia.md, ehdokas 1 (VARMA). */
-      lunastus: 'Vuoden 1927 purkutöissä Largo di Torre Argentinasta '
-        + 'paljastui neljä tasavallan ajan temppeliä ja se paikka, jossa '
-        + 'Caesarin uskotaan tulleen murhatuksi — ja kuoppaan muutti '
-        + 'kissalauma. Vuonna 2012 arkeologiviranomaiset vaativat '
-        + 'kissasuojan häätöä; vetoomukseen kerättiin yli 30 000 nimeä, '
-        + 'ja kissat jäivät.',
+      /*
+       * OTSIKKO JA LUNASTUS KIRJOITETTU UUSIKSI 1.9.2026 (nostojen
+       * sisältöaudit). Kortti oli tähän asti saman tiedoston
+       * syvennystäyn 'kissat' tiivistelmä: sama aukio, sama piste,
+       * samat kaksi käännettä (1927 purkutyöt ja vuoden 2012 häätöyritys
+       * 30 000 nimen vetoomuksineen) lyhyempinä. Kumpaakaan korttia ei
+       * poistettu, vaan TYÖNJAKO SELVITETTIIN:
+       *
+       *   syvennys 'kissat' = KAIVAUS JA HOITAJAT. Miten kuoppa
+       *     syntyi, miten kissat sinne tulivat, miten avain kulki
+       *     näyttelijältä toiselle (sen minivisan vastaus) ja miten
+       *     häätöyritys kaatui. Ei muutettu.
+       *   tämä täkynosto = TEMPPELI JA LAKI. Missä suoja oikeastaan
+       *     seisoo ja millä oikeudella kissat siellä ovat.
+       *
+       * FAKTAT (en-Wikipedia "Largo di Torre Argentina", osiot "Roman
+       * temples" ja "Cat shelter"; haettu 1.9.2026):
+       *   - temppeli D on neljästä suurin, 100-luvulta eaa.; sen lupasi
+       *     pretori Lucius Aemilius Regillus kesken meritaistelua
+       *     Antiokhos Suuren laivastoa vastaan vuonna 190 eaa., ja
+       *     M. Aemilius Lepidus vihki sen sensorina 22.12.179 eaa.
+       *     merenkulkijoita suojeleville Lares Permarini -jumalille;
+       *     temppelistä on kaivettu esiin vain pieni osa, koska katu
+       *     peittää suurimman osan siitä;
+       *   - kissasuoja sijaitsee juuri temppeli D:n kohdalla, se
+       *     perustettiin 1993 ja toimii tappamattomana Italian
+       *     parlamentin vuonna 1991 säätämän lain numero 281 nojalla;
+       *     laki antoi kissoille oikeuden elää vapaana ja turvassa ja
+       *     teki kissojen hoitajista virallisen instituution; suoja
+       *     tekee sterilointi- ja adoptiotyötä ja jatkaa toimintaansa
+       *     arkeologien vastustuksesta huolimatta;
+       *   - Caesarin murhapaikasta lähde sanoo "uskotaan", ja niin
+       *     sanoo tämäkin kortti.
+       *
+       * KISSOJEN LUKUMÄÄRÄÄ EI KIRJOITETA — sama rajaus kuin
+       * syvennystäyllä, koska en-artikkelit antavat eri luvut.
+       */
+      otsikko: 'Rooman kuuluisin kissalauma asuu temppelissä, joka '
+        + 'luvattiin merenkulkijoiden jumalille kesken meritaistelua',
+      lunastus: [
+        'Kissasuoja ei ole raunion vieressä vaan raunion sisällä. Se '
+          + 'toimii temppeli D:n kohdalla — Largo di Torre Argentinan '
+          + 'neljästä temppelistä suurimman, jonka pretori Lucius '
+          + 'Aemilius Regillus lupasi rakentaa kesken meritaistelua '
+          + 'Antiokhos Suuren laivastoa vastaan vuonna 190 eaa. '
+          + 'Temppeli vihittiin yhdentoista vuoden kuluttua, 22. '
+          + 'joulukuuta 179 eaa., merenkulkijoita suojeleville Lares '
+          + 'Permarini -jumalille. Siitä on kaivettu esiin vain pieni '
+          + 'osa: loput ovat yhä kadun alla. Saman aukion laidalla on '
+          + 'se kohta, jossa Caesarin uskotaan tulleen murhatuksi.',
+        'Kissojen oikeus jäädä ei ole tunneasia vaan lakikysymys. '
+          + 'Italian parlamentti sääti vuonna 1991 lain numero 281, joka '
+          + 'antoi kulkukissoille oikeuden elää vapaana ja turvassa ja '
+          + 'teki niiden hoitajista virallisen instituution. Suoja '
+          + 'perustettiin kaksi vuotta myöhemmin ja toimii sen lain '
+          + 'nojalla tappamattomana: kissat steriloidaan ja niille '
+          + 'etsitään koti, mutta yhtäkään ei lopeteta. Arkeologit ovat '
+          + 'vaatineet suojan purkamista kaivauksen suojelemiseksi. '
+          + 'Suoja on yhä siellä.',
+      ],
+      lahde: 'en-Wikipedia "Largo di Torre Argentina", osiot "Roman temples" ja "Cat '
+        + 'shelter" (tarkistettu 1.9.2026).',
       avaa: 'kissat',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
@@ -705,6 +857,316 @@ export const FOKUSVIRTA_ROOMA = {
         laudat: {
           maailmankartta: { x: 6249.2, y: 1727.8 },
           europe: { x: 450.8, y: 791.8 },
+        },
+      },
+    },
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): ROOMAN KAUPUNKILEHDEN SIVUT
+     * NOSTOIKSI.
+     *
+     * Sama jako kuin Pariisissa erässä 5
+     * (docs/raportit/viesti-fable-karttauudistus-era5-20260913.md,
+     * suunnitelman luku 4.7): lehden aihesivujen nostot ovat nyt
+     * klikattavia karttapaloja kaupungin kohdekartalla. Kaikki tämän erän
+     * nostot ovat KOHDEKARTALLA, eivät pääkartalla — omistajan sääntö
+     * 2.9.2026 (tests/nostot-kartalla.test.mjs).
+     *
+     * TEKSTIÄ EI OLE KIRJOITETTU UUDESTAAN. Jokainen `lunastus`-kappale on
+     * lehden oman noston `teksti` SANATARKASTI
+     * (js/packs/kulttuuri-kategoriat.js, kaupunki `rooma`), ja `kuva` on
+     * lehden oma kuvarivi kenttineen. Siirto on tehty ohjelmallisesti ja
+     * todennettu ===-vertailulla
+     * (tools/savukkeet/savuke-kaupunkien-nostot.mjs vartio 4b avaa jokaisen
+     * kortin selaimessa ja vertaa merkki merkiltä).
+     *
+     * MINIKYSYMYKSET (erän 6 datamalli, kiintiö joka kolmas nosto):
+     * `colosseumin-kellari`, `rooman-nasone`.
+     * ══════════════════════════════════════════════════════════════
+     */
+    {
+      id: 'rooman-kolikko',
+      nimio: 'Kolikko olan yli',
+      otsikko: 'Kolikko olan yli',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman '
+          + 'olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita '
+          + 'putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne '
+          + 'kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle '
+          + 'hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa '
+          + 'kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä '
+          + 'jää säännöllisesti kiinni.',
+      ],
+      lahde: 'Rooman kaupunkilehden nosto "Kolikko olan yli" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Trevi Fountain - Roma.jpg',
+        lyhyt: 'Fontana di Trevi on Palazzo Poli -palatsin päätyseinä, jonka kaaren alla seisoo merenjumala Oceanus.',
+        selite: 'Fontana di Trevi ei ole erillinen muistomerkki vaan Palazzo Poli '
+          + '-palatsin päätyseinä, jonka kaaren alla seisoo meren jumala '
+          + 'Oceanus.',
+        lahde: 'NikonZ7II, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      /*
+       * MUSIIKKI JA ÄÄNI KORTILLE (avoin kohta 11.1, 14.9.2026). Erässä 10
+       * tämä nosto jäi lehden sivulle kaksoiskappaleeksi vain siksi, että
+       * musiikkilinkille ja ääninäytteelle ei ollut paikkaa kortilla.
+       * Kortti piirtää ne nyt SAMOILLA napeilla kuin lehti (js/ui.js
+       * lisaaNostonNapit), joten sivulta jäänyt kaksoiskappale purkautui.
+       */
+      aani: 'https://archive.org/download/aporee_15080_17587/WalkingtoPantheonFountainRome.mp3',
+      aaniLahde: '"Walking to Pantheon" — Rolf Yngve, radio aporee (public domain)',
+      kysymykset: [
+        'Miksi kolikko heitetään juuri oikealla kädellä vasemman olan yli?',
+        'Miten kolmentuhannen euron päiväsaalis kerätään altaan pohjasta '
+          + 'talteen?',
+        'Mihin Caritaksen ruoka-apu Roomassa menee?',
+      ],
+      paikka: {
+        nimi: 'Kolikko olan yli',
+        laudat: {
+          maailmankartta: { x: 6249.4, y: 1727.5 },
+          europe: { x: 450.9, y: 791.6 },
+        },
+      },
+    },
+    {
+      id: 'colosseumin-kellari',
+      nimio: 'Areenan kellari',
+      otsikko: 'Leijona nousi lattian alta',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Colosseumin areena oli puulattia, jonka päälle levitettiin '
+          + 'hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee '
+          + 'sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, '
+          + 'häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin '
+          + 'kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi '
+          + 'keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto '
+          + 'auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.',
+      ],
+      lahde: 'Rooman kaupunkilehden nosto "Leijona nousi lattian alta" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Hypogeum 1 (15005526662).jpg',
+        lyhyt: 'Colosseumin puulattian alla oli kaksikerroksinen kellari hypogeum käytävineen.',
+        selite: 'Colosseumin areenan puulattian alla oli kaksikerroksinen kellari '
+          + 'eli hypogeum, jossa oli käytäviä, häkkejä ja kahdeksankymmentä '
+          + 'pystykuilua.',
+        lahde: 'daryl_mitchell from Saskatoon, Saskatchewan, Canada, Wikimedia '
+          + 'Commons (CC BY-SA 2.0)',
+      },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Colosseum (8473462785).jpg',
+          lyhyt: 'Osa areenan lattiaa on rakennettu takaisin; alkuperäinen puulattia peitti koko hypogeumin.',
+          selite: 'Osa areenan lattiaa on rakennettu takaisin paikalleen; '
+            + 'alkuperäinen puulattia peitti koko hypogeumin.',
+          lahde: 'Edgar Jiménez from Porto, Portugal, Wikimedia Commons (CC BY-SA '
+            + '2.0)',
+        },
+      ],
+      kysymykset: [
+        'Miten kaksikerroksinen kellari käytävineen rakennettiin areenan '
+          + 'alle?',
+        'Miksi puulattian päälle levitettiin hiekkaa?',
+        'Miksi juuri sotalaivaston merimiehet kelasivat kangaskaton auki?',
+      ],
+      visa: {
+        kysymys: 'Colosseumin areenalla eläin saattoi ilmestyä keskelle kuin '
+          + 'tyhjästä. Miten se tehtiin?',
+        vaihtoehdot: [
+          'Vinssi nosti häkin pystykuilua pitkin lattian tasalle',
+          'Eläin ajettiin sisään katsomon alta nousevaa ramppia pitkin',
+          'Hiekkaan oli kaivettu kuoppa, jonka päällä oli matto',
+        ],
+        oikea: 0,
+        fakta: 'Colosseumin areena oli puulattia, jonka päälle levitettiin '
+          + 'hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee '
+          + 'sana areena.',
+      },
+      paikka: {
+        nimi: 'Areenan kellari',
+        laudat: {
+          maailmankartta: { x: 6249.7, y: 1728 },
+          europe: { x: 451.1, y: 791.9 },
+        },
+      },
+    },
+    {
+      id: 'minervan-norsu',
+      nimio: 'Norsu ja obeliski',
+      otsikko: 'Norsu kantaa obeliskia',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka '
+          + 'selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian '
+          + 'Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se '
+          + 'paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista '
+          + 'muinaisobeliskista pienin, viisi ja puoli metriä — ja '
+          + 'muinaisobeliskeja on Roomassa enemmän kuin missään muussa '
+          + 'kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen '
+          + 'pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli '
+          + 'heidän mielestään pieni ja pyöreä.',
+      ],
+      lahde: 'Rooman kaupunkilehden nosto "Norsu kantaa obeliskia" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Elephant and Obelisk.jpg',
+        lyhyt: 'Norsupatsaan suunnitteli Gian Lorenzo Bernini ja veisti Ercole Ferrata, ja se paljastettiin 1667.',
+        selite: 'Norsupatsaan suunnitteli Gian Lorenzo Bernini ja veisti Ercole '
+          + 'Ferrata, ja se paljastettiin vuonna 1667.',
+        lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Sama kuvasarja
+       * kuin lehden nostolla, josta tämä kortti kirjoitettiin: erässä 10
+       * se jäi siirtämättä, koska nostokortti ei tuntenut `galleria`-
+       * kenttää. Nyt tuntee (js/fokusnosto.js piirraNostonKuvasarja).
+       */
+      galleria: [
+        {
+          otsikko: 'Koko muistomerkki',
+          tiedosto: 'Elephant and Obelisk - Bernini.jpg',
+          lyhyt: 'Norsun selässä oleva obeliski on Rooman kolmestatoista muinaisobeliskista pienin.',
+          selite: 'Norsun selässä oleva obeliski on Rooman '
+            + 'kolmestatoista muinaisobeliskista pienin, viisi ja puoli '
+            + 'metriä.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      kysymykset: [
+        'Miten viisi ja puoli metriä korkea obeliski nostettiin norsun '
+          + 'selkään?',
+        'Mistä Rooman kolmetoista muinaisobeliskia ovat alun perin peräisin?',
+        'Miksi roomalaisten mielestä marmorinorsu muistutti enemmän possua '
+          + 'kuin norsua?',
+      ],
+      paikka: {
+        nimi: 'Norsu ja obeliski',
+        laudat: {
+          maailmankartta: { x: 6249.3, y: 1727.7 },
+          europe: { x: 450.8, y: 791.7 },
+        },
+      },
+    },
+    {
+      id: 'aqua-virgo',
+      nimio: 'Aqua Virgo',
+      otsikko: 'Vesi kulkee yhä',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta '
+          + 'vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä '
+          + 'painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä '
+          + 'kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 '
+          + 'eaa. ja kulkee melkein koko matkansa maan alla — '
+          + 'kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se '
+          + 'syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan '
+          + 'nuori tyttö näytti janoisille sotilaille lähteen, josta vesi '
+          + 'otettiin.',
+      ],
+      lahde: 'Rooman kaupunkilehden nosto "Vesi kulkee yhä" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Aqueducts in Rome.jpg',
+        lyhyt: 'Roomaan rakennettiin yksitoista akveduktia, joissa vesi virtasi kourua pitkin painovoimalla.',
+        selite: 'Roomaan rakennettiin yksitoista akveduktia, ja vesi virtasi '
+          + 'kaarien päällä kulkevassa kourussa pelkän painovoiman voimalla.',
+        lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      kysymykset: [
+        'Miten kolmenkymmenen sentin kaltevuus kilometrillä mitattiin '
+          + 'ilman nykyvälineitä?',
+        'Mitä Rooman yhdestätoista akveduktista on yhä käytössä?',
+        'Miksi Aqua Virgo vedettiin melkein koko matkaltaan maan alle?',
+      ],
+      paikka: {
+        nimi: 'Aqua Virgo',
+        laudat: {
+          maailmankartta: { x: 6249.4, y: 1727.5 },
+          europe: { x: 450.9, y: 791.6 },
+        },
+      },
+    },
+    {
+      id: 'rooman-nasone',
+      nimio: 'Nasone',
+      otsikko: 'Iso nenä joka kulmassa',
+      symboli: 'kaupunki',
+      lunastus: [
+        'Rooman kaduilla seisoo valurautaisia pylväitä, joiden '
+          + 'koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset '
+          + 'pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi '
+          + 'eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi '
+          + 'on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun '
+          + 'putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja '
+          + 'janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo '
+          + 'Pantheonin vieressä Piazza della Rotondalla.',
+      ],
+      lahde: 'Rooman kaupunkilehden nosto "Iso nenä joka kulmassa" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Nasone in Trastevere, Rome.jpg',
+        lyhyt: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi on samaa kuin kotihanoissa.',
+        selite: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi on '
+          + 'samaa kuin roomalaisten kotihanoissa.',
+        lahde: 'Sotamies, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Pigna-S Eustachio-Colonna - Nasone alla Rotonda.JPG',
+          selite: 'Vanhimpia yhä toimivia nasoneja seisoo Pantheonin vieressä '
+            + 'Piazza della Rotondalla.',
+          lahde: 'Lalupa, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      kysymykset: [
+        'Miksi nasoneiden annetaan juosta yötä päivää?',
+        'Mistä nasoneiden vesi tulee kaupunkiin?',
+        'Miksi ensimmäiset pylväät pystytettiin juuri 1870-luvulla?',
+      ],
+      visa: {
+        kysymys: 'Rooman katupylvään eli nasonen putken päällä on pieni reikä. Mitä '
+          + 'varten se on?',
+        vaihtoehdot: [
+          'Siitä pääsee ilma ulos, kun vesi kytketään päälle',
+          'Kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin '
+            + 'juotavaksi',
+          'Siitä kaupunki mittaa pylvään vedenpaineen',
+        ],
+        oikea: 1,
+        fakta: 'Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin '
+          + 'kotihanoissa.',
+      },
+      paikka: {
+        nimi: 'Nasone',
+        laudat: {
+          maailmankartta: { x: 6249.2, y: 1727.6 },
+          europe: { x: 450.8, y: 791.7 },
         },
       },
     },

@@ -240,7 +240,7 @@ test('nimi ei jää kaupunkiympyrän alle', async () => {
 const KAARETTOMAT = new Set([
   'kioto', 'varanasi', 'mandalay', 'kanton', // asia
   'sevilla', 'bergen', // europe
-  'fes', 'lalibela', // africa
+  'fes', // africa (lalibela sai saapumistekstin 8.9.2026)
 ]);
 
 async function vanhanMaailmanKaupungit() {
@@ -256,16 +256,31 @@ async function vanhanMaailmanKaupungit() {
 test('jokaisella vanhan maailman kaupungilla on saapumisteksti', async () => {
   const { PACKS } = await import('../js/pack.js');
   const { AFRICA_SAAPUMISET } = await import('../js/packs/africa-saapumiset.js');
-  const { EUROPE_SAAPUMISET } = await import('../js/packs/europe-saapumiset.js');
   const { ASIA_SAAPUMISET } = await import('../js/packs/asia-saapumiset.js');
-  const tekstit = { ...AFRICA_SAAPUMISET, ...EUROPE_SAAPUMISET, ...ASIA_SAAPUMISET };
+  const { FOKUSVIRRAT } = await import('../js/packs/fokusvirrat.js');
+  /*
+   * EUROOPPA TULEE NYT FOKUSVIRTAPAKEISTA (omistaja 8.9.2026, Raamattu:
+   * KOKO EUROOPPA KULKEE FOKUSVIRTAPAKKIEN KAUTTA). Vanha
+   * europe-saapumiset.js on arkistoitu pois pelistä
+   * (docs/arkisto/europe-saapumiset-2026-09-08.js.txt), ja jokaisen
+   * Euroopan kaupungin merkintä asuu sen omassa pakissa. Vaatimus on
+   * sama kuin ennen — jokaisella kaupungilla on merkintä — vain lähde
+   * vaihtui. Afrikan ja Aasian taulut ovat ennallaan.
+   */
+  const tekstit = { ...AFRICA_SAAPUMISET, ...ASIA_SAAPUMISET };
+  const merkinta = (id) => Boolean(tekstit[id] || FOKUSVIRRAT[id]?.matkakirja?.teksti);
   const { kaupungit } = await vanhanMaailmanKaupungit();
   const ilman = kaupungit
     .filter((c) => !KAARETTOMAT.has(c.id))
-    .filter((c) => !tekstit[c.id]).map((c) => c.id);
+    .filter((c) => !merkinta(c.id)).map((c) => c.id);
   assert.deepEqual(ilman, [], 'näiltä kaupungeilta puuttuu matkakirjan merkintä');
-  // Kaarettomalle EI myöskään saa kirjoittaa merkintää listaa
-  // purkamatta: teksti ilman listan siivousta ohittaisi vartioinnin.
+  /*
+   * Kaarettomalle EI myöskään saa kirjoittaa VANHAN MALLIN merkintää
+   * listaa purkamatta: teksti ilman listan siivousta ohittaisi
+   * vartioinnin. Fokusvirtapakki ei ole kaari eikä vanha merkintä vaan
+   * oma sisältölajinsa (Sevillalla ja Bergenillä on pakki mutta ei
+   * kaarta), joten se ei laukaise tätä vartiota.
+   */
   const salaa = kaupungit.filter((c) => KAARETTOMAT.has(c.id) && tekstit[c.id]).map((c) => c.id);
   assert.deepEqual(salaa, [], 'kaupungilla on merkintä mutta se on yhä KAARETTOMAT-listalla');
 });
@@ -366,6 +381,17 @@ test('Aasian artikkelit noudattavat talon mittaa', async () => {
    * ja tyyli vaihtelee." Siksi mitta on osa muotoa eikä makuasia:
    * kolme kappaletta ja alle tuhat merkkiä, jotta kortti pysyy
    * luettavana ja kaupungit keskenään samanmittaisina.
+   */
+  /*
+   * MAA-AVAIMILLAKIN ON TEKSTI (7.9.2026). Taulussa on maan nimellä
+   * avattuja tietueita, joiden intro-kentästä maalehti lukee maaosaston
+   * esittelyn (ARTIKKELIT[maa.wiki].intro). Ne saivat 6.9.2026 kaksi
+   * eri käytäntöä: AFG, KAZ ja NPL kirjoittivat myös teksti-kentän eli
+   * "Lue lisää" -paneelin artikkelin, kun MMR ja LKA jäivät tämän
+   * testin poikkeuslistalle. Päätoimittaja yhtenäisti: jokainen tämän
+   * taulun rivi kantaa teksti-kentän, joten poikkeuslistaa ei enää ole
+   * eikä uutta pidä lisätä — maa-avain kirjoittaa introonsa lisäksi
+   * kolmen kappaleen artikkelin niin kuin kaupunkikin.
    */
   for (const [nimi, a] of Object.entries(ASIA_ARTIKKELIT)) {
     assert.equal(a.teksti.split('\n\n').length, 3, `${nimi}: ei kolmea kappaletta`);
@@ -493,11 +519,24 @@ test('suomenkielisistä teksteistä ei puutu ä- ja ö-kirjaimia', async () => {
    */
   const VIERASSANAT = /\b(a[ln][- ])nahda\b/gi;
 
+  /*
+   * TOINEN POIKKEUS: PULUN TUNNETAGI `lammin`.
+   *
+   * Sama sääntö kuin `aani`-kentällä yllä — koodin tunnukset ovat
+   * tarkoituksella umlautittomia. `lammin` on yksi js/livia-tilanteet.js
+   * LIVIAN_TUNTEET -taulun avaimista (eleen tekninen nimi), ja pakit
+   * kirjoittavat sen kenttään `tunne` (tests/pulu-tunteet.test.mjs).
+   * Poikkeus on TAHALLAAN KAPEA: vain tuo yksi kenttäkirjoitusasu.
+   * Proosan "lammin" jää yhä kiinni.
+   */
+  const TUNNETAGIT = /(tunne: ')lammin(')/g;
+
   const kansio = new URL('../js/packs/', import.meta.url).pathname;
   const osumat = [];
   for (const nimi of readdirSync(kansio)) {
     if (!nimi.endsWith('.js')) continue;
-    const s = readFileSync(join(kansio, nimi), 'utf8').replace(VIERASSANAT, '$1—');
+    const s = readFileSync(join(kansio, nimi), 'utf8')
+      .replace(VIERASSANAT, '$1—').replace(TUNNETAGIT, '$1—$2');
     const loydot = [...new Set((s.match(hahmo) ?? []).map((x) => x.toLowerCase()))];
     if (loydot.length) osumat.push(`${nimi}: ${loydot.slice(0, 6).join(', ')}`);
   }

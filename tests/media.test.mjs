@@ -11,9 +11,13 @@ import assert from 'node:assert/strict';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
+import { execFileSync } from 'node:child_process';
+
 import {
-  PEILI_JUURI, peiliKuvaPolku, peiliAaniPolku, aaniOsoite, onPeilista,
+  PEILI_JUURI, peiliKuvaPolku, peiliAaniPolku, aaniOsoite, aaniUrl, onPeilista,
   asetaKuva, peiliPetti, peiliKaytossa, nollaaPeili, peilinLaji, AANI_JUURI,
+  KUVAN_YRITYKSET, nollaaKuvajono,
+  VERSIOIDUT_HORATIO_AANET,
 } from '../js/media.js';
 import { valokuvaUrl } from '../js/packs/africa-valokuvat.js';
 
@@ -95,9 +99,66 @@ test('aaniOsoite koskee vain peilattuja lähteitä', () => {
   // Pages-sivustosta.
   assert.ok(aaniOsoite(freesound).startsWith(AANI_JUURI));
   assert.ok(onPeilista(aaniOsoite(freesound)));
-  // Repon omat tiedostot eivät kulje peilin kautta.
-  assert.equal(aaniOsoite('assets/audio/efekti-klik.mp3'), 'assets/audio/efekti-klik.mp3');
+  // Pelin oma äänite kulkee ämpärin audio/-kansion kautta: repossa ei
+  // ole äänitiedostoja (omistajan linjaus 11.9.2026), joten
+  // assets/audio-polku on pelkkä tunniste eikä osoite mihinkään.
+  assert.equal(aaniOsoite('assets/audio/efekti-klik.mp3'),
+    `${AANI_JUURI}audio/efekti-klik.mp3`);
+  // Tunniste itse ei ole peilistä — vasta siitä laskettu osoite on.
   assert.equal(onPeilista('assets/audio/efekti-klik.mp3'), false);
+  assert.equal(onPeilista(aaniOsoite('assets/audio/efekti-klik.mp3')), true);
+});
+
+test('YDINSETILLÄ EI OLE POIKKEUSTA: tehoste ja huudahdus tulevat ämpäristä', () => {
+  /*
+   * Vanha sääntö (16.8.2026) piti tehosteet ja huudahdukset repon
+   * polussa, koska palvelutyöntekijä esilatasi juuri ne. Omistaja
+   * kumosi sen 11.9.2026: repossa ei ole äänitiedostoja lainkaan, joten
+   * repon polku olisi 404 ja ydinsetin nopeus hoidetaan esilataamalla
+   * sw.js:ssä samat osoitteet ämpäristä.
+   */
+  nollaaPeili();
+  for (const polku of [
+    'assets/audio/efekti-klik.mp3',
+    './assets/audio/huudahdus-star-1.mp3',
+    'assets/audio/puhe-fokus-matkakirja-marseille.mp3',
+  ]) {
+    assert.ok(aaniUrl(polku).startsWith(`${AANI_JUURI}audio/`), polku);
+  }
+  // Katkaisija ei koske omaan äänitteeseen: sammutettu peili ei voi
+  // pudottaa sitä polkuun, jota ei ole olemassa.
+  for (let i = 0; i < 5; i += 1) peiliPetti('aanet');
+  assert.equal(peiliKaytossa('aanet'), false);
+  assert.equal(aaniUrl('assets/audio/efekti-klik.mp3'),
+    `${AANI_JUURI}audio/efekti-klik.mp3`);
+  nollaaPeili();
+});
+
+test('hyväksytyt 45 Horatio-luentaa käyttävät muuttumattomia tuotantoavaimia', () => {
+  assert.equal(Object.keys(VERSIOIDUT_HORATIO_AANET).length, 45);
+  for (const [nimi, polku] of Object.entries(VERSIOIDUT_HORATIO_AANET)) {
+    assert.equal(aaniUrl(`assets/audio/${nimi}`), `${AANI_JUURI}${polku}`, nimi);
+    assert.match(polku,
+      /^audio\/versions\/horatio\/[0-9a-f]{12}\/horatio-[0-9a-f]{20}\/puhe-fokus-matkakirja-.+\.mp3$/);
+    assert.doesNotMatch(aaniUrl(`assets/audio/${nimi}`), /\?v=/);
+  }
+});
+
+test('VARTIO: repossa ei ole yhtään äänitiedostoa', () => {
+  /*
+   * Omistajan linjaus 11.9.2026, sanatarkasti: *"repossa ei saa olla
+   * äänitiedostoja, kaikki vain ämpärissä"*. Tiedostolista luetaan
+   * gitiltä eikä levyltä: paikallinen assets/audio on työkalujen
+   * työpöytä (.gitignore) ja saa hyvin olla täynnä mp3:ia — vain
+   * versionhallintaan päätynyt äänitiedosto on virhe.
+   */
+  const juuri = new URL('..', import.meta.url).pathname;
+  const tiedostot = execFileSync('git', ['ls-files', 'assets'], {
+    cwd: juuri, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024,
+  }).split('\n').filter(Boolean);
+  const aanet = tiedostot.filter((t) => /\.(mp3|wav|ogg|m4a)$/i.test(t));
+  assert.deepEqual(aanet, [],
+    `äänitiedostoja repossa: ${aanet.slice(0, 5).join(', ')} (varasto on ämpäri)`);
 });
 
 test('katkaisija sammuttaa peilin kolmen virheen jälkeen', () => {
@@ -150,61 +211,88 @@ test('peilin laji tunnistetaan osoitteesta', () => {
 
 /** Kevyt <img>-jäljitelmä: riittää asetaKuvan ketjun tarkistamiseen. */
 function teeKuva() {
-  const kuuntelijat = [];
+  const kuuntelijat = { load: [], error: [] };
   return {
     src: null,
     getAttribute() { return this.src; },
     setAttribute(_, arvo) { this.src = arvo; },
-    addEventListener(laji, fn, asetus) {
-      if (laji === 'error') kuuntelijat.push({ fn, kerran: Boolean(asetus?.once) });
-    },
+    addEventListener(laji, fn) { kuuntelijat[laji]?.push(fn); },
     removeEventListener(laji, fn) {
-      const i = kuuntelijat.findIndex((k) => k.fn === fn);
-      if (i >= 0) kuuntelijat.splice(i, 1);
+      const lista = kuuntelijat[laji];
+      if (!lista) return;
+      const i = lista.indexOf(fn);
+      if (i >= 0) lista.splice(i, 1);
     },
     /** Laukaisee latausvirheen niin kuin selain tekisi. */
     petta() {
-      for (const k of kuuntelijat.splice(0, kuuntelijat.length)) {
-        if (!k.kerran) kuuntelijat.push(k);
-        k.fn();
-      }
+      for (const fn of kuuntelijat.error.splice(0, kuuntelijat.error.length)) fn();
     },
   };
 }
 
-test('asetaKuva siirtyy varareitille, uusii kerran ja luovuttaa vasta sitten', async () => {
+/**
+ * Kaikki yritykset läpi: kuva pettää KUVAN_YRITYKSET kertaa peräkkäin.
+ * Uusinta on ajastettu (js/media.js lataaKuvaSitkeasti), joten tässä
+ * odotetaan jokaisen ajastimen väliin — testissä setTimeout on
+ * nopeutettu nollaan.
+ */
+async function pettaLoppuun(kuva, odota) {
+  for (let i = 0; i < KUVAN_YRITYKSET; i += 1) {
+    kuva.petta();
+    // eslint-disable-next-line no-await-in-loop
+    await odota();
+  }
+}
+
+test('asetaKuva siirtyy varareitille vasta kaikkien yritysten jälkeen', async () => {
   nollaaPeili();
+  nollaaKuvajono();
   const kuva = teeKuva();
   let luovutti = 0;
-  asetaKuva(kuva, 'https://peili.test/a.jpg', 'https://alkuperainen.test/a.jpg',
-    () => { luovutti += 1; });
-  assert.equal(kuva.src, 'https://peili.test/a.jpg');
-
-  kuva.petta();
-  assert.equal(kuva.src, 'https://alkuperainen.test/a.jpg', 'peilin pettäessä varareitille');
-  assert.equal(luovutti, 0, 'ei vielä luovuteta');
-
-  // Varareitin virhe EI luovuta vaan ajastaa kolmannen yrityksen
-  // (Commons rajoittaa purskeita — v306). Ajastin on 4 s; testissä
-  // nopeutetaan aikaa korvaamalla setTimeout hetkeksi.
+  // Uusinnat ovat ajastettuja (800 ms → ×2); testissä aika kuluu heti.
   const oikeaSetTimeout = globalThis.setTimeout;
   globalThis.setTimeout = (fn) => oikeaSetTimeout(fn, 0);
+  const odota = () => new Promise((r) => { oikeaSetTimeout(r, 4); });
   try {
+    asetaKuva(kuva, 'https://peili.test/a.jpg', 'https://alkuperainen.test/a.jpg',
+      () => { luovutti += 1; });
+    assert.equal(kuva.src, 'https://peili.test/a.jpg');
+
+    /*
+     * YKSI VIRHE EI ENÄÄ SIIRRÄ VARAREITILLE (6.9.2026). Ämpärin
+     * r2.dev-osoite rajoittaa purskeita ja vastaa 429:llä, eikä kuva
+     * kerro statustaan — jokainen virhe uusitaan siis rajallisesti
+     * samalla osoitteella ennen kuin varareitti otetaan käyttöön.
+     */
     kuva.petta();
-    assert.equal(luovutti, 0, 'varareitin virhe ajastaa uusinnan, ei luovuta');
-    await new Promise((r) => { oikeaSetTimeout(r, 10); });
-    assert.equal(kuva.src, 'https://alkuperainen.test/a.jpg?yritys=2',
-      'kolmas yritys lisäparametrilla');
+    await odota();
+    assert.equal(kuva.src, 'https://peili.test/a.jpg', 'uusinta samalle osoitteelle');
+    assert.equal(luovutti, 0);
+
+    // Loput peilin yritykset: vasta viimeinen siirtää varareitille.
+    for (let i = 2; i < KUVAN_YRITYKSET; i += 1) {
+      kuva.petta();
+      await odota();
+      assert.equal(kuva.src, 'https://peili.test/a.jpg');
+    }
+    kuva.petta();
+    await odota();
+    assert.equal(kuva.src, 'https://alkuperainen.test/a.jpg',
+      'peili luovutti — nyt varareitille');
+    assert.equal(luovutti, 0, 'ei vielä luovuteta');
+
+    // Varareitti saa saman määrän yrityksiä, ja vasta sitten luovutetaan.
+    await pettaLoppuun(kuva, odota);
+    assert.equal(luovutti, 1, 'kaikki yritykset pettivät — nyt luovutetaan');
 
     kuva.petta();
-    assert.equal(luovutti, 1, 'kaikki kolme pettivät — nyt luovutetaan');
-
-    kuva.petta();
+    await odota();
     assert.equal(luovutti, 1, 'ketju ei jää silmukkaan');
   } finally {
     globalThis.setTimeout = oikeaSetTimeout;
   }
   nollaaPeili();
+  nollaaKuvajono();
 });
 
 /*
@@ -215,26 +303,36 @@ test('asetaKuva siirtyy varareitille, uusii kerran ja luovuttaa vasta sitten', a
  * välilehden eliniän, kuva jäi rikki myös uudelleenlatauksen jälkeen
  * (omistajan havainto 6.8.2026).
  */
-test('asetaKuva uusii kerran myös silloin, kun varareittiä ei ole', async () => {
+test('asetaKuva uusii myös silloin, kun varareittiä ei ole', async () => {
   nollaaPeili();
+  nollaaKuvajono();
   const kuva = teeKuva();
   let luovutti = 0;
   const oikeaSetTimeout = globalThis.setTimeout;
   globalThis.setTimeout = (fn) => oikeaSetTimeout(fn, 0);
+  const odota = () => new Promise((r) => { oikeaSetTimeout(r, 4); });
   try {
     asetaKuva(kuva, 'https://vain.test/a.jpg', null, () => { luovutti += 1; });
     kuva.petta();
+    await odota();
     assert.equal(luovutti, 0, 'ensimmäinen virhe ajastaa uusinnan');
-    await new Promise((r) => { oikeaSetTimeout(r, 10); });
-    assert.equal(kuva.src, 'https://vain.test/a.jpg?yritys=2', 'uusinta lisäparametrilla');
+    assert.equal(kuva.src, 'https://vain.test/a.jpg', 'osoite ei muutu uusinnassa');
+    for (let i = 2; i < KUVAN_YRITYKSET; i += 1) {
+      kuva.petta();
+      await odota();
+      assert.equal(luovutti, 0, `yritys ${i} ei vielä luovuta`);
+    }
     kuva.petta();
-    assert.equal(luovutti, 1, 'vasta toinen virhe luovuttaa');
+    await odota();
+    assert.equal(luovutti, 1, 'vasta viimeinen virhe luovuttaa');
     kuva.petta();
+    await odota();
     assert.equal(luovutti, 1, 'ketju ei jää silmukkaan');
   } finally {
     globalThis.setTimeout = oikeaSetTimeout;
   }
   nollaaPeili();
+  nollaaKuvajono();
 });
 
 /*
@@ -262,16 +360,28 @@ test('peilin katkaisija aukeaa itsestään määräajan jälkeen', () => {
   nollaaPeili();
 });
 
-test('vanha kuuntelija ei pudota uutta kuvaa edellisen varareitille', () => {
+test('vanha kuuntelija ei pudota uutta kuvaa edellisen varareitille', async () => {
   nollaaPeili();
+  nollaaKuvajono();
   const kuva = teeKuva();
-  asetaKuva(kuva, 'https://peili.test/eka.jpg', 'https://alkuperainen.test/eka.jpg');
-  // Galleriassa sama <img> saa heti seuraavan kuvan ilman virhettä.
-  asetaKuva(kuva, 'https://peili.test/toka.jpg', 'https://alkuperainen.test/toka.jpg');
-  kuva.petta();
-  assert.equal(kuva.src, 'https://alkuperainen.test/toka.jpg',
-    'varareitin pitää olla juuri sen kuvan, joka petti');
+  const oikeaSetTimeout = globalThis.setTimeout;
+  globalThis.setTimeout = (fn) => oikeaSetTimeout(fn, 0);
+  const odota = () => new Promise((r) => { oikeaSetTimeout(r, 4); });
+  try {
+    asetaKuva(kuva, 'https://peili.test/eka.jpg', 'https://alkuperainen.test/eka.jpg');
+    // Galleriassa sama <img> saa heti seuraavan kuvan ilman virhettä.
+    asetaKuva(kuva, 'https://peili.test/toka.jpg', 'https://alkuperainen.test/toka.jpg');
+    // Ensimmäiset virheet uusivat saman osoitteen (r2.dev 429, 6.9.2026)
+    // — vasta kaikkien yritysten jälkeen siirrytään varareitille, ja sen
+    // pitää olla JUURI SEN kuvan varareitti, joka on nyt ruudulla.
+    await pettaLoppuun(kuva, odota);
+    assert.equal(kuva.src, 'https://alkuperainen.test/toka.jpg',
+      'varareitin pitää olla juuri sen kuvan, joka petti');
+  } finally {
+    globalThis.setTimeout = oikeaSetTimeout;
+  }
   nollaaPeili();
+  nollaaKuvajono();
 });
 
 /*
@@ -601,4 +711,21 @@ test('peilaus- ja hakutyökalu ohittavat Flickr-nimet', () => {
   const haku = readFileSync(join(JUURI, 'tools/fetch-photos.mjs'), 'utf8');
   assert.match(haku, /VALOKUVAT_FLICKR/,
     'kuvahakutyökalun pitää ohittaa Flickr-nimet');
+});
+
+test('laattojen katkaisija: oma laji, kolme virhettä sulkee 20 sekunniksi, jäljellä oleva aika luettavissa', async () => {
+  const { peilinKatkoJaljella } = await import('../js/media.js');
+  nollaaPeili();
+  assert.equal(peiliKaytossa('laatat'), true);
+  peiliPetti('laatat'); peiliPetti('laatat');
+  assert.equal(peiliKaytossa('laatat'), true, 'kaksi virhettä ei vielä katkaise');
+  assert.equal(peilinKatkoJaljella('laatat'), 0);
+  peiliPetti('laatat');
+  assert.equal(peiliKaytossa('laatat'), false);
+  const jaljella = peilinKatkoJaljella('laatat');
+  assert.ok(jaljella > 15000 && jaljella <= 20000, `laattojen katko on 20 s, ei 5 min: ${jaljella}`);
+  // Kuvien laji ei kärsi laattojen katkosta.
+  assert.equal(peiliKaytossa('kuvat'), true);
+  nollaaPeili();
+  assert.equal(peiliKaytossa('laatat'), true);
 });

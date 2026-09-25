@@ -65,11 +65,32 @@ export const LAHTEET = [
         lisenssi: 'Public domain',
       },
       {
+        nimi: 'GSHHG — rantaviivat pääkartan laatoissa ja pallon vektoreissa (versio 2.3.7)',
+        tekija: 'Wessel & Smith, A Global Self-consistent, Hierarchical, '
+          + 'High-resolution Geography Database',
+        lisenssi: 'LGPL 3+',
+      },
+      {
         nimi: 'ETOPO1 Global Relief Model, Ice Surface (1 kaariminuutti) — '
-          + 'maaston korkeus, meren syvyys, varjostus ja reliefikartta',
+          + 'pääkartan varjostus ja meren syvyys sekä maaston korkeustiedot',
         tekija: 'Amante & Eakins 2009, NOAA NGDC / NCEI '
           + '(doi:10.7289/V5C8276M); haettu NOAA CoastWatch ERDDAPista',
         lisenssi: 'Public domain (Yhdysvaltain liittovaltion virasto)',
+      },
+      {
+        nimi: 'ETOPO 2022 15 Arc-Second Global Relief Model, surface — '
+          + 'topografia- ja vesistölinssin reliefi sekä astronautin kamera',
+        tekija: 'NOAA National Centers for Environmental Information 2022 '
+          + '(doi:10.25921/fd45-gt74)',
+        lisenssi: 'Public domain (Yhdysvaltain liittovaltion virasto)',
+      },
+      {
+        nimi: 'Copernicus DEM GLO-30 ja GLO-90 — natiivipelin maaston korkeusmalli '
+          + 'ja kaupunkien korkeudet',
+        tekija: 'Produced using Copernicus WorldDEM-30 and WorldDEM-90 © DLR e.V. 2010-2014 '
+          + 'and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS '
+          + 'by the European Union and ESA; all rights reserved',
+        lisenssi: 'Copernicus DEM -lisenssi (vapaa käyttö lähdemaininnalla)',
       },
       {
         nimi: 'Earth at Night (Black Marble) 2016 — yökartan valot',
@@ -242,13 +263,35 @@ export const LAHTEET = [
           + '(äänimaisemat ja "Kuuntele kieltä")',
         tekija: 'Äänittäjät kohteittain; jakelu archive.orgin kautta. Nimi ja '
           + 'lisenssi näkyvät äänen selitteessä pelissä.',
-        lisenssi: 'Public domain, CC BY, CC BY-SA ja CC BY-NC kohteittain',
+        lisenssi: 'Public domain, CC BY ja CC BY-SA kohteittain',
       },
       {
         nimi: 'Freesound — äänimaisemat ja tehosteet (mm. nopan heitto, '
           + 'kirjoituskone, potkurikone, sivun kääntö)',
         tekija: 'Äänittäjät kohteittain, mm. LoafDV, brktkrgll, Hoscalegeek, AardsReal',
-        lisenssi: 'CC0, CC BY ja CC BY-NC kohteittain',
+        lisenssi: 'CC0 ja CC BY kohteittain',
+      },
+      /*
+       * Kaksi hakuajoa, jotka valitsevat äänensä koneellisesti ja
+       * kirjaavat tekijän manifestiin äänen viereen ämpäriin: pulun
+       * ääniefektit (tools/hae-freesound.mjs --pulu) ja Ihmisen matka
+       * -linssin äänimaisemat (--maisemat). Nimeltä ei voi luetella
+       * tässä, koska huonon osuman vaihtaminen paremmaksi vaihtaa
+       * tekijän eikä peli saa odottaa julkaisua sen takia — mutta
+       * KOKOELMA ja LISENSSIRAJAUS ovat pysyviä, ja juuri ne lisenssi
+       * vaatii näytettäväksi. Yksittäiset CC BY -nimet ovat manifestissa
+       * ja ajon lokissa; ne lisätään tähän riviin, kun lista on ajettu
+       * ja omistaja on hyväksynyt äänet.
+       */
+      {
+        nimi: 'Freesound — Livian ääniefektit ja linssien nauhoitetut '
+          + 'äänimaisemat (Ihmisen matka: savanni, sademetsä, luola, '
+          + 'arktinen tuuli, meren ranta…)',
+        tekija: 'Äänittäjät kohteittain; tekijä, lisenssi ja Freesoundin id '
+          + 'kulkevat äänen mukana manifestissa (aanet/tehosteet/pulu/ ja '
+          + 'aanet/tehosteet/ihmisen-matka/)',
+        lisenssi: 'CC0 ja CC BY kohteittain (haku rajaa vain näihin kahteen)',
+        huom: 'Haku tools/hae-freesound.mjs, ajo .github/workflows/aanihaku.yml',
       },
       {
         nimi: 'Lyhytaaltoäänitteet — maailmanradion viritysäänet',
@@ -294,6 +337,34 @@ export const LAHTEET = [
         tekija: 'Pelin omaa aineistoa (js/sound.js)',
         lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',
       },
+      {
+        nimi: 'Tuna 1.1.3 — Web Audio -efektiketjut (megafoni, radio, puhelin, '
+          + 'luola, ulkoilma; js/tehosteketju.js)',
+        tekija: 'DinahMoe AB & Oskar Eriksson, github.com/Theodeus/tuna',
+        lisenssi: 'MIT — lisenssiteksti kirjaston rinnalla (vendor/tuna-1.1.3.LICENSE.txt)',
+      },
+    ],
+  },
+  {
+    otsikko: 'Ohjelmakirjastot',
+    johdanto: 'Valmiit kirjastot, jotka peli lataa ämpärin vendor/-polusta '
+      + 'tarvittaessa (Raamattu 5.9.2026: VALMIIT KIRJASTOT). Lisenssiteksti '
+      + 'kulkee kirjaston rinnalla samassa kansiossa.',
+    rivit: [
+      {
+        nimi: 'StPageFlip 2.0.7 (page-flip) — lehden sivunkääntö',
+        tekija: 'Nodlik (Oleg Litovski), github.com/Nodlik/StPageFlip',
+        lisenssi: 'MIT',
+        huom: 'Tarkistettu 5.9.2026 paketin LICENSE-tiedostosta (npm page-flip 2.0.7). '
+          + 'Ämpärissä vendor/page-flip-2.0.7.browser.js ja .LICENSE.txt.',
+      },
+      {
+        nimi: 'Globe.gl 2.46.2 (three.js mukana) — karttapallo ja pallolauta',
+        tekija: 'Vasco Asturiano (vasturiano), github.com/vasturiano/globe.gl',
+        lisenssi: 'MIT',
+        huom: 'Tarkistettu 5.9.2026 (npm globe.gl 2.46.2, LICENSE). Ämpärissä '
+          + 'vendor/globe.gl-2.46.2.min.js.',
+      },
     ],
   },
   {
@@ -323,6 +394,49 @@ export const LAHTEET = [
           + 'väittämät, tapahtumakortit, pulmat ja tiivistelmät',
         tekija: 'Sami Reivinen / VVI',
         lisenssi: 'Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy',
+      },
+    ],
+  },
+  /*
+   * VALMIIT KIRJASTOT (Raamattu, VALMIIT KIRJASTOT: STPAGEFLIP ENSIN,
+   * sääntö 3: lisenssiteksti ämpäriin kirjaston rinnalle ja maininta
+   * lähdesivulle — pilari 5). Kirjastot ladataan pelin ämpärin
+   * vendor/-polusta, ja MIT-lisenssin teksti on siellä tiedostossa
+   * <kirjasto>.LICENSE.txt. Yksi rivi per kirjasto, jotta rinnakkaiset
+   * lisäykset yhdistyvät riveittäin.
+   */
+  {
+    otsikko: 'Avoimen lähdekoodin kirjastot',
+    johdanto: 'Pelin ämpärin vendor/-polusta ladattavat kirjastot ja niiden lisenssit.',
+    rivit: [
+      {
+        nimi: 'Vivus 0.4.6 — musteviiva piirtyy (SVG-polkujen piirtoanimaatio)',
+        tekija: 'maxwellito',
+        lisenssi: 'MIT',
+        huom: 'Tarkistettu 5.9.2026 (vendor/vivus-0.4.6.min.LICENSE.txt).',
+      },
+      {
+        nimi: 'Rough.js 4.6.6 — käsin piirretyn näköiset kehykset ja viivat',
+        tekija: 'Preet Shihn',
+        lisenssi: 'MIT',
+        huom: 'Tarkistettu 5.9.2026 (vendor/rough-4.6.6.LICENSE.txt).',
+      },
+      {
+        nimi: 'rough-notation 0.5.1 — kynän alleviivaus ja ympyröinti tekstiin',
+        tekija: 'Preet Shihn',
+        lisenssi: 'MIT',
+        huom: 'Tarkistettu 5.9.2026 (vendor/rough-notation-0.5.1.iife.LICENSE.txt).',
+      },
+      {
+        nimi: 'd3-geo 3.1.1 ja d3-geo-projection 4.0.0 — karttaprojektiot: '
+          + 'maailmanaineisto pelin laudalle, isokaaret ja etäisyydet (js/geo.js)',
+        tekija: 'Mike Bostock',
+        lisenssi: 'ISC',
+      },
+      {
+        nimi: 'topojson-client 3.1.0 — TopoJSON-aineiston purku kartalle',
+        tekija: 'Mike Bostock',
+        lisenssi: 'ISC',
       },
     ],
   },

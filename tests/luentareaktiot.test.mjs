@@ -1,0 +1,936 @@
+/*
+ * LUENTAREAKTIOT — pulu reagoi isoisän luennan sisällä.
+ *
+ * Raamattu: PULU REAGOI TEKSTIN SISALLA; skeema docs/pulu-reaktiot.md
+ * osiossa "Luentareaktiot (tekstin sisällä)". Testi vartioi neljää
+ * asiaa, joita ei näe pelistä kuin kuuntelemalla:
+ *
+ *   1. ANKKURIN RATKAISU: pakin `ankkuri` löytyy äänitteen
+ *      sanakohtaisista aikaleimoista sanasta sanaan, välimerkeistä ja
+ *      kirjainkoosta riippumatta — TÄSMÄLLEEN KERRAN — eikä epäselvä
+ *      rivi koskaan arvaa hetkeä.
+ *   2. AJOITUS: reaktio ammutaan kerran ja oikeassa kohdassa; tauko ei
+ *      ammu, tauolla ohitettu hetki ei purkaudu jälkikäteen, kelaus
+ *      eteenpäin ei ammu väliin jääneitä, kelaus taaksepäin palauttaa
+ *      ne. Luennan luonnollinen loppu saa vielä jälkireaktion.
+ *   3. TAPAHTUMASOPIMUS sovittimen kanssa (js/livia-eleet.js):
+ *      `luentaTunnus` on soitin, `tunnus` on reaktion tunniste, ja
+ *      `reactionEnd` katkaisee eleen kaikissa muissa lopuissa paitsi
+ *      luennan luonnollisessa.
+ *   4. AIKALEIMATIEDOSTO ON SIDOTTU: versio 2 kantaa tekstin ja
+ *      äänitteen SHA-256:n, eikä peli ammu mitään, jos jompikumpi on
+ *      vaihtunut. Väärään äänitteeseen kohdistetut ajat kuulostavat
+ *      toimivilta mutta osuvat viereiseen lauseeseen.
+ *   5. SISÄLLÖN VARTIO: jokaisen fokusvirtapakin reaktioankkuri löytyy
+ *      sen OMASTA luentatekstistä ja tarkoitus kuuluu sallittuun
+ *      joukkoon. Väärä ankkuri olisi pelissä pelkkää hiljaisuutta.
+ */
+
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+
+import { kuunteleLivianTilanteita } from '../js/livia-tilanteet.js';
+import {
+  AIKALEIMOJEN_VERSIO, LOPPUVARA_MS, LUENNAN_LOPPU_TAPAHTUMA, REAKTION_TARKOITUKSET,
+  LUENTAREAKTIO_UUSINTA_VIIVE_MS, LUENTAREAKTIO_UUSINTOJA,
+  aikaleimojenOsoite, kaupunkiOsoitteesta, kytkeLuentareaktiot, kytkeMatkakirjanReaktiot,
+  lataaLuentareaktiot, ratkaiseAnkkurit, tarkistaAikaleimat,
+} from '../js/luentareaktiot.js';
+import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
+import { aaniUrl } from '../js/media.js';
+import { karsiTagit } from '../tools/generoi-linssiluennat.mjs';
+import {
+  REAKTION_TARKOITUKSET as TYOKALUN_TARKOITUKSET, etsiAnkkuri, laskeAnkkurinOsumat, sanoiksi,
+} from '../tools/kohdista-luennat.mjs';
+
+const JUURI = new URL('..', import.meta.url);
+const lue = (polku) => readFileSync(new URL(polku, JUURI), 'utf8');
+
+/** Sama summa kuin pelissä (crypto.subtle) — testissä node:crypto riittää. */
+const sha = (data) => createHash('sha256').update(data).digest('hex');
+
+/** Äänitettä esittävät tavut: mp3:n sisällöllä ei ole tässä väliä. */
+const AANI = Buffer.from('kuviteltu matkakirjaluenta — pelkkiä tavuja', 'utf8');
+
+/**
+ * Aikaleimatiedosto tekstistä: sana sekunnin välein, 400 ms per sana.
+ * Muoto on VERSIO 2 eli sidottu tekstiin ja äänitteeseen; `muutos`
+ * ylikirjoittaa kenttiä, kun testi haluaa rikkoa juuri yhden asian.
+ */
+function aikaleimat(teksti, muutos = {}) {
+  const sanat = teksti.split(/\s+/).filter(Boolean).map((sana, i) => ({
+    sana, alku: i * 1000, loppu: i * 1000 + 400,
+  }));
+  return {
+    versio: AIKALEIMOJEN_VERSIO,
+    kaupunki: 'testikaupunki',
+    teksti,
+    tekstiSha256: sha(Buffer.from(teksti, 'utf8')),
+    aani: {
+      nimi: 'puhe-fokus-matkakirja-testikaupunki.mp3',
+      versio: 0,
+      tavut: AANI.length,
+      sha256: sha(AANI),
+    },
+    kesto: sanat.length * 1000,
+    sanat,
+    lauseet: [0],
+    ...muutos,
+  };
+}
+
+/** Soitinta esittävä EventTarget (sama tyyli kuin livia-tilanteet-testi). */
+function soitin() {
+  const a = new EventTarget();
+  a.currentTime = 0;
+  a.paused = false;
+  a.ended = false;
+  a.aja = (sekunnit) => { a.currentTime = sekunnit; a.dispatchEvent(new Event('timeupdate')); };
+  return a;
+}
+
+/** Kerää reaction- ja reactionEnd-tapahtumat testin ajaksi. */
+function kuuntele(t) {
+  const osumat = [];
+  const loput = [];
+  const off = kuunteleLivianTilanteita((laji, tiedot) => {
+    if (laji === 'reaction') osumat.push(tiedot);
+    if (laji === 'reactionEnd') loput.push(tiedot);
+  });
+  t.after(off);
+  return { osumat, loput };
+}
+
+test('ankkuri ratkeaa sanasta sanaan; välimerkit ja kirjainkoko eivät ratkaise', () => {
+  const data = aikaleimat('Ostin palan saippuaa. Terva, kala ja suolavesi seurasivat minua.');
+  const lista = ratkaiseAnkkurit([
+    { id: 'a', ankkuri: 'Ostin palan.', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0 },
+    { id: 'b', ankkuri: 'terva KALA ja suolavesi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 120 },
+  ], data);
+  // "palan" on toinen sana: loppu 1400 ms.
+  assert.deepEqual(lista[0], { id: 'a', hetki: 1400, tarkoitus: 'myotailee', voimakkuus: 0.3 });
+  // "suolavesi" on seitsemäs sana (indeksi 6): loppu 6400 + siirtymä 120.
+  assert.deepEqual(lista[1], { id: 'b', hetki: 6520, tarkoitus: 'huvittuu', voimakkuus: 0.45 });
+});
+
+test('löytymätön ankkuri ja tuntematon tarkoitus ohitetaan, ei arvata hetkeä', () => {
+  const data = aikaleimat('Marseillen satamassa myytiin saippuaa tiiliskivinä.');
+  assert.deepEqual(ratkaiseAnkkurit([
+    { id: 'ei-ole', ankkuri: 'kauppias vakuutti', tarkoitus: 'epailee', voimakkuus: 0.5 },
+    { id: 'vaara-tarkoitus', ankkuri: 'saippuaa tiiliskivinä', tarkoitus: 'nauraa', voimakkuus: 0.5 },
+    { id: 'tyhja', ankkuri: '', tarkoitus: 'huvittuu', voimakkuus: 0.5 },
+  ], data), []);
+  // Ilman aikaleimoja ei synny yhtään hetkeä (ei merkkimääräarvioita).
+  assert.deepEqual(ratkaiseAnkkurit([
+    { id: 'a', ankkuri: 'saippuaa tiiliskivinä', tarkoitus: 'huvittuu', voimakkuus: 0.5 },
+  ], null), []);
+  // Puuttuva siirtymä on nolla.
+  const [rivi] = ratkaiseAnkkurit([
+    { id: 'a', ankkuri: 'saippuaa tiiliskivinä', tarkoitus: 'huvittuu', voimakkuus: 0.5 },
+  ], data);
+  assert.deepEqual(rivi, { id: 'a', hetki: 4400, tarkoitus: 'huvittuu', voimakkuus: 0.5 });
+});
+
+test('moottori ei arvaa: moniosuma, vajaa loppu, toistuva tunnus ja kelvoton luku hylätään', () => {
+  const data = aikaleimat('Ostin palan saippuaa. Ostin palan leipää.');
+  const yksi = (reaktio) => ratkaiseAnkkurit([reaktio], data).map((r) => r.id);
+
+  // 1. Kahdesti osuva ankkuri: kumpi osuma olisi oikea? Ei kumpikaan.
+  assert.deepEqual(yksi({ id: 'moni', ankkuri: 'Ostin palan', tarkoitus: 'myotailee', voimakkuus: 0.3 }), []);
+  assert.deepEqual(yksi({ id: 'yksi', ankkuri: 'palan leipää', tarkoitus: 'myotailee', voimakkuus: 0.3 }), ['yksi']);
+
+  // 2. Vajaa tiedosto: viimeiseltä sanalta puuttuu loppu → ei kurkoteta
+  //    seuraavan sanan alkuun.
+  const vajaa = aikaleimat('Ostin palan saippuaa.');
+  delete vajaa.sanat[1].loppu;
+  assert.deepEqual(ratkaiseAnkkurit([
+    { id: 'a', ankkuri: 'Ostin palan', tarkoitus: 'myotailee', voimakkuus: 0.3 },
+  ], vajaa), []);
+
+  // 3. Toistuva tunnus: sovitin tunnistaa eleen tunnuksesta, joten
+  //    kumpaakaan ei ammuta.
+  assert.deepEqual(ratkaiseAnkkurit([
+    { id: 'sama', ankkuri: 'Ostin palan saippuaa', tarkoitus: 'myotailee', voimakkuus: 0.3 },
+    { id: 'sama', ankkuri: 'palan leipää', tarkoitus: 'huvittuu', voimakkuus: 0.4 },
+  ], data), []);
+  assert.deepEqual(ratkaiseAnkkurit([
+    { id: '', ankkuri: 'palan leipää', tarkoitus: 'huvittuu', voimakkuus: 0.4 },
+  ], data), []);
+
+  // 4. Voimakkuutta EI enää rajata: kelvoton luku on sisällön virhe.
+  for (const voimakkuus of [3, 0, -1, 'paljon', undefined]) {
+    assert.deepEqual(yksi({ id: 'v', ankkuri: 'palan leipää', tarkoitus: 'huvittuu', voimakkuus }), [],
+      `voimakkuus ${voimakkuus} olisi pitänyt hylätä`);
+  }
+
+  // 5. Siirtymä on kokonaisluku millisekunteina, ja hetken on osuttava
+  //    äänitteeseen (loppuvara mukaan luettuna).
+  assert.deepEqual(yksi({ id: 's', ankkuri: 'palan leipää', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 12.5 }), []);
+  assert.deepEqual(yksi({ id: 's', ankkuri: 'palan leipää', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 60000 }), []);
+  // Viimeinen sana loppuu 6400 ms, kesto 7000 ms: loppuvara riittää.
+  assert.deepEqual(yksi({
+    id: 's', ankkuri: 'palan leipää', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: LOPPUVARA_MS + 600,
+  }), ['s']);
+  assert.deepEqual(yksi({
+    id: 's', ankkuri: 'palan leipää', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: LOPPUVARA_MS + 700,
+  }), []);
+});
+
+test('reaktio ammutaan kerran ja vasta hetkellään; tauko ei ammu', (t) => {
+  const { osumat } = kuuntele(t);
+  const a = soitin();
+  const purku = kytkeLuentareaktiot(a, [
+    { id: 'r1', hetki: 2000, tarkoitus: 'huvittuu', voimakkuus: 0.35 },
+    { id: 'r2', hetki: 3000, tarkoitus: 'epailee', voimakkuus: 0.5 },
+  ], { kaupunki: 'marseille' });
+  t.after(purku);
+
+  a.dispatchEvent(new Event('playing'));
+  a.aja(1.5);
+  assert.equal(osumat.length, 0, 'ennen hetkeä ei ammuta');
+  a.aja(2.1);
+  assert.equal(osumat.length, 1);
+  assert.equal(osumat[0].tunnus, 'r1');
+  assert.equal(osumat[0].lahde, 'matkakirja');
+  assert.equal(osumat[0].kaupunki, 'marseille');
+  assert.equal(osumat[0].tarkoitus, 'huvittuu');
+  assert.equal(osumat[0].voimakkuus, 0.35);
+  assert.equal(osumat[0].jalkireaktio, false, 'tavallinen osuma ei ole jälkireaktio');
+  // TAPAHTUMASOPIMUS: soitin kulkee mukana kentässä luentaTunnus (sama
+  // olio kuin narration-tapahtuman tunnus), ei enää nimellä tunnus2.
+  assert.equal(osumat[0].luentaTunnus, a);
+  assert.equal('tunnus2' in osumat[0], false, 'vanha kenttä tunnus2 on poistettu');
+  a.aja(2.4);
+  assert.equal(osumat.length, 1, 'sama reaktio ei ammu kahdesti');
+
+  // Tauko: kello ei etene eikä pysähtynyt soitin reagoi.
+  a.paused = true;
+  a.dispatchEvent(new Event('pause'));
+  a.currentTime = 3.2;
+  a.dispatchEvent(new Event('timeupdate'));
+  assert.equal(osumat.length, 1, 'tauko ei ammu');
+  a.paused = false;
+  a.dispatchEvent(new Event('playing'));
+  assert.equal(osumat.length, 1, 'jatko ei ammu tauolla ohitettua hetkeä');
+  a.aja(3.4);
+  assert.equal(osumat.length, 1, 'ohitettu hetki pysyy ohitettuna');
+});
+
+test('puskurointi (waiting) ei ammu eikä pura ohitettua hetkeä jälkikäteen', (t) => {
+  const { osumat } = kuuntele(t);
+  const a = soitin();
+  const purku = kytkeLuentareaktiot(a, [
+    { id: 'r1', hetki: 1000, tarkoitus: 'huvittuu', voimakkuus: 0.35 },
+    { id: 'r2', hetki: 1500, tarkoitus: 'epailee', voimakkuus: 0.5 },
+  ], { kaupunki: 'marseille' });
+  t.after(purku);
+
+  a.dispatchEvent(new Event('playing'));
+  a.aja(0.8);
+  assert.equal(osumat.length, 0);
+  // Puskurointi ei pysäytä soitinta (paused pysyy epätotena), mutta
+  // kello juoksee ilman ääntä — hetki 1,0 s kuullaan ilman reaktiota.
+  a.dispatchEvent(new Event('waiting'));
+  a.aja(1.1);
+  assert.equal(osumat.length, 0, 'puskuroinnissa ei ammuta');
+  a.dispatchEvent(new Event('playing'));
+  assert.equal(osumat.length, 0, 'ohitettu hetki on jo mennyt, sitä ei ammuta jälkikäteen');
+  a.aja(1.6);
+  assert.deepEqual(osumat.map((o) => o.tunnus), ['r2'], 'seuraava reaktio ammutaan normaalisti');
+});
+
+test('kelaus taaksepäin sallii uudelleen, eteenpäin ohittaa väliin jääneet', (t) => {
+  const { osumat } = kuuntele(t);
+  const a = soitin();
+  const purku = kytkeLuentareaktiot(a, [
+    { id: 'r1', hetki: 2000, tarkoitus: 'huvittuu', voimakkuus: 0.35 },
+    { id: 'r2', hetki: 6000, tarkoitus: 'epailee', voimakkuus: 0.5 },
+    { id: 'r3', hetki: 9000, tarkoitus: 'vakavoituu', voimakkuus: 0.4 },
+  ], { kaupunki: 'marseille' });
+  t.after(purku);
+
+  a.dispatchEvent(new Event('playing'));
+  a.aja(1.4);
+  a.aja(2.2);
+  assert.deepEqual(osumat.map((o) => o.tunnus), ['r1']);
+
+  // Eteenpäin kelaus r3:n yli: r2 ja r3 jäävät väliin eikä niitä ammuta.
+  a.dispatchEvent(new Event('seeking'));
+  a.currentTime = 9.5;
+  a.dispatchEvent(new Event('seeked'));
+  a.aja(9.5);
+  assert.deepEqual(osumat.map((o) => o.tunnus), ['r1'], 'väliin jääneitä ei ammuta jälkikäteen');
+  a.aja(9.8);
+  assert.equal(osumat.length, 1);
+
+  // Taaksepäin kelaus: ohitetut palaavat ammuttaviksi.
+  a.dispatchEvent(new Event('seeking'));
+  a.currentTime = 5.5;
+  a.dispatchEvent(new Event('seeked'));
+  a.aja(5.5);
+  assert.equal(osumat.length, 1);
+  a.aja(6.2);
+  assert.deepEqual(osumat.map((o) => o.tunnus), ['r1', 'r2']);
+  a.aja(7.6);
+  a.aja(9.2);
+  assert.deepEqual(osumat.map((o) => o.tunnus), ['r1', 'r2', 'r3']);
+});
+
+test('reactionEnd katkaisee eleen kelauksessa, tauolla ja purussa', (t) => {
+  const { osumat, loput } = kuuntele(t);
+  const a = soitin();
+  const purku = kytkeLuentareaktiot(a, [
+    { id: 'r1', hetki: 1000, tarkoitus: 'huvittuu', voimakkuus: 0.3 },
+    { id: 'r2', hetki: 5000, tarkoitus: 'epailee', voimakkuus: 0.4 },
+  ], { kaupunki: 'marseille' });
+
+  a.dispatchEvent(new Event('playing'));
+  a.aja(0.5);
+  a.dispatchEvent(new Event('pause'));
+  assert.equal(loput.length, 0, 'tyhjiä loppuja ei lähetetä, jos mitään ei ole ammuttu');
+
+  a.dispatchEvent(new Event('playing'));
+  a.aja(1.2);
+  assert.equal(osumat.length, 1);
+  a.dispatchEvent(new Event('seeking'));
+  assert.equal(loput.length, 1, 'kelaus katkaisee eleen ennen kelauksen käsittelyä');
+  assert.equal(loput[0].lahde, 'matkakirja');
+  assert.equal(loput[0].kaupunki, 'marseille');
+  assert.equal(loput[0].luentaTunnus, a, 'sovitin tunnistaa luentakerran soittimesta');
+  a.dispatchEvent(new Event('seeked'));
+  assert.equal(loput.length, 1, 'sama loppu ei toistu');
+
+  // Uusi reaktio ja tauko: tauko katkaisee eleen.
+  a.currentTime = 4.9;
+  a.dispatchEvent(new Event('playing'));
+  a.aja(5.2);
+  assert.deepEqual(osumat.map((o) => o.tunnus), ['r1', 'r2']);
+  a.paused = true;
+  a.dispatchEvent(new Event('pause'));
+  assert.equal(loput.length, 2);
+
+  // Purku ilman ammuttua reaktiota ei lähetä mitään…
+  purku();
+  assert.equal(loput.length, 2);
+
+  // …mutta purku kesken eleen lähettää.
+  const b = soitin();
+  const puraB = kytkeLuentareaktiot(b, [
+    { id: 'r1', hetki: 1000, tarkoitus: 'huvittuu', voimakkuus: 0.3 },
+  ], { kaupunki: 'marseille' });
+  b.dispatchEvent(new Event('playing'));
+  b.aja(1.1);
+  assert.equal(osumat.length, 3);
+  puraB();
+  assert.equal(loput.length, 3);
+  assert.equal(loput[2].luentaTunnus, b);
+});
+
+test('voimassa() epätosi purkaa kytkennän ja katkaisee eleen', (t) => {
+  const { osumat, loput } = kuuntele(t);
+  const a = soitin();
+  let voimassa = true;
+  kytkeLuentareaktiot(a, [
+    { id: 'r1', hetki: 1000, tarkoitus: 'huvittuu', voimakkuus: 0.3 },
+    { id: 'r2', hetki: 2000, tarkoitus: 'epailee', voimakkuus: 0.4 },
+  ], { kaupunki: 'marseille', voimassa: () => voimassa });
+  a.dispatchEvent(new Event('playing'));
+  a.aja(1.1);
+  assert.equal(osumat.length, 1);
+  // Luenta vaihtui toisaalla: seuraava osuma purkaa kytkennän.
+  voimassa = false;
+  a.aja(2.1);
+  assert.equal(osumat.length, 1, 'vanhentunut kytkentä ei ammu');
+  assert.equal(loput.length, 1, 'ele katkaistaan purettaessa');
+  voimassa = true;
+  a.aja(2.5);
+  assert.equal(osumat.length, 1, 'kuuntelijat on irrotettu lopullisesti');
+});
+
+/*
+ * MARSEILLEN OIKEA LOPPU (selainkoe 11.9.2026): peli pysäyttää luennan
+ * itse 25 ms ennen tiedoston reunaa (js/luenta.js pehmeaLoppu), joten
+ * 'ended' ei tule lainkaan — luenta lähettää LUENNAN_LOPPU_TAPAHTUMAn
+ * ja heti sen jälkeen automaattisen 'pause'-tapahtuman.
+ */
+for (const loppu of [LUENNAN_LOPPU_TAPAHTUMA, 'ended']) {
+  test(`luonnollinen loppu (${loppu}) ampuu tasan yhden jälkireaktion`, (t) => {
+    const { osumat, loput } = kuuntele(t);
+    const a = soitin();
+    const purku = kytkeLuentareaktiot(a, [
+      // Yhdeksän sekuntia vanha, ampumatta jäänyt rivi: se on kuultu
+      // ilman reaktiota eikä saa purkautua lopussa ryöppynä.
+      { id: 'marseille.r4', hetki: 20000, tarkoitus: 'epailee', voimakkuus: 0.4 },
+      { id: 'marseille.r6', hetki: 29239, tarkoitus: 'huvittuu', voimakkuus: 0.6 },
+    ], { kaupunki: 'marseille' });
+    /*
+     * Moottori on kytketty kesken luennan (aikaleimojen lataus kesti),
+     * joten r4:n hetki on mennyt ohi ampumattomana. Se on kuultu ilman
+     * reaktiota eikä saa purkautua lopussa r6:n seurana.
+     */
+    a.aja(29.1);
+    assert.equal(osumat.length, 0, 'ennen hetkeä ei ammuta');
+
+    a.currentTime = 29.263;
+    if (loppu === 'ended') a.ended = true;
+    a.dispatchEvent(new Event(loppu));
+    assert.deepEqual(osumat.map((o) => o.tunnus), ['marseille.r6'],
+      'vain viimeinen, loppuvaran sisällä oleva rivi ammutaan');
+    assert.equal(osumat[0].jalkireaktio, true);
+    assert.equal(osumat[0].luentaTunnus, a);
+    assert.equal(loput.length, 0, 'jälkireaktio saa valmistua äänitteen jälkeen');
+
+    // Luonnollista loppua seuraa aina soittimen oma pause: se ei saa
+    // katkaista juuri ammuttua jälkireaktiota.
+    a.paused = true;
+    a.dispatchEvent(new Event('pause'));
+    assert.equal(loput.length, 0, 'automaattinen pause ei lähetä reactionEndiä');
+    a.ended = false;
+    a.paused = false;
+    a.aja(30);
+    assert.equal(osumat.length, 1, 'kuuntelijat irtosivat lopussa');
+
+    // …mutta stopDiaryVoice/haivytaLuenta (purku) katkaisee eleen myös
+    // luonnollisesti päättyneeltä luennalta.
+    purku();
+    assert.equal(loput.length, 1, 'purku lähettää reactionEndin lopun jälkeenkin');
+    assert.equal(loput[0].luentaTunnus, a);
+    purku();
+    assert.equal(loput.length, 1, 'sama loppu ei toistu');
+  });
+}
+
+test('luonnollinen loppu ei ammu, jos luenta on jo vaihtunut (voimassa epätosi)', (t) => {
+  const { osumat, loput } = kuuntele(t);
+  const a = soitin();
+  let voimassa = true;
+  kytkeLuentareaktiot(a, [
+    { id: 'r6', hetki: 29239, tarkoitus: 'huvittuu', voimakkuus: 0.6 },
+  ], { kaupunki: 'marseille', voimassa: () => voimassa });
+  a.currentTime = 29.0;
+  a.dispatchEvent(new Event('playing'));
+  voimassa = false;
+  a.currentTime = 29.263;
+  a.dispatchEvent(new Event(LUENNAN_LOPPU_TAPAHTUMA));
+  assert.equal(osumat.length, 0, 'vanhentunut kytkentä ei ammu lopussakaan');
+  assert.equal(loput.length, 0, 'eikä tyhjää loppua lähetetä');
+  voimassa = true;
+  a.aja(29.3);
+  assert.equal(osumat.length, 0, 'kuuntelijat on irrotettu');
+});
+
+test('waiting ja stalled katkaisevat eleen kuten tauko', (t) => {
+  const { osumat, loput } = kuuntele(t);
+  for (const laji of ['waiting', 'stalled']) {
+    const a = soitin();
+    kytkeLuentareaktiot(a, [
+      { id: `r-${laji}`, hetki: 1000, tarkoitus: 'huvittuu', voimakkuus: 0.3 },
+    ], { kaupunki: 'marseille' });
+    a.dispatchEvent(new Event('playing'));
+    a.aja(1.1);
+    assert.equal(osumat.at(-1).tunnus, `r-${laji}`);
+    a.dispatchEvent(new Event(laji));
+    assert.equal(loput.at(-1).luentaTunnus, a, `${laji} lähettää reactionEndin`);
+  }
+  assert.equal(loput.length, 2);
+});
+
+test('kuollut-callback kerrotaan kerran, kun moottori purkaa itsensä', (t) => {
+  kuuntele(t);
+  const kokeet = {
+    error: (a) => a.dispatchEvent(new Event('error')),
+    emptied: (a) => a.dispatchEvent(new Event('emptied')),
+    loppu: (a) => a.dispatchEvent(new Event(LUENNAN_LOPPU_TAPAHTUMA)),
+  };
+  for (const [nimi, laukaise] of Object.entries(kokeet)) {
+    let kuollut = 0;
+    const a = soitin();
+    kytkeLuentareaktiot(a, [{ id: 'r1', hetki: 1000, tarkoitus: 'huvittuu', voimakkuus: 0.3 }],
+      { kuollut: () => { kuollut += 1; } });
+    laukaise(a);
+    assert.equal(kuollut, 1, `${nimi} kertoo kuolemasta kerran`);
+    laukaise(a);
+    assert.equal(kuollut, 1, `${nimi} ei kerro kahdesti`);
+  }
+
+  // Luennan vaihtuminen kesken soiton: purku tapahtuu osumalla.
+  let kuollut = 0;
+  let voimassa = true;
+  const b = soitin();
+  kytkeLuentareaktiot(b, [{ id: 'r1', hetki: 1000, tarkoitus: 'huvittuu', voimakkuus: 0.3 }],
+    { voimassa: () => voimassa, kuollut: () => { kuollut += 1; } });
+  b.dispatchEvent(new Event('playing'));
+  voimassa = false;
+  b.aja(1.1);
+  assert.equal(kuollut, 1, 'voimassa-false kertoo kuolemasta');
+
+  // Kutsujan oma purku ei ole moottorin kuolema: luenta.js nollaa
+  // tiedon itse puraReaktiot-kääreessään.
+  let kuollutC = 0;
+  const c = soitin();
+  const pura = kytkeLuentareaktiot(c, [{ id: 'r1', hetki: 1000, tarkoitus: 'huvittuu', voimakkuus: 0.3 }],
+    { kuollut: () => { kuollutC += 1; } });
+  pura();
+  assert.equal(kuollutC, 0);
+});
+
+/*
+ * KYTKENNÄN KILPAILU (selainkoe 11.9.2026, 1500 ms viive: 0/6
+ * reaktiota). Aikaleimojen lataus ja äänisidonta kestävät, ja soitin
+ * ehtii lähettää 'playing'-tapahtumansa ennen kuin moottori on
+ * kytketty. Uutta 'playing'iä ei enää tule, joten tila on annettava
+ * moottorille mukaan.
+ */
+test('kytkentä kesken soiton: ohitetut sovitetaan, myöhemmät ammutaan', (t) => {
+  const { osumat } = kuuntele(t);
+  const a = soitin();
+  a.currentTime = 5;
+  const purku = kytkeLuentareaktiot(a, [
+    { id: 'r1', hetki: 2000, tarkoitus: 'huvittuu', voimakkuus: 0.3 },
+    { id: 'r2', hetki: 6000, tarkoitus: 'epailee', voimakkuus: 0.4 },
+  ], { kaupunki: 'marseille', soiva: true });
+  t.after(purku);
+  // Ei yhtään 'playing'-tapahtumaa: kytkentä tapahtui soiton aikana.
+  a.aja(6.2);
+  assert.deepEqual(osumat.map((o) => o.tunnus), ['r2'],
+    'ennen kytkentää ohitettua hetkeä ei ammuta jälkikäteen');
+});
+
+test('kytkeMatkakirjanReaktiot: soitto alkaa latauksen aikana eikä reaktioita menetetä', async (t) => {
+  const vanhaFetch = globalThis.fetch;
+  t.after(() => { globalThis.fetch = vanhaFetch; });
+  const { osumat } = kuuntele(t);
+  const teksti = FOKUSVIRRAT.marseille.matkakirja.teksti;
+  const data = aikaleimat(teksti);
+  // Aikaleimavastaus jää odottamaan porttia: sillä aikaa soitin alkaa soida.
+  let avaa;
+  const portti = new Promise((r) => { avaa = r; });
+  globalThis.fetch = async (osoite) => {
+    if (String(osoite).includes('.aikaleimat.json')) {
+      await portti;
+      return { ok: true, status: 200, json: async () => data };
+    }
+    return { ok: true, status: 200, arrayBuffer: async () => new Uint8Array(AANI).buffer };
+  };
+
+  const rivit = ratkaiseAnkkurit(FOKUSVIRRAT.marseille.matkakirja.reaktiot, data);
+  assert.ok(rivit.length >= 2, 'Marseillen pakista pitää ratketa hetkiä');
+  const viimeinen = rivit.at(-1);
+
+  const a = soitin();
+  a.currentTime = (viimeinen.hetki - 1000) / 1000;
+  const lupaus = kytkeMatkakirjanReaktiot(a, 'assets/audio/puhe-fokus-matkakirja-marseille.mp3', {});
+  // Soitto alkaa kesken latauksen — tämä on se tapahtuma, joka ennen katosi.
+  a.dispatchEvent(new Event('playing'));
+  avaa();
+  const purku = await lupaus;
+  assert.equal(typeof purku, 'function', 'kytkentä syntyy');
+  t.after(purku);
+
+  a.aja((viimeinen.hetki + 100) / 1000);
+  assert.deepEqual(osumat.map((o) => o.tunnus), [viimeinen.id],
+    'latauksen aikana alkanut soitto ampuu yhä myöhemmät reaktiot');
+});
+
+test('loppu, tyhjennys ja purku irrottavat kuuntelijat', (t) => {
+  const { osumat, loput } = kuuntele(t);
+  const a = soitin();
+  // Hetki on kaukana loppuvaran ulkopuolella (currentTime 0), joten
+  // 'ended' ei ammu sitä jälkireaktiona.
+  kytkeLuentareaktiot(a, [{ id: 'r1', hetki: 10000, tarkoitus: 'huvittuu', voimakkuus: 0.3 }], {});
+  a.dispatchEvent(new Event('ended'));
+  a.aja(20);
+  assert.equal(osumat.length, 0, 'loppunut luenta ei enää ammu');
+
+  const b = soitin();
+  const purku = kytkeLuentareaktiot(b, [{ id: 'r1', hetki: 1000, tarkoitus: 'huvittuu', voimakkuus: 0.3 }], {});
+  purku();
+  b.aja(2);
+  assert.equal(osumat.length, 0, 'purettu kytkentä ei ammu');
+  assert.equal(loput.length, 0, 'eikä tyhjä purku lähetä reactionEndiä');
+
+  // Tyhjennys ja virhe purkavat samoin.
+  const c = soitin();
+  kytkeLuentareaktiot(c, [{ id: 'r1', hetki: 1000, tarkoitus: 'huvittuu', voimakkuus: 0.3 }], {});
+  c.dispatchEvent(new Event('emptied'));
+  c.dispatchEvent(new Event('playing'));
+  c.aja(2);
+  assert.equal(osumat.length, 0, 'tyhjennetty soitin ei ammu');
+
+  const d = soitin();
+  kytkeLuentareaktiot(d, [{ id: 'r1', hetki: 1000, tarkoitus: 'huvittuu', voimakkuus: 0.3 }], {});
+  d.dispatchEvent(new Event('error'));
+  d.dispatchEvent(new Event('playing'));
+  d.aja(2);
+  assert.equal(osumat.length, 0, 'virheen jälkeen ei ammuta');
+
+  // Tyhjä lista ei kytke mitään, mutta palauttaa kelvollisen purun.
+  assert.equal(typeof kytkeLuentareaktiot(soitin(), [], {}), 'function');
+});
+
+test('validaattori hylkää kaiken, mikä ei ole sidottu tähän tekstiin ja äänitteeseen', async () => {
+  const teksti = 'Ostin palan saippuaa. Terva seurasi minua.';
+  const aani = { tavut: AANI.length, sha256: sha(AANI) };
+  const kelpo = aikaleimat(teksti);
+  const syy = async (data, odotus = { teksti, aani }) => {
+    const tulos = await tarkistaAikaleimat(data, odotus);
+    return tulos.ok ? null : tulos.syy;
+  };
+
+  assert.equal(await syy(kelpo), null, 'kelvollinen tiedosto kelpaa');
+  assert.match(await syy({ ...kelpo, versio: 999 }), /versio/);
+  assert.match(await syy({ ...kelpo, versio: 1 }), /versio/);
+  assert.match(await syy({ ...kelpo, teksti: `${teksti} ` }), /teksti/);
+  assert.match(await syy({ ...kelpo, tekstiSha256: sha(Buffer.from('muu')) }), /tekstiSha256/);
+  assert.match(await syy({ ...kelpo, sanat: [] }), /sanat/);
+  assert.match(await syy({ ...kelpo, sanat: 'ei taulukko' }), /sanat/);
+  assert.match(await syy({ ...kelpo, lauseet: 0 }), /lauseet/);
+
+  // Negatiiviset, ei-kokonaiset ja ristiin menevät ajat.
+  const rikki = (muutos) => {
+    const sanat = kelpo.sanat.map((s) => ({ ...s }));
+    muutos(sanat);
+    return { ...kelpo, sanat };
+  };
+  assert.match(await syy(rikki((s) => { s[0].alku = -10; })), /kelvoton/);
+  assert.match(await syy(rikki((s) => { s[0].loppu = 12.5; })), /kokonaisluku/);
+  assert.match(await syy(rikki((s) => { s[1].loppu = s[1].alku - 1; })), /kelvoton/);
+  assert.match(await syy(rikki((s) => { s[2].alku = s[1].alku - 500; })), /järjestyksessä/);
+  assert.match(await syy(rikki((s) => { s[2].sana = 'väärin'; })), /sanat eivät vastaa/);
+  assert.match(await syy({ ...kelpo, kesto: 10 }), /kesto/);
+  assert.match(await syy({ ...kelpo, kesto: 30000.5 }), /kesto/);
+
+  // Äänikenttien muoto ja itse sidonta.
+  assert.match(await syy({ ...kelpo, aani: undefined }), /aani/);
+  assert.match(await syy({ ...kelpo, aani: { ...kelpo.aani, sha256: 'lyhyt' } }), /sha256/);
+  assert.match(await syy({ ...kelpo, aani: { ...kelpo.aani, tavut: 0 } }), /tavut/);
+  assert.match(await syy({ ...kelpo, aani: { ...kelpo.aani, versio: '2' } }), /versio/);
+  assert.match(await syy(kelpo, { teksti, aani: { tavut: AANI.length, sha256: sha(Buffer.from('toinen')) } }),
+    /SHA-256/);
+  assert.match(await syy(kelpo, { teksti, aani: { tavut: 1, sha256: sha(AANI) } }), /koko/);
+});
+
+test('äänisidonta: aikaleimat kelpaavat vain sille äänitteelle, joka soi', async (t) => {
+  const vanhaFetch = globalThis.fetch;
+  t.after(() => { globalThis.fetch = vanhaFetch; });
+  const teksti = 'Marseillen satamassa myytiin saippuaa tiiliskivinä.';
+  const data = aikaleimat(teksti);
+  /*
+   * Kaksi osoitetta, kaksi vastausta: aikaleimatiedosto tulee JSONina
+   * ja äänite tavuina. Äänitteen haku kulkee js/media.js haeAani →
+   * haeSitkeasti -reittiä, joka lukee vastauksesta vain `ok`,
+   * `status` ja `arrayBuffer`.
+   */
+  const mockaa = (json, aani) => {
+    globalThis.fetch = async (osoite) => (String(osoite).includes('.aikaleimat.json')
+      ? { ok: true, status: 200, json: async () => json }
+      : { ok: true, status: 200, arrayBuffer: async () => new Uint8Array(aani).buffer });
+  };
+
+  mockaa(data, AANI);
+  assert.deepEqual(
+    await lataaLuentareaktiot('sidottu', 'assets/audio/puhe-fokus-matkakirja-sidottu.mp3', { teksti }),
+    data, 'oikea pari kelpaa',
+  );
+
+  // Sama tiedosto, uusiksi äänitetty luenta: ajat eivät enää päde.
+  mockaa(data, Buffer.from('uusi äänitys, eri tavut'));
+  assert.equal(
+    await lataaLuentareaktiot('uusittu', 'assets/audio/puhe-fokus-matkakirja-uusittu.mp3', { teksti }),
+    null, 'väärä äänite hylätään',
+  );
+
+  // Teksti korjattu pakissa: sanarajat siirtyvät, joten ajat hylätään.
+  mockaa(data, AANI);
+  assert.equal(
+    await lataaLuentareaktiot('korjattu', 'assets/audio/puhe-fokus-matkakirja-korjattu.mp3',
+      { teksti: `${teksti} Lisäys.` }),
+    null, 'väärä teksti hylätään',
+  );
+
+  // Versio 1 ei kelpaa enää lainkaan.
+  mockaa({ ...data, versio: 1 }, AANI);
+  assert.equal(
+    await lataaLuentareaktiot('vanha', 'assets/audio/puhe-fokus-matkakirja-vanha.mp3', { teksti }),
+    null, 'versio 1 hylätään',
+  );
+});
+
+test('valmiiksi soitettu osittainen audiovälimuisti ohitetaan hash-fetchissä ilman cachebusteria', async (t) => {
+  const vanhaFetch = globalThis.fetch;
+  t.after(() => { globalThis.fetch = vanhaFetch; });
+  const teksti = 'Sarajevon katot olivat illalla hiljaiset.';
+  const data = aikaleimat(teksti);
+  let mp3Hakuja = 0;
+  globalThis.fetch = async (osoite, asetukset = {}) => {
+    if (String(osoite).includes('.aikaleimat.json')) {
+      return { ok: true, status: 200, json: async () => data };
+    }
+    mp3Hakuja += 1;
+    // Mallintaa Chrome-havainnon: oletushaku osuisi audioelementin
+    // primed 206/Range -vastaukseen ilman ACAO:ta ja kaatuisi CORSissa.
+    if (asetukset.cache !== 'reload') throw new TypeError('MissingAllowOriginHeader');
+    return { ok: true, status: 200, arrayBuffer: async () => new Uint8Array(AANI).buffer };
+  };
+  const url = 'assets/audio/puhe-fokus-matkakirja-sarajevo-cachekoe.mp3';
+  assert.deepEqual(await lataaLuentareaktiot('sarajevo-cachekoe', url, { teksti }), data);
+  assert.equal(mp3Hakuja, 1);
+});
+
+test('ohimenevä CORS-verkkovirhe saa jäähdytetyn uusinnan mutta ei retry-myrskyä', async (t) => {
+  const vanhaFetch = globalThis.fetch;
+  const vanhaNyt = Date.now;
+  let nyt = 10_000;
+  Date.now = () => nyt;
+  t.after(() => { globalThis.fetch = vanhaFetch; Date.now = vanhaNyt; });
+  const teksti = 'Miljacka virtasi kaupungin halki.';
+  const data = aikaleimat(teksti);
+  let mp3Hakuja = 0;
+  let aikaleimahakuja = 0;
+  globalThis.fetch = async (osoite, asetukset = {}) => {
+    if (String(osoite).includes('.aikaleimat.json')) {
+      aikaleimahakuja += 1;
+      return { ok: true, status: 200, json: async () => data };
+    }
+    mp3Hakuja += 1;
+    assert.equal(asetukset.cache, 'reload');
+    if (mp3Hakuja === 1) throw new TypeError('tilapäinen CORS-esto');
+    return { ok: true, status: 200, arrayBuffer: async () => new Uint8Array(AANI).buffer };
+  };
+  const url = 'assets/audio/puhe-fokus-matkakirja-sarajevo-retrykoe.mp3';
+  assert.equal(await lataaLuentareaktiot('sarajevo-retrykoe', url, { teksti }), null);
+  // OFF→ON heti perään käyttää jäähyä eikä aloita rinnakkaista myrskyä.
+  assert.equal(await lataaLuentareaktiot('sarajevo-retrykoe', url, { teksti }), null);
+  assert.deepEqual([aikaleimahakuja, mp3Hakuja], [1, 1]);
+  nyt += LUENTAREAKTIO_UUSINTA_VIIVE_MS;
+  assert.deepEqual(await lataaLuentareaktiot('sarajevo-retrykoe', url, { teksti }), data);
+  assert.deepEqual([aikaleimahakuja, mp3Hakuja], [2, 2]);
+  // Onnistunut pari jää tavalliseen muistivälimuistiin.
+  nyt += 60_000;
+  assert.deepEqual(await lataaLuentareaktiot('sarajevo-retrykoe', url, { teksti }), data);
+  assert.deepEqual([aikaleimahakuja, mp3Hakuja], [2, 2]);
+});
+
+test('perushaku ja jäähyltä vapautuva uusinta ovat kumpikin single-flight', async (t) => {
+  const vanhaFetch = globalThis.fetch;
+  const vanhaNyt = Date.now;
+  let nyt = 15_000;
+  Date.now = () => nyt;
+  t.after(() => { globalThis.fetch = vanhaFetch; Date.now = vanhaNyt; });
+  let vapauta;
+  let hakuja = 0;
+  globalThis.fetch = () => {
+    hakuja += 1;
+    return new Promise((valmis) => { vapauta = valmis; });
+  };
+  const url = 'assets/audio/puhe-fokus-matkakirja-sarajevo-singleflight.mp3';
+  const lataa = () => lataaLuentareaktiot('sarajevo-singleflight', url, { teksti: 'x' });
+
+  const ensimmaiset = Array.from({ length: 8 }, lataa);
+  assert.equal(hakuja, 1, 'peruskutsut jakavat yhden keskeneräisen haun');
+  vapauta({ ok: false, status: 503 });
+  assert.deepEqual(await Promise.all(ensimmaiset), Array(8).fill(null));
+
+  nyt += LUENTAREAKTIO_UUSINTA_VIIVE_MS;
+  const uusinnat = Array.from({ length: 8 }, lataa);
+  assert.equal(hakuja, 2, 'jäähyltä vapautuvat kutsut varaavat yhden yhteisen uusinnan');
+  vapauta({ ok: false, status: 503 });
+  assert.deepEqual(await Promise.all(uusinnat), Array(8).fill(null));
+  assert.equal(hakuja, 2);
+});
+
+test('ohimenevän sidontavirheen uusinnat päättyvät dokumentissa määrättyyn kattoon', async (t) => {
+  const vanhaFetch = globalThis.fetch;
+  const vanhaNyt = Date.now;
+  let nyt = 20_000;
+  Date.now = () => nyt;
+  t.after(() => { globalThis.fetch = vanhaFetch; Date.now = vanhaNyt; });
+  const teksti = 'Sarajevon ilta jäi verkon taakse.';
+  const data = aikaleimat(teksti);
+  let mp3Hakuja = 0;
+  globalThis.fetch = async (osoite) => {
+    if (String(osoite).includes('.aikaleimat.json')) {
+      return { ok: true, status: 200, json: async () => data };
+    }
+    mp3Hakuja += 1;
+    throw new TypeError('tilapäinen verkkovirhe');
+  };
+  const url = 'assets/audio/puhe-fokus-matkakirja-sarajevo-retrykatto.mp3';
+  for (let yritys = 0; yritys <= LUENTAREAKTIO_UUSINTOJA; yritys += 1) {
+    assert.equal(await lataaLuentareaktiot('sarajevo-retrykatto', url, { teksti }), null);
+    nyt += LUENTAREAKTIO_UUSINTA_VIIVE_MS * (2 ** yritys);
+  }
+  assert.equal(mp3Hakuja, 1 + LUENTAREAKTIO_UUSINTOJA);
+  nyt += 60_000;
+  assert.equal(await lataaLuentareaktiot('sarajevo-retrykatto', url, { teksti }), null);
+  assert.equal(mp3Hakuja, 1 + LUENTAREAKTIO_UUSINTOJA,
+    'katon jälkeen uusi OFF→ON ei aloita loputonta hakuketjua');
+});
+
+test('puuttuva aikaleimatiedosto (404) on hiljainen null eikä virhe', async (t) => {
+  const vanha = globalThis.fetch;
+  let pyyntoja = 0;
+  globalThis.fetch = async () => { pyyntoja += 1; return { ok: false, status: 404 }; };
+  t.after(() => { globalThis.fetch = vanha; });
+  const polku = 'assets/audio/puhe-fokus-matkakirja-testikaupunki.mp3';
+  assert.equal(await lataaLuentareaktiot('testikaupunki', polku, { teksti: 'mitä vain' }), null);
+  // Välimuisti: toista pyyntöä ei lähetetä samalle osoitteelle.
+  assert.equal(await lataaLuentareaktiot('testikaupunki', polku, { teksti: 'mitä vain' }), null);
+  assert.equal(pyyntoja, 1);
+  assert.match(aikaleimojenOsoite(polku), /puhe-fokus-matkakirja-testikaupunki\.aikaleimat\.json/);
+  assert.equal(kaupunkiOsoitteesta(polku), 'testikaupunki');
+  assert.equal(kaupunkiOsoitteesta('assets/audio/intro-puhe.mp3'), null);
+});
+
+test('rikkinäinen tai tyhjä aikaleimatiedosto ei kaada luentaa', async (t) => {
+  const vanha = globalThis.fetch;
+  globalThis.fetch = async () => ({ ok: true, status: 200, json: async () => ({ versio: 1, sanat: [] }) });
+  t.after(() => { globalThis.fetch = vanha; });
+  assert.equal(await lataaLuentareaktiot('tyhja', 'assets/audio/puhe-fokus-matkakirja-tyhja.mp3', { teksti: 'x' }), null);
+  globalThis.fetch = async () => { throw new Error('verkko poikki'); };
+  assert.equal(await lataaLuentareaktiot('rikki', 'assets/audio/puhe-fokus-matkakirja-rikki.mp3', { teksti: 'x' }), null);
+});
+
+test('virheellinen JSON on pysyvä hylkäys, mutta rungon verkkokatkos uusitaan rajatusti', async (t) => {
+  const vanhaFetch = globalThis.fetch;
+  const vanhaNyt = Date.now;
+  let nyt = 30_000;
+  Date.now = () => nyt;
+  t.after(() => { globalThis.fetch = vanhaFetch; Date.now = vanhaNyt; });
+
+  let syntaksihakuja = 0;
+  globalThis.fetch = async () => {
+    syntaksihakuja += 1;
+    return { ok: true, status: 200, json: async () => { throw new SyntaxError('Unexpected token'); } };
+  };
+  const syntaksiUrl = 'assets/audio/puhe-fokus-matkakirja-json-syntax.mp3';
+  assert.equal(await lataaLuentareaktiot('json-syntax', syntaksiUrl, { teksti: 'x' }), null);
+  nyt += 60_000;
+  assert.equal(await lataaLuentareaktiot('json-syntax', syntaksiUrl, { teksti: 'x' }), null);
+  assert.equal(syntaksihakuja, 1, 'virheellistä JSONia ei haeta uudelleen');
+
+  let runkohakuja = 0;
+  globalThis.fetch = async () => {
+    runkohakuja += 1;
+    return { ok: true, status: 200, json: async () => { throw new TypeError('body stream interrupted'); } };
+  };
+  const runkoUrl = 'assets/audio/puhe-fokus-matkakirja-json-body.mp3';
+  assert.equal(await lataaLuentareaktiot('json-body', runkoUrl, { teksti: 'x' }), null);
+  assert.equal(await lataaLuentareaktiot('json-body', runkoUrl, { teksti: 'x' }), null);
+  assert.equal(runkohakuja, 1, 'runkovirhe kunnioittaa jäähyä');
+  nyt += LUENTAREAKTIO_UUSINTA_VIIVE_MS;
+  assert.equal(await lataaLuentareaktiot('json-body', runkoUrl, { teksti: 'x' }), null);
+  assert.equal(runkohakuja, 2, 'rungon kuljetusvirhe saa uuden yrityksen jäähyn jälkeen');
+});
+
+test('VARTIO: jokaisen pakin reaktioankkurit löytyvät sen omasta luentatekstistä', () => {
+  const kaupungit = Object.keys(FOKUSVIRRAT);
+  assert.ok(kaupungit.length >= 45, `fokusvirtoja ${kaupungit.length}, odotettiin vähintään 45`);
+  assert.deepEqual([...REAKTION_TARKOITUKSET], [...TYOKALUN_TARKOITUKSET],
+    'pelin ja työkalun tarkoituslistat eivät saa eriytyä');
+  const nahdyt = new Set();
+  let reaktioita = 0;
+  for (const id of kaupungit) {
+    const merkinta = FOKUSVIRRAT[id]?.matkakirja;
+    const reaktiot = merkinta?.reaktiot;
+    if (!Array.isArray(reaktiot) || !reaktiot.length) continue;
+    /*
+     * ÄÄNITTEEN TEKSTI ON RUUDUN TEKSTI (Raamattu). Ankkuri kirjoitetaan
+     * `teksti`-kenttää vasten, mutta kohdistus tehdään `luenta`-kentästä
+     * tagit karsittuina — jos ne eriytyvät, ankkuri ei löydy pelissä.
+     */
+    assert.equal(karsiTagit(merkinta.luenta ?? merkinta.teksti), merkinta.teksti,
+      `${id}: luenta ja teksti eriytyneet (tagit karsittuna)`);
+    const sanat = sanoiksi(merkinta.teksti);
+    const data = aikaleimat(merkinta.teksti);
+    for (const reaktio of reaktiot) {
+      reaktioita += 1;
+      assert.ok(reaktio.id && !nahdyt.has(reaktio.id), `${id}: reaktion tunnus puuttuu tai toistuu (${reaktio.id})`);
+      nahdyt.add(reaktio.id);
+      assert.ok(REAKTION_TARKOITUKSET.includes(reaktio.tarkoitus),
+        `${reaktio.id}: tarkoitus "${reaktio.tarkoitus}" ei ole sallittu`);
+      assert.ok(Number.isFinite(reaktio.voimakkuus) && reaktio.voimakkuus > 0 && reaktio.voimakkuus <= 1,
+        `${reaktio.id}: voimakkuus ei ole välillä 0–1`);
+      assert.ok(Number.isInteger(reaktio.siirtyma ?? 0), `${reaktio.id}: siirtymä ei ole kokonaisluku`);
+      assert.ok(etsiAnkkuri(sanat, reaktio.ankkuri) >= 0,
+        `${reaktio.id}: ankkuria "${reaktio.ankkuri}" ei löydy ${id}-pakin tekstistä sanasta sanaan`);
+      // Peli hylkää ankkurin, joka osuu useammin kuin kerran.
+      assert.equal(laskeAnkkurinOsumat(sanat, reaktio.ankkuri), 1,
+        `${reaktio.id}: ankkuri "${reaktio.ankkuri}" ei ole yksikäsitteinen ${id}-pakin tekstissä`);
+    }
+    // Sama ratkaisu kuin pelissä: jokainen rivi saa hetken.
+    assert.equal(ratkaiseAnkkurit(reaktiot, data).length, reaktiot.length,
+      `${id}: osa reaktioista jäi ilman hetkeä`);
+  }
+  assert.ok(reaktioita >= 6, `reaktioita löytyi ${reaktioita}, pilotissa on kuusi`);
+});
+
+test('VARTIO: Marseillen kohdistus on kohdistettu hyväksyttyyn r2-tekstiin (korjattu 23.9.2026)', async () => {
+  const data = JSON.parse(lue('assets/aikaleimat/puhe-fokus-matkakirja-marseille.aikaleimat.json'));
+  assert.equal(data.versio, AIKALEIMOJEN_VERSIO);
+  assert.equal(data.kaupunki, 'marseille');
+  assert.equal(data.tekstiSha256, sha(Buffer.from(data.teksti, 'utf8')));
+  assert.equal(data.aani.nimi, 'puhe-fokus-matkakirja-marseille.mp3');
+  /*
+   * 14.9.2026: hyväksytty r2 muutti tekstin, ja vanha kohdistus jäi
+   * silloin tarkoituksella talteen ilman uutta maksullista ajoa —
+   * tämä testi vartioi, että peli hylkäisi sen tuolloin (ks. git-
+   * historia). 23.9.2026 Fable valtuutti kohdistuksen kaikille 45
+   * fokusvirtakaupungille (.github/workflows/generoi-luennat.yml
+   * toiminto: kohdista); Marseille kohdistettiin uudelleen nykyiseen
+   * tekstiin, joten vartio kääntyi positiiviseksi: rivi kelpaa nyt.
+   */
+  const uusiTeksti = FOKUSVIRRAT.marseille.matkakirja.teksti;
+  assert.equal(data.teksti, uusiTeksti);
+  const tulos = await tarkistaAikaleimat(data, { teksti: uusiTeksti });
+  assert.equal(tulos.ok, true, tulos.syy);
+});
+
+test('kohdistustyökalun kuiva ajo kertoo osoitteet eikä tarvitse verkkoa', () => {
+  const loki = execFileSync(process.execPath, [
+    fileURLToPath(new URL('tools/kohdista-luennat.mjs', JUURI)), '--kaupungit', 'marseille', '--kuiva',
+  ], { encoding: 'utf8', env: { ...process.env, ELEVEN_API_KEY: '', HTTPS_PROXY: '', https_proxy: '' } });
+  assert.match(loki, /KUIVA AJO/);
+  assert.match(loki, /Tiedostomuoto: versio 2/);
+  assert.match(loki, /--sido/);
+  assert.ok(loki.includes(aaniUrl('assets/audio/puhe-fokus-matkakirja-marseille.mp3')),
+    'kuiva ajo kertoo saman versionoidun äänen, jonka peli soittaa');
+  assert.match(loki, /assets\/aikaleimat\/puhe-fokus-matkakirja-marseille\.aikaleimat\.json/);
+  /*
+   * 14.9.2026: hyväksytyssä Eurooppa-revisiossa Marseillella on viisi
+   * reaktiota (r1–r5), ei kuutta. Vartio pysyy yhtä tiukkana: jokaisen
+   * pakin reaktion on ratkettava sanoiksi, eikä ylimääräisiä saa olla.
+   */
+  const reaktiot = FOKUSVIRRAT.marseille.matkakirja.reaktiot;
+  assert.equal(reaktiot.length, 5);
+  for (const { id } of reaktiot) {
+    assert.match(loki, new RegExp(`${id.replace('.', '\\.')}: ankkuri sanoissa`));
+  }
+  assert.equal((loki.match(/marseille\.r\d+: ankkuri sanoissa/g) ?? []).length, reaktiot.length,
+    'kuiva ajo ratkaisee tasan pakin reaktiot');
+  assert.doesNotMatch(loki, /xi-api-key|ELEVEN_API_KEY=/, 'avainta ei tulosteta');
+});
+
+test('moduuli on esilatauslistassa ja niputuksessa', () => {
+  assert.match(lue('sw.js'), /'\.\/js\/luentareaktiot\.js',/);
+  const nippu = lue('tools/build-standalone.mjs');
+  assert.match(nippu, /'js\/luentareaktiot\.js',/);
+  assert.ok(nippu.indexOf("'js/luentareaktiot.js'") < nippu.indexOf("'js/luenta.js'"),
+    'luentareaktiot ennen luentaa: luenta.js tuo sen staattisesti');
+  assert.ok(nippu.indexOf("'js/packs/fokusvirrat.js'") < nippu.indexOf("'js/luentareaktiot.js'"),
+    'fokusvirrat ennen luentareaktioita');
+  // Tuonti on monirivinen (11.9.2026: mukaan tuli luennanLauserajat
+  // matkakirjan tilapäistä lyhennystä varten) — vartio katsoo nimiä.
+  assert.match(lue('js/luenta.js'),
+    /LUENNAN_LOPPU_TAPAHTUMA, kytkeMatkakirjanReaktiot, luennanLauserajat,\s*\} from '\.\/luentareaktiot\.js';/);
+  // Sovittimen sopimus: luenta kertoo, onko tälle luennalle ajastettuja
+  // reaktioita, ja purkaa ne pysäytettäessä.
+  const luenta = lue('js/luenta.js');
+  assert.match(luenta, /reaktiotAjastettu: \(\) => reaktiotValmis/);
+  assert.equal((luenta.match(/audio\.puraReaktiot\?\.\(\)/g) ?? []).length, 2,
+    'purku ajetaan sekä stopDiaryVoicessa että haivytaLuennassa');
+});

@@ -8,6 +8,13 @@ Data: js/packs/kulttuuri-kategoriat.js, saatiedot.js,
 uutislahteet.js, kohtaamiset.js · Koodi: js/ui.js (lehtikoneisto),
 js/saa.js, js/uutiset.js · Työkalu: tools/kirjoita-kategoriat.mjs.)*
 
+*(PELILAUTA EI KUULU LEHTEEN, 5.9.2026: kaupunkilehti aukeaa samalla
+kutsulla (`openArrival`) kummalta laudalta tahansa — karttapallon
+kaupunkipisteestä (pelin lauta, docs/moduulit/karttapallo.md) tai vanhan
+tasokartan kaupungista (linssikartta ja pelaajan palautusoptio,
+päävalikon Pelilauta-rivi). Lehti on DOM-pinta laudan päällä eikä tiedä
+laudasta mitään, joten tämän ohjeen reseptit ovat samat kummallakin.)*
+
 ## Tutki on paikallislehti
 
 *(Omistajan visio 5.8.2026, v270; linjaus Raamatussa: Kaupungit.)*
@@ -30,6 +37,16 @@ vaadi koodimuutoksia:
   kirjoitetaan muita pidemmäksi, koska se kantaa maaosaston yksin.
   Muut kaupungit näyttävät etusivun entiseen tapaan
   (`.dialog.lehti`-luokka ohjaa kaiken).
+- **Sivunumero on indeksi, ei painetun lehden sivu (3.9.2026):**
+  `naytaTutkiSivu(n)` lukee sivut listasta, jossa `0` on etusivu ja
+  `n` on kategoria `n − 1` (js/lehti.js `rakennaSivut`). Kansiosion
+  (`id: 'kaupunki'`) nostot ovat siis AINA sivulla 1. Sähketehtävän
+  puolikkaalla pullalla ostettava suora linkki käyttää tätä numerointia
+  (`vastauslinkki: { tyyppi: 'lehtisivu', kaupunki, sivu }`,
+  js/packs/fokusvirta-*.js), joten jos kaupungin kategorioiden
+  järjestys muuttuu, linkin numero on tarkistettava — sitä vahtii
+  tests/sahketehtava.test.mjs, joka lukee sivun nostot ja vaatii
+  sähkeen oikean vastausotsikon niiden joukosta.
 - **Teosgalleria:** nosto voi kantaa `galleria: [{ otsikko, tiedosto,
   selite, lahde }]` -listan (pilotti: Venetsian Canaletto, 6 teosta).
   Noston kuva saa selailunuolet ja laskurin; selite- ja lähderivit
@@ -49,6 +66,20 @@ vaadi koodimuutoksia:
   ovat yhden virkkeen mittaiset kuten muuallakin — vasemmassa myös
   ajankohta, oikeassa nykytila. Uusi kaupunki ei vaadi koodia; ilman
   kenttää etusivu taittuu ennallaan.
+- **Lyhyt kuvateksti sivulla, pitkä avatussa kuvassa (omistajan
+  linjaus 9.9.2026, Raamattu "LYHYT KUVATEKSTI SIVULLA, PITKA VASTA
+  AVATUSSA KUVASSA"):** jokaisella kuvalla voi olla kaksi pituutta.
+  Sivulla, kortilla ja kartan päällä näkyy `lyhyt` (yksi virke,
+  enintään 100 merkkiä, päättyy pisteeseen); suurennoksessa näkyy
+  entinen `selite`/`kuvateksti` kokonaisuudessaan ja sen jatkeena
+  lähderivi. Sääntö on yhdessä paikassa (`js/kuvatekstit.js`:
+  `kuvatekstiLyhyt` ja `kuvatekstiPitka`), ja kaikki piirtopaikat
+  kysyvät sitä sieltä — uuteen piirtopaikkaan ei kirjoiteta omaa
+  `?? `-ketjua. Valmiiksi lyhyt kuvateksti kelpaa sellaisenaan ilman
+  `lyhyt`-kenttää. Isojen datatiedostojen lyhennystyö tehdään
+  työkalulla `tools/kuvatekstit-lyhyet.mjs` (`--lista`, `--vie`,
+  `--tarkista`); työkalun otsikkokommentissa ovat tarkat komennot ja
+  lyhyen kuvatekstin kirjoitussäännöt.
 - **Äänirivin ennen ja nyt (pilotti Lontoossa ja Kairossa, omistajan
   tilaus 21.8.2026):** äänirivi jakautuu kahtia, kun kaupungille on
   vanha äänitallenne `js/packs/vanhat-aanet.js`:ssä. Vasemmalla on
@@ -161,6 +192,41 @@ aina kun voit**, jotta kuvakkeet pysyvät tuttuina kaupungista toiseen.
 - **Yksi kuva esiintyy kaupungissa vain kerran.** Sama tarina ei saa
   toistua kahdessa aiheessa (Lontoosta siivottiin kaksi tällaista paria).
 
+## Sivunkääntö (js/sivunkaanto.js, 5.9.2026)
+
+Omistajan päätös 5.9.2026 (sanatarkasti *"Tee 2. Ensin"*, Raamattu
+VALMIIT KIRJASTOT: STPAGEFLIP ENSIN): lehti kääntyy kuin kirja. Kääntö
+on **teatteri**, ei sivupino — lehdessä on yhä yksi elävä sivu
+(`.dialog-card`), jonka `naytaTutkiSivu` piirtää uudestaan; StPageFlip
+kääntää käännöksen ajaksi kortin päälle nostetussa kerroksessa lähtevän
+ja saapuvan sivun klooneja, ja kerros katoaa, kun sivu on kääntynyt.
+Lukija, tarttuva otsikkorivi, visa ja etukäteispuskuri elävät oikealla
+sivulla kuten ennen. Taaksepäin on peilattu eteenpäin. Sormiveto
+(`kytkeTutkiSelaus` → `aloitaSivunVeto`) seuraa sormea; napit, sisällys,
+nuolinäppäimet ja jatkuva luenta kääntävät `naytaTutkiSivu`n `suunta`-
+parametrilla. Kirjasto (page-flip 2.0.7, MIT) tulee ämpärin
+`vendor/`-polusta laiskasti; ilman sitä (offline, dist, reduced motion,
+localStorage `matkakirja-sivunkaanto` = `0`) sivu liukuu kuten ennen.
+Vartijat: `tests/sivunkaanto.test.mjs`, `tools/savukkeet/savuke-sivunkaanto.mjs`.
+
+**Vierityspalkki ei muuta sivun leveyttä** (omistaja 9.9.2026,
+sanatarkasti: *"lehden koko pomppaa hieman sivun käännön ajaksi. syy on
+oikeanpuolen vierityspalkissa joka häviää käännöksen aikana mutta saa
+samalla aikaan sivun sisällön leviämisen"*; Raamattu: LEHDEN
+SIVUNKÄÄNTÖ EI SAA POMPAUTTAA SISÄLTÖÄ). Teatterin kloonit ovat
+`overflow-y: hidden`, joten ne eivät piirrä vierityspalkkia — ja
+klassisilla palkeilla (työpöytä-Chromium, Firefox, Windows) palkin
+15 px vapautui tekstille juuri käännön ajaksi. Mitattu 1600×1000,
+Lontoon lehti: elävän kortin sisus 943 px, kloonin 958 px. Korjaus:
+`#arrival-dialog > .dialog-card` ja `.sivunkaanto-sivu .dialog-card`
+saavat `scrollbar-gutter: stable`, joka varaa kaistan myös
+`overflow: hidden` -säiliössä — leveys on sama ennen kääntöä, sen
+aikana ja sen jälkeen (0 px). Safari ohittaa säännön eikä tarvitse
+sitä: sen overlay-palkki ei vie asettelusta tilaa. Vartija:
+`tools/savukkeet/savuke-lehden-kaanto.mjs` (aja näytöllisenä,
+`xvfb-run -a`, jotta palkit ovat klassiset) ja sääntötesti
+`tests/sivunkaanto.test.mjs`.
+
 ## Kuvat
 
 - Commons-tiedosto, leveys ≥ 1200 px, lisenssi PD/CC0/CC BY/CC BY-SA,
@@ -169,6 +235,62 @@ aina kun voit**, jotta kuvakkeet pysyvät tuttuina kaupungista toiseen.
   lisenssiin `(PD)`, ei `(public domain)`. Lisenssi käskee nimetä tekijän.
 - Kuvat päätyvät R2-peiliin itsestään: push mainiin käynnistää
   `.github/workflows/peilaa.yml`:n, joka peilaa uudet viittaukset.
+- **Selauskaistat (omistaja 9.9.2026):** herokuvan ja kansikuvien
+  karusellissa edellinen/seuraava on vain kapea reunakaista, 24 % kuvan
+  leveydestä kummallakin puolella; keskimmäinen 52 % avaa suurennoksen.
+  Luku asuu YHDESSÄ paikassa: `js/galleria.js` `GALLERIAN_REUNAKAISTA`
+  ja sen CSS-pari `--gallerian-reunakaista` (css/styles.css `:root`).
+  Nuolialueiden leveyttä ei kirjoiteta tyyleihin lukuna — `width:
+  var(--gallerian-reunakaista)` — eikä vyöhykettä lasketa käsin, vaan
+  `gallerianVyohyke()`-apurilla. Pyyhkäisy ja nuolinapit toimivat kuten
+  ennen. Vartija: `tests/galleria.test.mjs`.
+
+### Kuvien sietokyky: r2.dev rajoittaa pyyntöjä (429), 6.9.2026
+
+**Omistajan bugiraportti 6.9.2026 klo 01.09** (iPhone, Ateenan
+kaupunkilehden kohdekartta): *"Kartalla pisteitä jotka eivät toimi"* —
+viisi kohdetta kahdestatoista näkyi pelkkänä täplänä piirroksen sijaan.
+
+**Juurisyy mitattiin, ei arvattu.** Kaikki 12 miniatyyriä ovat
+ämpärissä ja kunnossa. HEAD-kysely niihin samaan aikaan vastasi
+**429 Too Many Requests** jokaiselle: peli hakee mediansa julkisesta
+`pub-….r2.dev`-osoitteesta, joka on **Cloudflaren oma rajoitettu
+kehitysosoite** — sen pyyntötahti on rajattu, eikä raja ole pelin
+puolella säädettävissä.
+
+**PYSYVÄ KORJAUS ON OMISTAJAN TOIMENPIDE:** ämpärille kytketään oma
+verkkotunnus (Cloudflare → R2 → ämpäri → Settings → Public access →
+Connect custom domain). Omalla verkkotunnuksella r2.dev-rajoitusta ei
+ole lainkaan, ja alla kuvattu sietokyky jää turvaverkoksi. Osoite
+vaihdetaan silloin yhdestä paikasta: `js/media.js` `R2_JUURI`.
+
+**Mitä pelin puolella tehtiin (v-numero mainissa, 6.9.2026):**
+
+| Paikka | Muutos |
+| --- | --- |
+| `js/media.js` `lataaKuvaSitkeasti` | Kuvan `error` → sama osoite uudestaan. 4 yritystä, odotus 800 ms → ×2, hajonta [1, 2). Vasta viimeinen virhe kutsuu `onVirhe`-haaraa. |
+| `js/media.js` `haeSitkeasti` | Fetch-polku lukee statuksen: uusii vain 429:n ja 5xx:n, kunnioittaa `Retry-After`-otsaketta (katto 10 s), palauttaa 404:n heti. |
+| `js/media.js` jono | `KUVAJONON_LEVEYS = 4`: kohdekartan 10–25 miniatyyriä eivät lähde yhtenä purskeena. `VUORON_KATTO_MS = 15000` estää jonon jumittumisen. |
+| `js/media.js` `asetaKuva` | Peili ja varareitti kulkevat kumpikin sitkeän latauksen läpi; vanha `?yritys=2`-lisäparametri poistui (se ohitti sw:n välimuistin, jonka avain on polku). |
+| `js/nahtavyydet.js` | Kohdekartan miniatyyri ja jutun piirros: täplä vasta kaikkien yritysten jälkeen. Merkki säilyy nimettynä ja napautettavana. |
+| `js/ui-apurit.js` `esilataaKuvat` | Uusinta mukaan, jonon ohi (taustatyö ei saa viedä vuoroja näkyviltä kuvilta). |
+| `js/aikajana.js` kuvavarasto | Uusinta mukaan, jonon ohi; dekoodaus vasta onnistuneesta latauksesta. |
+| `js/etusivupallo.js` | Juliste sitkeästi; video saa yhden uuden `load()`:n ennen kuin kerros puretaan. |
+| `sw.js` | `kohtaamiset/`-polku kuvakoriin (kerran nähty piirros ei lähde verkkoon enää). Ei-ok vastaus palautuu sellaisenaan eikä laukaise toista noutoa — 429-purskeessa pyyntömäärä ei enää kaksinkertaistu. |
+| `index.html` + `js/main.js` | Kehittäjävalikon **media**-rivi: onnistuneet ✓ / uusinnat ↻ / lopullisesti epäonnistuneet ✗ tässä istunnossa. Napautus päivittää lukemat. |
+
+**Osoite ei muutu uusinnassa.** Cache-busting rikkoisi palvelutyöntekijän
+välimuistin, jonka avain on polku; sama `src` riittää, koska rikkinäisen
+kuvan tila ei ole "completely available" (HTML: update the image data).
+Todennettu Chromiumissa (Playwright, `page.route` → 429 kahdesti, sitten
+kuva): tasan kolme pyyntöä per osoite ja kaikki 12 piirrosta ilmestyivät.
+
+**Rinnakkaisuus muualla — ei muutettu, kirjattu vain:** laattapyramidin
+nouto `js/laattapyramidi.js` `NOUTO_RINNAKKAIN = 4`, palvelutyöntekijän
+laattaesilataus `sw.js` `LAATTAESILATAUKSEN_LEVEYS = 6`.
+
+**Vartijat:** `tests/mediauusinta.test.mjs`, `tests/media.test.mjs`,
+`tests/nahtavyydet.test.mjs`, `tests/sw.test.mjs`.
 
 ### Flickr täydentävänä lähteenä
 

@@ -28,6 +28,8 @@ import {
   sivunOtsikko,
 } from './maalehti.js';
 import { asetaKuva, julisteUrl } from './media.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
+import { aloitaLivianLehtikierros, reagoiLivianLehtisivuun } from './livia-lehtireaktiot.js';
 // Reaktiolaskurit työhuoneen arviointinäkymään (js/reaktiot.js).
 import {
   REAKTIO_SYMBOLIT, haeReaktiolista, merkitseVirheKorjatuksi,
@@ -43,18 +45,37 @@ import { JULISTE_LAHDE } from './packs/julisteet.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import { KAUPUNKIKARTAT, MAAKARTAT } from './packs/maakartat.js';
+
+/**
+ * ONKO KOHDEKARTTA KAUPUNKILEHDEN ETUSIVULLA. Epätosi PAATOKSET 34
+ * kohdasta 9 alkaen (kartta on kaupunkiliuskan Nähtävyydet-rivillä).
+ * Ehto on nimetty eikä poistettu, jotta sammutuksen syy näkyy siinä
+ * kohdassa, jossa osio ennen piirtyi.
+ */
+const KOHDEKARTTA_LEHDESSA = false;
 import { SAATIEDOT } from './packs/saatiedot.js';
 import { lueOmatPoiminnat, tyhjennaPoiminnat, vientiLohko } from './pollopoiminnat.js';
 import {
   haeSaaTanaan, kuukausiSsa, piirraVuosiSaa, saaKuvaus, vuosiSaaSelite, SAA_IKONIT,
 } from './saa.js';
 import { ARTIKKELIT, KULTTUURIT } from './sisaltotaulut.js';
+import { kayttoluvanNimi } from './kuvavinkki.js';
 import { sfx } from './sound.js';
+import {
+  aloitaSivunVeto, kaannaSivu, lataaSivunkaanto, sivunkaantoMahdollinen,
+} from './sivunkaanto.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
+import { kehittajalehdenSivut } from './tyohuone-kehittajalehti.js';
+import { musiikkiSivut } from './tyohuone-musiikki.js';
 import { RAAMATTU } from './tyohuone-raamattu.js';
+import {
+  onRaamatunMuutos, piirraRaamatunKentta, piirraRaamatunLahetys,
+} from './tyohuone-raamattu-muokkaus.js';
 import { TESTATTAVAA, TILANNE, TUOREET } from './tyohuone-tilanne.js';
 import { raamatunTaulusivu, tilastoSivut } from './tyohuone-tilastot.js';
 import {
-  cachedSummary, html, jaaKappaleiksi, kehittajaTilaPaalla, onVanhaKuva, shortIntro,
+  cachedSummary, html, jaaKappaleiksi, kehittajaTilaPaalla, onVanhaKuva,
+  piirraLeipateksti, shortIntro,
 } from './ui-apurit.js';
 import {
   haeArtikkeli, haeUutiset, kaannaSuomeksi, uutislahde,
@@ -194,6 +215,7 @@ export async function openWiki(ui, cityId) {
  * kohdat mene rikki.
  */
 export function rakennaSivut(ui, cityId) {
+  aloitaLivianLehtikierros(ui);
   /*
    * Maaosasto takaisin etusivun palstaan: piirraMaaEtusivu siirtää
    * elementin karttasivulle, ja ilman palautusta seuraava kaupunki,
@@ -414,12 +436,55 @@ export function tutkiEkaSivu(ui) {
  * otsikosta.
  */
 export function naytaTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) {
+  /*
+   * SIVU KÄÄNTYY KUIN KIRJA (omistaja 5.9.2026 "Tee 2. Ensin", Raamattu
+   * VALMIIT KIRJASTOT: STPAGEFLIP ENSIN). Kääntöteatteri (js/sivunkaanto.js)
+   * ottaa käännön, kun kirjasto on ladattu ja liike sallittu: se
+   * kloonaa lähtevän sivun, piirtää kohdesivun tähän samaan korttiin
+   * (piirraTutkiSivu — lukija, otsikkorivi ja puskuri kuten ennen) ja
+   * animoi käännöksen kloonien välillä. Ilman kirjastoa (offline,
+   * dist, reduced motion, lippu pois) sivu liukuu kuten ennenkin.
+   * Suunta luetaan sivunumeroista, ei kutsujan arvauksesta:
+   * sisällysvalikko antaa aina +1, mutta hyppy taaksepäin on käännös
+   * taaksepäin. Avaukset (heti) eivät animoidu — ne käynnistävät vain
+   * kirjaston laiskan latauksen seuraavaa käännöstä varten.
+   */
+  if (sivunkaantoMahdollinen()) void lataaSivunkaanto();
+  if (!heti && suunta) {
+    const nykyinen = ui.lehtitila.tutkiSivu ?? tutkiEkaSivu(ui);
+    const kohde = rajaaTutkiSivu(ui, indeksi);
+    const kortti = ui.arrivalDialog?.querySelector('.dialog-card');
+    const vieritys = kortti?.scrollTop ?? 0;
+    if (kohde !== nykyinen && kortti && kaannaSivu({
+      dialogi: ui.arrivalDialog,
+      kortti,
+      suunta: Math.sign(kohde - nykyinen) || suunta,
+      piirra: () => piirraTutkiSivu(ui, kohde, { heti: true }),
+      peru: () => {
+        piirraTutkiSivu(ui, nykyinen, { heti: true });
+        kortti.scrollTop = vieritys;
+      },
+    })) return;
+  }
+  piirraTutkiSivu(ui, indeksi, { heti, suunta });
+}
+
+/** Sivunumero lehden rajoihin: ensimmäinen selattava … viimeinen. */
+export function rajaaTutkiSivu(ui, indeksi) {
+  return Math.min(Math.max(indeksi, tutkiEkaSivu(ui)), tutkiSivuja(ui) - 1);
+}
+
+/**
+ * Sivun piirto oikeaan korttiin. Kaikki, mikä ennen oli naytaTutkiSivu:
+ * kääre yllä päättää vain, animoidaanko käännös teatterissa.
+ */
+export function piirraTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) {
   // Arkki oikeaan leveyteen ENNEN sivun rakentamista: sivun sisällä
   // on kortin leveydestä mitoitettavia piirroksia (kohdekartta,
   // maakäyrät, tilastopalkit), ja niiden on nähtävä lopullinen mitta.
   ui.mitoitaArkki();
   const sivuja = tutkiSivuja(ui);
-  const i = Math.min(Math.max(indeksi, tutkiEkaSivu(ui)), sivuja - 1);
+  const i = rajaaTutkiSivu(ui, indeksi);
   ui.lehtitila.tutkiSivu = i;
   const etusivu = i === 0;
   if (ui.arrivalPalstat) ui.arrivalPalstat.hidden = !etusivu;
@@ -464,7 +529,17 @@ export function naytaTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) {
    * avattiin kaupunkilehden liitenapista, koska arrivalShownFor
    * osoittaa yhä kaupunkiin.
    */
-  const karttaEtusivulla = etusivu && ui.lehtitila.tutkiTila !== 'maa'
+  /*
+   * ══ KOHDEKARTTA EI OLE ENÄÄ LEHDESSÄ (Raamattu, KARTTAUUDISTUKSEN
+   * PAATOKSET 34 kohta 9) ═══════════════════════════════════════════
+   *
+   * Sama sisältö on nyt kaupunkiliuskan "Nähtävyydet"-rivin takana
+   * (js/pallolauta/kaupunkiliuska.js NAHTAVYYDET_NIMIO), joten
+   * lehden etusivulla se olisi sama asia kahdesti. Matkailijalle-osio
+   * JÄÄ etusivulle: se ei ole kartta eikä liuskan rivi.
+   */
+  const karttaEtusivulla = KOHDEKARTTA_LEHDESSA && etusivu
+    && ui.lehtitila.tutkiTila !== 'maa'
     && KAUPUNKIKARTAT[ui.lehtitila.arrivalShownFor];
   /*
    * Aluelehdillä (Islanti, Lappi, Kreeta, Sisilia, Alpit) ei ole
@@ -509,6 +584,14 @@ export function naytaTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) {
   else if (kategoria?.numerot) piirraMaaNumerotSivu(ui, kategoria);
   else piirraKategoria(ui, kategoria);
   ui.arrivalKategoria.hidden = !kategoria;
+  reagoiLivianLehtisivuun(ui, {
+    kategoria,
+    sivu: i,
+    tila: ui.lehtitila.tutkiTila,
+    omistaja: ui.lehtitila.tutkiTila === 'maa'
+      ? ui.lehtitila.tutkiMaaLehti : ui.lehtitila.arrivalShownFor,
+    nakyva: Boolean(kategoria),
+  });
   /*
    * Mediarivi maalehden ensimmäiselle sivulle myös silloin, kun
    * maalla ei ole korkokarttaa.
@@ -652,9 +735,38 @@ export function jatkaLehdenLuentaa(ui) {
  * Kaupunkilehteen palataan sulkemalla; maalehti ei ole kaupungin
  * sivujen jatke vaan rinnakkainen lehti.
  */
-export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
+/**
+ * SIVUNUMERO SIVUTUNNUKSESTA — maalehden avaus suoraan aihesivulle.
+ *
+ * Karttauudistuksen erä 3 (pallon maapaneelin Lisää-valikko,
+ * js/pallolauta/maapaneeli.js): otsikon napautus avaa MAALEHDEN
+ * KYSEISEN SIVUN, ei etusivua. Valikko lukee otsikot samasta
+ * `MAA_KATEGORIAT`-taulusta, josta tämä lehti latoo sivunsa, joten
+ * VALIKKO ANTAA SIVUTUNNUKSEN (`historia`, `menovinkit`, …) EIKÄ
+ * NUMEROA: numero riippuu siitä, onko maalla karttasivu, ja sen
+ * arvaaminen kutsupuolella tuottaisi kahden taulun rinnakkaisen
+ * järjestyksen — juuri sen, mitä tässä tiedostossa on vältetty
+ * kaikkialla muuallakin.
+ *
+ * Numero saa silti kelvata: kehittäjän savuke ja mahdolliset muut
+ * kutsujat voivat antaa suoran sivunumeron. Tuntematon tunnus palaa
+ * lehden ensimmäiselle sivulle — se on TURVALLINEN TILA, ei virhe:
+ * maalta on voitu poistaa aihe, jonka linkki jäi jonnekin elämään.
+ *
+ * Sivupinon indeksointi on lehden oma (ks. piirraTutkiSivu): sivu n
+ * näyttää `tutkiSivut[n - 1]`, ja maalehden ensimmäinen selattava on 1.
+ */
+function maalehdenSivunumero(sivut, sivu) {
+  if (Number.isFinite(sivu)) return Math.max(1, Math.round(sivu));
+  if (typeof sivu !== 'string' || !sivu) return 1;
+  const i = sivut.findIndex((s) => s.id === sivu);
+  return i < 0 ? 1 : i + 1;
+}
+
+export function avaaMaalehti(ui, iso, { nimi = null, sivu = null } = {}) {
   const maa = ui.game?.pack?.map?.countryShapes?.[iso];
   if (!maa) return;
+  aloitaLivianLehtikierros(ui);
   // Maalehti vaihtaa sisällön JO AUKI OLEVAAN dialogiin, joten
   // lukija.js:n keskitetty ponnahdusikkunasääntö ei näe avausta —
   // kaupunkilehden luenta vaiennetaan tässä (omistajan tilaus
@@ -771,8 +883,9 @@ export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
   // ei sen, jossa pelaaja sattuu seisomaan (ks. paivitaMediarivit).
   paivitaMediarivit(ui);
   // Maalehti alkaa maan etusivulta (indeksi 0 on kaupunkilehden
-  // kansi, jota maalehdellä ei ole — siksi sivu 1).
-  naytaTutkiSivu(ui, 1, { heti: true });
+  // kansi, jota maalehdellä ei ole — siksi sivu 1) tai siltä
+  // sivulta, jonka kutsuja pyysi (ks. maalehdenSivunumero).
+  naytaTutkiSivu(ui, maalehdenSivunumero(sivut, sivu), { heti: true });
 }
 
 /**
@@ -819,16 +932,36 @@ export function avaaKehittajaLehti(ui, otsikko, sivut) {
   naytaTutkiSivu(ui, 1, { heti: true });
 }
 
+/*
+ * RAAMATUN SIVU MUOKKAUSKENTTINÄ (omistaja 11.9.2026).
+ *
+ * Jokainen kohta on oma kenttänsä, ja sivun lopussa on "Lähetä
+ * muutokset". Kentät eivät kirjoita RAAMATTU-olioon mitään: muutos
+ * elää istunnon luonnoksessa ja lähtee ehdotusworkerille
+ * (js/tyohuone-raamattu-muokkaus.js). Piirto on sivun oma `rakenna`,
+ * koska nostomalli latoisi kohdat pelkkänä luettavana tekstinä.
+ */
+function piirraRaamatunSivu(kohde, { osio, kohdat, johdanto = null }) {
+  if (johdanto) kohde.appendChild(html('p', 'periaate-teksti', johdanto));
+  const kentat = html('div', 'raamattu-kentat');
+  for (const { kohta, teksti } of kohdat) {
+    piirraRaamatunKentta(kentat, { osio, kohta, teksti });
+  }
+  kohde.appendChild(kentat);
+  piirraRaamatunLahetys(kohde, RAAMATTU);
+}
+
 /** Raamattu lehtenä: johdanto + jokainen osio omana sivunaan. */
 export function avaaRaamattuLehti(ui) {
   const sivut = [{
     id: 'raamattu-johdanto',
     nimi: 'Raamattu',
     yksipalsta: true,
-    nostot: [{
-      otsikko: `Päivitetty ${RAAMATTU.paivitetty}`,
-      teksti: RAAMATTU.johdanto,
-    }],
+    rakenna: (kohde) => piirraRaamatunSivu(kohde, {
+      osio: 'Johdanto',
+      johdanto: `Päivitetty ${RAAMATTU.paivitetty}`,
+      kohdat: [{ kohta: 'johdanto', teksti: RAAMATTU.johdanto }],
+    }),
   }, ...RAAMATTU.osiot.flatMap((osio, i) => {
     // Valmiusaste värichippinä otsikossa "Tila:"-rivin sijaan.
     const valmis = (osio.tila ?? '').startsWith('hyväksytty');
@@ -837,11 +970,11 @@ export function avaaRaamattuLehti(ui) {
       nimi: osio.otsikko,
       yksipalsta: true,
       tagi: { teksti: valmis ? 'valmis' : 'kesken', luokka: valmis ? 'valmis' : 'kesken' },
-      // Tyhjä rivi kohtien välissä = oma kappale taitossa
-      // (jaaKappaleiksi kunnioittaa kirjoittajan kappalerajoja).
-      nostot: [{
-        teksti: (osio.kohdat ?? []).join('\n\n'),
-      }],
+      // Kohdat ovat muokattavia kenttiä, eivät luettavaa leipätekstiä.
+      rakenna: (kohde) => piirraRaamatunSivu(kohde, {
+        osio: osio.otsikko,
+        kohdat: (osio.kohdat ?? []).map((teksti, j) => ({ kohta: j, teksti })),
+      }),
     };
     /*
      * Aarteet ja tutki kätkö -pelit saavat osionsa perään pelidatasta
@@ -852,6 +985,34 @@ export function avaaRaamattuLehti(ui) {
     return taulu ? [sivu, taulu] : [sivu];
   })];
   avaaKehittajaLehti(ui, 'Raamattu', sivut);
+}
+
+/**
+ * KEHITTÄJÄLEHTI: työhuoneen toinen nappi (omistaja 11.9.2026).
+ *
+ * Yksi sivu, jolla ovat entiset työhuoneen napit riveinä. Rivi kutsuu
+ * täsmälleen samaa avausta kuin poistettu nappi — logiikkaa ei ole
+ * kahdennettu. Lukijaäänen säädindialogi asuu js/main.js:ssä (se on
+ * lomake index.html:ssä), joten sen rivi kulkee main.js:n
+ * rekisteröimän koukun kautta samalla kehittäjätilan ehdolla kuin
+ * entinen #puhe-saadin-btn.
+ *
+ * HUOM NIMET: avaaKehittajaLehti (iso L) on yllä oleva YLEINEN
+ * liitelehden avaus, jota jokainen kehittäjän lehti käyttää;
+ * avaaKehittajalehti (pieni l) on TÄMÄ yksi nimetty lehti.
+ */
+export function avaaKehittajalehti(ui) {
+  const avaa = {
+    tilanne: () => avaaTilanneLehti(ui),
+    poiminnat: () => avaaPoiminnatLehti(ui),
+    tilastot: () => avaaTilastoLehti(ui),
+    grafiikka: () => avaaGrafiikkaLehti(ui),
+    lukijoilta: () => avaaLukijoiltaLehti(ui),
+    musiikki: () => avaaMusiikkiLehti(ui),
+    lukijaaani: () => window.matkakirjaTyohuone?.avaaLukijaaani?.(),
+  };
+  const piilota = kehittajaTilaPaalla() ? [] : ['lukijaaani'];
+  avaaKehittajaLehti(ui, 'Kehittäjälehti', kehittajalehdenSivut(avaa, { piilota }));
 }
 
 /*
@@ -999,6 +1160,16 @@ export function avaaTilastoLehti(ui) {
 }
 
 /**
+ * Musiikki-lehti: pelin taustamusiikit kuunneltavaksi (omistajan tilaus
+ * 3.9.2026: *"kehittäjä hampurilaiseen voisi tehdä oman sivun
+ * taustamusiikeille, jossa voisin käydä kuuntelemassa niitä"*).
+ * Sivut ja soittokoneisto js/tyohuone-musiikki.js.
+ */
+export function avaaMusiikkiLehti(ui) {
+  avaaKehittajaLehti(ui, 'Musiikki', musiikkiSivut());
+}
+
+/**
  * Grafiikka-lehti (omistajan tilaus 22.8.2026, suunta tarkennettu
  * samana päivänä): TYYLIKOKEEN KATSELMUS. Aiempi versio listasi
  * pelin palkintojulisteet, mutta niiden mainostekstit eivät
@@ -1113,9 +1284,40 @@ function lukijoiltaOhjeSivu(teksti) {
   }];
 }
 
+/**
+ * Kuvavinkin ja havainnekuvapalautteen omat rivit (1.9.2026,
+ * kuvien syöttöputki).
+ *
+ * Nämä tulevat samasta jonosta kuin tavalliset ehdotukset
+ * (worker/ehdotukset/kuvavinkki.js kirjoittaa saman etuliitteen alle),
+ * joten lista on yksi — mutta kuvavinkillä on kaksi asiaa, joita
+ * juttuideassa ei ole ja joita ilman kuvaa ei voi käyttää: PAIKKA ja
+ * OIKEUDET. Ne nostetaan tekstin kärkeen, koska juuri niiden takia
+ * kuva joko kelpaa tai ei kelpaa.
+ */
+function kuvavinkinRivit(e) {
+  const rivit = [];
+  if (e.laji === 'kuvapalaute') {
+    rivit.push('PALAUTE HAVAINNEKUVASTA');
+    if (e.kuvatunnus) rivit.push(`Kuva: ${e.kuvatunnus}`);
+    if (e.kuvalahde) rivit.push(`Lähderivi: ${e.kuvalahde}`);
+  } else if (e.laji === 'kuvavinkki') {
+    rivit.push('KUVAVINKKI PAIKASTA');
+  }
+  if (e.paikka) rivit.push(`Paikka: ${e.paikka}`);
+  if (e.kuvaoikeudet) {
+    rivit.push(`Oikeudet: ${e.kuvaoikeudet.omaKuva
+      ? 'lähettäjä vakuuttaa ottaneensa kuvan itse ja omistavansa oikeudet'
+      : 'EI VAKUUTUSTA'}`);
+    rivit.push(`Käyttölupa: ${kayttoluvanNimi(e.kuvaoikeudet.kayttolupa)}`);
+  }
+  if (e.pro) rivit.push(`PRO-LÄHDE: ${e.pro.nimi || e.pro.tekijaId}`);
+  return rivit;
+}
+
 /** Yhden ehdotuksen tiedot leipätekstiksi. */
 function lukijoiltaTiedot(e) {
-  const rivit = [];
+  const rivit = kuvavinkinRivit(e);
   if (e.teksti) rivit.push(e.teksti);
   if (e.sivu) rivit.push(`Sivuehdotus: ${e.sivu}`);
   if (e.tarkenne) rivit.push(`Tarkenne: ${e.tarkenne}`);
@@ -1374,15 +1576,50 @@ function reaktioSivut(ui, kohteet, avain) {
   return [yhteenveto, virheet];
 }
 
+/**
+ * RAAMATUN MUUTOKSET OMANA RYHMÄNÄÄN (omistaja 11.9.2026).
+ *
+ * Työhuoneesta lähetetyt Raamatun muutokset tulevat samasta jonosta
+ * kuin lukijoiden ehdotukset, mutta ne ovat eri asia: Fable poimii ne
+ * postikierroksella ja kirjoittaa Raamattuun sanatarkasti. Siksi ne
+ * saavat oman ryhmäsivunsa eivätkä huku lukijoiden ehdotusten sekaan.
+ */
+function raamatunMuutosSivut(muutokset) {
+  if (!muutokset.length) return [];
+  const etusivu = {
+    id: 'lukijoilta-raamattu',
+    nimi: 'Raamatun muutokset',
+    yksipalsta: true,
+    nostot: [{
+      otsikko: `${muutokset.length} lähetystä`,
+      teksti: 'Työhuoneen Raamattu-lehdestä lähetetyt muutokset. Jokainen '
+        + 'sivu kertoo osion, kohdan numeron sekä vanhan ja uuden tekstin. '
+        + 'Vain Fable kirjoittaa js/tyohuone-raamattu.js:ään.',
+    }],
+  };
+  const sivut = muutokset.map((e, i) => ({
+    id: `lukijoilta-raamattu-${i}`,
+    nimi: `${ehdotusAika(e.aikaleima)} · Raamattu`,
+    yksipalsta: true,
+    nostot: [{ otsikko: 'Raamatun muutokset', teksti: lukijoiltaTiedot(e) }],
+  }));
+  return [etusivu, ...sivut];
+}
+
 /** Ehdotuslistasta lehden sivut: etusivu + yksi sivu per ehdotus. */
 function lukijoiltaSivut(ehdotukset, avain) {
+  // Raamatun muutokset ovat oma ryhmänsä lehden lopussa, joten etusivun
+  // luku ja sivut kertovat vain lukijoiden omista ehdotuksista.
+  const raamatut = ehdotukset.filter(onRaamatunMuutos);
+  const lukijoilta = ehdotukset.filter((e) => !onRaamatunMuutos(e));
   const etusivu = {
     id: 'lukijoilta-etusivu',
     nimi: 'Lukijoilta',
     yksipalsta: true,
     nostot: [{
-      otsikko: `${ehdotukset.length} ehdotusta`,
-      teksti: ehdotukset.length
+      otsikko: `${lukijoilta.length} ehdotusta`
+        + (raamatut.length ? ` · ${raamatut.length} Raamatun muutosta` : ''),
+      teksti: lukijoilta.length
         ? 'Uusin ensin. Yksi ehdotus sivua kohti: kuvat, teksti, '
           + 'sivuehdotus ja lähettäjän tiedot. Sähköposti näkyy vain '
           + 'täällä — sitä ei viedä peliin eikä repoon.\n\n'
@@ -1392,7 +1629,7 @@ function lukijoiltaSivut(ehdotukset, avain) {
         : 'Yhtään ehdotusta ei ole vielä tullut.',
     }],
   };
-  const sivut = ehdotukset.map((e, i) => ({
+  const sivut = lukijoilta.map((e, i) => ({
     id: `lukijoilta-${i}`,
     nimi: `${ehdotusAika(e.aikaleima)} · ${e.nimimerkki || 'Nimetön'}`,
     yksipalsta: true,
@@ -1406,7 +1643,7 @@ function lukijoiltaSivut(ehdotukset, avain) {
       })),
     ],
   }));
-  return [etusivu, ...sivut];
+  return [etusivu, ...sivut, ...raamatunMuutosSivut(raamatut)];
 }
 
 /**
@@ -1771,29 +2008,89 @@ export function kytkeTutkiSelaus(ui, kortti) {
   if (ui.lehtitila.tutkiSelausKytketty) return;
   ui.lehtitila.tutkiSelausKytketty = true;
   let alku = null;
+  /*
+   * Pyyhkäisyn päättävä napsautus ei saa painaa nappia eikä avata
+   * kuvaa sillä sivulla, jolle juuri siirryttiin. Tulppa on
+   * kertakäyttöinen JA lyhytikäinen: kosketusveto ei tuota clickiä
+   * lainkaan (vain hiiren raahaus tuottaa), ja ilman määräaikaa tulppa
+   * jäisi odottamaan ja söisi seuraavan oikean napautuksen — napin,
+   * jota pelaaja painaa sivun luettuaan.
+   */
+  const tulppaaNapsautus = () => {
+    const tulppa = (napsautus) => {
+      napsautus.preventDefault();
+      napsautus.stopPropagation();
+    };
+    kortti.addEventListener('click', tulppa, { capture: true, once: true });
+    setTimeout(() => kortti.removeEventListener('click', tulppa, { capture: true }), 350);
+  };
+  /*
+   * SORMI KÄÄNTÄÄ SIVUA (js/sivunkaanto.js aloitaSivunVeto): kun liike
+   * on vaakasuuntainen ja ylittää 12 px, sivun kulma tarttuu sormeen ja
+   * seuraa sitä; irrotus vie sivun yli tai palauttaa sen. Kohdesivu
+   * piirretään korttiin jo tarttuessa (sama piirto kuin napista), ja
+   * peruuntunut veto piirtää lähtösivun takaisin vierityskohtineen.
+   * Ilman teatteria (kirjasto puuttuu, reduced motion, lippu pois)
+   * pyyhkäisy toimii kuten ennen: 60 px vaakaa pointerupissa.
+   */
+  const aloitaVeto = (e) => {
+    const dx = e.clientX - alku.x;
+    const suunta = dx < 0 ? 1 : -1;
+    const nykyinen = ui.lehtitila.tutkiSivu ?? tutkiEkaSivu(ui);
+    const kohde = nykyinen + suunta;
+    if (kohde < tutkiEkaSivu(ui) || kohde >= tutkiSivuja(ui)) return null;
+    const vieritys = kortti.scrollTop;
+    const veto = aloitaSivunVeto({
+      dialogi: ui.arrivalDialog,
+      kortti,
+      suunta,
+      piirra: () => piirraTutkiSivu(ui, kohde, { heti: true }),
+      peru: () => {
+        piirraTutkiSivu(ui, nykyinen, { heti: true });
+        kortti.scrollTop = vieritys;
+      },
+      clientX: e.clientX,
+      clientY: e.clientY,
+    });
+    if (!veto) return null;
+    sfx.play('paper');
+    try { kortti.setPointerCapture(e.pointerId); } catch { /* ei kaappausta */ }
+    return veto;
+  };
   kortti.addEventListener('pointerdown', (e) => {
     if (e.pointerType === 'mouse' && e.button !== 0) { alku = null; return; }
-    alku = { x: e.clientX, y: e.clientY, pysty: false };
+    // Tekstikentässä vaakaliike on valintaa, ei sivunkääntöä.
+    if (e.target.closest?.('input, textarea, select')) { alku = null; return; }
+    alku = { x: e.clientX, y: e.clientY, pysty: false, veto: null, vanha: false };
   });
   kortti.addEventListener('pointermove', (e) => {
     if (!alku || alku.pysty) return;
-    if (Math.abs(e.clientY - alku.y) > Math.abs(e.clientX - alku.x)) alku.pysty = true;
+    if (alku.veto) { alku.veto.vedä(e.clientX, e.clientY); return; }
+    const dx = Math.abs(e.clientX - alku.x);
+    const dy = Math.abs(e.clientY - alku.y);
+    if (dy > dx) { alku.pysty = true; return; }
+    if (alku.vanha || dx < 12) return;
+    alku.veto = aloitaVeto(e);
+    if (!alku.veto) alku.vanha = true;
   });
-  kortti.addEventListener('pointercancel', () => { alku = null; });
+  kortti.addEventListener('pointercancel', () => {
+    alku?.veto?.peru();
+    alku = null;
+  });
   kortti.addEventListener('pointerup', (e) => {
     const a = alku;
     alku = null;
     if (!a || a.pysty) return;
+    if (a.veto) {
+      a.veto.irrota(e.clientX, e.clientY);
+      tulppaaNapsautus();
+      return;
+    }
     const dx = e.clientX - a.x;
     const dy = e.clientY - a.y;
     if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 2) return;
     if (!vaihdaTutkiSivu(ui, dx < 0 ? 1 : -1)) return;
-    // Pyyhkäisyn päättävä napsautus ei saa painaa nappia eikä avata
-    // kuvaa sillä sivulla, jolle juuri siirryttiin.
-    kortti.addEventListener('click', (napsautus) => {
-      napsautus.preventDefault();
-      napsautus.stopPropagation();
-    }, { capture: true, once: true });
+    tulppaaNapsautus();
   });
   ui.arrivalDialog.addEventListener('keydown', (e) => {
     if (!ui.arrivalDialog.open || tutkiSivuja(ui) < 2) return;
@@ -1856,6 +2153,62 @@ export function kytkeTutkiSelaus(ui, kortti) {
  * näppäimet, sulku) asuu yhä ui.js:ssä ja kutsutaan ui-olion kautta.
  */
 
+/* ======== KAUPUNKILEHDEN ETUSIVUN OSAT UUDELLEENKÄYTETTÄVIKSI ======
+ *
+ * KARTTAUUDISTUS, ERÄ 4 (13.9.2026; suunnitelma
+ * docs/raportit/karttauudistus-suunnitelma-pallo-20260913.md luku 3.3,
+ * Raamattu "KARTTAUUDISTUS"): kaupungin merkin napautus pallolla avaa
+ * ison pop-upin, jossa on kaupunkilehden HEROKUVAT, ESITTELYTEKSTI ja
+ * NÄHTÄVYYSKARTTA — ja turisti-info-merkki avaa pelkän matkustusoppaan.
+ *
+ * SISÄLTÖÄ EI KIRJOITETA UUDESTAAN EIKÄ MUUTETA. Nämä kolme apuria
+ * kertovat vain, MISTÄ etusivun ainekset luetaan ja miten ne ladotaan
+ * annettuun säiliöön; jokainen teksti ja kuva tulee samasta
+ * lehtidatasta sanatarkasti kuin etusivulla. Kaupunkilehden oma kulku
+ * (rakennaSivut → piirraTutkiSivu) ei muutu.
+ */
+
+/**
+ * Kaupungin kansiosasto (aihe `kaupunki`) — herokuvien, esittelyn
+ * kuvarivin ja matkailijalle-lohkon yksi lähde. Sama haku kuin
+ * rakennaSivut tekee kansilleen, omana kutsuttavanaan, jotta pallon
+ * pop-up ei tarvitse koko sivupinoa nähdäkseen kaupungin kannen.
+ */
+export function kaupunginKansi(cityId) {
+  if (!cityId) return null;
+  return (KULTTUURI_KATEGORIAT[cityId] ?? []).find((k) => k.id === 'kaupunki') ?? null;
+}
+
+/**
+ * Saapumiskortin vakiorivi, kun kaupungilla ei ole omaa esittelyä.
+ * Sama merkkijono kuin js/ui.js openArrival kirjoittaa elementtiin —
+ * yksi totuus kahdelle kutsujalle, ei kopiota.
+ */
+export const LEHDEN_VAKIOESITTELY = 'Isoisä on merkinnyt tämän paikan karttaansa.';
+
+/**
+ * Kaupungin oma esittelyteksti (etusivun leipäteksti) tai null.
+ * Avain on wiki-otsikko, mutta useimmilla kaupungeilla se on sama kuin
+ * nimi (ks. js/ui.js openArrival: sama varasuunnitelma).
+ */
+export function kaupunginEsittely(city) {
+  if (!city) return null;
+  return ARTIKKELIT[city.wiki ?? city.name]?.intro ?? null;
+}
+
+/**
+ * Esittely annettuun säiliöön etusivun asussa (.arrival-intro):
+ * oma leipäteksti korostuksineen, tai vakiorivi jos omaa ei ole.
+ */
+export function latoKaupunginEsittely(kohde, city) {
+  const lohko = html('div', 'arrival-intro');
+  const teksti = kaupunginEsittely(city);
+  if (teksti) piirraLeipateksti(lohko, teksti);
+  else lohko.textContent = LEHDEN_VAKIOESITTELY;
+  kohde.appendChild(lohko);
+  return lohko;
+}
+
 /**
  * Lehden etusivun kuvataitto (omistajan toive 5.8.2026): iso
  * pääkuva maston alla ja pienempien kuvien rivi esittelytekstin
@@ -1884,13 +2237,34 @@ export function kytkeTutkiSelaus(ui, kortti) {
  * täsmälleen ennallaan.
  */
 export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null, ennenNyt = null) {
+  latoLehtiKuvat(ui, {
+    paakuva: ui.arrivalLehtiPaakuva,
+    kuvarivi: ui.arrivalLehtiKuvat,
+    kuvat,
+    avauskuvat,
+    ennenNyt,
+  });
+}
+
+/**
+ * ETUSIVUN HEROKUVAT MIHIN TAHANSA KAHTEEN SÄILIÖÖN (karttauudistus
+ * erä 4, 13.9.2026). Rivit ovat täsmälleen entiset ja entisessä
+ * järjestyksessä — vain kaksi kiinteää lehtielementtiä
+ * (ui.arrivalLehtiPaakuva, ui.arrivalLehtiKuvat) on vaihtunut
+ * parametreiksi, jotta kaupungin pallo-pop-up voi latoa samat kuvat
+ * omaan kehykseensä ilman toista piirtäjää. Kaupunkilehti kutsuu tätä
+ * kääreen (piirraLehtiKuvat) kautta eikä muutu miksikään.
+ */
+export function latoLehtiKuvat(ui, {
+  paakuva: paakuvaEl, kuvarivi, kuvat, avauskuvat = null, ennenNyt = null,
+} = {}) {
   const lista = kuvat ?? [];
   const panoraamat = avauskuvat ?? [];
   const pari = (ennenNyt?.length ?? 0) >= 2 ? ennenNyt.slice(0, 2) : null;
-  ui.arrivalLehtiPaakuva.replaceChildren();
-  ui.arrivalLehtiKuvat.replaceChildren();
-  ui.arrivalLehtiPaakuva.hidden = !lista.length && !panoraamat.length;
-  ui.arrivalLehtiKuvat.hidden = pari
+  paakuvaEl.replaceChildren();
+  kuvarivi.replaceChildren();
+  paakuvaEl.hidden = !lista.length && !panoraamat.length;
+  kuvarivi.hidden = pari
     ? false
     : (panoraamat.length ? !lista.length : lista.length < 2);
   if (!lista.length && !panoraamat.length && !pari) return;
@@ -1899,7 +2273,8 @@ export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null, ennenNyt = null) 
     const kuva = document.createElement('img');
     kuva.decoding = 'async';
     kuva.draggable = false;
-    kuva.alt = teos.selite ?? '';
+    // Sivulla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+    kuva.alt = kuvatekstiLyhyt(teos);
     // Harmaasävy vain aidosti vanhoille (sama sääntö kuin postikortissa).
     if (onVanhaKuva(teos)) kuva.classList.add('vanha-vedos');
     // Ämpärikuvalla (`ampari`) ei ole Commons-polkua eikä varareittiä.
@@ -1909,7 +2284,8 @@ export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null, ennenNyt = null) 
       teokset: sarja, kohdalla: indeksi,
     }));
     kotelo.appendChild(kuva);
-    if (teos.selite) {
+    const lyhytTeksti = kuvatekstiLyhyt(teos);
+    if (lyhytTeksti) {
       const teksti = html('figcaption', 'kuvateksti');
       // Rooliotsikko kuvatekstin alkuun: pari luetaan yhtenä juttuna
       // vasemmalta oikealle, eikä lukijan tarvitse päätellä kumpi on kumpi.
@@ -1917,17 +2293,19 @@ export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null, ennenNyt = null) 
         teksti.appendChild(html('b', 'lehti-kuva-rooli',
           rooli === 'ennen' ? 'Ennen ' : 'Nyt '));
       }
-      teksti.appendChild(document.createTextNode(teos.selite));
+      teksti.appendChild(document.createTextNode(lyhytTeksti));
       // Väli tulee CSS:n ::before-sisällöstä, ei tekstistä
       // (css/styles.css "LÄHDERIVI KUVATEKSTIN JATKEEKSI").
-      if (teos.lahde) teksti.appendChild(html('span', 'lehti-kuvalahde', teos.lahde));
+      if (teos.lahde) {
+        teksti.appendChild(kortinKuvalahde(html('span', 'lehti-kuvalahde'), teos.lahde, teos));
+      }
       kotelo.appendChild(teksti);
     }
     return kotelo;
   };
   const piirraPari = () => {
-    ui.arrivalLehtiKuvat.appendChild(teeKuva(pari[0], 0, 640, { sarja: pari, rooli: 'ennen' }));
-    ui.arrivalLehtiKuvat.appendChild(teeKuva(pari[1], 1, 640, { sarja: pari, rooli: 'nyt' }));
+    kuvarivi.appendChild(teeKuva(pari[0], 0, 640, { sarja: pari, rooli: 'ennen' }));
+    kuvarivi.appendChild(teeKuva(pari[1], 1, 640, { sarja: pari, rooli: 'nyt' }));
   };
   /*
    * AVAUSKUVAT (omistajan tilaus 15.8.2026: "saisi olla laadukas
@@ -1940,19 +2318,19 @@ export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null, ennenNyt = null) 
    * niistä ensimmäistä. Kaupunki ilman avauskuvia taittuu ennalleen.
    */
   if (panoraamat.length) {
-    ui.arrivalLehtiPaakuva.appendChild(panoraamat.length > 1
+    paakuvaEl.appendChild(panoraamat.length > 1
       ? nahtavyydenKaruselli(ui, panoraamat)
       : nahtavyydenKuva(ui, panoraamat[0]));
     if (pari) { piirraPari(); return; }
     for (let i = 0; i < Math.min(lista.length, 2); i += 1) {
-      ui.arrivalLehtiKuvat.appendChild(teeKuva(lista[i], i, 640));
+      kuvarivi.appendChild(teeKuva(lista[i], i, 640));
     }
     return;
   }
-  if (lista.length) ui.arrivalLehtiPaakuva.appendChild(teeKuva(lista[0], 0, 1200));
+  if (lista.length) paakuvaEl.appendChild(teeKuva(lista[0], 0, 1200));
   if (pari) { piirraPari(); return; }
   for (let i = 1; i < Math.min(lista.length, 3); i += 1) {
-    ui.arrivalLehtiKuvat.appendChild(teeKuva(lista[i], i, 640));
+    kuvarivi.appendChild(teeKuva(lista[i], i, 640));
   }
 }
 
@@ -2255,4 +2633,187 @@ export function avaaUutinen(ui, uutinen, lahde) {
   ui.suurennosIsanta().appendChild(kortti);
   ui.lehtitila.kulttuuriKuvaEl = kortti;
   ui.rekisteroiSuurennosNappaimet();
+}
+
+/* ========== LEHDEN KEHYS ILMAN SIVUNAVIGOINTIA (PAATOKSET 11) ========== */
+
+/*
+ * OMISTAJA 14.9.2026 sanatarkasti (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 11 kohta 3): *"kaupunkia klikkaamalla piti avautua
+ * muutettu kaupunkilehti. sisalto on oikea, mutta sen ulkoasu saisi
+ * olla tasmalleen sama kuin kaupunkilehdessa kaikilta osin (myos pop
+ * upin leveys)"*.
+ *
+ * TÄMÄ EI OLE UUSI ULKOASU VAAN SAMA KEHYS. Tiivistetty etusivu
+ * (js/kaupunkinosto.js latoTiivisEtusivu) aukesi PAATOKSET 10:ssä
+ * karttanoston omaan korttiin (`.kaupunkipopup`), jonka leveys, paperi,
+ * kehys ja kirjasimet ovat kartan kalusteen eivätkä lehden. Mitattuna
+ * (Pariisi 390×844): kortti 358,8 px leveä, reunus 12 px pyöristetty,
+ * kirjasin Iowan Old Style, otsikko 18,4 px — kun kaupunkilehti samalla
+ * ruudulla on 390 px leveä, suora leikattu paperi, American Typewriter
+ * ja otsikko 30,4 px.
+ *
+ * KORJAUS EI KOPIOI YHTÄÄN TYYLIÄ. Tämä funktio avaa SAMAN
+ * `<dialog class="dialog lehti arkki">` -kehyksen samoine
+ * `.dialog-card.arrival-card` -luokkineen ja samoine
+ * `.arrival-palstat > .arrival-palsta` -palstoineen kuin kaupunkilehti
+ * (index.html #arrival-dialog), ja leveys kirjoitetaan samalla
+ * `ui.mitoitaArkki`lla. Jokainen mitta tulee siis css/styles.css:n
+ * omista `.dialog.arkki`- ja `.dialog.lehti`-säännöistä — jos lehden
+ * ulkoasu joskus muuttuu, tämä muuttuu mukana ilman toista muokkausta.
+ *
+ * VANHA LEHTI EI TIEDÄ TÄSTÄ MITÄÄN. Kehys on OMA elementtinsä eikä
+ * #arrival-dialog: kaupunkilehden sivupino, `ui.lehtitila` ja sen
+ * kymmenet kiinteät id-elementit jäävät koskematta, eikä tämän kortin
+ * avaaminen tai sulkeminen voi jättää niihin tilaa. Kaksi sääntöä
+ * css/styles.css:ssä oli kirjoitettu vain id:lle (#arrival-city,
+ * #arrival-intro); niiden valitsinlistaan on lisätty saman lehden
+ * luokkanimi (.lehti-nimio, .lehti-leipa), joka on nyt myös
+ * index.html:n omissa elementeissä — vanhan elementin id-sääntö on
+ * rivilleen ennallaan, eikä yhtään arvoa ole kopioitu.
+ */
+
+/**
+ * Lehden nimi mastossa. Sama merkkijono kuin index.html:n
+ * #arrival-lehti-ylarivissa (omistajan päätös 8.8.2026); nimi on pelin
+ * oma eikä kaupungin, joten sama masto on kaupunki- ja maalehden yllä.
+ */
+export const LEHDEN_NIMIO = 'Unohdettu aarre';
+
+/**
+ * Maan nimi päiväysriville. Sama haku kuin js/ui.js openArrival tekee
+ * omaan lehtitilaansa (cityCountry → countryShapes), mutta LUKEE vain:
+ * tiivis arkki ei kirjoita riviäkään kaupunkilehden tilaan.
+ */
+export function lehdenMaanNimi(ui, city) {
+  const iso = city?.id ? ui?.game?.pack?.map?.cityCountry?.[city.id] : null;
+  return (iso ? ui.game.pack.map?.countryShapes?.[iso]?.nimi : null) ?? null;
+}
+
+/** Kehyksen tunnus DOMissa (yksi elementti koko pelin ajaksi). */
+export const LEHTIARKIN_TUNNUS = 'tiivis-lehtiarkki';
+/** Kehyksen oma luokka savukkeille ja tyyleille. */
+export const LEHTIARKIN_LUOKKA = 'tiivis-lehtiarkki';
+/**
+ * Kevyen yläosan otsikon luokka (kohta 17 e). Nimiön oma sääntö antaa
+ * lehden ison antiikvan; tämä luokka on se paikka, jossa kevyt näkymä
+ * saa pienemmän mittansa — yksi arvo, ei kopioitua tyyliä.
+ */
+export const KEVYEN_OTSIKON_LUOKKA = 'tiivis-lehtiarkki-otsikko';
+
+/** Onko tiivis lehtiarkki auki? */
+export function tiivisLehtiarkkiAuki() {
+  const d = typeof document === 'undefined' ? null : document.getElementById(LEHTIARKIN_TUNNUS);
+  return d?.open ? d : null;
+}
+
+/** Sulkee tiiviin lehtiarkin, jos se on auki. */
+export function suljeTiivisLehtiarkki() {
+  tiivisLehtiarkkiAuki()?.close();
+}
+
+/**
+ * Kaupunkilehden kehys ILMAN sivunavigointia: sama arkki, sama leveys,
+ * sama paperi ja typografia, mutta yksi sivu eikä pinoa.
+ *
+ * `lato(ui, palsta, city)` täyttää lehden palstan — kaikki sisältö
+ * tulee kutsujalta, joten tämä funktio ei tiedä eikä päätä mitään
+ * sisällöstä. Palauttaa dialogin.
+ *
+ * NELJÄS PARAMETRI ON LISÄYS, EI MUUTOS (omistajan päätös 18.9.2026
+ * klo 15.20, Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta 17 e).
+ * Ilman `asetukset.otsikko`a masto ladotaan rivilleen entisellään.
+ * Otsikon kanssa masto JÄÄ KOKONAAN POIS — ei kickeriä, ei kaupungin
+ * isoa nimeä, ei päiväysriviä viivoineen — ja tilalle tulee YKSI rivi:
+ * annettu otsikko samassa `h2.lehti-nimio`ssa, jotta sulkunappi istuu
+ * samassa kulmassa samalla säännöllä eikä yhtään tyyliarvoa kopioida.
+ */
+export function avaaTiivisLehtiarkki(ui, city, lato, asetukset = {}) {
+  if (typeof document === 'undefined' || !city) return null;
+  sfx.play('paper');
+  let dialogi = document.getElementById(LEHTIARKIN_TUNNUS);
+  if (!dialogi) {
+    dialogi = document.createElement('dialog');
+    dialogi.id = LEHTIARKIN_TUNNUS;
+    // Samat kolme luokkaa kuin kaupunkilehdellä sen ollessa auki
+    // (js/ui.js openArrival: 'arkki', rakennaSivut: 'lehti').
+    dialogi.className = `dialog lehti arkki ${LEHTIARKIN_LUOKKA}`;
+    const kortti = html('div', 'dialog-card arrival-card');
+    kortti.tabIndex = -1;
+    const palstat = html('div', 'arrival-palstat');
+    palstat.appendChild(html('div', 'arrival-palsta'));
+    kortti.appendChild(palstat);
+    dialogi.appendChild(kortti);
+    document.body.appendChild(dialogi);
+    /*
+     * Sulku taustaa napauttamalla — sama sopimus kuin nähtävyysarkilla
+     * (js/nahtavyydet.js avaaNahtavyys): kortti täyttää dialogin, joten
+     * dialogiin itseensä osuva napautus tulee vain reunan ulkopuolelta.
+     */
+    dialogi.addEventListener('click', (tapahtuma) => {
+      if (tapahtuma.target !== dialogi) return;
+      sfx.play('paper');
+      dialogi.close();
+    });
+  }
+  const palsta = dialogi.querySelector('.arrival-palsta');
+  palsta.replaceChildren();
+  /*
+   * Sulkunappi on kartan kortin oma ✕ eikä lehden alanappirivi: lehden
+   * uloskäynti on sivunavigointi, joka on juuri se, mitä tästä
+   * kortista puuttuu. Nappi on absoluuttinen eikä osa palstan virtaa,
+   * joten se ei muuta yhtään mittaa.
+   */
+  const sulje = html('button', 'lehti-arkkinappi tiivis-lehtiarkki-sulje', '✕');
+  sulje.type = 'button';
+  sulje.title = 'Sulje';
+  sulje.setAttribute('aria-label', `Sulje ${city.name ?? ''}`.trim());
+  sulje.addEventListener('click', () => {
+    sfx.play('paper');
+    dialogi.close();
+  });
+  /*
+   * LEHDEN MASTO (Fablen päätös 14.9.2026: *"'Täsmälleen sama ulkoasu
+   * kaikilta osin' kattaa lehden maston (kicker + päiväysrivi) samoilla
+   * piirtäjillä kuin vanhassa lehdessä, herokuvien yläpuolelle kuten
+   * vanhassa."*).
+   *
+   * KOLME RIVIÄ SAMASSA JÄRJESTYKSESSÄ KUIN index.html:ssä: kicker
+   * (.lehti-ylarivi), nimiö (h2) ja päiväysrivi (.lehti-alarivi).
+   * Luokat ovat lehden omat ja niiden säännöt ovat jo css/styles.css:ssä
+   * PELKKINÄ LUOKKINA (.lehti-ylarivi, .lehti-alarivi, .pvm-maa) — tähän
+   * ei siis tarvittu yhtään uutta valitsinta eikä yhtään tyyliarvoa.
+   *
+   * TEKSTIT OVAT SAMAT KUIN VANHASSA LEHDESSÄ, EI UUTTA SISÄLTÖÄ:
+   * kicker on lehden nimi (LEHDEN_NIMIO) ja päiväysrivi sama kahden
+   * osan rivi kuin `rakennaSivut` latoo — maan nimi omassa spanissaan ja
+   * matkapäivän numero pelistä. Liitelinkkiä (.maa-linkki) EI ole: se on
+   * alaosan navigointia, jonka omistaja rajasi pois erässä 10.
+   */
+  const omaOtsikko = typeof asetukset?.otsikko === 'string' ? asetukset.otsikko : null;
+  if (omaOtsikko) {
+    // KEVYT YLÄOSA (kohta 17 e): vain otsikko ja sulkunappi.
+    const nimio = html('h2', `lehti-nimio ${KEVYEN_OTSIKON_LUOKKA}`, omaOtsikko);
+    nimio.appendChild(sulje);
+    palsta.appendChild(nimio);
+  } else {
+    palsta.appendChild(html('p', 'lehti-ylarivi', LEHDEN_NIMIO));
+    const nimio = html('h2', 'lehti-nimio', city.name ?? '');
+    nimio.appendChild(sulje);
+    palsta.appendChild(nimio);
+    const pvm = html('p', 'lehti-alarivi');
+    const maanNimi = lehdenMaanNimi(ui, city);
+    if (maanNimi) pvm.appendChild(html('span', 'pvm-maa', `${maanNimi} · `));
+    pvm.appendChild(document.createTextNode(`${ui.game?.dayCount?.() ?? 1}. matkapäivä`));
+    palsta.appendChild(pvm);
+  }
+  lato(ui, palsta, city);
+  if (!dialogi.open) dialogi.showModal();
+  /*
+   * AVAUSANIMAATIOSTA ks. css/styles.css `.tiivis-lehtiarkki >
+   * .dialog-card { animation: none }` — mitattu vika, ei makuasia.
+   */
+  // Leveys ja korkeus samasta mitoittajasta kuin kaupunkilehdellä.
+  ui?.mitoitaArkki?.(dialogi);
+  return dialogi;
 }

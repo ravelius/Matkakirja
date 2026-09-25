@@ -49,8 +49,45 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  /*
+   * TILAPALKKI EI LEIKKAA KORTTIA (omistajan laitekuva 19.9.2026 klo
+   * 17.44: kello 17.44 kortin yläreunan päällä). Sivu on
+   * viewport-fit=cover, joten kotinäytön sovelluksessa ruutu alkaa
+   * tilapalkin alta; yläreunan vara on safe-area + 1rem. Sama sääntö
+   * kaikille korttikerroksille alempana (KORTTIKERROS JA TURVA-ALUE).
+   */
+  padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
   background: rgba(18, 12, 4, 0);
   transition: background 220ms ease-out;
+}
+
+/*
+ * KORTTIKERROS JA TURVA-ALUE (omistajan iPhone-kaappaus 21.9.2026,
+ * v2021, skandaalikortti "Kuningattaren kaulanauhajuttu": kortti alkoi
+ * tilarivin alta, kellonaika peitti otsikkorivin SKANDAALIT ja
+ * sulkunappi oli akkukuvakkeen päällä). Jokainen koko ruudun
+ * korttikerros (nosto, eläintäky, syvennys, skandaali, hetki,
+ * tiedeliite css/aikajana.css) pitää turva-alueen tyhjänä joka
+ * reunalta: ylhäällä tilarivi, alhaalla kotipalkki, vaaka-asennossa
+ * lovi vasemmalla tai oikealla. Reunus on 1rem + inset, ei max(): kortti
+ * ei saa koskaan alkaa turva-alueen sisältä. Insetit luetaan :root-
+ * muuttujista --turva-* (css/styles.css, env(safe-area-inset-*)), ei
+ * env():stä suoraan: kuva edellä -kortti (js/nostokuva.js, position:
+ * fixed) lukee samat muuttujat omaan asemointiinsa, ja savuke
+ * (tools/savukkeet/savuke-kortti-turva-alue.mjs) pakottaa ne
+ * headlessissä, jossa env() on aina 0.
+ */
+.fokusnosto-kerros,
+.elaintaky-kerros,
+.syvennys-kerros,
+.skandaali-kerros,
+.hetki-kerros,
+.tiedeliite-kerros {
+  padding-top: calc(1rem + var(--turva-yla, 0px));
+  padding-right: calc(1rem + var(--turva-oikea, 0px));
+  padding-bottom: calc(1rem + var(--turva-ala, 0px));
+  padding-left: calc(1rem + var(--turva-vasen, 0px));
 }
 
 .fokusnosto-kortti-auki { background: rgba(18, 12, 4, 0.3); }
@@ -60,7 +97,10 @@
   display: flex;
   flex-direction: column;
   width: min(34rem, 100%);
-  max-height: min(80vh, 44rem);
+  /* Omistaja 1.9.2026 (Sofia-patsaan kortti): "pitäisikö pop-up-lehti
+     olla vähän korkeampi?" — katto ylös, jotta pystykuva ja teksti
+     mahtuvat samaan näkymään ilman että kuvaa tarvitsee leikata. */
+  max-height: min(88vh, 52rem);
   padding: 0.7rem 0.8rem 0.75rem;
   border-radius: 12px;
   border: 1px solid rgba(122, 85, 20, 0.32);
@@ -151,18 +191,40 @@
 /* Kuva on kortin ensimmäinen iso asia, kuten fokusvirran kortilla:
    nosto myytiin kuvalla, joten kuva näkyy heti kunnolla. */
 .fokusnosto-kuva {
-  margin: 0 0 0.55rem;
+  /*
+   * KUVATEKSTI EI SAA OLLA KUVAA LEVEÄMPI (omistaja 3.9.2026 ilta,
+   * Visočican skandaalikortti). Kuva kapenee korkeuskattoon (alla
+   * max-height) ja keskittyy, joten kehys kutistuu kuvan levyiseksi
+   * (fit-content, sama kaava kuin saapumiskortin kuvakotelossa) ja
+   * kuvateksti sekä lähderivi alkavat ja päättyvät kuvan reunoissa.
+   * Vaakakuva täyttää palstan, jolloin mikään ei muutu. Koskee kaikkia
+   * kortteja, jotka piirtävät kuvan piirraNostonKuva-funktiolla
+   * (nostot, skandaalit, syvennystarinat, Tiedeliite).
+   */
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 0.55rem;
 }
 
 .fokusnosto-kuva[hidden] { display: none; }
 
 .fokusnosto-kuva img {
   display: block;
-  width: 100%;
-  max-height: 34vh;
+  /*
+   * KUVA NÄKYY AINA KOKONAAN (omistaja 1.9.2026, Sofia-patsaan
+   * kortti: "Kuva pitää näkyä kokonaan" — cover leikkasi pystykuvalta
+   * pään). Vaakakuva täyttää leveyden kuten ennenkin; pystykuva
+   * pysähtyy korkeuskattoon ja kapenee keskelle, ja "sivuille jää
+   * tyhjää" on omistajan sanoin juuri tarkoitus — näin iso kuva ei
+   * vie koko sivua.
+   */
+  width: auto;
+  max-width: 100%;
+  max-height: 42vh;
+  margin: 0 auto;
   border-radius: 6px;
   border: 1px solid rgba(122, 85, 20, 0.3);
-  object-fit: cover;
+  object-fit: contain;
   background: rgba(122, 85, 20, 0.1);
 }
 
@@ -201,6 +263,11 @@ button.fokusnosto-kuvanappi:focus-visible { background: transparent; }
 }
 
 .fokusnosto-kuvateksti {
+  /* Teksti ei saa määrätä kehyksen leveyttä (fit-content laskisi sen
+     pisimmän rivin mukaan): leveys 0 sisäiseen mitoitukseen, sitten
+     täysi kuvan leveys. */
+  width: 0;
+  min-width: 100%;
   margin: 0.3rem 0 0;
   font-size: 0.8rem;
   line-height: 1.4;
@@ -225,7 +292,8 @@ button.fokusnosto-kuvanappi:focus-visible { background: transparent; }
  */
 .fokusnosto-valokuva {
   max-width: 62%;
-  margin: 0.8rem 0 0;
+  /* Vasempaan laitaan, kuvan levyisenä (ks. .fokusnosto-kuva). */
+  margin: 0.8rem auto 0 0;
 }
 
 .fokusnosto-valokuva img { max-height: 20vh; }
@@ -515,7 +583,10 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
   display: flex;
   flex-direction: column;
   width: min(34rem, 100%);
-  max-height: min(80vh, 44rem);
+  /* Omistaja 1.9.2026 (Sofia-patsaan kortti): "pitäisikö pop-up-lehti
+     olla vähän korkeampi?" — katto ylös, jotta pystykuva ja teksti
+     mahtuvat samaan näkymään ilman että kuvaa tarvitsee leikata. */
+  max-height: min(88vh, 52rem);
   padding: 0.7rem 0.8rem 0.75rem;
   border-radius: 12px;
   border: 1px solid rgba(122, 85, 20, 0.32);
@@ -561,6 +632,162 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
    punnat tule kahdesti. */
 .elaintaky-palkkio-vanha { color: rgba(33, 29, 24, 0.58); }
 
+/* ---------------------------------------------------------------------------
+   KAKSI KUVAA SAMASTA AIHEESTA = KARUSELLI (omistajan päätös 5.9.2026)
+   ---------------------------------------------------------------------------
+   Raamatun osio "ELAINKUVIIN TARINAA, KAKSI KUVAA SAMASTA AIHEESTA",
+   sanatarkasti: *"samasta eläinaiheesta voi olla kaksi erilaista
+   hyväksyttyä kuvaa, ja kortilla ne näytetään KARUSELLINA (kuva
+   vaihtuu pyyhkäisyllä kuten lehden alarivin karuselli, pisteet
+   kertovat määrän, kummallakin kuvalla oma kuvateksti)"*.
+
+   MITAT JA ILME OVAT LEHDEN ALARIVIN KARUSELLIN (css/aikajana.css
+   .tiedeliite-karuselli-*): ikkuna, jonka sisällä raita liukuu, ruutu
+   per kuva ja pisteet alla. Säännöt ovat tässä tiedostossa eivätkä
+   siellä, koska eläinkortti lataa vain fokusnosto.css:n — aikajanan
+   tyylit tulevat sivulle vasta linssin mukana (js/elaintaky.js
+   elaintakyLataaTyyli).
+
+   IKKUNA ON KUVIEN OMASSA MITTASUHTEESSA (3:2, tools/elaintakykuvat.mjs
+   960 x 640) ja enintään yhtä korkea kuin yhden kuvan kortissa
+   (.fokusnosto-kuva img max-height 42vh), joten yksi ja kaksi kuvaa
+   ovat kortilla saman kokoisia. Kuva on `contain`illa kokonaan
+   näkyvissä (omistaja 1.9.2026: "Kuva pitää näkyä kokonaan"), joten
+   muunkin muotoinen kakkoskuva latoutuu leikkaamatta.
+
+   YKSI KUVA EI SAA NÄISTÄ SÄÄNNÖISTÄ MITÄÄN: kaikki valitsimet ovat
+   .elaintaky-karuselli-alkuisia, ja karuselli syntyy vain useammasta
+   kuvasta (js/elaintaky.js elaintakyPiirraKuva).
+   --------------------------------------------------------------------- */
+
+.elaintaky-karuselli {
+  position: relative;
+  /* Kehys on kuvan levyinen (ks. .fokusnosto-kuva): ikkuna on tässä se
+     mitta, joka ratkaisee, ja kuvateksti asettuu sen reunoihin. */
+  width: min(100%, calc(42vh * 3 / 2));
+}
+
+.elaintaky-karuselli-ikkuna {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  /* Vaakapyyhkäisy karusellille, pystyvieritys yhä kortille. */
+  touch-action: pan-y;
+  border-radius: 6px;
+  border: 1px solid rgba(122, 85, 20, 0.3);
+  background: rgba(122, 85, 20, 0.1);
+}
+
+.elaintaky-karuselli-raita {
+  display: flex;
+  height: 100%;
+  /* Liuku nopeutuen ja hidastuen (Raamattu: kaikki liike animoidaan
+     pehmeästi); 250 ms on omistajan mitta tälle kortille. */
+  transition: transform 250ms cubic-bezier(0.33, 0.02, 0.2, 1);
+  will-change: transform;
+}
+
+/* Sormen alla raita seuraa liikettä ilman siirtymää. */
+.elaintaky-karuselli-raita.raahataan { transition: none; }
+
+.elaintaky-karuselli-ruutu {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  /* Yleissääntö `button { min-height: … }` venyttäisi ruudun raidan
+     yli; ruudun mitta on ikkunan mitta. */
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+/*
+ * KEHYS ON IKKUNALLA, EI KUVALLA: perussääntö .fokusnosto-kuva img
+ * antaa jokaiselle kortin kuvalle oman reunuksen ja 42vh-katon, mutta
+ * karusellissa reunus kuuluu ikkunaan — muuten raidalla olisi kaksi
+ * kehystä ja kuva jäisi ikkunaansa lyhyemmäksi.
+ */
+.elaintaky-karuselli-ruutu img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.elaintaky-karuselli-ruutu img[hidden] { display: none; }
+.elaintaky-karuselli-ruutu:focus-visible { outline: 2px solid #9c6b17; outline-offset: -3px; }
+
+/* Kuvateksti ja lähderivi vaihtuvat kuvan mukana ja tulevat esiin
+   pehmeästi samassa 250 ms:ssä kuin raita liukuu. */
+.elaintaky-karuselli-teksti.vaihtui { animation: elaintaky-kuvateksti-esiin 250ms ease-out; }
+
+@keyframes elaintaky-kuvateksti-esiin {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* PISTEET: kuvien määrä ja paikka yhdellä silmäyksellä (omistajan
+   päätös: "pisteet kertovat määrän"). */
+.elaintaky-karuselli-pisteet {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin: 0.25rem 0 0;
+}
+
+/* Piste itse on pieni, mutta nappi on sormen kokoinen (22 px): väri ja
+   reuna piirtyvät ::before-ympyrään, ei nappiin — muuten yleissääntö
+   `button { min-height: 42px }` venyttäisi pisteen soikioksi. */
+.elaintaky-karuselli-piste {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.elaintaky-karuselli-piste::before {
+  content: '';
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1px solid rgba(122, 85, 20, 0.6);
+  border-radius: 50%;
+  background: transparent;
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.elaintaky-karuselli-piste:hover::before { background: rgba(122, 85, 20, 0.3); }
+
+.elaintaky-karuselli-piste.nykyinen::before {
+  background: #b8891f;
+  transform: scale(1.15);
+}
+
+/* Hiljainen liike: kuva vaihtuu suoraan, ilman liukua ja häivytystä. */
+@media (prefers-reduced-motion: reduce) {
+  .elaintaky-karuselli-raita { transition: none; }
+  .elaintaky-karuselli-piste::before { transition: none; }
+  .elaintaky-karuselli-teksti.vaihtui { animation: none; }
+}
+
+
 /* ===========================================================================
    7. SYVENNYSTARINA JA SKANDAALI — kartan tarinakortit (js/syvennys.js,
       js/skandaalit.js)
@@ -575,7 +802,8 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
    =========================================================================== */
 
 .syvennys-kerros,
-.skandaali-kerros {
+.skandaali-kerros,
+.hetki-kerros {
   position: fixed;
   inset: 0;
   z-index: 46;
@@ -588,15 +816,20 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
 }
 
 .syvennys-auki,
-.skandaali-auki { background: rgba(18, 12, 4, 0.3); }
+.skandaali-auki,
+.hetki-auki { background: rgba(18, 12, 4, 0.3); }
 
 .syvennys-kortti,
-.skandaali-kortti {
+.skandaali-kortti,
+.hetki-kortti {
   position: relative;
   display: flex;
   flex-direction: column;
   width: min(34rem, 100%);
-  max-height: min(80vh, 44rem);
+  /* Omistaja 1.9.2026 (Sofia-patsaan kortti): "pitäisikö pop-up-lehti
+     olla vähän korkeampi?" — katto ylös, jotta pystykuva ja teksti
+     mahtuvat samaan näkymään ilman että kuvaa tarvitsee leikata. */
+  max-height: min(88vh, 52rem);
   padding: 0.7rem 0.8rem 0.75rem;
   border-radius: 12px;
   border: 1px solid rgba(122, 85, 20, 0.32);
@@ -614,7 +847,8 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
 }
 
 .syvennys-auki .syvennys-kortti,
-.skandaali-auki .skandaali-kortti {
+.skandaali-auki .skandaali-kortti,
+.hetki-auki .hetki-kortti {
   opacity: 1;
   transform: translateY(0);
 }
@@ -623,5 +857,361 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
   .syvennys-kerros,
   .syvennys-kortti,
   .skandaali-kerros,
-  .skandaali-kortti { transition: none; }
+  .skandaali-kortti,
+  .hetki-kerros,
+  .hetki-kortti { transition: none; }
+}
+
+/* ===========================================================================
+   8. HISTORIAN HETKEN KUVASELAILU (js/historian-hetket.js)
+   ---------------------------------------------------------------------------
+   Hetkellä on kaksi havainnekuvaa — lähikuva ihmisistä ja kaukokuva
+   kohtauksesta — ja kortti näyttää ensimmäisen isona ja loput samojen
+   nuolten ja laskurin takaa kuin lehden nostogalleria (js/ui.js
+   kaariNostoGalleria, .arrival-kuva-nuoli). Luokat ovat omat, koska
+   kortin kuvanappi on oma asemointipohjansa; mitat ja ilme ovat samat.
+
+   KOLMAS KUVA VOI OLLA PYSTYKUVA (3.9.2026). Neljälle hetkelle tehtiin
+   aikakauden lehtisivun rekonstruktio, ja se on 1024 × 1536 eli
+   pystyyn. Kuva itse näkyy kokonaan jo perussäännöllä
+   (`.fokusnosto-kuva img`: width auto, max-height 42vh, contain), mutta
+   NUOLET JA LASKURI eivät: ne asemoituvat kuvanappiin, ja nappi oli
+   `width: 100%` eli aina palstan levyinen. Pystykuvalla nuolet
+   leijuivat siis kortin pohjan päällä kuvan molemmin puolin, ja
+   laskuri istui tyhjässä kulmassa. Nappi kutistetaan siksi kuvan
+   levyiseksi ja keskitetään — sama ratkaisu kuin saapumiskortin
+   kuvakotelossa (css/styles.css `.arrival-kuvakotelo`), ja
+   vaakakuvalla lopputulos on entinen, koska kuva täyttää palstan.
+   Kutistus koskee vain hetken korttia: skandaalikortin kuvat ovat
+   vaakakuvia, eikä sen asemointiin ole syytä koskea.
+   =========================================================================== */
+
+/* ===========================================================================
+   MEDIARIVI KORTILLA (karttauudistuksen erä 10, avoin kohta 11.1)
+
+   Noston `aani`-, `musiikki`-, `musiikkiNayte`- ja `esikuuntelu`-kentät
+   piirtyvät kortille SAMOILLA napeilla kuin lehden sivulla
+   (js/ui.js lisaaNostonNapit), joten niiden oma ulkoasu tulee
+   css/styles.css:n .kulttuuri-kuuntele- ja .kulttuuri-musiikkilinkki-
+   säännöistä. Tässä määritellään vain rivi, jolla ne istuvat: kortin
+   palsta on kapea, joten napit saavat kiertyä uudelle riville.
+   =========================================================================== */
+
+.fokusnosto-media {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0 0 0.5rem;
+}
+
+.hetki-kuva .fokusnosto-kuvanappi,
+.skandaali-kuva .fokusnosto-kuvanappi { position: relative; }
+/* Karusellin (.nostosarja-*) tyylit ovat css/kuvasarja.css:ssä, jonka
+   js/kuvasarja.js lataa itse — myös kohdekortille. */
+
+.hetki-kuva .fokusnosto-kuvanappi {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.hetki-kuvanuoli,
+.skandaali-kuvanuoli {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /*
+   * KAPEA REUNAKAISTA (omistaja 9.9.2026, ks. css/styles.css :root
+   * --gallerian-reunakaista ja js/galleria.js GALLERIAN_REUNAKAISTA).
+   * Ennen 30 % kummallakin puolella: keskelle jäi 40 %, eikä kuvan
+   * ylä- ja alalaidasta päässyt suurennokseen muualta. Nyt 24 %,
+   * keskiosaa 52 %.
+   */
+  width: var(--gallerian-reunakaista);
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #f6f0e0;
+  font-size: 1.7rem;
+  line-height: 1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.hetki-kuvanuoli.edellinen,
+.skandaali-kuvanuoli.edellinen { left: 0; text-align: left; padding-left: 0.4rem; }
+.hetki-kuvanuoli.seuraava,
+.skandaali-kuvanuoli.seuraava { right: 0; text-align: right; padding-right: 0.4rem; }
+/*
+ * KUVAN PÄÄLLÄ OLEVA NUOLI EI SAA TAUSTAA MISSÄÄN TILASSA: yleinen
+ * button:hover/:active-tausta (css/styles.css) voitti ennen tämän
+ * `background: none` -säännön spesifisyydellä ja maalasi 24 %:n
+ * tumman paneelin kuvan päälle (mitattu 19.9.2026, WebKit ja Chromium
+ * kosketustilassa: rgb(67, 51, 31)). Nuoli näkyy vain merkkinä.
+ */
+button.hetki-kuvanuoli:is(:hover, :active, :focus, :focus-visible),
+button.skandaali-kuvanuoli:is(:hover, :active, :focus, :focus-visible) { background: none; }
+.hetki-kuvanuoli:hover,
+.hetki-kuvanuoli:focus-visible,
+.skandaali-kuvanuoli:hover,
+.skandaali-kuvanuoli:focus-visible { opacity: 1; }
+
+.hetki-kuvalaskuri,
+.skandaali-kuvalaskuri {
+  position: absolute;
+  right: 0.45rem;
+  bottom: 0.4rem;
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+  background: rgba(18, 12, 4, 0.55);
+  color: #f6f0e0;
+  font-family: var(--font-type);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
+/* ===========================================================================
+   9. LÖÖPPITAITTO (omistaja 3.9.2026; pilotti GRC sofia-korut, sitten
+      kaikki 83 skandaalikorttia)
+   ---------------------------------------------------------------------------
+   Omistajan tilaus sanatarkasti: "Saisiko nämä skandaalinostot taitettua
+   enemmän lehden muotoon, missä olisi pääotsikko isolla ja sitten olisi
+   vielä ingressitekstiä ja muuta? ... vähän samantyyppisen kuin
+   kaupunkilehden taitto, mutta tee lehdestä aavistuksen pienempi
+   kooltaan, jotta se ei sotkeudu kaupunkilehden kanssa ... hieman
+   keltaisempi pohjaväri, kun kyseessä on lööppi."
+
+   Nosto, jonka datassa on `taitto: 'lehti'`, saa kortille luokan
+   .fokusnosto-looppi. Rakenne ylhäältä alas:
+
+     ylärivi (kohdemallin symboli + luokka)      .fokusnosto-ylarivi
+     nimiö "Lisälehti"                           .looppi-nimio
+     päiväysrivi kaksoisviivoin (paikka · vuosi) .looppi-paivays
+     PÄÄOTSIKKO isolla                           .looppi-otsikko
+     ingressi                                    .looppi-ingressi
+     kuva + kuvateksti (ennallaan)               .fokusnosto-kuva
+     leipäteksti anfangilla, leveällä ruudulla
+     kahdessa palstassa                          .looppi-leipa
+
+   Samat muotoilut kuin kaupunkilehdessä (css/styles.css .lehti-ylarivi,
+   .lehti-alarivi, #arrival-intro::first-letter, #arrival-intro
+   column-count) mutta kortin omassa mitassa: kortti on 40 rem leveä (omistaja 3.9.2026: "vähän leveämpi", 32 → 40)
+   (kaupunkilehti on koko ruutu), joten lehti ja lööppi eivät sekoitu.
+   Pohja on lehden paperia keltaisempi (#f6ecc6): lööppi on lööppi.
+
+   MONISTETTU KAIKKIIN SKANDAALIKORTTEIHIN (omistaja 3.9.2026: *"lööppi
+   lisälehti on nyt hyvä. monista kaikkiin muihinkin"*). Skandaalikortin
+   kuori on oma luokkansa (.skandaali-kortti, osio 7), joten se saa
+   .fokusnosto-looppin rinnalleen ja tarvitsee OMAN valitsimensa samoille
+   arvoille: osion 7 `background`-lyhenne ja `width: min(34rem, 100%)`
+   ovat yhtä tarkkoja kuin yksiluokkainen looppisääntö eivätkä väistäisi
+   sitä. Kaksiluokkainen valitsin voittaa kummankin, ja osion 7 muut
+   kortit (syvennys, hetki) jäävät koskematta.
+
+   VANHA .skandaali-ingressi -SÄÄNTÖ POISTETTU 3.9.2026: skandaalin
+   ingressi (`kortti`) latoutuu nyt .looppi-ingressinä ennen kuvaa, eikä
+   luokkaa `skandaali-ingressi` synnytä enää mikään moduuli (tarkistettu
+   grepillä koko puusta). Kuvaselailun nuolet ja laskuri jäivät osioon 8
+   historian hetken luokkien rinnalle.
+   =========================================================================== */
+
+.fokusnosto-kortti.fokusnosto-looppi,
+.skandaali-kortti.fokusnosto-looppi {
+  width: min(40rem, 100%);
+  background-color: #f6ecc6;
+  background-image: var(--paper-noise);
+  background-blend-mode: multiply;
+  border-color: rgba(122, 85, 20, 0.45);
+}
+
+.fokusnosto-looppi .looppi-nimio {
+  margin: 0.45rem 0 0;
+  font-family: var(--font-type);
+  font-size: 0.6rem;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(70, 51, 31, 0.7);
+}
+
+/* Päiväysrivi saa rivittyä: skandaalien paikannimet ovat pisimmillään
+   yli 60 merkkiä ("Entinen ruhtinaanpalatsi (nyk. Kansallinen
+   taidegalleria), Sofia"), ja kapealla ruudulla rivi menee kahdelle tai
+   kolmelle riville kaksoisviivojen väliin. Väljä riviväli pitää
+   harvennetun versaalin luettavana silloinkin; keskitys ja kaksoisviiva
+   ovat entiset, eikä riviä kielletä katkeamasta. */
+.fokusnosto-looppi .looppi-paivays {
+  margin: 0.2rem 0 0.7rem;
+  padding: 0.22rem 0;
+  border-top: 3px double rgba(70, 51, 31, 0.75);
+  border-bottom: 1px solid rgba(70, 51, 31, 0.5);
+  font-family: var(--font-type);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: center;
+  text-wrap: balance;
+  color: rgba(70, 51, 31, 0.85);
+}
+
+/* Pääotsikko: lehden otsikkokoko, tiukka riviväli, vasen tasaus. Kortin
+   oma otsikkosääntö (.fokusnosto-kortti-otsikko) jättää tilaa
+   sulkunapille; lööpissä nappi on nimiön yläpuolella eikä otsikon
+   vieressä, joten koko leveys on otsikon. */
+.fokusnosto-looppi .looppi-otsikko {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-luku);
+  font-size: clamp(1.45rem, 4.6vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.005em;
+  color: #16130f;
+  text-wrap: balance;
+}
+
+/* Ingressi voi olla useampi kappale (skandaalin `kortti`-kenttä), joten
+   väli on kappaleiden välissä eikä vain viimeisen alla. */
+.fokusnosto-looppi .looppi-ingressi {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-luku);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.42;
+  color: #2a231b;
+}
+
+/* Leipäteksti: anfangi ensimmäiseen kappaleeseen kuten lehden
+   etusivulla, ja leveällä ruudulla kaksi palstaa. */
+.fokusnosto-looppi .looppi-leipa p:first-of-type::first-letter {
+  float: left;
+  font-family: var(--font-type);
+  font-size: 3.1em;
+  line-height: 0.82;
+  font-weight: 700;
+  padding: 0.06em 0.12em 0 0;
+  color: rgba(70, 51, 31, 0.9);
+}
+
+@media (min-width: 560px) {
+  .fokusnosto-looppi .looppi-leipa {
+    column-count: 2;
+    column-gap: 1.4rem;
+    /* Vasen tasaus: kortin palsta on n. 14 em leveä, ja tasapalsta
+       jätti siihen aukkoja (kaappaus 3.9.2026). Lehden 2 rem palstat
+       ovat leveämmät ja kestävät tasauksen. */
+    text-align: left;
+    hyphens: auto;
+  }
+  .fokusnosto-looppi .looppi-leipa p { margin: 0 0 0.65em; }
+  .fokusnosto-looppi .looppi-leipa p:last-child { margin-bottom: 0; }
+}
+
+/* ===========================================================================
+   12. MINIKYSYMYS KORTIN LOPUSSA (karttauudistuksen erä 6, 13.9.2026)
+   ---------------------------------------------------------------------------
+   Säännöt asuvat css/styles.css:ssä (.minitehtava.fokusnosto-visa), koska
+   sama laatikko piirtyy myös kartan kohdekorttiin (js/fokuskohteet.js
+   asetaKohdeVisa), eikä tämä tiedosto ole ladattu kaikilla pinnoilla.
+   Ks. styles.css "NOSTOVISA PAPERINA".
+   =========================================================================== */
+
+/* "HAVAINNEKUVA"-MERKINNÄN (.kuvateksti-havainne) sääntö asuu css/styles.css:ssä:
+   merkki piirtyy myös kartan kohdekorttiin, eikä tämä tiedosto ole ladattu
+   ennen ensimmäistä fokusnostoa (Natiivi-UI:n löydös 24.9.2026). */
+
+/* ===========================================================================
+   13. NOSTOKORTIN KAKSIPALSTATAITTO ≥ 1100 PX (omistaja 21.9.2026,
+       Le Mans -kaappaus työpöydällä; korjattu samana päivänä omistajan
+       hylkäyksen jälkeen — ks. TOINEN YRITYS alla)
+   ---------------------------------------------------------------------------
+   22.9.2026: SAMA TAITTO ON NYT KAIKILLA KUVA EDELLÄ -KORTEILLA (omistaja
+   klo 23.06, "Kaikkiin nostoihin kaksi palstaa") — kohdekortti,
+   skandaali, eläintäky, hetki ja syvennys saavat saman säännön
+   css/nostokuva.css:stä luokan .nostokuva-kortti kautta, ja
+   js/nostokuva.js nostoPalstoiksi rakentaa niille samat kotelot. Tämä
+   osio koskee edelleen nostokorttia sellaisenaan.
+
+   Leveällä ruudulla nostokortti saa kaksi palstaa: kuva JA sen kuvateksti vasemmalla
+   (KUVAPALSTA, enintään 50 % kortista, pystykuvalla kapeampi), kaikki
+   muu oikealla (TEKSTIPALSTA: leipäteksti, mahdollinen kakkoskuva,
+   lähde, karttaliite, "Lukijan kysymys", kohdenappi, pöllökysymykset).
+   Alle rajan kortti on entinen pino (kuva ylhäällä, teksti alla) —
+   js/nostokuva.js NOSTOKUVA_LEVEA_RAJA/NOSTOKUVA_KAPEA_KATTO pitävät
+   kortin leveyden silloin ~760 px:ssä kuvan koosta huolimatta; rajan
+   yläpuolella NOSTOKUVA_LEVEA_KATTO pitää koko kortin ~1100 px:ssä.
+
+   TOINEN YRITYS: KAKSI OMAA KOTELOA, EI display: contents. Ensimmäinen
+   toteutus irrotti kuvatekstin kuvan ALTA suoraan tekstipalstaan
+   `display: contents` -kikalla (yksi grid, kuvan kehys purkautuna) —
+   mutta silloin GRIDIN RIVIKORKEUS periytyi kuvan riviltä myös
+   tekstipalstalle: kuvateksti jäi rivin YLÄLAITAAN, leipäteksti seuraavana
+   gridin rivinä alkoi vasta KUVAN ALAREUNAN tasalta, ja väliin jäi tyhjä
+   kaista (omistajan hylkäys, kaappaus nosto-1400.png 21.9.2026 —
+   "kuvan vieressä on aivan liikaa tyhjää tilaa"). Nyt js/fokusnosto.js
+   (piirraNostonSisus) rakentaa KAKSI ERILLISTÄ koteloa DOMiin —
+   .fokusnosto-kuvapalsta (kuva + kuvateksti, ENNALLAAN pareittain,
+   kuvateksti KUVAN ALLA kuten aina ennenkin) ja .fokusnosto-tekstipalsta
+   (kaikki muu) — kääre .fokusnosto-rivi ympärillä. Flexbox (ei grid):
+   `align-items: flex-start` pitää palstat TOISISTAAN RIIPPUMATTOMINA —
+   kumpikin alkaa samalta yläreunalta eikä kummankaan korkeus periydy
+   toisesta, joten leipäteksti alkaa AINA tekstipalstan yläreunasta eikä
+   putoa kuvan alareunan tasalle. Kortin korkeus seuraa sisältöä: rivin
+   korkeus on korkeamman palstan korkeus, ei mitään pakotettua vähintä.
+
+   ILMAN KUVAA EI KOTELOIDA LAINKAAN. js/fokusnosto.js jättää
+   .fokusnosto-rivi/-kuvapalsta väliin ja liittää tekstipalstan lapset
+   suoraan `.fokusnosto-sisalto`iin, kun kuvaa ei ole (sama DOM-muoto
+   kuin aina ennen tätä ominaisuutta, kaikilla ruuduilla).
+
+   KUVAN KOKO TULEE JS:STÄ, EI TÄSTÄ TIEDOSTOSTA. js/nostokuva.js
+   NOSTOKUVA_KUVAPALSTA_OSUUS (50 %) / -PYSTY_OSUUS (pystykuvalla
+   kapeampi) laskevat kuvan pikselileveyden suoraan `<img>`:n inline-
+   tyyliin (samalla kaavalla kuin kortin oma leveys, NOSTOKUVA_LEVEA_
+   RAJA-kommentti nostokuva.js:ssä) — `.fokusnosto-kuvapalsta`in
+   `max-width` alla on vain VARMISTUS niille harvoille poluille, joissa
+   kuva EI ole JS:n mitoittama (css/fokusnosto.css .fokusnosto-kuva img,
+   kuvaton "kuva edellä" -reitti epäonnistui).
+
+   VASTAUSVAIHTOEHDOT OVAT PALSTAN LEVYISIÄ ILMAN UUTTA SÄÄNTÖÄ:
+   `.minitehtava.fokusnosto-visa` on tekstipalstan tavallinen lohkolapsi
+   (width: auto → täyttää vanhemman leveyden), ja
+   `.kulttuuri-vaihtoehdot button { width: 100% }` (css/styles.css)
+   venyttää napit sen levyisiksi.
+   =========================================================================== */
+@media (min-width: 1100px) {
+  .fokusnosto-kortti .fokusnosto-rivi {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  /* Kuvapalsta on kuvan levyinen (JS mitoittaa), max-width on varmistus. */
+  .fokusnosto-kortti .fokusnosto-kuvapalsta {
+    flex: 0 0 auto;
+    min-width: 0;
+    max-width: 50%;
+  }
+
+  /* Pystykuva: kapeampi kuvapalsta, leveämpi tekstipalsta (vaatimus 1). */
+  .fokusnosto-kortti.fokusnosto-pysty .fokusnosto-kuvapalsta {
+    max-width: 34%;
+  }
+
+  .fokusnosto-kortti .fokusnosto-tekstipalsta {
+    flex: 1 1 0%;
+    min-width: 0;
+  }
+
+  /*
+   * LÖÖPIN SISÄINEN KAKSIPALSTATEKSTI POIS (osio 9, .looppi-leipa
+   * column-count: 2): tekstipalsta on tässä taitossa jo kapea, eikä
+   * leipätekstiä kannata jakaa vielä kahtia sen sisällä.
+   */
+  .fokusnosto-kortti.fokusnosto-looppi .fokusnosto-tekstipalsta .looppi-leipa {
+    column-count: 1;
+  }
 }

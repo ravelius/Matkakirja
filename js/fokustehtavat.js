@@ -92,6 +92,7 @@ import { PULLA_HINTA } from './game.js';
 // mutta sen kysymys asuu yhä sisältötauluissa (ks. fokusVisanKehys).
 import { KULTTUURIT } from './sisaltotaulut.js';
 import { sfx } from './sound.js';
+import { ilmoitaLivianTilanne } from './livia-tilanteet.js';
 
 /** Kevyen kulun lehtitehtävät päällä? Ks. LIPPU yllä. */
 export const FOKUS_LEHTITEHTAVAT = true;
@@ -399,7 +400,7 @@ function aarreAuki(ui, city) {
  * kasvamassa. Maa, jota ei ole taulussa, saa yleisnimen: väärä
  * paikallisnimi olisi pahempi kuin rehellinen yleisnimi.
  */
-const PULLA_NIMET = {
+export const PULLA_NIMET = {
   GRC: 'tsoureki',
   BGR: 'kozunak',
   BIH: 'hurmašica',
@@ -467,13 +468,21 @@ const PULLA_NIMET = {
 };
 
 /** Maa, jota taulussa ei ole. */
-const PULLA_YLEISNIMI = 'makea pulla';
+export const PULLA_YLEISNIMI = 'makea pulla';
 
 /** Kuinka kauan varmistusnappi odottaa toista napautusta. */
 const PULLA_VARMISTUS_MS = 6000;
 
-/** Kaupungin pullavastine — aina jokin, koskaan tyhjä. */
-function pullanNimi(ui, city) {
+/**
+ * Kaupungin pullavastine — aina jokin, koskaan tyhjä.
+ *
+ * VIETY JAETTAVAKSI (3.9.2026): sähketehtävän oma pullakauppa
+ * (js/fokusvirta.js) tarvitsee täsmälleen saman nimen kuin aarteen
+ * pullavinkki. Kaksi kopiota PULLA_NIMET-taulusta ajautuisi erilleen
+ * ensimmäisellä uudella maalla, joten taulu ja sen lukija ovat tässä
+ * kerran ja fokusvirta tuo ne.
+ */
+export function pullanNimi(ui, city) {
   const iso = ui?.game?.pack?.map?.cityCountry?.[city?.id] ?? null;
   return (iso && PULLA_NIMET[iso]) || PULLA_YLEISNIMI;
 }
@@ -531,6 +540,113 @@ function pullaKuittausTeksti(nimi) {
 }
 
 /**
+ * PULLAKAUPAN NAPPI — KAKSI NAPAUTUSTA, KASSA JA KUITTAUS.
+ *
+ * VIETY JAETTAVAKSI (3.9.2026, Raamattu: SÄHKETEHTÄVÄ LEHTIMÄISEKSI JA
+ * PULLA VINKIKSI). Kaava on omistajan hyväksymä ja pelitestattu — ei
+ * vahingossa (ensimmäinen napautus varmistaa, toinen maksaa),
+ * varmistus raukeaa itsestään, tyhjä kassa kertoo itsestään Livian
+ * äänellä, ja onnistunut osto jättää rivin tilalle kuittauksen ja
+ * heittää −N puntaa -kellukkeen. Sähketehtävän kaksi pullaa käyttävät
+ * SAMAA funktiota eivätkä kopiota: jos kaava muuttuu, se muuttuu
+ * yhdessä paikassa.
+ *
+ * @param {object} ui
+ * @param {Element} kotelo laatikko, jonka loppuun rivi tulee
+ * @param {object} asetukset tekstit ja kauppa
+ * @param {number} asetukset.hinta punnat
+ * @param {string} asetukset.teksti nappi vastaamattomana
+ * @param {string} asetukset.varmistus nappi varmistusta odottamassa
+ * @param {string} asetukset.koyha nappi kun kassa ei riitä
+ * @param {string} asetukset.kelluke kellukkeen alarivi
+ * @param {string} asetukset.tehty rivi napin tilalle oston jälkeen
+ * @param {boolean} [asetukset.ostettu] jo ostettu: pelkkä kuittaus
+ * @param {() => {ok: boolean}} asetukset.osta pelin oma kassatapahtuma
+ * @param {(rivi: Element) => void} [asetukset.jalkeen] oston jälkityö
+ * @returns {Element} rivi
+ */
+export function pullaOstosnappi(ui, kotelo, {
+  hinta = PULLA_HINTA, teksti, varmistus, koyha, kelluke, tehty,
+  ostettu = false, osta, jalkeen = null, tarjolla = null, luokka = null,
+}) {
+  const rivi = html('div', 'fokus-pulla');
+  if (luokka) rivi.classList.add(luokka);
+  kotelo.appendChild(rivi);
+  if (ostettu) {
+    rivi.appendChild(html('p', 'fokus-pulla-tehty', tehty));
+    return rivi;
+  }
+  const nappi = html('button', 'fokus-pulla-nappi');
+  nappi.type = 'button';
+  const huomio = html('p', 'fokus-pulla-huomio');
+  let varmistusOdottaa = false;
+  let ajastin = 0;
+
+  const koyhaNyt = () => (ui.game.player?.money ?? 0) < hinta;
+
+  const paivita = () => {
+    if (koyhaNyt()) {
+      varmistusOdottaa = false;
+      nappi.disabled = true;
+      nappi.classList.remove('fokus-pulla-varmistus');
+      nappi.textContent = koyha;
+      huomio.textContent = PULLA_KOYHA_LIVIA;
+      huomio.hidden = false;
+      return;
+    }
+    nappi.disabled = false;
+    nappi.classList.toggle('fokus-pulla-varmistus', varmistusOdottaa);
+    nappi.textContent = varmistusOdottaa ? varmistus : teksti;
+    huomio.textContent = varmistusOdottaa ? PULLA_VARMISTUS_OHJE : '';
+    huomio.hidden = !varmistusOdottaa;
+  };
+
+  nappi.addEventListener('click', () => {
+    // Tarjous vanheni rivin ollessa ruudulla (aarre avattiin muuta
+    // tietä): rivi pois, eikä rahaa veloiteta.
+    if (tarjolla && !tarjolla()) {
+      clearTimeout(ajastin);
+      rivi.remove();
+      return;
+    }
+    if (!varmistusOdottaa) {
+      varmistusOdottaa = true;
+      paivita();
+      sfx.play('click');
+      clearTimeout(ajastin);
+      ajastin = setTimeout(() => {
+        varmistusOdottaa = false;
+        paivita();
+      }, PULLA_VARMISTUS_MS);
+      return;
+    }
+    clearTimeout(ajastin);
+    const vastaus = osta();
+    if (!vastaus?.ok) {
+      // Kassa ehti tyhjentyä tai ostos on jo tehty: nappi kertoo
+      // tilanteen eikä jätä pelaajaa varmistustilaan.
+      varmistusOdottaa = false;
+      paivita();
+      return;
+    }
+    sfx.play('coin');
+    rivi.replaceChildren(html('p', 'fokus-pulla-tehty', tehty));
+    const box = ui.buildToast?.({
+      kind: 'stamp', icon: 'kukkaro', text: `−${hinta} puntaa`, sub: kelluke,
+    });
+    if (box) setTimeout(() => ui.removeToast(box), TOAST_MS.default);
+    ui.onChange?.(ui.game);
+    ui.renderTurnPill?.();
+    jalkeen?.(rivi);
+    ilmoitaLivianTilanne('bunGranted', { tunnus: {} });
+  });
+
+  paivita();
+  rivi.append(nappi, huomio);
+  return rivi;
+}
+
+/**
  * ONKO PULLA TARJOLLA TÄSSÄ KAUPUNGISSA JUURI NYT?
  *
  * Kaksi ehtoa, samat kuin aarteen avaavalla kysymyksellä:
@@ -546,6 +662,24 @@ function pullaTarjolla(ui, city) {
   return !aarreAuki(ui, city);
 }
 
+/** Aarteen pullatarjouksen rivin luokka (siivoaPullatarjous löytää sen). */
+const PULLA_AARRERIVI = 'fokus-pulla-aarre';
+
+/**
+ * TARJOUS POIS, KUN AARRE AVATTIIN MUUTA TIETÄ (omistaja 23.9.2026,
+ * sama kuin natiivissa). Lehti ei piirrä itseään uudelleen vastauksen
+ * jälkeen (koko render() sulkisi sen), joten ratkaistun aarretehtävän
+ * alle jäi ostettava pullarivi — ja sillä pystyi maksamaan jo avatusta
+ * aarteesta. Rivit, joissa on yhä ostonappi, poistetaan heti; jo
+ * ostetun pullan kuittausrivi jää.
+ */
+function siivoaPullatarjous(ui, city) {
+  if (typeof document === 'undefined' || pullaTarjolla(ui, city)) return;
+  for (const rivi of document.querySelectorAll(`.${PULLA_AARRERIVI}`)) {
+    if (rivi.querySelector('.fokus-pulla-nappi')) rivi.remove();
+  }
+}
+
 /**
  * TARJOUSRIVI LAATIKON LOPPUUN — nappi ja Livian ääni.
  *
@@ -558,79 +692,29 @@ function pullaTarjolla(ui, city) {
 function piirraPullaOstos(ui, city, kotelo, aarreAvattiin) {
   if (!pullaTarjolla(ui, city)) return null;
   const nimi = pullanNimi(ui, city);
-  const rivi = html('div', 'fokus-pulla');
-  const nappi = html('button', 'fokus-pulla-nappi');
-  nappi.type = 'button';
-  const huomio = html('p', 'fokus-pulla-huomio');
-  let varmistus = false;
-  let ajastin = 0;
-
-  const koyha = () => (ui.game.player?.money ?? 0) < PULLA_HINTA;
-
-  const paivita = () => {
-    if (koyha()) {
-      varmistus = false;
-      nappi.disabled = true;
-      nappi.classList.remove('fokus-pulla-varmistus');
-      nappi.textContent = pullaKoyhaTeksti(nimi);
-      huomio.textContent = PULLA_KOYHA_LIVIA;
-      huomio.hidden = false;
-      return;
-    }
-    nappi.disabled = false;
-    nappi.classList.toggle('fokus-pulla-varmistus', varmistus);
-    nappi.textContent = varmistus ? pullaVarmistusTeksti(nimi) : pullaNapinTeksti(nimi);
-    huomio.textContent = varmistus ? PULLA_VARMISTUS_OHJE : '';
-    huomio.hidden = !varmistus;
-  };
-
-  nappi.addEventListener('click', () => {
-    if (!varmistus) {
-      varmistus = true;
-      paivita();
-      sfx.play('click');
-      clearTimeout(ajastin);
-      ajastin = setTimeout(() => {
-        varmistus = false;
-        paivita();
-      }, PULLA_VARMISTUS_MS);
-      return;
-    }
-    clearTimeout(ajastin);
-    const vastaus = ui.game.actionPullaVinkki(city.id, PULLA_HINTA);
-    if (!vastaus.ok) {
-      // Kassa ehti tyhjentyä tai pulla on jo ostettu: nappi kertoo
-      // tilanteen eikä jätä pelaajaa varmistustilaan.
-      varmistus = false;
-      paivita();
-      return;
-    }
-    sfx.play('coin');
-    rivi.replaceChildren(html('p', 'fokus-pulla-tehty', pullaTehtyTeksti(nimi)));
-    const box = ui.buildToast?.({
-      kind: 'stamp',
-      icon: 'kukkaro',
-      text: `−${PULLA_HINTA} puntaa`,
-      sub: `${nimi} Livialle`,
-    });
-    if (box) setTimeout(() => ui.removeToast(box), TOAST_MS.default);
+  return pullaOstosnappi(ui, kotelo, {
+    tarjolla: () => pullaTarjolla(ui, city),
+    luokka: PULLA_AARRERIVI,
+    hinta: PULLA_HINTA,
+    teksti: pullaNapinTeksti(nimi),
+    varmistus: pullaVarmistusTeksti(nimi),
+    koyha: pullaKoyhaTeksti(nimi),
+    kelluke: `${nimi} Livialle`,
+    tehty: pullaTehtyTeksti(nimi),
+    osta: () => ui.game.actionPullaVinkki(city.id, PULLA_HINTA),
     /*
      * SAMA JÄRJESTYS KUIN OIKEALLA VASTAUKSELLA: tallennus ja
-     * rahapilleri ensin, sitten piste kartalle, ja pöllön kupla
-     * viimeisenä — kupla ei saa luvata mitään, mitä kartalla ei vielä
-     * ole. Koko render() sulkisi lehden, joten sitä ei kutsuta.
+     * rahapilleri ensin (yhteinen nappi hoitaa ne), sitten piste
+     * kartalle, ja pöllön kupla viimeisenä — kupla ei saa luvata
+     * mitään, mitä kartalla ei vielä ole. Koko render() sulkisi
+     * lehden, joten sitä ei kutsuta.
      */
-    ui.onChange?.(ui.game);
-    ui.renderTurnPill?.();
-    ui.paivitaFokuspiste?.();
-    aarreAvattiin?.();
-    kuittausPinta?.(ui, pullaKuittausTeksti(nimi));
+    jalkeen: () => {
+      ui.paivitaFokuspiste?.();
+      aarreAvattiin?.();
+      kuittausPinta?.(ui, pullaKuittausTeksti(nimi));
+    },
   });
-
-  paivita();
-  rivi.append(nappi, huomio);
-  kotelo.appendChild(rivi);
-  return rivi;
 }
 
 /**
@@ -753,6 +837,73 @@ export function piirraSivunTehtava(ui, kohde, kategoria) {
 }
 
 /**
+ * VISAN VASTAUSLIPUKKEET JA TULOSRIVI — YKSI KONE KAHDELLE PINNALLE.
+ *
+ * Sama kolmen osan kuvio on nyt kahdessa paikassa: lehden nimetty
+ * tehtävä (piirraNimettyTehtava alla) ja karttanoston minikysymys
+ * (js/fokusnosto.js piirraNostonVisa, karttauudistuksen erä 6). Osat
+ * ovat kysymyslipukkeet, tulosrivi ja se, MITEN vastaus luetaan:
+ * oikeasta tulee `Oikein! +N puntaa.` ja väärästä `Oikea vastaus: X.`,
+ * kummankin perään datan `fakta`. Äänet ja natiivin kuittaus kulkevat
+ * samaa reittiä.
+ *
+ * MIKSI JAETTU KOMPONENTTI EIKÄ KOPIO. Palkkiot eroavat (lehti 50 p,
+ * nosto 25 p, Raamattu KARTTAUUDISTUKSEN PAATOKSET 1), mutta
+ * palautteen sanamuoto ja se, että VÄÄRÄKIN vastaus kertoo oikean, on
+ * pelin sääntö eikä pinnan koriste. Kopio ajautuisi erilleen
+ * ensimmäisessä muutoksessa.
+ *
+ * KIRJAUS JÄÄ KUTSUJALLE. Tämä ei tiedä kaupungista, aiheesta eikä
+ * laskureista: `kirjaa(oikein)` tekee kassan ja kirjanpidon ja
+ * palauttaa `actionMinitehtava`n vastauksen. Falsy tai `{ ok: false }`
+ * (esim. jo vastattu) keskeyttää — mitään ei piirretä eikä soiteta,
+ * eikä `ennen`/`jalkeen` aja. Näin sama kysymys ei voi maksaa
+ * kahdesti kummallakaan pinnalla.
+ *
+ * @param {Element} laatikko Mihin lipukkeet ja tulosrivi liitetään.
+ * @param {object} asetukset
+ * @param {{ kysymys: string, vaihtoehdot: string[], oikea: number,
+ *   fakta?: string }} asetukset.visa
+ * @param {number} asetukset.palkkio Puntaa oikeasta vastauksesta.
+ * @param {(oikein: boolean) => ({ ok: boolean }|null|undefined)} asetukset.kirjaa
+ * @param {(oikein: boolean) => void} [asetukset.ennen] Heti kirjauksen
+ *   jälkeen, ennen tulosrivin piirtoa.
+ * @param {(oikein: boolean) => void} [asetukset.jalkeen] Tulosrivin
+ *   jälkeen: palkintokuvat, tallennus, kuittaukset.
+ * @returns {{ vaihtoehdot: Element, tulos: Element }}
+ */
+export function piirraVisanVastaukset(laatikko, {
+  visa, palkkio, kirjaa, ennen, jalkeen,
+}) {
+  const vaihtoehdot = html('div', 'kulttuuri-vaihtoehdot');
+  const tulos = html('p', 'kulttuuri-tulos');
+  tulos.hidden = true;
+  visa.vaihtoehdot.forEach((teksti, i) => {
+    const nappi = html('button', '', teksti);
+    nappi.type = 'button';
+    nappi.addEventListener('click', () => {
+      const oikein = i === visa.oikea;
+      const vastaus = kirjaa(oikein);
+      if (!vastaus?.ok) return;
+      ennen?.(oikein);
+      vaihtoehdot.replaceChildren();
+      tulos.hidden = false;
+      tulos.className = oikein ? 'kulttuuri-tulos oikein-tulos' : 'kulttuuri-tulos vaarin-tulos';
+      tulos.textContent = (oikein
+        ? `Oikein! +${palkkio} puntaa. `
+        : `Oikea vastaus: ${visa.vaihtoehdot[visa.oikea]}. `) + (visa.fakta ?? '');
+      sfx.play(oikein ? 'correct' : 'wrong');
+      natiiviVastaus(oikein);
+      jalkeen?.(oikein);
+    });
+    vaihtoehdot.appendChild(nappi);
+  });
+  laatikko.appendChild(vaihtoehdot);
+  laatikko.appendChild(tulos);
+  return { vaihtoehdot, tulos };
+}
+
+/**
  * Nimetty tehtävälaatikko sivun loppuun.
  *
  * Ulkoasu on lehden minitehtävän oma (.minitehtava ja sen luokat,
@@ -843,31 +994,25 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
     ? ui.piirraJulistepalkinto(laatikko, julisteAvain, juliste, ui.game.julisteet?.has(julisteAvain))
     : null;
   laatikko.appendChild(html('p', 'minitehtava-kysymys', visa.kysymys));
-  const vaihtoehdot = html('div', 'kulttuuri-vaihtoehdot');
-  const tulos = html('p', 'kulttuuri-tulos');
-  tulos.hidden = true;
-  visa.vaihtoehdot.forEach((teksti, i) => {
-    const nappi = html('button', '', teksti);
-    nappi.type = 'button';
-    nappi.addEventListener('click', () => {
-      const oikein = i === visa.oikea;
-      // Tilanne ENNEN vastausta: kuittaus ei saa kertoa jäljen
-      // syttyneen, jos se paloi kartalla jo tähän napautettaessa.
-      const oliAuki = aarreAuki(ui, city);
-      const vastaus = ui.game.actionMinitehtava(
+  // Tilanne ENNEN vastausta: kuittaus ei saa kertoa jäljen syttyneen,
+  // jos se paloi kartalla jo tähän napautettaessa. Arvo luetaan
+  // kirjauksen alussa, eli ennen kuin actionMinitehtava on muuttanut
+  // mitään — siksi se on `kirjaa`n sisällä eikä sen ulkopuolella.
+  let oliAuki = false;
+  piirraVisanVastaukset(laatikko, {
+    visa,
+    palkkio: FOKUS_TEHTAVA_PALKKIO,
+    kirjaa: (oikein) => {
+      oliAuki = aarreAuki(ui, city);
+      return ui.game.actionMinitehtava(
         city.id, tehtavanAihe(tehtava), oikein, FOKUS_TEHTAVA_PALKKIO,
       );
-      if (!vastaus.ok) return;
+    },
+    ennen: () => {
       // Vihjerivi oli lupaus vastaamattomalle; nyt tilalle tulee tulos.
       vihjerivi?.remove();
-      vaihtoehdot.replaceChildren();
-      tulos.hidden = false;
-      tulos.className = oikein ? 'kulttuuri-tulos oikein-tulos' : 'kulttuuri-tulos vaarin-tulos';
-      tulos.textContent = (oikein
-        ? `Oikein! +${FOKUS_TEHTAVA_PALKKIO} puntaa. `
-        : `Oikea vastaus: ${visa.vaihtoehdot[visa.oikea]}. `) + (visa.fakta ?? '');
-      sfx.play(oikein ? 'correct' : 'wrong');
-      natiiviVastaus(oikein);
+    },
+    jalkeen: (oikein) => {
       if (oikein) {
         const box = ui.buildToast?.({
           kind: 'stamp',
@@ -899,6 +1044,7 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
        * voisi ehtiä katsoa karttaa sitä ennen.
        */
       if (oikein && avaaAarteen(tehtava)) ui.paivitaFokuspiste?.();
+      if (oikein) siivoaPullatarjous(ui, city);
       /*
        * PÖLLÖ KERTOO PALKINNOSTA VIIMEISENÄ. Kupla nousee pöllönapista
        * lehden päälle, ja se on tässä vasta kaiken muun jälkeen kahdesta
@@ -907,11 +1053,8 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
        * lukee siitä, kumpi tehtävä on vielä tekemättä.
        */
       if (oikein) kuittausPinta?.(ui, kuittausTeksti(ui, city, tehtava, oliAuki));
-    });
-    vaihtoehdot.appendChild(nappi);
+    },
   });
-  laatikko.appendChild(vaihtoehdot);
-  laatikko.appendChild(tulos);
   /*
    * TARJOUS VASTAUSLIPUKKEIDEN ALLE, EI NIIDEN SEKAAN. Se on eri asia
    * kuin vastaaminen — toinen tie samaan vinkkiin — ja sen on näytettävä
@@ -1059,6 +1202,7 @@ function visaanVastattiin(ui, city, oikein) {
   ui.arrivalKulttuuriVisa?.classList.remove('fokus-visa-aarre');
   ui.arrivalKulttuuriVisa?.querySelector('.fokus-tehtava-vihje')?.remove();
   if (!oikein) return;
+  siivoaPullatarjous(ui, city);
   // Sama järjestys kuin nimetyssä tehtävässä: piste ensin kartalle,
   // vasta sitten pöllö — kupla ei saa luvata mitään, mitä siellä ei ole.
   ui.paivitaFokuspiste?.();

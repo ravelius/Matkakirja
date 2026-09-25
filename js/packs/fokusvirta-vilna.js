@@ -146,33 +146,115 @@ export const FOKUSVIRTA_VILNA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ilman lisäystä. */
-    paikkarivi: 'Vilna, kesäkuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Kaupunki on täynnä kirkkoja kuin lipas helmiä: barokkia joka '
-      + 'kadunkulmassa, ja niiden välissä kapeita kujia, joilla myydään '
-      + 'meripihkaa ja pyhäinkuvia. Keisarikunnan raja kulkee lännempänä, '
-      + 'mutta täällä rukoillaan monella kielellä — puolaksi, liettuaksi, '
-      + 'hepreaksi, venäjäksi — ja jokainen pitää kaupunkia omanaan. '
-      + 'Katedraalin tornista näin metsää joka suuntaan: tämä maa on metsän '
-      + 'sydämeen rakennettu.',
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 bbc6d613a504b26f946499b66a2591a7f1fe69cf825e8b4e8650e828850a6ba7. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-vilna-r20260909-paper-v4.jpg",
+      lyhyt: "Vilna, 1873. Auringolla oli pilkkuja, tutkijalla teetä.",
+      selite: "Observatorion pöydällä auringonpilkkujen kuva näytti ensin vialliselta vedokselta. Kaukoputki odotti pilvien väistymistä, ja ikkunan takana Vilnan tornit osoittivat kohti taivasta.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.muziejus.vu.lt/en/departments/observatory-of-ideas","https://www.knygynas.vu.lt/kitos-knygos/vadovas-po-senaja-vu-astronomijos-observatorija"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-vilna-r20260911-paper2-v1.jpg",
+      lyhyt: "Vilna, 1873. Pilvien väistyessä tuoli ehti palvella tiedettä.",
+      selite: "Tutkija odotti ikkunalla pilvien väistymistä kaukoputken äärellä. Istuin teekuppi kädessä ja katselin päivänvalossa Vilnan kirkontorneja.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.muziejus.vu.lt/en/departments/observatory-of-ideas"],
+    },
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Vilna, kesäkuussa 1873. Poutaa; kirkonkellot kuuluvat '
+      + 'kukkulalle; puntari korkealla.',
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
+    teksti: "Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.",
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    luenta: '[curious] Kaupunki on täynnä kirkkoja kuin lipas helmiä: '
-      + 'barokkia joka kadunkulmassa, ja niiden välissä kapeita kujia, '
-      + 'joilla myydään meripihkaa ja pyhäinkuvia. [warmly] Keisarikunnan '
-      + 'raja kulkee lännempänä, mutta täällä rukoillaan monella kielellä — '
-      + 'puolaksi, liettuaksi, hepreaksi, venäjäksi — ja jokainen pitää '
-      + 'kaupunkia omanaan. [softly] Katedraalin tornista näin metsää joka '
-      + 'suuntaan: tämä maa on metsän sydämeen rakennettu.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: valokuvan esittely ja "Tutkija odotti pilvien
+     * väistymistä" (taustaa).
+     */
+    reaktiot: [
+  {
+    "id": "vilna.r1",
+    "ankkuri": "tarjosi salakuljetettua tavaraa",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "vilna.r2",
+    "ankkuri": "Aapisen",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "vilna.r3",
+    "ankkuri": "kieltäneet liettuan painamisen latinalaisin kirjaimin",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.55,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "vilna.r4",
+    "ankkuri": "Ostin kirjan ja piilotin sen",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "vilna.r5",
+    "ankkuri": "pelkäämään vain opettajaa",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.25,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[softly] Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. [thoughtfully] Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-vilna.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-vilna-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-vilna-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Vilna: tähtitieteilijänkin ikkuna avautuu tavalliseen päivään.',
+        selite: 'Vilnan yliopiston vanhan observatorion pihalla ikkunat ja '
+          + 'tornit kohoavat päivänvalossa kulkijoiden ylle. Opiskelija '
+          + 'kulkee pihan poikki kirjat ja laukku mukanaan.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://biblioteka.vu.lt/e.parodos/kiemeliai/vu/observatorijoskiemas/infoen.html',
+          'https://www.muziejus.vu.lt/en/',
+        ],
+      },
+    ],
     /*
      * KAANONTEKSTI ON JAETTU KAHTEEN KENTTÄÄN, EI MUUTETTU.
      *
@@ -193,12 +275,33 @@ export const FOKUSVIRTA_VILNA = {
      * ole muutettu — peräkkäin luettuna teksti on sanasta sanaan Fablen
      * kaanonteksti.
      */
-    maadoitus: 'Vilnan vanhakaupunki on nykyään maailmanperintöä juuri '
-      + 'niiden kirkkojen takia, ja kieliä kuulee kaduilla edelleen monta.. '
-      + 'Se metsä joka suuntaan pitää myös yhä paikkansa — Liettua on '
-      + 'Euroopan metsäisimpiä maita.',
-    teksti: 'Katedraali seisoo paikallaan, ja sen alla on jotain mistä '
-      + 'isoisäsi ei tiennyt puoliakaan. Mennään katsomaan.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
+    kommentti: ["Vilnan Užupisin taiteilijat julistivat kaupunginosansa leikillään tasavallaksi. Sen perustuslaki vapauttaa kissan rakastamasta omistajaansa. Minä etsin lintujen pykälää. Se puuttuu. Minulla olisi lisättävää."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'miettiva', voimakkuus: 0.45 },
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-
      * kategoriat.js, vilna/avauskuvat, heroerä 31): Gediminaan torni
@@ -212,6 +315,7 @@ export const FOKUSVIRTA_VILNA = {
      */
     kuva: {
       ampari: 'herokoe/hero-vilna-gediminas.jpg',
+      lyhyt: 'Gediminaan torni on ainoa jäljellä oleva osa Vilnan ylälinnasta, 1400-luvun puoliväliltä.',
       selite: 'Gediminaan torni on ainoa jäljellä oleva osa Vilnan '
         + 'ylälinnasta, ja nykyinen tiilitorni on 1400-luvun puolivälistä.',
       lahde: 'Matkakirjan havainnekuva',
@@ -299,6 +403,10 @@ export const FOKUSVIRTA_VILNA = {
         + 'hyvin harjoitellut vastarinta. Kirjankantajan päivää vietetään '
         + '16. maaliskuuta, kuuluisimman kantajan Jurgis Bielinisin '
         + 'syntymäpäivänä.',
+      lahde: 'en-Wikipedia "Knygnešys" ja en-Wikipedia "Lithuanian press '
+        + 'ban"; pelin oma tarkistettu aineisto '
+        + 'js/packs/kulttuuri-kategoriat.js (vilna/oppi). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto vilna/oppi,
        * js/packs/kulttuuri-kategoriat.js) — siis jo kertaalleen
@@ -310,6 +418,7 @@ export const FOKUSVIRTA_VILNA = {
        */
       kuva: {
         tiedosto: 'Lithuanian book carrier Kazys Ūdra (1857–1937).jpg',
+        lyhyt: 'Kazys Ūdra (1857–1937) oli knygnešys, joka kuljetti kiellettyjä liettuankielisiä kirjoja rajan yli.',
         selite: 'Kazys Ūdra (1857–1937) oli knygnešys eli kirjankantaja, '
           + 'joka kuljetti kiellettyjä liettuankielisiä kirjoja rajan yli '
           + 'selässään.',
@@ -392,6 +501,9 @@ export const FOKUSVIRTA_VILNA = {
         + 'kivelle ja halkaisi sen — mistä kaupungissa riitti puhetta '
         + 'pitkäksi aikaa. Kivi on nykyään nostettu pääoven viereen '
         + 'seinälle.',
+      lahde: 'en-Wikipedia "Church of St. Peter and St. Paul, Vilnius"; pelin '
+        + 'oma tarkistettu aineisto js/packs/kulttuuri-kategoriat.js '
+        + '(vilna/avauskuvat). Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 5679×3775, CC BY-SA 4.0, Scotch Mist, kuvattu
        * 7.6.2018, osa saman kuvaajan Vilna-sarjaa. Restrictions tyhjä.
@@ -410,6 +522,7 @@ export const FOKUSVIRTA_VILNA = {
        */
       kuva: {
         tiedosto: 'Vilnius Sts Peter et Paul Church 05.jpg',
+        lyhyt: 'Pyhien Pietarin ja Paavalin kirkon holveissa on noin 2000 valkoista stukkohahmoa.',
         selite: 'Pyhien Pietarin ja Paavalin kirkon holveissa on noin '
           + 'kaksituhatta stukkohahmoa, ja ne ovat kaikki valkoisia.',
         lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
@@ -501,6 +614,9 @@ export const FOKUSVIRTA_VILNA = {
         + 'kolme ja puoli kiloa painava möhkäle, Euroopan kolmanneksi '
         + 'suurin. Se on varastettu museosta kahdesti ja palautettu '
         + 'kahdesti.',
+      lahde: 'en-Wikipedia "Amber" ja en-Wikipedia "Palanga Amber Museum"; '
+        + 'pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
+        + '(LTU/luonto). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto LTU/luonto,
        * js/packs/maa-kategoriat.js) — jo kertaalleen tarkistettu ja
@@ -516,6 +632,7 @@ export const FOKUSVIRTA_VILNA = {
        */
       kuva: {
         tiedosto: 'Sun of Amber.jpg',
+        lyhyt: 'Palangan meripihkamuseon Meripihkan aurinko painaa 3526 g, Euroopan kolmanneksi suurin.',
         selite: 'Palangan meripihkamuseon Meripihkan aurinko painaa 3526 '
           + 'grammaa ja on Euroopan kolmanneksi suurin meripihkapala.',
         lahde: 'Beny Shlevich, Wikimedia Commons (CC BY-SA 2.0)',
@@ -658,6 +775,7 @@ export const FOKUSVIRTA_VILNA = {
      */
     kuva: {
       tiedosto: 'Vilnius Cathedral in the 19th c.jpg',
+      lyhyt: 'Puupiirros Vilnan katedraalista 1871: kolme kivipatsasta purettiin 1950 ja palasivat 1997.',
       selite: 'Puupiirros Vilnan katedraalista noin vuodelta 1871: katolla '
         + 'seisovat vielä ne kolme kivipatsasta, jotka purettiin 1950 ja '
         + 'palasivat paikoilleen vasta 1997.',
@@ -906,6 +1024,7 @@ export const FOKUSVIRTA_VILNA = {
        */
       kuva: {
         tiedosto: 'Dune slope with view over the lagoon at Curonian Spit, Lithuania.jpg',
+        lyhyt: 'Kuršių nerija on 98 km pitkä dyynikannas, joka erottaa Kuurinlahden ja kuuluu Unescoon.',
         selite: 'Kuršių nerija on 98 kilometrin pituinen dyynikannas, joka '
           + 'erottaa Kuurinlahden Itämerestä ja kuuluu Unescon '
           + 'maailmanperintöön.',
@@ -1017,6 +1136,7 @@ export const FOKUSVIRTA_VILNA = {
        */
       kuva: {
         tiedosto: 'Hill of Crosses 1, Siauliai, Lithuania.JPG',
+        lyhyt: 'Ristien kukkulalla arvioitiin olevan 55 000 ristiä 1990 ja 100 000 vuonna 2006.',
         selite: 'Ristien kukkulalla arvioitiin olevan noin 55 000 ristiä '
           + 'vuonna 1990 ja noin 100 000 vuonna 2006, eikä tarkkaa lukua ole '
           + 'kenelläkään.',
@@ -1128,6 +1248,7 @@ export const FOKUSVIRTA_VILNA = {
        */
       kuva: {
         tiedosto: 'Front facade of the Trakai Island Castle, 2009.jpg',
+        lyhyt: 'Trakain saarilinnan rakensivat Kęstutis ja hänen poikansa Vytautas Suuri, joka kuoli linnassa 1430.',
         selite: 'Trakain saarilinnan rakensivat Kęstutis 1300-luvulla ja '
           + 'hänen poikansa Vytautas Suuri, joka kuoli linnassa 1430.',
         lahde: 'Leszek Kozlowski, Wikimedia Commons (CC BY 2.0)',

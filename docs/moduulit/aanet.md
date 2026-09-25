@@ -1,0 +1,1213 @@
+# Siirtymämusiikki ja pelin äänet — tuotanto-ohje
+
+Sitovat linjaukset ovat Raamatussa (js/tyohuone-raamattu.js). Tämä
+dokumentti kertoo, miten musiikkiraidat (siirtymät ja linssit) ja
+ämpärissä asuvat ääniefektit tuotetaan ja viedään. Koodin kuvaus on
+moduulien js/siirtymamusiikki.js ja js/tehosteet.js
+otsikkokommenteissa.
+
+## Siirtymämusiikki (omistaja 2.9.2026)
+
+Kolme raitaa, yksi per kulkumuoto: `siirtyma-jalan-lyria.mp3`,
+`siirtyma-laiva-lyria.mp3`, `siirtyma-lento-lyria.mp3` (pääte on
+moottorin nimi, ks. Generointi).
+
+| ominaisuus | vaatimus |
+|---|---|
+| kesto | 10–20 s; pisin siirto on n. 5,7 s, lyhin n. 1,4 s |
+| looppi | saumaton äänitteessä itsessään (alku ja loppu samaan lepoon, ei häntää, ei hiljaisuutta) — peli ei ristihäivytä |
+| taso | −33 LUFS, mittaus `node tools/mittaa-aanet.mjs` |
+| formaatti | mp3, mono, 128 kbps, 44,1 kHz |
+| luonne | jalan = kävelyn rytmi, kevyt ja etenevä; laiva = aallokon huojunta, hitaampi ja leveämpi; lento = ilmava ja liikkumaton, soi kabiiniäänen alla |
+| ei tekstiä, ei laulua | instrumentaali |
+
+Peli feidaa sisään 300 ms ja ulos 500 ms; voima jalan/laiva 0,11,
+lento 0,06. Musiikki väistyy pöllön, kertojan ja lukijan alta.
+
+## Linssien musiikki (omistaja 2.9.2026 ilta)
+
+Omistajan tilaus: *"Generoi linssille oma musiikki"*. Aikajanalinssi
+(js/aikajana.js + js/linssit/keksinnot.js) soittaa omaa raitaansa koko
+ajon ajan. Raita on saman moduulin (js/siirtymamusiikki.js) laji siinä
+missä siirtymätkin — koneisto, kaksi polkua, väistö ja puuttuvan
+raidan sietäminen ovat samat — mutta mitat ovat toiset.
+
+| ominaisuus | vaatimus |
+|---|---|
+| tiedosto | `linssi-keksinnot-lyria.mp3` (laji `keksinnot`) |
+| kesto | 45–60 s; linssi kestää minuutteja (25 pysäkkiä), joten lyhyt kierto alkaisi kuulua silmukaksi |
+| looppi | saumaton äänitteessä itsessään, kuten siirtymäraidoilla |
+| taso ja formaatti | −33 LUFS; mp3, mono, 128 kbps, 44,1 kHz |
+| luonne | pohjalla levossa olevan **sydämen syke** (n. 60 bpm, omistajan tarkennus 3.9.2026) ja sen päällä hillitty 1800-luvun kellokoneisto: tikitys, uteliaisuus ja odotus; akustinen (jouset, puupuhaltimet, kevyt vasarapiano tai cembalo) |
+| ei | ei elektronista, ei laulua, ei tekstiä, ei liian tunnelmoivaa — kello ja filminauha liikkuvat musiikin päällä |
+
+Peli feidaa sisään 600 ms ja ulos 800 ms (siirtymää rauhallisemmin:
+linssi avataan kerran), voima 0,11, looppi päällä koko ajon ajan.
+Musiikki alkaa, kun linssi käynnistyy (kamera-ajon kanssa, ennen
+kelloa), **jatkuu tauon yli puoleen tasoon hiljennettynä** (napautus
+kelloon tai korttiin) ja feidataan pois, kun linssi suljetaan tai
+juttu avataan nähtävyyskorttina — kortin sulkeutuessa se palaa.
+Kaari kertoo raidan kentässä `aikajana.musiikki`; ilman kenttää ajo
+on hiljainen.
+
+Generointi on sama työkalu: `--laji keksinnot`. Valinta `kaikki` EI
+sisällä sitä (ks. alla).
+
+## Linssitilan äänimaailma (omistaja 3.9.2026)
+
+Omistajan tilaus: *"Kun linssitila menee päälle, niin kaikki muut
+äänet saisi vaieta taustalta ja oma linssin generoitu musiikki saisi
+alkaa toistua taustalla."*
+
+| hetki | mitä tapahtuu |
+|---|---|
+| linssi käynnistyy | `hiljennaAmbienssi('linssi')` vie kaupunkiäänet, pohjavireen, visamusiikin ja radion alas yhdellä syyllä; `pysaytaLukija()` vaientaa kesken olevan luennan |
+| linssin oma raita | alkaa samalla hetkellä eikä väisty omaa hiljennystään (js/siirtymamusiikki.js `lajinVaisto`) — pöllö, kertoja ja lukija vaimentavat sen yhä |
+| vuosi vaihtuu | **kohahdus** ämpäristä (alla); jos varianttia ei ole, kellon oma syntetisoitu naksahdus (js/sound.js `vuosi`) |
+| linssi suljetaan | `palautaAmbienssi('linssi')` samalla syyllä purussa |
+
+## Ääniefektit: kohahdus (omistaja 3.9.2026)
+
+Omistajan tilaus: *"se efektiääni vuodenvaihtuessa voisi olla joku
+uuu-huudahdus, aivan kuin yleisö kohahtaisi, kun uusi hieno keksintö
+saapuu maailmaan. Niitä vain pitäisi sitten generoida useampia
+variantteja, jotta sama ääniefekti ei toistuisi peräjälkeen. Ne
+voisivat kuitenkin olla aika lähellä toisiaan."*
+
+| ominaisuus | vaatimus |
+|---|---|
+| tiedostot | `aanet/tehosteet/kohahdus-1.mp3` … `kohahdus-4.mp3` |
+| kesto | n. 1,5 s (hyväksytään 1,0–2,4 s) |
+| taso ja formaatti | −30 LUFS (3 dB musiikkia kovempi); mp3, mono, 128 kbps, 44,1 kHz |
+| luonne | pienen 1800-luvun luentosalin yleisö, hillitty ihastunut "uuu"; ei aplodeja, ei puhetta, kuiva sisätila |
+| variantit | neljä samasta promptista — *"aika lähellä toisiaan"*, ero mallin omasta satunnaisuudesta |
+| päät | hiljaisuus leikattu pois, 30 ms häivytykset |
+
+Peli (js/tehosteet.js) esilataa variantit `preload="metadata"`
+-elementteinä, arpoo yhden eikä koskaan soita samaa kahdesti
+peräkkäin, ei aloita uutta ennen kuin edellinen on soinut loppuun ja
+kunnioittaa mykistystä ja taustatilaa. Voimakkuus on 0,35 ×
+linssiraidan voima — omistaja: *"ei tarvitse nousta merkittävästi
+taustamusiikin päälle"*.
+
+```
+node tools/generoi-tehosteet.mjs --laji kohahdus
+node tools/generoi-tehosteet.mjs --laji kohahdus --maara 1 --ei-vientia
+node tools/generoi-tehosteet.mjs --laji kohahdus --kuiva
+```
+
+| lippu | merkitys |
+|---|---|
+| `--laji kohahdus` | pakollinen (toistaiseksi ainoa laji) |
+| `--maara N` | montako varianttia, 1–8 (oletus 4). **Jokainen on oma maksullinen kutsunsa.** |
+| `--kuiva` | ei APIa eikä vientiä: tulostaa promptin ja ajaa ffmpeg-ketjun syntetisoidulla äänellä |
+| `--ei-vientia` | generoi ja viimeistele, mutta jätä tiedostot levylle |
+
+Rajapinta on ElevenLabsin **sound-generation**
+(`POST /v1/sound-generation`, kentät `text`, `duration_seconds`,
+`prompt_influence`) — eri kuin musiikin `/v1/music`. Ketju: kutsu per
+variantti, hiljaisuus pois päistä (`silenceremove` molempiin suuntiin),
+30 ms häivytykset, taso mitataan loudnormilla ja korjataan yhdellä
+lineaarisella vahvistuksella −30 LUFSiin. Tiedostot kirjoitetaan
+`media/tehosteet/`-kansioon (.gitignoressa) ja viedään ämpärin
+`aanet/tehosteet/`-kansioon; raakatuotos jää `media/tehosteet-raaka/`.
+Ajo: `.github/workflows/generoi-tehosteet.yml` (workflow_dispatch,
+inputit `laji` ja `maara`, samat salaisuudet kuin musiikkiajolla).
+
+## Kaupunkiraidat (omistaja 5.9.2026)
+
+Omistajan tilaus klo 00.35, sanatarkasti: *"ateenaan saavuttaessa voisi
+vaihtua kappale. generoi sinne oma musiikki."*
+
+Kaupunkiraita ei ole uusi kerros vaan **pohjavireen paikallinen
+sijainen**: kun pelaaja saapuu kaupunkiin, jolla on oma kappale,
+pohjavire (`musa-pohja`) ristihäivytetään kaupungin raitaan, ja kun
+kaupungista lähdetään, se palaa samaa tietä. Raita soi siis samassa
+kohdassa sekoitusta kuin pohjavire — ambienssiäänten alla, samalla
+väistöllä (pöllö, kertoja, lukija) ja samalla kehittäjäkertoimella
+(`musiikki`).
+
+| ominaisuus | vaatimus |
+|---|---|
+| tiedosto | `musa-kaupunki-<kaupungin id>.mp3` (Lyrialla `-lyria`-päätteellä), esim. `musa-kaupunki-ateena-lyria.mp3` |
+| kesto | 60–90 s (Ateena 75 s); pelaaja viipyy kaupungissa minuutteja, ja lyhyt kierto alkaisi kuulua silmukaksi |
+| looppi | saumaton äänitteessä itsessään, kuten pohjavireellä — sauma pyydetään promptissa, sitä ei leikata ffmpegillä (ks. Musiikkipaletti) |
+| taso ja formaatti | sama kuin paletilla; peli soittaa raidan pohjavireen tasolla (POHJA_VOIMA) |
+| luonne | kaupungin oma, mutta **pohjaäänimaiseman ALLA** — ei saa viedä huomiota kertojalta eikä maisemalta |
+
+Ateenan prompti (Fablen sanoin omistajan tilauksesta): *"Ateenaan
+saapuminen iltapäivällä: kevyt, valoisa ja lämmin instrumentaali,
+bouzouki ja kitara hillitysti, hidas rytmi, Välimeren ilta, ei laulua,
+ei turistikliseitä, soi pohjaäänimaiseman ALLA."*
+
+**Mekanismi pelissä.** Taulukko ja nimisääntö ovat
+`js/kaupunkimusiikki.js`:ssä (`KAUPUNKIRAIDAT`, `kaupunginMusiikki`,
+`kaupunkiraidanTunnus`), soitin `js/ambience-stream.js`:n
+pohjavirekoneistossa. `playPlaceAmbience` antaa paikan tunnuksen
+`kaynnistaPohjaMusiikki(cityId)`:lle: jos kaupungilla on oma raita, se
+otetaan soivan tilalle 1,5 sekunnin ristihäivytyksellä, ja matkan aikana
+(`jalkamatka`, `merimatka`, `lentomatka`, `null`) sama koneisto palaa
+pohjavireeseen. Polku lasketaan `musaPolku`-apurilla, joten
+`MUSIIKIN_PAATE`-kytkin koskee kaupunkiraitoja siinä missä palettiakin.
+
+**Puuttuva raita ei riko mitään.** Jos kaupungin mp3 ei vastaa (404 —
+normaali tila siinä välissä, kun taulukko on mainissa ja raita vasta
+generoidaan), polku merkitään puuttuvaksi tälle istunnolle ja pohjavire
+käynnistetään sen tilalle. Peli ei siis ole hetkeäkään hiljainen.
+
+**Miten uusi kaupunki lisätään** (Fablen työ; molemmat taulut, muuten
+`tests/kaupunkimusiikki.test.mjs` kaatuu):
+
+1. `js/kaupunkimusiikki.js` → `KAUPUNKIRAIDAT`: avaimeksi laudan
+   kaupungin id (`js/packs/europe.js` `id: 'ateena'`) ja lyhyt kuvaus.
+2. `tools/generoi-musiikki.mjs` → `RAIDAT`: sama avain, `laji:
+   'kaupunki'`, `kaupunki: '<id>'`, `tiedosto:
+   'musa-kaupunki-<id>.mp3'`, kesto, `looppi: true` ja prompti.
+3. Aja työnkulku ja kuuntele raita PR:ssä ennen mergeä.
+
+**Työnkulun ajo.** `.github/workflows/generoi-musiikki.yml`
+(workflow_dispatch), `raidat`-inputiin kaupungin nimi tai ryhmä:
+
+```
+raidat: ateena       # yksi kaupunki
+raidat: kaupungit    # kaupunkien omat kappaleet JA alueraidat
+```
+
+**Kaupungit, joilla ei ole omaa kappaletta, saavat ALUEENSA raidan**
+(5.9.2026 yö) — ks. *Pohjaraidan valitsin* alla. Oma kappale on siis
+poikkeus, alue on sääntö, eikä uutta kaupunkia tarvitse lisätä minnekään.
+
+Kaupunkiraidat **eivät** sisälly valintaan `kaikki` (= paletin neljä
+raitaa) — sama varovaisuus kuin linssiraidalla siirtymätyökalussa:
+valmista raitaa ei generoida vahingossa uudestaan, ja jokainen kutsu
+maksaa. Paikallinen kuiva ajo ilman avainta:
+
+```
+node tools/generoi-musiikki.mjs kaupungit --kuiva
+node tools/generoi-musiikki.mjs ateena --moottori lyria
+```
+
+Vienti kulkee kuten paletilla: ajo vie mp3:n suoraan ämpärin
+`audio/`-kansioon ja liittää sen ajon artefaktiksi kuuntelua varten
+(mp3:ia ei committoida). Työhuoneen Musiikki-lehden **Kaupunkiraidat**-
+osasto (Paletti-sivu) kertoo, onko raita jo ämpärissä, ja soittaa sen.
+
+## Musiikki kohtauksittain — inventaario (5.9.2026 yö)
+
+Omistajan tilaus, sanatarkasti: *"generoi musiikkeja kaikkiin kohtiin
+peliä, ne tuovat paljon lisää tunnelmaa."* Ennen työtä käytiin läpi
+jokainen kohtaus ja kirjattiin, mitä siinä nyt soi. Taulukko on
+inventaario, ei suunnitelma: *lisätty*-sarake kertoo, mitä tässä
+erässä tehtiin.
+
+| kohtaus | soi jo (koneisto ja raita) | lisätty |
+|---|---|---|
+| etusivun portti ja avausteksti | pohjavire `musa-pohja` (`playPlaceAmbience('etusivu')` → pohjavirekoneisto) + lentoaseman ambienssi | **`musa-etusivu`** — etusivun oma raita pohjavireen tilalla |
+| pallon vapaa selailu, lähtökaupungin valinta | sama kuin yllä: `game.phase === 'pickstart'` on yksi vaihe | **ei omaa raitaa** — sama `musa-etusivu`; pelaaja ei vaihda näkymää, ja raidan vaihto kesken saman vaiheen kuulostaisi virheeltä (päätös kirjattu js/musiikkivalitsin.js:ään) |
+| kaupunkiin saapuminen | Ateenassa `musa-kaupunki-ateena`, muualla pohjavire | **alueraidat** kaikille Euroopan laudan kaupungeille: `musa-kaupunki-<alue>` (6 kpl) |
+| matka (jalan, laiva, lento) | siirtymäraidat `siirtyma-jalan/laiva/lento` (js/siirtymamusiikki.js) + pohjavire alla | — |
+| linssi (Keksinnöt) | `linssi-keksinnot` koko ajon ajan; muu ääni hiljennetään (`hiljennaAmbienssi('linssi')`) | — |
+| linssin välinäytös (merkkipaalu) | linssin oma raita jatkuu laatikon yli | **ei omaa raitaa** — oma raita kilpailisi linssiraidan kanssa juuri siinä hetkessä, jota varten linssiraita on; ks. avoin kysymys alla |
+| lehti (kaupunki- ja maalehti, kehittäjän liite) | ambienssi madaltuu (`hiljennaAmbienssi('lehti')`), musiikkina paikan raita | **`musa-lehti`** — lehden oma raita paikan raidan tilalla |
+| matkalaukku | ei mitään omaa; paikan raita jatkuu | **`musa-matkalaukku`** |
+| kohtaaminen ja tietovisa | `musa-visa-2` (js/visa.js `startQuizMusic`, js/aani-ehdokkaat.js) | — (soi jo) |
+| kaksintaistelu rosvon kanssa | sama `musa-visa-2` | — |
+| fokusvirran oppitunti ja pöllön kupla | kartan päällä: paikan raita jatkuu, pöllö väistää sen alla | — (kohtaus tapahtuu kaupungissa, jossa soi kaupungin tai alueen raita) |
+| aarteen paljastus | `musa-aarre` (js/ui.js `soitaAarreMusiikki`) | — |
+| pääaarre ja pelin loppu | `musa-paaaarre` samasta soittimesta; pelin päätyttyä pohjavire | — (soi jo) |
+| työhuoneen Musiikki-lehti | kuunneltava raita, ambienssi hiljennetty (`musiikkisivu`) | uudet raidat listautuvat lehteen itsestään |
+
+## Pohjaraidan valitsin (5.9.2026 yö)
+
+Pelissä on **yksi musiikin paikka sekoituksessa**: ambienssiäänten alla,
+saman väistön (pöllö, kertoja, lukija) ja saman kehittäjäkertoimen
+(`musiikki`) takana. Siihen paikkaan on nyt monta ehdokasta, ja
+`js/musiikkivalitsin.js` päättää kuka voittaa. Soitin on yhä
+`js/ambience-stream.js`:n pohjavirekoneisto — sama, joka soitti
+pohjavireen ja Ateenan kappaleen.
+
+**Ketju parhaasta alkaen:**
+
+```
+tila (lehti → matkalaukku) → paikan raita (etusivu)
+→ kaupungin oma kappale → kaupungin alueen raita → pohjavire
+```
+
+Soitin ottaa ketjusta ensimmäisen, jota ei ole todettu puuttuvaksi.
+Puuttuva raita (404) on **normaali tila** — kytkentä on mainissa ennen
+kuin mp3 on generoitu — ja silloin seuraava taso ottaa paikan
+automaattisesti. Peli ei ole hetkeäkään hiljainen. Vaihto on aina
+1,5 sekunnin ristihäivytys (`VAIHTO_MS`), samaan ja takaisin.
+
+| raita | kesto | milloin |
+|---|---|---|
+| `musa-lehti` | 90 s | lehti auki (kaupunki-, maa- ja kehittäjän lehti) |
+| `musa-matkalaukku` | 45 s | matkalaukku auki |
+| `musa-etusivu` | 90 s | etusivu, avausteksti, pallon selailu, lähtökaupungin valinta |
+| `musa-kaupunki-<id>` | 60–90 s | kaupungin oma kappale (Ateena) |
+| `musa-kaupunki-<alue>` | 75 s | alueen raita: `britteinsaaret`, `pohjola`, `keski-eurooppa`, `valimeri`, `balkan`, `ita-eurooppa` |
+| `musa-pohja` | 80 s | kaikkialla muualla |
+
+**Mistä tila tulee.** Kaksi lähdettä, kumpikin jo olemassa olevaa
+reittiä pitkin:
+
+1. **Paikka** tulee `playPlaceAmbience`sta — samasta kohdasta, josta
+   koko peli pyytää taustaääntä. Mukana menee kaupungin maa (pakan
+   `map.cityCountry`), josta alue johdetaan: `js/kaupunkimusiikki.js`
+   `ALUEEN_MAAT` (ISO-3 → alue) ja `KAUPUNGIN_ALUE` (poikkeukset,
+   esim. Marseille = Välimeri). **Uusi kaupunki tunnettuun maahan saa
+   raitansa ilman koodimuutosta.**
+2. **Tilat** ovat päällekkäisiä syitä joukossa, kuten ambienssin
+   hiljennykset. Lehti tulee suoraan hiljennyssyystä `'lehti'`, jota
+   lehden kolme avauskohtaa ja yksi sulkukohta jo kutsuvat — uutta
+   koukkua ei tarvittu. Matkalaukku ei hiljennä ambienssia, joten se
+   kertoo tilansa suoraan (`js/ui.js` `openPassport` ja dialogin
+   `close`-kuuntelija).
+
+**Autoplay.** Etusivun raita ei ala ennen käyttäjän ensimmäistä
+kosketusta: selaimen `play()`-hylkäys ei merkitse raitaa puuttuvaksi,
+vaan seuraava renderöinti yrittää uudelleen — käytännössä *Aloita
+seikkailu* -napista, josta muutkin äänet lähtevät.
+
+**Miten uusi raita lisätään.** Sama kahden taulun sääntö kuin
+kaupunkiraidoilla (`tests/musiikkivalitsin.test.mjs` kaatuu, jos taulut
+eroavat):
+
+1. Peliin: `js/musiikkivalitsin.js` `TILARAIDAT`/`PAIKKARAIDAT` tai
+   `js/kaupunkimusiikki.js` `ALUERAIDAT` — tunnus ja lyhyt kuvaus.
+2. Työkaluun: `tools/generoi-musiikki.mjs` `RAIDAT` — sama avain,
+   `laji: 'alue'|'tila'`, `tiedosto`, kesto, `looppi: true` ja prompti.
+3. Aja työnkulku ja **kuuntele raita PR:ssä** ennen mergeä.
+
+**Työnkulun ajo** (`.github/workflows/generoi-musiikki.yml`,
+workflow_dispatch, `raidat`-input):
+
+```
+raidat: kaikki       # paletin neljä raitaa (ennallaan)
+raidat: kaupungit    # kaupunkien omat kappaleet JA alueraidat
+raidat: alueet       # vain kuusi alueraitaa
+raidat: tilat        # lehti, matkalaukku, etusivu
+raidat: valimeri     # yksi raita nimeltä
+```
+
+Paikallinen kuiva ajo ilman avainta:
+
+```
+node tools/generoi-musiikki.mjs alueet --kuiva
+node tools/generoi-musiikki.mjs tilat --kuiva
+```
+
+Vienti kulkee kuten paletilla: ajo vie mp3:t suoraan ämpärin
+`audio/`-kansioon ja liittää ne ajon artefaktiksi kuuntelua varten
+(mp3:ia ei committoida). Työhuoneen Musiikki-lehden osastot
+**Alueraidat** ja **Näkymien raidat** (Paletti-sivu) lukevat rivit
+pelin omista tauluista, joten uusi raita näkyy siellä ilman muutoksia.
+
+**Avoin kysymys.** Linssin välinäytös (merkkipaalun laatikko,
+`js/aikajana.js`) jäi ilman omaa raitaa: siinä hetkessä soi linssin oma
+raita, ja kaikki muu ääni on tarkoituksella hiljennetty
+(`hiljennaAmbienssi('linssi')`). Oma välinäytösraita vaatisi päätöksen
+siitä, väistyykö linssiraita sen alta — se on omistajan päätös, ei
+koneiston.
+
+## Avauksen ääni (omistaja 7.9.2026)
+
+Omistajan tilaus, sanatarkasti: *"Pelin aloitussivulla, heti kun pelaaja
+on painanut "aloita seikkailu" nappia, niin musiikki saisi hiljentyä
+hieman ja mukaan saisi tulla se terminaalin äänimaisema voimakkaasti
+mukaan ja siitä lähtisi omalla ajallaan kertojan luenta myös käyntiin."*
+
+Portin painallus on pelin ensimmäinen ele, ja siitä alkaa **kolmen
+äänen sarja**. Koneisto on `js/ambience-stream.js`:n osiossa
+*AVAUKSEN ÄÄNI*, ja kytkennät ovat `js/ui.js`:ssä (painallus,
+eteneminen) ja `js/luenta.js`:ssä (luennan loppu).
+
+| Hetki (napin painalluksesta) | Mitä kuuluu |
+| --- | --- |
+| 0 ms | musiikki alkaa liukua 0,6-kertaiseksi ja etusivun äänimaisema 1,45-kertaiseksi (`AVAUKSEN_MUSIIKKI`, `AVAUKSEN_MAISEMA`) |
+| 1300 ms | sekoitus on paikallaan (`AVAUKSEN_LIUKU_MS`) |
+| ~1800 ms | portissa odottanut äänimaisema on täydessä nousussaan (`HAIVYTYS_MS`) |
+| 2850 ms | kirjoituskone alkaa paikkarivistä (`js/ui.js` `AVAUS_KERTOMUS_MS`) |
+| ~4000 ms | kertojan luenta alkaa, kun paikkarivi on naputettu — **terminaali jää sen alla nostoonsa** (ks. alempi luku) |
+
+**Miksi juuri nämä luvut.** Musiikki laskee −4,4 dB (0,019 → 0,0114):
+askel kuuluu, mutta raita jää soimaan — tilauksessa musiikki hiljenee
+"hieman", ei pois. Maisema nousee +3,2 dB (efektiivinen 0,119 → 0,173),
+jolloin raitojen ero kasvaa lähes 8 dB ja terminaali astuu eteen.
+Nosto on **tilapäinen**: se purkautuu, kun kertojan luenta päättyy tai
+pelaaja etenee kartalle, eikä etusivun oma kalibrointi
+(`ETUSIVUN_VOIMA`, kuulokoe 12.8.2026) siis muutu mihinkään.
+Lopullinen sekoitus on kuulokokeen nuppi kuten muutkin äänitasot.
+
+**Ei hyppyjä.** Kumpikin muutos on AudioParam-ramppi tai sama
+rAF-häivytys kuin muutkin tasonmuutokset (`haivyta`), ja kertoimet
+kerrotaan tasoon sisään (`taso`, `pohjaMusiikinTaso`) — niin väistö
+(kertoja, ääninäyte, lukunäkymä) ja kehittäjän säätimet toimivat
+avauksen aikana täsmälleen kuten ennen. Vähennetty liike ei muuta
+ääniä: aikataulu ja liu'ut ovat samat.
+
+**Äänivalikko voittaa.** Taustaäänten ollessa pois ei ole maisemaa eikä
+musiikkia, eivätkä avauksen kutsut tee mitään; kertojan ollessa pois
+luentaa ei tule, ja nosto purkautuu vasta pelaajan edetessä. Kumpikin
+on normaali tila, ei virhe.
+
+### Kertoja ei väistä terminaalia (omistajan vika 7.9.2026 illalla)
+
+Omistaja v1671:stä, sanatarkasti: *"Lentoterminaalin ääni ei kuulu
+etusivulla, vaikka pitäisi."*
+
+Ensimmäinen toteutus kertoi avauksen nostot **väistön päälle**, ja
+avauksen ainoa puhuja on avaustekstin kertoja itse. Mitattuna
+(Chromium, oikeat äänitteet) terminaali nousi lukemaan 0,1728, piti sen
+noin sekunnin ja putosi luennan alkaessa (2,85 s painalluksesta)
+lukemaan 0,1728 × 0,25 = **0,0432 — 64 % alle oman kalibroidun tasonsa
+(0,1192)** — ja jäi sinne koko 18 sekunnin luennan ajaksi. Painalluksesta
+kuului siis lyhyt aalto ja sen jälkeen ei mitään.
+
+Vika oli laskukaavassa eikä säädössä: tilauksessa luenta lähtee käyntiin
+**sen päälle**, mikä on jo "voimakkaasti mukana". Kertoja on osa avausta
+eikä keskeytys. Siksi avauksen sekoitus **korvaa** väistön etusivun
+maisemalla sen ajan kun se on voimassa (`avauksenMaisemanKerroin`), eikä
+kerry sen päälle. Musiikkiin väistö kertyy yhä: siellä molemmat
+osoittavat samaan suuntaan. Lukunäkymän hiljennys (pöllö, lehti, linssi)
+madaltaa nostettuakin terminaalia — se on pelaajan oma keskeytys.
+
+Luennan lopun **järjestys kääntyi** samalla (`js/luenta.js`): puhujan
+rooli vapautetaan ensin ja nosto puretaan vasta perään, jolloin taso
+laskee kerralla oikeaan lukemaan eikä käy välillä väistössä.
+
+**Vartijat.** `tests/ambienssi.test.mjs` (tasot tynkäselaimessa: kertoja
+ei väistä terminaalia, lukunäkymä väistää) ja
+`tools/savukkeet/savuke-etusivun-aani.mjs` (oikea Chromium: musiikki
+laskee, maisema nousee, liuku ei ole hyppy, luenta alkaa vasta ≥ 2850 ms
+päästä, **terminaalin nauha etenee ja taso pysyy yli tavallisen koko
+luennan ajan**, luennan jälkeen tasot palaavat, ja sama ajo jatkaa
+Ateenaan varmistamaan että **avauslennon kabiini soi**).
+
+Sivutuote samasta savukkeesta: avaustekstin luenta ei koskaan lähetä
+`ended`-tapahtumaa, koska `pehmeaLoppu` pysäyttää sen juuri ennen
+tiedoston reunaa — ja siksi puhujan rooli jäi ennen vapauttamatta ja
+etusivun tausta jumiin neljäsosaan luennan jälkeen. `js/luenta.js`
+vapauttaa roolin nyt myös `pause`-tapahtumasta.
+
+### Musiikki ja äänimaisema ovat eri kytkimet (omistajan vika 7.9.2026 illalla)
+
+Omistaja, sanatarkasti: *"striimilukija ei mene päälle, jos
+taustamusiikki on kytketty pois. Ne ovat kaksia irrallista asiaa, joten
+striimi-ääni pitäisi kuulua, vaikka taustamusiikki on kytketty pois."*
+(Raamattu, VIAT v1672.)
+
+**Juurisyy.** Äänivalikossa oli yksi kytkin, TAUSTAÄÄNET
+(`js/sound.js` `enabled`), ja sen takana oli kaikki: paikkojen
+äänimaisema, tehosteet, pohjaraita, kaupunkien kappaleet, siirtymä- ja
+linssiraidat, visamusiikki. Musiikin sammuttaminen vei siis myös
+kenttä-äänitykset.
+
+**Korjaus.** Musiikilla on oma pysyvä kytkin
+(`js/musiikkivalitsin.js` `musiikkiPaalla` / `asetaMusiikkiPaalla`,
+avain `matkakirja-musiikki`, oletus päällä), ja äänivalikossa on nyt
+kolme riviä: **Kertoja**, **Musiikki** ja **Äänimaisema** (entinen
+Taustaäänet). Työnjako:
+
+| kytkin | vaientaa |
+| --- | --- |
+| Musiikki | pohjaraita ja kaupunkien kappaleet, siirtymä- ja linssiraidat, visamusiikki, aarteen paljastusaihe |
+| Äänimaisema | paikkojen äänitykset ja tehosteet — myös koko pelin mykistys (sen alla ei soi mikään) |
+
+Kytkin asuu valitsimessa, koska se on musiikin alin kerros eikä tuo
+mitään soittimista: `js/ambience-stream.js` (pohjaraita, visa),
+`js/siirtymamusiikki.js` (matka ja linssi) ja `js/ui.js` (aarteen aihe)
+kysyvät siltä samaa asiaa ilman kehää. Kytkimen vaihto herättää samat
+kuuntelijat kuin näkymän vaihto, joten raita palaa samaan paikkaan.
+Avauksen sekoitus (nosto terminaaliin, musiikki alas) toimii
+sellaisenaan: musiikin ollessa pois nostettavaa raitaa ei ole, ja
+terminaali nousee kuten ennen — sama koskee avauslennon kabiinia.
+
+**Vartijat.** `tests/ambienssi.test.mjs` (musiikki pois → maiseman
+soitin syntyy ja kuuluu, pohjaraitaa ei synny; kytkin päälle → raita
+palaa; koko pelin mykistys vaientaa yhä molemmat),
+`tools/savukkeet/savuke-etusivun-aani.mjs` vartio 10 (oikea Chromium:
+valikon Musiikki-kytkin pois → äänimaiseman nauha etenee ja taso pysyy
+yli nollan, kytkin päälle → raita palaa) ja
+`tools/savuke-etusivun-aani.mjs` (valikossa on kolme kytkintä).
+
+## Vienti ja jakelu
+
+**EI ÄÄNITIEDOSTOJA REPOSSA (omistajan linjaus 11.9.2026, sanatarkasti:
+*"repossa ei saa olla äänitiedostoja, kaikki vain ämpärissä"*).**
+`assets/audio` on .gitignoressa: se on generointityökalujen paikallinen
+työpöytä, ei varasto. Varasto on ämpäri `media.matkakirja.app`.
+
+- **Peli hakee kaikki omat äänensä ämpäristä.** `js/media.js aaniUrl`
+  kääntää tunnisteen `assets/audio/x.mp3` osoitteeksi
+  `<ämpäri>/audio/x.mp3` — poikkeuksetta ja peilin katkaisijasta
+  riippumatta. Repon polkua ei ole, joten varareittiä siihen ei ole.
+- **Ydinsetti esiladataan ämpäristä.** Tehosteet ja huudahdukset
+  (`sw.js` `YDINAANET`) noudetaan asennuksessa `mode: 'cors'`
+  -pyynnöillä äänikoriin `AANICACHE`. Yksikin epäonnistunut nouto ei
+  kaada asennusta: ydinsetti on nopeutta varten, ei asennuksen ehto.
+- **Generointi vie suoraan ämpäriin.** Työkalu kirjoittaa paikalliseen
+  `assets/audio`-kansioon ja Actions-ajo (`generoi-luennat.yml`,
+  `generoi-musiikki.yml`) vie tuotoksen `aws s3 sync` -komennolla
+  ämpärin `audio/`-kansioon. mp3:ia ei committoida mihinkään.
+- **Kuuntelu tapahtuu ajon artefaktista.** Sama tuotos liitetään ajoon
+  `actions/upload-artifact` -liitteenä (säilytys 14 vrk).
+- **Kuuntelusääntö.** UUSI tiedosto ei kuulu pelissä ennen kuin pelidata
+  viittaa siihen, joten sen voi viedä huoletta. SAMANNIMISEN äänitteen
+  uusinta sen sijaan korvaa ämpärin tiedoston heti — siksi uusinnat
+  tehdään harkiten ja `js/media.js UUSITUT_AANET` -kyselyversio
+  nostetaan samassa PR:ssä, jossa pelidata muuttuu.
+
+Kaksi ämpärikansiota, kaksi asiaa: `aanet/` on ulkopuolelta peilattu
+äänimaisema (nimi lasketaan lähdeosoitteesta) ja `audio/` pelin oma
+äänite (nimi sama kuin tunnisteessa). Siirtymä- ja linssiraidoille peli
+kokeilee ensin `aanet/`-polkua ja vasta sitten `audio/`-polkua;
+musiikkipaletti kysyy vain `audio/`-polkua.
+
+Puuttuva raita ei aiheuta virhettä: soitto lähtee optimistina ja 404
+merkitsee lajin hiljaiseksi. Kehittäjävalikon rivi "siirtymämusiikki"
+kertoo, mitkä raidat löytyvät; kytkin "varamusiikki" (oletus pois)
+soittaa syntetisoidun kuvion vain, jos oikea raita puuttuu.
+
+## Generointi
+
+**KAIKKI MUSIIKKI LYRIALLA (omistajan linjaus 5.9.2026 illalla,
+sanatarkasti: *"kaikki musiikki lyrialla"*).** Aiemmin samana päivänä
+omistaja kuunteli ElevenLabs Musicin ja Lyria 3.5:n siirtymäraidat
+rinnakkain ja valitsi Lyrian (*"ota lyra musiikit käyttöön peliin ja
+poista vanha"*); iltalinjaus laajensi saman koko musiikkiin, myös
+musiikkipalettiin. Molemmat työkalut ottavat siis
+`--moottori lyria|eleven`, **oletus `lyria`**, ja jakavat saman
+Lyria-haun moduulista `tools/lyria.mjs` (osoite, malli `lyria-3.5`,
+kehotteen muoto, `-lyria`-pääte, avaimen luku `GOOGLE_API_KEY`).
+ElevenLabs jää vertailumoottoriksi: sen raidat kirjoitetaan paljaalla
+nimellä eivätkä ne soi pelissä.
+
+### Siirtymä- ja linssiraidat
+
+Työkalu `tools/generoi-siirtymamusiikki.mjs`. Lyrian raidat viedään päätteellä
+`-lyria`, ja peli soittaa ne. Promptit ovat työkalussa
+vakioina, yhteinen tyylilause kaikille lajeille.
+
+```
+node tools/generoi-siirtymamusiikki.mjs --laji kaikki
+node tools/generoi-siirtymamusiikki.mjs --laji laiva --ei-vientia
+node tools/generoi-siirtymamusiikki.mjs --laji keksinnot --kuiva
+```
+
+| lippu | merkitys |
+|---|---|
+| `--laji jalan\|laiva\|lento\|keksinnot\|kaikki` | pakollinen; `kaikki` = kolme **siirtymäraitaa**, ei linssiraitaa |
+| `--kuiva` | ei API-kutsua eikä vientiä: tulostaa suunnitelman ja promptit ja ajaa koko ffmpeg-ketjun syntetisoidulla siniäänellä |
+| `--ei-vientia` | generoi ja leikkaa, mutta jätä tiedosto vain levylle |
+
+Ketju: mallilta tilataan 24 s (linssiraidalle 66 s), siitä leikataan
+keskeltä looppi (jalan 12 s, laiva ja lento 16 s, keksinnöt 50 s) ja
+sauma ommellaan ffmpegillä ristihäivytyksellä niin, että loopin loppu
+jatkuu lähteessä sen alkuun. Taso mitataan loudnormilla ja korjataan yhdellä lineaarisella
+vahvistuksella −33 LUFSiin — dynaaminen normalisointi rikkoisi juuri
+tehdyn sauman. Valmis mp3 (mono, 128 kbps, 44,1 kHz) tarkistetaan:
+kesto lajin rajoissa (siirtymät 10–20 s, linssi 45–60 s), taso ±1 LU
+tavoitteesta, ei hiljaisuutta päissä (`silencedetect`). Kelvoton raita
+jää viemättä.
+
+Tiedostot kirjoitetaan `media/`-kansioon (.gitignoressa, tarkistetaan
+ennen ensimmäistäkään maksullista kutsua) ja viedään sieltä ämpärin
+`aanet/`-kansioon samalla `aws s3 cp` -komennolla kuin muutkin
+ääniajot. Lopuksi ajo tulostaa julkiset osoitteet ja
+HEAD-tarkistuksen. Raakatuotos jää talteen kansioon
+`media/siirtymamusiikki-raaka/`, joten loopin voi leikata uudelleen
+ilman uutta kutsua.
+
+Ajo: `.github/workflows/generoi-siirtymamusiikki.yml`
+(workflow_dispatch, input `laji`: `kaikki`, `jalan`, `laiva`, `lento`
+tai `keksinnot`). Linssiraita pyydetään nimeltä, koska `kaikki` on
+vain kolme siirtymäraitaa — näin valmiita raitoja ei generoida
+vahingossa uudestaan, ja jokainen kutsu maksaa. Ajo asentaa ffmpegin,
+ajaa ensin kuivan ajon, sitten oikean, eikä committoi repoon mitään. Ei
+automaattista triggeriä: musiikki maksaa rahaa. Salaisuudet ovat
+Actions-asetuksissa: `ELEVEN_API_KEY` ja neljä R2-salaisuutta.
+API-avain vain ympäristömuuttujana, ei koskaan repoon eikä lokiin.
+
+Koneellinen tarkistus ei kuule saumaa: raidat **kuunnellaan** ajon
+jälkeen, ja loopin on kierrettävä ilman naksahdusta.
+Leikkauslaskennan vartija on `tests/siirtymaraidat.test.mjs`.
+
+### Musiikkipaletti
+
+Neljä raitaa, jotka soivat muualla kuin siirtymissä:
+
+| avain | tiedosto (Lyria) | mitä | looppi |
+|---|---|---|---|
+| `pohja` | `musa-pohja-lyria.mp3` | pohjavire ambienssin alla, 80 s | kyllä |
+| `visa` | `musa-visa-2-lyria.mp3` | tietovisan tikittävä uteliaisuus, 45 s | kyllä |
+| `aarre` | `musa-aarre-lyria.mp3` | tavallisen aarteen lämmin aihe, 10 s | ei |
+| `paaaarre` | `musa-paaaarre-lyria.mp3` | sama aihe juhlavampana, 13 s | ei |
+
+Aarre ja pääaarre ovat **pari**: sama sävelaihe kahdessa asussa. Jos
+toinen generoidaan uusiksi, generoi molemmat — muuten sukulaisuus
+katoaa. ElevenLabsilla samat nimet ilman `-lyria`-päätettä.
+
+```
+node tools/generoi-musiikki.mjs kaikki
+node tools/generoi-musiikki.mjs pohja visa --kuiva
+node tools/generoi-musiikki.mjs aarre paaaarre --moottori eleven
+```
+
+Sama työkalu tekee myös **kaupunkiraidat** (oma osionsa alla): `kaikki`
+on paletin neljä raitaa, kaupungit pyydetään nimeltä tai ryhmänä
+`kaupungit`.
+
+| lippu | merkitys |
+|---|---|
+| (paljas argumentti) | raitojen avaimet välilyönnein tai `kaikki` |
+| `--moottori lyria\|eleven` | oletus `lyria` |
+| `--kuiva` | ei API-kutsua: tulostaa kohdetiedostot, kestot ja promptit (myös `ELEVEN_KUIVA=1`) |
+
+**Looppia EI leikata.** Siirtymäraidat ommellaan ffmpegillä
+saumattomiksi; paletti ei kulje sen koneiston läpi, vaan mallin tuotos
+menee levylle sellaisenaan. Syy on kolmiosainen: kaksi neljästä
+raidasta ei ole looppi lainkaan (aarreaiheilla on alku ja loppu), kaksi
+looppiraitaa soivat pelin hiljaisimmalla tasolla ja pyytävät sauman jo
+promptissa, ja kelvottoman paletin raidan päättää kuuntelija PR:ssä
+eikä mittari. Jos sauma joskus naksahtaa, oikea korjaus on ajaa raita
+saman leikkurin läpi — ei rakentaa toista.
+
+**Vienti menee suoraan ämpäriin, ei repon kautta.** Raita
+kirjoitetaan paikalliseen `assets/audio/`-kansioon (.gitignore), ja
+`.github/workflows/generoi-musiikki.yml` vie sen samassa ajossa ämpärin
+`audio/`-kansioon sekä liittää ajon artefaktiksi kuuntelua varten.
+Juuri sitä polkua peli hakee: `js/media.js`
+`aaniUrl` kääntää `assets/audio/x.mp3` → `<ämpäri>/audio/x.mp3`.
+Ämpärin `aanet/`-kansio olisi paletille umpikuja — yksikään paletin
+soittokohta ei kysy sitä (toisin kuin siirtymäraidat, jotka kokeilevat
+ensin `aanet/`).
+
+Ajo: `.github/workflows/generoi-musiikki.yml` (workflow_dispatch,
+inputit `raidat` ja `moottori`). Salaisuus on `GOOGLE_API_KEY`
+(Lyria) tai `ELEVEN_API_KEY` (vertailu); avain vain
+ympäristömuuttujana, ei koskaan repoon eikä lokiin. Vartija:
+`tests/musiikkipaletti.test.mjs`.
+
+### Pelin kytkin: `MUSIIKIN_PAATE`
+
+Paletin neljä soittokohtaa — pohjavire (`js/ambience-stream.js`),
+visamusiikki (`js/aani-ehdokkaat.js`) ja kaksi aarreaihetta
+(`js/ui.js`) — sekä työhuoneen kuuntelulehti
+(`js/tyohuone-musiikki.js`) rakentavat polkunsa apurilla `musaPolku`
+(`js/media.js`). Apuri liittää tunnukseen vakion `MUSIIKIN_PAATE`,
+joka on **`''`**, kunnes Lyrian raidat ovat ämpärissä.
+
+> **Kun työnkulku `Generoi musiikki` on ajettu moottorilla `lyria`,
+> PR on mergetty ja `HEAD` vastaa 200:lla osoitteisiin
+> `<ämpäri>/audio/musa-pohja-lyria.mp3`, `…/musa-visa-2-lyria.mp3`,
+> `…/musa-aarre-lyria.mp3` ja `…/musa-paaaarre-lyria.mp3`, käännä
+> `js/media.js`: `MUSIIKIN_PAATE = '-lyria'`.** Se on yksi rivi ja
+> kääntää kaikki neljä polkua sekä kuuntelulehden kerralla; paluu
+> vanhaan on saman rivin vaihto takaisin.
+
+Ennen kytkimen kääntämistä vanhat ElevenLabs-raidat soivat. Näin
+paletti ei ehdi olla hetkeäkään hiljainen: puuttuva mp3 ei riko
+äänipolkua, mutta hiljainen peli näyttää rikkinäiseltä.
+
+## Musiikin taso ja säädin (omistaja 8.9.2026)
+
+Omistajan vika 8.9.2026 klo 18.39 (iPhone, Vilnan kaupunkikartta,
+maailma-pakki, kehittäjätila päällä): *"Taustamusiikki on aivan liian
+kovalla, eikä rattaan säädin vaikuta sen tasoon ollenkaan."*
+
+### Miksi musiikki oli liian kovalla
+
+Musiikkipaletin soittotasot kalibroitiin ElevenLabsin raitoihin.
+Paletti vaihdettiin Lyriaan (`js/media.js` `MUSIIKIN_PAATE`, v1628),
+**tiedostot vaihtuivat mutta kertoimet eivät** — ja Lyria-masterit ovat
+selvästi kovempia. Mitattuna (`node tools/mittaa-musiikin-tasot.mjs`,
+dekoodaus selaimessa, RMS koko raidasta):
+
+| raita | ennen | nyt | ero |
+| --- | --- | --- | --- |
+| pohjavire | `musa-pohja.mp3` −31,3 dBFS | `musa-pohja-lyria.mp3` −14,7 dBFS | +16,6 dB |
+| kaupunki/alue | — | `musa-kaupunki-*-lyria.mp3` −14,1…−14,5 dBFS | |
+| visa | `musa-visa-2.mp3` −28,7 dBFS | `musa-visa-2-lyria.mp3` −14,4 dBFS | +14,3 dB |
+| aarre | `musa-aarre.mp3` −26,4 dBFS | `musa-aarre-lyria.mp3` −14,6 dBFS | +11,8 dB |
+
+Siirtymä- ja linssiraidat eivät kärsineet: ne on masteroitu tähän
+dokumenttiin kirjattuun tavoitteeseen (−33 dBFS), ja mittaus vahvistaa
+sen (−32,5…−33,5 dBFS). Vika koskee siis juuri musiikkipalettia.
+
+**Uusi perustaso on YKSI vakio:** `js/musiikkivalitsin.js`
+`MUSIIKIN_PERUSTASO` (0,034). Sen kertoimina lausuvat tasonsa
+pohjaraita ja kaupunkiraidat (`js/ambience-stream.js` `POHJA_VOIMA`),
+visamusiikki (`MUSIIKKI_VOIMA`, ×1,3) ja aarreaihe (`js/ui.js`
+`AARRE_MUSIIKIN_VOIMA`, ×3,8). Luku on omistajan 5.9. hyväksymä taso
+miinus se kaksinkertaistus, joka 8.9. purettiin — eli 6 dB alaspäin.
+Mitattuna Vilnassa musiikki soi lukemalla −43,9 dBFS ja kertoja
+lukemalla −18,0 dBFS, joten musiikki on noin 26 dB kertojan (ja pulun)
+alla. Paletin seuraavassa vaihdossa korjataan yksi luku, ei kolmea.
+
+### Miksi säädin ei vaikuttanut
+
+Kaksi syytä, molemmat korjattu:
+
+1. **Reitit lukivat eri kerrointa.** Pohjaraita ja siirtymäraidat
+   lukivat kehittäjän kerrointa, visamusiikki, aarreaihe ja kehittäjän
+   varakuvio eivät lukeneet sitä lainkaan. Nyt kaikki kysyvät samaa
+   funktiota `musiikinKerroin()` ja ilmoittautuvat kuuntelijaksi
+   `kuunteleMusiikinKerrointa()`-funktiolla, jolloin SOIVA raita seuraa
+   säätöä 200 ms:n liu'ulla. Vartija: `tests/musiikin-kerroin.test.mjs`
+   (lähdekoodivartio + toimintatesti); kehittäjän kerrointa ei saa enää
+   lukea suoraan musiikin nimissä missään muualla kuin valitsimessa.
+2. **Taso ei mennyt perille puhelimessa.** Musiikkisoitin oli pelkkä
+   `<audio>`-elementti, jonka ainoa säätökahva on `element.volume`.
+   Työpöytäselaimessa se toimii (mitattu Chromiumissa), mutta iPhonen
+   WebKit ei anna JavaScriptin asettaa `volumea` — kirjoitus menee läpi
+   ilman virhettä ja lukema palaa ykköseksi. Silloin perustaso, väistö,
+   avauksen sekoitus JA säädin katoavat kaikki, ja raita soi tiedoston
+   omalla tasollaan eli kertojan yläpuolella. Pohjaraita reititetään nyt
+   äänimaiseman tapaan **vahvistinsolmun** läpi
+   (`js/ambience-stream.js` `liitaMusiikinVahvistin`), jolloin taso
+   säädetään gainilla eikä volumella. Kompressoria ketjussa ei ole
+   (paletti on jo masteroitu), joten musiikilla ei ole myöskään
+   `VOLUME_POLUN_KORVAUS`-kerrointa: sama luku tarkoittaa samaa kuuluvaa
+   tasoa kummallakin reitillä. Jos reititys ei onnistu tai ketju jää
+   WebKitissä mykäksi, `vartioiMusiikinHiljaisuutta` palauttaa soittimen
+   entiselle volume-polulle.
+
+   **TÄMÄ JÄI PUOLITIEHEN** ja omistaja raportoi vian uudestaan 9.9.2026
+   (*"vielä aivan liian kovalla"*): vain pohjaraita oli reititetty,
+   reititystä ei yritetty uudestaan kontekstin herättyä, eikä
+   volume-varareitti ole iPhonessa "entinen taso" vaan täysi taso. Ks.
+   seuraava luku — reititys asuu nyt `js/musiikkivahvistin.js`:ssä ja
+   koskee kaikkia musiikkireittejä.
+
+Väistö (kertoja, pöllö, lukunäkymä) **kertautuu kertoimen kanssa** eikä
+ylikirjoita sitä: taso lasketaan aina samasta kaavasta
+`perustaso × väistö × kerroin × avaus`, joten luennan aikana tehty säätö
+jää väistön alle ja luennan jälkeen taso palaa säädettyyn lukemaan.
+
+Mittaustyökalut: `node tools/mittaa-musiikin-tasot.mjs` (raitojen omat
+tasot) ja `node tools/savukkeet/savuke-musiikin-taso.mjs` (mitä pelissä
+oikeasti soi, millä tasolla ja seuraako se säädintä).
+
+## Säädin toimii oikeasti ja laajalla välillä (omistaja 9.9.2026)
+
+Omistajan vika 9.9.2026 klo 16.30, sanatarkasti: *"Taustamusiikki on
+ainakin iPhonilla vielä aivan liian kovalla. Saisiko säätimen niin, että
+se oikeasti toimisi ja sen pystyisi säätämään todella isolla välillä,
+niin, että musiikin saisi oikeasti säädettyä oikealle tasolle?"* — sama
+vika toista kertaa, eli edellinen luku jäi puolitiehen.
+**iPhone-tarkistus on omistajan**: alla oleva mittaus on tehty
+Chromiumilla, ja lopullisen tuomion antaa oikea laite.
+
+### Mikä 8.9. korjauksesta jäi puuttumaan
+
+1. **Reititystä ei yritetty uudestaan.** Vahvistin kytkettiin vain, jos
+   äänikonteksti oli JO käynnissä sillä hetkellä kun soitin syntyi.
+   iOS:ssä konteksti on `suspended` vielä eleen jälkeenkin (`resume()`
+   on asynkroninen), joten pelin ensimmäinen raita päätyi lähes aina
+   volume-polulle — ja koska pohjaraita jää soimaan silmukkana, yksi
+   huono ajoitus tarkoitti koko istunnon täyttä tasoa.
+2. **Vain pohjaraita oli reititetty.** Siirtymä- ja linssiraidat,
+   visamusiikki ja aarreaihe soivat yhä elementin oman `volumen`
+   varassa — eli iPhonessa tiedoston omalla tasolla.
+3. **Varareitti oli vikaa pahempi.** Hiljaisuusvahti pudotti mykän
+   ketjun takaisin volume-polulle; iOS:ssä se on täysi taso, ei entinen
+   taso.
+4. **Säädin oli väärän muotoinen.** Rattaan musiikkirivi oli
+   kerroinaskellin ×0,25…×3,0 askeleella 0,1. Alaraja ×0,25 on vain
+   −12 dB eikä hiljaisuus, ja väli on lineaarinen — korva kuulee
+   desibelejä, joten lineaarisen säätimen alapäässä tapahtuu kaikki ja
+   yläpäässä ei mitään.
+
+### Yksi vahvistin kaikelle musiikille
+
+`js/musiikkivahvistin.js` on nyt ainoa paikka, josta musiikkisoitin saa
+tiensä ulos:
+
+    elementti → MediaElementAudioSourceNode → GainNode → Analyser → ulos
+
+| funktio | tehtävä |
+| --- | --- |
+| `musiikkiKonteksti()` | pelin oma AudioContext (`sfx.ensureContext`), herätettynä |
+| `kuunteleReitityksenAvautumista(fn)` | odottaja: `fn` kutsutaan kun konteksti on käynnissä (ele, paluu taustalta, `statechange`) |
+| `volumeToimii()` | mittaa kerran, tottelisiko selain `volumea` — iOS: ei |
+| `liitaMusiikkiin(audio)` | reitittää ja palauttaa GainNoden, tai `null` |
+| `musiikkiSaaSoida(audio)` | saako raidan päästää soimaan (vahvistin TAI toimiva volume) |
+| `asetaMusiikinTaso` / `lueMusiikinTaso` / `liutaMusiikkia` | taso ja liuku oikeaan paikkaan kummallakin polulla |
+| `irrotaMusiikinVahvistin(audio)` | solmut irti kuolleelta soittimelta |
+
+Käyttäjät: `js/ambience-stream.js` (pohjaraita, kaupunkiraidat,
+visamusiikki), `js/siirtymamusiikki.js` (siirtymä- ja linssiraidat) ja
+`js/ui.js` (aarteen paljastusaihe). Vartija:
+`tests/musiikin-saadin.test.mjs` kaatuu, jos jokin musiikkisoitin ei
+pyydä vahvistinta tai päästää raidan soimaan kysymättä
+`musiikkiSaaSoida`.
+
+**Hiljaisuus on parempi kuin hallitsematon täysi taso.** Jos vahvistinta
+ei saatu EIKÄ `volume` tottele, raita jää soimatta. Pohjaraita jää
+odottamaan ja rakennetaan uudelleen reititettynä heti kun konteksti
+herää (enintään neljä yritystä); lyhyet raidat (visa, siirtymä, aarre)
+jäävät väliin ja seuraava yritys onnistuu, koska konteksti on silloin jo
+hereillä.
+
+**CORS.** Web Audio lukee elementin ääntä, joten ämpäristä
+(`media.matkakirja.app`) tuleva raita tarvitsee `crossOrigin =
+'anonymous'` **ennen** `src`:n asettamista; ilman lupaa ketju olisi
+hiljainen ilman virhettä. Palvelutyöntekijän äänipeili (`sw.js`
+`aaniPeilista`) noutaa `mode: 'cors'` ja palauttaa CORS-vastauksen, joten
+lupa saadaan myös välimuistista — sw.js:ään ei tarvittu muutosta.
+Varapolkua repon omaan `assets/audio/…`-kansioon EI enää ole:
+äänitiedostot eivät ole repossa (11.9.2026), joten pelin oman raidan
+ainoa lähde on ämpäri ja 404 merkitsee raidan puuttuvaksi. Visan
+ulkopuoliselle lähteelle (Freesound) CORS-lupaa ei pyydetä, ja sille
+alkuperäislähde on yhä varareitti.
+
+### Käyrä ja oletus
+
+Musiikin säädin on **liuku 0–100** (`#kehittaja-musiikki-liuku`
+hammasratasvalikossa) ja käyrä on vakio `js/musiikkivalitsin.js`:ssä:
+
+    vahvistus(x) = (x / 100) ^ MUSIIKIN_KAYRA        MUSIIKIN_KAYRA = 2,5
+    musiikinKerroin() = vahvistus(liuku) × MUSIIKIN_KATTO   MUSIIKIN_KATTO = 8
+
+| liuku | vahvistus | dB täydestä | kerroin (1,0 = 8.9. hyväksytty taso) |
+| --- | --- | --- | --- |
+| 0 | 0 | hiljaisuus | 0 |
+| 5 | 0,00056 | −65,1 dB | 0,0045 |
+| 10 | 0,0032 | −50,0 dB | 0,025 |
+| 20 | 0,0179 | −35,0 dB | 0,14 |
+| **35** | **0,0725** | **−22,8 dB** | **0,58 ← OLETUS** |
+| 43,5 | 0,125 | −18,1 dB | 1,00 |
+| 50 | 0,1768 | −15,1 dB | 1,41 |
+| 100 | 1 | 0 dB | 8,0 |
+
+Oletus 35 on siis 4,7 dB entistä tasoa hiljaisempi, väli ulottuu
+hiljaisuudesta 18 dB entisen yli, ja pykälän kokoinen muutos kuuluu
+suunnilleen samanlaisena kaikkialla säätimen matkalla. Tallennus:
+`localStorage['matkakirja-musiikin-taso']` (kirjoitetaan vain kun arvo
+poikkeaa oletuksesta). Lukema säätimen vieressä kertoo desibelit
+(`35 · −23 dB`), koska kuulokokeen tulos on helpompi kertoa eteenpäin
+lukuna kuin muistikuvana.
+
+**Kehittäjän vanha `musiikki`-kerroin on poistettu** (`js/kehittajan-
+voimat.js` `KEHITTAJAN_VOIMA_LAJIT` on nyt pelkkä `['tausta']`). Sen
+arvo jäi laitteen muistiin, ja omistajan puhelimessa saattoi olla yhä
+5.9. linjattu ×2,0, joka olisi kaksinkertaistanut uuden liu'un tuloksen
+kenenkään huomaamatta. Avain `matkakirja-dev-voima-musiikki` jää
+laitteille lojumaan mutta sitä ei lueta; migraatiota ei tehdä, koska
+vanha ×-arvo ei tarkoita liu'ulla mitään.
+
+### Mitattu (Chromium, `node tools/savukkeet/savuke-musiikin-saadin.mjs`)
+
+Savuke vakoilee `createMediaElementSource`- ja `createGain`-kutsut ja
+lukee soivan ketjun. Etusivun raidasta (`musa-etusivu-lyria.mp3`):
+
+| tilanne | elementin volume | kytketty gainiin | gain |
+| --- | --- | --- | --- |
+| liuku 35 (oletus) | 1 | kyllä | 0,01183 |
+| liuku 90 | 1 | kyllä | 0,1254 |
+| liuku 5 | 1 | kyllä | 0,0000228 |
+
+Elementin oma `volume` on 1 eli taso tulee kokonaan gainista — juuri se
+on koko korjaus. Väistö kertautuu edelleen: liu'un 5 ja 60 lukemat on
+mitattu luennan väistön (0,25) aikana ja liu'un 35 ja 90 ilman.
+Säätimestä vedettynä (`input`-tapahtuma) lukema näytti `60 · −11 dB` ja
+gain muuttui samassa. Kaappaus:
+`/tmp/matkakirja-kaappaukset/musiikkisaadin.png`.
+
+## Kehittäjän voimakkuussäätimet (omistaja 3.9.2026)
+
+Omistaja: *"kehittäjätilaan saisi hammasrattaan alle laittaa
+äänenvoimakkuus säätimet taustaäänen ja taustamusiikin voimakkuuksille
+(+/- arvot nykyisille arvoille)"*.
+
+`js/kehittajan-voimat.js` pitää kahta kerrointa (`tausta`, `musiikki`),
+oletus **1,0 molemmilla** = pelin nykyinen taso, askel 0,1, rajat
+0,25–3,0, tallennus localStorageen (`matkakirja-dev-voima-<laji>`).
+Hammasratasvalikon (`#kehittaja-valikko`) kaksi riviä näyttävät arvon
+(`×1,0`) ja säätävät sitä miinus- ja plusnapeilla.
+
+> **Musiikki ei ole enää täällä (9.9.2026).** `KEHITTAJAN_VOIMA_LAJIT`
+> on nyt `['tausta']`; musiikilla on oma liuku 0–100 omalla käyrällään.
+> Ks. luku "Säädin toimii oikeasti ja laajalla välillä". Alla oleva
+> teksti kuvaa tilannetta 3.9.–9.9.2026 ja jää muistiin siitä, miksi
+> kertoimia ei saa olla kahta.
+
+`tausta` kerrotaan ambienssin tasoon (`js/ambience-stream.js taso`) ja
+linssien äänimaisemiin. `musiikki` luettiin **vain** valitsimen kautta
+(`js/musiikkivalitsin.js musiikinKerroin`), ja sitä kautta se koskee
+kaikkea musiikkia: pohjaraita ja kaupunkiraidat, tila- ja paikkaraidat,
+siirtymä- ja linssiraidat, visamusiikki, aarreaihe ja kehittäjän
+varakuvio. Kaikki kuuntelevat muutosta ja liu'uttavat soivan äänen
+uuteen tasoon 200 ms:ssa — ks. edellinen luku.
+
+Musiikin oletus oli 5.9.–8.9.2026 välillä 2,0 (omistajan linjaus vanhaan
+hiljaiseen palettiin). Palettivaihdon jälkeen se kaksinkertaisti jo
+valmiiksi liian kovan raidan, joten hyväksytty kuuluva taso asuu nyt
+perustasossa ja kerroin on jälleen pelkkä säädin.
+Tavallisella pelaajalla kerroin on aina 1,0.
+
+## Sarajevon äänimaisema (omistaja 3.9.2026)
+
+Omistaja: *"sarajevon taustaäänimaisema pitää vaihtaa koska siinä
+kilkattaa kokoajan kirkonkello"*. Aiempi äänite oli Pyhän Joosefin
+kirkon kellot (aporee_72320_84455). Tilalla saman tallentajan (Haris
+Sahačić, public domain) Ferhadija-kadun kävelykadun hälinä
+(aporee_72317_84452, −31,3 LUFS → voima 0,82) ja Gazi Husrev-begin
+moskeijan edustan suihkulähde (aporee_72314_84448, −33,9 LUFS → voima
+1,11). Mittaukset `tools/aanitasot.json`.
+
+## Jalankulkumusiikki soi nopanheittojen yli (omistaja 3.9.2026)
+
+Omistaja: *"jalankulukumusiikki saisi olla rymikäs ja melkein laukkaava
+rytmi ja se saisi soida myös välinopanheittojen ajan kunnes pelaaja
+pääsee seuraavaan kaupunkiin"*. Raidan `jalan` prompti on uusittu
+(laukkaava 1870-luvun matkasvengi, ei raskaita rumpuja; ajo workflow
+`generoi-siirtymamusiikki` laji `jalan`). Pelissä `js/ui.js
+animatePawnSisalla` ei enää sammuta jalan-raitaa siirron päättyessä, jos
+pelaaja jäi reitin välipisteeseen (`player.pos.type === 'edge'`): raita
+jatkaa seuraavan heiton ja siirron yli ja feidaa vasta kaupunkiin
+saavuttaessa. Laiva ja lento sammuvat siirron päättyessä kuten ennen.
+
+## Keksintölinssin luennat (omistaja 4.9.2026)
+
+Omistaja: *"Generoi selostajan äänellä jokaiseen kohtaan vuosiluku,
+keksijän nimi ja keksintö, eli se tulisi aina Keksinnön vaihtoessa
+lukijan äänellä."*
+
+**Teksti ja tiedostonimi tulevat datasta.** `js/linssipuhe.js` on
+ainoa paikka, jossa molemmat ladotaan, ja sekä peli että
+generointityökalu lukevat samat funktiot:
+
+- `luennanTeksti(t)` → `"<vuosi>. <henkilö>. <keksintö>."`, esimerkiksi
+  `"1769. James Watt. Höyrykoneen lauhdutin."` Kaksoispysäkillä
+  henkilö on jo datassa yhtenä nimenä (*Montgolfier-veljekset*).
+  Merkkipaalu 1873 luetaan ilman henkilöä: `"1873. Matkakirjan vuosi."`
+- `luennanPuhe(t)` on sama teksti mallille: pisteiden kohdalla
+  `<break time="0.4s" />` (eleven_v3 tukee break-tagia).
+- `luennanRunko(t)` → tiedostorunko = **muotokuvan runko** eli pysäkin
+  `kuva.osoite`-tiedostonimi ilman päätettä (`1769-james-watt`). Vuosi
+  yksin ei kelpaa: kaaressa on kolme vuoden 1895 pysäkkiä (Marconi,
+  Röntgen, Lumière). Kuvaton merkkipaalu saa rungon vuodesta ja
+  otsikosta (`1873-matkakirjan-vuosi`).
+
+Osoite on muotokuvien sisarkansio ämpärissä:
+`aikajana/keksinnot/puhe/<runko>.mp3`.
+
+**Pelissä.** `soitaLinssiluenta(ui, t)` kutsutaan yhdeltä riviltä
+`js/aikajana.js`:n `sytyta(i)`:n lopussa — siis vain ELÄVÄSTÄ
+syttymisestä. Pysäytetyn kellon selailu (`siirry(i)`, kortin tai lampun
+napautus) ei lue ääneen. Kilahdus (`keksinnonAani`) soi ensin ja luenta
+alkaa 350 ms sen jälkeen (`LUENNAN_VIIVE_MS`). `pura()` ja `alusta()`
+kutsuvat `pysaytaLinssiluenta(ui)`.
+
+Luenta noudattaa kertojan kytkintä (`js/luenta.js luentaKytkinPaalla`)
+ja puheen voimakkuutta (`puheVoima`), ja `merkitsePuhuja` hoitaa
+väistön: puhujalaskuri nostaa ambienssin väistön, ja koska väistö menee
+myös ulkoisille väistäjille, **linssin oma raita hiljenee samalla**
+(`js/siirtymamusiikki.js lajinVaisto` sivuuttaa vain oman
+linssihiljennyksensä, ei puheen väistöä). Soitin on oma eikä
+`playDiaryVoice`, koska tuo oli sidottu matkakirjakortin omaan
+soittimeen ja väistöön. (Vanha perustelu — `playDiaryVoice` yritti
+peilin pettäessä repon `assets/audio`-varareittiä ja kutsui
+`peiliPetti('aanet')` — ei enää päde: varareitti poistettiin
+11.9.2026, kun äänitiedostot poistuivat reposta.) Puuttuva
+tiedosto (404) on hiljainen, ei virhe.
+
+**Generointi.** `tools/generoi-linssiluennat.mjs`, sama resepti kuin
+matkakirjaluennoilla (Viisas Kertoja, `eleven_v3`,
+`/v1/text-to-dialogue`, mp3_44100_192 — 14.9.2026 asti mp3_44100_128,
+omistaja päivitti Pro-tasoon — stability 0,5). Viimeistely
+ffmpegillä: hiljaisuus pois molemmista päistä, 30 ms häivytykset,
+taso **−17 LUFS** (mitattu 4.9.2026 ämpärin muista kertojaluennoista:
+intro-puhe −17,1 · puhe-lento-alku −17,4 · puhe-fokus-matkakirja-lontoo
+−17,1) yhtenä lineaarisena vahvistuksena, 150 ms hiljainen häntä, mono
+44,1 kHz 128 kbit. Liput: `--kuiva` (tekstit ja kohteet, ei APIa),
+`--pysakit 1769,1783` (tyhjä = kaikki 26), `--pakota` (ohittaa HEAD-
+tarkistuksen, joka muuten jättää ämpärissä jo olevat generoimatta),
+`--ei-vientia`.
+
+Tuotos menee **vain ämpäriin**, ei repoon: työkalu kirjoittaa
+`media/linssiluennat/`-kansioon (.gitignoressa, tarkistetaan ennen
+ensimmäistäkään maksullista kutsua) ja vie tiedostot `aws s3 cp`
+-komennolla. Ajo on `.github/workflows/generoi-linssiluennat.yml`
+(workflow_dispatch, syötteet `pysakit` ja `kuiva`), salaisuudet
+`ELEVEN_API_KEY` + neljä R2-salaisuutta. Vartija:
+`tests/linssipuhe.test.mjs`.
+
+## Tehosteketjut: Tuna (omistaja 5.9.2026)
+
+Omistajan päätös kirjastokartoituksen
+(docs/raportit/valmiit-palikat-2026-09-04.md) TOP 6:sta, sanatarkasti
+*"Tee 2. Ensin"* → *"Sitten 5. Sitten 6. Ja 3."*: kohta 5 on Tuna 1.1.3
+(MIT). `js/tehosteketju.js` lataa kirjaston laiskasti ämpärin
+`vendor/tuna-1.1.3.js`-polusta (virhehaara: ääni kulkee suoraan) ja
+rakentaa nimetyt ketjut `megafoni`, `radio`, `puhelin`, `luola` ja
+`ulkoilma` (`tehosteketju(ctx, nimi, pääte)` → `{ input, output,
+pura() }`, ristihäivytys 200 ms kumpaankin suuntaan). Kytkentä:
+kohdekortti asettaa puhujan akustiikan (`asetaAkustiikka`; pakkien
+`akustiikka: 'luola'` viidellä kohteella: Vjetrenica, Aggtelek, Turda,
+Capri, Kappadokia) ja lukijaääni (`js/puhe.js luoPuheSoitin`) kysyy sen
+palaa aikatauluttaessaan — Livian vastaus ja kertojan luenta kuuluvat
+luolasta, kun luolan kortti on auki. Radion suora lähetys EI kulje
+ketjun läpi (se ei kulje Web Audion läpi lainkaan, ks.
+js/linssit/radio.js), eikä megafonille ole vielä kutsupaikkaa
+(siirtomaalinssi). Kuuntelu: hammasratasvalikon *tehosteketjut*-nappi
+soittaa testiäänen suoraan ja jokaisen ketjun läpi. Kirjasto säilyy
+offline `sw.js`:n `VENDORCACHE`-korissa. Vartijat:
+`tests/tehosteketju.test.mjs`, `tools/savukkeet/savuke-tehosteketju.mjs`.
+
+## Pulun tehosteet (omistaja 6.9.2026)
+
+Omistajan tilaus aamupäivällä, sanatarkasti: *"Pululle ja muuallekin
+tarvitaan ääniefektejä: linnun siivet lentäessä, tömähdyksiä (pulu
+laskeutuu), hassuja täyteääniä kun pulu sekoilee (doing vieteriääni
+yms), oven lämähdys kiinni ja auki (pulu tulee tai lähtee),
+viuhahdusefektejä yms. **Näitä ei generoida.**"*
+
+Viimeinen lause erottaa tämän kaikesta muusta tällä sivulla: nämä
+**haetaan valmiina äänitteinä Freesoundista**, eivät ElevenLabsilta.
+
+### Lähteet ja lisenssit (monilähteinen 11.9.2026 alkaen)
+
+Omistajan päätös 11.9.2026, sanatarkasti: *"Lisää ilmaisia lähteitä
+rinnalle."* Freesoundin rinnalla haetaan samaan putkeen kaksi muuta
+ilmaista lähdettä. Syy on laatu: kone valitsee luvuista eikä korvalla,
+ja yhden lähteen paras mitattu osuma voi silti olla väärä ääni
+(riemuääneksi tuli ensin *"Cute Computer Squeak"* ja sitten *"Upset
+Bird Chirp"*).
+
+| lähde | avain | mitä sieltä saa | miten |
+|---|---|---|---|
+| **Freesound** | kyllä (`FREESOUND_API`) | laaja kirjasto, arvosanat ja latausmäärät | rajapintahaku, lisenssirajaus palvelimen puolella |
+| **Wikimedia Commons** | **ei** | nauhoitettuja maisemia ja yksittäisiä ääniä, PD/CC0/CC BY | MediaWiki Action API, OR-muotoinen kysely + `filetype:audio` |
+| **Kenney** (kenney.nl) | **ei** | käsin tehdyt CC0-pelipaketit: UI, iskut, ovet, kirjat, sarjakuva | pakettisivulta zipin osoite, zip kerran muistiin, sisältö hakemistosta |
+
+Lisenssirajaus on yhdessä paikassa (`tools/aanilahteet.mjs`) ja se
+ajetaan **jokaiselle** lähteelle heti haun jälkeen — Freesoundilla
+lisäksi palvelimen puolella, kuten ennenkin.
+
+Commonsista karsitaan lisäksi **ääntämisnäytteet** (Wikisanakirja ja
+Lingua Libre: `Nl-boing.ogg`, `LL-Q1860 (eng)-…`). Ne ovat ihmisiä
+sanomassa yhden sanan mikrofoniin, ja juuri siksi ne osuvat hakusanaan
+täydellisesti — kuivassa ajossa 11.9.2026 hollantilainen ääntämässä
+sanan *boing* voitti sarjakuvavieterin.
+
+| asia | ratkaisu |
+|---|---|
+| kelpaa | **CC0, public domain ja CC BY** |
+| ei kelpaa | CC BY-NC, CC BY-ND, Sampling+, **ja CC BY-SA** — share-alike tarttuu johdannaiseen, ja ajo leikkaa ja normalisoi äänen eli tekee siitä johdannaisen |
+| tuntematon lisenssi | ei kelpaa: lähde voi lisätä uuden lisenssin milloin tahansa |
+| attribuutio | CC BY vaatii nimeämisen; **lähde**, tekijä, lisenssi, id ja sivu kirjataan manifestiin ja tulostetaan ajon lopuksi |
+| taso ja muoto | −14 LUFS, mp3, mono, 128 kbps, 44,1 kHz; hiljaisuus leikattu päistä, 20 ms häivytykset |
+
+**Miksi juuri nämä kolme.** Pixabay ja Mixkit selvitettiin ja jäivät
+pois: Pixabaylla **ei ole äänirajapintaa** (API tuntee vain kuvat ja
+videot) ja sen käyttöehdot kieltävät ohjelmallisen keruun; Mixkitin
+ehdot kieltävät sekä koneellisen latauksen että sen jakelun, mitä tämä
+putki tekee tuloksellaan (ääni ämpärissä julkisen osoitteen takana).
+Perustelut lähde-URLeineen ovat `tools/aanilahteet.mjs`:n
+otsikkokommentissa, ja `tests/aanilahteet.test.mjs` kaatuu, jos
+kumpikaan nimi ilmestyy lähderekisteriin.
+
+Taso on tarkoituksella paljon kovempi kuin generoitujen tehosteiden
+−30 LUFS: nämä ovat lyhyitä iskuja eivätkä taustaa. Lopullisen
+kuuluvuuden asettaa peli (`PULUN_TASO`, alla).
+
+### Lista ja työnkulku
+
+Lista on `tools/tehosteet/pulu-tehosteet.json`: jokaisella tunnuksella
+on kuvaus, **hakusanat englanniksi** (Freesoundin aineisto on merkitty
+englanniksi), **kestorajat** ja **lisenssit** CC0 ensin. Muototarkistus
+ja valintalogiikka ovat `tools/tehostelista.mjs`:ssä, jotta testi voi
+tuoda ne tuomatta samalla API-avainta lukevaa hakutyökalua.
+
+```
+# koko lista: hae, normalisoi, vie ämpäriin ja kirjoita manifesti
+node tools/hae-freesound.mjs --pulu
+# vain yhdestä lähteestä (esim. kun Freesoundin osuma oli huono)
+node tools/hae-freesound.mjs --pulu --kuiva --lahteet commons,kenney
+# vain yksi tunnus uusiksi (huono osuma vaihtoon) — manifesti täydentyy
+node tools/hae-freesound.mjs --pulu --tunnus siivet-lento
+# pelkkä haku ja valinta, ei latausta eikä vientiä
+node tools/hae-freesound.mjs --pulu --kuiva
+# lataa ja normalisoi, mutta jätä tiedostot levylle
+node tools/hae-freesound.mjs --pulu --ei-vientia
+```
+
+Ajo tehdään **työnkulussa** `.github/workflows/aanihaku.yml`
+(workflow_dispatch, syöte `tila: pulu-tehosteet`, lisäksi `tunnus` ja
+`kuiva`), koska Freesoundin avain on repon salaisuuksissa eikä sitä saa
+liittää keskusteluun. Salaisuudet: `FREESOUND_API` (tai jokin
+vaihtoehtoinen kirjoitusasu) **ja** neljä R2-salaisuutta
+`R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`,
+`R2_BUCKET` — samat kuin muillakin ääniajoilla. Ajo tarkistaa ne nimeltä
+ennen kuin mitään haetaan. **Uusia salaisuuksia ei tarvita**: Commons ja
+Kenney toimivat ilman avainta (Commons vaatii vain tunnistautuvan
+User-Agentin, joka on työkalussa). Jos Freesoundin avain puuttuu, ajo ei
+enää kaadu vaan hakee kahdesta muusta ja sanoo sen lokissa.
+
+Lähteitä voi rajata: työnkulun syöte `lahteet` (esim. `commons` tai
+`freesound,kenney`) tai komentorivillä `--lahteet`. Lista voi kertoa
+oman rajauksensa: äänimaisemat ajavat vain Freesoundin ja Commonsin,
+koska Kenneyssä ei ole minuutin mittaisia maisemia.
+
+Kone valitsee jokaiselle tunnukselle **yhden** osuman kolmesta
+mitattavasta luvusta ja yhdestä kertoimesta:
+
+- **arvosana** (paino 3; alle kolme arviota on kohinaa, jolloin
+  neutraali 3/5 — sama koskee lähteitä, joissa arvioita ei ole),
+- **suosio** (paino 2, logaritmisesti) **lähteen omalla asteikolla**:
+  Freesoundissa 10 000 latausta on täydet pisteet, Commonsissa 20
+  käyttöä wikeissä. Ilman lähdekohtaista asteikkoa Freesound voittaisi
+  jokaisen vertailun pelkällä mittakaavallaan.
+- **kesto** (paino 1, haarukan keskikohta parhaana),
+- **osuvuus kertoimena** (0,3 + 0,7 × osuvuus): puhuuko osuman nimi
+  samasta asiasta kuin hakusana. Tämä on 11.9.2026 lisätty ja se on
+  koko muutoksen tärkein osa — *"Cute Computer Squeak"* sai täydet
+  pisteet arvosanasta, latauksista ja kestosta, eikä yhtään
+  osuvuudesta. Kerroin sanoo sen, mikä on totta: suosio ratkaisee
+  osuvien äänten kesken eikä niiden ohi.
+
+Ajon loki kertoo osumamäärät lähteittäin ja kaksi seuraavaksi parasta
+ehdokasta. **Kuuntele tulos ajon jälkeen** — kone ei kuuntele, ja
+huonon osuman vaihtaa `--tunnus`-ajolla (tai rajaamalla lähteen
+`--lahteet`-valitsimella).
+
+Ämpäriin syntyy `aanet/tehosteet/pulu/<tunnus>.mp3` ja
+`aanet/tehosteet/pulu/manifesti.json` (tunnus, tiedosto, **lähde**,
+lähteen id, nimi, tekijä, lisenssi, attribuutioteksti, sivu, kesto,
+pisteet; Freesound-riveillä myös entinen `freesoundId`).
+Repoon ei jää mitään: työkalu kirjoittaa `media/tehosteet-pulu/`-kansioon,
+joka on `.gitignoressa`, ja se tarkistetaan koneellisesti.
+
+### Tunnukset ja missä ne soivat
+
+Peli lukee manifestin ajossa (`js/sound.js lataaPulunTehosteet`) eikä
+tunne yhtään osoitetta ennalta — niin huonon osuman korvaaminen ei
+vaadi julkaisua. Ilman manifestia tehosteet ovat **hiljaa**:
+synteesivastinetta ei ole, koska arvattu siivenräpytys olisi huonompi
+kuin ei mitään. Voimakkuus on `PULUN_TASO` = 0,4 eli **−8 dB luentaan
+nähden** (omistajan vaatimus: tehoste ei nouse luennan päälle).
+
+| pelin tunnus | listan tunnus | missä soi |
+|---|---|---|
+| `pulu.siivet` | siivet-lento | Livian saapuminen ja lähtö (js/livia.js) |
+| `pulu.siivet-lasku` | siivet-laskeutuminen | vapaa |
+| `pulu.tomahdys` | tomahdys-laskeutuminen | kun avauskupla ilmestyy |
+| `pulu.doing` | doing-vieteri | sekoilurepliikit (esim. *"Melkein joka ikisen"*) |
+| `pulu.sekoilu` | sekoilu-2 | vapaa (toinen hassu ääni vaihteluksi) |
+| `pulu.ovi-auki` | ovi-auki | **ei kutsupaikkaa** — ks. alla |
+| `pulu.ovi-kiinni` | ovi-lamahdys | **ei kutsupaikkaa** — ks. alla |
+| `pulu.viuhahdus` | viuhahdus-tulo | Livian saapuminen |
+| `pulu.viuhahdus-lahto` | viuhahdus-lahto | Livian lähtö |
+| `pulu.kujerrus` | kujerrus | vapaa |
+| `pulu.sahke` | paperin-kahina | vapaa (yleinen) |
+| `pulu.kilahdus` | kellon-kilahdus | vapaa (yleinen) |
+
+**Ovea ei soiteta vielä.** Omistajan tilauksessa ovi kuuluu
+sisätiloihin, ja avausesittely tapahtuu maailmankartan yllä — ulkona.
+Ohje oli *"jätä pois jos epäselvää"*, joten ovitunnukset ovat pelissä
+valmiina mutta ilman kutsupaikkaa; ensimmäinen sisäkohtaus saa ne.
+
+Livian kytkentä on yhdessä apufunktiossa (`js/livia.js
+soitaLivianTehoste`) ja kolmessa yhden rivin kutsussa:
+
+- **saapuminen** — viuhahdus (0 s) + siivet (0,1 s) → tömähdys (0,45 s),
+  kun avauskupla ilmestyy
+- **sekoilu** — doing niissä repliikeissä, joissa Livia sekoilee
+  (`SEKOILUN_MERKIT`: *"Melkein joka ikisen"*, *"ihan hiessä"*,
+  *"anteeksi valikoima"*); tunnistus on tekstistä eikä indeksistä,
+  koska repliikit ovat kaanonia ja voivat siirtyä paikaltaan
+- **lähtö** — siivet (0 s) + viuhahdus (0,18 s), kun sarja päättyy tai
+  pelaaja valitsee kaupungin
+
+Vartija: `tests/pulu-tehosteet.test.mjs`.
+
+## Linssien äänimaisemat: Ihmisen matka (omistaja 7.9.2026 ilta)
+
+Omistajan tilaus, sanatarkasti: *"olisi todella makeaa, jos saataisiin
+myös joitain ääniefektejä, siis aitoja, jossain nauhoitettuja, missä
+voisi olla eri paikkojen äänimaisemaa. Lähinnähän ne ovat varmaan
+jotain tuulta ja sademetsän sirkutusta, mutta jos saadaan joitain
+pieniä eroja, niin se tekisi todella ison säväytyksen."* (Raamattu:
+**LINSSIEN AIDOT AANIMAISEMAT**.)
+
+Nämä **haetaan valmiina äänitteinä Freesoundista, ei generoida** —
+sama linjaus ja sama putki kuin pulun tehosteilla, eri mitat.
+
+| ominaisuus | vaatimus |
+|---|---|
+| tiedostot | `aanet/tehosteet/ihmisen-matka/<tyyppi>.mp3` + `manifesti.json` |
+| kesto | 30–120 s (silmukka kestää minuutteja; lyhyempi kuuluisi kierroksena) |
+| taso ja formaatti | **−30 LUFS**; mp3, mono, 128 kbps, 44,1 kHz |
+| lisenssit | CC0 ensisijaisesti, CC BY attribuutiolla — ei mitään muuta |
+| rajaus | `-tag:music -tag:song -tag:speech -tag:voice`: nauhoitettu paikka, ei musiikkia eikä puhetta |
+| hiljaisuuden leikkaus | **pois päältä** — tuulen hiljaisin kohta on osa tuulta |
+| häivytykset päissä | 0,25 s (jäävät soittimen ristihäivytyksen sisään) |
+
+**Lista** on `tools/tehosteet/ihmisen-matka-maisemat.json`: 15
+maisematyyppiä, kolme englanninkielistä hakua kummallekin, kestorajat
+ja lisenssit. Sama muototarkistus kuin pulun listalla
+(`tools/tehostelista.mjs`); ero on `peliavainEtuliite: "maisema"`,
+listan tason `poisTagit` ja `leikkaaHiljaisuus: false`.
+
+**Kytkentä peliin** ei ole `js/sound.js`:ssä vaan kertomuksessa:
+jokaisella jaksolla (`js/linssit/ihmisen-matka-kertomus.js`) on tekninen
+kenttä `maisema`, jonka arvo on listan tunnus tai `null` (avausjakso on
+musta ruutu ja pelkkä kertojan ääni). `tests/ihmisen-matka-aanimaisemat.test.mjs`
+vartioi molempiin suuntiin: yksikään jakso ei saa pyytää tuntematonta
+tunnusta, eikä yhtäkään tunnusta saa hakea ämpäriin ilman käyttäjää.
+
+### Soitin
+
+`js/linssit/ihmisen-matka-aanimaisema.js`, kaksi käskyä:
+
+```js
+asetaAanimaisema(jakso.maisema);   // jokaisen jakson alussa
+lopetaAanimaisema();               // kun linssi suljetaan
+```
+
+Sama tyyppi peräkkäin ei tee mitään — kolme savannijaksoa on YKSI
+katkeamaton savanni. Vaihto on 2,5 sekunnin ristihäivytys (omistajan
+mitta 2–3 s), ja **sama koneisto tekee myös silmukan sauman**:
+kenttä-äänitteen alku ja loppu eivät osu yhteen, joten `audio.loop`
+kuuluisi kuoppana joka kierroksella; sen sijaan kierroksesta
+ristihäivytyksen verran ennen loppua aloitetaan uusi kierros samasta
+tiedostosta ja vanha häivytetään sen alta.
+
+Taso on `MAISEMAN_VOIMA` = 0,10 — **kuulokokeen nuppi**, omistaja
+säätää sen omalla laitteellaan. Soitin väistää kertojan, pöllön ja
+lukunäkymien alta (`lisaaVaistaja`), vaikenee taustalle mennessä
+(`lisaaTaustaVaimennus`), tottelee äänivalikon mykistystä
+(`matkakirja-aanivalinta`) ja kehittäjän `tausta`-kerrointa. **Linssin
+oman `linssi`-hiljennyksen se ohittaa** — muuten maisema väistyisi omaa
+hiljennystään ja jäisi puoleen tasoon koko esityksen ajaksi (sama
+poikkeus kuin linssin musiikkiraidalla, `js/siirtymamusiikki.js`).
+
+Puuttuva manifesti ja puuttuva tiedosto ovat **hiljaisuutta eivätkä
+virhe**: ennen hakuajoa esitys kulkee täsmälleen samoin, vain ilman
+maisemaa.
+
+### Ajo
+
+```
+node tools/hae-freesound.mjs --maisemat --kuiva
+node tools/hae-freesound.mjs --maisemat
+node tools/hae-freesound.mjs --maisemat --tunnus savanni
+```
+
+Avain on repon salaisuuksissa, joten oikea ajo tehdään työnkulusta:
+`.github/workflows/aanihaku.yml`, `tila: ihmisen-matka-maisemat`
+(`tunnus` yhden korjaukseen, `kuiva` pelkkään valintaan). Ajo ei
+committoi mitään: tiedostot menevät `media/tehosteet-ihmisen-matka/`
+-kansioon, joka on .gitignoressa, ja sieltä ämpäriin.
+
+**KUUNTELE AJON JÄLKEEN.** Kone valitsee arvosanasta, latauksista ja
+kestosta; se ei kuule lentokoneen jyrinää tai nauhoittajan yskäisyä.
+CC BY -tekijät kirjataan manifestista `js/lahteet.js`:n Äänet-osastoon
+ja README.md:n samaan lukuun.
+
+Ehdokaslista ja omistajan hyväksyntä:
+`docs/raportit/ihmisen-matka-aanimaisemat-ehdokkaat.md`.
+Vartija: `tests/ihmisen-matka-aanimaisemat.test.mjs`.

@@ -122,6 +122,7 @@ export const FOKUSKOHTEET_BIH = [
     id: 'mostar',
     nimi: 'Mostar',
     tyyppi: 'kaupunki',
+    taso: 1,
     kysymykset: [
       'Kuka oli Mimar Sinan?',
       'Mitä sillanvartijan työhön kuului?',
@@ -166,7 +167,7 @@ export const FOKUSKOHTEET_BIH = [
     nimio: 'Blagajin luostari',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Keitä dervissit olivat?',
       'Miksi luostari rakennettiin juuri kallion juureen?',
@@ -208,6 +209,7 @@ export const FOKUSKOHTEET_BIH = [
     id: 'una',
     nimi: 'Una-joki',
     tyyppi: 'joki',
+    taso: 1,
     kysymykset: [
       'Mihin Una lopulta laskee?',
       'Mitä Unan kansallispuistossa voi tehdä?',
@@ -235,6 +237,18 @@ export const FOKUSKOHTEET_BIH = [
       + '("According to local legends"), ja teksti sanoo sen ääneen. '
       + 'Muoto "Una-joki" on aineiston ohje: fi-Wikipedian "Una" on '
       + 'moniselitesivu.',
+    visa: {
+      kysymys: 'Mikä on Unan suurin putous?',
+      vaihtoehdot: [
+        'Kravice',
+        'Štrbački buk',
+        'Plitvice',
+        'Skradinski buk',
+      ],
+      oikea: 1,
+      fakta: '212 kilometrin mittainen Una on täynnä koskia ja putouksia, ja sen varren '
+        + 'tärkein kaupunki on Bihać.',
+    },
     // Commons 25.8.2026: 4899×3266, CC BY-SA 3.0, Julian Nyča, 8.9.2018,
     // kuvaus "Wasserfall Štrbački buk an der Una südlich von Bihać" —
     // juuri se putous, jonka teksti nimeää. Category:Štrbački buk.
@@ -285,7 +299,8 @@ export const FOKUSKOHTEET_BIH = [
     nimi: 'Višegrad',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mistä romaani Drinan silta kertoo?',
       'Mitä suurvisiirin työhön kuului?',
@@ -451,10 +466,19 @@ export const FOKUSKOHTEET_BIH = [
     korostukset: ['Ragusan tasavalta', 'puskurivyöhyke|puskurivyöhykettä'],
     /* Valintakuplan painike. Lupaus on mitta, joka näkyy kartalta. */
     nappi: 'Kahdenkymmenen kilometrin rannikko',
-    // 42,925 N / 17,61667 E — en-Wikipedia "Neum".
+    /*
+     * 42,94 N / 17,615 E — kaupungin pohjoislaita (en-Wikipedia "Neum"
+     * 42,925 N / 17,61667 E). Puoli yksikköä pohjoiseen 21.9.2026
+     * (Karttaseppä): Neum, Stonin muurit, Mljet ja Neretvan suisto ovat
+     * kymmenen yksikön ryppäässä, ja kun Bosnian 14 uutta nostoa
+     * (js/packs/hahmotelma-bih.js) kytkettiin, BIH:n ladonta pudotti
+     * Neumin nimiön alas täsmälleen Stonin muurien nimiön päälle
+     * (limitys 0,1 yksikköä; maiden välinen väistö on yksisuuntainen
+     * BIH → HRV). Portti 0 limitystä ilman BIH-erää ja sen kanssa.
+     */
     laudat: {
-      maailmankartta: { x: 6420.6, y: 1686.4 },
-      europe: { x: 549.4, y: 764.7 },
+      maailmankartta: { x: 6420.5, y: 1685.8 },
+      europe: { x: 549.4, y: 764.3 },
     },
     teksti: 'Bosnia ja Hertsegovinalla on merenrantaa 20 kilometriä, ja '
       + 'Neum on sen ainoa kaupunki — koko maan ainoa yhteys '
@@ -513,9 +537,12 @@ export const FOKUSKOHTEET_BIH = [
   {
     id: 'vjetrenica',
     nimi: 'Vjetrenican luola',
+    // Puhujan akustiikka kortilla (js/tehosteketju.js): luolan kaiku.
+    akustiikka: 'luola',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Miten luolaeläin tulee toimeen ilman valoa?',
       'Miksi luolan suusta puhaltaa kylmää?',
@@ -556,7 +583,7 @@ export const FOKUSKOHTEET_BIH = [
     nimi: 'Hutovo Blato',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'elain',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     kysymykset: [
       'Mikä Ramsar-kosteikko on?',
       'Mitä lintuja täällä levähtää?',

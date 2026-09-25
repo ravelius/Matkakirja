@@ -6,8 +6,9 @@
  * sama moottori (js/fokusvirta.js). Aalto 4B, Norja.
  *
  * KAUPUNGIN NIMI. Pelissä kaupunki on Oslo, mutta isoisän vuonna 1873
- * se on Kristiania — kaanon hoitaa vaihdoksen itse: paikkarivi lukee
- * Kristiania ja Livian kupla kertoo, että vanha nimi palautettiin 1925.
+ * se on Christiania (virallinen kirjoitusasu Kristiania vasta 1877) —
+ * kaanon hoitaa vaihdoksen itse: paikkarivi lukee Christiania ja Livian
+ * kupla kertoo, että vanha nimi palautettiin 1925 (Fable 20.9.2026).
  * Tämä paketti ei selitä sitä toistamiseen missään.
  *
  * ── MISTÄ TEKSTIT TULEVAT ──────────────────────────────────────────
@@ -160,70 +161,128 @@ export const FOKUSVIRTA_OSLO = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan. */
-    paikkarivi: 'Kristiania, heinäkuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Kaupungin nimi on Kristiania, ja se on nuori pääkaupunki '
-      + 'vanhassa maassa: katuja vedetään suoriksi, yliopisto on täynnä ja '
-      + 'vuonolla höyrylaiva ohittaa purjeet kuin ohimennen. Täällä '
-      + 'puhutaan kansallishengestä joka toisessa lauseessa — omasta '
-      + 'kielestä, omista saduista, omista vuorista. Illalla söin lohta ja '
-      + 'kuuntelin ylioppilaita, jotka väittelivät siitä, kenen Norja '
-      + 'oikeastaan on. Ruotsin kuninkaan, sanoi laki. Ei kauan, sanoivat '
-      + 'he.',
+    /* Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json (luentakuva); luentakuva2 ennallaan. */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-oslo-i1-r20260914-tarina-v1.jpg',
+      lyhyt: 'Christiania, 1873. Työmies kantoi astiaa Lysakerin tehtaan luona.',
+      selite: 'Vuoteen 1873 sijoittuva kuviteltu kohtaaminen pohjautuu Lysakerin nitroglyseriinitehtaan noin vuonna 1870 kuvattuun ympäristöön. Tehdas oli Alfred Nobelin yhtiökumppanien ensimmäisiä Norjassa.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://snl.no/nitroglyserin',
+        'https://media.snl.no/media/263334/standard_compressed_Nitroglyserinfabrikken_Lysaker_Justert.jpg',
+      ],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-oslo-r20260911-paper2-v1.jpg",
+      lyhyt: "Christiania, 1873. Vedestä nostettu lastu tuoksui yhä metsältä.",
+      selite: 'Nostin laiturin vierestä pienen lastun, kun purjelaiva ja lankkupinot odottivat taustalla. Se oli jo satamassa, mutta tuoksui yhä metsältä.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.oslobilder.no/search?page=10&query=%22havna%22"],
+    },
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Christiania, heinäkuussa 1873. Valoisaa myöhään; vuono tyyni; '
+      + 'puntari korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 332 merkkiä (yläraja 400). */
+    teksti: "Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.",
     /*
      * LUENTA = sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi): kolme tagia, alku ja loppu eri sävyssä.
      */
-    luenta: '[curious] Kaupungin nimi on Kristiania, ja se on nuori '
-      + 'pääkaupunki vanhassa maassa: katuja vedetään suoriksi, yliopisto '
-      + 'on täynnä ja vuonolla höyrylaiva ohittaa purjeet kuin ohimennen. '
-      + '[warmly] Täällä puhutaan kansallishengestä joka toisessa '
-      + 'lauseessa — omasta kielestä, omista saduista, omista vuorista. '
-      + 'Illalla söin lohta ja kuuntelin ylioppilaita, jotka väittelivät '
-      + 'siitä, kenen Norja oikeastaan on. [softly] Ruotsin kuninkaan, '
-      + 'sanoi laki. Ei kauan, sanoivat he.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: lankkujen lastaus ja sataman miehen selitys
+     * sahoista (taustaa).
+     */
+    reaktiot: [
+  {
+    "id": "oslo.r1",
+    "ankkuri": "valmistettiin nitroglyseriiniä",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "oslo.r2",
+    "ankkuri": "kantoi astiaa molemmin käsin",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "oslo.r3",
+    "ankkuri": "Yksi kolaus saattoi räjäyttää sen",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.55,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "oslo.r4",
+    "ankkuri": "vastasi pelkällä nyökkäyksellä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "oslo.r5",
+    "ankkuri": "kiitollinen huonosta käytöksestä",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[softly] Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. [warmly] Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-oslo.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
     /*
-     * LIVIAN MAADOITUS — TARKENNUSOTE (Raamattu, "LIVIA AIKASIIRTYMÄN
-     * VÄLITTÄJÄNÄ — PARIPERIAATE"). Merkintä päättyy lakiin ja
-     * vastaväitteeseen, joten maadoitus ei naljaile vaan tarkentaa:
-     * isoisä kuuli lain oikein, mutta laki oli vain puolet asiasta.
-     * Piikkiä ei osoiteta paikallisiin missään kohdassa.
-     *
-     * FAKTAKURI: yksi väite, kaksi lähdettä. Norjalla oli unionissa oma
-     * perustuslaki, oma suurkäräjät, omat lait ja oma valtiokirstu;
-     * yhteistä olivat kuningas ja ulkopolitiikka, ja ulkopolitiikka
-     * päätettiin Ruotsin hallituksessa ja hoidettiin Ruotsin
-     * ulkoministeriössä — en-Wikipedia "Union between Sweden and Norway"
-     * (johdanto: *"separate constitutions, laws, legislatures,
-     * administrations, state churches, armed forces, and currencies"*;
-     * *"a common monarch and common foreign policy"*; *"Foreign policy
-     * was decided in the Swedish cabinet and conducted by the Swedish
-     * ministry of foreign affairs"*), ja sama asetelma no-Wikipedian
-     * "Norges flagg" -artikkelin unioniosiossa, jossa lippukiista
-     * kulkee juuri siitä, kumpi maa on toisen alainen. Perustuslain
-     * päiväys 17.5.1814 on lisäksi pelin omassa artikkelissa
-     * (js/packs/europe-artikkelit.js, Oslo). Tarkistettu 29.8.2026.
-     *
-     * MIKSI EI 1905: kaanonin kuplateksti kertoo itsenäistymisvuoden
-     * heti perään, eikä maadoitus saa syödä sitä etukäteen.
-     *
-     * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Mut"), keskellä sanat
-     * auki; pronominit kokonaisina; ei huutomerkkejä.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-oslo-01-r20260909-euv1-v1.jpg, pulu-cam-oslo-02-r20260909-euv1-v3.jpg.
      */
-    maadoitus: 'Isoisäsi kuuli lain oikein, mut laki oli vain puolet '
-      + 'asiasta.. Norjalla oli unionissakin oma perustuslaki vuodesta '
-      + '1814, omat suurkäräjät, omat lakinsa ja oma valtiokirstunsa. '
-      + 'Yhteistä olivat kuningas ja ulkopolitiikka, ja se ulkopolitiikka '
-      + 'päätettiin Ruotsin hallituksessa ja hoidettiin Ruotsin '
-      + 'ulkoministeriössä. Ne ylioppilaat eivät siis väitelleet tyhjästä: '
-      + 'puolet vastauksesta oli heillä jo kädessä, ja he väittelivät '
-      + 'toisesta puolesta.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-oslo-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Oslo: ihmisetkin ovat alkaneet käyttää kattoa kulkureittinä.',
+        selite: 'Oslon oopperan valkoinen katto toimii kulkureittinä aivan vuonon reunalla. Minä seurasin hetken kenkiä ja huomasin, että rakennukseen voi tutustua jo ennen ovea.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.operaen.no/',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-oslo-02-r20260909-euv1-v3.jpg',
+        lyhyt: 'Oslo: katon idea näkyi paremmin, kun nousin siitä irti.',
+        selite: 'Ilmasta oopperan katto näyttää kaupungin jatkamalta kävelytieltä vuonon ääreen. Ensimmäisessä kuvassa seurasin kenkiä; tässä näkyy, mihin ne ovat menossa.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.operaen.no/',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Oslon oopperatalon valkoinen katto nousee vuonon rannasta kuin mäki. Ihmiset kävelevät sen päällä ja katselevat laivoja. Minä väistin yhtä kenkää. Katot ovat sentään tavallisesti meidän aluettamme!"],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ylpea', voimakkuus: 0.45 },
     /* KAANON (Fable) — kuplateksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Ylioppilaat olivat oikeassa — Norja itsenäistyi 1905, ja '
       + 'Kristiania sai takaisin vanhan nimensä Oslo 1925.. Ne omat sadut '
@@ -334,6 +393,8 @@ export const FOKUSVIRTA_OSLO = {
         + 'kaksi vuotta ennen kuin isoisäsi kuunteli ylioppilaita. '
         + 'Ensimmäinen läpikuvitettu laitos tuli 1879, ja siitä alkoi se '
         + 'kuvasto, jonka moni tuntee tarinoita paremmin.',
+      lahde: 'en-Wikipedia "Norwegian Folktales" ja no-Wikipedia "Norske '
+        + 'Folkeeventyr". Tarkistettu 1.9.2026.',
       /*
        * UUSI KUVA (ei pelidatassa ennestään). Commons 29.8.2026:
        * 10031×6701, public domain, Theodor Kittelsen, päiväys 1904,
@@ -349,6 +410,7 @@ export const FOKUSVIRTA_OSLO = {
        */
       kuva: {
         tiedosto: 'Theodor Kittelsen - The Water Sprite - NG.M.00863 - National Museum of Art, Architecture and Design.jpg',
+        lyhyt: 'Theodor Kittelsenin Nøkken (1904) esittää norjalaisten kansantarinoiden veden haltijaa.',
         selite: 'Theodor Kittelsenin Nøkken (1904) esittää veden haltijaa, '
           + 'joka tunnetaan norjalaisista kansantarinoista; Kittelsen tuli '
           + 'tunnetuksi Asbjørnsenin ja Moen satujen kuvittajana.',
@@ -431,7 +493,7 @@ export const FOKUSVIRTA_OSLO = {
       id: 'unionilippu',
       nappi: 'Lippu, jonka nurkassa oli silakkasalaatti',
       otsikko: 'Unionimerkki lipun kannossa',
-      teksti: 'Kun isoisäsi katsoi Kristianian satamassa norjalaisten '
+      teksti: 'Kun isoisäsi katsoi Christianian satamassa norjalaisten '
         + 'laivojen lippuja, niiden kannossa eli lipputangon puoleisessa '
         + 'yläkulmassa oli pieni kirjava merkki, jossa Norjan ja Ruotsin '
         + 'värit olivat sekaisin. Nykyinen lippu oli suunniteltu jo 1821; sen teki '
@@ -456,6 +518,8 @@ export const FOKUSVIRTA_OSLO = {
         + 'että kolme peräkkäistä suurkäräjää ehti hyväksyä sen. Laki tuli '
         + 'voimaan ilman kuninkaan vahvistusta joulukuussa 1898, ja '
         + 'kauppalipun kannosta merkki katosi vuoden 1899 lopussa.',
+      lahde: 'en-Wikipedia "Flag of Norway" ja no-Wikipedia "Norges flagg". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * UUSI KUVA (ei pelidatassa ennestään). Commons 29.8.2026:
        * 1140×513, CC BY-SA 4.0, Henri-Georges Chartier (1859–1924),
@@ -474,6 +538,7 @@ export const FOKUSVIRTA_OSLO = {
        */
       kuva: {
         tiedosto: 'LAROUSSE - H.Chartier (1859-1924) SUÈDE ET NORVÈGE Armes, drapeaux, armee (Sweden and Norway historical Coat of arms, flags 1890s) Nouveau Larousse Illustré Paris 1898-1901 Vol 07 (detail).jpg',
+        lyhyt: 'Ruotsin ja Norjan liput unionin viimeisiltä vuosilta, sama unionimerkki kummankin kannossa.',
         selite: 'Ruotsin ja Norjan liput unionin viimeisiltä vuosilta: '
           + 'kummankin kannossa on sama unionimerkki, jossa maiden värit '
           + 'on jaettu tasan.',
@@ -498,7 +563,7 @@ export const FOKUSVIRTA_OSLO = {
        * ELÄINTÄKY (Raamatun linjaus: täkyihin myös eläinjuttuja) JA
        * ERÄN MAKU (tarinakaari, aistikierto).
        *
-       * MIKSI TÄMÄ TÄKY: isoisä söi Kristianiassa illalliseksi lohta. Se
+       * MIKSI TÄMÄ TÄKY: isoisä söi Christianiassa illalliseksi lohta. Se
        * lohi oli pyydetty; tämän päivän lohi kasvatetaan — ja juuri se
        * ero muutti sen, mitä lohesta tehdään toisella puolella maailmaa.
        *
@@ -575,6 +640,8 @@ export const FOKUSVIRTA_OSLO = {
         + 'japanilainen elintarvikeyhtiö Nichirei sopivat yhteistyöstä. '
         + 'Se lohinigiri, jota nykyään pidetään japanilaisena, on siis '
         + 'osittain norjalainen.',
+      lahde: 'en-Wikipedia "Aquaculture of salmonids", no-Wikipedia '
+        + '"Lakseoppdrett" ja en-Wikipedia "Sushi". Tarkistettu 1.9.2026.',
       /*
        * UUSI KUVA (ei pelidatassa ennestään). Commons 29.8.2026:
        * 7035×4690, CC BY-SA 4.0, Diego Delso, kuvaus "Salmon floating
@@ -590,6 +657,7 @@ export const FOKUSVIRTA_OSLO = {
        */
       kuva: {
         tiedosto: 'Jaulas flotantes de salmón, Svolvær, Lofoten, Noruega, 2019-09-05, DD 54.jpg',
+        lyhyt: 'Kelluva merikassi Svolværin edustalla Lofooteilla; katos estaa lintuja pääsemästä kaloihin.',
         selite: 'Kelluva merikassi Lofooteilla Svolværin edustalla: kehä '
           + 'pysyy pinnalla, verkko roikkuu sen alla ja katos estää '
           + 'lintuja pääsemästä kaloihin.',
@@ -675,7 +743,7 @@ export const FOKUSVIRTA_OSLO = {
    */
   oppitunti: {
     otsikko: 'Palkinto, jonka Nobel jätti rajan taakse',
-    teksti: 'Isoisäsi kuunteli Kristianiassa ylioppilaita, jotka väittelivät '
+    teksti: 'Isoisäsi kuunteli Christianiassa ylioppilaita, jotka väittelivät '
       + 'siitä, kenen Norja on. Kaksikymmentäkaksi vuotta myöhemmin, 27. '
       + 'marraskuuta 1895, ruotsalainen kemisti Alfred Nobel allekirjoitti '
       + 'testamentin, jossa hän jakoi omaisuutensa palkintoihin. Kaikki '
@@ -746,6 +814,7 @@ export const FOKUSVIRTA_OSLO = {
      */
     kuva: {
       tiedosto: 'Nobellinstituttet Oslo 2012.jpg',
+      lyhyt: 'Norjan Nobel-instituutti perustettiin 1904, talo entinen yksityishuvila vuodelta 1867.',
       selite: 'Norjan Nobel-instituutti perustettiin 1904 avustamaan '
         + 'Nobel-komiteaa, ja sen talo on entinen yksityishuvila vuodelta '
         + '1867.',
@@ -756,36 +825,42 @@ export const FOKUSVIRTA_OSLO = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * FABLE KATSELMOI: kohtaamisluonnos. Oslolla ON jo hahmo — Talonpoika
-   * Sigrid tarinakaaren paketissa (js/packs/tarinakaari.js, oslo:
-   * *"viljelee peltoa, jonka laidalla laivakumpu on ollut hänen sukunsa
-   * vartiossa satoja vuosia"*) — joten tämä EI ole uusi hahmo vaan sama
-   * hahmo fokusvirran kortille kirjoitettuna, kuten Helsingissä (Luotsi
-   * Aino), Tallinnassa (Tornimestari Kristjan) ja Kööpenhaminassa
-   * (Sadunkertoja Karen). Nimi, ammatti ja sävy ovat silti
-   * vaihdettavissa; kortti ei kertaa kaaren repliikkejä eikä paljasta
-   * laattakysymyksen vastausta.
+   * HENKILÖ VAIHTUI TOISEN KERRAN 12.9.2026: maanviljelijä Oskar →
+   * maisemakuvaaja Liv (omistajan päätös kysymyskortissa: *"Vaihda
+   * kaanoniin uudet henkilöt"*, kun kuvaputki toimitti kuvan, jossa
+   * seisoo harjulla kuvaaja kameroineen ja koirineen). Kortin oma
+   * esittely seuraa kuvaa: sama pelto, sama kumpu, sama aitan hirsi ja
+   * sama kysymys ulkoa — vain se, miksi hän on pellon laidassa, muuttui
+   * kynnöstä valon odottamiseen. Perustelu kaanonin puolella on
+   * js/tyohuone-kehitys-data.js KAARI_PAKETIT, 'oslo'.
+   *
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. HENKILÖ VAIHTUI: talonpoika
+   * Sigrid → maanviljelijä Oskar (js/tyohuone-kehitys-data.js
+   * KAARI_PAKETIT, 'oslo'; kuvaputken tarinaehdotus 5.9.2026, Fablen
+   * päätös samana iltana klo 20:05 UTC). Perustelu on kaaren omassa
+   * kommenttilohkossa: vanhassa kaaressa kumpu oli *"hänen sukunsa
+   * vartiossa satoja vuosia"* ja isoisä oli *"luvannut, ettei kaiva"*
+   * saadakseen jotain nähdä — kaksi kiellettyä kuviota kerralla.
+   * Kortti ei kertaa kaaren repliikkejä eikä paljasta laattakysymyksen
+   * vastausta.
    *
    * PERUSTELUT LUONNOKSELLE:
-   *   - KAAVA TÄYTTYY: suvun jatkumo (sama pelto, sama kumpu, polvia
-   *     joita kukaan ei laske), epäusko (Sigrid pitää suvun tarinaa
-   *     satuna) ja portinvartijakysymys (hän kysyy isoisän kysymyksen
-   *     ennen kuin näyttää mitään).
-   *   - VARALLISUUSSÄÄNTÖ PITÄÄ. Isoisä ei maksa mitään eikä käske
-   *     ketään: hän nukkui kolme yötä pellon laidassa ja lupasi olla
-   *     kaivamatta — tämä on kaaren oma teko, ja se on juuri sen
-   *     kokoinen kuin köyhän miehen teko saa olla. Odotuksen syy on
-   *     suvun oma: lupaus, joka pidettiin puolin ja toisin.
-   *   - ÄÄNIPROFIILI: epäuskoinen (tarinakaari-ohjeen "sukuni tarina on
-   *     minusta satua — mutta vihko on tässä"). Bergenin Solveig on
-   *     saman maan toinen epäuskoinen; ero on siinä, että Solveig ei
-   *     usko tarinaa mutta uskoo työtään, kun taas Sigrid ei usko
-   *     kumpuun eikä silti kynnä sen yli.
+   *   - KAAVA TÄYTTYY ILMAN SUKUA: jatkumo on työn eikä perinnön (sama
+   *     pelto kynnetään joka kevät), epäusko säilyy (Liv pitää
+   *     kumpujuttuja naapurien puheena) ja portinvartijakysymys on
+   *     hänen oma uteliaisuutensa, ei perittyä tehtävää.
+   *   - VARALLISUUSSÄÄNTÖ PITÄÄ. Isoisä ei maksa mitään, ei käske
+   *     ketään eikä ole luvannut kenellekään mitään, eikä kukaan odota
+   *     perillistä. Aitan hirteen kirjoitettu päiväys on jäljelle
+   *     jäänyt merkintä eikä sopimus.
+   *   - ÄÄNIPROFIILI: puhelias ja huvittunut. Bergenin Solveig hoitaa
+   *     tämän erän epäuskoisen osuuden, joten Liv saa olla se, joka
+   *     nauraa ensin ja vakavoituu vasta piirroksen kohdalla.
    *   - EI KUVAA. Tehtävänannon rajaus (aalto 4B): kohtaamiseen ei tule
    *     kuvaa, ja kuvat kuuluvat kaupunkilehteen.
-   *   - EI SPOILERIA. Teksti ei kerro, mikä kummuista nostetut laivat
-   *     säilytti (tarinakaaren oma kysymys) eikä mitään Oslon viidestä
-   *     laattakysymyksestä.
+   *   - EI SPOILERIA. Teksti ei kerro, mikä kummuissa maanneen puun
+   *     säilytti tai tuhosi (tarinakaaren oma kysymys) eikä mitään
+   *     Oslon viidestä laattakysymyksestä.
    *
    * VIHJEOSIO: 'laivat'. Oslon laattakysymyksistä kaksi (Fram ja
    * balsalautta) ratkeaa lehden Laivat-sivulla, ja sama sivu on lähinnä
@@ -793,30 +868,34 @@ export const FOKUSVIRTA_OSLO = {
    * löytyy, ei sitä mikä vastaus on.
    */
   kohtaaminen: {
-    hahmo: 'Talonpoika Sigrid',
-    nappi: 'Tapaa Sigrid',
+    hahmo: 'Maisemakuvaaja Liv',
+    nappi: 'Tapaa Liv',
     /*
      * VARMISTUSKYSYMYS (omistajan pelitestipalaute v1119). Lause on
      * datassa eikä koodissa, koska suomen genetiivi ei taivu koneellisesti
      * jokaisesta nimestä (js/fokusvirta.js varmistusLause).
      */
-    varmistus: 'Haluatko varmasti tavata Sigridin juuri nyt?',
+    varmistus: 'Haluatko varmasti tavata Livin juuri nyt?',
     vihjeOsio: 'laivat',
-    teksti: 'Sigridin pellon keskellä maa nousee loivaksi kummuksi, ja aura '
-      + 'on kiertänyt sen joka kevät niin monta polvea, ettei kukaan '
-      + 'viitsi laskea. Suvun tarinaa hän pitää satuna: kumpu on kumpu, ja '
-      + 'mullassa on kiviä niin kuin joka pellossa. Kiertää sen silti. '
-      + 'Aitan seinähirressä on päiväys kesältä 1873 ja sen alla kysymys '
-      + 'vieraalla käsialalla — mies, joka sen kirjoitti, nukkui kolme '
-      + 'yötä pellon laidassa ja lupasi olla kaivamatta. Sigrid osaa '
-      + 'kysymyksen ulkoa, vaikka ei usko siihen sanaakaan. Hän kysyy sen '
-      + 'nyt.',
+    teksti: 'Pellon laidassa, jota Liv on kuvannut kymmenen vuotta, maa '
+      + 'nousee loivaksi kummuksi, ja aura kiertää sen joka kevät, koska '
+      + 'niin on aina kierretty eikä kukaan ole keksinyt syytä lopettaa. '
+      + 'Naapureiden kumpujuttuja hän pitää lähinnä huvittavina: kumpu on '
+      + 'kumpu, ja mullassa on kiviä niin kuin joka pellossa. Sen sijaan '
+      + 'maastonmuodot hän tuntee kuin oman kämmenensä — mikä notko vetää '
+      + 'veden, mikä rinne kuivuu ensin, missä kohtaa aura on aina '
+      + 'noussut. Ne oppii, kun odottaa samalla harjulla valoa vuosi '
+      + 'vuoden jälkeen, koira jalassa kiinni. Aitan seinähirressä on '
+      + 'päiväys kesältä 1873 ja sen alla kysymys vieraalla käsialalla; '
+      + 'kuka sen kirjoitti, sitä ei tiedä kukaan. Liv osaa kysymyksen '
+      + 'ulkoa ja kysyy sen huvikseen jokaiselta, joka pysähtyy pellon '
+      + 'laitaan.',
   },
 
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * KOHTAAMISPAIKKA: JELLHAUGEN, HALDEN. Kaari ei nimeä Sigridin
+   * KOHTAAMISPAIKKA: JELLHAUGEN, HALDEN. Kaari ei nimeä Livin
    * pitäjää, ja kaanonin aarremerkintä sanoo vain, että talonpojan
    * pitäjässä aura osui arkkuun ja että "maa on täällä vanhaa ja aurat
    * uusia". Jellhaugen on siihen tarkin oikea paikka Oslon lähellä:
@@ -824,7 +903,7 @@ export const FOKUSVIRTA_OSLO = {
    * maatutkalla viikinkilaiva, joka makasi puoli metriä kyntökerroksen
    * alla ja jota kyntäminen oli kuluttanut; laiva kaivettiin esiin
    * 2020–2022, mutta itse Jellhaugen — yksi maan suurimmista kummuista
-   * — seisoo yhä kaivamattomana. Sigridin kumpu on siis se, jota ei ole
+   * — seisoo yhä kaivamattomana. Livin kumpu on siis se, jota ei ole
    * avattu, ja naapuripellon tarina kertoo miksi lupaus on merkinnyt
    * jotakin. (en-Wikipedia "Gjellestad ship": löytö 2018 maatutkalla,
    * *"lies 50 centimetres below the topsoil due to years of plowing"*,
@@ -849,7 +928,7 @@ export const FOKUSVIRTA_OSLO = {
    * TARKISTUS LAATTAA VASTEN: Oslon laatta on Euroopan laudalla 418 /
    * 318 (js/packs/europe.js), ja piste jää siitä 22,0 yksikköä kaakkoon
    * — yli PISTE_ERO_MINin (14, js/fokuspiste.js), joten piste piirtyy
-   * omalle paikalleen eikä siirry. Niin pitääkin: Sigridin pelto ei ole
+   * omalle paikalleen eikä siirry. Niin pitääkin: Livin pelto ei ole
    * kaupungissa.
    *
    * HUOMIO FABLELLE: Bergenin Amundsen-täkynoston piste (Borge,

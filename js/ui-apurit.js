@@ -6,13 +6,77 @@
  * docs/moduulirakenne-suunnitelma.md) — ei pelitilariippuvuuksia.
  */
 
+import { pollonArvonimi } from './packs/pollon-arvonimet.js';
 import { HUUDAHDUKSET } from './aani-ehdokkaat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
-import { asetaKuva } from './media.js';
+import { asetaKuva, assetOsoite, lataaKuvaSitkeasti } from './media.js';
 import { tokenIconSvg } from './mapart.js';
 import { AARRETYYPIT } from './tokens.js';
 import { fetchImage, fetchSummary } from './wiki.js';
 import { OMAT_TIIVISTELMAT } from './packs/omat-tiivistelmat.js';
+
+/*
+ * ── PUHELINTUNNISTUS YHDESSÄ PAIKASSA ───────────────────────────────
+ *
+ * Raja on ruudun mitta, EI käyttäjäagentti: `max-width: 699px` on
+ * kartan oma puhelinraja ja `max-height: 520px` sama raja
+ * vaakasuunnassa, jossa iPhone on 844 × 390 eikä leveysraja osuisi.
+ * Mitattu 14.9.2026: 390 × 844 → leveysraja osuu, 844 × 390 →
+ * korkeusraja osuu, 1400 × 900 → kumpikaan ei osu.
+ *
+ * MIKSI TÄÄLLÄ EIKÄ ui.js:SSÄ. Raja syntyi v1891:ssä ui.js:ään, mutta
+ * myös js/pollo.js tarvitsee sen (puhelimella puhekuplat imeytyvät heti
+ * pluskuplaan). pollo.js ei tuo ui.js:ää — eikä saa tuoda, koska ui.js
+ * tuo pollon. ui-apurit on juuri tätä varten: puhtaita apureita ilman
+ * pelitilariippuvuuksia. ui.js vie nimen yhä eteenpäin, joten sen
+ * käyttäjien ei tarvinnut muuttua.
+ *
+ * SAMA MERKKIJONO ON CSS:SSÄ (css/styles.css "PUHELIN: ISOISÄN JA
+ * PULUN TEKSTIT PIILOON"). Jos rajaa muutetaan, molemmat muuttuvat.
+ */
+export const PUHELIN_KYSELY = '(max-width: 699px), (max-height: 520px)';
+
+/** Onko peli puhelimen kokoisella ruudulla (ks. PUHELIN_KYSELY)? */
+export function puhelinTila() {
+  return Boolean(globalThis.matchMedia?.(PUHELIN_KYSELY)?.matches);
+}
+
+/*
+ * LUENNAN AIKANA TEKSTIT PIILOON KAIKILLA LAITTEILLA (omistaja
+ * 15.9.2026, Raamattu "TEKSTIT PIILOON KAIKILLA LAITTEILLA").
+ *
+ * Sanatarkasti: luennan aikana isoisän matkakirjamerkinnän teksti ja
+ * pulun puhekupla piilotetaan KAIKILLA laitteilla, ei vain
+ * puhelimella. Näkyviin jää kuva ja kuvateksti; merkinnän saa esiin
+ * lappua napauttamalla ja pulun repliikin pluskuplasta.
+ *
+ * RAJA EI OLE RUUTUKOKO VAAN LUENNAN TILA. Mekanismi on sama kuin
+ * v1891:n puhelinpiilotus (lappu + pluskupla), mutta ehto luetaan
+ * bodyn luokasta, jonka luentavahti kirjoittaa (js/ui.js
+ * kaynnistaLuentavahti). Niin työpöydän käytös luennan ULKOPUOLELLA
+ * pysyy entisellään: luokka on silloin poissa, ja tämä palautuu
+ * pelkäksi puhelintunnistukseksi.
+ *
+ * KERTOJA EIKÄ KOKO LUENTA: luokka nousee vain isoisän (kertojan)
+ * luennasta, ei pulun omasta puheesta — muuten pulun oma repliikki
+ * imeytyisi aina pluskuplaan jo syntyessään, ja työpöydän
+ * kuplakäytös muuttuisi kaikkialla.
+ */
+export const LUENNAN_TEKSTIPIILO = 'luenta-tekstit-piiloon';
+
+/** Onko kertojan luenta käynnissä (ks. LUENNAN_TEKSTIPIILO)? */
+export function luennanTekstipiilo() {
+  return Boolean(globalThis.document?.body?.classList?.contains?.(LUENNAN_TEKSTIPIILO));
+}
+
+/**
+ * Aloittavatko isoisän merkintä ja pulun kupla suljettuina?
+ * Kaksi syytä, sama mekanismi: puhelin (v1891) tai kertojan luenta
+ * (15.9.2026).
+ */
+export function tekstitPiilossa() {
+  return puhelinTila() || luennanTekstipiilo();
+}
 
 // Tapahtumakuplien kestot (siirretty ui.js:stä M3:ssa: myös
 // vertailutila tarvitsee oletuskeston ilman kiertotuontia).
@@ -22,6 +86,72 @@ export const TOAST_MS = { die: 950, default: 1200 };
 // ennen kuin se piirtyy uudelleen. Ilman häivytystä koko reitti
 // katoaisi yhdellä ruudulla, ja se näkyisi nykäyksenä.
 export const JALJEN_PYYHKAISY = 0.06;
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * ETUSIVUN VALITTAVAT KOHTEET JA NÄKYVÄT KAUPUNGIT
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * KAIKKI KOLMETOISTA KOHDETTA TAKAISIN KOKEEKSI (omistaja 7.9.2026
+ * iltapäivä, työpöytä, sanatarkasti: *"ja nostetaan kokeeksi kaikki
+ * kohdekaupungit takaisin mitä aiemmin oli käytössä"*). Tämä KUMOAA
+ * v1119:n piilotuksen aloituskartalla: silloin kaikki muut paitsi
+ * Ateena piilotettiin, koska ne lupasivat matkan, jota ei ollut
+ * olemassa. Nyt lupaus on koe — omistajan ehto on, että jokaiseen
+ * kohteeseen pääsee lentämään ja saapuminen toimii
+ * (tools/savukkeet/savuke-aloitusvalinta-13.mjs vartioi jokaisen).
+ *
+ * KAKSI MUUTOSTA LUETTELOON (omistajan päätös 7.9.2026 illalla):
+ * LOS ANGELES VAIHTUU SAN FRANCISCOKSI ja ISTANBUL LISÄTÄÄN, joten
+ * kohteita on neljätoista. Los Angeles jää maailmanlaudalle
+ * (js/packs/maailma.js) mutta ei ole enää valittava eikä näy
+ * lähtövalinnassa; San Francisco ja Istanbul lisättiin samalle
+ * laudalle kohteiksi, ja niiden sisältö on valmiina (San Francisco
+ * northamerica-pakassa, Istanbul js/fokusvirta-istanbul.js:ssä sekä
+ * europe- ja middleeast-pakoissa).
+ *
+ * SET ASUU TÄÄLLÄ EIKÄ js/ui.js:SSÄ (7.9.2026), koska myös Livian
+ * avausesittely (js/livia.js) tarvitsee kohteiden MÄÄRÄN: "pöllö on
+ * tarkistanut vasta yhden reitin" -kupla jätetään pois, kun reittejä
+ * on useampi. js/livia.js ei voi tuoda js/ui.js:ää (kehätuonti), mutta
+ * se tuo jo tämän moduulin — joukko on puhdasta dataa eikä pelitilaa,
+ * joten se kuuluu apureihin.
+ *
+ * ALKUPERÄINEN SÄÄNTÖ (omistajan tilaus 25.8.2026) oli, että
+ * aloituskartalla on vain ne kaupungit, joilla on valmis fokusmoodin
+ * sisältö: matkan ensimmäinen kohde on kokonaisen maan avaus, eikä
+ * puolivalmiiseen kohteeseen saa päästä lentämään. Omistajan koe
+ * 7.9.2026 laajentaa joukon takaisin, ja ehto muuttui muodosta
+ * "sisältö on valmis" muotoon "lento ja saapuminen toimivat" — sen
+ * mittaa savuke kaupungeittain. Lisäys on yhä TÄHÄN joukkoon, ei
+ * laudan dataan.
+ *
+ * Sofia on jo pelissä mutta EI ole aloituskohde: sinne kävellään
+ * Ateenasta, kuten tarina menee.
+ */
+export const ETUSIVUN_KOHTEET = new Set([
+  'ateena', 'newyork', 'kairo', 'rio', 'mumbai', 'peking', 'sydney',
+  'moskova', 'tokio', 'singapore', 'kapkaupunki', 'sanfrancisco', 'tanger',
+  'istanbul',
+]);
+/*
+ * MITKÄ KAUPUNGIT NÄKYVÄT ALOITUSKARTALLA LAINKAAN.
+ *
+ * Joukko oli v1119:stä 7.9.2026 asti pelkkä Lontoo + Ateena (omistajan
+ * pelitestipalaute v1119: *"piilota toistaiseksi KAIKKI muut kaupungit
+ * paitsi Ateena"*), koska valittavia oli tasan yksi. Kun valittavat
+ * palasivat, näkyvät palasivat niiden mukana: valittava kaupunki, jota
+ * ei näy, olisi pahempi kuin kaupunki, jota ei voi valita.
+ *
+ * NÄKYVYYS, EI DATA. Lauta pysyy täytenä maailmankarttana
+ * (js/packs/maailma.js) — myös katselutilaa (?lauta=) varten, jossa
+ * tämä piilotus ei ole voimassa.
+ *
+ * Lontoo on mukana lähtöpisteenä: siitä matka alkaa, ja se on
+ * valintanäkymän ainoa kartalta ladottu nimi (valittavat saavat
+ * nimensä omasta kohdemerkistään, js/pallolauta/lauta.js aloitusNimet).
+ */
+export const ETUSIVUN_NAKYVAT = new Set(['lontoo', ...ETUSIVUN_KOHTEET]);
 
 /*
  * SILMUKAN AVAINHETKET.
@@ -153,10 +283,23 @@ export function esilataaKuvat(osoitteet) {
     const kuva = new Image();
     kuva.decoding = 'async';
     esilataukset.add(kuva);
-    const valmis = () => esilataukset.delete(kuva);
-    kuva.addEventListener('load', valmis, { once: true });
-    kuva.addEventListener('error', valmis, { once: true });
-    kuva.src = osoite;
+    /*
+     * SITKEÄSTI, MUTTA JONON OHI (6.9.2026, r2.dev 429). Ämpäri vastaa
+     * purskeeseen 429:llä, ja ennen tätä yksikin virhe jätti kuvan
+     * lataamatta kokonaan — karuselli odotti sitä sitten verkolta
+     * juuri sillä hetkellä, kun pelaaja selasi kuvaan. Uusinta hoitaa
+     * sen (js/media.js lataaKuvaSitkeasti).
+     *
+     * JONOA EI KÄYTETÄ TÄSSÄ. Esilataus on nimenomaan taustatyö, joka
+     * saa mennä selaimen omaan tahtiin. Jos se veisi jonon vuorot,
+     * kohdekartan miniatyyrit ja kohtaamiskuvat — ne, joita pelaaja
+     * juuri katsoo — jäisivät odottamaan kymmenien taustakuvien
+     * taakse. Jono on siksi varattu ruudulla näkyville kuville.
+     *
+     * Kirjanpito on ennallaan: yksi ketju per osoite per istunto.
+     */
+    void lataaKuvaSitkeasti(kuva, osoite, { jonota: false })
+      .then(() => esilataukset.delete(kuva));
   }
 }
 
@@ -248,7 +391,10 @@ export function arvoHuudahdus(type) {
  * jokin lauta vielä sellaista käyttää.
  */
 export function aarrekuvanOsoitteet(kuva) {
-  if (kuva.startsWith('assets/')) return [kuva, null];
+  // Ämpäriin siirretty aarrekuva saa R2-osoitteen samasta paikasta
+  // (js/media.js R2_ASSETIT.aarteet); ennen siirtoa polku palautuu
+  // sellaisenaan, eli tämä haara käyttäytyy täsmälleen kuten ennen.
+  if (kuva.startsWith('assets/')) return [assetOsoite('aarteet', kuva), null];
   return [valokuvaUrl(kuva, 640), valokuvaVara(kuva, 640)];
 }
 
@@ -299,6 +445,35 @@ export function tallennaLinssi(tunnus) {
     else localStorage.removeItem(LINSSI_AVAIN);
   } catch {
     /* yksityinen selaus: valinta jää vain tälle istunnolle */
+  }
+}
+
+/*
+ * MATKAN TILASTOT -LOHKON ASENTO (omistaja 6.9.2026: "Piilota nuo
+ * tiedot väkäsen alle").
+ *
+ * Sama perhe kuin valitulla linssillä: tämä on laitteen katseluasetus
+ * eikä pelin tapahtuma, joten se ei kuulu pelitallennukseen vaan omaan
+ * avaimeensa. OLETUS ON KIINNI, ja siksi levylle kirjoitetaan vain
+ * poikkeus ("1" = auki) — tavallinen pelaaja ei koskaan avaa lohkoa,
+ * eikä hänen selaimeensa jää siitä riviä.
+ */
+const LAUKKU_TILASTOT_AVAIN = 'matkakirja-laukku-tilastot';
+
+export function laukunTilastotAuki() {
+  try {
+    return localStorage.getItem(LAUKKU_TILASTOT_AVAIN) === '1';
+  } catch {
+    return false; // yksityinen selaus
+  }
+}
+
+export function tallennaLaukunTilastot(auki) {
+  try {
+    if (auki) localStorage.setItem(LAUKKU_TILASTOT_AVAIN, '1');
+    else localStorage.removeItem(LAUKKU_TILASTOT_AVAIN);
+  } catch {
+    /* yksityinen selaus: asento jää vain tälle istunnolle */
   }
 }
 
@@ -405,6 +580,27 @@ export function maahanMuoto(nimi) {
   return `${sana}${viim}n`;
 }
 
+/**
+ * "Klikkaa X:ää" -muoto kaupungin nimestä: yksikön partitiivi.
+ *
+ * Tarvitaan pulun ohjekuplaan (js/livia.js livianPaljastus: *"Kantsuu
+ * klikata Ateenaa kartalta"*, omistaja 7.9.2026). Sääntö on sama
+ * kolmijako kuin koulukieliopissa: yksi vokaali saa pelkän a/ä:n
+ * (Ateena → Ateenaa), pitkä vokaali tai diftongi vaatii t:n
+ * (Lontoo → Lontoota) ja konsonanttiloppuinen nimi sidevokaalin
+ * (Wien → Wieniä) — sama sidevokaali kuin inessiivissä yllä.
+ */
+export function paikkaaMuoto(nimi) {
+  const sana = String(nimi ?? '').trim();
+  if (!sana) return '';
+  const paate = takavokaalinen(sana) ? 'a' : 'ä';
+  const viim = sana.slice(-1).toLowerCase();
+  const toka = sana.slice(-2, -1).toLowerCase();
+  if (!VOKAALIT.includes(viim)) return `${sana}i${paate}`;
+  if (viim === toka || DIFTONGIT.has(`${toka}${viim}`)) return `${sana}t${paate}`;
+  return `${sana}${paate}`;
+}
+
 /** "Tehtävä X:ssä" -muoto kaupungin nimestä: inessiivi tai poikkeus. */
 export function paikassaMuoto(nimi) {
   const sana = String(nimi ?? '').trim();
@@ -423,6 +619,55 @@ export function ekaLause(teksti) {
   const m = /^[\s\S]*?[.!?…](?:["»”])?(?=\s|$)/.exec(teksti);
   if (!m) return { eka: teksti, loput: '' };
   return { eka: m[0], loput: teksti.slice(m[0].length).trimStart() };
+}
+
+/**
+ * MATKAKIRJAKORTIN OTSIKKO JA TUNNELMARIVI (omistaja 8.9.2026,
+ * sanatarkasti: *"matkakirjan tekstiotsikon voisi vaihtaa suoraan
+ * muotoon «Sarajevo, syyskuussa 1873». Se olisi yhtä paksulla kuin
+ * «Matkapäiväkirja» teksti jonka se korvaa. Sen alapuolella olisi
+ * kursiivilla ja pienemmällä «Kirkas ilta; vuoret lähellä»."*).
+ *
+ * Kortin otsikko oli ennen sama sana joka kaupungissa
+ * (MATKAPÄIVÄKIRJA) ja merkinnän kohtausrivi luki sen alla kokonaan.
+ * Nyt sama rivi jaetaan kahtia: PAIKKA JA AIKA nousee otsikoksi ja SÄÄ
+ * JA TUNNELMA jää sen alle omalla, kursiivilla ladotulla rivillään.
+ *
+ * JAKO TEHDÄÄN TÄSSÄ EIKÄ DATASSA. Kohtausrivi on kaanonia
+ * (js/packs/fokusvirta-<id>.js `matkakirja.paikkarivi`) ja sen muoto on
+ * vakio — *"Paikka, kuussa 1873. Sää; tunnelma."* — joten kahdeksi
+ * kentäksi paloittelu tarkoittaisi 38 pakkauksen muokkausta ilman että
+ * yksikään sana muuttuisi. Yksi kenttä pysyy myös luettavana
+ * kaanoninlukijalle, joka kirjoittaa rivin yhtenä ajatuksena.
+ *
+ * VUOSILUKU RATKAISEE. Vain kohtausrivi sisältää vuosiluvun, ja sen
+ * puuttuminen kertoo, että kutsupaikka antoi jotain muuta — pelkän
+ * kaupungin nimen (kaupunki, jolle kohtausriviä ei ole vielä
+ * kirjoitettu) tai aarremerkinnän oman rivin. Ensimmäinen saa
+ * otsikokseen *"Kaupunki, 1873"*, jälkimmäinen kulkee läpi
+ * sellaisenaan.
+ *
+ * @param {string} paikkarivi merkinnän kohtausrivi
+ * @param {string} [kaupunki] kaupungin nimi varamuotoa varten
+ * @returns {{otsikko: string, tunnelma: string}} kumpikin ilman
+ *   loppupistettä; tyhjä tunnelma tarkoittaa, ettei riviä piirretä.
+ */
+export function matkakirjanOtsikko(paikkarivi, kaupunki = '') {
+  const rivi = String(paikkarivi ?? '').trim();
+  const nimi = String(kaupunki ?? '').trim();
+  const ilmanPistetta = (teksti) => teksti.trim().replace(/\s*\.$/, '');
+  if (/\b1\d{3}\b/.test(rivi)) {
+    const raja = rivi.search(/\.\s/);
+    if (raja < 0) return { otsikko: ilmanPistetta(rivi), tunnelma: '' };
+    return {
+      otsikko: ilmanPistetta(rivi.slice(0, raja)),
+      tunnelma: ilmanPistetta(rivi.slice(raja + 1)),
+    };
+  }
+  // Ilman vuosilukua: kaupungin oma nimi saa vuoden, muu rivi jää omaksi
+  // otsikokseen (esim. aarremerkinnän "Isoisän merkintä · Ateena").
+  if (!rivi || rivi === nimi) return { otsikko: nimi ? `${nimi}, 1873` : '', tunnelma: '' };
+  return { otsikko: ilmanPistetta(rivi), tunnelma: '' };
 }
 
 /*
@@ -494,11 +739,131 @@ export function html(tag, className, text) {
  * @param {{ennen?: string, yli?: string, tilalle?: string, jalkeen?: string}} osat
  * @returns {Element} sama kohde
  */
+/*
+ * VIISAAN PÖLLÖN ARVONIMET (Raamattu, VIISAAN POLLON ARVONIMET; omistaja
+ * 19.9.2026 klo 21.45: *"Keksisitkö viisaalle pöllölle synonyymejä
+ * yliviivauksiin niin vitsi ei vanhenisi niin nopeasti? … jos on pidempi
+ * loru niin tiivistetään kirjaimia vaakasuunnassa yliviivatun osalta,
+ * jotta mahtuu."*). Lista ja arvonta ovat Fablen tiedostossa
+ * js/packs/pollon-arvonimet.js; tämä vain kertoo, missä pelaaja on.
+ *
+ * Arvonimet ovat ABLATIIVISSA ("Kysy X pululta"), joten ne kuuluvat vain
+ * kysy-otsikoihin (`arvonimi: true`). Nominatiivinen "Viisas Pöllö Pulu"
+ * (pulun nappi, aarteen paljastus, fokusvirran ylärivi) pysyy ennallaan.
+ */
+const ARVONIMEN_MAANOSA = {
+  europe: 'europe', africa: 'africa', middleeast: 'asia', asia: 'asia',
+  northamerica: 'americas', southamerica: 'americas', oceania: 'oceania',
+};
+/** Napapiirin leveysaste: tätä pohjoisempana tai etelämpänä arvonimet 'polar'. */
+const NAPAPIIRI = 66;
+
+/**
+ * Pelaajan maanosa ja maa arvonimen arvontaan: laivamatkalla 'meri',
+ * napapiirin takana 'polar', muuten kaupungin maanosa (cityManner).
+ */
+export function arvonimenPaikka(game = globalThis.matkakirja?.game ?? null) {
+  const pack = game?.pack;
+  const pos = game?.player?.pos;
+  if (!pack || !pos) return { maanosa: null, iso: null };
+  if (pos.type !== 'city') {
+    return { maanosa: game.travelMode === 'sea' ? 'meri' : null, iso: null };
+  }
+  const iso = pack.map?.cityCountry?.[pos.city] ?? null;
+  const kaupunki = (pack.cities ?? []).find((c) => c.id === pos.city);
+  const lat = kaupunki?.pallo?.lat;
+  if (iso === 'GRL' || (Number.isFinite(lat) && Math.abs(lat) >= NAPAPIIRI)) {
+    return { maanosa: 'polar', iso };
+  }
+  return { maanosa: ARVONIMEN_MAANOSA[pack.map?.cityManner?.[pos.city]] ?? null, iso };
+}
+
+/**
+ * ARVONIMEN PAIKKA ANNETULLE MAALLE (Sonnet 1, kierros 16b, 20.9.2026:
+ * Rumšiškėsin kortissa luki *"Pariisin salonkien pöllöltä"*, koska
+ * arvonimi luettiin PELAAJAN sijainnista — kortti oli Liettuassa, pelaaja
+ * Pariisissa). Kortti kertoo kohteestaan, joten sen arvonimi kuuluu
+ * kohteen maahan.
+ *
+ * Maanosa päätellään saman taulun kautta kuin pelaajan paikka
+ * (pack.map.cityManner) maan ensimmäisestä kaupungista; napapiirin takana
+ * ja Grönlannissa arvonimet ovat 'polar' kuten ennenkin.
+ *
+ * @param {?string} iso maatunnus (esim. 'LTU')
+ * @param {object} [game]
+ * @returns {{maanosa: ?string, iso: ?string}}
+ */
+export function arvonimenPaikkaMaalle(iso, game = globalThis.matkakirja?.game ?? null) {
+  if (!iso) return { maanosa: null, iso: null };
+  const pack = game?.pack ?? null;
+  const maat = pack?.map?.cityCountry ?? null;
+  const kaupunki = maat
+    ? (pack.cities ?? []).find((c) => maat[c.id] === iso) ?? null
+    : null;
+  const lat = kaupunki?.pallo?.lat;
+  if (iso === 'GRL' || (Number.isFinite(lat) && Math.abs(lat) >= NAPAPIIRI)) {
+    return { maanosa: 'polar', iso };
+  }
+  const manner = kaupunki ? pack.map?.cityManner?.[kaupunki.id] ?? null : null;
+  return { maanosa: ARVONIMEN_MAANOSA[manner] ?? null, iso };
+}
+
+/**
+ * Tiivistyksen alaraja. Pisin nimi ("Pöllöltä, Jolla On Kaksi Tutkintoa
+ * Enemmän Kuin Sinulla") tarvitsee 390 px:n kohdekortissa 0,447
+ * (tools/savukkeet/savuke-arvonimet.mjs); raja jättää varaa.
+ */
+export const NIMILAPUN_TIIVISTYS_MIN = 0.4;
+
+/**
+ * PITKÄ ARVONIMI TIIVISTETÄÄN, EI RIVITETÄ. Mitataan, mahtuuko rivi
+ * kohteen leveyteen; jos ei, VAIN yliviivattu sana puristetaan
+ * vaakasuunnassa (scaleX vasemmasta reunasta), ja <s>-laatikko saa
+ * puristetun leveyden, jolloin kynänveto (100 % laatikosta) seuraa
+ * mukana ja "pululta" siirtyy viereen. Palauttaa kertoimen (1 = mahtui).
+ */
+export function tiivistaNimilappu(kohde) {
+  const viiva = kohde?.querySelector?.('.pollo-yliviivattu');
+  const sana = viiva?.querySelector('.pollo-yliviivattu-sana');
+  if (!viiva || !sana || !kohde.isConnected) return 1;
+  sana.style.transform = '';
+  sana.style.marginRight = '';
+  const tila = kohde.clientWidth;
+  const tarve = kohde.scrollWidth;
+  if (!(tila > 0) || tarve <= tila + 0.5) return 1;
+  const leveys = sana.getBoundingClientRect().width;
+  if (!(leveys > 0)) return 1;
+  const k = Math.max(NIMILAPUN_TIIVISTYS_MIN, (leveys - (tarve - tila) - 2) / leveys);
+  sana.style.display = 'inline-block';
+  sana.style.transformOrigin = 'left center';
+  sana.style.transform = `scaleX(${k.toFixed(3)})`;
+  // Transform ei muuta asettelua: negatiivinen marginaali kutistaa sanan
+  // asettelulaatikon piirretyn levyiseksi, jolloin <s> (ja kynänveto,
+  // joka on sen levyinen) seuraa sitä eikä rivi ylivuoda.
+  sana.style.marginRight = `${(-leveys * (1 - k)).toFixed(1)}px`;
+  return k;
+}
+
 export function polloNimilappu(kohde, osat = {}) {
+  let { yli = 'Viisas Pöllö' } = osat;
   const {
-    ennen = '', yli = 'Viisas Pöllö', tilalle = 'Pulu', jalkeen = '',
+    ennen = '', tilalle = 'Pulu', jalkeen = '', arvonimi = false,
   } = osat;
   if (!kohde) return kohde;
+  if (arvonimi) {
+    const paikka = (osat.maanosa !== undefined || osat.iso !== undefined)
+      ? { maanosa: osat.maanosa ?? null, iso: osat.iso ?? null } : arvonimenPaikka();
+    yli = pollonArvonimi(paikka.maanosa, paikka.iso) || yli;
+    // Rivi ei katkea: pitkä nimi tiivistetään (tiivistaNimilappu).
+    kohde.style.whiteSpace = 'nowrap';
+    kohde.classList?.add?.('pollo-nimilappu-arvonimi');
+    const tiivista = () => tiivistaNimilappu(kohde);
+    if (typeof requestAnimationFrame === 'function') {
+      requestAnimationFrame(tiivista);
+      // Kortti voi liittyä DOMiin vasta myöhemmin tai animoida leveytensä.
+      setTimeout(tiivista, 250);
+    }
+  }
   kohde.textContent = '';
   if (ennen) kohde.appendChild(document.createTextNode(ennen));
   const viiva = document.createElement('s');
@@ -577,6 +942,115 @@ function polloVeto() {
 export const NAPAUTUKSEN_NIELU_MS = 500;
 export const NAPAUTUKSEN_NIELU_SADE = 32;
 
+/*
+ * VETO EI OLE NAPAUTUS — kortin saa sulkea vain napautus.
+ *
+ * Omistajan vikailmoitus 12.9.2026, sanatarkasti: *"Nosto häviää
+ * näkyvistä jos yrittää scrollata. Ilmeisesti peli tulkitsee että
+ * pelaaja painaa kuvan ulkopuolelta ja sulkee ikkunan vaikka nosto on
+ * jo rakentunut kuvan ympärille."*
+ *
+ * Juurisyy oli se, että kortit sulkeutuivat PELKÄSTÄ pointerdownista:
+ * sormi kortin ulkopuolella (kuva edellä -kortti täyttää lähes koko
+ * ruudun, joten reunan yli osuu helposti) sulki kortin heti, vaikka
+ * sormi oli vasta lähdössä pystyvetoon. Nyt sulkeminen odottaa, että
+ * ele osoittautuu napautukseksi: sormi nousee lähellä lähtöpistettä
+ * eikä välissä ole ylitetty vetokynnystä.
+ *
+ * KYNNYS ON SAMA LUKU KUIN KARTAN OMASSA RAAHAUSVAHDISSA (js/kartta.js
+ * pointermove, joka lukee tämän vakion): jos kartta pitää elettä
+ * raahauksena, kortinkin on pidettävä — kaksi eri kynnystä
+ * tarkoittaisi väliä, jolla kartta panoroi ja kortti silti sulkeutuu.
+ * Sama luku on myös saapumisasennon RAAHAUKSEN_KYNNYS_PX:llä; sitä ei
+ * tuoda tänne, koska js/saapumisasento.js on niputuslistalla vasta
+ * tämän tiedoston JÄLKEEN (tools/tarkista-niputus.mjs sääntö 3).
+ * tests/kortin-veto.test.mjs vahtii, että luvut pysyvät samoina.
+ */
+export const RAAHAUKSEN_KYNNYS = 6;
+/*
+ * Napautus on myös lyhyt. Pitkä painallus paikallaan on pelaajan
+ * mielessä jokin muu ele (tekstin valinta, kuvan pikavalikko) kuin
+ * kortin sulkeva napsautus, eikä sen purkautuminen saa viedä korttia.
+ */
+export const NAPAUTUKSEN_KESTO_MS = 700;
+
+/**
+ * Sulkeva napautus kortin ulkopuolelta — vetoa lukuun ottamatta.
+ *
+ * Kuuntelee `kohde`-elementin (tai dokumentin) pointerdownit. Jokainen
+ * alkava ele tarjotaan ensin `kelpaa`:lle, joka tekee kortin omat
+ * rajaukset (osuiko kortin sisään, pöllönappiin, suurennokseen…) ja
+ * kertoo, voisiko tästä tulla sulkeva napautus. Vasta kun sormi nousee
+ * kynnyksen sisällä ja ajoissa, kutsutaan `napautus` — ja sille
+ * annetaan ALKUPERÄINEN pointerdown, koska kortin rajaukset ja nielu
+ * (nielaiseSulkevaNapautus) puhuvat sen kohteesta ja koordinaateista.
+ *
+ * Liike, irrotus ja peruutus kuunnellaan dokumentista: sormi voi
+ * nousta aivan muualla kuin missä se laskeutui, ja kartta kaappaa
+ * osoittimen omaan raahaukseensa kesken eleen.
+ *
+ * @param {EventTarget} kohde elementti tai document, jolta ele alkaa.
+ * @param {object} p
+ * @param {(t: PointerEvent) => boolean} p.kelpaa voisiko tämä sulkea.
+ * @param {(t: PointerEvent) => void} p.napautus sulkeva napautus.
+ * @param {object} [asetukset]
+ * @returns {() => void} purku.
+ */
+export function kuunteleSulkevaNapautus(kohde, { kelpaa, napautus }, {
+  kaappaus = false,
+  kynnys = RAAHAUKSEN_KYNNYS,
+  kesto = NAPAUTUKSEN_KESTO_MS,
+  doc = typeof document === 'undefined' ? null : document,
+} = {}) {
+  if (!kohde?.addEventListener) return () => {};
+  let ele = null;
+  const unohda = () => {
+    if (!ele) return;
+    ele = null;
+    doc?.removeEventListener('pointermove', liike, true);
+    doc?.removeEventListener('pointerup', irti, true);
+    doc?.removeEventListener('pointercancel', peru, true);
+  };
+  function liike(tapahtuma) {
+    if (!ele || tapahtuma.pointerId !== ele.id) return;
+    // Kynnyksen ylitys tekee eleestä vedon — eikä veto enää palaa
+    // napautukseksi, vaikka sormi kääntyisi takaisin lähtöpisteeseen.
+    if (Math.hypot(tapahtuma.clientX - ele.x, tapahtuma.clientY - ele.y) >= kynnys) unohda();
+  }
+  function peru(tapahtuma) {
+    // Selain otti eleen itselleen (vieritys, iOS:n oma ele): ei sulje.
+    if (ele && tapahtuma.pointerId === ele.id) unohda();
+  }
+  function irti(tapahtuma) {
+    if (!ele || tapahtuma.pointerId !== ele.id) return;
+    const alku = ele.alku;
+    const matka = Math.hypot(tapahtuma.clientX - ele.x, tapahtuma.clientY - ele.y);
+    const kulunut = (tapahtuma.timeStamp || Date.now()) - ele.t;
+    unohda();
+    if (matka >= kynnys || kulunut > kesto) return;
+    napautus(alku);
+  }
+  const alkaa = (tapahtuma) => {
+    unohda();
+    if (!kelpaa(tapahtuma)) return;
+    ele = {
+      id: tapahtuma.pointerId,
+      x: tapahtuma.clientX,
+      y: tapahtuma.clientY,
+      t: tapahtuma.timeStamp || Date.now(),
+      alku: tapahtuma,
+    };
+    doc?.addEventListener('pointermove', liike, true);
+    doc?.addEventListener('pointerup', irti, true);
+    doc?.addEventListener('pointercancel', peru, true);
+  };
+  kohde.addEventListener('pointerdown', alkaa, kaappaus);
+  return () => {
+    unohda();
+    kohde.removeEventListener('pointerdown', alkaa, kaappaus);
+  };
+}
+
 /**
  * SULKEVA NAPAUTUS EI SAA VUOTAA KELLUVAN KUPLAN ALLE (omistajan
  * iPad-havainto 27.8.2026: *"kun klikkaa puhekuplaa sulkeakseen sen,
@@ -635,6 +1109,279 @@ export function nielaiseSulkevaNapautus(tapahtuma, {
   doc.addEventListener('click', nielu, true);
   ajastin = setTimeout(lopeta, kesto);
   return lopeta;
+}
+
+/*
+ * VALIKON SULKU ON OMA NAPAUTUKSENSA (omistajan iPad-havainto
+ * 7.9.2026, sanatarkasti: *"jos hampurilainen tai joku muu valikko on
+ * auki ja käyttäjä klikkaa mitä tahansa kohtaa kartalla, niin silloin
+ * vain se Valikko pitäisi sulkeutua, mutta mikään kohde ei saisi
+ * avautua kartalla samalla klikkauksella."*).
+ *
+ * Vika on sama kuin pöllön kuplassa 27.8.2026 ja lääke sama: valikot
+ * sulkeutuvat POINTERDOWNISTA (js/main.js ulkopuolisen napautuksen
+ * kuuntelijat), mutta laudan osumatesti ajetaan vasta CLICKISSÄ
+ * (globe.gl onGlobeClick/onPointClick, tasokartalla pane-click) — yksi
+ * napautus siis sekä sulki valikon että avasi kohteen sen alta. iOS
+ * syntetisoi clickin touchendistä juuri näin.
+ *
+ * KARTOITETUT VALIKOT ovat ne, jotka kelluvat kartan päällä ja
+ * sulkeutuvat ulkopuolisesta napautuksesta: hampurilainen (#paavalikko —
+ * sen sisällä ovat myös äänirivit, lautakytkimet ja työhuoneen napit) ja
+ * kehittäjän ratasvalikko (#kehittaja-valikko). Muut valikot eivät
+ * tarvitse vartijaa: nähtävyyskortin valikko (#nahtavyys-valikko) ja
+ * matkalaukun varustevalitsin (#linssi-valikko) asuvat modaalin dialogin
+ * sisällä, jolloin kartta ei ota napautuksia lainkaan, ja pöllön sekä
+ * pulun kuplat nielaisevat oman sulkevan napautuksensa itse (js/pollo.js
+ * sidoKuplanNapautus). Musiikkivalitsin on Tilannelehden sivu, ei
+ * kelluva valikko.
+ */
+export const VALIKKOKERROKSET = [
+  { valikko: '#paavalikko', nappi: '#menu-btn' },
+  { valikko: '#kehittaja-valikko', nappi: '#kehittaja-valikko-btn' },
+  /*
+   * LINSSIN HAMPURILAINEN (8.9.2026, js/aikajana-valikko.js) elää vain
+   * linssin ajan ja on kartta-alueen sisällä — juuri se tapaus, jota
+   * tämä vartija koskee: valikon sulkeva napautus ei saa avata kohdetta
+   * sen alta. Puuttuva valikko on null eikä haittaa (avoimetValikot).
+   */
+  { valikko: '#aikajana-valikko', nappi: '.aikajana-valikko-nappi' },
+];
+
+/** Kartan alue: napautus TÄÄLLÄ sulkee valikon eikä tee muuta. */
+export const KARTAN_ALUE = '.map-pane';
+
+/*
+ * Napit ja kentät kartan päällä (maalehtinappi, maapilleri, noppa,
+ * kelluvien korttien omat painikkeet) ovat komentoja eivätkä "kohta
+ * kartalla" — sama rajaus kuin pöllön kuplan omaHallinta. Niiden
+ * napautus menee perille myös valikon ollessa auki; valikko sulkeutuu
+ * silti normaalisti oman kuuntelijansa kautta.
+ */
+const OMA_HALLINTA = 'a, button, input, select, textarea, label, [role="button"]';
+
+/**
+ * ONKO TÄMÄ NAPAUTUS KARTAN OMA — vai jonkin päällysrakenteen?
+ *
+ * PÄÄLLYSIKKUNAN AVAAMINEN EI OLE KARTAN LIIKE (omistaja 15.9.2026,
+ * Raamattu "VIKA: ASETUSTEN AVAAMINEN KESKEN LUENNAN KUTISTAA
+ * LUENTAKUVAT", sanatarkasti: *"Jos klikkaan esimerkiksi
+ * hammasratasta, sinä aikana kun isoisän luenta on päällä, niin kuvat
+ * pienentyvät heti"*).
+ *
+ * Luennan isokuvasarja päättyy kartan liikkeeseen, koska kartan liike
+ * on pelaajan tahdonilmaus (js/fokusvirta.js kytkeSarjanKartanLiike).
+ * Vartija kuunteli kuitenkin KOKO dokumentin pointerdownia, joten
+ * jokainen napautus mihin tahansa — hammasratas, hampurilainen,
+ * matkalaukku, saapumiskortin lappu — luettiin kartan liikkeeksi ja
+ * kutisti kuvat. Mitattu 15.9.2026 (1400 × 900, Dubrovnik): rattaan
+ * napautus vei `.fokusvirta-isokuva`-päällyksen ruudulta 0,6 s
+ * kuluessa, vaikka luenta soi häiriöttä (`paused === false`,
+ * currentTime 0,93 → 2,97 s). Ääneen napautus ei koske lainkaan, joten
+ * korjaus on rajata "kartan liike" siihen, mitä se lukee: kartta-alue.
+ *
+ * Rajaus on sama kuin valikon sulkuvartijalla (asennaValikonSulkuvartija):
+ * kartta-alueen sisällä, mutta ei sen päällä kelluvissa napeissa ja
+ * kentissä (OMA_HALLINTA) eikä kelluvissa valikoissa. Kartan päällä
+ * elävät päällykset (iso luentakuva, sen suurennos) ovat DOM-puussa
+ * `.stage`:ssa `.map-panen` VIERESSÄ, joten ne jäävät ulkopuolelle jo
+ * tämän ehdon nojalla.
+ *
+ * @param {Event} tapahtuma pointerdown
+ * @returns {boolean} osuiko napautus itse kartalle
+ */
+export function onkoKartanLiike(tapahtuma) {
+  const kohde = tapahtuma?.target;
+  if (typeof kohde?.closest !== 'function') return false;
+  if (!kohde.closest(KARTAN_ALUE)) return false;
+  if (kohde.closest(OMA_HALLINTA)) return false;
+  for (const { valikko } of VALIKKOKERROKSET) {
+    if (kohde.closest(valikko)) return false;
+  }
+  return true;
+}
+
+/** Kartan päällä kelluvat valikot, jotka ovat juuri nyt auki. */
+export function avoimetValikot(doc = typeof document === 'undefined' ? null : document) {
+  const auki = [];
+  if (typeof doc?.querySelector !== 'function') return auki;
+  for (const { valikko, nappi } of VALIKKOKERROKSET) {
+    const el = doc.querySelector(valikko);
+    if (!el || el.hidden) continue;
+    auki.push({ el, nappi: doc.querySelector(nappi) });
+  }
+  return auki;
+}
+
+/** Onko jokin kartan päällä kelluva valikko auki? */
+export function onkoValikkoAuki(doc) {
+  return avoimetValikot(doc).length > 0;
+}
+
+/**
+ * Sulkee kaikki avoimet valikot. Palauttaa true, jos jokin oli auki.
+ *
+ * Sulku on sama kuin valikoiden omissa kuuntelijoissa (hidden +
+ * aria-expanded), joten se on turvallista tehdä myös silloin, kun
+ * valikon oma kuuntelija sulkee saman valikon hetkeä myöhemmin.
+ */
+export function suljeAvoimetValikot(doc) {
+  const auki = avoimetValikot(doc);
+  for (const { el, nappi } of auki) {
+    el.hidden = true;
+    nappi?.setAttribute?.('aria-expanded', 'false');
+  }
+  return auki.length > 0;
+}
+
+/*
+ * Yhden napautuksen lippu laudan osumatestille. Se asetetaan jokaisella
+ * kartalle osuvalla pointerdownilla, joten VETO (panorointi) ei jätä
+ * lippua roikkumaan seuraavaan napautukseen: seuraava pointerdown
+ * nollaa sen, koska valikkoa ei silloin enää ole auki.
+ */
+let valikkoSulkiNapautuksen = false;
+
+/**
+ * Sulkiko juuri alkanut napautus valikon? Laudan napautuksenkäsittelijä
+ * kysyy tämän ENNEN osumatestiä ja luovuttaa, jos vastaus on kyllä.
+ * Lippu kuluu lukemisesta.
+ */
+export function valikkoSulkeutuiNapautuksesta() {
+  const oli = valikkoSulkiNapautuksen;
+  valikkoSulkiNapautuksen = false;
+  return oli;
+}
+
+/*
+ * ── KOSKETUS EI SAA JÄÄDÄ ROIKKUMAAN ────────────────────────────────
+ *
+ * (Omistajan iPad-havainto 7.9.2026 ilta, sanatarkasti: *"Kartan
+ * pyörittämisessä on joku bugi, koska näyttää ihan kuin yksi sormi
+ * olisi koko ajan painettuna. jos koitan yhdellä sormella vierittää,
+ * niin kartta zoomautuukin sisään ja ulos, eikä vierity."*)
+ *
+ * Karttapallon ohjain (three.js OrbitControls) pitää omaa sormilistaa.
+ * Yksi sormi kiertää, kaksi nipistää — joten yksi UNOHTUNUT sormi
+ * tekee jokaisesta seuraavasta yhden sormen vedosta nipistyksen.
+ * Sormi unohtuu, jos sen pointerup tai pointercancel ei tule perille:
+ * kirjasto kuuntelee peruutuksen VAIN kankaaltaan, ja päälliskerros
+ * (kupla, valikko, linssin paneeli, aikajanan merkki) voi kadota
+ * kesken kosketuksen niin, että loppu jää tulematta.
+ *
+ * Tämä on kerrosten yhteinen ilmoitus: "kosketukset ovat nyt ohi".
+ * Pallo kuuntelee sitä (js/pallo.js asennaPallonEleet) ja nollaa
+ * sormilistansa. Apuri asuu ui-apureissa, koska sama vuoto koskee
+ * jokaista kelluvaa kerrosta — eikä yksikään niistä saa joutua
+ * tuntemaan palloa. Yhteys on siis tapahtuma, ei tuonti.
+ *
+ * `paitsi` on se sormi, joka on YHÄ pohjassa: valikon sulku tapahtuu
+ * pointerdownissa, ja sama sormi jatkaa usein panorointiin — sitä ei
+ * saa unohtaa samalla, kun kadonneet unohdetaan.
+ */
+export const KOSKETUKSEN_VAPAUTUS = 'matkakirja:vapauta-kosketus';
+
+/**
+ * Ilmoittaa, että kesken jäänyt kosketus on ohi.
+ *
+ * @param {object} [asetukset]
+ * @param {?number} [asetukset.paitsi] pointerId, joka on yhä pohjassa.
+ * @param {Document} [asetukset.doc]
+ */
+export function vapautaKosketus({
+  paitsi = null,
+  doc = typeof document === 'undefined' ? null : document,
+} = {}) {
+  if (typeof doc?.dispatchEvent !== 'function' || typeof CustomEvent !== 'function') return false;
+  doc.dispatchEvent(new CustomEvent(KOSKETUKSEN_VAPAUTUS, { detail: { paitsi } }));
+  return true;
+}
+
+/**
+ * Nollaa three.js:n OrbitControlsin sormilistan.
+ *
+ * KIRJASTO EI TARJOA NOLLAUSTA: `dispose()` purkaisi koko ohjaimen
+ * (kuuntelijat pois, pallo lakkaisi tottelemasta), ja sormilista
+ * `_pointers` on kirjaston yksityinen kenttä. Kolmesta vaihtoehdosta
+ * valittiin kenttien suora nollaus:
+ *
+ *  1. `dispatchEvent(new PointerEvent('pointercancel', { pointerId }))`
+ *     kankaalle — kirjasto ajaisi oman `_onPointerUp`-polkunsa, mutta
+ *     se kutsuu viimeisellä sormella `releasePointerCapture(id)`:tä,
+ *     joka HEITTÄÄ, kun osoitin ei ole enää elossa (juuri se tilanne,
+ *     jota tässä siivotaan). Poikkeus kuuntelijasta ei kaada peliä,
+ *     mutta se näkyy sivun virheenä ja savukkeet lukevat ne.
+ *  2. `controls.dispose()` — liikaa: ohjain ei enää palaisi.
+ *  3. Kenttien nollaus — sama lopputila kuin kirjaston omalla
+ *     "viimeinen sormi nousi" -haaralla: lista ja paikat tyhjiksi,
+ *     tila NONE (−1) ja dokumentin liike-/nostokuuntelijat pois
+ *     (kirjasto lisää ne vasta, kun lista on tyhjä ja sormi laskeutuu).
+ *
+ * Varapolku on silti 1: jos kirjaston versio ei tunne `_pointers`-
+ * kenttää, unohtuneille sormille lähetetään pointercancel try/catchissa.
+ *
+ * @param {?object} ohjaimet pallo.controls()
+ * @param {Iterable<number>} [idt] tiedossa olevat pointerId:t (varapolku)
+ * @returns {boolean} oliko listassa jotain nollattavaa
+ */
+export function nollaaKosketusOhjaimet(ohjaimet, idt = []) {
+  if (!ohjaimet) return false;
+  const lista = ohjaimet._pointers;
+  if (Array.isArray(lista)) {
+    const oli = lista.length > 0;
+    lista.length = 0;
+    const paikat = ohjaimet._pointerPositions;
+    if (paikat) for (const avain of Object.keys(paikat)) delete paikat[avain];
+    ohjaimet.state = -1; // STATE.NONE
+    const doc = ohjaimet.domElement?.ownerDocument ?? null;
+    if (doc && ohjaimet._onPointerMove) doc.removeEventListener('pointermove', ohjaimet._onPointerMove);
+    if (doc && ohjaimet._onPointerUp) doc.removeEventListener('pointerup', ohjaimet._onPointerUp);
+    return oli;
+  }
+  let nollattiin = false;
+  for (const id of idt) {
+    try {
+      ohjaimet.domElement?.dispatchEvent?.(new PointerEvent('pointercancel', { pointerId: id, bubbles: true }));
+      nollattiin = true;
+    } catch { /* vanha selain ilman PointerEvent-rakentajaa */ }
+  }
+  return nollattiin;
+}
+
+/**
+ * Asentaa vartijan: kartalle osuva napautus valikon ollessa auki sulkee
+ * valikon eikä välity kartalle.
+ *
+ * Kuuntelija on DOKUMENTIN KAAPPAUSVAIHEESSA, joten se ehtii ennen
+ * valikoiden omia kuplavaiheen sulkukuuntelijoita ja ennen laudan
+ * kuuntelijoita. Nielu (nielaiseSulkevaNapautus) syö saman napautuksen
+ * clickin — se hoitaa myös tasokartan pane-click-polun, joka on tämän
+ * kuuntelijan alapuolella puussa.
+ *
+ * @returns {() => void} vartijan purku.
+ */
+export function asennaValikonSulkuvartija({
+  doc = typeof document === 'undefined' ? null : document,
+} = {}) {
+  if (typeof doc?.addEventListener !== 'function') return () => {};
+  const vahti = (tapahtuma) => {
+    // Jokainen napautus alkaa puhtaalta lipulta: veto (panorointi) ei
+    // saa jättää sulkulippua roikkumaan seuraavaan napautukseen.
+    valikkoSulkiNapautuksen = false;
+    const kohde = tapahtuma.target;
+    if (typeof kohde?.closest !== 'function') return;
+    if (!kohde.closest(KARTAN_ALUE)) return;
+    if (kohde.closest(OMA_HALLINTA)) return;
+    valikkoSulkiNapautuksen = suljeAvoimetValikot(doc);
+    if (valikkoSulkiNapautuksen) {
+      nielaiseSulkevaNapautus(tapahtuma, { doc });
+      // Valikko katosi kesken kosketuksen: pallo unohtaa muut sormet,
+      // mutta EI tätä — sama sormi jatkaa usein panorointiin.
+      vapautaKosketus({ paitsi: tapahtuma.pointerId ?? null, doc });
+    }
+  };
+  doc.addEventListener('pointerdown', vahti, true);
+  return () => doc.removeEventListener('pointerdown', vahti, true);
 }
 
 /*
@@ -912,6 +1659,24 @@ export const VIIVA_IKONIT = {
     + '<path d="M4.4 20.2h15.2"/>',
   noppa: '<rect x="3.6" y="3.6" width="16.8" height="16.8" rx="3.2"/><g class="taytto"><circle cx="8.2" cy="8.2" r="1.25"/><circle cx="15.8" cy="8.2" r="1.25"/><circle cx="12" cy="12" r="1.25"/><circle cx="8.2" cy="15.8" r="1.25"/><circle cx="15.8" cy="15.8" r="1.25"/></g>',
   kompassi: '<circle cx="12" cy="12" r="8.4"/><path d="M12 5.8 14.3 12 12 18.2 9.7 12z"/><circle class="taytto" cx="12" cy="12" r="1"/>',
+  /*
+   * LIIKU-NAPIN KAKSI UUTTA KULKUTAPAA (karttauudistus erä 8, omistaja
+   * 13.9.2026: *"liftaus (ilmainen), bussi kahden vierekkaisen
+   * kaupungin valilla (50p), laiva ja lento entisellaan"*).
+   *
+   * PEUKALO on liftauksen merkki kaikkialla maailmassa, ja se erottuu
+   * saappaasta yhdellä silmäyksellä — vanha `saapas` jää kartan omiin
+   * merkkeihin. BUSSI on kori, ikkunarivi ja kaksi pyörää: sama
+   * viivapaksuus ja sama 24-ruudukko kuin muilla, täytöt (.taytto)
+   * vain pyörissä kuten nopan silmissä.
+   */
+  peukalo: '<path d="M8.4 20.4V11.2l3.4-3.6V4.9a1.5 1.5 0 0 1 3 0v4.4h3.1'
+    + 'a1.9 1.9 0 0 1 1.9 2.2l-.9 6.1a2.4 2.4 0 0 1-2.4 2z"/>'
+    + '<rect x="3.6" y="11.2" width="4.8" height="9.2" rx="1.2"/>',
+  bussi: '<rect x="3.4" y="4.6" width="17.2" height="11.6" rx="2.4"/>'
+    + '<path d="M3.6 12.2h16.8"/><path d="M9.2 7.2v5M14.8 7.2v5"/>'
+    + '<g class="taytto"><circle cx="7.6" cy="18.6" r="1.7"/>'
+    + '<circle cx="16.4" cy="18.6" r="1.7"/></g>',
   nuoli: '<path d="M9.5 6.2 5 10.6l4.5 4.4"/><path d="M5 10.6h9.2a4.6 4.6 0 1 1 0 9.2H9.5"/>',
   kone: '<path d="M12 3.6v5.9l7.6 4.6v2.1L12 13.7v4.4l2.4 1.9v1.6L12 20.5l-2.4 1.1V20l2.4-1.9v-4.4L4.4 16.2v-2.1L12 9.5z"/>',
   tahti: '<path d="m12 3.8 2.5 5.2 5.5.7-4 3.9 1 5.6-5-2.7-5 2.7 1-5.6-4-3.9 5.5-.7z"/>',
@@ -1042,7 +1807,7 @@ export function shortIntro(text, maxChars = 280, maxSentences = 3) {
  *   3. ANFANGI ensimmäiseen kappaleeseen sivulla (vain kerran, ks.
  *      kutsuja) — aukeaman avaus.
  */
-const LEIPAN_ALOITUS_SANOJA = 4;
+export const LEIPAN_ALOITUS_SANOJA = 4;
 
 /*
  * VIRKEJAKO, JOKA OSAA SUOMEA.
@@ -1080,6 +1845,57 @@ export function virkkeiksi(teksti) {
   return ulos.filter(Boolean);
 }
 
+/*
+ * ── LEHTIPALSTAT PITKÄLLE NOSTOTEKSTILLE (omistaja 22.9.2026 klo 23.48,
+ * iPad pystyssä, sanatarkasti: *"Kaksi erilaista. Tuo kaksi palstaa näyttää
+ * paremmalta kaiken kaikkiaan myös muuten. Voisi tehdä kaikkiin pidempiin
+ * ainakin."*) ────────────────────────────────────────────────────────────
+ *
+ * Skandaalikortin lööppi latoo leipätekstin kahteen CSS-palstaan
+ * anfangilla (css/fokusnosto.css osio 9, .looppi-leipa). Sama malli
+ * kaikkien karttakorttien PITKÄÄN leipätekstiin: kohdekortti, eläintäky,
+ * historian hetki, syvennys ja maalehden nosto.
+ *
+ * PITKÄ = vähintään kaksi KIRJOITTAJAN kappaletta (tyhjä rivi tekstissä)
+ * tai vähintään LEHTIPALSTA_MERKKEJA merkkiä. Automaattista puolitusta
+ * (jaaKappaleiksi alla, ≥ 3 virkettä → kaksi kappaletta) ei lasketa:
+ * muuten jokainen kolmen virkkeen lyhyt teksti menisi kahteen kapeaan
+ * palstaan, ja juuri lyhyen tekstin omistaja halusi pitää yhdessä.
+ *
+ * LEVEYS RATKAISEE CSS:SSÄ, EI TÄÄLLÄ. Palstat tulevat vasta kun tekstin
+ * OMA leveys riittää (css/styles.css .lehtipalsta-kotelo, container
+ * query): puhelimella ja kapeassa kortissa yksi palsta, iPadin
+ * kuvakortissa kaksi. Sama sääntö toimii myös ≥ 1100 px:n kuva/teksti-
+ * taitossa (js/nostokuva.js nostoPalstoiksi), jossa tekstipalsta on
+ * kapeampi kuin kortti — siellä ratkaisee tekstipalstan leveys.
+ */
+export const LEHTIPALSTA_MERKKEJA = 600;
+
+/** Onko nostoteksti niin pitkä, että se saa lehtipalstat (ks. yllä)? */
+export function onPitkaNostoteksti(teksti) {
+  const koko = String(teksti ?? '').trim();
+  if (koko.length >= LEHTIPALSTA_MERKKEJA) return true;
+  return koko.split(/\n{2,}/).map((k) => k.trim()).filter(Boolean).length >= 2;
+}
+
+/**
+ * Leipätekstin kotelo lehtipalstoja varten. Pitkä teksti saa luokan
+ * `lehtipalsta` ja kotelon `.lehtipalsta-kotelo`, jonka leveys on
+ * container queryn mitta (css/styles.css); lyhyt palautetaan
+ * sellaisenaan. Palauttaa solmun, joka liitetään korttiin tekstin
+ * paikalle.
+ *
+ * @param {Element} tekstiEl  valmis leipätekstielementti (kappaleet sisällä)
+ * @param {string} lahde      sama teksti merkkijonona (pituuden mittaus)
+ */
+export function lehtipalstaKotelo(tekstiEl, lahde) {
+  if (!tekstiEl || !onPitkaNostoteksti(lahde)) return tekstiEl;
+  tekstiEl.classList.add('lehtipalsta');
+  const kotelo = html('div', 'lehtipalsta-kotelo');
+  kotelo.appendChild(tekstiEl);
+  return kotelo;
+}
+
 export function jaaKappaleiksi(teksti) {
   const koko = String(teksti ?? '').trim();
   /*
@@ -1097,6 +1913,108 @@ export function jaaKappaleiksi(teksti) {
   if (virkkeet.length < 3) return [koko].filter(Boolean);
   const puoli = Math.ceil(virkkeet.length / 2);
   return [virkkeet.slice(0, puoli).join(' '), virkkeet.slice(puoli).join(' ')].filter(Boolean);
+}
+
+/*
+ * ── LIVIAN PUHEENVUORO OSIIN (omistajan tilaus 3.9.2026) ────────────
+ *
+ * *"pulu voisi kommentoida sitä muutamissa osissa. huudahtaa vaikka
+ * ensin sen 'kääk, onpa hurja juttu' ja sitten vähän ajan päästä
+ * jatkaa."*
+ *
+ * Yksi pitkä puheenvuoro on yksi seinä tekstiä: pelaaja lukee sen
+ * kerralla tai ei ollenkaan. Osiin jaettuna se on keskustelu — ensin
+ * säikähdys, sitten sen selitys. Jako on TÄSSÄ eikä sisältöpaketeissa,
+ * koska kaanoniteksti pysyy yhtenä kappaleena (vain Fable kirjoittaa
+ * siihen) ja esitystapa kuuluu koodiin.
+ *
+ * KOLME SÄÄNTÖÄ:
+ *  1. Kirjoittajan omat kappalerajat voittavat — sama sopimus kuin
+ *     jaaKappaleiksi-funktiolla.
+ *  2. Ensimmäinen osa on ensimmäinen virke, mutta lyhyt huudahdus
+ *     ("Kääk.") ei ole oma kuplansa: se saa parikseen seuraavan
+ *     virkkeen, jolloin ensimmäinen kupla sanoo jotain.
+ *  3. Loput virkkeet niputetaan enintään OSAN_KATTO-mittaisiksi
+ *     osiksi, ja osia on enintään OSIA_ENINTAAN — viimeinen saa venyä,
+ *     koska kolmen kuplan jälkeen neljäs olisi jo saarna.
+ *
+ * Sanat säilyvät täsmälleen: osat välilyönnillä yhdistettynä on
+ * alkuperäinen teksti (ilman kappalevaihtoja). Testi vartioi sitä.
+ */
+const PUHEENVUORON_OSAN_KATTO = 220;
+const PUHEENVUORON_OSIA_ENINTAAN = 3;
+const PUHEENVUORON_LYHYT_ALKU = 4;
+
+/*
+ * Puheenvuoron virkejako on virkkeiksi():n sukulainen, mutta se
+ * tuntee kaksi merkkiä lisää: kolme pistettä päättää virkkeen, ja
+ * ajatusviiva aloittaa sellaisen (Livia puhuu ajatusviivoilla).
+ * Erillinen siksi, ettei leipätekstin ja sitaattinostojen virkejako
+ * muutu tämän mukana.
+ */
+const PUHEEN_VIRKKEEN_ALKU = /[0-9A-ZÅÄÖÜÉ"“«—–]/;
+const PUHEEN_VIRKKEEN_LOPPU = '.!?…';
+
+function puheenVirkkeet(teksti) {
+  const t = String(teksti ?? '');
+  const ulos = [];
+  let alku = 0;
+  for (let i = 0; i < t.length; i++) {
+    const merkki = t[i];
+    if (!PUHEEN_VIRKKEEN_LOPPU.includes(merkki)) continue;
+    // Järjestysluvun piste ei päätä virkettä (ks. virkkeiksi).
+    if (merkki === '.' && /[0-9]/.test(t[i - 1] ?? '')) continue;
+    const osuma = /^\s+(.)/.exec(t.slice(i + 1));
+    if (!osuma) break;
+    if (!PUHEEN_VIRKKEEN_ALKU.test(osuma[1])) continue;
+    ulos.push(t.slice(alku, i + 1).trim());
+    alku = i + 1;
+  }
+  if (alku < t.length) ulos.push(t.slice(alku).trim());
+  return ulos.filter(Boolean);
+}
+
+/** Sanamäärä — puheenvuoron viiveet ja lyhyt alku lasketaan siitä. */
+export function sanamaara(teksti) {
+  return String(teksti ?? '').trim().split(/\s+/).filter(Boolean).length;
+}
+
+/**
+ * Puheenvuoro kuplasarjaksi (js/pollo.js polloPuheenvuoro).
+ *
+ * @param {string} teksti koko puheenvuoro.
+ * @returns {string[]} osat lukujärjestyksessä; tyhjä teksti antaa [].
+ */
+export function jaaPuheenvuoroksi(teksti) {
+  const koko = String(teksti ?? '').trim();
+  if (!koko) return [];
+  if (koko.includes('\n\n')) {
+    return koko.split(/\n{2,}/).map((k) => k.trim()).filter(Boolean);
+  }
+  const virkkeet = puheenVirkkeet(koko);
+  if (virkkeet.length <= 1) return [koko];
+  const osat = [];
+  let seuraava = 1;
+  let ensimmainen = virkkeet[0];
+  // Lyhyt huudahdus ei jää yksin: "Kääk." + sen jatko samaan kuplaan.
+  if (sanamaara(ensimmainen) <= PUHEENVUORON_LYHYT_ALKU && virkkeet[1]) {
+    ensimmainen = `${ensimmainen} ${virkkeet[1]}`;
+    seuraava = 2;
+  }
+  osat.push(ensimmainen);
+  let kertyma = '';
+  for (let i = seuraava; i < virkkeet.length; i++) {
+    const ehdokas = kertyma ? `${kertyma} ${virkkeet[i]}` : virkkeet[i];
+    const tilaaJaljella = osat.length < PUHEENVUORON_OSIA_ENINTAAN - 1;
+    if (kertyma && ehdokas.length > PUHEENVUORON_OSAN_KATTO && tilaaJaljella) {
+      osat.push(kertyma);
+      kertyma = virkkeet[i];
+      continue;
+    }
+    kertyma = ehdokas;
+  }
+  if (kertyma) osat.push(kertyma);
+  return osat;
 }
 
 export function piirraLeipa(kohde, teksti, { anfangi = false } = {}) {
@@ -1177,11 +2095,14 @@ const KEHITTAJA_AVAIN = 'matkakirja-kehittaja';
  */
 let kehittajaMuisti = null;
 let kehittajaMaailmaMuisti = null;
+let lautaMuisti = null;
 
 /** Kytkinten muisti tyhjäksi: seuraava kysyjä lukee levyltä. */
 export function unohdaKehittajaKytkimet() {
   kehittajaMuisti = null;
   kehittajaMaailmaMuisti = null;
+  // Laudan valinta on samaa perhettä (ks. lautaValinta alempana).
+  lautaMuisti = null;
 }
 
 try {
@@ -1256,6 +2177,61 @@ export function asetaFokusmoodi(paalla) {
 }
 
 /*
+ * === LINSSIN PORTTI: LINSSIN AIKANA KAIKKI MUU ON KIINNI ============
+ * === (omistajan tilaus 4.9.2026) ====================================
+ *
+ * *"Pöllön kommentit saattavat tulla vielä kesken linssin. Tosin itse
+ * käynnistin linssin kesken kaiken mutta silti pitää kaikki muu blokata
+ * varmuuden vuoksi kun linssi alkaa."*
+ *
+ * Linssi (js/aikajana.js) omistaa koko ruudun sen ajan kuin se on
+ * päällä: kartta on tummennettu, valot palavat ja kello juoksee. Sen
+ * päälle ei saa avautua mitään — ei Livian kuplaa, ei kohdekorttia,
+ * ei nostoa eikä chattia — koska ne peittäisivät juuri sen, mitä
+ * pelaaja katsoo (omistajan kuvakaappaus: kuplapino keskellä
+ * keksintölinssin ajoa).
+ *
+ * TILA LUETAAN BODYN LUOKASTA eikä ui-oliosta: porttia tarvitsevat
+ * kaikki kelluvien korttien avaajat pitkin koodikantaa, eikä niillä
+ * läheskään aina ole ui:ta käsillä. Luokan `aikajana-paalla` linssi
+ * asettaa kytkeytyessään ja poistaa purkautuessaan (aikajanaPaalla(ui)
+ * kertoo saman ui-oliosta). YKSI APURI, jotta uusi avaaja ei unohda
+ * porttia: kaikki kysyvät tästä.
+ */
+export function linssiEstaa(doc = (typeof document === 'undefined' ? null : document)) {
+  return Boolean(doc?.body?.classList?.contains('aikajana-paalla'));
+}
+
+/**
+ * Chatin portti on löysempi kuin kuplien: välinäytöksen aikana (kello
+ * seisoo, teksti kartalla) pulun kanssa saa keskustella (omistaja
+ * 4.9.2026 iltapäivä: *"olisi hyvä saada mahdollisuus chatata pulun
+ * kanssa tässä tilanteessa"*). Luokan asettaa js/aikajana.js
+ * avaaValinaytos ja purkaa suljeValinaytos.
+ */
+export function linssiEstaaChatin(doc = (typeof document === 'undefined' ? null : document)) {
+  return linssiEstaa(doc)
+    && !doc?.body?.classList?.contains('aikajana-valinaytos-auki')
+    /*
+     * TUTKIMUSVAIHE ON KESKUSTELUN VAIHE (omistaja 7.9.2026 ilta:
+     * *"pulu voisi räkäistä, että kysy vain sitten minulta lisää, jos
+     * löydät jonkun mielenkiintoisen kohdan"*). Esityksen jälkeen
+     * kello seisoo, kartta on pelaajan ja nostojen kysymysnapit
+     * lähettävät suoraan chattiin — portti ei saa olla kiinni juuri
+     * silloin. Luokan asettaa js/linssit/ihmisen-matka-tutkimus.js ja
+     * purkaa sen purku.
+     */
+    && !doc?.body?.classList?.contains('aikajana-tutkimus-auki')
+    /*
+     * NOSTON KORTTI ON MYÖS KESKUSTELUN PAIKKA (Raamattu YKSI NOSTOMALLI,
+     * 7.9.2026): kortti aukeaa jo esityksen aikana lampusta tai kuvasta,
+     * ja sen valmiit kysymykset menevät chattiin. Luokan asettaa
+     * js/linssit/ihmisen-matka-kortti.js kortin auetessa ja purkaa sulku.
+     */
+    && !doc?.body?.classList?.contains('aikajana-nostokortti-auki');
+}
+
+/*
  * === KEHITTÄJÄN YKSI YLÄRIVIN NAPPI: MAAILMANÄKYMÄ ==================
  * === (omistajan tilaus 27.8.2026) ===================================
  *
@@ -1302,6 +2278,11 @@ const KORVATUT_KEHITTAJA_AVAIMET = [
   'matkakirja-kehittaja-pisteet',
   'matkakirja-fokussumennus',
   'matkakirja-fokusmoodi',
+  // Maatummennuksen kytkin (1.9.–2.9.2026). Omistaja 2.9.2026:
+  // *"kehittäjätilassa ota pois se tummennusvalinta"* — naapurimaiden
+  // varjo poistui pelistä kokonaan, joten laitteelle jäänyt '0' ei saa
+  // jäädä kummittelemaan ilman kytkintä (ks. js/maatummennus.js).
+  'matkakirja-kehittaja-tummennus',
 ];
 
 /*
@@ -1346,37 +2327,312 @@ export function asetaKehittajaMaailma(paalla) {
 }
 
 /*
- * PÖLLÖN LEHTIVINKKI (kevyt kulku -kokeilu, omistaja 24.8.2026, ilta).
+ * === PELILAUTA: KARTTAPALLO VAI TASOKARTTA ==========================
+ * === (omistaja 5.9.2026, Raamattu: KARTTAPALLO ON PELILAUTA) ========
  *
- * Raamatun KEVYT KULKU -KOKEILU: kun kaupunkilehti aukeaa, pöllö
- * vinkkaa lyhyesti minitehtävästä, ja *"vinkissä ruksi 'älä näytä
- * jatkossa'"*. Ruksi on lukijan asetus eikä pelitilanteen osa — sama
- * kaava kuin kehittäjätilalla ja fokusmoodilla yllä: oma avain,
- * try/catch ja ei riviäkään pelitallennuksessa.
+ * *"Voisiko pallon vaihtaa pelin kartaksi suoraan?"* / *"Kunhan vanha
+ * kartta pysyy pois tieltä eikä hidasta ollenkaan uuden kartan
+ * toimintaa. Mutta jos pallo ei toimi niin pidetään optio palauttaa
+ * se."*
  *
- * OLETUS ON NÄYTETÄÄN: puuttuva avain tarkoittaa, ettei ruksia ole
- * koskaan painettu. Piilotus kirjoittaa arvon '1', ja mikä tahansa muu
- * arvo palauttaa oletuksen — vanha tai kelvoton arvo ei jätä vinkkiä
- * puolitilaan.
+ * YKSI VALINTA, KOLME LÄHDETTÄ, YKSI VAKIO (docs/moduulit/karttapallo.md
+ * luku 2): URL-parametri `?lauta=pallo|kartta` voittaa aina (savukkeet,
+ * omistajan kokeilu), sitten laitteen muistettu valinta (PELAAJAN
+ * asetusrivi päävalikon Pelilauta-osiossa tai kehittäjän ratasvalikon
+ * vipu — sama avain, sama kaava), ja viimeisenä LAUTA_OLETUS. Palautus
+ * tuotantoon on tämän yhden vakion vaihto — ei muita koodimuutoksia.
+ *
+ * URL-PARAMETRI `lauta` ON JAETTU KATSELUTILAN KANSSA (js/main.js:
+ * `?lauta=<laudan id>` avaa laudan katseluun). Arvot 'pallo' ja
+ * 'kartta' eivät ole laudan tunnuksia, joten packById ei tunne niitä ja
+ * katselutila ei käynnisty; muut arvot ohitetaan täällä. Kumpikaan ei
+ * siis sotke toista.
+ *
+ * LAUDAN VALINTA EI OLE PELITILAN OSA: pelitila ja tallennus ovat samat
+ * kummallakin laudalla (js/game.js ei tiedä laudasta mitään). Sama
+ * kaava kuin kehittäjätilalla yllä: oma avain, try/catch, muisti eikä
+ * levyluku joka kehyksessä (kehittajaTilaPaalla).
+ *
+ * OLETUS ON PALLO 5.9.2026 AAMUSTA (omistaja, sanatarkasti: *"Ota vanha
+ * kartta jo heti kokonaan pois ja korvaa pallolla. Ei haittaa vaikka
+ * peli ei toimi."*). Suunnitelman vaihe 6 (laitetesti ensin) ohitettiin
+ * omistajan päätöksellä: pallo on lauta heti, ja vaiheet 2–5 valmistuvat
+ * sen päälle. Vanha kartta jää linssikartaksi ja palautusoptioksi:
+ * `?lauta=kartta`, päävalikon Pelilauta-rivi (pelaajan kytkin, vaihe 6:
+ * omistaja 5.9.2026 *"pelissä periaatteessa voisi olla lopulta kytkin,
+ * millä pelaaja voisi valita haluaako pelata pallonäkymässä vai sillä
+ * meidän vanhalla kartalla sitten kun ollaan saatu pallo toimimaan."*)
+ * tai ratasvalikon vipu palauttaa sen tälle laitteelle.
  */
-const LEHTIVINKKI_AVAIN = 'matkakirja-lehtivinkki-pois';
+export const LAUTA_OLETUS = 'pallo';
+const LAUTA_AVAIN = 'matkakirja-lauta';
 
-export function lehtivinkkiPiilotettu() {
+/*
+ * === VANHA KARTTA POIS KÄYTÖSTÄ, VÄLIAIKAISESTI ====================
+ * === (omistaja 7.9.2026 aamu) ======================================
+ *
+ * Sanatarkasti: *"Voisiko vanhan kartan ottaa pelistä ainakin
+ * väliaikaisesti kokonaan pois, eli että se ei lataisi sitä millään
+ * lailla, eikä se olisi myöskään kytkettävissä päälle?"*
+ *
+ * TÄSMENTÄÄ aiempaa linjausta VANHA KARTTA JAA VIVUN TAAKSE: koodi
+ * (js/kartta.js, js/kartta-lataus.js, linssikartta) JÄÄ REPOON, mutta
+ * peli ei enää lataa sitä eikä sitä voi kytkeä päälle. Tämä yksi vakio
+ * on ainoa portti: kun omistaja haluaa vanhan kartan takaisin, se
+ * käännetään todeksi ja `LAUDAT` saa taas arvon 'kartta' — ei muita
+ * koodimuutoksia.
+ *
+ * MITÄ TÄMÄ SULKEE:
+ *   1. `?lauta=kartta` ja laitteen muistettu 'kartta' ohitetaan
+ *      (LAUDAT tuntee vain pallon) — lautaValinta palauttaa aina
+ *      'pallo';
+ *   2. päävalikon Pelilauta-rivit ja ratasvalikon pallolauta-vipu ovat
+ *      piilossa (index.html, js/main.js);
+ *   3. tasokartan moduuli ei lataudu millään polulla
+ *      (js/kartta-lataus.js lataaTasokartta, js/ui.js varmistaKartta);
+ *   4. pallon turvatila ja varapolku EIVÄT enää pudota tasokartalle
+ *      vaan avaavat pallon kevennettynä (ks. PALLON KEVENNYS alempana).
+ */
+export const VANHA_KARTTA_KAYTOSSA = false;
+/*
+ * PALLON TURVATILAN LASKURI (vaihe 6): pallolaudan turvatila laskee
+ * peräkkäiset kaatumiset ja pudottaa pelin tasokartalle, kun niitä on
+ * kaksi. Kun PELAAJA valitsee pallon itse (asetusrivi tai ratasvalikon
+ * vipu), laskuri nollataan: valinta on uusi yritys, eikä vanha
+ * kaatumispari saa kääntää sitä heti takaisin kartaksi. Avaimen
+ * kirjoittaa turvatila (js/pallo.js, js/ui.js pallolautaVarapolku,
+ * erillinen erä 5.9.2026) — jos se saa toisen nimen, lisää nimi tähän
+ * luetteloon, niin nollaus seuraa mukana.
+ */
+const PALLON_KAATUMISAVAIMET = ['matkakirja-pallo-kaatumiset'];
+/*
+ * KELPAAVAT LAUDAT. 7.9.2026 alkaen tässä on VAIN pallo: vanha kartta on
+ * väliaikaisesti pois käytöstä (VANHA_KARTTA_KAYTOSSA yllä), joten
+ * `?lauta=kartta` ja laitteelle jäänyt vanha muistiarvo ohitetaan kuten
+ * mikä tahansa tuntematon arvo — ne eivät siis voi kytkeä tasokarttaa
+ * päälle. Paluu: lisää 'kartta' takaisin, kun vakio kääntyy todeksi.
+ */
+const LAUDAT = VANHA_KARTTA_KAYTOSSA ? new Set(['pallo', 'kartta']) : new Set(['pallo']);
+
+/** Laudan valinta: aina 'pallo', kunnes vanha kartta palaa käyttöön. */
+export function lautaValinta() {
+  if (lautaMuisti !== null) return lautaMuisti;
+  let valinta = null;
   try {
-    return localStorage.getItem(LEHTIVINKKI_AVAIN) === '1';
+    const param = new URLSearchParams(globalThis.location?.search ?? '').get('lauta');
+    if (LAUDAT.has(param)) valinta = param;
   } catch {
-    return false; // yksityinen selaus: vinkki näytetään
+    /* ei osoitetta (testiajo) */
   }
+  if (!valinta) {
+    try {
+      const muistettu = localStorage.getItem(LAUTA_AVAIN);
+      if (LAUDAT.has(muistettu)) valinta = muistettu;
+    } catch {
+      /* yksityinen selaus */
+    }
+  }
+  lautaMuisti = valinta ?? LAUTA_OLETUS;
+  return lautaMuisti;
 }
 
-export function piilotaLehtivinkki(piiloon) {
+/**
+ * Tallentaa laudan valinnan laitteelle. Oletuksen valinta poistaa
+ * avaimen, jotta LAUTA_OLETUKSEN vaihto vaiheessa 6 tavoittaa myös ne
+ * laitteet, joilla vipua on käytetty.
+ */
+export function asetaLautaValinta(lauta) {
+  unohdaKehittajaKytkimet();
   try {
-    if (piiloon) localStorage.setItem(LEHTIVINKKI_AVAIN, '1');
-    else localStorage.removeItem(LEHTIVINKKI_AVAIN);
+    if (LAUDAT.has(lauta) && lauta !== LAUTA_OLETUS) localStorage.setItem(LAUTA_AVAIN, lauta);
+    else localStorage.removeItem(LAUTA_AVAIN);
+    // Pallo valittuna: turvatilan kaatumislaskuri alkaa alusta (ks. yllä).
+    if (lauta === 'pallo') for (const avain of PALLON_KAATUMISAVAIMET) localStorage.removeItem(avain);
   } catch {
     /* yksityinen selaus: valinta jää vain tälle istunnolle */
   }
 }
+
+/*
+ * === ETUSIVUN ESIRENDERÖITY PALLO (aalto 1D) ========================
+ *
+ * OMISTAJA 5.9.2026, sanatarkasti: *"Käännä kaikki pallolle, niin
+ * voidaan sulkea vanha kartta kokonaan."*
+ *
+ * OLETUS SEURAA LAUTAA. Pallolaudalla (lautaValinta() === 'pallo')
+ * etusivun esirenderöity pallo (js/etusivupallo.js) on käytössä ilman
+ * yhtään lippua; lippu jäi vain POISKYTKIMEKSI (`?etusivupallo=0` tai
+ * ratasvalikon vipu). `?lauta=kartta` pitää etusivun vielä vanhassa
+ * pienoiskartassa — se poistuu vasta aallossa 3.
+ *
+ * MIKSI TÄÄLLÄ EIKÄ js/etusivupallo.js:SSÄ: js/ui.js:n mount päättää
+ * ENNEN ensimmäistäkään piirtoa, alustetaanko tasokartta etusivua
+ * varten (karttapallo.md luku 3: "vanha kartta pysyy pois tieltä"),
+ * eikä se voi odottaa dynaamista tuontia. Sama kaava kuin laudan
+ * valinnalla yllä: URL › muistettu valinta › oletus, oma avain,
+ * try/catch. js/etusivupallo.js vie nämä edelleen ulos, joten moduulin
+ * rajapinta ei muutu.
+ */
+export const ETUSIVUPALLO_AVAIN = 'matkakirja-etusivupallo';
+
+/** URL-parametri ohittaa muistin savukkeita ja esittelyä varten. */
+export function etusivupalloOsoitteesta(win = globalThis) {
+  try {
+    const arvo = new URLSearchParams(win.location?.search ?? '').get('etusivupallo');
+    if (arvo === null) return null;
+    return arvo !== '0' && arvo !== 'ei';
+  } catch {
+    return null;
+  }
+}
+
+/** Oletus: pallolaudalla päällä, tasokartalla pois. */
+export function etusivupalloOletus() {
+  return lautaValinta() === 'pallo';
+}
+
+/** Onko etusivun pallo käytössä? (URL › muisti › laudan mukainen oletus) */
+export function etusivupalloPaalla(win = globalThis) {
+  const osoitteesta = etusivupalloOsoitteesta(win);
+  if (osoitteesta !== null) return osoitteesta;
+  try {
+    // Muistettu valinta on tallessa vain, kun se eroaa oletuksesta.
+    const muistettu = win.localStorage?.getItem(ETUSIVUPALLO_AVAIN);
+    if (muistettu === '1') return true;
+    if (muistettu === '0') return false;
+  } catch {
+    /* yksityinen selaus */
+  }
+  return etusivupalloOletus();
+}
+
+/**
+ * Kytkee etusivun pallon päälle tai pois. Oletuksen mukainen valinta
+ * POISTAA avaimen (kuten asetaLautaValinta), jotta oletuksen myöhempi
+ * vaihto tavoittaa myös ne laitteet, joilla vipua on käytetty.
+ */
+export function asetaEtusivupallo(paalla, win = globalThis) {
+  try {
+    if (Boolean(paalla) === etusivupalloOletus()) win.localStorage?.removeItem(ETUSIVUPALLO_AVAIN);
+    else win.localStorage?.setItem(ETUSIVUPALLO_AVAIN, paalla ? '1' : '0');
+  } catch {
+    /* yksityinen tila */
+  }
+}
+
+/*
+ * === KARTTAPALLON TURVATILA (pallolauta vaihe 5c) ===================
+ *
+ * docs/moduulit/karttapallo.md luku 6: WKWebView'n sisältöprosessi voi
+ * kaatua WebGL-kontekstin, laattojen ja pelin DOM:in yhteispainosta, ja
+ * kaatuminen näkyy pelaajalle logosilmukkana. Jos pallo kaatuu KAHDESTI
+ * PERÄKKÄIN samalla laitteella, seuraava käynnistys avaa pallon
+ * KEVENNETTYNÄ ja kertoo sen yhdellä rivillä — peli ei jää kaatumaan
+ * uudestaan.
+ *
+ * TURVATILA EI ENÄÄ AVAA TASOKARTTAA (omistaja 7.9.2026, ks.
+ * VANHA KARTTA POIS KÄYTÖSTÄ yllä). Ennen turvatila pudotti pelin
+ * vanhalle tasokartalle; nyt vanhaa karttaa ei ole olemassa pelaajalle,
+ * joten turvatila kytkee pallon raskaimman osan (laattakerroksen,
+ * js/pallolaatat.js) pois tältä istunnolta — sama perääntymistie kuin
+ * `?laattakerros=0`, mutta automaattisesti. Jos pallo kaatuu vielä
+ * kevennettynäkin, pelaaja saa selkeän virheilmoituksen (js/ui.js
+ * pallolautaVarapolku) — ei vanhaa karttaa.
+ *
+ * "PERÄKKÄIN" = laskuri nollautuu, kun pallo on pysynyt pystyssä
+ * TURVATILAN_UNOHDUS_MS ajan (js/pallolauta/lauta.js): yksi ohimenevä
+ * kaatuminen viikon takaa ei saa sulkea palloa. Kehittäjän ja pelaajan
+ * vipu (ratasvalikko) nollaa laskurin heti.
+ *
+ * Sama kaava kuin laudan valinnalla yllä: oma avain, try/catch (yksityinen
+ * selaus), muisti eikä levyluku joka piirrossa — pallolautaHalutaan
+ * kysyy tätä jokaisessa renderissä.
+ */
+export const PALLON_TURVATILAN_RAJA = 2;
+/** Kuinka kauan pallon on pysyttävä pystyssä, jotta laskuri nollataan. */
+export const PALLON_TURVATILAN_UNOHDUS_MS = 20000;
+const PALLON_KAATUMISET_AVAIN = 'matkakirja-pallo-kaatumiset';
+let kaatumisMuisti = null;
+
+/** Kaatumislaskuri laitteelta (muistista, jos jo luettu). */
+export function pallonKaatumiset(muisti = null) {
+  if (muisti !== null) return Number(muisti.getItem(PALLON_KAATUMISET_AVAIN)) || 0;
+  if (kaatumisMuisti !== null) return kaatumisMuisti;
+  try {
+    kaatumisMuisti = Number(localStorage.getItem(PALLON_KAATUMISET_AVAIN)) || 0;
+  } catch {
+    kaatumisMuisti = 0; // yksityinen selaus
+  }
+  return kaatumisMuisti;
+}
+
+/** Kirjaa kaatumisen ja palauttaa uuden lukeman. */
+export function palloKaatui(muisti = null) {
+  const luku = pallonKaatumiset(muisti) + 1;
+  if (muisti !== null) { muisti.setItem(PALLON_KAATUMISET_AVAIN, String(luku)); return luku; }
+  kaatumisMuisti = luku;
+  try {
+    localStorage.setItem(PALLON_KAATUMISET_AVAIN, String(luku));
+  } catch {
+    /* yksityinen selaus: laskuri jää tälle istunnolle */
+  }
+  return luku;
+}
+
+/** Nollaa laskurin (vakaa istunto tai ratasvalikon vipu). */
+export function nollaaPallonKaatumiset(muisti = null) {
+  if (muisti !== null) { muisti.removeItem(PALLON_KAATUMISET_AVAIN); return; }
+  if (kaatumisMuisti === 0) return;
+  kaatumisMuisti = 0;
+  try {
+    localStorage.removeItem(PALLON_KAATUMISET_AVAIN);
+  } catch {
+    /* yksityinen selaus */
+  }
+}
+
+/**
+ * Onko pallo turvatilassa eli avataanko se KEVENNETTYNÄ tällä
+ * laitteella? (Ennen 7.9.2026 tämä tarkoitti "pallo suljettu, tasokartta
+ * tilalle"; vanha kartta on nyt pois käytöstä eikä turvatila enää
+ * vaihda lautaa — ks. VANHA KARTTA POIS KÄYTÖSTÄ.)
+ */
+export function palloTurvatilassa(muisti = null) {
+  return pallonKaatumiset(muisti) >= PALLON_TURVATILAN_RAJA;
+}
+
+/*
+ * === PALLON KEVENNYS (turvatila ja varapolku, 7.9.2026) =============
+ *
+ * Kevennys on ISTUNNON lippu, ei laitteen asetus: se ei kirjoita mitään
+ * localStorageen eikä jää päälle seuraavaan käynnistykseen, joten yksi
+ * kaatuminen ei sido palloa kevyeen tilaan ikuisesti. Lipun kytkee
+ * js/ui.js (turvatila avauksessa, varapolku kaatumisen jälkeen), ja
+ * ainoa lukija on `laattakerrosPaalla` alempana — kevennys = pallon
+ * raskain kerros (js/pallolaatat.js) pois, muu pallo ennallaan.
+ */
+let palloKevennysPaalla = false;
+
+/** Kytkee pallon kevennyksen tälle istunnolle (ei muistiin). */
+export function asetaPalloKevennys(paalla) {
+  palloKevennysPaalla = Boolean(paalla);
+}
+
+/** Onko pallo kevennettynä tässä istunnossa? */
+export function palloKevennetty() {
+  return palloKevennysPaalla;
+}
+
+/*
+ * LEHTIVINKIN RUKSI ON POISTETTU (omistaja 7.9.2026, Raamattu PULUN
+ * UUSI RYTMI ATEENASSA): lehden avautuessa pulu sanoo vinkkinsä VAIN
+ * ENSIMMÄISELLÄ kerralla koskaan, joten "Älä näytä jatkossa" -ruksia
+ * ei enää ole eikä sen laiteavainta (matkakirja-lehtivinkki-pois)
+ * kirjoiteta tai lueta missään. Kertaluontoisuuden lippu asuu nyt
+ * Livian omien kertalippujen seurassa (js/livia.js
+ * LIVIA_LEHTIVINKKI_TALLE). Vanha avain jää selainten muistiin
+ * kuolleena — sitä ei tarvitse siivota, koska mikään ei kysy sitä.
+ */
 
 // Tiivistelmät ja kuvat haetaan kerran per artikkeli: sama kuva näkyy
 // sekä saapumiskortissa että Lue lisää -dialogissa ilman uutta hakua.
@@ -1406,4 +2662,291 @@ export async function cachedImage(title) {
     wikiImageCache.set(title, cachedSummary(title).then((s) => fetchImage(s)));
   }
   return wikiImageCache.get(title);
+}
+
+/*
+ * TARKKUUS MYÖS LIIKKEESSÄ — kokeiluvipu (omistaja 5.9.2026 klo 21,
+ * sanatarkasti: "kokeile pyörisikö vieritys sillä korkeammalla
+ * tarkkuudella joka kytkeytyy nyt päälle vasta kun liike loppuu").
+ * Pallon laatunosto (js/pallo.js asennaLaatunosto) pudottaa liikkeessä
+ * laattatason ja pikselisuhteen; tällä vivulla levon asetukset jäävät
+ * päälle koko ajan, jotta omistaja voi mitata puhelimella, pysyykö
+ * vieritys sulavana. URL › muisti › oletus (pois). Sama kaava kuin
+ * etusivupallolla yllä.
+ */
+export const LAATU_AINA_AVAIN = 'matkakirja-pallo-laatu-aina';
+
+export function laatuAinaOsoitteesta(win = globalThis) {
+  try {
+    const arvo = new URLSearchParams(win.location?.search ?? '').get('laatu');
+    if (arvo === null) return null;
+    return arvo === 'aina' || arvo === '1';
+  } catch {
+    return null;
+  }
+}
+
+/** Onko levon tarkkuus päällä myös liikkeessä? (URL › muisti › pois) */
+export function laatuAinaPaalla(win = globalThis) {
+  const osoitteesta = laatuAinaOsoitteesta(win);
+  if (osoitteesta !== null) return osoitteesta;
+  try {
+    return win.localStorage?.getItem(LAATU_AINA_AVAIN) === '1';
+  } catch {
+    return false;
+  }
+}
+
+export function asetaLaatuAina(paalla, win = globalThis) {
+  try {
+    if (paalla) win.localStorage?.setItem(LAATU_AINA_AVAIN, '1');
+    else win.localStorage?.removeItem(LAATU_AINA_AVAIN);
+  } catch {
+    /* yksityinen tila */
+  }
+}
+
+/*
+ * LAATTAKERROS JA SEN PERÄÄNTYMISTIE (erä E1, suunnitelma
+ * docs/moduulit/pallon-liike-taydella-tarkkuudella.md luku 4.4). Pallon
+ * pinta piirretään pyramidin laatoista laatta kerrallaan
+ * (js/pallolaatat.js luoLaattakerros), jolloin liikkeessä on sama
+ * tarkkuus kuin levossa. `?laattakerros=0` sammuttaa kerroksen ja
+ * palauttaa vanhan koneen (liike/lepo-laatutilat ja lepokerros)
+ * täsmälleen sellaisena kuin se oli v1645:ssä — perääntymistie, kunnes
+ * omistaja on hyväksynyt kerroksen puhelimellaan.
+ *
+ * Oletus tulee KUTSUJALTA (js/pallo.js LAATTAKERROS_OLETUS), koska tämä
+ * moduuli on yhden tiedoston nipussa eikä js/pallolaatat.js ole
+ * (tools/build-standalone.mjs: pallo ja sen apurit ladataan laiskasti).
+ *
+ * VALINTA MUISTIIN 6.9.2026 (vika v1649). Omistaja katsoo peliä
+ * iOS-KUORESSA (ios/), jossa ei ole osoiteriviä: ilman muistipaikkaa
+ * kerroksia ei voi sammuttaa sovelluksessa lainkaan, eikä vikaa siis
+ * voi rajata siellä missä se näkyy. Kytkin on ratasvalikossa
+ * (index.html, js/main.js) ja tallettaa valinnan laitteelle; URL voittaa
+ * muistin kuten muissakin kehittäjän vivuissa.
+ */
+export const LAATTAKERROS_AVAIN = 'matkakirja-laattakerros';
+
+export function laattakerrosOsoitteesta(win = globalThis) {
+  try {
+    const arvo = new URLSearchParams(win.location?.search ?? '').get('laattakerros');
+    if (arvo === null) return null;
+    return !(arvo === '0' || arvo === 'ei' || arvo === 'pois');
+  } catch {
+    return null;
+  }
+}
+
+/** Muistettu valinta: true, false tai null (ei valittu). */
+export function laattakerrosMuistissa(win = globalThis) {
+  try {
+    const arvo = win.localStorage?.getItem(LAATTAKERROS_AVAIN);
+    if (arvo === '0') return false;
+    if (arvo === '1') return true;
+  } catch {
+    /* yksityinen selaus */
+  }
+  return null;
+}
+
+/** Onko pallon laattakerros päällä? (kevennys › URL › muisti › oletus) */
+export function laattakerrosPaalla(win = globalThis, oletus = true) {
+  /*
+   * KEVENNYS VOITTAA KAIKEN (7.9.2026): kun pallo on kaatunut, sen
+   * raskain kerros jää pois vaikka URL tai muisti pyytäisi sitä —
+   * turvatilan koko idea on, ettei seuraava yritys kaadu samalla
+   * painolla. Vanha kartta ei ole enää vaihtoehto (VANHA_KARTTA_KAYTOSSA).
+   */
+  if (palloKevennysPaalla) return false;
+  const osoitteesta = laattakerrosOsoitteesta(win);
+  if (osoitteesta !== null) return osoitteesta;
+  const muistettu = laattakerrosMuistissa(win);
+  if (muistettu !== null) return muistettu;
+  return Boolean(oletus);
+}
+
+export function asetaLaattakerros(paalla, win = globalThis) {
+  try {
+    win.localStorage?.setItem(LAATTAKERROS_AVAIN, paalla ? '1' : '0');
+  } catch {
+    /* yksityinen tila */
+  }
+}
+
+/*
+ * PALLON VEKTORIVIIVAT — sama kehittäjän vipu (vika v1649). Lukija asuu
+ * js/pallovektorit.js:ssä (pallovektoritPaalla), joka on laiskasti
+ * ladattava moduuli; ratasvalikko on tässä nipussa eikä voi tuoda sitä,
+ * joten AVAIN on kaksoiskappale. tests/pallovektorit.test.mjs vartioi,
+ * että avaimet ovat samat.
+ */
+export const PALLOVEKTORIT_AVAIN = 'matkakirja-pallovektorit';
+
+export function pallovektoritOsoitteesta(win = globalThis) {
+  try {
+    const arvo = new URLSearchParams(win.location?.search ?? '').get('vektorit');
+    if (arvo === '0') return false;
+    if (arvo === '1') return true;
+  } catch {
+    /* ei osoitetta */
+  }
+  return null;
+}
+
+/** Muistettu valinta: true, false tai null (ei valittu). */
+export function pallovektoritMuistissa(win = globalThis) {
+  try {
+    const arvo = win.localStorage?.getItem(PALLOVEKTORIT_AVAIN);
+    if (arvo === '0') return false;
+    if (arvo === '1') return true;
+  } catch {
+    /* yksityinen selaus */
+  }
+  return null;
+}
+
+/** Onko vektorikerros päällä? (URL › muisti › oletus) — sama järjestys kuin lukijalla. */
+export function pallovektoritValittu(win = globalThis, oletus = true) {
+  const osoitteesta = pallovektoritOsoitteesta(win);
+  if (osoitteesta !== null) return osoitteesta;
+  const muistettu = pallovektoritMuistissa(win);
+  if (muistettu !== null) return muistettu;
+  return Boolean(oletus);
+}
+
+export function asetaPallovektorit(paalla, win = globalThis) {
+  try {
+    win.localStorage?.setItem(PALLOVEKTORIT_AVAIN, paalla ? '1' : '0');
+  } catch {
+    /* yksityinen tila */
+  }
+}
+
+
+/* ==================== KUVAN SUURENNOKSEN MITAT ==================== */
+
+/*
+ * YKSI SÄÄNTÖ KAIKILLE SUURENNOKSILLE: VASTAKKAINEN SUUNTA TÄYTTÄÄ,
+ * SAMA SUUNTA JÄTTÄÄ REUNAN.
+ *
+ * Omistaja 8.9.2026, sanatarkasti: *"pystykuvat saisivat aueta hieman
+ * pienemmäksi. Nyt ne täyttävät ihan koko ruudun. Vaakakuva saa aueta
+ * koko ruudun leveydelle, ainakin jos pelaajalla on pystyruutuinen
+ * näyttö. Tilanne on tietenkin toinen, jos on vaakaruutuinen näyttö,
+ * niin silloin vaakakuva saa jäädä hieman pienemmäksi, että sivuista
+ * näkyy jotain. Ja taas pystykuva voi tullakin koko ruudun
+ * korkeudelle. Tästä kannattaa tehdä jokin yleinen linjaus, jotta
+ * toimii kaikissa tilanteissa samalla tavalla."*
+ *
+ * Linjaus on siis KUVAN suunnan ja RUUDUN suunnan vertailu:
+ *
+ *   vastakkainen suunta  kuva täyttää ruudun lyhyemmän sivun
+ *                        (pystyruutu + vaakakuva → koko leveys;
+ *                        vaakaruutu + pystykuva → koko korkeus)
+ *   sama suunta          kuva jää hieman pienemmäksi, jotta ruudun
+ *                        laidoista näkyy jotain: pystyruudulla enintään
+ *                        78 % korkeudesta, vaakaruudulla enintään 82 %
+ *                        leveydestä
+ *   neliömäinen kuva     (suhde 0,9–1,1) käsitellään ruudun suuntaisena
+ *
+ * Toinen suunta saa aina 94 %:n katon, jottei paperi puske reunaan
+ * kiinni. Mitoitus on TÄSSÄ yhtenä puhtaana funktiona, ja sekä
+ * fokusvirran (js/fokusvirta.js avaaSuurennos) että kohdekortin
+ * (js/fokuskohteet.js avaaKohdeSuurennos) suurennos kutsuu sitä —
+ * kaksi eri kaavaa oli juuri se, mistä omistaja huomautti.
+ */
+
+/** Kuva täyttää ruudun lyhyemmän sivun, kun suunnat ovat vastakkaiset. */
+export const SUURENNOS_VASTAKKAINEN = 0.99;
+/** Sama suunta, pystyruutu: osuus ruudun korkeudesta. */
+export const SUURENNOS_SAMA_PYSTY = 0.78;
+/** Sama suunta, vaakaruutu: osuus ruudun leveydestä. */
+export const SUURENNOS_SAMA_VAAKA = 0.82;
+/** Vapaan suunnan katto: paperi ei puske ruudun reunaan. */
+export const SUURENNOS_TOINEN_SUUNTA = 0.94;
+/** Neliömäisen kuvan haarukka: tämän sisällä kuva on ruudun suuntainen. */
+export const SUURENNOS_NELIO_ALA = 0.9;
+export const SUURENNOS_NELIO_YLA = 1.1;
+/** Kuvalle jäävä vähimmäisosuus korkeudesta, kun kuvateksti on pitkä. */
+export const SUURENNOS_VAHIN_KORKEUS = 0.28;
+/** Kuvasuhde, jota käytetään ennen kuin kuvan omat mitat tiedetään. */
+export const SUURENNOS_OLETUSSUHDE = 4 / 3;
+/**
+ * Kortin suurennoksen katto kumpaankin suuntaan, kun kuva saa täyttää
+ * ruudun contain-periaatteella (`tayteen`, omistaja 20.9.2026,
+ * nostokortti 2 kohta 3: "kokoruutuzoom näyttää kuvan niin isona kuin
+ * mahtuu"). Fokusvirran suurennos pitää entiset osuudet.
+ */
+export const SUURENNOS_TAYTEEN = 0.97;
+
+/**
+ * Suurennetun kuvan mitat yllä kuvatulla säännöllä.
+ *
+ * @param {object} p
+ * @param {number} p.kuvaLeveys kuvan luonnollinen leveys (tai suhdeluvun osoittaja)
+ * @param {number} p.kuvaKorkeus kuvan luonnollinen korkeus
+ * @param {number} p.ruutuLeveys näkymän leveys pikseleinä
+ * @param {number} p.ruutuKorkeus näkymän korkeus pikseleinä
+ * @param {number} [p.vaakaVara] kehyksen oma tila vaakasuunnassa (reunus, sisennys)
+ * @param {number} [p.pystyVara] kehyksen oma tila pystysuunnassa (kuvatekstipalkki)
+ * @param {number} [p.enintaanLeveys] katto kuvan omasta koosta (ei venytetä puuroksi)
+ * @param {number} [p.vahintaanLeveys] kapein sallittu kuva
+ * @param {boolean} [p.tayteen] kumpikin suunta SUURENNOS_TAYTEEN-kattoon (contain)
+ * @returns {{leveys: number, korkeus: number, vastakkainen: boolean}}
+ */
+export function suurennoksenMitat({
+  kuvaLeveys, kuvaKorkeus, ruutuLeveys, ruutuKorkeus,
+  vaakaVara = 0, pystyVara = 0, enintaanLeveys = Infinity, vahintaanLeveys = 0,
+  tayteen = false,
+} = {}) {
+  const rl = Number.isFinite(ruutuLeveys) && ruutuLeveys > 0 ? ruutuLeveys : 0;
+  const rk = Number.isFinite(ruutuKorkeus) && ruutuKorkeus > 0 ? ruutuKorkeus : 0;
+  if (!rl || !rk) return { leveys: 0, korkeus: 0, vastakkainen: false };
+  const kelpo = Number.isFinite(kuvaLeveys) && kuvaLeveys > 0
+    && Number.isFinite(kuvaKorkeus) && kuvaKorkeus > 0;
+  const suhde = kelpo ? kuvaLeveys / kuvaKorkeus : SUURENNOS_OLETUSSUHDE;
+  const ruutuPysty = rk >= rl;
+  // Neliömäinen kuva kulkee ruudun mukana: se ei ole kummankaan suunnan
+  // kuva, eikä sitä siis kannata venyttää reunaan asti.
+  const nelio = suhde >= SUURENNOS_NELIO_ALA && suhde <= SUURENNOS_NELIO_YLA;
+  const kuvaPysty = nelio ? ruutuPysty : suhde < 1;
+  const vastakkainen = kuvaPysty !== ruutuPysty;
+  let leveysKatto;
+  let korkeusKatto;
+  if (tayteen) {
+    leveysKatto = rl * SUURENNOS_TAYTEEN;
+    korkeusKatto = rk * SUURENNOS_TAYTEEN;
+  } else if (vastakkainen && ruutuPysty) {
+    leveysKatto = rl * SUURENNOS_VASTAKKAINEN;
+    korkeusKatto = rk * SUURENNOS_TOINEN_SUUNTA;
+  } else if (vastakkainen) {
+    korkeusKatto = rk * SUURENNOS_VASTAKKAINEN;
+    leveysKatto = rl * SUURENNOS_TOINEN_SUUNTA;
+  } else if (ruutuPysty) {
+    korkeusKatto = rk * SUURENNOS_SAMA_PYSTY;
+    leveysKatto = rl * SUURENNOS_TOINEN_SUUNTA;
+  } else {
+    leveysKatto = rl * SUURENNOS_SAMA_VAAKA;
+    korkeusKatto = rk * SUURENNOS_TOINEN_SUUNTA;
+  }
+  leveysKatto = Math.min(leveysKatto - vaakaVara, enintaanLeveys);
+  // Pitkä kuvateksti ei saa syödä kuvaa olemattomiin.
+  korkeusKatto = Math.max(korkeusKatto - pystyVara, rk * SUURENNOS_VAHIN_KORKEUS);
+  let leveys = leveysKatto;
+  let korkeus = leveys / suhde;
+  if (korkeus > korkeusKatto) {
+    korkeus = korkeusKatto;
+    leveys = korkeus * suhde;
+  }
+  if (leveys < vahintaanLeveys) {
+    leveys = vahintaanLeveys;
+    korkeus = leveys / suhde;
+  }
+  return {
+    leveys: Math.max(0, Math.round(leveys)),
+    korkeus: Math.max(0, Math.round(korkeus)),
+    vastakkainen,
+  };
 }

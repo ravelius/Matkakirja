@@ -39,6 +39,13 @@ import { MAAILMANKARTTA } from '../../js/packs/maailmankartta.js';
 import { keraaNostot, nostojenYhteenveto } from '../fokuskartta/nostot.mjs';
 import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
 
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
+
 /** Kameran varakohde kaupungeittain, jos peli ei ole vielä ladannut lehteä. */
 const POHJAT = {
   ateena: FOKUS_POHJAT.GRC.rajaus,
@@ -70,7 +77,7 @@ const palvelin = http.createServer((req, res) => {
   res.end(readFileSync(polku));
 });
 await new Promise((ok) => palvelin.listen(0, ok));
-const osoite = `http://localhost:${palvelin.address().port}/`;
+const osoite = `http://localhost:${palvelin.address().port}/?lauta=kartta`;
 
 /* --------------------------------------------------- poltettava erä */
 
@@ -223,20 +230,8 @@ async function piirraPoltettu(sivu, merkit) {
       paikat[m.tunnus] = { x: mx, y: my };
       if (mx < -200 || my < -200 || mx > window.innerWidth + 200
         || my > window.innerHeight + 200) continue;
-      const v = m.viiva;
-      if (v) {
-        ctx.save();
-        ctx.strokeStyle = v.vari;
-        ctx.globalAlpha = v.himmeys;
-        ctx.lineCap = 'round';
-        ctx.lineWidth = Math.max(0.2, v.leveys * skaala);
-        ctx.setLineDash([v.katko * skaala, v.katko * skaala]);
-        ctx.beginPath();
-        ctx.moveTo(ruutuX(v.x1, v.y1), ruutuY(v.x1, v.y1));
-        ctx.lineTo(ruutuX(v.x2, v.y2), ruutuY(v.x2, v.y2));
-        ctx.stroke();
-        ctx.restore();
-      }
+      // Nostoviivoja ei ole (js/fokusniput.js sääntö 6): merkit
+      // latoutuvat kaupungin kylkeen ilman siirtoviivoja.
       ctx.save();
       ctx.translate(mx, my);
       piirraNostosymPolttoon(ctx, m, m.porras * skaala);

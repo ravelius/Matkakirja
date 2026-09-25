@@ -27,6 +27,13 @@ test('jokainen docs/-ohjedokumentti on Raamatun kartalla', () => {
       ? readdirSync(new URL('moduulit/', DOCS))
         .filter((n) => n.endsWith('.md')).map((n) => `moduulit/${n}`)
       : []),
+    // Päätösloki (docs/raamattu-loki/, Raamatun jako 20.9.2026) on
+    // Raamatun liite: jokainen lokitiedosto on kartalla, jotta sessio
+    // löytää sen — loki ei lataudu peliin, mutta se on ohjeen historia.
+    ...(existsSync(new URL('raamattu-loki/', DOCS))
+      ? readdirSync(new URL('raamattu-loki/', DOCS))
+        .filter((n) => n.endsWith('.md')).map((n) => `raamattu-loki/${n}`)
+      : []),
   ];
   for (const nimi of tiedostot) {
     assert.ok(RAAMATTU.includes(`docs/${nimi}`),

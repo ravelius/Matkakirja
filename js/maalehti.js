@@ -12,6 +12,7 @@
 import { piirraSivunTehtava } from './fokustehtavat.js';
 import { avaaLippuikkuna } from './liput.js';
 import { asetaKuva } from './media.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { avaaKarttaSuurennos } from './nahtavyydet.js';
 import {
   lippuUrl, lippuVara, valokuvaUrl, valokuvaVara,
@@ -21,9 +22,9 @@ import { karttapiste } from './packs/maakartat.js';
 import { radioMaalle } from './packs/radiot.js';
 import { vanhaTallenne } from './packs/vanhat-aanet.js';
 import { aiheAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
-import { piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.js';
+import { otsikkoAvain, piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.js';
 import { KIELET, MAATIEDOT } from './sisaltotaulut.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import {
   html, lahdemerkinta, MERKKI_SOITA, piirraLeipa,
   suojaa,
@@ -517,7 +518,8 @@ export function piirraMaaEtusivu(ui, kategoria) {
   }
   kehys.appendChild(kotelo);
   kytkeMaakartanSuurennos(ui, kehys, kotelo, kartta, kategoria.nimi);
-  kehys.appendChild(html('p', 'lahde', kartta.lahde));
+  // Sama apuri kuin muilla lähderiveillä (2.9.2026, ks. tekijakortti.js).
+  kehys.appendChild(taytaLahderivi(html('p', 'lahde'), kartta.lahde, kartta));
   kohde.appendChild(kehys);
   ui.arrivalMaa.hidden = false;
   kohde.appendChild(ui.arrivalMaa);
@@ -616,7 +618,17 @@ export function sisallysTiedot(ui, osa) {
   // kertomaan mistä sivulla on kyse, eli juuri tähän tarkoitukseen.
   const johdanto = osa.johdanto ?? ensimmainen?.teksti ?? '';
   const virke = (johdanto.match(/[^.!?]+[.!?]/) ?? [johdanto])[0].trim();
-  return { kuva: ensimmainen?.tiedosto ?? null, ingressi: virke };
+  /*
+   * `osoite` on valmis polku ilman thumb-putkea (pelin oma
+   * havainnekuva ämpärissä, ks. piirraKategoria). Se palautetaan
+   * omana kenttänään, jottei kutsuja yritä kääntää sitä
+   * valokuvaUrl:lla — muuten sisällysrivi jäisi kuvattomaksi.
+   */
+  return {
+    kuva: ensimmainen?.tiedosto ?? null,
+    osoite: ensimmainen?.osoite ?? null,
+    ingressi: virke,
+  };
 }
 
 /** Sisällysluettelon rivit. Käytetään sekä etusivulla että valikossa. */
@@ -657,15 +669,18 @@ export function rakennaSisallysLista(ui, sisallys, { suljeValikko = null, etusiv
     lista.appendChild(rivi);
   }
   for (const osa of sisallys ?? []) {
-    const { kuva, ingressi } = sisallysTiedot(ui, osa);
+    const { kuva, osoite, ingressi } = sisallysTiedot(ui, osa);
     const rivi = html('button', 'sisallys-rivi');
     rivi.type = 'button';
-    if (kuva) {
+    if (kuva || osoite) {
       const img = document.createElement('img');
       img.className = 'sisallys-kuva';
       img.alt = '';
       img.decoding = 'async';
-      asetaKuva(img, valokuvaUrl(kuva, 320), valokuvaVara(kuva, 320));
+      // Valmiilla osoitteella ei ole varareittiä — ämpäri on ainoa
+      // lähde, kuten julisteillakin (js/ui.js varustaNostonKuva).
+      if (osoite) asetaKuva(img, osoite, null);
+      else asetaKuva(img, valokuvaUrl(kuva, 320), valokuvaVara(kuva, 320));
       rivi.appendChild(img);
     }
     const teksti = html('div', 'sisallys-teksti');
@@ -925,7 +940,8 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     if (eka) {
       const hero = html('figure', 'vinkki-hero');
       const kuva = document.createElement('img');
-      kuva.alt = eka.selite ?? eka.nimi ?? '';
+      // Sivulla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+      kuva.alt = kuvatekstiLyhyt(eka) || eka.nimi || '';
       kuva.decoding = 'async';
       asetaKuva(kuva, valokuvaUrl(eka.tiedosto, 1200), valokuvaVara(eka.tiedosto, 1200), () => hero.remove());
       hero.appendChild(kuva);
@@ -936,10 +952,11 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
        * JATKEENA samalla rivillä hennolla pienellä (omistajan tilaus
        * 23.8.2026; ks. css/styles.css "LÄHDERIVI KUVATEKSTIN JATKEEKSI").
        */
-      if (eka.selite || eka.lahde) {
+      const ekaLyhyt = kuvatekstiLyhyt(eka);
+      if (ekaLyhyt || eka.lahde) {
         const teksti = html('figcaption', 'vinkki-hero-teksti');
-        if (eka.selite) teksti.appendChild(html('span', 'vinkki-hero-selite', eka.selite));
-        if (eka.lahde) teksti.appendChild(html('span', 'lahde', eka.lahde));
+        if (ekaLyhyt) teksti.appendChild(html('span', 'vinkki-hero-selite', ekaLyhyt));
+        if (eka.lahde) teksti.appendChild(kortinKuvalahde(html('span', 'lahde'), eka.lahde, eka));
         hero.appendChild(teksti);
       }
       // Hero johdannon perään, ennen ryhmiä.
@@ -977,21 +994,26 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
     ui.lisaaNostonNapit(otsikkoRivi, nosto);
     // Ajankohta otsikkorivin oikeassa reunassa hahmottamisen tueksi
     // (omistajan toive 7.8.2026: "Historia sivulla vuosisadan voisi
-    // merkitä jotenkin otsikkorivillä") — kenttä on vapaaehtoinen
-    // ja toimii millä tahansa sivulla.
+    // merkitä jotenkin otsikkorivillä"; omalla laatikollaan 21.9.2026)
+    // — kenttä on vapaaehtoinen ja toimii millä tahansa sivulla.
     if (nosto.aika) otsikkoRivi.appendChild(html('span', 'nosto-aika', nosto.aika));
-    /*
-     * VÄLIOTSIKON REAKTIONAPPI (omistajan tilaus 27.8.2026:
-     * "reaktionappi jokaiseen popupiin ja lehtien jokaiseen
-     * väliotsikkoon"). Nappi on rivin PÄÄSSÄ eikä leipätekstin päällä:
-     * lepotilassa se on yksi himmeä merkki, ja vasta napautus levittää
-     * viisi symbolia. Ajankohta jää sen vasemmalle puolelle, koska
-     * ajankohta kuuluu otsikkoon ja nappi ei.
-     */
-    piirraOtsikonReaktio(otsikkoRivi, sivuAvain, nosto.otsikko);
+    // REAKTIONAPIT EIVÄT OLE ENÄÄ OTSIKKORIVILLÄ (omistajan päätös
+    // 21.9.2026, kaappaus Ranskan lehden Historia-osiosta): ne
+    // piirtyvät jutun leipätekstin loppuun "Lue lisää aiheesta"
+    // -linkin viereen, ks. alempana LOPPURIVI. Sama kohdeavain
+    // (otsikkoAvain) pitää vanhat äänet tallessa siitä huolimatta,
+    // että nappien paikka vaihtui.
     lohko.appendChild(otsikkoRivi);
     let kuva = null;
-    if (nosto.tiedosto) {
+    /*
+     * KOLME KUVALÄHDETTÄ, YKSI ASETTAJA. `tiedosto` on Commons-nimi,
+     * `ampari` ämpärin oma painotuote ja `osoite` valmis osoite (pelin
+     * oma havainnekuva ämpärissä). Kaikki kolme osaa jo
+     * `varustaNostonKuva` (js/ui.js) — ennen 2.9.2026 tämä ehto katsoi
+     * vain tiedostonimeä, jolloin havainnekuvanosto latoutui ilman
+     * kuvaa ja jätti pelkän lähderivin roikkumaan otsikon alle.
+     */
+    if (nosto.tiedosto || nosto.osoite || nosto.ampari) {
       kuva = document.createElement('img');
       // Sama syy kuin litteissä nostoissa: nollan kokoinen laiska kuva
       // ei lataudu WebKitissä lainkaan. Vain avatun aiheen kuvat ovat
@@ -1049,7 +1071,7 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       kuva = document.createElement('img');
       kuva.decoding = 'async';
       kuva.draggable = false;
-      kuva.alt = nosto.selite ?? nosto.otsikko ?? 'Lukijan lähettämä kuva';
+      kuva.alt = kuvatekstiLyhyt(nosto) || nosto.otsikko || 'Lukijan lähettämä kuva';
       kuva.src = nosto.kuvaUrl;
       lohko.appendChild(kuva);
     }
@@ -1112,14 +1134,23 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       anfangi: ensimmainen && !kategoria.yksipalsta,
     });
     ensimmainen = false;
+    /*
+     * LOPPURIVI: "Lue lisää aiheesta" ja reaktionapit SAMALLA RIVILLÄ
+     * leipätekstin lopussa (omistajan päätös 21.9.2026 — pois
+     * otsikkoriviltä, ks. otsikkoRivi yllä). Kohdeavain on sama kuin
+     * väliotsikon reaktiolla ennen (otsikkoAvain), joten vanhat äänet
+     * pysyvät tallessa napin paikan vaihtuessa.
+     */
+    const loppurivi = html('div', 'leipa-loppurivi');
     if (nosto.wiki) {
       const nappi = html('button', 'wiki-btn', 'Lue lisää aiheesta');
       nappi.type = 'button';
       nappi.addEventListener('click', () => ui.openWikiArticle(nosto.wiki, nosto.otsikko));
-      // Heti leipätekstin loppuun, ei erilliseksi lohkoksi sivun
-      // pohjalle (omistajan toive 5.8.2026).
-      leipa.appendChild(nappi);
+      loppurivi.appendChild(nappi);
     }
+    const reaktioAvain = otsikkoAvain(sivuAvain, nosto.otsikko);
+    if (reaktioAvain) piirraReaktiot(loppurivi, reaktioAvain, { otsikko: nosto.otsikko });
+    if (loppurivi.childNodes.length) leipa.appendChild(loppurivi);
     /*
      * TOIMINTONAPIT — vain kehittäjälehdillä (js/lehti.js: Lukijoilta
      * ja sen pro-osio). Nosto voi kantaa napit, joilla omistaja tekee

@@ -33,8 +33,23 @@ export const LINSSI = {
   tunnus: 'vertailu',
   jarjestys: 90,
   kerros: false,
+  /*
+   * PALLOLLA (karttapallo.md luku 10, aalto 1C): tila piirtää maat
+   * pallon pinnalle js/vertailu.js:n tahdistaVertailu-funktiossa laudan
+   * linssiapurilla (polygonit + merkit), joten linssikarttaa ei tarvita.
+   * Kahva on tyhjä — purku tapahtuu tilan sammuessa samassa paikassa.
+   */
+  pallolle() { return { pura() {} }; },
 
   nimi: 'Vertailulinssi',
+  /*
+   * KESKENERÄINEN (omistaja 20.9.2026 klo 15.10: *"merkitse vertailulinssi,
+   * maidentiedot, sekä vesistölinssi harmaalla ja siirrä omalle rivilleen
+   * ja pienennä niiden ikonit. ne ovat vielä liian keskeneräisiä"*).
+   * Laukku latoo keskeneräiset omalle riville ruudukon loppuun harmaana
+   * ja pienempänä (js/ui.js rakennaLinssivalikko); linssi toimii yhä.
+   */
+  kesken: true,
   lyhyt: 'Valitse kartalta enintään kolme maata Suomen rinnalle ja vertaa niitä samoilla asteikoilla.',
   // Kaksi käyrää samassa kehyksessä ja yhteinen pohjaviiva.
   ikoni: '<path d="M3 19.2h18"/>'

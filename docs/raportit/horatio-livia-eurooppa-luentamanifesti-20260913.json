@@ -1,0 +1,3710 @@
+{
+  "schemaVersion": 1,
+  "contentRevision": "eu-hl-europe-20260913-r2-approved1",
+  "state": "content-frozen-audio-authorized-rc-only",
+  "publishedBaselineCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1",
+  "cityCount": 45,
+  "liviaCityUtteranceCount": 55,
+  "invariants": {
+    "visibleAndSpokenWordsMustMatch": true,
+    "finalTimingsFromForcedAlignmentOnly": true,
+    "audioRunOwner": "RC/animaatiovetäjä",
+    "imageGenerationAuthorized": false,
+    "publishAuthorized": false,
+    "sofiaOnlyCityPairChange": "sofia-3",
+    "sofiaPreservedUtterances": [
+      "sofia-5",
+      "sofia-6",
+      "sofia-7",
+      "sofia-8",
+      "sofia-9",
+      "sofia-10",
+      "sofia-11",
+      "sofia-12",
+      "sofia-13",
+      "sofia-14"
+    ]
+  },
+  "voices": {
+    "horatio": {
+      "name": "Viisas Kertoja",
+      "model": "eleven_v3"
+    },
+    "livia": {
+      "name": "Flicker — cheerful fairy & sparkly sweetness",
+      "id": "piI8Kku0DcvcL6TTSeQt",
+      "model": "eleven_v3",
+      "stability": 0.5
+    }
+  },
+  "cities": [
+    {
+      "city": "ateena",
+      "horatio": {
+        "visibleText": "Ateenassa Troijan kullasta puhuttiin kuin kaikki olisivat olleet kaivamassa. Kahvilan isäntä piti Schliemannia nerona, asiakas varkaana; kultaa ei ollut kummallakaan näyttää. Akropolis ei tarvinnut mainosta. Maksoin kahvin kolikolla, jonka alkuperää ei kysytty.",
+        "visibleTextSha256": "8d24dfa210d0d4bdc02194f89872c7d7da0189490329ee18606dd1dc58b2c2d3",
+        "ttsText": "[curious] Ateenassa Troijan kullasta puhuttiin kuin kaikki olisivat olleet kaivamassa. Kahvilan isäntä piti Schliemannia nerona, asiakas varkaana; kultaa ei ollut kummallakaan näyttää. Akropolis ei tarvinnut mainosta. [softly] Maksoin kahvin kolikolla, jonka alkuperää ei kysytty.",
+        "ttsTextSha256": "b14ce455e89a4e2e789fafa87b0ee349c63035fed0bcda045183ae014fa9d217",
+        "cues": [
+          {
+            "cueId": "ateena.r1",
+            "anchor": "kuin kaikki olisivat olleet kaivamassa",
+            "intent": "epailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "ateena.r3",
+            "anchor": "kultaa ei ollut kummallakaan näyttää",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "ateena.r4",
+            "anchor": "Akropolis ei tarvinnut mainosta",
+            "intent": "vakavoituu",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "ateena.r5",
+            "anchor": "jonka alkuperää ei kysytty",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "ateena-3",
+        "visibleText": "Schliemannin talo on nyt rahamuseo. Etsin puutarhasta varjoa, mutta kahvilan pöytien alta löytyi pullanmuruja. Siinä unohtui varjo hetkeksi!",
+        "visibleTextSha256": "e832aa94e48db059fa3a1acc25982e675212b6b48e0a00be711f2d46d37f7713",
+        "ttsText": "[curious] Schliemannin talo on nyt rahamuseo. [mischievously] Etsin puutarhasta varjoa, mutta kahvilan pöytien alta löytyi pullanmuruja. [brightly] Siinä unohtui varjo hetkeksi!",
+        "ttsTextSha256": "6ea7da1811bb6a9b0110787d927b5b85a474f42325150045ebee09e9bd3b1f34",
+        "cues": [
+          {
+            "cueId": "ateena.livia.c1",
+            "anchor": "nyt rahamuseo",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.45
+          },
+          {
+            "cueId": "ateena.livia.c3",
+            "anchor": "Etsin puutarhasta varjoa",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.35
+          },
+          {
+            "cueId": "ateena.livia.c4",
+            "anchor": "pöytien alta löytyi pullanmuruja",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.55
+          },
+          {
+            "cueId": "ateena.livia.c5",
+            "anchor": "unohtui varjo hetkeksi",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          }
+        ]
+      },
+      "batch": "pilot",
+      "sourcePackPath": "js/packs/fokusvirta-ateena.js",
+      "sourcePackBlobSha": "c2cf63eec0a8e3c33fb1303a64b37c7f5eea2517"
+    },
+    {
+      "city": "sofia",
+      "horatio": {
+        "visibleText": "Sofiassa maa tarjosi kuumaa vettä pyytämättä halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. Matkailun epäjohdonmukaisuus oli valmis. Vitoša näytti nukkuvan, mutta kaupungin alla oli jo noustu keittämään.",
+        "visibleTextSha256": "ac8d4fd3ee5c696a6037aee7a272ba85140ccbc3a2de09db0f145ada2038f311",
+        "ttsText": "[curious] Sofiassa maa tarjosi kuumaa vettä pyytämättä halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. [mischievously] Matkailun epäjohdonmukaisuus oli valmis. [softly] Vitoša näytti nukkuvan, mutta kaupungin alla oli jo noustu keittämään.",
+        "ttsTextSha256": "ba14173a7573380f388c311e38cc56e7d137df119c8d734fa46bb8ab56bedc64",
+        "cues": [
+          {
+            "cueId": "sofia.r1",
+            "anchor": "pyytämättä halkoja",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sofia.r2",
+            "anchor": "kylmästä pesuvedestä",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sofia.r3",
+            "anchor": "epäjohdonmukaisuus oli valmis",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sofia.r4",
+            "anchor": "jo noustu keittämään",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "sofia-3",
+        "visibleText": "Sofian lähteeltä haetaan yhä kuumaa vettä. Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. Arvokkuus palasi vasta seuraavalla räystäällä.",
+        "visibleTextSha256": "a2d6d6ffb6ccabd33da64e053acdce5b63479109e4b8de0433ad57671f067f14",
+        "ttsText": "[brightly] Sofian lähteeltä haetaan yhä kuumaa vettä. [curious] Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. [mischievously] Arvokkuus palasi vasta seuraavalla räystäällä.",
+        "ttsTextSha256": "1f1e5ee0ac5848ad4a5aa1ae776c6d2d74449cdb5c0a1c3416983c3c21b01904",
+        "cues": [
+          {
+            "cueId": "sofia.livia.c1",
+            "anchor": "haetaan yhä kuumaa vettä",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.35
+          },
+          {
+            "cueId": "sofia.livia.c2",
+            "anchor": "höyry pörrötti otsasulkani",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.3
+          },
+          {
+            "cueId": "sofia.livia.c3",
+            "anchor": "Arvokkuus palasi",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.35
+          }
+        ]
+      },
+      "batch": "e5",
+      "sourcePackPath": "js/packs/fokusvirta-sofia.js",
+      "sourcePackBlobSha": "388c44f96a9edaa19b0f584ff6b306deb398d867"
+    },
+    {
+      "city": "istanbul",
+      "horatio": {
+        "visibleText": "Galatan mäessä kantaja laski arkkunsa kivelle ja antoi mäen odottaa. Mäkeen kaivettiin tunnelia, jotta ihmiset pääsisivät ylös istualtaan. Paljon työtä työn välttämiseksi. Kantajalla oli parempaa tekemistä.",
+        "visibleTextSha256": "e2ed8065c9e6633aaba652a8f29b241706bc128581b71a0cca71794cb1885bc3",
+        "ttsText": "[curious] Galatan mäessä kantaja laski arkkunsa kivelle ja antoi mäen odottaa. Mäkeen kaivettiin tunnelia, jotta ihmiset pääsisivät ylös istualtaan. [mischievously] Paljon työtä työn välttämiseksi. [softly] Kantajalla oli parempaa tekemistä.",
+        "ttsTextSha256": "d4e3154586470a560d1f7e2a186c3cce2fd6b4db4b1bcfa697faf65b1a94e5b5",
+        "cues": [
+          {
+            "cueId": "istanbul.r1",
+            "anchor": "antoi mäen odottaa",
+            "intent": "huvittuu",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "istanbul.r2",
+            "anchor": "ylös istualtaan",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "istanbul.r3",
+            "anchor": "työtä työn välttämiseksi",
+            "intent": "huvittuu",
+            "strength": 0.55,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "istanbul.r4",
+            "anchor": "parempaa tekemistä",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "istanbul-3",
+        "visibleText": "Tünel kulkee yhä mäen alla. Minä nousin mäen siivillä ja ehdin perille ennen vaunua. Kokeneen lentäjänkin on ilo, kun katu ja tunneli päätyvät samaan paikkaan.",
+        "visibleTextSha256": "424c7fcfd70d847d423c47893c52a109fe20a62d374fd8e387cbf2cf7f60e2b5",
+        "ttsText": "[brightly] Tünel kulkee yhä mäen alla. [mischievously] Minä nousin mäen siivillä ja ehdin perille ennen vaunua. [warmly] Kokeneen lentäjänkin on ilo, kun katu ja tunneli päätyvät samaan paikkaan.",
+        "ttsTextSha256": "35bdfa45449d1b6366f068b0edbc019770e1a87898872fb093ae92d846981b4e",
+        "cues": [
+          {
+            "cueId": "istanbul.livia.c1",
+            "anchor": "Tünel kulkee yhä",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.35
+          },
+          {
+            "cueId": "istanbul.livia.c2",
+            "anchor": "ehdin perille ennen vaunua",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.3
+          },
+          {
+            "cueId": "istanbul.livia.c3",
+            "anchor": "päätyvät samaan paikkaan",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.45
+          }
+        ]
+      },
+      "batch": "e5",
+      "sourcePackPath": "js/packs/fokusvirta-istanbul.js",
+      "sourcePackBlobSha": "ffdbd22c699aa50181c3e96335d596e4bd474c2a"
+    },
+    {
+      "city": "rooma",
+      "horatio": {
+        "visibleText": "Rooman Pantheonin kattoaukosta satoi sisään. Sade löysi lattialta paikkansa, joten näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Uusia virkamiehiä kulki vanhojen keisarien ohi. Pantheon päästi yhä taivaan sisään kysymättä nimeä.",
+        "visibleTextSha256": "b069edce55d9f992514740bb2096f31c10c6f2e2171d4155083655d379082481",
+        "ttsText": "[curious] Rooman Pantheonin kattoaukosta satoi sisään. Sade löysi lattialta paikkansa, joten näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Uusia virkamiehiä kulki vanhojen keisarien ohi. [softly] Pantheon päästi yhä taivaan sisään kysymättä nimeä.",
+        "ttsTextSha256": "946c96e14c5a34dd1646e563c064f95deaf3327f890a0786660da81fd1cb11de",
+        "cues": [
+          {
+            "cueId": "rooma.r1",
+            "anchor": "kattoaukosta satoi sisään",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "rooma.r2",
+            "anchor": "Sade löysi lattialta paikkansa",
+            "intent": "vakavoituu",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "rooma.r3",
+            "anchor": "tohtinut huomauttaa katosta",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "rooma.r4",
+            "anchor": "kysymättä nimeä",
+            "intent": "myotailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "rooma-3",
+        "visibleText": "Pantheoniin ostetaan nyt pääsylippu. Minä kiersin aukon yläpuolella ja vilkaisin alas. Ihmiset väistivät sadetta; minä väistin vain väärään suuntaan nousevaa ilmavirtaa.",
+        "visibleTextSha256": "bae1b78438e851c193bb414cd5a123da3a27b87a156d5c1e94f0e321cf05633a",
+        "ttsText": "[curious] Pantheoniin ostetaan nyt pääsylippu. [brightly] Minä kiersin aukon yläpuolella ja vilkaisin alas. [mischievously] Ihmiset väistivät sadetta; minä väistin vain väärään suuntaan nousevaa ilmavirtaa.",
+        "ttsTextSha256": "f33686f04fd09d1d24a9efde9eb2362ec0ea4f5427bb1a83b6d26b2b855413a7",
+        "cues": [
+          {
+            "cueId": "rooma.livia.c1",
+            "anchor": "ostetaan nyt pääsylippu",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "rooma.livia.c2",
+            "anchor": "kiersin aukon yläpuolella",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "rooma.livia.c3",
+            "anchor": "väärään suuntaan nousevaa ilmavirtaa",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.55
+          }
+        ]
+      },
+      "batch": "e3",
+      "sourcePackPath": "js/packs/fokusvirta-rooma.js",
+      "sourcePackBlobSha": "e9c710cbd30671931f12af2d92ffb9241cc1cbc4"
+    },
+    {
+      "city": "bukarest",
+      "horatio": {
+        "visibleText": "Manucin majatalossa huoneet kiersivät pihaa puuparvien takana. Alhaalla mies nukkui säkkinsä päällä kuin pankki omaisuutensa vartijana. Keittiön tuoksulle ei tarvittu tulkkia. Huoneeni löysin illalla naapurini kuorsauksesta.",
+        "visibleTextSha256": "69ab057e0c5d909689b083b0a578f55080a25c7d7263df47710be7cafe9c81a8",
+        "ttsText": "[curious] Manucin majatalossa huoneet kiersivät pihaa puuparvien takana. [mischievously] Alhaalla mies nukkui säkkinsä päällä kuin pankki omaisuutensa vartijana. Keittiön tuoksulle ei tarvittu tulkkia. [softly] Huoneeni löysin illalla naapurini kuorsauksesta.",
+        "ttsTextSha256": "f3fa587708484ce3c1ce6493d632fb154a240c81ed171835915f0cffe75ff349",
+        "cues": [
+          {
+            "cueId": "bukarest.r2",
+            "anchor": "kuin pankki omaisuutensa vartijana",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "bukarest.r3",
+            "anchor": "ei tarvittu tulkkia",
+            "intent": "myotailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "bukarest.r4",
+            "anchor": "naapurini kuorsauksesta",
+            "intent": "huvittuu",
+            "strength": 0.55,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "bukarest-3",
+        "visibleText": "Manucin majatalon sisäpihalla syödään yhä. Etsin pöytien alta murusia, kun viereisestä pöydästä kuului sana ”salaisuus”. Muruset unohtuivat siihen.",
+        "visibleTextSha256": "f252ce5afd9a9a6ad3039fb445984df0d7bef6cac4747f088193b907603553b2",
+        "ttsText": "[brightly] Manucin majatalon sisäpihalla syödään yhä. [curious] Etsin pöytien alta murusia, kun viereisestä pöydästä kuului sana ”salaisuus”. [mischievously] Muruset unohtuivat siihen.",
+        "ttsTextSha256": "26a97d3a102e1ad0809d8b83e2ad40aa4ffb693630620776c0f05ba7437a2b97",
+        "cues": [
+          {
+            "cueId": "bukarest.livia.c1",
+            "anchor": "sisäpihalla syödään yhä",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.35
+          },
+          {
+            "cueId": "bukarest.livia.c2",
+            "anchor": "sana ”salaisuus”",
+            "occurrence": 1,
+            "intent": "hammastyy",
+            "strength": 0.4
+          },
+          {
+            "cueId": "bukarest.livia.c3",
+            "anchor": "Muruset unohtuivat",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.35
+          }
+        ]
+      },
+      "batch": "e5",
+      "sourcePackPath": "js/packs/fokusvirta-bukarest.js",
+      "sourcePackBlobSha": "569c7f21bb17c3c47856ae16d7c316c2a71d83f4"
+    },
+    {
+      "city": "sarajevo",
+      "horatio": {
+        "visibleText": "Sarajevon kupariseppä naputti pannua vasaralla, jonka olisin hukannut taskuun. Viereisessä puodissa oli samanlainen kahvipannu. Olin juonut aamulla katsomatta; nyt näin jokaisen jäljen. Basaarin kilkutuksessa aamiainen muuttui käsityöksi.",
+        "visibleTextSha256": "05b85cfa80f4454aca5a97c5d525765587c4ccf2644e33e7535f25691232460f",
+        "ttsText": "[curious] Sarajevon kupariseppä naputti pannua vasaralla, jonka olisin hukannut taskuun. Viereisessä puodissa oli samanlainen kahvipannu. Olin juonut aamulla katsomatta; nyt näin jokaisen jäljen. [softly] Basaarin kilkutuksessa aamiainen muuttui käsityöksi.",
+        "ttsTextSha256": "75944c232551bd284082e812bee01a5ffd72710fa3fb1986de378a559f368682",
+        "cues": [
+          {
+            "cueId": "sarajevo.r1",
+            "anchor": "hukannut taskuun",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sarajevo.r2",
+            "anchor": "aamulla katsomatta",
+            "intent": "vakavoituu",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sarajevo.r3",
+            "anchor": "jokaisen jäljen",
+            "intent": "vakavoituu",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sarajevo.r4",
+            "anchor": "aamiainen muuttui käsityöksi",
+            "intent": "myotailee",
+            "strength": 0.45,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "sarajevo-3",
+        "visibleText": "Kuparisepät naputtavat basaarissa yhä. Minun piti vain piipahtaa, mutta jäin kuuntelemaan yhtä vasaraa. Yritin naputtaa nokalla samaa tahtia — seppä oli kyllä nopeampi!",
+        "visibleTextSha256": "145fb8120049fc081ddd36ebe98f44369868e89bac35068d2981a3e14ce6da9d",
+        "ttsText": "[softly] Kuparisepät naputtavat basaarissa yhä. [curious] Minun piti vain piipahtaa, mutta jäin kuuntelemaan yhtä vasaraa. [mischievously] Yritin naputtaa nokalla samaa tahtia — seppä oli kyllä nopeampi!",
+        "ttsTextSha256": "d1f5fb31dbe5f92131f9512373ad54d63468bf2bf6bd46e8dcd999e0c66b63dd",
+        "cues": [
+          {
+            "cueId": "sarajevo.livia.c1",
+            "anchor": "basaarissa yhä",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "sarajevo.livia.c3",
+            "anchor": "jäin kuuntelemaan yhtä vasaraa",
+            "occurrence": 1,
+            "intent": "lammin",
+            "strength": 0.45
+          },
+          {
+            "cueId": "sarajevo.livia.c4",
+            "anchor": "naputtaa nokalla samaa tahtia",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.55
+          },
+          {
+            "cueId": "sarajevo.livia.c5",
+            "anchor": "seppä oli kyllä nopeampi",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.5
+          }
+        ]
+      },
+      "batch": "pilot",
+      "sourcePackPath": "js/packs/fokusvirta-sarajevo.js",
+      "sourcePackBlobSha": "d186cab8d6e194010f86ef6929f892b9c17a5c5e"
+    },
+    {
+      "city": "madrid",
+      "horatio": {
+        "visibleText": "Pradossa pieni prinsessa sai huomion, suuri koira ei välittänyt. Maalari katsoi minuun; peilissä seisoi kuningaspari. Minä olin saanut paikan heidän edestään. Kahviloissa väiteltiin tasavallasta. Taulussa valta vaihtui ilman sanomalehteä.",
+        "visibleTextSha256": "fe87562a5de1f13a42bfe99844d02955839dee8a12dda01f524d9a9655a9dae8",
+        "ttsText": "[curious] Pradossa pieni prinsessa sai huomion, suuri koira ei välittänyt. Maalari katsoi minuun; peilissä seisoi kuningaspari. Minä olin saanut paikan heidän edestään. Kahviloissa väiteltiin tasavallasta. [softly] Taulussa valta vaihtui ilman sanomalehteä.",
+        "ttsTextSha256": "a02e4a1873177f627075dd10b2c0182161c0decdb901902f0d387855a39f3815",
+        "cues": [
+          {
+            "cueId": "madrid.r1",
+            "anchor": "suuri koira ei välittänyt",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "madrid.r2",
+            "anchor": "Maalari katsoi minuun",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "madrid.r3",
+            "anchor": "paikan heidän edestään",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "madrid.r4",
+            "anchor": "ilman sanomalehteä",
+            "intent": "huvittuu",
+            "strength": 0.55,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "madrid-3",
+        "visibleText": "Las Meninas on yhä Pradon salissa 12. Minä tarkkailin jonon vieressä nukkuvaa koiraa. Se ei vilkaissut museoon päinkään. Velázquez olisi hyväksynyt asennon.",
+        "visibleTextSha256": "06c2bc6f02e0d6cfb2016c26916b4f9a6a007b88cccde18617f3ba085dc510f6",
+        "ttsText": "[curious] Las Meninas on yhä Pradon salissa 12. [warmly] Minä tarkkailin jonon vieressä nukkuvaa koiraa. [mischievously] Se ei vilkaissut museoon päinkään. [softly] Velázquez olisi hyväksynyt asennon.",
+        "ttsTextSha256": "2f83d5ec4e911ef8ba46308c562a7bf8bc4224357d8511f42b645815edf680d7",
+        "cues": [
+          {
+            "cueId": "madrid.livia.c1",
+            "anchor": "yhä Pradon salissa 12",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "madrid.livia.c2",
+            "anchor": "nukkuvaa koiraa",
+            "occurrence": 1,
+            "intent": "lammin",
+            "strength": 0.45
+          },
+          {
+            "cueId": "madrid.livia.c3",
+            "anchor": "ei vilkaissut museoon",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.5
+          }
+        ]
+      },
+      "batch": "e2",
+      "sourcePackPath": "js/packs/fokusvirta-madrid.js",
+      "sourcePackBlobSha": "d1915ec76b2fe865857178724b0fb4aa742fd0f0"
+    },
+    {
+      "city": "wien",
+      "horatio": {
+        "visibleText": "Wienin maailmannäyttelyssä kone painoi sanomalehteä ajattelematta sanaakaan. Rotunden kupoli peitti taivaan rautaisella hatulla. Sitten pörssi romahti. Kahvilassa mies taitteli lehtensä pieneksi, mutta uutinen ei pienentynyt. Tilasin hänelle kahvin; koneista ei ollut siihen apua.",
+        "visibleTextSha256": "003fcd23dfbf598d0e15e7f87883c47a986d9c5f2ed261d7649b4252a307269c",
+        "ttsText": "[curious] Wienin maailmannäyttelyssä kone painoi sanomalehteä ajattelematta sanaakaan. Rotunden kupoli peitti taivaan rautaisella hatulla. Sitten pörssi romahti. [softly] Kahvilassa mies taitteli lehtensä pieneksi, mutta uutinen ei pienentynyt. Tilasin hänelle kahvin; koneista ei ollut siihen apua.",
+        "ttsTextSha256": "f8e2e236769b80596db0e729bf6b396a0775298c7df1475157eb0cfc91bd54d1",
+        "cues": [
+          {
+            "cueId": "wien.r1",
+            "anchor": "kone painoi sanomalehteä",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "wien.r2",
+            "anchor": "ajattelematta sanaakaan",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "wien.r3",
+            "anchor": "pörssi romahti",
+            "intent": "vakavoituu",
+            "strength": 0.7,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "wien.r4",
+            "anchor": "uutinen ei pienentynyt",
+            "intent": "vakavoituu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "wien.r5",
+            "anchor": "Tilasin hänelle kahvin",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "wien.r6",
+            "anchor": "ei ollut siihen apua",
+            "intent": "vakavoituu",
+            "strength": 0.45,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "wien-3",
+        "visibleText": "Rotunde paloi myöhemmin; Wienin kahvilat jäivät. Pujottelin terassipöytien yllä ja pysähdyin taitellun lehden kohdalle. Isoisä ymmärsi siinä ihmistä paremmin kuin konetta.",
+        "visibleTextSha256": "e7e526eac0575bb4e7556c2d094f046e2965733d9ef824d967efaffc57d84b74",
+        "ttsText": "[softly] Rotunde paloi myöhemmin; Wienin kahvilat jäivät. [brightly] Pujottelin terassipöytien yllä ja pysähdyin taitellun lehden kohdalle. [warmly] Isoisä ymmärsi siinä ihmistä paremmin kuin konetta.",
+        "ttsTextSha256": "3f1c76ae2a4b1a4c58973d589546e14a694314d2690d05308ceab0bfd55f3616",
+        "cues": [
+          {
+            "cueId": "wien.livia.c1",
+            "anchor": "Rotunde paloi myöhemmin",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.45
+          },
+          {
+            "cueId": "wien.livia.c2",
+            "anchor": "Pujottelin terassipöytien yllä",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "wien.livia.c3",
+            "anchor": "taitellun lehden kohdalle",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.4
+          },
+          {
+            "cueId": "wien.livia.c4",
+            "anchor": "ihmistä paremmin kuin konetta",
+            "occurrence": 1,
+            "intent": "lammin",
+            "strength": 0.55
+          }
+        ]
+      },
+      "batch": "e3",
+      "sourcePackPath": "js/packs/fokusvirta-wien.js",
+      "sourcePackBlobSha": "c07c1eb5d6fd21fa1a1663037cbdb3fb2b40b7cb"
+    },
+    {
+      "city": "pariisi",
+      "horatio": {
+        "visibleText": "Pariisin uusi oopperatalo oli yhä kesken. Kultaa, pylväitä, marmoria: kokonainen rakennus juhlatamineissaan. Paluumatkalla seurasin miestä, joka vihelsi leipä kainalossa. Jos hänelle annettaisiin tuo talo, menisin kuuntelemaan. Toistaiseksi hän esiintyi ilmaiseksi.",
+        "visibleTextSha256": "07160d1d991ebd038f0a1fb1cd9ab3aff014a6079395b005c12169138efa0662",
+        "ttsText": "[curious] Pariisin uusi oopperatalo oli yhä kesken. Kultaa, pylväitä, marmoria: kokonainen rakennus juhlatamineissaan. Paluumatkalla seurasin miestä, joka vihelsi leipä kainalossa. [warmly] Jos hänelle annettaisiin tuo talo, menisin kuuntelemaan. [softly] Toistaiseksi hän esiintyi ilmaiseksi.",
+        "ttsTextSha256": "9f6d13b9fbf7b8340cf441be5a7f7c97f82e9edd276f59472a0e37524216cbf7",
+        "cues": [
+          {
+            "cueId": "pariisi.r1",
+            "anchor": "yhä kesken",
+            "intent": "epailee",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "pariisi.r2",
+            "anchor": "Kultaa, pylväitä, marmoria",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "pariisi.r3",
+            "anchor": "rakennus juhlatamineissaan",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "pariisi.r4",
+            "anchor": "menisin kuuntelemaan",
+            "intent": "myotailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "pariisi.r5",
+            "anchor": "esiintyi ilmaiseksi",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "pariisi-3",
+        "visibleText": "Palais Garnier avattiin kaksi vuotta isoisän käynnin jälkeen. Minä tarkistin katon kultaukset ennen lippujonoa. Sisälläkin esiinnytään yhä, mutta räystäällä ei pyydetty pääsymaksua.",
+        "visibleTextSha256": "304579993d54852f2b18452809d2814b8397b64409df796a0fd4a8db4234e2e9",
+        "ttsText": "[curious] Palais Garnier avattiin kaksi vuotta isoisän käynnin jälkeen. [brightly] Minä tarkistin katon kultaukset ennen lippujonoa. [mischievously] Sisälläkin esiinnytään yhä, mutta räystäällä ei pyydetty pääsymaksua.",
+        "ttsTextSha256": "2916c8089c34d9d769770fe1cfe0c6dfba5f20d84a2e19d53ee8664599d247be",
+        "cues": [
+          {
+            "cueId": "pariisi.livia.c1",
+            "anchor": "kaksi vuotta isoisän käynnin jälkeen",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.4
+          },
+          {
+            "cueId": "pariisi.livia.c2",
+            "anchor": "katon kultaukset ennen lippujonoa",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.45
+          },
+          {
+            "cueId": "pariisi.livia.c3",
+            "anchor": "räystäällä ei pyydetty pääsymaksua",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.55
+          }
+        ]
+      },
+      "batch": "e1",
+      "sourcePackPath": "js/packs/fokusvirta-pariisi.js",
+      "sourcePackBlobSha": "f250c0087fcf5193901aa4ffd9322f1d141bb3b7"
+    },
+    {
+      "city": "berliini",
+      "horatio": {
+        "visibleText": "Berliinin voitonpylväs koristeltiin vallatuilla tykinputkilla. Korkealle nostettu tykki ei osunut ohikulkijaan. Katsojat polkivat lehtipojan numeron mutaan; ostin sen. Suuret voitot painettiin paksuin kirjaimin, pieni tappio näkyi pojan kasvoilla.",
+        "visibleTextSha256": "c304fa6e6b962d9c8a195d4f0bc7667e552931edb7d4f6ca8ea6b711ba3ffb66",
+        "ttsText": "[curious] Berliinin voitonpylväs koristeltiin vallatuilla tykinputkilla. Korkealle nostettu tykki ei osunut ohikulkijaan. Katsojat polkivat lehtipojan numeron mutaan; ostin sen. [softly] Suuret voitot painettiin paksuin kirjaimin, pieni tappio näkyi pojan kasvoilla.",
+        "ttsTextSha256": "58df2eedf3dfd76cf2adaf4388d3ffc7ea54c45547370c5e1f9b0fc142c9c312",
+        "cues": [
+          {
+            "cueId": "berliini.r1",
+            "anchor": "vallatuilla tykinputkilla",
+            "intent": "vakavoituu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "berliini.r2",
+            "anchor": "ei osunut ohikulkijaan",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "berliini.r3",
+            "anchor": "lehtipojan numeron mutaan",
+            "intent": "vakavoituu",
+            "strength": 0.6,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "berliini.r4",
+            "anchor": "ostin sen",
+            "intent": "myotailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "berliini.r5",
+            "anchor": "pojan kasvoilla",
+            "intent": "vakavoituu",
+            "strength": 0.6,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "berliini-3",
+        "visibleText": "Pylväs siirrettiin 1938–1939 Großer Sternille. Nousin patsaan tasalle hetkeksi — tuuli ei arvostanut vertailua. Alhaalla ajattelin lehtipoikaa, kuten isoisäkin.",
+        "visibleTextSha256": "d4dcfab17290057b586c68e8944a02136a882b63d692125fae9df5354ca3c859",
+        "ttsText": "[curious] Pylväs siirrettiin 1938–1939 Großer Sternille. [brightly] Nousin patsaan tasalle hetkeksi — tuuli ei arvostanut vertailua. [softly] Alhaalla ajattelin lehtipoikaa, kuten isoisäkin.",
+        "ttsTextSha256": "8b46e71f70e3fa9cdddf40ccab6ba6c5ffd28d475ecdbdc2eb0fda0e43c4d46b",
+        "cues": [
+          {
+            "cueId": "berliini.livia.c1",
+            "anchor": "1938–1939 Großer Sternille",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "berliini.livia.c2",
+            "anchor": "Nousin patsaan tasalle",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "berliini.livia.c3",
+            "anchor": "tuuli ei arvostanut vertailua",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.5
+          },
+          {
+            "cueId": "berliini.livia.c4",
+            "anchor": "ajattelin lehtipoikaa",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.45
+          },
+          {
+            "cueId": "berliini.livia.c5",
+            "anchor": "kuten isoisäkin",
+            "occurrence": 1,
+            "intent": "lammin",
+            "strength": 0.5
+          }
+        ]
+      },
+      "batch": "e3",
+      "sourcePackPath": "js/packs/fokusvirta-berliini.js",
+      "sourcePackBlobSha": "0fa65f8822bf154e68f19baf66c5be65fccc44d7"
+    },
+    {
+      "city": "lontoo",
+      "horatio": {
+        "visibleText": "Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Herra vastapäätä luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Perille päästiin nopeasti; yskä tuli mukana.",
+        "visibleTextSha256": "d5d4af786a0629681736653ef8ae19996495a001e03ff657a554d1a2dd252e8c",
+        "ttsText": "[curious] Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Herra vastapäätä luki lehteään, vaikka katosi välillä näkyvistä. [mischievously] Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. [softly] Perille päästiin nopeasti; yskä tuli mukana.",
+        "ttsTextSha256": "4d5cba326f44ab92f2e0afd21949e5ff5d7ccc45a5bb4487ad2f2db181ae54a8",
+        "cues": [
+          {
+            "cueId": "lontoo.r1",
+            "anchor": "matkustajat sen savuun",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "lontoo.r2",
+            "anchor": "katosi välillä näkyvistä",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "lontoo.r3",
+            "anchor": "pehmustettuja penkkejä",
+            "intent": "huvittuu",
+            "strength": 0.6,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "lontoo.r4",
+            "anchor": "Perille päästiin nopeasti",
+            "intent": "myotailee",
+            "strength": 0.3,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "lontoo.r5",
+            "anchor": "yskä tuli mukana",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "lontoo-3",
+        "visibleText": "Matkustajahöyryjunat katosivat metrosta kauan sitten. Lensin uloskäynniltä toiselle. Ihmiset ehtivät perille; minä ehdin nähdä kaupungin.",
+        "visibleTextSha256": "764407dba1673232efc46844241ae3856b43ae723e164c1a9dffbb0cb9c11548",
+        "ttsText": "[curious] Matkustajahöyryjunat katosivat metrosta kauan sitten. [brightly] Lensin uloskäynniltä toiselle. [softly] Ihmiset ehtivät perille; minä ehdin nähdä kaupungin.",
+        "ttsTextSha256": "1f589ceb579bb0aceead0852dc7139c2286459bad691a8121b0c5f3ef540af0f",
+        "cues": [
+          {
+            "cueId": "lontoo.livia.c1",
+            "anchor": "Matkustajahöyryjunat",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.35
+          },
+          {
+            "cueId": "lontoo.livia.c2",
+            "anchor": "Lensin uloskäynniltä toiselle",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.45
+          },
+          {
+            "cueId": "lontoo.livia.c3",
+            "anchor": "ehdin nähdä kaupungin",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.45
+          }
+        ]
+      },
+      "batch": "e1",
+      "sourcePackPath": "js/packs/fokusvirta-lontoo.js",
+      "sourcePackBlobSha": "7c2a423df9b20e99fed33da0612f244e26e99db8"
+    },
+    {
+      "city": "budapest",
+      "horatio": {
+        "visibleText": "Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. Lämmössä kaupungit saivat odottaa järjestystä.",
+        "visibleTextSha256": "3aac08bb0005e9e45befd31ee9c0ba911a32946120147f8530b89bd988c9eb0b",
+        "ttsText": "[curious] Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. [mischievously] Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. [softly] Lämmössä kaupungit saivat odottaa järjestystä.",
+        "ttsTextSha256": "ed25b341d2edf94d2455486c9a59352b350ff207d6bd74dabd922e0b61f6a976",
+        "cues": [
+          {
+            "cueId": "budapest.r1",
+            "anchor": "vanheni kesken aamiaisen",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "budapest.r2",
+            "anchor": "Tonava piti suuntansa",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "budapest.r3",
+            "anchor": "uutta nimeä",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "budapest.r4",
+            "anchor": "odottaa järjestystä",
+            "intent": "myotailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "budapest-3",
+        "visibleText": "Rudasissa kylvetään nyt katollakin. Höyry peitti vastarannan juuri, kun olin valmis lähtöön. Odotin aivan rauhallisesti — ainakin melkein.",
+        "visibleTextSha256": "0a95192174e2e5d3047d97bc8e9d6b17943e5a4253d2a73a05db88090bafe126",
+        "ttsText": "[brightly] Rudasissa kylvetään nyt katollakin. [curious] Höyry peitti vastarannan juuri, kun olin valmis lähtöön. [mischievously] Odotin aivan rauhallisesti — ainakin melkein.",
+        "ttsTextSha256": "bdcaf541c96eaff529da84c7da9aa76f8ab7dd41ba6ca9530e32cf915900f492",
+        "cues": [
+          {
+            "cueId": "budapest.livia.c1",
+            "anchor": "kylvetään nyt katollakin",
+            "occurrence": 1,
+            "intent": "hammastyy",
+            "strength": 0.4
+          },
+          {
+            "cueId": "budapest.livia.c2",
+            "anchor": "Höyry peitti vastarannan",
+            "occurrence": 1,
+            "intent": "vakavoituu",
+            "strength": 0.3
+          },
+          {
+            "cueId": "budapest.livia.c3",
+            "anchor": "ainakin melkein",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.35
+          }
+        ]
+      },
+      "batch": "e5",
+      "sourcePackPath": "js/packs/fokusvirta-budapest.js",
+      "sourcePackBlobSha": "9d27eb03ee445b47737c7e593f9791df96074ed8"
+    },
+    {
+      "city": "dubrovnik",
+      "horatio": {
+        "visibleText": "Ragusan muureilta katsottuna meri pysyi ulkopuolella. Portin sisällä vesi tuli vastaan Onofrion kaivon kivikasvoista. Join kahdesta suusta; ne näyttivät olevan eri mieltä mausta. Sama vesi. Kuusitoista päätä neuvoi ottamaan vielä kulauksen.",
+        "visibleTextSha256": "392f19841c2949c4cd5cbbdda399ddb72111e60b584648a74f1f2048901e7d38",
+        "ttsText": "[curious] Ragusan muureilta katsottuna meri pysyi ulkopuolella. Portin sisällä vesi tuli vastaan Onofrion kaivon kivikasvoista. [mischievously] Join kahdesta suusta; ne näyttivät olevan eri mieltä mausta. Sama vesi. [softly] Kuusitoista päätä neuvoi ottamaan vielä kulauksen.",
+        "ttsTextSha256": "104f423ed3d9dd7e4081abe27f988e5697a8eb6f2a39a063a3fc9022500539b4",
+        "cues": [
+          {
+            "cueId": "dubrovnik.r1",
+            "anchor": "meri pysyi ulkopuolella",
+            "intent": "hammastyy",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "dubrovnik.r2",
+            "anchor": "eri mieltä mausta",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "dubrovnik.r3",
+            "anchor": "Sama vesi",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "dubrovnik.r4",
+            "anchor": "ottamaan vielä kulauksen",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "dubrovnik-3",
+        "visibleText": "Onofrion kaivon kuusitoista kivikasvoa antavat yhä vettä. Kun kuvittelin niiden puhuvan yhtä aikaa, minäkin hiljenin hetkeksi. Sitten laskin ne uudelleen.",
+        "visibleTextSha256": "57cd6f64c3e20d293d97c72d9200276add4b58b7a8e26aee29e9a38f2cb85492",
+        "ttsText": "[brightly] Onofrion kaivon kuusitoista kivikasvoa antavat yhä vettä. [curious] Kun kuvittelin niiden puhuvan yhtä aikaa, minäkin hiljenin hetkeksi. [mischievously] Sitten laskin ne uudelleen.",
+        "ttsTextSha256": "1326e7b05bce21384855901ebf02e44c537566ffd808c23b9d1a9fe6760e5ed1",
+        "cues": [
+          {
+            "cueId": "dubrovnik.livia.c1",
+            "anchor": "kuusitoista kivikasvoa",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.35
+          },
+          {
+            "cueId": "dubrovnik.livia.c2",
+            "anchor": "minäkin hiljenin hetkeksi",
+            "occurrence": 1,
+            "intent": "hammastyy",
+            "strength": 0.35
+          },
+          {
+            "cueId": "dubrovnik.livia.c3",
+            "anchor": "laskin ne uudelleen",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.35
+          }
+        ]
+      },
+      "batch": "e5",
+      "sourcePackPath": "js/packs/fokusvirta-dubrovnik.js",
+      "sourcePackBlobSha": "af6b2aba379c0b831767e0c33121d2651c1a5754"
+    },
+    {
+      "city": "praha",
+      "horatio": {
+        "visibleText": "Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.",
+        "visibleTextSha256": "8455337101aad970682a3e616570b750b3d64f55f61eb6e419e6e5398e06b5d0",
+        "ttsText": "[curious] Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. [softly] Hän piti aikaa hukattuna.",
+        "ttsTextSha256": "c151def8709ba2a4e6f9e47d800caea1993faf54c4f12607ddb89d208a0e3ccc",
+        "cues": [
+          {
+            "cueId": "praha.r1",
+            "anchor": "luuranko soitti",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "praha.r2",
+            "anchor": "unohdin verrata",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "praha.r3",
+            "anchor": "omassani vain kiireelle",
+            "intent": "vakavoituu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "praha.r4",
+            "anchor": "puoli tuntia myöhemmin",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "praha.r5",
+            "anchor": "piti aikaa hukattuna",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "praha-3",
+        "visibleText": "Kello kokoaa torille väkeä yhä. Minä istuin katon reunalla ja ihmettelin, miksi puhelintaan katsovat ihmiset nostivat yhtä aikaa päänsä. Kun luuranko liikahti, nostin minäkin.",
+        "visibleTextSha256": "ddeeef8a4b8ae574d2872df4f3fbd9c5127a10de0290e90a46d982eaac36bf62",
+        "ttsText": "[curious] Kello kokoaa torille väkeä yhä. [brightly] Minä istuin katon reunalla ja ihmettelin, miksi puhelintaan katsovat ihmiset nostivat yhtä aikaa päänsä. [mischievously] Kun luuranko liikahti, nostin minäkin.",
+        "ttsTextSha256": "edc6ace4a0f79eb06c7c8f035426cc022f05a962aebedfead21052405b8783d8",
+        "cues": [
+          {
+            "cueId": "praha.livia.c1",
+            "anchor": "kokoaa torille väkeä yhä",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "praha.livia.c2",
+            "anchor": "istuin katon reunalla",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.4
+          },
+          {
+            "cueId": "praha.livia.c3",
+            "anchor": "nostivat yhtä aikaa päänsä",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.45
+          },
+          {
+            "cueId": "praha.livia.c4",
+            "anchor": "luuranko liikahti",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.5
+          },
+          {
+            "cueId": "praha.livia.c5",
+            "anchor": "nostin minäkin",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          }
+        ]
+      },
+      "batch": "e3",
+      "sourcePackPath": "js/packs/fokusvirta-praha.js",
+      "sourcePackBlobSha": "f366612d8979824b9674317f7fe198370dfc21b9"
+    },
+    {
+      "city": "tukholma",
+      "horatio": {
+        "visibleText": "Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.",
+        "visibleTextSha256": "c7316f2c98ea26a305c0a013f85ab59a1e3db0e4a336dd7b7684e97385e09e20",
+        "ttsText": "[curious] Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. [softly] Suosittelisin samaa selostajaa valtakunnan asioihin.",
+        "ttsTextSha256": "77395b32be1c019eb3a2e2e2b1c68f0321315d3215b65ef92f7fc74304c94107",
+        "cues": [
+          {
+            "cueId": "tukholma.r1",
+            "anchor": "lähinnä hattuja",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "tukholma.r2",
+            "anchor": "selosti hevoset",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "tukholma.r3",
+            "anchor": "Kuningas jäi sivulauseeseen",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "tukholma.r4",
+            "anchor": "valtakunnan asioihin",
+            "intent": "huvittuu",
+            "strength": 0.55,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "visibleText": "Ruotsissa kuninkaita ei enää kruunata. Minä nousin Monteliusvägenin kaiteelle nähdäkseni saaret paremmin. Neljäntoista laskeminen meni sekaisin, kun veneet alkoivat näyttää muruilta.",
+        "visibleTextSha256": "2be4a5a4823f51baaf9705fbfcc3533011fc4901fc0ec4c68e75752c2aeb2ed7",
+        "ttsText": "[curious] Ruotsissa kuninkaita ei enää kruunata. [brightly] Minä nousin Monteliusvägenin kaiteelle nähdäkseni saaret paremmin. [mischievously] Neljäntoista laskeminen meni sekaisin, kun veneet alkoivat näyttää muruilta.",
+        "ttsTextSha256": "5c071f95e65e29436968b4ffecd1a050ffde3b5048854a524f7159b35baef44d",
+        "cues": [
+          {
+            "cueId": "tukholma.livia.c1",
+            "anchor": "ei enää kruunata",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "tukholma.livia.c2",
+            "anchor": "Monteliusvägenin kaiteelle",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "tukholma.livia.c3",
+            "anchor": "veneet alkoivat näyttää muruilta",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.55
+          }
+        ],
+        "audioId": "tukholma-3"
+      },
+      "batch": "e4",
+      "sourcePackPath": "js/packs/fokusvirta-tukholma.js",
+      "sourcePackBlobSha": "f723d19fe281888d0c9d7ad8a40d7bbf292caec9"
+    },
+    {
+      "city": "kobenhavn",
+      "horatio": {
+        "visibleText": "Tivolissa vanha pari tanssi niin hitaasti, että orkesteri ehti edelle. He eivät lähteneet sen perään. Puiston lamput syttyivät ennen tähtiä. Olin tullut katsomaan huvituksia; muistin heidät.",
+        "visibleTextSha256": "e8b1cbcdb53f3064cc348844c296d1182a75ae04c47b98ae3952b346e05763a0",
+        "ttsText": "[curious] Tivolissa vanha pari tanssi niin hitaasti, että orkesteri ehti edelle. [mischievously] He eivät lähteneet sen perään. Puiston lamput syttyivät ennen tähtiä. [softly] Olin tullut katsomaan huvituksia; muistin heidät.",
+        "ttsTextSha256": "cdd5b6e7687df75aef05bee4a7c136f36dba40b61ebf7e8994ae129056293455",
+        "cues": [
+          {
+            "cueId": "kobenhavn.r1",
+            "anchor": "orkesteri ehti edelle",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "kobenhavn.r2",
+            "anchor": "lähteneet sen perään",
+            "intent": "myotailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "kobenhavn.r4",
+            "anchor": "muistin heidät",
+            "intent": "vakavoituu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "kobenhavn-3",
+        "visibleText": "Tivoli huvittaa yhä. Orkesterin sävel sai minut laskeutumaan tanssilattian reunalle. Otin kaksi pientä askelta ja poistuin ennen kuin kukaan ehti pyytää kolmatta.",
+        "visibleTextSha256": "532a847728734e1af99697c578825f56975428f41baf16d557d7d78543a267bf",
+        "ttsText": "[brightly] Tivoli huvittaa yhä. [mischievously] Orkesterin sävel sai minut laskeutumaan tanssilattian reunalle. Otin kaksi pientä askelta ja poistuin ennen kuin kukaan ehti pyytää kolmatta.",
+        "ttsTextSha256": "a7cf5a579883fe13927eab18bedc823c998ac9f6fcd159eb1c3acd0846c7ba6c",
+        "cues": [
+          {
+            "cueId": "kobenhavn.livia.c1",
+            "anchor": "Tivoli huvittaa yhä",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.35
+          },
+          {
+            "cueId": "kobenhavn.livia.c2",
+            "anchor": "laskeutumaan tanssilattian reunalle",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.4
+          },
+          {
+            "cueId": "kobenhavn.livia.c3",
+            "anchor": "pyytää kolmatta",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.45
+          }
+        ]
+      },
+      "batch": "e4b",
+      "sourcePackPath": "js/packs/fokusvirta-kobenhavn.js",
+      "sourcePackBlobSha": "6954983fd7ecfaf79da72303bfecd0403f4dbfa9"
+    },
+    {
+      "city": "helsinki",
+      "horatio": {
+        "visibleText": "Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi rasvajälki. Harvoin olen saanut yhtä täsmällistä paikallistietoa.",
+        "visibleTextSha256": "f348050cd2622c928d369f2e017a38fd5d1813bfaeba8c4b8cbe77bb698fe995",
+        "ttsText": "[curious] Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi rasvajälki. [softly] Harvoin olen saanut yhtä täsmällistä paikallistietoa.",
+        "ttsTextSha256": "b61c97c6d36a9d6998bd7d12328c0e0650efce633bab576c5e7b68f06e90bdfa",
+        "cues": [
+          {
+            "cueId": "helsinki.r1",
+            "anchor": "vaikutti vakavalta",
+            "intent": "huvittuu",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "helsinki.r2",
+            "anchor": "silakalla paikoilleen",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "helsinki.r3",
+            "anchor": "Suomenlahdelle jäi rasvajälki",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "helsinki.r4",
+            "anchor": "täsmällistä paikallistietoa",
+            "intent": "huvittuu",
+            "strength": 0.55,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "visibleText": "Kirkko on tuomiokirkko. Minä kokeilin apostolien näköalaa, mutta torin kalat näkyivät paremmin alempaa. Lokki ehti ensin. Se katsoi minua kuin olisin ollut harjoittelija.",
+        "visibleTextSha256": "a58b34043c408bceb0eaec4dc33e6a94cd27004907a196d68b87e65953e1e8f4",
+        "ttsText": "[curious] Kirkko on tuomiokirkko. [brightly] Minä kokeilin apostolien näköalaa, mutta torin kalat näkyivät paremmin alempaa. [mischievously] Lokki ehti ensin. [softly] Se katsoi minua kuin olisin ollut harjoittelija.",
+        "ttsTextSha256": "bde58c651df7ae0439f13d927cf3a8838b37303ec33a2ddfa80307b5dd2ca97e",
+        "cues": [
+          {
+            "cueId": "helsinki.livia.c1",
+            "anchor": "on tuomiokirkko",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "helsinki.livia.c2",
+            "anchor": "apostolien näköalaa",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "helsinki.livia.c3",
+            "anchor": "Lokki ehti ensin",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.5
+          },
+          {
+            "cueId": "helsinki.livia.c4",
+            "anchor": "kuin olisin ollut harjoittelija",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.4
+          }
+        ],
+        "audioId": "helsinki-3"
+      },
+      "batch": "e4",
+      "sourcePackPath": "js/packs/fokusvirta-helsinki.js",
+      "sourcePackBlobSha": "dba6d1e1358dcb52cef78260eb6f52aa85b4332c"
+    },
+    {
+      "city": "tallinna",
+      "horatio": {
+        "visibleText": "Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.",
+        "visibleTextSha256": "f661eaa434cbdd3f0d327ed29be82ae54b1fb38ed2fb23a025120ab30ae6aeba",
+        "ttsText": "[curious] Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. [softly] Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.",
+        "ttsTextSha256": "69b275b15ea0cea6f9b36240103d88e608e563dcd689194d5b8a61a87b6bfa43",
+        "cues": [
+          {
+            "cueId": "tallinna.r1",
+            "anchor": "marsipaani sydänsuruihin",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "tallinna.r2",
+            "anchor": "ketä kaipaa",
+            "intent": "vakavoituu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "tallinna.r3",
+            "anchor": "suuremman palan",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "tallinna.r4",
+            "anchor": "Söin lääkkeeni",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "tallinna.r5",
+            "anchor": "poikkeuksellisen tyytyväinen",
+            "intent": "huvittuu",
+            "strength": 0.55,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "visibleText": "Raeapteekki myy marsipaania yhä. Minä odotin portaalla, että joku murentaisi annoksensa. Yksi lapsi jakoi palan ystävälleen. Ehkä isoisän lääkkeessä oli oikea ajatus.",
+        "visibleTextSha256": "ac627c3f69360a941f6f97e5e31339da90560c1da3906a5ab8ee97605b9023bf",
+        "ttsText": "[curious] Raeapteekki myy marsipaania yhä. [mischievously] Minä odotin portaalla, että joku murentaisi annoksensa. [warmly] Yksi lapsi jakoi palan ystävälleen. [softly] Ehkä isoisän lääkkeessä oli oikea ajatus.",
+        "ttsTextSha256": "ac58735d7ae0bd26f19411581d2e2684c360f07d456f5dacac058cfe169abaf8",
+        "cues": [
+          {
+            "cueId": "tallinna.livia.c1",
+            "anchor": "myy marsipaania yhä",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "tallinna.livia.c2",
+            "anchor": "joku murentaisi annoksensa",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "tallinna.livia.c3",
+            "anchor": "jakoi palan ystävälleen",
+            "occurrence": 1,
+            "intent": "lammin",
+            "strength": 0.5
+          },
+          {
+            "cueId": "tallinna.livia.c4",
+            "anchor": "oikea ajatus",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.4
+          }
+        ],
+        "audioId": "tallinna-3"
+      },
+      "batch": "e4",
+      "sourcePackPath": "js/packs/fokusvirta-tallinna.js",
+      "sourcePackBlobSha": "bc3bc4f9c0f006ad3e5e6ffa49fd6274aaf50f1c"
+    },
+    {
+      "city": "sevilla",
+      "horatio": {
+        "visibleText": "Sevillan tupakkatehdas näytti palatsilta, mutta portista kulki työväkeä. Nainen sitoi huivinsa, haukkasi leipää ja katosi sisään. Pihalta tuli appelsiininkukkien tuoksu. Aioin kirjoittaa suuresta rakennuksesta; kirjoitinkin pienestä aamiaisesta, joka piti sitä käynnissä.",
+        "visibleTextSha256": "ea1f3638b5580a9aa4af448856e47a00c8de3290dd5743a467850e2e8cda58b8",
+        "ttsText": "[curious] Sevillan tupakkatehdas näytti palatsilta, mutta portista kulki työväkeä. Nainen sitoi huivinsa, haukkasi leipää ja katosi sisään. Pihalta tuli appelsiininkukkien tuoksu. [softly] Aioin kirjoittaa suuresta rakennuksesta; kirjoitinkin pienestä aamiaisesta, joka piti sitä käynnissä.",
+        "ttsTextSha256": "fc777dee386650b339edaf3951ac632ba5c0a48b97be05b8a85c9dbd3535d3c3",
+        "cues": [
+          {
+            "cueId": "sevilla.r1",
+            "anchor": "portista kulki työväkeä",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sevilla.r2",
+            "anchor": "haukkasi leipää",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sevilla.r3",
+            "anchor": "appelsiininkukkien tuoksu",
+            "intent": "myotailee",
+            "strength": 0.3,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sevilla.r4",
+            "anchor": "pienestä aamiaisesta",
+            "intent": "vakavoituu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "sevilla-3",
+        "visibleText": "Entinen tupakkatehdas on nyt yliopisto. Näin opiskelijalla niin suuren paperipinon, että lähdin vaistosta perään. Ne eivät olleet kirjeitä. Hyvä yritys.",
+        "visibleTextSha256": "0fd228327bdfa562bce8aa7c51199dadcd17f0502e34abd7c39a6615bbb97fee",
+        "ttsText": "[curious] Entinen tupakkatehdas on nyt yliopisto. [brightly] Näin opiskelijalla niin suuren paperipinon, että lähdin vaistosta perään. [softly] Ne eivät olleet kirjeitä. Hyvä yritys.",
+        "ttsTextSha256": "82d7c1c7ce26dbbb131a621d65429a7d21967d293ad6809c0157f8b5d197e095",
+        "cues": [
+          {
+            "cueId": "sevilla.livia.c1",
+            "anchor": "nyt yliopisto",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "sevilla.livia.c2",
+            "anchor": "niin suuren paperipinon",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.55
+          },
+          {
+            "cueId": "sevilla.livia.c3",
+            "anchor": "eivät olleet kirjeitä",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.45
+          }
+        ]
+      },
+      "batch": "e2",
+      "sourcePackPath": "js/packs/fokusvirta-sevilla.js",
+      "sourcePackBlobSha": "9e58fb1dec90b1c57e9dc5e4916b0c2344ba9839"
+    },
+    {
+      "city": "bergen",
+      "horatio": {
+        "visibleText": "Bergenin Bryggenissä kauppias nosti kuivatun turskan kuin hopeaharkon. Sade rummutti kattoa; kala pysyi kuivana, minä en. Kaupungin arvojärjestys selvisi ilman tulkkia.",
+        "visibleTextSha256": "5153b01a60ba1d3234a2c3077213a1acc4f42579530c249a4cf541c05ec4271e",
+        "ttsText": "[curious] Bergenin Bryggenissä kauppias nosti kuivatun turskan kuin hopeaharkon. [mischievously] Sade rummutti kattoa; kala pysyi kuivana, minä en. [softly] Kaupungin arvojärjestys selvisi ilman tulkkia.",
+        "ttsTextSha256": "37979f7b5e0f98c2451e76d14e605af17897cc2ca622aa8941d275dcb5da0e9b",
+        "cues": [
+          {
+            "cueId": "bergen.r1",
+            "anchor": "kuin hopeaharkon",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "bergen.r3",
+            "anchor": "kala pysyi kuivana",
+            "intent": "huvittuu",
+            "strength": 0.55,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "bergen.r4",
+            "anchor": "ilman tulkkia",
+            "intent": "myotailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "bergen-3",
+        "visibleText": "Bryggen on nyt maailmanperintöä. Suojasin kirjeen räystään alla sateelta, kun viereinen lokki ravisteli vedet päälleni. Kirje säilyi kuivana. Minä vaihdoin räystästä.",
+        "visibleTextSha256": "fc90d06f97a6fa68525f14309db76ff3a905c24d0666ae75bb90ec42ea6edd76",
+        "ttsText": "[brightly] Bryggen on nyt maailmanperintöä. [curious] Suojasin kirjeen räystään alla sateelta, kun viereinen lokki ravisteli vedet päälleni. [mischievously] Kirje säilyi kuivana. Minä vaihdoin räystästä.",
+        "ttsTextSha256": "2e1e8a19645c319216f690653dd62756223b76661fd4ae4407b4de6bb5ae7192",
+        "cues": [
+          {
+            "cueId": "bergen.livia.c1",
+            "anchor": "nyt maailmanperintöä",
+            "occurrence": 1,
+            "intent": "vakavoituu",
+            "strength": 0.35
+          },
+          {
+            "cueId": "bergen.livia.c2",
+            "anchor": "viereinen lokki ravisteli",
+            "occurrence": 1,
+            "intent": "hammastyy",
+            "strength": 0.35
+          },
+          {
+            "cueId": "bergen.livia.c3",
+            "anchor": "Minä vaihdoin räystästä",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.4
+          }
+        ]
+      },
+      "batch": "e4b",
+      "sourcePackPath": "js/packs/fokusvirta-bergen.js",
+      "sourcePackBlobSha": "8b6b244ef8e657db9c5d4b1e45cc98c4846060b5"
+    },
+    {
+      "city": "amsterdam",
+      "horatio": {
+        "visibleText": "Amsterdamin kanavalla tuoli nousi kolmanteen kerrokseen talon ulkopuolella. Portaat olivat liian kapeat. Kaksi miestä ohjasi köysiä, ja tuoli meni ikkunasta sisään selkä edellä, arvokkaasti kuin piispa vaunuihin. Täällä täytyy harkita tarkkaan sekä kalustonsa että riitansa.",
+        "visibleTextSha256": "90e44b3a7de3f65d7031a569a398110a6cf776d60ec89c8a71579b262ca27ac6",
+        "ttsText": "[curious] Amsterdamin kanavalla tuoli nousi kolmanteen kerrokseen talon ulkopuolella. Portaat olivat liian kapeat. Kaksi miestä ohjasi köysiä, ja tuoli meni ikkunasta sisään selkä edellä, arvokkaasti kuin piispa vaunuihin. [softly] Täällä täytyy harkita tarkkaan sekä kalustonsa että riitansa.",
+        "ttsTextSha256": "dac3f906e271c8a62f9f9022d8e45371e14d04c0fbf7d0f1f06cd897a5d7de6d",
+        "cues": [
+          {
+            "cueId": "amsterdam.r1",
+            "anchor": "talon ulkopuolella",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "amsterdam.r2",
+            "anchor": "Portaat olivat liian kapeat",
+            "intent": "epailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "amsterdam.r3",
+            "anchor": "kuin piispa vaunuihin",
+            "intent": "huvittuu",
+            "strength": 0.55,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "amsterdam.r4",
+            "anchor": "kalustonsa että riitansa",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "amsterdam-3",
+        "visibleText": "Nostoparruja on yhä julkisivuissa. Saavuin kolmannen kerroksen ikkunalle yhdellä kaarroksella. En huomauttanut siitä: lentotaito ei ole muuttajan vika.",
+        "visibleTextSha256": "7bf9114a4a0786d2b1efa43a1276df559f1dfcfb131ebb7855f73cc0011b1a0c",
+        "ttsText": "[curious] Nostoparruja on yhä julkisivuissa. [brightly] Saavuin kolmannen kerroksen ikkunalle yhdellä kaarroksella. [mischievously] En huomauttanut siitä: lentotaito ei ole muuttajan vika.",
+        "ttsTextSha256": "62e2a1fc5fe82ab936154f5908c6e8f641fc024596dd11f1f9f3da33305d70e3",
+        "cues": [
+          {
+            "cueId": "amsterdam.livia.c1",
+            "anchor": "Nostoparruja on yhä",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.35
+          },
+          {
+            "cueId": "amsterdam.livia.c2",
+            "anchor": "yhdellä kaarroksella",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.45
+          },
+          {
+            "cueId": "amsterdam.livia.c3",
+            "anchor": "lentotaito ei ole muuttajan vika",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.55
+          }
+        ]
+      },
+      "batch": "e1",
+      "sourcePackPath": "js/packs/fokusvirta-amsterdam.js",
+      "sourcePackBlobSha": "5aa781ea99386d8f92460d000b08787c9e427078"
+    },
+    {
+      "city": "dublin",
+      "horatio": {
+        "visibleText": "Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään. Olin unohtanut vuokrasopimuksen.",
+        "visibleTextSha256": "ef62405a48b64084ba1d0f7bc01dd713384cd1f0ad448279bde72747fd5eb1b7",
+        "ttsText": "[curious] Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. [mischievously] Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään. [softly] Olin unohtanut vuokrasopimuksen.",
+        "ttsTextSha256": "fb82d2ea42357e80cce92e9ca2d0d8b88a1ebf239d0e7f4be4a115c57f72b21c",
+        "cues": [
+          {
+            "cueId": "dublin.r1",
+            "anchor": "yhdeksäksituhanneksi vuodeksi",
+            "intent": "hammastyy",
+            "strength": 0.6,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "dublin.r2",
+            "anchor": "olueen tai janoon",
+            "intent": "huvittuu",
+            "strength": 0.55,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "dublin.r3",
+            "anchor": "loppuuko työ koskaan",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "dublin.r4",
+            "anchor": "katsoi minua pitkään",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "dublin.r5",
+            "anchor": "Olin unohtanut vuokrasopimuksen",
+            "intent": "huvittuu",
+            "strength": 0.55,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "dublin-3",
+        "visibleText": "St James’s Gaten vanhassa käymistalossa käy nyt vieraita seitsemässä kerroksessa. Nousin Gravity Barin tasolle ulkokautta. Minun kierrokseni oli lyhyempi, näköala sama.",
+        "visibleTextSha256": "c14d37f9397da3c89d5f841aef425ce7bbf022bf5918819c5b6d677eacf848bd",
+        "ttsText": "[curious] St James’s Gaten vanhassa käymistalossa käy nyt vieraita seitsemässä kerroksessa. [brightly] Nousin Gravity Barin tasolle ulkokautta. [mischievously] Minun kierrokseni oli lyhyempi, näköala sama.",
+        "ttsTextSha256": "27bcf376f20395dd2c0658cdc456badf25f641ec15bcdd3669a62a8fa86eae71",
+        "cues": [
+          {
+            "cueId": "dublin.livia.c1",
+            "anchor": "seitsemässä kerroksessa",
+            "occurrence": 1,
+            "intent": "hammastyy",
+            "strength": 0.4
+          },
+          {
+            "cueId": "dublin.livia.c2",
+            "anchor": "Gravity Barin tasolle ulkokautta",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.5
+          },
+          {
+            "cueId": "dublin.livia.c3",
+            "anchor": "kierrokseni oli lyhyempi",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.5
+          }
+        ]
+      },
+      "batch": "e1",
+      "sourcePackPath": "js/packs/fokusvirta-dublin.js",
+      "sourcePackBlobSha": "3b67a6e913f5ae27a2f6e066f3ed08e2d31275a1"
+    },
+    {
+      "city": "edinburgh",
+      "horatio": {
+        "visibleText": "Edinburghissa katu saattoi olla toisen kadun katto. Menin portaita alas ja tulin ulos jonkun ikkunan yläpuolella. Sukat riippuivat kuilun yllä vailla huimausta. Linnan musta kallio kohosi kaiken takana. Kaupungin karttaan tarvittaisiin toinen arkki päälle.",
+        "visibleTextSha256": "8b1dc8b229ed7cf7ae7700532838438b222bccf576a38e45fb92c2e49be9d219",
+        "ttsText": "[curious] Edinburghissa katu saattoi olla toisen kadun katto. Menin portaita alas ja tulin ulos jonkun ikkunan yläpuolella. [mischievously] Sukat riippuivat kuilun yllä vailla huimausta. Linnan musta kallio kohosi kaiken takana. [softly] Kaupungin karttaan tarvittaisiin toinen arkki päälle.",
+        "ttsTextSha256": "9bd6f35bc769e22c424d12a62422b00f2780652dae32837688d3c8a8d4ad869f",
+        "cues": [
+          {
+            "cueId": "edinburgh.r1",
+            "anchor": "toisen kadun katto",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "edinburgh.r2",
+            "anchor": "vailla huimausta",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "edinburgh.r3",
+            "anchor": "musta kallio",
+            "intent": "vakavoituu",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "edinburgh.r4",
+            "anchor": "toinen arkki päälle",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "edinburgh-3",
+        "visibleText": "Elokuussa Edinburghin kadutkin muuttuvat näyttämöiksi. Lensin esiintyjän yli ja laskeuduin väärälle katolle. Täällä hyvä aitiopaikka ei vielä kerro, missä kerroksessa esitys on.",
+        "visibleTextSha256": "0c10b06819954310c377e62a5e8fa7940d967f86cb4d1e0a6ce38204e7a289c4",
+        "ttsText": "[curious] Elokuussa Edinburghin kadutkin muuttuvat näyttämöiksi. [brightly] Lensin esiintyjän yli ja laskeuduin väärälle katolle. [mischievously] Täällä hyvä aitiopaikka ei vielä kerro, missä kerroksessa esitys on.",
+        "ttsTextSha256": "9b073905df2ff29ab187ecd33f460ed2b0c67622557b5c1df0a5e59468a90c7c",
+        "cues": [
+          {
+            "cueId": "edinburgh.livia.c1",
+            "anchor": "kadutkin muuttuvat näyttämöiksi",
+            "occurrence": 1,
+            "intent": "hammastyy",
+            "strength": 0.4
+          },
+          {
+            "cueId": "edinburgh.livia.c2",
+            "anchor": "laskeuduin väärälle katolle",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.5
+          },
+          {
+            "cueId": "edinburgh.livia.c3",
+            "anchor": "missä kerroksessa esitys on",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.55
+          }
+        ]
+      },
+      "batch": "e1",
+      "sourcePackPath": "js/packs/fokusvirta-edinburgh.js",
+      "sourcePackBlobSha": "52f0a7e373611c8a9d441f6dbcdf54c91fad3ee6"
+    },
+    {
+      "city": "lissabon",
+      "horatio": {
+        "visibleText": "Baixan kadut vedettiin järistyksen jälkeen suoriksi kuin hallitsijan jakaus. Alfamassa eksyin silti. Yksi nainen neuvoi ylös, toinen alas. Kumpikin oli oikeassa: meri löytyi eri kattojen välistä. Kartta oli täällä taskussa kulkeva lohdutus.",
+        "visibleTextSha256": "cdf46cf32f48916666059e33bd0acd91b1744e3484666871f3bc68dbe60e2f78",
+        "ttsText": "[curious] Baixan kadut vedettiin järistyksen jälkeen suoriksi kuin hallitsijan jakaus. Alfamassa eksyin silti. Yksi nainen neuvoi ylös, toinen alas. Kumpikin oli oikeassa: meri löytyi eri kattojen välistä. [softly] Kartta oli täällä taskussa kulkeva lohdutus.",
+        "ttsTextSha256": "a1cb395998e8079bc22f8c7782891628c5c6d637c53970f16ca2466e32ad1345",
+        "cues": [
+          {
+            "cueId": "lissabon.r1",
+            "anchor": "kuin hallitsijan jakaus",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "lissabon.r2",
+            "anchor": "Alfamassa eksyin silti",
+            "intent": "huvittuu",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "lissabon.r3",
+            "anchor": "toinen alas",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "lissabon.r4",
+            "anchor": "eri kattojen välistä",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "lissabon.r5",
+            "anchor": "taskussa kulkeva lohdutus",
+            "intent": "myotailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "lissabon-3",
+        "visibleText": "Raitiovaunu 12 kulkee Alfaman mäkien kautta. Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. Kun löysin vaunun uudelleen, seurasin sitä päätepysäkille asti.",
+        "visibleTextSha256": "281581a4e5e898c1f524318dffc7c650aba776a5d8f1aaca22de2b01f2602616",
+        "ttsText": "[brightly] Raitiovaunu 12 kulkee Alfaman mäkien kautta. [curious] Seurasin sen kelloa kattojen yllä ja päädyin aivan eri aukiolle. [mischievously] Kun löysin vaunun uudelleen, seurasin sitä päätepysäkille asti.",
+        "ttsTextSha256": "37ae70f8be30f51dac1f07b5c4417b07dd561ec154de210f6f6b20ca5279209a",
+        "cues": [
+          {
+            "cueId": "lissabon.livia.c1",
+            "anchor": "Raitiovaunu 12 kulkee",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "lissabon.livia.c2",
+            "anchor": "sen kelloa kattojen yllä",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "lissabon.livia.c3",
+            "anchor": "päätepysäkille asti",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.5
+          }
+        ]
+      },
+      "batch": "e2",
+      "sourcePackPath": "js/packs/fokusvirta-lissabon.js",
+      "sourcePackBlobSha": "1fe8e75acb1ceea1c508b02eb272fd394c0333cb"
+    },
+    {
+      "city": "riika",
+      "horatio": {
+        "visibleText": "Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken ihmisäänistä.",
+        "visibleTextSha256": "99882ee01490a7f4a0da99230f90e0cb5856652b4c2e207e9d940df2257ce4af",
+        "ttsText": "[curious] Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. [softly] Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken ihmisäänistä.",
+        "ttsTextSha256": "6cff959001c48817a1b1b91a6ae6c7072ece6c67afa71963d26c96fd7bbddf2b",
+        "cues": [
+          {
+            "cueId": "riika.r1",
+            "anchor": "kuoro veti henkeä kuin yksi",
+            "intent": "hammastyy",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "riika.r2",
+            "anchor": "En ymmärtänyt sanoja",
+            "intent": "myotailee",
+            "strength": 0.3,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "riika.r3",
+            "anchor": "kyynel poskellaan",
+            "intent": "vakavoituu",
+            "strength": 0.6,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "riika.r4",
+            "anchor": "hetken ihmisäänistä",
+            "intent": "vakavoituu",
+            "strength": 0.55,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "visibleText": "Laulujuhlat jatkuvat yhä, ja Mežaparksin lava näyttää ilmasta suurelta pesältä. Laskeuduin hetkeksi sen reunalle. Kun kuoro aloitti, en yrittänyt laskea laulajia. Kuuntelin vain.",
+        "visibleTextSha256": "6e675316902872b7890be9ff88336ae6cd3d44f3f784e9c32e5cc0f552da84d2",
+        "ttsText": "[softly] Laulujuhlat jatkuvat yhä, ja Mežaparksin lava näyttää ilmasta suurelta pesältä. [curious] Laskeuduin hetkeksi sen reunalle. [softly] Kun kuoro aloitti, en yrittänyt laskea laulajia. Kuuntelin vain.",
+        "ttsTextSha256": "592f40cbbb5fc0d7aed80c335a1f7e7caf9de3c195168088680375ce612c73ff",
+        "cues": [
+          {
+            "cueId": "riika.livia.c1",
+            "anchor": "Laulujuhlat jatkuvat yhä",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "riika.livia.c2",
+            "anchor": "ilmasta suurelta pesältä",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "riika.livia.c3",
+            "anchor": "Laskeuduin hetkeksi",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.35
+          },
+          {
+            "cueId": "riika.livia.c4",
+            "anchor": "Kuuntelin vain",
+            "occurrence": 1,
+            "intent": "lammin",
+            "strength": 0.55
+          }
+        ],
+        "audioId": "riika-3"
+      },
+      "batch": "e4",
+      "sourcePackPath": "js/packs/fokusvirta-riika.js",
+      "sourcePackBlobSha": "342505c54630bd58605ec511cac60019617f4ddc"
+    },
+    {
+      "city": "barcelona",
+      "horatio": {
+        "visibleText": "Barcelonan uusista kortteleista oli leikattu kulmat pois. Epäilin muuraria, kunnes kaksi kärryä mahtui kääntymään. Cerdà oli piirtänyt tilaa hengittää. Tulevan kadun paikalla kasvoi vielä kaalia; se ei tiennyt muuttuvansa liikenteeksi.",
+        "visibleTextSha256": "2b54905d43b5c8fabb9863d41c80b3662dae59febebbc0c1043600ffd3f61646",
+        "ttsText": "[curious] Barcelonan uusista kortteleista oli leikattu kulmat pois. Epäilin muuraria, kunnes kaksi kärryä mahtui kääntymään. Cerdà oli piirtänyt tilaa hengittää. [softly] Tulevan kadun paikalla kasvoi vielä kaalia; se ei tiennyt muuttuvansa liikenteeksi.",
+        "ttsTextSha256": "11864457fff46a4fd49016a23ebb857d8c18e7d51ab2e3e7cd68cc586ee2c2b8",
+        "cues": [
+          {
+            "cueId": "barcelona.r1",
+            "anchor": "leikattu kulmat pois",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "barcelona.r2",
+            "anchor": "Epäilin muuraria",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "barcelona.r3",
+            "anchor": "tilaa hengittää",
+            "intent": "myotailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "barcelona.r4",
+            "anchor": "muuttuvansa liikenteeksi",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "barcelona-3",
+        "visibleText": "Cerdàn viistetyt kulmat näkyvät ilmasta yhä. Laskeuduin räystäälle tarkkailemaan risteystä: jalankulkijat, pyörät ja autot kulkivat kukin suuntaansa. Minulle jäi taivas. Hyvin suunniteltu.",
+        "visibleTextSha256": "55004b6bdb9b5f9c4df3abbe895b838ec4c6904d09f2ec74c297b824071849e3",
+        "ttsText": "[curious] Cerdàn viistetyt kulmat näkyvät ilmasta yhä. [brightly] Laskeuduin räystäälle tarkkailemaan risteystä: jalankulkijat, pyörät ja autot kulkivat kukin suuntaansa. [mischievously] Minulle jäi taivas. [softly] Hyvin suunniteltu.",
+        "ttsTextSha256": "2405ad06abc543c7d8a0865d3b5eeaaa5319db5e090f6899b749d54a5c9f960d",
+        "cues": [
+          {
+            "cueId": "barcelona.livia.c1",
+            "anchor": "näkyvät ilmasta yhä",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "barcelona.livia.c2",
+            "anchor": "Laskeuduin räystäälle",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "barcelona.livia.c3",
+            "anchor": "Minulle jäi taivas",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.55
+          }
+        ]
+      },
+      "batch": "e2",
+      "sourcePackPath": "js/packs/fokusvirta-barcelona.js",
+      "sourcePackBlobSha": "438f86cba7ef6b0d109e406fe71866afaadf2c84"
+    },
+    {
+      "city": "firenze",
+      "horatio": {
+        "visibleText": "Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.",
+        "visibleTextSha256": "10bd55fca4a5e9cdb9bdcfd4d176f997e1982222b0696d506f413cea7331c63f",
+        "ttsText": "[curious] Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. [softly] Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.",
+        "ttsTextSha256": "2e48652d4ee6be369d336235e2d10b995ab5f53c91db8414abc079320a42aeb7",
+        "cues": [
+          {
+            "cueId": "firenze.r1",
+            "anchor": "minä hikoilin liivissä",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "firenze.r2",
+            "anchor": "siirtää sateelta suojaan",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "firenze.r3",
+            "anchor": "suurta kättä ja omaani",
+            "intent": "vakavoituu",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "firenze.r4",
+            "anchor": "piirtää käden",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "firenze.r5",
+            "anchor": "enemmän ihmiseltä",
+            "intent": "vakavoituu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "firenze-3",
+        "visibleText": "David on nyt sisällä ja aukiolla kopio. Kiersin museon katon kautta aukiolle ja tarkistin kopion ilmeen. Se ei räpäyttänyt. Minä taisin hävitä.",
+        "visibleTextSha256": "c667e8523678055133c79769ef456fa842796883a75a8afdbb53d634a95400bf",
+        "ttsText": "[curious] David on nyt sisällä ja aukiolla kopio. [brightly] Kiersin museon katon kautta aukiolle ja tarkistin kopion ilmeen. [mischievously] Se ei räpäyttänyt. [softly] Minä taisin hävitä.",
+        "ttsTextSha256": "bf821f4cbd4e28352d6ec3a4913f3bca523ef77af85194c6e4c54a4a5593d3f9",
+        "cues": [
+          {
+            "cueId": "firenze.livia.c1",
+            "anchor": "nyt sisällä ja aukiolla kopio",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "firenze.livia.c2",
+            "anchor": "Kiersin museon katon kautta",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "firenze.livia.c3",
+            "anchor": "Se ei räpäyttänyt",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.5
+          },
+          {
+            "cueId": "firenze.livia.c4",
+            "anchor": "taisin hävitä",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.45
+          }
+        ]
+      },
+      "batch": "e3",
+      "sourcePackPath": "js/packs/fokusvirta-firenze.js",
+      "sourcePackBlobSha": "b9cdb2dc2768ea8ffa34baf2882a32f0a53af807"
+    },
+    {
+      "city": "venetsia",
+      "horatio": {
+        "visibleText": "Venetsiassa majatalon ovi avautui veteen, ja olin astua uimaan. Gondolieri piti ilmeensä suorana. Palatsien välissä kuulin lusikan osuvan kahvikuppiin yläkerrassa. Taloilla oli hienot julkisivut; vesi kuunteli niiden aamiaista.",
+        "visibleTextSha256": "f2a67bc806e83eaf4a49b9b57e45590dfc5f1588cae442bbe58de9086e736785",
+        "ttsText": "[curious] Venetsiassa majatalon ovi avautui veteen, ja olin astua uimaan. Gondolieri piti ilmeensä suorana. Palatsien välissä kuulin lusikan osuvan kahvikuppiin yläkerrassa. [softly] Taloilla oli hienot julkisivut; vesi kuunteli niiden aamiaista.",
+        "ttsTextSha256": "ca0eb5c4908f09db54b5de8daf396d5798628c148cf01f99eff5655dbf22d2e3",
+        "cues": [
+          {
+            "cueId": "venetsia.r1",
+            "anchor": "ovi avautui veteen",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "venetsia.r2",
+            "anchor": "olin astua uimaan",
+            "intent": "huvittuu",
+            "strength": 0.55,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "venetsia.r3",
+            "anchor": "piti ilmeensä suorana",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "venetsia.r4",
+            "anchor": "lusikan osuvan kahvikuppiin",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "venetsia.r5",
+            "anchor": "vesi kuunteli niiden aamiaista",
+            "intent": "myotailee",
+            "strength": 0.45,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "venetsia-3",
+        "visibleText": "Venetsiassa kuljetaan yhä vesibusseilla. Minä lennän nykyään vähän pidempää reittiä. Yhden tutun takia. Hetkinen — nuo kuvat ovat yksityisiä! Hän vain sattui jokaiseen hyvään kuvakulmaan. No, ehkä minä vähän odotin.",
+        "visibleTextSha256": "2cbd024d573c4a3aee0900a057d2260ad0056570cbae2f1239cbf44410cf0601",
+        "ttsText": "[brightly] Venetsiassa kuljetaan yhä vesibusseilla. [warmly] Minä lennän nykyään vähän pidempää reittiä. [whispers] Yhden tutun takia. Hetkinen — nuo kuvat ovat yksityisiä! [mischievously] Hän vain sattui jokaiseen hyvään kuvakulmaan. [softly] No, ehkä minä vähän odotin.",
+        "ttsTextSha256": "f912f4a7dc2dcd127c4e283b6af6c810d087f068423218365d6fc07548c9c09b",
+        "cues": [
+          {
+            "cueId": "venetsia.livia.c1",
+            "anchor": "kuljetaan yhä vesibusseilla",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "venetsia.livia.c5",
+            "anchor": "vähän pidempää reittiä",
+            "occurrence": 1,
+            "intent": "lammin",
+            "strength": 0.45
+          },
+          {
+            "cueId": "venetsia.livia.c6",
+            "anchor": "Yhden tutun takia",
+            "occurrence": 1,
+            "intent": "rakkaus",
+            "strength": 0.7
+          },
+          {
+            "cueId": "venetsia.livia.c2",
+            "anchor": "kuvat ovat yksityisiä",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.55
+          },
+          {
+            "cueId": "venetsia.livia.c3",
+            "anchor": "jokaiseen hyvään kuvakulmaan",
+            "occurrence": 1,
+            "intent": "rakkaus",
+            "strength": 0.8
+          },
+          {
+            "cueId": "venetsia.livia.c7",
+            "anchor": "ehkä minä vähän odotin",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.6
+          }
+        ]
+      },
+      "batch": "pilot",
+      "sourcePackPath": "js/packs/fokusvirta-venetsia.js",
+      "sourcePackBlobSha": "3ca8e5bb3ffc688e1d645f5197bc0529b3ef64cc"
+    },
+    {
+      "city": "marseille",
+      "horatio": {
+        "visibleText": "Marseillen satamassa saippuaa myytiin tiiliskivinä, kuulemma koko maailman pesuun. Kauppiaan mustat kynnet kertoivat köysitöistä. Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. Maailma jäi likaiseksi; käteni olivat jo toista mieltä.",
+        "visibleTextSha256": "3655157ea05577588eaf53815031a4fd6c90f45443ea82c85c403f83abcd70f7",
+        "ttsText": "[curious] Marseillen satamassa saippuaa myytiin tiiliskivinä, kuulemma koko maailman pesuun. Kauppiaan mustat kynnet kertoivat köysitöistä. Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. [softly] Maailma jäi likaiseksi; käteni olivat jo toista mieltä.",
+        "ttsTextSha256": "80f72c029def102e30a94d64a23ac0e9498e160944a39b9c820e0c02bfa69c7d",
+        "cues": [
+          {
+            "cueId": "marseille.r1",
+            "anchor": "saippuaa myytiin tiiliskivinä",
+            "intent": "huvittuu",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "marseille.r2",
+            "anchor": "koko maailman pesuun",
+            "intent": "epailee",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "marseille.r3",
+            "anchor": "mustat kynnet",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "marseille.r5",
+            "anchor": "terva, kala ja suolavesi",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "marseille.r6",
+            "anchor": "käteni olivat jo toista mieltä",
+            "intent": "huvittuu",
+            "strength": 0.6,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "marseille-3",
+        "visibleText": "Marseillen saippuaa tehdään yhä. Minä erotan Vieux-Portin jo äänestä ja suolasta höyhenissä. Lokit tuntevat jokaisen pöydän. Minä vasta harjoittelen.",
+        "visibleTextSha256": "2d597bd0fd42d4a1bc86e3fa0dd9ffdbcc55f49acffbdf9587d821db2ec2ca8b",
+        "ttsText": "[curious] Marseillen saippuaa tehdään yhä. [warmly] Minä erotan Vieux-Portin jo äänestä ja suolasta höyhenissä. [mischievously] Lokit tuntevat jokaisen pöydän. [softly] Minä vasta harjoittelen.",
+        "ttsTextSha256": "78695168d8c72b764fc10d3ae960069187942a6eace1c51b558f5ada20d399f5",
+        "cues": [
+          {
+            "cueId": "marseille.livia.c1",
+            "anchor": "saippuaa tehdään yhä",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "marseille.livia.c3",
+            "anchor": "Vieux-Portin jo äänestä",
+            "occurrence": 1,
+            "intent": "lammin",
+            "strength": 0.45
+          },
+          {
+            "cueId": "marseille.livia.c2",
+            "anchor": "Lokit tuntevat jokaisen pöydän",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "marseille.livia.c4",
+            "anchor": "Minä vasta harjoittelen",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.35
+          }
+        ]
+      },
+      "batch": "pilot",
+      "sourcePackPath": "js/packs/fokusvirta-marseille.js",
+      "sourcePackBlobSha": "98bfad52aeeac36c3645349d26aeafd6d6a074d7"
+    },
+    {
+      "city": "oslo",
+      "horatio": {
+        "visibleText": "Christianian vuonolla lankut lähtivät maailmalle siisteinä pinoina. Kivitalojen sanottiin kasvavan puusta. Poimin vedestä lastun; se tuoksui yhä metsältä, vaikka matka oli jo alkanut.",
+        "visibleTextSha256": "2dee94af8c1008b64b08fcd2467791953e15661a57863cf6a6d52aecfc4e521f",
+        "ttsText": "[curious] Christianian vuonolla lankut lähtivät maailmalle siisteinä pinoina. Kivitalojen sanottiin kasvavan puusta. [softly] Poimin vedestä lastun; se tuoksui yhä metsältä, vaikka matka oli jo alkanut.",
+        "ttsTextSha256": "d395429af6449244d04bceb170758f386b6964ad4d643beb98697a2343952eda",
+        "cues": [
+          {
+            "cueId": "oslo.r1",
+            "anchor": "siisteinä pinoina",
+            "intent": "huvittuu",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "oslo.r3",
+            "anchor": "Poimin vedestä lastun",
+            "intent": "myotailee",
+            "strength": 0.3,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "oslo.r4",
+            "anchor": "tuoksui yhä metsältä",
+            "intent": "vakavoituu",
+            "strength": 0.45,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "oslo-3",
+        "visibleText": "Nimi on Oslo, ja oopperan katolla kävellään. Hämmästyin, kun ihmiset nousivat samalle katolle kuin minä. Kerrankin rakennus oli yhtä hyvä reitti jaloille ja siiville.",
+        "visibleTextSha256": "069828779d606f4f3c80ba4fe3f9019a8bd1cc582dad299d47b0ab7d1c21a622",
+        "ttsText": "[brightly] Nimi on Oslo, ja oopperan katolla kävellään. [surprised] Hämmästyin, kun ihmiset nousivat samalle katolle kuin minä. [warmly] Kerrankin rakennus oli yhtä hyvä reitti jaloille ja siiville.",
+        "ttsTextSha256": "eff18112796b6040e70671790d963889c621b39b6e52e756cc7ec06653cf7b28",
+        "cues": [
+          {
+            "cueId": "oslo.livia.c1",
+            "anchor": "Nimi on Oslo",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.35
+          },
+          {
+            "cueId": "oslo.livia.c2",
+            "anchor": "ihmiset nousivat samalle katolle",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.35
+          },
+          {
+            "cueId": "oslo.livia.c3",
+            "anchor": "jaloille ja siiville",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.4
+          }
+        ]
+      },
+      "batch": "e4b",
+      "sourcePackPath": "js/packs/fokusvirta-oslo.js",
+      "sourcePackBlobSha": "ae7bada01cd5a6589957a31abf2d3ed264ae26e9"
+    },
+    {
+      "city": "tampere",
+      "horatio": {
+        "visibleText": "Tammerkoski teki töitä kahden järven välissä: puuvilla muuttui langaksi ja miehet rahakkaiksi. Finlaysonilla nainen näytti katkenneen langan solmun. Minun sormissani se katkesi heti; hän sitoi sen katsomatta. Tehtaan voimaa mitatessa pitäisi laskea myös sormet.",
+        "visibleTextSha256": "6c22b94fe2af26ae29127c18a39295066cbadd371d2a398090fdc54c287bb58f",
+        "ttsText": "[curious] Tammerkoski teki töitä kahden järven välissä: puuvilla muuttui langaksi ja miehet rahakkaiksi. Finlaysonilla nainen näytti katkenneen langan solmun. Minun sormissani se katkesi heti; hän sitoi sen katsomatta. [softly] Tehtaan voimaa mitatessa pitäisi laskea myös sormet.",
+        "ttsTextSha256": "d29d245f842853ea1cbc6967e544d54b62a723b99ee957a5d335594eeef830f8",
+        "cues": [
+          {
+            "cueId": "tampere.r1",
+            "anchor": "teki töitä kahden järven",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "tampere.r2",
+            "anchor": "miehet rahakkaiksi",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "tampere.r3",
+            "anchor": "se katkesi heti",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "tampere.r4",
+            "anchor": "sitoi sen katsomatta",
+            "intent": "hammastyy",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "tampere.r5",
+            "anchor": "laskea myös sormet",
+            "intent": "vakavoituu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "visibleText": "Finlaysonilla on nyt ravintoloita ja puutarha katolla. Seurasin leipäkoria pöytien välissä niin tarkasti, että melkein törmäsin tuoliin. Kori kääntyi. Minä en aivan.",
+        "visibleTextSha256": "2758095a57d5508b166c4557f2f0b63d5da3b6b4af2e12ad570bb27bbcaeeadd",
+        "ttsText": "[brightly] Finlaysonilla on nyt ravintoloita ja puutarha katolla. [curious] Seurasin leipäkoria pöytien välissä niin tarkasti, että melkein törmäsin tuoliin. [mischievously] Kori kääntyi. Minä en aivan.",
+        "ttsTextSha256": "23578dbe21278e0078cf1b33c241fb0ecc621ddc44967c23b53c33d8cc4a6e7e",
+        "cues": [
+          {
+            "cueId": "tampere.livia.c1",
+            "anchor": "ravintoloita ja puutarha katolla",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "tampere.livia.c2",
+            "anchor": "Seurasin leipäkoria",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "tampere.livia.c3",
+            "anchor": "melkein törmäsin tuoliin",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.55
+          },
+          {
+            "cueId": "tampere.livia.c4",
+            "anchor": "Kori kääntyi",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.5
+          },
+          {
+            "cueId": "tampere.livia.c5",
+            "anchor": "Minä en aivan",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.45
+          }
+        ],
+        "audioId": "tampere-3"
+      },
+      "batch": "e4",
+      "sourcePackPath": "js/packs/fokusvirta-tampere.js",
+      "sourcePackBlobSha": "822f312d7d0e3aa26f8a3bf3b158511ce492329b"
+    },
+    {
+      "city": "vilna",
+      "horatio": {
+        "visibleText": "Vilnan observatoriossa näin valokuvan auringonpilkuista. Olin pitänyt aurinkoa virheettömänä valaisimena; silläkin oli tahroja. Pilviä odotellessa joimme teetä. On lohdullista, että taivaan tutkiminenkin vaatii toisinaan vain hyvän tuolin.",
+        "visibleTextSha256": "e21b8f45f7490979c49b1f3a7b037844316b4306d4ecf02dea05372e45df7a9a",
+        "ttsText": "[curious] Vilnan observatoriossa näin valokuvan auringonpilkuista. Olin pitänyt aurinkoa virheettömänä valaisimena; silläkin oli tahroja. Pilviä odotellessa joimme teetä. [softly] On lohdullista, että taivaan tutkiminenkin vaatii toisinaan vain hyvän tuolin.",
+        "ttsTextSha256": "a0bdc5d46760ea72bab6b33f25bef4b78ebbc2a47d8911c81a94a2a3f4167753",
+        "cues": [
+          {
+            "cueId": "vilna.r1",
+            "anchor": "silläkin oli tahroja",
+            "intent": "hammastyy",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "vilna.r3",
+            "anchor": "joimme teetä",
+            "intent": "myotailee",
+            "strength": 0.3,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "vilna.r4",
+            "anchor": "vain hyvän tuolin",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "visibleText": "Vanha observatorio kuuluu yhä yliopistolle, mutta taivasta ei tutkita siellä enää. Nousin ikkunan korkeudelle; kaupungin valot voittivat tähdet. Tähtitieteilijät lähtivät kauemmas, minä jäin kierrokselle.",
+        "visibleTextSha256": "25768f2f32066899d231fd36477da98b3d2899a5871d65c34ccd96d041dd6c25",
+        "ttsText": "[curious] Vanha observatorio kuuluu yhä yliopistolle, mutta taivasta ei tutkita siellä enää. [brightly] Nousin ikkunan korkeudelle; kaupungin valot voittivat tähdet. [softly] Tähtitieteilijät lähtivät kauemmas, minä jäin kierrokselle.",
+        "ttsTextSha256": "d92fc8524419392ec1c337fcc91db615447897b298074ab531375d93c9386f6d",
+        "cues": [
+          {
+            "cueId": "vilna.livia.c1",
+            "anchor": "kuuluu yhä yliopistolle",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "vilna.livia.c2",
+            "anchor": "ei tutkita siellä enää",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.4
+          },
+          {
+            "cueId": "vilna.livia.c3",
+            "anchor": "kaupungin valot voittivat tähdet",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.45
+          },
+          {
+            "cueId": "vilna.livia.c4",
+            "anchor": "lähtivät kauemmas",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.35
+          },
+          {
+            "cueId": "vilna.livia.c5",
+            "anchor": "jäin kierrokselle",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.4
+          }
+        ],
+        "audioId": "vilna-3"
+      },
+      "batch": "e4",
+      "sourcePackPath": "js/packs/fokusvirta-vilna.js",
+      "sourcePackBlobSha": "798b937194fce83fad9b77f1af2e77de780c212e"
+    },
+    {
+      "city": "granada",
+      "horatio": {
+        "visibleText": "Alhambran hienoin rakennusaine oli vesi. Se kulki kapeissa uomissa ja puhui niin hiljaa, että minäkin vaikenin. Altaassa palatsi oli tehty valosta. Särjin sen sormellani ja odotin, kunnes se rakentui takaisin.",
+        "visibleTextSha256": "15065d286ef22cb74d4801da95c191f9a0a339dddf3bc2278d46701825a3aebe",
+        "ttsText": "[curious] Alhambran hienoin rakennusaine oli vesi. Se kulki kapeissa uomissa ja puhui niin hiljaa, että minäkin vaikenin. Altaassa palatsi oli tehty valosta. [softly] Särjin sen sormellani ja odotin, kunnes se rakentui takaisin.",
+        "ttsTextSha256": "213ee9c403b9333e97fb02bdcc356019de31f607214893124e12397405937dea",
+        "cues": [
+          {
+            "cueId": "granada.r1",
+            "anchor": "hienoin rakennusaine oli vesi",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "granada.r2",
+            "anchor": "että minäkin vaikenin",
+            "intent": "myotailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "granada.r3",
+            "anchor": "Särjin sen sormellani",
+            "intent": "vakavoituu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "granada.r4",
+            "anchor": "rakentui takaisin",
+            "intent": "myotailee",
+            "strength": 0.45,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "granada-3",
+        "visibleText": "Alhambran Myrttipihan allas peilaa tornia yhä. Laskeuduin reunalle saadakseni kuvan, mutta tuuli rikkoi palatsin ensin. Odotin aivan liikkumatta. Kerrankin nokkani ei ollut syyllinen.",
+        "visibleTextSha256": "62eb624ccd2ff45ace07709b2d288e1f3f7cfeee066d2244272850d0344a880b",
+        "ttsText": "[curious] Alhambran Myrttipihan allas peilaa tornia yhä. [softly] Laskeuduin reunalle saadakseni kuvan, mutta tuuli rikkoi palatsin ensin. Odotin aivan liikkumatta. [mischievously] Kerrankin nokkani ei ollut syyllinen.",
+        "ttsTextSha256": "c90c13ec3c492ffb0c682baf96fd9d5b2416992a87847939518e65d98ee2df7a",
+        "cues": [
+          {
+            "cueId": "granada.livia.c1",
+            "anchor": "allas peilaa tornia yhä",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "granada.livia.c2",
+            "anchor": "tuuli rikkoi palatsin ensin",
+            "occurrence": 1,
+            "intent": "hammastys",
+            "strength": 0.45
+          },
+          {
+            "cueId": "granada.livia.c3",
+            "anchor": "nokkani ei ollut syyllinen",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.55
+          }
+        ]
+      },
+      "batch": "e2",
+      "sourcePackPath": "js/packs/fokusvirta-granada.js",
+      "sourcePackBlobSha": "c5e75d8e5dccd541af111c3aabd9dfa86953c8cd"
+    },
+    {
+      "city": "kiova",
+      "horatio": {
+        "visibleText": "Kiovan luostarin kupolit näkyivät Dneprille, mutta pyhiinvaeltajat menivät maan alle. Luolassa liekkini sammui. Edellä kulkeva nainen sytytti sen omastaan. Kaksi liekkiä, eikä ensimmäiseltä puuttunut mitään. Olen tutkinut monta tapaa siirtää omaisuutta. Tämän haluan muistaa.",
+        "visibleTextSha256": "cdc9c1beede5fe7242413e65f5fae73d6dff1aacf848544aed3c530f21ca2467",
+        "ttsText": "[curious] Kiovan luostarin kupolit näkyivät Dneprille, mutta pyhiinvaeltajat menivät maan alle. Luolassa liekkini sammui. [softly] Edellä kulkeva nainen sytytti sen omastaan. Kaksi liekkiä, eikä ensimmäiseltä puuttunut mitään. Olen tutkinut monta tapaa siirtää omaisuutta. Tämän haluan muistaa.",
+        "ttsTextSha256": "cfdf16b136585666d04b1c215829aa8a5aef182a83961562065a3a2ede87eb07",
+        "cues": [
+          {
+            "cueId": "kiova.r1",
+            "anchor": "menivät maan alle",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "kiova.r2",
+            "anchor": "sytytti sen omastaan",
+            "intent": "vakavoituu",
+            "strength": 0.55,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "kiova.r3",
+            "anchor": "Kaksi liekkiä",
+            "intent": "hammastyy",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "kiova.r4",
+            "anchor": "siirtää omaisuutta",
+            "intent": "huvittuu",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "kiova.r5",
+            "anchor": "Tämän haluan muistaa",
+            "intent": "myotailee",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "kiova-3",
+        "visibleText": "Dneprin tuuli nosti minut Lavran muurin ylle, mutta luolasto jäi ihmisille. Reittiinsä luottava kirjekyyhky tietää myös, mihin ei lennä.",
+        "visibleTextSha256": "afa42bbbdcfaec15fef158701bb7a6ce7a373ccb03f524daff13c2f190d77472",
+        "ttsText": "[curious] Dneprin tuuli nosti minut Lavran muurin ylle, mutta luolasto jäi ihmisille. [softly] Reittiinsä luottava kirjekyyhky tietää myös, mihin ei lennä.",
+        "ttsTextSha256": "39aa0822fb37853656f88cc16df5a63d75894ddddab7fd2c43239d498d7e731f",
+        "cues": [
+          {
+            "cueId": "kiova.livia.c1",
+            "anchor": "luolasto jäi ihmisille",
+            "occurrence": 1,
+            "intent": "hammastyy",
+            "strength": 0.35
+          },
+          {
+            "cueId": "kiova.livia.c2",
+            "anchor": "Reittiinsä luottava kirjekyyhky",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.35
+          },
+          {
+            "cueId": "kiova.livia.c3",
+            "anchor": "mihin ei lennä",
+            "occurrence": 1,
+            "intent": "vakavoituu",
+            "strength": 0.45
+          }
+        ]
+      },
+      "batch": "e6",
+      "sourcePackPath": "js/packs/fokusvirta-kiova.js",
+      "sourcePackBlobSha": "ed2cb2af5d7448b2bd9b31885efe2ee12f0534b6"
+    },
+    {
+      "city": "krakova",
+      "horatio": {
+        "visibleText": "Krakovan Marian kirkon torvi vaikeni kesken sävelmän. Odotin loppua niin kauan, että torikauppias tarjosi tuolia. Hän oli kuullut saman katkoksen koko ikänsä eikä odottanut enää. Ostin leivän ja jäin silti. Kun kaupunki jättää jotakin sanomatta, korva ei tahdo lähteä.",
+        "visibleTextSha256": "02148116bb2e86bc76de2cf609da4fae7db0863bc025a7658618eacddc1e065c",
+        "ttsText": "[curious] Krakovan Marian kirkon torvi vaikeni kesken sävelmän. Odotin loppua niin kauan, että torikauppias tarjosi tuolia. Hän oli kuullut saman katkoksen koko ikänsä eikä odottanut enää. [mischievously] Ostin leivän ja jäin silti. [softly] Kun kaupunki jättää jotakin sanomatta, korva ei tahdo lähteä.",
+        "ttsTextSha256": "60a4a9bfb12ed0354d908a931c4ea418087a2ac35113a9291b3ae144700c9d1b",
+        "cues": [
+          {
+            "cueId": "krakova.r1",
+            "anchor": "vaikeni kesken sävelmän",
+            "intent": "hammastyy",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "krakova.r2",
+            "anchor": "torikauppias tarjosi tuolia",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "krakova.r3",
+            "anchor": "jäin silti",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "krakova.r4",
+            "anchor": "korva ei tahdo lähteä",
+            "intent": "vakavoituu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "krakova-3",
+        "visibleText": "Odotin räystäällä ikkunan alla. Torvi soi neljään suuntaan, jokainen puhallus eri yleisölle. Kirjekyyhky arvostaa täsmällistä jakelua.",
+        "visibleTextSha256": "ba0a8421bf7b014a40698d6d51e93ac2116dca94b652923f74e4b2c19354958d",
+        "ttsText": "[curious] Odotin räystäällä ikkunan alla. Torvi soi neljään suuntaan, jokainen puhallus eri yleisölle. [brightly] Kirjekyyhky arvostaa täsmällistä jakelua.",
+        "ttsTextSha256": "fb57232a51c224d07227f2482d385de8e9e6a9aac9fd2e3603cb56051d0689e8",
+        "cues": [
+          {
+            "cueId": "krakova.livia.c1",
+            "anchor": "räystäällä ikkunan alla",
+            "occurrence": 1,
+            "intent": "hammastyy",
+            "strength": 0.35
+          },
+          {
+            "cueId": "krakova.livia.c2",
+            "anchor": "neljään suuntaan",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.35
+          },
+          {
+            "cueId": "krakova.livia.c3",
+            "anchor": "täsmällistä jakelua",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.45
+          }
+        ]
+      },
+      "batch": "e6",
+      "sourcePackPath": "js/packs/fokusvirta-krakova.js",
+      "sourcePackBlobSha": "7b8686a263acee4570bc8ae2b7af975df60b7a0b"
+    },
+    {
+      "city": "moskova",
+      "horatio": {
+        "visibleText": "Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.",
+        "visibleTextSha256": "55373c0e8c0b43e87c60719250969cea0aed635b838561ffce349bee48ba2f78",
+        "ttsText": "[curious] Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. [mischievously] Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.",
+        "ttsTextSha256": "d3464c1ef45dafb4cbabaf59032ebfc32f6133a4e9315716e1054183fd2cdc11",
+        "cues": [
+          {
+            "cueId": "moskova.r1",
+            "anchor": "ei ollut soinut kertaakaan",
+            "intent": "hammastyy",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "moskova.r2",
+            "anchor": "ennen ensimmäistä lyöntiä",
+            "intent": "vakavoituu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "moskova.r3",
+            "anchor": "huonettani suuremmalta",
+            "intent": "hammastyy",
+            "strength": 0.55,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "moskova.r4",
+            "anchor": "hiljaisuus olisi sillä voitettu",
+            "intent": "epailee",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "moskova.r5",
+            "anchor": "enemmän vaikutusvaltaa",
+            "intent": "huvittuu",
+            "strength": 0.55,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "moskova-3",
+        "visibleText": "Tsaarinkellon ympärillä puhelimet nousivat yhtä aikaa. Väistin kamerat ja laskeuduin muurin varjoon — kuuluisuus vie paljon ilmatilaa.",
+        "visibleTextSha256": "687aafd256c18b363a154860a691626d634ccfd4e86bb1653ae75eabf2e921da",
+        "ttsText": "[curious] Tsaarinkellon ympärillä puhelimet nousivat yhtä aikaa. Väistin kamerat ja laskeuduin muurin varjoon — [mischievously] kuuluisuus vie paljon ilmatilaa.",
+        "ttsTextSha256": "eecc14590f6d9ac131b505bfc31a463525517eafad542a6af6514204feda24fa",
+        "cues": [
+          {
+            "cueId": "moskova.livia.c1",
+            "anchor": "puhelimet nousivat yhtä aikaa",
+            "occurrence": 1,
+            "intent": "hammastyy",
+            "strength": 0.35
+          },
+          {
+            "cueId": "moskova.livia.c2",
+            "anchor": "Väistin kamerat",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.4
+          },
+          {
+            "cueId": "moskova.livia.c3",
+            "anchor": "paljon ilmatilaa",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.45
+          }
+        ]
+      },
+      "batch": "e6",
+      "sourcePackPath": "js/packs/fokusvirta-moskova.js",
+      "sourcePackBlobSha": "7fe8157146dc05d69039f889f3817f47d06e4bd9"
+    },
+    {
+      "city": "odessa",
+      "horatio": {
+        "visibleText": "Odessan portaat olivat niin leveät, että niitä pitkin olisi voinut saapua valtakunta. Minä saavuin yksin ja lepäsin silti puolivälissä. Satamassa vehnäsäkit siirtyivät laivaan; ylhäällä herrat siirtelivät keppejään. Merituuli kulki portaat yhdellä hengenvedolla; sitä ei pysäytetty tullissa.",
+        "visibleTextSha256": "6f6acb707eeea0aa7c81e1b508819a61838f16f1a2867b3fdc9960e59cbe563d",
+        "ttsText": "[curious] Odessan portaat olivat niin leveät, että niitä pitkin olisi voinut saapua valtakunta. [mischievously] Minä saavuin yksin ja lepäsin silti puolivälissä. Satamassa vehnäsäkit siirtyivät laivaan; ylhäällä herrat siirtelivät keppejään. Merituuli kulki portaat yhdellä hengenvedolla; sitä ei pysäytetty tullissa.",
+        "ttsTextSha256": "0ae34ae49f7b04a85fbfc383b3b1557e3690fe32d145656358f7aa7163d40d19",
+        "cues": [
+          {
+            "cueId": "odessa.r1",
+            "anchor": "saapua valtakunta",
+            "intent": "hammastyy",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "odessa.r2",
+            "anchor": "lepäsin silti puolivälissä",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "odessa.r3",
+            "anchor": "herrat siirtelivät keppejään",
+            "intent": "vakavoituu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "odessa.r4",
+            "anchor": "yhdellä hengenvedolla",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "odessa.r5",
+            "anchor": "ei pysäytetty tullissa",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "odessa-3",
+        "visibleText": "Vanhakaupunki on yhä vaarantuneen maailmanperinnön luettelossa. Lensin portaiden yllä ja pidin vaurioituneisiin kattoihin tavallista enemmän väliä.",
+        "visibleTextSha256": "709246b12f59e5b3c3d19b028727df8e9cc10729414d9b3cd41cc1c80a82fa05",
+        "ttsText": "[softly] Vanhakaupunki on yhä vaarantuneen maailmanperinnön luettelossa. Lensin portaiden yllä ja pidin vaurioituneisiin kattoihin tavallista enemmän väliä.",
+        "ttsTextSha256": "734f06086b6a422b8a17499a9fbd49de8372d161039d5471fb708226142e7ad2",
+        "cues": [
+          {
+            "cueId": "odessa.livia.c1",
+            "anchor": "vaarantuneen maailmanperinnön luettelossa",
+            "occurrence": 1,
+            "intent": "vakavoituu",
+            "strength": 0.55
+          },
+          {
+            "cueId": "odessa.livia.c2",
+            "anchor": "Lensin portaiden yllä",
+            "occurrence": 1,
+            "intent": "epailee",
+            "strength": 0.4
+          },
+          {
+            "cueId": "odessa.livia.c3",
+            "anchor": "tavallista enemmän väliä",
+            "occurrence": 1,
+            "intent": "vakavoituu",
+            "strength": 0.55
+          }
+        ]
+      },
+      "batch": "e6",
+      "sourcePackPath": "js/packs/fokusvirta-odessa.js",
+      "sourcePackBlobSha": "d2898efcca1dcc18d8436c40a505d0472dcefc8f"
+    },
+    {
+      "city": "pietari",
+      "horatio": {
+        "visibleText": "Pietarin kesäyö oli vaalea kuin loppuun pesty lakana. Kello käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. Palatsien ikkunat hohtivat ilman kynttilöitä. Kirjoitin päivän tapahtumat loppuun. Päivä itse ei suostunut lopettamaan, joten lisäsin vielä tämän.",
+        "visibleTextSha256": "ce7297fc0f29c31d69b9db4474483efebcabce22943ecabe2ab7da5aed58345f",
+        "ttsText": "[curious] Pietarin kesäyö oli vaalea kuin loppuun pesty lakana. Kello käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. Palatsien ikkunat hohtivat ilman kynttilöitä. Kirjoitin päivän tapahtumat loppuun. [mischievously] Päivä itse ei suostunut lopettamaan, joten lisäsin vielä tämän.",
+        "ttsTextSha256": "98884ea7ae698a5bc030a5f92e22ae398a19cd82fd42bae9dc63de5ea294aa42",
+        "cues": [
+          {
+            "cueId": "pietari.r1",
+            "anchor": "loppuun pesty lakana",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "pietari.r2",
+            "anchor": "iltaa vanhemmalta",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "pietari.r3",
+            "anchor": "ilman kynttilöitä",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "pietari.r4",
+            "anchor": "lisäsin vielä tämän",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "pietari-3",
+        "visibleText": "Valkoisena yönä Nevan sillat nousivat yksi toisensa jälkeen. Vaihdoin reittiä ennen laivojen tuloa — kirjekyyhky ei luota pelkkään kelloon.",
+        "visibleTextSha256": "00f5aad7f4b720e0ea7d7bdb313a8f056ad14762446e5fb0b7bd0d3e79305a84",
+        "ttsText": "[curious] Valkoisena yönä Nevan sillat nousivat yksi toisensa jälkeen. Vaihdoin reittiä ennen laivojen tuloa — [mischievously] kirjekyyhky ei luota pelkkään kelloon.",
+        "ttsTextSha256": "dcfb2a0502fb0ad031c5a0f8d9acb9804513948d26297671012d946cd589a6a2",
+        "cues": [
+          {
+            "cueId": "pietari.livia.c1",
+            "anchor": "sillat nousivat",
+            "occurrence": 1,
+            "intent": "hammastyy",
+            "strength": 0.4
+          },
+          {
+            "cueId": "pietari.livia.c2",
+            "anchor": "Vaihdoin reittiä",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.35
+          },
+          {
+            "cueId": "pietari.livia.c3",
+            "anchor": "ei luota pelkkään kelloon",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.45
+          }
+        ]
+      },
+      "batch": "e6",
+      "sourcePackPath": "js/packs/fokusvirta-pietari.js",
+      "sourcePackBlobSha": "0e9d8865c041434caec342f6744615a5d5190c8a"
+    },
+    {
+      "city": "varsova",
+      "horatio": {
+        "visibleText": "Kartassani Varsova kuului Venäjälle. Torin leipuri sanoi olevansa puolalainen ja kopautti leipää: tuoretta. Viraston kyltissä kirjaimet olivat venäläisiä, mutta aamiaiseni sain puolaksi. Karttaan voi vetää rajan yhdellä liikkeellä. Ihmiset eivät siirry kynän mukana.",
+        "visibleTextSha256": "e314f53092d24c5fc93a0e90326bbb002d2eb9088524b32ff4972ab33ce26c78",
+        "ttsText": "[curious] Kartassani Varsova kuului Venäjälle. Torin leipuri sanoi olevansa puolalainen ja kopautti leipää: tuoretta. Viraston kyltissä kirjaimet olivat venäläisiä, mutta aamiaiseni sain puolaksi. [softly] Karttaan voi vetää rajan yhdellä liikkeellä. Ihmiset eivät siirry kynän mukana.",
+        "ttsTextSha256": "c78f0e16c6987ccf143b6e33745c09dfbc92170683937da07d4a84e886141537",
+        "cues": [
+          {
+            "cueId": "varsova.r1",
+            "anchor": "kuului Venäjälle",
+            "intent": "vakavoituu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "varsova.r2",
+            "anchor": "olevansa puolalainen",
+            "intent": "myotailee",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "varsova.r4",
+            "anchor": "aamiaiseni sain puolaksi",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "varsova.r5",
+            "anchor": "eivät siirry kynän mukana",
+            "intent": "vakavoituu",
+            "strength": 0.6,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "varsova-3",
+        "visibleText": "Torin räystäältä huomaa, etteivät jälleenrakennetut talot ole lavasteita: ikkunoissa kuivuu pyykkiä. Kaupunki jatkaa elämäänsä julkisivujen takana.",
+        "visibleTextSha256": "005c0cffc1fa698f9e5fb398ca175d18aad2481c18f251a9feefef9a25732ba1",
+        "ttsText": "[curious] Torin räystäältä huomaa, etteivät jälleenrakennetut talot ole lavasteita: ikkunoissa kuivuu pyykkiä. [warmly] Kaupunki jatkaa elämäänsä julkisivujen takana.",
+        "ttsTextSha256": "07c2db1ed5cf93e1792c507052a6fd4ab9f39214d2b56d0c175692614e0a570a",
+        "cues": [
+          {
+            "cueId": "varsova.livia.c1",
+            "anchor": "Torin räystäältä",
+            "occurrence": 1,
+            "intent": "hammastyy",
+            "strength": 0.35
+          },
+          {
+            "cueId": "varsova.livia.c2",
+            "anchor": "jälleenrakennetut talot",
+            "occurrence": 1,
+            "intent": "vakavoituu",
+            "strength": 0.45
+          },
+          {
+            "cueId": "varsova.livia.c3",
+            "anchor": "jatkaa elämäänsä",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.45
+          }
+        ]
+      },
+      "batch": "e6",
+      "sourcePackPath": "js/packs/fokusvirta-varsova.js",
+      "sourcePackBlobSha": "02b024adbb4791d475c26a5e931c0b437822fa42"
+    },
+    {
+      "city": "kreeta",
+      "horatio": {
+        "visibleText": "Hanian majakan aloittivat venetsialaiset ja rakensivat uudelleen egyptiläiset. Vuonna 1873 Kreeta kuului sulttaanille. Kun kysyin kalastajalta, kenen majakka on, hän osoitti merelle: niiden, jotka tarvitsevat sitä. Piirsin valon ilman valtakunnan väriä.",
+        "visibleTextSha256": "d889da0b7347bc484eee538d9405fd80d169abf8ee36af34e9a0c9994a8ef625",
+        "ttsText": "[curious] Hanian majakan aloittivat venetsialaiset ja rakensivat uudelleen egyptiläiset. Vuonna 1873 Kreeta kuului sulttaanille. Kun kysyin kalastajalta, kenen majakka on, hän osoitti merelle: [softly] niiden, jotka tarvitsevat sitä. Piirsin valon ilman valtakunnan väriä.",
+        "ttsTextSha256": "97c6da02314da609af42f1c9964fcf76b72bf00d0f1c09c2c295f47c2cac6311",
+        "cues": [
+          {
+            "cueId": "kreeta.r1",
+            "anchor": "kuului sulttaanille",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "kreeta.r3",
+            "anchor": "hän osoitti merelle",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "kreeta.r4",
+            "anchor": "jotka tarvitsevat sitä",
+            "intent": "vakavoituu",
+            "strength": 0.55,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "kreeta.r5",
+            "anchor": "ilman valtakunnan väriä",
+            "intent": "myotailee",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "kreeta-3",
+        "visibleText": "Kreeta on nyt Kreikkaa. Hanian tuttu majakka näyttää paluureitin. Väitin tienneeni suunnan koko ajan, mutta helpotuksesta siipeni löivät vähän nopeammin.",
+        "visibleTextSha256": "268565b31f571dc4b732b692d5dc09821bda23af8e8e11375f616f392443ec90",
+        "ttsText": "[brightly] Kreeta on nyt Kreikkaa. Hanian tuttu majakka näyttää paluureitin. [mischievously] Väitin tienneeni suunnan koko ajan, mutta [warmly] helpotuksesta siipeni löivät vähän nopeammin.",
+        "ttsTextSha256": "f4cdfc8d2ded00a326b0d4c6c5d82515182e061807c053616ce82acb263b1b19",
+        "cues": [
+          {
+            "cueId": "kreeta.livia.c1",
+            "anchor": "nyt Kreikkaa",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.35
+          },
+          {
+            "cueId": "kreeta.livia.c2",
+            "anchor": "Väitin tienneeni suunnan",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.35
+          },
+          {
+            "cueId": "kreeta.livia.c3",
+            "anchor": "siipeni löivät vähän nopeammin",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.45
+          }
+        ]
+      },
+      "batch": "e5",
+      "sourcePackPath": "js/packs/fokusvirta-kreeta.js",
+      "sourcePackBlobSha": "e5550083c5cc2af67921d60128014866d7d30e36"
+    },
+    {
+      "city": "sisilia",
+      "horatio": {
+        "visibleText": "Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.",
+        "visibleTextSha256": "8e7360e13a20b28263af9c38dfa35b32849c1eae9832e35f6922fc282600d611",
+        "ttsText": "[curious] Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. [softly] Tekijöiden nimiä olisin kuunnellut kauemmin.",
+        "ttsTextSha256": "dcf213af56a477a33fea641090707a8936bd4f6f761e3c339b949cb7189f54b7",
+        "cues": [
+          {
+            "cueId": "sisilia.r1",
+            "anchor": "veistetyksi luolastoksi",
+            "intent": "hammastyy",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sisilia.r2",
+            "anchor": "kunnes niska väsyi",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sisilia.r3",
+            "anchor": "Kuninkaan nimi tunnettiin",
+            "intent": "epailee",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "sisilia.r4",
+            "anchor": "olisin kuunnellut kauemmin",
+            "intent": "vakavoituu",
+            "strength": 0.55,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "sisilia-3",
+        "visibleText": "Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. Kiersin pihan yllä, nokka kohti ikkunoita. Katon näin kuvassa, sillä sisälle en lentänyt.",
+        "visibleTextSha256": "ac331a83b4fcc669811a2f1c0ef75edbb32769cf76081771e675eb968783cd52",
+        "ttsText": "[curious] Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. [brightly] Kiersin pihan yllä, nokka kohti ikkunoita. [softly] Katon näin kuvassa, sillä sisälle en lentänyt.",
+        "ttsTextSha256": "002d538c86c8a40d897f997fcaad8f476420a8929d314512bcdcf7c09ff6ce38",
+        "cues": [
+          {
+            "cueId": "sisilia.livia.c1",
+            "anchor": "kokoontuu Sisilian parlamentti",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "sisilia.livia.c2",
+            "anchor": "Kiersin pihan yllä",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "sisilia.livia.c3",
+            "anchor": "Katon näin kuvassa",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.5
+          },
+          {
+            "cueId": "sisilia.livia.c4",
+            "anchor": "sisälle en lentänyt",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.5
+          }
+        ]
+      },
+      "batch": "e3",
+      "sourcePackPath": "js/packs/fokusvirta-sisilia.js",
+      "sourcePackBlobSha": "ad967813d4d4fa167af624c6a7c40609d9fe7157"
+    },
+    {
+      "city": "islanti",
+      "horatio": {
+        "visibleText": "Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.",
+        "visibleTextSha256": "4c3365081a483fd64b728ae263148fa4ac1a6c323020898888535b1d2a7403f4",
+        "ttsText": "[curious] Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. [mischievously] Maa teki ensi kerran palveluksen vaatimatta lapioimista. [softly] Kaulus puhdistui; käsitykseni saaresta ei.",
+        "ttsTextSha256": "92bb6b92f000a7f4cc2393266fc2fc8760034dbb3be6172432ff1209cb728035",
+        "cues": [
+          {
+            "cueId": "islanti.r1",
+            "anchor": "kuumassa lähteessä",
+            "intent": "hammastyy",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "islanti.r2",
+            "anchor": "Annoin paitani pestäväksi",
+            "intent": "myotailee",
+            "strength": 0.3,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "islanti.r3",
+            "anchor": "vaatimatta lapioimista",
+            "intent": "huvittuu",
+            "strength": 0.55,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "islanti.r5",
+            "anchor": "käsitykseni saaresta ei",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "islanti-3",
+        "visibleText": "Reykjavíkin talot lämpenevät yhä maan voimalla. Löysin lämpimän räystään, lämmittelin varpaitani ja päätin levätä pitkään. Hetkeä myöhemmin olin jo ilmassa.",
+        "visibleTextSha256": "edd43d46ddaa90ae568f83eb023e0e33679a03ee709c09de8fd6b146610ce336",
+        "ttsText": "[brightly] Reykjavíkin talot lämpenevät yhä maan voimalla. [softly] Löysin lämpimän räystään, lämmittelin varpaitani ja päätin levätä pitkään. [mischievously] Hetkeä myöhemmin olin jo ilmassa.",
+        "ttsTextSha256": "c08c252c228fe0fab821d691433f1ceab5d7d79c6f51aa24e007354a74009217",
+        "cues": [
+          {
+            "cueId": "islanti.livia.c1",
+            "anchor": "lämpenevät yhä maan voimalla",
+            "occurrence": 1,
+            "intent": "hammastyy",
+            "strength": 0.35
+          },
+          {
+            "cueId": "islanti.livia.c2",
+            "anchor": "lämmittelin varpaitani",
+            "occurrence": 1,
+            "intent": "myotailee",
+            "strength": 0.35
+          },
+          {
+            "cueId": "islanti.livia.c3",
+            "anchor": "jo ilmassa",
+            "occurrence": 1,
+            "intent": "huvittuu",
+            "strength": 0.4
+          }
+        ]
+      },
+      "batch": "e4b",
+      "sourcePackPath": "js/packs/fokusvirta-islanti.js",
+      "sourcePackBlobSha": "65b2a1ebda26189403f7611a6eab11735ed7d8b4"
+    },
+    {
+      "city": "alpit",
+      "horatio": {
+        "visibleText": "Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.",
+        "visibleTextSha256": "53c582513ec17b7bb6db19b0fbc22bbcee6ff66aadb227e7547fe2eb66f91ac9",
+        "ttsText": "[curious] Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. [softly] Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.",
+        "ttsTextSha256": "0e7233b465d6a06d7d5d18c7ab9fc225a104e34eac399d98df5922279b3de9a0",
+        "cues": [
+          {
+            "cueId": "alpit.r1",
+            "anchor": "ettei taivas ylettynyt",
+            "intent": "hammastyy",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "alpit.r2",
+            "anchor": "jään liikkuvan",
+            "intent": "epailee",
+            "strength": 0.4,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "alpit.r3",
+            "anchor": "Kivi ei suostunut todistajaksi",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "alpit.r4",
+            "anchor": "pitkä rasahdus",
+            "intent": "vakavoituu",
+            "strength": 0.7,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "alpit.r5",
+            "anchor": "itseni kauemmas",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "alpit.r6",
+            "anchor": "vuori olisi vaiti",
+            "intent": "vakavoituu",
+            "strength": 0.6,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "audioId": "alpit-3",
+        "visibleText": "Jäätikkö on vetäytynyt kauas isoisän päivistä. Lensin rotkon yllä ja etsin hänen kiveään. Kiviä oli liikaa, jäätä liian vähän. En väitä löytäneeni oikeaa.",
+        "visibleTextSha256": "5c15ee5104983529668e0cc23184ee38474e767e21e2bc61726f3acbf102b513",
+        "ttsText": "[softly] Jäätikkö on vetäytynyt kauas isoisän päivistä. [curious] Lensin rotkon yllä ja etsin hänen kiveään. Kiviä oli liikaa, jäätä liian vähän. [softly] En väitä löytäneeni oikeaa.",
+        "ttsTextSha256": "a09801e9fcfb023eadddebf4951bb7986a28108b0cffe65f89945706c5956d9a",
+        "cues": [
+          {
+            "cueId": "alpit.livia.c1",
+            "anchor": "vetäytynyt kauas",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.55
+          },
+          {
+            "cueId": "alpit.livia.c2",
+            "anchor": "Lensin rotkon yllä",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.4
+          },
+          {
+            "cueId": "alpit.livia.c3",
+            "anchor": "Kiviä oli liikaa",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.45
+          },
+          {
+            "cueId": "alpit.livia.c4",
+            "anchor": "En väitä löytäneeni oikeaa",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.5
+          }
+        ]
+      },
+      "batch": "e3",
+      "sourcePackPath": "js/packs/fokusvirta-alpit.js",
+      "sourcePackBlobSha": "8e60b4d637d508b27958639d8cbe16adb008d21d"
+    },
+    {
+      "city": "lappi",
+      "horatio": {
+        "visibleText": "Rovaniemellä Ounasjoki liittyi Kemijokeen kuin matkustaja suurempaan veneeseen. Olin piirtänyt joet rajoiksi; täällä ne olivat teitä. Veneeseen astuva nainen löysi seuraavan talon savusta, ei kartasta. Lisäsin talon ja jätin savulle tilaa nousta.",
+        "visibleTextSha256": "bd195fe98753435f3048b20070c9e6be570f9c85ed96268872125d530d8dadb6",
+        "ttsText": "[curious] Rovaniemellä Ounasjoki liittyi Kemijokeen kuin matkustaja suurempaan veneeseen. Olin piirtänyt joet rajoiksi; täällä ne olivat teitä. Veneeseen astuva nainen löysi seuraavan talon savusta, ei kartasta. [softly] Lisäsin talon ja jätin savulle tilaa nousta.",
+        "ttsTextSha256": "696ec3323fd9c7363adad70ff7b37a2c5db414551443bf463d89bcfeb88df95c",
+        "cues": [
+          {
+            "cueId": "lappi.r1",
+            "anchor": "kuin matkustaja suurempaan veneeseen",
+            "intent": "myotailee",
+            "strength": 0.35,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "lappi.r2",
+            "anchor": "ne olivat teitä",
+            "intent": "hammastyy",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "lappi.r3",
+            "anchor": "savusta, ei kartasta",
+            "intent": "vakavoituu",
+            "strength": 0.5,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "lappi.r4",
+            "anchor": "tilaa nousta",
+            "intent": "myotailee",
+            "strength": 0.45,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "visibleText": "Rovaniemelle lennetään joulupukkiakin katsomaan. Seurasin Ounasjokea ilmasta ja luulin valojen jatkuvan veteen. Lähempänä ne olivat heijastuksia. Hyvä etten yrittänyt laskeutua niiden väliin.",
+        "visibleTextSha256": "d4169d3f922d8e34e53b0e95ace9c87ee09b6b5b2327d3ecfb9a26079bde770b",
+        "ttsText": "[brightly] Rovaniemelle lennetään joulupukkiakin katsomaan. [curious] Seurasin Ounasjokea ilmasta ja luulin valojen jatkuvan veteen. [mischievously] Lähempänä ne olivat heijastuksia. [softly] Hyvä etten yrittänyt laskeutua niiden väliin.",
+        "ttsTextSha256": "4a38825136a4c4b1c71e806904b1645d844053b1db8942b783b3f20598202198",
+        "cues": [
+          {
+            "cueId": "lappi.livia.c1",
+            "anchor": "joulupukkiakin katsomaan",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.4
+          },
+          {
+            "cueId": "lappi.livia.c2",
+            "anchor": "Seurasin Ounasjokea ilmasta",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "lappi.livia.c3",
+            "anchor": "valojen jatkuvan veteen",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.45
+          },
+          {
+            "cueId": "lappi.livia.c4",
+            "anchor": "ne olivat heijastuksia",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.4
+          },
+          {
+            "cueId": "lappi.livia.c5",
+            "anchor": "laskeutua niiden väliin",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.5
+          }
+        ],
+        "audioId": "lappi-3"
+      },
+      "batch": "e4",
+      "sourcePackPath": "js/packs/fokusvirta-lappi.js",
+      "sourcePackBlobSha": "cf3b9d991279aecee6a1c21d143f678fb49e4a4c"
+    },
+    {
+      "city": "tromssa",
+      "horatio": {
+        "visibleText": "Tromssan uuteen museoon tuotiin pohjoisen luita ja kiviä, joista laivanvarustaja ei tavallisesti maksa. Pienen simpukan vieressä oli luu, jonka eläimeen en tahtonut törmätä uimassa. Sama meri ruokki vatsan ja uteliaisuuden. Jälkimmäinen vaikutti pohjattomalta.",
+        "visibleTextSha256": "2513dd99c892bdcb682c498025771e362c35a50f4008c7fa62b5a1d9e4026fdc",
+        "ttsText": "[curious] Tromssan uuteen museoon tuotiin pohjoisen luita ja kiviä, joista laivanvarustaja ei tavallisesti maksa. Pienen simpukan vieressä oli luu, jonka eläimeen en tahtonut törmätä uimassa. Sama meri ruokki vatsan ja uteliaisuuden. [softly] Jälkimmäinen vaikutti pohjattomalta.",
+        "ttsTextSha256": "84ce48d0ffb586c96bccfb9b63bf75d5f0ec13b39fe577c103997d12f725ddbb",
+        "cues": [
+          {
+            "cueId": "tromssa.r1",
+            "anchor": "ei tavallisesti maksa",
+            "intent": "huvittuu",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "tromssa.r2",
+            "anchor": "törmätä uimassa",
+            "intent": "huvittuu",
+            "strength": 0.55,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "tromssa.r3",
+            "anchor": "vatsan ja uteliaisuuden",
+            "intent": "myotailee",
+            "strength": 0.45,
+            "offsetMs": 0
+          },
+          {
+            "cueId": "tromssa.r4",
+            "anchor": "vaikutti pohjattomalta",
+            "intent": "huvittuu",
+            "strength": 0.5,
+            "offsetMs": 0
+          }
+        ]
+      },
+      "livia": {
+        "visibleText": "Tromssassa on nyt yliopisto ja Polaarimuseo vanhoissa tullirakennuksissa. Löysin laiturilta simpukankuoren ja kurkistin sisään. Tyhjä. Hetken mietin, kuka oli lähtenyt ja minne.",
+        "visibleTextSha256": "c17f172e0270f1272e2fc001bf0742fef5ee88b1c104b03a4d03a78e59e08b22",
+        "ttsText": "[curious] Tromssassa on nyt yliopisto ja Polaarimuseo vanhoissa tullirakennuksissa. [brightly] Löysin laiturilta simpukankuoren ja kurkistin sisään. [whispers] Tyhjä. [softly] Hetken mietin, kuka oli lähtenyt ja minne.",
+        "ttsTextSha256": "0caa3020abba164cb49fff3baebec2aa025823a708b618fbee331211d3d4cbe2",
+        "cues": [
+          {
+            "cueId": "tromssa.livia.c1",
+            "anchor": "nyt yliopisto",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "tromssa.livia.c2",
+            "anchor": "Polaarimuseo vanhoissa tullirakennuksissa",
+            "occurrence": 1,
+            "intent": "selittaa",
+            "strength": 0.4
+          },
+          {
+            "cueId": "tromssa.livia.c3",
+            "anchor": "kurkistin sisään",
+            "occurrence": 1,
+            "intent": "ilo",
+            "strength": 0.45
+          },
+          {
+            "cueId": "tromssa.livia.c4",
+            "anchor": "Tyhjä",
+            "occurrence": 1,
+            "intent": "hammentynyt",
+            "strength": 0.45
+          },
+          {
+            "cueId": "tromssa.livia.c5",
+            "anchor": "kuka oli lähtenyt ja minne",
+            "occurrence": 1,
+            "intent": "miettiva",
+            "strength": 0.5
+          }
+        ],
+        "audioId": "tromssa-3"
+      },
+      "batch": "e4",
+      "sourcePackPath": "js/packs/fokusvirta-tromssa.js",
+      "sourcePackBlobSha": "8f6666279bb50ffe0f8a51c70eedeea46ecedb91"
+    }
+  ],
+  "sofiaSupplementalLiviaUtterances": [
+    {
+      "audioId": "sofia-5",
+      "context": "sahketehtava.johdanto",
+      "index": "1",
+      "visibleText": "Pöllö istuu kuopassa eikä kerro löytöään ennen tunnussanaa.",
+      "visibleTextSha256": "1ba84c6a2de9a8841ebbbec2d28e780d1a95edae67d8156336f9a1d53a00e613",
+      "ttsText": "[helpfully] Pöllö istuu kuopassa eikä kerro löytöään ennen tunnussanaa.",
+      "ttsTextSha256": "fa2439cafcb7de9e38fba6865da556759d20948f60d6c8888e8f7c954edb1135",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
+    },
+    {
+      "audioId": "sofia-6",
+      "context": "sahketehtava.johdanto",
+      "index": "2",
+      "visibleText": "Vastaa kaksi aukkoa: kartan kohde Bulgariasta ja vuosiluku.",
+      "visibleTextSha256": "a9eb925dc94574aa6d431cb9d3ca3525883fe188986c07092338d817f9254516",
+      "ttsText": "[helpfully] Vastaa kaksi aukkoa: kartan kohde Bulgariasta ja vuosiluku.",
+      "ttsTextSha256": "6a68a2953fa7b237d2e6fb03b07e823896c4decbfed2169cbc158797335aaadd",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
+    },
+    {
+      "audioId": "sofia-7",
+      "context": "sahketehtava.vinkki",
+      "index": "1",
+      "visibleText": "Se kulta ei ole Sofiassa vaan Mustanmeren rannalla.",
+      "visibleTextSha256": "d8629644984ffc15770246bef1c3d4a79c3be95031441c46ced09fc02eb86a09",
+      "ttsText": "[helpfully] Se kulta ei ole Sofiassa vaan Mustanmeren rannalla.",
+      "ttsTextSha256": "ac334acdba993738e7d17f4a49834c683bb1a9c1407c4fe749fe35067288ad49",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
+    },
+    {
+      "audioId": "sofia-8",
+      "context": "sahketehtava.vinkki",
+      "index": "2",
+      "visibleText": "Katso rannikkokaupungin kortti. Vuosiluku on siinä, seitkytluvulla.",
+      "visibleTextSha256": "8624f4a2be642bdda3e9a3685bc476bca1c785150826a2d049cae6d9c5f26a76",
+      "ttsText": "[helpfully] Katso rannikkokaupungin kortti. [brightly] Vuosiluku on siinä, seitkytluvulla.",
+      "ttsTextSha256": "5273481cfea97ea86f49e6dec0789794528b5be5a2740e0ba2d74683eeed3426",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
+    },
+    {
+      "audioId": "sofia-9",
+      "context": "sahketehtava.linkkiSaate",
+      "index": "–",
+      "visibleText": "No. Puolikas pulla, puolikas palvelus. Tossa on suora linkki, lue itse.",
+      "visibleTextSha256": "506716e2bd3628988c0b608ae17d8268a3c11a41218cced661c9c1c6860470e1",
+      "ttsText": "[amused] No. [quickly] Puolikas pulla, puolikas palvelus. Tossa on suora linkki, lue itse.",
+      "ttsTextSha256": "4b68f2a62d85cf4c6c416b73ff167a25f9d69986e172d406f69fb61e345c0aad",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
+    },
+    {
+      "audioId": "sofia-10",
+      "context": "sahketehtava.oikein",
+      "index": "1",
+      "visibleText": "Se on se. Yli kolmetuhatta kultaesinettä, ennen kuin kukaan osasi kirjoittaa.",
+      "visibleTextSha256": "bfc333881266bc3294e0b707be531fb4d64d27486b491baa8325949b24993358",
+      "ttsText": "[excited] Se on se. [awed] Yli kolmetuhatta kultaesinettä, ennen kuin kukaan osasi kirjoittaa.",
+      "ttsTextSha256": "6918a0606024b9fe65821294688718afa9c12b877eeef17612e671b8a43051d6",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
+    },
+    {
+      "audioId": "sofia-11",
+      "context": "sahketehtava.oikein",
+      "index": "2",
+      "visibleText": "Minä vien tämän pöllölle. Palaan kyllä.",
+      "visibleTextSha256": "5c34060a962e1e26c0f42b1f3aa3d5bef4d8fe92496da2f0c0a19fae42f1590e",
+      "ttsText": "[excited] Minä vien tämän pöllölle. [awed] Palaan kyllä.",
+      "ttsTextSha256": "cfb34ae3911f44e432c6151b7447afe26037b30d0f691ee7eeacba10342bb1f0",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
+    },
+    {
+      "audioId": "sofia-12",
+      "context": "sahketehtava.odotus",
+      "index": "–",
+      "visibleText": "Livia on matkalla. Se palaa kun se palaa — sillä välin sinä saat tehdä mitä huvittaa.",
+      "visibleTextSha256": "7fb4663e400dee1cfe05aa5433ba45f14445f891bad5798a5e2ef2485162a46d",
+      "ttsText": "[casually] Livia on matkalla. [amused] Se palaa kun se palaa — sillä välin sinä saat tehdä mitä huvittaa.",
+      "ttsTextSha256": "bbb385a11c25725368f78c4efe6931a55f5c9e2650ddfc868cdf35ab28d95ed9",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
+    },
+    {
+      "audioId": "sofia-13",
+      "context": "sahketehtava.paluu",
+      "index": "1",
+      "visibleText": "Perillä oltiin. Pöllö oli kuopan pohjalla mullassa: lapio oli hyvä sijoitus.",
+      "visibleTextSha256": "e5fa90746cb94f297f2e0edbe6400e6d632fca48cfb91d90bd6f0fe605803f43",
+      "ttsText": "[breathless] Perillä oltiin. [amused] Pöllö oli kuopan pohjalla mullassa: lapio oli hyvä sijoitus.",
+      "ttsTextSha256": "34e02d4a86caa492b9e181e83957fa599d8b4ba8f816a8c269d7fc0b85cf15be",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
+    },
+    {
+      "audioId": "sofia-14",
+      "context": "sahketehtava.paluu",
+      "index": "2",
+      "visibleText": "Sitten se kertoi paikan: se on tässä, jalkojesi alla. Katso alas.",
+      "visibleTextSha256": "d542527d20680333e438408c08886163e1a3ff08f421a8d1e801739a359cde06",
+      "ttsText": "[breathless] Sitten se kertoi paikan: se on tässä, jalkojesi alla. [amused] Katso alas.",
+      "ttsTextSha256": "a5869151ea402a3574cd0db7499c3c377fb1ecaca87e96f31e5d23abf96f2b94",
+      "unchangedFromBaseline": true,
+      "generationAction": "reuse-existing",
+      "ttsRecipeSource": {
+        "path": "tools/generoi-pulu.mjs",
+        "export": "TAGIT",
+        "verifiedAtCommit": "079284e1cf09f650ed7e5f3d54f54c4e3da933b1"
+      }
+    }
+  ]
+}

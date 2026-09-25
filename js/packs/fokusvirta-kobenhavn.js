@@ -61,10 +61,13 @@
  * "Voileipä syödään haarukalla" tekstiä (js/packs/kulttuuri-kategoriat.js).
  * Uusia faktaväitteitä ei ole kummassakaan.
  *
- * MIKSI EI SATUKYSYMYSTÄ: kaupungin laattakysymys kysyy, mikä saduista on
- * Andersenin (js/tyohuone-kehitys-data.js KAARI_PAKETIT, kobenhavn). Jos
- * lehden aarteen avaava tehtävä kysyisi samasta, kysymys olisi ratkaistu
- * ennen kuin Karen on tavattu.
+ * MIKSI EI SATUKYSYMYSTÄ EIKÄ TIVOLIN LUPAKYSYMYSTÄ: kaupungin
+ * laattakysymys kysyy 5.9.2026 alkaen Tivolin puisen vuoristoradan
+ * jarrumiehestä (js/tyohuone-kehitys-data.js KAARI_PAKETIT, kobenhavn).
+ * Jos lehden aarteen avaava tehtävä kysyisi samasta, kysymys olisi
+ * ratkaistu ennen kuin Freja on tavattu. Sama koskee tämän tiedoston
+ * omaa Tivoli-syvennystä, joka kysyy puiston luvan perustelua — kaksi
+ * eri Tivoli-kysymystä, ei sama kahdesti.
  */
 const NYHAVN_VISA = {
   kysymys: 'Miksi Nyhavnin kanava kaivettiin 1670-luvulla keskelle '
@@ -99,52 +102,115 @@ export const FOKUSVIRTA_KOBENHAVN = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 11402c573860ea6849049ddd0d2d041a594eaa3e7c3c8d05932bae0fb4fef452. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kobenhavn-r20260909-paper-v4.jpg",
+      lyhyt: "Kööpenhamina, 1873. Orkesteri sai odottaa omassa tahdissaan.",
+      selite: 'Tivolin vanha pari tanssi niin hitaasti, että puutarhan lamput ehtivät syttyä ja löytää vedestä toisen rivin. Rakennettujen huvitusten keskellä riittivät kaksi kättä, tuttu askel ja haluttomuus kiirehtiä.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kobenhavn-r20260911-paper2-v1.jpg",
+      lyhyt: "Kööpenhamina, 1873. Lamput ehtivät veteen ennen tähtiä.",
+      selite: 'Tivolin öljylamput syttyivät yksi kerrallaan ja kokosivat vallihaudan veteen katkonaisen tähtitaivaan. Vanha pari jäi puiden alle pieneksi, mutta juuri heidät muistin.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens","https://www.tivoli.dk/haven/fyrvaerkeri"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Vuodenaika seuraa merkinnän omaa
      * havaintoa: illat huvipuistossa tarkoittavat kesäkautta, ja Tivoli
      * on ollut kesäpuisto avaamisestaan asti (en-Wikipedia "Tivoli
      * Gardens"; ks. täky).
      */
-    paikkarivi: 'Kööpenhamina, kesällä 1873. Illat ovat valoisat kello '
-      + 'yhteentoista, ja koko kaupunki on ulkona.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Tanska menetti sodassa kolmanneksen maastaan, ja silti täällä '
-      + 'käydään illat huvipuistossa. Kävelin Tivolin portista sisään ja '
-      + 'ymmärsin: tämä kansa päätti surra valot päällä.',
-    luenta: '[curious] Tanska menetti sodassa kolmanneksen maastaan, ja '
-      + 'silti täällä käydään illat huvipuistossa. [softly] Kävelin Tivolin '
-      + 'portista sisään ja ymmärsin: [whispers] tämä kansa päätti surra '
-      + 'valot päällä.',
+    paikkarivi: 'Kööpenhamina, kesäkuussa 1873. Valoisaa iltamyöhään; koko '
+      + 'kaupunki ulkona; puntari korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
+    teksti: "Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.",
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Olin tullut katsomaan huvituksia" (asetelma).
+     */
+    reaktiot: [
+  {
+    "id": "kobenhavn.r1",
+    "ankkuri": "palvelija piilotti paistin isännältään",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kobenhavn.r2",
+    "ankkuri": "Sanaakaan ei lausuttu",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kobenhavn.r3",
+    "ankkuri": "poika nauroi samoissa kohdissa kuin minä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kobenhavn.r4",
+    "ankkuri": "piirtämään majatalon isännälle munan",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kobenhavn.r5",
+    "ankkuri": "ymmärsin vieraan ihmisen juonet vaivatta",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. [warmly] Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-kobenhavn.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * LIVIAN MAADOITUS — VÄLITTÄJÄOTE (Raamattu, "LIVIA AIKASIIRTYMÄN
-     * VÄLITTÄJÄNÄ — PARIPERIAATE"). Merkintä koskee sotatappiota ja
-     * surua, joten pariperiaate kieltää naljailun: Livia avaa
-     * historiakontekstin ja antaa isoisän havainnon seistä.
-     *
-     * FAKTAKURI: kolme väitettä, kaikki tarkistettavia. (1) Tanska
-     * menetti Slesvigin vuonna 1864 (päätoimittajan historia-ankkuri
-     * tähän erään). (2) Tivoli avattiin 1843 — siis kaksikymmentäyksi
-     * vuotta ENNEN tappiota (pelidata: js/packs/kulttuuri-kategoriat.js,
-     * kobenhavn/sadut, "Huvipuisto avattiin vuonna 1843"; sama päivämäärä
-     * 15.8.1843 en-Wikipedian "Tivoli Gardens" -artikkelissa).
-     * (3) Isoisän käynnistä on yli sataviisikymmentä vuotta.
-     *
-     * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kuule", "mut"),
-     * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-kobenhavn-01-r20260909-euv1-v2.jpg.
      */
-    maadoitus: 'Kuule, tuo on kyllä tarkka havainto, ja siihen kannattaa '
-      + 'lisätä yksi luku. Se sota, jossa maa kutistui, käytiin vuonna '
-      + '1864 — ja se huvipuisto oli avattu jo 1843, kaksikymmentäyksi '
-      + 'vuotta ennen tappiota. Valot olivat siis päällä ensin, ja niitä '
-      + 'ei vain sammutettu. Isoisäsi käynnistä on yli sataviisikymmentä '
-      + 'vuotta, eikä niitä ole sammutettu vieläkään. Mä pidän tästä '
-      + 'kaupungista, ja mä pidän tästä leivonnaisesta, jota täällä '
-      + 'sanotaan wienerleiväksi vaikka se ei ole Wienistä.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-kobenhavn-01-r20260909-euv1-v2.jpg',
+        lyhyt: 'Kööpenhamina: tanssin ajaksi vapautui hyvä tarkkailupaikka.',
+        selite: 'Tivolin iltavaloissa hitaasti tanssiva pari mahtui kuvaan kahvilapöytien välistä. Isoisä piti kiireettömästä tanssista, ja minäkin katsoin hetken muualle kuin tyhjälle lautaselle.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.tivoli.dk/en/',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Tivolin pantomiimiteatterin esirippu on valtava riikinkukon pyrstö. Se laskeutui, ja näyttämö aukesi! Minä kurkistin sivulta, minne pyrstö oikein meni. Halusin nähdä koneiston. Kun viimein käännyin katsomaan näyttelijöitä, yleisö nauroi jo. Mitä minä nyt menetin?"],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (Nyhavn). Faktat ovat lehden
      * oman avauskuvan selitteestä (js/packs/kulttuuri-kategoriat.js,
@@ -161,6 +227,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
       + 'koska kaikki asuvat samalla puolella vettä.',
     kuva: {
       ampari: 'herokoe/hero-kobenhavn-nyhavn.jpg',
+      lyhyt: 'Nyhavn kaivettiin 1670-luvulla kanavaksi laivojen lastinpurkuun keskelle kaupunkia.',
       selite: 'Nyhavn kaivettiin 1670-luvulla kanavaksi, jotta laivat '
         + 'pääsisivät purkamaan lastinsa keskelle kaupunkia.',
       lahde: 'Matkakirjan havainnekuva',
@@ -225,6 +292,9 @@ export const FOKUSVIRTA_KOBENHAVN = {
         + 'Puisto on maailman toiseksi vanhin yhä toimiva huvipuisto; '
         + 'vanhin on Dyrehavsbakken, joka on samassa maassa muutaman '
         + 'kilometrin päässä.',
+      lahde: 'en-Wikipedia "Tivoli Gardens"; pelin oma tarkistettu aineisto '
+        + 'js/packs/kulttuuri-kategoriat.js (kobenhavn/sadut). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto kobenhavn/sadut,
        * js/packs/kulttuuri-kategoriat.js). Commons 29.8.2026: CC BY-SA
@@ -300,6 +370,8 @@ export const FOKUSVIRTA_KOBENHAVN = {
         + 'kivestä antoi nimen langattomalle yhteydelle: Bluetooth on '
         + 'Harald Sinihammas, koska hän yhdisti heimoja kuten yhteys '
         + 'yhdistää laitteita.',
+      lahde: 'en-Wikipedia "Jelling stones"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (DNK/historia). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto DNK/historia).
        * Commons 29.8.2026: CC BY-SA 3.0, Ajepbah. SILMÄTARKISTUS tehty:
@@ -307,6 +379,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
        */
       kuva: {
         tiedosto: 'Jelling rune stones.1.ajb.jpg',
+        lyhyt: 'Jellingin pienemmän kiven pystytti Gorm Vanha vaimolleen, suuremman poika Harald Sinihammas.',
         selite: 'Vanhemman Jellingin kiven pystytti kuningas Gorm Vanha '
           + 'vaimonsa Thyran muistoksi, ja suuremman hänen poikansa Harald '
           + 'Sinihammas vanhempiensa muistoksi.',
@@ -366,6 +439,8 @@ export const FOKUSVIRTA_KOBENHAVN = {
         + 'kannattaa lukea kahdesti: kuudesta samanlaisesta kahdeksan '
         + 'nystyn palikasta saa yli yhdeksänsataa miljoonaa erilaista '
         + 'yhdistelmää.',
+      lahde: 'en-Wikipedia "Lego"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (DNK/keksinnot). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto DNK/keksinnot).
        * Commons 29.8.2026: CC0, Ziongarage. SILMÄTARKISTUS tehty:
@@ -373,6 +448,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
        */
       kuva: {
         tiedosto: 'Lego 2x4 brick.jpg',
+        lyhyt: 'Lego-palikat valmistetaan ABS-muovista Billundissa, liitettäviksi lukemattomilla tavoilla.',
         selite: 'Lego-palikat valmistetaan ABS-muovista Billundissa, ja ne '
           + 'on suunniteltu liitettäviksi toisiinsa lukemattomilla '
           + 'tavoilla.',
@@ -397,9 +473,28 @@ export const FOKUSVIRTA_KOBENHAVN = {
   /*
    * ---------- 4. Oppitunti ----------
    * Pohjustaa kohtaamisen laattakysymyksen (js/tyohuone-kehitys-data.js
-   * KAARI_PAKETIT, kobenhavn): mikä saduista on Andersenin. Visasääntö
-   * täyttyy — vastaus on tekstissä, mutta kysymyksen sanamuoto ei toistu
-   * siinä sellaisenaan.
+   * KAARI_PAKETIT, kobenhavn). Visasääntö täyttyy — vastaus on
+   * tekstissä, mutta kysymyksen sanamuoto ei toistu siinä sellaisenaan.
+   *
+   * VIIMEINEN KAPPALE LISÄTTY 5.9.2026 (Fable tarkistanut 5.9.2026).
+   * Laattakysymys vaihtui Andersenin sadusta Tivolin puisen
+   * vuoristoradan jarrumieheen, joten oppitunnin oli opetettava uusi
+   * vastaus — sama ratkaisu kuin Lontoossa v1593 (*"oppituntiin lisätty
+   * lain oma kappale, joka opettaa vastauksen toistamatta
+   * vastausriviä"*). Andersen-osuus säilyy sanasta sanaan: se on
+   * kaupungin oma tarina eikä enää törmää mihinkään kysymykseen.
+   * Silta kappaleiden välillä on oppitunnin oma avauslause valoista.
+   *
+   * LISÄKAPPALEEN FAKTAT (tarkistettu 5.9.2026): en-Wikipedia "Tivoli
+   * Gardens" (*"The park is best known for its wooden roller coaster,
+   * Rutschebanen … built in 1914"*, *"one of the world's oldest wooden
+   * roller coasters that is still operating today"*, avattu 15.8.1843)
+   * ja en-Wikipedia "Rutschebanen (Tivoli Gardens)" (*"An operator
+   * controls the ride by braking so that it does not gain too much
+   * speed during descent"* — jarrumies matkustaa junan mukana).
+   * Vastausriviä ("jarruttaa junaa käsin laskuissa") ei kirjoiteta
+   * sellaisenaan: teksti kertoo työntekijästä ja vivusta, ja lukija
+   * päättelee lopun itse.
    *
    * FAKTAT: js/packs/kulttuuri-kategoriat.js, kobenhavn/sadut, nostot
    * "Poika tuli kaupunkiin yksin" ja "Satamakatu, jonka varrella satuja
@@ -444,7 +539,15 @@ export const FOKUSVIRTA_KOBENHAVN = {
       + 'talossa yhteensä toistakymmentä vuotta, ja numerossa 20 hän '
       + 'kirjoitti ensimmäiset satunsa. Isoisäsi käynnin aikaan hän oli yhä '
       + 'elossa ja kaupungin tunnetuin ihminen; hän kuoli kaksi vuotta '
-      + 'myöhemmin.',
+      + 'myöhemmin. Ne illan valot taas syttyivät ensimmäisen kerran '
+      + 'elokuussa 1843, kun kaupunkiin avattiin huvipuisto: isoisäsi '
+      + 'käydessä Tivoli oli kolmenkymmenen vuoden ikäinen. Puiston '
+      + 'tunnetuin laite on kuitenkin matkakirjaa nuorempi. Puinen '
+      + 'vuoristorata Rutschebanen valmistui vuonna 1914 ja on yhä '
+      + 'ajossa, yksi maailman vanhimmista. Se ei kulje itsestään: '
+      + 'jokaisen junan mukana matkustaa työntekijä, joka pitää vauhdin '
+      + 'kurissa omalla vivullaan, ettei vaunu tulisi mäkeä liian '
+      + 'kovaa. Matkustajat luulevat häntä usein oppaaksi.',
     /*
      * Kuva on pelin omasta aineistosta (sama tiedosto kobenhavn/sadut).
      * Commons 29.8.2026: public domain, Thora Hallager, kuvattu 1869 —
@@ -453,6 +556,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
      */
     kuva: {
       tiedosto: 'Hans Christian Andersen by Thora Hallager 1869.jpg',
+      lyhyt: 'Hans Christian Andersen vuoden 1869 valokuvassa, neljä vuotta ennen isoisän käyntiä.',
       selite: 'Hans Christian Andersen vuonna 1869 otetussa valokuvassa, '
         + 'neljä vuotta ennen isoisän käyntiä. Hän syntyi Odensessa '
         + 'suutarin perheeseen vuonna 1805.',
@@ -462,62 +566,79 @@ export const FOKUSVIRTA_KOBENHAVN = {
 
   /*
    * ---------- 5. Kohtaaminen ----------
-   * Hahmo, kohtaamiskuva ja kysymys ovat tarinakaaren paketissa
-   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'kobenhavn'):
-   * sadunkertoja Karen kertoo satuja Nyhavnin laiturilla samalta
-   * puiselta arkulta, jolta hänen isoisänsä ne kertoi. Tämä kortti ei
-   * kertaa Karenin repliikkiä eikä paljasta vastausta.
+   * Hahmo ja kysymys ovat tarinakaaren paketissa
+   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'kobenhavn'). Tämä
+   * kortti ei kertaa henkilön omaa repliikkiä eikä paljasta vastausta.
    *
-   * KÖÖPENHAMINAN VANHA KOHTAAMINEN JÄÄ ENNALLEEN (js/packs/
-   * kohtaamiset.js): sama Karen kahdella pinnalla, ei kahta lupausta
-   * samasta ovesta.
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. HENKILÖ JA PAIKKA VAIHTUIVAT:
+   * sadunkertoja Karen Nyhavnin laiturilla → karusellinhoitaja Freja
+   * Tivolissa (omistajan kuvapalaute *"Vaihda henkilö ja paikka"*,
+   * Fablen päätös 5.9.2026 klo 20:05 UTC). Suvussa periytynyt arkku ja
+   * sadunkirjoittajan lahja ovat poissa. Myös kohtaamispiste siirtyy
+   * (ks. alla).
+   *
+   * VIHJEOSIO SÄILYY: 'sadut' on Kööpenhaminan lehden osio, joka
+   * käsittelee sekä Andersenin että Tivolin (nostot "Huvipuisto
+   * avattiin vuonna 1843" ja "Lupa huvipuistolle annettiin viideksi
+   * vuodeksi kerrallaan", js/packs/kulttuuri-kategoriat.js). Rivi
+   * osoittaa siis yhä oikeaan suuntaan, ja varsinainen vastaus
+   * opetetaan tämän paketin oppitunnin viimeisessä kappaleessa.
    */
   kohtaaminen: {
-    hahmo: 'Sadunkertoja Karen',
-    nappi: 'Tapaa sadunkertoja',
-    teksti: 'Karen kertoo satuja laiturilla samalta puiselta arkulta, '
-      + 'jolta hänen isoisänsä ne kertoi. Hän ei lue kirjasta eikä katso '
-      + 'muistiinpanoja: sadut ovat menneet suvussa suusta suuhun niin '
-      + 'kauan, että hän tietää missä kohtaa kuulijat vetävät henkeä. '
-      + 'Arkun hän avaa harvoin. Ennen kuin hän tekee sen, hän haluaa '
-      + 'tietää, tunnistaako vieras sen, mikä täällä kirjoitettiin.',
+    hahmo: 'Karusellinhoitaja Freja',
+    nappi: 'Tapaa karusellinhoitaja',
+    teksti: 'Freja sulkee musiikkikarusellin joka ilta viimeisenä ja '
+      + 'peittelee hevoset itse, koska maali ei kestä yökosteutta. '
+      + 'Puiston laitteet hän osaa ikäjärjestyksessä ja korjaa niistä '
+      + 'kolme neljäsosaa omin käsin; loput ovat niin vanhoja, että '
+      + 'niihin tulee mies kaupungin toiselta puolen. Kesäiltoina hän on '
+      + 'kuullut kaikki kysymykset, ja aarteesta kysytään harvemmin kuin '
+      + 'luulisi. Vasta suljetun portin jälkeen hänellä on aikaa katsoa '
+      + 'kenenkään kirjaa — ja silloinkin hän kysyy ensin jotain, minkä '
+      + 'jokainen puistossa työskentelevä tietää.',
     vihjeOsio: 'sadut',
   },
 
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * KOHTAAMISPAIKKA: NYHAVNIN LAITURI. Kaaren teksti asettaa Karenin
-   * juuri sinne, ja pelin oma Kööpenhamina-aineisto osoittaa saman
-   * paikan (js/packs/kulttuuri-kategoriat.js, kobenhavn/sadut,
-   * "Satamakatu, jonka varrella satuja kirjoitettiin").
+   * KOHTAAMISPAIKKA: TIVOLI (5.9.2026; ennen Nyhavnin laituri).
    *
-   * 55,67990556 N / 12,59028889 E — da-Wikipedia "Nyhavn",
-   * prop=coordinates (haettu 29.8.2026). Muunnos on sama kaava ja samat
+   * Kaaren kohtaaminen siirtyi Nyhavnista Tivoliin, joten piste
+   * siirtyy mukana — kaupungissa on yksi kohtaamispaikka, ja sen on
+   * oltava se, jossa henkilö tavataan. Pelin oma Kööpenhamina-aineisto
+   * tukee uutta paikkaa (js/packs/kulttuuri-kategoriat.js,
+   * kobenhavn/sadut, nostot "Huvipuisto avattiin vuonna 1843" ja "Lupa
+   * huvipuistolle annettiin viideksi vuodeksi kerrallaan").
+   *
+   * 55,67361111 N / 12,56833333 E — en-Wikipedia "Tivoli Gardens",
+   * prop=coordinates (haettu 5.9.2026). Muunnos on sama kaava ja samat
    * vakiot kuin fokuskohteilla: maailmankartalla Millerin lieriö
    * LEVEYS 12000 / LON0 −175 / POHJOINEN 76 (tools/fokuskartta/piirto.js
    * laudanProjektio), Euroopan laudalla x = (lon + 11) × 19,2 ja
    * y = (72 − lat) × 26,3.
    *
    * LASKU:
-   *   maailmankartta  x = ((12,59028889 − (−175)) mod 360) × (12000/360)
-   *                     = 187,59028889 × 33,3333… = 6253,0
-   *                   y = (millerY(76) − millerY(55,67990556)) × 12000/2π
-   *                     = 1134,1
-   *   europe          x = (12,59028889 + 11) × 19,2 = 452,9
-   *                   y = (72 − 55,67990556) × 26,3 = 429,2
+   *   maailmankartta  x = ((12,56833333 − (−175)) mod 360) × (12000/360)
+   *                     = 187,56833333 × 33,3333… = 6252,3
+   *                   y = (millerY(76) − millerY(55,67361111)) × 12000/2π
+   *                     = 1134,4
+   *   europe          x = (12,56833333 + 11) × 19,2 = 452,5
+   *                   y = (72 − 55,67361111) × 26,3 = 429,4
    *
    * TARKISTUS LAATTAA VASTEN: Kööpenhaminan laatta on Euroopan laudalla
    * 452 / 429 ja maailmankartalla 6251,4 / 1133,7, eli piste osuu
-   * käytännössä laatan päälle — niin pitääkin, Nyhavn on keskustassa.
-   * Piirtopuoli siirtää pisteen koilliseen (js/fokuspiste.js
-   * PISTE_ERO_MIN), jottei se peitä laattaa.
+   * käytännössä laatan päälle — niin pitääkin, Tivoli on rautatieaseman
+   * vieressä keskustassa. Piirtopuoli siirtää pisteen sivuun
+   * (js/fokuspiste.js PISTE_ERO_MIN), jottei se peitä laattaa. Vanha
+   * Nyhavnin piste oli 6253,0 / 1134,1 ja 452,9 / 429,2 — siirtymä on
+   * laudalla alle puoli yksikköä, kuten kilometrin matkalta pitääkin.
    */
   kohtaamispiste: {
-    nimi: 'Nyhavnin laituri',
+    nimi: 'Tivoli',
     laudat: {
-      maailmankartta: { x: 6253.0, y: 1134.1 },
-      europe: { x: 452.9, y: 429.2 },
+      maailmankartta: { x: 6252.3, y: 1134.4 },
+      europe: { x: 452.5, y: 429.4 },
     },
   },
 
@@ -615,6 +736,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-trelleborg-loistoaika.webp',
+        lyhyt: 'Trelleborg asuttuna: neljä pihaa, kuusitoista samanmittaista taloa ja portti joka ilmansuuntaan.',
         selite: 'Trelleborg asuttuna: neljä pihaa, kuusitoista pitkää taloa '
           + 'täsmälleen samassa mitassa ja portti jokaiseen ilmansuuntaan.',
         lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
@@ -628,6 +750,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
        */
       valokuva: {
         tiedosto: 'Trelleborg airphoto.JPG',
+        lyhyt: 'Trelleborg on viikinkiaikainen rengaslinnoitus, kuningas Harald Sinihampaan rakennuttama 980.',
         selite: 'Trelleborg on yksi seitsemästä tunnetusta '
           + 'viikinkiaikaisesta rengaslinnoituksesta, ja sen rakennutti '
           + 'kuningas Harald Sinihammas vuonna 980.',

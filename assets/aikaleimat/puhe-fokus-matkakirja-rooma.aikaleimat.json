@@ -1,0 +1,178 @@
+{
+  "versio": 2,
+  "kaupunki": "rooma",
+  "teksti": "Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.",
+  "tekstiSha256": "ba05f059fd0e1e73ce6094d8cc0434f94c0703e33b1b79bb8d78e3616c30340d",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-rooma.mp3",
+    "versio": 2,
+    "tavut": 333993,
+    "sha256": "ec7ced01d1e4522c50174d4ad43c3a56498149f5d957d967e17c51a7a3d8562c"
+  },
+  "kesto": 20780,
+  "sanat": [
+    {
+      "sana": "Rooman",
+      "alku": 200,
+      "loppu": 480
+    },
+    {
+      "sana": "Pantheonin",
+      "alku": 580,
+      "loppu": 1240
+    },
+    {
+      "sana": "kattoaukosta",
+      "alku": 1300,
+      "loppu": 2160
+    },
+    {
+      "sana": "satoi",
+      "alku": 2200,
+      "loppu": 2540
+    },
+    {
+      "sana": "sisään",
+      "alku": 2600,
+      "loppu": 3220
+    },
+    {
+      "sana": "Vesi",
+      "alku": 4400,
+      "loppu": 4700
+    },
+    {
+      "sana": "katosi",
+      "alku": 4740,
+      "loppu": 5120
+    },
+    {
+      "sana": "lattian",
+      "alku": 5160,
+      "loppu": 5620
+    },
+    {
+      "sana": "pieniin",
+      "alku": 5680,
+      "loppu": 6080
+    },
+    {
+      "sana": "reikiin",
+      "alku": 6160,
+      "loppu": 6760
+    },
+    {
+      "sana": "Näin",
+      "alku": 8160,
+      "loppu": 8360
+    },
+    {
+      "sana": "vanhalle",
+      "alku": 8400,
+      "loppu": 8780
+    },
+    {
+      "sana": "talolle",
+      "alku": 8900,
+      "loppu": 9360
+    },
+    {
+      "sana": "ei",
+      "alku": 9460,
+      "loppu": 9580
+    },
+    {
+      "sana": "kai",
+      "alku": 9620,
+      "loppu": 9780
+    },
+    {
+      "sana": "tohtinut",
+      "alku": 9840,
+      "loppu": 10240
+    },
+    {
+      "sana": "huomauttaa",
+      "alku": 10300,
+      "loppu": 10900
+    },
+    {
+      "sana": "katosta",
+      "alku": 10960,
+      "loppu": 11460
+    },
+    {
+      "sana": "Kaupungin",
+      "alku": 13100,
+      "loppu": 13560
+    },
+    {
+      "sana": "hallitsijat",
+      "alku": 13600,
+      "loppu": 14180
+    },
+    {
+      "sana": "olivat",
+      "alku": 14220,
+      "loppu": 14460
+    },
+    {
+      "sana": "vaihtuneet",
+      "alku": 14520,
+      "loppu": 15080
+    },
+    {
+      "sana": "monta",
+      "alku": 15140,
+      "loppu": 15400
+    },
+    {
+      "sana": "kertaa",
+      "alku": 15460,
+      "loppu": 15900
+    },
+    {
+      "sana": "Pantheon",
+      "alku": 17660,
+      "loppu": 18160
+    },
+    {
+      "sana": "päästi",
+      "alku": 18220,
+      "loppu": 18560
+    },
+    {
+      "sana": "yhä",
+      "alku": 18640,
+      "loppu": 18820
+    },
+    {
+      "sana": "taivaan",
+      "alku": 18860,
+      "loppu": 19300
+    },
+    {
+      "sana": "sisään",
+      "alku": 19360,
+      "loppu": 19860
+    },
+    {
+      "sana": "kysymättä",
+      "alku": 19940,
+      "loppu": 20440
+    },
+    {
+      "sana": "nimeä",
+      "alku": 20480,
+      "loppu": 20780
+    }
+  ],
+  "lauseet": [
+    200,
+    4400,
+    8160,
+    13100,
+    17660
+  ],
+  "luotu": "2026-09-23T15:35:28.586Z"
+}

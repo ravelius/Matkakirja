@@ -107,29 +107,122 @@ export const FOKUSVIRTA_BUDAPEST = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 7335500faf52cd93ed400d5fe167db8ca8d971a2a90131352935baca81916800. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-budapest-r20260909-paper-v4.jpg",
+      lyhyt: "Budapest, 1873. Kupolin alla kartta sai odottaa.",
+      selite: 'Rudasin kupolin pienet aukot sirottivat valoa altaaseen, jossa vesi liikkui hitaasti. Asetin kameran altaan ulkopuolelle ja annoin höyryn pehmentää ääriviivoja.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.rudasfurdo.hu/en/past-and-present","https://fortepan.hu/en/photos/?id=252393","https://fortepan.hu/en/photos/?id=82594"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-budapest-r20260911-paper2-v1.jpg",
+      lyhyt: "Budapest, 1873. Kartan kolme nimeä joutuivat saman ympyrän sisään.",
+      selite: 'Vanha kartta jakoi kaupungin vielä kolmeen osaan, vaikka Tonava ja Ketjusilta näkyivät ikkunasta ennallaan. Piirsin rajojen ympärille uuden järjestyksen, jonka marraskuu oli ehtinyt tehdä kartantekijää nopeammin.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.rudasfurdo.hu/en/past-and-present","https://fortepan.hu/en/photos/?id=252393"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Kuukausi seuraa merkinnän omaa
      * faktaa: kaupunkia "ei vielä eilen ollut", ja yhdistyminen astui
      * voimaan 17. marraskuuta 1873 (ks. oppitunti). Sääkommentti on
      * isoisän havainto, ei mitattu väite.
      */
-    paikkarivi: 'Budapest, marraskuussa 1873. Harmaata; joelta nousee '
-      + 'kylmä tuuli.',
+    paikkarivi: 'Budapest, marraskuussa 1873. Harmaata; joelta nousee kylmä '
+      + 'tuuli; puntari putoaa.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Saavuin kaupunkiin, jota ei vielä eilen ollut: Buda, Óbuda '
-      + 'ja Pest liitettiin yhteen, ja nimi on nyt Budapest. '
-      + 'Kartantekijöille riittää töitä. Tonavan rannalla vanha mies '
-      + 'sanoi, että uusi nimi tai ei — joki muistaa kaiken.',
-    luenta: '[curious] Saavuin kaupunkiin, jota ei vielä eilen ollut: '
-      + 'Buda, Óbuda ja Pest liitettiin yhteen, ja nimi on nyt Budapest. '
-      + '[laughs] Kartantekijöille riittää töitä. [softly] Tonavan '
-      + 'rannalla vanha mies sanoi, että uusi nimi tai ei — [whispers] '
-      + 'joki muistaa kaiken.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 367 merkkiä (yläraja 400). */
+    teksti: "Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.",
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Buda, Pest ja Óbuda on tänä marraskuuna
+     * liitetty yhteen" (taustatieto).
+     */
+    reaktiot: [
+  {
+    "id": "budapest.r1",
+    "ankkuri": "liitettiin marraskuussa yhteen",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "budapest.r2",
+    "ankkuri": "Karttani vanheni kesken aamiaisen",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "budapest.r3",
+    "ankkuri": "Tonava piti suuntansa",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "budapest.r4",
+    "ankkuri": "pysyin nyt samassa kaupungissa",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "budapest.r5",
+    "ankkuri": "piti kätensä ojossa",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. [warmly] Maksunkerääjä nyökkäsi ja piti kätensä ojossa.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-budapest.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era02; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-budapest-01-r20260909-euv1-v1.jpg, pulu-cam-budapest-02-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-budapest-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Budapest: kylpylällä on vihdoin lintujen kerros.',
+        selite: 'Rudasin katolla lämmin vesi ja Pestin näkymä mahtuvat samaan kuvaan. Tarkistin altaan reunan ja totesin, että ihmiset ovat löytäneet näköalapaikan, jossa saa samalla istua.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.rudasfurdo.hu/',
+          'https://tickets.rudasfurdo.hu/product/b56d483a-364d-4630-8bf5-25ce019cc411',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-budapest-02-r20260909-euv1-v1.jpg',
+        lyhyt: 'Budapest: nimi yhdisti kaupungin, joki jäi näkyvästi väliin.',
+        selite: 'Katolta Tonava, Pestin ranta, sillat ja laivat erottuvat omina reitteinään. Yksi nimi yhdistää kaupungin kartassa, mutta joki jää kuvassa näkyvästi väliin.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.rudasfurdo.hu/',
+        ],
+      },
+    ],
     /*
      * LIVIAN MAADOITUS — PARIPERIAATE (Raamattu, "LIVIA AIKASIIRTYMÄN
      * VÄLITTÄJÄNÄ"): merkintä on kevyt ja utelias, ei synkkä, joten
@@ -148,14 +241,33 @@ export const FOKUSVIRTA_BUDAPEST = {
      * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kääk", "Mut"),
      * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
      */
-    maadoitus: 'Kääk. Kolme kaupunkia yhdeksi yhdessä päivässä — tiedätkö '
-      + 'sinä, mitä se tarkoittaa minun ammatissani. Kirjeeseen oli '
-      + 'ennen valittava Buda tai Pest tai Óbuda, ja nyt osoite on yksi. '
-      + 'Se tapahtui seitsemästoista marraskuuta 1873, ja uusi kaupunki '
-      + 'jaettiin kymmeneen kaupunginosaan samalla istumalla. Siitä on '
-      + 'nyt yli sataviisikymmentä vuotta, eikä kukaan enää muista '
-      + 'kysyä kumpi ranta. Mut kürtőskalács kiertää yhä vartaan '
-      + 'ympäri, ja siitä minä muistan tämän kaupungin.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Ketjusillan leijonilla ei kuulemma ole kieliä. Lensin katsomaan suuhun: onhan siellä! Alhaalta niitä ei vain näe. Olin juuri lähdössä levittämään tietoa, kun opas kertoi uuden ryhmänsä edessä saman vanhan jutun. Hei! Minulla olisi tästä aivan tuore havainto!"],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (parlamenttitalo). Faktat
      * ovat lehden oman avauskuvan selitteestä (js/packs/
@@ -165,14 +277,9 @@ export const FOKUSVIRTA_BUDAPEST = {
      * nimenomaan isoisän jälkeen rakennettu, ja juuri siksi se sopii
      * merkintään kaupungista, jota ei eilen ollut.
      */
-    teksti: 'Tuota taloa isoisäsi ei nähnyt: parlamentti valmistui vasta '
-      + '1904, kolmekymmentä vuotta hänen käyntinsä jälkeen. Imre '
-      + 'Steindl piirsi siitä 268 metriä pitkän, ja kupoli nousee tasan '
-      + '96 metriin — luku muistuttaa vuodesta 896, jolloin unkarilaiset '
-      + 'tulivat vuorten yli. Uusi kaupunki halusi heti talon, joka '
-      + 'näkyy joelle. Katso ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-budapest-parliament.jpg',
+      lyhyt: 'Unkarin parlamenttitalo valmistui 1904 Imre Steindlin piirustuksin, kupoli tasan 96 metrissä.',
       selite: 'Unkarin parlamenttitalo valmistui 1904 Imre Steindlin '
         + 'piirustuksin: uusgoottilainen palatsi on 268 metriä pitkä, ja '
         + 'sen kupoli nousee tasan 96 metriin.',
@@ -237,6 +344,8 @@ export const FOKUSVIRTA_BUDAPEST = {
         + 'kaksikymmentäviisisataa vuotta myöhemmin laskettuna '
         + 'viisikymmentäkaksi, neljässä rivissä. Osa katosi toisessa '
         + 'maailmansodassa; noin kolmesataa osaa on yhä tallella.',
+      lahde: 'en-Wikipedia "Aquincum", en-Wikipedia "Pipe organ" ja '
+        + 'hu-Wikipedia "Aquincumi víziorgona". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 3488×2616, CC BY-SA 2.0, Jerzy Kociatkiewicz,
        * kuvattu 20.8.2007, kuvaus kertoo suoraan kuvan olevan
@@ -247,6 +356,7 @@ export const FOKUSVIRTA_BUDAPEST = {
        */
       kuva: {
         tiedosto: 'Roman pipe organ Aquincum.jpg',
+        lyhyt: 'Aquincumin vesiurkujen rekonstruktio; alkuperäisestä soittimesta jäljellä noin 300 metalliosaa.',
         selite: 'Aquincumin vesiurkujen rekonstruktio museossa. '
           + 'Alkuperäisestä soittimesta on jäljellä noin kolmesataa '
           + 'metalliosaa.',
@@ -311,6 +421,9 @@ export const FOKUSVIRTA_BUDAPEST = {
         + 'kristallien peittämä luola, joka on syntynyt 300 000–500 000 '
         + 'vuotta sitten — kauan ennen kuin kukaan asettui joen rannalle '
         + 'kiistelemään kaupungin nimestä.',
+      lahde: 'en-Wikipedia "Tourism in Hungary", en-Wikipedia "List of World '
+        + 'Heritage Sites in Hungary" ja en-Wikipedia "Gellért Hill". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1200×798, CC BY-SA 3.0, VinceB, kuvattu
        * 10.4.2012, kuvaus "Pál-völgy Cave, Budapest, Hungary".
@@ -319,6 +432,7 @@ export const FOKUSVIRTA_BUDAPEST = {
        */
       kuva: {
         tiedosto: 'Pál-völgy Cave.JPG',
+        lyhyt: 'Pál-völgyin luola Budan kukkuloiden sisällä syntyi alhaalta nousseesta lämpimästä vedestä.',
         selite: 'Pál-völgyin luola Budan kukkuloiden sisällä. Käytävät '
           + 'ovat syntyneet alhaalta nousseesta lämpimästä vedestä.',
         lahde: 'VinceB, Wikimedia Commons (CC BY-SA 3.0)',
@@ -386,6 +500,9 @@ export const FOKUSVIRTA_BUDAPEST = {
         + 'raiteilla. Keisari Franz Joseph vihki radan toukokuussa 1896. '
         + 'Sama neljän ja puolen kilometrin rata yhdentoista asemineen '
         + 'kulkee yhä.',
+      lahde: 'en-Wikipedia "Metro Line M1 (Budapest Metro)"; pelin oma '
+        + 'tarkistettu aineisto js/packs/maa-kategoriat.js (GBR/historia). '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1021×799, public domain, tekijä tuntematon,
        * vuosi 1896, kuvaus "Andrássy út in Budapest, Hungary, showing an
@@ -396,6 +513,7 @@ export const FOKUSVIRTA_BUDAPEST = {
        */
       kuva: {
         tiedosto: 'Budapest, M1 metró (kisföldalatti), Andrássy út.png',
+        lyhyt: 'Aikalaispiirros 1896 näyttää millenniumin maanalaisen kulkevan matalalla Andrássy-kadun alla.',
         selite: 'Aikalaispiirros vuodelta 1896 näyttää, kuinka matalalla '
           + 'millenniumin maanalainen kulkee Andrássy-kadun alla.',
         lahde: 'Wikimedia Commons (public domain)',
@@ -476,6 +594,7 @@ export const FOKUSVIRTA_BUDAPEST = {
      */
     kuva: {
       tiedosto: 'Budapest, Lánchíd a budai hídfőtől nézve, 1873-1880 között. - Fortepan 82081.jpg',
+      lyhyt: 'Ketjusilta Budan sillanpäältä vuosien 1873–1880 väliltä, isoisän matkavuonna tai heti sen jälkeen.',
       selite: 'Ketjusilta Budan puoleiselta sillanpäältä kuvattuna '
         + 'vuosien 1873 ja 1880 välillä — isoisän matkavuonna tai aivan '
         + 'sen jälkeen.',

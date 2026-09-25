@@ -294,6 +294,153 @@ käyttäytyy sanasta sanaan kuten ennen:
 kohdistusheitto ja leviäminen, jotka Raamatun tyyliohje nimeää.
 `taitteet: false` ja `vinjetti: null` kaikilla tasoilla.
 
+### `kirkas` — sama resepti vaaleampana (omistaja 2.9.2026)
+
+Omistaja: *"kartta ei olisi ihan noin tumma ja se saisi olla myös vähän
+värikylläisempi… myös raetta ja pehmeyttä saisi olla hieman
+vähemmän."* Uusi resepti `RESEPTIT.kirkas` on `taysi` kuudella
+säädetyllä oliolla — passit, järjestys ja luonne ovat samat.
+
+| parametri | `taysi` | `kirkas` | miksi |
+| --- | --- | --- | --- |
+| `savyt.kayra` | 0,88 / 21 | 0,87 / **36** | koko arkki vaaleammaksi |
+| `savyt.musteHaalennus` | 0,13 | **0,04** | vastapaino: muste ei nouse käyrän mukana |
+| `pastelli.kyllaisyys` | 0,55 | **0,45** | kromasta jää 55 % entisen 45 %:n sijaan (+22 %) |
+| `pastelli.kromanVahvistus` | 0 | **0,95** | maan kroma vielä yli pohjan tason (omistaja 2.9.2026) |
+| `paperi` rae / nyppy / kuitu / risti | 0,072 / 0,054 / 0,052 / 0,030 | **puolet** | rae puoleen |
+| `leviaminen.voima` | 0,30 | **0,15** | pehmeys puoleen (säde 2 px on paperivakio) |
+| `ikaantyminen` voima / lampo | 0,075 / 0,55 | **0,055 / 0,40** | tahrat kevyemmin, paperi ei kellastu |
+| `reunakertyma.voima` | 0,24 | **0,18** | sama |
+
+Muuttumattomat: `syvyys` (litistys 0,70), `maanraja`, `rosoisuus`,
+`kohdistus`, `pastelli.vaalennus` (0,37 = reliefikontrasti),
+`taitteet: false`, `vinjetti: null`.
+
+**Mitattu z2:n maailmanarkilta** (luminanssikeskiarvo tasaisilta
+aloilta; hajonta = rae tasaisella paperilla):
+
+| | ei patinaa | `taysi` | `kirkas` |
+| --- | --- | --- | --- |
+| paperi (marginaali) | 235,2 | 225,7 | **238,9** |
+| meri (avo-Tyynimeri) | 176,7 | 181,7 | **195,2** |
+| maa (Sahara) | 212,5 | 204,5 | **217,6** |
+| vuori (Tiibet) | 133,5 | 144,2 | **156,3** |
+| paperin rae (σ) | 3,07 | 6,54 | **4,14** |
+| maan kylläisyys (HSL S) | 69,5 % | 42,0 % | **61,4 %** |
+
+**Muste ei nouse mukana** — mitattu z5:n Kreikka-otoksesta (0,5 %:n
+persentiili = viivojen tummin pää, mediaani = koko kuvan taso):
+
+| | `ei` | `taysi` | `kirkas` |
+| --- | --- | --- | --- |
+| muste (0,5 %) | 80 | 98 | **103** |
+| mediaani | 197 | 192 | **205** |
+| viivan ja paperin ero | 117 | 94 | **102** |
+
+Kartta siis kirkastuu 13 sävyä, mutta viivan ja paperin ero KASVAA
+94:stä 102:een: `musteHaalennuksen` lasku 0,13 → 0,04 on tarkalleen se
+vastapaino, jota käyrän nosto vaati.
+
+Patina ei siis juuri tummenna — **pohja on tumma**, ja `taysi` jättää
+sen tummaksi. Kirkastus on siksi aitoa valon lisäystä sävykäyrään, ei
+"vähemmän patinaa". Sivutuotteena laatat myös **pakkautuvat ~5 %
+pienemmiksi** (z5 Kreikka: 560 kt → 534 kt / laatta), koska puolitettu
+rae on juuri sitä kohinaa, jota webp ei voi pakata.
+
+Kirkkaammaksi ei pääse sävykäyrää nostamalla: käyrä on affiini, joten
+meren nosto L=195:stä ylöspäin joko leikkaisi kerman valkoiseksi tai
+litistäisi kontrastin niin, että meri ja maa alkaisivat sulaa yhteen.
+Seuraava askel olisi pohjan oma syvyysramppi (`piirto.js` SYVYYS), ei
+patina.
+
+#### Kylläisyys vielä yli pohjan: `kromanVahvistus` (omistaja 2.9.2026)
+
+Omistaja katsoi yllä olevan vertailun ja sanoi: *"Vaaleus on hyvä,
+mutta lisää vielä kylläisyyttä reilusti."* `pastelli.kyllaisyys` ei
+riitä siihen: se voi vain VIEDÄ kromaa pois, eli nollakaan ei pääse
+pohjakuvan väriä pidemmälle — ja pohja on itse jo pastelli.
+
+Uusi kenttä `PASTELLI.kromanVahvistus` skaalaa kroman pikselin **oman
+luminanssin ympäri** (`c' = Ln + (c − Ln)·k`). Se on tarkoituksella
+juuri tämä kaava eikä esimerkiksi HSL-kylläisyyden kertominen:
+
+- **luminanssi säilyy täsmälleen** (luminanssi on lineaarinen kanavien
+  suhteen, joten `lum(Ln + (c − Ln)·k) = Ln`) — värin lisääminen ei siis
+  voi tummentaa karttaa;
+- **sävy säilyy**, koska kaikki kolme kanavaa skaalataan samasta
+  keskipisteestä samalla kertoimella;
+- **kanava ei leikkaudu**: kerroin lasketaan pikselikohtaisesti alas
+  niin pieneksi, ettei mikään kanava mene välin [0, 255] yli. Ilman
+  tätä vuoriston ruskean punainen kanava jäisi kattoon ja sävy
+  kääntyisi oranssiksi juuri siellä, missä väriä on eniten.
+
+Vahvistus kulkee **pastellin omalla maskilla**, joten muste (tumma) ja
+meri (matala kroma) jäävät ulkopuolelle — ja paperi samoin, koska
+marginaali on maskin luminanssi-ikkunan yläpuolella.
+
+Kaksi ehdokasta ajettiin koko putken läpi (z2 maailma 24 laattaa,
+z5 Kreikka/Balkan 6 laattaa, z7 Sofia 1 laatta) ja mitattiin samoista
+laatikoista. `nyk.` = `kirkas` ilman vahvistusta.
+
+**Maan kylläisyys (HSL S)**
+
+| | ei patinaa | `taysi` | `nyk.` | A 0,55 | B **0,95** |
+| --- | --- | --- | --- | --- | --- |
+| z5 Kreikka/Balkan | 58,1 % | 31,5 % | 41,3 % | 57,6 % | **68,4 %** |
+| z2 maailma (Sahara) | 68,7 % | 43,7 % | 64,4 % | 74,7 % | **81,3 %** |
+| z7 Sofia (vuori) | 59,9 % | 33,2 % | 43,6 % | 61,2 % | **72,5 %** |
+
+A osuu tasan patinattoman pohjan kylläisyyteen, B vie sen yli.
+Omistajan sana oli "reilusti", joten **valittiin B**; A:n arvo 0,55 on
+tallessa `PASTELLI_KIRKAS`:n kommentissa.
+
+**Mikä ei liikkunut** — kaikki kolme tasoa mitattuna, `nyk.` / A / B:
+
+| | z2 | z5 | z7 |
+| --- | --- | --- | --- |
+| paperin marginaali L | 238,9 / 238,9 / 238,9 | — | — |
+| paperin rae σ | 7,34 / 7,34 / 7,34 | — | — |
+| meri L | 196,2 / 196,2 / 196,2 | 198,6 / 198,6 / 198,6 | — |
+| meri S | 19,3 / 19,3 / 19,3 % | 20,0 / 20,0 / 20,0 % | — |
+| muste 0,5 % | 96 / 96 / 96 | 103 / 103 / 103 | 157 / 156 / 156 |
+| muste 2 % | 131 / 131 / 131 | 155 / 155 / 154 | 167 / 166 / 166 |
+| mediaani | 212 / 212 / 212 | 205 / 205 / 205 | 219 / 219 / 219 |
+
+Meressä ei ole yhden yksikönkään eroa: maski pitää sen ulkona.
+
+**Mitä väri maksoi luminanssissa** — B:n muutos `nyk.`:iin nähden:
+
+| | maa L | vuori L | maa H | vuori H |
+| --- | --- | --- | --- | --- |
+| z2 | 218,2 → 218,2 | 158,3 → 157,9 | 42,2° → 42,2° | 29,4° → 28,9° |
+| z5 | 192,9 → 192,5 | 173,0 → 172,0 | 36,6° → 36,2° | 31,5° → 30,5° |
+| z7 | 230,0 → 230,0 | 198,8 → 198,6 | 49,2° → 49,2° | 38,2° → 37,9° |
+
+Suurin tummeneminen on **1,0 sävyä** ja suurin sävykulman kääntymä
+**1,0 astetta** — eli kartta ei tummene eikä ruskea käänny oranssiksi,
+mikä oli koko leikkaussuojan tarkoitus.
+
+### `kevyt` — kirkas kevennettynä (omistajan valinta 3.9.2026)
+
+Omistaja: *"patinaan voisi ajaa seuraavat muutokset: kirkkautta, raetta
+ja sumennusta hieman pois"* ja pelinäkymän vedosten jälkeen
+*"saturaatiota voi hieman vähentää myös"*. Seitsemästä vedoksesta
+(kirkas, a/b/c, a2/b2/c2 — Bulgaria 100 km, nimet, nostot ja viivat
+mukana) omistaja valitsi A2:n. `RESEPTIT.kevyt` on `kirkas` neljällä
+muutoksella; workflow-oletus ja koko pyramidin sekä nostotason resepti
+versiosta 2026-09-03a alkaen.
+
+| parametri | `kirkas` | `kevyt` |
+|---|---|---|
+| sävykäyrän nosto | 36 | 30 |
+| paperin rae / karkea | 0,036 / 0,027 | 0,027 / 0,020 |
+| kuitu / ristikuitu | 0,026 / 0,015 | 0,020 / 0,011 |
+| leviämisen voima | 0,15 | 0,10 |
+| kylläisyys / kromanVahvistus | 0,45 / 0,95 | 0,40 / 0,80 |
+
+Hylätyt annokset b (26 / 0,018 / 0,06) ja c (22 / 0,010 / ei
+leviämistä) ovat git-historiassa (v1490:n vedosreseptit).
+
 ### Mikä meni laattoihin ja mikä ei
 
 | osa | laattoihin? | miksi |
@@ -489,13 +636,39 @@ Peli katsoo valittua tasoa noin 1:1 **laitepikseleinä**
 on puhelimella 1 170 ja työpöydällä 1 440–3 024 laitepikseliä leveä.
 Tasolla z2 jokainen nimetty meri mahtuu näkymään kaikilla näillä
 laitteilla; z3:lla Tyynimeri ja Jäämeri ovat jo kaksi ruudullista.
-**Raja kulkee siis z2:n ja z3:n välissä**, ja se on koodissa samassa
-yksikössä kuin muutkin yleistyskynnykset (kuvapikseliä lautayksikköä
-kohti): `KALUSTEIDEN_YLARAJA = 0,3`, kun z2 on 0,225 ja z3 on 0,45.
+**Raja kulki siis aluksi z2:n ja z3:n välissä**, ja se on koodissa
+samassa yksikössä kuin muut yleistyskynnykset (kuvapikseliä
+lautayksikköä kohti): `KALUSTEIDEN_YLARAJA = 0,3`, kun z2 on 0,225 ja
+z3 on 0,45.
 
 Sama luku on generoi-laattapyramidi.mjs:ssä umpimeren karsintaa varten
 (`umpimeriSavy` ehto 4 koskee vain kalustetasoja) — kaksi kopiota, ja
 ne on pidettävä samana.
+
+#### Kynnys nousi z3:lle (omistaja 1.9.2026 illalla)
+
+Sanatarkasti: *"toiseksi uloin zoomtaso saisi sisältää samat
+lisämerkinnät karttaan kuin uloin taso. tai ainakin sen ison
+ilmansuunta symbolin meren päällä."* Sama taso ja sama pari
+kaappauksia kuin saman päivän aamun kalustepyynnössä (5000 km = z2,
+2000 km = z3): aamun korjaus vei marginaalin kalusteet z3:lle, joten
+z3:lle jäi arkki, jossa on otsikko ja painajanrivi mutta ei yhtään
+valtameren nimeä eikä kompassiruusua.
+
+**Kynnys 0,3 → 0,5**, eli nimet ja ruusu piirtyvät tasoille z0–z3
+(z4:n 0,90 jää yhä ulkopuolelle). Alkuperäinen mittaus ei kumoudu:
+kriteeri *"koko meri on näkyvissä"* oli oikea kysymys nimen
+**sijoittelulle**, ei sen olemassaololle. Nimi ja meri ovat molemmat
+kartan mittakaavassa (`S`), joten nimen osuus altaastaan on joka
+tasolla sama — z3:lla ATLANTIN VALTAMERI on 564 px ja sen allas
+1 239 px, sama suhde kuin z2:n 282 / 619. Yksikään taulukon
+täyttöasteista ei siis muutu; ainoa muutos on, ettei Tyynenmeren nimeä
+näe enää yhdellä silmäyksellä koko altaansa kanssa — ja omistaja pyysi
+tätä nähtyään juuri sen näkymän.
+
+Kynnys on kahdessa paikassa (piirto ja karsinta), ja molemmat
+nostettiin; tests/viivataso.test.mjs vartioi sekä haarukkaa (z3:n ja
+z4:n välissä) että kopioiden yhtäsuuruutta.
 
 ### Koot mitoitettiin uudestaan sen mukaan, missä ne piirretään
 
@@ -533,7 +706,7 @@ vie kehän 13,8°:een eli juuri avoveden sisään; 1,9 veisi sen
 | z0 | 675 | 3,4 px | 71 px | 52 px | kyllä |
 | z1 | 1 350 | 6,8 px | 141 px | 104 px | kyllä |
 | z2 | 2 700 | **13,5 px** | **282 px** | **207 px** | kyllä |
-| z3 | 5 400 | (27,0) | (564) | (414) | **ei** |
+| z3 | 5 400 | 27,0 px | 564 px | 414 px | **kyllä** (1.9.2026 illasta) |
 | z4–z7 | 10 800–86 400 | (54–432) | (1 128–9 026) | (829–6 629) | **ei** |
 
 Katsottu: z2 on nyt luettava maailmankartta, jossa jokainen meri on
@@ -1606,6 +1779,129 @@ Näkyvät laatat luodaan aina ENNEN reunuksen laattoja (kaksi kierrosta
 samalla käsittelijällä), koska pyyntöjärjestys pätee joka selaimessa —
 `fetchpriority` on sama asia pelkkänä vihjeenä.
 
+## 6n. Kaksoiskuvat: nostotaso ja maastokohteen nimi (2.9.2026 ilta)
+
+Omistajan kaksi havaintoa saman illan kaappauksista, ja molemmat ovat
+**sama asia kartalla kahdesti** — eri syistä.
+
+### A. Tuplanäkymä zoomatessa
+
+Sanatarkasti: *"välillä tulee tällaisia tuplanäkymiä … ne onneksi
+häviävät jonkun ajan kuluttua"* (Sofia, mittajana 100 km). Kaappauksessa
+sumea, venytetty ja hieman siirtynyt *Boyanan kirkko* terävän nimen
+vieressä.
+
+**Juurisyy 1 — pohjan sääntö väärässä kerroksessa.** Sääntö 2 (*vanha
+taso ei katoa ennen kuin uusi on paikallaan*) on kirjoitettu
+LÄPINÄKYMÄTTÖMÄLLE pohjalle: uusi laatta maalaa vanhan yli, ja vanha on
+vain vakuutus tyhjää vastaan. Nostotaso on merkintöjä läpinäkyvällä
+lasilla, joten vanha muste **näkyy uuden läpi**. Päälle tulee se, että
+noston ruutukatto lasketaan tason omalla tiheydellä
+(`nostoladontaKattoSuhde`): karkeamman tason merkki on lautayksiköissä
+suurempi ja sen nimiö kauempana ankkurista — siis juuri venynyt ja
+siirtynyt haamu. Korjaus: nostotaso saa lipun `lapinakyva`, ja tason
+vaihtuessa edellisen tason laatat poistetaan heti
+(`js/laattapyramidi.js paivitaKerros`). Pohja ja viivataso pitävät
+sääntönsä — viivataso siksi, että sen muste on karttavakiota ja osuu
+uuden PÄÄLLE eikä viereen.
+
+Aukon hinta maksetaan esilatauksessa: `jonotaTasovaihto` lämmittää nyt
+myös nosto- ja viivatason naapuritasot, joita se ei ennen tuntenut.
+
+**Juurisyy 2 — luettelo selaimen välimuistista.** `pyramidi.json` on
+`max-age=300`, ja juuri se viisi minuuttia on ikkuna, jossa peli lukee
+EDELLISEN ajon nostoversion mutta laskee tiivisteet uudella koodilla:
+jokainen muuttunut merkki on kartalla kahdesti (vanha laatassa, uusi
+elävänä). Luettelo noudetaan siksi `cache: 'no-cache'` -tarkistuksella
+(304 ilman runkoa), ja verkoton varareitti on tavallinen nouto — muuten
+kartta katoaisi lentokonetilassa. Laatan avain kantaa lisäksi ajon
+version, joten kaksi ajoa ei voi jakaa samaa elementtiä.
+
+**Mitattu** (`tools/savukkeet/savuke-nostolaatat.mjs`, laattaviive
+400 ms, 121 otosta Sofian zoomista): ennen korjausta nostokerroksessa
+oli kahden tason laattoja **10 otoksessa** (pahimmillaan 91 laattaa
+tasoilta z5 ja z6), jälkeen **0**. Pohjakerros näyttää kaksi tasoa yhä
+(5–7 otosta), eli otanta ei mittaa tyhjää.
+
+### B. Irrallinen vuorenkuva
+
+Sanatarkasti: *"Balkan vuoret ovat edelleen polttamatta eikä tekstiä voi
+klikata. sen sijaan sen yläpuolella oleva irrallinen vuorenkuva vie
+balkan vuorten popupiin."*
+
+Kaksoisnimen KOLMAS lähdepari (vrt. luku 6c.1): kohdeaineisto
+(`js/packs/fokuskohteet-bgr.js` `balkanvuoret`, 6666,7 / 1673,3) ja
+maastonimet (`maailmankartta-nimet.js`, 6660 / 1691,4) — sama vuoristo
+19 lautayksikön päässä itsestään. Kohdemerkki oli vaiennettu
+nimiöttömäksi perusteella *"nimen sanoo laatta"*, mutta laattoihin ei
+ole poltettu nimiä sitten `nimiot: false` -ajon: nimen latoi nimikerros
+maastonimen omasta pisteestä eikä sitä voinut napauttaa. Kartalle jäi
+kaksi puolikasta.
+
+**Sääntö nyt:** pari ratkaistaan kerran (`js/fokuskohteet.js
+maastoParit`) ja molemmat puolet lukevat saman vastauksen.
+
+| omistaja | ehto | seuraus |
+| --- | --- | --- |
+| kohdemerkki | tunnus vain yhdessä maassa → merkki poltetaan koko maailman kartalle | merkki kantaa nimensä; nimikerros ei lado maastonimeä eikä sen kolmiota |
+| nimikerros | sama tunnus monessa maassa (Victorianjärvi, Tonava) → ei polttaudu lainkaan | maastonimi jää nimikerrokselle; merkki vaikenee kuten ennen |
+
+Mitattu: nimiöttömiä merkkejä 50 → 22, ja 28 poltettavaa merkkiä saa
+nimensä (yksi vuori, yksi järvi, loput jokia — 37 maastonimen paria,
+joista viisi on vuoria tai järviä, muut jokia, joita nimikerros ei
+piirrä lainkaan). Poltetun nimiön näkymätön osumamuoto tulee
+olemassa olevasta koneistosta (`asetaPoltetutTekstiOsumat`), joten nimi
+on napautettava samalla tavalla kuin muillakin poltetuilla nostoilla.
+
+Muutos koskee jokaisen merkin tiivistettä, joten **ladontasääntö nousee
+`v9-maasto`** ja nostotaso piiloutuu kokonaan uusintapolttoon asti.
+
+## 6o. Avauslento odottaa laattoja (omistaja 3.9.2026)
+
+Omistajan tilaus sanatarkasti (Raamattu, AVAUSLENTO VALMIIKSI
+LADATTUNA): *"kartta pitää ladata etukäteen, nyt se rakentui
+pikkuhiljaa taustalla valmiiksi."*
+
+**Juurisyy.** Avauslento odotti pergamenttiarkin takana vain
+**pohjatasoa** (`js/ui.js ALOITUSLENNON_POHJA_ODOTUS_MS`), ja se oli
+vanhan vektorilaudan mitta. Laattakartta on eri asia: se on **haku**,
+joka lähtee liikkeelle vasta kun kamera on lennon rajauksessa
+(`paivitaPyramidi`), eikä sen valmistumisesta kertonut kukaan.
+
+**Mitattu** (`tools/savukkeet/savuke-avauslento.mjs`, Chromium, laatat
+ämpäristä, näytteet 200 ms välein):
+
+| hetki | arkki | kiinnitettyjä laattoja | ruudulla kesken |
+| --- | --- | --- | --- |
+| ennen korjausta, arkki väistyy | pois | **0** | 0 |
+| +0,6 s | pois | 103 | 29 |
+| +2,1 s | pois | 103 | 0 |
+| korjauksen jälkeen, arkki väistyy | pois | **103** | **0** |
+
+Eli kartta täydentyi ennen korjausta 103 laatan verran vasta koneen
+lennon alla, täsmälleen niin kuin omistaja sen näki.
+
+**Ratkaisu.** `odotaPyramidi(ui, { katto })` odottaa, että luettelo on
+kädessä, laatat on kiinnitetty ja jokainen **ruudulla** oleva laatta on
+`load`-tapahtunut (`pyramidinKesken` lukee saman `data-odottaa` /
+`data-ladattu` -parin kuin `kaikkiRuudullaLadattu`). Lento kutsuu sen
+viimeisenä ennen arkin häivytystä — reitti, kone ja kohtauksen kerrokset
+ovat silloin jo puussa, joten arkin takana ei tapahdu enää mitään muuta.
+
+**Katto on varoventtiili, ei odotusaika.** Mitattuna näkyvän alueen 103
+laattaa ovat perillä noin 1,5 sekunnissa kamera-ajosta; kuuden sekunnin
+katto (`ALOITUSLENNON_LAATTA_ODOTUS_MS`) koskee vain hidasta verkkoa tai
+saapumatta jäävää laattaa, eikä lento saa jäädä niistä jumiin. Aika
+luetaan kellosta eikä ajastimien laukeamisista, samasta syystä kuin
+pohjatason odotuksessa.
+
+**Sivutuote: kertoja kuuluu.** Avauslennon luenta oli ripustettu
+seinäkelloon (ajastin 2,3 s napautuksesta) ja lennon `finally` perui
+ajastimen. Ajastin osui samaan ikkunaan, jossa laattaburst kilpaili
+sekä pääsäikeestä että kaistasta. Nyt luenta lähtee **kohtauksesta**:
+laattojen valmistuttua, juuri ennen arkin väistymistä
+(`js/ui.js lueLennonRepliikki`).
+
 ## 7. Harva pyramidi — mitattu, päätetty POIS
 
 Karsinta laattamäärästä (`--harva-raja 8`, koko maailma, uusi arkki):
@@ -1644,6 +1940,77 @@ maastoa (Alpit, Himalaja, Andit, Kaukasus), piirtyy eri näköisenä — se
 on muutoksen tarkoitus. Todennettu md5:llä
 (`d5820eb…` → `7c3fb3d…`). **Jos `patinoi-fokus.yml` ajetaan uudestaan,
 js/media.js `FOKUS_VUOSIKERTA` on nostettava.**
+
+## 8b. Korkeusdata: 1 kaariminuutti syvimmällä tasolla (2.9.2026)
+
+Omistajan tilaus 2.9.2026: *"korkeusdata pitää tehdä 1 tarkkuudella
+uudestaan"*. Raamatun vanha linjaus (3 kaariminuuttia kaikilla
+tasoilla) kumoutuu **vain syvimmän tason osalta**.
+
+| taso | ruutu | mistä |
+| --- | --- | --- |
+| z7 | 1′ (`--kaariminuutit`, oletus 1) | R2:n 10°-palat |
+| z0–z6 | 3′ aina | repon `tools/korkeusaineisto/` |
+
+**Miksi kaukotasot jäävät kolmeen.** Yksi korkeussolu on z7:llä 12
+kuvapikseliä 3′:llä ja 4 pikseliä 1′:llä — siellä tarkkuus näkyy. Jo
+z6:lla 1′-solu on 2 pikseliä ja z5:llä yksi: aineisto olisi piirtoa
+tarkempaa, eli tarkempi ruudukko ei toisi yhtään näkyvää
+yksityiskohtaa vaan nelinkertaisen muistin. Sääntö on koodissa
+(`kaariminuutitTasolle`) ja luettelossa (`pyramidi.json` → `korkeus`).
+
+**Kohinaa ei tullut.** Raamattu varoitti, että 1′:n naapurierot
+näkyisivät rakeisuutena varjossa (varjo lasketaan naapurien erosta).
+Rinnakkaisvedokset z7:ltä (Alpit 6,5–8,5 °E / 45,4–46,6 °N ja Kreikka
+22,5–24,5 °E / 37,4–38,6 °N, sama patina ja laatu, vain ruutu vaihtui)
+näyttävät päinvastaista: 1′ tuo laaksot ja harjanteet esiin
+**puhtaana** eikä rakeisena, koska 4 kuvapikseliä solua kohti on yhä
+reilusti yli näytteenottorajan. Varjopassiin **ei siis lisätty**
+alipäästösuodatinta — se olisi hävittänyt juuri sen, mitä ajolla
+haettiin.
+
+**Aineisto ei tule NOAA:lta.** 1′-palat ovat omassa R2-ämpärissämme
+(`julisteet/korkeus/1min/`, `tools/tee-korkeuspalat.mjs`,
+`vie-korkeuspalat.yml`), ja työnkulku kopioi shardin tarvitsemat palat
+levylle **ennen polttoa** (`--vain-palat` antaa listan). Poltto itse ei
+tee yhtään verkkopyyntöä.
+
+**Muisti.** Koko lauta 1′:llä olisi 424 Mt Int16:na, joten ruudukkoa ei
+enää koota koko laudalle vaan **vain sille alalle, jonka ajo piirtää**
+(`korkeudenLaatikko`: lohkojen unioni reunuksineen + 0,5° marginaali).
+Mitattu tässä kontissa:
+
+| ajo | ruudukko | Int16 | kokoaminen |
+| --- | --- | --- | --- |
+| z7 sarakkeet 0–43 | 5701 × 9795 | 112 Mt | 1,0 s / 170 palaa (RSS 215 Mt) |
+| z7 sarakkeet 44–87 | 5710 × 9795 | 112 Mt | 187 palaa |
+| z7 sarakkeet 88–131 | 5711 × 9795 | 112 Mt | 170 palaa |
+| z7 sarakkeet 132–168 | 4774 × 9795 | 94 Mt | 153 palaa |
+| z7 kokonaan (ei shardattu) | 21661 × 9795 | 424 Mt | 612 palaa |
+| z0–z6 (3′) | 7221 × 3267 | 47 Mt | reposta, ennallaan |
+
+Rajaus koskee **vain korkeusruudukkoa**; rannikot, järvet ja rajat
+kootaan yhä koko laudalta. Täyden leveyden ajossa laatikko on
+leikattu vanhaan koko laudan laatikkoon.
+
+**3′-tuotannon laatat ovat tavulleen entiset — mitattu, ei väitetty**
+(2.9.2026, sama kontti, sama Chromium, vanha koodi vs. uusi):
+
+- koko z3 maailmasta, **77/77 laattaa md5-identtisiä**
+- z7 Alpit (`--alue 6.5,45.4,8.5,46.6`) kavennetulla laatikolla
+  (198 × 166 solua vanhan 7221 × 3267:n sijaan), **4/4 laattaa
+  md5-identtisiä**
+
+Kaventaminen ei siis muuta pikseliäkään: hilapisteet ovat samat, koska
+laatikon reunat napsautetaan samaan `RUUTU`-hilaan kuin ennenkin.
+Lisäksi tests/korkeusikkuna.test.mjs vertaa vanhan poiminnan ja uuden
+ikkunan solu solulta kolmella laatikolla.
+
+**Yksi ajo, yksi ruudukko.** Ruudukko tarjoillaan selainsivulle yhtenä
+tiedostona, joten ajo jonka tasot tarvitsisivat eri tarkkuudet
+pysähtyy äänekkäästi. Matriisi ajaa z0–z6:n ja z7:n eri shardeissa;
+paikkausajo (kaikki tasot yhdessä) ajaa generaattorin kahdesti, ja
+luettelo täydentyy erissä kuten muutenkin.
 
 ## 9. Sauma
 
@@ -1945,6 +2312,481 @@ listausta (sekunteja) riittää todistamaan 23 285 kopion ehjyyden.
 Työnkulku ajaa tämän shardin viimeisenä askeleena, ja luettelojobi on
 `needs: laatat` -riippuvuuden takana — **epäonnistunut paikkaus ei
 koskaan päädy `pyramidi.json`:iin eikä siis kenenkään selaimeen.**
+
+## 10d. Paikallinen poltto Mac Studiolla (`tools/polta-paikallisesti.sh`)
+
+Työnkulku on yhä *se nappi* (luku 10b), mutta sillä on kaksi kattoa,
+joita ei voi nostaa: **GitHubin ajokoneessa on neljä vCPU:ta ja jobissa
+kuuden tunnin katto** (matriisin timeout 330 min). Syvin taso z8 on
+69 628 laattaa eli mitattuna noin 13 ydintuntia — se ei mahdu yhteen
+jobiin neljällä ytimellä, ja pilkkominen kymmeniin jobeihin maksaisi
+saman aineistonoudon kymmeniä kertoja. Omistajan kone tekee saman työn
+omilla ytimillään ilman kumpaakaan kattoa, joten poltto on skriptattu:
+
+```
+tools/polta-paikallisesti.sh [--sarjat z8|kaikki|z0-z7] [--koe] […]
+```
+
+Skripti tekee täsmälleen sen mitä työnkulku ja samoilla argumenteilla —
+sama shardijako, sama `generoi-laattapyramidi.mjs`, samat
+`aws s3 sync` -komennot, samat polut ja samat välimuistiotsakkeet.
+Erot ovat vain siinä, mikä on koneen ja mikä pilven asia:
+
+| asia | työnkulku | paikallinen |
+| --- | --- | --- |
+| rinnakkaisuus | matriisi, 4 vCPU / job | `xargs -P <ytimet>` |
+| Natural Earth | oma job → artefakti | `<ulos>/ne-data` (nouto kerran) |
+| 1′-korkeuspalat | shardi kopioi omansa `aws s3 cp`:llä | kaikki 612 palaa kerran julkisesta osoitteesta, `--korkeuspalat` kaikille |
+| uusinta | job uudelleen | `--vain <shardi>`, valmiit ohitetaan |
+| pallon Mercator-sarja | oma työnkulku, yksi prosessi | `--pallo-osia` shardia samalla `xargs -P`:llä |
+| vienti ämpäriin | jobin lopussa | shardikohtaisesti polton rinnalla, 32 yhtaikaista pyyntöä |
+
+### Vaatimukset
+
+```
+brew install node awscli          # node ≥ 22
+npx playwright install chromium   # skripti tekee tämän itse jos puuttuu
+```
+
+Kuvakirjastoa ei tarvita: `package.json` ei riipu `canvas`:sta eikä
+`sharp`:sta, vaan piirto- ja patinapassi ajetaan Playwrightin
+Chromiumissa (`PW_CHROMIUM`). Cairo/pango eivät siis kuulu asennukseen.
+`sharp` asennetaan vain, jos ajetaan `--pallo` (pallon Mercator-sarja).
+
+### z8 EI ole uusi versio vaan lisä olemassa olevaan
+
+Tämä on koko erän tärkein linjaus. Laatan polussa on versio ja polku on
+muuttumaton — mutta **z8:n polkua ei ole vielä kirjoitettu
+kenellekään**, joten sen kirjoittaminen nykyisen version alle ei
+ylikirjoita mitään:
+
+```
+julisteet/pyramidi/<versio>/z8/<sarake>/<rivi>.webp        uusi, tyhjä polku
+julisteet/pyramidi/<viivaversio>/viivat/z8/…              uusi, tyhjä polku
+julisteet/pyramidi/<nostoversio>/nostot/z8/…              uusi, tyhjä polku
+julisteet/pyramidi/pyramidi.json                          tasot z0…z8
+```
+
+Koska yksikään versio ei vaihdu, **pallon lepokerroksen versiovahti
+pysyy tyytyväisenä** (`js/pallo.js lepokerroksenKerrokset`: pallon
+`laatat.json` versio/viivat/nostot = `pyramidi.json`
+versio/viivataso/nostotaso), pallon Mercator-sarjaa ei tarvitse polttaa
+uudestaan eikä yhtään koodiriviä muuteta. Peli ottaa z8:n käyttöön
+luettelosta (`js/laattapyramidi.js valitseTaso` valitsee tason
+luettelon tasoista) heti kun uusi `pyramidi.json` on ämpärissä.
+
+Jos taas poltetaan **uusi pohjaversio** (`--sarjat kaikki`), versiovahti
+sammuttaa lepokerroksen siihen asti, kunnes pallon sarja on poltettu
+samasta versiosta ja `js/pallo.js`:n `PALLO_LAATTAVERSIO` osoittaa
+siihen. Silloin `--pallo` on pakollinen ja se yksi rivi muuttuu
+julkaisussa.
+
+Skripti lukee oletusversiot ja -asetukset (laatu, patina, piirit)
+**ämpärin nykyisestä luettelosta**, ei arvaa niitä: jos z8 poltettaisiin
+eri laadulla tai patinalla kuin z7, uudet laatat erottuisivat silmällä
+naapureistaan — sama perustelu kuin paikkausajolla (luku 10c).
+
+### Nostokerros on se, joka ratkaisee tarvitaanko koodimuutos
+
+`pyramidi.json`:in `nostotaso.nostot` (tunnus → tiiviste) lasketaan aina
+**nykyisestä reposta**, ja peli vaientaa elävästä kerroksesta jokaisen
+merkin, jonka se löytää sieltä (`js/laattapyramidi.js nostoOnPoltettu`)
+— **riippumatta zoomtasosta**. Jos repoon on tullut nostoja sen jälkeen
+kun nykyiset nostolaatat poltettiin, uusi luettelo lupaisi ne
+poltetuiksi myös tasoilla z5–z7, joiden laatoissa niitä ei ole, ja ne
+katoaisivat kartalta kokonaan. Skripti **vertaa** siksi uuden luettelon
+ämpärin luetteloon ennen vientiä ja kaatuu, jos ero on muualla kuin
+z8:ssa (mitattu 6.9.2026: ero oli `nostot: +1084 ~22`). Ohitus on
+`--pakota-luettelo`, eikä sitä pidä käyttää ennen kuin ero on
+ymmärretty. Kaksi tietä eteenpäin:
+
+1. **Aja poltto siitä commitista, joka poltti nykyiset nostolaatat.**
+   Silloin luettelo täsmää, mitään koodiriviä ei muuteta ja pallon
+   lepokerros pysyy päällä koko ajan.
+2. **Polta nostokerros uudestaan uudella versiolla:**
+   `--sarjat z8 --nostoversio <uusi>`. Skripti lisää silloin
+   shardilistaan `nosto-z5-z7`:n — koko kerros, ei vain z8, koska
+   luettelo kuvaa kaikki tasot yhdellä nostojoukolla. Uusi nostoversio
+   kuitenkin **sammuttaa pallon lepokerroksen versiovahtiin**, kunnes
+   pallon Mercator-sarja on poltettu uudestaan
+   (`tools/tee-pallolaatat.mjs --nostot --tunniste <uusi kirjain>`,
+   skriptin `--pallo`) ja `js/pallo.js`:n **`PALLO_LAATTATUNNISTE`**
+   osoittaa siihen kansioon. Se on **se yksi koodirivi**, joka tässä
+   tiessä muuttuu. Sama koskee viivatasoa (`--viivaversio`), jos
+   rajat tai reitit ovat muuttuneet.
+
+### Shardijako
+
+| shardi | erä | laattoja |
+| --- | --- | --- |
+| `z8-001`…`z8-085` | z8, neljä saraketta (yksi lohko) kukin | 824 / shardi, 69 628 |
+| `viiva-z8-01`…`-11` | viivataso z8, 32 saraketta kukin | 8 680 |
+| `nosto-z8` | nostotaso z8 | 2 075 |
+| (`--sarjat kaikki` lisää) `z0-z6`, `z7a`…`z7d`, `viiva-z0-z7`, `nosto-z5-z7` | työnkulun oma jako | 23 340 + 5 830 + 2 856 |
+
+85 kaistaa on **yli kaksi kertaa ytimet** vielä 42-ytimisellä koneella,
+ja kuorma tasaantuu itsestään: `xargs` antaa vapautuvalle ytimelle aina
+seuraavan kaistan, joten merikaistan nopeus ei jää käyttämättä.
+
+**z8-shardi ajetaan `--tasoja 9`:llä.** Kaista tulkitaan aina *syvimmän
+tason* sarakkeina; ilman lippua jako olisi puolikas ja **kaistan
+viimeinen z8-sarake jäisi jokaisesta shardista piirtämättä**.
+`--tasoja` on komentoriviargumentti, jonka oletus on 8, ja se koskee
+vain kolmea asiaa: oletustasoja, luettelon tasoluetteloa ja kaistan
+tulkintaa. Tason 0 leveys (675 px) ja tarkan korkeusruudukon alaraja
+(z7) ovat naulatut, joten `--tasoja 9` **lisää z8:n eikä siirrä
+yhtäkään olemassa olevaa tasoa** — z0…z7 ovat tavulleen entiset.
+
+### Mitattu (6.9.2026, kehityskontti, 4 vCPU, patina `kevyt`, q0,9)
+
+| mittaus | luku |
+| --- | --- |
+| kokonainen z8-kaista `z8-001` (`--sarakkeet 0-3`, Tyynimeri) | 824 laattaa, 648 s, **1,27 laattaa/s**, 0,35 Mpx/s, hukka 6,0 % |
+| z8-otos Kreikka–Balkan (64 laattaa, mannerta) | 1,12 laattaa/s, 0,39 Mpx/s |
+| laatan keskikoko, merikaista | 21,6 kt (0,085 tavua/px) |
+| laatan keskikoko, mannerotos | 33,1 kt (0,129 tavua/px) |
+| **z8 kokonaan (69 628 laattaa, ~19 400 Mpx piirrettyä)** | **12–15 ydintuntia** |
+
+Kesto ytimien mukaan. Kaistoja on 85 eli reilusti enemmän kuin ytimiä,
+joten jako on käytännössä lineaarinen; Mac Studion ydin on kontin
+ydintä nopeampi, joten luvut ovat **yläraja**:
+
+| ytimiä | z8:n kesto |
+| --- | --- |
+| 4 | 3,1–3,9 h |
+| 12 | 1,0–1,3 h |
+| 24 | 0,5–0,7 h |
+
+Vertailun vuoksi: sama työ työnkulussa olisi 4 vCPU:lla yli kolme
+tuntia **shardia kohti** ja kymmeniä jobeja — juuri se, mihin kuuden
+tunnin katto ja neljä vCPU:ta eivät riitä.
+
+**Levytila.** z8 on noin **1,5–2,4 Gt** (69 628 laattaa à 22–33 kt);
+viiva- ja nostotason läpinäkyvät z8-laatat (8 680 ja 2 075 laattaa)
+ovat murto-osa siitä. Huomaa että luvun 6b taulukon 1,32…1,48 Gt on
+mitattu patinalla `taysi`, kun tuotanto on nyt `kevyt` — z8:n
+tavua/px (0,085…0,129) on selvästi z7:n mitattua (0,186…0,211)
+pienempi juuri siksi. R2:n ilmaisraja on 10 Gt, ja **vanhat versiot
+ämpärissä lasketaan siihen mukaan**, joten se on syytä tarkistaa ennen
+ajoa. Työkoneella tarvitaan sama tila, ellei `--siivoa` poista shardin
+laattoja onnistuneen viennin jälkeen (silloin levyllä on kerrallaan
+enintään ytimien verran shardeja, noin 18 Mt kukin).
+
+**1′-korkeuspalat** ovat 612 kappaletta à ~350 kt eli noin 215 Mt, ja
+ne noudetaan **kerran** julkisesta osoitteesta
+`https://media.matkakirja.app/julisteet/korkeus/1min/` (ei avaimia).
+Sen jälkeen poltossa ei ole yhtään verkkopyyntöä — kolmen tunnin ajo ei
+saa kaatua yhteen aikakatkaisuun.
+
+### Komennot vaihe vaiheelta
+
+```bash
+# 1. Avaimet ympäristöön — EI tiedostoon repossa, ei argumenteiksi.
+#    (Skripti kieltäytyy, jos avain annetaan argumenttina.)
+export AMPARI='<r2-ämpärin nimi>'
+export PAATE='https://<tili-id>.r2.cloudflarestorage.com'
+export AWS_ACCESS_KEY_ID='…'
+export AWS_SECRET_ACCESS_KEY='…'
+export AWS_DEFAULT_REGION=auto
+export AWS_REQUEST_CHECKSUM_CALCULATION=when_required
+export AWS_RESPONSE_CHECKSUM_VALIDATION=when_supported
+
+# 2. Koeajo: yksi z8-kaista, ei vientiä, ja arvio koko ajon kestosta.
+tools/polta-paikallisesti.sh --koe
+
+# 3. Koko z8 kaikilla ytimillä ja vienti ämpäriin.
+tools/polta-paikallisesti.sh --sarjat z8
+
+# 3b. Sama, jos levy on tiukalla (laatat poistetaan viennin jälkeen):
+tools/polta-paikallisesti.sh --sarjat z8 --siivoa
+
+# 4. Kaatunut shardi uudestaan (valmiit ohitetaan automaattisesti):
+tools/polta-paikallisesti.sh --vain z8-047
+tools/polta-paikallisesti.sh --sarjat z8      # jatkaa loput
+```
+
+Lokit ovat `<ulos>/lokit/<shardi>.log` (oletus
+`<repo>/pyramidi-poltto/lokit/`), ja valmis shardi jättää jälkeensä
+`<shardi>.valmis`-tiedoston, jonka perusteella se ohitetaan
+seuraavalla ajolla. `pyramidi-poltto/` on `.gitignore`ssa — sinne
+kertyy gigatavuja eikä yhtään sitä committoida.
+
+### Väliaikaraportit, uusinta ja eheystarkistus (7.9.2026)
+
+Omistajan kysymys uusintapolton jälkeen, sanatarkasti: *"Voiko Macin
+ajokoodia jotenkin vielä parantaa, jotta se antaisi väliaikaraportteja,
+missä mennään? Varsinkin pidempien ajojen aikana. […] Tullaan varmasti
+ajamaan noita juttuja vielä paljon."* Seitsemän ja puolen tunnin ajossa
+työnkulun loki oli hiljaa alusta loppuun: shardit kirjoittavat omiin
+lokeihinsa, eikä kukaan koonnut niistä kuvaa. Kolme lisäystä:
+
+**1. Edistymisraportti viiden minuutin välein.** Jokainen shardi
+kirjoittaa tilansa tiedostoon `lokit/<shardi>.tila` (avain=arvo:
+`tila`, `tehty`, `kaikki`, `alkoi`, `paivitetty`, `yritys`, `loki`).
+Luvut luetaan shardin omasta lokista — pyramidi tulostaa `laattoja
+123/824` joka laatan jälkeen, pallo `500/1234 laattaa` viidensadan
+välein — ja tehtyjen määrä varmistetaan levyltä, jotta pallon karkea
+loki ei jätä tahtia pimeään. Taustavahti kokoaa tilatiedostoista
+yhteenvedon (`tools/poltto-edistyminen.mjs`), tulostaa sen yhtenä
+`::notice::`-rivinä ja vie sen ämpäriin. Fable lukee sen ilman avaimia:
+
+```bash
+curl -s https://media.matkakirja.app/julisteet/poltto/<ajo-id>/edistyminen.json
+curl -s https://media.matkakirja.app/julisteet/poltto/<ajo-id>/valmis.json
+```
+
+Ajo-id on `GITHUB_RUN_ID` (työnkulku) tai aikaleima (paikallinen ajo),
+ja skripti tulostaa sen ja koko osoitteen heti alussa. Otsake on
+`no-store`: raportti muuttuu viiden minuutin välein, eikä siitä saa
+tarjoilla välimuistiversiota. `valmis.json` kirjoitetaan
+EXIT-ansassa, joten se syntyy myös kaatuneesta ja keskeytetystä ajosta.
+
+| kenttä | mitä |
+| --- | --- |
+| `ajo`, `vaihe`, `valmis`, `koodi` | ajon tunnus, vaihe (`pyramidi`/`luettelo`/`pallo`), lopputila |
+| `alkoi`, `hetki`, `kesto_min` | ensimmäisen shardin alku, raportin hetki, kulunut aika |
+| `shardit` | `kaikki`, `valmis`, `ajossa`, `kaatunut`, `jonossa` |
+| `laattoja` | `tehty`, `odotettu`, `osuus` (aloittamattoman shardin koko arvioidaan tunnettujen keskiarvolla) |
+| `laattaa_min` | **viimeisen välin** tahti, ei koko ajon keskiarvo |
+| `jaljella_min`, `arvio_valmis` | arvio jäljellä olevasta ajasta ja kellonajasta |
+| `ajossa_nyt` | mitkä shardit piirtävät juuri nyt ja kuinka pitkällä |
+| `kaatuneet` | shardi, yritysten määrä, loki ja sen viimeiset rivit |
+| `kesken` | vain valmis-raportissa: mitkä shardit jäivät ajamatta |
+
+Väli on `--raporttivali S` (oletus 300; `0` = ei raporttia).
+
+**2. Kaatunut shardi ajetaan kerran uudestaan** samalla komennolla omaan
+lokiinsa `lokit/<shardi>.uusinta.log`, ja vasta toinen kaatuminen
+merkitsee shardin kaatuneeksi. Muut shardit ajetaan silti loppuun
+(`xargs` jatkaa), ja loppuraportti kertoo, mitkä jäivät kesken. Ohimenevä
+vika — ämpärin `HTTP 429`, katkennut yhteys, Chromiumin kaatuminen —
+maksoi ennen tätä koko shardin ja käsin annetun uusinta-ajon. Shardin
+kansio tyhjennetään jokaisen yrityksen alussa: laattakohtaista ohitusta
+ei ole (shardi piirtää aina koko työlistansa), joten vanhoista laatoista
+ei ole hyötyä, mutta jos sama kansio on ajettu eri jaolla (`--pallo-osia`,
+`--sarakkeet`), levylle jääneet vieraat laatat laskettaisiin mukaan.
+
+**3. Eheystarkistus ennen luettelon vientiä.** Laattojen määrä lasketaan
+tasoittain ja verrataan **luettelon lupaukseen**: pohjataso on
+`sarakkeita × riveja` (tai laataston bittikartta), nosto-, viiva- ja
+rantataso ovat kerroksensa `laatastot[z]`-bittikartan ykkösbittejä ja
+pallon Mercator-taso on täysi ruudukko 4^Z. Jos laattoja puuttuu,
+**luetteloa ei viedä** — laatat ovat harmittomia ilman luetteloa, mutta
+luettelo ilman laattoja lupaisi pelille tiedostoja, joita ämpärissä ei
+ole — ja ajo poistuu virheellä puuttuvat tasot lueteltuaan. Jokainen
+shardi kirjaa laskentansa (`lokit/<shardi>.laskut`) ennen vientiä ja
+siivousta, joten tarkistus toimii myös `--siivoa`-ajossa. Ohitus on
+`--ohita-eheys`, eikä sitä pidä käyttää ennen kuin puute on ymmärretty.
+
+Todennettu kontissa 7.9.2026 (pallon sarja z0–z4, neljä shardia): yksi
+shardi kaadettiin keinotekoisesti kerran → uusinta vei sen läpi; toinen
+kaadettiin joka kerta → merkittiin kaatuneeksi, muut kolme ajettiin
+loppuun ja raportti nimesi kesken jääneen. Yhden laatan hukannut shardi
+jäi kiinni eheystarkistuksessa (`pallo z1 — poltettu 3, luettelo lupaa
+4`), eikä luetteloa viety. Ämpärin oikeaa `pyramidi.json`ia vasten
+lasketut odotukset ovat pohja z8 **69 628**, viivat z8 **7 391**, nostot
+z8 **2 075** ja ranta z8 **7 104**.
+
+Vain poltto ilman vientiä on `--ei-vie` ja pelkkä shardilista `--lista`.
+Jos jokin kolmesta versiosta vaihtuu, pallon sarja poltetaan perään:
+
+```bash
+# Nostokerros uusiksi ja pallon sarja sen mukana:
+tools/polta-paikallisesti.sh --sarjat z8 --nostoversio 2026-09-07a \
+  --pallo --pallotunniste d
+# → js/pallo.js: PALLO_LAATTATUNNISTE = 'd'
+```
+
+### Pallon sarja shardeihin ja vienti rinnakkain (7.9.2026)
+
+Omistajan kysymys uusintapolton jälkeen (run 34054242743, 7,5 h):
+*"Miksi vain yksi ydin?"*. Ajo jakautui näin:
+
+| vaihe | kesto | miksi |
+| --- | --- | --- |
+| pyramidi z0–z8, kaikki kerrokset | ~3 h | shardattu, kaikki ytimet |
+| pallon Mercator-sarja, 87 381 laattaa | ~3 h | **yksi prosessi** |
+| loppuvienti (~170 000 tiedostoa) | 55 min | yksi `aws s3 sync`, CLI:n oletus 10 yhtaikaista pyyntöä |
+
+Linjaus on siksi: **jokainen poltto jaetaan shardeihin kaikille
+ytimille; vienti rinnakkain** (Raamattu KAIKKI YTIMET JA LOPUTKIN
+MACILLE). Skripti **kieltäytyy** ajamasta pallon sarjaa yhtenä
+prosessina monen ytimen koneella.
+
+**Jako on sarakekaista, ei siivu laattaluettelosta.**
+`tools/tee-pallolaatat.mjs --osa i/n` antaa osalle i jokaiselta
+Mercator-tasolta n:nnen siivun sarakkeita (`kaistanRajat`), täsmälleen
+kuten pyramidin z7- ja z8-shardit jakavat arkin. Syy on mitattu: työ ei
+ole piirtoa vaan **lähdelaattojen noutoa** — kontissa 256 laattaa vei
+119 s seinäaikaa mutta vain 11,9 s prosessoriaikaa. Rivijärjestyksessä
+yksi Z8-rivi kiertää koko maailman ja koskee jokaista z7-saraketta
+(338), jolloin lähdelaattojen välimuisti (160 laattaa) ei riitä ja
+seuraava rivi noutaa samat laatat uudestaan. Kaistassa rivi koskee vain
+kouraa sarakkeita, ne pysyvät välimuistissa rivien yli, ja mitattu
+noutosuhde oli **0,71 lähdelaattaa laattaa kohti** (kaista Z8 x127).
+
+Osat ovat pistevieraat ja kattavat sarjan tasan, joten **n osaa tuottaa
+täsmälleen samat laatat kuin yksi ajo**: todennettu 7.9.2026 tavu
+tavulta tasoille 0–3 (85 laattaa, neljä shardia vs. yksi prosessi,
+`md5sum` täsmää jokaisesta). tests/pallo.test.mjs vartioi kattavuutta
+koneellisesti.
+
+Osien määrä (`--pallo-osia`, oletus ytimet × 3) on kompromissi: kapea
+kaista tasaa kuormaa, leveä noutaa vähemmän samoja lähdelaattoja kahteen
+kertaan — kaistan reunalla oleva z7-laatta osuu kahteen kaistaan, ja
+kapeimmillaan kaista on alle yhden z7-sarakkeen levyinen.
+
+**Rantavalinta luetaan luettelosta, ei tämän ajon lipuista.** Jos
+ämpärin `pyramidi.json`issa on rantataso, pohja on poltettu ilman
+rantaviivaa, ja pallon sarja kootaan `--ilman-rantaa` — vektoriviiva
+(`js/pallovektorit.js`) on silloin ainoa rantaviiva pallolla.
+`--pallon-ranta` palauttaa poltetun viivan, jos vektorikerrosta ei ole
+julkaistu. Shardi lukee saman valinnan luetteloajon `laatat.json`ista,
+joten yksittäisen osan uusinta ei voi koota eri sarjaa kuin muut.
+
+**Noutotahti ratkaisee keston.** Ämpäri vastasi 429:llä, kun kaksi
+tahdittamatonta ajoa haki lähdelaattoja (4.9.2026), ja
+`NOUTOVALI_OLETUS` 40 ms (25 noutoa/s) on se tahti, jolla kolmen tunnin
+ajo meni läpi ilman yhtään 429:ää. Rinnakkaiset osat pitävät
+yhteistahdin maltillisena: kukin tahdittaa itsensä `YHTEISTAHTI_MS`
+(15 ms) × rinnakkaiset prosessit, eli yhteensä noin **66 noutoa
+sekunnissa**. Polttoskripti laskee arvon rinnakkaisten PROSESSIEN
+määrästä (`--noutovali`), koska osia on ytimiä enemmän. Jos lokiin
+ilmestyy `HTTP 429`, arvoa nostetaan; jos ämpäri kestää enemmän, sitä
+lasketaan (`--noutovali 120` 24 prosessilla ≈ 200 noutoa/s).
+
+**Vienti.** `aws_viritys` nostaa CLI:n rinnakkaisuuden
+(`max_concurrent_requests = 32`, `max_queue_size = 10000`) sekä
+ympäristömuuttujina että omaan konfiguraatiotiedostoon
+(`$ULOS/aws-asetukset.conf`) — koneen omaan `~/.aws/config`iin ei
+kosketa. Jokainen `aws s3` -kutsu saa `--cli-connect-timeout`, jottei
+jumittunut yhteys pysäytä shardia. Jokainen shardi vie oman osansa heti
+valmistuttuaan, joten vienti kulkee polton rinnalla eikä sen perässä;
+pallon shardi käyttää `cp --recursive`-komentoa eikä `sync`iä, koska
+osan avaimet ovat sen omat eikä kohteen listaus (87 381 avainta) tuota
+mitään. Luettelo (`laatat.json`) viedään vasta viimeisenä, koska peli
+koettaa sen olemassaoloa ennen laattojen käyttöä.
+
+**Arvio uudesta kestosta** (24 ydintä, oletusasetukset): laskenta on
+noin 67 ydinminuuttia eli alle kolme minuuttia jaettuna, ja noutotahti
+asettaa lattian noin 20–30 minuuttiin — **kolmesta tunnista noin
+puoleen tuntiin**, ja vienti sisältyy siihen. Ensimmäinen oikea ajo
+kertoo tarkan luvun; lokeissa on shardikohtainen `laattaa, s`.
+
+```bash
+# Pelkkä pallon sarja uudestaan (pyramidi on jo ämpärissä):
+tools/polta-paikallisesti.sh --vain-pallo --pallotunniste f --siivoa
+# Sama työnkulusta: sarjat = pallo, lisäargumentit "--pallotunniste f --siivoa"
+
+# Yksi kaatunut pallon shardi (sama --pallo-osia kuin ajossa):
+tools/polta-paikallisesti.sh --vain pallo-017 --pallo-osia 72 \
+  --pallotunniste f
+
+# Shardilista ilman ajoa:
+tools/polta-paikallisesti.sh --vain-pallo --pallotunniste f --lista
+```
+
+Valmis osa jättää jälkeensä `lokit/pallo-NNN.valmis`-merkin ja ohitetaan
+seuraavalla ajolla (`--uudestaan` ajaa nekin); kaatuneen osan loki
+`lokit/pallo-NNN.log` näkyy työnkulun *Kaatuneiden shardien lokit*
+-askeleessa samalla säännöllä kuin pyramidin shardit.
+
+### Rantaviiva omalla tasollaan (`--ilman-rantaviivaa`)
+
+Omistajan päätös 6.9.2026 ilta, sanatarkasti: *"joo poltetaan vain
+uudestaan ilman viivaa nyt kun on mac studio viritetty"*. Rantaviivan
+muste siirtyy pohjalaatoista NELJÄNTEEN läpinäkyvään pyramidiin
+(`<rantaversio>/ranta/z…`), jotta karttapallo voi jättää sen lataamatta
+ja piirtää tilalle pikselin levyisen vektoriviivan
+(docs/moduulit/pallon-vektoriviivat.md, luvut 4.5 ja 6, erä V4).
+Tasokartalla kuva ei muutu: se lataa rantatason pohjan päälle
+(pohja → **ranta** → viiva → nosto).
+
+Pohjan sisältö muuttuu, joten **koko pyramidi poltetaan uuteen
+versioon** — z8:n lisäystä olemassa oleviin versioihin tämä ei ole.
+Skripti vaatii siksi uudet versiot kaikille kerroksille, ja koska
+pohjan versio vaihtuu, myös pallon oma Mercator-sarja (lepokerroksen
+versiovahti, js/pallo.js `lepokerroksenKerrokset`):
+
+```bash
+tools/polta-paikallisesti.sh --sarjat kaikki --ilman-rantaviivaa \
+  --versio 2026-09-07a \
+  --rantaversio 2026-09-07a-ranta \
+  --viivaversio 2026-09-07a-viivat \
+  --nostoversio 2026-09-07a-nostot \
+  --pallo --pallotunniste e --siivoa
+```
+
+Mitä se ajaa:
+
+| shardit | mitä |
+| --- | --- |
+| `z0-z6`, `z7a`–`z7d`, `z8-001`…`z8-085` | pohja **ilman rantaviivaa** |
+| `viiva-z0-z7`, `viiva-z8-01`…`-11` | reitit, rajat, piirit (uusi versio) |
+| `nosto-z5-z7`, `nosto-z8` | poltetut merkit (uusi versio) |
+| `ranta-z0-z7`, `ranta-z8-01`…`-11` | **rantaviiva** (uusi taso) |
+
+Rantatason laattoja on 12 096 (z0–z7 4 992, z8 7 104) eli suunnilleen
+saman verran kuin viivatasolla, ja ne piirtyvät ilman korkeusruudukkoa
+— tason oma osuus ajasta on minuutteja, ei tunteja.
+
+Luettelo kootaan kokonaan uutena (`--sarjat kaikki` ei tee
+z8-yhdistystä eikä `vertaa_luettelo`-tarkistusta), ja luettelojobi
+saa `--data`-kansion, koska rantatason peite lasketaan Natural Earthin
+rantaviivasta.
+
+Pallon sarja poltetaan tässä tilassa **ilman rantatasoa**
+(`tools/tee-pallolaatat.mjs --ilman-rantaa`), koska pallolla
+rantaviiva on vektori; `--pallon-ranta` palauttaa sen, jos
+vektorikerrosta ei ole vielä julkaistu.
+
+**Julkaisussa muuttuvat koodirivit** (Fable tekee, ei tämä skripti):
+
+| tiedosto | vakio | uusi arvo |
+| --- | --- | --- |
+| js/pallo.js | `PALLO_LAATTAVERSIO` | pohjan uusi versio |
+| js/pallo.js | `PALLO_LAATTATUNNISTE` | `--pallotunniste`-kirjain |
+
+Pyramidin oma versio, viiva-, nosto- ja rantaversio ovat luettelossa
+eivätkä koodissa, joten js/laattapyramidi.js ei muutu.
+
+**Mitä uusintapoltto maksaa kuvassa.** Rantaviiva oli pohjapiirron
+osiossa 4 eli järvien, jokien, paperin rakeen ja reunahäivytyksen
+ALLA; omalla tasollaan se on niiden PÄÄLLÄ, ja patina ajetaan sille
+läpinäkyvän musteen reseptillä (RESEPTIT.nosto) kuten nosto- ja
+viivatasolle. Mitattu Ateenan otoksesta (z0–z4, 1,26 Mpx, PNG:t
+scratchpadissa; vanha pohja vs. rannaton pohja + rantataso päällä):
+
+| mitta | luku |
+| --- | --- |
+| pikseleitä, joissa mikä tahansa ero | 25,0 % |
+| ero > 8/255 | 7,4 % |
+| ero > 16/255 | 3,2 % |
+| suurin ero | 60/255 |
+| z4: musteen omalla alalla (10,1 % laatasta) | keskiero 10,4/255 |
+| z4: musteen ULKOPUOLELLA | keskiero 1,7/255 |
+| z4: vahvan musteen luminanssi (uusi − vanha) | +6,7/255 (hitusen vaaleampi) |
+
+Ero on siis **rantaviivan oman 3 pikselin vyön sisällä** eikä
+kartalla muualla; silmällä laatat ovat samat (montaasit
+scratchpadissa). Sama luokka kuin reittien ja rajojen siirto
+viivatasolle 31.8.2026. Ilman rantatason patinaa vahva muste olisi
+25,7 yksikköä TUMMEMPI kuin ennen — siksi taso ajetaan
+RESEPTIT.nosto-patinalla eikä ilman.
+
+Työnkulkuun (.github/workflows/generoi-pyramidi.yml) rantatasoa **ei
+lisätty**: se vaatisi uuden syötteen, uuden matriisirivin, oman
+vientihaaran ja `--ilman-rantaviivaa`-lipun jokaiselle pohjashardille
+— eikä se olisi yhden rivin lisäys. Ja koska pohja on tässä joka
+tapauksessa poltettava kokonaan uudestaan, ajo tehdään Mac Studiolla
+tällä skriptillä, kuten z8:kin.
+
+Työnkulkuun z8:aa **ei lisätty**. Matriisiin mahtuisi kyllä 85 kaistaa,
+mutta jokainen job maksaisi oman `npm install`- ja
+Chromium-asennuksensa ja oman aineistonoutonsa, ja shardin
+argumenttirakenne pitäisi opettaa `--tasoja 9`:ään — enemmän muutosta
+ja enemmän minuutteja kuin koko ajo tällä koneella. Työnkulku jää
+z0–z7:n napiksi, ja z8 on paikallinen ajo.
 
 ## 11. Siirtymä
 

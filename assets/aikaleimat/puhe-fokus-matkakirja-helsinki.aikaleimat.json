@@ -1,0 +1,169 @@
+{
+  "versio": 2,
+  "kaupunki": "helsinki",
+  "teksti": "Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi rasvajälki. Harvoin olen saanut yhtä täsmällistä paikallistietoa.",
+  "tekstiSha256": "f348050cd2622c928d369f2e017a38fd5d1813bfaeba8c4b8cbe77bb698fe995",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-helsinki.mp3",
+    "versio": 2,
+    "tavut": 382476,
+    "sha256": "6f88a886bdf2628662e83cb6a4a325b8f7b39852840b8de7ae27116ce1f8db32"
+  },
+  "kesto": 23820,
+  "sanat": [
+    {
+      "sana": "Kirkon",
+      "alku": 100,
+      "loppu": 440
+    },
+    {
+      "sana": "apostolit",
+      "alku": 520,
+      "loppu": 1040
+    },
+    {
+      "sana": "katsoivat",
+      "alku": 1080,
+      "loppu": 1600
+    },
+    {
+      "sana": "merelle",
+      "alku": 1640,
+      "loppu": 2100
+    },
+    {
+      "sana": "Torilla",
+      "alku": 3480,
+      "loppu": 3860
+    },
+    {
+      "sana": "kalakauppias",
+      "alku": 3900,
+      "loppu": 4660
+    },
+    {
+      "sana": "punnitsi",
+      "alku": 4720,
+      "loppu": 5120
+    },
+    {
+      "sana": "silakoita",
+      "alku": 5180,
+      "loppu": 5840
+    },
+    {
+      "sana": "Kummankin",
+      "alku": 7340,
+      "loppu": 7840
+    },
+    {
+      "sana": "työ",
+      "alku": 7880,
+      "loppu": 8080
+    },
+    {
+      "sana": "vaikutti",
+      "alku": 8140,
+      "loppu": 8580
+    },
+    {
+      "sana": "vakavalta",
+      "alku": 8640,
+      "loppu": 9360
+    },
+    {
+      "sana": "Tuuli",
+      "alku": 11040,
+      "loppu": 11300
+    },
+    {
+      "sana": "nosti",
+      "alku": 11360,
+      "loppu": 11620
+    },
+    {
+      "sana": "karttani",
+      "alku": 11680,
+      "loppu": 12180
+    },
+    {
+      "sana": "nainen",
+      "alku": 13040,
+      "loppu": 13380
+    },
+    {
+      "sana": "painoi",
+      "alku": 13440,
+      "loppu": 13820
+    },
+    {
+      "sana": "sen",
+      "alku": 13860,
+      "loppu": 14020
+    },
+    {
+      "sana": "silakalla",
+      "alku": 14080,
+      "loppu": 14580
+    },
+    {
+      "sana": "paikoilleen",
+      "alku": 14640,
+      "loppu": 15320
+    },
+    {
+      "sana": "Suomenlahdelle",
+      "alku": 16820,
+      "loppu": 17600
+    },
+    {
+      "sana": "jäi",
+      "alku": 17760,
+      "loppu": 17920
+    },
+    {
+      "sana": "rasvajälki",
+      "alku": 17980,
+      "loppu": 18860
+    },
+    {
+      "sana": "Harvoin",
+      "alku": 20760,
+      "loppu": 21140
+    },
+    {
+      "sana": "olen",
+      "alku": 21180,
+      "loppu": 21360
+    },
+    {
+      "sana": "saanut",
+      "alku": 21420,
+      "loppu": 21780
+    },
+    {
+      "sana": "yhtä",
+      "alku": 21900,
+      "loppu": 22100
+    },
+    {
+      "sana": "täsmällistä",
+      "alku": 22160,
+      "loppu": 22800
+    },
+    {
+      "sana": "paikallistietoa",
+      "alku": 22840,
+      "loppu": 23820
+    }
+  ],
+  "lauseet": [
+    100,
+    3480,
+    7340,
+    11040,
+    16820,
+    20760
+  ],
+  "luotu": "2026-09-23T15:39:27.725Z"
+}

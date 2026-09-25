@@ -1,0 +1,193 @@
+{
+  "versio": 2,
+  "kaupunki": "bukarest",
+  "teksti": "Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.",
+  "tekstiSha256": "9aa99a8e547b9e90f8ce312591f1b790db679a227fd3ff2ce65233e40a825c5c",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-bukarest.mp3",
+    "versio": 2,
+    "tavut": 379968,
+    "sha256": "4af6bb5887a514147116306a891b75f0837dcd7dca599e24cc214e6391987553"
+  },
+  "kesto": 23660,
+  "sanat": [
+    {
+      "sana": "Bukarestin",
+      "alku": 180,
+      "loppu": 760
+    },
+    {
+      "sana": "uutta",
+      "alku": 840,
+      "loppu": 1060
+    },
+    {
+      "sana": "raitiovaunua",
+      "alku": 1100,
+      "loppu": 1880
+    },
+    {
+      "sana": "vetivät",
+      "alku": 1920,
+      "loppu": 2280
+    },
+    {
+      "sana": "hevoset",
+      "alku": 2320,
+      "loppu": 2860
+    },
+    {
+      "sana": "Nousin",
+      "alku": 4140,
+      "loppu": 4480
+    },
+    {
+      "sana": "kyytiin",
+      "alku": 4540,
+      "loppu": 5000
+    },
+    {
+      "sana": "ja",
+      "alku": 5040,
+      "loppu": 5120
+    },
+    {
+      "sana": "kehuin",
+      "alku": 5160,
+      "loppu": 5520
+    },
+    {
+      "sana": "ajurille",
+      "alku": 5620,
+      "loppu": 6080
+    },
+    {
+      "sana": "kaupungin",
+      "alku": 6140,
+      "loppu": 6620
+    },
+    {
+      "sana": "edistystä",
+      "alku": 6700,
+      "loppu": 7460
+    },
+    {
+      "sana": "Hän",
+      "alku": 8880,
+      "loppu": 9020
+    },
+    {
+      "sana": "pyysi",
+      "alku": 9060,
+      "loppu": 9320
+    },
+    {
+      "sana": "kehumaan",
+      "alku": 9380,
+      "loppu": 9800
+    },
+    {
+      "sana": "hevosia",
+      "alku": 9840,
+      "loppu": 10340
+    },
+    {
+      "sana": "ne",
+      "alku": 11220,
+      "loppu": 11320
+    },
+    {
+      "sana": "vetivät",
+      "alku": 11360,
+      "loppu": 11800
+    },
+    {
+      "sana": "meidät",
+      "alku": 11840,
+      "loppu": 12360
+    },
+    {
+      "sana": "Pysähdyimme",
+      "alku": 14080,
+      "loppu": 14640
+    },
+    {
+      "sana": "juottamaan",
+      "alku": 14680,
+      "loppu": 15200
+    },
+    {
+      "sana": "niitä",
+      "alku": 15240,
+      "loppu": 15520
+    },
+    {
+      "sana": "Kiskot",
+      "alku": 17140,
+      "loppu": 17520
+    },
+    {
+      "sana": "olivat",
+      "alku": 17560,
+      "loppu": 17820
+    },
+    {
+      "sana": "suorat",
+      "alku": 17900,
+      "loppu": 18320
+    },
+    {
+      "sana": "vaunu",
+      "alku": 18920,
+      "loppu": 19320
+    },
+    {
+      "sana": "komea",
+      "alku": 19380,
+      "loppu": 19740
+    },
+    {
+      "sana": "mutta",
+      "alku": 20660,
+      "loppu": 20920
+    },
+    {
+      "sana": "koko",
+      "alku": 20980,
+      "loppu": 21240
+    },
+    {
+      "sana": "uudistus",
+      "alku": 21340,
+      "loppu": 21860
+    },
+    {
+      "sana": "hengitti",
+      "alku": 21920,
+      "loppu": 22600
+    },
+    {
+      "sana": "ja",
+      "alku": 22640,
+      "loppu": 22720
+    },
+    {
+      "sana": "tarvitsi",
+      "alku": 22780,
+      "loppu": 23220
+    },
+    {
+      "sana": "vettä",
+      "alku": 23280,
+      "loppu": 23660
+    }
+  ],
+  "lauseet": [
+    180,
+    4140,
+    8880,
+    14080,
+    17140
+  ],
+  "luotu": "2026-09-23T15:35:30.520Z"
+}

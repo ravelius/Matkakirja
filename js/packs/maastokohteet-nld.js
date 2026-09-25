@@ -27,11 +27,70 @@
  * mahdollista olemassa olevaa fokuskohteet-pakkia EI ole tarvinnut
  * koskea eikä yhtään sen kohdetta ole toistettu täällä.
  *
+ * ── K2-ERÄ 3 6.9.2026: KAHDEKSAN KOHDETTA MAASTON RINNALLE ────────
+ *
+ * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+ * Alankomaissa oli kolme maastokohdetta ja nolla kuratoitua kohdetta
+ * (docs/moduulit/karttanostot-kattavuus.md). Tavoite on kahdeksan
+ * KOHDETTA maastokohteiden lisäksi, ja tässä ne ovat. Malli on sama
+ * kuin K2-erässä 1 (js/packs/maastokohteet-isl.js, -che.js).
+ *
+ * MIKSI NE OVAT TÄSSÄ TIEDOSTOSSA EIVÄTKÄ fokuskohteet-nld.js:ssä.
+ * Kohdepakki tarvitsisi rivin js/fokuskohteet.js:n KOHDE_MAAT-tauluun
+ * ja lehden poltettujen nimien lohkon (js/packs/fokus-grc.js
+ * FOKUS_LISANIMET, tests/fokusnimet.test.mjs). Kumpaakaan ei tehdä
+ * tässä erässä: KOHDE_MAAT on rinnakkaisen erän hallussa, ja
+ * lisänimien lohko ladotaan ämpärin `<ISO>.json`-tiedostosta, jota
+ * repossa ei ole. Tämän tiedoston lista liittyy peliin hakemiston
+ * kautta (js/packs/maastokohteet.js), joten kohteet ovat kartalla heti.
+ *
+ * KAIKKI KAHDEKSAN OVAT KAUKANA PELIKAUPUNGISTA. Lähin uusi merkki on
+ * Domtoren 15,2 lautayksikön päässä Amsterdamista, eli yli kaupungin
+ * kohdalla -säteen (KAUPUNGIN_KOHDALLA_SADE 7, js/fokuskohteet.js) ja
+ * yli kaupunkikaton säteen (KAUPUNKIKATON_SADE 8). Kaikki kahdeksan
+ * ovat siis pääkartan merkkejä.
+ *
+ * MITÄ JÄTETTIIN POIS JA MIKSI (sääntö N3, sama nimi kartalla vain
+ * kerran): Afsluitdijk, Delft, Alkmaar ja Loevesteinin linna ovat jo
+ * Amsterdamin fokusvirran nostoja omalla karttapaikallaan
+ * (js/packs/fokusvirta-amsterdam.js), ja Schokland on maalehden oma
+ * nosto (js/packs/maakartat.js NLD). Zaanse Schans jäi pois, koska se
+ * on Amsterdamin kohdalla. Kinderdijkin tuulimyllyt olisivat olleet
+ * ilmeisin valinta, mutta niiden nimiö osui Van Meegeren -skandaalin
+ * nimiön päälle Rotterdamissa (tools/tarkista-nimiolimitys.mjs), joten
+ * vesitekniikan paikan sai Woudagemaal.
+ *
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä): kortti kantaa nyt kaksi tarkistettua
+ * Commons-kuvaa.
+ * Faktat on tarkistettu en-Wikipediasta kohde kerrallaan 6.9.2026.
+ *
  * Alankomaiden maastokohteet. Faktat en-Wikipediasta 29.8.2026. Pieni maa: kolme kohdetta.
  */
 export const MAASTOKOHTEET_NLD = [
   {
     id: 'vaalserberg',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-vaalserberg-57f9a84c.jpg',
+      lyhyt: 'Vaalserbergin metsäinen kukkula Vaalsin ympäristön peltojen takana.',
+      selite: 'Alankomaiden kaakkoiskulmassa Limburgissa kohoava kukkula näkyy lännestä katsottuna vihreän maiseman yllä.',
+      lahde: 'Valokuva: Romaine, Wikimedia Commons (CC0).',
+      tekija: 'Romaine',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vaals-Vaalserberg_gezien_vanuit_het_westen.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-vaalserberg-1ace4a86.jpg',
+        lyhyt: 'Näkymä metsäisen Vaalserbergin ylle Wilhelminatornista.',
+        selite: 'Lehtimetsä peittää kukkulaa, ja metsän halki kulkee polku tai tie.',
+        lahde: 'Valokuva: Ziko van Dijk, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Ziko van Dijk',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2017-05_Vaalserberg_03.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Vaalserberg',
     tyyppi: 'vuori',
     kysymykset: [
@@ -51,9 +110,42 @@ export const MAASTOKOHTEET_NLD = [
       + 'kohta aina vuoteen 2010, jolloin Karibian Saba 887-metrisine tulivuorineen liitettiin '
       + 'maahan erityiskuntana.',
     lahde: 'en-Wikipedia "Vaalserberg", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mikä muutti Vaalserbergin aseman maan korkeimpana kohtana vuonna 2010?',
+      vaihtoehdot: [
+        'Karibian Saba liitettiin maahan',
+        'Vaalserberg vajosi merenpinnan alle',
+        'NAP-taso määriteltiin uudelleen',
+        'Limburg erosi kuningaskunnasta',
+      ],
+      oikea: 0,
+      fakta: 'Karibian Saba on 887-metrinen tulivuori, joka liitettiin kuningaskuntaan erityiskuntana vuonna 2010.',
+    },
   },
   {
     id: 'pohjanmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-pohjanmeri-f1f4a0dc.jpg',
+      lyhyt: 'Pohjanmeren aallot ja leveä hiekkaranta Texelin saarella.',
+      selite: 'Aallot rullaavat pitkälle hiekkarannalle, ja rantaviivan takana kohoavat dyynit.',
+      lahde: 'Valokuva: Txllxt TxllxT, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Txllxt TxllxT',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Texel_-_De_Koog_-_Kogerstrand_-_North_Sea_Beach_-_View_WNW.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-pohjanmeri-3db7140b.jpg',
+        lyhyt: 'Pohjanmeren hiekkaranta Texelin De Koogin kohdalla.',
+        selite: 'Tuuli ja aallot ovat muovanneet leveän rannan, jonka taustalla siintää dyynivyöhyke.',
+        lahde: 'Valokuva: Txllxt TxllxT, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Txllxt TxllxT',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Texel_-_De_Koog_-_Kogerstrand_-_North_Sea_Beach_-_View_NNE.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Pohjanmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -71,9 +163,32 @@ export const MAASTOKOHTEET_NLD = [
       + 'kanaalin kautta ja pohjoisessa Norjanmereen. Pituutta sillä on yli 970 kilometriä, '
       + 'leveyttä 580 ja pinta-alaa 570 000 neliökilometriä.',
     lahde: 'en-Wikipedia "North Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Minkä kanavan kautta Pohjanmeri yhtyy Atlanttiin etelässä?',
+      vaihtoehdot: [
+        'Kielin kanavan',
+        'Englannin kanaalin',
+        'Suezin kanavan',
+        'Panaman kanavan',
+      ],
+      oikea: 1,
+      fakta: 'Etelässä Pohjanmeri yhtyy Atlanttiin Englannin kanaalin kautta.',
+    },
   },
   {
     id: 'maas',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-maas-0fd12d1f.jpg',
+      lyhyt: 'Maas virtaa Maastrichtin läpi, ja joen yli kaartuu silta.',
+      selite: 'Leveä joki halkoo kaupunkia, ja rantojen rakennukset näkyvät sillan takana.',
+      lahde: 'Valokuva: Mark Ahsmann, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Mark Ahsmann',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:20150312_Maastricht%3B_Meuse_seen_from_Kennedybrug_to_the_north_04.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+    ],
     nimi: 'Maas',
     tyyppi: 'joki',
     kysymykset: [
@@ -92,6 +207,496 @@ export const MAASTOKOHTEET_NLD = [
       + 'Rein–Maas–Schelde-suistosta, samasta suistosta kuin Reinkin. Alankomaissa se on Reinin '
       + 'ohella maan kaksi suurta vesireittiä.',
     lahde: 'en-Wikipedia "Meuse", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mistä maasta Maas-joki saa alkunsa?',
+      vaihtoehdot: [
+        'Saksasta',
+        'Belgiasta',
+        'Ranskasta',
+        'Luxemburgista',
+      ],
+      oikea: 2,
+      fakta: 'Maas nousee Ranskasta ja virtaa Belgian ja Alankomaiden läpi ennen Pohjanmerta.',
+    },
+  },
+  /* ================================================================
+   * K2-ERÄ 3 6.9.2026 — KAHDEKSAN KOHDETTA. Perustelut tiedoston alussa.
+   *
+   * Uusilla kohteilla on vain maailmankartan rivi: Euroopan
+   * erillislaudasta on luovuttu (Raamattu 30.8.2026), eikä uutta
+   * `europe`-koordinaattia siksi lasketa. Yllä olevien maastokohteiden
+   * vanhoihin riveihin ei ole koskettu.
+   * ============================================================== */
+  {
+    id: 'woudagemaal',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/nld-kohde-woudagemaal-762e8a2302a9.jpg',
+      lyhyt: 'Woudagemaalin höyrypumppaamo Frieslandissa.',
+      selite: 'Vuonna 1920 avattu Woudagemaal voi yhä käynnistää höyrykoneensa ja pumpata Frieslandista 4 000 kuutiometriä vettä minuutissa.',
+      lahde: 'Valokuva: bertknot, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'bertknot',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:D.F._Wouda_Steam_Pumping_Station_(16)_(44492155982).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+    },
+    nimi: 'Woudagemaal',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Mikä pumppaamo on?',
+      'Miksi höyrykone on yhä käytössä?',
+    ],
+    korostukset: ['höyrypumppaamo|höyrypumppaamo'],
+    nappi: 'Maailman suurin toimiva höyrypumppaamo',
+    // 5.67889 E / 52.84583 N — en-Wikipedia "Wouda pumping station"
+    laudat: {
+      maailmankartta: { x: 6022.6, y: 1264.2 },
+    },
+    teksti: 'Woudagemaal on pumppaamo Frieslandissa Pohjois-Alankomaissa ja maailman suurin '
+      + 'yhä toimiva höyrypumppaamo. Kuningatar Vilhelmiina avasi sen 7. lokakuuta 1920, ja '
+      + 'sen tehtävä oli pumpata ylimääräinen vesi pois maakunnasta; teho on 4 000 '
+      + 'kuutiometriä minuutissa. Rakennuksen suunnitteli maakunnan vesilaitoksen '
+      + 'pääinsinööri D. F. Wouda, jonka mukaan asema on nimetty; ukonilma iski '
+      + 'rakennusaikana vasta valmistuneeseen suojaamattomaan savupiippuun, joka jouduttiin '
+      + 'tekemään kokonaan uudestaan. Koneistona on neljä 500 hevosvoiman '
+      + 'höyrykonetta ja kahdeksan keskipakopumppua; hiilikattilat muutettiin vuonna 1967 '
+      + 'raskaalle polttoöljylle. Asemaa käytetään nykyään noin kerran vuodessa, kun '
+      + 'Frieslandin vedenpinta nousee poikkeuksellisen korkealle, ja se on ollut '
+      + 'maailmanperintökohde vuodesta 1998.',
+    lahde: 'en-Wikipedia "Wouda pumping station", johdanto-osa sekä osiot "History", "Power '
+      + 'and engines" ja "Operation" (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'deltatyot',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-deltatyot-c26ae542.jpg',
+      lyhyt: 'Oosterscheldekeringin patoluukkujen valkoiset tornit tuulivoimaloiden edessä.',
+      selite: 'Pato ulottuu Oosterschelden suulle, ja sen betonipilarit nousevat vedestä.',
+      lahde: 'Valokuva: Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Dietmar Rabich',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vrouwenpolder_(NL),_Oosterscheldekering_--_2022_--_5023.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-deltatyot-6e7ba321.jpg',
+        lyhyt: 'Oosterscheldekering etäältä hiekkarannan ja matalan veden takaa.',
+        selite: 'Pitkä myrskyvyöry-este ulottuu poikki salmen Zeelandissa.',
+        lahde: 'Valokuva: Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Dietmar Rabich',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vrouwenpolder_(NL),_Oosterscheldekering_--_2022_--_5016.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Deltatyöt',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Mikä vuoden 1953 Pohjanmeren tulva oli?',
+      'Miksi Oosterscheldea ei suljettu kokonaan?',
+    ],
+    korostukset: ['myrskypuomi|myrskypuomiksi'],
+    nappi: 'Padot, jotka lyhensivät rannikkoa',
+    // 3.72 E / 51.65 N — en-Wikipedia "Delta Works", artikkelin oma koordinaatti
+    laudat: {
+      maailmankartta: { x: 5957.3, y: 1317.7 },
+    },
+    teksti: 'Deltatyöt on sarja rakennushankkeita Lounais-Alankomaissa: ne suojaavat Reinin, '
+      + 'Maasin ja Schelden suiston seutua mereltä. Ne tehtiin vuosina 1954–1997, ja niihin '
+      + 'kuuluu patoja, sulkuja, penkereitä ja myrskypuomeja Etelä-Hollannin ja Zeelandin '
+      + 'maakunnissa; ajatus oli lyhentää maan rannikkoviivaa, jolloin korotettavia patoja '
+      + 'tarvitaan vähemmän. Työ alkoi vuoden 1953 Pohjanmeren tulvan jälkeen asetetun '
+      + 'komission selvityksestä, joka määritti hyväksyttävän tulvariskin alueittain — '
+      + 'Pohjois- ja Etelä-Hollannille yksi tulva kymmenessätuhannessa vuodessa. Alun perin '
+      + 'Oosterschelden suu oli tarkoitus padota kokonaan, mutta se olisi tappanut koko '
+      + 'suolaisen veden eliöstön ja ostereiden pyynnin, joten ympäristöväki ja kalastajat '
+      + 'saivat parlamentin muuttamaan suunnitelman myrskypuomiksi. Puomi suljetaan vasta '
+      + 'kun meren odotetaan nousevan kolme metriä keskiveden yläpuolelle; muina aikoina '
+      + 'suisto on auki ja vuorovesi kulkee siitä läpi.',
+    lahde: 'en-Wikipedia "Delta Works", johdanto-osa sekä osiot "Delta law and conceptual '
+      + 'framework" ja "The storm-surge barrier" (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'vredespaleis',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-vredespaleis-6ff2e643.jpg',
+      lyhyt: 'Vredespaleis eli Rauhanpalatsi Haagissa.',
+      selite: 'Tiilinen palatsi tornineen ja koristeellisine julkisivuineen toimii kansainvälisten oikeusistuinten kotina.',
+      lahde: 'Valokuva: Carl Sotomil, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Carl Sotomil',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Den_Haag_Peace_Palace_September_2016.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-vredespaleis-9bdfd950.jpg',
+        lyhyt: 'Rauhanpalatsi Haagin Carnegieplein-aukiolta katsottuna.',
+        selite: 'Palatsin pääjulkisivu, torni ja portti kohoavat rakennusta ympäröivän puiston yllä.',
+        lahde: 'Valokuva: Steven Lek, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Steven Lek',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Peace_Palace_The_Hague_1.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Vredespaleis',
+    tyyppi: 'historia',
+    taso: 1,
+    kysymykset: [
+      'Mikä pysyvä välitystuomioistuin on?',
+      'Kuka maksoi rauhanpalatsin?',
+    ],
+    korostukset: ['välitystuomioistuin|välitystuomioistuimelle'],
+    nappi: 'Talo, joka rakennettiin sotien lopettamiseksi',
+    // 4.2955 E / 52.0866 N — en-Wikipedia "Peace Palace". Kartta-ankkuri on siirretty
+    // 3 yksikköä länteen, jotta Vredespaleisin ja Naundorffin nimiöt eivät leikkaa.
+    laudat: {
+      maailmankartta: { x: 5973.5, y: 1298.2 },
+    },
+    teksti: 'Vredespaleis eli Rauhanpalatsi on kansainvälinen oikeustalo Haagissa. Se avattiin '
+      + '28. elokuuta 1913 taloksi pysyvälle välitystuomioistuimelle, joka oli perustettu '
+      + 'vuoden 1899 Haagin sopimuksella lopettamaan sodat. Taustalla oli 1800-luvun lopun '
+      + 'varustelukilpa: Venäjän tsaari Nikolai II ehdotti kokousta, jossa kehitettäisiin '
+      + 'rauhanomaisia keinoja valtioiden riitojen ratkaisuun, ja Haagiin saapui 26 valtion '
+      + 'lähetystöt Euroopasta, osmanien valtakunnasta, Yhdysvalloista, Meksikosta, Kiinasta, '
+      + 'Japanista, Siamista ja Persiasta. Talon 1,5 miljoonan dollarin rakennusrahat hankki '
+      + 'yhdysvaltalainen diplomaatti Andrew Dickson White skotlantilaissyntyiseltä '
+      + 'teräsmagnaatilta Andrew Carnegieltä. Palatsissa istuu vuodesta 1946 myös '
+      + 'kansainvälinen tuomioistuin, Yhdistyneiden kansakuntien tärkein oikeuselin.',
+    lahde: 'en-Wikipedia "Peace Palace", johdanto-osa ja osio "Background" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'domtoren',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-domtoren-7f1f0afb.jpg',
+      lyhyt: 'Utrechtin Domtoren kohoaa Oudegrachtin kaupunkimaiseman yllä.',
+      selite: 'Korkea kivinen kirkontorni hallitsee kaupungin siluettia kanavan ja vanhojen rakennusten takana.',
+      lahde: 'Valokuva: Michielverbeek, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Michielverbeek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Utrecht,_de_Domtoren_(RM36075)_vanaf_de_Oudegracht_230_ongeveer_foto5_2015-11-01_08.56.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-domtoren-ab363aa2.jpg',
+        lyhyt: 'Domtoren Stadhuisbrugilta katsottuna Utrechtissa.',
+        selite: 'Korkea kirkontorni nousee kaupungin rakennusten yläpuolelle, ja edessä kulkee kanavan silta.',
+        lahde: 'Valokuva: Andy Li, Wikimedia Commons (CC0).',
+        tekija: 'Andy Li',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:View_of_Utrecht_Dom_Tower_from_Stadhuisbrug_2024-11-28.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+      },
+    ],
+    nimi: 'Domtoren',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Miksi Domtoren seisoo yksin?',
+      'Kuka vastusti tornin rakentamista?',
+    ],
+    korostukset: ['karillon|soittokellon'],
+    nappi: 'Alankomaiden korkein kirkontorni',
+    // 5.1214 E / 52.09065 N — en-Wikipedia "Dom Tower of Utrecht"
+    laudat: {
+      maailmankartta: { x: 6004, y: 1298.1 },
+    },
+    teksti: 'Domtoren on 112,3 metrillään Alankomaiden korkein kirkontorni ja Utrechtin tunnus. '
+      + 'Se rakennettiin vuosina 1321–1382 osaksi Pyhän Martinuksen katedraalia eli Domin '
+      + 'kirkkoa, ja piirustukset teki John of Hainaut; katedraali jäi rahapulan takia '
+      + 'kokonaan valmistumatta. Kun keskeneräinen keskilaiva romahti vuonna 1674, torni jäi '
+      + 'seisomaan erilleen — ja se seisoo siinä kohdassa, jossa Utrecht sai alkunsa lähes '
+      + 'kaksituhatta vuotta sitten. Saarnaaja Geert Groote paheksui hanketta aikanaan '
+      + 'turhamaisena: liian korkea, liian kallis eikä edes kaunis. Tornissa on '
+      + 'neljäntoista soittokellon sarja, painoltaan yhteensä 32 tonnia, ja kelloja soittaa '
+      + 'yhä käsin Utrechtin kellonsoittajien kilta.',
+    lahde: 'en-Wikipedia "Dom Tower of Utrecht", johdanto-osa sekä osiot "Design and '
+      + 'construction" ja "Ringing Bells" (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'bourtange',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/nld-kohde-bourtange-a6a4bc212558.jpg',
+      lyhyt: 'Bourtangen entisöidyn tähtilinnoituksen portti.',
+      selite: 'Suon halki kulkenutta tietä vartioinut Bourtange palautettiin 1900-luvulla tähtilinnoituksen 1740-luvun asuun.',
+      lahde: 'Valokuva: Piotr Iłowiecki, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Piotr Iłowiecki',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fort_Bourtange_(30210822204).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+    },
+    nimi: 'Bourtange',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mikä tähtilinnoitus on?',
+      'Miksi linnoitus rakennettiin juuri tähän?',
+    ],
+    korostukset: ['tähtilinnoitus|tähtilinnoitus'],
+    nappi: 'Tähtilinnoitus suon keskellä',
+    // 7.192 E / 53.0066 N — en-Wikipedia "Bourtange"
+    laudat: {
+      maailmankartta: { x: 6073.1, y: 1257 },
+    },
+    teksti: 'Bourtange on 430 asukkaan kylä Groningenin maakunnan itälaidalla lähellä Saksan '
+      + 'rajaa. Linnoitus rakennettiin vuonna 1593 Alankomaiden kapinan aikana, kun Oranian '
+      + 'Vilhelm halusi hallita Saksan ja espanjalaisten pitämän Groningenin välistä päätietä. '
+      + 'Tie kulki hiekkaharjannetta pitkin Bourtangen suon halki, ja juuri harjanne antoi '
+      + 'paikalle nimen: hollannin tange tarkoittaa hiekkaharjua. Vuodesta 1594 Bourtange '
+      + 'kuului pohjoisten maakuntien ja Saksan välisen rajan linnoitusketjuun, ja '
+      + 'linnoituksesta luovuttiin vasta 1851, jolloin siitä tuli tavallinen kylä. Vuosina '
+      + '1967–1992 tähtilinnoitus palautettiin vaihe vaiheelta 1740-luvun asuunsa, ja '
+      + 'nykyään se on ulkoilmamuseo.',
+    lahde: 'en-Wikipedia "Bourtange", johdanto-osa sekä osiot "Etymology" ja "History" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'giethoorn',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-giethoorn-24f87aec.jpg',
+      lyhyt: 'Giethoornin kanava ja talot sen rannalla.',
+      selite: 'Kapea kanava kulkee kylän läpi, ja talojen pihat ulottuvat suoraan veden reunaan.',
+      lahde: 'Valokuva: Steven Lek, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Steven Lek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Giethoorn_canal_2016.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-giethoorn-7395711b.jpg',
+        lyhyt: 'Giethoornin kanavia ja siltoja Overijsselissä.',
+        selite: 'Vesi ja vihreys ympäröivät kylän vanhaa osaa, jossa ei ole teitä vaan kanavia.',
+        lahde: 'Valokuva: Zairon, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Zairon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Giethoorn_Kan%C3%A4le_19.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Giethoorn',
+    tyyppi: 'kulttuuri',
+    taso: 1,
+    kysymykset: [
+      'Miksi kylässä ei ollut katuja?',
+      'Mistä kylän järvet syntyivät?',
+    ],
+    korostukset: ['turpeennosto|turpeennostosta'],
+    nappi: 'Kylä, jossa liikutaan veneellä',
+    // 6.0781 E / 52.7389 N — en-Wikipedia "Giethoorn"
+    laudat: {
+      maailmankartta: { x: 6035.9, y: 1269 },
+    },
+    teksti: 'Giethoorn on noin 2 800 asukkaan kylä Overijsselin maakunnassa, ja sitä kutsutaan '
+      + 'usein Alankomaiden Venetsiaksi. Vanhassa kyläosassa ei ollut lainkaan teitä, vaan '
+      + 'kaikki liikkuminen tapahtui vesitse kanavia pitkin; myöhemmin sinne vedettiin '
+      + 'pyörätie. Kylän järvet eivät ole jääkauden vaan ihmisen tekemiä: ne syntyivät '
+      + 'turpeennostosta. Siltoja on 176, ja matkailu on kylän tärkein elinkeino. Kylä tuli '
+      + 'laajemmin tunnetuksi vuonna 1958, kun ohjaaja Bert Haanstra kuvasi siellä '
+      + 'komediansa Fanfare.',
+    lahde: 'en-Wikipedia "Giethoorn", johdanto-osa sekä osiot "History" ja "Tourism" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'krollermuller',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-krollermuller-91ec189e.jpg',
+      lyhyt: 'Kröller-Müllerin museon rakennus ja ympäröivä puisto Otterlossa.',
+      selite: 'Matala museorakennus on istutettu vehreän kansallispuiston keskelle.',
+      lahde: 'Valokuva: qwesy qwesy, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'qwesy qwesy',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hoge_Veluwe_National_Park,_Kr%C3%B6ller-M%C3%BCller_Museum_-_panoramio.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    nimi: 'Kröller-Müllerin museo',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Kenen kokoelmasta museo syntyi?',
+      'Kuinka suuri veistospuutarha on?',
+    ],
+    korostukset: ['veistospuutarha|veistospuutarha'],
+    nappi: 'Toiseksi suurin Van Gogh -kokoelma',
+    // 5.8169 E / 52.0958 N — en-Wikipedia "Kröller-Müller Museum"
+    laudat: {
+      maailmankartta: { x: 6027.2, y: 1297.8 },
+    },
+    teksti: 'Kröller-Müllerin museo on valtiollinen taidemuseo Hoge Veluwen kansallispuistossa '
+      + 'Otterlossa. Sen perusti taiteenkerääjä Helene Kröller-Müller, joka oli '
+      + 'neuvonantajansa H. P. Bremmerin opastuksella ensimmäisiä Vincent van Goghin arvon '
+      + 'tunnistajia; vuonna 1935 hän lahjoitti koko kokoelmansa Alankomaiden valtiolle, ja '
+      + 'Henry van de Velden suunnittelema museo avattiin yleisölle 1938. Museossa on '
+      + 'maailman toiseksi suurin Van Gogh -maalausten kokoelma heti Amsterdamin Van Gogh '
+      + '-museon jälkeen, ja lisäksi töitä muun muassa Mondrianilta, Seurat’lta, Gauguinilta '
+      + 'ja Picassolta. Metsän keskellä oleva veistospuutarha lisättiin vuonna 1961, ja se on '
+      + 'yli kolmenkymmenen hehtaarin alallaan yksi Euroopan suurimmista. Puutarha toteuttaa '
+      + 'perustajansa ajatusta taiteen, arkkitehtuurin ja luonnon yhteiselosta.',
+    lahde: 'en-Wikipedia "Kröller-Müller Museum", johdanto-osa sekä osiot "History", '
+      + '"Collection" ja "Sculpture garden" (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'nijmegen',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-nijmegen-933c9fd4.jpg',
+      lyhyt: 'Waalbrug ylittää Waal-joen Nijmegenissä, Valkhofin puistosta katsottuna.',
+      selite: 'Kaareva silta yhdistää Waalin rannat, ja kaupungin rakennukset näkyvät joen varrella.',
+      lahde: 'Valokuva: Michielverbeek, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Michielverbeek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nijmegen,_de_Waalbrug_RM523067_vanaf_het_Valkhof_foto6_2016-06-08_14.19.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-nijmegen-c2e75189.jpg',
+        lyhyt: 'Valkhofin kappeli ja Waalbrug Nijmegenissä.',
+        selite: 'Pieni kivikappeli seisoo Valkhofin puistossa, ja taustalla siintää Waalin yli kaartuva silta.',
+        lahde: 'Valokuva: Michielverbeek, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Michielverbeek',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nijmegen,_kapel_van_het_Valkhof_met_Waalbrug_foto13_2010-12-20_12.36.JPG',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
+    nimi: 'Nijmegen',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Miksi Nijmegen on Alankomaiden vanhimpia kaupunkeja?',
+      'Mistä kaupungin nimi tulee?',
+    ],
+    korostukset: ['Noviomagus|Noviomagus'],
+    nappi: 'Kaupunki, joka täytti kaksituhatta vuotta',
+    // 5.8625 E / 51.8475 N — en-Wikipedia "Nijmegen"
+    laudat: {
+      maailmankartta: { x: 6028.8, y: 1308.9 },
+    },
+    teksti: 'Nijmegen on Gelderlandin suurin kaupunki Waalin rannalla lähellä Saksan rajaa, ja '
+      + 'se on Alankomaiden vanhimpia kaupunkeja: vuonna 2005 siellä juhlittiin kahdentuhannen '
+      + 'vuoden ikää. Roomalaiset rakensivat paikalle sotilasleirin ennen ajanlaskun alkua, '
+      + 'koska ympäröiviltä kukkuloilta näki hyvin Waalin ja Reinin laaksoon. Vuonna 98 se oli '
+      + 'ensimmäinen paikka nykyisten Alankomaiden alueella, joka sai roomalaiset '
+      + 'kaupunkioikeudet, ja keisari Traianus antoi sille vuonna 104 nimen Ulpia Noviomagus '
+      + 'Batavorum — lyhyemmin Noviomagus, josta nykyinen nimi on kulunut. Kaarle Suuri piti '
+      + 'kaupungissa palatsiaan vuonna 777, ja vuonna 1230 siitä tuli vapaa valtakunnankaupunki. '
+      + 'Keskiajalla se kuului Hansaliittoon, ja vuodesta 1923 se on ollut yliopistokaupunki.',
+    lahde: 'en-Wikipedia "Nijmegen", johdanto-osa sekä osiot "Antiquity" ja "Middle Ages" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  /* ================================================================
+   * K2-ERÄ 3, 11.9.2026 — KAKSI KOHDETTA LISÄÄ.
+   *
+   * Omistaja 11.9.2026: *"Agentit voisivat tarkastaa myös muut
+   * Euroopan maat että kaikissa tarpeeksi nostoja."* Alankomailla oli
+   * pääkartalla 18 merkkiä, ja tavoite on vähintään kaksikymmentä.
+   * Afsluitdijk on 33,7 ja Maastricht 72,9 lautayksikön päässä
+   * Amsterdamista, joten kumpikin on pääkartan merkki. Ensimmäinen
+   * ehdokas oli Kinderdijk, mutta sen nimiö osui Van Meegerenin
+   * skandaalinimiön päälle (tools/tarkista-nimiolimitys.mjs), ja
+   * tilalle valittiin Afsluitdijk. Kuvat lisätty 20.9.2026 (ent. kuvaton erä).
+   * ============================================================== */
+  {
+    id: 'afsluitdijk',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-afsluitdijk-2cf83c33.jpg',
+      lyhyt: 'Näkymä Afsluitdijkiltä Den Oeverin lähellä.',
+      selite: 'Pitkä pato leikkaa merta, ja tie kulkee sen harjalla.',
+      lahde: 'Valokuva: Gouwenaar, Wikimedia Commons (CC0).',
+      tekija: 'Gouwenaar',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Zicht_vanaf_Afsluitdijk_nabij_Den_Oever.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+    },
+    nimi: 'Afsluitdijk',
+    tyyppi: 'tekniikka',
+    taso: 1,
+    kysymykset: [
+      'Mikä Zuiderzee oli?',
+      'Miksi pato rakennettiin vasta 1900-luvulla?',
+    ],
+    nappi: 'Kolmenkymmenen kilometrin pato',
+    // 5,2683 E / 53,0736 N — en-Wikipedia "Afsluitdijk", padon keskivaiheilta
+    laudat: {
+      maailmankartta: { x: 6008.9, y: 1253.9 },
+      europe: { x: 312.4, y: 497.8 },
+    },
+    teksti: 'Afsluitdijk on 32 kilometriä pitkä pato Pohjois-Hollannin ja Frieslandin '
+      + 'välillä. Harjalta se on 90 metriä leveä, ja se kohoaa 7,8 metriä merenpinnan '
+      + 'yläpuolelle — alun perin 7,25 metriä, mutta korkeutta nostettiin vuoden 1953 '
+      + 'tulvan jälkeen.\n\n'
+      + 'Pato sulki Zuiderzeen, Pohjanmereen yhteydessä olleen suolaisen lahden. Lahdesta '
+      + 'tuli makeavetinen IJsselmeer-järvi, ja sen rannoilta saatiin uutta viljelysmaata. '
+      + 'Sama rakennelma suojaa maata myrskytulvilta.\n\n'
+      + 'Insinööri Cornelis Lely laati ensimmäisen suunnitelman jo vuonna 1891, mutta '
+      + 'hanke sai poliittisen tuen vasta vuoden 1916 tulvan ja vuoden 1918 nälänhädän '
+      + 'jälkeen. Rakentaminen kesti vuodesta 1927 vuoteen 1932: työssä oli kymmenentuhatta '
+      + 'ihmistä, 27 suurta ruoppaajaa, 13 kelluvaa nosturia, 132 proomua ja 88 '
+      + 'hinaajaa.\n\n'
+      + 'Viimeinen aukko suljettiin 28. toukokuuta 1932, kaksi vuotta etuajassa, ja pato '
+      + 'vihittiin käyttöön 25. syyskuuta 1933. Harjalla kulkee moottoritie A7, jolla ajaa '
+      + 'noin 20 000 ajoneuvoa vuorokaudessa.',
+    lahde: 'en-Wikipedia "Afsluitdijk" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'maastricht',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-maastricht-bce19396.jpg',
+      lyhyt: 'Sint Servaasbrug kaartuu kivikaarina Maas-joen yli Maastrichtissa.',
+      selite: 'Vanha kivinen Servaasbrug ylittää Maas-joen useilla kaarilla. Joen toisella rannalla kohoaa Sint-Martinuskerkin torni ja rivi kaupunkitaloja.',
+      lahde: 'Valokuva: Michielverbeek, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Michielverbeek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Maastricht,_de_Servaasbrug_RM28026_en_de_Sint-Martinuskerk_RM27823_IMG_0965_2022-04-03_12.44.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-maastricht-aa782105.jpg',
+        lyhyt: 'Vuoden 1837 öljymaalauksessa Maastricht ja Maas-joki näkyvät Sint-Pietersbergiltä katsottuna.',
+        selite: 'Alexander Schaepkensin maalauksessa kaupungin tornit häämöttävät tasangolla ja Maas kiemurtelee kuvan oikeassa reunassa. Etualalla on rinne ja kiviaita.',
+        lahde: 'Maalaus: Alexander Schaepkens, Wikimedia Commons (public domain).',
+        tekija: 'Alexander Schaepkens',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Maastricht,_panorama_(A_Schaepkens,_1837).jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
+    nimi: 'Maastricht',
+    tyyppi: 'kaupunki',
+    kysymykset: [
+      'Mitä Trajectum ad Mosam tarkoittaa?',
+      'Mikä Maastrichtin sopimus oli?',
+    ],
+    nappi: 'Kaupunki Maasin kahluupaikalla',
+    // 5.6833 E / 50.85 N — en-Wikipedia "Maastricht"
+    laudat: {
+      maailmankartta: { x: 6022.8, y: 1353 },
+      europe: { x: 320.3, y: 556.2 },
+    },
+    teksti: 'Maastricht on Limburgin maakunnan pääkaupunki Alankomaiden kaakkoiskulmassa, '
+      + 'siinä kohdassa jossa Jeker laskee Maasiin. Asukkaita on noin 120 000 (2021).\n\n'
+      + 'Kaupunki sai alkunsa roomalaisesta joenylityspaikasta noin vuonna 50 jaa. Sen '
+      + 'latinankielinen nimi Trajectum ad Mosam tarkoittaa Maasin kahlaamoa, ja siitä on '
+      + 'kulunut myös kaupungin nykyinen nimi.\n\n'
+      + 'Perimätiedon mukaan pyhä Servatius kuoli täällä vuonna 384, ja noin vuonna 570 hänen '
+      + 'hautapaikalleen rakennettiin kivikirkko. Siitä kasvoi yksi Alankomaiden vanhimmista '
+      + 'kristillisistä keskuksista. Maasin yli kulkeva Sint Servaasbrug on osin 1200-luvulta '
+      + 'ja maan vanhin silta. Keskiajalla kaupunki eli kaupasta, ja 1500—1700-luvuilla se '
+      + 'koki useita piirityksiä.\n\n'
+      + 'Kansainvälisesti Maastricht tunnetaan vuoden 1992 sopimuksesta, jolla Euroopan '
+      + 'unioni perustettiin. Kaupungissa on 1 677 valtakunnallisesti suojeltua rakennusta, '
+      + 'enemmän kuin missään muualla Alankomaissa Amsterdamia lukuun ottamatta.',
+    lahde: 'en-Wikipedia "Maastricht" (tarkistettu 11.9.2026).',
+    visa: {
+      kysymys: 'Mitä Maastrichtin latinankielinen nimi Trajectum ad Mosam tarkoittaa?',
+      vaihtoehdot: [
+        'Pyhää jokea',
+        'Kahta kirkkoa',
+        'Roomalaista siltaa',
+        'Maasin kahlaamoa',
+      ],
+      oikea: 3,
+      fakta: 'Latinankielinen nimi Trajectum ad Mosam tarkoittaa Maasin kahlaamoa.',
+    },
   },
 ];
-

@@ -1,0 +1,193 @@
+{
+  "versio": 2,
+  "kaupunki": "granada",
+  "teksti": "Alhambran palatsista vietiin koristeita matkamuistoiksi. Poimin jätekasasta sinisen kaakelinpalan. Mies keräsi sirpaleita museota varten ja ojensi kätensä. Annoin palan hänelle. Olin pitänyt sitä vain hetken, mutta tuntui kuin hän olisi ottanut jotakin minun omaani.",
+  "tekstiSha256": "18a8ffe96632c487e17a7ea92562ae11d27173fe8150282030b28c465c6654fc",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-granada.mp3",
+    "versio": 2,
+    "tavut": 356981,
+    "sha256": "bbedcbc02ea90f9e8d2a6970e61e4e7e7a628a4f0c8cb401eda30fb2dad3e41d"
+  },
+  "kesto": 22220,
+  "sanat": [
+    {
+      "sana": "Alhambran",
+      "alku": 140,
+      "loppu": 620
+    },
+    {
+      "sana": "palatsista",
+      "alku": 680,
+      "loppu": 1280
+    },
+    {
+      "sana": "vietiin",
+      "alku": 1320,
+      "loppu": 1700
+    },
+    {
+      "sana": "koristeita",
+      "alku": 1760,
+      "loppu": 2380
+    },
+    {
+      "sana": "matkamuistoiksi",
+      "alku": 2440,
+      "loppu": 3440
+    },
+    {
+      "sana": "Poimin",
+      "alku": 5140,
+      "loppu": 5460
+    },
+    {
+      "sana": "jätekasasta",
+      "alku": 5500,
+      "loppu": 6260
+    },
+    {
+      "sana": "sinisen",
+      "alku": 6340,
+      "loppu": 6780
+    },
+    {
+      "sana": "kaakelinpalan",
+      "alku": 6860,
+      "loppu": 7780
+    },
+    {
+      "sana": "Mies",
+      "alku": 9180,
+      "loppu": 9480
+    },
+    {
+      "sana": "keräsi",
+      "alku": 9540,
+      "loppu": 9860
+    },
+    {
+      "sana": "sirpaleita",
+      "alku": 9920,
+      "loppu": 10540
+    },
+    {
+      "sana": "museota",
+      "alku": 10600,
+      "loppu": 11080
+    },
+    {
+      "sana": "varten",
+      "alku": 11140,
+      "loppu": 11700
+    },
+    {
+      "sana": "ja",
+      "alku": 11760,
+      "loppu": 11840
+    },
+    {
+      "sana": "ojensi",
+      "alku": 11900,
+      "loppu": 12220
+    },
+    {
+      "sana": "kätensä",
+      "alku": 12280,
+      "loppu": 12840
+    },
+    {
+      "sana": "Annoin",
+      "alku": 13980,
+      "loppu": 14280
+    },
+    {
+      "sana": "palan",
+      "alku": 14320,
+      "loppu": 14580
+    },
+    {
+      "sana": "hänelle",
+      "alku": 14620,
+      "loppu": 15120
+    },
+    {
+      "sana": "Olin",
+      "alku": 16580,
+      "loppu": 16760
+    },
+    {
+      "sana": "pitänyt",
+      "alku": 16820,
+      "loppu": 17180
+    },
+    {
+      "sana": "sitä",
+      "alku": 17220,
+      "loppu": 17400
+    },
+    {
+      "sana": "vain",
+      "alku": 17440,
+      "loppu": 17640
+    },
+    {
+      "sana": "hetken",
+      "alku": 17680,
+      "loppu": 18120
+    },
+    {
+      "sana": "mutta",
+      "alku": 18880,
+      "loppu": 19080
+    },
+    {
+      "sana": "tuntui",
+      "alku": 19140,
+      "loppu": 19560
+    },
+    {
+      "sana": "kuin",
+      "alku": 19620,
+      "loppu": 19840
+    },
+    {
+      "sana": "hän",
+      "alku": 19880,
+      "loppu": 20040
+    },
+    {
+      "sana": "olisi",
+      "alku": 20100,
+      "loppu": 20360
+    },
+    {
+      "sana": "ottanut",
+      "alku": 20440,
+      "loppu": 20860
+    },
+    {
+      "sana": "jotakin",
+      "alku": 20920,
+      "loppu": 21440
+    },
+    {
+      "sana": "minun",
+      "alku": 21500,
+      "loppu": 21800
+    },
+    {
+      "sana": "omaani",
+      "alku": 21880,
+      "loppu": 22220
+    }
+  ],
+  "lauseet": [
+    140,
+    5140,
+    9180,
+    13980,
+    16580
+  ],
+  "luotu": "2026-09-23T15:34:32.316Z"
+}

@@ -1,0 +1,259 @@
+{
+  "versio": 2,
+  "kaupunki": "pariisi",
+  "teksti": "Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.",
+  "tekstiSha256": "a1e38ff0f7dd9a5da7842a59622f01ec167ee50c412153381ad96be5bd88a5c5",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-pariisi.mp3",
+    "versio": 2,
+    "tavut": 486130,
+    "sha256": "1892d571cc78df9438f612aefc42eec3593b14254d1c058a0fd5122874b1fac5"
+  },
+  "kesto": 30300,
+  "sanat": [
+    {
+      "sana": "Tuileries’n",
+      "alku": 100,
+      "loppu": 740
+    },
+    {
+      "sana": "keisarillinen",
+      "alku": 800,
+      "loppu": 1560
+    },
+    {
+      "sana": "palatsi",
+      "alku": 1600,
+      "loppu": 2080
+    },
+    {
+      "sana": "oli",
+      "alku": 2280,
+      "loppu": 2440
+    },
+    {
+      "sana": "poltettu",
+      "alku": 2500,
+      "loppu": 3000
+    },
+    {
+      "sana": "Pariisin",
+      "alku": 3040,
+      "loppu": 3480
+    },
+    {
+      "sana": "kapinan",
+      "alku": 3540,
+      "loppu": 3920
+    },
+    {
+      "sana": "aikana",
+      "alku": 4019,
+      "loppu": 4460
+    },
+    {
+      "sana": "kaksi",
+      "alku": 4520,
+      "loppu": 4820
+    },
+    {
+      "sana": "vuotta",
+      "alku": 4860,
+      "loppu": 5160
+    },
+    {
+      "sana": "sitten",
+      "alku": 5220,
+      "loppu": 5780
+    },
+    {
+      "sana": "Tyhjät",
+      "alku": 7040,
+      "loppu": 7420
+    },
+    {
+      "sana": "ikkunat",
+      "alku": 7520,
+      "loppu": 7940
+    },
+    {
+      "sana": "seisoivat",
+      "alku": 8000,
+      "loppu": 8560
+    },
+    {
+      "sana": "yhä",
+      "alku": 8640,
+      "loppu": 8840
+    },
+    {
+      "sana": "puutarhan",
+      "alku": 8900,
+      "loppu": 9400
+    },
+    {
+      "sana": "laidalla",
+      "alku": 9440,
+      "loppu": 9900
+    },
+    {
+      "sana": "Asetin",
+      "alku": 11680,
+      "loppu": 12020
+    },
+    {
+      "sana": "kameran",
+      "alku": 12080,
+      "loppu": 12480
+    },
+    {
+      "sana": "puiden",
+      "alku": 12540,
+      "loppu": 12880
+    },
+    {
+      "sana": "alle",
+      "alku": 13020,
+      "loppu": 13240
+    },
+    {
+      "sana": "ja",
+      "alku": 13480,
+      "loppu": 13560
+    },
+    {
+      "sana": "etsin",
+      "alku": 13640,
+      "loppu": 13920
+    },
+    {
+      "sana": "kulmaa",
+      "alku": 14000,
+      "loppu": 14420
+    },
+    {
+      "sana": "josta",
+      "alku": 14500,
+      "loppu": 14740
+    },
+    {
+      "sana": "rauniot",
+      "alku": 14800,
+      "loppu": 15260
+    },
+    {
+      "sana": "eivät",
+      "alku": 15300,
+      "loppu": 15540
+    },
+    {
+      "sana": "näkyisi",
+      "alku": 15580,
+      "loppu": 16200
+    },
+    {
+      "sana": "Halusin",
+      "alku": 17600,
+      "loppu": 17940
+    },
+    {
+      "sana": "viedä",
+      "alku": 17980,
+      "loppu": 18240
+    },
+    {
+      "sana": "kotiin",
+      "alku": 18300,
+      "loppu": 18700
+    },
+    {
+      "sana": "kauniin",
+      "alku": 18760,
+      "loppu": 19200
+    },
+    {
+      "sana": "Pariisin",
+      "alku": 19260,
+      "loppu": 19920
+    },
+    {
+      "sana": "Siirsin",
+      "alku": 21540,
+      "loppu": 21900
+    },
+    {
+      "sana": "jalustaa",
+      "alku": 21940,
+      "loppu": 22420
+    },
+    {
+      "sana": "kahdesti",
+      "alku": 22480,
+      "loppu": 23120
+    },
+    {
+      "sana": "Sitten",
+      "alku": 24160,
+      "loppu": 24460
+    },
+    {
+      "sana": "käänsin",
+      "alku": 24520,
+      "loppu": 24860
+    },
+    {
+      "sana": "kameran",
+      "alku": 24920,
+      "loppu": 25280
+    },
+    {
+      "sana": "suoraan",
+      "alku": 25360,
+      "loppu": 25800
+    },
+    {
+      "sana": "palatsiin",
+      "alku": 25860,
+      "loppu": 26420
+    },
+    {
+      "sana": "tämäkin",
+      "alku": 27960,
+      "loppu": 28440
+    },
+    {
+      "sana": "oli",
+      "alku": 28520,
+      "loppu": 28680
+    },
+    {
+      "sana": "kaupunki",
+      "alku": 28720,
+      "loppu": 29280
+    },
+    {
+      "sana": "jossa",
+      "alku": 29440,
+      "loppu": 29740
+    },
+    {
+      "sana": "olin",
+      "alku": 29800,
+      "loppu": 30040
+    },
+    {
+      "sana": "käynyt",
+      "alku": 30080,
+      "loppu": 30300
+    }
+  ],
+  "lauseet": [
+    100,
+    7040,
+    11680,
+    17600,
+    21540,
+    24160
+  ],
+  "luotu": "2026-09-23T15:35:38.169Z"
+}

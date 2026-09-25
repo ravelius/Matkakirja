@@ -22,33 +22,23 @@ import {
 import { naytaLivianAvaus } from './livia.js';
 import { stopDiaryVoice, stopIntroVoice } from './luenta.js';
 import { pyramidinArkki } from './laattapyramidi.js';
+/*
+ * LEPOTILAN SIJAISOLIO ON KANTALUOKKA (erä 5b, 5.9.2026): nukkuvan
+ * kartan pienet metodit (boardBounds, kiertava, dieRestingSpot …) asuvat
+ * js/kartta-lataus.js:ssä, jotta pallolauta saa ne ilman tätä moduulia.
+ * Sama koodi molemmille — ks. sen tiedoston alun kommentti.
+ */
+import { NukkuvaKartta } from './kartta-lataus.js';
 import { el } from './mapart.js';
 import { sfx } from './sound.js';
-import { fokusmoodiPaalla, kehittajaMaailmaPaalla, kehittajaTilaPaalla } from './ui-apurit.js';
+// Ajon keston sovitus asuu koreografiassa (js/siirtokoreografia.js):
+// pallolaudan kamera tarvitsee sen ilman tätä moduulia.
+import { saapumisenKameranKohta } from './saapumisasento.js';
+import { sovitaAjonKesto } from './siirtokoreografia.js';
+import {
+  fokusmoodiPaalla, kehittajaMaailmaPaalla, kehittajaTilaPaalla, RAAHAUKSEN_KYNNYS,
+} from './ui-apurit.js';
 
-/*
- * Kuinka paljon pergamenttia jatketaan kartan alle avaustekstiä varten.
- *
- * NOLLA 25.8.2026 (etusivu-uudistus): teksti oli hetken yhtenä palstana
- * kartan PÄÄLLÄ, joten kaistalle ei ollut käyttöä.
- *
- * TAKAISIN 26.8.2026, ilta (omistajan tilaus): *"Aloitussivulla saisi
- * olla maailmankartta pienemmällä ja asettelu niin että maailmankartan
- * päällä olisi 'Maailman ympäri...' -otsikko ja sen alapuolella olisi
- * tyhjää vaaleaa karttapohjaa ja sen päälle tulisi muut tekstit."*
- *
- * Juuri tämä vakio pienentää kartan: rajauslaatikkoa jatketaan alaspäin,
- * jolloin sovitus laskee mittakaavan isommalle laatikolle ja lauta
- * kutistuu ruudun ylälohkoon. Alle jäävä pergamentti on se tyhjä vaalea
- * karttapohja, jonka päälle avausteksti asettuu (js/ui.js placeIntro
- * mittaa rajan .intro-arkille).
- *
- * 1.2 = lauta vie ylälohkon ja pergamenttia jatketaan 1,2-kertaisesti
- * sen alle. Leveällä ruudulla (korkeus rajoittaa) lauta asettuu noin
- * 45 %:iin paneelin korkeudesta; kapealla pystyruudulla leveys rajoittaa
- * jo ennestään eikä kaista pienennä lautaa, vaan nostaa sen ylös.
- */
-export const INTRO_SPACE = 1.2;
 // Kuinka paljon lautaa lasketaan yläreunasta aloitusnäkymässä.
 const INTRO_TOP = 0.05;
 /*
@@ -123,6 +113,30 @@ const ZOOMI_LAHIN_KAPEA = 58;
 const KAPEAN_RAJA = 700;
 
 /*
+ * SIIRTONÄKYMÄN KATTO (omistajan tilaus 1.9.2026 ilta: *"kartta saisi
+ * zoomautua lähemmäksi ensin ja sitten vasta pelaaja alkaisi
+ * liikkua"*; ks. js/ui.js ennakoiSiirtoZoomi).
+ *
+ * Nopanheiton ennakkozoomi on SUHTEELLINEN (1,7× nykyisestä), ja koska
+ * kamera jää perillä siihen minne se ajettiin, pelkkä kerroin
+ * kylläisi kartan muutamassa heitossa portaikon pohjaan: lähin porras
+ * näyttää yhden kaupungin ympäristön (ZOOMI_LAHIN 88 lautayksikköä),
+ * ja siinä näkymässä YKSI askel täyttää ruudun eikä pelaaja enää näe
+ * mihin on menossa. Siksi siirtonäkymällä on oma kattonsa.
+ *
+ * MITTA ON ASKELVÄLI, EI PORRASNUMERO. Laudan maareittien askelväli on
+ * mediaanina noin 71 lautayksikköä (mitattu js/packs/maailmankartta.js:n
+ * kaarista 1.9.2026: 408 kaarta, mediaanikaari 245 yksikköä). Kun
+ * ruudulla on 3,5 × lähimmän portaan näkymä, kaistalle mahtuu neljä–
+ * viisi askelhelmeä ja nappula — siis se, mitä omistaja pyysi
+ * ("askelhelmet ja nappula näkyvät selvästi") — mutta myös reitin
+ * jatko. Kerroin kulkee kapean ruudun portaan (ZOOMI_LAHIN_KAPEA)
+ * mukana, joten puhelimella katto on samassa suhteessa tiukempi kuin
+ * työpöydällä, aivan kuten portaikkokin.
+ */
+const SIIRTONAKYMAN_LAHIN_KERROIN = 3.5;
+
+/*
  * ULOSZOOMAUKSEN LÖYSENNYS (omistajan päätös 30.8.2026): *"Raja pysyy,
  * mutta uloszoomaus sallitaan esimerkiksi kolminkertaiseen maan
  * ikkunaan. Näet maan ja sen naapurit, mutta et koko maailmaa.
@@ -184,8 +198,62 @@ const YLAKAISTA = 0.26;
 /*
  * Loitonnuksen varmuusvara: osuus laudan leveydestä, joka jää aina
  * näkymän ulkopuolelle, jottei sauma näy kahtena (ks. rajaaSkaala).
+ *
+ * KOSKEE ENÄÄ AVAUSNÄKYMÄN LÄHIKUVAA (sovitaAloitusZoom). Pelin oma
+ * näkymä ei kulje tästä: uloimmalla zoomilla lauta piirtyy KERRAN ja
+ * sen ulkopuoli on paperia (ks. KOKOLAUDAN_VARA alla).
  */
 const SAUMAN_VARA = 0.03;
+
+/*
+ * ============ ULOIN ZOOMI = KOKO LAUTA RUUDULLE ====================
+ *
+ * Omistaja 2.9.2026, sanatarkasti: *"Jos ruutu on vaakamuotoinen, niin
+ * silloin pitäisi pystyä zoomaamaan ulos niin paljon, että kartta
+ * näkyy kokonaisena. nyt jostain syystä yläosa hyppää näkymättömiin."*
+ * ja saman erän tarkennus: *"jos kartta alkaisi näkyä liiasta
+ * leveydestä johtuen kaksi kertaa, niin sivuilla voisi silloin olla
+ * tyhjää. mieluiten itseasiassa jos siinnekin pystyisi generoimaan
+ * samanlaista vaaleampaa paperipohjaa kuin ylhäällä ja alhaalla on.
+ * periaatteessa pystyruuduille voisi tehdä saman ja silloin ylös ja
+ * alas generoituisi vain lisää valkoista kartan tyhjää paperia
+ * jatkeeksi."*
+ *
+ * MIKÄ OLI VIKA (mitattu 2.9.2026 Chromiumilla, 2000 x 1300):
+ * uloimman zoomin mittakaava ei ollut laudan sovitus vaan
+ * `rajaaSkaala` — saumavara nosti mittakaavan arvoon
+ * paneeli / (lauta x 0,97), eli KOLME PROSENTTIA yli sen, mihin lauta
+ * juuri mahtuisi. Vaakaruudulla leveys on rajoittava mitta, joten
+ * korkeussuunta ei enää mahtunut: arkki oli 1243 px korkea 1223 px:n
+ * karttaruudussa ja reunus astelukemineen leikkautui ylhäältä ja
+ * alhaalta. Ultraleveällä ruudulla (2560 x 1080) ero oli 528 px.
+ * Sama luku toisin päin: pystyruudulla saumavara ei koskaan sitonut,
+ * ja juuri siksi vika näkyi vain vaakaruudulla.
+ *
+ * UUSI SÄÄNTÖ, kolme osaa, ja kaikki kolme ovat saman asian puolia:
+ *
+ *   1. Uloin zoomi on kokonaissovitus `min(leveys/lauta.w,
+ *      korkeus/lauta.h)` — pieni vara pois (KOKOLAUDAN_VARA), jottei
+ *      reunus kosketa ruudun laitaa eikä pyöristys leikkaa sitä.
+ *      Mitta on LAUTA REUNUKSINEEN (contentBox = pyramidin arkki),
+ *      ei kartta-ala, ja karttaruutu on ylä- ja alapalkin VÄLIIN
+ *      jäävä alue (mapPane), ei koko ikkuna.
+ *   2. Vapaaseen suuntaan jäävä tyhjä KESKITETÄÄN eikä lukita
+ *      reunaan: vaakaruudulla tyhjä jakautuu vasemmalle ja oikealle,
+ *      pystyruudulla ylös ja alas.
+ *   3. Kun näkymä on lautaa leveämpi, lauta piirtyy KERRAN: kierron
+ *      <use>-kopio ja laudan leveyden päähän monistetut merkit
+ *      leikataan pois (paivitaLaudanKierto + css .lauta-kokonaan), ja
+ *      tilalle jää sama pergamentin pohja, joka on jo nyt laudan ylä-
+ *      ja alapuolella (js/mapart.js paperinPohja / paperiUlkopuoli).
+ */
+const KOKOLAUDAN_VARA = 0.99;
+/*
+ * Milloin näkymä on "lautaa leveämpi"? Tasan laudan levyisessä
+ * näkymässä kopiosta ei näy pikseliäkään, joten kynnys on käytännössä
+ * yksi: pyöristysvara alaspäin riittää.
+ */
+const KOKOLAUTA_KYNNYS = 0.9995;
 /*
  * ============ LAVAIKKUNA ==========================================
  *
@@ -391,179 +459,26 @@ function levitaAlue(alue, kerroin) {
   };
 }
 
-export class Kartta {
-  constructor(ui) {
-    this.ui = ui;
-    // Kesken oleva kamera-ajo (ks. ajaKamera); null kun kamera on levossa.
-    this.kameraAjo = null;
-  }
-
+export class Kartta extends NukkuvaKartta {
   /*
-   * ============ KARTAN SIIRTOKUORI ==================================
-   *
-   * Omistajan tilaus 26.8.2026 ilta: *"scrollaus parempi mutta ei
-   * taysin sujuva"* — wrapper-siirto.
-   *
-   * KAIKKI kameran CSS-muunnokset (panorointi, nipistys, zoomiliuku,
-   * kamera-ajo) kirjoitetaan tähän kuoreen — EI SVG-juureen. Ero on
-   * mitattu Chromiumin CDP-mittarilla: kun siirto kirjoitettiin
-   * `svg.style.transform`iin, skriptattu panorointi tuotti ~1,05
-   * asettelua kehystä kohti, koska SVG:n oma asettelu lasketaan juuren
-   * muunnoksen läpi ja jokainen kehys likasi sen. Tavallisen divin
-   * muunnos ei koske asetteluun lainkaan
-   * (tools/savukkeet/savuke-panorointi.mjs vartioi lukua).
-   *
-   * KAAVA EI MUUTU, VAIN KOHDE-ELEMENTTI. Kuori on paneelin kokoinen
-   * ja alkaa paneelin vasemmasta yläkulmasta, joten muunnoksen origo
-   * (0 0) osuu täsmälleen siihen, mitä eleiden laskenta on aina
-   * olettanut. SVG jää kuoren sisään entisellään: viewBox ja
-   * inline-mitat (width/height/flex/align-self) ovat yhä sen omia,
-   * eikä `svg.getBoundingClientRect()` menetä mitään — se palauttaa
-   * yhä kuoren muunnoksen mukaisen ruutupaikan, koska kuori on sen
-   * esi-isä.
-   *
-   * Varana SVG itse: vanhassa DOM:ssa (yhden tiedoston koeversiot,
-   * testisivut) kuorta ei välttämättä ole, ja silloin kartta liikkuu
-   * kuten ennenkin.
+   * KANTALUOKKA ON NUKKUVA KARTTA (js/kartta-lataus.js): rakennin,
+   * lepotila, nuku, boardBounds, kiertava, dieRestingSpot ja muut
+   * nukkuvan kartan metodit ovat siellä yhtenä totuutena, ja tämä luokka
+   * korvaa perinnällä ne, jotka vaativat kerroksia, kameraa tai eleitä.
+   * Lepotilan portit ovat entisellään: yksi portti metodin alussa.
    */
-  get kuori() {
-    return this.ui.karttaKuori ?? this.ui.svg;
+
+  /** Oikea kartta, ei sijainen (ks. js/kartta-lataus.js). */
+  get sijainen() {
+    return false;
   }
 
-  /**
-   * Pelisisällön rajauslaatikko: kaupungit nimineen, reitit, lentokaaret ja
-   * koristeet. Näkymä sovitetaan tähän eikä koko karttapohjaan, jolloin lauta
-   * näkyy mahdollisimman suurena eikä tyhjää merta jää reunoille.
-   */
-  boardBounds() {
-    const { board, pack } = this.ui.game;
-    /*
-     * PYRAMIDILAUDALLA MAAILMA ON ARKKI (omistajan iPad-havainto
-     * 30.8.2026: *"Toiseksi laajin kartta ei näytä koko karttaa vaan
-     * leikkaa ylhäältä ja alhaalta karttaa pois."*).
-     *
-     * Alla oleva laskenta johtaa rajat kaupungeista, reiteistä ja
-     * koristeista — siis SISÄLLÖSTÄ, joka on peräisin vanhalta
-     * laudalta. Kun kartta on laattapyramidi, se on väärä mitta:
-     * mitattu laatikko oli y 254…5345, mutta arkin kartta-ala on
-     * y −611…5811 ja koko paperi kehyksineen −1046…6261. Ero
-     * leikkasi ylhäältä 865 ja alhaalta 466 yksikköä juuri sitä
-     * aluetta, jonka takia arkkia laajennettiin (Grönlannin kärki,
-     * Huippuvuoret, JÄÄMERI-nimiö) — ja piilotti paperimarginaalin ja
-     * kehyksen, jotka uloimmille tasoille tehtiin.
-     *
-     * Arkki tulee pyramidin luettelosta (js/laattapyramidi.js
-     * pyramidinArkki), eli samasta lähteestä kuin laattojen paikat.
-     * Kopio, koska aloitusnäkymä kasvattaa laatikkoa eikä luettelon
-     * oliota saa muuttaa.
-     */
-    const arkki = pyramidinArkki(pack.id);
-    if (arkki) return this.withIntroSpace({ ...arkki });
-    // Valmiiksi rajattu lauta (esim. Maailma) käyttää omaa kehystään.
-    // Kopio, koska aloitusnäkymä kasvattaa laatikkoa eikä pakkaa saa muuttaa.
-    if (pack.map.frame) return this.withIntroSpace({ ...pack.map.frame });
-
-    const pts = [];
-    // Karkea arvio nimikirjaimen leveydestä. Aloituskaupungit piirtyvät
-    // isommalla versaalifontilla (21px, kirjainväli 0.1em), joten niissä
-    // kirjain vie puolitoista kertaa tavallisen levyn — muuten esimerkiksi
-    // Aasian Tokio jäisi rajauksen ulkopuolelle ja leikkautuisi reunaan.
-    const CHAR_W = 9.5;
-    const START_CHAR_W = 15.2;
-    const STROKE = 2; // nimen vaalea reunusviiva levittää tekstiä hieman
-    for (const c of board.cities) {
-      pts.push([c.x - 34, c.y - 34], [c.x + 34, c.y + 34]);
-      const w = c.name.length * (c.start ? START_CHAR_W : CHAR_W) + STROKE * 2;
-      const anchor = c.la ?? 'middle';
-      const lx = c.x + (c.lx ?? 0);
-      const ly = c.y + (c.ly ?? -(c.start ? 28 : 19));
-      const x0 = anchor === 'start' ? lx : anchor === 'end' ? lx - w : lx - w / 2;
-      pts.push([x0, ly - 18], [x0 + w, ly + 6]);
-    }
-    for (const e of board.edges) {
-      for (const p of e.poly) pts.push(p);
-    }
-    for (const route of this.ui.game.airRoutes) {
-      const a = board.cityById.get(route.a);
-      const b = board.cityById.get(route.b);
-      pts.push([(a.x + b.x) / 2 + (b.y - a.y) * 0.12, (a.y + b.y) / 2 - (b.x - a.x) * 0.12]);
-    }
-    const d = pack.decor;
-    pts.push(
-      [d.compass.x - d.compass.r - 14, d.compass.y - d.compass.r - 26],
-      [d.compass.x + d.compass.r + 14, d.compass.y + d.compass.r + 14],
-    );
-    const titleHalf = Math.max(110, d.mapLabel.length * 12.5);
-    pts.push([d.mapLabelPos.x - titleHalf, d.mapLabelPos.y - 34], [d.mapLabelPos.x + titleHalf, d.mapLabelPos.y + 60]);
-    if (d.ship) pts.push([d.ship.x - 62, d.ship.y - 56], [d.ship.x + 62, d.ship.y + 46]);
-    if (d.serpent) pts.push([d.serpent.x - 96, d.serpent.y - 26], [d.serpent.x + 96, d.serpent.y + 30]);
-
-    let minX = Infinity;
-    let minY = Infinity;
-    let maxX = -Infinity;
-    let maxY = -Infinity;
-    for (const [x, y] of pts) {
-      if (x < minX) minX = x;
-      if (y < minY) minY = y;
-      if (x > maxX) maxX = x;
-      if (y > maxY) maxY = y;
-    }
-    const pad = 12;
-    const box = { x: minX - pad, y: minY - pad, w: maxX - minX + pad * 2, h: maxY - minY + pad * 2 };
-    /*
-     * Kiertävällä kartalla vaakarajaus on laudan leveys, ei sisällön.
-     *
-     * Sisällöstä laskettu laatikko on täällä väärä mitta: rannikot ja
-     * reitit JATKUVAT laudan reunan yli, koska sauman ylittävät viivat
-     * pidetään yhtenäisinä. Mitattuna laatikko oli 24860 yksikköä eli
-     * yli kaksi maapalloa, ja kaikki siitä johdettu meni mukana —
-     * kierron jakso, elementin leveys ja loitonnuksen raja.
-     *
-     * Pystysuunta lasketaan yhä sisällöstä: siellä ei kierretä.
-     */
-    if (this.kiertava()) {
-      box.x = 0;
-      box.w = pack.map.width;
-    }
-    // Aloitusnäkymässä pergamenttia jatketaan kartan alapuolelle, jotta
-    // avausteksti mahtuu siihen ja lauta nousee ruudun yläreunaan. Näkymä
-    // keskittää laatikon, joten alaosan kasvattaminen nostaa karttaa ylös.
-    return this.withIntroSpace(box);
-  }
-
-  /**
-   * Aloitusnäkymässä pergamenttia jatketaan kartan alapuolelle avaustekstiä
-   * varten. Näkymä kiinnitetään yläreunaan (fitViewBox), joten kasvatus
-   * nostaa laudan ruudun ylälaitaan ja jättää tekstille tyhjän alaosan.
-   */
-  withIntroSpace(box) {
-    if (!this.introKaistaKaytossa()) return box;
-    return { ...box, h: box.h * (1 + INTRO_SPACE) };
-  }
-
-  /**
-   * Onko avaustekstin kaista käytössä juuri nyt?
-   *
-   * Kaista on VASTA PORTIN JÄLKEEN (omistajan aloitusnäkymä pidetään
-   * ennallaan): Aloita seikkailu -ruudussa lauta on iso ja keskellä,
-   * ja vasta napin painalluksesta se kutistuu ylälohkoon ja alle
-   * jäävälle pergamentille kirjoittuu avausteksti. Katselutila
-   * (?lauta=) ei näytä avaustekstiä lainkaan, joten siellä kaistaa ei
-   * ole koskaan — muuten lauta kutistuisi ja jäisi yläreunaan
-   * (omistajan havainto).
-   */
-  introKaistaKaytossa() {
-    return this.ui.game.phase === 'pickstart' && !this.ui.katselu && Boolean(this.ui.aloitettu);
-  }
-
-  /**
-   * Laudan oma korkeus rajauslaatikossa: aloitusnäkymässä laatikkoa on
-   * jatkettu avaustekstin kaistalla (withIntroSpace), joten lauta on
-   * vain sen yläosa. Yksi paikka, josta sekä rajaus, aloitusZoom että
-   * js/ui.js placeIntro lukevat saman luvun.
-   */
-  laudanKorkeus(box) {
-    return this.introKaistaKaytossa() ? box.h / (1 + INTRO_SPACE) : box.h;
+  /** Tasokartta hereille: lauta piirretään kuten laudan vaihdossa. */
+  heraa() {
+    if (!this.lepotila) return false;
+    this.lepotila = false;
+    this.ui.drawBoardFor(this.ui.game.pack);
+    return true;
   }
 
   /**
@@ -572,23 +487,24 @@ export class Kartta {
    * mahdollisimman suurena. Kartta on staattinen: sitä ei zoomata eikä
    * raahata, joten kaikki on aina esillä.
    */
-  /** Kiertääkö tämän laudan kartta ympäri? */
-  kiertava() {
-    return this.ui.game?.pack?.map?.kiertava === true;
-  }
 
   /*
-   * Pienin sallittu mittakaava kiertävällä kartalla.
+   * Pienin sallittu mittakaava kiertävällä kartalla — VAIN
+   * AVAUSNÄKYMÄN LÄHIKUVALLE (sovitaAloitusZoom).
    *
    * Omistajan vaatimus: yksi paikka ei saa näkyä kahdessa kohdassa
    * samaan aikaan. Näkyvä leveys on paneelin leveys jaettuna
    * mittakaavalla, joten mittakaava ei saa alittaa arvoa
-   * paneeli / maailman leveys.
+   * paneeli / maailman leveys. Avausnäkymässä karttaa vieritetään
+   * kierrolla (panJakso), joten siellä sääntö on yhä oikea: matalassa
+   * ja leveässä ikkunassa (2400 x 420) korkeus kutistaa mittakaavan
+   * niin pieneksi, että maailma mahtuisi ruudulle kahdesti.
    *
-   * Raja tarvitaan erikseen lähikuvassa, koska siellä mittakaava
-   * lasketaan KORKEUDEN mukaan. Leveässä ja matalassa ikkunassa
-   * (2400 x 420) korkeus kutistaa mittakaavan niin pieneksi, että
-   * maailma mahtui ruudulle kahdesti — mitattu, ei arvattu.
+   * PELIN OMA NÄKYMÄ EI ENÄÄ KULJE TÄSTÄ (omistaja 2.9.2026, ks.
+   * KOKOLAUDAN_VARA): siellä uloin zoomi on koko laudan sovitus, ja
+   * kaksoiskuvan estää laudan kierron leikkaus (paivitaLaudanKierto)
+   * eikä mittakaavan nosto. Juuri tämä nosto leikkasi vaakaruudulla
+   * laudan ylä- ja alareunan pois.
    */
   rajaaSkaala(skaala, paneW, box) {
     if (!this.kiertava()) return skaala;
@@ -609,7 +525,38 @@ export class Kartta {
     return Math.max(skaala, paneW / (box.w * (1 - SAUMAN_VARA)));
   }
 
+  /**
+   * LAUTA KERRAN, KUN SE MAHTUU KOKONAAN (omistaja 2.9.2026, ks.
+   * KOKOLAUDAN_VARA kohta 3).
+   *
+   * Kiertävä lauta on ruudulla kahdesti: juuriryhmä ja sen <use>-kopio
+   * laudan leveyden päässä (js/ui.js laudanKierto), ja lisäksi
+   * napautettavat merkit on monistettu oikeina elementteinä samaan
+   * kohtaan (js/ui.js kiertoKohdat). Kun näkymä on lautaa leveämpi,
+   * molemmat näkyisivät ruudun laidassa toisintona — juuri se, mitä
+   * omistaja ei halua ("jos kartta alkaisi näkyä liiasta leveydestä
+   * johtuen kaksi kertaa, niin sivuilla voisi silloin olla tyhjää").
+   *
+   * Kytkin on YKSI LUOKKA SVG:n juuressa, ei solmukohtainen käsittely:
+   * css piilottaa kopion ja leikkaa laudan sisällön arkin levyiseksi
+   * (.lauta-kokonaan), jolloin laidoille jää pergamentin pohja. Luokka
+   * kirjoitetaan vain kun se muuttuu — tätä kutsutaan jokaisesta
+   * sovituksesta.
+   *
+   * @param {number} nakyvaLeveysYks näkyvä leveys laudan yksiköissä
+   */
+  paivitaLaudanKierto(nakyvaLeveysYks) {
+    const svg = this.ui.svg;
+    if (!svg) return;
+    const leveys = this.ui.contentBox?.w ?? 0;
+    const kokonaan = this.kiertava() && leveys > 0
+      && nakyvaLeveysYks > leveys * KOKOLAUTA_KYNNYS;
+    if (svg.classList.contains('lauta-kokonaan') === kokonaan) return;
+    svg.classList.toggle('lauta-kokonaan', kokonaan);
+  }
+
   fitViewBox() {
+    if (this.lepotila) return; // tasokartta nukkuu (ks. rakentaja)
     const pane = this.ui.mapPane;
     const w = pane.clientWidth;
     const h = pane.clientHeight;
@@ -638,18 +585,13 @@ export class Kartta {
     const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
     const kaista = !alkuun && w / box.w > h / box.h ? Math.min(h * 0.2, rem * 7) : 0;
     /*
-     * Loitonnuksen raja kiertävällä kartalla (omistajan vaatimus): yksi
-     * paikka ei saa näkyä kahdessa kohdassa samaan aikaan.
-     *
-     * Näkyvä leveys on w / scale, joten se ei saa ylittää laudan
-     * leveyttä. Ilman rajaa leveä ja matala ikkuna teki juuri sen:
-     * korkeus rajoitti mittakaavaa, ja 2000 x 400 pikselin ikkunaan
-     * olisi mahtunut kaksi maapalloa vierekkäin.
-     *
-     * Raja leikkaa pystysuunnasta eikä vaakasuunnasta — kartan ylä- ja
-     * alalaidassa on merta, kaupungit ovat keskellä.
+     * KOKONÄKYMÄ ON KOKO LAUDAN SOVITUS (omistaja 2.9.2026, ks.
+     * KOKOLAUDAN_VARA). Sovitus lasketaan molemmista mitoista, joten
+     * lauta reunuksineen mahtuu ruudulle sekä leveys- että
+     * korkeussuunnassa; vapaaseen suuntaan jäävä tyhjä keskitetään
+     * alempana (viewBox) ja täytetään pergamentilla.
      */
-    let scale = Math.min(w / box.w, (h - kaista) / box.h);
+    let scale = this.yleiskuvanSkaala(w, h - kaista);
     /*
      * Avaustekstin kaistallinen laatikko (h x 2,2) kutistaa laudan
      * leveällä ikkunalla: korkeus määrää mittakaavan ja kartta jää
@@ -663,10 +605,15 @@ export class Kartta {
     if (alkuun && this.ui.aloitettu) {
       scale = Math.min(w / box.w, (h * 0.72) / this.laudanKorkeus(box));
     }
-    if (this.kiertava()) scale = this.rajaaSkaala(scale, w, box);
+    // Saumavara vain avausnäkymälle: siellä karttaa vieritetään kierrolla
+    // eikä kokonäkymää luvata (ks. rajaaSkaala). Pelin näkymässä kierron
+    // hoitaa leikkaus, ei mittakaavan nosto.
+    if (alkuun && this.kiertava()) scale = this.rajaaSkaala(scale, w, box);
     const vw = w / scale;
     const vh = h / scale;
     this.ui.viewBoxSize = { vw, vh };
+    // Lauta kerran, jos näkymä on sitä leveämpi (ks. paivitaLaudanKierto).
+    this.paivitaLaudanKierto(vw);
     // Aloitusnäkymässä lauta on ennen Aloita seikkailu -nappia keskellä
     // ruutua (pystyruudulla alaosa ammotti muuten tyhjänä), ja nousee
     // portin auettua ylös, jolloin alle jäävä kaista annetaan kokonaan
@@ -775,6 +722,7 @@ export class Kartta {
     this.ui.svg.style.flex = '0 0 auto';
     this.ui.svg.style.alignSelf = 'center';
     this.ui.viewBoxSize = { vw: nakyvaYks, vh: nakyvaKorkeus };
+    this.paivitaLaudanKierto(paneW / skaala);
     /*
      * Aloituskartan lava on jo valmiiksi ruudun korkuinen ja vain
      * runsaan ruudullisen levyinen (yleiskuva x ALOITUS_ZOOM), joten
@@ -872,15 +820,6 @@ export class Kartta {
    * lähikuva aukeaa millä tahansa laudalla ja millä tahansa ruudulla.
    */
 
-  /**
-   * Ollaanko avausnäkymässä, jossa kartalla on oma lähikuvansa ja
-   * avausteksti? Katselutila (?lauta=) on vaiheeltaan pickstart mutta
-   * näyttää laudan kuin pelissä. Sama ehto on fitViewBoxissa.
-   */
-  avausNakymassa() {
-    return this.ui.game.phase === 'pickstart' && !this.ui.katselu;
-  }
-
   /** Nykyinen zoomiporras; kokonäkymässä 0. */
   get zoomiIndeksi() {
     if (!this.ui.mannerZoom) return 0;
@@ -951,6 +890,38 @@ export class Kartta {
     return paras;
   }
 
+  /**
+   * Nopanheiton siirtonäkymän zoomikerroin (js/ui.js ennakoiSiirtoZoomi).
+   *
+   * KOLME RAJAA SAMASSA LUVUSSA, ja tarkoituksella tässä eikä
+   * kutsujassa — siirtozoomin sääntö on kartan sääntö:
+   *
+   *   1. LÄHENNYS on kutsujan asia (js/ui.js SIIRTOZOOMIN_LAHENNYS):
+   *      montako kertaa lähemmäs nykyisestä ylipäätään pyritään.
+   *   2. SIIRTONÄKYMÄN KATTO (SIIRTONAKYMAN_LAHIN_KERROIN) pysäyttää
+   *      kylläytymisen: koska kamera jää perillä paikalleen, pelkkä
+   *      kerroin veisi muutamassa heitossa portaikon pohjaan.
+   *   3. PELAAJAN OMA LÄHIKUVA VOITTAA KATON. Jos pelaaja on itse
+   *      zoomannut kattoa lähemmäs, siirto EI vedä häntä kauemmas —
+   *      `Math.max(nyt, katto)` on juuri se ehto. Ennakkozoomi saa
+   *      lähentää, ei koskaan loitontaa.
+   *
+   * Lopuksi zoomiRajat, kuten kaikilla muillakin mittakaavoilla: ajo ei
+   * saa viedä lähemmäs kuin mihin pelaaja pääsee omin käsin eikä
+   * kauemmas kuin fokusikkuna sallii.
+   */
+  siirtoZoomiKerroin(lahennys = 1) {
+    const nyt = this.zoomiKerroin;
+    const leveys = this.ui.contentBox?.w ?? 1000;
+    const kapea = this.paneMitat(this.ui.mapPane).w < KAPEAN_RAJA;
+    const lahin = kapea ? ZOOMI_LAHIN_KAPEA : ZOOMI_LAHIN;
+    // Katto kertoimena: montako kertaa lauta mahtuu siirtonäkymään.
+    const katto = leveys / (lahin * SIIRTONAKYMAN_LAHIN_KERROIN);
+    const tavoite = Math.min(nyt * lahennys, Math.max(nyt, katto));
+    const { pienin, suurin } = this.zoomiRajat();
+    return Math.min(suurin, Math.max(pienin, tavoite));
+  }
+
   /** Zoomikerroin, jolla sovitaMannerZoom laskee lähikuvan mitat. */
   get zoomiKerroin() {
     /*
@@ -980,15 +951,14 @@ export class Kartta {
     const suurin = tasot.at(-1) ?? MANNER_ZOOM;
     const portaanPohja = tasot[0] ?? 1;
     return {
-      pienin: Math.min(suurin, Math.max(portaanPohja, this.fokusZoomMinimi())),
+      pienin: Math.min(suurin, Math.max(portaanPohja, this.zoomPohja())),
       suurin,
     };
   }
 
-
   /** Onko yleiskuva (porras 0) juuri nyt sallittu määränpää? */
   yleiskuvaSallittu() {
-    return this.fokusZoomMinimi() <= (this.zoomiTasot()[0] ?? 1) * 1.001;
+    return this.zoomPohja() <= (this.zoomiTasot()[0] ?? 1) * 1.001;
   }
 
   /**
@@ -1063,7 +1033,7 @@ export class Kartta {
      * pohjaan (alempi ehto). Loitonnusraja ei siis löysty pykälääkään.
      */
     const porrasNyt = tasot[this.zoomiIndeksi] ?? 0;
-    const pohjaNyt = this.fokusZoomMinimi();
+    const pohjaNyt = this.zoomPohja();
     const vapaa = this.ui.zoomiVapaa
       || (pohjaNyt > 0 && porrasNyt > 0 && porrasNyt < pohjaNyt * 0.999 ? pohjaNyt : 0);
     const nykyinen = vapaa
@@ -1161,46 +1131,6 @@ export class Kartta {
    * katoa vaan menee pois käytöstä — katoava nappi saa sormen etsimään
    * sitä, ja kartan reunassa se olisi erityisen ärsyttävää.
    */
-  /**
-   * Onko maiden tiedot -tila päällä: napista tai varusteesta.
-   *
-   * Kaksi lähdettä yhdelle tilalle tarvitsee yhden totuuden, tai
-   * varusteen vaihto sammuttaisi napilla avatun tilan.
-   */
-  maatiedotHalutaan() {
-    // Vain varusteesta (omistajan tarkennus 10.8.2026 ilta: "maiden
-    // tietojen vapaasta katsomisesta missä tahansa sijainnissa pitää
-    // tehdä oma varuste") — varusteeton ohituspolku poistui.
-    return this.ui.linssiValittu === 'maatiedot';
-  }
-
-  /** Napin ulkoasu ja näkyvyys: vain laudoilla, joilla on maiden rajat. */
-  paivitaMaalehtiNappi() {
-    const nappi = document.getElementById('maalehti-nappi');
-    if (!nappi) return;
-    const rajat = Boolean(this.ui.game?.pack?.map?.countryShapes);
-    // Nappi näkyy vasta kun Maiden tiedot on KYTKETTY PÄÄLLE
-    // päävalikosta (omistajan tarkennus 10.8.2026 ilta: "pitäisi olla
-    // oletuksena poissa näkyvistä. se tulisi vain jos kyseinen varuste
-    // kytketään päälle") — pelkkä omistus ei riitä. Kartalla nappi
-    // toimii varusteen pikakatkaisijana.
-    nappi.hidden = !rajat || this.avausNakymassa() || !this.maatiedotHalutaan();
-    nappi.setAttribute('aria-pressed', String(this.maatiedotHalutaan()));
-  }
-
-  /**
-   * Kartan kalusteet zoomitason mukaan.
-   *
-   * NIMI ON PERUA +/- -PAINIKKEILTA, jotka poistettiin 27.8.2026
-   * (omistajan tilaus): zoomi hoidetaan eleillä, ja portaiden päät
-   * tuntee zoomaaPainikkeella itse. Kutsupaikkoja on kymmeniä — joka
-   * piirto, joka kamera-ajo — ja niistä jokainen tarvitsee yhä Maiden
-   * lehdet -napin päivityksen, joten metodi jäi paikalleen sen
-   * ainoana tehtävänään.
-   */
-  paivitaZoomiNapit() {
-    this.paivitaMaalehtiNappi();
-  }
 
   /** Palauttaa kartan tavalliseen kokoonsa (uusi peli, laudan vaihto). */
   nollaaAloitusZoom() {
@@ -1473,10 +1403,18 @@ export class Kartta {
     }
     this.ui.panKoko = { w: paneW, h: paneH };
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
-    const yleiskuva = Math.min(paneW / box.w, paneH / box.h);
+    const yleiskuva = this.yleiskuvanSkaala(paneW, paneH);
     // Zoomitaso tulee portaikosta: automaattinen saapumiszoom käyttää
-    // oletusporrasta, painikkeet siirtävät sitä.
-    const skaala = this.rajaaSkaala(yleiskuva * this.zoomiKerroin, paneW, box);
+    // oletusporrasta, painikkeet siirtävät sitä. Saumavaraa EI enää
+    // lisätä: uloin porras on koko laudan sovitus (KOKOLAUDAN_VARA), ja
+    // lautaa leveämmässä näkymässä kierto leikataan pois.
+    const skaala = yleiskuva * this.zoomiKerroin;
+    /*
+     * Onko näkymä lautaa leveämpi? Silloin lauta piirtyy kerran,
+     * lava on tasan ruudun levyinen ja lauta keskitetään siihen
+     * (ks. KOKOLAUDAN_VARA kohta 2 ja 3).
+     */
+    const kokoLautaX = this.kiertava() && paneW / skaala > box.w * KOKOLAUTA_KYNNYS;
     // Laudan eteläpuolelle varataan tilaa alarivin nappien verran, jotta
     // eteläisimmät kaupungit saa panoroitua niiden alta pois (omistajan
     // havainto: Kreeta ja Ateena jäivät nappien alle). Tila ei muuta
@@ -1523,7 +1461,9 @@ export class Kartta {
      * juuri se mitä tarvitaan kun vieritys on kiertymässä ympäri.
      */
     const jakso = Math.round(box.w * skaala);
-    const yliLeveys = this.kiertava() ? Math.ceil(paneW) : 0;
+    // Uloimmalla zoomilla kaistaletta ei ole: siellä lauta on kokonaan
+    // ruudulla, kopio leikataan pois ja ruudun laidoille jää paperia.
+    const yliLeveys = this.kiertava() && !kokoLautaX ? Math.ceil(paneW) : 0;
     // Koko lava ilman ikkunointia: tästä lavaikkuna leikataan.
     const taysiLeveysYks = box.w + yliLeveys / skaala;
     const lauta = {
@@ -1590,6 +1530,27 @@ export class Kartta {
     const keskiY = ylaReuna + (paneH / 2 - panY) / skaala;
     const ikkuna = this.lavaIkkuna(keskiX, keskiY, paneW, paneH, skaala, lauta);
     /*
+     * ULOIN ZOOMI: LAVA ON RUUDUN LEVYINEN JA LAUTA SEN KESKELLÄ.
+     *
+     * lavaIkkuna palauttaa kiertävällä laudalla koko laudan levyisen
+     * lavan ja jättää kierron panorointiarvon hoidettavaksi (panJakso).
+     * Uloimmalla zoomilla se olisi väärä vastaus kahdesti: lava jäisi
+     * ruutua kapeammaksi (flex latoisi laudan vasempaan laitaan ja
+     * jättäisi kaiken tyhjän oikealle), ja vieritys kiertäisi ympäri
+     * vaikka lauta on jo kokonaan näkyvissä. Tässä lava levitetään
+     * ruudun levyiseksi laudan keskipisteen ympäri: pan menee nollaan,
+     * tyhjä jakautuu tasan molemmille sivuille ja täyttyy paperilla
+     * (js/mapart.js paperiUlkopuoli).
+     */
+    if (kokoLautaX) {
+      const nakyvaLeveys = paneW / skaala;
+      ikkuna.x = box.x - (nakyvaLeveys - box.w) / 2;
+      ikkuna.w = nakyvaLeveys;
+      ikkuna.keski = box.x + box.w / 2;
+      ikkuna.kokoLeveys = false;
+      ikkuna.kiertoX = false;
+    }
+    /*
      * MITAT PIKSELEINÄ JA VIEWBOX NIISTÄ TAKAISIN, jotta mittakaava on
      * täsmälleen `skaala` eikä pyöristys jätä SVG:hen kirjelaatikkoa
      * (preserveAspectRatio keskittäisi sisällön ja siirtäisi kaiken
@@ -1617,6 +1578,7 @@ export class Kartta {
      */
     this.ui.svg.style.alignSelf = korkeus < paneH ? 'center' : 'flex-start';
     this.ui.viewBoxSize = { vw: nakyvaYks, vh: nakyvaKorkeus };
+    this.paivitaLaudanKierto(paneW / skaala);
     this.ui.zoomVasenReuna = ikkuna.x;
     this.ui.zoomYlaReuna = ikkuna.y;
     // Ikkunan tila reunatäydennykselle (ikkunoiLava). Yksi olio
@@ -1672,6 +1634,7 @@ export class Kartta {
    */
   ajastaMannerZoom() {
     clearTimeout(this.ui.mannerAjastin);
+    if (this.lepotila) return; // tasokartta nukkuu (ks. rakentaja)
     if (!this.mannerZoomTarpeen() || this.ui.mannerZoom) {
       document.body.classList.remove('manner-odottaa');
       return;
@@ -1700,7 +1663,7 @@ export class Kartta {
 
   /** Zoomaa mantereen kartan nappulan kohdalle pehmeästi liukuen. */
   zoomaaMantereelle() {
-    if (this.ui.mannerZoom) return;
+    if (this.ui.mannerZoom || this.lepotila) return;
     const [vx, vy, vw, vh] = (this.ui.svg.getAttribute('viewBox') ?? '0 0 1000 1000')
       .split(/\s+/).map(Number);
     // Kohde: pelaajan nappula, tai näkymän keskus jos sitä ei löydy.
@@ -1889,10 +1852,20 @@ export class Kartta {
     return { x: n.x + n.w / 2, y: n.y + n.h / 2, skaala: n.skaala };
   }
 
-  /** Yleiskuvan mittakaava: se, johon zoomikerroin 1 viittaa. */
+  /**
+   * Yleiskuvan mittakaava: se, johon zoomikerroin 1 viittaa — eli
+   * ULOIN ZOOMI. Koko lauta reunuksineen mahtuu ruutuun molemmissa
+   * suunnissa, ja KOKOLAUDAN_VARA jättää reunuksen ja ruudun laidan
+   * väliin ohuen kaistan paperia (omistaja 2.9.2026; ilman varaa
+   * fitViewBoxin pikselipyöristys leikkasi astelukemat).
+   *
+   * Tämä on se yksi luku, jonka fitViewBox, sovitaMannerZoom,
+   * fokusZoomMinimi ja kamera-ajot lukevat: uloin zoomi on laudan
+   * sovitus eikä mikään muu.
+   */
   yleiskuvanSkaala(paneW, paneH) {
     const box = this.ui.contentBox ?? { x: 0, y: 0, w: 1000, h: 1000 };
-    return Math.min(paneW / box.w, paneH / box.h);
+    return Math.min(paneW / box.w, paneH / box.h) * KOKOLAUDAN_VARA;
   }
 
   /**
@@ -1926,7 +1899,31 @@ export class Kartta {
     const kerroin = kohde.leveys > 0
       ? (paneW / kohde.leveys) / yleis
       : (kohde.kerroin ?? this.zoomiKerroin);
-    return { x: kohde.x, y: kohde.y, kerroin: rajaa(kerroin) };
+    const rajattu = rajaa(kerroin);
+    /*
+     * SAAPUMISASENTO — SAMA KAAVA KUIN PALLOLLA (js/saapumisasento.js;
+     * omistaja 9.9.2026, Raamattu SAAPUMISESSA KAMERA ASETTUU NIIN, ETTA
+     * KAUPUNKI ON ALIMMASSA KOLMANNEKSESSA). Kamera keskittää aina
+     * näkymän keskipisteen, joten kaupunki viedään alimpaan
+     * kolmannekseen siirtämällä KOHDISTUSPISTETTÄ — laudan pisteet
+     * pysyvät paikoillaan. Vain saapumisajo antaa lipun, joten pelaajan
+     * oma panorointi ja zoomi eivät kulje täältä.
+     *
+     * Tasokartta nukkuu (js/ui-apurit.js VANHA_KARTTA_KAYTOSSA false),
+     * mutta kaava pidetään yhteisenä: kun lauta joskus herää, asento on
+     * sama eikä sitä tarvitse keksiä uudestaan.
+     */
+    if (kohde.saapuminen) {
+      const asento = saapumisenKameranKohta({
+        x: kohde.x,
+        y: kohde.y,
+        leveys: paneW / (rajattu * yleis),
+        paneW,
+        paneH,
+      });
+      if (asento) return { x: asento.x, y: asento.y, kerroin: rajattu };
+    }
+    return { x: kohde.x, y: kohde.y, kerroin: rajattu };
   }
 
   /**
@@ -1965,9 +1962,14 @@ export class Kartta {
    * `pakota` ohittaa aloituslennon kameravarauksen (ks. alla). Sitä
    * käyttää vain lento itse.
    */
-  ajaKamera(kohde, { kesto = AJO_MS, pehmennys = pehmennysKaari, pakota = false } = {}) {
+  ajaKamera(kohde, {
+    kesto = AJO_MS, pehmennys = pehmennysKaari, pakota = false, sovita = false,
+  } = {}) {
     const pane = this.ui.mapPane;
     if (this.ui.dead || !pane) return Promise.resolve(false);
+    // Tasokartta nukkuu: pallolaudan kamera on js/pallolauta/kamera.js,
+    // ja ui.kamera() valitsee sen — tänne asti tullut ajo raukeaa.
+    if (this.lepotila) return Promise.resolve(false);
     /*
      * ALOITUSLENTO OMISTAA KAMERAN (omistaja 24.8.2026, Raamattu:
      * ALOITUSLENTO UUSIKSI). Lennon aikana kartalla on rajaus, johon
@@ -1986,7 +1988,19 @@ export class Kartta {
     if (this.avausNakymassa()) return Promise.resolve(false);
     const maali = this.kameranKohde(kohde, paneW, paneH);
     if (!maali) return Promise.resolve(false);
-    const alku = this.kameranTila();
+    /*
+     * LÄHTÖ ON SE, MISSÄ KUVA JUURI NYT ON (omistaja 3.9.2026:
+     * *"nopanheiton alussa kun kartta zoomaa, niin se menee nyt joissain
+     * tilanteissa liian pikaisesti"*). kameranTila lukee KIRJATUN
+     * näkymän, ja kesken olevan ajon aikana kirjattu näkymä on jo sen
+     * MÄÄRÄNPÄÄ — ajo piirtää liikkeen muunnoksella sen päälle. Jos
+     * uusi ajo (ennakkozoomi) alkaa edellisen (kohdesovitus, saatto)
+     * ollessa kesken, lähtöasemana oli edellisen loppu: kuva hyppäsi
+     * sinne ja jatkoi siitä. Nyt lähtö on kesken olevan ajon nykyinen
+     * kehys, ja liike jatkuu saumatta uuteen kohteeseen.
+     */
+    const kesken = this.kameraAjo?.nyt;
+    const alku = kesken ? { ...kesken } : this.kameranTila();
 
     // Edellinen ajo pois alta ILMAN välivaiheen kirjausta: uusi ajo
     // asettaa näkymän joka tapauksessa itse.
@@ -2024,6 +2038,9 @@ export class Kartta {
       this.ui.taydennaTaide?.({ heti: true });
       return Promise.resolve(true);
     }
+    // Kesto liikkeen mukaan (sovita): iso zoomi tai pitkä panorointi
+    // saa lisää aikaa, pieni ele pysyy ripeänä. Ks. sovitaAjonKesto.
+    if (sovita) kesto = sovitaAjonKesto(kesto, suhde, matka / paneW);
 
     /*
      * LAVA KATTAA KOKO AJON (ks. LAVAIKKUNA).
@@ -2475,6 +2492,9 @@ export class Kartta {
    * (ks. js/ui-apurit.js kehittajaMaailmaPaalla).
    */
   panorointiVapaa() {
+    // Aikajanalinssi (js/aikajana.js) vapauttaa kameran ajon ajaksi:
+    // kaari kattaa monta maata, eikä yhden maan ikkuna saa lukita sitä.
+    if (this.ui.kameraVapaa) return true;
     if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla()) return true;
     return !fokusmoodiPaalla();
   }
@@ -2607,6 +2627,8 @@ export class Kartta {
      * maahan. Sama nappi, sama sääntö kuin panorointiVapaassa.
      */
     if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla()) return null;
+    // Sama vapaus aikajanalinssille (ks. panorointiVapaa).
+    if (this.ui.kameraVapaa) return null;
     /*
      * VAIN LÄHIKUVASSA. Yleiskuva (mannerZoom pois) on laudan oma
      * näkymä, jossa fokuskuva on pieni upote maailmankartalla eikä
@@ -2728,6 +2750,40 @@ export class Kartta {
    * Yläraja on portaikon tihein porras — rajaus ei saa koskaan viedä
    * lähemmäs kuin mihin pelaaja pääsee omin käsin.
    */
+  /*
+   * PEITTOPOHJA POISTETTU 2.9.2026 — TÄSSÄ OLI `peittoZoomMinimi`.
+   *
+   * Se nosti loitonnuksen pohjan cover-sovitukseen (omistaja 1.9.2026:
+   * *"Ulos zoomia voisi rajoittaa niin, että tyhjää tilaa ei voi tulla
+   * näkyville"*), eli kartta täytti ruudun molemmissa suunnissa ja
+   * ylimenevä osa jäi ruudun ulkopuolelle. Omistajan seuraavan päivän
+   * havainto kumosi säännön nimenomaan siltä osin, mitä se maksoi:
+   * *"jos ruutu on vaakamuotoinen, niin silloin pitäisi pystyä
+   * zoomaamaan ulos niin paljon, että kartta näkyy kokonaisena"* ja
+   * *"jos kartta alkaisi näkyä liiasta leveydestä johtuen kaksi
+   * kertaa, niin sivuilla voisi silloin olla tyhjää... pystyruuduille
+   * voisi tehdä saman ja silloin ylös ja alas generoituisi vain lisää
+   * valkoista kartan tyhjää paperia jatkeeksi."*
+   *
+   * Tyhjä tila ei siis ole enää vika vaan piirretään pergamenttina
+   * (js/mapart.js paperiUlkopuoli, css .lauta-kokonaan), ja uloin
+   * zoomi on koko laudan sovitus (KOKOLAUDAN_VARA). Pohjaa nostaa
+   * enää maan fokusikkuna.
+   */
+
+  /**
+   * Loitonnuksen yhteinen pohja: maan fokusikkuna. Jokainen
+   * loitonnusreitti (portaat, nipistys, kamera-ajo) kulkee
+   * zoomiRajat-pohjan kautta, ja tämä on se yksi luku, jonka
+   * zoomiRajat, yleiskuvaSallittu ja porraslasku lukevat.
+   *
+   * Ruudun peitto EI enää nosta pohjaa (ks. yllä): uloin zoomi on
+   * laudan sovitus, ja sen ulkopuolelle jäävä tyhjä on paperia.
+   */
+  zoomPohja() {
+    return this.fokusZoomMinimi();
+  }
+
   fokusZoomMinimi() {
     const rajat = this.fokusRajaukset();
     if (!rajat) return 0;
@@ -2746,9 +2802,45 @@ export class Kartta {
     return Math.min(tasot.at(-1) ?? MANNER_ZOOM, skaala / yleis);
   }
 
+  /**
+   * Pelaajan ULOIN sallittu mittakaava laudan yksiköissä (px/yksikkö),
+   * tai 0 jos maan ikkunaa ei ole.
+   *
+   * Sama laatikko ja sama kaava kuin fokusZoomMinimillä — maan ikkuna
+   * kerrottuna ULOSZOOMAUS_KERROIMELLA — mutta vastaus on mittakaava
+   * eikä portaikon kerroin, ja KEHITTÄJÄN MAAILMANÄKYMÄ EI OHITA SITÄ.
+   * Juuri se ero on tämän olemassaolon syy: fokusRajaukset palauttaa
+   * maailmanäkymässä nullin, koska kamera saa silloin liikkua vapaasti,
+   * mutta kysymys *"missä on se raja, johon peli normaalisti päästää
+   * pelaajan loitontamaan"* on silti mielekäs — ja juuri sitä
+   * maatummennus kysyy (js/maatummennus.js, omistajan tarkennus
+   * 31.8.2026: *"kehittäjätilassa kun zoomataan enemmän ulos, niin
+   * silloin tummennuksia ei tarvita"*).
+   *
+   * Laskenta on tarkoituksella tässä eikä kysyjässä: jos löysennys tai
+   * ikkunan lähde joskus muuttuu, molemmat rajat muuttuvat yhdessä.
+   */
+  pelaajanUloinSkaala() {
+    const kuva = this.ui.fokusPohjaBbox;
+    if (!(kuva?.w > 0) || !(kuva?.h > 0)) return 0;
+    const pane = this.ui.mapPane;
+    if (!pane) return 0;
+    const { w: paneW, h: paneH } = this.paneMitat(pane);
+    if (!paneW || !paneH) return 0;
+    const yleis = this.yleiskuvanSkaala(paneW, paneH);
+    if (!yleis) return 0;
+    const uloin = levitaAlue(this.ui.fokusPohjaRajaus ?? kuva, ULOSZOOMAUS_KERROIN);
+    const skaala = Math.min(paneW / uloin.w, paneH / uloin.h);
+    if (!(skaala > 0)) return 0;
+    // Sama katto kuin fokusZoomMinimillä: raja ei saa viedä lähemmäs
+    // kuin mihin pelaaja pääsee omin käsin.
+    const tasot = this.zoomiTasot();
+    return yleis * Math.min(tasot.at(-1) ?? MANNER_ZOOM, skaala / yleis);
+  }
+
   /** Sama pohja portaikon indeksinä: loitonnus pysähtyy tähän. */
   fokusPorrasMinimi() {
-    const pohja = this.fokusZoomMinimi();
+    const pohja = this.zoomPohja();
     if (!(pohja > 0)) return 0;
     const tasot = this.zoomiTasot();
     const i = tasot.findIndex((t) => t >= pohja * 0.999);
@@ -2773,6 +2865,7 @@ export class Kartta {
    * kartta rikkoo jo valmiiksi.
    */
   tarkistaFokusZoom() {
+    if (this.lepotila) return; // tasokartta nukkuu (ks. rakentaja)
     const rajat = this.fokusRajaukset();
     if (!rajat) return;
     const pohja = this.fokusZoomMinimi();
@@ -2918,234 +3011,106 @@ export class Kartta {
      * laskettu sormen paikka karkaisi eleen aikana. Kartan päällä
      * kelluvat kortit ovat myös ruudun lapsia (ks. KELLUVA_UI), joten
      * niiden tapahtumat kuplivat tänne vain ruudusta kuunneltaessa.
+     *
+     * LEPOTILAN PORTTI ON TÄSSÄ, EI JOKAISESSA KUUNTELIJASSA. Pallolauta
+     * (js/pallolauta/lauta.js) asuu karttaruudun sisällä, joten pallon
+     * eleet kuplivat myös tänne; nukkuvan kartan panorointi, nipistys ja
+     * napautus eivät saa ajaa riviäkään (*"eikä hidasta ollenkaan uuden
+     * kartan toimintaa"*). Kuuntelijoita on tässä metodissa
+     * parikymmentä, joten portti puetaan ruudun ympärille kerran:
+     * jokainen tästä eteenpäin lisätty kuuntelija ohittaa tapahtuman
+     * lepotilassa, ja muut ruudun jäsenet (mitat, kaappaus) kulkevat
+     * läpi sellaisenaan. Kaikki kuuntelijat ovat pysyviä (poistoa ei
+     * ole), joten kääre ei riko removeEventListeneriä.
      */
-    const pane = this.ui.mapPane;
+    const ruutu = this.ui.mapPane;
+    const pane = new Proxy(ruutu, {
+      get: (kohde, avain) => {
+        if (avain === 'addEventListener') {
+          return (nimi, kasittelija, valinnat) => kohde.addEventListener(nimi, (e) => {
+            if (!this.lepotila) kasittelija(e);
+          }, valinnat);
+        }
+        const arvo = kohde[avain];
+        return typeof arvo === 'function' ? arvo.bind(kohde) : arvo;
+      },
+    });
     let alku = null;
     let liikkui = false;
 
     /*
-     * --- MERKKIKERROKSET PIILOON ELEEN AJAKSI ------------------------
+     * --- KAIKKI ELÄVÄT ELEMENTIT PYSYVÄT NÄKYVISSÄ KOKO ELEEN AJAN ---
      *
-     * v1277 vei nipistyksen SKRIPTIajan alas 58 %, ja jäljelle jäi se,
-     * mitä profiili kutsuu layerize-kustannukseksi: kartan CSS-muunnos
-     * pakottaa selaimen jakamaan koko SVG:n uudestaan maalipaloihin
-     * joka kehyksellä, ja merkkikerrokset ovat siinä kalleimmat —
-     * kymmeniä pieniä ryhmiä, joilla kullakin on oma muunnos, ympyrät,
-     * glyyfit ja nimiöt. Kartta itse on yksi iso kuva, merkit ovat
-     * kymmeniä pieniä. Omistajan ennakkomittaus: merkkiryhmien
-     * piilotus `display: none`-tyylillä eleen ajaksi pudottaa paintin
-     * noin 22-kertaisesti.
+     * Omistajan linjaus 1.9.2026 ilta, sanatarkasti: *"kaikki elementit
+     * pitää pysyä päällä kun karttaa liikutetaan tai zoomataan vaikka
+     * niitä ei olisi poltettu."*
      *
-     * DISPLAY, EI OPACITY tai visibility — ITSE PIILONA. Vain
-     * `display: none` ottaa solmut pois maalikierroksesta kokonaan;
-     * läpinäkyväkin kerros pilkotaan ja maalataan. (Nimikerroksen
-     * häivytys eleen alussa on siirtymä piiloon eikä piilo, ks. alempi
-     * osio "PIILO ON HÄIVYTYS, EI KATOAMINEN".) Sama keino on jo
-     * käytössä samoilla kerroksilla toisesta syystä (js/fokuskohteet.js
-     * .fokuskohteet-piilossa yleiskuvassa), joten paluu on koeteltu:
-     * merkit ovat SVG-ryhmiä, joiden paikka on muunnosmääreessä eikä
-     * asettelussa — piilotus ei siirrä mitään, ja esiin tullessaan
-     * jokainen on pikselilleen siinä missä oli.
+     * KUMOAA ELEENAIKAISEN PIILOTUKSEN KOKONAAN. Tässä oli 31.8.2026
+     * asti pari `piilotaMerkit` / `naytaMerkit`, runkoluokat
+     * `kartta-merkit-haipyy` ja `kartta-merkit-piilossa` (css/styles.css
+     * samanniminen lohko) sekä niiden paluupolut ui.js:n jumivahdissa ja
+     * destroyssa. Se oli edellisen linjauksen — *"Kaikki elementit mitä
+     * ei ole poltettu pitää poistua näkyvistä kun karttaa zoomataan"* —
+     * toteutus. Uusi linjaus on sen vastakohta, joten mekanismia ei
+     * hienosäädetä vaan se on purettu.
      *
-     * ENNAKKOTAPAUS on asteikkojen entinen käytös (js/fokusmitat.js):
-     * mitta, joka ei voi olla oikeassa liikkeen aikana, väistyy eleen
-     * ajaksi ja palaa pienen levon jälkeen. Merkeillä syy on toinen —
-     * ne OVAT oikeassa, mutta maksavat liikaa — mutta oppi sama.
+     * MIKSI KOKO MEKANISMI POIS EIKÄ VAKIO NOLLAKSI. Piilotus ei ollut
+     * yksi luokanvaihto vaan tilakone: paluuviive, uusi yritys niin
+     * kauan kuin runko kantaa liikeluokkaa, katto sille odottelulle,
+     * häivytyksen oma ajastin ja sen varareitti taustavälilehdelle,
+     * kehysvaraus peittävyyden nostoon, lippukenttä `merkitPiilossa` ja
+     * kaksi ulkopuolista siivouspolkua. Kuollut tilakone olisi jäänyt
+     * lukijalle arvoitukseksi ja jumivahdille turhaksi haaraksi, joten
+     * mitään siitä ei jätetty roikkumaan. Jos piilotus joskus palaa, se
+     * palaa mittausten kanssa uudelleen kirjoitettuna — ei
+     * kommentoituna.
      *
-     * KAKSI KYNNYSTÄ, ETTEI RÄPSY. Napautus ja mikroliike eivät saa
-     * vilauttaa merkkejä pois:
-     *   - panoroinnissa piilotus on saman 6 pikselin kynnyksen takana,
-     *     joka muutenkin erottaa napautuksen raahauksesta (liikkui)
-     *   - nipistyksessä kahden sormen kosketus ei vielä riitä, vaan
-     *     mittakaavan on oikeasti muututtava (MERKKIPIILON_KYNNYS)
+     * MITATTU ENNEN JA JÄLKEEN — JA PURKU ON MYÖS NOPEAMPI
+     * (tools/savukkeet/savuke-maailmanakyma.mjs, Chromium 390x844 dpr3,
+     * kehittäjän maailmanäkymä Kreikan lähikuvassa; se on RASKAIN
+     * mahdollinen tapaus, koska maailmanäkymä ohittaa käymättömien
+     * maiden piilotuksen. Kuusi pyyhkäisyä ja neljä nipistystä per ajo,
+     * longtaskien summa per ajo):
      *
-     * PALUU ON VIIVEEN TAKANA (MERKKIEN_PALUU_MS) samasta syystä kuin
-     * asteikoilla: eleen loppuun kuuluu vielä liuku, fitViewBox ja
-     * bittikartan täydennys, eikä merkkejä kannata maalata takaisin
-     * kesken sen. Uusi kosketus kuitenkin tuo ne heti (ks.
-     * pointerdown): merkki on napautuskohde, ja osumatesti — sekä
-     * selaimen oma että moduulin ruutulaatikkovertailu
-     * (js/fokuskohteet.js lahinKohde) — vaatii näkyvän solmun.
+     *   piilotus päällä (3 ajoa)
+     *     panorointi   724 / 840 / 767 ms                (med. 767)
+     *     nipistys    1203 / 1412 / 1420 ms              (med. 1412)
+     *   piilotus poissa (5 ajoa)
+     *     panorointi   313 / 422 / 492 / 254 / 357 ms    (med. 357)
+     *     nipistys     925 / 1070 / 1104 / 1135 / 857 ms (med. 1070)
      *
-     * AUKI OLEVA KORTTI ESTÄÄ PIILOTUKSEN: kortti seuraa merkkinsä
-     * ruutupaikkaa (js/fokuskohteet.js asetaKohteenPaikka), ja
-     * piilotetun merkin laatikko on nollissa — kortti hyppäisi ruudun
-     * nurkkaan. Kortti on auki harvoin ja silloin karttaa harvoin
-     * nipistetään, joten hinta on olematon.
+     * Sarjat eivät mene päällekkäin panoroinnissa lainkaan: mediaani
+     * putosi 767 -> 357 ms ja nipistyksessä 1412 -> 1070 ms. Odotus oli
+     * päinvastainen, ja syy paljastuu siitä, mitä piilotus todella teki:
+     * se vaihtoi eleen molemmissa päissä runkoluokan, joka pakotti koko
+     * dokumentin tyylinlaskun ja otti kuusi SVG-kerrosta ulos
+     * asettelusta ja takaisin sisään — eleen alussa ja lopussa, eli
+     * juuri niissä kehyksissä, joissa nykäys tuntuu. Se, mitä
+     * maalikierroksesta säästyi eleen keskellä, maksettiin
+     * kalliimpana sen päissä. Piilotukselle ei siis jäänyt perustelua
+     * edes nopeudesta — vain omistajan uusi linjaus, ja ne osoittavat
+     * samaan suuntaan.
      *
-     * KEHYSSILMUKKA EI SAA TUOTTAA ROSKAA (js/fokusmitat.js): tässä
-     * kirjoitetaan kaksi luokkaa eleen alussa ja poistetaan ne eleen
-     * jälkeen — ei mitään per kehys, ei yhtään uutta oliota.
+     * MITÄ TÄMÄ MAKSAA MUUTA KUIN AIKAA. Polttamattomat kerrokset
+     * LADOTAAN RUUTUAVARUUDESSA (js/karttanimet.js: `laudalle = cssPx /
+     * skaala`), joten ne skaalautuvat nipistyksen aikana laudan mukana
+     * ja asettuvat omaan kokoonsa vasta eleen jälkeisessä
+     * uudelleenladonnassa. Juuri sen napsahduksen piilotus aikanaan
+     * peitti; nyt se on näkyvissä, koska omistaja pitää katoamista
+     * pahempana. Poltettu jälki ei kuulu tähän lainkaan: se on osa
+     * laatan kuvaa ja liikkuu kompositorilla laatan mukana.
+     *
+     * VASTASKAALA ON NYT VOIMASSA KOKO ELEEN AJAN. Kun merkit olivat
+     * piilossa, ruutumittaiset kerrokset saivat ohittaa
+     * mittakaavakirjoituksensa eleen ajaksi (`merkitPiilossa` -vahti
+     * js/elaintaky.js:ssä) ja ottivat oikean mitan vasta eleen
+     * päättävästä kutsusta `vastaskaalaaMerkit(1)`. Näkyvällä merkillä
+     * sitä oikotietä ei ole: vahti on poistettu, ja lehdettömän
+     * varapolun kerrokset vastaskaalataan joka kehyksellä kuten ennen
+     * v1277:ää. Fokusnäkymässä (vakioskaala) silmukkaa ei ajeta
+     * lainkaan — merkit kasvavat kartan mukana, mikä on juuri se mitä
+     * pyydettiin (ks. vastaskaalaaMerkit alempana).
      */
-    /*
-     * === PIILO ON HÄIVYTYS, EI KATOAMINEN (omistaja 31.8.2026) =======
-     *
-     * Omistajan linjaus sanatarkasti: *"Kaikki elementit mitä ei ole
-     * poltettu pitää poistua näkyvistä kun karttaa zoomataan, mutten
-     * tulee ikävä hyppäys."*
-     *
-     * KAKSI ASIAA, JOTKA TÄMÄ RATKAISEE. Ensimmäinen on se, mitä
-     * piilotetaan: piilo koski ennen vain kohdemerkkejä ja niiden
-     * seuralaisia, mutta ajossa 2026-08-31b karttanostoista poltettiin
-     * laattoihin 413/624 — loput 211 sekä koko paikannimikerros
-     * (js/karttanimet.js: kaupunkien nimet ja pisteet, maastonimet,
-     * nostoviivat) ovat yhä elävää DOMia, joka LADOTAAN
-     * RUUTUAVARUUDESSA. Ruutuavaruudessa ladottu kerros skaalautuu
-     * eleen aikana laudan mukana ja napsahtaa oikeaan kokoonsa vasta
-     * eleen jälkeisessä uudelleenladonnassa — juuri se on omistajan
-     * näkemä hyppäys. Piilossa tehty ladonta ei hyppää, koska sitä ei
-     * nähdä. Poltettu jälki ei kuulu tähän lainkaan: se on osa laatan
-     * kuvaa ja liikkuu kompositorilla laatan mukana.
-     *
-     * Toinen on itse piilotus. `display: none` päälle ja pois on
-     * halvin mahdollinen tapa, mutta se on myös nykäys: kerros katoaa
-     * ja ilmestyy yhdellä kehyksellä. Siksi piilo on kaksivaiheinen
-     * (css/styles.css, sama pari luokkia):
-     *
-     *   1. `kartta-merkit-haipyy` heti — nimikerros häipyy
-     *      MERKKIEN_HAIPYMA_MS:ssä, merkkikerrokset katoavat samassa
-     *      silmänräpäyksessä
-     *   2. `kartta-merkit-piilossa` häivytyksen jälkeen — display none
-     *      kaikille, eli maalikierroksesta pois lopuksi eleeksi
-     *
-     * Paluussa järjestys on käänteinen ja peittävyys nostetaan vasta
-     * SEURAAVASSA KEHYKSESSÄ: selain tekee siirtymän vain, jos se ehtii
-     * nähdä lähtöarvon näkyvässä kerroksessa.
-     *
-     * HÄIVYTYS VAIN NIMIKERROKSELLE, JA SE ON MITATTU. Peittävyys
-     * väliltä 0–1 pakottaa selaimen tekemään ryhmästä oman
-     * läpinäkyvyystasonsa ja maalaamaan sen joka kehyksellä — ja
-     * merkkikerroksissa on kymmeniä ryhmiä, joissa kussakin on ympyrä,
-     * glyyfi ja nimiö. Mitattu tools/savukkeet/savuke-maailmanakyma.mjs
-     * -savukkeella (kolme ajoa per variantti): pitkien tehtävien summa
-     * kuudessa pyyhkäisyssä oli ilman häivytystä 0–124 ms, häivytys
-     * kaikille kerroksille 446–661 ms ja häivytys vain nimikerrokselle
-     * 0–83 ms. Nimikerros on se, jonka LADONTA eleen aikana muuttuu,
-     * joten hyöty on siellä ja hinta jää maksamatta. Luvut ja koko
-     * taulukko: css/styles.css samassa lohkossa.
-     *
-     * KUSTANNUS EI SIIS PALANNUT. `display: none` on yhä ainoa keino,
-     * joka oikeasti poistaa kerroksen kierroksesta (läpinäkyväkin
-     * kerros pilkotaan ja maalataan), ja merkkikerroksilla se on
-     * voimassa eleen ensimmäisestä kehyksestä alkaen kuten ennenkin.
-     *
-     * === PALUU VAATII AIDON LEVON (js/fokusmitat.js LEPO_MS -malli) ==
-     *
-     * Ajastin yksin ei riitä: eleen loppuun kuuluu vielä liuku,
-     * fitViewBox, laattojen täydennys ja uusi ladonta, ja niiden
-     * kestoa ei tiedä kello. Sama vastaus kuin viivaimilla: jos runko
-     * yhä kantaa liikeluokkaa, paluuta siirretään eteenpäin
-     * (MERKKIEN_UUSI_YRITYS_MS). Lista on sama kuin viivaimilla ja
-     * ui.js:n tarkkuusodotuksella — sama kysymys, sama vastaus.
-     *
-     * ODOTUKSELLA ON KATTO, toisin kuin viivaimilla: merkki on
-     * napautuskohde, eikä sitä saa jäädä pois jos jokin liikeluokka
-     * jää roikkumaan. Katon jälkeen kerrokset palaavat vaikka kartta
-     * väittäisi liikkuvansa.
-     */
-    const MERKKIEN_PALUU_MS = 320;
-    /** Häivytyksen kesto — sama luku css/styles.css transitionissa. */
-    const MERKKIEN_HAIPYMA_MS = 140;
-    /** Uusi yritys, kun kartta on paluuhetkellä yhä liikkeessä. */
-    const MERKKIEN_UUSI_YRITYS_MS = 140;
-    /** Katto odottelulle: merkit ovat napautuskohteita (ks. yllä). */
-    const MERKKIEN_LEPO_KATTO_MS = 1600;
-    /** Nipistyksen mittakaava saa heilahtaa tämän verran ilman piiloa. */
-    const MERKKIPIILON_KYNNYS = 0.03;
-    /*
-     * Rungon luokat, jotka tarkoittavat "kuva liikkuu VIELÄ" — sama
-     * lista ja sama perustelu kuin js/fokusmitat.js LIIKELUOKAT:
-     * mukaan kelpaavat vain luokat, jotka jokin ajastin tai eleen
-     * loppu ottaa varmasti pois (tilaluokka ei ole liikeluokka).
-     */
-    const MERKKIEN_LIIKELUOKAT = [
-      'kartta-raahaus', 'zoom-kaynnissa', 'manner-odottaa', 'flight-active',
-    ];
-    const kartanLiike = () => MERKKIEN_LIIKELUOKAT
-      .some((l) => document.body.classList.contains(l));
-    /** Kaikki eleen jäljet pois kerralla: ajastimet, kehys ja luokat. */
-    const merkitEsiin = () => {
-      clearTimeout(this.ui.merkkiPaluuAjastin);
-      this.ui.merkkiPaluuAjastin = 0;
-      clearTimeout(this.ui.merkkiHaipymaAjastin);
-      this.ui.merkkiHaipymaAjastin = 0;
-      cancelAnimationFrame(this.ui.merkkiPaluuKehys ?? 0);
-      this.ui.merkkiPaluuKehys = 0;
-      this.ui.merkitPiilossa = false;
-      document.body.classList.remove('kartta-merkit-piilossa');
-      document.body.classList.remove('kartta-merkit-haipyy');
-    };
-    // Kentäksi asti: ui.js:n jumivahti ja destroy siivoavat luokat ja
-    // ajastimet silloinkin, kun ele ei pääse omaan loppuunsa.
-    this.merkitEsiin = merkitEsiin;
-    /** Lepo tuli: kerrokset takaisin maalikierrokseen ja häivytys auki. */
-    const paljastaMerkit = (odotusAlkoi) => {
-      this.ui.merkkiPaluuAjastin = 0;
-      if (kartanLiike() && performance.now() - odotusAlkoi < MERKKIEN_LEPO_KATTO_MS) {
-        this.ui.merkkiPaluuAjastin = setTimeout(
-          () => paljastaMerkit(odotusAlkoi), MERKKIEN_UUSI_YRITYS_MS);
-        return;
-      }
-      clearTimeout(this.ui.merkkiHaipymaAjastin);
-      this.ui.merkkiHaipymaAjastin = 0;
-      // Lippu alas jo tässä: piilotus saa keskeyttää paluun kesken
-      // kehyksen (se peruu alla varatun kehyksen).
-      this.ui.merkitPiilossa = false;
-      // Ensin takaisin maalikierrokseen — yhä läpinäkyvänä…
-      document.body.classList.remove('kartta-merkit-piilossa');
-      cancelAnimationFrame(this.ui.merkkiPaluuKehys ?? 0);
-      // …ja vasta seuraavassa kehyksessä peittävyys ylös, jolloin
-      // selain näkee arvon muuttuvan ja tekee siirtymän.
-      const nostaPeittavyys = () => {
-        clearTimeout(this.ui.merkkiHaipymaAjastin);
-        this.ui.merkkiHaipymaAjastin = 0;
-        cancelAnimationFrame(this.ui.merkkiPaluuKehys ?? 0);
-        this.ui.merkkiPaluuKehys = 0;
-        document.body.classList.remove('kartta-merkit-haipyy');
-      };
-      this.ui.merkkiPaluuKehys = requestAnimationFrame(nostaPeittavyys);
-      /*
-       * VARAREITTI TAUSTALLE. Piilossa olevalla sivulla kehyspyyntö ei
-       * laukea lainkaan, ja ilman tätä nimikerros jäisi läpinäkyväksi
-       * siihen asti kun sivu palaa esiin — eikä jumivahti sitä siivoa,
-       * koska sen mielestä piilo on jo purettu. Kumpi ehtii ensin,
-       * siivoaa toisen.
-       */
-      this.ui.merkkiHaipymaAjastin = setTimeout(nostaPeittavyys, MERKKIEN_HAIPYMA_MS);
-    };
-    /** Ele on aidosti käynnissä: polttamaton karttasisältö väistyy. */
-    const piilotaMerkit = () => {
-      if (this.ui.merkitPiilossa || this.ui.fokuskohdeAuki) return;
-      clearTimeout(this.ui.merkkiPaluuAjastin);
-      this.ui.merkkiPaluuAjastin = 0;
-      // Kesken oleva paluu perutaan: kerros ei saa nousta esiin
-      // uuden eleen alta.
-      cancelAnimationFrame(this.ui.merkkiPaluuKehys ?? 0);
-      this.ui.merkkiPaluuKehys = 0;
-      this.ui.merkitPiilossa = true;
-      document.body.classList.add('kartta-merkit-haipyy');
-      clearTimeout(this.ui.merkkiHaipymaAjastin);
-      this.ui.merkkiHaipymaAjastin = setTimeout(() => {
-        this.ui.merkkiHaipymaAjastin = 0;
-        // Ele saattoi ehtiä loppua häivytyksen aikana; silloin
-        // maalikierroksesta ei enää poisteta mitään.
-        if (this.ui.merkitPiilossa) {
-          document.body.classList.add('kartta-merkit-piilossa');
-        }
-      }, MERKKIEN_HAIPYMA_MS);
-    };
-    /** Ele ohi: kerrokset takaisin — heti vain uuden kosketuksen alta. */
-    const naytaMerkit = (heti = false) => {
-      if (!this.ui.merkitPiilossa) return;
-      clearTimeout(this.ui.merkkiPaluuAjastin);
-      if (heti) { merkitEsiin(); return; }
-      const odotusAlkoi = performance.now();
-      this.ui.merkkiPaluuAjastin = setTimeout(
-        () => paljastaMerkit(odotusAlkoi), MERKKIEN_PALUU_MS);
-    };
-    // Kentäksi asti: ui.js:n jumivahti ja destroy palauttavat merkit
-    // silloinkin, kun ele ei pääse omaan loppuunsa.
-    this.naytaMerkit = naytaMerkit;
 
     /*
      * --- KARTAN PÄÄLLÄ KELLUVA UI EI OLE KARTTA ----------------------
@@ -3183,8 +3148,15 @@ export class Kartta {
      * koska kupla siirtyy kiinnityskohteensa mukana (js/pollo.js
      * kiinnitysKohde) eikä sijainti saa ratkaista, toimiiko vieritys.
      */
+    // Linssin ilmiöpaneeli on raahattava (js/aikajana.js kytkeRaahaus):
+    // kartta ei saa lähteä mukaan eikä kaapata osoitinta.
+    // Luentakuva pakkoineen on raahattava ja selattava (js/fokusvirta.js,
+    // js/pulucam.js): kartta ei saa lähteä sen eleistä mukaan eikä
+    // kutistaa matkakirjakorttia, kun pelaaja selaa kuvapakkaa
+    // (omistaja 10.9.2026).
     const KELLUVA_UI = '.fokusvirta-kortti, .fokusvirta-kupla, .fokuszoom, '
-      + '.fokus-maataulu, .fokuskohde-popup';
+      + '.fokusvirta-luentakuva, '
+      + '.fokus-maataulu, .fokuskohde-popup, .aikajana-ilmio';
     /** Alkaako ele kartan päällä kelluvalta pinnalta? */
     const kelluvaltaPinnalta = (e) => Boolean(e?.target?.closest?.(KELLUVA_UI));
 
@@ -3444,7 +3416,7 @@ export class Kartta {
       // päätöstapahtumaa, ele hylätään (ks. ajastaNipistysVahti).
       ajastaNipistysVahti();
       // Kartta lähtee kahden sormen alla liikkeelle: päiväkirja riviksi.
-      this.ui.asetaPaivakirjanKoko(true);
+      this.ui.kutistaKortinLiikkeesta();
       this.kuori.style.transition = '';
     };
 
@@ -3477,9 +3449,8 @@ export class Kartta {
       if (!Number.isFinite(tx) || !Number.isFinite(ty)) return;
       this.kuori.style.transform =
         `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0) scale(${nipistys.suhde.toFixed(4)})`;
-      // Kahden sormen kosketus ei vielä ole ele: merkit väistyvät vasta
-      // kun mittakaava oikeasti muuttuu (ks. MERKKIPIILON_KYNNYS).
-      if (Math.abs(nipistys.suhde - 1) > MERKKIPIILON_KYNNYS) piilotaMerkit();
+      // Ruutumittaiset kerrokset pysyvät oikean kokoisina koko eleen
+      // ajan: vastaskaala ajetaan joka kehyksellä (ks. yllä).
       vastaskaalaaMerkit(nipistys.suhde);
     };
 
@@ -3528,9 +3499,6 @@ export class Kartta {
       document.body.classList.remove('kartta-raahaus');
       this.kuori.style.transform = '';
       vastaskaalaaMerkit(1);
-      // Merkit takaisin vasta kun eleen loppuun kuuluva sovitus,
-      // ankkurointi ja bittikartan täydennys on tehty (naytaMerkit).
-      naytaMerkit();
       // Napautus eleen jälkeen ei saa valita kaupunkia.
       this.ui.raahattiin = true;
       setTimeout(() => { this.ui.raahattiin = false; }, 0);
@@ -3681,7 +3649,6 @@ export class Kartta {
       // lähikuvissa), joten eleen jälki pyyhitään ensin käsin.
       this.kuori.style.transform = '';
       vastaskaalaaMerkit(1);
-      naytaMerkit();
       this.fitViewBox();
     };
     // Kentäksi asti: ui.js:n jumivahti (eleKesken) ja taustapaluun
@@ -3792,7 +3759,6 @@ export class Kartta {
       if (tila !== 'panorointi') return;
       this.ui.kartanRaahaus = false;
       document.body.classList.remove('kartta-raahaus');
-      naytaMerkit();
       this.ui.merkitseKartanEle();
       // Ele ohi: lava ikkunoidaan tarvittaessa uudelleen (LAVAIKKUNA).
       this.ikkunoiLava();
@@ -3820,7 +3786,6 @@ export class Kartta {
         document.body.classList.remove('kartta-raahaus');
         this.ui.taideOdottaa = true;
       }
-      naytaMerkit();
       rullanEle = null;
     };
     // Kentäksi asti: ui.js:n jumivahti ja destroy purkavat eleen tästä.
@@ -3841,7 +3806,7 @@ export class Kartta {
         this.ui.kartanRaahaus = true;
         document.body.classList.add('kartta-raahaus');
         // Kartta lähtee liikkeelle: päiväkirja yhdelle riville.
-        this.ui.asetaPaivakirjanKoko(true);
+        this.ui.kutistaKortinLiikkeesta();
       }
       this.ui.merkitseKartanEle();
       // Sisältö seuraa sormia: sormet ylös, kartta ylös. Pystysuunta
@@ -3850,9 +3815,6 @@ export class Kartta {
       const dy = this.ui.panVaraY ? -e.deltaY : 0;
       const rajattu = this.rajaaKasinPan((this.ui.panX ?? 0) + dx, (this.ui.panY ?? 0) + dy);
       this.asetaPan(rajattu.x, rajattu.y);
-      // Trackpadin vieritys on jatkuva virta eikä napautus: ele on
-      // käynnissä heti ensimmäisestä deltasta (ks. merkkien piilotus).
-      piilotaMerkit();
       ajastaRullanLoppu();
     };
 
@@ -4091,9 +4053,6 @@ export class Kartta {
       liuku = null;
       this.ui.kartanRaahaus = false;
       document.body.classList.remove('kartta-raahaus');
-      // Liuku on samaa elettä kuin raahaus, joten merkit palaavat vasta
-      // sen loputtua — eivät sormen irrotessa.
-      naytaMerkit();
       if (keskeytys) this.ui.taideOdottaa = true;
     };
     // Laudan nollaus ja zoomipainikkeet pysäyttävät liu'un tästä.
@@ -4198,15 +4157,6 @@ export class Kartta {
       // tarttuu hiireen: viimeistellään se heti, ettei uusi veto jää
       // odottamaan debouncea (rullaele varaa nipistys-tilan).
       if (rullanEle) paataRullanEle();
-      /*
-       * UUSI KOSKETUS TUO MERKIT HETI. Paluuviive (MERKKIEN_PALUU_MS)
-       * on eleen jälkihoitoa varten, mutta merkki on napautuskohde:
-       * piilotettuna sitä ei osu selaimen osumatesti eikä moduulin oma
-       * ruutulaatikkovertailu (js/fokuskohteet.js lahinKohde). Kesken
-       * elettä ei kuitenkaan paljasteta — toinen sormi ruudulla ei saa
-       * räpsäyttää merkkejä esiin nipistyksen keskellä.
-       */
-      if (!nipistetaan() && !alku) naytaMerkit(true);
       if (nipistetaan()) return;
       // Kortin, kuplan tai suurennoksen päältä alkava veto jää kortin
       // omaksi vieritykseksi — kartta ei liiku (ks. KELLUVA_UI).
@@ -4236,8 +4186,10 @@ export class Kartta {
       // vaakaan (panVaraY on siellä nolla).
       const dy = this.ui.panVaraY ? e.clientY - alku.y : 0;
       // Pieni kynnys: pelkkä napautus ei saa laskea raahaukseksi eikä
-      // sammuttaa sykähdyksiä turhaan.
-      if (!liikkui && Math.hypot(dx, dy) < 6) return;
+      // sammuttaa sykähdyksiä turhaan. SAMA LUKU kuin korttien
+      // sulkevalla napautuksella (ui-apurit RAAHAUKSEN_KYNNYS): jos
+      // kartta pitää elettä raahauksena, kortinkin on pidettävä.
+      if (!liikkui && Math.hypot(dx, dy) < RAAHAUKSEN_KYNNYS) return;
       if (!liikkui) {
         liikkui = true;
         this.ui.kartanRaahaus = true;
@@ -4246,17 +4198,15 @@ export class Kartta {
         // peruuntua (iOS peruu osoittimet oman eleensä alta) — raahaus
         // toimii silloinkin, kaappaus vain jää tekemättä.
         try { pane.setPointerCapture?.(e.pointerId); } catch { /* ei kaappausta */ }
-        // Sama kynnys erottaa napautuksen raahauksesta myös merkeille:
-        // vasta tässä ele on aidosti käynnissä (ks. MERKKIEN_PALUU_MS).
-        piilotaMerkit();
         /*
          * Päiväkirja yhdelle riville heti kun kartta lähtee liikkeelle
          * — ja vain kerran eleen aikana (omistajan toive: kortti ei saa
          * napsahdella kesken vierityksen). Tämä haara on kynnyksen
          * takana ja suoritetaan eleessä täsmälleen kerran, ja
-         * asetaPaivakirjanKoko palaa saman tien, jos lappu on jo pieni.
+         * kutistaKortinLiikkeesta palaa saman tien, jos lappu on jo
+         * pieni — ja luennan aikana se ajastaa kortin paluun auki.
          */
-        this.ui.asetaPaivakirjanKoko(true);
+        this.ui.kutistaKortinLiikkeesta();
       }
       // Nopeusnäyte liukua varten; vanhat putoavat ikkunan takaa pois.
       naytteet.push({ t: e.timeStamp || performance.now(), x: e.clientX, y: e.clientY });
@@ -4290,7 +4240,6 @@ export class Kartta {
       if (salliLiuku && liikkui && aloitaLiuku()) return;
       // Sykähdykset palaavat heti kun sormi irtoaa.
       document.body.classList.remove('kartta-raahaus');
-      naytaMerkit();
       /*
        * Bittikartta täydennetään VAIN tässä: heti kun sormi irtoaa
        * (tai liukuAskeleessa, kun liuku on pysähtynyt — se on saman
@@ -4427,42 +4376,6 @@ export class Kartta {
     // Linssin selitekortti väistää päiväkirjaa: se saa oman nurkkansa
     // vasta kun päiväkirjan nurkka on tiedossa.
     this.ui.sijoitaLinssiSelite();
-  }
-
-  /** Kartan koordinaatit kartta-alueen pikseleiksi. */
-  mapToPane({ x, y }) {
-    const point = this.ui.svg.createSVGPoint();
-    point.x = x;
-    point.y = y;
-    const screen = point.matrixTransform(this.ui.svg.getScreenCTM());
-    const rect = this.ui.mapPane.getBoundingClientRect();
-    return { x: screen.x - rect.left, y: screen.y - rect.top };
-  }
-
-  /**
-   * Nopan lepopaikka: avomerta, jotta noppa ei jää kenenkään nappulan tai
-   * kaupungin päälle. Paikka arpoutuu hieman joka heitolla, jotta noppa ei
-   * osu aina täsmälleen samaan kohtaan. Päiväkirjakortti hakeutuu
-   * merellisimpään kulmaan — usein samaan, jonne nopan paikka on valittu —
-   * joten kortin kulmaa väistetään peilaamalla paikka vastakkaiselle
-   * sivulle (tai pakan omaan varapaikkaan decor.dieSpotAlt).
-   */
-  dieRestingSpot() {
-    const pane = this.ui.mapPane;
-    const w = pane.clientWidth || 600;
-    const h = pane.clientHeight || 600;
-    const decor = this.ui.game.pack.decor;
-    let spot = decor.dieSpot;
-    const corner = this.ui.factCard?.hidden ? null : this.ui.factCard?.dataset.corner;
-    if (corner) {
-      const spotCorner = (spot.y < 0.5 ? 't' : 'b') + (spot.x < 0.5 ? 'l' : 'r');
-      if (spotCorner === corner) spot = decor.dieSpotAlt ?? { x: 1 - spot.x, y: spot.y };
-    }
-    const jitter = this.ui.dieJitter ?? { x: 0, y: 0 };
-    return {
-      x: w * (spot.x + jitter.x),
-      y: h * (spot.y + jitter.y),
-    };
   }
 
   /*

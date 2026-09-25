@@ -202,33 +202,112 @@ export const FOKUSVIRTA_KRAKOVA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ilman lisäystä. */
-    paikkarivi: 'Krakova, kesäkuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Torin laidalla kangashalli on täynnä kauppiaita kuin '
-      + 'neljäsataa vuotta sitten, ja tasatunnein tornista soi torvi, '
-      + 'jonka sävelmä loppuu kesken — kysyin syytä kolmelta mieheltä ja '
-      + 'sain kolme eri tarinaa. Wawelin kukkulalla kuninkaat nukkuvat '
-      + 'kirkon lattian alla. Tämä kaupunki kuuluu nyt keisarille Wienissä, '
-      + 'mutta se muistaa olleensa kuningasten kaupunki, ja muisti on '
-      + 'täällä pitkävihaisempi kuin missään.',
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 c7c5c4d815e12c0815261e3a9f4ebe9443343dd9060dd701d22e8c0f1f5821fb. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-krakova-r20260909-paper-v4.jpg",
+      lyhyt: "Krakova, 1873. Tuoli odotti, jos sävelmä ei loppuisi.",
+      selite: 'Torikauppias tarjosi minulle tuolia, kun jäin odottamaan Marian kirkon katkenneen torvisävelmän loppua. Kirkon erikorkuiset tornit näyttivät äänen paikan, mutta kuvakin jätti jotakin ulkopuolelle.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://ct.mhk.pl/wps/portal/mhmk/main/strona-artefaktu/?artefactId=%7B61040CE7-72DA-4281-A0A3-14D3C075B00B%7D","https://mnk.pl/en/wystawy/the-sukiennice/","https://convention.krakow.pl/english/ccb_en/7973%2Cartykul%2Cthe_cloth_hall.html"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-krakova-r20260911-paper2-v1.jpg",
+      lyhyt: "Krakova, 1873. Leipä oli sylissä, puuttuva sävel yhä ilmassa.",
+      selite: 'Istuin torilla leipä sylissäni ja katsoin Marian kirkon torneihin, vaikka sävelmä oli jo katkennut. Kauppa jatkui ympärillä, mutta korva odotti yhä sitä, mitä kaupunki ei sanonut.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://muzeumkrakowa.pl/en/exhibitions/krakow-sounds-melodies-words","https://mnk.pl/en/wystawy/the-sukiennice/"],
+    },
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Krakova, kesäkuussa 1873. Poutaa; torilla pölyää; puntari '
+      + 'korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 298 merkkiä (yläraja 400). */
+    teksti: "Krakovan yliopistossa näin vanhan maapallon. Intian eteläpuolelle oli merkitty maa nimeltä Amerikka. Vieressä luki: vastikään löydetty. Minä luin sen kahdesti. Omista kartoistani on puuttunut saaria, mutta kokonaista mannerta en sentään ole hukannut.",
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    luenta: '[curious] Torin laidalla kangashalli on täynnä kauppiaita kuin '
-      + 'neljäsataa vuotta sitten, ja tasatunnein tornista soi torvi, '
-      + 'jonka sävelmä loppuu kesken — kysyin syytä kolmelta mieheltä ja '
-      + 'sain kolme eri tarinaa. [softly] Wawelin kukkulalla kuninkaat '
-      + 'nukkuvat kirkon lattian alla. [whispers] Tämä kaupunki kuuluu nyt '
-      + 'keisarille Wienissä, mutta se muistaa olleensa kuningasten '
-      + 'kaupunki, ja muisti on täällä pitkävihaisempi kuin missään.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Hän oli kuullut saman katkoksen koko ikänsä"
+     * (selittävä sivulause).
+     */
+    reaktiot: [
+  {
+    "id": "krakova.r1",
+    "ankkuri": "näin vanhan maapallon",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "krakova.r2",
+    "ankkuri": "maa nimeltä Amerikka",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "krakova.r3",
+    "ankkuri": "vastikään löydetty",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "krakova.r4",
+    "ankkuri": "Minä luin sen kahdesti",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "krakova.r5",
+    "ankkuri": "kokonaista mannerta en sentään ole hukannut",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Krakovan yliopistossa näin vanhan maapallon. Intian eteläpuolelle oli merkitty maa nimeltä Amerikka. Vieressä luki: vastikään löydetty. [warmly] Minä luin sen kahdesti. Omista kartoistani on puuttunut saaria, mutta kokonaista mannerta en sentään ole hukannut.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-krakova.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era02; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-krakova-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-krakova-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Krakova: soittajalla on neljä yleisöä ja yksi hengitys kerrallaan.',
+        selite: 'Marian kirkon tornista sävelmä soitetaan neljään suuntaan, ja ikkunan ulkopuolelta näin soittajan seuraavan suunnan jo odottavan. Kuuntelin loppuun asti, niin pitkälle kuin loppua annettiin.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://culture.pl/en/article/the-hejnal-trumpet-call-of-krakow-fact-vs-fiction',
+        ],
+      },
+    ],
     /*
      * KAANONTEKSTI ON JAETTU KAHTEEN KENTTÄÄN, EI MUUTETTU.
      *
@@ -248,11 +327,33 @@ export const FOKUSVIRTA_KRAKOVA = {
      * auki, ja `teksti` kääntää katseen kangashalliin ja torille.
      * Peräkkäin luettuna teksti on sanasta sanaan Fablen kaanonteksti.
      */
-    maadoitus: 'Se torvi soi edelleen joka tunti, neljään ilmansuuntaan, ja '
-      + 'sävelmä katkeaa edelleen samalla tavalla — syyn saat selvittää '
-      + 'itse, ja huomaat että tarinoita on yhä useampi kuin yksi..',
-    teksti: 'Kangashallissa myydään nykyään meripihkaa ja matkamuistoja, mut '
-      + 'halli on sama. Torille siis.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Tuo maapallo on 1500-luvun alusta, jolloin eurooppalaisten tiedot Amerikasta olivat vielä hataria. Krakova on vanha yliopistokaupunki. Minä kuuntelin kahvilan ikkunalla opiskelijoiden väittelyä. Kolme ihmistä, neljä mielipidettä."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'miettiva', voimakkuus: 0.45 },
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-
      * kategoriat.js, krakova/avauskuvat, generoitu heroerä 15):
@@ -268,6 +369,7 @@ export const FOKUSVIRTA_KRAKOVA = {
      */
     kuva: {
       ampari: 'herokoe/hero-krakova-ilta.png',
+      lyhyt: 'Sukiennice seisoo keskiaikaisen torin keskellä; renessanssiasunsa se sai 1555 palon jälkeen.',
       selite: 'Sukiennice seisoo lähes neljän hehtaarin keskiaikaisen torin '
         + 'keskellä, ja renessanssiasunsa se sai 1555 palon jälkeen.',
       lahde: 'Matkakirjan havainnekuva',
@@ -350,6 +452,10 @@ export const FOKUSVIRTA_KRAKOVA = {
         + '1800-luvun taiteen galleria, joka on siellä yhä. Isoisäsi käveli '
         + 'siis hallin ohi kuusi vuotta liian aikaisin — ja näki sen '
         + 'sellaisena kuin sitä ei enää voi nähdä kukaan.',
+      lahde: 'en-Wikipedia "Kraków Cloth Hall" ja pl-Wikipedia "Sukiennice w '
+        + 'Krakowie"; pelin oma tarkistettu aineisto '
+        + 'js/packs/kulttuuri-kategoriat.js (krakova/kaupunki). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto krakova/ennenNyt,
        * js/packs/kulttuuri-kategoriat.js) — siis jo kertaalleen
@@ -368,6 +474,7 @@ export const FOKUSVIRTA_KRAKOVA = {
        */
       kuva: {
         tiedosto: 'Krakow - Kosciol Maryacki i Sukiennice. 1910 (69699690).jpg',
+        lyhyt: 'Postikortti 1910 näyttää kangashallin 1870-luvun kunnostuksen: kaarikäytävä ja räystäslinja.',
         selite: 'Postikortti vuodelta 1910 näyttää kangashallin 1870-luvun '
           + 'kunnostuksen jäljiltä: kaarikäytävä ja räystäslinja ovat siitä '
           + 'työstä.',
@@ -488,6 +595,9 @@ export const FOKUSVIRTA_KRAKOVA = {
         + 'Guinnessin kirjaan: 11. kesäkuuta 2000 sen soitti yhtä aikaa '
         + 'lähes kaksituhatta torvensoittajaa eri puolilta maailmaa, nuorin '
         + 'kahdeksanvuotias ja vanhin 79.',
+      lahde: 'en-Wikipedia "St. Mary\'s Trumpet Call"; pelin oma tarkistettu '
+        + 'aineisto js/packs/kulttuuri-kategoriat.js (krakova/kaupunki). '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto krakova/kaupunki,
        * js/packs/kulttuuri-kategoriat.js) — jo kertaalleen tarkistettu ja
@@ -504,6 +614,7 @@ export const FOKUSVIRTA_KRAKOVA = {
        */
       kuva: {
         tiedosto: 'Hejnalista krakowski.jpg',
+        lyhyt: 'Hejnał soitetaan Mariankirkon 80-metrisestä tornista joka tunti neljään ilmansuuntaan.',
         selite: 'Hejnał soitetaan Mariankirkon korkeammasta, 80 metrin '
           + 'tornista joka tunti neljään ilmansuuntaan, ympäri vuorokauden.',
         lahde: 'Jadwiga, Wikimedia Commons (CC BY-SA 3.0)',
@@ -613,6 +724,9 @@ export const FOKUSVIRTA_KRAKOVA = {
         + '— yli kolme ja puoli miljoonaa kävijää vuonna 2025 — ja se '
         + 'pääsi 1978 osana vanhaakaupunkia ensimmäiseen erään Unescon '
         + 'maailmanperintöluetteloa.',
+      lahde: 'en-Wikipedia "Wawel Castle"; pelin oma tarkistettu aineisto '
+        + 'js/packs/kulttuuri-kategoriat.js (krakova/avauskuvat). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto
        * krakova/avauskuvat, js/packs/kulttuuri-kategoriat.js) — jo
@@ -630,6 +744,7 @@ export const FOKUSVIRTA_KRAKOVA = {
        */
       kuva: {
         tiedosto: 'Krakow - Wawel and Old Town from balloon.jpg',
+        lyhyt: 'Wawelin kukkula Veikselin rannalla oli isoisän matkavuonna itävaltalainen kasarmi.',
         selite: 'Wawelin kukkula kohoaa Veikselin rannalla vanhankaupungin '
           + 'eteläpuolella, ja se oli isoisän matkavuonna itävaltalainen '
           + 'kasarmi.',
@@ -797,6 +912,7 @@ export const FOKUSVIRTA_KRAKOVA = {
      */
     kuva: {
       tiedosto: 'Portrait of a Young Man by Raphael - Cleaned Archival Scan.jpg',
+      lyhyt: 'Rafaelin Nuoren miehen muotokuva tunnetaan enää valokuvista; maalaus katosi 1945.',
       selite: 'Rafaelin Nuoren miehen muotokuva tunnetaan nykyään vain '
         + 'valokuvista: maalaus katosi vuonna 1945 eikä sitä ole nähty sen '
         + 'jälkeen.',
@@ -1031,6 +1147,13 @@ export const FOKUSVIRTA_KRAKOVA = {
       id: 'wieliczka',
       // Kartan nimiö: lyhyt pelaajateksti pisteen kylkeen.
       nimio: 'Wieliczka',
+      /*
+       * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+       * kaivos on runsaan kymmenen kilometrin päässä Krakovasta eikä
+       * osu kaupunkilehden kohdekartan rajaukseen, joten merkki kuuluu
+       * pääkartalle.
+       */
+      kattoVapaa: true,
       otsikko: 'Kaivos, jonka pohjalle veistettiin kirkkosali siitä, mikä '
         + 'louhittiin pois',
       lunastus: [
@@ -1080,6 +1203,7 @@ export const FOKUSVIRTA_KRAKOVA = {
        */
       kuva: {
         tiedosto: 'Saint Kinga Chapel in Wieliczka Salt Mine.jpg',
+        lyhyt: 'Pyhän Kingan kappeli on louhittu Wieliczkan kaivokseen; reliefit ja kattokruunut suolakivestä.',
         selite: 'Pyhän Kingan kappeli on louhittu Wieliczkan kaivokseen, ja '
           + 'sen seinäreliefit, patsaat ja kattokruunut on tehty '
           + 'suolakivestä.',
@@ -1210,6 +1334,7 @@ export const FOKUSVIRTA_KRAKOVA = {
        */
       kuva: {
         tiedosto: "Toruń Gingerbread baking mould with city's coat of arms.jpg",
+        lyhyt: 'Toruńin piparkakkumuotteihin veistettiin vaakuna ja hallitsijoiden kuvia; tämä muotti 1600-luvulta.',
         selite: 'Toruńin piparkakkumuotteihin veistettiin kaupungin vaakuna ja '
           + 'hallitsijoiden kuvia; tämä muotti on 1600-luvulta.',
         lahde: 'Tuntematon tekijä (Toruń), Wikimedia Commons (CC0)',
@@ -1321,6 +1446,7 @@ export const FOKUSVIRTA_KRAKOVA = {
        */
       kuva: {
         tiedosto: 'Dwarfs, Wroclaw (P1180307).jpg',
+        lyhyt: 'Wrocławin krasnale ovat 20–30 cm korkeita pronssihahmoja, joita kaduilla on yli 800.',
         selite: 'Wrocławin krasnale ovat 20–30 senttiä korkeita '
           + 'pronssihahmoja, ja niitä on kaupungin kaduilla yli 800.',
         lahde: 'Matti Blume, Wikimedia Commons (CC BY-SA 4.0)',

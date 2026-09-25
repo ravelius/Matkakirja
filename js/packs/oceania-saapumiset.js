@@ -298,6 +298,17 @@ export const OCEANIA_SAAPUMISET = {
       + 'soutavat samalla joella yhä. Kaupunki oppi olemaan myös jotain '
       + 'omaansa.',
   },
+  dunedin: {
+    kuvaus: 'Dunedinissa kadut nousevat pystyyn: Baldwin Street on '
+      + 'maailman jyrkin katu, ja sen ylös kävelee hengästymättä vain '
+      + 'paikallinen. Rautatieasema on mustaa basalttia ja vaaleaa '
+      + 'kiveä kuin piparkakkutalo, ja koko kaupunki on rakennettu '
+      + 'sammuneen tulivuoren päälle.',
+    nosto: 'Isoisä kirjoitti: "Skotlantilaiset ovat pystyttäneet tänne '
+      + 'toisen Edinburghin kivi kiveltä ja kutsuvat sitä yhä '
+      + 'siirtokunnaksi." Kivitalot seisovat. Niiden ansiosta kaupunki '
+      + 'kutsuu itseään nykyään perintökaupungiksi.',
+  },
   milfordsound: {
     kuvaus: 'Milford Soundissa laiva tuntui lelulta: vuonon seinämät '
       + 'nousevat suoraan merestä yli kilometrin, ja sade — jota täällä '

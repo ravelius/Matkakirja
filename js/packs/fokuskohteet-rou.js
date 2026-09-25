@@ -106,7 +106,8 @@ export const FOKUSKOHTEET_ROU = [
     nimi: 'Branin linna',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'sana',
-    tyyppi: 'muu',
+    tyyppi: 'sana',
+    taso: 1,
     kysymykset: [
       'Missä Vlad Seivästäjä sitten asui?',
       'Kuka linnassa on oikeasti asunut?',
@@ -175,9 +176,21 @@ export const FOKUSKOHTEET_ROU = [
      */
     kuva: {
       tiedosto: 'Casa Vlad Dracul din Sighisoara4.JPG',
+      lyhyt: 'Vlad Draculin talo Sighișoaran vanhassakaupungissa, Unescon listalla vuodesta 1999.',
       selite: 'Vlad Draculin talo Sighișoaran vanhassakaupungissa. '
         + 'Vanhakaupunki on ollut Unescon listalla vuodesta 1999.',
       lahde: 'Cezar Suceveanu, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    visa: {
+      kysymys: 'Minä vuonna Sighișoaran vanhakaupunki tuli Unescon listalle?',
+      vaihtoehdot: [
+        '1435',
+        '1914',
+        '1999',
+        '1866',
+      ],
+      oikea: 2,
+      fakta: 'Vanhakaupunki on ollut Unescon maailmanperintökohteena vuodesta 1999.',
     },
   },
   {
@@ -185,7 +198,8 @@ export const FOKUSKOHTEET_ROU = [
     nimi: 'Peleșin linna',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Mistä linnan oma sähkö tuotettiin?',
       'Ketkä työmaalla noita kieliä puhuivat?',
@@ -214,6 +228,7 @@ export const FOKUSKOHTEET_ROU = [
     // Myrabella, kuvattu 29.7.2012, kuvaus "Peleș Castle in Sinaia, Romania".
     kuva: {
       tiedosto: '01 Chateau Peles.jpg',
+      lyhyt: 'Peleșin linna Sinaiassa: peruskivi 22.8.1873, linna valmistui lopullisesti vasta 1914.',
       selite: 'Peleșin linna Sinaiassa. Peruskivi laskettiin 22. elokuuta '
         + '1873, ja linna valmistui lopullisesti vasta 1914.',
       lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',
@@ -224,7 +239,8 @@ export const FOKUSKOHTEET_ROU = [
     nimi: 'Transfăgărășan',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'tekniikka',
-    tyyppi: 'muu',
+    tyyppi: 'tekniikka',
+    taso: 1,
     kysymykset: [
       'Mikä linna tien varrella on?',
       'Miksi reitti vedettiin juuri tähän kohtaan vuoristoa?',
@@ -273,7 +289,8 @@ export const FOKUSKOHTEET_ROU = [
     nimi: 'Tonavan suisto',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'joki',
+    taso: 1,
     kysymykset: [
       'Milloin pelikaanit saapuvat suistoon?',
       'Miten suistossa liikutaan?',
@@ -317,7 +334,7 @@ export const FOKUSKOHTEET_ROU = [
     nimi: 'Iloinen hautausmaa',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'kulttuuri',
-    tyyppi: 'muu',
+    tyyppi: 'kulttuuri',
     kysymykset: [
       'Kuka ristit veistää nykyään?',
       'Millaisia runot ovat sanoiltaan?',
@@ -390,7 +407,7 @@ export const FOKUSKOHTEET_ROU = [
     nimi: 'Rautaportti',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'joki',
     kysymykset: [
       'Minne Ada Kalehin asukkaat muuttivat?',
       'Kulkevatko laivat rotkon läpi nykyään?',
@@ -471,7 +488,7 @@ export const FOKUSKOHTEET_ROU = [
     nimio: 'Sarmizegetusa',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Keitä daakialaiset olivat?',
       'Mitä pyhäkön kalenterista tiedetään?',
@@ -511,9 +528,11 @@ export const FOKUSKOHTEET_ROU = [
   {
     id: 'turda',
     nimi: 'Turdan suolakaivos',
+    // Puhujan akustiikka kortilla (js/tehosteketju.js): kaivoksen kaiku.
+    akustiikka: 'luola',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'tekniikka',
-    tyyppi: 'muu',
+    tyyppi: 'tekniikka',
     kysymykset: [
       'Kuinka syvällä maanalainen järvi on?',
       'Millaista kaivoksessa on käydä?',
@@ -559,12 +578,12 @@ export const FOKUSKOHTEET_ROU = [
     nimi: 'Corvinin linna',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Mitkä ovat Romanian seitsemän ihmettä?',
       'Kuka linnan rakennutti?',
     ],
-    korostukset: ['Hunyadi|Hunyadin'],
+    korostukset: ['Hunyadi|Hunyadin', 'Vlad Seivästäjä|Vlad Seivästäjää'],
     /* Valintakuplan painike. Lupaus on seitsemän ihmeen lista. */
     nappi: 'Linna Romanian seitsemästä ihmeestä',
     // 45,74917 N / 22,88833 E — en-Wikipedia "Corvin Castle".
@@ -573,19 +592,33 @@ export const FOKUSKOHTEET_ROU = [
       europe: { x: 650.7, y: 690.4 },
     },
     /*
-     * LISTAN LYHYIN TEKSTI, JA SE ON TARKOITUS. Aineisto merkitsee tämän
-     * kohteen lähdepohjaltaan heikoimmaksi (siitä haettiin vain
-     * johdanto-osa) ja käskee jättää pois varmentamattoman virkkeen
-     * elokuvien kuvauspaikasta. Se on jätetty pois, eikä tilalle ole
-     * keksitty mitään — kaksi varmennettua virkettä on parempi kuin
-     * kolmas, jota lähde ei sano.
+     * KIRJOITETTU AUKI ERÄSSÄ 3B (1.9.2026). Kortti oli aiemmin 182
+     * merkkiä — koko nostoaineiston pahin ero lupauksen ja sisällön
+     * välillä (nostoaudit 1.9.2026, luku 3.4): Romanian kuuluisin
+     * linna kolmella virkkeellä, joissa ei ollut vuosilukua eikä
+     * Hunyadia. Syy oli lähdepohja: artikkelista oli haettu vain
+     * johdanto-osa. Nyt lähteinä ovat myös osiot "History",
+     * "Structure" ja "Legacy", ja kortti kertoo kolme asiaa, joita
+     * lyhyt versio ei kertonut: mistä nimi tulee, kuka linnan teki ja
+     * miksi sen nykyinen asu on kiistelty.
+     *
+     * ELOKUVIEN KUVAUSPAIKKALISTA ON YHÄ POIS. Se on artikkelissa
+     * ("Legacy"), mutta se on luettelo eikä tarina, eikä se kuulu
+     * 1873:n maailmaan.
      */
-    teksti: 'Hunedoaran goottilais-renessanssilinna on yksi Euroopan '
-      + 'suurimmista linnoista ja kuuluu "Romanian seitsemään ihmeeseen". '
-      + 'Se tunnetaan myös nimillä Hunyadin linna ja Hunedoaran linna.',
-    lahde: 'en-Wikipedia "Corvin Castle", johdanto-osa (tarkistettu '
-      + '25.8.2026). Vain johdanto on tarkistettu, joten kohteesta ei '
-      + 'sanota enempää kuin siinä lukee.',
+    teksti: 'Linna on nimetty korpin mukaan: Mantteli-siivessä on yhä maalaus tarusta, josta '
+      + 'juontuu nimi Corvinus. Sukuun se tuli 1409 erokorvauksena Unkarin kuninkaalta '
+      + 'Sigismundilta, ja 1446 Transilvanian vojvodi János Hunyadi alkoi muuttaa vanhaa '
+      + 'tornilinnoitusta ruhtinaan asunnoksi; samana vuonna hänestä tuli valtakunnanhoitaja. '
+      + 'Hunyadin kuoltua 1456 työ hyytyi ja 1480 se pysähtyi kokonaan; silloin linnaa '
+      + 'pidettiin jo yhtenä Itä-Euroopan vaikuttavimmista rakennuksista, ja se on yhä yksi '
+      + '"Romanian seitsemästä ihmeestä". Nykyinen asu ei silti ole keskiaikainen: tulipalon '
+      + 'ja rappion jälkeen tehtyä ennallistusta on arvosteltu arkkitehtien omaksi haaveeksi '
+      + 'siitä, miltä suuren goottilaisen linnan kuuluisi näyttää. Oppaat kertovat, että '
+      + 'Hunyadi piti täällä vankinaan Vlad Seivästäjää — ja linnaa mainitaan toisinaan Bram '
+      + 'Stokerin Draculan (1897) esikuvana, vaikka Stoker ei tästä tiennyt.',
+    lahde: 'en-Wikipedia "Corvin Castle", johdanto-osa sekä osiot "History", "Structure" ja '
+      + '"Legacy" (tarkistettu 1.9.2026).',
     // Category:Corvin Castle. Commons 25.8.2026: 2400×2107, CC BY-SA 4.0,
     // Pasztilla aka Attila Terbócs, 2019.
     kuva: {
@@ -624,7 +657,7 @@ export const FOKUSKOHTEET_ROU = [
   {
     id: 'comaneci',
     nimi: 'Nadia Comăneci',
-    tyyppi: 'muu',
+    tyyppi: 'urheilu',
     symboli: 'urheilu',
     /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
     nappi: 'Tulostaulu ei osannut näyttää täyttä kymppiä — se näytti 1.00',
@@ -643,9 +676,8 @@ export const FOKUSKOHTEET_ROU = [
       + 'sitä — niinpä tuomarit saivat sen näkyviin ainoalla jäljellä '
       + 'olleella tavalla, muodossa 1.00. Samoissa kisoissa hän sai vielä '
       + 'kuusi kymppiä lisää ja voitti kolme kultaa.',
-    lahde: 'en-Wikipedia "Nadia Comăneci", johdanto ja osio "1976 Summer '
-      + 'Olympics" (tarkistettu 25.8.2026 työaineistoon '
-      + 'docs/mantereet-tyoaineisto/takynostot-romania.md, ehdokas 3).',
+    lahde: 'en-Wikipedia "Nadia Comăneci", johdanto ja osio "1976 Summer Olympics" '
+      + '(tarkistettu 25.8.2026).',
     /*
      * Commons 25.8.2026: 480×722, public domain, tekijä tuntematon
      * (agerpres-arkisto), kuvattu 3.8.1976, kuvaus "Nadia Comăneci at
@@ -657,6 +689,80 @@ export const FOKUSKOHTEET_ROU = [
       lahde: 'Tuntematon kuvaaja (Agerpres-arkisto) 1976, Wikimedia '
         + 'Commons (public domain)',
     },
+    visa: {
+      kysymys: 'Minkä yhtiön tulostaulu ei osannut näyttää täyttä kymppiä?',
+      vaihtoehdot: [
+        'Adidas',
+        'Rolex',
+        'Seiko',
+        'Omega',
+      ],
+      oikea: 3,
+      fakta: 'Omega ei ollut ohjelmoinut taulua näyttämään lukemaa 10.00, joten se näytti 1.00.',
+    },
+  },
+  /* ================================================================
+   * K2-ERÄ 3, 11.9.2026 — YKSI KOHDE LISÄÄ. Omistaja 11.9.2026:
+   * *"Agentit voisivat tarkastaa myös muut Euroopan maat että
+   * kaikissa tarpeeksi nostoja."* Tavoite on vähintään 20 pääkartan
+   * nostoa per Euroopan maa; Romania oli 19:ssä.
+   *
+   * Kohde on kaukana Bukarestin laatasta (128 lautayksikköä), joten se
+   * on pääkartan merkki eikä valu kohdekartalle. Kuvat lisätty 20.9.2026 (ent. kuvaton nosto): sama
+   * linja kuin muissa tämän erän kohteissa (js/packs/maastokohteet-aut.js),
+   * kuvat tilataan erikseen. Faktat en-Wikipediasta 11.9.2026.
+   * ============================================================== */
+  {
+    id: 'voronet',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-voronet-0286ec46.jpg',
+      lyhyt: 'Voroneţin kirkon maalattu ulkoseinä ruusujen takana.',
+      selite: 'Kirkon ulkoseinät on peitetty värikkäillä pyhimyskuvilla ja kohtauksilla, jotka ulottuvat lavan alle.',
+      lahde: 'Valokuva: Adam Jones Adam63, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Adam Jones Adam63',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Voronet_Monastery_-_Romania_-_02.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    nimi: 'Voronețin luostari',
+    symboli: 'kulttuuri',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Miten seinämaalaukset ovat kestäneet ulkona?',
+      'Mikä Bukovina on?',
+    ],
+    korostukset: ['eksonarteksi|eksonarteksin', 'Moldova|Moldovan'],
+    nappi: 'Kirkko, jonka ulkoseinät on maalattu täyteen',
+    // 25.6631 E / 47.5175 N — en-Wikipedia "Voroneț Monastery"
+    laudat: {
+      maailmankartta: { x: 6688.8, y: 1496.7 },
+    },
+    teksti: 'Voronețin luostari on keskiaikainen luostari Voronețin kylässä, '
+      + 'joka kuuluu nykyään Gura Humoruluin kaupunkiin Suceavan läänissä. Se on '
+      + 'yksi eteläisen Bukovinan kuuluisista maalatuista luostareista. Kirkon '
+      + 'rakennutti Tapani Suuri vuonna 1488 Vasluin taistelun voiton muistoksi, '
+      + 'ja työhön meni kolme kuukautta ja kolme viikkoa.\n\n'
+      + 'Kirkkoa kutsutaan usein idän Sikstuksen kappeliksi. Sen ulkoseinien '
+      + 'freskoissa on satoja hyvin säilyneitä hahmoja, ja niiden taustalla hohtaa '
+      + 'azuriitista saatu sininen, jota Romaniassa sanotaan Voronețin siniseksi. '
+      + 'Ulkoseinät eivät kuitenkaan ole alkuperäisiä: vuonna 1547 Moldovan '
+      + 'metropoliitta Grigorie Roșca rakennutti kirkon länsipäähän eksonarteksin '
+      + 'eli ulomman eteisen ja maalautti koko ulkopinnan. Läntinen julkisivu on '
+      + 'kokonaan ilman aukkoja, mikä kertoo että se varattiin alusta asti '
+      + 'freskoille. Pohjoisseinällä näkyy yhä alkuperäinen koristelu, rivit '
+      + 'keltaisia, ruskeita ja vihreitä lasitettuja keramiikkakiekkoja, joissa on '
+      + 'Moldovan vaakunan leijona ja alkuhärän pää sekä länsieurooppalaisesta '
+      + 'kirjallisuudesta lainattuja olentoja, kuten kaksipyrstöisiä merenneitoja.\n\n'
+      + 'Luostari oli tunnettu myös kalligrafiakoulustaan, jossa papit ja munkit '
+      + 'opettelivat lukemaan, kirjoittamaan ja kääntämään. Koulusta on peräisin '
+      + 'kaksi kuuluisaa romaniankielistä raamatunkäännöstä, 1871 löydetty '
+      + 'Voronețin koodeksi ja 1882 löydetty Voronețin psalttari; molemmat ovat '
+      + 'nykyään Romanian akatemian hallussa. Luostari autioitui pian vuoden 1775 '
+      + 'jälkeen, kun Habsburgit liittivät pohjoisen Moldovan itseensä, ja '
+      + 'munkkiyhteisö palasi vasta 1991. Kirkko kuuluu Unescon maailmanperintöön '
+      + 'osana Moldovan maalattuja kirkkoja.',
+    lahde: 'en-Wikipedia "Voroneț Monastery", johdanto-osa sekä osiot "History" '
+      + 'ja "Church" (tarkistettu 11.9.2026).',
   },
 ];
 

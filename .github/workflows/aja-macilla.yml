@@ -1,0 +1,82 @@
+# Yksittäinen terminaalikomento omistajan Mac Studiolla (self-hosted runner).
+#
+# Raamattu, TERMINAALI MACILLE (omistaja 7.9.2026 aamupäivä, sanatarkasti:
+# "Pystynkö mitenkään antamaan sinulle oikeutta, että voisit itse ajaa
+# terminaalikomentoja tarvittaessa?" ja "rakenna se"): Fable käynnistää
+# työnkulut omistajan tunnuksilla, joten Mac ajaa ne omistajan oikeuksin.
+# Tämä työnkulku ottaa komennon syötteenä ja ajaa sen bashilla repon
+# työkansiossa — sillä hoituvat esimerkiksi Homebrew-korjaukset
+# (`brew reinstall simdutf`), työkalujen tarkistukset ja lyhyet
+# kertaluonteiset ajot ilman, että omistajan tarvitsee avata terminaalia.
+# Poltot ja renderöinnit ajetaan edelleen omilla työnkuluillaan
+# (polta-macilla.yml, tee-etusivupallo.yml jne.), joissa on shardaus,
+# edistymisraportit ja ämpärin avaimet.
+#
+# TURVA (repo on julkinen): laukeaa VAIN käsin, ja job ajetaan vain, jos
+# käynnistäjä on repon omistaja — muuten kuka tahansa pääsisi omistajan
+# koneelle. Työnkulkuun ei koskaan lisätä pull_request- tai push-
+# laukaisua. AJON LOKI ON JULKINEN: komento ei saa tulostaa salaisuuksia
+# eikä henkilötietoja (ei `env`, ei avaintiedostoja, ei sähköposteja).
+# Ämpärin avaimia tälle työnkululle ei anneta lainkaan; jos komento
+# tarvitsee niitä, käytetään erillistä työnkulkua.
+#
+# Komento annetaan ympäristömuuttujana, ei liimattuna skriptiin, jotta
+# lainausmerkit ja dollarit menevät bashille sellaisinaan.
+name: Aja komento Macilla
+
+on:
+  workflow_dispatch:
+    inputs:
+      komento:
+        description: 'Bash-komento (set -euo pipefail; monirivinen sallittu; ajetaan repon työkansiossa)'
+        required: true
+        type: string
+      valmistelu:
+        description: 'tools/mac-ajovalmis.sh:n liput ennen komentoa (tyhjä = node@22 ja awscli polkuun; esim. "--chromium --ffmpeg"; "ohita" = ei valmistelua)'
+        required: false
+        type: string
+        default: ''
+      aikaraja:
+        description: 'Aikaraja minuutteina'
+        required: false
+        type: string
+        default: '60'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: aja-macilla
+  cancel-in-progress: false
+
+jobs:
+  aja:
+    # Vain omistaja saa ajaa self-hosted-koneella (repo on julkinen).
+    if: github.event_name == 'workflow_dispatch' && github.actor == github.repository_owner
+    runs-on: [self-hosted, macOS]
+    timeout-minutes: ${{ fromJSON(inputs.aikaraja) }}
+    env:
+      NODE_USE_ENV_PROXY: '1'
+    steps:
+      - uses: actions/checkout@v4
+
+      # Homebrew polkuun aina, jotta brew/ffmpeg/aws löytyvät myös
+      # silloin, kun valmistelu ohitetaan (runner on taustapalvelu, jolla
+      # ei ole omistajan kuoren profiilia).
+      - name: Homebrew polkuun
+        run: echo "PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH" >> "$GITHUB_ENV"
+
+      - name: Mac-ajokoneen valmistelu
+        if: ${{ inputs.valmistelu != 'ohita' }}
+        run: tools/mac-ajovalmis.sh ${{ inputs.valmistelu }}
+
+      - name: Komento
+        env:
+          KOMENTO: ${{ inputs.komento }}
+        run: |
+          set -euo pipefail
+          echo "::group::Komento"
+          printf '%s\n' "$KOMENTO"
+          echo "::endgroup::"
+          echo "Kone: $(uname -m) $(sw_vers -productVersion 2>/dev/null || true), ytimiä $(sysctl -n hw.ncpu 2>/dev/null || true)"
+          bash -euo pipefail -c "$KOMENTO"

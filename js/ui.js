@@ -2,6 +2,13 @@
 
 import { pixelOf, pointAlong, posKey } from './rules.js';
 import {
+  ENNAKKOZOOMIN_MS, ENNAKON_ASKELIA, ENNAKON_HENGAHDYS_MS, ENNAKON_JATKOT, HYPYN_TAUKO_MS,
+  NAPPULAN_LAHDON_VIIVE_MS, SAATON_PEHMENNYS, SAATON_VAHIN_OSUUS, SAATON_VAHIN_PX,
+  MATKARAJAUKSEN_MARGINAALI, MATKARAJAUKSEN_PALUU_MS, MATKARAJAUKSEN_VAHIN_YKS,
+  SIIRTOZOOMIN_LAHENNYS, STEP_MS, askelenSiirtoleveys, autokyydinAskel, autokyydinVaihe,
+  hypynHuippu, hypynVaihe, matkanVaihe, siirtoajonKesto,
+} from './siirtokoreografia.js';
+import {
   chooseDuelAnswer,
   chooseMove,
   chooseQuizAnswer,
@@ -11,7 +18,7 @@ import {
   wantsHint,
 } from './ai.js';
 import {
-  DUEL_PRIZE, FLIGHT_PRICE,
+  BUS_FARE, DUEL_PRIZE, FLIGHT_PRICE,
   HINT_PRICE, MANNERLENTO_NAPPI, MANNER_NIMET, RECORD_DAYS, SEA_FARE, STAR_PRIZE,
 } from './game.js';
 import {
@@ -21,24 +28,49 @@ import { stampBoard } from './passport.js';
 // UI:n puhtaat apurit, ikonit ja alkuanimaation kehysmatematiikka
 // (siirretty tästä tiedostosta 17.8.2026, remontin M2).
 import {
-  AARRELAATAT, EVENT_SOUND, JALJEN_PYYHKAISY, TOAST_MS, LINSSI_EI_IKONI, MERKKI_SEIS,
+  AARRELAATAT, ETUSIVUN_KOHTEET, ETUSIVUN_NAKYVAT, EVENT_SOUND, JALJEN_PYYHKAISY,
+  TOAST_MS, LINSSI_EI_IKONI, MERKKI_SEIS,
   MERKKI_SOITA, REVEAL_SUB, VIIVA_IKONIT, aarreIkoni, aarrekuvanOsoitteet,
   alkuKehykset, arvoHuudahdus, ekaLause, esilataaKuvat, html, jaaKappaleiksi,
   jaljenKehykset, kierraKehykset, kuvitukseton, lahdemerkinta, liuskaIkoniSvg,
-  maahanMuoto, onVanhaKuva, paikassaMuoto, pehmeaPolku, piirraLeipateksti,
+  maahanMuoto, matkakirjanOtsikko, onVanhaKuva, paikassaMuoto, paikkaaMuoto, pehmeaPolku,
+  piirraLeipateksti,
   pisteMonikulmiossa, polloNimilappu, polunPituus,
   cachedImage, cachedSummary, fokusmoodiPaalla,
   kehittajaMaailmaPaalla, kehittajaTilaPaalla, unohdaKehittajaKytkimet,
+  lautaValinta, palloTurvatilassa, asetaPalloKevennys, palloKevennetty, etusivupalloPaalla,
+  // Linssin yhteinen portti (body.aikajana-paalla): ks. linssikarttaEstaa.
+  linssiEstaa,
+  // VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): yksi vakio ratkaisee,
+  // ladataanko tasokarttaa lainkaan (js/ui-apurit.js).
+  VANHA_KARTTA_KAYTOSSA,
+  laukunTilastotAuki, tallennaLaukunTilastot,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
+  puhelinTila,
+  // Luennan aikainen tekstipiilo (omistaja 15.9.2026): sama mekanismi
+  // kuin puhelimella, mutta ehtona luennan tila eikä ruudun koko.
+  LUENNAN_TEKSTIPIILO, luennanTekstipiilo, tekstitPiilossa,
 } from './ui-apurit.js';
 import { onAarre } from './tokens.js';
+// Rekisteri on pieni ja staattinen: hiomassa-linssin ikonipaikka luetaan
+// siitä laukkuun ilman moduulia (js/linssit/rekisteri.js HIOMASSA).
+import { LINSSIT } from './linssit/rekisteri.js';
+/** Yhteinen kuva hiomassa olevalle linssille, kunnes Codex piirtää omat (assets/linssit/<tunnus>.png). */
+const LINSSI_HIOMASSA_KUVA = 'assets/linssit/hiomassa.svg';
+import { ilmoitaLivianTilanne, ilmoitaLivianTunne } from './livia-tilanteet.js';
+// Kehittäjän kohtaamislista (omistaja 5.9.2026): oma moduulinsa, joka
+// hoitaa lehden, hiekkalaatikon ja pelin kloonauksen kokonaan itse.
+import { avaaKohtaamistesti } from './kohtaamistesti.js';
 // Remontin M5a: lehden sivukoneisto.
 import {
   avaaGrafiikkaLehti,
-  avaaKehittajaLehti, avaaLukijoiltaLehti, avaaMaalehti, avaaPoiminnatLehti,
+  avaaKehittajaLehti, avaaKehittajalehti, avaaLukijoiltaLehti, avaaMaalehti,
+  avaaMusiikkiLehti,
+  avaaPoiminnatLehti,
   avaaRaamattuLehti,
   avaaSisallysvalikko,
-  avaaTilanneLehti, avaaTilastoLehti, jatkaLehdenLuentaa, kytkeTutkiSelaus, naytaMaaUutiset,
+  avaaTilanneLehti, avaaTilastoLehti, jatkaLehdenLuentaa, kaupunginEsittely,
+  kytkeTutkiSelaus, naytaMaaUutiset, LEHDEN_VAKIOESITTELY,
   naytaTutkiSivu, naytaVuosiSaa, openWiki, rakennaSivut, renderArticle,
   renderMaastoArtikkeli, sijoitaLehtiKaiutin, tutkiEkaSivu, tutkiSivuja,
   vaihdaTutkiSivu, varustaLukija,
@@ -51,7 +83,12 @@ import {
 import {
   asetaLuentaKytkin, haivytaJaSiivoa, haivytaLuenta, lueMerkinta,
   luennanLoppuun, luentaKytkinPaalla, merkitsePuhuja, playDiaryVoice,
-  playIntroVoice, stopDiaryVoice, stopIntroVoice, vapautaPuhuja,
+  playIntroVoice, PUHUJA_PULU, saapumispuheenSoitin,
+  stopDiaryVoice, stopIntroVoice,
+  // Luennan NÄKYVÄT merkit lukevat kuuluvaa ääntä, eivät varattua
+  // puheenvuoroa (15.9.2026, ks. kaynnistaLuentavahti).
+  soivaPuhuja, puheenKello,
+  vapautaPuhuja,
 } from './luenta.js';
 import {
   answerDuelUi, answerQuiz, renderDuel, renderQuiz, stopQuizTimer,
@@ -67,6 +104,15 @@ import {
   avaaNahtavyys, mitoitaNahtavyysDialogi, nahtavyydenKaruselli,
 } from './nahtavyydet.js';
 import { taitaOpas } from './opas.js';
+import { naytaLinssivirhe, poistaLinssivirhe } from './linssivirhe.js';
+
+/*
+ * Kuinka kauan linssin avaukselle annetaan aikaa, ennen kuin pelaaja
+ * saa ilmoituksen (ks. varmistaLinssinAvaus). Sama luku kuin
+ * astronauttilinssin omalla vartijalla (js/linssit/satelliitti.js
+ * VARTIJAN_AIKAKATKO_MS) — pitkä kuvalataus ehtii perille.
+ */
+const LINSSIN_AVAUSVAHTI_MS = 12000;
 // Laitemittari (?mittari=1): pois päältä se ei tee eikä maksa mitään.
 import { kaynnistaKarttamittari, mittariPaalla } from './karttamittari.js';
 // Lautojen yhdistetyt sisältötaulut, luentajoukot ja kuratoidut
@@ -83,6 +129,8 @@ import {
 } from './natiivi.js';
 // Matkalaukun alalaidan "Unohdettu aarre": tekijänoikeus ja lähdeluettelo.
 import { LAHTEET, LAHTEITA, PELI } from './lahteet.js';
+// Ilmepaketti (omistaja 5.9.2026): matkareitti piirtyy musteviivana.
+import { piirraMusteviiva } from './ilme.js';
 import { fetchArticle, fetchImages, suurennusportaat } from './wiki.js';
 // HUOM: tuonnit ilman aliasta. Yhden tiedoston versio (tools/build-standalone.mjs)
 // niputtaa moduulit samaan näkyvyysalueeseen ja poistaa import-rivit, joten alias
@@ -93,7 +141,8 @@ import {
   lippuUrl, lippuVara, valokuvaSuurennos, valokuvaUrl, valokuvaVara,
 } from './packs/africa-valokuvat.js';
 import {
-  asetaKuva, julisteUrl, peiliPetti, peilinLaji, aaniOsoite, aaniUrl, onPeilista,
+  asetaKuva, assetOsoite, julisteUrl, musaPolku, peiliPetti, peilinLaji,
+  aaniOsoite, aaniUrl, onPeilista,
 } from './media.js';
 import { KULTTUURI_PALKKIO } from './packs/africa-kulttuuri.js';
 import { TARINAKAARI, KAARI_LAUDAT, kaariLuentaSoi } from './packs/tarinakaari.js';
@@ -114,30 +163,37 @@ import { MINIATYYRIT } from './packs/miniatyyrit.js';
 // kehittäjäkartan vihreä merkintä lukevat kaikki tämän saman taulun.
 import { JULISTEET, JULISTE_LAHDE, kaupunginJuliste } from './packs/julisteet.js';
 import {
-  POLLO_AARRE, polloAnkkuri, polloLisavihje, polloOnnittelu, polloPaivitaNakyvyys, polloSulje,
-  polloVihje, polloVihjePois,
+  POLLO_AARRE, polloAnkkuri, polloAuki, polloKuplatPois, polloLisavihje,
+  // Luennan tekstipiilo: ruudulla olevat repliikit pluskuplaan.
+  polloLuennanKuplatPiiloon,
+  polloOnnittelu,
+  polloPaivitaNakyvyys, polloSulje, polloVihje, polloVihjePois,
 } from './pollo.js';
 import { ajastaEhdotusKupla, ehdotusOsio, proHakuRasti, proOsio } from './ehdotukset.js';
+import { kuvavinkkiOsio } from './kuvavinkki.js';
 /*
  * Livian omat kuplat (js/livia.js): avausesittely aloitusvalinnassa
- * lähtee kartasta (zoomaaAloituskartta), mutta sen peruminen ja
- * mannerivihjeen tilannelaukaisin kuuluvat pelin kulkuun.
+ * lähtee siitä laudasta, jolta lähtökaupunki valitaan — tasokartalta
+ * zoomaaAloituskartta, pallolta aloitaPallolta (aalto 3A) — ja sen
+ * peruminen ja mannerivihjeen tilannelaukaisin kuuluvat pelin kulkuun.
  */
 import {
-  naytaLivianPaljastus, nollaaLivianVihjeet, paivitaMannerivihje, peruLivianAvaus,
+  livianPaljastusOdottaa, naytaLivianAvaus, naytaLivianPaljastus, nollaaLivianVihjeet,
+  odotaLivianTraileria, paivitaMannerivihje,
+  peruLivianAvaus, peruLivianTraileriodotus,
 } from './livia.js';
 // Viiden symbolin reaktionappi sisällön kylkeen (js/reaktiot.js).
 // ui.js tarvitsee tästä kuvasuurennoksen napin ja litteiden
 // kulttuurinostojen väliotsikkonapit; lehden ja jutun omat napit
 // piirretään niiden omissa moduuleissa.
-import { piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.js';
+import { otsikkoAvain, piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.js';
 /*
  * SÄHKEPINTA (Raamattu, osio SÄHKEJÄRJESTELMÄ): retkikunta, sähkeet ja
  * kaveriapu asuvat omassa moduulissaan (js/sahke.js). ui.js kutsuu
  * siitä kahta asiaa: valikon retkikuntaosio ja piirtokutsu.
  */
 import { paivitaSahke, retkikuntaOsio } from './sahke.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 // Tietäjätasot: matkalaukun nimikerivi ja pöllön onnittelukuplat.
 import {
   seuraavaTietajataso, tietajaAvatar, tietajataso, tietajatasonOsuus, varssynSakeet,
@@ -146,14 +202,27 @@ import {
 import { avaaTietajagalleria } from './tietajagalleria.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
+// Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
+import { livianKorostetutKaupungit } from './liviapuhe.js';
 // Fokusmoodin annosteluvirta (js/fokusvirta.js). Kytkentä on kaksi
 // kutsua: saapumisen laukaisin renderissä ja lehtilukko openArrivalissa.
+import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import {
   fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden,
   fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu, fokusvirtaLaattaNakyy,
-  fokusvirtaKohtaaminenPisteessa, fokusvirtaLehtivinkki, fokusvirtaSisalto,
-  fokusvirtaSaapumiskupla, nollaaFokuskuvat,
+  fokusvirtaLehtivinkki, fokusvirtaSisalto,
+  fokusvirtaHuudahdus, fokusvirtaUusiKulku, liikuNappiNakyvissa,
+  fokusvirtaSaapumiskupla, nollaaFokuskuvat, vaiennaLivianKaupunkipuhe,
+  naytaLuentakuvasarja, puraFokusvirtaPaikanvaihdossa,
+  paivitaMatkakirjanPikkukuvat,
 } from './fokusvirta.js';
+/*
+ * KAUPUNGIN MINITRAILERI (omistaja 11.9.2026): kolme herokuvaa ja nimi
+ * ennen isoisän ääntä. Luenta ja kirjoituskone odottavat sen lupausta
+ * (renderFact).
+ */
+import { naytaSaapumistraileri } from './saapumistraileri.js';
+import { kaynnistaKaiutinmittari, pysaytaKaiutinmittari } from './kaiutinmittari.js';
 
 const wikiGalleryCache = new Map();
 
@@ -164,12 +233,18 @@ const wikiGalleryCache = new Map();
  * Sama muunnos kahdelle aineistolle: Tutki-sivun OMAT_GALLERIAT
  * (kenttä `caption`) ja vuorikohteiden VUORIKUVAT (kentät `selite` ja
  * `lahde`, kuten nähtävyysjutuissa).
+ *
+ * KAKSI PITUUTTA KULKEE MUKANA (js/kuvatekstit.js, omistaja 9.9.2026):
+ * `caption` on pitkä versio suurennokselle (openLightbox) ja `lyhyt`
+ * se, mikä näkyy sivulla karusellin alla (paivitaWikiKuvateksti).
+ * Ilman `lyhyt`-kenttää molemmat ovat entinen teksti.
  */
 function kuratoituGalleria(kuvat, leveys = 1200) {
   return kuvat.map((k) => ({
     src: valokuvaUrl(k.tiedosto, leveys),
     vara: valokuvaVara(k.tiedosto, leveys),
-    caption: k.selite ?? k.caption ?? null,
+    caption: kuvatekstiPitka(k) || k.caption || null,
+    lyhyt: kuvatekstiLyhyt(k) || k.caption || null,
     lahde: k.lahde ?? null,
   }));
 }
@@ -184,11 +259,45 @@ async function cachedGallery(title) {
   return wikiGalleryCache.get(title);
 }
 import { sfx, treasureSound } from './sound.js';
+import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
+// Gallerioiden selauskaistat: yksi jaettu sääntö (omistaja 9.9.2026).
+import { gallerianVyohyke, vyohykkeenAskel } from './galleria.js';
 import {
   playPlaceAmbience, stopPlaceStream, stopQuizMusic,
   vaimennaTausta, palautaTausta,
   hiljennaAmbienssi, palautaAmbienssi,
+  // Avauksen oma sekoitus: portin painalluksesta musiikki alas ja
+  // terminaali ylös (js/ambience-stream.js "AVAUKSEN ÄÄNI").
+  aloitaAvauksenAani, lopetaAvauksenAani,
 } from './ambience-stream.js';
+/*
+ * Pohjaraidan valitsin (omistaja 5.9.2026 yö: "generoi musiikkeja
+ * kaikkiin kohtiin peliä"). UI kertoo vain, mikä näkymä on auki —
+ * raidan valinta ja ristihäivytys ovat js/musiikkivalitsin.js:ssä ja
+ * js/ambience-stream.js:ssä. Lehti kulkee ambienssin hiljennyssyystä,
+ * joten täältä kerrotaan vain matkalaukku.
+ */
+import {
+  MUSIIKIN_PERUSTASO, asetaMusiikkitila, kuunteleMusiikinKerrointa, musiikinKerroin,
+  musiikkiPaalla,
+} from './musiikkivalitsin.js';
+/*
+ * Aarteen paljastusaihe on musiikkia, joten sekin kulkee musiikin
+ * yhteisen vahvistimen kautta — muuten iOS soittaisi sen tiedoston
+ * omalla tasolla (omistajan vika 9.9.2026).
+ */
+import {
+  asetaMusiikinTaso, irrotaMusiikinVahvistin, liitaMusiikkiin, musiikkiSaaSoida,
+  volumeToimii,
+} from './musiikkivahvistin.js';
+/*
+ * Siirtymän oma musiikki (omistajan tilaus 2.9.2026). Oma moduulinsa,
+ * koska se ei ole paikan ääni vaan matkan: ks. js/siirtymamusiikki.js.
+ */
+import {
+  aloitaSiirtymamusiikki, lopetaSiirtymamusiikki,
+  aloitaVaramusiikki, lopetaVaramusiikki,
+} from './siirtymamusiikki.js';
 import {
   AANITILA_TAPAHTUMA, puheVoima, jaaAlku, kertojaTila, luentaVastaaTekstia,
 } from './aani-ehdokkaat.js';
@@ -228,6 +337,7 @@ import {
   drawLand,
   drawPaperOverlay,
   drawPaperPohja,
+  drawPaperUlkopuoli,
   drawParchment,
   drawTerrain,
   drawWaves,
@@ -251,16 +361,29 @@ import {
 } from './mapart.js';
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
 import { vuorikuvat } from './packs/vuori-valokuvat.js';
-import { MAASTO_TEKSTIT } from './packs/maasto-tekstit.js';
-import { MAASTO_TEKSTIT_MALLI } from './packs/maasto-tekstit-malli.js';
-import { MERISYVYYS } from './packs/maailmankartta-syvyys.js';
-import { MAASTON_VARJOSTUS } from './packs/maailmankartta-varjostus.js';
-// Remontin M7a: laudan kamera ja koordinaatit (malli B).
-import { Kartta } from './kartta.js';
+/*
+ * TASOKARTTA LADATAAN VASTA KUN SE TARVITAAN (laiskoituserä 5b,
+ * omistaja 5.9.2026 ilta: *"laita laiskoitus työn alle"*).
+ *
+ * Remontin M7a laudan kamera (js/kartta.js, malli B) ja ne
+ * aineistopakat, joita VAIN tasokartta lukee (maasto-tekstit ja sen
+ * malli avaaMaastonimessä, maailmankartta-varjostus drawMaastossa)
+ * tulivat tähän asti staattisina tuonteina: 0,89 Mt lähdekoodia haettiin
+ * ja jäsennettiin joka käynnistyksessä, myös pallolaudalla, jossa
+ * tasokartta on lepotilassa eikä piirrä mitään. Nyt ne tulevat yhdestä
+ * portista (js/kartta-lataus.js lataaTasokartta), ja ui.kartta on siihen
+ * asti nukkuva sijaisolio — ks. sen tiedoston alun kommentti mallista.
+ *
+ * js/packs/maailmankartta-syvyys.js (MERISYVYYS, 260 kt) putosi kokonaan:
+ * kerros on ollut pois käytöstä (ks. drawBoard), joten tuonti oli
+ * pelkkää käynnistyksen painoa.
+ */
+import { NukkuvaKartta, lataaTasokartta, tasokartanOsat } from './kartta-lataus.js';
 // Fokuslehden klikattavat karttakohteet ja niiden pop-up (js/fokuskohteet.js).
 import {
   matkakirjanIhme, nollaaFokuskohteet, paivitaFokuskohteet, piirraIhmenappi,
   piirraIhmenauha,
+  avaaKohdeSuurennos,
 } from './fokuskohteet.js';
 /*
  * MERKKIEN LADONNAN MITTAKAAVA TULEE LADONTAMODUULISTA, EI TÄSTÄ
@@ -276,7 +399,16 @@ import {
  * kuin kohdemerkeillä: päivitys aina kun näkymä on asettunut, nollaus
  * laudan vaihdossa.
  */
-import { paivitaFokuspiste, nollaaFokuspiste } from './fokuspiste.js';
+import { paivitaFokuspiste, paivitaFokuspisteKaikillaLaudoilla, nollaaFokuspiste } from './fokuspiste.js';
+/*
+ * Nykyisen maan vahvistettu ääriviiva (js/maatummennus.js; naapurien
+ * tummennus poistui 2.9.2026). Sama elinkaari kuin
+ * yllä olevilla merkkikerroksilla: päivitys kun näkymä on ASETTUNUT ja
+ * kun maa vaihtuu, nollaus laudan vaihdossa. Aineisto on laiska eikä
+ * moduuli tuo mitään — kerros jää yksinkertaisesti pois, jos
+ * maapolygonit.json ei ole saatavilla (yhden tiedoston versio).
+ */
+import { paivitaMaatummennus, nollaaMaatummennus } from './maatummennus.js';
 /*
  * Laattapyramidi (js/laattapyramidi.js) on pelilaudan AINOA karttapohja
  * (Raamattu, "YKSI MAAILMANBITTIKARTTA"). `pyramidiKattaa` kertoo,
@@ -285,6 +417,7 @@ import { paivitaFokuspiste, nollaaFokuspiste } from './fokuspiste.js';
  */
 import {
   paivitaPyramidi, nollaaPyramidi, pyramidiKattaa, pyramidinMittarit,
+  odotaPyramidi,
 } from './laattapyramidi.js';
 /*
  * PAIKANNIMET LADOTAAN RUUTUAVARUUDESSA (omistajan päätös 30.8.2026).
@@ -294,7 +427,8 @@ import {
  * hiljaa vanhojen laattojen päällä.
  */
 import {
-  karttanimienMitat, paivitaKarttanimet, unohdaKarttanimet,
+  asetaRuutuvaraukset, karttanimienMitat, paivitaKarttanimet, unohdaKarttanimet,
+  asetaKarttanimienLentotila,
 } from './karttanimet.js';
 /*
  * MAAN IKKUNA laudan koordinaateissa (js/packs/fokus-grc.js
@@ -308,6 +442,11 @@ import { paivitaElaintakyt, nollaaElaintakyt } from './elaintaky.js';
 // Karttaselitevalikko ja sen aihevalot (js/karttaselite.js,
 // js/karttavalot.js): nappi kartan oikeaan yläkulmaan, valot merkkien alle.
 import { kaynnistaKarttaselite, paivitaKarttaselite } from './karttaselite.js';
+// Karttatyökalun Maakunnat-välilehti (runko, 22.9.2026): kytketään heti
+// karttaselitteen käynnistyksen jälkeen — turvallinen kutsu myös vanhalla
+// karttaselitteellä, jolla ei vielä ole asetaMaakunnat-koukkua.
+import { kytkeMaakunnatKarttaselitteeseen } from './karttatyokalu-maakunnat.js';
+import { kaynnistaYlapalkkiVaaka } from './ylapalkki-vaaka.js';
 /*
  * Fokusnäkymän RUUTUUN ankkuroidut atlas-elementit: mittajana, maan
  * kartuutsi ja sen takaa liukuva maataulu (omistaja 25.8.2026). Ne
@@ -315,107 +454,54 @@ import { kaynnistaKarttaselite, paivitaKarttaselite } from './karttaselite.js';
  * skaalautua zoomissa — ks. js/fokusmitat.js.
  */
 import { nollaaFokusmitat, paivitaFokusmitat, projisoiLaudalle } from './fokusmitat.js';
+/*
+ * LINSSIKETJUN LOKI (js/reliefipyramidi.js). Avaus kulkee kolmen
+ * moduulin läpi, eikä yksikään näe muiden osuutta — yhteinen loki on
+ * ainoa tapa sanoa, mikä vaihe maksaa. Ks. moduulin oma perustelu.
+ */
+import { aloitaLinssiketju, merkitseLinssiketju, linssiketjunLoki } from './reliefipyramidi.js';
+import { aaniLisenssiSallittu } from './lisenssi.js';
+import { suoraanKartallePaalla } from './piirtokoe-asetus.js';
+import { taytaPohja } from './tekstipohja.js';
+import { INTRO_PAIKKA, INTRO_TEXT, INTRO_VALINTA, PERIAATTEET } from './ui-tekstit.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
 const BOT_QUIZ_DELAY = 1500; // botin kysymys jää hetkeksi näkyviin luettavaksi
+/*
+ * AUTOMAATTIHEITON HENGÄHDYS (omistajan tilaus 2.9.2026, sanatarkasti:
+ * *"nopanheitto tulee jatkua automaattisesti jos ei olla saavuttu
+ * seuraavaan kohdekaupunkiin"*).
+ *
+ * Kun nappula pysähtyy reitin askelpisteeseen, seuraava heitto tulee
+ * itsestään — mutta ei samassa silmänräpäyksessä. Tauko on se hetki,
+ * jossa silmä ehtii nähdä mihin nappula jäi (kamera on juuri jäänyt
+ * siirtozoomiin, ks. animatePawnSisalla) ennen kuin noppa pyörähtää
+ * kartan päällä. Botin vuorotauko (BOT_DELAY 650 ms) on samaa luokkaa;
+ * tämä on hitusen pidempi, koska edellinen askel päättyy laskeutuvaan
+ * nappulaan eikä valmiiseen ruutuun.
+ */
+const AUTOMAATTIHEITON_TAUKO_MS = 750;
 const LETTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 
-// Animaatioiden rytmi millisekunteina.
+/*
+ * Kohtaamiskuvan lähderivi. Kuvat ovat pelin omaa kuvitusta eivätkä
+ * Commonsin aineistoa, joten lähde on sama joka kuvalla — mutta se
+ * kirjoitetaan silti näkyviin samalla kuvateksti + lähde -mallilla
+ * kuin muualla pelissä (js/ui.js naytaPostikortti).
+ */
+const KOHTAAMISKUVAN_LAHDE = 'Matkakirjan kuvitus';
 
-const STEP_MS = 190; // yhden hypyn lentoaika kartalla
 /*
- * NAPPULAN HYPPY (omistajan tilaus #100).
- *
- * `STEP_MS` on nyt HYPYN LENTOAIKA, ja tauko on oma lukunsa: askel
- * kestää yhteensä lento + tauko. Jako on tarkoituksellinen, koska
- * tulossa on erikseen hitaampi jalkamatkasiirtymä (#96) — silloin
- * riittää kasvattaa lentoaikaa (parametri `stepMs`), ja tauko pysyy
- * sinä pienenä hengähdyksenä, joka tekee liikkeestä siirretyn
- * pelinappulan eikä liukuvan pisteen.
- *
- * Kaaren korkeus laudan yksiköinä on suhteessa hypyn pituuteen, mutta
- * rajoissa: lyhyt askel ei saa jäädä litteäksi eikä pitkä (lento,
- * jossa askelia on yksi) kaartaa ruudun ulkopuolelle.
+ * SIIRRON KOREOGRAFIAN LUVUT JA KÄYRÄT (STEP_MS, HYPYN_TAUKO_MS,
+ * jalkamatkanAskel, NAPPULAN_LAHDON_VIIVE_MS, siirtoajonPehmennys,
+ * siirtoajonKesto, SIIRTOZOOMIN_LAHENNYS, ENNAKKOZOOMIN_MS, ENNAKON_*,
+ * SAATON_VAHIN_*) asuvat js/siirtokoreografia.js:ssä: ne ovat
+ * lautariippumattomia, ja karttapallo (js/pallolauta/) lukee samat
+ * luvut (pallolauta vaihe 2, docs/moduulit/karttapallo.md luku 7).
+ * Siirto oli sanatarkka kommentteineen — perustelut ovat siellä.
  */
-const HYPYN_TAUKO_MS = 190; // näkymätön käsi laskee nappulan ja tarttuu uudelleen
-const HYPYN_KAARI = 0.34; // kaaren huippu suhteessa hypyn pituuteen
-const HYPYN_KORKEUS_MIN = 9;
-const HYPYN_KORKEUS_MAX = 30;
-/*
- * JALKAMATKAN OMA ASKEL (omistajan tilaus #96: *"Matkustusanimaatio
- * jalan saisi olla hitaampi."*).
- *
- * Muutos on täsmälleen se, jota #100 varautui: kasvatetaan HYPYN
- * LENTOAIKAA, ei taukoa. Tauko on se pieni hengähdys, joka tekee
- * liikkeestä siirretyn pelinappulan; jos sekin venyisi, jalkamatka
- * muuttuisi nykiväksi odotteluksi. Lento (STEP_MS, FLIGHT_MS,
- * MANNER_LENTO_MS) jää ennalleen — tilaus koski maareittejä.
- *
- * 190 → 640 ms eli 3,4×. Ensimmäinen yritys oli 340 ms (1,8×), mutta
- * omistajan pelitesti 27.8.2026 (iPhone) oikaisi sen: *"pelinappulan
- * etenemisvauhti pitäisi olla paljon hitaampi"* — paljon, ei vähän.
- * 640 ms on se aika, jossa silmä ehtii seurata yhden hypyn kaaren
- * alusta loppuun ja liike lukee käden siirroksi eikä lentoradaksi.
- *
- * Kuuden askeleen täysi heitto kestää nyt 6 × 640 + 5 × 190 ≈ 4,8 s
- * (ennen 1,9 s), ja juuri se on se matka, jonka ajan saattava kamera
- * ehtii ajaa lähemmäs, kuljettaa laudan uuteen kohteeseen ja palata.
- */
-const JALKAMATKAN_STEP_MS = 640;
-/*
- * SAATTAVA KAMERA (omistajan tilaus #96: *"Kartta voisi samalla myös
- * hitaasti siirtyä uuteen kohteeseen ja paljastaa sitä näkyviin sitä
- * mukaa kun nappula etenee."*).
- *
- * Kamera ei seuraa nappulaa hypyittäin — se olisi nykivä, koska hyppy
- * on paraabeli ja välissä on tauko — vaan LIUKUU koko matkan ajan
- * kohti määränpäätä yhtenä ajona (js/kartta.js ajaKamera). Se on
- * samalla se tapa, jolla kohde "paljastuu sitä mukaa": uutta maastoa
- * tulee näkyviin ruudun reunasta täsmälleen sitä tahtia kuin nappula
- * etenee.
- *
- * KAMERA MENEE MYÖS LÄHEMMÄS (omistajan pelitesti 27.8.2026, iPhone:
- * *"kamera-animaatio ei seuraa järkevästi pelinappulaa. pitäisi olla
- * ainakin lähempänä jotta lauta liikkuisi enemmän"*).
- *
- * Ensimmäinen toteutus piti mittakaavan ennallaan ja siirsi vain
- * keskipistettä. Ongelma ei ollut liu'ussa vaan siinä, ETTEI LAUTA
- * LIIKKUNUT TARPEEKSI: kaukaa katsottuna koko matka mahtuu ruudulle,
- * ja kamera siirtyy muutaman kymmenen pikseliä — silmä ei näe sitä
- * seuraamisena. Lähikuvassa sama matka on ruudullinen liikettä, ja
- * juuri se on "kartta siirtyy uuteen kohteeseen".
- *
- * SAATTOZOOMI on kerroin nykyiseen zoomiin: 1,7× vie kartan selvästi
- * lähemmäs mutta ei niin lähelle, että pelaaja kadottaisi paikkansa.
- * Katon hoitaa kamera-ajo itse (kartta.zoomiRajat), joten valmiiksi
- * lähellä oleva näkymä ei kiristy yli portaikon.
- *
- * JA PALAA. Perillä kamera ajaa takaisin siihen kertoimeen, josta
- * matka alkoi — nopeammin kuin meno, koska paluu ei ole kohtaus vaan
- * asennon palautus. Uuteen MAAHAN saavuttaessa fokuskartan oma ajo
- * ehtii ensin ja korvaa paluun; se on oikein, koska maanvaihdoksen
- * rajaus on tarkempi kuin vanha kerroin.
- *
- * Pehmennys on smoothstep eikä kamera-ajon oma kuutiokäyrä: kuutio
- * seisoo lähes paikallaan matkan ensimmäisen neljänneksen, ja kamera
- * jäisi jälkeen ja kirisi lopussa. Smoothstep lähtee ja pysähtyy
- * pehmeästi mutta kulkee välillä lähes nappulan tahtia.
- *
- * ELE VOITTAA: ajon keskeyttää sormi kartalla, nipistys, rulla tai
- * zoomipainike (kartta.pysaytaKameraAjo), ja kartta jää siihen mihin
- * ajo ehti. Sitä ei yritetä jatkaa — pelaajan oma ele on viimeinen
- * sana kartan paikasta, eikä keskeytetty matka aja paluutakaan.
- */
-const SAATON_PEHMENNYS = (t) => t * t * (3 - 2 * t);
-const SAATON_LAHENNYS = 1.7;
-const SAATON_PALUU_MS = 900;
-/*
- * Alle tämän jäävää siirtoa ei ajeta lainkaan: kohde on jo käytännössä
- * ruudun keskellä, ja pikkuliike näyttäisi vain siltä että kartta
- * värähtää nappulan lähtiessä. Mitta on RUUDUN pikseleitä.
- */
-const SAATON_VAHIN_PX = 60;
+
 /*
  * JALKAMATKAN ÄÄNIMAISEMA (#96: *"Taustalle pitää kehitellä sopiva
  * äänimaisema siirtymän ajaksi."*).
@@ -433,7 +519,7 @@ const SAATON_VAHIN_PX = 60;
  * arpoutua korista ja alkaa eri kohdasta joka kerta, koska sama
  * siirtymä toistuu pelissä kymmeniä kertoja.
  */
-const JALKAMATKAN_MAISEMA = 'metsa';
+export const JALKAMATKAN_MAISEMA = 'metsa';
 const FLIGHT_MS = 900;
 // Mantereen sisäinen lento liukuu rauhallisemmin moottorin hurinalla.
 const MANNER_LENTO_MS = 2800;
@@ -529,41 +615,18 @@ const LENNON_NIELU_MS = 500;
 // Lähtökaupunki: matka alkaa aina Lontoosta (Raamattu, "Pelin kulku").
 const ALOITUSLENNON_LAHTO = 'lontoo';
 /*
- * ETUSIVUN VALITTAVAT KOHTEET (omistajan tilaus 25.8.2026).
- *
- * Aloituskartalla on vain ne kaupungit, joilla on valmis fokusmoodin
- * sisältö: matkan ensimmäinen kohde on kokonaisen maan avaus, eikä
- * puolivalmiiseen kohteeseen saa päästä lentämään. PISTEITÄ LISÄTÄÄN
- * SITÄ MUKAA KUN MAITA VALMISTUU FOKUSJÄRJESTELMÄLLE — lisäys on tähän
- * joukkoon, ei laudan dataan (js/packs/maailma.js pysyy täytenä
- * maailmankarttana, jota myös katselutila käyttää).
- *
- * Sofia on jo pelissä mutta EI ole aloituskohde: sinne kävellään
- * Ateenasta, kuten tarina menee.
+ * Se yksi kohde, jonka lauta ja taide esilämmitetään avaustekstin
+ * aikana (esilammitaAvaus): tarinan ensimmäinen reitti. Muut kohteet
+ * ovat yhtä valittavia, mutta ilman etumatkaa.
  */
-const ETUSIVUN_KOHTEET = new Set(['ateena']);
+const ESILAMMITETTAVA_KOHDE = 'ateena';
 /*
- * MITKÄ KAUPUNGIT NÄKYVÄT ALOITUSKARTALLA LAINKAAN (omistajan
- * pelitestipalaute v1119: *"piilota toistaiseksi KAIKKI muut
- * kaupungit paitsi Ateena — Tanger, Moskova, Kairo, Kapkaupunki,
- * Peking, Mumbai ym. pois näkyvistä (nimet, ympyrät, konesymbolit;
- * Lontoo lähtöpisteenä saa jäädä)"*).
- *
- * Valintakartalla oli neljätoista kaupunkia nimineen, laattoineen ja
- * lentokonemerkkeineen, mutta VALITTAVIA on tasan yksi
- * (ETUSIVUN_KOHTEET). Kolmetoista muuta lupasivat matkan, jota ei ole
- * vielä olemassa.
- *
- * NÄKYVYYS, EI DATA. Lauta pysyy täytenä maailmankarttana
- * (js/packs/maailma.js) — myös katselutilaa (?lauta=) varten, jossa
- * tämä piilotus ei ole voimassa. Kaupunki palaa kartalle lisäämällä
- * sen tunnuksen tähän joukkoon, samaan tapaan kuin ETUSIVUN_KOHTEET
- * kasvaa maiden valmistuessa.
- *
- * Lontoo on mukana lähtöpisteenä: siitä matka alkaa, ja sen kultainen
- * rengas on koko kartan ainoa kiintopiste.
+ * ETUSIVUN VALITTAVAT KOHTEET JA NÄKYVÄT KAUPUNGIT asuvat
+ * js/ui-apurit.js:ssä (ETUSIVUN_KOHTEET, ETUSIVUN_NAKYVAT): myös Livian
+ * avausesittely lukee kohteiden määrän, eikä js/livia.js voi tuoda
+ * tätä tiedostoa. Joukko on puhdasta dataa — mitkä kaupungit ovat
+ * lähtövalinnassa valittavia ja mitkä näkyvät kartalla lainkaan.
  */
-const ETUSIVUN_NAKYVAT = new Set(['lontoo', ...ETUSIVUN_KOHTEET]);
 /*
  * ALOITUSSIIRTYMÄN PERGAMENTTIARKKI (omistajan tilaus 25.8.2026).
  *
@@ -612,6 +675,21 @@ const ALOITUSLENNON_AJO_MS = 2400;
  * pitää silloinkin kun pääsäie on tukossa (ks. aloituslentoSisalla).
  */
 const ALOITUSLENNON_POHJA_ODOTUS_MS = 12000;
+
+/**
+ * Kauanko avauslento odottaa LAATTAKARTAN valmistumista arkin takana.
+ *
+ * Omistajan tilaus 3.9.2026 (Raamattu, AVAUSLENTO VALMIIKSI LADATTUNA):
+ * *"kartta pitää ladata etukäteen, nyt se rakentui pikkuhiljaa
+ * taustalla valmiiksi."*
+ *
+ * KUUSI SEKUNTIA ON VAROVENTTIILI EIKÄ ODOTUSAIKA. Mitattuna
+ * (tools/savukkeet/savuke-avauslento.mjs, Chromium, laatat ämpäristä)
+ * näkyvän alueen 103 laattaa ovat perillä noin 1,5 sekunnissa siitä,
+ * kun kamera on rajauksessa — katto koskee siis vain hidasta verkkoa
+ * tai saapumatta jäävää laattaa, eikä lento saa jäädä niistä jumiin.
+ */
+const ALOITUSLENNON_LAATTA_ODOTUS_MS = 6000;
 // Reitin kaaren voimakkuus. Sama kerroin kuin laudan omilla
 // lentoreiteillä (drawBoard, .air-route), jotta uusi viiva on samaa
 // käsialaa kuin kartalle valmiiksi piirretyt kaaret.
@@ -748,6 +826,62 @@ const SAAPUMISEN_KUPLA_VALI_MS = 2500;
  * lauseen — pöllö odottaa, että kertoja on vaiennut.
  */
 const SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS = 900;
+
+/*
+ * ── PUHELIN: ISOISÄN JA PULUN TEKSTIT PIILOON ───────────────────────
+ *
+ * Omistaja (Raamattu, "IPHONE: ISOISAN JA PULUN TEKSTIT PIILOON"):
+ * *"Iphonella voisi piilottaa isoisan ja pulun tekstit. Lisaksi piilota
+ * tuo liiku nappi luennan ajaksi. Se voisi olla lisaksi vahan
+ * huomaamattomampi nakyessaan."*
+ *
+ * PUHELIN TUNNISTETAAN RUUDUN MITASTA, EI KÄYTTÄJÄAGENTISTA. Molemmat
+ * rajat ovat pelissä jo käytössä: `max-width: 699px` on kartan oma
+ * puhelinraja (css/styles.css) ja `max-height: 520px` sama raja
+ * vaakasuunnassa, jossa iPhone on 844 × 390 eikä leveysraja osuisi.
+ * Mitattu 14.9.2026: 390 × 844 → leveysraja osuu, 844 × 390 →
+ * korkeusraja osuu, 1400 × 900 → kumpikaan ei osu.
+ *
+ * SAMA MERKKIJONO ON CSS:SSÄ (css/styles.css "PUHELIN: ISOISÄN JA
+ * PULUN TEKSTIT PIILOON"). Jos rajaa muutetaan, molemmat muuttuvat.
+ *
+ * RAJA ASUU NYT js/ui-apurit.js:SSÄ (v1892): myös js/pollo.js tarvitsee
+ * sen, eikä pollo saa tuoda ui.js:ää (ui tuo pollon). Nimi viedään yhä
+ * täältä eteenpäin, joten ui.js:n käyttäjien ei tarvinnut muuttua.
+ */
+export { puhelinTila, luennanTekstipiilo, tekstitPiilossa };
+
+/*
+ * ── LIIKU-NAPIN NÄKYVYYS JA LAAJENNUS ───────────────────────────────
+ *
+ * Nappi on piilossa niin kauan kuin joku on äänessä (saapumisluenta
+ * tai Livian repliikki) ja palaa heti, kun vuoro vapautuu. Tila
+ * LUETAAN luennasta (js/luenta.js soivaPuhuja) — luenta- tai
+ * äänilogiikkaa ei muuteta, vain kuunnellaan.
+ *
+ * KAKSI TURVAA:
+ *   1. VÄLIRAUHA. Isoisän luennan ja Livian repliikin väliin jää
+ *      hengähdys (SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS = 900 ms).
+ *      Ilman välirauhaa nappi välähtäisi siinä välissä näkyviin.
+ *   2. VARAVENTTIILI. Jos puhe jää jumiin (mikään soitin ei etene
+ *      30 sekuntiin), nappi tulee näkyviin — piiloon jäänyt Liiku olisi
+ *      umpikuja. Ehjä pitkä luento ei laukaise sitä (löydös 45).
+ */
+/** Kuinka usein napin vahti kysyy, onko joku äänessä. */
+const LUENTAVAHDIN_VALI_MS = 200;
+/** Välirauha puheenvuorojen välissä: nappi ei välähdä esiin. */
+const LUENNAN_VALIRAUHA_MS = SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS + 400;
+/** Varaventtiili: nappi näkyy viimeistään tämän jälkeen. */
+const LUENNAN_VARAVENTTIILI_MS = 30000;
+/**
+ * Kauanko Liiku on laajennettuna aarteen löytymisen jälkeen.
+ *
+ * Omistaja 14.9.2026: *"Kun aarre on loytynyt nappi voisin laajentua
+ * liiku napiksi niin etta symboli jaisi vasempaan reunaan ja teksti
+ * tulisi oikealle puolelle. Nappi voisi kutistua jonkin ajan kuluttua
+ * sitten takaisin pelkaksi nelio symbooli napiksi."*
+ */
+export const LIIKU_LAAJENNUS_MS = 6000;
 /*
  * KUPLIEN SANAMUOTO ON KAANON (omistajan tilaus 26.8.2026). Maa ja
  * kaupunki taipuvat js/ui-apurit.js:n taulukoilla, mutta lauseiden
@@ -758,13 +892,111 @@ const SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS = 900;
 const SAAPUMISEN_KUPLA_TOINEN = 'Klikkaa kaupungin kultaista merkkiä kartalla.';
 
 /*
- * MATKUSTUSNÄKYMÄN MARGINAALI (omistajan pelitestipalaute v1119).
- * Osuus rajauslaatikon koosta joka reunaan: naapurikaupungin nimi ja
- * laatta mahtuvat kokonaan ruudulle eivätkä kosketa laitaa. Väljempi
- * kuin kameran oletus (0,12), koska laatikko on tässä pieni ja
- * kaupunkien merkit ovat sen reunoilla.
+ * ====================================================================
+ * KOHTEIDEN SOVITUS RUUDULLE (omistajan tilaus 2.9.2026, sanatarkasti:
+ * *"Kun pelaaja painaa Matkusta, niin kartta voisi pysyä paikallaan.
+ * Vasta sen jälkeen kun kulkumuoto on valittu ja noppaa heitetty
+ * (paitsi ei lennossa), niin vasta sen jälkeen kartta zoomautuisi sen
+ * verran ulospäin, jotta kaikki vaihtoehdot tulevat mukavasti
+ * näkyville ja reunoille jää vielä vähän lisää tilaa. Ja lennossa taas
+ * kartta zoomautuisi jo heti kun lentomuoto on valittu, niin paljon,
+ * että jokainen kohdekaupunki, mihin lento olisi mahdollinen, tulee
+ * näkyviin."*)
+ * ====================================================================
+ *
+ * MITÄ MUUTTUI. Matkusta-nappi ajoi ennen kameran naapureiden
+ * rajaukseen heti painalluksesta (v1119 MATKUSTUKSEN_MARGINAALI 0,22)
+ * ja Takaisin-nappi takaisin lähikuvaan. Se liikutti karttaa kahdesti
+ * ennen kuin pelaaja oli valinnut mitään, ja uloszoomaus tuli
+ * hetkellä, jolla ei vielä ollut yhtään valittavaa kohdetta. Nyt
+ * napista ei liiku mikään, eikä kulkumuodon valintakaan liikuta —
+ * kamera sovittaa vasta silloin kun VAIHTOEHDOT OVAT TIEDOSSA:
+ *
+ *   maitse ja meritse   nopanheiton jälkeen (sovitaSiirtokohteet):
+ *                       nappula ja kaikki heiton lailliset kohteet
+ *   lennossa            heti lentolistan auetessa (sovitaLentokohteet):
+ *                       nappula ja kaikki mahdolliset lentokohteet
+ *
+ * SOVITUS EI KOSKAAN ZOOMAA SISÄÄN eikä liiku, jos kaikki mahtuvat jo
+ * ruudulle marginaaleineen (sovitaKohteetNakyviin). Se on olennainen
+ * ero vanhaan: lähikuva säilyy silloin kun se riittää, ja kamera
+ * puuttuu peliin vain kun jokin vaihtoehto olisi jäänyt ruudun taakse.
+ *
+ * MARGINAALI ON RUUDUN MITTAA, EI LAATIKON. *"reunoille jää vielä
+ * vähän lisää tilaa"* tarkoittaa tilaa RUUDULLA, ja kohteen merkki on
+ * ruudun kokoinen olio (kultalevy ja hengittävä halo mitoitetaan
+ * ruudulle, paivitaFokusKohdeMitat): laatikon osuutena sama luku olisi
+ * pienellä laatikolla muutama pikseli ja isolla puoli ruutua. 14 %
+ * kummastakin mitasta on 1280x800-ruudun käytettävällä alueella
+ * (914 x 626 px) 128 x 88 px, eli reilusti enemmän kuin kohdemerkin
+ * laajin aste (halo 1,42 x 26 px ~ 37 px) ja sen yläpuolelle latova
+ * nimi — merkit eivät leikkaudu reunaan silloinkaan, kun kohde on tasan
+ * laatikon kulmassa.
+ *
+ * MARGINAALI MITATAAN KÄYTETTÄVÄSTÄ ALUEESTA, joka on paneeli miinus
+ * kartan päällä olevat kalusteet (SOVITUKSEN_KALUSTEET,
+ * sovituksenAlue). Ilman sitä kohde oli "ruudulla" mutta
+ * MATKAPÄIVÄKIRJA-kortin alla — mitattu vika, ks. kalustelistan
+ * perustelu.
  */
-const MATKUSTUKSEN_MARGINAALI = 0.22;
+const KOHDESOVITUKSEN_MARGINAALI = 0.14;
+/*
+ * RUUDUN KALUSTEET, JOIDEN ALLE KOHDE EI SAA JÄÄDÄ (omistajan tarkennus
+ * 2.9.2026: *"reunoille jää vielä vähän lisää tilaa"* koskee myös
+ * kartan päällä olevia kalusteita).
+ *
+ * Ensimmäinen toteutus sovitti kohteet PANEELIIN, ja mitattu seuraus
+ * näkyi heti savukkeessa: Ateenasta lennettäessä Rooman merkki asettui
+ * kohtaan 187 x 242 px — teknisesti ruudulla, mutta MATKAPÄIVÄKIRJA-
+ * kortin alle (kortti peittää nurkasta 346 x 253 px). Käytettävä alue
+ * on siis paneeli MIINUS kalusteet.
+ *
+ * LISTA ON VALITSIMIA EIKÄ MITTOJA, ja mitat luetaan ajossa
+ * (getBoundingClientRect) — sama ratkaisu ja sama perustelu kuin
+ * asteviivainten väistöllä (js/fokusmitat.js KALUSTEET): kortin korkeus
+ * riippuu merkinnän pituudesta, kartuutsin leveys maan nimestä ja
+ * napit turva-alueesta, joten kovakoodattu luku olisi väärin jo
+ * seuraavassa maassa.
+ *
+ * Yläpalkki on listalla vaikka se on nykyään karttapaneelin
+ * YLÄPUOLELLA: leikkaustesti hylkää sen itsestään, eikä listaa tarvitse
+ * muistaa muuttaa, jos palkki joskus kelluu kartan päälle.
+ */
+const SOVITUKSEN_KALUSTEET = [
+  '.topbar',
+  '.fact-card',
+  '.fokus-kartuutsi',
+  '.fokus-jana',
+  // Napit eikä koko rivi: rivi on ruudun levyinen mutta läpinäkyvä,
+  // ja sen laatikko veisi alalaidasta kaistan, jossa ei ole mitään.
+  // Sama valinta kuin js/fokusmitat.js KALUSTEET-listalla.
+  '.toimintorivi button',
+  '.pollo-nappi.pollo-kelluu',
+];
+/*
+ * Kuinka suuri osuus alueesta on jäätävä jäljelle, kun yksi kaluste
+ * väistetään. Kaluste, joka veisi enemmän, jätetään väistämättä: koko
+ * ruudun mittainen kaista olisi pahempi vika kuin kortin alle jäävä
+ * merkki, ja sovituksen on toimittava myös oudoilla ruutukoilla.
+ */
+const SOVITUKSEN_VAHIN_OSUUS = 0.45;
+/*
+ * VEITSENTERÄN SIETO. Sovitus asettaa laatikon tasan marginaalin
+ * reunalle, joten seuraava tarkistus vertaa kahta lukua, jotka ovat
+ * matematiikassa samat mutta liukuluvuissa harvoin: ilman sietoa jo
+ * pyöristysvirhe kertoisi "ei mahdu" ja peli virittäisi uuden ajon
+ * joka heitolla. Kaksi pikseliä on pienempi kuin mikään ruudulla
+ * näkyvä ero ja isompi kuin kertyvä pyöristys.
+ */
+const SOVITUKSEN_SIETO_PX = 2;
+/*
+ * Sovituksen kesto. Kartan muut ajot ovat 2 s (AJO_MS) ja ennakkozoomi
+ * 760 ms; tämä on niiden väliltä ja samaa lajia kuin ennakkozoomi —
+ * toistuva ele eikä kohtaus. Pehmennys on kamera-ajon oma
+ * kuutiokäyrä (kartta.js pehmennysKaari), sama kuin kaikissa muissa
+ * ajoissa paitsi saatossa, jolla on oma syynsä olla smoothstep.
+ */
+const KOHDESOVITUKSEN_MS = 720;
 /*
  * Matkareittien mitat ruudun pikseleinä (skaalataan näkymän
  * mittakaavalla kuten lentoreitilläkin). Viiva on laudan omaa
@@ -780,6 +1012,15 @@ const MATKAREITIN_KATKO_PX = 8;
  * ruutu, jolle nappula pysähtyy, ja sellaisen pitää näkyä.
  */
 const MATKAREITIN_PISTE_PX = 4.2;
+/*
+ * LENTOKAAREN mitat ruudun pikseleinä. Kaari on lyhytikäinen ja
+ * kulkee koko ruudun poikki, joten se saa olla laivareittiä
+ * harvempi ja hitusen paksumpi — sama lautapelin katkoviivan henki
+ * kuin poltetuilla reiteillä (maailmapiirto.js REITTITYYLI, omistaja
+ * 1.9.2026 *"harvempia ja vähän paksumpia"*).
+ */
+const LENTOKAAREN_VIIVA_PX = 2.4;
+const LENTOKAAREN_KATKO_PX = 14;
 
 /*
  * NUOREN FOGGIN HUUDAHDUSRIVI PALJASTUSKORTILLA (omistajan
@@ -808,16 +1049,26 @@ const REVEAL_HUUDAHDUS_RIVI = false;
  * eikä niitä esiladata service workerissa, joten peli hakee ne
  * ämpäristä — puuttuva tiedosto on hiljainen eikä riko paljastusta.
  */
-const AARRE_MUSIIKKI = {
-  tavallinen: 'assets/audio/musa-aarre.mp3',
-  paa: 'assets/audio/musa-paaaarre.mp3',
+export const AARRE_MUSIIKKI = {
+  tavallinen: musaPolku('musa-aarre'),
+  paa: musaPolku('musa-paaaarre'),
 };
 /*
  * Aihe soi paljastuskortin päällä eikä taustalla, joten sen taso on
  * lähempänä hihkaisua kuin ambienssia. Kuulokokeen nuppi kuten muutkin
  * äänitasot: omistaja kuulee sen ensimmäisenä oikeasta laitteesta.
+ *
+ * 0,5 → perustaso × 3,8 ≈ 0,13 (omistajan vika 8.9.2026: musiikki
+ * liian kovalla). Sama syy kuin pohjaraidalla: luku kalibroitiin
+ * ElevenLabsin aarreaiheeseen (musa-aarre.mp3, RMS −26,4 dBFS), ja
+ * Lyria-paletin aihe on RMS −14,6 dBFS eli 11,8 dB kovempi. 0,13
+ * palauttaa täsmälleen sen kuuluvan tason, jolla aihe soi ennen
+ * palettivaihtoa, ja koska se lausutaan musiikin yhteisen perustason
+ * kertoimena (js/musiikkivalitsin.js MUSIIKIN_PERUSTASO), paletin
+ * seuraava vaihto korjataan yhdestä paikasta.
+ * Mittaus: `node tools/mittaa-musiikin-tasot.mjs`.
  */
-const AARRE_MUSIIKIN_VOIMA = 0.5;
+const AARRE_MUSIIKIN_VOIMA = MUSIIKIN_PERUSTASO * 3.8;
 /*
  * Hiljennyksen syy on merkkijono, koska js/ambience-stream.js pitää
  * syistä JOUKKOA: sama syy kahdesti ei kerry, ja toisen syyn
@@ -924,6 +1175,53 @@ const FOKUS_KUVAN_REUNA = [0.16, 0.28, 0.42, 0.62, 1];
  * (23 -> 19 -> 15 -> 10,5).
  */
 const FOKUS_LAATTA_PX = 10.5;
+/* ===== PELAAJAN OMA KAUPUNKI ON ASKELHELMEN KOKOINEN YMPYRÄ ========
+ *
+ * OMISTAJA 1.9.2026 ilta, kuvakaappaus Bulgarian lehtinäkymästä,
+ * sanatarkasti: *"se kaupunki jossa pelaaja on pitäisi olla saman
+ * kokoinen ympyrä kuin askelpisteet ovat (pienennyksen jälkeen)."*
+ *
+ * ── MIKSI TÄMÄ ON OMA MITTANSA ────────────────────────────────────
+ *
+ * FOKUS_LAATTA_PX on RUUDUN mitta lehden perustasolla, ja sen päällä on
+ * kasvukatto (fokusKasvukatto), joka lukitsee laatan ruutukoon
+ * maanäkymän kokoon. Askelhelmi taas on KARTTAVAKIO: se poltetaan
+ * laattoihin reittiyksiköissä (tools/fokuskartta/maailmapiirto.js
+ * REITTITYYLI.helmi) ja kasvaa ruudulla zoomin mukana. Kaksi eri
+ * mittajärjestelmää eivät voi olla samankokoisia kuin yhdellä
+ * zoomitasolla — juuri sen omistaja luki lähikuvasta.
+ *
+ * Pelaajan oma kaupunki saa siksi KARTTAVAKION: säde reittiyksiköinä,
+ * täsmälleen niin kuin helmi. Muut kaupungit jäävät entiseen yhteiseen
+ * ruutumittaansa kattoineen — ne olivat 31.8.2026 se, mikä näkyi
+ * *"hervottoman isona"*, eikä tämä tilaus koske niitä.
+ *
+ * ── KYTKÖS ON PIDETTÄVÄ KÄSIN ─────────────────────────────────────
+ *
+ * Reittityyli asuu laattageneraattorin puolella, eikä js/ saa tuoda
+ * tools/-moduulia (yhden tiedoston versio ketjuttaa vain js/:n).
+ * Vartija on siksi testi: tests/viivataso.test.mjs vertaa tätä lukua
+ * REITTITYYLI.helmiin ja kaatuu, jos helmi muuttuu eikä tämä seuraa.
+ * KUN HELMI PIENENEE, TÄMÄ PIENENEE SAMASSA ERÄSSÄ.
+ *
+ * 10 on omistajan *"pienennyksen jälkeen"*: v1423 pienensi helmen
+ * 15 R:stä 10 R:ään (maareittierä), ja kaupungin ympyrä seuraa samaan
+ * lukuun — "saman kokoinen ympyrä kuin askelpisteet". Laatta ei siis
+ * ole koskaan helmeä isompi. (Kirjoitettiin ensin 12, kun helmi oli
+ * vielä 15 ja pienenemässä; luvut yhdistettiin tässä mergessä.)
+ */
+const FOKUS_LAATTA_R = 10;
+/*
+ * REITTIYKSIKKÖ (R) LAUDAN YKSIKÖINÄ.
+ *
+ * R on määritelty pyramidin syvimmän tason tiheydestä
+ * (maailmapiirto.js: `R = (px / SYVIN_TIHEYS) * paperiS`, SYVIN_TIHEYS
+ * 7,2 ja paperiS 1), joten yksi R on 1/7,2 lautayksikköä JOKA TASOLLA —
+ * se on koko idea: reittimerkinnät ovat karttavakioita.
+ */
+const REITTIYKSIKKO_LAUDALLA = 1 / 7.2;
+/** Pelaajan kaupungin ympyrän säde laudan yksiköinä (= askelhelmi). */
+const FOKUS_LAATTA_SADE = FOKUS_LAATTA_R * REITTIYKSIKKO_LAUDALLA;
 /*
  * LEHDEN OMA PROTOTYYPPILEVEYS PIKSELEINÄ (tools/fokuskartta/piirto.js
  * `S`): lehden kaikki ladonta — kirjainkoot, viivanleveydet,
@@ -1230,9 +1528,36 @@ const FOKUS_LAATTA_OSUMA_LAUDALLA = 34;
  * NIMI ON ISOMPI KUIN LAATTAAN POLTETTU KAUPUNGINNIMI: valinta saa
  * erottua siitä, mikä on jo painettu karttaan. 13 px on maltillinen
  * ero, ei otsikko.
+ *
+ * VAHVISTUS 2.9.2026 (omistajan pelitesti, sanatarkasti:
+ * *"nopanheitossa valittavat pisteet täytyy näkyä selvemmin"*).
+ * Kreikan laudalta otetussa kaappauksessa (heitto 3 Ateenasta)
+ * valittavat kohteet olivat pieniä valkoisia ympyröitä reittien
+ * varrella — ne hukkuivat karttaan käytännössä kokonaan. Koska
+ * fokusnäkymä on nykyään pelin NORMAALINÄKYMÄ (Raamattu), juuri sen
+ * kohteet olivat pelin heikoin merkki.
+ *
+ * KORJAUS: fokusnäkymän kohde puhuu nyt SAMAA KIELTÄ kuin laudan
+ * yleiskuvan .target-ring/.target-halo — vaalea kultalevy, päälle
+ * punamullan katkoviivarengas ja alle hengittävä kultahalo (sama pari,
+ * jonka omistaja hyväksyi 18.8.2026 laudan puolelle). Ero laudan
+ * merkkiin on vain MITTAKAAVASSA: koko mitataan ruudulta eikä laudalta,
+ * joten atlaslehden päälle ei tule 60 pikselin kehää vaan 24 pikselin.
+ * Askelpiste (ei kaupunkia) saa saman merkin pienempänä, kuten
+ * .target-ring.far laudalla — niin kaikki valittavat löytyvät yhdellä
+ * silmäyksellä eikä pelaajan tarvitse arvata, mikä on napautettava.
  */
-const FOKUS_KOHDE_PX = 18;
+const FOKUS_KOHDE_PX = 24;
 const FOKUS_KOHDE_NIMI_PX = 13;
+/*
+ * Halon laajin aste (sama luku kuin @keyframes kohde-halo -kehyksessä
+ * 50 % ja liikeherkkyyden staattisessa kehässä on suurempi näistä).
+ * Nimen etäisyys lasketaan TÄSTÄ eikä pelkästä merkin säteestä: muuten
+ * hengittävä halo kävisi nimen päällä joka jakson puolivälissä.
+ */
+const FOKUS_KOHDE_HALO_LAAJIN = 1.42;
+/* Nimen ja halon uloimman kehän väliin jäävä rako ruutupikseleinä. */
+const FOKUS_KOHDE_NIMI_RAKO_PX = 8;
 /*
  * KUINKA LEVEÄ NÄKYMÄ SAA OLLA, JOTTA KAUPUNKIEN NIMET NÄKYVÄT
  * (pituusasteina, ks. paivitaKaupunkinimienNakyvyys).
@@ -1244,8 +1569,14 @@ const FOKUS_KOHDE_NIMI_PX = 13;
  * saavat erota, jos omistaja haluaa nimille toisen rajan kuin täyille.
  */
 const KAUPUNKINIMET_NAKYY_ASTETTA = 90;
-/* Askelpiste ilman kaupunkia on pelkkä reitin nasta — puolet merkistä. */
-const FOKUS_KOHDE_PISTE_PX = 10;
+/*
+ * Askelpiste ilman kaupunkia: sama merkki pienempänä (omistaja
+ * 2.9.2026). ENNEN tämä oli puolet merkistä eli 10 px valkoista
+ * palluraa — juuri se, mikä hukkui reitin varrelle. Nyt suhde on sama
+ * kuin laudalla (.target-ring 22 vs. .target-ring.far 14), jolloin
+ * askelpiste erottuu kaupungista mutta ei katoa kartasta.
+ */
+const FOKUS_KOHDE_PISTE_PX = 15;
 /* Napautusalue: sama sormisääntö kuin laatalla, sama katto laudalla. */
 const FOKUS_KOHDE_OSUMA_PX = 48;
 /*
@@ -1284,6 +1615,78 @@ const PALUU_KESTO_MS = 8000;
 // Kirjoituskoneen tahti: avaus saa naksua rauhassa, muut tekstit ripeästi.
 const TYPE_MS = 50;
 const INTRO_TYPE_MS = 190;
+/*
+ * AVAUKSEN VIISI VAIHETTA (omistajan tilaus 6.9.2026 aamu, sanatarkasti:
+ * *"ota taustalta pois pelin otsikko ja keskitä aloita seikkailu nappi
+ * ihan keskelle ruutua. Kun nappia painetaan niin sitten tulee pienellä
+ * viiveellä yläviiva ja otsikko sitten pienen hetken päästä osa 2
+ * teksti. se saisi tulla animoidusti niin että kirjainkoko ja kirkkaus
+ * välähtää isompana ja feidautuu nykyiseen, kuin pieni salaman isku.
+ * sitten tulisi alaviiva otsikkoon ja pienen hetken päästä alkaisi
+ * konekirjoitusteksti."*).
+ *
+ * Ennen tätä juliste oli kokonaan ruudulla jo aloitusportin takana
+ * sumennettuna (5.9.2026 vaiheistus, jossa vain "osa II" feidasi
+ * sisään). Nyt portin takana näkyy pelkkä pallo, ja juliste rakentuu
+ * napin painalluksesta pala palalta. Ajat ovat NAPIN PAINALLUKSESTA,
+ * jotta jokainen vaihe on yhtä ajastinta eikä ketju kasaa viiveitä:
+ *
+ *   600 ms   AVAUS_YLAVIIVA_MS   yläviiva piirtyy keskeltä ulos
+ *                                (VIIVAN_PIIRTO_MS) ja otsikon
+ *                                pergamenttiharso feidaa mukana,
+ *  1050 ms   AVAUS_OTSIKKO_MS    MATKAKIRJA + Vernen kaksi riviä
+ *                                VÄLÄHTÄVÄT (SALAMAN_KERROIN-kokoisina
+ *                                ja kirkkaina) ja asettuvat
+ *                                SALAMAN_KESTO_MS:ssä lopulliseen
+ *                                kokoonsa — transformilla ja
+ *                                suodattimella, ei kirjasinkoolla,
+ *                                joten fitIntron mitoitus ei liiku,
+ *  1750 ms   AVAUS_OSA_MS        "osa II · unohdettu aarre" samalla
+ *                                salamalla (700 ms otsikon jälkeen),
+ *  2250 ms   AVAUS_ALAVIIVA_MS   alaviiva piirtyy (500 ms osan
+ *                                jälkeen),
+ *  2850 ms   AVAUS_KERTOMUS_MS   kirjoituskone ja luenta alkavat
+ *                                (600 ms alaviivan jälkeen) — pari
+ *                                säilyttää keskinäisen järjestyksensä
+ *                                (paikkarivi naputetaan ensin, luenta
+ *                                alkaa rungon kanssa).
+ *
+ * ÄÄNI KULKEE SAMASSA AIKATAULUSSA (omistajan tilaus 7.9.2026:
+ * *"musiikki saisi hiljentyä hieman ja mukaan saisi tulla se terminaalin
+ * äänimaisema voimakkaasti mukaan ja siitä lähtisi omalla ajallaan
+ * kertojan luenta myös käyntiin"*). Painalluksen hetkellä (0 ms)
+ * musiikki alkaa liukua alas ja terminaalin äänimaisema ylös; sekoitus
+ * on valmis 1,3 sekunnissa ja maisema täydessä nousussaan 1,8
+ * sekunnissa (js/ambience-stream.js "AVAUKSEN ÄÄNI", AVAUKSEN_LIUKU_MS
+ * ja HAIVYTYS_MS).
+ *
+ * KERTOMUKSEN AIKA EI SIIS LYHENE EIKÄ SITÄ TARVITSE PIDENTÄÄ: 2850 ms
+ * on jo yli sekunnin äänimaiseman nousun jälkeen, ja itse LUENTA alkaa
+ * vielä myöhemmin — paikkarivi naputetaan ensin, ja kertoja aloittaa
+ * vasta sen valmistuttua (aloitaKertomus → aloitaRunko). Luku pysyy
+ * siksi ennallaan; jos avauksen liukua joskus pidennetään, tämän on
+ * pysyttävä sen jäljessä.
+ *
+ * Vähennetyllä liikkeellä (prefers-reduced-motion) järjestys ja ajat
+ * ovat samat, mutta salamaa ei oteta: pelkät häivytykset (Raamattu,
+ * arkkikirjasto: *"prefers-reduced-motion kunnioitetaan (pelkkä
+ * häivytys)"*). Äänet eivät ole liikettä eivätkä siis muutu: musiikin
+ * lasku ja maiseman nousu ajetaan samoin kummallakin asetuksella.
+ */
+const AVAUS_YLAVIIVA_MS = 600;
+const AVAUS_OTSIKKO_MS = 1050;
+const AVAUS_OSA_MS = 1750;
+const AVAUS_ALAVIIVA_MS = 2250;
+const AVAUS_KERTOMUS_MS = 2850;
+/*
+ * Viivan piirto ja salaman häivytys viedään css:ään muuttujina
+ * (--viivan-piirto, --salaman-kesto, --salaman-kerroin), jotta luvut
+ * ovat olemassa vain tässä tiedostossa. Salaman lähtökoko on 1,25×
+ * lopullinen ja se feidaa nykyiseen 600 ms:ssä.
+ */
+const VIIVAN_PIIRTO_MS = 520;
+const SALAMAN_KESTO_MS = 600;
+const SALAMAN_KERROIN = 1.25;
 /*
  * KIRJOITTAJAN RYTMI. Sanaväli huojuu, ja välimerkin jälkeen pidetään
  * tauko: revennyt katkelma jättää lukijan pisimmäksi aikaa tyhjän
@@ -1352,6 +1755,25 @@ export function kirjoituksenKesto(teksti, tahti = INTRO_TYPE_MS) {
 const INTRO_FONT_MAX = 1.14;
 const INTRO_FONT_MIN = 0.6;
 /*
+ * JULISTEOTSIKON KERROIN: selaimen oma h2-koko. Otsikko oli ennen
+ * 26.8.2026 tekstipalstan lapsi ja peri kokonsa siitä kerrottuna
+ * 1,5:llä; kerroin pitää sen entisen kokoisena nyt, kun se on oma
+ * lohkonsa.
+ *
+ * LUKU ON MYÖS CSS:SSÄ (.intro-juliste font-size = INTRO_FONT_MAX ×
+ * tämä = 1,71rem; .intro-palsta = INTRO_FONT_MAX = 1,14rem), ja juuri
+ * siitä syystä se on nimetty vakioksi. Omistajan havainto 5.9.2026
+ * klo 00.20, sanatarkasti: *"etusivun otsikko hyppää alussa eri kokoon
+ * kun kirjoituskone teksti alkaa"* — css:n lähtökoko (1,44rem) ei ollut
+ * sama kuin fitIntron mittaama (1,71rem), ja koska fitIntro ajettiin
+ * vasta kirjoituskoneen alkaessa, otsikko kasvoi juuri silloin 19 %
+ * ja nousi 27 px ylemmäs (mitattu Chromiumilla 1400 × 900). Nyt
+ * lähtökoko on sama luku ja mittaus tehdään jo portin takana, joten
+ * otsikko on koko avauksen ajan samassa paikassa samankokoisena.
+ * Vartija: tests/lento-ajoitus.test.mjs.
+ */
+const JULISTEEN_KERROIN = 1.5;
+/*
  * AVAUKSEN YLÄLOHKON HAARUKKA (omistajan pelitestipalaute v1119:
  * *"maailmankarttakuva katkeaa nyt liian aikaisin, eteläinen
  * pallonpuolisko leikkautuu … kasvata ylälohkoa niin että kartta näkyy
@@ -1375,53 +1797,6 @@ const INTRO_KARTTA_ENINTAAN = 0.72;
  * ALAPUOLISEEN pergamenttiin eikä syö karttakuvan alinta kaistaletta.
  */
 const INTRO_HAIVYTYS_EM = 2.2;
-/*
- * Omistajan päättämä avausteksti. ÄLÄ muokkaa ilman omistajan lupaa
- * (docs/tyolista-opukselle.md, paketti 3). Lyhennetty omistajan
- * pyynnöstä 4.8.2026; draamaviilaus omistajan hyväksynnällä
- * 10.8.2026. Teksti ja luenta (intro-puhe.mp3) pidetään samana —
- * muutos vain tools/generoi-avaus.mjs:n kautta, jonka INTRO_RUUTU
- * on tämän vakion ainoa lähde (sanasta sanaan).
- *
- * V3/V4 25.8.2026 (omistajan etusivu-uudistus): kirjan nimi pois —
- * se luetaan nyt kansikuvan selästä (assets/etusivu/kansikuva.png) —
- * ja ohjerivi "Valitse kohde kartalta" pois, koska ohjeen tilalle
- * tuli klikattava viimeinen lause (INTRO_VALINTA). Teksti päättyy
- * siis täsmälleen siihen, mihin nauhoitettu luentakin.
- */
-/*
- * V5 25.8.2026 (omistajan uusi alkuteksti, sanasta sanaan): terminaali
- * ja revitty sivu yhdessä kappaleessa; paikkarivi naputetaan ensin
- * kirjoituskoneella ja luenta alkaa vasta tästä kappaleesta.
- */
-const INTRO_TEXT = 'Vintiltä löytyi isoisän matkalaukku ja kulunut '
-  + 'matkakirja. Juokset sisälle terminaaliin ja olet varma, että ukko '
-  + 'oli löytänyt jotain. Mutta kuka on repinyt kirjasta viimeisen '
-  + 'sivun?';
-/*
- * KYSYMYS ON NAPPI (omistajan tilaus 26.8.2026, ilta): "Mistä
- * aloitan?" on samalla se kehystetty 1873-nappi, joka vie kartan
- * lähikuvaan Lontoon kohdalle. Välivaihe, jossa kysymys oli pelkkää
- * tekstiä ja sen alla erillinen ALOITA MATKA -nappi, purettiin — kaksi
- * peräkkäistä kehotusta oli yksi liikaa.
- *
- * Nappi EI OLE KERRONTAA eikä siksi kuulu INTRO_TEXTiin: nauhoitettu
- * luenta päättyy revittyyn sivuun.
- *
- * TEKSTI ON NYT KEHOTUS EIKÄ KYSYMYS (omistajan pelitestipalaute
- * v1119): *"Mistä aloitan?" → "Valitse aloituskaupunki"*. Nappi vie
- * kartan lähikuvaan, jossa valinta oikeasti tehdään, ja kysymys jätti
- * epäselväksi mitä napista tapahtuu.
- */
-const INTRO_VALINTA = 'Valitse aloituskaupunki';
-/*
- * ETUSIVUN PAIKKARIVI (omistajan tilaus 25.8.2026): kohtausmerkintä
- * avaustekstin ensimmäisenä rivinä, kuukausi ja vuosi laitteen
- * kellosta. Kertoja EI lue tätä (nauhoitettu luenta alkaa vasta
- * varsinaisesta tekstistä), joten rivi elää oman elementtinsä
- * varassa eikä ole osa INTRO_TEXTiä.
- */
-const INTRO_PAIKKA = 'Heathrow, Lontoo';
 
 /*
  * ETUSIVUN ALKUANIMAATIO: kuusi reittiä, joita pitkin kulkee sykkivä
@@ -1704,13 +2079,48 @@ const KARJET = [
   { luokka: 'alkureitti-karki', sade: [4.2, 9.2], kirkkaus: [0.5, 1] },
 ];
 /** Kärjen arvo sykkeen muodon kohdassa `osuus` (0 = lepo, 1 = huippu). */
+/**
+ * NOSTON MUSIIKKILINKIT — YKSI LINKKI TAI LISTA.
+ *
+ * `musiikki` on alun perin yksi Apple Music -osoite merkkijonona, ja se
+ * muoto pysyy voimassa sellaisenaan. Kun nostossa on kaksi eri
+ * muusikkoa tai teosta, kenttä saa olla myös LISTA muotoa
+ * `[{ nimi, url }]` — silloin jokainen linkki näyttää oman nimensä,
+ * jotta listasta erottaa kumpi on kumpi (Fablen päätös 14.9.2026:
+ * Pariisin `pariisi-soi` kantaa sekä Piafin että Django Reinhardtin
+ * linkin, jotka erän 5 jako yhdisti yhdeksi nostoksi).
+ *
+ * Yhden linkin muoto pitää entisen nimiönsä "Apple Music": ulkoasu ei
+ * muutu niillä sadoilla nostoilla, joilla kenttä on merkkijono.
+ *
+ * @param {object} nosto noston tietue
+ * @returns {{url: string, nakyva: string, otsake: string|undefined}[]}
+ */
+export function nostonMusiikkilinkit(nosto) {
+  const kentta = nosto?.musiikki;
+  if (!kentta) return [];
+  if (typeof kentta === 'string') {
+    return [{ url: kentta, nakyva: 'Apple Music', otsake: nosto.musiikkiNimi }];
+  }
+  if (!Array.isArray(kentta)) return [];
+  return kentta
+    .filter((linkki) => typeof linkki?.url === 'string' && linkki.url)
+    .map((linkki) => ({
+      url: linkki.url,
+      // Nimi on listan koko pointti: ilman sitä kaksi linkkiä näyttäisi
+      // samalta napilta kahdesti.
+      nakyva: linkki.nimi ?? 'Apple Music',
+      otsake: linkki.otsake ?? `${linkki.nimi ?? ''} Apple Musicissa`.trim(),
+    }));
+}
+
 function sykkeenArvo(arvot, osuus) {
   return arvot[0] + (arvot[1] - arvot[0]) * osuus;
 }
 
 // Lehden minitehtävän palkkio: pienempi kuin kulttuurivisan, koska
 // vastaus lukee samalla sivulla.
-const MINITEHTAVA_PALKKIO = 10;
+export const MINITEHTAVA_PALKKIO = 10;
 /*
  * Tarkkuusvahdin kaksi viivettä (ks. tarkistaTarkkuus).
  *
@@ -1730,6 +2140,40 @@ const TARKKUUS_LEPO_MS = 1600;
 // Osoitinlippu on jumissa, jos se on ollut pystyssä näin kauan ilman
 // yhtään tapahtumaa (ks. tarkkuusOdotus).
 const TARKKUUS_JUMI_MS = 5000;
+/*
+ * MATKAKIRJAKORTIN PALUU KARTAN LIIKKEEN JÄLKEEN (omistaja 10.9.2026,
+ * Raamattu "MATKAKIRJAKORTTI AUKEAA SAAPUMISESSA JA PALAA AUKI LUENNAN
+ * AJAN KARTAN LIIKKEEN JALKEEN"): *"Matkakirjan teksti saisi aina aueta
+ * kun tullaan uuteen paikkaan ja se saisi pysyä auki niin kauan kuin
+ * puhe kestää. Jos karttaa liikuttaa niin se katoaa pieneksi mutta
+ * puheen aikana se palutuu liikkeen jälkeen. Puheen jälkeen se voi
+ * pysyä piilossa."*
+ *
+ * KORTTI PALAA HETI, EI RAUHOITUSAJAN JÄLKEEN (omistajan tarkennus
+ * 10.9.2026 klo 10.50, sanatarkasti: *"matkakirja saisi tulla heti
+ * takaisin näytölle kun kartan liike loppuu"*). Ensimmäinen versio
+ * odotti puoli sekuntia sormen noston jälkeen, ja se puoli sekuntia
+ * näytti siltä, että teksti on poissa.
+ *
+ * KAKSI MITTAA, KOSKA ELEITÄ ON KAHTA LAJIA:
+ *
+ *   1. SORMI JA HIIRI PÄÄTTYVÄT TAPAHTUMAAN (pointerup, pointercancel,
+ *      touchend). Silloin kelloa ei tarvita lainkaan: paluu ajastetaan
+ *      teknisellä viiveellä, joka vain päästää selaimen oman
+ *      tapahtumajonon (click, liu'un aloitus) edelle.
+ *   2. RULLA JA NIPISTYS EIVÄT PÄÄTY MIHINKÄÄN. Niistä ei tule
+ *      pointerup-tapahtumaa, joten ainoa merkki eleen lopusta on
+ *      hiljaisuus — lyhyt, jottei kortti jää piiloon, mutta riittävä,
+ *      ettei kortti napsahtele rullan naksujen välissä.
+ */
+const KORTIN_PALAUTUS_MS = 40;
+const KORTIN_HILJAISUUS_MS = 150;
+/*
+ * KELLUVAT KUVAPINNAT KARTAN PÄÄLLÄ (luentakuva pakkoineen ja kuvan
+ * suurennos). Niiden napautus on kuvan selaamista eikä kartan
+ * liikuttamista: kortti ei kutistu eikä kuva pienene.
+ */
+const KUVAPAKAN_PINNAT = '.fokusvirta-luentakuva, .fokuszoom';
 /*
  * Rasterointiruudun yläraja laudan yksiköissä (ks. taydennaTaide).
  *
@@ -1818,11 +2262,25 @@ const TURN_WIDTH = 560; // pidettävä samana kuin .turn-card css:ssä
 export class UI {
   constructor(game, { onNewGame, onChange }) {
     this.game = game;
-    // Remontin M7a: kamera ja koordinaatit asuvat Kartta-oliossa.
-    this.kartta = new Kartta(this);
+    /*
+     * Remontin M7a: kamera ja koordinaatit asuvat Kartta-oliossa.
+     *
+     * PELI SYNTYY NUKKUVALLA SIJAISELLA (laiskoituserä 5b): oikea
+     * Kartta-olio vaatii js/kartta.js:n, jota ei ladata pallolaudalla
+     * lainkaan. Sijainen osaa nukkuvan kartan rajapinnan (js/kartta-
+     * lataus.js NukkuvaKartta), ja varmistaKartta vaihtaa sen oikeaan
+     * olioon ensimmäisessä herätyksessä.
+     */
+    this.kartta = new NukkuvaKartta(this);
     this.onNewGame = onNewGame;
     this.onChange = onChange;
     this.botTimer = null;
+    // Automaattiheiton ajastin ja viimeisin automaattiheiton paikka
+    // (ajastaAutomaattinenHeitto, automaattiheittoSallittu).
+    this.automaattiheittoAjastin = null;
+    this.automaattiheittoPaikka = null;
+    // Liuku auki vain nopalle (renderActions roll-haara) — ei pelaajan avaamana.
+    this.liukuNopalle = false;
 
     this.svg = document.getElementById('board');
     this.turnPill = document.getElementById('turn-pill');
@@ -1840,6 +2298,19 @@ export class UI {
     this.passportAarteet = document.getElementById('passport-aarteet');
     this.passportFinds = document.getElementById('passport-finds');
     this.passportProgress = document.getElementById('passport-progress');
+    /*
+     * MATKAN TILASTOT: laskurit väkäsen alla (omistaja 6.9.2026,
+     * "Piilota nuo tiedot väkäsen alle"). Sijainti, Kukkaro ja
+     * tietäjätaso jäävät #passport-progressiin näkyviin; laskurit
+     * ladotaan tähän lohkoon, joka on oletuksena kiinni.
+     */
+    this.passportTilastot = document.getElementById('passport-tilastot');
+    this.tilastoNappi = document.getElementById('laukku-tilastot-nappi');
+    this.tilastoLohko = document.getElementById('laukku-tilastot');
+    this.tilastoNappi?.addEventListener('click', () => this.vaihdaTilastolohko());
+    // Kiinni-tila kirjoitetaan DOMiin heti, jotta ensimmäinenkin avaus
+    // näyttää laukun oikeassa asennossa ilman välähdystä.
+    this.paivitaTilastolohko(laukunTilastotAuki(), { heti: true });
     // Julisterivi: oma kotelonsa, koska koko rivi piiloutuu ennen
     // ensimmäistä voitettua julistetta (ks. renderJulisteet).
     this.julisteKotelo = document.getElementById('juliste-kotelo');
@@ -1911,6 +2382,16 @@ export class UI {
       // seuraavan avauksen mukana ilman että kukaan sitä pyysi.
       this.suljeJulisteGalleria();
       document.body.classList.remove('laukku-auki');
+      // Laukun raita pois samasta kuuntelijasta kuin muukin siivous:
+      // laukun voi sulkea Escistä ja taustanapautuksesta, ja close
+      // laukeaa niistä kaikista.
+      asetaMusiikkitila('matkalaukku', false);
+      if (!this.dead) {
+        ilmoitaLivianTunne(
+          { tunne: 'lammin', voimakkuus: 0.3 },
+          { lahde: 'laukku', tunnus: 'laukku.kiinni' },
+        );
+      }
     });
 
     this.turnCard = document.getElementById('actions').closest('.turn-card');
@@ -2102,27 +2583,7 @@ export class UI {
     this.arrivalKulttuuriKysymys = document.getElementById('arrival-kulttuuri-kysymys');
     this.arrivalKulttuuriVaihtoehdot = document.getElementById('arrival-kulttuuri-vaihtoehdot');
     this.arrivalKulttuuriTulos = document.getElementById('arrival-kulttuuri-tulos');
-    document.getElementById('arrival-yes').addEventListener('click', () => {
-      // Tutki paikka vie tietovisaan: tauolle jäänyt luenta ei saa
-      // jatkua kysymyksen alle. Ehto closeArrivalissa ei riitä, koska
-      // visa syntyy vasta actionQuizissa — sulku ehtii ensin
-      // (omistajan havainto Tangerissa).
-      this.luentaTauolla = null;
-      this.closeArrival();
-      sfx.play('paper');
-      /*
-       * Kohtaamiskaupungissa hahmo esittää kysymyksen itse, joten
-       * muotoarvonta (väittämä, valokuvaaja, tullimies) ohitetaan —
-       * "Tapaa gondolieeri" ei saa avata tullimiestä. Isoisän pulma
-       * pysyy silti etusijalla: nimetty muoto ohittaisi sen, joten
-       * pulman odottaessa kutsu tehdään entiseen tapaan.
-       */
-      const kohtaaminen = KOHTAAMISET[this.game.cityOf()?.id];
-      const pulmaOdottaa = this.game.pendingPuzzle?.();
-      this.doAction(() => this.game.actionQuiz(
-        kohtaaminen && !pulmaOdottaa ? { form: 'quiz' } : {},
-      ));
-    });
+    document.getElementById('arrival-yes').addEventListener('click', () => this.etsiKatko());
     document.getElementById('arrival-no').addEventListener('click', () => {
       this.closeArrival();
       // Kortti avataan nykyään Tutki-napista kesken vuoron, jolloin
@@ -2230,12 +2691,25 @@ export class UI {
       // (omistajan toive). Yhden kuvan kortti sulkeutuu mistä napautuksesta
       // tahansa, kuten ennenkin.
       /*
-       * Pino kiertää eteenpäin, ei vaihda päikseen.
+       * Pino kiertää, ei vaihda päikseen.
        *
        * Kahdella kuvalla vaihto riitti, mutta pinossa voi nyt olla
        * useampi (omistajan toive). Napautus nostaa seuraavan
        * päällimmäiseksi ja kiertää lopusta alkuun; pinosta pääsee pois
        * napauttamalla sen ulkopuolelle.
+       *
+       * SELAUS ON NYT KAPEILLA REUNAKAISTOILLA (omistaja 9.9.2026 klo
+       * 14.15: *"liian leveä alue mistä kuva siirtyy seuraavaan tai
+       * edelliseen kuvaan"*). Ennen KOKO kortti vei eteenpäin, joten
+       * kuvaa ei voinut katsoa napauttamatta sitä pois. Nyt vasen
+       * reunakaista vie edelliseen, oikea seuraavaan ja keskiosa
+       * (js/galleria.js: 52 % kortin leveydestä) jättää kortin
+       * paikalleen. Sama vakio kuin karusellien nuolialueilla.
+       *
+       * KESKELTÄ EI AVAUDU ERILLISTÄ SUURENNOSTA, koska postikortti ON
+       * jo avattu kuva: se aukeaa matkakirjan pikkukuvasta ja näyttää
+       * pitkän kuvatekstin (Raamattu 9.9.2026, ks. naytaPostikortti).
+       * Keskiosan tehtävä on siis pitää kuva paikallaan.
        */
       const kortit = this.postikortti
         ? [...this.postikortti.querySelectorAll('.postikortti-kortti')] : [];
@@ -2243,7 +2717,13 @@ export class UI {
       if (kortit.length > 1 && kortilla) {
         e.preventDefault();
         e.stopPropagation();
-        this.postikorttiIndeksi = ((this.postikorttiIndeksi ?? 0) + 1) % kortit.length;
+        const nykyinen = ((this.postikorttiIndeksi ?? 0) % kortit.length + kortit.length)
+          % kortit.length;
+        // Vyöhyke mitataan PÄÄLLIMMÄISESTÄ kortista: pinon alemmat
+        // ovat sen alla ja hieman eri kohdassa.
+        const askel = vyohykkeenAskel(gallerianVyohyke(e, kortit[nykyinen]));
+        if (!askel) return;
+        this.postikorttiIndeksi = (nykyinen + askel + kortit.length) % kortit.length;
         kortit.forEach((k, i) => k.classList.toggle('alla', i !== this.postikorttiIndeksi));
         sfx.play('swipe');
         return;
@@ -2379,6 +2859,8 @@ export class UI {
     this.factCard.addEventListener('click', (e) => {
       if (!this.factCard.classList.contains('pieni')) return;
       e.stopPropagation();
+      // Pelaaja avasi lapun itse: odottava paluu on tarpeeton.
+      this.peruKortinPalautus();
       this.asetaPaivakirjanKoko(false);
     });
     // Sama näppäimistöltä: kutistuneena kortilla on role="button" ja
@@ -2397,14 +2879,39 @@ export class UI {
     this.quizQuestion = document.getElementById('quiz-question');
     // Kohtaamisen tervehdys kysymyksen yllä (js/packs/kohtaamiset.js).
     this.quizKohtaaminen = document.getElementById('quiz-kohtaaminen');
+    /*
+     * KOHTAAMISKUVA ON KORTIN YLÄOSAN ISO KUVA (omistajan tilaus
+     * 1.9.2026). Kuvio pitää sisällään kuvan ja sen alle tulevan
+     * kuvatekstin lähderiveineen; kaikki kolme piilotetaan yhdessä,
+     * ettei kuvaton kohtaaminen jätä korttiin tyhjää aukkoa.
+     */
+    this.quizKohtaaminenKuvio = document.getElementById('quiz-kohtaaminen-kuvio');
     this.quizKohtaaminenKuva = document.getElementById('quiz-kohtaaminen-kuva');
+    this.quizKohtaaminenKuvateksti = document.getElementById('quiz-kohtaaminen-kuvateksti');
+    this.quizKohtaaminenSelite = document.getElementById('quiz-kohtaaminen-selite');
     // Kohtaamisen muotokuva aukeaa koko näytölle kuten muutkin
     // popupien kuvat (omistajan raportti 30.8.2026). Kuvalla ei ole
     // muuta napautusroolia, joten suurennos ei riko mitään.
+    // Suurennos saa SAMAN kuvatekstin ja lähderivin kuin kortti
+    // (1.9.2026): valmis lista ohittaa artikkeligalleriahaun, joten
+    // katselin ei lähde verkkoon eikä paljasta vastausta.
     this.quizKohtaaminenKuva?.addEventListener('click', () => {
       const src = this.quizKohtaaminenKuva.getAttribute('src');
-      if (src) this.openLightbox(null, this.quizKohtaaminenKuva.alt || 'Kohtaaminen', src);
+      if (!src) return;
+      // Suurennokseen PITKÄ versio (js/kuvatekstit.js); kortilla
+      // näkyvä teksti on lyhyt, ks. naytaKohtaamiskuva.
+      const caption = this.quizKohtaaminenPitka
+        || this.quizKohtaaminenSelite?.textContent || null;
+      this.openLightbox(null, this.quizKohtaaminenKuva.alt || 'Kohtaaminen', src,
+        [{ src, caption, lahde: caption ? KOHTAAMISKUVAN_LAHDE : null }]);
     });
+    /*
+     * VIIMEISEN YRITYKSEN VAROITUS tervehdyssivulla (omistajan tilaus
+     * 1.9.2026): kun ensimmäinen vastaus on mennyt väärin, pelaajalle
+     * kerrotaan ENNEN Aloita peli -nappia, että yrityksiä on enää yksi.
+     * Tekstin asettaa js/visa.js renderQuiz.
+     */
+    this.quizVaroitus = document.getElementById('quiz-varoitus');
     this.quizIsoisa = document.getElementById('quiz-isoisa');
     this.quizIsoisaTeksti = document.getElementById('quiz-isoisa-teksti');
     // Tervehdys luetaan kerran per kaupunki ja istunto — toistuvassa
@@ -2493,6 +3000,9 @@ export class UI {
     this.peruutusLaput = [this.quizDialog, this.eventDialog, this.arrivalDialog];
     for (const lappu of this.peruutusLaput) lappu.addEventListener('cancel', this.lappuPeruutus);
 
+    // Liiku-napin luentavahti käyntiin heti kytkentöjen kanssa.
+    this.kaynnistaLuentavahti();
+
     /*
      * LEHTI HILJENTÄÄ ÄÄNIMAISEMAN (omistajan tilaus 13.8.2026:
      * *"ambienssi voisi hiljentyä hieman myös jos lehti avataan"*).
@@ -2529,7 +3039,51 @@ export class UI {
      * Kuuntelija on kartta-alueella, jonka päällä kortit vain
      * kelluvat, joten kortin oma napautus ei osu tähän.
      */
-    this.mapPane.addEventListener('click', () => this.asetaPaivakirjanKoko(true));
+    /*
+     * KUVAPAKKA EI OLE KARTAN LIIKETTÄ (omistaja 10.9.2026: *"matkakirja
+     * ei saisi hävitä näkyvistä jos käyttäjä klikkaa kuvapakasta toisen
+     * kuvan näkyville"*). Luentakuvan paneeli ja kuvan suurennos
+     * kelluvat karttapinnan päällä, joten niiden napautus kuplii tänne
+     * asti — vartio on tässä, koska tämä on se kohta, joka kutistaa
+     * kortin. Sama lista kuin luentakuvan omalla pienennysvartiolla
+     * (js/fokusvirta.js kytkeLuentakuvanPienennys).
+     */
+    this.mapPane.addEventListener('click', (tapahtuma) => {
+      if (tapahtuma.target?.closest?.(KUVAPAKAN_PINNAT)) return;
+      this.kutistaKortinLiikkeesta();
+    });
+
+    /*
+     * ELEEN LOPPU ON KORTIN PALUUN MERKKI (omistaja 10.9.2026).
+     * Kuuntelijat ovat dokumentissa eivätkä kartassa, koska sama
+     * kortti kutistuu kolmelta laudalta: tasokartan raahaus, nipistys
+     * ja rullapanorointi (js/kartta.js) sekä pallolaudan veto
+     * (js/pallolauta/lauta.js). Yksi paikka, joka tietää milloin
+     * pelaajan sormi on kartalla — ja rauhoitusaika lasketaan aina
+     * viimeisestä liikkeestä, ei ensimmäisestä.
+     *
+     * Kaikki työ on ajastimen takana: ilman odottavaa paluuta nämä
+     * kuuntelijat eivät tee mitään kehysbudjettia syövää.
+     */
+    const liikeVirkisti = () => {
+      if (this.kortinPalautusAjastin) this.ajastaKortinPalautus();
+    };
+    const osoitinAlas = () => { this.osoitinAlhaalla = true; liikeVirkisti(); };
+    /*
+     * SORMEN NOSTO ON ELEEN LOPPU, JA KORTTI PALAA HETI (omistaja
+     * 10.9.2026). Tässä yhdessä kohdassa tiedetään varmasti, että ele
+     * on ohi — hiljaisuutta ei tarvitse odottaa, vain tapahtumajono
+     * päästetään edelle (KORTIN_PALAUTUS_MS).
+     */
+    const osoitinYlos = () => {
+      this.osoitinAlhaalla = false;
+      if (this.kortinPalautusAjastin) this.ajastaKortinPalautus(KORTIN_PALAUTUS_MS);
+    };
+    document.addEventListener('pointerdown', osoitinAlas, true);
+    document.addEventListener('pointermove', liikeVirkisti, true);
+    document.addEventListener('pointerup', osoitinYlos, true);
+    document.addEventListener('pointercancel', osoitinYlos, true);
+    document.addEventListener('touchend', osoitinYlos, true);
 
     /*
      * KARTAN +/- -PAINIKKEET ON POISTETTU (omistajan tilaus
@@ -2594,11 +3148,27 @@ export class UI {
     this.radioAani = null;
     this.linssiLataus = null; // kesken oleva tuonti; jaetaan kaikille kutsujille
     this.linssiValittu = tallennettuLinssi();
+    /*
+     * LAUKUSSA ESIKATSELTU LINSSI (omistaja 5.9.2026, ks.
+     * esikatseleLinssi): `undefined` = laukussa ei ole napautettu
+     * mitään, jolloin selite kertoo päällä olevasta linssistä kuten
+     * ennen. Muuten arvo on napautetun ruudun tunnus — ja null on
+     * kelvollinen arvo ("Ei linssiä"), joten tyhjä tila EI voi olla
+     * null.
+     */
+    this.linssiEsikatselu = undefined;
     this.linssiPiirretty = null; // mihin kerrokseen linssi on piirretty
     this.linssiPois = new Set(); // linssit, joilla ei ollut tälle laudalle mitään
     this.linssiLauta = null; // mille laudalle valikoima on laskettu
     this.linssiTunniste = null; // valikoiman tunniste: valikko rakennetaan vain muutoksesta
     this.linssiAskeleet = new Map(); // valittu askel linssiä kohti
+    /*
+     * PALLOLLA OLEVA LINSSI (karttapallo.md luku 10, aalto 1A):
+     * { tunnus, kahva } kun linssi on piirretty pallon pinnalle
+     * linssimoottorilla (js/pallolauta/linssit.js). Kahvan `pura()`
+     * ottaa kerrokset pois; linssikarttaa ei silloin avata lainkaan.
+     */
+    this.pallolinssi = null;
     /*
      * Valitsin ei enää avaudu eikä sulkeudu: se on osa päävalikkoa ja
      * katoaa sen mukana. Sulkeutumisen kuuntelijat (napautus muualle,
@@ -2608,7 +3178,31 @@ export class UI {
 
     this.busy = false;
     this.dead = false; // destroy() jälkeen instanssi ei saa enää piirtää
+    /*
+     * PALLOLAUTA (omistaja 5.9.2026, Raamattu KARTTAPALLO ON PELILAUTA).
+     * `pallolauta` on js/pallolauta/lauta.js:n olio, kun karttapallo on
+     * pelin lauta; tasokartta on silloin lepotilassa (js/kartta.js) ja
+     * herää vain LINSSIKARTAKSI (`linssikartta`: linssin ajaksi,
+     * avaaLinssikartta/suljeLinssikartta → js/pallolauta/linssikartta.js).
+     * Vaiheesta 2 alkaen siirrot tehdään pallolla; linssikartta on vain
+     * linsseille, ja sen ajaksi Liiku ja lehdet ovat kiinni (vaihe 4).
+     */
+    this.pallolauta = null;
+    this.pallolautaAvautuu = false;
+    /* Linssin avauksen vartija (ks. varmistaLinssinAvaus). */
+    this.linssinAvausVahti = 0;
+    this.pallolautaEpaonnistui = false;
+    // Turvatilan rivi näytetään kerran istunnossa (ilmoitaPallonTurvatila).
+    this.pallonTurvatilaIlmoitettu = false;
+    this.linssikartta = null;
     this.travelExpanded = false; // matkavalinnan toinen vaihe auki
+    /*
+     * MATKASESSIO: se kaupunki, josta pelaaja lähti liikkeelle, tai null
+     * kun matkaa ei ole aloitettu. Reittiviuhkan näkyvyys lukee tätä eikä
+     * liu'un auki-oloa (Raamattu KARTTAUUDISTUKSEN PAATOKSET 8,
+     * js/ui.js matkaSessioKesken).
+     */
+    this.matkaSessio = null;
     this.travelSuodatin = null; // 'sea' | 'air' | null — kumpi lista näytetään
     this.kehittajaTila = kehittajaTilaPaalla();
     /*
@@ -2640,6 +3234,12 @@ export class UI {
     this.revealShownFor = null;
     this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     /*
+     * Avausjulisteen vaiheajastimet (AVAUS_*): lista, jotta piirto,
+     * portti ja destroy voivat perua koko ketjun kerralla
+     * (peruAvausjuliste).
+     */
+    this.julisteAjastimet = [];
+    /*
      * Pöllön vihjekuplan ajastin (paivitaValintavihje). Viive on
      * kentässä eikä suoraan vakiona, jotta savukkeen ei tarvitse odottaa
      * viittätoista sekuntia todistaakseen ketjun toimivaksi.
@@ -2668,12 +3268,54 @@ export class UI {
     this.viewBoxSize = { vw: 1000, vh: 1000 };
     // Aloituskartan lähikuva ja sen vaakapanorointi (puhelin).
     this.aloitusZoom = false;
+    /*
+     * LÄHTÖVALINTA PALLOLLA (aalto 3A). OMA LIPPU EIKÄ `aloitusZoom`:
+     * jälkimmäinen on TASOKARTAN lähikuvatila, jonka js/kartta.js
+     * nollaa aina kun kartta nukahtaa tai lauta vaihtuu
+     * (nollaaAloitusZoom) — ja juuri se tapahtuu, kun pallo avataan
+     * hereillä olleen kartan päälle (`?etusivupallo=0`). Silloin
+     * valintatila olisi kadonnut samassa piirrossa kuin se syntyi
+     * (mitattu Chromiumilla 5.9.2026).
+     */
+    this.aloitusvalintaPallolla = false;
     this.panX = null;
     this.panVara = 0;
   }
 
   mount() {
-    this.drawBoardFor(this.game.pack);
+    /*
+     * PALLOLAUTA VALITAAN ENNEN ENSIMMÄISTÄKÄÄN PIIRTOA. Kun lauta on
+     * karttapallo, tasokartta pannaan lepotilaan tässä — ei vasta pallon
+     * latauduttua — jotta svg#board ei ehdi saada yhtään kerrosta eikä
+     * laattapyramidi yhtään pyyntöä (omistaja 5.9.2026: *"vanha kartta
+     * pysyy pois tieltä"*). Pallo itse avataan renderistä
+     * (paivitaPallolauta), ja jos se ei lataudu, kartta herää varapolkuna.
+     */
+    /*
+     * ETUSIVU ON MYÖS PALLOA (aalto 1D, omistaja 5.9.2026: *"Käännä
+     * kaikki pallolle, niin voidaan sulkea vanha kartta kokonaan."*).
+     * Lähtövalinnassa pallolautaHalutaan on vielä epätosi (pelin lauta
+     * otetaan vasta kaupungin valinnasta), mutta tasokarttaa ei silti
+     * alusteta: avausnäkymän pienoiskartan tilalla on esirenderöity
+     * pallovideo (js/etusivupallo.js). Ilman tätä svg#board sai 188
+     * elementtiä ja laattapyramidi heräisi pelkkää etusivua varten.
+     */
+    /*
+     * MODUULI VASTA TÄSSÄ (laiskoituserä 5b): pallohaara ei lataa
+     * tasokarttaa lainkaan, karttahaara herättää sen heti kun
+     * js/kartta.js on paikallaan (heraaTasokartta) — piirto on yhden
+     * mikrotehtävän, verkottomana SW-välimuistin haun, päässä entisestä.
+     */
+    /*
+     * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): karttahaaraan ei
+     * mennä lainkaan — tasokartta jää lepotilaan myös silloin, kun
+     * etusivun pallo on kytketty pois (`?etusivupallo=0`). Ylälohkoon jää
+     * silloin pergamentti ja julisteotsikko, kuten silloin kun pallovideo
+     * ei lataudu; vanhaa pienoiskarttaa ei enää piirretä.
+     */
+    if (!VANHA_KARTTA_KAYTOSSA) this.kartta.lepotila = true;
+    else if (this.pallolautaHalutaan() || this.etusivunPalloKaytossa()) this.kartta.lepotila = true;
+    else void this.heraaTasokartta();
     /*
      * NOPPA KARTAN SIIRTOKUOREEN, EI KARTTARUUTUUN (#98). Kuori on se
      * elementti, johon panoroinnin ja nipistyksen muunnos kirjoitetaan
@@ -2704,6 +3346,15 @@ export class UI {
      * palavat heti ensimmäisessä piirrossa.
      */
     kaynnistaKarttaselite(this);
+    // Maakunnat-välilehden runko (js/karttatyokalu-maakunnat.js) heti
+    // perässä: se vain rekisteröi rakentajan, ei piirrä mitään ennen
+    // kuin pelaaja avaa välilehden.
+    kytkeMaakunnatKarttaselitteeseen(this);
+    /*
+     * VAAKAPUHELIMEN YLÄPALKKINAPPI samassa kohdassa ja samasta
+     * syystä: se asuu karttaruudussa karttaselitteen vieressä.
+     */
+    kaynnistaYlapalkkiVaaka(this);
     this.vahdiNakymanKokoa();
     this.render();
     this.esilataaAarrekuvat();
@@ -2734,7 +3385,7 @@ export class UI {
      * laitelippu on tarkoituksella tämän ulkopuolella — se on kerran
      * per laite, ei kerran per peli.
      */
-    nollaaLivianVihjeet();
+    nollaaLivianVihjeet(this);
   }
 
   /**
@@ -3335,8 +3986,15 @@ export class UI {
    * viewportin yksiköistä. Ei mitään, jos mitta ei eroa CSS:n omasta
    * tuloksesta — inline-arvo vain vahvistaa saman luvun.
    */
-  mitoitaArkki() {
-    const dialog = this.arrivalDialog;
+  mitoitaArkki(arkki = null) {
+    /*
+     * PARAMETRI ON LISÄYS, EI MUUTOS (karttauudistus erä 11): ilman
+     * argumenttia tämä on rivilleen entinen kaupunkilehden mitoittaja.
+     * Argumentilla sama mitta annetaan toiselle lehtiarkille
+     * (js/lehti.js avaaTiivisLehtiarkki), jotta tiivistetyn etusivun
+     * leveys EI ole kopio vaan sama laskutoimitus.
+     */
+    const dialog = arkki ?? this.arrivalDialog;
     if (!dialog?.classList.contains('arkki')) return;
     // Korkeus samalla kertaa: sivunvaihto on juuri se hetki, jolloin
     // kortin mitat kirjoitetaan pikseleinä.
@@ -3483,7 +4141,427 @@ export class UI {
     this.kartta.ajastaMannerZoom();
   }
 
+  /*
+   * ==================================================================
+   * PALLOLAUTA (omistaja 5.9.2026, Raamattu KARTTAPALLO ON PELILAUTA;
+   * suunnitelma docs/moduulit/karttapallo.md, tämä on vaihe 1)
+   * ==================================================================
+   *
+   * *"Voisiko pallon vaihtaa pelin kartaksi suoraan?"* / *"Linssit voi
+   * olla vanhalla kartalla."* / *"Kunhan vanha kartta pysyy pois tieltä
+   * eikä hidasta ollenkaan uuden kartan toimintaa. Mutta jos pallo ei
+   * toimi niin pidetään optio palauttaa se."*
+   *
+   * KAKSI LAUTAA, YKSI PELITILA. Laudan valinta on laitteen asetus
+   * (js/ui-apurit.js lautaValinta), ei pelitilan kenttä. Kun lauta on
+   * pallo, tasokartta (js/kartta.js) nukkuu ja karttapallo
+   * (js/pallolauta/lauta.js) asuu karttaruudussa sen paikalla. Tasokartta
+   * herää LINSSIKARTAKSI vain linssin ajaksi (matkalaukun valinta,
+   * valitseLinssi); siirrot, laiva, lento, noppa ja kohteet ovat
+   * pallolla (vaihe 2, js/pallolauta/{siirto,merkit,reitit}.js).
+   * Kamera-ajot kulkevat `kamera()`-delegaatin kautta, joka valitsee
+   * hereillä olevan laudan, ja nappulan liike laudan kuljettajan
+   * kautta (nappulanKuljettaja).
+   *
+   * VARAPOLKU: jos Globe.gl ei lataudu (ei verkkoa, yhden tiedoston
+   * versio, WebGL puuttuu), kartta herää tälle istunnolle ja laitteen
+   * valinta ei muutu (pallolautaVarapolku, vain tälle istunnolle).
+   */
+
+  /** Halutaanko pallolauta juuri nyt: valinta, lauta ja pelin vaihe. */
+  pallolautaHalutaan() {
+    if (this.pallolautaEpaonnistui || this.katselu || this.dead) return false;
+    if (lautaValinta() !== 'pallo') return false;
+    /*
+     * TURVATILA (vaihe 5c, karttapallo.md luku 6): kaksi kaatumista
+     * peräkkäin tällä laitteella. Laskuri on laitteen asetus
+     * (js/ui-apurit.js), ei pelitilan kenttä, ja ratasvalikon vipu
+     * nollaa sen.
+     *
+     * EI ENÄÄ TASOKARTTAA (omistaja 7.9.2026: vanha kartta pois
+     * käytöstä kokonaan). Ennen tämä palautti epätoden ja peli avasi
+     * tasokartan; nyt pallo pysyy lautana ja avataan KEVENNETTYNÄ —
+     * laattakerros pois tältä istunnolta (asetaPalloKevennys), yksi
+     * rivi pelaajalle. Kevennys kytketään heti tässä, koska
+     * js/pallolauta/lauta.js lukee laattakerroksen avatessaan pallon.
+     */
+    if (palloTurvatilassa()) { asetaPalloKevennys(true); this.ilmoitaPallonTurvatila(); }
+    if (!this.aloituslentoPallolla()) return false;
+    /*
+     * LÄHTÖKAUPUNKI VALITAAN PALLOLTA (aalto 3A, omistaja 5.9.2026:
+     * *"Käännä kaikki pallolle, niin voidaan sulkea vanha kartta
+     * kokonaan."*). Aloitusnäytöllä pelin lauta on vielä sen oma
+     * (js/packs/maailma.js) eikä maailmankartta, joten pakkaehto ei
+     * kelpaa portiksi: valintanäkymän pallo piirtyy maailmankartan
+     * kaupungeista (js/pallolauta/lauta.js `pack`), samalta laudalta
+     * jolle peli astuu heti valinnan jälkeen.
+     *
+     * PALLO AVATAAN VASTA NAPISTA. Avausnäkymässä ylälohkossa on kevyt
+     * esirenderöity pallovideo (js/etusivupallo.js), ja WebGL-lauta
+     * maksetaan vasta kun pelaaja painaa "Valitse aloituskaupunki"
+     * (aloitaPallolta nostaa `aloitusvalintaPallolla`-lipun).
+     *
+     * AVAUSLENTO ON PALLOLLA (vaihe 5b): pallo pitää laudan valinnan
+     * yli, ja lento lennetään pallolla — kaari, kone, harso ja kamera
+     * ovat pallon omia (js/pallolauta/avaus.js).
+     */
+    if (this.game.phase === 'pickstart') return this.aloitusvalintaPallolla;
+    // Pallo tuntee vain maailmankartan projektion (js/pallo.js PALLO_LAUTA).
+    return this.game.pack?.id === 'maailmankartta';
+  }
+
+  /**
+   * Onko lauta karttapallo tässä istunnossa — pelin vaiheesta
+   * riippumatta? Avauslento tarvitsee tämän ENNEN actionPickStartia
+   * (doPickStart panee tasokartan nukkumaan arkin takana), eikä
+   * pallolautaHalutaan voi vastata siihen: pelin lauta on silloin vielä
+   * aloitusnäytön oma (js/packs/maailma.js) ja vaihe 'pickstart'.
+   */
+  aloituslentoPallolla() {
+    if (this.pallolautaEpaonnistui || this.katselu || this.dead) return false;
+    return lautaValinta() === 'pallo';
+  }
+
+  /**
+   * Onko AVAUSNÄKYMÄN pallo käytössä (aalto 1D)? Jos on, tasokarttaa ei
+   * alusteta etusivua varten lainkaan: ylälohkon täyttää esirenderöity
+   * pallovideo (js/etusivupallo.js), ja jos video ei lataudu, lohkoon
+   * jää pergamentti ja julisteotsikko — ei koskaan tyhjää ruutua.
+   *
+   * Lippu on enää poiskytkin (?etusivupallo=0 tai ratasvalikon vipu):
+   * pois kytkettynä tämä on epätosi ja etusivu palaa vanhaan
+   * pienoiskarttaan. Sama koskee `?lauta=kartta`-tilaa, joka poistuu
+   * vasta aallossa 3 (docs/moduulit/karttapallo.md luku 10).
+   */
+  etusivunPalloKaytossa() {
+    return this.aloituslentoPallolla() && etusivupalloPaalla();
+  }
+
+  /** Onko pallo ruudulla pelin lautana (kartta nukkuu, pallo näkyy)? */
+  pallolautaPaalla() {
+    return Boolean(this.pallolauta && this.kartta.lepotila);
+  }
+
+  /*
+   * ============ TASOKARTAN LAISKA LATAUS (erä 5b) ===================
+   *
+   * Omistaja 5.9.2026 ilta: *"laita laiskoitus työn alle"*. js/kartta.js
+   * ja sen omat aineistopakat ladataan vasta kun kartta oikeasti
+   * tarvitaan; siihen asti ui.kartta on nukkuva sijaisolio
+   * (js/kartta-lataus.js). Kaksi kutsujaa: tämä pari ja sijaisen oma
+   * heraa(), joka ohjaa tänne.
+   */
+
+  /**
+   * Oikea Kartta-olio paikalleen sijaisen tilalle. Palauttaa ui.kartan.
+   *
+   * Ensimmäinen kutsu lataa moduulin (SW-välimuistista ilman verkkoa),
+   * loput ovat yksi vertailu. Olio syntyy NUKKUVANA: herätys on kutsujan
+   * asia, jotta lataus ei piirrä lautaa kenenkään selän takana.
+   */
+  async varmistaKartta() {
+    /*
+     * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026, sanatarkasti:
+     * *"eli että se ei lataisi sitä millään lailla"*). Portti on tässä
+     * eikä kutsupaikoissa: sijainen jää paikalleen, eikä
+     * js/kartta-lataus.js lataaTasokarttaan mennä lainkaan — muuten
+     * jokainen kutsu kirjaisi konsoliin turhan varoituksen. Sijaisen
+     * rajapinta riittää pallolaudalla (kiertava, boardBounds,
+     * dieRestingSpot); herätys palauttaa aina false, joten kutsujat
+     * eivät piirrä tyhjää. Paluu: VANHA_KARTTA_KAYTOSSA (js/ui-apurit.js).
+     */
+    if (!VANHA_KARTTA_KAYTOSSA) return this.kartta;
+    if (!this.kartta.sijainen) return this.kartta;
+    let osat = null;
+    try {
+      osat = await lataaTasokartta();
+    } catch (syy) {
+      // Ilman moduulia peli jää pallolle (tai tyhjälle laudalle
+      // ?lauta=kartta-tilassa) — sama tilanne kuin ennen laiskoitusta,
+      // jos js/kartta.js ei latautunut ui.js:n mukana.
+      console.warn('Tasokarttaa ei saatu ladattua.', syy);
+      return this.kartta;
+    }
+    // Kilpa-ajo: toinen kutsuja ehti vaihtaa olion, tai peli purettiin.
+    if (this.dead || !this.kartta.sijainen) return this.kartta;
+    this.kartta = new osat.Kartta(this);
+    /*
+     * Karttaruudun eleet asennetaan vasta tässä: mount kutsui
+     * asennaPanorointia sijaiselle, jolle se on tynkä. Kutsu on
+     * kertaluontoinen kuten mountissa — olio vaihtuu vain kerran.
+     */
+    this.kartta.asennaPanorointi();
+    return this.kartta;
+  }
+
+  /**
+   * Tasokartta hereille laiskan latauksen läpi: moduuli ensin, sitten
+   * sama heraa() + piirto kuin ennen. Palauttaa true, jos kartta heräsi.
+   */
+  async heraaTasokartta() {
+    await this.varmistaKartta();
+    // Lataus epäonnistui: sijainen jää paikalleen eikä herätystä yritetä
+    // uudelleen tästä (muuten sijaisen heraa() kiertäisi ikuisesti).
+    if (this.dead || this.kartta.sijainen) return false;
+    if (!this.kartta.heraa()) return false;
+    this.render();
+    return true;
+  }
+
+  /**
+   * KAMERAN DELEGAATTI: hereillä oleva lauta omistaa kameran. Rajapinta
+   * on sama kummallakin (ajaKamera, kameranTila, kameraAjossa,
+   * pysaytaKameraAjo, siirtoZoomiKerroin), eikä kummankaan sisäisiä
+   * metodeja kutsuta ristiin.
+   */
+  kamera() {
+    return this.pallolautaPaalla() ? this.pallolauta.kamera : this.kartta;
+  }
+
+  /** Renderin pallohaara: avaa pallon tarvittaessa, päivittää merkit. */
+  paivitaPallolauta() {
+    // Lehtikuori (js/lehtikuori.js): pelkkä lehti, lautaa ei avata eikä herätetä.
+    if (this.lehtikuori) return;
+    if (this.pallolauta) {
+      this.pallolauta.paivita();
+      return;
+    }
+    if (this.pallolautaHalutaan() && !this.pallolautaAvautuu) void this.avaaPallolauta();
+    /*
+     * ETUSIVU EI HERÄTÄ KARTTAA (aalto 1D). Lähtövalinnassa pallolautaa
+     * ei vielä haluta, mutta lepotila on tarkoituksellinen: etusivun
+     * pallo hoitaa ylälohkon, ja kartta herää vasta jos pallolauta
+     * kaatuu (pallolautaVarapolku) tai lippu käännetään pois.
+     */
+    else if (this.etusivunPalloKaytossa() && this.game.phase === 'pickstart') { /* pallo on etusivulla */ }
+    else if (!this.pallolautaAvautuu && this.kartta.heraa()) {
+      // Lepotila ilman palloa (esim. valinta vaihtui): kartta hereille.
+      this.render();
+    }
+  }
+
+  /**
+   * Avaa pallolaudan. Moduuli ja kirjasto ladataan vasta nyt
+   * (js/pallolauta/lauta.js), joten yhden tiedoston versio ja verkoton
+   * käynnistys putoavat siististi varapolkuun.
+   */
+  async avaaPallolauta() {
+    if (this.dead || this.pallolauta || this.pallolautaAvautuu) return false;
+    this.pallolautaAvautuu = true;
+    let lauta = null;
+    try {
+      const moduuli = await import('./pallolauta/lauta.js');
+      lauta = await moduuli.avaaPallolauta(this);
+    } catch (syy) {
+      console.warn('Pallolauta ei avautunut.', syy);
+      lauta = null;
+    }
+    this.pallolautaAvautuu = false;
+    if (this.dead) { lauta?.pura(); return false; }
+    if (!lauta) {
+      this.pallolautaVarapolku();
+      return false;
+    }
+    this.pallolauta = lauta;
+    // Kartta nukkumaan (jos se ehti herätä, esim. aloituslennon jälkeen)
+    // ja pallo näkyviin pelaajan paikan ylle — kaupungin tai reitin
+    // välipisteen, matka jatkuu pallolla kummastakin (vaihe 2).
+    this.kartta.nuku();
+    lauta.nayta();
+    /*
+     * LÄHTÖVALINNAN NÄKYMÄ (aalto 3A): matkaajalla ei ole vielä paikkaa,
+     * joten `kotiin` ei tietäisi mistä aloittaa. Kamera ajetaan Lontoon
+     * ja valittavien kaupunkien laatikkoon — samaan rajaukseen, jossa
+     * avauslento sitten lennetään (js/pallolauta/avaus.js), joten
+     * pergamenttiarkin takana kamera ei enää liiku.
+     */
+    if (this.game.phase === 'pickstart') lauta.aloitusnakyma();
+    // Saapumisrajaus: maa mahdollisimman isona (js/pallolauta/lauta.js).
+    else void lauta.saavu();
+    this.render();
+    return true;
+  }
+
+  /**
+   * Pallo ei latautunut tai se kaatui. EI ENÄÄ TASOKARTTAA (omistaja
+   * 7.9.2026, sanatarkasti: *"Voisiko vanhan kartan ottaa pelistä ainakin
+   * väliaikaisesti kokonaan pois, eli että se ei lataisi sitä millään
+   * lailla, eikä se olisi myöskään kytkettävissä päälle?"*).
+   *
+   * KAKSI ASKELTA, EI KOLMATTA LAUTAA:
+   *   1. ensimmäinen kaatuminen tässä istunnossa → pallo yritetään
+   *      uudelleen KEVENNETTYNÄ (laattakerros pois, js/ui-apurit.js
+   *      asetaPalloKevennys) ja pelaaja saa siitä rivin;
+   *   2. jos kevennettykin kaatuu, peli näyttää selkeän virheilmoituksen
+   *      eikä avaa mitään lautaa. Vanha kartta ei ole vaihtoehto: sen
+   *      moduulia ei ladata (js/kartta-lataus.js VANHA_KARTTA_KAYTOSSA).
+   *
+   * Laitteen valintaa ei kirjoiteta kummassakaan tapauksessa
+   * (karttapallo.md luku 2), joten seuraava käynnistys yrittää palloa
+   * uudestaan täydellä laadulla.
+   */
+  pallolautaVarapolku() {
+    // Pallolla ollut linssi katoaa laudan mukana; kahva pois kirjoista.
+    this.pallolinssi = null;
+    this.pallolauta?.pura();
+    this.pallolauta = null;
+    /*
+     * TOINEN YRITYS KEVENNETTYNÄ. `pallolautaEpaonnistui` jää epätodeksi,
+     * jotta pallolautaHalutaan päästää seuraavan avauksen läpi; render
+     * kutsuu avaaPallolautaa uudelleen samassa vuorossa. Kevennys on
+     * istunnon lippu eikä laitteen asetus, joten se ei jää päälle.
+     */
+    if (!palloKevennetty()) {
+      asetaPalloKevennys(true);
+      this.render();
+      const kevyt = this.buildToast({
+        kind: 'info',
+        text: 'Karttapallo kaatui — avataan kevennettynä.',
+      });
+      setTimeout(() => this.removeToast(kevyt), TOAST_MS.default * 3);
+      return;
+    }
+    /*
+     * KEVENNETTYKIN KAATUI: lauta jää avaamatta ja pelaaja saa selkeän
+     * virheilmoituksen. Ruutu ei jää tyhjäksi mustaksi — pergamentti ja
+     * pelin muut osat (laukku, lehdet, valikot) ovat entisellään, ja
+     * ratasvalikon "pallon turvatila" nollaa laskurin uutta yritystä
+     * varten.
+     */
+    this.pallolautaEpaonnistui = true;
+    this.render();
+    const box = this.buildToast({
+      // 'bad' on talon punainen kupla (css/styles.css .event-toast.bad);
+      // omaa 'error'-luokkaa ei ole, joten se jäisi tyylittömäksi.
+      kind: 'bad',
+      icon: 'estetty',
+      text: 'Karttapalloa ei saatu auki tällä laitteella. Kokeile ladata sivu uudelleen.',
+    });
+    setTimeout(() => this.removeToast(box), TOAST_MS.default * 4);
+  }
+
+  /**
+   * TURVATILAN RIVI (vaihe 5c): pallo on kaatunut kahdesti peräkkäin
+   * tällä laitteella, joten se avataan kevennettynä (laattakerros pois).
+   * Rivi näytetään kerran istunnossa — pallolautaHalutaan kysytään joka
+   * piirrossa, eikä ilmoitus saa toistua. (Ennen 7.9.2026 rivi kertoi
+   * pallon sulkeutuneen ja pelin siirtyneen tasokartalle; vanha kartta on
+   * nyt pois käytöstä eikä lauta enää vaihdu.)
+   */
+  ilmoitaPallonTurvatila() {
+    if (this.pallonTurvatilaIlmoitettu || this.dead) return;
+    this.pallonTurvatilaIlmoitettu = true;
+    const box = this.buildToast({
+      kind: 'info',
+      text: 'Karttapallo kaatui aiemmin — avataan kevennettynä. Nollaa ratasvalikosta.',
+    });
+    setTimeout(() => this.removeToast(box), TOAST_MS.default * 3);
+  }
+
+  /**
+   * Tasokartan kerrokset pois ja svg#board tyhjäksi (js/kartta.js nuku).
+   * Sama purku kuin laudan vaihdossa (drawBoard) — vain se ajetaan nyt
+   * ilman uutta piirtoa. drawnPackId nollataan, jotta herääminen piirtää
+   * laudan uudestaan drawBoardForilla.
+   */
+  puraLauta() {
+    nollaaPyramidi(this);
+    unohdaKarttanimet();
+    nollaaFokuskuvat(this);
+    nollaaFokuskohteet(this);
+    nollaaFokuspiste(this);
+    nollaaElaintakyt(this);
+    // Ruutuun ankkuroidut kalusteet (maataulu, mittajana, asteikot) pois:
+    // ne ovat tasokartan omia (karttapallo.md luku 4) eivätkä saa jäädä
+    // pallon päälle, kun linssikartta suljetaan (savuke-pallolauta,
+    // kaappaus pallolauta-siirto 5.9.2026).
+    nollaaFokusmitat(this);
+    this.pysaytaAikajana();
+    this.maastonimiTunniste = null;
+    this.countryKey = null;
+    this.fokusAvain = null;
+    this.drawnPackId = null;
+    this.svg.textContent = '';
+  }
+
+  /**
+   * LINSSIKARTTA: tasokartta herää pallon päälle LINSSIN AJAKSI
+   * (valitseLinssi). Kuori asuu js/pallolauta/linssikartta.js:ssä
+   * (vaihe 4): Kartta herää pallon näkymään, kehys (linssin nimi,
+   * Sulje) päälle, pallo häipyy; Sulje palauttaa pallon kartan
+   * viimeiseen näkymään ja purkaa kartan. Linssit toimivat kuoressa
+   * täsmälleen kuten tasokartalla. Siirrot eivät kulje tästä (vaihe 2:
+   * ne ovat pallolla), ja kuoren ajaksi Liiku ja lehdet ovat kiinni
+   * (linssikarttaEstaa). `lahto` jää tarkistaLinssikartalle: ilman
+   * linssiä avattu kuori sulkeutuu, kun ollaan perillä toisessa
+   * kaupungissa.
+   */
+  avaaLinssikartta(tiedot = {}) {
+    /*
+     * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026, sanatarkasti: *"ei
+     * lataisi sitä millään lailla"*). Linssikartta oli tasokartan
+     * VIIMEINEN pelinsisäinen herätyspolku. Kaikki käytössä olevat
+     * linssit (ihmisen-matka, keksinnot, radio, topografia, vertailu,
+     * maatiedot, vesistot) piirtävät jo pallon pinnalle `pallolle`-
+     * sopimuksella, joten tämä haara oli jo kuollut koodi; portti pitää
+     * sen kuolleena myös silloin, kun joku avaa uuden linssin ilman
+     * `pallolle`-toteutusta — sellainen linssi ei ilmesty tasokartalle
+     * vaan jää piirtämättä (konsolivaroitus paivitaLinssiTiedoissa).
+     * Kuori itse (js/pallolauta/linssikartta.js) jää repoon.
+     */
+    if (!VANHA_KARTTA_KAYTOSSA) return false;
+    if (!this.pallolauta || this.linssikartta) return false;
+    return Boolean(this.pallolauta.linssikartta?.avaa(tiedot));
+  }
+
+  /** Linssikartta kiinni: pallo takaisin kartan näkymään, kartta nukkumaan. */
+  suljeLinssikartta() {
+    if (!this.pallolauta || !this.linssikartta) return false;
+    return Boolean(this.pallolauta.linssikartta?.sulje());
+  }
+
+  /**
+   * LINSSI BLOKKAA MUUN (omistaja 4.9.2026, sanatarkasti: *"pitää kaikki
+   * muu blokata varmuuden vuoksi kun linssi alkaa"*): linssikartan
+   * kuoressa Matkusta-nappi, Liiku ja lehtien avaajat (kaupungin
+   * napautus, Tutki) eivät toimi; sulkeminen palauttaa. Yksi portti,
+   * yksi kenttä — tasokartalla (?lauta=kartta) kenttä on aina null.
+   *
+   * SAMA PORTTI KOSKEE PALLOLLA OLEVIA LINSSEJÄ (12.9.2026,
+   * satelliittilinssin vaatimus: *"Linssin merkit eivät kuluta
+   * pelivuoroa, käynnistä matkustusta eivätkä avaa kaupunkilehteä"*).
+   * Pallolinssin ajan bodyssa on luokka `aikajana-paalla`
+   * (js/ui-apurit.js linssiEstaa), ja se kertoo saman asian kuin
+   * linssikartan kuori: ruutu on linssin, ei pelin. Ilman tätä pallon
+   * pinnan napautus saattoi yhä osua nopanheiton kohteeseen tai
+   * kaupunkiin havaintopisteen vierestä (js/pallolauta/lauta.js
+   * napautaPintaan → doMove / avaaTutkinta).
+   */
+  linssikarttaEstaa() {
+    return Boolean(this.linssikartta) || linssiEstaa();
+  }
+
+  /** Perillä? Linssikartta sulkeutuu, kun siirto päättyi uuteen kaupunkiin. */
+  tarkistaLinssikartta() {
+    const lk = this.linssikartta;
+    if (!lk || lk.linssi || this.busy || this.movingPlayerId != null) return;
+    const { game } = this;
+    if (game.phase === 'move' || game.phase === 'roll' || game.phase === 'over') return;
+    const pos = game.player?.pos;
+    if (pos?.type !== 'city' || pos.city === lk.lahto) return;
+    this.suljeLinssikartta();
+  }
+
   destroy() {
+    // Ensiliidon kupla, ääni ja piilotuskuuntelijat kuuluvat tälle
+    // näkymälle: uusi peli ei odota niiden seuraavaa ajastinkierrosta.
+    peruLivianAvaus();
+    peruLivianTraileriodotus(this);
+    this.paataAloituslennonSignaali('peru');
+    // Laudan purku vie linssikerroksetkin (lauta.linssit.pura).
+    this.pallolinssi = null;
+    this.pallolauta?.pura();
+    this.pallolauta = null;
     // Kuollut instanssi ei saa enää koskea jaettuun DOM:iin: sen
     // tapahtumakuuntelijat ja kesken olevat animaatioketjut jäävät elämään
     // uuden pelin rinnalle, ja ilman lippua ne piirtäisivät vanhan pelin
@@ -3493,6 +4571,11 @@ export class UI {
     // peli ei saa periä vanhan instanssin kuplaa.
     clearTimeout(this.ehdotusKuplaAjastin);
     this.ehdotusKuplaAjastin = null;
+    // Linssin avausvartija on sekunteja pitkä: kuolleen instanssin
+    // vartija ei saa näyttää ilmoitusta uuden pelin päälle.
+    clearTimeout(this.linssinAvausVahti);
+    this.linssinAvausVahti = 0;
+    poistaLinssivirhe();
     // Tarkkuusvahti on documentin kuuntelija: ilman purkua kuollut
     // instanssi jäisi tarkkailemaan näkyvyyttä uuden pelin rinnalle.
     if (this.tarkkuusVahti) {
@@ -3555,22 +4638,14 @@ export class UI {
     // ei saa viimeistellä elettä kuolleessa pelissä.
     clearTimeout(this.rullanEleAjastin);
     /*
-     * Eleen ajaksi piilotetut merkkikerrokset (kartta.js piilotaMerkit)
-     * palautetaan tässä eikä ajastimen varassa: kuolleen pelin ajastin
-     * ei laukea, ja runkoon jäänyt luokka piilottaisi seuraavan pelin
-     * merkit heti alkuun.
+     * MERKKIEN ELEENAIKAISTA PIILOTUSTA EI ENÄÄ OLE, joten sen paluuta
+     * ei myöskään siivota täältä (omistaja 1.9.2026: *"kaikki elementit
+     * pitää pysyä päällä kun karttaa liikutetaan tai zoomataan vaikka
+     * niitä ei olisi poltettu."* — koko mekanismin purku js/kartta.js
+     * asennaPanorointi, ks. sen ensimmäinen lohko). Kuolleeseen peliin
+     * ei siis voi jäädä merkkejä piilottavaa runkoluokkaa eikä
+     * ajastinta, joka kirjoittaisi sellaisen takaisin.
      */
-    clearTimeout(this.merkkiPaluuAjastin);
-    this.merkkiPaluuAjastin = 0;
-    // Häivytyksen oma ajastin ja paluun kehysvaraus samasta syystä:
-    // kumpikin voisi kirjoittaa luokan takaisin kuolleen pelin päälle.
-    clearTimeout(this.merkkiHaipymaAjastin);
-    this.merkkiHaipymaAjastin = 0;
-    cancelAnimationFrame(this.merkkiPaluuKehys ?? 0);
-    this.merkkiPaluuKehys = 0;
-    this.merkitPiilossa = false;
-    document.body.classList.remove('kartta-merkit-piilossa');
-    document.body.classList.remove('kartta-merkit-haipyy');
     // Lehden avauksen mittavarmistuksen jälkitarkistukset samoin.
     clearTimeout(this.lehtitila.lehtiMittaAjastin);
     clearTimeout(this.lehtitila.lehtiMittaJalkiajastin);
@@ -3613,6 +4688,9 @@ export class UI {
     // Sama kartalennolle: lippu pidättelee kamera-ajoja ja annosteluvirtaa,
     // joten kesken katkennut lento lamauttaisi seuraavan pelin.
     document.body.classList.remove('flight-active', 'kartalento');
+    // Nimikerroksen lentovaitiolo samalla alas: pystyyn jäädessään se
+    // jättäisi uuden pelin kartan kokonaan nimettömäksi.
+    this.paataKarttanimienLentotila();
     // Arkin alle piilotettu lauta takaisin näkyviin: pystyyn jäädessään
     // luokka jättäisi uuden pelin kartan näkymättömäksi.
     document.body.classList.remove('lauta-arkin-alla', 'aloitusverho-paalla');
@@ -3628,7 +4706,14 @@ export class UI {
     document.body.classList.remove('radio-tila');
     for (const kalvo of document.querySelectorAll('.flight-overlay')) kalvo.remove();
     this.suljeAloitusportti();
+    // Avausjulisteen vaiheajastimet: kuollut instanssi ei saa naputtaa
+    // avaustekstiä uuden pelin päälle (peruAvausjuliste nollaa ketjun).
+    this.peruAvausjuliste();
     clearTimeout(this.botTimer);
+    // Kesken katkennut matka jättäisi automaattiheiton ajastimen
+    // pyörimään uuden pelin päälle.
+    clearTimeout(this.automaattiheittoAjastin);
+    this.automaattiheittoPaikka = null;
     clearTimeout(this.lentoPuheAjastin);
     clearTimeout(this.lentoTekstiAjastin);
     clearTimeout(this.zoomAlkuAjastin);
@@ -3638,6 +4723,18 @@ export class UI {
     if (this.previewFrame) cancelAnimationFrame(this.previewFrame);
     for (const timer of Object.values(this.typeTimers ?? {})) clearTimeout(timer);
     stopQuizTimer(this);
+    // Liiku-napin vahdit: kuollut näkymä ei enää kysele luennan tilaa
+    // eikä kutista nappia takaisin.
+    clearInterval(this.luentavahti);
+    this.luentavahti = null;
+    clearTimeout(this.liikuLaajennusAjastin);
+    // Kaiuttimen VU-mittari seis: kuollut näkymä ei jätä rAF-silmukkaa
+    // pyörimään eikä kaaria palamaan (js/kaiutinmittari.js).
+    pysaytaKaiutinmittari();
+    document.body?.classList?.remove?.(
+      'luenta-aanessa', 'liiku-laaja', 'kertoja-aanessa', 'luenta-huntu',
+      LUENNAN_TEKSTIPIILO,
+    );
     for (const lappu of this.taustaLaput ?? []) lappu.removeEventListener('click', this.lappuTausta);
     for (const lappu of this.peruutusLaput ?? []) lappu.removeEventListener('cancel', this.lappuPeruutus);
     // Nipistyksen kuuntelijat pois: ne ovat paneelissa, joka jää eloon.
@@ -4058,20 +5155,12 @@ export class UI {
         this.taideOdottaa = true;
       }
       /*
-       * Eleen ajaksi piilotetut merkkikerrokset (kartta.js
-       * piilotaMerkit) palaavat samalla: jumiin jäänyt ele ei saa
-       * jättää karttaa merkittömäksi lopuksi istunnoksi — merkit ovat
-       * napautuskohteita.
+       * MERKKIEN PALUUTA EI TARVITSE ENÄÄ PAKOTTAA. Jumiin jäänyt ele
+       * ei voi jättää karttaa merkittömäksi, koska merkkejä ei
+       * piiloteta eleen ajaksi lainkaan (omistaja 1.9.2026; purku
+       * js/kartta.js asennaPanorointi). Napautuskohteet ovat siis
+       * paikoillaan riippumatta siitä, pääsikö ele omaan loppuunsa.
        */
-      if (this.merkitPiilossa) {
-        // merkitEsiin siivoaa luokat, ajastimet ja kehysvarauksen
-        // kerralla; varapolku vanhalle kartalle jää naytaMerkkiin.
-        if (this.kartta?.merkitEsiin) this.kartta.merkitEsiin();
-        else this.kartta?.naytaMerkit?.(true);
-        document.body.classList.remove('kartta-merkit-piilossa');
-        document.body.classList.remove('kartta-merkit-haipyy');
-        this.merkitPiilossa = false;
-      }
     }
     return Boolean(this.osoitinKartalla || this.kartanRaahaus);
   }
@@ -4099,6 +5188,9 @@ export class UI {
    */
   merkitseKartanEle() {
     this.kartanEleHetki = performance.now();
+    // Matkakirjakortin paluu lasketaan viimeisestä liikkeestä: niin
+    // kauan kuin karttaa liikutetaan, kortti pysyy lappuna.
+    if (this.kortinPalautusAjastin) this.ajastaKortinPalautus();
   }
 
   /**
@@ -4114,6 +5206,17 @@ export class UI {
   }
 
   /**
+   * Pallon GL-nimiökerros (js/pallonimiot-gl.js) tai null. Lauta antaa
+   * kerroksen kahvan kenttään `glKerros` (js/pallolauta/lauta.js), koska
+   * kerros syntyy laiskasti ja puretaan laudan mukana; savukkeet ja
+   * vartijat lukevat sen tästä metodista (tools/tarkista-savukkeet.mjs
+   * hyväksyy kutsun vain UI-luokan metodille).
+   */
+  pallolautaGL() {
+    return typeof this.glKerros === 'function' ? (this.glKerros() ?? null) : null;
+  }
+
+  /**
    * Näkyvä alue laudan koordinaatteina.
    *
    * Luvut luetaan ruudulta eikä zoomimuuttujista: this.zoomSkaala on
@@ -4121,6 +5224,9 @@ export class UI {
    * elementin oma koko ovat olemassa aina.
    */
   nakyvaAlue() {
+    // Pallolaudalla näkyvän alueen kertoo pallon kamera (laudan
+    // yksiköissä, sama muoto) — nukkuvan kartan viewBox ei kerro mitään.
+    if (this.pallolautaPaalla()) return this.pallolauta.kamera.nakyvaAlue();
     /*
      * KARTTARUUTU, EI SIIRTOKUORI (wrapper-siirto 26.8.2026). Kuori on
      * ruudun kokoinen mutta liikkuu kartan mukana, joten siitä luettu
@@ -4223,6 +5329,16 @@ export class UI {
    */
   taydennaTaide({ heti = false } = {}) {
     if (this.dead) return;
+    /*
+     * NUKKUVA KARTTA EI TÄYDENNÄ (pallolauta vaihe 4, sama portti kuin
+     * js/kartta.js:ssä). Linssikartan sulku puretaan kesken kartan
+     * kamera-ajon (aikajanan paluuajo, kohdesovitus), ja ajon
+     * viimeinen kehys tulisi tänne vasta purun jälkeen — merkkiketju
+     * piirtäisi fokuskohteet ja eläintäyt takaisin tyhjään svg:hen
+     * (mitattu 5.9.2026: 1 263 elementtiä pallon alla). Yksi portti
+     * metodin alussa, ei hajautettuja ehtoja.
+     */
+    if (this.kartta.lepotila) return;
     /*
      * Maastonimet päivitetään SAMASSA KOHDASSA kuin kartan kuva.
      *
@@ -4815,6 +5931,10 @@ export class UI {
   }
 
   paivitaMaastonimet(tiedettyNakyva = null) {
+    // Nukkuva kartta ei lado merkkejä (ks. taydennaTaide: sama portti).
+    // Pallolaudalla selitteen laskurit tulevat pallolta (render →
+    // paivitaKarttaselite, ui.karttavaloLaskuri), ei tästä ketjusta.
+    if (this.kartta.lepotila) return;
     /*
      * NÄKYMÄ KERRAN, KAIKILLE (ks. taydennaTaide: "NÄKYMÄ MITATAAN
      * KERRAN"). Ilman kutsujan mittausta luetaan tässä yhden kerran ja
@@ -4839,6 +5959,40 @@ export class UI {
     // KARTALLA — PURETTU.)
     paivitaFokuskohteet(this, nakyvaNyt);
     /*
+     * ====== PELIMERKKIEN MITAT ENNEN NIMIÄ, JA SE ON JÄRJESTYS-
+     *        VAATIMUS (omistaja 2.9.2026) ============================
+     *
+     * Nämä kolme olivat ennen tämän metodin LOPUSSA, ja se oli oikein
+     * niin kauan kuin nimikerros ei tiennyt merkeistä mitään. Nyt se
+     * tietää: pelinappula, pelaajan kaupungin laatta ja nopanheiton
+     * kohdemerkit luovutetaan ladonnan varauksiksi (luovutaRuutuvaraukset),
+     * ja varaus on laatikko SIINÄ KOOSSA, JOSSA MERKKI RUUDULLA ON.
+     * Vanhassa järjestyksessä varaus olisi luettu edellisen
+     * zoomiportaan mitoista — syvään zoomiin siirryttäessä
+     * puolet liian pienenä, ja juuri se on se vika, jota tämä erä
+     * korjaa.
+     *
+     * KUTSUT OVAT MUUTEN ENNALLAAN eivätkä lue nimikerrokselta mitään:
+     * ne kirjoittavat merkkien muunnokset ja napautusalueet. Ainoa
+     * muutos on paikka tässä listassa.
+     *
+     * Nykyisen kaupungin laatta on fokuslehden päällä kiinteän
+     * kokoinen RUUDULLA (paivitaFokusLaatta), joten sen mittakaava ja
+     * napautusalue lasketaan uudelleen jokaisesta zoomista…
+     */
+    this.paivitaFokusLaatta();
+    // …sama koskee pelinappulaa ja aarremerkkiä (paivitaFokusMerkkiMitat)…
+    this.paivitaFokusMerkkiMitat();
+    // …sekä valittavien kohteiden merkkejä ja niiden nimiä.
+    this.paivitaFokusKohdeMitat();
+    /*
+     * PELIMERKIT LADONNAN VARAUKSIKSI. Palautusarvoa ei tarvitse
+     * katsoa tässä: paivitaKarttanimet ajetaan joka tapauksessa heti
+     * perässä, ja ilmoittautuminen tyhjentää ladontamuistin vain jos
+     * joukko oikeasti muuttui.
+     */
+    this.luovutaRuutuvaraukset();
+    /*
      * PYRAMIDILAUDAN PAIKANNIMET (js/karttanimet.js). Ladonta on
      * funktio pelkästä mittakaavasta ja muistetaan sen mukaan, joten
      * panorointi ei laske sitä uudelleen — tässä valitaan vain se
@@ -4857,6 +6011,14 @@ export class UI {
     paivitaKarttanimet(this, nakyvaNyt);
     // Sama koskee kevyen kulun vihreää kohtaamispistettä.
     paivitaFokuspiste(this);
+    /*
+     * Maan ääriviiva (js/maatummennus.js) — TÄSMÄLLEEN TÄSTÄ KOHDASTA ja
+     * samasta syystä kuin muutkin ruudun mittakaavasta riippuvat
+     * kerrokset: sen näkyvyys ratkeaa mittakaavasta (pelaajan uloin
+     * zoomi), eikä sitä lasketa eleen aikana vaan kun näkymä on
+     * ASETTUNUT. Sama maa samalla näkyvyydellä palaa heti.
+     */
+    paivitaMaatummennus(this);
     // Ja maiden eläintäkyjä (js/elaintaky.js): merkit elävät kartan
     // mittakaavassa ja katoavat yleiskuvassa, joten ne lasketaan
     // samassa kohtaa kuin muutkin merkkikerrokset.
@@ -4874,14 +6036,7 @@ export class UI {
      * yllä — eikä siis joka kehyksessä.
      */
     paivitaFokusmitat(this);
-    // Sama syy kuin yllä: nykyisen kaupungin laatta on fokuslehden
-    // päällä kiinteän kokoinen RUUDULLA (paivitaFokusLaatta), joten sen
-    // mittakaava ja napautusalue lasketaan uudelleen jokaisesta zoomista.
-    this.paivitaFokusLaatta();
-    // Sama koskee pelinappulaa ja aarremerkkiä (paivitaFokusMerkkiMitat)…
-    this.paivitaFokusMerkkiMitat();
-    // …sekä valittavien kohteiden merkkejä ja niiden nimiä.
-    this.paivitaFokusKohdeMitat();
+    // (Pelimerkkien mitat ajettiin jo nimien EDELLÄ, ks. yllä.)
     if (!this.maastonimiKerros) return;
     if (!this.maastonimet) return;
     /*
@@ -5012,8 +6167,15 @@ export class UI {
      */
     const laji = ['vuoret', 'joet', 'jarvet']
       .find((l) => MAAILMANKARTAN_NIMET[l]?.includes(kohde));
+    /*
+     * Tekstit tulevat tasokartan latausportista (js/kartta-lataus.js):
+     * tänne pääsee vain maastonimikerroksesta, joka on olemassa vasta
+     * hereillä olevalla kartalla — silloin pakat ovat aina ladatut.
+     */
+    const kartanOsat = tasokartanOsat();
     const teksti = laji
-      ? (MAASTO_TEKSTIT[laji]?.[kohde.avain] ?? MAASTO_TEKSTIT_MALLI[laji]?.[kohde.avain])
+      ? (kartanOsat?.MAASTO_TEKSTIT?.[laji]?.[kohde.avain]
+        ?? kartanOsat?.MAASTO_TEKSTIT_MALLI?.[laji]?.[kohde.avain])
       : null;
     /*
      * Vuorikohteilla on oma kuratoitu karuselli (VUORIKUVAT). Se
@@ -5254,13 +6416,35 @@ export class UI {
    */
   fitIntro() {
     /*
-     * Otsikon kerroin 1.5 on selaimen oma h2-koko: ennen 26.8.2026
-     * juliste oli tekstipalstan lapsi ja peri kokonsa siitä kerrottuna
-     * 1,5:llä. Nyt se on oma lohkonsa, ja sama kerroin pitää otsikon
-     * täsmälleen entisen kokoisena.
+     * Otsikon kerroin (JULISTEEN_KERROIN) on selaimen oma h2-koko:
+     * ennen 26.8.2026 juliste oli tekstipalstan lapsi ja peri kokonsa
+     * siitä kerrottuna 1,5:llä. Nyt se on oma lohkonsa, ja sama kerroin
+     * pitää otsikon täsmälleen entisen kokoisena.
+     *
+     * TÄMÄ AJETAAN JO PORTIN TAKANA (renderIntro): mittaus ei saa osua
+     * kirjoituskoneen alkuun, tai otsikko hyppäisi juuri siinä
+     * (omistaja 5.9.2026 klo 00.20).
      */
-    this.sovitaIntroLohko(this.introKartta, this.introOtsikko, 1.5);
+    this.sovitaIntroLohko(this.introKartta, this.introOtsikko, JULISTEEN_KERROIN);
     this.sovitaIntroLohko(this.introArkki, this.introPalsta);
+  }
+
+  /**
+   * Lohkon TEKSTIN korkeus. EI scrollHeight (7.9.2026): etusivun
+   * pergamenttiharso on lohkon oma ::before, joka ulottuu insetillä
+   * reilusti lohkon ulkopuolelle — ja absoluuttisesti asemoitu
+   * jälkeläinen kasvattaa scrollHeightia alaspäin. Harso siis kutisti
+   * kirjasinta, vaikka se on pelkkä koriste tekstin TAKANA: kun harson
+   * liukua pidennettiin (-4,6em → -11em), puhelimen avausteksti kutistui
+   * neljänneksen. Lasten laatikot kertovat tekstin todellisen korkeuden,
+   * eikä pseudo ole `children`-listassa.
+   */
+  introLohkonKorkeus(palsta) {
+    let pohja = 0;
+    for (const lapsi of palsta.children) {
+      pohja = Math.max(pohja, lapsi.offsetTop + lapsi.offsetHeight);
+    }
+    return pohja || palsta.scrollHeight;
   }
 
   /** Pienentää palstan kirjasinta, kunnes se mahtuu kaistaan. */
@@ -5270,7 +6454,7 @@ export class UI {
     let koko = INTRO_FONT_MAX * kerroin;
     palsta.style.fontSize = `${koko}rem`;
     // Askelia riittävästi koko haarukkaan; INTRO_FONT_MIN on lattia.
-    for (let i = 0; i < 8 && palsta.scrollHeight > kaista; i++) {
+    for (let i = 0; i < 8 && this.introLohkonKorkeus(palsta) > kaista; i++) {
       koko = Math.max(INTRO_FONT_MIN * kerroin, koko - 0.09 * kerroin);
       palsta.style.fontSize = `${koko}rem`;
     }
@@ -5489,6 +6673,15 @@ export class UI {
     this.svg.textContent = '';
 
     const maarittelyt = drawDefs(this.svg);
+    /*
+     * PERGAMENTTI LAUDAN ULKOPUOLELLE ja laudan leikkaus (js/mapart.js
+     * drawPaperUlkopuoli). Molemmat ovat laudan juuriryhmän
+     * ULKOPUOLELLA — pohja siksi, ettei leikkaus leikkaisi sitä, ja
+     * leikkaus siksi, että se on juuriryhmän oma rajaus. Kumpikin on
+     * lepotilassa piilossa ja astuu voimaan vasta uloimmalla zoomilla
+     * (css .lauta-kokonaan, js/kartta.js paivitaLaudanKierto).
+     */
+    drawPaperUlkopuoli(this.svg, pack.map, maarittelyt);
     // Kaikki piirretään juuriryhmään: esikatselu siirtää ryhmää, ei SVG:tä,
     // jolloin elementin taakse ei paljastu tyhjää taustaa raahatessa.
     const root = el('g', { class: 'board-root' }, this.svg);
@@ -5592,7 +6785,7 @@ export class UI {
       drawMaasto(
         taide,
         pack.map,
-        pack.id === 'maailmankartta' ? MAASTON_VARJOSTUS : null,
+        pack.id === 'maailmankartta' ? (tasokartanOsat()?.MAASTON_VARJOSTUS ?? null) : null,
         pack.id === 'maailmankartta' ? MAAILMANKARTAN_NIMET : null,
       );
     }
@@ -5747,6 +6940,36 @@ export class UI {
      * vuoda reunan yli, joten kopio ja alkuperäinen eivät mene
      * päällekkäin (ks. linssikerroksen rajausperustelu yllä).
      */
+    /*
+     * MAAN VAHVISTETTU ÄÄRIVIIVA (js/maatummennus.js, omistajan tilaus
+     * 31.8.2026; naapurien tummennus purettiin 2.9.2026 ja kerrokseen
+     * jäi pelkkä viiva).
+     *
+     * TÄHÄN KOHTAAN, koska kerros on POHJALAATTOJEN PÄÄLLÄ mutta
+     * kaikkien merkki-, nimi- ja pelitilakerrosten ALLA: se vahvistaa
+     * nykyisen maan rajan, se ei saa peittää yhtään pelimerkkiä eikä
+     * syödä napautuksia (siksi pointer-events: none).
+     *
+     * JUURIRYHMÄN SISÄÄN samasta syystä kuin linssi ja sumuverho:
+     * <use href="#lauta-sisalto"> on elävä viittaus, joten kiertävän
+     * laudan kopio saa viivan ilmaiseksi eikä sauman toinen puoli jää
+     * ilman.
+     *
+     * SAMA VAAKARAJAUS KUIN LINSSILLÄ. Muutama maa ylittää laudan
+     * sauman (Tšukotka, Aleutit, Fidži, Uusi-Seelanti), ja
+     * js/maatummennus.js monistaa niiden renkaat laudan leveyden verran
+     * sivuun. Ilman rajausta monistettu pala ja <use>-kopio piirtäisivät
+     * saman kaistaleen kahdesti — sama mitattu vika, jonka takia
+     * linssikerros on rajattu.
+     *
+     * KERROS ON TYHJÄ, kunnes maa ja mittakaava ovat kohdallaan.
+     */
+    this.maatummennusKerros = el('g', {
+      class: 'maatummennus',
+      'pointer-events': 'none',
+      ...(pack.map.kiertava ? { 'clip-path': 'url(#linssi-rajaus)' } : {}),
+    }, root);
+    nollaaMaatummennus(this);
     this.fokusKerros = el('g', { class: 'fokus-sumu', 'pointer-events': 'none' }, root);
     /*
      * MERENPOHJAN RAJAUS ON POISTETTU YHDESSÄ SYVYYSVYÖHYKKEIDEN KANSSA.
@@ -5861,6 +7084,9 @@ export class UI {
     nollaaFokuskohteet(this);
     nollaaFokuspiste(this);
     nollaaElaintakyt(this);
+    // Aikajana (js/aikajana.js) elää yhdellä laudalla: uusi lauta tai
+    // uusi peli purkaa sen kellon, valot ja nauhan.
+    this.pysaytaAikajana();
     // Uusi lauta, tyhjä kerros: muistettu näkymätunniste ei saa jäädä
     // voimaan, tai nimet jäisivät piirtymättä kun sama näkymä palaa.
     this.maastonimiTunniste = null;
@@ -6047,6 +7273,8 @@ export class UI {
      * se on nyt poissa, myös kehittäjätilassa. Laatan luokka on siis
      * pelkkä `city`/`city-start` joka tilassa.
      */
+    // Kehien listat kerran, ei kaupunkia kohti (ks. alempaa).
+    const tarkistettavat = livianKorostetutKaupungit();
     for (const c of board.cities) {
       const wobble = `rotate(${vary(`city:rot:${c.id}`, 12).toFixed(1)} ${c.x} ${c.y})`;
       /*
@@ -6118,6 +7346,38 @@ export class UI {
           'text-anchor': 'middle',
           ...tunnus, ...fokus,
         }, cities).textContent = '✈';
+      }
+      /*
+       * TARKISTUSKEHÄ (omistajan tilaus 7.9.2026, väliaikainen): kaupunki,
+       * jonka uusi pulukulku on kirjoitettu JA äänitetty, saa kultaisen
+       * kehän — omistaja löytää tarkistettavat kohteet yhdellä
+       * silmäyksellä. Kehä on PELKKÄ VIIVA laatan päällä (pointer-events
+       * none, css .city-tarkistus): se ei muuta pisteen kokoa eikä
+       * yhtäkään osumapintaa, joten kaupunkilehti- ja nosto-osumatestit
+       * pysyvät ennallaan. Päätoimittaja kääntää LIVIAN_KOROSTUS_KAYTOSSA
+       * falseksi, kun kaupungit on käyty läpi.
+       */
+      /*
+       * SININEN LUENTAKUVAKEHÄ POISTETTU (omistaja 11.9.2026: *"siniset
+       * kaupunkilaatat voi palauttaa takaisin alkuperäiseen väriin"*).
+       * Se oli 9.9.2026 tehty työmerkintä siitä, missä isoisän
+       * luentakuva jo oli; kuvia on nyt kaikissa 45 kaupungissa, joten
+       * merkintä ei erottanut enää mitään. Tarkistuskehän mekaniikka
+       * jää (LIVIAN_KOROSTUS_KAYTOSSA on epätosi, joten sekin on
+       * käytännössä nollattu).
+       */
+      const kehanLuokka = tarkistettavat.has(c.id) ? 'city-tarkistus' : null;
+      if (kehanLuokka) {
+        const tr = base + 5.2;
+        el('ellipse', {
+          cx: c.x,
+          cy: c.y,
+          rx: tr + vary(`tarkistus:rx:${c.id}`, 0.7),
+          ry: tr + vary(`tarkistus:ry:${c.id}`, 0.7),
+          transform: wobble,
+          class: kehanLuokka,
+          ...tunnus, ...fokus,
+        }, cities);
       }
       /*
        * PAIKANNIMI KUULUU LAATTAAN, EI ELÄVÄÄN KERROKSEEN
@@ -6436,9 +7696,8 @@ export class UI {
    * (vaihe 'roll' tai 'move'). Muulloin kerros on tyhjä — atlas on
    * lehti, ei pelilauta.
    *
-   * PIIRRETÄÄN LAUDAN OMASTA MURTOVIIVASTA (board.edgeById poly), sama
-   * lähde kuin matkustusrajauksella (matkustusRajaus): viiva on siis
-   * täsmälleen se reitti, jota pitkin nappula kulkee.
+   * PIIRRETÄÄN LAUDAN OMASTA MURTOVIIVASTA (board.edgeById poly):
+   * viiva on siis täsmälleen se reitti, jota pitkin nappula kulkee.
    *
    * VÄLIASKELEET LASKETAAN KAARENPITUUDESTA, EI MURTOVIIVAN
    * PISTEISTÄ (omistajan tilaus 26.8.2026: *"Käytä alkuperäisen kartan
@@ -6462,31 +7721,294 @@ export class UI {
    * niihin ruutuihin, joilla nappula pysähtyy — yhtä monta joka
    * reitillä, tasavälein, myös merellä.
    */
+  /**
+   * MITKÄ MATKAREITIT JA LENTOKAARET NÄYTETÄÄN — yksi sääntö kahdelle
+   * laudalle (pallolauta vaihe 2: js/pallolauta/reitit.js piirtää
+   * täsmälleen saman valinnan pallolle, joten sääntö on tässä eikä
+   * piirrossa).
+   *
+   * Reitit näkyvät siirtovaiheessa (heitto tai siirto) ja liu'un
+   * ollessa auki; ei katselutilassa eikä botin vuorolla. Kesken reittiä
+   * näkyy pelkkä se reitti, jolla nappula on — silloin muut reitit eivät
+   * ole valittavissa eikä niitä siis kuulu näkyä. Kaupungissa viuhka
+   * näkyy vain liu'un ollessa auki (seuraava osio).
+   *
+   * === NAAPURIVIUHKA ON MATKASESSIO (omistaja 14.9.2026, Raamattu
+   * KARTTAUUDISTUKSEN PAATOKSET 8)
+   *
+   * Sanatarkasti: *"reittiviuhka tulee nakyviin heti kun pelaaja painaa
+   * 'liiku' nappia ja on kokoajan nakyvissa kunnes pelaaja saapuu uuteen
+   * kaupunkiin tai peruuttaa liikkumisen eli jaakin nykyiseen
+   * kaupunkiin"*. Lähtötilaus samana päivänä: *"onko kaupunkien valiset
+   * siirtymalinjat ja merireitit omalla tasollaan? jos on niin ne voi
+   * ottaa pois nakyvista ja palauttaa vasta kun pelaaja painaa liiku
+   * nappia"*.
+   *
+   * Kaupungissa seisova pelaaja EI valitse reittiä — hän lukee karttaa.
+   * Viuhka kuului siihen asti siirtovaiheeseen (`vaiheessa`), ja koska
+   * vuoro alkaa kaupungissa vaiheesta 'roll' aina kun matkustustapa on
+   * esivalittu (game.beginTurn autoTravel), neljä katkoviivaa makasi
+   * maan päällä koko sen ajan, jonka pelaaja katseli kaupunkia.
+   *
+   * MIKSI LIPPU EIKÄ PÄÄTELTY TILA. Ensimmäinen toteutus sitoi viuhkan
+   * `liukuAuki`-lippuun, ja se on väärä mitta kahdesta suunnasta: liuku
+   * sulkeutuu heti kun matkanappia painetaan (piirraToimintorivi), eli
+   * kesken matkan, ja toisaalta vaihe 'roll' voi alkaa kaupungissa ilman
+   * että pelaaja on painanut mitään. Ruudun tilasta ei siis voi päätellä,
+   * ONKO matka aloitettu — se on muistettava. `matkaSessio` on se muisti:
+   * lähtökaupungin tunnus, jonka `vaihdaLiuku` kirjoittaa.
+   *
+   * PIILOTUS KOSKEE VAIN VIUHKAA, EI KESKEN OLEVAA MATKAA. Nappulan
+   * ollessa reitin päällä (`kesken`) se yksi reitti jää näkyviin
+   * sessiosta riippumatta — muuten nappula kulkisi tyhjän päällä, ja
+   * juuri tämä poikkeus kantaa myös sivunlatauksen kesken matkaa, jolloin
+   * sessiota ei ole tallessa. Siksi ehto on `reittiTunnukset`-haarassa
+   * eikä lentojen ehdossa: lentokaarilla on oma, omistajan 1.9.2026
+   * päättämä elinikänsä (ks. alla), eikä sitä saa sotkea tähän.
+   *
+   * === LENTOKAARET OVAT ELÄVIÄ, EIVÄT LAATOISSA (omistaja 1.9.2026)
+   *
+   * Sanatarkasti: *"Poistetaan lentoreitit kokonaan näkyvistä.
+   * Piirretään ne näkyviin reaaliajassa vasta sitten jos pelaaja
+   * päättää mennä lentokoneella."* Laatoista ne poistuvat
+   * viivatason ajossa (tools/generoi-laattapyramidi.mjs LENNOT
+   * EIVÄT OLE VIIVATASOLLA); tässä on se, mikä tulee tilalle.
+   *
+   * Kaari näkyy kahdessa hetkessä ja katoaa itsestään molemmista:
+   *   1. kun pelaaja on avannut LENTÄEN-listan (travelSuodatin
+   *      'air'), jokaiseen valittavaan kohteeseen — silloin lista
+   *      ja kartta puhuvat samasta matkasta;
+   *   2. valitun lennon ajan (`lentoKaari`), kunnes nappula on
+   *      perillä ja doFly nollaa sen.
+   *
+   * Kaari on SAMA muoto kuin laudan omilla lentoreiteillä oli
+   * (neljännespoikkeama 0,12 · jänne), jotta pelaajan muistikuva
+   * kartasta ei muutu — vain elinikä muuttuu.
+   *
+   * VAIN LAATTALAUDALLA. Mantereiden omilla laudoilla lentoreitit
+   * piirtyvät yhä kartan kuvaan (drawBoard `air-routes`), eikä
+   * samaa yhteyttä saa olla ruudulla kahdesti.
+   *
+   * @returns {{ reittiTunnukset: string[], lennot: string[],
+   *   lentoLahto: string|null, avain: string }} tyhjä avain = ei mitään
+   */
+  /**
+   * ONKO MATKA KESKEN JUURI NYT — ja jos ei enää ole, sessio päättyy
+   * tässä (Raamattu KARTTAUUDISTUKSEN PAATOKSET 8).
+   *
+   * Omistajan sanat antavat sessiolle yhden alun ja kaksi loppua:
+   * *"tulee nakyviin heti kun pelaaja painaa 'liiku' nappia ja on
+   * kokoajan nakyvissa kunnes pelaaja saapuu uuteen kaupunkiin tai
+   * peruuttaa liikkumisen eli jaakin nykyiseen kaupunkiin"*.
+   *
+   *   PERILLÄ on se, että nappula on KAUPUNGISSA, joka ei ole se, josta
+   *   matka alkoi. Tämä on asema eikä tapahtuma, ja siksi se kestää
+   *   kaikki reitit: bussi ja lento siirtävät kaupungista toiseen
+   *   yhdessä toiminnossa, liftaus ja laiva monta askelta ja tarvittaessa
+   *   MONTA VUOROA (game.jatkaMatkaaItsestaan jatkaa samaa matkaa reitin
+   *   varrella). Sessio ei siis saa nollautua vuoron vaihtuessa — eikä
+   *   nollaudu, koska kesken reittiä ei olla missään kaupungissa.
+   *
+   *   PERUUTUS on se, että pelaaja on yhä lähtökaupungissaan eikä
+   *   yksikään matkan vaihe ole auki: ei liukua, ei kohdelistaa, ei
+   *   valittua matkustustapaa (vaihe 'roll') eikä heitettyä noppaa
+   *   (vaihe 'move'). Peruutus tunnistetaan TÄSTÄ TILASTA eikä
+   *   napeista, koska tapoja jäädä kaupunkiin on monta ja lisää voi
+   *   tulla: liu'un sulkeminen napista, napautus kartalle
+   *   (kytkeLiukuSulku), kohdelistan "Takaisin" (suljeMatkavalikko),
+   *   "Vaihda matkustustapa" (game.actionCancelTravel), linssikartan
+   *   avaus (js/pallolauta/linssikartta.js ui.suljeLiuku) ja pöllön
+   *   avaaminen (js/pollo.js). Jokainen niistä päätyy samaan tilaan, ja
+   *   yksi ehto kattaa ne kaikki.
+   *
+   * @param {object} [kaupunki] pelaajan kaupunki, jos se on jo haettu
+   * @returns {boolean} onko matka kesken
+   */
+  matkaSessioKesken(kaupunki = this.game.cityOf?.()) {
+    /*
+     * SIIRRON ANIMAATIO ON YHÄ MATKAA (omistaja 19.9.2026 klo 23.47,
+     * iPad Pariisi–Marseille, sanatarkasti: *"jos onnistuu heittämään
+     * tarpeeksi ison luvun että pääsee kertaheitolla seuraavaan
+     * kaupunkiin niin reitti virheellisesti häviää näkyvistä siirtymän
+     * ajaksi"*).
+     *
+     * `game.actionMove` on siirtänyt pelaajan määränpäähän jo ennen kuin
+     * nappula lähtee liikkeelle, joten `cityOf()` on tässä KOHDEKAUPUNKI
+     * eikä lähtökaupunki — sessio päättyi alla olevaan ehtoon ja viuhka
+     * katosi kesken hyppyjen. Kun matka päättyi reitin varrelle, viivan
+     * piti pystyssä `kesken`-haara (nappula on `edge`illä), ja juuri
+     * siksi vika näkyi vain kertaheiton mittaisella matkalla.
+     *
+     * `siirtoKaynnissa` on lähtöpaikka ja se lasketaan vasta kun
+     * kuljettaja on laskenut nappulan perille, joten reitti pysyy
+     * näkyvissä koko siirron ajan ja katoaa vasta saapumisen jälkeen.
+     */
+    if (this.siirtoKaynnissa) return true;
+    if (!this.matkaSessio) return false;
+    // Kesken reittiä ei olla missään kaupungissa: matka jatkuu.
+    if (!kaupunki) return true;
+    if (kaupunki.id !== this.matkaSessio) { this.matkaSessio = null; return false; }
+    const { game } = this;
+    /*
+     * VAIHE 'roll' EI YKSIN RIITÄ. Kaupungissa se voi olla myös LEPOTILA:
+     * kun noppatapoja on vain yksi, game.beginTurn valitsee sen valmiiksi
+     * (`autoTravel`) ja vuoro alkaa heti heittovaiheesta, vaikka pelaaja
+     * ei ole painanut mitään — juuri sitä tilaa omistaja katsoi, kun
+     * pyysi viuhkan pois. Pelaajan ITSE valitsema tapa jättää
+     * `autoTravel` epätodeksi, ja silloin heittovaihe on aito matkan
+     * vaihe, joka jatkuu vaikka liuku sulkeutuisi napin painalluksessa.
+     */
+    const auki = this.liukuAuki || this.travelExpanded
+      || game.phase === 'move' || (game.phase === 'roll' && !game.autoTravel);
+    if (!auki) this.matkaSessio = null;
+    return auki;
+  }
+
+  /**
+   * Lentokohteet, jotka lentolista tarjoaa juuri nyt (lentokentät ja
+   * mannerlennot). Tyhjä, ellei LENTÄEN-lista ole auki. Sama joukko
+   * piirtää lentokaaret (matkareittienValinta) ja tuo kohdekaupunkien
+   * merkit pallolle (js/pallolauta/lauta.js pelinKaupunkirajaus).
+   *
+   * @returns {string[]} kaupunkitunnukset, ilman kaksoiskappaleita
+   */
+  tarjotutLennot() {
+    const { game } = this;
+    if (!(this.travelExpanded && this.travelSuodatin === 'air')) return [];
+    if (this.katselu || game.player?.isBot) return [];
+    const kohteet = [];
+    for (const id of game.airportDestinations?.() ?? []) kohteet.push(id);
+    for (const k of game.mannerLennot?.() ?? []) kohteet.push(k.city);
+    return [...new Set(kohteet)];
+  }
+
+  matkareittienValinta() {
+    const { game } = this;
+    const vaiheessa = game.phase === 'roll' || game.phase === 'move';
+    /*
+     * SIIRRON AIKANA PAIKKA ON LÄHTÖPAIKKA, EI MÄÄRÄNPÄÄ (ks.
+     * matkaSessioKesken): `siirtoKaynnissa` kertoo mistä nappula on
+     * matkalla, ja reitti piirretään siitä, kunnes se on perillä.
+     */
+    const siirtyva = this.siirtoKaynnissa ?? null;
+    const kaupunki = siirtyva
+      ? (siirtyva.type === 'city' ? game.board.cityById.get(siirtyva.city) : null)
+      : game.cityOf?.();
+    const matkalla = this.matkaSessioKesken(kaupunki);
+    const naytetaan = !this.katselu && !game.player?.isBot
+      && (matkalla || this.liukuAuki || vaiheessa);
+    const paikka = siirtyva ?? game.player?.pos;
+    const kesken = !kaupunki && paikka?.type === 'edge' ? paikka.edge : null;
+    /*
+     * REITIT HEITON KANTAMAN PÄÄHÄN (omistajan päätös 20.9.2026 klo
+     * 13.45: *"liftatessa piirretään ne kaaret, joita pitkin tällä
+     * heitolla voi edetä"*).
+     *
+     * AIEMMIN piirrettiin vain oman kaupungin omat kaaret. Brysselissä
+     * niitä on kaksi (Pariisi ja Amsterdam), joten kuutosella pelaaja
+     * näki kaksi viivaa vaikka pääsi Lontooseen ja Berliiniin asti —
+     * kartta laajeni heiton jälkeen, mutta viivoja ei tullut lisää.
+     *
+     * KANTAMA OTETAAN PELIN OMASTA LASKELMASTA, ei omasta haustani:
+     * game.moves on juuri tämän heiton lailliset siirrot
+     * (js/rules.js findMoves), ja jokainen niistä kantaa polkunsa.
+     * Polkujen kaarten unioni ON "kaikki tavoitettavat polut" — sama
+     * sääntö kuin siirron sallittavuudella, joten viiva ei voi luvata
+     * reittiä, jota peli ei hyväksy (eikä jättää pois sellaista, jonka
+     * se hyväksyy). Kulkutapa, kielletyt kaaret ja askelmäärät tulevat
+     * samalla ilmaiseksi.
+     *
+     * ENNEN HEITTOA kantamaa ei ole (game.moves on tyhjä tai edellisen
+     * vuoron), ja silloin pidetään entinen esikatselu: oman kaupungin
+     * kaaret.
+     */
+    const kantamanKaaret = () => {
+      const liikkeet = game.phase === 'move' ? game.moves : null;
+      if (!liikkeet?.size) return null;
+      const kaaret = new Set();
+      for (const { path } of liikkeet.values()) {
+        for (const askel of path ?? []) {
+          if (askel?.type === 'edge' && askel.edge) kaaret.add(askel.edge);
+        }
+      }
+      return kaaret.size ? [...kaaret] : null;
+    };
+    const lennotElavana = pyramidiKattaa(game.pack.id);
+    const lentoKohteet = naytetaan && kaupunki ? this.tarjotutLennot() : [];
+    if (lennotElavana && this.lentoKaari?.b) lentoKohteet.push(this.lentoKaari.b);
+    const lennot = lennotElavana ? [...new Set(lentoKohteet)] : [];
+    const lentoLahto = this.lentoKaari?.a ?? kaupunki?.id ?? null;
+    /*
+     * LENTONÄKYMÄSSÄ EI LIFTAUSKAARIA (omistaja 20.9.2026 klo 14.40,
+     * sanatarkasti: *"lentonäkymässä liftausreitit pitää piilottaa ja
+     * lentoreittien kohde kaupungit pitää näkyä"*). Kun lentolista on
+     * auki tai lento valittu, kartta puhuu vain lennosta: heiton
+     * kantaman kaaret veisivät silmän väärään matkaan. Kohdekaupunkien
+     * merkit tulevat näkyviin pallon kaupunkirajauksessa
+     * (js/pallolauta/lauta.js pelinKaupunkirajaus → tarjotutLennot).
+     */
+    const lentonakyma = lennot.length > 0;
+    const reittiTunnukset = lentonakyma
+      ? []
+      : (kaupunki
+        ? (matkalla
+          ? (kantamanKaaret() ?? [...(game.board.adj.get(kaupunki.id) ?? [])])
+          : [])
+        : (kesken ? [kesken] : []));
+    /*
+     * HIMMEÄ REITTIVERKKO (omistaja 20.9.2026 klo 13.50: *"entä jos
+     * piirretaan myos muutkin reitit mutta himmeammalla"*): liftatessa
+     * — samalla ehdolla kuin kantaman kaaret — koko laudan kaaret
+     * näkyvät himmeinä (js/pallovektorit.js naytaVerkko). Lippu on osa
+     * avainta, jotta sen vaihtuminen piirtää kerroksen uudestaan
+     * silloinkin, kun kaarilista sattuu olemaan sama.
+     */
+    const verkko = Boolean(kaupunki && matkalla && naytetaan);
+    const avain = naytetaan && (reittiTunnukset.length || lennot.length)
+      // Siirron ajan avain on vakio: vaiheen vaihtuminen kesken
+      // animaation ei saa piirtää viivaa uudestaan.
+      // Heiton silmäluku ja kaarten määrä ovat osa avainta: sama
+      // kaupunki ja sama vaihe voivat antaa eri kantaman eri heitolla,
+      // ja ilman näitä kerros jäisi ensimmäisen heiton näköiseksi.
+      ? `${game.pack.id}:${kaupunki?.id ?? kesken}:${siirtyva ? 'siirto' : game.phase}`
+        + `:${game.die ?? ''}/${reittiTunnukset.length}`
+        + `:${lentoLahto ?? ''}>${lennot.join(',')}${verkko ? ':verkko' : ''}` : '';
+    return {
+      reittiTunnukset, lennot, lentoLahto, avain, verkko,
+    };
+  }
+
   paivitaMatkareitit() {
+    // Pallolaudalla reitit ovat pallon kerroksia (js/pallolauta/reitit.js);
+    // sama sääntö (matkareittienValinta), eri piirtäjä.
+    if (this.kartta.lepotila) { this.pallolauta?.paivita(); return; }
     const kerros = this.matkaLayer;
     if (!kerros) return;
     const { game } = this;
-    const vaiheessa = game.phase === 'roll' || game.phase === 'move';
-    const naytetaan = !this.katselu && !game.player?.isBot
-      && (this.liukuAuki || vaiheessa);
-    /*
-     * MITKÄ REITIT PIIRRETÄÄN. Kaupungissa naapurireitit, kesken
-     * reittiä pelkkä se reitti, jolla nappula on — silloin muut
-     * reitit eivät ole valittavissa eikä niitä siis kuulu näkyä.
-     */
-    const kaupunki = game.cityOf?.();
-    const kesken = !kaupunki && game.player?.pos?.type === 'edge'
-      ? game.player.pos.edge : null;
-    const reittiTunnukset = kaupunki
-      ? [...(game.board.adj.get(kaupunki.id) ?? [])]
-      : (kesken ? [kesken] : []);
-    const avain = naytetaan && reittiTunnukset.length
-      ? `${game.pack.id}:${kaupunki?.id ?? kesken}:${game.phase}` : '';
+    const {
+      reittiTunnukset, lennot, lentoLahto, avain,
+    } = this.matkareittienValinta();
     if (this.matkareittiAvain === avain) return;
     this.matkareittiAvain = avain;
     kerros.textContent = '';
-    if (!avain) return;
+    // Tyhjä kerros nollaa musteviivan tunnisteen: seuraava ilmestyminen piirtyy.
+    if (!avain) { piirraMusteviiva(kerros); return; }
     const skaala = this.nakyvaAlue()?.skaala || 1;
+    const lahtoKaupunki = lentoLahto ? game.board.cityById.get(lentoLahto) : null;
+    for (const kohdeId of lahtoKaupunki ? lennot : []) {
+      const kohde = game.board.cityById.get(kohdeId);
+      if (!kohde) continue;
+      const a = lahtoKaupunki;
+      const mx = (a.x + kohde.x) / 2 + (kohde.y - a.y) * 0.12;
+      const my = (a.y + kohde.y) / 2 - (kohde.x - a.x) * 0.12;
+      const kaari = el('path', {
+        d: `M${a.x},${a.y} Q${mx.toFixed(1)},${my.toFixed(1)} ${kohde.x},${kohde.y}`,
+        class: 'matkareitti matkareitti-lento',
+      }, kerros);
+      kaari.style.strokeWidth = (LENTOKAAREN_VIIVA_PX / skaala).toFixed(2);
+      const jakso = LENTOKAAREN_KATKO_PX / skaala;
+      kaari.style.strokeDasharray = `${(jakso * 0.6).toFixed(2)} ${(jakso * 0.4).toFixed(2)}`;
+    }
     for (const eid of reittiTunnukset) {
       const reitti = game.board.edgeById.get(eid);
       const poly = reitti?.poly;
@@ -6522,6 +8044,13 @@ export class UI {
         }, kerros);
       }
     }
+    /*
+     * MUSTEVIIVA (ilmepaketti, omistaja 5.9.2026): uudet reitit piirtyvät
+     * kynällä alusta loppuun (js/ilme.js, Vivus). Kertaluonteinen ja vain
+     * uusille poluille; ilman kirjastoa tai reduced motionilla reitti on
+     * heti valmis kuten ennenkin. Kamera ja linssikerros eivät osallistu.
+     */
+    piirraMusteviiva(kerros);
   }
 
   /**
@@ -6530,9 +8059,12 @@ export class UI {
    *
    * Lähtöpisteen valinnassa kartalla oli neljätoista kaupunkia
    * nimineen, laattoineen ja lentokonemerkkeineen, vaikka valittavia
-   * oli tasan yksi. Kaikki muut paitsi Lontoo ja aloituskohteet
-   * piilotetaan — nimi, laatta, rantarengas, porttikehä ja
-   * konemerkki, eli kaupungin koko piirros.
+   * oli v1119:ssä tasan yksi. Kaikki muut paitsi Lontoo ja
+   * aloituskohteet piilotetaan — nimi, laatta, rantarengas,
+   * porttikehä ja konemerkki, eli kaupungin koko piirros. Kun
+   * valittavat palasivat 7.9.2026, joukko kasvoi niiden mukana
+   * (ETUSIVUN_NAKYVAT), joten sääntö on ennallaan vaikka piilotettavia
+   * on nyt vähemmän.
    *
    * PIILOTUS ON LUOKKA JA VAIN NÄKYVYYTTÄ. Laudan data pysyy
    * koskemattomana, ja katselutila (?lauta=) näyttää laudan yhä
@@ -6721,6 +8253,20 @@ export class UI {
      */
     this.paivitaMaailmanRajaus();
     this.kartta?.tarkistaFokusZoom?.();
+    /*
+     * PALLOLAUTA SAA TIETÄÄ KYTKENNÄSTÄ HETI (omistaja 15.9.2026,
+     * Raamattu: KARTTAUUDISTUKSEN PAATOKSET 23). Maailmanäkymässä
+     * tasoituksen kerma ei peitä kohdemaan ulkopuolta, ja tila luetaan
+     * laudan `paivita`-ohjauksessa (js/pallolauta/lauta.js
+     * asetaTasoituksenMaailma). Ilman tätä kutsua kartta jäisi
+     * entiselleen siihen asti, kunnes jokin muu pelin tapahtuma
+     * ajaisi ohjauksen — eli nappi ei näyttäisi tekevän mitään.
+     *
+     * `pallolauta?.paivita()` eikä `paivitaPallolauta()`: jälkimmäinen
+     * AVAISI pallon, jos sitä halutaan mutta sitä ei vielä ole, ja
+     * kehittäjän kytkin ei ole se hetki, jossa lauta syntyy.
+     */
+    this.pallolauta?.paivita();
   }
 
   /* --- MERKKIKERROSTEN NÄKYMÄRAJAUS (mitattu 29.8.2026) ------------- */
@@ -6733,10 +8279,10 @@ export class UI {
    * Kehittäjän maailmanäkymä (paivitaKehittajaMaailma) ohittaa
    * käymättömien maiden piilotuksen, jotta omistaja voi siirtyä maasta
    * toiseen. Sen hintana kartalla on KOKO laudan kaupunkikerros: 602
-   * näkyvää solmua siinä missä pelissä on muutama kymmenen. Eleen
-   * aikainen piilotus (js/kartta.js piilotaMerkit,
-   * body.kartta-merkit-piilossa) ei kata niitä lainkaan — se koskee
-   * fokuskohteita, fokuspisteitä, nostosymboleita ja nippuviivoja.
+   * näkyvää solmua siinä missä pelissä on muutama kymmenen. Kerroksia
+   * ei enää piiloteta eleen ajaksi lainkaan (omistaja 1.9.2026; purku
+   * js/kartta.js asennaPanorointi), joten tämä rajaus on ainoa asia,
+   * joka pitää maailmanäkymän solmumäärän kurissa liikkeen aikana.
    *
    * Mitattuna sama Kreikan-sisäinen ele nappi pois vs. päällä:
    *
@@ -6806,7 +8352,7 @@ export class UI {
      * olemassa vain ajon ajan, joten se kelpaa yhdeksi ehdoksi
      * sellaisenaan.
      */
-    const ajossa = Boolean(this.kartta?.kameraAjossa?.()
+    const ajossa = Boolean(this.kamera()?.kameraAjossa?.()
       || this.aloituslentoKesken
       || this.lavaUnioni
       || globalThis.document?.body?.classList?.contains('kartalento'));
@@ -7063,6 +8609,14 @@ export class UI {
     this.paivitaFokusMerkkiMitat();
     // Samoin valittavien kohteiden merkit: pieni piste ja nimi.
     this.paivitaFokusKohdeMitat();
+    /*
+     * MERKKIEN KOOT MUUTTUIVAT, JOTEN NIMILADONNAN VARAUS MUUTTUI
+     * (omistaja 2.9.2026, ks. luovutaRuutuvaraukset). Uudelleenladonta
+     * tehdään vain jos laatikot oikeasti liikkuivat — maan vaihdos ja
+     * lehden ikkunan asettuminen tulevat tänne, eivätkä ne useimmiten
+     * muuta yhtään laatikkoa.
+     */
+    if (this.luovutaRuutuvaraukset()) paivitaKarttanimet(this);
   }
 
   /* --- MERKIT KARTAN MITTAKAAVAAN (omistajan linjaus 26.8.2026) ------ */
@@ -7278,6 +8832,24 @@ export class UI {
    * OSUMA-ALUEET EIVÄT KUTISTU: laatan napautusympyrä lasketaan yhä
    * KATTAMATTOMASTA skaalasta (paivitaFokusLaatta, sormen 44 px:n
    * sääntö), aivan kuten typografiakaton kanssa.
+   */
+  /*
+   * OMISTAJA 8.9.2026, iPad-kaappaus Riiasta, sanatarkasti: *"Miksi
+   * kohdekaupunki näkyy noin pienenä pallona? Se saisi olla selvästi
+   * suurempi."* — ja klo 15.45: *"tee samoin myös kohdekaupungin
+   * tekstille joka jää lähellä liian pieneksi."*
+   *
+   * KORJAUS EI OLE TÄSSÄ, JA SE ON MITTAUKSEN TULOS. Kaappauksen
+   * kohdekaupunki mitattiin pikselitasolla 14 laitepikseliksi eli
+   * 7,0 css-pikseliksi — se on PALLOLAUDAN kaupunkipiste
+   * (js/pallolauta/lauta.js KAUPUNKIPISTEEN_HALKAISIJA_PX), ei tämän
+   * kerroksen laatta: vanha kartta on 7.9.2026 alkaen pois käytöstä
+   * (js/ui-apurit.js VANHA_KARTTA_KAYTOSSA) ja elää enää linssin alla.
+   * Lattia — piste vähintään 1,5 x kohdemerkki ja nimi vähintään
+   * 1,3 x kohdenimiö — on siksi pallolaudalla
+   * (kohdekaupunginMitat, docs/moduulit/karttapallo.md luku 19), ja
+   * TÄMÄ katto jää koskemattomaksi: sen mitat on viritetty linssin
+   * tasokartalle, eikä omistajan havainto koske sitä näkymää.
    */
   fokusKasvukatto() {
     if (!this.fokusmoodi || this.katselu) return 1;
@@ -7564,10 +9136,27 @@ export class UI {
         vanha.classList.remove('nappulan-alla');
       }
     }
-    for (const osa of osat) this.asetaLaatanKoko(osa, kerroin);
     this.fokusLaattaOsat = osat;
     // Sama mitta koskee KAIKKIA kaupunkeja (ks. alla).
     this.paivitaMaailmanLaattaKoot(kerroin);
+    /*
+     * PELAAJAN OMA KAUPUNKI VIIMEISENÄ JA OMALLA MITALLAAN
+     * (FOKUS_LAATTA_SADE, omistaja 1.9.2026: *"saman kokoinen ympyrä
+     * kuin askelpisteet"*).
+     *
+     * JÄRJESTYS ON EHTO, EI TYYLISEIKKA: paivitaMaailmanLaattaKoot käy
+     * läpi kerroksen KAIKKI lapset, myös pelaajan omat osat, ja
+     * kirjoittaisi niihin yhteisen kertoimen. Oma mitta on siksi sen
+     * jälkeen — ja joka kerta, koska maailmapassi voi ohittaa itsensä
+     * tunnisteella mutta oma laatta ei saa jäädä väärään kokoon.
+     *
+     * Säde on laudan yksiköitä, joten kerroin ei riipu mittakaavasta
+     * lainkaan: ympyrä kasvaa ja kutistuu kartan mukana kuten helmi.
+     */
+    const omaKerroin = Number.isFinite(rx) && rx > 0
+      ? FOKUS_LAATTA_SADE / rx
+      : kerroin;
+    for (const osa of osat) this.asetaLaatanKoko(osa, omaKerroin);
     /*
      * MERKINTÄ SIITÄ, ETTÄ NAPPULA SEISOO TÄMÄN LAATAN PÄÄLLÄ.
      *
@@ -8028,6 +9617,139 @@ export class UI {
   }
 
   /**
+   * YHDEN MERKIN LAATIKKO LAUDAN YKSIKÖISSÄ — SIINÄ KOOSSA, JOSSA SE
+   * RUUDULLA ON.
+   *
+   * `getBBox` antaa muodon omissa koordinaateissaan ja `transform`
+   * kertoo, mihin ja minkä kokoisena se piirretään (asetaMerkinKoko,
+   * asetaLaatanKoko). Kumpikin luetaan SVG:n omasta geometriasta eikä
+   * ruudun laatikoista: `getBoundingClientRect` pakottaisi
+   * tyylinlaskennan ja mittaisi ruutupikseleitä, jotka pitäisi
+   * kääntää takaisin laudalle kameran muunnoksen läpi. Ryhmän
+   * `getBBox` sisältää lapsensa muunnoksineen (nappulan varjo,
+   * vuororengas, hahmo), joten pino tulee mukaan yhtenä laatikkona.
+   *
+   * PIILOTETTU MERKKI EI VARAA MITÄÄN. `display: none` -osan laatikko
+   * on tyhjä (tai kutsu heittää), ja tyhjä laatikko karsiutuu tässä —
+   * niin kuin pitääkin: piilotettu merkki ei peitä yhtään nimeä.
+   *
+   * @param {Element} osa
+   * @param {number} kasvu  kerroin muodon ympärille (CSS-animaation
+   *   laajin aste; se ei näy muunnoksessa, ks. kohdemerkin halo)
+   */
+  static merkinLaatikko(osa, kasvu = 1) {
+    let bb = null;
+    try {
+      bb = osa.getBBox();
+    } catch {
+      return null;
+    }
+    if (!(bb.width > 0) || !(bb.height > 0)) return null;
+    const m = osa.transform?.baseVal?.consolidate?.()?.matrix ?? null;
+    const kulmat = [
+      { x: bb.x, y: bb.y },
+      { x: bb.x + bb.width, y: bb.y },
+      { x: bb.x, y: bb.y + bb.height },
+      { x: bb.x + bb.width, y: bb.y + bb.height },
+    ].map((p) => (m
+      ? { x: m.a * p.x + m.c * p.y + m.e, y: m.b * p.x + m.d * p.y + m.f }
+      : p));
+    const laatikko = {
+      x0: Math.min(...kulmat.map((p) => p.x)),
+      y0: Math.min(...kulmat.map((p) => p.y)),
+      x1: Math.max(...kulmat.map((p) => p.x)),
+      y1: Math.max(...kulmat.map((p) => p.y)),
+    };
+    if (!(kasvu > 1)) return laatikko;
+    const kx = ((laatikko.x1 - laatikko.x0) * (kasvu - 1)) / 2;
+    const ky = ((laatikko.y1 - laatikko.y0) * (kasvu - 1)) / 2;
+    return {
+      x0: laatikko.x0 - kx, y0: laatikko.y0 - ky, x1: laatikko.x1 + kx, y1: laatikko.y1 + ky,
+    };
+  }
+
+  /**
+   * PELIMERKIT NIMILADONNAN VARAUKSIKSI (omistajan tilaus 2.9.2026:
+   * *"syvällä zoomilla kaupungin nimiö jää pelinappulan alle"*).
+   *
+   * === MIKSI TÄSTÄ SUUNNASTA (js/karttanimet.js asetaRuutuvaraukset) =
+   *
+   * Nimikerros latoo nimet, mutta se ei piirrä pelinappulaa, kaupungin
+   * laattaa eikä nopanheiton kohdemerkkejä — eikä siis tiedä niistä
+   * mitään. Sama juurisyy kuin kohdenimiöillä ennen 30.8.2026: kaksi
+   * kerrosta, ei yhtään yhteistä päätöstä. Ja sama korjaus:
+   * PIIRTÄVÄ kerros ilmoittautuu ladonnalle, riippuvuus osoittaa
+   * yhteen suuntaan.
+   *
+   * === MITÄ LUOVUTETAAN, JA MIKSI JUURI NE =========================
+   *
+   *   PELINAPPULAT, kaikki. Monipelissä ja bottien kanssa nappuloita
+   *   on kartalla useampi, ja jokainen niistä peittää oman kohtansa;
+   *   sääntö on geometrinen eikä *"pelaajan oma"*.
+   *
+   *   PELAAJAN KAUPUNGIN LAATTA kaikkine osineen (fokusLaattaOsat:
+   *   laatta, porttikehä, lentokentän merkki). Se on ainoa laatta,
+   *   joka on omassa mitassaan (FOKUS_LAATTA_SADE, askelhelmen
+   *   kokoinen KARTTAVAKIO) ja kasvaa siksi ruudulla zoomin mukana —
+   *   juuri se peitti omistajan kaappauksessa nimen *"SOFIA"*.
+   *   Muiden kaupunkien laatat ovat ruutumitassa kattoineen
+   *   (paivitaMaailmanLaattaKoot) eivätkä kasva nimen yli, ja niiden
+   *   pisteet ovat ladonnalla jo omassa varauksessaan.
+   *
+   *   NOPANHEITON KOHDEMERKIT (.target-piste ja hengittävä .target-halo,
+   *   v1439). Ne ovat kartan mittakaavassa niin kuin laattakin, eli
+   *   syvässä zoomilla nimen kokoisia. Halo saa laajimman asteensa
+   *   (FOKUS_KOHDE_HALO_LAAJIN): CSS-animaation muunnos ei näy
+   *   geometriassa, ja kehä kävisi muuten nimen päällä joka jakson
+   *   puolivälissä.
+   *
+   * NÄKYMÄTTÖMÄT OSUMA-ALUEET EIVÄT KUULU JOUKKOON (.target-hit ja
+   * laatan oma 48 px:n ympyrä): varaus on MUSTETTA. Osuma-alueina ne
+   * pudottaisivat nimiä tyhjän paperin takia.
+   *
+   * KUTSUJÄRJESTYS ON EHTO: merkkien mitat on laskettava ENNEN tätä
+   * (paivitaFokusLaatta, paivitaFokusMerkkiMitat, paivitaFokusKohdeMitat),
+   * tai laatikot olisivat edellisen zoomiportaan kokoisia. Ks.
+   * paivitaMaastonimet, jossa kutsut on juuri siksi tässä
+   * järjestyksessä.
+   *
+   * @returns {boolean} muuttuiko varausjoukko (kutsuja voi ohittaa
+   *   turhan uudelleenladonnan)
+   */
+  luovutaRuutuvaraukset() {
+    if (!this.svg) return asetaRuutuvaraukset([]);
+    const rivit = [];
+    const lisaa = (osa, kasvu = 1) => {
+      const laatikko = UI.merkinLaatikko(osa, kasvu);
+      if (laatikko) rivit.push(laatikko);
+    };
+    for (const nappula of this.pawnLayer?.querySelectorAll('.pawn') ?? []) lisaa(nappula);
+    /*
+     * LAATAN OSAT LUETAAN SIITÄ JOUKOSTA, JONKA MITOITUS JUURI KIRJOITTI
+     * (fokusLaattaOsat, paivitaFokusLaatta) — ei omalla kyselyllä.
+     * Yhdellä lähteellä ei voi käydä niin, että varaus koskee eri
+     * osajoukkoa kuin mitoitus; kahdella se on ajan kysymys.
+     */
+    for (const osa of this.fokusLaattaOsat ?? []) lisaa(osa);
+    for (const osa of this.targetLayer?.querySelectorAll('.target-piste') ?? []) lisaa(osa);
+    for (const osa of this.targetLayer?.querySelectorAll('.target-halo') ?? []) {
+      lisaa(osa, FOKUS_KOHDE_HALO_LAAJIN);
+    }
+    /*
+     * LAATTAAN POLTETUT NOSTOT SAMAAN JOUKKOON (omistaja 2.9.2026:
+     * *"Sofia menee päällekkäin jonkun noston tekstin kanssa"*).
+     * Nekään eivät ole DOMissa vaan laatan kuvassa, ja nimiladonta
+     * tarvitsee niistä täsmälleen saman tiedon kuin pelinappulasta:
+     * missä on mustetta, jota ei voi siirtää. Laatikot laskee ja
+     * ilmoittaa kohdekerros (js/fokuskohteet.js
+     * poltettujenNostojenVaraukset) — se ajetaan tämän EDELLÄ samassa
+     * asettumisketjussa (paivitaMaastonimet).
+     */
+    for (const laatikko of this.poltetutNostovaraukset ?? []) rivit.push(laatikko);
+    return asetaRuutuvaraukset(rivit);
+  }
+
+  /**
    * Yhden merkin muunnos: paikka, koko ja heilunta samassa järjestyksessä.
    *
    * Muunnos KIRJOITETAAN KOKONAAN UUDELLEEN eikä täydennetä: sen osat
@@ -8215,6 +9937,10 @@ export class UI {
    *   kaikkialta — ks. paivitaFokusPallot.
    */
   paivitaFokusPohja(bbox, rajaus = null) {
+    // Nukkuva kartta ei piirrä fokuskerroksia (ks. taydennaTaide: sama
+    // portti) — fokuskohteet, kohtaamispiste ja eläintäyt syntyisivät
+    // muuten tyhjään svg:hen pallon alle.
+    if (this.kartta.lepotila) return;
     const ennen = this.fokusPohjaBbox ?? null;
     const uusi = bbox && bbox.w > 0 && bbox.h > 0 ? bbox : null;
     const sama = (!ennen && !uusi)
@@ -8247,6 +9973,10 @@ export class UI {
     paivitaFokuskohteet(this);
     // Kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js).
     paivitaFokuspiste(this);
+    // Maa vaihtui: tummennuksesta puuttuu yhä EDELLISEN maan pala ja
+    // ääriviiva on edellisen maan muotoinen, joten polut lasketaan
+    // uudelleen — kerran, tässä (js/maatummennus.js).
+    paivitaMaatummennus(this);
     // Sama kerrosjono jatkuu maiden eläintäyillä (js/elaintaky.js).
     paivitaElaintakyt(this);
     // Maan vaihduttua selitevalikon kappalemäärät ovat vanhat: uudet
@@ -8605,6 +10335,15 @@ export class UI {
 
   drawTargets() {
     const { game } = this;
+    /*
+     * NUKKUVALLA KARTALLA EI OLE KERROSTA (karttapallo.md luku 3).
+     * Pallolaudalla kohteet piirtää pallo (js/pallolauta/merkit.js), ja
+     * tasokartan kerrokset syntyvät vasta drawBoardissa. Radion ja
+     * linssin tahdistus kutsuu tätä myös silloin, kun kartta nukkuu —
+     * pallolle käännetty linssi ei enää herätä sitä (luku 10) — joten
+     * portti on tässä eikä jokaisessa kutsujassa.
+     */
+    if (!this.targetLayer) return;
     this.targetLayer.textContent = '';
     /*
      * MITKÄ KAUPUNGIT OVAT JUURI NYT VALITTAVIA KOHTEITA?
@@ -8687,10 +10426,12 @@ export class UI {
     /*
      * LÄHTÖPISTEEN VALINTA — ETUSIVUN VALINTAKARTTA.
      *
-     * Kohdepisteitä on tasan yksi (ks. ETUSIVUN_KOHTEET): Ateena.
-     * Pisteitä lisätään sitä mukaa kun maita valmistuu
-     * fokusjärjestelmälle. Sofia on jo pelissä, mutta se EI ole
-     * aloituskohde — sinne kävellään Ateenasta.
+     * Kohdepisteitä on niin monta kuin ETUSIVUN_KOHTEET-joukossa on
+     * kaupunkeja — 7.9.2026 alkaen neljätoista (omistajan koe: kaikki
+     * entiset kohdekaupungit takaisin). Silmukka on aina ollut
+     * monikohteinen, joten tässä ei ole vaihetta yhden ja monen
+     * välillä. Sofia on jo pelissä, mutta se EI ole aloituskohde —
+     * sinne kävellään Ateenasta.
      *
      * PISTEET ILMESTYVÄT VASTA LÄHIKUVASSA (omistajan tilaus
      * 25.8.2026). Etusivulla kartan päällä on avauspalsta, ja kartta
@@ -8831,8 +10572,15 @@ export class UI {
   }
 
   /**
-   * Valittavan kohteen merkki fokusnäkymässä: pieni pyöreä laatta ja
-   * sen yläpuolella kohteen nimi.
+   * Valittavan kohteen merkki fokusnäkymässä: hengittävä kultahalo,
+   * sen päällä kultalevy + punamullan katkoviivarengas, ja ylimpänä
+   * kohteen nimi.
+   *
+   * KOLME ELEMENTTIÄ, YKSI ELE (omistaja 2.9.2026: *"nopanheitossa
+   * valittavat pisteet täytyy näkyä selvemmin"*). Halo piirretään
+   * ENSIN, jotta se jää renkaan alle; se ei ota napautuksia vastaan
+   * (pointer-events: none CSS:ssä), joten osuma-alue on yhä sitä ennen
+   * ladottu .target-hit.
    *
    * MITAT ANNETAAN LAUDAN YKSIKÖISSÄ MUTTA TARKOITETAAN RUUDULLE.
    * Tässä piirretään karkea alkuarvo, ja paivitaFokusKohdeMitat asettaa
@@ -8842,10 +10590,18 @@ export class UI {
    * merkistä voidaan laskea uudelleen joka zoomilla.
    *
    * NIMETÖN KOHDE on askelpiste reitin varrella (nopanheiton väliruutu),
-   * ei kaupunki: se saa pienemmän pisteen eikä nimeä lainkaan.
+   * ei kaupunki: se saa saman merkin pienempänä (.far, kuten laudan
+   * .target-ring.far) eikä nimeä lainkaan.
    */
   fokusKohdeMerkki(g, x, y, city = null, etuliite = '') {
     const px = city ? FOKUS_KOHDE_PX : FOKUS_KOHDE_PISTE_PX;
+    const halo = el('circle', {
+      cx: x,
+      cy: y,
+      r: px / 2,
+      class: city ? 'target-halo fokus' : 'target-halo fokus far',
+    }, g);
+    halo.dataset.px = String(px);
     const piste = el('circle', {
       cx: x,
       cy: y,
@@ -8866,17 +10622,24 @@ export class UI {
   }
 
   /**
-   * Kohdemerkkien koko RUUDULLA: pisteet, nimet ja napautusalueet.
+   * Kohdemerkkien koko RUUDULLA: halot, renkaat, nimet ja
+   * napautusalueet.
    *
    * Kutsutaan samoista kahdesta paikasta kuin nykyisen kaupungin laatan
    * mitat (paivitaFokusPallot joka piirrossa, paivitaMaastonimet kun
    * näkymä on asettunut), jotta merkki ei kasva eikä kutistu zoomin
    * mukana.
+   *
+   * HALO MITOITETAAN SAMASTA LUVUSTA KUIN RENGAS eikä omastaan: CSS
+   * laajentaa sitä muunnoksella (scale 1,14…1,42), joten sen oma säde
+   * on täsmälleen renkaan säde. Jos halo jäisi tästä silmukasta pois,
+   * se jähmettyisi piirtohetken karkeaan alkuarvoon ja karkaisi
+   * renkaastaan heti ensimmäisellä zoomilla.
    */
   paivitaFokusKohdeMitat() {
     if (!this.targetLayer || !this.fokusKohdeMerkit()) return;
     const osat = this.targetLayer.querySelectorAll(
-      '.target-piste, .target-nimi, .target-hit',
+      '.target-piste, .target-halo, .target-nimi, .target-hit',
     );
     if (!osat.length) return;
     const skaala = this.nakyvaAlue()?.skaala;
@@ -8886,15 +10649,22 @@ export class UI {
     // samalla lailla") — sama vakio kuin merkeillä ja nimilapuilla.
     const kerroin = this.fokusMerkkiSkaala();
     for (const osa of osat) {
-      if (osa.classList.contains('target-piste')) {
+      if (osa.classList.contains('target-piste')
+        || osa.classList.contains('target-halo')) {
         const px = Number(osa.dataset.px) || FOKUS_KOHDE_PX;
         osa.setAttribute('r', ((px / 2) * kerroin).toFixed(2));
       } else if (osa.classList.contains('target-nimi')) {
         osa.setAttribute('font-size', (FOKUS_KOHDE_NIMI_PX * kerroin).toFixed(2));
         const y = Number(osa.dataset.ky);
         if (Number.isFinite(y)) {
-          // Nimi merkin yläpuolelle: puolikas merkkiä ja pieni rako.
-          osa.setAttribute('y', (y - (FOKUS_KOHDE_PX / 2 + 6) * kerroin).toFixed(2));
+          /*
+           * Nimi HALON yläpuolelle, ei renkaan: hengittävän kehän
+           * laajin aste on 1,42 × säde, ja sitä pienemmällä etäisyydellä
+           * halo kävisi nimen päällä joka jakson puolivälissä.
+           */
+          const yla = (FOKUS_KOHDE_PX / 2) * FOKUS_KOHDE_HALO_LAAJIN
+            + FOKUS_KOHDE_NIMI_RAKO_PX;
+          osa.setAttribute('y', (y - yla * kerroin).toFixed(2));
         }
       } else {
         /*
@@ -9120,11 +10890,18 @@ export class UI {
     this.turnPill.textContent = '';
     // Laukun kahva pillerin edessä: pilleri on samalla matkalaukun nappi,
     // ja ilman kuvaketta mikään ei kertoisi sen aukeavan (omistajan toive).
+    //
+    // Isoisän mattolaukku (omistaja 15.9.2026, Raamattu "MATKALAUKKU ON
+    // FOGGIN MATTOLAUKKU"): pyöreähkö kangaslaukku, nahkakahva ja
+    // messinkilukko/kehys ylhäällä, kuvioitu kangas viitteellisesti
+    // siksak-rivinä. Bounding box (x4-20, y4.6-19.5) on tarkoituksella
+    // sama kuin vanhassa laukkukuvakkeessa.
     const laukku = html('span', 'laukku-ikoni');
     laukku.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">'
-      + '<rect x="4" y="8" width="16" height="11.5" rx="2"/>'
-      + '<path d="M9.3 8V6.3a1.7 1.7 0 0 1 1.7-1.7h2a1.7 1.7 0 0 1 1.7 1.7V8'
-      + 'M8.6 8v11.5M15.4 8v11.5"/></svg>';
+      + '<rect x="4" y="8" width="16" height="11.5" rx="4"/>'
+      + '<path d="M9.3 8V6.3a1.7 1.7 0 0 1 1.7-1.7h2a1.7 1.7 0 0 1 1.7 1.7V8"/>'
+      + '<path d="M6.6 9.6h10.8"/><circle cx="12" cy="9.6" r="0.85"/>'
+      + '<path d="M7 13.6 10.3 16.4 13.7 13.6 17 16.4"/></svg>';
     this.turnPill.appendChild(laukku);
     if (game.phase === 'over') {
       this.turnPill.appendChild(html('span', '', `${game.winner.name} voitti`));
@@ -9162,6 +10939,7 @@ export class UI {
     const { game } = this;
     const p = game.player;
     this.passportProgress.textContent = '';
+    if (this.passportTilastot) this.passportTilastot.textContent = '';
 
     /*
      * Rivi palauttaa itsensä, jotta kutsuja voi ripustaa siihen omansa
@@ -9174,6 +10952,21 @@ export class UI {
       row.appendChild(html('span', 'find-text', label));
       row.appendChild(html('span', 'find-value', value));
       this.passportProgress.appendChild(row);
+      return row;
+    };
+
+    /*
+     * Sama rivi, mutta väkäsen alle (omistaja 6.9.2026: "Piilota nuo
+     * tiedot väkäsen alle"). Laskurit ovat matkan kirjanpitoa; laukun
+     * kärki on Sijainti, Kukkaro ja tietäjätaso. Ilman lohkoa (vanha
+     * merkkaus, testiympäristö) rivit palaavat matkalohkoon, jotta
+     * mikään tieto ei katoa.
+     */
+    const tilastoRivi = (label, value) => {
+      const row = html('div', 'find');
+      row.appendChild(html('span', 'find-text', label));
+      row.appendChild(html('span', 'find-value', value));
+      (this.passportTilastot ?? this.passportProgress).appendChild(row);
       return row;
     };
 
@@ -9247,7 +11040,7 @@ export class UI {
     // Aarteet: sama laskenta kuin Aarnin luettelossa, jotta laukun kaksi
     // aarrelukua eivät voi mennä eri tahtiin.
     const { kaikki, loydetyt } = this.aarreLuettelo();
-    rivi('Avatut aarteet', `${loydetyt.length} / ${kaikki.length}`);
+    tilastoRivi('Avatut aarteet', `${loydetyt.length} / ${kaikki.length}`);
 
     /*
      * Kaupungit ja maat TÄLTÄ LAUDALTA. Lauta on maailmankartta, jolla
@@ -9262,7 +11055,7 @@ export class UI {
      */
     const kaydyt = game.worldOf?.(p)?.visited ?? new Set();
     const kaupunkeja = game.pack?.cities?.length ?? 0;
-    if (kaupunkeja) rivi('Käydyt kaupungit', `${kaydyt.size} / ${kaupunkeja}`);
+    if (kaupunkeja) tilastoRivi('Käydyt kaupungit', `${kaydyt.size} / ${kaupunkeja}`);
 
     const maaTaulu = game.pack?.map?.cityCountry ?? null;
     if (maaTaulu) {
@@ -9273,16 +11066,73 @@ export class UI {
           const iso = maaTaulu[cityId];
           if (iso) kaydytMaat.add(iso);
         }
-        rivi('Käydyt maat', `${kaydytMaat.size} / ${kaikkiMaat.size}`);
+        tilastoRivi('Käydyt maat', `${kaydytMaat.size} / ${kaikkiMaat.size}`);
       }
     }
 
     const tieto = game.knowledgePercent(p);
-    if (tieto !== null) rivi('Tieto tästä laudasta', `${tieto} %`);
+    if (tieto !== null) tilastoRivi('Tieto tästä laudasta', `${tieto} %`);
+  }
+
+  /**
+   * MATKAN TILASTOT -LOHKON VÄKÄNEN (omistaja 6.9.2026: "Piilota nuo
+   * tiedot väkäsen alle").
+   *
+   * Otsikkorivin napautus avaa ja sulkee lohkon, ja asento muistetaan
+   * laitteeseen (tallennaLaukunTilastot) kuten muutkin laukun
+   * katseluasetukset. Oletus on KIINNI.
+   */
+  vaihdaTilastolohko() {
+    const auki = this.tilastoNappi?.getAttribute('aria-expanded') !== 'true';
+    this.paivitaTilastolohko(auki);
+    tallennaLaukunTilastot(auki);
+  }
+
+  /**
+   * Lohkon asento ruudulle. Liike animoidaan pehmeästi (omistajan
+   * pysyvä linjaus), ja siihen tarvitaan mitattu korkeus: `max-height`
+   * ei osaa siirtyä `auto`-arvoon, joten avattaessa mitataan sisällön
+   * scrollHeight ja siirtymän päätyttyä katto vapautetaan (`none`).
+   * Ilman vapautusta myöhemmin latautuva julistevedos jäisi katkolle.
+   *
+   * @param {boolean} auki haluttu asento
+   * @param {{heti?: boolean}} [asetukset] heti = ilman animaatiota
+   */
+  paivitaTilastolohko(auki, { heti = false } = {}) {
+    const nappi = this.tilastoNappi;
+    const lohko = this.tilastoLohko;
+    if (!nappi || !lohko) return;
+    nappi.setAttribute('aria-expanded', String(auki));
+    nappi.title = auki ? 'Piilota matkan tilastot' : 'Näytä matkan tilastot';
+    lohko.classList.toggle('auki', auki);
+    if (this.tilastoSiirtyma) {
+      lohko.removeEventListener('transitionend', this.tilastoSiirtyma);
+      this.tilastoSiirtyma = null;
+    }
+    if (heti || this.reducedMotion) {
+      lohko.style.maxHeight = auki ? 'none' : '0px';
+      return;
+    }
+    // Lähtökorkeus on aina luku: suljettaessa `none` pitäisi ensin
+    // mitata, tai siirtymällä ei olisi mistä lähteä.
+    lohko.style.maxHeight = auki ? '0px' : `${lohko.scrollHeight}px`;
+    // Asettelun luku pakottaa selaimen huomaamaan lähtöarvon (sama
+    // temppu kuin havaitseLinssiTietojenVaihdossa).
+    void lohko.offsetHeight;
+    lohko.style.maxHeight = auki ? `${lohko.scrollHeight}px` : '0px';
+    this.tilastoSiirtyma = (e) => {
+      if (e.propertyName !== 'max-height' || e.target !== lohko) return;
+      lohko.removeEventListener('transitionend', this.tilastoSiirtyma);
+      this.tilastoSiirtyma = null;
+      if (lohko.classList.contains('auki')) lohko.style.maxHeight = 'none';
+    };
+    lohko.addEventListener('transitionend', this.tilastoSiirtyma);
   }
 
   renderActions() {
     const { game } = this;
+    // Nopan oma liuku merkitään uudestaan vain roll-haarassa (ks. alla).
+    this.liukuNopalle = false;
     this.actionsEl.textContent = '';
     // Matkustustavan ensimmäinen vaihe latoo nappinsa aina yhteen riviin;
     // muut näkymät (vaihe B, kysymykset) käyttävät tavallista ruudukkoa.
@@ -9360,13 +11210,60 @@ export class UI {
        * Paluunappi vain kun on mihin palata. Esivalitulla tavalla
        * game.actionCancelTravel torjuu paluun ("Muita matkustustapoja ei
        * ole"), joten nappi näyttäisi vain virheilmoituksen.
+       *
+       * BUSSI EI ESTÄ AUTOMAATTISTA HEITTOA mutta on yhä valittavissa
+       * ennen sitä (Raamattu KARTTAUUDISTUKSEN PAATOKSET 5): kun
+       * noppatapa on esivalittu ja bussikohteita on, paluunappi vie
+       * takaisin Liiku-napin valintaan.
        */
-      if (!game.autoTravel) {
+      if (!game.autoTravel || game.muitaTapojaTarjolla()) {
         const backBtn = this.iconButton('nuoli', 'Vaihda matkustustapa');
         backBtn.addEventListener('click', () => this.doAction(() => game.actionCancelTravel()));
         napit.push(backBtn);
       }
 
+      /*
+       * NOPPA ON LIU'USSA, JOTEN LIUKU ON AUKI (mitattu 19.9.2026,
+       * Tangerin laivamatka-jumi — Sonnetin pelitesti v1949, löydös 2:
+       * *"ilmestyi noppakuvake, joka ei reagoinut yhteenkään
+       * kosketukseen"*, ja ulospääsy oli vain "Uusi peli").
+       *
+       * piirraToimintorivi latoo matkanapit `.toimintorivi-liuku`-
+       * laatikkoon, joka on SULJETTUNA `opacity: 0; pointer-events:
+       * none` (css/styles.css .toimintorivi-liuku) ja avautuu vain
+       * `liuku-auki`-luokalla. Vaiheessa 'roll' juuri noppa JA
+       * matkustustavan vaihto ovat ne napit — mutta `liukuAuki` on
+       * silloin epätosi, koska liu'un oma napautuskuuntelija nollaa
+       * sen heti kun matkustustapa valitaan (ja laivalippu valitaan
+       * kokonaan liu'un ulkopuolelta, vaiheen B listasta). Noppa siis
+       * PIIRTYI ruudulle mutta jäi läpinäkyvän, napautusta
+       * läpäisemättömän liu'un sisään.
+       *
+       * MIKSI VIKA NÄKYI VAIN LAIVALLA. Liftaus (doWalk), bussi
+       * (doBus) ja lento (doFly) tekevät heiton tai siirron samassa
+       * eleessä, eikä peli jää vaiheeseen 'roll' lainkaan. Laiva on
+       * ainoa tapa, joka VALITSEE tavan ja jättää heiton pelaajalle —
+       * ja sama umpikuja odotti myös vuoron alussa esivalittua tapaa
+       * (game.beginTurn autoTravel) sekä kesken reittiä pysähtynyttä
+       * matkaa, jos automaattiheitto ei lähtenyt.
+       *
+       * KORJAUS ON TILAN TOTEAMINEN, EI UUSI SÄÄNTÖ: vaiheessa 'roll'
+       * rivin sisältö ON liuku, joten liuku on auki. Muut vaiheet
+       * eivät tätä haaraa näe, joten liftaus, bussi, kyyhky ja lento
+       * käyttäytyvät täsmälleen kuten ennen.
+       */
+      this.liukuAuki = true;
+      /*
+       * LIUKU ON AUKI NOPPAA VARTEN, EI PELAAJAN AVAAMANA. Ero on
+       * automaattiheitolle ratkaiseva: `automaattiheittoSallittu` pitää
+       * auki olevaa liukua merkkinä siitä, että pelaaja avasi jotain ja
+       * matka odottaa. Tämä rivi (v1950, laivamatka-jumin korjaus) nosti
+       * lipun JOKA roll-vaiheessa, jolloin kesken reittiä pysähtynyt
+       * matka ei enää jatkunut itsestään (omistaja 19.9.2026 klo 23.47:
+       * *"automaattinen nopanheitto on poistunut vaikka pitäisi olla
+       * päällä"*). Merkki erottaa nämä kaksi tilaa toisistaan.
+       */
+      this.liukuNopalle = true;
       this.piirraToimintorivi(napit, this.tutkiNappi());
       return;
     }
@@ -9397,15 +11294,18 @@ export class UI {
     // Mannerlento aukeaa, kun tämän mantereen unohdettu aarre on
     // löytynyt — se ei vaadi lentokenttää, joten se on oma listansa.
     const mannerLennot = game.mannerLennot();
+    const bussikohteet = game.busDestinations();
+    const bussia = modes.includes('bus');
     const laivaa = modes.includes('sea');
     const lentoa = flights.length > 0 || mannerLennot.length > 0;
-    const hasSlow = laivaa || lentoa;
+    const hasSlow = bussia || laivaa || lentoa;
 
     // Jos välivaiheeseen ei jää yhtään valintaa (esim. rahat eivät riitä
     // lentoon eikä satamaa ole), palataan suoraan perusvalintoihin —
     // pelkkä Takaisin-nappi ei ole näkymä. Sama koskee tyhjäksi jäävää
     // suodatinta: laivalistaa ei avata, jos laivoja ei ole.
     const suodatinTyhja = (this.travelSuodatin === 'sea' && !laivaa)
+      || (this.travelSuodatin === 'bus' && !bussia)
       || (this.travelSuodatin === 'air' && !lentoa);
     if (this.travelExpanded && (!hasSlow || suodatinTyhja)) this.suljeMatkavalikko();
 
@@ -9416,12 +11316,29 @@ export class UI {
        * matkustustapa." lisää siihen mitään. Koko tilarivi poistui
        * 13.8.2026 — kartan päälle ei kirjoiteta mitään.
        */
-      // Jalan. Estettynä kerrotaan syy napin vihjetekstissä, kuten muissakin
-      // pelin estetyissä napeissa (vrt. vertailunappi).
-      const landBtn = this.iconButton('saapas', 'Jalan',
+      /*
+       * NELJÄ KULKUTAPAA (omistaja 13.9.2026, Raamattu KARTTAUUDISTUS:
+       * *"Liikkumiseen tulee nelja vaihtoehtoa: liftaus (ilmainen),
+       * bussi kahden vierekkaisen kaupungin valilla (50p), laiva ja
+       * lento entisellaan."*).
+       *
+       * LIFTAUS ON ENTINEN "JALAN": sama `land`-tunnus, sama noppa,
+       * sama aikakulu — vain nimi, kuvake ja animaatio vaihtuivat
+       * (PAATOKSET 1 kohta 4; js/pallolauta/siirto.js autokyyti).
+       * Estettynä kerrotaan syy napin vihjetekstissä, kuten muissakin
+       * pelin estetyissä napeissa (vrt. vertailunappi).
+       */
+      const landBtn = this.iconButton('peukalo', 'Liftaus',
         modes.includes('land') && !modes.includes('stay') ? 'primary' : '');
       if (modes.includes('land')) landBtn.addEventListener('click', () => this.doWalk());
       else this.estaNappi(landBtn, this.maaEste());
+
+      const bussiBtn = this.iconButton('bussi', 'Bussilla');
+      if (bussia) {
+        bussiBtn.addEventListener('click', () => this.avaaMatkavalikko('bus'));
+      } else {
+        this.estaNappi(bussiBtn, this.bussiEste());
+      }
 
       const laivaBtn = this.iconButton('purje', 'Laivalla');
       if (laivaa) {
@@ -9437,18 +11354,31 @@ export class UI {
         this.estaNappi(lentoBtn, this.lentoEste());
       }
 
-      this.piirraToimintorivi([landBtn, laivaBtn, lentoBtn], this.tutkiNappi());
+      this.piirraToimintorivi([landBtn, bussiBtn, laivaBtn, lentoBtn], this.tutkiNappi());
       return;
     }
 
     // Vaihe B.
-    const meri = this.travelSuodatin !== 'air';
-    const ilma = this.travelSuodatin !== 'sea';
+    const meri = this.travelSuodatin !== 'air' && this.travelSuodatin !== 'bus';
+    const ilma = this.travelSuodatin !== 'sea' && this.travelSuodatin !== 'bus';
+    const maitse = this.travelSuodatin === 'bus';
     /*
      * Listan yläpuolella oli ennen kysymysrivi ("Minne lennetään?").
      * Se on poistettu muun kartanpäällisen tekstin mukana: napit
      * kertovat itse, mihin ne vievät.
      */
+
+    /*
+     * BUSSIN KOHTEET OVAT NAAPURIKAUPUNKEJA, EIVÄT NOPAN TULOKSIA:
+     * lista on siksi sama kuin lennoilla — kaupungin nimi ja hinta.
+     * Bussi ei heitä noppaa eikä kuluta päivää (game.actionBus).
+     */
+    for (const dest of maitse ? bussikohteet : []) {
+      const city = game.board.cityById.get(dest);
+      const busBtn = this.ikoniTekstiNappi('bussi', `${city.name} (${BUS_FARE} p)`, 'wide');
+      busBtn.addEventListener('click', () => this.doBus(dest));
+      this.actionsEl.appendChild(busBtn);
+    }
 
     if (meri && modes.includes('sea')) {
       const seaBtn = this.ikoniTekstiNappi('purje', `Laivalla (${SEA_FARE} p)`, 'wide');
@@ -9480,6 +11410,33 @@ export class UI {
       btn.addEventListener('click', () => {
         this.suljeMatkavalikko();
         sfx.play('flight');
+        /*
+         * PALLOLLA MANNERLENTO LENTÄÄ (pallolauta vaihe 2, karttapallo.md:
+         * "mannerlento samoin"): kaari ja kone mantereelta toiselle, sama
+         * kuljettaja kuin doFlyn lennolla. Tasokartalla mannerlento on
+         * ennallaan pelkkä siirto ilman animaatiota — `?lauta=kartta`
+         * antaa täsmälleen entisen pelin.
+         */
+        if (this.pallolautaPaalla()) {
+          const player = game.player;
+          const from = player.pos;
+          const lahto = game.cityOf();
+          if (lahto) this.lentoKaari = { a: lahto.id, b: kohde.city };
+          this.paivitaMatkareitit();
+          this.run(() => game.actionMannerLento(kohde.city), {
+            after: async () => {
+              try {
+                sfx.startFlight(MANNER_LENTO_MS);
+                await this.animatePawn(player, from, [player.pos], MANNER_LENTO_MS, { lento: true });
+                sfx.stopFlight();
+              } finally {
+                this.lentoKaari = null;
+                this.paivitaMatkareitit();
+              }
+            },
+          });
+          return;
+        }
         this.doAction(() => game.actionMannerLento(kohde.city));
       });
       this.actionsEl.appendChild(btn);
@@ -9493,17 +11450,47 @@ export class UI {
     this.actionsEl.appendChild(backBtn);
   }
 
-  /** Avaa vaiheen B yhdellä listalla: 'sea' laivat, 'air' lennot. */
+  /**
+   * Avaa vaiheen B yhdellä listalla: 'sea' laivat, 'air' lennot.
+   *
+   * LENTOLISTA SOVITTAA KAMERAN HETI (omistaja 2.9.2026: *"lennossa
+   * taas kartta zoomautuisi jo heti kun lentomuoto on valittu, niin
+   * paljon, että jokainen kohdekaupunki, mihin lento olisi
+   * mahdollinen, tulee näkyviin"*). Lennossa ei ole nopanheittoa, joten
+   * tämä on se hetki, jolla vaihtoehdot ovat tiedossa — sama hetki,
+   * jolla drawTargets piirtää ne kartalle napautettaviksi.
+   *
+   * SOVITUS RENDERIN JÄLKEEN, koska sen ehdot luetaan ruudulta
+   * (nakyvaAlue) ja lista voi vielä sulkeutua itsestään tyhjänä
+   * (renderTravelChoice suodatinTyhja).
+   */
   avaaMatkavalikko(suodatin = null) {
     this.travelExpanded = true;
     this.travelSuodatin = suodatin;
+    /*
+     * MATKAVALINTA ON SE HETKI, JOLLOIN KAMERAN ON PÄÄSTÄVÄ MAAN
+     * IKKUNAN ULKOPUOLELLE (karttauudistus erä 8, suunnitelman 3.7):
+     * lentolista sovittaa kaikki kohteet ruutuun heti valinnasta, ja
+     * sekin on uloszoomausta. Esto palaa, kun valikko suljetaan tai
+     * matka päättyy (palaaMaanRajaukseen).
+     */
+    this.matkaZoomivapaus(true);
     this.render();
+    // Bussi ja laiva eivät sovita lentokohteita: sovitus on lentolistan
+    // oma ele (ks. yllä), ja bussin kohteet ovat naapurikaupunkeja.
+    if (this.travelExpanded && suodatin !== 'sea' && suodatin !== 'bus') this.sovitaLentokohteet();
   }
 
   /** Sulkee vaiheen B ja unohtaa suodattimen. */
   suljeMatkavalikko() {
     this.travelExpanded = false;
     this.travelSuodatin = null;
+    /*
+     * Esto takaisin heti: jos valikosta valittiin matka, siirto
+     * kumoaa sen uudelleen omalla rajauksellaan (ennakoiSiirtoZoomi),
+     * ja jos pelaaja perui, kartta on taas maan ikkunassa.
+     */
+    this.matkaZoomivapaus(false);
   }
 
   /**
@@ -9539,6 +11526,25 @@ export class UI {
   maaEste() {
     if (this.keskenReittia()) return 'matka jatkuu samaa reittiä';
     return 'täältä ei lähde maareittiä';
+  }
+
+  /**
+   * Miksi bussi ei nyt kulje? Sama ehtojärjestys kuin laivalla, ja
+   * viimeisenä RAHA — juuri se on omistajan tarkoittama valinta
+   * (Raamattu, PAATOKSET 1 kohta 4: *"pelaaja voi valita rahan
+   * puutteessa hitaamman tavan edeta"*). Ilman 50 puntaa nappi on
+   * harmaa ja kertoo hinnan, ei katoa.
+   */
+  bussiEste() {
+    const { game } = this;
+    if (this.keskenReittia()) return 'matka jatkuu samaa reittiä';
+    const city = game.cityOf();
+    if (!city) return 'bussi lähtee vain kaupungista';
+    const maata = game.board.adj.get(city.id)
+      ?.some((id) => game.board.edgeById.get(id)?.type === 'land');
+    if (!maata) return 'täältä ei lähde maareittiä';
+    if (game.player.money < BUS_FARE) return `bussilippu maksaa ${BUS_FARE} puntaa`;
+    return 'täältä ei lähde bussia';
   }
 
   laivaEste() {
@@ -9595,6 +11601,8 @@ export class UI {
       stayBtn.classList.remove('tutki-syke');
       this.avaaTutkinta(city);
     });
+    // Linssikartan kuoressa lehdet ovat kiinni (linssikarttaEstaa).
+    if (this.linssikarttaEstaa()) stayBtn.disabled = true;
     return stayBtn;
   }
 
@@ -9606,65 +11614,273 @@ export class UI {
    * ratkaisee lopun — fokusvirran avaus tai paluu nykyvaiheeseen, ja
    * virran ohitettua saapumiskortti, josta laatan kääntö alkaa
    * (fokusvirtaOhittaaLehden).
+   *
+   * `ohitaLehtilukko` JÄÄ KYTKENTÄKOHDAKSI, vaikka sen ainoa käyttäjä
+   * — kartan "Etsi aarre" -nappi — poistettiin karttauudistuksen
+   * erässä 9 (omistaja 13.9.2026: *"Ota Etsi aarre nappi pois."*).
+   * Lukko itse on purettu (fokusvirtaOhittaaLehden palauttaa aina
+   * false), joten lippu on varalla siltä varalta, että lukko kytketään
+   * takaisin päälle — ei kuollutta polkua vaan sama kytkin kuin
+   * openArrivalissa.
    */
-  avaaTutkinta(city = this.game.cityOf()) {
+  avaaTutkinta(city = this.game.cityOf(), { ohitaLehtilukko = false } = {}) {
     if (!city) return;
+    // Linssikartan kuoressa lehdet eivät aukea (linssikarttaEstaa).
+    if (this.linssikarttaEstaa()) return;
     sfx.play('paper');
     this.lehtitila.tutkiSyke = null;
     // Tutki avaa ensin saapumiskortin (esittely, kuva ja Lue lisää) —
     // peliin siirrytään vasta kortin omasta Tutki paikka -napista.
-    this.openArrival(city);
+    this.openArrival(city, { ohitaLehtilukko });
   }
 
   /**
-   * SAAKO LIIKU-NAPPI NÄKYÄ JUURI NYT?
+   * SAAKO LIIKU-NAPPI NÄKYÄ JUURI NYT? — KYLLÄ, AINA.
    *
-   * Omistajan tarkennus 25.8.2026: *"Liiku-nappi EI näy pelin alussa
-   * lainkaan. Se ilmestyy vasta kun maan aarre on löydetty."*
+   * Sääntö itse on js/fokusvirta.js:n `liikuNappiNakyvissa`, jossa myös
+   * sen perustelu ja historia (omistajan linjaus 13.9.2026 kumosi
+   * 25.8.2026 laattaportin: nappi on pysyvä, ei aarteen palkinto).
+   * Tämä metodi jää kytkentäkohdaksi, koska piirraToimintorivi kysyy
+   * sitä nimellä — ja jos linjaus joskus saa ehtoja takaisin, ne
+   * kirjoitetaan yhteen paikkaan eikä kahteen.
    *
-   * MIKSI. Fokusmoodissa kaupunki on tehtävä eikä pysäkki: matkakirja,
-   * pöllön huomio, täky, tietovisa ja lopulta paikallisen esittämä
-   * aarrekysymys (Raamattu, ANNOSTELU ja ETENEMINEN). Liiku-nappi
-   * alarivissä on koko sen ajan ovi ulos, ja aloittava pelaaja lukee
-   * ainoan näkyvän napin ohjeeksi. Kun nappi ilmestyy vasta aarteen
-   * ratkettua, se on palkinto ja lupa jatkaa — juuri se, mitä
-   * ETENEMINEN kuvaa: *"Aarteen jälkeen vapaa tutkinta … tai pelaaja
-   * jatkaa matkaa."*
-   *
-   * MITTA ON LAATTA, SAMA KUIN LEHTILUKOLLA (js/fokusvirta.js
-   * fokusvirtaLukitseeLehden): niin kauan kuin kaupungin laatta on
-   * kääntämättä (game.tokens sisältää sen), aarretta ei ole löydetty.
-   * Kääntyneen laatan alta löytyi mitä tahansa — myös väärä vastaus
-   * päättää vaiheen aikanaan — ja lukko aukeaa lopullisesti.
-   *
-   * UMPIKUJAA EI SYNNY. Nappi on aina näkyvissä silloin kun laattaa ei
-   * ole (kaupunki ilman laattaa, reitin varsi ilman kaupunkia,
-   * fokusmoodi pois, katselutila).
-   *
-   * KEHITTÄJÄTILA EI OLE ENÄÄ POIKKEUS (omistajan pelitesti 25.8.2026:
-   * *"Liiku teksti ei pitäisi vielä näkyä"*). Poikkeus oli tarkoitettu
-   * kaupungista toiseen hyppimiseen, mutta omistaja pelaa
-   * kehittäjätilassa päällä — fokus- ja sumennuskytkimet ovat siinä —
-   * ja poikkeus näytti napin heti pelin alusta juuri sille, jonka
-   * pelikokemusta sääntö suojelee. Sääntö on nyt sama kaikissa
-   * tiloissa: nappi ilmestyy, kun laatta on käännetty. Katselutila
-   * (yllä) riittää yhä kartan vapaaseen tarkasteluun.
-   *
-   * VÄÄRÄ VASTAUS EI LUKITSE KAUPUNKIIN. Laatta jää silloin paikalleen
-   * ja kysymyksen voi yrittää uudelleen (sama sääntö kuin lehtilukolla,
-   * js/fokusvirta.js): laatan napautus avaa tehtävän niin monta kertaa
-   * kuin tarvitaan. Nappi palaa heti kun laatta kääntyy — löytyi sen
-   * alta mitä tahansa.
-   *
-   * ILMESTYMINEN ILMAN SIVUN PÄIVITYSTÄ hoituu itsestään: laatan
-   * kääntävä vastaus kulkee doActionin kautta, ja se piirtää rivin
-   * uudelleen (renderActions) samassa kehyksessä.
+   * TURVARAJAT OVAT MUUALLA EIVÄTKÄ MUUTU: renderActions ei piirrä
+   * riviä lainkaan botin vuorolla eikä vaiheissa 'pickstart', 'move',
+   * 'event', 'quiz' ja 'offer' (saapumiskortti), ja piirraToimintorivi
+   * harmaannuttaa napin, kun matkustustapoja ei ole tai linssikartan
+   * kuori estää (linssikarttaEstaa).
    */
   liikuNappiNakyy() {
-    if (!this.fokusmoodi || this.katselu) return true;
-    const city = this.game.cityOf?.();
-    if (!city) return true;
-    return !this.game.tokens?.has(city.id);
+    return liikuNappiNakyvissa(this);
+  }
+
+  /**
+   * LUENNAN VAHTI: piilottaa Liiku-napin niin kauaksi kuin joku puhuu.
+   *
+   * Vahti vain LUKEE luennan tilan (soivaPuhuja) — se ei käynnistä,
+   * pysäytä eikä muuta yhtäkään ääntä.
+   *
+   * KUULUVA ÄÄNI, EI VARATTU VUORO (korjaus 15.9.2026). Vahti kysyi
+   * ennen `puhujaAanessa`, joka on TOSI jo ennen kuin ääni alkaa: vuoro
+   * varataan merkitsePuhujassa ja play() ratkeaa vasta myöhemmin. Jos
+   * play() hylkääntyy (headless-selain, offline, rikkinäinen tiedosto),
+   * ruudulla ehti silti välähtää koko luennan asu — tekstit piiloon,
+   * kartalle huntu, Liiku pois — vaikka mitään ei kuulu. Mitattu
+   * julkaisuhaarassa 15.9.2026: Ateenan ääniraita kaatui headlessissä
+   * NotSupportedErroriin ja kutisti matkakirjakortin juuri
+   * mittaushetkellä. `soivaPuhuja` lukee kuuluvaa ääntä
+   * (js/luenta.js aaniKuuluu), joten epäonnistunut käynnistys ei näy
+   * ruudulla lainkaan. Tila kirjoitetaan bodyn
+   * luokkaan `luenta-aanessa`, josta css piilottaa napin kokonaan
+   * (display: none, ei pelkkä opacity — piiloon jäänyttä nappia ei saa
+   * voida napauttaa).
+   *
+   * Kysely eikä tapahtuma: luentoja syntyy monella reitillä
+   * (playDiaryVoice, lueKertojana, Livian repliikit), eikä niillä ole
+   * yhteistä tapahtumaa, jota voisi kuunnella muuttamatta luentaa.
+   * 200 ms:n kysely on halpa ja koskematon.
+   *
+   * Ks. LUENTAVAHDIN_VALI_MS, LUENNAN_VALIRAUHA_MS ja
+   * LUENNAN_VARAVENTTIILI_MS.
+   */
+  kaynnistaLuentavahti() {
+    /*
+     * VAHTI KÄYNNISTETÄÄN KERRAN. Kahvaa EI nollata konstruktorissa
+     * erikseen: kytkennät tehdään konstruktorissa ennen kenttien
+     * alustusrivejä, ja nollaus söisi juuri asetetun ajastinkahvan —
+     * silloin destroy ei saisi vahtia enää kiinni ja kaksi vahtia
+     * kilpailisi samasta bodyn luokasta (mitattu 14.9.2026: luokka
+     * välkkyi päälle ja pois 400 ms:n välein).
+     */
+    if (this.luentavahti || typeof document === 'undefined') return;
+    /*
+     * VARAVENTTIILI MITTAA PUHEEN EDISTYMISTÄ, EI KESTOA (löydös 45,
+     * 24.9.2026). Ennen kello lähti puheenvuoron alusta, joten jokainen yli
+     * 30 sekunnin luenta välähdytti Liikun (ja palautti hetkeksi tekstit
+     * ja hunnun) kesken puheen ja nollasi kellon (mitattu Ateena
+     * 393 × 852: Liiku näkyvissä t 33,4–33,6 s). Nyt venttiili aukeaa vasta,
+     * kun joku on "äänessä" mutta mikään soitin ei ole edennyt 30 sekuntiin
+     * (pysähtynyt virta) — ehjä pitkä luento ei koskaan laukaise sitä.
+     */
+    let kello = -1;
+    let viimeEdistys = 0;
+    // Viimeisin hetki, jolloin joku oli äänessä: välirauhan kello.
+    let puheLoppui = 0;
+    // Sama kello erikseen kertojalle (tekstipiilo, ks. alempana).
+    let kertojaLoppui = 0;
+    const askel = () => {
+      if (this.dead) return;
+      const nyt = Date.now();
+      const aanessa = Boolean(soivaPuhuja());
+      const nytKello = puheenKello();
+      if (!aanessa || nytKello !== kello) { kello = nytKello; viimeEdistys = nyt; }
+      if (aanessa) puheLoppui = nyt;
+      const varaventtiili = aanessa && nyt - viimeEdistys > LUENNAN_VARAVENTTIILI_MS;
+      // Välirauha: kahden puheenvuoron väliin jäävä hengähdys ei
+      // paljasta nappia välähdykseksi.
+      const valirauhassa = Boolean(puheLoppui) && nyt - puheLoppui < LUENNAN_VALIRAUHA_MS;
+      const piiloon = !varaventtiili && (aanessa || valirauhassa);
+      if (!piiloon) puheLoppui = 0;
+      document.body.classList.toggle('luenta-aanessa', piiloon);
+      /*
+       * KERTOJA ERIKSEEN PULUSTA (omistaja 14.9.2026): *"Luennan aikana
+       * matkakirjan ylarivin reunassa voisi sykkia kevyesti kaiuttimen
+       * kuva merkiksi etta luenta on kaynnissa. Pulun luennassa riittaa
+       * pulun elehtiminen ajamaan saman asian."* `soivaPuhuja` osaa
+       * jättää pulun laskuista, joten merkki kytkeytyy vain isoisän
+       * luentaan — ja mykistettynä ääntä ei synny lainkaan, joten
+       * merkkikään ei syki.
+       */
+      const kertoja = !varaventtiili && soivaPuhuja(PUHUJA_PULU) !== null;
+      document.body.classList.toggle('kertoja-aanessa', kertoja);
+      /*
+       * TEKSTIT PIILOON KAIKILLA LAITTEILLA LUENNAN AJAKSI (omistaja
+       * 15.9.2026, Raamattu "TEKSTIT PIILOON KAIKILLA LAITTEILLA"):
+       * *"luennan aikana isoisän matkakirjamerkinnän teksti ja pulun
+       * puhekupla piilotetaan KAIKILLA laitteilla, ei vain
+       * puhelimella. Näkyviin jää kuva ja kuvateksti."*
+       *
+       * OMA VÄLIRAUHANSA. `kertoja` sammuu jokaisen äänitteen väliin,
+       * ja jos lappu palautuisi siitä, kortti välähtäisi auki ja kiinni
+       * kesken merkinnän. Sama hengähdysaika kuin Liiku-napilla
+       * (LUENNAN_VALIRAUHA_MS) pitää piilon päällä puheenvuorojen yli.
+       */
+      if (kertoja) kertojaLoppui = nyt;
+      const kertojaRauhassa = Boolean(kertojaLoppui)
+        && nyt - kertojaLoppui < LUENNAN_VALIRAUHA_MS;
+      const tekstitPiiloon = !varaventtiili && (kertoja || kertojaRauhassa);
+      if (!tekstitPiiloon) kertojaLoppui = 0;
+      document.body.classList.toggle(LUENNAN_TEKSTIPIILO, tekstitPiiloon);
+      /*
+       * Kortti kutistuu lapuksi VAIN reunalla, ei joka kyselyssä: jos
+       * pelaaja avaa lapun napauttamalla kesken luennan, 200 ms:n
+       * kysely kutistaisi sen muuten heti takaisin eikä napautuksesta
+       * seuraisi mitään. Sama reuna palauttaa kortin luennan jälkeen —
+       * mutta vain jos kutistus oli tämän vahdin tekemä (lippu), jotta
+       * kartan liikkeestä kutistunut lappu ei aukea luennan lopusta.
+       */
+      if (tekstitPiiloon !== this.luennanTekstipiiloPaalla) {
+        this.luennanTekstipiiloPaalla = tekstitPiiloon;
+        if (tekstitPiiloon) {
+          this.luennanKortinKutistus = this.factCard?.classList?.contains('pieni') === false;
+          this.asetaPaivakirjanKoko(true);
+          // Jo ruudulla oleva repliikki pluskuplaan: uudet imeytyvät
+          // sinne itsestään (js/pollo.js lisaaPinoon).
+          polloLuennanKuplatPiiloon();
+        } else if (this.luennanKortinKutistus) {
+          /*
+           * LUENNAN LOPPU EI AVAA KORTTIA MILLÄÄN LAITTEELLA (omistaja
+           * 18.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 38 kohta 1,
+           * sanatarkasti: *"onhan isoisan ja pulun tekstit piilossa? ne
+           * pitavat tulla nakyviin vain klikattaessa."*).
+           *
+           * Ennen tämä palautti kortin auki työpöydällä
+           * (asetaPaivakirjanKoko(puhelinTila())) ja jätti lapun lapuksi
+           * vain puhelimella (v1891). Nyt sääntö on yksi kaikille
+           * ruuduille: lappu jää lapuksi, ja kortin avaa VAIN pelaajan
+           * oma napautus (factCardin click- ja keydown-kuuntelija).
+           * Lippu nollataan silti, jottei myöhempi polku luulisi
+           * kutistusta tämän vahdin velaksi.
+           */
+          this.luennanKortinKutistus = false;
+        }
+      }
+      /*
+       * KAIUTTIMEN KOLME KAARTA VU-MITTARINA (omistaja 15.9.2026, ks.
+       * js/kaiutinmittari.js). Merkki ei ole enää koko kuvakkeen syke
+       * vaan kaarien vuorottelu: mittari käy täsmälleen niin kauan kuin
+       * kertoja on äänessä, ja sammuttaa kaaret pysähtyessään.
+       *
+       * ANALYSAATTORI ON JO KETJUSSA: luenta reititetään Web Audion
+       * läpi KAIKILLA laitteilla (js/luenta.js liitaLuennanVahvistin,
+       * korjaus 15.9.2026 — aiemmin vain iOS:llä ja vain jos
+       * äänikonteksti sattui olemaan hereillä, jolloin mittari joutui
+       * ajastettuun kuvioon ja kaaret elivät omaa tahtiaan). Mittari
+       * lukee `audio.aaniMittari`-analysaattorin RMS:n ja normalisoi
+       * sen luennan gainilla, jotta Lukija-liuku ei himmennä kaaria.
+       */
+      const mykka = this.factKuuntele?.classList?.contains('mykistetty') === true;
+      /*
+       * SAAPUMISPUHE ON SAMA KERTOJA (16.9.2026). Kaupungin nimen ja
+       * iskulauseen otto ei ole `diaryVoice` vaan trailerin oma soitin
+       * (js/luenta.js saapumispuheenSoitin) — ilman tätä hakua mittari
+       * jäisi ilman analysaattoria juuri isoisän ensimmäisen lauseen
+       * ajaksi ja piirtäisi ajastettua kuviota (ks. js/kaiutinmittari.js).
+       */
+      const puhuva = () => this.diaryVoice ?? saapumispuheenSoitin();
+      if (kertoja && !mykka) {
+        kaynnistaKaiutinmittari(this.factKuuntele,
+          () => puhuva()?.aaniMittari ?? null,
+          { haeVahvistus: () => puhuva()?.luennanVahvistin?.gain?.value ?? null });
+      } else {
+        // Mykistettynä kaikki kaaret sammuksissa (omistajan sanoma
+        // ehto) — sammutus tulee tästä eikä luennan puuttumisesta,
+        // koska mykistetty luenta voi silti olla "äänessä" vaimennettuna.
+        pysaytaKaiutinmittari();
+      }
+      /*
+       * LUENNAN HUNTU (omistaja 14.9.2026): *"Luennan aikana kun kuvat
+       * nakyvat, kartta tausta voisi olla tummempi ja vahan blurri."*
+       * Huntu nousee vain kun kuva on oikeasti ruudulla — pelkkä
+       * luenta ilman kuvaa ei saa tummentaa karttaa.
+       *
+       * KAKSI KUVAKERROSTA, EI VAIN YKSI (korjaus 15.9.2026, mitattu
+       * Dubrovnikilla: huntu ei näkynyt kertaakaan). `.fokusvirta-
+       * luentakuva.nakyy` on vain se PIENI, KARTALLE ANKKUROITU pakka,
+       * jonka `naytaLuentakuva` piirtää sarjan LOPUKSI (js/fokusvirta.js
+       * nostaPieniPakka) — siihen mennessä isoisä on jo vaiennut, joten
+       * `kertoja` on tuolloin lähes aina epätosi eivätkä ehdot
+       * koskaan osu yhteen. Isoisän ÄÄNEN AIKANA näkyvä kuva on ISO
+       * KESKIPÄÄLLYS `.fokusvirta-isokuva` (js/fokusvirta.js
+       * avaaIsokuvaPaallys), joka asuu `.stage`:ssa `.map-panen`
+       * VIERESSÄ eikä sisällä — juuri se kuva, joka omistajan
+       * kuvakaappauksessa oli kaiuttimen kanssa ruudulla huntutta.
+       * Kysely kattaa nyt molemmat kerrokset.
+       */
+      const kuvaRuudulla = Boolean(document.querySelector(
+        '.fokusvirta-luentakuva.nakyy, .fokusvirta-isokuva.nakyy',
+      ));
+      /*
+       * POIKKEUS KEHITTÄJÄN MAAILMANÄKYMÄSSÄ (omistaja 15.9.2026,
+       * Raamattu "KARTTATAUSTA LUENNAN JA KAUPUNKIESITTELYN AIKANA",
+       * POIKKEUS-kohta): kehittäjän maailmanäkymässä huntua ei nosteta
+       * lainkaan — muut luennan merkit (kaiutin, tekstipiilo, Liiku-
+       * piilo) pysyvät ennallaan. Nappi tarkistetaan joka kyselyllä,
+       * jotta huntu poistuu heti kun maailmanäkymä kytketään päälle
+       * kesken luennan.
+       */
+      const huntuSallittu = !(kehittajaTilaPaalla() && kehittajaMaailmaPaalla());
+      /*
+       * PULUN KUVAT SAAVAT SAMAN HUNNUN KUIN ISOISÄN KUVAT (omistajan
+       * iPhone-kuva Ateenasta 16.9.2026): `kertoja` yllä on TARKOITUKSELLA
+       * puluton (ks. kommentti sen määrittelyssä — kaiuttimen syke on
+       * vain isoisällä), mutta huntu on kuvan, ei puhujan, ominaisuus.
+       * Kartan pitää tummua ja sumentua yhtä lailla silloin, kun ruudulla
+       * on PuluCam-kuva ja pulu puhuu, joten huntu kysyy KENEN TAHANSA
+       * kuuluvaa ääntä (soivaPuhuja() ilman `paitsi`-rajausta) eikä
+       * pelkkää kertojaa.
+       */
+      const puheKaynnissa = !varaventtiili && soivaPuhuja() !== null;
+      document.body.classList.toggle('luenta-huntu', puheKaynnissa && kuvaRuudulla && huntuSallittu);
+    };
+    askel();
+    this.luentavahti = setInterval(askel, LUENTAVAHDIN_VALI_MS);
+  }
+
+  /**
+   * AARRE LÖYTYI: neliösymboli laajenee hetkeksi Liiku-napiksi.
+   *
+   * Omistaja 14.9.2026 (ks. LIIKU_LAAJENNUS_MS). Tila on bodyn
+   * luokassa eikä napissa, koska toimintorivi piirretään uudelleen
+   * useasti: luokka säilyy piirtojen yli itsestään.
+   */
+  laajennaLiiku() {
+    if (typeof document === 'undefined') return;
+    document.body.classList.add('liiku-laaja');
+    clearTimeout(this.liikuLaajennusAjastin);
+    this.liikuLaajennusAjastin = setTimeout(() => {
+      document.body.classList.remove('liiku-laaja');
+    }, LIIKU_LAAJENNUS_MS);
   }
 
   /**
@@ -9673,10 +11889,11 @@ export class UI {
    *   vasen   Liiku  — monitoiminappi, avaa matkustusnapit
    *   oikea   Tutki  — suurennuslasi, ennallaan
    *
-   * LIIKU ODOTTAA AARRETTA (omistajan tarkennus 25.8.2026): fokusmoodissa
-   * nappia ei ole olemassa ennen kuin kaupungin laatta on käännetty
-   * (ks. liikuNappiNakyy). Rivi voi siis olla hetken tyhjä — se on
-   * tarkoitus, ei virhe: silloin ainoa tarjolla oleva teko on kartalla.
+   * LIIKU EI ODOTA AARRETTA (omistajan linjaus 13.9.2026, kumoaa
+   * 25.8.2026 laattaportin): nappi on pysyvästi paikallaan myös
+   * fokusmoodissa, jotta kevyessä kohteessa — jossa laattaa kääntävää
+   * ketjua ei ole lainkaan — ei synny umpikujaa. Ks. liikuNappiNakyy
+   * ja js/fokusvirta.js liikuNappiNakyvissa.
    *
    * FOKUSNÄKYMÄSSÄ VAIN LIIKU (omistajan pelitestitilaus 24.8.2026
    * illalla). Tutki-napin toiminto siirtyi kaupungin laatan
@@ -9720,16 +11937,19 @@ export class UI {
     const perus = html('div', 'toimintorivi-perus');
 
     /*
-     * "MATKUSTA" (omistajan pelitestipalaute v1119; ennen "Liiku",
-     * ja sitä ennen "Matkustustavat"). Kompassikuvake säilyy, mutta
-     * nimi kertoo teon täsmällisemmin: napin takaa avautuvat jalan,
-     * laivalla ja lentäen -valinnat, eikä "Liiku" kertonut niistä.
-     * iconButton asettaa saman tekstin näkyväksi nimeksi, titleksi ja
-     * aria-labeliksi, joten ruudunlukija ja hiiren kärki saavat sen
-     * yhtä aikaa. Matkustustapojen valinta on liu'un omien nappien
-     * aria-label-teksteissä (jalan, laiva, lento).
+     * "LIIKU" (omistaja 13.9.2026, Raamattu KARTTAUUDISTUS sanatarkasti:
+     * *"Alareunassa onkin kokojan nakyvilla pieni 'liiku' nappi."*).
+     *
+     * Nimi kävi välissä "Matkusta"na (pelitestipalaute v1119), koska
+     * "Liiku" ei kertonut mitä napin takana on. Omistajan uusi linjaus
+     * kumoaa sen nimeltä mutta ei perustelultaan: liu'un takana on nyt
+     * NELJÄ nimettyä kulkutapaa (liftaus, bussi, laiva, lento), joten
+     * teko on napissa ja tavat niiden omissa nimissä. Kompassikuvake
+     * säilyy. iconButton asettaa saman tekstin näkyväksi nimeksi,
+     * titleksi ja aria-labeliksi, joten ruudunlukija ja hiiren kärki
+     * saavat sen yhtä aikaa.
      */
-    const monitoimi = this.iconButton('kompassi', 'Matkusta');
+    const monitoimi = this.iconButton('kompassi', 'Liiku');
     monitoimi.classList.add('monitoimi-nappi');
     /*
      * Ilman matkustusvaihtoehtoja nappi on estetty — sama harmaus kuin
@@ -9737,7 +11957,9 @@ export class UI {
      * aina kolme nappia (jalan, laiva, lento), joten pelkkä lukumäärä ei
      * riitä: liuku on tyhjä myös silloin, kun kaikki kolme ovat estettyjä.
      */
-    monitoimi.disabled = matkanapit.length === 0 || matkanapit.every((n) => n.disabled);
+    monitoimi.disabled = matkanapit.length === 0 || matkanapit.every((n) => n.disabled)
+      // Linssikartan kuoressa Matkusta on harmaana (linssikarttaEstaa).
+      || this.linssikarttaEstaa();
     monitoimi.setAttribute('aria-expanded', String(Boolean(this.liukuAuki)));
     monitoimi.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -9780,16 +12002,13 @@ export class UI {
     for (const nappi of matkanapit) liuku.appendChild(nappi);
     // Mikä tahansa liu'un nappi vie toimintoon, jonka jälkeen rivi
     // piirretään uudestaan — liuku ei saa jäädä auki sen alle.
-    liuku.addEventListener('click', () => {
-      this.liukuAuki = false;
-      /*
-       * MATKUSTUSTAPA VALITTU: kamera JÄÄ uloszoomattuun näkymään
-       * (v1119). Seuraava vaihe on kohteen valinta kartalta, ja
-       * kohteet ovat juuri ne naapurit, joiden takia näkymä avattiin —
-       * paluu lähikuvaan piilottaisi ne saman tien.
-       */
-      this.matkustusPaluu = null;
-    });
+    /*
+     * MATKUSTUSTAPA VALITTU: liuku kiinni, kamera paikallaan (omistaja
+     * 2.9.2026: *"Vasta sen jälkeen kun kulkumuoto on valittu ja
+     * noppaa heitetty… vasta sen jälkeen kartta zoomautuisi"*). Lento
+     * on poikkeus ja sovittaa heti (avaaMatkavalikko).
+     */
+    liuku.addEventListener('click', () => { this.liukuAuki = false; });
     rivi.appendChild(liuku);
 
     if (this.liukuAuki && !monitoimi.disabled) rivi.classList.add('liuku-auki');
@@ -9838,7 +12057,19 @@ export class UI {
     }, this.valintavihjeViive);
   }
 
-  /** Vihjekupla ja sen ajastin pois. */
+  /**
+   * Vihjekupla ja sen ajastin pois.
+   *
+   * VAIN OHJEKUPLAT (omistajan Sofia-havainto 3.9.2026: *"pulu ei
+   * kommentoinut matkakirjan hurjaa tekstiä"*). Tämä kutsu tulee myös
+   * kartan kosketuksesta (kartallaKosketettu), ja ennen kuplapinoa se
+   * piilotti kuplien AINOAN elementin — siis myös Livian juuri
+   * alkaneen saapumispuheenvuoron. Pelaajan sormi kartalla pyyhki
+   * puheenvuoron, jota hän ei ollut vielä ehtinyt lukea. Nyt
+   * polloVihjePois koskee vain ohjekupliin (js/pollo.js
+   * piilotaVihje); puheenvuorot jäävät pinoon, kunnes pelaaja sulkee
+   * ne itse tai avaa chatin.
+   */
   peruValintavihje() {
     clearTimeout(this.valintavihjeAjastin);
     this.valintavihjeAjastin = null;
@@ -9857,11 +12088,45 @@ export class UI {
 
   /** Monitoiminapin napautus: liuku auki tai kiinni. */
   vaihdaLiuku() {
+    // Linssikartan kuoressa ei matkusteta (linssikarttaEstaa).
+    if (this.linssikarttaEstaa()) return;
     this.liukuAuki = !this.liukuAuki;
+    // Pelaajan oma napautus: liuku ei ole enää pelkkä nopan koti.
+    this.liukuNopalle = false;
     // Liuku peittää pöllön napin, joten avautuessaan se sulkee chatin.
     if (this.liukuAuki) polloSulje();
-    if (this.liukuAuki) this.avaaMatkustusNakyma();
-    else this.palaaMatkustusNakymasta();
+    /*
+     * MATKA ALKAA TÄSTÄ NAPISTA (omistaja 14.9.2026, Raamattu
+     * KARTTAUUDISTUKSEN PAATOKSET 8, sanatarkasti: *"reittiviuhka tulee
+     * nakyviin heti kun pelaaja painaa 'liiku' nappia ja on kokoajan
+     * nakyvissa kunnes pelaaja saapuu uuteen kaupunkiin tai peruuttaa
+     * liikkumisen eli jaakin nykyiseen kaupunkiin"*).
+     *
+     * Tässä on se painallus ja vain tässä: monitoiminappi on ainoa tie
+     * liukuun (piirraToimintorivi), ja liuku on ainoa tie matkanappeihin.
+     * Sessio muistaa LÄHTÖKAUPUNGIN, koska juuri sen vaihtuminen on
+     * "saapuu uuteen kaupunkiin"; kesken reittiä avattu liuku merkitään
+     * omalla arvollaan, jottei kenttä jää epätodeksi.
+     *
+     * Sessio EI pääty tästä: sulkeutuva liuku on vasta yksi peruutuksen
+     * muoto muiden joukossa, ja ne kaikki tunnistetaan yhdestä paikasta
+     * (matkaSessioKesken).
+     */
+    if (this.liukuAuki) this.matkaSessio = this.game.cityOf?.()?.id ?? 'kesken';
+    /*
+     * PALLOLAUDALLA SIIRROT TEHDÄÄN PALLOLLA (vaihe 2, karttapallo.md
+     * luku 7): Liiku ei enää herätä tasokarttaa — kohteet, reitit,
+     * noppa ja nappula elävät pallolla (js/pallolauta/lauta.js), ja
+     * linssikartta jää vain linsseille (valitseLinssi).
+     */
+    /*
+     * MATKUSTA EI LIIKUTA KARTTAA (omistaja 2.9.2026: *"Kun pelaaja
+     * painaa Matkusta, niin kartta voisi pysyä paikallaan."*). Tässä
+     * ajettiin v1119:stä lähtien kamera naapureiden rajaukseen ja
+     * sulkemisesta takaisin; sovitus tehdään nyt vasta kun
+     * vaihtoehdot ovat tiedossa (sovitaSiirtokohteet,
+     * sovitaLentokohteet).
+     */
     this.paivitaLiuku();
     // Reitit näkyviin (tai pois) heti: liu'un avaus ei kulje renderin
     // kautta, ja juuri silloin pelaaja katsoo, mihin reitit vievät.
@@ -9871,90 +12136,265 @@ export class UI {
   suljeLiuku() {
     if (!this.liukuAuki) return;
     this.liukuAuki = false;
-    this.palaaMatkustusNakymasta();
+    this.liukuNopalle = false;
     this.paivitaLiuku();
     this.paivitaMatkareitit();
   }
 
   /**
-   * MATKUSTA AVAA NÄKYMÄN NAAPUREIHIN (omistajan pelitestipalaute
-   * v1119: *"kun pelaaja painaa MATKUSTA-nappia, kartan pitää ZOOMATA
-   * ULOSPÄIN pehmeällä kamera-ajolla niin, että näkyvissä ovat nykyinen
-   * kaupunki, KAIKKI naapurikaupungit joihin reitti kulkee, ja reitit
-   * niihin kokonaisuudessaan (reittipisteineen/noppineen) sopivalla
-   * marginaalilla"*).
+   * KOHTEET RUUDULLE — sovituksen ainoa koneisto (ks. lohko
+   * KOHTEIDEN SOVITUS RUUDULLE tiedoston alussa).
    *
-   * Lähikuvassa naapurikaupunki jäi ruudun ylälaidan taakse, eikä
-   * reitistä näkynyt kuin ensimmäinen askel — pelaaja valitsi
-   * matkustustavan näkemättä, mihin se veisi.
+   * Kaksi kutsujaa (sovitaSiirtokohteet, sovitaLentokohteet) antavat
+   * laatikon laudan koordinaateissa; tämä päättää liikutaanko
+   * lainkaan ja millä mittakaavalla.
    *
-   * RAJAUS ON REITTIEN OMA, EI ARVATTU SÄDE: laatikko lasketaan
-   * nykyisen kaupungin naapurireittien MURTOVIIVOISTA (board.edgeById
-   * poly), joten mukaan tulevat myös reittien väliaskelpisteet — ne,
-   * joilla noppa kulkee. Sama kamera-ajokoneisto kuin muissakin ajoissa
-   * (js/kartta.js ajaKamera), joten liike on pehmeä ja ele keskeyttää
-   * sen kuten aina.
+   * NELJÄ EHTOA, JOILLA EI LIIKUTA.
+   *   1. ELE VOITTAA. Sormi kartalla (osoitinKartalla) tarkoittaa, että
+   *      pelaaja itse katsoo jotain — ajo keskeyttäisi sen eleen ja
+   *      veisi kartan pois hänen alta. Sama sääntö kuin muillakin
+   *      ajoilla, mutta toisin päin: siellä ele keskeyttää ajon, tässä
+   *      ajoa ei edes aloiteta.
+   *   2. KATSELUTILA (?lauta=) on laudan esittelyä eikä matkaa.
+   *   3. KAIKKI MAHTUU JO. Laatikko marginaaleineen on näkyvän alueen
+   *      sisällä — silloin uloszoomaus vain veisi lähikuvan pois.
+   *   4. Mittoja ei ole (näkymä kesken, paneeli nollan kokoinen).
+   *
+   * EI KOSKAAN SISÄÄNPÄIN. Tavoitemittakaava on `Math.min` nykyisestä
+   * ja tarvittavasta: kolmen naapurin laatikko voisi muuten imaista
+   * kameran syvälle lähikuvaan, ja tilaus on nimenomaan *"zoomautuisi
+   * sen verran ulospäin"* — vain tarvittaessa.
+   *
+   * @returns {boolean} lähtikö ajo (savukkeille ja vartijoille)
    */
-  matkustusRajaus() {
-    const kaupunki = this.game?.cityOf?.();
-    const board = this.game?.board;
-    if (!kaupunki || !board?.adj) return null;
-    let x0 = kaupunki.x; let y0 = kaupunki.y;
-    let x1 = kaupunki.x; let y1 = kaupunki.y;
-    const mukaan = (x, y) => {
-      if (!Number.isFinite(x) || !Number.isFinite(y)) return;
-      if (x < x0) x0 = x;
-      if (x > x1) x1 = x;
-      if (y < y0) y0 = y;
-      if (y > y1) y1 = y;
-    };
-    for (const eid of board.adj.get(kaupunki.id) ?? []) {
-      const reitti = board.edgeById.get(eid);
-      if (!reitti) continue;
-      // Murtoviiva kattaa molemmat päät ja väliaskeleet; ilman sitä
-      // (vanha lauta ilman polyä) riittävät reitin päätekaupungit.
-      for (const p of reitti.poly ?? []) mukaan(p?.x ?? p?.[0], p?.y ?? p?.[1]);
-      for (const id of [reitti.a, reitti.b]) {
-        const c = board.cityById.get(id);
-        if (c) mukaan(c.x, c.y);
-      }
-    }
-    if (!(x1 > x0) || !(y1 > y0)) return null;
-    return { x: x0, y: y0, w: x1 - x0, h: y1 - y0 };
-  }
-
-  /** Kamera naapureiden rajaukseen; paluupaikka talteen. */
-  avaaMatkustusNakyma() {
-    if (!this.kartta?.ajaKamera || this.katselu) return;
-    const bbox = this.matkustusRajaus();
-    if (!bbox) return;
-    /*
-     * PALUUPAIKKA ON NÄKYVÄ ALUE, EI ZOOMIKERROIN. Kerroin lasketaan
-     * yleiskuvan mittakaavasta, ja fokusnäkymässä se on eri asia kuin
-     * lehden oma rajaus; näkyvä alue palautuu sellaisenaan
-     * (ajaKamera bbox + marginaali 0).
-     */
+  sovitaKohteetNakyviin(bbox, { kesto = KOHDESOVITUKSEN_MS } = {}) {
+    if (!bbox || !(bbox.w >= 0) || !(bbox.h >= 0)) return false;
+    if (this.dead || this.katselu || this.osoitinKartalla) return false;
+    const kartta = this.kamera();
+    if (!kartta?.ajaKamera) return false;
+    const paneW = this.mapPane?.clientWidth ?? 0;
+    const pane = this.mapPane?.getBoundingClientRect();
+    if (!paneW || !(pane?.width > 0) || !(pane.height > 0)) return false;
     const nakyva = this.nakyvaAlue?.();
-    this.matkustusPaluu = nakyva?.w > 0
-      ? {
-        x: nakyva.x, y: nakyva.y, w: nakyva.w, h: nakyva.h,
-      } : null;
-    this.kartta.ajaKamera({ bbox, marginaali: MATKUSTUKSEN_MARGINAALI });
+    if (!(nakyva?.skaala > 0)) return false;
+    const alue = this.sovituksenAlue(pane);
+    const leveys = alue.right - alue.left;
+    const korkeus = alue.bottom - alue.top;
+    if (!(leveys > 0) || !(korkeus > 0)) return false;
+    const reunaX = leveys * KOHDESOVITUKSEN_MARGINAALI;
+    const reunaY = korkeus * KOHDESOVITUKSEN_MARGINAALI;
+    /*
+     * LAATIKKO RUUDUN PIKSELEIKSI nykyisellä näkymällä. Vertailu tehdään
+     * ruudulla eikä laudan yksiköissä, koska käytettävä alue on ruudun
+     * eikä laudan käsite: kalusteet eivät liiku kartan mukana.
+     */
+    const s = nakyva.skaala;
+    const vasen = pane.left + (bbox.x - nakyva.x) * s;
+    const yla = pane.top + (bbox.y - nakyva.y) * s;
+    const sieto = SOVITUKSEN_SIETO_PX;
+    const mahtuu = vasen >= alue.left + reunaX - sieto
+      && vasen + bbox.w * s <= alue.right - reunaX + sieto
+      && yla >= alue.top + reunaY - sieto
+      && yla + bbox.h * s <= alue.bottom - reunaY + sieto;
+    if (mahtuu) return false;
+    const tilaaX = Math.max(1, leveys - 2 * reunaX);
+    const tilaaY = Math.max(1, korkeus - 2 * reunaY);
+    // Yhteen riviin tai sarakkeeseen asettuva joukko antaa nollan
+    // mitan; silloin se suunta ei rajoita mittakaavaa lainkaan.
+    const tarvittu = Math.min(
+      bbox.w > 0 ? tilaaX / bbox.w : Infinity,
+      bbox.h > 0 ? tilaaY / bbox.h : Infinity,
+    );
+    const skaala = Math.min(s, tarvittu);
+    if (!(skaala > 0) || !Number.isFinite(skaala)) return false;
+    /*
+     * KAMERA KESKITTÄÄ AINA PANEELIN KESKELLE (js/kartta.js
+     * kameranKohde), mutta kohteiden on osuttava KÄYTETTÄVÄN ALUEEN
+     * keskelle. Ero on kalusteiden verran, ja se korjataan siirtämällä
+     * ajon keskipistettä laudalla saman verran vastakkaiseen suuntaan:
+     * piste `Cb - d/skaala` piirtyy paneelin keskelle täsmälleen
+     * silloin, kun `Cb` osuu ruudulla d pikseliä siitä sivuun.
+     */
+    const dx = (alue.left + alue.right) / 2 - (pane.left + pane.right) / 2;
+    const dy = (alue.top + alue.bottom) / 2 - (pane.top + pane.bottom) / 2;
+    void kartta.ajaKamera(
+      {
+        x: bbox.x + bbox.w / 2 - dx / skaala,
+        y: bbox.y + bbox.h / 2 - dy / skaala,
+        leveys: paneW / skaala,
+      },
+      // Kesto liikkeen mukaan (kartta.js sovitaAjonKesto, omistaja 3.9.2026).
+      { kesto, sovita: true },
+    );
+    return true;
   }
 
   /**
-   * Kamera takaisin siihen näkymään, josta matkustusvalintaan tultiin.
+   * KÄYTETTÄVÄ ALUE = KARTTAPANEELI MIINUS KALUSTEET (ks.
+   * SOVITUKSEN_KALUSTEET).
    *
-   * Vain sulkemisesta (napautus ulkopuolelle tai sama nappi uudelleen).
-   * Kun matkustustapa VALITAAN, paluuta ei tehdä: seuraavaksi valitaan
-   * kohde kartalta, ja juuri tämä uloszoomattu näkymä on se, jossa
-   * kohteet näkyvät (ks. renderActions liu'un kuuntelija).
+   * YKSI KALUSTE VÄISTETÄÄN YHDELLÄ REUNALLA, ja reuna valitaan
+   * HINNAN mukaan: se, joka syö vähiten nykyisestä alueesta. Nurkassa
+   * istuva MATKAPÄIVÄKIRJA-kortti (346 x 253 px 1280 x 800 -ruudulla)
+   * maksaa vasempana kaistana 27 % leveydestä ja ylänauhana 35 %
+   * korkeudesta — vasen voittaa, ja kortin ALLE jäävä kartta pysyy
+   * käytössä pystysuunnassa. Nelikulmainen alue eikä monikulmio: laatikko
+   * riittää sovitukselle, ja se on ainoa muoto, jonka kamera ymmärtää.
+   *
+   * SUURIN ENSIN, jotta pienet kalusteet mitataan jo kavennettua aluetta
+   * vasten: alalaidan kartuutsi jää päiväkirjan kaistan taakse eikä vie
+   * enää omaa kaistaansa.
+   *
+   * LIIAN AHNAS KALUSTE OHITETAAN (SOVITUKSEN_VAHIN_OSUUS): jos yksikään
+   * reuna ei mahdu väistämään, alue jää ennalleen. Silloin kohde voi
+   * jäädä kalusteen alle — mutta se on lievempi vika kuin alue, johon ei
+   * mahdu mitään.
    */
-  palaaMatkustusNakymasta() {
-    const paluu = this.matkustusPaluu;
-    this.matkustusPaluu = null;
-    if (!paluu || !this.kartta?.ajaKamera || this.dead) return;
-    this.kartta.ajaKamera({ bbox: paluu, marginaali: 0 });
+  sovituksenAlue(pane) {
+    const alue = {
+      left: pane.left, top: pane.top, right: pane.right, bottom: pane.bottom,
+    };
+    const laatikot = [];
+    for (const valitsin of SOVITUKSEN_KALUSTEET) {
+      for (const osa of document.querySelectorAll(valitsin)) {
+        // Piilotettu kaluste ei peitä mitään; nollan kokoinen ei myöskään.
+        if (osa.hidden || osa.closest('[hidden]')) continue;
+        const r = osa.getBoundingClientRect();
+        if (!(r.width > 0) || !(r.height > 0)) continue;
+        const tyyli = getComputedStyle(osa);
+        if (tyyli.visibility === 'hidden' || Number(tyyli.opacity) === 0) continue;
+        laatikot.push(r);
+      }
+    }
+    laatikot.sort((a, b) => b.width * b.height - a.width * a.height);
+    for (const r of laatikot) {
+      const x0 = Math.max(alue.left, r.left);
+      const x1 = Math.min(alue.right, r.right);
+      const y0 = Math.max(alue.top, r.top);
+      const y1 = Math.min(alue.bottom, r.bottom);
+      // Ei osu alueeseen (esim. yläpalkki paneelin yläpuolella).
+      if (!(x1 > x0) || !(y1 > y0)) continue;
+      const w = alue.right - alue.left;
+      const h = alue.bottom - alue.top;
+      const ehdokkaat = [
+        { reuna: 'left', arvo: x1, hinta: (x1 - alue.left) / w },
+        { reuna: 'right', arvo: x0, hinta: (alue.right - x0) / w },
+        { reuna: 'top', arvo: y1, hinta: (y1 - alue.top) / h },
+        { reuna: 'bottom', arvo: y0, hinta: (alue.bottom - y0) / h },
+      ].sort((a, b) => a.hinta - b.hinta);
+      const valinta = ehdokkaat.find((e) => e.hinta <= 1 - SOVITUKSEN_VAHIN_OSUUS);
+      if (valinta) alue[valinta.reuna] = valinta.arvo;
+    }
+    return alue;
+  }
+
+  /**
+   * Laatikko, johon nappula ja annetut laudan pisteet mahtuvat.
+   *
+   * KIERTÄVÄLLÄ LAUDALLA otetaan kustakin pisteestä se kopio, joka on
+   * lähempänä nappulaa (kiertoKohdat antaa molemmat). Muuten sauman
+   * takana oleva kohde venyttäisi laatikon koko laudan levyiseksi,
+   * vaikka ruudulla se on nappulan vieressä.
+   */
+  kohteidenRajaus(pisteet) {
+    const oma = this.game?.player?.pos
+      ? pixelOf(this.game.board, this.game.player.pos) : null;
+    if (!oma) return null;
+    let x0 = oma.x; let x1 = oma.x; let y0 = oma.y; let y1 = oma.y;
+    for (const p of pisteet) {
+      if (!Number.isFinite(p?.x) || !Number.isFinite(p?.y)) continue;
+      const kohdat = this.kiertoKohdat(p.x);
+      let x = kohdat[0];
+      for (const k of kohdat) if (Math.abs(k - oma.x) < Math.abs(x - oma.x)) x = k;
+      if (x < x0) x0 = x;
+      if (x > x1) x1 = x;
+      if (p.y < y0) y0 = p.y;
+      if (p.y > y1) y1 = p.y;
+    }
+    return {
+      x: x0, y: y0, w: x1 - x0, h: y1 - y0,
+    };
+  }
+
+  /**
+   * NOPANHEITON JÄLKEEN: nappula ja kaikki valittavat kohteet ruudulle
+   * (omistaja 2.9.2026, ks. tiedoston alun lohko).
+   *
+   * Kutsutaan heiton animaation PÄÄTTEEKSI (doRoll, doWalk) eli juuri
+   * silloin kun kohteet ovat tiedossa mutta valintaa ei ole vielä
+   * tehty. Automaattiheitto (v1440) kulkee saman doRollin läpi, joten
+   * jokainen välipisteheitto sovittaa uudet vaihtoehdot itsestään.
+   *
+   * Botin vuorolla ei sovitella: kone valitsee kohteensa itse eikä
+   * kartan tarvitse esitellä sille vaihtoehtoja.
+   */
+  sovitaSiirtokohteet() {
+    const { game } = this;
+    if (game?.phase !== 'move' || game.player?.isBot) return false;
+    const pisteet = [];
+    for (const opt of game.moveOptions?.() ?? []) {
+      pisteet.push(pixelOf(game.board, opt.pos));
+    }
+    if (!pisteet.length) return false;
+    /*
+     * NOPANHEITON KOHTEET OVAT MAAN IKKUNAN ULKOPUOLELLA, JOTEN
+     * ULOSZOOMAUKSEN ESTO ON KUMOTTAVA TÄSSÄKIN (mitattu 19.9.2026,
+     * Sonnetin puhelintesti v1952 löydös 1 — Pariisi → Amsterdam,
+     * liftaus → Liiku → liftaus → noppa: *"kamera panoroituu tyhjälle
+     * pergamentille Maastrichtin kaakkoispuolelle, kohteita ei
+     * ilmesty"* — ja sama Tangerin laivapolulla).
+     *
+     * JUURISYY, MITATTUNA KEHYS KEHYKSELTÄ. `sovitaKohteetNakyviin`
+     * ajaa kameran `ajaKamera`lla, joka kirjoittaa `pointOfView`in
+     * suoraan joka kehyksessä — uloszoomaus siis NÄYTTÄÄ onnistuvan
+     * (Amsterdamissa korkeus nousi 0,058 → 0,579 kahden sekunnin
+     * ajossa). Kohdemaan uloszoomauskatto elää kuitenkin
+     * OrbitControlsin `maxDistance`issa (js/pallolauta/lauta.js
+     * tahdistaZoomirajat, maanZoomiraja), ja se puree vasta kun ajo
+     * lakkaa kirjoittamasta: ajon päätyttyä ohjain kuristi korkeuden
+     * takaisin 0,058:aan JA JÄTTI PANOROIDUN KESKIPISTEEN paikalleen
+     * (49,60 N 7,85 E — tyhjää maata Pariisin ja Berliinin puolivälissä,
+     * juuri Maastrichtin kaakkoispuolella). Lopputulos on lähikuva,
+     * jossa nappula (ruudulla −243, −233) ja molemmat kohteet
+     * (−758, 556 ja 908, −316) ovat ruudun ulkopuolella: mitään ei ole
+     * näkyvissä eikä napautettavissa, ja vaihe jää 'move'iin — jossa
+     * renderActions ei piirrä yhtään nappia, joten myös Liiku katoaa,
+     * ja tila säilyy tallennuksessa (matkakirja-save-v1).
+     *
+     * MIKSI JUURI TÄSSÄ. Esto kumotaan jo lennolla (doFly),
+     * matkavalikossa (avaaMatkavalikko) ja siirron animaatiossa
+     * (animatePawn) — nopanheiton oma sovitus oli ainoa reitti ilman
+     * kumousta. Esto palaa entiseen tapaan perillä
+     * (palaaMaanRajaukseen) ja matkavalikon sulkeutuessa.
+     */
+    this.matkaZoomivapaus(true);
+    return this.sovitaKohteetNakyviin(this.kohteidenRajaus(pisteet));
+  }
+
+  /**
+   * LENTOLISTA AUKESI: nappula ja kaikki mahdolliset lentokohteet
+   * ruudulle (omistaja 2.9.2026: *"lennossa taas kartta zoomautuisi jo
+   * heti kun lentomuoto on valittu"*).
+   *
+   * Lennossa ei ole nopanheittoa — kohteet tiedetään jo valinnan
+   * hetkellä (game.airportDestinations), ja juuri ne piirretään
+   * kartalle napautettaviksi (drawTargets). Mannerlennot jäävät pois:
+   * niiden kohde ei ole tällä laudalla lainkaan vaan omassa napissaan.
+   *
+   * Laatikko voi olla koko lauta, ja se on tilauksen mukaista: *"niin
+   * paljon, että jokainen kohdekaupunki, mihin lento olisi
+   * mahdollinen, tulee näkyviin"*.
+   */
+  sovitaLentokohteet() {
+    const { game } = this;
+    if (game?.player?.isBot) return false;
+    const pisteet = [];
+    for (const dest of game?.airportDestinations?.() ?? []) {
+      const city = game.board.cityById.get(dest);
+      if (city) pisteet.push({ x: city.x, y: city.y });
+    }
+    if (!pisteet.length) return false;
+    return this.sovitaKohteetNakyviin(this.kohteidenRajaus(pisteet));
   }
 
   paivitaLiuku() {
@@ -10112,11 +12552,27 @@ export class UI {
   esilammitaAvaus() {
     if (this.esilammitys || this.dead || this.katselu) return;
     if (this.game.phase !== 'pickstart') return;
-    // Kohde tiedetään ennalta vain jos valittavia on tasan yksi
-    // (ETUSIVUN_KOHTEET). Useammalla esilämmitys jää tekemättä eikä
-    // mikään muutu — se on etumatka, ei ehto.
-    if (ETUSIVUN_KOHTEET.size !== 1) return;
-    const [kohdeId] = [...ETUSIVUN_KOHTEET];
+    /*
+     * MIKÄ KOHDE ESILÄMMITETÄÄN, KUN VALITTAVIA ON MONTA
+     * (7.9.2026)? Yksi ja vain yksi: ATEENA. Esilämmitys nostaa
+     * kohdemaan laudan muistiin ja piirtää sen taiteen valmiiksi
+     * (enterWorld + esilammitaTaide) — kolmelletoista kohteelle se
+     * olisi neljätoista lautaa ja neljätoista taidepohjaa
+     * avaustekstin alla, eli juuri se töksähdys, jonka esilämmitys
+     * on tarkoitettu poistamaan. Ateena on tarinan oma ensimmäinen
+     * reitti (Livian avaus, Aarnin luettelo), joten se on myös
+     * todennäköisin valinta; muut kohteet lentävät ilman etumatkaa,
+     * täsmälleen kuten ennen tätä optimointia.
+     *
+     * Talletus on kohdekohtainen (esilammitys.kohde), ja doPickStart
+     * käyttää talletettua repliikkiä vain jos kohde täsmää — muille
+     * kaupungeille arvonta tehdään siellä kuten ennenkin, joten
+     * rng-järjestys pysyy oikeana kaikilla kolmellatoista.
+     */
+    const kohdeId = ETUSIVUN_KOHTEET.has(ESILAMMITETTAVA_KOHDE)
+      ? ESILAMMITETTAVA_KOHDE
+      : (ETUSIVUN_KOHTEET.size === 1 ? [...ETUSIVUN_KOHTEET][0] : null);
+    if (!kohdeId) return;
     const kohde = this.game.board.cityById.get(kohdeId);
     const portti = (kohde?.links ?? [])[0];
     if (!kohde || !portti) return;
@@ -10160,12 +12616,6 @@ export class UI {
    */
   async doPickStart(city) {
     const { game } = this;
-    /*
-     * Livian avausesittely väistyy heti, kun pelaaja tekee valintansa
-     * (omistaja 29.8.2026: kuplat eivät estä valintaa). Kaupungin voi
-     * napauttaa kesken minkä tahansa repliikin.
-     */
-    peruLivianAvaus();
     const portti = (city.links ?? []).length > 0;
     // Ei ääniefektiä lähtövalinnassa (omistajan päätös 10.8.2026):
     // moottoriääni feidautuu sisään vasta lentokalvolla.
@@ -10174,6 +12624,15 @@ export class UI {
     // kuin kohdemaan kartta aukeaa.
     const lontoo = game.board.cityById.get(ALOITUSLENNON_LAHTO);
     if (lontoo && lontoo.id !== city.id) {
+      // Pulun piilotus alkaa samassa synkronisessa napautusketjussa,
+      // ennen avaussarjan purkua, verhoa tai ensimmäistä odotusta.
+      this.aloitaAloituslennonSignaali(city.id);
+      /*
+       * Livian avausesittely väistyy heti, kun pelaaja tekee valintansa
+       * (omistaja 29.8.2026: kuplat eivät estä valintaa). Kaupungin voi
+       * napauttaa kesken minkä tahansa repliikin.
+       */
+      peruLivianAvaus();
       /*
        * NAKSAHDUS ENSIMMÄISENÄ RIVINÄ (omistajan pelitesti 25.8.2026
        * iPhonella: *"kun klikkaa Atenaa, niin ei kuulu mitään ääntä"*).
@@ -10239,7 +12698,10 @@ export class UI {
       if (kartalento) {
         this.naytaAloitusverho();
         await this.wait(ALOITUSVERHO_SISAAN_MS);
-        if (this.dead) return;
+        if (this.dead) {
+          this.paataAloituslennonSignaali('peru');
+          return;
+        }
         /*
          * Arkki on nyt läpinäkymätön: lauta saa lakata maalautumasta
          * sen alla (css/styles.css body.lauta-arkin-alla). Vasta tässä
@@ -10265,21 +12727,41 @@ export class UI {
       // silta napautuksesta tähän on kuljettu (ks. aloitaLennonAmbienssi).
       this.lennonAmbienssi = false;
       if (kartalento) this.aloituslentoKesken = true;
+      /*
+       * TASOKARTTA NUKKUMAAN JO TÄSSÄ, KUN LAUTA ON PALLO (vaihe 5b).
+       *
+       * actionPickStart vaihtaa laudan aloitusnäytöstä maailmankartalle,
+       * ja doActionin oma render piirtäisi sen: 1 650 SVG-elementtiä ja
+       * laattapyramidin koko ruudullinen — kaikki pergamenttiarkin
+       * takana, kaikki turhaan, koska lento lennetään pallolla.
+       * Omistajan ehto *"vanha kartta pysyy pois tieltä"* tarkoittaa
+       * juuri tätä hetkeä: nukutus ennen vaihdosta, jolloin svg#board
+       * jää tyhjäksi eikä pyramidiin lähde yhtäkään pyyntöä koko
+       * avauksen aikana. Pallo avataan lennon omassa kohdassa
+       * (aloituslento), ja jos kirjasto ei lataudu, varapolku herättää
+       * kartan takaisin (pallolautaVarapolku).
+       */
+      if (kartalento && this.aloituslentoPallolla()) this.kartta.nuku();
       this.doAction(() => game.actionPickStart(city.id, portti ? 0 : null));
+      // Uusi avaus, uusi lupa lukea: lippu nollataan ennen kumpaakin
+      // lentotapaa (ks. lueLennonRepliikki).
+      this.lennonLuentaAlkoi = false;
       if (!this.reducedMotion) {
-        // Avauslennon repliikki on lukittu ja luettu ääneen: puhe alkaa
-        // pienellä viiveellä, kun moottori on jo ehtinyt nousta esiin.
-        this.lentoPuheAjastin = setTimeout(() => {
-          // Lentorepliikin lukee vain pitkä kertoja. Kertoja aloittaa
-          // vasta kun moottori on ehtinyt nousta kuuluviin (omistajan
-          // toive 10.8.2026, tarkennus samana iltana: 4,2 s kohdalla,
-          // kun moottori on jo noussut rauhassa kuuluviin). 12.8.2026
-          // hetki aikaistui LENNON_PUHE_MS:ään: ääni saa olla edellä ja
-          // teksti perässä.
-          if (!this.dead && kertojaTila() === 'pitka') {
-            playDiaryVoice(this, 'assets/audio/puhe-lento-alku.mp3');
-          }
-        }, LENNON_PUHE_MS);
+        /*
+         * AJASTIN ON NYT VANHAN KALVOLENNON POLKU, EI KARTTALENNON.
+         *
+         * Kertoja aloitti ennen tästä molemmilla lentotavoilla:
+         * 2,3 s napautuksesta (omistajan toive 10.8.2026, aikaistus
+         * 12.8. — *"ääni saa olla edellä ja teksti perässä"*). Kartalla
+         * lentävä avaus ottaa hetkensä nyt kohtauksesta eikä kellosta:
+         * ajastin osui aiemmin täsmälleen siihen ikkunaan, jossa lauta
+         * vaihtuu ja sata laattaa noudetaan, ja myöhässä lauennut luenta
+         * peruuntui lennon finally-lohkon clearTimeoutissa (ks.
+         * aloituslentoSisalla, KERTOJA ALKAA TÄSTÄ). Karttalento
+         * kumoaa tämän ajastimen omalla kutsullaan.
+         */
+        this.lentoPuheAjastin = setTimeout(() => this.lueLennonRepliikki(),
+          LENNON_PUHE_MS);
       }
       // Kartalento voi todeta lennon mahdottomaksi (puuttuva maatieto tai
       // rajaus); silloin vanha kalvo hoitaa avauksen kuten ennenkin.
@@ -10294,6 +12776,14 @@ export class UI {
             'Lontoo', city.name, line,
             { dx: city.x - lontoo.x, dy: city.y - lontoo.y },
           );
+          // Liikeherkkyydessä animateFlight palaa ilman kohtauksen
+          // saapumis-renderiä. Se on onnistunut oikopolku, ei peruutus:
+          // actionPickStartin render on jo avannut mahdollisen trailerin.
+          if (this.reducedMotion && !this.dead) {
+            this.paataAloituslennonSignaali('loppu', {
+              odottaaTraileria: Boolean(this.saapumistraileri),
+            });
+          }
         }
       } finally {
         clearTimeout(this.lentoPuheAjastin);
@@ -10301,10 +12791,31 @@ export class UI {
         // poikkeukseen. Tavallisella polulla se on jo poistettu
         // (aloituslentoSisalla) ja tämä palaa heti.
         await this.piilotaAloitusverho();
+        // Tavallinen polku päätti signaalin saapumisen renderissä.
+        // Jos suoritus katkesi sitä ennen, sama token perutaan tässä.
+        this.paataAloituslennonSignaali('peru');
       }
       return;
     }
+    peruLivianAvaus();
     this.doAction(() => game.actionPickStart(city.id, portti ? 0 : null));
+  }
+
+  /** Aloituslennon yksi tunnus yhdistää alun, lopun ja peruutuksen. */
+  aloitaAloituslennonSignaali(kaupunki) {
+    this.paataAloituslennonSignaali('peru');
+    const tila = { tunnus: {}, kaupunki };
+    this.aloituslentoSignaali = tila;
+    ilmoitaLivianTilanne('startFlight', { vaihe: 'alku', ...tila });
+  }
+
+  /** Päättää aktiivisen aloituslentosignaalin tasan kerran. */
+  paataAloituslennonSignaali(vaihe, tiedot = {}) {
+    const tila = this.aloituslentoSignaali;
+    if (!tila) return false;
+    this.aloituslentoSignaali = null;
+    ilmoitaLivianTilanne('startFlight', { vaihe, ...tila, ...tiedot });
+    return true;
   }
 
 
@@ -10321,25 +12832,86 @@ export class UI {
       return;
     }
     // Nappula siirtyy ilman animaatiota: oikotie saa näyttää oikotieltä.
-    haivytaLuenta(this);
+    this.vaiennaPaikanPuhe();
     this.suljeMatkavalikko();
     this.doAction(() => game.actionKehittajaSiirto(city.id));
   }
 
-  /** Jalan: matkustustapa ja nopanheitto samalla painalluksella. */
+  /**
+   * PAIKASTA LÄHTEMINEN VAIENTAA MOLEMMAT ÄÄNET (omistaja 8.9.2026).
+   *
+   * Kertojan luenta häipyi lähdössä jo ennen, mutta pulun repliikki jäi
+   * soimaan — ja kuului seuraavassa kaupungissa sen oman kertojan alla
+   * väärää kaupunkia selittäen. Sama kutsu hoitaa nyt molemmat, jotta
+   * lähtö ei voi jättää toista puhujaa päälle.
+   *
+   * KUPLAT LÄHTEVÄT MUKANA (omistaja 8.9.2026, sanatarkasti: *"Pulun
+   * puhekuplat pitää tyhjentyä kun tullaan uuteen kaupunkiin"*).
+   * Kuplapino jäi ennen ruudulle, ja uuden kaupungin kuplat kasautuivat
+   * edellisen kaupungin puheiden päälle — pinossa oli siis kahden
+   * kaupungin keskustelu yhtä aikaa. Tyhjennys tehdään täällä eli
+   * LÄHTÖHETKELLÄ, koska juuri tässä kaupunki vaihtuu; pino häipyy
+   * pehmeästi (js/pollo.js poistaKuplat) eikä räpsähdä pois, ja kaikki
+   * sanottu jää chatin historiaan (kirjaaKuplaViestiin).
+   */
+  vaiennaPaikanPuhe() {
+    haivytaLuenta(this);
+    vaiennaLivianKaupunkipuhe(this);
+    polloKuplatPois();
+  }
+
+  /** Liftaus (entinen jalan): matkustustapa ja nopanheitto samalla painalluksella. */
   doWalk() {
     // Radiotilassa kartalla ei liikuta.
     if (this.radioPaalla()) return;
     const { game } = this;
     // Nopanheitto keskeyttää tarinan: luenta häipyy pehmeästi pois.
-    haivytaLuenta(this);
-    this.run(
-      () => {
-        const chosen = game.actionTravel('land');
-        return chosen.ok ? game.actionRoll() : chosen;
+    this.vaiennaPaikanPuhe();
+    // Sama jälkinäytös kuin doRollissa: noppa ensin, sitten sovitus.
+    this.heitaJaSovita(() => {
+      const chosen = game.actionTravel('land');
+      return chosen.ok ? game.actionRoll() : chosen;
+    });
+  }
+
+  /**
+   * BUSSI: 50 puntaa, yksi kaari, ei noppaa eikä päivää (omistaja
+   * 13.9.2026). Vastaa doWalkia ja doFlytä — teko pelissä, animaatio
+   * perässä — mutta kulkee actionBusin kautta, koska kohde on valittu
+   * eikä heitetty.
+   *
+   * ANIMAATIO ON SAMA AUTOKYYTI KUIN LIFTAUKSESSA, vain nopeampi
+   * (autokyydinAskel `bussi`): bussi ja liftaus ajavat saman kaaren,
+   * ja ero on hinnassa, ajassa ja vauhdissa.
+   */
+  doBus(destination) {
+    // Radiotilassa kartalla ei liikuta.
+    if (this.radioPaalla()) return;
+    if (this.linssikarttaEstaa()) return;
+    const { game } = this;
+    // Bussi vie pois paikasta: edellisen kaupungin puhe päättyy tähän.
+    this.vaiennaPaikanPuhe();
+    this.suljeMatkavalikko();
+    const player = game.player;
+    const from = player.pos;
+    this.run(() => game.actionBus(destination), {
+      after: (result) => {
+        if (!result?.ok) return undefined;
+        if (from.type === 'city') {
+          puraFokusvirtaPaikanvaihdossa(this);
+          ilmoitaLivianTunne(
+            { tunne: 'ilo', voimakkuus: 0.4 },
+            { lahde: 'matka', tunnus: 'matka.kavely.lahto' },
+          );
+        }
+        const path = game.lastPath ?? [player.pos];
+        return this.animatePawn(player, from, path,
+          autokyydinAskel(path.length, { bussi: true }),
+          {
+            saatto: true, maitse: true, musiikki: 'jalan', kyyti: true, tapa: 'bus',
+          });
       },
-      { after: (result) => this.animateDie(result.die) },
-    );
+    });
   }
 
   /**
@@ -10436,8 +13008,21 @@ export class UI {
       this.suljePostikortti();
       return;
     }
+    /*
+     * Kaupungilla ei aina ole omaa historiakuvaa: esimerkiksi Dubain
+     * rivillä on vain lisat-pino ja uusi kuva. Pikkukuvaksi kelpaa
+     * pinon ensimmäinen kuva — ilman varakuvaa valokuvaUrl(undefined)
+     * kaataisi koko renderin kaupunkiin saavuttaessa.
+     */
+    const esikuva = valokuva.tiedosto
+      ?? valokuva.lisat?.[0]?.tiedosto ?? valokuva.uusi?.tiedosto;
+    if (!esikuva) {
+      this.factValokuva.hidden = true;
+      this.suljePostikortti();
+      return;
+    }
     asetaKuva(this.factValokuvaKuva,
-      valokuvaUrl(valokuva.tiedosto, 160), valokuvaVara(valokuva.tiedosto, 160));
+      valokuvaUrl(esikuva, 160), valokuvaVara(esikuva, 160));
     this.factValokuva.hidden = false;
   }
 
@@ -10472,9 +13057,17 @@ export class UI {
        * silloin, kun kuvalla ei ole selitettä.
        */
       const teksti = html('p', 'kuvateksti');
-      if (kuvaTiedot.selite) teksti.appendChild(document.createTextNode(kuvaTiedot.selite));
-      teksti.appendChild(html('span', 'kuvalahde',
-        [tiedot.paikka, kuvaTiedot.vuosi, kuvaTiedot.lahde].filter(Boolean).join(' · ')));
+      /*
+       * POSTIKORTTI ON JO AVATTU KUVA: se aukeaa muistikirjan
+       * pikkukuvasta (fact-valokuva) eikä siitä ole enää omaa
+       * suurennosta, joten tässä näkyy PITKÄ versio ja lähderivi
+       * (js/kuvatekstit.js, omistaja 9.9.2026).
+       */
+      const pitkaTeksti = kuvatekstiPitka(kuvaTiedot);
+      if (pitkaTeksti) teksti.appendChild(document.createTextNode(pitkaTeksti));
+      teksti.appendChild(taytaLahderivi(html('span', 'kuvalahde'),
+        [tiedot.paikka, kuvaTiedot.vuosi, kuvaTiedot.lahde].filter(Boolean).join(' · '),
+        kuvaTiedot));
       osa.appendChild(teksti);
       return osa;
     };
@@ -10490,11 +13083,16 @@ export class UI {
      * näkymät, viimeisenä nykypäivä. Näin pino kertoo saman tarinan kuin
      * teksti ja päättyy siihen, mitä paikasta on jäljellä.
      */
+    // Ylätason historiakuva voi puuttua (rivillä vain lisat/uusi) —
+    // silloin pino alkaa suoraan päiväkirjan näkymistä.
+    const onHistoriakuva = Boolean(tiedot.tiedosto);
     const pino = [
-      { ...tiedot, alt: `Vanha valokuva: ${tiedot.paikka}` },
+      ...(onHistoriakuva
+        ? [{ ...tiedot, alt: `Vanha valokuva: ${tiedot.paikka}` }]
+        : []),
       ...(tiedot.lisat ?? []).map((k) => ({
         ...k,
-        alt: `${k.selite ? k.selite.slice(0, 60) : tiedot.paikka}`,
+        alt: `${kuvatekstiLyhyt(k) ? kuvatekstiLyhyt(k).slice(0, 60) : tiedot.paikka}`,
       })),
       ...(tiedot.uusi
         ? [{
@@ -10511,9 +13109,10 @@ export class UI {
         kuvaTiedot === pino[pino.length - 1] && tiedot.uusi ? 'uusi' : '',
         i === 0 ? '' : 'alla',
       ].filter(Boolean).join(' ');
-      // Pinon ensimmainen on kaupungin historiakuva. Jos siita puuttuu
-      // vuosi, se on silti vanha — muissa oletus on varillinen.
-      const osa = teeKortti(kuvaTiedot, luokat, kuvaTiedot.alt, i === 0);
+      // Pinon ensimmainen on kaupungin historiakuva (jos sellainen on).
+      // Jos siita puuttuu vuosi, se on silti vanha — muissa oletus on
+      // varillinen.
+      const osa = teeKortti(kuvaTiedot, luokat, kuvaTiedot.alt, i === 0 && onHistoriakuva);
       // Laskuri kertoo, että kuvia on lisää — muuten pinon alta
       // pilkottava reuna jää helposti huomaamatta.
       if (pino.length > 1) {
@@ -10629,7 +13228,35 @@ export class UI {
       stopDiaryVoice(this);
       return;
     }
+    /*
+     * PULUN KAKSI KUPLAA ENNEN ISOISÄN LUENTAA (omistaja 7.9.2026,
+     * Raamattu PULUN UUSI RYTMI ATEENASSA). Ensimmäisellä saapumisella
+     * koskaan luenta EI ala tässä piirrossa vaan jää odottamaan: lippu
+     * nostetaan juuri ennen saapumisen renderiä (aloituslento) ja
+     * lasketaan aloitaLykattyLuenta-metodissa, jonka pulun kuplasarja
+     * kutsuu (js/livia.js odotaLuenta). Tehtävä on jo talletettu, joten
+     * kaiutinnappi ja kertojakytkin toimivat kuten ennen.
+     */
+    if (this.luennanLykkays) {
+      stopDiaryVoice(this);
+      return;
+    }
     this.merkinnanLuenta();
+  }
+
+  /**
+   * LYKÄTTY LUENTA LIIKKEELLE. Pulun kuplasarja kutsuu tämän, kun
+   * kaksi ensimmäistä kuplaa on sanottu (js/livia.js vapautaLuenta) —
+   * ja myös silloin, kun sarja ei ala lainkaan, jottei luenta jää
+   * odottamaan kuplaa, jota ei tule.
+   *
+   * @returns {boolean} lähtikö luenta käyntiin
+   */
+  aloitaLykattyLuenta() {
+    this.luennanLykkays = false;
+    if (this.dead || !this.merkinnanLuenta || !luentaKytkinPaalla()) return false;
+    this.merkinnanLuenta();
+    return true;
   }
 
   /**
@@ -10665,12 +13292,32 @@ export class UI {
    */
   uusiFactKey(key) {
     this.factKey = key;
+    /*
+     * EDELLISEN MERKINNAN PIKKUKUVAT POIS (PAATOKSET 35 kohta 4).
+     * Tämä on kortin ainoa yhteinen vaihtokohta, joten rivi siivotaan
+     * tässä ja ladotaan takaisin vain fokusvirran merkinnälle
+     * (renderFact → paivitaMatkakirjanPikkukuvat).
+     */
+    paivitaMatkakirjanPikkukuvat(this, null);
     // Uusi merkintä, uusi teksti: edellisen luenta ei saa jatkua,
     // eikä edellisen merkinnän jatko-osa saa soida uuden alla.
     this.merkintaJatko = null;
     if (lukijaLukee(this.factKuuntele)) pysaytaLukija();
     if (this.factText) this.factText.scrollTop = 0;
-    this.asetaPaivakirjanKoko(false);
+    // Uusi merkintä nollaa myös kartan liikkeestä odottavan paluun:
+    // edellisen merkinnän ajastin ei saa avata korttia uuden alla.
+    this.peruKortinPalautus();
+    /*
+     * PUHELIMELLA MERKINTÄ JÄÄ LAPUKSI (omistajan linjaus, ks.
+     * PUHELIN_KYSELY). Mitattu 14.9.2026: auki oleva kortti on
+     * 390 × 844 ruudulla 340 × 195 px (87 % leveydestä) ja 844 × 390
+     * ruudulla 340 × 244 px (63 % korkeudesta) — se peittää juuri sen
+     * kuvan, jota merkintä kuvailee. Luenta soi normaalisti, ja teksti
+     * on yhä saatavilla: lappu on painike, jonka napautus avaa kortin
+     * (ks. asetaPaivakirjanKoko ja factCardin click-kuuntelija).
+     * Työpöydällä kortti avautuu kuten ennenkin.
+     */
+    this.asetaPaivakirjanKoko(tekstitPiilossa());
     this.paivitaJatkuuVihje?.();
   }
 
@@ -10706,6 +13353,9 @@ export class UI {
       // Auki kortti on tavallista sisältöä omine nappeineen, joten
       // painikkeen rooli ja tila otetaan pois — sisäkkäinen painike
       // painikkeen sisällä ei ole luettavissa oleva tila.
+      // Kortti on auki: luennan lopetus ei enää palauta sitä (lippu on
+      // vahdin oma, ks. kaynnistaLuentavahti).
+      this.luennanKortinKutistus = false;
       this.factCard.removeAttribute('role');
       this.factCard.removeAttribute('tabindex');
       this.factCard.removeAttribute('aria-expanded');
@@ -10715,25 +13365,173 @@ export class UI {
   }
 
   /**
+   * Onko matkakirjan luenta kesken juuri nyt?
+   *
+   * Kaksi lukijaa saman kaiuttimen takana: tuotettu äänite
+   * (`this.diaryVoice`, js/luenta.js playDiaryVoice) ja laitteen oma
+   * puhesyntetisaattori (js/lukija.js, kaiutinnappi factKuuntele).
+   * Kumpi tahansa äänessä tarkoittaa, että merkintää luetaan.
+   *
+   * Pysähtynyt soitin luetaan lopuksi VAIN jos se ehti soida: luenta
+   * alkaa pienellä viiveellä, ja silloin soitin on paused mutta
+   * currentTime on nolla. Sama erottelu kuin luennanLoppuun-vahdissa —
+   * lauserajan häivytys pysäyttää äänen ilman 'ended'-tapahtumaa.
+   */
+  luentaKesken() {
+    if (lukijaLukee(this.factKuuntele)) return true;
+    const aani = this.diaryVoice;
+    if (!aani) return false;
+    if (aani.ended || aani.error) return false;
+    if (aani.paused && aani.currentTime > 0) return false;
+    return true;
+  }
+
+  /**
+   * KARTAN LIIKE KUTISTAA KORTIN — JA LUENNAN AIKANA SE PALAA.
+   *
+   * Tämä on se yksi paikka, jota kaikki kartan kutistuskohdat
+   * kutsuvat (js/kartta.js raahaus, nipistys ja rullapanorointi,
+   * js/pallolauta/lauta.js veto sekä mapPanen napautus). Logiikka on
+   * tässä eikä neljänä kopiona: jos luenta on kesken, kutistus on vain
+   * väliaikainen väistyminen, ja kortti nousee takaisin auki kun
+   * kartta on ollut rauhassa KORTIN_PALAUTUS_MS millisekuntia.
+   *
+   * PELAAJAN NAPAUTUS KARTTAAN ON LIIKETTÄ (omistajan tulkinta
+   * hyväksytty 10.9.2026): napautus kutistaa kortin kuten ennenkin,
+   * mutta luennan aikana kortti palaa siitä samalla tavalla kuin
+   * raahauksesta — puhe ja teksti kuuluvat yhteen. Lapun oma napautus
+   * sen sijaan on pelaajan oma valinta avata kortti, eikä se kulje
+   * tämän kautta lainkaan.
+   *
+   * Saapumisen kamera-ajo tai pallon lentolinja EI kutsu tätä: ne
+   * eivät ole pelaajan omaa panorointia, joten juuri avattu merkintä
+   * ei kutistu saapumislennon alla.
+   */
+  kutistaKortinLiikkeesta() {
+    this.asetaPaivakirjanKoko(true);
+    if (!this.luentaKesken()) {
+      // Puheen jälkeen kutistunut kortti saa jäädä lapuksi.
+      this.peruKortinPalautus();
+      return;
+    }
+    this.ajastaKortinPalautus();
+  }
+
+  /**
+   * Ajastaa kortin paluun auki eleen päätyttyä.
+   *
+   * `viive` on oletuksena rullan ja nipistyksen lyhyt hiljaisuus
+   * (KORTIN_HILJAISUUS_MS); sormen nosto antaa tilalle teknisen
+   * viiveen (KORTIN_PALAUTUS_MS), koska silloin eleen loppu on jo
+   * tiedossa eikä hiljaisuutta tarvitse odottaa. Kesken olevaa elettä
+   * odotetaan lisäksi erikseen: sormi voi levätä liikkumatta
+   * kartalla, eikä kortti saa nousta kesken raahauksen tai liu'un.
+   */
+  ajastaKortinPalautus(viive = KORTIN_HILJAISUUS_MS) {
+    /*
+     * NOPEAMPI MAALI VOITTAA. Sormen nosto ajastaa paluun heti
+     * (KORTIN_PALAUTUS_MS), mutta samasta eleestä tulee vielä yksi
+     * "kartan ele" -merkintä perässä (js/kartta.js irrota →
+     * merkitseKartanEle) — ilman tätä vertailua se lykkäisi juuri
+     * ajastetun paluun takaisin hiljaisuuden päähän, ja kortti
+     * näyttäisi taas viipyvän.
+     */
+    const maali = Date.now() + Math.max(0, viive);
+    if (this.kortinPalautusAjastin && (this.kortinPalautusMaali ?? 0) <= maali) return;
+    clearTimeout(this.kortinPalautusAjastin);
+    this.kortinPalautusMaali = maali;
+    this.kortinPalautusAjastin = setTimeout(() => {
+      this.kortinPalautusAjastin = null;
+      // Sormi tai liuku yhä kartalla: odotetaan vielä yksi jakso.
+      if (this.osoitinAlhaalla || this.osoitinKartalla || this.kartanRaahaus) {
+        this.ajastaKortinPalautus();
+        return;
+      }
+      // Luenta ehti loppua odotuksen aikana: kortti jää lapuksi.
+      if (!this.luentaKesken()) return;
+      /*
+       * KERTOJAN LUENNAN AIKANA KORTTI EI NOUSE AUKI (omistaja
+       * 15.9.2026). Ennen tätä teksti ja puhe kuuluivat yhteen ja
+       * kortti palasi auki kartan rauhoituttua; nyt luennan aikana
+       * näkyviin jäävät kuva ja kuvateksti, ja merkinnän saa esiin
+       * lappua napauttamalla.
+       */
+      if (luennanTekstipiilo()) return;
+      this.asetaPaivakirjanKoko(false);
+    }, Math.max(0, viive));
+  }
+
+  /** Peruu odottavan paluun (luenta loppui, tai uusi merkintä tuli). */
+  peruKortinPalautus() {
+    clearTimeout(this.kortinPalautusAjastin);
+    this.kortinPalautusAjastin = null;
+    this.kortinPalautusMaali = 0;
+  }
+
+  /**
    * PAIKKARIVI KAHDESSA MITASSA (omistajan pelitestipalaute v1119:
    * *"kun laatikko pienenee yhdelle riville, rivillä saa näkyä VAIN
    * otsikko ja kaupungin nimi — ei päivämäärää, säätä eikä tekstin
    * alkua"*).
    *
-   * Auki kortissa paikkarivi on merkinnän oma kohtausrivi: *"Ateena,
+   * Auki kortissa paikkarivi oli merkinnän koko kohtausrivi: *"Ateena,
    * heinäkuussa 1873. Seesteistä; ilmanpuntari 762 mmHg."* Yhden rivin
    * lapussa se venyi katkeavaksi litaniaksi, josta ei erottunut mitään
    * — ja juuri se lappu on se, jonka pelaaja näkee karttaa liikuttaessa.
+   *
+   * MATKAKIRJAKORTILLA RIVI ON NYT PELKKÄ TUNNELMA (omistaja 8.9.2026):
+   * paikka ja aika nousivat otsikoksi (asetaMatkakirjanOtsikko), ja
+   * lyhyt muoto jää siellä tyhjäksi — otsikossa on jo kaupungin nimi,
+   * eikä lapulle saa tulla samaa nimeä kahdesti. Muut kortin haarat
+   * (aikataulu, havainnot) käyttävät riviä ja lyhyttä muotoa entiseen
+   * tapaan.
    *
    * Lyhyt muoto on oma elementtinsä eikä leikattu teksti: leikkaus
    * kolmella pisteellä olisi jättänyt riville puolikkaan päivämäärän.
    * Ilman erillistä lyhyttä muotoa käytetään pitkää — useimmissa
    * haaroissa se on jo pelkkä kaupungin nimi.
    */
-  asetaPaikkarivi(teksti, lyhyt = null) {
+  asetaPaikkarivi(teksti, lyhyt = null, { tunnelma = false } = {}) {
     const rivi = String(teksti ?? '');
-    if (this.factPlace) this.factPlace.textContent = rivi;
+    if (this.factPlace) {
+      this.factPlace.textContent = rivi;
+      /*
+       * TUNNELMARIVI ON ALAOTSIKKO (omistaja 8.9.2026): matkakirjan
+       * kortilla tämä rivi on sään ja tunnelman virke otsikkona olevan
+       * paikan ja ajan alla, ja se ladotaan kursiivilla ja pienemmällä
+       * (css .fact-place.tunnelma). Muissa haaroissa rivi on entisensä.
+       */
+      this.factPlace.classList.toggle('tunnelma', Boolean(tunnelma));
+    }
     if (this.factPlaceLyhyt) this.factPlaceLyhyt.textContent = String(lyhyt ?? rivi);
+  }
+
+  /**
+   * MATKAKIRJAKORTIN OTSIKKO: PAIKKA JA AIKA, ALLA TUNNELMA.
+   *
+   * Yksi paikka, kaksi elementtiä: otsikoksi merkinnän kohtausrivin
+   * paikka ja aika, sen alle sään ja tunnelman virke (js/ui-apurit.js
+   * matkakirjanOtsikko). Yhden rivin lapussa otsikko riittää yksin —
+   * siinä lukee jo kaupungin nimi, joten lyhyt paikkarivi jää tyhjäksi
+   * eikä kaupunki toistu kahdesti samalla kaistaleella.
+   */
+  asetaMatkakirjanOtsikko(paikkarivi, kaupunki = '') {
+    const { otsikko, tunnelma } = matkakirjanOtsikko(paikkarivi, kaupunki);
+    this.factVoiceEl.textContent = otsikko;
+    this.factVoiceEl.classList.add('paikka-aika');
+    this.asetaPaikkarivi(tunnelma, '', { tunnelma: true });
+  }
+
+  /**
+   * Otsake takaisin entiseen muotoonsa (muut kortin haarat).
+   *
+   * Otsikko on sama elementti kaikilla haaroilla, joten matkakirjan
+   * paikka-aika-tyyli on purettava, kun korttiin kirjoitetaan jotain
+   * muuta — muuten "Isoisän aikataulusta" perisi sen tyylin.
+   */
+  asetaOtsake(teksti) {
+    this.factVoiceEl.textContent = String(teksti ?? '');
+    this.factVoiceEl.classList.remove('paikka-aika');
   }
 
   renderFact() {
@@ -10758,7 +13556,7 @@ export class UI {
       // Piilotuksen lisäksi sisältö tyhjennetään: muuten edellisen pelin
       // teksti voi välähtää ruudulla ennen kuin kortti ehtii piiloon.
       this.uusiFactKey(null);
-      this.factVoiceEl.textContent = '';
+      this.asetaOtsake('');
       this.asetaPaikkarivi('');
       this.factText.textContent = '';
       this.factImage.hidden = true;
@@ -10830,14 +13628,22 @@ export class UI {
         this.factCard.hidden = false;
         if (this.factKey === merkinta.avain) return;
         this.uusiFactKey(merkinta.avain);
-        // Otsikko lyheni v1119:ssä (omistajan pelitestipalaute):
-        // MATKAPÄIVÄKIRJASTA → MATKAPÄIVÄKIRJA. Yhden rivin lapussa
-        // otsikko ja kaupungin nimi ovat vierekkäin, ja partitiivi
-        // teki rivistä pitkän ilman että se kertoi enempää.
-        this.factVoiceEl.textContent = 'Matkapäiväkirja';
-        // Lyhyt muoto on kaupungin nimi: kohtausrivin päivämäärä ja
-        // sää eivät mahdu yhden rivin lappuun (ks. asetaPaikkarivi).
-        this.asetaPaikkarivi(merkinta.paikkarivi, virtaKaupunki.name);
+        /*
+         * OTSIKKONA PAIKKA JA AIKA (omistaja 8.9.2026). Ennen tässä luki
+         * joka kaupungissa sama sana MATKAPÄIVÄKIRJA (v1119: aiemmin
+         * MATKAPÄIVÄKIRJASTA) ja koko kohtausrivi sen alla. Nyt rivi
+         * jaetaan: paikka ja aika otsikoksi, sää ja tunnelma sen alle
+         * (asetaMatkakirjanOtsikko).
+         */
+        this.asetaMatkakirjanOtsikko(merkinta.paikkarivi, virtaKaupunki.name);
+        /*
+         * PIKKUKUVAT MERKINNAN LOPPUUN (omistaja 17.9.2026 klo 22.05,
+         * Raamattu KARTTAUUDISTUKSEN PAATOKSET 35 kohta 4). Rivi
+         * rakennetaan tässä, koska tämä on kortin ainoa kohta, jossa
+         * fokusvirran kaupunki on tiedossa; muilla korttipoluilla rivi
+         * siivotaan uusiFactKeyssä eikä kaupungin kuvia ole.
+         */
+        paivitaMatkakirjanPikkukuvat(this, virtaKaupunki);
         this.factImageTitle = null;
         this.factImage.hidden = true;
         stopDiaryVoice(this);
@@ -10855,14 +13661,18 @@ export class UI {
          * fokusvirrat antavat kuvansa yhä itse, eikä niiden kortti
          * muutu.
          */
-        if (merkinta.kuva) {
+        /*
+         * UUDESSA KULUSSA EI KUVAA (omistaja 7.9.2026, Raamattu
+         * KAUPUNGIN KULKU: EI KUVIA, PULU - LUENTA - PULU): kaupungin,
+         * jonka pulutekstit on kirjoitettu uusiksi, matkakirjakortti on
+         * pelkkää tekstiä — kuvat kuuluvat kaupunkilehteen. Vanhan
+         * pakkauksen `matkakirja.kuva` jää dataan koskematta.
+         */
+        if (merkinta.kuva && !fokusvirtaUusiKulku(this, virtaKaupunki)) {
           this.naytaFactValokuva(virtaKaupunki.id, virtaKaupunki.name, merkinta.kuva);
         } else {
           this.naytaFactValokuva(null);
         }
-        this.typeText(this.factText, merkinta.teksti, 'fact', () => {
-          fokusvirtaMerkintaLuettu(this, virtaKaupunki);
-        });
         const virranMerkinta = fokusvirtaSisalto(this, virtaKaupunki)?.matkakirja;
         /*
          * AARREMERKINTÄ EI PERI SAAPUMISMERKINNÄN ÄÄNITETTÄ (omistajan
@@ -10883,30 +13693,116 @@ export class UI {
         } else {
           this.factKuuntele.hidden = true;
         }
-        // Lyhyt kertoja pysähtyy ensimmäisen virkkeen jälkeiseen
-        // hengähdykseen; osuus kertoo äänitteen lauserajan etsijälle,
-        // mistä kohtaa puhetta virkkeen loppu suunnilleen on.
-        const { eka: virtaEka } = ekaLause(merkinta.teksti);
-        const virtaOsuus = merkinta.teksti.length
-          ? virtaEka.length / merkinta.teksti.length : null;
-        this.asetaMerkinnanLuenta(virtaAanite ? () => {
-          const tila = kertojaTila();
-          if (tila === 'ei') {
-            stopDiaryVoice(this);
-          } else if (tila === 'lyhyt') {
-            playDiaryVoice(this, virtaAanite, {
-              ekaLauseeseen: true, osuus: virtaOsuus, viive: 1000,
-            });
-          } else {
-            playDiaryVoice(this, virtaAanite, { viive: 1000 });
+        /*
+         * LUENTA PÄÄTTYY SAMAAN KOHTAAN KUIN TEKSTI (omistaja 11.9.2026,
+         * Raamattu SAAPUMISEN UUSI JARJESTYS…). Kortin teksti on
+         * lyhennetty kaksi lausetta (js/fokusvirta.js
+         * lyhennettyMerkinta), ja luenta pysäytetään samaan lauserajaan
+         * — äänitettä ei äänitetä uusiksi, vaan osuus kertoo, mihin
+         * kohtaan puhetta lyhennetty teksti päättyy.
+         */
+        const lopetaOsuuteen = merkinta.lyhennetty && merkinta.tekstiKoko?.length
+          ? merkinta.teksti.length / merkinta.tekstiKoko.length : null;
+        // Kertoja lukee koko merkinnän tai ei mitään ('lyhyt' poistettu
+        // 3.9.2026, ks. js/aani-ehdokkaat.js kertojaTila).
+        const luentatehtava = virtaAanite ? () => {
+          if (kertojaTila() === 'ei') stopDiaryVoice(this);
+          else playDiaryVoice(this, virtaAanite, { viive: 1000, lopetaOsuuteen });
+        } : null;
+        /*
+         * Luentatehtävä talteen HETI, mutta ilman aloitusta: kaiutin ja
+         * kertojakytkin toimivat jo trailerin aikana, eikä edellisen
+         * kaupungin merkintä jää kytkimen taakse. Aloitus tulee
+         * trailerin jälkeen (aloitaMerkinta).
+         */
+        this.asetaMerkinnanLuenta(luentatehtava, { aloita: false });
+        /*
+         * ISOISÄ ALOITTAA, PULU HUUTAA VÄLIIN (omistaja 8.9.2026: *"ota
+         * kaikki pulun alustukset pois."*). Luenta lähtee siis heti
+         * ylläolevasta kutsusta, ja välihuudon ajoitus lasketaan sen
+         * kestosta — siksi tämä kutsu on tässä eikä kirjoituskoneen
+         * lopussa. Kommentti tulee yhä kirjoituskoneen lopusta
+         * (fokusvirtaMerkintaLuettu).
+         */
+        /*
+         * MERKINTÄ ALKAA YHDESTÄ PAIKASTA: kirjoituskone, luenta,
+         * välihuuto ja luentakuvasarja lähtevät samasta hetkestä.
+         * Aiemmin ne olivat tässä suoraan; nyt ne ovat funktiossa,
+         * koska minitraileri (alla) siirtää koko hetkeä eteenpäin.
+         */
+        const aloitaMerkinta = () => {
+          // Traileri kestää sekunteja: pelaaja on voinut sillä välin
+          // lähteä kaupungista, aloittaa uuden pelin tai saada uuden
+          // merkinnän korttiin.
+          if (this.dead || this.factKey !== merkinta.avain) return;
+          if (this.game.cityOf?.()?.id !== virtaKaupunki.id) return;
+          /*
+           * SUORAAN KARTALLE (omistajan testitila 23.9.2026): merkintä
+           * kortissa heti, luenta valmiiksi "Kuuntele"-napin taakse mutta
+           * ei käyntiin, ei pulun välihuutoa eikä isoja luentakuvia. Pulun
+           * saapumiskupla (merkinnän lopun koukku) jää samalla pois.
+           */
+          if (suoraanKartallePaalla()) {
+            this.factText.textContent = merkinta.teksti;
+            this.asetaMerkinnanLuenta(luentatehtava, { aloita: false });
+            return;
           }
-        } : null);
+          this.typeText(this.factText, merkinta.teksti, 'fact', () => {
+            fokusvirtaMerkintaLuettu(this, virtaKaupunki);
+          });
+          this.asetaMerkinnanLuenta(luentatehtava);
+          /*
+           * ISOISÄ ALOITTAA, PULU HUUTAA VÄLIIN (omistaja 8.9.2026:
+           * *"ota kaikki pulun alustukset pois."*). Luenta lähtee siis
+           * heti ylläolevasta kutsusta, ja välihuudon ajoitus lasketaan
+           * sen kestosta — siksi tämä kutsu on tässä eikä
+           * kirjoituskoneen lopussa. Kommentti tulee yhä
+           * kirjoituskoneen lopusta (fokusvirtaMerkintaLuettu).
+           */
+          fokusvirtaHuudahdus(this, virtaKaupunki);
+          /*
+           * ISOT KUVAT KESKELLE, SARJANA (omistaja 11.9.2026, Raamattu
+           * SAAPUMISEN UUSI JARJESTYS…). Kuva nousee SAMASTA HETKESTÄ
+           * kuin luenta lähtee — siksi kutsu on tässä, välihuudon
+           * vieressä. Isoisän kuva avautuu keskelle ruutua, PuluCamin
+           * kuvat seuraavat 4 s välein, ja lopuksi kartalle jää pieni
+           * kuvapakka. Ilman pakin `matkakirja.luentakuva`-kenttää tämä
+           * ei tee mitään.
+           */
+          naytaLuentakuvasarja(this, virtaKaupunki);
+        };
+        /*
+         * KAUPUNGIN MINITRAILERI ENNEN ISOISÄN ÄÄNTÄ (omistaja
+         * 11.9.2026, sanatarkasti: *"ennen isoisan kertomusta tulee
+         * kaupungin mini esittely kolmen kuvan ja nimen voimin"*).
+         *
+         * KERRAN PER PAKKI JA KAUPUNKI: kortti piirtyy samassa
+         * kaupungissa uudelleen (aikataulurivi, laatan ratkeaminen),
+         * eikä traileri saa alkaa alusta joka kerta — muisti on sama
+         * avain kuin saapumiskuplalla ja välihuudolla. Katselutilassa
+         * ja lehti auki ei traileria: silloin ruudulla on jo jokin muu
+         * näkymä, jonka päälle koko ruudun päällys ei kuulu. Lehden
+         * tunnistus on DIALOGIN TILA eikä `arrivalShownFor`: se jää
+         * osoittamaan viimeksi avattuun kaupunkiin (null suljettaessa,
+         * ei undefined), joten sillä ei voi kysyä "onko lehti auki".
+         */
+        const trailerAvain = `${game.pack.id}:${virtaKaupunki.id}`;
+        this.trailerNaytetty ??= new Set();
+        // Suoraan kartalle (testitila): ei traileria.
+        const trailerSaa = !this.katselu && !this.trailerNaytetty.has(trailerAvain)
+          && !this.arrivalDialog?.open && !suoraanKartallePaalla();
+        if (trailerSaa) {
+          this.trailerNaytetty.add(trailerAvain);
+          void naytaSaapumistraileri(this, virtaKaupunki).then(aloitaMerkinta);
+        } else {
+          aloitaMerkinta();
+        }
         return;
       }
       if (virtaKaupunki && fokusvirtaLukitseeLehden(this, virtaKaupunki)) {
         this.factCard.hidden = true;
         this.uusiFactKey(null);
-        this.factVoiceEl.textContent = '';
+        this.asetaOtsake('');
         this.asetaPaikkarivi('');
         this.factText.textContent = '';
         this.factImage.hidden = true;
@@ -10933,7 +13829,7 @@ export class UI {
       const key = `schedule:${aikataulu.packId}:${aikataulu.day}`;
       if (this.factKey === key) return;
       this.uusiFactKey(key);
-      this.factVoiceEl.textContent = 'Isoisän aikataulusta';
+      this.asetaOtsake('Isoisän aikataulusta');
       this.asetaPaikkarivi(`Päivä ${aikataulu.day}`);
       this.factImage.hidden = true;
       this.factKuuntele.hidden = true;
@@ -10987,8 +13883,36 @@ export class UI {
         const key = luentaAvain + aikatauluLisa;
         if (this.factKey === key) return;
         this.uusiFactKey(key);
-        this.factVoiceEl.textContent = 'Matkakirjasta';
-        this.asetaPaikkarivi(kaupunki.name);
+        /*
+         * EUROOPASSA SAMA OTSIKKO KUIN FOKUSVIRRAN KORTILLA (omistaja
+         * 8.9.2026): *"Nämä voisi muuttaa kaikkiin euroopan
+         * kaupunkeihin."* Näillä kaupungeilla ei ole vielä kirjoitettua
+         * kohtausriviä, joten otsikoksi tulee kaupunki ja matkan vuosi
+         * ("Kreeta, 1873") ilman tunnelmariviä — sää ja tunnelma
+         * kirjoitetaan kaanoniin myöhemmin.
+         *
+         * MITTA ON KAUPUNKI, EI LAUTA: Euroopan kaupungit ovat myös
+         * maailmankartalla, joten laudan tunnus kertoisi väärin.
+         *
+         * MITTA VAIHTUI FOKUSVIRTAAN (8.9.2026). Ennen tässä kysyttiin
+         * Euroopan omalta saapumistaululta (SAAPUMISTEKSTIT.europe),
+         * mutta se taulu on arkistoitu pois pelistä (omistaja: KOKO
+         * EUROOPPA KULKEE FOKUSVIRTAPAKKIEN KAUTTA) — ehto olisi jäänyt
+         * ikuisesti epätodeksi ja otsake putoaisi jokaisessa Euroopan
+         * kaupungissa vanhaan "Matkakirjasta"-muotoon. Fokusvirtapakki
+         * kertoo saman asian ja kertoo sen suoraan: se on olemassa
+         * jokaiselle Euroopan laudan kohteelle eikä yhdellekään muulle.
+         *
+         * Kysely on tahallaan pakkarekisteristä eikä fokusvirtaSisällön
+         * kautta: tämä varapolku on juuri se haara, jolla fokusmoodi voi
+         * olla POIS päältä, eikä otsakkeen muodon pidä riippua siitä.
+         */
+        if (fokusvirtaKaupungille(saapuminen.cityId)) {
+          this.asetaMatkakirjanOtsikko(kaupunki.name, kaupunki.name);
+        } else {
+          this.asetaOtsake('Matkakirjasta');
+          this.asetaPaikkarivi(kaupunki.name);
+        }
         this.factImageTitle = null;
         this.factImage.hidden = true;
         this.naytaFactValokuva(saapuminen.cityId, kaupunki.name);
@@ -11039,15 +13963,11 @@ export class UI {
           this.diaryFullUrl = null;
           this.naytaMerkinnanKaiutin(false);
           // Kertojan tila (yläpalkin valikko): pitkä lukee koko
-          // merkinnän, lyhyt vain ensimmäisen lauseen — kaiutinnappi
-          // jatkaa loput. Ei kertojaa → ei autoluentaa.
+          // merkinnän, ei kertojaa → ei autoluentaa ('lyhyt' poistettu
+          // 3.9.2026).
           const aloitaStriimi = () => {
             stopDiaryVoice(this);
-            const tila = kertojaTila();
-            if (tila === 'lyhyt') {
-              this.merkintaJatko = jatkoTeksti || null;
-              lueMerkinta(this, eka, { viive: 1000 });
-            } else if (tila === 'pitka') {
+            if (kertojaTila() === 'pitka') {
               lueMerkinta(this, [uusi.kuvaus, uusi.nosto].filter(Boolean).join(' '), { viive: 1000 });
             }
           };
@@ -11075,24 +13995,12 @@ export class UI {
           : null;
         this.naytaMerkinnanKaiutin(Boolean(saapumisLauta));
         // Kertojan tila (yläpalkin valikko): pitkä lukee koko merkinnän,
-        // lyhyt vain ensimmäisen lauseen (omistajan tarkennus — luenta
-        // pysähtyy ensimmäisen virkkeen jälkeiseen hengähdykseen), ei
-        // kertojaa jättää luennan aloittamatta — kaiutinnappi yliajaa
-        // sen hetkellisesti.
+        // ei kertojaa jättää luennan aloittamatta — kaiutinnappi yliajaa
+        // sen hetkellisesti ('lyhyt' poistettu 3.9.2026).
         const saapumisAani = this.diaryFullUrl;
         const aloitaSaapuminen = saapumisLauta ? () => {
-          const tila = kertojaTila();
-          if (tila === 'ei') {
-            stopDiaryVoice(this);
-          } else if (tila === 'lyhyt') {
-            playDiaryVoice(this, saapumisAani, {
-              ekaLauseeseen: true,
-              osuus: eka.length / (uusi.kuvaus.length + 1 + (uusi.nosto?.length ?? 0)),
-              viive: 1000,
-            });
-          } else {
-            playDiaryVoice(this, saapumisAani, { viive: 1000 });
-          }
+          if (kertojaTila() === 'ei') stopDiaryVoice(this);
+          else playDiaryVoice(this, saapumisAani, { viive: 1000 });
         } : null;
         if (saapumisLauta && this.luettuSaapuminen !== luentaAvain) {
           this.luettuSaapuminen = luentaAvain;
@@ -11114,7 +14022,7 @@ export class UI {
         const key = luentaAvain + aikatauluLisa;
         if (this.factKey === key) return;
         this.uusiFactKey(key);
-        this.factVoiceEl.textContent = voiceTitle(factVoice(fakta));
+        this.asetaOtsake(voiceTitle(factVoice(fakta)));
         this.asetaPaikkarivi(kaupunki.name);
         this.factImageTitle = typeof fakta === 'string' ? null : fakta.wiki ?? null;
         this.factImage.hidden = !this.factImageTitle;
@@ -11207,7 +14115,7 @@ export class UI {
 
     // Otsikko kertoo kumpi ääni puhuu, alarivi paikan.
     const onRoute = player.pos.type === 'edge';
-    this.factVoiceEl.textContent = voiceTitle(factVoice(fact));
+    this.asetaOtsake(voiceTitle(factVoice(fact)));
     this.asetaPaikkarivi(onRoute ? `Matkalla — ${city.name}` : city.name, city.name);
     // Havaintoon voi liittyä kuva: pieni linkki avaa ilmiön Wikipedia-kuvan.
     this.factImageTitle = typeof fact === 'string' ? null : fact.wiki ?? null;
@@ -11257,6 +14165,9 @@ export class UI {
     // Radiotilassa radio on ainoa ääni. Kaupungin äänimaiseman sulkee
     // radio.paalle() itse; tämä estää sen palaamisen.
     if (this.radioPaalla()) return;
+    // Linssin ajan kaupungin maisema on POISSA (omistaja 3.9.2026,
+    // js/aikajana.js avaaAanimaailma); purku kutsuu tämän uudelleen.
+    if (this.aikajana?.juuri?.isConnected) { stopPlaceStream(); return; }
     // Lennon aikana kuuluu matkustamon äänimaisema (omistajan toive
     // 10.8.2026: kalvon taustaääneksi äänimaisema lentokoneen
     // sisältä). Kaupungin maisema alkaa vasta, kun pelaaja astuu ulos
@@ -11385,7 +14296,15 @@ export class UI {
     this.syncAmbience();
     if (this.dead) return;
     this.primePhotoPool();
-    this.onChange?.(this.game);
+    /*
+     * KOHTAAMISTESTIN HIEKKALAATIKKO (js/kohtaamistesti.js, omistajan
+     * tilaus 5.9.2026): kehittäjän kohtaamislistasta avattu testi ajaa
+     * KLOONATTUA peliä, eikä siitä saa jäädä laitteelle jälkeä. Lippu
+     * sulkee renderin molemmat kirjoittajat — tallennuksen (onChange)
+     * ja passin leimat (stampPassport, alempana). Kaikki muu piirtyy
+     * kuten pelissä, koska juuri sitä testissä katsotaan.
+     */
+    if (!this.kohtaamistesti) this.onChange?.(this.game);
     // Aloituskartalla asettelu on kahdessa palstassa; pelin käynnistyttyä
     // kartta täyttää koko ruudun ja paneelit kelluvat sen päällä.
     // Katselutila käyttäytyy kuin peli olisi jo käynnissä.
@@ -11408,34 +14327,51 @@ export class UI {
     // vaiheissa se suljetaan, jottei se jää roikkumaan kartan päälle.
     if (this.game.phase !== 'offer' || this.game.player.isBot) this.closeArrival();
     this.renderIntro();
-    this.stampPassport();
-    // Vuorossa oleva pelaaja voi olla eri laudalla kuin edellinen.
-    if (this.game.pack.id !== this.drawnPackId) this.drawBoardFor(this.game.pack);
-    // Zoomiportaan päät ja näkyvyys tarkistetaan joka piirrossa: vaihe
-    // vaihtuu, lauta vaihtuu ja automaattinen saapumiszoom muuttaa tasoa.
-    this.kartta.paivitaZoomiNapit();
-    this.drawCountryBorders();
+    // Kohtaamistestissä passia ei leimata (ks. lippu ylempänä).
+    if (!this.kohtaamistesti) this.stampPassport();
     /*
-     * Vertailutilan maakerros piirretään joka piirrossa uudestaan
-     * kuten muutkin kerrokset: kartta rakennetaan kokonaan uusiksi kun
-     * lauta vaihtuu (drawBoardFor), ja ilman tätä kerros jäisi vanhan
-     * puun mukana pois — kaupungit palaisivat kartalle kesken
-     * vertailun.
+     * TASOKARTAN PIIRTO ON YHDEN PORTIN TAKANA (js/kartta.js lepotila).
+     * Pallolaudalla mikään alla olevista kerroksista ei synny: lauta,
+     * rajat, vertailu, laatat, kohteet, nappulat ja fokuskerros jäävät
+     * piirtämättä, ja pallo päivittää omat merkkinsä (paivitaPallolauta).
+     * Hereillä oleva kartta piirtyy täsmälleen kuten ennen.
      */
-    if (vertailuPaalla()) {
-      piirraVertailuMaat(this);
-      rakennaVertailuPalkki(this);
+    if (this.kartta.lepotila) {
+      this.paivitaPallolauta();
+    } else {
+      // Vuorossa oleva pelaaja voi olla eri laudalla kuin edellinen.
+      if (this.game.pack.id !== this.drawnPackId) this.drawBoardFor(this.game.pack);
+      // Zoomiportaan päät ja näkyvyys tarkistetaan joka piirrossa: vaihe
+      // vaihtuu, lauta vaihtuu ja automaattinen saapumiszoom muuttaa tasoa.
+      this.kartta.paivitaZoomiNapit();
+      this.drawCountryBorders();
+      /*
+       * Vertailutilan maakerros piirretään joka piirrossa uudestaan
+       * kuten muutkin kerrokset: kartta rakennetaan kokonaan uusiksi kun
+       * lauta vaihtuu (drawBoardFor), ja ilman tätä kerros jäisi vanhan
+       * puun mukana pois — kaupungit palaisivat kartalle kesken
+       * vertailun.
+       */
+      if (vertailuPaalla()) {
+        piirraVertailuMaat(this);
+        rakennaVertailuPalkki(this);
+      }
+      this.drawTokens();
+      this.drawTargets();
+      this.drawPawns();
+      /*
+       * Fokuskerros vasta kaupunkien ja laattojen jälkeen: se lukee
+       * kartalta valmiit data-fokus-maa -osat ja piilottaa käymättömien
+       * maiden datan. Tässä kohdassa myös uusi kaupunki on jo kirjattu
+       * käydyksi, joten maa tarkentuu samassa piirrossa kuin saavutaan.
+       */
+      this.paivitaFokusKerros();
+      // Linssikartta sulkeutuu itsestään, kun siirto on perillä.
+      this.tarkistaLinssikartta();
+      // Pallo ottaa laudan, kun tasokartalla alkanut avaus (aloituslento,
+      // vaihe 5 siirtää senkin pallolle) on ohi ja lauta on valittu palloksi.
+      if (!this.pallolauta && !this.pallolautaAvautuu && this.pallolautaHalutaan()) void this.avaaPallolauta();
     }
-    this.drawTokens();
-    this.drawTargets();
-    this.drawPawns();
-    /*
-     * Fokuskerros vasta kaupunkien ja laattojen jälkeen: se lukee
-     * kartalta valmiit data-fokus-maa -osat ja piilottaa käymättömien
-     * maiden datan. Tässä kohdassa myös uusi kaupunki on jo kirjattu
-     * käydyksi, joten maa tarkentuu samassa piirrossa kuin saavutaan.
-     */
-    this.paivitaFokusKerros();
     this.renderTurnPill();
     /*
      * Selitevalikon näkyvyys elää samaa vaihetta kuin pilleri
@@ -11490,6 +14426,9 @@ export class UI {
       return;
     }
     this.scheduleBot();
+    // Onko matka kesken reitillä? Silloin seuraava noppa pyörähtää
+    // itsestään pienen hengähdyksen jälkeen (omistaja 2.9.2026).
+    this.ajastaAutomaattinenHeitto();
   }
 
   /**
@@ -11531,7 +14470,11 @@ export class UI {
    * havainto 9.8.2026). Nollaus tehdään siksi aina showModalin JÄLKEEN.
    */
   nollaaDialoginVieritys(dialogi) {
-    for (const kortti of dialogi.querySelectorAll('.dialog-card')) kortti.scrollTop = 0;
+    // .laukku-sisus mukaan: matkalaukussa vierii kortin sisus eikä
+    // kortti itse (ks. index.html "LAUKKU VIERII SISUKSESTAAN").
+    for (const kortti of dialogi.querySelectorAll('.dialog-card, .laukku-sisus')) {
+      kortti.scrollTop = 0;
+    }
   }
 
   /**
@@ -11552,13 +14495,12 @@ export class UI {
   tehtavaNapinTila(city) {
     const { game } = this;
     /*
-     * KEVYT KULKU: kohtaaminen tavataan kartalta, ei lehden pohjalta
-     * (Raamattu, KEVYT KULKU -KOKEILU: *"kaupunkilehden ALIN KOHTA
-     * (josta pääsi tapaamaan henkilön) POIS"*). Perustelu ja umpikujan
-     * esto ovat yhdessä paikassa: js/fokusvirta.js
-     * fokusvirtaKohtaaminenPisteessa.
+     * LEHDEN TEHTÄVÄNAPPI EI ENÄÄ VÄISTY VIHREÄÄ PISTETTÄ (Raamattu,
+     * KORTIT POIS 2.9.2026: laattakysymykseen pääsee lehden
+     * tehtävänapista ja laatasta). Kevyen kulun kokeilu piilotti napin
+     * pisteen palaessa (fokusvirtaKohtaaminenPisteessa), jotta AARTEEN
+     * AVAUS -tehtävä olisi pakollinen; nyt piste on lisäovi, ei portti.
      */
-    if (fokusvirtaKohtaaminenPisteessa(this, city)) return null;
     const kaari = game.kaariTilanne?.(city.id);
     const tapaa = KOHTAAMISET[city.id]?.nappi
       ?? (kaari?.kohde?.nimi ? `Tapaa ${kaari.kohde.nimi}` : 'Etsi kätkö');
@@ -11581,22 +14523,77 @@ export class UI {
     return game.tehtavaTarjolla?.() ? { teksti: tapaa, pois: false } : null;
   }
 
-  /** Asettaa tehtävänapin tekstin, harmauden ja näkyvyyden kortille. */
+  /**
+   * Asettaa tehtävänapin tekstin, harmauden ja näkyvyyden kortille.
+   *
+   * LEHDEN TEHTÄVÄNAPPI ON POISSA (omistaja 6.9.2026 aamu, sanatarkasti:
+   * "Tapaa nappi pitää ottaa pois"): kohtaamiseen ja kätköön mennään
+   * kartan kultaisesta merkistä (Livian ohje saapuessa: "napauta
+   * kaupungin kultaista merkkiä kartalla"), ei lehden alapalkista.
+   * Napin tilalogiikka (tehtavaNapinTila) säilyy, koska savukkeet ja
+   * fokusvirran kuvaukset viittaavat siihen — nappi vain ei näy.
+   */
   paivitaTehtavaNappi(city) {
     const nappi = document.getElementById('arrival-yes');
     if (!nappi || !city) return;
+    nappi.hidden = true;
     const tila = this.tehtavaNapinTila(city);
-    nappi.hidden = !tila;
     if (!tila) return;
     nappi.textContent = tila.teksti;
     nappi.disabled = tila.pois;
     nappi.classList.toggle('tehtava-pois', tila.pois);
   }
 
-  openArrival(city) {
+  /**
+   * ETSI KÄTKÖ — LEHDEN OMA NAPPI, EI KARTAN.
+   *
+   * Ketju oli ennen saapumiskortin napin kuuntelijan sisällä; se on
+   * nimettynä metodina, koska kutsujia on useampi kuin yksi ja
+   * kopioitu ketju ajautuisi ensimmäisessä muutoksessa erilleen.
+   *
+   * TÄMÄ ON AARREKYSYMYS, EI LEHTI. Kutsu sulkee lehden ja menee
+   * suoraan tietovisaan/kohtaamiseen (doAction → game.actionQuiz).
+   * Kartalla aarteen ovi on VIHREÄ PISTE (erä 7, js/fokuspiste.js), ei
+   * tämä metodi: piste vie laattakysymykseen ja kaupunkilehti avataan
+   * laatan napautuksesta (avaaTutkinta). Aarteen etsinnän kulku on
+   * siis: vihreä piste (tai kaupunkilehdestä löytyvä aarrekysymys) →
+   * tämä metodi. Erään 9 asti tässä oli kartan "Etsi aarre" -nappi,
+   * joka avasi kaupunkilehden; omistaja poisti sen 13.9.2026.
+   */
+  etsiKatko() {
+    // Tutki paikka vie tietovisaan: tauolle jäänyt luenta ei saa
+    // jatkua kysymyksen alle. Ehto closeArrivalissa ei riitä, koska
+    // visa syntyy vasta actionQuizissa — sulku ehtii ensin
+    // (omistajan havainto Tangerissa).
+    this.luentaTauolla = null;
+    this.closeArrival();
+    sfx.play('paper');
+    /*
+     * Kohtaamiskaupungissa hahmo esittää kysymyksen itse, joten
+     * muotoarvonta (väittämä, valokuvaaja, tullimies) ohitetaan —
+     * "Tapaa gondolieeri" ei saa avata tullimiestä. Isoisän pulma
+     * pysyy silti etusijalla: nimetty muoto ohittaisi sen, joten
+     * pulman odottaessa kutsu tehdään entiseen tapaan.
+     */
+    const kohtaaminen = KOHTAAMISET[this.game.cityOf()?.id];
+    const pulmaOdottaa = this.game.pendingPuzzle?.();
+    this.doAction(() => this.game.actionQuiz(
+      kohtaaminen && !pulmaOdottaa ? { form: 'quiz' } : {},
+    ));
+  }
+
+  openArrival(city, { ohitaLehtilukko = false } = {}) {
     // Fokusmoodin lehtilukko: kaupungin lehti aukeaa vasta aarteesta,
     // ja siihen asti sen paikan ottaa annosteluvirta (js/fokusvirta.js).
-    if (fokusvirtaOhittaaLehden(this, city)) return;
+    //
+    // KARTAN "ETSI AARRE" -NAPPI OHITTAA LUKON (omistaja 9.9.2026:
+    // *"se on tavallaan ensimmäinen askel aarteen etsintää, että löytää
+    // lehdestä sen"*). Nappi tulee vasta pulun kommentin jälkeen ja on
+    // pelaajan ainoa ovi eteenpäin — sen takaa lehden on auettava.
+    // Lippu on nimenomaan tässä yhdessä kutsussa: muualla lukko toimii
+    // kuten ennen (tällä hetkellä fokusvirtaOhittaaLehden palauttaa
+    // aina false, mutta lukko voidaan kytkeä takaisin päälle).
+    if (!ohitaLehtilukko && fokusvirtaOhittaaLehden(this, city)) return;
     if (this.lehtitila.arrivalShownFor === city.id && this.arrivalDialog.open) return;
     // Mitta kuntoon ennen kuin mitään sivutetaan (ks. varmistaLehtiMitta).
     this.varmistaLehtiMitta();
@@ -11622,14 +14619,14 @@ export class UI {
     // Maalehti piilottaa esittelyrivin (ks. avaaMaalehti); kaupunkiin
     // palattaessa se on palautettava, tai se jäisi piiloon lopullisesti.
     this.arrivalIntro.hidden = false;
-    this.arrivalIntro.textContent = 'Isoisä on merkinnyt tämän paikan karttaansa.';
+    this.arrivalIntro.textContent = LEHDEN_VAKIOESITTELY;
     this.arrivalWiki.hidden = true;
     // Oma lyhytnosto (pilottikaupungit) näkyy heti ja toimii ilman
     // verkkoa; Lue lisää avaa oman artikkelin, joten nappi voi näkyä heti.
     // Avain on wiki-otsikko, mutta useimmilla kaupungeilla se on sama
     // kuin nimi. Ilman varasuunnitelmaa oma nosto katosi hiljaa
     // kaupungeilta, joilta wiki-kenttä puuttui.
-    const omaIntro = ARTIKKELIT[city.wiki ?? city.name]?.intro;
+    const omaIntro = kaupunginEsittely(city);
     if (omaIntro) {
       piirraLeipateksti(this.arrivalIntro, omaIntro);
       this.arrivalWiki.hidden = false;
@@ -11956,7 +14953,8 @@ export class UI {
       if (kohdekartta.varikartta) kuvat.push(kohdekartta.varikartta);
       // Miniatyyripiirrokset (etukäteispuskurin periaate): kortti
       // aukeaa napautuksesta, eikä piirros saa latautua vasta siinä.
-      kuvat.push(...Object.values(MINIATYYRIT[cityId] ?? {}));
+      kuvat.push(...Object.values(MINIATYYRIT[cityId] ?? {})
+        .map((arvo) => assetOsoite('miniatyyrit', arvo)));
     }
     return kuvat;
   }
@@ -12036,11 +15034,21 @@ export class UI {
    * siellä myöskään haeta.
    */
   nostonKuvat(nosto, leveys) {
-    if (!nosto?.tiedosto) return [];
-    const kuvat = [valokuvaUrl(nosto.tiedosto, leveys)];
+    /*
+     * Valmis osoite (pelin oma havainnekuva ämpärissä) ja julisteämpäri
+     * puskuroidaan sellaisinaan; Commonsin tiedostonimi käännetään
+     * leveyden mukaiseksi thumbiksi. Sama portaikko kuin piirrossa
+     * (varustaNostonKuva, kaariNostoGalleria).
+     */
+    const url = (t, w) => (t?.osoite
+      ?? (t?.ampari ? julisteUrl(t.ampari) : (t?.tiedosto ? valokuvaUrl(t.tiedosto, w) : null)));
+    const oma = url(nosto, leveys);
+    if (!oma) return [];
+    const kuvat = [oma];
     if (leveys === 900) {
       for (const teos of nosto.galleria ?? []) {
-        if (teos.tiedosto) kuvat.push(valokuvaUrl(teos.tiedosto, 900));
+        const teoksenUrl = url(teos, 900);
+        if (teoksenUrl) kuvat.push(teoksenUrl);
       }
     }
     return kuvat;
@@ -12137,13 +15145,10 @@ export class UI {
       // Ääninäyte, Apple Music ja ilmainen musiikkinäyte — yhteinen
       // toteutus kategorianostojen kanssa (lisaaNostonNapit).
       this.lisaaNostonNapit(otsikkoRivi, nosto);
-      /*
-       * VÄLIOTSIKON REAKTIONAPPI (js/reaktiot.js) rivin päähän, sama
-       * kuin kategorianostoilla (js/maalehti.js). Sivuavain tulee
-       * kutsujalta: Tutki-ikkunan liuska tietää, mikä sivu on auki,
-       * eikä sitä voi päätellä täältä ilman lehtitilan kaivamista.
-       */
-      piirraOtsikonReaktio(otsikkoRivi, sivuAvain, nosto.otsikko);
+      // REAKTIONAPIT EIVÄT OLE ENÄÄ OTSIKKORIVILLÄ (omistajan päätös
+      // 21.9.2026): ne piirtyvät "Lue lisää aiheesta" -linkin viereen
+      // jutun lopussa, ks. LOPPURIVI alempana. Sama kohdeavain
+      // (otsikkoAvain) pitää vanhat äänet tallessa.
       lohko.appendChild(otsikkoRivi);
       if (nosto.tyyppi === 'kuva' && nosto.tiedosto) {
         const kuva = document.createElement('img');
@@ -12160,12 +15165,21 @@ export class UI {
         lohko.appendChild(kuva);
       }
       lohko.appendChild(html('p', 'arrival-intro', nosto.teksti));
+      /*
+       * LOPPURIVI: "Lue lisää aiheesta" ja reaktionapit SAMALLA
+       * RIVILLÄ (omistajan päätös 21.9.2026), sama malli kuin
+       * js/maalehti.js piirraKategoria.
+       */
+      const loppurivi = html('div', 'leipa-loppurivi');
       if (nosto.wiki) {
         const nappi = html('button', 'wiki-btn', 'Lue lisää aiheesta');
         nappi.type = 'button';
         nappi.addEventListener('click', () => this.openWikiArticle(nosto.wiki, nosto.otsikko));
-        lohko.appendChild(nappi);
+        loppurivi.appendChild(nappi);
       }
+      const reaktioAvain = otsikkoAvain(sivuAvain, nosto.otsikko);
+      if (reaktioAvain) piirraReaktiot(loppurivi, reaktioAvain, { otsikko: nosto.otsikko });
+      if (loppurivi.childNodes.length) lohko.appendChild(loppurivi);
       this.lisaaNostonLinkki(lohko, nosto);
       const lahteet = [lahdemerkinta(nosto.lahde), nosto.aaniLahde]
         .filter(Boolean).join(' · ');
@@ -12285,7 +15299,8 @@ export class UI {
    */
   varustaNostonKuva(kuva, nosto, leveys) {
     kuva.decoding = 'async';
-    kuva.alt = nosto.selite ?? nosto.otsikko;
+    // Sivulla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+    kuva.alt = kuvatekstiLyhyt(nosto) || nosto.otsikko;
     /*
      * Selaimen oma kuvanraahaus keskeyttää osoitintapahtumat
      * (pointercancel), ja sivunvaihtopyyhkäisy kuoli heti kun se alkoi
@@ -12306,7 +15321,7 @@ export class UI {
      * nähtävyysjuttuun.
      */
     const osoitteet = nosto.osoite
-      ? [nosto.osoite]
+      ? [assetOsoite('ihmeet', nosto.osoite)]
       : (nosto.ampari
         ? [julisteUrl(nosto.ampari)]
         : [...new Set([
@@ -12438,7 +15453,8 @@ export class UI {
     // selaus ei odota verkkoa (omistajan tilaus 14.8.2026).
     if (lista) {
       esilataaKuvat(lista.map((t) => (t.osoite
-        ?? (t.ampari ? julisteUrl(t.ampari) : valokuvaSuurennos(t.tiedosto, 1600)))));
+        ? assetOsoite('ihmeet', t.osoite)
+        : (t.ampari ? julisteUrl(t.ampari) : valokuvaSuurennos(t.tiedosto, 1600)))));
     }
     const nayta = () => {
       const teos = lista ? lista[indeksi] : nosto;
@@ -12456,9 +15472,12 @@ export class UI {
       if (teos.osoite || teos.ampari) {
         asetaKuva(kuva, teos.osoite ?? julisteUrl(teos.ampari), null);
       } else asetaKuva(kuva, valokuvaSuurennos(teos.tiedosto, 1600), valokuvaUrl(teos.tiedosto, 1600));
-      kuva.alt = teos.otsikko ?? teos.selite ?? '';
-      kuvaselite.textContent = teos.selite ?? '';
-      kuvalahde.textContent = [teos.otsikko, teos.lahde].filter(Boolean).join(' · ');
+      kuva.alt = teos.otsikko ?? kuvatekstiPitka(teos);
+      // AVATTU KUVA NÄYTTÄÄ AINA PITKÄN (js/kuvatekstit.js).
+      kuvaselite.textContent = kuvatekstiPitka(teos);
+      // Lähderivi kootaan joka kuvanvaihdossa uudestaan; taytaLahderivi
+      // tyhjentää elementin, joten havainnekuvaselite syntyy mukana.
+      taytaLahderivi(kuvalahde, [teos.otsikko, teos.lahde].filter(Boolean).join(' · '), teos);
       kuvateksti.hidden = !kuvaselite.textContent && !kuvalahde.textContent;
       /*
        * "MATKAKIRJAN IHME" -NAUHA MYÖS TÄHÄN KATSELIMEEN (omistaja
@@ -12473,7 +15492,7 @@ export class UI {
       kotelo.classList.toggle('kuva-nauhalla', Boolean(nauha));
       reaktiot?.remove();
       reaktiot = piirraReaktiot(kortti, teos.reaktio, {
-        otsikko: teos.reaktioOtsikko ?? teos.otsikko ?? '',
+        otsikko: teos.reaktioOtsikko ?? teos.otsikko ?? kuvatekstiLyhyt(teos),
         luokka: 'reaktiot-suurennos',
       });
       if (laskuri) laskuri.textContent = `${indeksi + 1} / ${lista.length}`;
@@ -12578,6 +15597,21 @@ export class UI {
      * ennen saapumisikkunaa, koska se avataan aina päällimmäiseksi.
      */
     if (this.passportDialog?.open) return this.passportDialog;
+    /*
+     * TIIVIS ARKKI ON MYÖS ISÄNTÄ (PAATOKSET 34 kohta 18 d, omistaja
+     * 18.9.2026: *"Kokoruutu-nappi EI TOIMI iPhonella"*).
+     *
+     * MITATTU JUURISYY (390 px, Pariisin Nähtävyydet-arkki): suurennos
+     * meni `arrivalDialog`iin, joka ei ole auki lainkaan — liuskan
+     * Nähtävyydet-rivi avaa OMAN modaalinsa `tiivis-lehtiarkki`.
+     * Suljettuun dialogiin liitetty kortti ei piirry (mitattu korkeus
+     * 0 px), ja auki ollessaankin modaali elää selaimen ylimmässä
+     * kerroksessa, jonka taakse toisen dialogin lapsi jäisi. Sama
+     * sääntö kuin nähtävyysikkunalla ja matkalaukulla: päällimmäinen
+     * AUKI oleva dialogi on isäntä.
+     */
+    const arkki = document.getElementById('tiivis-lehtiarkki');
+    if (arkki?.open) return arkki;
     return this.arrivalDialog;
   }
 
@@ -12782,7 +15816,7 @@ export class UI {
    * tuontisyklin (fokuspiste tuo fokusvirran, fokusvirta fokustehtävät),
    * joten kutsu kulkee ui-olion kautta kuten lehden muutkin.
    */
-  paivitaFokuspiste() { return paivitaFokuspiste(this); }
+  paivitaFokuspiste() { return paivitaFokuspisteKaikillaLaudoilla(this); }
 
   /*
    * Sama ohut delegaattori eläintäyille (js/elaintaky.js): kortti
@@ -12839,6 +15873,10 @@ export class UI {
 
   avaaRaamattuLehti() { return avaaRaamattuLehti(this); }
 
+  /* Työhuoneen toinen nappi (omistaja 11.9.2026): entiset seitsemän
+     työhuoneen nappia yhden lehden riveinä. */
+  avaaKehittajalehti() { return avaaKehittajalehti(this); }
+
   avaaTilanneLehti() { return avaaTilanneLehti(this); }
 
   avaaPoiminnatLehti() { return avaaPoiminnatLehti(this); }
@@ -12847,7 +15885,19 @@ export class UI {
 
   avaaGrafiikkaLehti() { return avaaGrafiikkaLehti(this); }
 
+  avaaMusiikkiLehti() { return avaaMusiikkiLehti(this); }
+
   avaaLukijoiltaLehti() { return avaaLukijoiltaLehti(this); }
+
+  /*
+   * KEHITTÄJÄN KOHTAAMISLISTA (omistajan tilaus 5.9.2026) — kaikki
+   * aarrekohtaamiset maanosittain, jokainen avattavissa
+   * hiekkalaatikossa. Koko toteutus on js/kohtaamistesti.js:ssä; se
+   * vaihtaa testin ajaksi this.gamen klooniin ja nostaa
+   * this.kohtaamistesti-lipun, joka estää renderiä kirjoittamasta
+   * tallennetta tai passin leimoja (ks. render).
+   */
+  avaaKohtaamistesti() { return avaaKohtaamistesti(this); }
 
   piirraMinitehtava(kohde, kategoria) {
     const { tehtava } = kategoria;
@@ -13054,6 +16104,9 @@ export class UI {
     if (!juliste) return;
     this.naytaKulttuuriKuva({
       otsikko: juliste.otsikko,
+      // Molemmat pituudet mukaan: katselin näyttää pitkän, mutta
+      // lyhyt kulkee alt-tekstiin (js/kuvatekstit.js).
+      lyhyt: juliste.lyhyt,
       selite: juliste.selite,
       lahde: JULISTE_LAHDE,
       osoite: julisteUrl(juliste.tiedosto),
@@ -13076,15 +16129,31 @@ export class UI {
       {
         otsikko: nosto.otsikko,
         tiedosto: nosto.tiedosto,
+        // Kaksi pituutta kulkee sarjan mukana (js/kuvatekstit.js):
+        // sivulla lyhyt, suurennoksessa pitkä.
+        lyhyt: nosto.lyhyt,
         selite: nosto.selite,
         lahde: nosto.lahde,
         // Pro-tuottajan tekijäsivu kulkee teoskohtaisesti: sarjan
         // kuvat voivat olla eri tekijöiltä (js/tekijakortti.js).
         tekija: nosto.tekija,
         tekijaId: nosto.tekijaId,
+        // Ämpärikuvalla ei ole Commons-tiedostonimeä; valmis osoite
+        // kulkee mukana, jotta sarjan ensimmäinen teos näkyy myös
+        // silloin kun noston kuva on pelin oma havainnekuva.
+        osoite: nosto.osoite,
+        ampari: nosto.ampari,
       },
       ...nosto.galleria,
     ];
+    /*
+     * TEOKSEN OSOITE: valmis polku ensin, sitten julisteämpäri ja
+     * viimeisenä Commonsin thumb-putku varareitteineen. Sama portaikko
+     * kuin suurennoksessa (naytaKulttuuriKuva) ja noston omalla kuvalla
+     * (varustaNostonKuva) — kolme paikkaa, yksi järjestys.
+     */
+    const teoksenOsoite = (t) => (t.osoite
+      ?? (t.ampari ? julisteUrl(t.ampari) : valokuvaUrl(t.tiedosto, 900)));
     /*
      * Sarjan kaikki kuvat latautuvat taustalla heti kun galleria on
      * sivulla (omistajan tarkennus 14.8.2026: ensimmäinen erä kattoi
@@ -13092,7 +16161,7 @@ export class UI {
      * nostogalleria jäi lataamaan kuvat vasta nuolesta). Sama osoite
      * ja leveys kuin nayta():ssa, jotta välimuisti osuu.
      */
-    esilataaKuvat(teokset.map((t) => valokuvaUrl(t.tiedosto, 900)));
+    esilataaKuvat(teokset.map(teoksenOsoite).filter(Boolean));
     let kohdalla = 0;
     const laskuri = html('span', 'arrival-kuva-laskuri', `1 / ${teokset.length}`);
     // Suurennos avaa kohdalla olevan teoksen JA koko sarjan selattavana
@@ -13101,11 +16170,13 @@ export class UI {
     const nayta = (suunta) => {
       kohdalla = (kohdalla + suunta + teokset.length) % teokset.length;
       const teos = teokset[kohdalla];
-      asetaKuva(kuva, valokuvaUrl(teos.tiedosto, 900), valokuvaVara(teos.tiedosto, 900));
-      kuva.alt = teos.selite ?? teos.otsikko ?? nosto.otsikko;
+      asetaKuva(kuva, teoksenOsoite(teos),
+        teos.osoite || teos.ampari ? null : valokuvaVara(teos.tiedosto, 900));
+      kuva.alt = kuvatekstiLyhyt(teos) || teos.otsikko || nosto.otsikko;
       kuva.galleriaTila = { teokset, kohdalla };
-      if (selite) selite.textContent = teos.selite ?? '';
-      if (lahde) taytaLahderivi(lahde, teos.lahde ?? nosto.lahde ?? '', teos);
+      // Sivulla lyhyt; pitkä näkyy vasta suurennoksessa.
+      if (selite) selite.textContent = kuvatekstiLyhyt(teos);
+      if (lahde) kortinKuvalahde(lahde, teos.lahde ?? nosto.lahde ?? '', teos);
       laskuri.textContent = `${kohdalla + 1} / ${teokset.length}`;
     };
     const nuoli = (luokka, merkki, nimi, suunta) => {
@@ -13164,19 +16235,28 @@ export class UI {
       nappi.addEventListener('click', () => this.kulttuuriAaniNapista(nosto, nappi));
       otsikkoRivi.appendChild(nappi);
     }
-    if (nosto.musiikki) {
+    for (const musiikki of nostonMusiikkilinkit(nosto)) {
       const linkki = html('a', 'kulttuuri-musiikkilinkki');
-      linkki.href = nosto.musiikki;
+      linkki.href = musiikki.url;
       linkki.target = '_blank';
       linkki.rel = 'noopener';
-      if (nosto.musiikkiNimi) linkki.title = nosto.musiikkiNimi;
+      if (musiikki.otsake) linkki.title = musiikki.otsake;
       linkki.innerHTML = '<svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">'
         + '<path d="M9 18.5V6.2l9-1.7v11.3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>'
         + '<circle cx="6.8" cy="18.6" r="2.2" fill="currentColor"/>'
-        + '<circle cx="15.8" cy="15.9" r="2.2" fill="currentColor"/></svg> Apple Music';
+        + '<circle cx="15.8" cy="15.9" r="2.2" fill="currentColor"/></svg> ';
+      // Nimi tekstisolmuna: se tulee datasta, eikä sitä ladota HTML:nä.
+      linkki.appendChild(document.createTextNode(musiikki.nakyva));
       otsikkoRivi.appendChild(linkki);
     }
-    if (nosto.musiikkiNayte) {
+    /*
+     * LISENSSIPORTTI (Fable 23.9.2026, js/lisenssi.js): NC- tai ND-ehtoinen
+     * näyte ei soi. Silloin nosto käyttäytyy kuin näytettä ei olisi
+     * (esikuuntelu tai linkki voi tulla tilalle alla).
+     */
+    const musiikkiNayte = nosto.musiikkiNayte && aaniLisenssiSallittu(nosto.musiikkiNayteNimi)
+      ? nosto.musiikkiNayte : null;
+    if (musiikkiNayte) {
       const nappi = html('button', 'kulttuuri-kuuntele kulttuuri-musiikkinayte');
       nappi.type = 'button';
       nappi.title = nosto.musiikkiNayteNimi ?? 'Vapaasti lisensoitu ääninäyte';
@@ -13186,7 +16266,7 @@ export class UI {
         + '<circle cx="15.8" cy="15.9" r="2.2" fill="currentColor"/></svg>'
         + '<span>Kuuntele musiikkia</span><span class="aika" hidden></span>';
       nappi.addEventListener('click', () => this.kulttuuriAaniNapista(
-        { aani: nosto.musiikkiNayte, otsikko: nosto.otsikko }, nappi,
+        { aani: musiikkiNayte, otsikko: nosto.otsikko }, nappi,
       ));
       otsikkoRivi.appendChild(nappi);
     }
@@ -13206,7 +16286,14 @@ export class UI {
      * Linkki itse vie edelleen Apple Musiciin, jossa tilaaja saa
      * koko kappaleen.
      */
-    if ((nosto.esikuuntelu || nosto.musiikki) && !nosto.musiikkiNayte) {
+    /*
+     * ESIKUUNTELU VAIN YHDEN LINKIN NOSTOLLE. Automaattinen esikatselu
+     * johdetaan Apple Music -linkistä (esikuunteluNapista), ja
+     * linkkilistalla ei ole yhtä "sitä kappaletta" — kaksi samannimistä
+     * "Kuuntele näyte" -nappia vierekkäin ei kertoisi kumpi soi.
+     * Nimenomainen `esikuuntelu`-termi toimii silloinkin.
+     */
+    if ((nosto.esikuuntelu || typeof nosto.musiikki === 'string') && !musiikkiNayte) {
       const nappi = html('button', 'kulttuuri-kuuntele kulttuuri-musiikkinayte');
       nappi.type = 'button';
       nappi.title = 'Esikuuntelu Apple Musicista (30 s)';
@@ -13492,11 +16579,18 @@ export class UI {
     this.wikiKuvateksti.textContent = '';
     this.wikiKuvateksti.hidden = !kuva;
     if (!kuva) return;
-    if (kuva.caption) {
-      this.wikiKuvateksti.appendChild(html('span', 'nahtavyys-selite', kuva.caption));
+    // Sivulla lyhyt, suurennoksessa (openLightbox) pitkä
+    // (js/kuvatekstit.js, ks. kuratoituGalleria).
+    const lyhyt = kuva.lyhyt ?? kuva.caption;
+    if (lyhyt) {
+      this.wikiKuvateksti.appendChild(html('span', 'nahtavyys-selite', lyhyt));
     }
     if (kuva.lahde) {
-      this.wikiKuvateksti.appendChild(html('span', 'nahtavyys-lahde', kuva.lahde));
+      // Sama apuri kuin kaikilla muilla lähderiveillä (2.9.2026):
+      // kuratoitu kuva voi olla myös Matkakirjan oma havainnekuva.
+      this.wikiKuvateksti.appendChild(
+        kortinKuvalahde(html('span', 'nahtavyys-lahde'), kuva.lahde, kuva),
+      );
     }
   }
 
@@ -13646,8 +16740,13 @@ export class UI {
       // Lähde kuvatekstin jatkeeksi samalle riville pienemmällä
       // (23.8.2026): CC BY vaatii tekijän maininnan myös
       // suurennoksessa, jossa kuva on isoimmillaan.
-      kuvateksti.textContent = kohde.caption ?? '';
-      if (kohde.lahde) kuvateksti.appendChild(html('span', 'lightbox-lahde', kohde.lahde));
+      // AVATTU KUVA NÄYTTÄÄ AINA PITKÄN (js/kuvatekstit.js): kuvalistan
+      // `caption` on jo pitkä versio (ks. kuratoituGalleria).
+      kuvateksti.textContent = kuvatekstiPitka(kohde) || kohde.caption || '';
+      if (kohde.lahde) {
+        kuvateksti.appendChild(taytaLahderivi(html('span', 'lightbox-lahde'),
+          kohde.lahde, kohde));
+      }
       kuvateksti.hidden = !kohde.caption && !kohde.lahde;
       counter.textContent = kuvat.length > 1 ? `${kohdalla + 1} / ${kuvat.length}` : '';
       prev.hidden = next.hidden = kuvat.length < 2;
@@ -13828,7 +16927,7 @@ export class UI {
     // Uusi peli tuo tekstin takaisin täyteen näkyvyyteen häivytyksestä —
     // mutta lähikuvassa teksti on väistynyt tarkoituksella, joten sitä ei
     // palauteta joka renderöinnillä.
-    if (nakyy && !this.aloitusZoom) this.introEl.classList.remove('intro-fade', 'intro-pois');
+    if (nakyy && !this.aloitusvalintaAuki()) this.introEl.classList.remove('intro-fade', 'intro-pois');
     /*
      * KOKO AVAUSKAPPALE ODOTTAA NAPPIA (omistajan tilaus 12.8.2026).
      *
@@ -13847,9 +16946,47 @@ export class UI {
     // Sumuverho syttyy samalla kuin teksti: portin takana kartta on
     // terävä, ja portilla on oma tummennuksensa.
     this.introEl.classList.toggle('intro-aloitettu', Boolean(nakyy && this.aloitettu));
+    /*
+     * ETUSIVUN ESIRENDERÖITY PALLO (pallolauta vaihe 5a, oletukseksi
+     * aallossa 1D). Yksi koukku: moduuli lukee lipun (oletus PÄÄLLÄ
+     * pallolaudalla, pois `?lauta=kartta`-tilassa), hakee videon
+     * ämpäristä ja purkaa itsensä. Dynaaminen tuonti kaatuu yhden
+     * tiedoston versiossa kuten linsseillä ja pallolaudalla, ja ilman
+     * verkkoa kerros ei synny: tasokartalla etusivu jää vanhaan
+     * karttaan, pallolaudalla pelkäksi pergamentiksi (karttaa ei
+     * herätetä — etusivunPalloKaytossa).
+     */
+    if (nakyy && !this.aloitusvalintaPallolla && etusivupalloPaalla()) {
+      void import('./etusivupallo.js')
+        .then((m) => m.paivitaEtusivupallo(this, nakyy))
+        .catch(() => {
+          /*
+           * MODUULIA EI OLE (yhden tiedoston versio): silloin etusivun
+           * pallo on mahdoton, ja vanha pienoiskartta on ainoa etusivu —
+           * kartta herätetään lepotilasta, johon mount sen pani. Tämä on
+           * eri asia kuin verkkovika: siinä moduuli on olemassa ja päättää
+           * itse jättää ylälohkon pergamentiksi.
+           */
+          if (this.kartta.lepotila && !this.pallolauta) {
+            this.kartta.heraa();
+            this.render();
+          }
+        });
+    } else {
+      /*
+       * PURKU ON SYNKRONINEN eikä odota moduulia (aalto 1D): kehittäjän
+       * vipu sammuttaa kerroksen SAMASSA piirrossa, jossa tasokartta
+       * herää — muuten ruudulla olisi hetken sekä pallo että vanha
+       * pienoiskartta. Kesken oleva avaus (etusivupalloAvautuu) purkaa
+       * itsensä moduulin omassa vartiossa.
+       */
+      this.etusivupallo?.pura();
+      this.etusivupallo = null;
+    }
     if (!nakyy) {
       this.introShown = false;
       this.introRunko.textContent = '';
+      this.peruAvausjuliste();
       if (this.introValinta) this.introValinta.hidden = true;
       stopIntroVoice(this);
       this.suljeAloitusportti();
@@ -13860,34 +16997,63 @@ export class UI {
     // joten lukuääni, kirjoituskone ja ambienssi käynnistyvät kaikki
     // samasta Aloita seikkailu -painalluksesta. Tausta on himmeänä takana.
     if (!this.aloitettu) {
+      /*
+       * KOKO JULISTE ON PIILOSSA JO PORTIN TAKANA (omistaja 6.9.2026
+       * aamu: *"ota taustalta pois pelin otsikko"*): viivat, otsikko,
+       * "osa II" ja otsikon harso paljastuvat vasta napin painalluksen
+       * jälkeen vaihe kerrallaan (naytaAvausjuliste). Jos piilotus
+       * tehtäisiin vasta napautuksesta, juliste välähtäisi ensin pois
+       * ja rakentuisi sitten takaisin.
+       */
+      this.piilotaAvausjuliste();
+      /*
+       * KIRJASINKOKO MITATAAN JO PORTIN TAKANA (omistaja 5.9.2026 klo
+       * 00.20: *"etusivun otsikko hyppää alussa eri kokoon kun
+       * kirjoituskone teksti alkaa"*). fitIntro ajettiin ennen vasta
+       * kertomuksen alkaessa, ja koska se asettaa lohkoille eri koon
+       * kuin css:n lähtöarvo, julisteotsikko kasvoi ja nousi juuri
+       * kirjoituskoneen ensimmäisellä naksahduksella. Mittaus on
+       * idempotentti (sama lohkon korkeus → sama koko), joten myöhemmät
+       * kutsut eivät enää liikuta mitään.
+       */
+      this.fitIntro();
       this.showAloitusportti();
       return;
     }
     this.introShown = true;
+    // Pelin resetistä palattaessa portti ohitetaan: juliste piiloon
+    // tässä samassa piirrossa, ennen kuin mitään ehtii näkyä.
+    this.piilotaAvausjuliste();
     /*
-     * Avauslennon esilämmitys alkaa samasta hetkestä kuin kertomus:
-     * pelaaja kuuntelee, peli rakentaa kohdelaudan taustalla
-     * (ks. esilammitaAvaus).
-     */
-    this.esilammitaAvaus();
-    /*
-     * PAIKKARIVI NAPUTETAAN ENSIN (omistajan tilaus 25.8.2026: "Tätä ei
-     * tarvitse lukea, mutta konekirjoitus ääni pitää kuulua ensin tämän
-     * kohdalla, sitten vasta alkaa seuraavan kappaleen luenta").
-     * Kirjoituskone lyö kohtausmerkinnän, ja vasta sen valmistuttua
-     * kertoja aloittaa ja runko alkaa kirjoittua.
-     */
-    if (this.introPaikka) this.introPaikka.textContent = '';
-    /*
-     * Avausteksti kirjoittuu selvästi hitaammin kuin muut: se on matkan
-     * ensimmäinen hetki eikä pelitilanteen ilmoitus.
+     * KOKO ALALOHKO ON LOPULLISEN KOKOINEN ENNEN ENSIMMÄISTÄ KIRJAINTA
+     * (omistaja 6.9.2026 klo 11.11, iPhone: *"Konekirjoitusteksti
+     * hyppää kun tekstiä tulee"*).
      *
-     * Teksti varaa tilansa näkymättömällä varjotekstillä (typeTextin
-     * oma pending-span) jo ennen kirjoitusta, ja fitIntro mitataan
-     * vasta sen jälkeen — muuten palsta kasvaisi kirjoituksen alla ja
-     * kansikuva hyppisi sen perässä.
+     * JUURISYY: kumpikin kirjoituskohta oli TYHJÄ siihen asti, kunnes
+     * sen oma typeText alkoi — paikkarivi vasta AVAUS_KERTOMUS_MS:n
+     * kohdalla ja runko vasta rivin valmistuttua. typeText varaa
+     * tilansa näkymättömällä varjotekstillä (pending-span), mutta se
+     * varaus syntyy vasta kirjoituksen alkaessa, ja koska palsta on
+     * arkin keskellä (css .intro-arkki align-items: center), lohko
+     * kasvoi kahdessa askeleessa ja liukui ylöspäin kummallakin.
+     * Mitattu Chromiumilla ennen korjausta: palstan yläreuna 558 → 535
+     * → 439 px (390 × 844) ja 532 → 519 → 461 px (1280 × 800), ja
+     * VALITSE ALOITUSKAUPUNKI -nappi saman verran alaspäin.
+     *
+     * Korjaus varaa MOLEMPIEN kirjoituskohtien lopullisen tilan tässä,
+     * samassa piirrossa jossa alalohko ylipäätään ilmestyy: teksti on
+     * paikallaan koko mitassaan, näkymättömänä. Sen jälkeen mitään ei
+     * lisätä lohkoon — kirjoituskone vain paljastaa jo varattua tilaa,
+     * ja harso (::before) on lopullisen kokoinen ensimmäisestä
+     * kehyksestä. Vartija: tests/lento-ajoitus.test.mjs.
+     *
+     * PAIKKARIVIN TEKSTI TALTEEN TÄSSÄ: sama merkkijono kirjoitetaan
+     * myöhemmin, joten varaus ja kirjoitus eivät voi erota toisistaan
+     * (esim. kuukauden vaihtuessa keskellä avausta).
      */
-    this.introRunko.textContent = '';
+    this.introPaikkaTeksti = `${this.introPaikkarivi()}:`;
+    if (this.introPaikka) this.varaaKirjoitustila(this.introPaikka, this.introPaikkaTeksti);
+    this.varaaKirjoitustila(this.introRunko, INTRO_TEXT);
     /*
      * MISTÄ ALOITAN? -NAPPI ILMESTYY VASTA KIRJOITUKSEN JÄLKEEN
      * (omistajan tilaus 25.8.2026). Nappi on kuitenkin jo asettelussa
@@ -13903,6 +17069,19 @@ export class UI {
         this.introValinta.addEventListener('click', () => this.aloitaKartalta());
       }
     }
+    /*
+     * MITTAUS VASTA NYT, kun lohkossa on kaikki mitä siihen tulee:
+     * teksti varattuna ja nappi paikallaan. Näin fitIntro näkee saman
+     * korkeuden kuin kirjoituksen lopussa eikä kirjasinkoko muutu
+     * kesken avauksen (omistajan aiempi havainto 5.9.2026 klo 00.20).
+     */
+    this.fitIntro();
+    /*
+     * Avauslennon esilämmitys alkaa samasta hetkestä kuin kertomus:
+     * pelaaja kuuntelee, peli rakentaa kohdelaudan taustalla
+     * (ks. esilammitaAvaus).
+     */
+    this.esilammitaAvaus();
     const aloitaRunko = () => {
       if (this.dead || this.game.phase !== 'pickstart') return;
       // Luenta alkaa vasta nyt — paikkarivi oli pelkkää konekirjoitusta.
@@ -13911,32 +17090,175 @@ export class UI {
         // Nappi paljastuu pehmeästi vasta kun viimeinen kirjain on tullut.
         this.introValinta?.classList.remove('intro-valinta-piilossa');
       }, INTRO_TYPE_MS);
-      // Koko teksti on paikallaan (typeTextin varjoteksti varaa tilan),
-      // joten koon voi sovittaa heti — mikään ei liiku kirjoituksen alla.
-      this.fitIntro();
+      // EI fitIntroa täällä: tila on varattu jo renderIntrossa, ja
+      // mittaus juuri kirjoituskoneen alkaessa on se, mikä ennen sai
+      // asettelun hyppäämään.
     };
-    if (this.introPaikka) {
-      this.typeText(this.introPaikka, `${this.introPaikkarivi()}:`, 'intro',
-        aloitaRunko, INTRO_TYPE_MS);
-      this.fitIntro();
-    } else {
-      aloitaRunko();
+    /*
+     * KIRJOITUSKONE JA LUENTA ALKAVAT VASTA ALAVIIVAN JÄLKEEN (omistaja
+     * 6.9.2026 aamu). Pari säilyttää keskinäisen ajoituksensa —
+     * paikkarivi naputetaan ensin (omistajan tilaus 25.8.2026: *"Tätä
+     * ei tarvitse lukea, mutta konekirjoitus ääni pitää kuulua ensin
+     * tämän kohdalla, sitten vasta alkaa seuraavan kappaleen luenta"*),
+     * ja sen valmistuttua kertoja aloittaa rungon kanssa — mutta koko
+     * pari odottaa julisteen valmiiksi (naytaAvausjuliste,
+     * AVAUS_KERTOMUS_MS). Molempien tila on varattu jo renderIntrossa,
+     * joten tässä ei mitata eikä mikään liiku.
+     */
+    const aloitaKertomus = () => {
+      if (this.dead || this.game.phase !== 'pickstart') return;
+      if (this.introPaikka) {
+        this.typeText(this.introPaikka, this.introPaikkaTeksti, 'intro',
+          aloitaRunko, INTRO_TYPE_MS);
+      } else {
+        aloitaRunko();
+      }
+    };
+    this.naytaAvausjuliste(aloitaKertomus);
+  }
+
+  /**
+   * KOKO JULISTE PIILOON (omistajan tilaus 6.9.2026 aamu, sanatarkasti:
+   * *"ota taustalta pois pelin otsikko"*): aloitusportin takana ruudulla
+   * on pelkkä pyörivä pallo, äänirivi ja nappi. Piilossa ovat viivat,
+   * otsikkorivit, "osa II" JA otsikon pergamenttiharso (css
+   * .avaus-kesken) — harso on julisteen oma ::before, ja ilman
+   * piilotusta se jäisi portille vaaleaksi läiskäksi tyhjän otsikon
+   * paikalle.
+   *
+   * Piilotus on PELKKÄÄ PEITTÄVYYTTÄ JA TRANSFORMIA: julisteen mitat ja
+   * rivijako pysyvät ennallaan, joten fitIntro mittaa portin takana
+   * saman koon kuin avauksen jälkeen eikä mikään hyppää.
+   *
+   * SAMA ODOTUS KOSKEE TEKSTIPALSTAN HARSOA: sekin on tyhjä vaalea
+   * soikio, kunnes kirjoituskone alkaa (naytaAvausjuliste viimeinen
+   * vaihe), joten se odottaa vuoroaan samalla luokalla.
+   *
+   * Ajat ja mitat viedään css:ään muuttujina avauslohkon juureen (ne
+   * periytyvät sekä otsikolle että palstalle), jotta luvut ovat
+   * olemassa vain tässä tiedostossa (VIIVAN_PIIRTO_MS,
+   * SALAMAN_KESTO_MS, SALAMAN_KERROIN).
+   */
+  piilotaAvausjuliste() {
+    this.peruAvausjuliste();
+    if (!this.introOtsikko) return;
+    this.introEl?.style.setProperty('--viivan-piirto', `${VIIVAN_PIIRTO_MS}ms`);
+    this.introEl?.style.setProperty('--salaman-kesto', `${SALAMAN_KESTO_MS}ms`);
+    this.introEl?.style.setProperty('--salaman-kerroin', String(SALAMAN_KERROIN));
+    this.introOtsikko.classList.add('avaus-kesken');
+    this.introPalsta?.classList.add('avaus-kesken');
+  }
+
+  /**
+   * Avauksen ajastimet pois ja koko juliste takaisin näkyviin: ilman
+   * `avaus-kesken`-luokkaa julisteessa ei ole yhtään piilotusta, joten
+   * tämä on myös se polku, jolla katselutila ja pelin resetti saavat
+   * otsikon kerralla ruudulle.
+   */
+  peruAvausjuliste() {
+    for (const ajastin of this.julisteAjastimet) clearTimeout(ajastin);
+    this.julisteAjastimet = [];
+    this.introPalsta?.classList.remove('avaus-kesken', 'avaus-harso');
+    if (!this.introOtsikko) return;
+    this.introOtsikko.classList.remove('avaus-kesken', 'avaus-harso');
+    for (const osa of this.introOtsikko.querySelectorAll('.avaus-nakyy, .avaus-salama')) {
+      osa.classList.remove('avaus-nakyy', 'avaus-salama');
     }
   }
 
   /**
-   * Mistä aloitan? -napin polku kartalle (omistajan tilaus 25.8.2026,
+   * Paljastaa julisteen palan: joko pehmeästi feidaten (viivat) tai
+   * SALAMANA (otsikkorivit ja "osa II").
+   *
+   * Salama on kaksivaiheinen, koska siirtymä tarvitsee lähtöasennon
+   * omaksi kehyksekseen: ensin pala maalataan kerran isona ja kirkkaana
+   * (`avaus-salama`, ei siirtymää), ja vasta seuraavassa kehyksessä
+   * luokka vaihtuu lopulliseen (`avaus-nakyy`), jolloin css feidaa
+   * koon, kirkkauden ja hehkun nykyiseen SALAMAN_KESTO_MS:ssä. Koko
+   * muuttuu TRANSFORMILLA eikä kirjasinkoolla, joten fitIntron mitoitus
+   * pysyy paikallaan eikä asettelu hypi (vartija:
+   * tests/lento-ajoitus.test.mjs, savuke E11f).
+   *
+   * Vähennetyllä liikkeellä salamaa ei oteta lainkaan — pala vain
+   * feidaa paikalleen samassa järjestyksessä.
+   */
+  paljastaJulisteenOsa(valitsin, salamalla = false) {
+    const osat = this.introOtsikko?.querySelectorAll(valitsin);
+    if (!osat?.length) return;
+    if (!salamalla || this.reducedMotion) {
+      for (const osa of osat) osa.classList.add('avaus-nakyy');
+      return;
+    }
+    for (const osa of osat) osa.classList.add('avaus-salama');
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      for (const osa of osat) {
+        osa.classList.add('avaus-nakyy');
+        osa.classList.remove('avaus-salama');
+      }
+    }));
+  }
+
+  /**
+   * Rakentaa julisteen palasta palaan napin painalluksen jälkeen ja
+   * kuittaa `valmis` vasta lopuksi: kirjoituskone ja luenta alkavat
+   * siitä, eivät koskaan ennen alaviivaa.
+   *
+   * Jokainen vaihe on OMA ajastimensa napin painalluksesta (ks.
+   * AVAUS_*-vakiot), joten yhden vaiheen myöhästyminen ei siirrä muita.
+   * Sama polku kelpaa myös silloin, kun otsikkoa ei jostain syystä ole
+   * olemassa: kertomus ei saa jäädä puuttuvan koristeen taakse.
+   */
+  naytaAvausjuliste(valmis) {
+    if (!this.introOtsikko) {
+      this.peruAvausjuliste();
+      valmis();
+      return;
+    }
+    const vaihe = (ms, teko) => {
+      this.julisteAjastimet.push(setTimeout(() => {
+        if (this.dead || this.game.phase !== 'pickstart') return;
+        teko();
+      }, ms));
+    };
+    vaihe(AVAUS_YLAVIIVA_MS, () => {
+      // Harso syttyy viivan kanssa: pergamentti on otsikon alusta.
+      this.introOtsikko.classList.add('avaus-harso');
+      this.paljastaJulisteenOsa('.juliste-viiva:first-child');
+    });
+    vaihe(AVAUS_OTSIKKO_MS,
+      () => this.paljastaJulisteenOsa('.juliste-nimi, .juliste-yla, .juliste-ala', true));
+    vaihe(AVAUS_OSA_MS, () => this.paljastaJulisteenOsa('.juliste-osa', true));
+    vaihe(AVAUS_ALAVIIVA_MS, () => this.paljastaJulisteenOsa('.juliste-viiva:last-child'));
+    vaihe(AVAUS_KERTOMUS_MS, () => {
+      // Tekstipalstan pergamenttiharso syttyy vasta kirjoituskoneen
+      // kanssa: muuten tyhjä vaalea soikio odottaisi tekstiään koko
+      // avauksen ajan pallon päällä.
+      this.introPalsta?.classList.add('avaus-harso');
+      valmis();
+    });
+  }
+
+  /**
+   * Mistä aloitan? -napin polku laudalle (omistajan tilaus 25.8.2026,
    * nappi 26.8.2026).
    *
    * Naksahdus, avauspalsta häipyy (teksti, sumuverho ja kansikuva
-   * samalla kertaa, koska ne ovat saman elementin lapsia), ja kartta
-   * zoomautuu koko ruudulle Lontoon kohdalle — sama lähikuva, joka
-   * ennen aukesi puhelimella kartan napautuksesta
-   * (kartta.zoomaaAloituskartta). Kohdepisteet piirtyvät vasta siinä
-   * lähikuvassa, joten Ateenan voi valita vasta täältä.
+   * samalla kertaa, koska ne ovat saman elementin lapsia), ja lauta
+   * ottaa koko ruudun valintanäkymään: pallolla kamera ajaa Lontoon ja
+   * valittavien ylle (aloitaPallolta, aalto 3A), tasokartalla lähikuva
+   * zoomautuu Lontoon kohdalle (aloitaTasokartalta →
+   * kartta.zoomaaAloituskartta). Kohdemerkit ilmestyvät vasta siinä
+   * näkymässä, joten Ateenan voi valita vasta täältä.
    */
   aloitaKartalta() {
-    if (this.aloitusZoom || this.game.phase !== 'pickstart') return;
+    if (this.aloitusvalintaAuki() || this.game.phase !== 'pickstart') return;
+    // Avauksen sekoitus purkautuu viimeistään tässä: pelaaja etenee,
+    // eikä terminaalin nosto saa jäädä päälle kartalle (sama purku kuin
+    // luennan päättyessä, js/luenta.js playIntroVoice).
+    lopetaAvauksenAani();
+    // Avausteksti väistyy jo kaupunginvalintaan mentäessä. Jos lukija
+    // jatkaa tähän asti, sen puhevuoro estäisi lennossa tervehtivän Pulun.
+    stopIntroVoice(this);
     // Naksahdus: sama puinen naksu kuin nappulan kolauksessa
     // (efekti-naksu.mp3). Kevyt eikä juhlava — matka ei ole vielä
     // alkanut, kartta vain avautuu.
@@ -13944,8 +17266,114 @@ export class UI {
     // Häivytys ensin ja zoomaus vasta sen alettua: kartta saa liikkua
     // pehmenevän tekstin alla eikä ruutu välähdä tyhjäksi väliltä.
     this.introEl.classList.add('intro-fade');
+    /*
+     * LÄHTÖKAUPUNKI VALITAAN PALLOLTA (aalto 3A, karttapallo.md luku
+     * 10.3). Aalto 1D jätti tähän tasokartan herätyksen — se oli
+     * pallolaudan VIIMEINEN pelitoiminto, joka vielä herätti
+     * js/kartta.js:n. Nyt valintanäkymä on pallon oma, eikä kartta
+     * herää pallolaudalla lainkaan; `?lauta=kartta` kulkee yhä vanhaa
+     * tietä (poistuu aallossa 3B).
+     */
+    if (this.aloituslentoPallolla()) { this.aloitaPallolta(); return; }
+    /*
+     * VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tasokartan haaraan
+     * ei mennä enää missään tilanteessa. Jos pallo on epäonnistunut
+     * (aloituslentoPallolla epätosi), valinta avataan silti pallolla —
+     * pallolautaVarapolku on jo kertonut pelaajalle rivillä, mitä
+     * tapahtui, eikä puolikas tasokartta paranna tilannetta.
+     */
+    if (!VANHA_KARTTA_KAYTOSSA) { this.aloitaPallolta(); return; }
+    void this.aloitaTasokartalta();
+  }
+
+  /**
+   * LÄHTÖVALINTA PALLOLLA (aalto 3A): avausteksti väistyy ja pallolauta
+   * ottaa ruudun valintatilassa.
+   *
+   * Lippu on laudan OMA (`aloitusvalintaPallolla`) eikä tasokartan
+   * lähikuva: js/kartta.js nollaa `aloitusZoom`in aina kun kartta
+   * nukahtaa, ja juuri niin käy kun pallo avataan hereillä olleen
+   * kartan päälle. Lippu nostetaan ENNEN piirtoa, koska kolme asiaa
+   * lukee sen samassa renderissä: `pallolautaHalutaan` (avaa pallon),
+   * `renderIntro` (purkaa etusivun pallovideon) ja
+   * `aloitusvalinnanKohteet` (piirtää kohdemerkit pallolle).
+   *
+   * Kamera ajetaan valintanäkymään pallon avautuessa (avaaPallolauta →
+   * lauta.aloitusnakyma), ja Livia lennähtää mukaan täsmälleen kuten
+   * tasokartan lähikuvassa (js/kartta.js zoomaaAloituskartta).
+   */
+  aloitaPallolta() {
+    this.aloitusvalintaPallolla = true;
+    this.render();
+    naytaLivianAvaus(this);
+  }
+
+  /**
+   * Vanha polku (`?lauta=kartta`): kartta herää lepotilasta ja zoomaa
+   * Lontoon lähikuvaan, josta kohdepisteet valitaan. Tämä on myös
+   * pallon varapolku: jos Globe.gl ei lataudu kesken valinnan,
+   * pallolautaVarapolku antaa valinnan kartalle.
+   */
+  async aloitaTasokartalta() {
+    // VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tänne ei tulla
+    // pelistä lainkaan (aloitaKartalta ohjaa pallolle). Metodi jää
+    // paikalleen sitä varten, kun vanha kartta palaa käyttöön.
+    if (!VANHA_KARTTA_KAYTOSSA) return;
+    // Moduuli ensin (laiskoituserä 5b): lähikuva ajetaan heti herätyksen
+    // perään, joten sijaisen tynkä ei kelpaa tässä.
+    await this.varmistaKartta();
+    if (this.dead) return;
+    if (this.kartta.lepotila && !this.pallolauta) {
+      this.kartta.heraa();
+      this.render();
+    }
     const lontoo = this.game.board.cityById.get(ALOITUSLENNON_LAHTO);
     this.kartta.zoomaaAloituskartta(lontoo ? { x: lontoo.x, y: lontoo.y } : null);
+  }
+
+  /**
+   * ONKO LÄHTÖKAUPUNGIN VALINTA AUKI eli onko avausteksti väistynyt?
+   * Tasokartalla se on lähikuva (`aloitusZoom`, js/kartta.js
+   * zoomaaAloituskartta), pallolla laudan valintatila
+   * (`aloitusvalintaPallolla`, aalto 3A). Sama kysymys, kaksi lautaa —
+   * yksi vastaus, jotta avausteksti, etusivun pallo ja kohdemerkit
+   * lukevat kaikki samaa totuutta.
+   */
+  aloitusvalintaAuki() {
+    return Boolean(this.aloitusZoom || this.aloitusvalintaPallolla);
+  }
+
+  /**
+   * LÄHTÖVALINNAN KOHTEET PALLOLLE (aalto 3A). Sama joukko ja sama
+   * portti kuin tasokartan kohderenkailla (drawTargets, haara
+   * `game.phase === 'pickstart'`): valittavia ovat ETUSIVUN_KOHTEET, ja
+   * ne ilmestyvät vasta napin jälkeen (`aloitusvalintaPallolla`) —
+   * avausnäkymässä laudan päällä on avauspalsta, eikä valintaa tehdä
+   * sen takaa.
+   *
+   * Kaupungit ovat PELIN laudan (js/packs/maailma.js) olioita, koska
+   * doPickStart lukee niistä portin (`links`); pallon oma paikka niille
+   * tulee maailmankartan koordinaateista (js/pallolauta/lauta.js).
+   *
+   * @returns {object[]} valittavat kaupungit, tyhjä jos valinta ei ole auki
+   */
+  aloitusvalinnanKohteet() {
+    if (this.game.phase !== 'pickstart' || this.katselu || !this.aloitusvalintaPallolla) return [];
+    const board = this.game.board;
+    return [...ETUSIVUN_KOHTEET].map((id) => board?.cityById?.get(id)).filter(Boolean);
+  }
+
+  /**
+   * Lähtövalinnassa NÄKYVÄT kaupungit (Lontoo ja valittavat) tai null,
+   * kun valintaa ei ole käynnissä. Sama joukko, jolla tasokartta
+   * piilottaa muut aloituskartalta (paivitaAloituskaupungit,
+   * ETUSIVUN_NAKYVAT); pallolla se rajaa nimet ja pisteet
+   * (js/pallolauta/lauta.js), jotta valintanäkymä on yhtä niukka
+   * kummallakin laudalla.
+   */
+  aloitusvalinnanNakyvat() {
+    if (this.game.phase !== 'pickstart' || this.katselu) return null;
+    return ETUSIVUN_NAKYVAT;
   }
 
   /** Aloita seikkailu -portti: keskellä ruutua, kartta himmeänä takana. */
@@ -13965,6 +17393,18 @@ export class UI {
     const nappi = html('button', 'start-btn primary', 'Aloita seikkailu');
     nappi.addEventListener('click', () => {
       this.aloitettu = true;
+      /*
+       * AVAUKSEN ÄÄNI ENSIMMÄISENÄ (omistajan tilaus 7.9.2026:
+       * *"musiikki saisi hiljentyä hieman ja mukaan saisi tulla se
+       * terminaalin äänimaisema voimakkaasti mukaan"*). Kutsu on ENNEN
+       * render()iä, koska juuri tämä painallus on se ele, jolla etusivun
+       * maisema pääsee vihdoin soimaan: kun lippu on jo päällä, alkava
+       * soitin nousee suoraan avauksen tasoon eikä ensin tavalliseen ja
+       * sitten uudelleen (js/ambience-stream.js aloitaAvauksenAani).
+       * Nosto purkautuu, kun kertojan luenta päättyy (js/luenta.js
+       * playIntroVoice) tai pelaaja etenee (aloitaKartalta).
+       */
+      aloitaAvauksenAani();
       this.suljeAloitusportti();
       /*
        * Lauta kutistuu keskeltä ylälohkoon tekstin tieltä heti portin
@@ -14003,61 +17443,20 @@ export class UI {
     const kortti = html('div', 'dialog-card');
     lappu.appendChild(kortti);
 
-    const otsikko = html('h2', 'periaate-otsikko', 'Oppiminen on hauskaa');
+    const otsikko = html('h2', 'periaate-otsikko', PERIAATTEET.otsikko);
     kortti.appendChild(otsikko);
 
-    const kappale = (teksti, luokka = '') => {
-      const p = html('p', `periaate-teksti ${luokka}`.trim());
-      p.textContent = teksti;
+    // Tekstit: js/ui-tekstit.js PERIAATTEET (sama lähde natiivin paketissa).
+    for (const osa of PERIAATTEET.osat) {
+      if (osa.otsikko) {
+        const h = html('h3', 'periaate-valiotsikko');
+        h.textContent = osa.otsikko;
+        kortti.appendChild(h);
+      }
+      const p = html('p', `periaate-teksti ${osa.karki ? 'kärki' : ''}`.trim());
+      p.textContent = osa.teksti;
       kortti.appendChild(p);
-    };
-    const valiotsikko = (teksti) => {
-      const h = html('h3', 'periaate-valiotsikko');
-      h.textContent = teksti;
-      kortti.appendChild(h);
-    };
-
-    kappale('Matkakirja ja unohdettu aarre on seikkailupeli, jonka sivutuotteena opitaan — '
-      + 'ei oppikirja, johon on liimattu noppa. Pelin pitää olla '
-      + 'koukuttava ensin; tieto tarttuu matkassa.', 'kärki');
-
-    valiotsikko('Mitä pelissä opitaan');
-    kappale('Maiden arkea ja kulttuuria, maantiedettä ja historiaa, '
-      + 'geopolitiikkaa ja poliittista tilannetta — ja ennen kaikkea sitä, '
-      + 'että maailma on suurempi kuin oma ympäristö. Jokaisella '
-      + 'pysähdyksellä on jotain katsottavaa: valokuva silloin ja nyt, '
-      + 'maan tunnusluvut, kaupungin musiikkia ja ruokaa.');
-
-    valiotsikko('Kaksi ääntä');
-    kappale('Isoisän päiväkirja vuodelta 1873 ja nuoren Foggin havainto '
-      + 'tänään. Vanha ääni loistaa siinä, mikä ei ole muuttunut, ja on '
-      + 'toivottoman vanhentunut nimissä ja rajoissa.');
-
-    valiotsikko('Totuus ja lähteet');
-    kappale('Jokainen väittämä on tarkistettavissa. Epävarmaa ei väitetä '
-      + 'eikä kiistanalaista esitetä varmana. Politiikka ja historia '
-      + 'kuvataan, ei tuomita: kerrotaan mitä on ja miksi.');
-
-    valiotsikko('Tekoäly apuna, ihminen päättää');
-    kappale('Tekoäly auttaa sisällön kokoamisessa: havainnekuvat luodaan '
-      + 'avoimesti lisensoiduista aineistoista ja merkitään havainnekuviksi, '
-      + 'ja tekstit kirjoitetaan lähteistä uudelleen yhtenäiseen asuun. '
-      + 'Jokaisen sisällön tarkistaa ja hyväksyy ihminen.');
-
-    valiotsikko('Kunnioitus');
-    kappale('Jokainen maa kuvataan asukkaidensa silmin — ei stereotypioita, '
-      + 'ei pilkkaa eikä säälittelyä, ei pelkkiä turistikliseitä. '
-      + 'Vaikeita aiheita ei kaunistella eikä kauhistella.');
-
-    valiotsikko('Avointa ja ilmaista');
-    kappale('Peli on toistaiseksi ilmainen, ja sen lähdekoodi on '
-      + 'kaikkien luettavissa. Peliä tekee tamperelainen '
-      + 'Visuaaliviestinnän Instituutti (VVI). '
-      + 'Kuvat, äänet ja tiedot tulevat avoimista '
-      + 'lähteistä, ja jokaisen kohdalla lukee mistä se on ja kuka sen '
-      + 'on tehnyt. Peli itse on tekijänsä omaisuutta: sitä saa pelata '
-      + 'ja lähdekoodia lukea vapaasti, mutta julkaisuun tai omaan '
-      + 'tuotteeseen tarvitaan lupa.');
+    }
 
     // Lippukuvat näkyvät pieninä tervehdysten vieressä, eikä niiden alle
     // mahdu omaa lähderiviä. Valtaosa on public domainia, mutta muutaman
@@ -14065,15 +17464,14 @@ export class UI {
     // "jokaisen kohdalla lukee kuka sen on tehnyt" pitää paikkansa.
     if (LIPPU_TEKIJAT.length) {
       const lippurivi = html('p', 'periaate-teksti periaate-liput');
-      lippurivi.textContent = `Lippukuvat ovat Wikimedia Commonsista. `
-        + `Näiden tekijät lisenssi käskee nimetä: `
+      lippurivi.textContent = PERIAATTEET.lippurivi
         + `${LIPPU_TEKIJAT.map((l) => `${l.tekija} (${l.lisenssi})`).join(', ')}.`;
       kortti.appendChild(lippurivi);
     }
 
     const linkit = html('p', 'periaate-linkit');
-    const gh = html('a', 'periaate-linkki', 'Pelin GitHub-sivu');
-    gh.href = 'https://github.com/ravelius/Matkakirja';
+    const gh = html('a', 'periaate-linkki', PERIAATTEET.linkki.teksti);
+    gh.href = PERIAATTEET.linkki.url;
     gh.target = '_blank';
     gh.rel = 'noopener';
     linkit.appendChild(gh);
@@ -14081,8 +17479,7 @@ export class UI {
 
     kortti.appendChild(this.periaatePalaute());
 
-    const oikeudet = html('p', 'periaate-oikeudet',
-      '© Visuaaliviestinnän Instituutti Tampere Oy');
+    const oikeudet = html('p', 'periaate-oikeudet', PERIAATTEET.oikeudet);
     kortti.appendChild(oikeudet);
 
     const sulje = html('button', 'ghost periaate-sulje', 'Takaisin');
@@ -14124,7 +17521,7 @@ export class UI {
     lohko.appendChild(johdanto);
 
     const vihje = html('p', 'periaate-teksti');
-    vihje.textContent = 'Pelin oikeassa alakulmassa on huutomerkki. Sitä '
+    vihje.textContent = 'Valikossa on nappi "ehdota sisältöä". Sitä '
       + 'napauttamalla voit lähettää palautetta juuri siitä kohdasta, '
       + 'jossa olet — kätevää etenkin, jos jokin näyttää menneen vikaan.';
     lohko.appendChild(vihje);
@@ -14241,6 +17638,16 @@ export class UI {
     const rasti = proHakuRasti();
     const laheta = osio?.querySelector('.periaate-laheta');
     if (rasti && laheta) laheta.before(rasti);
+    /*
+     * KUVIEN SYÖTTÖPUTKI (omistajan tilaus 1.9.2026): "Vinkkaa paikasta
+     * kuvalla" ehdotusosion RINNALLE omana väkäsenään
+     * (js/kuvavinkki.js). Eri kanava eri pakollisilla kentillä —
+     * kuvavinkki vaatii oikeusvakuutuksen ja käyttöluvan, juttuidea ei
+     * vaadi kuvaa lainkaan — eikä kahta eri pakollisuutta voi ladota
+     * samaan lomakkeeseen ilman että kumpikin hämärtyy.
+     */
+    const kuvavinkki = kuvavinkkiOsio(this.ehdotusSivu(tilanne));
+    if (kuvavinkki) lohko.appendChild(kuvavinkki);
     const pro = proOsio();
     if (pro) lohko.appendChild(pro);
   }
@@ -14498,17 +17905,40 @@ export class UI {
    * linssi on siellä heti eikä vasta seuraavan piirron jälkeen.
    */
   openPassport() {
+    const avautuu = !this.passportDialog.open;
+    // Uusi avaus alkaa puhtaalta pöydältä: selite kertoo päällä
+    // olevasta linssistä, kunnes jotain ruutua napautetaan.
+    this.linssiEsikatselu = undefined;
     this.renderProgress();
     this.renderAarteet();
     this.renderFinds();
     this.renderJulisteet();
     void this.paivitaLinssit();
-    if (!this.passportDialog.open) this.passportDialog.showModal();
+    if (avautuu) {
+      this.passportDialog.showModal();
+      ilmoitaLivianTunne(
+        { tunne: 'utelias', voimakkuus: 0.4 },
+        { lahde: 'laukku', tunnus: 'laukku.auki' },
+      );
+    }
+    // Laukulla on oma hiljainen raitansa (nahka ja messinki); se
+    // väistyy paikan musiikin tieltä, kun laukku suljetaan. Ambienssia
+    // laukku EI hiljennä — se ei ole lukunäkymä.
+    asetaMusiikkitila('matkalaukku', true);
     // Kapealla ruudulla alanappirivi väistyy laukun alta, jotta
     // linssin vaikutus karttaan näkyy (css: body.laukku-auki).
     document.body.classList.add('laukku-auki');
     this.nollaaDialoginVieritys(this.passportDialog);
     this.asemoiLaukku();
+  }
+
+  /**
+   * Sulkee matkalaukun, jos se on auki. Siivous (pikkuseloste,
+   * julistegalleria, body.laukku-auki) tapahtuu dialogin omassa
+   * close-kuuntelijassa, joten tämä on tarkoituksella vain portti.
+   */
+  suljeLaukku() {
+    if (this.passportDialog?.open) this.passportDialog.close();
   }
 
   /*
@@ -14820,6 +18250,7 @@ export class UI {
     const selattavat = ryhmat.flatMap((r) => r.kaupungit.filter((id) => voitetut.has(id)));
     const teokset = selattavat.map((cityId) => ({
       otsikko: JULISTEET[cityId].otsikko,
+      lyhyt: JULISTEET[cityId].lyhyt,
       selite: JULISTEET[cityId].selite,
       lahde: JULISTE_LAHDE,
       // Valmis osoite ohittaa Commons-portaikon (ks. naytaKulttuuriKuva).
@@ -15110,7 +18541,16 @@ export class UI {
    */
   nakyvatLinssit(tuki) {
     const omat = tuki.omistus.omistetut(this.game, this.game.player);
+    /*
+     * PALLOLAUDALLA PALLO EI OLE LINSSI (karttapallo.md vaihe 6: "pallo-
+     * linssi pois laukusta", kun pallo on lauta — omistaja 5.9.2026: "Ota
+     * vanha kartta jo heti kokonaan pois ja korvaa pallolla"). Laukun
+     * karttapallo avaisi valikkopallon pallon päälle. Tasokartalla
+     * (?lauta=kartta) linssi jää valikoimaan ennalleen.
+     */
+    const pallolauta = lautaValinta() === 'pallo';
     return tuki.kaikki.filter((linssi) => omat.has(linssi.tunnus)
+      && !(pallolauta && linssi.tunnus === 'pallo')
       && tuki.kerros.kelpaaLaudalle(linssi, this.game.pack.id)
       && !this.linssiPois.has(linssi.tunnus));
   }
@@ -15131,17 +18571,53 @@ export class UI {
       this.linssiPois.clear();
     }
     const nakyvat = this.nakyvatLinssit(tuki);
-    this.linssiKotelo.hidden = nakyvat.length === 0;
+    /*
+     * HIOMASSA OPTIKOLLA (omistaja 21.9.2026): omistettu linssi, jota ei
+     * vielä ole toteutettu, näkyy laukussa harmaana — sillä ei ole
+     * moduulia, joten se ei ole `nakyvat`-listassa. Valmistunut linssi
+     * saa kerran "valmistui"-merkin (omistus.js valmistuneet).
+     */
+    const hiomassa = tuki.omistus?.hiomassaOlevat?.(this.game, this.game.player) ?? [];
+    const valmistuneet = tuki.omistus?.valmistuneet?.(this.game, this.game.player) ?? [];
+    this.linssiKotelo.hidden = nakyvat.length === 0 && hiomassa.length === 0;
 
-    const tunniste = `${this.game.pack.id}|${nakyvat.map((l) => l.tunnus).join(',')}`;
+    const tunniste = `${this.game.pack.id}|${nakyvat.map((l) => l.tunnus).join(',')}`
+      + `|hiomassa:${hiomassa.join(',')}|valmistui:${valmistuneet.join(',')}`;
     if (tunniste !== this.linssiTunniste) {
       this.linssiTunniste = tunniste;
-      this.rakennaLinssivalikko(nakyvat);
+      this.rakennaLinssivalikko(nakyvat, { hiomassa, valmistuneet });
     }
 
     // Omistamaton tai tuntematon tallennettu valinta ohitetaan hiljaa
     // (suunnitelman luku 5.3): tallennus voi olla toiselta pelikerralta.
     const haluttu = nakyvat.some((l) => l.tunnus === this.linssiValittu) ? this.linssiValittu : null;
+    /*
+     * Nukkuvalla kartalla ei ole kerrosta, johon sytyttää. Muistettu
+     * valinta (esim. edellisen istunnon radio) ei saa jäädä laukkuun
+     * "valituksi" ilman kuorta: pallolaudalla linssi on aina kuoren
+     * kanssa (vaihe 4), ja kuori avautuu vain laukun valinnasta —
+     * ei itsestään käynnistyksessä (linssi blokkaa muun). Valinta
+     * unohdetaan; tasokartalla (?lauta=kartta) tänne ei tulla.
+     */
+    if (this.kartta.lepotila) {
+      /*
+       * PALLOLINSSI ON POIKKEUS (karttapallo.md luku 10, aalto 1A):
+       * linssi, jolla on `pallolle`, piirtyy pallon pinnalle eikä
+       * tarvitse kuorta lainkaan. Valintaa ei siis unohdeta, ja jos
+       * kahva puuttuu (uusi lauta, uusi peli), linssi sytytetään
+       * uudelleen — kuten tasokartalla tyhjä kerros sytytetään alla.
+       */
+      if (this.pallolinssiKelpaa(haluttu, nakyvat)) {
+        if (this.pallolinssi?.tunnus !== haluttu) await this.sytytaLinssi(haluttu);
+        return;
+      }
+      if (haluttu && !this.linssikartta) {
+        this.linssiValittu = null;
+        tallennaLinssi(null);
+        this.paivitaLinssiTiedot();
+      }
+      return;
+    }
     /*
      * Lauta piirretään uudelleen monesta syystä (uusi peli, laudan
      * vaihto, kehittäjätilan esikatselu), ja silloin kerros on uusi ja
@@ -15153,24 +18629,118 @@ export class UI {
     }
   }
 
+  /**
+   * LINSSI PALLOLLE VAI KARTALLE (karttapallo.md luku 10.1). Pallolauta
+   * piirtää linssin itse, jos linssillä on `pallolle` ja laudan
+   * linssimoottori on pystyssä. Muut linssit avaavat linssikartan kuten
+   * ennen, kunnes nekin on käännetty pallolle.
+   */
+  pallolinssiKelpaa(tunnus, lista = this.linssiTuki?.kaikki ?? []) {
+    if (!tunnus || !this.pallolautaPaalla() || !this.pallolauta?.linssit) return false;
+    return typeof lista.find((l) => l.tunnus === tunnus)?.pallolle === 'function';
+  }
+
+  /** Pallolla oleva linssi pois: kahvan pura() ottaa kerrokset. */
+  sammutaPallolinssi() {
+    const nyt = this.pallolinssi;
+    this.pallolinssi = null;
+    if (!nyt) return;
+    this.linssiTuki?.moottori?.poistaLuokat();
+    try {
+      nyt.kahva?.pura?.();
+    } catch (syy) {
+      console.warn(`Pallolinssin "${nyt.tunnus}" purku epäonnistui.`, syy);
+    }
+  }
+
   /** Sytyttää linssin kartalle; tunnus === null sammuttaa. */
+  /** Viimeisimmän linssin avauksen vaiheet millisekunteina (savuke, kenttä). */
+  linssiketju() {
+    return linssiketjunLoki();
+  }
+
+  /*
+   * RELIEFIN AUKOT KENTÄLTÄ LUETTAVIKSI (Raamattu PAATOKSET 41 kohta 3).
+   *
+   * Laatasto on harva kahdesta syystä — avomerestä ei polteta laattaa
+   * ja poltto on ajettu rajatulle alueelle — ja vain toinen niistä on
+   * luettelossa. `puuttuvat` on niiden laattojen määrä, jotka
+   * luettelon mukaan pitäisi olla mutta joita ämpäri ei anna (404);
+   * `varoja` ne, joille piirrettiin karkeampi reliefilaatta
+   * paikanpitäjäksi, ja `tasavareja` ne, joille maalattiin yksi väri.
+   * Sama luku on savukkeen ja omistajan puhelimen ulottuvilla ilman
+   * erillistä ajoa.
+   */
+  reliefi404() {
+    const m = this.pallolauta?.lepokerros?.()?.mittarit?.() ?? null;
+    if (!m) return null;
+    return {
+      puuttuvat: m.reliefi404 ?? 0,
+      varoja: m.reliefiVaroja ?? 0,
+      tasavareja: m.reliefiTasavareja ?? 0,
+      taso: m.taso ?? null,
+    };
+  }
+
   async sytytaLinssi(tunnus) {
+    merkitseLinssiketju('sytyta');
     const tuki = await this.lataaLinssit();
+    merkitseLinssiketju('linssit-ladattu');
     if (!tuki || this.dead) return;
     const askel = tunnus ? this.linssiAskeleet.get(tunnus) ?? null : null;
+    const tila = tuki.kerros.linssitila(this.game.pack, askel);
+    // Edellinen pallolinssi pois aina — myös silloin kun uusi linssi
+    // piirtyy kartalle tai valinta nollataan.
+    this.sammutaPallolinssi();
     let tulos = null;
-    try {
-      tulos = await tuki.moottori.vaihda(tunnus, tuki.kerros.linssitila(this.game.pack, askel));
-    } catch (syy) {
+    if (this.pallolinssiKelpaa(tunnus, tuki.kaikki)) {
       /*
-       * Moottori heittää sopimusrikkeestä tarkoituksella: se on aina
-       * linssimoduulin oma vika ja se pitää nähdä. Peli ei silti saa
-       * kaatua siihen — rikkinäinen linssi pudotetaan valikoimasta ja
-       * kartta jää entiselleen.
+       * PALLOLLA MOOTTORI ON LAUDAN OMA (karttapallo.md luku 10, aalto
+       * 1A): linssi piirtää pallon pinnalle js/pallolauta/linssit.js:n
+       * kautta, ja tasokartan kerrosmoottori sammutetaan, jottei
+       * nukkuvaan karttaan jää edellisen linssin piirrosta.
        */
-      console.error(syy);
-      this.pudotaLinssi(tunnus);
-      return;
+      const linssi = tuki.kaikki.find((l) => l.tunnus === tunnus);
+      tuki.moottori.sammuta();
+      try {
+        // Aineisto haetaan kuten kerrosmoottorissa (kerros.js vaihda):
+        // linssin lataa() tuo pakat ja kuvat ennen piirtoa.
+        await linssi.lataa?.();
+        merkitseLinssiketju('lataa');
+        if (this.dead || this.linssiValittu !== tunnus) return;
+        // Body-luokat (linssi-paalla, linssi-<tunnus>, linssi-valokuva)
+        // ovat samat kuin kartalla: selite, sävyt ja rakeisuus lukevat ne.
+        tuki.moottori.merkitseLuokat(linssi);
+        /*
+         * KOLMAS PARAMETRI ON UI (12.9.2026, satelliittilinssi):
+         * pallolauta ei kanna ui-oliota, mutta linssi, joka vaihtaa
+         * KOKO YLÄPALKIN omakseen, tarvitsee karttaruudun (ui.mapPane)
+         * ja sulkemisen (ui.valitseLinssi(null)). Vanhat linssit
+         * jättävät parametrin lukematta, joten muutos on lisäys.
+         */
+        this.pallolinssi = { tunnus, kahva: linssi.pallolle(this.pallolauta, tila, this) ?? null };
+        merkitseLinssiketju('pallolle');
+        tulos = { tunnus, linssi, elementteja: 0, rasteroitu: false };
+      } catch (syy) {
+        console.error(syy);
+        this.pudotaLinssi(tunnus);
+        return;
+      }
+      if (this.dead) return;
+    } else {
+      try {
+        tulos = await tuki.moottori.vaihda(tunnus, tila);
+      } catch (syy) {
+        /*
+         * Moottori heittää sopimusrikkeestä tarkoituksella: se on aina
+         * linssimoduulin oma vika ja se pitää nähdä. Peli ei silti saa
+         * kaatua siihen — rikkinäinen linssi pudotetaan valikoimasta ja
+         * kartta jää entiselleen.
+         */
+        console.error(syy);
+        this.pudotaLinssi(tunnus);
+        return;
+      }
     }
     if (this.dead) return;
     this.linssiPiirretty = this.linssiKerros;
@@ -15187,6 +18757,10 @@ export class UI {
     // Vertailulinssi on radion tavoin kartan TILA eikä karttakerros
     // (kerros: false) — se kytketään tässä samalla tavalla.
     tahdistaVertailu(this, tunnus === 'vertailu');
+    if (this.dead) return;
+    // Aikajanalinssit (keksinnöt) ovat samaa perhettä: linssin valinta
+    // matkalaukusta käynnistää ajon, muu valinta purkaa sen.
+    await this.tahdistaAikajana(tunnus);
     if (this.dead) return;
     // Maiden tiedot on samaa perhettä: kartan tila, ei kerros. Tila
     // voi olla päällä myös kartan omasta napista, joten varusteen
@@ -15211,6 +18785,9 @@ export class UI {
   /** Ottaa linssin pois valikoimasta ja palaa linssittömään karttaan. */
   pudotaLinssi(tunnus) {
     if (tunnus) this.linssiPois.add(tunnus);
+    // Pallolla oleva kerros pois heti: pudotettu linssi ei saa jäädä
+    // pallon pinnalle odottamaan seuraavaa sytytystä.
+    this.sammutaPallolinssi();
     this.linssiValittu = null;
     tallennaLinssi(null);
     this.linssiTunniste = null;
@@ -15220,13 +18797,104 @@ export class UI {
 
   /** Valitsimen rivin napautus. tunnus === null = "Ei linssiä". */
   valitseLinssi(tunnus) {
+    // Kytketty linssi on tosiasia, ei esikatselu: laukun selite palaa
+    // kertomaan päällä olevasta linssistä (esikatseleLinssi).
+    this.linssiEsikatselu = undefined;
+    /*
+     * KARTTAPALLO ON TOIMINTO, EI TILA (omistaja 4.9.2026: "Lisää pallo
+     * yhdeksi linssiksi matkalaukkuun"). Valinta sulkee laukun ja avaa
+     * pallon; valittu linssi ei vaihdu, joten radio tai muu päällä oleva
+     * varuste jatkaa, kun pallo suljetaan (js/linssit/pallo.js).
+     */
+    if (tunnus === 'pallo') {
+      this.suljeLaukku();
+      void this.avaaPallo();
+      return;
+    }
     if (this.linssiValittu === tunnus) return;
+    /*
+     * Portti alla lukee ladattua linssiluetteloa (linssiTuki). Jos
+     * luetteloa ei vielä ole (valinta tulee ennen laukun avaamista,
+     * esim. tallennettu valinta tai kehittäjätila), ladataan ensin —
+     * muuten pallolle käännetty linssi avaisi turhaan linssikartan.
+     */
+    if (tunnus && !this.linssiTuki && this.pallolautaPaalla()) {
+      void this.lataaLinssit().then(() => { if (!this.dead) this.valitseLinssi(tunnus); });
+      return;
+    }
+    /*
+     * KAIKKI PALLOLLE (omistaja 5.9.2026, Raamattu KAIKKI PALLOLLE,
+     * VANHA KARTTA SULJETAAN: *"Käännä kaikki pallolle, niin voidaan
+     * sulkea vanha kartta kokonaan"*). Pallolle käännetty linssi
+     * (`pallolle`) piirtyy pallon pinnalle, eikä linssikarttaa avata
+     * lainkaan — ja jos kuori oli auki edellisen linssin takia, se
+     * sulkeutuu. Kääntämätön linssi herättää tasokartan linssikartaksi
+     * kuten ennen, kunnes se on aallossa 1–2 käännetty (luku 10.2).
+     */
+    const pallolle = this.pallolinssiKelpaa(tunnus);
+    if (tunnus && this.pallolautaPaalla() && !pallolle) this.avaaLinssikartta({ linssi: true });
+    else if ((!tunnus || pallolle) && this.linssikartta?.linssi) this.suljeLinssikartta();
     this.linssiValittu = tunnus;
     tallennaLinssi(tunnus);
     // Merkintä valikkoon heti, kerros hetkeä myöhemmin: raskas linssi
     // rasteroidaan, eikä napin pidä odottaa sitä näyttääkseen valinnan.
     this.paivitaLinssiTiedot();
+    /*
+     * KELLO KÄYNTIIN NAPAUTUKSESTA, ei siitä hetkestä, jolloin
+     * `sytytaLinssi` pääsee ajoon: pelaajan odotus alkaa napista, ja
+     * juuri se on se luku, jota vastaan 400 ms:n katto mitataan.
+     */
+    if (tunnus) aloitaLinssiketju();
     void this.sytytaLinssi(tunnus);
+    this.varmistaLinssinAvaus(tunnus);
+  }
+
+  /*
+   * ── LINSSI EI SAA JÄÄDÄ AUKEAMATTA ÄÄNEEN ───────────────────────
+   *
+   * MITATTU 16.9.2026 (Raamattu, ASTRONAUTIN KAMERA LISÄYS 11 kohta
+   * 34): jos pallolautaa ei ole — esimerkiksi kun Globe.gl ei
+   * latautunut ämpäristä — laukun "Aktivoi linssi" merkitsee valinnan
+   * mutta EI AVAA MITÄÄN. Pelaaja jää katsomaan pelin omaa tummaa
+   * pohjaa ilman yhtään riviä siitä, mitä tapahtui.
+   *
+   * Vartija katsoo ruutua AIKAKATKON JÄLKEEN: jos valinta on yhä sama
+   * eikä linssistä syntynyt kahvaa eikä linssikarttaa, pelaajalle
+   * näytetään yksi lause ja nappi ulos (js/linssivirhe.js). Aikakatko
+   * on sama kuin astronauttilinssin omalla vartijalla, jotta hidas
+   * laite ehtii perille ennen ilmoitusta.
+   */
+  varmistaLinssinAvaus(tunnus) {
+    clearTimeout(this.linssinAvausVahti);
+    this.linssinAvausVahti = 0;
+    poistaLinssivirhe();
+    if (!tunnus) return;
+    this.linssinAvausVahti = setTimeout(() => {
+      this.linssinAvausVahti = 0;
+      if (this.dead || this.linssiValittu !== tunnus) return;
+      /*
+       * PALLOLINSSI ON OMA TAPAUKSENSA. Kerroksettomalla linssillä
+       * (`kerros: false`, kuten Astronautin kamera) tasokartan moottori
+       * merkitsee valinnan TEHDYKSI piirtämättä mitään — se ei siis
+       * kelpaa todisteeksi siitä, että pelaaja näkee jotain. Ainoa
+       * kelpaava todiste on laudan oma kahva (`pallolinssi`).
+       */
+      const linssi = this.linssiTuki?.kaikki?.find((l) => l.tunnus === tunnus) ?? null;
+      if (typeof linssi?.pallolle === 'function') {
+        if (this.pallolinssi?.tunnus === tunnus) return;
+      } else {
+        if (this.linssikartta) return;
+        if (this.linssiTuki?.moottori?.tunnus === tunnus) return;
+      }
+      naytaLinssivirhe({
+        otsikko: 'Linssi ei käynnistynyt',
+        syy: this.pallolauta
+          ? 'Linssiä ei saatu piirrettyä pallolle.'
+          : 'Maapalloa ei saatu ladattua, joten linssiä ei voi avata. Tarkista verkkoyhteys ja yritä uudelleen.',
+        nappi: 'Sulje',
+        onSulje: () => this.valitseLinssi(null),
+      });
+    }, LINSSIN_AVAUSVAHTI_MS);
   }
 
   /*
@@ -15253,13 +18921,15 @@ export class UI {
    * nuolinäppäinnavigoinnin, jota tässä pelissä ei ole yhdessäkään
    * liuskarivissä (suunnitelman luku 5.2).
    */
-  rakennaLinssivalikko(linssit) {
+  rakennaLinssivalikko(linssit, { hiomassa = [], valmistuneet = [] } = {}) {
     if (!this.linssiValikko) return;
     this.linssiValikko.replaceChildren();
     // Vanha tietolohko jäi irralleen puusta: viittaus siihen kirjoittaisi
     // näkymättömään elementtiin.
     this.linssiTiedot = null;
-    if (!linssit.length) return;
+    // Ruudukko on uusi, joten napautusmuisti ei koske siihen.
+    this.linssiEsikatselu = undefined;
+    if (!linssit.length && !hiomassa.length) return;
 
     const liuskat = html('nav', 'linssi-liuskat');
     liuskat.setAttribute('role', 'group');
@@ -15267,17 +18937,63 @@ export class UI {
     // "Ei linssiä" on aina ensimmäisenä: paluu tavalliseen karttaan on
     // yhtä lähellä kuin linssin valinta.
     liuskat.appendChild(this.linssiLiuska(null, 'Ei linssiä'));
-    for (const linssi of linssit) {
-      liuskat.appendChild(this.linssiLiuska(linssi.tunnus, linssi.nimi));
+    /*
+     * KESKENERÄISET OMALLE RIVILLEEN RUUDUKON LOPPUUN (omistaja
+     * 20.9.2026 klo 15.10: *"merkitse vertailulinssi, maidentiedot,
+     * sekä vesistölinssi harmaalla ja siirrä omalle rivilleen ja
+     * pienennä niiden ikonit. ne ovat vielä liian keskeneräisiä"*).
+     * Linssi kertoo itse (`kesken: true`, linssimoduulin oma metatieto
+     * kuten nimi ja kuvake); laukku latoo ne toiseen ruudukkoon
+     * harmaana ja pienempänä (css .linssi-liuskat-kesken). Napit ovat
+     * samat kuin valmiilla — esikatselu ja aktivointi toimivat.
+     */
+    const valmiit = linssit.filter((l) => !l.kesken);
+    const keskeneraiset = linssit.filter((l) => l.kesken);
+    for (const linssi of valmiit) {
+      const nappi = this.linssiLiuska(linssi.tunnus, linssi.nimi);
+      // Optikolta valmistunut linssi: merkki, kunnes ruutua on napautettu.
+      if (valmistuneet.includes(linssi.tunnus)) {
+        nappi.classList.add('valmistui');
+        nappi.title = `${linssi.nimi} — optikko toi linssin valmiina`;
+      }
+      liuskat.appendChild(nappi);
     }
     this.linssiValikko.appendChild(liuskat);
+    if (keskeneraiset.length) {
+      const kesken = html('nav', 'linssi-liuskat linssi-liuskat-kesken');
+      kesken.setAttribute('role', 'group');
+      kesken.setAttribute('aria-label', 'Keskeneräiset linssit');
+      for (const linssi of keskeneraiset) {
+        const nappi = this.linssiLiuska(linssi.tunnus, `${linssi.nimi} (keskeneräinen)`);
+        nappi.classList.add('kesken');
+        kesken.appendChild(nappi);
+      }
+      this.linssiValikko.appendChild(kesken);
+    }
+    /*
+     * HIOMASSA OPTIKOLLA: samalla harmaalla rivillä kuin keskeneräiset,
+     * mutta ilman aktivointia — linssiä ei ole. Kuvake on rekisterin
+     * paikkavaraus (Codex piirtää) tai yhteinen hiomassa-kuva.
+     */
+    if (hiomassa.length) {
+      const rivi = html('nav', 'linssi-liuskat linssi-liuskat-kesken linssi-liuskat-hiomassa');
+      rivi.setAttribute('role', 'group');
+      rivi.setAttribute('aria-label', 'Hiomassa optikolla');
+      for (const tunnus of hiomassa) {
+        const nimi = this.linssiTuki?.omistus?.hiomassaNimi?.(tunnus) ?? tunnus;
+        const nappi = this.linssiLiuska(tunnus, `${nimi} (hiomassa optikolla)`, { hiomassa: true });
+        nappi.classList.add('kesken', 'hiomassa');
+        rivi.appendChild(nappi);
+      }
+      this.linssiValikko.appendChild(rivi);
+    }
     this.linssiTiedot = html('div', 'linssi-tiedot');
     this.linssiValikko.appendChild(this.linssiTiedot);
     this.paivitaLinssiNappi();
     this.paivitaLinssiTiedot();
   }
 
-  linssiLiuska(tunnus, nimi) {
+  linssiLiuska(tunnus, nimi, { hiomassa = false } = {}) {
     const nappi = html('button');
     nappi.type = 'button';
     nappi.dataset.linssi = tunnus ?? '';
@@ -15286,17 +19002,167 @@ export class UI {
     nappi.title = nimi;
     nappi.setAttribute('aria-label', nimi);
     if (tunnus) {
-      // Sama pyöreä rajaus kuin aarteilla; jos kuva ei lataudu,
-      // aarreIkoni pudottaa tilalle laattatyypin viivakuvakkeen.
-      nappi.appendChild(aarreIkoni({ kuva: `assets/varusteet/varuste-${tunnus}.jpg`, name: nimi }, 'linssi', 64));
+      /*
+       * Sama pyöreä rajaus kuin aarteilla; jos kuva ei lataudu, aarreIkoni
+       * pudottaa tilalle laattatyypin viivakuvakkeen. ASTRONAUTIN KAMERA
+       * -linssillä (satelliitti) on 20.9.2026 alkaen oma maalattu
+       * varustekuva (omistaja klo 14.50: *"tee astronautin kameralle
+       * uusi kuvake, missä on astronautti ja kamera"*; Fable valitsi
+       * ehdokkaan 3, docs/raportit/kaappaukset/astro-kuvake-20260920/).
+       * Varasolu on yhä sen oma vektorikuvake (js/mapart.js
+       * 'linssi-satelliitti'), ei muiden linssien jaettu taikalasi.
+       */
+      const onSatelliitti = tunnus === 'satelliitti';
+      // Hiomassa: rekisterin ikonipaikka tai yhteinen hiomassa-kuva.
+      const kuva = hiomassa
+        ? (LINSSIT.find((r) => r.tunnus === tunnus)?.ikoni ?? LINSSI_HIOMASSA_KUVA)
+        : `assets/varusteet/varuste-${tunnus}.jpg`;
+      const tiedot = { kuva, name: nimi };
+      nappi.appendChild(aarreIkoni(tiedot, onSatelliitti ? 'linssi-satelliitti' : 'linssi', 64));
     } else {
       // "Ei linssiä" ei ole esine, jolla olisi valokuva: yliviivatut
       // taikalasit pyöreässä kehyksessä pitävät sen samassa rivissä
       // kuvien kanssa mutta selvästi "paljain silmin" -valintana.
       nappi.innerHTML = liuskaIkoniSvg(LINSSI_EI_IKONI, 30);
     }
-    nappi.addEventListener('click', () => this.valitseLinssi(tunnus));
+    /*
+     * NAPAUTUS EI SYTYTÄ, VAAN SELITTÄÄ (omistaja 5.9.2026 sanatarkasti:
+     * *"kun linssi klikataan matkalaukussa niin silloin päivittyy vasta
+     * selite teksti ja tekstin loppuun tulee "aktivoi", mitä
+     * klikkaamalla linssi menee päälle ja matkalaukku sulkeutuu"*).
+     * Kytkentä on siis kaksivaiheinen: ruudun napautus vaihtaa
+     * selitteen, ja selitteen perässä oleva "aktivoi" kytkee linssin.
+     */
+    nappi.addEventListener('click', () => this.esikatseleLinssi(tunnus));
     return nappi;
+  }
+
+  /**
+   * Laukun ruudun napautus: merkitsee linssin katsotuksi ja kirjoittaa
+   * sen selitteen ruudukon alle. EI kytke linssiä — sen tekee vasta
+   * selitteen perässä oleva "aktivoi" (aktivoiLinssi).
+   *
+   * @param {string|null} tunnus napautettu linssi; null = "Ei linssiä"
+   */
+  esikatseleLinssi(tunnus) {
+    this.linssiEsikatselu = tunnus ?? null;
+    // Valmistuneen linssin merkki kuitataan ensimmäisellä napautuksella.
+    const omistus = this.linssiTuki?.omistus;
+    if (tunnus && omistus?.valmistuneet?.(this.game, this.game.player).includes(tunnus)) {
+      omistus.merkitseLinssiNahdyksi?.(tunnus);
+      this.linssiValikko?.querySelector(`.linssi-liuskat button[data-linssi="${tunnus}"]`)?.classList.remove('valmistui');
+    }
+    this.paivitaLinssiTiedot();
+  }
+
+  /**
+   * Selitteen "aktivoi" (tai päällä olevan linssin kohdalla
+   * "sammuta"): kytkee linssin ja sulkee laukun, jotta kartta jää
+   * heti näkyviin.
+   */
+  aktivoiLinssi(tunnus) {
+    this.linssiEsikatselu = undefined;
+    this.valitseLinssi(tunnus);
+    this.suljeLaukku();
+  }
+
+  /* ==================== AIKAJANALINSSIT (js/aikajana.js) ==================== */
+
+  /**
+   * Käynnistää aikajanalinssin (esim. 'keksinnot') kartan päälle.
+   *
+   * Moottori ja linssi tuodaan dynaamisesti: yhden tiedoston versio ei
+   * niputa linssejä (docs/moduulit/linssit.md 2.1), ja tuontivirhe
+   * tarkoittaa silloin vain, ettei aikajanaa ole — peli ei kaadu.
+   * Aikajana vaatii maailmankartan laudan (linssin `laudat`).
+   *
+   * @returns {Promise<boolean>} lähtikö ajo
+   */
+  async kaynnistaAikajana(tunnus) {
+    if (this.dead) return false;
+    let moottori = null;
+    let linssi = null;
+    try {
+      const tuki = await this.lataaLinssit();
+      moottori = await import('./aikajana.js');
+      linssi = await tuki?.kerros.haeLinssi(tunnus);
+    } catch (syy) {
+      console.warn(`Aikajanalinssiä "${tunnus}" ei voitu ladata.`, syy);
+      return false;
+    }
+    if (this.dead || !linssi?.aikajana || !moottori) return false;
+    if (!(linssi.laudat ?? []).some((l) => l === '*' || l === this.game.pack.id)) return false;
+    const lahti = moottori.kaynnistaAikajana(this, linssi);
+    this.aikajanaTunnus = lahti ? tunnus : null;
+    document.dispatchEvent(new CustomEvent('aikajana-tila', { detail: { paalla: lahti } }));
+    return lahti;
+  }
+
+  /**
+   * KARTTAPALLO (omistaja 4.9.2026, Globe.gl): maailmanvalikko pallona
+   * kartan päällä; napautus sukeltaa laudalle. Avataan matkalaukun
+   * Karttapallo-linssistä (valitseLinssi). Moduuli ja kirjasto
+   * ladataan vasta avattaessa (js/pallo.js).
+   */
+  async avaaPallo() {
+    if (this.dead) return false;
+    let pallo = null;
+    try {
+      pallo = await import('./pallo.js');
+    } catch (syy) {
+      console.warn('Karttapalloa ei voitu ladata.', syy);
+      return false;
+    }
+    return pallo.avaaPallo(this);
+  }
+
+  /** Purkaa päällä olevan aikajanan; ilman aikajanaa ei tee mitään. */
+  pysaytaAikajana() {
+    if (!this.aikajana) return false;
+    const tunnus = this.aikajanaTunnus;
+    this.aikajana.pura();
+    this.aikajana = null;
+    this.aikajanaTunnus = null;
+    document.dispatchEvent(new CustomEvent('aikajana-tila', { detail: { paalla: false } }));
+    /*
+     * AIKAJANAN SULJE ON LINSSIN SULJE (vaihe 4, aalto 2A): aikajanan
+     * oma ✕ ja Esc päättävät linssin, jotta laukun valinta ei jää
+     * päälle ilman ajoa. Pallolaudalla (aalto 2A) portti on lauta itse
+     * — linssikarttaa ei enää avata aikajanalle — ja linssikartalla
+     * kuori palaa pallolle. Tasokartalla (?lauta=kartta) kumpikaan ehto
+     * ei täyty ja valinta jää kuten ennen. Ei kehää: valitseLinssi(null)
+     * nollaa valinnan ennen kuin sen oma tahdistus kutsuu tätä uudestaan.
+     */
+    const linssinSulje = this.pallolautaPaalla() || Boolean(this.linssikartta?.linssi);
+    if (linssinSulje && tunnus && this.linssiValittu === tunnus) this.valitseLinssi(null);
+    return true;
+  }
+
+  /**
+   * Linssivalinnan tahdistus: kerrokseton aikajanalinssi käynnistää
+   * ajon, mikä tahansa muu valinta (tai valinnan purku) sammuttaa sen —
+   * mutta vain jos ajo oli linssivalinnan käynnistämä. Kehittäjävalikon
+   * käynnistämä aikajana ei sammu linssinapista.
+   */
+  async tahdistaAikajana(tunnus) {
+    const tuki = await this.lataaLinssit();
+    /*
+     * LINSSI HAETAAN TUNNUKSELLA, EI KERROSMOOTTORISTA (aalto 2A).
+     * Pallolaudalla `pallolle`-linssi ei kulje kerrosmoottorin kautta
+     * lainkaan (sytytaLinssi sammuttaa moottorin ja piirtää pallolle),
+     * joten moottorin `linssi` on silloin null — ja keksintölinssi jäisi
+     * käynnistymättä juuri sillä laudalla, jolle se on käännetty.
+     */
+    const linssi = tunnus ? tuki?.kaikki.find((l) => l.tunnus === tunnus) ?? null : null;
+    if (linssi?.aikajana) {
+      if (this.aikajanaTunnus !== tunnus) await this.kaynnistaAikajana(tunnus);
+      this.aikajanaValitsimesta = true;
+      return;
+    }
+    if (this.aikajanaValitsimesta) {
+      this.aikajanaValitsimesta = false;
+      this.pysaytaAikajana();
+    }
   }
 
   /** Ylärivin nappi näyttää päällä olevan linssin kuvakkeen. */
@@ -15314,23 +19180,61 @@ export class UI {
     return this.linssiTuki?.kaikki.find((l) => l.tunnus === this.linssiValittu) ?? null;
   }
 
+  /** Linssimoduuli tunnuksella; null = "Ei linssiä" eikä siis moduulia. */
+  linssiTunnuksella(tunnus) {
+    if (!tunnus) return null;
+    return this.linssiTuki?.kaikki.find((l) => l.tunnus === tunnus) ?? null;
+  }
+
   /** Valittu rivi korostetaan ja sen kuvaus kirjoitetaan rivien alle. */
   paivitaLinssiTiedot() {
+    // Linssikartan otsikkorivi seuraa valintaa (js/pallolauta/linssikartta.js).
+    this.pallolauta?.linssikartta?.paivita();
     if (!this.linssiValikko) return;
+    /*
+     * KAKSI KOROSTUSTA, KAKSI ERI ASIAA (omistaja 5.9.2026). `paalla`
+     * on messinkirengas päällä olevan linssin ympärillä — se kertoo,
+     * mikä kartalla nyt on. `esikatselu` on kevyt rengas juuri
+     * napautetun ruudun ympärillä: se kertoo, mistä alla oleva selite
+     * puhuu. Ne voivat olla eri ruuduissa yhtä aikaa, ja juuri siksi
+     * ne ovat eri luokkia.
+     */
+    const esikatselussa = this.linssiEsikatselu !== undefined;
     for (const nappi of this.linssiValikko.querySelectorAll('.linssi-liuskat button')) {
-      const paalla = (nappi.dataset.linssi || null) === this.linssiValittu;
+      const tunnus = nappi.dataset.linssi || null;
+      const paalla = tunnus === this.linssiValittu;
       nappi.classList.toggle('paalla', paalla);
+      nappi.classList.toggle('esikatselu', esikatselussa && tunnus === this.linssiEsikatselu);
       nappi.setAttribute('aria-pressed', String(paalla));
     }
     if (!this.linssiTiedot) return;
     this.linssiTiedot.replaceChildren();
-    const linssi = this.paallaOlevaLinssi();
+    // Napautettu ruutu selitetään; ilman napautusta selite kertoo
+    // päällä olevasta linssistä kuten ennen.
+    const tunnus = esikatselussa ? this.linssiEsikatselu : this.linssiValittu;
+    const linssi = this.linssiTunnuksella(tunnus);
+    if (!linssi && tunnus && this.linssiTuki?.omistus?.hiomassa?.(tunnus)) {
+      // Hiomassa optikolla: nimi rekisteristä, ei aktivointia.
+      const nimi = this.linssiTuki.omistus.hiomassaNimi?.(tunnus) ?? tunnus;
+      this.linssiTiedot.appendChild(html('h3', 'linssi-nimi', nimi));
+      this.linssiTiedot.appendChild(html('p', 'linssi-lyhyt',
+        'Hiomassa optikolla. Linssi tulee laukkuun käyttöön, kun se on valmis — kerran nähtyä maailmaa ei oteta pois.'));
+      this.havaitseLinssiTietojenVaihto();
+      return;
+    }
     if (!linssi) {
+      // "Ei linssiä" on napautettuna yhtä lailla varuste: sillä on nimi
+      // ja selite, ja sen Aktivoi-nappi palauttaa paljaan kartan.
+      if (esikatselussa) this.linssiTiedot.appendChild(html('h3', 'linssi-nimi', 'Paljain silmin'));
       this.linssiTiedot.appendChild(html('p', 'linssi-lyhyt', 'Kartta sellaisena kuin isoisä sen piirsi.'));
+      if (esikatselussa) this.lisaaLinssinAktivointi(null, null);
+      this.havaitseLinssiTietojenVaihto();
       return;
     }
     this.linssiTiedot.appendChild(html('h3', 'linssi-nimi', linssi.nimi));
     this.linssiTiedot.appendChild(html('p', 'linssi-lyhyt', linssi.lyhyt));
+    if (esikatselussa) this.lisaaLinssinAktivointi(tunnus, linssi);
+    this.havaitseLinssiTietojenVaihto();
 
     /*
      * LÄHDELINKKI POISTETTU VALIKOSTA (omistaja 5.8.2026: "poista myös,
@@ -15347,6 +19251,63 @@ export class UI {
      * merkintöinä lisensseineen. Jos joskus tulee CC BY -aineistoon
      * perustuva linssi, sen nimeäminen kuuluu sinne, ei tähän.
      */
+  }
+
+  /**
+   * AKTIVOI-NAPPI SELITTEEN ALLE (omistaja 6.9.2026: *"Tee aktivoi
+   * tekstistä nappi."*).
+   *
+   * Kaksivaiheisuus on ennallaan (omistaja 5.9.2026: *"kun linssi
+   * klikataan matkalaukussa niin silloin päivittyy vasta selite teksti
+   * ... mitä klikkaamalla linssi menee päälle ja matkalaukku
+   * sulkeutuu"*) — vain painike vaihtoi muotoa. Sana oli ennen ladottu
+   * selitekappaleen perään tekstilinkin näköisenä ja oli yhden
+   * tekstirivin korkuinen: laukun ainoa varsinainen toiminto ei näyttänyt
+   * napilta eikä osunut sormeen. Nyt se on OMA LOHKONSA selitteen alla,
+   * messinkireunaisena ja 44 pikselin korkuisena (css .linssi-aktivoi).
+   *
+   * Päällä olevan linssin kohdalla nappi sanoo "Ota pois" ja kytkee
+   * linssin pois (valitseLinssi(null)) — sama nappi, käänteinen suunta.
+   * Poiskytkentä säilyy siis samassa kohdassa kuin ennenkin; siksi nappi
+   * ei ole disabloitu "Käytössä"-teksti.
+   *
+   * aria-label kertoo, MITÄ aktivoidaan: pelkkä "Aktivoi" ei sitä kerro.
+   *
+   * @param {string|null} tunnus esikatseltu linssi (null = paljain silmin)
+   * @param {object|null} linssi linssimoduuli, jos tunnus osoittaa sellaiseen
+   */
+  lisaaLinssinAktivointi(tunnus, linssi) {
+    const paalla = Boolean(tunnus) && tunnus === this.linssiValittu;
+    const nappi = html('button', `linssi-aktivoi${paalla ? ' pois' : ''}`,
+      paalla ? 'Ota pois' : 'Aktivoi');
+    nappi.type = 'button';
+    const nimi = linssi?.nimi ?? 'Paljain silmin';
+    if (paalla) nappi.setAttribute('aria-label', `Ota linssi ${nimi} pois käytöstä`);
+    else if (linssi) nappi.setAttribute('aria-label', `Aktivoi linssi ${nimi}`);
+    else nappi.setAttribute('aria-label', 'Katso karttaa paljain silmin');
+    /*
+     * Nappi tulee selitteen JÄLKEEN tietolohkoon, ei kappaleen sisään:
+     * kappale on virke ja nappi on toiminto. Kutsuja on siksi jo
+     * latonut selitteen paikalleen, kun tänne tullaan.
+     */
+    this.linssiTiedot.appendChild(nappi);
+    nappi.addEventListener('click', () => this.aktivoiLinssi(paalla ? null : tunnus));
+    return nappi;
+  }
+
+  /**
+   * Selitteen vaihto häivytetään sisään (css: .linssi-tiedot.vaihtui).
+   * Luokka otetaan pois ja pannaan takaisin, jotta sama animaatio
+   * lähtee alusta joka napautuksella; välissä oleva asettelun luku
+   * pakottaa selaimen huomaamaan muutoksen. Reduced motion nollaa
+   * keston tyylitiedostossa, joten tästä ei tarvitse kysyä.
+   */
+  havaitseLinssiTietojenVaihto() {
+    const lohko = this.linssiTiedot;
+    if (!lohko?.classList) return;
+    lohko.classList.remove('vaihtui');
+    void lohko.offsetWidth;
+    lohko.classList.add('vaihtui');
   }
 
   /**
@@ -15542,13 +19503,14 @@ export class UI {
 
   showWinner() {
     clearTimeout(this.botTimer);
+    clearTimeout(this.automaattiheittoAjastin);
     if (!this.winnerDialog.open) sfx.play('win');
     const w = this.game.winner;
     document.getElementById('winner-title').textContent = `${w.name} voitti!`;
     // Voiton ainoa tie on pääaarre kotiin (js/game.js checkWin).
     this.typeText(
       document.getElementById('winner-text'),
-      this.game.pack.texts.winnerStar(w.name, w.money),
+      taytaPohja(this.game.pack.texts.winnerStar, { name: w.name, money: w.money }),
       'winner',
     );
     const roamBtn = document.getElementById('winner-roam');
@@ -15613,6 +19575,79 @@ export class UI {
   // --- tietovisa ----------------------------------------------------------
 
   /**
+   * KOHTAAMISKORTIN ISO KUVA JA SEN KUVATEKSTI (omistajan tilaus
+   * 1.9.2026: *"nuo aarrekuvat vaativat pelissä isomman kuva-alan …
+   * voisit suunnitella kohtaamiskortin uudelleen niin että kuva näkyy
+   * siinä isona. idea oli kai että kuvan alle tulee myös
+   * kuvatekstiä"*).
+   *
+   * Kuvio piilotetaan kokonaan, kun kuvaa ei ole: kuvaton kohtaaminen
+   * (vanha paikallinen muotokuva puuttuu, kuva ei ole tarkistettu tai
+   * kyseessä on kaksintaistelu) piirtyy täsmälleen kuten ennen eikä
+   * jätä korttiin tyhjää aukkoa. Sama koskee verkkovirhettä: yhden
+   * tiedoston versiossa kuvat haetaan R2:sta, ja yhteydetön pelaaja
+   * saa saman kortin kuin kuvattomassa kaupungissa.
+   *
+   * @param {?{osoite: string, alt?: string, kuvateksti?: string,
+   *   valokuva?: boolean}} tiedot null piilottaa kuvion
+   */
+  naytaKohtaamiskuva(tiedot) {
+    const kuvio = this.quizKohtaaminenKuvio;
+    const kuva = this.quizKohtaaminenKuva;
+    if (!kuvio || !kuva) return;
+    if (!tiedot?.osoite) {
+      kuvio.hidden = true;
+      kuva.removeAttribute('src');
+      return;
+    }
+    /*
+     * Kaksi kuvamaailmaa, kaksi sulautusta. Vanhat paikalliset
+     * muotokuvat ovat pergamenttipohjaisia piirroksia, joilta multiply
+     * hävittää taustan; uudet kohtaamiskuvat ovat valokuvia, joita
+     * multiply vain likaisi — niille riittää pehmeä vinjetti, joka
+     * sulattaa reunat paperiin (css/styles.css .quiz-kohtaaminen-kuva).
+     */
+    kuva.classList.toggle('valokuva', Boolean(tiedot.valokuva));
+    kuva.classList.toggle('piirros', !tiedot.valokuva);
+    if (kuva.getAttribute('src') !== tiedot.osoite) kuva.src = tiedot.osoite;
+    kuva.alt = tiedot.alt ?? '';
+    kuva.onerror = () => {
+      kuvio.hidden = true;
+      kuva.removeAttribute('src');
+    };
+    /*
+     * KORTILLA LYHYT, AVATUSSA KUVASSA PITKÄ (js/kuvatekstit.js,
+     * omistaja 9.9.2026). Pitkä versio talletetaan kenttään, josta
+     * kuvan suurennos (openLightbox-kuuntelija) lukee sen.
+     */
+    const kortinKuvateksti = kuvatekstiLyhyt(tiedot);
+    this.quizKohtaaminenPitka = kuvatekstiPitka(tiedot) || null;
+    if (this.quizKohtaaminenSelite) this.quizKohtaaminenSelite.textContent = kortinKuvateksti;
+    if (this.quizKohtaaminenKuvateksti) {
+      this.quizKohtaaminenKuvateksti.hidden = !kortinKuvateksti;
+      /*
+       * HAVAINNEKUVASELITE MYÖS KOHTAAMISKORTTIIN (1.9.2026). Tämän
+       * kortin lähderivi on kiinteää HTML:ää (index.html "Matkakirjan
+       * kuvitus"), eli ainoa lähderivi talossa, jota mikään renderöijä
+       * ei kirjoita — mutta se kulkee silti SAMAN apurin kautta kuin
+       * kaikki muut (taytaLahderivi, 2.9.2026). Apuri kirjoittaa rivin
+       * tekstin uudestaan joka näytöllä, joten selite syntyy mukana
+       * eikä tässä tarvitse tietää merkintätavasta mitään.
+       *
+       * Teksti annetaan vakiona (KOHTAAMISKUVAN_LAHDE) eikä lueta
+       * HTML:stä: sama vakio on jo kortin suurennoksen lähderivi
+       * (openLightbox), joten molemmat sanovat saman asian samasta
+       * paikasta.
+       */
+      const kuvalahde = this.quizKohtaaminenKuvateksti.querySelector('.kuvalahde');
+      if (kuvalahde) {
+        taytaLahderivi(kuvalahde, KOHTAAMISKUVAN_LAHDE, { osoite: tiedot.osoite });
+      }
+    }
+    kuvio.hidden = false;
+  }
+
+  /**
    * Vastausnapit rakennetaan vain kun kysymys vaihtuu, ja päivitetään muuten
    * paikallaan. Jos ne rakennettaisiin joka renderillä uudelleen, esiin-
    * liukuva option-in-animaatio alkaisi alusta joka kerta ja koko lista
@@ -15635,7 +19670,7 @@ export class UI {
           btn.classList.add('kuvallinen');
           const img = document.createElement('img');
           img.className = 'quiz-option-kuva';
-          img.alt = kuva.selite ?? '';
+          img.alt = kuvatekstiLyhyt(kuva);
           img.draggable = false;
           img.addEventListener('error', () => { img.hidden = true; });
           asetaKuva(img, valokuvaUrl(kuva.tiedosto, 560), valokuvaVara(kuva.tiedosto, 560));
@@ -15705,8 +19740,31 @@ export class UI {
    * hihkaisukin on ääninäyttelyä.
    */
   soitaHihkaisu(lahde) {
-    const audio = new Audio(aaniUrl(lahde));
-    audio.volume = puheVoima();
+    /*
+     * TASO SITÄ POLKUA, JOTA SELAIN TOTTELEE. Hihkaisu on kertojan
+     * ääninäyttelyä ja soi puheVoimalla — mutta iOS:n WebKit ei tottele
+     * elementin omaa volumea (js/musiikkivahvistin.js, omistajan vika
+     * 9.9.2026), joten puhelimessa hihkaisu on soinut tiedoston omalla
+     * tasolla eikä Lukija-liuku ole tavoittanut sitä. Reititetään sama
+     * vahvistin kuin musiikilla ja luennoilla; jos reititys ei onnistu,
+     * taso menee volumeen kuten ennen.
+     *
+     * crossOrigin ENNEN srciä ja vain reitittävällä polulla: turha
+     * lupapyyntö muuttaisi työpöydän pyyntöä ilman hyötyä.
+     */
+    const reititetaan = !volumeToimii();
+    const audio = new Audio();
+    if (reititetaan) audio.crossOrigin = 'anonymous';
+    audio.src = aaniUrl(lahde);
+    const vahvistin = reititetaan ? liitaMusiikkiin(audio) : null;
+    // Sama kentän nimi kuin luennoilla, jotta Lukija-liu'un päivitys
+    // löytää gainin eikä kirjoita olemattomaan volumeen.
+    if (vahvistin) audio.luennanVahvistin = vahvistin;
+    if (vahvistin) vahvistin.gain.value = Math.max(0, Math.min(1, puheVoima()));
+    else audio.volume = puheVoima();
+    const irrota = () => irrotaMusiikinVahvistin(audio);
+    audio.addEventListener('ended', irrota);
+    audio.addEventListener('error', irrota);
     // Tausta väistyy hihkaisun ajaksi kuten luennoilla; merkitsePuhuja
     // vapauttaa roolin ended/error-tapahtumista.
     merkitsePuhuja(this, audio);
@@ -15740,12 +19798,26 @@ export class UI {
    * silloin virhetapahtuma purkaa väistön eikä mitään muuta tapahdu.
    */
   soitaAarreMusiikki(lahde) {
-    if (!sfx.enabled) return;
+    // Paljastusaihe on musiikkia: oma kytkin vaientaa sen erikseen
+    // (Raamattu, VIAT v1672) — äänimaisema ja tehosteet jatkavat.
+    if (!sfx.enabled || !musiikkiPaalla()) return;
     // Edellinen aihe pois, jos pelaaja ehti seuraavaan paljastukseen:
     // kaksi fanfaaria päällekkäin ei ole juhla vaan sotku.
     this.pysaytaAarreMusiikki();
-    const audio = new Audio(aaniUrl(lahde));
-    audio.volume = AARRE_MUSIIKIN_VOIMA;
+    const audio = new Audio();
+    /*
+     * crossOrigin ENNEN srciä: aihe reititetään vahvistimen läpi, ja
+     * Web Audio tarvitsee CORS-luvan lukeakseen ämpäristä tulevaa
+     * ääntä (sw.js aaniPeilista vastaa CORS-tilassa).
+     */
+    audio.crossOrigin = 'anonymous';
+    audio.src = aaniUrl(lahde);
+    // Paljastusaihe on musiikkia: sama kerroin kuin kaikella muulla
+    // musiikilla (js/musiikkivalitsin.js musiikinKerroin), jotta säädin
+    // koskee myös sitä — ja sama vahvistinreitti, jotta taso menee
+    // perille myös iPhonessa (omistajan vika 9.9.2026).
+    audio.aaniVahvistin = liitaMusiikkiin(audio);
+    asetaMusiikinTaso(audio, AARRE_MUSIIKIN_VOIMA * musiikinKerroin());
     /*
      * Tausta madaltuu aiheen ajaksi. Hiljennys (syyjoukko) eikä väistö
      * (laskuri): pääaarteella soi samaan aikaan luettu huudahdus, joka
@@ -15755,20 +19827,33 @@ export class UI {
      */
     hiljennaAmbienssi(AARRE_MUSIIKIN_SYY);
     this.aarreMusiikki = audio;
+    // Säädin koskee myös kesken soivaa aihetta: kuuntelija irtoaa, kun
+    // aihe päättyy tai seuraava ottaa sen paikan.
+    const irtiSaatimesta = kuunteleMusiikinKerrointa(() => {
+      asetaMusiikinTaso(audio, AARRE_MUSIIKIN_VOIMA * musiikinKerroin());
+    });
     /*
      * Purku VAIN jos tämä aihe on yhä se soiva. Pysäytys asettaa
      * `aarreMusiikki`-kentän nolliin ja purkaa hiljennyksen jo itse, ja
      * sen jälkeen elementin `src`:n irrotus laukaisee vielä virheen —
      * ilman tätä ehtoa se purkaisi seuraavan aiheen hiljennyksen, joka
-     * ehti jo alkaa.
+     * ehti jo alkaa. Säätimen kuuntelija irrotetaan silti aina.
      */
     const ohi = () => {
+      irtiSaatimesta();
       if (this.aarreMusiikki !== audio) return;
       this.aarreMusiikki = null;
       palautaAmbienssi(AARRE_MUSIIKIN_SYY);
     };
     audio.addEventListener('ended', ohi);
     audio.addEventListener('error', ohi);
+    /*
+     * Ilman vahvistinta JA ilman toimivaa volumea (iOS) aihe soisi
+     * tiedoston omalla täydellä tasolla. Silloin se jätetään soimatta
+     * ja hiljennys puretaan heti — juhla ilman fanfaaria on parempi
+     * kuin fanfaari, joka jyrää huudahduksen yli.
+     */
+    if (!musiikkiSaaSoida(audio)) { ohi(); return; }
     audio.play().catch(ohi);
   }
 
@@ -15783,6 +19868,9 @@ export class UI {
     } catch {
       /* soitin oli jo purettu */
     }
+    // Solmut irti: reititys on pysyvä, ja purkamaton ketju pitäisi
+    // elementin kiinni destinationissa jokaisen aarteen jälkeen.
+    irrotaMusiikinVahvistin(audio);
     palautaAmbienssi(AARRE_MUSIIKIN_SYY);
   }
 
@@ -16137,6 +20225,12 @@ export class UI {
     if (this.reducedMotion) {
       pohja.classList.add('shown');
       kuvaEl?.classList.add('shown');
+      if (onAarre(type)) {
+        ilmoitaLivianTunne(
+          { tunne: 'ilo', voimakkuus: 0.8 },
+          { lahde: 'aarre', tunnus: `aarre.loyto:${cityId ?? 'tuntematon'}:${type}` },
+        );
+      }
       caption.classList.add('shown');
       leima?.classList.add('lyoty');
       // Kirkastuminen kuuluu vain diplomille: tumman mallin pääaarre
@@ -16154,6 +20248,12 @@ export class UI {
       await this.wait(420);
       pohja.classList.add('shown');
       kuvaEl?.classList.add('shown');
+      if (onAarre(type)) {
+        ilmoitaLivianTunne(
+          { tunne: 'ilo', voimakkuus: 0.8 },
+          { lahde: 'aarre', tunnus: `aarre.loyto:${cityId ?? 'tuntematon'}:${type}` },
+        );
+      }
       sfx.play(treasureSound(type));
       if (aihe) this.soitaAarreMusiikki(aihe);
       if (hihkaisu) this.soitaHihkaisu(hihkaisu);
@@ -16185,7 +20285,11 @@ export class UI {
     overlay.remove();
     // Löytö päätyy matkalaukkuun: yläreunan Laukku-nappi heilahtaa
     // eloisasti merkiksi (omistajan toive). Rosvo ei tuo mitään.
-    if (onAarre(type)) this.elavoitaLaukku();
+    if (onAarre(type)) {
+      this.elavoitaLaukku();
+      // Aarre löytyi: neliösymboli laajenee hetkeksi Liiku-napiksi.
+      this.laajennaLiiku();
+    }
   }
 
   /**
@@ -16283,17 +20387,41 @@ export class UI {
   }
 
   /**
+   * VARAA KIRJOITUSKONEEN TILAN ENNAKKOON: sama näkymätön varjoteksti
+   * kuin typeTextin lähtötilassa (tyhjä `typed` + täysi `pending`),
+   * mutta ilman ajastimia. Elementti on siis heti lopullisen kokoinen,
+   * ja kirjoituskone vain paljastaa jo varattua tilaa.
+   *
+   * Tätä tarvitaan siellä, missä kirjoitus alkaa vasta sekuntien
+   * päästä mutta lohko on jo ruudulla: etusivun avauksessa paikkarivi
+   * ja runko odottavat julisteen valmistumista, ja ilman varausta
+   * keskitetty tekstipalsta kasvoi ja liukui kummankin alkaessa
+   * (omistaja 6.9.2026: *"Konekirjoitusteksti hyppää kun tekstiä
+   * tulee"*). Sama teksti annetaan myöhemmin typeTextille.
+   *
+   * Varjoteksti on `visibility: hidden` (css .pending), joten se ei näy
+   * eikä päädy ruudunlukijalle.
+   */
+  varaaKirjoitustila(target, text) {
+    if (!target) return;
+    target.textContent = '';
+    target.appendChild(html('span', 'typed'));
+    const tuleva = html('span', 'pending');
+    tuleva.textContent = String(text);
+    target.appendChild(tuleva);
+  }
+
+  /**
    * Kirjoituskone: teksti naksuu ruudulle sana kerrallaan kuin vanhalla
    * matkakirjoituskoneella. Sama paikka (slot) keskeyttää edellisen
    * kirjoituksen, jotta tekstit eivät sekoitu keskenään. Liikkeen
    * vähennystä toivovalle teksti ilmestyy kerralla.
-   */
-  /**
-   * Kirjoituskoneteksti. Koko teksti on alusta asti paikallaan, mutta
-   * kirjoittamaton osa on näkymätöntä: se varaa tilansa, joten rivitys ei
-   * muutu kesken kirjoituksen eikä jo luettu teksti hyppää paikaltaan.
-   * Aiemmin sanat lisättiin yksi kerrallaan, jolloin koko kappale latoutui
-   * uudelleen joka sanalla.
+   *
+   * Koko teksti on alusta asti paikallaan, mutta kirjoittamaton osa on
+   * näkymätöntä: se varaa tilansa, joten rivitys ei muutu kesken
+   * kirjoituksen eikä jo luettu teksti hyppää paikaltaan. Aiemmin sanat
+   * lisättiin yksi kerrallaan, jolloin koko kappale latoutui uudelleen
+   * joka sanalla.
    */
   typeText(target, text, slot = 'fact', done = null, speed = TYPE_MS) {
     this.typeTimers ??= {};
@@ -16408,8 +20536,35 @@ export class UI {
     // Radiotilassa kartalla ei liikuta.
     if (this.radioPaalla()) return;
     // Nopanheitto keskeyttää tarinan: luenta häipyy pehmeästi pois.
-    haivytaLuenta(this);
-    this.run(() => this.game.actionRoll(), { after: (result) => this.animateDie(result.die) });
+    this.vaiennaPaikanPuhe();
+    this.heitaJaSovita(() => this.game.actionRoll());
+  }
+
+  /**
+   * Nopanheitto ja sen jälkinäytös: noppa pyörii, rivi piirtyy, ja
+   * vasta sitten kamera sovittaa vaihtoehdot ruudulle (omistaja
+   * 2.9.2026, ks. tiedoston alun lohko KOHTEIDEN SOVITUS RUUDULLE).
+   *
+   * JÄRJESTYS ON EHTO, JA SE ON KAKSIOSAINEN.
+   *
+   *   1. NOPAN JÄLKEEN. Noppa lentää nappulan vierestä laudalle RUUDUN
+   *      pikseleissä, ja kesken heiton alkava kamera-ajo siirtäisi
+   *      maalin sen alta. Siksi sovitus ei ole `after`-vaiheessa.
+   *   2. RENDERIN JÄLKEEN, eli `run`-lupauksen ratkettua. Käytettävä
+   *      alue luetaan RUUDULTA (sovituksenAlue), ja juuri heiton
+   *      päätteeksi ruudun kalusteet vaihtuvat: Matkusta-nappi katoaa
+   *      rivistä siirtovaiheen ajaksi ja kohdemerkit ilmestyvät. Alueen
+   *      lukeminen ennen sitä antoi mitatusti eri laatikon kuin sen
+   *      jälkeen, ja kamera olisi asettunut kahden eri totuuden väliin.
+   *
+   * Sovitus itse ei ole odotettava vaihe: ajo saa jäädä pyörimään, ja
+   * pelaajan ele voittaa sen kuten kaikki muutkin kamera-ajot.
+   */
+  heitaJaSovita(teko) {
+    return this.run(teko, { after: (result) => this.animateDie(result?.die) })
+      .then(() => {
+        if (!this.dead) this.sovitaSiirtokohteet();
+      });
   }
 
 
@@ -16417,6 +20572,13 @@ export class UI {
   doMove(key) {
     // Radiotilassa kartalla ei liikuta.
     if (this.radioPaalla()) return;
+    // Linssin ajan ei liikuta lainkaan (ks. linssikarttaEstaa): pallon
+    // pinnan napautus ei saa kuluttaa pelivuoroa linssin merkkien
+    // vierestä.
+    if (this.linssikarttaEstaa()) return;
+    // Nappula liikkuu: automaattiheiton "samasta pisteestä vain kerran"
+    // -merkki vanhenee tässä (ks. automaattiheittoSallittu).
+    this.automaattiheittoPaikka = null;
     const { game } = this;
     const move = game.moves?.get(key);
     if (!move) return;
@@ -16430,12 +20592,59 @@ export class UI {
      * milloin null, milloin seuraavan vuoron tapa.
      */
     const maitse = game.travelMode === 'land';
+    /*
+     * SAMASTA SYYSTÄ KULKUTAPA TALTEEN TÄSSÄ (karttauudistus erä 8):
+     * `after` ajetaan vasta kun actionMove on jo päättänyt vuoron, ja
+     * beginTurn on silloin nollannut travelModen. Ilman tätä riviä
+     * kulkutapakohtainen rajaus ja paluu maan näkymään jäisivät
+     * tekemättä juuri maa- ja merimatkoilla.
+     */
+    const tapa = game.travelMode;
+    /*
+     * ASKELTAHTI PORRASTETAAN HEITON PITUUDEN MUKAAN (omistaja
+     * 1.9.2026 ilta: *"pelaajan nappulat saisi edetä vähän
+     * hitaammin"*). Yhden askeleen matka saa täyden rauhan, kuutonen
+     * kutistuu kattoon mahtuvaksi — kaava ja luvut jalkamatkanAskelissa.
+     */
+    /*
+     * SIIRTYMÄMUSIIKIN LAJI LUETAAN SAMASTA TILASTA JA SAMAAN AIKAAN
+     * kuin matkustustapa (omistaja 2.9.2026: musiikki *"voisi olla
+     * hieman eri kävellessä laivalla ja lentäen"*). doMove kattaa
+     * kaksi lajia kolmesta — maitse ja meritse — ja lennon oma laji
+     * kytketään doFlyssä, jossa animaatio on toinen.
+     */
+    const musiikki = maitse ? 'jalan' : 'laiva';
     this.run(() => game.actionMove(key), {
-      after: () => this.animatePawn(
+      after: (result) => {
+        // Lähtö kuuluu vain kaupungista alkavaan valittuun matkaan.
+        // Reitin varren automaattijatko ei saa uutta tunnetta joka heitolla.
+        if (result?.ok && from.type === 'city') {
+          puraFokusvirtaPaikanvaihdossa(this);
+          ilmoitaLivianTunne(
+            { tunne: 'ilo', voimakkuus: maitse ? 0.4 : 0.45 },
+            { lahde: 'matka', tunnus: maitse ? 'matka.kavely.lahto' : 'matka.laiva.lahto' },
+          );
+        }
+        /*
+         * NAPPULA HYPPII TAAS ASKEL ASKELEELTA (omistaja 19.9.2026 klo
+         * 23.47 Suomen aikaa, iPad Pariisi–Marseille, sanatarkasti:
+         * *"Ota hyppiminen takaisin nappulan siirtymiseen."*). Erän 8
+         * autokyyti (v1845, 13.9.2026: `kyyti: maitse`) korvasi
+         * hyppyketjun maareitillä yhdellä liukuvalla ajolla; nyt
+         * maareitti kulkee taas hyppyketjua (js/siirtokoreografia.js
+         * hypynVaihe/hypynHuippu, HYPYN_TAUKO_MS joka välissä), kamera
+         * edellä ja nappula perässä kuten ennen v1845:tä. Askeltahti on
+         * sama porrastus (autokyydinAskel = jalkamatkanAskel). Bussin
+         * ilmainen kyyti (kyyti: true alempana) ajaa yhä autona.
+         */
+        return this.animatePawn(
         player, from, path,
-        maitse ? JALKAMATKAN_STEP_MS : STEP_MS,
-        { saatto: true, maitse },
-      ),
+        maitse ? autokyydinAskel(path.length) : STEP_MS,
+        {
+          saatto: true, maitse, musiikki, kyyti: false, tapa,
+        },
+        );
+      },
     });
   }
 
@@ -16443,33 +20652,109 @@ export class UI {
     // Radiotilassa kartalla ei liikuta.
     if (this.radioPaalla()) return;
     const { game } = this;
+    // Lento vie pois paikasta: edellisen kaupungin puhe päättyy tähän
+    // (ks. vaiennaPaikanPuhe) eikä jatku kohdekaupungin luennan alla.
+    this.vaiennaPaikanPuhe();
     // Matkavalinnan välivaihe ei saa jäädä päälle seuraavaan vuoroon.
     this.suljeMatkavalikko();
     const player = game.player;
     const from = player.pos;
     const lahto = from.type === 'city' ? game.board.cityById.get(from.city) : null;
     const kohde = game.board.cityById.get(destination);
+    const kelvollinenLento = !this.busy && !this.dead && game.phase === 'action'
+      && game.airportDestinations().includes(destination);
     const suunta = lahto && kohde ? { dx: kohde.x - lahto.x, dy: kohde.y - lahto.y } : null;
     // Repliikki arvotaan ennen siirtoa, jotta rng-kutsu osuu samaan kohtaan
     // riippumatta siitä, näytetäänkö animaatio.
     const line = game.flightLine(destination);
+    // Todellinen ja kelvollinen lentovalinta reagoi ennen kalvoa, joka
+    // tarkoituksella sulkee kaikki uudet tilannereaktiot matkan ajaksi.
+    if (kelvollinenLento) {
+      ilmoitaLivianTunne(
+        { tunne: 'jannitys', voimakkuus: 0.5 },
+        { lahde: 'matka', tunnus: 'matka.lento.lahto' },
+      );
+    }
     // Kalvollisella lennolla kohteen äänimaisema odottaa kalvon loppuun.
     if (game.pack.id === 'maailma') {
       sfx.play('flight');
       if (!this.reducedMotion) document.body.classList.add('flight-active');
     }
+    /*
+     * VALITUN LENNON KAARI KARTALLE MATKAN AJAKSI (omistaja 1.9.2026:
+     * *"Piirretään ne näkyviin reaaliajassa vasta sitten jos pelaaja
+     * päättää mennä lentokoneella."*). Kaari piirtyy elävässä
+     * matkareittikerroksessa (paivitaMatkareitit) ja katoaa PERILLÄ:
+     * `lentoKaari` nollataan vasta kun nappula on maassa, eikä sitä
+     * jätetä roikkumaan, vaikka animaatio keskeytyisi.
+     */
+    if (lahto && kohde) this.lentoKaari = { a: lahto.id, b: kohde.id };
+    /*
+     * LENTO VIE AINA MAAN IKKUNAN ULKOPUOLELLE (karttauudistus erä 8):
+     * kuljettaja rajaa kameran lähtö- ja kohdekaupungin laatikkoon
+     * (js/pallolauta/siirto.js lennonRajaus), joten uloszoomauksen
+     * esto on kumottava jo ennen ajoa. Perillä kuljettaja ajaa
+     * saapumisrajauksen itse, ja tässä palautetaan pelkät rajat.
+     */
+    this.matkaZoomivapaus(true);
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * PULU VÄISTYY LENNON AJAKSI (omistaja 16.9.2026,
+     * KARTTAUUDISTUKSEN PAATOKSET 30: *"pulu näkyy lennon aikana"*)
+     * ══════════════════════════════════════════════════════════════
+     *
+     * Kalvolennolla (pack `maailma`) pulu on jo piilossa —
+     * body.flight-active vie kelluvan napin ja paneelin (css/styles.css).
+     * PALLOLAUDAN oma lento menee kuitenkin doFly:n TOISTA haaraa
+     * (pack `maailmankartta`, MANNER_LENTO_MS), jossa kalvoa ei ole eikä
+     * siis mitään runkoluokkaakaan: mitattu 16.9.2026 (390 × 844,
+     * Ateena → Rooma) kelluvan pulunapin laskettu peittävyys oli 1
+     * jokaisessa lennon näytteessä.
+     *
+     * `lento-kesken` on sama mekanismi kuin body.flight-active: yksi
+     * runkoluokka, sama häivytys, ja se poistuu perillä `finally`ssä
+     * (myös keskeytyksessä ja virheessä). Luokka on lisäksi
+     * js/main.js:n siivouslistalla, joten se ei voi jäädä päälle
+     * pelin vaihtuessa.
+     */
+    document.body.classList.add('lento-kesken');
+    this.paivitaMatkareitit();
     this.run(() => game.actionFly(destination), {
-      after: async () => {
-        // Lentokalvo kuuluu vain maailmankartalle; mantereella nappula
-        // lentää suoraan karttanäkymässä — rauhallisemmin ja moottorin
-        // hurinan saattelemana (omistajan toive).
-        if (game.pack.id === 'maailma') {
-          await this.animateFlight(lahto?.name ?? '', kohde?.name ?? '', line, suunta);
-          await this.animatePawn(player, from, [player.pos], FLIGHT_MS);
-        } else {
-          sfx.startFlight(MANNER_LENTO_MS);
-          await this.animatePawn(player, from, [player.pos], MANNER_LENTO_MS);
-          sfx.stopFlight();
+      after: async (result) => {
+        if (result?.ok && from.type === 'city') puraFokusvirtaPaikanvaihdossa(this);
+        /*
+         * LENNON OMA SIIRTYMÄRAITA (omistaja 2.9.2026). Musiikki
+         * kytketään tässä eikä animatePawnin kautta, koska lento on
+         * kaksi eri animaatiota: maailmankartalla kalvo ja sen jälkeen
+         * nappulan hyppy, mantereella pelkkä hyppy. Musiikin kuuluu
+         * kattaa koko matka kummassakin, joten se alkaa ennen niitä ja
+         * loppuu vasta perillä.
+         *
+         * KABIINIÄÄNI JÄÄ (v1097) — musiikki soi sen ALLA, ja siksi
+         * lennon raidan oma taso on kolmesta matalin
+         * (js/siirtymamusiikki.js RAIDAT.lento.voima).
+         */
+        this.aloitaSiirronMusiikki('lento');
+        try {
+          // Lentokalvo kuuluu vain maailmankartalle; mantereella nappula
+          // lentää suoraan karttanäkymässä — rauhallisemmin ja moottorin
+          // hurinan saattelemana (omistajan toive).
+          if (game.pack.id === 'maailma') {
+            await this.animateFlight(lahto?.name ?? '', kohde?.name ?? '', line, suunta);
+            await this.animatePawn(player, from, [player.pos], FLIGHT_MS, { lento: true });
+          } else {
+            sfx.startFlight(MANNER_LENTO_MS);
+            // `lento` kertoo kuljettajalle, että askel on lento: pallolla
+            // kaaren ylittää kone, ei hyppivä nappula (js/pallolauta/siirto.js).
+            await this.animatePawn(player, from, [player.pos], MANNER_LENTO_MS, { lento: true });
+            sfx.stopFlight();
+          }
+        } finally {
+          document.body.classList.remove('lento-kesken');
+          this.lopetaSiirronMusiikki();
+          this.lentoKaari = null;
+          this.paivitaMatkareitit();
+          void this.palaaMaanRajaukseen({ aja: false });
         }
       },
     });
@@ -16808,7 +21093,12 @@ export class UI {
     this.hideFlightLine();
     // Ulos astuttaessa päiväkirja pääsee ääneen: lennon ajaksi lykätty
     // saapumismerkintä alkaa kirjoittua ja soida vasta nyt.
-    if (!this.dead) this.render();
+    if (!this.dead) {
+      this.render();
+      this.paataAloituslennonSignaali('loppu', {
+        odottaaTraileria: Boolean(this.saapumistraileri),
+      });
+    }
     // Kartan bittikartta täydennetään vasta tässä: lennon aikana
     // rasterointi olisi jumittanut kalvon animaation ja puheen ajastimen.
     this.taydennaTaide?.({ heti: true });
@@ -17247,8 +21537,16 @@ export class UI {
    * kiinni luennan loppumisessa (js/luenta.js luennanLoppuun) ja
    * vanha viive on varapolku sille tapaukselle, ettei luentaa ole —
    * mykistys, kertojatila 'ei' tai puuttuva äänite.
+   *
+   * ENSIMMÄINEN SAAPUMINEN KOSKAAN ON POIKKEUS (omistaja 7.9.2026):
+   * silloin luenta itse on lykätty pulun kahden kuplan taakse
+   * (asetaMerkinnanLuenta, luennanLykkays), joten luentaa ei ole vielä
+   * soimassa — tämä metodi menee varapolkua pitkin heti kuplasarjaan,
+   * ja kolmas kupla odottaa luennan lopun omassa sarjassaan.
    */
   saapumisenKuplat(kohde) {
+    const cityId = kohde?.id;
+    if (odotaLivianTraileria(this, cityId, () => this.saapumisenKuplat(kohde))) return;
     const maa = this.kaupunginMaanNimi(kohde?.id);
     const paikka = paikassaMuoto(kohde?.name);
     // Ilman maata tai kaupunkia lause jäisi puolikkaaksi — silloin
@@ -17262,6 +21560,10 @@ export class UI {
     const naytaKuplat = (viive) => {
       this.saapumisKuplaAjastin = setTimeout(() => {
         if (this.dead) return;
+        // Traileri voi syntyä vasta sen jälkeen, kun 1 s ajastin jo
+        // asetettiin. Tarkista portti uudelleen juuri ennen kuin yksikään
+        // Pulun teksti tai ääni voisi alkaa.
+        if (odotaLivianTraileria(this, cityId, () => this.saapumisenKuplat(kohde))) return;
         /*
          * LIVIAN TUURAUSPALJASTUS ENSIN (omistaja 29.8.2026): aivan
          * ensimmäisessä kohdemaassa Livia kertoo kahdella kuplalla,
@@ -17270,9 +21572,26 @@ export class UI {
          * saa syödä hetkeä eikä hetki ohjetta. Muilla saapumisilla
          * kutsu palaa saman tien epätotena (js/livia.js).
          */
+        /*
+         * OHJEET OVAT PALJASTUKSEN SISÄLLÄ (omistaja 5.9.2026 ilta,
+         * sanat uusiksi 7.9.2026): pulu toivottaa tervetulleeksi ja
+         * neuvoo kaupungin napauttamisen omissa kuplissaan
+         * (js/livia.js livianPaljastus), joten ohjekuplia ei näytetä
+         * sen perään. Jos paljastus ei ala (jo nähty tai paneeli
+         * auki), ohjekuplat tulevat kuten ennen.
+         *
+         * KAUPUNGIN NIMI KAHDESSA MUODOSSA: "Tervetuloa Ateenaan"
+         * (maahanMuoto) ja "klikata Ateenaa" (paikkaaMuoto). Maata ei
+         * enää tarvita kuplissa — se elää yhä ohjekuplan
+         * tervetulotoivotuksessa alla.
+         */
         if (naytaLivianPaljastus(this, {
-          jalkeen: () => this.saapumisenOhjekuplat(tervetuloa),
+          paikkaan: kohde?.name ? maahanMuoto(kohde.name) : '',
+          paikkaa: kohde?.name ? paikkaaMuoto(kohde.name) : '',
         })) return;
+        // Paljastus ei alkanut (jo nähty tai paneeli auki): mahdollinen
+        // lykätty luenta päästetään heti liikkeelle.
+        this.aloitaLykattyLuenta();
         this.saapumisenOhjekuplat(tervetuloa);
       }, viive);
     };
@@ -17418,151 +21737,41 @@ export class UI {
   }
 
   /**
-   * Aloituslento kartalla. Palauttaa true, jos lento oikeasti lennettiin
-   * — false tarkoittaa, että kutsujan on lennettävä vanha kalvolento.
+   * LENTOKOHTAUKSEN KULJETTAJA — LAUDAN OMA OSA AVAUSLENNOSTA
+   * (pallolauta vaihe 5b, docs/moduulit/karttapallo.md luku 7).
+   *
+   * Sama jako kuin siirrossa (nappulanKuljettaja): avauksen koreografia
+   * — arkki, kamera-ajo, kertoja, kabiiniääni, repliikki, ohitus,
+   * saapumiskortti ja kuplat — on YHDESSÄ paikassa
+   * (aloituslentoSisalla) kummallekin laudalle, ja vain kohtauksen
+   * fyysinen puoli delegoidaan laudalle: tasokartalla lentokerroksen
+   * SVG (harso, reitti, kone, katkojälki), pallolla kaari, kone ja
+   * harso pallon päällä (js/pallolauta/avaus.js).
+   *
+   * Kohtauksen sopimus: `rajaus` on { bbox, marginaali } laudan
+   * yksiköissä (null = tällä laudalla ei voi lentää → vanha kalvo);
+   * `valmistele()` panee laudan lennon tilaan ennen kamera-ajoa;
+   * `rakenna()` luo kohtauksen kameran asetuttua ja jättää koneen
+   * kiitoradalle; `lenna(kesto)` päästää koneen matkaan ja palauttaa
+   * { animaatiot, perilla }, jossa animaatioilla on `finish()`
+   * ohitusta varten; `poistuma()` häivyttää kohtauksen ja `pura()`
+   * poistaa sen (idempotentti — myös poikkeuksen jälkeen).
    */
-  async aloituslento(cityId, line) {
-    /*
-     * LAUTA VAIHTUU ENNEN LENTOA. Aloitusnäyttö on oma pieni lautansa
-     * (js/packs/maailma.js), ja lähtöpisteen valinta vie sen portista
-     * varsinaiselle maailmankartalle. Lento piirretään sille laudalle,
-     * joten kartta on rakennettava ensin: muuten kone lentäisi laudalla,
-     * joka katoaa alta ensimmäisessä piirrossa. render() tekee vaihdon
-     * (drawBoardFor) — se on sama kutsu, joka muutenkin tulisi
-     * doActionin perässä, tässä vain heti eikä vasta lokin jälkeen.
-     */
-    this.render();
-    const kerros = this.flightLayer;
-    const lahto = this.game.board.cityById.get(ALOITUSLENNON_LAHTO);
-    const kohde = this.game.board.cityById.get(cityId);
-    const maat = this.game.pack?.map?.cityCountry;
-    const lahtoIso = maat?.[ALOITUSLENNON_LAHTO];
-    const kohdeIso = maat?.[cityId];
-    // Ilman maatietoa rajausta ei voi laskea — silloin vanha kalvo on
-    // parempi kuin puolikas uusi (sama varovaisuus kuin sumuverholla).
-    if (!kerros || !lahto || !kohde || !lahtoIso || !kohdeIso) return false;
-    const bbox = this.aloituslennonRajaus(lahto, kohde, [lahtoIso, kohdeIso]);
-    if (!bbox) return false;
-    try {
-      await this.isoAnimaatio(() => this.aloituslentoSisalla({
-        kerros, lahto, kohde, bbox, line,
-      }));
-    } finally {
-      /*
-       * Lippu alas myös silloin, kun lento katkeaa poikkeukseen. Se
-       * pidättelee kamera-ajoja ja annosteluvirtaa, joten pystyyn
-       * jäädessään se lamauttaisi koko loppupelin — ja vika näkyisi
-       * jossain aivan muualla kuin lennossa.
-       */
-      this.aloituslentoKesken = false;
+  aloituslennonKohtaus({ lahto, kohde }) {
+    if (this.pallolautaPaalla()) {
+      return this.pallolauta.aloituslennonKohtaus({ lahto, kohde });
     }
-    return true;
+    return this.tasokartanLentokohtaus({ kerros: this.flightLayer, lahto, kohde });
   }
 
-  /** Lennon varsinainen piirto; kääre yllä hiljentää kartan animaatiot. */
-  async aloituslentoSisalla({ kerros, lahto, kohde, bbox, line }) {
-    kerros.textContent = '';
-    /*
-     * kartalento kertoo CSS:lle ja rasteroinnille, että lento on kartan
-     * PÄÄLLÄ eikä kalvon takana: pelitila (nappula, kohderenkaat,
-     * laatat) piiloon lennon ajaksi, mutta kartan kuva täyteen
-     * tarkkuuteen (ks. taydennaTaide).
-     */
-    document.body.classList.add('flight-active', 'kartalento');
-    /*
-     * Fokusmoodin niukkuus voimaan ENNEN kamera-ajoa: sumuverho
-     * rakennetaan tässä, jotta ajo alkaa jo valmiiksi niukalta kartalta
-     * eikä maailma himmene kesken liikkeen.
-     *
-     * MAAKOHTAISTA POHJAA EI PIIRRETÄ LENNON AIKANA (omistajan pelitesti
-     * 25.8.2026, ks. js/fokuskartta.js). Lentonäkymä on niukka vanha
-     * kartta punaisella viivalla; lehti, sen verhonreikä, laatan alle
-     * keskitetyt nimilaput ja kohtaamispiste tulevat vasta perillä.
-     */
-    this.paivitaFokusKerros();
-
-    // --- 1) Kamera-ajo: lähtömaa ja kohdemaa samaan kuvaan -----------
-    /*
-     * pakota, koska lento omistaa kameran (ks. kartta.ajaKamera):
-     * this.aloituslentoKesken torjuu muut ajot lennon ajaksi, ja tämä on
-     * se yksi ajo, joka saa mennä läpi.
-     */
-    /*
-     * PERGAMENTTIARKIN TAKANA KAMERA EI AJA VAAN ASETTUU (omistajan
-     * tilaus 25.8.2026). Ajo alkaisi uuden laudan oletusnäkymästä eli
-     * koko maailmankartasta, ja juuri se on se tyhjä maailmankartta,
-     * joka ennen välähti — arkin takana ajolla ei olisi katsojaa,
-     * vain hinta. kesto 0 vie näkymän rajaukseen kerralla.
-     *
-     * Ilman arkkia (esim. jos verho on jo ehditty poistaa) ajo menee
-     * kuten ennenkin.
-     */
-    await this.kartta.ajaKamera(
-      { bbox, marginaali: ALOITUSLENNON_MARGINAALI },
-      { kesto: this.aloitusverho ? 0 : ALOITUSLENNON_AJO_MS, pakota: true },
-    );
-    if (this.dead) return;
-    /*
-     * ARKIN TAKANA ODOTETAAN VAIN KARKEA KOKO LAUDAN KUVA.
-     *
-     * Pohjataso (rasteroiTaide → rasteroiPohja) on koko laudan
-     * bittikartta, ja se on avauksen ratkaiseva hetki kahdesta syystä.
-     * Se on ensimmäinen kuva, joka näyttää kartalta ilman vektoreita —
-     * ja ennen kaikkea se PÄÄSTÄÄ VEKTORIT POIS (poistaVektorit).
-     * Niin kauan kuin laudan 7000 vektorielementtiä ovat elävässä
-     * puussa, jokainen lähikuvan kehys maksaa Chromiumissa mitatusti
-     * 1,6 sekuntia: kone nytkähtelisi, kirjoituskone naputtaisi sanan
-     * puolentoista sekunnin välein eikä ajastin osuisi mihinkään.
-     *
-     * ODOTUS ON LYHYT JA MITATTU KELLOSTA. Vanha versio odotti koko
-     * ruutusarjan valmistumista silmukalla, joka laski ajastimen
-     * laukeamisia — ja koska juuri ne olivat jumissa, sen luvattu
-     * kolmen sekunnin katto venyi kuudeksitoista. Tässä katto luetaan
-     * performance.now():sta, joten se pitää riippumatta siitä, mitä
-     * pääsäie tekee. Kattoon osuessaan lento lähtee joka tapauksessa.
-     *
-     * TARKAT RUUDUT EIVÄT KUULU TÄHÄN (omistajan tilaus 25.8.2026:
-     * *"karkea kuva SAA tarkentua koneen lennon alla; älä odota täyttä
-     * rasterointia verhon takana"*). Ne piirretään perillä — tai
-     * jäävät piirtämättä, jos kohdemaan lehti peittää laudan.
-     */
-    /*
-     * ODOTUS PÄTEE MYÖS NYT, KUN LAUTA ON ATLAKSEN ALLA (25.8.2026,
-     * ilta). Pohjataso rakennetaan yhä kerran, koska juuri se päästää
-     * vektorit pois — ja piilotettukin vektorikerros maksaa Chromiumissa
-     * (ks. rasteroiTaide). Odotus on siis edelleen se hetki, jonka
-     * jälkeen kone lentää kevyen puun päällä.
-     */
-    const pohjanTakaraja = performance.now() + ALOITUSLENNON_POHJA_ODOTUS_MS;
-    while (!this.dead && !this.taidePohja && this.pohjaTulossa
-      && performance.now() < pohjanTakaraja) {
-      // eslint-disable-next-line no-await-in-loop
-      await this.wait(60);
-    }
-    if (this.dead) return;
-    /*
-     * KARTTA TARKENTUU KONEEN LENNON ALLA — EI ARKIN TAKANA.
-     *
-     * Tässä oli odotus, joka piti pergamenttiarkkia ruudulla siihen
-     * asti kunnes koko ruutusarja oli rasteroitu (30 x 100 ms).
-     * Ylärajan piti olla kolme sekuntia, mutta se ei pitänyt: silmukan
-     * odotukset ovat ajastimia, ja rasterointi jumittaa pääsäikeen
-     * satojen millisekuntien erissä, joten yksi kierros venyi
-     * mitatusti puoleentoista sekuntiin. Klikkauksesta koneen lähtöön
-     * kului Chromiumissa 24 sekuntia, ja siitä 16 tämän silmukan
-     * takana — pergamentti ruudulla, ei mitään tapahtumassa.
-     *
-     * Omistajan tilaus 25.8.2026: *"kartta tulisi nopeasti feidaten
-     * ilman odottelua ja sen jälkeen tulisi ääni ja lentokone alkaisi
-     * liikkua"* — ja *"karkea kuva saa tarkentua koneen lennon alla"*.
-     * Arkki väistyy siis heti kun kamera on rajauksessa ja kone on
-     * kiitoradalla (ks. piilotaAloitusverho alempana), ja ruutusarja
-     * jatkuu lennon alla. Kartta ei ole silloin tyhjä: laudan vektorit
-     * ovat paikallaan täydessä tarkkuudessaan ja pohjataso niiden
-     * alla — tarkentuu vain se, mikä on jo oikein.
-     */
-
-    // --- 2) Reitti ja kone laudan koordinaateissa --------------------
+  /**
+   * Piirtää tasokartan lentokohtauksen lentokerrokseen: laivareitit,
+   * lähtömerkki, piirtyvä reitti, kone vanavesineen ja koneen liikkeen
+   * ruutusarjat. Yksi lohko, koska kaikki osat lukevat saman
+   * mittakaavan ja saman kaaren — kutsuja on tasokartanLentokohtaus.
+   */
+  piirraLentokohtaus({ kerros, lahto, kohde }) {
+    // --- Reitti ja kone laudan koordinaateissa -----------------------
     /*
      * Mittakaava luetaan kerran: kamera on nyt paikallaan koko lennon
      * ajan, joten viivan paksuus ja koneen koko voidaan muuntaa ruudun
@@ -17667,6 +21876,328 @@ export class UI {
         kulma: (Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180) / Math.PI,
       };
     };
+    // --- Ruutusarjat: lento on selaimen oma animaatio ----------------
+    const RUUTUJA = 120;
+    const koneRuudut = [];
+    const reittiRuudut = [];
+    for (let i = 0; i <= RUUTUJA; i++) {
+      const t = i / RUUTUJA;
+      // Pehmeä kiihdytys ja jarrutus, jottei kone nykäise liikkeelle.
+      const e = t < 0.5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2;
+      const p = kohta(e);
+      koneRuudut.push({
+        offset: t,
+        transform: `translate(${p.x.toFixed(2)}px, ${p.y.toFixed(2)}px) rotate(${p.kulma.toFixed(2)}deg)`,
+      });
+      // Tuore vetäisy kulkee koneen perässä: kuvion ainoa viiva alkaa
+      // aina kärjen verran ennen konetta ja päättyy koneeseen.
+      reittiRuudut.push({ offset: t, strokeDashoffset: karki - kokoPituus * e });
+    }
+    kone.style.transform = koneRuudut[0].transform;
+    return {
+      kone, keinu, reitti, kohta, koneRuudut, reittiRuudut, kokoPituus, skaala,
+    };
+  }
+
+  /**
+   * Tasokartan lentokohtaus: sama koodi kuin ennen vaihetta 5b,
+   * sopimuksen muodossa. Palauttaa null (tai rajauksen null), jos
+   * lentokerros tai maatieto puuttuu — silloin kutsuja lentää vanhan
+   * kalvon, kuten ennenkin.
+   */
+  tasokartanLentokohtaus({ kerros, lahto, kohde }) {
+    const maat = this.game.pack?.map?.cityCountry;
+    const lahtoIso = maat?.[lahto?.id];
+    const kohdeIso = maat?.[kohde?.id];
+    // Ilman maatietoa rajausta ei voi laskea — silloin vanha kalvo on
+    // parempi kuin puolikas uusi (sama varovaisuus kuin sumuverholla).
+    if (!kerros || !lahto || !kohde || !lahtoIso || !kohdeIso) return null;
+    const bbox = this.aloituslennonRajaus(lahto, kohde, [lahtoIso, kohdeIso]);
+    if (!bbox) return null;
+    // Kohtauksen osat syntyvät vasta rakenna()-kutsussa: mittakaava on
+    // luettava kameran asetuttua (ks. alla).
+    let kone = null;
+    let keinu = null;
+    let reitti = null;
+    let kohta = null;
+    let koneRuudut = [];
+    let reittiRuudut = [];
+    let kokoPituus = 0;
+    let skaala = 1;
+    return {
+      rajaus: { bbox, marginaali: ALOITUSLENNON_MARGINAALI },
+      valmistele: () => {
+        kerros.textContent = '';
+        /*
+         * NIMIKERROS VAIKENEE KOKO LENNON AJAKSI (omistaja 3.9.2026:
+         * *"muiden kaupunkien kuin lontoon ja kohdekaupungin nimiä ei
+         * tarvita"*). Lippu ennen kamera-ajoa, jotta yksikään ladonta ei
+         * ehdi kirjoittaa Eurooppaa täyteen nimiä sillä välin — kerros
+         * tyhjennetään tässä ja pysyy tyhjänä, koska lipun päällä ollessa
+         * jokainen piirtokutsu tyhjentää sen (js/karttanimet.js lentotila).
+         * Lontoo ja kohdekaupunki tulevat lennon omasta kerroksesta
+         * (js/kartta.js aloituslennonNiukkuus).
+         */
+        asetaKarttanimienLentotila(true);
+        this.karttanimiAvain = null;
+        paivitaKarttanimet(this);
+        /*
+         * Fokusmoodin niukkuus voimaan ENNEN kamera-ajoa: sumuverho
+         * rakennetaan tässä, jotta ajo alkaa jo valmiiksi niukalta kartalta
+         * eikä maailma himmene kesken liikkeen.
+         *
+         * MAAKOHTAISTA POHJAA EI PIIRRETÄ LENNON AIKANA (omistajan pelitesti
+         * 25.8.2026, ks. js/fokuskartta.js). Lentonäkymä on niukka vanha
+         * kartta punaisella viivalla; lehti, sen verhonreikä, laatan alle
+         * keskitetyt nimilaput ja kohtaamispiste tulevat vasta perillä.
+         */
+        this.paivitaFokusKerros();
+      },
+      rakenna: () => {
+        const osat = this.piirraLentokohtaus({ kerros, lahto, kohde });
+        ({
+          kone, keinu, reitti, kohta, koneRuudut, reittiRuudut, kokoPituus, skaala,
+        } = osat);
+      },
+      lenna: (lennonKesto) => {
+        const animaatiot = [];
+        const koneAnim = kone.animate(koneRuudut, {
+          duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
+        });
+        const reittiAnim = reitti.animate(reittiRuudut, {
+          duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
+        });
+        animaatiot.push(koneAnim, reittiAnim);
+        // Katkojälki ja koneen huojunta samaan tahtiin: ne ovat kohtauksen
+        // koristeita, mutta ohituksen on vietävä nekin loppuun, ettei
+        // ruudulle jää puolikasta reittimerkintää.
+        animaatiot.push(...this.lennonKatkojalki({
+          kerros, kohta, kokoPituus, mitta: 1 / skaala, kesto: lennonKesto, viive: 180,
+        }));
+        animaatiot.push(this.lennonHuojunta(keinu, {
+          mitta: 1 / skaala, kesto: lennonKesto, viive: 180,
+        }));
+        return {
+          animaatiot,
+          perilla: Promise.all([koneAnim.finished, reittiAnim.finished]),
+        };
+      },
+      poistuma: () => kerros.classList.add('lento-poistuu'),
+      pura: () => {
+        kerros.textContent = '';
+        kerros.classList.remove('lento-poistuu');
+      },
+    };
+  }
+
+  /**
+   * Aloituslento. Palauttaa true, jos lento oikeasti lennettiin
+   * — false tarkoittaa, että kutsujan on lennettävä vanha kalvolento.
+   */
+  async aloituslento(cityId, line) {
+    /*
+     * LAUTA VAIHTUU ENNEN LENTOA. Aloitusnäyttö on oma pieni lautansa
+     * (js/packs/maailma.js), ja lähtöpisteen valinta vie sen portista
+     * varsinaiselle maailmankartalle. Lento piirretään sille laudalle,
+     * joten kartta on rakennettava ensin: muuten kone lentäisi laudalla,
+     * joka katoaa alta ensimmäisessä piirrossa. render() tekee vaihdon
+     * (drawBoardFor) — se on sama kutsu, joka muutenkin tulisi
+     * doActionin perässä, tässä vain heti eikä vasta lokin jälkeen.
+     *
+     * PALLOLAUDALLA LAUTA ON KARTTAPALLO (vaihe 5b), eikä sitä piirretä
+     * vaan avataan: kirjasto ladataan tässä, arkin takana, ja lento
+     * lennetään pallolla. Tasokartta nukkuu jo (doPickStart), joten
+     * render ei piirrä sitä eikä pyramidiin lähde pyyntöjä. Jos pallo ei
+     * avaudu, varapolku herättää kartan ja lento lennetään kartalla.
+     */
+    if (this.pallolautaHalutaan() && !this.pallolauta) await this.avaaPallolauta();
+    if (this.dead) return false;
+    this.render();
+    const lahto = this.game.board.cityById.get(ALOITUSLENNON_LAHTO);
+    const kohde = this.game.board.cityById.get(cityId);
+    if (!lahto || !kohde) return false;
+    const kohtaus = this.aloituslennonKohtaus({ lahto, kohde });
+    if (!kohtaus?.rajaus) return false;
+    try {
+      await this.isoAnimaatio(() => this.aloituslentoSisalla({
+        kohtaus, kohde, rajaus: kohtaus.rajaus, line,
+      }));
+    } finally {
+      /*
+       * Kohtaus pois myös silloin, kun lento katkeaa poikkeukseen:
+       * pallolla se laskee koneen ja päättää lennon niukkuuden, joten
+       * ilman tätä lauta jäisi harson alle ilman nappulaa.
+       */
+      kohtaus.pura();
+      /*
+       * Lippu alas myös silloin, kun lento katkeaa poikkeukseen. Se
+       * pidättelee kamera-ajoja ja annosteluvirtaa, joten pystyyn
+       * jäädessään se lamauttaisi koko loppupelin — ja vika näkyisi
+       * jossain aivan muualla kuin lennossa.
+       */
+      this.aloituslentoKesken = false;
+      /*
+       * Sama varmistus nimikerroksen lentovaitiololle: poikkeukseen
+       * katkennut lento ei saa jättää karttaa nimettömäksi lopuksi
+       * ajaksi. Tavallisella polulla lippu on jo laskettu
+       * saapumissekvenssissä ja tämä on nollatyötä.
+       */
+      this.paataKarttanimienLentotila();
+    }
+    return true;
+  }
+
+  /**
+   * Laskee nimikerroksen lentovaitiolon ja pyytää uuden ladonnan.
+   *
+   * Kaksi riviä yhdessä paikassa, koska ne KUULUVAT yhteen: pelkkä
+   * lipun lasku jättäisi kerroksen tyhjäksi siihen asti kunnes jokin
+   * muu sattuisi muuttamaan näkymää (rakennusavain on lennon
+   * tyhjennyksestä eikä siis muutu itsestään).
+   */
+  paataKarttanimienLentotila() {
+    if (!asetaKarttanimienLentotila(false)) return;
+    this.karttanimiAvain = null;
+    paivitaKarttanimet(this);
+  }
+
+  /**
+   * Avauslennon repliikin luenta — KERRAN JA VAIN KERRAN.
+   *
+   * Kaksi kutsujaa, yksi ääni: karttalento kutsuu tämän kohtauksesta
+   * (aloituslentoSisalla, kartta valmiina juuri ennen feidiä) ja vanha
+   * kalvolento doPickStartin ajastimesta. Lippu takaa, ettei sama
+   * äänite lähde kahdesti — playDiaryVoice aloittaa aina
+   * stopDiaryVoicella, joten toinen käynnistys katkaisisi ensimmäisen
+   * kesken lauseen.
+   *
+   * Vain pitkä kertoja lukee lentorepliikin (sama sääntö kuin
+   * avaustekstillä, js/luenta.js playIntroVoice).
+   */
+  lueLennonRepliikki() {
+    clearTimeout(this.lentoPuheAjastin);
+    if (this.lennonLuentaAlkoi || this.dead || this.reducedMotion) return;
+    this.lennonLuentaAlkoi = true;
+    if (kertojaTila() !== 'pitka') return;
+    playDiaryVoice(this, 'assets/audio/puhe-lento-alku.mp3');
+  }
+
+  /** Lennon varsinainen piirto; kääre yllä hiljentää kartan animaatiot. */
+  async aloituslentoSisalla({ kohtaus, kohde, rajaus, line }) {
+    /*
+     * KARTTALENTO OMISTAA KERTOJAN HETKEN. doPickStartin ajastin on
+     * vanhan kalvolennon polku; tässä se perutaan heti, ettei luenta
+     * pääse alkamaan pergamenttiarkin takana silloin kun laattojen
+     * odotus (odotaPyramidi) kestää ajastinta pidempään.
+     */
+    clearTimeout(this.lentoPuheAjastin);
+    /*
+     * kartalento kertoo CSS:lle ja rasteroinnille, että lento on kartan
+     * PÄÄLLÄ eikä kalvon takana: pelitila (nappula, kohderenkaat,
+     * laatat) piiloon lennon ajaksi, mutta kartan kuva täyteen
+     * tarkkuuteen (ks. taydennaTaide).
+     */
+    document.body.classList.add('flight-active', 'kartalento');
+    /*
+     * LAUTA LENNON TILAAN ENNEN KAMERA-AJOA (kohtaus.valmistele): niukka
+     * kartta, kaksi nimeä, tyhjä lentokerros — tasokartalla nimikerroksen
+     * lentotila ja fokusmoodin sumuverho, pallolla harso ja lennon kaari.
+     * Ennen ajoa, jotta kuva on jo valmiiksi niukka eikä maailma himmene
+     * kesken liikkeen — ja jottei yksikään ladonta ehdi kirjoittaa
+     * Eurooppaa täyteen nimiä sillä välin.
+     */
+    kohtaus.valmistele();
+
+    // --- 1) Kamera-ajo: lähtömaa ja kohdemaa samaan kuvaan -----------
+    /*
+     * pakota, koska lento omistaa kameran (ks. kartta.ajaKamera):
+     * this.aloituslentoKesken torjuu muut ajot lennon ajaksi, ja tämä on
+     * se yksi ajo, joka saa mennä läpi.
+     */
+    /*
+     * PERGAMENTTIARKIN TAKANA KAMERA EI AJA VAAN ASETTUU (omistajan
+     * tilaus 25.8.2026). Ajo alkaisi uuden laudan oletusnäkymästä eli
+     * koko maailmankartasta, ja juuri se on se tyhjä maailmankartta,
+     * joka ennen välähti — arkin takana ajolla ei olisi katsojaa,
+     * vain hinta. kesto 0 vie näkymän rajaukseen kerralla.
+     *
+     * Ilman arkkia (esim. jos verho on jo ehditty poistaa) ajo menee
+     * kuten ennenkin.
+     */
+    await this.kamera().ajaKamera(
+      rajaus,
+      { kesto: this.aloitusverho ? 0 : ALOITUSLENNON_AJO_MS, pakota: true },
+    );
+    if (this.dead) return;
+    /*
+     * ARKIN TAKANA ODOTETAAN VAIN KARKEA KOKO LAUDAN KUVA.
+     *
+     * Pohjataso (rasteroiTaide → rasteroiPohja) on koko laudan
+     * bittikartta, ja se on avauksen ratkaiseva hetki kahdesta syystä.
+     * Se on ensimmäinen kuva, joka näyttää kartalta ilman vektoreita —
+     * ja ennen kaikkea se PÄÄSTÄÄ VEKTORIT POIS (poistaVektorit).
+     * Niin kauan kuin laudan 7000 vektorielementtiä ovat elävässä
+     * puussa, jokainen lähikuvan kehys maksaa Chromiumissa mitatusti
+     * 1,6 sekuntia: kone nytkähtelisi, kirjoituskone naputtaisi sanan
+     * puolentoista sekunnin välein eikä ajastin osuisi mihinkään.
+     *
+     * ODOTUS ON LYHYT JA MITATTU KELLOSTA. Vanha versio odotti koko
+     * ruutusarjan valmistumista silmukalla, joka laski ajastimen
+     * laukeamisia — ja koska juuri ne olivat jumissa, sen luvattu
+     * kolmen sekunnin katto venyi kuudeksitoista. Tässä katto luetaan
+     * performance.now():sta, joten se pitää riippumatta siitä, mitä
+     * pääsäie tekee. Kattoon osuessaan lento lähtee joka tapauksessa.
+     *
+     * TARKAT RUUDUT EIVÄT KUULU TÄHÄN (omistajan tilaus 25.8.2026:
+     * *"karkea kuva SAA tarkentua koneen lennon alla; älä odota täyttä
+     * rasterointia verhon takana"*). Ne piirretään perillä — tai
+     * jäävät piirtämättä, jos kohdemaan lehti peittää laudan.
+     */
+    /*
+     * ODOTUS PÄTEE MYÖS NYT, KUN LAUTA ON ATLAKSEN ALLA (25.8.2026,
+     * ilta). Pohjataso rakennetaan yhä kerran, koska juuri se päästää
+     * vektorit pois — ja piilotettukin vektorikerros maksaa Chromiumissa
+     * (ks. rasteroiTaide). Odotus on siis edelleen se hetki, jonka
+     * jälkeen kone lentää kevyen puun päällä.
+     */
+    const pohjanTakaraja = performance.now() + ALOITUSLENNON_POHJA_ODOTUS_MS;
+    while (!this.dead && !this.taidePohja && this.pohjaTulossa
+      && performance.now() < pohjanTakaraja) {
+      // eslint-disable-next-line no-await-in-loop
+      await this.wait(60);
+    }
+    if (this.dead) return;
+    /*
+     * KARTTA TARKENTUU KONEEN LENNON ALLA — EI ARKIN TAKANA.
+     *
+     * Tässä oli odotus, joka piti pergamenttiarkkia ruudulla siihen
+     * asti kunnes koko ruutusarja oli rasteroitu (30 x 100 ms).
+     * Ylärajan piti olla kolme sekuntia, mutta se ei pitänyt: silmukan
+     * odotukset ovat ajastimia, ja rasterointi jumittaa pääsäikeen
+     * satojen millisekuntien erissä, joten yksi kierros venyi
+     * mitatusti puoleentoista sekuntiin. Klikkauksesta koneen lähtöön
+     * kului Chromiumissa 24 sekuntia, ja siitä 16 tämän silmukan
+     * takana — pergamentti ruudulla, ei mitään tapahtumassa.
+     *
+     * Omistajan tilaus 25.8.2026: *"kartta tulisi nopeasti feidaten
+     * ilman odottelua ja sen jälkeen tulisi ääni ja lentokone alkaisi
+     * liikkua"* — ja *"karkea kuva saa tarkentua koneen lennon alla"*.
+     * Arkki väistyy siis heti kun kamera on rajauksessa ja kone on
+     * kiitoradalla (ks. piilotaAloitusverho alempana), ja ruutusarja
+     * jatkuu lennon alla. Kartta ei ole silloin tyhjä: laudan vektorit
+     * ovat paikallaan täydessä tarkkuudessaan ja pohjataso niiden
+     * alla — tarkentuu vain se, mikä on jo oikein.
+     */
+
+    // --- 2) Reitti ja kone: laudan oma kohtaus -----------------------
+    /*
+     * Kamera on nyt paikallaan, ja vasta siitä kuvasta kohtaus voidaan
+     * rakentaa: tasokartalla reitin paksuus ja koneen koko luetaan
+     * mittakaavasta (kohtaus lukee sen kerran), pallolla nimet ladotaan
+     * tähän näkymään ja kone nostetaan Lontoon ylle. Kumpikin lauta
+     * jättää koneen kiitoradalle — lento alkaa vasta arkin väistyttyä.
+     */
+    kohtaus.rakenna();
 
     // --- 3) Repliikki, ohitus ja kohtauksen kerrokset -----------------
     /*
@@ -17703,6 +22234,26 @@ export class UI {
     this.mapPane.appendChild(overlay);
     overlay.addEventListener('pointerdown', ohitaLento, { once: true });
     /*
+     * ARKKI VÄLITTÄÄ NAPAUTUKSEN ETEENPÄIN (v1493).
+     *
+     * Pergamenttiarkki on kaikkien kartan kerrosten yläpuolella (css
+     * .aloitusverho, z-index 50 vastaan lentokalvon 7) ja nielee
+     * napautukset tarkoituksella, ettei siirtymän aikana valita
+     * kaupunkia sen alta. Se oli harmiton niin kauan kuin arkki oli
+     * ruudulla vain feidin ajan — mutta v1492 lisäsi sen taakse
+     * laattojen odotuksen (odotaPyramidi, jopa kuusi sekuntia), ja
+     * juuri siihen ikkunaan pelaajan kiire osuu. Ohituskuuntelija ei
+     * saanut napautusta lainkaan: mitattuna välikortti tuli vasta
+     * 8 s napautuksesta, kun sääntö on *"pääsee siirtymään mantereelle
+     * välittömästi"* (omistaja 26.8.2026).
+     *
+     * Sama käsittelijä siis myös arkille. Kuuntelija katoaa arkin
+     * mukana, kun arkki väistyy — ja koska ohitus jättää arkin
+     * paikalleen, saapumisen välikortti kirjoittuu samalle arkille
+     * ilman välähdystä.
+     */
+    this.aloitusverho?.addEventListener('pointerdown', ohitaLento, { once: true });
+    /*
      * Hento vinjetti lennon ajaksi (d-kohta, päätoimittajan taidesuunta
      * 26.8.2026): ruudun reunat tummuvat aavistuksen, jolloin katse
      * hakeutuu kartan keskelle reitin päälle. Liuku elementissä eikä
@@ -17713,6 +22264,27 @@ export class UI {
     overlay.appendChild(alaosa);
     this.flightLineValmis = null;
     if (line) this.showFlightLine(line, alaosa);
+    /*
+     * ISOISÄN VALOKUVA POIS ENSIMMÄISELTÄ LENNOLTA (omistaja 6.9.2026
+     * ilta, sanatarkasti: *"ens. lentokohtauksesta, ota isoisän kuva
+     * pois"*).
+     *
+     * Tässä kohdassa oli kortti (`.lento-valokuva`), joka nousi kartan
+     * päälle 2,6 sekuntia repliikin alkamisen jälkeen ja jonka napautus
+     * avasi kuvan suurena. Kuva luettiin taulun avaimesta
+     * `lento` (js/isoisan-valokuvat.js), ja avain on yhä tallessa siellä
+     * kommentteineen — kytkentä on poissa, ei mittaustyö.
+     *
+     * Poisto tarkoitti myös, ettei kameran tarvitse enää väistää korttia:
+     * kone lensi ennen kortin ohi nostettuna keskilinjan yläpuolelle
+     * (js/pallolauta/avaus.js AVAUSLENNON_KONEEN_NOSTO), ja se nosto oli
+     * yksi samana iltana moititun kameran nykimisen lähteistä. Kortin
+     * mukana lähti nosto.
+     *
+     * Isoisän kuvat eivät katoa pelistä: etusivun pallon reittikuvat
+     * (js/packs/etusivun-isoisakuvat.js) ja aikajanan kuvat pysyvät
+     * ennallaan.
+     */
     // Harsopilvet kartan päälle koko lennon ajaksi.
     const pilvet = this.lennonPilvet(this.mapPane);
     const sanoja = line ? String(line).trim().split(/\s+/).length : 0;
@@ -17734,32 +22306,101 @@ export class UI {
     const nuolenAjastin = setTimeout(() => nuoli.classList.add('nakyy'), LENNON_NUOLI_MS);
     nuoli.addEventListener('click', ohitaLento);
 
-    // --- 4) Lento selaimen omina animaatioina ------------------------
-    const RUUTUJA = 120;
-    const koneRuudut = [];
-    const reittiRuudut = [];
-    for (let i = 0; i <= RUUTUJA; i++) {
-      const t = i / RUUTUJA;
-      // Pehmeä kiihdytys ja jarrutus, jottei kone nykäise liikkeelle.
-      const e = t < 0.5 ? 2 * t * t : 1 - (-2 * t + 2) ** 2 / 2;
-      const p = kohta(e);
-      koneRuudut.push({
-        offset: t,
-        transform: `translate(${p.x.toFixed(2)}px, ${p.y.toFixed(2)}px) rotate(${p.kulma.toFixed(2)}deg)`,
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * KARTTA VALMIIKSI ENNEN FEIDIÄ (omistajan tilaus 3.9.2026)
+     * ══════════════════════════════════════════════════════════════
+     *
+     * Sanatarkasti: *"kartta pitää ladata etukäteen, nyt se rakentui
+     * pikkuhiljaa taustalla valmiiksi."*
+     *
+     * JUURISYY. Arkin takana odotettiin PELKKÄÄ POHJATASOA (yllä), ja
+     * se oli vanhan vektorilaudan mitta. Laattakartta on eri asia: se
+     * on HAKU, joka lähtee liikkeelle vasta kun kamera on rajauksessa
+     * (js/laattapyramidi.js paivitaPyramidi), eikä sen valmistumisesta
+     * kertonut kukaan. Mitattuna (savuke-avauslento, Chromium): arkin
+     * väistyessä kiinnitettyjä laattoja oli NOLLA, ja kartta täydentyi
+     * 103 laatan verran vasta seuraavien kahden sekunnin aikana — siis
+     * koneen lennon alla, täsmälleen niin kuin omistaja sen näki.
+     *
+     * ODOTUS ON TÄSSÄ EIKÄ AIEMMIN. Reitti, kone ja kaikki kohtauksen
+     * kerrokset ovat nyt puussa, joten arkin takana ei tapahdu enää
+     * mitään muuta kuin laattojen saapuminen — ja tämä on viimeinen
+     * hetki, jolloin odottaminen ei vielä näy pelaajalle.
+     *
+     * OHITUS PÄTEE JO TÄSSÄ (v1493). Odotus tapahtuu arkin takana, ja
+     * juuri siihen ikkunaan napautus osuu: kone ja ohituskuuntelija ovat
+     * puussa, mutta lento ei ole vielä alkanut. Ilman `keskeytys`-ehtoa
+     * napautus kirjattiin muistiin ja lento eteni silti loppuun asti —
+     * mitattuna välikortti tuli yli kahdeksan sekuntia napautuksesta,
+     * vaikka omistajan sääntö on *"pääsee siirtymään mantereelle
+     * välittömästi"* (26.8.2026). Kartta saa täydentyä loppuun
+     * taustalla; ohittanut pelaaja ei jää sitä odottamaan.
+     */
+    /*
+     * ODOTUS ON LAUDAN MITTA. Tasokartalla se on laattapyramidin oma
+     * (odotaPyramidi tuntee kesken olevat laatat); pallolla pyramidia ei
+     * ole eikä se koskaan valmistuisi, joten pallon kohtaus tuo oman
+     * odotuksensa (kohtaus.odotaKartta, js/pallolauta/avaus.js). Sama
+     * katto ja sama ohitus kummallakin.
+     */
+    if (kohtaus.odotaKartta) {
+      await kohtaus.odotaKartta({
+        katto: ALOITUSLENNON_LAATTA_ODOTUS_MS,
+        keskeytys: () => ohitettu,
       });
-      // Tuore vetäisy kulkee koneen perässä: kuvion ainoa viiva alkaa
-      // aina kärjen verran ennen konetta ja päättyy koneeseen.
-      reittiRuudut.push({ offset: t, strokeDashoffset: karki - kokoPituus * e });
+    } else {
+      await odotaPyramidi(this, {
+        katto: ALOITUSLENNON_LAATTA_ODOTUS_MS,
+        keskeytys: () => ohitettu,
+      });
     }
-    kone.style.transform = koneRuudut[0].transform;
+    if (this.dead) return;
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * KERTOJA ALKAA TÄSTÄ — EI KELLOSTA (omistaja 3.9.2026)
+     * ══════════════════════════════════════════════════════════════
+     *
+     * Sanatarkasti: *"jostain syystä myös kertojan ääni jäi
+     * kuulumattomiin vaikka kohdekaupungissa kyllä sitten taas
+     * kuului."*
+     *
+     * JUURISYY. Luenta oli ripustettu SEINÄKELLOON: doPickStart
+     * käynnisti sen ajastimella 2,3 s napautuksesta, ja lennon oma
+     * finally-lohko perui ajastimen (clearTimeout) heti kun lento
+     * päättyi. Juuri siihen ikkunaan osui koko avauksen raskain työ —
+     * laudan vaihto, kamera-ajo, pohjatason rasterointi ja sadan
+     * laatan nouto ja purku. Hitaalla laitteella ja hitaalla verkolla
+     * ajastin myöhästyy ja äänitiedosto jonottaa samojen laattojen
+     * takana; myöhässä lauennut luenta joko peruttiin ajastimen mukana
+     * tai ehti vain alkaa ennen kuin saapumisen oma luenta pysäytti
+     * sen (playDiaryVoice aloittaa aina stopDiaryVoicella). Sama
+     * pullonkaula selittää molemmat omistajan havainnot: kartta rakentui
+     * silmien edessä JA kertoja jäi kuulumatta. Kohdekaupungin luenta
+     * kuuluu, koska se lähtee rauhoittuneesta saapumissekvenssistä.
+     *
+     * KORJAUS. Luenta ei enää katso kelloa vaan KOHTAUSTA: se alkaa
+     * täsmälleen siitä hetkestä, jolloin kartta on valmis ja arkki
+     * alkaa väistyä. Ääni on silloin edellä ja teksti perässä (repliikin
+     * kirjoitus alkaa LENNON_TEKSTI_VIIVE_MS:n päästä), kuten omistaja
+     * pyysi 12.8.2026 — ja verkko on vapaa, koska laatat ovat jo
+     * perillä.
+     */
+    if (!ohitettu) this.lueLennonRepliikki();
     /*
      * ARKKI POIS VASTA NYT: kaikki on paikallaan — kartta rajattuna
-     * lähtömaahan ja kohdemaahan, lähtömerkki Lontoon kohdalla, kone
-     * kiitoradalla. Pergamenttiarkista feidataan siis suoraan valmiiseen
-     * lentonäkymään, eikä tyhjää maailmankarttaa näy hetkeäkään
-     * (omistajan tilaus 25.8.2026, ks. ALOITUSVERHO_SISAAN_MS).
+     * lähtömaahan ja kohdemaahan, laatat ruudulla, lähtömerkki Lontoon
+     * kohdalla, kone kiitoradalla. Pergamenttiarkista feidataan siis
+     * suoraan valmiiseen lentonäkymään, eikä tyhjää maailmankarttaa näy
+     * hetkeäkään (omistajan tilaus 25.8.2026, ks. ALOITUSVERHO_SISAAN_MS).
+     *
+     * OHITETTU LENTO EI PALJASTA KARTTAA LAINKAAN. Napautus arkin takana
+     * tarkoittaa, ettei lentoa ehditty nähdä: arkki jää silloin
+     * paikalleen ja saapumisen välikortti kirjoittuu samalle arkille
+     * (naytaSaapumiskortti → naytaAloitusverho palauttaa saman).
+     * Väistyminen ja välitön paluu olisi pelkkä välähdys.
      */
-    await this.piilotaAloitusverho();
+    if (!ohitettu) await this.piilotaAloitusverho();
     if (this.dead) return;
     /*
      * ÄÄNI ENSIN, SITTEN KARTTA, SITTEN KONE (omistajan tilaus
@@ -17776,26 +22417,27 @@ export class UI {
      * napautuksen kohta on ohitettu (esim. kehittäjätilan hyppy).
      */
     this.syncAmbience();
-    await new Promise((valmis) => requestAnimationFrame(() => requestAnimationFrame(valmis)));
-    const koneAnim = kone.animate(koneRuudut, {
-      duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
-    });
-    const reittiAnim = reitti.animate(reittiRuudut, {
-      duration: lennonKesto, delay: 180, easing: 'linear', fill: 'forwards',
-    });
-    lentoAnimaatiot.push(koneAnim, reittiAnim);
-    // Katkojälki ja koneen huojunta samaan tahtiin: ne ovat kohtauksen
-    // koristeita, mutta ohituksen on vietävä nekin loppuun, ettei
-    // ruudulle jää puolikasta reittimerkintää.
-    lentoAnimaatiot.push(...this.lennonKatkojalki({
-      kerros, kohta, kokoPituus, mitta: 1 / skaala, kesto: lennonKesto, viive: 180,
-    }));
-    lentoAnimaatiot.push(this.lennonHuojunta(keinu, {
-      mitta: 1 / skaala, kesto: lennonKesto, viive: 180,
-    }));
-    await Promise.all([koneAnim.finished, reittiAnim.finished]).catch(() => {
-      /* peruttu animaatio (esim. uusi peli) ei kaada lentoa */
-    });
+    /*
+     * KONE EI LÄHDE ENÄÄ, JOS LENTO ON JO OHITETTU. `ohitaLento` vie
+     * loppuun ne animaatiot, jotka ovat olemassa sillä hetkellä — arkin
+     * takana napautettaessa niitä ei ole yhtäkään, ja tässä luodut
+     * animaatiot alkaisivat vasta ohituksen jälkeen. Silloin ohitus
+     * odottaisi juuri sitä lentoa, jonka pelaaja äsken katkaisi.
+     */
+    if (!ohitettu) {
+      await new Promise((valmis) => requestAnimationFrame(() => requestAnimationFrame(valmis)));
+      /*
+       * KONE MATKAAN LAUDAN OMALLA TAVALLA, OHITUS SAMALLA SANALLA.
+       * Tasokartalla lento on selaimen omia animaatioita (kone, viiva,
+       * katkojälki, huojunta), pallolla rAF-silmukka kaaren päällä —
+       * kummankin kahva on `finish()`, jonka ohitaLento kutsuu.
+       */
+      const lento = kohtaus.lenna(lennonKesto);
+      lentoAnimaatiot.push(...lento.animaatiot);
+      await lento.perilla.catch(() => {
+        /* peruttu animaatio (esim. uusi peli) ei kaada lentoa */
+      });
+    }
 
     /*
      * PERILLÄ — JA JATKO TAPAHTUU ITSESTÄÄN (omistajan tilaus
@@ -17831,13 +22473,26 @@ export class UI {
      */
     const kortti = this.naytaSaapumiskortti(kohde);
     document.body.classList.remove('flight-active', 'kartalento');
+    /*
+     * NIMET TAKAISIN. Lippu alas heti lentotilan mukana ja rakennusavain
+     * nollaan, jotta saapumisen ensimmäinen asettunut näkymä latoo
+     * kerroksen uudestaan (paivitaMaastonimet → paivitaKarttanimet).
+     * Ilman avaimen nollausta kerros luulisi olevansa jo ajan tasalla:
+     * viimeinen kirjattu avain on lennon tyhjennyksestä.
+     */
+    this.paataKarttanimienLentotila();
     overlay.classList.add('flight-leaving');
     this.poistaLennonPilvet(pilvet);
-    kerros.classList.add('lento-poistuu');
+    kohtaus.poistuma();
     await this.wait(280);
     overlay.remove();
-    kerros.textContent = '';
-    kerros.classList.remove('lento-poistuu');
+    /*
+     * KOHTAUS PURETAAN ARKIN ALLA. Tasokartalla se on lentokerroksen
+     * tyhjennys, pallolla koneen lasku, kaaren ja harson poisto sekä
+     * kameran sukellus kohdekaupunkiin — sama hetki, sama peitto, ja
+     * kartta paljastuu perillä valmiissa näkymässään.
+     */
+    kohtaus.pura();
     this.hideFlightLine();
     // Välikortti kirjoittuu ja häipyy arkilla; kartta rakennetaan
     // vasta sen jälkeen, arkin takana.
@@ -17855,7 +22510,19 @@ export class UI {
      * oikeassa zoomitilassa — EI zoomausanimaatiota"*.
      */
     this.aloituslentoKesken = false;
+    /*
+     * PULUN KUPLAT ENNEN ISOISÄN LUENTAA (omistaja 7.9.2026). Jos tämä
+     * on se ensimmäinen saapuminen, jossa pulu paljastaa tuuraavansa,
+     * saapumismerkinnän luenta ei ala tässä piirrossa vaan odottaa
+     * kahta ensimmäistä kuplaa (asetaMerkinnanLuenta,
+     * aloitaLykattyLuenta). Lippu nostetaan ENNEN renderiä, koska
+     * luenta lähtee juuri siitä piirrosta.
+     */
+    this.luennanLykkays = livianPaljastusOdottaa(this);
     this.render();
+    this.paataAloituslennonSignaali('loppu', {
+      odottaaTraileria: Boolean(this.saapumistraileri),
+    });
     // Arkki pois: kartta on jo valmiissa rajauksessaan sen takana.
     await this.piilotaAloitusverho();
     if (this.dead) return;
@@ -17877,6 +22544,289 @@ export class UI {
   }
 
   /**
+   * ENNAKKOZOOMI: kamera lähemmäs ENNEN kuin nappula lähtee liikkeelle
+   * (omistajan tilaus 1.9.2026 ilta: *"kartta saisi zoomautua
+   * lähemmäksi ensin ja sitten vasta pelaaja alkaisi liikkua"*).
+   *
+   * Palauttaa lupauksen, jota siirto ODOTTAA. Tämä on koko tilauksen
+   * ydin: nappulaa ei poimita laudalta ennen kuin ajo on perillä.
+   *
+   * KOLME EHTOA, samat kuin saatolla. (1) Liikeherkkyys ohittaa: silloin
+   * nappulakaan ei liiku vaan hyppää perille, eikä zoomausta ole.
+   * (2) Kartan on jo oltava LÄHIKUVASSA — yleiskuvasta ajo pakottaisi
+   * mannerZoomin päälle laudalla, jolla saapumiszoomia ei ajeta
+   * lainkaan (kartta.mannerZoomTarpeen), ja veisi liikeherkän pelaajan
+   * näkymän pois hänen tahtomattaan. (3) Kohteen on oltava tiedossa.
+   *
+   * RAJAUS ON NAPPULA JA REITIN ALKU, ei määränpää: keskipisteeksi
+   * otetaan lähtöruudun ja ENNAKON_ASKELIA:n päässä olevan askeleen
+   * puoliväli. Näin ruudulla on lähtiessä sekä nappula että se suunta,
+   * johon se on menossa — määränpään hakeminen on saaton työtä, ja jos
+   * ennakko tekisi senkin, koko matka olisi ohi ennen ensimmäistä
+   * hyppyä.
+   *
+   * HENGÄHDYS PERÄÄN. Ilman sitä zoomin pysähdys ja ensimmäinen hyppy
+   * osuisivat samaan kehykseen ja lukisivat yhtenä liikkeenä; tilaus
+   * on nimenomaan kaksi peräkkäistä tapahtumaa.
+   */
+  async ennakoiSiirtoZoomi(from, path, tapa = null) {
+    if (this.reducedMotion || this.dead) return;
+    const kartta = this.kamera();
+    // Pallolla ei ole yleiskuvan porrasta: se on aina "lähikuvassa"
+    // (kamera on korkeus, ei portaikko), joten ehto 2 koskee vain karttaa.
+    if (!kartta?.ajaKamera) return;
+    if (!this.pallolautaPaalla() && !this.mannerZoom) return;
+    const board = this.game.board;
+    const lahto = pixelOf(board, from);
+    // Askel, joka kertoo suunnan: ENNAKON_ASKELIA:s tai lyhyellä
+    // matkalla viimeinen. Yhden askeleen matkalla tämä on määränpää.
+    const suunta = path[Math.min(ENNAKON_ASKELIA, path.length) - 1];
+    if (!lahto || !suunta) return;
+    /*
+     * KULKUTAPA RAJAA NÄKYMÄN (karttauudistus erä 8, omistaja
+     * 13.9.2026: *"kartta zoomautuu automaattisesti vanhaan tapaan
+     * kauemmas riippuen siita mika liikkumisvaihtoehto on
+     * valittuna."*).
+     *
+     * Kun kulkutapa tunnetaan, rajaus on KOKO MATKA marginaaleineen
+     * (matkarajaus) eikä enää nappulan ympäristö kiinteällä
+     * lähennyskertoimella. Tämä on se hetki, jossa kameran on myös
+     * päästävä maan ikkunan ulkopuolelle — uloszoomauksen esto on
+     * kumottu matkan ajaksi (matkaZoomivapaus).
+     *
+     * ILMAN KULKUTAPAA KAIKKI ON ENNALLAAN: avauslento, mannerlento ja
+     * muut kutsujat saavat entisen lähennyksen (SIIRTOZOOMIN_LAHENNYS).
+     */
+    /*
+     * ASKEL RATKAISEE SYVYYDEN (Raamattu, KARTTAUUDISTUKSEN PAATOKSET
+     * 40; omistaja 18.9.2026: *"kartan pitaisi zoomautua lahemmas
+     * pelinappulaa kun se liftaa pisteiden valilla."*).
+     *
+     * Hyppyjen kulkutavoilla (liftaus, bussi) tavoite EI ole enää koko
+     * matkan laatikko eikä kiinteä kerroin nykyiseen zoomiin, vaan se
+     * näkyvä leveys, jolla YKSI ASKEL on ruudulla vähintään
+     * ASKELEN_VAHIN_OSUUS ruudun lyhyemmästä sivusta
+     * (askelenSiirtoleveys). Koko matkan laatikko teki päinvastaista
+     * kuin tilaus: mitä pidempi heitto, sitä kauempana kamera — ja
+     * kuutosella askel oli ruudulla kymmenesosa ruutua.
+     *
+     * KATTOA EI TARVITSE KIRJOITTAA TÄHÄN: kamera ei päästä pyydettyä
+     * leveyttä laitteen syvimmän sallitun zoomin alle (pallolla
+     * korkeusMin(), PAATOKSET 34 kohta 15 c: puhelin 40, muut 60
+     * lautayksikköä), eikä rajaus mene lähemmäs kuin askel vaatii.
+     *
+     * LAIVA PITÄÄ MATKARAJAUKSENSA: sen kaari on pallolla pitkä, ja
+     * rajaus on siellä kaaren mitta eikä askelen (MATKARAJAUKSEN_
+     * MARGINAALI sea 0,5). Ilman kulkutapaa kaikki on ennallaan.
+     */
+    const askelleveys = MATKARAJAUKSEN_MARGINAALI[tapa] && tapa !== 'sea'
+      ? this.askelenNakymaleveys(from, path)
+      : null;
+    const rajaus = askelleveys ? null : this.matkarajaus(tapa, from, path);
+    const kohti = pixelOf(board, suunta);
+    const kohta = { x: (lahto.x + kohti.x) / 2, y: (lahto.y + kohti.y) / 2 };
+    if (askelleveys) {
+      /*
+       * EI KOSKAAN ULOS PELAAJAN OMASTA LÄHIKUVASTA (sama sopimus kuin
+       * kartta.siirtoZoomiKerroin): jos näkymä on jo lähempänä kuin
+       * askel vaatii, siirto pitää sen — tavoite on VÄHIMMÄISmitta
+       * askeleelle, ei kiinteä mittakaava.
+       */
+      const nyt = kartta.kameranTila?.()?.leveys;
+      this.siirtozoominLeveys = nyt > 0 ? Math.min(nyt, askelleveys) : askelleveys;
+      // Uloszoomauksen esto pois matkan ajaksi kuten matkarajauksella:
+      // askelen leveys voi olla maan ikkunaa isompi pitkällä askeleella.
+      this.matkaZoomivapaus(true);
+      await this.ajaEnnakkozoomi(kartta, { x: kohta.x, y: kohta.y, leveys: this.siirtozoominLeveys });
+    } else if (rajaus) {
+      this.matkaZoomivapaus(true);
+      await this.ajaEnnakkozoomi(kartta, rajaus);
+    } else {
+      const kerroin = kartta.siirtoZoomiKerroin(SIIRTOZOOMIN_LAHENNYS);
+      // Kesto liikkeen mukaan (kartta.js sovitaAjonKesto): iso zoomi
+      // yleiskuvasta saa aikaa, pieni ele pysyy 760 ms:ssa.
+      await this.ajaEnnakkozoomi(kartta, { x: kohta.x, y: kohta.y, kerroin });
+    }
+    if (this.dead) return;
+    await this.wait(ENNAKON_HENGAHDYS_MS);
+  }
+
+  /**
+   * Ennakkozoomi LOPPUUN ASTI (Raamattu, KARTTAUUDISTUKSEN PAATOKSET
+   * 40; omistaja 1.9.2026: *"kartta saisi zoomautua lähemmäksi ensin ja
+   * sitten vasta pelaaja alkaisi liikkua"*).
+   *
+   * `ajaKamera`n `false` tarkoitti ennen kahta eri asiaa, ja vain
+   * toinen niistä on tilaus:
+   *
+   *   ELE VOITTAA — pelaaja tarttui karttaan (sormi, nipistys, rulla).
+   *     Silloin luovutetaan heti ja nappula lähtee siitä näkymästä,
+   *     jonka pelaaja itse valitsi. Tämä on pelin sääntö eikä muutu.
+   *   OHJELMA KESKEYTTI — jokin muu ajo osui päälle. Se ei ole ele,
+   *     ja mitattuna (18.9.2026) se katkaisi ennakon ensimmäisellä
+   *     millisekunnilla. Juurisyy on korjattu (teleporttivahti,
+   *     js/pallolauta/lauta.js), ja tämä on varmistin: ajo jatketaan
+   *     JÄLJELLÄ OLEVALLA ajalla, enintään ENNAKON_JATKOT kertaa.
+   *
+   * Kesto ei siis kerraannu: vaihe kestää yhden ENNAKKOZOOMIN_MS:n
+   * (venytettynä kamera-ajon omalla `sovita`-säännöllä, joka luetaan
+   * vain ensimmäisellä kierroksella — jatko on lyhyt loppumatka eikä
+   * uusi kohtaus). Kaikki laudat, joilla keskeytyksen syytä ei kerrota
+   * (`ajonKeskeytys` puuttuu), käyttäytyvät täsmälleen kuten ennen.
+   */
+  async ajaEnnakkozoomi(kartta, kohde) {
+    let jaljella = ENNAKKOZOOMIN_MS;
+    for (let kierros = 0; kierros <= ENNAKON_JATKOT; kierros += 1) {
+      const alku = performance.now();
+      // eslint-disable-next-line no-await-in-loop
+      const perilla = await kartta.ajaKamera(kohde, { kesto: jaljella, sovita: kierros === 0 });
+      if (perilla || this.dead) return Boolean(perilla);
+      if (kartta.ajonKeskeytys?.() !== 'ohjelma') return false;
+      jaljella -= performance.now() - alku;
+      if (!(jaljella > 0)) return false;
+    }
+    return false;
+  }
+
+  /**
+   * Matkan rajaus kulkutavan mukaan: lähdön ja määränpään laatikko
+   * marginaalilla (MATKARAJAUKSEN_MARGINAALI). Null tarkoittaa "ei
+   * kulkutapakohtaista rajausta" — lento rajaa itse
+   * (js/pallolauta/siirto.js lennonRajaus), ja tuntemattomalla tavalla
+   * ennakkozoomi pysyy entisenä.
+   *
+   * LAATIKKO EI KUTISTU SIIRTONÄKYMÄN KATON ALLE
+   * (MATKARAJAUKSEN_VAHIN_YKS): yhden askeleen liftaus veisi muuten
+   * kameran lähemmäs kuin pelin oma siirtonäkymä koskaan, eli
+   * päinvastaiseen suuntaan kuin tilaus.
+   */
+  /**
+   * Näkyvä leveys (laudan yksikköä), jolla yksi askel on ruudulla
+   * vähintään ASKELEN_VAHIN_OSUUS ruudun lyhyemmästä sivusta
+   * (js/siirtokoreografia.js askelenSiirtoleveys, PAATOKSET 40).
+   *
+   * ASKEL ON MEDIAANI EIKÄ KESKIARVO. Reitin askelvälit ovat
+   * pääsääntöisesti yhtä pitkiä (js/rules.js jakaa kaaren tasan), mutta
+   * viimeinen askel kaupunkiin voi olla murto-osa muista; keskiarvo
+   * vetäisi tavoitteen silloin liian lähelle, mediaani ei.
+   *
+   * Null, kun mitta puuttuu (ruutua ei ole tai reitti on tyhjä) —
+   * silloin kutsuja pitää entisen rajauksensa.
+   */
+  askelenNakymaleveys(from, path) {
+    const board = this.game.board;
+    const pisteet = [from, ...(path ?? [])]
+      .map((p) => pixelOf(board, p))
+      .filter((p) => Number.isFinite(p?.x) && Number.isFinite(p?.y));
+    if (pisteet.length < 2) return null;
+    const valit = [];
+    for (let i = 1; i < pisteet.length; i += 1) {
+      valit.push(Math.hypot(pisteet[i].x - pisteet[i - 1].x, pisteet[i].y - pisteet[i - 1].y));
+    }
+    valit.sort((a, b) => a - b);
+    const askel = valit[Math.floor(valit.length / 2)];
+    return askelenSiirtoleveys(askel, this.mapPane?.clientWidth, this.mapPane?.clientHeight);
+  }
+
+  matkarajaus(tapa, from, path) {
+    const marginaali = MATKARAJAUKSEN_MARGINAALI[tapa];
+    if (!(marginaali > 0)) return null;
+    const maali = path?.[path.length - 1];
+    if (!maali) return null;
+    const a = pixelOf(this.game.board, from);
+    const b = pixelOf(this.game.board, maali);
+    if (!Number.isFinite(a?.x) || !Number.isFinite(b?.x)) return null;
+    const w = Math.abs(b.x - a.x);
+    const h = Math.abs(b.y - a.y);
+    const kasvuX = Math.max(0, MATKARAJAUKSEN_VAHIN_YKS - w) / 2;
+    const kasvuY = Math.max(0, MATKARAJAUKSEN_VAHIN_YKS - h) / 2;
+    return {
+      bbox: {
+        x: Math.min(a.x, b.x) - kasvuX,
+        y: Math.min(a.y, b.y) - kasvuY,
+        w: w + 2 * kasvuX,
+        h: h + 2 * kasvuY,
+      },
+      marginaali,
+    };
+  }
+
+  /**
+   * Uloszoomauksen esto pois matkan ajaksi ja takaisin perillä
+   * (js/pallolauta/lauta.js matkaZoomirajat; suunnitelman luku 3.7).
+   * Tasokartalla ei ole estoa, joten kutsu on siellä tyhjä sana.
+   */
+  matkaZoomivapaus(vapaa) {
+    if (this.pallolautaPaalla()) this.pallolauta?.matkaZoomirajat?.(Boolean(vapaa));
+  }
+
+  /**
+   * KERMA POIS LIIKKEEN AJAKSI JA TAKAISIN PERILLÄ (omistaja 16.9.2026,
+   * Raamattu KARTTAUUDISTUKSEN PAATOKSET 29 kohta 2, sanatarkasti:
+   * *"otetaan sitten huntu kaikkialta pois liikkeen ajaksi ja
+   * palautetaan takaisin sitten kun pelaaja on paassyt uuteen kohde
+   * kaupunkiin"*).
+   *
+   * Reitin maiden erottelu jäi tekemättä tarkoituksella: kerma on
+   * poltettu laattojen kankaisiin, joten yhden maan vapauttaminen
+   * vaatisi sen maan omat renkaat leikkuriksi kesken animaation
+   * (perustelu js/laattapyramidi.js, KERMA POIS MATKAN AJAKSI).
+   * Tasokartalla kermaa ei ole, joten kutsu on siellä tyhjä sana.
+   */
+  /*
+   * TÄSMENNYS 21.9.2026 (omistaja, Fablen erä "huntu liikkeen ajan"):
+   * huntu PYSYY liikkeen ajan, mutta lähtö- JA kohdemaa ovat sen
+   * ulkopuolella — `kohdeIso` kertoo laudalle toisen aukon
+   * (js/laattapyramidi.js HUNTU PYSYY LIIKKEEN AJAN). Perillä aukko
+   * on vain kohdemaassa kuten ennen.
+   */
+  matkanKermattomuus(pois, kohdeIso = null) {
+    if (this.pallolautaPaalla()) this.pallolauta?.matkanKerma?.(Boolean(pois), kohdeIso);
+  }
+
+  /**
+   * MATKAN KOHDEMAA (ISO A3) polusta: viimeinen kaupunki, tai jos polku
+   * päättyy reitin varteen (liftaus pysähtyy askelpisteeseen), se
+   * reitin pää, jota kohti kuljetaan. Null, jos maata ei voi päätellä —
+   * silloin huntuun jää vain lähtömaan aukko.
+   */
+  matkanKohdemaa(from, path) {
+    const cityCountry = this.game?.pack?.map?.cityCountry;
+    if (!cityCountry || !Array.isArray(path) || !path.length) return null;
+    const viimeinen = path[path.length - 1];
+    if (viimeinen?.type === 'city') return cityCountry[viimeinen.city] ?? null;
+    if (viimeinen?.type !== 'edge') return null;
+    const e = this.game?.board?.edgeById?.get(viimeinen.edge);
+    if (!e) return null;
+    // Suunta: edellinen polun piste (tai lähtö) kertoo, kumpaa päätä
+    // kohti idx kasvaa — a→b kun idx nousee, b→a kun laskee.
+    const edellinen = path.length > 1 ? path[path.length - 2] : from;
+    let kohti = null;
+    if (edellinen?.type === 'city') kohti = e.a === edellinen.city ? e.b : e.a;
+    else if (edellinen?.type === 'edge' && edellinen.edge === viimeinen.edge) {
+      kohti = viimeinen.idx > edellinen.idx ? e.b : e.a;
+    }
+    return kohti ? (cityCountry[kohti] ?? null) : null;
+  }
+
+  /**
+   * KARTTA PALAA MAAN RAJAUKSEEN SAAPUMISEN JÄLKEEN (omistaja
+   * 13.9.2026): matkan ajan näkymä on koko matkan mittainen, ja
+   * perillä kamera asettuu takaisin maan ikkunaan — samaan, johon
+   * saapumisajo vie (js/pallolauta/lauta.js saavu).
+   *
+   * `aja: false` vain palauttaa zoomirajat: lennolla kuljettaja on jo
+   * ajanut saapumisrajauksen (js/pallolauta/siirto.js laske), eikä
+   * toinen ajo saa nykäistä kuvaa sen päälle.
+   */
+  async palaaMaanRajaukseen({ aja = true } = {}) {
+    if (!this.pallolautaPaalla()) return;
+    const lauta = this.pallolauta;
+    if (aja && !this.dead) await lauta.saavu({ kesto: MATKARAJAUKSEN_PALUU_MS });
+    this.matkaZoomivapaus(false);
+  }
+
+  /**
    * Käynnistää saattavan kamera-ajon matkan ajaksi (#96).
    *
    * KOLME EHTOA. (1) Liikeherkkyys ohittaa: silloin nappulakaan ei
@@ -17885,85 +22835,161 @@ export class UI {
    * mikä ei ole tilaus (tilaus on panorointi). (3) Siirron on oltava
    * ruudulla tuntuva (SAATON_VAHIN_PX), muuten kartta vain värähtäisi.
    *
-   * KOHDE ON MATKAN PÄÄTEPISTE eikä kaupungin muotolaatikko: kerrointa
-   * ei anneta, joten kamera pitää nykyisen mittakaavansa ja pelkkä
-   * keskipiste siirtyy. Näin nappulan käänteisskaalaus (kerroin
-   * animatePawnSisalla) pysyy voimassa koko matkan ajan.
+   * KOHDE ON NAPPULAN SIIRTYMÄ (askelmittakaavalla) tai matkan
+   * päätepiste — ei kaupungin muotolaatikko: kerrointa ei anneta, joten
+   * kamera pitää nykyisen mittakaavansa ja pelkkä keskipiste siirtyy.
+   * MITTAKAAVAN ON ASETTANUT ENNAKKOZOOMI, joka
+   * ajettiin juuri ennen tätä — saatto ei enää zoomaa itse, koska
+   * kaksi mittakaavaa samassa ajossa on täsmälleen se sekamelska,
+   * jonka omistaja pyysi purkamaan. Näin myös nappulan
+   * käänteisskaalaus (kerroin animatePawnSisalla) pysyy voimassa koko
+   * matkan ajan.
    *
    * Lupausta ei odoteta: ajo saa jäädä pyörimään saapumisen yli, ja
-   * ele saa keskeyttää sen milloin tahansa.
+   * ele saa keskeyttää sen milloin tahansa. Perillä kamera JÄÄ SIIHEN
+   * (ks. osion johdanto: paluuajo poistettiin 1.9.2026).
+   *
+   * `from` on nappulan LÄHTÖPAIKKA: askelmittakaavan saatto liukuu
+   * nappulan mukana eikä määränpään asentoon (ks. SAATTO LIUKUU
+   * NAPPULAN MUKANA alla). Ilman sitä käytös on entinen.
    */
-  aloitaSaattavaKamera(path, kesto) {
-    this.saatonPaluuKerroin = null;
+  aloitaSaattavaKamera(path, kesto, from = null) {
     if (this.reducedMotion || this.dead) return;
-    const kartta = this.kartta;
-    if (!kartta?.ajaKamera || !this.mannerZoom) return;
+    const kartta = this.kamera();
+    if (!kartta?.ajaKamera) return;
+    // Sama lautaehto kuin ennakolla: pallolla ei ole yleiskuvaa.
+    if (!this.pallolautaPaalla() && !this.mannerZoom) return;
     const maali = path[path.length - 1];
     if (!maali) return;
     const kohta = pixelOf(this.game.board, maali);
     const nyt = kartta.kameranTila?.();
     if (!nyt) return;
     /*
-     * LÄHEMMÄS ON EHTO, EI KORISTE. Ajo tehdään myös silloin kun matka
-     * on ruudulla lyhyt, koska zoomi yksinään liikuttaa lautaa —
-     * SAATON_VAHIN_PX torjuu vain sen tapauksen, jossa EIKÄ kohde siirry
-     * EIKÄ mittakaava muutu (kamera on jo lähikuvan katossa kohteen
-     * päällä).
+     * SIIRTYMÄ ON NYT AINOA EHTO. Ennen tässä katsottiin myös, meneekö
+     * ajo lähemmäs — koska saatto zoomasi itse. Nyt zoomin on hoitanut
+     * ennakko, joten jäljellä on pelkkä panorointi: jos määränpää on jo
+     * käytännössä ruudun keskellä, ajo näyttäisi vain siltä että kartta
+     * värähtää nappulan lähtiessä.
      */
-    const lahtoKerroin = kartta.zoomiKerroin;
-    const kerroin = lahtoKerroin * SAATON_LAHENNYS;
-    const matka = Math.hypot(kohta.x - nyt.x, kohta.y - nyt.y) * nyt.skaala;
-    const lahenee = kartta.kameranKohde?.(
-      { x: kohta.x, y: kohta.y, kerroin },
-      this.mapPane?.clientWidth ?? 0,
-      this.mapPane?.clientHeight ?? 0,
-    );
-    const zoomaa = lahenee ? Math.abs(lahenee.kerroin / lahtoKerroin - 1) > 0.02 : false;
-    if (!(matka > SAATON_VAHIN_PX) && !zoomaa) return;
     /*
-     * Paluu tarvitsee kaksi asiaa, ja molemmat katoavat matkan aikana:
-     * LÄHTÖKERTOIMEN (ajo kirjoittaa zoomiVapaan uuteen arvoonsa) ja
-     * tiedon siitä, PÄÄSIKÖ AJO PERILLE — lupaus ratkeaa arvolla false,
-     * jos ele keskeytti sen.
+     * MITTA ON ENNAKKOZOOMIN TAVOITEMITTAKAAVA, EI SE MISSÄ KAMERA
+     * SATTUU OLEMAAN (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 40 kohta 3).
+     *
+     * Kynnys on olemassa siksi, ettei kartta värähdä nappulan lähtiessä,
+     * ja se mitattiin nykyisestä mittakaavasta. Mittauksessa 18.9.2026
+     * (390 × 844) se esti saaton KOKONAAN juuri silloin kun saattoa
+     * eniten tarvittiin: kamera oli nykäisty avaruuteen, jolloin koko
+     * matka oli ruudulla 15,7 px eli alle 24 px:n pohjan — ja saatto
+     * jäi ajamatta. Kamera on saaton alkaessa menossa ennakkozoomin
+     * tavoitteeseen, joten oikea vertailu on siinä mittakaavassa.
+     *
+     * Ilman tavoitelukua (laiva, tuntematon kulkutapa) mitta on entinen.
      */
-    this.saatonPaluuKerroin = lahtoKerroin;
-    this.saatonAjo = kartta.ajaKamera(
-      { x: kohta.x, y: kohta.y, kerroin },
-      { kesto, pehmennys: SAATON_PEHMENNYS },
-    );
-  }
-
-  /**
-   * Saattozoomi purkautuu perillä (#96 + omistajan pelitesti
-   * 27.8.2026): kamera palaa siihen kertoimeen, josta matka alkoi, ja
-   * jää nappulan kohdalle.
-   *
-   * EI AJETA, JOS SAATTO KESKEYTYI. Keskeytys tarkoittaa, että pelaaja
-   * otti kartan omaan käteensä (kartta.pysaytaKameraAjo kirjaa
-   * välivaiheen oikeaksi kameratilaksi) — silloin paluu olisi toinen
-   * ohjastus samaan karttaan ja veisi sen pois siitä kohdasta, jonka
-   * pelaaja juuri valitsi.
-   *
-   * Lupausta ei odoteta: saapumisen kortit, kuplat ja mahdollinen
-   * maanvaihdoksen oma ajo saavat alkaa heti.
-   */
-  async puraSaattavaKamera(path) {
-    const kerroin = this.saatonPaluuKerroin;
-    const ajo = this.saatonAjo;
-    this.saatonPaluuKerroin = null;
-    this.saatonAjo = null;
-    if (!kerroin || !ajo || this.reducedMotion || this.dead) return;
-    // Menoajon lupaus on tässä kohtaa jo ratkennut (kesto = matkan
-    // kesto); false tarkoittaa, että ele keskeytti sen.
-    const perille = await ajo;
-    if (!perille || this.dead || !this.kartta?.ajaKamera) return;
-    const maali = path[path.length - 1];
-    if (!maali) return;
-    const kohta = pixelOf(this.game.board, maali);
-    void this.kartta.ajaKamera(
-      { x: kohta.x, y: kohta.y, kerroin },
-      { kesto: SAATON_PALUU_MS },
-    );
+    const tavoiteLeveys = this.siirtozoominLeveys;
+    const skaala = tavoiteLeveys > 0 && nyt.leveys > 0
+      ? nyt.skaala * (nyt.leveys / tavoiteLeveys)
+      : nyt.skaala;
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * SAATTO LIUKUU NAPPULAN MUKANA (Raamattu, KARTTAUUDISTUKSEN
+     * PAATOKSET 43 kohta 11)
+     * ══════════════════════════════════════════════════════════════
+     *
+     * Omistaja 18.9.2026 (iPad/iPhone, v1946), sanatarkasti: *"Kun
+     * nappula liikkuu liftauksen aikana, kartta panoroi vaaraan
+     * suuntaan."*
+     *
+     * JUURISYY ON MITATTU EIKÄ ARVATTU (savuke-siirtozoomin pohjalta,
+     * Marseille → Nevers, land, silmä 3):
+     *
+     *   Saatto ajoi määränpään SAAPUMISASENTOON, ja se asento on
+     *   kaupungin POHJOIS- JA ITÄPUOLELLA — poikkeama on
+     *   { x: −0,08, y: +0,28 } NÄKYMÄSTÄ (js/saapumisasento.js
+     *   saapumisenPallonKohta), eli se kasvaa näkyvän kaaren mukana.
+     *   Työpöytäruudulla (1400 × 900, näkyvä leveys 396 lautayksikköä
+     *   = 11,88°) itäsiirto oli +1,49°, kun koko matkan pituusaste-
+     *   ero on vain −2,38°: kameran kohde jäi LÄHTÖPISTEEN ITÄPUOLELLE
+     *   (lng 4,4535 → 4,4700), vaikka nappula kulki länteen. Mitattu
+     *   kameran liikevektori oli siis pituusasteella VASTAKKAINEN
+     *   nappulan liikkeelle — juuri se, minkä omistaja näki.
+     *   Puhelimella (390 × 844) sama poikkeama oli +0,67° itään ja
+     *   +3,07° pohjoiseen: kamera liikkui länteen vain kolmanneksen
+     *   nappulan matkasta ja ohitti määränpään 1,3-kertaisesti
+     *   pohjoisessa, joten nappula valui ruudulla 80 px vasemmalle ja
+     *   90 px alas.
+     *
+     * KORJAUS ON PUHDAS SIIRTYMÄ: kamera ajaa siitä, missä se on, sen
+     * verran ja siihen suuntaan kuin NAPPULA kulkee (määränpää −
+     * lähtöpaikka). Silloin kameran liikevektori on määritelmän
+     * mukaan nappulan liikkeen suuntainen, ja nappula pysyy koko
+     * matkan siinä kohdassa ruutua, johon ennakkozoomi sen jätti.
+     * Kesto, käyrä ja mittakaava ovat ennallaan — muuttuu vain MAALI.
+     *
+     * SAAPUMISASENTO EI KATOA. Maitse ja bussilla kaupunkiin päättyvä
+     * matka ajaa perillä `palaaMaanRajaukseen` → `lauta.saavu`, ja
+     * SE asettaa kaupungin alimpaan kolmannekseen (js/pallolauta/
+     * kamera.js saavu, `saapuminen: true`). Kun saatto teki saman
+     * asennon jo matkan aikana, asento tehtiin kahdesti — ja
+     * ensimmäinen kerta maksoi koko panoroinnin suunnan.
+     *
+     * LAIVA JA TUNTEMATON KULKUTAPA ENNALLAAN. Niillä ennakkozoomi
+     * rajaa KOKO MATKAN (MATKARAJAUKSEN_MARGINAALI sea 0,5,
+     * PAATOKSET 40: *"LAIVA PITÄÄ MATKARAJAUKSENSA"*), jolloin kamera
+     * ei ole nappulan päällä vaan matkan keskellä eikä puhdas siirtymä
+     * osuisi mihinkään. Ehto on sama `tavoiteLeveys`, joka erottaa
+     * askelmittakaavan muista jo kynnyksessä.
+     */
+    const lahto = from ? pixelOf(this.game.board, from) : null;
+    const siirtyma = tavoiteLeveys > 0 && Number.isFinite(lahto?.x)
+      ? { x: kohta.x - lahto.x, y: kohta.y - lahto.y }
+      : null;
+    const matka = siirtyma
+      ? Math.hypot(siirtyma.x, siirtyma.y) * skaala
+      : Math.hypot(kohta.x - nyt.x, kohta.y - nyt.y) * skaala;
+    // Kynnys ruudun leveydestä, pohja absoluuttinen (ks. SAATON_VAHIN_PX).
+    const kynnys = Math.max(SAATON_VAHIN_PX,
+      (this.mapPane?.clientWidth ?? 0) * SAATON_VAHIN_OSUUS);
+    if (!(matka > kynnys)) return;
+    /*
+     * SAATTO PÄÄTTYY SAAPUMISASENTOON — VAIN SILLOIN KUN SE ON MATKAN
+     * VIIMEINEN AJO (omistaja 9.9.2026, Raamattu SAAPUMISESSA KAMERA
+     * ASETTUU NIIN, ETTA KAUPUNKI ON ALIMMASSA KOLMANNEKSESSA).
+     * Askelmittakaavan saatto EI enää tee sitä: sen maali on nappulan
+     * siirtymä (yllä), ja asennon tekee perillä `palaaMaanRajaukseen`.
+     * Muilla (laiva, tuntematon kulkutapa) tämä on yhä se ajo, johon
+     * kamera jää, joten `saapuminen` säilyy. Siirto lasketaan laudan
+     * kamerassa, joten kaava on sama molemmilla laudoilla eikä ui.js
+     * tunne lautaa.
+     */
+    /*
+     * SAATTO PITÄÄ ENNAKKOZOOMIN MITTAKAAVAN — NYT KIRJATTUNA, EI
+     * PERITTYNÄ (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 40 kohta 2).
+     *
+     * Ennen tässä ei annettu leveyttä lainkaan: kamera piti sen
+     * mittakaavan, jonka ennakkozoomi sattui jättämään. Se on sama
+     * asia VAIN jos ennakkozoomi ehti perille — ja mitattuna
+     * (18.9.2026, 390 × 844) se ei aina ehdi: ajo voi pysähtyä heti,
+     * jolloin saatto peri lähtönäkymän ja askel jäi ruudulla
+     * kymmenesosaan ruutua. Yksi ja sama luku (`siirtozoominLeveys`)
+     * molemmissa ajoissa on täsmälleen se "sama mittakaava", jonka
+     * päätös pyytää — se ei ole toinen zoomi vaan ensimmäisen jatke.
+     *
+     * Ilman lukua (laiva, tuntematon kulkutapa) käytös on entinen:
+     * pelkkä keskipiste siirtyy.
+     */
+    let kamerankohde;
+    if (siirtyma) {
+      kamerankohde = {
+        x: nyt.x + siirtyma.x, y: nyt.y + siirtyma.y, leveys: tavoiteLeveys,
+      };
+    } else if (tavoiteLeveys > 0) {
+      kamerankohde = {
+        x: kohta.x, y: kohta.y, leveys: tavoiteLeveys, saapuminen: true,
+      };
+    } else {
+      kamerankohde = { x: kohta.x, y: kohta.y, saapuminen: true };
+    }
+    void kartta.ajaKamera(kamerankohde, { kesto, pehmennys: SAATON_PEHMENNYS });
   }
 
   /**
@@ -17994,6 +23020,40 @@ export class UI {
     if (!vaihtui && !this.dead) this.syncAmbience();
   }
 
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * SIIRTYMÄMUSIIKKI (omistajan tilaus 2.9.2026)
+   * ══════════════════════════════════════════════════════════════
+   *
+   * *"Tähän voisi taustalle kehittää oman pienen musiikin, joka
+   * tulisi aina siirtymän taustalle. Ja se voisi olla hieman eri
+   * kävellessä laivalla ja lentäen."*
+   *
+   * Kaksi metodia ja ei yhtään ehtoa muualla: koko koneisto —
+   * kolme raitaa, puuttuvan tiedoston hiljainen kohtelu, väistö,
+   * häivytykset ja kehittäjän varamusiikki — asuu omassa
+   * moduulissaan (js/siirtymamusiikki.js). Nämä ovat vain se paikka,
+   * jossa PELI päättää milloin siirtymä alkaa ja loppuu.
+   *
+   * RADIOTILA VAIKENEE. Radiossa radio on ainoa ääni (sama sääntö
+   * kuin jalkamatkan äänimaisemalla, aloitaJalkamatkanAani).
+   */
+
+  /** Siirtymän oma raita soimaan: laji on 'jalan', 'laiva' tai 'lento'. */
+  aloitaSiirronMusiikki(laji) {
+    if (this.dead || this.radioPaalla()) return;
+    aloitaSiirtymamusiikki(laji);
+    // Kehittäjän varamusiikki on erillinen ja oletuksena pois; se soi
+    // vain jos kytkin on päällä JA oikea raita puuttuu.
+    aloitaVaramusiikki(laji);
+  }
+
+  /** Siirtymän raita pois pehmeästi. Turvallinen kutsua aina. */
+  lopetaSiirronMusiikki() {
+    lopetaSiirtymamusiikki();
+    lopetaVaramusiikki();
+  }
+
   /**
    * Yksi hyppy askelpisteestä toiseen (#100).
    *
@@ -18013,7 +23073,7 @@ export class UI {
    */
   hyppaaAskel(g, hahmo, varjo, a, b, kesto, koko) {
     const matka = Math.hypot(b.x - a.x, b.y - a.y);
-    const huippu = Math.min(HYPYN_KORKEUS_MAX, Math.max(HYPYN_KORKEUS_MIN, matka * HYPYN_KAARI));
+    const huippu = hypynHuippu(matka);
     return new Promise((valmis) => {
       const alku = performance.now();
       const kehys = (nyt) => {
@@ -18022,9 +23082,10 @@ export class UI {
         // koko matka syöksy läpi yhdessä kehyksessä.
         if (this.dead) { valmis(); return; }
         const t = Math.min(1, (nyt - alku) / kesto);
-        // Vaaka: ease-in-out. Pysty: paraabeli, nolla päissä.
-        const e = t < 0.5 ? 2 * t * t : 1 - ((-2 * t + 2) ** 2) / 2;
-        const korkeus = huippu * 4 * t * (1 - t);
+        // Vaaka: ease-in-out. Pysty: paraabeli, nolla päissä — kaava
+        // on js/siirtokoreografia.js hypynVaihe, sama kuin pallolla.
+        const { e, nousu } = hypynVaihe(t);
+        const korkeus = huippu * nousu;
         const osuus = huippu > 0 ? korkeus / huippu : 0;
         g.style.transform =
           `translate(${(a.x + (b.x - a.x) * e).toFixed(2)}px, ${(a.y + (b.y - a.y) * e).toFixed(2)}px)${koko}`;
@@ -18041,33 +23102,214 @@ export class UI {
     });
   }
 
-  /** Nappulan varsinainen siirto; kääre yllä hiljentää kartan animaatiot. */
-  async animatePawnSisalla(player, from, path, stepMs = STEP_MS, { saatto = false, maitse = false } = {}) {
-    if (!path || path.length === 0) return;
+  /**
+   * NAPPULAN KULJETTAJA — LAUDAN OMA OSA SIIRROSTA (pallolauta vaihe 2,
+   * docs/moduulit/karttapallo.md luku 7).
+   *
+   * Siirron koreografia — musiikki, ennakkozoomi, saatto, lähdön viive,
+   * äänet, tauot, saapuminen — on YHDESSÄ paikassa (animatePawnSisalla)
+   * kummallekin laudalle, ja vain nappulan fyysinen käsittely
+   * delegoidaan laudalle: tasokartalla SVG-kerros ja hyppaaAskel
+   * (tasokartanKuljettaja), pallolla DOM-elementti pallon pinnalla
+   * (js/pallolauta/siirto.js). Näin ui.js:n kutsut musiikkiin ja ääniin
+   * eivät kahdennu, ja tests/siirtoajoitus.test.mjs:n vartioima
+   * järjestys on sama laudasta riippumatta.
+   *
+   * Kuljettajan sopimus: `nosta()` luo liikkuvan nappulan (paikallaan
+   * oleva on jo piilossa movingPlayerId:n takia); `aseta(pos)` panee
+   * sen laudan paikkaan ilman liikettä (lähtöruutu, liikeherkkyys);
+   * `hyppaa(a, b, kesto)` on yksi hyppy paikasta toiseen ja ratkeaa
+   * laskeutuessa; `laske()` poistaa liikkuvan nappulan. Paikat ovat
+   * pelin `pos`-olioita, ei pikseleitä — pikselit ovat laudan asia.
+   */
+  nappulanKuljettaja(player, { lento = false, omaKamera = false } = {}) {
+    /*
+     * `omaKamera` on LAUDAN lisä (js/pallolauta/siirto.js): avauslennon
+     * kohtaus ajaa kameran itse yhtenä kaarena (omistaja 6.9.2026 ilta),
+     * eikä kuljettaja saa käynnistää omaa lennon kamera-ajoaan. Tasokartan
+     * kuljettaja ei aja kameraa lainkaan, joten sille lippu on tyhjä sana.
+     */
+    if (this.pallolautaPaalla()) {
+      return this.pallolauta.nappulanKuljettaja(player, { lento, omaKamera });
+    }
+    return this.tasokartanKuljettaja(player);
+  }
+
+  /** Tasokartan kuljettaja: sama koodi kuin ennen vaihetta 2, sopimuksen muodossa. */
+  tasokartanKuljettaja(player) {
     const { board } = this.game;
-    this.movingPlayerId = player.id;
-    this.drawPawns();
-    const g = this.pawnShape(this.pawnLayer, player, false);
-    g.classList.add('pawn-moving');
-    const hahmo = g.querySelector('.pawn-hahmo');
-    const varjo = g.querySelector('.pawn-varjo');
+    let g = null;
+    let hahmo = null;
+    let varjo = null;
+    let koko = null;
+    let paikka = null;
+    return {
+      nosta: () => {
+        g = this.pawnShape(this.pawnLayer, player, false);
+        g.classList.add('pawn-moving');
+        hahmo = g.querySelector('.pawn-hahmo');
+        varjo = g.querySelector('.pawn-varjo');
+      },
+      aseta: (pos) => {
+        /*
+         * LIIKKUVA NAPPULA ON YHTÄ PIENI KUIN PAIKALLAAN OLEVA. Siirron
+         * paikka on TYYLISSÄ (hyppy kirjoittaa sen joka kehyksellä), ja
+         * tyyli voittaa transform-määreen — fokusnäkymän käänteisskaalaus
+         * on siksi kirjoitettava tähän samaan merkkijonoon eikä
+         * paivitaFokusMerkkiMitatiin. Kerroin luetaan KERRAN, ennakko- ja
+         * saattoajon asettamasta lopullisesta mittakaavasta (ensimmäinen
+         * aseta-kutsu on lähtöruutu, ja se tulee saaton jälkeen).
+         */
+        if (koko === null) {
+          const kerroin = this.fokusNappulaKerroin();
+          koko = Math.abs(kerroin - 1) < 0.0005 ? '' : ` scale(${kerroin.toFixed(4)})`;
+        }
+        paikka = pixelOf(board, pos);
+        g.style.transform = `translate(${paikka.x}px, ${paikka.y}px)${koko}`;
+      },
+      hyppaa: async (a, b, kesto) => {
+        const kohta = pixelOf(board, b);
+        await this.hyppaaAskel(g, hahmo, varjo, paikka, kohta, kesto, koko);
+        paikka = kohta;
+      },
+      laske: () => { g?.remove(); g = null; },
+    };
+  }
+
+  /** Paikallaan olevat nappulat laudan mukaan: SVG-kerros tai pallon merkit. */
+  piirraNappulat() {
+    if (this.kartta.lepotila) this.pallolauta?.paivita();
+    else this.drawPawns();
+  }
+
+  /** Nappulan varsinainen siirto; kääre yllä hiljentää kartan animaatiot. */
+  async animatePawnSisalla(
+    player, from, path, stepMs = STEP_MS,
+    {
+      saatto = false, maitse = false, musiikki = null, lento = false,
+      kyyti = false, tapa = null,
+    } = {},
+  ) {
+    if (!path || path.length === 0) return;
+    /*
+     * SIIRTYMÄMUSIIKKI ALKAA HETI, KOKO KOREOGRAFIAN ALUSSA (omistajan
+     * tilaus 2.9.2026: *"oman pienen musiikin, joka tulisi aina
+     * siirtymän taustalle"*). Ennakkozoomi on jo osa siirtoa, joten
+     * musiikki nousee sen aikana ja on täydessä tasossaan silloin kun
+     * kamera lähtee rullaamaan. Ero äänimaisemaan on tarkoituksellinen:
+     * MAISEMA kertoo missä ollaan ja alkaa siksi vasta nappulan
+     * liikkeestä (ks. aloitaJalkamatkanAani), MUSIIKKI kertoo että
+     * ollaan matkalla ja alkaa siksi matkan alusta.
+     */
+    if (musiikki) this.aloitaSiirronMusiikki(musiikki);
 
     /*
-     * MATKAN LISÄT LAUDALLA (#96) ENNEN MITOITUSTA. Kesto lasketaan
-     * tässä, koska sekä kamera että ääni tarvitsevat saman luvun:
-     * hyppyjä on path.length ja taukoja yksi vähemmän.
+     * SIIRTO ON KÄYNNISSÄ — LIPPU YLÖS ENNEN MITÄÄN MUUTA (Raamattu,
+     * KARTTAUUDISTUKSEN PAATOKSET 40).
+     *
+     * Sama lippu kuin lennon `lentoKaari`, ja samasta syystä: `ui.run`
+     * on jo ajanut `game.actionMove`n, joten pelaajan paikka on
+     * määränpää, mutta `movingPlayerId` nousee vasta ennakkozoomin
+     * jälkeen. Ilman lippua pallolaudan teleporttivahti luki tuon
+     * välin paikanvaihdokseksi ja käynnisti saapumisajon, joka
+     * keskeytti ennakkozoomin ensimmäisellä millisekunnilla
+     * (juurisyy ja mittaus js/pallolauta/lauta.js `paivita`).
+     *
+     * Lippu lasketaan vasta kun kuljettaja on laskenut nappulan ja
+     * merkinnyt paikkansa (merkitseNappulanPaikka) — ja kuolleen pelin
+     * haarassa heti, jottei se jää päälle.
+     *
+     * ARVO ON LÄHTÖPAIKKA EIKÄ `true`: sama tieto kertoo laudalle myös,
+     * MIHIN paikallaan oleva nappula piirretään ennakkozoomin ajan
+     * (js/pallolauta/lauta.js `paivita`). Ilman sitä nappula seisoisi
+     * määränpäässä koko zoomin ajan ja hyppäisi lähtöön vasta kun
+     * liikkuva kopio syntyy.
+     */
+    this.siirtoKaynnissa = from;
+
+    /*
+     * KERMA POIS HETI KOKO KOREOGRAFIAN ALUSSA (ks. matkanKermattomuus):
+     * laattakerros kokoaa kankaansa uudelleen, ja ennakkozoomi on juuri
+     * se hetki, jonka aikana se ehtii tapahtua — kun nappula lähtee
+     * liikkeelle, kartta on jo kermaton. Palautus on tämän funktion
+     * lopussa ja kuolleen pelin haarassa, jottei huntu jää pois.
+     */
+    this.matkanKermattomuus(true, this.matkanKohdemaa(from, path));
+
+    /*
+     * === 1. ENNAKKOZOOMI, JA VASTA SITTEN NAPPULA ==================
+     *
+     * Omistajan tilaus 1.9.2026 ilta: *"kartta saisi zoomautua
+     * lähemmäksi ensin ja sitten vasta pelaaja alkaisi liikkua."*
+     *
+     * Ajoa ODOTETAAN, ja se tehdään ENNEN kuin nappula poimitaan
+     * laudalta. Järjestys on tarkka: `movingPlayerId` piilottaa
+     * paikallaan olevan nappulan ja korvaa sen liikkuvalla kopiolla,
+     * ja jos se tehtäisiin ensin, nappula katoaisi kartalta koko
+     * zoomauksen ajaksi. Nyt zoomin ajan ruudulla on tavallinen
+     * nappula, joka skaalautuu kartan mukana kuten aina.
+     */
+    /*
+     * Ennakkozoomin tavoiteleveys on VOIMASSA VAIN TÄMÄN MATKAN AJAN
+     * (PAATOKSET 40): se lasketaan tämän heiton askeleesta, ja saatto
+     * lukee sen. Nollaus tässä, jottei edellisen heiton luku pääse
+     * saatolle silloin kun ennakko ei aja (liikeherkkyys, laiva).
+     */
+    this.siirtozoominLeveys = null;
+    if (saatto) await this.ennakoiSiirtoZoomi(from, path, tapa);
+    // Peli kuoli kesken ennakkozoomin: musiikki ei saa jäädä soimaan
+    // (loppusammutus alempana jää tekemättä, koska tästä poistutaan).
+    if (this.dead) {
+      if (musiikki) this.lopetaSiirronMusiikki();
+      this.matkanKermattomuus(false);
+      this.siirtoKaynnissa = null;
+      return;
+    }
+
+    this.movingPlayerId = player.id;
+    this.piirraNappulat();
+    // Laudan oma kuljettaja (ks. nappulanKuljettaja): liikkuva nappula
+    // syntyy nyt, paikkansa se saa vasta saaton jälkeen (alla).
+    const kuljettaja = this.nappulanKuljettaja(player, { lento });
+    kuljettaja.nosta();
+
+    /*
+     * === 2. MATKAN LISÄT LAUDALLA (#96) ENNEN MITOITUSTA ===========
+     *
+     * Kesto lasketaan tässä, koska sekä kamera että ääni tarvitsevat
+     * saman luvun: hyppyjä on path.length ja taukoja yksi vähemmän.
      *
      * JÄRJESTYS ON OLEELLINEN. Saattoajo vie näkymän lopulliseen
-     * mittakaavaansa heti (kartta.ajaKamera → fitViewBox) ja piirtää
+     * rajaukseensa heti (kartta.ajaKamera → fitViewBox) ja piirtää
      * matkan sen päälle kuoren muunnoksena. Nappulan käänteisskaalaus
      * on siis luettava VASTA ajon jälkeen — muuten se olisi lähtötilan
      * mittakaavasta ja nappula jäisi perillä väärän kokoiseksi siihen
      * asti, kunnes seuraava piirto korjaa sen.
+     *
+     * ÄÄNI KUULUU NAPPULAN LIIKKEESEEN, EI ZOOMAUKSEEN. Jalkamatkan
+     * äänimaisema nousee vasta tässä — ennakkozoomin aikana kuuluu
+     * yhä lähtökaupungin oma maisema, koska matka ei ole vielä
+     * alkanut. Sama sääntö kuin määränpään ambienssilla, joka lähtee
+     * nousemaan viimeisellä askeleella eikä siirron lopussa.
      */
     if (saatto) {
-      const kokonaiskesto = path.length * stepMs
-        + Math.max(0, path.length - 1) * HYPYN_TAUKO_MS;
-      this.aloitaSaattavaKamera(path, kokonaiskesto);
+      /*
+       * KAMERA-AJO ON PIDEMPI KUIN NAPPULAN MATKA (omistajan tilaus
+       * 2.9.2026): siihen tulee eteen nappulan lähdön viive ja perään
+       * saapumisero, jotta *"laatta saapuu perille vähän ennen, kuin
+       * kartan panorointiliike loppuu"*. Luvut ja perustelu ovat
+       * osiossa SIIRRON KOREOGRAFIA (siirtoajonKesto).
+       */
+      /*
+       * AUTOKYYDISSÄ EI OLE TAUKOJA (karttauudistus erä 8): matka on
+       * yksi yhtäjaksoinen ajo, joten kameran mitoitus lasketaan ilman
+       * hyppyjen välistä hengähdystä — muuten saatto jäisi roikkumaan
+       * sekunnin verran nappulan jälkeen.
+       */
+      const kyydissa = kyyti && !this.reducedMotion && typeof kuljettaja.aja === 'function';
+      const nappulanKesto = path.length * stepMs
+        + (kyydissa ? 0 : Math.max(0, path.length - 1) * HYPYN_TAUKO_MS);
+      this.aloitaSaattavaKamera(path, siirtoajonKesto(nappulanKesto), from);
       /*
        * YHDEN ASKELEEN MATKA JÄÄ ILMAN OMAA ÄÄNTÄ. Maisema nousee
        * kuuluviin 900 ms:ssa, ja viimeinen askel vaihtaa sen jo
@@ -18078,20 +23320,75 @@ export class UI {
     }
 
     /*
-     * LIIKKUVA NAPPULA ON YHTÄ PIENI KUIN PAIKALLAAN OLEVA. Siirron
-     * paikka on TYYLISSÄ (hyppy kirjoittaa sen joka kehyksellä), ja
-     * tyyli voittaa transform-määreen — fokusnäkymän käänteisskaalaus
-     * on siksi kirjoitettava tähän samaan merkkijonoon eikä
-     * paivitaFokusMerkkiMitatiin. Kerroin luetaan kerran, saattoajon
-     * asettamasta lopullisesta mittakaavasta (ks. yllä).
+     * Nappula lähtöruutuunsa VASTA saaton jälkeen: tasokartalla
+     * kuljettaja lukee tässä fokusnäkymän käänteisskaalauksen
+     * lopullisesta mittakaavasta (ks. tasokartanKuljettaja), pallolla
+     * ruudun pisteen kamera-ajon alettua.
      */
-    const kerroin = this.fokusNappulaKerroin();
-    const koko = Math.abs(kerroin - 1) < 0.0005 ? '' : ` scale(${kerroin.toFixed(4)})`;
-    let paikka = pixelOf(board, from);
-    g.style.transform = `translate(${paikka.x}px, ${paikka.y}px)${koko}`;
+    kuljettaja.aseta(from);
+    let paikka = from;
 
-    for (const [i, pos] of path.entries()) {
-      const kohta = pixelOf(board, pos);
+    /*
+     * === 3. NAPPULA LÄHTEE VIIVEELLÄ KAMERAN JÄLKEEN ===============
+     *
+     * Omistajan tilaus 2.9.2026: *"nappulan liikkeelle lähtö voisi
+     * olla hieman viivytetty niin, että kartta ehtii lähteä hitaasti
+     * jo rullaamaan eteenpäin."* Viive on TÄSSÄ eikä kamerassa, koska
+     * kamera-ajo on jo käynnissä ja sen kello juoksee: odotus ei
+     * pysäytä mitään, se vain siirtää nappulan ensimmäisen hypyn
+     * alkamaan sen verran myöhemmin.
+     *
+     * Nappula on jo laudalla ja lähtöruudussaan (yllä), joten se
+     * matkustaa viiveen ajan kartan mukana kuten kaikki muukin
+     * kuoressa oleva — ruudulla ei ole hetkeäkään tyhjää kohtaa.
+     */
+    if (saatto && !this.reducedMotion) await this.wait(NAPPULAN_LAHDON_VIIVE_MS);
+
+    /*
+     * ═══ AUTOKYYTI: KOKO MATKA YHDELLÄ AJOLLA ══════════════════════
+     *
+     * Omistaja 13.9.2026 (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 1
+     * kohta 4): *"siirtyminen tosin muutetaan animaatiossa ei
+     * hyppivaksi pelinapiksi, vaan kuin autokyydiksi joka kiihdyttaa
+     * alussa ja jarruttaa lopussa ja liikutaan nopan antaman matkan
+     * verran."*
+     *
+     * Hyppyketju jää tähän vaihtoehdoksi ja on yhä ainoa polku
+     * merellä, lennolla, liikeherkkyydessä ja tasokartalla (jonka
+     * kuljettaja ei tunne `aja`a). Ero on vain nappulan liikkeessä:
+     * musiikki, saatto, äänimaisema ja saapuminen ovat samat.
+     *
+     * MÄÄRÄNPÄÄN MAISEMA nousee viimeisen askeleen mitalta kuten
+     * hyppyketjussakin — ajossa se on osuus kestosta, koska
+     * askelrajoja ei ole.
+     */
+    const ajettiin = kyyti && !this.reducedMotion && typeof kuljettaja.aja === 'function';
+    if (ajettiin) {
+      const maali = path[path.length - 1];
+      const kesto = path.length * stepMs;
+      /*
+       * VAIHEKÄYRÄ TUNTEE MATKAPISTEET (omistaja 16.9.2026, Raamattu
+       * KARTTAUUDISTUKSEN PAATOKSET 29: *"pelinappula saisi silti
+       * liikkua jokaisen matkapisteen lapi ja kiihdyttaa ja jarruttaa
+       * niiden valilla"*). `matkanVaihe` on `autokyydinVaihe` ja sen
+       * päällä pisteiden aaltoilu, joten matkan iso ele ja kesto ovat
+       * ennallaan — vain vauhti notkahtaa jokaisen pisteen kohdalla.
+       */
+      const ajo = kuljettaja.aja(from, path, kesto, { vaihe: matkanVaihe(path.length) });
+      const viimeisenAlku = Math.max(0, (kesto * (path.length - 1)) / path.length);
+      await this.wait(viimeisenAlku);
+      if (!this.dead) {
+        const kaupunkiin = maali.type === 'city';
+        this.lopetaJalkamatkanAani({ vaihtui: kaupunkiin });
+        this.ennakoiAmbienssi(maali);
+      }
+      await ajo;
+      // Naksahdus kuuluu perilletuloon kuten hypyn laskeutumisessa.
+      sfx.play('arrive');
+    }
+
+    // Hyppyketju: ajossa tämä silmukka on tyhjä (ks. AUTOKYYTI yllä).
+    for (const [i, pos] of (ajettiin ? [] : path).entries()) {
       const viimeinen = i === path.length - 1;
       // Määränpään äänimaisema lähtee nousemaan jo viimeisellä
       // askeleella, jotta ristihäivytys on käynnissä saapumishetkellä
@@ -18109,9 +23406,9 @@ export class UI {
         this.ennakoiAmbienssi(pos);
       }
       if (this.reducedMotion) {
-        g.style.transform = `translate(${kohta.x}px, ${kohta.y}px)${koko}`;
+        kuljettaja.aseta(pos);
       } else {
-        await this.hyppaaAskel(g, hahmo, varjo, paikka, kohta, stepMs, koko);
+        await kuljettaja.hyppaa(paikka, pos, stepMs);
       }
       /*
        * NAKSAHDUS KUULUU LASKEUTUMISEEN, ei lähtöön: nappula kolahtaa
@@ -18120,7 +23417,7 @@ export class UI {
        * alussa.
        */
       sfx.play(viimeinen ? 'arrive' : 'step');
-      paikka = kohta;
+      paikka = pos;
       /*
        * TAUKO VÄLIPISTEESSÄ (omistajan tilaus #100: *"kuin näkymätön
        * käsi siirtäisi pelinappulaa laudalla aavistuksen
@@ -18130,19 +23427,77 @@ export class UI {
       if (!viimeinen && !this.reducedMotion) await this.wait(HYPYN_TAUKO_MS);
     }
 
-    g.remove();
+    kuljettaja.laske();
+    // Paikka on nyt merkitty (merkitseNappulanPaikka), joten
+    // teleporttivahti saa taas toimia: lippu alas vasta tässä.
+    this.siirtoKaynnissa = null;
     this.movingPlayerId = null;
     this.revealShownFor = null;
-    this.drawPawns();
+    this.piirraNappulat();
+    /*
+     * SIIRTYMÄMUSIIKKI POIS PERILLÄ. Häivytys on 500 ms (js/
+     * siirtymamusiikki.js LASKU_MS) eli hitaampi kuin sisääntulo, ja
+     * se jatkuu vielä hetken kamera-ajon kanssa — matka loppuu
+     * ääneen, ei leikkaukseen. Kutsu on ehdoton: myös keskeytynyt
+     * siirto jättää musiikin soimaan ilman tätä.
+     *
+     * PAITSI JALAN KESKEN REITIN (omistaja 3.9.2026: *"jalankulku-
+     * musiikki ... saisi soida myös välinopanheittojen ajan kunnes
+     * pelaaja pääsee seuraavaan kaupunkiin"*). actionMove on jo
+     * ajettu ennen animaatiota, joten `player.pos` on määränpää: jos
+     * se on yhä reitin välipiste (type 'edge'), raita jää soimaan
+     * seuraavan heiton ja siirron yli — aloitaSiirtymamusiikki ei
+     * käynnistä samaa lajia uudestaan, joten looppi jatkuu saumatta.
+     * Kaupunkiin saapuminen, uusi peli (js/main.js) ja lajin vaihto
+     * laivaan tai lentoon (aloitaSiirtymamusiikki) sammuttavat sen.
+     */
+    const jalanKeskenReitin = musiikki === 'jalan' && player.pos?.type === 'edge' && !this.dead;
+    if (musiikki && !jalanKeskenReitin) this.lopetaSiirronMusiikki();
+    /*
+     * NAPPULA ON NIMILADONNAN VARAUS, JOTEN SIIRTO ON LADONNAN SYÖTETTÄ
+     * (omistaja 2.9.2026, ks. luovutaRuutuvaraukset) — MUTTA SITÄ EI
+     * KIRJATA TÄSSÄ.
+     *
+     * Ketju on jo olemassa: siirron jälkeen ajetaan render, ja se
+     * kulkee paivitaFokusKerroksen kautta paivitaFokusPallotiin, joka
+     * mitoittaa nappulan ja luovuttaa varaukset. Toinen kutsu tästä
+     * olisi paitsi turha myös HAITALLINEN: se mitoittaisi nappulan
+     * kesken sitä hetkeä, jossa savuke-nappula.mjs mittaa hahmon
+     * (vartio 5b), eikä siirto tarvitse omaa polkuaan silloin kun
+     * yhteinen polku ajetaan joka tapauksessa.
+     */
     /*
      * NOPPA POIS UUDESSA KAUPUNGISSA (#98). Matka päättyi kaupunkiin
      * (myös lento on tällainen siirto, jossa askelia on yksi), joten
      * edellisen heiton noppa on tehnyt tehtävänsä.
      */
     if (path[path.length - 1]?.type === 'city') this.piilotaNoppa();
-    // Saattozoomi auki: kamera palaa lähtökertoimeensa nappulan
-    // kohdalle (ei odoteta — saapuminen saa jatkua sen päällä).
-    if (saatto) await this.puraSaattavaKamera(path);
+    /*
+     * KAMERA JÄÄ SINNE MINNE SE AJETTIIN (omistaja 1.9.2026 ilta).
+     * Tässä oli ennen paluuajo lähtökertoimeen (puraSaattavaKamera);
+     * se poistettiin, kun siirtozoomille tuli absoluuttinen katto —
+     * perustelu kokonaisuudessaan osiossa SAATTAVA KAMERA. Uuteen
+     * MAAHAN saavuttaessa fokuskartan oma ajo rajaa näkymän kuten
+     * ennenkin, joten maanvaihdos ei jää siirtozoomin varaan.
+     */
+    /*
+     * …PAITSI KULKUTAPAKOHTAISEN RAJAUKSEN JÄLKEEN (karttauudistus erä
+     * 8). Kun matka rajattiin kulkutavan mukaan (matkarajaus), kamera
+     * on koko matkan mittaisessa näkymässä — ja omistajan tilaus on,
+     * että kartta PALAA maan rajaukseen perillä. Sama ajo palauttaa
+     * uloszoomauksen eston. Kaupunkiin päättyvä matka vain: reitin
+     * varteen pysähtyvä matka jatkuu seuraavalla heitolla.
+     */
+    if (saatto && MATKARAJAUKSEN_MARGINAALI[tapa] > 0
+      && path[path.length - 1]?.type === 'city') {
+      void this.palaaMaanRajaukseen();
+    }
+    /*
+     * KERMA TAKAISIN PERILLÄ (ks. matkanKermattomuus). Nappula on
+     * maassa ja saapumisajo on käynnissä, joten laattojen uudelleen-
+     * kokoaminen ei osu enää liikkeen päälle.
+     */
+    this.matkanKermattomuus(false);
   }
 
   /** Nopanheitto: noppa lentää nappulan vierestä laudalle ja jää siihen. */
@@ -18184,10 +23539,23 @@ export class UI {
      * (dieRestingSpot); vasta pysähdyttyään noppa lukitaan siihen
      * kohtaan KARTTAA, johon se jäi.
      */
-    const from = this.kartta.paneKuoreen(this.kartta.mapToPane(pixelOf(this.game.board, player.pos)));
-    const to = this.kartta.paneKuoreen(this.kartta.dieRestingSpot());
+    /*
+     * PALLOLAUDALLA NOPPA ON KUORESSA PALLON PÄÄLLÄ (vaihe 2): lähtö on
+     * nappulan ruutupiste pallolta ja lepopaikka sama ruudulta arvottu
+     * avomeren kolkka (dieRestingSpot on ruudun mitoista, ei laudan).
+     * Noppaa ei ankkuroida palloon — se lepää ruudulla kuten
+     * karttapallo.md luku 4 sanoo: "nopan paikka lasketaan ruudulta".
+     */
+    const pallolla = this.pallolautaPaalla();
+    const to = pallolla
+      ? this.kartta.dieRestingSpot()
+      : this.kartta.paneKuoreen(this.kartta.dieRestingSpot());
+    // Pallon takana oleva lähtöpiste (ei ruudulla) → noppa lähtee lepopaikasta.
+    const from = pallolla
+      ? (this.pallolauta.ruutupiste(player.pos) ?? to)
+      : this.kartta.paneKuoreen(this.kartta.mapToPane(pixelOf(this.game.board, player.pos)));
     this.dieThrown = true;
-    this.kartta.merkitseNopanPaikka(to);
+    if (!pallolla) this.kartta.merkitseNopanPaikka(to);
 
     /*
      * Noppa tuntuu kädessä kahdesti (iOS-kuori; selaimessa mykkä):
@@ -18265,6 +23633,28 @@ export class UI {
     for (const event of events) {
       sfx.play(EVENT_SOUND[event.kind] ?? 'turn');
       const box = this.buildToast(event);
+      if (event.tilanne === 'peli.vararikko.pankkiapu') {
+        ilmoitaLivianTunne(
+          { tunne: 'lammin', voimakkuus: 0.5 },
+          { lahde: 'peli', tunnus: event.tilanne },
+        );
+      } else if (event.tilanne === 'matka.jumissa') {
+        ilmoitaLivianTunne(
+          { tunne: 'hammentynyt', voimakkuus: 0.45 },
+          { lahde: 'matka', tunnus: event.tilanne },
+        );
+      } else if (event.tilanne === 'peli.linssi.avautui') {
+        ilmoitaLivianTunne(
+          { tunne: 'ilo', voimakkuus: 0.65 },
+          { lahde: 'peli', tunnus: event.tilanne, linssi: event.linssi },
+        );
+      } else if (event.tilanne === 'peli.linssi.hiomassa') {
+        // Linssi hiomassa optikolla: iloa löydöstä, mutta ei juhlaa vielä.
+        ilmoitaLivianTunne(
+          { tunne: 'lammin', voimakkuus: 0.45 },
+          { lahde: 'peli', tunnus: event.tilanne, linssi: event.linssi },
+        );
+      }
       await this.wait(this.reducedMotion ? 0 : TOAST_MS[event.kind] ?? TOAST_MS.default);
       await this.removeToast(box);
     }
@@ -18320,6 +23710,85 @@ export class UI {
       this.naytaPolloKupla(kupla);
       await this.wait(this.reducedMotion ? 0 : TIETAJAKUPLA_MS);
     }
+  }
+
+  /**
+   * MATKA JATKUU ITSESTÄÄN, KUNNES OLLAAN KAUPUNGISSA (omistajan tilaus
+   * 2.9.2026, sanatarkasti: *"nopanheitto tulee jatkua automaattisesti
+   * jos ei olla saavuttu seuraavaan kohdekaupunkiin"*).
+   *
+   * Ennen tätä yksi maayhteys pilkkoutui monen napautuksen sarjaksi:
+   * heitä noppa, valitse suunta, katso askeleet — ja heitä noppa taas,
+   * vaikka mitään valittavaa ei ollut, koska nappula jäi reitin
+   * askelpisteeseen. Nyt peli heittää sen välinopan itse.
+   *
+   * MIKSI AJASTIN JA MIKSI RENDERISTÄ. Heitto kuuluu UI:lle eikä
+   * pelisäännöille, koska nopan ja nappulan animaatiot ovat samassa
+   * ketjussa (run → after → render). Tämä on scheduleBotin sisarus ja
+   * kutsutaan samasta paikasta: render on se hetki, jolloin edellinen
+   * siirto on kokonaan näytetty (run nollaa busy-lipun ja piirtää
+   * vasta animaation jälkeen). Sama kutsupaikka hoitaa myös sivun
+   * latauksen kesken matkaa — ensimmäinen render tekee saman
+   * päätöksen kuin siirron jälkeinen.
+   *
+   * MIKÄ ESTÄÄ HEITON. Ajastin viritetään uudelleen joka piirrossa ja
+   * ehdot tarkistetaan VIELÄ KERRAN ajastimen lauetessa, koska
+   * pelaaja ehtii tauon aikana avata mitä tahansa: pöllön, lehden,
+   * matkustusliu’un, minkä tahansa modaalin tai radiotilan. Samat
+   * portit kuin doRollissa (radioPaalla) ja lisäksi busy-lippu, joka
+   * estää tuplaheiton, jos pelaaja ehti painaa noppaa itse. Botin
+   * vuoroon ei kosketa: game.jatkaMatkaaItsestaan vaatii
+   * ihmispelaajan.
+   */
+  automaattiheittoSallittu() {
+    const { game } = this;
+    if (this.dead || this.busy || this.katselu) return false;
+    if (!game.jatkaMatkaaItsestaan()) return false;
+    // Radiotilassa kartalla ei liikuta (sama portti kuin doRollissa).
+    if (this.radioPaalla()) return false;
+    // Pelaaja avasi jotain: pöllö, alanappien liuku tai mikä tahansa
+    // modaali (lehti, laukku, passi, nähtävyys) — matka odottaa.
+    /*
+     * NOPPAVAIHEEN LIUKU EI OLE "PELAAJA AVASI JOTAIN" (ks.
+     * renderActions `liukuNopalle`): siinä liu'ussa on vain noppa, jonka
+     * peli on juuri aikeissa heittää itse.
+     */
+    if (polloAuki() || (this.liukuAuki && !this.liukuNopalle)) return false;
+    if (document.querySelector('dialog[open]')) return false;
+    /*
+     * SAMASTA PISTEESTÄ VAIN KERRAN. Jos automaatin heitto ei tuota
+     * yhtään laillista siirtoa, peli päättää vuoron ja nappula jää
+     * täsmälleen samaan pisteeseen — ja ilman tätä porttia seuraava
+     * piirto virittäisi heiton uudelleen loputtomiin. Nykyisillä
+     * laudoilla reitin varrelta pääsee aina molempiin suuntiin, joten
+     * tämä on varmistus eikä arkipäivää; merkki nollataan heti kun
+     * nappula oikeasti liikkuu (doMove).
+     */
+    if (this.automaattiheittoPaikka === posKey(game.player.pos)) return false;
+    return true;
+  }
+
+  ajastaAutomaattinenHeitto() {
+    if (!this.automaattiheittoSallittu()) {
+      clearTimeout(this.automaattiheittoAjastin);
+      this.automaattiheittoAjastin = null;
+      return;
+    }
+    /*
+     * JO VIRITETTY AJASTIN SAA LASKEA LOPPUUN. Renderiä kutsutaan
+     * pelin aikana monesta suunnasta, ja jos ajastin nollattaisiin
+     * joka piirrossa, tiheä piirto siirtäisi heittoa loputtomasti
+     * eteenpäin — matka jäisi juuri siihen odotukseen, josta tilaus
+     * halusi eroon.
+     */
+    if (this.automaattiheittoAjastin) return;
+    this.automaattiheittoAjastin = setTimeout(() => {
+      this.automaattiheittoAjastin = null;
+      // Tauon aikana ehti tapahtua mitä tahansa: ehdot uudestaan.
+      if (!this.automaattiheittoSallittu()) return;
+      this.automaattiheittoPaikka = posKey(this.game.player.pos);
+      this.doRoll();
+    }, AUTOMAATTIHEITON_TAUKO_MS);
   }
 
   scheduleBot() {

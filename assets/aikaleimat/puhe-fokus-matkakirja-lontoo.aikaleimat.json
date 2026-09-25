@@ -1,0 +1,230 @@
+{
+  "versio": 2,
+  "kaupunki": "lontoo",
+  "teksti": "Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.",
+  "tekstiSha256": "cfa89af3766f0109f33a9d72cf335677b77eef2ea31bde9b0ccd4ba3a8481a23",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-lontoo.mp3",
+    "versio": 2,
+    "tavut": 511626,
+    "sha256": "882433c7fa2aa99a20262a9da75dbd7cad078570e2c7874a8f05fb7d017b7a80"
+  },
+  "kesto": 31900,
+  "sanat": [
+    {
+      "sana": "Lontoossa",
+      "alku": 180,
+      "loppu": 740
+    },
+    {
+      "sana": "höyryveturi",
+      "alku": 800,
+      "loppu": 1500
+    },
+    {
+      "sana": "pantiin",
+      "alku": 1560,
+      "loppu": 1960
+    },
+    {
+      "sana": "maan",
+      "alku": 2020,
+      "loppu": 2280
+    },
+    {
+      "sana": "alle",
+      "alku": 2400,
+      "loppu": 2640
+    },
+    {
+      "sana": "ja",
+      "alku": 2980,
+      "loppu": 3020
+    },
+    {
+      "sana": "matkustajat",
+      "alku": 3060,
+      "loppu": 3680
+    },
+    {
+      "sana": "sen",
+      "alku": 3720,
+      "loppu": 3900
+    },
+    {
+      "sana": "savuun",
+      "alku": 3960,
+      "loppu": 4460
+    },
+    {
+      "sana": "Vastapäinen",
+      "alku": 5920,
+      "loppu": 6540
+    },
+    {
+      "sana": "herra",
+      "alku": 6600,
+      "loppu": 6860
+    },
+    {
+      "sana": "luki",
+      "alku": 6900,
+      "loppu": 7140
+    },
+    {
+      "sana": "lehteään",
+      "alku": 7200,
+      "loppu": 7780
+    },
+    {
+      "sana": "vaikka",
+      "alku": 7920,
+      "loppu": 8200
+    },
+    {
+      "sana": "katosi",
+      "alku": 8260,
+      "loppu": 8640
+    },
+    {
+      "sana": "välillä",
+      "alku": 8680,
+      "loppu": 8980
+    },
+    {
+      "sana": "näkyvistä",
+      "alku": 9020,
+      "loppu": 9660
+    },
+    {
+      "sana": "Jos",
+      "alku": 11500,
+      "loppu": 11640
+    },
+    {
+      "sana": "helvettiin",
+      "alku": 11680,
+      "loppu": 12280
+    },
+    {
+      "sana": "vedettäisiin",
+      "alku": 12340,
+      "loppu": 13080
+    },
+    {
+      "sana": "kiskot",
+      "alku": 13140,
+      "loppu": 13680
+    },
+    {
+      "sana": "me",
+      "alku": 14220,
+      "loppu": 14320
+    },
+    {
+      "sana": "englantilaiset",
+      "alku": 14380,
+      "loppu": 15080
+    },
+    {
+      "sana": "kysyisimme",
+      "alku": 15140,
+      "loppu": 15720
+    },
+    {
+      "sana": "ensin",
+      "alku": 15800,
+      "loppu": 16200
+    },
+    {
+      "sana": "pehmustettuja",
+      "alku": 16260,
+      "loppu": 17060
+    },
+    {
+      "sana": "penkkejä",
+      "alku": 17100,
+      "loppu": 17620
+    },
+    {
+      "sana": "Laiturilla",
+      "alku": 19860,
+      "loppu": 20340
+    },
+    {
+      "sana": "tunnistin",
+      "alku": 20400,
+      "loppu": 20840
+    },
+    {
+      "sana": "herra",
+      "alku": 20880,
+      "loppu": 21160
+    },
+    {
+      "sana": "Grimshaw’n",
+      "alku": 21220,
+      "loppu": 21860
+    },
+    {
+      "sana": "kilpakumppanini",
+      "alku": 22560,
+      "loppu": 23500
+    },
+    {
+      "sana": "aarrejahdissa",
+      "alku": 23580,
+      "loppu": 24600
+    },
+    {
+      "sana": "Hän",
+      "alku": 26440,
+      "loppu": 26560
+    },
+    {
+      "sana": "tarjosi",
+      "alku": 26620,
+      "loppu": 26940
+    },
+    {
+      "sana": "nenäliinaa",
+      "alku": 26980,
+      "loppu": 27580
+    },
+    {
+      "sana": "Otin",
+      "alku": 28340,
+      "loppu": 28600
+    },
+    {
+      "sana": "sen",
+      "alku": 28680,
+      "loppu": 29000
+    },
+    {
+      "sana": "Palautuksesta",
+      "alku": 30300,
+      "loppu": 31260
+    },
+    {
+      "sana": "emme",
+      "alku": 31360,
+      "loppu": 31560
+    },
+    {
+      "sana": "sopineet",
+      "alku": 31620,
+      "loppu": 31900
+    }
+  ],
+  "lauseet": [
+    180,
+    5920,
+    11500,
+    19860,
+    26440,
+    28340,
+    30300
+  ],
+  "luotu": "2026-09-23T15:39:10.571Z"
+}

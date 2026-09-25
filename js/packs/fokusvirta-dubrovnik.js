@@ -55,10 +55,15 @@
  * (js/packs/kulttuuri-kategoriat.js). Uusia faktaväitteitä ei ole
  * kummassakaan.
  *
- * MIKSI EI VAPAUSKYSYMYSTÄ: kaupungin laattakysymys koskee tasavallan
- * lipun sanaa (ks. KOHTAAMINEN alempana). Jos lehden aarteen avaava
+ * MIKSI EI VAPAUSKYSYMYSTÄ: kaupungin laattakysymys koskee latinan
+ * sanaa Libertas (ks. KOHTAAMINEN alempana). Jos lehden aarteen avaava
  * tehtävä kysyisi samasta vapaudesta, aarrekysymys olisi ratkaistu
- * ennen kuin Ivo on tavattu.
+ * ennen kuin kohtaamishenkilö on tavattu.
+ *
+ * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10: rajaus on ennallaan, mutta hahmo
+ * vaihtui (muurinvartija Ivo → merimelontaopas Mara) ja kysymyksen
+ * sanamuoto ei enää puhu lipusta vaan sanasta — lipun täsmällistä
+ * käyttöä eri aikakausina ei väitetä.
  */
 const KARANTEENI_VISA = {
   kysymys: 'Vuonna 1377 Dubrovnikin suuri neuvosto määräsi '
@@ -93,6 +98,21 @@ export const FOKUSVIRTA_DUBROVNIK = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 b28529ab9d7edf924e4e0a91ca58a9f463445f8d748f1efa628213e00f31bf76. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-dubrovnik-r20260909-paper-v4.jpg",
+      lyhyt: "Ragusa, 1873. Kivikasvot puhuivat vedellä.",
+      selite: 'Suuren Onofrion kaivon kivikasvot johtivat veden ohikulkijan ulottuville muurien sisällä. Rajasin yhden vakavan naaman kasvokuvaksi, vaikka vesi ei pysähtynyt valotuksen ajaksi.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://tzdubrovnik.hr/lang/en/get/spomenici/5535/onofrios_fountains.html"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-dubrovnik-r20260911-paper2-v1.jpg",
+      lyhyt: "Ragusa, 1873. Muuri piti meren ulkona ja näkyvissä.",
+      selite: 'Muurin harjalta meri täytti melkein koko näkökentän, ja pieni purjevene kulki alhaalla rannikon suuntaan. Kaupunki piti veden ulkopuolellaan, mutta jätti katseelle portin auki.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://tzdubrovnik.hr/lang/en/get/spomenici/5535/onofrios_fountains.html"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Kuukausi on syyskuu: merkintä
      * kertoo koko muurikierroksesta, ja Dalmatian kesähelteessä
@@ -100,50 +120,104 @@ export const FOKUSVIRTA_DUBROVNIK = {
      * merkintä. Sääkommentti on isoisän havainto eikä mitattu väite.
      */
     paikkarivi: 'Dubrovnik, syyskuussa 1873. Poutaa; muurilla käy tuuli '
-      + 'mereltä.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Ragusa osti rauhansa joka vuosi uudestaan — halvempaa kuin '
-      + 'sota, ja kauniimpaa. Kävelin muurin koko kierroksen ja laskin '
-      + 'torneja; kaupunki on kuin laiva, joka päätti jäädä satamaan ja '
-      + 'kivettyä.',
-    luenta: '[curious] Ragusa osti rauhansa joka vuosi uudestaan — '
-      + '[softly] halvempaa kuin sota, ja kauniimpaa. Kävelin muurin koko '
-      + 'kierroksen ja laskin torneja; [whispers] kaupunki on kuin laiva, '
-      + 'joka päätti jäädä satamaan ja kivettyä.',
+      + 'mereltä; puntari korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 341 merkkiä (yläraja 400). */
+    teksti: "Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.",
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Portin sisällä vesi kuitenkin tulee
+     * vastaan..." (selittävä käänne).
+     */
+    reaktiot: [
+  {
+    "id": "dubrovnik.r1",
+    "ankkuri": "vanhoja karanteenirakennuksia",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "dubrovnik.r2",
+    "ankkuri": "etteivät toisi tautia kaupunkiin",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "dubrovnik.r3",
+    "ankkuri": "pitänyt satamaan saapumista matkan loppuna",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "dubrovnik.r4",
+    "ankkuri": "nähdä kaupungin katot joka aamu pääsemättä niiden alle",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.5,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. [softly] Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-dubrovnik.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * LIVIAN MAADOITUS — PARIPERIAATE (Raamattu, "LIVIA AIKASIIRTYMÄN
-     * VÄLITTÄJÄNÄ"): merkintä on rauhallinen ja viisas, ei synkkä,
-     * joten Livia saa naljailla. Nalja ei osu isoisän ajatukseen vaan
-     * yhteen puuttuvaan tietoon, ja tieto on tarkistettavissa.
-     *
-     * FAKTAKURI: kolme väitettä, kaikki tarkistettavia. (1) Ragusan
-     * tasavalta lakkasi olemasta 1808, kuusikymmentäviisi vuotta ennen
-     * isoisän käyntiä (js/packs/nahtavyysjutut.js, "Pilen portti", jo
-     * hyväksyttyä pelidataa; en-Wikipedia "Republic of Ragusa",
-     * tietolaatikko: 1358–1808). (2) Muurikierros on noin 1 940 metriä
-     * (js/packs/kulttuuri-kategoriat.js, dubrovnik/avauskuvat).
-     * (3) Muureilla kävi vuonna 2019 yli 1,2 miljoonaa kävijää
-     * (en-Wikipedia "Walls of Dubrovnik", johdanto). Fritulet ovat
-     * pelin omaa Livia-aineistoa (js/fokusvirta.js LIVIAN_SAAPUMISET).
-     *
-     * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kääk", "Mut"),
-     * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-dubrovnik-01-r20260909-euv1-v1.jpg, pulu-cam-dubrovnik-02-r20260909-euv1-v1.jpg, pulu-cam-dubrovnik-03-r20260909-euv1-v1.jpg.
      */
-    maadoitus: 'Kääk. Laiva, joka päätti jäädä satamaan ja kivettyä — '
-      + 'kauniisti sanottu, ja minä sanon sen mieluummin kuin keksin '
-      + 'itse. Yksi asia isoisältäsi vain jäi huomaamatta: se tasavalta, '
-      + 'jonka rauhaa hän ihaili, oli lakannut olemasta jo 1808, '
-      + 'kuusikymmentäviisi vuotta ennen kuin hän nousi muurille. Hän '
-      + 'laski siis torneja, joilla ei ollut enää yhtään vartijaa. Muuri '
-      + 'seisoo silti: kierros on lähes kaksituhatta metriä, ja vuonna '
-      + '2019 sen käveli yli miljoona kaksisataatuhatta ihmistä. Mut '
-      + 'fritulet on yhä pieniä ja paistettuja, eikä niitä laske kukaan '
-      + 'muu kuin minä.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-dubrovnik-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Dubrovnik: laskenta alkoi yhdestä märästä nenästä.',
+        selite: 'Yksi Onofrion kivikasvoista täytti pullon ja piti ilmeensä vakavana. Aloitin märkien nenien laskennan siitä, joka oli valmiiksi juuri sopivalla korkeudella.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.historyhit.com/locations/large-onofrio-fountain/',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-dubrovnik-02-r20260909-euv1-v1.jpg',
+        lyhyt: 'Dubrovnik: sama vesi, lisää puheenvuoroja.',
+        selite: 'Kivikasvojen jono jatkui kaivon ympäri, ja kauempana joku pysähtyi veden ääreen pullon kanssa. Sama vesi sai monta puheenvuoroa; minä jatkoin laskemista kuivin jaloin.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.historyhit.com/locations/large-onofrio-fountain/',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-dubrovnik-03-r20260909-euv1-v1.jpg',
+        lyhyt: 'Dubrovnik: kuusitoista suuta yhden kaivon ympärillä.',
+        selite: 'Ylhäältä koko kaivo, sen monet kivisuut ja vedenhakijoiden reitit asettuivat samaan kuvaan. Kuusitoista sivua selvisi ilman, että maistoin jokaista.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.historyhit.com/locations/large-onofrio-fountain/',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Lazaretin pihalla katselin linđo-tanssia. Johtaja huusi, ja parit vaihtoivat suuntaa kuin yhteisestä ajatuksesta. Kokeilin samaa kaiteella: askel, käännös, toinen askel. Siivet piti avata heti. Ihmiset tekivät kaiken ilman niitä! Jäin vielä yhden tanssin ajaksi tutkimaan jalkoja."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'utelias', voimakkuus: 0.45 },
     /*
      * Huomio viittaa herokuvan kohteeseen (kaupunginmuurit). Faktat
      * ovat lehden oman avauskuvan selitteestä (js/packs/
@@ -159,6 +233,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
       + 'on Lokrum. Katso ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-dubrovnik-kaupunginmuurit.jpg',
+      lyhyt: 'Dubrovnikin muurit kiertävät vanhankaupungin noin 1940 metriä, paikoin 25 m korkeat ja 4–6 m paksut.',
       selite: 'Dubrovnikin kaupunginmuurit kiertävät vanhankaupungin noin '
         + '1 940 metrin matkalta, ne nousevat paikoin 25 metriin ja ovat '
         + 'maan puolella 4–6 metriä paksut.',
@@ -219,6 +294,8 @@ export const FOKUSVIRTA_DUBROVNIK = {
         + 'Minčetan pyöreä torni, jonka muuri on paikoin kuusi metriä '
         + 'paksu — ja jonka alta on löydetty yli viisisataa vuotta vanha '
         + 'tykkivalimo.',
+      lahde: 'en-Wikipedia "Walls of Dubrovnik" ja hr-Wikipedia "Dubrovačke '
+        + 'gradske zidine". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 3264×2448, CC BY-SA 2.0, Ramón from Llanera,
        * España, kuvattu 26.9.2011, kuvaus "Fortress Minčeta and Walls,
@@ -305,6 +382,8 @@ export const FOKUSVIRTA_DUBROVNIK = {
         + 'eteläpäässä on lisäksi pieni suolajärvi, jota sanotaan '
         + 'Kuolleeksimereksi — se saa vetensä Adrianmereltä '
         + 'vedenalaisten luolien kautta.',
+      lahde: 'en-Wikipedia "Lokrum", hr-Wikipedia "Lokrum", fr-Wikipedia '
+        + '"Lokrum" ja it-Wikipedia "Lacroma". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 3264×2448, CC BY-SA 3.0, Bizutage, kuvattu
        * 18.5.2013, kuvaus "Peacock roaming ruins of a Benedictan
@@ -381,6 +460,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
         + 'käsikirjoitusnidettä ja noin satatuhatta yksittäistä '
         + 'asiakirjaa, vanhin vuodelta 1022. Tasavalta ehti kadota, '
         + 'mutta sen kirjat eivät.',
+      lahde: 'en-Wikipedia "Sponza Palace". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 5970×3954, CC BY 2.0, Richard Mortel,
        * kuvattu 8.9.2016, kuvaus "Sponza Palace, Dubrovnik, 16th
@@ -390,6 +470,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
        */
       kuva: {
         tiedosto: 'Sponza Palace, Dubrovnik, 16th century (13) (29858392800).jpg',
+        lyhyt: 'Sponzan palatsin sisäpiha, jossa kauppiaat punnitsivat tavaransa; selvisi 1667 maanjäristyksestä.',
         selite: 'Sponzan palatsin sisäpiha, jossa kauppiaat punnitsivat '
           + 'tavaransa julkisesti. Talo selvisi vuoden 1667 '
           + 'maanjäristyksestä vaurioitta.',
@@ -477,6 +558,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
      */
     kuva: {
       tiedosto: 'Croatia-01664 - Fortress Lovrijenac (10088562716).jpg',
+      lyhyt: 'Lovrijenacin linnake muurin ulkopuolella kalliollaan; portin yllä tasavallan tunnetuin kirjoitus.',
       selite: 'Lovrijenacin linnake omalla kalliollaan muurin '
         + 'ulkopuolella. Sen portin yllä on tasavallan tunnetuin '
         + 'kirjoitus.',
@@ -486,67 +568,86 @@ export const FOKUSVIRTA_DUBROVNIK = {
 
   /*
    * ---------- 5. Kohtaaminen ----------
-   * Hahmo, kohtaamiskuva ja kysymys ovat tarinakaaren paketissa
-   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'dubrovnik'):
-   * muurinvartija Ivo kävelee kehän joka ilta ja laskee askeleensa.
    *
-   * KYSYMYSTÄ EI VAIHDETTU, ja se on harkittu. Raamattu (omistaja
-   * 28.8.2026): *"PELITEHTÄVÄN AIHE RATKAISEE… aarretehtävän aihe
-   * kytketään aina kaupungin muuhun tarinaverkkoon."* Kaaren vanha
-   * kysymys tasavallan lipun sanasta on jo täsmälleen siinä verkossa:
-   * merkintä alkaa ostetusta rauhasta, oppitunti kertoo mitä rauha
-   * maksoi ja mitä sanaa ei myyty, ja kohtaaminen lunastaa sen. Aallon
-   * 2 kolmesta muusta kaupungista poiketen täällä ei siis ollut mitään
-   * korjattavaa. Tämä kortti ei kertaa Ivon repliikkiä eikä paljasta
-   * vastausta.
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
+   *
+   * HAHMO VAIHDETTU: muurinvartija Ivo → merimelontaopas Mara
+   * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 19:05 UTC:
+   * *"Ivon henkilökertomus, saranoitu kivi ja lyhty poistuvat"*).
+   * Hahmo, kohtaamiskuva ja kysymys ovat tarinakaaren paketissa
+   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'dubrovnik').
+   *
+   * KYSYMYKSEN YDIN SÄILYI, SANAMUOTO EI. Laattakysymys koskee yhä
+   * Libertas-sanaa, mutta se ei enää väitä mitään lipun täsmällisestä
+   * käytöstä: Mara huomaa sanan kirjan reunaan kopioituna ja pyytää
+   * matkaajaa tulkitsemaan sen. Merkinnän ja oppitunnin kytkös pitää
+   * ennallaan — merkintä alkaa ostetusta rauhasta, oppitunti kertoo
+   * mitä rauha maksoi ja mitä sanaa ei myyty. Tämä kortti ei kertaa
+   * Maran repliikkiä eikä paljasta vastausta.
+   *
+   * EI SUKUSALAISUUTTA EIKÄ VARTIJAA. Mara ei tiedä kätköstä eikä
+   * tunne Horatiota; hänen etunsa on ammatillinen — hän osaa lukea
+   * rannan mereltä päin, ja juuri se ratkaisee pelaajan väärän
+   * oletuksen.
    */
   kohtaaminen: {
-    hahmo: 'Muurinvartija Ivo',
-    nappi: 'Tapaa muurinvartija',
-    teksti: 'Ivo kävelee kehän joka ilta ja laskee askeleensa, koska niin '
-      + 'on tehty vapaan tasavallan ajoista asti. Hän tuntee jokaisen '
-      + 'portaan, jokaisen tuulisen kulman ja sen kohdan, jossa meri '
-      + 'kuuluu kovimmin. Vieraita hän on nähnyt enemmän kuin haluaisi '
-      + 'laskea. Ennen kuin hän avaa portin ja päästää mukaansa, hän '
-      + 'haluaa tietää, onko vieras ymmärtänyt, mitä tämä kaupunki ei '
-      + 'suostunut myymään.',
+    hahmo: 'Merimelontaopas Mara',
+    nappi: 'Tapaa Mara',
+    teksti: 'Mara vie ryhmiä rantoihin, joihin ei pääse maalta: hän '
+      + 'tuntee kalliot siitä, miltä ne näyttävät veneen korkeudelta, '
+      + 'ja tietää tunnin tarkkuudella, milloin aallokko sallii '
+      + 'rantautumisen. Vieraita hän ohjaa kuivasti ja lyhyesti, ja '
+      + 'kastuneille tavaroille hän ei osoita sääliä. Ennen kuin hän '
+      + 'kääntää kajakin keulan rantaan, hän haluaa tietää, ymmärsikö '
+      + 'vieras sen sanan, joka on kopioitu kirjan reunaan.',
   },
 
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * KOHTAAMISPAIKKA: PILEN PORTTI. Kaaren teksti asettaa Ivon portin
-   * holviin avainrenkaineen, ja pelin oma Dubrovnik-aineisto sanoo,
-   * että Pilen portti on yksi vain kolmesta paikasta, joista
-   * muurikävelyn voi aloittaa (js/packs/nahtavyysjutut.js, "Pilen
-   * portti").
+   * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
    *
-   * 42,64173333 N / 18,10681389 E — hr-Wikipedia "Vrata od Pila",
-   * prop=coordinates (haettu 29.8.2026). Muunnos on sama kaava ja
-   * samat vakiot kuin fokuskohteilla: maailmankartalla Millerin lieriö
-   * LEVEYS 12000 / LON0 −175 / POHJOINEN 76 (tools/fokuskartta/
-   * piirto.js laudanProjektio), Euroopan laudalla x = (lon + 11) × 19,2
-   * ja y = (72 − lat) × 26,3.
+   * KOHTAAMISPAIKKA VAIHDETTU: PILEN PORTTI → KALLIORANTA VANHAN
+   * KAUPUNGIN KAAKKOISPUOLELLA. Vanha piste kuului muurinvartija
+   * Ivolle; uusi kohtaaminen tapahtuu vedessä suuren kalliosuun edessä,
+   * eikä sinne pääse maalta — se on koko kaaren idea.
    *
-   * LASKU:
-   *   maailmankartta  x = ((18,10681389 − (−175)) mod 360) × (12000/360)
-   *                     = 193,10681389 × 33,3333… = 6436,9
-   *                   y = (millerY(76) − millerY(42,64173333)) × 12000/2π
-   *                     = 1697,8
-   *   europe          x = (18,10681389 + 11) × 19,2 = 558,9
-   *                   y = (72 − 42,64173333) × 26,3 = 772,1
+   * PAIKKAEHDOKAS ON BETINAN LUOLA, ja sitä EI ole vahvistettu
+   * kuvauspaikaksi eikä pääsyä luvata (kuvaputken ehdotus 5.9.2026:
+   * *"Betinan luolan seutu on tarkistettava paikkaehdokas"*). Luolalla
+   * ei ole omaa Wikipedia-artikkelia eikä OSM-kohdetta, joten
+   * koordinaattia EI ole otettu luolan nimestä. Piste on laskettu
+   * rannikkokohdasta, jonka Commonsin geotagatut kuvat vahvistavat
+   * (mm. "Adriatic Sea, Dubrovnik (5132063723).jpg" 42,641283 /
+   * 18,124179 ja "Küste bei Dubrovnik 8.jpg" 42,640026 / 18,125040,
+   * imageinfo haettu 5.9.2026): käytetty piste 42,6390 N / 18,1258 E on
+   * niiden välissä samalla rantaviivalla. FABLE/SONNET: jos kuvaputki
+   * vahvistaa tarkan luolan, koordinaatti päivitetään sen mukaan.
+   *
+   * Muunnos on sama kaava ja samat vakiot kuin fokuskohteilla:
+   * maailmankartalla Millerin lieriö LEVEYS 12000 / LON0 −175 /
+   * POHJOINEN 76 (tools/fokuskartta/piirto.js laudanProjektio),
+   * Euroopan laudalla x = (lon + 11) × 19,2 ja y = (72 − lat) × 26,3.
+   *
+   * LASKU (ajettu laudanProjektion omalla kaavalla):
+   *   maailmankartta  x = ((18,1258 − (−175)) mod 360) × (12000/360)
+   *                     = 193,1258 × 33,3333… = 6437,5
+   *                   y = (millerY(76) − millerY(42,6390)) × 12000/2π
+   *                     = 1697,9
+   *   europe          x = (18,1258 + 11) × 19,2 = 559,2
+   *                   y = (72 − 42,6390) × 26,3 = 772,2
    *
    * TARKISTUS LAATTAA VASTEN: Dubrovnikin laatta on Euroopan laudalla
    * 560 / 770 ja maailmankartalla 6438,9 / 1694,6, eli piste on sen
-   * vieressä parin yksikön päässä. Niin pitääkin — portti on
-   * vanhankaupungin länsireunassa, ja laudan yksikkö on
-   * maailmankartalla noin kolme kilometriä.
+   * vieressä muutaman yksikön päässä — käytännössä samassa kohdassa
+   * kuin vanha Pilen portti, vain kaupungin toisella puolella. Laudan
+   * yksikkö on maailmankartalla noin kolme kilometriä.
    */
   kohtaamispiste: {
-    nimi: 'Pilen portti',
+    nimi: 'Kallioranta vanhan kaupungin kaakkoispuolella',
     laudat: {
-      maailmankartta: { x: 6436.9, y: 1697.8 },
-      europe: { x: 558.9, y: 772.1 },
+      maailmankartta: { x: 6437.5, y: 1697.9 },
+      europe: { x: 559.2, y: 772.2 },
     },
   },
 
@@ -651,6 +752,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-pulan-areena-loistoaika.webp',
+        lyhyt: 'Areena käytössä: katsomo täynnä, aurinkokatos mastojen varassa ja meri aivan muurin takana.',
         selite: 'Areena käytössä: katsomo täynnä, aurinkokatos '
           + 'pingotettuna mastojen varaan ja meri aivan muurin takana.',
         lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',

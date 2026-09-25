@@ -28,6 +28,7 @@ import {
   fokusvirtaTila, normalisoiSahketeksti, sahkePalkkio, sisaltohakemisto,
   tulkitseVapaaSahke,
 } from '../js/fokusvirta.js';
+import { MATKAKIRJAN_LYHENNYS_LAUSEITA, lyhennaLauseita } from '../js/lausejako.js';
 // Vapaan vastauksen oikeat vastaukset asuvat välityspalvelimella eivätkä
 // pelissä; taulu luetaan tänne vain sen tarkistamiseksi, että pelidatan
 // tehtävätunnukset ja palvelimen taulu pysyvät synkassa.
@@ -40,9 +41,11 @@ import { SAHKE_VASTAUKSET } from '../tools/pollo/rajat.js';
  * pilotin todellinen lista jäisi vartioimatta — ja juuri sen pituus on
  * se, joka ratkaisee kannattaako arvata.
  */
-import '../js/fokuskohteet.js';
-import { EUROPE_SAAPUMISET } from '../js/packs/europe-saapumiset.js';
-import { FOKUSVIRRAT, fokusvirtaKaupungille } from '../js/packs/fokusvirrat.js';
+import { KOHDE_MAAT } from '../js/fokuskohteet.js';
+import { FOKUSVIRRAT, KEVYET_FOKUSVIRRAT, fokusvirtaKaupungille } from '../js/packs/fokusvirrat.js';
+// Livian kentät voivat olla kuplien taulukoita (7.9.2026): sama
+// normalisointi kuin pelissä ja generointityökalussa.
+import { livianKuplat } from '../js/liviapuhe.js';
 import { FOKUSKOHTEET_GRC, fokuskohteet } from '../js/packs/fokuskohteet-grc.js';
 import { Game } from '../js/game.js';
 import { packById } from '../js/pack.js';
@@ -194,10 +197,24 @@ test('Ateenan fokusvirta on rakenteeltaan ehjä', () => {
   assert.ok(VIRRATON, 'laudalta pitää löytyä ainakin yksi kaupunki ilman virtaa');
   assert.equal(fokusvirtaKaupungille(VIRRATON), null, 'muut kaupungit jäävät ennalleen');
 
-  for (const kohta of ['matkakirja', 'pollo', 'oppitunti']) {
+  for (const kohta of ['matkakirja', 'oppitunti']) {
     assert.ok(ATEENA[kohta]?.teksti?.length > 80, `${kohta}: teksti puuttuu tai on liian lyhyt`);
   }
-  assert.ok(ATEENA.kohtaaminen.nappi.includes('Nikos'), 'kohtaamisnappi nimeää henkilön');
+  /*
+   * PULUN KENTTÄ VAIHTUI (omistaja 8.9.2026 klo 19.10): Ateenan
+   * `pollo.maadoitus` ja `pollo.teksti` korvattiin yhdellä
+   * kommenttikuplalla, joka tulee luennan jälkeen kuten muissa
+   * kaupungeissa. Kupla on lyhyempi kuin vanha korttiteksti — mitta on
+   * siksi kuplan mitta (js/liviapuhe.js, enintään 125 merkkiä), ja
+   * puheenvuoron olemassaolo vartioidaan samalla silmukalla kuin
+   * muissa kaupungeissa ("jokaisella fokuskaupungilla on Livian
+   * puheenvuoro isoisän merkintään").
+   */
+  assert.equal(ATEENA.pollo.maadoitus, undefined, 'pollo: maadoitus on korvattu kommentilla');
+  assert.equal(ATEENA.pollo.teksti, undefined, 'pollo: vaiheen huomio on korvattu kommentilla');
+  assert.equal(livianKuplat(ATEENA.pollo.kommentti).length, 1, 'pollo: yksi kupla');
+  // Henkilö vaihtui 5.9.2026: vartija Nikos → konservaattori Dafni.
+  assert.ok(ATEENA.kohtaaminen.nappi.includes('Dafni'), 'kohtaamisnappi nimeää henkilön');
 
   // Täkyjä eli syvennystarinoita on 2–3 (ne avautuvat nykyään kartan
   // merkeistä, js/syvennys.js — sisältö on yhä tässä paketissa).
@@ -281,24 +298,93 @@ test('kaupungin virta poimii kohteet tunnuksilla eikä kaadu kirjoitusvirheeseen
  * OIKEAKSI — juuri se sääntö estää hahmoa muuttumasta
  * besserwisseriksi.
  */
-test('jokaisella fokuskaupungilla on Livian maadoitus isoisän merkintään', () => {
+test('jokaisella fokuskaupungilla on Livian puheenvuoro isoisän merkintään', () => {
   const kaupungit = Object.keys(FOKUSVIRRAT);
   assert.ok(kaupungit.length >= 6, 'fokuskaupunkeja pitäisi olla vähintään kuusi');
   for (const [kaupunki, virta] of Object.entries(FOKUSVIRRAT)) {
-    const maadoitus = virta.pollo?.maadoitus;
-    assert.ok(typeof maadoitus === 'string' && maadoitus.length > 120,
-      `${kaupunki}: Livian maadoitus puuttuu tai on liian lyhyt`);
-    assert.notEqual(maadoitus, virta.pollo?.teksti,
-      `${kaupunki}: maadoitus ei saa olla sama teksti kuin vaiheen huomio`);
-    // Huutomerkkejä Livia ei käytä (tools/pollo/worker.js KARAKTÄÄRI).
-    assert.ok(!maadoitus.includes('!'), `${kaupunki}: Livia ei käytä huutomerkkejä`);
+    /*
+     * KAKSI MUOTOA (omistaja 7.9.2026, Raamattu KAUPUNGIN KULKU): uuden
+     * kulun kaupungissa luennan jälkeinen puheenvuoro on `kommentti`
+     * (kirjoitettu kupliksi), vanhassa se on yhä `maadoitus` yhtenä
+     * merkkijonona. livianKuplat normalisoi kummankin (js/liviapuhe.js).
+     */
+    const kommentti = livianKuplat(virta.pollo?.kommentti);
+    const kuplat = kommentti.length ? kommentti : livianKuplat(virta.pollo?.maadoitus);
+    const puhe = kuplat.join(' ');
+    assert.ok(kuplat.length >= 1 && puhe.length > 60,
+      `${kaupunki}: Livian puheenvuoro puuttuu tai on liian lyhyt`);
+    assert.notEqual(puhe, livianKuplat(virta.pollo?.teksti).join(' '),
+      `${kaupunki}: puheenvuoro ei saa olla sama teksti kuin vaiheen huomio`);
+    // Vanha kuplakohtainen 125 merkin vartio säilyy muilla kaupungeilla.
+    // Horatio–Livia-pilotissa omistajan 13.9.2026 hyväksymä mitta on sen
+    // sijaan kaupungin yhteinen paribudjetti; sitä vartioi erillinen
+    // horatio-livia-pilotti.test.mjs.
+    const paribudjettipilotit = new Set([
+      'marseille', 'ateena', 'sarajevo', 'venetsia',
+      'tukholma', 'helsinki', 'tampere', 'tallinna',
+      'riika', 'vilna', 'tromssa', 'lappi',
+      'lontoo', 'dublin', 'edinburgh', 'amsterdam', 'pariisi',
+      'madrid', 'barcelona', 'sevilla', 'granada', 'lissabon',
+      'rooma', 'firenze', 'sisilia', 'alpit', 'wien', 'praha', 'berliini',
+      'bergen', 'oslo', 'kobenhavn', 'islanti',
+      'sofia', 'bukarest', 'budapest', 'istanbul', 'dubrovnik', 'kreeta',
+      'kiova', 'odessa', 'krakova', 'varsova', 'moskova', 'pietari',
+    ]);
+    for (const kupla of kommentti) {
+      if (!paribudjettipilotit.has(kaupunki)) {
+        assert.ok(kupla.length <= 125, `${kaupunki}: kupla on liian pitkä luettavaksi ääneen`);
+      }
+    }
+    if (!kommentti.length) {
+      // Huutomerkkejä Livia ei käytä vanhassa maadoituksessa
+      // (tools/pollo/worker.js KARAKTÄÄRI). Uuden kulun välihuudot ovat
+      // omistajan sanatarkkoja tekstejä, joissa huutomerkki on sallittu.
+      assert.ok(!puhe.includes('!'), `${kaupunki}: Livia ei käytä huutomerkkejä`);
+    }
   }
 });
 
-test('vähintään yhdessä maadoituksessa isoisä osoittautuu oikeaksi', () => {
+/*
+ * UUDEN KULUN KAUPUNGIT: yksi välihuuto luennan aikana ja kommentti sen
+ * jälkeen (Raamattu, KAUPUNGIN KULKU — ja sen kavennus 8.9.2026, jolla
+ * alustus poistui joka kaupungista).
+ * Huudahduksen `kohta` on ajoituksen ankkuri, ja sen on esiinnyttävä
+ * matkakirjan tekstissä TASAN KERRAN — muuten välihuuto tulisi väärään
+ * kohtaan tai ei lainkaan, eikä mikään kaatuisi.
+ */
+test('uuden kulun huudahdus osuu matkakirjan tekstiin tasan kerran', () => {
+  let uusia = 0;
+  for (const [kaupunki, virta] of Object.entries(FOKUSVIRRAT)) {
+    const huudahdus = virta.pollo?.huudahdus;
+    if (!huudahdus) continue;
+    uusia += 1;
+    /*
+     * ALUSTUSTA EI OLE (omistaja 8.9.2026: *"ota kaikki pulun
+     * alustukset pois."*). Kenttä ei saa palata takaovesta: peli ei enää
+     * lue sitä (js/fokusvirta.js kulunKuplat), joten pakkaukseen jäänyt
+     * teksti olisi kuollutta kaanonia.
+     */
+    assert.equal(virta.pollo?.alustus, undefined,
+      `${kaupunki}: alustus on poistettu kaikista kaupungeista`);
+    const teksti = virta.matkakirja?.teksti ?? '';
+    assert.ok(huudahdus.kohta, `${kaupunki}: huudahduksen kohta puuttuu`);
+    assert.equal(teksti.split(huudahdus.kohta).length - 1, 1,
+      `${kaupunki}: huudahduksen kohta "${huudahdus.kohta}" ei löydy tasan kerran`);
+    assert.ok(livianKuplat(huudahdus)[0].length <= 30,
+      `${kaupunki}: välihuuto on liian pitkä`);
+  }
+  // Huudahdukset poistettiin kokonaan 9.9.2026 (omistajan tekstipaketti,
+  // yksi kupla per kaupunki): kenttää ei ole enää yhdessäkään kaupungissa.
+  assert.equal(uusia, 0, `huudahduksen kaupunkeja pitäisi olla 0, on ${uusia}`);
+});
+
+test('vähintään yhdessä puheenvuorossa isoisä osoittautuu oikeaksi', () => {
   const myonnytys = Object.values(FOKUSVIRRAT)
-    .map((virta) => virta.pollo?.maadoitus ?? '')
-    .filter((teksti) => /myönnä|osui|piti paikkansa|oli oikeassa/i.test(teksti));
+    .map((virta) => [
+      ...livianKuplat(virta.pollo?.kommentti),
+      ...livianKuplat(virta.pollo?.maadoitus),
+    ].join(' '))
+    .filter((teksti) => /myönnä|osui|piti paikkansa|oli oikeassa|oikea ajatus/i.test(teksti));
   assert.ok(myonnytys.length >= 1,
     'ainakin yhdessä kaupungissa Livian on myönnettävä isoisän olleen oikeassa');
 });
@@ -329,7 +415,17 @@ test('jokaisella fokusvirran kuvalla on selite ja lähde', () => {
       ...(virta.takynostot ?? []).flatMap((t) => [t.kuva, t.valokuva]),
       ...(virta.kohteet ?? []).map((k) => k.kuva),
     ].filter(Boolean);
-    assert.ok(kuvat.length >= 4, `${kaupunki}: kuvia on liian vähän`);
+    /*
+     * KEVYELLÄ PAKILLA ON YKSI KUVA, TÄYDELLÄ NELJÄ (8.9.2026).
+     *
+     * Kevyt pakki (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT) kantaa
+     * vain matkakirjan ja pulun kuplan, koska kortit ovat pois käytöstä
+     * — sen ainoa kuva on lehden herokuva `pollo.kuva`. Vaatimus
+     * kuitenkin pätee jokaiseen kuvaan, joka pakissa on: selite ja
+     * lähde tarkistetaan alla samalla silmukalla.
+     */
+    const vahintaan = KEVYET_FOKUSVIRRAT.has(kaupunki) ? 1 : 4;
+    assert.ok(kuvat.length >= vahintaan, `${kaupunki}: kuvia on liian vähän`);
     for (const kuva of kuvat) {
       assert.ok(kuva.tiedosto || kuva.ampari || kuva.osoite,
         `${kaupunki}: kuvalla ei ole tiedostoa, ämpäripolkua eikä osoitetta`);
@@ -454,6 +550,15 @@ const SAHKE_JA_KOHTAAMINEN = new Set(['sofia']);
 
 test('aarrevaiheelle on sisältö, ja kaksoiskirjoitus on tietoinen', () => {
   for (const [cityId, virta] of Object.entries(FOKUSVIRRAT)) {
+    /*
+     * KEVYT PAKKI EI KANNA AARREVAIHETTA (8.9.2026). Kortit ovat pois
+     * käytöstä (js/fokusvirta.js FOKUSVIRTA_KORTIT === false), ja kevyen
+     * kulun aarrevaihe alkaa lehden kysymyksestä (fokusAarreAvattu) eikä
+     * paketin kohtaamisesta — kirjoitettu kohtaaminen olisi näissä
+     * kuudessa kohteessa dataa, jota mikään ei piirrä. Täydeltä pakilta
+     * vaaditaan yhä sisältö kummallakin tavalla.
+     */
+    if (KEVYET_FOKUSVIRRAT.has(cityId)) continue;
     assert.ok(
       virta.kohtaaminen || virta.sahketehtava,
       `${cityId}: aarrevaiheelle ei ole sisältöä kummallakaan tavalla`,
@@ -483,9 +588,11 @@ test('sähkepilottien molemmat aukot ovat ratkaistavissa', () => {
   for (const [cityId, virta] of pilotit) {
     const tehtava = virta.sahketehtava;
     assert.ok(tehtava.sahke.includes('STOP'), `${cityId}: sähke ei ole sähketyylinen`);
-    assert.ok(tehtava.johdanto?.length > 80, `${cityId}: Livian saate puuttuu`);
-    assert.ok(tehtava.vinkki?.length > 20, `${cityId}: lähdevinkki puuttuu`);
-    assert.ok(tehtava.paluu?.length > 20, `${cityId}: paluukupla puuttuu`);
+    // Kenttä voi olla kuplien taulukko (7.9.2026): mitta on niiden summa.
+    const pituus = (kentta) => livianKuplat(kentta).join(' ').length;
+    assert.ok(pituus(tehtava.johdanto) > 80, `${cityId}: Livian saate puuttuu`);
+    assert.ok(pituus(tehtava.vinkki) > 20, `${cityId}: lähdevinkki puuttuu`);
+    assert.ok(pituus(tehtava.paluu) > 20, `${cityId}: paluukupla puuttuu`);
     assert.equal(tehtava.aukot.length, 2, `${cityId}: lomakkeessa on oltava kaksi aukkoa`);
 
     const hakemisto = sisaltohakemisto(uiTynka(game), tehtava.hakemistoMaa);
@@ -661,8 +768,20 @@ test('fokusvirtakaupungin matkakirjateksti ei vaihdu laatan ratkettua', () => {
     // Laatta paikallaan: merkintä on virran oma.
     game.tokens.set(cityId, 'topaz');
     const ennen = fokusvirtaMatkakirja(ui, city);
-    assert.equal(ennen?.teksti, virta.matkakirja.teksti,
+    /*
+     * TILAPÄINEN LYHENNYS (omistaja 11.9.2026, Raamattu SAAPUMISEN UUSI
+     * JARJESTYS…): kortin teksti on pakin teksti kaksi lausetta
+     * lyhyempänä, ja KOKO teksti kulkee mukana kentässä `tekstiKoko`
+     * (luenta pysäytetään siitä lasketulla osuudella). Vertailu tehdään
+     * samalla apurilla kuin lyhennys, jottei testi kirjoita sääntöä
+     * toiseen kertaan — paluu entiseen (kytkin 0) menee tästä läpi
+     * sellaisenaan.
+     */
+    assert.equal(ennen?.tekstiKoko, virta.matkakirja.teksti,
       `${cityId}: virran merkintä ei tule korttiin ennen laatan ratkaisua`);
+    assert.equal(ennen?.teksti,
+      lyhennaLauseita(virta.matkakirja.teksti, MATKAKIRJAN_LYHENNYS_LAUSEITA),
+      `${cityId}: kortin teksti ei ole lyhennetty sovitulla säännöllä`);
 
     // Laatta ratkaistu: sama avain, sama teksti, sama kuva. Avain on
     // yhtä tärkeä kuin teksti — sen vaihtuminen kirjoittaisi kortin
@@ -672,12 +791,15 @@ test('fokusvirtakaupungin matkakirjateksti ei vaihdu laatan ratkettua', () => {
     assert.deepEqual(jalkeen, ennen,
       `${cityId}: matkakirjakortti vaihtui laatan ratkettua`);
 
-    // Ja nimenomaan: vanha saapumisteksti ei saa kummitella kortissa.
-    const vanha = EUROPE_SAAPUMISET[cityId];
-    if (vanha) {
-      assert.notEqual(jalkeen.teksti, vanha.kuvaus,
-        `${cityId}: kortissa on vanha saapumismerkintä`);
-    }
+    /*
+     * VANHA SAAPUMISTEKSTI EI VOI ENÄÄ KUMMITELLA KORTISSA: Euroopan
+     * saapumistaulu on arkistoitu pois pelistä (omistaja 8.9.2026,
+     * docs/arkisto/europe-saapumiset-2026-09-08.js.txt), ja sitä
+     * vartioi nyt lähdekoodivartio alempana ("yksikään js/-moduuli ei
+     * tuo arkistoitua saapumistaulua"). Aiempi tekstivertailu tähän
+     * tauluun poistettiin samalla — se olisi vaatinut arkiston
+     * lukemista testistä.
+     */
   }
 });
 
@@ -742,30 +864,12 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
   const { fileURLToPath } = await import('node:url');
   const juuri = join(dirname(fileURLToPath(import.meta.url)), '..');
   const sw = readFileSync(join(juuri, 'sw.js'), 'utf8');
+  // Ämpärin juuri luetaan pelistä eikä toisteta tässä (js/media.js).
+  const { PEILI_JUURI } = await import('../js/media.js');
 
-  const paketit = Object.entries({
-    GRC: (await import('../js/packs/fokuskohteet-grc.js')).FOKUSKOHTEET_GRC,
-    TUR: (await import('../js/packs/fokuskohteet-tur.js')).FOKUSKOHTEET_TUR,
-    EGY: (await import('../js/packs/fokuskohteet-egy.js')).FOKUSKOHTEET_EGY,
-    IRQ: (await import('../js/packs/fokuskohteet-irq.js')).FOKUSKOHTEET_IRQ,
-    // Euroopan erä 27.8.2026: Forum Romanum, Tuileries ja vanha St Paul.
-    ITA: (await import('../js/packs/fokuskohteet-ita.js')).FOKUSKOHTEET_ITA,
-    FRA: (await import('../js/packs/fokuskohteet-fra.js')).FOKUSKOHTEET_FRA,
-    GBR: (await import('../js/packs/fokuskohteet-gbr.js')).FOKUSKOHTEET_GBR,
-    // Maailman erä 27.8.2026: seitsemän uutta maata, joilla on
-    // fokuslehti mutta ei vielä omaa fokusvirtaa.
-    SYR: (await import('../js/packs/fokuskohteet-syr.js')).FOKUSKOHTEET_SYR,
-    CHN: (await import('../js/packs/fokuskohteet-chn.js')).FOKUSKOHTEET_CHN,
-    MEX: (await import('../js/packs/fokuskohteet-mex.js')).FOKUSKOHTEET_MEX,
-    JOR: (await import('../js/packs/fokuskohteet-jor.js')).FOKUSKOHTEET_JOR,
-    IRN: (await import('../js/packs/fokuskohteet-irn.js')).FOKUSKOHTEET_IRN,
-    AFG: (await import('../js/packs/fokuskohteet-afg.js')).FOKUSKOHTEET_AFG,
-    ZWE: (await import('../js/packs/fokuskohteet-zwe.js')).FOKUSKOHTEET_ZWE,
-    // Välimeren erä 27.8.2026: kaksi uutta maata, joilla on fokuslehti
-    // mutta ei vielä omaa fokusvirtaa.
-    LBY: (await import('../js/packs/fokuskohteet-lby.js')).FOKUSKOHTEET_LBY,
-    TUN: (await import('../js/packs/fokuskohteet-tun.js')).FOKUSKOHTEET_TUN,
-  });
+  // Pelin oma koonti sisältää kuratoidut kohteet, maastokohteet ja
+  // hahmotelmapakat. Näin testi ei unohda uutta sisältöperhettä.
+  const paketit = Object.entries(KOHDE_MAAT);
 
   let ihmeita = 0;
   for (const [maa, kohteet] of paketit) {
@@ -774,9 +878,23 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
       ihmeita += 1;
       const tunnus = `${maa}/${kohde.id}`;
       const { osoite, selite, lahde, kadonnut } = kohde.ihme;
-      assert.ok(osoite?.startsWith('assets/kartat/ihmeet/ihme-'),
-        `${tunnus}: ihmekuvan polku on assets/kartat/ihmeet/ihme-*`);
-      assert.ok(existsSync(join(juuri, osoite)), `${tunnus}: ${osoite} puuttuu levyltä`);
+      /*
+       * KAKSI LAILLISTA OSOITEMUOTOA (loistoaika-v2-erä 5.9.2026).
+       * Vanhat ihmekuvat ovat repon polkuja
+       * (assets/kartat/ihmeet/ihme-*), ja kuvaputken uudet loistoaika-
+       * kuvat syntyivät suoraan ämpäriin — niillä ei ole repokopiota
+       * eikä varareittiä, ja js/media.js assetOsoite päästää valmiin
+       * osoitteen läpi sellaisenaan. Repon polku tarkistetaan levyltä
+       * ja sw.js:n esilatauslistasta; ämpäriosoitteella kumpaakaan ei
+       * ole tarkistettavana, joten siitä tarkistetaan muoto: sama
+       * ämpäri (js/media.js PEILI_JUURI) ja sama ihme-etuliite.
+       */
+      const amparissa = osoite?.startsWith(`${PEILI_JUURI}kohtaamiset/ihmeet/ihme-`);
+      if (!amparissa) {
+        assert.ok(osoite?.startsWith('assets/kartat/ihmeet/ihme-'),
+          `${tunnus}: ihmekuvan polku on assets/kartat/ihmeet/ihme-* tai ämpäriosoite`);
+        assert.ok(existsSync(join(juuri, osoite)), `${tunnus}: ${osoite} puuttuu levyltä`);
+      }
       assert.equal(typeof kadonnut, 'boolean',
         `${tunnus}: esitystapa (kadonnut) on kerrottava kumpaankin suuntaan`);
       assert.ok(selite?.length > 60, `${tunnus}: ihmekuvan selite puuttuu tai on liian lyhyt`);
@@ -786,7 +904,11 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
         `${tunnus}: ihmekuvan selite kertoo kohteesta, ei kuvasta`);
       assert.ok(/^Matkakirjan havainnekuva:/.test(lahde ?? ''),
         `${tunnus}: lähderivin on merkittävä kuva havainnekuvaksi`);
-      assert.ok(sw.includes(`'./${osoite}'`), `${tunnus}: ${osoite} puuttuu sw.js:n listasta`);
+      // Esilatauslista koskee vain repon omia tiedostoja: ämpärikuvaa
+      // sw.js ei asennuksessa hae (ks. osoitemuodot yllä).
+      if (!amparissa) {
+        assert.ok(sw.includes(`'./${osoite}'`), `${tunnus}: ${osoite} puuttuu sw.js:n listasta`);
+      }
 
       /*
        * YKSI REKONSTRUKTIO KOHDETTA KOHTI (omistajan tilaus 27.8.2026
@@ -807,8 +929,13 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
          * KADONNEELLA EI OLE VALOKUVAA, koska kohdetta ei ole: ihmekuva
          * on kortin ensimmäinen ja ainoa kuva (piirraKohdeKuvat).
          */
-        assert.equal(kuvalista.length, 0,
-          `${tunnus}: kadonneen kohteen ainoa kuva on ihmekuva`);
+        // Skálholt oli valmis maastokohde ennen kadonneen katedraalin
+        // ihmettä. Sen nykyiset paikkakuvat säilyvät lähdeaineistona,
+        // vaikka kadonnut katedraali käyttää kortin pääkuvana ihmettä.
+        if (kohde.id !== 'skalholt') {
+          assert.equal(kuvalista.length, 0,
+            `${tunnus}: kadonneen kohteen ainoa kuva on ihmekuva`);
+        }
       } else {
         /*
          * OLEMASSA OLEVAN PÄÄKUVA ON VALOKUVA KOHTEEN NYKYISESTÄ
@@ -816,9 +943,9 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
          * ei repon oma generoitu kuva. Generoitu ihmekuva aukeaa vain
          * "Koe ihme" -napista, joka piirtyy tämän kuvan ALLE.
          */
-        assert.ok(kohde.kuva?.tiedosto,
+        assert.ok(kohde.kuva?.tiedosto || kohde.kuva?.osoite,
           `${tunnus}: olemassa olevan kohteen pääkuvan on oltava Commons-valokuva`);
-        assert.ok(/\(CC|\(PD|PD\)/.test(kohde.kuva.lahde ?? ''),
+        assert.ok(kohde.kuva.lisenssi || /\(CC|\(PD|PD\)|public domain/i.test(kohde.kuva.lahde ?? ''),
           `${tunnus}: pääkuvan lähderivillä on oltava lisenssi ja tekijä`);
       }
     }
@@ -831,7 +958,7 @@ test('Matkakirjan ihmeillä on kuva, selite ja havainnekuvamerkintä', async () 
    * mantereelta ja VÄLIMEREN erä vielä kahdeksan antiikin Välimereltä
    * ja Mesopotamiasta.
    */
-  assert.equal(ihmeita, 35, 'Matkakirjan ihmeitä on kolmekymmentäviisi');
+  assert.equal(ihmeita, 104, 'Matkakirjan ihmeitä on sataneljä');
 });
 
 /*
@@ -848,12 +975,18 @@ test('ihmeiden kuvakansiossa on vain uudet ihme-kuvat', async () => {
   const juuri = join(dirname(fileURLToPath(import.meta.url)), '..');
   const kansio = join(juuri, 'assets/kartat/ihmeet');
   const tiedostot = readdirSync(kansio);
-  assert.equal(tiedostot.length, 35,
-    'kansiossa on kolmekymmentäviisi ihmekuvaa');
+  assert.equal(tiedostot.length, 104,
+    'kansiossa on sataneljä ihmekuvaa');
   for (const nimi of tiedostot) {
     assert.ok(nimi.startsWith('ihme-'), `${nimi}: vanha loistoaikakuva on yhä levyllä`);
   }
   const sw = readFileSync(join(juuri, 'sw.js'), 'utf8');
+  const euroopanJpg = tiedostot.filter((nimi) => nimi.endsWith('-loistoaika.jpg'));
+  assert.equal(euroopanJpg.length, 69, 'Euroopan erässä on 69 JPG-kuvaa');
+  for (const nimi of euroopanJpg) {
+    assert.ok(!sw.includes(`assets/kartat/ihmeet/${nimi}`),
+      `${nimi}: R2:sta ladattavaa 1600 px kuvaa ei lisätä SHELL-esilataukseen`);
+  }
   for (const rivi of sw.split('\n')) {
     const osuma = rivi.match(/assets\/kartat\/ihmeet\/([^']+)/);
     if (!osuma) continue;
@@ -866,6 +999,23 @@ test('kadonnut ihme saa kartalle tähden, olemassa oleva pitää oman merkkinsä
   const { NOSTOSYM_LUOKAT, NOSTOSYM_TYYPIT } = await import('../js/fokusnosto-symbolit.js');
   assert.ok(NOSTOSYM_TYYPIT.has('ihme'), 'tähti on symbolikirjastossa');
   assert.ok(NOSTOSYM_LUOKAT.ihme, 'tähdellä on kortin ylärivin luokkanimi');
+  /*
+   * LOISTOAIKA-V2 (kuvaputken erä, omistaja hyväksynyt 5.9.2026).
+   * Ensimmäisen erän ihmekuva näytti kohteen "loistoaikansa asussa
+   * NYKYMAAILMASSA", ja siksi sen kuvatekstin piti kertoa myös, mitä
+   * paikalla on nyt. Uusi erä on päinvastainen: kuva on kohde OMANA
+   * AIKANAAN ilman nykyajan elementtejä, ja kuvateksti on sanatarkka
+   * kuvaputken teksti kyseisestä hetkestä. Nykypäivä ei siis enää
+   * mahdu näiden kohteiden kuvatekstiin, ja sen kertoo lähderivin
+   * merkintä "omana aikanaan" — jota ilman kuva väittäisi nykyaikaa.
+   *
+   * Alla olevat nykypäivä-vartiot koskevat siksi vain ensimmäisen erän
+   * kuvatekstejä. V2-kuvalta vaaditaan sen sijaan tarkistettu
+   * faktalähde lähderivillä ("Faktat: …"), joka on se, mihin kuvan
+   * väite omasta ajastaan perustuu. Vartio ei katoa kummaltakaan,
+   * mutta se kysyy kummaltakin oikeaa asiaa.
+   */
+  const loistoaikaV2 = (ihme) => /omana aikanaan/.test(ihme?.lahde ?? '');
   const kolossi = FOKUSKOHTEET_GRC.find((k) => k.id === 'rodoksen-kolossi');
   const knossos = FOKUSKOHTEET_GRC.find((k) => k.id === 'knossos');
   assert.equal(kolossi.ihme.kadonnut, true, 'kolossia ei ole enää olemassa');
@@ -886,8 +1036,15 @@ test('kadonnut ihme saa kartalle tähden, olemassa oleva pitää oman merkkinsä
   assert.equal(tuileries.ihme.kadonnut, true, 'Tuileries purettiin 1883');
   assert.equal(tuileries.kuva, undefined, 'puretusta palatsista ei ole valokuvaa');
   assert.equal(stPaul.ihme.kadonnut, false, 'Ludgate Hillin katedraali on paikallaan');
-  assert.ok(/EDELTÄJÄ/.test(stPaul.ihme.selite),
-    'vanhan St Paulin selite kertoo kuvan olevan nykyisen edeltäjä');
+  /*
+   * Edeltäjämaininta saa olla selitteessä TAI lähderivillä: kortti
+   * piirtää lähderivin heti selitteen perään samaan figcaptioniin
+   * (js/fokuskohteet.js piirraKohdeKuva), joten pelaaja lukee ne
+   * yhtenä tekstinä. 4.9.2026 selite vaihtui kuvaputken sanatarkkaan
+   * kuvatekstiin, ja maininta siirtyi lähderiville.
+   */
+  assert.ok(/EDELTÄJÄ/.test(`${stPaul.ihme.selite} ${stPaul.ihme.lahde}`),
+    'vanhan St Paulin kuvateksti kertoo kuvan olevan nykyisen edeltäjä');
 
   /*
    * MAAILMAN ERÄ 27.8.2026. Kolme vartiota, jotka kaikki koskevat
@@ -918,8 +1075,10 @@ test('kadonnut ihme saa kartalle tähden, olemassa oleva pitää oman merkkinsä
   const pyramidi = FOKUSKOHTEET_EGY.find((k) => k.id === 'gizan-suuri-pyramidi');
   assert.equal(buddhat.ihme.kadonnut, true, 'Bamiyanin patsaat tuhottiin 2001');
   assert.equal(buddhat.kuva, undefined, 'tuhotuista patsaista ei ole valokuvaa');
-  assert.ok(/syvennykse/i.test(buddhat.ihme.selite),
-    'Bamiyanin selite kertoo kallion ja syvennysten olevan yhä paikallaan');
+  assert.ok(loistoaikaV2(buddhat.ihme)
+    ? /Faktat:/.test(buddhat.ihme.lahde)
+    : /syvennykse/i.test(buddhat.ihme.selite),
+  'Bamiyanin kuvateksti kertoo, mistä ajasta kuva on ja mihin se perustuu');
   assert.equal(khazneh.ihme.kadonnut, false, 'Al-Khazneh on kalliossa tallella');
   assert.ok(khazneh.kuva?.tiedosto, 'Al-Khaznesta on valokuva nykytilasta');
   assert.equal(zimbabwe.ihme.kadonnut, false, 'Suuren Zimbabwen muurit ovat pystyssä');
@@ -970,12 +1129,16 @@ test('kadonnut ihme saa kartalle tähden, olemassa oleva pitää oman merkkinsä
       `${siirretty.id}: kohde ei ole enää paikallaan`);
     assert.equal(siirretty.kuva, undefined,
       `${siirretty.id}: siirretystä kohteesta ei ole paikan päällä valokuvaa`);
-    assert.ok(/Berliini/.test(siirretty.ihme.selite),
-      `${siirretty.id}: selitteen on kerrottava, että kohde on Berliinissä`);
+    assert.ok(loistoaikaV2(siirretty.ihme)
+      ? /Faktat:/.test(siirretty.ihme.lahde)
+      : /Berliini/.test(siirretty.ihme.selite),
+    `${siirretty.id}: kuvatekstin on kerrottava, mihin kuva perustuu tai missä kohde on`);
   }
   assert.equal(satama.ihme.kadonnut, true, 'sotasataman rakennelmat ovat poissa');
-  assert.ok(/allas/i.test(satama.ihme.selite),
-    'Karthagon selite kertoo altaan olevan yhä maastossa');
+  assert.ok(loistoaikaV2(satama.ihme)
+    ? /Faktat:/.test(satama.ihme.lahde)
+    : /allas/i.test(satama.ihme.selite),
+  'Karthagon kuvateksti kertoo, mistä ajasta kuva on ja mihin se perustuu');
   assert.equal(colosseum.ihme.kadonnut, false, 'Colosseum on pystyssä');
   assert.ok(colosseum.kuva?.tiedosto, 'Colosseumista on valokuva nykytilasta');
   assert.equal(muurit.ihme.kadonnut, false, 'Theodosiuksen muurit ovat pystyssä');
@@ -1015,4 +1178,200 @@ test('jokaisella symbolikategorialla on oma viivamerkki kartalla', async () => {
   assert.equal(nostosymMiniTunnus('luonto', 'saari'), 'vuori');
   assert.equal(nostosymMiniTunnus('luonto', 'meri'), 'meri');
   assert.equal(nostosymMiniTunnus('luonto', 'joki'), 'meri');
+});
+
+/* ---------- pulun lehtivinkki: kerran koskaan, ei ruksia ---------- */
+
+/*
+ * OMISTAJA 7.9.2026 (Raamattu, PULUN UUSI RYTMI ATEENASSA): lehden
+ * avautuessa pulu sanoo *"Etsi lehdestä aarrekysymys."* — vain
+ * ensimmäisellä kerralla koskaan, ja "Älä näytä jatkossa" -ruksi on
+ * poistettu kokonaan.
+ *
+ * Kertaluontoisuus on kahden lipun varassa (laite + istunto), joten
+ * sitä ei voi testata pelkästä lähdekoodista: muistin jäljitelmä
+ * paljastaa myös sen, ettei istunnon lippu unohdu, jos laitteen muisti
+ * tyhjenee kesken pelin (yksityinen selaus).
+ */
+test('lehtivinkki sanotaan kerran koskaan — laite- ja istuntolippu', async () => {
+  const muisti = new Map();
+  const vanha = globalThis.localStorage;
+  globalThis.localStorage = {
+    getItem: (avain) => (muisti.has(avain) ? muisti.get(avain) : null),
+    setItem: (avain, arvo) => muisti.set(avain, String(arvo)),
+    removeItem: (avain) => muisti.delete(avain),
+  };
+  try {
+    const {
+      LIVIA_LEHTIVINKKI_TALLE, LIVIAN_LEHTIVINKIN_SANA, LIVIAN_LEHTIVINKKI,
+      livianLehtivinkkiOdottaa, merkitseLehtivinkkiNahdyksi,
+    } = await import('../js/livia.js');
+    assert.equal(LIVIAN_LEHTIVINKKI, 'Etsi lehdestä aarrekysymys.');
+    assert.ok(LIVIAN_LEHTIVINKKI.includes(LIVIAN_LEHTIVINKIN_SANA),
+      'ympyröitävä avainsana ei ole vinkin sisällä');
+    // Tuore laite: vinkki on sanomatta.
+    assert.equal(livianLehtivinkkiOdottaa(), true);
+    merkitseLehtivinkkiNahdyksi();
+    assert.equal(muisti.get(LIVIA_LEHTIVINKKI_TALLE), '1');
+    // Toinen lehti, kolmas kaupunki, sama istunto: ei enää vinkkiä.
+    assert.equal(livianLehtivinkkiOdottaa(), false);
+    // Laitteen muisti tyhjeni kesken pelin: istunnon lippu kantaa.
+    muisti.clear();
+    assert.equal(livianLehtivinkkiOdottaa(), false);
+  } finally {
+    if (vanha === undefined) delete globalThis.localStorage;
+    else globalThis.localStorage = vanha;
+  }
+});
+
+test('lehtivinkin kupla on ruksiton ja puhuu pulun äänellä', async () => {
+  const { readFileSync } = await import('node:fs');
+  const virta = readFileSync(new URL('../js/fokusvirta.js', import.meta.url), 'utf8');
+  const apurit = readFileSync(new URL('../js/ui-apurit.js', import.meta.url), 'utf8');
+  // Ruksi on poissa: ei valintaruutua, ei asetusta, ei laiteavainta.
+  // (Sana esiintyy yhä kommentissa, joka kertoo mikä poistettiin.)
+  assert.doesNotMatch(virta, /'Älä näytä jatkossa'|vinkkiruksi|piilotaLehtivinkki|lehtivinkkiPiilotettu\(/);
+  assert.doesNotMatch(apurit, /lehtivinkkiPiilotettu|piilotaLehtivinkki/);
+  // Kertalippu Livian omasta moduulista, ei enää kaupunkikohtaista muistia.
+  assert.match(virta, /if \(!livianLehtivinkkiOdottaa\(\)\) return false;/);
+  assert.doesNotMatch(virta, /fokusvinkkiNaytetty/);
+  // Lippu kuluu vasta kun kupla oikeasti näkyi.
+  assert.match(virta, /if \(!naytaPolloKupla\(ui, LIVIAN_LEHTIVINKKI\)\) return;\s*\n\s*merkitseLehtivinkkiNahdyksi\(\);/);
+  // Avainsana ympyröidään ja repliikki luetaan pulun äänellä.
+  assert.match(virta, /LIVIAN_LEHTIVINKIN_SANA, \{ tyyppi: 'circle'/);
+  assert.match(virta, /soitaLivianAani\(ui, 'lehtivinkki', 0, \{ teksti: LIVIAN_LEHTIVINKKI \}\);/);
+});
+
+/* ---------- matkakirjakortin otsikko (omistaja 8.9.2026) ---------- */
+
+/*
+ * OTSIKKONA PAIKKA JA AIKA, ALLA TUNNELMA, sanatarkasti: *"matkakirjan
+ * tekstiotsikon voisi vaihtaa suoraan muotoon «Sarajevo, syyskuussa
+ * 1873» … Sen alapuolella olisi kursiivilla ja pienemmällä «Kirkas
+ * ilta; vuoret lähellä»."*
+ *
+ * Jako tehdään koodissa eikä datassa (kohtausrivi on yksi kaanonin
+ * kenttä), joten juuri se jako on se kohta, joka voi hiljaa mennä
+ * rikki: väärä katkaisu näkyisi vasta pelaajalle.
+ */
+test('matkakirjan otsikko on paikka ja aika, tunnelma sen alla', async () => {
+  const { matkakirjanOtsikko } = await import('../js/ui-apurit.js');
+  assert.deepEqual(
+    matkakirjanOtsikko('Sarajevo, syyskuussa 1873. Kirkas ilta; vuoret lähellä.', 'Sarajevo'),
+    { otsikko: 'Sarajevo, syyskuussa 1873', tunnelma: 'Kirkas ilta; vuoret lähellä' },
+  );
+  // Pitkä toinen virke kelpaa tunnelmaksi sellaisenaan (css rivittää).
+  assert.deepEqual(
+    matkakirjanOtsikko('Helsingfors, kesällä 1873. Tulin mereltä, ja kaupunki oli iso.'),
+    { otsikko: 'Helsingfors, kesällä 1873', tunnelma: 'Tulin mereltä, ja kaupunki oli iso' },
+  );
+  // Kohtausrivi ilman toista virkettä: pelkkä otsikko.
+  assert.deepEqual(matkakirjanOtsikko('Riika, heinäkuussa 1873'),
+    { otsikko: 'Riika, heinäkuussa 1873', tunnelma: '' });
+  // Kaupunki ilman kirjoitettua kohtausriviä saa matkan vuoden.
+  assert.deepEqual(matkakirjanOtsikko('Kreeta', 'Kreeta'),
+    { otsikko: 'Kreeta, 1873', tunnelma: '' });
+  assert.deepEqual(matkakirjanOtsikko('', 'Kreeta'), { otsikko: 'Kreeta, 1873', tunnelma: '' });
+  // Muu rivi ilman vuosilukua jää omaksi otsikokseen (aarremerkintä).
+  assert.deepEqual(matkakirjanOtsikko('Isoisän merkintä · Ateena', 'Ateena'),
+    { otsikko: 'Isoisän merkintä · Ateena', tunnelma: '' });
+});
+
+test('jokaisen kohtausrivin otsikko ja tunnelma ovat luettavia', async () => {
+  const { matkakirjanOtsikko } = await import('../js/ui-apurit.js');
+  for (const [kaupunki, virta] of Object.entries(FOKUSVIRRAT)) {
+    const rivi = virta.matkakirja?.paikkarivi;
+    if (!rivi) continue;
+    const { otsikko, tunnelma } = matkakirjanOtsikko(rivi, kaupunki);
+    // Otsikossa on paikka ja aika — ja aina matkan vuosi.
+    assert.match(otsikko, /,/, `${kaupunki}: otsikossa ei ole paikkaa ja aikaa`);
+    assert.match(otsikko, /18\d\d$/, `${kaupunki}: otsikko ei pääty vuosilukuun: ${otsikko}`);
+    assert.ok(!otsikko.endsWith('.'), `${kaupunki}: otsikossa on loppupiste`);
+    // Tunnelmarivi on kirjoitettu jokaiselle (Fablen kaanon 8.9.2026).
+    assert.ok(tunnelma.length > 0, `${kaupunki}: tunnelmarivi puuttuu`);
+    assert.ok(!tunnelma.endsWith('.'), `${kaupunki}: tunnelmarivissä on loppupiste`);
+  }
+});
+
+test('matkakirjakortti näyttää otsikon ja tunnelman omina riveinään', async () => {
+  const { readFileSync } = await import('node:fs');
+  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  // Otsakkeen tilalla on kohtausrivin paikka ja aika.
+  assert.doesNotMatch(ui, /factVoiceEl\.textContent = 'Matkapäiväkirja'/);
+  assert.match(ui, /this\.asetaMatkakirjanOtsikko\(merkinta\.paikkarivi, virtaKaupunki\.name\);/);
+  // Tunnelmarivi on paikkarivin elementissä omalla luokallaan, ja
+  // lyhyt muoto jää tyhjäksi: otsikossa on jo kaupungin nimi.
+  assert.match(ui, /this\.asetaPaikkarivi\(tunnelma, '', \{ tunnelma: true \}\);/);
+  // Muut kortin haarat purkavat tyylin (asetaOtsake).
+  assert.match(ui, /this\.asetaOtsake\('Isoisän aikataulusta'\);/);
+  // Kursiivi, pienempi ja himmeämpi — ja otsikko ilman versaaleja.
+  assert.match(css, /\.fact-card h2\.paikka-aika \{[^}]*text-transform: none;/);
+  assert.match(css, /\.fact-place\.tunnelma \{[^}]*font-style: italic;/);
+});
+
+
+/* ---------- Euroopan kattavuus ja arkistoitu saapumistaulu ---------- */
+
+/*
+ * KOKO EUROOPPA KULKEE FOKUSVIRTAPAKKIEN KAUTTA (omistaja 8.9.2026,
+ * Raamattu; sanatarkasti: *"joo kirjoita niille omat ja arkistoi
+ * europe-saapumiset tiedosto ja kirjoita sen alkuun EI ENÄÄ KÄYTÖSSÄ
+ * tms tai miten vain parhaiten saadaan pelistä pois että ei vahingossa
+ * palaa"*).
+ *
+ * Vanha saapumistaulu oli Euroopan kuuden viimeisen kohteen ainoa
+ * merkintä, ja se on nyt arkistoitu pelin ulkopuolelle
+ * (docs/arkisto/europe-saapumiset-2026-09-08.js.txt). Jos yksikin
+ * Euroopan kaupunki jäisi ilman pakkia, sen matkakirjakortti olisi
+ * TYHJÄ — mikään ei kaadu, teksti vain katoaa. Siksi kattavuus
+ * luetaan laudalta eikä listasta.
+ */
+test('jokaisella Euroopan laudan kaupungilla on fokusvirtapakki', async () => {
+  const { EUROPE } = await import('../js/packs/europe.js');
+  const ilman = EUROPE.cities.filter((city) => !FOKUSVIRRAT[city.id]).map((city) => city.id);
+  assert.deepEqual(ilman, [], 'näiltä Euroopan kohteilta puuttuu fokusvirtapakki');
+  for (const city of EUROPE.cities) {
+    const virta = FOKUSVIRRAT[city.id];
+    assert.ok(virta.matkakirja?.teksti?.length > 80,
+      `${city.id}: matkakirjamerkintä puuttuu tai on liian lyhyt`);
+    assert.ok(livianKuplat(virta.pollo?.kommentti).length
+      || livianKuplat(virta.pollo?.maadoitus).length,
+    `${city.id}: pulun puheenvuoro puuttuu`);
+  }
+  // Ja pakki on samalla laudan kohteen oma: tunnus ei saa liukua.
+  for (const [cityId, virta] of Object.entries(FOKUSVIRRAT)) {
+    assert.equal(virta.kaupunki, cityId, `${cityId}: pakin kaupunkitunnus ei täsmää rekisteriin`);
+  }
+});
+
+/*
+ * ARKISTOITU TAULU EI SAA PALATA TAKAOVESTA. Tiedostonimi on
+ * arkistossa .js.txt tasan siksi, ettei sitä voi tuoda moduulina —
+ * mutta kopio js/packs/-kansioon olisi yhtä helppo tehdä kuin
+ * huomaamatta jättää. Tämä vartio lukee lähdekoodin: yksikään
+ * js/-moduuli ei tuo saapumistaulua, eikä sitä ole pakkien joukossa.
+ */
+test('yksikään js/-moduuli ei tuo arkistoitua saapumistaulua', async () => {
+  const { readdirSync, readFileSync, existsSync } = await import('node:fs');
+  const juuri = new URL('../js/', import.meta.url);
+  assert.ok(!existsSync(new URL('packs/europe-saapumiset.js', juuri)),
+    'js/packs/europe-saapumiset.js on palannut — taulu on arkistoitu 8.9.2026');
+  const tiedostot = [
+    ...readdirSync(juuri).filter((n) => n.endsWith('.js')).map((n) => n),
+    ...readdirSync(new URL('packs/', juuri)).filter((n) => n.endsWith('.js'))
+      .map((n) => `packs/${n}`),
+  ];
+  const tuovat = tiedostot.filter((nimi) => {
+    const koodi = readFileSync(new URL(nimi, juuri), 'utf8');
+    return /(from|import)\s*['"][^'"]*europe-saapumiset/.test(koodi)
+      || /\bEUROPE_SAAPUMISET\b/.test(koodi);
+  });
+  assert.deepEqual(tuovat, [], 'nämä moduulit tuovat yhä arkistoidun saapumistaulun');
+  // Arkistokappale on olemassa ja kantaa otsikkohuomautuksen.
+  const arkisto = new URL('../docs/arkisto/europe-saapumiset-2026-09-08.js.txt',
+    import.meta.url);
+  assert.ok(existsSync(arkisto), 'arkistokappale puuttuu');
+  assert.match(readFileSync(arkisto, 'utf8').slice(0, 400), /EI ENÄÄ KÄYTÖSSÄ/,
+    'arkistokappaleen alusta puuttuu "EI ENÄÄ KÄYTÖSSÄ" -huomautus');
 });

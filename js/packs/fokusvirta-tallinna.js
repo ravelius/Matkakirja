@@ -65,7 +65,7 @@
  * MIKSI EI TUULIVIIRIKYSYMYSTÄ: kaupungin laattakysymys koskee Vana
  * Toomasin tarua (js/tyohuone-kehitys-data.js KAARI_PAKETIT, tallinna).
  * Jos lehden aarteen avaava tehtävä kysyisi samasta, kysymys olisi
- * ratkaistu ennen kuin Kristjan on tavattu.
+ * ratkaistu ennen kuin Eve on tavattu.
  */
 const SALAMA_VISA = {
   kysymys: 'Olevisten kirkon torni on Viron korkein kirkontorni. Mistä se '
@@ -106,22 +106,118 @@ export const FOKUSVIRTA_TALLINNA = {
      * Tallinna–Pietari-rata avattiin 1870, kolme vuotta ennen isoisän
      * käyntiä (päätoimittajan historia-ankkuri tähän erään).
      */
-    paikkarivi: 'Reval, syksyllä 1873. Satamasta asemalle on lyhyempi matka '
-      + 'kuin kolme vuotta sitten uskoi kukaan.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Revalissa laiva purki lastinsa aamulla, ja juna vei sen '
-      + 'Pietariin ennen iltaa — uusi rata on tehnyt vanhasta '
-      + 'hansakaupungista taas portin. Yläkaupungin muurit muistavat '
-      + 'vanhemmat kauppiaat.',
-    luenta: '[curious] Revalissa laiva purki lastinsa aamulla, ja juna vei '
-      + 'sen Pietariin ennen iltaa — [softly] uusi rata on tehnyt vanhasta '
-      + 'hansakaupungista taas portin. [whispers] Yläkaupungin muurit '
-      + 'muistavat vanhemmat kauppiaat.',
+    paikkarivi: 'Reval, syyskuussa 1873. Tuulista; satamassa lokit huutavat; '
+      + 'puntari putoaa.',
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1; audio/alignment tarvitaan. */
+    teksti: "Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.",
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Ikkunasta näkyi raatihuone ja sen vakava
+     * torni" (havainto).
+     */
+    reaktiot: [
+  {
+    "id": "tallinna.r1",
+    "ankkuri": "auttaisiko marsipaani sydänsuruihin",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tallinna.r2",
+    "ankkuri": "jos ei vielä tiedä ketä kaipaa",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tallinna.r3",
+    "ankkuri": "Apteekkari leikkasi suuremman palan",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tallinna.r4",
+    "ankkuri": "Söin lääkkeeni satamaan mennessä",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tallinna.r5",
+    "ankkuri": "hoitoon olin poikkeuksellisen tyytyväinen",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    luenta: "[curious] Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. [warmly] Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-tallinna.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-tallinna-r20260909-story-v2.jpg;
+     * omistajan hyväksymä tarinakorjaus ISOISA-TARINAKORJAUKSET-4, promptId
+     * ISOISA-TARINA-V2-tallinna). Kuvatekstit tekstisession sanasta sanaan: lyhyt
+     * kartalle, pitkä suurennokseen. Lähde on pelin oma havainnekuvamerkintä;
+     * lahteet on toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tallinna-r20260909-story-v2.jpg',
+      lyhyt: 'Reval, 1873. Apteekkari määräsi suuremman palan.',
+      selite: 'Apteekissa oli vaaka, mutta apteekkari leikkasi marsipaanista '
+        + 'silmämäärällä tavallista suuremman palan. Kuvasin annoksen vakavien '
+        + 'apteekkiastioiden keskellä ennen lähtöä.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://raeapteek.ee/en/',
+        'https://visittallinn.ee/eng/visitor/see-do/things-to-do/attractions-museums/174823/town-hall-pharmacy',
+      ],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tallinna-r20260911-paper2-v1.jpg",
+      lyhyt: "Reval, 1873. Marsipaani kului, paperi siirtyi taskuun.",
+      selite: "Söin apteekkarin leikkaamaa marsipaania Raatihuoneentorilla ja työnsin kääreen taskuun. Mantelin tuoksu seurasi ulos apteekista.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://raeapteek.ee/en/our-story/","https://raekoda.tallinn.ee/en/the-building/"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era03; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-tallinna-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tallinna-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Tallinna: parempi annoskoko löytyi jo ennen reseptiä.',
+        selite: 'Raeapteekki toimii yhä Raatihuoneentorilla, ja sen edessä '
+          + 'kuljetetaan marsipaanipakettia. Sen omistaja pysähtyi apteekin '
+          + 'eteen jakamaan palan matkakumppanilleen.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://raeapteek.ee/en/',
+          'https://visittallinn.ee/eng/visitor/see-do/things-to-do/attractions-museums/174823/town-hall-pharmacy',
+        ],
+      },
+    ],
     /*
      * LIVIAN MAADOITUS — VÄLITTÄJÄOTE JA SUKUYLPEYS (Raamattu, "LIVIA
      * AIKASIIRTYMÄN VÄLITTÄJÄNÄ" ja "LIVIA TUURAAJANA"). Merkintä on
@@ -140,16 +236,33 @@ export const FOKUSVIRTA_TALLINNA = {
      * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kuule", "mut"),
      * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
      */
-    maadoitus: 'Kuule, tämä on nyt sellainen kohta, jossa minun täytyy '
-      + 'sanoa jotain suvun puolesta. Se rata avattiin vuonna 1870, kolme '
-      + 'vuotta ennen isoisäsi käyntiä, ja siitä hetkestä alkaen lasti oli '
-      + 'aamulla laiturilla ja illalla Pietarissa. Ennen sitä nopein tapa '
-      + 'saada viesti perille oli minun sukuni. Nyt sama matka tehdään '
-      + 'ilman että kukaan lähtee mihinkään: Viro oli vuonna 2005 '
-      + 'maailman ensimmäinen maa, jossa sai äänestää vaaleissa '
-      + 'internetissä, ja vuonna 2023 yli puolet äänistä annettiin '
-      + 'verkossa. Meiltä vietiin ensin työ ja sitten koko ammatti. Mut '
-      + 'kyllä minä sen kestän.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Raeapteekki myy marsipaania yhä. Minä odotin portaalla, että joku murentaisi annoksensa. Yksi lapsi jakoi palan ystävälleen. Ehkä isoisän lääkkeessä oli oikea ajatus."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'lammin', voimakkuus: 0.55 },
     /*
      * Huomio viittaa herokuvan kohteeseen (kaupunginmuuri). Faktat ovat
      * lehden oman avauskuvan selitteestä (js/packs/kulttuuri-kategoriat.js,
@@ -160,15 +273,9 @@ export const FOKUSVIRTA_TALLINNA = {
      * TÄMÄ POHJUSTAA AARREMERKINNÄN: merkintä puhuu muurista, joka
      * muistaa vanhemmat kauppiaat, ja aarre on seinän sisässä.
      */
-    teksti: 'Katso ensin tonne muurin suuntaan. Sitä oli parhaimmillaan '
-      + 'kaksi ja puoli kilometriä ja siinä oli neljäkymmentäkuusi tornia; '
-      + 'nykyään muuria on jäljellä noin yhdeksäntoista sadan metrin verran '
-      + 'ja torneja kaksikymmentä. Se on Pohjois-Euroopan parhaiten '
-      + 'säilyneitä keskiaikaisia kaupunginmuureja — eikä se ole jäänyt '
-      + 'pystyyn vahingossa. Muuri on paksu siksi, että sen sisällä oli '
-      + 'jotain, mikä kannatti pitää tallessa.',
     kuva: {
       ampari: 'herokoe/hero-tallinna-kaupunginmuuri.jpg',
+      lyhyt: 'Tallinnan kaupunginmuuria oli 2,4 km ja 46 tornia; jäljellä noin 1,9 km ja 20 tornia pystyssä.',
       selite: 'Tallinnan kaupunginmuuria oli parhaimmillaan 2,4 kilometriä '
         + 'ja siinä 46 tornia; nykyään muuria on jäljellä noin 1,9 '
         + 'kilometriä ja torneista pystyssä 20.',
@@ -212,6 +319,8 @@ export const FOKUSVIRTA_TALLINNA = {
         + 'moneen suuntaan. Nykyään siitä vatkataan myös jälkiruokavaahtoa, '
         + 'mikä on saman aineen toinen ura: eväästä tuli jälkiruoka, kun '
         + 'kukaan ei enää tarvinnut evästä.',
+      lahde: 'et-Wikipedia "Kama"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (EST/arki). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto EST/arki,
        * js/packs/maa-kategoriat.js). Commons 29.8.2026: CC BY-SA 3.0,
@@ -219,6 +328,7 @@ export const FOKUSVIRTA_TALLINNA = {
        */
       kuva: {
         tiedosto: 'Kama.jpg',
+        lyhyt: 'Kama on paahdetuista ohrasta, rukiista ja kaurasta jauhettu Baltian ruokalaji, sekoitetaan maitoon.',
         selite: 'Kama on Baltian ruokalaji, jonka pohjana on paahdetuista '
           + 'ohrasta, rukiista ja kaurasta jauhettu seos ja joka '
           + 'sekoitetaan kypsentämättä maitoon tai piimään.',
@@ -276,6 +386,9 @@ export const FOKUSVIRTA_TALLINNA = {
         + 'koskaan paikalla. Se on sama vanha hansa-ajatus uudessa '
         + 'muodossa: kaupankäynti ei vaadi läsnäoloa, se vaatii vain '
         + 'luotettavan tavan todistaa, kuka olet.',
+      lahde: 'en-Wikipedia "e-Residency of Estonia" ja en-Wikipedia '
+        + '"Electronic voting in Estonia"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (EST/arki). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto EST).
        * Commons 29.8.2026: CC BY 2.0, Masayuki (Yuki) Kawagishi.
@@ -283,6 +396,7 @@ export const FOKUSVIRTA_TALLINNA = {
        */
       kuva: {
         tiedosto: 'E-Residency card.jpg',
+        lyhyt: 'Viron e-residenttiohjelma alkoi 2014, antaen ulkomaalaisille sirukortin asiakirjoihin ja yritykseen.',
         selite: 'Viron e-residenttiohjelma alkoi 1. joulukuuta 2014, ja se '
           + 'antaa ulkomaalaisille sirukortin, jolla voi allekirjoittaa '
           + 'asiakirjoja ja perustaa yrityksen.',
@@ -336,6 +450,8 @@ export const FOKUSVIRTA_TALLINNA = {
         + 'Tornia on siksi kutsuttu Epäluulon torniksi. Kahden eripituisen '
         + 'jalan takia Tallinnaa sanotaan leikillään ontuvaksi '
         + 'kaupungiksi.',
+      lahde: 'pelin oma tarkistettu aineisto js/packs/kulttuuri-kategoriat.js '
+        + '(tallinna/historia). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto
        * tallinna/historia). Commons 29.8.2026: CC BY-SA 3.0, NOSSER.
@@ -344,6 +460,7 @@ export const FOKUSVIRTA_TALLINNA = {
        */
       kuva: {
         tiedosto: 'Lühikese Jala värav.JPG',
+        lyhyt: 'Lyhyen jalan porttitorniin hakattiin ampuma-aukkoja Toompeata kohti, siksi Epäluulon torni.',
         selite: 'Lyhyen jalan porttitorniin hakattiin 1400-luvulla '
           + 'ampuma-aukkoja, jotka osoittavat ylös Toompealle — siksi sitä '
           + 'on kutsuttu Epäluulon torniksi.',
@@ -425,6 +542,7 @@ export const FOKUSVIRTA_TALLINNA = {
      */
     kuva: {
       tiedosto: 'Vana Toomas (anno 1530) Tallinna raekojas (2013).jpg',
+      lyhyt: 'Alkuperäinen Vana Toomas vaurioitui 1944; tornissa kääntyy nyt vuonna 1996 taottu kopio.',
       selite: 'Alkuperäinen Vana Toomas vaurioitui vuoden 1944 '
         + 'pommituksessa, ja raatihuoneen tornissa kääntyy nyt vuonna 1996 '
         + 'taottu kopio.',
@@ -434,34 +552,52 @@ export const FOKUSVIRTA_TALLINNA = {
 
   /*
    * ---------- 5. Kohtaaminen ----------
-   * Hahmo, kohtaamiskuva ja kysymys ovat tarinakaaren paketissa
-   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'tallinna'):
-   * tornimestari Kristjan rasvaa Vana Toomasin laakerit ja nousee
-   * torniin joka myrskyn jälkeen. Tämä kortti ei kertaa Kristjanin
-   * repliikkiä eikä paljasta vastausta.
    *
-   * TALLINNAN VANHA KOHTAAMINEN JÄÄ ENNALLEEN (js/packs/kohtaamiset.js):
-   * sama Kristjan kahdella pinnalla, ei kahta lupausta samasta ovesta.
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
+   *
+   * HAHMO VAIHDETTU 7.9.2026: opas Eve → opas Leena. Syy on omistajan
+   * palaute kohtaamiskuvasta: *"Vaihda henkilö ja vaatetus ja tuo
+   * taustalle paljon ihmisiä näkyviin. Saisi olla joku paikallinen
+   * juhlapäivä menossa. rajaa vähän tiiviimmin"* (Fablen päätös
+   * samana iltana). Kohtaaminen siirtyi tornin tyhjistä
+   * kierreportaista vanhankaupungin päivien tungokseen; aiempi
+   * vaihdos (tornimestari Kristjan → Eve, 5.9.2026) poisti kaaresta
+   * kaanonrikkeen, jossa kaupungin kirjanpito muisti Horation.
+   *
+   * Hahmo, kohtaamiskuva ja kysymys ovat tarinakaaren paketissa
+   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'tallinna'). Tämä
+   * kortti ei kertaa Leenan repliikkiä eikä paljasta vastausta.
+   *
+   * ÄÄNIPROFIILI: hämmästyvä ja huvittunut — Leena huvittuu siitä,
+   * että joku tulee keskellä juhlaa kysymään vanhasta kirjasta.
+   *
+   * MUUHUN PAKETTIIN EI KOSKETA: matkakirja, hopeakätkön
+   * aarremerkintä, oppitunti ja lehtitehtävät säilyvät sanatarkasti.
    */
   kohtaaminen: {
-    hahmo: 'Tornimestari Kristjan',
-    nappi: 'Tapaa tornimestari',
-    teksti: 'Kristjan nousee torniin joka myrskyn jälkeen katsomaan, että '
-      + 'vartija kääntyy yhä. Hän kantaa öljykannua ja tietää portaiden '
-      + 'määrän ulkoa, koska on laskenut ne kerran eikä ole nähnyt syytä '
-      + 'laskea uudelleen. Kaupungin kirjanpito on hänelle tuttua lukemista: '
-      + 'siellä on merkitty myös ne päivät, joina tuuli teki jotain, mitä '
-      + 'sen ei olisi pitänyt tehdä. Ennen kuin hän avaa kirjauksen, hän '
-      + 'haluaa tietää, tunteeko vieras tornin oman tarun.',
+    hahmo: 'Opas Leena',
+    nappi: 'Tapaa Leena',
+    teksti: 'Leena luotsaa ryhmiään vanhankaupungin läpi päivät pitkät, ja '
+      + 'juuri nyt kadut ovat täynnä väkeä: kaupungin omat päivät ovat '
+      + 'menossa ja soitto kantaa torilta joka kujalle. Torni on hänen '
+      + 'työpaikkansa siinä missä katukivetys, ja sen tarinat hän osaa ulkoa '
+      + '— myös ne, joita opastusaineistossa ei lue. Vanhaa kirjaa kantava '
+      + 'vieras keskellä juhlaa huvittaa häntä: tänään ihmiset tulevat '
+      + 'katsomaan kulkuetta, eivät kyselemään vuosisadan takaisista '
+      + 'merkinnöistä. Ryhmänsä hän saa odottamaan hetken. Ennen kuin hän vie '
+      + 'ketään eteenpäin, hän haluaa tietää, tunteeko tulija tornin oman '
+      + 'tarun jo entuudestaan.',
     vihjeOsio: 'kaupunki',
   },
 
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * KOHTAAMISPAIKKA: RAATIHUONEEN TORNI. Kaaren teksti asettaa
-   * Kristjanin tornin portaisiin, ja pelin oma Tallinna-aineisto
-   * osoittaa saman paikan (js/packs/kulttuuri-kategoriat.js,
+   * KOHTAAMISPAIKKA: RAATIHUONEENTORI. Piste EI siirry henkilön
+   * vaihdossa 7.9.2026 — koordinaatit ovat samat kuin ennenkin. Vain
+   * nimi tarkentui: kaaren teksti asettaa Leenan vanhankaupungin
+   * päivien tungokseen, ja torni seisoo torilla, joten piste nimetään
+   * laattapaikan mukaan (js/packs/kulttuuri-kategoriat.js,
    * tallinna/kaupunki).
    *
    * KOORDINAATIT LUETAAN LAUDALTA EIKÄ PROJEKTIOSTA — POIKKEUS, JOKA
@@ -483,7 +619,7 @@ export const FOKUSVIRTA_TALLINNA = {
    * on tässä nimenomaan oikeampi kuin tarkka koordinaatti.
    */
   kohtaamispiste: {
-    nimi: 'Raatihuoneen torni',
+    nimi: 'Raatihuoneentori',
     laudat: {
       maailmankartta: { x: 6654.2, y: 1034.5 },
       europe: { x: 684, y: 374 },
@@ -592,6 +728,7 @@ export const FOKUSVIRTA_TALLINNA = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-kaali-loistoaika.webp',
+        lyhyt: 'Kaalin kraatteri tuoreena: metsä kaatunut ja savuaa kilometrien säteellä.',
         selite: 'Kaalin kraatteri tuoreena: metsä on kaatunut ja savuaa '
           + 'kilometrien säteellä, ja kuopan reunalle on tultu katsomaan.',
         lahde: 'Matkakirjan havainnekuva: kohde törmäyksen jälkeisenä hetkenä',
@@ -604,6 +741,7 @@ export const FOKUSVIRTA_TALLINNA = {
        */
       valokuva: {
         tiedosto: 'Livonia, Vulgo Lyefland - Atlas Maior, vol 2, map 10 - Joan Blaeu, 1667 - BL 114.h(star).2.(10).jpg',
+        lyhyt: 'Joan Blaeun 1667 kartta Liivinmaasta: Saarenmaa tarkasti piirretty, kraatterijärvi vain järvi.',
         selite: 'Joan Blaeun vuoden 1667 kartta Liivinmaasta: Saarenmaa on '
           + 'siinä jo tarkasti piirretty, mutta kraatterijärvi on vain '
           + 'järvi muiden joukossa.',

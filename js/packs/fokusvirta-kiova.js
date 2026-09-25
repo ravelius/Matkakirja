@@ -181,33 +181,121 @@ export const FOKUSVIRTA_KIOVA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ilman lisäystä. */
-    paikkarivi: 'Kiova, toukokuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Kaupunki nousee joen törmältä kultaisina kupoleina, ja sen '
-      + 'alla on toinen kaupunki: munkit ovat kaivaneet käytäviä maan '
-      + 'sisään kahdeksansataa vuotta, ja kynttilä kädessä siellä kulkee '
-      + 'pyhiinvaeltajia enemmän kuin kaduilla väkeä. Ostin torilta '
-      + 'hunajaa miehiltä, jotka tulivat myymään sitä veneellä satojen '
-      + 'virstojen päästä. Tämä maa on musta ja antelias — sen näkee '
-      + 'leivästä.',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Kiova, toukokuussa 1873. Lämmintä; kastanjat kukkivat; '
+      + 'puntari korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 326 merkkiä (yläraja 400). */
+    teksti: "Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.",
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    luenta: '[curious] Kaupunki nousee joen törmältä kultaisina kupoleina, '
-      + 'ja sen alla on toinen kaupunki: [whispers] munkit ovat kaivaneet '
-      + 'käytäviä maan sisään kahdeksansataa vuotta, ja kynttilä kädessä '
-      + 'siellä kulkee pyhiinvaeltajia enemmän kuin kaduilla väkeä. '
-      + '[warmly] Ostin torilta hunajaa miehiltä, jotka tulivat myymään '
-      + 'sitä veneellä satojen virstojen päästä. [softly] Tämä maa on '
-      + 'musta ja antelias — sen näkee leivästä.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Seurasin kynttilöitä luoliin" (siirtymä).
+     */
+    reaktiot: [
+  {
+    "id": "kiova.r1",
+    "ankkuri": "kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kiova.r2",
+    "ankkuri": "pakkasi rasian tuliaisiksi",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kiova.r3",
+    "ankkuri": "Palasin puotiin ennen kuin pääsin majatalolle",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kiova.r4",
+    "ankkuri": "katsoi tyhjää rasiaani",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kiova.r5",
+    "ankkuri": "sitoi uuden kannen tavallista tiukemmin",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. [softly] Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-kiova.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-kiova-r20260909-story-v1.jpg;
+     * omistajan hyväksymä tarinakorjaus ISOISA-TARINAKORJAUKSET-4, promptId
+     * ISOISA-TARINA-V2-kiova). Kuvatekstit tekstisession sanasta sanaan: lyhyt
+     * kartalle, pitkä suurennokseen. Lähde on pelin oma havainnekuvamerkintä;
+     * lahteet on toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kiova-r20260909-story-v1.jpg',
+      lyhyt: 'Kiova, 1873. Toinen liekki ei pienentänyt ensimmäistä.',
+      selite: 'Nainen sytytti kynttiläni omastaan Kiovan luolaluostarin kapeassa käytävässä, eikä ensimmäinen liekki pienentynyt. Saamani pieni valo riitti johdattamaan minut takaisin muiden luo.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://guide.kyivcity.gov.ua/lavra-vr/en/',
+        'https://whc.unesco.org/en/list/527/',
+      ],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kiova-r20260911-paper2-v1.jpg",
+      lyhyt: "Kiova, 1873. Luolasta tuotu liekki löysi päivänvalon.",
+      selite: 'Luolien jälkeen suojasin jäljellä olevaa liekkiä kivireunalla, vaikka päivä valaisi jo Lavran kupolit ja kukkivat kastanjat. Tulta ei enää tarvittu, mutta se muistutti maan alla saadusta avusta.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://whc.unesco.org/en/list/527/"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-kiova-01-r20260909-euv2-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-kiova-01-r20260909-euv2-v1.jpg',
+        lyhyt: 'Kiova: tähän kuvaan jätin tilaa hiljaisuudelle.',
+        selite: 'Kuvan kädet suojaavat yhtä liekkiä tuulelta, ja minä jätin sen ympärille tilaa hiljaisuudelle. Isoisän saama valo tuli mieleeni: toiselle annettuna se ei vähentynyt.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://whc.unesco.org/en/list/527/',
+          'https://suspilne.media/kyiv/1335280-kievo-pecerska-lavra-castkovo-vidnovila-svou-robotu/',
+        ],
+      },
+    ],
     /*
      * KAANONTEKSTI ON JAETTU KAHTEEN KENTTÄÄN, EI MUUTETTU.
      *
@@ -226,12 +314,33 @@ export const FOKUSVIRTA_KIOVA = {
      * järjestystä ei ole muutettu: peräkkäin luettuna teksti on sanasta
      * sanaan Fablen kaanonteksti.
      */
-    maadoitus: 'Ne käytävät ovat edelleen olemassa ja niissä kävellään '
-      + 'edelleen kynttilä kädessä — sähkövaloa sinne ei ole viety '
-      + 'tänäkään päivänä..',
-    teksti: 'Ja se musta antelias maa on sama josta tämä maa tunnetaan '
-      + 'nykyäänkin: Ukrainan mustamulta ruokkii ison osan maailmaa. '
-      + 'Hunajaa myydään yhä toreilla. Mennään törmälle.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Kiovan tunnuspuu on hevoskastanja. Puistossa näin uusia puita raketti-iskun tuhoamien tilalla. Minä vein yhden oksanhaaraan risun. Siihen saisi vielä pesän."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'vakava', voimakkuus: 0.6 },
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/
      * kulttuuri-kategoriat.js, kiova/avauskuvat): luolaluostari. Juuri
@@ -245,6 +354,7 @@ export const FOKUSVIRTA_KIOVA = {
      */
     kuva: {
       ampari: 'herokoe/hero-kiova-keskipaiva.jpg',
+      lyhyt: 'Kiovan luolaluostarin perusti munkki Antoni 1051; lavra Unescon maailmanperintöä vuodesta 1990.',
       selite: 'Kiovan luolaluostarin perusti kronikoiden mukaan '
         + 'Athos-vuorelta palannut munkki Antoni vuonna 1051, ja '
         + 'maanalaisista käytävistä kasvanut lavra on ollut Unescon '
@@ -302,6 +412,7 @@ export const FOKUSVIRTA_KIOVA = {
         + 'kansanperinteeseen, Taras Ševtšenkon teoksiin ja Ivan '
         + 'Aivazovskin maalauksiin — ja Linnunradan nimeen, joka ei ole '
         + 'muuttunut.',
+      lahde: 'en-Wikipedia "Chumak". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 2064×1300, public domain, Ivan Aivazovsky,
        * päiväys 1885, Restrictions tyhjä. SILMÄTARKISTUS TEHTY (960 px):
@@ -315,6 +426,7 @@ export const FOKUSVIRTA_KIOVA = {
        */
       kuva: {
         tiedosto: 'Aivasovsky Ivan Constantinovich - Chumaks leisure.jpg',
+        lyhyt: 'Tšumakkien kuormasto yöpyy aron laidalla: härkävankkurit piirissä, tavara odottaa nuotion vieressä.',
         selite: 'Tšumakkien kuormasto yöpyy aron laidalla: härkävankkurit '
           + 'seisovat piirissä, ja tavara odottaa aamua nuotion vieressä.',
         lahde: 'Ivan Aivazovsky 1885, Wikimedia Commons (public domain)',
@@ -391,6 +503,7 @@ export const FOKUSVIRTA_KIOVA = {
         + 'nimesi, mistä se syntyy — ilmastosta, kasvillisuudesta, '
         + 'kalliosta, maanpinnan muodosta ja ajasta. Viisi tekijää, ja '
         + 'yksi niistä on pelkkää kärsivällisyyttä.',
+      lahde: 'en-Wikipedia "Chernozem". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 802×3008, CC BY-SA 3.0, Rockwurm, kuvattu
        * 2.11.2012, kuvaus "Soil profile of a Chernozem". Restrictions
@@ -404,6 +517,7 @@ export const FOKUSVIRTA_KIOVA = {
        */
       kuva: {
         tiedosto: 'Chernozem.JPG',
+        lyhyt: 'Mustamullan pystyleikkaus: Ukrainassa humuskerros voi olla puolitoista metriä paksu.',
         selite: 'Mustamullan pystyleikkaus näyttää humuskerroksen '
           + 'paksuuden: Ukrainassa mustaa maata on paikoin puolitoista '
           + 'metriä ennen kuin vaaleampi pohja alkaa.',
@@ -488,6 +602,9 @@ export const FOKUSVIRTA_KIOVA = {
         + 'hänet myös haudattiin. Kylässä seisoo hänen muistomerkkinsä, '
         + 'ja Ukrainan mehiläishoidon tutkimuslaitos kantaa hänen '
         + 'nimeään.',
+      lahde: 'en-Wikipedia "Petro Prokopovych"; pelin oma tarkistettu '
+        + 'aineisto js/packs/paikallisaarteet.js (UKR/pieni). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Commons 30.8.2026: 861×684, public domain, tekijä L. Moll,
        * kuvaus "Sorte de ruche de la fin du 19e siècle", tiedostonimi
@@ -502,6 +619,7 @@ export const FOKUSVIRTA_KIOVA = {
        */
       kuva: {
         tiedosto: 'Ruche Prokopowitsh.jpg',
+        lyhyt: 'Prokopovytšin kehyspesä 1800-luvun oppikirjassa: kehykset nostetaan ulos pesää rikkomatta.',
         selite: 'Prokopovytšin kehyspesä 1800-luvun mehiläishoidon '
           + 'oppikirjan kuvassa: kehykset nostetaan ulos yksitellen, '
           + 'jolloin pesää ei tarvitse rikkoa.',
@@ -646,6 +764,7 @@ export const FOKUSVIRTA_KIOVA = {
      */
     kuva: {
       tiedosto: 'Golden Gate Kiev top 2018 G1.jpg',
+      lyhyt: 'Portin holvin päällä kultakupolinen kirkko näkyi kauas; nykyinen on vuoden 1982 jälleenrakennus.',
       selite: 'Portin holvin päälle rakennetun kirkon kullatut kupolit '
         + 'näkyivät aikanaan kauas kaupungin ulkopuolelle; nykyinen '
         + 'rakennelma on vuoden 1982 jälleenrakennus.',
@@ -656,60 +775,61 @@ export const FOKUSVIRTA_KIOVA = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * FABLE KATSELMOI: kohtaamisluonnos
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
    *
-   * HAHMO JA KYSYMYS OVAT KAANONIA, ESITTELYTEKSTI ON LUONNOS. Kiovalla
-   * on tarinakaaren paketti (js/tyohuone-kehitys-data.js KAARI_PAKETIT,
-   * id 'kiova'), joka antaa sekä hahmon — portinvartija Oksana, joka
-   * pitää Kultaisen portin avaimia ja tuntee holvin jokaisen
-   * kaiverruksen sormenpäillään — että kysymyksen, jonka game.actionQuiz
-   * esittää laatalla (js/game.js kaariTarina). Kumpaakaan ei kosketa
-   * täällä. Alla oleva `teksti` on VAIN kortin esittely, ja se on
-   * ehdotus: se on kirjoitettu niin, ettei se kertaa Oksanan omaa
-   * repliikkiä eikä paljasta vastausta.
+   * HAHMO VAIHDETTU 7.9.2026: näyttelymestari Taras → näyttelymestari
+   * Danylo. Syy on omistajan palaute kohtaamiskuvasta: *"kuva
+   * lähempää, poista nainen ja vaihda henkilö"* (Fablen päätös samana
+   * iltana). Aiempi vaihdos (portinvartija Oksana → Taras, 5.9.2026)
+   * poisti kaaresta perillisen odotuksen; ammatti ja ääniprofiili
+   * säilyvät ennallaan.
+   *
+   * Kaaren paketti antaa hahmon JA kysymyksen, jonka game.actionQuiz
+   * esittää laatalla (js/game.js kaariTarina); kumpaakaan ei kosketa
+   * täällä. Alla oleva `teksti` on VAIN kortin esittely, kirjoitettu
+   * niin, ettei se kertaa Danylon omaa repliikkiä eikä paljasta
+   * vastausta.
    *
    * KUVAA EI OLE (omistajan linjaus): kohtaamiskortissa on hahmo,
    * nappi, varmistus, vihjeOsio ja teksti.
    *
    * MITÄ LUONNOS YRITTÄÄ (docs/moduulit/tarinakaari.md, luvut 3 ja 5):
-   *   - ÄÄNIPROFIILI on HÄMMÄSTYY ITSEKIN. Vilnan Rasa ja Sevillan
-   *     Amparo ovat epäuskoisia, joten tälle erälle tarvitaan toinen
-   *     ääni: Oksana uskoo sukunsa tarinan täysin, mutta ei ole
-   *     koskaan tiennyt, kuka viivat veisti — ja myöntää sen ääneen.
+   *   - ÄÄNIPROFIILI on HÄMMÄSTYY ITSEKIN, kuten ennenkin: Danylo
+   *     tietää kokoelmasta kaiken eikä silti tiedä, mistä piirroksen
+   *     viiva on peräisin — ja myöntää sen ääneen.
    *   - VARALLISUUSSÄÄNTÖ: isoisä ei maksa mitään, ei tilaa mitään eikä
-   *     käske ketään. Suvun syy pitää huolta holvista on suvun oma:
-   *     avaimet ovat kulkeneet perheessä, ja kaiverrusten pyyhkiminen
-   *     on osa työtä, jota kukaan ei ole käskenyt tekemään.
-   *   - LUPAUS, JONKA AARRETEKSTIN ON LUNASTETTAVA: Oksana painaa
-   *     vieraan käden kaiverrukselle, ja se luetaan sormilla.
-   *   - EI SPOILERIA: kortti ei mainitse porttia, sen tehtävää eikä
-   *     ikää — vain holvin, kiven ja avaimet.
+   *     käske ketään, eikä kukaan odota ketään. Danylo kiinnostuu
+   *     työkseen: tunnistamaton viiva on hänen ongelmansa.
+   *   - EI SPOILERIA: kortti ei mainitse portin tehtävää eikä ikää —
+   *     vain dokumentoinnin, jäännökset ja kansiot.
+   *   - PIENOISMALLI POISTUI kaaresta 7.9.2026, joten sitä ei mainita
+   *     enää täälläkään. MODERNI JA MUINAINEN PIDETÄÄN SILTI
+   *     ERILLÄÄN: vuoden 1982 suojarakennus ei ole muinainen eikä sitä
+   *     väitetä sellaiseksi.
    */
   kohtaaminen: {
-    hahmo: 'Portinvartija Oksana',
-    nappi: 'Tapaa portinvartija',
-    varmistus: 'Haluatko varmasti tavata Oksanan juuri nyt?',
+    hahmo: 'Näyttelymestari Danylo',
+    nappi: 'Tapaa näyttelymestari',
+    varmistus: 'Haluatko varmasti tavata Danylon juuri nyt?',
     /*
      * VIHJELINKIN OSIO (omistajan pelitestipalaute v1119, kohta 13):
      * rivi kertoo, MISTÄ PÄIN LEHTEÄ ratkaisu löytyy, vastausta
      * paljastamatta, ja avaa lehden siihen osioon. Tunnus on
      * kaupunkilehden osion id (js/packs/kulttuuri-kategoriat.js, kiova):
-     * 'kaupunki' tai 'musiikki'. Oksanan kysymys koskee holvia ja
+     * 'kaupunki' tai 'musiikki'. Danylon kysymys koskee porttia ja
      * muureja, ja lähin tuki on kaupunkisivulla, jonka kansikuvan selite
      * kertoo, mitä porttitornista on aitoa ja mitä ei.
      */
     vihjeOsio: 'kaupunki',
-    teksti: 'Oksanalla on avaimet, ja avaimet ovat vanhempia kuin lukot, '
-      + 'joihin ne sopivat: perheessä on hoidettu tätä holvia niin '
-      + 'kauan, ettei kukaan enää muista, kuka aloitti. Työhön kuuluu '
-      + 'pyyhkiä pöly kaiverruksista, ja sen hän tekee kämmenellä eikä '
-      + 'harjalla, koska harja ei tunne mitään. Vieraita hän on '
-      + 'opastanut satoja, ja useimmat kysyvät samaa: kuka nämä viivat '
-      + 'on veistänyt. Oksana sanoo suoraan, ettei tiedä, ja että se '
-      + 'harmittaa häntä enemmän kuin hän kehtaa myöntää — hän on '
-      + 'lukenut ne tuhat kertaa sormillaan eikä ole päässyt riviäkään '
-      + 'pidemmälle. Kiveen hän ei kuitenkaan päästä ketään koskemaan '
-      + 'ennen kuin tulija osoittaa tietävänsä, mitä varten se '
+    teksti: 'Danylo järjestää museon dokumentointia ja tuntee kokoelman '
+      + 'kerroksittain: mikä on 1000-luvun muurijäännöstä ja mikä vuoden 1982 '
+      + 'suojarakennusta, hän osoittaa kädellä epäröimättä. Vieraita hän on '
+      + 'opastanut satoja, ja useimmat kysyvät kullasta; sen hän kuittaa '
+      + 'ystävällisesti ja joka kerta samoin sanoin. Vanha piirros on eri '
+      + 'asia. Siinä on viiva, jota hän ei tunnista, eikä tunnistamattomuus '
+      + 'ole hänen ammatissaan mukava tunne — se harmittaa häntä enemmän kuin '
+      + 'hän kehtaa myöntää. Kansioitaan hän ei silti avaa kenellekään ennen '
+      + 'kuin tulija osoittaa tietävänsä, mitä varten koko rakennelma '
       + 'aikoinaan pystytettiin.',
   },
 
@@ -719,7 +839,7 @@ export const FOKUSVIRTA_KIOVA = {
    */
 
   /*
-   * KOHTAAMISPAIKKA: KULTAINEN PORTTI, jonka holvissa Oksana seisoo.
+   * KOHTAAMISPAIKKA: KULTAINEN PORTTI, jonka museossa Taras työskentelee.
    *
    * 50,44888889 N / 30,51333333 E — en-Wikipedia "Golden Gate, Kyiv",
    * prop=coordinates (haettu 30.8.2026). Muunnos on sama kaava ja samat
@@ -907,6 +1027,7 @@ export const FOKUSVIRTA_KIOVA = {
        */
       kuva: {
         tiedosto: '02013 Der "bemalten Keramik" vom Trypillja-Typus am Anfang des 30.Jhs.v. Chr. beim Dorfe Biltsche-Solote, B5.JPG',
+        lyhyt: 'Trypillian kulttuurin maalattua keramiikkaa Biltše-Zolotesta, poltettu kehittyneissä uuneissa.',
         selite: 'Trypillian kulttuurin maalattua keramiikkaa Biltše-Zolotesta: '
           + 'astiat poltettiin kehittyneissä uuneissa jo ennen '
           + 'savenvalajan pyörän yleistymistä muualla.',
@@ -1017,6 +1138,7 @@ export const FOKUSVIRTA_KIOVA = {
        */
       kuva: {
         tiedosto: 'Історія України-Русі. 1912. Дніпровий поріг ненаситець.jpg',
+        lyhyt: 'Nenasytets eli Kyltyämätön oli koskista suurin, 2,5 km pitkä kivikko kuuluvine kilometrien päähän.',
         selite: 'Nenasytets eli Kyltymätön oli koskista suurin: kaksi ja '
           + 'puoli kilometriä pitkä kivikko, jonka kohina kuului '
           + 'useiden kilometrien päähän.',
@@ -1128,6 +1250,7 @@ export const FOKUSVIRTA_KIOVA = {
        */
       kuva: {
         tiedosto: 'Oranta-Kyiv.jpg',
+        lyhyt: 'Oranta, rukoileva Neitsyt, on kuusi metriä korkea ja täyttää Pyhän Sofian keskusapsidin.',
         selite: 'Oranta eli rukoileva Neitsyt on kuusi metriä korkea ja '
           + 'täyttää Pyhän Sofian keskusapsidin kultaisella pohjallaan.',
         lahde: 'Wikimedia Commons (public domain)',

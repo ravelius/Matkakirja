@@ -1,0 +1,308 @@
+[
+ {
+  "selain": "chromium",
+  "kotelo": "iphone",
+  "kerta": 1,
+  "kirjasto": "kirjasto yritys=0 ok=1 ms=366",
+  "avaruusAlku": "avaruus-alku kotelo=374x771 kangas=1122x2313 hukassa=0 itsenainen=0 dpr=3",
+  "lahde": "4096x2048",
+  "ladontaKangas": "2048x1024",
+  "ladontaRivit": [
+   "2048x1024 ok=1 tapa=suodatin"
+  ],
+  "valmis": "blob 1456 ms",
+  "vaiheetKaatui": [],
+  "pintaMittaus": [
+   "kirkkaus=89 reliefi=1 varapolku=0"
+  ],
+  "pintaMusta": [],
+  "kehykset": [
+   "piirtoja=545 alussa=98 pakotettu=0"
+  ],
+  "pistemittari": [
+   "kohteita=64 domissa=64 kerros=71",
+   "kohteita=64 domissa=64 kerros=71"
+  ],
+  "pisteetUusinta": [],
+  "vartijat": [
+   "ei/64",
+   "ei/64"
+  ],
+  "puuteLopussa": "ei",
+  "pisteitaLopussa": 64,
+  "pisteSarja": [
+   [
+    0,
+    64
+   ],
+   [
+    0.5,
+    64
+   ],
+   [
+    1,
+    64
+   ],
+   [
+    1.5,
+    64
+   ],
+   [
+    2,
+    64
+   ],
+   [
+    2.5,
+    64
+   ],
+   [
+    3,
+    64
+   ],
+   [
+    3.5,
+    64
+   ],
+   [
+    4,
+    64
+   ],
+   [
+    4.5,
+    64
+   ],
+   [
+    5,
+    64
+   ],
+   [
+    5.5,
+    64
+   ],
+   [
+    6,
+    64
+   ],
+   [
+    6.5,
+    64
+   ],
+   [
+    7,
+    64
+   ],
+   [
+    7.5,
+    64
+   ],
+   [
+    8,
+    64
+   ],
+   [
+    8.5,
+    64
+   ],
+   [
+    9,
+    64
+   ],
+   [
+    9.5,
+    64
+   ],
+   [
+    10,
+    64
+   ],
+   [
+    10.5,
+    64
+   ],
+   [
+    11,
+    64
+   ],
+   [
+    11.5,
+    64
+   ],
+   [
+    12,
+    64
+   ],
+   [
+    12.5,
+    64
+   ],
+   [
+    13,
+    64
+   ],
+   [
+    13.5,
+    64
+   ],
+   [
+    14,
+    64
+   ],
+   [
+    14.5,
+    64
+   ]
+  ],
+  "pisteitaEnsinHetki": 0,
+  "kirkkaus5": {
+   "keski": 50.6,
+   "sivut": [
+    53.5,
+    67,
+    82.6,
+    22.6
+   ],
+   "max": 82.6
+  },
+  "kirkkaus15": {
+   "keski": 56.9,
+   "sivut": [
+    46.2,
+    64.1,
+    79.5,
+    21.8
+   ],
+   "max": 79.5
+  },
+  "kirkkausSarja": [
+   [
+    1,
+    58.9,
+    83.2
+   ],
+   [
+    2,
+    55.2,
+    85.2
+   ],
+   [
+    5,
+    50.6,
+    82.6
+   ]
+  ],
+  "eleMs": 31755,
+  "kartta": {
+   "map": true,
+   "tyyppi": "HTMLImageElement",
+   "koko": "2048x1024",
+   "valmis": true,
+   "src": "blob:http://127.0.0.",
+   "versio": 1,
+   "vari": "999999",
+   "emissive": "000000"
+  },
+  "erittely": null,
+  "kuva": "astro-webkit-chromium-iphone-1-20260918.jpg",
+  "reliefinTarkkuus": "4k",
+  "reliefinKestoMs": 1456,
+  "pinnanOsoite": "blob:http://127.0.0.1:88",
+  "kangas": {
+   "leveys": 1122,
+   "korkeus": 2484
+  },
+  "laastari": {
+   "lat": 41.6,
+   "lng": 14.6,
+   "altitude": 0.14,
+   "kuva": "astro-laastari-yo-chromium-jalkeen.jpg",
+   "teravyys": 11.496,
+   "fps": 21.3,
+   "muistiMt": 257,
+   "kaistat": [
+    46.94,
+    51.97,
+    45.76,
+    55.49
+   ],
+   "kaari": 0.8459,
+   "vartio5": {
+    "pohjanKaistat": [
+     49.61,
+     57.42,
+     49.58,
+     58.45
+    ],
+    "erot": [
+     -2.67,
+     -5.45,
+     -3.82,
+     -2.96
+    ],
+    "kaistaEro": 5.45,
+    "kaistaEroOk": true,
+    "pohjanKaari": 0.8488,
+    "kaariEro": 0.0029,
+    "kaariOk": true
+   },
+   "reliefipyyntoja": 20,
+   "seepiapyyntoja": 0,
+   "ekaLaattaMs": 66,
+   "tila": "astronautti",
+   "kaytossa": true,
+   "astro": true,
+   "taso": 5,
+   "laattoja": 20,
+   "valmiita": 20,
+   "scenessa": 20,
+   "tavut": 27962020,
+   "syy": ""
+  },
+  "koteloMitat": {
+   "leveys": 374,
+   "korkeus": 828
+  },
+  "kontekstiHukassa": false,
+  "ilmoitus": null,
+  "diag": [
+   "avaruus-alku kotelo=374x771 kangas=1122x2313 hukassa=0 itsenainen=0 dpr=3",
+   "alku lahde=4096x2048 kangas=2048x1024 ruutu=390 kokoPallo=1 webkit=1",
+   "avaruus-pinta tekstuuri=1 tarkkuus=4k",
+   "avaruus-valmis alt=3.91 kotelo=374x771 tahtia=2190 kalvo=1",
+   "vaihe nimi=avaruus ok=1 ms=51",
+   "vaihe nimi=pulu ok=1 ms=0",
+   "vaihe nimi=aanet ok=1 ms=0",
+   "vaihe nimi=linssiaani ok=1 ms=0",
+   "vaihe nimi=pisteet ok=1 ms=0",
+   "kuva px=4096x2048 ms=190",
+   "ladonta koko=2048x1024 ok=1 tapa=suodatin ms=141",
+   "blob kt=3766 ms=1123",
+   "valmis syy=blob osoite=blob:http:// ms=1456",
+   "pinta-mittaus kirkkaus=89 reliefi=1 varapolku=0",
+   "vartija puute=ei pisteita=64 vaiheet=0",
+   "pistemittari kohteita=64 domissa=64 kerros=71",
+   "kehykset piirtoja=545 alussa=98 pakotettu=0",
+   "vartija puute=ei pisteita=64 vaiheet=0",
+   "pistemittari kohteita=64 domissa=64 kerros=71"
+  ],
+  "ruutu": {
+   "inner": "390x844",
+   "dpr": 3,
+   "standalone": false,
+   "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHT"
+  },
+  "virheet": [],
+  "konsoli": [
+   "error: Failed to load resource: net::ERR_FAILED",
+   "warning: [.WebGL-0x11c004f2200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+   "warning: [.WebGL-0x11c004f2200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+   "warning: [.WebGL-0x11c004f2200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+   "warning: [.WebGL-0x11c004f2200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+   "error: Failed to load resource: net::ERR_FAILED",
+   "error: Failed to load resource: net::ERR_FAILED",
+   "error: The AudioContext encountered an error from the audio device or the WebAudio renderer.",
+   "error: Failed to load resource: net::ERR_FAILED",
+   "warning: Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multip",
+   "error: The AudioContext encountered an error from the audio device or the WebAudio renderer."
+  ]
+ }
+]

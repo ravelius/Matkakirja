@@ -1,0 +1,199 @@
+{
+  "versio": 2,
+  "kaupunki": "madrid",
+  "teksti": "Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.",
+  "tekstiSha256": "076951023a639d1d74dc50775f3a07dc8a748eb6ecf844140db3348c0c29bfcc",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-madrid.mp3",
+    "versio": 2,
+    "tavut": 399195,
+    "sha256": "35968a715d0784bdc379496d6a9b18b7f2838ca990c7d180b1c4fa9006bbb4df"
+  },
+  "kesto": 24860,
+  "sanat": [
+    {
+      "sana": "Retiron",
+      "alku": 140,
+      "loppu": 580
+    },
+    {
+      "sana": "portilla",
+      "alku": 640,
+      "loppu": 1080
+    },
+    {
+      "sana": "valmistauduin",
+      "alku": 1140,
+      "loppu": 1860
+    },
+    {
+      "sana": "näyttämään",
+      "alku": 1900,
+      "loppu": 2440
+    },
+    {
+      "sana": "käyntikorttini",
+      "alku": 2500,
+      "loppu": 3400
+    },
+    {
+      "sana": "Vartija",
+      "alku": 4740,
+      "loppu": 5140
+    },
+    {
+      "sana": "viittasi",
+      "alku": 5200,
+      "loppu": 5620
+    },
+    {
+      "sana": "sisään",
+      "alku": 5680,
+      "loppu": 6120
+    },
+    {
+      "sana": "katsomatta",
+      "alku": 6160,
+      "loppu": 6760
+    },
+    {
+      "sana": "nimeä",
+      "alku": 6800,
+      "loppu": 7280
+    },
+    {
+      "sana": "Kuningattaren",
+      "alku": 8820,
+      "loppu": 9520
+    },
+    {
+      "sana": "entinen",
+      "alku": 9600,
+      "loppu": 10020
+    },
+    {
+      "sana": "puisto",
+      "alku": 10080,
+      "loppu": 10620
+    },
+    {
+      "sana": "kuului",
+      "alku": 10700,
+      "loppu": 11100
+    },
+    {
+      "sana": "nyt",
+      "alku": 11160,
+      "loppu": 11340
+    },
+    {
+      "sana": "kaupungille",
+      "alku": 11400,
+      "loppu": 12200
+    },
+    {
+      "sana": "Lammen",
+      "alku": 14180,
+      "loppu": 14480
+    },
+    {
+      "sana": "rannalla",
+      "alku": 14540,
+      "loppu": 15000
+    },
+    {
+      "sana": "mies",
+      "alku": 15060,
+      "loppu": 15300
+    },
+    {
+      "sana": "levitti",
+      "alku": 15340,
+      "loppu": 15720
+    },
+    {
+      "sana": "eväänsä",
+      "alku": 15780,
+      "loppu": 16160
+    },
+    {
+      "sana": "penkille",
+      "alku": 16219,
+      "loppu": 16680
+    },
+    {
+      "sana": "ja",
+      "alku": 16720,
+      "loppu": 16880
+    },
+    {
+      "sana": "teki",
+      "alku": 16960,
+      "loppu": 17160
+    },
+    {
+      "sana": "minulle",
+      "alku": 17200,
+      "loppu": 17500
+    },
+    {
+      "sana": "tilaa",
+      "alku": 17620,
+      "loppu": 18100
+    },
+    {
+      "sana": "Panin",
+      "alku": 19880,
+      "loppu": 20160
+    },
+    {
+      "sana": "kortin",
+      "alku": 20220,
+      "loppu": 20540
+    },
+    {
+      "sana": "takaisin",
+      "alku": 20580,
+      "loppu": 21000
+    },
+    {
+      "sana": "taskuun",
+      "alku": 21040,
+      "loppu": 21560
+    },
+    {
+      "sana": "Tähän",
+      "alku": 22740,
+      "loppu": 23020
+    },
+    {
+      "sana": "seuraan",
+      "alku": 23080,
+      "loppu": 23600
+    },
+    {
+      "sana": "pääsi",
+      "alku": 23660,
+      "loppu": 24000
+    },
+    {
+      "sana": "ilman",
+      "alku": 24080,
+      "loppu": 24340
+    },
+    {
+      "sana": "esittelyä",
+      "alku": 24420,
+      "loppu": 24860
+    }
+  ],
+  "lauseet": [
+    140,
+    4740,
+    8820,
+    14180,
+    19880,
+    22740
+  ],
+  "luotu": "2026-09-23T15:35:34.556Z"
+}

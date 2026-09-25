@@ -1,0 +1,2000 @@
+# Karttanostojen kattavuus maittain
+
+Päivitetty: 6.9.2026 (Fable, runko; K2-erän inventaario ja erät 1–2 täyttivät
+taulukon). Taulukko-osio on aina `node tools/laske-karttanostot.mjs --md`
+-tulosteesta, ei käsin korjattu.
+Omistaja 2.9.2026: *"pitäisi jatkaa kaikki Euroopan maat loppuun
+näiden karttanostojen osalta. ja muistathan että kohdekaupunkien
+nostot eivät tule pääkartalle?"* Tavoite per maa: 8 kohdetta,
+3 maastokohdetta, 1 eläintäky, 2 skandaalia. Kohdekaupunkien kohdalla
+olevat nostot menevät kohdekartalle, eivät pääkartalle (Raamattu).
+
+## Miten taulukko syntyy
+
+Luvut lasketaan koneellisesti eikä käsin:
+
+```
+node tools/laske-karttanostot.mjs        # luettava taulukko
+node tools/laske-karttanostot.mjs --md   # tämän sivun taulukko
+```
+
+Työkalu lukee samat taulut kuin peli ja pyytää karttarivit pelin
+omalta passilta (tools/tarkista-nostopaikat.mjs `paakartanNostot`),
+joten kaksi työkalua ei voi antaa samasta maasta eri vastausta. Kun
+maa täydennetään, taulukko ajetaan uusiksi eikä lukuja korjata käsin.
+
+## Mitä sarakkeet ovat
+
+| sarake | mistä |
+|---|---|
+| kohteet | maan kohdemerkit, joiden tyyppi ei ole maastoa |
+| maastokohteet | saman listan maastotyypit: vuori, joki, meri, järvi, saari |
+| eläintäky | `js/packs/elaintakyt.js`, 0 tai 1 |
+| skandaalit | `js/packs/skandaalit.js` |
+| hetket | `js/packs/historian-hetket.js`, maan `iso`-kentällä |
+| kulttuurinostot | maan kaupunkien syvennykset ja täkynostot, joilla on **oma** karttapaikka (`js/syvennys.js`, `js/fokusnosto.js`) |
+| pääkartalla | merkkejä maailmankartalla kaupunkikaton jälkeen |
+| kohdekartalla | merkkejä kaupunkilehden kohdekartalla |
+
+Jako on **tyypin** eikä tiedoston mukainen. Pelaaja näkee kartalla
+tyypin, ei tiedostoa: Kreikan Ólympos on maastokohde, vaikka se asuu
+kuratoidussa `fokuskohteet-grc.js`:ssä, ja Islannin Þjórsá on
+maastokohde `maastokohteet-isl.js`:ssä. Peli katsoo listat joka
+tapauksessa yhdessä (`js/fokuskohteet.js` KOHDE_MAAT).
+
+## Kattavuus Euroopassa 6.9.2026 (erien 2–4 jälkeen)
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Islanti (ISL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Sveitsi (CHE) | 8 | 5 | 1 | 3 | 1 | 0 | 17 | 0 | täysi |
+| Tšekki (CZE) | 8 | 3 | 1 | 3 | 0 | 4 | 14 | 4 | täysi |
+| Viro (EST) | 8 | 3 | 1 | 3 | 0 | 4 | 13 | 5 | täysi |
+| Latvia (LVA) | 8 | 3 | 1 | 2 | 0 | 5 | 16 | 2 | täysi |
+| Tanska (DNK) | 8 | 3 | 1 | 3 | 1 | 4 | 15 | 4 | täysi |
+| Ruotsi (SWE) | 8 | 4 | 1 | 3 | 0 | 4 | 14 | 5 | täysi |
+| Itävalta (AUT) | 8 | 4 | 1 | 3 | 2 | 5 | 17 | 3 | täysi |
+| Bosnia ja Hertsegovina (BIH) | 9 | 5 | 1 | 2 | 0 | 4 | 18 | 2 | täysi |
+| Irlanti (IRL) | 8 | 3 | 1 | 3 | 0 | 6 | 17 | 3 | täysi |
+| Liettua (LTU) | 8 | 3 | 1 | 3 | 0 | 6 | 17 | 3 | täysi |
+| Alankomaat (NLD) | 8 | 3 | 1 | 3 | 0 | 7 | 18 | 3 | täysi |
+| Suomi (FIN) | 8 | 4 | 1 | 3 | 1 | 7 | 14 | 8 | täysi |
+| Romania (ROU) | 12 | 4 | 1 | 2 | 0 | 4 | 19 | 3 | täysi |
+| Unkari (HUN) | 11 | 6 | 1 | 3 | 0 | 3 | 20 | 3 | täysi |
+| Norja (NOR) | 8 | 4 | 1 | 3 | 2 | 8 | 20 | 3 | täysi |
+| Portugali (PRT) | 8 | 4 | 1 | 3 | 2 | 7 | 19 | 4 | täysi |
+| Bulgaria (BGR) | 12 | 6 | 1 | 3 | 0 | 5 | 18 | 7 | täysi |
+| Kroatia (HRV) | 8 | 11 | 1 | 3 | 0 | 3 | 23 | 2 | täysi |
+| Puola (POL) | 8 | 5 | 1 | 3 | 0 | 9 | 20 | 5 | täysi |
+| Ukraina (UKR) | 8 | 5 | 1 | 3 | 0 | 9 | 21 | 4 | täysi |
+| Ranska (FRA) | 8 | 6 | 1 | 3 | 6 | 9 | 15 | 11 | täysi |
+| Iso-Britannia (GBR) | 8 | 5 | 1 | 3 | 9 | 7 | 20 | 7 | täysi |
+| Venäjä (RUS) | 8 | 8 | 1 | 3 | 2 | 9 | 22 | 6 | täysi |
+| Saksa (DEU) | 8 | 13 | 1 | 3 | 4 | 6 | 28 | 5 | täysi |
+| Italia (ITA) | 10 | 9 | 1 | 3 | 3 | 10 | 22 | 12 | täysi |
+| Espanja (ESP) | 8 | 5 | 1 | 3 | 4 | 15 | 25 | 10 | täysi |
+| Turkki (TUR) | 22 | 6 | 1 | 3 | 2 | 3 | 29 | 6 | täysi |
+| Kreikka (GRC) | 20 | 15 | 1 | 3 | 1 | 4 | 33 | 9 | täysi |
+
+Maita 29, tavoitteessa 29, vajaita 0. Euroopan kohdetavoite on täynnä.
+
+## Erä 1: viisi heikointa maata, ennen ja jälkeen
+
+Erä valittiin taulukon heikoimmasta päästä. Karttamerkkien yhteismäärä
+(pääkartta + kohdekartta) oli pienin näillä viidellä, ja jokaisella
+niistä kuratoituja kohteita oli **nolla** — maasto, eläintäky ja
+skandaalit olivat jo tavoitteessa, joten koko vaje oli kohteissa.
+
+| maa | merkkejä ennen | merkkejä jälkeen | kohteet ennen → jälkeen |
+|---|---:|---:|---|
+| Islanti (ISL) | 5 | 13 | 0 → 8 |
+| Sveitsi (CHE) | 8 | 16 | 0 → 8 |
+| Tšekki (CZE) | 10 | 18 | 0 → 8 |
+| Viro (EST) | 10 | 18 | 0 → 8 |
+| Latvia (LVA) | 10 | 18 | 0 → 8 |
+
+Yhteensä 40 uutta karttanostoa. Yksikään ei ole kohdekaupungin
+kohdalla: lähin uusi merkki on Islannin Þingvellir 26,7 lautayksikön
+päässä Islanti-laatasta, ja muissa maissa lähin on 29,1–29,6
+yksikön päässä (raja `KAUPUNGIN_KOHDALLA_SADE` on 7). Kaikki 40 ovat
+siis pääkartan merkkejä.
+
+**Missä ne asuvat.** Kohteet kirjoitettiin maan omaan
+`js/packs/maastokohteet-<iso>.js`-tiedostoon eikä uuteen
+`fokuskohteet-<iso>.js`-pakkiin. Syy on kirjattu jokaisen tiedoston
+alkuun: kohdepakki vaatisi rivin `js/fokuskohteet.js`:n
+KOHDE_MAAT-tauluun (rinnakkaisen erän hallussa) sekä FOKUS_LISANIMET-
+lohkon (`js/packs/fokus-grc.js`), jonka lähtöaineisto on ämpärissä
+eikä repossa. Maastokohteiden hakemisto (`js/packs/maastokohteet.js`)
+liittää listan peliin sellaisenaan, joten kohteet ovat kartalla heti.
+Kun KOHDE_MAAT vapautuu, lohkot siirtyvät omiin pakkeihinsa
+sellaisinaan — ja silloin on ajettava myös
+`tools/tee-fokus-lisanimet.mjs`, jotta lehteen poltetut kaupunginnimet
+eivät jää kaksinkerroin.
+
+**Kuvaton erä.** Kortti kantaa tekstin ja lähteen, ei kuvaa — sama
+linja kuin maastokohteilla muutenkin. Tarkistamaton Commons-tiedosto
+olisi huonompi kuin kuvaton kortti.
+
+## Erien järjestys
+
+Erä valitaan aina taulukon heikoimmasta päästä: ensin ne maat, joiden
+karttamerkkien yhteismäärä (pääkartta + kohdekartta) on pienin, ja
+niiden sisällä ne lajit, joissa vaje on suurin.
+
+- **K2, erä 1 (tehty)** — ISL, CHE, CZE, EST, LVA: 8 kohdetta kuhunkin,
+  yhteensä 40 uutta karttanostoa.
+- **Erä 2 (tehty 6.9.2026)** — DNK, SWE, AUT, IRL, LTU: 8 kohdetta
+  kuhunkin, yhteensä 40 uutta karttanostoa. Omistaja 6.9.2026:
+  *"Jatka kartta nostojen tekoa koko maailmaan."* Kaikilla viidellä oli
+  nolla kohdetta ja pienin merkkimäärä jäljellä olevista, joten työ oli
+  puhdasta kohdetyötä erän 1 mallilla. Yksikään uusi merkki ei ole
+  pelikaupungin kohdalla: lähin on Tarán kukkula 15,1 lautayksikön
+  päässä Dublinista (raja `KAUPUNGIN_KOHDALLA_SADE` on 7), joten kaikki
+  40 ovat pääkartan merkkejä. Kuvaton erä, kuten erä 1. Ainoa hylätty
+  ehdokas oli Drottningholm: kuusi yksikköä Tukholmasta eli kaupungin
+  kohdalla.
+- **Erä 3 (ehdotus)** — NLD 13, FIN 14, PRT 15, NOR 16, POL 17.
+- **Erä 4 (ehdotus)** — UKR 17, RUS 20, ESP 26 sekä vajaat FRA (−6) ja
+  GBR (−5), jotka ovat lähimpänä maalia.
+
+Maastovajetta ei jäänyt: tyyppipohjaisella laskennalla jokaisella
+maalla on jo vähintään kolme maastokohdetta, ja skandaalitavoite (2)
+täyttyy kaikkialla. Koko jäljellä oleva vaje on siis kohteissa.
+
+## Säännöt, jotka pätevät joka erässä
+
+1. **Kohdekaupungin kohdalla oleva nosto ei ole pääkartalla.** Mitta on
+   `KAUPUNGIN_KOHDALLA_SADE` (7 lautayksikköä, `js/fokuskohteet.js`).
+   Uutta kohdetta ei siis kirjoiteta pelikaupungin viereen, ellei sille
+   samalla tehdä pistettä kohdekartalle (`js/packs/maakartat.js`
+   kohteet + `js/packs/nahtavyysjutut.js` `nosto`-kenttä).
+2. **Jokainen nosto on jollakin kartalla.** `tools/tarkista-nostopaikat.mjs`
+   ja `tests/nostot-kartalla.test.mjs` ovat portti.
+3. **Sama nimi kartalla vain kerran** (N3). Maastokohteen nimi tulee
+   `js/packs/maailmankartta-nimet.js`:stä, jos sama nimi on lähellä.
+   Uusi kohde ei myöskään toista maan oman listan nimeä
+   (`tools/savukkeet/savuke-maastokohteet.mjs`, vartio 6).
+4. **Kuva vain Commonsin PD/CC-tiedostosta**, lisenssi ja tekijä
+   tarkistettuina; kuvateksti kertoo kohteesta eikä kuvasta, yksi virke.
+   Kuvaton kohde on parempi kuin tarkistamaton kuva.
+5. **Lähde on en-Wikipedia + artikkelin osa + tarkistuspäivä**, ja
+   jokainen väite on lähteen katteessa (faktakuri).
+
+## Kattavuus koko maailmassa 6.9.2026
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Työkalu laskee siitä lähtien KAIKKI laudan maat, ei enää Euroopan 29:ää:
+joukko on maailmankartan oma maalista (`map.cityCountry` -taulun uniikit
+ISO-tunnukset, **112 maata**) eli täsmälleen ne maat, joissa pelaaja voi
+olla. Nimet tulevat pelin omasta nimitaulusta (`map.countryShapes`), ja
+kohdelista suoraan pelin `KOHDE_MAAT`-taulusta — työkaluun ei siis
+tarvitse lisätä riviä, kun uusi `fokuskohteet-<iso>.js` syntyy.
+Tavoite ja sarakkeet ovat samat kuin yllä.
+
+Rivit on ryhmitelty maanosittain ja maanosan sisällä **heikoimmasta
+vahvimpaan** (pääkartan ja kohdekartan merkkien summa) — siinä
+järjestyksessä, jossa erät valitaan. Maanosa tulee laudan omasta
+`cityManner`-taulusta; Euroopan laudan 29 maata pysyvät Euroopassa,
+joten Turkki ja Venäjä ovat tässäkin siellä, missä niiden erät on
+suunniteltu.
+
+Edellä oleva 2.9.2026 taulukko on jätetty koskematta tarkoituksella:
+rinnakkaiset erät päivittävät sitä, ja Euroopan luvut näkyvät tässä
+osiossa tuoreina.
+
+**Tilanne yhdellä silmäyksellä (erien M1–M18 jälkeen, 6.9.2026 iltapäivä).** 112 maasta **103 on tavoitteessa** ja 9 vajaita. Tarkoitukselliset vajeet: Vanuatu ja Saint Helena (laudan maa-alue tai outlines ei kata saarta, eläintäky ei mahdu vartioon), Hongkong, Singapore, Qatar, Kuwait ja Kypros (lehden ikkuna tai kaupunkisäde). Fidžin ja Salomonsaarten eläintäky tuli 7.9.2026 erässä M19 (ks. dokumentin loppu); luvut päivittyvät, kun taulukot ajetaan uudelleen. Maailman nostoerät ovat tehdyt; jäljellä on vain tekniset poikkeukset.
+
+### Eurooppa (29 maata)
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Islanti (ISL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Sveitsi (CHE) | 8 | 5 | 1 | 3 | 1 | 0 | 17 | 0 | täysi |
+| Tšekki (CZE) | 8 | 3 | 1 | 3 | 0 | 4 | 14 | 4 | täysi |
+| Viro (EST) | 8 | 3 | 1 | 3 | 0 | 4 | 13 | 5 | täysi |
+| Latvia (LVA) | 8 | 3 | 1 | 2 | 0 | 5 | 16 | 2 | täysi |
+| Tanska (DNK) | 8 | 3 | 1 | 3 | 1 | 4 | 15 | 4 | täysi |
+| Ruotsi (SWE) | 8 | 4 | 1 | 3 | 0 | 4 | 14 | 5 | täysi |
+| Itävalta (AUT) | 8 | 4 | 1 | 3 | 2 | 5 | 17 | 3 | täysi |
+| Bosnia ja Hertsegovina (BIH) | 9 | 5 | 1 | 2 | 0 | 4 | 18 | 2 | täysi |
+| Irlanti (IRL) | 8 | 3 | 1 | 3 | 0 | 6 | 17 | 3 | täysi |
+| Liettua (LTU) | 8 | 3 | 1 | 3 | 0 | 6 | 17 | 3 | täysi |
+| Alankomaat (NLD) | 8 | 3 | 1 | 3 | 0 | 7 | 18 | 3 | täysi |
+| Suomi (FIN) | 8 | 4 | 1 | 3 | 1 | 7 | 14 | 8 | täysi |
+| Romania (ROU) | 12 | 4 | 1 | 2 | 0 | 4 | 19 | 3 | täysi |
+| Unkari (HUN) | 11 | 6 | 1 | 3 | 0 | 3 | 20 | 3 | täysi |
+| Norja (NOR) | 8 | 4 | 1 | 3 | 2 | 8 | 20 | 3 | täysi |
+| Portugali (PRT) | 8 | 4 | 1 | 3 | 2 | 7 | 19 | 4 | täysi |
+| Bulgaria (BGR) | 12 | 6 | 1 | 3 | 0 | 5 | 18 | 7 | täysi |
+| Kroatia (HRV) | 8 | 11 | 1 | 3 | 0 | 3 | 23 | 2 | täysi |
+| Puola (POL) | 8 | 5 | 1 | 3 | 0 | 9 | 20 | 5 | täysi |
+| Ukraina (UKR) | 8 | 5 | 1 | 3 | 0 | 9 | 21 | 4 | täysi |
+| Ranska (FRA) | 8 | 6 | 1 | 3 | 6 | 9 | 15 | 11 | täysi |
+| Iso-Britannia (GBR) | 8 | 5 | 1 | 3 | 9 | 7 | 20 | 7 | täysi |
+| Venäjä (RUS) | 8 | 8 | 1 | 3 | 2 | 9 | 22 | 6 | täysi |
+| Saksa (DEU) | 8 | 13 | 1 | 3 | 4 | 6 | 28 | 5 | täysi |
+| Italia (ITA) | 10 | 9 | 1 | 3 | 3 | 10 | 22 | 12 | täysi |
+| Espanja (ESP) | 8 | 5 | 1 | 3 | 4 | 15 | 25 | 10 | täysi |
+| Turkki (TUR) | 22 | 6 | 1 | 3 | 2 | 3 | 29 | 6 | täysi |
+| Kreikka (GRC) | 20 | 15 | 1 | 3 | 1 | 4 | 33 | 9 | täysi |
+
+### Lähi-itä (12 maata)
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Qatar (QAT) | 5 | 3 | 0 | 2 | 0 | 0 | 10 | 0 | kohteita −3, eläintäky puuttuu |
+| Kuwait (KWT) | 5 | 4 | 1 | 2 | 0 | 0 | 11 | 0 | kohteita −3 |
+| Kypros (CYP) | 7 | 3 | 1 | 2 | 0 | 0 | 12 | 0 | kohteita −1 |
+| Iran (IRN) | 8 | 3 | 1 | 2 | 0 | 0 | 12 | 1 | täysi |
+| Irak (IRQ) | 8 | 3 | 1 | 2 | 0 | 0 | 12 | 1 | täysi |
+| Jordania (JOR) | 8 | 3 | 1 | 2 | 0 | 0 | 12 | 1 | täysi |
+| Oman (OMN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Saudi-Arabia (SAU) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Syyria (SYR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Jemen (YEM) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Arabiemiirikunnat (ARE) | 9 | 3 | 1 | 2 | 0 | 0 | 14 | 0 | täysi |
+| Egypti (EGY) | 8 | 3 | 1 | 2 | 3 | 0 | 15 | 1 | täysi |
+
+### Aasia (19 maata)
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Hongkong (HKG) | 4 | 2 | 0 | 2 | 0 | 0 | 8 | 0 | kohteita −4, maastoa −1, eläintäky puuttuu |
+| Singapore (SGP) | 5 | 1 | 0 | 2 | 0 | 0 | 8 | 0 | kohteita −3, maastoa −2, eläintäky puuttuu |
+| Afganistan (AFG) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Indonesia (IDN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Intia (IND) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Japani (JPN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Kazakstan (KAZ) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Etelä-Korea (KOR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Sri Lanka (LKA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Myanmar (MMR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Mongolia (MNG) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Nepal (NPL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Pakistan (PAK) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Thaimaa (THA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Taiwan (TWN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Uzbekistan (UZB) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Vietnam (VNM) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Kiina (CHN) | 8 | 4 | 1 | 2 | 0 | 0 | 14 | 0 | täysi |
+| Filippiinit (PHL) | 8 | 4 | 1 | 2 | 0 | 0 | 14 | 0 | täysi |
+
+### Afrikka (27 maata)
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Saint Helena (SHN) | 3 | 1 | 1 | 2 | 0 | 0 | 6 | 0 | kohteita −5, maastoa −2 |
+| Angola (AGO) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Kamerun (CMR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Kongo (COD) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Algeria (DZA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Etiopia (ETH) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Ghana (GHA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Kenia (KEN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Liberia (LBR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Libya (LBY) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Marokko (MAR) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Madagaskar (MDG) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Mali (MLI) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Mosambik (MOZ) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Namibia (NAM) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Sudan (SDN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Etelä-Sudan (SDS) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Senegal (SEN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Sierra Leone (SLE) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Tšad (TCD) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Tunisia (TUN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Tansania (TZA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Uganda (UGA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Zimbabwe (ZWE) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Nigeria (NGA) | 8 | 4 | 1 | 2 | 0 | 0 | 14 | 0 | täysi |
+| Somalia (SOM) | 8 | 4 | 1 | 2 | 0 | 0 | 14 | 0 | täysi |
+| Etelä-Afrikka (ZAF) | 8 | 4 | 1 | 2 | 0 | 0 | 14 | 0 | täysi |
+
+### Pohjois-Amerikka (7 maata)
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Kanada (CAN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Kuuba (CUB) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Grönlanti (GRL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Guatemala (GTM) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Meksiko (MEX) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Nicaragua (NIC) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Yhdysvallat (USA) | 8 | 3 | 1 | 2 | 4 | 0 | 16 | 0 | täysi |
+
+### Etelä-Amerikka (11 maata)
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Argentiina (ARG) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Bolivia (BOL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Brasilia (BRA) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Chile (CHL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Kolumbia (COL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Ecuador (ECU) | 8 | 3 | 1 | 2 | 1 | 0 | 13 | 0 | täysi |
+| Panama (PAN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Paraguay (PRY) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Uruguay (URY) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Venezuela (VEN) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Peru (PER) | 8 | 3 | 1 | 2 | 1 | 0 | 14 | 0 | täysi |
+
+### Oseania (7 maata)
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit | hetket | kulttuurinostot | pääkartalla | kohdekartalla | tila |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| Fidži (FJI) | 5 | 3 | 0 | 2 | 0 | 0 | 10 | 0 | kohteita −3, eläintäky puuttuu |
+| Salomonsaaret (SLB) | 6 | 3 | 0 | 2 | 0 | 0 | 11 | 0 | kohteita −2, eläintäky puuttuu |
+| Australia (AUS) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Uusi-Seelanti (NZL) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Papua-Uusi-Guinea (PNG) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Itä-Timor (TLS) | 8 | 3 | 1 | 2 | 0 | 0 | 13 | 0 | täysi |
+| Vanuatu (VUT) | 8 | 3 | 0 | 2 | 0 | 0 | 13 | 0 | eläintäky puuttuu |
+
+Maita 112, tavoitteessa 103, vajaita 9.
+
+## Maailman erät (ehdotus)
+
+Sama sääntö kuin Euroopassa: erä on **viisi maata taulukon heikoimmasta
+päästä**, ja jokaiselle kirjoitetaan **8 kohdetta, 3 maastokohdetta,
+1 eläintäky ja 2 skandaalia**. Kohdekaupungin kohdalle
+(`KAUPUNGIN_KOHDALLA_SADE`, 7 lautayksikköä) ei sijoiteta uutta
+pääkartan merkkiä, ja jokainen väite on en-Wikipedian katteessa
+lähderivillä. Erät ovat maanosittain, jotta yksi erä on yhtä
+lähdeaineistoa ja yhtä karttaseutua — ja jotta parvi voi ajaa
+useampaa maanosaa rinnakkain ilman, että kaksi erää koskee samaan
+tiedostoon.
+
+| erä | maanosa | maat (merkkejä nyt) |
+|---|---|---|
+| M1 (tehty 6.9.) | Etelä-Amerikka | Argentiina (ARG) 0, Bolivia (BOL) 0, Brasilia (BRA) 0, Chile (CHL) 0, Kolumbia (COL) 0 |
+| M2 (tehty 6.9.) | Oseania | Australia (AUS) 0, Fidži (FJI) 0, Uusi-Seelanti (NZL) 0, Papua-Uusi-Guinea (PNG) 0, Salomonsaaret (SLB) 0 |
+| M3 (tehty 6.9.) | Aasia | Hongkong (HKG) 0, Indonesia (IDN) 0, Intia (IND) 0, Sri Lanka (LKA) 0, Myanmar (MMR) 0 |
+| M4 (tehty 6.9.) | Pohjois-Amerikka | Kanada (CAN) 0, Kuuba (CUB) 0, Grönlanti (GRL) 0, Guatemala (GTM) 0, Nicaragua (NIC) 0 |
+| M5 (tehty 6.9.) | Afrikka | Saint Helena (SHN) 0, Etelä-Sudan (SDS) 2, Angola (AGO) 3, Kamerun (CMR) 3, Kongo (COD) 3 |
+| M6 (tehty 6.9.) | Lähi-itä | Kypros (CYP) 2, Oman (OMN) 2, Qatar (QAT) 2, Arabiemiirikunnat (ARE) 3, Kuwait (KWT) 3 |
+| M7 (tehty erinä 2–4) | Eurooppa | Tanska (DNK) 11, Ruotsi (SWE) 11, Itävalta (AUT) 12, Irlanti (IRL) 12, Liettua (LTU) 12 |
+
+Erä M7 on sama kuin Euroopan "erä 2 (ehdotus)" yllä — sama viisikko,
+sama peruste. Muut kuusi ovat uusia.
+
+**Mitä työtä erä on.** Euroopan ulkopuolella vaje on kaikissa neljässä
+lajissa eikä vain kohteissa: 32 maalla ei ole yhtäkään karttamerkkiä,
+eläintäky puuttuu 59 maasta ja skandaalitavoite 83 maasta. Erän hinta on
+siis korkeampi kuin Euroopassa — yhtä maata kohti 8 + 3 kohdetta,
+1 eläintäky ja 2 skandaalia, eli viiden maan erässä noin 70 uutta
+riviä. Ensimmäinen erä kannattaa ajaa yhtenä maanosana, jotta mitta
+näkyy ennen kuin muut kuusi tilataan.
+
+**Ajojärjestys ehdotuksena.** M1 ja M2 ensin (kaikki kymmenen maata
+nollassa, ja niiden maastokohteet puuttuvat kokonaan — sama putki kuin
+Euroopan erässä 1), sitten M3 ja M4, sitten M5 ja M6, ja M7 vasta
+lopuksi: Euroopan heikoinkin maa on 11 merkissä, eli muualla sama työ
+tuottaa moninkertaisen hyödyn.
+## Erä 4 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Erä vei loppuun Euroopan viimeiset vajaat maat. Yhteensä 35 uutta
+kohdetta, kaikki maan omaan `js/packs/maastokohteet-<iso>.js`-tiedostoon
+lohkoon "K2-ERÄ 4 6.9.2026". Yhdenkään tyyppi ei ole maastoa, kaikilla on
+vain maailmankartan rivi (erillislaudasta luovuttu, Raamattu 30.8.2026),
+ja erä on kuvaton. Taulukon luvut ajetaan `tools/laske-karttanostot.mjs`
+-työkalulla erikseen.
+
+| maa | uusia | kohteet |
+|---|---:|---|
+| Ukraina (UKR) | 8 | Kamjanets-Podilskyin linna, Tšernobylin ydinvoimala, Hersonesos, Lviv, Hortytsja, Poltavan taistelu, Sofijivkan puisto, Derzhprom |
+| Venäjä (RUS) | 8 | Kizhin pogosta, Solovetskin luostari, Kazanin kreml, Veliki Novgorod, Kolan syväreikä, Tunguskan räjähdys, Tobolskin kreml, Jasnaja Poljana |
+| Espanja (ESP) | 8 | Santiago de Compostela, Segovian akvedukti, Altamiran luola, Toledo, Córdoban moskeijakatedraali, Las Médulas, Méridan roomalainen teatteri, Salamancan yliopisto |
+| Ranska (FRA) | 6 | Mont-Saint-Michel, Carcassonnen linnoituskaupunki, Lascaux, Chartresin katedraali, Pont du Gard, Carnacin kivirivit |
+| Britannia (GBR) | 5 | Stonehenge, Hadrianuksen muuri, Skara Brae, Ironbridge, Bathin roomalaiset kylpylät |
+
+FRA:lla oli jo kaksi ja GBR:llä kolme kuratoitua kohdetta
+(`js/packs/fokuskohteet-fra.js`, `-gbr.js`); niihin ei koskettu eikä
+yhtäkään niiden kohteista toistettu.
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-listan kaupunkiin, ja jokaisen
+kohteen lähin on kirjattu sen koordinaattirivin viereen. Koko erän lähin
+on Toledo 23,9 lautayksikön päässä Madridista; raja
+`KAUPUNGIN_KOHDALLA_SADE` on 7. Kolme kohdetta jätettiin pois juuri
+tästä säännöstä: Alhambra (Granadan kohdalla), Versailles (7,3 yksikköä
+Pariisista) ja Forth Bridge (7,1 yksikköä Edinburghista).
+## Erä 3 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Viisi maata, kahdeksan kohdetta kuhunkin, yhteensä 40 uutta
+karttanostoa. Kaikki asuvat maan omassa
+`js/packs/maastokohteet-<iso>.js`-tiedostossa lohkossa "K2-ERÄ 3
+6.9.2026" — sama ratkaisu ja sama perustelu kuin erässä 1, koska
+`js/fokuskohteet.js` KOHDE_MAAT on yhä rinnakkaisen erän hallussa.
+Erä on kuvaton; kortti kantaa tekstin ja lähteen. Taulukon luvut
+päivittää Fable laskurilla (`node tools/laske-karttanostot.mjs --md`).
+
+| maa | kohteet |
+|---|---|
+| Alankomaat (NLD) | Woudagemaal, Deltatyöt, Vredespaleis, Domtoren, Bourtange, Giethoorn, Kröller-Müllerin museo, Nijmegen |
+| Suomi (FIN) | Olavinlinna, Turun linna, Vanha Rauma, Verla, Petäjäveden vanha kirkko, Sammallahdenmäki, Kerimäen kirkko, Bomarsund |
+| Portugali (PRT) | Sintra, Batalhan luostari, Tomarin luostari, Guimarães, Almendresin kivikehä, São Vicenten niemi, Elvas, Óbidos |
+| Norja (NOR) | Urnesin sauvakirkko, Røros, Altan kalliopiirrokset, Nordkapp, Nidarosin tuomiokirkko, Vemork, Flåmsbana, Eidsvollin rakennus |
+| Puola (POL) | Malborkin linna, Auschwitz-Birkenau, Jasna Góra, Zamość, Westerplatte, Gniezno, Elblągin kanava, Krzemionki |
+
+Kaikki 40 ovat pääkartan merkkejä: lähin uusi merkki on Sintra 9,2
+lautayksikön päässä Lissabonista, eli yli `KAUPUNGIN_KOHDALLA_SADE`n
+(7) ja yli kaupunkikaton säteen (8). Muissa maissa lähin on 15,2–61,1
+yksikön päässä.
+
+Pois jätettiin kohteita, joiden nimi on jo kartalla (sääntö N3):
+Suomenlinna (Helsingin kohdekartan piste), Afsluitdijk, Delft, Porto,
+Coimbra, Wieliczka, Toruń ja Wrocław (kaupunkien fokusvirran nostoja
+omalla karttapaikallaan) sekä Białowieża (Puolan eläintäky).
+Kinderdijk pudotettiin, koska sen nimiö osui Van Meegeren -skandaalin
+nimiön päälle (`tools/tarkista-nimiolimitys.mjs`); tilalle tuli
+Woudagemaal.
+
+## Erä M1 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Erä M1
+on maailman ensimmäinen Euroopan ulkopuolinen erä: Etelä-Amerikan viisi
+maata, joilla ei ollut yhtäkään karttamerkkiä. Jokainen sai täyden
+kiintiön — **8 kohdetta, 3 maastokohdetta, 1 eläintäky ja 2 skandaalia**
+— eli 13 uutta pääkartan merkkiä maata kohti, yhteensä 65, sekä kaksi
+uutta eläintäkyä (ARG, BRA ja CHL olivat jo eläintäkytaulussa). Kaikki viisi
+ovat laskurin mukaan nyt "täysi" (`node tools/laske-karttanostot.mjs`);
+taulukot ajaa Fable erikseen.
+
+Erä on **kuvaton**, kuten K2-erät 1–4: kortti kantaa tekstin ja lähteen.
+Se koskee myös Bolivian ja Kolumbian eläintäkyjä, jotka odottavat
+kuvaputken toimitusta — `tests/elaintakyt.test.mjs` sallii nyt nollan
+kuvan, koska kuvattomuus on kortissa tuettu tila (`elaintakynKuvat`).
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Argentiina (ARG) | Cueva de las Manos, Quebrada de Humahuaca, Córdoban jesuiittakortteli, La Polvorillan viadukti, Península Valdés, Ushuaia, Ischigualasto, Perito Moreno -jäätikkö | Aconcagua, Río de la Plata, Argentiinanmeri | (oli jo: magellaninpingviini) | Rosario 1978, Bariloche 1994 |
+| Bolivia (BOL) | Tiwanaku, Cerro Rico, Sucre, Chiquitosin lähetysasemat, Yungas-tie, Salar de Uyuni, Oruron karnevaali, El Fuerte de Samaipata | Nevado Sajama, Illimani, Desaguadero | boliviandelfiini | Vesisota 2000, Kokaiinikaappaus 1980 |
+| Brasilia (BRA) | Brasília, Itaipun pato, Serra da Capivara, São Miguel das Missões, Olinda, Congonhasin profeetat, Pantanal, Lençóis Maranhenses | Pico da Neblina, Fernando de Noronha, Atlantti | (oli jo: kultatamariini) | Lava Jato, Brumadinho 2019 |
+| Chile (CHL) | Atacama, Chuquicamata, Humberstone, Chinchorron muumiot, Sewell, Paranalin observatorio, Isla Negra, Valdivian maanjäristys | Ojos del Salado, Chiloé, Tyynimeri | (oli jo: guanako) | Colonia Dignidad, Santiago 1962 |
+| Kolumbia (COL) | Ciudad Perdida, San Agustín, Tierradentro, Cartagena de Indias, Mompox, Guatavitan laguuni, Barranquillan karnevaali, Kahvimaisema | Pico Cristóbal Colón, Caño Cristales, Karibianmeri | kultamyrkkysammakko | San Josén aarre 1708, Ciénaga 1928 |
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin, ja jokaisen kohteen lähin
+on kirjattu sen koordinaattirivin viereen. Erän lähin on Itaipun pato
+11,2 lautayksikön päässä Iguazústa; seuraavat ovat Guatavita 13,3
+(Bogotá), Atlantti 27,5 (Salvador) ja Olinda 29,4 (João Pessoa). Raja
+`KAUPUNGIN_KOHDALLA_SADE` on 7, joten kaikki 65 ovat pääkartan merkkejä
+— mikä oli tässä erässä pakko, sillä Etelä-Amerikan kaupungeista vain
+Buenos Airesilla ja Rio de Janeirolla on kohdekartta.
+
+**Mitä pudotettiin ja miksi.** Pääsiäissaari (CHL) jäi pois, koska se on
+maan fokuslehden rajauksen ulkopuolella (`savuke-maastokohteet.mjs`
+vartio 7a): merkki olisi olemassa mutta pelaajan ulottumattomissa.
+Zipaquirán suolakatedraali (COL) putosi, koska sen nimiö olisi tullut
+Guatavitan laguunin päälle — pisteiden väli on 7,6 lautayksikköä.
+Argentiinan corralito ja Kolumbian Proceso 8000 jäivät pois, koska
+tapahtumapaikat ovat Buenos Airesin ja Bogotán ytimessä. Sääntö N3
+(sama nimi kartalla vain kerran) pudotti Titicacan ja Mamorén (BOL),
+Iguazún ja Paranán (ARG) sekä Amazonin, Rio Negron, São Franciscon,
+Madeiran, Xingun, Tapajósin, Tocantinsin, Araguaian ja Purusin (BRA) —
+siksi Brasilian kolmesta maastokohteesta yksikään ei ole joki.
+
+**Herkät aiheet.** Kolme skandaalia koskee diktatuuria ja yksi
+huumekauppaa. Ne on kirjoitettu asiallisesti ja tiukasti lähteen
+katteessa: mitä tapahtui, kuka teki ja mitä siitä seurasi.
+`node tools/tarkista-nimiolimitys.mjs` antaa "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+## Erä M2 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Maailman
+erä M2 on Oseania: **AUS, FJI, NZL, PNG ja SLB**, joilla kaikilla oli nolla
+karttamerkkiä. Erä toi 35 kohdetta, 15 maastokohdetta ja 10 skandaalia eli
+**60 uutta karttanostoa**. Kohteet ja maastokohteet asuvat maan omassa
+`js/packs/maastokohteet-<iso>.js`-tiedostossa (viisi uutta tiedostoa,
+rekisteröity `js/packs/maastokohteet.js`-hakemistoon); skandaalit ovat
+`js/packs/skandaalit.js`:n lopussa lohkossa "ERÄ M2, OSEANIA". Erä on
+kuvaton, ja jokaisella nostolla on vain maailmankartan rivi.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Australia (AUS) | Port Arthur, Ubirr, Parkesin radioteleskooppi, Broken Hill, Mungojärvi, Snowy Mountains -hanke, Eurekan paalutus, Cooktown | Mount Augustus (vuori), Iso valliriutta (meri), Tasmania (saari) | koala (oli jo) | Batavia 1629, Glenrowan 1880 |
+| Fidži (FJI) | Levuka, Sigatokan dyynit, Taveuni, Sri Siva Subramaniya, Vatukoula | Bligh Water (meri), Vanua Levu (saari), Kadavu (saari) | **puuttuu** | Elizan musketit, Cakobaun lasku |
+| Uusi-Seelanti (NZL) | Waitangi, Ruapekapeka, Cape Reinga, Whakarewarewa, Waitomon luola, Napier, Arrowtown, Denniston | Ruapehu (vuori), Taupojärvi (meri), Waikato (joki) | kiivi (oli jo) | Rainbow Warrior 1985, Parihaka 1881 |
+| Papua-Uusi-Guinea (PNG) | Kokodan polku, Rabaul, Kukin suo, Trobriandsaaret, Gorokan näytös, Lae, Pangunan kaivos, Milne Bay | Mount Wilhelm (vuori), Flyjoki (joki), Bismarckinmeri (meri) | paratiisilintu (oli jo) | Ok Tedi, Uusi Ranska 1880 |
+| Salomonsaaret (SLB) | Tulagi, Kennedysaari, Marovon laguuni, Arnavonsaaret, Langa Langa, Tetepare | Popomanaseu (vuori), Uuden-Georgian salmi (meri), Rennell (saari) | **puuttuu** | Kwaio 1927, Savo 1942 |
+
+**Kaksi vajetta, molemmat kirjattuina.**
+
+1. *Fidži 5 kohdetta ja Salomonsaaret 6 kohdetta kahdeksan sijaan.* Syy ei
+   ole lähteissä vaan lehden ikkunassa. Fidžin fokuslehden rajaus on
+   137 × 146 lautayksikköä ja Salomonsaarten 329 × 240
+   (`js/packs/fokus-grc.js` FOKUS_POHJAT), ja kohteet ovat molemmissa
+   maissa muutamassa rykelmässä. Kymmenen ja yksitoista merkkiä on se
+   määrä, joka mahtuu ilman että naapurin nimiö jää toisen alle
+   (`tools/tarkista-nimiolimitys.mjs`). Perustelut ja karsitut ehdokkaat
+   ovat tiedostojen otsikkokommenteissa.
+2. *Fidžin ja Salomonsaarten eläintäky puuttuu, ja se on kuvaputken työ.*
+   `tests/elaintakyt.test.mjs` vaatii jokaiselta tietueelta vähintään yhden
+   kuvan, eikä tietuetta voi siksi kirjoittaa ennen kuin kuva on olemassa.
+   Tilaukset ovat erän raportissa.
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin — Australiassa niitä on
+kaksikymmentä — ja jokaisen kohteen lähin on kirjattu sen koordinaattirivin
+viereen. Koko erän lähin on Popomanaseu 11,5 lautayksikön päässä
+Honiarasta; raja `KAUPUNGIN_KOHDALLA_SADE` on 7. Tästä säännöstä karsiutui
+Fidžin Tomanivi (7,2 Suvasta) sekä Salomonsaarten Henderson Field ja Gold
+Ridge.
+
+**Kolme jätettiin pois säännöllä N3** (sama nimi kartalla vain kerran):
+Murray ja Kosciuszko ovat jo `js/packs/maailmankartta-nimet.js`:n omia
+nimiöitä ("Murray"-jokirivi sekä "Kaakkois-Australian ylängöt" ja "Suuri
+vedenjakajavuoristo", joiden `huippu` on Kosciuszko), ja Aoraki on
+"Uuden-Seelannin Alpit" -rivin huippu. Tilalle tulivat Mount Augustus,
+Tasmania ja Ruapehu. Uluru ja Sepik ovat pelikaupunkeja, joten nekään eivät
+saaneet uutta merkkiä.
+
+**Kiertävä kartta tarkistettu.** Fidžin itäiset saaret ylittävät
+antimeridiaanin. Laudan x on `((lon + 175) mod 360) · 33,33`, joten 180° E
+antaa x 11 833,3 ja jatkuu siististi kohti laudan reunaa 12 000. Taveuni
+(tasan 180°) osuu lehden rajaukseen, mutta Laun saariryhmä (n. 178,8° W eli
+x ≈ 11 873) jäisi sen ulkopuolelle, joten sieltä ei valittu mitään. Samasta
+syystä Salomonsaarten Santa Cruzin saaret (Vanikoro, La Pérousen
+haaksirikko) jäivät pois: ne ovat rajauksen itäpuolella.
+
+**Vartiot menivät läpi ilman muutoksia.** `savuke-maastokohteet.mjs`
+vartio 7a olettaa maalta fokuslehden rajauksen (`lehdenRajaus`), ja
+kaikilla viidellä maalla se on olemassa — vartiota ei siis tarvinnut
+koskea, vaan jokainen uusi rivi mitattiin sen sisään ennen kirjoittamista.
+`tools/tarkista-nimiolimitys.mjs` antaa yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+## Erä M4 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Erä
+M4 on Pohjois-Amerikan viisikko, jolla ei ollut yhtäkään karttamerkkiä:
+**CAN, CUB, GRL, GTM ja NIC**. Jokainen sai täyden kiintiön — 8 kohdetta,
+3 maastokohdetta, 1 eläintäky ja 2 skandaalia — eli 13 uutta merkkiä
+maata kohti ja 65 koko erässä. Laskurin (`node tools/laske-karttanostot.mjs`)
+mukaan kaikki viisi ovat erän jälkeen tilassa *täysi*; taulukot ajaa Fable.
+
+Kohteet ja maastokohteet asuvat maan omassa uudessa
+`js/packs/maastokohteet-<iso>.js`-tiedostossa (rekisteröity
+`js/packs/maastokohteet.js`-hakemistoon, `sw.js`:n SHELL-listalle ja
+`tools/build-standalone.mjs`:n MODULES-listalle), eläintäyt
+`js/packs/elaintakyt.js`:ään ja skandaalit `js/packs/skandaalit.js`:ään.
+Erä on kuvaton. Faktat ovat en-Wikipedian raakatekstistä, ja jokainen
+lähderivi nimeää artikkelin ja sen osan sekä tarkistuspäivän 6.9.2026.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Kanada (CAN) | L'Anse aux Meadows, Craigellachie, Rideaun kanava, Head-Smashed-In, Dinosaur Provincial Park, Vanha Québec, Louisbourgin linnoitus, Dawson City | Mount Logan, Naha Dehé, Baffininsaari | (oli jo: jääkarhunpentu) | Pacific 1873, Bre-X 1997 |
+| Kuuba (CUB) | Trinidad, Viñalesin laakso, San Pedro de la Roca, Cienfuegos, Camagüey, Baracoa, Hersheyn rata, Bayamo | Pico Turquino, Cauto, Nuorisonsaari | (oli jo: mehiläiskolibri) | Maine 1898, Playa Girón 1961 |
+| Grönlanti (GRL) | Hvalsey, Ivittuut, Kangerlussuaq, Grönlannin jäätikkö, Sisimiut, Uummannaq, Ittoqqortoormiit, Koillis-Grönlannin kansallispuisto | Gunnbjørn Fjeld, Ilulissatin jäävuono, Diskonsaari | grönlanninkoira | Kuannersuit, Vihreä maa 985 |
+| Guatemala (GTM) | Tikal, El Mirador, Quiriguá, Seibal, Iximche, Chichicastenango, Semuc Champey, San Felipe de Lara | Tajumulco, Atitlánjärvi, Motagua | ketsaali | Banaanisopimus 1904, Santa María 1902 |
+| Nicaragua (NIC) | León, Granada, El Castillo, Bluefields, Solentiname, Somoton kanjoni, Ciudad Darío, Bilwi | Cosigüina, Ometepe, San Juanjoki | guardabarranco | Walker 1856, Kanava 2013 |
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin, ja jokaisen kohteen lähin
+on kirjattu sen koordinaattirivin viereen. Koko erän lähin merkki on
+Ciudad Darío 12,6 lautayksikön päässä Managuasta; raja
+`KAUPUNGIN_KOHDALLA_SADE` on 7. `node tools/tarkista-nostopaikat.mjs`
+antaa kaikille 65:lle rivin *pääkartta*, ja
+`node tools/tarkista-nimiolimitys.mjs` sanoo yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Kolme rajausta, jotka valitsivat sisällön.** (1) Laudan pohjoisreuna
+on 76°N (Millerin lieriö), joten Grönlannista jäivät pois Pituffik
+(Thule 1968), Camp Century ja Qaanaaq — ne olisivat saaneet negatiivisen
+y-koordinaatin eli jääneet laudan yläreunan taakse. (2) Sääntö N3:
+Mackenzie ja Nicaraguajärvi ovat jo laudan omalla nimitaululla
+(`js/packs/maailmankartta-nimet.js`), joten Kanadan joeksi valittiin Naha
+Dehé ja Nicaraguan maastokolmikkoon Cosigüinan tulivuori. (3)
+Kaupunkisääntö pudotti Antigua Guatemalan (8,0 yksikköä pääkaupungista)
+ja Momotombon (8,0 yksikköä Managuasta).
+
+**Vartio 7a ja maat ilman lehteä.** `tools/savukkeet/savuke-maastokohteet.mjs`
+vaatii, että jokainen kohde osuu maan fokuslehden rajaukseen
+(`osuuLehteen`). Kaikilla viidellä maalla rajaus on olemassa
+(`js/packs/fokus-grc.js` FOKUS_POHJAT), joten vartio pätee myös näihin
+tiedostoihin eikä sitä ole kierretty; ratkaisu on kirjattu jokaisen
+tiedoston otsikkokommenttiin. Jos maalla ei olisi rajausta,
+`osuuLehteen` palauttaisi `null` ja vartio ohittaisi maan — vartioita ei
+ole muutettu kummassakaan tapauksessa. Savuke menee läpi 8/8.
+
+**Kuvat puuttuvat kolmelta eläintäyltä.** GRL, GTM ja NIC saivat
+`kuva`-kenttään kuvaputken tunnuksen ilman kansiota (`elain-grl`,
+`elain-gtm`, `elain-nic`), joka osoittaa ämpäriin: kun kuvaputki tekee
+kuvan, se ilmestyy kortille ilman koodimuutosta, ja siihen asti kortti on
+kuvaton.
+## Erä M3 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Maailman erien ensimmäinen Aasian erä: **HKG, IDN, IND, LKA, MMR** —
+viisi maata, joilla ei ollut yhtäkään karttamerkkiä. Erä on kuvaton
+kuten K2-erät 1–4, ja jokainen väite on en-Wikipedian raakatekstin
+katteessa lähderivillä, joka nimeää artikkelin ja osan sekä
+tarkistuspäivän 6.9.2026. Taulukon luvut ajetaan
+`node tools/laske-karttanostot.mjs --md` -työkalulla erikseen.
+
+Kohteet ja maastokohteet asuvat maan omassa
+`js/packs/maastokohteet-<iso>.js`-tiedostossa (viisi uutta tiedostoa,
+rekisteröity `js/packs/maastokohteet.js`-hakemistoon, `sw.js`:n
+SHELL-listaan ja `tools/build-standalone.mjs`:n MODULES-listaan).
+Eläintäyt ovat `js/packs/elaintakyt.js`:n lopussa ja skandaalit
+`js/packs/skandaalit.js`:n lopussa; kummankin testin lukumäärä
+päivitettiin (eläintäkyjä 53 → 56, skandaaleja 83 → 93 ja maita
+29 → 34).
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Hongkong (HKG) | Kowloonin muurikaupunki, Tai O, Tung Chungin linnake, Tai Fu Tai | Tai Mo Shan, Lantau | — | Godberin pako, Carrian |
+| Indonesia (IDN) | Borobudur, Prambanan, Trowulan, Sangiran, Sawahlunto, Tana Toraja, Bandasaaret, Besakih | Krakatau, Tobajärvi, Komodo | babirusa | Max Havelaar, Bre-X 1997 |
+| Intia (IND) | Taj Mahal, Ajanta, Ellora, Khajuraho, Hampi, Konarkin aurinkotemppeli, Jantar Mantar, Darjeelingin vuoristorata | Kangchenjunga, Chilikajärvi, Bengalinlahti | (oli jo: tiikerinpentu) | Natwarlal, Telgin leimat |
+| Sri Lanka (LKA) | Sigiriya, Anuradhapura, Polonnaruwa, Yapahuwa, Kandyn hammastemppeli, Gallen linnoitus, Nuwara Eliya, Yhdeksän kaaren silta | Sri Pada, Mahaweli, Palkinlahti | sri lankan leopardi | Matalen kapina, Golden Key |
+| Myanmar (MMR) | Bagan, Mrauk U, Beikthano, Kyaiktiyo, Pindayan luolat, Pyin Oo Lwin, Mawlamyine, Shwebo | Hkakabo Razi, Inlejärvi, Chindwin | surkkunenäapina | Dhammazedin kello, Kultainen kirje |
+
+Neljä maata viidestä on tavoitteessa (`node tools/laske-karttanostot.mjs`
+sanoo niistä "täysi"). Hongkong ei ole, ja syy on mitattu.
+
+**Miksi Hongkong jäi vajaaksi.** Koko alue mahtuu maailmankartalla noin
+11 × 9 lautayksikön ruutuun, ja yhden nostomerkin nimiölaatikko on
+leveämpi kuin koko maa. Kahdeksan kohdetta ja kolme maastokohdetta
+kirjoitettiin ensin; `tools/tarkista-nimiolimitys.mjs` löysi niistä
+seitsemän nimiö–nimiö-limitystä, eikä nimien lyhentäminen auttanut,
+koska laatikolla on vähimmäisleveys. Kahdeksan merkkiä on maan yläraja:
+kahdeksalla limityksiä on nolla ja yhdeksännellä yksi. Kahdeksan
+jaettiin neljään kohteeseen, kahteen maastokohteeseen ja kahteen
+skandaaliin. Lisäksi Hongkongin kaupunkilehden kohdekartta
+(`js/packs/maakartat.js` hongkong, lat 22,2665–22,3015 ja lon
+114,1385–114,1805) kattaa koko Victoria-sataman, ja sen ruutuun osuva
+nosto kuuluu kohdekartan pisteelle eikä pääkartalle
+(`tests/nostot-kartalla.test.mjs`). Hongkongin kohdekartan työlistalle
+jäävät siis valmiiksi kirjoitettuina Peak Tram (1888), Hongkongin
+observatorio (1883), Tsim Sha Tsuin kellotorni, Victorian satama ja
+Lei Cheng Ukin Han-hauta. Eläintäkyä ei voitu tehdä lainkaan: merkin on
+oltava vähintään 35 lautayksikön päässä jokaisesta kaupunkimerkistä
+(`tests/elaintakyt.test.mjs`), ja koko Hongkong on 11–20 yksikön päässä
+omasta laatastaan. Ehdokas odottaa valmiina: Romerin puupuu, jonka
+Chek Lap Kokin populaatio siirrettiin talteen 1992 ennen lentoaseman
+rakentamista.
+
+**Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
+mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin.
+Lähin uusi merkki on Hongkongin Tai Fu Tai 10,9 lautayksikön päässä
+Hongkong-laatasta ja toiseksi lähin Myanmarin Pyin Oo Lwin 11,6
+yksikön päässä Mandalaysta; raja `KAUPUNGIN_KOHDALLA_SADE` on 7 ja
+kaupunkikaton säde 8. Pois jätettiin juuri tästä säännöstä Elephantan
+luolat (Mumbain kohdalla), Shwedagon (Yangonin kohdalla), Inwa,
+Amarapura ja Mingun (Mandalayn kohdalla) sekä Matale ja Kurunegala
+(Colombo-laatta on saaren keskellä). Kahden skandaalin merkki
+siirrettiin kohdekartan ruudun ulkopuolelle samalle rannalle —
+Hongkongin Carrian ja Colombon Golden Key — ja syy on kirjattu
+kummankin kortin viereen `js/packs/skandaalit.js`:ssä.
+
+**Nimisääntö N3 karsi kaksi maastokohdetta.** Kartalla on jo
+`js/packs/maailmankartta-nimet.js`:ssä jokinimiöt Ganges ja Iravadi,
+joten Intian joeksi valittiin Bengalinlahti ja Myanmarin joeksi
+Chindwin (Iravadin suurin sivujoki). Samasta syystä pois jäivät myös
+Jamuna, Brahmaputra, Godavari, Krishna, Narmada, Indus, Sutlej,
+Himalaja, Länsi-Ghatit ja Salween.
+
+**Herkkien kohteiden linjaukset pidettiin**
+(`docs/aasia-tyoaineisto/spec-asia.md`, SITOVA). Hongkongista ei
+kirjoitettu 2010–2020-lukujen protesteja eikä turvallisuuslakia:
+molemmat skandaalit ovat 1970–80-luvun talous- ja virkarikoksia.
+Myanmarista ei kirjoitettu juntta- eikä konfliktisisältöä, minkä takia
+kaksi muuten ilmeistä ehdokasta jäi pois: Goteikin viadukti (artikkeli
+kertoo sen tuhoutuneen 2025 sisällissodassa) ja Mogokin
+rubiinikaivokset (artikkelin nykytilaosuus on sotaa).
+
+## Erä M5 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Maailman
+erien ensimmäinen Afrikan erä: **SDS, AGO, CMR, COD ja DZA**. Neljällä maalla
+oli kolme maastokohdetta ja Etelä-Sudanilla kaksi, mutta yhdelläkään ei ollut
+yhtään kohdetta, eläintäkyä eikä skandaalia. Erä kirjoitti kullekin kahdeksan
+kohdetta, yhden eläintäyn ja kaksi skandaalia sekä Etelä-Sudanille lisäksi
+puuttuneen maastokohteen (Sudd) — yhteensä 56 uutta karttamerkkiä. Erä on
+kuvaton kuten K2-erät 1–4 ja maailman erät M1–M4, ja jokainen väite on
+en-Wikipedian raakatekstin katteessa lähderivillä, joka nimeää artikkelin ja
+osan sekä tarkistuspäivän 6.9.2026. `node tools/laske-karttanostot.mjs` sanoo
+erän jälkeen kaikista viidestä *täysi*; taulukot ajaa Fable.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Etelä-Sudan (SDS) | Gondokoro, Lado, Jonglein kanava, Boman puisto, Bandingilon puisto, Wau, Nzara, Nimule | Sudd (uusi; oli jo: Kinyeti, Valkoinen Niili) | kenkänokka | Fashoda 1898, Zubayr 1873 |
+| Angola (AGO) | M’banza-Kongo, São Miguelin linnoitus, Kalandulan putoukset, Quiçaman puisto, Ionan puisto, Moçâmedes, Benguelan rata, Cuito Cuanavale | (oli jo: Morro de Moco, Atlantti, Cuanza) | jättiläisseeprantilooppi | Cassange 1961, Orjatie 1905 |
+| Kamerun (CMR) | Foumbanin palatsi, Djan luonnonpuisto, Bimbia, Rhumsiki, Wazan kansallispuisto, Kribi, Korupin kansallispuisto, Ngaoundéré | (oli jo: Kamerunvuori, Guineanlahti, Sanaga) | goliattisammakko | Nyos 1986, Manga Bell 1914 |
+| Kongo (COD) | Ingan padot, Boyoman putoukset, Virungan puisto, Kahuzi-Biéga, Salongan puisto, Garamban puisto, Upemban puisto, Lubumbashin kaivokset | (oli jo: Mount Stanley, Tanganjikajärvi, Kongo) | bonobo | Casement 1904, Shinkolobwe |
+| Algeria (DZA) | Timgad, Djémila, Tipasa, Tassilin kalliotaide, Qal’at Bani Hammad, Tlemcen, M’zabin laakso, Constantine | (oli jo: Tahat, Välimeri, Chelif) | fennekki | Kärpäsviuhka 1827, Gerboise Bleue 1960 |
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin, ja jokaisen kohteen lähin on
+kirjattu sen koordinaattirivin viereen. Koko erän lähin merkki on Kribi 26,2
+lautayksikön päässä Kamerun-laatasta ja skandaaleista Deim Zubeir 28,6
+yksikön päässä Bahr el Ghazalista; raja `KAUPUNGIN_KOHDALLA_SADE` on 7.
+`node tools/tarkista-nostopaikat.mjs` antaa kaikille 56:lle rivin *pääkartta*,
+ja `node tools/tarkista-nimiolimitys.mjs` sanoo yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Neljä rajausta, jotka valitsivat sisällön.** (1) Sääntö N3 ja tiheä
+rannikko: Angolan rannikolla Lobito, Benguela ja Catumbela ovat samassa
+parinkymmenen lautayksikön ruudussa, joten radalle valittiin ylängön
+Huambo-piste (radan oma artikkeli ei anna koordinaatteja) ja Nevinsonin
+orjatien merkki jäi Benguelaan. Samasta syystä Kamerunista jäi pois Limbe ja
+Buea (molemmat alle kymmenen yksikön päässä Bimbiasta) ja Etelä-Sudanista
+Juba (kolmen yksikön päässä Gondokorosta) sekä Malakal, joka osuu Valkoisen
+Niilin vanhan merkin päälle. (2) M3:n Myanmar-linja: artikkeleita, joiden
+nykytila on sotaa, ei kirjoitettu. Kongosta jätettiin siksi pois Okapin
+luonnonpuisto (artikkelin nykytilaosuus kertoo aseellisesta miehityksestä ja
+siviiliuhreista), ja Virunga sekä Kahuzi-Biéga kirjoitettiin puistojen
+historiasta ja luonnosta — uhanalaisten kohteiden luettelo mainitaan
+asiallisesti yhtenä lauseena. Angolan Cuito Cuanavale on 1987–88 käyty
+taistelu ja kirjoitettu tapahtumahistoriana New Yorkin sopimukseen asti.
+(3) Tyyppi kertoo, mitä merkki näyttää: Tassili n'Ajjer on artikkelissa
+vuoristo, joten nosto rajattiin sen kalliotaiteeseen (`kulttuuri`) eikä
+kirjattu maastoksi, ja Sudd on `jarvi`. (4) Kaksi ehdokasta kaatui
+lähdeaineiston ohuuteen: Tundavalasta ja Tchitundo-Hulusta ei ole
+en-Wikipedian artikkelia lainkaan, ja Serra da Leban artikkeli on neljä riviä
+— niiden tilalle tulivat Moçâmedes ja Ionan puisto.
+
+**Eläintäkyjen paikat on mitattu koneellisesti.** Jokainen piste on maan
+rajojen sisällä, maalla ja vähintään 35 lautayksikön päässä jokaisesta
+kaupunkimerkistä (`tests/elaintakyt.test.mjs`). Kamerun oli erän ainoa tiukka
+tapaus: koko goliattisammakon rannikkokaista on 26–36 yksikön päässä
+Kamerun-laatasta, joten piste haettiin haravoimalla ja se asetettiin
+vyöhykkeen pohjoispäähän (lon 9,9 / lat 3,4; etäisyys 36,5).
+
+**Kuvat puuttuvat kaikilta viideltä eläintäyltä.** `kuva`-kentässä on
+kuvaputken ämpäritunnus ilman kansiota (`elain-dza`, `elain-ago`,
+`elain-cmr`, `elain-cod`, `elain-sds`): kun kuvaputki toimittaa kuvan, se
+ilmestyy kortille ilman koodimuutosta, ja siihen asti kortti on kuvaton.
+## Erä M8 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Aasian toinen erä: **NPL, THA, VNM, SGP, TLS**. Nepalilla oli ennen erää
+vain eläintäky, muilla neljällä ei yhtäkään karttamerkkiä. Erä on
+kuvaton kuten K2-erät 1–4 ja maailman erät M1–M4, ja jokainen väite on
+en-Wikipedian raakatekstin katteessa lähderivillä, joka nimeää
+artikkelin ja osan sekä tarkistuspäivän 6.9.2026. Taulukon luvut ajetaan
+`node tools/laske-karttanostot.mjs --md` -työkalulla erikseen.
+
+Kohteet ja maastokohteet asuvat maan omassa
+`js/packs/maastokohteet-<iso>.js`-tiedostossa (viisi uutta tiedostoa,
+rekisteröity `js/packs/maastokohteet.js`-hakemistoon, `sw.js`:n
+SHELL-listaan ja `tools/build-standalone.mjs`:n MODULES-listaan).
+Eläintäyt ovat `js/packs/elaintakyt.js`:n lopussa ja skandaalit
+`js/packs/skandaalit.js`:n lopussa; kummankin testin lukumäärä
+päivitettiin (eläintäkyjä 61 → 64, skandaaleja 123 → 133 ja maita
+49 → 54).
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Nepal (NPL) | Lumbini, Bhaktapur, Gorkha, Janakpur, Muktinath, Lo Manthang, Nuwakot, Bardiyan kansallispuisto | Dhaulagiri, Koshi, Rara-järvi | (oli jo) | Khumjungin jetin päänahka, Yrjö V:n metsästysretki |
+| Thaimaa (THA) | Ayutthaya, Sukhothai, Ban Chiang, Phanom Rung, Phimai, Khao Yai, Chiang Mai, Kuoleman rautatie | Doi Inthanon, Chao Phraya, Thaimaanlahti | kimalaislepakko | Phaulkonin nousu ja tuho, Sininen timantti |
+| Vietnam (VNM) | Hội An, Huế, Mỹ Sơn, Phong Nha, Điện Biên Phủ, Hồ-linnoitus, Hoa Lư, Po Nagar | Fansipan, Punainenjoki, Hạ Longin lahti | saola | Hanoin rottapalkkiot, Hội Anin hylky |
+| Singapore (SGP) | Kasvitieteellinen puutarha, Pulau Ubin, Kranji, Rafflesin majakka, Haw Par Villa | Bukit Timah | — | Barings, Pan-Electric |
+| Itä-Timor (TLS) | Cristo Rei, Maubara, Balibo, Lailin luola, Baucau, Baguia, Viqueque, Nino Konis Santana | Matebian, Ataúro, Timorinmeri | timorinpeippo | Lifaun pako, Manufahin kapina |
+
+Neljä maata viidestä on tavoitteessa (`node tools/laske-karttanostot.mjs`
+sanoo niistä "täysi"). Singapore ei ole, ja syy on mitattu.
+
+**Miksi Singapore jäi vajaaksi.** Koko maa mahtuu maailmankartalla noin
+10 × 10 lautayksikön ruutuun — vielä Hongkongiakin ahtaammin — ja yhden
+nostomerkin nimiölaatikko on leveämpi kuin koko maa. Kahdeksan merkkiä
+on maan yläraja aivan kuten Hongkongissa: viisi kohdetta, yksi
+maastokohde ja kaksi skandaalia, ja `tools/tarkista-nimiolimitys.mjs`
+antaa niistä nollan nimiö–nimiö-limitystä. Yhdeksäs toi ensimmäisen.
+Lisäksi Singaporen kaupunkilehden kohdekartta (`js/packs/maakartat.js`
+singapore, lat 1,276–1,308 ja lon 103,836–103,874) kattaa koko
+siirtomaa-ajan ytimen, ja sen ruutuun osuva nosto kuuluu kohdekartan
+pisteelle eikä pääkartalle (`tests/nostot-kartalla.test.mjs`). Sinne
+jäävät Fort Canningin kukkula, Raffles Hotel, Empress Place, Boat Quay
+ja Sri Mariamman -temppeli, jotka ovat jo kohdekartan pisteitä; samasta
+syystä molempien skandaalien merkit siirrettiin ruudun ulkopuolelle
+(Barings ruudun itäpuolelle, Pan-Electric Changiin saaren
+koilliskärkeen), ja syy on kirjattu kummankin kortin viereen. Eläintäkyä
+ei voitu tehdä lainkaan: merkin on oltava vähintään 35 lautayksikön
+päässä jokaisesta kaupunkimerkistä (`tests/elaintakyt.test.mjs`), ja
+jokainen piste Singaporen alueella on 12,6–21,6 yksikön päässä omasta
+laatastaan. Ehdokas odottaa valmiina: sarvinokkalintu (Anthracoceros
+albirostris), joka katosi Singaporesta 1800-luvulla ja palasi Pulau
+Ubinille 1990-luvulla.
+
+**Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
+mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin.
+Lähin uusi merkki on Vietnamin Hanoin rottapalkkiot 12,8 lautayksikön
+päässä Hanoi-laatasta ja toiseksi lähin Itä-Timorin Betano 12,9
+yksikön päässä Dilistä; raja `KAUPUNGIN_KOHDALLA_SADE` on 7. Pois
+jätettiin juuri tästä säännöstä Nepalin Kathmandun laakson kohteet
+(Kirtipur, Pharpingin voimalaitos, Changu Narayan, Kathmandun
+Durbar-aukio), Vietnamin Cổ Loan linnoitus (4,9 yksikköä Hanoista) sekä
+Itä-Timorin **Tatamailau** (5,1 yksikköä Dilistä), joka on maan korkein
+vuori — sen tilalle maastokohteeksi tuli Matebian. Kathmandun laaksoon
+mahtui lisäksi vain yksi nimiö, joten Bhaktapurin naapurit jäivät pois
+myös limityssyystä.
+
+**Nimisääntö N3 karsi neljä ehdokasta.** Kartalla on jo
+`js/packs/maailmankartta-nimet.js`:ssä nimiöt Himalaja, Ganges ja
+Mekong, ja Etelä-Kiinan meri on Kiinan oma nosto
+(`js/packs/maastokohteet-chn.js`). Siksi Nepalin vuoreksi valittiin
+Dhaulagiri ja joeksi Koshi, ja Vietnamin joeksi Punainenjoki ja mereksi
+Hạ Longin lahti. Saman säännön ja nimiölimityksen takia jäivät pois
+myös Annapurna, Kali Gandaki ja Sa Pa (yhdeksän kilometriä
+Fansipanista).
+
+**Herkkien kohteiden linjaukset pidettiin**
+(`docs/aasia-tyoaineisto/spec-asia.md`, SITOVA). Vietnamin sodista
+kirjoitettiin vain lähteen katteessa ja ilman nykypolitiikkaa: Điện
+Biên Phủ on ensimmäisen Indokiinan sodan ratkaisutaistelu 1954, ja Mỹ
+Sơnin kortti mainitsee pommitusvaurion samalla tarkkuudella kuin
+artikkeli. Itä-Timorin miehityksestä kerrotaan vain Balibon kortissa
+toteavasti, ja molemmat maan skandaalit ovat siirtomaakaudelta (1769 ja
+1911–1912). Nepalin sisällissodasta ei kirjoitettu lainkaan; maan
+skandaalit ovat vuosilta 1911 ja 1960. Thaimaan ja Singaporen
+skandaalit ovat talousrikoksia ja hovihistoriaa, kuten Hongkongissa
+erässä M3.
+## Erä M6 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Maailman erä M6 on Lähi-itä: **CYP, OMN, QAT, ARE ja KWT** — viisi
+maata, joilla oli yhteensä kaksitoista karttamerkkiä ja yksi kohde.
+Erä toi **38 kohdetta ja maastokohdetta, 4 eläintäkyä ja 10 skandaalia
+eli 52 uutta karttanostoa**. Kohteet ja maastokohteet asuvat maan
+omassa `js/packs/maastokohteet-<iso>.js`-tiedostossa (kaikilla viidellä
+tiedosto oli jo olemassa, joten `js/packs/maastokohteet.js`-hakemistoon,
+`sw.js`:ään eikä `tools/build-standalone.mjs`:ään ei tarvinnut koskea);
+eläintäyt ovat `js/packs/elaintakyt.js`:n lopussa ja skandaalit
+`js/packs/skandaalit.js`:n lopussa lohkossa "ERÄ M6, LÄHI-ITÄ".
+Erä on kuvaton, ja jokaisella nostolla on vain maailmankartan rivi.
+Faktat ovat en-Wikipedian raakatekstistä, ja jokainen lähderivi nimeää
+artikkelin ja sen osan sekä tarkistuspäivän 6.9.2026.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Kypros (CYP) | Paphoksen mosaiikit, Palaipafos, Kourion, Khirokitia, Asinoun kirkko, Kykkoksen luostari, Kap Greco | Levantinmeri (meri) | kyproksenpöllönen | Cesnolan kokoelma, Rikhardin Kypros-kauppa |
+| Oman (OMN) | Bahlan linnoitus, Nizwan linnoitus, Batin haudat, Sur, Sumhuram, Sharqiyan hiekat, Nakhalin linnoitus, Musandam | Masirah (saari) | arabianleopardi | Oryksin suojelualue, Ubarin löytö |
+| Qatar (QAT) | Zubarah, Jassasiya, Al Reem, Dukhan, Al Thakhira | Bahraininlahti (meri) | **mahdoton** | Dohan ryöstö, Zubarahin loppu |
+| Arabiemiirikunnat (ARE) | Hili, Jebel Hafeet, Fujairahin linna, Al Bidyan moskeija, Mleiha, Ed Dur, Julfar, Qasr al-Hosn | Sir Bani Yas (saari) | arabiantahri | Merirosvorannikko, Dubai World |
+| Kuwait (KWT) | Failaka, Bahra 1, Burganin kenttä, Kubbar, Umm al Maradim | Bubiyan (saari) | hietakissa | Souk Al-Manakh, Helmien loppu |
+
+`node tools/laske-karttanostot.mjs` sanoo erän jälkeen Omanista ja
+Arabiemiirikunnista *täysi*; Kypros on −1 kohdetta, Qatar −3 kohdetta ja
+eläintäky, Kuwait −3 kohdetta. Kolme vajetta on mitattu eikä arvattu, ja
+kaikki kolme johtuvat samasta asiasta: maa on pieni ja pelikaupunki
+istuu sen keskellä.
+
+**Miksi Qatar, Kuwait ja Kypros jäivät vajaiksi.** Mitta on
+`tools/tarkista-nimiolimitys.mjs`, joka laskee poltettavien nimiöiden
+laatikot laudan yksiköissä. Qatarin fokuslehden rajaus on 68,9 × 99,5
+lautayksikköä ja Doha on itärannalla sen keskellä; kaupunkikaton
+(`KAUPUNKIKATON_SADE` 8) ja rajauksen jälkeen käyttökelpoista tilaa jää
+noin 25 × 25 yksikköä pohjoiseen ja kapea kaistale länteen, ja siihen
+mahtuu viisi kohdetta. Kuwaitin rajaus on 103,3 × 100,5 yksikköä ja
+Kuwait City lahden pohjukassa; kolme ilmeistä ehdokasta (Al Jahran
+punainen linnake, Kazma, Umm an Namil) olisi tullut olemassa olevien
+maastomerkkien päälle 2–3 yksikön päähän. Kyproksen rajaus on 100,9 ×
+66,5 yksikköä, ja seitsemän kohdetta on se määrä, jolla jokainen nimiö
+pysyy näkyvissä. Jokaisen tiedoston otsikkokommentti luettelee karsitut
+ehdokkaat ja mitatut etäisyydet.
+
+**Qatarin eläintäky on mahdoton, ja se on laskettu.**
+`tests/elaintakyt.test.mjs` vaatii merkiltä vähintään 35 lautayksikön
+etäisyyden jokaiseen kaupunkimerkkiin. Koko Qatarin maa-alue
+haravoitiin kahden sadasosa-asteen ruudukolla (maan rengas ja
+`js/mapart.js` `isOnLand`): kaukaisin maapiste Dohasta on niemimaan
+pohjoiskärki, ja sekin vain 31,8 yksikön päässä. Sama tilanne kuin
+Hongkongissa erässä M3. Ehdokas odottaa valmiina: arabianoryksi, jota
+Al Reemin biosfäärialue suojelee.
+
+## Erä M9 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Lähi-idän toinen erä: **SAU, IRN, JOR, IRQ ja EGY**. Kaikilla viidellä
+oli jo kolme (Saudi-Arabialla kaksi) maastokohdetta, ja neljällä oli
+yksittäisiä kuratoituja kohteita fokuspakissaan, mutta yhdelläkään ei
+ollut skandaaleja eikä — Saudi-Arabiaa lukuun ottamatta — eläintäkyä.
+Erä kirjoitti kullekin maalle puuttuvat kohteet, Saudi-Arabialle lisäksi
+puuttuneen maastokohteen (Farasansaaret) sekä neljä eläintäkyä ja
+kymmenen skandaalia — yhteensä **42 uutta karttamerkkiä**. Erä on
+kuvaton kuten K2-erät 1–4 ja maailman erät M1–M5 ja M8, ja jokainen
+väite on en-Wikipedian raakatekstin katteessa lähderivillä, joka nimeää
+artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+`node tools/laske-karttanostot.mjs` sanoo erän jälkeen kaikista
+viidestä *täysi*; taulukot ajaa Fable.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Saudi-Arabia (SAU) | Hegra, Al-Ahsan keidas, Jubbahin kalliotaide, Al-Ukhdud, Rijal Almaa, Qaryat al-Faw, Vanha Jedda | Farasansaaret (uusi; oli jo: Jabal Sawda, Rub al-Khali, Punainenmeri) | (oli jo: arabianoryksi) | Wallinin valeasu, Tayman kivi |
+| Iran (IRN) | Pasargadai, Bamin linnoitus, Yazd, Shushtar, Soltaniyeh, Takht-e Soleyman, Gonbad-e Qabus | (oli jo: Damavand, Kaspianmeri, Karun) | persianonageri | Tupakkakapina, Susan kaivausmonopoli |
+| Jordania (JOR) | Jerash, Umm Qais, Umm el-Jimal, Madaba, Kerakin linna, Wadi Rum, Ayla | (oli jo: Jabal Umm ad Dami, Kuollutmeri, Jordan) | nubiantorvikauris | Meshan steela, Azraqin kosteikko |
+| Irak (IRQ) | Ur, Uruk, Samarran moskeija, Erbilin sitadelli, Hatra | (oli jo: Cheekha Dar, Tigris, Shatt al-Arab) | basranruokokerttunen | Bagdadin patteri, Rassamin oikeusjuttu |
+| Egypti (EGY) | Abu Simbel, Abydos, Philae, Wadi al-Hitan | (oli jo: Siinainvuori, Punainenmeri, Niili) | egyptinmangusti | Denderan horoskooppi, Suezin osakekauppa |
+
+**Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
+mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin, ja
+jokaisen kohteen lähin on kirjattu sen koordinaattirivin viereen. Koko
+erän lähin merkki on Failaka 8,8 lautayksikön päässä Kuwait-laatasta;
+raja `KAUPUNGIN_KOHDALLA_SADE` on 7 ja kaupunkikaton säde 8. Tästä
+säännöstä karsiutuivat Qatarin Al Wakrah (5,0), Al Wajbahin linnake
+(4,2) ja Barzanin tornit (5,7), Omanin Al-Baleed (5,8) sekä
+Arabiemiirikuntien Al Shindagha ja Al Fahidi. `node
+tools/tarkista-nimiolimitys.mjs` antaa yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0", ja
+kaikki 64 Lähi-idän merkkiä pitävät nimiönsä näkyvissä.
+
+**Kaksi skandaalimerkkiä on siirretty naapuriruutuun** samalla
+periaatteella kuin erässä M3 (Hongkongin Carrian ja Colombon Golden
+Key): Zubarahin hävitys on niemimaan pohjoisrannalla, koska Zubarahin
+oma nosto istuu jo raunioiden päällä, ja Souk Al-Manakh Kuwaitinlahden
+suulla, koska tapahtumapaikka Jibla on Kuwait Cityn sisällä. Kolmas
+siirto on Kyproksen Rikhard-skandaali, joka on Limassolin itälaidalla
+viiden kilometrin päässä keskustasta, koska Khirokitian nimiö on
+keskustan kohdalla. Jokaisen kortin `paikka`-rivi kertoo tapahtuman
+oikean paikan, ja syy on kirjattu merkin viereen koodiin.
+
+**Sääntö N3 karsi kolme ehdokasta.** Saudi-Arabialla on jo
+arabianoryksi, joten Omanin eläintäyksi valittiin arabianleopardi
+(Jabal Samhanin luonnonsuojelualue) eikä oryksi; Kyproksen Salamis ja
+Famagusta ovat käytännössä Pediaíos-nimiön päällä, joten kumpaakaan ei
+otettu. Yksikään uusi nimi ei ole laudan omassa nimitaulussa
+(`js/packs/maailmankartta-nimet.js`).
+
+**Herkät aiheet asiallisesti** (`docs/aasia-tyoaineisto/spec-asia.md`).
+Kyproksesta ei kirjoitettu vuoden 1974 jälkeisiä kiistoja eikä
+nykypolitiikkaa: molemmat skandaalit ovat 1100- ja 1800-luvulta, ja
+saaren hallinnollinen nykytilanne jätettiin kokonaan mainitsematta.
+Warbahin saari jätettiin pois Kuwaitin listalta, koska sen artikkelin
+historiaosuus on kokonaan rajakiistaa. Kolonialismi kerrotaan
+neutraalina historiana ja lähteen katteessa (Fujairahin linnan
+pommitus 1925, vuoden 1819 retkikunta ja sen kiistetty peruste).
+Sotahistoriaa ei ole otettu kohteiksi.
+
+**Vartiot menivät läpi ilman muutoksia.** `savuke-maastokohteet.mjs`
+vartio 7a olettaa maalta fokuslehden rajauksen (`lehdenRajaus`), ja
+kaikilla viidellä maalla se on olemassa (`js/packs/fokus-grc.js`
+FOKUS_POHJAT) — vartiota ei siis tarvinnut koskea, vaan jokainen uusi
+rivi mitattiin sen sisään ennen kirjoittamista. Savuke menee läpi 8/8.
+`tests/elaintakyt.test.mjs` ja `tests/skandaalit.test.mjs` lukumäärät
+päivitettiin (eläintäkyjä 61 → 65, skandaaleja 123 → 133 ja maita
+49 → 54).
+
+**Kuvaputkelle jää neljä eläintäkykuvaa.** CYP, OMN, ARE ja KWT saivat
+`kuva`-kenttään kuvaputken tunnuksen ilman kansiota (`elain-cyp`,
+`elain-omn`, `elain-are`, `elain-kwt`), joka osoittaa ämpäriin: kun
+kuvaputki tekee kuvan, se ilmestyy kortille ilman koodimuutosta, ja
+siihen asti kortti on kuvaton.
+erän lähin merkki on Bagdadin patteri 11,2 lautayksikön päässä
+Bagdadista, seuraavat Pasargadai 13,9 yksikköä Persepoliksesta ja
+Denderan horoskooppi 15,7 yksikköä Luxorista; raja
+`KAUPUNGIN_KOHDALLA_SADE` on 7. `node tools/tarkista-nostopaikat.mjs`
+antaa kaikille 42:lle rivin *pääkartta*, ja
+`node tools/tarkista-nimiolimitys.mjs` sanoo yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Kaupunkisääntö karsi eniten juuri tässä erässä.** Lähi-idän
+pelikaupungit istuvat suoraan kuuluisimpien kohteiden päällä, joten
+pois jäivät Persepolis (oma pelikaupunkinsa), Naqsh-e Rostam,
+Diriyahin At-Turaif (5 yksikköä Riadista), Saqqara ja Dahshur (6–9
+yksikköä Kairosta), Pyhän Katariinan luostari (käytännössä
+Siinai-laatan päällä), Niniven Kuyunjik ja Deir el-Bahari (Luxorin
+päällä). Nimiölimitys karsi lisäksi Al-Ulan vanhankaupungin (Hegran
+vieressä), Ajlounin linnan (5,4 yksikköä Jerashista) ja Qusayr Amran
+(8,3 yksikköä Azraqista). Kaksi kohdepaikkaa annettiin skandaalille:
+Tayman keidas ja Nimrud kantavat nyt kortin "Tayman kivi" ja "Rassamin
+oikeusjuttu", koska kaksi nimiötä samassa pisteessä olisi limitys.
+
+**Herkkien aiheiden linjaus pidettiin** (`docs/aasia-tyoaineisto/
+spec-asia.md`, SITOVA, sekä M3:n Myanmar-linja). Yksikään kortti ei
+koske nykypolitiikkaan eikä käynnissä olevaan konfliktiin: Irakin
+kohteet ovat muinaishistoriaa, ja Hatran vaurioista 2015 kerrotaan
+yhdellä toteavalla virkkeellä lähteen sanamuodossa (veistoksia
+tuhottiin, muurit ja tornit ovat yhä pystyssä). Nimrudia ei kirjoitettu
+kohteeksi lainkaan. Kymmenestä skandaalista kahdeksan on vuosilta
+1820–1902, ja kaksi 1900-luvun tapausta ovat Bagdadin patterin
+tiedehuhu (1936–1938) ja Azraqin kosteikon kuivuminen (1960–1992),
+joista jälkimmäinen on vesitalouden ympäristötapaus.
+
+**Eläintäkyjen paikat on mitattu koneellisesti.** Jokainen piste on maan
+rajojen sisällä, maalla ja vähintään 35 lautayksikön päässä jokaisesta
+kaupunkimerkistä (`tests/elaintakyt.test.mjs`): Iranin onageri 140,8
+yksikköä Teheranista, Irakin ruokokerttunen 71,6 Kuwaitista, Egyptin
+mangusti 44,1 Kairosta ja Jordanian kauris 40,5 Petrasta. Jordania oli
+erän tiukin tapaus — koko maa on niin kapea, että vain Mujibin ylänkö
+Kuolleenmeren itäpuolella ylitti rajan. Egyptin eläimeksi ei voitu
+ottaa fennekkiä (Algerian täky) eikä nubiantorvikaurista (Jordanian
+täky), joten valinta on egyptinmangusti, joka on samalla muinaisen
+Egyptin muumioitu ja jumalatar Mafdetiin liitetty eläin.
+
+**Kuvat puuttuvat kaikilta neljältä eläintäyltä.** `kuva`-kentässä on
+kuvaputken ämpäritunnus ilman kansiota (`elain-irn`, `elain-jor`,
+`elain-irq`, `elain-egy`): kun kuvaputki toimittaa kuvan, se ilmestyy
+kortille ilman koodimuutosta, ja siihen asti kortti on kuvaton.
+
+## Erä M11 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Afrikan toinen erä: **ETH, KEN, TZA, UGA ja MAR**. Kaikilla viidellä oli
+ennen erää kolme maastokohdetta ja eläintäky mutta nolla kohdetta ja
+nolla skandaalia, joten työ oli puhdasta kohde- ja skandaalityötä: 8
+kohdetta ja 2 skandaalia kuhunkin maahan, yhteensä 50 uutta
+karttamerkkiä. Erä on kuvaton kuten K2-erät 1–4 ja maailman erät M1–M8,
+ja jokainen väite on en-Wikipedian raakatekstin katteessa lähderivillä,
+joka nimeää artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+`node tools/laske-karttanostot.mjs` sanoo erän jälkeen kaikista
+viidestä *täysi*; taulukot ajaa Fable.
+
+Kohteet asuvat maiden omissa `js/packs/maastokohteet-<iso>.js`
+-tiedostoissa (kaikilla viidellä oli tiedosto jo olemassa, joten uusia
+rekisteröintejä `maastokohteet.js`-hakemistoon, `sw.js`:ään tai
+`tools/build-standalone.mjs`:ään ei tarvittu). Skandaalit ovat
+`js/packs/skandaalit.js`:n lopussa, ja `tests/skandaalit.test.mjs`:n
+lukumäärät päivitettiin (skandaaleja 143 → 153 ja maita 59 → 64).
+Eläintäkyihin ei koskettu: ne olivat jo kaikilla viidellä maalla.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Etiopia (ETH) | Aksum, Fasil Ghebbi, Harar, Tiya, Debre Damo, Danakilin syvänne, Hadar, Balen kansallispuisto | (oli jo: Ras Dejen, Tanajärvi, Sininen-Niili) | (oli jo: gelada) | Magdalan ryöstö 1868, Wuchalen artikla 17 (1889) |
+| Kenia (KEN) | Lamu, Fort Jesus, Gedin rauniot, Thimlich Ohinga, Koobi Fora, Hell's Gate, Amboseli, Lewa | (oli jo: Mount Kenya, Victorianjärvi, Intian valtameri) | (oli jo: kirahvinvasa) | Happy Valley 1920–1941, Tsavon ihmissyöjät 1898 |
+| Tansania (TZA) | Olduvain rotko, Serengeti, Kondoan kalliotaide, Kilwa Kisiwani, Bagamoyo, Ujiji, Tabora, Kalambon putoukset | (oli jo: Kilimandžaro, Intian valtameri, Tanganjikajärvi) | (oli jo: norsunvasa) | Maji Maji 1905–1907, maapähkinähanke 1946–1951 |
+| Uganda (UGA) | Kasubin haudat, Murchisonin putoukset, Queen Elizabethin puisto, Kibalen kansallispuisto, Nyeron kalliomaalaukset, Kidepon laakso, Fort Patiko, Jinja | (oli jo: Mount Stanley, Victorianjärvi, Niili) | (oli jo: gorillanpoikanen) | Kabakan karkotus 1953–1955, kadonneet kreivikunnat 1894–1964 |
+| Marokko (MAR) | Volubilis, Aït Benhaddou, Essaouira, Chefchaouen, Hassan-torni, Erg Chebbi, El Jadida, Lixus | (oli jo: Toubkal, Atlantti, Drâa) | (oli jo: berberiapina) | Agadirin kriisi 1911, Annualin katastrofi 1921 |
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin, ja jokaisen kohteen
+lähin on kirjattu sen koordinaattirivin viereen. Koko erän lähin merkki
+on Volubilis 19,2 lautayksikön päässä Fèsistä ja toiseksi lähin Tiya
+20,6 yksikön päässä Addis Abebasta; raja `KAUPUNGIN_KOHDALLA_SADE` on 7.
+`node tools/tarkista-nostopaikat.mjs` antaa kaikille 50:lle rivin
+*pääkartta*, ja `node tools/tarkista-nimiolimitys.mjs` sanoo yhä
+"NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Neljä rajausta, jotka valitsivat sisällön.** (1) M3:n Myanmar-linja:
+artikkeleita, joiden nykytila on selkkaus, ei kirjoitettu. Etiopian
+**Konso** oli erän ainoa kokonaan hylätty ehdokas — sen artikkelissa on
+oma osio "Conflict since 1990", joka kertoo yhä käynnissä olevasta
+väkivallasta — ja sen tilalle tuli Balen vuorten kansallispuisto.
+Samasta linjasta Lamun kortti kertoo vain kaupungin historian eikä
+artikkelin nykypäivän turvallisuustilannetta. (2) Merkkien
+päällekkäisyys karsi kolme muuten hyvää ehdokasta: **Ngorongoro** osuisi
+kahdeksan lautayksikön päähän Olduvain rotkosta (kraatteri mainitaan
+Olduvain kortissa), **Meknès** on 6,6 yksikön päässä Volubiliksesta
+(kaupunki mainitaan Volubiliksen kortissa) ja Ugandan **Bwindi** on
+täsmälleen samassa pisteessä kuin maan eläintäky, gorillanpoikanen.
+Samasta syystä myös kaksi skandaalia vaihtui: **Aksumin obeliski**
+(Rooma 1937–2005) olisi tullut saman erän Aksum-kohteen päälle, joten
+obeliskin tarina kerrotaan Aksumin kortissa ja Etiopian skandaaleiksi
+tulivat Magdala ja Wuchale, ja **Entebbe 1976** olisi ollut samassa
+pisteessä kuin kabakan karkotus, jonka neuvottelut käytiin Entebben
+Government Housessa. (3) Tyyppi kertoo, mitä merkki näyttää: Danakilin
+syvänne ja Erg Chebbi ovat `muu` eivätkä maastoa, koska maastokiintiö
+oli jo täynnä, ja Kalambon putoukset on `historia`, koska kortti kertoo
+maailman vanhimmasta tunnetusta puurakennelmasta eikä vesiputouksesta.
+(4) Lähdeaineiston ohuus: Fort Patikon ja Kasubin hautojen koordinaatit
+eivät ole en-Wikipedian `coordinates`-propissa vaan artikkelin omassa
+infolaatikossa, ja ne on luettu sieltä; Bigo bya Mugenyi ja Sof Omar
+jäivät pois, koska koordinaattia ei ollut kummassakaan.
+
+**Herkät aiheet on kirjoitettu lähteen katteessa ja ilman
+nykypolitiikkaa.** Maji Majin uhriluvut (75 000–300 000), Tsavon
+uhriluvut (Pattersonin 135, päiväkirjan 28–31 ja isotooppitutkimuksen
+10,5 + 24,2) ja Annualin tappiot ovat artikkelien omia lukuja.
+Siirtomaahistorian pakkosiirrot mainitaan toteavasti siellä missä lähde
+ne mainitsee (Kidepon ik ja ketebo, Queen Elizabethin songora), eikä
+yhdenkään kortin aihe ole käynnissä oleva selkkaus.
+
+## Erä M10 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Aasian kolmas erä: **JPN, KOR, TWN, KAZ, MNG**. Kaikilla viidellä oli
+ennen erää maastokohteita mutta ei yhtäkään kohdetta (Mongolialla yksi,
+Gobi, tyyppi `muu`), ja Japania lukuun ottamatta ei eläintäkyä eikä
+skandaalia. Erä on kuvaton kuten K2-erät 1–4 ja maailman erät M1–M8, ja
+jokainen väite on en-Wikipedian raakatekstin katteessa lähderivillä,
+joka nimeää artikkelin ja osan sekä tarkistuspäivän 6.9.2026. Taulukon
+luvut ajetaan `node tools/laske-karttanostot.mjs --md` -työkalulla
+erikseen.
+
+Kohteet ja maastokohteet kirjoitettiin maiden omiin, jo olemassa
+oleviin `js/packs/maastokohteet-<iso>.js`-tiedostoihin, joten uusia
+rivejä `js/packs/maastokohteet.js`-hakemistoon, `sw.js`:n SHELL-listaan
+tai `tools/build-standalone.mjs`:n MODULES-listaan ei tarvittu.
+Eläintäyt ovat `js/packs/elaintakyt.js`:n lopussa ja skandaalit
+`js/packs/skandaalit.js`:n lopussa; kummankin testin lukumäärä
+päivitettiin (eläintäkyjä 69 → 73, skandaaleja 143 → 153 ja maita
+59 → 64).
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Japani (JPN) | Himejin linna, Nikkō Tōshō-gū, Shirakawa-gō, Hiroshiman rauhanmuistomerkki, Hōryū-ji, Iwamin hopeakaivos, Kumano Kodō, Dejima | (oli jo: Fuji, Japaninmeri, Shinanojoki) | (oli jo) | Namamugi 1862, Minamatan tauti |
+| Etelä-Korea (KOR) | Gyeongju, Haeinsa, Hwaseong, Hahoe, Gochangin dolmenit, Jeonjun hanokit, Baekjen alueet, Songgwangsa | (oli jo: Hallasan, Keltainenmeri, Nakdong) | korean vesihirvi | Oegyujanggak 1866, Port Hamilton 1885–1887 |
+| Taiwan (TWN) | Taroko, Santo Domingo, Jiufen, Lukang, Chaotian, Fort Zeelandia, Wushantou, Sanxiantai | Penghu (saari) | formosanmustakarhu | Roverin haaksirikko 1867, Lanyun ydinjätevarasto 1982 |
+| Kazakstan (KAZ) | Yasawin mausoleumi, Tamgaly, Baikonur, Charynin kanjoni, Altyn-Emel, Issykin kurgaani, Aisha Bibi, Saryarka | (oli jo: Khan Tengri, Araljärvi, Irtyš) | saiga | Semipalatinskin koealue, Aralin kalasatama |
+| Mongolia (MNG) | Amarbayasgalant, Bayanzag, Hustain nuruu, Peurakivet, Tövhön, Tsagaan agui, Tšingisin patsas (+ Gobi oli jo) | Hövsgöl (järvi) | przewalskinhevonen | Ongiin luostari 1939, Tarbosaurus-huutokauppa 2012 |
+
+Kaikki viisi maata ovat erän jälkeen tavoitteessa: `node
+tools/laske-karttanostot.mjs` sanoo niistä "täysi". Uusia karttamerkkejä
+tuli 51 (39 kohdetta, 2 maastokohdetta, 4 eläintäkyä, 10 skandaalia).
+
+**Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
+mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin.
+Lähin uusi merkki on Taiwanin Taroko 12,6 lautayksikön päässä
+Taipei-laatasta ja toiseksi lähin Korean Hwaseongin linnoitus 12,6
+yksikön päässä Soulista; raja `KAUPUNGIN_KOHDALLA_SADE` on 7. Kaksi
+ehdokasta kaatui juuri tähän: Korean **Namhansanseong** (7,6 yksikköä
+Soulista) ja Taiwanin **Sun Moon Lake** (6,0 yksikköä Taipeista).
+`node tools/tarkista-nimiolimitys.mjs` sanoo koko maailmasta yhä
+"NIMIÖ NIMIÖN PÄÄLLÄ: 0", ja `tools/tarkista-nostopaikat.mjs` antaa
+jokaiselle uudelle nostolle rivin *pääkartta*.
+
+**Nimiölimitys valitsi neljä kohdetta uudelleen.** Japanin
+Itsukushiman pyhäkkö on 6,6 yksikön päässä Hiroshiman
+rauhanmuistomerkistä, Taiwanin Alishan 5,4 yksikön päässä maan omasta
+Yu Shan -merkistä, Kazakstanin Otrar 18,0 yksikön päässä Turkistanin
+mausoleumista ja Korean Jejun Seongsan Ilchulbong 14,2 yksikön päässä
+Hallasanista. Painavin tapaus on Mongolian **Karakorum**: maan oma
+Orhon-merkki on Harhorinin kohdalla, ja Karakorumin nimiö osuisi 6,9
+yksikön päähän siitä — sekä muinainen pääkaupunki että Erdene Zuun
+luostari jäivät siksi pois, ja Orhonin laakson kohteista mukaan mahtui
+Tövhön (21,8 yksikköä joen merkistä).
+
+**Aasian linjaukset pidettiin** (`docs/aasia-tyoaineisto/spec-asia.md`,
+SITOVA). Taiwanin korteissa ei ole salmikysymystä eikä nykypolitiikkaa:
+painotus on 1600–1900-luvun Formosassa, kaupassa, kansoissa ja
+tekniikassa, ja **Kinmen jätettiin pois kokonaan**, koska sen artikkeli
+lepää nykyisen kiistan varassa. Japanin sotahistoriasta kirjoitettiin
+vain Hiroshiman rauhanmuistomerkin kortissa: se kertoo rakennuksen
+historian ja muistomerkin nykyisen tehtävän lähteen katteessa, ilman
+uhrilukujen korostusta. Japanin skandaalit ovat ympäristö- ja
+diplomatiahistoriaa (1862 ja 1932–1968), Korean 1800-luvun
+siirtomaadiplomatiaa (1866 ja 1885–1887) ja Mongolian 1930-luvun
+uskonnonvainot sekä fossiilien salakuljetus. Kazakstanin ydinkoealue ja
+Araljärven kuivuminen kerrotaan artikkelien omalla tarkkuudella.
+
+**Neljä eläintäkyä, kaikki kuvattomia.** `kuva`-kentässä on
+kuvaputken ämpäritunnus ilman kansiota (`elain-kor`, `elain-twn`,
+`elain-kaz`, `elain-mng`): kun kuvaputki toimittaa kuvan, se ilmestyy
+kortille ilman koodimuutosta. Paikat on mitattu koneellisesti — jokainen
+piste on maan rajojen sisällä, maalla ja vähintään 35 lautayksikön
+päässä jokaisesta kaupunkimerkistä (`tests/elaintakyt.test.mjs`).
+Tiukin oli Taiwan: Taipei-laatta on laudalla keskellä saarta, joten
+formosanmustakarhun piste oli haettava saaren eteläosan vuoristosta
+(etäisyys 49,7).
+
+## Erä M14 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Aasian neljäs erä: **AFG, PAK, UZB, PHL ja CHN**. Kaikilla viidellä oli
+ennen erää maastokohteet (PHL:llä ja CHN:llä neljä, UZB:llä kaksi),
+mutta kohteita oli yhteensä kolme ja skandaaleja ei yhtään; eläintäky
+oli vain Kiinalla. Erästä tuli **38 kohdetta, 1 maastokohde, 4
+eläintäkyä ja 10 skandaalia** eli 53 uutta karttamerkkiä, ja
+## Erä M15 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Afrikan viides erä: **SDN, TCD, LBY, NGA ja SOM**. Kaikilla viidellä
+oli ennen erää maastokohteita (3–4) mutta ei yhtään eläintäkyä eikä
+skandaalia, ja kohteita oli vain Libyalla yksi — Leptis Magna, joka
+asuu maan omassa `js/packs/fokuskohteet-lby.js`:ssä. Työ oli siis
+kohde-, eläintäky- ja skandaalityötä: 39 uutta kohdetta, 5 eläintäkyä
+ja 10 skandaalia, yhteensä 54 uutta karttamerkkiä. Erä on kuvaton
+kuten K2-erät 1–4 ja maailman erät M1–M11, ja jokainen väite on
+en-Wikipedian raakatekstin katteessa lähderivillä, joka nimeää
+artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+`node tools/laske-karttanostot.mjs` sanoo erän jälkeen kaikista
+viidestä *täysi*; taulukot ajaa Fable.
+
+Kohteet asuvat maiden omissa `js/packs/maastokohteet-<iso>.js`
+-tiedostoissa (kaikilla viidellä oli tiedosto jo olemassa, joten uusia
+rekisteröintejä `maastokohteet.js`-hakemistoon, `sw.js`:ään tai
+`tools/build-standalone.mjs`:ään ei tarvittu). Eläintäyt ovat
+`js/packs/elaintakyt.js`:n ja skandaalit `js/packs/skandaalit.js`:n
+lopussa, ja kummankin testin lukumäärät päivitettiin (eläintäkyjä
+81 → 85, skandaaleja 183 → 193 ja maita 79 → 84). Erä on kuvaton kuten
+K2-erät 1–4 ja maailman erät M1–M11, ja jokainen väite on
+en-Wikipedian raakatekstin katteessa lähderivillä, joka nimeää
+artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Afganistan (AFG) | Band-e Amir, Jamin minareetti, Heratin linnoitus, Balkh, Mes Aynak, Ai-Khanoum, Ghazni (+ Bamiyanin buddhat oli jo) | (oli jo: Noshaq, Amudarja, Helmand) | lumileopardi | Gandamak 1842, Baktrian kulta 1978–2003 |
+| Pakistan (PAK) | Mohenjo-daro, Taxila, Makli, Rohtasin linnoitus, Takht-i-Bahi, Khewran kaivos, Deosai, Mehrgarh | (oli jo: K2, Arabianmeri, Indus) | markhor | Kohinoor 1849, Harappan tiilet 1857 |
+| Uzbekistan (UZB) | Itchan Kala, Shahrisabz, Moynaq, Nukusin museo, Kampir Tepe, Ayaz-Kala, Kokand (+ Araljärvi oli jo) | Aydarjärvi (järvi) | bukharanhirvi | Bukhara 1842 (Conolly ja Stoddart), Vozroždenije 1954–2002 |
+| Filippiinit (PHL) | Banaue, Vigan, Chocolate Hills, Tubbataha, Maanalainen joki, Callaon luola, Paoayn kirkko, Corregidor | (oli jo: Mount Apo, Mayon, Filippiinienmeri, Cagayan) | tarsieri | Balangigan kellot 1901–2018, Yamashitan kulta 1971–1996 |
+| Kiina (CHN) | Mutianyu, Terrakotta-armeija, Mogaon luolat, Zhangjiajie, Lijiang, Leshanin Buddha, Pingyao (+ Yuanmingyuan oli jo) | (oli jo: Taishan, Etelä-Kiinan meri, Jangtse, Keltainenjoki) | (oli jo) | Nankingin sopimus 1842, Qing-haudat 1928 |
+
+**Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
+mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin, ja
+jokaisen kohteen lähin on kirjattu sen koordinaattirivin viereen.
+Erän lähin merkki on **Mes Aynak 9,3 lautayksikön päässä Kabulista**
+ja toiseksi lähin **Terrakotta-armeija 12,9 yksikön päässä
+Xi'anista**; raja `KAUPUNGIN_KOHDALLA_SADE` on 7 ja kaupunkikaton
+säde 8. `node tools/tarkista-nostopaikat.mjs` antaa jokaiselle
+uudelle nostolle rivin *pääkartta*, ja
+`node tools/tarkista-nimiolimitys.mjs` sanoo koko maailmasta yhä
+"NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Kaksi kaupunkia siirrettiin kohdelistalta skandaalikortille**, koska
+sama nimiö olisi tullut kahdesti samaan pisteeseen. Pakistanin
+**Lahoren linnoitus** ja maan Kohinoor-skandaali osuisivat samaan
+kohtaan, joten Lahoren tarina kerrotaan skandaalikortissa ja
+kohdelistalle tuli tilalle Mehrgarh. Uzbekistanin **Bukhara** on sama
+tapaus: Poi Kalyan, Ark ja Chor-Bakr ovat 2–3 lautayksikön päässä
+toisistaan ja Conolly–Stoddart-skandaalista, joten kaupunki näkyy
+kartalla vain skandaalimerkkinä ja kohteeksi tuli Kokand. Samasta
+säännöstä kaatuivat myös Kiinan **Suzhoun puutarhat** (11,6 yksikköä
+Shanghaista, nimiö kaupungin nimen päällä) ja Filippiinien
+**Intramuros** (Manilan laatan kohdalla).
+
+**Aasian linjaukset ovat sitovia** (`docs/aasia-tyoaineisto/spec-asia.md`).
+Afganistanin, Pakistanin ja Kiinan kortit ovat historiaa eivätkä
+nykypolitiikkaa, ja M3:n Myanmar-linjan mukaisesti artikkeleita, joiden
+nykytila on sotaa, ei kirjoitettu: Afganistanin **Bagram** jätettiin
+kokonaan pois, koska sen artikkeli lepää lentotukikohdan ja sodan
+varassa, ja Mes Aynakin kortti kertoo kaivauspaikan oman historian ja
+sen, että kaivostoiminta uhkaa jäänteitä, ilman nykyhallinnon
+nimeämistä. Bamiyanin buddhien tuhoa ei kirjoitettu skandaaliksi,
+koska sama aihe on jo maan fokuskohteena
+(`js/packs/fokuskohteet-afg.js`); samasta syystä Kiinan skandaaleiksi
+valittiin Nankingin sopimus ja Qing-hautojen ryöstö eikä Yuanmingyuan,
+joka on jo `js/packs/fokuskohteet-chn.js`:ssä. Balangigan kortti kertoo
+kellojen matkan eikä sitä edeltäneitä tekoja yksityiskohtineen, eikä
+yhdenkään kortin aihe ole käynnissä oleva selkkaus.
+
+**Kaksi ehdokasta jäi pois lähdeaineiston takia.** Pakistanin
+**Khunjerabin solalla** ei ole en-Wikipedian artikkelissa lainkaan
+koordinaattia (`{{Coord|type:pass}}` ilman lukuja), ja kortista olisi
+tullut rajakortti; Deosai kirjoitettiin sen sijaan luontokohteena ja
+Pakistanin hallinnoiman Gilgit-Baltistanin nimi on kortissa lähteen
+omalla muotoilulla. Osalla kohteista koordinaatti ei ollut
+en-Wikipedian `coordinates`-propissa vaan artikkelin oman infolaatikon
+`{{coord}}`-mallissa (mm. Band-e Amir, Herat, Mes Aynak, Makli,
+Takht-i-Bahi, Khewra, Deosai, Itchan Kala, Shahrisabz, Nukus,
+Ayaz-Kala, Aydar, Mutianyu, Zhangjiajie, Lijiang), ja se on luettu
+sieltä; kumpi lähde kulloinkin, se lukee kohteen koordinaattirivillä.
+
+**Neljä eläintäkyä, kaikki kuvattomia.** `kuva`-kentässä on kuvaputken
+ämpäritunnus ilman kansiota (`elain-afg`, `elain-pak`, `elain-uzb`,
+`elain-phl`). Paikat on mitattu koneellisesti: jokainen piste on maan
+rajojen sisällä, maalla ja vähintään 35 lautayksikön päässä jokaisesta
+kaupunkimerkistä (`tests/elaintakyt.test.mjs`). Lumileopardi on
+Wakhanin käytävässä, jossa se on lähteen mukaan tallentunut
+riistakameroihin 16 paikassa; markhor Chitralin vuoristossa, jossa on
+lajin suurin kanta; bukharanhirvi Amudarjan tugai-vyöhykkeellä; ja
+tarsieri Etelä-Mindanaon Saranganissa. Filippiineillä Bohol olisi ollut
+lajin tunnetuin koti, mutta piste olisi osunut saman erän Chocolate
+Hills -merkin päälle.
+## Erä M13 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+Eteläinen Afrikka: **MDG, MOZ, NAM, ZAF, ZWE**. Kaikilla viidellä oli
+ennen erää maastokohteet kunnossa (3–4), mutta kohteita ei ollut
+yhtäkään paitsi Zimbabwella yksi (Suuri Zimbabwe,
+`js/packs/fokuskohteet-zwe.js`, jota ei toistettu). Eläintäky oli jo
+MDG:llä, NAM:lla ja ZAF:lla; skandaali ei yhdelläkään. Erä on kuvaton
+kuten K2-erät 1–4 ja maailman erät M1–M11, ja jokainen väite on
+en-Wikipedian raakatekstin katteessa lähderivillä, joka nimeää
+artikkelin ja osan sekä tarkistuspäivän 6.9.2026. Taulukon luvut
+ajetaan `node tools/laske-karttanostot.mjs --md` -työkalulla erikseen.
+
+Kohteet kirjoitettiin maiden omiin, jo olemassa oleviin
+`js/packs/maastokohteet-<iso>.js`-tiedostoihin, joten uusia rivejä
+`js/packs/maastokohteet.js`-hakemistoon, `sw.js`:n SHELL-listaan tai
+`tools/build-standalone.mjs`:n MODULES-listaan ei tarvittu. Eläintäyt
+ovat `js/packs/elaintakyt.js`:n lopussa ja skandaalit
+`js/packs/skandaalit.js`:n lopussa; kummankin testin lukumäärä
+päivitettiin (eläintäkyjä 81 → 83, skandaaleja 183 → 193 ja maita
+79 → 84).
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Madagaskar (MDG) | Ambohimanga, Tsingy de Bemaraha, Baobabien kuja, Isalo, Andasibe-Mantadia, Ranomafana, Merirosvojen hautausmaa, Antsiranana | (oli jo: Maromokotro, Mosambikin kanaali, Mangoky) | (oli jo: sifaka) | Tamatave 1885, Nosy Be 1849 |
+| Mosambik (MOZ) | Gorongosa, Sofala, Inhambane, Cahora Bassa, Quelimane, Angoche, Manyikeni, Maputo | (oli jo: Monte Binga, Intian valtameri, Sambesi) | dugongi | Gaza 1895, Delagoa 1889 |
+| Namibia (NAM) | Spitzkoppe, Kolmanskop, Fish Riverin kanjoni, Etosha, Sossusvlei, Swakopmund, Hoban meteoriitti, Cape Cross | (oli jo: Brandberg, Atlantti, Oranjejoki) | (oli jo: erämaanorsu) | Waterberg 1904, Caprivi 1890 |
+| Etelä-Afrikka (ZAF) | Sterkfonteinin luolat, Kruger, Isandlwana, Cape Agulhas, Stellenbosch, Pilgrim's Rest, Vredefortin kraatteri, iSimangaliso | (oli jo: Mafadi, Pöytävuori, Intian valtameri, Oranjejoki) | (oli jo: afrikanpingviini) | Hopetown 1869, Mapungubwe 1933 |
+| Zimbabwe (ZWE) | Matobo, Mana Pools, Hwange, Chinhoyin luolat, Naletale, Birchenough Bridge, Mutare (+ Suuri Zimbabwe oli jo) | (oli jo: Mount Nyangani, Sambesi, Limpopo) | musta sarvikuono | Rudd 1888, Kariba 1958 |
+
+Kaikki viisi maata ovat erän jälkeen tavoitteessa: `node
+tools/laske-karttanostot.mjs` sanoo niistä "täysi". Uusia karttamerkkejä
+tuli 51 (39 kohdetta, 2 eläintäkyä, 10 skandaalia).
+
+**Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
+mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin.
+Lähin uusi merkki on Mosambikin **Sofala** 21,5 lautayksikön päässä
+Mosambik-laatasta ja toiseksi lähin Madagaskarin **Andasibe-Mantadia**
+23,4 yksikön päässä Madagaskar-laatasta; raja `KAUPUNGIN_KOHDALLA_SADE`
+on 7. Alueen pelikaupungit rajasivat silti sisältöä: **Mosambikin
+saari**, **Viktorian putoukset**, **Kimberley**, **Kapkaupunki** ja
+**Namib** ovat kaupunkeja, joten Mosambikin saarta, itse putouksia ja
+Kimberleyn Big Holea ei kirjoitettu kohteiksi lainkaan.
+Kimberleyn timanttikuume kerrotaan sen sijaan Hopetownin
+skandaalikortissa 40,1 yksikön päässä Kimberleystä — sieltä timantti
+oikeasti löytyi.
+
+**Nimiölimitys ratkaisi kuusi valintaa.** Namibian **Twyfelfontein** on
+3,2 lautayksikön päässä maan oman erämaanorsu-eläintäyn merkistä ja
+**Lüderitz** 3,3 yksikön päässä Kolmanskopista; kummastakin parista
+mahtui kartalle vain toinen (tilalle Spitzkoppe, Kolmanskop jäi).
+Etelä-Afrikan **Robben Island** on 5,9 yksikön päässä Pöytävuoresta ja
+**Blyde River** 10,9 yksikön päässä Pilgrim's Restistä. Madagaskarin
+**Tôlanaro** on 22,7 yksikön päässä sifakasta, ja tilalle tuli
+Antsiranana. Zimbabwen **Khami** on 14,4 yksikön päässä Matobosta;
+Matobo valittiin, ja Khami jäi odottamaan. `node
+tools/tarkista-nimiolimitys.mjs` sanoo koko maailmasta yhä "NIMIÖ
+NIMIÖN PÄÄLLÄ: 0"; tiedoksi luetellussa "nimiö symbolin päällä"
+-listassa on yksi uusi rivi (ZAF:n Mapungubwe 1933 -nimiö Zimbabwen
+Limpopo-merkin symbolin päällä), mikä on väistön oma sallittu tinkiminen.
+
+**Herkät aiheet asiallisesti.** Waterbergin taistelu 1904 ja sitä
+seurannut hererokansanmurha kerrotaan artikkelin omalla tarkkuudella
+ilman kuvailua, jota lähteessä ei ole; sama koskee Gazan valtakunnan
+kukistumista 1895 ja Kariban altaan tieltä siirrettyjä 57 000 tongaa.
+Nykypolitiikka on jätetty pois: Etelä-Afrikan **Graaff-Reinet**
+karsiutui juuri siksi, että sen artikkelin nykytila on helmikuun 2026
+nimenmuutos. Mosambikin **Ibo** ja **Quirimbas** jätettiin pois M3:n
+Myanmar-linjalla, koska artikkelien nykytila on aseellista konfliktia.
+
+**Kaksi eläintäkyä, molemmat kuvattomia.** `kuva`-kentässä on
+kuvaputken ämpäritunnus ilman kansiota (`elain-moz`, `elain-zwe`).
+Mosambikin dugongin piste jouduttiin siirtämään mantereelle
+Inhassoroon Bazaruton saariston vastarannalle: testi vaatii eläintäyn
+maalle ja maan rajojen sisään (`tests/elaintakyt.test.mjs`), ja
+saariston oma vesialue on laudan maskissa merta. Zimbabwen musta
+sarvikuono seisoo Gonarezhoun kansallispuistossa 122,1 yksikön päässä
+lähimmästä kaupunkimerkistä.
+## Erä M12 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Afrikan
+kolmas erä ja ensimmäinen Länsi-Afrikan erä: **GHA, SEN, MLI, LBR ja SLE**.
+Kaikilla viidellä oli ennestään kolme maastokohdetta mutta ei yhtäkään
+kohdetta, eläintäkyä eikä skandaalia. Erä kirjoitti kullekin kahdeksan
+kohdetta, yhden eläintäyn ja kaksi skandaalia — yhteensä 55 uutta
+karttamerkkiä. Erä on kuvaton kuten K2-erät 1–4 ja maailman erät M1–M11, ja
+jokainen väite on en-Wikipedian raakatekstin katteessa lähderivillä, joka
+nimeää artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+`node tools/laske-karttanostot.mjs` sanoo erän jälkeen kaikista viidestä
+*täysi*; taulukot ajaa Fable.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Ghana (GHA) | Elminan linna, Kakumin puisto, Larabangan moskeija, Molen puisto, Nzulezo, Osun linna, Pagan krokotiilit, Prinzensteinin linnake | (oli jo: Afadja, Guineanlahti, Voltajärvi) | valkokaulakalliovaris | Kultajakkaran sota 1900, Salagan orjatori |
+| Senegal (SEN) | Gorée, Saint-Louis, Djoudjin lintupuisto, Sine Ngayènen kivikehät, Touban moskeija, Joal-Fadiouth, Saloumin suisto, Ziguinchor | (oli jo: Atlantti, Senegaljoki, Gambiajoki) | afrikanmanaatti | Lat Jor ja rautatie 1886, Aline Sitoé Diatta 1943 |
+| Mali (MLI) | Djennén moskeija, Dogonmaa, Askian hauta, Ségou, Baoulén mutka, Médinen linnake, Sikasson tata, Bamako | (oli jo: Hombori Tondo, Niger, Senegal) | gourmannorsu | Timbuktun käsikirjoitukset 2012, Office du Niger 1932 |
+| Liberia (LBR) | Providence Island, Sapon puisto, Yekepa, Harper, Robertsport, Buchanan, Gbarnga, Bopolu | (oli jo: Mount Wuteve, Atlantti, Cavalla) | kääpiövirtahepo | Firestonen sopimus 1926, Christyn raportti 1930 |
+| Sierra Leone (SLE) | Tiwain suojelualue, Outamba-Kilimi, Golan sademetsä, Bo, Kenema, Bumbunan pato, Bonthe, Kabala | (oli jo: Bintumani, Atlantti, Rokel) | länsiafrikansimpanssi | Lomboko 1849, Koidun kaivossopimus 1995 |
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin, ja jokaisen kohteen lähin on
+kirjattu sen koordinaattirivin viereen. Koko erän lähin merkki on Kakum 9,4
+lautayksikön päässä Kumasi-laatasta ja toiseksi lähin Dékheulén skandaali
+14,8 yksikön päässä Dakarista; raja `KAUPUNGIN_KOHDALLA_SADE` on 7.
+`node tools/tarkista-nostopaikat.mjs` antaa kaikille 55:lle rivin
+*pääkartta*, ja `node tools/tarkista-nimiolimitys.mjs` sanoo yhä
+"NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Viisi rajausta, jotka valitsivat sisällön.** (1) Pelikaupunkien omat
+nähtävyydet jäivät pois: Kumasin Manhyian palatsi (Kumasi), Timbuktun
+käsikirjoituskirjastot kohteena (Timbuktu) ja Freetownin Bunce Island,
+Port Loko ja Fourah Bay College, jotka ovat 6,0, 5,2 ja 12,8 lautayksikön
+päässä Sierra Leone -laatasta. Askian hauta on Gaossa, mutta laudan
+Gao-laatta on 115,9 yksikön päässä haudan oikeasta paikasta, joten se
+kelpasi. (2) Merkkien päällekkäisyys karsi neljä ehdokasta: Cape Coastin
+linna olisi 3,7 yksikön päässä Elminasta, Akosombon pato 7,0 yksikön
+päässä Voltajärvestä (ja padon tarina on jo Voltajärven kortissa),
+Niokolo-Koba 5,0 yksikön päässä Gambiajoesta ja Makeni 10,9 yksikön
+päässä Bumbunasta. (3) Tyyppi kertoo, mitä merkki näyttää: Bandiagaran
+jyrkänne on kirjoitettu Dogonmaana (`kulttuuri`) eikä maastona, sama linja
+kuin M5:n Tassili n'Ajjerissa, ja Senegalin Lac Rose jäi pois, koska se on
+järvi eikä kasvattaisi kohteiden lukua. (4) Yksi ehdokas oli väärässä
+maassa: en-Wikipedian "Mount Nimba Strict Nature Reserve" on Guinean ja
+Norsunluurannikon puolella, joten Liberian Nimba on kartalla Yekepan
+kaivoskaupunkina. (5) Kaksi ehdokasta kaatui lähdeaineiston ohuuteen:
+"Bassari Country" on 698 merkkiä ja "Tongo Hills" 616, ja niiden tilalle
+tulivat Ziguinchor ja Pagan krokotiilit.
+
+**Kolme skandaalimerkkiä on siirretty tietoisesti.** Dékheulén
+taistelupaikalla ja Lombokon linnakkeella ei ole en-Wikipedian
+koordinaattia, joten merkit ovat saman seudun koordinaatillisissa
+pisteissä: Dékheulé Tivaouanessa (en-Wikipedia "Tivaouane") ja Lomboko
+Moajoen suulla Gallinasin rannikolla (en-Wikipedia "Moa River"). Christyn
+raportti koski Liberian koko hallitusta Monroviassa, mutta Monrovian
+piste on jo Providence Islandilla, joten merkki on Sinoen
+satamakaupungissa Greenvillessä. Kaikki kolme on kirjattu skandaalin oman
+lohkon kommenttiin.
+
+**Herkät aiheet lähteen katteessa.** Orjakaupan, pakkotyön ja
+siirtomaasotien luvut ovat artikkelien omia, eikä yhdenkään kortin aihe
+ole käynnissä oleva selkkaus. Sierra Leonen ja Liberian sisällissodat
+mainitaan vain siellä, missä artikkeli kertoo niistä mennyttä aikaa
+(Koidun kaivossopimus 1995, Yekepan kaivoskaupunki, Bumbunan padon
+keskeytys 1997). Bandiagaran kortti on kirjoitettu kohteen historiasta ja
+luonnosta, ei artikkelin nykytilaosuudesta (M3:n Myanmar-linja).
+
+**Eläintäkyjen paikat on mitattu koneellisesti.** Jokainen piste on maan
+rajojen sisällä, maalla ja vähintään 35 lautayksikön päässä jokaisesta
+kaupunkimerkistä (`tests/elaintakyt.test.mjs`) sekä 30 yksikön päässä
+muista täyistä. Erän tiukat tapaukset olivat Ghana ja Mali: Ghanassa
+Molen puiston kohta olisi osunut saman erän Mole-kohteen päälle, joten
+täky vietiin lounaisiin metsiin (lon −2,2 / lat 6,3; etäisyys Kumasiin
+39,4), ja Malissa Gourman norsujen läntinen pää osuisi Hombori Tondon
+päälle, joten piste on alueen itäpäässä (lon −0,5 / lat 15,2).
+
+**Kuvat puuttuvat kaikilta viideltä eläintäyltä.** `kuva`-kentässä on
+kuvaputken ämpäritunnus ilman kansiota (`elain-gha`, `elain-sen`,
+`elain-mli`, `elain-lbr`, `elain-sle`): kun kuvaputki toimittaa kuvan, se
+ilmestyy kortille ilman koodimuutosta, ja siihen asti kortti on kuvaton.
+lopussa, ja testien lukumäärät päivitettiin (eläintäkyjä 81 → 86,
+skandaaleja 183 → 193 ja skandaalimaita 79 → 84).
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Sudan (SDN) | Meroë, Jebel Barkal, Kerma, Vanha Dongola, Soleb, Naqa, Dinder, Sennar | (oli jo: Jebel Marra, Punainenmeri, Niili) | arruikatsa | Khartumin piiritys 1885, Wadi Halfa 1959–1964 |
+| Tšad (TCD) | Guelta d'Archei, Aloban kaari, Ouniangan järvet, Zakouma, Fitri, Manda, Abéché, Iro | (oli jo: Emi Koussi, Tšadjärvi, Chari) | sapelisarvioryksi | Rabihin kallo 1900, Toumaïn reisiluu 2001–2022 |
+| Libya (LBY) | Sabratha, Kyrene, Ptolemais, Ghadames, Tadrart Acacus, Garama, Ubarin hiekkameri (oli jo: Leptis Magna) | (oli jo: Bikku Bitti, Välimeri, Iso-Syrtti) | saharangaselli | Tobruk 1911, Soluch 1931 |
+| Nigeria (NGA) | Sukur, Osun-Osogbo, Zuma Rock, Igbo-Ukwu, Yankari, Kainji, Nok, Badagry | (oli jo: Chappal Waddi, Guineanlahti, Nigerjoki, Benue) | drilli | Beninin retkikunta 1897, Jaja of Opobo 1887 |
+| Somalia (SOM) | Laas Geel, Dhambalin, Amud, Zeila, Bosaso, Hobyo, Hamar Weyne, Barawa | (oli jo: Shimbiris, Adeninlahti, Intian valtameri, Jubba) | beira | Berberan sopimukset 1884–1886, Illigin sopimus 1905 |
+## Erä M18 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Erä
+M18 on **PRY, URY, VEN ja VUT** — kolme eteläamerikkalaista maata ja
+yksi Oseanian saarivaltio, joilla kaikilla oli ennen erää **nolla
+karttamerkkiä, nolla eläintäkyä ja nolla skandaalia**. Erä toi 32
+kohdetta, 12 maastokohdetta, 3 eläintäkyä ja 8 skandaalia eli **55
+uutta karttanostoa**. Kaikki neljä maata olivat ilman omaa
+`js/packs/maastokohteet-<iso>.js`-tiedostoa, joten erä loi neljä uutta
+pakkia ja rekisteröi ne `js/packs/maastokohteet.js`-hakemistoon (97 →
+101 maata), `sw.js`:n SHELL-listaan ja
+`tools/build-standalone.mjs`:n MODULES-listaan. Eläintäyt ovat
+`js/packs/elaintakyt.js`:n lopussa ja skandaalit
+`js/packs/skandaalit.js`:n lopussa; kummankin testin lukumäärä
+päivitettiin (eläintäkyjä 81 → 84, skandaaleja 183 → 191 ja maita
+79 → 83). Erä on kuvaton kuten K2-erät 1–4 ja maailman erät M1–M11, ja
+jokainen väite on en-Wikipedian raakatekstin katteessa lähderivillä,
+joka nimeää artikkelin ja osan sekä tarkistuspäivän 6.9.2026.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Paraguay (PRY) | Trinidad ja Jesús, San Cosme y Damián, Cerro Corá, Ybycuí, Filadelfia, Yaguarón, Concepción, Guairán putoukset | Cerro Tres Kandú (vuori), Apa (joki), Tebicuary (joki) | chacopekari | Humaitá 1868, Nueva Germania 1887 |
+| Uruguay (URY) | Colonia del Sacramento, Punta del Este, Cabo Polonio, Salto Granden pato, Santa Teresan linnoitus, Quebrada de los Cuervos, Tacuarembó, Rivera | Cerro Catedral (vuori), Merínin laguuni (järvi), Atlantti (meri) | kapybara | Graf Spee 1939, Anglo 1863–1979 |
+| Venezuela (VEN) | Salto Ángel, Coro, Ciudad Bolívar, Guácharon luola, Méridan köysirata, Colonia Tovar, Morrocoy, Ciudad Guayana | Roraima (vuori), Maracaibojärvi (järvi), Los Roques (saari) | jättimuurahaiskarhu | Saarto 1902–1903, Nueva Cádiz 1500–1541 |
+| Vanuatu (VUT) | Nagol, Ambrym, Malakula, Gaua, Torresin saaret, Ambae, Epi, Futuna | Yasur (vuori), Tabwemasana (vuori), Korallimeri (meri) | **puuttuu** | Coolidge 1942, Erromango 1825–1906 |
+
+**Yksi vaje, ja sen syy on laudan maamuoto.** Vanuatun eläintäkyä ei voi
+kirjoittaa lainkaan. `tests/elaintakyt.test.mjs` vaatii pisteeltä
+samanaikaisesti kolme asiaa: se on maalla (`js/mapart.js` isOnLand),
+maan monikulmion sisällä ja vähintään 35 lautayksikön päässä jokaisesta
+kaupunkimerkistä. Koko saariketju käytiin läpi 0,05 asteen ruudukolla
+(lon 165,5…170,5, lat −21…−13): lauta tuntee Vanuatusta maaksi vain
+Efaten pohjoisosan Port Vilan ympärillä, ja siellä kauimmainen
+kelvollinen piste on 7,2 lautayksikön päässä laatasta. Ehdot täyttävää
+pistettä ei siis ole olemassa, eikä vartiota kierretty. Sama vaje on
+ennestään Fidžillä ja Salomonsaarilla (erä M2). Kuvaputkelle tilattava
+laji olisi kookoskrapu (*Birgus latro*).
+
+**Yksikään uusi merkki ei ole pelikaupungin kohdalla.** Etäisyys
+mitattiin jokaiseen `js/packs/maailmankartta.js` CITIES-kaupunkiin, ja
+jokaisen kohteen lähin on kirjattu sen koordinaattirivin viereen. Koko
+erän lähin merkki on Igbo-Ukwu 19,3 lautayksikön päässä Lagosista ja
+toiseksi lähin Sabratha 24,9 yksikön päässä Tripolista; raja
+`KAUPUNGIN_KOHDALLA_SADE` on 7. Ras Hafun ja Tšad-järvi ovat itse
+pelikaupunkeja, joten kumpaakaan ei otettu kohteeksi. `node
+tools/tarkista-nostopaikat.mjs` antaa kaikille 39 kohteelle rivin
+*pääkartta*, ja `node tools/tarkista-nimiolimitys.mjs` sanoo yhä
+"NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**M3:n Myanmar-linja rajasi sisällön kolmessa maassa.** Sudanin,
+Libyan ja Somalian nykytila on selkkaus, joten kohteet kirjoitettiin
+vain historiasta ja luonnosta ja skandaalit vain 1800- ja 1900-luvun
+historiasta. Kokonaan pois jäivät Somalian **Taleh**, jonka
+artikkelissa on kaksi osiota käynnissä olevasta kiistasta, ja Tšadin
+**Faya-Largeau**, jonka koko historiaosuus on 1970- ja 1980-lukujen
+sotaa; Sudanin **Musawwarat es-Sufra** jäi pois sekä nimiösyystä että
+siksi, että sen nykytila on artikkelin mukaan selkkaus. Mogadishun
+kortti on rajattu Hamar Weynen vanhan kaupunginosan moskeijaan (Fakhr
+al-Dinin moskeija, 1269) eikä kaupungin nykytilaan. Yhdenkään kortin
+aihe ei ole käynnissä oleva konflikti.
+
+**Merkkien päällekkäisyys karsi kaksitoista ehdokasta.** Nigeriassa
+Ife on 9,1 lautayksikköä Osun-Osogbosta, Ogbuniken luolat 6,8 yksikköä
+Igbo-Ukwusta, Gashaka-Gumti 12,3 yksikköä Chappal Waddista ja Vanhan
+Oyon kansallispuisto 3,3 yksikköä Orjarannikosta eli suoraan
+pelikaupungin päällä. Tšadissa Gaoui on 4,0 yksikköä Chari-merkistä,
+Ouara 14,4 yksikköä Abéchésta ja Fada 11,9 yksikköä Guelta
+d'Archeista. Libyassa Apollonia on 4,7 yksikköä Kyrenestä ja Ubarin
+kaupunki 9,9 yksikköä Germasta. Somaliassa Maydh on 10,2 yksikköä
+Shimbiriksestä, Aw-Barkhadle 5,4 yksikköä Laas Geelistä ja Gondershe
+5,6 yksikköä Mercasta. Sudanissa Nuri ja El-Kurru ovat alle viiden
+yksikön päässä Jebel Barkalista, ja niiden pyramidit mainitaan sen
+kortissa.
+
+**Kolme skandaalimerkkiä on siirretty naapuriruutuun** samalla
+periaatteella kuin erissä M3 ja M6: Khartumin piiritys on Sinisen
+Niilin varrella kaakkoon kaupungista, koska Niili-merkki istuu
+täsmälleen Khartumin kohdalla; Berberan sopimukset ovat Adeninlahdella
+kaupungin edustalla, koska saman erän Laas Geel ja Dhambalin täyttävät
+rannikon nimiöt; ja Rabihin kallo on Kousserin taistelupaikalta
+koilliseen, koska Chari-joen nimiö on Kousserin päällä. Jokaisen
+kortin `paikka`-rivi kertoo tapahtuman oikean paikan, ja syy on
+kirjattu merkin viereen koodiin.
+
+**Eläintäyt eivät toista mitään aiempaa lajia.** Fennekki on jo
+Algerian täky ja nubiantorvikauris Jordanian, joten Libyan lajiksi
+tuli saharangaselli; kirahvi on Kenian ja norsu Tansanian ja Namibian,
+joten Tšadiin valittiin sapelisarvioryksi, joka julistettiin luonnosta
+hävinneeksi vuonna 2000 ja palautettiin Tšadiin vuodesta 2016; gorilla
+on Ugandan täky, joten Nigeriaan tuli drilli. Somalian beiran piste
+oli erän tiukin tapaus: laudan SOM-muoto ei kata Somalimaan
+luoteisosaa, joten piste haettiin levinneisyyden itäpäästä Nugaalin
+laaksosta, jonka artikkeli nimeää erikseen. Kaikki viisi pistettä ovat
+maalla, oman maansa rajojen sisällä ja vähintään 35 lautayksikön
+päässä jokaisesta kaupunkimerkistä; lähin on Libyan saharangaselli
+62,4 yksikköä Murzukista.
+
+**Kuvaputkelle jää viisi eläintäkykuvaa.** SDN, TCD, LBY, NGA ja SOM
+saivat `kuva`-kenttään kuvaputken tunnuksen ilman kansiota
+(`elain-sdn`, `elain-tcd`, `elain-lby`, `elain-nga`, `elain-som`),
+joka osoittaa ämpäriin: kun kuvaputki tekee kuvan, se ilmestyy
+kortille ilman koodimuutosta, ja siihen asti kortti on kuvaton.
+## Erä M16 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Erä
+M16 kattaa **TUN, SYR, YEM ja SHN**. Tunisialla oli ennen erää yksi
+kohde ja Syyrialla yksi, Jemenillä ja Saint Helenalla ei yhtäkään;
+kaikilta puuttuivat eläintäky ja skandaalit. Erä kirjoitti yhteensä
+**30 uutta karttamerkkiä**: 23 kohdetta ja maastokohdetta, 3 eläintäkyä
+ja 8 skandaalia. Erä on kuvaton kuten K2-erät 1–4 ja maailman erät
+M1–M11, ja jokainen väite on en-Wikipedian raakatekstin katteessa
+lähderivillä, joka nimeää artikkelin ja osan sekä tarkistuspäivän
+6.9.2026. Taulukot ajaa Fable.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Tunisia (TUN) | Dougga, El Jemin amfiteatteri, Kairouanin altaat, Kerkouane, Soussen ribat, Matmata, Sbeitla (oli jo: Karthagon sotasatama) | (oli jo: Jabal ash Shanabi, Välimeri, Medjerda) | dorkasgaselli | Bardon sopimus 1881, Saharan meri 1877–1882 |
+| Syyria (SYR) | Krak des Chevaliers, Bosra, Ugarit, Ebla, Apamea, Resafa, Mari (oli jo: Belin temppeli) | (oli jo: Hermonvuori, Välimeri, Eufrat) | kaljuiibis | Tell Halaf 1899–1943, Dura-Europos 1920–1937 |
+| Jemen (YEM) | Shibam, Zabid, Maribin pato, Tarim, Jibla, Baraqish, Thula, Al Hajjarah | (oli jo: Jabal an-Nabi Shu'ayb, Adeninlahti, Sokotra) | jemeninkameleontti | Perim 1857, Mokka 1616–1719 |
+| Saint Helena (SHN) | High Knoll Fort, Plantation House, Saint Helenan lentoasema | Diana's Peak, Sandy Bay | — (ks. alla) | Longwood House 1815–1858, Deadwood 1900–1902 |
+
+**Yksikään ei ole pelikaupungin kohdalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin, ja jokaisen kohteen
+lähin on kirjattu sen koordinaattirivin viereen. Erän lähin merkki on
+Thula 12,4 lautayksikön päässä Sanasta ja toiseksi lähin Al Hajjarah
+19,0 yksikön päässä samasta laatasta; raja `KAUPUNGIN_KOHDALLA_SADE` on
+7. `node tools/tarkista-nostopaikat.mjs` antaa kaikille 30:lle rivin
+*pääkartta*, ja `node tools/tarkista-nimiolimitys.mjs` sanoo yhä
+"NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Saint Helena on erän erikoistapaus, ja sen vaje on tarkoituksellinen.**
+Saari on 16 × 8 kilometriä, ja maailmankartan mitassa se mahtuu noin
+neljän lautayksikön ruutuun (piirretty saari on x 5640,6…5644,7 ja
+y 3746,1…3749,5), kun yhden merkin nimiölaatikko on parikymmentä
+yksikköä leveä. Merkit ovat siis toistensa päällä, ja ladonnan
+erottelupassi joutuu levittämään ne saaren ympärille. Enimmäismäärä
+haettiin koneellisesti kokeilemalla kaikki yhdistelmät kahdeksasta
+ehdokkaasta: **viisi kohdetta ja kaksi skandaalia** on suurin joukko,
+jolla nimiölimitys pysyy nollassa eikä yhtään nimiötä jää väistön
+piilottamaksi — kuudes tuottaa aina vähintään yhden limityksen. Pois
+jäivät siksi Jaakobin tikkaat (Jacob's Ladder) ja Longwood House
+kohteena; Longwoodin tarina kerrotaan erän skandaalina. Vaje on
+**kohteita −5 ja maastoa −1**.
+
+**Saint Helenan eläintäky puuttuu, ja syy on tekninen.** Saaren tikkuri
+(*Saint Helena plover*, wirebird) olisi maan luonteva täky, mutta
+`tests/elaintakyt.test.mjs` vaatii, että täyn piste osuu laudan
+MAA-ALUEELLE (`js/mapart.js` `isOnLand`, `map.outlines`) eikä maan
+`countryShapes`-renkaaseen. Maailmankartan `outlines`-taulussa ei ole
+Saint Helenan saarta lainkaan — saari on vain countryShapes-renkaana —
+joten yksikään saaren piste ei läpäise testiä. Vartiota ei kierretty
+eikä poikkeuslistaa lisätty: vaje jää Fablen ratkaistavaksi (joko
+`outlines`-tauluun lisätään saari tai testiin oma perusteltu
+poikkeus, kuten Islannilla on jo rajatestissä).
+
+**Herkät aiheet rajattiin `docs/aasia-tyoaineisto/spec-asia.md`:n ja
+M3:n Myanmar-linjan mukaan.** Syyrian ja Jemenin nykytila on sotaa,
+joten kohteiksi kelpuutettiin vain antiikin ja keskiajan paikkoja,
+joiden lähdeartikkelin nykytilaosuus ei ole taistelua, ja kortit
+kertovat kohteen oman historian. **Maaloula jätettiin pois**, koska sen
+artikkelin koko History-osio on vuoden 2013 taistelu. Dura-Europos ja
+Tell Halaf kirjoitettiin kohteiden sijaan skandaaleiksi, koska
+kummankin tarina on kaivauksen ja löytöjen tarina. Shibamin kortissa
+sanotaan yhdellä toteavalla virkkeellä, että kohde on ollut
+vaarantuneiden maailmanperintökohteiden luettelossa vuodesta 2015 —
+se on kohteen nykyinen asema Unescon listalla. Skandaalit ovat kaikissa
+neljässä maassa 1800- ja 1900-luvun historiaa: siirtomaasopimuksia,
+insinöörihaaveita, arkeologiaa ja kauppaa. **Al Mukalla** jäi pois,
+koska sen artikkelin nykyosuus on aseellista toimintaa.
+
+**Muut pois jääneet ehdokkaat.** Tunisin medina (6,6 lautayksikköä
+Karthagon sotasataman merkistä eli käytännössä sen nimiön päällä),
+Djerba ja Ichkeulin järvi (maastotyyppejä, eikä maastossa ollut
+vajetta), Awwamin temppeli (noin neljä lautayksikköä Maribin padosta)
+sekä Speery Island (ei omaa en-Wikipedian artikkelia, ohjaus vie
+Saint Helenan yleisartikkeliin).
+
+**Kolme eläintäkyä, kaikki kuvattomia.** `kuva`-kentässä on kuvaputken
+ämpäritunnus ilman kansiota (`elain-tun`, `elain-syr`, `elain-yem`):
+kun kuvaputki toimittaa kuvan, se ilmestyy kortille ilman
+koodimuutosta. Paikat on mitattu koneellisesti — jokainen piste on maan
+rajojen sisällä, maalla ja vähintään 35 lautayksikön päässä jokaisesta
+kaupunkimerkistä sekä 30 yksikön päässä muista eläintäyistä. Lähimmäksi
+kaupunkia jäi Jemenin kameleontti (50,4 yksikköä Sanasta).
+## Erä M17 (tehty 6.9.2026)
+
+Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."* Erä
+M17 on **Amerikkojen täydennys**: USA, MEX, ECU, PER ja PAN. Kolmella
+niistä oli entuudestaan yksi merkki (USA:n biisoninvasa, Meksikon
+aksolotli ja Templo Mayor, Perun vikunja), muilla ei mitään. Erän
+jälkeen kaikki viisi ovat laskurin (`node tools/laske-karttanostot.mjs`)
+mukaan tilassa *täysi*: 8 kohdetta, 3 maastokohdetta, 1 eläintäky ja
+2 skandaalia kutakin. Uusia rivejä on 54 (kohteet ja maastokohteet)
++ 2 eläintäkyä + 10 skandaalia. Erä on kuvaton, ja faktat ovat
+en-Wikipedian raakatekstistä; jokainen lähderivi nimeää artikkelin
+osan ja tarkistuspäivän 6.9.2026.
+
+Kohteet ja maastokohteet asuvat maiden uusissa
+`js/packs/maastokohteet-<iso>.js`-tiedostoissa (rekisteröity
+`js/packs/maastokohteet.js`-hakemistoon, `sw.js`:n SHELL-listalle ja
+`tools/build-standalone.mjs`:n MODULES-listalle), eläintäyt
+`js/packs/elaintakyt.js`:ään ja skandaalit `js/packs/skandaalit.js`:ään.
+
+| maa | kohteet | maastokohteet | eläintäky | skandaalit |
+|---|---|---|---|---|
+| Yhdysvallat (USA) | Mesa Verde, Cahokia, Chacon kanjoni, Gettysburg, Kill Devil Hills, Promontory, Independence Hall, Mammothin luola | Mount St. Helens, Crater Lake, Nantucket | (oli jo: biisoninvasa) | Teapot Dome 1922, Crédit Mobilier 1872 |
+| Meksiko (MEX) | Teotihuacán, Palenque, Chichén Itzá, Monte Albán, El Tajín, Guanajuato, Chihuahuan rata (+ oli jo: Templo Mayor) | Popocatépetl, Cozumel, Usumacinta | (oli jo: aksolotli) | Querétaro 1867, Cananea 1906 |
+| Ecuador (ECU) | Ingapirca, Cuenca, Guayaquil, Yasuní, Paholaisen nenä, Panamahattu, Valdivian kulttuuri, Otavalo | Cotopaxi, Quilotoa, Napo | andienkarhu | Kiinapuu 1860, Lago Agrio 1993 |
+| Peru (PER) | Nazcan viivat, Chan Chan, Caral, Kuélap, Sipán, Chavín de Huántar, Arequipa, Colcan kanjoni | Huascarán, Apurímac, Ballestas-saaret | (oli jo: vikunja) | Chincha 1864, Yale-kiista |
+| Panama (PAN) | Portobelo, Panaman rautatie, El Caño, Guna Yala, Los Santos, Bocas del Toro, Dariénin aukko, Helmisaaret | Volcán Barú, Coiba, Chagres | panamankultasammakko | San Blas 1925, Darien 1698 |
+
+**Yhdysvallat karsi eniten, koska pelikaupunkeja on kahdeksantoista.**
+Laudalla ovat New York, San Francisco, Nome, Anchorage, Sitka,
+Yellowstone, Mount Rushmore, Chicago, Appalakit, Denver, Santa Fe,
+Grand Canyon, Los Angeles, Havaiji, Houston, New Orleans, Miami ja San
+Juan, joten kohteet on valittu niiden välistä. Lähin uusi merkki on
+Independence Hall 49,1 lautayksikön päässä New Yorkista; raja
+`KAUPUNGIN_KOHDALLA_SADE` on 7. Alaskan ja Havaijin kohteet jäivät pois
+USA-lehden rajauksen takia (x 1329,0–3947,3 / y 1219,2–2533,4).
+
+**Kolme paikkaa, jotka kaupunkisääntö pudotti.** (1) Ecuadorin Mitad
+del Mundo on 5,9 yksikköä Quitosta. (2) Panaman Culebran leikkaus 4,2,
+Barro Colorado 5,2 ja Gatúnjärvi 6,7 yksikköä Panamásta — kannas on
+laudalla niin pieni, että koko kanavavyöhyke mahtuu kymmenen yksikön
+säteelle, joten sieltä otettiin vain yksi merkki (Panaman rautatie
+Colónin päästä, 8,5). (3) Meksikossa Teotihuacán jäi 9,1 yksikköön eli
+juuri rajan yli, ja se on 13,2 yksikköä Templo Mayorista.
+
+**Kolme skandaalia vaihdettiin paikan takia, ei aiheen.** Ecuadorin
+vuoden 1894 "lipun myynti" (La venta de la bandera), Galápagosin
+plantaasivaltias Manuel Julián Cobos (1904) ja Panaman ranskalaisen
+kanavayhtiön romahdus 1892 olisivat olleet erän ilmeiset valinnat, mutta
+yhdellekään ei ollut kartalla paikkaa. Lipun myynti tapahtui Quitossa
+(1,6 lautayksikköä laatasta) ja koko Panaman kanavavyöhyke on alle
+seitsemän yksikön päässä Panamásta; `tests/nostot-kartalla.test.mjs`
+pitää kaupungin kohdalla olevien pääkartan nostojen listaa, joka saa
+vain laskea. Cobos taas asui Galápagosilla, joka on Ecuadorin
+fokuslehden ikkunan (x 2925–3533) länsipuolella: saarille sijoitettu
+merkki ei piirtyisi lainkaan, ja sama syy on kirjattu Darwin-hetkeen
+(`tools/tarkista-nostopaikat.mjs`, POIKKEUS). Tilalle valittiin saman
+maan tapaukset, joilla on oma paikkansa: Lojan kiinapuumonopoli ja sen
+salakuljetus (129,1 yksikköä Quitosta), Lago Agrion öljyriita (57,6) ja
+San Blasin kapina 1925 (59,0 yksikköä Panamásta). Kaikilla kolmella on
+oma en-Wikipedian artikkelinsa.
+
+**Sääntö N3 ohjasi maastovalintoja.** Laudan oma nimitaulu
+(`js/packs/maailmankartta-nimet.js`) kantaa jo Kalliovuoret, Sierra
+Nevadan, Kaskadit, Yläjärven, Coloradon, Rio Granden, Sierra Madre
+Occidentalin, Andit, Amazonin, Marañónin, Ucayalin ja Titicacan, joten
+yhtäkään niistä ei ole tässä erässä. Perun Chinchan saaret jäivät pois
+maastokolmikosta, koska ne ovat laudalla käytännössä Ballestas-saarten
+päällä; guanosodan merkki on siksi Callaon satamassa.
+`node tools/tarkista-nimiolimitys.mjs` sanoo yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0",
+`node tools/tarkista-nostopaikat.mjs` antaa "ILMAN PAIKKAA 0", ja
+`tools/savukkeet/savuke-maastokohteet.mjs` menee läpi 8/8.
+
+**Kuvat puuttuvat kahdelta eläintäyltä.** ECU ja PAN saivat
+`kuva`-kenttään kuvaputken tunnuksen ilman kansiota (`elain-ecu`,
+`elain-pan`), joka osoittaa ämpäriin: kun kuvaputki tekee kuvan, se
+ilmestyy kortille ilman koodimuutosta, ja siihen asti kortti on
+kuvaton.
+erän lähin merkki on Venezuelan Colonia Tovar 14,6 lautayksikön päässä
+Caracasista ja toiseksi lähin Paraguayn Yaguarón 15,2 yksikön päässä
+Asunciónista; raja `KAUPUNGIN_KOHDALLA_SADE` on 7. Tähän sääntöön kaatui
+erän painavin poisjäänyt kohde: Vanuatun **Chief Roi Mata's Domain** on
+maan ainoa maailmanperintökohde, mutta sen piste on 4,3 lautayksikön
+päässä Port Vila -laatasta, joten se kuuluisi kaupungin kohdekartalle
+eikä pääkartalle. `node tools/tarkista-nostopaikat.mjs` antaa kaikille
+55 nostolle rivin *pääkartta*, `node tools/tarkista-nimiolimitys.mjs`
+sanoo yhä "NIMIÖ NIMIÖN PÄÄLLÄ: 0" ja `savuke-maastokohteet.mjs` menee
+läpi 8/8.
+
+**Sääntö N3 valitsi maaston kolmessa maassa neljästä.** Paraguayn kolme
+luontevinta jokea ovat kaikki poissa: Paraná, Rio Negro ja Uruguayjoki
+ovat jo laudan omia jokinimiä (`js/packs/maailmankartta-nimet.js`), ja
+Pilcomayon artikkelikoordinaatti on joen suu 2,5 lautayksikön päässä
+Asunciónista — maaston kiintiö täyttyi siksi huipulla ja kahdella
+sisäjoella. Uruguaylta putosivat samasta syystä Uruguayjoki, Rio Negro
+ja Río de la Plata (viimeinen on Argentiinan pakissa), joten maasto on
+huippu, laguuni ja Atlantti. Venezuelalta putosi Orinoco, joten maasto
+on tepui, järvi ja saaristo. Myös yksi kohteen nimi vaihtui: Kuuballa on
+jo *Trinidad* (`js/packs/maastokohteet-cub.js`), joten Paraguayn
+jesuiittalähetysten merkki on **Trinidad ja Jesús**.
+
+**Merkkien päällekkäisyys karsi kuusi muuten hyvää ehdokasta.**
+Venezuelan **Catatumbon salamat** osuisivat 16,6 lautayksikön päähän
+Maracaibojärvestä (ilmiö kerrotaan järven kortissa) ja **Margaritan
+saari** kuuden yksikön päähän Cubaguan skandaalista; Paraguayn
+**Encarnación** on kuusi yksikköä Trinidadista ja **Ypacaraíjärvi** 9,7
+yksikköä Asunciónista; Vanuatun **Champagne Beach** ja **Million Dollar
+Point** olisivat tulleet Coolidgen skandaalin päälle ja **Espiritu
+Santo** Tabwemasanan päälle. Vanuatun kohdalla tämä on rakenteellista:
+saariketju on lehden ikkunassa vain 184 lautayksikköä leveä, joten
+kahdeksan kohdetta ja kolme maastokohdetta oli se määrä, joka mahtui
+ilman nimiölimitystä.
+
+**Kaksi pistettä on asetettu käsin, ja molemmat on perusteltu koodissa.**
+Uruguayn Atlantilla ja Vanuatun Korallimerellä ei ole maakohtaista
+koordinaattia (artikkelien omat keskipisteet ovat −25 / 0 ja 158 / −18),
+joten piste on maan oman rannikon edustalla — sama ratkaisu kuin
+Namibialla ja Portugalilla (`js/packs/maastokohteet-nam.js`). Merínin
+laguunin artikkelikoordinaatti osuu laguunin Brasilian puoleiseen
+osaan, joten merkki on siirretty Uruguayn puoleiselle rannalle.
+
+**Herkät aiheet on kirjoitettu lähteen katteessa ja ilman
+nykypolitiikkaa.** Kolmen liiton sodasta kerrotaan Humaitán piirityksen
+kortissa artikkelin omalla tarkkuudella, Nueva Germanian rotuoppinen
+tausta ja hankkeen romahdus sanotaan suoraan artikkelin sanoin, ja
+Erromangon kortti kertoo santelipuukaupan, tuotujen tautien ja
+työvoimakaupan (blackbirding) luvut niin kuin artikkeli ne esittää:
+40 000 vietyä Queenslandiin 1863–1906 ja saaren väkiluku 381 vuonna
+1931. Venezuelan velkasaarto 1902–1903 kerrotaan tapahtumina eikä
+nykypäivän kautta, eikä yhdenkään kortin aihe ole käynnissä oleva
+selkkaus (M3:n Myanmar-linja). Guayana Esequiban rajakiista jätettiin
+kokonaan pois samasta syystä.
+
+## Erä M19 (tehty 7.9.2026): Fidžin ja Salomonsaarten eläintäky
+
+Kaksi maata, joilla eläintäky oli merkitty *tarkoitukselliseksi vajeeksi*
+(erät M2 ja M18), saivat sen nyt. Kuvat olivat kuvaputken 7.9. toimituksen
+(`posti/kuvatoimitus-valmiit-29-20260907.json`) kaksi viimeistä kytkemättä
+jäänyttä kuvaa, ja este oli laudassa eikä lähteissä tai kuvissa.
+
+| maa | eläintäky | laji | paikka | lähin kaupunkimerkki |
+|---|---|---|---|---|
+| Fidži (FJI) | nauhaleguaani | *Brachylophus fasciatus* | Lakeba, Lau-saaret | Suva 102,9 |
+| Salomonsaaret (SLB) | ducorpsinkakadu | *Cacatua ducorpsii* | Malaitan pohjoiskärki | Honiara 42,0 |
+
+**Este mitattiin 0,02 asteen ruudukolla, ei arvattu.** `tests/elaintakyt.test.mjs`
+vaatii pisteeltä kolme asiaa yhtä aikaa: maalla (`js/mapart.js` isOnLand,
+joka lukee `map.outlines`), oman maan monikulmion sisällä ja vähintään 35
+lautayksikön päässä jokaisesta kaupunkimerkistä.
+
+- *Salomonsaaria ei piirretä maana lainkaan.* Maan yhdentoista
+  countryShapes-renkaan sisään osuu 739 ruudukkopistettä, ja isOnLand on
+  niissä kaikissa epätosi; lähin rantaviivan piste Guadalcanalista on
+  ~282 lautayksikön päässä Uudessa-Guineassa.
+- *Fidžistä on piirretty vain Viti Levu.* Vanua Levu ja Kadavu ovat
+  countryShapes-renkaissa mutta eivät rantaviivassa, ja Viti Levun
+  kaukaisin piste on 33,6 yksikköä Suvasta eli alle vartion 35:n.
+  Lau-saaret (x ≈ 11 874) ovat kokonaan monikulmion ulkopuolella, joka
+  päättyy x 11 833,3:een eli 180° E:hen.
+
+**Ratkaisu on pallo, ei latistettu lauta (Fablen päätös 7.9.2026).** Laudan
+`map.outlines` on tyylitelty piirros, josta pienet saaret puuttuvat, mutta
+pallon vektorirantaviiva (`js/pallovektorit.js`, v1649 alkaen) piirtää saman
+geometrian Natural Earthin 1:10m-aineistosta ja tuntee sekä Lau-saaret että
+Salomonsaaret. Merkki pannaan siksi eläimen todelliseen maantieteelliseen
+paikkaan, ja laudan vanha piirros saa dokumentoidun poikkeuksen samalla
+mallilla kuin Islannin siirtynyt muoto: `MAATESTIN_POIKKEUS` (FJI, SLB)
+maatestissä ja `RAJATESTIN_POIKKEUS` (ISL, FJI) rajatestissä. Kun
+`map.outlines` joskus päivitetään, poikkeus poistetaan.
+
+**Poikkeus ei koske kaupunkisädettä.** Kumpikin piste on yli 35 lautayksikön
+päässä jokaisesta kaupunkimerkistä ilman helpotusta, ja Salomonsaarten piste
+on lisäksi oman maansa monikulmion sisällä — siltä osin vartiota ei kierretty
+lainkaan. Guadalcanal karsiutui mittauksella: koko saaren kaukaisin piste on
+34,1 yksikköä Honiarasta, siis alle rajan, koska Honiara on itse saarella.
+
+**Sääntö N3 siirsi Salomonsaarten pistettä kerran.** Malaitan artikkelin oma
+koordinaatti (160,95 / −9,02) on 3,5 lautayksikön päässä skandaalista
+"Kwaio 1927", ja `tools/tarkista-nimiolimitys.mjs` kaatoi ladonnan nimiö
+nimiön päälle. Piste siirtyi saaren pohjoiskärkeen, jolloin väli on 26,5
+yksikköä ja työkalu sanoo taas "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Fidžin merkki näkyy maailmankartalla mutta ei maalehden kartalla.**
+`FOKUS_POHJAT.FJI`-rajaus päättyy x 11 853,33:een ja Lakeba on x 11 874,0,
+eli koko Lau-saaristo on lehden ikkunan ulkopuolella — sama havainto on jo
+`js/packs/maastokohteet-fji.js`:n otsikkokommentissa. Eläintäky on
+maailmankartan merkki, joten se toimii, mutta Fidžin lehden kartalta se
+puuttuu. Vaihtoehtoa ei ollut: nauhaleguaania ei ole Lau-saarten
+ulkopuolella. Rajauksen levennys uusisi myös lehden pohjakuvan
+(`FJI.webp`), joten se on oma työnsä. Salomonsaarten merkki on lehden
+rajauksen sisällä.
+
+**Vanuatu jää yhä ilman.** Sen este on sama laudan maamuoto (erä M18), mutta
+lajia (kookoskrapu, *Birgus latro*) ei ole vielä tilattu kuvaputkelta. Saint
+Helenan vaje on niin ikään ennallaan. Taulukoiden lukuja ei ole päivitetty
+tässä erässä — ne ajetaan `node tools/laske-karttanostot.mjs --md`
+-työkalulla.
+
+
+## Erä M20 (tehty 7.9.2026): yhdeksän pienen maan täydennys
+
+Fablen tilaus 7.9.2026 illalla: täydennä karttanostot yhdeksälle
+pienelle maalle, joilla laskuri näytti vajetta — **QAT, KWT, CYP, HKG,
+SGP, SHN, FJI, SLB ja VUT**. Erän lähtökohta oli, että aiemmissa erissä
+kirjatut vajeet on *mitattu* eikä arvattu, joten jokainen niistä
+mitattiin uudelleen ehdokas kerrallaan `node tools/tarkista-nimiolimitys.mjs
+<ISO>` -työkalulla. Neljä maata oli aidosti täynnä, viidessä oli vielä
+tilaa. Erä toi **kaksitoista uutta kohdetta ja yhden eläintäyn** eli
+13 uutta karttamerkkiä; laskurin lukema nousi 103 → 108 maata
+tavoitteessa, vajaita jäi neljä.
+
+| maa | uudet kohteet | jäävä vaje |
+|---|---|---|
+| Qatar (QAT) | Fuwayrit, Al-Shahaniya, Mesaieed | eläintäky (mahdoton, ks. alla) |
+| Kuwait (KWT) | Warbah, Qaruh, Wadi al-Batin | — täysi |
+| Kypros (CYP) | Apostolos Andreas | — täysi |
+| Fidži (FJI) | Yasawa, Vatulele, Vilavilairevo | — täysi |
+| Salomonsaaret (SLB) | Santa Isabel, Makira | — täysi |
+| Singapore (SGP) | Sungei Buloh | kohteita −2, maastoa −2, eläintäky |
+| Vanuatu (VUT) | eläintäky: kookoskrapu | — täysi |
+| Hongkong (HKG) | — | kohteita −4, maastoa −1, eläintäky |
+| Saint Helena (SHN) | — | kohteita −5, maastoa −1, eläintäky |
+
+**Kolme vajetta oli liikkunut, ja se selvisi vain mittaamalla.** Erä M6
+kirjasi Kyprokselle vajeen kohteita −1 ja Qatarille −3 "koska maa on
+pieni"; erä M8 kirjasi Singaporen ylärajaksi kahdeksan merkkiä. Kaikissa
+kolmessa yläraja oli todellisuudessa yhtä tai kolmea merkkiä korkeammalla
+— ei siksi, että sääntö olisi muuttunut, vaan siksi, että ladonnan
+erottelupassi sijoittaa nimiöt eri tavalla eri ehdokkaille. Mittaus
+tehtiin siis aina sillä ehdokkaalla, joka oli tarkoitus kirjoittaa, eikä
+yleisellä arviolla.
+
+**Neljä maata oli aidosti täynnä, ja sekin mitattiin.** Hongkongin
+koekappaleeksi otettiin juuri se ehdokas, jonka erä M3 oli jättänyt
+odottamaan — Lei Cheng Ukin Han-hauta — ja se tuotti yhden
+nimiö–nimiö-limityksen, aivan kuten M3 ennusti. Saint Helenalla
+kahdeksatta merkkiä kokeiltiin neljässä eri pisteessä saarta, ja jokainen
+tuotti 1–2 limitystä. Kyproksella Soli tuotti yhden ja Machairas kaksi,
+ja Kyrenian linna, Bellapais ja Buffavento jäivät kaikki kaupunkikaton
+(8 lautayksikköä) alle Nikosiasta. Tamassos läpäisi nimiölimityksen
+mutta kaatui toiseen vartioon: se osuu Nikosian KOHDEKARTAN alueelle,
+ja `tests/nostot-kartalla.test.mjs` laskee sen kaupungin kohdalla
+olevaksi nostoksi, jonka luku saa vain laskea — se kuuluu siis Nikosian
+kohdekartalle, mikä on eri työ. Kyproksen kahdeksanneksi kohteeksi tuli
+sen tilalle Karpasin niemen kärjen Apostolos Andreas (44,7
+lautayksikköä Nikosiasta). Singaporen kymmenes merkki (Sentosa)
+tuotti yhden limityksen.
+
+**Vanuatun eläintäky: kookoskrapu (*Birgus latro*), omistajan toive.**
+Este oli sama kuin Fidžillä ja Salomonsaarilla erässä M19 — laudan
+`map.outlines` tuntee Vanuatusta maaksi vain Efaten pohjoisosan Port
+Vilan ympärillä — ja niin on ratkaisukin: `MAATESTIN_POIKKEUS` sai
+kolmannen maan (`tests/elaintakyt.test.mjs`), perustelu on testissä ja
+`js/packs/elaintakyt.js`:n erälohkossa. Poikkeus koskee vain laudan
+tyyliteltyä rantaviivaa: piste (166,6 / −14,65, Espiritu Santon
+pohjoiskärki) on Vanuatun oman monikulmion **sisällä**, 118,7
+lautayksikön päässä Port Vilasta ja 387,8 lähimmästä toisesta
+eläintäystä, ja se on VUT-lehden rajauksen sisällä, joten merkki näkyy
+myös maalehden kartalla — toisin kuin Fidžin Lau-saarten merkki. Paikka
+haravoitiin 0,05 asteen ruudukolla: 276 ehdot täyttävästä pisteestä
+valittiin se, joka on kauimpana maan olemassa olevista merkeistä.
+
+**Kravun kuva on Commonsista, ja se on taulun ensimmäinen sellainen.**
+Muut kuvalliset eläintäyt kantavat omistajan generoituja havainnekuvia,
+mutta Vanuatun kuvaa ei tilattu kuvaputkelta: Commonsista löytyi lajista
+valokuva, joka on otettu Vanuatussa (tiedoston Location-malline
+−18,7588 / 169,3558 ja luokat "Animals of Vanuatu" sekä "Vanuatu
+photographs taken on 2019-05-12"). Tiedosto on
+`File:Birgus latro 197146121.jpg`, tekijä **Dominik Maximilián Ramík**,
+lisenssi **CC BY 4.0** — molemmat luettu Commonsin `extmetadata`sta
+(`Artist`, `LicenseShortName`, `UsageTerms`, `AttributionRequired`
+true), ei arvattu. Alkuperäinen on 2048 × 1365 px, ja osoite skaalaa
+sen 1200:aan samalla `Special:FilePath`-tavalla kuin pelin muut
+Commons-kuvat. Kuva on katsottu: siinä on tummansininen kookoskrapu
+tarttumassa keppiin kyläpihalla.
+
+**Saint Helenan eläintäyn este vaihtui, ja se on syytä tietää.** Erä M16
+kirjasi syyksi sen, ettei laudan `outlines` tunne saarta — tämä pitää
+yhä paikkansa, mutta se este on nyt ratkaistavissa samalla poikkeuksella
+kuin FJI, SLB ja VUT. Kaupunkisäde ei myöskään ole este: **kaikki** 347
+ruudukkopistettä saaren monikulmion sisällä ovat yli 35 lautayksikön
+päässä jokaisesta kaupunkimerkistä (kaukaisin 85,5), koska laudan
+St. Helena -laatta on tyylitellyllä paikalla saaren koillispuolella.
+Este on **nimiölimitys**: kahdeksas merkki ei mahdu saarelle, jonka
+halkaisija on maailmankartalla noin neljä lautayksikköä. Saaren tikkuri
+(wirebird) siis mahtuisi kaikkiin muihin vartioihin mutta ei ladontaan.
+Ratkaisu olisi pudottaa jokin nykyinen merkki sen tieltä — se on
+sisältöpäätös, ei integroijan tehtävä.
+
+**Qatarin, Hongkongin ja Singaporen eläintäyt ovat yhä mahdottomia, ja
+mittaus toistettiin.** Maiden monikulmioiden sisään osuu 2 456 / 887 /
+1 556 ruudukkopistettä, ja kaukaisin niistä on omasta kaupunkilaatastaan
+vain 32,3 / 22,2 / 19,8 lautayksikön päässä, kun
+`tests/elaintakyt.test.mjs` vaatii 35. Kaupunkisädettä **ei** kierretä
+poikkeuksella: FJI:n, SLB:n ja VUT:n poikkeus koskee vain laudan
+rantaviivaa. Qatarin ehdokas odottaa yhä valmiina (arabianoryksi,
+Al Reemin biosfäärialue) ja Singaporen sarvinokkalintu samoin.
+
+**Kaikki uudet merkit ovat pääkartalla.** Etäisyys mitattiin jokaiseen
+`js/packs/maailmankartta.js` CITIES-kaupunkiin ja kirjattiin jokaisen
+koordinaattirivin viereen. Lähin uusi merkki on Al-Shahaniya 10,9 lautayksikön päässä Dohasta — yli
+sekä `KAUPUNGIN_KOHDALLA_SADE`-rajan (7) että kaupunkikaton säteen (8) —,
+ja toiseksi lähin Mesaieed 11,1 yksikköä samasta laatasta.
+`node tools/tarkista-nostopaikat.mjs` antaa kaikille kahdelletoista
+rivin *pääkartta*, ja `node tools/tarkista-nimiolimitys.mjs` sanoo
+jokaisesta yhdeksästä maasta "NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Kaksi pistettä siirrettiin nimiön takia.** Wadi al-Batinin artikkelin
+oma koordinaatti (46,555 / 29,101) on 6,0 lautayksikön päässä Kuwaitin
+eläintäystä, joten piste siirtyi saman uoman pohjoisemmalle jaksolle
+(46,9 / 29,75), jolloin väli on 21,1. Vanuatun kookoskravun ensimmäinen
+koepiste Espiritu Santon keskiosassa oli Tabwemasanan nimiön päällä, ja
+piste siirtyi saaren pohjoiskärkeen.
+
+**Vartio 7a ilman savuketta.** `tools/savukkeet/savuke-maastokohteet.mjs`
+on 7.9.2026 alkaen ohituksessa (vanha kartta pois käytöstä, omistajan
+päätös; `tools/savukkeet/vanha-kartta-ohitus.mjs`), joten se tulostaa
+OHITUS-rivin eikä anna 8/8:aa. Savukkeen aineistovartio 7a ("jokainen
+kohde osuu maansa fokuslehden rajaukseen") ei kuitenkaan tarvitse
+selainta, ja se ajettiin erikseen samalla `osuuLehteen`-funktiolla
+kaikille 1 135 maastokohteelle: ikkunan ulkopuolella on **nolla**.
+Ontong Javan atolli karsiutui juuri tähän — se on Salomonsaarten lehden
+rajauksen pohjoispuolella.
+
+**Erä on kuvaton kohteiden osalta** kuten K2-erät 1–4 ja maailman erät
+M1–M19. Faktat on luettu en-Wikipedian raakatekstistä kohde kerrallaan,
+ja jokainen lähderivi nimeää artikkelin ja sen osan sekä
+tarkistuspäivän 7.9.2026. Taulukoita ei ole päivitetty käsin — ne
+ajetaan `node tools/laske-karttanostot.mjs --md` -työkalulla.
+
+
+## Erä M21 (tehty 8.9.2026): Saint Helenan tikkuri, Sandy Bay pois
+
+Omistajan päätös 8.9.2026: *"Pudota yksi merkki, tikkuri mukaan."* Erät
+M16 ja M20 olivat kirjanneet Saint Helenan eläintäyn puuttuvaksi ja
+mitanneet syyn kahdesti: saarelle mahtuu seitsemän merkkiä, ei
+kahdeksaa. M20 jätti ratkaisun sisältöpäätökseksi — mikä nykyisistä
+merkeistä väistää — ja päätoimittaja teki sen nyt.
+
+**Pudotettu merkki on Sandy Bay** (`js/packs/maastokohteet-shn.js`,
+id `sandy-bay-shn`, tyyppi *meri*). Perustelu: viidestä saaren
+kohteesta ja maastokohteesta se kantaa vähiten omaa — lahti, sen rannat
+ja Lot's Wife's Ponds ovat saaren maantiedettä, jota kerrotaan muutenkin,
+kun taas High Knoll Fort, Plantation House kilpikonnineen, lentoasema ja
+Diana's Peak ovat kukin saaren ainoita laatuaan. Laudan kaupunkimerkkiä
+`sthelena` ei kosketa: se on pelimerkki eikä nosto.
+
+**Saaren seitsemän merkkiä ennen erää:** High Knoll Fort, Plantation
+House ja Saint Helenan lentoasema (kohteet); Diana's Peak ja Sandy Bay
+(maastokohteet); Longwood House 1815–1858 ja Deadwood 1900–1902
+(skandaalit). Erän jälkeen niitä on yhä seitsemän, mutta Sandy Bayn
+tilalla on tikkurin eläintäky.
+
+**Mittaus.** Saaren monikulmion sisäpuoli haravoitiin 0,01 asteen
+ruudukolla (88 pistettä) ja jokaiselle ajettiin sama ladonta kuin
+portille (`laskeNimiolimitykset`). Nolla nimiö–nimiö-limitystä antoi 12
+pistettä, kaikki saaren eteläosassa — siis juuri siltä alueelta, jonka
+Sandy Bay vapautti. Täky vietiin pisteeseen **5,72 W / 15,99 S**, joka
+on sama piste, jonka erä M20 kokeili ja joka silloin tuotti limityksen.
+`node tools/tarkista-nimiolimitys.mjs SHN` sanoo nyt
+"NIMIÖ NIMIÖN PÄÄLLÄ: 0".
+
+**Muut vartiot ilman helpotusta.** Piste on SHN:n oman monikulmion
+sisällä, 84,3 lautayksikköä St. Helena -kaupunkilaatasta
+(vähimmäisetäisyys 35), 688,4 yksikköä lähimmästä toisesta
+eläintäystä (Namibia, vähimmäisetäisyys 30) ja SHN-lehden rajauksen
+sisällä, joten merkki näkyy myös maalehden kartalla.
+
+**Maatestin poikkeus.** Maailmankartan `map.outlines` ei tunne Saint
+Helenan saarta lainkaan — saari on laudalla vain countryShapes-renkaana
+—, joten yksikään saaren piste ei läpäise `isOnLand`-vartiota. SHN
+lisättiin siksi `tests/elaintakyt.test.mjs`:n
+`MAATESTIN_POIKKEUS`-listaan samalla perusteella kuin FJI, SLB ja VUT:
+tyylitelty rantaviiva on piirros eikä mittaustulos, ja poikkeus poistuu,
+kun `map.outlines` joskus päivitetään. Poikkeus ei koske mitään muuta
+vartiota.
+
+**Kuvaton tietue.** Tikkurin `kuva`-kentässä on kuvaputken ämpäritunnus
+`elain-shn` ilman kansiota; kortti latoo siihen asti tekstin ja lähteen
+ilman kuvakehystä. Faktat on luettu en-Wikipedian raakatekstistä
+("Saint Helena plover", johdanto sekä osiot "Description" ja "Status and
+conservation") 8.9.2026.
+
+**Vaje päivittyi**: Saint Helena on nyt *kohteita −5, maastoa −2*, ja
+eläintäky ei enää puutu. Laskurin lukema pysyy ennallaan (maita 112,
+tavoitteessa 108, vajaita 4), koska saari on yhä vajaa kohteiden osalta.
+Taulukon SHN-rivi on ajettu `node tools/laske-karttanostot.mjs --md`
+-työkalulla.

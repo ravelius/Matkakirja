@@ -31,6 +31,19 @@
  * etuliitteellään (reaktiot/) eivätkä tallenna mitään henkilötietoa —
  * vain "montako ääntä tällä symbolilla on tässä kohteessa".
  *
+ * NATIIVIPORTTI (23.9.2026): natiivi iOS-peli (Unity, UnityWebRequest)
+ * ei lähetä Originia. Se pääsee pelaajan selainreiteille (/laheta,
+ * /kuvavinkki, /pro-tarkista, /pro-profiili, /reaktiot, /reaktio), kun
+ * Origin PUUTTUU ja otsake `x-matkakirja-natiivi` kantaa sallitun bundle
+ * id:n, joka esiintyy myös User-Agentissa (`Matkakirja/<versio> (<bundle
+ * id>)`). Sama malli kuin pöllöworkerissa (tools/pollo/rajat.js) ja
+ * sähkeworkerissa (worker/sahke/kasittelija.js). Sallitut tunnisteet:
+ * ympäristömuuttuja EHDOTUS_NATIIVIT (pilkkulista) tai oletus
+ * NATIIVIT_OLETUS. Väärä origin ei muutu sallituksi natiiviotsakkeella,
+ * natiivi ei tarvitse CORS-otsakkeita eikä OPTIONS-esilentoa, ja
+ * omistajan avainreitit vaativat yhä avaimen. Koko-, määrä- ja
+ * kuvarajat ovat samat kuin selaimella.
+ *
  * SÄHKÖPOSTI ei vuoda mihinkään muualle kuin meta.jsoniin yksityisessä
  * ämpärissä: sitä ei kirjoiteta lokiin eikä palauteta kenellekään
  * ilman avainta.
@@ -44,6 +57,7 @@ import {
   haeReaktiot, kirjaaReaktio, listaaReaktiot, merkitseKorjatuksi,
   reaktioOmistajanPolku, reaktioPolku,
 } from './reaktiot.js';
+import { kuvavinkkiPolku, kuvavinkkiReitti } from './kuvavinkki.js';
 
 /** Sallitut kuvatyypit ja niiden tiedostopäätteet. */
 export const KUVA_TYYPIT = {
@@ -57,6 +71,19 @@ export const KUVA_TYYPIT = {
 export const KUVIA_ENINTAAN = 3;
 export const KUVAN_KATTO = 8 * 1024 * 1024;
 export const TEKSTIN_KATTO = 4000;
+
+/*
+ * RAAMATUN MUUTOSLÄHETYS (omistaja 11.9.2026: Raamattu muokattavaksi
+ * pelissä). Työhuoneen Raamattu-lehti lähettää muuttuneet kohdat
+ * vanhoine ja uusine teksteineen samaa reittiä kuin lukijoiden
+ * ehdotukset. Yksi Raamatun kohta voi olla parin tuhannen merkin
+ * mittainen ja lähetyksessä voi olla useita kohtia kahtena versiona,
+ * joten 4000 merkin katto katkaisisi lähetyksen kesken lauseen.
+ * Laji on ainoa tapa saada isompi katto, eikä se avaa mitään muuta:
+ * lähetys menee samaan yksityiseen ämpäriin kuin kaikki muutkin.
+ */
+export const RAAMATUN_LAJI = 'raamattu';
+export const RAAMATUN_TEKSTIN_KATTO = 120000;
 export const KENTAN_KATTO = 200;
 export const LISTAN_KATTO = 200;
 
@@ -98,6 +125,29 @@ export function sallittuOrigin(origin, sallitut) {
   if (!origin) return false;
   if (sallitut.includes(origin)) return true;
   return /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin);
+}
+
+/*
+ * Natiiviportti. Kopio pöllöworkerin apufunktioista (tools/pollo/rajat.js)
+ * eikä tuonti: ehdotusworker paketoidaan omasta kansiostaan, eikä sen
+ * kuulu riippua tools/-kansiosta.
+ */
+export const NATIIVI_OTSAKE = 'x-matkakirja-natiivi';
+export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli', 'fi.matkakirja.peli.kehitys']);
+
+/** Sallitut natiivitunnisteet: EHDOTUS_NATIIVIT (pilkkulista) ohittaa oletuksen. */
+export function sallitutNatiivit(env) {
+  const lista = String(env?.EHDOTUS_NATIIVIT ?? '')
+    .split(',').map((osa) => osa.trim()).filter(Boolean);
+  return lista.length ? lista : NATIIVIT_OLETUS;
+}
+
+/** Onko pyyntö sallitusta natiivista sovelluksesta? `otsakkeet` = Headers tai get(nimi)-olio. */
+export function sallittuNatiivi(otsakkeet, lista = NATIIVIT_OLETUS) {
+  const tunniste = String(otsakkeet?.get?.(NATIIVI_OTSAKE) ?? '').trim();
+  if (!tunniste || !lista.includes(tunniste)) return false;
+  const agentti = String(otsakkeet?.get?.('user-agent') ?? '');
+  return agentti.includes(tunniste);
 }
 
 function korsOtsakkeet(origin, sallitut) {
@@ -150,7 +200,7 @@ export function teeKansio(nyt, tunnus) {
 }
 
 /** Satunnainen tunnus (kansiossa on jo aikaleima, joten kuusi merkkiä riittää). */
-function satunnainenTunnus() {
+export function satunnainenTunnus() {
   const tavut = new Uint8Array(4);
   crypto.getRandomValues(tavut);
   return [...tavut].map((t) => t.toString(16).padStart(2, '0')).join('').slice(0, 6);
@@ -249,7 +299,12 @@ async function laheta(pyynto, env, kors, apurit) {
     return vastaa({ ok: true, kansio: null }, kors);
   }
 
-  const teksti = tekstikentta(lomake, 'teksti');
+  // Vain 'raamattu' kelpaa lajiksi tällä reitillä: kuvavinkin ja
+  // kuvapalautteen lajit syntyvät omalla reitillään, eikä niitä saa
+  // voida väittää lomakekentällä.
+  const laji = kentta(lomake, 'laji', 40) === RAAMATUN_LAJI ? RAAMATUN_LAJI : '';
+  const teksti = tekstikentta(lomake, 'teksti',
+    laji === RAAMATUN_LAJI ? RAAMATUN_TEKSTIN_KATTO : TEKSTIN_KATTO);
   const sivu = kentta(lomake, 'sivu');
   const tarkenne = kentta(lomake, 'tarkenne', 500);
   const nimimerkki = kentta(lomake, 'nimimerkki', 80);
@@ -339,6 +394,10 @@ async function laheta(pyynto, env, kors, apurit) {
     versio: pro ? 2 : 1,
     aikaleima: nyt.toISOString(),
     kansio,
+    // Laji erottaa työhuoneen Raamatun muutokset lukijan ehdotuksesta
+    // (Lukijoilta-lehti ryhmittelee ne omaksi ryhmäkseen). Tyhjä =
+    // tavallinen ehdotus, kuten kaikissa vanhoissa meta.jsoneissa.
+    laji,
     sivu,
     tarkenne,
     teksti,
@@ -486,7 +545,8 @@ async function kommentti(pyynto, env, kors) {
  * Koko workerin käsittely.
  *
  * @param {Request} pyynto pyyntö
- * @param {object} env ympäristö: EHDOTUKSET (R2), EHDOTUS_AVAIN, EHDOTUS_ORIGINIT
+ * @param {object} env ympäristö: EHDOTUKSET (R2), EHDOTUS_AVAIN, EHDOTUS_ORIGINIT,
+ *   EHDOTUS_NATIIVIT
  * @param {object} apurit testien kello ja tunnus: { nyt, tunnus }
  * @returns {Promise<Response>} vastaus
  */
@@ -495,6 +555,13 @@ export async function kasittele(pyynto, env, apurit = {}) {
   const origin = pyynto.headers.get('origin');
   const sallitut = sallitutOriginit(env);
   const kors = { origin, sallitut };
+  /*
+   * Pelaajan reittien portti: pelin origin tai natiivi peli. Natiivi
+   * hyväksytään vain ilman Originia: vieras origin ei pelasta itseään
+   * natiiviotsakkeella.
+   */
+  const pelaajanPortti = () => sallittuOrigin(origin, sallitut)
+    || (!origin && sallittuNatiivi(pyynto.headers, sallitutNatiivit(env)));
 
   if (pyynto.method === 'OPTIONS') {
     if (!sallittuOrigin(origin, sallitut)) return new Response(null, { status: 403 });
@@ -510,10 +577,44 @@ export async function kasittele(pyynto, env, apurit = {}) {
      * on ainoa portti: ilman sitä worker olisi kenen tahansa avoin
      * tallennustila.
      */
-    if (!sallittuOrigin(origin, sallitut)) {
+    if (!pelaajanPortti()) {
       return vastaa({ virhe: 'Origin ei ole sallittu' }, { status: 403, ...kors });
     }
     return laheta(pyynto, env, kors, apurit);
+  }
+
+  /*
+   * KUVIEN SYÖTTÖPUTKI (worker/ehdotukset/kuvavinkki.js). Sama portti
+   * kuin /laheta:lla — selaimesta tuleva kirjoitus, joten origin-
+   * tarkistus on ainoa este. Apurit annetaan kimppuna, jotta
+   * lomakkeenluku ja ämpärin kirjoitus pysyvät yhtenä toteutuksena.
+   */
+  if (kuvavinkkiPolku(url.pathname)) {
+    if (pyynto.method !== 'POST') {
+      return vastaa({ virhe: 'Vain POST' }, { status: 405, ...kors });
+    }
+    if (!pelaajanPortti()) {
+      return vastaa({ virhe: 'Origin ei ole sallittu' }, { status: 403, ...kors });
+    }
+    return kuvavinkkiReitti({
+      pyynto,
+      env,
+      kors,
+      apurit,
+      apu: {
+        vastaa,
+        kentta,
+        tekstikentta,
+        rasti,
+        teeKansio,
+        satunnainenTunnus,
+        kuvaTyypit: KUVA_TYYPIT,
+        tekstinKatto: TEKSTIN_KATTO,
+        tunnistaPro,
+        normalisoiSahkoposti,
+        vertaa: vertaaSalaisuus,
+      },
+    });
   }
 
   /*
@@ -526,7 +627,7 @@ export async function kasittele(pyynto, env, apurit = {}) {
     if (proOmistajanPolku(url.pathname) && !avainKelpaa(url, env)) {
       return vastaa({ virhe: 'Avain puuttuu tai ei kelpaa' }, { status: 401, ...kors });
     }
-    if (proSelaimenPolku(url.pathname) && !sallittuOrigin(origin, sallitut)) {
+    if (proSelaimenPolku(url.pathname) && !pelaajanPortti()) {
       return vastaa({ virhe: 'Origin ei ole sallittu' }, { status: 403, ...kors });
     }
     if (!env.EHDOTUKSET) {
@@ -552,7 +653,7 @@ export async function kasittele(pyynto, env, apurit = {}) {
     if (omistajan && !avainKelpaa(url, env)) {
       return vastaa({ virhe: 'Avain puuttuu tai ei kelpaa' }, { status: 401, ...kors });
     }
-    if (!omistajan && !sallittuOrigin(origin, sallitut)) {
+    if (!omistajan && !pelaajanPortti()) {
       return vastaa({ virhe: 'Origin ei ole sallittu' }, { status: 403, ...kors });
     }
     if (!env.EHDOTUKSET) {

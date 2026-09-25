@@ -1,0 +1,157 @@
+{
+  "versio": 2,
+  "kaupunki": "tallinna",
+  "teksti": "Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.",
+  "tekstiSha256": "f661eaa434cbdd3f0d327ed29be82ae54b1fb38ed2fb23a025120ab30ae6aeba",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-tallinna.mp3",
+    "versio": 2,
+    "tavut": 321036,
+    "sha256": "52a655246a1a24977d321ecaed47194300b7242ff9e42810be581485203a12ad"
+  },
+  "kesto": 19980,
+  "sanat": [
+    {
+      "sana": "Revalin",
+      "alku": 220,
+      "loppu": 620
+    },
+    {
+      "sana": "torin",
+      "alku": 660,
+      "loppu": 880
+    },
+    {
+      "sana": "apteekissa",
+      "alku": 980,
+      "loppu": 1640
+    },
+    {
+      "sana": "kysyin",
+      "alku": 1700,
+      "loppu": 2120
+    },
+    {
+      "sana": "auttaisiko",
+      "alku": 2560,
+      "loppu": 3100
+    },
+    {
+      "sana": "marsipaani",
+      "alku": 3160,
+      "loppu": 3800
+    },
+    {
+      "sana": "sydänsuruihin",
+      "alku": 3860,
+      "loppu": 4660
+    },
+    {
+      "sana": "jos",
+      "alku": 5680,
+      "loppu": 5720
+    },
+    {
+      "sana": "ei",
+      "alku": 5740,
+      "loppu": 5820
+    },
+    {
+      "sana": "vielä",
+      "alku": 5860,
+      "loppu": 6100
+    },
+    {
+      "sana": "tiedä",
+      "alku": 6160,
+      "loppu": 6460
+    },
+    {
+      "sana": "ketä",
+      "alku": 6520,
+      "loppu": 6740
+    },
+    {
+      "sana": "kaipaa",
+      "alku": 6800,
+      "loppu": 7300
+    },
+    {
+      "sana": "Apteekkari",
+      "alku": 9000,
+      "loppu": 9560
+    },
+    {
+      "sana": "leikkasi",
+      "alku": 9600,
+      "loppu": 10000
+    },
+    {
+      "sana": "suuremman",
+      "alku": 10060,
+      "loppu": 10540
+    },
+    {
+      "sana": "palan",
+      "alku": 10600,
+      "loppu": 10920
+    },
+    {
+      "sana": "Söin",
+      "alku": 12840,
+      "loppu": 13040
+    },
+    {
+      "sana": "lääkkeeni",
+      "alku": 13080,
+      "loppu": 13580
+    },
+    {
+      "sana": "satamaan",
+      "alku": 13640,
+      "loppu": 14080
+    },
+    {
+      "sana": "mennessä",
+      "alku": 14120,
+      "loppu": 14640
+    },
+    {
+      "sana": "Vaiva",
+      "alku": 15880,
+      "loppu": 16219
+    },
+    {
+      "sana": "jäi",
+      "alku": 16280,
+      "loppu": 16680
+    },
+    {
+      "sana": "hoitoon",
+      "alku": 17720,
+      "loppu": 18200
+    },
+    {
+      "sana": "olin",
+      "alku": 18240,
+      "loppu": 18440
+    },
+    {
+      "sana": "poikkeuksellisen",
+      "alku": 18480,
+      "loppu": 19360
+    },
+    {
+      "sana": "tyytyväinen",
+      "alku": 19420,
+      "loppu": 19980
+    }
+  ],
+  "lauseet": [
+    220,
+    9000,
+    12840,
+    15880
+  ],
+  "luotu": "2026-09-23T15:39:29.775Z"
+}

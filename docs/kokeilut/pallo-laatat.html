@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Laatoitettu karttapallo — koe</title>
+<!--
+  KOE: laatoitettu karttapallo (omistajan kysymys 4.9.2026: "Onko noista
+  laatoitetuista demoa?"). Globe.gl 2.46 lataa pallon pinnan slippy-
+  laattoina (Web Mercator XYZ) ja hakee tarkempia laattoja vain katsotulle
+  alueelle, joten tarkkuus ei rajoitu yhteen tekstuuriin. Tässä kokeessa
+  laatat ovat JULKISIA karttapalveluita (OpenStreetMap, CARTO,
+  OpenTopoMap), eivät pelin julistetta: pelin laattapyramidi on Millerin
+  projektiossa omassa ruudukossaan, ja sen kääntäminen Web Mercator
+  -laatoiksi on oma työnsä. Sivu ei kuulu peliin eikä sitä linkitetä
+  mistään; se on vain katsottavaksi Pages-osoitteesta.
+-->
+<style>
+  html, body { margin: 0; height: 100%; background: #120e0b; color: #e6d5ac; font-family: system-ui, sans-serif; overflow: hidden; }
+  #pallo { position: fixed; inset: 0; }
+  .paneeli { position: fixed; top: 0.6rem; left: 0.6rem; right: 0.6rem; display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; z-index: 2; pointer-events: none; }
+  .paneeli > * { pointer-events: auto; }
+  .paneeli strong { font-size: 0.95rem; margin-right: 0.4rem; }
+  .paneeli button { border: 1px solid rgba(217,161,59,0.55); background: rgba(20,14,10,0.8); color: #f3e4bf; border-radius: 999px; padding: 0.35rem 0.8rem; font-size: 0.85rem; cursor: pointer; }
+  .paneeli button.paalla { background: rgba(217,161,59,0.35); }
+  .tila { position: fixed; left: 0.6rem; right: 0.6rem; bottom: 0.6rem; font-size: 0.75rem; color: #a8987a; z-index: 2; pointer-events: none; }
+  .tila a { color: #d9a13b; pointer-events: auto; }
+</style>
+</head>
+<body>
+<div class="paneeli">
+  <strong>Laatoitettu karttapallo</strong>
+  <button data-lahde="osm" class="paalla">OpenStreetMap</button>
+  <button data-lahde="carto">CARTO Voyager</button>
+  <button data-lahde="topo">OpenTopoMap</button>
+</div>
+<div id="pallo"></div>
+<p class="tila" id="tila">Ladataan kirjastoa…</p>
+<script src="https://cdn.jsdelivr.net/npm/globe.gl@2.46.2/dist/globe.gl.min.js"></script>
+<script>
+  const LAHTEET = {
+    osm: { url: (x, y, l) => `https://tile.openstreetmap.org/${l}/${x}/${y}.png`, max: 12, kiitos: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-tekijät</a>' },
+    carto: { url: (x, y, l) => `https://basemaps.cartocdn.com/rastertiles/voyager/${l}/${x}/${y}.png`, max: 12, kiitos: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-tekijät</a> · © <a href="https://carto.com/attributions">CARTO</a>' },
+    topo: { url: (x, y, l) => `https://tile.opentopomap.org/${l}/${x}/${y}.png`, max: 11, kiitos: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap-tekijät</a>, SRTM · © <a href="https://opentopomap.org">OpenTopoMap</a> (CC-BY-SA)' },
+  };
+  const tila = document.getElementById('tila');
+  const kotelo = document.getElementById('pallo');
+  const pallo = Globe()(kotelo)
+    .width(innerWidth).height(innerHeight)
+    .backgroundColor('#120e0b')
+    .showAtmosphere(true).atmosphereColor('#d9a13b').atmosphereAltitude(0.18);
+  let nykyinen = null;
+  function vaihda(avain) {
+    const l = LAHTEET[avain];
+    nykyinen = avain;
+    pallo.globeTileEngineUrl(l.url).globeTileEngineMaxLevel?.(l.max);
+    if (pallo.globeTileEngineMaxZoom) pallo.globeTileEngineMaxZoom(l.max);
+    pallo.globeTileEngineClearCache?.();
+    for (const b of document.querySelectorAll('.paneeli button')) b.classList.toggle('paalla', b.dataset.lahde === avain);
+    tila.innerHTML = `Laatat haetaan tarkkuustasoittain vain katsotulle alueelle (enintään taso ${l.max}). Pyöritä ja nipistä. ${l.kiitos}`;
+  }
+  for (const b of document.querySelectorAll('.paneeli button')) b.addEventListener('click', () => vaihda(b.dataset.lahde));
+  vaihda('osm');
+  pallo.pointOfView({ lat: 48, lng: 12, altitude: 1.6 }, 0);
+  const ohjaimet = pallo.controls();
+  ohjaimet.autoRotate = true; ohjaimet.autoRotateSpeed = 0.3;
+  kotelo.addEventListener('pointerdown', () => { ohjaimet.autoRotate = false; }, { once: true });
+  addEventListener('resize', () => pallo.width(innerWidth).height(innerHeight));
+  window.pallo = pallo; // kokeilua varten
+</script>
+</body>
+</html>

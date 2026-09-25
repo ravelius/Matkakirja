@@ -134,7 +134,8 @@ export const FOKUSKOHTEET_TUR = [
     nimi: 'Troija',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Kuinka pitkälle kaivaukset ovat ehtineet nykyään?',
       'Mitä Priamoksen aarteelle tapahtui löydön jälkeen?',
@@ -175,7 +176,8 @@ export const FOKUSKOHTEET_TUR = [
     nimi: 'Efesos',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miksi kaupunki lopulta hylättiin?',
       'Minne temppelin löydöt vietiin?',
@@ -207,6 +209,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     kuva: {
       tiedosto: 'Ephesus Celsus Library Façade.jpg',
+      lyhyt: 'Celsuksen kirjaston julkisivu Efesoksessa; Artemiin temppelistä on jäljellä vain kivijalka.',
       selite: 'Celsuksen kirjaston julkisivu Efesoksessa. Artemiin '
         + 'temppelistä on jäljellä vain kivijalka ja yksi pylväs.',
       lahde: 'Benh Lieu Song, Wikimedia Commons (CC BY-SA 3.0)',
@@ -216,30 +219,47 @@ export const FOKUSKOHTEET_TUR = [
      * samannimisessä lohkossa. `kadonnut: false`: Efesos itse on yhä
      * käveltävissä ja kohteella on oma valokuva, joten kartalla säilyy
      * historian pylväs ja valokuvan alle tulee "Koe ihme" -nappi.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-artemiin-temppeli.webp',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-artemiin-temppeli-loistoaika-v2.jpg',
       kadonnut: false,
-      selite: 'Artemiin temppelissä oli yli sata seitsemäntoistametristä '
-        + 'marmoripylvästä, ja se oli antiikin kuuluisin '
-        + 'pyhiinvaelluskohde: väkeä tuli koko Välimeren piiristä, ja '
-        + 'kaupungin hopeasepät elivät jumalattaren pienoismallien '
-        + 'myynnistä. Temppeli oli myös Vähän-Aasian pankki — kaupungit, '
-        + 'kuninkaat ja yksityiset säilyttivät siellä rahansa ja '
-        + 'sopimuksensa — ja turvapaikka, josta pakolaista ei saanut '
-        + 'hakea. Viimeinen temppeli tuhoutui vuonna 401 '
-        + 'jaa.; paikalla on nyt soistuneella kentällä vain kivijalka ja '
-        + 'yksi kokoon kasattu pylväs.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      lyhyt: 'Pyhiinvaeltaja tuo säästämänsä uhrilahjan Artemiin temppeliin, joka toimi myös pankkina.',
+      selite: 'Pyhiinvaeltaja on ehkä säästänyt matkarahoja vuosia tuodakseen '
+        + 'Artemiille pienen uhrilahjan. Temppelin portailla hänen '
+        + 'vieressään kulkevat käsityöläiset, papit ja kauppiaat: pyhäkkö '
+        + 'oli samalla Efesoksen uskonnollinen sydän, vaurauden näyttämö ja '
+        + 'turvalliseksi koettu rahansäilytyspaikka.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: UNESCO World Heritage Centre — Ephesus, '
+        + 'tarkistettu 5.9.2026.',
+      url: 'https://whc.unesco.org/en/list/1018/',
+    },
+    visa: {
+      kysymys: 'Minä vuonna John Turtle Wood löysi Artemiin temppelin kivijalan?',
+      vaihtoehdot: [
+        '1869',
+        '1863',
+        '1873',
+        '1994',
+      ],
+      oikea: 0,
+      fakta: 'Brittiläinen arkkitehti John Turtle Wood etsi temppeliä British Museumin '
+        + 'rahoituksella vuodesta 1863.',
     },
   },
   {
     id: 'kappadokia',
     nimi: 'Kappadokia',
+    // Puhujan akustiikka kortilla (js/tehosteketju.js): kortin teksti on
+    // kallioon hakatuista kirkoista ja maanalaisista kaupungeista.
+    akustiikka: 'luola',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Asuuko kallokolotaloissa vielä ihmisiä?',
       'Kuinka syvälle maanalaiset kaupungit ulottuvat?',
@@ -270,9 +290,22 @@ export const FOKUSKOHTEET_TUR = [
     // kuvaa.
     kuva: {
       tiedosto: 'Göreme Valley in Cappadocia edit1.jpg',
+      lyhyt: 'Göremen keijunsavupiippuja Kappadokiassa; kiveen on kaiverrettu satoja kirkkoja ja luostareita.',
       selite: 'Göremen laakson keijunsavupiippuja Kappadokiassa. Kiveen '
         + 'on kaiverrettu satoja kirkkoja ja luostareita.',
       lahde: 'Brocken Inaglory, Wikimedia Commons (CC BY-SA 3.0)',
+    },
+    visa: {
+      kysymys: 'Mitkä kolme tulivuorta peittivät Kappadokian tuhkakiveen?',
+      vaihtoehdot: [
+        'Ararat, Nemrut ja Süphan',
+        'Vesuvius, Etna ja Stromboli',
+        'Fuji, Aso ja Sakurajima',
+        'Erciyes, Hasan ja Göllüdağ',
+      ],
+      oikea: 3,
+      fakta: 'Pehmeään kiveen on kaiverrettu satoja kirkkoja ja luostareita sekä '
+        + 'kokonaisia maanalaisia kaupunkeja.',
     },
   },
   {
@@ -283,7 +316,8 @@ export const FOKUSKOHTEET_TUR = [
     nimio: 'Pamukkale',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Saako terasseilla vielä kävellä?',
       'Miksi antiikin kaupunki rakennettiin juuri tähän?',
@@ -362,9 +396,22 @@ export const FOKUSKOHTEET_TUR = [
      */
     kuva: {
       tiedosto: 'Castillo de Ankara, Ankara, Turquía, 2024-10-03, DD 47.jpg',
+      lyhyt: 'Ankaran linna kaupungin vanhalla ytimellä; isoisän aikaan kaupunki tunnettiin Euroopassa Angorana.',
       selite: 'Ankaran linna kaupungin vanhan ytimen laella. Isoisän '
         + 'aikaan kaupunki tunnettiin Euroopassa nimellä Angora.',
       lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    visa: {
+      kysymys: 'Minä vuonna kelttiläiset galatalaiset asettuivat Ankaraan?',
+      vaihtoehdot: [
+        '278 eaa.',
+        '25 eaa.',
+        '1873 jaa.',
+        '64 eaa.',
+      ],
+      oikea: 0,
+      fakta: 'Isoisän matkan aikaan Ankara oli vasta Angoran vilajetin keskus, ei '
+        + 'pääkaupunki — pääkaupunki oli Istanbul.',
     },
   },
   {
@@ -533,7 +580,7 @@ export const FOKUSKOHTEET_TUR = [
     nimi: 'Göbekli Tepe',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Ketkä pylväät pystyttivät?',
       'Miksi kaivauksia tehdään niin hitaasti?',
@@ -564,6 +611,7 @@ export const FOKUSKOHTEET_TUR = [
     // Category:Göbekli Tepe. Laajalti käytetty yleiskuva kaivausalueesta.
     kuva: {
       tiedosto: 'Göbekli Tepe, Urfa.jpg',
+      lyhyt: 'Göbekli Tepen T-kirjaimen muotoiset kivipylväät ovat maailman vanhimpia tunnettuja megaliitteja.',
       selite: 'Göbekli Tepen kaivausaluetta. T-kirjaimen muotoiset '
         + 'kivipylväät ovat maailman vanhimpia tunnettuja megaliitteja.',
       lahde: 'Teomancimit, Wikimedia Commons (CC BY-SA 3.0)',
@@ -616,7 +664,7 @@ export const FOKUSKOHTEET_TUR = [
     nimi: 'Vanjärvi',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
     kysymykset: [
       'Mistä järven vesi tulee, jos se ei laske mihinkään?',
       'Millainen kala inci kefali on?',
@@ -650,6 +698,18 @@ export const FOKUSKOHTEET_TUR = [
       selite: 'Akdamarin saari Vanjärvellä. Järvi on Turkin suurin ja '
         + 'niin emäksinen, ettei se yleensä jäädy.',
       lahde: 'W. Bulach, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    visa: {
+      kysymys: 'Kuinka korkeita mikrobialiittitorneja Vanjärven pohjalta on löydetty?',
+      vaihtoehdot: [
+        '3 000 metriä',
+        '40 metriä',
+        '9,7 metriä',
+        '280 metriä',
+      ],
+      oikea: 1,
+      fakta: 'Vanjärven vesi on niin emäksistä (pH 9,7–9,8), ettei se yleensä jäädy '
+        + 'talvellakaan.',
     },
   },
   {
@@ -736,6 +796,7 @@ export const FOKUSKOHTEET_TUR = [
     // suistolta, jonka koordinaatti osoittaa.
     kuva: {
       tiedosto: 'Kızıl ırmak Bafra Samsun (64325689).jpeg',
+      lyhyt: 'Kızılırmak Bafran suistossa; Turkin pisin kokonaan maan sisällä virtaava joki, 1 355 kilometriä.',
       selite: 'Kızılırmak Bafran suistossa. Joki on Turkin pisin '
         + 'kokonaan maan sisällä virtaava joki, 1 355 kilometriä.',
       lahde: 'Sadi Sezgin, Wikimedia Commons (CC BY 3.0)',
@@ -807,7 +868,7 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'kapalicarsi',
     nimi: 'Kapalıçarşı',
-    tyyppi: 'muu',
+    tyyppi: 'kauppa',
     symboli: 'kauppa',
     kysymykset: [
       'Mitä basaarissa myydään nykyään?',
@@ -855,6 +916,17 @@ export const FOKUSKOHTEET_TUR = [
         + 'sulttaanin tughra eli nimikirjoitusmerkki.',
       lahde: 'Alexandru Panoiu, Wikimedia Commons (CC BY 2.0)',
     },
+    visa: {
+      kysymys: 'Minä vuonna alettiin rakentaa Kapalıçarşın ydintä?',
+      vaihtoehdot: [
+        '1873',
+        '1929',
+        '1455',
+        '1994',
+      ],
+      oikea: 2,
+      fakta: 'Kapalıçarşıssa on 61 katettua katua ja yli 4 000 myymälää.',
+    },
   },
   {
     id: 'gelibolu',
@@ -892,6 +964,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     kuva: {
       tiedosto: 'Piri reis world map 01.jpg',
+      lyhyt: 'Piri Reisin maailmankartan säilynyt osa vuodelta 1513 löytyi uudelleen Topkapıssa 1929.',
       selite: 'Piri Reisin maailmankartan säilynyt osa vuodelta 1513. '
         + 'Kartta löytyi uudelleen Topkapın palatsista 1929.',
       lahde: 'Piri Reis 1513, Wikimedia Commons (public domain)',
@@ -900,7 +973,7 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'vanin-kissa',
     nimi: 'Vanin kissa',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     symboli: 'elain',
     kysymykset: [
       'Miksi kissa oppi uimaan?',
@@ -965,11 +1038,23 @@ export const FOKUSKOHTEET_TUR = [
         lahde: 'Francesco Bini, Wikimedia Commons (CC BY-SA 4.0)',
       },
     ],
+    visa: {
+      kysymys: 'Minä vuonna puhtaita Vanin kissoja laskettiin olevan enää 92?',
+      vaihtoehdot: [
+        '1873',
+        '1929',
+        '1995',
+        '1992',
+      ],
+      oikea: 3,
+      fakta: 'Vanin kissa tunnetaan "uivana kissana", sillä sen on nähty uivan '
+        + 'Vanjärvessä.',
+    },
   },
   {
     id: 'kirkpinar',
     nimi: 'Kırkpınar',
-    tyyppi: 'muu',
+    tyyppi: 'urheilu',
     symboli: 'urheilu',
     kysymykset: [
       'Miksi painijat öljyävät itsensä?',
@@ -1014,6 +1099,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     kuva: {
       tiedosto: 'Oil wrestling match in the gardens of the Sultan\'s Palace.jpg',
+      lyhyt: 'Öljypainiottelu Topkapın puutarhassa, tuntemattoman taiteilijan maalauksessa noin 1809.',
       selite: 'Öljypainiottelu Topkapın palatsin puutarhassa '
         + 'tuntemattoman kreikkalaisen taiteilijan maalauksessa '
         + 'noin 1809. Laji oli sama kuin Kırkpınarin kentällä.',
@@ -1048,10 +1134,17 @@ export const FOKUSKOHTEET_TUR = [
   {
     id: 'dolmabahce',
     nimi: 'Dolmabahçen palatsi',
+    /*
+     * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+     * palatsi on Beşiktaşissa, kolme kilometriä kaupunkilehden
+     * kohdekartan (vanhakaupunki ja Galata) pohjoispuolella, joten
+     * merkki kuuluu pääkartalle.
+     */
+    kattoVapaa: true,
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Dolmabahçe',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
     nappi: 'Sulttaanin äiti läimäytti Ranskan keisarinnaa',
@@ -1076,10 +1169,9 @@ export const FOKUSKOHTEET_TUR = [
       + 'käsivarresta, ja läimäisi tätä vatsaan muistutuksena siitä, '
       + 'ettei oltu Ranskassa. Hovista vuoti kaksi eri huhua siitä, '
       + 'mihin sulttaanin äiti löi.',
-    lahde: 'en-Wikipedia "Abdulaziz", osio "European tour" (tarkistettu '
-      + '25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
-      + 'takynostot-turkki.md, ehdokas 1). Lähde varaa tapahtuman sanalla '
-      + '"reportedly", ja molemmat sen antamat versiot on kerrottu.',
+    lahde: 'en-Wikipedia "Abdulaziz", osio "European tour" (tarkistettu 25.8.2026). '
+      + 'Lähde varaa tapahtuman sanalla "reportedly", ja molemmat sen antamat '
+      + 'versiot on kerrottu.',
     /*
      * Commons (takynostot-turkki.md, ehdokas 1, varmennettu
      * 25.8.2026): 2481×3823, public domain, Franz Xaver Winterhalter,
@@ -1102,7 +1194,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     id: 'yaren',
     nimi: 'Eskikaraağaç',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     symboli: 'elain',
     /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
     nappi: 'Haikara palasi Afrikasta samalle kalastajalle — joka kevät',
@@ -1122,11 +1214,9 @@ export const FOKUSKOHTEET_TUR = [
       + 'ystävyyden ensi kerran 2016, siitä tehtiin palkittu '
       + 'dokumentti, ja kylän keskusaukiolle pystytettiin patsas '
       + 'kalastajasta ja haikarasta.',
-    lahde: 'en-Wikipedia "Yaren (stork)" ja "Eskikaraağaç, Karacabey" '
-      + '(tarkistettu 25.8.2026 työaineistoihin docs/mantereet-tyoaineisto/'
-      + 'takynostot-turkki.md, ehdokas 5, ja takyt-istanbul.md, täky 18). '
-      + 'Artikkelia ei ole päivitetty vuoden 2021 jälkeen, joten teksti on '
-      + 'menneessä aikamuodossa.',
+    lahde: 'en-Wikipedia "Yaren (stork)" ja "Eskikaraağaç, Karacabey" (tarkistettu '
+      + '25.8.2026). Artikkelia ei ole päivitetty vuoden 2021 jälkeen, joten '
+      + 'teksti on menneessä aikamuodossa.',
     /*
      * KUVAVALINTA ON TIETOINEN VARMAN PUOLEN VALINTA. Tarinan oma
      * alkuperäiskuva on `Adem Amca ve Yaren Leylek 2020.jpg`
@@ -1144,6 +1234,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     kuva: {
       tiedosto: 'Ciconia ciconia - White Stork 09.jpg',
+      lyhyt: 'Kattohaikara Turkissa; haikarat kiertävät Bosporin kautta, koska merellä ei synny nousuvirtauksia.',
       selite: 'Kattohaikara Turkissa. Haikarat kiertävät Välimeren '
         + 'Bosporin kautta, koska nousuvirtauksia ei synny meren yllä.',
       lahde: 'Zeynel Cebeci, Wikimedia Commons (CC BY-SA 4.0)',
@@ -1167,7 +1258,7 @@ export const FOKUSKOHTEET_TUR = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Mausoleumi',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi hautaa kutsutaan mausoleumiksi?',
@@ -1195,20 +1286,23 @@ export const FOKUSKOHTEET_TUR = [
       + 'tietolaatikko sekä osiot "Destruction of the tomb" ja '
       + '"Discovery and excavation" (tarkistettu 26.8.2026).',
     /* MATKAKIRJAN IHME (kadonnut) — säännöt fokuskohteet-grc.js:ssä.
-       Kohteen ainoa kuva: haudasta on jäljellä vain perustukset. */
+       Kohteen ainoa kuva: haudasta on jäljellä vain perustukset.
+       Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+       omana aikanaan, ei nykyajan elementtejä. */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-halikarnassoksen-mausoleumi.webp',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-halikarnassoksen-mausoleumi-loistoaika-v2.jpg',
       kadonnut: true,
-      selite: 'Mausoloksen noin 45-metrinen hauta valmistui 351 eaa. Se '
-        + 'ei ollut temppeli vaan muistomerkki: leski Artemisia hautasi '
-        + 'miehensä komein juhlin, joissa kilpailtiin ja uhrattiin suuri '
-        + 'määrä eläimiä, ja lopuksi portaat haudan sisään suljettiin '
-        + 'kivillä ja soralla. Rakennusta ihailtiin niin, että sen '
-        + 'nimestä tuli sana '
-        + 'mausoleumi. Maanjäristykset kaatoivat sen keskiajalla ja kivet '
-        + 'muurattiin Bodrumin linnaan, joka vartioi lahden suuta yhä.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      lyhyt: 'Kivenveistäjä näkee huipulle nostetun nelivaljakon ensi kertaa; siitä juontuu sana mausoleumi.',
+      selite: 'Nuori kivenveistäjä on työstänyt hautamuistomerkin reliefejä '
+        + 'ehkä vuosia, mutta huipulle nostettua nelivaljakkoa hän katsoo '
+        + 'nyt ensi kertaa valmiina. Hallitsijoille rakennus lupaa '
+        + 'kuolemattomuutta; tekijälle se merkitsee pölyä keuhkoissa, '
+        + 'kipeitä käsiä ja omaa jälkeä monumentissa, jonka nimeä käytetään '
+        + 'vielä vuosituhansien päästä kaikista mausoleumeista.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: British Museum — Mausoleum of Halikarnassos, '
+        + 'tarkistettu 5.9.2026.',
+      url: 'https://www.britishmuseum.org/collection/galleries/mausoleum-halikarnassos',
     },
   },
   {
@@ -1239,7 +1333,7 @@ export const FOKUSKOHTEET_TUR = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Hippodromi',
-    tyyppi: 'muu',
+    tyyppi: 'urheilu',
     symboli: 'urheilu',
     kysymykset: [
       'Miksi vaunukilpailut olivat kaupungille niin tärkeitä?',
@@ -1275,20 +1369,24 @@ export const FOKUSKOHTEET_TUR = [
      * todennäköisesti vielä paljon kaivamatta, ja etelänpään sphendonen
      * perustus on näkyvissä. Selite sanoo "aukio ja kolme monumenttia",
      * ei "ei mitään jäljellä".
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-hippodromi.webp',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-hippodromi-loistoaika-v2.jpg',
       kadonnut: true,
-      selite: 'Hippodromi oli Konstantinopolin sydän tuhat vuotta: '
-        + 'satatuhatta katsojaa mahtui katsomaan vaunukilpailuja radan '
-        + 'ympärille, ja keskiselänteellä seisoi monumenttirivi '
-        + 'kaikkialta valtakunnasta. Katsomot on louhittu pois, mutta '
-        + 'paikan päälle ei koskaan rakennettu: siellä on nyt '
-        + 'Sultanahmetin aukio, jonka keskellä seisovat yhä Thutmosis '
-        + 'kolmannen obeliski, Delfoin käärmepatsas ja muurattu '
-        + 'obeliski — samassa rivissä kuin radan aikaan.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      lyhyt: 'Vedenmyyjäpoika säikähtää valjakkoa; kilpa-ajot ovat viihdettä, toimeentuloa ja politiikkaa.',
+      selite: 'Vedenmyyjäksi palkattu poika ehtii tuskin nostaa tarjotintaan, '
+        + 'kun valjakko ajautuu pölyssä kohti matalaa suojamuuria. Hän '
+        + 'tuntee sinisten ja vihreiden kannattajien huudon kehossaan ennen '
+        + 'kuin erottaa sanat — täällä kilpa-ajot ovat viihdettä, '
+        + 'toimeentuloa ja politiikkaa, mutta hänen maailmansa kutistuu '
+        + 'hetkeksi kavioihin, pyöriin ja siihen, osuuko vaunu.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: Istanbul Tarihi — Byzantine Constantinople '
+        + 'research portal, tarkistettu 5.9.2026.',
+      url: 'https://istanbultarihi.ist/',
     },
   },
   {
@@ -1329,7 +1427,7 @@ export const FOKUSKOHTEET_TUR = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Kaupunginmuurit',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miten Konstantinopoli lopulta vallattiin, jos muuri kesti?',
@@ -1371,6 +1469,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     kuva: {
       tiedosto: 'Walls of Constantinople.JPG',
+      lyhyt: 'Theodosiuksen muurien korjattu osuus: vallihaudan muuri, ulkomuuri ja päämuurin torni.',
       selite: 'Theodosiuksen muurien korjattu osuus: edessä vallihaudan '
         + 'muuri, keskellä ulkomuuri ja takana päämuurin torni.',
       lahde: 'Bigdaddy1204, Wikimedia Commons (CC BY-SA 3.0)',
@@ -1379,27 +1478,24 @@ export const FOKUSKOHTEET_TUR = [
      * MATKAKIRJAN IHME (yhä olemassa) — säännöt js/packs/
      * fokuskohteet-grc.js:n samannimisessä lohkossa. `kadonnut: false`,
      * joten "Koe ihme" -nappi tulee valokuvan alle.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-theodosiuksen-muurit.webp',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-theodosiuksen-muurit-loistoaika-v2.jpg',
       kadonnut: false,
-      selite: 'Theodosiuksen muurit olivat myöhäisantiikin mahtavin '
-        + 'linnoitus: 5,7 kilometriä kolminkertaista puolustusta '
-        + 'mereltä merelle, 96 tornia päämuurissa ja niiden edessä '
-        + 'matalampi ulkomuuri ja yli kahdenkymmenen metrin levyinen '
-        + 'vallihauta. Ne pitivät kaupungin tuhat vuotta, ja kaupunki '
-        + 'piti niistä huolta: kun maanjäristys kaatoi vuonna 447 puoli '
-        + 'sataa tornia juuri kun hunnit lähestyivät, työhön pantiin '
-        + 'kilpa-ajoradan kannattajajoukot. Siniset ja vihreät korjasivat '
-        + 'kumpikin oman osuutensa, ja muuri oli pystyssä kahdessa '
-        + 'kuukaudessa. Muuririvi '
-        + 'kulkee yhä halki Istanbulin, ja sen vieressä on nyt '
-        + 'puistokaista ja moottoritie; 1980-luvun korjauksia on '
-        + 'moitittu, sillä vuoden 1999 maanjäristyksessä juuri '
-        + 'korjatut osat sortuivat ja alkuperäinen muuraus jäi '
-        + 'pystyyn.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      lyhyt: 'Kilpa-ajokannattajat rakentavat puolustuslinjaa hunneja vastaan, muttei suostu lopettamaan kisojaan.',
+      selite: 'Sinisten ja vihreiden kilpa-ajokannattajat rakentavat nyt samaa '
+        + 'puolustuslinjaa — mutta eivät suostu lopettamaan kilpailuaan. '
+        + 'Kuvituksen muurarinoppilas pelkää pudottavansa raskaan tiilen '
+        + 'enemmän kuin kaukana lähestyviä hunneja; vanhemman miehen käsi '
+        + 'olkapäällä muistuttaa, että sortuneiden tornien on noustava ennen '
+        + 'kuin vihollinen ehtii kaupungille.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: UNESCO World Heritage Centre — Historic Areas '
+        + 'of Istanbul, tarkistettu 5.9.2026.',
+      url: 'https://whc.unesco.org/en/list/356/',
     },
   },
   {
@@ -1432,7 +1528,7 @@ export const FOKUSKOHTEET_TUR = [
      */
     id: 'pergamonin-alttari',
     nimi: 'Pergamonin alttari',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi Pergamonin kuninkaat rakensivat näin suuresti?',
@@ -1458,7 +1554,10 @@ export const FOKUSKOHTEET_TUR = [
       + 'marmorialttari, neljäkymmentä jalkaa korkea, ja siinä on '
       + 'kolossaalisia veistoksia." Rakennelma purettiin osittain '
       + '600-luvulla, kun akropolis linnoitettiin, ja 1800-luvulla '
-      + 'paikallinen väki käytti rinnettä kivilouhoksena.',
+      + 'paikallinen väki käytti rinnettä kivilouhoksena. Saksalaiset '
+      + 'kaivaukset nostivat friisin palat esiin 1878–1886, ja alttarin '
+      + 'länsisivu portaineen on koottu uudelleen Berliinin '
+      + 'Pergamonmuseumiin; Bergamassa on jäljellä perustus.',
     lahde: 'en-Wikipedia "Pergamon Altar", johdanto sekä osiot '
       + '"Endowment and dating", "Function", "Until the close of '
       + 'antiquity", "From antiquity to 19th century excavations" ja '
@@ -1474,24 +1573,24 @@ export const FOKUSKOHTEET_TUR = [
      * Myöskään friisien palauttamiskeskustelua ei kerrota: se on
      * politiikkaa eikä kohteen historiaa, ja Perustuslain
      * ikäsopivuuskohta pitää tekstin kohteessa.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-pergamonin-alttari.webp',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-pergamonin-alttari-loistoaika-v2.jpg',
       kadonnut: true,
-      selite: 'Pergamonin suuri alttari oli hellenistisen taiteen '
-        + 'huipentuma: 35 metriä leveä marmorirakennelma akropoliin '
-        + 'terassilla, jalustassa satojen hahmojen taistelufriisi ja '
-        + 'edessä kaksikymmentä metriä leveä portaikko, jota myöten '
-        + 'kulkue nousi pylväiden ympäröimälle uhripihalle. Siellä '
-        + 'poltettiin uhrit Zeukselle. Rakennelmaa '
-        + 'ei ole enää paikallaan. Isoisän matkan aikaan vuonna 1873 '
-        + 'bergamalaiset yhä louhivat rinteestä kiveä ja polttivat '
-        + 'marmoria kalkiksi; Carl Humannin kaivaukset alkoivat viisi '
-        + 'vuotta myöhemmin, ja friisit vietiin sopimuksella Berliiniin, '
-        + 'missä ne ovat yhä Pergamonmuseumissa. Terassilla on nyt '
-        + 'perustus ja muutama muurinpätkä.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      lyhyt: 'Kuvanveistäjä ja sisar katsovat jumalien ja jättiläisten taistelua, joka kiertää alttaria 120 m.',
+      selite: 'Nuori kuvanveistäjä tuntee jättiläisen kasvoissa jokaisen '
+        + 'taltaniskun, mutta hänen sisarensa näkee hahmon nyt ensi kertaa '
+        + 'lähes elävänä. Yli sadan jumalan ja jättiläisen taistelu kiertää '
+        + 'alttaria 120 metrin matkan: hallitsijasuvulle se julistaa voittoa '
+        + 'ja jumalallista järjestystä, tekijöille se on vuosien pölyinen '
+        + 'työ, johon oma nimi ei ehkä koskaan päädy.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: Staatliche Museen zu Berlin — Great Altar of '
+        + 'Pergamon, tarkistettu 5.9.2026.',
+      url: 'https://search.smb.museum/object/obj-829881',
     },
   },
 ];

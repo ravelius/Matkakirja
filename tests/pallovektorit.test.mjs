@@ -1,0 +1,463 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import {
+  PALLOVEKTORIT_JUURI, PALLOVEKTORIT_OLETUS, PALLOVEKTORIT_VERSIO, RAJA_KATKO_YKS,
+  VEKTORIT_HAIVE_MS, VEKTORIT_HARVENNUS_PORTAAT, VEKTORIT_HARVENNUS_PX, VEKTORIT_JARRU_MS,
+  VEKTORIT_KORKEUS, VEKTORIT_LEVEYS_CSS, VEKTORIT_LEVEYS_TIHEYS, VEKTORIT_PEHMENNYS_LAITEPX,
+  VEKTORIT_RAJAT_PX_ASTE, VEKTORIT_RAJA_LEVEYS_CSS, VEKTORIT_RENDER_ORDER,
+  VEKTORIT_SOLUKATTO, VEKTORIT_SYVYYSSIIRTO, VEKTORIT_TERAVYYS_PX,
+  harvennaViiva, harvennusPorras, pallovektoritPaalla, pehmennaLineMaterial, pinnanPiste,
+  puraDelta, vektorijanat, vektorisolut, vektoritaso, viivanLeveysCss,
+} from '../js/pallovektorit.js';
+import { LEPOKERROS_HAIVE_SISAAN_MS, LEPOKERROS_SYVYYSSIIRTO, pallonPiste } from '../js/pallo.js';
+import { REITIN_KORKEUS } from '../js/pallolauta/reitit.js';
+
+/*
+ * PALLON VEKTORIVIIVAT (Raamattu 6.9.2026, VEKTORIT SAMALLA; suunnitelma
+ * docs/moduulit/pallon-vektoriviivat.md luku 4): rantaviivat ja maiden
+ * rajat piirtyvät laattojen päälle tasan tavoiteleveytensä
+ * laitepikseleinä. Nämä testit vartioivat kerroksen puhdasta logiikkaa
+ * ilman selainta: yksinkertaistustason valinta, solujako sauman yli,
+ * aineiston deltapurku, janageometria, säde–pallo-leikkaus ja ne
+ * vakiot, joista piirtojärjestys ja parallaksittomuus riippuvat.
+ */
+
+const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
+
+/* Aineiston tasot (tools/tee-pallovektorit.mjs oletus, luku 2.4). */
+const LODIT = [0.1, 0.03, 0.008, 0.004, 0];
+
+test('tason valinta: matalin taso, jonka toleranssi on ruudulla alle puoli pikseliä', () => {
+  // Luvun 2.4 taulukko: 0,1° riittää z0–z2:lle, 0,03° z3–z4:lle,
+  // 0,008° z5:lle, 0,004° z6:lle ja harventamaton lähde z7+:lle.
+  assert.equal(vektoritaso(LODIT, 6, VEKTORIT_TERAVYYS_PX), 1, 'koko pallo: 6 px/aste');
+  assert.equal(vektoritaso(LODIT, 62, VEKTORIT_TERAVYYS_PX), 2, 'z5: 62 px/aste');
+  assert.equal(vektoritaso(LODIT, 125, VEKTORIT_TERAVYYS_PX), 3, 'z6: 125 px/aste');
+  assert.equal(vektoritaso(LODIT, 240, VEKTORIT_TERAVYYS_PX), 4, 'z7: 240 px/aste');
+  // Yleiskuva: karkein taso kelpaa, kun tarve on pieni.
+  assert.equal(vektoritaso(LODIT, 3, VEKTORIT_TERAVYYS_PX), 0);
+  // Pakotus (savukkeet, kehittäjän vipu) ohittaa mittauksen ja rajautuu listaan.
+  assert.equal(vektoritaso(LODIT, 240, VEKTORIT_TERAVYYS_PX, 0), 0);
+  assert.equal(vektoritaso(LODIT, 3, VEKTORIT_TERAVYYS_PX, 9), 4, 'pakotus ei mene listan yli');
+  assert.equal(vektoritaso(LODIT, 3, VEKTORIT_TERAVYYS_PX, -2), 0);
+  assert.equal(vektoritaso([], 100), 0);
+});
+
+/*
+ * ======== VANHAN KARTAN VIIVA (omistaja 7.9.2026) =================
+ *
+ * *"Miksi muuten kartan rajat ovat noin mustia ja röpelöisiä? ... Sitä
+ * saisi vähän pehmentää paremmin vanhan kartan tyyliin istuvaksi."*
+ * Kolme mitattua syytä ja niiden vartijat: leveys liukuu kameran
+ * mukana, geometria harvennetaan vielä selaimessa, ja varjostimen
+ * paikka hylkää päätypyörylät ja häivyttää reunan.
+ */
+test('leveys liukuu: yleiskuvassa ohuempi kuin lähikuvassa', () => {
+  const kaukaa = viivanLeveysCss(5);
+  const lahelta = viivanLeveysCss(1000);
+  assert.equal(kaukaa, VEKTORIT_LEVEYS_CSS[0], 'alle liukuman: ohuin pää');
+  assert.equal(lahelta, VEKTORIT_LEVEYS_CSS[1], 'yli liukuman: paksuin pää');
+  assert.ok(kaukaa < lahelta);
+  // Välissä liukuma on monotoninen eikä mene päätearvojen yli.
+  const keskella = viivanLeveysCss((VEKTORIT_LEVEYS_TIHEYS[0] + VEKTORIT_LEVEYS_TIHEYS[1]) / 2);
+  assert.ok(keskella > kaukaa && keskella < lahelta, String(keskella));
+  // Rajat ovat hennommat samalla tiheydellä.
+  assert.ok(viivanLeveysCss(1000, VEKTORIT_RAJA_LEVEYS_CSS) < lahelta);
+  // Mittaamaton tiheys (ennen ensimmäistä kehystä) ei kaada eikä paksunna.
+  assert.equal(viivanLeveysCss(0), VEKTORIT_LEVEYS_CSS[0]);
+});
+
+test('harvennusporras: karkea kaukaa, nolla lähikuvassa', () => {
+  const kaukaa = harvennusPorras(23.8);
+  const lahelta = harvennusPorras(640);
+  assert.ok(kaukaa > lahelta, `${kaukaa} ≤ ${lahelta}`);
+  assert.ok(VEKTORIT_HARVENNUS_PORTAAT.includes(kaukaa));
+  // Porras pysyy ruudulla luvatussa tarkkuudessa.
+  assert.ok(kaukaa * 23.8 <= VEKTORIT_HARVENNUS_PX + 1e-9, String(kaukaa * 23.8));
+  assert.ok(lahelta * 640 <= VEKTORIT_HARVENNUS_PX + 1e-9);
+  // Portaita on kourallinen: geometriaa ei rakenneta uudelleen joka kehyksellä.
+  assert.ok(VEKTORIT_HARVENNUS_PORTAAT.length <= 6);
+  assert.equal(VEKTORIT_HARVENNUS_PORTAAT[VEKTORIT_HARVENNUS_PORTAAT.length - 1], 0, 'täysi yksityiskohta');
+  assert.equal(harvennusPorras(0), 0, 'ennen mittausta ei harvenneta');
+});
+
+test('harvennus: suora litistyy, mutka jää', () => {
+  const suora = [[0, 0], [1, 0.0001], [2, -0.0001], [3, 0]];
+  assert.deepEqual(harvennaViiva(suora, 0.01), [[0, 0], [3, 0]]);
+  // Toleranssin ylittävä mutka säilyy.
+  const mutka = [[0, 0], [1, 0.5], [2, 0]];
+  assert.equal(harvennaViiva(mutka, 0.01).length, 3);
+  // Nolla ja liian lyhyt viiva palautuvat sellaisenaan.
+  assert.deepEqual(harvennaViiva(suora, 0), suora);
+  assert.deepEqual(harvennaViiva([[0, 0], [1, 1]], 0.5), [[0, 0], [1, 1]]);
+  // Päätepisteet eivät koskaan katoa: solujen saumat pysyvät kiinni.
+  const ranta = Array.from({ length: 50 }, (_, i) => [i * 0.01, Math.sin(i) * 0.002]);
+  const harva = harvennaViiva(ranta, 0.005);
+  assert.deepEqual(harva[0], ranta[0]);
+  assert.deepEqual(harva[harva.length - 1], ranta[ranta.length - 1]);
+  assert.ok(harva.length < ranta.length);
+});
+
+test('varjostimen paikka: ei päätypyörylöitä, reuna häivytetään', () => {
+  const frag = ['uniform float linewidth;', 'void main() {',
+    '  float alpha = opacity;', '  gl_FragColor = vec4( diffuseColor.rgb, alpha );', '}'].join('\n');
+  const m = { fragmentShader: frag, uniforms: {}, userData: {} };
+  assert.equal(pehmennaLineMaterial(m), true);
+  assert.ok(m.uniforms.pehmennys, 'uniformi lisätty');
+  assert.match(m.fragmentShader, /uniform float pehmennys;/);
+  // Päätypyörylä pois: janat laatoittavat viivan limittämättä, joten
+  // läpinäkyvä muste ei kasaudu mustaksi kärkien kohdalla.
+  assert.match(m.fragmentShader, /abs\( vUv\.y \) > 1\.0 \) discard/);
+  assert.match(m.fragmentShader, /smoothstep\( 1\.0 - pehmennys, 1\.0, abs\( vUv\.x \) \)/);
+  assert.equal(m.needsUpdate, true);
+  // Toinen kutsu ei paikkaa kahdesti.
+  const ennen = m.fragmentShader;
+  assert.equal(pehmennaLineMaterial(m), true);
+  assert.equal(m.fragmentShader, ennen);
+  // Tuntematon varjostin: paikka ei mene läpi eikä varjostinta rikota.
+  const vieras = { fragmentShader: 'void main() {}', uniforms: {}, userData: {} };
+  assert.equal(pehmennaLineMaterial(vieras), false);
+  assert.equal(vieras.fragmentShader, 'void main() {}');
+});
+
+test('solujako: näkyvä laatikko soluiksi, sauman yli molemmin puolin', () => {
+  // Kreikan laatikko 10°:n soluilla osuu neljään soluun (19–20 / 4–5).
+  const kreikka = vektorisolut({
+    lat0: 35, lat1: 42, lon0: 19, lon1: 26,
+  }, 10);
+  assert.equal(kreikka.length, 4);
+  assert.deepEqual([...kreikka].sort(), ['19_4', '19_5', '20_4', '20_5']);
+
+  /*
+   * SAUMA: lepokerroksenAlue antaa pituuspiirit aukikierrettyinä, joten
+   * Tyynenmeren yli katsova ruutu on lon 175…185 eikä −180…180. Solujen
+   * pitää tulla molemmilta puolilta saumaa (sarakkeet 35 ja 0).
+   */
+  const sauma = vektorisolut({
+    lat0: -5, lat1: 5, lon0: 175, lon1: 185,
+  }, 10);
+  assert.ok(sauma.some((a) => a.startsWith('35_')), `sauman länsipuoli puuttuu: ${sauma}`);
+  assert.ok(sauma.some((a) => a.startsWith('0_')), `sauman itäpuoli puuttuu: ${sauma}`);
+  assert.equal(sauma.length, 4);
+
+  // Karkeilla tasoilla koko maailma on yksi solu (luku 2.4).
+  assert.deepEqual(vektorisolut({
+    lat0: -90, lat1: 90, lon0: -180, lon1: 180,
+  }, 360), ['0_0']);
+  assert.deepEqual(vektorisolut(null, 10), [], 'ilman aluetta ei soluja');
+  // Koko maailma 10°:n soluilla: 36 saraketta × 18 riviä, ei enempää.
+  assert.equal(vektorisolut({
+    lat0: -90, lat1: 90, lon0: -180, lon1: 180,
+  }, 10).length, 36 * 18);
+});
+
+/** Synteettinen solu V0:n muodossa (int32 n, int32 lon·1e4, int32 lat·1e4, int16-deltat). */
+function teeSolu(viivat) {
+  let tavuja = 0;
+  for (const v of viivat) tavuja += 12 + (v.length - 1) * 4;
+  const puskuri = new ArrayBuffer(tavuja);
+  const nakyma = new DataView(puskuri);
+  let o = 0;
+  for (const v of viivat) {
+    nakyma.setInt32(o, v.length, true);
+    let x = Math.round(v[0][0] * 1e4);
+    let y = Math.round(v[0][1] * 1e4);
+    nakyma.setInt32(o + 4, x, true);
+    nakyma.setInt32(o + 8, y, true);
+    o += 12;
+    for (let k = 1; k < v.length; k += 1) {
+      const nx = Math.round(v[k][0] * 1e4);
+      const ny = Math.round(v[k][1] * 1e4);
+      nakyma.setInt16(o, nx - x, true);
+      nakyma.setInt16(o + 2, ny - y, true);
+      o += 4;
+      x = nx;
+      y = ny;
+    }
+  }
+  return puskuri;
+}
+
+test('deltapurku: int16-deltat 1e-4 asteen tarkkuudella, molempiin suuntiin', () => {
+  const viivat = [
+    [[23.7275, 37.9838], [23.7301, 37.9812], [23.6, 37.9]],
+    [[-179.9998, -0.5], [-179.9, -0.4], [-179.8, -0.3], [-179.7, -0.2]],
+  ];
+  const purettu = puraDelta(teeSolu(viivat));
+  assert.equal(purettu.length, 2);
+  assert.equal(purettu[0].length, 3);
+  assert.equal(purettu[1].length, 4);
+  for (let i = 0; i < viivat.length; i += 1) {
+    for (let k = 0; k < viivat[i].length; k += 1) {
+      assert.ok(Math.abs(purettu[i][k][0] - viivat[i][k][0]) < 1e-9, `lon ${i}/${k}`);
+      assert.ok(Math.abs(purettu[i][k][1] - viivat[i][k][1]) < 1e-9, `lat ${i}/${k}`);
+    }
+  }
+  assert.deepEqual(puraDelta(new ArrayBuffer(0)), []);
+  // Vajaa tiedosto luetaan siihen asti kuin se on ehjä, ei kaadeta palloa.
+  const koko = teeSolu(viivat);
+  assert.equal(puraDelta(koko.slice(0, 20)).length, 1);
+});
+
+test('janat: jokainen väli oma jana täsmälleen pinnan säteellä', () => {
+  const sade = 100;
+  // 0,06 astetta: alle jakorajan, joten väli on yksi jana (ks. seuraava testi).
+  const { paikat, janoja } = vektorijanat([[[23.7, 37.9], [23.75, 37.95]]], sade);
+  assert.equal(janoja, 1);
+  assert.equal(paikat.length, 6);
+  const a = pallonPiste(37.9, 23.7, sade);
+  const b = pallonPiste(37.95, 23.75, sade);
+  const lahella = (x, y, mika) => assert.ok(Math.abs(x - y) < 1e-3, `${mika}: ${x} ≠ ${y}`);
+  lahella(paikat[0], a.x, 'x0'); lahella(paikat[1], a.y, 'y0'); lahella(paikat[2], a.z, 'z0');
+  lahella(paikat[3], b.x, 'x1'); lahella(paikat[4], b.y, 'y1'); lahella(paikat[5], b.z, 'z1');
+  // Piste on säteellä R: VEKTORIT_KORKEUS on 0 (parallaksi, luku 2.3).
+  lahella(Math.hypot(paikat[0], paikat[1], paikat[2]), sade, 'säde');
+  // Kolme pistettä = kaksi janaa (LineSegments2 haluaa parit).
+  assert.equal(vektorijanat([[[0, 0], [0.05, 0], [0.1, 0]]], sade).janoja, 2);
+  assert.equal(vektorijanat([[[0, 0]]], sade).janoja, 0, 'yksinäinen piste ei ole jana');
+  assert.equal(vektorijanat([], sade).janoja, 0);
+});
+
+test('janat: pitkä jana jaetaan paloiksi, joiden päät ovat pinnalla (Gironde 20.9.2026)', () => {
+  const sade = 100;
+  /*
+   * Médocin ranta: yksi 0,50 asteen jana (−1,199 E 45,121 N → −1,260 E
+   * 44,627 N). Jänteen keskikohta painui pinnan alle 9,5·10⁻⁶·R ja
+   * syvyystesti leikkasi korostuksen pois; paloina jokainen pää on
+   * pinnalla ja painuma on enintään 0,1 asteen janan painuma.
+   */
+  const a = [-1.199, 45.121];
+  const b = [-1.260, 44.627];
+  const yksi = vektorijanat([[a, b]], sade, 0);
+  assert.equal(yksi.janoja, 1, 'enimmäispituus 0 = ei jakoa (vertailukohta)');
+  const { paikat, janoja } = vektorijanat([[a, b]], sade);
+  assert.equal(janoja, 5, '0,50 astetta / 0,1 = 5 palaa');
+  assert.equal(paikat.length, 5 * 6);
+  // Päät ovat täsmälleen alkuperäiset pisteet.
+  const alku = pallonPiste(a[1], a[0], sade);
+  const loppu = pallonPiste(b[1], b[0], sade);
+  const lahella = (x, y, mika) => assert.ok(Math.abs(x - y) < 1e-3, `${mika}: ${x} ≠ ${y}`);
+  lahella(paikat[0], alku.x, 'alku x'); lahella(paikat[1], alku.y, 'alku y'); lahella(paikat[2], alku.z, 'alku z');
+  lahella(paikat[27], loppu.x, 'loppu x'); lahella(paikat[28], loppu.y, 'loppu y'); lahella(paikat[29], loppu.z, 'loppu z');
+  // Palat ovat ketju: palan loppu on seuraavan alku, ja jokainen pää on säteellä R.
+  for (let k = 0; k < janoja; k += 1) {
+    const o = k * 6;
+    lahella(Math.hypot(paikat[o], paikat[o + 1], paikat[o + 2]), sade, `pala ${k} alku säde`);
+    lahella(Math.hypot(paikat[o + 3], paikat[o + 4], paikat[o + 5]), sade, `pala ${k} loppu säde`);
+    if (k) {
+      lahella(paikat[o], paikat[o - 3], `pala ${k} ketju x`);
+      lahella(paikat[o + 1], paikat[o - 2], `pala ${k} ketju y`);
+      lahella(paikat[o + 2], paikat[o - 1], `pala ${k} ketju z`);
+    }
+  }
+  // Painuma: yhden jänteen keskikohta vs. palojen keskikohta (R − säde).
+  const painuma = (p) => sade - Math.hypot(...p);
+  const keski = (o) => [(paikat[o] + paikat[o + 3]) / 2, (paikat[o + 1] + paikat[o + 4]) / 2, (paikat[o + 2] + paikat[o + 5]) / 2];
+  const jannePainuma = painuma(keski(0).map((v, i) => (yksi.paikat[i] + yksi.paikat[i + 3]) / 2));
+  const palaPainuma = painuma(keski(12));
+  assert.ok(jannePainuma > 5e-4, `koko jänne painuu selvästi: ${jannePainuma}`);
+  assert.ok(palaPainuma < jannePainuma / 10, `pala painuu alle kymmenesosan: ${palaPainuma} vs ${jannePainuma}`);
+  // Lyhyt jana ei jakaudu: rosoinen ranta ei kasva.
+  assert.equal(vektorijanat([[[23.7, 37.9], [23.75, 37.95]]], sade).janoja, 1);
+  // Juuri rajan yli (0,127 astetta) jakautuu kahtia — pituus mitataan
+  // leveyspiirin kutistuman kanssa, ei pelkkänä asteruudukkona.
+  assert.equal(vektorijanat([[[23.7, 37.9], [23.8, 38.0]]], sade).janoja, 2);
+  // Sauman yli: 179,96 → −179,96 on 0,08 astetta, ei 359,9 — yksi jana.
+  assert.equal(vektorijanat([[[179.96, 0], [-179.96, 0]]], sade).janoja, 1);
+  // Sauman yli pitkänä: palat kulkevat lyhyempää tietä (x ≈ −R, ei +R).
+  const sauma = vektorijanat([[[179.5, 0], [-179.5, 0]]], sade);
+  assert.equal(sauma.janoja, 10);
+  assert.ok(sauma.paikat[3 * 6 + 2] < -sade * 0.99, `keskipala sauman puolella: z ${sauma.paikat[3 * 6 + 2]}`);
+});
+
+/*
+ * Kirjaston Vector3:n korvike: pinnanPiste lukee luokan kameran omasta
+ * paikkavektorista, joten testin riittää tarjota sama rajapinta.
+ * `unproject` vie ruudun NDC-pisteen tason z = 0 maailmaan, mikä
+ * vastaa z-akselilla olevaa kameraa, joka katsoo origoon.
+ */
+class V3 {
+  constructor(x = 0, y = 0, z = 0) { this.x = x; this.y = y; this.z = z; }
+
+  clone() { return new V3(this.x, this.y, this.z); }
+
+  sub(v) { this.x -= v.x; this.y -= v.y; this.z -= v.z; return this; }
+
+  add(v) { this.x += v.x; this.y += v.y; this.z += v.z; return this; }
+
+  multiplyScalar(s) { this.x *= s; this.y *= s; this.z *= s; return this; }
+
+  dot(v) { return this.x * v.x + this.y * v.y + this.z * v.z; }
+
+  normalize() {
+    const l = Math.hypot(this.x, this.y, this.z) || 1;
+    return this.multiplyScalar(1 / l);
+  }
+
+  unproject(kamera) {
+    this.x *= kamera.levea;
+    this.y *= kamera.levea;
+    this.z = 0;
+    return this;
+  }
+}
+
+test('säde–pallo-leikkaus: ruudun keski on kameran alla, kulma taivaalla on null', () => {
+  const kamera = { position: new V3(0, 0, 300), levea: 1000 };
+  const keski = pinnanPiste(kamera, 200, 400, 400, 800, 100);
+  assert.ok(keski, 'keskipisteen säde ei osunut palloon');
+  assert.ok(Math.abs(keski.lat) < 1e-9, `lat ${keski.lat}`);
+  assert.ok(Math.abs(keski.lng) < 1e-9, `lng ${keski.lng}`);
+  // Ruudun kulma menee pallon ohi: kerros ei saa keksiä sinne solua.
+  assert.equal(pinnanPiste(kamera, 400, 0, 400, 800, 100), null);
+  // Vinosti alaspäin: piste on eteläisemmällä leveydellä kuin keski.
+  const alas = pinnanPiste(kamera, 200, 420, 400, 800, 100);
+  assert.ok(alas && alas.lat < 0, `alaspäin ${alas?.lat}`);
+  assert.equal(pinnanPiste(null, 200, 400, 400, 800, 100), null);
+  assert.equal(pinnanPiste(kamera, 200, 400, 0, 800, 100), null);
+});
+
+test('kytkin: ?vektorit voittaa muistetun, muistettu oletuksen', () => {
+  const teeIkkuna = (haku, muistettu) => ({
+    location: { search: haku },
+    localStorage: { getItem: () => muistettu ?? null },
+  });
+  assert.equal(pallovektoritPaalla(teeIkkuna('', null)), PALLOVEKTORIT_OLETUS);
+  assert.equal(pallovektoritPaalla(teeIkkuna('?vektorit=0', '1')), false);
+  assert.equal(pallovektoritPaalla(teeIkkuna('?vektorit=1', '0')), true);
+  assert.equal(pallovektoritPaalla(teeIkkuna('', '0')), false);
+  assert.equal(pallovektoritPaalla(teeIkkuna('', '1')), true);
+  assert.equal(pallovektoritPaalla({}), PALLOVEKTORIT_OLETUS, 'ilman ikkunaa oletus');
+});
+
+test('vakiot: piirtojärjestys laattojen päälle, merkkien alle, ilman parallaksia', () => {
+  /*
+   * Läpinäkyvien jono (mitattu, luku 2.3): laatat ja lepokerros ≤ −1 →
+   * vektorit −0,5 → reitit 0 → kalvot 1. Reittien renderOrder on
+   * kirjaston oletus 0, joten se on tässä lukuna.
+   */
+  const REITTIEN_RENDER_ORDER = 0;
+  assert.equal(VEKTORIT_RENDER_ORDER, -0.5);
+  assert.ok(VEKTORIT_RENDER_ORDER < REITTIEN_RENDER_ORDER, 'reitit piirtyvät vektorien päälle');
+  // Syvyyssiirto laattakerroksen (E1, −8) edelle: viiva ei jää laatan alle.
+  assert.equal(VEKTORIT_SYVYYSSIIRTO, -12);
+  assert.ok(VEKTORIT_SYVYYSSIIRTO < LEPOKERROS_SYVYYSSIIRTO,
+    'vektori jäisi lepokerroksen ja laattakerroksen alle');
+  /*
+   * KORKEUS ON TÄSMÄLLEEN NOLLA: nostettu viiva kulki lähikuvassa 2–4
+   * laitepikseliä poltetun viivan vieressä (parallaksi, luku 2.3), ja
+   * järjestys hoidetaan syvyyssiirrolla. Reitit ovat yhä ylempänä.
+   */
+  assert.equal(VEKTORIT_KORKEUS, 0);
+  assert.ok(VEKTORIT_KORKEUS < REITIN_KORKEUS);
+  // Häive on sama pehmeä sisääntulo kuin lepokerroksella (KAIKKI LIIKE ANIMOIDAAN).
+  assert.equal(VEKTORIT_HAIVE_MS, LEPOKERROS_HAIVE_SISAAN_MS);
+  assert.equal(VEKTORIT_HAIVE_MS, 260);
+  /*
+   * VANHAN KARTAN VIIVA (omistaja 7.9.2026: *"noin mustia ja
+   * röpelöisiä ... saisi vähän pehmentää"*): leveys on CSS-pikseleinä
+   * [kaukana, lähellä], yleiskuvassa ohuempi kuin lähikuvassa, ja
+   * rajat kummassakin päässä rantaviivaa hennommat.
+   */
+  assert.deepEqual(VEKTORIT_LEVEYS_CSS, [0.8, 1.2]);
+  assert.ok(VEKTORIT_LEVEYS_CSS[0] < VEKTORIT_LEVEYS_CSS[1], 'kaukaa ohuempi');
+  assert.ok(VEKTORIT_RAJA_LEVEYS_CSS[0] < VEKTORIT_LEVEYS_CSS[0]);
+  assert.ok(VEKTORIT_RAJA_LEVEYS_CSS[1] < VEKTORIT_LEVEYS_CSS[1]);
+  assert.ok(VEKTORIT_PEHMENNYS_LAITEPX > 0, 'reuna häivytetään, ei jätetä MSAA:n varaan');
+  assert.ok(VEKTORIT_LEVEYS_TIHEYS[0] < VEKTORIT_LEVEYS_TIHEYS[1]);
+  assert.equal(VEKTORIT_TERAVYYS_PX, 0.5);
+  assert.equal(VEKTORIT_JARRU_MS, 60);
+  assert.equal(VEKTORIT_SOLUKATTO, 160);
+  assert.equal(VEKTORIT_RAJAT_PX_ASTE, 30);
+  assert.deepEqual(RAJA_KATKO_YKS, [0.011, 0.022]);
+  // Aineisto on versioidussa polussa (vuoden välimuisti, immutable).
+  assert.ok(PALLOVEKTORIT_JUURI.endsWith(`/${PALLOVEKTORIT_VERSIO}/`), PALLOVEKTORIT_JUURI);
+  assert.match(PALLOVEKTORIT_JUURI, /^https:\/\/media\.matkakirja\.app\/julisteet\/pallo\/vektorit\//);
+});
+
+test('V1: moduuli ei tuo ui-apureita eikä laattakerroksen moduulia suoraan', () => {
+  /*
+   * Suunnitelma luku 4.3: kytkin on TÄSSÄ moduulissa eikä
+   * js/ui-apurit.js:ssä (toinen erä muuttaa sitä), ja laattakerroksen
+   * tiedostoihin (js/pallolaatat.js, js/pallo.js) ei kosketa —
+   * lepokerroksen apurit tulevat js/pallo.js:n jälleenviennin kautta,
+   * jolloin kaksi kerrosta ei voi eriytyä eikä tämä moduuli sido
+   * itseään E1:n työn alla olevaan tiedostoon.
+   */
+  const lahde = lue('../js/pallovektorit.js');
+  assert.ok(!/from '\.\/ui-apurit\.js'/.test(lahde), 'moduuli tuo js/ui-apurit.js:n');
+  assert.ok(!/from '\.\/pallolaatat\.js'/.test(lahde), 'moduuli tuo js/pallolaatat.js:n');
+  assert.match(lahde, /from '\.\/pallo\.js'/);
+  // Kerros on palvelutyöntekijän kuoressa (offline).
+  assert.match(lue('../sw.js'), /'\.\/js\/pallovektorit\.js'/);
+});
+
+/*
+ * KEHITTÄJÄN KYTKIMET RATASVALIKOSSA (vika v1649). Omistaja katsoo peliä
+ * iOS-kuoressa (ios/), jossa ei ole osoiteriviä: ilman muistettua
+ * valintaa kumpaakaan pallon kerrosta ei voi sammuttaa siellä, missä
+ * vika näkyy. Kytkimet ovat ratasvalikossa ja tallettavat valinnan
+ * laitteelle; osoite voittaa muistin kuten muissakin kehittäjän vivuissa.
+ */
+test('kytkimet: laattakerros ja vektorit myös muistista, ratasvalikosta', async () => {
+  const {
+    LAATTAKERROS_AVAIN, PALLOVEKTORIT_AVAIN: AVAIN_UI, asetaLaattakerros, asetaPallovektorit,
+    laattakerrosPaalla, pallovektoritValittu,
+  } = await import('../js/ui-apurit.js');
+  const { PALLOVEKTORIT_AVAIN } = await import('../js/pallovektorit.js');
+  // Avain on kaksoiskappale (ratasvalikko ei voi tuoda laiskaa moduulia).
+  assert.equal(AVAIN_UI, PALLOVEKTORIT_AVAIN, 'ui-apurit ja pallovektorit samasta avaimesta');
+  const muisti = new Map();
+  const win = {
+    location: { search: '' },
+    localStorage: {
+      getItem: (k) => (muisti.has(k) ? muisti.get(k) : null),
+      setItem: (k, v) => muisti.set(k, v),
+      removeItem: (k) => muisti.delete(k),
+    },
+  };
+  // Oletus tulee kutsujalta, kunnes valinta on tehty.
+  assert.equal(laattakerrosPaalla(win, true), true);
+  assert.equal(pallovektoritValittu(win, true), true);
+  asetaLaattakerros(false, win);
+  asetaPallovektorit(false, win);
+  assert.equal(muisti.get(LAATTAKERROS_AVAIN), '0');
+  assert.equal(muisti.get(PALLOVEKTORIT_AVAIN), '0');
+  assert.equal(laattakerrosPaalla(win, true), false, 'muistettu pois voittaa oletuksen');
+  assert.equal(pallovektoritValittu(win, true), false);
+  // Laiskan moduulin oma lukija lukee saman muistipaikan samalla tavalla.
+  assert.equal(pallovektoritPaalla(win), false);
+  // Osoite voittaa muistin.
+  assert.equal(laattakerrosPaalla({ ...win, location: { search: '?laattakerros=1' } }, true), true);
+  assert.equal(pallovektoritValittu({ ...win, location: { search: '?vektorit=1' } }, true), true);
+  assert.equal(pallovektoritPaalla({ ...win, location: { search: '?vektorit=1' } }), true);
+  asetaLaattakerros(true, win);
+  asetaPallovektorit(true, win);
+  assert.equal(laattakerrosPaalla(win, false), true, 'muistettu päällä voittaa oletuksen');
+  assert.equal(pallovektoritValittu(win, false), true);
+  // NAPIT POIS RATTAASTA 11.9.2026 (omistaja: *"nämä kaikki napit voisi
+  // ottaa pois ja jättää noihin asetuksiin"*). Asetukset itse jäivät
+  // nykyisin oletuksin ja osoiteparametrein ?laattakerros= / ?vektorit=.
+  const html = lue('../index.html');
+  assert.doesNotMatch(html, /id="kehittaja-laattakerros-kytkin"/);
+  assert.doesNotMatch(html, /id="kehittaja-pallovektorit-kytkin"/);
+  const main = lue('../js/main.js');
+  assert.doesNotMatch(main, /asetaLaattakerros\(/);
+  assert.doesNotMatch(main, /asetaPallovektorit\(/);
+});
+
+/*
+ * NAULAUKSEN TYÖSÄIE (korjaus 23.9.2026): korostuksen pyyntölaskuri oli
+ * alustamatta, ensimmäinen pyyntö oli NaN, ja NaN !== NaN hylkäsi jokaisen
+ * säikeen vastauksen — kehä jäi naulaamatta ("kaksi erilaista viivaa").
+ */
+test('naulauksen pyyntölaskuri on alustettu ja säikeen portti on matalampi', async () => {
+  const lahde = lue('../js/pallovektorit.js');
+  const kentat = /const korostus = \{([\s\S]*?)\n {2}\};/.exec(lahde)?.[1] ?? '';
+  assert.match(kentat, /\bpyynto: 0\b/);
+  assert.match(kentat, /\bodottaa: null\b/);
+  assert.match(lahde, /tiheys >= \(tyosaie \? NAULAUKSEN_TIHEYS_RAJA_SAIE : NAULAUKSEN_TIHEYS_RAJA\)/);
+  const n = await import('../js/pallovektorit-naulaus.js');
+  assert.ok(n.NAULAUKSEN_TIHEYS_RAJA_SAIE < n.NAULAUKSEN_TIHEYS_RAJA);
+});

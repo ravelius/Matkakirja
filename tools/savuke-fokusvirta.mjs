@@ -16,13 +16,16 @@
  *      se on kirjaa eikä korttiannostelua, ja se jäi kokeiluun.
  *   3. Tutki (kaupungin laatta) avaa KAUPUNKILEHDEN SUORAAN, vaikka
  *      laatta on kääntämättä: lehtilukko on auki.
- *   4. Pöllö vinkkaa lehden avautuessa lyhyesti, ja vinkissä on ruksi
- *      "Älä näytä jatkossa" — ruksi jää laitteen muistiin.
+ *   4. Pulu vinkkaa lehden avautuessa yhdellä lauseella ("Etsi
+ *      lehdestä aarrekysymys."), EIKÄ vinkissä ole ruksia. Vinkki
+ *      sanotaan vain kerran koskaan: laitelippu jää muistiin ja
+ *      toinen lehden avaus on vinkitön (omistaja 7.9.2026).
  *   5. Sivulla 2 on nimilaatta AARTEEN AVAUS ja sivulla 3 JULISTE.
  *   6. AARTEEN AVAUS -tehtävän OIKEA vastaus sytyttää kartalle vihreän
  *      pisteen; ennen sitä pistettä ei ole.
- *   7. Pisteen napautus avaa kohtaamisen (Vartija Nikos) ja sen nappi
- *      vie samaan laattakysymykseen kuin ennenkin.
+ *   7. Pisteen napautus avaa laattakysymyksen SUORAAN — kohtaamis-
+ *      korttia ei tule (KORTIT POIS, omistaja 2.9.2026). Ateenassa
+ *      lehden tehtävänappi näkyy pisteen rinnalla.
  *   8. JULISTE-tehtävän oikea vastaus myöntää Ateenan julisteen ja
  *      tarjoaa Lunasta juliste -napin.
  *   9. Laatan ratkettua matkakirjakortti EI palaa vanhaan
@@ -32,20 +35,18 @@
  *  10. ATEENASSA EI maadoituskuplaa: aloituskaupungin kaksi ohjekuplaa
  *      saavat tilan (omistajan päätös 27.8.2026).
  *  11. SOFIASSA isoisän maadoitus tulee Livian saapumiskuplaan heti
- *      matkakirjaluennan päätyttyä, nimilappuineen — ja kuplassa on
+ *      matkakirjaluennan päätyttyä, pelkkänä puheena (ei nimilappua
+ *      eikä kuvaketta, omistaja 3.9.2026) — ja kuplassa on
  *      säikähdyksen JÄLKEEN aikasiirtymän konteksti (pariperiaate,
  *      Raamattu v1262). Väite EI ole FOKUSVIRTA_KORTIT-kytkimen
  *      takana — se on kevyen kulun oma.
- *  12. VENETSIASSA sama kupla kertoo kaupungin oman saapumisrepliikin:
+ *  12. KREETALLA (fokusvirraton) sama kupla kertoo kaupungin oman saapumisrepliikin:
  *      fokusvirrattomassa kaupungissa puheenvuoro tulee tavallisen
  *      saapumismerkinnän perästä (omistajan laajennus 28.8.2026).
  *
- * LIPPUTESTI (vanha virta palaa): palvelin kääntää lennossa molemmat
- * liput päinvastoin (FOKUSVIRTA_KORTIT = true, FOKUS_LEHTITEHTAVAT =
- * false), sivu ladataan uudestaan ja mitataan, että Tutki avaa taas
- * PÖLLÖN KUPLAN eikä lehteä. Näin kokeilun voi perua yhdellä rivillä,
- * ja savuke todistaa sen — muuten "helppo palauttaa" olisi lupaus,
- * jota kukaan ei ole kokeillut.
+ * LIPPUTESTI (vanha virta palaa) POISTETTIIN 2.9.2026 — ks. tiedoston
+ * loppu. Korttiannostelu on omistajan päätöksellä pois pysyvästi
+ * (Raamattu, FOKUSVIRRAN KORTIT POIS).
  *
  * serviceWorkers: 'block' on pakollinen — muuten sw sieppaa pyynnöt ja
  * ajo mittaa välimuistia eikä koodia. Ulkopuoliset osoitteet (kuvat)
@@ -238,6 +239,14 @@ vaadi('Ateenassa ei maadoituskuplaa (aloituskaupungin ohjekuplat saavat tilan)',
  */
 const sofianKupla = await sivu.evaluate(async () => {
   const { ui, game } = window.matkakirja;
+  /*
+   * ENSISAAPUMISEN TUURAUSPALJASTUS VOITTAA (omistaja 29.8.2026,
+   * js/livia.js livianPaljastusOdottaa): tuoreessa selaimessa Livian
+   * kahden kuplan paljastus ottaisi Sofian puheenvuoron ja maadoitus
+   * väistyisi. Savuke mittaa maadoitusta, joten paljastus merkitään
+   * nähdyksi samalla avaimella kuin peli itse.
+   */
+  localStorage.setItem('matkakirja-livia-paljastus', '1');
   game.player.pos = { type: 'city', city: 'sofia' };
   game.world.visited.add('sofia');
   if (!game.tokens.has('sofia')) game.world.tokens.set('sofia', 'coin');
@@ -254,45 +263,73 @@ const sofianKupla = await sivu.evaluate(async () => {
     await new Promise((r) => setTimeout(r, 250));
   }
   ui.diaryVoice?.pause();
-  for (let i = 0; i < 40; i += 1) {
-    const k = document.querySelector('.pollo-vihje');
-    if (k && !k.hidden && k.classList.contains('pollo-vihje-maadoitus')) {
-      return {
-        nimilappu: k.querySelector('.pollo-vihje-nimilappu')?.textContent ?? '',
-        yliviivaus: Boolean(k.querySelector('.pollo-vihje-nimilappu .pollo-yliviivattu')),
-        teksti: [...k.querySelectorAll('.pollo-vihje-lause')]
-          .map((p) => p.textContent).join(' '),
-      };
-    }
+  /*
+   * KUPLAPINO (omistajan tilaus 3.9.2026): maadoitus tulee nyt
+   * MONTANA kuplana peräkkäin (js/pollo.js naytaPuheenvuoro), joten
+   * väitteen mittaama teksti on pinon kaikkien kuplien teksti
+   * yhdistettynä. Odotus jatkuu, kunnes puheenvuoron viimeinen lause
+   * on pinossa, enintään 25 sekuntia.
+   *
+   * ODOTUS PITENI, KUN SOFIA SAI ÄÄNEN (6.9.2026): äänitetty
+   * puheenvuoro etenee kuplan LUKUAJALLA (js/livia.js
+   * livianKuplanLukuaika, enintään 9,5 s per osa) eikä vanhalla
+   * 1,8–4,2 sekunnin perusrytmillä — muuten viimeinen kupla olisi
+   * ruudulla kauan ennen kuin pulu ehtii puhua sen. Uudessa kulussa
+   * (7.9.2026, kavennus 8.9.2026) pulu puhuu vasta luennan aikana ja
+   * sen jälkeen, joten odotus kattaa luennan ja kaksi kommenttikuplaa.
+   *
+   * PELKÄT PUHEKUPLAT (omistajan tarkennus 3.9.2026): kuplissa ei saa
+   * olla nimilappuriviä eikä pöllökuvaketta, joten mittari laskee
+   * molemmat — nollan ylittävä luku kaataa väitteen.
+   */
+  const lueKuplat = () => {
+    const kuplat = [...document.querySelectorAll('.pollo-kuplapino .pollo-vihje-maadoitus')];
+    return {
+      kuplia: kuplat.length,
+      nimilappuja: kuplat
+        .filter((k) => k.querySelector('.pollo-vihje-nimilappu')).length,
+      kuvakkeita: kuplat
+        .filter((k) => k.querySelector('.pollo-vihje-kuvapaikka, svg')).length,
+      teksti: kuplat
+        .flatMap((k) => [...k.querySelectorAll('.pollo-vihje-lause')].map((p) => p.textContent))
+        .join(' '),
+    };
+  };
+  for (let i = 0; i < 60; i += 1) {
+    const tulos = lueKuplat();
+    if (/Ei se juttua pienennä/.test(tulos.teksti)) return tulos;
     await new Promise((r) => setTimeout(r, 500));
   }
-  return { teksti: '', nimilappu: '', yliviivaus: false };
+  return lueKuplat();
 });
 /*
  * VÄITE MITTAA PARIPERIAATTEEN (Raamattu v1262): Sofian merkintä on
- * laudan synkin, joten kuplassa pitää näkyä KAKSI asiaa peräkkäin —
+ * laudan synkin, joten kuplissa pitää näkyä KAKSI asiaa peräkkäin —
  * säikähdysavaus ja sen jälkeen aikasiirtymän välitys eli konkreettinen
  * historiakonteksti. Toinen ehto tarkistaa siksi, että kuplassa on
  * vuosiluku 1873 ja etäisyys nykyhetkeen ("sataviisikymmentä vuotta").
  * Jos joku kirjoittaa kontekstin pois ja jättää pelkän säikähdyksen,
  * savuke kaatuu tähän.
  *
- * MUOTO ON PUHEKIELINEN, PAINO REUNOILLA (Raamattu v1270 "LIVIAN
- * PUHEKIELI", sääntö 1): tämä kupla on omistajan hyväksymä
- * malliesimerkki koko säännöstä, joten väite mittaa MOLEMMAT reunat
- * ja keskikohdan kerralla. Alku on Livian omaa ääntä ("Kääk", "hurja
- * juttu"), KESKELLÄ luku on auki kirjoitettuna ("sataviisikymmentä
- * vuotta") ja LOPUSSA lyhentymä palaa ("Mut kyllä sen kestää lukea").
- * Kirjakielelle palauttaminen kaataa lopun ehdon, ja lyhentymien
- * valuttaminen takaisin keskelle (sataviiskyt) kaataa keskiehdon.
+ * UUSI KULKU (omistaja 7.9.2026, Raamattu KAUPUNGIN KULKU — kavennus
+ * 8.9.2026: *"ota kaikki pulun alustukset pois."*): pinossa on isoisän
+ * luennan JÄLKEEN kommentti kahtena kuplana, eikä alustusta enää ole.
+ * Kommentti alkaa nyt suoraan asiasta ("Hurja juttu…"): sen edestä
+ * poistui toistuva "Kääk.", joka tuli heti luennan aikaisen välihuudon
+ * perään (omistaja 8.9.2026). Tekstit ovat omistajan sanatarkasti
+ * hyväksymiä, eivätkä puhekielisäännöt koske niitä.
  */
-vaadi('Sofiassa isoisän maadoitus tulee Livian saapumiskuplaan',
-  /^Kääk\./.test(sofianKupla.teksti)
-    && /hurja juttu/.test(sofianKupla.teksti)
+vaadi('Sofiassa pulun kommentti tulee kuplasarjaan luennan jälkeen',
+  /^Hurja juttu/.test(sofianKupla.teksti)
+    // Kaksi kommenttikuplaa; alustusta ei enää ole.
+    && sofianKupla.kuplia >= 2
+    && !/Helteistä, tomu ei laskeudu/.test(sofianKupla.teksti)
+    && !/Kääk\. Hurja juttu/.test(sofianKupla.teksti)
     && /1873/.test(sofianKupla.teksti)
     && /sataviisikymmentä vuotta/.test(sofianKupla.teksti)
-    && /Mut kyllä sen kestää lukea/.test(sofianKupla.teksti)
-    && sofianKupla.yliviivaus === true && /Pulu/.test(sofianKupla.nimilappu),
+    && /Ei se juttua pienennä/.test(sofianKupla.teksti)
+    // Pelkät puhekuplat (3.9.2026): ei nimilappua eikä kuvaketta.
+    && sofianKupla.nimilappuja === 0 && sofianKupla.kuvakkeita === 0,
   JSON.stringify(sofianKupla).slice(0, 200));
 
 await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-maadoituskupla.png') });
@@ -334,13 +371,22 @@ await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-maadoituskupla.png') });
  * mitä se lupaa: että Venetsiaan saavuttaessa kupla NOUSEE UUDESTAAN
  * ja siinä on kaupungin oma repliikki.
  */
+/*
+ * VENETSIA → KREETA (2.9.2026): Venetsia sai fokusvirran aallossa 3
+ * (js/packs/fokusvirta-venetsia.js maadoituksineen), joten se ei enää
+ * kelpaa fokusvirrattoman kaupungin mitaksi. Kreeta on laudan kaupunki,
+ * jolla on oma saapumisrepliikki (LIVIAN_SAAPUMISET) mutta ei virtaa.
+ */
 const venetsianKupla = await sivu.evaluate(async () => {
   const { ui, game } = window.matkakirja;
-  // Sofian puheenvuoro pois samasta solmusta (ks. yllä).
-  window.matkakirjaPollo?.piilotaVihje();
-  game.player.pos = { type: 'city', city: 'venetsia' };
-  game.world.visited.add('venetsia');
-  game.arrivalFact = { packId: game.pack.id, cityId: 'venetsia' };
+  // Sofian puheenvuoro pois pinosta (ks. yllä). Kuplapinon myötä
+  // (3.9.2026) piilotaVihje koskee vain ohjekupliin, joten sarjan
+  // kaikki kuplat kaadetaan tyhjennaPinolla — sama kutsu kuin
+  // sulkuruksi tekee.
+  window.matkakirjaPollo?.tyhjennaPino();
+  game.player.pos = { type: 'city', city: 'kreeta' };
+  game.world.visited.add('kreeta');
+  game.arrivalFact = { packId: game.pack.id, cityId: 'kreeta' };
   ui.render();
   // Sama luennan pysäytys kuin Sofiassa: kupla odottaa luennan loppua.
   for (let i = 0; i < 40; i += 1) {
@@ -349,21 +395,23 @@ const venetsianKupla = await sivu.evaluate(async () => {
   }
   ui.diaryVoice?.pause();
   for (let i = 0; i < 40; i += 1) {
-    const k = document.querySelector('.pollo-vihje');
-    if (k && !k.hidden && k.classList.contains('pollo-vihje-maadoitus')) {
+    // Kupla on pelkkää puhetta (3.9.2026): nimilappu ja kuvake pois.
+    const k = document.querySelector('.pollo-kuplapino .pollo-vihje-maadoitus');
+    if (k) {
       return {
         teksti: [...k.querySelectorAll('.pollo-vihje-lause')]
           .map((p) => p.textContent).join(' '),
-        nimilappu: k.querySelector('.pollo-vihje-nimilappu')?.textContent ?? '',
+        nimilappuja: k.querySelectorAll('.pollo-vihje-nimilappu').length,
+        kuvakkeita: k.querySelectorAll('.pollo-vihje-kuvapaikka, svg').length,
       };
     }
     await new Promise((r) => setTimeout(r, 500));
   }
-  return { teksti: '', nimilappu: '' };
+  return { teksti: '', nimilappuja: 0, kuvakkeita: 0 };
 });
-vaadi('Venetsiassa Livia kertoo kaupungin oman saapumisrepliikin',
-  /^Venetsia\./.test(venetsianKupla.teksti)
-    && /Pulu/.test(venetsianKupla.nimilappu),
+vaadi('Kreetalla Livia kertoo kaupungin oman saapumisrepliikin (ei fokusvirtaa)',
+  /^Kreeta\./.test(venetsianKupla.teksti)
+    && venetsianKupla.nimilappuja === 0 && venetsianKupla.kuvakkeita === 0,
   JSON.stringify(venetsianKupla).slice(0, 200));
 
 await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-saapumisrepliikki.png') });
@@ -388,41 +436,46 @@ const lehti = await sivu.evaluate(async () => {
 vaadi('kaupunkilehti aukeaa suoraan fokusmoodissa',
   lehti.auki && lehti.lehti && /ateena/i.test(lehti.otsikko), JSON.stringify(lehti));
 
-// Lehden ALIN KOHTA — "Tapaa Nikos" — on poissa: kohtaaminen tavataan
-// kartalta (Raamattu, KEVYT KULKU -KOKEILU).
+// Lehden tehtävänappi ("Tapaa …") NÄKYY heti: laattakysymykseen pääsee
+// lehden tehtävänapista ja laatasta (Raamattu, KORTIT POIS 2.9.2026).
+// Kevyen kulun kokeilu piilotti napin; se on nyt palautettu.
 const alanappi = await sivu.evaluate(() => {
   const nappi = document.getElementById('arrival-yes');
   return { piilossa: Boolean(nappi?.hidden), teksti: nappi?.textContent ?? '' };
 });
-vaadi('lehden alin "tapaa henkilö" -kohta on poissa',
-  alanappi.piilossa, JSON.stringify(alanappi));
+vaadi('lehden tehtävänappi näkyy ennen aarteen avausta',
+  !alanappi.piilossa && /tapaa/i.test(alanappi.teksti), JSON.stringify(alanappi));
 
-// Pöllön vinkki lehden päällä + ruksi. Kupla tulee tarkoituksella
+// Pulun vinkki lehden päällä, ilman ruksia. Kupla tulee tarkoituksella
 // vasta ~1,4 s hengähdyksen jälkeen (omistaja 26.8.2026).
 await sivu.waitForTimeout(2200);
 const vinkki = await sivu.evaluate(() => {
   const kupla = document.querySelector('.fokusvirta-vinkki');
   return {
     teksti: kupla?.querySelector('.fokusvirta-vinkkiteksti')?.textContent ?? '',
-    ruksi: Boolean(kupla?.querySelector('.fokusvirta-vinkkiruksi input')),
+    ruksi: Boolean(kupla?.querySelector('input[type="checkbox"]')),
+    muistissa: localStorage.getItem('matkakirja-livia-lehtivinkki'),
   };
 });
-vaadi('pöllö vinkkaa lyhyesti lehden avautuessa',
-  vinkki.teksti.length > 0 && vinkki.teksti.length <= 90 && /minitehtäv/i.test(vinkki.teksti),
-  `${vinkki.teksti.length} mrk: ${vinkki.teksti}`);
-vaadi('vinkissä on "Älä näytä jatkossa" -ruksi', vinkki.ruksi);
+vaadi('pulu vinkkaa lyhyesti lehden avautuessa',
+  vinkki.teksti === 'Etsi lehdestä aarrekysymys.', `"${vinkki.teksti}"`);
+vaadi('vinkissä EI ole ruksia', !vinkki.ruksi);
+vaadi('kertalippu jäi laitteen muistiin', vinkki.muistissa === '1', String(vinkki.muistissa));
 
 await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-lehtivinkki.png') });
 
-const ruksittu = await sivu.evaluate(() => {
-  document.querySelector('.fokusvirta-vinkkiruksi input')?.click();
-  return {
-    muistissa: localStorage.getItem('matkakirja-lehtivinkki-pois'),
-    kuplia: document.querySelectorAll('.fokusvirta-vinkki').length,
-  };
+// Toinen avaus samassa istunnossa: vinkkiä ei enää tule.
+const uudelleen = await sivu.evaluate(async () => {
+  const { ui, game } = window.matkakirja;
+  document.querySelector('.fokusvirta-vinkki')?.remove();
+  ui.fokusvirtaKortti = null;
+  ui.closeArrival();
+  await new Promise((r) => setTimeout(r, 500));
+  ui.avaaTutkinta(game.cityOf());
+  await new Promise((r) => setTimeout(r, 2400));
+  return document.querySelectorAll('.fokusvirta-vinkki').length;
 });
-vaadi('ruksi kirjoittaa laitteen muistiin ja sulkee vinkin',
-  ruksittu.muistissa === '1' && ruksittu.kuplia === 0, JSON.stringify(ruksittu));
+vaadi('toinen lehden avaus on vinkitön', uudelleen === 0, `kuplia ${uudelleen}`);
 
 /* ---------- nimetyt minitehtävät sivuilla 2 ja 3 ---------- */
 
@@ -515,39 +568,13 @@ vaadi('piste on kartalla sormenkokoisella osuma-alueella',
 
 await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-vihrea-piste.png') });
 
-// Pisteen napautus avaa kohtaamisen.
+// Pisteen napautus avaa laattakysymyksen suoraan (KORTIT POIS 2.9.2026).
 const kohtaaminen = await sivu.evaluate(async () => {
+  const { game } = window.matkakirja;
   window.matkakirja.ui.busy = false;
+  game.phase = 'action';
   document.querySelector('.fokuspiste')
     ?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
-  await new Promise((r) => setTimeout(r, 500));
-  const kortti = document.querySelector('.fokusvirta-kortti');
-  return {
-    kortti: Boolean(kortti),
-    otsikko: kortti?.querySelector('.fokusvirta-otsikko')?.textContent ?? '',
-    // v1120: suora Tapaa-nappi korvattiin varmistuksella (Kyllä/Ei)
-    // ja kahden yrityksen pränttivaroituksella.
-    varmistus: kortti?.querySelector('.fokusvirta-varmistus')?.textContent ?? '',
-    varoitus: kortti?.querySelector('.fokusvirta-varoitus')?.textContent ?? '',
-    napit: [...(kortti?.querySelectorAll('button') ?? [])]
-      .map((b) => b.textContent.trim()).filter((t) => /^(kyllä|ei)$/i.test(t)),
-  };
-});
-vaadi('pisteen napautus avaa Vartija Nikoksen kohtaamisen',
-  kohtaaminen.kortti && /nikos/i.test(kohtaaminen.otsikko)
-    && /haluatko varmasti tavata/i.test(kohtaaminen.varmistus)
-    && /kaksi yritystä/i.test(kohtaaminen.varoitus)
-    && kohtaaminen.napit.length === 2,
-  JSON.stringify(kohtaaminen));
-
-await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-kohtaaminen.png') });
-
-// Kohtaamisen Kyllä vie laattakysymykseen (sama actionQuiz kuin ennen).
-const kysymys = await sivu.evaluate(async () => {
-  const { game } = window.matkakirja;
-  game.phase = 'action';
-  [...document.querySelectorAll('.fokusvirta-kortti button')]
-    .find((b) => /^kyllä$/i.test(b.textContent.trim()))?.click();
   await new Promise((r) => setTimeout(r, 900));
   return {
     kortti: document.querySelectorAll('.fokusvirta-kortti').length,
@@ -555,8 +582,11 @@ const kysymys = await sivu.evaluate(async () => {
     kysymys: Boolean(game.quiz),
   };
 });
-vaadi('Kyllä avaa laattakysymyksen ja sulkee kortin',
-  kysymys.kortti === 0 && (kysymys.kysymys || kysymys.vaihe === 'quiz'), JSON.stringify(kysymys));
+vaadi('pisteen napautus avaa laattakysymyksen suoraan ilman korttia',
+  kohtaaminen.kortti === 0 && (kohtaaminen.kysymys || kohtaaminen.vaihe === 'quiz'),
+  JSON.stringify(kohtaaminen));
+
+await sivu.screenshot({ path: join(ULOS, 'savuke-kevyt-kohtaaminen.png') });
 
 /*
  * LAATAN RATKETTUA MERKINTÄ EI VAIHDU (omistajan bugi 27.8.2026).
@@ -622,31 +652,14 @@ vaadi('ratkaistuun kaupunkiin palatessa kortissa on fokusvirran merkintä',
 
 vaadi('ei sivuvirheitä kokeilutilassa', virheet.length === 0, virheet.join(' | '));
 
-/* ==================== 2. LIPPUTESTI: VANHA VIRTA ==================== */
-
-vanhaVirta = true;
-virheet.length = 0;
-await sivu.evaluate(() => localStorage.clear());
-const vanha = await ateenaan();
-vaadi('vanha virta: nappula Ateenassa', vanha.kaupunki === 'ateena', JSON.stringify(vanha));
-
-const vanhaTutki = await sivu.evaluate(async () => {
-  const { ui, game } = window.matkakirja;
-  ui.avaaTutkinta(game.cityOf());
-  await new Promise((r) => setTimeout(r, 900));
-  const dialogi = document.getElementById('arrival-dialog');
-  const pinta = document.querySelector('.fokusvirta-kupla, .fokusvirta-kortti');
-  return {
-    lehtiAuki: Boolean(dialogi?.open),
-    virranPinta: Boolean(pinta),
-    teksti: (pinta?.textContent ?? '').slice(0, 60),
-  };
-});
-vaadi('lippu palauttaa korttiannostelun: Tutki avaa virran, ei lehteä',
-  vanhaTutki.virranPinta && !vanhaTutki.lehtiAuki, JSON.stringify(vanhaTutki));
-
-await sivu.screenshot({ path: join(ULOS, 'savuke-vanha-virta.png') });
-vaadi('ei sivuvirheitä vanhassa virrassa', virheet.length === 0, virheet.join(' | '));
+/*
+ * LIPPUTESTI POISTETTU (KORTIT POIS, omistaja 2.9.2026). Savuke käänsi
+ * ennen liput lennossa ja mittasi, että Tutki avaa taas pöllön kuplan.
+ * Lehtilukko purettiin v1466 (Tutki avaa lehden lipusta riippumatta),
+ * ja korttiannostelua ei enää käännetä päälle ilman omistajan uutta
+ * päätöstä — testattavaa polkua ei ole. Palvelimen lipunkääntö
+ * (vanhaVirta) jätettiin paikoilleen mahdollista käsiajoa varten.
+ */
 
 await selain.close();
 palvelin.close();

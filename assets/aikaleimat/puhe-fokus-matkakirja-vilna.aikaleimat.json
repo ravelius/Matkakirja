@@ -1,0 +1,183 @@
+{
+  "versio": 2,
+  "kaupunki": "vilna",
+  "teksti": "Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.",
+  "tekstiSha256": "2076c02cfeff510e2229e7a15206253cf895bc705a6edd7f7480e44f3a00bf0e",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-vilna.mp3",
+    "versio": 2,
+    "tavut": 356981,
+    "sha256": "5064c595fd2961b5f0cc71a3e46007ab9a0c466a927e71c1be3972696ba719e1"
+  },
+  "kesto": 22220,
+  "sanat": [
+    {
+      "sana": "Vilnassa",
+      "alku": 120,
+      "loppu": 640
+    },
+    {
+      "sana": "mies",
+      "alku": 700,
+      "loppu": 920
+    },
+    {
+      "sana": "avasi",
+      "alku": 980,
+      "loppu": 1280
+    },
+    {
+      "sana": "takkinsa",
+      "alku": 1320,
+      "loppu": 1920
+    },
+    {
+      "sana": "ja",
+      "alku": 2400,
+      "loppu": 2480
+    },
+    {
+      "sana": "tarjosi",
+      "alku": 2540,
+      "loppu": 2940
+    },
+    {
+      "sana": "salakuljetettua",
+      "alku": 2980,
+      "loppu": 3860
+    },
+    {
+      "sana": "tavaraa",
+      "alku": 3920,
+      "loppu": 4520
+    },
+    {
+      "sana": "Aapisen",
+      "alku": 5740,
+      "loppu": 6420
+    },
+    {
+      "sana": "Venäjän",
+      "alku": 8140,
+      "loppu": 8500
+    },
+    {
+      "sana": "viranomaiset",
+      "alku": 8540,
+      "loppu": 9240
+    },
+    {
+      "sana": "olivat",
+      "alku": 9280,
+      "loppu": 9560
+    },
+    {
+      "sana": "kieltäneet",
+      "alku": 9620,
+      "loppu": 10160
+    },
+    {
+      "sana": "liettuan",
+      "alku": 10220,
+      "loppu": 10740
+    },
+    {
+      "sana": "painamisen",
+      "alku": 10780,
+      "loppu": 11360
+    },
+    {
+      "sana": "latinalaisin",
+      "alku": 11460,
+      "loppu": 12100
+    },
+    {
+      "sana": "kirjaimin",
+      "alku": 12160,
+      "loppu": 12800
+    },
+    {
+      "sana": "Ostin",
+      "alku": 14700,
+      "loppu": 14980
+    },
+    {
+      "sana": "kirjan",
+      "alku": 15040,
+      "loppu": 15360
+    },
+    {
+      "sana": "ja",
+      "alku": 15400,
+      "loppu": 15520
+    },
+    {
+      "sana": "piilotin",
+      "alku": 15580,
+      "loppu": 16020
+    },
+    {
+      "sana": "sen",
+      "alku": 16079,
+      "loppu": 16360
+    },
+    {
+      "sana": "Omassa",
+      "alku": 17540,
+      "loppu": 17880
+    },
+    {
+      "sana": "aapisessani",
+      "alku": 17960,
+      "loppu": 18680
+    },
+    {
+      "sana": "samat",
+      "alku": 18760,
+      "loppu": 19060
+    },
+    {
+      "sana": "kirjaimet",
+      "alku": 19120,
+      "loppu": 19580
+    },
+    {
+      "sana": "olivat",
+      "alku": 19620,
+      "loppu": 19880
+    },
+    {
+      "sana": "saaneet",
+      "alku": 19920,
+      "loppu": 20300
+    },
+    {
+      "sana": "minut",
+      "alku": 20340,
+      "loppu": 20580
+    },
+    {
+      "sana": "pelkäämään",
+      "alku": 20620,
+      "loppu": 21320
+    },
+    {
+      "sana": "vain",
+      "alku": 21380,
+      "loppu": 21600
+    },
+    {
+      "sana": "opettajaa",
+      "alku": 21680,
+      "loppu": 22220
+    }
+  ],
+  "lauseet": [
+    120,
+    5740,
+    8140,
+    14700,
+    17540
+  ],
+  "luotu": "2026-09-23T15:34:30.164Z"
+}

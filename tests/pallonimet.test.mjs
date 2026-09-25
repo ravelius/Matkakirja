@@ -1,0 +1,541 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+
+/*
+ * PALLOLAUTA, VAIHE 3: MERKIT (omistaja 5.9.2026, kysymyskortin vastaus
+ * 1: kaupunkien nimet pallolaudalla *"ELAVINA tekstielementteina
+ * laattojen paalla (kuten Google Earth)"*; docs/moduulit/karttapallo.md
+ * luku 7, rivi 3). Vartioi ladonnan säännöt ilman selainta:
+ *
+ *   1. RUUTULADONTA EI LIMITY: kahden nimen laatikot eivät leikkaa, eikä
+ *      nimi leikkaa annettua varausta (elävä nosto) tai pelimerkin
+ *      pinoa; katto pitää (≤ 40) ja tärkein ehdokas nimetään ensin.
+ *   2. PISTE VAIN NIMEN KANSSA: lauta antaa pistekerrokselle vain nimetyt
+ *      kaupungit (ja oman kaupungin, kehittäjän maailmanäkymässä kaikki).
+ *   3. SAMA SÄÄNTÖ KAHDELLE LAUDALLE: laudan ladonta (lado) ja pallon
+ *      ruutuladonta kulkevat saman sijoitusfunktion kautta, ja laudan
+ *      ladonnan tulos on pysynyt tavu tavulta entisenä (vertailu
+ *      tests/karttanimet.test.mjs kattaa arvot; tässä rakenne).
+ *   4. POLTETUT NOSTOT LUETAAN PALLON OMASTA LUETTELOSTA (laatat.json
+ *      nostotaso.nostot), jonka tools/tee-pallolaatat.mjs kirjoittaa.
+ *   5. Sallitut kerrokset eivät kasvaneet (vaihe 3 ei tarvinnut uutta),
+ *      ja uudet moduulit ovat SHELLissä.
+ */
+
+const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
+
+const {
+  karttanimienKaupungit, ladoRuutunimet, karttanimienLadonta, KARTTANIMI_KOOT,
+} = await import('../js/karttanimet.js');
+const { MAAILMANKARTTA } = await import('../js/packs/maailmankartta.js');
+const {
+  NIMIEN_KATTO, NIMIEN_VAHIN, NIMIBUDJETIN_KORKEUS, NIMEN_REUNAVARA_PX, nimibudjetti,
+} = await import('../js/pallolauta/nimet.js');
+const { PALLOLAUDAN_KERROKSET, HTML_MERKKIEN_KATTO } = await import('../js/pallolauta/lauta.js');
+const { KOHDEMAAN_NIMIOT_ELAVINA } = await import('../js/laattapyramidi.js');
+const { NOSTOJEN_KATTO } = await import('../js/pallolauta/nostot.js');
+const { pallonNostotaso, lahdetaso } = await import('../tools/tee-pallolaatat.mjs');
+const { laatatSaatavilla, pallonNostoOnPoltettu, pallonLaatoissaOnNostoja } = await import('../js/pallo.js');
+
+const leikkaa = (a, b) => a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 && a.y1 > b.y0;
+
+/**
+ * Ruudun ehdokkaat kuten pallo ne antaa: kaupungit projisoituna
+ * mittakaavalla `px` (CSS-pikseliä lautayksikköä kohti) ikkunaan, joka
+ * on keskitetty kaupunkiin `keskus`, tärkeysjärjestyksessä (oma kaupunki
+ * ensin, sitten laudan tärkeys, sitten lähin keskipistettä).
+ */
+function ehdokkaat(px, keskus, w, h, oma = keskus.id) {
+  const ulos = [];
+  for (const c of karttanimienKaupungit(MAAILMANKARTTA)) {
+    const x = (c.x - keskus.x) * px + w / 2;
+    const y = (c.y - keskus.y) * px + h / 2;
+    if (x < -40 || y < -40 || x > w + 40 || y > h + 40) continue;
+    ulos.push({
+      c, x, y, tarkeys: c.tarkeys + (c.id === oma ? 1000 : 0), etaisyys: Math.hypot(x - w / 2, y - h / 2),
+    });
+  }
+  return ulos.sort((a, b) => (b.tarkeys - a.tarkeys) || (a.etaisyys - b.etaisyys)
+    || (a.c.nimi < b.c.nimi ? -1 : 1));
+}
+
+const ateena = MAAILMANKARTTA.cities.find((c) => c.id === 'ateena');
+const lontoo = MAAILMANKARTTA.cities.find((c) => c.id === 'lontoo');
+
+test('ruutuladonta: nimet eivät limity keskenään eivätkä varausten tai pinojen kanssa; katto pitää', () => {
+  // Saapumisnäkymä Ateenassa (leveys 240 / 390 px), Euroopan yleiskuva
+  // Lontoosta (leveys 2000) ja koko pallonpuolisko (leveys 12000).
+  const nakymat = [
+    { px: 390 / 240, keskus: ateena, w: 390, h: 844 },
+    { px: 390 / 2000, keskus: lontoo, w: 390, h: 844 },
+    { px: 834 / 12000, keskus: lontoo, w: 834, h: 1112 },
+  ];
+  for (const n of nakymat) {
+    const e = ehdokkaat(n.px, n.keskus, n.w, n.h);
+    // Elävä nosto Ateenan itäpuolella ja pelimerkkipino pisteen päällä.
+    const varaukset = [{
+      x0: n.w / 2 + 8, y0: n.h / 2 - 6, x1: n.w / 2 + 70, y1: n.h / 2 + 6,
+    }];
+    const pinot = [{
+      x0: n.w / 2 - 16, y0: n.h / 2 - 36, x1: n.w / 2 + 16, y1: n.h / 2 + 4,
+    }];
+    const { nimiot, pudotettu } = ladoRuutunimet(e, { varaukset, pinot, katto: NIMIEN_KATTO });
+    assert.ok(nimiot.length <= NIMIEN_KATTO, `katto: ${nimiot.length}`);
+    assert.equal(nimiot.length + pudotettu, e.length, 'jokainen ehdokas on joko nimetty tai pudotettu');
+    if (e.length) assert.equal(nimiot[0].c, e[0].c, 'tärkein ehdokas (oma kaupunki) saa nimensä ensimmäisenä');
+    for (let i = 0; i < nimiot.length; i += 1) {
+      for (let j = i + 1; j < nimiot.length; j += 1) {
+        assert.ok(!leikkaa(nimiot[i].r, nimiot[j].r), `${nimiot[i].c.nimi} limittyy ${nimiot[j].c.nimi} (px ${n.px.toFixed(3)})`);
+      }
+      for (const v of varaukset) assert.ok(!leikkaa(nimiot[i].r, v), `${nimiot[i].c.nimi} peittää noston`);
+      for (const v of pinot) assert.ok(!leikkaa(nimiot[i].r, v), `${nimiot[i].c.nimi} jää pelimerkin alle`);
+      // Nimi on kiinni pisteessään: siirtymä on ruutupikseleitä, ei laudan.
+      assert.ok(Math.hypot(nimiot[i].dx, nimiot[i].dy) < 90, `${nimiot[i].c.nimi} karkasi pisteestään`);
+      assert.ok([KARTTANIMI_KOOT.isoKaupunki, KARTTANIMI_KOOT.kaupunki].includes(nimiot[i].koko));
+      assert.equal(nimiot[i].tyylitys, 'small-caps', 'kohdekaupungin asu on harvennettu kapiteeli');
+    }
+  }
+  // Koko pallonpuoliskolla katto rajaa: ehdokkaita on yli 40, nimiä ≤ 40.
+  const koko = ehdokkaat(834 / 12000, lontoo, 834, 1112);
+  assert.ok(koko.length > NIMIEN_KATTO, `ehdokkaita ${koko.length}`);
+  assert.equal(ladoRuutunimet(koko, { katto: NIMIEN_KATTO }).nimiot.length, NIMIEN_KATTO);
+  assert.equal(ladoRuutunimet(koko, { katto: 5 }).nimiot.length, 5, 'pienempi katto pienentää');
+  assert.deepEqual(ladoRuutunimet([]), { nimiot: [], pudotettu: 0 });
+});
+
+test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän maailmanäkymä näyttää kaikki', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  // Avauslennolla (vaihe 5b) pisteet ovat reitin kaksi päätä ja
+  // lähtövalinnassa (aalto 3A) Lontoo + valittavat; muuten sääntö on
+  // ennallaan: nimetty, oma kaupunki tai maailmanäkymä.
+  assert.match(lauta, /if \(lento\) return lento\.nimet\.has\(k\.id\);/);
+  assert.match(lauta, /const valinta = aloitusNakyvat\(\);\n\s+if \(valinta\) return valinta\.has\(k\.id\);/);
+  assert.match(lauta, /return nimet\.nimetty\(k\.id\)\n\s+\|\| ui\.game\.cityOf\?\.\(\)\?\.id === k\.id\n\s+\|\| Boolean\(ui\.maailmanakyma\?\.\(\)\);/);
+  /*
+   * MUIDEN MAIDEN KAUPUNGIT PIILOON, KUN EI OLLA LIIKKUMASSA (Raamattu,
+   * KARTTAUUDISTUKSEN PAATOKSET 43 kohta 8; omistaja 18.9.2026
+   * sanatarkasti: *"Voiko muiden maiden kaupungit piilottaa kartalta
+   * jos ei olla liikkumassa?"*). Rajaus on pistekerroksen portti
+   * ENNEN vanhaa sääntöä, ja sama joukko menee nimien ladontaan.
+   */
+  assert.match(lauta, /const rajaus = pelinKaupunkirajaus\(\);\n\s+if \(rajaus && !rajaus\.has\(k\.id\)\) return false;/);
+  // Maa luetaan samasta paikasta kuin korostuskehä ja nostotaso, ja
+  // jäsenyys PALLON oman laudan taulusta (pelin pack voi olla toinen).
+  assert.match(lauta, /const taulu = pack\?\.map\?\.cityCountry \?\? null;/);
+  assert.match(lauta, /const iso = taulu \? kohteidenNykyinenIso\(ui\) : null;/);
+  // Maailmatila, linssi ja avauslento näyttävät kaikki kuten ennen.
+  assert.match(lauta, /if \(lento \|\| linssiPaalla\(\) \|\| maailmatilassa\(\) \|\| ui\.maailmanakyma\?\.\(\)\) \{/);
+  // Siirtovaiheessa tarjolla olevat kohteet JA lentolistan kohteet tulevat
+  // joukkoon (matkanKohteet; lentokohteet omistaja 20.9.2026 klo 14.40).
+  assert.match(lauta, /const kohdeIdt = \[\.\.\.matkanKohteet\(\)\];/);
+  assert.match(lauta, /if \(game\.phase === 'move'\) \{\n\s+for \(const o of game\.moveOptions\?\.\(\) \?\? \[\]\)/);
+  assert.match(lauta, /for \(const id of ui\.tarjotutLennot\?\.\(\) \?\? \[\]\) joukko\.add\(id\);/);
+  /*
+   * KAUPUNGIN PISTE PIILOON LIUSKAN AJAKSI (Raamattu, KARTTAUUDISTUKSEN
+   * PAATOKSET 34 kohta 16 a, omistajan iPhone-kuva v1939: *"piste nakyy
+   * liikaa taustan lapi"*). Sääntö on pistekerroksen suodatin, ja se on
+   * sama tunnus, jolla kaupungin iso nimi piilotetaan (kohta 14 c).
+   */
+  assert.match(lauta, /const piiloKaupunki = nostot\.liuskanKaupunkiId\?\.\(\) \?\? null;/);
+  assert.match(lauta, /const nakyvat = kaupungit\.filter\(\(k\) => pisteNakyy\(k\) && k\.id !== piiloKaupunki\);/);
+  assert.match(lauta, /pallo\.pointsData\(\[\.\.\.valot, \.\.\.nakyvat, \.\.\.helmet\]\);/);
+  // Napautus kilpailee vain näkyvistä merkeistä (fokusniput sääntö 9).
+  assert.match(lauta, /if \(pisteNakyy\(k\)\) ehdokkaat\.push\(\{ laji: 'kaupunki'/);
+  assert.match(lauta, /for \(const o of nostot\.osumat\(\)\) ehdokkaat\.push\(\{ laji: 'nosto'/);
+  /*
+   * Ladonta kulkee liikkeen mukana (omistaja 12.9.2026: *"kun panorointi
+   * loppuu kaikki liikkuvat hieman ja hakevat paikkansa uudestaan"*).
+   * Ajoitus on KURITUS eikä vaimennus: ladonta ajetaan myös kesken
+   * vedon, enintään kerran LADONNAN_TAHTI_MS:ssä, ja perälautana vielä
+   * kerran liikkeen jälkeen. Ajoituksen oma vartija on
+   * tests/pallopiste.test.mjs (ladonnanAjoitus).
+   */
+  assert.match(lauta, /export const LADONNAN_LEPOVIIVE_MS = LAATU_LEPOVIIVE_MS;/);
+  assert.match(lauta, /ohjaimet\.addEventListener\('change', pyydaLadonta\);/);
+  assert.match(lauta, /const \{ heti, viiveMs \} = ladonnanAjoitus\(nyt - ladottuHetki\);/);
+  /*
+   * LIIKKEEN JA LEVON LADONTA OVAT NYT SAMA AJO (18.9.2026 aamu,
+   * Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta 13 b: *"pelimerkki
+   * ei pura lukkoa"*). `liikkeenLadonta`-lippu ja `levossa`-parametri
+   * poistuivat, koska lukkoa ei enää koetella pelimerkkiä vastaan
+   * kummassakaan — ladonta väistää nappulan siinä ajossa, joka
+   * SYNNYTTÄÄ lukon, ja kantaa sen sen jälkeen sellaisenaan.
+   */
+  // 22.9.2026 (LIIKKEESSÄ EI TÄYTTÄ LADONTAA): sama ajo, mutta liikkeessä vain kun kamera on siirtynyt riittävästi.
+  assert.match(lauta, /if \(heti\) \{\n\s*if \(ladontaTarpeen\(kamera\.nakyvaAlue\(\)\)\) ladoLevossa\(\);/);
+  assert.ok(!/liikkeenLadonta/.test(lauta), 'liikkeen ladonnan lippu on poistettu');
+  assert.ok(!/^\s+levossa: /m.test(lauta), 'nimiladonta ei enää saa levossa-lippua');
+  assert.match(lauta, /lepoAjastin = setTimeout\(ladoLevossaLevossa, viiveMs\);/);
+  // Nostot ensin, nimikatto laskee kun nostoja on; kokonaiskatto 60.
+  // 60 poltetuilla nimiöillä; 180 kun kohdemaan nimiöt ovat elävinä
+  // (js/laattapyramidi.js KOHDEMAAN_NIMIOT_ELAVINA, 20.9.2026).
+  assert.equal(HTML_MERKKIEN_KATTO, KOHDEMAAN_NIMIOT_ELAVINA ? 180 : 60);
+  assert.equal(NIMIEN_KATTO, 40);
+  assert.equal(NOSTOJEN_KATTO, KOHDEMAAN_NIMIOT_ELAVINA ? 120 : 40);
+  /*
+   * Nimibudjetti tulee nyt ZOOMTASOSTA (omistaja 12.9.2026, ks.
+   * js/pallolauta/nimet.js nimibudjetti); CSS2D-kerroksen oma katto on
+   * yhä sen yläraja. Budjettikäyrän vartija on alempana tässä
+   * tiedostossa.
+   */
+  /*
+   * BUDJETISTA VÄHENNETÄÄN NIMIÖLLISET, EI PISTEITÄ (Raamattu,
+   * KARTTAUUDISTUKSEN PAATOKSET 34 kohta 21). Kohdemaan katon yli
+   * menevät nostot piirtyvät nimiöttöminä pisteinä, eivätkä ne saa
+   * syödä kaupunkien nimibudjettia — muuten pisteiden esiin
+   * päästäminen veisi nimet.
+   */
+  assert.match(lauta, /Math\.min\(nimibudjetti\(korkeusAst\),\n\s*Math\.max\(0, HTML_MERKKIEN_KATTO - pelia\n\s*- \(nostoTulos\.nimiollisia \?\? nostoTulos\.maara\)\)\)/);
+  // Avauslento rajaa ehdokkaat kahteen nimeen ja lähtövalinta LONTOOSEEN
+  // (nimet.js `vain`, aalto 3A). Valittavan kaupungin nimi tulee sen
+  // omasta kohdemerkistä, joten karttanimi jää siltä pois — muuten
+  // ruudulla oli kaksi nimeä päällekkäin (omistajan kaappaus 5.9.2026).
+  assert.match(lauta, /const niukka = lento\?\.nimet \?\? aloitusNimet\(\);/);
+  /*
+   * MUIDEN MAIDEN NIMET POIS SAMASTA PORTISTA (Raamattu,
+   * KARTTAUUDISTUKSEN PAATOKSET 43 kohta 8, 18.9.2026: *"Voiko muiden
+   * maiden kaupungit piilottaa kartalta jos ei olla liikkumassa?"*).
+   * Pelinäkymän rajaus kulkee ladonnan `vain`-portista, mutta BUDJETTI
+   * tulee yhä zoomtasosta — katto luetaan `niukka`sta eikä `vain`ista,
+   * tai kohdemaan koko ohittaisi nimibudjetin.
+   */
+  assert.match(lauta, /const vain = niukka \?\? pelinKaupunkirajaus\(\);/);
+  assert.match(lauta, /const katto = niukka\n\s*\? niukka\.size/);
+  assert.match(lauta, /const aloitusNimet = \(\) => \{/);
+  assert.match(lauta, /^ {6}vain,$/m);
+  assert.match(lue('../js/pallolauta/nimet.js'), /if \(vain && !vain\.has\(k\.c\.id\)\) continue;/);
+  // Kortti ankkuroidaan ruutupisteestä ja seuraa merkkiään levossa.
+  assert.match(lauta, /osuma\.avaa\(ankkuri\(osuma\.lat, osuma\.lng\)\);/);
+  assert.match(lauta, /if \(ui\.fokuskohdeAuki\?\.ankkuri\) asemoiFokuskohde\(ui\);/);
+  assert.match(lue('../js/fokuskohteet.js'), /export function avaaFokuskohde\(ui, kohde, \{ ankkuri = null \} = \{\}\)/);
+  // Sulkeva napautus ei avaa mitään uutta (omistaja 31.8.2026).
+  assert.match(lauta, /if \(korttiOliAuki\) \{ korttiOliAuki = false; return; \}/);
+  // Selitteen laskurit pallolta.
+  assert.match(lauta, /ui\.karttavaloLaskuri = \(\) => nostot\.laskurit\(\);/);
+  assert.match(lue('../js/karttavalot.js'), /const omat = ui\?\.karttavaloLaskuri\?\.\(\);/);
+});
+
+test('sama sääntö kahdelle laudalle: laudan ladonta ja ruutuladonta kulkevat samasta sijoitusfunktiosta', () => {
+  const src = lue('../js/karttanimet.js');
+  assert.equal((src.match(/sijoitaKaupunginNimi\(\{/g) ?? []).length, 3, 'määrittely + kaksi kutsujaa (lado, ladoRuutunimet)');
+  assert.match(src, /const \{ este, vapaa, varaa \} = varausruudukko\(\);/);
+  assert.match(src, /const \{ este, varaa \} = varausruudukko\(\);/);
+  // Laudan ladonta pakottaa (kohdekaupunki ei putoa), pallo ei.
+  assert.match(src, /c, x, y, pino: merkkiVaraus\(x, y\), este, varaa,\n\s+\}\);/);
+  assert.match(src, /c, x, y, pino: pino\(x, y\), este, varaa, pakota: false,/);
+  // Laudan ladonnan rakenne on entinen: kaikki kaupungit nimettyjä ja
+  // pakotus kirjataan (tests/karttanimet.test.mjs vertaa arvot).
+  const tulos = karttanimienLadonta(MAAILMANKARTTA, 1.88);
+  // Jokainen kaupunki saa merkkinsä: nimi on oma tai maastoparin (Alpit).
+  // 264 → 266 (21.9.2026): Luxemburg ja Valletta liittyivät
+  // maailmankartalle (omistajan päätös 21.9.2026: Kypros, Luxemburg ja
+  // Malta saavat pelikaupungin).
+  // 263 → 264 (20.9.2026): Košice liittyi maailmankartalle (Slovakian
+  // pelikaupunki, omistajan päätös 19.9.2026).
+  // 262 → 263 (20.9.2026): Ljubljana liittyi maailmankartalle (Slovenian
+  // pelikaupunki, omistajan päätös 19.9.2026).
+  // 261 → 262 (19.9.2026): Bryssel liittyi maailmankartalle (omistajan
+  // päätös, Belgian pelikaupunki, pilotti).
+  assert.equal(tulos.merkit.filter((m) => m.laji === 'kaupunki').length, 266);
+  assert.equal(typeof tulos.pakotettu, 'number');
+  // Nimen elementti käyttää samaa kirjasinta ja luokkia kuin kartta.
+  const nimet = lue('../js/pallolauta/nimet.js');
+  assert.match(nimet, /teksti\.style\.fontFamily = KARTTANIMI_FONTTI;/);
+  assert.match(nimet, /'karttanimi karttanimi-kaupunki'/);
+  assert.match(lue('../css/styles.css'), /\.pallolauta-nimi-siirto \{ transition: transform 250ms ease-in-out; \}/);
+});
+
+test('poltetut nostot luetaan pallon omasta luettelosta, jonka laattatyökalu kirjoittaa', async () => {
+  // Työkalu: pyramidin nostotaso pallon tasoina (Z = z + 1).
+  const luettelo = {
+    nostotaso: {
+      versio: '2026-09-04a', saanto: 'v11-limitys', tasot: [5, 6, 7], nostot: { delfoi: '17516f69', olympia: '079ff219' },
+    },
+  };
+  const nt = pallonNostotaso(luettelo, 0, 8);
+  assert.deepEqual(nt.tasot, [6, 7, 8]);
+  assert.equal(lahdetaso(6), 5);
+  assert.deepEqual(nt.nostot, luettelo.nostotaso.nostot);
+  assert.equal(pallonNostotaso({}, 0, 7), null);
+  assert.match(lue('../tools/tee-pallolaatat.mjs'), /nostotaso: pallonNostotaso\(luettelo, min, max\)/);
+  // Pallo: ennen luetteloa mikään ei ole poltettu.
+  assert.equal(pallonNostoOnPoltettu('delfoi'), false);
+  assert.equal(pallonLaatoissaOnNostoja(), false);
+  const ok = await laatatSaatavilla(async () => ({
+    ok: true, json: async () => ({ tasot: { min: 0, max: 8 }, nostotaso: nt }),
+  }));
+  assert.deepEqual(ok, { tasot: { min: 0, max: 8 } }, 'luettelo palauttaa tasot (laattatasoMax)');
+  assert.equal(pallonLaatoissaOnNostoja(), true);
+  assert.equal(pallonNostoOnPoltettu('delfoi'), true, 'tunnus riittää');
+  assert.equal(pallonNostoOnPoltettu('delfoi', '17516f69'), true, 'tiiviste täsmää');
+  assert.equal(pallonNostoOnPoltettu('delfoi', 'muuttunut'), false, 'sisältö muuttui → elävänä');
+  assert.equal(pallonNostoOnPoltettu('parnassos'), false);
+  // Nostokerros kysyy pallon luetteloa, ei pyramidin.
+  const nostot = lue('../js/pallolauta/nostot.js');
+  assert.match(nostot, /import \{ pallonNostoOnPoltettu, pallonNostonPisteLaatassa \} from '\.\.\/pallo\.js';/);
+  // Kytkin tulee pallo.js:n kautta, ei suoraan pyramidista (kommentti saa mainita tiedoston).\n  assert.doesNotMatch(nostot, /from '\.\.\/laattapyramidi\.js'/);
+  // Poltettu-liput kulkevat kääreen läpi (koe `poltetutnostot` kirjaa samalla pisteet laatassa).
+  assert.match(nostot, /maanKohdemerkit\(pack, iso, pohja, kirjaaPiste\)/);
+  assert.match(nostot, /return onPoltettu\(tunnus, tiiviste\);/);
+  assert.match(nostot, /naapurienPoltetutMerkit\(ui, nakyva, onPoltettu\)/);
+  // Elävä nosto: sama merkki ja nimiö kuin kartalla, poltettu vain osuma.
+  // Piirto asuu sisäasettelussa (asetteleNosto), koska sovittelu voi
+  // vaihtaa kyljen ja piilottaa lapun kesken elinkaaren (luku 14).
+  // Ykköstaso antaa lisäksi kuvamerkin ja ruudun kertoimen (NOSTOJEN TASOT).
+  assert.match(nostot, /piirraNostosymKartalle\(g, d\.kategoria, nimio, d\.symLaji, puoli, undefined, \{/);
+  assert.match(nostot, /export function asetteleNosto\(el, d\)/);
+  /*
+   * Poltettu muste on osuma yhtä lailla kuin elävä merkki. Suodatin
+   * perässä (14.9.2026): nimikyltti (`vainNimi`, näkyvä kaupunki ilman
+   * korttia, js/packs/nakyvat-kaupungit-fra.js) ei ole osuma, koska
+   * sillä ei ole korttia.
+   */
+  assert.match(nostot, /osumat = \[\.\.\.naytetaan, \.\.\.nakyvat\.filter\(\(r\) => r\.poltettu\)\]\s*\n?\s*\.filter\(\(r\) => !r\.vainNimi\);/);
+  // Kohtaamispiste samalla tuikkeella (css/fokusvirta.css); lukko on
+  // sama merkki himmennettynä (karttauudistuksen erä 7).
+  assert.match(nostot, /fokuspisteKuvio\(g, \{ lukittu: Boolean\(d\.lukittu\) \}\);/);
+  assert.match(nostot, /export function asetteleFokuspiste\(el, d\)/);
+  assert.match(lue('../js/fokuspiste.js'),
+    /export function fokuspisteKuvio\(g, \{ lukittu = false \} = \{\}\)/);
+});
+
+test('sallitut kerrokset eivät kasvaneet; uudet moduulit ovat SHELLissä; pallolauta ei kutsu ui.js:n koukkuja', () => {
+  // Nimet ja nostot eivät tarvinneet uutta kerrosta; polygonsData tuli
+  // 5.9.2026 LINSSILLE (karttapallo.md luku 10.1) ja particlesData
+  // 7.9.2026 AVARUUDELLE (js/pallolauta/tahdet.js) — kumpikaan ei ole
+  // kartta eikä pinnoitteen päällä.
+  assert.deepEqual(PALLOLAUDAN_KERROKSET, [
+    'pointsData', 'htmlElementsData', 'pathsData', 'arcsData', 'polygonsData', 'particlesData',
+  ]);
+  const sw = lue('../sw.js');
+  for (const nimi of ['nimet', 'nostot']) {
+    assert.match(sw, new RegExp(`'\\./js/pallolauta/${nimi}\\.js'`), `${nimi}.js puuttuu SHELListä`);
+  }
+  for (const nimi of ['nimet', 'nostot']) {
+    const src = lue(`../js/pallolauta/${nimi}.js`);
+    assert.ok(!src.includes("from '../ui.js'"), `${nimi}.js tuo ui.js:ää`);
+    assert.ok(!/\.(labelsData|ringsData|polygonsData)\(/.test(src), `${nimi}.js piirtää karttaa kerroksena`);
+  }
+  // Merkkirekisteri: yksi html-kerros, osat, häivytys ulos ja pallon taakse luokilla.
+  const merkit = lue('../js/pallolauta/merkit.js');
+  assert.match(merkit, /el\.classList\.toggle\('pallolauta-takana', !nakyy\);/);
+  assert.match(merkit, /d\.el\.classList\.add\('pallolauta-poistuu'\);/);
+  assert.match(merkit, /aseta\('peli', lista, \{ haivyta: false \}\);/);
+  const css = lue('../css/styles.css');
+  assert.match(css, /\.pallolauta-merkki\.pallolauta-takana,\n\.pallolauta-merkki\.pallolauta-poistuu \{ opacity: 0; \}/);
+  assert.match(css, /@keyframes pallolauta-ilmesty/);
+  assert.match(css, /\.pallolauta-merkki \{ transition: none; animation: none; \}/);
+});
+
+/*
+ * 6. CSS2D-KERROS JÄÄ KORTTIEN, POPUPIEN JA KUPLIEN ALLE (omistaja
+ *    6.9.2026 ilta, Raamattu PALLO LEVOSSA YHTA TERAVA KUIN TASOKARTTA,
+ *    LISAKSI-kohta, sanatarkasti: *"kaupunkien nimet nakyvat popup
+ *    sivujen paalla"*).
+ *
+ * Globe.gl:n CSS2DRenderer kirjoittaa syvyysjärjestyksen JOKAISEN merkin
+ * omaan tyyliin (element.style.zIndex = n - i), eikä kerroksen kotelo saa
+ * z-indexiä lainkaan. Ilman omaa pinontakontekstia nuo luvut valuvat
+ * juuren pinoon ja mittelevät suoraan pelin kerrosten kanssa: mitattu
+ * Chromiumilla 6.9.2026, jolloin lähimmät nimet piirtyivät kohdekortin
+ * (.fokuskohde-popup, z-index 6) päälle ja kaukaisemmat sen alle.
+ *
+ * Sääntö on KERROKSEN, ei kortin. Vartio lukee kolme asiaa: sääntö on
+ * olemassa, kortti on yhä kuudessa (eli kerroksen yläpuolella), eikä
+ * yksittäisille pallon merkeille ole lisätty korttikohtaisia paikkauksia.
+ */
+test('pallon CSS2D-kerros on oma pinontakonteksti eikä nouse korttien päälle', () => {
+  const css = lue('../css/styles.css');
+  assert.match(css, /^\.pallo-kotelo \.scene-container > div \{ z-index: 0; \}$/m,
+    'CSS2D-kerroksen kotelolta puuttuu oma pinontakonteksti');
+  // Kortti pysyy kerroksen yläpuolella (css/fokuskohteet.css).
+  assert.match(lue('../css/fokuskohteet.css'), /\.fokuskohde-popup \{[^}]*\n\s*z-index: 6;/,
+    'kohdekortin z-index ei ole enää 6');
+  // Ei korttikohtaisia paikkauksia: yksikään pallon merkkien sääntö ei
+  // mainitse korttia, popupia tai kuplaa.
+  const saannot = css.match(/^[^{}\n]*\.pallolauta-(?:nimi|merkki|nosto|piste)[^{}\n]*\{[^}]*\}/gm) ?? [];
+  for (const s of saannot) {
+    assert.ok(!/fokuskohde|popup|kupla|toast/.test(s), `korttikohtainen paikkaus: ${s}`);
+  }
+});
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * 7. KAUPUNGIN NIMI ON OSA OSUMAPINTAA (omistaja 9.9.2026,
+ *    työpöytäkaappaus Euroopan lähizoomista)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * OMISTAJA, SANATARKASTI: *"lisäksi kaupungin nimi saisi olla myös
+ * klikattavaa aluetta"*. ENNEN osuma oli 44 px kaupungin PISTEESTÄ,
+ * joten pitkän nimen ulkopää jäi ulottumattomiin: mitattu Chromiumilla
+ * (1419 × 821 css, näkymä Venetsia–Istanbul) pisin nimi oli musteeltaan
+ * 79,8 px leveä ja sen ulkopää 94,3 px pisteestä, eikä sen napautus
+ * tehnyt mitään. JÄLKEEN sama napautus ajaa kameran kaupungin ylle
+ * täsmälleen kuten pisteen napautus (mitattu: molemmat kirjaavat saman
+ * kamera-ajon, Sofia laudan kohtaan 6611, 1696).
+ *
+ * SÄÄNTÖ: nimen laatikko on samassa vertailussa kuin noston nimilappu
+ * (js/pallolauta/lauta.js musteenVoittaja): etäisyys laatikkoon,
+ * kosketusvara, pienin voittaa ja tasapelissä lähin keskipiste. Nimen
+ * laatikko talletetaan PISTEEN SUHTEEN (js/pallolauta/nimet.js
+ * `osuma(p)`), koska ladonta ajetaan vain levossa mutta nimi seuraa
+ * pistettään CSS2D:n mukana.
+ */
+
+const {
+  LAPUN_KOSKETUSVARA_PX, laatikonEtaisyys, musteenVoittaja,
+} = await import('../js/pallolauta/lauta.js');
+
+const nimenLaatikko = {
+  r: {
+    x0: 380, y0: 275, x1: 440, y1: 290,
+  },
+  voittaja: { laji: 'kaupunki', k: { id: 'sofia' } },
+};
+const lapunLaatikko = {
+  r: {
+    x0: 300, y0: 320, x1: 360, y1: 332,
+  },
+  voittaja: { laji: 'nosto', o: { id: 'rila' } },
+};
+
+test('nimen napautus antaa saman kaupungin kuin pisteen napautus', () => {
+  // Musteen päällä: nimi voittaa ja palauttaa kaupungin tietueen.
+  const osuma = musteenVoittaja({ x: 410, y: 283 }, [nimenLaatikko]);
+  assert.equal(osuma.laji, 'kaupunki');
+  assert.equal(osuma.k.id, 'sofia');
+  // Pitkän nimen ULKOPÄÄ on yhä osumaa, vaikka piste olisi kaukana.
+  assert.equal(musteenVoittaja({ x: 439, y: 283 }, [nimenLaatikko]).k.id, 'sofia');
+  // Kosketusvaran sisällä kelpaa, sen ulkopuolella ei.
+  assert.equal(musteenVoittaja({ x: 410, y: 290 + LAPUN_KOSKETUSVARA_PX - 1 }, [nimenLaatikko]).k.id, 'sofia');
+  assert.equal(musteenVoittaja({ x: 410, y: 290 + LAPUN_KOSKETUSVARA_PX + 1 }, [nimenLaatikko]), null);
+  assert.equal(musteenVoittaja({ x: 410, y: 283 }, []), null);
+});
+
+test('fokuskohteen nimilappu ei osu kaupunkiin vaan omaan nostoonsa', () => {
+  const ehdokkaat = [nimenLaatikko, lapunLaatikko];
+  // Lapun musteen päällä voittaa nosto, ei viereinen kaupungin nimi.
+  const lapulla = musteenVoittaja({ x: 330, y: 326 }, ehdokkaat);
+  assert.equal(lapulla.laji, 'nosto');
+  assert.equal(lapulla.o.id, 'rila');
+  // Ja päinvastoin: kaupungin musteen päällä voittaa kaupunki.
+  assert.equal(musteenVoittaja({ x: 400, y: 282 }, ehdokkaat).laji, 'kaupunki');
+  // Kummankin varan sisällä: lähempi laatikko voittaa (sääntö 9).
+  assert.equal(musteenVoittaja({ x: 366, y: 310 }, ehdokkaat).laji, 'nosto');
+});
+
+test('laatikon etäisyys on 0 sisällä ja kasvaa ulkopuolella', () => {
+  const r = {
+    x0: 0, y0: 0, x1: 10, y1: 10,
+  };
+  assert.equal(laatikonEtaisyys({ x: 5, y: 5 }, r), 0);
+  assert.equal(laatikonEtaisyys({ x: 13, y: 5 }, r), 3);
+  assert.equal(laatikonEtaisyys({ x: -3, y: -4 }, r), 5);
+});
+
+test('lauta kysyy nimien osumat ja tekee niistä kaupungin napautuksen', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /for \(const n of nimet\.osumat\(\)\) \{/);
+  assert.match(lauta, /lisaa\(n, n\.laatikko, \{ laji: 'kaupunki', lat: n\.lat, lng: n\.lng, k \}\);/);
+  // Sama käsittelijä kuin pisteellä: voittaja.laji === 'kaupunki'.
+  assert.match(lauta, /if \(voittaja\.laji === 'kaupunki'\) napautaKaupunki\(voittaja\.k\);/);
+  // Nimen laatikko lasketaan napautuksen hetken ruutupisteestä.
+  const nimet = lue('../js/pallolauta/nimet.js');
+  assert.match(nimet, /osuma: suhde \? \(p\) => \(\{/);
+  assert.match(nimet, /osumat: \(\) => osumat,/);
+});
+
+/* ================================================================== *
+ * NIMIBUDJETTI ZOOMTASON MUKAAN (omistaja 12.9.2026)
+ *
+ * *"Kaupunki tekstejä on liikaa näkyvillä uloimmilla zoom tasoilla
+ * koska ne joutuvat panoroitaessa väistelemään toisiaan ja silloin
+ * tekstit hyppivät eri paikkoihin"*
+ *
+ * MITATTU (Chromium 390 x 844 dpr 2, kahdeksan pientä panorointi-
+ * askelta; väistö = nimen kyljen tai siirron vaihtuminen):
+ *
+ *   näkymän korkeus   nimiä ennen  jälkeen   väistöjä ennen  jälkeen
+ *   133,6°            40           6         41              3
+ *    85,5°            40           9          9              3
+ *    64,1°            22–32        11–12     12              5
+ *    53,4°            19–20        11–12      8              3
+ *    40,1°            10–11        8–10       2              5
+ *    32,1°             7–10        5–6        2              0
+ *    19,8°             3–4         3          0              0
+ *
+ * Työpöydällä (1440 x 900) sama: 84,9° 2–40 nimeä ja 63 väistöä ->
+ * 9 nimeä ja 17 väistöä; 78° 35–40 / 45 -> 10 / 16.
+ * ================================================================== */
+
+test('nimibudjetti pienenee portaattomasti ulos zoomatessa, lattiaan asti', () => {
+  // Vertailukorkeus on saapumisnäkymä: siellä budjetti on täysi.
+  assert.equal(nimibudjetti(NIMIBUDJETIN_KORKEUS), NIMIEN_KATTO);
+  assert.equal(nimibudjetti(19.8), NIMIEN_KATTO);
+  // Mitatut zoomtasot: budjetti seuraa näkymän korkeutta.
+  const mitatut = [[32.1, 25], [40.1, 20], [53.4, 15], [64.1, 12], [85.5, 9], [133.6, 6]];
+  for (const [hAst, odotettu] of mitatut) {
+    assert.equal(nimibudjetti(hAst), odotettu, `korkeus ${hAst}`);
+  }
+  // Portaaton ja kasvava sisäänpäin: ei yhtään nousua ulospäin.
+  let edellinen = Infinity;
+  for (let h = 10; h <= 160; h += 0.5) {
+    const nyt = nimibudjetti(h);
+    assert.ok(nyt <= edellinen, `korkeus ${h}: budjetti kasvoi ulospäin`);
+    edellinen = nyt;
+  }
+  // Lattia ja katto pitävät, eivätkä rikkinäiset luvut kaada.
+  assert.equal(nimibudjetti(1000), NIMIEN_VAHIN);
+  assert.equal(nimibudjetti(1), NIMIEN_KATTO);
+  assert.equal(nimibudjetti(0), NIMIEN_VAHIN);
+  assert.equal(nimibudjetti(Infinity), NIMIEN_VAHIN);
+  assert.equal(nimibudjetti(NaN), NIMIEN_VAHIN);
+  assert.ok(NIMIEN_VAHIN >= 6, 'maailmanmitassa on yhä puolisen tusinaa nimeä');
+  // Lauta lukee budjetin näkymän KORKEUDESTA (ei leveydestä).
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /const korkeusAst = nakyva\?\.h > 0 \? \(nakyva\.h \* 360\) \/ PALLOLAUDAN_LEVEYS : Infinity;/);
+  assert.match(lauta, /Math\.min\(nimibudjetti\(korkeusAst\),/);
+});
+
+test('nimien valinta on kaupungin oma eikä kameran: ei etäisyyttä keskipisteeseen', () => {
+  const nimet = lue('../js/pallolauta/nimet.js');
+  // Tasapelin ratkaisee kaupungin reittiaste ja nimi, ei ruutupaikka.
+  assert.match(nimet, /\.sort\(\(a, b\) => \(b\.tarkeys - a\.tarkeys\)\n\s*\|\| \(\(b\.c\.aste \?\? 0\) - \(a\.c\.aste \?\? 0\)\)\n\s*\|\| \(a\.c\.nimi < b\.c\.nimi \? -1 : 1\)\);/);
+  assert.ok(!nimet.includes('etaisyys'),
+    'kameran etäisyys ei saa palata valintaan — se teki joukosta suunnasta riippuvan');
+  // Arvojärjestys on aineistossa ja pysyvä.
+  for (const c of karttanimienKaupungit(MAAILMANKARTTA)) {
+    assert.ok(Number.isFinite(c.aste) && c.aste >= 0, `${c.id}: aste puuttuu`);
+    assert.ok(Number.isFinite(c.tarkeys), `${c.id}: tarkeys puuttuu`);
+  }
+  // Sama näkymä antaa saman joukon riippumatta siitä, missä järjestyksessä
+  // ehdokkaat tulevat — eli valinta ei riipu kameran liikesuunnasta.
+  const jarjesta = (lista) => [...lista].sort((a, b) => (b.tarkeys - a.tarkeys)
+    || ((b.c.aste ?? 0) - (a.c.aste ?? 0))
+    || (a.c.nimi < b.c.nimi ? -1 : 1));
+  const pohja = ehdokkaat(834 / 12000, ateena, 834, 1112).map((e) => ({ ...e }));
+  const a = ladoRuutunimet(jarjesta(pohja), { katto: 12, ruutu: { w: 834, h: 1112 } });
+  const b = ladoRuutunimet(jarjesta([...pohja].reverse()), { katto: 12, ruutu: { w: 834, h: 1112 } });
+  assert.deepEqual(a.nimiot.map((n) => n.c.id), b.nimiot.map((n) => n.c.id),
+    'ehdokkaiden saapumisjärjestys ei saa vaikuttaa valintaan');
+});
+
+test('nimi ei leikkaudu ruudun reunasta: ulkopuoli on este', () => {
+  const nimet = lue('../js/pallolauta/nimet.js');
+  // Ehdokkaan pisteen on oltava ruudulla (ei enää +40 px ulkopuolelle).
+  assert.equal(NIMEN_REUNAVARA_PX, 0);
+  assert.match(nimet, /ruutu: \{ w, h, vara: liikevara > 0 \? liikevara : 0 \}/);
+  const w = 834;
+  const h = 1112;
+  const laidalla = ehdokkaat(834 / 12000, ateena, w, h);
+  const ilman = ladoRuutunimet(laidalla, { katto: 40 });
+  const kanssa = ladoRuutunimet(laidalla, { katto: 40, ruutu: { w, h } });
+  const yli = (tulos) => tulos.nimiot.filter((n) => n.r
+    && (n.r.x0 < -1 || n.r.y0 < -1 || n.r.x1 > w + 1 || n.r.y1 > h + 1)).length;
+  assert.ok(yli(ilman) > 0, 'mittaus ei toistu: reunan yli meneviä ei ollut ennenkään');
+  assert.equal(yli(kanssa), 0, 'nimi jäi yhä ruudun ulkopuolelle');
+  // Nimi ei katoa vaan siirtyy: valtaosa säilyy, kun reuna on este.
+  assert.ok(kanssa.nimiot.length >= ilman.nimiot.length - yli(ilman),
+    `nimiä ${kanssa.nimiot.length} vs ${ilman.nimiot.length}`);
+});

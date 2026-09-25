@@ -1,0 +1,338 @@
+/*
+ * SAVUKE: LEPOPIIRTO — levossa harvoin, liikkeessä joka kehys, muutokset heti.
+ *
+ *   PLAYWRIGHT_JS=<polku> node tools/savukkeet/savuke-lepopiirto.mjs [--webkit]
+ *   (SAVUKE_MOOTTORI=webkit|chromium; sarjat.json ajaa molemmat rivit)
+ *
+ * === MIKSI ==========================================================
+ *
+ * js/pallolauta/lepopiirto.js (sulavuuskatsaus kohta 18) pysäyttää
+ * kirjaston silmukan, kun mikään ei muuttunut, ja piirtää sykkeellä
+ * 4 fps. Oletus on PÄÄLLÄ (omistaja todensi levon iPhonella 22.9.2026),
+ * ja savuke ajaa saman polun kuin pelaaja — ei koelippua. Erotus
+ * v2101–v2104:ään: webdriver-poikkeus, joka esti vartijaa näkemästä
+ * välkkeen, on poissa.
+ *
+ * === VÄITTEET =======================================================
+ *
+ *   V1  LEVOSSA HARVOIN: 2 s levossa piirtoja ≤ 20 fps (syke 4 fps tai
+ *       hehkupisteen syke 15 fps), ja yhtään 'kamera'-syytä ei kerry
+ *       (kameran vertailu ei värähtele).
+ *   V2  LIIKKEESSÄ JOKA KEHYS: tasaisuusmittarin veto — pysähdyksiä ≤ 2
+ *   V7  VEDON AIKANA EI OHITUKSIA, vaikka tapahtuma osuisi vain joka
+ *       toiseen kehykseen (iOS ei tahdista pointermovea rAF:iin);
+ *       ohitettu kehys pysäyttää tickin, jossa syöte sovelletaan
+ *       (headless WebKit pysähtyy 1–2 kehystä ilman lepopiirtoakin).
+ *   V3  MUUTOS NÄKYY HETI: kamera uuteen paikkaan → laattojen saapuminen
+ *       kirjaa 'pakko'/'tarve'-piirtoja (ryhmän add ilmoittaa), ja
+ *       levossa readPixels ilman pakotusta antaa laatan värin, ei taustaa.
+ *   V4  PALUULIPPU: `?koe=levovanha` piirtää joka kehys (≥ 50 fps).
+ *   V6  VEDON ALKU: oikeilla osoitintapahtumilla kamera liikkuu alle
+ *       120 ms:ssä ensimmäisestä tapahtumasta. Mitattu 22.9.2026:
+ *       ilman syötteen ilmoitusta 29 ms (chromium) ja 52 ms (webkit),
+ *       ilmoituksen kanssa 14 ja 15 ms eli yksi kehys. V2 ei kata tätä,
+ *       koska tasaisuusmittari ajaa kameraa suoraan.
+ *   V5  KANGAS EI VÄLKY: levossa SOMMITTELIJAN kautta otetut kaappaukset
+ *       ovat kaikki karttaa, eivät tyhjää. Tämä on omistajan 22.9.2026
+ *       löytämä vika ("kartta välkkyy kuin strobovalo"): renderin ohitus
+ *       tickin sijaan antoi WebKitissä tyhjän kankaan joka ohitetulla
+ *       kehyksellä (kaappausten kokoero 24 ×; tickin ohitus 1,00 ×).
+ *       PNG:n koko erottaa tyhjän kartasta ilman kuvakirjastoa.
+ */
+import http from 'node:http';
+import { existsSync, readFileSync } from 'node:fs';
+import { extname, join } from 'node:path';
+
+import { Game } from '../../js/game.js';
+import { packById } from '../../js/pack.js';
+
+const paketti = await import(process.env.PLAYWRIGHT_JS ?? 'playwright')
+  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+const MOOTTORI = (process.argv.includes('--webkit') || process.env.SAVUKE_MOOTTORI === 'webkit')
+  ? 'webkit' : 'chromium';
+const moottori = paketti[MOOTTORI] ?? paketti.default?.[MOOTTORI];
+const JUURI = new URL('../..', import.meta.url).pathname;
+
+const TYYPIT = {
+  '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css',
+  '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png',
+  '.webp': 'image/webp', '.geojson': 'application/json',
+};
+const palvelin = http.createServer((req, res) => {
+  const reitti = req.url.split('?')[0];
+  const polku = join(JUURI, reitti === '/' ? 'index.html' : reitti);
+  if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
+  res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
+  res.end(readFileSync(polku));
+});
+await new Promise((ok) => palvelin.listen(Number(process.env.PORTTI) || 0, ok));
+const osoite = `http://localhost:${palvelin.address().port}/`;
+
+let lapi = 0;
+let kaikki = 0;
+const vaadi = (nimi, ehto, lisa = '') => {
+  kaikki += 1;
+  if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
+};
+const tieto = (nimi, arvo) => console.log(`INFO  ${nimi}: ${arvo}`);
+
+/* Ämpäri Noden kautta: CORS estää 127.0.0.1:n suoran haun. */
+const AMPARI = 'https://media.matkakirja.app/';
+const valimuisti = new Map();
+async function ampariHaku(url) {
+  if (valimuisti.has(url)) return valimuisti.get(url);
+  const lupaus = fetch(url).then(async (v) => (v.ok
+    ? { status: 200, body: Buffer.from(await v.arrayBuffer()), tyyppi: v.headers.get('content-type') }
+    : { status: v.status, body: Buffer.alloc(0), tyyppi: 'text/plain' }))
+    .catch(() => null);
+  valimuisti.set(url, lupaus);
+  return lupaus;
+}
+const kirjasto = await ampariHaku(`${AMPARI}vendor/globe.gl-2.46.2.min.js`);
+if (kirjasto?.status !== 200) {
+  console.log('OHITUS: ämpäri ei vastaa — pallo ei voi latautua, savuke ei voi mitata.');
+  palvelin.close();
+  process.exit(0);
+}
+
+const peli = new Game({
+  players: [{ name: 'Fogg', color: '#c9a227', start: 'marseille' }],
+  pack: packById('maailmankartta'),
+  seed: 5,
+});
+peli.phase = 'action';
+peli.tokens.delete('marseille');
+const tallenne = JSON.stringify(peli.toJSON());
+
+const selain = await (MOOTTORI === 'webkit'
+  ? moottori.launch()
+  // Oikea GPU Macilla (ANGLE Metal): SwiftShaderin rAF on ~4 fps eikä erota lepoa liikkeestä.
+  : moottori.launch({ executablePath: process.env.CHROMIUM || undefined, args: ['--disable-dev-shm-usage', '--use-angle=metal', '--ignore-gpu-blocklist'] }));
+const ctx = await selain.newContext({
+  viewport: { width: 390, height: 844 },
+  hasTouch: true,
+  ...(MOOTTORI === 'webkit' ? {} : { isMobile: true }),
+  deviceScaleFactor: 2,
+  serviceWorkers: 'block',
+});
+await ctx.addInitScript((data) => {
+  try { localStorage.setItem('matkakirja-save-v1', data); localStorage.removeItem('matkakirja-lauta'); } catch { /* yksityinen selaus */ }
+}, tallenne);
+const sivu = await ctx.newPage();
+sivu.setDefaultTimeout(120000);
+const konsoli = [];
+sivu.on('console', (m) => { if (m.type() === 'error') konsoli.push(m.text().slice(0, 300)); });
+await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
+await sivu.route(/wikimedia\.org/, (r) => r.abort());
+await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
+  const vastaus = await ampariHaku(route.request().url());
+  if (!vastaus || vastaus.status !== 200) { route.abort().catch(() => {}); return; }
+  route.fulfill({
+    status: 200, contentType: vastaus.tyyppi ?? 'application/octet-stream', body: vastaus.body,
+    headers: { 'access-control-allow-origin': '*' },
+  }).catch(() => {});
+});
+
+
+const avaa = async (koe) => {
+  await sivu.goto(`${osoite}?lauta=pallo&koe=${koe}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  const auki = await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 60000 })
+    .then(() => true).catch(() => false);
+  if (!auki) return false;
+  await sivu.waitForTimeout(2500);
+  await sivu.evaluate(() => {
+    setInterval(() => {
+      const ui = window.matkakirja?.ui;
+      const n = ui?.ohitaNappi?.isConnected ? ui.ohitaNappi : document.querySelector('.fokusvirta-ohitanappi');
+      if (n) n.click();
+    }, 150);
+  });
+  await sivu.waitForTimeout(2000);
+  await sivu.evaluate(() => window.matkakirja.ui.pallolauta.saavu?.({ kesto: 0 }));
+  await sivu.waitForTimeout(3000);
+  return true;
+};
+const laske = async (ms) => {
+  const a = await sivu.evaluate(() => ({ f: window.matkakirja.ui.pallonInstanssi.renderer().info.render.frame, t: performance.now(), s: window.matkakirja.ui.pallonInstanssi.__piirto?.tila?.().syyt ?? null }));
+  await sivu.waitForTimeout(ms);
+  const b = await sivu.evaluate(() => ({ f: window.matkakirja.ui.pallonInstanssi.renderer().info.render.frame, t: performance.now(), s: window.matkakirja.ui.pallonInstanssi.__piirto?.tila?.().syyt ?? null }));
+  const fps = (b.f - a.f) / ((b.t - a.t) / 1000);
+  const syyt = {};
+  for (const k of new Set([...Object.keys(a.s ?? {}), ...Object.keys(b.s ?? {})])) syyt[k] = (b.s?.[k] ?? 0) - (a.s?.[k] ?? 0);
+  return { fps, syyt };
+};
+
+vaadi('pallolauta avautuu (lepopiirto)', await avaa(process.env.SAVUKE_LEPOPIIRTO_KOE ?? 'mittaus'));
+const paalla = await sivu.evaluate(() => Boolean(window.matkakirja.ui.pallonInstanssi.__piirto));
+vaadi('lepopiirto asennettu oletuksena', paalla);
+if (!paalla) { await ctx.close(); await selain.close(); palvelin.close(); process.exit(1); }
+const lepo = await laske(2000);
+tieto(`V1 ${MOOTTORI} lepo`, `${lepo.fps.toFixed(1)} fps, syyt ${JSON.stringify(lepo.syyt)}`);
+vaadi(`V1 ${MOOTTORI}: levossa ≤ 20 fps`, lepo.fps <= 20, `${lepo.fps.toFixed(1)} fps`);
+vaadi(`V1 ${MOOTTORI}: levossa ei kamera-syitä`, (lepo.syyt.kamera ?? 0) <= 1, `kamera ${lepo.syyt.kamera}`);
+/*
+ * V5: SOMMITTELIJAN NÄKEMÄ KANGAS LEVOSSA. readPixels lukee sen
+ * puskurin, johon juuri piirrettiin; kaappaus lukee sen, minkä
+ * sommittelija näyttää — ja vain jälkimmäinen näkee välkkeen.
+ */
+const kangasAlue = await sivu.evaluate(() => {
+  const c = document.querySelector('.pallolauta canvas') ?? document.querySelector('canvas');
+  const r = c.getBoundingClientRect();
+  return { x: Math.round(r.x), y: Math.round(r.y), width: Math.round(r.width), height: Math.round(r.height) };
+});
+const koot = [];
+for (let i = 0; i < 12; i += 1) {
+  koot.push((await sivu.screenshot({ clip: kangasAlue })).length);
+  await sivu.waitForTimeout(70);
+}
+const suhde = Math.max(...koot) / Math.max(1, Math.min(...koot));
+tieto(`V5 ${MOOTTORI} kaappaukset levossa`, `${Math.min(...koot)}–${Math.max(...koot)} tavua, ero ${suhde.toFixed(2)}×`);
+// Piirto joka kehys antaa 1,12 ×; renderin ohitus antoi 24 ×. Raja 1,5 ×.
+vaadi(`V5 ${MOOTTORI}: kangas ei välky levossa`, suhde <= 1.5, `ero ${suhde.toFixed(2)}×, koot ${koot.join(',')}`);
+
+/*
+ * V6: VEDON ALKU. Odottava veto sovelletaan kameraan kirjaston tickissä
+ * (pallo.js sovellaSyote → ohjaimet.update), ja lepopiirto pysäyttää
+ * tickin levossa. Ennustin tästä 250 ms:n jumin (veto ei voi herättää
+ * tickiä, koska herätesyy on "kamera muuttui" eikä kamera voi muuttua
+ * ennen sovellusta) — MITTAUS EI VAHVISTANUT SITÄ: ilman ilmoitustakin
+ * veto lähti 29 ms:ssä (chromium) ja 52 ms:ssä (webkit), eli jokin muu
+ * herättää tickin. Ilmoitus tekee lähdöstä silti yhden kehyksen
+ * mittaisen ja DETERMINISTISEN (14 ja 15 ms) sen sijaan, että se
+ * riippuisi sykkeen osumasta. Tämä väite vahtii lukua, ei teoriaa.
+ */
+const alkuviive = await (async () => {
+  await sivu.evaluate(() => { window.matkakirja.ui.pallolauta.heraa?.(); });
+  await sivu.waitForTimeout(1200); // varmistetaan lepo: tick pysäytetty
+  const ennen = await sivu.evaluate(() => {
+    const p = window.matkakirja.ui.pallonInstanssi.pointOfView();
+    window.__vedonAlku = { lng: p.lng, lat: p.lat, t: performance.now(), havaittu: null };
+    const seuraa = () => {
+      const n = window.matkakirja.ui.pallonInstanssi.pointOfView();
+      if (window.__vedonAlku.havaittu == null
+        && (Math.abs(n.lng - window.__vedonAlku.lng) > 1e-6 || Math.abs(n.lat - window.__vedonAlku.lat) > 1e-6)) {
+        window.__vedonAlku.havaittu = performance.now() - window.__vedonAlku.t;
+      }
+      requestAnimationFrame(seuraa);
+    };
+    requestAnimationFrame(seuraa);
+    return true;
+  });
+  if (!ennen) return null;
+  const x = 195; const y = 500;
+  await sivu.mouse.move(x, y);
+  await sivu.evaluate(() => { window.__vedonAlku.t = performance.now(); });
+  await sivu.mouse.down();
+  for (let i = 1; i <= 8; i += 1) { await sivu.mouse.move(x - i * 6, y); await sivu.waitForTimeout(16); }
+  await sivu.mouse.up();
+  return sivu.evaluate(() => window.__vedonAlku.havaittu);
+})();
+tieto(`V6 ${MOOTTORI} vedon alku`, `kamera liikkui ${alkuviive == null ? 'EI LAINKAAN' : `${alkuviive.toFixed(0)} ms`} ensimmäisestä tapahtumasta`);
+// Syke on 250 ms; aito veto saa lähteä enintään parin kehyksen viiveellä.
+vaadi(`V6 ${MOOTTORI}: veto lähtee heti (ei sykettä odottaen)`, alkuviive != null && alkuviive < 120, `${alkuviive} ms`);
+
+const veto = await sivu.evaluate(async () => {
+  const v = await window.__kehysprofiili.veto({ kesto: 1500, nopeusPx: 80 });
+  return { t: v.tasaisuus, teksti: window.__kehysprofiili.vetoTeksti(v) };
+});
+tieto(`V2 ${MOOTTORI} veto`, veto.teksti);
+// Headless WebKit pysähtyy 1–2 kehystä myös ilman lepopiirtoa (mitattu 22.9.2026: 63 % / 2 vs 65 % / 1); raja 2.
+vaadi(`V2 ${MOOTTORI}: liikkeessä joka kehys (pysähdyksiä ≤ 2)`, veto.t && veto.t.pysahdyksia <= 2 && veto.t.kehyksia > 30, JSON.stringify(veto.t));
+/*
+ * V7: VEDON AIKANA EI OHITETA YHTÄKÄÄN KEHYSTÄ (omistajan iPhone-
+ * mittaus 22.9.2026, v2122:n kehysprofiili: piirto 51–86 % ja
+ * ohitettuja 133–234 vedon aikana). Ohitettu kehys pysäyttää kirjaston
+ * tickin, ja kaikki syötetavat ajetaan juuri siinä tickissä — siitä
+ * syntyy 0/2-kuvio, jota mikään syötetapa ei voi korjata. Mitataan
+ * lepopiirron omista laskureista saman vedon yli: ohituksia 0.
+ */
+const vetoPiirto = await sivu.evaluate(async () => {
+  /*
+   * TAPAHTUMA JOKA TOISEEN KEHYKSEEN — juuri se, mitä iOS tekee.
+   * Tasaisuusmittarin oma veto lähettää pointermoven JOKA kehyksellä,
+   * jolloin kamera muuttuu joka kehys eikä ohituksia synny edes
+   * korjaamattomalla lepopiirrolla: se ei siis mittaa tätä vikaa
+   * lainkaan. Kehys ilman tapahtumaa on se tilanne, jossa vanha
+   * lepopiirto pysäytti tickin ja odottava veto jäi soveltamatta.
+   */
+  const ui = window.matkakirja.ui;
+  const kotelo = ui.pallonInstanssi.renderer().domElement;
+  const r = kotelo.getBoundingClientRect();
+  let x = r.left + r.width * 0.3;
+  const y = r.top + r.height * 0.55;
+  const tapahtuma = (tyyppi) => kotelo.dispatchEvent(new PointerEvent(tyyppi, {
+    bubbles: true, cancelable: true, composed: true, pointerId: 9, pointerType: 'touch',
+    isPrimary: true, clientX: x, clientY: y, buttons: tyyppi === 'pointerup' ? 0 : 1, button: 0,
+  }));
+  const lepo = () => ui.pallonInstanssi.__piirto.tila();
+  tapahtuma('pointerdown');
+  await new Promise((valmis) => { requestAnimationFrame(() => requestAnimationFrame(valmis)); });
+  const a = lepo();
+  let kehyksia = 0;
+  await new Promise((valmis) => {
+    const askel = () => {
+      kehyksia += 1;
+      if (kehyksia % 2 === 0) { x += 1.4; tapahtuma('pointermove'); }
+      if (kehyksia < 90) requestAnimationFrame(askel); else valmis();
+    };
+    requestAnimationFrame(askel);
+  });
+  const b = lepo();
+  tapahtuma('pointerup');
+  return {
+    kehyksia,
+    piirtoja: b.piirtoja - a.piirtoja,
+    ohitettuja: b.ohitettuja - a.ohitettuja,
+  };
+});
+tieto(`V7 ${MOOTTORI} vedon piirto`, `${vetoPiirto.kehyksia} kehystä, joka toisessa tapahtuma: piirtoja ${vetoPiirto.piirtoja}, ohitettuja ${vetoPiirto.ohitettuja}`);
+vaadi(`V7 ${MOOTTORI}: vedon aikana piirto joka rAF-kehyksessä, myös ilman tapahtumaa (ohituksia 0)`,
+  vetoPiirto.piirtoja > 30 && vetoPiirto.ohitettuja === 0, JSON.stringify(vetoPiirto));
+
+await sivu.waitForTimeout(800);
+/* V3: uusi paikka → laatat saapuvat → piirtoja ilman kameran liikettä; sitten pikseli ilman pakotusta. */
+await sivu.evaluate(() => { window.matkakirja.ui.pallolauta.heraa?.(); window.matkakirja.ui.pallonInstanssi.pointOfView({ lat: 43.5, lng: 4.5, altitude: 0.05 }, 0); });
+await sivu.waitForTimeout(300);
+const saapuminen = await laske(2500);
+const peitti = await sivu.waitForFunction(() => { const k = window.matkakirja.ui.pallolauta.lepokerros?.()?.mittarit?.(); return k && k.peittoOsuus === 1 && k.hapyvia === 0; }, null, { timeout: 30000 }).then(() => true).catch(() => false);
+tieto(`V3 ${MOOTTORI} saapuminen`, `${saapuminen.fps.toFixed(1)} fps, syyt ${JSON.stringify(saapuminen.syyt)}, peitti ${peitti}`);
+vaadi(`V3 ${MOOTTORI}: laattojen saapuminen piirretään ilmoituksesta`, (saapuminen.syyt.pakko ?? 0) + (saapuminen.syyt.tarve ?? 0) >= 3, JSON.stringify(saapuminen.syyt));
+await sivu.waitForTimeout(600);
+const pikseli = await sivu.evaluate(() => {
+  const pallo = window.matkakirja.ui.pallonInstanssi; const r = pallo.renderer(); const gl = r.getContext();
+  // Ei pakotusta: viimeisin sykkeen/hitaan piirto on puskurissa vain heti piirron jälkeen — piirretään ilman pakkoa
+  // (lepopiirto päättää itse) ja luetaan; jos se ohitti, odotetaan sykettä ja luetaan piirron jälkeen.
+  // Kääritään lepopiirron kääre: luetaan pikseli heti kirjaston OMAN, pakottamattoman piirron jälkeen.
+  return new Promise((ok) => {
+    const alku = performance.now();
+    const alk = r.render;
+    const palauta = () => { if (r.render === kaare) r.render = alk; };
+    const kaare = function kaare(...a) {
+      const ennen = r.info.render.frame;
+      const tulos = alk.apply(this, a);
+      if (r.info.render.frame > ennen) {
+        const W = gl.drawingBufferWidth, H = gl.drawingBufferHeight; const px = new Uint8Array(4);
+        gl.readPixels(Math.floor(W / 2), Math.floor(H / 2), 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, px);
+        palauta();
+        ok({ px: [...px], odotti: Math.round(performance.now() - alku), syyt: pallo.__piirto?.tila?.().syyt });
+      } else if (performance.now() - alku > 1500) { palauta(); ok({ px: null, odotti: 1500 }); }
+      return tulos;
+    };
+    r.render = kaare;
+  });
+});
+tieto(`V3 ${MOOTTORI} pikseli`, JSON.stringify(pikseli));
+vaadi(`V3 ${MOOTTORI}: levossa syke piirtää laatan (pikseli ei tausta)`, pikseli.px && pikseli.px[3] === 255 && !(pikseli.px[0] < 10 && pikseli.px[1] < 10 && pikseli.px[2] < 10), JSON.stringify(pikseli));
+/* V4: paluulippu levovanha piirtää joka kehys. */
+vaadi('pallolauta avautuu (levovanha)', await avaa('levovanha'));
+const ilman = await sivu.evaluate(() => Boolean(window.matkakirja.ui.pallonInstanssi.__piirto));
+const vanha = await laske(1500);
+tieto(`V4 ${MOOTTORI} levovanha`, `${vanha.fps.toFixed(1)} fps, lepopiirto ${ilman}`);
+vaadi(`V4 ${MOOTTORI}: paluulippu piirtää joka kehys`, !ilman && vanha.fps >= 50, `${vanha.fps.toFixed(1)} fps, lepopiirto ${ilman}`);
+if (konsoli.length) tieto('konsolivirheet', JSON.stringify(konsoli.slice(0, 3)));
+
+await ctx.close();
+await selain.close();
+palvelin.close();
+console.log(`\n${lapi}/${kaikki} väitettä läpi (${MOOTTORI})`);
+process.exit(lapi === kaikki ? 0 : 1);

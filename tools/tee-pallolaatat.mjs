@@ -1,0 +1,1208 @@
+/*
+ * KARTTAPALLON LAATAT — juliste Millerista Web Mercator -laatoiksi.
+ *
+ *   node tools/tee-pallolaatat.mjs [--kuiva] [--min 0] [--max 7] [--nostot]
+ *        [--ilman-rantaa]
+ *        [--ulos pallolaatat-ulos] [--alue lon0,lat0,lon1,lat1] [--tunniste b]
+ *        [--osa i/n] [--noutovali ms]
+ *        [--luettelo <paikallinen pyramidi.json>] [--lahde <kansio>]
+ *        [--relief <reliefipyramidi.json: osoite tai polku>] [--ilman-viivoja]
+ *
+ * RELIEFISARJA (--relief, Linssiseppä 23.9.2026: natiivin
+ * topografialinssi on Cesiumin rasterikerros, joka lukee vain Web
+ * Mercator- tai Geographic-tiilitystä). Lähteenä on reliefipyramidi
+ * (matkakirja/reliefipyramidi/<versio>/, sama Miller-arkki kuin pohjalla,
+ * z0–z7) ja tulos menee sen alle: <versio>/pallo/{Z}/{X}/{Y}.jpg,
+ * Z0–Z8. Geometria (projektio, rajaus) tulee pohjan luettelosta, koska
+ * reliefin luettelossa niitä ei ole (reliefinLuettelo). Relief on
+ * täysvärikartta ilman julisteen kehystä ja reunavarjoa, joten
+ * reunaa ei nosteta, ja kartan ulkopuoli (RELIEFIN_VALI) on reliefin
+ * omaa täytesävyä (RELIEFIN_TAYTE), ei pergamentin merta ja jäätä.
+ *
+ * SHARDIT (--osa i/n, 7.9.2026). Sarja on 87 381 laattaa tasoille 0–8, ja
+ * yhtenä prosessina se kesti Mac Studiolla noin kolme tuntia YHDELLÄ
+ * ytimellä, vaikka pyramidin poltto samassa skriptissä käyttää kaikki
+ * (tools/polta-paikallisesti.sh). Laatta ei riipu naapuristaan, joten
+ * sarja jaetaan osiin, jotka lasketaan rinnakkaisina prosesseina omiin
+ * kansioihinsa. Osat ovat pistevieraat ja kattavat sarjan tasan
+ * (osanLaatat), joten n osaa tuottaa täsmälleen samat laatat kuin yksi
+ * ajo — mitattu 7.9.2026 tavu tavulta tasoille 0–3.
+ *
+ * JAKO ON SARAKEKAISTA, KUTEN PYRAMIDILLA. Osa i saa jokaiselta tasolta
+ * n:nnen siivun sarakkeita (kaistanRajat), ei n:nnettä siivua
+ * laattaluettelosta. Syy on mitattu: työ ei ole prosessorityötä vaan
+ * lähdelaattojen noutoa (kontissa 256 laattaa = 119 s seinäaikaa mutta
+ * vain 11,9 s prosessoriaikaa). Rivijärjestyksessä yksi Z8-rivi kiertää
+ * koko maailman ja koskee jokaista z7-saraketta (338) — enemmän kuin
+ * VALIMUISTI (160) — joten seuraava rivi noutaa samat lähdelaatat
+ * uudestaan. Kaistassa yksi rivi koskee vain kouraa sarakkeita, ne
+ * pysyvät välimuistissa rivien yli, ja jokainen kaistan lähdelaatta
+ * noudetaan kerran: mitattu kaista Z8 x127 nouti 256 laatalle 182
+ * lähdelaattaa (0,71 per laatta) eli täsmälleen ne z7-laatat, jotka
+ * osuvat kaistaan.
+ *
+ * NOUTOTAHTI. Ämpäri vastasi 429:llä, kun kaksi rinnakkaista ajoa haki
+ * lähdelaattoja ilman tahditusta (4.9.2026); NOUTOVALI_OLETUS 40 ms on
+ * se tahti, jolla kolmen tunnin ajo meni läpi ilman yhtään 429:ää.
+ * Rinnakkaisten osien yhteistahti pidetään maltillisena: `--osa i/n`
+ * olettaa kaikkien n osan ajavan yhtä aikaa ja tahdittaa itsensä
+ * YHTEISTAHTI_MS × n:ään, eli yhteensä 2,6-kertaiseen yhden ajon
+ * tahtiin. Polttoskripti antaa `--noutovali`-arvon rinnakkaisten
+ * PROSESSIEN (ei osien) määrästä, koska osia on ytimiä enemmän. Jos
+ * lokiin ilmestyy "HTTP 429", nosta arvoa.
+ *
+ * `--osa`-ajo EI kirjoita laatat.json/kansio.txt-luetteloa: luettelo
+ * kuvaa koko sarjan, ja se kootaan kerran `--vain-luettelo`-ajolla.
+ *
+ * --tunniste liittää ämpärin kansion nimeen loppuliitteen (esim.
+ * 2026-09-03a-nostot-b): laatat ovat selaimessa vuoden välimuistissa,
+ * joten samaan polkuun ei koskaan kirjoiteta eri sisältöä — muuttunut
+ * piirto (5.9.2026: napalakki) saa uuden kansion ja js/pallo.js:n
+ * PALLO_LAATTAKANSIO vaihdetaan siihen.
+ *
+ * OMISTAJAN TILAUS 4.9.2026 ilta ("Jos se tukee niin tee se suoraan
+ * peliin ilman demoa"): pallo (js/pallo.js, Globe.gl 2.46) käyttää
+ * laattamoottoria, joka hakee pinnan slippy map -laattoina (Web
+ * Mercator XYZ, 256 px) vain katsotulle alueelle tarkkuustasoittain.
+ * Yhden tekstuurin katto (z4, 8192 px, 128 Mt GPU-muistia) poistuu:
+ * tarkkuus on tason 7 kohdalla 32768 px koko maailman leveydeltä, ja
+ * puhelin pitää muistissa vain näkyvät laatat.
+ *
+ * Pelin juliste on Miller-projektiossa omassa ruudukossaan
+ * (laattapyramidi, ämpärin julisteet/pyramidi/pyramidi.json), joten
+ * tämä työkalu laskee jokaiselle Mercator-laatan pikselille
+ * vastaavan arkin pikselin (sama kaava kuin tee-pallotekstuuri.mjs:
+ * arkinPikseli) ja lukee sen lähdelaatasta. Lähdelaatat (pohja +
+ * viivataso) noudetaan tarpeen mukaan ja pidetään pienessä
+ * välimuistissa; koko arkkia ei koota, koska z6 olisi 43200 × 26308
+ * pikseliä.
+ *
+ * LÄHDETASO: Mercator-taso Z on päiväntasaajalla 256·2^Z px / 360°,
+ * pyramidin taso z on 675·2^z px / 360°, joten lähteeksi riittää
+ * z = Z − 1 (Z0 → z0). Tasolle 7 lähde on siis z6.
+ *
+ * JULISTEEN ULKOPUOLI (yli 84° N, alle 66° S) täytetään merisävyllä ja
+ * napajää jääsävyllä (ks. MERI_SAVY, JAA_SAVY); puuttuva lähdelaatta
+ * (umpimeri, 404) merisävyllä. Kaikki laatat kirjoitetaan (myös meri ja
+ * paperi), jotta pelin ei tarvitse tietää, mitkä laatat ovat olemassa:
+ * kirjaston laattamoottori ei osaa varalaattaa.
+ *
+ * Tulos: <ulos>/<Z>/<X>/<Y>.jpg sekä <ulos>/laatat.json (versio,
+ * tasot, laatan koko). Workflow tee-pallolaatat vie kansion polkuun
+ * julisteet/pallo/laatat/<pyramidin versio>/ ja js/pallo.js osoittaa
+ * versioon PALLO_LAATTAVERSIO.
+ *
+ * NOSTOTASON TIIVISTE LUETTELOON (pallolauta vaihe 3, karttapallo.md
+ * luku 4.2). `--nostot`-ajossa laatat.json saa kentän `nostotaso`:
+ * { versio, saanto, tasot: [Mercator-tasot, joilla nostot ovat],
+ *   nostot: { tunnus: tiiviste } } — kopio pyramidi.jsonin
+ * nostotaso-kentästä (tools/generoi-laattapyramidi.mjs), tasot
+ * käännettyinä pallon omiksi (Z = z + 1, ks. lahdetaso). Pallo lukee
+ * TÄSTÄ, mitkä nostot ovat sen laatoissa (js/pallo.js
+ * pallonNostoOnPoltettu) ja piirtää vain muut elävinä
+ * (js/pallolauta/nostot.js) — pyramidin oma luettelo ei kelpaa, koska
+ * pallon sarja poltetaan eri hetkellä ja voi olla eri versiota.
+ * Pohjasarjassa (ilman --nostot) kenttää ei ole: silloin laatoissa ei
+ * ole yhtään nostoa ja pallo piirtää kaikki elävinä.
+ *
+ * Kuvankäsittely on sharp-kirjastolla (workflow asentaa sen ajoon).
+ */
+import { spawnSync } from 'node:child_process';
+import {
+  writeFileSync, mkdirSync, readFileSync, existsSync,
+} from 'node:fs';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { arkinPikseli, millerY, JULKINEN_JUURI } from './tee-pallotekstuuri.mjs';
+
+const TAMA = fileURLToPath(import.meta.url);
+if (process.argv[1] === TAMA && !process.env.NODE_USE_ENV_PROXY
+  && (process.env.HTTPS_PROXY || process.env.https_proxy)) {
+  const ajo = spawnSync(process.execPath, [TAMA, ...process.argv.slice(2)], {
+    stdio: 'inherit',
+    env: { ...process.env, NODE_USE_ENV_PROXY: '1', NODE_NO_WARNINGS: '1' },
+  });
+  process.exit(ajo.status ?? 1);
+}
+
+/*
+ * LUETTELON OSOITE. Oletus on ämpärin julkinen luettelo, mutta
+ * `--luettelo <polku>` lukee sen PAIKALLISESTA tiedostosta (POLTTO
+ * ILMAN VÄLITILAA, omistaja 18.9.2026): yhden ajon tilassa pallon
+ * sarja on koottava juuri siitä luettelosta, jota ei ole vielä viety
+ * ämpäriin — muuten uusi nostotaso pitäisi julkaista ennen palloa ja
+ * pelin pallo olisi sumea siihen asti, kunnes sarja valmistuu.
+ */
+const LUETTELO = `${JULKINEN_JUURI}julisteet/pyramidi/pyramidi.json`;
+/** Laatan koko pikseleinä (slippy map -vakio). */
+export const LAATTA = 256;
+export const LAATU = 80;
+/*
+ * LÖYDÖS 46 -KOE (Karttaseppä 24.9.2026): NÄYTTEISTYS JA JPEG.
+ *
+ * Pyramidin taso z = Z − 1 on Kreikan leveyksillä noin 1,3 kertaa
+ * vaakasuunnassa ja 1,2 kertaa pystysuunnassa TIHEÄMPI kuin Mercator-
+ * laatta. Lähin pikseli (oletus, 'lahin') hyppää siksi joka kolmannen
+ * tai neljännen lähdepikselin yli epäsäännöllisesti: yhden pikselin
+ * viiva katkeilee ja maan ja meren raja saa epätasaisen portaikon.
+ * `--suodatin laatikko` keskiarvoistaa 3 × 3 alinäytettä pikselin
+ * alalta (pinta-alakeskiarvo), joten kavennus on suodatettu.
+ *
+ * JPEG: `--jpeg-laatu 90` ja `--jpeg-444` (ei värin alinäytteistystä):
+ * oletus 80 + 4:2:0 puolittaa värierot 2 × 2 -ruuduiksi, mikä näkyy
+ * ruskean rantaviivan ja harmaan meren rajalla porrastuksena.
+ */
+let SUODATIN = 'lahin';
+let JPEG = { quality: LAATU };
+export function asetaNaytteistys({ suodatin = 'lahin', laatu = LAATU, v444 = false } = {}) {
+  SUODATIN = suodatin;
+  JPEG = { quality: laatu, ...(v444 ? { chromaSubsampling: '4:4:4' } : {}) };
+}
+/*
+ * JULISTEEN ULKOPUOLI ILMAN "HARMAATA HATTUA" (omistaja 5.9.2026: "Lisää
+ * 4 tasolle navat ... Tai joku muu toteutus että päästään siitä harmaasta
+ * hatusta eroon"; sama päivä klo 15 kuvakaappaus Huippuvuorilta: "Miksi
+ * hattu näkyy?"). Kartta päättyy julisteessa noin 79,6° N:ään ja
+ * ~62° S:ään; sen ulkopuoli täytetään.
+ *
+ * MISTÄ HATTU TULI (mitattu laatasta 4/8/0, 5.9.2026): (1) merisävy
+ * mitattiin arkin vasemman alanurkan laatasta pikselistä (8, 8), joka
+ * on arkin MARGINAALIA, ei merta — täyte oli paperinsävyä ja erottui
+ * merestä vaaleana lakkina; (2) 84° N:n yläpuoli vaalennettiin vielä
+ * "jääksi", vaikka Pohjoinen jäämeri on julisteessa merta; (3) kartan
+ * reunassa on julisteen oma reunavarjo (~0,8° leveä, meri tummuu
+ * 202→189), joka jäi pallolle tummaksi renkaaksi täytteen rajalle.
+ *
+ * NYT: merisävy mitataan kartan SISÄLTÄ avomereltä (MERI_MITTAUS,
+ * eteläinen Tyynimeri) 5 × 5 pikselin keskiarvona; pohjoisessa täyte on
+ * pelkkää merta napaan asti; etelässä meri liukuu jääksi (JAA_RAJA.etela
+ * → JAA_LIUKU astetta etelämmäs) ilman terävää rajaa; ja kartan reunan
+ * REUNAN_NOSTO asteen kaista nostetaan merisävyyn niiltä pikseleiltä,
+ * jotka ovat merenkaltaisia (vähän kylläisyyttä, tummempia kuin meri
+ * enintään reunavarjon verran) — maa ja rantaviivat säilyvät.
+ * Napalakki 85°:n yläpuolella (Mercatorin raja) piirtyy kirjastossa
+ * ylimmän laattarivin reunasävyllä venytettynä, joten se saa merisävyn
+ * näistä laatoista (globeMaterial-väri ei vaikuta lakkiin, mitattu).
+ */
+export const MERI_SAVY = [208, 201, 183];
+export const JAA_SAVY = [220, 214, 198];
+/** Jäätä vain etelässä (Etelämanner); pohjoisessa null = merta napaan asti. */
+export const JAA_RAJA = { pohjoinen: null, etela: -70 };
+/** Meri liukuu jääksi tämän verran asteita JAA_RAJA:n takana. */
+export const JAA_LIUKU = 4;
+/** Kartan reunakaista (astetta), jolta reunavarjo nostetaan merisävyyn. */
+export const REUNAN_NOSTO = 1.2;
+/**
+ * Täytteen sävy mitataan SARAKKEITTAIN kartan reunasta tämän verran
+ * sisältä (astetta), 5 × 5 pikselin keskiarvona (5.9.2026 klo 18.45:
+ * julisteen meri on eri sävyinen eri pituusasteilla — yksi mitattu
+ * sävy jätti Uuden-Seelannin eteläpuolelle näkyvän portaan). Jos
+ * reunapikseli ei ole merenkaltainen (maa, rantaviiva), sarake saa
+ * puolipallon yleissävyn.
+ */
+export const REUNAN_MITTAUS = 0.6;
+/** Sarakesävyjen liukuvan keskiarvon puolileveys (sarakkeita). */
+export const SAVYN_TASOITUS = 12;
+/**
+ * Avomeren pituusasteet, joilta merisävy mitataan kummankin reunan
+ * sisäpuolelta (REUNAN_NOSTO + 0,6° kartan reunasta): pohjoisessa
+ * Grönlanninmeri (0° E), etelässä eteläinen Tyynimeri (130° W).
+ * Julisteen meri on eri sävyinen eri kohdissa (varjostus), joten
+ * täyte otetaan siitä merestä, johon se liittyy.
+ */
+export const MERI_MITTAUS = { pohjoinen: { lon: 0 }, etela: { lon: -130 }, sisaan: REUNAN_NOSTO + 0.6 };
+const MERI_VARA = MERI_SAVY;
+const RAD = Math.PI / 180;
+/** Lähdelaattoja välimuistissa kerrallaan (512 × 512 × 4 t ≈ 1 Mt kukin). */
+const VALIMUISTI = 160;
+
+/**
+ * Ämpärin kansio, johon laatat viedään. Nostotasollinen sarja (nimet ja
+ * karttanostot poltettuina, omistaja 5.9.2026: "lisää palloon myös se
+ * toinen kerros missä nimet ja kohteet") saa oman kansion, koska laatat
+ * ovat selaimessa vuoden välimuistissa: sama polku eri sisällöllä
+ * näyttäisi vanhaa.
+ */
+export const laattojenKansio = (versio, nostot = false, tunniste = '') => `julisteet/pallo/laatat/${versio}${nostot ? '-nostot' : ''}${tunniste ? `-${tunniste}` : ''}/`;
+
+/**
+ * Täytesävy leveysasteella lat kartan ulkopuolella: merta, paitsi
+ * etelässä JAA_RAJA.etela:n takana liukuen jääksi (JAA_LIUKU astetta).
+ * Pohjoisessa JAA_RAJA.pohjoinen = null → merta napaan asti.
+ */
+export function tayteRivilla(lat, meri = MERI_SAVY) {
+  let w = 0;
+  if (JAA_RAJA.etela != null && lat < JAA_RAJA.etela) w = Math.min(1, (JAA_RAJA.etela - lat) / JAA_LIUKU);
+  if (JAA_RAJA.pohjoinen != null && lat > JAA_RAJA.pohjoinen) w = Math.min(1, (lat - JAA_RAJA.pohjoinen) / JAA_LIUKU);
+  if (w <= 0) return meri;
+  const t = w * w * (3 - 2 * w); // smoothstep
+  return meri.map((m, i) => Math.round(m * (1 - t) + JAA_SAVY[i] * t));
+}
+
+/**
+ * Reunavarjon nosto: kartan reunakaistassa (osuus 0..1 reunaa kohti)
+ * merenkaltainen pikseli (vähän kylläisyyttä; meren ja reunavarjon
+ * välissä, ei rantaviivan tummuinen) sekoitetaan merisävyyn. Muuttaa
+ * puskuria paikallaan; palauttaa true, jos pikseliä nostettiin.
+ */
+/** Onko pikseli merenkaltainen (vähän kylläisyyttä, meren tummuusluokkaa)? */
+export function merenkaltainen(rgb, meri) {
+  const [r, g, b] = rgb;
+  const lum = (r + g + b) / 3;
+  const meriLum = (meri[0] + meri[1] + meri[2]) / 3;
+  const kyllainen = Math.abs(r - g) > 18 || Math.abs(g - b) > 34;
+  return !(kyllainen || lum < meriLum - 45 || lum > meriLum + 22);
+}
+
+export function nostaReuna(ulos, o, meri, osuus) {
+  if (osuus <= 0) return false;
+  const r = ulos[o]; const g = ulos[o + 1]; const b = ulos[o + 2];
+  if (!merenkaltainen([r, g, b], meri)) return false;
+  const t = Math.min(1, osuus) ** 0.7;
+  ulos[o] = Math.round(r * (1 - t) + meri[0] * t);
+  ulos[o + 1] = Math.round(g * (1 - t) + meri[1] * t);
+  ulos[o + 2] = Math.round(b * (1 - t) + meri[2] * t);
+  return true;
+}
+
+/** Mercator-tason Z lähdetaso pyramidissa. */
+export const lahdetaso = (Z) => Math.max(0, Z - 1);
+
+/*
+ * SAUMAN YLI VARMISTETTAVAT LÄHDESARAKKEET (Karttaseppä 24.9.2026).
+ *
+ * Arkin leveys (675 · 2^z px) ei ole laatan (512) monikerta, joten arkin
+ * VIIMEINEN SARAKE ON KAPEA: z4:llä 48 px, z5:llä 96 px (lon −176,6…−175).
+ * Vanha silmukka kulki L:n askelin ja kiersi sauman yli modulolla: z4:n
+ * x 10 650 → 11 162 ≡ 362 hyppäsi sarakkeen 21 yli suoraan sarakkeeseen 0.
+ * Laattaa ei noudettu, pikseli() ei löytänyt sitä välimuistista, ja
+ * kaistale maalautui täytteellä — mitattu reliefisarjasta 20260924: Z5 x0
+ * px 80–110 ja Z6 x0 täsmälleen RGB 37, 78, 144, vaikka lähdelaatat
+ * olivat levyllä (puuttui 0). Nyt kuljetaan sarakkeen rajalta rajalle.
+ * Sama vika koskee pohjan sarjaa (sama arkin leveys).
+ */
+export function varmistettavatSarakkeet(px0, px1, W, L) {
+  const sarakkeet = new Set();
+  let a = Math.floor(px0); const b = Math.floor(px1);
+  let loppu = b;
+  if (b - a >= W) { a = 0; loppu = W - 1; }
+  for (let x = a; x <= loppu + L;) {
+    const xm = ((x % W) + W) % W;
+    const tx = Math.floor(xm / L);
+    sarakkeet.add(tx);
+    x += Math.min((tx + 1) * L, W) - xm;
+  }
+  sarakkeet.add(Math.floor((((loppu % W) + W) % W) / L));
+  return sarakkeet;
+}
+
+/** Web Mercator -laatan (Z, X, Y) reunat asteina: { lansi, ita, pohjoinen, etela }. */
+export function laatanReunat(Z, X, Y) {
+  const n = 2 ** Z;
+  const lat = (y) => (Math.atan(Math.sinh(Math.PI * (1 - (2 * y) / n))) / RAD);
+  return {
+    lansi: (X / n) * 360 - 180,
+    ita: ((X + 1) / n) * 360 - 180,
+    pohjoinen: lat(Y),
+    etela: lat(Y + 1),
+  };
+}
+
+/** Laatan pikselirivin (0..LAATTA-1) leveysaste: Mercatorin käänteiskaava. */
+/** Alirivin leveysaste: rivin sisällä osuudella f ∈ [0, 1) (SUODATIN 'laatikko'). */
+export function alirivinLeveysaste(Z, Y, rivi, f) {
+  const n = 2 ** Z;
+  const y = Y + (rivi + f) / LAATTA;
+  return Math.atan(Math.sinh(Math.PI * (1 - (2 * y) / n))) / RAD;
+}
+
+export function rivinLeveysaste(Z, Y, rivi) {
+  const n = 2 ** Z;
+  const y = Y + (rivi + 0.5) / LAATTA;
+  return Math.atan(Math.sinh(Math.PI * (1 - (2 * y) / n))) / RAD;
+}
+
+async function noudaJson(url) {
+  const v = await fetch(url, { cache: 'no-store' });
+  if (!v.ok) throw new Error(`${url}: HTTP ${v.status}`);
+  return v.json();
+}
+
+/**
+ * Ämpärin noutotahti: R2 vastasi 429:llä, kun kaksi rinnakkaista tason
+ * 8 ajoa hakivat z7-laattoja täyttä vauhtia (4.9.2026 ilta). Pyynnöt
+ * tahditetaan vähintään NOUTOVALI ms:n välein, ja 429/5xx odotetaan
+ * kasvavalla viiveellä (Retry-After kunnioitetaan) enintään 60 s.
+ */
+export const NOUTOVALI_OLETUS = 40;
+/**
+ * Rinnakkaisen osan tahti millisekunteina KERROTTUNA rinnakkaisten
+ * prosessien määrällä: 15 ms × n on yhteensä noin 66 noutoa sekunnissa
+ * eli 2,6-kertainen yhden ajon tahti (NOUTOVALI_OLETUS 40 ms = 25/s).
+ * Varovainen tarkoituksella: 4.9.2026 429-havainto syntyi kahdesta
+ * tahdittamattomasta ajosta, joiden yhteistahti oli arviolta 100–200
+ * pyyntöä sekunnissa.
+ */
+export const YHTEISTAHTI_MS = 15;
+let noutovaliMs = NOUTOVALI_OLETUS;
+/** Noutotahti millisekunteina (shardiajossa hitaampi, ks. tiedoston alku). */
+export function asetaNoutovali(ms) {
+  if (!Number.isFinite(ms) || ms < 0) throw new Error(`--noutovali: ei-negatiivinen luku (${ms})`);
+  noutovaliMs = ms;
+}
+let edellinenNouto = 0;
+async function tahdita() {
+  const nyt = Date.now();
+  const odota = edellinenNouto + noutovaliMs - nyt;
+  if (odota > 0) await new Promise((r) => setTimeout(r, odota));
+  edellinenNouto = Date.now();
+}
+
+async function noudaLaatta(url, yrityksia = 9) {
+  for (let i = 0; i < yrityksia; i += 1) {
+    await tahdita(); // eslint-disable-line no-await-in-loop
+    let v;
+    try {
+      v = await fetch(url); // eslint-disable-line no-await-in-loop
+    } catch (e) {
+      if (i === yrityksia - 1) throw e;
+      await new Promise((r) => setTimeout(r, Math.min(60000, 1500 * 2 ** i))); // eslint-disable-line no-await-in-loop
+      continue;
+    }
+    if (v.status === 404) return null;
+    if (v.ok) return Buffer.from(await v.arrayBuffer()); // eslint-disable-line no-await-in-loop
+    if (v.status !== 429 && v.status < 500) throw new Error(`${url}: HTTP ${v.status}`);
+    if (i === yrityksia - 1) throw new Error(`${url}: HTTP ${v.status} (${yrityksia} yritystä)`);
+    const retryAfter = Number(v.headers.get('retry-after')) * 1000;
+    const viive = Math.min(60000, Math.max(retryAfter || 0, 1500 * 2 ** i));
+    console.log(`HTTP ${v.status}, odotetaan ${Math.round(viive / 1000)} s (${url.slice(-30)})`);
+    await new Promise((r) => setTimeout(r, viive)); // eslint-disable-line no-await-in-loop
+  }
+  return null;
+}
+
+/*
+ * LÄHDELAATAT PAIKALLISESTI (--lahde <kansio>, omistaja 18.9.2026).
+ *
+ * Mitattu 18.9.2026: pallon 16 shardia kestivät 20 min, ja CPU-käyttö
+ * jäi alle 20 % — työ ei ollut laskentaa vaan lähdelaattojen noutoa
+ * ämpäristä HTTP:llä 240 ms:n noutovälillä. Kun sama pyramidi on jo
+ * levyllä (aws s3 sync kerran, tai juuri poltetun kerroksen työkansio),
+ * laatta luetaan tiedostosta ja noutoväli menettää merkityksensä.
+ *
+ * Kansion polkurakenne on SAMA kuin ämpärissä `julisteet/pyramidi/`
+ * -etuliitteen alla, esim. <kansio>/<versio>/z6/12/34.webp ja
+ * <kansio>/<nostoversio>/nostot/z7/… — sama merkkijono, jolla laatta
+ * haettaisiin verkosta.
+ *
+ * KANSIO ON TOTUUS, EI VÄLIMUISTI: puuttuva tiedosto tarkoittaa samaa
+ * kuin ämpärin 404 (läpinäkyvä kerros, umpimeri pohjassa). Verkkoon ei
+ * palata, koska hiljainen paluu tekisi vajaasta synkronoinnista
+ * näkymättömän — 43 000 laatan ajo kestäisi taas tunteja eikä kukaan
+ * huomaisi. Siksi varmistaLahde() tarkistaa ENNEN ajoa, että jokainen
+ * tarvittava kerros/taso on kansiossa, ja kaatuu heti jos ei ole.
+ */
+let lahdeKansio = null;
+/** Lähdepyramidin juuri ämpärissä (reliefisarjassa matkakirja/reliefipyramidi/). */
+let pyramidiJuuri = 'julisteet/pyramidi/';
+export function asetaPyramidiJuuri(juuri) {
+  pyramidiJuuri = juuri;
+}
+/** Paikallinen lähdekansio (sama rakenne kuin ämpärin julisteet/pyramidi/). */
+export function asetaLahde(kansio) {
+  lahdeKansio = kansio || null;
+}
+const lahdeTilasto = { paikallisia: 0, verkosta: 0 };
+
+/**
+ * Lähdelaatta polulla, joka on ämpärin `julisteet/pyramidi/` alla
+ * (esim. `2026-09-07a/z6/12/34.webp`). Paikallisesta kansiosta ilman
+ * verkkoa, jos --lahde on annettu.
+ */
+async function noudaPyramidi(polku) {
+  if (lahdeKansio) {
+    const tiedosto = join(lahdeKansio, ...polku.split('/'));
+    if (!existsSync(tiedosto)) return null;
+    lahdeTilasto.paikallisia += 1;
+    return readFileSync(tiedosto);
+  }
+  lahdeTilasto.verkosta += 1;
+  return noudaLaatta(`${JULKINEN_JUURI}${pyramidiJuuri}${polku}`);
+}
+
+/**
+ * ENNAKKOTARKISTUS PAIKALLISELLE LÄHTEELLE. Vajaa kansio näkyisi
+ * valmiissa laatoissa vain merenä ja kadonneina rajoina, joten jokaisen
+ * tarvittavan kerroksen ja tason kansio tarkistetaan ennen ensimmäistä
+ * laattaa. Puute on virhe, ei varoitus.
+ */
+export function varmistaLahde(luettelo, min, max, { nostot = false, ranta = true } = {}) {
+  if (!lahdeKansio) return;
+  const nostotasot = new Set(luettelo.nostotaso?.tasot ?? []);
+  const puuttuu = [];
+  for (let Z = min; Z <= max; Z += 1) {
+    const z = lahdetaso(Z);
+    const vaaditut = [`${luettelo.versio}/z${z}`];
+    if (luettelo.viivataso?.versio) vaaditut.push(`${luettelo.viivataso.versio}/viivat/z${z}`);
+    if (ranta && luettelo.rantataso?.versio) vaaditut.push(`${luettelo.rantataso.versio}/ranta/z${z}`);
+    if (nostot && luettelo.nostotaso?.versio && nostotasot.has(z)) {
+      vaaditut.push(`${luettelo.nostotaso.versio}/nostot/z${z}`);
+    }
+    for (const p of vaaditut) {
+      if (!existsSync(join(lahdeKansio, ...p.split('/'))) && !puuttuu.includes(p)) puuttuu.push(p);
+    }
+  }
+  if (puuttuu.length) {
+    throw new Error(`--lahde ${lahdeKansio}: kansiosta puuttuu ${puuttuu.length} tarvittavaa `
+      + `kerros/taso-kansiota, esim. ${puuttuu.slice(0, 4).join(', ')}. `
+      + 'Synkronoi ne ämpäristä (aws s3 sync) tai aja ilman --lahde-lippua.');
+  }
+}
+
+/**
+ * Lähdelaattojen lukija: antaa arkin pikselin (z, px, py) RGB:nä.
+ * Pohja ja viivataso yhdistetään laattaa noudettaessa; puuttuva
+ * pohjalaatta on merta.
+ */
+function teeLukija(luettelo, sharp, { nostot = false, ranta = true } = {}) {
+  const L = luettelo.laatta ?? 512;
+  const viivaversio = luettelo.viivataso?.versio ?? null;
+  /*
+   * RANTATASO (omistaja 6.9.2026 ilta): kun pohja on poltettu
+   * `--ilman-rantaviivaa`, rantaviivan muste on omalla läpinäkyvällä
+   * tasollaan. Pallon sarjaan se yhdistetään SAMALLA SÄÄNNÖLLÄ kuin
+   * viivataso — paitsi kun pallo piirtää rantaviivan vektorina
+   * (js/pallovektorit.js), jolloin `--ilman-rantaa` jättää sen pois ja
+   * vektori on ainoa rantaviiva myös laatoissa.
+   *
+   * Vanha luettelo ilman `rantataso`-kenttää: null, eikä mitään
+   * yhdistetä — rantaviiva on silloin pohjalaatoissa kuten ennen.
+   */
+  const rantaversio = ranta ? (luettelo.rantataso?.versio ?? null) : null;
+  // Nostotaso (nimet, karttanostot) on vain tasoilla nostotaso.tasot (z5–z7).
+  const nostoversio = nostot ? (luettelo.nostotaso?.versio ?? null) : null;
+  const nostotasot = new Set(luettelo.nostotaso?.tasot ?? []);
+  const muisti = new Map();
+  let meri = null;
+  const tilasto = { noudettu: 0, puuttui: 0 };
+  async function laatta(z, tx, ty) {
+    const avain = `${z}/${tx}/${ty}`;
+    if (muisti.has(avain)) {
+      const arvo = muisti.get(avain);
+      muisti.delete(avain); muisti.set(avain, arvo); // tuoreimmaksi
+      return arvo;
+    }
+    const taso = luettelo.tasot.find((t) => t.z === z);
+    let ulos = null;
+    if (tx >= 0 && ty >= 0 && tx < taso.sarakkeita && ty < taso.riveja) {
+      const pohja = await noudaPyramidi(`${luettelo.versio}/z${z}/${tx}/${ty}.webp`);
+      if (pohja) {
+        tilasto.noudettu += 1;
+        const { data, info } = await sharp(pohja).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+        const kuva = { data, w: info.width, h: info.height };
+        /*
+         * KERROSTEN JÄRJESTYS ON PIIRTOJÄRJESTYS ja sama kuin
+         * tasokartalla (js/laattapyramidi.js varmistaKerrokset):
+         * pohja → ranta → viiva → nosto.
+         */
+        const kerrokset = [];
+        if (rantaversio) kerrokset.push(`${rantaversio}/ranta/z${z}/${tx}/${ty}.webp`);
+        if (viivaversio) kerrokset.push(`${viivaversio}/viivat/z${z}/${tx}/${ty}.webp`);
+        if (nostoversio && nostotasot.has(z)) kerrokset.push(`${nostoversio}/nostot/z${z}/${tx}/${ty}.webp`);
+        for (const polku of kerrokset) {
+          const kerros = await noudaPyramidi(polku); // eslint-disable-line no-await-in-loop
+          if (!kerros) continue;
+          const v = await sharp(kerros).ensureAlpha().raw().toBuffer({ resolveWithObject: true }); // eslint-disable-line no-await-in-loop
+          const n = Math.min(v.info.width * v.info.height, info.width * info.height);
+          for (let i = 0; i < n; i += 1) {
+            const a = v.data[i * 4 + 3] / 255;
+            if (a <= 0) continue;
+            for (let c = 0; c < 3; c += 1) data[i * 4 + c] = Math.round(data[i * 4 + c] * (1 - a) + v.data[i * 4 + c] * a);
+          }
+        }
+        ulos = kuva;
+      } else {
+        tilasto.puuttui += 1;
+      }
+    }
+    muisti.set(avain, ulos);
+    if (muisti.size > VALIMUISTI) muisti.delete(muisti.keys().next().value);
+    return ulos;
+  }
+  /**
+   * Noutaa etukäteen kaikki lähdelaatat, joita arkin alue [px0, px1] ×
+   * [py0, py1] tasolla z tarvitsee (x kiertää sauman yli). Tämän jälkeen
+   * pikseli() on synkroninen — 65 536 awaitia laattaa kohti olisi
+   * tuntien työ.
+   */
+  async function varmista(z, px0, px1, py0, py1) {
+    const taso = luettelo.tasot.find((t) => t.z === z);
+    const ty0 = Math.max(0, Math.floor(py0 / L));
+    const ty1 = Math.min(taso.riveja - 1, Math.floor(py1 / L));
+    const sarakkeet = varmistettavatSarakkeet(px0, px1, taso.leveys, L);
+    for (const tx of sarakkeet) {
+      for (let ty = ty0; ty <= ty1; ty += 1) await laatta(z, tx, ty); // eslint-disable-line no-await-in-loop
+    }
+  }
+  /** Arkin pikseli (px, py) tasolla z synkronisesti; laatta on varmistettu. */
+  function pikseli(z, px, py, ulos, o) {
+    const taso = luettelo.tasot.find((t) => t.z === z);
+    const W = taso.leveys;
+    const x = ((Math.floor(px) % W) + W) % W;
+    const y = Math.min(taso.korkeus - 1, Math.max(0, Math.floor(py)));
+    const k = muisti.get(`${z}/${Math.floor(x / L)}/${Math.floor(y / L)}`);
+    if (!k) { const m = meri?.aukko ?? meri?.pohjoinen ?? MERI_VARA; ulos[o] = m[0]; ulos[o + 1] = m[1]; ulos[o + 2] = m[2]; return; }
+    const i = ((y % L) * k.w + (x % L)) * 4;
+    ulos[o] = k.data[i]; ulos[o + 1] = k.data[i + 1]; ulos[o + 2] = k.data[i + 2];
+  }
+  /**
+   * Merisävyt kartan sisältä kummankin reunan avomereltä (MERI_MITTAUS)
+   * 5 × 5 pikselin keskiarvona karkealta lähdetasolta; mitataan kerran.
+   * Puute → MERI_SAVY. Palauttaa { pohjoinen, etela }.
+   */
+  async function mittaaMeri() {
+    if (meri) return meri;
+    const vali = julisteenLeveysvali(luettelo);
+    const taso = luettelo.tasot.find((t) => t.z === 2) ?? luettelo.tasot[0];
+    const mittaa = async (lon, lat) => {
+      const a = arkinPikseli(luettelo, taso, lon, lat);
+      const k = a && await laatta(taso.z, Math.floor(a.px / L), Math.floor(a.py / L));
+      if (!k) return MERI_VARA;
+      const summa = [0, 0, 0]; let n = 0;
+      for (let dy = -2; dy <= 2; dy += 1) {
+        for (let dx = -2; dx <= 2; dx += 1) {
+          const x = (Math.floor(a.px) % L) + dx; const y = (Math.floor(a.py) % L) + dy;
+          if (x < 0 || y < 0 || x >= k.w || y >= k.h) continue;
+          const i = (y * k.w + x) * 4;
+          summa[0] += k.data[i]; summa[1] += k.data[i + 1]; summa[2] += k.data[i + 2]; n += 1;
+        }
+      }
+      return n ? summa.map((v) => Math.round(v / n)) : MERI_VARA;
+    };
+    meri = {
+      pohjoinen: await mittaa(MERI_MITTAUS.pohjoinen.lon, vali.pohjoinen - MERI_MITTAUS.sisaan),
+      etela: await mittaa(MERI_MITTAUS.etela.lon, vali.etela + MERI_MITTAUS.sisaan),
+      // Reliefissä puuttuva lähdelaatta saa reliefin oman täytesävyn.
+      aukko: luettelo.relief ? luettelo.tayte : null,
+    };
+    return meri;
+  }
+  /** Kuten pikseli, mutta RGBA; palauttaa false, jos lähdelaatta puuttuu (väritaso). */
+  function pikseliRGBA(z, px, py, ulos, o) {
+    const taso = luettelo.tasot.find((t) => t.z === z);
+    const W = taso.leveys;
+    const x = ((Math.floor(px) % W) + W) % W;
+    const y = Math.min(taso.korkeus - 1, Math.max(0, Math.floor(py)));
+    const k = muisti.get(`${z}/${Math.floor(x / L)}/${Math.floor(y / L)}`);
+    if (!k) return false;
+    const i = ((y % L) * k.w + (x % L)) * 4;
+    ulos[o] = k.data[i]; ulos[o + 1] = k.data[i + 1]; ulos[o + 2] = k.data[i + 2]; ulos[o + 3] = k.data[i + 3];
+    return true;
+  }
+  return { varmista, pikseli, pikseliRGBA, tilasto, mittaaMeri };
+}
+
+/**
+ * Julisteen leveysasteväli: rajauksen ylä- ja alareuna asteina.
+ * Millerin käänteiskaava: lat = (atan(exp(−y/1,25)) − π/4) / 0,4, missä
+ * y on millerY-arvo (ruutu-y alaspäin, ks. tee-pallotekstuuri.mjs).
+ */
+export function julisteenLeveysvali(luettelo) {
+  if (luettelo.vali) return luettelo.vali;
+  const p = luettelo.projektio;
+  const sk = p.leveys / (2 * Math.PI);
+  const yP = millerY(p.pohjoinen);
+  const kaannos = (laudanY) => ((Math.atan(Math.exp(-(laudanY / sk + yP) / 1.25)) - Math.PI / 4) / 0.4) / RAD;
+  const { rajaus } = luettelo;
+  /*
+   * VAIN KARTTA, EI ARKIN KALUSTEITA (löydös 5.9.2026 etusivun pallosta:
+   * julisteen kartussi "MATKAKIRJA" ja kehys näkyivät pallolla
+   * Jäämerellä). Rajaus (rajaus.y … rajaus.y + rajaus.h) on kartan
+   * pinta; arkin marginaalit sen ylä- ja alapuolella (kartussi, kehys,
+   * painajanrivi) kuuluvat tasokartalle mutta eivät pallon pinnalle.
+   * Pohjoisessa kartta ulottuu rajauksen yläreunaan (≈ 84° N: Huippu-
+   * vuoret, Frans Joosefin maa ja Jäämeri ovat kartalla — 5.9.2026
+   * iltapäivän virhe leikkasi kartan projektion vertailuleveyteen 76°
+   * ja olisi hävittänyt ne); etelässä arkin alakehys (kehys.ala px)
+   * vähennetään rajauksen alareunasta. Ulkopuoli täytetään merellä ja
+   * jäällä (laskeLaatta, tayteRivilla).
+   */
+  const pohjoinen = kaannos(rajaus.y);
+  const alakehys = Number(luettelo.kehys?.ala) || 0;
+  const etela = kaannos(rajaus.y + rajaus.h - alakehys);
+  return { pohjoinen, etela };
+}
+
+/**
+ * Reliefisarjan luettelo: reliefipyramidin tasot ja arkki, pohjan
+ * projektio ja rajaus (reliefin luettelossa niitä ei ole; arkki on sama,
+ * mikä tarkistetaan). Ei kehystä eikä kerroksia (viivat, ranta, nostot).
+ */
+export function reliefinLuettelo(pohja, relief, versio) {
+  const a = pohja.arkki; const b = relief.arkki;
+  if (!a || !b || ['x', 'y', 'w', 'h'].some((k) => Math.abs(a[k] - b[k]) > 1e-6)) {
+    throw new Error(`--relief: reliefin arkki ${JSON.stringify(b)} ei ole pohjan arkki ${JSON.stringify(a)}`);
+  }
+  return {
+    versio,
+    relief: true,
+    lahde: relief.lahde ?? null,
+    projektio: pohja.projektio,
+    arkki: relief.arkki,
+    rajaus: pohja.rajaus,
+    kehys: {},
+    vali: RELIEFIN_VALI,
+    tayte: RELIEFIN_TAYTE,
+    laatta: relief.laatta ?? 512,
+    // Reliefin tasoilla ei ole pikseliaPerYksikko-kenttää (arkinPikseli).
+    tasot: relief.tasot.map((t) => ({ ...t, pikseliaPerYksikko: t.leveys / pohja.projektio.leveys })),
+  };
+}
+
+/*
+ * RELIEFIN KATTAVUUS JA TÄYTE (mitattu reliefipyramidista 20260920,
+ * 23.9.2026): laatat kattavat 84° N … 65,43° S (z7 rivit 6–95), ja
+ * kattavuuden ulkopuoli on tuottajan omaa täytettä RGB 37, 78, 144
+ * (työkalun MERIVARI webp-pakattuna). Sarja käyttää samaa sävyä kartan
+ * ulkopuolella ja puuttuvissa laatoissa, joten saumoja ei synny eikä
+ * reunan värejä venytetä raidoiksi.
+ *
+ * Versiossa 20260920 täytettä oli myös arkin itäisin kaistale lon
+ * −178,7…−175 (z7 sarakkeet 167–168 puuttuivat). Versio 20260924
+ * (Karttaseppä 24.9.2026) paikkasi ne: rivit ja kattavuus ovat samat,
+ * joten VALI ja TAYTE pätevät sellaisinaan, mutta kaistale on nyt
+ * reliefiä.
+ */
+export const RELIEFIN_VALI = { pohjoinen: 84, etela: -65.43 };
+export const RELIEFIN_TAYTE = [37, 78, 144];
+
+/** Reliefisarjan ämpärikansio: reliefipyramidin versio + pallo/ (tai pallo-k08/ kylläisyydellä 0,8). */
+export const reliefinKansio = (versio, kyllaisyys = 1) => `matkakirja/reliefipyramidi/${versio}/pallo${kyllaisyys === 1 ? '' : `-k${String(Math.round(kyllaisyys * 100)).padStart(3, '0').replace(/0$/, '')}`}/`;
+
+/*
+ * KYLLÄISYYS (--kyllaisyys s, Linssiseppä 23.9.2026): webin reliefi
+ * piirretään vaimeana (satelliitti-avaruus.js RELIEFIN_SATURAATIO, canvas
+ * saturate(0.8)), mutta Cesiumin rasterissa ei ole kylläisyyssäätöä, joten
+ * sama muunnos poltetaan laattoihin. Matriisi on CSS/SVG:n saturate
+ * (Filter Effects, feColorMatrix type="saturate") sRGB-arvoihin, kuten
+ * selaimen canvas-suodin sen tekee.
+ */
+export function kylliastyMatriisi(s) {
+  return [
+    [0.213 + 0.787 * s, 0.715 - 0.715 * s, 0.072 - 0.072 * s],
+    [0.213 - 0.213 * s, 0.715 + 0.285 * s, 0.072 - 0.072 * s],
+    [0.213 - 0.213 * s, 0.715 - 0.715 * s, 0.072 + 0.928 * s],
+  ];
+}
+
+/** RGB-puskuri (3 kanavaa) paikallaan kylläisyydellä s. */
+export function kyllaista(rgb, s) {
+  if (s === 1) return rgb;
+  const m = kylliastyMatriisi(s);
+  for (let i = 0; i < rgb.length; i += 3) {
+    const r = rgb[i]; const g = rgb[i + 1]; const b = rgb[i + 2];
+    for (let c = 0; c < 3; c += 1) {
+      rgb[i + c] = Math.max(0, Math.min(255, Math.round(m[c][0] * r + m[c][1] * g + m[c][2] * b)));
+    }
+  }
+  return rgb;
+}
+
+/*
+ * VÄRITASO PALLOLLE (--varitaso ISO, Natiiviseppä 24.9.2026: natiivi
+ * siirtyy webin pohjamalliin, sepiapohja + nykyisen maan väritaso).
+ * Webin väritaso on Miller-pyramidissa (pyramidi.json varitasot[ISO],
+ * <versio>/vari/<ISO>/z…), jota Cesium ei lue, joten se muunnetaan
+ * samalla kaavalla Mercator-laatoiksi — mutta RGBA:na: laatan alfa on
+ * väritason oma häivytys, ja kartan ulkopuoli sekä puuttuva lähdelaatta
+ * ovat läpinäkyviä. Ei täytettä, ei reunanostoa.
+ */
+export function varitasonLuettelo(pohja, iso) {
+  const v = pohja.varitasot?.[iso];
+  if (!v?.versio || !v.tasot?.length) throw new Error(`--varitaso ${iso}: luettelossa ei väritasoa`);
+  return {
+    ...pohja,
+    versio: `${v.versio}/vari${v.maaPolussa && v.maa ? `/${v.maa}` : ''}`,
+    viivataso: null, rantataso: null, nostotaso: null,
+    vari: { maa: iso, versio: v.versio, tasot: v.tasot, alue: v.alue ?? null },
+  };
+}
+
+/** Väritason pallokansio: julisteet/pallo/vari/<versio>/<ISO>/. */
+export const varitasonPallokansio = (versio, iso, tunniste = '') => `julisteet/pallo/vari/${versio}${tunniste ? `-${tunniste}` : ''}/${iso}/`;
+
+/*
+ * ALUEEN ULKOPUOLI KERMAKSI (Natiiviseppä 24.9.2026): webissä kerma-
+ * shader maalaa väritason alueen ulkopuolen, natiivissa sitä ei ole,
+ * joten reunalaattojen ulkopuoli (ja puuttuva lähdelaatta) poltetaan
+ * täydeksi kermaksi. Sama sävy kuin väritason kerma (#faf4d6) peitolla
+ * 0,85 (alfa 217). Maan ympäryksen häivytys ennallaan.
+ */
+export const VARIN_ULKOPUOLI = [250, 244, 214, 217];
+
+/** Yhden Mercator-laatan RGBA-puskuri väritasosta. */
+export async function laskeVariLaatta(luettelo, lukija, Z, X, Y) {
+  const z = lahdetaso(Z);
+  const taso = luettelo.tasot.find((t) => t.z === z);
+  const n = 2 ** Z;
+  const ulos = Buffer.alloc(LAATTA * LAATTA * 4);
+  const reunat = laatanReunat(Z, X, Y);
+  const vali = julisteenLeveysvali(luettelo);
+  const latY = Math.min(vali.pohjoinen - 1e-6, Math.max(vali.etela + 1e-6, reunat.pohjoinen));
+  const latE = Math.min(vali.pohjoinen - 1e-6, Math.max(vali.etela + 1e-6, reunat.etela));
+  const a0 = arkinPikseli(luettelo, taso, reunat.lansi + 1e-9, latY);
+  const a1 = arkinPikseli(luettelo, taso, reunat.ita - 1e-9, latE);
+  if (a0 && a1) {
+    let px1 = a1.px; if (px1 < a0.px) px1 += taso.leveys;
+    await lukija.varmista(z, a0.px, px1, Math.min(a0.py, a1.py), Math.max(a0.py, a1.py));
+  }
+  for (let r = 0; r < LAATTA; r += 1) {
+    const lat = rivinLeveysaste(Z, Y, r);
+    const kartalla = lat < vali.pohjoinen && lat > vali.etela;
+    for (let s = 0; s < LAATTA; s += 1) {
+      const o = (r * LAATTA + s) * 4;
+      const lon = ((X + (s + 0.5) / LAATTA) / n) * 360 - 180;
+      const va = luettelo.vari?.alue;
+      const alueella = !va || (lon >= va.lon0 && lon <= va.lon1 && lat >= va.lat0 && lat <= va.lat1);
+      const a = kartalla && alueella ? arkinPikseli(luettelo, taso, lon, lat) : null;
+      /*
+       * Alueen ulkopuoli ja PUUTTUVA lähdelaatta → kerma. Läpinäkyvä
+       * pikseli olemassa olevassa laatassa on maan sisäosa ja jää
+       * läpinäkyväksi (kierros k2 kermasi sen virheellisesti).
+       */
+      if (!a || !lukija.pikseliRGBA(z, a.px, a.py, ulos, o)) {
+        [ulos[o], ulos[o + 1], ulos[o + 2], ulos[o + 3]] = VARIN_ULKOPUOLI;
+      }
+    }
+  }
+  return ulos;
+}
+
+/** Laskee yhden Mercator-laatan RGB-puskurin. */
+export async function laskeLaatta(luettelo, lukija, Z, X, Y) {
+  const z = lahdetaso(Z);
+  const taso = luettelo.tasot.find((t) => t.z === z);
+  const n = 2 ** Z;
+  const ulos = Buffer.alloc(LAATTA * LAATTA * 3);
+  // Lähdelaatat etukäteen: pikselin x riippuu vain pituusasteesta ja y
+  // vain leveysasteesta, joten reunat riittävät.
+  const reunat = laatanReunat(Z, X, Y);
+  const vali = julisteenLeveysvali(luettelo);
+  const latY = Math.min(vali.pohjoinen - 1e-6, Math.max(vali.etela + 1e-6, reunat.pohjoinen));
+  const latE = Math.min(vali.pohjoinen - 1e-6, Math.max(vali.etela + 1e-6, reunat.etela));
+  const a0 = arkinPikseli(luettelo, taso, reunat.lansi + 1e-9, latY);
+  const a1 = arkinPikseli(luettelo, taso, reunat.ita - 1e-9, latE);
+  if (a0 && a1) {
+    let px1 = a1.px; if (px1 < a0.px) px1 += taso.leveys; // sauman yli
+    await lukija.varmista(z, a0.px, px1, Math.min(a0.py, a1.py), Math.max(a0.py, a1.py));
+  }
+  const meret = await lukija.mittaaMeri();
+  const relief = Boolean(luettelo.relief);
+  /*
+   * Reunarivien lähdelaatat ja sarakesävyt VAIN reunalaatoille (laatta
+   * ulottuu täytteeseen tai reunakaistaan). Kansion c ensimmäinen ajo
+   * (5.9.2026 klo 18.34–) haki reunarivit joka laatalle, mikä syrjäytti
+   * lähdelaattojen välimuistin (VALIMUISTI) ja lähes kaksinkertaisti
+   * ajan — Z8:n 65 536 laatalle se olisi tuntien ero.
+   */
+  const reunalaatta = reunat.pohjoinen > vali.pohjoinen - REUNAN_NOSTO
+    || reunat.etela < vali.etela + REUNAN_NOSTO;
+  const reunaLat = { pohjoinen: vali.pohjoinen - REUNAN_MITTAUS, etela: vali.etela + REUNAN_MITTAUS };
+  for (const lat of (reunalaatta ? [reunaLat.pohjoinen, reunaLat.etela] : [])) {
+    const b0 = arkinPikseli(luettelo, taso, reunat.lansi + 1e-9, lat);
+    const b1 = arkinPikseli(luettelo, taso, reunat.ita - 1e-9, lat);
+    if (!b0 || !b1) continue;
+    let px1 = b1.px; if (px1 < b0.px) px1 += taso.leveys;
+    await lukija.varmista(z, b0.px, px1, Math.min(b0.py, b1.py) - 2, Math.max(b0.py, b1.py) + 2); // eslint-disable-line no-await-in-loop
+  }
+  /*
+   * Sarakesävyt: kummankin reunan tint jokaiselle sarakkeelle 5 × 5
+   * keskiarvona, sitten liukuva keskiarvo sarakkeiden yli (SAVYN_TASOITUS),
+   * ettei paperin rae jää pystyraidoiksi täytteeseen. Merenkaltaisuus
+   * arvioidaan pikselistä itsestään (vähän kylläisyyttä, meren
+   * tummuusalue), ei puolipallon yleissävyyn verraten: julisteen meri on
+   * reunan lähellä paikoin selvästi vaaleampi kuin keskimäärin.
+   */
+  const sarakesavyt = { pohjoinen: null, etela: null };
+  const reunanSavy = (s, puoli) => {
+    if (!reunalaatta) return meret[puoli];
+    if (!sarakesavyt[puoli]) {
+      const raaka = [];
+      for (let c = 0; c < LAATTA; c += 1) {
+        const lon = ((X + (c + 0.5) / LAATTA) / n) * 360 - 180;
+        const a = arkinPikseli(luettelo, taso, lon, reunaLat[puoli]);
+        let savy = null;
+        if (a) {
+          const summa = [0, 0, 0]; const rgb = [0, 0, 0]; let k = 0;
+          for (let dy = -2; dy <= 2; dy += 1) {
+            for (let dx = -2; dx <= 2; dx += 1) {
+              lukija.pikseli(z, a.px + dx, a.py + dy, rgb, 0);
+              summa[0] += rgb[0]; summa[1] += rgb[1]; summa[2] += rgb[2]; k += 1;
+            }
+          }
+          const keski = summa.map((v) => Math.round(v / k));
+          const lum = (keski[0] + keski[1] + keski[2]) / 3;
+          const kyllainen = Math.abs(keski[0] - keski[1]) > 18 || Math.abs(keski[1] - keski[2]) > 34;
+          if (!kyllainen && lum >= 150 && lum <= 235) savy = keski;
+        }
+        raaka.push(savy);
+      }
+      // Aukot (maa, rantaviiva) lähimmästä merisarakkeesta, muuten yleissävy.
+      const tayt = raaka.map((v, i) => {
+        if (v) return v;
+        for (let d = 1; d < LAATTA; d += 1) {
+          if (raaka[i - d]) return raaka[i - d];
+          if (raaka[i + d]) return raaka[i + d];
+        }
+        return meret[puoli];
+      });
+      const tasoitettu = tayt.map((_, i) => {
+        const summa = [0, 0, 0]; let k = 0;
+        for (let d = -SAVYN_TASOITUS; d <= SAVYN_TASOITUS; d += 1) {
+          const v = tayt[Math.min(LAATTA - 1, Math.max(0, i + d))];
+          summa[0] += v[0]; summa[1] += v[1]; summa[2] += v[2]; k += 1;
+        }
+        return summa.map((v) => Math.round(v / k));
+      });
+      sarakesavyt[puoli] = tasoitettu;
+    }
+    return sarakesavyt[puoli][s];
+  };
+  for (let r = 0; r < LAATTA; r += 1) {
+    const lat = rivinLeveysaste(Z, Y, r);
+    const puoli = lat >= 0 ? 'pohjoinen' : 'etela';
+    // Reunakaista: 1 kartan reunassa, 0 REUNAN_NOSTO asteen päässä siitä.
+    const reuna = Math.max(0, 1 - Math.min(vali.pohjoinen - lat, lat - vali.etela) / REUNAN_NOSTO);
+    /*
+     * KARTAN ULKOPUOLI ON AINA TÄYTETTÄ (löydös 5.9.2026 klo 18.30,
+     * omistajan kuvakaappaus etelänavalta: katkoviivarengas 61,5° S).
+     * arkinPikseli vastaa koko rajaukselle, myös arkin alakehykselle
+     * (kehysviiva, painajanrivi), joka on julisteenLeveysvali:n
+     * ulkopuolella. Lähdelaatat noudetaan vain välille, joten kehys
+     * piirtyi vain sieltä, missä sen lähdelaatta sattui olemaan
+     * välimuistissa — katkoviiva. Nyt raja on väli, ei rajaus.
+     */
+    const kartalla = lat < vali.pohjoinen && lat > vali.etela;
+    for (let s = 0; s < LAATTA; s += 1) {
+      const lon = ((X + (s + 0.5) / LAATTA) / n) * 360 - 180;
+      const o = (r * LAATTA + s) * 3;
+      const a = kartalla ? arkinPikseli(luettelo, taso, lon, lat) : null;
+      if (!a) {
+        const tayte = relief ? luettelo.tayte : tayteRivilla(lat, reunanSavy(s, puoli));
+        ulos[o] = tayte[0]; ulos[o + 1] = tayte[1]; ulos[o + 2] = tayte[2];
+        continue;
+      }
+      if (SUODATIN === 'laatikko') {
+        // 3 × 3 alinäytettä pikselin alalta (ks. SUODATIN).
+        let k = 0; const summa = [0, 0, 0]; const rgb = [0, 0, 0];
+        for (let j = 0; j < 3; j += 1) {
+          const latj = alirivinLeveysaste(Z, Y, r, (j + 0.5) / 3);
+          for (let i = 0; i < 3; i += 1) {
+            const loni = ((X + (s + (i + 0.5) / 3) / LAATTA) / n) * 360 - 180;
+            const b = arkinPikseli(luettelo, taso, loni, latj);
+            if (!b) continue;
+            lukija.pikseli(z, b.px, b.py, rgb, 0);
+            summa[0] += rgb[0]; summa[1] += rgb[1]; summa[2] += rgb[2]; k += 1;
+          }
+        }
+        if (k) {
+          ulos[o] = Math.round(summa[0] / k); ulos[o + 1] = Math.round(summa[1] / k); ulos[o + 2] = Math.round(summa[2] / k);
+        } else lukija.pikseli(z, a.px, a.py, ulos, o);
+      } else {
+        // Lähin pikseli (oletus): lähdetaso on aina tiheämpi kuin kohde.
+        lukija.pikseli(z, a.px, a.py, ulos, o);
+      }
+      if (reuna > 0 && !relief) nostaReuna(ulos, o, reunanSavy(s, puoli), reuna);
+    }
+  }
+  return ulos;
+}
+
+/**
+ * Nostotason kirjaus pallon luetteloon: pyramidin nostotaso pallon
+ * tasoina. Vain ne Mercator-tasot, joiden lähdetaso (lahdetaso) on
+ * nostotasolla JA jotka tämä ajo kirjoitti.
+ */
+export function pallonNostotaso(luettelo, min, max) {
+  const nt = luettelo?.nostotaso;
+  if (!nt) return null;
+  const lahteet = new Set(nt.tasot ?? []);
+  const tasot = [];
+  for (let Z = min; Z <= max; Z += 1) if (lahteet.has(lahdetaso(Z))) tasot.push(Z);
+  return {
+    versio: nt.versio ?? null,
+    saanto: nt.saanto ?? null,
+    tasot,
+    nostot: { ...(nt.nostot ?? {}) },
+  };
+}
+
+/** Laatat, jotka osuvat annettuun alueeseen (tai kaikki). */
+export function tasonLaatat(Z, alue = null) {
+  const n = 2 ** Z;
+  const ulos = [];
+  for (let Y = 0; Y < n; Y += 1) {
+    for (let X = 0; X < n; X += 1) {
+      if (alue) {
+        const r = laatanReunat(Z, X, Y);
+        if (r.ita <= alue[0] || r.lansi >= alue[2] || r.pohjoinen <= alue[1] || r.etela >= alue[3]) continue;
+      }
+      ulos.push([X, Y]);
+    }
+  }
+  return ulos;
+}
+
+/**
+ * Koko ajon työlista: [Z, X, Y] tasoilta min…max samassa järjestyksessä
+ * kuin yksi ajo ne laskee (taso kerrallaan, tasonLaatat-järjestys).
+ */
+export function tyolista(min, max, alue = null) {
+  const ulos = [];
+  for (let Z = min; Z <= max; Z += 1) for (const [X, Y] of tasonLaatat(Z, alue)) ulos.push([Z, X, Y]);
+  return ulos;
+}
+
+/**
+ * Osan i/n sarakekaista [x0, x1) tasolla, jolla on `sarakkeita`
+ * saraketta: peräkkäiset, pistevieraat ja yhdessä koko taso.
+ * Jakojäännös jaetaan ensimmäisille osille, joten kaistat eroavat
+ * leveydeltään enintään yhdellä sarakkeella. Kun osia on enemmän kuin
+ * sarakkeita (matalat tasot), viimeiset kaistat ovat tyhjiä.
+ */
+export function kaistanRajat(sarakkeita, i, n) {
+  const koko = Math.floor(sarakkeita / n);
+  const yli = sarakkeita % n;
+  const x0 = (i - 1) * koko + Math.min(i - 1, yli);
+  return [x0, x0 + koko + (i - 1 < yli ? 1 : 0)];
+}
+
+/**
+ * Osan i/n laatat: jokaiselta tasolta oman sarakekaistansa laatat
+ * samassa järjestyksessä kuin yksi ajo ne laskisi. Ilman osaa (null)
+ * koko työlista.
+ */
+export function osanLaatat(min, max, alue = null, osa = null) {
+  if (!osa) return tyolista(min, max, alue);
+  const ulos = [];
+  for (let Z = min; Z <= max; Z += 1) {
+    const [x0, x1] = kaistanRajat(2 ** Z, osa.i, osa.n);
+    if (x0 >= x1) continue;
+    for (const [X, Y] of tasonLaatat(Z, alue)) if (X >= x0 && X < x1) ulos.push([Z, X, Y]);
+  }
+  return ulos;
+}
+
+/** `--osa i/n` → { i, n }; null, jos lippua ei annettu. */
+export function lueOsa(teksti) {
+  if (!teksti) return null;
+  const osat = /^(\d+)\/(\d+)$/.exec(String(teksti).replace(/\s+/g, ''));
+  if (!osat) throw new Error(`--osa: muoto i/n, esim. 3/12 (${teksti})`);
+  const i = Number(osat[1]);
+  const n = Number(osat[2]);
+  if (n < 1 || i < 1 || i > n) throw new Error(`--osa ${teksti}: 1 ≤ i ≤ n`);
+  return { i, n };
+}
+
+async function paa() {
+  const argv = process.argv.slice(2);
+  const lippu = (nimi) => { const i = argv.indexOf(nimi); return i >= 0 ? argv[i + 1] : null; };
+  const kuiva = argv.includes('--kuiva');
+  const min = Number(lippu('--min') ?? 0);
+  const max = Number(lippu('--max') ?? 7);
+  const ulos = lippu('--ulos') ?? 'pallolaatat-ulos';
+  let alue = lippu('--alue')?.split(',').map(Number) ?? null;
+  const nostot = argv.includes('--nostot');
+  /*
+   * `--ilman-rantaa`: pallon sarja kootaan ilman rantatasoa, koska
+   * pallo piirtää rantaviivan vektorina. Oletus on RANTA MUKAAN, jos
+   * luettelossa on rantataso — silloin pallon laatta on sama kartta
+   * kuin tasokartan laatta.
+   */
+  const ranta = !argv.includes('--ilman-rantaa');
+  const tunniste = lippu('--tunniste') ?? '';
+  // Löydös 46 -koe (ks. SUODATIN); ilman lippuja tavulleen entinen.
+  asetaNaytteistys({
+    suodatin: lippu('--suodatin') ?? 'lahin',
+    laatu: Number(lippu('--jpeg-laatu') ?? LAATU),
+    v444: argv.includes('--jpeg-444'),
+  });
+  if (!/^[a-z0-9]*$/.test(tunniste)) throw new Error(`--tunniste: vain a–z ja 0–9 (${tunniste})`);
+  const osa = lueOsa(lippu('--osa'));
+  // Rinnakkaisten osien yhteistahti (ks. tiedoston alku, NOUTOTAHTI).
+  // TYHJÄ ARVO ON SAMA KUIN PUUTTUVA: `--noutovali ""` (skriptin muuttuja
+  // asettamatta) tarkoitti Number('') = 0 eli tahditusta ei olisi
+  // lainkaan — juuri se tila, josta ämpäri vastasi 429:llä.
+  const noutovaliArg = lippu('--noutovali');
+  const noutovali = noutovaliArg
+    ? Number(noutovaliArg)
+    : (osa ? YHTEISTAHTI_MS * osa.n : NOUTOVALI_OLETUS);
+  asetaNoutovali(noutovali);
+
+  /*
+   * LUETTELO JA LÄHDELAATAT PAIKALLISESTI (ks. LUETTELO ja
+   * noudaPyramidi tiedoston yläosassa): yhden ajon poltossa luetteloa
+   * ei ole vielä viety ämpäriin, ja lähdelaatat ovat levyllä.
+   */
+  const luettelopolku = lippu('--luettelo');
+  const lahde = lippu('--lahde');
+  asetaLahde(lahde);
+  const pohjaLuettelo = luettelopolku
+    ? JSON.parse(readFileSync(luettelopolku, 'utf8'))
+    : await noudaJson(LUETTELO);
+  /*
+   * RELIEFISARJA: `--relief` on reliefipyramidi.jsonin osoite tai polku;
+   * versio on sen kansion nimi (…/reliefipyramidi/<versio>/…).
+   */
+  const reliefLahde = lippu('--relief');
+  const kyllaisyys = Number(lippu('--kyllaisyys') ?? 1);
+  if (!(kyllaisyys >= 0 && kyllaisyys <= 2)) throw new Error(`--kyllaisyys: 0…2 (${kyllaisyys})`);
+  if (kyllaisyys !== 1 && !reliefLahde) throw new Error('--kyllaisyys vain --relief-sarjalle');
+  let luettelo = pohjaLuettelo;
+  let kansio = laattojenKansio(pohjaLuettelo.versio, nostot, tunniste);
+  if (reliefLahde) {
+    const versio = /reliefipyramidi\/([^/]+)\//.exec(reliefLahde)?.[1];
+    if (!versio) throw new Error(`--relief: polusta ei löydy reliefipyramidi/<versio>/ (${reliefLahde})`);
+    if (nostot || tunniste) throw new Error('--relief: ei --nostot- eikä --tunniste-lippua');
+    const relief = /^https?:/.test(reliefLahde) ? await noudaJson(reliefLahde) : JSON.parse(readFileSync(reliefLahde, 'utf8'));
+    luettelo = reliefinLuettelo(pohjaLuettelo, relief, versio);
+    asetaPyramidiJuuri('matkakirja/reliefipyramidi/');
+    kansio = reliefinKansio(versio, kyllaisyys);
+    luettelo.kyllaisyys = kyllaisyys;
+  }
+  const variIso = lippu('--varitaso');
+  if (variIso) {
+    if (reliefLahde || nostot) throw new Error('--varitaso: ei --relief- eikä --nostot-lippua');
+    luettelo = varitasonLuettelo(pohjaLuettelo, variIso);
+    // --tunniste = sarjan kierros (laatat ovat vuoden välimuistissa).
+    kansio = varitasonPallokansio(luettelo.vari.versio, variIso, tunniste);
+  }
+  /*
+   * `--ilman-viivoja` (Linssiseppä 23.9.2026): sarja ilman viivatasoa eli
+   * ilman poltettuja nykyrajoja — natiivin isoisän linssi 1873 vaihtaa sen
+   * pohjan tilalle, jotta nykyrajat eivät näy vuoden 1873 rajojen alla.
+   * Luettelon viivat on silloin null. Oma --tunniste on pakollinen, koska
+   * laatat ovat vuoden välimuistissa.
+   */
+  if (argv.includes('--ilman-viivoja')) {
+    if (!tunniste) throw new Error('--ilman-viivoja vaatii oman --tunniste-lipun');
+    luettelo = { ...luettelo, viivataso: null };
+  }
+  // Väritason oletusalue on sen oma laatikko (varitasot[ISO].alue).
+  const va = luettelo.vari?.alue;
+  if (!alue && va) alue = [va.lon0, va.lat0, va.lon1, va.lat1];
+  const lista = osanLaatat(min, max, alue, osa);
+  const yhteensa = lista.length;
+  if (luettelo.relief) console.log(`reliefi ${luettelo.versio} (pohjan geometria ${pohjaLuettelo.versio})`);
+  console.log(`pyramidi ${luettelo.versio}, viivat ${luettelo.viivataso?.versio ?? '-'}, `
+    + `ranta ${ranta ? (luettelo.rantataso?.versio ?? '-') : 'ei'}, `
+    + `nostot ${nostot ? (luettelo.nostotaso?.versio ?? '-') : 'ei'}, `
+    + `Mercator-tasot ${min}–${max} (lähteet z${lahdetaso(min)}–z${lahdetaso(max)}), `
+    + `${yhteensa} laattaa → ${kansio}`);
+  console.log(`luettelo ${luettelopolku ?? LUETTELO}, lähteet ${lahde ? `paikallisesti ${lahde}` : 'ämpäristä'}`);
+  if (osa) {
+    const kaistat = [];
+    for (let Z = min; Z <= max; Z += 1) {
+      const [x0, x1] = kaistanRajat(2 ** Z, osa.i, osa.n);
+      if (x0 < x1) kaistat.push(`Z${Z} x${x0}–${x1 - 1}`);
+    }
+    console.log(`osa ${osa.i}/${osa.n}: sarakekaistat ${kaistat.join(', ') || '(tyhjä)'}, `
+      + `noutovali ${noutovali} ms`);
+  }
+  varmistaLahde(luettelo, min, max, { nostot, ranta });
+  if (kuiva) { console.log('Kuiva ajo: ei nouda laattoja eikä kirjoita.'); return; }
+
+  /*
+   * VAIN LUETTELO (6.9.2026): kun taso 8 on laskettu neljänneksinä
+   * (--alue, jotka eivät kirjoita luetteloa), kansion laatat.json
+   * päivitetään tällä lipulla ilman laattojen uudelleenlaskentaa —
+   * peli lukee tasojen katon luettelosta (js/pallo.js laattatasoMax).
+   */
+  const vainLuettelo = argv.includes('--vain-luettelo');
+  if (vainLuettelo) {
+    mkdirSync(ulos, { recursive: true });
+    kirjoitaLuettelo(ulos, luettelo, {
+      min, max, nostot, ranta, tunniste, kansio, alue,
+    });
+    console.log(`kirjoitettu vain luettelo kansioon ${ulos}; ämpärin kansio: ${kansio}`);
+    return;
+  }
+
+  const sharp = (await import('sharp')).default;
+  const lukija = teeLukija(luettelo, sharp, { nostot, ranta });
+  mkdirSync(ulos, { recursive: true });
+  let tehty = 0;
+  const alkuAika = Date.now();
+  for (const [Z, X, Y] of lista) {
+    mkdirSync(join(ulos, String(Z), String(X)), { recursive: true });
+    if (luettelo.vari) {
+      const rgba = await laskeVariLaatta(luettelo, lukija, Z, X, Y); // eslint-disable-line no-await-in-loop
+      const webp = await sharp(rgba, { raw: { width: LAATTA, height: LAATTA, channels: 4 } }).webp({ quality: 90, alphaQuality: 100 }).toBuffer(); // eslint-disable-line no-await-in-loop
+      writeFileSync(join(ulos, String(Z), String(X), `${Y}.webp`), webp);
+    } else {
+      const rgb = await laskeLaatta(luettelo, lukija, Z, X, Y); // eslint-disable-line no-await-in-loop
+      if (luettelo.kyllaisyys && luettelo.kyllaisyys !== 1) kyllaista(rgb, luettelo.kyllaisyys);
+      const jpg = await sharp(rgb, { raw: { width: LAATTA, height: LAATTA, channels: 3 } }).jpeg(JPEG).toBuffer(); // eslint-disable-line no-await-in-loop
+      writeFileSync(join(ulos, String(Z), String(X), `${Y}.jpg`), jpg);
+    }
+    tehty += 1;
+    if (tehty % 500 === 0 || tehty === yhteensa) {
+      const s = Math.round((Date.now() - alkuAika) / 1000);
+      console.log(`${tehty}/${yhteensa} laattaa (${s} s, lähdelaattoja noudettu ${lukija.tilasto.noudettu}, `
+        + `puuttui ${lukija.tilasto.puuttui}, levyltä ${lahdeTilasto.paikallisia}, verkosta ${lahdeTilasto.verkosta})`);
+    }
+  }
+  /*
+   * OSA EI OMISTA LUETTELOA. laatat.json kuvaa koko sarjan (tasot
+   * min–max), joten shardi ei saa kirjoittaa sitä omasta osuudestaan:
+   * polttoskripti kokoaa sen kerran `--vain-luettelo`-ajolla ja vie
+   * viimeisenä, kun kaikki osat ovat ämpärissä.
+   */
+  if (!osa) {
+    kirjoitaLuettelo(ulos, luettelo, {
+      min, max, nostot, ranta, tunniste, kansio, alue,
+    });
+  }
+  console.log(`kirjoitettu ${tehty} laattaa kansioon ${ulos}${osa ? ` (osa ${osa.i}/${osa.n}, ei luetteloa)` : ''}; ämpärin kansio: ${kansio}`);
+}
+
+/** Kansion luettelo (laatat.json) ja kansio.txt työnkulun vientiä varten. */
+export function kirjoitaLuettelo(ulos, luettelo, {
+  min, max, nostot, ranta = true, tunniste, kansio, alue = null,
+}) {
+  writeFileSync(join(ulos, 'laatat.json'), `${JSON.stringify({
+    versio: luettelo.versio,
+    viivat: luettelo.viivataso?.versio ?? null,
+    /*
+     * RANTATASON VERSIO SARJASSA — lepokerroksen versiovahti lukee
+     * tämän (js/pallolaatat.js lepokerroksenKerrokset): jos sarjassa on
+     * rantaviiva poltettuna, lepokerroksen on piirrettävä sama taso
+     * pohjan päälle; jos ei ole (--ilman-rantaa, vektorikerros päällä),
+     * lepokerros jättää sen pois eikä levossa ilmesty toista viivaa.
+     */
+    ranta: ranta ? (luettelo.rantataso?.versio ?? null) : null,
+    nostot: nostot ? (luettelo.nostotaso?.versio ?? null) : null,
+    ...(tunniste ? { tunniste } : {}),
+    // Reliefisarjan lähde (ETOPO 2022, public domain) attribuutiota varten.
+    ...(luettelo.relief ? { relief: true, lahde: luettelo.lahde, kyllaisyys: luettelo.kyllaisyys ?? 1 } : {}),
+    ...(luettelo.vari ? { varitaso: luettelo.vari } : {}),
+    tasot: { min, max },
+    /*
+     * ALUESARJA (23.9.2026, natiivin syvä sarja Z9–Z11): laatat ovat
+     * olemassa vain tällä alalla [lon0, lat0, lon1, lat1]. Kenttä
+     * syntyy vain `--alue`-ajossa, joten koko maailman sarjan luettelo
+     * pysyy tavulleen entisenä.
+     */
+    ...(alue ? { alue } : {}),
+    laatta: LAATTA,
+    muoto: luettelo.vari ? 'webp' : 'jpg',
+    tehty: new Date().toISOString(),
+    // Mitkä nostot ovat laatoissa (ks. tiedoston alku, NOSTOTASON TIIVISTE).
+    ...(nostot && luettelo.nostotaso ? { nostotaso: pallonNostotaso(luettelo, min, max) } : {}),
+  }, null, 1)}\n`);
+  writeFileSync(join(ulos, 'kansio.txt'), `${kansio}\n`);
+}
+
+if (process.argv[1] === TAMA) {
+  paa().catch((e) => { console.error(e.message ?? e); process.exit(1); });
+}

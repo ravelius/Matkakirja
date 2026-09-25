@@ -98,6 +98,12 @@ export const FOKUSKOHTEET_DEU = [
   {
     id: 'zugspitze',
     nimi: 'Zugspitze',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'vuori',
     kysymykset: [
       'Miten vuorelle noustiin ennen hammasratasrataa?',
@@ -126,6 +132,18 @@ export const FOKUSKOHTEET_DEU = [
       tiedosto: 'Gipfel Zugspitze Sommer.jpg',
       selite: 'Zugspitzen huippu kesällä. Läntisen huipun poikki kulkee Itävallan raja.',
       lahde: 'Treeem, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    visa: {
+      kysymys: 'Kuka mainitaan ensimmäisenä Zugspitzen vuoden 1820 huipulle nousijoista?',
+      vaihtoehdot: [
+        'Anton Feldner',
+        'Johann Tauschl',
+        'Ludwig II',
+        'Josef Naus',
+      ],
+      oikea: 3,
+      fakta: 'Zugspitzen ensimmäisellä huipulle nousulla 27. elokuuta 1820 olivat mukana '
+        + 'Josef Naus, mittausapulainen Maier ja opas Johann Georg Tauschl.',
     },
   },
   {
@@ -232,7 +250,7 @@ export const FOKUSKOHTEET_DEU = [
       'Mikä on Brockenin haamu?',
       'Miksi Goethe sijoitti noidat juuri tälle vuorelle?',
     ],
-    korostukset: ['Brockenin haamu', 'Faust|Faustissa'],
+    korostukset: ['Brockenin haamu', 'Faust|Faustiinsa'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Noitien vuori Harzilla',
     // 10,6156 E / 51,7994 N — maat.mjs FOKUSMAAT.DEU.vuoret.
@@ -294,6 +312,18 @@ export const FOKUSKOHTEET_DEU = [
       selite: 'Pohjanmeren vuorovesitasankoa Pohjois-Friisinmaalla Saksan rannikolla.',
       lahde: 'Ralf Roletschek, Wikimedia Commons (CC BY-SA 3.0)',
     },
+    visa: {
+      kysymys: 'Mikä maa EI ole niiden joukossa, joita Pohjanmeri rajaa?',
+      vaihtoehdot: [
+        'Ruotsi',
+        'Tanska',
+        'Norja',
+        'Belgia',
+      ],
+      oikea: 0,
+      fakta: 'Pohjanmeri sijaitsee Ison-Britannian, Tanskan, Norjan, Saksan, Alankomaiden, '
+        + 'Belgian ja Ranskan välissä.',
+    },
   },
   {
     id: 'itameri',
@@ -339,14 +369,24 @@ export const FOKUSKOHTEET_DEU = [
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Järvi, jota kolme maata ei ole jakanut',
     /*
-     * 9,35 E / 47,6 N — järven likimääräinen keskipiste Obersee-altaan
-     * puolivälissä. Kohde on tyypiltään `meri`, koska pelin
-     * symbolitaksonomiassa vuoret, meret, saaret ja joet ovat yhtä
-     * luontokategoriaa eikä järvelle ole omaa tyyppiä.
+     * 9,25 E / 47,78 N — Obersee-altaan POHJOISRANTA (Meersburg–Überlingen,
+     * Saksan puoli). Oli 9,35 E / 47,6 N (altaan keskipiste), mutta
+     * siinä merkki istui kolmen maan nimiöryppäässä: CHE/stiftsbibliothek
+     * (St. Gallen) 4,9 ja AUT/bregenzin-jarvinayttamo 8,6 yksikön päässä.
+     * Kun Sveitsin 13 uutta nostoa (js/packs/hahmotelma-che.js) kytkettiin,
+     * CHE:n ladonta vaihtoi Stiftsbibliothekin kyljen ylös, ja DEU:n
+     * Bodenjärvelle ei jäänyt vapaata kylkeä — nimiö nimiön päällä
+     * (tools/tarkista-nimiolimitys.mjs, Karttaseppä 21.9.2026). Maiden
+     * välinen väistö on yksisuuntainen (AUT → CHE → DEU), joten ratkaisu
+     * on sisällön: järvi on 63 km pitkä, ja pohjoisranta on yhtä lailla
+     * Bodenjärvi. Portti 0 limitystä sekä ilman CHE:tä että sen kanssa.
+     * Kohde on tyypiltään `meri`, koska pelin symbolitaksonomiassa
+     * vuoret, meret, saaret ja joet ovat yhtä luontokategoriaa eikä
+     * järvelle ole omaa tyyppiä.
      */
     laudat: {
-      maailmankartta: { x: 6145.0, y: 1493.2 },
-      europe: { x: 390.7, y: 641.7 },
+      maailmankartta: { x: 6141.7, y: 1485.6 },
+      europe: { x: 388.8, y: 637 },
     },
     teksti: 'Bodenjärvi eli Bodensee on oikeastaan kolme vesistöä Reinin '
       + 'varrella Alppien pohjoisjuurella: iso Obersee, pieni Untersee ja '
@@ -371,6 +411,12 @@ export const FOKUSKOHTEET_DEU = [
   {
     id: 'rein',
     nimi: 'Rein',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'joki',
     kysymykset: [
       'Mikä Loreleyn tarina on?',
@@ -403,6 +449,18 @@ export const FOKUSKOHTEET_DEU = [
         + 'kapenee ja kääntyy jyrkästi.',
       lahde: 'Guido Radig, Wikimedia Commons (CC BY-SA 3.0)',
     },
+    visa: {
+      kysymys: 'Mikä joki on pidempi kuin Rein Keski- ja Länsi-Euroopassa?',
+      vaihtoehdot: [
+        'Rein',
+        'Tonava',
+        'Elbe',
+        'Loire',
+      ],
+      oikea: 1,
+      fakta: 'Rein on noin 1 230 kilometriä pitkä ja Keski- ja Länsi-Euroopan toiseksi '
+        + 'pisin joki Tonavan jälkeen.',
+    },
   },
   {
     id: 'elbe',
@@ -412,7 +470,7 @@ export const FOKUSKOHTEET_DEU = [
       'Mistä Elbe saa vetensä?',
       'Miksi Hampuri rakennettiin niin kauas merestä?',
     ],
-    korostukset: ['Vltava|Vltavan'],
+    korostukset: ['Vltava'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Joki, joka tulee Böömistä',
     // 11,75 E / 53,05 N — Elben uoma Wendlandin mutkassa Dömitzin luona.
@@ -545,6 +603,12 @@ export const FOKUSKOHTEET_DEU = [
   {
     id: 'brandenburgin-portti',
     nimi: 'Brandenburgin portti',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     // Kartalla lyhyt asu - koko nimi katkeaisi nimiossa (fokusnimet-vartio).
     nimio: 'Brandenburg',
     tyyppi: 'historia',
@@ -583,13 +647,19 @@ export const FOKUSKOHTEET_DEU = [
   {
     id: 'sanssouci',
     nimi: 'Sanssouci',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'kulttuuri',
     symboli: 'kulttuuri',
     kysymykset: [
       'Millainen hallitsija Fredrik Suuri oli?',
       'Mitä rokokoo tarkoittaa rakennuksessa?',
     ],
-    korostukset: ['rokokoo|rokokootyylinen'],
+    korostukset: ['rokokoo|rokokootyylisenä'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Linna nimeltä "ilman huolia"',
     // 13,0387 E / 52,4004 N — en-Wikipedia "Sanssouci".
@@ -624,7 +694,7 @@ export const FOKUSKOHTEET_DEU = [
       'Mikä Hansaliitto oli ja miksi se päättyi?',
       'Miksi Hampuri oli oma valtionsa?',
     ],
-    korostukset: ['Hansaliitto|Hansaliiton', 'Elbe|Elben'],
+    korostukset: ['Hansaliitto|Hansaliittoon', 'Elbe|Elben'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Vapaa hansakaupunki',
     // 9,9937 E / 53,5511 N — en-Wikipedia "Hamburg".
@@ -644,14 +714,32 @@ export const FOKUSKOHTEET_DEU = [
     lahde: 'en-Wikipedia "Hamburg", johdanto-osa (tarkistettu 27.8.2026).',
     kuva: {
       tiedosto: 'Hamburg, Speicherstadt, Wasserschloss -- 2016 -- 2956.jpg',
+      lyhyt: 'Speicherstadtin tiilivarastot Hampurin satamassa, rakennettu pian isoisän matkan jälkeen.',
       selite: 'Speicherstadtin varastokortteleita Hampurin satamassa. Tiilivarastot '
         + 'nousivat kanavien varsille pian isoisän matkan jälkeen.',
       lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    visa: {
+      kysymys: 'Mihin vuoteen asti Hampuria johti perinnöllinen suurporvarisääty?',
+      vaihtoehdot: [
+        '1871',
+        '1842',
+        '1919',
+        '1900',
+      ],
+      oikea: 2,
+      fakta: 'Hampuria johti perinnöllinen suurporvarisääty aina vuoteen 1919 asti.',
     },
   },
   {
     id: 'kolnin-tuomiokirkko',
     nimi: 'Kölnin tuomiokirkko',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     // Kartalla lyhyt asu - koko nimi katkeaisi nimiossa (fokusnimet-vartio).
     nimio: 'Tuomiokirkko',
     tyyppi: 'historia',
@@ -696,7 +784,7 @@ export const FOKUSKOHTEET_DEU = [
       'Keitä Wittelsbachit olivat?',
       'Miksi München pysyi katolisena uskonpuhdistuksessa?',
     ],
-    korostukset: ['Wittelsbach|Wittelsbachin suku', 'Isar|Isarin'],
+    korostukset: ['Wittelsbach|Wittelsbachin suku', 'Isar|Isar-joen'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Baijerin kuningaskunnan pääkaupunki',
     // 11,5755 E / 48,1372 N — en-Wikipedia "Munich".
@@ -730,7 +818,7 @@ export const FOKUSKOHTEET_DEU = [
       'Miksi Dresdeniä sanotaan Elben Firenzeksi?',
       'Millaista maastoa Elben laakso Dresdenin kohdalla on?',
     ],
-    korostukset: ['Elbe|Elben', 'Lusatia|Lusatiaan'],
+    korostukset: ['Elbe|Elben', 'Lusatia|Länsi-Lusatian'],
     /* Valintakuplan painike, jos kohde nostetaan jonkin kaupungin virtaan. */
     nappi: 'Saksin pääkaupunki Elben varrella',
     // 13,7373 E / 51,0504 N — en-Wikipedia "Dresden".
@@ -756,6 +844,12 @@ export const FOKUSKOHTEET_DEU = [
   {
     id: 'wartburg',
     nimi: 'Wartburg',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'historia',
     symboli: 'sana',
     kysymykset: [

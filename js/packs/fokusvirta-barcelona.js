@@ -192,49 +192,119 @@ export const FOKUSVIRTA_BARCELONA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Barcelona, maaliskuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Kaupunki purkaa muurejaan ja rakentaa itseään uusiksi '
-      + 'ruutuihin, joilla on insinöörin nimi ja suunnitelma suurempi '
-      + 'kuin yhdenkään kuninkaan. Ramblalla myydään lintuja häkeissä ja '
-      + 'vettä laseittain. Satamassa lastataan korkkia ja viiniä, ja '
-      + 'jokainen jonka tapaan puhuu kahta kieltä — toista minulle, '
-      + 'toista toisilleen. Espanja on tasavalta tänä keväänä, mutta '
-      + 'täällä sanotaan: Katalonia tekee työt.',
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 3c15e2076c08aae691740861b1a46284d672d5e89edc58a67cefadda8478f132. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-barcelona-r20260909-paper-v4.jpg",
+      lyhyt: "Barcelona, 1873. Tuleva katu kasvoi vielä lehtiä.",
+      selite: 'Uuden korttelin viisto kulma antoi kahdelle kärrylle tilaa kääntyä. Samassa kuvassa kaalirivit kasvavat vielä tulevan kadun paikalla.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/101603/1/bcn01engp.pdf"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-barcelona-r20260911-paper2-v1.jpg",
+      lyhyt: "Barcelona, 1873. Kärryt kääntyivät, kaali jatkoi kasvuaan.",
+      selite: 'Kaksi kärryä kääntyi viistetyn kulman molemmin puolin, kun kaali kasvoi vielä tulevan kadun paikalla. Istuin pellon reunalla piirtämässä hetkeä, jossa kaupunki ja sato käyttivät samaa maata.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/101603/1/bcn01engp.pdf"],
+    },
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Barcelona, maaliskuussa 1873. Lämmintä jo; satamassa tervan '
+      + 'haju; puntari korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 317 merkkiä (yläraja 400). */
+    teksti: "Barcelonan laidalla miehet nousivat toistensa hartioille, kerros kerrokselta. Viimeisenä kiipesi poika. Olin nähnyt miehiä mastossa, mutta tämä masto hengitti. Tartuin vieraan miehen käsivarteen. Poika nosti huipulla kätensä. Minä en uskaltanut irrottaa omaani.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[curious] Kaupunki purkaa muurejaan ja rakentaa itseään '
-      + 'uusiksi ruutuihin, joilla on insinöörin nimi ja suunnitelma '
-      + 'suurempi kuin yhdenkään kuninkaan. [excited] Ramblalla myydään '
-      + 'lintuja häkeissä ja vettä laseittain. Satamassa lastataan '
-      + 'korkkia ja viiniä, ja jokainen jonka tapaan puhuu kahta kieltä '
-      + '— toista minulle, toista toisilleen. [softly] Espanja on '
-      + 'tasavalta tänä keväänä, mutta täällä sanotaan: [whispers] '
-      + 'Katalonia tekee työt.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Yhden tulevan kadun paikalla kasvoi vielä
+     * kaalia" (havainto ennen loppua).
+     */
+    reaktiot: [
+  {
+    "id": "barcelona.r1",
+    "ankkuri": "miehet nousivat toistensa hartioille, kerros kerrokselta",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "barcelona.r2",
+    "ankkuri": "Viimeisenä kiipesi poika",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "barcelona.r3",
+    "ankkuri": "tämä masto hengitti",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "barcelona.r4",
+    "ankkuri": "Tartuin vieraan miehen käsivarteen",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "barcelona.r5",
+    "ankkuri": "Minä en uskaltanut irrottaa omaani",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Barcelonan laidalla miehet nousivat toistensa hartioille, kerros kerrokselta. Viimeisenä kiipesi poika. Olin nähnyt miehiä mastossa, mutta tämä masto hengitti. [softly] Tartuin vieraan miehen käsivarteen. Poika nosti huipulla kätensä. Minä en uskaltanut irrottaa omaani.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-barcelona.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
     /*
-     * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
-     * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo); `teksti` seuraa sen
-     * jälkeen.
-     *
-     * TÄMÄ ON KAANONIA, EI OMAA TEKSTIÄ. Kanoninen repliikki on jaettu
-     * virkerajalta kahtia (ks. tiedoston alun perustelu): tässä on sen
-     * ensimmäinen virke sellaisenaan, kaksoispisteineen ja kahden
-     * pisteen taukoineen. Yhtään sanaa ei ole lisätty eikä poistettu.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era03; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-barcelona-01-r20260909-euv1-v2.jpg.
      */
-    maadoitus: 'Se insinöörin ruudukko on nykyään nimeltään Eixample, ja '
-      + 'sen kulmissa on erikoisuus, jonka syyn annan sun päätellä ihan '
-      + 'kohta itse — sen verran vihjaan, että nykyään niissä viisteissä '
-      + 'parkkeeraa skoottereita..',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-barcelona-01-r20260909-euv1-v2.jpg',
+        lyhyt: 'Barcelona: viistetty kulma avasi näkymään tilaa.',
+        selite: 'Eixamplen viistetyt kulmat avaavat liikenteelle tavallista leveämmän risteyksen. Jalankulkija, pyöräilijä ja autoilija saivat omat reittinsä; minulle jäi taivas.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.barcelona.cat/imatges/es/29/vistes-de-barcelona/7871/avenida-diagonal-cruce-con-la-calle/',
+          'https://bcnroc.ajuntament.barcelona.cat/jspui/bitstream/11703/101603/1/bcn01engp.pdf',
+          'https://www.barcelona.cat/museuhistoria/sites/default/files/cerda_eng.pdf',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Barcelonan Sagrada Famíliassa pesii muuttohaukkoja. Niitä voi katsella pesäkamerasta. Minä näin emon palaavan kyyhky kynsissään. Suosittelen kameraa."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * KAANON (Fable) — repliikin loput kolme virkettä sellaisenaan.
      */
@@ -255,6 +325,7 @@ export const FOKUSVIRTA_BARCELONA = {
      */
     kuva: {
       tiedosto: 'Barcelona desde El Carmelo.JPG',
+      lyhyt: 'Cerdàn ruudukon korttelit ovat 113 m sivultaan; laidalla Sagrada Família rakenteilla 1882.',
       selite: 'Cerdàn ruudukon korttelit ovat 113 metriä sivultaan, ja '
         + 'sen laidalla on vuodesta 1882 rakenteilla ollut Sagrada '
         + 'Família.',
@@ -339,6 +410,8 @@ export const FOKUSVIRTA_BARCELONA = {
         + 'sen kulmassa on pieni kaukalo koirille. Siitä lähtee myös se '
         + 'lupaus, jota kukaan ei ole kumonnut: joka juo Canaletesista, '
         + 'palaa kaupunkiin.',
+      lahde: 'en-Wikipedia "La Rambla, Barcelona" ja ca-Wikipedia "Font de '
+        + 'Canaletes". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 3966×2948, CC0, Rijksmuseum, päiväys 1889,
        * kuvaus "Straatgezicht op de Rambla de las flores te Barcelona",
@@ -354,6 +427,7 @@ export const FOKUSVIRTA_BARCELONA = {
        */
       kuva: {
         tiedosto: 'Straatgezicht op de Rambla de las flores te Barcelona, RP-F-F01157-AY.jpg',
+        lyhyt: 'Rambla de las Flores 1889: 1859 istutetut plataanit jo kolmikymppisiä, katu kaupungin olohuone.',
         selite: 'Rambla de las Flores vuonna 1889: vuodesta 1859 '
           + 'istutetut plataanit ovat kolmenkymmenen vuoden ikäisiä ja '
           + 'katu on jo kaupungin olohuone.',
@@ -454,6 +528,9 @@ export const FOKUSVIRTA_BARCELONA = {
         + 'Fil·loxeran juhla jättiläisineen ja tulipetoineen. Kylä '
         + 'juhlii tuholaista, joka pakotti sen keksimään itsensä '
         + 'uudelleen.',
+      lahde: 'en-Wikipedia "Great French Wine Blight", ca-Wikipedia '
+        + '"Fil·loxera de la vinya" ja en-Wikipedia "Cava (Spanish wine)". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 893×830, public domain, tekijä tuntematon,
        * päiväys 1890, kuvaus "Sketch of phylloxera (Dactylosphaera
@@ -469,6 +546,7 @@ export const FOKUSVIRTA_BARCELONA = {
        */
       kuva: {
         tiedosto: 'Dactylosphaera vitifolii MKL Bd. 13 1890 (128905688).jpg',
+        lyhyt: 'Vuoden 1890 kuvataulu esittää fil·loxeran ja sen imukärsän suurennettuina.',
         selite: 'Vuoden 1890 kuvataulu esittää fil·loxeran siivekkäänä '
           + 'ja siivettömänä sekä imukärsän, jolla eläin tyhjentää '
           + 'viiniköynnöksen juuren — kaikki voimakkaasti suurennettuina.',
@@ -564,6 +642,8 @@ export const FOKUSVIRTA_BARCELONA = {
         + 'juuri valmistuneen torin ohi tietämättä, että sen tekijä oli '
         + 'mies, jonka kaupunki oli valinnut ja jonka valtio oli '
         + 'sivuuttanut.',
+      lahde: 'en-Wikipedia "Cerdà Plan" ja en-Wikipedia "Antoni Rovira i '
+        + 'Trias". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1548×1038, public domain, tekijä Antoni
        * Rovira, päiväys 1859, kuvaus "Eixample map of Barcelona. Map
@@ -579,6 +659,7 @@ export const FOKUSVIRTA_BARCELONA = {
        */
       kuva: {
         tiedosto: 'EixampleBCN-projecteRovira.jpg',
+        lyhyt: 'Rovira i Triasin voittanut ehdotus 1859: säteittäinen viuhka vanhastakaupungista, ei rakennettu.',
         selite: 'Antoni Rovira i Triasin voittanut kilpailuehdotus '
           + 'vuodelta 1859: vanhastakaupungista säteittäin avautuva '
           + 'viuhka, jota ei koskaan rakennettu.',
@@ -699,6 +780,7 @@ export const FOKUSVIRTA_BARCELONA = {
      */
     kuva: {
       tiedosto: 'Strait of Gibraltar (satellite view).jpg',
+      lyhyt: 'Gibraltarin salmi satelliitista; sen sulkeutuminen kuivatti Välimeren ja avautuminen täytti sen.',
       selite: 'Gibraltarin salmi satelliitista: tämän kapeikon '
         + 'sulkeutuminen kuivatti Välimeren ja sen avautuminen täytti '
         + 'sen takaisin.',

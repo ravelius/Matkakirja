@@ -131,6 +131,18 @@ export const FOKUSKOHTEET_BGR = [
         + 'seitsemälle kukkulalle.',
       lahde: 'S kirkova, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    visa: {
+      kysymys: 'Mistä lähtien Plovdivissa on asuttu yhtäjaksoisesti?',
+      vaihtoehdot: [
+        '6000-luvulta eaa.',
+        '1000-luvulta eaa.',
+        '300-luvulta eaa.',
+        '600-luvulta jaa.',
+      ],
+      oikea: 0,
+      fakta: 'Asutusta alueella on ollut yhtäjaksoisesti jo 6000-luvulta '
+        + 'eaa.',
+    },
   },
   {
     id: 'varna',
@@ -244,11 +256,25 @@ export const FOKUSKOHTEET_BGR = [
         + 'muovaamaa järveä.',
       lahde: 'Tsvetomira Zaharieva, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    visa: {
+      kysymys: 'Minkä kahden meren vedenjakaja kulkee Rilan harjannetta '
+        + 'pitkin?',
+      vaihtoehdot: [
+        'Adrianmeri ja Egeanmeri',
+        'Mustameri ja Egeanmeri',
+        'Mustameri ja Adrianmeri',
+        'Egeanmeri ja Välimeri',
+      ],
+      oikea: 1,
+      fakta: 'Bulgarian vedenjakaja Mustanmeren ja Egeanmeren '
+        + 'valuma-alueiden välillä kulkee juuri Rilan harjannetta pitkin.',
+    },
   },
   {
     id: 'musala',
     nimi: 'Musala',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Miksi juuri huipulle rakennettiin tutkimusasema?',
       'Millainen sää Musalalla on kesällä?',
@@ -282,7 +308,8 @@ export const FOKUSKOHTEET_BGR = [
     nimi: 'Rilan luostari',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'kulttuuri',
-    tyyppi: 'muu',
+    tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Miten luostari selvisi osmanivallan läpi?',
       'Mitä munkit tekevät luostarissa nykyään?',
@@ -311,11 +338,30 @@ export const FOKUSKOHTEET_BGR = [
         + 'vuoriston sydämessä.',
       lahde: 'Apostoloff, Wikimedia Commons (CC BY-SA 3.0)',
     },
+    visa: {
+      kysymys: 'Missä korkeudessa Rilan luostari sijaitsee?',
+      vaihtoehdot: [
+        '2925 metrissä',
+        '600 metrissä',
+        '1147 metrissä',
+        '1800 metrissä',
+      ],
+      oikea: 2,
+      fakta: 'Luostari sijaitsee syvässä Rilan-joen laaksossa 1147 metrin '
+        + 'korkeudessa.',
+    },
   },
   {
     id: 'vitosa',
     nimi: 'Vitoša',
     tyyppi: 'vuori',
+    /*
+     * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+     * huippu on 15 kilometriä kaupunkilehden kohdekartan eteläpuolella
+     * — vuori ei ole kohdekaupungissa vaan sen takana, ja juuri
+     * sellainen nosto kuuluu pääkartalle.
+     */
+    kattoVapaa: true,
     kysymykset: [
       'Voiko Vitoša vielä purkautua?',
       'Miksi vuori on sofialaisille niin tärkeä?',
@@ -388,6 +434,7 @@ export const FOKUSKOHTEET_BGR = [
      */
     kuva: {
       tiedosto: 'Balkan Mountains from Trakia motorway 1.jpg',
+      lyhyt: 'Balkanvuorten harjanne: Triglav oikealla, Botev-huippu vasemmalla.',
       selite: 'Balkanvuorten harjannetta; oikealla Triglav ja vasemmalla '
         + 'Botev-huippu Keskisen Balkanin massiivissa.',
       lahde: 'Ivano Giambattista, Wikimedia Commons (CC0)',
@@ -431,6 +478,17 @@ export const FOKUSKOHTEET_BGR = [
       selite: 'Tonava Vidinin kohdalla Bulgarian pohjoisrajalla.',
       lahde: 'Aleksand.sl, Wikimedia Commons (CC BY 4.0)',
     },
+    visa: {
+      kysymys: 'Minkä joen jälkeen Tonava on Euroopan toiseksi pisin?',
+      vaihtoehdot: [
+        'Reinin jälkeen',
+        'Ronen jälkeen',
+        'Elben jälkeen',
+        'Volgan jälkeen',
+      ],
+      oikea: 3,
+      fakta: 'Tonava on Euroopan toiseksi pisin joki Volgan jälkeen.',
+    },
   },
   {
     id: 'mustameri',
@@ -473,7 +531,7 @@ export const FOKUSKOHTEET_BGR = [
     nimi: 'Ruusulaakso',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
     kysymykset: [
       'Miten ruusuöljyä valmistetaan?',
       'Miksi juuri tämä laakso sopii ruusuille?',
@@ -506,6 +564,7 @@ export const FOKUSKOHTEET_BGR = [
      */
     kuva: {
       tiedosto: 'Rose-picking in Bulgaria 1870ies.jpg',
+      lyhyt: 'Ruusunpoimintaa Kazanlakin lähellä 1870-luvulla, yhä käsin touko-kesäkuussa.',
       selite: 'Ruusunpoimintaa Kazanlakin lähellä 1870-luvulla. Kukat '
         + 'poimitaan käsin touko-kesäkuussa yhä samaan tapaan.',
       lahde: 'Felix Philipp Kanitz, "Donau-Bulgarien und der Balkan" '
@@ -515,9 +574,16 @@ export const FOKUSKOHTEET_BGR = [
   {
     id: 'boyana',
     nimi: 'Boyanan kirkko',
+    /*
+     * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+     * kirkko on Vitošan juurella kaupunkilehden kohdekartan eteläpuolella
+     * (kartan eteläraja 42,681, kirkko 42,644), joten merkki kuuluu
+     * pääkartalle.
+     */
+    kattoVapaa: true,
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'kulttuuri',
-    tyyppi: 'muu',
+    tyyppi: 'kulttuuri',
     kysymykset: [
       'Kuka maalasi Boyanan freskot?',
       'Miten 1200-luvun maalaukset ovat säilyneet?',
@@ -542,8 +608,7 @@ export const FOKUSKOHTEET_BGR = [
       + 'ja 240 ihmishahmoa. Lahjoittajaparin, sebastokraattori Kaloyanin '
       + 'ja hänen vaimonsa Desislavan, muotokuvia pidetään kirkon '
       + 'elävimpinä ja vaikuttavimpina maalauksina.',
-    lahde: 'en-Wikipedia "Boyana Church" (tarkistettu 24.8.2026 '
-      + 'täkyraporttiin docs/mantereet-tyoaineisto/takyt-sofia.md, täky 7).',
+    lahde: 'en-Wikipedia "Boyana Church" (tarkistettu 24.8.2026).',
     // Category:Boyana Church. Sama tiedosto, jota en-Wikipedian artikkeli
     // itse käyttää — eli kuva on varmasti oikeasta rakennuksesta.
     kuva: {
@@ -575,13 +640,14 @@ export const FOKUSKOHTEET_BGR = [
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Jogurtti',
-    tyyppi: 'muu',
+    tyyppi: 'ruoka',
+    taso: 1,
     symboli: 'ruoka',
     kysymykset: [
       'Mitä bakteeri tekee maidolle?',
       'Miten jogurttia syödään Bulgariassa?',
     ],
-    korostukset: ['Lactobacillus bulgaricus'],
+    korostukset: ['Lactobacillus bulgaricus|Lactobacillus bulgaricukseksi'],
     /* Valintakuplan painike. Lupaus on bakteerin nimen tarina. */
     nappi: 'Bakteeri, joka sai maan nimen',
     /*
@@ -660,6 +726,7 @@ export const FOKUSKOHTEET_BGR = [
      */
     kuva: {
       tiedosto: 'Round Church, Preslav - Church outside view.jpg',
+      lyhyt: 'Kultaisen kirkon rauniot Veliki Preslavissa, ensimmäisen Bulgarian valtakunnan pääkaupungissa.',
       selite: 'Kultaisen eli pyöreän kirkon rauniot Veliki Preslavissa, '
         + 'ensimmäisen Bulgarian valtakunnan pääkaupungissa.',
       lahde: 'Alexander.D.Hristov, Wikimedia Commons (CC BY-SA 4.0)',
@@ -668,7 +735,7 @@ export const FOKUSKOHTEET_BGR = [
   {
     id: 'madara',
     nimi: 'Madaran ratsastaja',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Keitä kaanit Tervel ja Krum olivat?',
@@ -715,7 +782,7 @@ export const FOKUSKOHTEET_BGR = [
   {
     id: 'srebarna',
     nimi: 'Srebarna',
-    tyyppi: 'muu',
+    tyyppi: 'elain',
     symboli: 'elain',
     kysymykset: [
       'Kuinka suureksi kiharapelikaani kasvaa?',
@@ -762,6 +829,7 @@ export const FOKUSKOHTEET_BGR = [
     kuvat: [
       {
         tiedosto: 'Dalmatian pelican (Pelecanus crispus) in flight Danube delta.jpg',
+        lyhyt: 'Kiharapelikaani Tonavan suistossa Srebarnalla, jonka kaislikoissa pesii 179 lintulajia.',
         selite: 'Kiharapelikaani lennossa Tonavan suistossa, Srebarnan '
           + 'muuttoreitin varrella. Järven kaislikoissa pesii 179 '
           + 'lintulajia.',
@@ -780,6 +848,18 @@ export const FOKUSKOHTEET_BGR = [
         lahde: 'Popov Jevgeni, Wikimedia Commons (CC BY-SA 4.0)',
       },
     ],
+    visa: {
+      kysymys: 'Mistä Srebarnan nimen uskotaan olevan peräisin?',
+      vaihtoehdot: [
+        'Täydenkuun hopeisesta kimalluksesta',
+        'Kalastajan tyttären nimestä',
+        'Rusen kaupungin murteesta',
+        'Joen hopeisesta pohjasta',
+      ],
+      oikea: 0,
+      fakta: 'Nimen uskotuimman selityksen mukaan sen antoi täydenkuun '
+        + 'hopeinen kimallus veden pinnassa.',
+    },
   },
   {
     id: 'pernik',
@@ -824,6 +904,7 @@ export const FOKUSKOHTEET_BGR = [
      */
     kuva: {
       tiedosto: 'Kukeri razlog.JPG',
+      lyhyt: 'Kukereita Razlogin uudenvuoden kulkueessa; sama perinne kokoaa tuhannet Pernikin Survaan.',
       selite: 'Kukereita uudenvuoden kulkueessa Razlogissa. Sama '
         + 'naamioperinne kokoaa tuhannet kulkijat Pernikin Survaan.',
       lahde: 'Ivaneskoto, bg-Wikipedia / Wikimedia Commons (public '
@@ -860,7 +941,7 @@ export const FOKUSKOHTEET_BGR = [
   {
     id: 'moskeijat',
     nimi: 'Sofian moskeijat',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     /* Valintakuplan painike: noston oma klikkiotsikko sellaisenaan. */
     nappi: 'Ukkosmyrsky peitti yön, jona seitsemän moskeijaa räjähti',
@@ -875,8 +956,7 @@ export const FOKUSKOHTEET_BGR = [
       + 'moskeijaa samana yönä; ukkosmyrsky peitti räjähdysten äänen. '
       + 'Suurin osa kaupungin moskeijoista tuhoutui sodassa, ja suurin '
       + 'osa muslimiväestöstä lähti kaupungista sen jälkeen.',
-    lahde: 'en-Wikipedia "Sofia" (tarkistettu 25.8.2026 täkyraporttiin '
-      + 'docs/mantereet-tyoaineisto/takyt-sofia.md, täky 13).',
+    lahde: 'en-Wikipedia "Sofia" (tarkistettu 25.8.2026).',
     /*
      * Commons 25.8.2026: 700×485, public domain, tekijä tuntematon,
      * kuvaus "Баня баши джамия от края на 19 век", Category:Sofia in
@@ -888,6 +968,125 @@ export const FOKUSKOHTEET_BGR = [
         + 'Sofian ainoa yhä toimiva moskeija.',
       lahde: 'Tuntematon kuvaaja, Wikimedia Commons (public domain)',
     },
+  },
+  /* ================================================================
+   * ERÄ 11.9.2026 — KAKSI KOHDETTA LISÄÄ.
+   *
+   * Omistaja 11.9.2026: *"Agentit voisivat tarkastaa myös muut
+   * Euroopan maat että kaikissa tarpeeksi nostoja."* Bulgarialla oli
+   * pääkartalla 18 merkkiä, ja tavoite on vähintään kaksikymmentä.
+   * Nesebar on 76 ja Belogradtšikin kalliot 43 lautayksikön päässä
+   * lähimmästä pelikaupungista, joten kumpikin on pääkartan merkki
+   * eikä kuulu kohdekartalle. Kuvat lisätty 20.9.2026 (ent. kuvaton erä).
+   * ============================================================== */
+  {
+    id: 'nesebar',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-nesebar-0707cad0.jpg',
+      lyhyt: 'Nesebarin bysanttilainen Kristus Pantokrator -kirkko punatiilisine koristekaarineen.',
+      selite: 'Keskiaikaisen kirkon seinät on rakennettu vuorotellen kivestä ja punatiilestä, ja niitä koristavat kaarikuviot. Kirkko seisoo Nesebarin vanhassakaupungissa.',
+      lahde: 'Valokuva: Chrumps, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Chrumps',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Church_of_Christ_Pantocrator_Nesebar.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-nesebar-f01e8cc1.jpg',
+        lyhyt: 'Nesebarin vanhan kaupungin ahtaalla kujalla kohoavat puiset talot.',
+        selite: 'Perinteiset ullakko- ja ulokerakenteiset puutalot reunustavat kapeaa katua. Seinillä on puuluukut ja kadun varrella koristeellinen lyhty.',
+        lahde: 'Valokuva: Michal Gorski, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Michal Gorski',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:8230_Nessebar,_Bulgaria_-_panoramio_(11).jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
+    nimi: 'Nesebar',
+    tyyppi: 'kaupunki',
+    taso: 1,
+    kysymykset: [
+      'Mikä doorilainen siirtokunta oli?',
+      'Miksi kirkkoja on niin monta?',
+    ],
+    korostukset: ['Mesambria|Mesambria'],
+    nappi: 'Kirkkojen niemikaupunki',
+    // 27,7333 E / 42,6583 N — en-Wikipedia "Nesebar" (42°39′N 27°44′E).
+    laudat: {
+      maailmankartta: { x: 6757.8, y: 1697.2 },
+      europe: { x: 743.7, y: 771.7 },
+    },
+    teksti: 'Nesebar on pienelle niemelle rakennettu vanha kaupunki Mustanmeren rannalla '
+      + 'Burgasin alueella. Unesco otti sen maailmanperintöluetteloon vuonna 1983, ja syy on '
+      + 'kerrostumissa: samalla kalliolla on kolmen vuosituhannen jäljet päällekkäin.\n\n'
+      + 'Ensin paikalla oli traakialainen asutus. 500-luvun eaa. alussa Megarasta tulleet '
+      + 'kreikkalaiset perustivat siirtokunnan nimeltä Mesambria, joka oli Mustanmeren '
+      + 'rannikon ainoa doorilainen siirtokunta ja merkittävä kauppapaikka. Vuodesta 71 eaa. '
+      + 'kaupunki oli Rooman vallan alla mutta säilytti etuoikeutensa, muun muassa oikeuden '
+      + 'lyödä omaa rahaa.\n\n'
+      + 'Bysantin aikana Nesebar oli linnoitus, josta bysanttilaiset ja bulgarialaiset '
+      + 'kiistelivät toistuvasti: kaani Krum valtasi sen vuonna 812, ja myöhemmin se palasi '
+      + 'Bysantille. Tsaari Ivan Aleksanterin kaudella (1331—1371) kaupunki kukoisti, kunnes '
+      + 'ristiretkeläiset valtasivat sen 1366.\n\n'
+      + 'Kaupungissa ja sen ympäristössä on säilynyt kokonaan tai osittain neljäkymmentä '
+      + 'kirkkoa, vanhimmat 400—500-luvuilta. Osmanivalta vuodesta 1453 hiljensi kaupungin, '
+      + 'ja 1800-luvun puutalot antoivat sille nykyisen ilmeensä. Asukkaita on noin 13 600.',
+    lahde: 'en-Wikipedia "Nesebar" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'belogradtsik',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-belogradtsik-d81316cc.jpg',
+      lyhyt: 'Belogradtšikin punertavat kalliomuodostelmat kohoavat vehreyden keskeltä.',
+      selite: 'Hiekkakivestä ja konglomeraatista muodostuneet punaruskeat kalliopylväät nousevat polun yläpuolelle. Kalliot ovat pehmeäpintaisia ja niiden välissä kasvaa pensaita.',
+      lahde: 'Valokuva: Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Pudelek (Marcin Szala)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Belogradchik_Rocks_(%D0%91%D0%B5%D0%BB%D0%BE%D0%B3%D1%80%D0%B0%D0%B4%D1%87%D0%B8%D1%88%D0%BA%D0%B8_%D1%81%D0%BA%D0%B0%D0%BB%D0%B8)_-_by_Pudelek.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-belogradtsik-b628765b.jpg',
+        lyhyt: 'Belogradtšikin linnoituksen muuri ja kalliotornit kukkulan harjalla.',
+        selite: 'Kivinen linnoitusmuuri seuraa kukkulan reunaa, ja sen takana kohoavat kapeat kallionhuiput. Taustalla häämöttävät Balkanvuorten sinertävät rinteet.',
+        lahde: 'Valokuva: Vislupus, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Vislupus',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Belogradchik_03.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Belogradtšikin kalliot',
+    nimio: 'Belogradtšik',
+    tyyppi: 'vuori',
+    symboli: 'luonto',
+    kysymykset: [
+      'Mistä kallioiden punainen väri tulee?',
+      'Miten linnoitus käyttää kallioita?',
+    ],
+    nappi: 'Kivihahmojen rinne',
+    // 22,685 E / 43,6208 N — en-Wikipedia "Belogradchik Rocks"
+    // (43°37′15″N 22°41′06″E).
+    laudat: {
+      maailmankartta: { x: 6589.5, y: 1658.2 },
+      europe: { x: 646.8, y: 746.4 },
+    },
+    teksti: 'Belogradtšikin kalliot ovat hiekkakivestä ja konglomeraatista muodostunut '
+      + 'kivimuodostelmien joukko Luoteis-Bulgariassa Vidinin alueella, Balkanvuorten '
+      + 'länsirinteillä. Muodostumat jatkuvat noin viidenkymmenen neliökilometrin alalla '
+      + 'Rabišan kylältä idän suuntaan Belotintsiin, ja korkeimmat kalliot kohoavat jopa '
+      + 'kahteensataan metriin.\n\n'
+      + 'Ruosteenpunaisen värin antaa rautaoksidi; osa hiekkakivistä on vaaleampia. '
+      + 'Muodostuminen alkoi permikaudella noin 230 miljoonaa vuotta sitten ja jatkui trias- '
+      + 'ja jurakaudella.\n\n'
+      + 'Kalliot on totuttu näkemään hahmoina, ja monilla on oma nimensä: Aadam ja Eeva, '
+      + 'Madonna, Karhu, Koulutyttö ja Dervissi.\n\n'
+      + 'Belogradtšikin linnoitus on rakennettu niin, että kalliot ovat osa sen puolustusta: '
+      + 'muurit yhdistävät kivimuodostumia toisiinsa. Alue julistettiin luonnonmuistomerkiksi '
+      + 'vuonna 1949 ja liitettiin maan luonnonmuistomerkkien rekisteriin 1987.',
+    lahde: 'en-Wikipedia "Belogradchik Rocks" (tarkistettu 11.9.2026).',
   },
 ];
 

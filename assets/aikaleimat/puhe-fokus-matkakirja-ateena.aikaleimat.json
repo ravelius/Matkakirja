@@ -1,0 +1,239 @@
+{
+  "versio": 2,
+  "kaupunki": "ateena",
+  "teksti": "Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.",
+  "tekstiSha256": "4cd1f27661b3c7866f58932ddde1d3270277d676572d8cdac9802af875369177",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-ateena.mp3",
+    "versio": 2,
+    "tavut": 495325,
+    "sha256": "5ab669becf71bca9667a92e35dd6f3f53e50de8f461ab724a1c048a9f58b5a5b"
+  },
+  "kesto": 30860,
+  "sanat": [
+    {
+      "sana": "Ateenassa",
+      "alku": 180,
+      "loppu": 660
+    },
+    {
+      "sana": "kahvilan",
+      "alku": 720,
+      "loppu": 1180
+    },
+    {
+      "sana": "isäntä",
+      "alku": 1260,
+      "loppu": 1640
+    },
+    {
+      "sana": "piti",
+      "alku": 1680,
+      "loppu": 1900
+    },
+    {
+      "sana": "Schliemannia",
+      "alku": 1940,
+      "loppu": 2620
+    },
+    {
+      "sana": "nerona",
+      "alku": 2700,
+      "loppu": 3100
+    },
+    {
+      "sana": "asiakas",
+      "alku": 3840,
+      "loppu": 4280
+    },
+    {
+      "sana": "varkaana",
+      "alku": 4340,
+      "loppu": 5000
+    },
+    {
+      "sana": "Troijan",
+      "alku": 6420,
+      "loppu": 6860
+    },
+    {
+      "sana": "kulta",
+      "alku": 6920,
+      "loppu": 7260
+    },
+    {
+      "sana": "oli",
+      "alku": 7480,
+      "loppu": 7600
+    },
+    {
+      "sana": "viety",
+      "alku": 7640,
+      "loppu": 7900
+    },
+    {
+      "sana": "salaa",
+      "alku": 8039,
+      "loppu": 8360
+    },
+    {
+      "sana": "Kreikkaan",
+      "alku": 8420,
+      "loppu": 9140
+    },
+    {
+      "sana": "Minä",
+      "alku": 10220,
+      "loppu": 10440
+    },
+    {
+      "sana": "puolustin",
+      "alku": 10500,
+      "loppu": 11000
+    },
+    {
+      "sana": "löytäjän",
+      "alku": 11060,
+      "loppu": 11500
+    },
+    {
+      "sana": "oikeutta",
+      "alku": 11600,
+      "loppu": 12060
+    },
+    {
+      "sana": "löytöönsä",
+      "alku": 12120,
+      "loppu": 12880
+    },
+    {
+      "sana": "Aarnin",
+      "alku": 14640,
+      "loppu": 14980
+    },
+    {
+      "sana": "luettelo",
+      "alku": 15020,
+      "loppu": 15540
+    },
+    {
+      "sana": "painoi",
+      "alku": 15600,
+      "loppu": 15960
+    },
+    {
+      "sana": "taskussa",
+      "alku": 16000,
+      "loppu": 16600
+    },
+    {
+      "sana": "jos",
+      "alku": 17700,
+      "loppu": 17840
+    },
+    {
+      "sana": "tarinat",
+      "alku": 17900,
+      "loppu": 18220
+    },
+    {
+      "sana": "olivat",
+      "alku": 18280,
+      "loppu": 18560
+    },
+    {
+      "sana": "totta",
+      "alku": 18620,
+      "loppu": 19000
+    },
+    {
+      "sana": "jonakin",
+      "alku": 19580,
+      "loppu": 20000
+    },
+    {
+      "sana": "päivänä",
+      "alku": 20040,
+      "loppu": 20420
+    },
+    {
+      "sana": "löytäjä",
+      "alku": 20480,
+      "loppu": 20960
+    },
+    {
+      "sana": "olisin",
+      "alku": 21040,
+      "loppu": 21360
+    },
+    {
+      "sana": "minä",
+      "alku": 21400,
+      "loppu": 21780
+    },
+    {
+      "sana": "Asiakas",
+      "alku": 23760,
+      "loppu": 24160
+    },
+    {
+      "sana": "kysyi",
+      "alku": 24220,
+      "loppu": 24580
+    },
+    {
+      "sana": "milloin",
+      "alku": 24700,
+      "loppu": 25060
+    },
+    {
+      "sana": "löytäminen",
+      "alku": 25100,
+      "loppu": 25660
+    },
+    {
+      "sana": "muuttuu",
+      "alku": 25740,
+      "loppu": 26200
+    },
+    {
+      "sana": "ottamiseksi",
+      "alku": 26280,
+      "loppu": 27060
+    },
+    {
+      "sana": "Maksoin",
+      "alku": 29040,
+      "loppu": 29400
+    },
+    {
+      "sana": "kahvini",
+      "alku": 29440,
+      "loppu": 29860
+    },
+    {
+      "sana": "ja",
+      "alku": 29880,
+      "loppu": 29960
+    },
+    {
+      "sana": "vaihdoin",
+      "alku": 30020,
+      "loppu": 30440
+    },
+    {
+      "sana": "pöytää",
+      "alku": 30500,
+      "loppu": 30860
+    }
+  ],
+  "lauseet": [
+    180,
+    6420,
+    10220,
+    14640,
+    23760,
+    29040
+  ],
+  "luotu": "2026-09-23T15:35:19.263Z"
+}

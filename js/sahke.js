@@ -744,51 +744,89 @@ async function sahkePollaa() {
   }
 }
 
-/** Tilavastaus jonoon ja kaveriavun odotukseen. */
-function sahkeKasitteleTila(tila) {
-  const nahdyt = sahkeNahdyt();
+/**
+ * NIMIMERKKI JÄSENTUNNUKSEN TILALLE (omistaja 23.9.2026, sama kuin
+ * natiivissa): worker kertoo lähettäjän, kysyjän ja vastaajan
+ * jäsentunnuksena, ja tilannekuvan `jasenet` kertoo tunnuksen
+ * nimimerkin. Tuntematon tunnus näytetään sellaisenaan, puuttuva
+ * korvataan oletuksella.
+ */
+export function sahkeJasenNimet(tila) {
+  const nimet = new Map();
+  for (const j of Array.isArray(tila?.jasenet) ? tila.jasenet : []) {
+    if (j?.jasenId && typeof j.nimimerkki === 'string' && j.nimimerkki) nimet.set(j.jasenId, j.nimimerkki);
+  }
+  return (id, oletus) => (id ? (nimet.get(id) ?? id) : oletus);
+}
+
+/**
+ * Tilannekuva liuskoiksi (puhdas; sahkeKasitteleTila ja testit).
+ *
+ * OMAT VIESTIT EIVÄT PALAA ITSELLE (omistaja 23.9.2026, sama kuin
+ * natiivissa): oma sähke tulee tilannekuvassa takaisin, ja oma
+ * apupyyntö näkyisi omalle laitteelle, vaikka worker hylkää vastauksen
+ * omaan pyyntöön (409). Kumpikin merkitään nähdyksi mutta ei näytetä.
+ *
+ * @param {object} tila workerin tilannekuva
+ * @param {object} asetukset { nahdyt: Set, oma: jäsentunnus tai null, saate: () => string }
+ * @returns {{ jono: object[], uudet: string[], nimi: Function }}
+ */
+export function sahkeTilastaJono(tila, { nahdyt, oma = null, saate }) {
+  const nimi = sahkeJasenNimet(tila);
+  const jono = [];
   const uudet = [];
 
-  for (const sahke of tila?.sahkeet ?? []) {
+  for (const sahke of Array.isArray(tila?.sahkeet) ? tila.sahkeet : []) {
     if (!sahke?.id || nahdyt.has(sahke.id)) continue;
-    const pohja = sahkePohja(sahke.pohjaId);
     // Tuntematon pohja merkitään nähdyksi mutta ei näytetä: uudempi
     // versio toisessa päässä ei saa jäädä ikuiseksi jonoksi.
     uudet.push(sahke.id);
-    if (!pohja) continue;
-    sahkeTila.jono.push({
+    if (!sahkePohja(sahke.pohjaId)) continue;
+    if (oma && sahke.lahettaja === oma) continue;
+    jono.push({
       laji: 'sahke',
-      saate: SAHKE_SAATTEET[Math.floor(Math.random() * SAHKE_SAATTEET.length)],
+      saate: saate(),
       pohjaId: sahke.pohjaId,
       paikkaId: sahke.paikkaId,
-      lahettaja: sahke.lahettaja ?? '',
+      lahettaja: nimi(sahke.lahettaja, ''),
       aika: sahke.aika ?? '',
     });
   }
 
-  for (const pyynto of tila?.apupyynnot ?? []) {
+  for (const pyynto of Array.isArray(tila?.apupyynnot) ? tila.apupyynnot : []) {
     if (!pyynto?.apuId || nahdyt.has(`apu:${pyynto.apuId}`)) continue;
     uudet.push(`apu:${pyynto.apuId}`);
     const vaihtoehdot = Array.isArray(pyynto.vaihtoehdot)
       ? pyynto.vaihtoehdot.filter((v) => typeof v === 'string') : [];
     if (!pyynto.kysymys || vaihtoehdot.length < 2) continue;
-    sahkeTila.jono.push({
+    if (oma && pyynto.kysyja === oma) continue;
+    jono.push({
       laji: 'apupyynto',
       apuId: pyynto.apuId,
-      kysyja: pyynto.kysyja ?? 'Retkikunta',
+      kysyja: nimi(pyynto.kysyja, 'Retkikunta'),
       kysymys: pyynto.kysymys,
       vaihtoehdot,
     });
   }
+  return { jono, uudet, nimi };
+}
 
+/** Tilavastaus jonoon ja kaveriavun odotukseen. */
+function sahkeKasitteleTila(tila) {
+  const { jono, uudet, nimi } = sahkeTilastaJono(tila, {
+    nahdyt: sahkeNahdyt(),
+    oma: sahkeTunnus()?.jasenId ?? null,
+    saate: () => SAHKE_SAATTEET[Math.floor(Math.random() * SAHKE_SAATTEET.length)],
+  });
+  sahkeTila.jono.push(...jono);
   if (uudet.length) sahkeMerkitseNahdyksi(...uudet);
 
   // Oma kysymys odottaa vastausta: poimitaan sen veikkaus.
   const apu = sahkeTila.apu;
   if (apu && !apu.veikkaus) {
-    const vastaus = (tila?.apuvastaukset ?? []).find((v) => v?.apuId === apu.apuId);
+    const vastaus = (Array.isArray(tila?.apuvastaukset) ? tila.apuvastaukset : []).find((v) => v?.apuId === apu.apuId);
     if (vastaus && Number.isInteger(vastaus.veikkaus)) {
-      apu.veikkaus = { indeksi: vastaus.veikkaus, vastaaja: vastaus.vastaaja ?? 'Retkikunta' };
+      apu.veikkaus = { indeksi: vastaus.veikkaus, vastaaja: nimi(vastaus.vastaaja, 'Retkikunta') };
     }
   }
 }

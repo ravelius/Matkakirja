@@ -122,13 +122,12 @@ const SAHKE_TUKHOLMA = {
    * vastaus on. Juuri se raja tekee tehtävästä kaivamista eikä
    * arvaamista.
    */
+  /* Sähke on lyhyt ja kysymys ensin — sääntö ja perustelu
+   * js/packs/fokusvirta-sofia.js SAHKE_SOFIA (omistaja 2.9.2026). */
   sahke: 'LIVIALLE STOP\n'
-    + 'PAIKKA ON SELVILLÄ STOP\n'
-    + 'EN SÄHKÖTÄ SITÄ ILMAAN KOSKA LINJALLA KUUNNELLAAN STOP\n'
-    + 'VIERAASI VASTATKOON TUNNUSSANALLA STOP\n'
-    + 'MERI OTTI RUOTSISSA KERRAN JA ANTOI TAKAISIN STOP\n'
-    + 'NIMETKÖÖN SEN KOHTEEN JA VUODEN JOLLOIN SE NOUSI STOP\n'
-    + 'MOLEMMAT LUKEVAT LEHDISSÄ JOTKA HÄN ON JO SAANUT KÄTEENSÄ STOP\n'
+    + 'MIKÄ MEREN OTTAMA ALUS NOUSI RUOTSISSA TAKAISIN JA MINÄ VUONNA STOP\n'
+    + 'VASTAA KOHDE JA VUOSI STOP\n'
+    + 'MOLEMMAT LUKEVAT LEHDESSÄSI STOP\n'
     + 'PÖLLÖ STOP',
 
   /*
@@ -136,14 +135,9 @@ const SAHKE_TUKHOLMA = {
    * lyhentymät reunoilla ("No niin", "mut"), keskellä sanat auki,
    * pronominit kokonaisina, ei huutomerkkejä.
    */
-  johdanto: 'No niin. Pöllö on löytänyt paikan eikä kerro sitä ennen kuin '
-    + 'se saa tunnussanan takaisin — se on aina ollut tarkka siitä, kuka '
-    + 'kuulee mitäkin. Minä täytän lomakkeen ja lennän, sinä kaivat '
-    + 'vastauksen.\n\n'
-    + 'Kaksi aukkoa: yksi kohde Ruotsin luettelosta ja yksi vuosiluku. '
-    + 'Kumpikin lukee siinä lehdessä, jonka sinä juuri sait käteesi. '
-    + 'Väärä vastaus ei sulje mitään — mut se syö palkkiota, ja minä '
-    + 'joudun lentämään turhaan.',
+  johdanto: 'No niin. Pöllö on löytänyt paikan eikä kerro sitä ennen '
+    + 'tunnussanaa. Vastaa kahteen aukkoon: kohde Ruotsin luettelosta ja '
+    + 'vuosiluku. Molemmat lukevat lehdessä, jonka juuri sait käteesi.',
 
   /* Sisältöhakemisto rakennetaan tämän maan pelidatasta ajonaikaisesti. */
   hakemistoMaa: 'SWE',
@@ -192,10 +186,27 @@ const SAHKE_TUKHOLMA = {
   lahetaVapaa: 'Lähetä omin sanoin',
   vaarinSahke: 'EI TÄSMÄÄ STOP TARKISTA KOHDE JA VUOSILUKU STOP',
 
-  /* Kahden ohilyönnin jälkeen Livia sanoo lähteen suoraan. */
-  vinkki: 'Kato, minä sanon sen nyt suoraan: kaupunkilehden ensimmäisellä '
-    + 'sivulla on juttu laivasta, joka upposi ja nousi. Vuosiluku on samassa '
-    + 'kappaleessa.',
+  /*
+   * LIVIAN VINKKI (Fable 3.9.2026). Sama teksti kahdella tiellä: se
+   * tulee itsestään kahden ohilyönnin jälkeen JA se on se, minkä
+   * kokonainen pulla ostaa (Raamattu, SÄHKETEHTÄVÄ LEHTIMÄISEKSI JA
+   * PULLA VINKIKSI). Vinkki kertoo MISTÄ vastaus löytyy, ei sitä mikä
+   * vastaus on.
+   */
+  vinkki: 'No niin. Mä sanon sen näin. Se alus kaatui ennen kuin ehti '
+    + 'satamasta ulos, ja makasi pohjassa yli kolmesataa vuotta. Lehtesi '
+    + 'ensimmäisellä sivulla on juttu laivasta, joka upposi ja nousi, ja '
+    + 'nostovuosi lukee siinä, kuuskytluvun alusta.',
+
+  /*
+   * PUOLIKAS PULLA = SUORA LINKKI (omistaja 3.9.2026). Kaupunkilehden
+   * SIVU 1 on kansiosion nostosivu, jolla juttu "Laiva, joka upposi ja
+   * nousi" on (js/packs/kulttuuri-kategoriat.js tukholma/kaupunki;
+   * sivu 0 on etusivu, ks. js/lehti.js rakennaSivut).
+   */
+  linkkiSaate: 'No niin. Puolikas pulla, puolikas palvelus. Tossa on '
+    + 'suora linkki, lue itse.',
+  vastauslinkki: { tyyppi: 'lehtisivu', kaupunki: 'tukholma', sivu: 1 },
 
   vastaussahke: 'PÖLLÖLLE STOP\nTUNNUSSANA TÄSMÄÄ STOP\nLIVIA TULEE STOP',
   oikein: 'Se on se. Kolmesataakolmekymmentäkolme vuotta pohjassa ja sitten '
@@ -269,54 +280,116 @@ export const FOKUSVIRTA_TUKHOLMA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 1f9b347b206601084be2d69240d731c6b705ff75167d97444a6ef38182639702. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tukholma-r20260909-paper-v4.jpg",
+      lyhyt: "Tukholma, 1873. Selostaja sai kyydin parhaaseen katsomoon.",
+      selite: "Kruunajaisväen hattujen takana lapsi nousi aikuisen hartioille ja alkoi selostaa näkymää. Kuvasin tämän pienen katsomon, jonka avulla juhla näkyi myös taaempana seisoville.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.kungligaslotten.se/english/list-of-swedish-monarchs/oskar-ii.html","https://www.kungligaslotten.se/vara-besoksmal/kungliga-slottet/skattkammaren.html"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tukholma-r20260911-paper2-v1.jpg",
+      lyhyt: "Tukholma, 1873. Satamassa vesi jatkoi juhlaa ilman selostajaa.",
+      selite: "Kruunajaiskadun tungos jäi taakse, kun palasin satamaan. Saarten välissä välkkyi valo, ja ketjut sekä pienet alukset täyttivät hiljaisen laiturin.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.kungligaslotten.se/english/list-of-swedish-monarchs/oskar-ii.html"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Kuukausi seuraa oppitunnin faktoja:
      * Oscar II kruunattiin Storkyrkanissa 12. toukokuuta 1873 (sv-Wikipedia
      * "Oscar II av Sverige", osio Kröningen; ks. oppitunti).
      */
-    paikkarivi: 'Tukholma, toukokuussa 1873. Liputus joka ikkunassa ja '
-      + 'tungos, jossa taskuun ylettyy kuka tahansa.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Osuin Tukholmaan keskelle kruunajaisia: Oscar II sai kruununsa, '
-      + 'ja tungos vei minulta kaksi nappia ja sivun neljätoista. Sivulla oli '
-      + 'puolikas kartta. Kirjoitan tämän muistiin siltä varalta, että joku '
-      + 'vielä kysyy.',
-    luenta: '[curious] Osuin Tukholmaan keskelle kruunajaisia: Oscar II sai '
-      + 'kruununsa, ja tungos vei minulta kaksi nappia ja sivun neljätoista. '
-      + '[softly] Sivulla oli puolikas kartta. [whispers] Kirjoitan tämän '
-      + 'muistiin siltä varalta, että joku vielä kysyy.',
+    paikkarivi: 'Tukholma, toukokuussa 1873. Liputus joka ikkunassa; kaduilla '
+      + 'tungos; puntari korkealla.',
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1; audio/alignment tarvitaan. */
+    teksti: "Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.",
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: tytön luettelo ja "Satamaan palatessa saarten
+     * välissä välkkyi vesi" (havainnot).
+     */
+    reaktiot: [
+  {
+    "id": "tukholma.r1",
+    "ankkuri": "kruunattiin Oskar, mutta näin lähinnä hattuja",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tukholma.r2",
+    "ankkuri": "Pieni tyttö nousi isänsä hartioille",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tukholma.r3",
+    "ankkuri": "yhden kadonneen kengän",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tukholma.r4",
+    "ankkuri": "Kuningas jäi sivulauseeseen",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tukholma.r5",
+    "ankkuri": "Suosittelisin samaa selostajaa",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    luenta: "[curious] Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. [warmly] Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-tukholma.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * LIVIAN MAADOITUS — NALJAILUOTE (Raamattu, "LIVIA AIKASIIRTYMÄN
-     * VÄLITTÄJÄNÄ — PARIPERIAATE"). Merkintä on kevyt ja arkinen —
-     * taskuvaras kruunajaisissa — joten pariperiaate sallii naljailun
-     * eikä vaadi pehmennystä. Livia asettuu isoisän puolelle ja tekee
-     * saman havainnon toisin päin: samana päivänä yksi menetti puolikkaan
-     * kartan ja toinen sai kokonaisen kruunun.
-     *
-     * FAKTAKURI: kaksi väitettä, molemmat tarkistettavia. (1) Oscar II
-     * kruunattiin Storkyrkanissa 12. toukokuuta 1873. (2) Hän jäi Ruotsin
-     * viimeiseksi kruunatuksi kuninkaaksi. Molemmat: sv-Wikipedia "Oscar II
-     * av Sverige", osio "Kröningen" (*"Den 12 maj 1873 kröntes Oscar II i
-     * Storkyrkan i Stockholm. Han skulle komma att bli den sista kungen som
-     * kröntes i Sverige."*), ja sama tieto en-Wikipedian "Oscar II"
-     * -artikkelin kruunajaisosiossa; tarkistettu 29.8.2026.
-     *
-     * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kääk", "mut"), keskellä
-     * sanat auki; pronominit kokonaisina; ei huutomerkkejä.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-tukholma-01-r20260909-euv1-v2.jpg.
      */
-    maadoitus: 'Kääk. Kaksi nappia ja sivu neljätoista — meidän suvussa '
-      + 'sanotaan, että väkijoukko on ainoa paikka, jossa kirje katoaa ilman '
-      + 'että kukaan varastaa sitä. Se päivä oli kyllä iso: Oscar II '
-      + 'kruunattiin Storkyrkanissa kahdentenatoista toukokuuta, ja hän jäi '
-      + 'Ruotsin viimeiseksi kruunatuksi kuninkaaksi. Kukaan ei ole sen '
-      + 'jälkeen nostanut sitä kruunua päähänsä. Saman päivän aikana yksi '
-      + 'sai kokonaisen kruunun ja toinen menetti puolikkaan kartan. Mut '
-      + 'kuule, se puolikas on yhä jossain.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tukholma-01-r20260909-euv1-v2.jpg',
+        lyhyt: 'Tukholma: hyvä näköalapaikka ei vaadi kruunua.',
+        selite: 'Monteliusvägeniltä avautuu vettä, kattoja ja Tukholman tuttuja '
+          + 'siluetteja, joita lapsi osoittaa aikuisen hartioilta. Minä valitsin '
+          + 'oman näköalapaikkani kaiteen vierestä ilman kyytineuvottelua.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.visitstockholm.com/o/monteliusvagen/',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Kuninkaanlinnan vieressä kalastajan vapa taipui niin, että unohdin koko linnan. Kävelin pitkin kaidetta kalan mukana. Se välähti pinnassa, roiskautti vettä rinnuksilleni ja katosi. Kalastaja jäi tuijottamaan tyhjää siimaa. Minä pörhistin märät sulkani. Meillä oli nyt yhteinen puheenaihe."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ylpea', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen. Faktat ovat lehden oman
      * avauskuvan selitteestä (js/packs/kulttuuri-kategoriat.js,
@@ -336,6 +409,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
       + 'Tämän kaupungin alla on enemmän tavaraa kuin sen päällä.',
     kuva: {
       ampari: 'herokoe/hero-tukholma-gamlastan.jpg',
+      lyhyt: 'Tukholma on rakennettu 14 saarelle, kohtaan jossa makea Mälaren purkautuu suolaiseen Itämereen.',
       selite: 'Tukholma on rakennettu neljälletoista saarelle siihen '
         + 'kohtaan, jossa makea Mälaren purkautuu suolaiseen Itämereen.',
       lahde: 'Matkakirjan havainnekuva',
@@ -390,6 +464,8 @@ export const FOKUSVIRTA_TUKHOLMA = {
         + '— eikä sitä koskaan haettu pois. Löytäjät saivat palkkioksi '
         + 'miljoona kaksisataakuusikymmentäkolmetuhatta kruunua, ja se on '
         + 'löydön arvosta se pienin puoli.',
+      lahde: 'sv-Wikipedia "Spillingsskatten"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (SWE/historia). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto SWE/historia,
        * js/packs/maa-kategoriat.js) — siis jo kertaalleen tarkistettu ja
@@ -399,6 +475,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
        */
       kuva: {
         tiedosto: 'Silver tangle Spillings Hoard 1.jpg',
+        lyhyt: 'Spillingsin aarre on maailman suurin viikinkiaikainen hopealöytö, 67 kg ja 14 295 kolikkoa.',
         selite: 'Spillingsin aarre on maailman suurin viikinkiaikainen '
           + 'hopealöytö: se painoi 67 kiloa ja sisälsi 14 295 kolikkoa, '
           + 'joista useimmat islamilaisia.',
@@ -449,6 +526,8 @@ export const FOKUSVIRTA_TUKHOLMA = {
         + 'pääsevät nousemaan järveen asti. Keskellä miljoonakaupunkia '
         + 'seisoo siis mies onki kädessä siinä samassa virrassa, jonka '
         + 'yli parlamentti katsoo ikkunastaan.',
+      lahde: 'pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
+        + '(SWE/elaimet). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto SWE/elaimet).
        * Commons 29.8.2026: CC BY 3.0, Bengt Nyman. SILMÄTARKISTUS tehty:
@@ -457,6 +536,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
        */
       kuva: {
         tiedosto: 'Fishing in Strömmen, Stockholm - panoramio.jpg',
+        lyhyt: 'Tukholman Strömmenissä saa onkia keskellä kaupunkia, lohi nousee vanhankaupungin kupeeseen.',
         selite: 'Tukholman Strömmenissä saa onkia keskellä kaupunkia, ja '
           + 'lohi nousee virtaan aivan vanhankaupungin kupeeseen.',
         lahde: 'Bengt Nyman, Wikimedia Commons (CC BY 3.0)',
@@ -523,6 +603,9 @@ export const FOKUSVIRTA_TUKHOLMA = {
         + 'teki Jacob Heinrich Elbfas. Alkuperäinen on kadonnut, eikä '
         + 'kukaan tiedä minne. Kaupungin vanhin kuva on siis kuva '
         + 'kuvasta, jota ei enää ole.',
+      lahde: 'sv-Wikipedia "Vädersolstavlan" ja sv-Wikipedia "Storkyrkan"; '
+        + 'pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
+        + '(SWE/historia). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto SWE/historia).
        * Commons 29.8.2026: public domain. SILMÄTARKISTUS tehty: maalaus,
@@ -530,6 +613,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
        */
       kuva: {
         tiedosto: 'Vädersolstavlan 1535.jpg',
+        lyhyt: 'Vädersolstavlan kuvaa Tukholman halo-ilmiötä 20.4.1535, vanhin värillinen kuva kaupungista.',
         selite: 'Vädersolstavlan kuvaa Tukholman yllä 20. huhtikuuta 1535 '
           + 'nähtyä halo-ilmiötä, ja se on vanhin värillinen kuva '
           + 'kaupungista.',
@@ -615,6 +699,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
      */
     kuva: {
       tiedosto: 'Oscar II of Sweden & Sofia of Sweden coronation 1873.jpg',
+      lyhyt: 'Oscar II ja kuningatar Sofia kruunajaisissaan 1873, Ruotsin viimeisissä kruunajaisissa.',
       selite: 'Oscar II ja kuningatar Sofia kruunajaisissaan vuonna 1873. '
         + 'Ne jäivät Ruotsin viimeisiksi kruunajaisiksi.',
       lahde: 'Tuntematon tekijä, Wikimedia Commons (public domain)',
@@ -796,6 +881,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
        */
       valokuva: {
         tiedosto: 'Jørgen Aukland Vasaloppet 2013 002.jpg',
+        lyhyt: 'Vasaloppet hiihdetään Bergasta Moraan, 90 km ja maailman vanhin, suurin hiihtokilpailu.',
         selite: 'Vasaloppet hiihdetään maaliskuun ensimmäisenä sunnuntaina '
           + 'Bergasta Moraan, ja 90 kilometrin kisa on maailman vanhin ja '
           + 'osanottajamäärältään suurin hiihtokilpailu.',

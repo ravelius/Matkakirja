@@ -1,0 +1,184 @@
+{
+  "versio": 2,
+  "kaupunki": "barcelona",
+  "teksti": "Barcelonan laidalla miehet nousivat toistensa hartioille, kerros kerrokselta. Viimeisenä kiipesi poika. Olin nähnyt miehiä mastossa, mutta tämä masto hengitti. Tartuin vieraan miehen käsivarteen. Poika nosti huipulla kätensä. Minä en uskaltanut irrottaa omaani.",
+  "tekstiSha256": "aca84f0db9ef389e9295787852c4faad07b0236547007f0d9abca5e597b57ecf",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-barcelona.mp3",
+    "versio": 2,
+    "tavut": 353219,
+    "sha256": "2058c19d216272b8d6b8e67e3026d5d22c03e049e08b7c0014b5e31ec8c93fc6"
+  },
+  "kesto": 21980,
+  "sanat": [
+    {
+      "sana": "Barcelonan",
+      "alku": 140,
+      "loppu": 680
+    },
+    {
+      "sana": "laidalla",
+      "alku": 720,
+      "loppu": 1140
+    },
+    {
+      "sana": "miehet",
+      "alku": 1200,
+      "loppu": 1520
+    },
+    {
+      "sana": "nousivat",
+      "alku": 1560,
+      "loppu": 1980
+    },
+    {
+      "sana": "toistensa",
+      "alku": 2040,
+      "loppu": 2540
+    },
+    {
+      "sana": "hartioille",
+      "alku": 2600,
+      "loppu": 3260
+    },
+    {
+      "sana": "kerros",
+      "alku": 3680,
+      "loppu": 4059
+    },
+    {
+      "sana": "kerrokselta",
+      "alku": 4120,
+      "loppu": 4820
+    },
+    {
+      "sana": "Viimeisenä",
+      "alku": 6180,
+      "loppu": 6700
+    },
+    {
+      "sana": "kiipesi",
+      "alku": 6760,
+      "loppu": 7160
+    },
+    {
+      "sana": "poika",
+      "alku": 7200,
+      "loppu": 7580
+    },
+    {
+      "sana": "Olin",
+      "alku": 8940,
+      "loppu": 9120
+    },
+    {
+      "sana": "nähnyt",
+      "alku": 9160,
+      "loppu": 9480
+    },
+    {
+      "sana": "miehiä",
+      "alku": 9520,
+      "loppu": 9920
+    },
+    {
+      "sana": "mastossa",
+      "alku": 9960,
+      "loppu": 10480
+    },
+    {
+      "sana": "mutta",
+      "alku": 10580,
+      "loppu": 11040
+    },
+    {
+      "sana": "tämä",
+      "alku": 11100,
+      "loppu": 11360
+    },
+    {
+      "sana": "masto",
+      "alku": 11400,
+      "loppu": 11740
+    },
+    {
+      "sana": "hengitti",
+      "alku": 11800,
+      "loppu": 12420
+    },
+    {
+      "sana": "Tartuin",
+      "alku": 14140,
+      "loppu": 14500
+    },
+    {
+      "sana": "vieraan",
+      "alku": 14540,
+      "loppu": 14920
+    },
+    {
+      "sana": "miehen",
+      "alku": 14960,
+      "loppu": 15240
+    },
+    {
+      "sana": "käsivarteen",
+      "alku": 15280,
+      "loppu": 16059
+    },
+    {
+      "sana": "Poika",
+      "alku": 17200,
+      "loppu": 17520
+    },
+    {
+      "sana": "nosti",
+      "alku": 17560,
+      "loppu": 17800
+    },
+    {
+      "sana": "huipulla",
+      "alku": 17860,
+      "loppu": 18280
+    },
+    {
+      "sana": "kätensä",
+      "alku": 18320,
+      "loppu": 18920
+    },
+    {
+      "sana": "Minä",
+      "alku": 20220,
+      "loppu": 20420
+    },
+    {
+      "sana": "en",
+      "alku": 20480,
+      "loppu": 20540
+    },
+    {
+      "sana": "uskaltanut",
+      "alku": 20620,
+      "loppu": 21140
+    },
+    {
+      "sana": "irrottaa",
+      "alku": 21220,
+      "loppu": 21680
+    },
+    {
+      "sana": "omaani",
+      "alku": 21760,
+      "loppu": 21980
+    }
+  ],
+  "lauseet": [
+    140,
+    6180,
+    8940,
+    14140,
+    17200,
+    20220
+  ],
+  "luotu": "2026-09-23T15:37:30.715Z"
+}

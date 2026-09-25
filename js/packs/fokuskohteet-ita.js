@@ -121,6 +121,12 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'vesuvius',
     nimi: 'Vesuvius',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'vuori',
     kysymykset: [
       'Miksi vuoren juurella asutaan yhä?',
@@ -152,13 +158,30 @@ export const FOKUSKOHTEET_ITA = [
         + 'vuonna 1944.',
       lahde: 'Norbert Nagel, Wikimedia Commons (CC BY-SA 3.0)',
     },
+    visa: {
+      kysymys: 'Minä vuonna Vesuvius purkautui viimeksi?',
+      vaihtoehdot: [
+        '1944',
+        '1980',
+        '1631',
+        '1900',
+      ],
+      oikea: 0,
+      fakta: 'Vesuvius purkautui viimeksi vuonna 1944.',
+    },
   },
   {
     id: 'pompeji',
     nimi: 'Pompeji',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'historia',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     kysymykset: [
       'Mitä kaivauksissa on löytynyt talojen sisältä?',
       'Kaivetaanko Pompejia vielä nykyään?',
@@ -187,9 +210,21 @@ export const FOKUSKOHTEET_ITA = [
      */
     kuva: {
       tiedosto: 'Forum (Pompeii) and the Vesuvio.jpg',
+      lyhyt: 'Pompejin Forum ja Vesuvius; kaivaukset saivat nykymuotonsa Giuseppe Fiorellilta 1860-luvulla.',
       selite: 'Pompejin Forum ja sen takana Vesuvius. Kaivaukset saivat '
         + 'nykyisen tapansa Giuseppe Fiorellilta 1860-luvulla.',
       lahde: 'Commonists, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    visa: {
+      kysymys: 'Minä vuonna Giuseppe Fiorelli otti Pompejin kaivaukset johtoonsa?',
+      vaihtoehdot: [
+        '1873',
+        '1863',
+        '1944',
+        '1826',
+      ],
+      oikea: 1,
+      fakta: 'Giuseppe Fiorelli otti Pompejin kaivaukset johtoonsa vuonna 1863.',
     },
   },
   {
@@ -227,10 +262,27 @@ export const FOKUSKOHTEET_ITA = [
         + 'kukkulalta nähtynä.',
       lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
     },
+    visa: {
+      kysymys: 'Mitä kreikkalainen nimi Neápolis tarkoittaa?',
+      vaihtoehdot: [
+        'Kaunis kaupunki',
+        'Pyhä kaupunki',
+        'Uusi kaupunki',
+        'Suuri kaupunki',
+      ],
+      oikea: 2,
+      fakta: 'Napolin kreikkalainen nimi Neápolis tarkoittaa "uutta kaupunkia".',
+    },
   },
   {
     id: 'pisa',
     nimi: 'Pisa',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'kaupunki',
     kysymykset: [
       'Miksi tornia ei suoristettu kokonaan?',
@@ -266,6 +318,14 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'capri',
     nimi: 'Capri ja Sininen luola',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
+    // Puhujan akustiikka kortilla (js/tehosteketju.js): meriluolan kaiku.
+    akustiikka: 'luola',
     // Kartalle lyhyt asu (js/fokuskohteet.js kohteenKarttanimi):
     // koko nimi ei mahdu nimiöön, ja lyhennys jättäisi siitä määritteen.
     nimio: 'Capri',
@@ -274,7 +334,7 @@ export const FOKUSKOHTEET_ITA = [
       'Miten luolaan pääsee sisään?',
       'Miksi keisari halusi asua saarella?',
     ],
-    korostukset: ['Villa Jovis', 'Grotta Azzurra'],
+    korostukset: ['Villa Jovis', 'Grotta Azzurra|Sininen luola'],
     /* Valintakuplan painike. Lupaus on valo, ei keisari. */
     nappi: 'Luola, jossa vesi hehkuu sinisenä',
     /*
@@ -308,6 +368,7 @@ export const FOKUSKOHTEET_ITA = [
      */
     kuva: {
       tiedosto: 'Albert Bierstadt - The Blue Grotto, Capri - Walters 371565.jpg',
+      lyhyt: 'Sininen luola Caprilla, maalattuna 1850-luvun lopulla ennen isoisän matkaa.',
       selite: 'Sininen luola Caprilla, maalattuna 1850-luvun lopulla — '
         + 'runsaat kymmenen vuotta ennen isoisän matkaa.',
       lahde: 'Albert Bierstadt, Walters Art Museum, Wikimedia Commons '
@@ -317,9 +378,15 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'cinque-terre',
     nimi: 'Cinque Terre',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'meri',
     kysymykset: [
       'Mitä terasseilla kasvatetaan?',
       'Miten kylät ovat säilyneet ennallaan?',
@@ -393,6 +460,12 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'dolomiitit',
     nimi: 'Dolomiitit',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'vuori',
     kysymykset: [
       'Mitä dolomiittikivi oikeastaan on?',
@@ -428,6 +501,12 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'etna',
     nimi: 'Etna',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
     tyyppi: 'vuori',
     kysymykset: [
       'Kuinka usein Etna purkautuu?',
@@ -534,12 +613,12 @@ export const FOKUSKOHTEET_ITA = [
     nimi: 'Comojärvi',
     // Symboli kuratoitu 26.8.2026: jokainen kortin avaava kohde saa merkin.
     symboli: 'luonto',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
     kysymykset: [
       'Mikä Adda-jäätikkö oli?',
       'Mihin silkkiteollisuus järveltä katosi?',
     ],
-    korostukset: ['Lario', 'silkkiteollisuus|silkkiteollisuudesta'],
+    korostukset: ['jääkausi|jääkauden', 'silkkiteollisuus|silkkiteollisuudesta'],
     /* Valintakuplan painike. Lupaus on järven muoto. */
     nappi: 'Järvi, jonka jäätikkö kaiversi Y:ksi',
     // 9,2667 E / 46 N — en-Wikipedia "Lake Como".
@@ -602,6 +681,17 @@ export const FOKUSKOHTEET_ITA = [
       tiedosto: 'Po River Delta aerial 1.jpg',
       selite: 'Pon suisto Adrianmerellä ilmasta kuvattuna.',
       lahde: 'kallerna, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    visa: {
+      kysymys: 'Kuka oli mukana suunnittelemassa Milanon kanavaverkkoa?',
+      vaihtoehdot: [
+        'Michelangelo Buonarroti',
+        'Leonardo da Vinci',
+        'Galileo Galilei',
+        'Raffaello Sanzio',
+      ],
+      oikea: 1,
+      fakta: 'Po on yhdistetty Milanoon kanavaverkolla, jonka suunnittelussa Leonardo da Vinci oli mukana.',
     },
   },
   {
@@ -676,13 +766,13 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'forum-romanum',
     nimi: 'Forum Romanum',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
     symboli: 'historia',
     kysymykset: [
       'Miksi Forum jäi lopulta autioksi?',
       'Mitä Forumin aukiolla tehtiin tavallisena päivänä?',
     ],
-    korostukset: ['Curia Julia|Curia Julian', 'basilika|basilikat'],
+    korostukset: ['Curia Julia|Curia Julian', 'Basilica Aemilia|Basilica Aemiliaan'],
     /* Valintakuplan painike. */
     nappi: 'Aukio, jota on sanottu maailman kuuluisimmaksi',
     laudat: {
@@ -723,6 +813,7 @@ export const FOKUSKOHTEET_ITA = [
     ihme: {
       osoite: 'assets/kartat/ihmeet/ihme-forum-romanum.webp',
       kadonnut: false,
+      lyhyt: 'Forum oli valtakunnan sydän täynnä temppeleitä ja patsaita; nyt raunioalue keskellä Roomaa.',
       selite: 'Forum oli valtakunnan sydän: temppeleitä, riemukaaria ja '
         + 'kaksi valtavaa basilikaa, joiden pylväskäytävissä hoidettiin '
         + 'Rooman kaupat ja oikeusjutut. Marmori oli maalattua ja '
@@ -771,7 +862,13 @@ export const FOKUSKOHTEET_ITA = [
   {
     id: 'colosseum',
     nimi: 'Colosseum',
-    tyyppi: 'muu',
+    /*
+     * NOSTOTASOT (Fablen tilaus 20.9.2026, samaan tapaan kuin FRA:n
+     * docs/raportit/nostotasot-fra-20260920.md): ykköstaso = tunnetuin
+     * ja pelillisesti tärkein, isompi nimiö + kuvamerkki kartalla.
+     */
+    taso: 1,
+    tyyppi: 'urheilu',
     symboli: 'urheilu',
     kysymykset: [
       'Kuka maksoi Colosseumin rakentamisen?',
@@ -824,27 +921,35 @@ export const FOKUSKOHTEET_ITA = [
      * MATKAKIRJAN IHME (yhä olemassa) — säännöt js/packs/
      * fokuskohteet-grc.js:n samannimisessä lohkossa. `kadonnut: false`,
      * joten "Koe ihme" -nappi tulee yllä olevan valokuvan alle.
+     *
+     * Loistoaika-v2 (kuvaputki, omistaja hyväksynyt 5.9.2026): kohde
+     * omana aikanaan, ei nykyajan elementtejä.
      */
     ihme: {
-      osoite: 'assets/kartat/ihmeet/ihme-colosseum.webp',
+      osoite: 'https://media.matkakirja.app/kohtaamiset/ihmeet/ihme-colosseum-loistoaika-v2.jpg',
       kadonnut: false,
-      selite: 'Colosseumin ulkokehä oli valmiina yhtenäinen '
-        + 'nelikerroksinen muuri, jonka kaarissa seisoi patsaita ja '
-        + 'jonka yli merimiehet vetivät purjekangaskatoksen varjoksi. '
-        + 'Sisään mahtui noin 50 000 katsojaa, jotka pääsivät ilmaiseksi '
-        + 'mutta säädyn mukaan: pääsymerkki ohjasi senaattorit alimmille '
-        + 'riveille ja naiset ylimmille. Aamupäivä kului '
-        + 'eläintaisteluissa, iltapäivä gladiaattoreissa. '
-        + 'Vieressä kohosi Neron '
-        + 'kullattu pronssikolossi, jonka mukaan rakennus lopulta sai '
-        + 'nimensä. Kolossista on viimeinen varma maininta 300-luvulta '
-        + 'eikä sen jäljistä ole muuta kuin jalustan perustus; '
-        + 'eteläinen ulkomuuri kaatui vuoden 1349 maanjäristyksessä ja '
-        + 'sisus louhittiin '
-        + 'kiveksi ja kalkiksi. Pohjoinen ulkomuuri seisoo silti yhä, '
-        + 'ja rakennus on maailman suurin pystyssä oleva amfiteatteri.',
-      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa '
-        + 'nykymaailmassa',
+      lyhyt: 'Katsoja etsii numeroitua paikkaansa areenalla; purjemiehistö kiristää aurinkosuojaa ylhäällä.',
+      selite: 'Katsoja puristaa sisäänpääsymerkkiään ja etsii holvikäytävästä '
+        + 'omaa numeroitua reittiään: paikka areenalla määräytyy '
+        + 'yhteiskunnallisen aseman mukaan. Purjemiehistö kiristää valtavaa '
+        + 'aurinkosuojaa yläpuolella, ja kojujen myyjät tietävät, että '
+        + 'kymmenettuhannet janoiset ihmiset tekevät näytöspäivästä myös '
+        + 'heidän työpäivänsä.',
+      lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa omana '
+        + 'aikanaan. Faktat: Parco archeologico del Colosseo — official '
+        + 'collections, tarkistettu 5.9.2026.',
+      url: 'https://colosseo.it/en/marvels/',
+    },
+    visa: {
+      kysymys: 'Kuka vihki Colosseumin käyttöön vuonna 80?',
+      vaihtoehdot: [
+        'Vespasianus',
+        'Nero',
+        'Traianus',
+        'Titus',
+      ],
+      oikea: 3,
+      fakta: 'Vespasianus aloitti Colosseumin rakentamisen 72, ja Titus vihki sen käyttöön vuonna 80.',
     },
   },
 ];

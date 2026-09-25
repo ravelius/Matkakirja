@@ -141,56 +141,134 @@ export const FOKUSVIRTA_LISSABON = {
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
     /*
-     * PAIKKARIVI ON KAANONIA SELLAISENAAN. Aallon 3 kaupungeissa
-     * paikkariviin on kirjoitettu jatkoksi sään tai tunnelman lause,
-     * mutta siellä rivi oli kirjoittajan omaa; tässä aallossa Fable on
-     * antanut paikkarivin osana kaanonia, joten siihen ei lisätä mitään.
+     * PAIKKARIVI ON KAANONIA SELLAISENAAN. Ensimmäinen virke (paikka ja
+     * aika) on Fablen kaanonia alusta asti; toinen virke on hänen
+     * 8.9.2026 kirjoittamansa tunnelmarivi, joka näkyy kortilla otsikon
+     * alla kursiivilla (js/ui-apurit.js matkakirjanOtsikko). Kumpaakaan
+     * ei muotoilla uusiksi.
      */
-    paikkarivi: 'Lissabon, lokakuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Tämä kaupunki tuntee maan vihan: sata vuotta sitten se kaatui '
-      + 'järistykseen, paloi ja hukkui samana aamuna, ja rakennettiin '
-      + 'uusiksi suoriin kortteleihin kuin ruutupaperille. Belémin torni '
-      + 'seisoo joessa kuin norsunluinen shakkinappula. Räätälin ikkunassa '
-      + 'näin kaakeleita, sinivalkoisia, joilla täällä verhotaan kokonaiset '
-      + 'talonseinät — köyhän miehen freskot, sanoi isäntäni, mutta minusta '
-      + 'ne ovat kauniimpia kuin moni palatsi.',
+    paikkarivi: 'Lissabon, lokakuussa 1873. Tuulista; Tejolla valkoisia '
+      + 'harjoja; puntari korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 330 merkkiä (yläraja 400). */
+    teksti: "Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.",
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain tunnetagit lisätty
      * (docs/moduulit/tarinakaari.md, luku 7). Neljä tagia, alku ja loppu
      * eri sävyssä.
      */
-    luenta: '[curious] Tämä kaupunki tuntee maan vihan: sata vuotta sitten '
-      + 'se kaatui järistykseen, paloi ja hukkui samana aamuna, ja '
-      + 'rakennettiin uusiksi suoriin kortteleihin kuin ruutupaperille. '
-      + '[softly] Belémin torni seisoo joessa kuin norsunluinen '
-      + 'shakkinappula. [curious] Räätälin ikkunassa näin kaakeleita, '
-      + 'sinivalkoisia, joilla täällä verhotaan kokonaiset talonseinät — '
-      + 'köyhän miehen freskot, sanoi isäntäni, [warmly] mutta minusta ne '
-      + 'ovat kauniimpia kuin moni palatsi.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Siellä portailla istuva nainen neuvoi
+     * ylöspäin" (neuvon ensimmäinen puoli).
+     */
+    reaktiot: [
+  {
+    "id": "lissabon.r1",
+    "ankkuri": "katto oli sortunut vuoden 1755 maanjäristyksessä",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "lissabon.r2",
+    "ankkuri": "säilytetty muistomerkkinä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "lissabon.r3",
+    "ankkuri": "Riisuin ovella hattuni vanhasta tottumuksesta",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "lissabon.r4",
+    "ankkuri": "Kun sade alkoi, panin sen takaisin",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "lissabon.r5",
+    "ankkuri": "Toivoin, että tämä ymmärrettäisiin",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[softly] Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. [warmly] Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-lissabon.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-lissabon-r20260909-paper-v4;
+     * SHA-256 f849e0444cd35d714ea9e9e03b9410b57f603564f51a46b3dbfcdc956b427c14;
+     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
+     * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
+     * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
+     * toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lissabon-r20260909-paper-v4.jpg',
+      // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
+      // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
+      lyhyt: 'Lissabon, 1873. Naisen neuvo jatkui portaina.',
+      selite: 'Nainen neuvoi minua ylös Alfaman portailla, missä katot peittivät Tejon ja avasivat sen taas seuraavassa raossa. Portaalla seisojan ei tarvitse tuntea koko reittiä näyttääkseen seuraavan käännöksen.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+      'https://www.patrimoniocultural.gov.pt/wp-content/uploads/2024/08/ER4.pdf',
+      'https://imovel2.patrimoniocultural.gov.pt/detalhes.php?code=19448470',
+      ],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lissabon-r20260911-paper2-v1.jpg",
+      lyhyt: "Lissabon, 1873. Meri löytyi portaan ja kattojen välistä.",
+      selite: 'Pysähdyin Alfaman porrastasanteelle kartta kädessä, kun Tejo löytyi kattojen välistä. Ylös ja alas annetut neuvot olivat molemmat toimineet; kartta jäi lohdutukseksi.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.patrimoniocultural.gov.pt/wp-content/uploads/2024/08/ER4.pdf","https://imovel2.patrimoniocultural.gov.pt/detalhes.php?code=19448470"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * KAANONTEKSTI ON JAETTU KAHTEEN KENTTÄÄN, EI MUUTETTU.
-     *
-     * Livian puheenvuoro on kortilla kahdessa kentässä: `maadoitus`
-     * vastaa isoisän merkintään ja piirtyy kuplan ensimmäiseksi
-     * kappaleeksi, `teksti` jatkaa siitä ja kääntää katseen herokuvaan
-     * (js/fokusvirta.js piirraPollo). Fablen kaanonteksti tekee
-     * molemmat yhtenä puheenvuorona, ja tests/fokusvirta.test.mjs
-     * vaatii jokaiselta fokuskaupungilta oman maadoituksen, joten
-     * teksti on integroinnissa jaettu VIRKKEEN RAJAA pitkin
-     * (Edinburghin kaava): ensimmäinen virke on merkinnän kaakelit,
-     * loput järistys ja "Torni odottaa joessa" eli herokuvan osoitus.
-     * Yhtäkään sanaa, välimerkkiä tai järjestystä ei ole muutettu —
-     * peräkkäin luettuna teksti on sanasta sanaan kaanonteksti.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era01; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-lissabon-01-r20260909-euv1-v2.jpg.
      */
-    maadoitus: 'Lissabonissa ne kaakelit ovat edelleen joka seinällä, ja '
-      + 'niitä varastetaan nykyään seiniltä niin että osa kaduista on '
-      + 'aidattu..',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-lissabon-01-r20260909-euv1-v2.jpg',
+        lyhyt: 'Lissabon: hissin yläpää, jossa siipiä myydään ilmeisesti pareittain.',
+        selite: 'Santa Justan hissi nostaa matkustajat Baixasta Carmon korkeuksiin, joten Lissabonissa voi jonottaa pelkkää ylämäkeä. Minä katselin ylhäältä, kuinka katot jatkuivat ja ihmiset pyrkivät vielä vähän ylemmäs.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.visitlisboa.com/pt-pt/locais/elevador-de-santa-justa',
+          'https://www.carris.pt/',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Lissabonin mäillä talot seisovat kylki kyljessä. Niiden seiniä koristavat värikkäät kaakelit. Lennän punaisten tiilikattojen yli, ja alapuolellani kujat mutkittelevat varjossa. Edessä kimaltaa leveä Tejojoki."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     teksti: 'Se järistys, josta isoisäsi kirjoitti, muutti muuten koko '
       + 'Euroopan ajattelua — sen jälkeen alettiin ensimmäistä kertaa '
       + 'tutkia, miksi maa järisee, eikä vain ketä sillä rangaistiin. '
@@ -203,6 +281,7 @@ export const FOKUSVIRTA_LISSABON = {
      */
     kuva: {
       ampari: 'herokoe/hero-lissabon-aamu.png',
+      lyhyt: 'Belémin torni valmistui 1519 vartioimaan Tejon suuta, nelikerroksisena ja tykkibastionilla.',
       selite: 'Belémin torni valmistui 1519 vartioimaan Tejon suuta: '
         + 'nelikerroksinen torni nousee 30 metriin, ja sen bastionin '
         + 'ampuma-aukoista mahtui tulittamaan seitsemäntoista tykkiä.',
@@ -277,6 +356,9 @@ export const FOKUSVIRTA_LISSABON = {
         + 'vuonna 1821, kirjasto ei palannut hänen mukanaan. Se jäi. '
         + 'Neljä vuotta myöhemmin siitä tehtiin kauppa — ja kokoelmasta '
         + 'tuli toisen maan kansalliskirjasto.',
+      lahde: 'pt-Wikipedia "Biblioteca Nacional do Brasil", en-Wikipedia '
+        + '"National Library of Brazil" ja en-Wikipedia "Transfer of the '
+        + 'Portuguese court to Brazil". Tarkistettu 1.9.2026.',
       /*
        * UUSI KUVA (ei pelidatassa; tarvitsee R2-peilauksen). Commons
        * 29.8.2026: 1513×997, public domain, tekijä tuntematon, julkaistu
@@ -291,6 +373,7 @@ export const FOKUSVIRTA_LISSABON = {
        */
       kuva: {
         tiedosto: 'Americana 1920 Libraries - Bibliotheca Nacional Rio de Janeiro.jpg',
+        lyhyt: 'Brasilian kansalliskirjasto perustuu Portugalin kirjastoon, tuotu Atlantin yli 1810–11.',
         selite: 'Brasilian kansalliskirjasto Rio de Janeirossa. Sen '
           + 'perustan muodostaa Portugalin kuninkaallinen kirjasto, joka '
           + 'tuotiin Atlantin yli vuosina 1810 ja 1811.',
@@ -371,6 +454,9 @@ export const FOKUSVIRTA_LISSABON = {
         + 'Taitava latoja saa päivässä valmiiksi muutaman neliömetrin, ja '
         + 'jokainen kivi on kopautettu erikseen. Sinä kävelet sen yli '
         + 'katsomatta kertaakaan alas.',
+      lahde: 'en-Wikipedia "Portuguese pavement"; pelin oma tarkistettu '
+        + 'aineisto js/packs/maa-kategoriat.js (PRT/kasityo). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto PRT/kasityo,
        * js/packs/maa-kategoriat.js) — siis jo kertaalleen tarkistettu ja
@@ -459,6 +545,9 @@ export const FOKUSVIRTA_LISSABON = {
         + 'portugalilainen elokuva äänen kanssa. Kahdeksankymmentäviisi '
         + 'vuotta hautajaisten jälkeen koko maa kuuli hänen nimensä '
         + 'kaiuttimista.',
+      lahde: 'en-Wikipedia "Maria Severa Onofriana"; pelin oma tarkistettu '
+        + 'aineisto js/packs/maa-kategoriat.js (PRT/musiikki). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto PRT/musiikki,
        * js/packs/maa-kategoriat.js). Commons 29.8.2026: 338×484, public
@@ -469,6 +558,7 @@ export const FOKUSVIRTA_LISSABON = {
        */
       kuva: {
         tiedosto: 'Maria Severa - Fado-Sängerin.jpg',
+        lyhyt: 'Maria Severa (1820–1846) oli ensimmäinen fadolaulaja, kuolemansa jälkeen myyttinen hahmo.',
         selite: 'Maria Severa (1820–1846) oli ensimmäinen maineeseen '
           + 'noussut fadolaulaja, ja hänestä tuli kuolemansa jälkeen lähes '
           + 'myyttinen hahmo.',
@@ -584,6 +674,7 @@ export const FOKUSVIRTA_LISSABON = {
      */
     kuva: {
       tiedosto: '1755 Lisbon earthquake.jpg',
+      lyhyt: 'Vuoden 1755 kuparipiirros näyttää palavan kaupungin ja hyykyäallon, joka kaataa laivat Tejolla.',
       selite: 'Samana vuonna 1755 tehty kuparipiirros näyttää palavan '
         + 'kaupungin ja hyökyaallon, joka kaataa laivat Tejolla.',
       lahde: 'Tuntematon tekijä 1755, Wikimedia Commons (public domain)',
@@ -817,6 +908,7 @@ export const FOKUSVIRTA_LISSABON = {
        */
       kuva: {
         tiedosto: 'Biblioteca Joanina Universidade de Coimbra IMG 0664.JPG',
+        lyhyt: 'Joanina-kirjaston sali Coimbrassa: kullatut tammihyllyt ja kuningas João V:n muotokuva keskellä.',
         selite: 'Joanina-kirjaston sali Coimbran yliopistossa: kullatut '
           + 'tammihyllyt kahdessa kerroksessa ja keskellä perustajan, '
           + 'kuningas João V:n, muotokuva.',
@@ -901,6 +993,7 @@ export const FOKUSVIRTA_LISSABON = {
        */
       kuva: {
         tiedosto: 'Mysovskiy Sergey surfing Nazare.jpg',
+        lyhyt: 'Nazarén Praia do Norten aallot nousevat merenalaisen kanjonin päällä korkeimmiksi Portugalissa.',
         selite: 'Nazarén Praia do Norten aallot nousevat merenalaisen '
           + 'kanjonin päällä korkeammiksi kuin missään muualla Portugalin '
           + 'rannikolla.',
@@ -990,6 +1083,7 @@ export const FOKUSVIRTA_LISSABON = {
        */
       kuva: {
         tiedosto: 'Exploring the Azulejo-Adorned Grand Hall of São Bento Station (55248917165).jpg',
+        lyhyt: 'São Benton aseman odotushallin seinällä on noin 20 000 azulejo-laattaa, 551 neliömetriä.',
         selite: 'São Benton aseman odotushallin seinillä on noin 20 000 '
           + 'azulejo-laattaa, jotka peittävät 551 neliömetriä.',
         lahde: 'Michael Gaylard, Wikimedia Commons (CC BY 4.0)',
@@ -1086,6 +1180,7 @@ export const FOKUSVIRTA_LISSABON = {
        */
       kuva: {
         tiedosto: '09-06-2017 Harvested cork, Foz do Ribeiro, São Bartolomeu de Messines (1).JPG',
+        lyhyt: 'Irrotettua korkkikuorta Algarvessa; kuori irrotetaan käsin kirveellä rungon vaurioittamatta.',
         selite: 'Irrotettua korkkikuorta pinossa Algarvessa. Kuori '
           + 'irrotetaan käsin kirveellä, jottei rungon alla oleva kerros '
           + 'vaurioidu.',

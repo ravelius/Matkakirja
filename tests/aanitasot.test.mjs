@@ -308,26 +308,47 @@ test('luentaVastaaTekstia: äänite soi vain kun teksti täsmää (15.8.2026)', 
   assert.ok(!luentaVastaaTekstia(null));
 });
 
-test('saapumisäänitteiden enemmistö on ajan tasalla (kanarialintu)', async () => {
+test('fokusvirran luennat vastaavat ruututekstiä (kanarialintu)', async () => {
   /*
-   * Linjauksen hetkellä 39/42 äänitteellisestä merkinnästä täsmäsi.
-   * Jos tämä luku romahtaa, joku on muuttanut tekstejä kirjaamatta —
-   * se ei ole virhe sinänsä (muutokset striimataan), mutta iso
-   * pudotus ansaitsee katseen. Raja on väljä tahallaan.
+   * KANARIALINTU VAIHTOI HÄKKIÄ 8.9.2026.
+   *
+   * Tämä testi laski aiemmin, kuinka moni VANHAN saapumistaulun
+   * merkintä oli yhä äänitteensä veroinen (39/42 linjauksen hetkellä).
+   * Euroopan taulu — käytännössä koko sen otos — arkistoitiin pois
+   * pelistä (omistaja: KOKO EUROOPPA KULKEE FOKUSVIRTAPAKKIEN KAUTTA,
+   * docs/arkisto/europe-saapumiset-2026-09-08.js.txt), joten mitattavaa
+   * ei enää ollut.
+   *
+   * Sama ilmiö on nyt fokusvirtapakeissa, ja siellä se on VAARALLISEMPI:
+   * fokusvirran matkakirjaäänite soitetaan ilman tekstivertailua
+   * (js/ui.js renderFact lukee `matkakirja.aanite` sellaisenaan, kun
+   * vanhalla polulla vartijana oli luentaVastaaTekstia). Ainoa mitta,
+   * joka repossa on, on tämä: LUENTA ON RUUTUTEKSTI SANASTA SANAAN,
+   * vain tunnetagit lisättynä (docs/moduulit/tarinakaari.md, luku 7).
+   * Jos luenta ja teksti eroavat, äänite lukee eri asiaa kuin kortissa
+   * lukee — eikä mikään kaadu.
+   *
+   * Raja on väljä tahallaan: kyse on kanariasta, ei muotosäännöstä.
    */
-  const { luentaVastaaTekstia } = await import('../js/aani-ehdokkaat.js');
-  const { EUROPE_SAAPUMISET } = await import('../js/packs/europe-saapumiset.js');
-  const { AFRICA_SAAPUMISET } = await import('../js/packs/africa-saapumiset.js');
+  const { FOKUSVIRRAT } = await import('../js/packs/fokusvirrat.js');
+  // Tagit, break-ohjeet ja lainausmerkit pois: ne eivät ole sanoja.
+  // (Sofian merkinnässä lainausmerkit ovat ruudulla mutta eivät
+  // luennassa — se on ainoa hyväksytty poikkeama.)
+  const sanat = (teksti) => String(teksti ?? '')
+    .replace(/\[[^\]]*\]/g, ' ')
+    .replace(/<break[^>]*>/g, ' ')
+    .replace(/["“”]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
   let luennallisia = 0;
   let tasalla = 0;
-  for (const pakka of [EUROPE_SAAPUMISET, AFRICA_SAAPUMISET]) {
-    for (const m of Object.values(pakka)) {
-      if (!m.luenta) continue;
-      luennallisia += 1;
-      if (luentaVastaaTekstia(m)) tasalla += 1;
-    }
+  for (const virta of Object.values(FOKUSVIRRAT)) {
+    const merkinta = virta.matkakirja;
+    if (!merkinta?.luenta) continue;
+    luennallisia += 1;
+    if (sanat(merkinta.luenta) === sanat(merkinta.teksti)) tasalla += 1;
   }
   assert.ok(luennallisia >= 40, `luennallisia merkintöjä vain ${luennallisia}`);
-  assert.ok(tasalla / luennallisia > 0.5,
-    `vain ${tasalla}/${luennallisia} äänitettä ajan tasalla — tekstejä muutettu laajasti?`);
+  assert.ok(tasalla / luennallisia > 0.9,
+    `vain ${tasalla}/${luennallisia} luennasta vastaa ruututekstiä — tekstejä muutettu ilman luentaa?`);
 });

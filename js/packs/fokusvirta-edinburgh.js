@@ -155,60 +155,131 @@ export const FOKUSVIRTA_EDINBURGH = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, loppupiste lisätty. */
-    paikkarivi: 'Edinburgh, elokuussa 1873.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Kaupunki kiipeää kalliolle kuin sammal, ja sen yllä istuu '
-      + 'linna, jota ei ole koskaan vallattu rynnäköllä — nälällä '
-      + 'kylläkin. Vanhassa kaupungissa talot ovat kymmenkerroksisia, '
-      + 'köyhät ylhäällä ja rikkaat alhaalla, mikä on nurinkurisin '
-      + 'järjestys minkä olen nähnyt. Kirkkomaan portilla makasi pieni '
-      + 'koira, jonka sanotaan vartioineen isäntänsä hautaa neljätoista '
-      + 'vuotta. Se kuoli viime vuonna. Kaupunki aikoo pystyttää sille '
-      + 'muistomerkin — ennen kuin pystyttää sellaisen monelle ihmiselle.',
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Edinburgh, elokuussa 1873. Viileää; linna sumun yllä; '
+      + 'puntari putoaa.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 348 merkkiä (yläraja 400). */
+    teksti: "Edinburghin hautausmaalla vanha rautahäkki peitti hautaa. Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen. Kysyin haudankaivajalta, kauanko häkkiä oli tarvittu. Kunnes ruumis ei enää kelvannut kaupaksi. Hän jatkoi työtään. Minä jäin lukemaan nimeä kivestä.",
     /*
      * LUENTA: sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi: ruututeksti = luentateksti sanasta sanaan).
      * Kolme tagia, alku ja loppu eri sävyssä.
      */
-    luenta: '[curious] Kaupunki kiipeää kalliolle kuin sammal, ja sen '
-      + 'yllä istuu linna, jota ei ole koskaan vallattu rynnäköllä — '
-      + 'nälällä kylläkin. Vanhassa kaupungissa talot ovat '
-      + 'kymmenkerroksisia, köyhät ylhäällä ja rikkaat alhaalla, '
-      + 'mikä on nurinkurisin järjestys minkä olen nähnyt. '
-      + '[softly] Kirkkomaan portilla makasi pieni koira, jonka sanotaan '
-      + 'vartioineen isäntänsä hautaa neljätoista vuotta. Se kuoli viime '
-      + 'vuonna. [whispers] Kaupunki aikoo pystyttää sille muistomerkin — '
-      + 'ennen kuin pystyttää sellaisen monelle ihmiselle.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Menin portaita alas ja tulin ulos korkealla"
+     * (liikkeen kuvaus).
+     */
+    reaktiot: [
+  {
+    "id": "edinburgh.r1",
+    "ankkuri": "vanha rautahäkki peitti hautaa",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "edinburgh.r2",
+    "ankkuri": "Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.55,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "edinburgh.r3",
+    "ankkuri": "kauanko häkkiä oli tarvittu",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "edinburgh.r4",
+    "ankkuri": "Kunnes ruumis ei enää kelvannut kaupaksi",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.55,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "edinburgh.r5",
+    "ankkuri": "jäin lukemaan nimeä kivestä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[softly] Edinburghin hautausmaalla vanha rautahäkki peitti hautaa. Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen. Kysyin haudankaivajalta, kauanko häkkiä oli tarvittu. Kunnes ruumis ei enää kelvannut kaupaksi. [thoughtfully] Hän jatkoi työtään. Minä jäin lukemaan nimeä kivestä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-edinburgh.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-edinburgh-r20260909-paper-v4;
+     * SHA-256 7651069c5ad5fb7afceac80da3794648d84445241be8b4563381e94fe4de0edd;
+     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
+     * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
+     * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
+     * toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-edinburgh-r20260909-paper-v4.jpg',
+      // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
+      // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
+      lyhyt: 'Edinburgh, 1873. Sukat olivat oppineet asumaan korkealla.',
+      selite: 'Porraskuja, sen yli kulkeva reitti ja korkealla riippuvat pyykit mahtuivat samaan kuvaan. Linnan kallio nousi mutkien taakse kuin perusteluksi sille, miksi kartta olisi tarvinnut toisen arkin.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+      'https://canmore.org.uk/site/52499/edinburgh-old-town',
+      'https://www.historicenvironment.scot/visit-a-place/places/edinburgh-castle/history/',
+      ],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-edinburgh-r20260911-paper2-v1.jpg",
+      lyhyt: "Edinburgh, 1873. Sukat riippuivat kuilun yllä ilman huimausta.",
+      selite: 'Sukat riippuivat korkealla kapean porraskujan yllä, kun ikkunat ja askelmat jatkuivat niiden alapuolelle. Seisoin ylempänä ja ymmärsin, etteivät kaupungin korkeudet mahdu yhdelle kartta-arkille.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://canmore.org.uk/site/52499/edinburgh-old-town"],
+    },
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * KAANONTEKSTI ON JAETTU KAHTEEN KENTTÄÄN, EI MUUTETTU. Aallon 4A
-     * kaanonpaketti antaa Livialle YHDEN tekstin, mutta kortti lukee
-     * kaksi kenttää: `maadoitus` piirtyy kuplan ensimmäiseksi
-     * kappaleeksi heti isoisän merkinnän perään ja `teksti` sen jälkeen
-     * (js/fokusvirta.js piirraPollo). Lisäksi tests/fokusvirta.test.mjs
-     * vaatii jokaiselta fokuskaupungilta oman maadoituksen, joka ei ole
-     * sama merkkijono kuin huomio.
-     *
-     * JAKO KULKEE VIRKKEEN RAJAA PITKIN, eikä yhtäkään sanaa,
-     * välimerkkiä tai järjestystä ole muutettu: ensimmäiset kaksi
-     * virkettä kuittaavat isoisän merkinnän (patsas, valtaamaton
-     * linna), loput selittävät nurinkurisen järjestyksen ja vievät
-     * eteenpäin. Luettuna peräkkäin teksti on sanasta sanaan
-     * kaanonpaketin teksti.
-     *
-     * PÄÄTOIMITTAJALLE: jos kupla halutaan yhtenä kappaleena,
-     * maadoitukseen kirjoitetaan oma repliikkinsä ja koko kaanonteksti
-     * palautetaan `teksti`-kenttään yhtenä pötkönä. Kumpikin muoto
-     * kelpaa moottorille.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era01; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-edinburgh-01-r20260909-euv1-v1.jpg.
      */
-    maadoitus: 'Se pikkukoiran patsas on Edinburghissa edelleen, ja sen '
-      + 'kuonoa hierotaan onnen takia niin että se kiiltää.. Linna on '
-      + 'yhä valtaamaton, paitsi turistien toimesta.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-edinburgh-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Edinburgh: löysin kerroksen, jossa ei tarvitse kysyä tietä.',
+        selite: 'Kattojen, savupiippujen ja jyrkän linnakallion välistä erottui monta päällekkäistä reittiä. Laskeuduin väärälle katolle, mutta näköala vahvisti isoisän ajatuksen toisesta kartta-arkista.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.edinburgh.gov.uk/downloads/file/23848/c2a-camera-obscura-calton-hill',
+          'https://www.camera-obscura.co.uk/home/',
+          'https://www.camera-obscura.co.uk/news/article/Best-Views/',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["1800-luvun alun lääkäriopiskelijat tutkivat vainajia oppiakseen ihmisen rakennetta. Ruumiita saatiin laillisesti liian vähän, joten varkaille maksettiin. Minä luulin, että hautausmaalla sai olla rauhassa."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ylpea', voimakkuus: 0.5 },
     teksti: 'Ja se isoisäsi ihmettelemä järjestys — köyhät ylhäällä — '
       + 'johtui savusta: mitä alempana asuit, sitä vähemmän piippuja '
       + 'savusi sun ikkunan alla. Mennään vanhaan kaupunkiin.',
@@ -222,6 +293,7 @@ export const FOKUSVIRTA_EDINBURGH = {
      */
     kuva: {
       ampari: 'herokoe/hero-edinburgh-keskipaiva.png',
+      lyhyt: 'St Gilesin kruunutorni 1400-luvulta; John Knox saarnasi Skotlannin reformaation pääkirkossa.',
       selite: 'St Gilesin katedraalin kruunutorni on kannatellut kivistä '
         + 'kruunuaan 1400-luvulta asti, ja kirkko on Skotlannin '
         + 'reformaation pääkirkko — John Knox saarnasi täällä.',
@@ -305,6 +377,8 @@ export const FOKUSVIRTA_EDINBURGH = {
         + 'jäivät. Vesi kaivosta katkaistiin 1957. Kuono kiiltää, koska '
         + 'sitä hierotaan, ja kaupunki pyytää lakkaamaan, koska '
         + 'hierominen syö pronssia.',
+      lahde: 'en-Wikipedia "Greyfriars Bobby" ja en-Wikipedia "Greyfriars '
+        + 'Bobby Fountain". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 319×426, public domain, National Galleries
        * of Scotland, kuvaus "about 1865 ... Medium: albumen print,
@@ -318,6 +392,7 @@ export const FOKUSVIRTA_EDINBURGH = {
        */
       kuva: {
         tiedosto: 'Greyfriars Bobby (cropped).jpg',
+        lyhyt: 'Bobby noin 1865 otetussa kuvassa; koira kuoli 1872, ja sen muistoksi juomakaivo paljastettiin 1873.',
         selite: 'Bobby noin vuonna 1865 otetussa albumiinivedoksessa. '
           + 'Koira kuoli tammikuussa 1872, ja sen muistoksi pystytetty '
           + 'juomakaivo paljastettiin marraskuussa 1873.',
@@ -413,6 +488,7 @@ export const FOKUSVIRTA_EDINBURGH = {
         + 'ne ovat Skotlannin kansallismuseossa Chambers Streetillä — '
         + 'saman korttelin kulmalla kuin se juomakaivo, jolla koira '
         + 'seisoo.',
+      lahde: 'en-Wikipedia "Arthur\'s Seat coffins". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 640×464, CC BY-SA 2.0, kim traynor, kuvattu
        * 10.4.2011, kuvaus "Arthur's Seat coffins, Chambers Street".
@@ -421,6 +497,7 @@ export const FOKUSVIRTA_EDINBURGH = {
        */
       kuva: {
         tiedosto: "Arthur's Seat coffins, Chambers Street - geograph.org.uk - 2517081 - normalized.jpg",
+        lyhyt: 'Pikkuarkkuja nukkeineen Skotlannin kansallismuseossa; alun perin 17, jäljellä enää kahdeksan.',
         selite: 'Pikkuarkkuja nukkeineen Skotlannin kansallismuseossa. '
           + 'Arkkuja oli alun perin seitsemäntoista, ja niistä on '
           + 'jäljellä kahdeksan.',
@@ -502,6 +579,8 @@ export const FOKUSVIRTA_EDINBURGH = {
         + 'kirjoittivat siitä syyttävään sävyyn. Torni on siis '
         + 'kirjailijan muistomerkki, jonka jokainen yksityiskohta '
         + 'muistuttaa jostakusta muusta.',
+      lahde: 'en-Wikipedia "Scott Monument" ja en-Wikipedia "George Meikle '
+        + 'Kemp". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 2472×4465, CC BY-SA 3.0, Daniel Kraft,
        * kuvattu 19.10.2021, kuvaus "The Scott monument in Edinburgh,
@@ -514,6 +593,7 @@ export const FOKUSVIRTA_EDINBURGH = {
        */
       kuva: {
         tiedosto: 'Edinburgh Scott Monument 20211019.jpg',
+        lyhyt: 'Scott-monumentti idästä: holvin alla Walter Scottin patsas, etualalla Livingstonen muistomerkki.',
         selite: 'Scott-monumentti idästä nähtynä. Holvin alla istuu '
           + 'Walter Scottin marmoripatsas; etualan pronssi on '
           + 'tutkimusmatkailija David Livingstonen muistomerkki.',
@@ -623,6 +703,7 @@ export const FOKUSVIRTA_EDINBURGH = {
      */
     kuva: {
       tiedosto: 'One OClock Gun.JPG',
+      lyhyt: 'Yhden lyönnin tykki laukeaa linnan valleilta kohti Forthin lahtea, jonne aikamerkki tarkoitettiin.',
       selite: 'Yhden lyönnin tykki laukeaa linnan valleilta. Takana '
         + 'aukeaa Forthin lahti, jonne aikamerkki alun perin '
         + 'tarkoitettiin.',
@@ -850,6 +931,7 @@ export const FOKUSVIRTA_EDINBURGH = {
        */
       kuva: {
         tiedosto: 'Orkney Skara Brae.jpg',
+        lyhyt: 'Yksi Skara Braen kaivetuista taloista; keskellä liesi, seinustan kivikalusteet paikoillaan.',
         selite: 'Yksi Skara Braen kaivetuista taloista. Keskellä on '
           + 'liesi, ja seinustan kivikalusteet ovat yhä paikoillaan.',
         lahde: 'Dr. John F. Burka, Wikimedia Commons (CC BY-SA 3.0)',
@@ -958,6 +1040,7 @@ export const FOKUSVIRTA_EDINBURGH = {
        */
       kuva: {
         tiedosto: 'Joseph Mallord William Turner - Bell Rock Lighthouse - Google Art Project.jpg',
+        lyhyt: 'Bell Rockin majakka myrskyssä; Turner maalasi akvarellin 1819, yhdeksän vuotta valmistumisesta.',
         selite: 'Bell Rockin majakka myrskyssä. J. M. W. Turner maalasi '
           + 'akvarellin 1819, yhdeksän vuotta majakan valmistuttua.',
         lahde: 'J. M. W. Turner 1819, Wikimedia Commons (public domain)',
@@ -1061,6 +1144,7 @@ export const FOKUSVIRTA_EDINBURGH = {
        */
       kuva: {
         tiedosto: 'Saint Kilda 20090611 Hirta - Village Bay overview.jpg',
+        lyhyt: 'Village Bay Hirtalla: talorivi ja kivivarastot paikoillaan, vaikka asukkaat lähtivät 1930.',
         selite: 'Village Bay Hirtalla. Kylän talorivi ja rinteiden '
           + 'kivivarastot ovat paikoillaan, vaikka asukkaat lähtivät '
           + 'vuonna 1930.',

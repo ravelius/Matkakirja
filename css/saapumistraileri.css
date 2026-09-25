@@ -1,0 +1,365 @@
+/* =========================================================================
+   KAUPUNGIN MINITRAILERI (js/saapumistraileri.js)
+   -------------------------------------------------------------------------
+   Omistaja 11.9.2026 klo 12.40 (Raamattu, SAAPUMISEN UUSI JARJESTYS:
+   KAUPUNGIN MINITRAILERI, ISOT KUVAT KESKELLA, LYHENNETTY MERKINTA),
+   sanatarkasti: *"Ne kolme kuvaa voisivat liukua oikealta vasemmalle
+   pysahtyen keskelle ruutua kahden sekunnin ajaksi. Liut menisi tutulla
+   nopeutus hidastus kiihdytyksilla"* ja *"kirjaimet voisivat lentaa ruudun
+   keskelta kaukaa horisontista tullen oikeille paikoilleen"*.
+
+   VAIN TRANSFORM JA OPACITY LIIKKUVAT. Sama sääntö kuin kartan kamera-ajossa
+   ja kuvasuurennoksessa: asettelu tehdään kerran, liike jätetään
+   kompositorille. Kirjainten kasvu tulee PERSPEKTIIVISTÄ eikä skaalasta —
+   kaukana oleva kirjain on pieni, koska se on kaukana.
+
+   KESTOT OVAT SAMAT LUVUT KUIN js/saapumistraileri.js:ssä. Ajastimet ja
+   siirtymät on pidettävä samassa tahdissa: skripti päättää MILLOIN luokka
+   vaihtuu, css MITEN vaihto näyttää.
+   ========================================================================= */
+
+.saapumistraileri {
+  --traileri-liuku: 700ms;
+  --traileri-ulos: 600ms;
+  --traileri-kirjain: 650ms;
+  --traileri-kirjain-ulos: 450ms;
+  --traileri-iskulause: 600ms;
+
+  /*
+   * RUUDUN MITTA TULEE MITATTUNA, EI vw/vh-YKSIKKÖNÄ (omistaja
+   * 11.9.2026 klo 23.18, iPad-kaappaus: *"Nyt taas näkyy kuvat
+   * pienempänä … Syy on ilmeisesti siinä jos käyn toisessa apissa ja
+   * palaan matkakirjaan"*).
+   *
+   * WKWebView jättää toisesta sovelluksesta palatessa ASETTELU-
+   * VIEWPORTIN vanhaan, kapeampaan mittaan — sama vika, jota js/ui.js
+   * (mittaaNakyma, vahdiNakymanKokoa) on paikannut lehdelle ja
+   * kartalle kolmesti. Silloin `vw` ja `vh` eivät ole ruudun mitta
+   * vaan vanhentuneen viewportin mitta, ja koko traileri kutistuu sen
+   * mukana. Mitattu Chromiumilla vanhentuneella 480 px:n asettelu-
+   * viewportilla 834 px:n ruudulla: kuva 461 px = 55 % ruudusta.
+   *
+   * Siksi skripti (js/saapumistraileri.js paivitaTrailerinMitat)
+   * kirjoittaa ruudun mitan pikseleinä näihin kahteen muuttujaan ja
+   * uusii luvun aina kun sivu palaa näkyviin tai näkymä muuttuu.
+   * vw/vh jää vain varamitaksi ensimmäiseen ruutuun (ja testeihin),
+   * eikä yhtäkään trailerin mittaa saa enää kirjoittaa suoraan
+   * vw/vh-yksikköinä — muuten se karkaa taas omille teilleen.
+   */
+  --traileri-ruutu-leveys: 100vw;
+  --traileri-ruutu-korkeus: 100vh;
+
+  /*
+   * KUVAN KATOT YHDESSA PAIKASSA (omistaja 11.9.2026 klo 22.26,
+   * iPad-kaappaus: *"herokuva on yha liian pieni"*). Sama kaksikko
+   * ohjaa seka kuvakoteloa etta kuvaa, jotta ne eivat voi erkaantua.
+   */
+  --traileri-leveyskatto: calc(var(--traileri-ruutu-leveys) * 0.96);
+  --traileri-korkeuskatto: calc(var(--traileri-ruutu-korkeus) * 0.92);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--traileri-ruutu-leveys);
+  height: var(--traileri-ruutu-korkeus);
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*
+   * KARTTA NÄKYY TRAILERIN TAKANA SUMENNETTUNA (omistaja 19.9.2026 klo
+   * 23.22: *"Kun tullaan uuteen kaupunkiin niin esittely kuvien taustalla
+   * saisi olla jo kartta blurrina yms jotta ei tule hyppäystä kun isoisän
+   * kuvat ja puhe alkaa"*). Ennen tässä oli 85 %:n musta peite: kartta
+   * oli jo valmiina uuden kaupungin kohdalla, mutta se paljastui vasta
+   * trailerin kadotessa — siitä syntyi hyppäys. Nyt kartta piirtyy
+   * taustalla koko ajan, sumennettuna ja hieman tummennettuna, ja
+   * trailerin lopussa häipyy vain sumennus (kerros katoaa 200 ms:ssä).
+   *
+   * BACKDROP-FILTER, EI filter: suodatin kohdistuu KERROKSEN TAKANA
+   * olevaan kuvaan eikä pallon omaan kankaaseen, joten WebGL-piirto,
+   * laattamoottori ja linssien kerrokset eivät mene suodattimen läpi
+   * (sama varovaisuus kuin linssikerroksen suodatinkiellossa).
+   */
+  background: rgba(8, 12, 18, 0.3);
+  -webkit-backdrop-filter: blur(12px) saturate(0.9) brightness(0.82);
+  backdrop-filter: blur(12px) saturate(0.9) brightness(0.82);
+  /* Traileri on tervehdys eikä valikko: napautus missä tahansa ohittaa. */
+  cursor: pointer;
+  /* Kirjainten lento tulee "horisontista": yhteinen katselupiste ruudun
+     keskellä, jolloin kaikki kirjaimet lentävät samaa rataa. */
+  perspective: 900px;
+  perspective-origin: 50% 50%;
+  opacity: 1;
+  transition: opacity 200ms ease;
+}
+
+/*
+ * VARAREITTI: jos selain ei tue backdrop-filteriä, kartta ei saa jäädä
+ * paljaaksi trailerin tekstien alle — silloin peite on entinen musta.
+ */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .saapumistraileri { background: rgba(0, 0, 0, 0.85); }
+}
+
+/* Napautus ohittaa: koko päällys häipyy 200 ms:ssä (skripti poistaa sen). */
+.saapumistraileri.ohitettu {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.saapumistraileri-kuvat {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* KUVA LIUKUU OIKEALTA KESKELLE JA VASEMMALLE ULOS. Alkuasento on ruudun
+   oikean reunan takana; `keskella` tuo sen paikalleen ja `ulos` vie sen
+   vasemmalle. Molemmissa liukuvat nopeutus–hidastus-käyrät. */
+.saapumistraileri-kuva {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: var(--traileri-leveyskatto);
+  max-height: var(--traileri-korkeuskatto);
+  opacity: 0;
+  transform: translateX(calc(var(--traileri-ruutu-leveys) * 1.15));
+  transition:
+    transform var(--traileri-liuku) cubic-bezier(0.33, 0, 0.2, 1),
+    opacity 260ms ease;
+}
+
+.saapumistraileri-kuva.keskella {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* LÄHTEVÄ KUVA HÄIPYY MENNESSÄÄN (omistaja 11.9.2026, iPad-kaappaus
+   Tallinnasta: *"Kuvat tulevat liian pieninä ja edellinen jää sivuun
+   näkymään"*). Kuvat limittyvät tarkoituksella (TRAILERIN_LIMITYS_MS),
+   mutta täydellä peitolla lähtevä kuva näkyi vielä ruudun laidassa
+   uuden kuvan rinnalla. Nyt se haalistuu liukuessaan: liike on sama,
+   mutta laidassa ei roiku puolikasta kuvaa. */
+.saapumistraileri-kuva.ulos {
+  opacity: 0;
+  transform: translateX(calc(var(--traileri-ruutu-leveys) * -1.15));
+  transition:
+    transform var(--traileri-ulos) cubic-bezier(0.6, 0, 0.75, 1),
+    opacity var(--traileri-ulos) cubic-bezier(0.6, 0, 0.75, 1);
+}
+
+/* KUVA MAHDOLLISIMMAN ISONA, REUNAT PEHMEÄSTI HÄIVYTETTYINÄ. Sama
+   maskikaava kuin isoisän isossa keskikuvassa (css/fokusvirta.css
+   .fokusvirta-isokuva): kaikki neljä reunaa sulavat mustaan, jolloin
+   kuvalla ei ole kehystä vaan häive. */
+.saapumistraileri-kuva img {
+  /* KUVA NIIN ISONA KUIN SE MAHTUU — JA LAATIKKO TASAN KUVAN KOKOINEN.
+     (omistaja 11.9.2026 klo 22.26, iPad-kaappaus: *"herokuva on yha
+     liian pieni"*.)
+
+     Vanha sääntö `width: 92vw; max-height: 80vh; object-fit: contain`
+     MITTASI oikein mutta NÄYTTI väärin: kun korkeuskatto puri, laatikko
+     jäi 92 vw:n levyiseksi ja contain kutisti KUVAN sen sisään. Mitattu
+     Chromiumilla 11.9.2026: iPad vaakatasossa 1194 × 834 laatikko 92,0 %
+     ruudun leveydestä mutta maalattu kuva vain 83,8 % — ja reunahäive
+     osui tyhjään laatikkoon eikä kuvan reunaan.
+
+     Nyt leveys lasketaan MOLEMMISTA katoista: se on pienempi kahdesta,
+     leveyskatto tai se leveys, joka mahtuu korkeuskattoon kuvasuhteella.
+     Silloin `height: auto` osuu aina korkeuskaton alle, laatikko on
+     täsmälleen kuvan kokoinen eikä contain kutista mitään. Kuvasuhteen
+     kirjoittaa skripti (js/saapumistraileri.js) kuvan latatessa; 1.5 on
+     lehden herokuvien oma 3:2 ja kelpaa siihen asti. */
+  width: min(
+    var(--traileri-leveyskatto),
+    calc(var(--traileri-korkeuskatto) * var(--traileri-kuvasuhde, 1.5))
+  );
+  height: auto;
+  max-width: var(--traileri-leveyskatto);
+  max-height: var(--traileri-korkeuskatto);
+  border-radius: 18px;
+  object-fit: contain;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 7%, #000 93%, transparent 100%);
+  mask-image:
+    linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 7%, #000 93%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+/* NIMI JA ISKULAUSE SAMASSA PYSTYRIVISSÄ KUVIEN PÄÄLLÄ. Kotelo on
+   pystysuora, jotta iskulause asettuu nimen ALLE eikä sen viereen. */
+.saapumistraileri-teksti {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: calc(var(--traileri-ruutu-leveys) * 0.96);
+  pointer-events: none;
+}
+
+/* KAUPUNGIN NIMI HARVENNETUIN KAPITAALEIN KUVIEN KESKELLÄ. Nimi on
+   kuvien PÄÄLLÄ ja pysyy paikallaan kaikkien kolmen kuvan ajan. */
+.saapumistraileri-nimi {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  /* NIMI YHDELLE RIVILLE. Harvennetut kapitaalit levittävät nimen
+     leveäksi, ja rivitys pudotti viimeisen kirjaimen omalle rivilleen
+     (mitattu Chromiumilla 1024 px:n ruudulla). Kirjasinkoko lasketaan
+     siksi nimen PITUUDESTA: skripti kirjoittaa kirjainmäärän
+     muuttujaan --nimen-merkit, ja koko on pienempi kahdesta — ruudun
+     mukainen enimmäiskoko tai se, mikä mahtuu yhdelle riville. */
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  max-width: calc(var(--traileri-ruutu-leveys) * 0.96);
+  padding: 0 calc(var(--traileri-ruutu-leveys) * 0.02);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  /* Harvennus jättää viimeisen kirjaimen jälkeen välin: siirto puolella
+     harvennuksella pitää nimen optisesti keskellä. */
+  text-indent: 0.175em;
+  font-family: var(--font-otsikko, var(--font-luku, serif));
+  font-size: min(
+    clamp(2.4rem, calc(var(--traileri-ruutu-leveys) * 0.09), 7rem),
+    calc(var(--traileri-ruutu-leveys) * 0.88 / (var(--nimen-merkit, 8) * 1.1))
+  );
+  line-height: 1.1;
+  color: #fff;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+}
+
+/* KAUPUNGIN ISKULAUSE NIMEN ALLA (omistaja 11.9.2026 klo 12.55,
+   sanatarkasti: *"Kaupungin nimen alle voisi feidautua kaupungin isku
+   lause"*). Sama väri ja sama varjo kuin nimellä, mutta pienemmällä ja
+   hillitymmin harvennetulla kirjasimella — iskulause on kuiskaus nimen
+   alla, ei toinen otsikko. Se EI lennä: se vain häipyy näkyviin ja
+   pois, myös silloin kun kirjaimet syöksyvät. Ajoitus tulee skriptiltä
+   (js/saapumistraileri.js iskulauseenViive): puoli sekuntia viimeisen
+   kirjaimen laskeuduttua. */
+.saapumistraileri-iskulause {
+  margin-top: 0.6em;
+  max-width: calc(var(--traileri-ruutu-leveys) * 0.92);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  text-indent: 0.09em;
+  font-family: var(--font-otsikko, var(--font-luku, serif));
+  font-size: clamp(0.9rem, calc(var(--traileri-ruutu-leveys) * 0.026), 1.4rem);
+  line-height: 1.3;
+  color: #fff;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  transition: opacity var(--traileri-iskulause, 600ms) ease;
+  pointer-events: none;
+}
+
+.saapumistraileri-iskulause.nakyy { opacity: 1; }
+
+/* Kirjainten syöksyn kanssa yhtä aikaa pois — feidaten, ei lentäen. */
+.saapumistraileri-iskulause.ulos {
+  opacity: 0;
+  transition: opacity var(--traileri-kirjain-ulos) ease-in;
+}
+
+/* KIRJAIN LENTÄÄ HORISONTISTA: se alkaa 2500 px katsojasta poispäin ruudun
+   keskeltä ja tulee omalle paikalleen suureten perspektiivin mukaan.
+   Porrastus (--kirjaimen-viive) tulee skriptiltä, 90 ms/kirjain. */
+.saapumistraileri-kirjain {
+  display: inline-block;
+  opacity: 0;
+  transform: translate3d(0, 0, -2500px);
+  transition:
+    transform var(--traileri-kirjain) cubic-bezier(0.16, 0.84, 0.44, 1) var(--kirjaimen-viive, 0ms),
+    opacity 320ms ease var(--kirjaimen-viive, 0ms);
+}
+
+.saapumistraileri-vali {
+  width: 0.4em;
+}
+
+.saapumistraileri-nimi.nakyy .saapumistraileri-kirjain {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* LOPUKSI KAIKKI SAMAA RATAA ULOS: kirjaimet jatkavat katsojaa kohti
+   (translateZ +600 px), jolloin ne suurenevat ja katoavat ruudun ohi
+   lähes yhtä aikaa (porrastus 20 ms). */
+.saapumistraileri-nimi.ulos .saapumistraileri-kirjain {
+  opacity: 0;
+  transform: translate3d(0, 0, 600px);
+  transition:
+    transform var(--traileri-kirjain-ulos) cubic-bezier(0.6, 0, 0.9, 0.4) var(--kirjaimen-ulosviive, 0ms),
+    opacity var(--traileri-kirjain-ulos) ease-in var(--kirjaimen-ulosviive, 0ms);
+}
+
+/*
+ * LIIKE VÄHENNETTY: SAMAT AJAT, EI LIIKETTÄ (omistajan sääntö koko pelissä).
+ * Kuvat vaihtuvat ristihäivytyksellä ja nimi tulee näkyviin häivytyksellä —
+ * porrastus säilyy, jotta rytmi on sama kuin liikkeellisessä versiossa.
+ *
+ * Luokka tulee skriptiltä (js/saapumistraileri.js liikeVahennetty), jotta
+ * sama sääntö pätee myös silloin kun media-kysely ei ole käytettävissä.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .saapumistraileri-kuva,
+  .saapumistraileri-kuva.ulos { transform: none; }
+  .saapumistraileri-kuva.ulos { opacity: 0; }
+  .saapumistraileri-kirjain,
+  .saapumistraileri-nimi.nakyy .saapumistraileri-kirjain,
+  .saapumistraileri-nimi.ulos .saapumistraileri-kirjain { transform: none; }
+}
+
+.saapumistraileri.liike-vahennetty .saapumistraileri-kuva,
+.saapumistraileri.liike-vahennetty .saapumistraileri-kuva.ulos { transform: none; }
+.saapumistraileri.liike-vahennetty .saapumistraileri-kuva.ulos { opacity: 0; }
+.saapumistraileri.liike-vahennetty .saapumistraileri-kirjain,
+.saapumistraileri.liike-vahennetty .saapumistraileri-nimi.nakyy .saapumistraileri-kirjain,
+.saapumistraileri.liike-vahennetty .saapumistraileri-nimi.ulos .saapumistraileri-kirjain {
+  transform: none;
+}
+
+/*
+ * ── MATKAKIRJA JA PULUN KUPLA POIS TRAILERIN AJAKSI ───────────────
+ *
+ * OMISTAJA 20.9.2026 klo 11.15 (kaappaus
+ * docs/raportit/kaappaukset/omistaja-20260920/saapuminen-pariisi-v1974.webp):
+ * kartta saa jäädä teräväksi, mutta vasemman yläkulman
+ * matkakirjapaneeli (.fact-card) ja pulun puhekupla eivät saa näkyä
+ * saapumiskuvien päällä. v1974:ssä molemmat olivat ruudulla koko
+ * trailerin ajan.
+ *
+ * VISIBILITY EIKÄ DISPLAY: paneelin sisältö kirjoitetaan saapumisessa
+ * uudelleen, ja `display: none` veisi siltä mitat kesken kirjoituksen.
+ * Piilotettu elementti säilyttää paikkansa ja palaa ennalleen, kun
+ * runkoluokka poistuu (js/saapumistraileri.js piilotaSaapumistraileri).
+ * Häivytys on trailerin oma liuku, ja liikkeenvähennys ohittaa sen.
+ */
+body.saapumistraileri-paalla .fact-card,
+body.saapumistraileri-paalla .pollo-kuplapino-kehys,
+body.saapumistraileri-paalla .pollo-vihje {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 240ms var(--liike-ulos, ease), visibility 0s linear 240ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.saapumistraileri-paalla .fact-card,
+  body.saapumistraileri-paalla .pollo-kuplapino-kehys,
+  body.saapumistraileri-paalla .pollo-vihje {
+    transition: none;
+  }
+}

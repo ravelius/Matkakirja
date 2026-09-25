@@ -13,13 +13,36 @@
 #                              vaatii mpg123-decoder + lamejs
 #                              (hännän hiljaisuusmittaus + paddaus).
 #   tools/generoi-luennat.mjs  kaupunkien matkakirjaluennat.
+#   tools/kohdista-luennat.mjs AIKALEIMAT valmiille matkakirjaluennalle
+#                              (ei generoi ääntä; toiminto: kohdista).
+#                              `toiminto: kohdista` + `avaus: true`
+#                              kohdistaa myös avausluennat (intro-puhe,
+#                              puhe-lento-alku) ilman kuittia; ne viedään
+#                              audio/intro-puhe.aikaleimat.json- ja
+#                              audio/puhe-lento-alku.aikaleimat.json-
+#                              avaimiin (natiivin kirjoituskone, 24.9.2026).
 #
-# SYÖTE ON YHÄ PELKKIÄ KAUPUNKIAVAIMIA ("madrid wien" tai
-# "madrid,wien" — työkalu erottelee kummallakin; pilkullinen lista
-# meni ennen läpi yhtenä avaimena ja ajo kaatui vasta commit-vaiheeseen
-# "Yhtään tiedostoa ei syntynyt eikä muuttunut"), mutta työkalu
-# valitsee lähteen itse — kaupungin ei siis tarvitse tietää, kummasta
-# pakasta sen merkintä tulee:
+# SIDONTA EI ÄÄNITÄ EIKÄ KOHDISTA. `toiminto: sido` lukee repossa jo
+# olevan aikaleimatiedoston, hakee äänitteen ja kirjoittaa sen version 2
+# kentät tuoreina (teksti ja äänite sidottuina SHA-256:een), minkä
+# jälkeen tiedosto viedään ämpäriin. ElevenLabsia ei kutsuta kertaakaan,
+# joten ajo on ilmainen — sillä saa vanhan kohdistuksen kelpaamaan
+# pelille ilman uutta kohdistusajoa.
+#
+# KOHDISTUS EI ÄÄNITÄ MITÄÄN. `toiminto: kohdista` hakee olemassa
+# olevalle mp3:lle sanakohtaiset aikaleimat ElevenLabsin pakotetulla
+# kohdistuksella (POST /v1/forced-alignment) ja kirjoittaa tiedoston
+# assets/aikaleimat/puhe-fokus-matkakirja-<id>.aikaleimat.json. Peli
+# tarvitsee sen, jotta pulu voi reagoida luennan SISÄLLÄ oikeassa
+# sanassa (js/luentareaktiot.js; Raamattu PULU REAGOI TEKSTIN SISALLA).
+# Tiedosto viedään kuitin määräämään versionoituun sisaravaimeen heti
+# työkalusta oikealla sisältötyypillä (application/json). Repokopio jää
+# ajon tarkastusartefaktiin; workflow ei committoi eikä pushaa haaraa.
+#
+# Generoinnin syöte on kaupunkiavainlista. Kohdistuksen syöte on julkinen
+# valmis tuotantokuitti, joka määrää kaupungit ja muuttumattomat MP3-avaimet.
+# Työkalu tarkistaa silti lähteen itse — kutsujan ei siis tarvitse tietää,
+# kummasta pakasta merkintä tulee:
 #   FOKUSVIRTA (js/packs/fokusvirta-<id>.js) VOITTAA, jos kaupungilla
 #     on fokusvirta → assets/audio/puhe-fokus-matkakirja-<id>.mp3.
 #     Sama sääntö kuin pelissä: fokusvirtakaupungin matkakirjakortin
@@ -34,12 +57,21 @@
 # `aanite`-kenttä ja työkalun kohdetiedosto eivät täsmää. Avainta ei
 # tarvita. Kannattaa ajaa ennen oikeaa ajoa, kun kaupunkilista on uusi.
 #
-# TUOTOS EI MENE SUORAAN MAINIIN. Ajo committoi uudet mp3:t omalle
-# haaralleen (claude/luennat-<ajonumero>) ja jättää ne PR:ää varten:
-# luennat KUUNNELLAAN ennen julkaisua (generoi-avaus.mjs:n oma sääntö
-# "Kuuntele molemmat ennen julkaisua"), ja mp3 assets/audio-kansiossa
-# vaatii versionoston harkintoineen (sw-esilataus vai R2). Kun PR
-# mergetään, vie-aanet.yml vie tiedostot R2:een automaattisesti.
+# MP3:T MENEVÄT VERSIONOITUIHIN ÄMPÄRIAVAIMIIN, EIVÄT REPOON (omistajan linjaus
+# 11.9.2026: *"repossa ei saa olla äänitiedostoja, kaikki vain
+# ämpärissä"*). Ajo äänittää, vie tuotoksen versionoituihin `audio/`-avaimiin ja
+# liittää samat tiedostot ajon artefaktiksi — luennat KUUNNELLAAN siitä
+# artefaktista (generoi-avaus.mjs:n oma sääntö "Kuuntele molemmat ennen
+# julkaisua"), ei PR:stä. Aikaleimat jäävät vastaavasti ajon artefaktiin.
+#
+# KUUNTELUSÄÄNTÖ. UUSI äänite ei kuulu pelissä ennen kuin pelidata
+# viittaa siihen (fokusvirran `aanite`-kenttä tai saapumisen luenta),
+# joten sen voi viedä huoletta ja kuunnella rauhassa. SAMANNIMISEN
+# luennan uusinta sen sijaan korvaa ämpärin tiedoston heti ja kuuluu
+# pelaajille — siksi uusinnat tehdään harkiten, ja niiden yhteydessä
+# nostetaan js/media.js UUSITUT_AANET -kyselyversio samassa PR:ssä,
+# jossa pelidata muuttuu (muuten selaimen, reunan ja service workerin
+# välimuistit soittavat vanhaa luentaa viikkoja).
 #
 # Salaisuus on tämän repon Actions-asetuksissa: ELEVEN_API_KEY.
 # Avain ei koskaan tulostu lokiin (työkalut eivät tulosta sitä, eikä
@@ -60,12 +92,42 @@ on:
         required: false
         default: ''
       avaus:
-        description: Generoi myös etusivun ja avauslennon luennat
+        description: >-
+          Etusivun ja avauslennon luennat. toiminto "generoi": äänittää ne
+          uusiksi. toiminto "kohdista": EI ÄÄNITÄ, vaan hakee valmiille
+          intro-puhe.mp3:lle ja puhe-lento-alku.mp3:lle aikaleimat (kuittia
+          ei tarvita) ja vie ne ämpäriin.
         type: boolean
         default: false
+      toiminto:
+        description: >-
+          "generoi" (oletus) äänittää yllä annetut kaupungit.
+          "kohdista" EI ÄÄNITÄ: se hakee valmiille matkakirjaluennoille
+          sanakohtaiset aikaleimat (pulun luentareaktiot) ja vie ne
+          ämpäriin. "sido" EI ÄÄNITÄ EIKÄ KOHDISTA: se sitoo olemassa
+          olevat aikaleimat äänitteen SHA-256:een (tiedostomuoto versio
+          2) ja vie ne ämpäriin. Kaupungit annetaan kummassakin
+          tapauksessa kentässä "kaupungit".
+        type: choice
+        options: [generoi, kohdista, sido]
+        default: generoi
+      kuitti:
+        description: >-
+          Vain kohdista-toiminnolle: versionoidun valmiin Horatio-tuotantokuitin
+          julkinen HTTPS-osoite. Kuitti määrää kaupungit ja MP3-avaimet.
+        required: false
+        default: ''
+      kaaret:
+        description: >-
+          Tarinakaarien luennat (tools/generoi-kaari.mjs --mykistetyt):
+          kaupunkien avaimet välilyönnein, joiden mykistetyt-kenttien
+          osat generoidaan (esim. "lontoo dubrovnik odessa"). Tyhjä = ei
+          kaariluentoja. Mykistys puretaan käsin ajon jälkeen.
+        required: false
+        default: ''
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: generoi-luennat
@@ -82,6 +144,13 @@ jobs:
         with:
           node-version: 22
 
+      - name: Asenna kaupunkiluennan mittaustyökalu
+        if: ${{ inputs.kaupungit != '' && inputs.toiminto == 'generoi' }}
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+          ffprobe -version | head -1
+
       - name: Tarkista että avain on tallessa
         env:
           AVAIN: ${{ secrets.ELEVEN_API_KEY }}
@@ -95,42 +164,266 @@ jobs:
           echo "Avain löytyy."
 
       - name: Tarkista että jotain on tilattu
-        if: ${{ inputs.kaupungit == '' && inputs.avaus == false }}
+        if: ${{ inputs.toiminto == 'generoi' && inputs.kaupungit == '' && inputs.avaus == false && inputs.kaaret == '' }}
         run: |
           echo "::error::Ei mitään generoitavaa — anna kaupungit ja/tai avaus."
           exit 1
 
+      # Avausluennat (avaus: true) eivät tarvitse kuittia: niillä ei ole
+      # Horatio-erää, vaan äänite on pelin oma ?v=-versioitu osoite.
+      - name: Tarkista kohdistuksen kuitti
+        if: ${{ inputs.toiminto == 'kohdista' && inputs.kuitti == '' && inputs.avaus == false }}
+        run: |
+          echo "::error::Kohdistus vaatii valmiin Horatio-tuotantokuitin HTTPS-osoitteen (tai avaus: true)."
+          exit 1
+
+      # R2-portti ennen forced-alignment-kutsuja: valmista maksullista
+      # kohdistusta ei saa tehdä, jos sen versionoitua tulosta ei voi tallentaa.
+      - name: Tarkista kohdistuksen tallennusavaimet
+        if: ${{ inputs.toiminto == 'kohdista' }}
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "${R2_ACCOUNT_ID:-}" ]         || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ]     || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "${R2_BUCKET:-}" ]             || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Kohdistuksen versionoitu R2-vienti puuttuu:$puuttuu"
+            exit 1
+          fi
+
       # Vain avaus-työkalu tarvitsee paketteja (hännän mittaus +
       # hiljaisuuspaddaus). Asennus ilman package.json-muutosta:
       # --no-save, jotta työhakemisto pysyy puhtaana committia varten.
+      # Vain generoi-toiminto äänittää avauksen; kohdista + avaus hakee
+      # pelkät aikaleimat eikä saa koskaan äänittää uusiksi.
       - name: Asenna avaustyökalun paketit
-        if: ${{ inputs.avaus == true }}
+        if: ${{ inputs.avaus == true && inputs.toiminto == 'generoi' }}
         run: npm install --no-save --no-audit --no-fund mpg123-decoder lamejs
 
       - name: Generoi avausluennat
-        if: ${{ inputs.avaus == true }}
+        if: ${{ inputs.avaus == true && inputs.toiminto == 'generoi' }}
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          # RAAKAVIENTI tarvitsee R2:n jo generointivaiheessa (omistajan
+          # sääntö 14.9.2026): mallin tuotos menee ämpäriin ennen mitään
+          # käsittelyä, joten salaisuudet eivät voi enää olla vain
+          # myöhemmän vientiaskeleen ympäristössä.
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
         run: node tools/generoi-avaus.mjs
 
-      - name: Generoi kaupunkiluennat
-        if: ${{ inputs.kaupungit != '' }}
+      - name: Varaa muuttumaton Horatio-erä ennen maksullista ajoa
+        if: ${{ inputs.kaupungit != '' && inputs.toiminto == 'generoi' }}
         env:
-          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
-        run: node tools/generoi-luennat.mjs ${{ inputs.kaupungit }}
-
-      - name: Committoi tuotos omalle haaralleen
+          KAUPUNGIT: ${{ inputs.kaupungit }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
         run: |
           set -euo pipefail
-          git add assets/audio
-          if git diff --cached --quiet; then
-            echo "::error::Yhtään tiedostoa ei syntynyt eikä muuttunut."
+          node tools/generoi-luennat.mjs --plan-only --kaupungit "$KAUPUNGIT"
+          kuitti=assets/audio/luennat-tuotantokuitti.json
+          era=$(node -e 'console.log(require("./assets/audio/luennat-tuotantokuitti.json").batch.id)')
+          avain="audio/receipts/horatio/${era}.planned.json"
+          endpoint="https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
+          if aws s3api head-object --bucket "$R2_BUCKET" --key "$avain" --endpoint-url "$endpoint" >/dev/null 2>&1; then
+            echo "::error::Erä $era on jo aloitettu; maksullista ajoa ei uusita."
             exit 1
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          haara="claude/luennat-${{ github.run_number }}"
-          git checkout -b "$haara"
-          git commit -m "Luennat: ${{ inputs.avaus == true && 'avaus ' || '' }}${{ inputs.kaupungit }}"
-          git push -u origin "$haara"
-          echo "Valmis. Haara: $haara — kuuntele luennat ja tee PR."
+          aws s3 cp "$kuitti" "s3://${R2_BUCKET}/${avain}" --endpoint-url "$endpoint" \
+            --no-progress --content-type application/json --cache-control "public, max-age=2592000"
+
+      - name: Generoi kaupunkiluennat
+        if: ${{ inputs.kaupungit != '' && inputs.toiminto == 'generoi' }}
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          KAUPUNGIT: ${{ inputs.kaupungit }}
+        run: node tools/generoi-luennat.mjs --kaupungit "$KAUPUNGIT"
+
+      # Kuiva ajo ensin: väärä kaupunkiavain tai ankkuri, jota ei löydy
+      # luentatekstistä, paljastuu ilman yhtäkään API-kutsua.
+      - name: Tarkista kohdistus kuivana
+        if: ${{ inputs.toiminto == 'kohdista' || inputs.toiminto == 'sido' }}
+        env:
+          KAUPUNGIT: ${{ inputs.kaupungit }}
+          KUITTI: ${{ inputs.kuitti }}
+          AVAUS: ${{ inputs.avaus }}
+        run: |
+          set -euo pipefail
+          if [ "${{ inputs.toiminto }}" = kohdista ]; then
+            if [ "$AVAUS" = true ]; then
+              node tools/kohdista-luennat.mjs --kuiva --avaus
+            fi
+            if [ -n "$KUITTI" ]; then
+              case "$KUITTI" in https://media.matkakirja.app/audio/receipts/horatio/*.completed.json) ;; *)
+                echo "::error::Kuitti ei ole Matkakirjan valmistunut Horatio-tuotantokuitti."
+                exit 1
+              esac
+              node tools/kohdista-luennat.mjs --kuiva --kuitti "$KUITTI"
+            fi
+          else
+            node tools/kohdista-luennat.mjs --kuiva --kaupungit "$KAUPUNGIT"
+          fi
+
+      - name: Kohdista aikaleimat ja vie ämpäriin
+        if: ${{ inputs.toiminto == 'kohdista' }}
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          KUITTI: ${{ inputs.kuitti }}
+          AVAUS: ${{ inputs.avaus }}
+          # Samat nimet ja sama endpoint-tyyli kuin muissakin
+          # ääniajoissa (generoi-tehosteet.yml, generoi-pulu.yml).
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        # Avausluennat ja kuitin kaupungit ajetaan erikseen: kaupunkien
+        # kohdistus vaatii kuitin, avausluennat eivät.
+        run: |
+          set -euo pipefail
+          if [ "$AVAUS" = true ]; then
+            node tools/kohdista-luennat.mjs --vie --avaus
+          fi
+          if [ -n "$KUITTI" ]; then
+            node tools/kohdista-luennat.mjs --vie --kuitti "$KUITTI"
+          fi
+
+      # Sidonta ei kutsu ElevenLabsia, joten avainta ei anneta — mutta
+      # R2-tunnukset ovat samat kuin kohdistuksella: tiedosto viedään
+      # ämpäriin oikealla sisältötyypillä samasta työkalusta.
+      - name: Sido aikaleimat äänitteeseen ja vie ämpäriin
+        if: ${{ inputs.toiminto == 'sido' }}
+        env:
+          KAUPUNGIT: ${{ inputs.kaupungit }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        run: node tools/kohdista-luennat.mjs --sido --vie --kaupungit "$KAUPUNGIT"
+
+      - name: Generoi kaariluennat
+        if: ${{ inputs.kaaret != '' }}
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          # RAAKAVIENTI tarvitsee R2:n jo generointivaiheessa (omistajan
+          # sääntö 14.9.2026): mallin tuotos menee ämpäriin ennen mitään
+          # käsittelyä, joten salaisuudet eivät voi enää olla vain
+          # myöhemmän vientiaskeleen ympäristössä.
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        run: node tools/generoi-kaari.mjs --mykistetyt ${{ inputs.kaaret }}
+
+      # Kuuntelukopio ajon liitteenä. Tämä on ENNEN vientiä: jos vienti
+      # kaatuu, luennat ovat silti kuunneltavissa eikä kallista
+# äänitystä tarvitse toistaa. Generointiajo ei koskaan ylikirjoita
+# live-avainta `audio/puhe-fokus-...`: staging- ja final-avaimet tulevat
+# tuotantokuitista, ja julkaisu live-avaimeen on erillinen hyväksytty vaihe.
+      - name: Liitä luennat ajoon kuuntelua varten
+        if: ${{ always() && inputs.toiminto == 'generoi' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: luennat-${{ github.run_number }}-${{ github.run_attempt }}
+          path: |
+            assets/audio/*.mp3
+            assets/audio/luennat-tuotantokuitti.json
+          retention-days: 14
+          if-no-files-found: warn
+
+      - name: Vie luennat versionoituihin staging- ja final-avaimiin
+        if: ${{ inputs.toiminto == 'generoi' }}
+        env:
+          # Samat nimet ja sama endpoint-tyyli kuin muissakin
+          # ääniajoissa (generoi-tehosteet.yml, generoi-pulu.yml).
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          # R2 ei hyväksy AWS:n uudempia tarkistussummaotsakkeita, jotka
+          # aws-cli 2.23:sta alkaen lähtevät oletuksena mukaan.
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+        run: |
+          set -euo pipefail
+          kuitti=assets/audio/luennat-tuotantokuitti.json
+          if [ ! -f "$kuitti" ]; then
+            echo "::error::Tuotantokuitti puuttuu — mitään ei viedä."
+            exit 1
+          fi
+          node -e '
+            const k=require("./assets/audio/luennat-tuotantokuitti.json");
+            for(const r of k.cities){
+              if(r.generation.status!=="success")continue;
+              // RAAKAVIENTI ON PAKOLLINEN (omistaja 14.9.2026, Raamattu:
+              // ALKUPERÄISET ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA). Ilman
+              // raaka-avainta ja sen sha256:ta ajo ei vie mitään.
+              if(!r.objectKeys?.raw||!r.rawAudio?.sha256)process.exit(3);
+              if(!r.objectKeys?.staging||!r.objectKeys?.final||r.objectKeys.live!==null)process.exit(2);
+              console.log([r.outputPath,r.objectKeys.raw,r.objectKeys.staging,r.objectKeys.final].join("\t"));
+            }
+          ' > /tmp/horatio-vienti.tsv || {
+            echo "::error::Kuitista puuttuu raaka-avain tai sen sha256 — alkuperäinen katoaisi, joten mitään ei viedä."
+            exit 1
+          }
+          test -s /tmp/horatio-vienti.tsv || { echo "::error::Kuitissa ei ole onnistuneita luentoja."; exit 1; }
+          while IFS=$'\t' read -r paikallinen raaka staging final; do
+            # RAAKA ENSIN: alkuperäinen tavujono omaan eräkohtaiseen
+            # avaimeensa ennen kuin mitään muuta kirjoitetaan.
+            aws s3 cp "$paikallinen" "s3://${{ secrets.R2_BUCKET }}/$raaka" \
+              --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+              --no-progress --content-type audio/mpeg \
+              --cache-control "public, max-age=2592000"
+            # Ei koskaan kirjoiteta live-avaimeen audio/puhe-fokus-... .
+            aws s3 cp "$paikallinen" "s3://${{ secrets.R2_BUCKET }}/$staging" \
+              --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+              --no-progress --content-type audio/mpeg \
+              --cache-control "public, max-age=2592000"
+            aws s3 cp "$paikallinen" "s3://${{ secrets.R2_BUCKET }}/$final" \
+              --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+              --no-progress --content-type audio/mpeg \
+              --cache-control "public, max-age=2592000"
+          done < /tmp/horatio-vienti.tsv
+          era=$(node -e 'console.log(require("./assets/audio/luennat-tuotantokuitti.json").batch.id)')
+          aws s3 cp "$kuitti" "s3://${{ secrets.R2_BUCKET }}/audio/receipts/horatio/${era}.completed.json" \
+            --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+            --no-progress --content-type application/json \
+            --cache-control "public, max-age=2592000"
+          echo "Valmis. Luennat ovat versionoiduissa staging/final-avaimissa ja ajon artefaktissa; live-avainta ei muutettu."
+
+      # Versionoidut JSON-tiedostot ovat jo R2:ssa MP3:n sisaravaimissa.
+      # Repokopio annetaan tarkastettavaksi artefaktina; workflow ei kirjoita
+      # haaraa eikä tee automaattista julkaisupäätöstä.
+      - name: Tallenna aikaleimat tarkastettavaksi
+        if: ${{ inputs.toiminto == 'kohdista' || inputs.toiminto == 'sido' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: horatio-aikaleimat-${{ github.run_id }}
+          path: |
+            assets/aikaleimat/puhe-fokus-matkakirja-*.aikaleimat.json
+            assets/aikaleimat/intro-puhe.aikaleimat.json
+            assets/aikaleimat/puhe-lento-alku.aikaleimat.json
+          retention-days: 14
+          if-no-files-found: error

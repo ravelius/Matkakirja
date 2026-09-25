@@ -1,0 +1,184 @@
+{
+  "versio": 2,
+  "kaupunki": "edinburgh",
+  "teksti": "Edinburghin hautausmaalla vanha rautahäkki peitti hautaa. Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen. Kysyin haudankaivajalta, kauanko häkkiä oli tarvittu. Kunnes ruumis ei enää kelvannut kaupaksi. Hän jatkoi työtään. Minä jäin lukemaan nimeä kivestä.",
+  "tekstiSha256": "32774656e4e67bf99dfadfcb080c448ad54fa2853ea94298b1e2eecca3a4ae90",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-edinburgh.mp3",
+    "versio": 2,
+    "tavut": 358235,
+    "sha256": "2eb3972ebd3813ffaa1dda8e6183ffd84301ceca3056cd6e97af96b065c23074"
+  },
+  "kesto": 22300,
+  "sanat": [
+    {
+      "sana": "Edinburghin",
+      "alku": 180,
+      "loppu": 840
+    },
+    {
+      "sana": "hautausmaalla",
+      "alku": 900,
+      "loppu": 1760
+    },
+    {
+      "sana": "vanha",
+      "alku": 1800,
+      "loppu": 2080
+    },
+    {
+      "sana": "rautahäkki",
+      "alku": 2160,
+      "loppu": 2820
+    },
+    {
+      "sana": "peitti",
+      "alku": 2880,
+      "loppu": 3220
+    },
+    {
+      "sana": "hautaa",
+      "alku": 3260,
+      "loppu": 3920
+    },
+    {
+      "sana": "Ruumiinryöstäjät",
+      "alku": 5040,
+      "loppu": 5880
+    },
+    {
+      "sana": "olivat",
+      "alku": 5940,
+      "loppu": 6220
+    },
+    {
+      "sana": "myyneet",
+      "alku": 6300,
+      "loppu": 6700
+    },
+    {
+      "sana": "vainajia",
+      "alku": 6760,
+      "loppu": 7320
+    },
+    {
+      "sana": "lääkäreiden",
+      "alku": 7360,
+      "loppu": 7980
+    },
+    {
+      "sana": "opetukseen",
+      "alku": 8039,
+      "loppu": 8800
+    },
+    {
+      "sana": "Kysyin",
+      "alku": 10280,
+      "loppu": 10580
+    },
+    {
+      "sana": "haudankaivajalta",
+      "alku": 10620,
+      "loppu": 11620
+    },
+    {
+      "sana": "kauanko",
+      "alku": 11880,
+      "loppu": 12320
+    },
+    {
+      "sana": "häkkiä",
+      "alku": 12360,
+      "loppu": 12720
+    },
+    {
+      "sana": "oli",
+      "alku": 12760,
+      "loppu": 12900
+    },
+    {
+      "sana": "tarvittu",
+      "alku": 12940,
+      "loppu": 13600
+    },
+    {
+      "sana": "Kunnes",
+      "alku": 14460,
+      "loppu": 14800
+    },
+    {
+      "sana": "ruumis",
+      "alku": 14860,
+      "loppu": 15160
+    },
+    {
+      "sana": "ei",
+      "alku": 15220,
+      "loppu": 15300
+    },
+    {
+      "sana": "enää",
+      "alku": 15360,
+      "loppu": 15580
+    },
+    {
+      "sana": "kelvannut",
+      "alku": 15620,
+      "loppu": 16100
+    },
+    {
+      "sana": "kaupaksi",
+      "alku": 16140,
+      "loppu": 16800
+    },
+    {
+      "sana": "Hän",
+      "alku": 18420,
+      "loppu": 18540
+    },
+    {
+      "sana": "jatkoi",
+      "alku": 18620,
+      "loppu": 18940
+    },
+    {
+      "sana": "työtään",
+      "alku": 19000,
+      "loppu": 19620
+    },
+    {
+      "sana": "Minä",
+      "alku": 20560,
+      "loppu": 20740
+    },
+    {
+      "sana": "jäin",
+      "alku": 20780,
+      "loppu": 20980
+    },
+    {
+      "sana": "lukemaan",
+      "alku": 21020,
+      "loppu": 21480
+    },
+    {
+      "sana": "nimeä",
+      "alku": 21520,
+      "loppu": 21860
+    },
+    {
+      "sana": "kivestä",
+      "alku": 21920,
+      "loppu": 22300
+    }
+  ],
+  "lauseet": [
+    180,
+    5040,
+    10280,
+    14460,
+    18420,
+    20560
+  ],
+  "luotu": "2026-09-23T15:37:24.946Z"
+}

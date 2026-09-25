@@ -100,19 +100,29 @@ export const FOKUSVIRTA_WIEN = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 272aba9c4904bb61e5462b54ade8fad9e64a627cec32eb8440f785e3a3f45028. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-wien-r20260909-paper-v4.jpg",
+      lyhyt: "Wien, 1873. Kone teki lehteä ilman mielipidettä.",
+      selite: 'Maailmannäyttelyn hallissa mies valvoo painokonetta Rotunden rautapylväiden alla. Kone tekee lehteä ajattelematta sanaakaan; lukijan ajatukset jäävät myöhemmäksi.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://sammlung.wienmuseum.at/en/object/59815-weltausstellung-1873-rotunde-der-ring-vor-der-hebung-nr-3a/","https://www.technischesmuseum.at/presse/women_at_work","https://www.technischesmuseum.at/ausstellung/women_at_work"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-wien-r20260911-paper2-v1.jpg",
+      lyhyt: "Wien, 1873. Lehti pieneni pöydällä, uutinen ei.",
+      selite: 'Kahvilan herra taitteli lehteä yhä pienemmäksi, kun kahvi laskettiin hänen eteensä. Pörssin uutinen ei suostunut samaan temppuun.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://sammlung.wienmuseum.at/en/object/59815-weltausstellung-1873-rotunde-der-ring-vor-der-hebung-nr-3a/"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Kuukausi seuraa merkinnän omia
      * faktoja: näyttely avattiin 1.5.1873 ja pörssi kaatui kahdeksan
      * päivää myöhemmin, joten isoisä oli Wienissä toukokuussa.
      */
-    paikkarivi: 'Wien, toukokuussa 1873. Sadekuuroja; ilmanpuntari '
-      + 'laskee aamusta.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Wien on rakentanut maailmannäyttelyn ja sen ylle kupolin, '
-      + 'jota sanotaan maailman suurimmaksi. Kävelin Rotunden alla '
-      + 'hattu kädessä. Kahdeksan päivää avajaisten jälkeen pörssi '
-      + 'kaatui — näin rikkaita miehiä itkemässä kadulla, enkä unohda '
-      + 'sitä koskaan.',
+    paikkarivi: "Wien, heinäkuussa 1873. Koneiden kolinaa; levottomia uutisia.",
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 346 merkkiä (yläraja 400). */
+    teksti: "Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.",
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -121,16 +131,87 @@ export const FOKUSVIRTA_WIEN = {
      * kytkentä, ja ennen ajoa puuttuva mp3 jättää kaiuttimen vaiti
      * kaatamatta mitään (js/luenta.js playDiaryVoice).
      */
-    luenta: '[curious] Wien on rakentanut maailmannäyttelyn ja sen ylle '
-      + 'kupolin, jota sanotaan maailman suurimmaksi. Kävelin Rotunden '
-      + 'alla hattu kädessä. [softly] Kahdeksan päivää avajaisten '
-      + 'jälkeen pörssi kaatui — [whispers] näin rikkaita miehiä '
-      + 'itkemässä kadulla, enkä unohda sitä koskaan.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Rotunden kupoli peitti taivaan rautaisella
+     * hatulla" (kuva, pulu kuuntelee).
+     */
+    reaktiot: [
+  {
+    "id": "wien.r1",
+    "ankkuri": "kone painoi sanomalehteä",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "wien.r2",
+    "ankkuri": "kolerapuheet olivat liioittelua",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "wien.r3",
+    "ankkuri": "aamiaista tarjoillut nainen sairastui",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.5,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "wien.r4",
+    "ankkuri": "tarvitsisiko nainen lääkäriä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "wien.r5",
+    "ankkuri": "Olin ajatellut vain lähtöäni",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.5,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. [softly] Olin ajatellut vain lähtöäni.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-wien.mp3',
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era02; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-wien-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-wien-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Wien: kahvi saapui, vaikka uutinen ei parantunut.',
+        selite: 'Wieniläisen kahvilan terassilla tarjoilija laskee kupin samaan pöytään sanomalehden kanssa. En tiedä, mitä sivulla luki, mutta kahvin tuoman pienen tauon osasin kuvata.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.wien.info/en/dine-drink/coffeehouses/top-traditional-coffee-houses-in-vienna-361666',
+          'https://www.wien.gv.at/en/leisure/viennese-coffee-culture',
+        ],
+      },
+    ],
     /*
      * LIVIAN MAADOITUS — VÄLITTÄJÄOTE. Yksi kupla per saapuminen.
      * Merkintä päättyy itkeviin miehiin, joten kupla ei alota
@@ -144,13 +225,33 @@ export const FOKUSVIRTA_WIEN = {
      * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kääk", "Mut"),
      * keskellä sanat auki.
      */
-    maadoitus: 'Kääk. Hattu kädessä kupolin alla, ja kahdeksan päivää '
-      + 'myöhemmin itkeviä miehiä kadulla — kyllä minä ymmärrän, ettei '
-      + 'sellaista unohda. Sitten minä katson vuosilukua: siitä '
-      + 'toukokuusta on yli sataviisikymmentä vuotta, ja koko kupoli '
-      + 'paloi jo 1937. Raha kaatui silloin Wienissä, sitten '
-      + 'Berliinissä ja syksyllä New Yorkissa asti. Ei se kenenkään '
-      + 'itkua pienennä. Mut kyllä sen kestää lukea.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Wieniin johdetaan nyt juomavettä vuoristolähteistä. Kahvilan pihalla löysin tiputtavan hanan ja odotin pisaraa nokka auki. Kokonainen matka vuorilta asti, ja minä vain ojensin kaulaani."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'lammin', voimakkuus: 0.55 },
     /*
      * Huomio viittaa herokuvan kohteeseen (valtionooppera). Faktat
      * ovat lehden oman avauskuvan selitteestä (js/packs/
@@ -159,13 +260,9 @@ export const FOKUSVIRTA_WIEN = {
      * 2 — sama fakta kuin maadoituksessa, sanottuna toisesta suunnasta
      * (mitä jäi jäljelle).
      */
-    teksti: 'Sitä kupolia ei ole enää olemassa, se paloi 1937. '
-      + 'Ringstrassen talot sen sijaan seisovat yhä: tuo oopperatalo '
-      + 'tuolla avattiin 1869, neljä vuotta ennen isoisäsi käyntiä, ja '
-      + 'sen lavalla on esiinnytty melkein joka ilta siitä asti. Katso '
-      + 'ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-wien-state-opera.jpg',
+      lyhyt: 'Valtionooppera avasi 1869; lavalla esiinnytty joka ilta tauolla vain vuonna 1945.',
       selite: 'Valtionooppera avasi 1869 Ringstrassen loistorakennusten '
         + 'sarjan, ja sen lavalla on esiinnytty joka ilta pommituksista '
         + '1945 vain kymmenen vuoden tauolla.',
@@ -202,6 +299,7 @@ export const FOKUSVIRTA_WIEN = {
         + 'sähkön voi siirtää kahden kilometrin päähän kuparijohtoa '
         + 'pitkin. Kaksi vuotta myöhemmin nuori Nikola Tesla näki '
         + 'saman koneen Grazin teknillisessä korkeakoulussa.',
+      lahde: 'en-Wikipedia "Hippolyte Fontaine". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 2832×2128, CC BY-SA 4.0, Icone5, kuvaus
        * "Dynamo Gramme N°14 built by Mignon and Rouart in 1873" —
@@ -209,6 +307,7 @@ export const FOKUSVIRTA_WIEN = {
        */
       kuva: {
         tiedosto: 'Machine Gramme.jpg',
+        lyhyt: 'Gramme-kone vuodelta 1873; samanlainen pyörähti Wienin näyttelyssä ensimmäiseksi sähkömoottoriksi.',
         selite: 'Gramme-kone vuodelta 1873. Samanlainen laite pyörähti '
           + 'Wienin näyttelyssä maailman ensimmäiseksi kunnolliseksi '
           + 'sähkömoottoriksi.',
@@ -257,6 +356,8 @@ export const FOKUSVIRTA_WIEN = {
         + 'suihkulähde, joka avattaisiin samana päivänä kuin vesijohto. '
         + 'Niin syntyi Hochstrahlbrunnen. Vesijohto tuottaa yhä yli '
         + 'puolet kaupungin juomavedestä.',
+      lahde: 'de-Wikipedia "I. Wiener Hochquellenleitung". Tarkistettu '
+        + '1.9.2026.',
       /*
        * Commons 28.8.2026: 4032×3024, CC BY-SA 4.0, Anna Saini,
        * kuvattu 19.9.2019, kuvaus "Teil der 1. Wiener
@@ -266,6 +367,7 @@ export const FOKUSVIRTA_WIEN = {
        */
       kuva: {
         tiedosto: 'Aquädukt Liesing- Teil der 1. Wiener Hochquellenleitung 1.jpg',
+        lyhyt: 'Ensimmäisen vuoristovesijohdon akvedukti Liesingissä; vesi kulkee 95 km painovoiman varassa.',
         selite: 'Ensimmäisen vuoristovesijohdon akvedukti Liesingissä. '
           + 'Vesi kulkee koko 95 kilometrin matkan painovoiman varassa.',
         lahde: 'Anna Saini, Wikimedia Commons (CC BY-SA 4.0)',
@@ -309,6 +411,7 @@ export const FOKUSVIRTA_WIEN = {
         + 'virallinen metsästysalue ja riistakantaa hoiti palkattu '
         + 'metsästäjä; nykyään tasapainoa pidetään ilman aseita, ja osa '
         + 'alueesta jätetään tarkoituksella villiintymään.',
+      lahde: 'de-Wikipedia "Wiener Zentralfriedhof". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 5822×3881, CC BY-SA 4.0, Uoaei1, kuvattu
        * 21.10.2022, kuvaus "Roe deer in the old Israelite section of
@@ -390,6 +493,7 @@ export const FOKUSVIRTA_WIEN = {
      */
     kuva: {
       osoite: 'assets/kartat/nostot/nosto-rotunde-loistoaika.webp',
+      lyhyt: 'Rotunden sisus näyttelyssä: rautakupoli valoaukkoineen ja osastot suihkulähteen ympärillä.',
       selite: 'Rotunden sisus näyttelyn ollessa auki: rautarakenteinen '
         + 'kupoli valoaukkoineen, lippurivit ja näytteilleasettajien '
         + 'osastot keskussuihkulähteen ympärillä.',
@@ -527,6 +631,13 @@ export const FOKUSVIRTA_WIEN = {
        */
       id: 'maailmannayttely-1873',
       nimio: 'Näyttely ja pörssi',
+      /*
+       * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+       * näyttelyalue oli Praterissa, joka jää Wienin kohdekartan
+       * lepotilan näkymän (itäraja 16,404) itäpuolelle, joten merkki
+       * kuuluu pääkartalle.
+       */
+      kattoVapaa: true,
       otsikko: 'Keisari avasi maailmannäyttelyn — kahdeksan päivää '
         + 'myöhemmin poliisi sulki pörssin',
       lunastus: [
@@ -546,9 +657,7 @@ export const FOKUSVIRTA_WIEN = {
           + 'noin 15 miljoonaa guldenia.',
       ],
       lahde: 'de-Wikipedia "Gründerkrach" ja "Weltausstellung 1873" sekä '
-        + 'en-Wikipedia "Panic of 1873" (tarkistettu 25.8.2026 '
-        + 'työaineistoon docs/mantereet-tyoaineisto/takynostot-itavalta.md, '
-        + 'ehdokas 1).',
+        + 'en-Wikipedia "Panic of 1873" (tarkistettu 25.8.2026).',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
        * areenalla ja v1307:n neljällä nostolla): repon oma generoitu
@@ -604,6 +713,7 @@ export const FOKUSVIRTA_WIEN = {
        */
       kartta: {
         osoite: 'assets/kartat/karttaliitteet/liite-maailmannayttely-1873.webp',
+        lyhyt: 'Näyttelyalueen kartta 1873: Rotunde keskellä, teollisuuspalatsin siivet ja oma rautatieasema.',
         selite: 'Näyttelyalueen kartta vuodelta 1873: Rotunde keskellä, '
           + 'teollisuuspalatsin siivet itään ja länteen, sisäänkäynnit '
           + 'Hauptalleelta ja oma rautatieasema pohjoisessa.',
@@ -635,6 +745,12 @@ export const FOKUSVIRTA_WIEN = {
        */
       id: 'kirahvimuoti',
       nimio: 'Kirahvi ja muoti',
+      /*
+       * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+       * Schönbrunnin eläintarha on kaupunkilehden kohdekartan
+       * länsipuolella, joten merkki kuuluu pääkartalle.
+       */
+      kattoVapaa: true,
       otsikko: 'Yksi kirahvi muutti koko kaupungin muodin — kampaukset, '
         + 'hajuveden ja näytelmän',
       lunastus: [
@@ -648,10 +764,8 @@ export const FOKUSVIRTA_WIEN = {
           + 'keisariperheen yksityisomaisuutta, ja se pysyi sellaisena aina '
           + 'Itävalta-Unkarin hajoamiseen 1918 asti.',
       ],
-      lahde: 'en-Wikipedia "Schönbrunn Zoo", osiot "Founding and early '
-        + 'years" ja "In the 19th century" (tarkistettu 25.8.2026 '
-        + 'työaineistoon docs/mantereet-tyoaineisto/takynostot-itavalta.md, '
-        + 'ehdokas 4).',
+      lahde: 'en-Wikipedia "Schönbrunn Zoo", osiot "Founding and early years" ja "In '
+        + 'the 19th century" (tarkistettu 25.8.2026).',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin yllä): repon
        * oma generoitu havainnekuva, joten kenttä on `osoite` eikä
@@ -691,6 +805,261 @@ export const FOKUSVIRTA_WIEN = {
         laudat: {
           maailmankartta: { x: 6377.1, y: 1468.4 },
           europe: { x: 524.4, y: 626.3 },
+        },
+      },
+    },
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): WIENIN KAUPUNKILEHDEN SIVUT
+     * NOSTOIKSI.
+     *
+     * Sama jako kuin Pariisissa erässä 5
+     * (docs/raportit/viesti-fable-karttauudistus-era5-20260913.md,
+     * suunnitelman luku 4.7): lehden aihesivujen nostot ovat nyt
+     * klikattavia karttapaloja kaupungin kohdekartalla. Kaikki tämän erän
+     * nostot ovat KOHDEKARTALLA, eivät pääkartalla — omistajan sääntö
+     * 2.9.2026 (tests/nostot-kartalla.test.mjs).
+     *
+     * TEKSTIÄ EI OLE KIRJOITETTU UUDESTAAN. Jokainen `lunastus`-kappale on
+     * lehden oman noston `teksti` SANATARKASTI
+     * (js/packs/kulttuuri-kategoriat.js, kaupunki `wien`), ja `kuva` on
+     * lehden oma kuvarivi kenttineen. Siirto on tehty ohjelmallisesti ja
+     * todennettu ===-vertailulla
+     * (tools/savukkeet/savuke-kaupunkien-nostot.mjs vartio 4b avaa jokaisen
+     * kortin selaimessa ja vertaa merkki merkiltä).
+     *
+     * MINIKYSYMYKSET (erän 6 datamalli, kiintiö joka kolmas nosto):
+     * `praterin-ratas`, `taikahuilu-wiedenissa`.
+     * ══════════════════════════════════════════════════════════════
+     */
+    {
+      id: 'praterin-ratas',
+      nimio: 'Rattaan kulmat',
+      otsikko: 'Ratas, joka kulkee kävelyä hitaammin',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin '
+          + '50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan '
+          + 'kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. '
+          + 'Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. '
+          + 'Kun se avattiin uudelleen 1947, vaunuja ripustettiin takaisin '
+          + 'vain viisitoista — ja niin ne roikkuvat siitä asti joka toisessa '
+          + 'kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.',
+      ],
+      lahde: 'Wienin kaupunkilehden nosto "Ratas, joka kulkee kävelyä hitaammin" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Riesenrad Wiener Prater 2020-07-12 d.jpg',
+        lyhyt: 'Praterin jättirattaan pienet vaunut kulkevat vain 2,7 kilometriä tunnissa.',
+        selite: 'Praterin jättirattaan vaunut ovat pieniä puutaloja ovineen ja '
+          + 'ikkunoineen, ja ratas kulkee 2,7 kilometriä tunnissa.',
+        lahde: 'Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Sama kuvasarja
+       * kuin lehden nostolla, josta tämä kortti kirjoitettiin: erässä 10
+       * se jäi siirtämättä, koska nostokortti ei tuntenut `galleria`-
+       * kenttää. Nyt tuntee (js/fokusnosto.js piirraNostonKuvasarja).
+       */
+      galleria: [
+        {
+          otsikko: 'Koko ratas kerralla',
+          tiedosto: 'Wiener Riesenrad DSC02378.JPG',
+          lyhyt: 'Jättiratas on kolmikymmenkulmio; 1945 palon jälkeen vaunuja ripustettiin takaisin vain viisitoista.',
+          selite: 'Jättiratas ei ole ympyrä vaan kolmikymmenkulmio, ja '
+            + 'vuoden 1945 palon jälkeen vaunuja ripustettiin takaisin '
+            + 'vain viisitoista, joka toiseen kulmaan.',
+          lahde: 'David Monniaux, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      kysymykset: [
+        'Miksi rattaan kehästä tehtiin kolmikymmenkulmio eikä pyöreää?',
+        'Miksi vaunuja ripustettiin sodan jälkeen takaisin vain puolet?',
+        'Millaista Praterissa oli silloin, kun ratas nousi?',
+      ],
+      visa: {
+        kysymys: 'Praterin jättiratas ei ole ympyrä. Minkä muotoinen sen kehä on?',
+        vaihtoehdot: [
+          'Soikio',
+          'Kolmikymmenkulmio',
+          'Kuusikulmio',
+        ],
+        oikea: 1,
+        fakta: 'Ratas kulkee 2,7 kilometriä tunnissa.',
+      },
+      paikka: {
+        nimi: 'Rattaan kulmat',
+        laudat: {
+          maailmankartta: { x: 6379.9, y: 1467 },
+          europe: { x: 526, y: 625.5 },
+        },
+      },
+    },
+    {
+      id: 'lipizzanit',
+      nimio: 'Lipizzanit',
+      otsikko: 'Valkoiset hevoset syntyvät tummina',
+      symboli: 'elain',
+      lunastus: [
+        'Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit '
+          + 'tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. '
+          + 'Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina '
+          + 'tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden '
+          + 'iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi '
+          + 'ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari '
+          + 'Kaarle VI:n muotokuvaa ennen kuin ratsastavat.',
+      ],
+      lahde: 'Wienin kaupunkilehden nosto "Valkoiset hevoset syntyvät tummina" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Kawecan.jpg',
+        lyhyt: 'Lipizzanovarsat syntyvät tummina ja vaalenevat vuosittain, kunnes ovat 6–10-vuotiaina valkoisia.',
+        selite: 'Lipizzanovarsat syntyvät ruunikkoina tai mustina ja vaalenevat '
+          + 'vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia.',
+        lahde: 'Eerschay, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      kysymykset: [
+        'Miksi lipizzanit kasvatetaan Steiermarkissa eikä Wienissä?',
+        'Mitä ratsastuskoulussa opetetaan hevosille neljän vuoden iästä '
+          + 'eteenpäin?',
+        'Miksi tallissa pidetään perinteen vuoksi aina yksi ruunikko?',
+      ],
+      paikka: {
+        nimi: 'Lipizzanit',
+        laudat: {
+          maailmankartta: { x: 6378.9, y: 1467.4 },
+          europe: { x: 525.4, y: 625.8 },
+        },
+      },
+    },
+    {
+      id: 'taikahuilu-wiedenissa',
+      nimio: 'Taikahuilu',
+      otsikko: 'Taikahuilu tehtiin esikaupungin teatteriin',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu '
+          + 'sai ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin '
+          + 'teatterissa Wienin Wiedenin esikaupungissa, ja se laulettiin '
+          + 'saksaksi eikä italiaksi — tavallisen wieniläisen kielellä. '
+          + 'Schikaneder kirjoitti sanat itse ja näytteli linnustaja '
+          + 'Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. Kymmenen '
+          + 'vuoden päästä Schikaneder avasi kaupunkiin uuden teatterin ja '
+          + 'antoi veistää itsensä Papagenona sen portin päälle.',
+      ],
+      lahde: 'Wienin kaupunkilehden nosto "Taikahuilu tehtiin esikaupungin '
+        + 'teatteriin" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Karl Friedrich Schinkel - Die Sternenhalle der Königin der Nacht (ca. 1815).jpg',
+        lyhyt: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön kuningattaren tähtisalin lavastuksen.',
+        selite: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön '
+          + 'kuningattaren tähtisalin lavastuksen tähdillä ladotuksi siniseksi '
+          + 'kupoliksi.',
+        lahde: 'Karl Friedrich Schinkel, Wikimedia Commons (PD)',
+      },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Sama kuvasarja
+       * kuin lehden nostolla, josta tämä kortti kirjoitettiin: erässä 10
+       * se jäi siirtämättä, koska nostokortti ei tuntenut `galleria`-
+       * kenttää. Nyt tuntee (js/fokusnosto.js piirraNostonKuvasarja).
+       */
+      galleria: [
+        {
+          otsikko: 'Papagenon portti',
+          tiedosto: 'Theater an der Wien.jpg',
+          lyhyt: 'Theater an der Wienin portilla Schikaneder on kuvattu höyhenpukuisena Taikahuilun jatko-osasta.',
+          selite: 'Theater an der Wienin sivuportin päällä Emanuel '
+            + 'Schikaneder on veistetty höyhenpukuisena soittamassa '
+            + 'pillejään Taikahuilun jatko-osan Das Labyrinth '
+            + 'kohtauksessa.',
+          lahde: 'Yair Haklai, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * MUSIIKKI JA ÄÄNI KORTILLE (avoin kohta 11.1, 14.9.2026). Erässä 10
+       * tämä nosto jäi lehden sivulle kaksoiskappaleeksi vain siksi, että
+       * musiikkilinkille ja ääninäytteelle ei ollut paikkaa kortilla.
+       * Kortti piirtää ne nyt SAMOILLA napeilla kuin lehti (js/ui.js
+       * lisaaNostonNapit), joten sivulta jäänyt kaksoiskappale purkautui.
+       */
+      musiikki: 'https://music.apple.com/fi/search?term=Mozart%20Zauberfl%C3%B6te%20K%C3%B6nigin%20der%20Nacht',
+      musiikkiNimi: 'Taikahuilu Apple Musicissa',
+      musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/d/de/W._A._Mozart_-_Die_Zauberfl%C3%B6te_-_18._Der_H%C3%B6lle_Rache_kocht_in_meinem_Herzen_%28Ferenc_Fricsay%2C_1953%29.ogg/W._A._Mozart_-_Die_Zauberfl%C3%B6te_-_18._Der_H%C3%B6lle_Rache_kocht_in_meinem_Herzen_%28Ferenc_Fricsay%2C_1953%29.ogg.mp3',
+      musiikkiNayteNimi: 'Mozart: Yön kuningattaren aaria — johtaa Ferenc Fricsay, äänitetty 1953 (PD)',
+      kysymykset: [
+        'Miksi Mozartin viimeinen ooppera syntyi esikaupungin teatteriin '
+          + 'eikä hoville?',
+        'Mitä merkitsi, että ooppera laulettiin saksaksi eikä italiaksi?',
+        'Miksi Schikaneder halusi itsensä veistettynä Papagenona '
+          + 'teatterinsa portin päälle?',
+      ],
+      visa: {
+        kysymys: 'Millä kielellä Taikahuilu laulettiin ensi-illassaan?',
+        vaihtoehdot: [
+          'Italiaksi',
+          'Latinaksi',
+          'Saksaksi',
+        ],
+        oikea: 2,
+        fakta: 'Schikaneder kirjoitti sanat itse ja näytteli linnustaja Papagenoa.',
+      },
+      paikka: {
+        nimi: 'Taikahuilu',
+        laudat: {
+          maailmankartta: { x: 6378.8, y: 1467.8 },
+          europe: { x: 525.4, y: 626 },
+        },
+      },
+    },
+    {
+      id: 'tonava-kaunoinen',
+      nimio: 'Tonava kaunoinen',
+      otsikko: 'Kaupunki sävelsi oman jokensa',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin '
+          + 'Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta '
+          + 'myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku '
+          + 'tulee hitusen etuajassa, joten se ei mene metronomin kanssa '
+          + 'tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin '
+          + 'viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen '
+          + 'ja tahdittaen yhtä aikaa.',
+      ],
+      lahde: 'Wienin kaupunkilehden nosto "Kaupunki sävelsi oman jokensa" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Johann Strauss II by Fritz Luckhardt.jpg',
+        lyhyt: 'Johann Strauss nuorempi kuvattiin 1899 johtamassa orkesteriaan viulu kädessä, viimeisenä vuotenaan.',
+        selite: 'Johann Strauss nuorempi sävelsi noin viisisataa teosta ja johti '
+          + 'orkesteriaan viulu kädessä; Fritz Luckhardt valokuvasi hänet '
+          + '1899, hänen viimeisenä elinvuotenaan.',
+        lahde: 'Fritz Luckhardt, Wikimedia Commons (PD)',
+      },
+      /*
+       * MUSIIKKI JA ÄÄNI KORTILLE (avoin kohta 11.1, 14.9.2026). Erässä 10
+       * tämä nosto jäi lehden sivulle kaksoiskappaleeksi vain siksi, että
+       * musiikkilinkille ja ääninäytteelle ei ollut paikkaa kortilla.
+       * Kortti piirtää ne nyt SAMOILLA napeilla kuin lehti (js/ui.js
+       * lisaaNostonNapit), joten sivulta jäänyt kaksoiskappale purkautui.
+       */
+      musiikki: 'https://music.apple.com/fi/search?term=Johann%20Strauss%20Donauwalzer',
+      musiikkiNimi: 'Tonava kaunoinen Apple Musicissa',
+      musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/d/de/%22An_der_sch%C3%B6nen%2C_blauen_Donau%22%2C_performed_by_the_US_Marine_Band.mp3',
+      musiikkiNayteNimi: 'Strauss: Tonava kaunoinen — United States Marine Band (PD)',
+      kysymykset: [
+        'Miksi valssi tehtiin ensin mieskuorolle eikä orkesterille?',
+        'Miten etuajassa tuleva toinen isku opitaan, jos sitä ei voi laskea?',
+        'Miten yhdestä valssista tuli kokonaisen kaupungin tunnusmerkki?',
+      ],
+      paikka: {
+        nimi: 'Tonava kaunoinen',
+        laudat: {
+          maailmankartta: { x: 6379.3, y: 1467.5 },
+          europe: { x: 525.7, y: 625.8 },
         },
       },
     },

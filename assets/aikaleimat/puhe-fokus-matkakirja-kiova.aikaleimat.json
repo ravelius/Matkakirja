@@ -1,0 +1,167 @@
+{
+  "versio": 2,
+  "kaupunki": "kiova",
+  "teksti": "Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.",
+  "tekstiSha256": "df38845d6a3dddab127bd2282a34d88100863a2a8722e200415f764da2434e92",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-kiova.mp3",
+    "versio": 2,
+    "tavut": 308079,
+    "sha256": "ed67e3f596eec60b09b8ab9566984ba655bc62643eeca88799e51f22627d6400"
+  },
+  "kesto": 19180,
+  "sanat": [
+    {
+      "sana": "Kiovassa",
+      "alku": 220,
+      "loppu": 760
+    },
+    {
+      "sana": "ostin",
+      "alku": 800,
+      "loppu": 1100
+    },
+    {
+      "sana": "kuivaa",
+      "alku": 1160,
+      "loppu": 1600
+    },
+    {
+      "sana": "hilloa",
+      "alku": 1660,
+      "loppu": 2080
+    },
+    {
+      "sana": "sokerissa",
+      "alku": 3020,
+      "loppu": 3520
+    },
+    {
+      "sana": "keitettyjä",
+      "alku": 3560,
+      "loppu": 4240
+    },
+    {
+      "sana": "ja",
+      "alku": 4320,
+      "loppu": 4420
+    },
+    {
+      "sana": "kuivattuja",
+      "alku": 4480,
+      "loppu": 5040
+    },
+    {
+      "sana": "hedelmiä",
+      "alku": 5080,
+      "loppu": 5580
+    },
+    {
+      "sana": "Myyjä",
+      "alku": 7040,
+      "loppu": 7320
+    },
+    {
+      "sana": "pakkasi",
+      "alku": 7360,
+      "loppu": 7780
+    },
+    {
+      "sana": "rasian",
+      "alku": 7820,
+      "loppu": 8180
+    },
+    {
+      "sana": "tuliaisiksi",
+      "alku": 8240,
+      "loppu": 9080
+    },
+    {
+      "sana": "Palasin",
+      "alku": 10540,
+      "loppu": 10940
+    },
+    {
+      "sana": "puotiin",
+      "alku": 11000,
+      "loppu": 11480
+    },
+    {
+      "sana": "ennen",
+      "alku": 11560,
+      "loppu": 11780
+    },
+    {
+      "sana": "kuin",
+      "alku": 11840,
+      "loppu": 12040
+    },
+    {
+      "sana": "pääsin",
+      "alku": 12080,
+      "loppu": 12420
+    },
+    {
+      "sana": "majatalolle",
+      "alku": 12460,
+      "loppu": 13200
+    },
+    {
+      "sana": "Hän",
+      "alku": 14940,
+      "loppu": 15080
+    },
+    {
+      "sana": "katsoi",
+      "alku": 15120,
+      "loppu": 15520
+    },
+    {
+      "sana": "tyhjää",
+      "alku": 15560,
+      "loppu": 15960
+    },
+    {
+      "sana": "rasiaani",
+      "alku": 16020,
+      "loppu": 16820
+    },
+    {
+      "sana": "ja",
+      "alku": 16880,
+      "loppu": 16940
+    },
+    {
+      "sana": "sitoi",
+      "alku": 16980,
+      "loppu": 17340
+    },
+    {
+      "sana": "uuden",
+      "alku": 17420,
+      "loppu": 17720
+    },
+    {
+      "sana": "kannen",
+      "alku": 17780,
+      "loppu": 18100
+    },
+    {
+      "sana": "tavallista",
+      "alku": 18140,
+      "loppu": 18620
+    },
+    {
+      "sana": "tiukemmin",
+      "alku": 18660,
+      "loppu": 19180
+    }
+  ],
+  "lauseet": [
+    220,
+    7040,
+    10540,
+    14940
+  ],
+  "luotu": "2026-09-23T15:34:34.637Z"
+}

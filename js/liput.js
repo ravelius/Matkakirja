@@ -10,6 +10,7 @@ import { LIPPUTIEDOT } from './packs/lipputiedot.js';
 import { lippuUrl, lippuVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
 import { html } from './ui-apurit.js';
+import { taytaLahderivi } from './tekijakortti.js';
 
 /*
  * ISON LIPUN LEVEYS PIKSELEINÄ.
@@ -315,7 +316,12 @@ export function avaaLippuikkuna(tiedosto) {
     }
     kortti.appendChild(tunnukset);
   }
-  if (tiedot.lahde) kortti.appendChild(html('p', 'lahde', tiedot.lahde));
+  // Lippujen ja vaakunoiden lähderivi kulkee talon yhden apurin kautta
+  // (2.9.2026): Commons-rivi pysyy ennallaan, mutta jos jokin tunnus on
+  // joskus Matkakirjan oma piirros, selite tulee mukana ilman muutoksia.
+  if (tiedot.lahde) {
+    kortti.appendChild(taytaLahderivi(html('p', 'lahde'), tiedot.lahde, tiedot));
+  }
 
   kehys.appendChild(kortti);
   dialogi.appendChild(kehys);

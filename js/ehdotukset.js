@@ -200,11 +200,15 @@ export async function skaalaaEhdotusKuva(tiedosto, sivu = EHDOTUS_KUVAN_SIVU) {
  * käsittelevät vastauksen samalla tavalla: JSON jos on, workerin oma
  * virheteksti jos se antoi sellaisen, muuten HTTP-numero.
  *
+ * Viety ulos, jotta kuvien syöttöputki (js/kuvavinkki.js) käyttää
+ * täsmälleen samaa postitusta ja samaa virheenkäsittelyä — kaksi
+ * toteutusta erkanisi ensimmäisessä virhemuodossa.
+ *
  * @param {string} polku workerin reitti, esim. '/laheta'
  * @param {FormData} lomake lähetettävä lomake
  * @returns {Promise<object>} workerin vastaus
  */
-async function postita(polku, lomake) {
+export async function postita(polku, lomake) {
   const vastaus = await fetch(`${EHDOTUS_OSOITE}${polku}`, { method: 'POST', body: lomake });
   let data = null;
   try { data = await vastaus.json(); } catch { /* tyhjä runko */ }
@@ -220,6 +224,13 @@ async function postita(polku, lomake) {
  */
 export async function lahetaEhdotus(ehdotus) {
   const lomake = new FormData();
+  /*
+   * LAJI (11.9.2026): tavallinen lukijan ehdotus jättää kentän
+   * tyhjäksi; työhuoneen Raamattu-lehti lähettää 'raamattu', jolloin
+   * worker sallii pidemmän tekstin ja Lukijoilta-lehti ryhmittelee
+   * lähetyksen omaksi ryhmäkseen.
+   */
+  lomake.append('laji', ehdotus.laji ?? '');
   lomake.append('teksti', ehdotus.teksti ?? '');
   lomake.append('sivu', ehdotus.sivu ?? '');
   lomake.append('tarkenne', ehdotus.tarkenne ?? '');

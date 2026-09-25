@@ -78,11 +78,11 @@ Livia nokkii taustalla murua ja huomaa kameran vasta kesken nokkaisun.
 | Kaupunki | Hahmo(t) ja nykyhetki | Kysymyskytkös | Tila |
 | --- | --- | --- | --- |
 | Lontoo | Taksikuski Ned kääntyy pysäytetyn mustan taksin ratista takapenkille | Sumuinen lasi ja vanha katulamppu; selitystä ei näytetä | Tyylikoe valmis |
-| Amsterdam | Willem pysähtyy nykyajan kaupunkipyörällä kanaalisillalle | Vanhat kattokoukut taustassa; käyttötapaa ei näytetä | Tyylikoe valmis |
+| Amsterdam | Yara keskeyttää kanavatalon muuton vastatakseen matkaajalle | Vanhat kattokoukut taustassa; käyttötapaa ei näytetä | Tyylikoe valmis (hahmo vaihdettu Willemistä Yaraksi 5.9.2026, taulukko korjattu 22.9.2026) |
 | Venetsia | Lucia keskeyttää naamioiden lastauksen sähköiseen kuljetusveneeseen | Suljettu pitkänokkainen naamio; nokan sisältöä ei näytetä | Tyylikoe valmis |
-| Budapest | Márta ja aikuinen tytär Réka juovat smoothieita modernissa lasiatriumissa | Kolme erillistä kaupunkimerkkiä; yhdistävää vastausta ei näytetä | Tyylikoe valmis |
+| Budapest | Márta nojaa Széchenyin kylpylän porttiin sinisessä iltavalossa | Kolme erillistä kaupunkimerkkiä; yhdistävää vastausta ei näytetä | Tyylikoe valmis (korjattu 22.9.2026 — "Réka"-tytär oli dokumentaatiovirhe kahden eri kuvakonseptin sekoittumisesta; äiti-tytär/smoothie-konsepti on aktiivinen:false eikä käytössä) |
 | Istanbul | 52-vuotias konservointi-insinööri Emine roikkuu turvallisesti pää alaspäin vesisäiliössä | Pylväät ja vesi; Medusan asentoa ei näytetä | Tyylikoe valmis |
-| Wien | 64-vuotias Anton jatkaa juoksuaskelta ja kääntää vain päänsä pelaajaan | Vanha pörssirakennus bokehissa; päivämäärää ei näytetä | Tyylikoe valmis |
+| Wien | Suntio Anton pysähtyy kynttilät kädessään katakombien portaille | Vanhat holvit hämärässä; sijaintia ei näytetä | Tyylikoe valmis (korvaa 22.9.2026 vanhentuneen pörssirakennus-juoksija-konseptin — kuva wien-anton-katakombit-v2.jpg on hyväksytty) |
 | Pariisi | Colette avaa bouquiniste-kojua Maëlle-tyttärensä kanssa; Pulu jää vahingossa kuvaan | Vanha nimetön kirja ja vihreä koju; etymologiaa ei näytetä | Tyylikoe valmis |
 | Palermo / Sisilia | Rosalia ja Salvatore-isä keskeytetään nukketeatterin valmistelusta | Ritarinukke ilman nimiä tai tunnuksia | Tyylikoe valmis |
 | Barcelona | Mercè varjostaa silmiään kovalta auringolta tiheässä festivaaliväkijoukossa konfettipamauksen jälkeen | Lohikäärmehahmo bokehissa; ruusua ei näytetä | Tyylikoe valmis |
@@ -93,3 +93,26 @@ Livia nokkii taustalla murua ja huomaa kameran vasta kesken nokkaisun.
 | Praha | Tomáš pujottautuu suuren kehyksen alta museon huoltokäytävässä | Vanha kehys ja linnan seinät; vuotta 1648 ei näytetä | Täysikokotarkistettu; hyväksyntä avoin |
 | Berliini | Lotte on puoliksi autossa sateessa ja vetää salkkua jalkatilasta | Teleskooppikotelo ja observatorion kupu; planeetan nimeä ei näytetä | Täysikokotarkistettu; hyväksyntä avoin |
 | Rooma | Enzo horjahtaa suihkulähteen huoltotyössä kolikkohaavi kädessään | Märkä haavi ja kolikot; oikeaa uskomusta ei paljasteta | Täysikokotarkistettu; hyväksyntä avoin |
+
+## Brief kuvaputkelle
+
+`tools/kohtaamisbriefit.mjs` kokoaa jokaisesta pelin 41 tarinakaaren
+kohtaamisesta (js/packs/tarinakaari.js, TARINAKAARI) yhden briefin:
+kaupunki ja maa, hahmo, kohtaamispaikka ja tilanne, kysymys sanatarkasti,
+oikea vastaus merkittynä "EI SAA NÄKYÄ KUVASSA", väärät vaihtoehdot, onko
+kaupungilla jo tarkistettu kohtaamiskuva (js/kohtaamiskuvat-data.js) sekä
+tämän tiedoston kuvalinjan tiivistelmä kymmenenä sääntönä otsikossa.
+
+```
+node tools/kohtaamisbriefit.mjs --md --ulos polku.md
+node tools/kohtaamisbriefit.mjs --json --ulos polku.json
+node tools/kohtaamisbriefit.mjs --json --kaupunki rooma --ulos rooma.json
+node tools/kohtaamisbriefit.mjs --md --vain-kuvattomat --ulos puuttuvat.md
+```
+
+Täsmälleen yksi muoto (`--md` TAI `--json`) ja `--ulos <tiedosto>` ovat
+pakollisia. `--kaupunki <tunnus>` rajaa yhteen kaupunkiin (pelin
+kaupunkitunnus, esim. `rooma`), `--vain-kuvattomat` jättää pois
+kaupungit, joilla on jo tarkistettu kuva. Työkalu ei kirjoita mitään
+repoon paitsi `--ulos`-polun tiedoston, eikä se lue tai muuta muuta
+sisältöä.

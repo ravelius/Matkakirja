@@ -292,13 +292,19 @@ const kuuluva = (tila) => ambienssit(tila)
     return {
       rivit,
       kertojaMuisti: localStorage.getItem('matkakirja-kertoja'),
+      musiikkiMuisti: localStorage.getItem('matkakirja-musiikki'),
       kaiutinMykka: document.getElementById('fact-kuuntele')?.classList.contains('mykistetty'),
     };
   });
   const alku = await lue();
-  vaadi('ÄÄNET-osiossa on kaksi kytkintä: kertoja ja taustaäänet',
-    alku.rivit.length === 2
-      && alku.rivit[0].kytkin === 'kertoja' && alku.rivit[1].kytkin === 'tausta',
+  /*
+   * KOLMAS KYTKIN 7.9.2026 (Raamattu, VIAT v1672): musiikki irrotettiin
+   * äänimaisemasta, joten rivejä on kertoja, musiikki, äänimaisema —
+   * ja taustaäänten kytkin ('tausta') on nyt viimeinen.
+   */
+  vaadi('ÄÄNET-osiossa on kolme kytkintä: kertoja, musiikki ja äänimaisema',
+    alku.rivit.length === 3 && alku.rivit[0].kytkin === 'kertoja'
+      && alku.rivit[1].kytkin === 'musiikki' && alku.rivit[2].kytkin === 'tausta',
     JSON.stringify(alku.rivit));
   vaadi('kummankin kytkimen tila lukee rivillä sanana',
     alku.rivit.every((r) => r.tila === 'päällä' || r.tila === 'pois'),
@@ -314,7 +320,7 @@ const kuuluva = (tila) => ambienssit(tila)
   vaadi('kaiutinkuvake seuraa valikon kertojakytkintä',
     kertojaPois.kaiutinMykka === true, `mykistetty ${kertojaPois.kaiutinMykka}`);
   vaadi('taustaäänet eivät sammuneet kertojan mukana',
-    kertojaPois.rivit[1].paalla === true, JSON.stringify(kertojaPois.rivit[1]));
+    kertojaPois.rivit[2].paalla === true, JSON.stringify(kertojaPois.rivit[2]));
 
   // Sama kytkin toisesta kahvasta: kortin kaiutin kääntää sen takaisin.
   await sivu.evaluate(() => {
@@ -334,8 +340,18 @@ const kuuluva = (tila) => ambienssit(tila)
   await sivu.waitForTimeout(200);
   const taustaPois = await lue();
   vaadi('taustaäänten sammutus ei kaada kertojan omaa valintaa',
-    taustaPois.rivit[1].paalla === false && taustaPois.rivit[0].paalla === true,
+    taustaPois.rivit[2].paalla === false && taustaPois.rivit[0].paalla === true,
     JSON.stringify(taustaPois.rivit));
+  // MUSIIKKI JA ÄÄNIMAISEMA OVAT ERI KYTKIMET (VIAT v1672): musiikin
+  // sammutus ei koske äänimaisemaa eikä päinvastoin.
+  await sivu.evaluate(() => document.querySelector('[data-kytkin="tausta"]').click());
+  await sivu.evaluate(() => document.querySelector('[data-kytkin="musiikki"]').click());
+  await sivu.waitForTimeout(200);
+  const musiikkiPois = await lue();
+  vaadi('musiikin sammutus ei vaienna äänimaisemaa (ne ovat eri kytkimet)',
+    musiikkiPois.rivit[1].paalla === false && musiikkiPois.rivit[2].paalla === true
+      && musiikkiPois.musiikkiMuisti === 'off',
+    JSON.stringify(musiikkiPois.rivit));
   await ctx.close();
 }
 

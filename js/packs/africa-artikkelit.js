@@ -9,10 +9,22 @@
 // wiki tai nimi — sama avain, jolla cachedSummary hakee.
 export const OMAT_ARTIKKELIT = {
   Marokko: {
+    // Muita pidempi tarkoituksella: Marokon maalehden osasto nojaa
+    // tähän yksin (sama malli kuin Egyptillä ja Italialla).
     intro: 'Marokon kuningaskunta on Afrikan luoteiskulman maa, jossa '
       + 'Atlasvuoret erottavat meren rannikot Saharasta. Eurooppaan on '
       + 'matkaa vain salmen verran, ja se näkyy kaikessa — Marokko on '
-      + 'aina ollut kahden maailman naapuri.',
+      + 'aina ollut kahden maailman naapuri. Maa ei koskaan kuulunut '
+      + 'Osmanien valtakuntaan, vaan sitä hallitsivat omat sulttaanit, '
+      + 'ja siksi sen kaupungit, käsityö ja musiikki kehittyivät omaa '
+      + 'uraansa. Vanhin väestö ovat amazighit eli berberit, joiden '
+      + 'kieli on nykyään arabian rinnalla virallinen. Fèsissä toimii '
+      + 'al-Qarawiyyin, jota pidetään maailman vanhimpana yhä '
+      + 'toimivana korkeakouluna, ja Marrakechin El Badin palatsi '
+      + 'muistuttaa ajasta, jolloin marokkolainen armeija marssi '
+      + 'Saharan yli Nigerjoelle. Rannikolla puhaltaa Atlantin kylmä '
+      + 'virta, joka tekee vesistä yhdet Afrikan kalaisimmista, ja '
+      + 'vuorilla kasvaa setrimetsiä, joihin sataa talvella lunta.',
     artikkeli: 'Marokko on kuningaskunta Afrikan luoteisosassa. Sillä on '
       + 'rantaa kahdelle merelle, Atlantille ja Välimerelle, ja maan '
       + 'halki kulkee Atlasvuoristo, jonka huiput nousevat yli neljään '
@@ -35,10 +47,25 @@ export const OMAT_ARTIKKELIT = {
       + 'Casablanca — ja pohjoisessa Tanger, kahden meren portti.',
   },
   Libya: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // LBY) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Libya on Pohjois-Afrikan valtio, jossa kapean rannikkokaistan '
       + 'takana aukeaa Saharan suuri hiekkameri. Lähes koko maa on '
       + 'aavikkoa — siksi melkein kaikki libyalaiset asuvat meren '
-      + 'äärellä.',
+      + 'äärellä. Nimi on kolmetuhatta vuotta vanha ja luettiin '
+      + 'ensimmäisen kerran faaraon seinästä, mutta valtio, joka sitä '
+      + 'kantaa, on nuori: itsenäisyys tuli YK:n päätöksellä '
+      + 'jouluaattona 1951, ja kahdeksan vuotta myöhemmin aavikon alta '
+      + 'löytyi öljy. Rannikolla on kaksi poikkeusta hiekkaan — Vihreä '
+      + 'vuori, jolle sataa enemmän kuin muualle maahan, ja lähes '
+      + 'kaksituhatta kilometriä rantaa, jonne kilpikonnat tulevat '
+      + 'munimaan. Etelässä on Fezzan, jonka keitailla karavaanit '
+      + 'lepäsivät ja jonka aavikossa kohoaa tulivuori, jonka pohjalla '
+      + 'on järviä ja hyttysiä. Keittiö on lampaan, ohran ja mausteiden '
+      + 'keittiö, ja juhlissa soivat säkkipilli ja kehärummut. Juomavesi '
+      + 'tulee nykyään putkea pitkin aavikosta: hiekan alla on '
+      + 'fossiilista pohjavettä, joka satoi ennen viimeistä jääkautta.',
     artikkeli: 'Libya on suuri maa Välimeren rannalla Egyptin ja '
       + 'Tunisian välissä. Pinta-alaltaan se on yli viisi kertaa Suomen '
       + 'kokoinen, mutta valtaosa siitä on Saharan aavikkoa: hiekkaa, '
@@ -61,12 +88,40 @@ export const OMAT_ARTIKKELIT = {
       + 'kalliopiirrokset kertovat, miten tässä maassa on aina osattu '
       + 'elää hiekan ehdoilla.',
   },
+  /*
+   * TEKSTIREMONTTI 7.9.2026 (Raamattu, "TEKSTIEN PAINOPISTE" ja
+   * docs/aasia-tyoaineisto/lehtityo-resepti.md): intro EI OLE enää
+   * kahden lauseen nosto vaan lehden ETUSIVUN LEIPÄTEKSTI — 7–10
+   * virkettä kolmessa kappaleessa ('\n\n') ja kaksi maltillista
+   * **lihavointia**. Renderöijä (piirraLeipateksti) tekee kappaleet
+   * ja boldit, joten tänne ei kirjoiteta HTML:ää. Faktat ovat
+   * docs/mantereet-tyoaineisto/faktapohja-tanger.md:stä ja lehden
+   * omista jo tarkistetuista teksteistä (kulttuuri-kategoriat.js:n
+   * tanger-lohko); alla oleva artikkeli-kenttä on ennallaan.
+   */
   Tanger: {
-    intro: 'Tanger vartioi Gibraltarinsalmea Afrikan luoteiskulmassa: '
-      + 'Eurooppaan on merta vain neljätoista kilometriä, ja kaupungin '
-      + 'edustalla Atlantti ja Välimeri kohtaavat. Portti kahden meren '
-      + 'ja kahden mantereen välissä on tehnyt siitä satamakaupungin, '
-      + 'jota kaikki ovat aina halunneet.',
+    intro: 'Tanger seisoo Afrikan luoteiskulmassa siinä, missä '
+      + 'Atlantti kohtaa Välimeren. Salmi on kapeimmillaan 14,2 '
+      + 'kilometriä, ja lautta ylittää sen nopeimmillaan 35 '
+      + 'minuutissa — Eurooppa on siis toisella puolella vettä mutta '
+      + 'toisessa maanosassa. Kaupunki on rakennettu kahden kukkulan '
+      + 'väliin lahdelle, joka oli pitkään Marokon rannikon paras '
+      + 'luonnonsatama, ja maasto nousee siitä ylös kuin katsomo.'
+      + '\n\n'
+      + 'Satamasta on aina taisteltu. Foinikialaiset perustivat '
+      + 'Tingiksen, roomalaiset tekivät siitä provinssinsa '
+      + 'pääkaupungin, ja myöhemmin kaupunkia hallitsivat vuorollaan '
+      + 'portugalilaiset ja englantilaiset, joille se tuli '
+      + 'kuninkaallisina myötäjäisinä. **Vuosina 1923–1956 Tanger oli '
+      + 'kansainvälinen vyöhyke**, jota hallitsi monta maata yhdessä: '
+      + 'veroparatiisi ja turvasatama, jossa asui rinnakkain '
+      + 'muslimeja, juutalaisia ja kristittyjä.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 täällä olivat koko Marokon '
+      + 'lähetystöt, vaikka kaupungissa asui vain parikymmentä tuhatta '
+      + 'ihmistä. **Nykyään Tanger on Marokon toiseksi tärkein '
+      + 'teollisuuskeskus**, ja sen medina, minttutee ja rannan '
+      + 'kahvilat vetävät matkustajia molemmilta mantereilta.',
     artikkeli: 'Tanger on satamakaupunki Marokon pohjoisrannikolla, '
       + 'Gibraltarinsalmen suulla. Espanjan rannikko näkyy selkeällä '
       + 'säällä paljain silmin: merta on välissä vain reilut kymmenen '
@@ -216,11 +271,36 @@ export const OMAT_ARTIKKELIT = {
       + 'Niili, rauhallisena kuin ei olisi huomannut rannoilleen '
       + 'kasvanutta jättiläistä.',
   },
+  /*
+   * TEKSTIREMONTTI 7.9.2026, sama peruste kuin Tangerissa yllä:
+   * intro on nyt etusivun leipäteksti (7–10 virkettä, kolme
+   * kappaletta, kaksi lihavointia). Faktat
+   * docs/mantereet-tyoaineisto/faktapohja-marrakech.md:stä;
+   * artikkeli-kenttä on ennallaan.
+   */
   Marrakech: {
-    intro: 'Marrakech on punaisista savimuureistaan tunnettu '
-      + 'karavaanikaupunki Atlasvuorten juurella. Sen suurtorilla '
-      + 'tarinankertojat, käärmeenlumoajat ja ruokakojut ovat pitäneet '
-      + 'iltansa vuosisatojen ajan.',
+    intro: 'Marrakech on punaisesta savesta muurattu kaupunki Korkean '
+      + 'Atlaksen juurella, palmulehtojen keskellä. Almoravidit '
+      + 'perustivat sen noin vuonna 1070 karavaanireittien '
+      + 'solmukohtaan, ja siitä kasvoi Maghrebin ja Saharan '
+      + 'eteläpuolisen Afrikan kauppapaikka. **Koko maata kutsuttiin '
+      + 'pitkään Marrakechin kuningaskunnaksi** — siitä tulevat '
+      + 'Marokon eurooppalaiset nimet.'
+      + '\n\n'
+      + 'Medinaa kiertää yhdeksäntoista kilometriä muuria, jossa on '
+      + 'kaksikymmentä porttia ja kaksisataa tornia; sen '
+      + 'oranssinpunainen savi on antanut kaupungille lisänimen '
+      + 'punainen kaupunki. Muurin sisällä kohoaa Koutoubian moskeijan '
+      + '77-metrinen minareetti, kaupungin korkein rakennus ja kaikkien '
+      + 'suunnistuspiste. Sen juurella on Jemaa el-Fna, aukio, joka '
+      + 'muuttuu joka ilta ruokakojujen ja tarinankertojien '
+      + 'näyttämöksi.'
+      + '\n\n'
+      + 'Kuiva tasanko on aina ollut vihreä maanalaisten '
+      + 'khettara-tunnelien ansiosta, jotka toivat vuorten vedet '
+      + 'puutarhoihin. **Unesco otti vanhankaupungin '
+      + 'maailmanperintöluetteloon 1985**, ja aukion suullinen perinne '
+      + 'sai oman suojelunsa 2001.',
     artikkeli: 'Marrakech on kaupunki Marokon sisämaassa, palmulehtojen '
       + 'keskellä Atlasvuorten juurella. Kirkkaalla säällä vuorten '
       + 'lumihuiput näkyvät basaarin katoilta — lunta ja aavikkoa '
@@ -242,11 +322,44 @@ export const OMAT_ARTIKKELIT = {
       + 'kupari- ja nahkasepät tekevät työtään kuten ennenkin. Vieraalle '
       + 'kaadetaan minttuteetä, ja tinkiminen hoidetaan hymyssä suin.',
   },
+  /*
+   * LAGOSIN INTRO LAAJENNETTIIN 7.9.2026 (Opus, parvierä) reseptin
+   * mittaan: etusivun leipäteksti on 7–10 virkkeen johdatus
+   * kaupunkiin. Lähteinä en-Wikipedian "Lagos", "History of Lagos",
+   * "Lagos Colony" ja "Eyo festival" 7.9.2026; sama aineisto kuin
+   * kaupunkilehdellä (js/packs/kulttuuri-kategoriat.js, avain lagos,
+   * sekä docs/mantereet-tyoaineisto/faktapohja-lagos.md).
+   * artikkeli-kenttä on ennallaan.
+   *
+   * 1873-KEHYS: Lagos oli isoisän matkavuonna Britannian siirtomaa,
+   * jota hallittiin Kultarannikolta, ja intro sanoo sen suoraan.
+   */
   Lagos: {
-    intro: 'Lagos on laguunin saarille ja rannoille rakennettu '
-      + 'jättiläinen, Afrikan väkirikkaimpia kaupunkeja. Se on Nigerian '
-      + 'talouden, musiikin ja elokuvan moottori, joka ei hiljene '
-      + 'koskaan.',
+    intro: 'Lagos on Nigerian suurin kaupunki ja Afrikan '
+      + 'väkirikkaimpia. Se on rakennettu laguunin saarille ja '
+      + 'rannoille, ja se jakautuu kahteen: saareen, jolla ovat '
+      + 'liikekeskusta ja vanhin kaupunki, ja mantereeseen, jolla '
+      + 'asuu suurin osa lagosilaisista. Nimi tulee portugalin '
+      + 'sanasta järvet; jorubankielinen nimi on **Èkó**, ja se elää '
+      + 'yhä kaupungin omassa puheessa.'
+      + '\n\n'
+      + 'Perimätiedon mukaan aworien hallitsija Olofin sai '
+      + 'savilautasen ja ohjeen asettua sinne, mihin se uppoaa — se '
+      + 'upposi tähän laguuniin. Noin vuodesta 1600 saari oli '
+      + 'linnoitettu Beninin sotilastukikohta, ja 1700-luvulla siitä '
+      + 'kasvoi yksi Atlantin orjakaupan suurimmista satamista. '
+      + 'Britannia puuttui kaupungin asioihin 1851, ja oba Dosunmu '
+      + 'allekirjoitti luovutussopimuksen 6. elokuuta 1861.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Lagos oli **Britannian siirtomaa, '
+      + 'jota hallittiin Kultarannikolta asti** — omaksi '
+      + 'siirtomaakseen se erotettiin vasta 1886. Kaupunkiin oli jo '
+      + 'muuttanut vapautettujen jälkeläisiä Freetownista ja '
+      + 'Brasiliasta, ja heidän jälkensä näkyy yhä saaren '
+      + 'rakennuksissa. Lagos oli Nigerian pääkaupunki vuoteen 1991, '
+      + 'jolloin asema siirtyi Abujaan. Kaupungin oma juhla on Eyo, '
+      + 'jonka valkoiset hahmot kulkivat ensimmäisen kerran '
+      + '20. helmikuuta 1854.',
     artikkeli: 'Lagos on Nigerian suurin kaupunki ja koko Afrikan '
       + 'suurimpia: asukkaita on suurkaupunkialueella toistakymmentä '
       + 'miljoonaa, eikä laskeminen ole helppoa, sillä kaupunki kasvaa '
@@ -268,34 +381,191 @@ export const OMAT_ARTIKKELIT = {
       + 'erityisinä päivinä. Ruuhkassa paikalliset toteavat: täällä ei '
       + 'kysytä montako kilometriä, vaan montako tuntia.',
   },
+  /*
+   * DAKAR (Opus 7.9.2026, paketti O9) — merkintä kirjoitettu
+   * kokonaan uusiksi kaupunkilehden yhteydessä. Vanha intro oli
+   * neljä virkettä; uusi tekstilinjaus (Raamattu, omistaja
+   * 20.8.2026) vaatii 7–10 virkettä. Vanha artikkeli nojasi
+   * Youssou N'Douriin, thiéboudienneen ja car rapide -busseihin;
+   * kaksi ensimmäistä ovat Senegalin MAALEHDEN aiheita ja
+   * kolmannella ei ole katetta en-Wikipedian Dakar-artikkelissa.
+   * Uusi teksti kertoo kaupungin oman tarinan: lebu-kylät, Ndakaaru
+   * Goréen vastapäätä, Lebu-tasavalta, maapähkinäsatama ja
+   * hallintokaupunki.
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-dakar.md ja sen
+   * riippumaton tarkistus tarkistus-dakar.md. Väitteet luettu
+   * en-Wikipedian raakateksteistä 7.9.2026: "Dakar", "Lebu people",
+   * "Four Communes", "Cap-Vert".
+   */
   Dakar: {
-    intro: 'Dakar seisoo Afrikan läntisimmällä niemellä keskellä '
-      + 'Atlantin tuulia. Senegalin pääkaupunki on värikäs satama- ja '
-      + 'musiikkikaupunki, jonka edustalla Goréen saari muistuttaa '
-      + 'raskaasta historiasta.',
-    artikkeli: 'Dakar on Senegalin pääkaupunki Kap Verden niemellä, '
-      + 'mantereen läntisimmässä kärjessä. Kolmelta suunnalta kaupunkia '
-      + 'ympäröi meri, ja Atlantin tuuli käy aina.'
-      + '\n\n== Niemen kaupunki ==\n'
-      + 'Dakar kasvoi 1800-luvulla satamakaupungiksi ja oli aikanaan '
-      + 'koko Ranskan Länsi-Afrikan pääkaupunki, jonka kautta hallinto '
-      + 'ja kauppa kulkivat. Sen edustalla on pieni Goréen saari, jonka '
-      + 'kautta orjakauppa kulki vuosisatojen ajan — nykyään saari on '
-      + 'Unescon maailmanperintökohde ja hiljainen muistopaikka.'
-      + '\n\n== Terangan maa ==\n'
-      + 'Senegalilaiset kutsuvat maataan terangan, vieraanvaraisuuden, '
-      + 'maaksi, ja Dakarissa sen huomaa: vieras istutetaan '
-      + 'ruokavadin ääreen, ja thiéboudienne — kala-riisipata — syödään '
-      + 'yhdessä isolta vadilta. Iltaisin kaupungissa jyskyttävät '
-      + 'sabar-rummut ja soi mbalax, jonka tunnetuin ääni Youssou '
-      + 'N\'Dour on kotoisin juuri täältä. Värikkäät car rapide '
-      + '-pikkubussit kiitävät kaduilla kuin maalatut arkut täynnä '
-      + 'elämää.',
+    intro: 'Dakar seisoo Cap-Vertin niemellä **Manner-Afrikan '
+      + 'läntisimmässä kärjessä**, ja meri on siellä kolmella '
+      + 'puolella. Niemen asuttivat viimeistään 1400-luvulla '
+      + 'lebut, wolofien kalastajaryhmä, ja heidän vanhat kylänsä '
+      + 'Ouakam, Ngor, Yoff ja Hann ovat yhä omia kaupunginosiaan. '
+      + 'Itse kaupunki alkoi 1600-luvulla kylästä nimeltä Ndakaaru, '
+      + 'joka perustettiin Goréen saarta vastapäätä toimittamaan '
+      + 'eurooppalaiselle kauppa-asemalle ruokaa ja juomavettä.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Dakar oli yhä pieni satamapaikka: '
+      + 'ranskalaiset olivat perustaneet sinne sotilaspostin 1857, ja '
+      + 'vuotta aiemmin, **1872**, Gorée ja sen mukana Dakar oli '
+      + 'tunnustettu Ranskan kunnaksi. Omaksi kunnakseen Dakar '
+      + 'irrotettiin vasta 1887, ja Ranskan Länsi-Afrikan '
+      + 'pääkaupungiksi se nousi 1902.'
+      + '\n\n'
+      + 'Nykyään Dakarin departementissa asuu yli 1,2 miljoonaa ja '
+      + 'koko metropolialueella noin neljä miljoonaa ihmistä. '
+      + 'Kaupunki on Länsi-Afrikan rahoituskeskus ja **taiteen '
+      + 'pääkaupunki**: täällä pidettiin 1966 ensimmäinen mustan '
+      + 'taiteen maailmanfestivaali, ja Dak\'Art on mantereen '
+      + 'pitkäikäisin suuri taidetapahtuma.',
+    artikkeli: 'Dakar on Senegalin pääkaupunki Cap-Vertin niemellä, '
+      + 'Manner-Afrikan läntisimmässä kärjessä. Merituuli käy siellä '
+      + 'ympäri vuoden, ja se pitää kaupungin selvästi viileämpänä '
+      + 'kuin sisämaan Sahelin kaupungit.'
+      + '\n\n== Niemen oma kansa ==\n'
+      + 'Cap-Vertin asuttivat lebut, wolofien vesiviljelyyn '
+      + 'erikoistunut ryhmä, viimeistään 1400-luvulla. Yoffin '
+      + 'perustamisen perinteinen vuosi on 1430. Kun Cayorin '
+      + 'marabuutit nousivat kapinaan hallitsijaansa vastaan, lebut '
+      + 'vetäytyivät niemelle, rakensivat lateriittilohkareista '
+      + 'muurin Yoffista Hanniin ja torjuivat hyökkäyksen. Syntyi '
+      + 'oma valtio, jota ranskalaiset kutsuivat Lebu-tasavallaksi '
+      + 'ja jonka pääkaupunki oli Ndakaaru. Senegalin valtio '
+      + 'tunnustaa Ndakaarun serignen yhä lebujen perinteiseksi '
+      + 'auktoriteetiksi.'
+      + '\n\n== Maapähkinöistä pääkaupungiksi ==\n'
+      + 'Kun orjakauppa loppui Ranskan alueilla 1848, sen tilalle '
+      + 'nousi maapähkinä. Pieni Goréen saari kävi sadalle laivalle '
+      + 'ahtaaksi, ja kauppa siirtyi mantereelle. Rata Saint-Louis\'hin '
+      + 'valmistui 1885, ja 1902 Dakarista tuli Ranskan Länsi-Afrikan '
+      + 'pääkaupunki. Siirtomaakautensa huipulla se oli yksi '
+      + 'imperiumin suurkaupungeista, ja satamaan tuli myllyjä, '
+      + 'panimoita ja säilyketehtaita.'
+      + '\n\n== Kaksi kukkulaa ja taiteen kaupunki ==\n'
+      + 'Ouakamin kaksoiskukkulat ovat kaupungin ainoa korkea maasto. '
+      + 'Toisella seisoo vuonna 1864 valmistunut Mamellesin majakka, '
+      + 'jonka valo kantaa 31 meripeninkulmaa, toisella Afrikan '
+      + 'korkein patsas. Keskustassa taas on museoita ja '
+      + 'biennaali: Dak\'Art on koko mantereen pitkäikäisin suuri '
+      + 'taidetapahtuma, ja Mustien sivilisaatioiden museo avattiin '
+      + '2018.',
   },
+  /*
+   * FÈS (Opus 7.9.2026, paketti O9) — uusi merkintä. Avain on
+   * city.wiki eli 'Fès' (js/packs/africa.js).
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-fes.md ja sen
+   * riippumaton tarkistus tarkistus-fes.md. Väitteet luettu
+   * en-Wikipedian raakateksteistä 7.9.2026: "Fez, Morocco",
+   * "Fes el Bali", "Fes Jdid", "Fez (hat)".
+   *
+   * RAJAUS: Marokon maalehti on jo tehty, ja se on ottanut
+   * al-Qarawiyyinin, Chouaran nahkurialtaat, Dar al-Maganan
+   * vesikellon ja zellijin. Niitä ei toisteta tässä.
+   *
+   * TARKISTUKSEN RATKAISU A: lähteet nimeävät joen rannat kolmella
+   * eri tavalla (kaakkois-, oikea- ja itäranta), joten teksti ei
+   * nimeä ilmansuuntia lainkaan.
+   */
+  Fès: {
+    intro: 'Fès on Pohjois-Marokon sisämaan kaupunki Atlasvuorten '
+      + 'luoteispuolella, kukkuloiden ympäröimänä ja Fèsjoen '
+      + 'varrella. Se alkoi **kahtena erillisenä kaupunkina joen '
+      + 'kahdella rannalla**: Idris I perusti oman kaupunkinsa 789 '
+      + 'ja hänen poikansa Idris II toisen 809. Kaupungit riitelivät '
+      + 'ja linnoittivat kumpikin oman rantansa, ja almoravidien '
+      + 'Yusuf ibn Tashfin yhdisti ne yhdeksi kaupungiksi vasta '
+      + '1069–1070.'
+      + '\n\n'
+      + 'Marinidien aikana 1200–1400-luvuilla Fès oli kulta-ajassaan '
+      + 'ja pääkaupunki: seitsemän medresaa rakennettiin vuosina '
+      + '1271–1357, ja 1276 perustettiin hallintokaupunki Fes Jdid. '
+      + 'Isoisän matkavuonna 1873 valtaan nousi Moulay Hassan I, joka '
+      + 'teki viimeisen suuren muutoksen kaupunkikuvaan ennen '
+      + '1900-lukua: hän yhdisti kaksi vanhaa kaupunkia '
+      + 'muurikäytävällä ja rakennutti sen sisään puutarhoja ja '
+      + 'kesäpalatseja.'
+      + '\n\n'
+      + 'Vanhakaupunki merkittiin **maailmanperintöluetteloon 1981** '
+      + 'Marokon ensimmäisenä kohteena. Fes el-Bali on arabimaailman '
+      + 'vanhin yhtäjaksoisesti asuttu muurikaupunki ja yksi maailman '
+      + 'suurimmista autottomista kaupunkialueista. Fèsiä kutsutaan '
+      + 'lännen Mekaksi ja Afrikan Ateenaksi.',
+    artikkeli: 'Fès on Marokon henkinen ja kulttuurinen sydän, '
+      + 'kaupunki jonka kujilla ei kulje autoja. Vanhakaupunki '
+      + 'jakautuu kahteen muurialueeseen, vanhempaan Fes el-Baliin ja '
+      + '1276 perustettuun Fes Jdidiin.'
+      + '\n\n== Kaksi kaupunkia, yksi joki ==\n'
+      + 'Idris I perusti kaupunkinsa 789 ja Idris II toisen '
+      + 'vastarannalle 809. Väestö oli aluksi berberejä ja satoja '
+      + 'Kairouanista tulleita arabeja; 817–818 Córdobasta '
+      + 'karkotetut andalusialaisperheet muuttivat toiselle puolelle. '
+      + 'Kaupunginosat saivat nimensä tulijoiden mukaan. Kaksi '
+      + 'riitelevää emiiriveljestä linnoittivat 1050-luvun lopulla '
+      + 'kumpikin oman rantansa, ja heidän nimensä elävät yhä '
+      + 'kaupungin kahdessa portissa.'
+      + '\n\n== Vesi ja kujat ==\n'
+      + 'Suuren osan kaupungin vesijärjestelmästä rakennutti '
+      + 'hallitsija, joka istui vallassa 1037–1049 — ja se on '
+      + 'pääosin säilynyt tähän päivään. Fèsjoki jakautuu pieniin '
+      + 'kanaviin, jotka tuovat veden vanhaankaupunkiin. Kujat ovat '
+      + 'kapeammat kuin vaunun akseliväli, ja siksi kaikki kannetaan '
+      + 'yhä aasin selässä.'
+      + '\n\n== Kirjoja ja hattuja ==\n'
+      + 'Afrikan mantereen ensimmäinen painettu kirja tehtiin '
+      + 'Fèsissä 1516: Lissabonista paenneet Samuel ben Isaac '
+      + 'Nedivot ja hänen poikansa painoivat hepreaksi viisitoista '
+      + 'kappaletta. Arabialainen kirjapaino tuli kaupunkiin 1865 ja '
+      + 'toimi 1940-luvulle. Kaupungin mukaan on nimetty myös '
+      + 'fetsihattu — vaikka siitä, kuka sen ensimmäisenä teki, '
+      + 'lähteet ovat eri mieltä.',
+  },
+  /*
+   * TIMBUKTU (Opus 7.9.2026, paketti O9) — INTRO KIRJOITETTU UUSIKSI
+   * kaupunkilehden yhteydessä. Vanha intro oli kolme virkettä; uusi
+   * tekstilinjaus (Raamattu, omistaja 20.8.2026) vaatii 7–10
+   * virkkeen johdatuksen kaupunkiin. `artikkeli`-kenttä on ennallaan.
+   *
+   * Aineisto: docs/mantereet-tyoaineisto/faktapohja-timbuktu.md ja
+   * sen riippumaton tarkistus tarkistus-timbuktu.md. Väitteet luettu
+   * en-Wikipedian raakateksteistä 7.9.2026: "Timbuktu",
+   * "History of Timbuktu", "Sankoré Madrasah".
+   *
+   * ETÄISYYS JOKEEN ON 15 KM eikä 20 km: artikkelin johdanto sanoo
+   * 20 km "jokeen" ja Geography-osio 15 km "joen pääuomaan".
+   * Tarkempi osio voittaa (tarkistus, kohta B).
+   *
+   * MALIN MAALEHDEN AIHEITA EI TOISTETA: Mansa Musan pyhiinvaellusta
+   * ei kerrota, ja vuosien 2012–2013 tapahtumat ovat jo
+   * skandaalinostona (skandaalit.js MLI).
+   */
   Timbuktu: {
-    intro: 'Timbuktu oli aavikon reunan kulta- ja kirjakaupunki, jonka '
-      + 'kirjastot hämmästyttivät maailmaa. Karavaanit tuovat sinne yhä '
-      + 'suolaa kuten tuhat vuotta sitten.',
+    intro: 'Timbuktu on Malin pohjoisosassa, Saharan eteläreunalla, '
+      + 'viisitoista kilometriä Nigerin pääuomasta pohjoiseen. '
+      + 'Kaupunki alkoi tuaregien kausiluonteisena leiripaikkana ja '
+      + 'muuttui pysyväksi 1100-luvun alussa, kun aavikon karavaanit '
+      + 'ja joen veneet alkoivat vaihtaa tavaraa juuri täällä. '
+      + 'Vaurauden toivat suola, kulta ja norsunluu.'
+      + '\n\n'
+      + 'Kaupungin kolme savimoskeijaa — **Djinguereber, Sidi Yahya '
+      + 'ja Sankoré** — olivat myös kouluja. 1500-luvulla kaupungissa '
+      + 'oli toistasataa koraanikoulua ja tuhansia oppilaita, ja '
+      + 'sukujen kirjastoihin kertyi satojatuhansia '
+      + 'käsikirjoituksia. Marokkolainen armeija '
+      + 'valloitti kaupungin 1591, ja oppineita karkotettiin ja '
+      + 'pakeni; sen jälkeen kaupungin maine muuttui Euroopassa '
+      + 'rikkaasta salaperäiseksi.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Timbuktu ei ollut minkään yhden '
+      + 'vallan alla: Massinan valtakunta oli hallinnut sitä vuoteen '
+      + '1865 ja Toucouleur sen jälkeen, mutta lähteet ovat '
+      + 'erimielisiä siitä, kuka piti valtaa Ranskan tuloon 1893 '
+      + 'asti. Nimestä oli jo tullut Euroopassa sanonta paikasta '
+      + 'keskellä ei-mitään — **vaikka kaupunki oli koko ajan '
+      + 'olemassa** ja sen kirjastot sen mukana.',
     artikkeli: 'Timbuktu sijaitsee Malissa Saharan eteläreunalla, '
       + 'muutaman kilometrin päässä Nigerjoen suuresta mutkasta. '
       + 'Kaupunki syntyi siinä, missä kameli kohtaa kanootin: aavikon '
@@ -316,11 +586,42 @@ export const OMAT_ARTIKKELIT = {
       + 'Savesta rakennetut moskeijat rapataan yhä joka vuosi talkoilla '
       + 'uuteen kuosiin — samalla tavalla kuin vuosisatoja sitten.',
   },
+  /*
+   * KUMASIN INTRO KIRJOITETTIIN UUSIKSI 7.9.2026 (Opus, paketti O9)
+   * kaupunkilehden yhteydessä. Vanha versio oli neljä virkettä; uusi
+   * tekstilinjaus (Raamattu, omistaja 20.8.2026) vaatii etusivun
+   * leipätekstiltä 7–10 virkettä ja 1873-kehyksen. Lähteinä
+   * en-Wikipedian "Kumasi", "Asante Empire", "Golden Stool" ja
+   * "Anglo-Ashanti wars" 7.9.2026; sama aineisto kuin
+   * kaupunkilehdellä (js/packs/kulttuuri-kategoriat.js, avain
+   * kumasi, sekä docs/mantereet-tyoaineisto/faktapohja-kumasi.md).
+   * artikkeli-kenttä on ennallaan (Kapkaupunki-malli 6.9.2026).
+   */
   Kumasi: {
-    intro: 'Kumasi on Asanten kuningaskunnan vanha pääkaupunki Ghanan '
-      + 'vihreällä ylängöllä. Kultainen valtaistuin, kente-kankaat ja '
-      + 'Länsi-Afrikan suurimpiin kuuluva tori pitävät perinteet '
-      + 'elävinä.',
+    intro: 'Kumasi on Ghanan toiseksi suurin kaupunki ja Ashantin '
+      + 'alueen pääkaupunki, noin kahdensadan kilometrin päässä '
+      + 'Accrasta sademetsävyöhykkeellä. Nimi tulee twin sanasta '
+      + '**Kumase**, "kum-puun alla", ja se viittaa puuhun, jonka '
+      + 'ympärille kaupunki 1680-luvulla perustettiin. Perustaja oli '
+      + 'asantehene Osei Kofi Tutu I.'
+      + '\n\n'
+      + 'Kaupunki nousi merkittäväksi 1695, kun siitä tuli Asanten '
+      + 'pääkaupunki, ja vuonna 1701 asantit kukistivat Denkyiran '
+      + 'Feyiasen taistelussa ja avasivat tien rannikolle. Liiton '
+      + 'vertauskuva oli **kultainen jakkara Sika Dwa Kofi**, jonka '
+      + 'perimätiedon mukaan pappi Okomfo Anokye kutsui taivaalta; se '
+      + 'ei saa koskaan koskettaa maata. Kumasi on yhä asantehenen '
+      + 'istuinkaupunki, ja siksi sitä sanotaan myös nimellä '
+      + 'Oseikrom.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Kumasi oli vielä **oman '
+      + 'valtakuntansa pääkaupunki**: kolmas brittiläis-asantilainen '
+      + 'sota alkoi juuri silloin, ja britit saapuivat kaupunkiin '
+      + 'vasta 4. helmikuuta 1874. Brittihallintoon Kumasi siirtyi '
+      + '1896 ja Ashantin alueen pääkaupungiksi 1957. Kaupunkia '
+      + 'sanotaan puutarhakaupungiksi Maxwell Fryn vuoden 1945 '
+      + 'kaavan mukaan, ja sen Kejetian tori on Länsi-Afrikan suurin '
+      + 'yksittäinen tori.',
     artikkeli: 'Kumasi on Ghanan toiseksi suurin kaupunki ja Asanten '
       + 'kansan sydän sademetsävyöhykkeen ylängöllä. Kaupunkia '
       + 'kutsutaan puutarhakaupungiksi, ja sen keskustassa toimii '
@@ -341,11 +642,40 @@ export const OMAT_ARTIKKELIT = {
       + 'radioista. Vanha sananlasku sopii kaupungille: kun hämähäkin '
       + 'verkot yhdistyvät, ne sitovat leijonankin.',
   },
+  /*
+   * KAPKAUPUNGIN INTRO LAAJENNETTIIN 6.9.2026 (Opus, paketti O9)
+   * reseptin mittaan: etusivun leipäteksti on 7–10 virkkeen johdatus
+   * kaupunkiin (docs/aasia-tyoaineisto/lehtityo-resepti.md, Mitat).
+   * Vanha kolmivirkkeinen versio jäi lyhyeksi. Lähteinä
+   * en-Wikipedian "Cape Town", "History of Cape Town" ja "Table
+   * Mountain" 6.9.2026; sama aineisto kuin kaupunkilehdellä
+   * (js/packs/kulttuuri-kategoriat.js, avain kapkaupunki, sekä
+   * docs/mantereet-tyoaineisto/faktapohja-kapkaupunki.md).
+   * artikkeli-kenttä on ennallaan.
+   */
   Kapkaupunki: {
-    intro: 'Kapkaupunki lepää Pöytävuoren juurella kahden valtameren '
-      + 'tuntumassa. Satamakaupunki on Etelä-Afrikan vanhin ja '
-      + 'kauneimpana pidetty — ja sen historia kertoo koko maan '
-      + 'tarinan.',
+    intro: 'Kapkaupunki on rakennettu Pöytävuoren, Leijonanpään ja '
+      + 'Paholaisenhuipun muodostamaan luonnolliseen amfiteatteriin '
+      + 'meren rannalle. Kaupungin edustalla on Taffelinlahti, ja '
+      + 'siitä etelään työntyy neljänkymmenen kilometrin mittainen '
+      + 'Kapin niemimaa. Se on Etelä-Afrikan **lainsäädännöllinen '
+      + 'pääkaupunki**: parlamentti kokoontuu täällä, hallitus '
+      + 'Pretoriassa.'
+      + '\n\n'
+      + 'Ennen eurooppalaisia alue oli khoe- ja san-kansojen maata, ja '
+      + 'lahdella kävivät kauppaa ǁAmmaqua-vedenmiehet. Hollantilainen '
+      + 'Itä-Intian kauppakomppania perusti paikalle 1652 '
+      + 'huoltoaseman, jonka vihannestarhasta kasvoi kaupunki. '
+      + 'Työvoimapula ratkaistiin tuomalla orjuutettuja ihmisiä '
+      + 'Indonesiasta, Madagaskarilta ja Intiasta.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Kapkaupunki oli siirtomaan '
+      + 'pääkaupunki ja Intian-reitin tärkein satama. Se oli saanut '
+      + 'oman parlamenttinsa 1854 ja paikallisesti vastuullisen '
+      + 'pääministerin edellisenä vuonna 1872. Kaupungin edustalla on '
+      + '**Robben Island**, jossa Nelson Mandela istui vankina '
+      + 'kahdeksantoista vuotta; vapauduttuaan 1990 hän piti '
+      + 'ensimmäisen puheensa kaupungintalon parvekkeelta.',
     artikkeli: 'Kapkaupunki sijaitsee Afrikan lounaiskärjessä, '
       + 'tasahuippuisen Pöytävuoren ja meren välissä. Kaupungin ohi '
       + 'kiertää Hyväntoivonniemi, jonka ympäri purjehtiminen avasi '
@@ -366,10 +696,44 @@ export const OMAT_ARTIKKELIT = {
       + 'maksettiin. Rannoilla käyskentelevät pingviinit, braai-tulet '
       + 'savuavat viikonloppuisin ja jazzklubit soivat iltaisin.',
   },
+  /*
+   * SANSIBARIN INTRO LAAJENNETTIIN 7.9.2026 (Opus, parvierä)
+   * reseptin mittaan: etusivun leipäteksti on 7–10 virkkeen johdatus
+   * kaupunkiin. Lähteinä en-Wikipedian "Zanzibar", "Stone Town",
+   * "History of Zanzibar" ja "Christ Church, Zanzibar" 7.9.2026;
+   * sama aineisto kuin kaupunkilehdellä
+   * (js/packs/kulttuuri-kategoriat.js, avain sansibar, sekä
+   * docs/mantereet-tyoaineisto/faktapohja-sansibar.md).
+   * artikkeli-kenttä on ennallaan.
+   *
+   * 1873-KEHYS: isoisän matkavuosi on saaren historian käännekohta,
+   * ja intro sanoo sen suoraan. Taarabia ei mainita, koska se on
+   * Tansanian maalehden aihe (Fablen ohje).
+   */
   Sansibar: {
-    intro: 'Sansibar on maustesaari Intian valtameressä: neilikan '
-      + 'tuoksu, korallikivinen kivikaupunki ja dhow-purjeet kertovat '
-      + 'valtameren vanhasta kauppareitistä.',
+    intro: 'Sansibar on saariryhmä Intian valtameressä '
+      + 'Manner-Tansanian rannikolla, ja sen pääsaari on Unguja. '
+      + 'Kaupunki on saaren länsirannikolla pienellä niemellä: vanha '
+      + 'osa on **Kivikaupunki**, uudempi **Ngʼambo** eli toinen '
+      + 'puoli. Kadut ovat niin kapeita, ettei niillä kulje auto, '
+      + 'joten kaupungissa liikutaan jalan, pyörällä ja mopolla.'
+      + '\n\n'
+      + 'Kalastajakylä Shangani perustettiin 1000-luvulla ja oli '
+      + 'pitkään vähäpätöinen; saaren mahdit olivat Unguja Ukuu, '
+      + 'Kizimkazi ja Tumbatu. Portugalilaiset karkotettiin '
+      + '1600-luvulla, ja paikalliset ylimykset kutsuivat Omanin '
+      + 'sulttaanin puolustamaan saarta. 1800-luvun alkupuoliskolla '
+      + 'Said bin Sultan siirsi pääkaupunkinsa Muscatista tänne, ja '
+      + '1861 Sansibar ja Oman erosivat omiksi sulttaanikunnikseen.'
+      + '\n\n'
+      + 'Isoisän matkavuosi 1873 on saaren historian käännekohta: '
+      + 'Britannian konsuli uhkasi sulttaani Barghashia saarrolla, ja '
+      + 'sopimus **lakkautti orjakaupan ja sulki kaikki orjatorit**. '
+      + 'Saman vuoden jouluna laskettiin suurimman orjatorin paikalle '
+      + 'anglikaanisen kirkon peruskivi. Kivikaupunki on Unescon '
+      + 'maailmanperintökohde vuodesta 2000, ja sen arkkitehtuurissa '
+      + 'näkyvät arabialaiset, persialaiset, intialaiset ja '
+      + 'eurooppalaiset ainekset.',
     artikkeli: 'Sansibar on saariryhmä Tansanian rannikolla. Sen '
       + 'pääsaaren vanha keskus, Kivikaupunki eli Stone Town, on '
       + 'rakennettu korallikivestä kapeiden kujien sokkeloksi, jossa '
@@ -391,10 +755,42 @@ export const OMAT_ARTIKKELIT = {
       + 'punaisina auringonlaskua vasten — sama näky kuin sata ja '
       + 'tuhat vuotta sitten.',
   },
+  /*
+   * ADDIS ABEBAN INTRO LAAJENNETTIIN 7.9.2026 (Opus, Fablen parvi)
+   * reseptin mittaan: etusivun leipäteksti on 7–10 virkkeen johdatus
+   * kaupunkiin. Lähteinä en-Wikipedian "Addis Ababa", "Timeline of
+   * Addis Ababa", "Mount Entoto" ja "Addis Mercato" 7.9.2026; sama
+   * aineisto kuin kaupunkilehdellä (js/packs/kulttuuri-kategoriat.js,
+   * avain addisabeba, sekä docs/mantereet-tyoaineisto/
+   * faktapohja-addisabeba.md). artikkeli-kenttä on ennallaan.
+   *
+   * 1873-KEHYS: kaupunkia ei ollut isoisän matkavuonna, ja intro
+   * sanoo sen suoraan.
+   */
   'Addis Abeba': {
-    intro: 'Addis Abeba on Etiopian pääkaupunki ylängöllä lähes '
-      + 'kahden ja puolen kilometrin korkeudessa. "Uusi kukka" on koko '
-      + 'Afrikan kokouspaikka — ja kahvin kotimaan pääkaupunki.',
+    intro: 'Addis Abeba on Etiopian pääkaupunki **2 355 metrin '
+      + 'korkeudessa** — Afrikan korkein ja maailman neljänneksi '
+      + 'korkein pääkaupunki. Ilma on viileän kirkasta '
+      + 'päiväntasaajan lähelläkin: yhdenkään kuukauden '
+      + 'keskilämpötila ei nouse yli 22 asteen. '
+      + 'Kaupunki on Etiopian ylängöllä Entoton vuoren juurella, ja '
+      + 'sen nimi tarkoittaa amharaksi uutta kukkaa.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 täällä ei ollut kaupunkia lainkaan. '
+      + 'Laakson pohjalla oli Finfinne, kuumien lähteiden paikka, ja '
+      + 'asutus alkoi vasta 1886, kun keisarinna **Taytu Betul** '
+      + 'valitsi paikan lähteiden luota ja antoi sille nimen. Menelik '
+      + 'II rakensi palatsinsa 1887, ja pääkaupunki kaupungista tuli '
+      + '1889; sen jälkeen avattiin ensimmäiset lähetystöt. Vuonna '
+      + '1889 asukkaita oli noin 15 000, nyt 6,3 miljoonaa.'
+      + '\n\n'
+      + 'Addis Abebaa ei rakennettu siirtomaakaupungiksi, joten '
+      + 'eurooppalaista arkkitehtuuria on vain Piazzan korttelissa. '
+      + 'Kaupunkia kutsutaan Afrikan poliittiseksi pääkaupungiksi, '
+      + 'koska Afrikan unionin ja YK:n Afrikan talouskomission '
+      + 'päämajat ovat täällä. Merkato on **Afrikan suurin '
+      + 'ulkoilmatori**, ja kaupungin kaduilla kasvaa Menelikin '
+      + 'aikanaan tuotu eukalyptus.',
     artikkeli: 'Addis Abeba sijaitsee Etiopian ylängöllä noin 2 400 '
       + 'metrin korkeudessa, ja ilma on siellä aina viileän kirkasta. '
       + 'Nimi tarkoittaa amharaksi uutta kukkaa.'
@@ -414,6 +810,70 @@ export const OMAT_ARTIKKELIT = {
       + 'Mercato-torilla, yhdellä Afrikan suurimmista, myydään kaikkea '
       + 'mausteista kultaan — ja iltaisin klubeilla soi ethio-jazz, '
       + 'jota ei kuule missään muualla maailmassa.',
+  },
+  /*
+   * LALIBELA (Opus 7.9.2026, paketti O9) — UUSI MERKINTÄ
+   * kaupunkilehden yhteydessä. Avain on city.wiki eli "Lalibela"
+   * (js/packs/africa.js). Aineisto:
+   * docs/mantereet-tyoaineisto/faktapohja-lalibela.md ja sen
+   * riippumaton tarkistus tarkistus-lalibela.md. Väitteet luettu
+   * en-Wikipedian raakateksteistä 7.9.2026: "Lalibela",
+   * "Rock-Hewn Churches, Lalibela", "Gebre Meskel Lalibela",
+   * "Tekle Giyorgis II".
+   *
+   * ETIOPIAN MAALEHDEN NOSTOA EI TOISTETA: maa-kategoriat.js ETH
+   * kertoo jo louhintatavan, kirkkojen määrän ja
+   * Jerusalem-symboliikan ("Yksitoista kirkkoa, jotka kaivettiin
+   * alaspäin"). Tämä merkintä kertoo kaupungin oman tarinan:
+   * Rohan nimi, kuningas Lalibela, Lastan asema ja nykyinen
+   * pikkukaupunki.
+   *
+   * SAAPUMISTEKSTI KIRJOITETTIIN 8.9.2026 (Fable, omistajan päätös):
+   * lalibela poistui tests/vanha-maailma.test.mjs:n KAARETTOMAT-
+   * listalta, merkintä on africa-saapumiset.js:ssä.
+   */
+  Lalibela: {
+    intro: 'Lalibela on pieni kaupunki Etiopian ylängöllä Amharan '
+      + 'alueella, noin **2 500 metrin korkeudessa**, ja se on Lastan '
+      + 'pääkaupunki. Vuoden 2007 laskennassa asukkaita oli 17 367 — '
+      + 'kaupunki on siis pienempi kuin moni suomalainen '
+      + 'kuntakeskus, mutta se on Etiopian ortodoksisen kirkon '
+      + 'pyhimpiä paikkoja ja pyhiinvaelluksen päämäärä.'
+      + '\n\n'
+      + 'Kaupungin vanha nimi oli **Roha**, ja se nimettiin uudelleen '
+      + 'Zagwe-kuningas Gebre Meskel Lalibelan mukaan, joka hallitsi '
+      + 'noin 1181–1221. Hagiografian mukaan hän syntyi Rohassa 1162 '
+      + 'ja sai nimensä mehiläisparvesta, joka ympäröi vastasyntyneen: '
+      + 'vanhassa agaw-kielessä nimi tarkoittaa, että mehiläiset '
+      + 'tunnustavat hänen valtansa. Kaupunki oli Etiopian '
+      + 'pääkaupunki 1100-luvun lopulta 1200-luvulle.'
+      + '\n\n'
+      + 'Kalliokirkot otettiin maailmanperintöluetteloon 1978, ja '
+      + 'niitä on yksitoista. Kaupungin vesiuoma kantaa nimeä '
+      + 'Jordan, ja kirkot jakautuvat sen mukaan. Isoisän '
+      + 'matkavuonna 1873 Lastalla oli tuore muisto omasta '
+      + 'keisaristaan: **Wagshum Gobeze**, vanhan Zagwe-valtaistuimen '
+      + 'perijä, oli hallinnut Tekle Giyorgis II:na 1868–1871.',
+    artikkeli: 'Lalibela on kaupunki Etiopian pohjoisella ylängöllä '
+      + 'noin 2 500 metrin korkeudessa. Se tunnetaan yhdestätoista '
+      + 'kirkosta, joita ei muurattu vaan louhittiin kalliosta. Se on '
+      + 'yhä pyhiinvaelluskohde eikä museo.'
+      + '\n\n== Roha ja sen kuningas ==\n'
+      + 'Kaupungin vanha nimi oli Roha. Se sai nykyisen nimensä '
+      + 'kuningas Gebre Meskel Lalibelalta, joka hallitsi Zagwe-'
+      + 'dynastian aikana noin 1181–1221 ja vietti nuoruudessaan '
+      + 'vuosia maanpaossa Jerusalemissa. Kaupungin rakennuksilla on '
+      + 'raamatullisia nimiä, ja vesiuoma on nimeltään Jordan. '
+      + 'Hagiografian mukaan kuningas veisti kirkot enkelien avulla, '
+      + 'ja portugalilaisille papit kertoivat 1520-luvulla työn '
+      + 'kestäneen kaksikymmentäneljä vuotta.'
+      + '\n\n== Kaupunki kirkkojen ympärillä ==\n'
+      + 'Lalibelassa asuu runsaat seitsemäntoistatuhatta ihmistä. '
+      + 'Perinteisiä taloja on kahta lajia: pyöreä kivestä ladottu '
+      + 'tukul, jossa on usein kaksi kerrosta ja portaat ulkoseinällä, '
+      + 'sekä yksikerroksinen chika, joka on tehty maasta ja risuista. '
+      + 'Vilkkaimmillaan kaupunki on tammikuussa, kun kirkkoihin '
+      + 'saapuu pyhiinvaeltajia ja kulkueet kestävät useita päiviä.',
   },
   'Kongo (joki)': {
     intro: 'Kongojoki on Afrikan vesirikkain virta, joka kiertää '
@@ -483,9 +943,22 @@ export const OMAT_ARTIKKELIT = {
       + 'kuuluvat kahvilan pöytään joka korttelissa.',
   },
   Senegal: {
-    intro: 'Senegal on Länsi-Afrikan vakaimpia maita Atlantin '
-      + 'rannalla — terangan eli vieraanvaraisuuden maa, jossa '
-      + 'sabar-rummut ja mbalax pitävät tahtia.',
+    // Pidennetty maalehden (MAA_KATEGORIAT.SEN) yhteydessä 6.9.2026:
+    // maalehden etusivun maaosasto näyttää tämän intron sellaisenaan,
+    // joten sen pitää kantaa yksin. Sama malli kuin Egyptillä.
+    intro: 'Senegal on Afrikan läntisin maa, ja sen niemeltä on koko '
+      + 'mantereen lyhyin merimatka Amerikkaan. Maisema vaihtuu '
+      + 'pohjoisen kuivasta sahelista etelän Casamancen vehreyteen, ja '
+      + 'pohjoisrajaa pitkin virtaa Senegaljoki. Keskiajalla aluetta '
+      + 'hallitsi Jolofin valtakunta, ja Waalossa kuninkaan valitsi '
+      + 'lingeer eli äidin puolelta periytyvän suvun naispuolinen '
+      + 'perijä. Vieraanvaraisuudesta puhutaan sanalla teranga: ateria '
+      + 'syödään yhteiseltä vadilta, ja sen ympärille mahtuu aina yksi '
+      + 'lisää. Musiikissa soivat sabar-rummut, 21-kielinen kora ja '
+      + 'mbalax, ja griotit ovat säilyttäneet sukujen historian '
+      + 'muistissaan vuosisatoja. Ensimmäinen presidentti Léopold Sédar '
+      + 'Senghor oli runoilija, ja maasta tuli 1960-luvulla myös '
+      + 'afrikkalaisen elokuvan keskus.',
     artikkeli: 'Senegal sijaitsee Afrikan läntisimmässä kulmassa. '
       + 'Maisema on enimmäkseen matalaa savannia, jonka halki '
       + 'Senegaljoki virtaa pohjoisrajalla; ilmasto vaihettuu '
@@ -508,9 +981,25 @@ export const OMAT_ARTIKKELIT = {
       + 'mbalaxin tahti.',
   },
   Mali: {
+    // Pidennetty maalehden (MAA_KATEGORIAT.MLI) yhteydessä 6.9.2026:
+    // maalehden maaosasto nojaa tähän introon yksin, sama malli kuin
+    // Kenialla ja Nigerialla.
     intro: 'Mali on aavikon ja Nigerjoen maa, jonka keskiaikaiset '
       + 'valtakunnat olivat aikansa rikkaimpia. Kulta, suola ja '
-      + 'kirjat kulkivat sen kaupunkien kautta.',
+      + 'kirjat kulkivat sen kaupunkien kautta. Nigerin suuri mutka '
+      + 'kaartaa Saharan reunaan ja kääntyy takaisin etelään; sen '
+      + 'varrella nousivat peräkkäin Ghanan, Malin ja Songhain '
+      + 'suurvallat, jotka elivät etelän kullan ja pohjoisen suolan '
+      + 'vaihdosta. Mansa Musan pyhiinvaellus Mekkaan 1324 teki Malin '
+      + 'tunnetuksi Kairoa myöten, ja Timbuktu merkittiin '
+      + 'eurooppalaisiin karttoihin oppineiden kaupunkina. Kirinan '
+      + 'taistelun jälkeen noin 1235 klaanit sopivat Kurukan Fugan '
+      + 'tasangolla säännöistä, joita jelit eli griotit ovat siitä '
+      + 'asti kantaneet ulkomuistissa. Songhain valta päättyi 1591 '
+      + 'Tondibin taisteluun, kun Marokon armeija toi aavikon yli '
+      + 'tuliaseet; Ranskan siirtomaakauden jälkeen Mali itsenäistyi '
+      + '1960. Nykyään maan tunnetuin vientituote on musiikki: kora, '
+      + 'balafon ja aavikkoblues soivat kaikkialla maailmassa.',
     artikkeli: 'Mali on suuri sisämaavaltio Länsi-Afrikassa. Pohjoinen '
       + 'puoli on Saharaa, etelä savannia — ja niiden välistä virtaa '
       + 'Nigerjoki, jonka suuri mutka on aina ollut maan elämänlanka. '
@@ -534,9 +1023,21 @@ export const OMAT_ARTIKKELIT = {
       + 'sukupolvien ketjuna.',
   },
   Nigeria: {
+    // Pidennetty maalehden (MAA_KATEGORIAT.NGA) yhteydessä 6.9.2026:
+    // maalehden etusivun maaosasto näyttää tämän intron sellaisenaan.
     intro: 'Nigeria on Afrikan väkirikkain maa — joka kuudes '
-      + 'afrikkalainen on nigerialainen. Sadat kansat, kielet ja '
-      + 'kaupungit tekevät siitä mantereen suurimman kulttuurimahdin.',
+      + 'afrikkalainen on nigerialainen. Maan halki virtaavat Niger ja '
+      + 'Benue, ja etelän sademetsän ja pohjoisen sahelin väliin mahtuu '
+      + 'satoja kansoja ja kieliä. Jorubien Ifessä valettiin 1200-luvulta '
+      + 'alkaen kuparipäitä, joiden luonnonmukaisuus romutti '
+      + 'eurooppalaisten käsityksen afrikkalaisesta taiteesta, ja '
+      + 'pohjoisen hausakaupungeissa kirjoitettiin arabialaisin '
+      + 'kirjaimin neljällä kielellä. Nykyään Lagos on mantereen '
+      + 'suurimpia kaupunkeja, ja sen musiikki soi kaikkialla: afrobeat '
+      + 'syntyi täällä, ja Nollywood tekee enemmän elokuvia kuin '
+      + 'Hollywood. Amos Tutuola, Chinua Achebe ja Wole Soyinka '
+      + 'kirjoittivat nigerialaisen kirjallisuuden maailmankartalle. '
+      + 'Toreilla tingitään jollof-riisin tuoksussa sadalla kielellä.',
     artikkeli: 'Nigeria sijaitsee Guineanlahden rannalla Länsi-'
       + 'Afrikassa. Maan halki virtaavat Niger- ja Benuejoet, jotka '
       + 'yhtyvät keskellä maata; etelässä on sademetsää ja '
@@ -559,9 +1060,22 @@ export const OMAT_ARTIKKELIT = {
       + 'tuoksussa sadalla kielellä.',
   },
   Ghana: {
-    intro: 'Ghana oli Mustan Afrikan ensimmäinen itsenäistynyt '
-      + 'siirtomaa ja on nykyään yksi mantereen vakaimmista maista. '
-      + 'Kulta, kaakao ja kente-kangas ovat sen tunnusmerkit.',
+    // Pidennetty maalehden (MAA_KATEGORIAT.GHA) yhteydessä 6.9.2026:
+    // maalehden etusivun maaosasto näyttää tämän intron sellaisenaan.
+    intro: 'Ghana oli ensimmäinen itsenäistynyt siirtomaa Saharan '
+      + 'eteläpuolisessa Afrikassa: musta tähti nostettiin Accrassa '
+      + '6. maaliskuuta 1957. Nimi lainattiin keskiaikaiselta '
+      + 'valtakunnalta, joka sijaitsi yli tuhannen kilometrin päässä '
+      + 'nykyisistä rajoista. Rannikolla on laguuneja ja linnakkeita, '
+      + 'sisämaassa sademetsää ja pohjoisessa savannia, ja itälaidalla '
+      + 'lepää Voltajärvi, yksi maailman suurimmista tekojärvistä. '
+      + 'Sisämaata hallitsi Asanten valtakunta, joka punnitsi '
+      + 'kultahiekkansa messinkipunnuksilla — ja jokainen punnus '
+      + 'kertoi sananlaskun. Kaakao tuli maahan sepän matkatavaroissa '
+      + '1876 ja teki siitä yhden maailman suurimmista suklaan '
+      + 'raaka-aineen tuottajista. Arkena syödään waakyeta ja kenkeytä '
+      + 'shiton kanssa, juhlassa pukeudutaan kenteen, ja ovella '
+      + 'sanotaan akwaaba.',
     artikkeli: 'Ghana sijaitsee Guineanlahden rannalla. Rannikolla on '
       + 'laguuneja ja kalastajakyliä, sisämaassa sademetsää ja '
       + 'pohjoisessa savannia; maan itälaidalla on Voltajärvi, yksi '
@@ -583,9 +1097,27 @@ export const OMAT_ARTIKKELIT = {
       + 'kaikkialla. Tervetulotoivotus kuuluu joka ovella: akwaaba.',
   },
   'Etelä-Afrikka': {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // ZAF) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Tansanialla. Virallisia kieliä on kaksitoista, ei yksitoista:
+    // eteläafrikkalainen viittomakieli lisättiin 3.5.2023
+    // (en-Wikipedia "Languages of South Africa", tarkistettu 7.9.2026).
     intro: 'Etelä-Afrikka on sateenkaarikansan maa mantereen '
-      + 'eteläkärjessä: yksitoista virallista kieltä, kaksi valtamerta '
-      + 'ja historia, joka opetti maailmalle anteeksiannon voiman.',
+      + 'eteläkärjessä kahden valtameren välissä. Virallisia kieliä on '
+      + 'kaksitoista eikä yksikään niistä ole enemmistön kieli, joten '
+      + 'kielen vaihtaminen kesken keskustelun on arkea. Hollantilaiset '
+      + 'ja britit rakensivat tänne siirtokuntansa, kullan ja '
+      + 'timanttien löydöt tekivät maasta rikkaan, ja apartheid jakoi '
+      + 'rikkauden ihonvärin mukaan vuosikymmeniksi. Vuoden 1994 '
+      + 'vaaleissa kaikki saivat vihdoin äänestää, ja Nelson Mandelan '
+      + 'linja — vapaus ilman kostoa — vietiin läpi totuus- ja '
+      + 'sovintokomissiossa, jossa uhri ja tekijä puhuivat samassa '
+      + 'salissa. Musiikki ja ruoka syntyivät siirtotyöläisten '
+      + 'asuntoloissa ja kaivoskaupungeissa: isicathamiya-kuorot, '
+      + 'braai-tulet ja Durbanin leipään kaadettu curry. Vanhinta '
+      + 'taidetta ovat sanien kalliomaalaukset, joita on '
+      + 'Lohikäärmevuorilla kymmeniätuhansia — ja kaksi niiden '
+      + 'hahmoista seisoo nykyään maan vaakunassa.',
     artikkeli: 'Etelä-Afrikka täyttää mantereen eteläkärjen kahden '
       + 'valtameren välissä. Maisemat vaihtuvat Kapin vuorista '
       + 'Kalaharin puolikuivaan tasankoon ja itärannikon vehreyteen; '
@@ -607,9 +1139,21 @@ export const OMAT_ARTIKKELIT = {
       + 'kukkien peittämä Namaqualand keväisin.',
   },
   Tansania: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // TZA) nojaa tähän introon yksin, sama malli kuin Egyptillä.
     intro: 'Tansaniassa ovat Afrikan katto Kilimandžaro, Serengetin '
       + 'suuret laumat ja Sansibarin maustesaaret. Swahilin kieli '
-      + 'yhdistää yli sadan kansan maan.',
+      + 'yhdistää yli sadan kansan maan: se on koulun, kaupan ja '
+      + 'hallinnon kieli, ja sen aseman rakensi tietoisesti '
+      + 'ensimmäinen presidentti Julius Nyerere. Rannikko ja saaret '
+      + 'kuuluivat vuosisatoja Intian valtameren kauppaverkkoon, jonka '
+      + 'varrella syntyivät Kivikaupungin kaiverretut ovet ja Pemban '
+      + 'neilikkaviljelmät. Sisämaassa ovat Ngorongoron '
+      + 'romahduskattila, Olduvain rotko ja syvä Tanganjikajärvi. '
+      + 'Tanganjika itsenäistyi 1961 ja yhdistyi Sansibarin kanssa '
+      + '1964 Tansaniaksi. Ruoka vaihtuu rannikon maustetusta pilausta '
+      + 'sisämaan ugaliin ja grillattuun lihaan, ja kaupunkien '
+      + 'radioissa soi bongo flava.',
     artikkeli: 'Tansania sijaitsee Itä-Afrikassa Intian valtameren '
       + 'rannalla. Maan rajojen sisään mahtuvat Afrikan korkein vuori '
       + 'Kilimandžaro, mantereen suurin järvi Viktorianjärvi ja '
@@ -632,9 +1176,26 @@ export const OMAT_ARTIKKELIT = {
       + 'kasvatetaan kahvia, joka kuuluu maailman parhaimpiin.',
   },
   Etiopia: {
-    intro: 'Etiopia on ylänköjen maa, jota ei koskaan kolonisoitu: '
-      + 'oma kirjaimisto, oma ajanlasku ja kahvin kotimaa tekevät '
-      + 'siitä Afrikan omaleimaisimman valtion.',
+    intro: 'Etiopia on ylänköjen maa: suuri osa siitä on yli kahden '
+      + 'kilometrin korkeudessa, ja ylängön halki repeää Suuri '
+      + 'hautavajoama. Korkealla elää lajeja, joita ei ole muualla — '
+      + 'walia-vuorikauris Simien-vuorten jyrkänteillä ja etiopiansusi, '
+      + 'Afrikan uhanalaisin petoeläin, jota on jäljellä vain '
+      + 'seitsemällä vuoristoalueella. Pohjois-Etiopian alkuperäisestä '
+      + 'metsästä on jäljellä noin neljä prosenttia, ja lähes kaikki '
+      + 'siitä kasvaa kirkkojen ympärillä. Maassa on oma kirjaimistonsa, '
+      + 'oma ajanlaskunsa ja kolmetoista kuukautta vuodessa.'
+      + '\n\n'
+      + '**Kristinusko tuli maahan 300-luvulla, ja Lalibelan yksitoista '
+      + 'kirkkoa hakattiin kokonaisina kalliosta 1100- ja 1200-luvulla.** '
+      + 'Kuninkaiden sukua perusteltiin Kebra Nagast -eepoksella, jonka '
+      + 'mukaan hallitsijat polveutuivat Salomosta ja Saban '
+      + 'kuningattaresta. Vuosina 1769–1855 keisarit olivat vain '
+      + 'nimellisiä hallitsijoita Gondarissa, kun maakuntien ruhtinaat '
+      + 'taistelivat vallasta; Menelik II kokosi maan uudelleen, siirsi '
+      + 'pääkaupungin Addis Abebaan 1886 ja toi maahan postin, '
+      + 'hopeataalerin ja rautatien. Kahvipensas kasvaa villinä maan '
+      + 'metsissä, ja ruoka syödään yhteiseltä injera-leivältä käsin.',
     artikkeli: 'Etiopia on ylänköjen maa Afrikan sarvessa. Suuri osa '
       + 'maasta on yli kahden kilometrin korkeudessa, ja ylängön halki '
       + 'repeää Suuri hautavajoama; Sininen Niili saa alkunsa '
@@ -658,9 +1219,28 @@ export const OMAT_ARTIKKELIT = {
       + 'sukupolvi toisensa perään.',
   },
   'Kongon demokraattinen tasavalta': {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // COD) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Kongon demokraattinen tasavalta on Saharan eteläpuolisen '
       + 'Afrikan suurin maa: sademetsien, suuren joen ja valtavien '
-      + 'luonnonrikkauksien jättiläinen.',
+      + 'luonnonrikkauksien jättiläinen. Pinta-alaltaan se on Afrikan '
+      + 'toiseksi ja koko maailman yhdenneksitoista suurin, ja sen noin '
+      + '124 miljoonaa asukasta tekevät siitä maailman väkirikkaimman '
+      + 'ranskankielisen maan — virallinen kieli on ranska, mutta '
+      + 'kotikieliä on yli kaksisataa, ja niistä laajimmalle levinnyt on '
+      + 'lingala, joka syntyi joen kauppakielenä. Maan sydän on Kongojoki '
+      + 'sademetsineen; idässä kohoavat tulivuoret ja suuret järvet '
+      + 'hautavajoaman reunalla, kaakossa levittäytyy kuparivyöhyke. '
+      + 'Joen suulla kukoisti 1300-luvulta alkaen Kongon kuningaskunta, '
+      + 'jonka kuningas Afonso I kirjoitti kirjeitä Lissaboniin, ja '
+      + 'sisämaassa Luban ja Lundan valtakunnat; Luban historia '
+      + 'säilytettiin helmillä peitetyillä muistilaudoilla. Maa on '
+      + 'nimetty joen mukaan, ja joen vanha nimi Zaire tulee kikongon '
+      + 'ilmauksesta nzadi o nzere, joki joka nielee jokia. '
+      + 'Itsenäisyys tuli 1960, ja sen juhlalauluksi jäi Indépendance '
+      + 'Cha Cha — kongolainen rumba, joka pääsi 2021 Unescon '
+      + 'aineettoman kulttuuriperinnön luetteloon.',
     artikkeli: 'Kongon demokraattinen tasavalta on pinta-alaltaan '
       + 'Saharan eteläpuolisen Afrikan suurin valtio — yli '
       + 'kaksikymmentä kertaa Suomen kokoinen. Maan sydän on '
@@ -808,9 +1388,27 @@ export const OMAT_ARTIKKELIT = {
       + 'aavikon suolaa — samoja tavaroita kuin keisarien aikaan.',
   },
   'Sierra Leone': {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // SLE) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla. Faktat: docs/mantereet-tyoaineisto/faktapohja-sierraleone.md.
     intro: 'Sierra Leone on Länsi-Afrikan vehreä rannikkomaa, jonka '
-      + 'pääkaupunki Freetown perustettiin vapautettujen orjien '
-      + 'kodiksi. Nimi tarkoittaa leijonavuorta.',
+      + 'nimen antoivat portugalilaiset purjehtijat 1400-luvulla: '
+      + 'leijonavuoret nousevat merestä heti rannan takaa. Pääkaupunki '
+      + 'Freetown perustettiin 1792 vapautettujen orjien kaupungiksi, ja '
+      + 'seuraavien vuosikymmenten aikana sinne tuotiin tuhansia ihmisiä, '
+      + 'jotka laivasto oli vapauttanut laittomilta orjalaivoilta — '
+      + 'heistä, Nova Scotian uudisasukkaista ja Jamaikan marooneista '
+      + 'syntyi krio-väestö ja krio-kieli, jota nykyään puhuu lähes koko '
+      + 'maa. Suurimmat kansat ovat temnet ja mendet, ja rannikon takana '
+      + 'alkaa Ylä-Guinean sademetsävyöhyke, jonka viimeisiä paloja '
+      + 'suojellaan Golassa ja Tiwain saarella. Sisämaa liitettiin '
+      + 'siirtomaahan protektoraattina 1896, itsenäisyys tuli 27. '
+      + 'huhtikuuta 1961 Milton Margain johdolla ja tasavalta 1971. '
+      + 'Riisi on ateria, jonka päälle tulee kassavanlehti- tai '
+      + 'maapähkinäkastike, ja maan tunnetuin luonnonvara ovat timantit. '
+      + 'Freetownia sanottiin siirtomaa-aikana Afrikan Ateenaksi: sen '
+      + 'Fourah Bay College on Saharan eteläpuolisen Afrikan ensimmäinen '
+      + 'länsimainen yliopisto.',
     artikkeli: 'Sierra Leone sijaitsee Atlantin rannalla Länsi-'
       + 'Afrikassa. Portugalilainen purjehtija nimesi niemen '
       + 'leijonavuoreksi 1400-luvulla — kerrotaan, että ukkonen jylisi '
@@ -869,10 +1467,42 @@ export const OMAT_ARTIKKELIT = {
       + 'tammikuussa tekevät siitä paikan, jonne tullaan muistamaan — '
       + 'ja juhlimaan sitä, että elämä jatkuu.',
   },
+  /*
+   * KANON INTRO KIRJOITETTIIN UUSIKSI 7.9.2026 (Opus, paketti O9)
+   * kaupunkilehden yhteydessä. Vanha versio oli kolme virkettä; uusi
+   * tekstilinjaus (Raamattu, omistaja 20.8.2026) vaatii etusivun
+   * leipätekstiltä 7–10 virkettä ja 1873-kehyksen. Lähteinä
+   * en-Wikipedian "Kano (city)", "Kano Chronicle" ja "Kurmi Market"
+   * 7.9.2026; sama aineisto kuin kaupunkilehdellä
+   * (js/packs/kulttuuri-kategoriat.js, avain kano, sekä
+   * docs/mantereet-tyoaineisto/faktapohja-kano.md).
+   * artikkeli-kenttä on ennallaan (Kapkaupunki-malli 6.9.2026).
+   */
   Kano: {
-    intro: 'Kano on hausakaupunkien kuningatar: tuhatvuotinen '
-      + 'kauppakaupunki, jonka värjäyskuopat, muurit ja basaarit '
-      + 'ovat palvelleet karavaaneja vuosisatojen ajan.',
+    intro: 'Kano on Pohjois-Nigerian suurin kaupunki ja yksi '
+      + 'seitsemästä keskiaikaisesta hausakaupungista. Se tunnettiin '
+      + 'alun perin nimellä **Dala** kukkulan mukaan, jonka juurella '
+      + 'asui jo 600-luvulla rautaa työstänyt yhteisö. Islam saapui '
+      + 'kaupunkiin 1000-luvulla tai aiemmin Saharan-kaupan mukana, '
+      + 'ja sen myötä Kanosta tuli koko alueen kaupan hermokeskus.'
+      + '\n\n'
+      + 'Kaupungin ympärille rakennettiin savimuuri, jonka '
+      + 'perustuksen laski kuningas Gijimasu 1100-luvun alussa, ja '
+      + 'muurissa oli viisitoista porttia. Muhammad Rumfa '
+      + '(1463–1499) laajensi emiirin palatsia ja perusti Kurmin '
+      + 'torin, ja hänen aikanaan Kanon maine Saharan-kaupan '
+      + 'keskuksena oli keskiajalla korkeimmillaan. Heinrich Barth '
+      + 'kutsui kaupunkia 1851 **Keski-Afrikan suurimmaksi '
+      + 'kauppapaikaksi**.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Kano oli **Sokoton kalifaatin '
+      + 'suurin ja vaurain emiirikunta**; viimeinen sultaani oli '
+      + 'kukistettu 1805. Sama vuosi oli kaupungille raskas, sillä '
+      + '1873 on yksi sen nälkävuosista. Kudonta, värjäys ja '
+      + 'nahkatyö kulkivat kauppatavarana Marokkoon ja sieltä '
+      + 'Eurooppaan asti. Britannia liitti kaupungin imperiumiinsa '
+      + '1903, rautatie ylsi Kanoon 1911, ja kaupungin talous nojaa '
+      + 'yhä kauppaan.',
     artikkeli: 'Kano on Pohjois-Nigerian suurin kaupunki ja yksi '
       + 'Länsi-Afrikan vanhimmista: sen historia kauppapaikkana '
       + 'ulottuu yli tuhannen vuoden taakse. Kaupunki oli Saharan '
@@ -936,10 +1566,24 @@ export const OMAT_ARTIKKELIT = {
       + 'vuoren gaselleina.',
   },
   Angola: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // AGO) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Angola on eteläisen Afrikan suuri rannikkovaltio, jonka '
-      + 'historia kulkee Kongon kuningaskunnasta orjakaupan satamien '
-      + 'kautta öljyrikkauteen — ja jonka musiikki tanssittaa koko '
-      + 'maailmaa.',
+      + 'nimi on kuninkaan arvonimi: ngola oli Ndongon hallitsija, ja '
+      + 'portugalilaiset alkoivat kutsua koko seutua sen mukaan. '
+      + 'Rannikko on kuivaa ja etelässä aavikkoa, sisämaa vehreää '
+      + 'ylänköä ja pohjoinen sademetsää, ja niiden välissä maa putoaa '
+      + 'kilometrin alaspäin yhtenä jyrkänteenä. Ndongon ja Matamban '
+      + 'kuningatar Njinga neuvotteli ja soti Portugalia vastaan '
+      + 'neljäkymmentä vuotta 1600-luvulla, ja kuningaskunta kaatui '
+      + 'vasta 1671. Maa oli Portugalin siirtomaa yli neljäsataa vuotta '
+      + 'ja itsenäistyi 1975; sen jälkeen se on rakentanut itseään '
+      + 'öljyn ja timanttien voimin. Idän chokwet veistivät naamiot ja '
+      + 'päällikönistuimet ja piirsivät hiekkaan yhden viivan kuviot, '
+      + 'joita tutkitaan nykyään matematiikkana. Luandasta ovat '
+      + 'lähteneet maailmalle semba, kizomba ja kuduro — ja jo paljon '
+      + 'aiemmin soittojousi, josta tuli Brasilian berimbau.',
     artikkeli: 'Angola levittäytyy Atlantin rannikolta ylängöille: '
       + 'rannikko on kuivaa, sisämaa vehreää savannia ja pohjoisessa '
       + 'sademetsää. Pääkaupunki Luanda on kasvanut lahden ympärille '
@@ -982,9 +1626,27 @@ export const OMAT_ARTIKKELIT = {
       + 'loppuu ja valaat alkavat.',
   },
   'Saint Helena': {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // SHN) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'St. Helena on yksinäinen kalliosaari keskellä eteläistä '
       + 'Atlanttia — purjelaivojen huoltopysäkki, Napoleonin vankila '
-      + 'ja maailman vanhimman kilpikonnan koti.',
+      + 'ja maailman vanhimman kilpikonnan koti. Saari on 16 kilometriä '
+      + 'pitkä ja 8 leveä, se kohoaa merestä lähes 1 900 kilometrin '
+      + 'päässä Angolan rannikosta, ja vuoden 2021 laskennassa siellä '
+      + 'asui 4 439 ihmistä. Portugalilaiset löysivät asumattoman '
+      + 'saaren 1502, ja Itä-Intian kauppakomppania asutti sen 1659 — '
+      + 'siitä lasketaan saaren olevan Britannian toiseksi vanhin '
+      + 'siirtomaa. Neljänsadan vuoden ajan koko elämä pyöri sen '
+      + 'ympärillä, että purjelaivat tarvitsivat matkallaan Aasiaan '
+      + 'vettä ja ruokaa; kun Suezin kanava avattiin 1869, laivat '
+      + 'katosivat pohjoiseen ja saari köyhtyi. Eristys teki '
+      + 'luonnosta ainutlaatuisen: yli viisisataa kotoperäistä lajia '
+      + 'on kolmasosa kaikista Britannian merentakaisten alueiden '
+      + 'kotoperäisistä lajeista, ja saaren kansallislintu tikkuri '
+      + 'elää vain täällä. Lentoasema avattiin 2016 ja ensimmäinen '
+      + 'reittilento laskeutui lokakuussa 2017; sitä ennen ainoa '
+      + 'yhteys oli viiden vuorokauden laivamatka Kapkaupungista.',
     artikkeli: 'St. Helena nousee merestä lähes kahden tuhannen '
       + 'kilometrin päässä Afrikan rannikosta. Portugalilaiset '
       + 'löysivät asumattoman saaren 1502, ja siitä kasvoi '
@@ -1026,11 +1688,11 @@ export const OMAT_ARTIKKELIT = {
   },
   'Kimberley (Etelä-Afrikka)': {
     intro: 'Kimberley on timanttikuumeen synnyttämä kaupunki, jonka '
-      + 'keskellä ammottaa Big Hole — suurin ihmisten käsin kaivama '
-      + 'kuoppa maailmassa.',
+      + 'keskellä ammottaa Big Hole — yksi maailman suurimmista '
+      + 'ihmisten käsin kaivamista kuopista.',
     artikkeli: 'Kimberley syntyi vuonna 1871, kun Colesbergin '
-      + 'kukkulalta löytyi timantteja. Kuukausissa paikalle ryntäsi '
-      + 'kymmeniätuhansia kaivajia, ja kukkula katosi — sen tilalle '
+      + 'kukkulalta löytyi timantteja. Ensimmäisessä kuussa paikalle '
+      + 'ryntäsi tuhansia kaivajia, ja kukkula katosi — sen tilalle '
       + 'syntyi Big Hole, yli kahdensadan metrin syvyinen kuoppa, '
       + 'josta nostettiin lähes kolme tonnia timantteja.'
       + '\n\n== Timanttien kaupunki ==\n'
@@ -1072,9 +1734,27 @@ export const OMAT_ARTIKKELIT = {
       + 'siirtyi etelään — ja juuri siksi vanha saari säilyi.',
   },
   Madagaskar: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // MDG) nojaa tähän introon yksin, sama malli kuin Egyptillä ja Kenialla.
     intro: 'Madagaskar on maailman neljänneksi suurin saari ja oma '
-      + 'maailmansa: sen eläimistä ja kasveista suurin osa ei elä '
-      + 'missään muualla maapallolla.',
+      + 'maailmansa: sen eliölajeista yli yhdeksän kymmenestä ei elä '
+      + 'missään muualla maapallolla. Saari irtosi Afrikasta noin 180 '
+      + 'miljoonaa ja Intian niemimaasta noin 90 miljoonaa vuotta '
+      + 'sitten, ja luonto kehittyi eristyksissä omaan suuntaansa. '
+      + 'Ihmiset tulivat kahdelta suunnalta: ensimmäiset purjehtivat '
+      + 'vastapainokanooteilla Kaakkois-Aasiasta, ja malagassin lähin '
+      + 'sukukieli puhutaan yhä Borneolla noin 7 300 kilometrin '
+      + 'päässä; myöhemmin mantereelta tuli bantukansoja ja niiden '
+      + 'mukana sebu-karja. Ylängöllä syntyi Imerinan kuningaskunta, '
+      + 'joka 1800-luvulla vaihtoi kielensä kirjaimiston latinalaiseen, '
+      + 'perusti kouluja ja kävi diplomatiaa Lontoon ja Pariisin '
+      + 'kanssa, kunnes Ranska teki saaresta siirtomaan; itsenäisyys '
+      + 'tuli 1960. Ruokapöydässä on aina riisi — verbi "syödä ateria" '
+      + 'kuuluu suoraan "syödä riisiä" — ja seurana romazava-liemi, '
+      + 'jonka anamalao-lehdet puuduttavat kielen lievästi. Soittimet '
+      + 'tehdään siitä mitä kasvaa: bambusta valiha, ruo\'osta sodina, '
+      + 'ja pohjoisrannikon salegy juoksee lähes kolmeasataa iskua '
+      + 'minuutissa.',
     artikkeli: 'Madagaskar irtosi mantereista kymmeniä miljoonia '
       + 'vuosia sitten, ja sen luonto kehittyi omaan suuntaansa: '
       + 'lemurit, kameleontit ja baobabit ovat saaren omia. '
@@ -1199,25 +1879,22 @@ export const OMAT_ARTIKKELIT = {
   },
   Suakin: {
     intro: 'Suakin oli Punaisenmeren korallikaupunki: pyhiinvaeltajien '
-      + 'satama, jonka talot sahattiin korallikivestä ja jonka '
+      + 'satama, jonka talot nousivat korallikivestä ja jonka '
       + 'rauniot kertovat mahtavista vuosisadoista.',
     artikkeli: 'Suakin rakennettiin pyöreälle saarelle Punaisenmeren '
       + 'poukamaan. Vuosisatojen ajan se oli Sudanin rannikon '
       + 'tärkein satama: sen kautta purjehtivat pyhiinvaeltajat '
-      + 'Mekkaan ja kauppiaat Intiaan, ja basaarissa vaihtuivat '
-      + 'kahvi, helmet ja kankaat.'
+      + 'Mekkaan ja kauppiaat Intiaan.'
       + '\n\n== Korallista rakennettu ==\n'
-      + 'Suakinin talot ja moskeijat sahattiin korallikivestä, joka '
-      + 'hengitti ja viilensi huoneet. Kun uusi satama rakennettiin '
-      + 'pohjoisemmaksi 1900-luvun alussa, kaupunki hiljeni — ja '
-      + 'korallitalot alkoivat sulaa sateisiin kuin sokeri. Rauniot '
-      + 'ovat silti yhä täynnä kauneutta, ja niitä myös '
-      + 'entisöidään.'
+      + 'Suakinin talot ja moskeijat nousivat korallikivestä, joka '
+      + 'nostettiin lohkareina merenpohjasta. Kun uusi satama '
+      + 'rakennettiin pohjoisemmaksi 1900-luvun alussa, kaupunki '
+      + 'hiljeni — ja hoitamattomat rappaamattomat rakennukset '
+      + 'alkoivat rapautua nopeasti. Rauniot ovat silti yhä täynnä '
+      + 'kauneutta, ja niitä myös entisöidään.'
       + '\n\n== Meren aarteet ==\n'
       + 'Suakinin edustan riutat kuuluvat Punaisenmeren '
-      + 'kirkkaimpiin: korallipuutarhoja, kilpikonnia ja delfiinejä. '
-      + 'Helmenkalastajat sukelsivat täällä vapaasukelluksella, ja '
-      + 'heidän laulunsa tahdittivat työtä kuin airot soutua.',
+      + 'kirkkaimpiin: korallipuutarhoja, kilpikonnia ja delfiinejä.',
   },
   'Ras Hafun': {
     intro: 'Ras Hafun on Afrikan itäisin kärki — niemi, jonka ohi '
@@ -1240,10 +1917,42 @@ export const OMAT_ARTIKKELIT = {
       + 'edustalla meri kuhisee elämää — kylmä kumpuava vesi tekee '
       + 'siitä yhden valtameren kalaisimmista kulmista.',
   },
+  /*
+   * NAIROBIN INTRO LAAJENNETTIIN 6.9.2026 (Opus, paketti O9)
+   * reseptin mittaan: etusivun leipäteksti on 7–10 virkkeen johdatus
+   * kaupunkiin. Lähteinä en-Wikipedian "Nairobi", "History of
+   * Nairobi", "Nairobi National Park" ja "Uganda Railway" 6.9.2026;
+   * sama aineisto kuin kaupunkilehdellä
+   * (js/packs/kulttuuri-kategoriat.js, avain nairobi, sekä
+   * docs/mantereet-tyoaineisto/faktapohja-nairobi.md).
+   * artikkeli-kenttä on ennallaan.
+   *
+   * 1873-KEHYS: Nairobia ei ollut olemassa isoisän matkavuonna, ja
+   * intro sanoo sen suoraan.
+   */
   Nairobi: {
-    intro: 'Nairobi on Itä-Afrikan nuori suurkaupunki, joka syntyi '
-      + 'rautatien varteen ja kasvoi savannin rajalle — kirahvit '
-      + 'laiduntavat pilvenpiirtäjien katseen alla.',
+    intro: 'Nairobi on Kenian pääkaupunki ja Itä-Afrikan tärkein '
+      + 'rahoituskeskus. Se sijaitsee **1 795 metrissä** '
+      + 'merenpinnasta, joten päiväntasaajan kaupungin illat ovat '
+      + 'viileitä ja ilma kirkasta; lempinimi on Green City in the '
+      + 'Sun. Ennen kaupunkia paikka oli suoinen ylängön kohta, jossa '
+      + 'maasait paimensivat karjaansa, akamba-kauppiaat kulkivat ja '
+      + 'kikujut viljelivät yläpuolisia rinteitä.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 täällä ei ollut kaupunkia lainkaan. '
+      + 'Nairobi syntyi Ugandan radan varikkoleiristä, kun juna saapui '
+      + 'paikalle 30. toukokuuta 1899. Kaupunki poltettiin 1900-luvun '
+      + 'alussa ruttoepidemian jälkeen ja rakennettiin uudelleen; '
+      + '1907 siitä tuli protektoraatin pääkaupunki Mombasan tilalle. '
+      + 'Nimi tulee maasain ilmauksesta Enkare Nyirobi, viileiden '
+      + 'vesien paikka.'
+      + '\n\n'
+      + 'Nairobi on lähteen mukaan **maailman ainoa pääkaupunki, '
+      + 'jonka rajojen sisällä on kansallispuisto**. Vuonna 1946 '
+      + 'perustettu puisto on Kenian ensimmäinen, ja sen aidaton '
+      + 'eteläraja aukeaa yhä savannille. Kaupungissa toimivat YK:n '
+      + 'ympäristöohjelma ja YK:n Nairobin toimisto, ja kaduilla '
+      + 'kulkevat maalatut matatut.',
     artikkeli: 'Nairobi syntyi 1899 rautatietyömaan leiriksi '
       + 'ylängölle, jossa maasait juottivat karjaansa viileän veden '
       + 'paikalla — nimi tulee maasain sanoista enkare nyrobi, '
@@ -1264,9 +1973,21 @@ export const OMAT_ARTIKKELIT = {
 
   // --- Loput maat -------------------------------------------------------
   Tunisia: {
+    // Muita pidempi tarkoituksella: Tunisian maalehden osasto nojaa
+    // tähän yksin (sama malli kuin Egyptillä).
     intro: 'Tunisia on Pohjois-Afrikan pienin ja pohjoisin maa — '
       + 'Karthagon perillinen, jonka rannikot ovat aina katsoneet '
-      + 'Välimerelle.',
+      + 'Välimerelle. Rooman aikana provinssi oli valtakunnan '
+      + 'viljakomero: sen sanottiin ruokkineen pääkaupungin kahdeksan '
+      + 'kuukautta vuodesta. Kairouanista käsin arabidynastia '
+      + 'aghlabidit purjehtivat 800-luvulla Sisiliaan, ja 1800-luvulla '
+      + 'maassa lakkautettiin orjuus ja säädettiin arabimaiden '
+      + 'ensimmäinen kirjoitettu perustuslaki. Pohjoinen on vehreää '
+      + 'vuorimaata, keskiosa oliivilakeutta ja etelä Saharan reunaa '
+      + 'suola-aavikkoineen. Ruoka on Pohjois-Afrikan tulisinta: '
+      + 'harissa on maan oma chilitahna ja päätyi Unescon '
+      + 'kulttuuriperintöluetteloon. Gabèsin lahdella vuorovesi nousee '
+      + 'yli kahden metrin, mikä on Välimerellä poikkeuksellista.',
     artikkeli: 'Tunisia työntyy niemenä kohti Sisiliaa: Eurooppaan on '
       + 'merta vain sadanviidenkymmenen kilometrin verran. Pohjoinen '
       + 'on vehreää vuorimaata, keskiosa viljelylakeutta ja etelä '
@@ -1285,9 +2006,22 @@ export const OMAT_ARTIKKELIT = {
       + 'oliiviöljyn tuottajia.',
   },
   Algeria: {
+    // Muita pidempi tarkoituksella: Algerian maalehden osasto nojaa
+    // tähän yksin (sama malli kuin Egyptillä).
     intro: 'Algeria on Afrikan suurin valtio: kapea vehreä rannikko '
       + 'ja sen takana Saharan valtameri, jossa Ahaggarin vuoret '
-      + 'kohoavat tuaregien maana.',
+      + 'kohoavat tuaregien maana. Lähes kaikki algerialaiset asuvat '
+      + 'pohjoisessa, jossa Atlasvuorten rinteet vihertävät ja '
+      + 'Välimeri tuo sateet. Keskiajalla maassa oli oma '
+      + 'imaamivaltionsa, jonka pääkaupunki Tahert veti puoleensa '
+      + 'oppineita, ja 1500-luvulta 1830-luvulle Algerin regenssi oli '
+      + 'Välimeren merivaltoja. Ibn Khaldun kirjoitti '
+      + 'yhteiskuntatieteen klassikon Muqaddimahin algerialaisessa '
+      + 'vuorikylässä, ja 1900-luvulla maasta tuli Albert Camus\'n, '
+      + 'Kateb Yacinen ja Assia Djebarin kirjallinen koti. Oranissa '
+      + 'syntyi raï ja Algerin kasbahissa chaabi, ja kabyylinkielinen '
+      + 'laulu on kulkenut maailman ympäri. Saharan puolella kasvaa '
+      + 'sypressejä, jotka ovat yli kaksituhatta vuotta vanhoja.',
     artikkeli: 'Algeria on pinta-alaltaan Afrikan suurin maa, mutta '
       + 'yhdeksän kymmenesosaa siitä on Saharaa. Lähes kaikki '
       + 'algerialaiset asuvat pohjoisen rannikkokaistalla, jossa '
@@ -1306,9 +2040,25 @@ export const OMAT_ARTIKKELIT = {
       + 'vieraanvaraisuuden laki on sama.',
   },
   Tšad: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // TCD) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Tšad ulottuu Saharan hiekasta savannien vihreyteen, ja '
       + 'sen sydän on matala Tšad-järvi — neljän maan jakama '
-      + 'elämänlähde.',
+      + 'elämänlähde. Maa on Afrikan viidenneksi suurin, noin 1,3 '
+      + 'miljoonaa neliökilometriä, mutta merta siinä ei ole '
+      + 'metriäkään. Väkeä on kaksikymmentä miljoonaa, ja heistä '
+      + '1,6 miljoonaa asuu pääkaupungissa N\'Djamenassa '
+      + 'Charin ja Logonen yhtymäkohdassa. Etnisiä ryhmiä on yli '
+      + 'kaksisataa ja kieliä yli sata; virallisia kieliä on kaksi, '
+      + 'ranska ja arabia. Järven itäpuolella syntyi noin vuonna 700 '
+      + 'Kanemin valtakunta, joka eli Saharan halki kulkevasta '
+      + 'kaupasta ja josta tuli yksi Afrikan pitkäikäisimmistä '
+      + 'valtioista; sen rinnalle nousivat myöhemmin Baguirmin ja '
+      + 'Ouaddain sulttaanikunnat. Ruoka on kaikkialla samaa ja '
+      + 'kaikkialla erilaista: hirssistä muotoiltu pallo, joka '
+      + 'kastetaan kastikkeeseen, ja kalaa joko aurinkokuivattuna tai '
+      + 'savustettuna.',
     artikkeli: 'Tšad on suuri sisämaavaltio, jonka pohjoisosa on '
       + 'Saharan karuinta aavikkoa Tibestin tulivuorineen ja '
       + 'eteläosa viljavaa savannia. Nimensä maa sai järvestä, '
@@ -1326,9 +2076,22 @@ export const OMAT_ARTIKKELIT = {
       + 'toreilla myydään järven kuivattua kalaa ja dihé-leväkakkuja.',
   },
   Kenia: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // KEN) nojaa tähän introon yksin, sama malli kuin Egyptillä.
     intro: 'Kenia on safarien, ylänköjen ja juoksijoiden maa, jonka '
       + 'halki kulkee Suuri hautavajoama ja jonka rannikolla swahili '
-      + 'syntyi.',
+      + 'syntyi. Päiväntasaaja jakaa maan kahtia: pohjoisessa on '
+      + 'aavikkoa ja Turkana-järvi, etelässä teetarhoja ja '
+      + 'lumihuippuinen Mount Kenya. Rannikon kaupungit Mombasa ja '
+      + 'Malindi kävivät kauppaa valtameren yli jo kaksituhatta vuotta '
+      + 'sitten, ja niiden swahilikulttuuri syntyi afrikkalaisen ja '
+      + 'Intian valtameren maailman kohtaamisesta. Sisämaahan '
+      + 'päästiin kunnolla vasta 1900-luvun alussa, kun rautatie '
+      + 'kiskotettiin Mombasasta Viktorianjärvelle — matkan varrelle '
+      + 'nousi Nairobi. Itsenäisyys tuli 1963, ja maan tunnuslauseeksi '
+      + 'otettiin harambee, yhdessä vetäminen. Hautavajoaman '
+      + 'länsireunan ohuessa ilmassa on kasvanut sukupolvi toisensa '
+      + 'jälkeen maailman parhaita kestävyysjuoksijoita.',
     artikkeli: 'Kenia levittäytyy päiväntasaajan molemmin puolin '
       + 'Intian valtamereltä Viktorianjärvelle. Suuri hautavajoama '
       + 'halkoo ylänköä, ja sen laaksoissa ovat sekä flamingojärvet '
@@ -1349,9 +2112,25 @@ export const OMAT_ARTIKKELIT = {
       + 'digitulevaisuutta.',
   },
   Zimbabwe: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // ZWE) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Zimbabwe on kivisten kuningaskuntien maa: Suur-Zimbabwen '
       + 'rauniot antoivat maalle nimen, ja Viktorian putoukset '
-      + 'jylisevät sen luoteisrajalla.',
+      + 'jylisevät sen luoteisrajalla. Sisämaavaltio makaa Sambesin ja '
+      + 'Limpopon välisellä ylängöllä, jonka halki kulkee Suuri juonne, '
+      + 'noin 550 kilometrin mittainen kallioselänne kultaa, '
+      + 'kromia ja platinaa. Kun Suuri Zimbabwe hiljeni, valta siirtyi '
+      + 'pohjoiseen Mutapan kuningaskunnalle, jonka hallitsijan '
+      + 'arvonimestä eurooppalaiset karttapiirtäjät tekivät koko maan '
+      + 'nimen: Monomotapa. Lounaaseen syntyi 1840-luvulla Mzilikazin '
+      + 'ndebelevaltio, ja 1890-luvulla alue joutui brittiläisen '
+      + 'siirtomaayhtiön käsiin; itsenäisyys tuli 1980, ja nimeksi '
+      + 'valittiin jo 1960 valittu Zimbabwe, shonan kivitalot. '
+      + 'Kulttuurin tunnusmerkit ovat mbira, esivanhempien henkiä '
+      + 'kutsuva kielisoitin, ja serpentiinistä veistetty '
+      + 'shona-kivenveisto, joka nousi 1950-luvulta lähtien '
+      + 'maailman museoihin.',
     artikkeli: 'Zimbabwe on sisämaavaltio Zambezin ja Limpopon '
       + 'välissä. Nimi tarkoittaa shonaksi kivitaloja: Suur-'
       + 'Zimbabwen rauniokaupunki, jonka muurit ladottiin ilman '
@@ -1370,9 +2149,26 @@ export const OMAT_ARTIKKELIT = {
       + 'ja Zambezin virrassa — Nyaminyami, joen henki.',
   },
   Sudan: {
-    intro: 'Sudan on Niilin ja aavikon maa, jossa on enemmän '
-      + 'pyramideja kuin Egyptissä — Nubian mustien faaraoiden '
-      + 'perintö.',
+    intro: 'Sudan on Niilin ja aavikon maa: Valkoinen ja Sininen Niili '
+      + 'yhtyvät Khartumin kohdalla paikassa, jota sanotaan '
+      + 'al-Mograniksi. Aavikon alla kulkee kuivunut jokiuoma Wadi '
+      + 'Howar, joka oli yhdeksäntuhatta vuotta sitten Niilin sivujoki '
+      + 'ja jonka varrella laidunsi karjaa. Ukkospilvien alta nousevat '
+      + 'haboobit, hiekkaseinät, jotka voivat olla kahden kilometrin '
+      + 'korkuisia ja edetä seitsemänkymmentä kilometriä tunnissa. '
+      + 'Punaisenmeren puolella on erillinen korallirakennelma Sanganeb '
+      + 'ja Dungonabin lahti, maailmanperintökohde vuodesta 2016.'
+      + '\n\n'
+      + '**Niilin varrella oli valtakuntia ennen Egyptiä ja sen '
+      + 'jälkeen: Kerma, Napata, Meroë ja kristilliset Nubian '
+      + 'kuningaskunnat.** Meroën kuningattarilla oli oma arvonimensä '
+      + 'kandake, ja valtakunnalla oma kirjoituksensa, jonka merkit '
+      + 'osataan lukea mutta kieltä ei ymmärretä. Vuonna 652 solmittu '
+      + 'baqt-sopimus piti rauhan Nubian ja Egyptin välillä lähes '
+      + 'seitsemänsataa vuotta. Itäisessä autiomaassa liikkuu yhä '
+      + 'beja-kansa, jonka esi-isät egyptiläiset tunsivat nimellä '
+      + 'medjay. Maailman arabikumista noin seitsemänkymmentä '
+      + 'prosenttia kerätään Sudanin akasioista.',
     artikkeli: 'Sudan levittäytyy Saharan itäosasta Niilin varsille. '
       + 'Sininen ja Valkoinen Niili yhtyvät pääkaupunki Khartumissa, '
       + 'ja joen vihreä nauha halkoo aavikkoa kuten Egyptissäkin.'
@@ -1390,9 +2186,26 @@ export const OMAT_ARTIKKELIT = {
       + 'yhä keskeneräinen unelma.',
   },
   'Etelä-Sudan': {
-    intro: 'Etelä-Sudan on maailman nuorin valtio (2011): Suddin '
-      + 'kaislameren, dinkojen karjaleirien ja suurten '
-      + 'antilooppivaellusten maa.',
+    intro: 'Etelä-Sudan on maailman nuorin valtio: itsenäisyys tuli 9. '
+      + 'heinäkuuta 2011, ja YK:n 193. jäsen siitä tuli viisi päivää '
+      + 'myöhemmin. Maan sydän on Sudd, valtava kaislikko, johon '
+      + 'Valkoinen Niili hajoaa ja joka pysäytti vuosisatojen ajan '
+      + 'jokea ylöspäin pyrkineet. Kieliä on yli kuusikymmentä, mutta '
+      + 'yleisin puhuttu on juba-arabia, 1800-luvun varuskunnissa '
+      + 'syntynyt sekakieli; virallinen kieli on englanti. Karja on '
+      + 'monelle kansalle varallisuutta ja runoutta: nuerien pojat '
+      + 'saavat nimensä lempihärältään ja tytöt lypsämältään lehmältä.'
+      + '\n\n'
+      + '**Valkoisen Niilin länsirannalla oli oma kuningaskuntansa '
+      + 'kauan ennen karttoja: shillukien valtakunnan perusti '
+      + 'perimätiedon mukaan Nyikang 1400-luvulla, ja kuninkaan '
+      + 'terveyden ajateltiin olevan sama asia kuin kansan '
+      + 'hyvinvointi.** Sen pääkaupungissa Fashodassa kohtasivat 1898 '
+      + 'ranskalainen ja brittiläinen retkikunta, ja kriisi ratkesi '
+      + 'ilman laukausta. Lounaassa azandeilla on oma valtakuntansa '
+      + 'perinne, kuuluisat monteräiset heittoveitset ja Ture-veijarin '
+      + 'tarinat. Boman ja Bandingilon puistojen välillä kulkee '
+      + 'maailman suurin vuotuinen eläinvaellus.',
     artikkeli: 'Etelä-Sudan itsenäistyi vuonna 2011 pitkien sotien '
       + 'jälkeen — se on maailman nuorin valtio. Maata hallitsevat '
       + 'vedet: Valkoinen Niili ja sen sivujoet hajoavat Suddiksi, '
@@ -1410,9 +2223,29 @@ export const OMAT_ARTIKKELIT = {
       + 'ihmisten mukana.',
   },
   Somalia: {
+    // Pidennetty maalehden (MAA_KATEGORIAT.SOM) yhteydessä 7.9.2026:
+    // maalehden etusivun maaosasto näyttää tämän intron sellaisenaan,
+    // joten sen pitää kantaa yksin. Sama malli kuin Egyptillä.
     intro: 'Somalia on Afrikan sarven kärki: runoilijoiden, '
       + 'paimentolaisten ja merenkulkijoiden maa, jonka rannikko on '
-      + 'mantereen pisin.',
+      + 'mantereen pisin. Sisämaa on kuivaa ylänköä ja pensasaroa, '
+      + 'jossa kamelipaimenet liikkuvat laumojensa perässä — noin '
+      + 'kahdeksan kymmenestä somalialaisesta elää karjatalouden '
+      + 'varassa, ja Somaliassa ja Keniassa lypsetään yhdessä kaksi '
+      + 'kolmasosaa maailman kamelinmaidosta. Rannikon satamat ovat '
+      + 'olleet kaupan solmuja tuhansia vuosia: Zeilasta ja '
+      + 'Mogadishusta vietiin suitsuketta, kultaa ja hienoa kangasta '
+      + 'Egyptiin ja Syyriaan asti, ja Ibn Battuta kuvasi 1331 '
+      + 'Mogadishun tavattoman suureksi kaupungiksi, jossa vieras '
+      + 'majoitettiin kotiin. Runous on kansallistaito: alkusointu '
+      + 'kulkee koko runon läpi, parhaat runoilijat tunnetaan nimeltä, '
+      + 'ja oma latinalainen kirjaimisto saatiin vasta vuonna 1972. '
+      + 'Aamu alkaa ohuella canjeero-leivällä ja kardemummalla '
+      + 'maustetulla teellä, ja lounaslautasella voi olla sekä riisiä '
+      + 'että italialaisten jättämää spagettia. Rannikon edustalla '
+      + 'kulkee Somalian virta, maailman ainoa suuri kumpuamisalue '
+      + 'valtameren länsireunalla, ja se kääntyy monsuunin mukana '
+      + 'kahdesti vuodessa.',
     artikkeli: 'Somalia kaartuu Afrikan sarvena Intian valtamereen — '
       + 'sen rannikko on Afrikan pisin. Sisämaa on kuivaa ylänköä, '
       + 'jossa kamelipaimenet vaeltavat laumojensa kanssa; '
@@ -1432,9 +2265,27 @@ export const OMAT_ARTIKKELIT = {
       + 'kansa on nyt maailmalla.',
   },
   Kamerun: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // CMR) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Kamerunia kutsutaan Afrikaksi pienoiskoossa: yhdessä '
       + 'maassa on sademetsää, savannia, vuoria ja rannikkoa — ja '
-      + 'yli kaksisataa kieltä.',
+      + 'yli kaksisataa kieltä. Nimi on portugalilaisten antama: he '
+      + 'kastoivat Wouri-joen 1400-luvulla nimellä Rio dos Camarões, '
+      + 'katkarapujen joki. Pohjoisessa Tšad-järven suunnalla eli jo '
+      + 'kaksituhatta vuotta sitten Sao-sivilisaatio, jonka '
+      + 'muurikaupungeista kotokot polveutuvat, ja Mandaran vuorille '
+      + 'nousi 1500-luvun kynnyksellä oma kuningaskuntansa. Läntisillä '
+      + 'ruohikkomailla bamilekejen ja tikarien fonit hallitsevat yhä '
+      + 'chefferieitään, joissa helmitetty naamio, veistetty pilari ja '
+      + 'katonharjan piikkien määrä kertovat kunkin arvon. Ensimmäisen '
+      + 'maailmansodan jälkeen Saksan siirtomaa jaettiin Ranskan ja '
+      + 'Britannian kesken, ja vuoden 1961 kansanäänestys liitti '
+      + 'englanninkielisen etelän ranskankieliseen Kameruniin — siksi '
+      + 'maalla on kaksi eurooppalaista virallista kieltä. Ruoka '
+      + 'survotaan ja keitetään kärsivällisesti, musiikki syntyi '
+      + 'Doualan satamassa ja Yaoundén ylängöllä, ja jalkapallon '
+      + 'maailma oppi maan nimen kesällä 1990.',
     artikkeli: 'Kamerun ulottuu Guineanlahden rannalta Tšad-järvelle: '
       + 'etelässä sademetsää, keskellä ylänköä, pohjoisessa kuivaa '
       + 'savannia. Nimi tulee portugalin katkaravuista — '
@@ -1454,9 +2305,23 @@ export const OMAT_ARTIKKELIT = {
       + 'Kamerunvuori savuaa merellä taustalla.',
   },
   Liberia: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // LBR) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla.
     intro: 'Liberia on Afrikan vanhin tasavalta: vapautettujen '
       + 'orjien 1847 perustama valtio, jonka nimi tarkoittaa '
-      + 'vapauden maata.',
+      + 'vapauden maata. Eurooppalaiset tunsivat rannikon '
+      + 'pippurirannikkona, koska sieltä ostettiin paratiisinjyviä, '
+      + 'ja sisämaassa alkaa Ylä-Guinean sademetsävyöhyke. Maassa '
+      + 'puhutaan yli kahtakymmentä kieltä, ja vai-kansa kehitti '
+      + 'omalleen 1830-luvulla tavukirjaimiston, jota käytetään yhä. '
+      + 'Kru-merimiehet purjehtivat vuosisatoja koko Länsi-Afrikan '
+      + 'rannikkoa ja toivat mukanaan kitaran, josta kasvoi '
+      + 'palmuviinimusiikki ja sen jälkeen highlife. Riisi on ateria '
+      + 'ja kaikki muu sen päälle kaadettavaa, ja kahvilaji Coffea '
+      + 'liberica sai nimensä täältä. Lipussa on yksitoista raitaa ja '
+      + 'yksi valkoinen tähti, ja sen alla purjehtii maailman '
+      + 'toiseksi suurin kauppalaivasto.',
     artikkeli: 'Liberia sijaitsee Länsi-Afrikan rannikolla '
       + 'sademetsävyöhykkeellä. Yhdysvalloista palanneet vapautetut '
       + 'orjat perustivat sen tasavallaksi 1847 — Afrikan '
@@ -1478,9 +2343,28 @@ export const OMAT_ARTIKKELIT = {
       + 'Weah.',
   },
   Mosambik: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // MOZ) nojaa tähän introon yksin, sama malli kuin Angolalla ja
+    // Namibialla.
     intro: 'Mosambik on Intian valtameren pitkä rannikkomaa: '
       + 'dhow-purjeiden, marrabentan ja korallisaarten valtio, '
-      + 'jonka nimi tuli pieneltä saarelta.',
+      + 'jonka nimi tuli pieneltä saarelta. Rantaviiva kaartuu yli '
+      + 'kahden ja puolen tuhannen kilometrin matkan, sisämaassa '
+      + 'Sambesi virtaa maan halki, ja pohjoisessa savannista nousee '
+      + 'yksittäisvuoria, joiden huipuilla kasvaa sademetsää — Mabun '
+      + 'metsä löytyi tieteelle vasta Google Earthin satelliittikuvasta. '
+      + 'Sambesin laaksoa hallitsivat vuosisatoja prazot, kruunulta '
+      + 'vuokratut jättitilat, jotka periytyivät tyttäreltä tyttärelle, '
+      + 'ja Baruen kuningaskunta piti puolensa vuoteen 1902; '
+      + '1890-luvulta alkaen suurta osaa maasta hallitsivat '
+      + 'toimiluvan saaneet osakeyhtiöt, joilla oli oma pankki, oma '
+      + 'raha ja omat postimerkit. Portugalin siirtomaavalta päättyi '
+      + '1975. Chopien timbila-ksylofoniorkesterit Inhambanessa ja '
+      + 'makondeveistäjien mustapuuhahmot pohjoisessa ovat maan '
+      + 'tunnetuinta taidetta, ja Maputon esikaupungeista lähti '
+      + 'marrabenta. Lautasella on maissipuuro xima, huhmaressa '
+      + 'jauhetuista maniokinlehdistä keitetty matapa ja Intian '
+      + 'valtameren kaupan tuoma kookos ja curry.',
     artikkeli: 'Mosambikin rantaviiva kaartuu yli kahden ja puolen '
       + 'tuhannen kilometrin matkan — valkoisia rantoja, '
       + 'mangrovea ja korallisaaria. Sisämaassa Zambezi virtaa '
@@ -1500,9 +2384,25 @@ export const OMAT_ARTIKKELIT = {
       + 'monsuunin ja musiikin tahtia.',
   },
   Namibia: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // NAM) nojaa tähän introon yksin, sama malli kuin Egyptillä.
     intro: 'Namibia on avaruuden ja hiljaisuuden maa: maailman '
-      + 'vanhin aavikko, tähtitaivas ja vain kolme miljoonaa '
-      + 'asukasta Suomen puolentoista kokoisella alueella.',
+      + 'vanhin aavikko, tähtitaivas ja kolme miljoonaa asukasta '
+      + 'alueella, joka on runsaat kaksi kertaa Suomen kokoinen. '
+      + 'Väljemmin asuttu maa on vain Mongolia. Nimi tulee Namibin '
+      + 'aavikosta, ja khoikielinen sana tarkoittaa avaraa paikkaa: '
+      + 'aavikko seuraa koko rannikkoa, ja sisämaan ylängöt jatkuvat '
+      + 'idässä Kalahariin. Sadetta tulee vähemmän kuin missään muualla '
+      + 'Saharan eteläpuolisessa Afrikassa, joten rannikon elämä juo '
+      + 'kylmän Benguelanvirran nostattamaa sumua ja sisämaa '
+      + 'pohjavettä. Sanit, damarat, namat, hererot ja ovambot '
+      + 'asuttivat maata kauan ennen siirtomaakautta; Saksan ja '
+      + 'Etelä-Afrikan hallinnon jälkeen maa itsenäistyi 21. '
+      + 'maaliskuuta 1990 yhtenä Afrikan viimeisistä. Elanto tulee '
+      + 'karjasta, kaivoksista ja matkailusta — uraanissa Namibia on '
+      + 'ollut maailman neljänneksi suurin tuottaja — ja '
+      + 'luonnonsuojelu kirjattiin perustuslakiin, mikä on maailmassa '
+      + 'harvinaista.',
     artikkeli: 'Namibia on yksi maailman harvimmin asutuista maista: '
       + 'Namibin aavikko seuraa koko rannikkoa, ja sisämaan ylängöt '
       + 'jatkuvat Kalahariin. Nimi tulee aavikosta — namaksi '
@@ -1521,8 +2421,21 @@ export const OMAT_ARTIKKELIT = {
       + 'yötaivas on niin pimeä, että Linnunrata valaisee polun.',
   },
   Uganda: {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // UGA) nojaa tähän introon yksin, sama malli kuin Egyptillä.
     intro: 'Uganda on Afrikan helmi: Viktorianjärven, Niilin '
-      + 'lähteiden ja vuorigorillojen vehreä maa päiväntasaajalla.',
+      + 'lähteiden ja vuorigorillojen vehreä maa päiväntasaajalla. '
+      + 'Maa on ylänköä, jossa sataa kaksi kertaa vuodessa, joten '
+      + 'banaanitarha ja teepensas kasvavat samassa maisemassa. Ennen '
+      + 'nykyistä valtiota alueella oli kuningaskuntia — Buganda, '
+      + 'Bunyoro, Busoga ja Toro — ja koko maa sai nimensä niistä '
+      + 'suurimman swahilinkielisestä muodosta. Pääkaupunki Kampala '
+      + 'levittäytyy kukkuloille järven pohjoisrannalla, ja Jinjassa '
+      + 'Niili lähtee matkalleen kohti Välimerta. Ruokapöydässä ovat '
+      + 'höyryssä survottu matoke, maapähkinäkastike ja kadulta '
+      + 'ostettu rolex eli chapatiin kääritty munakas. Soittimet '
+      + 'tehdään siitä mitä kasvaa: kurpitsatorvista, kaarevasta '
+      + 'oksasta ja lehmännahasta.',
     artikkeli: 'Uganda lepää ylängöllä Viktorianjärven '
       + 'luoteisrannalla. Maa on vehreä kuin puutarha: kaksi '
       + 'sadekautta vuodessa, banaanitarhoja ja teepensaita — '

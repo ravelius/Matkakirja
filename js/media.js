@@ -1,3 +1,11 @@
+import { SAAPUMISPUHEET } from './packs/saapumispuheet.js';
+
+/** Yhtenäinen saapumisotto; ei käynnistä soittoa eikä korvaa matkakirjan luentaa. */
+export function haeSaapumispuhe(kaupunki) {
+  const id = typeof kaupunki === 'string' ? kaupunki : kaupunki?.id;
+  return Object.hasOwn(SAAPUMISPUHEET, id) ? SAAPUMISPUHEET[id] : null;
+}
+
 // Peili: pelin kaikista repon ulkopuolelta ladattavista kuvista ja
 // äänistä on oma kopio yhdessä paikassa (ämpäri, ks. R2_JUURI alla).
 // Peli hakee aineiston ensisijaisesti sieltä, jottei yksi kaatunut
@@ -28,7 +36,8 @@
  * yhä varareitiksi, jos ämpäri ei vastaa.
  *
  * Ämpärillä on CORS-sääntö, joka sallii GETin osoitteesta
- * https://ravelius.github.io. Sitä tarvitaan kahteen kohtaan:
+ * https://ravelius.github.io (6.9.2026 alkaen https://matkakirja.app).
+ * Sitä tarvitaan kahteen kohtaan:
  * js/sound.js loadRealSamples hakee tehosteet fetchillä ja purkaa ne
  * decodeAudioDatalla, ja sw.js noutaa kuvat omaan pitkäikäiseen
  * koriinsa mode: 'cors' -pyynnöllä. Tavallinen <audio>- ja
@@ -36,7 +45,10 @@
  * yhden tiedoston versio levyltä — peli toimii silti: nuo kaksi kohtaa
  * putoavat alkuperäiseen lähteeseen.
  */
-const R2_JUURI = 'https://pub-7bc0ed2083a74a68bd7115618bca4709.r2.dev/';
+// Oma verkkotunnus 6.9.2026 (omistaja osti matkakirja.app:n; R2:n
+// pub-*.r2.dev-osoite rajoitti pyyntötahtia ja vastasi 429:llä).
+// Liitetty ämpäriin .github/workflows/r2-verkkotunnus.yml:llä.
+const R2_JUURI = 'https://media.matkakirja.app/';
 export const PEILI_JUURI = R2_JUURI;
 export const AANI_JUURI = R2_JUURI;
 
@@ -54,8 +66,15 @@ export const AANI_JUURI = R2_JUURI;
  * Jälkimmäinen syntyi siitä, että sw.js esilatasi joka asennuksessa 420
  * äänitiedostoa, yhteensä noin 200 megatavua — ja niistä 195 Mt oli
  * luentoja, joista yksittäinen pelaaja kuulee murto-osan. Nyt esiladataan
- * vain ydinsetti (alla) ja loput haetaan ämpäristä sitä mukaa kuin niitä
- * kuunnellaan. Vienti: .github/workflows/vie-aanet.yml.
+ * vain pieni ydinsetti (tehosteet ja huudahdukset, sw.js) ja loput
+ * haetaan ämpäristä sitä mukaa kuin niitä kuunnellaan.
+ *
+ * EI ÄÄNITIEDOSTOJA REPOSSA (omistajan linjaus 11.9.2026): assets/audio
+ * ei ole enää versionhallinnassa, vaan ämpäri on äänitteiden ainoa
+ * varasto. Generointityökalut kirjoittavat paikalliseen assets/audio-
+ * kansioon (.gitignore) ja Actions-ajo vie tuotoksen suoraan ämpäriin.
+ * Siksi repon polku EI ole enää varareitti: polkua ei yksinkertaisesti
+ * ole olemassa julkaistussa pelissä.
  *
  * OFFLINE-PELAUS EI OLE TAVOITE (omistajan linjaus 16.8.2026):
  * verkkoyhteyden saa olettaa, ja välimuisti on nopeutta varten.
@@ -63,19 +82,83 @@ export const AANI_JUURI = R2_JUURI;
 const AANI_ALIPOLKU = 'audio/';
 
 /*
- * YDINSETTI: esiladataan asennuksessa ja soitetaan repon omasta polusta.
+ * HYVÄKSYTYT VERSIONOIDUT HORATIO-LUENNAT (13.9.2026).
  *
- * Nämä kaksi lajia ovat pelin nopeimmat äänet: tehoste kuuluu samalla
- * hetkellä kun sormi osuu laattaan, ja huudahdus samalla hetkellä kun
- * aarre paljastuu. Verkkohaku ehtisi juuri ja juuri myöhästyä, ja
- * myöhästynyt tehoste on pahempi kuin ei tehostetta lainkaan. Yhteensä
- * ne ovat 39 tiedostoa ja noin 1,3 Mt, eli asennus pysyy kevyenä.
+ * Polku ja todellinen kesto ovat valmistuneista tuotantokuiteista.
+ * Kesto pidetään samassa lukitussa rivissä URL:n kanssa, jotta QA ja
+ * ajoitus eivät voi vahingossa viitata eri tuotantoversioihin.
  *
- * Ydinsetti EI kulje ämpärin kautta lainkaan — muuten sw.js:n
- * esilataama kopio jäisi käyttämättä, koska peli pyytäisi eri osoitetta.
- * Nämä tiedostot jäävät siis repoon myös silloin, kun loput poistetaan.
+ * 14.9.2026: 40 kaupunkia osoittaa Horatio–Livia-Eurooppa-paketin uusiin
+ * luentoihin (lähde codex/europe-audio-20260914-r2, neljä erää; kuitit
+ * horatio-9c5b6e4dd75608cdbe8e, -91c7e2c997078439dee1, -623e51c1cd57ec159a43
+ * ja -1c804d7ab293dc259dae). Kuitin `objectKeys.live` on null ja
+ * `promotionStatus` on "pending-code-deploy": työnkulussa ei ole erillistä
+ * julkaisutoimintoa, vaan JULKAISU ON TÄMÄ TAULUKKO. Versionoitu polku on
+ * itsessään välimuistimurtaja, joten UUSITUT_AANET-kyselyversiota ei nosteta.
+ *
+ * VIISI KAUPUNKIA ODOTTAA ERÄN 5 AJOA: sisilia, islanti, alpit, lappi ja
+ * tromssa jäivät äänittämättä ElevenLabsin kiintiön loputtua, joten niiden
+ * rivit — ja js/packs/fokusvirta-*.js:ssä niiden teksti — pysyvät 13.9.2026
+ * asussa. Teksti ja ääni on pidettävä samassa polvessa, tai ankkurit osuisivat
+ * eri lauseeseen. Ks. js/livia-pilotti-cuet.js ERA5_ODOTTAVAT_KAUPUNGIT.
  */
-const YDINAANI = /^(?:efekti|huudahdus)-/;
+export const HORATIO_TUOTANTO = Object.freeze({
+  'puhe-fokus-matkakirja-alpit.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-1d5aa6a08222250d94c8/puhe-fokus-matkakirja-alpit.mp3', kesto: 24.346 }),
+  'puhe-fokus-matkakirja-amsterdam.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-amsterdam.mp3', kesto: 23.876 }),
+  'puhe-fokus-matkakirja-ateena.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-ateena.mp3', kesto: 30.929 }),
+  'puhe-fokus-matkakirja-barcelona.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-barcelona.mp3', kesto: 22.047 }),
+  'puhe-fokus-matkakirja-bergen.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-bergen.mp3', kesto: 23.406 }),
+  'puhe-fokus-matkakirja-berliini.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-berliini.mp3', kesto: 19.958 }),
+  'puhe-fokus-matkakirja-budapest.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-budapest.mp3', kesto: 22.674 }),
+  'puhe-fokus-matkakirja-bukarest.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-bukarest.mp3', kesto: 23.719 }),
+  'puhe-fokus-matkakirja-dublin.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-dublin.mp3', kesto: 22.753 }),
+  'puhe-fokus-matkakirja-dubrovnik.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-dubrovnik.mp3', kesto: 25.078 }),
+  'puhe-fokus-matkakirja-edinburgh.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-edinburgh.mp3', kesto: 22.361 }),
+  'puhe-fokus-matkakirja-firenze.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-firenze.mp3', kesto: 23.327 }),
+  'puhe-fokus-matkakirja-granada.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-granada.mp3', kesto: 22.282 }),
+  'puhe-fokus-matkakirja-helsinki.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-helsinki.mp3', kesto: 23.876 }),
+  'puhe-fokus-matkakirja-islanti.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-1d5aa6a08222250d94c8/puhe-fokus-matkakirja-islanti.mp3', kesto: 18.051 }),
+  'puhe-fokus-matkakirja-istanbul.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-istanbul.mp3', kesto: 21.081 }),
+  'puhe-fokus-matkakirja-kiova.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-kiova.mp3', kesto: 19.226 }),
+  'puhe-fokus-matkakirja-kobenhavn.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-kobenhavn.mp3', kesto: 24.921 }),
+  'puhe-fokus-matkakirja-krakova.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-krakova.mp3', kesto: 21.002 }),
+  'puhe-fokus-matkakirja-kreeta.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-kreeta.mp3', kesto: 17.868 }),
+  'puhe-fokus-matkakirja-lappi.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-8270eb898650a10b5b52/puhe-fokus-matkakirja-lappi.mp3', kesto: 22.753 }),
+  'puhe-fokus-matkakirja-lissabon.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-lissabon.mp3', kesto: 22.282 }),
+  'puhe-fokus-matkakirja-lontoo.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-lontoo.mp3', kesto: 31.948 }),
+  'puhe-fokus-matkakirja-madrid.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-madrid.mp3', kesto: 24.921 }),
+  'puhe-fokus-matkakirja-marseille.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-marseille.mp3', kesto: 22.518 }),
+  'puhe-fokus-matkakirja-moskova.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-moskova.mp3', kesto: 25.469 }),
+  'puhe-fokus-matkakirja-odessa.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-odessa.mp3', kesto: 17.868 }),
+  'puhe-fokus-matkakirja-oslo.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-oslo.mp3', kesto: 20.036 }),
+  'puhe-fokus-matkakirja-pariisi.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-pariisi.mp3', kesto: 30.354 }),
+  'puhe-fokus-matkakirja-pietari.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-pietari.mp3', kesto: 18.129 }),
+  'puhe-fokus-matkakirja-praha.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-praha.mp3', kesto: 22.988 }),
+  'puhe-fokus-matkakirja-riika.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-riika.mp3', kesto: 23.719 }),
+  'puhe-fokus-matkakirja-rooma.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-rooma.mp3', kesto: 20.846 }),
+  'puhe-fokus-matkakirja-sarajevo.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-sarajevo.mp3', kesto: 20.036 }),
+  'puhe-fokus-matkakirja-sevilla.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-sevilla.mp3', kesto: 24.529 }),
+  'puhe-fokus-matkakirja-sisilia.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-1d5aa6a08222250d94c8/puhe-fokus-matkakirja-sisilia.mp3', kesto: 25.234 }),
+  'puhe-fokus-matkakirja-sofia.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-sofia.mp3', kesto: 18.599 }),
+  'puhe-fokus-matkakirja-tallinna.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-tallinna.mp3', kesto: 20.036 }),
+  'puhe-fokus-matkakirja-tampere.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-tampere.mp3', kesto: 24.451 }),
+  'puhe-fokus-matkakirja-tromssa.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-8270eb898650a10b5b52/puhe-fokus-matkakirja-tromssa.mp3', kesto: 22.439 }),
+  'puhe-fokus-matkakirja-tukholma.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-tukholma.mp3', kesto: 19.487 }),
+  'puhe-fokus-matkakirja-varsova.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-varsova.mp3', kesto: 31.556 }),
+  'puhe-fokus-matkakirja-venetsia.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-venetsia.mp3', kesto: 23.327 }),
+  'puhe-fokus-matkakirja-vilna.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-vilna.mp3', kesto: 22.282 }),
+  'puhe-fokus-matkakirja-wien.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-wien.mp3', kesto: 24.529 }),
+});
+
+export const VERSIOIDUT_HORATIO_AANET = Object.freeze(Object.fromEntries(
+  Object.entries(HORATIO_TUOTANTO).map(([nimi, tieto]) => [nimi, tieto.polku]),
+));
+
+/** Valmistuneesta kuitista mitattu kesto sekunteina, tai null. */
+export function horatioAanenKesto(polku) {
+  const nimi = omaAaniPolku(polku) ?? String(polku ?? '').split('/').at(-1)?.split(/[?#]/)[0];
+  return HORATIO_TUOTANTO[nimi]?.kesto ?? null;
+}
 
 /**
  * Repon oman äänitiedoston nimi polusta, tai null jos polku ei osoita
@@ -93,23 +176,64 @@ export function omaAaniPolku(polku) {
 }
 
 /**
- * Repon oman äänitiedoston osoite: ämpäri ensin, repon polku varalla.
+ * Repon oman äänitteen soitto-osoite: AINA ämpäristä.
  *
  * TÄMÄ ON PELIN AINOA PAIKKA, jossa assets/audio-polusta tehdään
- * soitettava osoite. Kutsuja säilyttää alkuperäisen polun ja siirtyy
- * siihen, jos ämpäri pettää (onPeilista + peiliPetti('aanet') kuten
- * äänimaisemilla) — varareitti toimii niin kauan kuin tiedosto on vielä
- * repossa.
+ * soitettava osoite. Polku `assets/audio/x.mp3` on enää TUNNISTE, ei
+ * tiedoston sijainti: mp3:t eivät ole repossa (linjaus 11.9.2026),
+ * joten varareittiä repon polkuun ei ole eikä peilin katkaisija
+ * (peiliKaytossa/peiliPetti) koske tähän — sammutettu peili palauttaisi
+ * osoitteen, jossa ei ole mitään.
  *
- * Ydinsetti ja katkaisijan sammuttama peili palauttavat polun
- * sellaisenaan, jolloin tiedosto tulee pelin omasta välimuistista.
+ * Myös tehosteet ja huudahdukset kulkevat tätä kautta: niiden nopeus
+ * hoidetaan sw.js:n esilatauksella ämpärin osoitteista, ei erillisellä
+ * repon kopiolla (vanha ydinsetti-poikkeus kumottu 11.9.2026).
  */
 export function aaniUrl(polku) {
   const nimi = omaAaniPolku(polku);
-  if (!nimi || YDINAANI.test(nimi)) return polku;
-  if (!peiliKaytossa('aanet')) return polku;
+  if (!nimi) return polku;
+  const versioituPolku = VERSIOIDUT_HORATIO_AANET[nimi];
+  if (versioituPolku) return `${AANI_JUURI}${versioituPolku}`;
   const versio = UUSITUT_AANET[nimi];
   return `${AANI_JUURI}${AANI_ALIPOLKU}${nimi}${versio ? `?v=${versio}` : ''}`;
+}
+
+/*
+ * MUSIIKKIPALETIN MOOTTORIPÄÄTE — YKSI KYTKIN NELJÄLLE POLULLE
+ *
+ * Omistajan linjaus 5.9.2026 illalla, sanatarkasti: *"kaikki musiikki
+ * lyrialla"*. Siirtymä- ja linssiraidat vaihtuivat Lyria 3.5:een jo
+ * aiemmin samana päivänä; paletti (pohjavire, visamusiikki, kaksi
+ * aarreaihetta) generoidaan Lyrialla omalla päätteellä `-lyria`, jottei
+ * vanhoja ElevenLabs-raitoja ylikirjoiteta ennen kuin uudet on kuultu
+ * (tools/generoi-musiikki.mjs, tools/lyria.mjs `raidanTiedosto`).
+ *
+ * NELJÄ SOITTOKOHTAA, YKSI VAKIO. Pohjavire (js/ambience-stream.js),
+ * visamusiikki (js/aani-ehdokkaat.js), kaksi aarreaihetta (js/ui.js) ja
+ * työhuoneen kuuntelulehti (js/tyohuone-musiikki.js) rakentavat polkunsa
+ * kaikki `musaPolku`-apurilla. Vaihto on siis yhden merkkijonon vaihto
+ * eikä neljän tiedoston etsintä — ja paluu vanhaan yhtä helppo.
+ *
+ * KÄÄNNÄ NÄIN: kun .github/workflows/generoi-musiikki.yml on ajettu
+ * moottorilla `lyria` ja raidat vastaavat ämpäristä (HTTP 200
+ * osoitteista `<ämpäri>audio/musa-pohja-lyria.mp3`,
+ * `…/musa-visa-2-lyria.mp3`, `…/musa-aarre-lyria.mp3` ja
+ * `…/musa-paaaarre-lyria.mp3` — generoi-musiikki.yml vie ne ämpäriin
+ * heti ajossa, joten PR:ää ei tarvitse odottaa), vaihda arvoksi
+ * '-lyria'.
+ * Ennen sitä arvo on '' ja vanhat raidat soivat: puuttuva tiedosto
+ * hiljentäisi paletin, ja hiljainen peli näyttää rikkinäiseltä.
+ */
+export const MUSIIKIN_PAATE = '-lyria';
+
+/**
+ * Musiikkipaletin raidan polku repossa: `musaPolku('musa-pohja')` →
+ * `assets/audio/musa-pohja.mp3` (tai `-lyria`, ks. MUSIIKIN_PAATE).
+ * Soitto-osoite lasketaan tästä `aaniUrl`/`aaniOsoite`-funktiolla,
+ * eli ämpärin `audio/`-kansiosta.
+ */
+export function musaPolku(nimi) {
+  return `assets/audio/${nimi}${MUSIIKIN_PAATE}.mp3`;
 }
 
 /*
@@ -117,15 +241,70 @@ export function aaniUrl(polku) {
  * r2.dev-reuna, sw:n äänikori) pitävät ääntä osoitteen perusteella
  * jopa 30 vrk, joten SAMALLA NIMELLÄ korvattu äänite jäisi pelaajilla
  * vanhaksi viikoiksi. Nimi pysyy nimisäännön takia samana molemmin
- * puolin (ks. vie-aanet.yml), ja tuoreus hoidetaan kyselyversiolla:
+ * puolin (assets/audio/x.mp3 → audio/x.mp3), ja tuoreus hoidetaan
+ * kyselyversiolla:
  * kun äänite äänitetään uusiksi, sen numero nousee tässä. Ämpäri
  * ohittaa kyselyn, välimuistit näkevät uuden osoitteen.
+ *
+ * Taulu on exportattu, koska aikaleimatiedosto kantaa saman numeron
+ * mukanaan (tools/kohdista-luennat.mjs, kenttä `aani.versio`): siitä
+ * näkee yhdellä silmäyksellä, minkä äänitepolven ajat tiedostossa ovat.
  */
-const UUSITUT_AANET = {
+export const UUSITUT_AANET = {
   // 28.8.2026: avaus ja avauslento uusiksi (nimetön perillinen,
   // sinä-muoto).
   'intro-puhe.mp3': 2,
   'puhe-lento-alku.mp3': 2,
+  // 9.9.2026: Euroopan 45 matkakirjaluentaa generoitiin uusiksi omistajan
+  // teksteistä (generoi-luennat.yml ajo 17). Sama nimi, uusi sisältö:
+  // ilman numeroa palvelutyöntekijän äänikori (sw.js AANICACHE, välimuisti
+  // ensin) soittaisi vanhan luennan loputtomiin (omistajan havainto 9.9.:
+  // "matkakirjan luenta tulee vielä vanhasta tekstistä").
+  'puhe-fokus-matkakirja-ateena.mp3': 2,
+  'puhe-fokus-matkakirja-sofia.mp3': 2,
+  'puhe-fokus-matkakirja-istanbul.mp3': 2,
+  'puhe-fokus-matkakirja-bukarest.mp3': 2,
+  'puhe-fokus-matkakirja-sarajevo.mp3': 2,
+  'puhe-fokus-matkakirja-budapest.mp3': 2,
+  'puhe-fokus-matkakirja-wien.mp3': 2,
+  'puhe-fokus-matkakirja-praha.mp3': 2,
+  'puhe-fokus-matkakirja-krakova.mp3': 2,
+  'puhe-fokus-matkakirja-varsova.mp3': 2,
+  'puhe-fokus-matkakirja-pietari.mp3': 2,
+  'puhe-fokus-matkakirja-moskova.mp3': 2,
+  'puhe-fokus-matkakirja-kiova.mp3': 2,
+  'puhe-fokus-matkakirja-odessa.mp3': 2,
+  'puhe-fokus-matkakirja-helsinki.mp3': 2,
+  'puhe-fokus-matkakirja-tampere.mp3': 2,
+  'puhe-fokus-matkakirja-tallinna.mp3': 2,
+  'puhe-fokus-matkakirja-riika.mp3': 2,
+  'puhe-fokus-matkakirja-vilna.mp3': 2,
+  'puhe-fokus-matkakirja-kreeta.mp3': 2,
+  'puhe-fokus-matkakirja-sisilia.mp3': 2,
+  'puhe-fokus-matkakirja-islanti.mp3': 2,
+  'puhe-fokus-matkakirja-alpit.mp3': 2,
+  'puhe-fokus-matkakirja-lappi.mp3': 2,
+  'puhe-fokus-matkakirja-tromssa.mp3': 2,
+  'puhe-fokus-matkakirja-lontoo.mp3': 2,
+  'puhe-fokus-matkakirja-dublin.mp3': 2,
+  'puhe-fokus-matkakirja-edinburgh.mp3': 2,
+  'puhe-fokus-matkakirja-pariisi.mp3': 2,
+  'puhe-fokus-matkakirja-marseille.mp3': 2,
+  'puhe-fokus-matkakirja-lissabon.mp3': 2,
+  'puhe-fokus-matkakirja-madrid.mp3': 2,
+  'puhe-fokus-matkakirja-barcelona.mp3': 2,
+  'puhe-fokus-matkakirja-granada.mp3': 2,
+  'puhe-fokus-matkakirja-sevilla.mp3': 2,
+  'puhe-fokus-matkakirja-amsterdam.mp3': 2,
+  'puhe-fokus-matkakirja-berliini.mp3': 2,
+  'puhe-fokus-matkakirja-venetsia.mp3': 2,
+  'puhe-fokus-matkakirja-firenze.mp3': 2,
+  'puhe-fokus-matkakirja-rooma.mp3': 2,
+  'puhe-fokus-matkakirja-dubrovnik.mp3': 2,
+  'puhe-fokus-matkakirja-tukholma.mp3': 2,
+  'puhe-fokus-matkakirja-oslo.mp3': 2,
+  'puhe-fokus-matkakirja-bergen.mp3': 2,
+  'puhe-fokus-matkakirja-kobenhavn.mp3': 2,
 };
 
 /*
@@ -169,6 +348,103 @@ const PYRAMIDI_ALIPOLKU = 'julisteet/pyramidi/';
  */
 export function pyramidiUrl(polku) {
   return `${PEILI_JUURI}${PYRAMIDI_ALIPOLKU}${polku}`;
+}
+
+/*
+ * REPON ASSET-KUVAT ÄMPÄRIIN (omistajan päätös 2.9.2026: "R2-ämpäriin,
+ * JPG-muodossa").
+ *
+ * Pelin omat generoidut kuvat — kohdekartan miniatyyrit, eläintäkyjen
+ * lähikuvat, aarrekuvat sekä karttanostojen ja Matkakirjan ihmeiden
+ * havainnekuvat — ovat tähän asti asuneet repossa. Uudet kuvat menevät
+ * vain ämpäriin JPG:nä, ja vanhat siirretään sinne erissä
+ * (.github/workflows/vie-assetit.yml). Siirtymä kestää useamman
+ * julkaisun, joten pelin on osattava lukea kumpaakin.
+ *
+ * SIIRTYMÄ ON YKSI KYTKINTAULU EIKÄ SATA POLKUA. `R2_ASSETIT` kertoo
+ * lajeittain, onko vanha aineisto jo ämpärissä. Kun erä on viety ja
+ * takaisinluku vihreä, lippu kääntyy `true`:ksi — vasta silloin repon
+ * polut käännetään ämpäriosoitteiksi, ja vasta sen jälkeen tiedostot
+ * voi poistaa reposta. Yksikään datataulu ei muutu siirrosta.
+ *
+ * PELKKÄ TUNNUS TARKOITTAA AINA ÄMPÄRIÄ. Datassa saa lukea joko vanha
+ * repon polku (`assets/kartat/miniatyyrit/x.webp`) tai pelkkä tunnus
+ * (`ateena-akropolis-museo`). Tunnuksella ei ole repokopiota lainkaan —
+ * se on uusi kuva, joka syntyi suoraan ämpäriin — joten se ei ole
+ * kytkimen alainen. Puuttuva kuva on tavallinen tilanne eikä virhe:
+ * kutsuja piilottaa kuvapaikan (kohdekartalla piirros putoaa
+ * varatäpläksi), kunnes kuvaputki on toimittanut tiedoston.
+ */
+const ASSET_ALIPOLKU = 'kohtaamiset/';
+
+/**
+ * Asset-perheet: lajin tunnus → kansio repossa. Sama nimi on ämpärissä
+ * polun `kohtaamiset/<laji>/` alla, joten vientityökalu ja peli eivät
+ * voi olla eri mieltä siitä, minne tiedosto meni.
+ */
+export const ASSET_KANSIOT = {
+  miniatyyrit: 'assets/kartat/miniatyyrit',
+  elaimet: 'assets/elaimet',
+  aarteet: 'assets/aarteet',
+  nostot: 'assets/kartat/nostot',
+  ihmeet: 'assets/kartat/ihmeet',
+};
+
+/**
+ * Onko lajin VANHA repoaineisto jo ämpärissä? Oletus on false: peli
+ * lukee repon polkua, kunnes erä on viety ja tarkistettu.
+ */
+export const R2_ASSETIT = {
+  miniatyyrit: true,
+  elaimet: true,
+  aarteet: true,
+  nostot: true,
+  ihmeet: true,
+};
+
+/**
+ * Asset-kuvan osoite: ämpäri kun kuva on siellä, repon polku muuten.
+ *
+ * @param {string} laji ASSET_KANSIOT-avain. Ratkaisee vain PELKÄN
+ *   TUNNUKSEN tapauksen — valmis polku kertoo lajinsa itse, jotta
+ *   yhteiset kuvakohdat (esim. suurennos, joka näyttää sekä ihme- että
+ *   nostokuvia) eivät joudu arvaamaan lajia kutsupaikassa.
+ * @param {string} tiedosto repon polku, pelkkä tunnus tai valmis osoite.
+ */
+export function assetOsoite(laji, tiedosto) {
+  if (typeof tiedosto !== 'string' || !tiedosto) return tiedosto;
+  // Valmis osoite (ämpäri tai mikä tahansa muu) menee sellaisenaan.
+  if (/^(?:[a-z][a-z0-9+.-]*:)?\/\//i.test(tiedosto)) return tiedosto;
+  /*
+   * Pelkkä tunnus: uusi kuva, joka on vain ämpärissä. Muoto on JPG —
+   * paitsi MINIATYYREILLÄ, jotka ovat syvättyjä piirroksia paperin
+   * päällä ja tarvitsevat alfakanavan (omistajan havainto 2.9.2026 ilta:
+   * "Kuvaputken tekemiä uusia kuvia ei ole syvätty" — M1:n JPG:t
+   * näkyivät beigeinä laatikkoina). Miniatyyri luetaan PNG:nä; JPG-
+   * versio jää ämpäriin käyttämättä, ja kunnes PNG on siellä, 404
+   * pudottaa merkin varatäpläksi kuten ennenkin (Raamattu, KUVAMUOTO
+   * ON JPG: poikkeus liput ja miniatyyrit).
+   */
+  if (!tiedosto.includes('/')) {
+    if (!ASSET_KANSIOT[laji]) return tiedosto;
+    const pääte = laji === 'miniatyyrit' ? 'png' : 'jpg';
+    return `${PEILI_JUURI}${ASSET_ALIPOLKU}${laji}/${tiedosto}.${pääte}`;
+  }
+  const osuma = Object.entries(ASSET_KANSIOT)
+    .map(([nimi, kansio]) => [nimi, tiedosto.indexOf(`${kansio}/`)])
+    .find(([, i]) => i !== -1);
+  if (!osuma) return tiedosto;
+  const [nimi, i] = osuma;
+  if (!R2_ASSETIT[nimi]) return tiedosto;
+  /*
+   * Katkaisijan ollessa auki repon polku on yhä oikea vastaus — niin
+   * kauan kuin tiedosto on vielä repossa. Kun se on poistettu, lippu on
+   * ollut päällä jo julkaisun verran eikä varareittiä tarvita: 404
+   * käyttäytyy silloin samoin kuin ennen siirtoa puuttuva kuva.
+   */
+  if (!peiliKaytossa('kuvat')) return tiedosto;
+  const hanta = tiedosto.slice(i + ASSET_KANSIOT[nimi].length + 1);
+  return `${PEILI_JUURI}${ASSET_ALIPOLKU}${nimi}/${hanta}`;
 }
 
 /**
@@ -315,7 +591,18 @@ export function peiliAaniPolku(url) {
 // kuvia mukanaan.
 
 const VIRHERAJA = 3;
-const LAJIT = ['kuvat', 'aanet'];
+/*
+ * LAATAT OMANA LAJINAAN (sulavuuskatsaus 22.9.2026 kohta 21): pallon
+ * laattakerros (js/pallolaatat.js haeKuva) tekee jopa 40 rinnakkaista
+ * pyyntöä, eikä sillä ollut katkaisijaa — nurin oleva ämpäri tai
+ * 429-purske olisi jauhettu jokaisella päivityksellä. Laatoilla ei ole
+ * varareittiä: katkaisu tarkoittaa, että uusia latauksia EI ALOITETA
+ * kestoajan verran (jono säilyy ja jatkuu, kun aika on kulunut). Kesto
+ * on lyhyempi kuin kuvilla, koska tyhjä kartta on pahempi kuin tyhjä
+ * kuva: 20 s riittää purskeen (429) ja lyhyen katkon yli.
+ */
+const LAJIT = ['kuvat', 'aanet', 'laatat'];
+const KATKAISUN_KESTO_LAATAT_MS = 20 * 1000;
 const poisAvain = (laji) => `matkakirja-peili-pois-${laji}`;
 
 /*
@@ -341,8 +628,8 @@ const poisAvain = (laji) => `matkakirja-peili-pois-${laji}`;
  */
 const KATKAISUN_KESTO_MS = 5 * 60 * 1000;
 
-const virheita = { kuvat: 0, aanet: 0 };
-const poisAsti = { kuvat: 0, aanet: 0 };
+const virheita = { kuvat: 0, aanet: 0, laatat: 0 };
+const poisAsti = { kuvat: 0, aanet: 0, laatat: 0 };
 for (const laji of LAJIT) {
   try {
     const tallennettu = Number(globalThis.sessionStorage?.getItem(poisAvain(laji)));
@@ -365,12 +652,17 @@ export function peiliKaytossa(laji = 'kuvat') {
   return true;
 }
 
+/** Katkaisun jäljellä oleva aika (ms) tälle lajille; 0 kun käytössä. */
+export function peilinKatkoJaljella(laji = 'kuvat') {
+  return Math.max(0, (poisAsti[laji] ?? 0) - Date.now());
+}
+
 /** Peili petti: kolmannen virheen jälkeen se laji jätetään hetkeksi väliin. */
 export function peiliPetti(laji = 'kuvat') {
   if (!LAJIT.includes(laji) || !peiliKaytossa(laji)) return;
   virheita[laji] += 1;
   if (virheita[laji] < VIRHERAJA) return;
-  poisAsti[laji] = Date.now() + KATKAISUN_KESTO_MS;
+  poisAsti[laji] = Date.now() + (laji === 'laatat' ? KATKAISUN_KESTO_LAATAT_MS : KATKAISUN_KESTO_MS);
   try {
     globalThis.sessionStorage?.setItem(poisAvain(laji), String(poisAsti[laji]));
   } catch { /* ks. yllä */ }
@@ -389,16 +681,16 @@ export function nollaaPeili() {
 
 /**
  * Äänitteen osoite peilistä, jos se on peilattu. Peilissä ovat sekä
- * Freesoundin ja archive.orgin äänitteet (aanet/) että repon omat
- * äänitiedostot ydinsettiä lukuun ottamatta (audio/, ks. aaniUrl).
- * Muut osoitteet palautuvat sellaisenaan.
+ * Freesoundin ja archive.orgin äänitteet (aanet/) että pelin omat
+ * äänitteet (audio/, ks. aaniUrl). Muut osoitteet palautuvat
+ * sellaisenaan.
  */
 export function aaniOsoite(url) {
   if (!url) return url;
-  // Repon oma äänitiedosto kulkee oman sääntönsä kautta (audio/), ja se
-  // osaa jättää ydinsetin rauhaan. Ilman tätä haaraa jokainen
-  // soittokohta joutuisi valitsemaan kahden funktion väliltä sen
-  // mukaan, mistä ääni sattuu tulemaan.
+  // Pelin oma äänite kulkee oman sääntönsä kautta (audio/, ei
+  // katkaisijaa). Ilman tätä haaraa jokainen soittokohta joutuisi
+  // valitsemaan kahden funktion väliltä sen mukaan, mistä ääni sattuu
+  // tulemaan.
   if (omaAaniPolku(url)) return aaniUrl(url);
   if (!peiliKaytossa('aanet')) return url;
   // peiliAaniPolku tunnistaa itse, mitkä osoitteet ovat peilissä:
@@ -412,15 +704,28 @@ export function aaniOsoite(url) {
 /**
  * Hakee äänitteen puskuriin peilistä ja putoaa tarvittaessa
  * alkuperäiseen lähteeseen. Palauttaa saman kuin fetch.
+ *
+ * PELIN OMALLA ÄÄNITTEELLÄ EI OLE ALKUPERÄISTÄ LÄHDETTÄ: se syntyy
+ * täällä ja asuu vain ämpärissä (linjaus 11.9.2026). Repon polkuun
+ * putoaminen olisi toinen 404 — ja kolme sellaista sulkisi äänipeilin
+ * myös äänimaisemilta, joilla varareitti oikeasti on.
  */
-export async function haeAani(url) {
+export async function haeAani(url, asetukset = {}) {
+  if (omaAaniPolku(url)) return fetch(aaniUrl(url), asetukset);
   const peili = aaniOsoite(url);
   if (peili !== url) {
-    const vastaus = await fetch(peili).catch(() => null);
+    /*
+     * Kaksi yritystä ennen varareittiä (6.9.2026, r2.dev 429): ämpäri
+     * rajoittaa pyyntötahtia, ja yksi ohimeneva 429 vei ennen tätä
+     * äänen alkuperäiseen lähteeseen — ja kolmantena laukaisi peilin
+     * katkaisijan koko lajilta. Puuttuva tiedosto (404) palautuu yhä
+     * heti, joten varareitti ei hidastu (js/media.js haeSitkeasti).
+     */
+    const vastaus = await haeSitkeasti(peili, { ...asetukset, yrityksia: 2 });
     if (vastaus?.ok) return vastaus;
     peiliPetti('aanet');
   }
-  return fetch(url);
+  return fetch(url, asetukset);
 }
 
 /**
@@ -443,18 +748,300 @@ export function onPeilista(osoite) {
   return peilinLaji(osoite) !== null;
 }
 
+// --- sitkeä lataus ------------------------------------------------------------
+
+/*
+ * R2.DEV RAJOITTAA PYYNTÖJÄ — YKSI PURSKE EI SAA RIKKOA KARTTAA.
+ *
+ * Omistajan kuvakaappaus 6.9.2026 klo 01.09 (iPhone, Ateenan
+ * kaupunkilehti): *"Kartalla pisteitä jotka eivät toimi"* — viisi
+ * kohdetta kahdestatoista näkyi pelkkänä täplänä piirroksen sijaan.
+ * Juurisyy mitattiin samalta osoitteelta: peli hakee mediansa
+ * julkisesta `pub-….r2.dev`-osoitteesta, joka on Cloudflaren OMA
+ * rajoitettu kehitysosoite, ja HEAD-kysely kaikille kahdelletoista
+ * Ateenan miniatyyrille yhtä aikaa vastasi **429 Too Many Requests**
+ * jokaiselle. Tiedostot ovat ämpärissä ja kunnossa; vain pyyntötahti
+ * oli liikaa.
+ *
+ * Kuva ei kerro JS:lle HTTP-statustaan — `<img>` antaa pelkän
+ * `error`-tapahtuman — joten 429:ää ei voi erottaa 404:stä kuvapolulla.
+ * Siksi jokainen kuvavirhe uusitaan rajallisesti: neljä yritystä,
+ * ensimmäinen odotus 800 ms ja siitä kaksinkertaistuen hajonnalla.
+ * Puuttuva tiedosto (aito 404) maksaa siis neljä pyyntöä ennen kuin
+ * merkki putoaa täpläksi — se on halpaa, koska niitä on vähän, ja
+ * väärä päätös toiseen suuntaan näkyy pelaajalle rikkinäisenä karttana.
+ * Fetch-polut (js/media.js haeSitkeasti) sen sijaan LUKEVAT statuksen
+ * ja uusivat vain 429:n ja 5xx:n — ja kunnioittavat `Retry-After`ia.
+ *
+ * OSOITE EI MUUTU UUSINNASSA. Vanha asetaKuva lisäsi kolmanteen
+ * yritykseen `?yritys=2`-parametrin, jotta selaimen oma välimuisti ei
+ * tarjoilisi äsken epäonnistunutta vastausta. Se ei enää käy: sw.js
+ * välimuistittaa median POLULLA, joten lisäparametri ohittaisi korin ja
+ * tekisi kerran nähdystä kuvasta uuden pyynnön joka kerta. Sama osoite
+ * asetetaan uudestaan `src`-sijoituksella; selain lataa rikkinäisen
+ * kuvan uudestaan, koska sen tila on "broken" eikä "completely
+ * available" (HTML: update the image data).
+ *
+ * PYSYVÄ KORJAUS ON OMISTAJAN PUOLELLA: kun ämpärille kytketään oma
+ * verkkotunnus (Cloudflare R2 → Settings → Public access → Custom
+ * domain), r2.dev-rajoitus poistuu kokonaan. Tämä on pelin puolen
+ * sietokyky, ei rajoituksen kiertäminen.
+ */
+
+/** Montako yritystä yhdelle kuvalle (ensimmäinen mukaan luettuna). */
+export const KUVAN_YRITYKSET = 4;
+/** Ensimmäinen odotus uusinnan edellä; kaksinkertaistuu joka kierroksella. */
+export const UUSINNAN_VIIVE_MS = 800;
+/** Odotuksen kerroin (800 → 1600 → 3200 ms, kuhunkin oma hajonta). */
+export const UUSINNAN_KERROIN = 2;
+/** Montako yritystä fetch-polulla (429/5xx; muut palautuvat heti). */
+export const HAUN_YRITYKSET = 3;
+/** Kunnioitetaan Retry-Afteria korkeintaan tähän asti. */
+export const RETRY_AFTER_KATTO_MS = 10000;
+
+/*
+ * PYYNTÖJONO: NELJÄ KERRALLAAN.
+ *
+ * Kohdekartta pyytää 10–25 miniatyyriä samalla piirrolla, ja juuri se
+ * synnytti purskeen, jonka r2.dev torjui. Jono ei hidasta mitään
+ * havaittavasti — neljä rinnakkaista pyyntöä on sama luku, jolla
+ * laattapyramidi noutaa laattojaan (js/laattapyramidi.js
+ * NOUTO_RINNAKKAIN = 4) ja jonka HTTP/1.1-selaimet muutenkin sallivat
+ * per palvelin — mutta se levittää pyynnöt niin, ettei peli itse tee
+ * purskeita.
+ *
+ * Jono koskee VAIN sitkeän latauksen kautta kulkevia kuvia. Sivun omat
+ * <img src>-elementit (lehden taitto) menevät selaimen omaa reittiä
+ * kuten ennenkin.
+ */
+export const KUVAJONON_LEVEYS = 4;
+
+/*
+ * VUORO VAPAUTUU VIIMEISTÄÄN TÄSSÄ AJASSA.
+ *
+ * Selain ei lupaa `load`- eikä `error`-tapahtumaa jokaisesta pyynnöstä:
+ * roikkuva yhteys tai DOM:ista poistettu kuva voi jäädä molempia vaille.
+ * Ilman vahtia neljä sellaista lukitsisi jonon lopullisesti, eikä
+ * yksikään kuva latautuisi enää istunnon aikana. Vahti EI keskeytä
+ * latausta — kuva saa yhä valmistua ja näkyä — se vain päästää
+ * seuraavan pyynnön liikkeelle.
+ */
+export const VUORON_KATTO_MS = 15000;
+
+let jonossaKaynnissa = 0;
+const jononOdottajat = [];
+
+function varaaVuoro() {
+  if (jonossaKaynnissa < KUVAJONON_LEVEYS) {
+    jonossaKaynnissa += 1;
+    return null;
+  }
+  return new Promise((jatka) => { jononOdottajat.push(jatka); });
+}
+
+function vapautaVuoro() {
+  const seuraava = jononOdottajat.shift();
+  // Vuoro siirtyy suoraan seuraavalle: laskuria ei lasketa välissä
+  // alas, tai kaksi yhtaikaista vapautusta päästäisi viisi kerralla.
+  if (seuraava) seuraava();
+  else jonossaKaynnissa = Math.max(0, jonossaKaynnissa - 1);
+}
+
+/** Vain mittaukseen ja testeihin: montako pyyntöä menossa ja jonossa. */
+export function kuvajononTila() {
+  return { kaynnissa: jonossaKaynnissa, jonossa: jononOdottajat.length };
+}
+
+/** Vain testejä varten: tyhjentää jonon ja vapauttaa kaikki vuorot. */
+export function nollaaKuvajono() {
+  jononOdottajat.length = 0;
+  jonossaKaynnissa = 0;
+}
+
+/*
+ * MEDIAMITTARI (kehittäjävalikon "media"-rivi, js/main.js).
+ * Omistaja näkee yhdellä silmäyksellä, kuinka moni kuva tuli suoraan,
+ * kuinka moni vasta uusinnalla ja kuinka moni jäi kokonaan saamatta —
+ * eli näkyykö r2.dev-rajoitus juuri nyt vai ei.
+ */
+const mediaLaskurit = { onnistui: 0, uusinta: 0, epaonnistui: 0 };
+
+/** Istunnon medialukemat: { onnistui, uusinta, epaonnistui }. */
+export function mediaLukemat() {
+  return { ...mediaLaskurit };
+}
+
+/** Vain testejä varten: nollaa medialukemat. */
+export function nollaaMediaLukemat() {
+  mediaLaskurit.onnistui = 0;
+  mediaLaskurit.uusinta = 0;
+  mediaLaskurit.epaonnistui = 0;
+}
+
+/** Odotus, jossa on hajontaa: [odotus, 2 × odotus). */
+function hajonnalla(odotus) {
+  return Math.round(odotus * (1 + Math.random()));
+}
+
+/**
+ * Lataa kuvan ja uusii saman osoitteen, jos lataus pettää.
+ *
+ * Palauttaa lupauksen, joka ratkeaa `true`:ksi latauksen onnistuessa ja
+ * `false`:ksi vasta kun kaikki yritykset ovat menneet — vasta silloin
+ * kutsutaan `onVirhe`, eli vasta silloin kuvaa ei oikeasti ole.
+ *
+ * Sama `<img>` uusiokäytetään galleriassa ja kohdekartalla, joten
+ * jokainen askel tarkistaa, että kuva yhä yrittää juuri sitä osoitetta
+ * jolle tämä ketju asetettiin. Muuten vanha ketju jatkaisi uuden kuvan
+ * päällä.
+ *
+ * @param {HTMLImageElement} kuva
+ * @param {string} osoite
+ * @param {object} [asetukset] yrityksia, viive, kerroin, jonota,
+ *   onLatasi, onVirhe
+ */
+export function lataaKuvaSitkeasti(kuva, osoite, asetukset = {}) {
+  const {
+    yrityksia = KUVAN_YRITYKSET,
+    viive = UUSINNAN_VIIVE_MS,
+    kerroin = UUSINNAN_KERROIN,
+    jonota = true,
+    onLatasi = null,
+    onVirhe = null,
+  } = asetukset;
+  if (!kuva || !osoite) return Promise.resolve(false);
+
+  return new Promise((valmis) => {
+    let yritys = 0;
+    let odotus = viive;
+    let vuorolla = false;
+    let vahti = null;
+    const yhaTama = () => kuva.getAttribute('src') === osoite;
+    const paastaVuoro = () => {
+      if (vahti !== null) { clearTimeout(vahti); vahti = null; }
+      if (!vuorolla) return;
+      vuorolla = false;
+      vapautaVuoro();
+    };
+    const irrota = () => {
+      kuva.removeEventListener('load', latasi);
+      kuva.removeEventListener('error', petti);
+    };
+
+    function latasi() {
+      irrota();
+      paastaVuoro();
+      mediaLaskurit.onnistui += 1;
+      onLatasi?.();
+      valmis(true);
+    }
+
+    function petti() {
+      irrota();
+      paastaVuoro();
+      // Kuva vaihdettiin toiseen kesken latauksen: tämä ketju ei enää
+      // koske ketään, eikä sen pidä pudottaa uutta kuvaa täpläksi.
+      if (!yhaTama()) { valmis(false); return; }
+      if (yritys >= yrityksia) {
+        mediaLaskurit.epaonnistui += 1;
+        onVirhe?.();
+        valmis(false);
+        return;
+      }
+      mediaLaskurit.uusinta += 1;
+      const odota = hajonnalla(odotus);
+      odotus *= kerroin;
+      setTimeout(() => {
+        if (!yhaTama()) { valmis(false); return; }
+        void aloita();
+      }, odota);
+    }
+
+    async function aloita() {
+      yritys += 1;
+      if (jonota) {
+        const vuoro = varaaVuoro();
+        vuorolla = true;
+        if (vuoro) await vuoro;
+        // Jonossa odottaessa kuva ehti vaihtua toiseen.
+        if (yritys > 1 && !yhaTama()) { paastaVuoro(); valmis(false); return; }
+        // Vahti: vuoro ei jää roikkumaan, vaikka kumpikaan tapahtuma
+        // ei koskaan tulisi (ks. VUORON_KATTO_MS).
+        vahti = setTimeout(paastaVuoro, VUORON_KATTO_MS);
+      }
+      kuva.addEventListener('load', latasi, { once: true });
+      kuva.addEventListener('error', petti, { once: true });
+      // Sama osoite uudestaan — EI cache-bustingia, ks. lohkokommentti.
+      kuva.src = osoite;
+    }
+
+    void aloita();
+  });
+}
+
+/** Retry-After otsakkeesta millisekunteina, tai null. */
+export function retryAfterMs(vastaus) {
+  const otsake = vastaus?.headers?.get?.('Retry-After');
+  if (!otsake) return null;
+  const sekunteina = Number(otsake);
+  const ms = Number.isFinite(sekunteina)
+    ? sekunteina * 1000
+    : Date.parse(otsake) - Date.now();
+  if (!Number.isFinite(ms) || ms <= 0) return null;
+  return Math.min(ms, RETRY_AFTER_KATTO_MS);
+}
+
+/**
+ * Fetch, joka uusii vain ohimenevän virheen (429 ja 5xx sekä verkon
+ * katkos) ja kunnioittaa `Retry-After`ia. Muut vastaukset — myös 404 —
+ * palautuvat heti sellaisenaan: puuttuva tiedosto ei parane odottamalla.
+ *
+ * Palauttaa saman kuin fetch (tai null, jos verkko ei vastannut
+ * kertaakaan), joten kutsuja voi lukea statuksen kuten ennenkin.
+ */
+export async function haeSitkeasti(osoite, asetukset = {}) {
+  const {
+    yrityksia = HAUN_YRITYKSET,
+    viive = UUSINNAN_VIIVE_MS,
+    kerroin = UUSINNAN_KERROIN,
+    haku = globalThis.fetch?.bind(globalThis),
+    ...init
+  } = asetukset;
+  if (typeof haku !== 'function') return null;
+  let odotus = viive;
+  for (let yritys = 1; ; yritys += 1) {
+    // eslint-disable-next-line no-await-in-loop
+    const vastaus = await haku(osoite, init).catch(() => null);
+    if (vastaus?.ok) {
+      mediaLaskurit.onnistui += 1;
+      return vastaus;
+    }
+    const ohimeneva = !vastaus || vastaus.status === 429 || vastaus.status >= 500;
+    if (!ohimeneva || yritys >= yrityksia) {
+      mediaLaskurit.epaonnistui += 1;
+      return vastaus;
+    }
+    mediaLaskurit.uusinta += 1;
+    const odota = retryAfterMs(vastaus) ?? hajonnalla(odotus);
+    odotus *= kerroin;
+    // eslint-disable-next-line no-await-in-loop
+    await new Promise((jatka) => { setTimeout(jatka, odota); });
+  }
+}
+
 // --- kuvan asettaminen --------------------------------------------------------
 
 /**
  * Asettaa kuvan osoitteen niin, että peilin pettäessä siirrytään
  * varareitille. `onVirhe` kutsutaan vasta, kun kumpikin osoite on
- * epäonnistunut — silloin kuvaa ei oikeasti ole.
+ * epäonnistunut kaikilla yrityksillään — silloin kuvaa ei oikeasti ole.
  *
- * Sama <img> uusiokäytetään galleriassa, joten kuuntelija tarkistaa
- * ennen toimintaansa, että kuva yhä yrittää juuri sitä osoitetta jolle
- * se asetettiin. Muuten vanha kuuntelija voisi pudottaa uuden kuvan
- * edellisen varareitille. Ketju on enintään kahden pyynnön mittainen
- * eikä voi jäädä silmukkaan.
+ * Kumpikin osoite kulkee sitkeän latauksen läpi (lataaKuvaSitkeasti),
+ * eli neljä yritystä kasvavalla odotuksella. Ketju on siis enintään
+ * kahden osoitteen mittainen eikä voi jäädä silmukkaan: varareitille
+ * siirrytään vasta kun peiliosoite on lopullisesti pettänyt, ja
+ * peilin katkaisija (peiliPetti) saa tiedon vasta silloin — yksi
+ * ohimenevä purske ei siis enää sulje koko peiliä.
  */
 export function asetaKuva(kuva, osoite, vara, onVirhe = null) {
   const kohde = osoite ?? vara;
@@ -462,52 +1049,12 @@ export function asetaKuva(kuva, osoite, vara, onVirhe = null) {
   if (kuva.getAttribute('src') === kohde) return;
 
   const varalla = Boolean(vara) && vara !== kohde;
-  const yha = (odotettu) => kuva.getAttribute('src') === odotettu;
 
-  /*
-   * UUSINTA HETKEN PÄÄSTÄ, LISÄPARAMETRILLA.
-   *
-   * Kun kuvia pyydetään kymmeniä kerralla (lehden kansi), palvelin
-   * rajoittaa purskeita ja osa pyynnöistä kaatuu ohimenevästi. Lyhyt
-   * odotus riittää yleensä avaamaan rajan. Lisäparametri on pakollinen:
-   * ilman sitä selain tarjoilee äsken epäonnistuneen vastauksen omasta
-   * välimuististaan eikä pyydä mitään.
-   */
-  const uusiHetkenPaasta = (nykyinen, sitten) => {
-    setTimeout(() => {
-      if (!yha(nykyinen)) return;
-      const uusi = `${nykyinen}${nykyinen.includes('?') ? '&' : '?'}yritys=2`;
-      kuva.addEventListener('error', () => { if (yha(uusi)) sitten(); }, { once: true });
-      kuva.src = uusi;
-    }, 4000);
-  };
-
-  kuva.addEventListener('error', () => {
-    if (!yha(kohde)) return;
-    if (!varalla) {
-      /*
-       * EI ERILLISTÄ VARAREITTIÄ — MUTTA EI MYÖSKÄÄN HETI LUOVUTETA.
-       *
-       * Näin käy aina, kun peilin katkaisija on lauennut: silloin
-       * valokuvaUrl palauttaa jo valmiiksi Commonsin osoitteen, ja
-       * varareitti on sama osoite. Aiemmin tässä luovutettiin
-       * ENSIMMÄISESTÄ virheestä ilman yhtään uusintaa — ja koska
-       * katkaisija kesti koko välilehden eliniän, kuva jäi rikki myös
-       * sivun uudelleenlatauksen jälkeen (omistajan havainto
-       * 6.8.2026). Nyt sama uusinta kuin varareitilläkin.
-       */
-      uusiHetkenPaasta(kohde, () => onVirhe?.());
-      return;
-    }
-    peiliPetti(peilinLaji(kohde) ?? 'kuvat');
-    kuva.addEventListener('error', () => {
-      if (!yha(vara)) return;
-      // Kolmas yritys hetken päästä (omistajan havainto 6.8.2026:
-      // Venetsian kannesta puuttui kuvia).
-      uusiHetkenPaasta(vara, () => onVirhe?.());
-    }, { once: true });
-    kuva.src = vara;
-  }, { once: true });
-
-  kuva.src = kohde;
+  void lataaKuvaSitkeasti(kuva, kohde, {
+    onVirhe: () => {
+      if (!varalla) { onVirhe?.(); return; }
+      peiliPetti(peilinLaji(kohde) ?? 'kuvat');
+      void lataaKuvaSitkeasti(kuva, vara, { onVirhe: () => onVirhe?.() });
+    },
+  });
 }

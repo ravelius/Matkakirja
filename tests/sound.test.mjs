@@ -96,6 +96,12 @@ const NIMET = [
   // Pöllön omat äänet (13.8.2026): huhuilu paneelin avautuessa ja
   // kirjoituskoneen rivinvaihtokello vastauksen valmistuessa.
   'owl', 'typeBell',
+  // Aikajanan vuosiluvun naksahdus (3.9.2026): varaääni sille,
+  // kun ämpärin kohahdusta (js/tehosteet.js) ei ole ladattu.
+  'vuosi',
+  // Sähketehtävän kirjoittuvat rivit (3.9.2026): lennätinkonttorin
+  // naputus merkki merkiltä ja rivin lopun kello.
+  'kirjoituskone', 'bling',
 ];
 
 test('jokainen tehoste tuottaa äänilähteitä', async () => {
@@ -107,6 +113,83 @@ test('jokainen tehoste tuottaa äänilähteitä', async () => {
       `ääni "${nimi}" ei käynnistänyt yhtään äänilähdettä`,
     );
   }
+});
+
+/*
+ * AIKAJANAN VUOSILUVUN NAKSAHDUS (omistajan tilaus 3.9.2026: *"kun
+ * vuosiluku vaihtuu, niin siinäkin voisi olla pieni ääniefekti
+ * taustalla"*). Ääni on kirjastossa oma nimensä, jotta js/aikajana.js
+ * voi soittaa sen tavallisella sfx.play('vuosi'):lla — mykistys ja
+ * taustatila tulevat silloin ilmaiseksi. Taso on tarkoituksella
+ * murto-osa paperin kahahduksesta: naksu toistuu vuosi toisensa
+ * jälkeen koko kaaren ajan, eikä se saa nousta musiikin päälle.
+ */
+test("vuosiluvun naksahdus on kirjastossa ja paperia hiljaisempi", async () => {
+  const { sfx, ctx } = await lataaSfx();
+  sfx.play('vuosi');
+  assert.ok(ctx.aloitetut.length > 0, "ääntä 'vuosi' ei ole kirjastossa");
+
+  const lahde = readFileSync(new URL('../js/sound.js', import.meta.url), 'utf8');
+  const kohta = lahde.indexOf('  vuosi: (s) => {');
+  assert.ok(kohta > 0, "SOUNDS-kirjastosta puuttuu 'vuosi'");
+  const runko = lahde.slice(kohta, lahde.indexOf('},', kohta));
+  const paperi = Number(lahde.match(/paper: \(s\) => s\.hiss\(\{[^}]*gain: ([\d.]+)/)[1]);
+  const voimat = [...runko.matchAll(/gain: ([\d.]+)/g)].map((m) => Number(m[1]));
+  assert.ok(voimat.length >= 1, 'naksahduksella ei ole voimakkuutta');
+  for (const v of voimat) {
+    assert.ok(v < paperi / 2, `naksahduksen taso ${v} ei ole selvästi paperia (${paperi}) hiljaisempi`);
+  }
+  // Lyhyt kuin mekaanisen laskurin naksu: jokainen osa alle 40 ms.
+  const kestot = [...runko.matchAll(/dur: ([\d.]+)/g)].map((m) => Number(m[1]));
+  assert.ok(kestot.length >= 1 && kestot.every((d) => d <= 0.04), `naksahdus on liian pitkä: ${kestot}`);
+});
+
+/*
+ * SÄHKEEN KIRJOITUSKONE JA RIVIN KELLO (omistajan tilaus 3.9.2026:
+ * *"taustalla saisi kuulua kirjoituskoneen äänet ja lopussa aina se
+ * bling, kun rivi vaihtuu"*).
+ *
+ * Naputus soi kymmeniä kertoja peräkkäin, joten sen on oltava LYHYT
+ * (alle 40 ms per osa) ja selvästi paperin kahahdusta hiljaisempi —
+ * muuten rivi kuulostaisi rakennustyömaalta. Kello taas on kaksi
+ * puhdasta sinisävyä (2,1 kHz ja 3,2 kHz), jotka vaimenevat 250 ms:ssä:
+ * se on lennättimen ohut kilkatus eikä soittorasian kellopeli, ja siksi
+ * se on rakennettu `tone`-kutsuista eikä `bell`-kutsuista.
+ */
+test('sähkeen naputus on lyhyt ja hiljainen, ja rivin kello on kaksi sinisävyä', async () => {
+  const { sfx, ctx } = await lataaSfx();
+  sfx.play('kirjoituskone');
+  assert.ok(ctx.aloitetut.length > 0, "ääntä 'kirjoituskone' ei ole kirjastossa");
+  const ennen = ctx.aloitetut.length;
+  sfx.play('bling');
+  assert.ok(ctx.aloitetut.length > ennen, "ääntä 'bling' ei ole kirjastossa");
+
+  const lahde = readFileSync(new URL('../js/sound.js', import.meta.url), 'utf8');
+  const paperi = Number(lahde.match(/paper: \(s\) => s\.hiss\(\{[^}]*gain: ([\d.]+)/)[1]);
+
+  const naputus = lahde.slice(
+    lahde.indexOf('  kirjoituskone: (s, { vire = 1 } = {}) => {'),
+    lahde.indexOf('  bling: (s) => {'),
+  );
+  assert.ok(naputus.length > 40, "SOUNDS-kirjastosta puuttuu 'kirjoituskone'");
+  const naputusKestot = [...naputus.matchAll(/dur: ([\d.]+)/g)].map((m) => Number(m[1]));
+  assert.ok(naputusKestot.length >= 1 && naputusKestot.every((d) => d <= 0.04),
+    `naputus on liian pitkä: ${naputusKestot}`);
+  for (const v of [...naputus.matchAll(/gain: ([\d.]+)/g)].map((m) => Number(m[1]))) {
+    assert.ok(v < paperi, `naputuksen taso ${v} ei ole paperia (${paperi}) hiljaisempi`);
+  }
+
+  const kello = lahde.slice(
+    lahde.indexOf('  bling: (s) => {'),
+    lahde.indexOf('},', lahde.indexOf('  bling: (s) => {')),
+  );
+  assert.ok(kello.includes('2100') && kello.includes('3200'),
+    'kellosta puuttuu kumpikin sinisävy (2,1 kHz ja 3,2 kHz)');
+  assert.equal((kello.match(/s\.tone\(/g) ?? []).length, 2,
+    'kello ei ole kaksi puhdasta sinisävyä');
+  const kelloKestot = [...kello.matchAll(/dur: ([\d.]+)/g)].map((m) => Number(m[1]));
+  assert.ok(kelloKestot.length === 2 && kelloKestot.every((d) => d <= 0.25),
+    `kello soi liian pitkään: ${kelloKestot}`);
 });
 
 test('tehosteita ei ole portitettu sallitulla listalla', async () => {
@@ -536,7 +619,7 @@ test('Xing-otsakkeen kesto korjataan leikkauksen mukaiseksi', async () => {
 function tekoAudio(rekisteri) {
   return class {
     constructor(src) {
-      this.src = src;
+      this._src = src ?? null;
       // Alkuperäinen osoite jää talteen, koska removeAttribute pyyhkii
       // srcin: ilman tätä purettua soitinta ei voisi enää tunnistaa
       // (ks. maisemat-suodatin lataaAmbienssissa).
@@ -551,14 +634,21 @@ function tekoAudio(rekisteri) {
       rekisteri.push(this);
     }
 
+    get src() { return this._src; }
+
+    /* Musiikkisoitin saa srcinsä vasta konstruktorin jälkeen (crossOrigin
+     * on asetettava ensin), joten alkuperäinen osoite otetaan talteen
+     * ensimmäisestä asetuksesta riippumatta siitä, kumpaa tietä se tuli. */
+    set src(v) { this._src = v; if (!this.alkuSrc) this.alkuSrc = v ?? ''; }
+
     addEventListener(nimi, fn) {
       if (!this.kuuntelijat.has(nimi)) this.kuuntelijat.set(nimi, []);
       this.kuuntelijat.get(nimi).push(fn);
     }
 
     removeEventListener() {}
-    getAttribute() { return this.src; }
-    removeAttribute() { this.src = null; }
+    getAttribute() { return this._src; }
+    removeAttribute() { this._src = null; }
     load() {}
     pause() { this.paused = true; }
     play() { this.paused = false; return Promise.resolve(); }
@@ -766,16 +856,22 @@ test('kielinäytteet ovat oikeista kaupungeista ja muodoltaan kelvollisia', asyn
 test('musiikkinäytteet ovat suoria mp3-osoitteita ja kertovat lisenssin', async () => {
   const { EUROPE_KULTTUURI } = await import('../js/packs/europe-kulttuuri.js');
   const { KULTTUURI_KATEGORIAT } = await import('../js/packs/kulttuuri-kategoriat.js');
-  // Näyte voi olla kahdessa paikassa. Kun kaupunki saa oman lehden, sen
+  const { FOKUSVIRRAT } = await import('../js/packs/fokusvirrat.js');
+  // Näyte voi olla KOLMESSA paikassa. Kun kaupunki saa oman lehden, sen
   // litteät nostot siirtyvät europe-kulttuuri.js:stä kategorioihin ja
-  // näyte siirtyy mukana. Pelaajalle se on sama nappi samassa jutussa,
-  // joten testin on laskettava molemmat — muuten lukumäärän vahti
-  // laukeaa siirrosta eikä siitä, että näytteitä oikeasti katosi.
+  // näyte siirtyy mukana; karttauudistus siirsi lehden sivuja edelleen
+  // kohdekartan nostoiksi, ja 14.9.2026 myös mediakentät seurasivat
+  // nostokortille (js/fokusnosto.js piirraNostonMedia). Pelaajalle se on
+  // koko ajan sama nappi samassa jutussa, joten testin on laskettava
+  // kaikki kolme — muuten lukumäärän vahti laukeaa siirrosta eikä siitä,
+  // että näytteitä oikeasti katosi.
   const kaikki = [
     ...Object.entries(EUROPE_KULTTUURI)
       .flatMap(([city, tiedot]) => (tiedot.nostot ?? []).map((n) => [city, n])),
     ...Object.entries(KULTTUURI_KATEGORIAT)
       .flatMap(([city, sivut]) => sivut.flatMap((s) => (s.nostot ?? []).map((n) => [city, n]))),
+    ...Object.entries(FOKUSVIRRAT)
+      .flatMap(([city, virta]) => (virta?.takynostot ?? []).map((n) => [city, n])),
   ];
   let maara = 0;
   {
@@ -889,4 +985,16 @@ test('kesken jäänyt luenta ei ala itsestään paluussa', () => {
   const lukija = readFileSync(new URL('../js/lukija.js', import.meta.url), 'utf8');
   assert.match(lukija, /lisaaTaustaVaimennus\(\{ hiljenna: taustaHiljennaLukija \}\)/,
     'lukijalle ei saa antaa automaattista paluuta');
+});
+
+test('Pulun eleääni tarvitsee eleen, tuottaa PCM-lähteen ja on peruttavissa',async t=>{
+ const old=Object.getOwnPropertyDescriptor(globalThis,'document');
+ const doc=new EventTarget();Object.defineProperty(globalThis,'document',{configurable:true,writable:true,value:doc});
+ t.after(()=>old?Object.defineProperty(globalThis,'document',old):delete globalThis.document);
+ const{sfx,ctx}=await lataaSfx();t.mock.method(sfx,'loadRealSamples',()=>{});
+ assert.equal(sfx.play('liviaEle',{kind:'land'}),undefined);assert.equal(ctx.aloitetut.length,0);
+ doc.dispatchEvent(new Event('pointerdown'));
+ const stop=sfx.play('liviaEle',{kind:'land',voima:.4});assert.equal(typeof stop,'function');assert.ok(ctx.aloitetut.includes('bufferSource'));stop();stop();
+ const n=ctx.aloitetut.length;sfx.enabled=false;assert.equal(sfx.play('liviaEle',{kind:'flap'}),undefined);assert.equal(ctx.aloitetut.length,n);
+ sfx.enabled=true;sfx.saneluTauko=true;assert.equal(sfx.play('liviaEle',{kind:'flap'}),undefined);assert.equal(ctx.aloitetut.length,n);
 });

@@ -1,4 +1,5 @@
-import { R2_JUURI, kohtaamiskuvat } from './kohtaamiskuvat-data.js';
+import { kohtaamiskuvaOsoite, kohtaamiskuvat } from './kohtaamiskuvat-data.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
 
 const galleria = document.querySelector('#galleria');
 const korttipohja = document.querySelector('#kuvakortti');
@@ -19,7 +20,9 @@ function kortti(kohtaaminen) {
 
   artikkeli.dataset.haku = `${kohtaaminen.kaupunki} ${kohtaaminen.maa} ${kohtaaminen.hahmo}`.toLocaleLowerCase('fi');
   artikkeli.dataset.tila = kohtaaminen.tila;
-  kuva.src = `${R2_JUURI}/${encodeURIComponent(kohtaaminen.tiedosto)}`;
+  // Sama osoitteenrakennus kuin pelin kortilla (kohtaamiskuvat-data.js):
+  // galleria ja peli eivät saa erota siinä, mistä kuva haetaan.
+  kuva.src = kohtaamiskuvaOsoite(kohtaaminen);
   kuva.alt = kohtaaminen.alt;
   kuva.addEventListener('error', () => {
     kuva.hidden = true;
@@ -30,7 +33,8 @@ function kortti(kohtaaminen) {
   pala.querySelector('.maa').textContent = kohtaaminen.maa;
   pala.querySelector('.kaupunki').textContent = kohtaaminen.kaupunki;
   pala.querySelector('.hahmo').textContent = kohtaaminen.hahmo;
-  pala.querySelector('.kuvateksti').textContent = kohtaaminen.kuvateksti;
+  // Kortilla lyhyt (js/kuvatekstit.js) — sama sääntö kuin pelin kortilla.
+  pala.querySelector('.kuvateksti').textContent = kuvatekstiLyhyt(kohtaaminen);
   pala.querySelector('.hetki').textContent = kohtaaminen.hetki;
   pala.querySelector('.vihje').textContent = kohtaaminen.vihje;
   return pala;

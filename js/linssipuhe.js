@@ -1,0 +1,708 @@
+/*
+ * LINSSIN LUENTA — kertoja lukee jokaisen keksinnön ääneen.
+ *
+ * Omistajan tilaus 4.9.2026, sanatarkasti: *"Generoi selostajan
+ * äänellä jokaiseen kohtaan vuosiluku, keksijän nimi ja keksintö, eli
+ * se tulisi aina Keksinnön vaihtoessa lukijan äänellä."* Saman päivän
+ * aamuna kertoja sai kaksi pidempää vuoroa: avausjakson esittelyn ja
+ * merkkipaalun välinäytöksen (ks. KAAREN OMAT PUHEET alempana).
+ *
+ * Luenta on VALMIS ÄÄNITE, ei selaimen puhesyntetisaattori: sama
+ * "Viisas Kertoja" kuin matkakirjaluennoissa (tools/
+ * generoi-linssiluennat.mjs, ElevenLabs eleven_v3). Tiedostot asuvat
+ * ämpärissä muotokuvien vieressä — ks. luennanRunko alla.
+ *
+ * ── RUNKOSÄÄNTÖ ON KYTKENTÄ ────────────────────────────────────────
+ *
+ * Tiedostonimi EI ole kutsujan muistin varassa: `luennanRunko(t)`
+ * johtaa sen samasta datasta, josta työkalu johtaa kohdetiedoston.
+ * Runko on MUOTOKUVAN RUNKO (`kuva.osoite`-tiedostonimi ilman
+ * päätettä), koska se on jo valmiiksi yksikäsitteinen — vuosi ei ole:
+ * kaaressa on kolme vuoden 1895 pysäkkiä (Marconi, Röntgen,
+ * Lumière-veljekset). MERKKIPAALU (1873) on poikkeus: sen runko
+ * ladotaan aina vuodesta ja otsikosta, myös silloin kun paalu saa oman
+ * muotokuvan — muuten kuvan saapuminen nimeäisi jo generoidun luennan
+ * uudelleen ja peli olisi siinä kohtaa hiljainen.
+ *
+ * KAAREN OMILLA PUHEILLA on omat runkonsa (`esittely`,
+ * `valinaytos-<vuosi>`, ks. kaarenPuheet alempana): ne eivät ole
+ * pysäkkejä vaan avausjakson ja välinäytöksen pidempiä tekstejä.
+ *
+ * Sama funktio ajetaan pelissä ja työkalussa. Jos nimi ja kenttä
+ * eriytyisivät, ajo maksaisi tiedostosta, jota peli ei koskaan hae —
+ * eikä mikään kaatuisi, koska puuttuva luenta on hiljainen.
+ *
+ * ── MIKSI OMA SOITIN EIKÄ playDiaryVoice ───────────────────────────
+ *
+ * Luennan koneisto (js/luenta.js) on sama — kertojan kytkin, puheen
+ * voimakkuus ja taustan väistö tulevat sieltä samoina apureina —
+ * mutta playDiaryVoice on kirjoitettu REPON assets/audio-polkuja
+ * varten: se yrittää peilin pettäessä varareittiä ja kutsuu
+ * peiliPetti('aanet'). Linssiluenta on suoraan ämpärissä eikä sillä
+ * ole repokopiota, joten puuttuva tiedosto (404) kaataisi äänipeilin
+ * katkaisijan koko istunnoksi. Puuttuva luenta saa olla hiljainen,
+ * ei koko pelin äänien varareitti.
+ *
+ * ── TAUSTAN VÄISTÖ ─────────────────────────────────────────────────
+ *
+ * `merkitsePuhuja` (js/luenta.js) tekee kaiken: se nostaa
+ * js/ambience-stream.js:n puhujalaskurin (puheAlkoi), jolloin
+ * ambienssi väistyy — ja koska väistö menee myös ulkoisille
+ * väistäjille, LINSSIN OMA RAITA hiljenee samalla
+ * (js/siirtymamusiikki.js lajinVaisto: linssiryhmän raita seuraa
+ * väistön POHJAKERROINTA, eli sivuuttaa vain oman hiljennyksensä,
+ * ei puheen väistöä). Vapautus tulee 'ended'- ja 'error'-tapahtumista
+ * kerran ja vain kerran; pysäytetty äänite ei laukaise kumpaakaan,
+ * joten pysaytaLinssiluenta vapauttaa puhujan itse.
+ */
+
+import { puheVoima } from './aani-ehdokkaat.js';
+import { luentaKytkinPaalla, merkitsePuhuja, vapautaPuhuja } from './luenta.js';
+import { seuraaLivianKuuntelua } from './livia-tilanteet.js';
+import { KEKSINTO_KUVAJUURI } from './linssit/keksinnot.js';
+import {
+  irrotaMusiikinVahvistin, liitaMusiikkiin, volumeToimii,
+} from './musiikkivahvistin.js';
+
+const pulunKuuntelut = new WeakMap();
+
+/**
+ * Luentojen kansio ämpärissä: muotokuvien sisarkansio. Sama juuri kuin
+ * kuvilla, jotta osoite muuttuu yhdestä paikasta (js/linssit/
+ * keksinnot.js KEKSINTO_KUVAJUURI).
+ */
+export const LINSSILUENTA_JUURI = `${KEKSINTO_KUVAJUURI}/puhe`;
+
+/**
+ * Kilahduksen ja luennan väli. Keksinnön kilahdus (js/aikajana.js
+ * keksinnonAani) soi ensin ja saa vaieta ennen kuin kertoja aloittaa —
+ * päällekkäin ne kuulostaisivat kolinalta.
+ */
+export const LUENNAN_VIIVE_MS = 350;
+
+/** Ensimmäinen kirjain isoksi ("noin 300 000…" → "Noin 300 000…"). */
+function isollaAlkuun(teksti) {
+  const t = String(teksti ?? '').trim();
+  return t ? t[0].toUpperCase() + t.slice(1) : t;
+}
+
+/** Tunnus tekstistä: pienaakkoset, tarkkeet pois, väliviivat väleistä. */
+function tunnukseksi(teksti) {
+  return String(teksti ?? '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+/**
+ * Pysäkin luennan tiedostorunko ilman päätettä.
+ *
+ * PUHDAS FUNKTIO — sama sekä pelissä että generointityökalussa
+ * (tools/generoi-linssiluennat.mjs). Palauttaa null, jos pysäkistä ei
+ * saa yksikäsitteistä nimeä.
+ */
+export function luennanRunko(t) {
+  /*
+   * MERKKIPAALU EI OTA RUNKOAAN KUVASTA, vaikka sillä olisi sellainen.
+   * Paalun kortille on tulossa isoisän oma studiomuotokuva
+   * (js/linssit/keksinnot.js), eikä se saa nimetä jo generoitua
+   * luentaa uudelleen: paalun runko on aina vuosi ja otsikko.
+   */
+  if (!t?.paalu) {
+    /*
+     * PYSÄKIN TUNNUS ENNEN KUVAA (7.9.2026). Runko luettiin ennen vain
+     * kortin kuvan tiedostonimestä, ja niin kauan kuin Ihmisen matkan
+     * löytökuva oli `esine/<tunnus>.jpg`, se osui tunnukseen. Kuvaputken
+     * toimitus 7.9.2026 vei löytökuvat omaan erähakemistoonsa nimillä
+     * `ihmisen-matka-esine-<tunnus>-r20260907.jpg`, jolloin luennan nimi
+     * olisi vaihtunut kuvan mukana ja ämpärissä jo olevat kaksikymmentä
+     * mp3:a olisivat jääneet soimatta — kuvan vaihtuminen ei saa nimetä
+     * ääntä uudelleen. Tunnus on pysäkin pysyvä nimi, joten se on
+     * ensisijainen; keksintökaaren pysäkeillä tunnusta ei ole, joten
+     * niiden rungot tulevat yhä kuvasta eivätkä muutu.
+     */
+    if (typeof t?.tunnus === 'string' && t.tunnus) return t.tunnus;
+    const osoite = t?.kuva?.osoite;
+    if (typeof osoite === 'string' && osoite) {
+      const nimi = osoite.split(/[?#]/)[0].split('/').pop() ?? '';
+      const runko = nimi.replace(/\.[a-z0-9]+$/i, '');
+      if (runko) return runko;
+    }
+  }
+  // Kuvaton pysäkki (merkkipaalu): vuosi ja otsikko.
+  if (!Number.isFinite(t?.vuosi) || !t?.otsikko) return null;
+  const hanta = tunnukseksi(t.otsikko);
+  return hanta ? `${t.vuosi}-${hanta}` : null;
+}
+
+/*
+ * ── KAAREN OMAT PUHEET ─────────────────────────────────────────────
+ *
+ * Pysäkkiluentojen lisäksi kaarella on kaksi omaa puhetta, ja
+ * kummankin teksti on DATASSA eikä koodissa:
+ *
+ *   ESITTELY     avausjakson laatikon selite (linssin
+ *                `aikajana.esittely.teksti`), luetaan kun musta ruutu
+ *                on noussut ja laatikko on esillä — Käynnistä-nappi
+ *                katkaisee sen (js/aikajana.js avaaAvausjakso).
+ *   VÄLINÄYTÖS   merkkipaalun pidempi kertojanteksti
+ *                (`tapahtuma.valinaytos.kertoja`), luetaan kun kello
+ *                pysähtyy paaluun ja laatikko nousee kartan keskelle.
+ *
+ * SAMA RUNKOSÄÄNTÖ KUIN PYSÄKEILLÄ: nimi johdetaan datasta, jotta peli
+ * ja generointityökalu (tools/generoi-linssiluennat.mjs) osuvat samaan
+ * tiedostoon ilman erillistä nimilistaa.
+ */
+
+/** Avausjakson esittelyn runko: kaarella on niitä yksi. */
+export const ESITTELYN_RUNKO = 'esittely';
+
+/**
+ * Loppusanojen runko. Loppusanat ovat kaikilla kaarilla, mutta LUENTA
+ * vain niillä, jotka pyytävät sen (`aikajana.loppupuhe: true`):
+ * keksintökaaren loppusanoja ei ole äänitetty, eikä työkalu saa
+ * tarjota niille maksullista kutsua eikä peli hakea tiedostoa, jota ei
+ * ole. Ihmisen matka pyytää (Fablen arvio 6.9.2026).
+ */
+export const LOPUN_RUNKO = 'loppu';
+
+/*
+ * ── KERTOMUS YHTENÄ KAARENA ────────────────────────────────────────
+ *
+ * Raamattu IHMISEN MATKA ON YKSI KAARI, EI PYSAKKEJA: Ihmisen matkan
+ * kertoja ei lue pysäkkirivejä vaan JAKSOJA, jotka soivat peräkkäin
+ * ilman pysähdystä (js/linssit/ihmisen-matka-kertomus.js). Jaksolla ei
+ * ole vuotta eikä muotokuvaa, joten runko ladotaan JAKSON TUNNUKSESTA
+ * ja kaaren omasta etuliitteestä (`aikajana.kertomusRunko`):
+ *
+ *   ihmisen-matka-kertomus-avaus.mp3
+ *   ihmisen-matka-kertomus-jebel-irhoud.mp3
+ *
+ * Etuliite on DATASSA eikä tässä: sama funktio palvelee seuraavaa
+ * kertomuslinssiä ilman muutosta. Peli (js/linssit/ihmisen-matka-esitys.js)
+ * ja työkalu (tools/generoi-linssiluennat.mjs --kertomus) lukevat saman
+ * funktion, joten nimi ei voi eriytyä.
+ */
+
+/** Kertomusjaksojen rungon oletusetuliite, jos kaari ei kerro omaansa. */
+export const KERTOMUKSEN_ETULIITE = 'kertomus';
+
+/**
+ * Kertomusjakson luennan tiedostorunko ilman päätettä.
+ *
+ * PUHDAS FUNKTIO — sama pelissä ja työkalussa. Palauttaa null, jos
+ * jaksolla ei ole tunnusta.
+ *
+ * @param {object} jakso IHMISEN_MATKA_KERTOMUS-alkio
+ * @param {string} [etuliite] kaaren `kertomusRunko`
+ * @returns {string|null}
+ */
+export function kertomuksenRunko(jakso, etuliite = KERTOMUKSEN_ETULIITE) {
+  const tunnus = typeof jakso?.id === 'string' ? jakso.id.trim() : '';
+  const alku = String(etuliite ?? '').trim() || KERTOMUKSEN_ETULIITE;
+  return tunnus ? `${alku}-${tunnus}` : null;
+}
+
+/**
+ * KERTOJAN NOPEUS ILMAN ÄÄNITETTÄ. Kun jakson mp3 puuttuu tai sen
+ * kestoa ei ehditä lukea, jakson pituus arvioidaan tekstistä: 14
+ * merkkiä sekunnissa on sama luku, jolla pulun kuplien lukuaika on
+ * mitattu (js/livia.js livianKuplanLukuaika) ja jonka
+ * tools/generoi-pulu.mjs käyttää arviossaan. Esitys ei siis pysähdy
+ * siihen, ettei ääntä ole — se kulkee luetun mittaisena.
+ */
+export const KERTOMUKSEN_MERKKIA_SEKUNNISSA = 14;
+
+/**
+ * Jakson kesto millisekunteina tekstin pituudesta.
+ *
+ * @param {object} jakso IHMISEN_MATKA_KERTOMUS-alkio
+ * @param {number} [pohja] lyhinkin jakso saa tämän verran aikaa
+ * @returns {number} kesto ms
+ */
+export function kertomuksenVarakesto(jakso, pohja = 2500) {
+  const merkit = String(jakso?.teksti ?? '').trim().length;
+  return Math.max(pohja, Math.round((merkit / KERTOMUKSEN_MERKKIA_SEKUNNISSA) * 1000));
+}
+
+/**
+ * Kertomuksen luennat yhtenä listana: sama funktio pelissä ja
+ * työkalussa (vrt. kaarenPuheet).
+ *
+ * @param {object} kaari linssin `aikajana`-lohko
+ * @returns {Array<{avain:string, runko:string, nimi:string, teksti:string, puhe:string}>}
+ */
+export function kertomuksenLuennat(kaari) {
+  const etuliite = kaari?.kertomusRunko ?? KERTOMUKSEN_ETULIITE;
+  const rivit = [];
+  for (const jakso of kaari?.kertomus ?? []) {
+    const runko = kertomuksenRunko(jakso, etuliite);
+    const teksti = String(jakso?.teksti ?? '').trim();
+    if (!runko || !teksti) continue;
+    rivit.push({
+      avain: jakso.id,
+      runko,
+      nimi: `${runko}.mp3`,
+      teksti,
+      // Luenta on kaanonin oma tagitettu muoto (eleven_v3); ilman sitä
+      // malli saa saman tekstin ilman tageja.
+      puhe: String(jakso?.luenta ?? teksti).trim(),
+    });
+  }
+  return rivit;
+}
+
+/** Välinäytöksen runko, esim. `valinaytos-1873`. Null ilman välinäytöstä. */
+export function valinaytoksenRunko(t) {
+  if (!t?.valinaytos?.kertoja || !Number.isFinite(t?.vuosi)) return null;
+  return `valinaytos-${t.vuosi}`;
+}
+
+/**
+ * KAAREN OMAT PUHEET yhtenä listana: sama funktio pelissä ja
+ * työkalussa. `avain` on komentorivin valitsin (--pysakit esittely).
+ *
+ * @param {object} kaari linssin `aikajana`-lohko
+ * @returns {Array<{avain:string, runko:string, nimi:string, teksti:string}>}
+ */
+export function kaarenPuheet(kaari) {
+  const puheet = [];
+  const esittely = String(kaari?.esittely?.teksti ?? '').trim();
+  if (esittely) {
+    puheet.push({
+      avain: 'esittely', runko: ESITTELYN_RUNKO, nimi: `${ESITTELYN_RUNKO}.mp3`, teksti: esittely,
+    });
+  }
+  for (const t of kaari?.tapahtumat ?? []) {
+    const runko = valinaytoksenRunko(t);
+    const teksti = String(t?.valinaytos?.kertoja ?? '').trim();
+    if (runko && teksti) {
+      puheet.push({
+        avain: 'valinaytos', runko, nimi: `${runko}.mp3`, teksti,
+      });
+    }
+  }
+  const loppu = String(kaari?.loppusanat?.teksti ?? '').trim();
+  if (kaari?.loppupuhe && loppu) {
+    puheet.push({
+      avain: 'loppu', runko: LOPUN_RUNKO, nimi: `${LOPUN_RUNKO}.mp3`, teksti: loppu,
+    });
+  }
+  return puheet;
+}
+
+/** Kaaren puheiden valitsimet komentorivillä (--pysakit esittely). */
+export const KAAREN_AVAIMET = ['esittely', 'valinaytos', 'loppu'];
+
+/** Pysäkin luennan tiedostonimi ämpärissä. */
+export function luennanTiedosto(t) {
+  const runko = luennanRunko(t);
+  return runko ? `${runko}.mp3` : null;
+}
+
+/**
+ * Pysäkin luennan koko osoite ämpärissä.
+ *
+ * `juuri` on KAAREN oma luentakansio: keksinnöillä muotokuvien
+ * sisarkansio (oletus), uudella aikajanalinssillä sen oma kansio
+ * (linssin `aikajana.luentajuuri`). Ilman tätä toisen kaaren ajo
+ * soittaisi keksintöjen luennat.
+ */
+export function luennanOsoite(t, juuri = LINSSILUENTA_JUURI) {
+  const nimi = luennanTiedosto(t);
+  return nimi ? `${juuri}/${nimi}` : null;
+}
+
+/**
+ * Luennan osat siinä järjestyksessä kuin ne luetaan.
+ *
+ * KAKSI KAARTA, KAKSI RIVIÄ (Fablen ohje 6.9.2026). Keksinnöillä rivi
+ * on "vuosi. keksijä. keksintö."; "vuotta sitten" -kaarella ei ole
+ * vuosilukua eikä henkilöä, ja pysäkin tunnistaa AIKA JA PAIKKA:
+ * "Noin 300 000 vuotta sitten. Kasvot, jotka tunnistaisi — Jebel
+ * Irhoud, Marokko." Yksi lyhyt lause, ei kahta — luenta soi kortin
+ * vaihtuessa, ja pidempi teksti jäisi seuraavan pysäkin alle.
+ */
+function luennanOsat(t) {
+  if (!t) return [];
+  if (t.ajoitus && t.paikka) {
+    const paikka = [t.paikka, t.maa].filter(Boolean).join(', ');
+    const otsikko = [t.otsikko, paikka].filter(Boolean).join(' — ');
+    return [isollaAlkuun(t.ajoitus), otsikko]
+      .map((osa) => String(osa ?? '').trim().replace(/[.\s]+$/, ''))
+      .filter(Boolean);
+  }
+  // Merkkipaalulla ei ole keksijää — `henkilo` on siinä tapahtuman
+  // kuvaus ('Isoisä lähtee matkaan'), ei nimi, eikä sitä lueta.
+  const osat = t.paalu
+    ? [t.vuosi, t.otsikko, t.alaotsikko]
+    : [t.vuosi, t.henkilo, t.otsikko];
+  return osat
+    .map((osa) => String(osa ?? '').trim().replace(/[.\s]+$/, ''))
+    .filter(Boolean);
+}
+
+/**
+ * Luettava teksti: "<vuosi>. <henkilö>. <keksintö>."
+ * Esimerkiksi "1769. James Watt. Höyrykoneen lauhdutin."
+ */
+export function luennanTeksti(t) {
+  const osat = luennanOsat(t);
+  return osat.length ? `${osat.join('. ')}.` : null;
+}
+
+/** Tauko pisteiden kohdalla (eleven_v3 tukee break-tagia). */
+export const LUENNAN_TAUKO = '<break time="0.4s" />';
+
+/*
+ * VUOSILUKU SANOINA MALLILLE (omistajan havainto 4.9.2026: *"Lukija
+ * muuten lukee väärin ainakin 1700-luvun vuosiluvut. Jostain sanoi
+ * 1900 jotain."*). Numeroina annettu vuosi jää mallin arvattavaksi;
+ * sanoina se ei voi mennä väärin. Näytöllä vuosi on yhä numeroina —
+ * tämä koskee vain puhetekstiä (luennanPuhe, puheeksi).
+ */
+const YKSIKOT = ['', 'yksi', 'kaksi', 'kolme', 'neljä', 'viisi', 'kuusi', 'seitsemän', 'kahdeksan', 'yhdeksän'];
+
+/** 1–999 suomeksi yhteen kirjoitettuna (satojen ja kymmenten osa). */
+function alleTuhat(n) {
+  if (!n) return '';
+  let sanat = '';
+  const sadat = Math.floor(n / 100);
+  const kymmenet = Math.floor((n % 100) / 10);
+  const ykkoset = n % 10;
+  if (sadat) sanat += sadat === 1 ? 'sata' : `${YKSIKOT[sadat]}sataa`;
+  if (kymmenet === 1) sanat += ykkoset ? `${YKSIKOT[ykkoset]}toista` : 'kymmenen';
+  else {
+    if (kymmenet) sanat += `${YKSIKOT[kymmenet]}kymmentä`;
+    if (ykkoset) sanat += YKSIKOT[ykkoset];
+  }
+  return sanat;
+}
+
+/**
+ * 0–999 999 suomeksi yhteen kirjoitettuna: 300 000 →
+ * kolmesataatuhatta, 14 500 → neljätoistatuhattaviisisataa.
+ *
+ * "VUOTTA SITTEN" -KAAREN LUVUT OVAT SUURIA (Fablen ohje 6.9.2026:
+ * *"ota oppia ensimmäisestä linssistä"*). Sama syy kuin
+ * vuosiSanoinalla: numeroina annettu luku jää mallin arvattavaksi, ja
+ * "300 000" luetaan helposti nollina. Sanoina se ei voi mennä väärin.
+ */
+export function lukuSanoina(luku) {
+  const n = Number(luku);
+  if (!Number.isInteger(n) || n < 0 || n > 999999) return String(luku);
+  if (n === 0) return 'nolla';
+  const tuhannet = Math.floor(n / 1000);
+  let sanat = '';
+  if (tuhannet === 1) sanat = 'tuhat';
+  else if (tuhannet) sanat = `${alleTuhat(tuhannet)}tuhatta`;
+  return sanat + alleTuhat(n % 1000);
+}
+
+/** 1000–2999 suomeksi yhteen kirjoitettuna: 1769 → tuhatseitsemänsataakuusikymmentäyhdeksän. */
+export function vuosiSanoina(vuosi) {
+  const v = Number(vuosi);
+  if (!Number.isInteger(v) || v < 1000 || v > 2999) return String(vuosi);
+  return lukuSanoina(v);
+}
+
+/** Vaihtaa tekstin nelinumeroiset vuosiluvut sanoiksi (välit ja ajatusviivat säilyvät). */
+export function puheeksi(teksti) {
+  return String(teksti ?? '').replace(/\b(1\d{3}|2\d{3})\b/g, (m) => vuosiSanoina(m));
+}
+
+/**
+ * AJOITUS PUHEEKSI: myös välilyönnein ryhmitellyt suuret luvut.
+ * "noin 300 000 vuotta sitten" → "noin kolmesataatuhatta vuotta
+ * sitten", "noin 1250–1300 jaa." → vuosiluvut sanoina. Ryhmitys
+ * puretaan ennen muunnosta, muu teksti (ajatusviivat, "vuotta
+ * sitten") jää sellaisenaan.
+ */
+export function ajanSanat(teksti) {
+  return String(teksti ?? '').replace(/\d{1,3}(?:[\s\u00a0]\d{3})+|\d+/g, (m) => {
+    const luku = Number(m.replace(/[\s\u00a0]/g, ''));
+    return Number.isInteger(luku) && luku <= 999999 ? lukuSanoina(luku) : m;
+  });
+}
+
+/**
+ * Sama teksti mallille lähetettävässä muodossa: pieni tauko jokaisen
+ * pisteen kohdalle, jottei vuosi, nimi ja keksintö sula yhdeksi
+ * pötköksi.
+ */
+export function luennanPuhe(t) {
+  const osat = luennanOsat(t);
+  if (!osat.length) return null;
+  // Aika sanoina, muu sellaisenaan: vuosiluku (keksinnöt) tai koko
+  // ajoitusteksti suurine lukuineen ("vuotta sitten" -kaari).
+  const aikaSanoiksi = t?.ajoitus && t?.paikka ? ajanSanat : vuosiSanoina;
+  const puhuttavat = osat.map((osa, k) => (k === 0 ? aikaSanoiksi(osa) : osa));
+  return `${puhuttavat.join(`. ${LUENNAN_TAUKO} `)}.`;
+}
+
+/**
+ * Pysäyttää käynnissä olevan (tai vasta alkavan) linssiluennan ja
+ * vapauttaa taustan väistön. Turvallista kutsua monta kertaa.
+ */
+export function pysaytaLinssiluenta(ui) {
+  if (!ui) return false;
+  if (ui.linssiluentaAjastin) {
+    clearTimeout(ui.linssiluentaAjastin);
+    ui.linssiluentaAjastin = null;
+  }
+  const audio = ui.linssiluenta;
+  ui.linssiluenta = null;
+  if (!audio) return false;
+  pulunKuuntelut.get(audio)?.();
+  pulunKuuntelut.delete(audio);
+  try {
+    audio.pause();
+    audio.removeAttribute('src');
+  } catch {
+    /* soitin oli jo purettu */
+  }
+  // Pysäytetty äänite ei laukaise 'ended'- eikä 'error'-tapahtumaa,
+  // joten puhujan rooli on vapautettava käsin — muuten tausta ja
+  // linssin raita jäisivät pysyvästi väistöön.
+  ui.luennat?.delete(audio);
+  vapautaPuhuja(ui, audio);
+  irrotaLinssiluennanVahvistin(audio);
+  return true;
+}
+
+/**
+ * Soittaa pysäkin luennan kertojan äänellä. Kutsutaan VAIN elävästä
+ * syttymisestä (js/aikajana.js sytyta) — pysäytetyn kellon selailu
+ * (siirry) ei lue ääneen, koska pelaaja selaa silloin itse.
+ *
+ * Puuttuva tiedosto on hiljainen: luenta voi puuttua kokonaiselta
+ * kaarelta, eikä se ole virhe vaan tila.
+ *
+ * `runko` ohittaa pysäkin oman nimen: kaaren omat puheet (esittely,
+ * välinäytös) soitetaan samalla soittimella samasta kansiosta, ja vain
+ * tiedostonimi tulee muualta (ks. kaarenPuheet).
+ *
+ * `valmistele` saa soittimen heti sen synnyttyä ja ENNEN soittoa.
+ * Ihmisen matkan yhtenäinen luenta kelaa siinä jakson alkuun
+ * (js/linssit/ihmisen-matka-luenta.js): koko kertomus on yhtenä
+ * tiedostona, ja jakso on sen yksi väli. Kelaus ennen soittoa on
+ * HTML-määritelmän mukaan toiston oletusaloituskohta, joten se pätee
+ * myös ennen metatietoja — pysäyttäminen soiton jälkeen sen sijaan
+ * keskeyttäisi play()-lupauksen ja purkaisi taustan väistön.
+ *
+ * @returns {HTMLAudioElement|null} soittimen kahva, tai null jos
+ *   luentaa ei aloitettu
+ */
+/**
+ * TEKSTIN TIIVISTE VERSIOKYSELYKSI (9.9.2026). Kaaren omat puheet
+ * (esittely, loppu) säilyttävät tiedostonimensä, kun teksti kirjoitetaan
+ * uusiksi ja luenta generoidaan uudelleen — ja palvelutyöntekijän
+ * äänikori (sw.js AANICACHE) on välimuisti ensin, joten ilman
+ * versiokyselyä selain lukisi vanhaa tekstiä. Sama FNV-1a kuin pulun
+ * repliikeillä (js/liviapuhe.js livianTiiviste); ämpäri ohittaa kyselyn.
+ */
+export function puheenTiiviste(teksti) {
+  let h = 0x811c9dc5;
+  for (const merkki of String(teksti ?? '').trim()) {
+    h ^= merkki.codePointAt(0);
+    h = Math.imul(h, 0x01000193) >>> 0;
+  }
+  return h.toString(16).padStart(8, '0');
+}
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * LINSSILUENNAN TASO: SE POLKU, JOTA SELAIN TOTTELEE
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Linssiluenta on soinut perustasollaan `audio.volumen` kautta, ja
+ * iOS:n WebKit EI TOTTELE sitä: kirjoitus menee läpi ilman virhettä ja
+ * lukema palaa ykköseksi (mittaus ja perustelu js/musiikkivahvistin.js,
+ * omistajan kaksi vikailmoitusta 8.9. ja 9.9.2026). Puhelimessa
+ * linssiluenta on siis soinut TIEDOSTON OMALLA TASOLLA, eikä
+ * Lukija-liuku (js/luenta.js paivitaLuentojenVoima) ole tavoittanut
+ * sitä lainkaan.
+ *
+ * ------------------------------------------------------------------
+ * MITATTU 14.9.2026: TIEDOSTOJEN PÄISSÄ EI OLE NAKSAHDUSTA
+ * ------------------------------------------------------------------
+ *
+ * Kolme linssiluentaa ämpäristä, dekoodattuna (mpg123-decoder):
+ *
+ *   1769-james-watt          loppu 50 ms −∞ dBFS, viim. näyte 0,000000
+ *   1783-joseph-montgolfier  loppu 50 ms −∞ dBFS, viim. näyte 0,000000
+ *   1796-edward-jenner       loppu 50 ms −∞ dBFS, viim. näyte 0,000000
+ *
+ * Loppuhiljaisuutta 151–164 ms, alkuhiljaisuutta 2–7 ms, alun 20 ms
+ * huippu −32…−56 dBFS. Linssiluenta käyttäytyy siis kuin Livian
+ * repliikit eikä kuin kertojan matkakirjaluenta (jonka loppuhiljaisuus
+ * on 0,0 ms ja viimeinen näyte kuuluvalla tasolla). LOPPUHÄIVYTYSTÄ EI
+ * SIKSI LISÄTTY — sitä ei tarvita, eikä tämä erä muuta luentalogiikkaa.
+ *
+ * ------------------------------------------------------------------
+ * KAKSI REITTIÄ, VALINTA MITTAAMALLA
+ * ------------------------------------------------------------------
+ *
+ * `volumeToimii()` kysyy selaimelta kokeella (ei user-agentista),
+ * meneekö volume-kirjoitus perille.
+ *
+ *   TOTTELEE (työpöytä, Android) → `audio.volume` kuten ennen: ei uusia
+ *     solmuja, ei crossOriginia, pyyntö tavu tavulta entinen.
+ *   EI TOTTELE (iOS) → elementti reititetään pelin OMAN äänikontekstin
+ *     (js/sound.js sfx.ensureContext) vahvistimen läpi ja taso menee
+ *     gainiin. Sama ketju kuin musiikilla, äänimaisemalla ja Livian
+ *     puheella.
+ *
+ * `crossOrigin` on asetettava ENNEN srciä, ja se asetetaan vain
+ * reitittävällä polulla. Ämpäri peilaa Originin (mitattu 14.9.2026),
+ * joten lupa saadaan. Jos reititys ei onnistu (konteksti nukkuu, ei
+ * elettä vielä), taso jää volumeen kuten ennen: hiljaisuutta ei
+ * koskaan valita tason takia.
+ *
+ * VAHVISTIN TALLETETAAN NIMELLÄ `luennanVahvistin` — samalla, jota
+ * js/luenta.js:n tasonasetus käyttää. Silloin Lukija-liu'un kesken
+ * nauhaa tekemä päivitys (paivitaLuentojenVoima) löytää reititetyn
+ * linssiluennan gainin heti kun sekin siirtyy samaan reittiin, eikä
+ * kahta eri nimeä tarvitse sovitella jälkikäteen.
+ */
+
+/** Tottelisiko tämä selain elementin omaa volumea? (iOS: ei) */
+function linssinVolumeToimii() {
+  try {
+    return volumeToimii();
+  } catch {
+    return true;
+  }
+}
+
+/**
+ * Linssiluennan nykyinen taso siltä polulta, jota se käyttää.
+ * @param {HTMLAudioElement} audio
+ * @returns {number}
+ */
+export function linssiluennanTaso(audio) {
+  if (!audio) return 0;
+  const vahvistin = audio.luennanVahvistin;
+  if (vahvistin) return Number(vahvistin.gain.value) || 0;
+  return Number(audio.volume) || 0;
+}
+
+/**
+ * Asettaa linssiluennan tason oikeaan paikkaan: vahvistimeen jos
+ * elementti on reititetty, muuten elementin volumeen.
+ * @param {HTMLAudioElement} audio
+ * @param {number} arvo
+ */
+export function asetaLinssiluennanTaso(audio, arvo) {
+  if (!audio) return;
+  const taso = Math.max(0, Math.min(1, Number(arvo) || 0));
+  const vahvistin = audio.luennanVahvistin;
+  if (vahvistin) {
+    try {
+      vahvistin.gain.value = taso;
+      return;
+    } catch {
+      /* konteksti kiinni — kirjoitetaan volumeen */
+    }
+  }
+  try {
+    audio.volume = taso;
+  } catch {
+    /* selain ei kelpuuta arvoa — luenta soi silti */
+  }
+}
+
+/** Purkaa reitityksen. Turvallista kutsua monta kertaa. */
+function irrotaLinssiluennanVahvistin(audio) {
+  if (!audio?.luennanVahvistin) return;
+  audio.luennanVahvistin = null;
+  irrotaMusiikinVahvistin(audio);
+}
+
+/**
+ * Linssiluennan soitin: elementti ilman srciä ensin, koska
+ * `crossOrigin` on asetettava ENNEN srciä — ja se asetetaan vain
+ * silloin, kun luenta aiotaan reitittää vahvistimen läpi.
+ *
+ * @param {string} osoite valmis ääniosoite
+ * @param {number} taso aloitustaso
+ * @returns {HTMLAudioElement}
+ */
+function linssiluennanSoitin(osoite, taso) {
+  const audio = new Audio();
+  if (!linssinVolumeToimii()) audio.crossOrigin = 'anonymous';
+  audio.preload = 'auto';
+  audio.src = osoite;
+  if (!linssinVolumeToimii()) {
+    const vahvistin = liitaMusiikkiin(audio);
+    if (vahvistin) audio.luennanVahvistin = vahvistin;
+  }
+  asetaLinssiluennanTaso(audio, taso);
+  return audio;
+}
+
+export function soitaLinssiluenta(ui, t, {
+  viive = LUENNAN_VIIVE_MS, runko = null, juuri = LINSSILUENTA_JUURI, valmistele = null,
+  versio = null,
+} = {}) {
+  pysaytaLinssiluenta(ui);
+  if (!ui || (!t && !runko) || typeof Audio === 'undefined') return null;
+  // Kertojan kytkin on yksi ja sama koko pelissä (js/luenta.js).
+  if (!luentaKytkinPaalla()) return null;
+  // Radiotilassa ei kaksi ääntä päällekkäin — sama ehto kuin
+  // matkakirjaluennalla.
+  if (ui.radioModuuli && !ui.radioModuuli.luentaSallittu()) return null;
+  const url = runko ? `${juuri}/${runko}.mp3${versio ? `?v=${versio}` : ''}` : luennanOsoite(t, juuri);
+  if (!url) return null;
+
+  const audio = linssiluennanSoitin(url, puheVoima());
+  ui.linssiluenta = audio;
+  // Yhteinen soitin kattaa myös Ihmisen matkan yhtenäisen äänitteen.
+  // Vain todellinen playing aloittaa eleen; lataus/viive eivät puhu.
+  const lopetaKuuntelu = seuraaLivianKuuntelua(audio, () => ui.linssiluenta === audio,
+    () => t ? luennanTeksti(t) : '', { lahde: 'linssiluenta' });
+  pulunKuuntelut.set(audio, lopetaKuuntelu);
+  // Kirjanpito kaikkiin luentoihin: taustalle menevä peli hiljentää
+  // myös tämän (js/luenta.js taustaHiljennaLuennat).
+  (ui.luennat ??= new Set()).add(audio);
+  // Tausta ja linssin oma raita väistyvät puheen ajaksi. Merkintä
+  // ennen soittoa, jotta se pariutuu vapautuksen kanssa myös silloin
+  // kun soitto ei koskaan käynnisty.
+  merkitsePuhuja(ui, audio);
+  const vapaaksi = () => {
+    lopetaKuuntelu();
+    pulunKuuntelut.delete(audio);
+    ui.luennat?.delete(audio);
+    if (ui.linssiluenta === audio) ui.linssiluenta = null;
+    // Reititys on yksisuuntainen: purkamatta jäänyt ketju pitäisi
+    // kuolleen elementin muistissa.
+    irrotaLinssiluennanVahvistin(audio);
+  };
+  audio.addEventListener('ended', vapaaksi);
+  audio.addEventListener('error', vapaaksi);
+  // Kutsujan valmistelu (esim. kelaus jakson alkuun) ennen soittoa.
+  if (typeof valmistele === 'function') valmistele(audio);
+
+  const aloita = () => {
+    ui.linssiluentaAjastin = null;
+    if (ui.linssiluenta !== audio) return;
+    audio.play().then(() => {
+      // play() on asynkroninen: jos luenta ehti vaihtua, myöhässä
+      // herännyt ääni pysäytetään heti.
+      if (ui.linssiluenta !== audio) audio.pause();
+    }).catch(() => {
+      /*
+       * Puuttuva tiedosto tai eleeseen sitomaton soitto: hiljaisuus,
+       * ei virhettä. Käynnistymätön ääni ei laukaise omia
+       * tapahtumiaan, joten 'error' lähetetään käsin — muuten
+       * puhujan rooli ja taustan väistö jäisivät päälle.
+       */
+      audio.dispatchEvent(new Event('error'));
+    });
+  };
+  if (viive > 0) ui.linssiluentaAjastin = setTimeout(aloita, viive);
+  else aloita();
+  return audio;
+}

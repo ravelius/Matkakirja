@@ -144,6 +144,47 @@ jobs:
       # Allekirjoitus tarvitsee avainnipun, johon Apple tallettaa luomansa
       # varmenteen. Ajurin oletusnippua ei käytetä: oma nippu on avoinna
       # koko ajon ja katoaa ajon mukana.
+      # 6.9.2026: jokainen ajo tuoreella runnerilla luo tilille uuden
+      # kehityssertifikaatin (-allowProvisioningUpdates), ja kiintiö täyttyi
+      # 11 ajon jälkeen ("Choose a certificate to revoke"). Edellisten ajojen
+      # sertifikaatit ovat kuolleita (avain katosi runnerin mukana), joten ne
+      # perutaan ennen arkistointia. Jakelusertifikaatteihin ei kosketa.
+      # Sama logiikka kuin ios-sertit-siivous.yml:ssä. Ei kaada ajoa.
+      - name: Peru edellisten ajojen kehityssertifikaatit
+        continue-on-error: true
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet "pyjwt[crypto]==2.9.0"
+          python3 - <<'PY'
+          import os, sys, time, json, urllib.request, urllib.error
+          import jwt
+          kid = os.environ['ASC_KEY_ID']; iss = os.environ['ASC_ISSUER_ID']
+          avain = open(os.environ['ASC_AVAIN_POLKU']).read()
+          def tunnus():
+              nyt = int(time.time())
+              return jwt.encode({'iss': iss, 'iat': nyt, 'exp': nyt + 600, 'aud': 'appstoreconnect-v1'}, avain, algorithm='ES256', headers={'kid': kid, 'typ': 'JWT'})
+          def kutsu(metodi, polku):
+              req = urllib.request.Request('https://api.appstoreconnect.apple.com' + polku, method=metodi,
+                                           headers={'Authorization': 'Bearer ' + tunnus(), 'Accept': 'application/json'})
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as v:
+                      data = v.read(); return v.status, (json.loads(data) if data else {})
+              except urllib.error.HTTPError as e:
+                  return e.code, {}
+          tila, d = kutsu('GET', '/v1/certificates?limit=200')
+          if tila != 200:
+              print('sertifikaattien listaus ei onnistunut', tila); sys.exit(0)
+          KEHITYS = {'DEVELOPMENT', 'IOS_DEVELOPMENT', 'MAC_APP_DEVELOPMENT'}
+          n = 0
+          for s in d.get('data', []):
+              if s['attributes'].get('certificateType') in KEHITYS:
+                  t2, _ = kutsu('DELETE', '/v1/certificates/' + s['id']); n += (t2 == 204)
+          print(f'peruttu {n} kehityssertifikaattia')
+          PY
+
       - name: Luo väliaikainen avainnippu
         run: |
           set -euo pipefail

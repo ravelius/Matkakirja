@@ -1,0 +1,5067 @@
+# Karttapallo pelilautana — arkkitehtuuri ja vaiheistus
+
+*(Moduuli: Kartta (js/pallo.js, js/kartta.js). Linjaukset: Raamattu ›
+Fokusmoodi › KARTTAPALLO-kohdat (4.–5.9.2026), SIIRRON KOREOGRAFIA,
+JOKAINEN NAKYVA KARTTAMERKKI ON NIMETTY JA NAPAUTETTAVA, KAIKKI LIIKE
+ANIMOIDAAN PEHMEASTI; Karttalinssit; Jakelu ja iOS-kuori. Tämä
+dokumentti kertoo MITEN — ristiriidassa Raamattu voittaa. Laatija
+Fablemax 5.9.2026; SITOVA vasta kun päätoimittaja ja omistaja ovat
+hyväksyneet luvun 7 vaiheistuksen. Raamattuun tarvittava kirjaus on
+luvussa 8 ehdotuksena — sitä ei ole kirjoitettu.)*
+
+## 0. Omistajan linjaukset 5.9.2026, sanatarkasti
+
+1. *"Voisiko pallon vaihtaa pelin kartaksi suoraan?"* ja Fablen arvion
+   jälkeen *"Linssit voi olla vanhalla kartalla."*
+2. Lisäehdot samana päivänä: *"Kunhan vanha kartta pysyy pois tieltä
+   eikä hidasta ollenkaan uuden kartan toimintaa. Mutta jos pallo ei
+   toimi niin pidetään optio palauttaa se."*
+
+Tulkinta, joka sitoo koko suunnitelmaa: (a) karttapallosta tulee PELIN
+PÄÄLAUTA; (b) tasokartta (js/kartta.js + SVG-kerrokset) jää olemaan
+LINSSIKARTTANA, joka luodaan vasta kun linssi valitaan laukusta, ja
+puretaan kun siitä palataan — se ei elä taustalla; (c) yhdellä
+kytkimellä vanha kartta palaa oletuslaudaksi ilman koodimuutoksia
+muualle, ja pelitila (tallennus) on sama kummallakin laudalla. Kohdat
+(b) ja (c) ovat jokaisen vaiheen hyväksymisehto (luku 7).
+
+3. Vaiheen 1 julkaisun jälkeen (v1553): *"Ota vanha kartta jo heti
+   kokonaan pois ja korvaa pallolla. Ei haittaa vaikka peli ei toimi."*
+   → LAUTA_OLETUS = 'pallo' v1554:stä alkaen; vaihe 6 ohitettiin, ja
+   vaiheet 2–5 valmistuvat pelin ollessa jo pallolla. Samalla *"saako
+   pallon piirtämän kuvan röpeliäisyyttä pois vaikka sitten kun liike
+   pysähtyy"* → laatunosto levossa (js/pallo.js asennaLaatunosto).
+4. v1554:n jälkeen: *"pelissä periaatteessa voisi olla lopulta kytkin,
+   millä pelaaja voisi valita haluaako pelata pallonäkymässä vai sillä
+   meidän vanhalla kartalla sitten kun ollaan saatu pallo toimimaan."*
+   → pelaajan asetus vaiheen 5 jälkeen (luku 7, uusi vaihe 6).
+5. *"etusivun kartan voi pitää aluksi vielä vanhassa mutta sitten kun
+   ehditään tehdä uusi, niin siihen kannattaa varmaan renderöidä oma
+   spesifi zoomattu pallo joka pyörii hitaasti lontoosta kohti aasiaa,
+   mutta on jo renderöity blurrattuna, jotta efekti ei vie etusivulla
+   tehoja. ja siinä lentokone voisi lentää eri kaupunkien välillä samalla
+   kun pallo pyörii ja piirtää paksua punaista viivaa ja aina ei
+   kaupunkien välillä kun kone laskeutuu, tulee uusi isoisän aikalaiskuva
+   jonnekin kartan ulkopuolelle pienellä, niin että ei jää etusivun
+   tekstin päälle. kone jatkaa automaattisesti lentoa uuteen kohteeseen
+   pysähtymättä, muuttaa vain hieman suuntaa."* → vaihe 5 (avaus)
+   täsmentyy: etusivun pallo on ESIRENDERÖITY (sumennettu kuvasarja tai
+   video pallon laatoista, Lontoo → Aasia), ei elävä WebGL-pallo; kone,
+   punainen viiva ja isoisän kuvat ovat eläviä DOM/SVG-elementtejä sen
+   päällä. Aloituslento pelin alussa on eri asia ja pysyy pallolla.
+6. Linssi-idea B7 (docs/linssikatalogi.md): *"voidaan näyttää esim.
+   afrikan kohdalla pallon päällä sitä kaikkein vanhinta projisointi
+   mallia 1500-luvulta ja osoittaa miten pielessä se on."* → oma linssi
+   pallolle vaiheen 3 jälkeen (vanha kartta verhottuna pallon pinnalle,
+   liukusäädin).
+
+Aiemmat Raamatun kirjaukset, jotka tämä KUMOAA tai TÄSMENTÄÄ, on
+listattu luvussa 8 — ne on kirjattava Raamattuun ennen vaihetta 6.
+
+## 1. Tavoitetila yhdellä sivulla
+
+**Pallo on lauta.** Globe.gl 2.46 (three.js, MIT, ämpäristä) piirtää
+pelin julisteen Web Mercator -laattoina (Z0–Z7, nostotasollinen sarja
+Z6–Z7:llä: nimet ja karttanostot poltettuina). Pallon päällä ovat
+PELIN merkit: 261 kaupunkia (piste + nimi), pelaajan nappula,
+nopanheiton kohteet, valittu reitti askelhelmineen, lentokaari, elävät
+(vielä polttamattomat) nostot, Matkakirjan ihmeiden tähdet ja
+kohtaamispiste. Kaupungin napautus avaa kaupunkilehden (openArrival),
+Liiku-rivi, noppa, siirron koreografia (ennakkozoomi → trapetsiajo →
+nappula 300 ms kameran jälkeen), siirtymämusiikki, laiva, lento ja
+saapumissekvenssi toimivat pallolla samoin kuin tasolaudalla. Kamera on
+pallon pointOfView omalla tweenillä. Pöllö, Livian kuplat, toimintorivi,
+matkalaukku, lehdet ja kohdekartat ovat DOM-pintoja pallon päällä
+täsmälleen kuten ennen — ne eivät tiedä laudasta mitään.
+
+**Tasokartta on linssikartta.** Linssin valinta laukusta avaa
+tasokartan kuoreen pallon päälle (sama malli kuin nykyinen
+.pallo-kuori, roolit vaihtaen): linssit (js/linssit/*, kerros ja tila:
+keksinnöt-aikajana, radio, vertailu, maatiedot, topografia, vesistöt)
+toimivat siellä ennallaan, kamera lähtee pallon näkymästä
+(luku 5). "Sulje linssi" purkaa kuoren ja palauttaa pallon; kamera
+palaa pallolle siitä, mihin linssikartta jäi.
+
+**Mitä EI siirretä:** linssimoottori ja linssisopimus
+(docs/moduulit/linssit.md), aikajana (js/aikajana.js), kohdekartat
+(js/nahtavyydet.js, js/karttazoom.js), lehtien sää (js/saa.js on
+kaupunkilehden etusivun sää, ei kartan), fokusmitat (maataulu,
+mittajana, asteikot — ne ovat tasokartan kalusteita ja jäävät
+linssikartalle; pallolla mittakaava luetaan korkeudesta, luku 4),
+maatummennus, aloitussivun pienoiskartta (INTRO_SPACE-asettelu).
+Pelisäännöt (js/game.js, js/rules.js) eivät muutu riviäkään.
+
+**Mikä pysyy totena molemmilla laudoilla:** laudan (x, y)
+lautayksiköissä on ainoa paikkatotuus (kaupungit, reitit, nostot);
+pallo laskee asteet niistä (js/fokusmitat.js laudaltaAsteiksi) eikä
+tallenna omia koordinaatteja mihinkään.
+
+## 2. Kaksi lautaa, yksi pelitila — kytkin ja palautusoptio
+
+Omistajan ehto: *"jos pallo ei toimi niin pidetään optio palauttaa se."*
+
+- **Yksi valinta, kolme lähdettä, yksi vakio.** `js/ui-apurit.js`:
+  `export const LAUTA_OLETUS = 'kartta'` (vaiheessa 6 → `'pallo'`) ja
+  `lautaValinta()` = URL `?lauta=pallo|kartta` › localStorage
+  `matkakirja-lauta` › LAUTA_OLETUS, muistettuna kuten
+  kehittajaTilaPaalla (ei levyluku joka kehyksessä). Kehittäjävalikkoon
+  vipu "Lauta: pallo / kartta" (js/main.js kuuntelija, index.html
+  rivi, sama malli kuin kehittäjämaailma). Palautus tuotantoon = yhden
+  vakion vaihto, ei muita koodimuutoksia.
+- **Automaattinen varapolku ei kirjoita valintaa.** Jos Globe.gl ei
+  lataudu (ei verkkoa, WebGL puuttuu, WKWebView tappoi kontekstin) tai
+  ollaan yhden tiedoston versiossa (dynaaminen tuonti kaatuu kuten
+  linsseillä), peli käynnistää tasokartan TÄLLE istunnolle ja näyttää
+  yhden rivin ("Karttapallo ei latautunut — pelataan kartalla").
+  localStorage-arvoa ei muuteta: seuraava käynnistys yrittää palloa.
+- **Tallennus on sama.** Pelitila asuu js/game.js:ssä ja tallennus
+  serialisoi vain sen; pallolauta EI lisää pelitilaan yhtään kenttää.
+  Ainoa laudan oma muisti on kameran viimeinen näkymä, ja se on
+  localStoragea (kuten linssivalinta), ei tallennusta. Vartija:
+  tests/pallolauta.test.mjs lataa saman tallenteen kummallakin
+  laudalla ja vaatii identtisen game-tilan; tools/savukkeet/savuke-
+  lautavaihto.mjs vaihtaa laudan kesken pelin ja jatkaa siirtoa.
+- **Vaatimus jokaiselle vaiheelle (luku 7):** vaihe ei saa mergeytyä,
+  jos `?lauta=kartta` ei anna täsmälleen nykyistä peliä (savuke-
+  regressiot ennallaan) ja `?lauta=pallo` ei toimi samalla tallenteella.
+
+## 3. Tasokartta pois tieltä — mitattu alustus ja mitä pallolauta ohittaa
+
+Mitattu 5.9.2026 (Chromium, iPhone-mitat 390×844, dpr 3, ämpäri
+KATKAISTUNA — luvut ovat siis alaraja, laatat ja kuvat puuttuvat;
+skripti scratchpadissa `mittaa-kartan-alustus.mjs`, ei repoon):
+
+| mittari | avausnäkymä | Ateena (fokus) |
+| --- | --- | --- |
+| JS-moduuleja ladattu | 317 | 317 (ei uusia) |
+| joista karttamoduuleja (js/kartta, mapart, laattapyramidi, karttanimet, fokuskohteet, fokusniput, fokusmitat, fokusnosto-symbolit, nostoladonta, maatummennus, karttavalot, karttaselite, fokuspiste, elaintaky*, historian-hetket, skandaalit, karttamittari, fokusnosto) | 1,33 Mt / 33 900 riviä | — |
+| + fokuskohde-paketit (22 kpl) | 0,56 Mt | — |
+| + js/packs/maailmankartta.js (kaupungit, reitit — PALLOKIN tarvitsee) | 0,85 Mt | — |
+| svg#board-elementtejä | 188 | 1 835 (fokuskohteet 850, eläintäyt 580, kaupungit 342) |
+| DOM-solmuja yhteensä | 951 | 2 711 |
+| JS-keko käytössä | 82 Mt | 89 Mt |
+| joutilas kehys (mediaani / p95) | 16,7 / 16,9 ms | 16,7 / 16,9 ms |
+| ämpäripyyntöjä pyramidiin | 0 | 2 (luettelo; laatat olisivat seuranneet) |
+| sivun load | 4,7 s (kontti) | — |
+
+Havainnot: (1) JOUTILAS kartta ei maksa kehyksiä — Raamatun "LINSSEJA
+EI TAUOTETA" -mittaus pitää yhä; kustannus on ALUSTUS ja MUISTI, ei
+lepo. (2) Ateenassa tasokartta pitää DOMissa ~1 600 SVG-elementtiä ja
+laattapyramidi pyytäisi verkosta näkymän + ruudullisen joka suuntaan
+(js/laattapyramidi.js sääntö 1) — se on WKWebView'n muistikaton kannalta
+se osa, joka EI saa olla kahdesti. (3) Kaikki karttamoduulit tuodaan
+ui.js:ään STAATTISESTI (17 tuontiriviä, ui.js 73–342): ne ladataan ja
+parsitaan aina, mutta ne eivät piirrä mitään ennen drawBoard-kutsua.
+
+**Mitä pallolauta ohittaa (vaihe 1, `Kartta.lepotila`):** kun lauta on
+pallo, ui.render ei kutsu drawBoardForia lainkaan — svg#board jää
+tyhjäksi eikä yksikään kerros (staattinen, laattapyramidi, karttanimet,
+maastonimet, fokuskohteet, eläintäyt, fokuspiste, maatummennus,
+fokuslaatta, matkareitit, kohteet, nappulat, lento) synny;
+paivitaPyramidi, taydennaTaide/rasterointi, karttanimien ladonta,
+fokusmitat ja Kartta.ajaKamera ovat no-op lepotilassa (yksi portti
+metodin alussa, ei hajautettuja ehtoja). Ohitettava osuus Ateenassa on
+mitatusti ~1 650 SVG-elementtiä, koko pyramidiliikenne ja ~7 Mt keosta
+(89 → 82 mitattuna ilman laattoja; laattojen kanssa enemmän).
+**Mitä ei ohitettu vaiheessa 1 — TEHTY 5.9.2026 (erä 5b):** moduulien
+lataus. Staattiset tuonnit purettiin latausportin taakse
+(js/kartta-lataus.js), ja pallolaudan käynnistys keveni mitatusti
+0,90 Mt lähdekoodia. Luvut, malli ja rajaus ovat luvussa 10.3
+("Moduulien laiskoitus").
+
+**Linssikartta luodaan tarvittaessa:** linssin valinta → `Kartta`
+herää lepotilasta (drawBoardFor + kamera pallon näkymään), kuori
+näkyviin; "Sulje linssi" → nollaaPyramidi, nollaaFokuskohteet,
+nollaaElaintakyt, nollaaFokuspiste, svg#board tyhjäksi, lepotila
+takaisin. Purku on olemassa olevaa koodia (destroy tekee saman
+uudessa pelissä) — uutta on vain, että se ajetaan kuoren sulkeutuessa.
+
+## 4. Kerroskartta — jokainen kartan vastuu pallolla
+
+### 4.1 Tekstuuri vs. pelimerkit — ero kirjattuna
+
+Raamattu 4.–5.9.2026: *"pinnoitteen päälle ei edelleenkään lisätä
+erillisiä kerroksia"* — nimet, karttanostot ja reitit ovat LAATOISSA.
+Tämä pysyy: mitään KARTTAA (nimiä, nostoja, reittiverkkoa, rajoja,
+merten nimiä) ei piirretä pallolle kerroksena. Pallolle piirretään
+vain PELI eli se, mikä vaihtuu pelin edetessä tai ottaa vastaan
+kosketuksen — sama raja kuin tasokartalla ("KARTTANOSTOT POLTETAAN
+LAATTOIHIN": *"elävaksi jää vain se, mikä vaihtuu … ja
+NAPAUTUSALUEET"*). Pelimerkit ovat: kaupunkipiste + nimi (ankkuri
+pelin napautukselle), nappula, kohteet, valittu reitti, lentokaari,
+elävät nostot kunnes ne poltetaan, tähdet, kohtaamispiste,
+nostoladonnan osumat. tests/pallo.test.mjs:n kielto (pointsData ym.)
+vaihdetaan vaiheessa 1 tähän muotoon: sallitut kerrokset lueteltuna,
+labelsData ja tekstuurikerrokset (nimet, reitit) kiellettyinä.
+
+### 4.2 Taulukko
+
+Tekniikat: **P** = Globe.gl pointsData (yksi yhdistetty mesh,
+pointsMerge — halvin, raycast-osuma), **H** = htmlElementsData
+(CSS2DObject, DOM-elementti pallon päällä, hidden pallon takana;
+kallis per elementti → katto), **T** = pathsData (viiva pallon pintaa
+pitkin), **A** = arcsData, **O** = objectsData/oma three.js-objekti,
+**D** = pelin oma DOM kotelon päällä paikka getScreenCoords-kutsulla
+joka kehys, **R** = oma osumatesti ruutuavaruudessa ilman elementtiä.
+
+| kartan vastuu nyt (tasokartta) | pallolla | uudelleen käytettävä | kirjoitetaan uudestaan |
+| --- | --- | --- | --- |
+| Pohja: laattapyramidi (js/laattapyramidi.js) | Globe.gl laattamoottori (Z0–Z7, nostotasollinen sarja); poltetut nimet, nostot, reitit tekstuurina | tools/tee-pallolaatat.mjs, laatat.json, PALLO_* | laattaversion vaihto nostotason mukana (luettelotiiviste: mitkä nostot poltettu) |
+| Kaupungit: piste + nimi (js/karttanimet.js ladonta ruutuavaruudessa, g.cities) | piste **P** (261, karttavakio asteina: pointRadius ≈ 0,12°, umpimusta); nimi **H** vain näkyville, ladonta ruutuavaruudessa (getScreenCoords → karttanimet.js:n asettelu- ja törmäyssäännöt), katto 40 nimeä; piste näkyy vain nimen kanssa (PISTE VAIN NIMEN KANSSA) | pallonKaupungit, karttanimet.js:n ladontasäännöt (asetaRuutuvaraukset-rajapinta) | näkyvien poiminta pallon näkymästä (onZoom-jarru 120 ms), nimen katkaisu |
+| Kaupungin napautus → openArrival / avaaTutkinta / kehittäjäsiirto | onPointClick → sama `avaaTutkinta(city)` / doKehittajaSiirto; osuma ≥ 44 px: raycast + **R**-varmistus lähimpään kaupunkiin | ui.avaaTutkinta, doKehittajaSiirto, drawTargetsin sääntöjoukko (fokusKohdeKaupungit) | — |
+| Nykyisen kaupungin laatta (g.fokuslaatta) | **H** (sama SVG-sisältö kuin paivitaFokusLaatta latoo), korostus + nimi | fokuslaatan SVG-rakenne | mitoitus korkeudesta (luku 5) |
+| Nopanheiton kohteet (drawTargets: target-piste, target-halo) | **H** kohteille (≤ 12 kerrallaan), samat CSS-luokat; kehittäjätilassa kaikki kaupungit napautettavia = **P** onPointClick | css .target-*, moveOptions | — |
+| Reittiverkko (viivataso laatoissa) + elävä valittu reitti (g.matkareitit) | verkko tekstuurissa (Z5+); siirtovaiheessa naapurireitit ja askelhelmet **T** (pathPoints edge.poly → asteet), askelhelmet **P** | rules.pixelOf, edge.poly, REITTITYYLI-mitat | polyn asteistus välimuistiin per lauta |
+| Nappula (drawPawns, pawnShape; liikkuva .pawn-moving) | paikallaan **H** (pawnShape-SVG sellaisenaan); liikkeessä **D**: hyppaaAskel-kaari ruudulla, paikka joka kehys getScreenCoords(edgen pisteestä) | pawnShape, hyppaaAskel-profiili, STEP_MS, HYPYN_TAUKO_MS, NAPPULAN_LAHDON_VIIVE_MS, siirtoajonKesto | koreografian lautariippumaton osa irrotetaan js/siirtokoreografia.js:ään (vaihe 2) |
+| Kamera-ajot (Kartta.ajaKamera: kerroin/leveys/bbox, trapetsi, sovitaAjonKesto, ele keskeyttää) | js/pallo-kamera.js `ajaPallokamera(kohde, valinnat)` SAMALLA allekirjoituksella; oma rAF-tween pointOfView(pov, 0) kehyksittäin (Globe.gl:n oma tween on Cubic.InOut eikä tunne trapetsia); ele keskeyttää (pointerdown) | pehmennysKaari, sovitaAjonKesto, SIIRTOZOOMIN_LAHENNYS, KOHDESOVITUKSEN_MARGINAALI | leveys ↔ korkeus (luku 5), bbox → keskipiste + korkeus |
+| Ennakkozoomi, saatto, kohdesovitus, lentokohteiden sovitus (ui.js) | samat metodit, kamera valitaan `this.kamera()`-delegaatilla (pallo tai Kartta) | ennakoiSiirtoZoomi, aloitaSaattavaKamera, sovitaKohteetNakyviin | sovituksenAlue (kalusteet) toimii ruutupikseleissä → sama |
+| Fokusnostot: poltetut = näkymättömät osumamuodot; elävät = symboli + nimiö + siirtoviiva (js/fokuskohteet.js, fokusniput.js, nostoladonta.js) | poltetut: **R** — yksi onGlobeClick, lähin nosto 44 px:n sisällä getScreenCoords-kandidaateista näkyvältä alueelta (fokusniput sääntö 9: lähin keskipiste voittaa); elävät: **H** symboli + nimiö (piirraNostosymKartalle samaan pieneen svg:hen), katto 40, ylimenevät odottavat polttoa (Raamattu: kaksi kerrosta rinnakkain) | kohdedata (x, y laudalla), nostoOnPoltettu-luettelo, symbolikirjasto, avaaFokuskohde (kortti) | niputus kaupungin kyljille lasketaan asteina (nippuAsettelu → pallo), siirtoviiva **T** |
+| Eläintäyt, skandaalit, historian hetket, Matkakirjan ihmeet (tähti) | sama polku kuin nostoilla (poltettu **R** / elävä **H**); ihmenauha ja -nappi ovat kortin DOMia | elaintaky.js data, matkakirjanIhme, piirraIhmenauha | — |
+| Kohtaamispiste (js/fokuspiste.js, vihreä tuike) | **H** samalla CSS-tuikkeella (kompositorianimaatio) | fokuspiste-tuike-CSS | — |
+| Lento: elävä kaari + kone + pilvet (animateFlightSisalla, lennonLaivareitit) | kaari **A** (arcDashAnimateTime katkojälkeen), kone **D**, kamera ajaa maidenBbox-vastineen (lähtö- ja kohdemaan asteiden bbox → korkeus) | lennon tekstit, kabiiniääni, repliikit | kone pallon pinnan suuntaan (kierto pathin tangentista) |
+| Aloituslento Lontoosta (aloituslentoSisalla, niukkuusharso) | sama kuin lento; harso = pallon oma tumma kalvo (**O** puoliläpinäkyvä pallo säteellä 1,001) | lennon ajoitus, tekstit | — |
+| Karttaselite + aihevalot (js/karttaselite.js, karttavalot.js) | valikko on DOM (ennallaan); valo = **P** toinen pistekerros (kategorian väri, pointAltitude 0,001) vain näkyville nostoille | karttavalotLue/aseta, karttavaloVari | valojen sijoitus asteina |
+| Sää | ei kartan vastuu (lehden etusivu, js/saa.js) — ei muutu | — | — |
+| Pöllö, Livia, toimintorivi, noppa (dieRestingSpot), sähke, matkalaukku | DOM pallon päällä, ennallaan; nopan paikka lasketaan ruudulta kuten nyt | kaikki | .pallo-kuori z-index 45 → laudan tasolle (ui-paneelien alle), kuoren tumma pohja pois |
+| Kohdekartat, lehtien sisältö, aikajana, radio, vertailu, maatiedot | linssikartalla / lehdissä — ei muutu | — | — |
+| Fokusmitat (maataulu, mittajana, asteikot), maatummennus, atlaskehys, paperi laudan ulkopuolella | eivät tule pallolle (kalusteita); mittakaava = korkeus; navat ja juliste 76 °N:n yli ovat paperia laatoissa jo nyt | — | — |
+
+Sitovat säännöt kerroksille: jokainen näkyvä merkki on nimetty ja
+napautettava (kone valvoo: tools/tarkista-karttamerkit.mjs saa
+pallovastineen vaiheessa 3); kaikki ilmestyminen, poistuminen ja
+paikanvaihto animoidaan (pointsTransitionDuration /
+htmlTransitionDuration 250 ms, ease-in-out; reduced motion → 0 ms
+häivytyksellä); ei suodattimia SVG-osissa (iOS-sääntö pysyy, koska
+**H**-elementit ovat SVG:tä DOMissa); merkkien koko on karttavakio
+asteina pisteillä ja ruutuvakio nimillä — sama jako kuin tasokartalla.
+
+### 4.3 Napakannet (5.9.2026)
+
+Omistaja 5.9.2026 klo 15 Suomen aikaa, kuvakaappaus Huippuvuorilta:
+*"Miksi hattu näkyy?"* Napaa katsottaessa pallolla oli vaalea lakki ja
+sen reunalla katkoviivamainen tumma rengas. Kumpikaan ei ole laattojen
+sisältöä (sarjan b laatat mitattiin puhtaiksi), vaan Globe.gl 2.46:n
+omaa geometriaa: Mercatorin rajan (85,05°) yläpuolelle kirjasto
+venyttää tason 0 laatan koko pallon kokoisena, valaisemattomana
+pallopintana, ja laattaverkkojen ylimpien rivien sauma näkyy tummana
+renkaana. Renkaan leveysaste MITATTIIN (väriraidat 83–85,5° ja
+säteittäinen kirkkausprofiili kuvasta): se on 83,7–84,25°, ei 85°:ssä.
+
+Korjaus on js/pallo.js `asennaNapakannet`, joka kutsutaan
+laattamoottorihaarasta: kaksi ohutta pallokalottia (NAPAKANNEN_LEVEYS
+83,7° ⇒ pohjoinen ≥ 83,7°, etelä ≤ −83,7°) laattojen omalla
+täytesävyllä — pohjoinen merta (#c9c2af), etelä jäätä (#dcd6c6, =
+JAA_SAVY) — kummassakin peittävä kalotti ja 0,4° leveämpi 0,4-peittoinen
+reuna. Kansi ei ole kartan KERROS (luku 4.1:n kielto pysyy): se peittää
+vain sen, mitä kirjasto piirtää kartan ulkopuolelle, eikä ota kosketusta
+vastaan (`raycast` tyhjäksi), joten pelin merkit toimivat päällä
+ennallaan. Kannet lisätään laattamoottorin ISÄN alle, koska moottori
+purkaa omat lapsensa tason vaihtuessa.
+
+THREE:n konstruktorit (Mesh, SphereGeometry, materiaalit) saadaan
+vientinä `kolmiulotteinen(pallo)`, joka lukee ne elävistä
+laattaverkoista — Globe.gl:n UMD-paketti ei vie THREE:a globaaliin.
+Materiaaliluokka otetaan LAATOILTA: valaisematon kansi (MeshBasic)
+samalla sävyllä piirtyi mitatusti tummana kiekkona, koska kirjaston
+valot (ambient + suoraan pohjoisnavan päältä tuleva directional)
+kirkastavat laatat navalla n. 1,4-kertaisiksi.
+
+## 5. Sukellus, palaaminen, koordinaatit ja kamera
+
+**Yksi totuus:** laudan (x, y). `laudaltaAsteiksi('maailmankartta',
+x, y)` → {lat, lon} ja `projisoiLaudalle` takaisin; pallo pitää
+asteet välimuistissa per lauta (kaupungit 261, reittipolyt 1 526
+askelta, nostot ~300) ja laskee ne kerran drawBoardForin vastineessa.
+Napautus pallolla → `sukelluskohta(lat, lng)` → (x, y) → sama
+osumalogiikka kuin nyt. Näin tallennus, moveOptions, pixelOf ja kaikki
+pelisäännöt pysyvät lautayksiköissä.
+
+**Näkyvä leveys ↔ korkeus.** Kartan ajot pyytävät `leveys`
+(lautayksikköä ruudun leveydellä) tai `kerroin`. Pallolle:
+`korkeus(leveysYks) = (leveysYks · 360/12000) / (2 · tan(fov/2) · 180/π)`
+eli Globe.gl:n oletus-fovilla 50° `≈ leveysYks / 1780`
+(PALLO_SUKELLUSLEVEYS 620 → 0,35; kaupunkiporras 88 → 0,05; koko
+lauta → 2,2). Kaava on tarkka vain pienillä korkeuksilla (tasokuva);
+suurilla käytetään pallon geometriaa (näkyvä kaari = 2·acos(1/(1+h))).
+Kalibrointi savukkeella: kolme porrasta (kaupunki, maa, manner)
+mitataan getScreenCoords-etäisyyksinä ja vartioidaan ±5 %. `kerroin`
+muunnetaan nykyisestä leveydestä samoin kuin Kartta.siirtoZoomiKerroin.
+Zoomirajat: kaukaisin korkeus 2,5 (koko pallo), lähin sidotaan laattojen
+tarkkuuteen (luku 6): korkeintaan 2× venytys laitepikseleissä.
+
+**Sukellus kaupunkiin ja lehden avaus:** onPointClick(kaupunki) →
+kamera-ajo kaupungin ylle (leveys = saapumisporras, 1 400 ms trapetsi)
+JA `avaaTutkinta(city)` heti — omistaja 2.9.: *"Kohdekaupunki avaa
+aina kaupunkilehden"*, eikä lehden avaus odota kameraa.
+
+**Linssikartalle ja takaisin:** `valitseLinssi(tunnus)` (tunnus ≠ null,
+lauta = pallo) → `avaaLinssikartta()`: Kartta herää (drawBoardFor),
+kuori näkyviin, `kartta.ajaKamera({ x, y, leveys }, { kesto: 0 })`
+pallon nykyisestä pov:sta (sukelluskohta + leveys(korkeus)); sitten
+sytytaLinssi ennallaan. `valitseLinssi(null)` / Sulje → pallon kamera
+kartan viimeiseen näkymään (kameranTila → asteet + korkeus), kuori
+pois, Kartta lepotilaan ja purku (luku 3). Pallon oma linssi
+(js/linssit/pallo.js) poistuu laukusta, kun pallo on oletuslauta
+(vaihe 6) — kartta-oletuksella se jää valikoimaan ennalleen.
+
+**Kamera-ajojen delegaatti:** ui.js:n 8 kutsupaikkaa (ennakoiSiirto-
+Zoomi, aloitaSaattavaKamera, sovitaKohteetNakyviin, aloituslento,
+zoomaaMantereelle-perhe, fokuksen tarkistaFokusZoom) kutsuvat
+`this.kamera()`-oliota, joka on `this.kartta` tai `this.pallolauta.kamera`
+laudan mukaan. Rajapinta on sama (`ajaKamera`, `kameranTila`,
+`kameraAjossa`, `pysaytaKameraAjo`, `siirtoZoomiKerroin`); kummankaan
+sisäisiä metodeja ei kutsuta ristiin. Tämä on ainoa ui.js-muutos, joka
+koskee kameraa.
+
+## 6. Muisti ja suorituskyky iPhonella (WKWebView)
+
+- **Laatat.** Z0–Z7 = 21 845 laattaa (mitattu Z5-laatta 10,3 kt;
+  arvio ~200–250 Mt ämpärissä), nostotasollinen sarja Z6–Z7 erikseen.
+  Näkyvissä kerrallaan ≤ ~60 laattaa (256² RGB → ~12 Mt GPU-muistia
+  + mipmapit) — pienempi kuin pyramidin ruudullinen esilataus.
+  Vartija: savuke lukee `renderer().info.memory.textures` ja vaatii
+  ≤ 120 tekstuuria lepotilassa Ateenan tarkkuudella; ylitys = laatta-
+  moottorin karsintaa ei tapahdu → pyydetään omaa karsintaa (Globe.gl:n
+  tile engine ei dokumentoi poistoa; mitataan vaiheessa 1).
+- **Tarkkuus lähikuvassa.** Pyramidin z7 on 240 px/aste, pallon Z7 vain
+  91 px/aste (256·2⁷/360). Tasokartan lähin porras (58–88 yksikköä =
+  1,7–2,6°) olisi pallolla Z7:llä ~4× venytetty dpr 2:lla. Ratkaisu:
+  Z8 (182 px/aste; ajo aloitettu v1544, 65 536 laattaa) ja lähin
+  korkeus rajataan 2× venytykseen → 2,1° ≈ 70 yksikköä. Z9 (262 144
+  laattaa) EI tehdä ennen mittausta laitteella. **VANHENTUNUT v1649:ssä:**
+  terävyys tulee nyt vektoriviivoista, ja lähin näkyvä leveys on vakio
+  `PALLOLAUDAN_LAHIN_LEVEYS` 60 yksikköä (~1,8°) — ks. luku 10.4.
+- **DOM-katto.** htmlElements ≤ 60 yhteensä (nimet 40, kohteet 12,
+  elävät nostot 40 → priorisoidaan: kohteet > nappula > laatta >
+  nimet > nostot, ja nimikatto laskee kun nostoja on). CSS2DRenderer
+  laskee jokaisen elementin paikan JOKA KEHYS — 60 on mitatusti
+  pöytäkoneella ilmaista, iPhonella mitataan vaiheessa 1 kehysajalla
+  (vartija p95 ≤ 20 ms lepotilassa, ≤ 34 ms kamera-ajossa).
+- **Render-silmukka.** Globe.gl piirtää rAF:lla jatkuvasti; lepotilassa
+  (ei ajoa, ei eleitä, ei animoituja elementtejä) kutsutaan
+  `pauseAnimation()` ja herätetään pointerdownista, ajosta ja
+  data-muutoksesta — muuten pallo syö akkua lehden takana. Lehden
+  ollessa auki (arrivalDialog.open) pallo on aina tauolla.
+- **Hover-raycast** pois kosketuslaitteilla (`enablePointerInteraction`
+  vain napautuksen ajaksi: pointerdown → päälle, click käsitelty → pois),
+  koska jokainen pointermove raycastaa 261 pistettä + polut.
+- **Reduced motion:** ei autoRotatea, ei liukua, kamera-ajot 0 ms
+  häivytyksellä, nappula hyppää perille — sama sopimus kuin nyt.
+- **Offline ja varapolku:** Globe.gl (vendor, ~700 kt) ja laatat ovat
+  toisessa originissa; SW:n KUVACACHE-mallilla runtime-välimuisti
+  vendor-skriptille (opaque kelpaa skriptille) ja laatoille (katto
+  400 laattaa, LRU). Ensimmäinen käynnistys ilman verkkoa → tasokartta
+  istunnoksi (luku 2). Huom: tasokarttakaan ei toimi ilman ämpäriä
+  (pyramidi), joten "offline-varakartta" tarkoittaa SW:n aiemmin
+  välimuistittamia laattoja — kummallakin laudalla.
+- **Yhden tiedoston versio (dist):** ei palloa (dynaaminen tuonti
+  kaatuu hallitusti kuten linsseillä) → tasokartta. js/pallo*.js ja
+  js/pallolauta/*.js EIVÄT mene MODULES-listalle; ne kirjataan
+  tests/sw.test.mjs:n NIPUTTAMATTOMAT-listaan ja sw.js:n SHELLiin.
+- **Turvatila:** js/main.js kirjaaKaynnistys — kolme käynnistystä
+  neljässä minuutissa pallolaudalla → istunto tasokartalla, koska
+  WebGL-kontekstin kuolema näkyy täsmälleen logosilmukkana.
+
+## 7. Vaiheistus
+
+Jokaisen vaiheen yhteiset portit: node --test (kaikki läpi),
+tarkista-kaksoisavaimet, tarkista-niputus, build-standalone +
+savuke-dist; `?lauta=kartta` antaa täsmälleen nykyisen pelin
+(savuke-siirtokoreografia, -maailmanakyma, -fokuskohteet, -avauslento
+ennallaan); sama tallenne latautuu kummallakin laudalla
+(tests/pallolauta.test.mjs); tasokartta ei ole DOMissa pallolaudalla
+(svg#board tyhjä, pyramidipyyntöjä 0 — savuke-pallolauta mittaa).
+Sessio = yksi Fablemax-erä ≈ yksi PR.
+
+| vaihe | mitä | tiedostot | testit | työ | pelattavaa vaiheen jälkeen |
+| --- | --- | --- | --- | --- | --- |
+| **1. Perusta ja kytkin** | lautaValinta + LAUTA_OLETUS + kehittäjävipu; .pallo-kuori laudan tasolle (z-index, pohja pois, ei Sulje-nappia laudalla); Kartta.lepotila + render-portti (drawBoardFor ei aja); js/pallolauta/kamera.js (leveys↔korkeus, ajaKamera-rajapinta, trapetsi-tween, ele keskeyttää, pauseAnimation-lepo); kaupungit **P** + onPointClick → avaaTutkinta; nykyisen kaupungin laatta **H**; `this.kamera()`-delegaatti; Liiku-nappi avaa pallolaudalla toistaiseksi LINSSIKARTAN (vaiheen 4 kuori kevyimmillään: Kartta herää, kuori päälle) — siirrot tehdään siellä | js/ui-apurit.js, js/main.js, index.html, css/styles.css, js/pallo.js (jaetaan: kuori+eleet jää), js/pallolauta/{lauta,kamera}.js, js/ui.js (render-portti, delegaatti, valitseLinssi), js/kartta.js (lepotila), sw.js, tests/sw.test.mjs | tests/pallolauta.test.mjs (kytkin, sama tallenne, kaava leveys↔korkeus, kielletyt kerrokset), tests/pallo.test.mjs (kiellot → sallitut kerrokset), tools/savukkeet/savuke-pallolauta.mjs (svg tyhjä, tekstuurit ≤ 120, kehys p95, lehti aukeaa napautuksesta, kamera osuu kaupunkiin ±5 %) | 2 | kytkimellä: peli alkaa pallolla, Ateenan lehti aukeaa pallolta, siirto avaa tasokartan kuoreen ja palaa palloon perillä; ilman kytkintä kaikki ennallaan |
+| **2. Siirrot pallolla** | js/siirtokoreografia.js (STEP_MS, HYPYN_TAUKO_MS, NAPPULAN_LAHDON_VIIVE_MS, siirtoajonKesto, ENNAKON_* siirretään ui.js:stä sanatarkasti — tuojakartoitus päivitetään); kohteet **H**, naapurireitit **T** + helmet **P**, nappula **H**/**D**, ennakkozoomi → saatto → nappula; laiva; automaattiheitto; siirtymämusiikki ja äänet samoista koukuista; lento **A** + kone **D** + kamera; mannerlento | js/pallolauta/{siirto,merkit,reitit}.js, js/ui.js (animatePawn haarautuu laudan mukaan; doFly), js/siirtokoreografia.js | savuke-siirtokoreografia saa `--lauta pallo` -tilan (samat aikaleimavartijat: nappula 300 ms kameran jälkeen, saapuu 280 ms ennen); savuke-nappula pallolle; tests/siirtokoreografia.test.mjs | 3 | siirrot, laiva, lento ja saapumiset kokonaan pallolla; Liiku ei enää avaa tasokarttaa |
+| **3. Merkit** | kaupunkinimet **H** ladonnalla (karttanimet.js:n säännöt ruutuavaruudessa, katto 40, piste vain nimen kanssa); poltettujen nostojen **R**-osuma; elävät nostot, eläintäyt, skandaalit, hetket, ihmeet **H** (katto); kohtaamispiste; kortit (avaaFokuskohde) ankkuri ruutupisteestä; karttaselite + valot; kehittäjätilan kaikki kaupungit; pallolaattojen nostoversion tiiviste laatat.jsonissa (mitkä nostot poltettu) | js/pallolauta/{nimet,nostot}.js, js/fokuskohteet.js (ankkurin ruutupiste parametriksi), js/karttanimet.js (ladonta ilman svg:tä), tools/tee-pallolaatat.mjs (tiiviste luetteloon), tools/tarkista-karttamerkit.mjs (pallotila) | tests/pallonimet.test.mjs (ladonta ei limity, piste vain nimen kanssa), tarkista-karttamerkit pallolla julkaisuportiksi, savuke-fokuskohteet `--lauta pallo` | 3 | koko pelin sisältö napautettavissa pallolta; Euroopan nostot samat kuin kartalla |
+| **4. Linssikartta** | valitseLinssi → linssikartan kuori (Kartta herää, kamera pallon näkymään); Sulje/valinta null → purku ja paluu; radio, vertailu, maatiedot, aikajana, keksinnöt toimivat kuoressa; Liiku ja lehdet estetty kuoressa (linssi blokkaa muun — Raamattu 4.9.); pallon oma linssi piiloon pallolaudalla | js/pallolauta/linssikartta.js, js/ui.js (valitseLinssi, sytytaLinssi), js/kartta.js (herätys/purku), css | tests/linssikartta.test.mjs (kamera synkka molempiin suuntiin ±5 %, purku jättää svg:n tyhjäksi), savuke-aikajana ja savuke-kartta-tila `--lauta pallo` | 1,5 | kaikki linssit pallolaudalla vanhalla kartalla; paluu palloon |
+| **5. Avaus, offline, laite** | avausnäkymä: ESIRENDERÖITY sumennettu pallo (kuvasarja/video laatoista, pyörii hitaasti Lontoosta Aasiaan) etusivun tekstin takana, päällä elävä kone + paksu punainen viiva kaupungista toiseen ja isoisän aikalaiskuvat pienenä kartan ulkopuolella (luku 0 kohta 5; siihen asti etusivu vanhalla kartalla), aloituslento pallolla + niukkuusharso; SW-välimuisti vendorille ja laatoille; varapolku + turvatila; Z8 käyttöön ja lähin korkeus laattatarkkuudesta; hover-raycast pois; **5b** mitattu käynnistysaika TestFlightissa → päätös staattisten karttatuontien laiskoittamisesta (erä vain jos mittaus näyttää > 300 ms hyötyä) | js/pallolauta/avaus.js, js/ui.js (renderIntro, aloituslento), sw.js, js/main.js, js/pallo.js | savuke-avauslento `--lauta pallo`, tests/sw.test.mjs (välimuistikatot), savuke-dist (ei palloa, kartta) | 2 | uusi peli alusta loppuun pallolla; ilman verkkoa peli käynnistyy kartalla |
+| **6. Pelaajan kytkin** (alun perin "Oletukseksi" — LAUTA_OLETUS = 'pallo' ja pallo-linssi pois laukusta tehtiin jo v1554:ssä omistajan päätöksellä) | pelaajan asetus "Pelilauta: karttapallo / vanha kartta" (asetusvalikko, sama avain matkakirja-lauta, ei pelitilaan); regressiotaulukko ennen/jälkeen (kehys, keko, tekstuurit, käynnistys); docs/moduulit/linssit.md ja kaupunkilehti.md viitteet; tuojakartoitus; muutosloki; vanha kartta jää linssikartaksi ja palautusoptioksi (ei poisteta) | js/main.js (asetus), js/ui-apurit.js, docs/ | kaikki savukkeet kummallakin laudalla | 1,5 | pelaaja valitsee laudan itse; `?lauta=kartta` palauttaa vanhan |
+
+**Vaiheen 3 toteutusmerkinnät (Fablemax 5.9.2026, PR "Pallolauta vaihe
+3: nimet ja nostot pallolla"):** (1) nimet ladotaan ruutuavaruudessa
+samalla sijoitusfunktiolla kuin laudalla (js/karttanimet.js
+sijoitaKaupunginNimi, ladoRuutunimet) — kynnys KYNNYS.kaupunki ei ole
+käytössä pallolla, vaan katto 40 ja tärkeysjärjestys (oma kaupunki,
+lähtökaupunki, lentokenttä, reittisolmun aste, lähin ruudun keskipistettä)
+yleistävät; pudotus sallitaan, ja pudonnut kaupunki jää pisteettä (PISTE
+VAIN NIMEN KANSSA). (2) Ladonta ajetaan vain levossa (LAATU_LEPOVIIVE_MS,
+sama hetki kuin laadun palautus). (3) Nostojen ladonta (nippu, erottelu,
+nimiön kylki) tulee tasokartan tyngästä (js/fokuskohteet.js
+maanKohdemerkit), ei omasta koodista; poltetut luetaan PALLON laatat.json-
+luettelon `nostotaso.nostot`-kentästä (tools/tee-pallolaatat.mjs --nostot
+kirjoittaa sen), tunnuksella ja tiivisteellä kun se on annettu. Pallon
+nykyinen sarja (2026-09-03a) on pohjasarja ilman nostotasoa, joten kaikki
+nostot ovat toistaiseksi eläviä H-merkkejä. (4) Kortit ankkuroidaan
+merkin ruutupisteestä (avaaFokuskohde { ankkuri }) ja seuraavat merkkiä
+levossa. (5) Aihevalot ovat pistekerroksen täpliä; selitteen laskurit
+tulevat pallolta (ui.karttavaloLaskuri). (6) Uutta Globe.gl-kerrosta ei
+tarvittu: PALLOLAUDAN_KERROKSET on ennallaan. Portit:
+tests/pallonimet.test.mjs, tools/tarkista-pallomerkit.mjs,
+savuke-pallolauta vartiot 12–15.
+
+**Vaiheen 4 toteutusmerkinnät (Fablemax 5.9.2026, PR "Pallolauta vaihe
+4: linssikartta"):** (1) Kuori asuu js/pallolauta/linssikartta.js:ssä
+(luoLinssikartta); ui.avaaLinssikartta / ui.suljeLinssikartta delegoivat
+sinne, ja moduuli ladataan pallolaudan mukana (ei MODULES-listalle, SHELL
+kyllä). (2) Kamera molempiin suuntiin: avatessa pallon kameranTila
+(x, y, leveys) → Kartta.ajaKamera kesto 0; suljettaessa Kartta.kameranTila
+(x, y, skaala) → leveys = ruudun leveys / skaala → pallon ajaKamera kesto 0
+häivytyksen alla (kartanNakymaPallolle). Mitattu ±5 % (savuke-pallolauta
+vartio 7, tests/linssikartta.test.mjs). (3) Siirtymät: pallon kuori saa
+luokan `linssin-alla` (opacity 0, 250 ms) ja piilotetaan vasta häivytyksen
+jälkeen; suljettaessa pallo näytetään läpinäkyvänä, kamera asetetaan ja
+häivytys sisään, kartta puretaan (nuku → puraLauta) vasta kun pallo
+peittää sen. Tila (ui.linssikartta, body.linssikartta-auki, Kartta hereillä)
+vaihtuu aina heti; reduced motion → 0 ms samassa vuorossa. (4) Linssi
+blokkaa muun: yksi portti ui.linssikarttaEstaa() (vaihdaLiuku, avaaTutkinta,
+Matkusta ja Tutki harmaina); tasokartalla kenttä on aina null.
+(5) Aikajanan oma ✕/Esc ja radion OFF päättävät linssin pallolaudalla
+(ui.pysaytaAikajana → valitseLinssi(null)), jotta kuori ei jää tyhjänä
+karttana ruudulle; kehys on piilossa radiotilassa ja aikajanalla (niillä
+on oma sulkemisensa). (6) Muistettu linssivalinta ei jää laukkuun
+"valituksi" ilman kuorta: pallolaudalla käynnistyksessä valinta unohdetaan
+(paivitaLinssit lepotilassa) — kuori avautuu vain laukun valinnasta.
+(7) Löydetty ja korjattu vaiheen 1 aukko: tasokartan merkkiketju
+(taydennaTaide → paivitaMaastonimet, paivitaFokusPohja) piirsi
+fokuskohteet ja eläintäyt takaisin tyhjään svg:hen pallon alle, kun
+kartan kamera-ajo (aikajanan paluuajo, aloituslento) valmistui purun
+jälkeen — mitattu 1 263 elementtiä; nyt kolme metodia palaavat
+lepotilassa heti (sama yhden portin sääntö kuin js/kartta.js).
+(8) Vaiheen 1 väliaikainen "Palaa pallolle" poistui; Sulje on samassa
+kulmassa, selitenapin vasemmalla puolella. Portit: tests/linssikartta.test.mjs,
+savuke-pallolauta vartio 7, savuke-aikajana ja savuke-kartta-tila
+`--lauta pallo`.
+
+**Vaiheen 5b toteutusmerkinnät (PR "Pallolauta 5b: aloituslento
+pallolla"):** (1) Avauslennon KOREOGRAFIA pysyy yhtenä kappaleena
+js/ui.js:ssä (aloituslentoSisalla) — arkki, kamera-ajo, kertoja,
+kabiiniääni, repliikki, isoisän valokuva, ohitus, saapumiskortti ja
+kuplat — ja vain kohtauksen fyysinen puoli delegoidaan laudalle
+`ui.aloituslennonKohtaus`-sopimuksella (rajaus, valmistele, odotaKartta,
+rakenna, lenna, poistuma, pura), täsmälleen samalla mallilla kuin siirron
+`nappulanKuljettaja`. Tasokartan toteutus on ui.js:n
+tasokartanLentokohtaus + piirraLentokohtaus (entinen koodi sellaisenaan),
+pallon js/pallolauta/avaus.js. (2) Kone on VAIHEEN 2 KULJETTAJA
+(`ui.nappulanKuljettaja(player, { lento: true })`) ja kaari vaiheen 2
+arcsData — uutta Globe.gl-kerrosta ei tarvittu, PALLOLAUDAN_KERROKSET on
+ennallaan. Ohitus tarvitsi kuljettajalle yhden lisän: `paata()` vie
+kesken olevan rAF-hypyn loppuun samalla tavalla kuin `finish()` vie
+selaimen animaation. (3) Rajaus on kaupunkiparin laatikko samalla
+kaavalla ja marginaalilla kuin pallon omalla lennolla (siirto.js
+`lennonRajaus`, vietynä), joten kuljettajan oma kamera-ajo jää
+nolla-ajoksi eikä kamera nytkähdä koneen lähtiessä; perillä `laske()`
+sukeltaa kohdekaupunkiin saapumiskortin alla (savuke mittaa ±5 %).
+(4) NIUKKUUSHARSO ON CSS-KALVO kotelon päällä eikä toinen pallo säteellä
+1,001: ei uutta three.js-objektia eikä toista WebGL-kontekstia iOS:lle,
+häivytys on pelkkää peittävyyttä, väri sama kuin tasokartan harsolla.
+Kaari jää kalvon alle (WebGL), joten avauslennon kaari saa oman täyden
+sinooperinsa (REITIN_VARIT.avauslento) ja lennon kaksi nimeä
+pergamenttihalon, jotta ne lukeutuvat harson läpi kuten kartalla.
+(5) Tasokartta ei herää lainkaan: `kartta.nuku()` ajetaan doPickStartissa
+ENNEN actionPickStartia (arkin takana), joten svg#board on tyhjä ja
+pyramidipyyntöjä on 0 koko avauksesta perille. (6) Arkin takainen
+"kartta on valmis" -odotus on laudan mitta: kartalla odotaPyramidi,
+pallolla tekstuurien määrän vakiintuminen (kohtaus.odotaKartta), sama
+katto ja sama ohitus. Portit: tests/pallolauta.test.mjs (vaihe 5b),
+savuke-avauslento `--lauta pallo` (P1–P7) ja `?lauta=kartta` (L1–L4)
+ennallaan.
+
+Yhteensä **13 sessiota** (vaiheet 1–6; 5b mahdollinen +1). Vaihe 1 on
+"uuden jutun ensimmäinen kierros" (roolitus.md): Fable/Fablemax tekee
+sen itse ja hioo omistajan kanssa; vasta vaiheet 2–3 voi jakaa
+agenteille valmiin mallin kanssa.
+
+**Vaiheiden järjestysehto:** vanha kartta pysyy oletuksena (LAUTA_
+OLETUS = 'kartta') vaiheen 6 alkuun asti; kytkin on kehittäjätilan ja
+URL-parametrin takana. Yksikään vaihe ei muuta js/game.js:ää eikä
+tallennusmuotoa.
+
+## 8. Riskit, avoimet kysymykset omistajalle ja Raamattu-ehdotus
+
+**Riskit (mitattavat, kolme suurinta ensin):**
+1. WKWebView'n muisti: WebGL-konteksti + laatat + pelin DOM voi ylittää
+   sisältöprosessin katon → logosilmukka. Vartijat: tekstuurikatto,
+   pauseAnimation lehden takana, turvatila (luku 6). Mitataan vasta
+   laitteella; kontin Chromium ei kerro tästä mitään.
+2. Lähikuvan tarkkuus: Z7 on 2,6× karkeampi kuin pyramidin z7; ilman
+   Z8:aa kaupunkiporras on sumea. Z8 = 65 536 laattaa, ajoaika
+   mitattava ennen vaihetta 5.
+3. htmlElements-osumat ja eleet: CSS2D-elementtien pointer-events ja
+   nipistyksen/klikin erottelu ovat kirjaston sisällä (ThreeRender-
+   Objects), nykyinen sormenlaskenta on kiertotie. Jos elementit
+   eivät ota napautusta luotettavasti iOS:llä, kaikki osumat
+   siirretään **R**-malliin (yksi onGlobeClick + lähin merkki) —
+   arkkitehtuuri sallii sen ilman muita muutoksia.
+4. Nimiladonta ruutuavaruudessa joka zoomissa voi maksaa 261 nimen
+   mitat; jarru 120 ms ja näkyvien poiminta pitävät sen alle 10 ms
+   (vartija).
+5. Tasokartan herätys linssiä varten kestää (drawBoardFor + pyramidi
+   ~1–2 s) — linssin avausjakso (musta, otsikko, käynnistä) peittää
+   sen, mutta radio/vertailu/maatiedot avautuvat ilman jaksoa → kuoreen
+   lyhyt häivytys ja "Avataan karttaa…".
+
+**Avoimet kysymykset omistajalle (enintään viisi):**
+1. Saako kaupunkien NIMET latoa pallolle elävinä (H-elementteinä),
+   vai halutaanko nekin tekstuuriin? Elävä ladonta on ainoa tapa saada
+   dpr-tarkat, ei-limittyvät nimet (karttanimet.js:n 30.8. perustelu) —
+   tekstuurissa ne olisivat iPhonella kolmasosan kokoisia.
+2. Ajetaanko Z8 (ja tarvittaessa rajattu Z9 Euroopalle) ennen vaihetta
+   5, vai hyväksytäänkö lähin zoomi ~70 yksikköä (Z8) / ~140 (Z7)?
+3. Poistetaanko Karttapallo-linssi laukusta, kun pallo on lauta, vai
+   jääkö se "koko pallo kerralla" -näkymän napiksi (kamera kauas)?
+4. Mittajana, asteikot ja maataulu (fokusmitat): jäävätkö
+   linssikartalle vai halutaanko pallolle oma mittakaavamerkki?
+5. Aloitussivun asettelu: pallo Lontoon yllä avaustekstin takana (kuten
+   suunniteltu) vai nykyinen pienoiskartta tasokuvana?
+
+**Raamattuun (Fable kirjoittaa, ehdotus):** kohta "KARTTAPALLO ON
+PELILAUTA, LINSSIT VANHALLA KARTALLA (omistaja 5.9.2026 aamu,
+sanatarkasti: …)": pallo on pelin lauta ja tasokartta linssikartta,
+joka luodaan linssin ajaksi eikä elä taustalla; palautusoptio yhdellä
+vakiolla (LAUTA_OLETUS) ja kytkimellä, pelitila sama; pinnoitteen
+päälle ei piirretä KARTTAA (nimet, nostot, reitit laatoissa), mutta
+PELIN merkit (kaupunkipiste + nimi, nappula, kohteet, elävät nostot,
+osumat) ovat pallolla — täsmentää 4.–5.9. kirjauksia "ei mitään
+pinnoitteen päälle"; kumoaa 4.9. linjauksen "pallo on valikko, ei
+lauta"; "Yksi lauta: koko maailma yhdellä kartalla" pysyy — kartta on
+nyt pallo.
+
+## 9. Hylätyt vaihtoehdot
+
+- **Tasokartta piilossa DOMissa, pallo sen päällä (kevyin toteutus).**
+  Hylätty omistajan lisäehdolla: kartta pitäisi ~1 650 elementtiä ja
+  pyramidin esilatauksen elossa lehden takana (luku 3).
+- **Oma d3-ortografinen pallo SVG:llä.** Hylätty jo 4.9. (omistaja
+  valitsi Globe.gl:n); lisäksi laatoitettu pinta ei ole mahdollinen
+  SVG:ssä ilman omaa laattamoottoria.
+- **Nostot ja nimet labelsData-kerroksena (3D-teksti).** Hylätty:
+  TextGeometry per nimi on raskas, kirjasimet eivät ole pelin
+  kaiverruskirjasimia, eikä ladontaa (törmäys, kyljet) voi tehdä.
+- **Kaikki merkit htmlElements-kerroksena ilman kattoa.** Hylätty:
+  CSS2DRenderer laskee jokaisen elementin joka kehys; 300 nostoa +
+  261 nimeä ylittäisi kehysbudjetin iPhonella. Siksi poltetut nostot
+  saavat R-osuman ilman elementtiä.
+- **Globe.gl:n oma pointOfView-tween ajoihin.** Hylätty: Cubic.InOut
+  ei ole SIIRRON KOREOGRAFIAN trapetsi eikä sitä voi keskeyttää
+  kirjaamalla välivaihe; oma rAF-tween tekee molemmat ja on sama koodi
+  kuin nykyinen liuku.
+- **Pelitilaan kenttä "lauta".** Hylätty: rikkoisi vanhat tallenteet ja
+  palautusoption; laudan valinta on laitteen asetus kuten linssi.
+- **Staattisten karttatuontien laiskoitus heti vaiheessa 1.** Siirretty
+  vaiheeseen 5b mittauksen taakse: 20+ testiä lukee ui.js:ää tekstinä,
+  ja moduulit ovat SW-välimuistissa — hyöty on parsinta-aika, joka on
+  mitattava laitteella ennen remonttia.
+
+## 10. Kaikki pallolle — vanha kartta suljetaan (5.9.2026)
+
+**Omistajan linjaus (Raamattu KAIKKI PALLOLLE, VANHA KARTTA SULJETAAN):**
+*"Käännä kaikki pallolle, niin voidaan sulkea vanha kartta kokonaan"* /
+*"Käytä agenttia parvia"*. Kumoaa luvun 2 kytkimen ja luvun 5
+linssikartan: tasokartta ei jää linssikartaksi eikä palautusoptioksi.
+**Täsmennys 5.9.2026 ilta:** *"Pidetään vanha kartta vielä vivun
+takana, sitä voi tarvita joissain linsseissä koska siinä helpompi
+näyttää isoja alueita kerralla"* — js/kartta.js ei poistu; se pysyy
+`?lauta=kartta`-vivun takana ja linssipintana isoille alueille, eikä
+se alustu pallolaudalla.
+
+**Inventaario (5.9.2026):** vanhaan karttaan piirtävät enää
+topografia (1 rasterikuva), vesistöt (sama rasteri + 38 järveä + 253
+jokiviivaa), keksinnöt/aikajana (valot + maskitummennus + kamera),
+radio (kaupunkinapit), vertailu ja maatiedot (maapolygonit + nimet)
+sekä etusivun pienoiskartta. Lehtien kohdekartat ovat omia SVG-
+piirroksia (js/packs/maakartat.js) eivätkä riipu Kartta-luokasta.
+Poistettavaa kartan mukana: js/kartta.js, js/linssit/kerros.js,
+js/pallolauta/linssikartta.js, js/laattapyramidi.js, js/mapart.js,
+js/karttanimet.js, `?lauta=kartta`, LAUTA-kytkin, pyramidilaatat.
+
+### 10.1 Sopimus: linssi pallolla
+
+Jokainen linssi saa `pallolle(lauta, tila)`, joka piirtää linssin
+pallon pinnalle ja palauttaa kahvan `{ pura() }`. `tila` on sama kuin
+`piirra(ryhma, tila)`:lla (packId, map, askel …). Pallolaudalla
+`ui.sytytaLinssi` kutsuu `pallolle`-funktiota; linssikarttaa ei enää
+avata, kun linssillä on `pallolle`. Kun kaikilla on, linssikartta
+poistetaan.
+
+Piirto tapahtuu **vain** `lauta.linssit`-apurin (js/pallolauta/linssit.js)
+kautta — linssi ei koske Globe.gl-instanssiin suoraan:
+
+| kutsu | Globe.gl | datum |
+|---|---|---|
+| `kalvo(osa, { kuva, peittavyys })` | oma pallokuori (THREE.Mesh, säde × 1.002, MeshBasicMaterial map + transparent) | tasavälinen (equirectangular) kuva; rasteri (topografia, vesistöjen pohja) |
+| `polut(osa, lista)` | `pathsData` osarekisterin kautta (reitit.js `aseta(osa, lista)` kuten merkit.js) | `{ avain, pisteet: [[lat, lng]…], vari, paksuus, katko }` |
+| `polygonit(osa, lista)` | `polygonsData` (UUSI kerros; PALLOLAUDAN_KERROKSET saa sen) | `{ avain, geometry: GeoJSON Polygon/MultiPolygon, vari, reuna, korkeus, napautus(d) }` |
+| `merkit(osa, lista)` | `merkit.aseta(osa, lista)` (htmlElementsData) | `{ avain, laji: 'linssi', lat, lng, elementti(d), asettele?(el, d) }` |
+| `kalvoRuudulle(osa, { reika })` | CSS-kalvo kotelon päälle, reikä ruutupisteessä (`lauta.ruudulla`) | aikajanan tummennus; ei SVG-maskia |
+| `pura(osa)` | kaikki osan kerrokset pois siirtymällä | — |
+
+Koordinaatit: laudan (x, y) → `lauta.asteet(kohta)` → `{ lat, lon }`;
+GeoJSON laudalle ja pallolle: js/geo.js (`pallolle`, `laudanProjektio`).
+Elementtikatto, rasterointi ja `class`/`filter`-kiellot (linssit.md 1.3,
+1.4, 1.7) eivät koske palloa; kerrosten määrää vartioi
+tests/pallolauta.test.mjs.
+
+### 10.2 Aallot (Opus-agenttiparvi, Fable koordinoi)
+
+| aalto | osa | tiedostot | koko |
+|---|---|---|---|
+| 1 | linssimoottori `lauta.linssit` + topografia (kalvo) + sytytaLinssi-kytkentä | js/pallolauta/linssit.js (uusi), lauta.js, reitit.js, js/linssit/topografia.js, js/ui.js, sw.js, tests | M |
+| 1 | vesistöt: pohja (kalvo), joet (polut), järvet (polygonit) | js/linssit/vesistot.js, packs-muunnos lat/lng | M |
+| 1 | vertailu + maatiedot: maapolygonit ja nimet, napautus | js/vertailu.js, js/geo.js | L |
+| 1 | etusivu: etusivupallo oletukseksi, pienoiskartta pois | js/etusivupallo.js, js/kartta.js, css, index.html | M |
+| 2 | keksinnöt/aikajana: valot merkkeinä, tummennus kalvona, kamera pallolle | js/aikajana.js, js/linssit/keksinnot.js | L |
+| 2 | radio: kaupunkinapit merkkeinä | js/linssit/radio.js, js/ui.js | M |
+| 3 | ~~poisto~~ → KUMOTTU 5.9.2026 ilta (Raamattu VANHA KARTTA JAA VIVUN TAAKSE): 3A lähtökaupungin valinta pallolle; vanha kartta jää vivun taakse linssipinnaksi isoille alueille, ei alustu pallolaudalla | js/ui.js, js/pallolauta/avaus.js | M |
+
+Toteutusmerkinnät kirjataan tämän luvun loppuun aalloittain.
+
+### 10.3 Toteutusmerkinnät
+
+**Aalto 1A — linssimoottori ja topografia (5.9.2026).** Sopimuksen 10.1
+taulukko on toteutettu tiedostossa `js/pallolauta/linssit.js`
+(`luoLinssit`): `kalvo`, `polut`, `polygonit`, `merkit`,
+`kalvoRuudulle`, `pura`. Muutokset:
+
+- **Osarekisterit.** `js/pallolauta/reitit.js` sai `aseta(osa, lista)`
+  samaan tapaan kuin `merkit.js`; pelin naapurireitit ovat osa `peli`,
+  linssien viivat lisätään perään ja yksi `pathsData`-kutsu yhdistää.
+  `pathStroke` ja katko luetaan nyt datumista (pelin reitit saavat
+  oletuksensa).
+- **Uusi kerros.** `polygonsData` on `PALLOLAUDAN_KERROKSET`-listalla
+  LINSSIN kerroksena; peli ei piirrä sinne mitään
+  (tests/pallolauta.test.mjs, tests/pallo.test.mjs, tests/pallonimet.test.mjs
+  päivitetty samalla kommentilla).
+- **Kalvo.** THREE haetaan heijastuksella pallon näyttämöstä (Globe.gl ei
+  vie sitä ulos): pinnan pallomesh antaa Meshin ja geometrian, jonkin
+  materiaalin `map` antaa Texturen. Kalvo on pinnan SISARUS, koska
+  laattamoottori pitää pinnan oman meshin piilotettuna. Säde on
+  1,0015 × pinta eikä 1,002: reittiviivat ovat korkeudella 0,002, ja
+  samassa pinnassa kaksi kerrosta välkkyisi toistensa läpi.
+- **Topografia.** `js/linssit/topografia.js` sai `pallolle(lauta)`, joka
+  pyytää yhden kalvon peittävyydellä 0,72. Kuva on uudelleenprojisoitu
+  laudan Milleristä tasaväliseksi (`tools/tee-pallotopografia.mjs` →
+  Cloudflare R2:
+  `https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-20260915.webp`,
+  4096 × 2048, 768 kt — uudelleenrenderöity 1′-korkeusdatasta 15.9.2026,
+  mediaa ei säilytetä repossa; navat
+  läpinäkyviä, koska lauta kattaa 76° P … 58° E). Selitekortti toimii
+  kuten ennen; kaistat eivät koske palloa.
+- **Käyttöliittymä.** `ui.pallolinssiKelpaa` on se yksi portti, joka
+  päättää piirretäänkö pallolle vai avataanko linssikartta;
+  `ui.sytytaLinssi` kutsuu `pallolle`:a ja `ui.sammutaPallolinssi`
+  kahvan `pura()`:a. Nukkuva kartta ei enää unohda pallolinssin
+  valintaa. `drawTargets` sai portin nukkuvalle kartalle (radion ja
+  linssin tahdistus kutsuu sitä myös pallolla, jolloin `targetLayer`
+  ei ole olemassa).
+- Vartijat: `tests/pallolinssit.test.mjs` (uusi). Selaimessa varmistettu
+  Chromiumilla: kalvo syttyy, osuu maantieteellisesti kohdalleen,
+  linssikarttaa ei avata, "Ei linssiä" purkaa kalvon ja uudelleensytytys
+  toimii.
+
+**Aalto 1B — vesistöt pallolle (js/linssit/vesistot.js).** Linssi sai
+`pallolle(lauta)`, joka kutsuu `lauta.linssit`-apuria neljästi: kalvo
+(reliefi tasavälisenä, `TOPOGRAFIA_PALLOKUVA` =
+`https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-20260915.webp`
+(R2, 15.9.2026), peittävyys 0,72), polygonit (38
+järveä GeoJSON-renkaina, korkeus 0,003), polut (84 pengertä + 169 uomaa
+= 253, paksuus asteina 0,14/0,10 ja 0,06/0,04/0,025 tärkeysluokittain)
+ja merkit (20 tärkeimmän joen nimet, `.pallolauta-vesinimi`; kytkin
+`VESINIMET_PALLOLLA`, ohitetaan jos merkit-osaa ei ole). Muunnos on
+puhtaana funktiona `vesistotPallolle({ maasto, nimet }, asteet)` — ei
+selainta, ei Globe.gl:ää — ja se ajetaan kerran, tulos muistiin.
+Pehmennystä ei ole (pathResolution riittää); yli 2° välit tihennetään
+isoympyrällä ja kiertävän laudan sauma katkaisee polun. Vartiointi:
+tests/vesistot-pallolla.test.mjs. AVOIN: pathStroke on asteita, joten
+uoma ohenee maailmankuvassa alle pikselin — jos apuri joskus asettaa
+listat uudelleen kameran pysähtyessä, paksuudet on kerrottava korkeudella.
+
+**Aalto 1C — vertailu ja maaselain pallolle (js/vertailu.js).**
+Molemmat tilat piirtävät maat pallolaudalla laudan linssiapurilla:
+`polygonit('vertailu' | 'maatiedot', …)` (datum `{ avain: iso,
+geometry, vari, reuna, korkeus 0,004, napautus }`) ja vertailussa
+lisäksi `merkit('vertailu-nimet', …)` maan keskukseen samalla
+leveysehdolla kuin kartalla (`leveys >= 60`, 126 nimeä 133 maasta);
+tilan sammuessa `pura('vertailu')` + `pura('vertailu-nimet')` ja
+`pura('maatiedot')`. Valinnan vaihtuessa lista asetetaan uudestaan
+(värit) — kerrosta ei pureta. Sävyt ovat samat kuin css:n
+`.vertailu-maa` ja `.maatiedot-maa` (rgba-merkkijonoina, koska pallon
+pinnalla ei ole css:ää); kolmas sävy `himmea` on pallon oma lisä
+täydelle vertailulle, jossa hiiren osoitinta ei ole kertomassa
+napautettavia maita. Ele on kummallakin laudalla sama: vertailu kerää
+maat alapalkkiin, maaselain valitsee maan ja maakyltti avaa lehden
+(kyltti asuu mapPanessa, ei laudassa, joten se toimii sellaisenaan).
+
+Muunnos on puhtaana funktiona `maapolygonitPallolle(map, asteet)` — ei
+selainta, ei Globe.gl:ää — ja se ajetaan kerran pakkaa kohti (WeakMap):
+maailmankartalla 133 maata, 400 rengasta, 26 220 pistettä, 53 ms.
+Kiertävän laudan sauma puretaan renkaan sisällä (peräkkäiset pisteet
+pidetään lähekkäin) ja rengas siirretään takaisin keskelle, joten
+Venäjä, Fidži ja Aleutit jäävät ehjiksi kappaleiksi eikä yksikään
+renkaan sivu ylitä 180:tä astetta (mitattu suurin 27,6°, Kanada).
+Jokainen rengas on oma monikulmionsa (MultiPolygon), koska laudan
+aineisto ei erottele saaria ja reikiä. Vartiointi:
+tests/maapolygonit-pallolla.test.mjs.
+
+AVOIN (tarvitsee lauta.js-muutoksen, ei tehty tässä aallossa):
+kaupunkien PISTEET ovat Globe.gl:n `pointsData` eivätkä DOM-elementtejä,
+joten body-luokka ei piilota niitä. Css piilottaa nyt pallon
+DOM-merkit (`.pallolauta-nimi/-nosto/-piste/-kohde/-nappula`) näissä
+tiloissa; pisteitä varten `js/pallolauta/lauta.js` tarvitsee ehdon
+`pisteNakyy`-funktioon (esim. `maatEdella()` = body-luokka
+`vertailu-tila` tai `maatiedot-tila` → epätosi) sekä nimien katoksi 0
+`ladoLevossa`-funktiossa, ja luokkien vaihto on jo kuunneltu
+(`valovahti`-MutationObserver → `paivitaPisteet` + `pyydaLadonta`).
+
+**Aalto 1D — etusivu pallolle (5.9.2026).** (1) Etusivun
+esirenderöity pallo (js/etusivupallo.js, vaihe 5a) on PALLOLAUDALLA
+OLETUS ilman lippua; lippu jäi poiskytkimeksi (`?etusivupallo=0`,
+ratasvalikon vipu), ja `?lauta=kartta` pitää etusivun vielä vanhassa
+pienoiskartassa (poistuu aallossa 3). (2) Lippu muutti osoitetta: se
+asuu nyt js/ui-apurit.js:ssä laudan valinnan vieressä ja
+js/etusivupallo.js vie sen edelleen ulos, koska js/ui.js:n mount päättää
+ENNEN ensimmäistä piirtoa, alustetaanko tasokartta — se ei voi odottaa
+dynaamista tuontia. Oletus on `lautaValinta() === 'pallo'`, ja
+poiskytkentä tallentuu arvona '0' (oletuksen mukainen valinta poistaa
+avaimen, kuten laudalla). (3) TASOKARTTA EI ALUSTU ETUSIVUA VARTEN:
+mount panee `kartta.lepotila`n päälle myös lähtövalinnassa
+(`etusivunPalloKaytossa`), ja renderin pallohaara ei enää herätä karttaa
+pickstart-vaiheessa. Mitattu 390×844 dpr 2: svg#board 188 → **0
+elementtiä**, pyramidipyyntöjä 0 (oli 0 jo ennestään, koska avausnäkymä
+ei zoomaa). (4) LÄHTÖKAUPUNKI VALITAAN YHÄ TASOKARTALTA: "Valitse
+aloituskaupunki" herättää kartan lepotilasta (js/ui.js aloitaKartalta),
+joten alustus maksetaan vasta napautuksesta eikä avausnäkymästä —
+lähikuva, kohdepisteet ja Livian repliikit ovat entisellään. Kun
+lähtövalintakin siirtyy pallolle, tämä herätys poistuu. (5) Varapolut:
+reduced motion → juliste ilman videota; verkkovika tai vanhentunut
+luettelo → kerrosta ei synny EIKÄ karttaa herätetä, jolloin ylälohkoon
+jää pergamentti ja julisteotsikko (pelkkä paperi, ei koskaan tyhjä
+ruutu); dist → dynaaminen tuonti kaatuu ja kartta HERÄTETÄÄN, jolloin
+yhden tiedoston versio saa entisen pienoiskarttansa. (6) Vivun
+poiskytkentä purkaa kerroksen SYNKRONISESTI js/ui.js:ssä ja pyytää koko
+piirron (js/main.js), jolloin vanha pienoiskartta herää samassa
+piirrossa. (7) Ylälohkon korkeus tulee pallolaudalla CSS:n varasijalta
+(`--intro-kartta-korkeus`, 44 %), koska mittauksen tekee js/kartta.js
+placeIntro vain hereillä — mitattu ero vanhaan (42 %) on silmällä
+olematon. Portit: tests/etusivupallo.test.mjs (oletus laudan mukaan,
+poiskytkin, lepotilan vartijat), tests/pallolauta.test.mjs ja
+savuke-etusivupallo (E1d tasokartta ei alustu, E5d vanha kartta herää
+lipulla pois, E8 pelkkä paperi) — savuke ajetaan nyt oletuslaudalla
+eikä `?lauta=kartta`-tilassa.
+
+**Aalto 2B — maailmanradio pallolle (js/linssit/radio.js).** Radio on
+kartan TILA eikä kerros, joten pallolla muuttui tasan yksi asia:
+kaupunkien play-napit. Linssi sai `pallolle(lauta)`, joka pyytää yhden
+merkkiosan (`lauta.linssit.merkit('radio', …)`); datum on `{ avain:
+kaupungin id, laji: 'linssi', lat, lng, elementti, asettele }` ja
+elementti on div + svg (rooli `button`, `aria-label` "Kaupunki —
+asema"), mitat RUUTUPIKSELEINÄ kuten muillakin pallon merkeillä
+(laatikko 44 px = osuma-ala, rengas 13, hehku 21, ulkokehä 17). Kolme
+ulkoasua ovat samat kuin kartalla (soiva, asema olemassa, ei asemaa) ja
+karsinta on sama `radionKaupungit` (mitattu maailmankartalla 113 nappia,
+110 kanavaa) — kiertoKohtia ei ole, koska pallolla ei ole saumaa.
+Soivan aseman vaihtuessa lista asetetaan uudelleen SAMOILLA AVAIMILLA
+(kerroMuutos → tahdistaPallonNapit), joten elementit siirtyvät eivätkä
+synny uudestaan; `asettele` piirtää sisuksen vain kun asu vaihtui.
+Soitin, pistenäyttö, viritysäänet ja js/packs/radiot.js ovat kartasta
+riippumattomia eivätkä muuttuneet.
+
+- **Napautus kulkee elementin kautta** — poikkeus riskin 3 R-malliin.
+  Nappi ei koske peliin, ja se on ainoa joka tietää kaupunkinsa;
+  `.pallolauta-merkki` on pointer-events: none, joten radion nappi
+  kumoaa sen kaksiosaisella valitsimella (css/radio.css), ja pallon
+  takana oleva (häivytetty) nappi ei ota napautusta.
+- **Radiotila omistaa pallon.** Pinnan ja kaupunkipisteen napautus on
+  vaiti radiotilassa (js/pallolauta/lauta.js napautaKaupunki,
+  napautaKohde: `ui.radioPaalla()`) ja nopanheiton kohteet ovat piilossa
+  (`body.radio-tila .pallolauta-kohde`) — sama kuin tasokartalla, jossa
+  drawTargets piirtää radiotilassa vain radion napit. Kaupunkien nimet
+  ja nappula jäävät kuten kartallakin.
+- **Kamera ajaa vain kun asemaa ei näe.** Napautettu nappi on jo
+  ruudulla; nauhalta voi valita aseman pallon toiselta puolen, ja
+  silloin `lauta.kamera.ajaKamera` vie sinne (varmistettu selaimessa:
+  Lontoo ei liikuttanut kameraa, Tokio ajoi 30/20 → 35,7/139,7).
+- Vartijat: tests/radio-pallolla.test.mjs (uusi) ja ennallaan pysynyt
+  tests/radio.test.mjs. Selaimessa varmistettu Chromiumilla: linssi
+  'radio' → 113 nappia pallolla, soitin ja pistenäyttö näkyvissä,
+  linssikarttaa ei avata; napautus virittää (soiva nappi punaisena);
+  sulku vie napit, soittimen ja `radio-tila`-luokan.
+
+AVOIN: kaupunkien PISTEET (Globe.gl pointsData) jäävät nappien alle
+näkyviin — sama laudan `pisteNakyy`-muutos ratkaisisi tämän ja aallon 1C
+saman avoimen kohdan kerralla; napit ovat pisteitä isompia, joten piste
+ei ota napautusta itselleen.
+
+**Aalto 2A — keksintölinssi eli aikajana-ajo pallolle (5.9.2026).**
+`js/linssit/keksinnot.js` sai `pallolle(lauta)`, mutta itse piirto
+vaihdetaan MOOTTORIN sisällä (js/aikajana.js): linssi on kerrokseton,
+joten kahva vain purkaa laudan osan `aikajana`, ja ajon käynnistää kuten
+ennen `ui.tahdistaAikajana`. Noin 80 % moottorista — kello, karuselli,
+ilmiöpaneeli, avausjakso, välinäytös, musiikki, luenta, Tiedeliite,
+lyhdyt, paneelin raahaus — on kartasta riippumatonta DOMia ja säilyi
+koskemattomana. Kaksi asiaa oli tasokartan svg:tä, ja ne kääntyivät:
+
+- **Valot.** `lauta.linssit.merkit('aikajana', …)`, datum
+  `{ avain: 'aikajana:<i>', laji: 'linssi', lat, lng, elementti(d),
+  napautus(d) }`. Elementti on sama neljän ympyrän lamppu samoilla
+  luokilla (`aikajana-valo-kajo/-syke/-hehku/-pallo`) ja samoilla
+  mitoilla, mutta divinä pallon pinnan pisteessä; se RAKENNETAAN HETI
+  eikä vasta kirjaston tehtaassa, koska moottori lukee ja kirjoittaa
+  lampun tilaa luokkina (`palaa`, `nykyinen`) myös silloin, kun merkki on
+  pallon takana. Liukuvärit (`url(#aikajana-lamppu)`, `#aikajana-kajo`)
+  tulevat linssin omassa piilotetussa svg:ssä, koska kartan `defs` ei ole
+  olemassa. Koko on ruutuvakio → `merkkiSkaala`/`paivitaMittakaava` ja
+  nipistyksen vastaskaalaus jäivät karttahaaraksi.
+- **Tummennus.** `lauta.linssit.kalvoRuudulle('aikajana', { reika })`.
+  Sävy on sama kuin css:n maskissa (`rgba(10, 7, 5, 0.86)`, puolivälissä
+  0,35), reikä on 63 ruutupikseliä (`MERKIN_SADE × REIAN_SUHDE`) ja sen
+  reuna pehmeä kolmella pysäkillä. Kartan maskissa on reikä joka
+  palavalle lampulle; CSS-kalvolla reikiä on YKSI ja se LIUKUU lampusta
+  toiseen (700 ms, lyhintä pituuspiiriä; reduced motion hyppää).
+  Kalvo pyydetään `alle: true` — apuri sijoittaa sen kirjaston
+  CSS2D-kerroksen ETEEN (`.scene-container`, mitattu Chromiumilla), jotta
+  pinta, kaupunkipisteet ja reitit jäävät sen alle mutta lamput hehkuvat
+  sen päällä. Pelin omat DOM-merkit (nimet, nappula, nostot) eivät jää
+  kalvon alle, joten ne piilotetaan linssin ajaksi css:llä
+  (`body.aikajana-paalla`) — kartalla ne jäävät 0,86:n tummennuksen alle
+  eli käytännössä näkymättömiin.
+
+**Napautus** kulkee laudan omaa R-mallia (riski 3): merkki ei ota
+osumia (`.aikajana-valo-pallolla { pointer-events: none }` — kajon kehys
+on 98 px ja söisi pallon pyörityksen), vaan `js/pallolauta/merkit.js`
+sai `napautettavat()` ja `js/pallolauta/lauta.js` ratkaisee linssin
+merkit ENNEN kaupunkeja ja nostoja (lamppu istuu usein täsmälleen
+kaupungin päällä; myös kaupunkipisteen napautus antaa vuoron lampulle).
+
+**Kamera** on `ui.kamera()` eli hereillä olevan laudan oma — pallolla
+`js/pallolauta/kamera.js ajaKamera` samalla bbox-allekirjoituksella,
+joten `sovitaKaareen`, avausjakson ajo ja paluu edelliseen näkymään
+toimivat sellaisenaan. `vapautaKamera` ohitetaan pallolla: fokuslukko on
+tasokartan oma eikä nukkuvaa karttaa saa herättää sen takia.
+`ui.tahdistaAikajana` hakee linssin nyt TUNNUKSELLA eikä
+kerrosmoottorista (pallohaarassa moottori on sammutettu, joten sen
+`linssi` on null), ja aikajanan oma ✕/Esc päättää linssin myös
+pallolaudalla (`pysaytaAikajana` ei enää katso pelkkää linssikarttaa).
+
+Vartijat: tests/aikajanamerkit.test.mjs osio 1 b (samat säännöt pallolla:
+merkit laudan apurille, syke, jälki, reiän liuku, kamera, purku),
+tests/aikajana-pallolla.test.mjs (haarat ja kytkennät tekstinä).
+Selaimessa varmistettu Chromiumilla 900×700: svg#board 0 elementtiä koko
+ajon ajan, 25 lamppua htmlElementsDatassa, kalvo `.scene-container`in
+lapsena merkkikerroksen edellä, kello ja karuselli ruudulla, avausjakso
+ja Käynnistä toimivat, lampun napautus siirtää pysäkkiin (myös Lontoon
+kaupunkipisteestä: pysäkki 1837 eikä kaupunkilehteä) ja "Ei linssiä"
+palauttaa pallon entiseen näkymään (lamput 25 → 0, kalvo pois,
+linssikartta false).
+
+**Aalto 3A — lähtökaupungin valinta pallolle (5.9.2026).** Aalto 1D
+jätti tähän yhden poikkeuksen (kohta 4: *"LÄHTÖKAUPUNKI VALITAAN YHÄ
+TASOKARTALTA"*), ja se oli pallolaudan VIIMEINEN pelitoiminto, joka
+herätti js/kartta.js:n: "Valitse aloituskaupunki" ajoi
+`kartta.heraa()` → `zoomaaAloituskartta` → `drawTargets`. Nyt
+valintanäkymä on pallon oma, eikä pallolaudalla ole enää yhtään
+kutsua, joka herättäisi kartan (aalto 3B voi poistaa sen). Vanha kulku
+säilyy `?lauta=kartta`-tilassa ja pallon varapolkuna.
+
+- **Nappi haarautuu, ei muutu.** `js/ui.js aloitaKartalta` soittaa
+  naksun ja häivyttää avaustekstin kuten ennen, ja jakautuu sitten
+  kahdeksi: `aloitaPallolta` (uusi) ja `aloitaTasokartalta` (entinen
+  runko sellaisenaan). Livian avausrepliikit lähtevät kummallakin
+  laudalla samasta kutsusta (`naytaLivianAvaus`), tekstit ja äänet ovat
+  ennallaan, ja valinta päätyy molemmilta `doPickStart`iin — peli ei
+  tiedä kummalta laudalta valinta tuli.
+- **Oma lippu, ei `aloitusZoom`.** Valintatilaa kantaa
+  `ui.aloitusvalintaPallolla`, ja `ui.aloitusvalintaAuki()` yhdistää
+  sen tasokartan lähikuvaan yhdeksi kysymykseksi. Syy on mitattu:
+  `aloitusZoom` on TASOKARTAN tila, jonka js/kartta.js nollaa aina kun
+  kartta nukahtaa (`nollaaAloitusZoom`) — ja juuri se tapahtuu, kun
+  pallo avataan hereillä olleen kartan päälle (`?etusivupallo=0`),
+  jolloin valintatila katosi samassa piirrossa kuin se syntyi.
+- **Pallo avautuu jo pickstart-vaiheessa.** `pallolautaHalutaan` palaa
+  pickstartissa lipun mukaan; muissa vaiheissa portti on entinen laudan
+  pakka. Avausnäkymässä ylälohkossa on yhä kevyt esirenderöity
+  pallovideo, ja se puretaan samassa piirrossa kuin lippu nousee
+  (`renderIntro`), joten WebGL-lauta maksetaan vasta napautuksesta.
+- **PALLON LAUTA ON AINA MAAILMANKARTTA.** Aloitusnäytön lauta
+  (js/packs/maailma.js) on eri koordinaatistossa, eikä sen pisteitä voi
+  projisoida pallolle. `js/pallolauta/lauta.js` ratkaisee siksi
+  `pack`in kerran (`ui.game.pack.id === PALLO_LAUTA ? … :
+  packById(PALLO_LAUTA)`) ja antaa saman pakan nimikerrokselle, joka
+  muistaa aineistonsa (`luoNimet({ …, pack })`) — muuten välimuistiin
+  olisi jäänyt väärän laudan pisteet. Pelin paikat (nappula, nopan
+  lähtö, laattojen esilataus) kulkevat `pallonKohta`-apurin läpi, joka
+  hakee kaupungin tunnuksella pallon laudalta silloin kun pelin lauta
+  on toinen; ilman sitä matkaajan nappula seisoi valinnassa
+  Tyynellämerellä.
+- **Valittavat ovat pallon kohdemerkkejä.** `ui.aloitusvalinnanKohteet`
+  antaa ETUSIVUN_KOHTEET-kaupungit (sama joukko ja sama "vasta napin
+  jälkeen" -portti kuin `drawTargets`), ja laudan `kohdevalinta` työntää
+  ne merkkikerroksen osaan `peli` lajilla `kohde` — täsmälleen sama
+  datum ja sama `kohdeElementti` kuin nopanheiton kohteilla, joten halo,
+  kultalevy ja nimi tulevat samasta säännöstä. Napautus on laudan oma
+  R-osuma (`napautaKohde` → `ui.doPickStart(kohde.city)`); Lontoo on
+  lähtöpiste eikä valinta, joten sen napautus on vaiti
+  (kehittäjän maailmanäkymä ohittaa tämän kuten kartallakin).
+- **Niukkuus samasta joukosta.** `ui.aloitusvalinnanNakyvat`
+  (ETUSIVUN_NAKYVAT) rajaa pallolla nimet (`nimet.lado` `vain`, katto 2)
+  ja pisteet (`pisteNakyy`) samaan kahteen kaupunkiin, joihin
+  tasokartta rajaa aloituskartan (`paivitaAloituskaupungit`).
+- **KAMERA TÄHTÄÄ LAATIKON ETELÄPUOLELLE.** Ensimmäinen toteutus rajasi
+  Lontoon ja Ateenan avauslennon omalla laatikolla
+  (LENNON_RAJAUKSEN_MARGINAALI 0,35). Mitattu Chromiumilla 390 × 844:
+  pallon perspektiivi levitti molemmat ruudun laitoihin puoliksi
+  leikkautuneina, ja Ateena jäi TÄSMÄLLEEN Livian kuplapinon alle —
+  napautus meni kuplaan eikä kaupunkiin. Omistajan sääntö *"kuplat
+  eivät estä valintaa"* (29.8.2026) pitää siis pallollakin, joten
+  `aloitusnakyma` käyttää reilumpaa marginaalia
+  (ALOITUSVALINNAN_MARGINAALI 0,8) ja siirtää keskipistettä etelään
+  ruudun korkeudesta lasketulla varalla (ALOITUSVALINNAN_KUPLAVARA
+  0,34): sisältö nousee ruudulla kuplien yläpuolelle. Kamera-ajo on
+  laudan oma (`lauta.kamera.ajaKamera`), ja `avaaPallolauta` kutsuu sitä
+  `kotiin`-ajon sijasta, koska matkaajalla ei vielä ole paikkaa.
+- **Häivytetty avausteksti ei ota napautuksia.** Tasokartalla teksti
+  työntyy ruudun alle (`.intro-pois`), pallolla se vain häipyy — ja
+  näkymätön "Valitse aloituskaupunki" (`.intro-valinta` on
+  pointer-events: auto) olisi vienyt pallon pyörityksen. Css sulkee
+  `.intro.intro-fade`-puun kokonaan sormelta.
+- **Varapolku.** Jos Globe.gl kaatuu kesken valinnan,
+  `pallolautaVarapolku` nollaa lipun ja antaa valinnan kartalle
+  (`aloitaTasokartalta`) — muuten valinta jäisi yleiskuvaan ilman
+  kohdepisteitä.
+- Vartijat: tests/aloitus-pallolla.test.mjs (uusi) sekä päivitetyt
+  tests/pallolauta.test.mjs, tests/etusivupallo.test.mjs ja
+  tests/pallonimet.test.mjs; savuke-etusivupallo sai vartiot E9a–E9d
+  (nappi ei herätä karttaa, valittavat ovat pallon kohdemerkkejä,
+  kuplat eivät peitä niitä, napautus käynnistää pelin) ja ajaa
+  Chromiumin nyt ohjelmistorasteroijalla, jotta pallo rakentuu.
+  Selaimessa varmistettu 390 × 844 dpr 2 ilman tallennetta: avausnäkymä
+  → "Valitse aloituskaupunki" → valintatila (kartta.lepotila true,
+  svg#board 0 elementtiä, 1 kohdemerkki `aloitus:ateena`, nimet Lontoo
+  ja Ateena, 2 pistettä, nappula Lontoossa) → Ateenan napautus →
+  vaihe 'action', pakka 'maailmankartta' → avauslento pallolla (1 kaari,
+  1 kone, harso, repliikki). Vanha kulku `?lauta=kartta` ennallaan
+  (svg#board 206 elementtiä, 1 kohderengas).
+
+**Avauslento: paksu viiva, zoom, pyörintä, kuva ilman isoisää (5.9.2026
+ilta).** Omistaja työpöytäkaappauksesta klo 23.10, sanatarkasti: *"tähän
+pitää vaihtaa uusi kuva jossa isoisää ei tunnista. lentokone saisi tehdä
+saman paksun viivan kuin etusivulla. näkymä saisi olla zoomautunut
+hieman lähemmäs. pallo voisi pyöriä hitaasti lennon aikana."*
+
+- **Paksu punainen viiva.** `js/pallolauta/avaus.js` antaa
+  viivakerroksen osaan `avauslento` KOKO kaaren kerralla
+  (`reitit.js jalki(pisteet, { paksuus, osuus })`) ja kasvattaa lennon
+  aikana vain `osuus`-lukua: viiva piirtyy KATKOVIIVANA, jonka viivaosa
+  on kuljettu osuus ja väli 1. **Miksi näin:** joka kehyksen pistelistan
+  kirjoitus jätti viivan ruudulla lennon ensimmäisen pätkän mittaiseksi
+  Lontoon viereen (mitattu Chromiumilla) — Globe.gl rakentaa Line2:n
+  geometrian `interpolK`-tweenin kautta, mutta katkoviivan luvut
+  kirjoitetaan materiaaliin joka päivityksellä. Väri on
+  `REITIN_VARIT.avauslennonJalki` = `rgba(194, 69, 47, 0.92)` eli
+  täsmälleen css `.etusivupallo-viiva` (#c2452f), ja paksuus on sama
+  luku 11 kuin sen `stroke-width`. **MITATTU: `pathStroke` on tässä
+  Globe.gl-versiossa RUUTUPIKSELEITÄ, EI ASTEITA** — viiva on Line2,
+  jonka LineMaterialissa `worldUnits` on epätosi ja `resolution` kotelon
+  koko css-pikseleinä (374 × 777), ja varjostin laskee
+  `offset *= linewidth; offset /= resolution.y`. Ensimmäinen toteutus
+  laski paksuuden asteina (0,89) moduulien kommenttien mukaan, ja viiva
+  jäi alle pikselin levyiseksi eli näkymättömiin. **AVOIN:** samat
+  "asteina"-kommentit ovat myös `MATKAREITIN_PAKSUUS_AST` (0,05),
+  `LENTOKAAREN_PAKSUUS_AST` ja linssien uomapaksuuksissa; ne piirtyvät
+  siis paljon ohuempina kuin oli tarkoitus (kaaret ovat putkia ja
+  käyttäytyvät eri tavalla). Korjaus on oma työnsä. Jälki kulkee
+  koneen kaarella eikä pinnalla — kone ja jälki lukevat saman kaavan
+  (`reitit.js lentokaarenKohta`) ja saman kellon (`hypynVaihe`), joten
+  viivan kärki on tasan koneen alla. Kerros sai per-piste-korkeuden
+  (`pathPointAlt` kolmiluvusta `[lat, lng, korkeus]`). Katkoviivakaari
+  jää hennoksi suunnitteluviivaksi jäljen alle
+  (`REITIN_VARIT.avauslennonSuunnitelma`, peittävyys 0,3). Jälki jää
+  näkyviin lennon jälkeen ja katoaa vasta `pura()`:ssa saapumiskortin
+  alla; poisto palauttaa kerroksen siirtymän, joten se häipyy pehmeästi.
+- **Zoom.** *(KUMOTTU 6.9.2026 — ks. osio "Avauslennon kamera seuraa
+  konetta" tämän luvun lopussa: rajaus ei ole enää kaupunkiparin
+  laatikko vaan lähtökaupunki ja `AVAUSLENNON_ALKULEVEYS`.)*
+  Avauslennolla oli oma marginaali
+  (`AVAUSLENNON_RAJAUKSEN_MARGINAALI` 0,2) tavallisen lennon 0,35:n
+  sijaan: Lontoo → Ateena 44,3° → 36,5° (1400 × 900) ja 40,6° → 33,4°
+  (390 × 844).
+- **Hidas pyörintä.** *(KUMOTTU 6.9.2026 — pallo ei pyöri lennossa
+  lainkaan; kamera seuraa konetta, ks. saman luvun loppu.)*
+  `AVAUSLENNON_PYORINTA_AST` (5°) koko lennon
+  mitalla, `pyorinnanPehmennys`-liu'ulla (pehmeät päät, lähes tasainen
+  väli). Rajauslaatikkoa siirretään lähtöön puoli pyörintää lännemmäs,
+  jolloin kamera SEURAA konetta ja KONE on kuvassa lennon molemmissa
+  päissä. Mitattu Chromiumilla: työpöydällä (kotelo 1379 × 826) varaa
+  reunaan 183 px joka suuntaan; puhelimella (374 × 777) kone on kuvassa
+  sekä lähdössä (x 115) että perillä (x 356) — parannus, sillä ennen
+  tätä Ateena jäi 11 px kotelon oikean reunan ULKOPUOLELLE koko lennon
+  ajan. Reitin toinen pää saa valua kuvasta lennon kuluessa. Ajo on
+  laudan oma `ajaKamera`, joten ele keskeyttää sen; reduced motionissa
+  ei pyöritä eikä siirretä laatikkoa. Kuljettajan oma
+  `LENNON_KAMERA_MS`-ajo korvautuu tällä samassa kehyksessä.
+- **Kuva, jossa isoisää ei tunnista.** *(KUMOTTU 6.9.2026 iltana:
+  omistaja poisti kortin ensimmäiseltä lennolta kokonaan — ks. luvun
+  loppu. Taulun rivi jää js/isoisan-valokuvat.js:ään.)* Lento luki vain
+  `ISOISAN_VALOKUVAT.lento`-avainta (js/isoisan-valokuvat.js), joka on
+  YKSI VAIHDETTAVA PAIKKA: kuvaputken uusi kuva vaihdetaan siihen
+  yhdellä rivillä (omistaja klo 23.15: *"kohta pitäisi tulla isoisän
+  uusia kuvia, niin käytä niitä ennemmin"*), ja `rajaus` on
+  VALINNAINEN. Kuva on kuvaputken 5.9.2026 illalla toimittama
+  `isoisa-bombay-aged-r20260905-v1`: isoisä astuu veneeseen selin
+  kameraan Bombayn satamassa — hän on kuvassa mutta ei hahmotu
+  (Raamattu: ISOISA JAA ARVOITUKSEKSI). Kuva näytetään KOKONAAN
+  paperireunoineen, ilman rajausta: vaalea vinjetti on jo kuvassa eikä
+  pahvireunusta ole. Kuvateksti on omistajan sanoin *"Isoisä, Bombay,
+  1873"* — paikka ja vuosi, ei ulkonäköä.
+- Vartijat: tests/pallolauta.test.mjs (neljä uutta) ja päivitetty
+  tests/isoisan-valokuvat.test.mjs. Selaimessa varmistettu Chromiumilla
+  (swiftshader, r2.dev Noden fetchillä) 1400 × 900 ja 390 × 844.
+
+**Mitä js/kartta.js:stä pallolauta vielä ajaa (mitattu aallon 3B
+työlistaksi).** Kartta-olion metodit käärittiin selaimessa laskuriin ja
+peli pelattiin läpi avausnäkymästä ensimmäiseen nopanheittoon asti
+(Chromium 390 × 844). Lepotilassa kutsuttiin VAIN näitä seitsemää:
+
+| metodi | mistä | mitä tekee lepotilassa |
+|---|---|---|
+| `fitViewBox` × 3 | mount, ResizeObserver, showAloitusportti | palaa heti (lepotilan portti) |
+| `boardBounds` × 1 | showAloitusportti (`ui.contentBox`) | laudan rajat pakan datasta |
+| `withIntroSpace`, `introKaistaKaytossa` | boardBoundsin sisältä | avaustekstin kaista |
+| `nuku` × 2 | `avaaPallolauta`, `doPickStart` | lepotilan asetus |
+| `dieRestingSpot`, `kiertava` × 1 | `animateDie` (nopan lepopaikka) | ruutupiste ja kierron leveys |
+
+`heraa` ei kutsuttu kertaakaan — lähtövalinta oli sen viimeinen kutsuja
+(tämä aalto). Jäljellä on siis kolme oikeaa riippuvuutta: laudan rajat
+aloitusportin mitoituksessa, nopan lepopaikka ja kierron leveys. Kaikki
+kolme ovat pakan dataa eivätkä piirtoa, joten ne siirtyvät pieninä
+funktioina laudan omaan moduuliin. NELJÄS on linssikartta: kuori
+(js/pallolauta/linssikartta.js `ui.kartta.heraa/nuku/ajaKamera/
+kameranTila`) herättää kartan sille linssille, jolla ei ole
+`pallolle`-funktiota — mutta 5.9.2026 rekisterissä
+(js/linssit/rekisteri.js) EI OLE ENÄÄ YHTÄÄN sellaista: topografia,
+vesistöt, vertailu, maatiedot, keksinnöt ja radio ovat pallolla, ja
+seitsemäs (`pallo`) on toiminto eikä kerros. Kuori on siis jo nyt
+kuollutta koodia, ja `ui.pallolinssiKelpaa` on ainoa portti, joka
+päättää asian. Aallon 3B työlista on siis:
+(1) `ui.pallolautaPaalla`/`kamera()`/`paivitaPallolauta` -portit ja
+`kartta.lepotila` kokonaan pois, kun tasokarttaa ei enää ole;
+(2) linssikartan kuori ja `ui.avaaLinssikartta`/`suljeLinssikartta`
+pois, kun jokaisella linssillä on `pallolle`; (3) `ui.puraLauta`,
+`drawBoardFor`, `drawTargets`, `drawTokens`, `drawPawns`,
+`paivitaFokusKerros`, `paivitaAloituskaupungit`, `zoomaaAloituskartta`,
+`aloitaTasokartalta` ja `tasokartanLentokohtaus` pois;
+(4) `pallolautaVarapolku` ja `palloTurvatila` uusiksi — ilman
+tasokarttaa varapolku on jokin muu (ilmoitus, uudelleenyritys);
+(5) tiedostot js/kartta.js, js/linssit/kerros.js,
+js/pallolauta/linssikartta.js, js/laattapyramidi.js ja js/mapart.js
+sekä `?lauta=kartta` ja LAUTA-kytkin pois.
+
+HUOM luvun 10 inventaarioon: **js/karttanimet.js EI POISTU** aallossa
+3B, vaikka luvun alun lista niin sanoo. Pallo latoo nimensä sen
+funktioilla (`ladoRuutunimet`, `karttanimienKaupungit`,
+`KARTTANIMI_FONTTI`, `KARTTANIMI_KOOT` —
+js/pallolauta/{nimet,nostot}.js), ja se on tarkoituksellista: ladonnan
+sääntö on YKSI molemmille laudoille. Tiedostosta poistuu vain se osa,
+joka piirtää tasokartan svg:hen.
+
+**Etusivupallo koko sivulle (5.9.2026 ilta).** Omistaja sanatarkasti
+klo 21.30: *"pallo saisi pyöriä koko etusivun alalla. isoisän kuva
+saisi olla isompi ja vaihtua aina samaan paikkaan"* — ja klo 21.45:
+*"animaatio pitää mennä koko maapallon ympäri niin että se voi loopata.
+eli pysähtyy lontooseen ja punainen viiva ottaa kiinni lopuksi"*.
+Kolme muutosta js/etusivupallo.js:ään, css/styles.css:ään ja
+tools/tee-etusivupallo.mjs:ään; uusi videoversio on
+`ETUSIVUPALLO_VERSIO = '2026-09-05c'` (työnkulku tee-etusivupallo on
+ajettava, ennen sitä etusivu on varapolullaan pelkkää pergamenttia).
+Sarja 2026-09-07a (7.9.2026, ensimmäinen Macilla poltettu, 15 min
+kaikilla ytimillä) nosti laattatason 6:een ja kuvan 1200 pikseliin
+samalla sumennuksella; vakio osoittaa nyt siihen.
+
+1. **Kerros koko paneelin taakse.** Kerros syntyy nyt `.intro`-paneelin
+   ensimmäiseksi lapseksi eikä `.intro-kartta`-ylälohkoon, ja video
+   rajataan `object-fit: cover` (ennen `contain`, jolloin työpöydällä
+   pallo oli kapea neliö keskellä ja alalohko tyhjää pergamenttia).
+   Video ja SVG saavat SAMAN muunnoksen yhdestä paikasta:
+   `SOVITUS_TAPA = 'cover'`, `SVG_SOVITUS.cover = 'xMidYMid slice'` ja
+   puhtaat funktiot `kerroksenSovitus` + `videostaRuudulle`. Kahva
+   tarjoaa `koneRuudulla(t)`:n samasta laskennasta. Vartiot:
+   tests/etusivupallo.test.mjs (sovitus = SVG:n slice-kaava pikselilleen,
+   kone kuvassa 390×844 / 768×1024 / 1400×900 / 2000×1300, CSS ja
+   moduuli sopivat rajauksesta) ja savuke E1e/E1f/E10a/E10b (selaimen
+   laskema koneen ruutupiste vs. moduulin oma, alle 2 px).
+   Luettavuus: sumuverho kevennettiin 0,44 → 0,38 ja avaustekstin sekä
+   julisteotsikon TAAKSE tuli paikallinen pergamenttiharso
+   (`::before`-liukuväri, ei suodattimia — iOS-sääntö). Harso on
+   pseudo eikä elementin tausta juuri siksi, ettei se saa kasvattaa
+   laatikoita: padding veisi isoisän kortilta sen kaistan.
+2. **Isoisän kuva kiinteään paikkaan ja isommaksi.** Esteväistö
+   (`valitseKuvapaikka`, `sijoitaKuva`, kutistussarja) POISTUI, ja
+   paikan antaa CSS: puhelimella ja tabletilla julisteotsikon ja
+   avaustekstin väliin oikeaan laitaan (`top: 37,25 %`,
+   `width: clamp(110px, 28vw, 176px)`), työpöydällä (≥ 900 px)
+   paneelin oikeaan alanurkkaan (`clamp(170px, 18vw, 260px)`).
+   Kuvateksti on yhdellä rivillä ja kallistus loiva (−3°), koska
+   puhelimen vapaa kaista on mitattuna vain ~95 px. Kortteja on KAKSI
+   päällekkäin: vaihto on aito ristihäivytys. Varmistuksena (ei
+   väistönä) `varmistaPaikka` siirtää korttia pystysuunnassa
+   (`--etusivupallo-kuva-siirto`), jos kiinteä paikka jollain
+   kirjasinkoolla osuisi otsikkoon tai tekstiin — sama luku molemmille
+   korteille, joten paikka ei vaihdu kuvien mukana. Mitattu Chromiumilla
+   kolmessa koossa: ei leikkausta avaustekstiin, otsikkoon, nappeihin
+   eikä äänet/aloitus-riviin.
+3. **Kierros on 360° ja looppaa saumatta.** `ETUSIVUN_REITTI` on nyt
+   Foggin kierros Lontoo → Pariisi → Kairo (Suez) → Mumbai (Bombay) →
+   Kolkata → Singapore → Hongkong → Tokio (Jokohama) → San Francisco →
+   New York → Lontoo. `reitinPisteet` muuttaa paluun nollaeron täydeksi
+   kierrokseksi, joten pituusasteiden kierto on tasan 360,000°.
+   `koneenTila` on JAKSOLLINEN (kelaa sauman yli ja lisää 360° per
+   kierros), jolloin myös kameran silotus on jaksollinen ja kehys
+   hetkellä KESTO on sama kuin hetkellä 0. Kierroksen lopussa on
+   `LOPPU_PITO_S = 2,6 s` mittainen jakso ilman matkaa: KONE PYSÄHTYY
+   LONTOOSEEN, punainen viiva sulkee ympyrän (kärki koneen ja jäljen
+   alkupisteen kohdalla), ja vasta pidon viimeinen `HAIVYTYS_S = 1,1 s`
+   häivyttää SVG:n pois ennen loopin alkua. Video ei enää häivy —
+   työkalusta poistui `window.haivyta`. Kesto on 49,6 s
+   (`JAKSON_POHJA_S = 1,0`, `JAKSON_ASTE_S = 0,115`), eli 744 kehystä
+   15 fps:llä; kehykset jaetaan tasan kierrokselle
+   (`t = i × KESTO / KEHYKSIA`) ja ffmpeg saa murtolukuisen taajuuden
+   (`KEHYKSIA / KESTO`), jotta videon kesto on tasan kierros. Työkaluun
+   tuli `--sauma`-koe, joka polttaa vain kehykset t = 0 ja t = KESTO ja
+   vertaa ne tavu tavulta; kontissa ajettuna 5.9.2026: **kameran
+   lon-ero 360°:sta 0,0 ja kehykset identtiset (pikseliero 0)**.
+   Työkalu kaatuu heti, jos reitti ei kierrä 360°, ja esilämmitys
+   nostettiin 12 → 24 näytteeseen (kierros käy nyt koko maapallon
+   ympäri, joten laattoja tarvitaan kaksin verroin).
+
+**Isoisän kuvat pinona, haaleina, tekstin alla (5.9.2026 klo 22.45).**
+Omistaja sanatarkasti: *"isoisän kuvat voivat olla blurrattuja ja
+haalealla ja jäädä tekstin alle"* ja *"ne voisivat pinoutua hieman sikin
+sokin toistensa päälle"* — sekä klo 22.50: *"käytetään niitä uusia jotka
+toivottavasti olet saanut kuvaputkelta, jotka ovat aika vaaleita
+(vinjetti vaaleaan)"*. Muutos korvaa yllä olevan kohdan 2 (kiinteä
+paikka, ristihäivytys):
+
+- **Kerrosjärjestys ratkaisee.** Pino (`.etusivupallo-pino`) on oma
+  kerroksensa `.intro`-paneelissa: video 0, sumuverho 1, PINO 2,
+  otsikko- ja tekstilohkot 3. Kortit siis jäävät tekstin alle, ja juuri
+  siksi esteväistö (`varmistaPaikka`, `--etusivupallo-kuva-siirto`) ja
+  koko pystysiirto poistuivat ja kortti kasvoi: puhelin/tabletti
+  `clamp(160px, 46vw, 250px)` keskellä alaosaa, työpöytä
+  `clamp(200px, 34vw, 420px)` oikeassa alaneljänneksessä.
+- **Haalea ja sumea, KUVAKOHTAISESTI.** `<img>`-elementillä
+  `opacity: calc(var(--kuvan-haalea) + var(--pino-harsokorjaus))` ja
+  `filter: blur(var(--kuvan-sumennus))`. Arvot tulevat pakan sävystä
+  (tumma 0,55 / 1,5 px, vaalea 0,85 / 1,2 px), koska kuvaputken uudet
+  vedokset ovat vaaleita. Harsokorjaus (+0,25 alle 900 px) kompensoi
+  avaustekstin pergamenttiharson, joka lepää pinon päällä pienillä
+  ruuduilla. Suodatin `<img>`-elementillä on TIETOINEN poikkeus
+  iOS-sääntöön (sääntö koskee kartan SVG-kerroksia) ja staattinen, joten
+  se jää myös reduced motion -tilassa.
+- **Pino sikin sokin, katto viisi.** Jokainen laskeutuminen luo uuden
+  kortin pinon päälle siemenelliseen asentoon (`pinonAsento(nro)`:
+  siirto ±5 % kortin koosta, kallistus ±8°) — sama laskeutuminen aina
+  samassa asennossa, joten kaappaukset ja savuke ovat vakaita. Siemen on
+  laskeutumisnumero eikä kuvan indeksi, koska kahdella kuvalla
+  kuvasidonnainen asento pinoaisi kortit täsmälleen päällekkäin.
+  Laskeutuminen animoidaan 700 ms (pieni pudotus + kallistuksen
+  asettuminen); kuudennen laskeutuessa alin häivytetään 620 ms:ssa.
+  Loopin vaihteessa PINOA EI TYHJENNETÄ: viiden kortin yhtäaikainen
+  katoaminen osuisi juuri siihen saumaan, jonka video ylittää
+  huomaamatta — katto hoitaa siivouksen yksi kortti kerrallaan.
+- **Kuvateksti vain päällimmäiselle** (`.uusin`), terävänä ja täydellä
+  peittävyydellä: viisi kallistettua lappua päällekkäin olisi
+  lukukelvoton mössö. Teksti on paikka + vuosi ("Bombay, 1873"), ei
+  henkilökuvausta (Raamattu: ISOISA JAA ARVOITUKSEKSI).
+- **Kuvat ovat DATAA**: `js/packs/etusivun-isoisakuvat.js` (tunnus,
+  osoite, kuvateksti, kaupunki = reitin jakso, sävy, rajaus). Kuvaputken
+  toimitus lisätään sinne yhtenä rivinä; pakan otsikkokommentissa on
+  ohje ja odottavien kahdentoista kuvan tunnukset. Vartiot:
+  tests/etusivupallo.test.mjs (kerrosjärjestys, pinon katto,
+  deterministinen asento, ei esteväistöä, kuvateksti paikka + vuosi) ja
+  savuke E4a–E4j. Kaapattu Chromiumilla 390×844 / 768×1024 / 1400×900
+  (vanhalla 05b-videolla): teksti pysyy luettavana kolmen kortin pinon
+  päällä kaikissa kolmessa.
+
+**Kuvat pois etusivulta ja takaisin PALLON PINNALLE (6.9.2026).**
+Omistaja jätti kuvapinon pois yöllä klo 01.20 (*"Jätä isoisän kuvat pois
+etusivulta"*) ja tilasi aamulla kuvat takaisin toisenlaisina,
+sanatarkasti:
+
+> *"Etusivulla kuvat voisivat tulla pienellä kartalle kaupungin
+> käännöksen kohdalle ja seurata kaupunkia ja lopulta häipyä sitä kautta
+> näkyvistä. Käytä uusia vaaleita kuvia. Voi olla isoisän ottamia
+> kuvia."*
+
+- **Pino ei palaa.** Kortit, asennot ja katto ovat poissa sekä
+  moduulista että css:stä (vartio tests/etusivupallo.test.mjs).
+- **Kuva on ankkuroitu kaupunkiin.** Kerros `.etusivupallo-kuvat` on
+  videon päällä mutta SVG:n alla, joten kone ja punainen viiva piirtyvät
+  aina kuvan päälle. Ruutupaikka lasketaan joka kehyksellä samalla
+  projektiolla kuin koneen paikka (`pallonPiste` + `videostaRuudulle`),
+  joten kuva seuraa kaupunkia pallon pyöriessä ja katoaa sen mukana.
+- **Elinkaari:** ilmestys 600 ms, pito 1,2 s, häipyminen 2,8 s
+  (`REITTIKUVAN_ILMESTYS_S` / `_PITO_S` / `_HAIPYMINEN_S`), ja kuva
+  häipyy viimeistään pallon reunalla (kulma kameran akselista yli 70°,
+  10° vyö nollaan). Liike vähennettynä peittävyys on portaittainen ja
+  css häivyttää sen liikkumatta.
+- **Koko** on 14 % kerroksen lyhyemmästä sivusta (102 px 1280×800:lla,
+  52 px 390×844:llä), ja kuvan keskipiste on 0,58 × koko kaupungin
+  yläpuolella, jotta lähtevä kone jää vapaaksi.
+- **Vaalea reuna häivytetään maskilla, ei sekoitustilalla.** `multiply`
+  ja `darken` mitattiin ensin Chromiumilla: koska kuvat ovat vaaleita
+  vinjettikuvia ja pallon pinta on yhtä vaaleaa pergamenttia, molemmat
+  söivät kuvan (kuvan osuus ruudun pikseleistä 3–9 yksikköä 255:stä).
+  Nyt kuva piirtyy tavallisesti, pehmeä radial-maski häivyttää reunan ja
+  pieni `contrast(1.35) brightness(0.92)` pitää sen erottuvana; kuva jää
+  silti hyvin hennoksi (mitattu keskiero 11,5 / 255).
+- **Kuvat ovat repossa pienennettyinä** (omistaja: *"Etusivulle kuvat
+  kannattaa varmaan pienentää valmiiksi että pyörii parhaiten"*):
+  `assets/etusivu/reitti/<kaupunkitunnus>.jpg`, 320 px pisimmältä
+  sivulta, laatu 0,8, 9–13 kt. Lähde (ämpärin iso vedos) ja kuvateksti
+  ovat pakan tietueessa; sw.js:n SHELL esilataa tiedostot.
+- **Kaupunkien kattavuus:** kymmenen kymmenestä (kuvatoimitus
+  9.9.2026). Pariisi oli 6.9. alkaen ainoa kuvaton kaupunki —
+  väliaikaista sijaista ei pantu — ja Kalkutan jaksoa paikkasi Benares;
+  molemmat saivat nyt oman kuvansa, ja Benares palasi varantoon
+  (`kaupunki: null`) omalla kuvatekstillään, koska Varanasi ei ole
+  Kalkutta. Vartiot: tests/etusivun-reittikuvat.test.mjs. Kaapattu Chromiumilla 1280×800 ja
+  390×844 (Kairon ja Bombayn käännökset, sama kuva 1,5 s myöhemmin ja
+  häipymässä).
+
+AVOIN: työpöydällä video suurennetaan cover-sovituksessa 1,75-kertaiseksi
+(2000 px leveällä 2,5-kertaiseksi), joten sumennettu 800 px:n kuva on
+pehmeä. Jos omistaja haluaa terävämmän, `tools/tee-etusivupallo.mjs`
+ajetaan `--kuva 1100 --lava 1240` -arvoilla (tiedostot kasvavat noin
+kaksinkertaisiksi). Erittäin leveillä näytöillä (kuvasuhde yli ~2 : 1)
+cover rajaa pystysuunnassa niin paljon, että koneen reitin pohjoisin
+kohta voisi jäädä ulos; mitatut koot 390×844 … 2000×1300 ovat kunnossa.
+
+**Aikajana-ajon lähikuva, ennakoiva kamera, esiladatut havainnekuvat ja
+epäsäännöllinen valokeila (5.9.2026 ilta).** Omistaja katsoi aallon 2A
+ajoa työpöytäselaimella ja pyysi neljä asiaa, sanatarkasti:
+
+> *"zoomaa maapallo näin lähelle mutta liikuta palloa pehmeästi ja
+> hieman jo ennakoiden kohti uutta valopalloa niin että kun valopallo
+> syttyy kartan liike loppuu vasta vähän sen jälkeen. pidä kokoajan
+> terävä tila päällä."*
+>
+> *"havainnekuvat pitää esiladata, nyt tulivat vähän perässä."*
+>
+> *"saisiko havainnekuvan häivytyksen hieman epäsäännöllisemmän
+> muotoiseksi?"*
+
+1. **LÄHIKUVA ON VAKIO, EI KAAREN RAJAUS.** `AIKAJANAN_LAHIKUVA_LEVEYS`
+   (js/aikajana.js) = **260 lautayksikköä** (pyydetty kaista 7,8°,
+   altitude 0,146). Ajo ei enää sovita koko kaarta ruutuun: `sovitaAlkuun`
+   vie kameran ENSIMMÄISEN lampun ylle lähikuvaan (`ajaPysakille`), ja
+   siitä eteenpäin kamera vain siirtyy lampusta toiseen samalla
+   korkeudella. Tasokartta (`?lauta=kartta`) pitää entisen koko kaaren
+   sovituksen — lähikuva on pallon oma, koska vain siellä on laatat.
+   LUKU ON MITATTU EIKÄ LASKETTU: `korkeusLeveydesta` on tasokuvan kaava
+   PYSTYSUUNNAN avauskulmalla, joten ruudulla näkyvä vaakakaista on noin
+   1,8-kertainen pyydettyyn nähden. Mitattu Chromiumilla 1400 × 900
+   (kotelo 1379 × 821, kamera Pavian yllä, ruudun laitojen pisteet
+   käännettiin asteiksi ja väli laskettiin isoympyränä):
+   120 → 686 km, 200 → 1 162 km, 240 → 1 406 km, **260 → 1 527 km**,
+   300 → 1 782 km, 450 → 2 775 km. Omistajan mitta (Irlannista
+   Tanskaan ≈ 1 500 km ruudun leveydellä) osuu siis lukuun 260.
+   Mittakaava on kilometriä pikseliä kohti (≈ 1,1 km/px), joten
+   kapeampi ikkuna näyttää kapeamman kaistan; luku on yksi rivi, jos
+   omistaja haluaa toisin. Aikajanan lähikuva pysyy siirtonäkymän
+   katon (`PALLOLAUDAN_SIIRTOLEVEYS` = 120) yläpuolella; pelaajan oma
+   nipistys pääsee v1649:stä alkaen syvemmälle (luku 10.4).
+2. **KAMERA LÄHTEE ENNEN SYTTYMISTÄ JA SAAPUU VASTA SEN JÄLKEEN.**
+   Saapumishetki lasketaan samalla puhtaalla funktiolla kuin karusellin
+   ennakko (`aikaSeuraavaan`) — kello ei kulje vakionopeudella, joten
+   "kaksi sekuntia ennen" ei ole sama kuin "kahden sekunnin matka
+   jäljellä". `tarkistaKameraEnnakko` ajetaan `kehys`issä karusellin
+   ennakon rinnalla ja käynnistää ajon, kun syttymiseen on enintään
+   `AIKAJANAN_KAMERAN_ENNAKKO_MS` = **1 840 ms** (=
+   `AIKAJANAN_KAMERAN_ENNAKKO_OSUUS` 0,4 × `AIKAJANA_VIIVE_MS` 4 600).
+   Kesto on `eta + AIKAJANAN_KAMERAN_JALKIJATTO_MS` (**750 ms**), pohja
+   `AIKAJANAN_KAMERAN_POHJA_MS` (**900 ms**), joten liike jatkuu vielä
+   syttymisen yli. Pehmennys on `aikajananKameranPehmennys`
+   (smootherstep): nollanopeus molemmissa päissä, ei nykäisyä lähdössä
+   eikä pysähdyksessä. Jos ennakko ei ehtinyt lähteä (lyhyt väli,
+   ensimmäinen pysäkki, kortin tai lampun napautus), `sytyta`/`siirry`
+   ajaa pohjakestolla — lamppu ei jää lähikuvassa ruudun ulkopuolelle.
+   Kaaren LOPUSSA kamera peräytyy koko kaareen (`lopeta` →
+   `sovitaKaareen`), koska loppusanat lupaavat kaikki valot kerralla.
+3. **TERÄVÄ TILA PAKOTETTUNA AJON AJAKSI.** js/pallo.js sai
+   `pakotaPallonLaatu(true/false)` ja `pallonLaatuPakotettu()`: sama
+   vipu kuin `?laatu=aina`, mutta pyytäjittäin laskettuna ja ajon
+   mittaisena. `kytkeLaatunosto` lukee vivun nyt kutsuttaessa
+   (`const aina = () => laatuAinaPaalla(ikkuna) || laatuPakotukset > 0`)
+   ja saa muutoksen kuuntelijana: pakotus asettaa kynnykset ja
+   pikselisuhteen levon arvoihin, ajaa moottorille saman kameran (tarkat
+   laatat haetaan heti) ja terävöittää tekstuurit. Aikajana pyytää sen
+   `kaynnista`ssa ja vapauttaa `pura`ssa — myös kesken ajon suljettaessa.
+4. **HAVAINNEKUVAT KAKSI PYSÄKKIÄ ETUKÄTEEN.** `esilataaPienet` pyytää
+   yhä koko kaaren pienet tiedostot heti, mutta pyyntö ei pura WebP:tä.
+   Uusi `valmistaSeuraavat(i)` lataa JA DEKOODAA seuraavan
+   `PANEELIN_ESILATAUS_PYSAKKEJA` = 2 pysäkin havainnekuvan (640 px) ja
+   muotokuvat (400 px) jo edellisen pysäkin aikana; valmis Image-olio
+   jää varastoon (`luoKuvavarasto`, katto `KUVAVARASTON_KATTO` = 12,
+   vanhin poistuu ensin) ja paneeli OTTAA SEN SELLAISENAAN
+   (`kuvaTaiLaatta(..., varasto)`), jolloin uutta latausta ei lähde eikä
+   dekoodausta odoteta (`vaihdaPaneeli` ohittaa decode-kilpailun, kun
+   kuva on esiladattu). Osoite lasketaan samalla säännöllä kuin paneeli
+   sen pyytää (`paneelikuvanOsoite`) — muuten esilataus hakisi eri
+   tiedoston. Varasto tyhjennetään purussa.
+5. **VALOKEILAN REUNA ON EPÄSÄÄNNÖLLINEN.** `valokeilanMaski(siemen)`
+   laskee CSS:n `mask-image`-arvon: pohjasoikio ja sen päälle
+   `VALOKEILAN_LOHKOT` = 6 soikiota eri keskipisteissä ja eri säteillä.
+   Kerrokset yhdistyvät unionina (alfa a + b(1−a)), joten keskusta on
+   yhä täysin peittävä mutta ulkoreuna kumpuilee suunnan mukaan.
+   Siemen on tapahtuman indeksi (`t.n`), joten muoto on sama joka kerta
+   samalla kuvalla ja eri kuvilla eri. EI SUODATTIMIA (feTurbulence,
+   feDisplacementMap) — iPadilla ne maksaisivat paneelin
+   ristihäivytyksen joka kehyksellä; liukuvärit lasketaan kerran
+   merkkijonoksi ja selain rasteroi maskin kerran. Css lukee sen
+   muuttujasta `--aikajana-valokeila` ja pitää entisen yhden soikion
+   varasijana, joten sama reuna toimii pallolla ja vanhalla kartalla.
+
+Vartijat: tests/aikajana.test.mjs (lähikuvan mitta, ennakon luvut,
+pehmennyksen käyrä, esilatauksen osoitteet ja varasto, maskin muoto),
+tests/aikajanamerkit.test.mjs (tynkäselain: ajo alkaa lähikuvasta,
+ennakko lähtee ennen syttymistä ja kesto ylittää sen, terävä tila
+päällä ajon ajan ja pois purussa, kahden pysäkin esilataus),
+tests/aikajana-pallolla.test.mjs ja tests/pallo.test.mjs (pakotuksen
+laskuri ja kuuntelijat). Selaimessa mitattu Chromiumilla 1400 × 900
+(ohjelmistorasteroija, laatat ämpäristä): lähikuva 1 527 km, kameran
+lähtö 2,7–2,9 s ennen syttymistä (kontin hitaat kehykset venyttävät
+kelloa, joten ennakko on siellä pidempi kuin lasketut 1,84 s),
+`pallonLaatuPakotettu()` true ajon ajan ja false purun jälkeen, paneelin
+kuva `data-esiladattu="1"` ja maskissa 7 kerrosta, ei sivuvirheitä.
+
+AVOIN: kontin ohjelmisto-WebGL:llä kehysväli katkaistaan
+(`dt = min(200, …)`), jolloin kello kulkee reaaliaikaa hitaammin ja
+ennakolla laskettu saapumishetki tulee liian aikaisin — ajo ehtii
+päättyä juuri ennen syttymistä. Oikealla laitteella (60 fps) ennuste on
+tarkka, sama kuin karusellin ennakolla. Toinen avoin: lähikuva on
+kiinteä korkeus, joten kapealla puhelinruudulla näkyvä kaista on
+noin 430 km — omistajan pyyntö koski työpöytää, ja jos puhelin
+tarvitsee oman lukunsa, se on yksi rivi lisää.
+**Moduulien laiskoitus (erä 5b, 5.9.2026 ilta).** Omistaja: *"laita
+laiskoitus työn alle"*. Vaihe 1 pani tasokartan LEPOTILAAN (luku 3): se
+ei piirrä pallolaudalla mitään. Lataus jäi silti maksettavaksi — js/ui.js
+toi js/kartta.js:n ja sen aineistopakat staattisesti, joten ne haettiin
+ja jäsennettiin joka käynnistyksessä. Nyt ne tulevat yhdestä portista.
+
+*Mittaus ennen (Chromium, /opt/pw-browsers/chromium, 390 × 844, dpr 2,
+palvelin repon juuresta, ämpäri Noden kautta, service worker estetty;
+laskettu page.on('response'):n .js-vastausten tavut).* Ui.js:n
+staattisista tuonneista PALLOLAUDALLA turhia olivat vain nämä — muut
+karttamoduulit ovat yhteisiä ja jäivät staattisiksi:
+
+| moduuli | tavua | miksi laiska (kuka muu tuo) |
+| --- | --- | --- |
+| js/kartta.js | 223 875 | vain ui.js; `sovitaAjonKesto` siirtyi js/siirtokoreografia.js:ään, koska js/pallolauta/kamera.js tarvitsee sen ilman karttaa |
+| js/packs/maasto-tekstit.js | 318 456 | vain ui.js (avaaMaastonimi) |
+| js/packs/maasto-tekstit-malli.js | 21 474 | vain ui.js (avaaMaastonimi) |
+| js/packs/maailmankartta-varjostus.js | 100 563 | vain ui.js (drawMaasto) |
+| js/packs/maailmankartta-syvyys.js | 266 439 | TUONTI POISTETTU: MERISYVYYS on ollut pois käytöstä, pakkaa ei lueta mistään |
+
+YHTEISIÄ (jäivät staattisiksi, koska pallo tarvitsee ne): mapart,
+laattapyramidi, karttanimet + maailmankartta-nimet (js/pallolauta/nimet.js),
+karttavalot ja karttaselite (selite toimii pallolla), fokuskohteet,
+fokusmitat, elaintaky, fokuspiste, nostoladonta, maatummennus,
+karttamittari (js/main.js tuo), packs/maailmankartta.
+
+*Mittaus jälkeen.* Käynnistyksessä ladattu JS pallolaudalla (tallenne
+Ateenassa): **23 672 553 → 22 771 078 tavua (−901 475 B, −0,86 Mt;
+moduuleja 335 → 331)**. Avausnäkymässä (ei tallennetta) −902 397 B.
+Tasokartalla (`?lauta=kartta`) −253 060 B, koska merisyvyyspakka putosi
+sieltäkin; muu kuorma on sama, se vain tulee mountissa portin kautta.
+Herätys (linssikartta pallon päälle) lataa 649 kt kerran ja muistaa sen.
+Mittakaava: koko käynnistyksen JS on 22,6 Mt, josta sisältöpakat vievät
+valtaosan (kulttuuri-kategoriat 4,3 Mt, nähtävyysjutut 2,1 Mt,
+maa-kategoriat 1,6 Mt) — tasokartan osuus oli 4 %, ja seuraava mitattava
+erä on sisältö, ei kartta.
+
+*Malli: SIJAISOLIO, ei `await` jokaisen herätyksen edellä.* `ui.kartta`
+on aina olio, ja sitä kutsutaan pallolaudalla SYNKRONISESTI kymmenistä
+kohdista — mitattu selaimessa lepotilassa: `kiertava` 133 kutsua,
+`fitViewBox`, `asennaPanorointi`, `nuku` ja `boardBounds` jo
+avausnäkymässä, `dieRestingSpot` jokaisessa nopanheitossa. Yhtäkään ei
+voi muuttaa odottavaksi, joten portti on olio: js/kartta-lataus.js
+`NukkuvaKartta`, jonka `js/ui.js varmistaKartta` vaihtaa oikeaan
+`Kartta`-olioon ensimmäisessä herätyksessä. Kaksi totuutta ei synny,
+koska `Kartta extends NukkuvaKartta`: nukkuvan kartan pienet metodit
+(boardBounds, kiertava, dieRestingSpot, maatiedotHalutaan, mapToPane,
+kuori, laudanKorkeus …) ovat samaa koodia kummallakin, ja raskaat ovat
+kantaluokassa nukkuvina tynkinä, jotka hereillä oleva kartta korvaa.
+
+*Herätyspolut:* (a) `?lauta=kartta` ja katselutila — mount kutsuu
+`heraaTasokartta`, joka lataa moduulin ja piirtää laudan (ero entiseen on
+yksi mikrotehtävä, verkottomana SW-välimuistin haku); (b) linssikartta
+pallon päälle — js/pallolauta/linssikartta.js `avaa` jatkaa latauksen
+jälkeen samasta portista; (c) pallon varapolku ja `?etusivupallo=0` —
+sijaisen `heraa()` palauttaa epätoden ja ohjaa `heraaTasokartta`an, joten
+vanhat kutsupaikat toimivat sellaisenaan. Epäonnistunut lataus jää
+sijaiseen eikä kierrä (yksi ehto `heraaTasokartta`ssa).
+
+*Offline ja yhden tiedoston versio:* moduulit pysyvät sw.js:n SHELLissä
+(dynaaminen tuonti hakee ne korista ilman verkkoa) ja
+tools/build-standalone.mjs:n MODULES-listalla, jossa js/kartta-lataus.js
+ja js/siirtokoreografia.js ovat ennen js/kartta.js:ää (kantaluokka ja
+riippuvuus ennen perijäänsä — nipussa on yksi näkyvyysalue). Nipussa
+dynaaminen tuonti kaatuisi (linssit.md 2.1), joten portti lukee moduulit
+samasta näkyvyysalueesta try/catchilla; savuke-dist ja suora tarkistus:
+peli käynnistyy, lauta piirtyy (188 elementtiä), ei virheitä.
+tools/tarkista-niputus.mjs sai `DYNAAMISESTI_TUODUT`-poikkeuslistan
+(vain dynaamisesti tuodut, jotka silti niputetaan) ja vartioi, että
+dynaaminen tuonti oikeasti on olemassa.
+
+*Portit:* tests/kartta-lataus.test.mjs (uusi: ei staattisia tuonteja
+mistään js/-moduulista, sijaisen rajapinta kattaa jokaisen ui.js:n
+`this.kartta.X`-kutsun, tyngät ovat tynkiä, SHELL ja niputus) ja
+tools/savukkeet/savuke-kartan-laiskoitus.mjs (uusi, 10 vartiota:
+moduuleja ei haeta pallolaudalla, sijaisen luvut, herätys linssikartalla,
+Sulje, varapolku, `?lauta=kartta`). Ajettu vihreinä: `node --test
+tests/*.test.mjs` (1660 ok), tarkista-niputus, tarkista-savukkeet,
+tarkista-kaksoisavaimet, savuke-lautakytkin (10/10), savuke-etusivupallo
+(32/32), savuke-kartta-tila (20/20), savuke-dist.
+
+HUOM savuke-pallolauta vartio 7 (linssikartta) on VANHENTUNUT jo ennen
+tätä erää: aalto 1C teki maatiedot-linssistä pallolinssin, joten
+linssikarttaa ei enää avata siitä — sama FAIL tulee origin/mainissa
+(todennettu 5.9.2026). Laiskoitus ei siihen koske; savuke odottaa
+päivitystä aallon 1C mukaiseksi.
+
+**Avauslento: ei sumennusta, suora lähtö, häivytetty isoisän kuva
+(5.9.2026 klo 00.35).** Omistaja edellisen erän (v1601) kaappauksesta,
+sanatarkasti: *"lentokonekohtauksessa kartta voi näkyä ilman
+sumennusta. lentokoneen ei tarvitse kääntyä alussa vaan voi lehtää heti
+oikeaan suuntaa ja jättää paksun punaisen viivan. isoisän kuva pitää
+häivyttää joka reunastaan läpinäkyväksi ja tehdä vähän isommaksi"*
+
+- **Sumennus pois.** Vaiheen 5b niukkuusharso (`.pallolauta-harso`,
+  pergamentti rgba(238, 225, 196, 0.62) kotelon päällä) on poistettu
+  KOKONAAN pallolta: elementti, luokka ja css-sääntö. Se jäljitteli
+  tasokartan lentoharsoa, mutta pallolla se peitti juuri sen, mitä
+  avauksessa katsotaan — laattakartan maapallon. Niukkuus jää siihen
+  mitä se oikeasti on: kaksi nimeä (Lontoo + kohde), ei muita pisteitä
+  eikä pelitilaa. Lennon nimiasu (täysi muste + pergamenttihalo) jää,
+  koska nimen on luettava myös terävän laattakartan päällä, samoin
+  merkkien pinontataso (`.pallolauta-lennossa`, z-index 3). Vanhalla
+  kartalla (`?lauta=kartta`) harso on kartan oman lentokerroksen asia
+  eikä muuttunut.
+- **Terävät laatat koko lennon ajan.** Koska kartta on nyt lennon
+  pääosassa, `js/pallolauta/avaus.js valmistele()` pyytää terävän tilan
+  (`pakotaPallonLaatu(true)`, js/pallo.js, v1603) ja `pura()` vapauttaa
+  sen laskeutumisessa. Vipu laskee pyytäjiä, joten vapautus ei voi
+  sammuttaa toisen pyytäjän terävyyttä. MITATTU: pakotus ei kasvattanut
+  laattapyyntöjä — savuke pyysi pallolaattoja 1856 kertaa koko
+  avauksesta perille, kun origin/main pyysi samalla ajolla 1864.
+- **Suora lähtö, ei alkukäännöstä.** Koneen kulma laskettiin ennen
+  EDELLISEN KEHYKSEN ruutupisteestä: ilmestyessään koneella ei ollut
+  edellistä pistettä, joten kulma oli 0° eli nokka itään, ja koska
+  hypyn pehmennys lähtee hitaasti, ensimmäisten kehysten siirtymä jäi
+  alle puolen pikselin kynnyksen — kone seisoi väärässä asennossa ja
+  kääntyi vasta vauhdin kasvaessa. Nyt kulma luetaan KAARESTA
+  (`js/pallolauta/siirto.js koneenKulma`: kaaren pisteet osuuksilla e ja
+  e + `KONEEN_SUUNTANAYTE` 0,004 ruudulle projisoituina), joten asento
+  on oikea jo ensimmäisellä kehyksellä ja seuraa myös pallon pyörintää.
+  `aseta(pos, kaari)` sai kaaren toiseksi parametrikseen, ja avaus antaa
+  sen jo kiitoradalla. Käännöksen kesto on nolla vakiolla
+  `KONEEN_KAANNOKSEN_MS` (0 ms), joka menee elementin css-muuttujaan
+  `--koneen-kaannos-ms`: transformin siirtymä on siis rakenteellisesti
+  nolla eikä selain voi animoida kiertoa. Peittävyys sen sijaan liukuu
+  (`KONEEN_ILMESTYS_MS` 420 ms, `--koneen-ilmestys-ms`), joten kone
+  häivyttyy näkyviin jo oikeassa asennossa. Paksu punainen viiva
+  kirjoitetaan nyt heti lähdössä (`piirraJalki(hypynVaihe(0).e)`) eikä
+  vasta ensimmäisessä rAF-kehyksessä.
+- **Isoisän kuva häivytettynä ja isompana.** *(KUMOTTU 6.9.2026 iltana:
+  kortti ja sen tyylit poistettiin lennolta.)* Kortti (`.lento-valokuva`)
+  kasvoi noin neljänneksen ja koko on yksi muuttuja
+  `--lento-valokuvan-leveys`: työpöydällä min(30vw, 280px) →
+  min(37,5vw, 350px), puhelimessa min(44vw, 200px) → min(55vw, 250px).
+  Häivytys on MASKI EIKÄ SUODATIN (iOS-sääntö, tests/lento-ajoitus):
+  vaaka- ja pystysuuntainen lineaarinen liuku leikkauksena
+  (`mask-composite: intersect` + `-webkit-mask-composite: source-in`,
+  sama kaava kuin `.reveal-overlay.paikallis .reveal-aarrekuva`), vyöt
+  `--lento-valokuvan-haivytys-x` 15 % ja `-y` 18 % — jokainen neljästä
+  reunasta päätyy läpinäkyvään eikä yhtäkään kovaa reunaa jää.
+  `box-shadow` poistettiin: se piirtyy elementin LAATIKON mukaan eikä
+  maskin, eli olisi jättänyt juuri sen terävän suorakaiteen, jonka
+  häivytyksen on määrä poistaa. Kuvateksti *"Isoisä, Bombay, 1873"* on
+  kortin oma span kuvan ALLA eikä kuvan sisällä, joten se jää
+  häivytyksen ulkopuolelle ja pysyy täysin luettavana; negatiivinen
+  ylämarginaali (-0,6 rem) nostaa lapun kiinni kuvan viimeiseen
+  näkyvään riviin.
+- Vartijat: tests/pallolauta.test.mjs (kolme uutta: ei sumennusta, laatu
+  pakotettu ja vapautettu, käännöksen kesto 0),
+  tests/isoisan-valokuvat.test.mjs (maski kaikilta reunoilta, koko
+  +25 %, ei varjoa, kuvateksti häivytyksen ulkopuolella),
+  tests/lento-ajoitus.test.mjs (kohtaus ei sumenna karttaa).
+  `node --test tests/*.test.mjs` 1714 ok / 0 fail. savuke-avauslento sai
+  swiftshader-liput (ilman niitä `--lauta pallo` mittasi varapolkua) ja
+  P3 on nyt *"ei sumennusta lennolla; terävä laatu pakotettuna ja
+  vapautettuna perillä"*. Ajettu: 5/7 (P1–P5 vihreinä). AVOIN: saman
+  savukkeen P6 (lehti aukeaa perillä) ja P7 (kamera perillä) kaatuvat
+  TÄSMÄLLEEN SAMOILLA LUVUILLA myös origin/mainissa (todennettu tässä
+  kontissa 5.9.2026: poikkeama 37,7 %, leveys 1113,3 odotuksen 240
+  sijaan) — ämpäri vastaa 429:llä ja ohjelmistorasteroija ajaa
+  saapumisen liian hitaasti mittausikkunaan. Ei liity tähän erään;
+  kirjattu Fablelle.
+
+**Etusivun avaus: otsikko paikalleen, osa II myöhemmäksi, kolme kuvaa
+puolta pienempinä ja harsot näkymättömiin (5.9.2026 klo 00.20 ja
+00.25).** Omistaja katsoi etusivua työpöytäselaimella ja pyysi
+sanatarkasti:
+
+> *"etusivun otsikko hyppää alussa eri kokoon kun kirjoituskone teksti
+> alkaa. osa 2 saisi tulla sekunnin myöhemmin. ensimmäinen isoisän kuva
+> vasta noin 5 sek kohdalla ja puolet pienemmällä. kuvia saa tulla
+> yhteensä kolme, eli vähemmän kuin nyt ja hitaammin."*
+>
+> *"konekirjoituksen tekstin takana oleva vaalennus pienemmälle teholle
+> sekä isommalle alueella mutta niin että häivytys peittää elementin
+> neliöt rajat. ylemmässä myös häivytyksen rajat pois näkyvistä
+> (pohjalaatta vähän isompi ja häivytys pidemmälle matkalle)."*
+
+1. **OTSIKON HYPYN JUURISYY: kaksi eri lukua samasta koosta.** CSS:n
+   lähtökoko oli `.intro-juliste { font-size: 1.44rem }`, mutta
+   `js/ui.js fitIntro` aloittaa mittauksensa koosta
+   `INTRO_FONT_MAX × JULISTEEN_KERROIN` = 1,14 × 1,5 = **1,71rem** — ja
+   fitIntro ajettiin vasta kertomuksen alkaessa (`aloitaKertomus`,
+   `aloitaRunko`). Otsikko siis vaihtoi kokoa täsmälleen kirjoituskoneen
+   ensimmäisellä naksahduksella. Mitattu Playwrightilla ennen korjausta:
+   1400 × 900 kirjasin 23,04 px → 27,36 px, "MATKAKIRJA" 376,7 px →
+   447,5 px leveä ja y 166,0 → 138,9 (nousi 27 px); 1000 × 700 23,04 px
+   → 25,20 px (fitIntro kutisti yhden askeleen). Sama koski
+   tekstipalstaa: 15,36 px → 18,24 px, eli myös nappi ja työpöytäkuva
+   (em-mitat) hyppäsivät. Korjaus on kaksiosainen: css:n lähtöarvot ovat
+   nyt SAMAT luvut (`.intro-juliste` 1,71rem, `.intro-palsta` 1,14rem),
+   ja `renderIntro` ajaa `fitIntro`:n **jo portin takana** (ja portin
+   ohittavalla reitillä ennen ajastimia). Mittaus on idempotentti, joten
+   myöhemmät kutsut eivät liikuta mitään. Mitattu korjauksen jälkeen
+   1400 × 900 hetkillä 0,3 / 2,5 / 3,5 / 6 / 25 s: `.juliste-nimi`
+   47,0592 px ja 476,3 , 138,9 · 447,5 × 54,1 — sama luku joka
+   hetkellä; sama 2000 × 1300 ja 390 × 844.
+2. **OSA II SEKUNNIN MYÖHEMMIN.** `OSAN_VIIVE_MS` 1300 → **2300**;
+   `OSAN_HAIVYTYS_MS` pysyy 900 ms:ssä, ja kirjoituskone + luenta
+   alkavat yhä vasta häivytyksen jälkeen (siis 3,2 s napautuksesta).
+   Mitattu savukkeella: 2,0 s alaotsikon peitto 0,00 · 2,5 s 0,31 ·
+   3,0 s 0,91 · 3,5 s 1,00, paikkarivi tyhjä 3,0 s asti ja kirjoittunut
+   4,5 s kohdalla.
+3. **ISOISÄN KUVAT POIS ETUSIVULTA.** Omistaja katsoi kolmen kuvan
+   version ja päätti 6.9.2026 klo 01.20 sanatarkasti: *"Jätä isoisän
+   kuvat pois etusivulta"*. Tämä KUMOAA saman erän kohdat "kolme kuvaa
+   kierroksella, ensimmäinen noin 5 s kohdalla" ja "kortti puolet
+   pienemmäksi" — ne eivät päätyneet julkaisuun lainkaan. Poisto ei ole
+   lippu vaan koodin poisto, jottei etusivulle jää kuollutta koodia:
+   - js/etusivupallo.js: pinon DOM (`.etusivupallo-pino`), `laskeKortti`,
+     `pinonAsento`, `PINON_*`-vakiot, kuvien hetket
+     (`kuvienLaskeutumiset`) ja kierroslaskuri ovat poissa; kuvien
+     tuonnit (`rajausTyyli`, `valokuvanKuvateksti`, `isoisakuvanSavy`)
+     samoin. Piirto on nyt pelkkä viiva ja kone.
+   - css/styles.css: `.etusivupallo-pino`, `.etusivupallo-kuva` (kortti,
+     kuva, kuvateksti) ja `--pino-harsokorjaus` on poistettu.
+     Avauspaneelin kerrokset ovat pallo 0 · verho 1 · teksti 3.
+   - PAKKA JÄÄ: `js/packs/etusivun-isoisakuvat.js` (27 aikalaisvedosta),
+     `ETUSIVUN_KUVAKIERTO`, `saapumisenKaupunki` ja `saapumisenKuva`
+     ovat tallella vientinä — kuvat odottavat uutta käyttöpaikkaansa
+     (albumi, lentokohtaus), eikä niitä haeta uudelleen kuvaputkelta.
+     `saapumisenKuva` palasi kolmen argumentin muotoonsa (kierrossiirto
+     oli vain kolmen kuvan version tarve).
+   Vartiot: tests/etusivupallo.test.mjs *"etusivulla ei ole isoisän
+   kuvia: ei pinoa, ei kortteja, ei tyylejä"* (lähdevartio molempiin
+   tiedostoihin ja kerrosjärjestys) ja savuke E4a–E4c sekä E4k, joka
+   katsoo kahden ja puolen kierroksen ajan, ettei yhtään korttia
+   ilmesty. Palautus on käytännössä revert tästä commitista.
+4. *(kumottu kohdan 3 myötä: kortin koko)*
+5. **PERGAMENTTIHARSOT: YKSI KAAVA, KOLME MUUTTUJAA.** Harson reuna
+   näkyi, koska liukuvärin ellipsi oli laatikkoa suurempi (säde 74 %) ja
+   pseudon suorakulmio LEIKKASI harson kohdassa, jossa peittävyyttä oli
+   vielä 0,27 — juuri ne "elementin neliöt rajat". Nyt yhteinen sääntö
+   antaa `--harson-sade: 56%` (laatan reunalla ollaan 89 %:ssa sädettä,
+   eli käytännössä nollassa), seitsemän pysäkin liu'un ja peittävyyden
+   pseudon `opacity`iin muuttujana. Kaksi säädintä per harso:
+   konekirjoituksen teksti `--harson-peitto: 0.62` (ennen 0,94),
+   `--harson-haivytys: 42%`, laatta `-2.6em -5em` (ennen −1,2em/−1,6em);
+   julisteotsikko `--harson-peitto: 0.8`, `--harson-haivytys: 36%`,
+   laatta `-1.8em -3.6em` (ennen −0,5em/−1,4em). Laskettu peittävyys
+   laatan suoralla reunalla on nyt 0,036 (teksti) ja 0,030 (otsikko),
+   kun se oli 0,27 ja 0,24 — tests/etusivupallo.test.mjs LASKEE luvun
+   liukuvärin pysäkeistä eikä tarkista tekstiä. (Isoisän kortin
+   `--pino-harsokorjaus` poistui kuvien mukana, ks. kohta 3.)
+
+Vartijat: tests/lento-ajoitus.test.mjs (viive 2,2–2,5 s; css:n ja
+fitIntron kirjasinkoot sama luku; fitIntro ajetaan portin takana),
+tests/etusivupallo.test.mjs (etusivulla ei ole kuvapinoa missään
+muodossa, pakka ja sen valintasääntö tallella, harson reunapeitto alle
+0,05) ja savuke `tools/savukkeet/savuke-etusivupallo.mjs` E4a–E4c ja
+E4k (ei kuvia kahden ja puolen kierroksen aikana), E11d/E11e sekä uusi
+**E11f** (otsikon rivien laatikot ja kirjasinkoot samat 0,3 s ja 25 s
+kohdalla). Kaappaukset Chromiumilla 1400 × 900, 2000 × 1300 ja
+390 × 844 oikealla 2026-09-05c-videolla hetkiltä 0,3 / 2,5 / 3,5 / 6 /
+25 s.
+
+AVOIN: kuvat jäivät pois etusivulta, mutta pakka on olemassa ja
+maksettu — sille on löydettävä uusi paikka (albumi tai lentokohtaus),
+tai 27 vedosta jää käyttämättä.
+**Aloitusnäkymä lähemmäs, hidas pyörintä ja Livian viive — sekä
+kameran kuvasuhdekorjaus (5.9.2026 klo 00.30).** Omistaja katsoi
+lähtökaupungin valintaa työpöytäselaimella (2000 × 1300) ja pyysi
+kolme asiaa, sanatarkasti:
+
+> *"kartan zoom taso heti aloituksessa lähemmäksi. ks. 2 kuva.
+> karttapallo saisi pyöriä hitaast täydessä terävyydessä. pulun
+> kommentit noin 1,5 sek myöhemmin"*
+
+1. **KAMERAN KAAVA SAI KUVASUHTEEN — juurisyy zoomiin.** `PALLO_FOV`
+   (50°) on Globe.gl:n PYSTYSUUNNAN avauskulma, mutta
+   `korkeusLeveydesta` muutti pyydetyn LEVEYDEN korkeudeksi ilman
+   kuvasuhdetta: sama pyyntö näytti työpöydällä (1379 × 826)
+   1,67-kertaisen ja puhelimella (374 × 777) 0,48-kertaisen kaistan
+   pyydettyyn nähden, ja `kameranKohde`n bbox-haara laski
+   korkeusehdon (`bbox.h · vara · W/H`) siis täsmälleen väärinpäin.
+   Korjaus: `korkeusLeveydesta`, `leveysKorkeudesta` ja `lahinKorkeus`
+   saivat `kuvasuhde`-parametrin (oletus 1 = neliöruutu, jolloin
+   yksikkötestit ja apufunktiot säilyivät ennallaan), ja
+   `luoPallokamera` antaa aina kotelon oman suhteen — kutsuttaessa,
+   koska ruutu kääntyy. Nyt `leveys` tarkoittaa lautayksiköitä RUUDUN
+   LEVEYDELLÄ jokaisella laitteella, ja bbox mahtuu molempiin suuntiin.
+   *Mitattu Chromiumilla (swiftshader, r2.dev Noden fetchillä; ruudun
+   laitojen pisteet `toGlobeCoords`illa asteiksi ja väli isoympyränä,
+   sama tapa kuin aikajanan lähikuvassa):* sama pyyntö (260 yksikköä)
+   antoi ennen 1 530 km (1400 × 900) ja 430 km (390 × 844), nyt
+   898 km ja 872 km — eli kaikki laitteet näyttävät saman kaistan.
+   - **Aikajanan lähikuva kalibroitiin uudelleen samaksi kuvaksi:**
+     `AIKAJANAN_LAHIKUVA_LEVEYS` **260 → 434**, mitattu 1400 × 900:
+     260 → 898 km, 400 → 1 403 km, **434 → n. 1 525 km**, 450 →
+     1 588 km. Omistajan mitta (*"Irlannista Tanskaan ≈ 1 500 km"*)
+     pysyy siis pikselilleen entisenä työpöydällä — ja puhelin näyttää
+     nyt saman 1 450 km:n kaistan entisen 430 km:n sijaan, eli luvun 5c
+     AVOIN-kohta ratkesi tässä.
+   - **Avauslento:** `AVAUSLENNON_RAJAUKSEN_MARGINAALI` jätettiin
+     ennalleen (0,2) TIETOISESTI, ja mitattu rajaus muuttui:
+     1400 × 900 8 990 → **5 390 km**, 390 × 844 1 870 → **3 890 km**.
+     Syy: vanha luku oli sama kaava väärinpäin, eikä sitä voi palauttaa
+     molemmille laitteille yhtä aikaa — työpöydällä kuva oli
+     kaksinkertaisesti kaukana siitä, mitä omistaja pyysi (*"näkymä
+     saisi olla zoomautunut hieman lähemmäs"*, 5.9. klo 23.10), ja
+     puhelimella laatikko EI mahtunut leveyssuunnassa (siksi Ateena jäi
+     11 px kotelon ulkopuolelle ja rajausta piti siirtää lännemmäs).
+     Nyt kone ja molemmat päät ovat kuvassa kummallakin (mitattu
+     1400 × 900: Lontoo x 487, Ateena x 1 069 / 1 379; 390 × 844:
+     x 122 ja x 312 / 374). Jos omistaja haluaa vanhan kaukaisemman
+     kuvan takaisin, se on yksi luku (0,2 → 0,67 antaa entisen
+     työpöytärajauksen).
+   - **Saapumis- ja siirtonäkymä (240 ja 120 yksikköä) jätettiin
+     ennalleen**, koska niiden omat kommentit puhuvat asteista
+     (*"~7°"*, *"~3,6°"*) — ja vasta nyt ne pitävät paikkansa.
+     Mitattu vaikutus: saapuminen työpöydällä 1 345 → 840 km (lähemmäs,
+     omistajan toivomaan suuntaan) ja puhelimella 370 → 840 km
+     (kauemmas, mutta terävämpi: laatat eivät ole enää 1,9× venytettyjä
+     vaan alle 1×). Sama koskee tavallisen lennon rajausta
+     (`LENNON_RAJAUKSEN_MARGINAALI` 0,35). Jos jokin näistä halutaan
+     toisin, kukin on yksi rivi.
+2. **ALOITUKSEN RAJAUS.** `ALOITUSVALINNAN_MARGINAALI` **0,8 → 0,12**
+   (js/pallolauta/lauta.js). Vanha luku oli reilu juuri siksi, että
+   kaava veti kuvan kauas; korjatulla kaavalla valinta on nyt lennon
+   rajausta (0,35) TIUKEMPI. Kuplavara muuttui samalla osuudesta
+   PIKSELEIKSI (`ALOITUSVALINNAN_KUPLAVARA_PX` = 190 ja
+   `ALOITUSVALINNAN_KUPLALEVEYS_PX` = 336, ennen 0,34 ruudun
+   korkeudesta): Livian kuplapino on tekstiä, ja se mitattiin
+   336 × 129 px:ksi 2000 × 1300:ssa mutta 336 × 180 px:ksi
+   390 × 844:ssä — osuutena vara söi työpöydällä juuri sen zoomin, jota
+   omistaja pyysi. Siirto on VINO, koska kuplat ovat NURKASSA: sisältö
+   nousee ja siirtyy vasemmalle puolella kuplakaistasta, kumpaankin
+   suuntaan enintään neljänneksen laatikon ja reunan välistä
+   (`Math.min(kuplavara, (näkyvä − laatikko) / 4)`). Ensimmäinen mitta
+   ilman vaakasiirtoa jätti Ateenan nimen 1400 × 900:ssa kuplapinon
+   reunan alle (mitattu: merkki x 1 029, kuplat x ≥ 1 047); vaakasiirto
+   (90 yksikköä ≈ 107 px) vie sen selvästi sivuun, ja puhelimella siirto
+   on itsestään ~0, koska siellä laatikon leveys sitoo rajauksen.
+   *Mitattu ruudun leveys (km) valintanäkymässä ennen → jälkeen:*
+   2000 × 1300 **13 143 → 4 375**, 1400 × 900 **13 512 → 4 592**,
+   390 × 844 **3 453 → 3 419**. Puhelin ei siis muuttunut (siellä
+   laatikon leveys sitoo), työpöytä lähentyi kolminkertaisesti:
+   Irlanti on ylävasemmalla, Pohjois-Afrikan rannikko alalaidassa ja
+   Lontoo–Ateena-pari täyttää ruudun kuten omistajan kuvassa 2.
+3. **PALLO PYÖRII HITAASTI TÄYDESSÄ TERÄVYYDESSÄ.**
+   `ALOITUKSEN_PYORINTA_AST_S` = **0,4 °/s** itään (täysi kierros
+   15 min) ja `ALOITUKSEN_PYSAYTYS_MS` = 900. Pyörintä on OMA
+   rAF-silmukkansa eikä kamera-ajo: ajo on matka pisteestä toiseen,
+   tämä on tasainen liuku, joka lukee ja kirjoittaa `pointOfView`n
+   kehys kerrallaan SEINÄKELLOSTA (dt katkaistaan 100 ms:iin, jottei
+   taustavälilehdestä palaava ruutu hypäytä palloa). Koska nykyinen
+   kohta luetaan joka kehyksellä, pelaajan oma veto ja nipistys jäävät
+   voimaan. Kolme pysäytintä: sormi tai rulla koteloon → PEHMEÄ
+   hidastus (`pyorinnanPehmennys`, sama smootherstep kuin avauslennon
+   pyörinnässä, ei nykäisyä); toinen kamera-ajo omistaa kuvan → seis
+   samassa kehyksessä; vaihe vaihtuu tai lauta menee piiloon → seis ja
+   pakotus pois. Terävä tila on pakotettuna koko valinnan ajan
+   (`pakotaPallonLaatu(true)` jo ennen kamera-ajoa, `false` kun
+   kaupunki on valittu, lauta piilotetaan tai puretaan) — sama vipu
+   kuin aikajana-ajossa (v1603), joten laattataso ei putoa liikkeessä.
+   Reduced motion: ei pyörintää. Merkit ja nimet ovat kirjaston
+   CSS2D-pisteitä ja seuraavat pintaa itsestään, ja osuma lasketaan
+   napautuksen hetkellä ruudulta (R-malli), joten pyörivä pallo on yhtä
+   napautettava kuin paikallaan oleva. *Mitattu Chromiumilla
+   1400 × 900:* pyörii true, `pallonLaatuPakotettu()` true, lng
+   12,29 → 13,09; sormen jälkeen lng juoksi vielä 0,16° ja pysähtyi
+   (Δ 0,000° seuraavan 3 s aikana); kaupungin valinnan jälkeen pyörii
+   false ja laatupakotus false. (Kontin ohjelmistorasteroijalla kehysväli
+   on 200–300 ms, joten mitattu kulmanopeus on ~0,2 °/s; oikealla
+   laitteella kello antaa täyden 0,4 °/s.)
+4. **LIVIAN KUPLAT 1,5 s MYÖHEMMIN.** `LIVIAN_AVAUKSEN_VIIVE_MS` =
+   1 500 (js/livia.js) lisätään entisen `AVAUKSEN_VIIVE`n (900 ms)
+   päälle VAIN ensimmäisen kuplan eteen: kuplien keskinäinen rytmi
+   (`KUPLIEN_VALI` 280 ms, lukuaika) on ennallaan. Reduced motionissa
+   ei lisäviivettä — odotus on osa liikkeen koreografiaa, ja
+   liikkeetön ruutu vain seisoisi tyhjänä pidempään.
+5. **KAKSI NIMEÄ ATEENAN KOHDALLA — SELVITETTY JA KORJATTU.**
+   Omistajan kuvassa 1 luki päällekkäin harmaa kapiteeli "ATEENA" ja
+   tumma lihavoitu "Ateena". Molemmat olivat pysyviä: edellinen on
+   pallon KARTTANIMIKERROS (js/pallolauta/nimet.js; lähtövalinnassa
+   `vain` = Lontoo + valittavat), jälkimmäinen valittavan kaupungin
+   KOHDEMERKIN oma lappu (js/pallolauta/merkit.js `kohdeElementti`,
+   `.target-nimi` — sama kuin tasokartan kohderenkaassa). Merkin nimi
+   voittaa: se on kehotus toimia, se on lähempänä silmää ja se on sama
+   molemmilla laudoilla. Ladonta rajataan siksi uudella `aloitusNimet()`
+   -joukolla (näkyvät miinus valittavat) — käytännössä Lontooseen — ja
+   PISTE VAIN NIMEN KANSSA -sääntö pysyy ennallaan (`pisteNakyy` lukee
+   yhä koko näkyvää joukkoa, koska kohdemerkki on nimi).
+
+Vartijat: tests/aloitus-pallolla.test.mjs (rajauksen luvut, pyörinnän
+kolme pysäytintä, laatupakotus ja sen vapautus kolmesta paikasta,
+yksi nimi valittavalle, Livian viive), tests/pallolauta.test.mjs
+(kuvasuhde kaavassa ja kameran kaikissa kolmessa suunnassa),
+tests/pallonimet.test.mjs, tests/aikajana.test.mjs ja
+tests/aikajanamerkit.test.mjs (uusi mitattu lähikuva) sekä
+savuke-etusivupallo E9b/E9e/E9f. Ajettu: `node --test tests/*.test.mjs`
+1715 ok / 0 fail, tarkista-kaksoisavaimet, tarkista-niputus,
+tarkista-savukkeet, tarkista-nimiolimitys (0 nimiö nimiön päällä),
+savuke-etusivupallo 37/39, savuke-pallolauta (vartiot 1–6 ja 12–15
+läpi) ja savuke-avauslento `--lauta pallo` (P1–P5, P7 läpi). Kolme
+FAILia ovat VANHOJA ja tulevat samoina origin/mainissa (todennettu
+stashaamalla tämä erä pois 5.9.2026): savuke-etusivupallo E4b ja E4e
+(isoisän kortin kuvateksti ja haaleus), savuke-pallolauta vartio 7
+(linssikartta, vanhentunut jo aallossa 1C) ja savuke-avauslento P6
+(kaupunkilehti ei ehdi auki kontin hitaudessa; pallolaattapyyntöjä
+mainissa 1 870, tässä erässä 1 765 — lähikuva ei siis lisännyt
+laattakuormaa).
+**Elävä liekkivalo, häipyvä havainnekuva ja vasen vuosipalkki (5.9.2026
+klo 00.45–00.50).** Omistaja työpöytäkaappauksesta, sanatarkasti:
+*"havainnekuvan pitää häipyä kun kartan animaatio alkaa. samoin
+valopallo tuli nyt jotenkin liikuen paikoilleen. saisiko valopallosta
+epäsäännöllisemmän ja elävämmän muotoisen ja niin että se sykkisi kuin
+tulen liekki? … valon syttyminenkin voisi olla animoitu niin että se
+hetken hehkuu pienempänä ja sitten laajenee. keskiosa saisi olla
+kirkkaampi ja sitten häipyä pidemmällä matkalla ja pehmeämmin, mutta
+logaritmisesti (tai ainakin melkein) aivan kuin oikea valo. valot
+voisivat myös olla hieman erilaisia keskenään varioiden kirkkautta,
+kokoa, värilämpötilaa ja muotoa. havainnekuvan teksti saisi olla vähän
+pienempi ja ehkä hieman tummempi. pitäisikö vuosiluvun jälkeen olla
+tähtisymboli? joku mikä sopisi tyylillisesti"* — ja klo 00.50:
+*"vuosipalkin voisi yläreinassa siirtää vasempaan laitaan mutta ei ihan
+kiinni."*
+
+- **LIUKUMISEN JUURISYY EI OLLUT LAMPPU VAAN TUMMENNUKSEN REIKÄ.**
+  Mitattu Chromiumilla 1400 × 900 (lamppujen ruutupaikat ja kalvon
+  liukuvärin keskipiste 150 näytettä): jokainen uusi lamppu ILMESTYI
+  täsmälleen ruudun keskelle (700, 478) eikä liikkunut omin voimin —
+  kirjaston html-kerros (globe.gl 2.46.2) tweenaa vain OLEMASSA olevan
+  merkin siirtymän, ja uusi saa paikkansa kerralla
+  (`!t.__currentTargetD ? applyPosition : tween`). Liikkuva valo oli
+  `siirraReika`n 700 ms:n rAF-liuku: kalvon kirkas aukko lipui edellisen
+  lampun kohdalta uuden kohdalle (mitattu (1007, 462) → (689, 410))
+  juuri kun uusi valo syttyi, ja tummalla pallolla se lukee valopallona,
+  joka tulee liikkuen paikoilleen. Nyt reikä siirtyy KERRALLA
+  (`PALLON_REIAN_LIUKU_MS = 0`), ja liike on lampun omassa
+  syttymisessä. Kameran oma jälkijättö (`AIKAJANAN_KAMERAN_JALKIJATTO_MS`
+  750 ms) on ennallaan: se on omistajan aiempi tilaus 5.9. illalta.
+- **VALO ON CANVAS-KERROS: js/aikajana-valo.js (uusi).** SVG-ympyröillä
+  ei voi tehdä kolmea pyydettyä asiaa (epäsäännöllinen reuna, liekin
+  syke, likimain käänteinen neliö), koska `radialGradient` interpoloi
+  pysäkkiensä välit lineaarisesti ja muoto on aina ympyrä. Moottori
+  pyytää moduulilta kolme asiaa — `lamppu(n)`, `tila(n, palaa,
+  nykyinen)`, `pura()` — ja lamppu on div, jonka sisällä on canvas.
+  Profiili on **I(r) = 1 / (1 + (r/r0)²)**, r0 = 0,20 × säde,
+  normalisoituna niin että laidalla arvo on tasan 0 (ei reunaviivaa):
+  kirkas ydin, pitkä pehmeä häntä, ja etäisyyden kaksinkertaistuminen
+  neljännestää intensiteetin (mitattu testissä 1,13× ihanteesta).
+  Profiili maalataan KERRAN valoa kohti offscreen-canvasiin 28
+  gradienttipysäkillä; kehyksessä tehdään kolme `drawImage`-vetoa
+  (häntä, epäsäännöllisen maskin läpi piirretty runko, kirkas ydin).
+  Vakiot: säde 49 px (= entinen kajo, MERKIN_SADE × KAJON_SUHDE),
+  ruutu 128 px, syttymä 300 ms hehku (koko 0,30, kirkkaus 1,35) +
+  900 ms laajeneminen ease-outilla, syke 0,8–1,6 Hz (säde ±7 %,
+  kirkkaus ±9 %, eri vaiheessa) ja muoto 2–4 kulmaharmonista + oma
+  value-noise. Variaatio siemennetään tapahtuman numerosta: kirkkaus
+  ±15 %, koko ±20 %, värilämpötila lämpimästä oranssista (n. 1 800 K)
+  vaaleaan kellertävään (n. 2 700 K), harmoniat. EI KIRJASTOA:
+  arpoja, kohina ja profiili ovat kymmenen riviä omaa koodia.
+- **Suorituskyky mitattu** Chromiumilla (swiftshader, 1400 × 900,
+  kerroksen oma `piirra` 120 kehyksen keskiarvona): **1 palava lamppu
+  0,03–0,05 ms, kaikki 25 palavaa 0,6–1,0 ms kehystä kohti** eli 2–3 %
+  30 fps:n budjetista ohjelmistorasteroijalla. Piirto on kuristettu
+  33 ms:iin (`VALON_PIIRTOVALI_MS`), sammunutta ei piirretä ja
+  kehyskatto on 25. Reduced motion: silmukkaa ei käynnistetä lainkaan,
+  valo on staattinen täysi profiili ja jälki himmenee ilman liukua.
+- **VAIN PALLOLAUTA.** Tasokartan (`?lauta=kartta`) lamput ovat kartan
+  omassa svg:ssä laudan koordinaatistossa ja skaalautuvat zoomin mukana
+  (`paivitaMittakaava`), joten yhteistä kerrosta ei ole; vanha kartta
+  suljetaan aallossa 3B, joten liekki on pallon oma ja kartan lamput
+  jäävät ennalleen. Ilman canvas-tukea (esim. testien tynkäselain)
+  `lamppu()` palauttaa null ja pallolle piirtyy entinen neljän ympyrän
+  SVG-lamppu — linssi ei jää pimeäksi.
+- **Havainnekuva häipyy kameran mukana.** `tarkistaKameraEnnakko`
+  kutsuu `haivytaPaneeli()`n samassa lauseessa, jossa ennakoiva ajo
+  lähtee (n. 1 840 ms ennen syttymistä): paneeli saa luokan `haipyy`
+  (opacity → 0, 600 ms ease, `PANEELIN_ENNAKKOHAIVYTYS_MS`), ja uusi
+  kuva nousee vasta syttymisen ristihäivytyksessä, joka poistaa luokan.
+  Tauko ja Alusta poistavat luokan, jottei paneeli jää näkymättömäksi
+  odottamaan syttymistä, jota ei tule. Mitattu selaimessa: 1 → 0,93
+  (67 ms) → 0,48 (201 ms) → 0,09 (406 ms) → 0 (666 ms).
+- **Havainnekuvan teksti** on 0,85 × entinen (`clamp(0,81rem, 2,04vw,
+  1,15rem)`, mitattu 1400 px:llä 21,6 → 18,4 px) ja sävy pergamentin
+  tummaa kultaa `#d7bd88` entisen lähes valkoisen `#f1e3c2` sijaan.
+  Erotin vuosiluvun jälkeen on PELIN OMA MERKKI ◈ — sama kuin etusivun
+  julisteen hiusviivakoristeessa (index.html `.juliste-viiva`) ja
+  unohdetun aarteen tunnuksena — pisteen `·` tilalla, kultaisena,
+  0,6em ja hieman kohotettuna. Merkki on yhtenä vakiona
+  (`AIKAJANAN_EROTIN`, js/aikajana.js), joten se vaihtuu yhdeltä
+  riviltä; ruudunlukija ohittaa sen (`aria-hidden`).
+- **Vuosipalkki vasempaan laitaan** (`.aikajana-ylarivi`): marginaali on
+  oma muuttujansa `--aikajana-ylarivi-marginaali` (1,25rem), pystysija
+  ennallaan (0,6rem). Mitattu 1400 × 900: palkin vasen laita 20 px
+  linssin reunasta. Puhelimella (`max-width: 640px`, mitattu 390 × 844)
+  palkki on 255 px leveä 374 px:n ruudulla eli lähes ruudun levyinen,
+  joten se jää KESKELLE kuten ennen (vara 59 px molemmin puolin).
+- Vartijat: tests/aikajana-valo.test.mjs (uusi, 19 väitettä: profiilin
+  monotonisuus ja käänteinen neliö, syttymisen vaiheet, sykkeen ja
+  muodon rajat, deterministinen siemenvariaatio, reduced motion,
+  kehysbudjetti, EI SIJAINNIN SIIRTYMÄÄ missään päässä, paneelin
+  häivytys, teksti ja erotin, vuosipalkin laita) sekä päivitetyt
+  tests/aikajana.test.mjs-vartiot. Kaappaukset 1400 × 900 Chromiumilla:
+  syttymisen alku (150 ms, pieni kirkas piste), täysi valo, kuusi eri
+  valoa rinnakkain (koko, kirkkaus ja värilämpötila vaihtelevat) ja
+  havainnekuva häivytyksen keskellä.
+**Aalto 2C — ihmisen matka -linssi: kello ilman vuosilukuja, reittiviiva
+ja hyppykamera (5.9.2026).** Omistajan päätös 5.9.2026: toinen
+aikajanalinssi on nykyihmisen leviäminen Afrikasta koko maapallolle, 20
+pysäkkiä 300 000 vuotta sitten → n. 1300 jaa.
+(`js/linssit/ihmisen-matka.js` + `ihmisen-matka-data.js`). Kaari on
+ensimmäinen, joka ei mahdu keksintölinssin oletuksiin, ja moottori
+(js/aikajana.js) yleistettiin kolmesta kohdasta. JOKAINEN YLEISTYS ON
+KAAREN VALINTA: ilman kenttää käytös on entinen, ja keksintölinssi on
+rivin tarkkuudella ennallaan (tests/aikajana*.test.mjs).
+
+- **Kello ilman vuosilukuja** (`asteikko: 'vuosiaSitten'`). 300 000
+  vuotta keksintöjen tahdilla (1 vuosi = 260 ms) olisi 22 tuntia, joten
+  kellon paikka EI ole vuosiluku vaan pysäkkien koordinaatisto: jokainen
+  väli on `ASTEIKON_VALI` = 10 yksikköä, eli sama reaaliaika kuin
+  keksinnöissä keskimääräisellä välillä (~2,6 s + pysäkin 4,6 s tauko).
+  Näytettävä LUKEMA interpoloidaan välillä LOGARITMISESTI
+  (`vuosiaSittenLukema`, geometrinen keskiarvo): 300 000 → 3 000
+  puolivälissä on 30 000, ei 151 500. Kello pyöristää suuruuden mukaan
+  (`kellonAskel`: 1000 / 100 / 10 / 1), koska pyöristämätön viimeinen
+  rulla pyörisi kymmeniä tuhansia numeroita sekunnissa; rullia on kuusi,
+  niiden välissä on tuhaterotin ja perässä yksikkö ("v. sitten").
+  Etunollat jäävät paikoilleen näkymättöminä (`.vuosi-numero.tyhja`),
+  jotta numeroiden paikat eivät hypi. `asetaMatkamittari` sai kaksi
+  valinnaista lukua — `askel` ja `suunta` — ja `suunta: -1` kääntää
+  mittarin laskevaksi (uusi numero tulee ylhäältä, seuraava luku on
+  pienempi). Pysäkillä näytettävä teksti tulee DATASTA
+  (`ajoitus`: "300 000 vuotta sitten", "n. 1250 jaa."), ja moottorissa
+  on sitä varten yksi apuri (`ajoitus(t) = t.ajoitus ?? t.vuosi`), jota
+  kortti, lamppu, kellorivi, havainnekuvan teksti ja Tiedeliite lukevat.
+- **Reittiviiva** (`reitti: true`). Valot eivät ole erillisiä paikkoja
+  vaan yksi matka: `lauta.linssit.polut(PALLON_OSA, …)` piirtää
+  pysäkkien väliin isoympyrää seuraavan viivan (`reitinPisteet`, yli 2°
+  välit tihennetään), ja lista kasvaa sitä mukaa kuin valot syttyvät
+  (`paivitaReitti(i)`; selailu taaksepäin lyhentää sen, Alusta vie sen
+  pois, kaaren loppu näyttää koko matkan). Viiva on VALOJEN KANSSA
+  SAMASSA OSASSA, joten `pura('aikajana')` vie kummatkin. **Paksuus on
+  3 RUUTUPIKSELIÄ eikä asteita** — sama mitattu havainto kuin
+  avauslennon jäljellä (luku 10.3 yllä): asteina laskettu viiva jää alle
+  pikselin eli näkymättömiin.
+- **Väljempi lähikuva ja hyppykamera** (`lahikuva: 520`,
+  `hyppykamera: true`). Keksinnöissä naapuripysäkit ovat saman maanosan
+  sisällä; tässä ne ovat eri mantereilla, joten perusmitta on
+  kaksinkertainen (2 × 260). Valtameren ylityksessä (Beringia, Sahul,
+  Lapita, Aotearoa) kameran leveys lasketaan EDELLISEN pysäkin
+  etäisyydestä isoympyränä (`pysakinLeveys` → `pysakinLahikuva`, kerroin
+  2,2, katto 3600 yksikköä), jolloin lähtöranta ja reittiviiva ovat yhä
+  kuvassa. Dataan ei tarvitse merkitä, mikä väli on merimatka. Kameran
+  ennakko, jälkijättö ja pehmennys ovat entiset (v1603).
+- **Kuvat.** Kortilla on LÖYTÖ (`esine`: kallo, kivityökalu,
+  kalastuskoukku) eikä muotokuvaa — 300 000 vuoden takaa ei ole kasvoja
+  — ja havainnekuva (`kuva`) on oikean laidan paneelissa kuten ennen.
+  Muunnos moottorin kentiksi on linssin oma puhdas funktio
+  (`ihmisenMatkanPysakit`), joten moottori ei tunne kumpaakaan kaarta.
+  Kuvaputken kuvat ovat 1536 × 1024 ja niissä on noin 20 %
+  ympäristövaraa reunamaskia varten, joten kaari pyytää
+  `kuvasovitus: 'contain'` (cover-rajaus leikkaisi varan pois ennen
+  maskia). Havainnekuvan alla on iso rivi = otsikko ja pieni rivi =
+  kuvaputken oma `kuvateksti` ("Omo Kibish, noin 300 000 vuotta
+  sitten"), joka sisältää jo ajoituksen; ilman kuvatekstiä muoto on
+  entinen "ajoitus · otsikko".
+- **Ääni.** Oma musiikkilaji `ihmisen-matka` (js/siirtymamusiikki.js
+  RAIDAT, ryhmä `linssi`, voima 0,11 kuten keksinnöillä; prompti
+  tools/generoi-siirtymamusiikki.mjs LAJIT: syvä ja hidas, rumpu kuin
+  sydämen syke ja sanaton kaukainen ihmisääni, 50 s looppi). Raita
+  generoidaan erikseen — puuttuva tiedosto on hiljainen eikä riko ajoa.
+  Kaari sai myös oman LUENTAKANSIONSA (`luentajuuri`,
+  js/linssipuhe.js `soitaLinssiluenta({ juuri })`); ilman sitä ajo olisi
+  soittanut keksintökaaren luennat.
+- **Vartijat:** tests/ihmisen-matka.test.mjs (uusi: linssisopimus,
+  asteikko, logaritminen interpolointi, laskeva mittari, reittiviiva,
+  kamerarajat, kortin ja havainnekuvan tekstit, musiikkilaji, SHELL) ja
+  päivitetyt tests/aikajana.test.mjs, tests/linssipuhe.test.mjs,
+  tests/linssimusiikki.test.mjs, tests/siirtymaraidat.test.mjs,
+  tests/musiikkilehti.test.mjs. Ajettu: `node --test tests/*.test.mjs`
+  1729 ok / 0 fail, tarkista-kaksoisavaimet, -niputus, -savukkeet,
+  -nimiolimitys, build-standalone. Selaimessa varmistettu Chromiumilla
+  1400 × 900 (swiftshader): avausjakso ja Käynnistä, kello "286 000 v.
+  sitten" rullaa, kellorivi "300 000 vuotta sitten · Omo Kibish",
+  havainnekuva contain-sovituksella ja kuvateksti sen alla, lamppu
+  syttyy, reittiviiva kasvaa (0 → 1 pätkää) ja kamera nousee
+  valtameren ylityksessä (altitude 0,13 → 2,02). AINEISTO ON TYNKÄ:
+  js/linssit/ihmisen-matka-data.js sisältää kolme pysäkkiä, ja
+  sisältöagentti korvaa sen 20 pysäkillä samaa rajapintaa vasten.
+
+
+**Ihmisen matka — Fablen arvio ja hionta (6.9.2026, v1612:n jälkeen).**
+Linssi ajettiin läpi pallolla Chromiumilla 1400 × 900 (swiftshader,
+20 pysäkin oikea aineisto) ja katsottiin kuusi hetkeä: avaus, pysäkki 1,
+pysäkki 8 (Sahulin merimatka), 16 → 17 (White Sands → Beringia),
+pysäkki 20 ja loppu.
+
+*Mikä toimii.* Reittiviiva kasvaa pysäkki pysäkiltä ja on pallolla
+selvästi luettava; kamera nousee merimatkoilla niin, että lähtöranta ja
+viiva ovat kuvassa (altitude 0,13 → 0,84 Sahulissa, 1,20 Siperia →
+White Sands → Beringia -hypyissä) ja lopussa perääntyy koko kaareen
+(2,50), jolloin kaikki kaksikymmentä valoa palavat yhtä aikaa.
+Hyppykertoimeen 2,2 ja kattoon 3600 ei ollut aihetta koskea: katto
+osuu juuri niihin kolmeen hyppyyn, joissa sitä tarvitaan, eikä yksikään
+väli jäänyt liian ahtaaksi. Havainnekuvat tulevat ajoissa (paneelin
+esilataus kaksi pysäkkiä edellä) ja kuvateksti sanoo saman ajoituksen
+kuin kellorivi.
+
+*Kolme vikaa, jotka korjattiin.*
+
+- **Kortissa oli nimikirjainlaatta** ("EI", "SY"), koska löytökuvia
+  (`esine/`) ei ole vielä ämpärissä — ruma ja tyhjä. Nyt kortin
+  kuvatieto kantaa VARAKUVAN (`vara`, js/linssit/ihmisen-matka.js), ja
+  moottori putoaa siihen kuvaelementin omalla `error`-tapahtumalla
+  (js/aikajana.js `otaVarakuva`): kortissa on pysäkin havainnekuva
+  3:4-kehyksessä, rajattuna KESKELTÄ (`css .varakuva`
+  `object-position: center center`), koska kuvaputken turva-alue on
+  keskimmäiset 60 % — muotokuvien `center top` leikkaisi maiseman
+  taivaaksi. Erillistä HEAD-kyselyä ei tehdä: selain hakee osoitteen
+  kerran joka tapauksessa, ja kun kuvaputki tuo löydöt, ensimmäinen
+  pyyntö vain alkaa vastata 200 eikä koodi muutu.
+- **Kello pyöri harmaana sotkuna.** Askel tuli lukeman suuruudesta
+  (100 000 → tuhat vuotta), ja koska pysäkkiväli kestää noin 2,6 s,
+  ensimmäisellä välillä (300 000 → 233 000) kello vaihtui 67 kertaa —
+  ja matkamittarin murto-osa näytti lisäksi puolittaisia numeroita. Nyt
+  askel lasketaan VÄLISTÄ (`valinAskel`, tikkaat 100 … 50 000, tavoite
+  noin kuusi vaihtoa välissä), jokainen tikas on sadan monikerta (kaksi
+  viimeistä nollaa seisovat aina, isoissa askelissa kolme) ja
+  "vuotta sitten" -asteikko ei kuljeta murto-osaa lainkaan
+  (`murtoOsa: false`): kello ETENEE ASKELIN, ja jokainen askel on oma
+  pieni rullauksensa. Mitattu vaihtotahti on nyt 2–4 kertaa sekunnissa
+  kaikilla väleillä (vartija tests/ihmisen-matka.test.mjs laskee sen
+  oikeasta aineistosta). Loppupäässä kello vaihtaa VUOSILUKUUN
+  (`kellonVuositeksti`, alle 1 900 v. sitten): viimeisellä pysäkillä
+  lukee "n. 1250 jaa." — tasan se, mitä aineiston `ajoitus` sanoo, eikä
+  "750 v. sitten". Keksintökello on ennallaan (`murtoOsa: true`,
+  askel 1, ei tekstiä).
+- **Turhat 404:t.** Paneeli haki jokaisen kuvan ensin kansiosta
+  `pieni/`, jota tälle kaarelle ei ole tehty (tools/tee-pienet-kuvat.mjs
+  osaa vain `aikajana/keksinnot/`). Kaari kertoo nyt itse
+  `pienetKuvat: false`, jolloin moottori ohittaa koko portaikon eikä
+  esilataa koko kaarta (esilataus on kannattava vain pieninä
+  tiedostoina; alkuperäisinä se olisi kymmenen megatavun ryntäys).
+  Ajossa jää tasan yksi 404 pysäkkiä kohti — löytökuvan koetus.
+
+*Luennat ja musiikki.* `tools/generoi-linssiluennat.mjs` sai
+`--linssi <keksinnot|ihmisen-matka>`: kaari valitaan lipulla, kansio
+luetaan kaaren omasta `luentajuuri`-kentästä (`ampariKansio`) ja
+pysäkki valitaan tunnuksella, koska vuosilukuja ei ole. Pysäkin luenta
+on YKSI LYHYT LAUSE — "Noin 300 000 vuotta sitten. Kasvot, jotka
+tunnistaisi — Jebel Irhoud, Marokko." — ja suuret luvut menevät
+mallille sanoina (`lukuSanoina`, sama oppi kuin keksintökaaren
+vuosiluvuilla). Esittely ja loppusanat luetaan lyhentämättä
+(`esittely.mp3`, `loppu.mp3`); loppusanojen luenta on kaaren valinta
+(`loppupuhe: true`), joten keksintökaaren loppu on yhä hiljainen eikä
+ajo tarjoa sille maksullista kutsua. Työnkulut: `generoi-linssiluennat`
+sai syötteen `linssi` (oletus keksinnot — entinen käytös) ja
+`generoi-siirtymamusiikki` valinnan `ihmisen-matka` (prompti oli jo
+v1612:ssa: syvä ja hidas, rumpu kuin sydämen syke, sanaton kaukainen
+ihmisääni, ei melodiaa, 45–60 s looppi). Kumpaakaan ei ole vielä
+ajettu: `aanet/linssi-ihmisen-matka-lyria.mp3` ja
+`aikajana/ihmisen-matka/puhe/` vastaavat 404, eli kaari on toistaiseksi
+hiljainen — puuttuva tiedosto ei riko ajoa.
+
+*Avoinna.* (1) Löytökuvat (`esine/`) puuttuvat, joten kortissa ja
+paneelissa on sama kuva; kuvaputken erä poistaa toiston itsestään.
+(2) Pieniä versioita ei ole: kortit lataavat alkuperäiset 1536 × 1024
+-kuvat, mikä on kaaren mitassa noin kymmenen megatavua. Kun
+tools/tee-pienet-kuvat.mjs yleistetään toiselle kansiolle, riittää
+poistaa `pienetKuvat: false` — kortit kevenevät alle sadasosaan.
+(3) Luennat ja musiikki odottavat ajoa.
+
+**Viivapaksuudet pallolla: asteista ruutupikseleiksi (6.9.2026).** Luvun
+10.3 avauslentomerkintä jätti auki, että `MATKAREITIN_PAKSUUS_AST` (0,05)
+ja linssien uomapaksuudet oli laskettu asteina, vaikka `pathStroke` on
+mitattuna ruutupikseleitä. Ne piirtyivät siis alle pikselin hiuksina.
+Tässä erässä ne on korjattu ja MITATTU.
+
+*Mittatikku: neljä tunnettua testiviivaa.* Laudan linssiapurille
+annettiin magentat polut paksuuksilla 1 / 2,5 / 4 / 11 ja kaappauksesta
+laskettiin viivan leveys laitepikseleinä (Chromium, swiftshader):
+
+| paksuus | 1400 × 900, dpr 1 | 390 × 844, dpr 2 |
+|---|---|---|
+| 1 | 1 px | 2 px |
+| 2,5 | 3 px | 5 px |
+| 4 | 4 px | 8 px |
+| 11 | 11 px | 22 px |
+
+**DPR EI VAIKUTA.** LineMaterialin `resolution` on kotelon koko
+CSS-pikseleinä (mitattu 1379 × 821 ja 374 × 775), ja piirtopuskuri on
+dpr-kertainen, joten laitepikseleitä tulee tasan dpr × luku eli
+CSS-pikseleinä sama viiva kummallakin. Kompensointia ei siis tarvita —
+puhelimen viiva EI ole puolta ohuempi.
+
+*Vakiot ennen → jälkeen (kaikki ruutupikseleitä).*
+
+| vakio | ennen | jälkeen |
+|---|---|---|
+| `reitit.js MATKAREITIN_PAKSUUS_AST` → `_PX` | 0,05° | 2,5 px |
+| `reitit.js MATKAREITIN_VARJON_PAKSUUS_PX` | — | 4 px (uusi) |
+| `vesistot.js PALLON_UOMA_AST` → `_PX` | 0,06 / 0,04 / 0,025° | 3,6 / 2,4 / 1,6 px |
+| `vesistot.js PALLON_PENGER_AST` → `_PX` | 0,14 / 0,1° | 7 / 5 px |
+| `avaus.js AVAUSLENNON_VIIVAN_PX` | 11 px | 11 px (ennallaan) |
+| `aikajana.js REITIN_PAKSUUS_PX` | 3 px | 3 px (ennallaan) |
+
+Uoma on laudan oma mitta (LEVEYS 3,0 / 2,0 / 1,3 px) kerrottuna 1,2:lla,
+koska pallon pohja on tummempi ja kirjavampi kuin pergamentti; penger on
+laudan luku sellaisenaan, sillä penger on REUNA ja reunan mitta on
+ruudulla sama molemmilla laudoilla. Zoomi ei enää ohenna mitään: aiempi
+avoin kysymys (aste on kiinteä pallon pinnalla) katosi korjauksen myötä.
+
+*Naapurireitin varjo.* Tasokartalla reitti kulki vaalealla pergamentilla;
+pallolla sama 42 %:n muste hukkuu tummaan maastoon ja mereen. Jokainen
+naapurireitti on nyt KAKSI polkua: 4 px:n vaalea varjo
+(`REITIN_VARIT.varjo`, sama pergamentti kuin askelhelmissä, peittävyys
+0,3) korkeudella 0,0018 ja sen päällä 2,5 px:n musteviiva korkeudella
+0,002 — sama katkoviiva molemmilla, joten katko lukeutuu yhtenä merkkinä.
+Eri korkeus on tarpeen: samalle syvyydelle jätettynä kaksi Line2:ta
+välkkyisi toistensa läpi kameran liikkuessa.
+
+*Kaari on putki, ei ruutuviiva.* `arcStroke` ei mene Line2:n läpi:
+kirjasto rakentaa siitä `TubeGeometry`n, jonka säde on `stroke / 2`
+pallon omissa yksiköissä (säde 100). Luku ei siis ole asteita eikä
+pikseleitä, joten `LENTOKAAREN_PAKSUUS_AST` on nimetty
+`LENTOKAAREN_PAKSUUS_YKS`:ksi eikä sen arvoa (0,06) ole muutettu.
+
+*Mitä EI ollut korjattavana.* Topografia piirtyy kalvona, vertailu ja
+maatiedot polygoneina — kummallakaan ei ole polkuja. Polygonin `reuna`
+menee `polygonStrokeColor`iin, joka on kirjastossa tavallinen
+`THREE.Line` ilman leveyttä (aina 1 px); sitä ei voi säätää eikä siinä
+ole `_AST`-vakiota.
+
+*Mitattu ennen/jälkeen (Ateena, näkyvä leveys 240).* Naapurireitit:
+ennen 3 polkua, `linewidth` 0,05 → magentaksi värjättynä ruudulla
+mediaani 1 px ja vain kourallinen osumarivejä eli käytännössä
+näkymätön. Jälkeen 6 polkua (3 varjoa 4 px + 3 viivaa 2,5 px) →
+mediaani 5 laitepikseliä työpöydällä ja 8 puhelimella (dpr 2), ja
+katkoviiva erottuu kaappauksesta silmällä. Vesistöt: `linewidth`-jakauma
+ennen 0,025 × 85 / 0,04 × 71 / 0,06 × 13 / 0,1 × 71 / 0,14 × 13, jälkeen
+1,6 × 85 / 2,4 × 71 / 3,6 × 13 / 5 × 71 / 7 × 13; joet lukeutuvat nyt
+koko pallolta (kaappaus Euroopasta ja Afrikasta). Vertailulinssi ei
+piirrä polkuja kummassakaan (133 polygonia). Sivuvirheitä ei tullut
+kummassakaan näkymässä.
+
+*Vartiot.* tests/pallolinssit.test.mjs vaatii, ettei pallon POLKUJEN
+paksuusvakioissa ole `_AST`-loppuisia nimiä ja että jokainen arvo on
+1,5–12 px; avauslennon 11 ja aikajanan 3 on naulattu erikseen.
+tests/vesistot-pallolla.test.mjs vaatii saman uomilta ja penkereiltä.
+
+*Avoin Fablelle.* Penger (7 px) on laudan luku, ja se lukeutuu
+maailmanlaajuisessa näkymässä puhelimella jykevänä: pääjoet ovat
+paksuja sinisiä nauhoja. Yhden luvun (`PALLON_PENGER_PX`) pudotus
+keventäisi sen, mutta se olisi taiteellinen päätös eikä yksikkökorjaus —
+jätetty omistajan katsottavaksi.
+
+**Savukkeet nykyiseen arkkitehtuuriin (6.9.2026).** Kaksi savuketta oli
+jäänyt aaltoja edeltävään maailmaan:
+
+- `savuke-pallolauta.mjs` vartio 7 odotti, että linssin valinta avaa
+  linssikartan kuoren pallon päälle. Aallossa 1C maatiedot on pallolinssi,
+  joten vartio mittaa nyt sen, mitä sopimus 10.1 lupaa: `polygonsData`
+  saa 133 maata, `ui.pallolinssi` on maatiedot, linssikarttaa EI avata,
+  svg#board pysyy tyhjänä ja kartta lepotilassa, pyramidipyyntöjä 0,
+  kamera ei liiku, ja sammutus purkaa polygonit ja `maatiedot-tila`n.
+  Vartio 8 laskee naapurireitit nyt kahtena polkuna reittiä kohti
+  (viiva + varjo). Ajossa 37/38 läpi; ainoa punainen on vartio 6
+  (kamera-ajo Sofiaan, dy 24 px > raja 18,7), joka kaatuu SAMOIN
+  mainissa ilman tämän erän muutoksia (mitattu erikseen: dy 34,8 px) —
+  se on kontin kotelo/piirtopuskuri-kokoero, ei tämän erän vika.
+- `savuke-aikajana.mjs --lauta pallo` odotti aaltoa 2A edeltävää kuorta.
+  Nyt se mittaa aikajanan pallolla: valot ovat linssiapurin merkkejä
+  (`aikajana:<i>`, 25 kpl), tummennus on ruutukalvo, kello ja paneeli
+  ovat karttaruudussa, linssikarttaa ei avata ja tasokartta nukkuu; Sulje
+  purkaa pallolinssin (merkkejä 0, kalvo pois, pallo näkyvissä). Kamera-
+  ja purkuvartioiden mittausikkuna odottaa nyt tapahtumaa (näkymä
+  paikallaan, valot tyhjentyneet) kiinteän odotuksen sijaan, koska kontin
+  ohjelmisto-WebGL piirtää pallon liu'ut tasokarttaa hitaammin.
+  Kameravartio on nyt laudan mukainen: tasokartalla koko kaari (Lontoo ja
+  Pietari kuvassa), pallolla LÄHIKUVA — pallon ajo alkaa ensimmäisen
+  lampun yltä (`sovitaAlkuun`, omistaja 5.9.2026), eikä koko kaaren
+  rajausta enää vaadita. Mitattu näkyvä leveys pallolla on 434
+  lautayksikköä (tasokartalla 2 371). HAVAINTO FABLELLE: ensimmäinen
+  lamppu (Glasgow, 5691, 1126) jäi mittauksessa pallon `nakyvaAlue()`:n
+  suorakulmion ULKOPUOLELLE noin 66 lautayksikköä yläreunan yli, vaikka
+  Lontoo oli kuvassa — joko ajo jättää lampun karusellin yläpuolelle
+  odotettua ylemmäs tai pallon suorakulmainen arvio näkymästä on
+  pystysuunnassa siirtynyt (sama kokoero kuin savuke-pallolaudan
+  vartiossa 6). Ei korjattu tässä erässä: se on aallon 2A kameran asia. Kolme vartiota (kortin vuosiluku,
+  menneiden korttien sumennus, Tiedeliitteen paneeli) kaatuu YHTÄ LAILLA
+  tasokartalla (`--lauta kartta`), eli ne ovat sisällön ja tyylin
+  ajautumista eivätkä pallon asia; ne on jätetty koskematta ja kirjattu
+  tähän.
+- `savuke-avauslento.mjs --lauta pallo` ajettiin samalla: 7/7 läpi, myös
+  P6 (lehti aukeaa napautuksesta perillä) ja P7 (kamera kohdekaupungissa
+  ±5 %). Mittausikkunaa EI siis levennetty — se odottaa jo tapahtumaa
+  (`waitForFunction`: kone näkyy, arkki väistyy, `kartalento` päättyy)
+  eikä kelloa, ja kontin nopeus riitti sellaisenaan.
+
+**Karttanostojen kattavuusmittari koko maailmaan (6.9.2026).** Omistaja:
+*"Jatka kartta nostojen tekoa koko maailmaan."* `tools/laske-karttanostot.mjs`
+laski siihen asti vain Euroopan laudan 29 maata kovakoodatusta listasta;
+nyt se laskee kaikki laudan maat (`map.cityCountry` -taulun uniikit
+ISO-tunnukset, 112 maata) ja ryhmittelee rivit maanosittain
+(`map.cityManner`), maanosan sisällä heikoimmasta vahvimpaan. Maan nimi
+tulee pelin omasta taulusta (`map.countryShapes`) eikä työkalun omasta
+listasta, ja kohdelista suoraan `js/fokuskohteet.js`:n KOHDE_MAAT-taulusta
+— se vietiin vientilistalle (yksi sana), jottei työkaluun tarvitse lisätä
+tuontia joka kerta kun uusi `fokuskohteet-<iso>.js` syntyy. Sarakkeet,
+tavoitteet ja `--md`-tuloste ovat ennallaan. Vartija:
+`tests/laske-karttanostot.test.mjs` (rivejä yhtä monta kuin laudalla
+maita, jokaisella rivillä nimi eikä paljas ISO). Luvut ja maailman
+eräehdotukset: `docs/moduulit/karttanostot-kattavuus.md`, osio "Kattavuus
+koko maailmassa 6.9.2026" — 112 maasta 14 on tavoitteessa ja 32:lla ei
+ole yhtäkään karttamerkkiä. Pallolaudalle tämä on inventaariota, ei
+piirtoa: samat merkit näkyvät pallolla laudan omien kerrosten kautta.
+
+**Aloitusportti ilman otsikkoa ja juliste salamana (6.9.2026 aamu).**
+Omistaja katsoi aloitusporttia työpöydällä ja pyysi sanatarkasti:
+
+> *"ota taustalta pois pelin otsikko ja keskitä aloita seikkailu nappi
+> ihan keskelle ruutua. Kun nappia painetaan niin sitten tulee pienellä
+> viiveellä yläviiva ja otsikko sitten pienen hetken päästä osa 2
+> teksti. se saisi tulla animoidusti niin että kirjainkoko ja kirkkaus
+> välähtää isompana ja feidautuu nykyiseen, kuin pieni salaman isku.
+> sitten tulisi alaviiva otsikkoon ja pienen hetken päästä alkaisi
+> konekirjoitusteksti. maailmankartta-animaatio saisi olla vähän
+> tummempi, kuin on ihan aloitusruudussa, ehkä siitä asteen vaaleampi
+> mutta ei niin vaalea kuin nyt"*
+
+1. **PORTIN TAKANA VAIN PALLO JA NAPPI.** Juliste (viivat, otsikko,
+   "osa II") ja sen pergamenttiharso ovat kokonaan piilossa luokalla
+   `.avaus-kesken` — harso on julisteen oma `::before` eikä katoaisi
+   rivien mukana, joten se olisi jäänyt portille vaaleaksi soikioksi.
+   Nappiryhmä siirtyi 62 %:n korkeudelta ruudun keskelle
+   (`.start-gate-keskus` `top: 50%`, `translate(-50%, -50%)`), ja
+   portin tummennuksen soikio 42 %:sta 50 %:iin — valoisinta kohtaa ei
+   enää tarvita otsikolle. "Oppiminen on hauskaa" jää alareunaan.
+2. **VIISI VAIHETTA, JOKAINEN OMANA AJASTIMENAAN** napin painalluksesta
+   (js/ui.js): `AVAUS_YLAVIIVA_MS` 600 (yläviiva piirtyy keskeltä ulos
+   `VIIVAN_PIIRTO_MS` 520 ms:ssä, harso feidaa mukana) ·
+   `AVAUS_OTSIKKO_MS` 1050 (MATKAKIRJA + Vernen kaksi riviä salamana) ·
+   `AVAUS_OSA_MS` 1750 · `AVAUS_ALAVIIVA_MS` 2250 ·
+   `AVAUS_KERTOMUS_MS` 2850 (kirjoituskone ja luenta, ja samalla
+   tekstipalstan harso). Vanhat `OSAN_VIIVE_MS`/`OSAN_HAIVYTYS_MS` ja
+   `.osa-piilossa` poistuivat.
+3. **SALAMA ON TRANSFORMI, EI KIRJASINKOKO.** Rivi maalataan ensin
+   kerran `SALAMAN_KERROIN`-kokoisena (1,25×) ja kirkkaana
+   (`filter: brightness(1.5) drop-shadow(...)`, `transition: none`), ja
+   vasta seuraavassa kehyksessä luokka vaihtuu lopulliseen, jolloin
+   koko, kirkkaus ja hehku feidaavat nykyiseen `SALAMAN_KESTO_MS`
+   600 ms:ssä. Näin fitIntron mitoitus ei liiku eikä asettelu hypi —
+   sama juurisyy kuin 5.9. otsikkohypyssä. Vähennetyllä liikkeellä
+   järjestys ja ajat ovat samat, mutta salamaa ei oteta: pelkät
+   häivytykset.
+4. **TAUSTAPALLO TUMMENI.** `.intro.intro-pallolla .intro-verho` oli
+   vaalea pergamenttihuntu `rgba(239, 220, 180, 0.38)`, joka pesi
+   pallon kalpeaksi heti napista. Nyt se on sama kaava ja väri kuin
+   portilla, yhtä astetta vaaleampana: portti `--portin-tummennus` 0,28
+   keskellä ja `--portin-tummennus-reuna` 0,6 reunoilla, avaus
+   `--avauksen-tummennus` 0,18 ja `--avauksen-tummennus-reuna` 0,44.
+   Tekstin luettavuus ei ole tämän varassa vaan palstan ja otsikon
+   omien harsojen.
+
+Vartijat: tests/lento-ajoitus.test.mjs (viisi vaihetta järjestyksessä ja
+välit 600/700/500/600 ms, juliste piilossa portin takana, salama
+transformilla eikä kirjasinkoolla, kirjoituskone vasta alaviivan
+jälkeen, vähennetty liike ilman salamaa) ja savuke
+`tools/savukkeet/savuke-etusivupallo.mjs` E11b–E11f uusilla hetkillä
+0,3 / 0,8 / 1,2 / 1,5 / 2,5 / 3,5 / 4,5 / 6 / 25 s. Todennettu
+Playwrightilla (Chromium, swiftshader) 1280 × 800 ja 390 × 844 sekä
+pallolla että tasokartalla (`?lauta=kartta`) ja vähennetyllä liikkeellä.
+**Lepolaadun terävyys, hypyn kynnykset ja luettelon välimuisti (6.9.2026
+aamu).** Omistaja työpöydältä, kuvakaappaus Kreikasta lähimmässä
+zoomissa: *"vielä röpelöistä, varsinkin teksti"*. Mitattu selaimessa
+(Playwright + swiftshader, `serviceWorkers: 'block'`, media reititetty
+Node-fetchillä; skriptit `scratchpad/asettelu/tera-mittaa.mjs`,
+`tera-kaappaa.mjs`). Neljä havaintoa ja kolme korjausta:
+
+1. **Kynnysmoottori.** Globe.gl valitsee tason PELKÄSTÄ korkeudesta
+   (`thresholds.findIndex(k => k <= korkeus)`, `maxLevel` = luettelon 8).
+   Työpöydällä 2000 × 1160 dpr 2 (kotelo 1979 × 1081, piirtopuskuri
+   3958 × 2162) kynnys 0 oli **24,67** (= 8 · lepokerroin 3,91 ·
+   napakerroin 0,786) ja tasot **7 / 8 / 8** korkeuksilla 0,30 / 0,15 /
+   0,05; dpr 1:llä kynnys 12,33 ja tasot **6 / 7 / 8**; iPhonella
+   390 × 844 dpr 3 kynnys 26,39 ja tasot **7 / 8 / 8**.
+2. **Terävyys 0,55 → 1,0 lähikuvassa** (`LAATU_TERAVYYS`, js/pallo.js).
+   Kynnys pyöristyy aina ylöspäin, joten 1,0 takaa, että laatta on
+   levossa vähintään yhtä tarkka kuin ruutu; 0,55 salli 1,8× venytyksen.
+   Mitatut tasot ja laattamäärät samassa näkymässä (yksi lepo):
+   työpöytä dpr 2 korkeus 0,30 **taso 7 → 8**, laattoja **119 → 528**,
+   tekstuureja 170 → 605; dpr 1 korkeus 0,30 taso 6 → 7 (46 → 119) ja
+   0,15 taso 7 → 8 (42 → 139); iPhone saapumisnäkymä (korkeus 0,278)
+   **taso 7 → 8**, laattoja 85 → 207, tekstuureja 103 → 157. Hinta on
+   siis nelinkertainen laattamäärä siinä oktaavissa, jossa taso nousee —
+   `LAATU_TERAVYYS` on yksi vakio, jolla sen voi laskea takaisin.
+   Yleiskuvassa (korkeus > `LAATU_KAUKORAJA` 0,6) käytetään entistä
+   0,55:tä: pallon kaarevuus tuo reunat kuvaan, ja terävyys 1,0 nostaisi
+   koko pallon näkymän (2,5) tasolle 5 eli **1 024 laattaan** tason 4
+   (256) sijaan — mitattu.
+3. **RUUDUN LEVEYS EI KUULU KYNNYKSEEN.** Globe.gl:n fov 50° on
+   pystysuunnan avauskulma ja three.js pitää sen kiinteänä, joten
+   ruutupikseleitä astetta kohti on H / (53,4 · korkeus) sekä pysty- että
+   vaakasuunnassa: leveä ruutu näyttää leveämmän kaistan SAMALLA
+   tiheydellä. Mitattu korkeudella 0,0368 työpöydällä 550 css-px/aste
+   pystyssä ja 439 px vaakasuunnassa = 550 · cos 38° — täsmälleen kaava.
+   Leveyden lisääminen kertoimeen nostaisi tasoa nelinkertaisella
+   laattamäärällä ilman yhtään uutta yksityiskohtaa. Kerroin lasketaan
+   nyt piirtopuskurin korkeudesta (kotelon korkeus × min(dpr, 3)) eikä
+   `clientHeight × dpr`:stä, joka yliarvioisi dpr > 3 -laitteilla.
+   **Mitä leveä ruutu tekee, on viedä kameran lähemmäs:** sama pyydetty
+   näkyvä leveys on työpöydällä korkeus 0,074 ja puhelimessa 0,29, ja
+   lähin sallittu näkymä (`PALLOLAUDAN_SIIRTOLEVEYS` 120 yks = 3,6°)
+   venyttää työpöydällä Z8:aa **4,8-kertaiseksi** (puhelimella `lahinLeveys`
+   pitää rajan 2× venytyksessä, 103 yks). Siksi omistajan kuvakaappauksen
+   sumeat nimet EIVÄT korjaannu kynnyksillä: taso 8 on jo valittuna, ja se
+   on syvin ämpärissä oleva. Kaappaukset korkeudella 0,0368 ennen ja
+   jälkeen ovat tavu tavulta samat (`tera-poyta-lahin-{ennen,jalkeen}-rajaus.png`).
+   **Fablelle: seuraava askel on taso 9** (venytys 2,4×) tai 10 (1,2×)
+   nostosarjaan — tai poltettujen nimien korvaaminen elävillä
+   lähimmässä zoomissa. (v1649: raja ei enää tule laattatarkkuudesta
+   vaan on vakio 60 yksikköä, ja terävyys tulee vektoriviivoista;
+   poltetut nimet kasvavat yhä maaston mukana — ks. luku 10.4.)
+4. **Hyppy jätti kynnykset vanhoiksi (korjattu).** `lepoon()` palasi heti,
+   jos `lepo` oli jo tosi, ja yksi `pointOfView(pov, 0)` -hyppy ei kestä
+   `LAATU_LIIKEVIIVE_MS`:ää, joten kynnykset jäivät edellisen näkymän
+   leveysasteelle ja korkeudelle. Mitattu: hyppy lähikuvasta korkeuteen
+   2,5 haki tason 5 laatat (**1 024 kpl**) ennen kuin lepo olisi korjannut
+   sen. Nyt lepo laskee kynnykset aina uudestaan, ja terävyysalueen
+   vaihtuminen korjaa ne heti hypyn yhteydessä (sama koukku kuin
+   napakertoimen 4°:n askel). Korjauksen jälkeen sama hyppy hakee tason 4
+   (256 laattaa).
+5. **laatat.json ei enää jää selaimen välimuistiin.** Luettelo haettiin
+   `cache: 'force-cache'` -pyynnöllä, joka tarjoaa kappaleen vanhentuneenakin
+   — palaava pelaaja ei olisi saanut 6.9. klo 04.50 valmistunutta
+   `tasot.max = 8`:aa lainkaan. Nyt `no-cache` (ETag → 304); jos verkkoa ei
+   ole, kappale haetaan vielä `force-cache`-pyynnöllä, joten lentokonetila
+   säilyy. Sama sw.js:n taustapäivityksessä (`cache: 'no-cache'`) —
+   ämpäri antaa luettelolle max-age 3600, ja kori on jo yhden käynnistyksen
+   jäljessä. Laatat itse eivät revalidoi: ne ovat immutable.
+**Avauslennon kamera seuraa konetta, ja valinnan pallo pyörii hitaammin
+(6.9.2026 aamupäivä).** Omistaja katsoi avauslennon ja lähtövalinnan ja
+pyysi sanatarkasti:
+
+> *"Kohdemaan valinnassa hitaampi pallon liike. Lentokonekohtauksessa
+> paljon lähempi zoom aste ja kamera seuraa konetta. Kartta myös zoomaa
+> koko ajan pikkuhiljaa lähemmäs konetta. Pallon ei tarvitse siis
+> liikkua lentokohtauksessa."* — ja erikseen: *"Maapallo saa olla vähän
+> vaaleampi sittenkin kun näin testikuvasi"*.
+
+1. **VALINNAN PYÖRINTÄ 0,4 → 0,16 °/s.** `ALOITUKSEN_PYORINTA_AST_S`
+   (js/pallolauta/lauta.js). Perustelu on ruudun mitta eikä maku:
+   valintanäkymä on mitattuna 1 200 lautayksikköä (36,0°) työpöydällä
+   1280 × 800 ja 986 yksikköä (29,6°) puhelimella 390 × 844, eli yksi
+   pituusaste on 36 ja 13 ruutupikseliä. 0,4 °/s liikutti kuvaa
+   14 px/s työpöydällä ja 5 px/s puhelimella — sen katse joutuu
+   seuraamaan; 0,16 °/s on 5,7 ja 2,1 px/s. Täysi kierros kestää
+   37 minuuttia. Silmukka, kolme pysäytintä ja
+   terävän tilan pakotus ovat ennallaan (kohta 3 yllä).
+2. **AVAUSLENTO ON NYT KAMERAN SEURANTAA, EI RAJAUSTA.**
+   `AVAUSLENNON_RAJAUKSEN_MARGINAALI` ja `AVAUSLENNON_PYORINTA_AST`
+   POISTUIVAT (js/pallolauta/avaus.js); tilalla on
+   `AVAUSLENNON_ALKULEVEYS` **600 lautayksikköä** (≈ 18°) ja seuranta,
+   joka kirjoittaa `pointOfView`n joka kehyksellä:
+
+   - **Kohde luetaan koneen omasta kellosta ja kaaresta**
+     (`hypynVaihe` + `lentokaarenKohta`) — samat kaksi kaavaa kuin
+     koneella (siirto.js) ja paksulla jäljellä, joten kolme yhtä aikaa
+     piirtyvää asiaa lukee yhtä totuutta.
+   - **Paikka silotetaan eksponentiaalisesti**
+     (`AVAUSLENNON_SEURANNAN_VIIVE_MS` 260 ms); viimeinen kehys
+     asetetaan täsmälleen koneen kohdalle. Kehysväliä EI katkaista
+     (toisin kuin valinnan pyörinnässä): eksponentti kyllästyy
+     itsestään, joten pitkä väli napsauttaa kameran koneen kohdalle
+     sen sijaan, että jälkijättö kasvaisi. Mitattu kontissa
+     (kehysväli ~250 ms): katkaisun kanssa 186 px sivussa, ilman 37 px.
+   - **Korkeus liukuu logaritmisesti** `liukuPehmennys`-käyrällä
+     (entinen `pyorinnanPehmennys`, nimi vaihtui koska pyörintää ei
+     enää ole) alkuleveydestä saapumisleveyteen — ei porrasta, vaan
+     koko lennon mittainen hidas lähentyminen.
+   - **Loppu on TÄSMÄLLEEN saapumisnäkymä** (`PALLOLAUDAN_
+     SAAPUMISLEVEYS` 240), joten laskeutumisen oma ajo (siirto.js
+     `laske` → `kamera.kotiin`) on nolla-ajo eikä siirtymä hypi.
+     Molemmat päät lasketaan `kamera.kameranKohde`lla, joten laattojen
+     tarkkuusraja (`lahinKorkeus`) pitää myös lennolla.
+   - **Kone ratsastaa hitusen keskilinjan yläpuolella.**
+     *(KUMOTTU 6.9.2026 iltana: isoisän kortti poistui lennolta ja
+     nosto sen mukana — ks. seuraava merkintä.)*
+     (`AVAUSLENNON_KONEEN_NOSTO` 0,15 näkyvän alueen korkeudesta).
+     Syy on mitattu: isoisän valokuva (.lento-valokuva) on kapealla
+     ruudulla 37,5 vw leveä ja kiinni vasemmassa laidassa — mitattuna
+     390 × 844 kortti peitti x 16…246, y 392…561, ja täsmälleen
+     keskellä lentävä kone (195, 447) oli sen TAKANA koko lennon.
+     Nosto ajetaan sisään ja ulos trapetsilla
+     (`AVAUSLENNON_NOSTON_RAMPPI` 0,15, `nostonOsuus`), jottei kamera
+     loikkaa arkin väistyessä eikä laskeutuessa. Viimeisen kymmenyksen
+     ajan kone laskeutuu takaisin keskelle ja sipaisee kortin
+     häivytettyä ylälaitaa — se on tietoinen vaihtokauppa siitä, että
+     laskeutuminen osuu saapumisnäkymään pikselilleen.
+   - **Ele ei kilpaile seurannan kanssa:** lennon ajan kotelon päällä on
+     koko ruudun lentokalvo (js/ui.js `.flight-overlay`), joka ottaa
+     napautuksen ja ohittaa lennon; ohitus vie kameran maaliin.
+   - **Reduced motion:** kone ei lennä, joten `rajaus` on suoraan
+     kohdekaupungin saapumisnäkymä ja ui.js asettaa sen kerralla arkin
+     takana. Seurantasilmukkaa ei käynnistetä lainkaan.
+3. **LENTOREITIN LAATAT ETUKÄTEEN KORIIN.** Lähempi kuva pyytää Z7:ää
+   pitkin koko kaarta ja Z8:aa laskeutumisessa, eikä laattamoottori hae
+   mitään ennen kuin kamera on jo siellä. `js/pallo.js` sai
+   `reitinLaatat` (käytävä kaaren ympärillä, `REITIN_ESILATAUSTASOT`
+   [6, 7], säde 1 laatta) ja `esilataaLentoreitti`, jonka
+   `avaus.js valmistele` kutsuu heti — pergamenttiarkin takana on
+   sekunteja aikaa. Lontoo → Ateena (kaari 21,5°) on 24 näytettä ja
+   laskettuna 86 laattaa käytävässä (33 tasolla 6, 53 tasolla 7) plus
+   9 laskeutumislaattaa tasolla 8 — noin 1,4 Mt, kun koko maailman taso
+   7 olisi 21 845 laattaa. Tämä EI kuluta
+   `esilataaPallolaatat`in kerran-per-istunto-lupaa (reitti tiedetään
+   vasta lennon alkaessa), ja työntekijä ohittaa jo korissa olevat.
+   *Ei mitattavissa kontissa:* savukkeet ajavat `serviceWorkers: 'block'`
+   -tilassa, joten kutsu palauttaa nullin; vartija on
+   tests/pallo.test.mjs (käytävän geometria ja viestin muoto).
+4. **ETUSIVUN AVAUKSEN TUMMENNUS 0,18 → 0,12 ja reuna 0,44 → 0,34**
+   (css `.intro.intro-pallolla .intro-verho`). Portti jää ennalleen
+   (0,28 / 0,6): tilaus koski avausta.
+
+*Mitattu Playwrightilla (Chromium, swiftshader, laatat Noden fetchillä
+media.matkakirja.appista) 6.9.2026, Lontoo → Ateena. Lento venytettiin
+15-kertaiseksi, jotta kaappaus ehtii kunkin osuuden kohdalle; käyrä on
+lennon osuuden funktio, joten venytys ei muuta geometriaa.*
+
+| osuus | altitude 1280 × 800 | altitude 390 × 844 dpr 3 | näkyvä leveys (yks) | kone keskipisteestä (TP / puhelin) |
+|---|---|---|---|---|
+| 0 % | 0,194 | 0,700 | 600 | 0 px / 0 px |
+| 25 % | 0,172 | 0,622 | 532 | 126 px ylös / 122 px ylös |
+| 50 % | 0,127 | 0,456 | 391 | 193 px ylös / 130 px ylös |
+| 75 % | 0,092 | 0,331 | 284 | 162 px ylös / 123 px ylös |
+| 100 % | 0,078 | 0,280 | 240 | 8 px ylös / 16 px ylös |
+
+Vaakasuunnassa kone pysyi työpöydällä 1–45 px ja puhelimella 1–17 px
+keskilinjasta (kontin kehysväli 250 ms; oikealla laitteella jälkijättö
+on aikavakion 260 ms mittainen eli murto-osa tästä). Isoisän kortti oli
+mitattuna työpöydällä x 45…422 ja puhelimella x 16…246 — kone on siis
+molemmilla sen ulkopuolella koko lennon paitsi viimeisen kymmenyksen
+ajan, jolloin nosto laskee sen takaisin keskelle. Osuuden 0 % kuvassa
+kortti on koneen päällä, mutta se on VENYTYKSEN harha: kortti feidaa
+näkyviin 2 600 ms kalvon syntymisestä (LENNON_VALOKUVAN_VIIVE_MS), eli
+oikealla nopeudella vasta kun noston ramppi (15 % lennosta ≈ 1,2 s) on
+jo ylhäällä.
+
+Näkyvä leveys on sama lautayksikköinä molemmilla laitteilla (kameran
+kuvasuhdekorjaus, luku 10.3 kohta 1), ja perillä `kameranTila().leveys`
+on 240,0 eli tasan saapumisporras. Kaappaukset:
+`scratchpad/lento6/lento-{tyopoyta,puhelin}-{0,25,50,75,100}.png`.
+Pyörintä mitattiin samalla ajolla (lng 5 sekunnissa): kontin
+ohjelmistorasteroijalla 0,053 °/s työpöydällä ja 0,009 °/s puhelimella —
+kehysväli on siellä 250–600 ms ja pyörinnän dt katkaistaan 100 ms:iin,
+joten mitattu kulmanopeus on murto-osa nimellisestä; oikealla laitteella
+kello antaa täyden 0,16 °/s. Avauksen tummennus luettiin
+`getComputedStyle`lla: 0,12 / 0,34.
+
+Vartijat: tests/pallolauta.test.mjs (alkuleveys paljon vanhaa
+lähempänä, zoomi yhteen suuntaan, loppu = saapumisleveys, seuranta
+samasta kellosta, noston trapetsi, reduced motionin rajaus),
+tests/aloitus-pallolla.test.mjs (pyörinnän uusi haarukka),
+tests/pallo.test.mjs (reitin käytävä ja erillinen esilatausviesti).
+`tools/savukkeet/savuke-avauslento.mjs` sai samalla KAKSI korjausta.
+(1) Se reititti yhä vanhaa `pub-*.r2.dev`-isäntää eikä nykyistä
+media.matkakirja.appia, joten `--lauta pallo` mittasi mustaa palloa
+(0/7 vartiota); nyt molemmat isännät kelpaavat ja täytetty vastaus saa
+`access-control-allow-origin`-otsakkeen, jota THREE:n tekstuurilataus
+vaatii — mitattuna laattapyyntöjä 2 → 673. (2) P4 vaati LUKUA KAKSI
+pallon nimistä lennon aikana; seuraava kamera pitää reitin toisen pään
+kuvan ulkopuolella, joten kaukainen nimi ei enää lados. Vartio mittaa
+nyt sääntöä eikä lukua: mikään MUU kaupunki kuin Lontoo ja kohde ei saa
+nimeä. Ajossa (Lontoo → Ateena, 834 × 1194) **6/7 läpi** — myös P7,
+eli kamera on perillä kohdekaupungissa ja näkyvä leveys 240 ±5 %, mikä
+on tämän erän tärkein yksittäinen mitta (lennon zoomin loppupää =
+saapumisnäkymä). Ainoa punainen on P6 (kaupunkilehti aukeaa
+napautuksesta perillä), joka kaatuu kontin hitauteen samoin kuin
+aiemminkin (`{tulos: true, auki: false}`, ks. luvun aiempi merkintä
+5.9.2026). Vartion omat kaappaukset
+(`tools/savukkeet/kaappaukset/avauslento-pallo*.png`) jätettiin
+päivittämättä: ne ovat megatavun kokoisia eikä binäärihistoriaa
+kannata paisuttaa yhdestä ajosta.
+
+**Avauslento 6.9.2026 iltana: isoisän kuva pois ja kamera yhtenä
+kaarena (fablemax).** Omistaja iPadilta, sanatarkasti: *"ens.
+lentokohtauksesta, ota isoisän kuva pois. kartta liikuu siinä liian
+pikkutarkasti seuraten koneen alku ja loppu nykäisyjä. kartta saisi
+lentää yhden tasaisen reitin ja zoom muutoksen alusta loppuun."* Tämä
+KUMOAA edellisen kohdan 2 ("avauslento on kameran seurantaa") liikkeen
+osalta ja Raamatun rivin ISOISAN VAALEAT KUVAT lennon osalta; alkuleveys
+600 ja lähikuva jäävät voimaan.
+
+1. **ISOISÄN KORTTI POIS LENNOLTA.** `js/ui.js aloituslentoSisalla` ei
+   enää luo `.lento-valokuva`-nappia; kortin tyylit poistettiin
+   css:stä, `LENNON_VALOKUVAN_VIIVE_MS` js/isoisan-valokuvat.js:stä ja
+   moduulin tuonti ui.js:stä. Taulun rivi `lento` (Giza, luminanssi
+   184,4) jää moduuliin mittauksineen — jos kortti palaa, se palaa
+   siihen avaimeen. Koska ui.js oli moduulin ainoa niputettu tuoja,
+   `js/isoisan-valokuvat.js` poistui myös
+   `tools/build-standalone.mjs`:n MODULES-listalta (muut tuojat,
+   aikajana ja etusivun kuvapakka, eivät ole niputuksessa).
+   Isoisän kuvat säilyvät etusivun pallolla ja aikajanassa.
+2. **NYKÄISYJEN JUURISYY OLI NELJÄ ERI LIIKETTÄ SAMASSA KUVASSA.**
+   (a) Kone kulki `hypynVaihe`lla (easeInOutQuad), jonka kiihtyvyys
+   hyppää nollasta täyteen lennon alussa, kääntyy kerralla
+   puolivälissä ja putoaa nollaan lopussa — juuri ne "alku ja loppu
+   nykäisyt", ja kamera toisti ne suurennettuina, koska koko kuva
+   liikkui koneen mukana. (b) Seuranta oli ensimmäisen kertaluvun viive
+   (`AVAUSLENNON_SEURANNAN_VIIVE_MS` 260 ms), joka jäi lähdössä jälkeen,
+   kiri kiinni keskellä ja napsautti viimeisellä kehyksellä kameran
+   koneen kohdalle. (c) Koneen nosto ajettiin sisään ja ulos
+   trapetsilla lennon ensimmäisellä ja viimeisellä 15 %:lla — oma
+   liikkeensä juuri lennon päissä. (d) Kuljettaja käynnisti yhä oman
+   kamera-ajonsa kaupunkiparin laatikkoon (`siirto.js hyppaa`,
+   `LENNON_KAMERA_MS`), ja seuranta pysäytti sen vasta seuraavassa
+   kehyksessä.
+3. **KAMERA SAA YHDEN SUUNNITELMAN.** `js/pallolauta/avaus.js`:
+   `lennonSuunnitelma(kaari, { alku, huippu, loppu })` on puhdas
+   funktio `t → { lat, lng, altitude }`, ja `ajaKamerasuunnitelma`
+   kirjoittaa sen arvon sellaisenaan joka kehyksellä — ei seurantaa,
+   ei silotusta, ei kehyskohtaista kohdetta.
+   - **Paikka** isoympyrää pitkin (`lentokaarenKohta`) vaiheella
+     `lennonVaihe` = `liukuPehmennys` (smoothstep): kiihtyvyys on nolla
+     molemmissa päissä ja vaihtaa merkkiä vain kerran, puolivälissä.
+   - **Korkeus** `lennonKorkeus`: nousu `AVAUSLENNON_ALKULEVEYS` 600 →
+     `AVAUSLENNON_HUIPPULEVEYS` 760 osuudella 0…`AVAUSLENNON_HUIPUN_
+     KOHTA` 0,35 ja lasku 760 → `PALLOLAUDAN_SAAPUMISLEVEYS` 240
+     lopputiellä, kumpikin logaritmisena liukuna omalla
+     ease-in-out-käyrällään. Käyrällä on siis täsmälleen yksi maksimi,
+     se on monotoninen molemmin puolin, ja koska pehmennyksen
+     derivaatta on nolla kummankin osuuden päissä, kuva on tasainen
+     sekä huipulla (noin 35–65 %) että lennon päissä. Sama profiili
+     kuin koneella: nousu, matkalento, lasku.
+   - **Kone piirtyy suunnitelman päälle.** Kuljettaja sai kaksi
+     valinnaista lisää (`js/pallolauta/siirto.js`): `omaKamera` (ei
+     omaa kamera-ajoa) ja `hyppaa(…, { vaihe })` (vaihekäyrä
+     kohtaukselta). Kone ja paksu punainen jälki lukevat siis samaa
+     `lennonVaihe`ttä kuin kamera, joten kone on joka kehyksellä
+     täsmälleen siinä pisteessä, jota kamera katsoo; kaaren oma
+     korkeusparaabeli nostaa sen hitusen keskilinjan yläpuolelle.
+     Tavallinen lento (FLIGHT_MS, MANNER_LENTO_MS) EI anna kumpaakaan
+     lisää, joten sen rajaus ja käyrä ovat ennallaan.
+   - **Koneen nosto poistui** (`AVAUSLENNON_KONEEN_NOSTO`,
+     `AVAUSLENNON_NOSTON_RAMPPI`, `nostonOsuus`): se oli isoisän kortin
+     väistöä, ja kortti on poissa.
+   - **Loppu on yhä täsmälleen saapumisnäkymä**, joten laskeutumisen
+     oma ajo (`laske` → `kamera.kotiin`) on nolla-ajo. Kaikki kolme
+     korkeutta lasketaan `kamera.kameranKohde`lla, joten laattojen
+     tarkkuusraja pitää; `Math.max` varmistaa, ettei huippu jää päiden
+     alle, jolloin kaari menettäisi maksiminsa.
+
+*Mitattu kahdella tavalla 6.9.2026. (1) KAAVOISTA 30 kertaa sekunnissa
+12 sekunnin lennolta (Lontoo → Ateena, puhelimen 390 × 844 korkeudet
+0,729 / 0,923 / 0,292 eli 600 / 760 / 240 lautayksikköä): vanha rata
+ajettiin samalla silotuksella, nostolla ja vakioilla kuin
+origin/mainissa. (2) SELAIMESSA (Playwright, Chromium, swiftshader,
+laatat Noden fetchillä) käärimällä `pallo.pointOfView` ja kirjaamalla
+jokainen kameran kirjoitus; kontti piirtää 1–2 kehystä sekunnissa,
+joten selainajo kertoo radan MUODON eikä tiheyttä.*
+
+| 30 Hz, 12 s | ennen | jälkeen |
+|---|---|---|
+| lat-nopeuden suunnanvaihtoja | **2** | **0** |
+| lat-kiihtyvyyden merkinvaihtoja | 4 | 1 (lennon puoliväli) |
+| lng-kiihtyvyyden merkinvaihtoja | 2 | 1 |
+| suurin abs(lat-kiihtyvyys) | **27,98 °/s²** | **0,65 °/s²** |
+| suurin abs(lng-kiihtyvyys) | 29,27 °/s² | 1,25 °/s² |
+| suurin abs(d²ln(alt)/dt²) | 0,038 1/s² | 0,113 1/s² |
+| altitude alku → huippu → loppu | 0,729 → 0,729 (0 %) → 0,292 | 0,729 → 0,923 (35 %) → 0,292 |
+
+Lat-nopeus (°/s) kymmenyksittäin kertoo nykäisyt suoraan:
+
+    ennen   -0,16  -3,76  -0,33  -0,70  -1,20  -1,80  -1,71  -1,36  -0,97  +0,96  -0,88
+    jälkeen -0,01  -0,49  -0,92  -1,28  -1,56  -1,72  -1,73  -1,57  -1,23  -0,71  -0,01
+
+Vanhassa radassa kamera SYÖKSÄHTI etelään heti lähdössä (−3,76 °/s
+10 %:n kohdalla: noston ramppi ajautui sisään 15 %:ssa lentoa) ja
+KÄÄNTYI TAKAISIN POHJOISEEN lopussa (+0,96 °/s 90 %:n kohdalla, kun
+sama ramppi purkautui) — kaksi suunnanvaihtoa juuri lennon päissä,
+täsmälleen se, minkä omistaja näki. Uudessa radassa lat-nopeus nousee
+nollasta yhteen huippuun ja palaa nollaan, eikä vaihda suuntaa
+kertaakaan; suurin kiihtyvyys putosi 43-kertaisesti. Zoomin oma
+kiihtyvyys kolminkertaistui (0,038 → 0,113 1/s²), koska käyrä NYT
+kääntyy kerran (nousu → lasku) siinä missä vanha oli suora liuku; luku
+on yhä murto-osa koko lennon zoomimatkasta (|ln(240/600)| = 0,92), eikä
+se ole silmälle nykäisy vaan se yksi zoomin muutos, jota omistaja pyysi.
+
+Näkyvä leveys (lautayksikköä) kymmenyksittäin:
+600 · 629 · 692 · 750 · 745 · 650 · 520 · 400 · 311 · 258 · 240.
+
+Selainajo (390 × 844): ennen lat-nopeus −0,67 → −2,71 → **+2,17** °/s
+(sama loppukäännös näkyy myös 1,4 kehyksen sekuntivauhdilla, kamera
+palasi 1,5° pohjoiseen viimeisen 1,5 s aikana); jälkeen lat-nopeus
+−1,44 → −2,46 → −0,04 °/s eli aina samaan suuntaan, ja altitude
+0,759 → 0,876 (huippu) → 0,280 eli yksi kaari. Kaappaukset kuudesta
+kohdasta lentoa: `scratchpad/lento/{ennen,jalkeen}-kuva*.png` (ei
+repoon).
+
+Vartijat: tests/pallolauta.test.mjs (suunnitelman muoto 30 näytettä
+sekunnissa: yksi maksimi, monotoninen molemmin puolin, kiihtyvyys
+pieni; kone kameran vaiheella; seuranta ja nosto poistettu),
+tests/lento-ajoitus.test.mjs (ei kuvakorttia lennolla, kaaren yksi
+maksimi), tests/isoisan-valokuvat.test.mjs (kytkentä poissa, taulun
+rivi tallella). `savuke-avauslento --lauta pallo` ennen ja jälkeen
+**6/7** — sama tunnettu punainen P6 (kaupunkilehti aukeaa perillä
+napautuksesta) kuin aiemmissa ajoissa.
+
+**Lepokerros — levossa pallo on yhtä terävä kuin tasokartta (6.9.2026
+iltapäivä, fablemax).** Omistaja: *"kartta oli ennen palloa paljon
+terävämpi, eli ongelma on pallon renderöinnissä. ainakin kun liike on
+pysäytetty, kuva pitäisi renderöityä samalla tarkkuudella kuin 2d
+kartassa"* (Raamattu, PALLO LEVOSSA YHTA TERAVA KUIN TASOKARTTA).
+Mitattu syy: pallon Z8-sarja on poltettu pyramidin z7:stä (240 →
+182 px/aste päiväntasaajalla) jpeg-laatuun 80, ja jokainen pikseli
+käy kaksi uudelleennäytteistystä (Miller → Mercator, Mercator → pallon
+pinta). Toteutus `js/pallo.js` (`luoLepokerros`, kytketty samaan
+lepo/liike-koneeseen kuin laatutaso, `kytkeLaatunosto`): kun kamera on
+ollut paikallaan `LAATU_LEPOVIIVE_MS`, ruudun 7 × 7 pistettä
+säteenjäljitetään pallolle, niistä lasketaan leveys-pituus-laatikko
+(sauma aukikierrettynä), valitaan pyramidin taso, jonka px/aste ≥
+ruudun laitepikselit/aste, kootaan pohja + viiva + nosto -laatat yhdelle
+kankaalle täsmälleen tasokartan osoitteilla ja ruudukolla
+(`js/laattapyramidi.js` uudet ovet `haePyramidinLuettelo`,
+`pyramidinKerrostasot`, `pyramidinLaattaUrl`, `pyramidinLaattaOlemassa`)
+ja piirretään pallon pinnalle 0,25°:n verkkona, jonka UV on Millerin
+kankaalla. Kerros häipyy päälle 260 ms (reduced motion: heti) ja
+poistuu scenestä HETI ilman häivettä, kun liike alkaa (ks. korjaus
+alla). Säde TÄSMÄLLEEN pinnan (1,0): järjestys laattoihin nähden tulee
+syvyyssiirrosta (polygonOffset, 8 askelta kameraa kohti, ei
+kaltevuustermiä), merkit (≥ 1,0015) jäävät päälle; syvyys kirjoitetaan
+ja kerros piirretään läpinäkyvien ensimmäisenä (renderOrder −1), jotta
+linssin polygonit ja napakannen häive jäävät sen päälle. Rajat: ei
+yleiskuvassa (korkeus >
+0,6), laattakatto ruudun laitepikseleistä (4 × pikselit / 512², 16…64),
+kangas ≤ 8192 ja näytönohjaimen katto, tiheysvahti (karkeampaa kuin
+pallon omat Mercator-laatat katsotulla leveysasteella ei koota — mitattu
+puhelimella Euroopan yllä z5 olisi ollut askel taaksepäin), versiovahti
+(pallon laatat.json versio/viivat/nostot = pyramidi.json versio/
+viivataso/nostotaso, muuten ei kerrosta). Mittaus (Chromium, Kreikan
+lähikuva korkeus 0,12, Laplace-varianssi ruudun keskeltä): työpöytä
+2758 × 1642 363 → 388, puhelin 1170 × 2532 188 → 229; Euroopan
+yleiskuvassa kerrosta ei koota (tiheysvahti). Kustannus: Kreikan
+lähikuva työpöydällä 48 laattaa × 3 kerrosta (kangas 4096 × 3072,
+~50 Mt + mipmapit), puhelimella ~20 laattaa (2048 × 2560). Vartiot:
+`tests/pallolepokerros.test.mjs`; savukkeissa pyramidipyynnöt lasketaan
+nyt erotuksena lepokerroksen omista (`lauta.lepokerros().mittarit()`).
+Hylätty varakeino: pallon Z9 litteästä z8:sta — pyramidissa ei ole
+z8:aa, joten Z9 olisi venytetty z7 nelinkertaisella laattamäärällä.
+AVOIN: laattamoottori hakee levossa työpöydällä yli tuhat Z8-laattaa
+(lepokerroin), ja lepokerroksen kuvat jonottavat niiden perässä samalle
+palvelimelle (fetchPriority high auttaa vain Chromiumissa); mobiilin
+muisti on riski, jos kangas 45 laattaa (~47 Mt) osuu laattamoottorin
+oman huipun päälle.
+
+**Lepokerroksen hyppy ja nykivä vieritys (6.9.2026 ilta, fablemax).**
+Omistaja v1639:stä sanatarkasti: *"kun kuva tarkentuu, niin se
+zoomautuu vähän sisään, mikä näkyy hyppynä. saako pois? vieritys ei ole
+jostain syystä enää niin sulavaa vaikka tarkkuus vieritys on pois
+päältä ja kartta on röpelöinen vierityksen aikana"*. Mitatut syyt
+(Chromium 390 × 844 dpr 2, Kreikka korkeus 0,09; skripti mittasi
+neljännesten SAD-siirtymän kerros näkyvissä vs. piilossa): (1) säde
+1,001 on lähikuvassa suurennos 1/(korkeus × 10) — mitattu 1,3 %, alaosan
+neljänneksissä dx ±3,0 ja dy −5,3 laitepikseliä, ja häive teki siitä
+zoomin sisään; (2) kerros koottiin samasta 260 ms:n levosta kuin
+laattataso nousee, joten raahauksen mikrotauko (350 ms sormi pohjassa)
+käynnisti kokoamisen ja tekstuurin viennin — tauon jälkeinen kehys
+1 117 ms, kun muut olivat ~430 ms (v1638 samassa kohdassa 633 ms;
+ohjelmistopiirto, absoluuttiset ajat eivät vastaa laitetta); (3)
+röpelö oli 150 ms:n ulos-häive liikkeessä: suurennettu kerros laattojen
+päällä kahtena kuvana. Korjaus (`js/pallo.js`): `LEPOKERROS_KOROTUS` 1
+ja materiaalille `polygonOffset` (`LEPOKERROS_SYVYYSSIIRTO` −8 askelta,
+factor 0 — kaltevuustermi kasvaisi pallon reunalla merkkien nostoa
+suuremmaksi; vähimmäisverkko 64 silmää pitää jänteen painuman alle
+puolen syvyysaskeleen jokaisella korkeudella, laskettu
+`tests/pallolepokerros.test.mjs`); liike poistaa kerroksen scenestä
+heti ilman häivettä; kokoaminen vasta aidon levon jälkeen
+(`LEPOKERROS_LEPOVIIVE_MS` 400 ms viimeisestä liikkeestä JA sormet irti
+kotelosta, `luoLepokerroksenAjoitus`); tekstuuri viedään
+näytönohjaimelle heti kokoamisen päätteeksi (`renderer.initTexture`).
+Mittaus korjauksen jälkeen: siirtymä kerros→ilman ≤ 0,18 px kaikissa
+neljänneksissä korkeuksilla 0,04 ja 0,09 (suurennos 0,00001);
+syvyystesti päällä vs. pois -erokuvassa vain nappulan varjo (ei
+z-fighting-täpliä); neljässä raahauksessa (tasainen ja mikrotauot)
+kokoamislaskuri ei kasvanut kertaakaan sormen ollessa pohjassa, ja
+tauon jälkeinen kehyspiikki katosi (max 517 ms = muiden kehysten
+tasoa). Laattamoottorin oma lepo (260 ms, kynnykset, pikselisuhde) on
+ennallaan — liikkeessä pallo piirtyy täsmälleen kuten v1638.
+
+
+**Pisteet pallolla — levy ja aarrepiste (6.9.2026 ilta, iPhone).**
+Omistaja: *"piste venyy kun karttaa panoroi. nyt kartta ei tökkinyt
+enää"* ja *"aarteen piste syttyy liian lähelle ateenaa, ei pysty
+painamaan"*, *"sama ongelma myös sofiassa"*. (1) VENYMÄ oli geometriaa,
+ei liikettä: Globe.gl piirtää `pointsData`n lieriönä pinnasta
+korkeuteen, ja kaupunkipiste (säde 0,03, korkeus 0,003) on 0,3 yksikköä
+korkea mutta 0,105 leveä eli tappi (askelhelmi 0,25 × 0,05). Lähikuvassa
+kamera on 8 yksikön päässä pinnasta: keskellä tappi näkyy päästä, mutta
+laidalla vaippa piirtyy kapseliksi pinnan pisteestä kohti kattoa, ja
+nappulan jalka (html-merkki korkeudella 0,004) on vielä kauempana —
+levossa nappula seisoo pisteen päällä ruudun keskellä, joten vika näkyi
+vasta panoroitaessa. Mitattu (Chromium 390 × 844 dpr 2, korkeus 0,08,
+erotuskuva piste näkyvissä/piilossa nappula piilotettuna): keskellä
+22 × 22 laitepikseliä; 334 css-px keskustasta lieriö 22 × 50, pääakselien
+suhde 2,2 — sama v1640:ssä (22 × 41; sen 1,001-säteinen lepokerros
+peitti vaipan juuren levossa, liikkeessä sekin oli poissa) ja
+v1641:ssä; lepokerros ei siis ole syy. Korjaus
+(`js/pallolauta/lauta.js` `luoPisteidenLitistaja`): jokaisen pisteen
+geometria vaihdetaan LEVYYN — lieriön kansi yläpäässä (paikallinen
+z = −1, jonka `scale.z` vie korkeuteen), normaali ulospäin, ei vaippaa —
+`pointRadius`-luennassa, jolloin kirjasto on jo sitonut olion datumiin;
+geometria rakennetaan kirjaston omilla luokilla ensimmäisestä lieriöstä
+(vrt. `js/pallo.js kolmiulotteinen`). Korkeus, väri, napautus (raycast
+kanteen) ja siirtymät ovat ennallaan. Levynä 334 css-px keskustasta
+22 × 23, suhde 1,0. Hylätty: `pointAltitude` pienemmäksi (kirjaston
+lattia 0,1 yksikköä jättää vaipan, ja korkeus on piirtojärjestys) ja
+oma Object3D-kerros (toinen napautus- ja siirtymäpolku). (2) AARREPISTE
+piirtyi pallolla datan koordinaatteihin eli täsmälleen nappulan
+jalkaan (Ateenassa 1,3 css-px kaupungin ruutupisteestä, nappulan
+svg-laatikon sisällä), ja pallon osumatesti (lähin merkki) antoi
+tasapelin kaupungille: napautus avasi kaupunkilehden. Tasokartan
+sivusiirto (26.8.2026, koilliseen kun piste on alle 14 yksikön päässä
+laatasta) on nyt yksi funktio `js/fokuspiste.js fokuspisteenSiirto`,
+jota molemmat laudat käyttävät; pallolla (`js/pallolauta/nostot.js`)
+merkki JA osuma siirtyvät, data ei. Saapumisnäkymässä (korkeus 0,28)
+piste on 22 css-px kaupungista koilliseen, nappulan oikean olkapään
+vieressä, ja napautus avaa Ateenassa laattakysymyksen ja Sofiassa
+pöllön sähkekortin. Vartiot: `tests/pallopiste.test.mjs` ja
+savuke-pallolauta 15–16.
+**Liike ja zoom täydellä tarkkuudella — suunnitelma (6.9.2026 ilta,
+fablemax).** Omistaja v1642:sta: *"rannan ääriviiva … kasvaa niin
+paljon paksummaksi"*, *"Google Earthissä myös sisäänpäin zoomaus
+näyttää portaattomalta"*, *"löytyisikö netistä tähän jo valmista
+koodiratkaisua?"*. Mitattu (tools/savukkeet/mittaa-pallon-liike.mjs,
+puhelin 390 × 844 dpr 3, 4×): reunan leveys levossa 2 px (Z8),
+liikkeessä 5 px (Z5, jonka rantaviiva on piirretty paksulla musteella);
+?laatu=aina pitää 2 px:n reunan mutta laattamoottorin updatePov maksaa
+Z8:lla 33 ms/kutsu (zoomissa max 558 ms), laatat kertyvät purkamatta
+(227 → 500 → 975) ja jopa 55 % niistä on pallon takapuolella. Valmiit
+kirjastot (MapLibre, 3d-tiles-renderer, Cesium, OpenGlobus) kokeiltiin
+omilla laatoilla eikä mikään täytä vaatimuksia kohtuullisella
+siirrolla. Valittu ratkaisu: oma laattakerros Globe.gl:n sisään —
+pyramidin laatat laatta kerrallaan pysyvinä, ruutupohjainen taso
+hystereesillä, ristihäive, LRU-kiintiö, pohjamoottori naulattuna
+tasoon ≤ 5; lepokerros ja liike/lepo-laatutilat poistuvat. Mittaukset,
+kirjastovertailu, algoritmi ja Opus-parven erät E0–E5 tehtävänantoineen:
+docs/moduulit/pallon-liike-taydella-tarkkuudella.md. Pelikoodia ei
+muutettu tässä vaiheessa.
+
+**E0 tehty: laattakerroksen apurit omaan moduuliin (6.9.2026 ilta).**
+Suunnitelman ensimmäinen erä on mekaaninen siirto ilman käytösmuutosta:
+lepokerroksen puhtaat laskimet (näkyvä alue, laattakatto, tason valinta,
+laattaruudukko, Millerin UV, verkon puskurit, levon ajoitus) ja niiden
+vakiot siirtyivät sanatarkasti tiedostosta `js/pallo.js` uuteen
+moduuliin `js/pallolaatat.js` — 337 riviä pois, 337 riviä sisään, ei
+yhtään muutettua merkkiä. Mukana muuttivat `LAATU_LEPOVIIVE_MS` ja
+`LAATU_KAUKORAJA`, koska `LEPOKERROS_KORKEUSRAJA` alustuu jälkimmäisestä
+ja uusi moduuli pidetään tuonneitta: toisin päin tuonti tekisi kehän,
+jossa vakio jäisi alustamatta. `js/pallo.js` tuo nimet takaisin ja vie
+ne edelleen (`export … from './pallolaatat.js'`), joten testit, savukkeet
+ja `js/pallolauta/` näkevät saman rajapinnan kuin ennen; `luoLepokerros`
+ja `kytkeLaatunosto` jäivät paikoilleen. Rivimäärät: js/pallo.js
+2067 → 1757, js/pallolaatat.js 364. Moduuli on sw.js:n SHELLissä heti
+`js/pallo.js`:n jälkeen (ei niputuksessa, kuten pallo.js). Vartio:
+`tests/pallolepokerros.test.mjs` vaatii, ettei pallo.js enää määrittele
+siirrettyjä nimiä ja että uusi moduuli ei tuo mitään. Seuraava erä E1
+rakentaa näiden apurien päälle itse laattakerroksen.
+
+
+**E1 tehty: laattakerros — sama tarkkuus liikkeessä kuin levossa
+(6.9.2026 ilta).** Suunnitelman
+docs/moduulit/pallon-liike-taydella-tarkkuudella.md luvun 4 mukainen
+laattakerros on tiedostossa `js/pallolaatat.js` (`luoLaattakerros`) ja
+kytketty palloon `js/pallo.js`:n `rakennaPallo`- ja
+`kytkeLaatunosto`-funktioista. Pinta on nyt kaksi kerrosta: kirjaston
+oma laattamoottori jää KARKEAKSI POHJAKSI (`POHJAN_TASO_MAX = 5`, näkyy
+napojen yli ja siihen asti kunnes kerroksen laatta saapuu), ja sen
+päälle piirretään pyramidin laatat yksi verkko kerrallaan — taso ruudun
+pikseleistä hystereesillä (`LAATTAKERROS_TERAVYYS 1`,
+`LAATTAKERROS_HYSTEREESI_ALAS 0,7`), sisään-häive 260 ms, ulos-häive
+vain karkeamman valmiin peiton päältä, LRU-kiintiö (48 näkyvää + 24
+muistissa, katto 96 Mt) ja tekstuurien vienti enintään kaksi kehyksessä.
+Liike/lepo-laatutilat eivät enää vaihda kynnyksiä eivätkä pikselisuhdetta
+(pikselisuhde `min(dpr, 3)` kerran asennuksessa), eikä lepokerrosta
+luoda. Perääntymistie on `?laattakerros=0`: silloin kaikki toimii
+täsmälleen kuten v1645 (vipu `js/ui-apurit.js` `laattakerrosPaalla`).
+
+Kolme mitattua tarkennusta suunnitelmaan, kaikki samasta syystä — kerros
+päivittyy kymmenen kertaa sekunnissa, ei kerran levossa:
+
+1. **Näkyvän alueen näytteitä ei saa kysyä kirjastolta.**
+   `pallo.toGlobeCoords` testaa joka kutsulla pallon kaikki
+   laattaverkot, joten 81 näytettä maksoi puhelinnäkymässä **444 ms**
+   (Chromium, ei hidastusta, 47 000 kolmiota). Näytteet lasketaan
+   analyyttisesti (`laattakerroksenOsuma`: kamera on säteellä
+   R(1 + korkeus) suunnassa (lat, lng) eikä sillä ole kallistusta, joten
+   ruudun säde leikkaa pallon toisen asteen yhtälöllä). Ero
+   säteenjäljitykseen samassa näkymässä 0,03–0,05°, ja päivityksen hinta
+   putosi **473 ms → 0,5 ms**.
+2. **Takapuolen laatat on karsittava ennen laattakattoa**
+   (`laattakerroksenNakyvissa`). Näkyvä alue on lat/lon-laatikko, mutta
+   pallolla näkyy kalotti: yleiskuvassa laatikon kulmat ovat pallon
+   takana. Ilman karsintaa kerroksen taso KARKENI kesken sisäänzoomauksen
+   (mitattu 3 → 2 → 4 → 5 → 6 → 7), koska laatikko kasvoi katon yli.
+   Karsinnan jälkeen tasot ovat monotoniset **3 → 4 → 5 → 6 → 7**.
+3. **Latausjono kootaan joka päivityksellä** näkyvistä lataamattomista
+   (lähin ensin), ja puretun laatan kesken oleva haku katkaistaan
+   (`AbortController`). Kertaalleen jonoon jätetyt vanhentuneet tietueet
+   veivät zoomissa kaiken kaistan laatoilta, joita ei enää katsottu:
+   ilman tätä kymmenen sekunnin zoomin jälkeen yksikään laatta ei ehtinyt
+   valmiiksi kuudessa sekunnissa, sen kanssa näkymä on täysi.
+
+Mitattu ennen ja jälkeen (`tools/savukkeet/mittaa-pallon-liike.mjs`,
+Fogg Ateenassa korkeudella 0,35, panorointi kaksi ruudunleveyttä itään
+4 s:ssa; puhelin 390 × 844 dpr 3 CPU 4×, työpöytä 1440 × 900 dpr 2):
+
+| Mitta (puhelin) | Ennen (v1645) | Jälkeen (E1) | Suunnitelman raja |
+| --- | --- | --- | --- |
+| Reunan leveys levossa (mediaani / p90) | 2 / 4 px | 2 / 4 px | ≤ 3 / 5 px |
+| Reunan leveys liikkeessä (25 % / 55 %) | 5 / 8 px | **2 / 4 px** | = lepo ± 1 px |
+| Musteviivan paksuus levossa (med / p75) | 1 / 2 px | 2 / 3 px | — |
+| Musteviivan paksuus liikkeessä | 7–8 / 9–12 px | **2 / 2–5 px** | ≤ 2 px |
+| updatePov ms / kutsu (max) | 3,8 (32,4) | 8,7 (23,3) | ≤ 10 ms, max ≤ 40 |
+| Laattapyyntöjä 4 s:n panoroinnissa | 188 | **27** | ≤ 120 |
+| Laattaverkkoja scenessä lähikuvassa | 288 (pohja Z8) | 46 pohja + 15–35 kerros | ≤ 120 |
+| Piirtokutsuja / kehys | 218 | 36–65 | ≤ 120 |
+| Tekstuureja uudestaan levossa panoroinnin jälkeen | 183 | **4** | ≤ 20 |
+| Zoom 2,5 → 0,05: tyhjän osuus keskialueella | 0,000 | 0,000 | 0,000 |
+| Zoom: perättäisten kuvien ero (mean ΔL) | 21,8–27,9 | 25,1–27,0 | ei piikkiä |
+| Zoom: kerroksen tason vaihdot | (ei kerrosta) | 3 → 4 → 5 → 6 → 7 | monotoninen |
+| Zoom: pohjan tason vaihdot 10 s:ssa | 7, joista 2 edestakaisin | 3, monotoninen | — |
+
+| Mitta (työpöytä) | Ennen (v1645) | Jälkeen (E1) |
+| --- | --- | --- |
+| Reunan leveys levossa | 2 / 4 px | 2 / 5 px (kolmen sekunnin lepo 3 / 6 px, ks. alla) |
+| Reunan leveys liikkeessä | 2 / 4 px ¹ | 2 / 5 px |
+| Musteviivan paksuus liikkeessä | 1 / 2 px ¹ | 2 / 3 px |
+| updatePov ms / kutsu (max) | 11,0 (25,7) | 2,1 (3,6) |
+| Laattapyyntöjä 4 s:n panoroinnissa | 249 | 55 |
+| Piirtokutsuja / kehys | 247–302 | 64–139 |
+| Zoom lopussa levossa (reuna / muste) | 2 / 4 ja 2 / 2 px | 2 / 5 ja 2 / 2 px |
+
+¹ Työpöydän liikekaappaus osui hetkeen, jossa kirjaston taso oli jo
+palautunut seitsemään, joten se ei näytä liikkeen omaa karkeutta;
+puhelimen luvut kertovat sen.
+
+Neljä lukua on syytä lukea oikein.
+
+1. **Musteviiva paksuni levossa 1 → 2 px**, koska kerros valitsee
+   terävyydellä 1 pyramidin tason z6 (120 px/aste), kun pallon oma
+   Mercator-sarja tarjosi Z8:n (231 px/aste 38° N:ssä, poltettu pyramidin
+   z7:stä): pyramidin kartografia on tasokohtaista, joten karkeammalla
+   tasolla muste ja nimet on piirretty suhteessa isommiksi. Ruudun tarve
+   samassa näkymässä on 116 laitepikseliä leveysastetta kohti ja z6
+   antaa 139, joten yhtään yksityiskohtaa ei jää näyttämättä.
+2. **Kehysajat kontissa kasvoivat** (p50 233 → 1567 ms panoroinnissa),
+   koska pikselisuhde ei enää putoa liikkeessä kolmesta kahteen. Se on
+   ohjelmistorasteroijan täyttökustannus (suunnitelman luku 2.3 (c):
+   sama näkymä dpr 3 = 1042 ms, dpr 2 = 413 ms) eikä ennusta laitetta,
+   jolla 3 Mpx ja 60 piirtokutsua on kevyt kehys.
+3. **Ensimmäinen näkymä täyttyy hitaammin kuin ennen.** Pohja on nyt
+   tasolla 5, joten ennen kuin kerroksen laatat saapuvat, kuva on
+   karkeampi kuin ennen (jossa pohja meni Z8:aan). Kontissa jokainen
+   laatta haetaan ämpäristä välityspalvelimen läpi (~1 laatta/s), joten
+   mittarin 3,5 sekunnin lepo ei riitä työpöydän leveään näkymään:
+   ensimmäinen kaappaus on 3 / 6 px ja seuraavat 2 / 5 px. Laitteella
+   ja HTTP-välimuistin kanssa tämä on murto-osa sekunnista; E4 esilataa
+   avauslennon käytävän pyramidilaatoille.
+4. **Savukkeet antavat saman tuloksen kerros päällä ja pois**
+   (`?laattakerros=0`): pallolauta 42/42, avauslento 6/7 (P6 kaatuu
+   molemmilla), pallolaatat-offline 10/11 (vartio 4 kaatuu molemmilla),
+   siirtokoreografia ja kartta-tila kaatuvat molemmilla `page.goto`-
+   aikakattoon (30 s, `waitUntil: 'load'`) tässä kontissa. Yksi ero:
+   `savuke-pallolauta.mjs` KUVAKANSIOLLA ajettuna kaatuu Playwrightin
+   30 s:n kaappauskattoon maatiedot-linssin kohdalla — sama kaappaus
+   kestää ohjelmistorasteroijalla ilman kerrosta 22,6 s ja kerroksen
+   kanssa 33,7 s (1 690 piirtokutsua tulee linssin omista polygoneista,
+   ei kerroksesta). Ilman kuvakansiota savuke ei kaappaa mitään ja menee
+   läpi. Kyse on kontin rasteroijasta, ei laitteesta — mutta
+   kaappauskatto kannattaa nostaa, kun savuketta seuraavan kerran
+   kosketaan.
+
+**V2 tehty: vektoriviivat — rantaviivat ja rajat laattojen päälle
+(6.9.2026 ilta).** Raamatun linjaus VEKTORIT SAMALLA (omistaja: *"Tehdään
+se vektori juttu nyt samalla."*) on kytketty pelilautaan. `js/pallolauta/
+lauta.js` luo reittikerroksen jälkeen `luoPallovektorit({ pallo, kotelo,
+reitit })` — reittien jälkeen, koska kerros lukee Line2-luokat kirjaston
+omasta nipusta työntämällä hetkeksi nollamittaisen polun reittikerrokseen
+— tarjoaa kahvan `lauta.vektorit()` mittareille (kuten `lepokerros()`) ja
+purkaa sen `pura()`:ssa ennen `pallo._destructor?.()`:ää. Perääntymistie
+on `?vektorit=0` (`pallovektoritPaalla()`), jolloin kerrosta ei luoda
+lainkaan. Moduuli `js/pallovektorit.js` (V1) ja aineisto ämpärissä
+(`julisteet/pallo/vektorit/2026-09-06a/`, V0) olivat valmiina; V2 ei
+muuttanut kumpaakaan eikä laattakerrosta.
+
+MITATTU tuotantokoodilla (`tools/savukkeet/mittaa-pallon-vektorit.mjs
+--tapa=peli --vari=debug --vartio`, joka ajaa kokeilusivulla pelin oman
+moduulin ja ämpäriaineiston; puhelin 390 × 844 dpr 3, CPU-throttle 4×,
+Ateena). Vektoriviiva on mittauksessa magentaa, joten sen paksuus luetaan
+suoraan pikseleistä; POLTETTU-sarake on saman kuvan tumman musteen
+paksuus (`pinta`), joka laskee kaiken tumman — rantaviivan, tiet, nimet,
+maaston varjot — eli se on ylä-arvio rantaviivalle, mutta kertoo, miten
+paljon laatan venytys paksuntaa poltettua jälkeä näkymästä toiseen:
+
+| näkymä | poltettu muste mediaani/p75 | VEKTORI mediaani/p90 |
+| --- | --- | --- |
+| lepo Ateena 0,35 | 2 / 4 px | **2 / 3 px** |
+| lepo lähikuva 0,08 | 5 / 7 px | **2 / 3 px** |
+| lepo koko pallo 2,5 | 5 / 10 px | **3 / 7 px** |
+| kesken panoroinnin 25 % | 3 / 5 px | **2 / 3 px** |
+| kesken panoroinnin 55 % | 2 / 3 px | **2 / 3 px** |
+| zoom 1,0 | 15 / 25 px | **2 / 4 px** |
+| zoom 0,35 | 4 / 7 px | **2 / 3 px** |
+| zoom 0,1 | 6 / 8 px | **2 / 3 px** |
+| zoom 0,05 | 3 / 5 px | **2 / 3 px** |
+
+Vektori on siis TASAN SAMA LEVEYS joka näkymässä ja joka hetkellä —
+1,5 laitepikseliä + reunanpehmennys = mediaani 2 px — kun poltettu jälki
+vaihtelee 2:n ja 15:n välillä sen mukaan, kuinka paljon laattaa
+venytetään. Muut luvut samasta ajosta:
+
+- **Syvyysjärjestys pitää laattakerrosta vasten.** Vektorin
+  `polygonOffsetUnits −12` ja läpinäkyvien jono `renderOrder −0,5` on
+  suunniteltu lepokerrosta (−8, renderOrder −1) vasten, ja sama pätee E1:n
+  laattakerrokseen: se on samalla siirrolla −8 ja `renderOrder −10 + z`
+  eli kaikki sen tasot ovat läpinäkyvien jonon alussa vektorin alla, ja
+  kun laatta on häipynyt täyteen peittoon, se siirtyy opaakkien jonoon
+  eli piirtyy vielä aiemmin. Verkot ovat lisäksi jänteen painuman verran
+  pinnan sisäpuolella, kun vektori on täsmälleen säteellä R. Mitattu:
+  lähikuva 0,08, magentapikseleitä pintakerroksen kanssa 14 979 ja
+  kerros piilotettuna (29 verkkoa) 14 734 — suhde **1,017** (raja
+  0,97…1,03), eli kerros ei syö viivasta pikseliäkään. `js/pallolaatat.js`
+  ei siis tarvinnut muutosta.
+- **Kytkentä todennettu PELISSÄ** (ei vain kokeilusivulla): `?lauta=pallo`
+  tallenteella Ateenassa, puhelin dpr 3 — `ui.pallolauta.vektorit()`
+  palauttaa kahvan, kerroksen tila `nakyy`, taso 4, 16 solua, 24 449
+  janaa, 17 pyyntöä ja 114 kt, ja pallon näyttämöllä on 16 näkyvää
+  `userData.pallovektorit`-oliota. `pathsData` on 0, eli luokkien
+  lukemiseen käytetty nollamittainen polku poistui reittikerrokselta.
+  `?vektorit=0` antaa kahvaksi null ja 0 oliota.
+- **Pisteet voittavat viivan.** Koepiste (kultainen levy Sounionin
+  kärjessä) sai lähikuvassa 0 magentapikseliä levyn sisään (708 px
+  kultaa) — opaakit merkit piirtyvät ennen läpinäkyviä.
+- **Horisontti.** Koko pallon näkymässä magentaa kiekon ulkopuolella
+  26 / 31 978 px = **0,08 %** (raja 0,3 %).
+- **Kerroksen hinta.** Oma osuus piirtokutsuista Ateenassa **14**
+  (68 kerroksen kanssa, 54 ilman, 16 solua); kerroksen oma JS
+  `paivitaMs` pahimmillaan **4,4 ms** (mediaani 0,2 ms, 4× hidastus);
+  saapumisnäkymä maksoi **16 pyyntöä ja 111 kt** (raja 30 / 150 kt);
+  zoomissa 2,5 → 0,05 taso valittiin monotonisesti 2 → 3 → 4.
+  Panoroinnin p50-kehys 1 333 ms vs. 617 ms ilman kerrosta = **2,16 ×**
+  (raja 2,2 ×) — kontin ohjelmistorasteroijalla, ei laitteella; oikean
+  näytönohjaimen luku on yhä saatava omistajan puhelimelta
+  (suunnitelman luku 7).
+
+TYÖPÖYTÄ (1440 × 900 dpr 2, ei hidastusta) antaa saman viivan: lepo
+Ateena 2 / 4 px, lähikuva 2 / 3, liike 2 / 4, zoomin portaat 2 / 4, 2 / 4,
+2 / 3, 2 / 3; koepisteessä 0 magentaa, z-taistelu 1,013 (27 verkkoa
+piilotettu), horisonttivuoto 0,07 %, panorointi 1 583 ms vs 900 ms =
+1,76 ×. Koko pallon näkymässä työpöydän leveämpi ruutu ja dpr 2 antavat
+tarpeen 13,4 px/aste, jolloin tasoksi valikoituu 1 — koko maailma on
+YKSI solu ja kerroksen oma osuus piirtokutsuista on **1** (puhelimella
+49). Sama vakio siis ratkaisee puhelimen yleiskuvan.
+
+MITKÄ RAJAT EIVÄT TÄYTY (vartio puhelimella 18 OK / 2 FAIL, työpöydällä
+17 OK / 3 FAIL). Rajaa ei löysätty eikä `js/pallovektorit.js`:ää muutettu
+— kaikki kolme ovat vakiokysymyksiä, jotka suunnitelma jättää erälle V3:
+
+1. **Leveys koko pallon näkymässä** mediaani 3 px (raja 2) ja
+   puhelimella p90 7 px (raja 6; työpöydällä 6). Yleiskuvassa tiheät
+   rannikot ovat lähempänä toisiaan kuin viivan leveys, ja viivat
+   sulautuvat läiskiksi — täsmälleen luvun 4.4 riski *"Koko pallon
+   näkymässä tason 1 viivat sulautuvat läiskiksi (p90 6 px)"*.
+   Puhelimella tilanne on pahempi, koska tarve on 18,9 laitepikseliä
+   astetta kohti ja 0,03° × 18,9 = 0,567 ylittää `VEKTORIT_TERAVYYS_PX
+   0,5`:n niukasti: taso 2 (10°:n solut) valikoituu tason 1 sijaan.
+   Vastatoimi on suunnitelmassa sanatarkasti: *"Taso 0 (0,1°)
+   yleiskuvaan: TERAVYYS_PX 0,5 → yleiskuvassa 1,0 (kuten
+   LAATU_TERAVYYS_KAUKO); V3 säätää."*
+2. **Kerroksen oma osuus piirtokutsuista koko pallolla** puhelimella
+   49–50 (raja 4) — sama juuri kuin edellä: taso 2 näyttää 65 solua
+   yhden sijaan. Työpöydällä sama mitta on **1**, koska siellä taso 1
+   valikoituu ja koko maailma on yksi solu. Sama vakio korjaa
+   molemmat.
+3. **`paivitaMs` työpöydällä pahimmillaan 11,9 ms** (raja 5; mediaani
+   0,3 ms, puhelimella pahin 4,4 ms) ja **saapumisnäkymän pyynnöt
+   työpöydällä 39** (raja 30; puhelimella 16). Molemmat ovat sama
+   ilmiö: 1440 × 900:n näkymä kattaa Ateenassa 39 kymmenen asteen solua
+   puhelimen 16:n sijaan, ja yksi päivitys panee ne kaikki liikkeelle
+   kerralla. Luvun 5 rajat on mitattu puhelimella; kumpi korjataan —
+   solukoko, latauksen jaksotus vai rajan näkymäkohtaisuus — on V3:n ja
+   suunnitelman asia, ei kytkennän.
+
+### 10.4 v1649:n palaute — heiluri ja syvempi zoom (Opus 6.9.2026)
+
+Omistajan palaute v1649:stä (iPad), sanatarkasti:
+
+> "Kartta muuten pyörii nyt todella hyvin! Ainoastaan jos todella
+> nopeasti panoroi edestakaisin päästämättä sormea irti niin kartta
+> putoaa joiltain osin hetkeksi matalaan laatuun vaikka ko. osa on jo
+> ladattu ja ruudunpäivitys on hyvä."
+
+> "Voisiko syvemmin zoomin sallia jo nyt vaikka korkeusdataa ei ole
+> mutta rajat varmaan piirtyvät terävänä kun on vektori"
+
+#### 1. Heiluri: juurisyy mitattuna
+
+Uusi mittausvaihe `tools/savukkeet/mittaa-pallon-liike.mjs
+--vaihe=heiluri` laskee sormen kerran ruudun keskelle eikä nosta sitä:
+heiluri on sini ±20 % kotelon leveydestä, 3 Hz (6 edestakaista kahdessa
+sekunnissa). Lämmitys on sama heiluri kertaalleen läpi, sitten
+lataustauko sormi pohjassa, kunnes näkyvä alue on kokonaan scenessä.
+Mitat joka kehykseltä: näkyvän alueen peitto (`nakyviaScenessa /
+nakyvia`; alle 100 % = pohjan Z5 näkyy jossain kohtaa ruutua) ja
+`jumissa` = tietueita tilassa "ladataan", joita ei ole aloitettu eikä
+ole jonossa — laattoja, jotka kerros on unohtanut.
+
+KAKSI MITTAUSYMPÄRISTÖN RAJOITUSTA, jotka on kirjattava rehellisesti.
+(1) Heiluri on 3 Hz:n signaali, ja kontin ohjelmistorasteroija piirtää
+dpr 3:lla 1–2 kehystä SEKUNNISSA; suoraan kellosta ajettuna heiluri
+laskostuisi satunnaiseen vaiheeseen. Vaihe viedään siksi eteenpäin
+`min(HZ · dt, HEILURI_JAKSO_OSUUS)`:lla — nopealla laitteella tasan
+3 Hz, hitaalla enintään 0,3 jaksoa kehystä kohti, mikä on sama liike
+kerroksen päivitystä kohti kuin laitteella (3 Hz / 10 Hz = 0,3). Kesto
+mitataan jaksoina, ei sekunteina. Kellosta ajettavan version saa
+lipulla `--heilurijaksoosuus=99`. (2) Peittomitta vaatii, että laatan
+haku, dekoodaus ja tekstuurin vienti mahtuvat päivitysten väliin;
+sekunnin mittaisella kehyksellä koko putken pitäisi mahtua yhteen
+kehykseen, joten `RAJAT.heiluriKehysMs` (400 ms) antaa peittoriville
+OHI:n, kun kehysaika ylittää sen. `heilurin jumit` ei riipu kehysajasta
+eikä sitä ohiteta koskaan.
+
+MITATTU puhelinnäkymässä (390 × 844, dpr 3, CPU 4×) ENNEN korjausta,
+seitsemän ajoa: peitto **51,4 / 68,6 / 78,6 / 82,9 / 85,7 / 88,6 /
+92,9 %** — jokainen alle sadan — ja `jumissa` enimmillään 2. Suorin
+näyttö on lataustauon jälkeinen tila: näkyviä 28, scenessä 28, mutta
+tietueita 35 ja valmiita 31, eli **neljä näkyvän alueen laattaa oli
+muistissa tilassa "ladataan" ilman että lataus oli koskaan alkanut**.
+Puretuja laattoja 0 — LRU ei siis ollut syy, eikä sukupolvi-logiikka
+(kenttä `sukupolvi` kirjoitetaan mutta sitä ei lueta missään
+päätöksessä). Kontin kehysaika vaihtelee 0,8–2,0 s:n välillä ajosta
+toiseen, joten yksittäisen ajon peittoprosentti ei ole toistettava —
+suunta on.
+
+Juurisyy on latausjonon kokoamisehto. Jono koottiin joka päivityksellä
+PELKISTÄ näkyvistä laatoista, ja näkyvä alue laskettiin vain nykyisestä
+pov:sta. Heilurin ääripäässä reunan laatta on näkyvissä yhden
+päivityksen ajan (`LAATTAKERROS_PAIVITYSVALI_LIIKE_MS` 100 ms), ehtii
+jonoon muttei latauspaikkaan (`LAATTAKERROS_RINNAKKAIN` 6) — ja
+seuraavalla päivityksellä se putoaa jonosta kokonaan. Mittari näytti
+sen suoraan: levossa 28 näkyvästä laatasta 28 scenessä, heilurin
+alkaessa näkyviä 35 ja scenessä 31, ja ne neljä olivat olleet
+tietueina muistissa koko ajan tilassa "ladataan" ilman että lataus oli
+koskaan alkanut.
+
+Korjaus on kolme osaa (js/pallolaatat.js):
+
+1. **Ennakkoalue liikesuuntaan.** Alue laajennetaan sillä matkalla,
+   jonka kamera kulki edellisestä päivityksestä
+   (`LAATTAKERROS_LIIKEVARA_KERROIN` 2), ja lisäksi sillä laatikolla,
+   jonka kamera on PYYHKINYT viimeisen `LAATTAKERROS_PITO_MS`:n (2 s)
+   aikana — käännöksen kohdalla hetkellinen matka on nolla, vaikka
+   ruutu oli juuri 20 % leveydestä sivummalla. Ennakon laatat ladataan
+   ja pidetään, mutta ne EIVÄT osallistu tason valintaan: taso
+   valitaan yhä pelkistä näkyvistä laatoista
+   (`LAATTAKERROS_LAATTAKATTO_NAKYVA` 48), joten terävyys ei putoa
+   siitä, että jono kasvaa. Ennakon oma katto on
+   `LAATTAKERROS_LAATTAKATTO_ENNAKKO` 96.
+2. **Pito.** Laatta, joka on ollut näkyvissä tai ennakossa viimeisen
+   2 s:n aikana, pysyy jonossa (näkyvät ladataan silti ensin), sen
+   hakua ei katkaista eikä LRU:n MÄÄRÄkatto pura sitä. Tavukatto
+   (`LAATTAKERROS_LAATTAKATTO_TAVUT` 96 Mt) purkaa yhä myös pidettyjä —
+   muisti on kova raja. Aloittamaton tietue, jota ei enää katsota eikä
+   pidetä, poistetaan kokonaan: se on pelkkää kirjanpitoa.
+3. **Valmis laatta sceneen, jos se on yhä alueella.** Ennen tekstuurin
+   vienti lisäsi laatan sceneen vain, jos laatta sattui olemaan
+   näkyvissä juuri sillä kehyksellä; nyt riittää, että se on näkyvä tai
+   pidetty.
+
+JÄLKEEN samalla mittauksella: `jumissa` **0** joka ajossa (myös
+lataustauolla), ja peitto **100 %** niissä ajoissa, joissa kontin
+kehysaika pysyi alle sekunnin; hitaimmissa ajoissa jäljelle jää 1–3
+laattaa, jotka ovat oikeasti latauksessa (`pyyntoja` kasvaa) — se on
+kehysajan eikä logiikan mitta. Lataustauon jälkeinen tila on nyt
+näkyviä 35, scenessä 35, valmiita 35: heilurin koko alue on ladattu ja
+pidetty. Muste 2 px = levon muste.
+
+`--vartio` sai kolme uutta riviä: *heilurin peitto* (raja ≥ 100 %,
+OHI hitaassa ympäristössä), *heilurin jumit* (raja 0) ja *heilurin
+muste* (raja ≤ 2 px). Heiluri mitataan ilman CPU-hidastusta — muut
+vaiheet kuten ennen.
+
+#### 2. Lähin näkyvä leveys on nyt VAKIO 60 lautayksikköä
+
+Terävyys ei enää tule laattatasosta vaan vektoriviivoista (v1649,
+js/pallovektorit.js): rantaviiva ja rajat piirretään ruudun pikseliksi
+millä tahansa korkeudella. Laatta antaa vain maaston värin, joka saa
+olla pehmeä. Siksi vanha raja — laattatarkkuus ja
+`PALLON_SALLITTU_VENYTYS` 2 — on väärä mitta, ja se antoi lisäksi eri
+laitteille eri syvyyden (puhelin 103–107 yksikköä, iso ruutu katto 120).
+
+Uusi raja on yksi luku kaikille: `PALLOLAUDAN_LAHIN_LEVEYS` =
+`PALLOLAUDAN_SIIRTOLEVEYS` / 2 = **60 lautayksikköä ≈ 1,8°**. Yksi
+nipistys entisestä pohjasta vie siis vielä yhden portaan syvemmälle.
+`lahinLeveys` palauttaa vakion, `lahinKorkeus` muuttaa sen korkeudeksi
+ruudun kuvasuhteella, ja `korkeusMin` (OrbitControlsin `minDistance`,
+`kameranKohde`) lukee sen kuten ennen.
+
+Venytys uudessa rajassa, mitattu pyramidin syvimmästä tasosta (z8 =
+480 px/aste, `PYRAMIDIN_SYVIN_PX_ASTE`; funktio `laattojenVenytys`):
+
+| Näkymä | laitepikseliä | px/aste 1,8°:lla | venytys |
+| --- | --- | --- | --- |
+| puhelin 390 css × dpr 3 | 1 170 | 650 | **1,4×** |
+| iPad 834 × dpr 2 | 1 668 | 927 | **1,9×** |
+| työpöytä 1 440 × dpr 2 | 2 880 | 1 600 | **3,3×** |
+
+Ateenan lähikuvassa (mitattu selaimessa) laattakerros valitsee tason
+**8** — pyramidin syvimmän, eikä se yritä hakea olematonta z9:ää, koska
+`lepokerroksenTaso` palauttaa syvimmän saatavilla olevan — ja
+vektoritaso pysyy **lod 4**:ssä (`vektoritaso` palauttaa syvimmän, kun
+mikään ei riitä). Puhelimella näkyviä laattoja 24 (kaikki scenessä,
+40 Mt), työpöydällä 12 (24 Mt).
+
+MIKÄ EI MUUTU: `PALLOLAUDAN_SIIRTOLEVEYS` (120) on yhä siirtonäkymän
+katto (`siirtoZoomiKerroin`), joten siirtokoreografia ja ennakkozoomi
+pysyvät täsmälleen ennallaan; `PALLOLAUDAN_SAAPUMISLEVEYS` 240 sama;
+tasokartan oma lähin porras (js/kartta.js `ZOOMI_LAHIN` 88,
+`ZOOMI_LAHIN_KAPEA` 58, `SIIRTONAKYMAN_LAHIN_KERROIN` 3,5) on eri
+vakio eikä muutu. Merkit (CSS2D-nimet, pisteet levyinä), napakannet ja
+linssikalvot ovat ruutuankkuroituja eivätkä muutu syvyyden mukana;
+poltetut nostonimet sen sijaan kasvavat maaston mukana, eli
+työpöydällä 3,3× — se on syvemmän zoomin näkyvä hinta isolla ruudulla.
+
+Mittarin `--sarjapaikkaus` korvaa SERVATUN `laatat.json`:in versiot
+pyramidin versioilla. Sitä tarvitaan, kun ämpärin kaksi sarjaa ovat
+hetkellisesti eri versiota (ks. kohta 3) eikä kerros muuten piirrä
+lainkaan. Lippu on MITTAUSTELINE, EI TODISTE JULKAISTUSTA TILASTA:
+ilman sitä mittari ajaa sen, mitä ämpärissä oikeasti on, ja vartio
+kertoo, jos kerros ei piirrä (kaikki luvun 5 rivit OHI syineen).
+
+#### 3. Pohja vapautetaan, jos laattakerros ei piirrä
+
+Omistajan kuvakaappaus v1650:stä (iPad, Ateenan lähikuva) näytti
+selvästi sumean pohjan, laattojen välisiä sävyeroja ruutuina eikä
+yhtään poltettua nimeä — laattakerroksen sammumisen tuntomerkit.
+Kerros sammuu kokonaan, jos pyramidin ja pallon oman sarjan versiot
+eroavat (`lepokerroksenKerrokset`) tai jos pyramidin luetteloa ei saada.
+Sarjat poltetaan eri ajoissa, joten tämä on ihan tavallinen välitila
+(mitattu 6.9.2026: pyramidi 2026-09-07a, pallon sarja 2026-09-03a).
+Pohja jäi silloin naulattuna tasoon `POHJAN_TASO_MAX` (5), eli koko
+kartta oli z5:tä venytettynä — ja syvempi zoom olisi tehnyt siitä vielä
+kaksin verroin sumeamman.
+
+Nyt `kytkeLaatunosto` toteaa tilan piirtokoukussa
+(`POHJAN_VAPAUTUS_SYYT`), purkaa kerroksen ja palauttaa pohjalle sen
+OMAN syvimmän tason
+(`laatat.json` `tasot.max` = 8) ja v1645:n laatutilat. Kirjaston asetin
+on `triggerUpdate: false` (`globeTileEngineMaxLevel` → `tileEngine.maxLevel`),
+joten moottoria ei rakenneta uudestaan eikä `laatuPov`-kääre irtoa.
+Mitattu: moottorin taso 8, kuva terävä. Vapautus on kertakäyttöinen;
+ohimenevät syyt ("pyramidin luettelo haussa", "kirjaston luokat
+puuttuvat") eivät kelpaa siihen. Kerroksen KAHVA jää paikalleen
+(`lepokerrokset`), vaikka kerros puretaan: savukkeet lukevat siitä yhä
+kerroksen omat pyramidipyynnöt (savuke-pallolauta vartio 2 vähentää ne
+tasokartan pyynnöistä) ja mittarien tilan `purettu`.
+
+
+## 11. Vanha kartta pois käytöstä — väliaikaisesti (7.9.2026)
+
+**Omistaja 7.9.2026 aamu, sanatarkasti:** *"Voisiko vanhan kartan ottaa
+pelistä ainakin väliaikaisesti kokonaan pois, eli että se ei lataisi sitä
+millään lailla, eikä se olisi myöskään kytkettävissä päälle?"*
+
+Tämä on luvun 10 ("Kaikki pallolle") viimeinen askel — mutta
+**väliaikaisena ja ilman poistoa**: koodi jää repoon, ja paluu on yhden
+vakion kääntäminen.
+
+### 11.1 Yksi vakio, ei hajautettuja ehtoja
+
+`js/ui-apurit.js`:
+
+```js
+export const VANHA_KARTTA_KAYTOSSA = false;
+```
+
+Kaikki muu lukee tätä. Kun vakio kääntyy todeksi, vanha kartta palaa
+sellaisena kuin se v1664:ssä oli — yksikään portti ei ole poistanut
+koodia, vain sulkenut sen.
+
+### 11.2 Mitä vakio sulkee
+
+| Portti | Paikka | Vaikutus |
+| --- | --- | --- |
+| Kelpaavat laudat | `js/ui-apurit.js` `LAUDAT` | `?lauta=kartta` ja laitteelle jäänyt muistiarvo `kartta` ohitetaan kuten tuntematon arvo → `lautaValinta()` on aina `pallo` |
+| Latausportti | `js/kartta-lataus.js` `lataaTasokartta` | Palauttaa hylätyn lupauksen: `js/kartta.js`, `maasto-tekstit`, `maasto-tekstit-malli` ja `maailmankartta-varjostus` jäävät hakematta kaikilla poluilla |
+| Olion vaihto | `js/ui.js` `varmistaKartta` | Palaa heti; `ui.kartta` jää nukkuvaksi sijaiseksi (`NukkuvaKartta`), eikä konsoliin tule varoitusta joka kutsusta |
+| Mount | `js/ui.js` `mount` | `kartta.lepotila = true` kaikilla poluilla — myös kun etusivun pallo on kytketty pois (`?etusivupallo=0`); ylälohkoon jää silloin pergamentti ja julisteotsikko |
+| Linssikartta | `js/ui.js` `avaaLinssikartta` | Palauttaa `false`. Haara oli jo kuollut koodia (kaikilla käytössä olevilla linsseillä on `pallolle`), mutta portti pitää sen kuolleena myös uusille linsseille |
+| Lähtövalinta | `js/ui.js` `aloitaKartalta` / `aloitaTasokartalta` | Valinta avautuu aina pallolla; tasokartan haaraan ei mennä |
+| Turvatila | `js/ui.js` `pallolautaHalutaan` | Kaksi kaatumista → pallo **kevennettynä**, ei tasokarttaa (11.3) |
+| Varapolku | `js/ui.js` `pallolautaVarapolku` | Kaatunut pallo yritetään kevennettynä; toisesta kaatumisesta selkeä virheilmoitus (11.3) |
+| Kytkimet | `index.html`, `js/main.js` | Päävalikon Pelilauta-osio ja ratasvalikon `pallolauta`-vipu piilotetaan; rivejä ei rakenneta |
+| Esilataus | `sw.js` SHELL | Neljä tasokartan moduulia pois esilatauksesta (11.4) |
+
+### 11.3 Turvatila ja varapolku ilman vanhaa karttaa
+
+Kaatumislaskuri (`matkakirja-pallo-kaatumiset`, raja 2, unohdus 20 s) on
+ennallaan; **seuraus** muuttui. Ennen turvatila pudotti pelin
+tasokartalle. Nyt:
+
+1. **Turvatila** (kaksi kaatumista tällä laitteella) → `asetaPalloKevennys(true)`
+   ja rivi *"Karttapallo kaatui aiemmin — avataan kevennettynä."*
+2. **Kevennys** on istunnon lippu, ei laitteen asetus: se ei kirjoita
+   mitään `localStorageen`. Ainoa lukija on `laattakerrosPaalla`, joka
+   palauttaa kevennyksessä `false` **ennen URL:ää ja muistia** — pallon
+   raskain kerros (`js/pallolaatat.js`) jää pois, muu pallo ennallaan.
+   Sama perääntymistie kuin `?laattakerros=0`, mutta automaattisesti.
+3. **Varapolku** (`pallolautaVarapolku`) kaatuu kahdessa askeleessa:
+   ensimmäinen kaatuminen istunnossa → kevennys päälle ja rivi
+   *"Karttapallo kaatui — avataan kevennettynä."*; kevennettynäkin
+   kaatunut → `pallolautaEpaonnistui` ja virherivi *"Karttapalloa ei
+   saatu auki tällä laitteella. Kokeile ladata sivu uudelleen."*
+   Laitteen valintaa ei kirjoiteta kummassakaan askeleessa.
+
+Ratasvalikon *pallon turvatila* -nappi nollaa laskurin kuten ennen ja
+lataa sivun, jolloin pallo saa uuden yrityksen täydellä laadulla.
+
+### 11.4 Palvelutyöntekijä: neljä moduulia pois esilatauksesta
+
+Laiskoitus (luku 5b) siirsi latauksen ajankohtaa, mutta
+palvelutyöntekijä haki moduulit silti SHELLissä joka asennuksessa.
+Nyt SHELListä poistuivat `js/kartta.js`, `js/packs/maasto-tekstit.js`,
+`js/packs/maasto-tekstit-malli.js` ja `js/packs/maailmankartta-varjostus.js`;
+portti `js/kartta-lataus.js` jää, koska `js/ui.js` tuo sen staattisesti.
+Poikkeus on kirjattu `tests/sw.test.mjs`:n `VANHA_KARTTA_POIS`-listaan,
+joka myös vartioi, ettei moduuli ole molemmilla listoilla.
+
+**Pyramidi ei ole tasokartan omaisuutta.** Pallon laattakerros lukee
+saman pyramidin luetteloa ja rantatasoa (`js/pallolaatat.js`), joten
+`js/laattapyramidi.js`, pyramidin aineisto ja palvelutyöntekijän
+laattakori jäävät ennalleen. Palvelutyöntekijän oma laattaesilataus
+koskee vain pallon laattoja (`/julisteet/pallo/laatat/`).
+
+### 11.5 Linssit — kaikki toimivat pallolla
+
+Käytössä olevista linsseistä jokaisella on `pallolle`-toteutus
+(`ihmisen-matka`, `keksinnot`, `radio`, `topografia`, `vertailu`,
+`maatiedot`, `vesistot`), joten yksikään ei tarvitse linssikarttaa.
+Laukun `pallo`-linssi oli jo suodatettu pois pallolaudalla
+(`nakyvatLinssit`). Uusi linssi ilman `pallolle`-toteutusta ei enää
+ilmesty tasokartalle vaan jää piirtämättä — se on tarkoitus: linssi
+kirjoitetaan pallolle.
+
+### 11.6 Savukkeet
+
+`?lauta=kartta`-osoitetta ajavat savukkeet on siirretty **dokumentoituun
+ohitukseen**: ne tulostavat yhden `OHITUS`-rivin ja päättyvät koodilla 0.
+Perustelu, lista ja paluuohje: `tools/savukkeet/vanha-kartta-ohitus.mjs`
+ja `tools/savukkeet/README.md`. Poikkeukset (uudet vartiot, `--lauta`-vipu
+pallolle) on lueteltu README:ssä.
+
+### 10.5 v1664:n vika — kartta räpsii ja lennähtää (Opus 7.9.2026)
+
+Omistajan vikailmoitus 7.9.2026 aamu, sanatarkasti:
+
+> "Kartta räpsii panoroitaessa ja varsinkin zoomatessa äkkiä sekoaa ja
+> lennähtää ihan eri paikkaan. Suht samanlainen käytös selaimella ja
+> iOS-apin kautta."
+
+> "Kartta saattaa lennähtää myös aivan eri maahan, jos klikkaan jotain
+> karttanostoa. Äsken klikkasin Japanin kohdalla jotain kohdetta ja se
+> lensikin Etelä-Amerikkaan."
+
+Kaksi erillistä juurisyytä, molemmat mitattuja. Mittausteline:
+Playwright + `/opt/pw-browsers/chromium`, puhelinkoko 390 × 844,
+tallenne Fogg Ateenassa, ämpäri Noden fetchillä, palvelutyöntekijä
+estetty. Kontin ohjelmistorasteroija ei kelpaa kehysaikoihin, mutta
+kaikki alla olevat luvut ovat geometriaa ja JS-tilaa, eivät kehysaikoja.
+
+#### 1. Räpsintä: pinnan lukema oli kahdesta eri hetkestä
+
+`pinnanPiste` (js/pallolaatat.js, tuli v1653:ssa kirjaston
+`toGlobeCoords`in tilalle) rakensi säteen **suunnan** kameran
+`matrixWorld`ista (`unproject`) mutta **origon** kameran `position`ista.
+Ne eivät ole sormivedon aikana samasta hetkestä: `pointOfView` siirtää
+kameran paikan heti, kun taas suunnan (lookAt pallon keskipisteeseen)
+päivittää OrbitControls vasta seuraavassa piirrossa. Jokainen
+pointermove, joka osuu kahden piirron väliin, luki siis tuoreen paikan
+ja vanhan suunnan — iPhonella joka toinen (120 Hz syöte, 60 Hz piirto).
+
+Mitattu ennen korjausta: kun kamera oli juuri siirretty 10° itään,
+ruudun keskipiste luki **13,558°** eikä 10°. Kahdeksan yhtä suurta 8
+px:n sormiaskelta siirsivät karttaa 0,1941° / 0,1261° / 0,1499° /
+0,1415° / 0,1444° / 0,1433° / 0,1437° / 0,1435° — **sahaus 1,54×**
+(suurin / pienin). Se on omistajan "räpsintä": kartta ei kulje sormen
+tahdissa vaan nykii joka toisella syötteellä. Kirjaston vanha
+`toGlobeCoords` ei sahannut, koska three.js:n `Raycaster.setFromCamera`
+ottaa myös origon matriisista — lukema oli yhden kehyksen vanha mutta
+itsensä kanssa yhtenäinen. `camera.updateMatrixWorld()` EI korjaa tätä
+(kokeiltu, sama 13,558°): vanhentunut osa on kameran kvaternio, jonka
+OrbitControls asettaa vasta `update()`issa.
+
+Korjaus: säde rakennetaan pelkästä kameran paikasta ja linssistä samalla
+kaavalla kuin laattakerroksen näytteet (`laattakerroksenOsuma`). Se on
+aina itsensä kanssa yhtenäinen, koska Globe.gl pakottaa OrbitControlsin
+tähtäyspisteen pallon keskipisteeseen (`i.target.setScalar(0)` sen omassa
+`change`-kuuntelijassa) eikä kameralla ole kallistusta. Mitattu
+korjauksen jälkeen: sama 10°:n siirto luetaan **10,000°**, ja samat
+kahdeksan askelta ovat 0,1941…0,1947° — **sahaus 1,003×**.
+
+Sama korjaus koskee vektorikerrosta, joka lukee pinnan samasta
+funktiosta; se luki tähän asti piirtokoukusta, jossa matriisit ovat
+tuoreet, joten sen kuva ei muutu.
+
+#### 2. Lennähdys: pallon takapuoli otti napautuksia
+
+`getScreenCoords` projisoi myös pallon takapuolen pisteet ruudulle, ja
+perspektiivissä sormen säde leikkaa pallon kahdesti: napautettu piste
+edessä ja sen vastapiste takana projisoituvat samaan ruutupikseliin.
+Napautuksen osumatesti (`lahin`, js/pallolauta/lauta.js) mittasi pelkkää
+ruutuetäisyyttä 44 px:n säteellä, joten vastapisteen seutu voitti
+kilpailun. `lahinLinssimerkki` suodatti jo `edessa`llä, mutta
+`lahinKohde` (nopanheiton kohteet → `doMove`) ja `lahinMerkki`
+(kaupungit ja nostot) eivät.
+
+Mitattu: kamera Japanin yllä (36° N, 140° I, korkeus 0,6), napautus
+ruudun keskellä. Lähimmät kaupungit ruutupikseleinä:
+
+| Kaupunki | Etäisyys napautuksesta | Pallon puoli |
+| --- | --- | --- |
+| Tokio | 9,3 px | edessä |
+| **Porto Alegre** | **64,1 px** | **takana** |
+| **Montevideo** | **73,7 px** | **takana** |
+| **Rio de Janeiro** | **75,7 px** | **takana** |
+| **Buenos Aires** | **83,9 px** | **takana** |
+| Kioto | 125,8 px | edessä |
+
+Japanin rannikolla noin 50 px sivussa Tokiosta napautus osui siis
+Etelä-Amerikkaan, ja `doMove` vei nappulan sinne — täsmälleen omistajan
+kuvaama oire. Korjaus: osumatesti hyväksyy vain kameran puolella olevat
+merkit (`pisteEdessa`, puhdas kaava `(kamera − piste) · piste > 0`), ja
+suodatus on `lahin`issa itsessään, joten se koskee kaupunkeja, nostoja
+ja kohteita yhtä lailla.
+
+#### 3. Vartio: kartta ei hyppää ilman pelaajan elettä
+
+Sormivedon siirto on kahden pinnanlukeman **rajaton** erotus. Vaikka
+lukija on nyt yhtenäinen, yksikin virheellinen lukema (napaklampin
+±89,5° jälkeen erotus ei enää suppene, katkennut ele, NaN) veisi kartan
+toiselle mantereelle — ja jäisi vielä liu'un nopeudeksi, jolloin
+lennähdys jatkuisi sormen irrottua. Kaksi puhdasta, testattua kattoa
+(js/pallo.js):
+
+- `vedonSiirto` — yksi pointermove ei käännä palloa yli yhden näkyvän
+  ruudullisen (`VEDON_KATTO_RUUTUA` 1). Sen yli menevä lukema hylätään
+  kokonaan; kartta jää paikalleen ja seuraava lukema on taas kelvollinen.
+- `rajaaVauhti` — liuku ei vie näkyvää ruutua nopeammin kuin
+  `VAUHDIN_KATTO_MS`:ssä (250 ms), suunta säilyttäen.
+
+Katot eivät kosketa tavallista vetoa: mitattu 8 px:n sormiaskel
+korkeudella 0,35 siirtää karttaa 0,194°, ja katto on 18,7° — sadasosa.
+Myöskään nopein aito heitto (koko ruudun poikki yhdellä pointermovella,
+kun selain pudottaa väliltä tapahtumia) ei osu kattoon: pystyruudulla se
+on noin 0,5 kaistaa.
+
+#### 4. Mitä tutkittiin ja mikä osoittautui syyttömäksi
+
+- **Zoom (nipistys ja ctrl+rulla).** Mitattu kehyksittäin lat, lng,
+  korkeus, `controls.target`in etäisyys origosta ja kameran poikkeama
+  keskiakselilta, nipistys sekä ruudun keskellä että kulmassa (85 % /
+  15 %) korkeuksilla 0,35 ja 0,09: `target` pysyi tasan nollassa,
+  poikkeama tasan nollassa, ei yhtään kameran hyppyä, laattataso vaihtui
+  monotonisesti 6 → 7. Globe.gl:n `zoomToCursor` on siis vaaraton: sen
+  siirtämä tähtäyspiste palautetaan origoon joka `change`issä. Ensimmäinen
+  17-kertainen korkeushyppy oli mittaustelineen oma virhe (kaksi
+  kosketuspistettä meni ristiin, jolloin niiden etäisyys kävi nollassa).
+- **Laattakerroksen ennakkoalue ja pito (v1657).** Panoroinnissa ja
+  heilurissa scenen laattamäärä ei sahannut kertaakaan (suunnanvaihdot 0,
+  purkuja 0, `jumissa` 0), ja zoomin tasosarja on sama v1652:lla kuin
+  v1664:llä. Ennakkoalue ei siis räpsi.
+- **PALLOLAUDAN_LAHIN_LEVEYS 60 (v1657).** `minDistance` 106,94,
+  `maxDistance` 350, `korkeusMin` 0,0694 — ei NaN:ia, ei ristiriitaa
+  OrbitControlsin kanssa. Syvempi zoom kuitenkin PAHENTAA kohtaa 2:
+  mitä lähempänä kamera on, sitä tiukemmalle vastapisteen seutu
+  puristuu ruudun keskelle.
+- **Horisontin herkkyys.** Ennen korjausta mitattu 0,97°/px oli itse
+  kohdan 1 virhe, ei geometriaa: puhelimen pystyruudulla pallo täyttää
+  ruudun koko pallolaudan korkeusalueella (0,1…2,5), joten horisonttia ei
+  edes näy. Korjauksen jälkeen ruudun reunimmainen pikseli on 1,0–1,6×
+  keskipikseliä herkempi.
+
+## 12. Merkit lukittu kameraan, ja missä laudan pisteet oikeasti ovat (7.9.2026)
+
+Omistajan vikailmoitus 7.9.2026 (iPad, sanatarkasti):
+
+> "Helsinki näyttää, että se on aivan liian kaukana rannikosta. Ja nyt
+> kun kartta on pallona, niin kohdepisteet ja pelaajan nappula ei pysy
+> paikallaan, kun karttaa vierittää, vaan ne heiluvat vähän eri suuntiin,
+> riippuen mihin päin vierittää. Pystyisikö ne lukitsemaan? Paikalleen."
+
+Kaksi eri vikaa, eri juurisyillä. Toinen on korjattu tässä, toinen on
+mitattu ja kirjattu — sen korjaus on laudan aineistoa eikä koodia.
+
+### 12.1 Heiluminen: merkki oli pinnan YLÄPUOLELLA (korjattu)
+
+`MERKIN_KORKEUS` (js/pallolauta/merkit.js) oli 0,004 × säde eli 0,4
+yksikköä pinnasta. Perspektiivissä kohotettu piste ei projisoidu samaan
+ruutupikseliin kuin sen alla oleva pinnan piste: se työntyy ruudun
+keskipisteestä ULOSPÄIN kertoimella, joka on likimain
+`1 + h / (R · korkeus)`. Keskellä ero on nolla, laidalla suurin — ja kun
+karttaa panoroi, merkki liukuu laattojen päällä sitä mukaa kuin sen
+paikka ruudulla muuttuu. Suunta vaihtuu vierityssuunnan mukana, koska
+siirtymä osoittaa aina ruudun keskipisteestä poispäin.
+
+Laatat (js/pallolaatat.js), rantaviiva (js/pallovektorit.js
+`VEKTORIT_KORKEUS = 0`) ja pallon oma pinta ovat korkeudella 0 — ne eivät
+liikkuneet. Liikkui vain merkki.
+
+Mitattu Chromiumilla 7.9.2026 (390 × 844 dpr 2, Ateena, korkeus 0,08,
+12 × 0,02° panorointia itään). CSS2D-elementin ruutupaikka on tasan
+`getScreenCoords(lat, lng, 0,004)`, ja sen ero pinnan pisteestä:
+
+| merkin etäisyys ruudun keskipisteestä | ero pinnan pisteeseen |
+| --- | --- |
+| 11 px | 0,16 px |
+| 22 px | 0,49 px |
+| 33 px | 1,14 px |
+| 44 px | 1,95 px |
+
+Kerroin on **4,4 % säteittäisestä etäisyydestä**: puhelimen laidalla
+(195 px) 8,6 px ja iPadin laidalla (~400 px) 18 px.
+
+**Korjaus: `MERKIN_KORKEUS = 0`.** Nostatus ei osta CSS2D-kerrokselle
+mitään — merkit ovat DOM-elementtejä kankaan päällä, eivät
+kolmiulotteisia olioita, eikä niillä ole syvyystestiä, jonka edelle
+korkeus voisi nostaa. Nolla on ainoa korkeus, jolla merkki osuu
+täsmälleen siihen pinnan pisteeseen, jonka päällä kartta on. Sama vakio
+kulkee kolmeen paikkaan, joissa merkin ruutupaikka lasketaan: kortin
+ankkuri (js/pallolauta/lauta.js), liikkuva nappula ja lentokone
+(js/pallolauta/siirto.js `ruutu`) ja lentokaaren pohja
+(`lentokaarenKohta`). Lentokaaren huippu on 0,5, joten 0,004:n pudotus
+pohjasta ei näy.
+
+Vartiot: `tests/pallolauta.test.mjs` ("merkit ovat pinnalla") vaatii
+vakion nollaksi ja kieltää kovakoodatut kopiot;
+`tools/savukkeet/savuke-pallo-merkit-lukossa.mjs` vetää palloa 200 px
+itään ja länteen lähikuvassa ja vaatii, että JOKAISEN CSS2D-merkin
+ruutupaikka on `getScreenCoords(lat, lng, 0)` ±1 px joka kehyksessä —
+erikseen myös nopanheiton kohteille oikeasta heitosta.
+
+**Jäljelle jää kaupunkipiste.** Kaupunkien pisteet ovat `pointsData`
+korkeudella 0,003, ja ne ovat oikeita meshejä: nostatus on niiden
+piirtojärjestys suhteessa reittiviivoihin (varjo 0,0018, viiva 0,002,
+askelhelmi 0,0025). Niiden oma säteittäinen siirtymä on 3,3 % eli
+puhelimen laidalla ~6 px — nappulan (32 px) alle jäävä piste (12 px)
+pysyy yhä peitossa, mutta koko pino olisi laskettava pinnalle yhdessä,
+jotta myös piste lukittuisi. Se on oma eränsä, ei tämän.
+
+### 12.2 Helsinki sisämaassa: laudan piste, ei kalibrointi (mitattu; korjaus 12.4)
+
+Uusi työkalu `tools/tarkista-laudan-pisteet.mjs` laskee jokaiselle laudan
+kaupungille pallosijainnin laudan omalla projektiolla
+(js/fokusmitat.js `laudaltaAsteiksi`) ja vertaa sitä Wikidatan
+koordinaattiin (kaupungin `wiki`-kenttä → fi-Wikipedian artikkeli →
+`wdt:P625`). Vastaus on kilometrejä isoympyrää pitkin. Välimuisti on
+pakollinen, ja työkalu toimii ilman verkkoa, kun välimuisti on täysi
+(`--offline`).
+
+**Pallon lauta on aina maailmankartta** (js/pallo.js `PALLO_LAUTA`) —
+Suomen laudalla ei ole pallolla osaa eikä arpaa, eikä sillä ole riviä
+`FOKUS_LAUTAPROJEKTIOT`-taulussa. Vikailmoituksen Helsinki on siis
+maailmankartan Helsinki.
+
+**KALIBROINTI ON OIKEIN.** 228 mitatun kaupungin jäännösten mediaani on
++0,008° leveyttä ja −0,002° pituutta — nolla kummassakin. Millerin
+lieriö, laudan leveys 12000 = 360°, nollakohta −175° ja pohjoisreuna 76°
+ovat siis kohdallaan; jos kalibrointi olisi vinossa, jäännöksillä olisi
+yhteinen suunta. Niillä ei ole.
+
+**VIRHE ON KAUPUNKIKOHTAINEN JA PERITTY.** Maailmankartan kaupungit
+koottiin `tools/vanha-maailma.mjs`:llä: Aasia, Amerikat ja Oseania saivat
+todelliset lon/lat-koordinaatit (`tools/mapdata/*.json`), mutta Eurooppa,
+Afrikka ja Lähi-itä KÄÄNNETTIIN takaisin oman lautansa käsin piirretystä
+x/y:stä (`KAANTEISET`). Käännös itsessään on tarkka; käsin sommiteltu
+lautapiste ei. Euroopan laudalla Helsinki on `x 688, y 303`, ja laudan
+oma kaava lukee siitä 60,479° N — todellinen on 60,171° N. Ero on
+**34,7 km pohjoiseen**, ja juuri sen verran nappula seisoo Suomenlahden
+rantaviivan sisäpuolella omistajan kuvassa.
+
+Mittaus koko laudalle (raja 15 km):
+
+| luku | arvo |
+| --- | --- |
+| mitattu (kaupungilla on Wikidatan koordinaatti) | 228 / 261 |
+| ilman koordinaattia (ohjaussivu tai sivulla ei ole P625:tä) | 33 |
+| mediaani | 17,3 km |
+| yläneljännes | 75,2 km |
+| yli 15 km | 118 |
+| suurin | 823 km (`mosambik`) |
+
+Suurimmat luvut EIVÄT kaikki ole virheitä: osa laudan pisteistä on
+alueita, joiden Wikidata-koordinaatti on alueen keskipiste eikä se kohta,
+jota lauta tarkoittaa (`borneo` 416 km, `kamtsatka` 452 km, `ahaggar`
+281 km, `sahara`, `namib`, `nullarbor`…). Työkalu on siksi LIPPU
+IHMISELLE, ei tuomio — sama linja kuin `tools/tarkista-karttapisteet.mjs`.
+Selviä kaupunkivirheitä on silti paljon: `kanton` 473 km, `nairobi`
+419 km, `lagos` 412 km, `marrakech` 283 km, `varanasi` 258 km, `riika`
+236 km, `kioto` 188 km, `tallinna` 185 km, `kapkaupunki` 119 km,
+`budapest` 79 km, `helsinki` 34,7 km.
+
+**EI KORJATTU TÄSSÄ, JA SYY ON KIRJATTAVA.** Korjaus koskisi noin sataa
+kaupunkia ja on laudan AINEISTOA, ei koodia. Kolme estettä:
+
+1. Kaupungin x/y ei ole vain piirroskohta: se on reittien pituus
+   (`steps`), välipisteet (`via`), merireitin ranta
+   (`tools/satamat-rannalle.mjs`) ja vähimmäisväli (`minCityDistance`
+   60). Sadan kaupungin siirto on pelin geometrian muutos, joka ajetaan
+   koko ketjun läpi ja katsotaan silmällä.
+2. Aluepisteitä (Borneo, Kamtšatka, Sahara…) ei saa siirtää Wikidatan
+   keskipisteeseen. Kone ei erota niitä luotettavasti kaupungeista
+   (kokeiltu `P31/P279* → Q486972`: Marseille ja Tromssa jäivät
+   luokittelematta), joten lista on käytävä läpi ihmisen silmällä.
+3. 33 kaupungin `wiki`-kenttä on ohjaussivu tai sivu ilman
+   koordinaattia — ne on korjattava ensin, tai ne jäävät mittauksen
+   ulkopuolelle.
+
+Vaihtoehto, joka EI koske pelin geometriaan: antaa kaupungille erillinen
+todellinen `lat`/`lon` ja lukea se PALLOLLA (`pallonKaupungit`,
+`pallonAsteet`), jolloin lauta pysyy sellaisenaan ja vain pallon kuva
+korjaantuu. Sekin on aineistoerä ja vaatii saman ihmisen silmällä
+tehdyn listan. Päätös kuuluu päätoimittajalle ja omistajalle.
+
+### 12.3 Tampereen iso musta ympyrä (mitattu; korjaus 12.5)
+
+Omistajan kuvakaappauksessa Tampereen kohdalla on iso musta ympyrä.
+Se on kaupunkipiste: `KAUPUNKIPISTEEN_SADE` 0,03 on Globe.gl:n
+astemitta, siis MAAILMAN vakio eikä ruudun vakio. Kirjasto skaalaa
+pisteen `säde × 2π · R / 360` = 0,0524 yksikköä, halkaisija 0,105, ja
+ruutuhalkaisija on likimain `H / (2 · R · korkeus · tan(fov/2))` × 0,105
+— eli **kääntäen verrannollinen kameran korkeuteen**. Puhelimella
+(844 px) se on 2,7 px tavallisessa pelinäkymässä (korkeus 0,35) mutta
+13,7 px lähimmällä zoomilla, ja iPadin korkeammalla ruudulla lähimmällä
+zoomilla noin 30 css-px. Raamattu sanoo pallon merkeistä "koko on
+ruutuvakio"; kaupunkipiste on ainoa, joka ei sitä ole. Korjaus on säteen
+sitominen kameran korkeuteen (ja pisteiden uudelleenasetus zoomin
+muuttuessa) — oma eränsä.
+
+### 12.4 Kaupungin oma piste pallolla (korjattu 7.9.2026)
+
+Päätoimittajan päätös 12.2:n mittauksen jälkeen: **laudan x/y ei muutu**
+— se on reittien pituus (`steps`), välipisteet (`via`), merireitin ranta
+ja `minCityDistance` — vaan kaupunki saa **oman pallokoordinaattinsa**,
+jota vain pallo lukee. Kenttä on pakan kaupunkirivillä
+(`pallo: { lat, lon }`), ja sen taulu perusteluineen on
+`js/packs/maailmankartta-pallopisteet.js`. Tasokartta, reitinhaku,
+tallennus ja `?lauta=kartta` näkevät laudan ennallaan.
+
+**Ketju kestää uudelleengeneroinnin.** `js/packs/maailmankartta.js` on
+koneen kirjoittama, joten kenttää ei kirjoitettu riveille käsin: pakka
+tuo taulun ja liittää sen kaupunkeihin (`pallonPisteella`), ja
+`tools/tee-maailmankartta.mjs` kirjoittaa saman rivin ulos. Kommentit ja
+lähdeviitteet asuvat taulussa, jota kone ei koskaan ylikirjoita.
+
+**Ketkä siirrettiin.** `tools/tarkista-laudan-pisteet.mjs` lippusi 118
+kaupunkia yli 15 km:n. Laji ratkaistiin pakan riviltä (nimi, wiki-otsikko)
+ja Wikidatan `P31`:stä: siirrettiin 93 ASUTUSTA, jätettiin 23 ALUETTA
+(Borneo, Kamtšatkan niemimaa, Ahaggar, Namib, Nullarbor, Victoria-järvi,
+Tanganjikajärvi, Tšadjärvi, Sepik, Galápagos, Falkland, Bali, Saint
+Helena, Bananal, Havaiji, Sierra Leone, Siinai, Uluru, Mount Rushmore,
+Victorian putoukset, Milford Sound, Kap Palmas, Bahr el Ghazal) ja
+kaksi EPÄSELVÄÄ: `mosambik` (laudan nimi on alue "Mosambik", wiki-sivu
+kaupunki "Mosambikin saari", laudan piste on Beiran rannikolla — 823 km)
+ja `orjarannikko` (laudan nimi on rannikkoalue, wiki-sivu kaupunki
+"Ouidah" — 292 km). Kummankin ratkaisu on tarinan asia, ei koneen.
+Koordinaatti on Wikidatan `P625` kolmeen desimaaliin (~100 m);
+Karthago saa Tunisin viereisten raunioiden pisteen (36,887 N 10,315 I).
+
+Mittaus siirron jälkeen (sama työkalu, joka nyt lukee `pallo`-kentän):
+mediaani putosi **17,3 km → 1,4 km**, ja yli 15 km:n listalle jäi tasan
+ne 25 riviä, jotka jätettiin tarkoituksella.
+
+**Sama koordinaatti koskee kaikkia kaupungin merkkejä.** Siirto on YKSI
+asia (`js/pallo.js pallonOmatPisteet`), joka antaa kaksi hakemistoa:
+
+| hakemisto | avain → arvo | kuka lukee |
+| --- | --- | --- |
+| `pisteet` | laudan piste `"x\|y"` → `{ lat, lon }` | `pallonAsteet` — kaupunkipiste, nimi, nappula levossa, kohdekortin ankkuri, lentokaaren päät, nopan lähtöpiste |
+| `siirtymat` | kaupungin id → `{ dx, dy }` laudan yksikköinä | reitin polyn korjaus, nappulan kuljettaja |
+
+**Reittiviiva päättyy siirrettyyn pisteeseen — ilman nytkähdystä.**
+Pelkän päätepisteen siirto olisi rikkonut säännön KAIKKI LIIKE
+ANIMOIDAAN: nappula olisi kulkenut vanhaa viivaa ja hypännyt viimeisellä
+kehyksellä siirron verran (Helsingissä 35 km, lähikuvassa kymmeniä
+pikseleitä). Siksi korjaus levitetään koko polylle: jokainen polyn piste
+siirtyy päiden siirtymien painotettuna summana, painona osuus
+KAARENPITUUDESTA — sama parametrisointi kuin `pointAlong`illa, joten
+askelhelmet, nappula ja viiva kulkevat täsmälleen samaa korjattua
+viivaa, ja päissä paino on 1 ja 0. `pisteet`-taulun asteluku lasketaan
+korjatusta laudan pisteestä takaisin asteiksi, jolloin reitin pää ja
+levossa seisova nappula antavat bitilleen saman luvun
+(`tests/pallo.test.mjs`).
+
+Vartiot: `tests/pallo.test.mjs` (kenttä pakan rivillä, laudan x/y
+ennallaan, siirtymä ja piste sama asia, alueet eivät saa kenttää, siirto
+alle 500 km), `tests/pallolauta.test.mjs` (siirto kulkee reiteille ja
+kuljettajalle yhdestä paikasta), `tools/tarkista-laudan-pisteet.mjs`.
+
+### 12.5 Kaupunkipiste on ruudun vakio (korjattu 7.9.2026)
+
+12.3:n mittauksen korjaus: säde lasketaan kameran korkeudesta niin, että
+RUUTUHALKAISIJA on sama kaikilla korkeuksilla ja kaikilla laitteilla.
+Kaava johdetaan suoraan perspektiivistä (`js/pallolauta/lauta.js
+kaupunkipisteenSade`); pallon säde supistuu pois:
+
+> säde = halkaisija · korkeus · tan(fov/2) · (180/π) / ruudun korkeus
+
+Valittu halkaisija on **7 css-px**: vanhan puhelinhaarukan (2,7…13,7 px)
+sisällä, viidesosa nappulasta (32 px), joten nappula peittää pisteen
+kuten ennenkin — eikä se voi enää kasvaa iPadin 30 pikseliin.
+
+**Kirjasto lukee `pointRadius`-luennan vain datan päivittyessä**, joten
+zoomatessa säde kirjoitetaan suoraan olion skaalaan
+(`tahdistaPisteidenKoko`): kuuntelija ohjainten `change`-tapahtumassa,
+ruudun koon muuttuessa (`mitoita`) ja levon ladonnassa (`ladoLevossa`)
+— viimeinen on varasana sille, että kirjaston oma 250 ms:n siirtymä
+ehtii kirjoittaa skaalan vielä kerran zoomin jälkeen. Kirjoitus tehdään
+aina, herätys vain muutoksesta. Luku on sama, jonka luentakin antaisi: Globe.gl 2.46
+skaalaa pisteen `min(30, r) · 2π · R / 360`:llä (`PISTEEN_SKAALA`,
+luettu kirjaston lähteestä). Uutta pistedataa ei aseteta, joten 261
+pistettä ei synny uudestaan eikä 250 ms:n siirtymä laahaa zoomin
+perässä. Askelhelmi ja aihevalo ovat yhä KARTAN mittoja: helmi merkitsee
+reitin askelta maastossa, ja reitti itse on kartan mitta.
+
+**Korkeutta EI voi laskea pinnalle, ja syy on mitattu.** 12.1:n
+`MERKIN_KORKEUS = 0` koski CSS2D-merkkejä; kaupunkipiste on mesh, ja
+sitä sitoo kaksi lattiaa:
+
+1. **Kirjaston lattia.** Globe.gl asettaa pisteen korkeuden
+   `scale.z = max(alt · R, 0,1)`, joten `pointAltitude` alle 0,001 ei
+   muuta mitään — levy on aina vähintään 0,1 yksikköä pinnasta.
+2. **Lepokerroksen lattia.** Lepokerros on täsmälleen pinnan säteellä ja
+   järjestyy syvyyssiirrolla, joka on korkeusrajalla 0,034 yksikköä
+   (`js/pallo.js` LEPOKERROS, vartio `tests/pallolepokerros.test.mjs`).
+   Jokaisen merkin on oltava sen yläpuolella selvällä marginaalilla —
+   vartio vaatii nelinkertaisen eli yli 0,136 yksikköä.
+
+Kaupunkipisteen alla on lisäksi aihevalo (0,15) ja sen yli piirtyvät
+reitin varjo (0,18) ja viiva (0,2), joiden pää osuu samaan kohtaan.
+Pisteen 0,003 (0,3 yksikköä) on siis jo lähellä pienintä toimivaa
+arvoa, ja koko pinon laskeminen alemmas ostaisi 3,3 %:n säteittäisestä
+siirtymästä vain kolmanneksen — hinnalla, joka on lepokerroksen
+z-taistelu. **Korkeus jää 0,003:een, ja jäljelle jäävä siirtymä (3,3 %
+säteittäisestä etäisyydestä, puhelimen laidalla ~6 px) on lepokerroksen
+sulavuuden hinta.** Savuke raportoi luvun joka ajolla.
+
+Vartiot: `tests/pallolauta.test.mjs` (kaava on ruutuvakio kolmella
+ruudun korkeudella ja viidellä zoomilla; koko seuraa kameraa ilman uutta
+pistedataa) ja `tools/savukkeet/savuke-pallo-merkit-lukossa.mjs` vartio 4
+(pisteen levyn ruutuhalkaisija ± 1 px korkeudella 0,35 ja lähimmällä
+zoomilla, mitattuna pisteen omasta geometriasta eikä kaavasta).
+
+
+## 13. Valikon sulku ei avaa kohdetta (7.9.2026)
+
+Omistajan iPad-havainto, sanatarkasti: *"jos hampurilainen tai joku muu
+valikko on auki ja käyttäjä klikkaa mitä tahansa kohtaa kartalla, niin
+silloin vain se Valikko pitäisi sulkeutua, mutta mikään kohde ei saisi
+avautua kartalla samalla klikkauksella."*
+
+### 13.1 Juurisyy
+
+Valikot sulkeutuvat **pointerdownista** (js/main.js: dokumentin
+kuuntelijat `.valikko-kotelo`n ja `.kehittaja-valikko-kotelo`n
+ulkopuolisille napautuksille), mutta laudan osumatesti ajetaan vasta
+**clickissä** (globe.gl `onGlobeClick` / `onPointClick`, tasokartalla
+`.map-pane`n click). Yksi napautus siis sekä sulki valikon että avasi
+kohteen sen alta. Sama vika kuin pöllön kuplassa 27.8.2026 — iOS
+syntetisoi clickin touchendistä, ja Chromiumin kosketus tekee saman.
+
+### 13.2 Yksi yhteinen vartija
+
+js/ui-apurit.js (samassa tiedostossa kuin `nielaiseSulkevaNapautus`,
+jota se käyttää):
+
+| Vienti | Tehtävä |
+| --- | --- |
+| `VALIKKOKERROKSET` | kartan päällä kelluvat valikot `{ valikko, nappi }`-pareina |
+| `KARTAN_ALUE` | `.map-pane` — mikä lasketaan "kohdaksi kartalla" |
+| `avoimetValikot(doc)` / `onkoValikkoAuki(doc)` | mitkä ovat juuri nyt auki |
+| `suljeAvoimetValikot(doc)` | sulkee kaikki (hidden + aria-expanded), palauttaa `true` jos jokin oli auki |
+| `asennaValikonSulkuvartija({ doc })` | asentaa vartijan; kutsutaan kerran js/main.js:stä |
+| `valikkoSulkeutuiNapautuksesta()` | kertakäyttöinen lippu laudan osumatestille |
+
+Vartija on **dokumentin kaappausvaiheen pointerdown**, joten se ehtii
+ennen valikoiden omia kuplavaiheen sulkukuuntelijoita ja ennen laudan
+kuuntelijoita. Kun napautus osuu `.map-pane`en ja jokin valikko on auki:
+valikot suljetaan, lippu nousee ja `nielaiseSulkevaNapautus` syö saman
+napautuksen clickin kaappausvaiheessa — yksikään kartan kuuntelija ei
+näe sitä. Sama nielu hoitaa myös tasokartan `pane`-click-polun
+(js/kartta.js), joka on dokumentin alapuolella puussa; erillistä
+korjausta vanhalle laudalle ei siis tarvita (`VANHA_KARTTA_KAYTOSSA`
+on nyt false, ks. luku 11).
+
+`js/pallolauta/lauta.js` kysyy lipun **ennen osumatestiä** — sekä
+`napautaPintaan`in alussa että `onPointClick`issä — samalla kaavalla
+kuin `korttiOliAuki`. Se on toinen lukko sen varalta, että nielu ei
+jostain syystä ehdi.
+
+### 13.3 Rajaukset
+
+- **Veto panoroi yhä.** Lippu nollataan jokaisella kartalle osuvalla
+  pointerdownilla, joten panorointi ei jätä sitä roikkumaan: vain
+  napautus (tap/click) nielaistaan.
+- **Napit kartan päällä ovat komentoja** (`a, button, input, select,
+  textarea, label, [role="button"]`) — maalehtinappi, maapilleri, noppa,
+  kelluvien korttien painikkeet. Niiden napautus menee perille myös
+  valikon ollessa auki; valikko sulkeutuu silti omaa reittiään. Sama
+  rajaus kuin pöllön kuplan `omaHallinta`ssa.
+- **Kartoitetut valikot** ovat `#paavalikko` (hampurilainen — sen
+  sisällä myös äänirivit, lautakytkimet ja työhuoneen napit),
+  `#kehittaja-valikko` (ratas) ja 8.9.2026 alkaen `#aikajana-valikko`
+  (linssin oma hampurilainen palkin oikeassa laidassa,
+  js/aikajana-valikko.js): se elää kartta-alueen sisällä, joten sen
+  sulkeva napautus on juuri tämän vartijan tapaus. Muut eivät tarvitse vartijaa:
+  `#nahtavyys-valikko` ja `#linssi-valikko` asuvat modaalin dialogin
+  sisällä, jolloin kartta ei ota napautuksia lainkaan; pöllön ja pulun
+  kuplat nielaisevat sulkevan napautuksensa itse (js/pollo.js
+  `sidoKuplanNapautus`); musiikkivalitsin on Tilannelehden sivu.
+
+Savuke: `tools/savukkeet/savuke-valikon-sulku.mjs` (hampurilainen ja
+ratasvalikko: ensimmäinen napautus vain sulkee, toinen avaa kohteen).
+
+## 14. Kaupungin nimi nostojen päällä (7.9.2026)
+
+Omistajan vikailmoitus 7.9.2026 (kuvakaappaus Bukarestista,
+sanatarkasti): *"kaupungin nimi menee nostojen päälle"*. Kuvassa
+kaupunkipiste on keskellä, nimi BUKAREST pienenä harvennettuna sen alla
+ja kaksi nostoa molemmin puolin — ja oikean noston lappu makasi nimen
+päällä.
+
+Fablen linjaus (Raamattu, KAUPUNGIN NIMI NOSTOJEN PAALLA): pallolla
+kaupungin nimi ja nostojen nimilaput eivät saa mennä päällekkäin.
+**Kaupungin nimi on ensisijainen; nostojen laput väistävät.**
+
+### 14.1 Juurisyy: väärä osapuoli väisti
+
+Ladonta ajettiin levossa tässä järjestyksessä: nostot ensin, ja niiden
+laatikot menivät nimiladonnan varauksiksi (`ladoLevossa` →
+`nostot.paivita` → `nimet.lado({ varaukset })`). Siitä seurasi kaksi
+vikaa, jotka näyttivät samalta:
+
+1. **Poltettu muste ei varannut mitään.** Varauksiin meni vain ELÄVIEN
+   nostojen laatikot (`naytetaan`), koska ne ovat kerroksen omia
+   elementtejä. Poltettu nosto on laatan kuvassa eikä listalla — joten
+   nimi ei tiennyt siitä mitään ja laskeutui suoraan sen päälle. Tämä
+   on omistajan Bukarest: mitattuna A/B-ajossa (savuke, vanha
+   varaussääntö rinnalla) Bukarestin nimi limittyi poltetun musteen
+   kanssa korkeuksilla 0,05 ja 0,12 — ja vain Bukarestissa neljästä
+   mitatusta kaupungista.
+2. **Elävä lappu ajoi nimen pois.** Kun lappu oli varaus, nimi ei
+   voinut mennä sen päälle — se PUTOSI. Sääntö oli siis päinvastainen
+   kuin linjaus: liikkuva muste voitti kiinteän.
+
+### 14.2 Sääntö: liikkumaton muste varaa, liikkuva väistää
+
+`ladoLevossa` on nyt kolme vaihetta samassa levossa:
+
+1. **Nostot** valitsevat kerrokseen mahtuvat merkit ja antavat
+   **KIINTEÄN musteensa** laatikot: poltetun noston koko muste (ikoni +
+   laattaan paistettu nimiö) ja elävän noston **ikoni**. Elävän noston
+   **lappu ei ole varaus**.
+2. **Nimet** ladotaan (`js/pallolauta/nimet.js`) niin, että ne väistävät
+   vain sitä, mikä ei voi väistää itse.
+3. **Nostojen laput sovitellaan** (`nostot.sovittele`) nyt kiinteiden
+   nimilaatikoiden ympärille. Nimikerros antaa laatikkonsa luku-API:na
+   (`nimet.laatikot()`) eikä tiedä sovittelusta mitään.
+
+### 14.3 Päätössarja (js/pallolauta/sovittelu.js)
+
+Sovittelu on omassa moduulissaan, koska sama päätös koskee kahta
+kerrosta, jotka eivät saa tuntea toisiaan. Järjestys on Fablen linjaus:
+
+| Porras | Mitä kokeillaan | Miksi |
+| --- | --- | --- |
+| 0 | **oma kylki** ilman siirtoa | laattaladonta on käsin hiottua (`ladoMaanTynka`) — sitä kunnioitetaan aina kun se ei törmää |
+| 1 | **kolme muuta kylkeä** (`NOSTOSYM_NIMIO_KYLJET`: oikea, vasen, ylä, ala) | kylki on kirjaston oma käsite; rasterin välimuistiavaimessa on kylki, joten vaihto ei maksa uutta mittausta |
+| 2 | **pieni siirto** 6 px: kolme suuntaa kylkeä kohti (kohtisuoraan ±, sitten ulos) eli 12 asentoa | kohtisuora on se, joka irrottaa vaakalapun vaakanimen kaistasta; kaistan suuntaan työntäminen ei irrota mistään |
+| 3 | **lappu piiloon, ikoni jää** | nosto ei katoa kartalta, se menettää nimensä kunnes zoomi tekee tilaa |
+
+Järjestys lappujen kesken on **lähin kaupunkia ensin**: ahtain paikka
+saa ensimmäisenä valita. Väistänyt lappu lisätään esteisiin (kaksi
+lappua ei työnny päällekkäin); **paikallaan pysynyt ei ole este**, koska
+lappujen keskinäisen järjestyksen on jo ratkaissut laattaladonta
+(`tools/tarkista-nimiolimitys.mjs` vartioi sitä) — sovittelu ei ala
+sekoittaa käsin hiottua työtä ilman pyyntöä.
+
+**Siirto liikuttaa koko merkkiä, ei pelkkää lappua.** Ikoni ja nimiö
+ovat yhtä rasteria (`piirraNostosymKartalle`), joten lappua ei voi
+irrottaa ikonistaan. Kuusi pikseliä on kaukana napautuksen 44 px:n
+säteestä, joten **osuma ei siirry**: `lat`/`lng` pysyy, siirto on vain
+kuvassa. Sama myönnytys kuin kohtaamispisteellä (`fokuspisteenSiirto`).
+
+### 14.4 Suorituskyky: ei mittausta ruudulta, ei joka kehyksessä
+
+Sovittelu ajetaan **vain levossa**, samassa ajastintehtävässä kuin
+nimiladonta (`LADONNAN_LEPOVIIVE_MS`) — ei joka kehyksessä eikä joka
+toisessa. Kehysbudjetti on siis nolla: liikkeessä lappu seuraa
+pistettään CSS2D:n mukana kuten nimikin (luku 7), ja koko päätössarja
+ajetaan vasta kun kamera pysähtyy. Kehyksen sisään sijoitettu mittaus
+olisi juuri sitä layout-thrashia, jota tässä vältetään.
+
+Kaikki laatikot lasketaan **kaavasta** (`nostonLaatikko` →
+`nostosymNimioAsemointi`, `nostosymNimioMitta`), ei ruudulta. Merkin
+oma `<svg>` on 1 × 1 px ja ylivuotava, joten `getBoundingClientRect`ista
+ei olisi apua edes jos sitä haluaisi. DOMiin kirjoitetaan vain, jos
+jokin asento oikeasti muuttui (`asetteleNosto` vertaa reseptiä), ja
+rasteri paistetaan uudestaan vain kyljen tai nimiön vaihtuessa.
+
+Siirto animoidaan: `.pallolauta-nosto-siirto` saa 200 ms:n
+`transform`-siirtymän (`css/styles.css`), ja `prefers-reduced-motion`
+poistaa sen samasta säännöstä kuin nimen siirtymän. Kyljen vaihto on
+rasterin vaihto eikä liike.
+
+### 14.5 Vartijat
+
+- `tools/savukkeet/savuke-pallo-nostolaput.mjs` — Bukarest, Ateena,
+  Helsinki ja Istanbul, kaksi korkeutta kumpikin: yksikään lappu ei
+  leikkaa kaupunkinimen laatikkoa, yksikään nimi ei leikkaa
+  liikkumatonta mustetta, jokaisessa näkymässä on nimiä, sovittelun
+  asento on myös elementissä ja siirtymä on 200 ms. Lisäksi
+  **pakotettu väistö**: este asetetaan lapun päähän ja väistön jälkeen
+  yksikään näkyvä lappu ei jää sen alle.
+- `tests/pallosovittelu.test.mjs` — päätössarjan jokainen porras
+  erikseen, järjestys (ahtain ensin), väistäneen lapun esteeksi
+  muuttuminen ja se, että lauta sovittelee vasta nimien jälkeen.
+
+**Staattinen portti ei ole mahdollinen.** `tools/tarkista-nimiolimitys.mjs`
+lukee poltettavaa ladontaa laudan yksiköissä, mutta pallon kaupunkinimi
+ei ole laudan dataa: sen paikan valitsee ajonaikainen ruutuladonta
+(`ladoRuutunimet`) kameran projektiosta, nimibudjetista ja pelimerkkien
+pinoista. Pallon laput vs. kaupunkinimet mitataan siksi savukkeella eikä
+työkalulla; työkalun oma vastuu (poltettu nimiö vs. poltettu nimiö)
+pysyy ennallaan.
+
+
+## 15. Kehystahti — pisin kehys, ei keskiarvo (Opus 7.9.2026)
+
+**Omistaja 7.9.2026, sanatarkasti:**
+
+> "kartta pyörii nyt jo todella hyvin, mutta jos vertaa google earthiin,
+> niin vielä tulee vähän tökkimistä eli ei niin sulavaa ruudun
+> päivitystä, vaikka välillä on sujuvaa. löytyykö jostain vielä
+> optimoitavaa tai jotain mikä kuluttaa laskentatehoa? mittari kyllä
+> näyttää pysyvän 55-60 fps tasossa. voiko se muuton 55 ja 60 välillä
+> kuitenkin näkyä tökkimisenä?"
+
+**Vastaus kysymykseen on kyllä, ja se on koko luvun lähtökohta.** 60 Hz:n
+ruudulla 55 fps ei ole 8 % hitaampi kuva vaan **viisi pudotettua kehystä
+sekunnissa**: neljä kehystä 16,7 ms:n välein ja sitten yksi 33 ms:n
+nykäys. Silmä ei lue keskiarvoa vaan epätasaisuutta, joten mittarin
+oikea luku ei ole fps vaan **pisin kehys** ja **pudotusten lukumäärä**.
+Fablen linjaus (Raamattu, PALLON SULAVUUS) on sama: tavoite on pisimmän
+kehyksen pituus alle 17 ms, ei keskiarvo.
+
+### 15.1 Mittari ja sen kalibrointi
+
+`tools/savukkeet/savuke-pallo-kehystahti.mjs` (uusi). Kaksi asiaa
+erottaa sen aiemmista mittareista:
+
+**1. Kamera liikkuu kehysaskelin, ei kellosta.** Kontin Chromium piirtää
+SwiftShaderilla (ANGLE Vulkan, ohjelmistorasteroija), ja mitattuna
+7.9.2026 pallo vie kokonaisen kehyksen **150 ms** (360 × 240) …
+**1 130 ms** (1 600 × 900 dpr 1) — myös joutilaana. Kellosta ajettu
+6 sekunnin panorointi tekisi siis yhdellä kehyksellä satojen
+millisekuntien loikan, jolloin laattakerroksen ennakkoalue paisuisi
+eikä mitattu työ vastaisi laitteen kehystä lainkaan. Mittari siirtää
+kameraa joka piirretyllä kehyksellä täsmälleen sen verran kuin se
+siirtyisi laitteella 60 Hz:ssä (0,0505° panoroinnin askelta kohti).
+Jokainen mitattu kehys on siis laitteen kehys; vain seinäkelloaika
+venyy.
+
+**2. Vartio lukee JS-työtä, ei kehysväliä.** Kehysväliä ei voi tässä
+ympäristössä mitata: kiinteä 17 ms:n raja antaisi aina 100 % ja
+mediaaniin suhteutettu raja aina 0 %. Mittari erittelee sen sijaan
+kehyksen sen osan, joka on **pelin omaa pääsäikeen työtä**:
+laattakerroksen päivitys + kirjaston laattamoottori (`updatePov`) +
+tekstuurien vienti (`initTexture`) + three.js:n piirtokutsu. Rasterointi
+jää ulkopuolelle, ja juuri se on ainoa osa, joka on kontissa
+epärealistinen — laitteella sen tekee näytönohjain. **Raja 17 ms on siis
+laitteen 60 Hz:n kehysbudjetti sellaisenaan.** Lisäksi mitta on pahin
+tapaus: kontin kehysväli on satoja millisekunteja, joten kerroksen oma
+100 ms:n harvennus ei ehdi väliin ja jokainen mitattu kehys tekee täyden
+päivityksen.
+
+**3. Koneen kuorma jaetaan pois.** Konttia jakaa moni ajo. Mitattuna
+sama koodi antoi kuormitetulla koneella kehysmediaanin 1 200 ms ja
+rauhallisella 750 ms, ja samassa suhteessa venyivät JS-ajat. Mittari
+ajaa siksi ensin kiinteän laskusilmukan viidesti, ottaa parhaan ajan
+koneen nopeudeksi ja kertoo JS-ajat suhteella *rauhallinen / mitattu*.
+Ilman tätä vartio kaatuisi naapurin ajoon eikä pelin koodiin.
+
+**4. Jakso ajetaan kahdesti ja vartio lukee paremman ajon.** Yksittäinen
+kehys voi keskeytyä naapurin ajoon: mitattu samalla koodilla peräkkäin
+`renderer.render` mediaani 3 ms mutta pisin 76 ms, `updatePov` mediaani
+0 ms mutta pisin 40 ms. Yksittäiset piikit eivät siis mittaa peliä.
+Kaikki toistot jäävät JSON-raporttiin.
+
+**5. Panorointi kulkee aina uuteen maastoon.** Lämmitysajo koko matkan
+yli teki mittauksesta arpapeliä: LRU:n muistikatto (24 näkymätöntä
+valmista laattaa) on pienempi kuin matkan laattamäärä, joten osa ehti
+purkautua ja osa ei — kaksi peräkkäistä ajoa antoi 27 tekstuurin
+vientiä ja 0. Nyt kamera lähtee levänneestä Ateenasta ja jokainen
+toisto jatkaa siitä, mihin edellinen jäi.
+
+Vartion rajat: yli 17 ms:n JS-kehyksiä panoroinnissa enintään **3 %**
+(zoomissa 10 %: tason vaihto on oikeaa työtä), ja kaksi kuormasta
+riippumatonta **rakenteellista** rajaa (pohjan päivityksiä enintään
+0,7 × kehykset, tekstuurien vientejä enintään yksi kehystä kohti).
+
+### 15.2 Mitattu ENNEN ja JÄLKEEN
+
+Sama savuke, sama kone, sama tallenne, peräkkäin ajettuna 7.9.2026
+(puhelin 390 × 844 dpr 2, 46 laitekehystä panorointia ja 31 zoomia,
+kaksi toistoa kummastakin, taulukossa parempi toisto). Laattatyö oli
+sama molemmissa: **7 tekstuurin vientiä** kummassakin ajossa.
+
+| mitta (panorointi) | ENNEN | JÄLKEEN |
+| --- | --- | --- |
+| JS/kehys p50 | 4,5 ms | **1,6 ms** |
+| JS/kehys p95 | 14,8 ms | **4,4 ms** |
+| JS/kehys pisin | 32,6 ms | **10,4 ms** |
+| **yli 17 ms:n kehyksiä** | **6,5 %** (3 / 46) | **0 %** (0 / 46) |
+| raskaimman kehyksen erittely | moottori **26,3** · piirto 7,9 · laatat 0,3 | piirto 12,5 · laatat 7,4 · moottori **0** |
+| `updatePov` p95 / max (raaka) | 2,6 / **26,0 ms** | 0,4 / **1,3 ms** |
+| pohja päivitettiin | joka kutsulla (89 / 46 kehystä) | **15 / 46 kehystä** |
+
+| mitta (zoom) | ENNEN | JÄLKEEN |
+| --- | --- | --- |
+| JS/kehys p50 | 3,5 ms | **1,5 ms** |
+| JS/kehys p95 | 11,8 ms | **3,6 ms** |
+| JS/kehys pisin | 159,9 ms | **4,2 ms** |
+| yli 17 ms:n kehyksiä | 6,5 % | **0 %** |
+
+JÄLKEEN-ajo tehtiin vieläpä KUORMITETUMMALLA koneella (laskusilmukka
+6,5 ms vastaan 3,6 ms), joten ero on todellista suurempi, ei pienempi.
+
+Ensimmäinen mittaus (41 kehystä, ennen yhtään korjausta) antoi saman
+kuvan syyllisistä: JS/kehys pisin 20,0 ms, ja siitä **17,0 ms oli
+kirjaston laattamoottoria** — yksin koko 60 Hz:n kehysbudjetti.
+`updatePov` ajettiin 79 kertaa 41 kehyksellä (kaksi kertaa kehyksessä),
+mediaani 0,4 ms mutta pisin 12,2 ms. `initTexture` maksoi 3,0 ms (p50)
+ja 6,7 ms (max), ja niitä sai viedä kaksi samassa kehyksessä. Chromen
+jäljestä (`--jalki`, 4 s panorointia) näkyi lisäksi
+**V8.GC_MC_BACKGROUND_MARKING 845 ms, pisin 87 ms** — roskaa syntyi
+niin paljon, että päämerkintä kävi taustalla lähes koko ajon.
+
+### 15.3 Neljä juurisyytä ja niiden korjaukset
+
+**1. Kirjaston oma laattamoottori ajettiin kahdesti joka kehyksessä.**
+Mitattu: 79 `updatePov`-kutsua 41 kehyksellä; mediaani 0,4 ms mutta
+pisin 12,2 ms, ja raskaimmassa kehyksessä kutsut veivät yhteensä 17 ms
+— **yksin koko 60 Hz:n kehysbudjetin**. Juuri tämä on omistajan näkemä
+nykäys: keskiarvo pysyy 55–60 fps:ssä, mutta joka kymmenes kehys putoaa.
+
+Kun laattakerros on päällä, kirjaston moottori ei enää ole kartta vaan
+**karkea pohja**: taso on naulattu `POHJAN_TASO_MAX`:iin (5), yksi
+laatta kattaa 11,25°, ja kerros piirtää sen päälle terävän kuvan. Pohja
+ei siis kaipaa uutta luettelointia 60 kertaa sekunnissa. `js/pallo.js`
+(`kytkeLaatunosto`, "POHJA PÄIVITTYY HARVEMMIN KUIN RUUTU") ohittaa
+kirjaston kutsun, ellei jokin kolmesta ehdosta täyty: (a) laattakerros
+ei ole käytössä, (b) kamera on siirtynyt vähintään
+`POHJAN_ASKEL_OSUUS` (0,06) omasta etäisyydestään — suhdeluku eikä
+asteita, koska sama luku kelpaa joka korkeudella — tai (c) kerros ei
+peitä koko näkyvää aluetta, mutta silloinkin enintään `POHJAN_VALI_MS`
+(100 ms) välein. `lepoon` ajaa moottorin aina pysähdyksen jälkeen, joten
+**levossa pohja on täsmälleen sama kuin ennen**. Perääntyminen:
+`?pohjanharvennus=0`.
+
+**2. Kaksi tekstuuria kehystä kohti.** Mitattu `initTexture`: 3,0 ms
+(p50), 6,7 ms (max). Kaksi peräkkäin samassa kehyksessä on pahimmillaan
+13 ms 16,7 ms:n budjetista — se yksin pudottaa kehyksen.
+`LAATTAKERROS_TEKSTUUREJA_PER_KEHYS` oli 7.9.2026 alkaen **1**. Se on
+60 Hz:llä yhä 60 laattaa sekunnissa eli enemmän kuin
+`LAATTAKERROS_RINNAKKAIN` (6) ehtii ladata, joten jono ei kasva.
+
+*Päivitys 22.9.2026 (Karttaseppä):* zoomissa yksi vienti kehyksessä oli
+karkean tason näkymisajan lattia — 32 uuden tason laattaa vie 32
+kehystä, ja verkko ei ole pullonkaula (z8-laatta 16–52 kt, TTFB 21–56
+ms). Katto on nyt **2** ja valmistelun budjetti 6 ms: karkean tason
+näkymisaika (tools/savukkeet/mittaa-zoomiennakko-meri.mjs, WebKit 390 ×
+844 dpr 3) putosi merellä 536–895 → 347–433 ms ja maalla 751–1052 →
+546–711 ms (6 ms:n budjetilla 354–477 / 560–664), zoomin ja
+panoroinnin p95 ennallaan (mittaa-ablaatio porras 2: 25–28 / 18–22 ms).
+
+**3. Päivitys tuotti roskaa 10 kertaa sekunnissa.** Kerroksen
+`suorita` kokosi mittarinsa kahdeksalla erillisellä `filter`/`reduce`-
+kierroksella ja kahdella taulukkokopiolla kaikista tietueista, laski
+laatan lat/lon-suorakaiteen (`laatanAlue`) uudestaan jokaiselle
+ehdokkaalle kahdesti, ja rakensi ennakon ehdokaslistan kahtena
+välitaulukkona ennen kuin katto edes katsoi sitä. Lisäksi `js/pallo.js`
+kutsui kerroksen `mittarit()`ia **joka piirretyllä kehyksellä** pelkän
+kahden kentän takia — ja `mittarit()` kopioi koko taulun *ja*
+pyydettyjen osoitteiden joukon taulukoksi, satoja merkkijonoja. Nyt:
+mittarit yhdellä kierroksella ilman varauksia, `laatanAlue` muistiin
+(katto 4 096, sitten tyhjennys), ennakon suodatus ja katto samassa
+silmukassa, ja varauksettomat lukijat `tila()`, `syy()`, `peittaa()`.
+
+**4. Laattojen valmistelu oli näkymätöntä aikaa.** Kangas, `drawImage`,
+verkon puskurit ja materiaali ovat pääsäikeen työtä, joka osuu siihen
+kehykseen, jossa haku sattuu valmistumaan — eikä se näy missään
+kehyskoukussa. Kerros mittaa sen nyt itse (`mittarit.valmisteluMs`),
+ja savuke raportoi sen: **42,8 ms / 23 laattaa, pisin 9,1 ms**.
+
+### 15.4 Kokeiltu ja HYLÄTTY: bittikartta suoraan tekstuuriksi
+
+Pyramidin ranta-, viiva- ja nostotasot ovat harvoja, joten valtaosalla
+laatoista on vain pohjakerros. Kokeiltiin viedä sellainen laatta
+`new Texture(bittikartta)`:na ilman kangasta ja `drawImage`ia — yksi
+pääsäikeen pikselikopio pois. **Tulos oli päinvastainen:**
+`initTexture` kallistui 3,0 → **5,1 ms** (p50) ja pahin vienti 6,7 →
+**64,2 ms**. Syy on pystykäännöksessä: three.js:n tekstuurin oletus on
+`flipY = true`, ja kun lähde on bittikartta, kääntö tehdään pikseli
+pikseliltä keskusmuistissa; kangas taas elää jo näytönohjaimessa
+(kiihdytetty 2D-konteksti), joten sama kääntö on yksi GPU-kopio. Kangas
+siis MAKSAA yhden drawImagen ja SÄÄSTÄÄ koko viennin. Bittikartan
+lukuasetukset (`imageOrientation: 'none'`, `colorSpaceConversion:
+'none'`) jäivät; `premultiplyAlpha` jätettiin selaimen oletukseksi,
+koska kangas säilyttää pikselit esikerrottuina ja 'none' pakottaisi
+muunnoksen juuri `drawImage`n kohdalla.
+
+### 15.5 Tutkittu ja todettu syyttömäksi
+
+- **Nimet ja CSS2D-elementit.** Ladonta (`js/pallolauta/nimet.js`
+  `lado`) ajetaan vain levossa: `pyydaLadonta` on ajastin
+  (`LADONNAN_LEPOVIIVE_MS`), joka nollautuu jokaisesta ohjainten
+  `change`-tapahtumasta, eikä `getBoundingClientRect` kulje kehyksessä
+  lainkaan. Mitattu Ateenan lähikuvassa: **5 CSS2D-elementtiä**. Ei
+  layout-thrashia, ei mitään korjattavaa.
+- **Kaksi rAF-silmukkaa.** Ei ole. Mittarin `renderer.render` -kääre
+  laski panoroinnissa **41 kutsua 41 kehyksellä** — tasan yksi piirto
+  kehystä kohti. Pelin omat rAF-silmukat (kamera-ajo, liuku, häive,
+  avauslento) muuttavat vain tilaa; piirron tekee Globe.gl:n oma
+  silmukka, ja se pysäytetään jo nyt (`pauseAnimation`), kun kuori on
+  piilossa, lehti auki tai sivu taustalla (`js/pallolauta/lauta.js`
+  `tahdistaLepo`).
+- **Levon harventaminen.** Harkittiin ja jätettiin tekemättä: silmukan
+  pysäyttäminen levossa vaatisi herätyksen jokaisesta muutoslähteestä
+  (kamera-ajo, laatan häive, linssin kalvo, nappulan siirto, nostot,
+  koon muutos), ja yksikin unohdettu lähde jäädyttäisi laudan. Se olisi
+  paljon pahempi vika kuin lämmin näytönohjain, eikä se korjaa
+  omistajan oiretta, joka on nykäys **liikkeen aikana**.
+- **Pikselisuhde ja kuvan pehmennys liikkeessä.** Harkittiin dynaamista
+  pikselisuhdetta (2 levossa, 1,5 vedon aikana) ja jätettiin tekemättä.
+  Perustelu on omistajan oma seisova linjaus: liikkeen aikainen tarkkuus
+  ei saa pudota (Raamattu, "PALAUTE v1642:STA, LIIKKEEN AIKAINEN
+  TARKKUUS"; luku 10.3 "pikselisuhde kerran asennuksessa … kuvan
+  tarkkuus ei saa vaihtua liikkeessä"). Lisäksi mittaus osoittaa syyn
+  olevan muualla: mittari näyttää 55–60 fps eli näytönohjain pysyy
+  perässä, ja pudotukset tulevat yksittäisistä JS-piikeistä. Jos
+  omistaja myöhemmin haluaa vaihtaa terävyyttä sulavuuteen, vipu on
+  `LAATU_PIKSELISUHDE_LEPO` (nyt 3) — se on yhden luvun päätös, ja tämä
+  luku on sen paikka.
+- **Antialias, varjot ja valot.** Varjot ovat jo pois
+  (`shadowMap.enabled = false`); valoja on kaksi (AmbientLight,
+  DirectionalLight) ja ne ovat kirjaston omat, laattojen sävy riippuu
+  niistä (ks. luku 4.3 napakannet). Antialias on kirjaston oletus
+  (päällä) ja se pehmentää juuri vektoriviivat (rantaviiva, rajat), eli
+  sen sammuttaminen olisi sama laadun pudotus, jonka omistaja on kahdesti
+  torjunut. Ei koskettu.
+
+### 15.6 Muut vartiot ennen ja jälkeen
+
+`savuke-pallolauta` ajettiin sekä muutoksitta että muutoksilla:
+**41 / 43 ennen, 42 / 43 jälkeen**. Jäljelle jäävä FAIL (vartio 6,
+kamera-ajo osuu Sofiaan — dy 68,5 px) on sama molemmissa eli tätä erää
+vanhempi vika, ja sen viereen osui kummassakin ajossa yksi satunnainen
+FAIL (toisessa ajossa linssin pyramidipyynnöt, toisessa Sofian
+aarrepisteen elementti), joka ei toistunut uusintaajossa.
+`node --test tests/*.test.mjs` 2 072 läpi, 0 kaatunutta;
+`tarkista-niputus` ja `tarkista-savukkeet` puhtaat.
+
+### 15.7 Mittari näyttää nyt oikean luvun
+
+`js/karttamittari.js` (`?mittari=1` tai ratasvalikko) sai uuden rivin:
+
+```
+kehys     16,7 ms · max 33,4 ms · 59,9 fps
+pisin/1s  33,4 ms · pudotuksia 3 / 59 (> 17 ms)
+```
+
+Pisin kehys ja pudotusten määrä luetaan **sekunnin** ikkunasta, ei
+kahden: kahden sekunnin maksimi jää roikkumaan ruutuun senkin jälkeen,
+kun nykäys on ohi, eikä lukija näe, mikä ele sen aiheutti. Sama rivi
+menee konsoliin (Safarin etäkonsoli, iOS-kuori). Mittari on yhä
+kokonaan kehittäjän kytkimen takana eikä maksa mitään, kun se on pois.
+
+## 16. Aloitusvalinta: pallo paikallaan, kohteet takaisin (7.9.2026)
+
+Omistaja työpöytäselaimesta 7.9.2026 iltapäivällä, sanatarkasti:
+
+> Kartta voisi sittenkin pysyä ihan paikallaan tässä, kun pelaaja
+> valitsee, minne hän haluaa lentää. Kartan zoomaustason voisikin
+> muuttaa tällaiseksi, mikä nyt näkyy kuvassa. Ja valittavien
+> kohdekaupunkien huomioympyrää voisi hieman tehostaa. ja nostetaan
+> kokeeksi kaikki kohdekaupungit takaisin mitä aiemmin oli käytössä.
+
+Neljä muutosta samaan näkymään (Raamattu, "ALOITUSVALINTA: PALLO
+PAIKALLAAN, KAIKKI KOHTEET TAKAISIN KOKEEKSI").
+
+### 16.1 Pallo ei pyöri itsestään
+
+5.9.2026 lisätty hidas pyörintä (0,16 °/s itään, oma rAF-silmukka
+kolmella pysäyttimellä) on **poistettu kokonaan** — silmukka,
+vakiot ja pysäyttimet. Valinta on lukutilanne: neljästätoista
+kaupungista pitää löytää yksi, ja liikkuva kuva pakottaa katseen
+seuraamaan sen sijaan että antaisi lukea. Liike myös veisi kohteita
+pois kuvasta odottavalta pelaajalta.
+
+Pelaajan oma panorointi ja nipistys ovat ennallaan (kirjaston
+OrbitControls, `js/pallo.js asennaPallonEleet`) — vain automaattinen
+liike on poissa, ja juuri sitä neljätoista kohdetta vaativat:
+takapuolen kaupungit haetaan kääntämällä. Terävän tilan pakotus
+(`pakotaPallonLaatu`) jäi: valintakuva katsotaan täydessä terävyydessä
+liikkui se tai ei. `lauta.aloitusvalinnanPyorinta()` jäi rajapintaan ja
+vastaa aina `false` — se on savukkeen vartio siltä varalta, että
+automaattinen liike joskus palaa vahingossa.
+
+### 16.2 Rajaus on KIINTEÄ näkymä, ei laatikkosovitus
+
+Aalto 3A sovitti kameran Lontoon ja valittavien yhteiseen laatikkoon
+(`ALOITUSVALINNAN_MARGINAALI`, kuplavarat pikseleinä). Se toimi, kun
+valittavia oli yksi: laatikko oli Lontoo–Ateena eli Eurooppa. Kun
+kohteita on neljätoista, sama laatikko olisi koko maapallo — ja rajaus
+karkaisi juuri siitä kuvasta, jonka omistaja pyysi. Laatikkosovitus,
+marginaali ja kuplavarat poistettiin.
+
+Uusi näkymä on kaksi lukua (`js/pallolauta/lauta.js`):
+
+| Vakio | Arvo | Mitä se on |
+| --- | --- | --- |
+| `ALOITUSVALINNAN_LAT` / `_LON` | 30° N, 17° E | omistajan kuvan keskiö: Välimeren ja Saharan raja |
+| `ALOITUSVALINNAN_PALLON_OSUUS` | 0,55 | pallon SÄDE osuutena ruudun korkeudesta |
+| `ALOITUSVALINNAN_ANKKURIT` | `['lontoo', 'ateena']` | pisteet, joiden on mahduttava kuvaan |
+| `ALOITUSVALINNAN_ANKKURIVARA` | 0,78 | osuus ruudun puolikkaasta, jonka sisään ankkurin on osuttava |
+
+`aloitusvalinnanKorkeus({ leveysPx, korkeusPx, ankkurit })` laskee
+Globe.gl:n `altitude`n kahdesta ehdosta, joista **kauimmainen voittaa**:
+
+1. **Pallon koko.** Silhuetin kulmasäde on `atan(2 · osuus ·
+   tan(fov/2))` ruudun puolikkaina, ja pallon geometriasta etäisyys =
+   `1 / sin(kulmasäde)`. Fov on PYSTYSUUNNAN kulma, joten sama korkeus
+   antaa saman pallon koron kaikilla kuvasuhteilla — puhelimella pallo
+   silloin vuotaa sivureunojen yli, mikä on juuri se, mitä omistaja
+   puhelimelta pyysi (*"pallon leveys täyttää ruudun"*).
+2. **Ankkurit.** Piste `(e, n, u)` (itä–pohjoinen–ylös tähtäyspisteen
+   kehyksessä) osuu ruudulla kohtaan `(e, n) / ((d − u) · tan(fov/2))`
+   ruudun puolikkaina, joten ehdoista `|x| ≤ vara · (W/H)` ja
+   `|y| ≤ vara` seuraa suoraan `d ≥ u + |e| / (varaX · tan)` ja
+   `d ≥ u + |n| / (vara · tan)`. Analyyttinen, ei hakua.
+
+**Mitatut luvut** (Node, tests/aloitus-pallolla.test.mjs; sijainti
+ruudun puolikkaina keskipisteestä, y ylös):
+
+| Ruutu | altitude | pallon säde | Lontoo | Ateena |
+| --- | --- | --- | --- | --- |
+| 2000 × 1125 | 1,191 | 619 px (0,55 H) | −0,31 / +0,63 | +0,16 / +0,25 |
+| 1400 × 900 | 1,191 | 495 px | −0,31 / +0,63 | +0,16 / +0,25 |
+| 390 × 844 (puhelin) | 1,191 | 464 px | −0,31 / +0,63 | +0,16 / +0,25 |
+| 834 × 1194 (iPad) | 1,191 | 657 px | −0,31 / +0,63 | +0,16 / +0,25 |
+| 300 × 900 (kapea) | 1,418 | 438 px | −0,26 / +0,52 | +0,14 / +0,21 |
+
+Ankkuriehto ei siis sido tavallisilla ruuduilla: pallon koko ratkaisee,
+ja ankkurit ovat turvaverkko kuvasuhteille alle ~0,34. Kuvassa ovat
+Eurooppa, Afrikka ja Lähi-itä, Atlantti vasemmassa reunassa, Lontoo
+ylhäällä vasemmalla keskeltä ja Ateena keskellä oikealla — mitattu
+Chromiumilla 1400 × 900 (savuke-aloitusvalinta-13 `--kuvat`).
+
+Kuplavaraa ei enää tarvita: Lontoo ja Ateena ovat molemmat ruudun
+yläpuoliskossa, kaukana Livian kuplapinosta oikeassa alanurkassa.
+Kamera-ajo on yhä laudan oma (`kamera.ajaKamera`, pehmeä), ja
+`avaaPallolauta` kutsuu sitä `kotiin`-ajon sijasta.
+
+### 16.3 Huomiorengas valittaville
+
+Lähtövalinnan kohde on eri asia kuin nopanheiton kohde: nopanheitossa
+pelaaja etsii vaihtoehtoja lähikuvasta, lähtövalinnassa neljäätoista
+kaupunkia koko maapallolta. Valittava saa siksi kohdemerkin lisäksi
+oman renkaansa (`js/pallolauta/merkit.js KOHDEMERKIN_HUOMIO_PX` = 54 px
+eli säde 27, kun kohdemerkin halo on 24 px:n merkin päällä 17):
+
+- **Ruutuvakio koko.** Merkki on CSS2D-elementti, joten rengas on yhtä
+  iso kaukaa ja läheltä.
+- **Hidas syke.** Jakso 2,6 s (omistajan haarukka 2–3 s), ja syke on
+  kahdessa ominaisuudessa yhtä aikaa — säde (`transform: scale` 1 →
+  1,16) ja peittävyys (0,92 → 0,42) — jotta liike lukee hengityksenä
+  eikä välähdyksenä. Rengas ei koskaan katoa: kohteen on löydyttävä
+  myös sykkeen alalaidassa.
+- **Kultainen.** `stroke: var(--kulta, #eab84e)`, viiva ruudun mitassa
+  (`non-scaling-stroke`), pelkkä muunnos ja peitto — ei suodinta (sama
+  iOS-sääntö kuin kartan muillakin merkeillä).
+- **Liikeherkkyys:** ei sykettä, vaan pysyvä kultakehä (`scale(1,08)`,
+  peitto 0,85) — sama tinkiminen kuin `.target-halossa`.
+
+Lippu kulkee datumissa: `aloitusKohteet` merkitsee `huomio: true`,
+merkkikerros kantaa sen (`huomio: k.huomio === true`) ja
+`kohdeElementti` piirtää renkaan. Nimi nousee ylimmän kehän yläpuolelle
+(`nimenSade`), joten se ei jää renkaan päälle.
+
+### 16.4 Neljätoista kohdetta ja Livian kupla
+
+`ETUSIVUN_KOHTEET` ja `ETUSIVUN_NAKYVAT` siirtyivät `js/ui.js`:stä
+**`js/ui-apurit.js`**:ään, koska myös Livian avausesittely tarvitsee
+kohteiden määrän eikä `js/livia.js` voi tuoda `js/ui.js`:ää
+(kehätuonti). Joukot ovat puhdasta dataa, eivät pelitilaa.
+
+Kohteet palasivat ensin kolmentoista sarjana (iltapäivä), ja samana
+iltana omistaja teki niihin kaksi muutosta: **Los Angeles vaihtui San
+Franciscoksi ja Istanbul lisättiin**. Lopullinen luettelo on
+neljätoista: ateena, newyork, kairo, rio, mumbai, peking, sydney,
+moskova, tokio, singapore, kapkaupunki, sanfrancisco, tanger,
+istanbul. Se **kumoaa v1119:n piilotuksen** aloituskartalla, ja näkyvät
+kaupungit palasivat valittavien mukana (valittava kaupunki, jota ei
+näy, olisi pahempi kuin kaupunki, jota ei voi valita).
+
+**Kaksi uutta kaupunkia aloitusnäytön laudalle.** Kohde tarvitsee
+kaupungin KAHDELLA laudalla: pelin omalla aloitusnäytön laudalla
+(`js/packs/maailma.js`, josta `doPickStart` lukee portin) ja pallon
+laudalla (`js/packs/maailmankartta.js`, josta merkin paikka tulee).
+Maailmankartalla molemmat olivat jo; aloitusnäytön laudalta puuttuivat.
+Ne lisättiin samalla kaavalla kuin muut lentokenttäkaupungit
+(`airport: true`, portti maailmankartalle, `la/lx/ly` nimilapulle), ja
+x/y laskettiin todellisesta lat/lonista laudan omalla
+stereografisella pallonpuoliskoprojektiolla (`tools/hemispheres.mjs`):
+
+| Kaupunki | lat / lon | kaava antaa | laudalla |
+| --- | --- | --- | --- |
+| Istanbul | 41,013° N, 28,955° E | 776,7 / 287,1 | 776,7 / **288,1** |
+| San Francisco | 37,775° N, −122,419° W | 264,1 / 306,7 | **265,1 / 305,7** |
+
+Yhden yksikön siirto on rantaviivan takia: laudan tyylitelty rannikko
+jättää tarkan pisteen veteen (`isOnLand`, tests/rules.test.mjs
+*"kaupungit ovat mantereella"*). Muut tämän laudan kaupungit on
+aikanaan muunnettu vanhasta lieriölaudasta, joten ne poikkeavat samasta
+kaavasta 2–13 yksikköä — ero on 1150 × 800:n laudalla olematon, eikä
+lautaa edes piirretä lähtövalinnassa (pallo on lauta).
+
+Kolme muuta asiaa laudalla piti sovittaa:
+
+- **Reitit.** Laudan yhtenäisyys lasketaan `edges`-listasta eikä
+  lentoyhteyksistä, joten kumpikin sai maareitin naapuriinsa
+  (San Francisco–Los Angeles, Ateena–Istanbul) sekä lentoyhteydet
+  (`airRoutes`: Ateena–Istanbul, Istanbul–Moskova, San Francisco–Tokio,
+  San Francisco–New York).
+- **Laatat.** `tokens.counts` 14 → 16 (`isoAarre` 4 → 5, `pieniAarre`
+  8 → 9): `js/game.js enterWorld` heittää, jos laattoja ja kaupunkeja
+  ei ole yhtä monta.
+- **`minCityDistance` 45 → 20.** Laudan mittakaavassa Ateena–Kairo on
+  45 yksikköä eli noin 1 100 km. Istanbul on Ateenasta 500 km ja
+  San Francisco Los Angelesista 550 km, joten oikeilla paikoillaan ne
+  ovat 21 ja 27 yksikön päässä naapuristaan — raja ei voi olla 45 ilman
+  että kaupunki siirretään väärään paikkaan. Nimien ja laattojen
+  ruuhkaa vartioi oma testinsä, joka on tämän laudan todellinen
+  visuaalinen ehto; sen vuoksi kolme nimilappua siirtyi (New York
+  ylös, Kairo alas, Ateena 16 yksikköä länteen).
+
+**Los Angeles jää laudalle** mutta ei ole enää valittava eikä näy
+lähtövalinnassa (`ETUSIVUN_NAKYVAT` seuraa kohteita).
+
+**Kysymykset ja tiedot.** Laudan eheyssääntö vaatii jokaiselle
+kaupungille viisi visakysymystä ja kaksi tiesitkö-tietoa, joista
+toinen isoisän äänellä (tests/rules.test.mjs). Ne kirjoitettiin
+molemmille (js/packs/maailma-questions.js). Tämän laudan kysymyksiä ei
+kysytä pelissä — lähtövalinnasta lennetään heti maailmankartalle —
+mutta **isoisän merkinnät ovat Opuksen käsialaa ja päätoimittajan
+tarkistettava kaanonia vasten** (docs/roolitus.md).
+
+Sisältö on molemmilla valmiina: Istanbulilla `js/packs/fokusvirta-
+istanbul.js` sekä europe- ja middleeast-pakat, San Franciscolla
+northamerica-pakka.
+
+Kaksi paikkaa oletti yhtä kohdetta:
+
+- **Esilämmitys** (`ui.esilammitaAvaus`) latasi kohdemaan laudan ja
+  taiteen valmiiksi avaustekstin aikana, ja se oli ehdollistettu
+  `ETUSIVUN_KOHTEET.size !== 1` -portilla. Nyt esilämmitetään **yksi ja
+  vain yksi kohde: Ateena** (`ESILAMMITETTAVA_KOHDE`). Neljälletoista
+  kohteelle se olisi neljätoista lautaa ja neljätoista taidepohjaa
+  avaustekstin alla — juuri se töksähdys, jonka esilämmitys on
+  tarkoitettu poistamaan. Ateena on tarinan ensimmäinen reitti ja siten
+  todennäköisin valinta; muut lentävät ilman etumatkaa kuten ennen
+  optimointia. Rng-järjestys säilyy: talletus on kohdekohtainen
+  (`esilammitys.kohde === city.id`), ja muille kaupungeille repliikki
+  arvotaan `doPickStart`issa.
+- **`drawTargets`** (tasokartan valintarenkaat) oli jo monikohteinen
+  silmukka; vain kommentti puhui yhdestä kohteesta.
+
+**Livian avauskupla 4** — *"Ai niin, ja anteeksi valikoima: pöllö on
+tarkistanut vasta yhden reitin. Ateenasta se alkaa."* — on
+beta-rajoitus tarinan sisällä, ja se alkoi valehdella neljäntoista
+renkaan äärellä. Teksti **jää kaanoniin** (`LIVIAN_AVAUS`, oma
+äänitteensä), mutta näyttö on ehdollinen: `livianAvausSarja(kohteita =
+ETUSIVUN_KOHTEET.size)` suodattaa kuplan pois, kun kohteita on enemmän
+kuin yksi. **Ääni seuraa näyttöä:** äänitteen tiedostonimi tulee
+repliikin KAANONISESTA järjestysnumerosta, joten sarja kuljettaa
+indeksin mukanaan (`soitaLivianAani(ui, 'avaus', rivi.indeksi)`) — ilman
+sitä ohitetun kuplan äänite soisi seuraavan kuplan kohdalla.
+
+### 16.5 Omistajan ehto: jokaiseen pääsee, ja saapuminen toimii
+
+v1119 piilotti kohteet siksi, että osa niistä lupasi matkan, jota ei
+ollut. Ehto on nyt koneellinen:
+**`tools/savukkeet/savuke-aloitusvalinta-13.mjs`** ajaa jokaisen
+kohteen omassa selainkontekstissaan tyhjästä muistista —
+aloitusportti, "Valitse aloituskaupunki", merkin napautus — ja mittaa
+viisi asiaa: merkki ja huomiorengas, lento loppuun asti, matkaaja
+perillä oikeassa kaupungissa, kaupungin napautus avaa lehden, eikä
+sivulla ole yhtään `pageerroria`. Tulos on taulukko kaupungeittain.
+
+```
+NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-aloitusvalinta-13.mjs
+NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-aloitusvalinta-13.mjs --kohde tokio
+```
+
+Merkin saa olla pallon takapuolella: kohteet eivät mahdu yhteen
+näkymään, ja takapuolen kaupungit haetaan palloa kääntämällä. Savuke
+raportoi, montako merkkiä on kuvassa etupuolella. Tiedoston nimessä on
+13, koska kohteita oli niin monta ensimmäisellä kierroksella; joukko
+luetaan aina `ETUSIVUN_KOHTEET`-vakiosta.
+
+Vartijat: tests/aloitus-pallolla.test.mjs (rajauksen luvut Nodessa,
+pyörinnän poisto, huomiorenkaan mitta ja syke, kohteiden luettelo,
+Livian sarja), tests/livia-aani.test.mjs (äänite kaanonin numerolla),
+savuke-etusivupallo E9b/E9b2/E9e/E9f (kaikki merkit, rengas
+jokaisella, pallo paikallaan) ja savuke-aloitusvalinta-13.
+## 17. Roikkuva kosketus — yksi sormi panoroi aina (7.9.2026)
+
+Omistajan iPad-havainto Ihmisen matka -linssin lopussa, sanatarkasti:
+*"Kartan pyörittämisessä on joku bugi, koska näyttää ihan kuin yksi
+sormi olisi koko ajan painettuna. jos koitan yhdellä sormella
+vierittää, niin kartta zoomautuukin sisään ja ulos, eikä vierity."*
+
+### 17.1 Juurisyy: kirjaston sormilistaan jää sormi, eikä se poistu itsestään
+
+Pallon ohjain on three.js:n **OrbitControls** (Globe.gl luo sen
+kankaalle: `new OrbitControls(camera, renderer.domElement)`). Se pitää
+yksityistä sormilistaa `_pointers` ja paikkoja `_pointerPositions`.
+Pallolla `enableRotate` on **false** (yhden sormen kierto tehdään itse,
+ks. luku 5), joten listan pituus ratkaisee kaiken:
+
+| `_pointers.length` | Mitä kirjasto tekee |
+| --- | --- |
+| 1 | `TOUCH.ROTATE` → pois käytöstä → ei mitään |
+| 2 | `TOUCH.DOLLY_PAN` → **zoom** (etäisyys sormien välillä) |
+
+Kirjaston oma kirjanpito on **epäsymmetrinen**, ja siinä on vika:
+
+- `pointerdown` luetaan **kankaalta**. Kun lista on tyhjä, kirjasto
+  kaappaa osoittimen ja lisää `pointermove`- ja `pointerup`-kuuntelijat
+  **dokumenttiin**.
+- `pointercancel` luetaan **vain kankaalta**.
+- `pointerup` vie listasta yhden. Vasta kun lista TYHJENEE, kirjasto
+  irrottaa dokumentin kuuntelijat ja palauttaa tilan (`STATE.NONE`).
+
+Jos yhden sormen loppu (`pointerup` tai `pointercancel`) ei tule
+perille — iOS:n WebKit nielaisee sen, kun se ottaa eleen itselleen, tai
+kun kosketuksen kohde-elementti (kupla, valikko, linssin paneeli tai
+lamppu) katoaa kesken kosketuksen — päädytään **imukuoppaan**:
+
+1. Kaksi sormea pallolla: lista `[A, B]`, dokumentin kuuntelijat kiinni.
+2. B:n loppu katoaa. A nousee → lista `[B]` → **pituus 1, ei 0** →
+   kirjasto ei irrota dokumentin kuuntelijoita eikä palauta tilaa.
+   Tila jää arvoon `TOUCH_DOLLY_PAN`.
+3. Seuraava YKSI sormi on kirjastolle **kakkonen**: lista `[B, C]` →
+   dolly. Koska roikkuvan B:n paikka ei liiku, sormien etäisyys muuttuu
+   suoraan sormen liikkeen mukana → **pallo zoomaa sisään ja ulos**.
+4. C:n nousu vie listan takaisin pituuteen 1. Tila ei parane koskaan
+   ilman uutta palloa: vika jää päälle koko istunnoksi.
+
+**Mitattu** (Chromium 834 × 1100, hasTouch, CDP:n oikeat kosketukset,
+7.9.2026; sivun tila asetetaan kohdan 2 mukaiseksi ja tehdään 150 px:n
+YHDEN sormen veto):
+
+| | Δ pituusaste | Δ korkeus |
+| --- | --- | --- |
+| terve pallo | −1,688° | 0,00000 |
+| roikkuva sormi listassa | −0,422° | **−0,12641** (0,169 → 0,042) |
+| korjattu | −1,688° | 0,00000 |
+
+Eli veto käänsi palloa enää neljäsosan siitä, mitä pitäisi, ja korkeus
+putosi neljäsosaan (pallo hyppäsi nelinkertaiseen lähikuvaan) —
+täsmälleen se, mitä omistaja kuvasi. Toiseen suuntaan vedettäessä
+sama liike zoomaa ulos: siitä *"sisään ja ulos"*.
+
+**Miksi elettä ei saatu toistettua kontissa.** Ele-sarjat, joilla
+kadonnutta loppua yritettiin tuottaa Chromiumilla — nipistys, peruutus
+(`touchCancel`) kesken vedon, veto kotelon ulkopuolelle, napautus
+kuplaan kesken vedon — päättyivät kaikki siistiin `pointerup`-pariin, ja
+`_pointers` tyhjeni oikein. Chromiumin *implicit pointer capture* pitää
+kosketuksen kohteen paikallaan, vaikka elementti katoaisi. Vika elää
+iPadin WebKitissä. Siksi vartio (17.5) mittaa **seurauksen**: pallo
+asetetaan siihen tilaan, jonka kadonnut loppu jättää, ja korjauksen on
+selvittävä siitä.
+
+### 17.2 Korjaus: pallon oma sormivahti lukee dokumentista
+
+`js/pallo.js` `asennaPallonEleet` piti ennen pelkkää **lukumäärää**
+(`sormet.alhaalla`) ja luki sen kotelosta. Nyt:
+
+| Ennen | Nyt |
+| --- | --- |
+| `sormet.alhaalla` (luku) | `sormet.idt` (pointerId-joukko), `alhaalla` = sen koko |
+| `kotelo` pointerdown/up/cancel | **dokumentti, kaappausvaihe** (alas suodatetaan `kotelo.contains`illa) |
+| — | `nollaaKosketusOhjaimet` tyhjentää kirjaston listan |
+| — | tausta (`visibilitychange`), fokus (`blur`), `pagehide`, kerroksen ilmoitus |
+
+Kaksi kohtaa ratkaisee:
+
+1. **Ensimmäinen sormi siivoaa HETI.** Kun `sormet.idt` on tyhjä ja
+   sormi laskeutuu koteloon, kirjaston listan on oltava tyhjä; jos ei
+   ole, se nollataan siinä samassa. Kuuntelija on dokumentin
+   kaappausvaiheessa, joten se ehtii **ennen** kirjaston omaa
+   pointerdownia kankaalla — muuten kirjasto olisi jo lukenut sormen
+   kakkoseksi. Tämä on varsinainen parannuskeino: mistä tahansa
+   roikkuva sormi tuleekin, seuraava ele alkaa puhtaalta pöydältä.
+2. **Nosto ja peruutus luetaan dokumentista.** Kotelosta luettuna loppu
+   jäi tulematta joka kerta, kun sormi nousi kotelon ulkopuolella tai
+   päälliskerros katosi alta. Sama korjaus vei myös vanhan pikkuvian:
+   irrotuksen liuku (`paasta`) jäi ennen lähtemättä, jos sormi nousi
+   kotelon ulkopuolella, ja se lähtee nyt vasta VIIMEISEN sormen
+   noustessa (nipistyksen ensimmäinen irtoava sormi ei ole heitto).
+
+Siivous noston jälkeen tehdään **0 ms:n ajastimella**: kirjaston oma
+nostokäsittelijä istuu dokumentissa kuplavaiheessa, ja jos lista
+nollattaisiin heti kaappausvaiheessa, kirjaston oma "viimeinen sormi
+nousi" -haara (kaappauksen vapautus, `end`-tapahtuma) jäisi ajamatta
+joka kerta. Ajastin päästää tapahtuman läpi ensin, ja nollaus tehdään
+vain, jos listaan JÄI jotain.
+
+### 17.3 Turvaverkko: kerros ilmoittaa katoamisestaan
+
+`js/ui-apurit.js`:
+
+| Vienti | Tehtävä |
+| --- | --- |
+| `KOSKETUKSEN_VAPAUTUS` | dokumentin tapahtuma `matkakirja:vapauta-kosketus` |
+| `vapautaKosketus({ paitsi, doc })` | kerros ilmoittaa: kosketukset ovat ohi |
+| `nollaaKosketusOhjaimet(ohjaimet, idt)` | OrbitControlsin listan nollaus |
+
+Yhteys on **tapahtuma eikä tuonti**: sama vuoto koskee jokaista
+kelluvaa kerrosta, eikä yksikään niistä saa joutua tuntemaan palloa.
+`paitsi` on se sormi, joka on YHÄ pohjassa — valikko sulkeutuu
+pointerdownissa, ja sama sormi jatkaa usein panorointiin, joten sitä ei
+saa unohtaa samalla kun kadonneet unohdetaan.
+
+Kutsujat tänään:
+
+- **js/ui-apurit.js `asennaValikonSulkuvartija`** — valikko katoaa
+  pointerdownissa (luku 13); `paitsi` = tämän napautuksen sormi.
+- **js/pollo.js `sidoKuplanNapautus`** — kupla katoaa sulkevasta
+  napautuksesta; `paitsi` = juuri nouseva sormi.
+- **js/aikajana.js `pura`** — linssin paneeli, lamput ja loppulappu
+  katoavat kerralla; ei `paitsi`, koska koko näkymä päättyy.
+
+Uusi kelluva kerros, joka katoaa kesken kosketuksen, kutsuu samaa
+apuria. Se on halpa: ilman palloa (yksikkötestit, työhuoneen
+esikatselu) se ei tee mitään.
+
+### 17.4 Miksi kenttien nollaus eikä `dispose` tai `pointercancel`
+
+Kirjasto ei tarjoa sormilistan nollausta. Kolme vaihtoehtoa punnittiin:
+
+1. **`dispatchEvent(new PointerEvent('pointercancel', { pointerId }))`
+   kankaalle.** Kirjasto ajaisi oman polkunsa, mutta se kutsuu
+   viimeisellä sormella `releasePointerCapture(id)`:tä, joka **heittää**,
+   kun osoitin ei ole enää elossa — juuri se tilanne, jota siivotaan.
+   Poikkeus kuuntelijassa ei kaada peliä, mutta se näkyy sivun
+   virheenä, ja savukkeet lukevat ne. Jää **varapoluksi** sille
+   tapaukselle, ettei kirjaston versio tunne `_pointers`-kenttää.
+2. **`controls.dispose()`** — liikaa: se purkaa koko ohjaimen
+   kuuntelijoineen, eikä pallo tottelisi enää.
+3. **Kenttien nollaus** (valittu): `_pointers` tyhjäksi,
+   `_pointerPositions` tyhjäksi, `state = -1` (`STATE.NONE`) ja
+   dokumentin liike-/nostokuuntelijat pois. Lopputila on täsmälleen
+   sama kuin kirjaston omalla "viimeinen sormi nousi" -haaralla, joten
+   seuraava sormi kulkee kirjastossa normaalia "ensimmäinen sormi"
+   -polkua.
+
+### 17.5 Vartiot ja sivuhavainto
+
+**Savuke** `tools/savukkeet/savuke-pallo-kosketus.mjs` (iPadin mitat
+834 × 1100, `hasTouch`, CDP:n `Input.dispatchTouchEvent`):
+
+1. yhden sormen veto panoroi (suunta muuttuu, korkeus ei);
+2. **roikkuva sormi** istutetaan kirjaston listaan 17.1:n kohdan 2
+   mukaisesti → seuraava yhden sormen veto panoroi silti, ja lista on
+   vedon jälkeen tyhjä;
+3. pulun kupla suljetaan **kesken** pallolla olevaa vetoa → veto
+   jatkuu katkeamatta (tämä vartioi `paitsi`-säännön) ja seuraava veto
+   panoroi;
+4. Ihmisen matka ajetaan loppuun, loppusanojen **Sulje** kosketetaan →
+   veto panoroi;
+5. kahden sormen nipistys zoomaa yhä.
+
+**Yksikkötesti** `tests/roikkuva-kosketus.test.mjs` vartioi nollaimen
+lopputilan, kerroksen ilmoituksen ja pallon sormivahdin kytkennät ilman
+selainta; `tests/pallo.test.mjs` vartioi, että nosto ja peruutus
+luetaan dokumentin kaappausvaiheesta.
+
+**Sivuhavainto Fablelle (ei korjattu tässä):** pulun kuplapino
+(`.pollo-kuplapino-kehys`, z-index 40) jää pallolaudalla pallon kuoren
+alle — kuplan keskeltä `elementFromPoint` antaa kankaan, ei kuplaa.
+Napautus kuplaan ei siis mene perille pallolaudalla. Savuke ajaa
+napautuksen kuplan omaan elementtiin ja kirjaa havainnon INFO-rivinä.
+
+## 18. Noston teksti klikattavaksi ja nappulan jalka pisteeseen (7.9.2026)
+
+Kaksi omistajan vikaa ja yksi päätoimittajan linjaus samasta illasta
+(Raamattu, **VIAT v1672**). Kolmas kohta (äänimaisema irti musiikista)
+on `docs/moduulit/aanet.md`.
+
+### 18.1 Napautus osui kuvakkeeseen, ei tekstiin
+
+Omistaja, sanatarkasti: *"Karttanostoissa teksti ei ota klikkausta
+ainoastaan kuvake. Saisiko myös tekstit klikattaviksi?"*
+
+**Juurisyy.** Pallon osumatesti on R-malli (luku 4.2, riski 3): sormen
+pinnalle osunut piste ja siitä LÄHIN MERKKI 44 px:n sisällä
+(`napautaPintaan` → `lahinMerkki`). Merkin paikka on sen oma
+karttapiste — kuvakkeen keskus — mutta nimilappu piirtyy kuvakkeen
+KYLKEEN ja voi ulottua kauas siitä. Pitkän nimen ulkopää jää säteen
+ulkopuolelle, ja tiheässä nipussa se on jo lähempänä NAAPURIN
+keskipistettä. Nimilappu ei siis ollut osumapintaa lainkaan.
+
+Mitattu Chromiumilla 7.9.2026 (390 × 844, dpr 2, korkeus 0,12, kaikki
+ruudulla olevat nostolaput, napautus lapun ulkoreunaan 2 px reunan
+sisään):
+
+| näkymä | lappuja | ulkopää osui omaan | osui TOISEEN | ei mitään |
+| --- | --- | --- | --- | --- |
+| Bukarest | 17 | 8 | 3 | 6 |
+| Ateena | 17 | 10 | 0 | 7 |
+| Helsinki | 8 | 5 | 1 | 2 |
+| Istanbul | 12 | 4 | 1 | 7 |
+
+Esimerkkejä: *"Draculan alaviite"* (73 px leveä lappu) ja *"Nadia
+Comăneci"* eivät saaneet ulkopäästään mitään; *"Branin linna"* ja
+*"Balkanvuoret"* avasivat naapurin kortin. Juuri se lukee kädessä
+"teksti ei ota klikkausta".
+
+**Korjaus.** Nostokerros antaa jokaiselle osumalle sen NIMILAPUN
+LAATIKON ruudulla (`js/pallolauta/nostot.js` `lappu(p)`), ja
+osumatesti tarkistaa myös sen (`js/pallolauta/lauta.js`
+`lappuunOsunut`). Laatikko on TÄSMÄLLEEN sama, jonka sovittelu laski
+(`nostonLaatikko`, luku 14) — sama kaava, samat asennot, sama
+ruutukoordinaatisto — joten piirretty muste ja osumapinta eivät voi
+erkaantua. Kolme rajausta:
+
+* **Piiloon soviteltu lappu ei ole osumapintaa.** Kun sovittelu vei
+  nimen kaupungin nimen tieltä, `lappu` palauttaa nollan ja jäljellä
+  on vain kuvakkeen säde — kuten ennen.
+* **Poltettu muste on mukana.** Laattaan paistetulla nostolla ei ole
+  elementtiä, mutta sen nimiö on yhtä lailla ruudulla; lauta tuntee
+  sen laatikon samasta kaavasta. Tiheässä maassa (Bukarest) KAIKKI
+  nostot ovat poltettuja, joten ilman tätä korjaus ei olisi koskenut
+  yhtäkään omistajan näkemää lappua.
+* **Kaupunkipisteen oma muste voittaa lapun.** Jos sormi on 7 px:n
+  levyn (`KAUPUNKIPISTEEN_HALKAISIJA_PX`) päällä, pelaaja tähtäsi
+  kaupunkiin. Kaikkialla muualla piirretty teksti voittaa pelkän
+  44 px:n läheisyyden. Kahden lapun mennessä päällekkäin voittaa
+  lähin laatikon keskipiste — sama sääntö kuin merkeillä
+  (fokusniput 9).
+
+**Vartija.** `tools/savukkeet/savuke-pallo-nostolaput.mjs` vartio 6:
+oikea hiiren napautus kankaalle (ei kutsu laudan metodiin) Bukarestin
+*"Strousberg"*- ja Helsingin *"Kirjasota"*-lapun tekstiin sekä
+sellaiseen lappuun, jonka ulkopää jäi vanhalta säännöltä saamatta —
+mittarina kunkin noston oma `avaa`, koska kortin sisältö tulee pakan ja
+ämpärin datasta eikä vika ollut siinä.
+
+### 18.2 Nappulan jalka hyppäsi 18 px siirron lopussa
+
+Päätoimittajan linjaus: pallolla nappulan **jalka** on kaupungin
+pisteessä sekä levossa että liikkeessä.
+
+**Juurisyy.** Liikkeessä nappula on pelin omaa DOMia kotelon päällä ja
+asemoi itsensä joka kehys jalka pisteessä (`js/pallolauta/siirto.js`:
+`p.x - leveys / 2, p.y - korkeus`). Levossa se on CSS2D-merkki, ja
+kirjaston kerros kirjoittaa elementin transformiin ensin OMAN
+keskityksensä (`translate(-50%, -50%)`, `CSS2DObject.center`) ja vasta
+sitten ankkurin. Inline-tyyli voittaa tyylitiedoston, joten
+`.pallolauta-nappula`-säännön `translate(-50%, -100%)` ei ollut
+voimassa: levossa pisteessä oli nappulan KESKIPISTE. Siirron
+viimeisellä kehyksellä hahmo siis loksahti puoli nappulaa (18 px)
+alaspäin.
+
+**Korjaus (css/styles.css).** Lepomerkin oma laatikko on `0 × 0`,
+jolloin kirjaston keskitys — prosentteja ELEMENTIN omasta laatikosta —
+ei siirrä sitä lainkaan ja elementin origo on täsmälleen pinnan piste.
+Nappulan svg asemoidaan sen suhteen irti tekstivirrasta ja nostetaan
+omalla mitallaan ylös (`position: absolute; transform:
+translate(-50%, -100%)`), jolloin alareunan keskipiste on pisteessä.
+Ei kirjaston sisuksia, ei kovakoodattuja pikseleitä, ei ajoitusta —
+ja liikkuva nappula (`.pallolauta-liikkuva`) jää säännön ulkopuolelle.
+
+**Vartijat.** `savuke-pallolauta` vartio 10 mittaa jalan kummastakin
+kuvasta: lepomerkin svg:n alareunan keskipiste on KOHDEKAUPUNGIN
+pisteessä ±1 px, ja liikkuvan nappulan jalka ensimmäisellä
+kehyksellään LÄHTÖKAUPUNGIN pisteessä ±1 px. Kuvien vaihto on sama
+kummassakin päässä (CSS2D-merkki ↔ kotelon oma elementti), joten
+lähtöpää todistaa myös saapumispään — ja se on mitattavissa
+kehysnopeudesta riippumatta, koska liikkuva nappula on siinä vielä
+paikallaan.
+
+Kaksi tarkkuutta, jotka mittaus vaati. Jalka verrataan pinnan
+pisteeseen SAMASSA kehyksessä eikä kahden eri hetken ruutupaikkojen
+erotuksena: kamera liikkuu siirron aikana, ja pelkkä ruutupaikkojen
+erotus näytti 134 px:ää, vaikka jalka oli kummassakin päässä
+kohdallaan. Ja näyte otetaan joka kehyksessä, ei 40 ms:n kyselyllä.
+Saapumispään viimeinen piirretty kehys on raportin tieto, ei ehto:
+kuormitetulla koneella kartta piirtyy pari kertaa sekunnissa, jolloin
+viimeinen näyte voi olla askeleen takana (mitattu 7.9.2026 rauhallisella
+koneella 0,28 px, kuormitettuna 134 px — sama koodi).
+`savuke-pallo-merkit-lukossa` vartio 4 mittaa jalan koko 200 px:n
+sormivedon ajan.
+
+Sivuvaikutus, joka on parannus: nimiladonta lukee pelin merkkien
+laatikot elementeistä (`merkit.laatikot('peli')`), ja nappulan laatikko
+on nyt siellä, missä hahmo oikeasti on.
+
+
+## 19. Kohdekaupunki on selvästi suurempi kuin kohdemerkit (8.9.2026)
+
+**Omistaja, sanatarkasti** (iPad-kaappaus Riiasta): *"Miksi kohdekaupunki
+näkyy noin pienenä pallona? Se saisi olla selvästi suurempi."* — ja
+saman päivän lisäys klo 15.45: *"tee samoin myös kohdekaupungin
+tekstille joka jää lähellä liian pieneksi."*
+
+### 19.1 Mitattu ennen
+
+Kaappaus toistettiin Chromiumilla (`?lauta=pallo`, Riika, iPad
+834 × 1210 css, dpr 2, korkeus 0,05) ja mitattiin sekä omistajan
+kuvasta pikselitasolla että pelistä:
+
+| mitta | css-px | mistä |
+| --- | --- | --- |
+| kaupunkipiste (RIIKA) | 7,0 | `KAUPUNKIPISTEEN_HALKAISIJA_PX` (luku 12.5) |
+| kohdemerkki (karttanosto) | 11,0…11,4 | `KOHDEMERKIN_RUUTU_PX` = 2 · 7,4 · `NOSTON_MITTA` |
+| kohteen nimi (laattaan poltettu) | 16,4 | 8,5 px poltettuna, laatta venytettynä 1,93× |
+| kaupungin nimi (elävä) | 13,5 | `KARTTANIMI_KOOT.kaupunki`, paperivakio |
+
+Kaksi juurisyytä samassa kuvassa:
+
+1. **Piste on pienempi kuin kohdemerkki joka zoomilla.** Luvun 12.5
+   seitsemän pikseliä valittiin yleisnäkymän ehdolla (*"Tampereen
+   kohdalla iso musta ympyrä"*) eikä sitä koskaan verrattu
+   kohdemerkkiin. Kaupunki — se, johon matkustetaan — oli kartan pienin
+   merkki.
+2. **Nimi ei seuraa poltettua mustetta lähikuvassa.** Kaupungin nimi on
+   paperivakio, mutta kohteiden nimet ovat laatoissa poltettuina: kun
+   kamera menee syvimmän tason (z8) sisään, laattaa venytetään
+   (`laattojenVenytys`, iPadin lähimmässä näkymässä 1,93×), ja poltto
+   olettaa dpr 2:n (`NOSTOLADONTA_POLTON_TIHEYS`), joten 8,5 px:n nimiö
+   on ruudulla 8,5 · venytys · 2/dpr = 16,4 px. Maanäkymässä suhde on
+   tilattu 13,5 : 8,5, lähikuvassa se oli kääntynyt ympäri.
+
+### 19.2 Sääntö: lattia, ei uutta vakiota
+
+`js/pallolauta/lauta.js kohdekaupunginMitat` antaa kaupungin pisteelle
+ja nimelle LATTIAN, joka mitataan siitä, mitä kartalla juuri nyt on:
+
+> piste ≥ `KOHDEKAUPUNGIN_PISTE_SUHDE` (1,5) × kohdemerkin halkaisija
+> nimi ≥ `KOHDEKAUPUNGIN_NIMI_SUHDE` (1,3) × kohdenimiön ruutukoko
+
+**Lattia ei koskaan pienennä mitään** (`Math.max`): yleisnäkymässä piste
+on tavulleen entinen 7 px ja nimi entinen 13,5 px.
+
+**Pisteen lattia koskee vain lähikuvaa, jossa kohdemerkkejä on.** Portti
+on sama luku kuin merkeillä itsellään (`js/pallolauta/nostot.js
+lehdenOsuus ≥ LEHDEN_VAHIN_OSUUS`) — vertailua ei ole siellä, missä
+verrattavaa ei ole, eikä yleisnäkymän 7 px siis muutu pikseliäkään
+(luvun 12.5 korjaus säilyy). Liu'utus `KOHDEKAUPUNGIN_TAYSI_OSUUS`:een
+(0,75) tekee muutoksesta jatkuvan: piste kasvaa portin auetessa
+asteittain eikä hyppää.
+
+**Nimen lattia ei tarvitse porttia.** Se puree vasta kun poltettu muste
+on venytettyä (suurennus > 1,59), eli täsmälleen siinä lähikuvassa,
+josta omistaja kirjoitti. Suurennuksen katto on laattojen oma sallittu
+venytys (`PALLON_SALLITTU_VENYTYS` = 2): sitä syvemmällä laatta on
+pelkkää sumua, eikä merkin pidä kasvaa sumun mukana rajatta.
+
+**Ladonta tietää molemmat.** `nimet.lado` saa samasta laskusta
+`kokoKerroin`-luvun ja `pisteSade`-mitan, ja `ladoRuutunimet` varaa
+pisteelle sen säteen, joka sillä ruudulla oikeasti on — muuten suurempi
+piste jäisi oman nimensä alle. Sivuehdokkaiden etäisyys kasvaa samasta
+luvusta (`sijoitaKaupunginNimi`).
+
+### 19.3 Mitattu jälkeen
+
+Sama näkymä (Riika, iPad 834 × 1210, dpr 2, korkeus 0,05): piste
+7,0 → 17,2 px eli 1,5 × kohdemerkki, ja kaupungin nimi 13,5 → 21,3 px
+eli 1,3 × poltettu kohdenimiö (16,4 px). Puhelimella (390 css, dpr 3)
+poltettu muste ei ole venytettyä (suurennus 1), joten nimi pysyy
+13,5 pikselissä ja vain piste kasvaa. Yleisnäkymässä kumpikaan ei
+muutu: iPadilla korkeudella 0,8 piste on mitattuna 7,0 px, koska maan
+lehti ei enää täytä puolta näkymästä. Kapealla puhelinruudulla sama
+korkeus on vielä lehden näkymä (osuus 0,5…0,75), ja liuku antaa siellä
+8,8 px — kohdemerkit ovat kuvassa, joten vertailukin on.
+
+**Mitä EI muutu:** napautus on yhä 44 px:n säde ruudulla
+(`NAPAUTUKSEN_SADE_PX`) eikä se ole koskaan lukenut pisteen kokoa.
+Nappula ei ole pallolla sidottu pisteeseen (se on oma H-merkkinsä,
+32 px), joten sen koko on ennallaan; 17,2 px:n piste jää yhä nappulan
+alle, mutta reunaa jää nyt näkyviin — sama suhde kuin tasokartan
+laatalla, jonka alta omistaja halusi laatan näkyvän (`js/ui.js`
+`FOKUS_NAPPULA_PX`).
+
+**Vartijat:** `tests/kohdekaupunki.test.mjs` (lattia on olemassa ja
+≥ 1,5 × kohdemerkki, nimi ≥ 1,3 × kohdenimiö joka suurennuksella,
+yleisnäkymä muuttumaton, lattia jatkuva eikä hyppää portilla, ladonta
+varaa suuremman pisteen).
+
+### 19.4 Illan korjaus: lattia on yhden pisteen sääntö (8.9.2026 ilta)
+
+**Omistaja, sanatarkasti** (Mac, koko Eurooppa ruudulla, Fogg
+Kiovassa): *"tällä zoom tasolla kaupunki pallot jäävät liian isoiksi"*.
+
+Luvun 19.2 lattia laskettiin kerran näkymästä ja kirjoitettiin
+**kaikille 261 pisteelle** (`pisteenSade`, `tahdistaPisteidenKoko`).
+Portti on maan lehden osuus näkymästä, ja Ukrainan levyinen lehti
+täyttää puolet ruudusta jo koko Euroopan zoomilla: mitattu omistajan
+näkymästä (Chromium 1419 × 821 css, korkeus 0,42) `lehdenOsuus` 0,82 —
+yli `KOHDEKAUPUNGIN_TAYSI_OSUUS`:n, eli jokainen kaupunki oli kasvanut
+17,2 pikseliin. Omistajan kuvasta mitattu 14 laitepikseliä = 7,0 css-px
+on se, mitä muiden kaupunkien piti olla.
+
+**Sääntö on pistekohtainen** (`kaupunkipisteenHalkaisijaPx`): lattia
+koskee vain pelaajan nykyistä kaupunkia (`ui.game.cityOf`) — sitä yhtä,
+jonka lehteä kartalla luetaan ja jonka kohdemerkkejä vasten mitta
+otetaan. Kaikki muut ovat `KAUPUNKIPISTEEN_HALKAISIJA_PX` joka
+zoomilla, myös osuudella 1. Mitta lasketaan yhä kerran näkymästä
+(välimuisti `kaupunkiAvain`, jossa on nyt myös pelaajan kaupunki ja
+kesken oleva siirto), mutta se luetaan pisteelle vasta kun piste ON se
+kaupunki: kun pelaaja siirtyy, vanhan kaupungin piste palaa 7 px:ään ja
+uusi kasvaa.
+
+**Portti on myös pelitilan portti.** `nostot.lehdenOsuus` palauttaa 0
+samoissa tiloissa, joissa keräys ei tuota yhtään merkkiä (katselutila,
+lähtövalinta, avauslento, kesken oleva siirto) — sama ehto kuin
+`keraa`:n `lehtiNakyy`. Lattia ei siis ala ennen kuin kohdemerkkejä
+oikeasti piirretään.
+
+**Mitattu jälkeen** (sama näkymä, Chromium 1419 × 821 css, korkeus
+0,42): Kiova 16,3…17,0 px (lattia) ja Venetsia, Lontoo, Ateena,
+Berliini 5,8…7,0 px — perspektiivi syö pallon reunalla vajaan
+kymmenyksen 7 pikselistä, kuten ennenkin. Yleisnäkymän 7 px ja
+lähikuvan lattia (luku 19.3) ovat ennallaan.
+
+**Vartijat:** `tests/kohdekaupunki.test.mjs` osio 5 (lattia vain
+pelaajan kaupungille, muut 7 px myös osuudella 1, lattia siirtyy
+pelaajan mukana).
+
+## 20. Kaupunkipiste pysyy kaupunkinsa päällä (8.9.2026 ilta)
+
+**Omistaja, sanatarkasti** (Mac, kaappaus Venetsiasta lähizoomista):
+*"kaupunkien pisteet eivät myöskään pysy paikallaan, vaan liikkuvat
+panoroitaessa. minusta tuo korjattiin jo aiemmin mutta on ilmeisesti
+taas palannut."*
+
+### 20.1 Eri vika kuin 6.9. venyminen
+
+Luvun 12.6 korjaus (lieriö → levy) poisti **venymisen**. Tämä on
+**parallaksi**: kirjasto asettaa pisteen olion pinnan pisteeseen ja
+kääntää sen +z:n pallon keskustaan, joten levy (paikallinen z = −1,
+skaalattuna `scale.z`:lla) on 0,3 yksikköä pinnan yläpuolella
+**pintanormaalin** suuntaan. Lähikuvassa kamera on vain
+korkeus × 100 yksikön päässä pinnasta, joten kohotettu piste
+projisoituu ruudun keskipisteestä ulospäin — sama ilmiö, joka luvussa
+12 vaivasi CSS2D-merkkejä, mutta pistekerroksessa.
+
+Mitattu (Chromium 1440 × 900 css, dpr 2, Venetsia; levyn keskipiste
+projisoituna vs. `getScreenCoords(lat, lon, 0)`):
+
+| näkymä | etäisyys keskustasta | levy sivussa |
+| --- | --- | --- |
+| korkeus 0,08 | 16 px | 0,7 px (4,21 %) |
+| korkeus 0,08 | 197 px | 8,3 px (4,20 %) |
+| korkeus 0,08 | 294 px | 12,3 px (4,19 %) |
+| korkeus 0,60 | 130 px | 1,0 px (0,80 %) |
+
+Virhe on siis vakio-osuus etäisyydestä ruudun keskustaan (4,2 %
+lähikuvassa): ruudun keskellä nolla, laidalla Macin leveällä ruudulla
+kymmeniä pikseleitä — juuri siksi vika näkyy vasta panoroitaessa.
+
+### 20.2 Korjaus: levy katsesäteelle
+
+`js/pallolauta/lauta.js katsesateenPaikka` siirtää olion paikkaa niin,
+että levy ei nouse pinnasta **ulos** vaan **kameraa kohti**: paikasta
+vähennetään sama matka pintanormaalia pitkin, joka siihen lisätään
+katsesäteen suuntaan. Levy on silloin täsmälleen sillä säteellä, joka
+kulkee kaupungin pinnan pisteen läpi, ja projisoituu tarkalleen siihen.
+**Mitattu jälkeen: 0,00 px kaikissa neljässä näkymässä yllä.**
+
+Korkeus (`scale.z`) säilyy, ja sen kanssa piirtojärjestys: piste on yhä
+laattojen (pinta), aihevalojen (0,15), reittien (0,2) ja askelhelmien
+(0,25) päällä — nyt jopa varmemmin, koska 0,3 yksikköä mitataan suoraan
+kameran suuntaan eikä normaalia pitkin. Napautus (raycast levyyn) ja
+siirtymät ovat ennallaan. Sama korjaus koskee kaikkia pistekerroksen
+olioita: kaupunkeja, askelhelmiä ja aihevaloja.
+
+**Olion asentoon ei kosketa.** Levyn kääntäminen kameraa kohti
+(`lookAt`) olisi yhtä helppoa, mutta pisteen materiaali on kirjaston
+`MeshLambert` ja suuntavalo on kiinteästi pohjoisnavan suunnassa
+(mitattu scenestä: `DirectionalLight` kohdassa 0, 1, 0), joten
+normaalista riippuva sävy on nyt kaupungin leveysasteen vakio. Kameraa
+katsova levy vaihtaisi sävyään panoroitaessa.
+
+**Pienempi korkeus ei riitä:** kirjaston lattia `scale.z`:lle on 0,1
+yksikköä (`max(alt · R, 0,1)`), ja sekin jättäisi samalla korkeudella
+1,3 %:n virheen — Macin laidalla toistakymmentä pikseliä. Levy
+täsmälleen pinnalla (paikallinen z = 0) taas jäisi laattakerroksen
+syvyyssiirron (`LAATTAKERROS_SYVYYSSIIRTO` −8) alle.
+
+**Paikka kirjoitetaan** jokaisesta kameran liikkeestä
+(`tahdistaPisteidenKoko`), ladonnassa, ruudun koon muuttuessa ja vielä
+kerran kirjaston oman siirtymän jälkeen (`tahdistaSiirtymanJalkeen`):
+`pointsTransitionDuration` kirjoittaa olion paikan takaisin pinnalle
+joka kehyksellä 250 ms:n ajan, ja nukkuvalla silmukalla vasta
+herätyksen jälkeen. Laskenta lähtee aina datumin lat/lonista
+(`pallonPiste`), ei olion nykyisestä paikasta, joten toistuva kirjoitus
+ei kasaa siirtoa siirron päälle.
+
+**Vartijat:** `tests/kohdekaupunki.test.mjs` osio 6 (levy on
+katsesäteellä, projektio osuu pinnan pisteeseen, ennen/jälkeen-laskenta
+samalla kameralla) ja selainsavuke
+`tools/savukkeet/savuke-pallo-merkit-lukossa.mjs` vartio 3b (levyn oma
+ruutupaikka on pinnan pisteessä ±1 px myös ruudun laidalla).
+
+## 21. Lähizoomin kaupunkipisteet ja nimi osumapintana (9.9.2026)
+
+**Omistaja, sanatarkasti** (työpöytäkaappaus Euroopan lähizoomista,
+jossa näkyvät pelikaupungit isoilla kapiteelinimillä — WIEN, BUDAPEST,
+VENETSIA, SARAJEVO, SOFIA, BUKAREST, ISTANBUL — ja niiden ympärillä
+fokuskohteiden pienet pisteet kursiivinimineen): *"kohdekaupunkien
+pisteet saisivat puolestaan tässä zoom tasossa olla isommalla, nyt
+niitä ei erota muista palloista. lisäksi kaupungin nimi saisi olla myös
+klikattavaa aluetta"*.
+
+### 21.1 Mikä zoomi on "lähizoomi": kameran mittakaava, ei lehden osuus
+
+Luvun 19.4 lattian portti on `nostot.lehdenOsuus` — maan lehden leveys
+näkymästä. Se ei kerro zoomia lainkaan: Ukrainan levyinen lehti täyttää
+puolet ruudusta jo koko Euroopan zoomilla, ja juuri siksi 8.9. jokainen
+piste oli 17,2 px liian kaukaa katsottuna. Sama portti tekisi saman
+virheen uudestaan, joten lähizoomin mitta on **kameran oma mittakaava**
+`kamera.nakyvaAlue().skaala` (ruudun pikseliä yhtä lautayksikköä
+kohden).
+
+Mitattu Chromiumilla (1419 × 821 css, kotelo 1398 × 742, dpr 1, Fogg
+Wienissä, näkymä Venetsia–Istanbul kuten omistajan kaappauksessa):
+
+| korkeus | skaala | `lehdenOsuus` | näkymä |
+| --- | --- | --- | --- |
+| 0,60 | 0,69 | 0,22 | Eurooppa ja Pohjois-Afrikka |
+| 0,42 | 0,99 | 0,32 | koko Eurooppa (8.9. *"liian isoja"*) |
+| 0,30 | 1,39 | 0,45 | Alpit–Musta meri |
+| 0,22 | 1,89 | 0,61 | **omistajan 9.9. näkymä** |
+| 0,16 | 2,60 | 0,84 | Balkan |
+
+Liuku alkaa 8.9. näkymän yläpuolelta (`LAHIZOOMIN_SKAALA_ALKU` 1,2) ja
+on täydessä mitassaan omistajan näkymässä (`…_TAYSI` 1,8). Se on yksi
+jatkuva funktio (`lahizoominOsuus`), joten piste kasvaa pehmeästi eikä
+hyppää missään kohdassa — ja 8.9. sääntö säilyy tavulleen.
+
+**Tavoitekoko on kaksi kohdepistettä:**
+`LAHIZOOMIN_PISTE_SUHDE` × `KOHDEMERKIN_RUUTU_PX` = 2 × 11,44 =
+**22,87 px**. Nappula on 32 px, joten piste jää yhä sen alle.
+Pelaajan kaupungin lattia (luku 19.4) on ennallaan: pelaajan piste on
+näiden kahden suurempi eikä siis pienene mistään.
+
+### 21.2 Mitattu ennen ja jälkeen (pisteen halkaisija ruudulla)
+
+Halkaisija laskettu olion skaalasta ja kameran etäisyydestä
+(`2 · scale.x · f / etäisyys`, `f = korkeusPx / (2 tan(fov/2))`).
+`muut` on suurin muu kuin pelaajan kaupunki (ruudun keskellä; pallon
+reunalla perspektiivi syö osan), `oma` on Wien.
+
+| korkeus | skaala | ENNEN muut | JÄLKEEN muut | ENNEN oma | JÄLKEEN oma |
+| --- | --- | --- | --- | --- | --- |
+| 0,60 | 0,69 | 6,98 px | 6,98 px | 6,87 px | 6,87 px |
+| 0,42 | 0,99 | 6,97 px | 6,97 px | 6,78 px | 6,78 px |
+| 0,30 | 1,39 | 6,95 px | 11,90 px | 6,61 px | 11,33 px |
+| 0,22 | 1,89 | 6,88 px | **22,49 px** | 10,38 px | 20,79 px |
+| 0,16 | 2,60 | 6,84 px | 22,35 px | 14,63 px | 19,50 px |
+| 0,12 | 3,47 | 6,74 px | 22,01 px | 13,39 px | 17,85 px |
+
+Omistajan näkymässä (0,22) piste on siis **1,97 × kohdemerkki**
+(11,44 px), kun se ennen oli 0,60 × kohdemerkki. Kaukonäkymät (0,60 ja
+0,42) eivät muuttuneet pikseliäkään. Värit (käymätön seepia, käyty ja
+alku kulta, luentakuvallisten sininen v1709) ovat ennallaan.
+
+Kaappaukset: `/tmp/matkakirja-kaappaukset/pallopisteet-lahizoom-ennen.png`
+ja `…-jalkeen.png` (sama näkymä, korkeus 0,22).
+
+### 21.3 Nimi on osa osumapintaa
+
+Kaupungin nimi on ladottu piirtomerkki täsmälleen kuten noston
+nimilappu (luku 18.1), vain eri kerroksessa (`js/pallolauta/nimet.js`,
+CSS2D-solmu, `pointer-events: none`). Ennen osuma oli 44 px kaupungin
+**pisteestä**, joten pitkän nimen ulkopää jäi ulottumattomiin: mitattu
+samasta näkymästä, että pisin nimi (KAPPADOKIA) on musteeltaan 79,8 px
+leveä ja sen ulkopää **94,3 px** pisteestä.
+
+Korjaus: nimen laatikko tulee **samaan vertailuun** noston nimilapun
+kanssa (`musteenVoittaja`): etäisyys laatikkoon (musteen päällä 0),
+`LAPUN_KOSKETUSVARA_PX`, pienin voittaa ja tasapelissä lähin
+keskipiste. Laatikko talletetaan **pisteen suhteen** (`nimet.js`
+`osuma(p)`), koska ladonta ajetaan vain levossa mutta nimi seuraa
+pistettään CSS2D:n mukana — sama ratkaisu kuin nostojen `lappu(p)`.
+Voittaja on `{ laji: 'kaupunki', k }`, eli täsmälleen sama tietue kuin
+pisteen napautuksesta, ja teon tekee sama `napautaKaupunki`.
+
+Fokuskohteiden nimet eivät vuoda kaupunkeihin: kohteen lappu on oma
+ehdokkaansa ja voittaa oman musteensa päällä, eivätkä laatikot mene
+päällekkäin (sovittelu pitää kaupungin nimen kiinteänä esteenä).
+
+**Mitattu jälkeen** (aidot hiiren klikkaukset, kamera-ajot kirjattu):
+
+| napautus | ENNEN | JÄLKEEN |
+| --- | --- | --- |
+| Sofian piste | ei ajoa | ajo laudan kohtaan 6611, 1696 |
+| Sofian nimi (26,6 px pisteestä) | ei ajoa | **sama ajo** 6611, 1696 |
+| Kappadokian nimen ulkopää (94,3 px) | ei ajoa | ajo 7001, 1867 (sama kaupunki) |
+
+Sivutuote: kaupunkipisteen oma muste voittaa lapun (luku 18.1) nyt
+pisteen **todellisella** ruutuhalkaisijalla eikä kiinteällä 7 px:llä,
+joten lähizoomissa myös pisteen napautus osuu luotettavammin.
+
+**Vartijat:** `tests/kohdekaupunki.test.mjs` osio 5b (lähizoomin koko,
+liu'un jatkuvuus, kaukonäkymän muuttumattomuus) ja
+`tests/pallonimet.test.mjs` osio 7 (nimen napautus antaa saman
+kaupungin, fokuskohteen lappu ei osu kaupunkiin, kytkennät).
+
+## 22. Saapumisasento: kaupunki alimpaan kolmannekseen (9.9.2026)
+
+Omistajan tilaus 9.9.2026 klo 16.10 (Raamattu, SAAPUMISESSA KAMERA
+ASETTUU NIIN, ETTA KAUPUNKI ON ALIMMASSA KOLMANNEKSESSA JA LUENTAKUVA
+SEN YLAPUOLELLA HIEMAN OIKEALLA, sanatarkasti):
+
+> "kun tullaan uuteen kaupunkiin, kamera saisi asettua niin että
+> kaupunki jää alimpaan kolmannekseen ja kuva tulee sen yläpuolelle ja
+> vähän oikealle, niin että se ei jää matkakirjan tekstin peittoon
+> varsinkin pienillä näytöillä"
+
+### 22.1 Kohdistuspisteen siirto, ei uutta paikkaa laudalla
+
+Kamera keskittää aina näkymän keskipisteen. Asento toteutetaan siis
+**kohdistuspisteen siirtona**: saapumisajo katsoo pistettä, joka on
+kaupungin pohjois- ja itäpuolella juuri sen verran, että kaupunki itse
+asettuu ruudulla kohtaan (0,42 · leveys, 0,78 · korkeus). Laudan
+pisteitä ei liikuteta, zoomi ei muutu, eikä mikään kehyssilmukka korjaa
+kameraa jälkikäteen — pelaajan oma panorointi ja nipistys jäävät
+voimaan sellaisinaan.
+
+Kaava on **yhteinen molemmille laudoille** (`js/saapumisasento.js`,
+puhdas moduuli ilman DOMia). Poikkeama annetaan osuuksina näkymästä
+(`saapumisenPoikkeama` → `{ x: −0,08, y: +0,28 }`), ja kumpikin lauta
+soveltaa sitä omissa yksiköissään:
+
+| lauta | funktio | yksikkö |
+| --- | --- | --- |
+| pallo | `saapumisenPallonKohta` | asteita (lat/lng) |
+| tasokartta (nukkuu) | `saapumisenKameranKohta` | lautayksiköitä |
+
+Pallolla pystysiirto on `poikkeama.y · leveysAst · (paneH / paneW)`,
+missä `leveysAst` on ruudun leveydellä näkyvä kaari
+(`asteetLeveydesta`). Vaakasiirto jaetaan **kosinilla**, koska
+pituusaste on kaarta ahtaampi napoja kohti; ilman jakoa Lontoossa kuva
+liukuisi 38 % liian vähän. Etumerkit ovat vastakkaiset: ruudun alaspäin
+on etelään (lat pienenee), mutta lautayksiköiden y kasvaa alaspäin.
+
+### 22.2 Kolme kutsukohtaa — ja vain ne
+
+`saapuminen: true` on `kameranKohde`-kohteen lippu
+(`js/pallolauta/kamera.js`, sama nimi `js/kartta.js`:ssä):
+
+1. **`kamera.kotiin`** — lento- ja teleporttisaapumiset
+   (`js/pallolauta/siirto.js laske`, `lauta.js paivita`);
+2. **avauslennon maali** (`js/pallolauta/avaus.js`): siirto kulkee
+   suunnitelman loppuun `lennonVaihe`-painotuksena (`loppusiirto`), ei
+   hyppynä, joten lähtökuva on ennallaan, liike on yhä yksi kaari ja
+   laskeutumisen jälkeinen `kotiin` pysyy nolla-ajona. Reduced motionin
+   suora hyppy saa saman lipun;
+3. **saattava kamera** (`js/ui.js aloitaSaattavaKamera`) — kävelymatkalla
+   tämä ON saapumisajo, koska paluuajo poistettiin 1.9.2026.
+
+Muualta lippua ei anneta, joten ennakkozoomi, kohdesovitus, linssit ja
+pelaajan omat eleet katsovat kohdettaan keskeltä kuten ennenkin.
+
+### 22.3 Mitattu (Chromium 9.9.2026, Lontoo, saapumisleveys 240)
+
+Kaupungin **todellinen** ruutupaikka luetaan Globe.gl:n
+`getScreenCoords`-projektiosta, ei `nakyvaAlue`-arviosta (ks. 22.4):
+
+| ruutu | karttapinta | kaupungin x | kaupungin y |
+| --- | --- | --- | --- |
+| työpöytä 1600 × 1000 | 1579 × 921 | 41,8 % | **77,8 %** |
+| puhelin 430 × 930 | 414 × 861 | 41,2 % | **77,7 %** |
+
+Molemmilla piste on alimmassa kolmanneksessa (raja 66,7 %) ja hitusen
+keskeltä vasemmalla, kuten tilattiin. Kaappaukset
+`saapuminen-kolmannes-tyopoyta.png` ja `-puhelin.png`.
+
+### 22.4 Sivulöytö: `nakyvaAlue` on pallolla likiarvo
+
+Sama mittaus paljasti, että `ui.nakyvaAlue()` — jolla HTML-kerroksen
+merkit (Etsi aarre -nappi, pulun paikkamerkki) laskevat ruutupaikkansa —
+on pallolla **likiarvo**. Se kohtelee laudan yksiköitä ruudulla
+lineaarisina, mutta laudan projektio on Millerin lieriö: y venyy
+leveysasteen mukana ja x on pituusastetta eikä kaarta. Lontoossa
+(51,5° N) ero mitattiin näin:
+
+| piste | `nakyvaAlue`-arvio | `getScreenCoords` | ero |
+| --- | --- | --- | --- |
+| Lontoo, 1579 × 921 | 581, 806 | 660, 717 | −79 px x, +89 px y |
+
+Kertoimet ovat Millerin venytys (1,34× pystyssä) ja
+1/cos 51,5° = 1,61 (vaakasuunnassa). Ero on nolla päiväntasaajalla ja
+kasvaa napoja kohti; lähikuvassa se on kymmeniä pikseleitä.
+
+Luentakuva (`js/fokusvirta.js`) käyttää siksi **pallon omaa
+projektiota**, kun pallolauta on hereillä, ja `nakyvaAlue`-arviota vasta
+sen puuttuessa. Sama korjaus kuuluisi Etsi aarre -napille ja pulun
+paikkamerkille — se on oma eränsä, ei tämän.
+
+## 23. Lento on matka, ei määränpää (16.9.2026)
+
+Omistajan havainto pelin SISÄISESTÄ lennosta (Raamattu,
+KARTTAUUDISTUKSEN PAATOKSET 30): *"lentomatkalla punainen viiva ei
+piirry, kartta zoomaa suoraan kohdemaahan, pulu näkyy lennon aikana."*
+Kolme havaintoa, viisi juurisyytä — kaikki mitattu Chromiumilla
+390 × 844, lento Ateena → Rooma (`tools/savukkeet/savuke-lento-rajaus.mjs`).
+
+**1. Kamera zoomasi kohdemaahan 45 ms:ssa.** `game.actionFly` siirtää
+pelaajan kohdekaupunkiin JO ENNEN animaatiota, ja `ui.movingPlayerId`
+asetetaan vasta `animatePawn`issa. Siinä välissä `ui.run`in oma render
+osui `lauta.js`:n *"KAMERA SEURAA TELEPORTTIA"* -haaraan: kuljettajan
+rajausajo alkoi t = 21 ms ja `saavu()` ohitti sen t = 45 ms. Haara ei
+enää laukea, kun `ui.lentoKaari` on päällä — se on tosi täsmälleen
+lennon ajan (doFly asettaa ennen `actionFly`ta, nollaa vasta kun
+nappula on maassa).
+
+**2. Rajaus ei mahtunut ruutuun.** Kapealla ruudulla kameran
+`korkeuteenSovitus` (PÄÄTÖKSET 17) sovittaa laatikon RUUDUN KORKEUTEEN
+ja antaa sen vuotaa sivuille. Maalle se on oikein (maa mahdollisimman
+isona), matkalle tuhoisa: lennon laatikosta (375 × 154 lautayksikköä)
+näkyi 85 yksikköä eli alle neljännes. Kameran kohteelle lisättiin
+`kokonaan: true`, joka ohittaa korkeussovituksen ja sovittaa koko
+laatikon — lennon rajaus on ainoa käyttäjä.
+
+**3. Marginaali 0,35 → 0,158.** `marginaali` on osuus LAATIKOSTA joka
+reunalla, joten laatikon pää päätyy ruudun reunasta `m / (1 + 2m)`
+päähän: 0,35 antoi 20,6 % (matkasta näkyi lyhyt pätkä keskellä),
+0,158 antaa 12 %. Mitattu tulos 390 × 844: lähtö 88,0 % ja kohde
+14,1 % ruudun leveydestä.
+
+**4. Maan uloszoomauskatto puristi kuvan takaisin.**
+`matkaZoomirajat` nollasi vain linssin syrjäytyksen, ei `maanLaatikko`n
+kattoa: rajausajo nousi näkyvään leveyteen 385 yksikköä ja
+`tahdistaZoomirajat` veti sen kesken lennon 205:een (kohdemaan katto),
+jolloin lähtökaupunki valui ruudun ulkopuolelle (x = 1,21 ruudun
+leveyttä). `maanZoomiraja()` palauttaa nyt `null` matkan ajan — matka
+on määritelmän mukaan maan ikkunaa isompi. Katto palaa perillä
+(`palaaMaanRajaukseen`). Sama korjaus teki vihreäksi
+savuke-liiku.mjs:n vartion *"lento: koko matka näkyi ruudulla matkan
+ajan"*, joka oli punainen esiolemassa.
+
+**5. Kamera-ajo odotetaan, kone lähtee vasta sitten.** `hyppaa` ei enää
+heitä ajoa menemään (`void`) vaan lähettää koneen ajon lupauksesta
+(`.then(lahde, lahde)`), ja ajo venyi 900 → 1100 ms. Kone seisoo sen
+ajan lähtökaupungin yllä oikeassa asennossa (`aseta`), joten ruudulla ei
+ole hetkeäkään tyhjää. Odotuksen aikana purku ja ohitus ratkaistaan
+`lentoOdottaa`-tilasta, ettei katkaistu lento jäisi odottamaan lupausta.
+Mitattu: kameran keskipiste ja mittakaava eivät muutu lennon aikana
+lainkaan (poikkeama 0,000).
+
+**6. Punainen viiva oli vain avauslennon kutsu.** `lauta.reitit.jalki`
+(paksu sinooperi, geometria kerran ja kasvu katkoviivan osuudella) oli
+`avaus.js`:n oma; pelin lento ei koskenut siihen, eikä jäljen datumia
+ollut kerroksessa yhdelläkään lennon näytteellä. Nyt `siirto.js`
+rakentaa saman 64 pisteen kaaren (`lentokaarenKohta`, korkeus
+`REITIN_KORKEUS`) lennon alussa ja piirtää osuuden JOKA KEHYS samasta
+vaiheesta kuin koneen paikan — viivan kärki on koneen alla koko matkan.
+`laske()` piirtää jäljen täyteen ja poistaa sen kerroksen omalla
+siirtymällä. Avauslento (`omaKamera`) piirtää oman jälkensä kuten ennen,
+eikä kuljettaja kirjoita samaan kerrokseen kahdesti.
+
+**7. Pulu jäi ruudulle kolmessa paikassa.** Pallolaudan lento menee
+doFly:n KALVOTTOMAAN haaraan (pack `maailmankartta`, MANNER_LENTO_MS),
+jossa `body.flight-active` ei ole päällä. Uusi runkoluokka
+`lento-kesken` (doFly, poistuu `finally`ssä ja on js/main.js:n
+siivouslistalla) vie kelluvan napin ja paneelin samalla häivytyksellä
+kuin kalvolento — ja lisäksi:
+
+- `.pollo-nappi.pollo-ilmestyy` ajaa keyframe-animaation, joka on
+  kaskadissa yhtä painava kuin väistö mutta MYÖHEMPI: kun nappi syntyi
+  uudestaan kesken lennon, se animoitui takaisin näkyviin (25 näytettä
+  27:stä luki peittävyydeksi 1). Kolmen luokan valitsin voittaa
+  järjestyksestä riippumatta.
+- `.livia-kasvot-pinta.livia-lentonayttamo` on BODYN lapsi
+  (js/livia-eleet.js), 152 × 304 px `position: fixed` — napin häivytys
+  ei koske siihen lainkaan. Sama keino kuin linssissä
+  (`body.aikajana-pulu-piilossa`): `visibility: hidden`, jota myös
+  livia-eleiden oma näkyvyystesti lukee. Pulun ohjekupla
+  (`.pollo-vihje`) menee samaa tietä.
+
+Sääntö koskee vain pelin omaa lentoa: avauslennossa (`body.kartalento`)
+Livia puhuu ja kuuluu kohtaukseen.
+
+**Vartio:** `tools/savukkeet/savuke-lento-rajaus.mjs` (390 ja 1400,
+31 vartiota ja kolme vastakoetta). Se mittaa päiden ruutupaikat, kameran
+liikkumattomuuden, jäljen kasvun suoraan viivakerroksen kutsuista ja
+pulun kolme elementtiä — ja ottaa raporttikuvan jäädyttämällä lennon
+puoliväliin, koska Playwrightin kuvankaappaus kestää tässä kontissa
+16–28 sekuntia eli monta lentoa.

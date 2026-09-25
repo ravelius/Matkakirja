@@ -1,0 +1,677 @@
+/*
+ * PALLOLAUDAN REITIT — naapurireitit viivoina, askelhelmet pisteinä ja
+ * lentokaaret kaarina (vaihe 2, docs/moduulit/karttapallo.md luku 4.2:
+ * reitit **T** = pathsData, helmet **P** = pointsData, kaaret **A** =
+ * arcsData).
+ *
+ * KARTTA LAATOISSA, PELI PÄÄLLÄ (Raamattu 5.9.2026): reittiVERKKO on
+ * laatoissa tekstuurina eikä sitä piirretä pallolle. Pallolle piirretään
+ * vain se, mikä tasokartan elävässä matkareittikerroksessa on
+ * (js/ui.js paivitaMatkareitit): nykyisen kaupungin naapurireitit
+ * askelhelmineen VAIN MATKAN AJAN (Raamattu KARTTAUUDISTUKSEN PAATOKSET
+ * 8, omistaja 14.9.2026: *"reittiviuhka tulee nakyviin heti kun pelaaja
+ * painaa 'liiku' nappia ja on kokoajan nakyvissa kunnes pelaaja saapuu
+ * uuteen kaupunkiin tai peruuttaa liikkumisen eli jaakin nykyiseen
+ * kaupunkiin"*; ui.matkaSessioKesken), kesken reittiä se reitti jolla
+ * nappula on sessiosta riippumatta, ja lentokaaret vain lentolistan
+ * ollessa auki tai valitun lennon ajan (omistaja 1.9.2026: *"Piirretään
+ * ne näkyviin reaaliajassa vasta sitten jos pelaaja päättää mennä
+ * lentokoneella."*).
+ * SÄÄNTÖ ON YKSI: ui.matkareittienValinta() päättää, tämä vain piirtää.
+ *
+ * SAMA KIELI KUIN KARTALLA: maareitti hento musteviiva, merireitti
+ * sinertävä, lentokaari poltettua sinooperia (css .matkareitti-*),
+ * katkoviiva 50/50 ja lennolla 60/40, askelhelmet vaaleita pisteitä
+ * täsmälleen niissä kohdissa, joihin nappula pysähtyy (js/rules.js
+ * pointAlong, sama kaava kuin pixelOf).
+ *
+ * YKSI TOTUUS: laudan (x, y). Reitin poly käännetään asteiksi kerran
+ * per reitti ja muistetaan (karttapallo.md luku 5: "polyn asteistus
+ * välimuistiin per lauta"). Datumit ovat pysyviä olioita avaimittain,
+ * jotta Globe.gl siirtää olemassa olevaa viivaa eikä luo sitä uudestaan
+ * (pathTransitionDuration, KAIKKI LIIKE ANIMOIDAAN).
+ */
+
+import { pointAlong } from '../rules.js';
+import { pallonKorjattuPoly } from '../pallo.js';
+
+/*
+ * ── PATHSTROKE ON RUUTUPIKSELEITÄ, EI ASTEITA ─────────────────────
+ *
+ * Mitattu Chromiumilla 5.9.2026 (docs/moduulit/karttapallo.md luku 10.3):
+ * Globe.gl 2.46 rakentaa viivan Line2:na, jonka LineMaterialissa
+ * `worldUnits` on epätosi ja `resolution` kotelon koko CSS-pikseleinä.
+ * Varjostin laskee `offset *= linewidth; offset /= resolution.y`, joten
+ * luku on CSS-pikseleitä ruudulla — ja koska resolution on CSS-mitta,
+ * se on sama luku myös dpr 2:lla (kalibrointi: paksuus 11 piirtyi
+ * työpöydällä 11 ja puhelimella 22 laitepikseliä = 11 css-pikseliä).
+ *
+ * Ensimmäiset pallototeutukset laskivat nämä asteina (0,05), ja viiva
+ * jäi alle pikselin levyiseksi eli näkymättömiin. Kaikki pallon POLKUJEN
+ * paksuudet ovat siksi `_PX`-nimisiä ruutupikseleitä — sama mitta kuin
+ * tasokartan `MATKAREITIN_VIIVA_PX` (js/ui.js), jossa `non-scaling-stroke`
+ * teki saman työn. KATKON jakso on yhä asteita: se muutetaan osuudeksi
+ * polun pituudesta, eli se on geometriaa eikä ruudun mitta.
+ */
+
+/** Reittiviivan paksuus RUUTUPIKSELEINÄ (tasokartalla 2 px). */
+export const MATKAREITIN_PAKSUUS_PX = 2.5;
+/**
+ * NAAPURIREITIN VARJO: vaalea uoma musteviivan alla, 0,75 px kummallakin
+ * puolella. Tasokartalla reitti kulki vaalealla pergamentilla; pallon
+ * pinnalla sama 42 % musta katoaa tummaan maastoon ja mereen, joten
+ * viivan alle jää sama pergamentin sävy kuin askelhelmissä. Varjo on
+ * viivaa hitusen alempana (REITIN_VARJON_KORKEUS), jotta kaksi
+ * päällekkäistä viivaa ei välky toistensa läpi.
+ */
+export const MATKAREITIN_VARJON_PAKSUUS_PX = 4;
+/** Katkoviivan jakso asteina (viiva + väli); tasokartalla 8 px. */
+export const MATKAREITIN_KATKO_AST = 0.16;
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * VÄLIPISTE ON PÄÄTEPISTEEN KOKOINEN YMPYRÄ ILMAN PUNAISTA (Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 39, omistaja 18.9.2026 klo 20.40,
+ * sanatarkasti: *"valipisteet saisi nakya isommalla. saman kokoinen
+ * ympyra kuin paatepiste, mutta ilman punaista korostusta"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * ENNEN: helmi oli KARTTAVAKIO, säde 0,014 pallon yksikköä. Mitattuna
+ * omalla kaavallaan (js/pallolauta/lauta.js kaupunkipisteenSade,
+ * käänteisenä) se on 390 × 844:n ruudulla noin 1,2 px vertailu-
+ * korkeudella 0,37 ja noin 4 px lähimmässäkin siirtonäkymässä — juuri
+ * ne *"pienet valkoiset tapit"*, jotka omistaja näki Marseillen
+ * kuvasta. Päätepiste (nopanheiton kohdemerkki reitin varrella,
+ * js/pallolauta/merkit.js KOHDEMERKIN_PISTE_PX) on sen rinnalla
+ * 15 px:n ympyrä joka zoomilla.
+ *
+ * NYT: helmi on RUUDUN VAKIO ja täsmälleen sen päätepisteen kokoinen,
+ * joka on samaa lajia kuin se itse — reitin varrella oleva askelpiste
+ * (.target-piste.far, 15 px). Kun helmi on valittavissa, se saa
+ * päälleen punaisen katkorenkaan; kun ei ole, se on sama ympyrä ilman
+ * korostusta. Punainen jää siis yksin valinnan merkiksi.
+ *
+ * REUNUS KAHDELLA SISÄKKÄISELLÄ PISTEELLÄ. Globe.gl:n pisteellä on
+ * yksi materiaali eikä lainkaan viivaa, joten tumma reunus tehdään
+ * alemmalla, hitusen suuremmalla levyllä (`reuna: true`) ja
+ * pergamentti sen päällä. Levyt ovat katsesäteellä (lauta.js LEVY
+ * KATSESÄTEELLE), joten alempi korkeus tarkoittaa myös kauempana
+ * kamerasta — reunus jää varmasti pergamentin taakse.
+ */
+/** Askelhelmen ULKOhalkaisija ruutupikseleinä (= KOHDEMERKIN_PISTE_PX). */
+export const REITTIHELMEN_HALKAISIJA_PX = 15;
+/** Tumman reunuksen paksuus ruutupikseleinä (= .target-piste.far viiva). */
+export const REITTIHELMEN_REUNA_PX = 2.2;
+/** Pergamenttitäytteen halkaisija: ulkomitta miinus reunus molemmin puolin. */
+export const REITTIHELMEN_TAYTE_PX = REITTIHELMEN_HALKAISIJA_PX - 2 * REITTIHELMEN_REUNA_PX;
+/** Helmen korkeus: kaupunkipisteiden (0,003) alla, viivan (0,002) päällä. */
+export const REITTIHELMEN_KORKEUS = 0.0025;
+/** Reunuslevy hitusen pergamentin alla — yhä reitin viivan päällä. */
+export const REITTIHELMEN_REUNAN_KORKEUS = 0.0024;
+export const REITIN_KORKEUS = 0.002;
+export const REITIN_VARJON_KORKEUS = 0.0018;
+
+/*
+ * ══════════════════════════════════════════════════════════════
+ * KIINTEÄ PIIRTOJÄRJESTYS KIRJASTON OLIOILLE (datumin `jarjestys`)
+ * ══════════════════════════════════════════════════════════════
+ *
+ * VIKA (Fable 24.9.2026): vesistölinssin joet piirtyivät pallolla
+ * pätkittäisinä ja läpikuultavina. Mitattu näyttämöstä: jokainen
+ * penger ja uoma oli Line2, jonka materiaali oli OPAAKKI ja KIRJOITTI
+ * SYVYYTTÄ, renderOrder 0 ja korkeus sama (0,002) — kapeampi uoma
+ * taisteli leveämmän pengerensä kanssa samasta syvyydestä pätkä
+ * kerrallaan. Linssin reliefikalvo (linssit.js KALVON_SYVYYSSIIRTO −12)
+ * piirtyi opaakkien JÄLKEEN ja voitti syvyystestin osassa viivaa,
+ * jolloin 72 %:n kuva peitti uoman: läpikuultavuus syntyi siis
+ * kerrosten keskinäisestä järjestyksestä eikä viivan omasta väristä.
+ *
+ * KORJAUS ON NATIIVIN (proto-3d Linssit/Unity/VesistotKerros.cs):
+ * kerroksen viivat ja täytöt ovat läpinäkyvässä jonossa ilman
+ * syvyyskirjoitusta, ja järjestys on kiinteä (järvet, penkereet,
+ * uomat luokittain). Syvyystesti jää päälle, joten pallon takapuoli
+ * leikkautuu kuten ennen. Peittävyys pysyy 1:nä: läpinäkyvä jono on
+ * vain järjestystä varten, viiva on yhä täysin peittävä.
+ *
+ * Kirjasto (Globe.gl 2.46) ei tunne renderOrderia eikä depthWritea, ja
+ * se asettaa `transparent`-lipun värin alfasta joka päivityksessä.
+ * Siksi asetus tehdään JÄLKIKÄTEEN: kun kerros on työnnetty, oliot
+ * haetaan näyttämöltä muutamaan kertaan (kirjaston päivitys on
+ * viivästetty, ks. js/pallolauta/tahdet.js OLIOT LÖYTYVÄT VASTA KUN
+ * KIRJASTO ON KOONNUT NE) ja asetetaan datumin `jarjestys`-luvun
+ * mukaan. Olio, jolla lukua ei ole, palautetaan kirjaston oletuksiin
+ * — kirjasto voi kierrättää saman olion toiselle datumille.
+ */
+export const KERROSTUS_VIIVEET_MS = [0, 30, 120, 400, 1200];
+
+/**
+ * Yksi kirjaston olio (ryhmä lapsineen) kiinteään järjestykseen tai
+ * takaisin oletuksiin. Ei hae mitään näyttämöltä, joten sen voi ajaa
+ * Nodessa pelkillä olioilla.
+ */
+export function asetaPiirtojarjestys(ryhma, jarjestys) {
+  const kiintea = Number.isFinite(jarjestys);
+  if (!kiintea && !ryhma.__piirtojarjestys) return false;
+  const kaikki = [ryhma, ...(ryhma.children ?? [])];
+  for (const o of kaikki) {
+    o.renderOrder = kiintea ? jarjestys : 0;
+    const materiaalit = Array.isArray(o.material) ? o.material : (o.material ? [o.material] : []);
+    for (const m of materiaalit) {
+      const lapinakyva = kiintea ? true : (m.opacity ?? 1) < 1;
+      const syvyys = !kiintea;
+      if (m.transparent !== lapinakyva || m.depthWrite !== syvyys) {
+        m.transparent = lapinakyva;
+        m.depthWrite = syvyys;
+        m.needsUpdate = true;
+      }
+    }
+  }
+  if (kiintea) ryhma.__piirtojarjestys = jarjestys;
+  else delete ryhma.__piirtojarjestys;
+  return true;
+}
+
+/**
+ * Kerroksen `laji` (kirjaston `__globeObjType`, esim. 'path' tai
+ * 'polygon') oliot kiinteään järjestykseen. `jarjestysDatumista(data)`
+ * lukee luvun kirjaston datumista; polygoneilla se on `data.data`,
+ * koska kirjasto käärii linssin datumin omaansa.
+ */
+export function kerrostaPallolla(pallo, laji, jarjestysDatumista, ajastin = globalThis) {
+  const aja = () => {
+    const nayttamo = pallo?.scene?.();
+    if (!nayttamo?.traverse) return;
+    nayttamo.traverse((o) => {
+      if (o.__globeObjType !== laji) return;
+      asetaPiirtojarjestys(o, jarjestysDatumista(o.__data));
+    });
+  };
+  for (const ms of KERROSTUS_VIIVEET_MS) ajastin.setTimeout?.(aja, ms);
+}
+/**
+ * KAARI ON PUTKI, EI RUUTUVIIVA. `arcStroke` ei mene Line2:n läpi vaan
+ * kirjasto tekee siitä TubeGeometryn, jonka säde on `stroke / 2` pallon
+ * omissa yksiköissä (pallon säde 100). Luku ei siis ole asteita eikä
+ * ruutupikseleitä: 0,06 on noin 0,034° eli saapumisnäkymässä pari
+ * pikseliä, ja se ohenee zoomatessa ulos kuten kaikki pinnan geometria.
+ * Nimi on `_YKS`, jottei sitä sekoiteta polkujen `_PX`-lukuihin.
+ */
+export const LENTOKAAREN_PAKSUUS_YKS = 0.06;
+/** Lentokaaren katkojakso asteina (osuus lasketaan kaaren kulmasta). */
+export const LENTOKAAREN_KATKO_AST = 0.35;
+/**
+ * Lentokaaren huippu pallon säteinä 180°:n lennolla; lyhyempi lento
+ * kaartaa suhteessa matalammin. Kone (js/pallolauta/siirto.js) lentää
+ * saman kaaren, joten luku on täällä molempien luettavissa.
+ */
+export const LENTOKAAREN_KORKEUS = 0.5;
+/** Valitun lennon katkojälki kiertää kaarta (ms per kierros). */
+export const LENTOKAAREN_ELO_MS = 2400;
+
+/** Värit: css .matkareitti (#4a3a24 .42), .matkareitti-meri, .matkareitti-lento. */
+export const REITIN_VARIT = {
+  maa: 'rgba(74, 58, 36, 0.42)',
+  meri: 'rgba(61, 85, 112, 0.42)',
+  lento: 'rgba(150, 54, 40, 0.6)',
+  /*
+   * NAAPURIREITIN VARJO: sama pergamentti kuin askelhelmissä
+   * (HELMEN_VARI), mutta kolmannes peittävyydestä — varjo ei ole oma
+   * merkkinsä vaan pohja, jota vasten hento muste luetaan tummalta
+   * maastolta ja mereltä.
+   */
+  varjo: 'rgba(250, 243, 226, 0.3)',
+  /*
+   * AVAUSLENTO LUETAAN HARSON LÄPI. Lennon niukkuusharso on kalvo
+   * kotelon päällä (js/pallolauta/lauta.js), ja kaari on sen ALLA
+   * pallon pinnassa — WebGL-kerrosta ei voi nostaa CSS-kalvon yli.
+   * Tasokartalla reitti piirtyy harson päälle terävänä sinooperina
+   * (.flight-trail), joten pallon kaari saa saman sävyn täytenä, jotta
+   * se lukeutuu harson läpi samanlaisena.
+   */
+  avauslento: 'rgba(194, 69, 47, 0.95)',
+  /*
+   * AVAUSLENNON SUUNNITTELUVIIVA. Kun kone piirtää lennon aikana paksun
+   * punaisen viivan (avauslennonJalki alla, omistaja 5.9.2026 klo
+   * 23.10), katkoviivakaari ei enää saa kilpailla sen kanssa: se jää
+   * hennoksi suunnitteluviivaksi paksun viivan alle, samaan tapaan kuin
+   * tasokartalla reitti näkyy ohuena ennen kuin kone on kulkenut sen.
+   */
+  avauslennonSuunnitelma: 'rgba(194, 69, 47, 0.3)',
+  /*
+   * PAKSU PUNAINEN VIIVA KUTEN ETUSIVULLA (omistaja 5.9.2026 klo 23.10,
+   * sanatarkasti: *"lentokone saisi tehdä saman paksun viivan kuin
+   * etusivulla"*). Sama sinooperi kuin css .etusivupallo-viiva
+   * (#c2452f, peittävyys 0,92) — etusivun pallo ja pelin pallo
+   * piirtävät saman jäljen, vaikka toinen on esirenderöity video ja
+   * toinen elävä lauta.
+   */
+  avauslennonJalki: 'rgba(194, 69, 47, 0.92)',
+};
+export const HELMEN_VARI = 'rgba(250, 243, 226, 0.9)';
+/*
+ * HELMEN TUMMA REUNUS. Sama muste kuin maareitin viivalla
+ * (REITIN_VARIT.maa) mutta täytenä, jotta ympyrän raja lukeutuu sekä
+ * vaalealta mereltä että tummalta maastolta. EI punaista: punainen
+ * (--mark) on varattu valittavalle päätepisteelle (PAATOKSET 39).
+ */
+export const HELMEN_REUNAN_VARI = 'rgba(74, 58, 36, 0.88)';
+
+const RAD = Math.PI / 180;
+
+/** Isoympyräkulma kahden pisteen välillä asteina. */
+export function kulmaAsteina(a, b) {
+  const la1 = a.lat * RAD; const la2 = b.lat * RAD;
+  const dLng = (b.lng - a.lng) * RAD;
+  const c = Math.sin(la1) * Math.sin(la2) + Math.cos(la1) * Math.cos(la2) * Math.cos(dLng);
+  return Math.acos(Math.max(-1, Math.min(1, c))) / RAD;
+}
+
+/** Piste isoympyrällä a→b osuudella t (0…1), asteina. */
+export function isoympyranPiste(a, b, t) {
+  const kulma = kulmaAsteina(a, b) * RAD;
+  if (kulma < 1e-9) return { lat: a.lat, lng: a.lng };
+  const la1 = a.lat * RAD; const lo1 = a.lng * RAD;
+  const la2 = b.lat * RAD; const lo2 = b.lng * RAD;
+  const s = Math.sin(kulma);
+  const A = Math.sin((1 - t) * kulma) / s;
+  const B = Math.sin(t * kulma) / s;
+  const x = A * Math.cos(la1) * Math.cos(lo1) + B * Math.cos(la2) * Math.cos(lo2);
+  const y = A * Math.cos(la1) * Math.sin(lo1) + B * Math.cos(la2) * Math.sin(lo2);
+  const z = A * Math.sin(la1) + B * Math.sin(la2);
+  return { lat: Math.atan2(z, Math.hypot(x, y)) / RAD, lng: Math.atan2(y, x) / RAD };
+}
+
+/** Lentokaaren huippukorkeus lennon kulmasta (asteina). */
+export function lentokaarenKorkeus(kulmaAst) {
+  return LENTOKAAREN_KORKEUS * Math.max(0.02, Math.min(1, kulmaAst / 180));
+}
+
+/**
+ * Piste lentokaarella osuudella e: { lat, lng, korkeus }.
+ *
+ * YKSI KAAVA KONEELLE JA JÄLJELLE. Kone (js/pallolauta/siirto.js
+ * piirraKone) ja avauslennon paksu viiva (js/pallolauta/avaus.js) ovat
+ * saman lennon kaksi puolta: jos korkeusparaabeli olisi kahdessa
+ * paikassa, viiva irtoaisi koneen alta heti kun toista säädettäisiin.
+ * `pohja` on kerroksen oma nostatus pinnasta (koneella MERKIN_KORKEUS,
+ * viivalla REITIN_KORKEUS).
+ */
+export function lentokaarenKohta(kaari, e, pohja = 0) {
+  const p = isoympyranPiste(kaari.alku, kaari.loppu, e);
+  return { lat: p.lat, lng: p.lng, korkeus: kaari.korkeus * 4 * e * (1 - e) + pohja };
+}
+
+/**
+ * Reittikerros pallolle. `asteet(kohta)` kääntää laudan (x, y) asteiksi
+ * ({ lat, lon }); `ui` antaa laudan ja lentoKaaren; `siirtymat` on
+ * kaupunkien omien pallopisteiden siirtymä laudan yksikköinä
+ * (js/pallo.js pallonOmatPisteet) — ks. REITIN PÄÄ SIIRTYY KAUPUNGIN
+ * MUKANA alempana.
+ */
+export function luoReitit({ pallo, ui, siirtyma, asteet, siirtymat = null }) {
+  const reittiMuisti = new Map(); // edge id → { pisteet, pituusAst, helmet, datum }
+  const polyMuisti = new Map(); // edge id → korjattu poly
+  const kaariMuisti = new Map(); // "a>b" → datum
+  /*
+   * YKSI VIIVAKERROS, MONTA OSAA (karttapallo.md luku 10.1). Globe.gl:llä
+   * on tasan yksi pathsData, ja siihen kirjoittaa nyt pelin lisäksi
+   * linssi (joet, rajat, virrat — js/pallolauta/linssit.js polut).
+   * Jokainen osa asettaa oman listansa nimellään, ja kerros kootaan
+   * osista samaan tapaan kuin merkkikerroksessa (merkit.js aseta):
+   * linssi ei voi pyyhkiä pelin naapurireittejä pois eikä toisin päin.
+   */
+  const osat = new Map(); // osan nimi → datumit
+  // Oliko edellisessä kerroksessa kiinteän järjestyksen viivoja (ks. tyonna).
+  let kerrostettu = false;
+  let edellinenAvain = null;
+  let helmet = [];
+  /*
+   * PISTEKERROKSELLE MENEVÄ LISTA: reunuslevyt ensin, pergamentit
+   * perässä (ks. VÄLIPISTE ON PÄÄTEPISTEEN KOKOINEN). `helmet` on yhä
+   * pelkkä pergamenttilista, koska se on helmen PAIKKA — juuri se,
+   * mitä `helmet()` lukijoilleen lupaa (tools/savukkeet/
+   * savuke-pallo-reitit.mjs vartio 2).
+   */
+  let helmipisteet = [];
+
+  pallo
+    .pathsData([])
+    .pathPoints('pisteet')
+    .pathPointLat((p) => p[0]).pathPointLng((p) => p[1])
+    /*
+     * KORKEUS PISTEESTÄ, KUN SE ON ANNETTU. Pelin reitit ja linssien
+     * viivat ovat pallon pinnassa (REITIN_KORKEUS), mutta avauslennon
+     * jälki nousee koneen mukana kaarelle, joten kolmas luku
+     * ([lat, lng, korkeus]) saa voittaa. Kahden luvun pisteet toimivat
+     * ennallaan.
+     */
+    .pathPointAlt((p) => (p.length > 2 ? p[2] : REITIN_KORKEUS))
+    .pathColor((d) => d.vari)
+    // Paksuus ja katko datumista: pelin reitit saavat oletuksensa
+    // (MATKAREITIN_PAKSUUS_PX, katko laskettuna), linssin viiva omansa.
+    // Ilman katkoa viiva on yhtenäinen (jakso 1, väli 0).
+    .pathStroke((d) => d.paksuus ?? MATKAREITIN_PAKSUUS_PX)
+    /*
+     * KATKO KAHDESTA LUVUSTA, KUN NIITÄ ON KAKSI. Pelin reitit ja
+     * linssien viivat antavat yhden `katko`n (viiva ja väli yhtä
+     * pitkiä); avauslennon jälki antaa ne erikseen (`viiva` = kuljettu
+     * osuus, `vali` = loput), jolloin viiva kasvaa koneen perässä ilman
+     * että geometriaa rakennetaan uudestaan joka kehys.
+     */
+    .pathDashLength((d) => d.viiva ?? d.katko ?? 1)
+    .pathDashGap((d) => d.vali ?? d.katko ?? 0)
+    .pathTransitionDuration(siirtyma)
+    .pathResolution(2);
+  pallo
+    .arcsData([])
+    .arcStartLat('startLat').arcStartLng('startLng')
+    .arcEndLat('endLat').arcEndLng('endLng')
+    .arcColor((d) => d.vari ?? REITIN_VARIT.lento)
+    .arcAltitude((d) => d.korkeus)
+    .arcStroke(LENTOKAAREN_PAKSUUS_YKS)
+    .arcDashLength((d) => d.katko * 0.6).arcDashGap((d) => d.katko * 0.4)
+    .arcDashAnimateTime((d) => (d.elava ? LENTOKAAREN_ELO_MS : 0))
+    .arcsTransitionDuration(siirtyma);
+
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * REITIN PÄÄ SIIRTYY KAUPUNGIN MUKANA
+   * ══════════════════════════════════════════════════════════════
+   *
+   * Kaupungilla voi olla oma pallopiste (js/packs/
+   * maailmankartta-pallopisteet.js), joka on kymmeniä kilometrejä
+   * laudan omasta pisteestä. Päätoimittajan päätös 7.9.2026: sama
+   * koordinaatti koskee KAIKKIA kaupungin merkkejä — myös reittiviivan
+   * päätä.
+   *
+   * KAAVA ON js/pallo.js:ssä (pallonKorjattuPoly), koska SAMA viiva
+   * piirtyy myös laattapyramidin viivatasoon (tools/fokuskartta/
+   * sisalto.mjs). Kaksi kaavaa kahdessa paikassa tarkoitti, että elävä
+   * reitti päättyi kaupungin pallopisteeseen ja poltettu verkko laudan
+   * vanhaan pisteeseen — Helsingissä 34,7 km sisämaahan. Tässä on enää
+   * muisti: korjaus lasketaan kerran per reitti.
+   */
+  const korjattuPoly = (reitti) => {
+    const muistissa = polyMuisti.get(reitti.id);
+    if (muistissa) return muistissa;
+    const korjattu = pallonKorjattuPoly(
+      reitti.poly ?? [],
+      siirtymat?.get(reitti.a) ?? null,
+      siirtymat?.get(reitti.b) ?? null,
+    );
+    polyMuisti.set(reitti.id, korjattu);
+    return korjattu;
+  };
+
+  /** Reitin poly asteiksi, pituus ja helmet — kerran per reitti. */
+  const reitinMuisti = (reitti) => {
+    let m = reittiMuisti.get(reitti.id);
+    if (m) return m;
+    const poly = korjattuPoly(reitti);
+    const pisteet = [];
+    let pituusAst = 0;
+    let edellinen = null;
+    for (const [x, y] of poly) {
+      const a = asteet({ x, y });
+      if (!a) continue;
+      const p = { lat: a.lat, lng: a.lon };
+      if (edellinen) pituusAst += kulmaAsteina(edellinen, p);
+      pisteet.push([p.lat, p.lng]);
+      edellinen = p;
+    }
+    /*
+     * ASKELHELMET: reitin väliaskeleet, sama kaava kuin nappulan
+     * sijainnilla (js/rules.js pixelOf). Päätekaupungit jäävät pois —
+     * niillä on oma pisteensä — joten kierros on 1 … steps-1.
+     */
+    const askelia = Math.max(1, Math.round(reitti.steps ?? 1));
+    const helmia = [];
+    const reunoja = [];
+    for (let i = 1; i < askelia; i += 1) {
+      const kohta = pointAlong(poly, i / askelia);
+      const a = asteet(kohta);
+      if (!a) continue;
+      /*
+       * KAKSI LEVYÄ SAMASSA PISTEESSÄ (ks. VÄLIPISTE ON PÄÄTEPISTEEN
+       * KOKOINEN): tumma reunus alla, pergamentti päällä. Molemmat ovat
+       * lajia `helmi`, jotta kaikki muu (napautus pintaan, piilotus,
+       * laskurit) kohtelee niitä yhtenä merkkinä; `reuna` erottaa vain
+       * värin, korkeuden ja halkaisijan.
+       */
+      reunoja.push({
+        laji: 'helmi', reuna: true, id: `${reitti.id}#${i}r`, lat: a.lat, lon: a.lon,
+      });
+      helmia.push({ laji: 'helmi', id: `${reitti.id}#${i}`, lat: a.lat, lon: a.lon });
+    }
+    const katko = pituusAst > 0 ? Math.min(0.5, (MATKAREITIN_KATKO_AST / 2) / pituusAst) : 0.5;
+    /*
+     * VARJO ON OMA DATUMINSA saman katkon ja saman polun päällä, mutta
+     * hitusen alempana: pisteille annetaan kolmas luku (korkeus), jonka
+     * pathPointAlt lukee. Sama polku kahdesti on halpaa — naapureita on
+     * kerrallaan kourallinen ja lista muistetaan reitin mukana.
+     */
+    const varjonPisteet = pisteet.map(([lat, lng]) => [lat, lng, REITIN_VARJON_KORKEUS]);
+    m = {
+      pisteet,
+      pituusAst,
+      helmet: helmia,
+      reunat: reunoja,
+      varjo: {
+        avain: `${reitti.id}#varjo`,
+        pisteet: varjonPisteet,
+        katko,
+        vari: REITIN_VARIT.varjo,
+        paksuus: MATKAREITIN_VARJON_PAKSUUS_PX,
+      },
+      datum: {
+        avain: reitti.id, pisteet, katko, vari: REITIN_VARIT[reitti.type === 'sea' ? 'meri' : 'maa'],
+      },
+    };
+    reittiMuisti.set(reitti.id, m);
+    return m;
+  };
+
+  /** Lentokaaren datum kaupunkiparille (pysyvä olio). */
+  const kaari = (a, b, elava) => {
+    const avain = `${a.id}>${b.id}`;
+    let d = kaariMuisti.get(avain);
+    if (!d) {
+      const alku = asteet(a);
+      const loppu = asteet(b);
+      if (!alku || !loppu) return null;
+      const kulma = kulmaAsteina({ lat: alku.lat, lng: alku.lon }, { lat: loppu.lat, lng: loppu.lon });
+      d = {
+        avain,
+        startLat: alku.lat, startLng: alku.lon, endLat: loppu.lat, endLng: loppu.lon,
+        kulma,
+        korkeus: lentokaarenKorkeus(kulma),
+        katko: kulma > 0 ? Math.min(0.5, LENTOKAAREN_KATKO_AST / kulma) : 0.5,
+        elava: false,
+      };
+      kaariMuisti.set(avain, d);
+    }
+    d.elava = elava;
+    return d;
+  };
+
+  /**
+   * Piirtää valinnan (ui.matkareittienValinta) pallolle. Palauttaa
+   * askelhelmien LEVYT (reunus + pergamentti), jotka lauta.js liittää
+   * pistekerrokseen.
+   */
+  const paivita = ({
+    reittiTunnukset = [], lennot = [], lentoLahto = null, avain = '', kaarenVari = null,
+  }) => {
+    const elava = ui.lentoKaari?.b ?? null;
+    const tunniste = `${avain}|${elava ?? ''}`;
+    if (tunniste === edellinenAvain) return helmipisteet;
+    edellinenAvain = tunniste;
+    const { board } = ui.game;
+    const polut = [];
+    helmet = [];
+    const reunat = [];
+    if (avain) {
+      for (const eid of reittiTunnukset) {
+        const reitti = board.edgeById.get(eid);
+        if (!reitti?.poly?.length) continue;
+        const m = reitinMuisti(reitti);
+        // Varjo ensin: se on musteviivan alla sekä listassa että pinnalla.
+        polut.push(m.varjo, m.datum);
+        helmet.push(...m.helmet);
+        reunat.push(...m.reunat);
+      }
+    }
+    const kaaret = [];
+    const lahto = avain && lentoLahto ? board.cityById.get(lentoLahto) : null;
+    for (const kohdeId of lahto ? lennot : []) {
+      const kohde = board.cityById.get(kohdeId);
+      if (!kohde) continue;
+      const d = kaari(lahto, kohde, elava === kohdeId && ui.lentoKaari?.a === lahto.id);
+      if (d) { d.vari = kaarenVari; kaaret.push(d); }
+    }
+    aseta('peli', polut);
+    pallo.arcsData(kaaret);
+    helmipisteet = [...reunat, ...helmet];
+    return helmipisteet;
+  };
+
+  /** Koko viivakerros kirjastolle: osat järjestyksessä. */
+  const tyonna = () => {
+    const lista = [];
+    for (const o of osat.values()) lista.push(...o);
+    pallo.pathsData(lista);
+    /*
+     * Linssin viivat kiinteään järjestykseen (KIINTEÄ PIIRTOJÄRJESTYS).
+     * Yksi kierros vielä sen jälkeen, kun viimeinen kerrostettu viiva
+     * lähti: kirjaston kierrättämät oliot palaavat oletuksiin.
+     */
+    const kerrostettavia = lista.some((d) => Number.isFinite(d?.jarjestys));
+    if (kerrostettavia || kerrostettu) kerrostaPallolla(pallo, 'path', (d) => d?.jarjestys);
+    kerrostettu = kerrostettavia;
+  };
+
+  /**
+   * Osan viivat. `peli` on pelin naapurireitit, linssien osat lisätään
+   * perään (js/pallolauta/linssit.js polut). Tyhjä lista poistaa osan
+   * viivat kerrokselta siirtymällä.
+   */
+  function aseta(nimi, lista = []) {
+    osat.set(nimi, lista);
+    tyonna();
+  }
+
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * AVAUSLENNON JÄLKI — PAKSU PUNAINEN VIIVA KONEEN PERÄSSÄ
+   * ══════════════════════════════════════════════════════════════
+   *
+   * Omistaja 5.9.2026 klo 23.10: *"lentokone saisi tehdä saman paksun
+   * viivan kuin etusivulla."* Jälki on tavallinen viivakerroksen osa
+   * (`aseta('avauslento', …)`), joten se ei voi pyyhkiä pelin
+   * naapurireittejä eikä linssien viivoja — sama sääntö kuin kaikilla
+   * muillakin osilla.
+   *
+   * GEOMETRIA KERRAN, KASVU KATKOVIIVALLA. `pisteet` on KOKO kaari heti
+   * ensimmäisellä kutsulla, ja `osuus` (0…1) kertoo, kuinka pitkälle
+   * kone on ehtinyt: viiva piirretään katkona, jonka viivaosa on
+   * `osuus` ja väli 1 (Globe.gl normittaa katkon viivan pituudella,
+   * dashScale = 1/pituus, joten juuri alkupää `osuus` piirtyy).
+   *
+   * MIKSI NÄIN EIKÄ PISTELISTAA KASVATTAMALLA (mitattu Chromiumilla
+   * 5.9.2026): kasvava pistelista näkyi ruudulla vain lennon
+   * ENSIMMÄISENÄ pätkänä Lontoon vieressä. Globe.gl rakentaa Line2:n
+   * geometrian `interpolK`-tweenin kautta, ja joka kehyksen kirjoitus
+   * jätti geometrian ensimmäisen kirjoituksen mittaiseksi. Katkoviivan
+   * luvut sen sijaan kirjoitetaan materiaaliin joka päivityksellä
+   * ennen tuota tweeniä, joten ne menevät perille varmasti.
+   *
+   * SIIRTYMÄ POIS JÄLJEN AJAKSI: kerroksen datumit siirtyvät
+   * pathTransitionDurationin verran (KAIKKI LIIKE ANIMOIDAAN), eikä
+   * kasvava viiva saa laahata koneen perässä siirtymän mitan. Siirtymä
+   * palautuu, kun jälki poistetaan — ja juuri siksi poisto myös HÄIPYY
+   * PEHMEÄSTI eikä katoa välähdyksellä.
+   */
+  let jalkiDatum = null;
+
+  const jalki = (pisteet, { paksuus = MATKAREITIN_PAKSUUS_PX, osuus = 1 } = {}) => {
+    if (!pisteet?.length) {
+      if (!jalkiDatum) return;
+      jalkiDatum = null;
+      pallo.pathTransitionDuration(siirtyma);
+      aseta('avauslento', []);
+      return;
+    }
+    if (!jalkiDatum) {
+      jalkiDatum = { avain: 'avauslennon-jalki', pisteet, vari: REITIN_VARIT.avauslennonJalki };
+      pallo.pathTransitionDuration(0);
+    }
+    jalkiDatum.pisteet = pisteet;
+    jalkiDatum.paksuus = paksuus;
+    jalkiDatum.viiva = Math.max(0, Math.min(1, osuus));
+    // Väli on aina koko viiva: jakso on viiva + 1 ≥ 1, joten kuljetun
+    // osuuden jälkeen ei piirry mitään.
+    jalkiDatum.vali = 1;
+    aseta('avauslento', [jalkiDatum]);
+  };
+
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * HIMMEÄ REITTIVERKKO: KAIKKI LAUDAN KAARET ASTEINA, KERRAN
+   * ══════════════════════════════════════════════════════════════
+   *
+   * Omistaja 20.9.2026 klo 13.50: *"entä jos piirretaan myos muutkin
+   * reitit mutta himmeammalla"*. Piirtäjä on pallon vektorikerros
+   * (js/pallovektorit.js asetaVerkko/naytaVerkko — staattinen, ilman
+   * animaatiota, kerran per lauta); tämä antaa sille geometrian SAMASTA
+   * muistista kuin kirkkaat kantaman kaaret (reitinMuisti), joten himmeä
+   * viiva kulkee täsmälleen kirkkaan alla — päät kaupunkien
+   * pallopisteissä (REITIN PÄÄ SIIRTYY KAUPUNGIN MUKANA), ei laudan
+   * vanhoissa pisteissä.
+   *
+   * Vektorikerros lukee [lon, lat] (sama muoto kuin rannikkosolut);
+   * reittikerroksen pisteet ovat [lat, lng], joten järjestys käännetään
+   * tässä kerran. Muisti on laudan avaimella: sama lauta ei laske
+   * uudestaan, uusi lauta laskee.
+   */
+  let verkkoMuisti = null; // { avain, viivat }
+
+  const verkonViivat = () => {
+    const { board, pack } = ui.game;
+    const avain = pack?.id ?? '';
+    if (verkkoMuisti?.avain === avain) return verkkoMuisti.viivat;
+    const viivat = [];
+    for (const reitti of board.edgeById.values()) {
+      if (!reitti?.poly?.length) continue;
+      const { pisteet } = reitinMuisti(reitti);
+      if (pisteet.length < 2) continue;
+      viivat.push(pisteet.map(([lat, lng]) => [lng, lat]));
+    }
+    verkkoMuisti = { avain, viivat };
+    return viivat;
+  };
+
+  return {
+    paivita,
+    aseta,
+    jalki,
+    helmet: () => helmet,
+    verkonViivat,
+    /**
+     * Reitin poly siinä muodossa, jossa PALLO sen piirtää: päät
+     * kaupunkien omissa pallopisteissä (ks. REITIN PÄÄ SIIRTYY
+     * KAUPUNGIN MUKANA). Nappulan kuljettaja (js/pallolauta/siirto.js)
+     * kulkee samaa viivaa kuin askelhelmet.
+     */
+    poly: korjattuPoly,
+    /** Lentokaaren geometria koneelle: { alku, loppu, kulma, korkeus }. */
+    lentokaari: (a, b) => {
+      const d = kaari(a, b, false);
+      if (!d) return null;
+      return {
+        alku: { lat: d.startLat, lng: d.startLng },
+        loppu: { lat: d.endLat, lng: d.endLng },
+        kulma: d.kulma,
+        korkeus: d.korkeus,
+      };
+    },
+  };
+}

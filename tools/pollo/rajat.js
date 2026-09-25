@@ -158,6 +158,38 @@ export function sallittuOrigin(origin, lista = []) {
   return lista.includes(origin.replace(/\/+$/, ''));
 }
 
+/*
+ * NATIIVI SOVELLUS (Fablen päätös 23.9.2026): natiivi iOS-peli ei lähetä
+ * Originia, joten se tunnistetaan otsakkeesta `x-matkakirja-natiivi`, jonka
+ * arvo on sovelluksen bundle id, ja saman tunnisteen esiintymisestä
+ * User-Agentissa (iOS:n NSURLSession kirjoittaa sen sinne itse). Sallitut
+ * tunnisteet: ympäristömuuttuja POLLO_NATIIVIT (pilkkulista) tai oletus
+ * NATIIVIT_OLETUS. Natiivi pääsee puhesynteesiin, pöllön chattiin ja
+ * sähketehtävän tuomioon (NATIIVIN_TEHTAVAT; Fablen päätös 23.9.2026: chat
+ * ja sähketuomio samoin 30/vrk per IP- ja kuukausirajoin kuin selain), ei
+ * kuvaan eikä tilaan.
+ */
+export const NATIIVI_OTSAKE = 'x-matkakirja-natiivi';
+// fi.matkakirja.peli = TestFlight-/App Store -build (proto3d-testflight.yml BUNDLE_ID), omistajan löydös 16.
+// fi.matkakirja.peli.kehitys = kehityskäännös (Developer-tiimi RCD77XPB7M, iso iPad; Fable 24.9.2026), samat oikeudet.
+export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.matkakirja.peli', 'fi.matkakirja.peli', 'fi.matkakirja.peli.kehitys']);
+
+/** Natiiville sallitut tehtävät; puuttuva tehtävä on chatin vastaus kuten selaimella. */
+export const NATIIVIN_TEHTAVAT = Object.freeze(['puhe', 'vastaus', 'ehdotukset', 'sahke']);
+
+/** Saako natiivi tehdä pyynnön tehtävän? */
+export function natiivilleSallittu(tehtava) {
+  return NATIIVIN_TEHTAVAT.includes(tehtava ?? 'vastaus');
+}
+
+/** Onko pyyntö sallitusta natiivista sovelluksesta? `otsakkeet` = Headers tai get(nimi)-olio. */
+export function sallittuNatiivi(otsakkeet, lista = NATIIVIT_OLETUS) {
+  const tunniste = String(otsakkeet?.get?.(NATIIVI_OTSAKE) ?? '').trim();
+  if (!tunniste || !lista.includes(tunniste)) return false;
+  const agentti = String(otsakkeet?.get?.('user-agent') ?? '');
+  return agentti.includes(tunniste);
+}
+
 /** Pilkulla erotetun ympäristömuuttujan luku listaksi. */
 export function lueLista(arvo) {
   return String(arvo ?? '')
@@ -257,6 +289,87 @@ export function poimiJatkot(teksti, maara = 3) {
     // ranskalaiset viivat pois, ei-kysymykset hylätään.
     jatkot: poimiEhdotukset(rivit.slice(raja + 1).join('\n'), maara),
   };
+}
+
+/*
+ * TYHJÄ VASTAUS — SYY KERROTAAN, EI KEKSITÄ (omistajan vikailmoitus
+ * 6.9.2026: Livia kertoi Spartasta pitkästi, mutta jatkokysymykseen
+ * "Kerro siitä" tuli pelkkä "En osaa vastata tähän").
+ *
+ * Vanha varateksti valehteli: se väitti osaamattomuutta silloinkin, kun
+ * syy oli tekninen — virran kesken katkaissut ylikuormavirhe, mallin
+ * kieltäytyminen tai vastaus, josta jäi poiminnan jälkeen vain
+ * JATKOT-lohko. Malli ei siis sanonut "en osaa"; sen sanoi worker.
+ * Pelaaja ei voinut päätellä, kannattaako kysyä uudelleen.
+ *
+ * Siksi tyhjä vastaus luokitellaan ensin: verkko- ja ylikuormavirheet
+ * sekä muut tuntemattomat tyhjät ansaitsevat yhden uusintayrityksen,
+ * kieltäytyminen ei (uusinta tuottaisi saman kiellon ja kuluttaisi
+ * pelaajan päivärajaa). Vasta sen jälkeen näytetään teksti, joka kertoo
+ * totuuden. Lokiin menee VAIN syyluokka — ei pelaajan eikä mallin
+ * tekstiä.
+ */
+
+/** Kieltäytyminen: malli ei halunnut vastata. Uusinta ei auta. */
+export const LIVIA_KIELTAYTYY = 'Tästä en voi kertoa. Kysytkö jotain muuta?';
+
+/** Tekninen tyhjä: vastaus jäi matkalle. Uudelleen kysyminen kannattaa. */
+export const LIVIA_EI_TULLUT = 'Vastaus jäi matkalle eikä tullut perille. '
+  + 'Kokeile uudelleen.';
+
+/**
+ * Tyhjän vastauksen syyluokka.
+ *
+ * @param {{virhe?: string|null, stop?: string|null}} havainto
+ *   `virhe` = striimin oma virhetapahtuma (esim. "overloaded_error"),
+ *   `stop` = mallin stop_reason (esim. "refusal", "max_tokens").
+ * @returns {{syy: string, loki: string, uusinta: boolean}}
+ */
+export function tyhjanSyy({ virhe = null, stop = null } = {}) {
+  if (virhe) return { syy: 'virta', loki: `virta: ${virhe}`, uusinta: true };
+  if (stop === 'refusal') return { syy: 'kieltaytyi', loki: 'stop=refusal', uusinta: false };
+  return { syy: 'tyhja', loki: `stop=${stop || 'tuntematon'}`, uusinta: true };
+}
+
+/*
+ * AJATTELU EI SAA SYÖDÄ VASTAUSTA (löydös 67, omistajan kuva 25.9.2026:
+ * vastaus loppui sanaan "…muurin alta, n"). Sonnet 5 ajattelee
+ * oletuksena, kun `thinking` puuttuu, ja ajattelutokenit lasketaan
+ * `max_tokens`-rajaan: 900 tokenin vastausrajasta jäi näkyvälle tekstille
+ * noin 740 merkkiä, 350 tokenin jatkosta noin 300, joskus ei mitään.
+ * Pulun vastaukset ovat lyhyitä, joten ajattelu suljetaan siellä, missä
+ * malli sen sallii. Mallit, joilla ajattelua ei voi sulkea (Fable,
+ * Mythos, Opus 5.5: `disabled` = 400), ajavat pienimmällä vaivalla.
+ * Haiku 4.5 ei ajattele ilman pyyntöä eikä hyväksy effort-kenttää.
+ */
+export function ajatteluKentat(malli) {
+  const m = String(malli ?? '');
+  if (/haiku|claude-3/.test(m)) return {};
+  if (/fable|mythos|opus-5-5/.test(m)) return { output_config: { effort: 'low' } };
+  return { thinking: { type: 'disabled' } };
+}
+
+/*
+ * Sanarajaan (max_tokens) pysähtynyt teksti leikataan viimeiseen
+ * kokonaiseen virkkeeseen, jotta pelaaja ei koskaan saa kesken sanan
+ * loppuvaa vastausta valmiina. Jos kokonaista virkettä ei ole, perään
+ * tulee ellipsi viimeisen (mahdollisesti katkenneen) sanan tilalle,
+ * jolloin katkos näkyy katkoksena.
+ */
+const VIRKKEEN_LOPPU = /[.!?…][»"”’)\]]*(?=\s|$)/g;
+export function katkaiseKokonaiseen(teksti) {
+  const t = String(teksti ?? '').trimEnd();
+  let loppu = -1;
+  for (const osuma of t.matchAll(VIRKKEEN_LOPPU)) loppu = osuma.index + osuma[0].length;
+  if (loppu > 0) return t.slice(0, loppu);
+  // Viimeinen sana voi olla katkennut kesken ("…muurin alta, n"): se pois.
+  const ilmanHantaa = /\s/.test(t) ? t.replace(/\s+\S*$/, '') : t;
+  return t ? `${ilmanHantaa.replace(/[\s,;:–—-]+$/, '')}…` : t;
+}
+
+/** Pelaajalle näytettävä teksti syyluokan mukaan. */
+export function tyhjanTeksti(syy) {
+  return syy === 'kieltaytyi' ? LIVIA_KIELTAYTYY : LIVIA_EI_TULLUT;
 }
 
 /**

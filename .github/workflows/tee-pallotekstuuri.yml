@@ -1,0 +1,134 @@
+name: Tee karttapallon pinnoite
+
+# KARTTAPALLON PINNOITE JA KIRJASTO ÄMPÄRIIN (omistaja 4.9.2026: Globe.gl
+# valittu maailmanvalikon moottoriksi). Kaksi vientiä samalla ajolla:
+#   1. julisteet/pallo/<pyramidin versio>/tekstuuri-z<taso>.jpg — pelin juliste
+#      käännettynä Millerista tasaväliseksi (tools/tee-pallotekstuuri.mjs);
+#   2. vendor/globe.gl-<versio>.min.js — Globe.gl:n UMD-paketti npm:stä,
+#      jotta peli lataa sen omasta ämpäristään eikä repo kanna 700 kt:n
+#      kirjastoa (js/pallo.js PALLO_KIRJASTO).
+# Sama neljän salaisuuden R2-kaava kuin tee-pienet-kuvat.yml:ssä.
+#
+# AJOKONE (omistaja 7.9.2026 aamu, sanatarkasti: *"No Tee loputkin
+# macilla sitten"* ja *"Macilla voi tehdä lyhyempiäkin nyt kun työnkulku
+# automatisoitu"*): oletuksena omistajan Mac Studio (self-hosted
+# runner), varalla GitHubin ajokone. Ajo on yhden ytimen työtä — 286
+# laattaa tasolta z4 ja 8192 × 4096 pikselin käännös — eikä sitä ole
+# kaistoitettu: mitattu kesto Actionsissa 1 min 23 s … 4 min 36 s
+# (ajot 33903135136, 33906159108, 33911079739), eli jaettavaa on vähän.
+# Mac on silti oletus, jotta kaikki ämpäriajot lähtevät samasta napista
+# ja samalta koneelta.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ajokone:
+        description: 'Missä ajetaan (mac = omistajan Mac Studio)'
+        required: false
+        type: choice
+        default: 'mac'
+        options: ['mac', 'actions']
+      taso:
+        description: 'Pyramidin taso, josta pinnoite lasketaan (4 = 8192 px leveä pinnoite, pelin ainoa)'
+        required: false
+        type: string
+        default: '4'
+      kirjasto:
+        description: 'Globe.gl:n versio npm:stä (tyhjä = ei viedä kirjastoa)'
+        required: false
+        type: string
+        default: '2.35.0'
+      kuiva:
+        description: 'Kuiva ajo: lue luettelo, älä laske äläkä vie'
+        required: true
+        type: choice
+        default: 'ei'
+        options: ['ei', 'kylla']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tee-pallotekstuuri
+  cancel-in-progress: false
+
+jobs:
+  tee:
+    # Self-hosted-kone on omistajan oma (repo on julkinen): Mac-ajon saa
+    # käynnistää vain omistaja. Sama ehto kuin polta-macilla.yml:ssä.
+    if: inputs.ajokone != 'mac' || github.actor == github.repository_owner
+    runs-on: ${{ fromJSON(inputs.ajokone == 'mac' && '["self-hosted","macOS"]' || '["ubuntu-latest"]') }}
+    timeout-minutes: 20
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        if: inputs.ajokone != 'mac'
+        with:
+          node-version: 22
+
+      # Macilla node@22 ja awscli tulevat koneelta; sharp asennetaan
+      # npm:llä samassa askeleessa kuin ennen, kummallakin ajokoneella.
+      - name: Mac-ajokoneen valmistelu
+        if: inputs.ajokone == 'mac'
+        run: tools/mac-ajovalmis.sh
+
+      - name: Tarkista että salaisuudet ovat tallessa
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          puuttuu=""
+          [ -n "${R2_ACCOUNT_ID:-}" ]         || puuttuu="$puuttuu R2_ACCOUNT_ID"
+          [ -n "${AWS_ACCESS_KEY_ID:-}" ]     || puuttuu="$puuttuu R2_ACCESS_KEY_ID"
+          [ -n "${AWS_SECRET_ACCESS_KEY:-}" ] || puuttuu="$puuttuu R2_SECRET_ACCESS_KEY"
+          [ -n "${R2_BUCKET:-}" ]             || puuttuu="$puuttuu R2_BUCKET"
+          if [ -n "$puuttuu" ]; then
+            echo "::error::Näitä salaisuuksia ei löydy tästä reposta:$puuttuu"
+            exit 1
+          fi
+
+      # NODE tulee Mac-valmistelusta (tools/mac-ajovalmis.sh kiinnittää
+      # node@22:n); Actionsissa muuttujaa ei ole ja polun node kelpaa.
+      - name: Kuiva ajo (luettelo ja kohdeavain)
+        run: |
+          "${NODE:-node}" tools/tee-pallotekstuuri.mjs --kuiva --taso "${{ inputs.taso }}"
+
+      - name: Asenna sharp ja laske pinnoite
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          npm install --no-save --no-fund --no-audit sharp
+          "${NODE:-node}" tools/tee-pallotekstuuri.mjs --taso "${{ inputs.taso }}" --ulos pallotekstuuri-ulos/tekstuuri.jpg
+
+      - name: Vie pinnoite ämpäriin
+        if: inputs.kuiva != 'kylla'
+        run: |
+          set -euo pipefail
+          avain="$(cat pallotekstuuri-ulos/avain.txt)"
+          aws s3 cp pallotekstuuri-ulos/tekstuuri.jpg "s3://${R2_BUCKET}/${avain}" \
+            --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --no-progress --content-type image/jpeg \
+            --cache-control 'public, max-age=2592000'
+          echo "Viety: ${avain}"
+
+      - name: Vie Globe.gl ämpäriin
+        if: inputs.kuiva != 'kylla' && inputs.kirjasto != ''
+        run: |
+          set -euo pipefail
+          v="${{ inputs.kirjasto }}"
+          curl -fsSL -o globe.gl.min.js "https://cdn.jsdelivr.net/npm/globe.gl@${v}/dist/globe.gl.min.js"
+          head -c 200 globe.gl.min.js | grep -q "globe.gl" || { echo "::error::ladattu tiedosto ei näytä Globe.gl:ltä"; exit 1; }
+          aws s3 cp globe.gl.min.js "s3://${R2_BUCKET}/vendor/globe.gl-${v}.min.js" \
+            --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --no-progress --content-type application/javascript \
+            --cache-control 'public, max-age=31536000, immutable'
+          echo "Viety: vendor/globe.gl-${v}.min.js"

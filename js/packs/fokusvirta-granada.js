@@ -90,7 +90,7 @@
  * lue, mitä nimi tarkoittaa. Tarkkaavainen lukija päättelee maasta
  * värin ja väristä nimen; hätäinen arvaa. Juuri se on tarinakaaren
  * luvun 6 kohdan 6 tarkoittama raja. Kaaren omaa repliikkiä
- * (vesimestari Yusuf ja kourut) ei kerrata tässä paketissa.
+ * (puutarhuri Inés ja tukkeutunut kouru) ei kerrata tässä paketissa.
  *
  * KAANONPAPERIN SPOILERIKIELTOLISTA sitoo myös näitä tekstejä, ja se on
  * käyty läpi kenttä kentältä. Tapas-tavan syntyä EI selitetä missään —
@@ -215,73 +215,118 @@ export const FOKUSVIRTA_GRANADA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Granada, huhtikuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Linna kukkulalla on kaunein raunio jonka olen '
-      + 'nähnyt — paitsi ettei se ole raunio: sen saleissa asuu köyhiä '
-      + 'perheitä, ja seinien kirjoitukset kulkevat heidän arkensa yllä '
-      + 'kuin toisen maailman posti. Vuorilla on lunta vaikka laaksossa '
-      + 'kypsyvät appelsiinit. Illalla kukkulan luolissa laulettiin ja '
-      + 'tanssittiin tavalla, joka ei pyydä yleisöä — se vain sietää '
-      + 'sitä.',
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 f12be85587f38c11c04ad5d94945111033f1da546be5ccb1b0f34bc3264c4745. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-granada-r20260909-paper-v4.jpg",
+      lyhyt: "Granada, 1873. Comaresin torni toisessa rakennusaineessa.",
+      selite: 'Myrttipihan altaassa Comaresin torni, kaaret ja pensaat jatkuivat alaspäin valosta rakennettuna palatsina. Odotin veden tyyntymistä ennen valotusta; työ valmistui jälleen maksutta.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.alhambra-patronato.es/wp-content/uploads/2019/02/Conservacion_y_gestion_cultural.pdf"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-granada-r20260911-paper2-v1.jpg",
+      lyhyt: "Granada, 1873. Sormi särki heijastuksen, vesi rakensi sen takaisin.",
+      selite: 'Kosketin Myrttipihan allasta sormenpäällä, ja tornin sekä kaarten heijastus hajosi renkaiksi. Odotin kivireunalla, kunnes vesi rakensi palatsin uudelleen.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.alhambra-patronato.es/wp-content/uploads/2019/02/Conservacion_y_gestion_cultural.pdf","https://www.alhambra-patronato.es/en/recomendacion-lectura/la-acequia-real-de-la-alhambra"],
+    },
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Granada, huhtikuussa 1873. Kirkasta; Sierra Nevadalla lunta; '
+      + 'puntari korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 315 merkkiä (yläraja 400). */
+    teksti: "Alhambran palatsista vietiin koristeita matkamuistoiksi. Poimin jätekasasta sinisen kaakelinpalan. Mies keräsi sirpaleita museota varten ja ojensi kätensä. Annoin palan hänelle. Olin pitänyt sitä vain hetken, mutta tuntui kuin hän olisi ottanut jotakin minun omaani.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[curious] Linna kukkulalla on kaunein raunio jonka '
-      + 'olen nähnyt — paitsi ettei se ole raunio: [softly] sen saleissa '
-      + 'asuu köyhiä perheitä, ja seinien kirjoitukset kulkevat heidän '
-      + 'arkensa yllä kuin toisen maailman posti. [warmly] Vuorilla on '
-      + 'lunta vaikka laaksossa kypsyvät appelsiinit. [whispers] Illalla '
-      + 'kukkulan luolissa laulettiin ja tanssittiin tavalla, joka ei '
-      + 'pyydä yleisöä — se vain sietää sitä.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Altaassa näin palatsin toistamiseen" (havainto
+     * ennen kuvaa).
+     */
+    reaktiot: [
+  {
+    "id": "granada.r1",
+    "ankkuri": "vietiin koristeita matkamuistoiksi",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "granada.r2",
+    "ankkuri": "Poimin jätekasasta sinisen kaakelinpalan",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "granada.r3",
+    "ankkuri": "keräsi sirpaleita museota varten",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "granada.r4",
+    "ankkuri": "Annoin palan hänelle",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "granada.r5",
+    "ankkuri": "kuin hän olisi ottanut jotakin minun omaani",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[softly] Alhambran palatsista vietiin koristeita matkamuistoiksi. Poimin jätekasasta sinisen kaakelinpalan. Mies keräsi sirpaleita museota varten ja ojensi kätensä. Annoin palan hänelle. Olin pitänyt sitä vain hetken, mutta tuntui kuin hän olisi ottanut jotakin minun omaani.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-granada.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
-     * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo); kanoninen `teksti` seuraa
-     * sen jälkeen.
-     *
-     * PUHEKIELIPASSI (Raamattu, "LIVIAN PUHEKIELI", sääntö 1 PAINOPISTE
-     * REUNOILLA): lyhentymät ovat vain alussa ("Kääk") ja lopussa
-     * ("mut"), keskellä sanat ovat auki; pronominit kokonaisina; ei
-     * huutomerkkejä.
-     *
-     * MIKSI LUMI JA APPELSIINIT: kanoninen `teksti` alla hoitaa jo
-     * palatsin asukkaat, kirjailijan ja luolat, eikä sama asia saa
-     * tulla kahdesti samassa kuplassa. Merkinnän ainoa virke, johon
-     * kukaan muu ei vastaa, on se lyhyt lumi- ja appelsiinihavainto —
-     * ja se on niitä isoisän huomioita, jotka pitävät yhä.
-     *
-     * VUORISTOA EI NIMETÄ. Sen nimi on js/packs/europe-questions.js:n
-     * `granada`-lohkon toisen laattakysymyksen vastaus, joten tässä
-     * puhutaan vuorista ja hiihtokeskuksesta ilman nimeä. Kaikki muu on
-     * kaupunkilehden omaa nostoa "Aamulla hiihtoa, iltapäivällä merta"
-     * (js/packs/kulttuuri-kategoriat.js, granada): (1) keskustasta on
-     * vajaat 30 km Euroopan eteläisimpään hiihtokeskukseen ja noin 70
-     * km Välimeren rannalle, (2) hissit nousevat yli kolmen kilometrin
-     * korkeuteen, (3) vieressä kohoaa Iberian niemimaan korkein huippu
-     * 3 479 metriä, (4) alppihiihdon MM-kisat piti pitää täällä 1995,
-     * mutta ne siirrettiin vuodella, koska rinteet olivat paljaat.
-     * Yksikään luku ei muutu.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era03; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-granada-01-r20260909-euv1-v1.jpg.
      */
-    maadoitus: 'Kääk. Se lumen ja appelsiinin yhdistelmä piti '
-      + 'paikkansa, ja pitää yhä: keskustasta on vajaat kolmekymmentä '
-      + 'kilometriä Euroopan eteläisimpään hiihtokeskukseen ja noin '
-      + 'seitsemänkymmentä Välimeren rannalle, joten saman päivän '
-      + 'aikana ehtii sekä rinteeseen että uimaan. Hissit nousevat yli '
-      + 'kolmen kilometrin korkeuteen, ja vieressä kohoaa Iberian '
-      + 'niemimaan korkein huippu, kolmetuhatta neljäsataa '
-      + 'seitsemänkymmentäyhdeksän metriä. Lunta ei silti ole taattu: '
-      + 'alppihiihdon maailmanmestaruuskisat oli määrä pitää täällä '
-      + 'vuonna 1995, mut ne siirrettiin vuodella, koska rinteet olivat '
-      + 'paljaat.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-granada-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Granada: palatsilla on toinen kerros veden alla.',
+        selite: 'Alhambran Myrttipihan allas kantaa Comaresin tornin peilikuvaa, jonka pienikin liike rikkoo ja rakentaa uudelleen. Odotin matalalla reunalla nokka kurissa, kunnes melkein koko palatsi mahtui alapuolelleni.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.alhambra-patronato.es/en/edificios-lugares/patio-de-los-arrayanes',
+          'https://www.archnet.org/sites/16021?media_content_id=116790',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Alhambran puutarhat ovat kukkulalla, mutta vesi ei kiivennyt sinne. Se johdettiin Darrojoesta vielä korkeammalta, yli kuuden kilometrin kanavaa pitkin. Koko matka alamäkeä! Siinä olisi kelvannut lepuuttaa siipiä."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      */
@@ -307,6 +352,7 @@ export const FOKUSVIRTA_GRANADA = {
      */
     kuva: {
       ampari: 'herokoe/hero-granada-ilta.jpg',
+      lyhyt: 'Corral del Carbón on 1300-luvulta säilynyt kauppiaiden funduq, ainoa nasridiajalta koko Iberiassa.',
       selite: 'Corral del Carbón on 1300-luvun alkupuolelta säilynyt '
         + 'funduq eli kauppiaiden majatalo ja viljavarasto — ainoa '
         + 'nasridiajalta säilynyt lajissaan koko Iberian niemimaalla.',
@@ -405,6 +451,8 @@ export const FOKUSVIRTA_GRANADA = {
         + 'kirja kantoi: vuotta isoisäsi käynnin jälkeen eräs '
         + 'kalifornialainen mies antoi uudelle esikaupungilleen nimen '
         + 'Alhambra, koska hänen tyttärensä sattui lukemaan sitä.',
+      lahde: 'en-Wikipedia "Tales of the Alhambra" ja en-Wikipedia '
+        + '"Alhambra". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 2400×991, public domain, tekijä David
        * Roberts, päiväys 1836, credit Harvard Art Museums (Fogg
@@ -421,6 +469,7 @@ export const FOKUSVIRTA_GRANADA = {
        */
       kuva: {
         tiedosto: 'David Roberts - The Fortress of the Alhambra, Granada - 1967.72 - Fogg Museum.jpg',
+        lyhyt: 'David Robertsin maalaus 1836: linnoitus kukkulallaan, lumihuiput takana, kaupunki alla.',
         selite: 'David Robertsin maalaus vuodelta 1836, neljä vuotta '
           + 'Irvingin kirjan jälkeen: linnoitus kukkulallaan, lumiset '
           + 'huiput takana ja kaupunki sen alla.',
@@ -525,6 +574,8 @@ export const FOKUSVIRTA_GRANADA = {
         + 'pienempänä. Isoisäsi käveli siis kolmenkymmenen vuoden '
         + 'ikäisessä jäljitelmässä ja luuli sitä luultavasti vanhaksi. '
         + 'Niin luulee useimmiten tänäänkin se, joka siellä kävelee.',
+      lahde: 'es-Wikipedia "Alcaicería de Granada" ja en-Wikipedia "Bombyx '
+        + 'mori". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 1536×2048, CC0, tekijä Zarateman, kuvattu
        * 1.8.2023, kuvaus "La Alcaicería (Granada)". Restrictions tyhjä.
@@ -540,6 +591,7 @@ export const FOKUSVIRTA_GRANADA = {
        */
       kuva: {
         tiedosto: 'Granada - La Alcaicería 1.jpg',
+        lyhyt: 'Alcaicerían holvikäytävä: kipsikaaret ovat vuoden 1843 palon jälkeistä uusarabialaista työtä.',
         selite: 'Alcaicerían holvikäytävä: kipsikaaret ja koristelu ovat '
           + 'vuoden 1843 palon jälkeistä uusarabialaista työtä, eivät '
           + 'silkkitorin omaa.',
@@ -646,6 +698,8 @@ export const FOKUSVIRTA_GRANADA = {
         + 'vanhoissa katoissa. Piha on siis ollut kolmea eri mieltä '
         + 'siitä, miltä sen pitäisi näyttää, ja isoisäsi sattui '
         + 'käymään keskimmäisen aikana.',
+      lahde: 'en-Wikipedia "Court of the Lions", en-Wikipedia "Alhambra" ja '
+        + 'es-Wikipedia "Alcaicería de Granada". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 6352×4464, Public Domain Mark, tekijä Jean
        * Laurent, päiväys "noin 1865", credit Städel Museum
@@ -666,6 +720,7 @@ export const FOKUSVIRTA_GRANADA = {
        */
       kuva: {
         tiedosto: 'Granada- View into the lion court of the Alhambra (SM stf113).png',
+        lyhyt: 'Jean Laurentin vedos noin 1865: paviljongin pallomainen kupoli purettiin vasta 1934.',
         selite: 'Jean Laurentin vedos noin vuodelta 1865: pihan perällä '
           + 'olevan paviljongin päällä on pallomainen kupoli, joka '
           + 'purettiin vasta 1934.',
@@ -800,6 +855,7 @@ export const FOKUSVIRTA_GRANADA = {
      */
     kuva: {
       tiedosto: 'Torre de las Infantas, exterior, Murallas de la Medina de la Alhambra 06.jpg',
+      lyhyt: 'Torre de las Infantas ja kehämuuri: rapatun tornin vieressä muurin sullotun maan kerrokset näkyvät.',
       selite: 'Torre de las Infantas ja sen molemmin puolin kehämuuri: '
         + 'rapatun tornin vieressä muurin paljas pinta näyttää sullotun '
         + 'maan vaakakerrokset ja värin.',
@@ -810,53 +866,43 @@ export const FOKUSVIRTA_GRANADA = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * FABLE KATSELMOI: kohtaamisluonnos
-   *
-   * HAHMO ON KAANONIA, TEKSTI EI. Vesimestari Yusuf on tarinakaaren
-   * paketissa (js/tyohuone-kehitys-data.js KAARI_PAKETIT, 'granada'):
-   * hän avaa ja sulkee palatsin vanhat vesikourut samoilla avaimilla
-   * kuin sukunsa vuosisatojen ajan. Alla oleva kortti on ESITTELY
-   * samasta ihmisestä eikä uusi hahmo — mutta lauseet ovat tämän paketin
-   * omia, ja siksi lohko on merkitty katselmoitavaksi. Kaaren repliikkiä
-   * (veden ääni kertoo, jos joku liikkuu palatsissa) EI kerrata eikä
-   * kiistetä tässä: sama tarina kerrotaan kerran, ja se on kaaren.
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. HENKILÖ VAIHTUI: vesimestari
+   * Yusuf → puutarhuri Inés (js/tyohuone-kehitys-data.js
+   * KAARI_PAKETIT, 'granada'; kuvaputken tarinaehdotus 5.9.2026,
+   * Fablen päätös samana iltana klo 20:05 UTC). Perustelu on kaaren
+   * omassa kommenttilohkossa: vuosisatojen yli periytyneet avaimet ja
+   * isoisän kanssa opeteltu veden kuuntelu eivät kestä kaanonia.
+   * Alla oleva kortti on ESITTELY samasta ihmisestä kuin kaari, mutta
+   * lauseet ovat tämän paketin omia. Kaaren repliikkiä (tukkeutunut
+   * kouru, piirroksen vanha nimi) EI kerrata tässä: sama tarina
+   * kerrotaan kerran, ja se on kaaren.
    *
    * VARSINAINEN KYSYMYS on ennallaan kaaren paketissa (Alhambran nimen
    * merkitys), eikä tämä paketti kosketa sitä.
    *
-   * KAAVA (aallon 4C tilaus, sama kuin 4B:ssä): suvun jatkumo + epäusko
-   * + portinvartijakysymys.
-   *   - JATKUMO: sama työ, sama järjestys, samat avaimet monessa
-   *     polvessa.
-   *   - EPÄUSKO: Yusuf pitää suvun omaa selitystä työn merkityksestä
-   *     satuna. HUOM: epäusko kohdistuu tarkoituksella siihen, mitä
-   *     tämä kortti itse esittelee (ajatus veden järjestyksestä talon
-   *     muistina), EI kaaren repliikkiin — muuten kortti kiistäisi
-   *     kaanonin.
+   * KAAVA: ammatin jatkumo + epäusko + portinvartijakysymys.
+   *   - JATKUMO EI OLE SUVUN VAAN TYÖN: samat rinteet, sama
+   *     kastelukierto, samat suunnitelmat vuodesta toiseen. Kukaan ei
+   *     ole perinyt tehtävää eikä luvannut mitään kenellekään.
+   *   - EPÄUSKO: Inés pitää puheita palatsin "muistista" satuna.
+   *     Epäusko kohdistuu tarkoituksella siihen, mitä tämä kortti itse
+   *     esittelee, EI kaaren repliikkiin.
    *   - PORTINVARTIJAKYSYMYS: hän haluaa tietää, tietääkö tulija,
    *     mistä koko kukkula on saanut nimensä. Muotoilu on
    *     tarkoituksella sellainen, ettei se karsi yhtäkään kaaren
-   *     neljästä vaihtoehdosta: kaikki neljä ovat mahdollisia
-   *     vastauksia juuri tuohon kysymykseen.
+   *     neljästä vaihtoehdosta.
    *
    * VARALLISUUSSÄÄNTÖ tarkistettu virke virkkeeltä: isoisä ei maksa
-   * mitään, ei tilaa mitään eikä käske ketään. Suvun syy jatkaa on
-   * suvun oma ja käytännöllinen — kourut kastelevat yhä, ja jos kukaan
-   * ei tunne järjestystä, se loppuu häneen.
-   *
-   * ODOTUKSEN SYY ON UUSI TÄLLÄ LAUDALLA. Sevillan Amparo ja Firenzen
-   * Ginevra jatkavat kumpikin siksi, että "kesken jätetty sarja on
-   * pahempi kuin turha sarja" (tarinakaari luku 3: sama syy enintään
-   * kahdesti / lauta). Se kiintiö on täynnä, joten Yusufin syy on eri:
-   * työ on yhä välttämätöntä, ja tieto katoaa hänen mukanaan.
+   * mitään, ei tilaa mitään eikä käske ketään, eikä kukaan odota
+   * ketään. Inés tekee työtään, koska rinne kastellaan joka aamu.
    *
    * KUVAA EI OLE (omistajan linjaus): kohtaamiskortissa on vain hahmo,
    * nappi, varmistus, vihjeOsio ja teksti.
    */
   kohtaaminen: {
-    hahmo: 'Vesimestari Yusuf',
-    nappi: 'Tapaa vesimestari',
-    varmistus: 'Haluatko varmasti tavata Yusufin juuri nyt?',
+    hahmo: 'Puutarhuri Inés',
+    nappi: 'Tapaa puutarhuri',
+    varmistus: 'Haluatko varmasti tavata Inésin juuri nyt?',
     /*
      * VIHJELINKIN OSIO (omistajan pelitestipalaute v1119, kohta 13):
      * rivi kertoo, MISTÄ PÄIN LEHTEÄ ratkaisu löytyy, vastausta
@@ -867,15 +913,14 @@ export const FOKUSVIRTA_GRANADA = {
      * ensimmäinen nosto käsittelee palatsia kokonaisuutena.
      */
     vihjeOsio: 'kaupunki',
-    teksti: 'Yusuf kiertää kourut aamuisin samassa järjestyksessä kuin '
-      + 'hänen isoisänsä kiersi, ja avaimet ovat samat: yksi on kulunut '
-      + 'niin sileäksi, ettei sen urista erota enää mitään. Suvussa on '
-      + 'aina sanottu, että järjestys on talon muisti ja että sen '
-      + 'rikkominen sekoittaisi koko kukkulan. Yusuf sanoo suoraan '
-      + 'pitävänsä sitä puhetta satuna. Kierroksen hän tekee silti joka '
-      + 'aamu, koska vesi kastelee yhä rinteen puutarhat ja koska hän '
-      + 'on viimeinen, joka tuntee järjestyksen ulkoa: jos hän '
-      + 'lopettaa, se ei jää kirjoihin vaan häneen. Vieraita hän on '
+    teksti: 'Inés kiertää puutarhat aamuisin samassa järjestyksessä kuin '
+      + 'edellisenäkin aamuna: leikkaa, haravoi, avaa tukkeutuneet '
+      + 'kourut ja merkitsee suunnitelmaan sen, mikä ei toiminut. '
+      + 'Oppaat sanovat vieraille, että vesi on palatsin muisti; Inés '
+      + 'sanoo suoraan pitävänsä sitä puhetta satuna. Kierroksen hän '
+      + 'tekee silti, koska rinne kastellaan joka aamu ja koska hän '
+      + 'tuntee reitit paremmin kuin niiden piirustukset — osa kouruista '
+      + 'ei ole yhdessäkään nykyisessä suunnitelmassa. Vieraita hän on '
       + 'nähnyt satoja, ja melkein jokainen kysyy ensin kullasta. Ennen '
       + 'kuin hän vie ketään kourujen luo, hän haluaa tietää, tietääkö '
       + 'tulija edes sen, mistä koko linnoitus on saanut nimensä.',
@@ -887,24 +932,34 @@ export const FOKUSVIRTA_GRANADA = {
    */
 
   /*
-   * KOHTAAMISPAIKKA: ALHAMBRA.
+   * KOHTAAMISPAIKKA: GENERALIFEN PUUTARHA (5.9.2026; ennen Alhambra).
    *
-   * 37,17634 N / −3,58821 E — es-Wikipedia "Alhambra",
-   * prop=coordinates (haettu 30.8.2026). Piste on itse linnoitus, koska
-   * kaaren vesimestari työskentelee sen kouruilla; erillistä
-   * koordinaattia kouruille tai Leijonapihalle ei Wikipediassa ole.
-   * Muunnos on sama kaava ja samat vakiot kuin fokuskohteilla:
-   * maailmankartalla Millerin lieriö LEVEYS 12000 / LON0 −175 /
-   * POHJOINEN 76 (tools/fokuskartta/piirto.js laudanProjektio),
-   * Euroopan laudalla x = (lon + 11) × 19,2 ja y = (72 − lat) × 26,3.
+   * Kaaren kohtaaminen tapahtuu Generalifessa, jonka puutarhoja Inés
+   * hoitaa, joten piste siirtyy linnoituksesta sen kesäpalatsin
+   * puutarhaan. Ero on pieni — Generalife on Alhambran kyljessä, ja
+   * laudalla siirtymä on kymmenesosayksikköjä — mutta piste ei saa
+   * osoittaa muuta paikkaa kuin se, jossa henkilö tavataan.
+   *
+   * 37,17694444 N / −3,58527778 E — en-Wikipedia "Generalife",
+   * prop=coordinates (haettu 5.9.2026). Muunnos on sama kaava ja samat
+   * vakiot kuin fokuskohteilla: maailmankartalla Millerin lieriö LEVEYS
+   * 12000 / LON0 −175 / POHJOINEN 76 (tools/fokuskartta/piirto.js
+   * laudanProjektio), Euroopan laudalla x = (lon + 11) × 19,2 ja
+   * y = (72 − lat) × 26,3.
    *
    * LASKU:
-   *   maailmankartta  x = ((−3,58821 − (−175)) mod 360) × (12000/360)
-   *                     = 171,41179 × 33,3333… = 5713,7
-   *                   y = (millerY(76) − millerY(37,17634)) × 12000/2π
-   *                     = 1912,6
-   *   europe          x = (−3,58821 + 11) × 19,2 = 142,3
-   *                   y = (72 − 37,17634) × 26,3 = 915,9
+   *   maailmankartta  x = ((−3,58527778 − (−175)) mod 360) × (12000/360)
+   *                     = 171,41472 × 33,3333… = 5713,8
+   *                   y = (millerY(76) − millerY(37,17694444)) × 12000/2π
+   *                     = 1912,5
+   *   europe          x = (−3,58527778 + 11) × 19,2 = 142,4
+   *                   y = (72 − 37,17694444) × 26,3 = 915,8
+   *
+   * VANHA ALHAMBRA-PISTE VERTAILUKSI (37,17634 N / −3,58821 E,
+   * es-Wikipedia): maailmankartta 5713,7 / 1912,6 ja europe 142,3 /
+   * 915,9 — eli ero on alle kymmenesosayksikkö kummallakin laudalla,
+   * ja alla oleva laattatarkistus pätee sellaisenaan myös uuteen
+   * pisteeseen.
    *
    * TARKISTUS LAATTOJA VASTEN — EIKÄ POIKKEAMAA OLE. Granadan laatta on
    * maailmankartalla 5713,2 / 1912,8 (js/packs/maailmankartta.js) ja
@@ -917,10 +972,10 @@ export const FOKUSVIRTA_GRANADA = {
    * siitä, että vika oli niiden laatoissa eikä kaavassa.
    */
   kohtaamispiste: {
-    nimi: 'Alhambra',
+    nimi: 'Generalifen puutarha',
     laudat: {
-      maailmankartta: { x: 5713.7, y: 1912.6 },
-      europe: { x: 142.3, y: 915.9 },
+      maailmankartta: { x: 5713.8, y: 1912.5 },
+      europe: { x: 142.4, y: 915.8 },
     },
   },
 

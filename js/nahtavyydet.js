@@ -10,11 +10,15 @@
  * tuontisykliä.
  */
 
+import { piirraNostosymboli } from './fokusnosto-symbolit.js';
 import { kytkeKarttaZoom } from './karttazoom.js';
+import { NAHTAVYYDET_NIMIO } from './kaupunkiliuska-nimiot.js';
 import { galleriaNappi } from './kuvagalleria.js';
 import { liitaLukija, pysaytaLukija } from './lukija.js';
 import { el } from './mapart.js';
-import { asetaKuva, julisteUrl } from './media.js';
+import {
+  asetaKuva, assetOsoite, julisteUrl, lataaKuvaSitkeasti,
+} from './media.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { HENKILOLINKIT, HENKILOT } from './packs/henkilot.js';
 import {
@@ -25,7 +29,8 @@ import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { juttuAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
 import { piirraReaktiot } from './reaktiot.js';
 import { sfx } from './sound.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { esilataaKuvat, html, lahdemerkinta, vuosiluku } from './ui-apurit.js';
 
 /*
@@ -152,19 +157,163 @@ function asetaKylttiRaja(piste, polku) {
  * ovat pelkkiä merkkejä. Data: js/packs/maakartat.js
  * (KAUPUNKIKARTAT).
  */
-export function piirraKaupunkiKartta(ui, kohde) {
-  const kartta = KAUPUNKIKARTAT[ui.lehtitila.arrivalShownFor];
+/*
+ * KAUPUNKI VOI TULLA MYÖS PARAMETRINA (karttauudistus erä 4,
+ * 13.9.2026): pallon kaupunki-pop-up latoo saman kohdekartan omaan
+ * kehykseensä, eikä sen avautuminen kulje saapumiskortin kautta —
+ * `ui.lehtitila.arrivalShownFor` osoittaa silloin siihen kaupunkiin,
+ * jossa pelaaja on, ei siihen, jonka merkkiä napautettiin. Oletus on
+ * entinen kenttä, joten kaupunkilehti ei muutu miksikään.
+ */
+/**
+ * NÄHTÄVYYSTEKSTI = KOHDEKARTAN OMA SAATETEKSTI.
+ *
+ * PAATOKSET 34 kohta 16 e puhuu *"nähtävyystekstistä"* kartan alla.
+ * Pelissä on täsmälleen yksi teksti, joka on kirjoitettu kaupungin
+ * kohdekartasta: `KAUPUNKIKARTAT[id].esittely` (js/packs/maakartat.js),
+ * jonka kaupunkilehti latoo kahteen palstaan kartan yläpuolelle. Uusi
+ * näkymä lukee siis SAMAA tekstiä — yhtään uutta sisältöä ei
+ * kirjoiteta, ja teksti on kartan omaa saatetta eikä kaupungin yleistä
+ * esittelyä (se on lehden `intro`, jonka "Pariisi"-rivi näyttää).
+ *
+ * Kaupunki ilman kohdekarttaa palauttaa tyhjän: silloin koko näkymää ei
+ * ole olemassakaan, koska liuskan rivi tulee vain kartalliselle
+ * kaupungille (kaupungillaKohdekartta).
+ */
+export function kaupunginNahtavyysteksti(cityId) {
+  return KAUPUNKIKARTAT[cityId]?.esittely ?? '';
+}
+
+/**
+ * KAUPUNGIN SISÄISIKSI NOSTOIKSI SIIRTYNEET KARTTAKOHTEET
+ * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34 kohta 18 b, omistaja
+ * 18.9.2026 klo 17.55).
+ *
+ * Nähtävyyskartalle jäävät vain piirretyt nähtävyysrakennukset; kohde
+ * ilman piirrosta (entinen vaalea ympyrä tai sininen kysymysmerkki)
+ * on kaupungin SISÄINEN NOSTO, joka näkyy kaupunkiliuskan
+ * kategorioissa ja avautuu sieltä SAMALLA kortilla kuin ennen
+ * kartalta. Tämä funktio on se yksi paikka, jossa lajittelu tehdään:
+ * kartta jättää saman ehdon täyttävät pisteet piirtämättä
+ * (piirraKaupunkiKartta), ja liuska ottaa ne tästä
+ * (js/pallolauta/nostot.js). Ehto on datassa eikä kaupunkilistassa,
+ * joten sääntö pätee jokaiseen kaupunkiin ilman omaa riviään.
+ *
+ * KORTTI ON SAMA: juttu haetaan samalla kaavalla kuin kartalla
+ * (NAHTAVYYSJUTUT voittaa wikin, muuten `openWikiArticle`), ja
+ * järjestysnumero on kohteen paikka kartan omassa listassa.
+ * Kohde, jolla ei ole kumpaakaan, ei ole nostokaan — se oli kartalla
+ * pelkkä merkki eikä siitä tulisi avattavaa riviä.
+ *
+ * @param {object} ui
+ * @param {string} cityId kaupungin tunnus (KAUPUNKIKARTAT-avain)
+ * @returns {Array<{avain:string,id:string,nimi:string,avaa:Function}>}
+ */
+/*
+ * TULOS MUISTETAAN KAUPUNGEITTAIN (mitattu 20.9.2026, pallolaudan
+ * panorointi): kaupunkiliuskan ladonta kutsuu tätä JOKAISELLE
+ * kaupungille joka ladonnassa, ja ladonta ajetaan liikkeen aikana
+ * viidesti sekunnissa (js/pallolauta/lauta.js LADONNAN_TAHTI_MS).
+ * Funktio rakentaa joka kutsulla uudet oliot ja sulkeumat, vaikka
+ * lähde (KAUPUNKIKARTAT, NAHTAVYYSJUTUT, MINIATYYRIT) on vakio ja
+ * sulkeumat kantavat vain `ui`n. Muisti on siksi ui-kohtainen
+ * WeakMap, joka vapautuu pelin mukana.
+ */
+const siirretytMuisti = new WeakMap();
+
+export function kaupunkikartanSiirretyt(ui, cityId) {
+  const kartta = KAUPUNKIKARTAT[cityId];
+  if (!kartta) return [];
+  if (ui && typeof ui === 'object') {
+    const muisti = siirretytMuisti.get(ui) ?? new Map();
+    const valmis = muisti.get(cityId);
+    if (valmis) return valmis;
+    const tulos = laskeKaupunkikartanSiirretyt(ui, cityId, kartta);
+    muisti.set(cityId, tulos);
+    siirretytMuisti.set(ui, muisti);
+    return tulos;
+  }
+  return laskeKaupunkikartanSiirretyt(ui, cityId, kartta);
+}
+
+/** Varsinainen ladonta (ks. muisti yllä). */
+function laskeKaupunkikartanSiirretyt(ui, cityId, kartta) {
+  const ulos = [];
+  // Numeroympyrälliset kartat (Bryssel, Ljubljana) pitävät piirroksettomat
+  // kohteet kartalla, joten liuskaan ei siirry mitään (ks. piirraKaupunkiKartta).
+  if (kartta.numeroympyrat) return ulos;
+  (kartta.kohteet ?? []).forEach((raaka, i) => {
+    if (MINIATYYRIT[cityId]?.[raaka.nimi]) return;
+    const juttu = NAHTAVYYSJUTUT[cityId]?.[raaka.nimi];
+    const kuvahaku = raaka.wiki ?? raaka.nimi;
+    const k = juttu
+      ? { ...raaka, wiki: undefined, ...juttu, kuvahaku }
+      : { ...raaka, kuvahaku };
+    const numero = String(i + 1);
+    const avaa = k.teksti
+      ? () => avaaNahtavyys(ui, k, numero)
+      : (k.wiki ? () => ui.openWikiArticle(k.wiki, k.nimi) : null);
+    if (!avaa) return;
+    /*
+     * TUNNUS ON NOSTON OMA TUNNUS, kun kohde on karttanosto (kenttä
+     * `nosto`, js/packs/maakartat.js) — silloin liuskan rivi ja
+     * pääkartan karsinta puhuvat samasta merkistä. Ilman sitä tunnus
+     * on kartan oma paikka, joka on yhtä lailla yksikäsitteinen.
+     */
+    const tunnus = Array.isArray(raaka.nosto) ? raaka.nosto[0] : (raaka.nosto ?? null);
+    ulos.push({
+      avain: `kartta:${cityId}:${numero}`,
+      id: tunnus ?? `kartta:${cityId}:${numero}`,
+      nimi: raaka.nimi,
+      avaa,
+    });
+  });
+  return ulos;
+}
+
+/*
+ * KOLME OSAA VOI JÄTTÄÄ POIS (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34
+ * kohta 16, omistaja 18.9.2026): kaupunkiliuskan "Nähtävyydet"-rivin
+ * näkymässä on VAIN kartta ja sen alla nähtävyysteksti, jonka
+ * ensimmäinen lause näkyy ja loput tulevat "Lue lisää" -napista —
+ * kohdeluettelo (`selitteet`) poistuu siitä näkymästä kokonaan, ja
+ * saateteksti (`esittely`) latoo kutsuja itse KARTAN ALLE.
+ *
+ * LIPUT EIVÄT MUUTA VANHAA: oletukset ovat entiset, joten kaupunkilehti
+ * ja vanha iso pop-up piirtyvät rivilleen kuten ennen. Kohteet avataan
+ * uudessa näkymässä kartalta napauttamalla, aivan kuten kartalla on
+ * aina voinut (avaaJuttu on merkissä kiinni, ei listassa).
+ */
+export function piirraKaupunkiKartta(ui, kohde, {
+  cityId = null, esittely = true, selitelista = true, kuvagalleria = true,
+  otsikko = true, zoomiNapit = true, opasteet = true, kokoruutuNappi = false,
+} = {}) {
+  const kaupunkiId = cityId ?? ui.lehtitila.arrivalShownFor;
+  const kartta = KAUPUNKIKARTAT[kaupunkiId];
   if (!kartta) return;
   const lohko = html('div', 'kaupunkikartta');
-  lohko.appendChild(html('h3', 'kaupunkikartta-otsikko', 'Kaupunki kartalla'));
+  // OTSIKKO ON NYT "Nähtävyydet" (Raamattu, KARTTAUUDISTUKSEN
+  // PAATOKSET 34 kohta 8: *"Nahtavyydet (entinen 'Kaupunki kartalla',
+  // nimi vaihtuu kaikkialla)"*). Sisältö on sama kohdekartta ja sama
+  // esittely — vain nimi vaihtui.
+  /*
+   * KAKSI OTSIKKOA EI OLE OTSIKKO (PAATOKSET 34 kohta 18 c, omistaja
+   * 18.9.2026): Nähtävyydet-arkilla lukee jo arkin oma "NÄHTÄVYYDET",
+   * joten osion oma otsake toistaisi saman sanan heti sen alla.
+   * Lippu on oletuksena tosi, joten kaikki muut latojat (lehti,
+   * kaupunkipop-up) piirtyvät ennallaan.
+   */
+  if (otsikko) lohko.appendChild(html('h3', 'kaupunkikartta-otsikko', NAHTAVYYDET_NIMIO));
   // Esittely kahdessa palstassa (omistajan tilaus 15.8.2026:
   // "kaupunki kartalla teksti voisi olla kahdessa palstassa");
   // kapealla ruudulla CSS palauttaa yhden palstan.
-  const palstat = html('div', 'kaupunkikartta-palstat');
-  for (const kappale of (kartta.esittely ?? '').split('\n\n').filter(Boolean)) {
-    palstat.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
+  if (esittely) {
+    const palstat = html('div', 'kaupunkikartta-palstat');
+    for (const kappale of (kartta.esittely ?? '').split('\n\n').filter(Boolean)) {
+      palstat.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
+    }
+    lohko.appendChild(palstat);
   }
-  lohko.appendChild(palstat);
   /*
    * ZOOMATTAVA KARTTAIKKUNA (omistajan tilaus 14.8.2026: "voiko
    * kaupunkikartasta tehdä zoomattavaa ... pyörisi nykyisessä
@@ -333,9 +482,10 @@ export function piirraKaupunkiKartta(ui, kohde) {
    * voittaa kohteen mahdollisen wiki-kentän (undefined ohittaa
    * sen), koska omalla jutulla ei näytetä "Lue lisää" -linkkiä.
    */
-  const kaupunki = ui.lehtitila.arrivalShownFor;
+  const kaupunki = kaupunkiId;
   // Piirrospisteet kerätään hajautusta varten (ks. metodin loppu).
   const piirrosPisteet = [];
+  const numeroympyrat = [];
   /*
    * KOHTEEN AVAAJA TALTEEN KOKORUUTUA VARTEN (omistajan tilaus
    * 22.8.2026: "Ei pysty klikkaamaan kohteita"). Kokoruutunäkymä
@@ -347,6 +497,9 @@ export function piirraKaupunkiKartta(ui, kohde) {
    * pisteen dataset.numero-kenttään.
    */
   const avaajat = [];
+  // Montako kohdetta sai Matkakirjan ihmeen tähden? Selite kartan
+  // yläkulmaan syntyy vain, jos tähtiä on (ks. lohkon loppu).
+  let ihmeita = 0;
   (kartta.kohteet ?? []).forEach((raaka, i) => {
     const juttu = NAHTAVYYSJUTUT[kaupunki]?.[raaka.nimi];
     /*
@@ -364,7 +517,40 @@ export function piirraKaupunkiKartta(ui, kohde) {
     const p = karttapiste(kartta, k.lat, k.lon);
     // Napautettava, jos kohteella on oma juttu TAI wiki-artikkeli.
     const avattava = Boolean(k.teksti || k.wiki);
-    const miniatyyri = MINIATYYRIT[kaupunki]?.[raaka.nimi] ?? null;
+    /*
+     * MINIATYYRIN OSOITE TULEE MEDIASTA (2.9.2026, assetit ämpäriin).
+     * Taulussa voi lukea joko vanha repon polku tai pelkkä tunnus, joka
+     * on ämpärissä JPG:nä — js/media.js assetOsoite tuntee molemmat, ja
+     * tämä tiedosto ei tiedä kummasta on kyse.
+     */
+    const miniatyyri = MINIATYYRIT[kaupunki]?.[raaka.nimi]
+      ? assetOsoite('miniatyyrit', MINIATYYRIT[kaupunki][raaka.nimi])
+      : null;
+    /*
+     * ══ KARTALLE JÄÄVÄT VAIN PIIRRETYT NÄHTÄVYYSRAKENNUKSET ════════
+     * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34 kohta 18 a-b, omistaja
+     * 18.9.2026 klo 17.55, iPhone-kuva Pariisin nähtävyyskartasta.)
+     *
+     * Kartalla oli kolmenlaisia merkkejä: piirretyt rakennukset
+     * (Eiffel, Riemukaari, Notre-Dame…), VAALEAT YMPYRÄT (kohde ilman
+     * piirrosta) ja SINISET KYSYMYSMERKIT (WebKitin rikkinäisen kuvan
+     * merkki, kun tilattu piirros ei ole vielä ämpärissä — sama vika
+     * kuin js/laattapyramidi.js SININEN KYSYMYSMERKKI KARTALLA).
+     * Kaksi jälkimmäistä eivät kuulu enää kartalle: ne ovat kaupungin
+     * SISÄISIÄ NOSTOJA ja avautuvat kaupunkiliuskan kategorioista
+     * (kohta 2-3 ja 11, ks. `kaupunkikartanSiirretyt` alla).
+     *
+     * EROTTELU ON DATASTA: piirros = kohteella on miniatyyri
+     * (js/packs/miniatyyrit.js). Merkintä on lupaus toimitetusta
+     * piirroksesta, joten toimittamattomien merkinnät on poistettu
+     * taulusta — silloin kysymysmerkkiäkään ei voi syntyä. `avaajat`
+     * saa silti tässäkin alkion, jotta indeksi pysyy kohteen
+     * järjestysnumerona (kokoruudun klooni kytkee sillä napin).
+     */
+    if (!miniatyyri && !kartta.numeroympyrat) {
+      avaajat.push(null);
+      return;
+    }
     /*
      * PIIRROS NUMERON PAIKALLA (omistajan tilaukset 15.8.2026:
      * "Piirrokset kartalla saisi näkyä numeroiden paikalla" ja
@@ -385,6 +571,21 @@ export function piirraKaupunkiKartta(ui, kohde) {
      */
     const piste = html(avattava ? 'button' : 'span',
       'maakartta-piste kaupunki-kohde kohde-numero');
+    /*
+     * NUMEROYMPYRÄ ILMAN MINIATYYRIÄ (omistajan päätös 20.9.2026,
+     * Bryssel ja Ljubljana; kuvat lisätään myöhemmin). Kartan data
+     * kertoo lipulla `numeroympyrat: true`, että sen piirroksettomat
+     * kohteet piirretään kartalle numeroituina ympyröinä (numero
+     * sisällä, nimi alla) sen sijaan että ne siirtyisivät liuskan
+     * sisäisiksi nostoiksi (ks. kaupunkikartanSiirretyt). Muut kaupungit
+     * ovat ennallaan: lippu puuttuu, ja piirroksettomat kohteet
+     * siirtyvät liuskaan kuten PAATOKSET 34 kohta 18 b sanoo.
+     */
+    if (!miniatyyri) {
+      piste.classList.add('kohde-numeroympyra');
+      piste.appendChild(html('span', 'kohde-numeroteksti', numero));
+      numeroympyrat.push({ piste, x: p.x, y: p.y });
+    }
     if (miniatyyri) {
       piste.classList.add('kohde-piirros');
       const pikku = document.createElement('img');
@@ -392,7 +593,39 @@ export function piirraKaupunkiKartta(ui, kohde) {
       pikku.alt = '';
       pikku.decoding = 'async';
       pikku.draggable = false;
-      pikku.src = miniatyyri;
+      /*
+       * PUUTTUVA PIIRROS PUTOAA VARATÄPLÄKSI (2.9.2026, assetit
+       * ämpäriin). Taulussa on tunnuksia, joiden kuva on vasta tilattu
+       * kuvaputkelta: ämpäri vastaa 404:llä, ja ilman tätä kartalle
+       * jäisi selaimen rikkinäisen kuvan ikoni juuri sinne, missä
+       * kohteen pitäisi olla. `kohde-piirros`-luokan poisto palauttaa
+       * merkin 13 pikselin täpläksi (css/styles.css
+       * .maakartta-piste.kohde-numero) ja piilottaa samalla kyltin,
+       * joka näkyy vain piirroksella — kohde on siis kartalla ja
+       * napautettavissa aivan kuten ennen piirroksia.
+       *
+       * TÄPLÄ VASTA KUN KAIKKI YRITYKSET OVAT MENNEET (6.9.2026).
+       * Omistajan kuvakaappaus Ateenan kohdekartasta näytti viisi
+       * täplää kahdestatoista, vaikka kaikki miniatyyrit ovat
+       * ämpärissä: r2.dev vastasi 429:llä koko purskeeseen (ks.
+       * js/media.js lohko "sitkeä lataus"). Lataus kulkee nyt
+       * jonon ja uusinnan läpi, ja vasta neljäs epäonnistunut yritys
+       * pudottaa merkin täpläksi.
+       */
+      /*
+       * PUUTTUVA PIIRROS VIE KOKO MERKIN (PAATOKSET 34 kohta 18 a).
+       * Ennen merkki putosi varatäpläksi; nyt kartalla on vain
+       * piirrettyjä rakennuksia, joten täplä olisi juuri se vaalea
+       * ympyrä, jonka omistaja pyysi pois. Kohde ei katoa pelistä: se
+       * on kaupunkiliuskan sisäinen nosto (kaupunkikartanSiirretyt
+       * lukee saman taulun) ja avautuu sieltä samalla kortilla.
+       */
+      void lataaKuvaSitkeasti(pikku, miniatyyri, {
+        onVirhe: () => {
+          pikku.remove();
+          piste.remove();
+        },
+      });
       piste.appendChild(pikku);
       // Numero kylttiin (omistajan tilaus 15.8.2026: "Nimikyltissä
       // saisi olla numero näkyvissä") — kytkee kyltin selitelistaan.
@@ -405,8 +638,31 @@ export function piirraKaupunkiKartta(ui, kohde) {
       asetaKylttiRaja(piste, miniatyyri);
       piirrosPisteet.push({ piste, x: p.x, y: p.y });
     }
-    piste.style.left = `${p.x.toFixed(1)}%`;
-    piste.style.top = `${p.y.toFixed(1)}%`;
+    /*
+     * MERKIN VÄISTÖ NAAPURIN ALTA (2.9.2026, karsitut karttanostot
+     * kohdekartalle). Kaupunkikaton pudottamat nostot ovat kaupungin
+     * kuuluisimpien kohteiden vieressä — Elginin marmorit seisovat
+     * Akropoliin, Niken temppeli saman kallion lounaiskulmassa ja
+     * maratonhuijaus Kallimarmaron päällä. Merkkiruutujen peitto on
+     * silloin 59–100 % (tools/tarkista-karttapisteet.mjs), eli alempi
+     * merkki jää kokonaan piiloon eikä sitä voi napauttaa.
+     *
+     * KOORDINAATTIA EI SIIRRETÄ — piste on datassa siellä, missä kohde
+     * on. Väistö on PIIRTOASIA, kuten nimiön puolen valinta
+     * (`nimiPuoli`): merkki piirtyy `siirto`-kentän verran sivuun
+     * kartan omissa pikseleissä (kehys on kapealla ruudulla 360 px, ja
+     * merkki 24 px, joten 26 px riittää juuri irrottamaan sen). Luku on
+     * kartan lavan pikseleitä, ei ruudun, joten leveämmällä ruudulla
+     * väistö kasvaa samassa suhteessa kuin kartta ja pysyy samalla
+     * kohdalla piirrosta.
+     */
+    const siirto = raaka.siirto ?? null;
+    piste.style.left = siirto?.x
+      ? `calc(${p.x.toFixed(1)}% + ${siirto.x}px)`
+      : `${p.x.toFixed(1)}%`;
+    piste.style.top = siirto?.y
+      ? `calc(${p.y.toFixed(1)}% + ${siirto.y}px)`
+      : `${p.y.toFixed(1)}%`;
     // Numero talteen: kokoruutunäkymä kytkee sillä kloonatun napin
     // oikeaan avaajaan (avaaKarttaSuurennos). Kartalla se ei näy.
     piste.dataset.numero = numero;
@@ -425,6 +681,46 @@ export function piirraKaupunkiKartta(ui, kohde) {
      * ainoa, joka kertoo ruudunlukijalle paikan nimen. Ääneen lukija
      * ohittaa koko pisteen (js/lukija.js: .maakartta-piste).
      */
+    /*
+     * MATKAKIRJAN IHMEEN TÄHTI MERKIN YLÄREUNAAN (omistajan tilaus
+     * 2.9.2026: *"karttaan voisi tehdä pienen tähden jokaisen kohteen
+     * yläreunaan, jos sinne on generoitu myös tällainen historiallinen
+     * kuva nykyaikaisen kuvan lisäksi. eli merkki matkakirjan
+     * ihmeestä. kartan yläreunassa voisi olla selite"*).
+     *
+     * SAMA TÄHTI KUIN PÄÄKARTALLA, ei uutta muotoa: kompassiruusun
+     * kahdeksansakarainen tähti piirretään samasta kirjastosta
+     * (js/fokusnosto-symbolit.js piirraNostosymboli, tunnus `ihme`),
+     * joten Raamatun SYMBOLITAKSONOMIA pysyy yhtenä totuutena. Koko
+     * tulee CSS:stä (.kohde-ihmetahti) — pienennys on tyyliä, ei
+     * toista piirtäjää.
+     *
+     * TÄHTI TULEE DATASTA EIKÄ LISTASTA: `ui.matkakirjanIhme` lukee
+     * kohteen nimellä fokuskohteiden `ihme`-lohkon (sama haku, jolla
+     * nähtävyysjuttu näyttää loistoaikakuvan), joten uusi ihme saa
+     * tähtensä kartalle ilman muutosta tähän tiedostoon.
+     */
+    if (ui.matkakirjanIhme?.(raaka.nimi)) {
+      ihmeita += 1;
+      const tahti = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      tahti.setAttribute('class', 'kohde-ihmetahti');
+      tahti.setAttribute('viewBox', '-12 -12 24 24');
+      tahti.setAttribute('aria-hidden', 'true');
+      piirraNostosymboli(el('g', {}, tahti), 'ihme');
+      piste.appendChild(tahti);
+    }
+    /*
+     * NIMIÖN VÄISTÖ DATASTA (2.9.2026). Nimi on oletuksena merkin alla
+     * keskitettynä, ja ahtaassa kohdassa se osuu naapurin nimeen tai
+     * piirrokseen. Merkkiä itseään EI siirretä — koordinaatti on
+     * kartan lupaus — vaan nimiö väistää sivuun, kuten pääkartan
+     * merkeillä (js/fokusniput.js sääntö 2). Kohde ilmoittaa puolen
+     * kentässä `nimiPuoli: 'vasen' | 'oikea'`; ilman kenttää nimi
+     * pysyy keskellä eikä yksikään vanha kartta muutu.
+     */
+    if (raaka.nimiPuoli === 'vasen' || raaka.nimiPuoli === 'oikea') {
+      piste.classList.add(`kohde-nimi-${raaka.nimiPuoli}`);
+    }
     const nimilappu = html('span', 'kohde-nimi', k.nimi);
     piste.appendChild(nimilappu);
     /*
@@ -597,7 +893,7 @@ export function piirraKaupunkiKartta(ui, kohde) {
     if (Math.hypot(e.clientX - alku.x, e.clientY - alku.y) > 6) return;
     if (e.target.closest?.('button, a')) return;
     if (kehys.classList.contains('zoomattu')) return;
-    avaaKarttaSuurennos(ui, kehys, kartta, { avaajat });
+    avaaKarttaSuurennos(ui, kehys, kartta, { avaajat, zoomiNapit });
   });
   kehys.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') { tyhjennaValinta(); return; }
@@ -607,9 +903,10 @@ export function piirraKaupunkiKartta(ui, kohde) {
     if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
     e.preventDefault();
     if (ui.lehtitila.kulttuuriKuvaEl) ui.suljeKulttuuriKuva();
-    else avaaKarttaSuurennos(ui, kehys, kartta, { avaajat });
+    else avaaKarttaSuurennos(ui, kehys, kartta, { avaajat, zoomiNapit });
   });
   hajautaPiirrospisteet(kotelo, piirrosPisteet, ydin);
+  vaistaNumeroympyrat(kotelo, numeroympyrat);
   /*
    * Näkymävipu piirroksen ja värikartan välillä (omistajan tilaus
    * 14.8.2026 satelliitille; värikartta korvasi satelliitin
@@ -629,7 +926,9 @@ export function piirraKaupunkiKartta(ui, kohde) {
    * pelkkä totuusarvo, jottei toisen kaupungin lehti aukea
    * värinäkymään.
    */
-  const lahderivi = html('p', 'lahde', kartta.lahde);
+  // Kartankin lähderivi kulkee talon yhden apurin kautta (2.9.2026):
+  // jos kartta joskus on Matkakirjan oma, selite tulee mukana.
+  const lahderivi = taytaLahderivi(html('p', 'lahde'), kartta.lahde, kartta);
   /*
    * Kartan työkalurivi: zoomipainikkeet vasemmalla, näkymävipu
    * oikealla. Rivi on kartan yllä, koska kuvan päälle asetetut
@@ -637,6 +936,16 @@ export function piirraKaupunkiKartta(ui, kohde) {
    * koska näkymävipu on ollut siinä 14.8.2026 alkaen.
    */
   const tyokalut = html('div', 'kartta-tyokalut');
+  /*
+   * PLUS JA MIINUS POIS NÄHTÄVYYSARKILTA (PAATOKSET 34 kohta 18 g,
+   * omistaja 18.9.2026 klo 18.00). Nipistys, rulla ja tuplanapautus
+   * zoomaavat yhä (kytkeKarttaZoom), ja ne ovat kosketuslaitteen omat
+   * eleet — painikkeet veivät tilaa kartan yläpuolelta. Lippu on
+   * oletuksena tosi, joten lehden ja pop-upin kartat (ja niiden
+   * savukevartiot) pysyvät ennallaan; nähtävyysnäkymä antaa
+   * `zoomiNapit: false`. Ohjain saa silloin tyhjän nappitaulun, jonka
+   * js/karttazoom.js kestää (valinnaiset kentät).
+   */
   const zoomiRyhma = html('div', 'kartta-zoomi');
   zoomiRyhma.setAttribute('role', 'group');
   zoomiRyhma.setAttribute('aria-label', 'Kartan suurennus');
@@ -648,17 +957,42 @@ export function piirraKaupunkiKartta(ui, kohde) {
     zoomiRyhma.appendChild(nappi);
     return nappi;
   };
-  const napit = {
-    loitonna: zoomiNappi('−', 'Loitonna karttaa'),
-    lahenna: zoomiNappi('+', 'Lähennä karttaa'),
-  };
+  const napit = zoomiNapit ? {
+    loitonna: zoomiNappi('\u2212', 'Loitonna karttaa'),
+    lahenna: zoomiNappi('+', 'L\u00e4henn\u00e4 karttaa'),
+  } : {};
+  /*
+   * KOKORUUTU ON OIKEA NAPPI KARTAN YLÄPUOLELLA (kohta 18 d-e,
+   * omistaja: *"Kokoruutu-nappi EI TOIMI iPhonella"*).
+   *
+   * JUURISYY: "Kokoruutu" oli pelkkä KYLTTI (`kartta-suurennusvihje`,
+   * aria-hidden, pointer-events: none) kartan oikeassa alakulmassa —
+   * suurennos aukesi vain siitä, että kartan kehyksen oma
+   * osoitinele tulkittiin napautukseksi. Puhelimella sama kehys
+   * ottaa vastaan myös vierityksen ja nipistyksen, joten napautus jäi
+   * usein tulkitsematta eikä kyltti itse ottanut kosketusta lainkaan.
+   * Nyt sama avaus on tavallinen painike työkalurivillä kartan
+   * YLÄPUOLELLA: se ottaa click-tapahtuman kuten mikä tahansa nappi,
+   * toimii näppäimistöllä ja on ruudunlukijalle olemassa. Kehyksen
+   * oma napautus säilyy rinnalla (työpöydän tottumus).
+   */
+  const kokoruutu = kokoruutuNappi
+    ? html('button', 'kartta-vipu-nappi kartta-kokoruutu-nappi', '\u2922 Kokoruutu')
+    : null;
+  if (kokoruutu) {
+    kokoruutu.type = 'button';
+    kokoruutu.setAttribute('aria-label', 'Avaa kartta kokoruudulle');
+    kokoruutu.title = 'Avaa kartta kokoruudulle';
+    kokoruutu.addEventListener('click', () => avaaKarttaSuurennos(ui, kehys, kartta, { avaajat, zoomiNapit }));
+  }
   /*
    * Zoomin ohjaus on kytketty vasta lohkon lopussa (kytkeKarttaZoom
    * tarvitsee valmiin kehyksen), mutta näkymävipu tarvitsee siihen
    * kahvan jo tässä. Olio täytetään kytkennässä.
    */
   const zoomOhjain = {};
-  tyokalut.appendChild(zoomiRyhma);
+  if (zoomiNapit) tyokalut.appendChild(zoomiRyhma);
+  if (kokoruutu) tyokalut.appendChild(kokoruutu);
   /*
    * VAIN VÄRIKARTTA (omistajan päätös 15.8.2026: "Piirroskartan voi
    * ottaa kokonaan pois ja pitää vain värillisen. Se on todella
@@ -671,36 +1005,37 @@ export function piirraKaupunkiKartta(ui, kohde) {
   lohko.appendChild(tyokalut);
   kehys.appendChild(kotelo);
   /*
-   * OPASTE KARTAN PÄÄLLE (omistajan tilaus 18.8.2026): ohje kohteiden
-   * napauttamisesta oli ennen jokaisen kaupungin esittelytekstin
-   * viimeisenä virkkeenä — kaksitoista kertaa sama lause leipätekstissä,
-   * kaukana siitä kartasta, jota se koskee. Nyt se on pieni kyltti
-   * kartan oikeassa yläkulmassa ja kirjoitetaan VAIN tähän, joten
-   * uusi kaupunki saa sen ilman omaa riviään.
-   *
-   * Kyltti kuuluu KEHYKSEEN eikä lavalle: lava zoomaa ja panoroi, ja
-   * opaste on ohje eikä maisemaa — sen paikan on pysyttävä samana.
-   * `pointer-events: none` pitää panorointiotteen ja kohteiden
-   * napautukset ennallaan kyltin alla. Luenta ohittaa sen
-   * (js/lukija.js: .kartta-opaste).
+   * KARTAN PÄÄLLÄ OLEVAT KYLTIT (PAATOKSET 34 kohta 18 e-f, omistaja
+   * 18.9.2026 klo 18.00): napautusopaste *"Napauta nähtävyyttä, saat
+   * lisätietoja."*, Matkakirjan ihmeen selite ja kulman "⤢ Kokoruutu"
+   * -vihje jäävät pois NÄHTÄVYYSARKILTA (`opasteet: false`) — kaksi
+   * ensimmäistä veivät tilaa kartan yläreunan kohteiden päältä ja
+   * kolmas on siellä oikeana nappina kartan yläpuolella. Muualla
+   * kyltit ovat ennallaan. Kohteiden omat ihmetähdet säilyvät joka
+   * kartalla; vain selite lähti.
    */
-  const opaste = html('div', 'kartta-opaste', 'Napauta nähtävyyttä, saat lisätietoja.');
-  opaste.setAttribute('aria-hidden', 'true');
-  kehys.appendChild(opaste);
-  /*
-   * SUURENNOSVIHJE OMANA LAPPUNAAN kartan oikeassa ALAkulmassa
-   * (omistajan tilaus 21.8.2026). Ensin se kokeiltiin toisena rivinä
-   * yläkulman opasteessa, mutta puhelimen kapealla ruudulla kyltistä
-   * tuli neljä riviä korkea ja se peitti kartan pohjoisreunan
-   * kohteet. Kahden sanan lappu vastakkaisessa kulmassa pysyy
-   * yksirivisenä joka leveydellä; vasen alakulma on mittajanan, joten
-   * oikea on vapaa.
-   */
-  const vihje = html('div', 'kartta-suurennusvihje', '⤢ Kokoruutu');
-  vihje.setAttribute('aria-hidden', 'true');
-  kehys.appendChild(vihje);
+  if (opasteet) {
+    const opaste = html('div', 'kartta-opaste', 'Napauta nähtävyyttä, saat lisätietoja.');
+    opaste.setAttribute('aria-hidden', 'true');
+    kehys.appendChild(opaste);
+    if (ihmeita > 0) {
+      const ihmeselite = html('div', 'kartta-ihmeselite');
+      const tahti = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+      tahti.setAttribute('class', 'kohde-ihmetahti kartta-ihmeselite-tahti');
+      tahti.setAttribute('viewBox', '-12 -12 24 24');
+      tahti.setAttribute('aria-hidden', 'true');
+      piirraNostosymboli(el('g', {}, tahti), 'ihme');
+      ihmeselite.appendChild(tahti);
+      ihmeselite.appendChild(document.createTextNode('Matkakirjan ihme'));
+      ihmeselite.setAttribute('aria-hidden', 'true');
+      kehys.appendChild(ihmeselite);
+    }
+    const vihje = html('div', 'kartta-suurennusvihje', '\u2922 Kokoruutu');
+    vihje.setAttribute('aria-hidden', 'true');
+    kehys.appendChild(vihje);
+  }
   lohko.appendChild(kehys);
-  lohko.appendChild(selitteet);
+  if (selitelista) lohko.appendChild(selitteet);
   lohko.appendChild(lahderivi);
   /*
    * KAUPUNGIN OMA KUVAGALLERIA (omistajan tilaus 23.8.2026). Sama
@@ -713,13 +1048,13 @@ export function piirraKaupunkiKartta(ui, kohde) {
   const kaupunkitieto = ui.game?.board?.cityById?.get(kaupunki) ?? null;
   const keskiLat = kartta.rajat ? (kartta.rajat.pohjoinen + kartta.rajat.etela) / 2 : NaN;
   const keskiLon = kartta.rajat ? (kartta.rajat.ita + kartta.rajat.lansi) / 2 : NaN;
-  const galleria = galleriaNappi(ui, {
+  const galleria = kuvagalleria ? galleriaNappi(ui, {
     nimi: kaupunkitieto?.name ?? kaupunki,
     wiki: kaupunkitieto?.wiki ?? kaupunkitieto?.name ?? '',
     lat: keskiLat,
     lon: keskiLon,
     sade: 5000,
-  }, 'Lisää kuvia tästä kaupungista');
+  }, 'Lisää kuvia tästä kaupungista') : null;
   if (galleria) lohko.appendChild(galleria);
   kohde.appendChild(lohko);
   kytkeKarttaZoom(ui, kehys, kotelo, napit, ydin, zoomOhjain);
@@ -873,6 +1208,19 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
   const mitat = asetukset.mitat ?? kehys.getBoundingClientRect();
   if (!(mitat.width > 0) || !(mitat.height > 0)) return;
   const avaajat = asetukset.avaajat ?? null;
+  /*
+   * PLUS JA MIINUS POIS MYÖS KOKORUUDUSTA (PAATOKSET 34 kohta 18 g,
+   * omistaja 18.9.2026: *"plus- ja miinuspainikkeet POISTETAAN
+   * kartasta"*). v1944 otti napit nähtävyysarkin kartalta
+   * (`zoomiNapit: false`), mutta kokoruutu rakensi omat nappinsa
+   * ehdoitta, joten ne palasivat heti kartan levittyä. Lippu kulkee
+   * nyt avaajan mukana samalla ehdolla: arkin kartta antaa epätoden ja
+   * kokoruutu jää ilman nappeja (nipistys, rulla, tuplanapautus ja
+   * panorointi toimivat ennallaan, ks. kytkeKarttaZoom). Lehden ja
+   * pop-upin kartat sekä maalehden korkokartta eivät anna lippua
+   * lainkaan, joten niiden kokoruutu pitää nappinsa.
+   */
+  const zoomiNapit = asetukset.zoomiNapit !== false;
   const ydin = ydinAla(kartta);
   ui.suljeKulttuuriKuva();
   const kortti = html('div', 'postikortti kulttuuri-suurennos kartta-suurennos');
@@ -1104,7 +1452,9 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
     });
     kortti.appendChild(selite);
   }
-  if (kartta.lahde) kortti.appendChild(html('p', 'kuvalahde', kartta.lahde));
+  if (kartta.lahde) {
+    kortti.appendChild(taytaLahderivi(html('p', 'kuvalahde'), kartta.lahde, kartta));
+  }
   /*
    * ZOOMIPAINIKKEET KARTAN PÄÄLLE, eivät omalle riville. Kortin
    * mitoitus lasketaan kartan kuvasuhteesta (--kartta-suhde) ja
@@ -1127,14 +1477,15 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
     zoomiRyhma.appendChild(nappi);
     return nappi;
   };
-  const isoNapit = {
+  const isoNapit = zoomiNapit ? {
     loitonna: isoZoomiNappi('−', 'Loitonna karttaa'),
     lahenna: isoZoomiNappi('+', 'Lähennä karttaa'),
-  };
-  tyokalut.appendChild(zoomiRyhma);
+  } : {};
+  if (zoomiNapit) tyokalut.appendChild(zoomiRyhma);
   // Ilman lavaa ei ole mitään zoomattavaa (vanha kartta ilman
   // kartta-lava-koteloa) — silloin ei myöskään näytetä säätimiä.
-  if (lava) kortti.appendChild(tyokalut);
+  // Tyhjää työkaluriviä ei liitetä lainkaan (kohta 18 g).
+  if (lava && zoomiNapit) kortti.appendChild(tyokalut);
   sulku.addEventListener('click', (e) => {
     e.stopPropagation();
     ui.suljeKulttuuriKuva();
@@ -1266,7 +1617,38 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
    * ennen kuin panoroinnin rajat lasketaan uudelleen. Lehden kartta
    * ei anna kahvaa, joten sen kehys pysyy kiinteänä kuten ennen.
    */
-  if (lava) kytkeKarttaZoom(ui, iso, lava, isoNapit, ydin, { zoomMuuttui: levita });
+  /*
+   * ZOOMIN KATTO RUUDUN MUKAAN (PAATOKSET 34 kohta 18 h, omistaja
+   * 18.9.2026: *"Yla ja alaosa taytyy kun kayttaja zoomaa sisaan"*).
+   *
+   * Lepotilassa kortti on kartan kuvasuhteen mittainen, joten
+   * pystyruudulla vaakakartan ylle ja alle jää mustaa — se on
+   * kuvasuhteen laki. Zoomatessa ikkuna saa kasvaa mustan päälle
+   * (levita), mutta vain niin pitkälle kuin zoomattua karttaa
+   * riittää: ikkunan korkeus on `min(näkyvä × 0,98, kartan
+   * lepokorkeus × kerroin)`. Jotta ylä- ja alaosa TÄYTTYVÄT, kertoimen
+   * on siis päästävä arvoon `näkyvä × 0,98 / lepokorkeus`.
+   *
+   * 390 × 844 px:llä lepokorkeus on noin 291 px ja vaadittu kerroin
+   * 2,8 — juuri ja juuri widgetin oman katon (3) alla. Pidemmällä
+   * puhelimella (430 × 932) vaadittu kerroin on jo yli kolmen, joten
+   * katto EI voi olla vakio: se lasketaan tässä ja annetaan
+   * funktiona, koska ruudun kääntö muuttaa sekä näkyvää alaa että
+   * vaadittua kerrointa kesken katselun. Arkin kartta ei anna kattoa
+   * lainkaan, joten sen yläraja pysyy kolmessa.
+   */
+  const ruudunKatto = () => {
+    const { vh } = nakyvaAla();
+    const lepokorkeus = (ydin.korkeus / 100) * (lava?.offsetHeight ?? 0);
+    if (!(vh > 0) || !(lepokorkeus > 0)) return 0;
+    return (vh * 0.98) / lepokorkeus;
+  };
+  if (lava) {
+    kytkeKarttaZoom(ui, iso, lava, isoNapit, ydin, {
+      zoomMuuttui: levita,
+      suurin: ruudunKatto,
+    });
+  }
   // Avausääni kuuluu jo napautuksessa (naytaNahtavyys), joten tässä ei
   // enää soiteta mitään — sama korjaus kuin kohdepopupeilla (v1119).
 }
@@ -1284,8 +1666,14 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
  * kohteet — sama kortti, samat eleet, ei uutta ikkunatyyppiä.
  * Kaupunki ilman matkailijalle-kenttää ei näytä osiota.
  */
-export function piirraMatkailijalle(ui, kohde) {
-  const tiedot = ui.lehtitila.tutkiKansi?.matkailijalle;
+/*
+ * KANSI VOI TULLA MYÖS PARAMETRINA (karttauudistus erä 4, 13.9.2026):
+ * turisti-info-merkki pallolla avaa PELKÄN tämän lohkon omaan
+ * pop-upiinsa, eikä sivupinoa (ui.lehtitila.tutkiKansi) ole silloin
+ * rakennettu sille kaupungille. Sisältö on sama sanatarkasti.
+ */
+export function piirraMatkailijalle(ui, kohde, { kansi = null } = {}) {
+  const tiedot = (kansi ?? ui.lehtitila.tutkiKansi)?.matkailijalle;
   if (!tiedot?.kappale) return;
   const lohko = html('div', 'matkailijalle');
   lohko.appendChild(html('h3', 'kaupunkikartta-otsikko', 'Matkailijalle'));
@@ -1329,11 +1717,14 @@ export function piirraMatkailijalle(ui, kohde) {
       }, true);
     }
     kotelo.appendChild(kuva);
-    if (tiedot.kuva.selite) {
-      const teksti = html('figcaption', 'kuvateksti', tiedot.kuva.selite);
+    // Sivulla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+    const kuvanLyhyt = kuvatekstiLyhyt(tiedot.kuva);
+    if (kuvanLyhyt) {
+      const teksti = html('figcaption', 'kuvateksti', kuvanLyhyt);
       if (tiedot.kuva.lahde) {
         // Väli tulee CSS:stä (ks. "LÄHDERIVI KUVATEKSTIN JATKEEKSI").
-        teksti.appendChild(html('span', 'lehti-kuvalahde', tiedot.kuva.lahde));
+        teksti.appendChild(kortinKuvalahde(html('span', 'lehti-kuvalahde'),
+          tiedot.kuva.lahde, tiedot.kuva));
       }
       kotelo.appendChild(teksti);
     }
@@ -1356,6 +1747,117 @@ export function piirraMatkailijalle(ui, kohde) {
     viimeinenKappale.appendChild(lue);
   }
   kohde.appendChild(lohko);
+}
+
+/**
+ * NUMEROYMPYRÖIDEN VÄISTÖ (omistajan päätös 20.9.2026, Fablen välittämä
+ * kierroksen 18 löydös: Ljubljanassa ympyrät 3–4 ja 7–8 osuivat osittain
+ * päällekkäin). Laskee jokaiselle ympyrälle näyttösiirron `{ vx, vy }`
+ * ruutupikseleinä niin, että kahden ympyrän keskipisteet ovat vähintään
+ * halkaisija + rako päässä toisistaan.
+ *
+ * Koordinaattia ei muuteta: ympyrä piirtyy siirron verran sivuun ja
+ * lyhyt viiva osoittaa oikeaan pisteeseen (kuten nimiöiden väistö,
+ * `nimiPuoli`). Rentoutus on sama kuin `hajautaPiirrospisteet`:ssä —
+ * lähekkäiset parit työnnetään pienimmän siirron suuntaan eli pitkin
+ * niitä yhdistävää viivaa, kumpikin puolet matkasta — mutta siirto on
+ * rajattu (`enimmaisSiirto`), jottei ympyrä karkaa kohteestaan.
+ *
+ * Yksikkö on ruutupikseli eikä kartan pikseli: ympyrä on käyttöliittymän
+ * merkki, jonka koko ei kasva zoomin mukana (.kartta-lava-vastaskaalaus),
+ * joten sama vakiosiirto pitää parin erillään jokaisella zoomilla.
+ * Pure-funktio ilman DOMia, jotta savuke ja testi voivat käyttää sitä.
+ *
+ * @param {{X:number, Y:number}[]} paikat ympyröiden todelliset paikat
+ *   ruutupikseleinä (lavan lepomitoilla)
+ * @returns {{vx:number, vy:number}[]}
+ */
+export function laskeNumeroympyroidenVaisto(paikat, {
+  halkaisija = 26, rako = 4, enimmaisSiirto = 24,
+} = {}) {
+  const MIN = halkaisija + rako;
+  const siirrot = paikat.map(() => ({ vx: 0, vy: 0 }));
+  for (let kierros = 0; kierros < 120; kierros++) {
+    let liikkui = false;
+    for (let a = 0; a < paikat.length; a++) {
+      for (let b = a + 1; b < paikat.length; b++) {
+        let dx = (paikat[b].X + siirrot[b].vx) - (paikat[a].X + siirrot[a].vx);
+        let dy = (paikat[b].Y + siirrot[b].vy) - (paikat[a].Y + siirrot[a].vy);
+        let d = Math.hypot(dx, dy);
+        if (d >= MIN) continue;
+        // Täsmälleen päällekkäiset erotetaan vaakasuuntaan.
+        if (d < 0.001) { dx = 1; dy = 0; d = 1; }
+        const puoli = (MIN - d) / 2;
+        siirrot[a].vx -= (dx / d) * puoli;
+        siirrot[a].vy -= (dy / d) * puoli;
+        siirrot[b].vx += (dx / d) * puoli;
+        siirrot[b].vy += (dy / d) * puoli;
+        liikkui = true;
+      }
+    }
+    // Siirron katto joka kierroksella, ettei kolmen ympyrän rykelmä
+    // työnnä yhtäkään kauas kohteestaan.
+    for (const v of siirrot) {
+      const pituus = Math.hypot(v.vx, v.vy);
+      if (pituus > enimmaisSiirto) {
+        v.vx *= enimmaisSiirto / pituus;
+        v.vy *= enimmaisSiirto / pituus;
+      }
+    }
+    if (!liikkui) break;
+  }
+  return siirrot;
+}
+
+/**
+ * Asettaa numeroympyröiden väistön kartalle: `--vx`/`--vy` (ruutupikseliä,
+ * css/styles.css .kohde-vaistetty) ja viivan `.kohde-osoitin` ympyrän
+ * reunasta oikeaan pisteeseen. Mitataan lavan LEPOMITOILLA (offsetWidth,
+ * jota zoom-muunnos ei muuta) asettelun jälkeen, ja lasketaan uudelleen
+ * jokaisella koon muutoksella; laskenta lähtee aina prosenttipaikoista,
+ * joten se ei kasaa siirtoja päällekkäin.
+ */
+export function vaistaNumeroympyrat(kotelo, ympyrat) {
+  if (ympyrat.length < 2) return;
+  const asettele = () => {
+    const W = kotelo.offsetWidth;
+    const K = kotelo.offsetHeight;
+    // Etukäteispuskurin lehti renderöityy piilossa (leveys 0), ja
+    // kuvaa odottava lava on tyhjä rivilaatikko: odotetaan kokovahtia.
+    if (W < 40 || K < 40) return false;
+    const paikat = ympyrat.map((m) => ({ X: (m.x / 100) * W, Y: (m.y / 100) * K }));
+    const siirrot = laskeNumeroympyroidenVaisto(paikat);
+    ympyrat.forEach((m, i) => {
+      const { vx, vy } = siirrot[i];
+      const pituus = Math.hypot(vx, vy);
+      m.piste.querySelector(':scope > .kohde-osoitin')?.remove();
+      if (pituus < 2) {
+        m.piste.classList.remove('kohde-vaistetty');
+        m.piste.style.removeProperty('--vx');
+        m.piste.style.removeProperty('--vy');
+        return;
+      }
+      m.piste.classList.add('kohde-vaistetty');
+      m.piste.style.setProperty('--vx', `${vx.toFixed(1)}px`);
+      m.piste.style.setProperty('--vy', `${vy.toFixed(1)}px`);
+      // Alle 16 px:n siirrolla oikea piste jää ympyrän omalle alalle
+      // (säde 13 + pisteen säde 3), joten viivaa ei piirretä: piste
+      // istuisi numeron päällä.
+      if (pituus < 16) return;
+      // Viiva ympyrästä takaisin oikeaan pisteeseen (siirron vastasuunta).
+      const osoitin = html('span', 'kohde-osoitin');
+      osoitin.setAttribute('aria-hidden', 'true');
+      osoitin.style.setProperty('--kulma', `${Math.atan2(-vy, -vx).toFixed(4)}rad`);
+      osoitin.style.setProperty('--pituus', `${pituus.toFixed(1)}px`);
+      m.piste.appendChild(osoitin);
+    });
+    return true;
+  };
+  requestAnimationFrame(() => {
+    asettele();
+    const vahti = new ResizeObserver(() => { asettele(); });
+    vahti.observe(kotelo);
+  });
 }
 
 /**
@@ -1648,17 +2150,23 @@ export function avaaNahtavyys(ui, kohde, numero, {
    * jutut ja muut ei-karttakohteet eivät löydä piirrosta nimellään,
    * jolloin kappale taittuu ennalleen.
    */
-  const piirros = MINIATYYRIT[ui.lehtitila.arrivalShownFor]?.[kohde.nimi] ?? null;
+  const piirrosArvo = MINIATYYRIT[ui.lehtitila.arrivalShownFor]?.[kohde.nimi] ?? null;
+  const piirros = piirrosArvo ? assetOsoite('miniatyyrit', piirrosArvo) : null;
 
   kappaleet.forEach((kappale, i) => {
     const kpl = nahtavyysKappale(ui, kappale, linkit);
     if (i === 0 && piirros) {
       const kuva = document.createElement('img');
       kuva.className = 'nahtavyys-piirros';
-      kuva.src = piirros;
       kuva.alt = '';
       kuva.decoding = 'async';
       kuva.draggable = false;
+      // Puuttuva piirros (ämpärissä ei vielä ole tunnuksen kuvaa) ei saa
+      // jättää kappaleen sisään rikkinäistä kuvaa: kappale taittuu
+      // silloin ennalleen, kuten kohteella jolla piirrosta ei ole.
+      // Sama sitkeä lataus kuin kartalla: 429-purske ei saa poistaa
+      // piirrosta, joka on ämpärissä (js/media.js).
+      void lataaKuvaSitkeasti(kuva, piirros, { onVirhe: () => kuva.remove() });
       kpl.insertBefore(kuva, kpl.firstChild);
     }
     // Kelluva kuva ennen kappaletta, jotta teksti kiertää sen.
@@ -2111,7 +2619,8 @@ export function nahtavyydenKuva(ui, kuva) {
   const kehys = html('figure', 'nahtavyys-kuvakehys');
   const el = document.createElement('img');
   el.className = 'nahtavyys-kuva kulttuuri-kuva-nappi';
-  el.alt = kuva.selite ?? '';
+  // Jutussa lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+  el.alt = kuvatekstiLyhyt(kuva);
   // Sama peiliputki ja suurennus kuin nostojen kuvilla.
   ui.varustaNostonKuva(el, kuva, 900);
   /*
@@ -2137,12 +2646,13 @@ export function nahtavyydenKuva(ui, kuva) {
    */
   if (ui.piirraIhmenauha?.(kehys, kuva.nauha)) kehys.classList.add('kuva-nauhalla');
   const teksti = html('figcaption', 'nahtavyys-kuvateksti');
-  if (kuva.selite) teksti.appendChild(html('span', 'nahtavyys-selite', kuva.selite));
+  const lyhytSelite = kuvatekstiLyhyt(kuva);
+  if (lyhytSelite) teksti.appendChild(html('span', 'nahtavyys-selite', lyhytSelite));
   // Lähderivi: pro-tuottajan kuvassa tekijän nimi on painike, joka
   // avaa tekijäsivun (js/tekijakortti.js). Ilman `tekijaId`-kenttää
   // rivi on tavallista tekstiä kuten ennen.
   if (kuva.lahde) {
-    teksti.appendChild(taytaLahderivi(html('span', 'nahtavyys-lahde'), kuva.lahde, kuva));
+    teksti.appendChild(kortinKuvalahde(html('span', 'nahtavyys-lahde'), kuva.lahde, kuva));
   }
   kehys.appendChild(teksti);
   return kehys;
@@ -2197,9 +2707,11 @@ export function nahtavyydenKaruselli(ui, kuvat) {
     if (el) el.replaceWith(uusi); else ikkuna.prepend(uusi);
     el = uusi;
     teksti.replaceChildren();
-    if (kuva.selite) teksti.appendChild(html('span', 'nahtavyys-selite', kuva.selite));
+    // Karusellissa lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+    const lyhyt = kuvatekstiLyhyt(kuva);
+    if (lyhyt) teksti.appendChild(html('span', 'nahtavyys-selite', lyhyt));
     if (kuva.lahde) {
-      teksti.appendChild(taytaLahderivi(html('span', 'nahtavyys-lahde'), kuva.lahde, kuva));
+      teksti.appendChild(kortinKuvalahde(html('span', 'nahtavyys-lahde'), kuva.lahde, kuva));
     }
     laskuri.textContent = `${kohta + 1}/${kuvat.length}`;
   };

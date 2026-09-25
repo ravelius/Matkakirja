@@ -35,6 +35,13 @@ import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
 
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
+
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
@@ -66,7 +73,7 @@ const palvelin = http.createServer((req, res) => {
   res.end(readFileSync(polku));
 });
 await new Promise((ok) => palvelin.listen(0, ok));
-const osoite = `http://localhost:${palvelin.address().port}/`;
+const osoite = `http://localhost:${palvelin.address().port}/?lauta=kartta`;
 
 let lapi = 0;
 let kaikki = 0;
@@ -719,9 +726,11 @@ if (!LUETTELO.viivataso) {
       vaarassaPolussa: kuvat.filter((k) => !(k.getAttribute('href') ?? '')
         .includes('/viivat/')).length,
       /*
-       * KERROSJÄRJESTYS: viivataso tarkan päällä ja noston alla.
-       * Reitin kuuluu olla kartan päällä, mutta noston symbolin
-       * reitin päällä.
+       * KERROSJÄRJESTYS: ranta tarkan päällä, viiva rannan päällä ja
+       * nosto ylimpänä. Rantaviiva on maaston reuna, reitin kuuluu
+       * kulkea sen päällä, ja noston symbolin reitin päällä.
+       * Rantataso lisättiin 6.9.2026 (omistajan päätös: pohja
+       * poltetaan ilman rantaviivaa, ks. laattapyramidi.md 10d).
        */
       jarjestys: [...(ui.pyramidiKerros?.children ?? [])]
         .map((k) => k.getAttribute('class')).filter(Boolean),
@@ -731,9 +740,9 @@ if (!LUETTELO.viivataso) {
     viiva1.laattoja > 0 && viiva1.vaarassaPolussa === 0,
     `laattoja ${viiva1.laattoja}, väärässä polussa ${viiva1.vaarassaPolussa} `
     + `(taso z${viiva1.taso})`);
-  vaadi('V1b kerrosjärjestys on pohja - tarkka - viiva - nosto',
-    viiva1.jarjestys.join(' ').includes('pyramidi-tarkkataso pyramidi-viivataso '
-      + 'pyramidi-nostotaso'),
+  vaadi('V1b kerrosjärjestys on pohja - tarkka - ranta - viiva - nosto',
+    viiva1.jarjestys.join(' ').includes('pyramidi-tarkkataso pyramidi-rantataso '
+      + 'pyramidi-viivataso pyramidi-nostotaso'),
     viiva1.jarjestys.join(' '));
   const viivapyynnot = pyynnot.filter((p) => p.includes('/viivat/'));
   const viivabitit = {};

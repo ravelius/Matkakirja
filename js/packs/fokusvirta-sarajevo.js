@@ -126,7 +126,7 @@ import { bihFokuskohteet } from './fokuskohteet-bih.js';
  * MIKSI EI KUPARIKYSYMYSTÄ. Sarajevon laattakysymys (kohtaaminen, ks.
  * alempana) kysyy, mitä astiaa kaupungin kuparisepät takovat. Jos
  * lehden aarteen avaava tehtävä kysyisi kuparista tai kahvista,
- * aarrekysymys olisi ratkaistu ennen kuin Emiria on tavattu. Sivu 2 on
+ * aarrekysymys olisi ratkaistu ennen kuin Adnania on tavattu. Sivu 2 on
  * kokonaan toisesta vuosisadasta eikä pohjusta laattaa lainkaan.
  *
  * SIVUN OMA TEHTÄVÄ VÄISTYY. Aihesivulla 'urheilu' on jo
@@ -184,17 +184,80 @@ export const FOKUSVIRTA_SARAJEVO = {
 
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 0e044c6931a207d02f2608832ca2c53dfb46da6ae93e63fabeeea809991cb64a. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sarajevo-r20260909-paper-v4.jpg",
+      lyhyt: "Sarajevo, 1873. Vasara sai levätä kuvan ajan.",
+      selite: 'Kupariseppä pysäytti vasaransa puoliksi kuvioidun astian yllä. Basaarin kilkutus jatkui ympärillä, kun annoin astioille kamerassani koko pöydän verran tilaa.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://arhiva.visitsarajevo.ba/2018/04/sarajevo-coppersmiths-masters-of-an-old-craft/?lang=en"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sarajevo-r20260911-paper2-v1.jpg",
+      lyhyt: "Sarajevo, 1873. Aamukahvin pannussa näkyi nyt jokainen vasaranjälki.",
+      selite: 'Kahvipannun pinta oli täynnä sepän pieniä vasaranjälkiä. Aamulla olin huomannut vain juoman, mutta nyt työ näkyi jokaisessa kuviossa.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://arhiva.visitsarajevo.ba/2018/04/sarajevo-coppersmiths-masters-of-an-old-craft/?lang=en"],
+    },
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
-    paikkarivi: 'Sarajevo, syyskuussa 1873. Kirkas ilta; vuoret lähellä.',
-    teksti: 'Laskin sillalta neljän uskon äänet: kirkonkellot idästä ja '
-      + 'lännestä, minareetin kutsun, sapatin hiljaisuuden — ja joen, joka '
-      + 'ei kuulu kenellekään. Majatalon isäntä sanoi, ettei kaupungissa '
-      + 'tarvitse valita, minkä kellon mukaan herää.',
+    paikkarivi: 'Sarajevo, syyskuussa 1873. Kirkas ilta; vuoret lähellä; '
+      + 'puntari korkealla.',
+    /* HYVÄKSYTTY TEKSTIPILOTTI r2 13.9.2026: yhteinen Horatio–Livia-
+     * paribudjetti alittaa julkaistun lähtöparin. Sanat on hyväksytty
+     * tekniseen RC-jatkoon; uusi luenta ja aikaleimat vaaditaan ennen
+     * julkaisua. */
+    teksti: "Sarajevon kupariseppä naputti kahvipannua vasaralla, jonka olisin hukannut taskuun. Aamulla olin juonut kahvini samanlaisesta pannusta vilkaisematta sitä. Nyt näin jokaisen vasaranjäljen. Basaarin kilkutuksessa aamiainen muuttui käsityöksi.",
     /* Kaanon, kohta 1 — luenta ja äänitteen polku sellaisinaan. */
-    luenta: '[curious] Laskin sillalta neljän uskon äänet: kirkonkellot '
-      + 'idästä ja lännestä, minareetin kutsun, sapatin hiljaisuuden — ja '
-      + 'joen, joka ei kuulu kenellekään. [warmly] Majatalon isäntä sanoi, '
-      + 'ettei kaupungissa tarvitse valita, minkä kellon mukaan herää.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljainen osuus: basaarin kilkutus jää taustahavainnoksi ilman
+     * omaa lisäreaktiota.
+     */
+    reaktiot: [
+  {
+    "id": "sarajevo.r1",
+    "ankkuri": "jonka olisin hukannut taskuun",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "sarajevo.r2",
+    "ankkuri": "juonut kahvini samanlaisesta pannusta vilkaisematta sitä",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "sarajevo.r3",
+    "ankkuri": "Nyt näin jokaisen vasaranjäljen",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "sarajevo.r4",
+    "ankkuri": "aamiainen muuttui käsityöksi",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
+     * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
+    luenta: "[curious] Sarajevon kupariseppä naputti kahvipannua vasaralla, jonka olisin hukannut taskuun. Aamulla olin juonut kahvini samanlaisesta pannusta vilkaisematta sitä. [warmly] Nyt näin jokaisen vasaranjäljen. Basaarin kilkutuksessa aamiainen muuttui käsityöksi.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-sarajevo.mp3',
     /*
      * KUVA: Alois Schönnin maalaus Latinalaissillalta, Österreichische
@@ -217,6 +280,7 @@ export const FOKUSVIRTA_SARAJEVO = {
      */
     kuva: {
       tiedosto: 'Friedrich Alois Schönn - An der lateinischen Brücke in Sarajewo - 171 - Österreichische Galerie Belvedere.jpg',
+      lyhyt: 'Latinalaissilta; Alois Schönn maalasi näkymän 1883, kymmenen vuotta isoisän käynnin jälkeen.',
       selite: 'Latinalaissilta Sarajevossa. Alois Schönn maalasi näkymän '
         + 'vuonna 1883, kymmenen vuotta isoisän käynnin jälkeen.',
       lahde: 'Alois Schönn 1883, Österreichische Galerie Belvedere, '
@@ -236,6 +300,24 @@ export const FOKUSVIRTA_SARAJEVO = {
    */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-sarajevo-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-sarajevo-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Sarajevo: pannun kylki kertoo, kuka teki aamukahvin mahdolliseksi.',
+        selite: 'Kazandžilukin kupariastiat heijastavat kapean kujan valoa, ja tekijän naputus erottaa kuvioidun pinnan sileästä. Odotin vasaran hiljenemistä ja kuvasin pannun ennen kuin oma nokkani ehti mukaan työhön.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://visitbih.ba/en/one-of-the-oldest-streets-of-sarajevo-kazandziluk-500-years-long-tradition/',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS (Fablen kaanon 27.8.2026, TUURAAJA-KEHYS).
      *
      * Merkinnän loppulause ("ei tarvitse valita, minkä kellon mukaan
@@ -252,15 +334,33 @@ export const FOKUSVIRTA_SARAJEVO = {
      * Loppu myöntää isoisälle sen osan, joka piti paikkansa — kaanonin
      * sääntö 3 kevyempänä muotona (varsinainen myönnytys on Ateenassa).
      */
-    maadoitus: 'Kaunis lause. Mut postinkantajan kannalta se näytti vähän '
-      + 'toiselta: monta uskoa tarkoitti montaa kalenteria, montaa pyhien '
-      + 'sarjaa ja ikuista laskemista siitä, minä päivänä mikäkin luukku on '
-      + 'auki. Meikäläiset valitti siitä ääneen. Herätä sai silti minkä '
-      + 'kellon mukaan halus — se osa piti kyl paikkansa.',
-    teksti: 'Joen varrella on nykyään talo nimeltä Inat kuća — Uhman '
-      + 'talo. Kun keisarin virkamiehet halusivat sen tontin, omistaja '
-      + 'purki talonsa ja kokosi sen uudestaan joen toiselle puolelle, '
-      + 'lauta laudalta. Minä ihailen sitä miestä ammatikseni.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* TEKSTIPILOTTI 12.9.2026: yksi sisältöön sidottu virke lisää. */
+    kommentti: ["Kuparisepät naputtavat basaarissa yhä. Minun piti vain piipahtaa, mutta jäin kuuntelemaan yhtä vasaraa. Yritin naputtaa nokalla samaa tahtia — seppä oli kyllä nopeampi!"],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*
      * Commons 25.8.2026: 5184×3456, CC BY 2.0, Fred Romero, kuvattu
      * 20.8.2019, kategoria Inat kuća; tiedoston oma kuvaus kertoo saman
@@ -268,6 +368,7 @@ export const FOKUSVIRTA_SARAJEVO = {
      */
     kuva: {
       tiedosto: 'Sarajevo - Inat kuća (49104054186).jpg',
+      lyhyt: 'Inat kuća eli Uhman talo Miljackan rannalla; talo purettiin ja koottiin joen toiselle puolelle.',
       selite: 'Inat kuća eli Uhman talo Miljackan rannalla. Talo purettiin '
         + 'ja koottiin uudelleen joen toiselle puolelle.',
       lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)',
@@ -321,12 +422,14 @@ export const FOKUSVIRTA_SARAJEVO = {
         + 'kuća, Uhmatalo. Kuulet siitä vielä toisenkin version, jossa mies '
         + 'vaati korvaukseksi kultarahan jokaista tiiltä kohti. Sitä minä '
         + 'en toista: se ei ole lähteissäni.',
+      lahde: 'en-Wikipedia "Spite house". Tarkistettu 1.9.2026.',
       /*
        * Sama tarkistettu tiedosto kuin pöllön huomiolla — sama talo,
        * eri kuvateksti: vaihe 2 näyttää talon, täky kertoo tontin.
        */
       kuva: {
         tiedosto: 'Sarajevo - Inat kuća (49104054186).jpg',
+        lyhyt: 'Uhman talo joen rannalla; alkuperäinen tontti oli vastarannalla, missä kaupungintalo nyt on.',
         selite: 'Uhman talo joen rannalla. Alkuperäinen tontti oli '
           + 'vastarannalla, siellä missä kaupungintalo nyt seisoo.',
         lahde: 'Fred Romero, Wikimedia Commons (CC BY 2.0)',
@@ -381,6 +484,7 @@ export const FOKUSVIRTA_SARAJEVO = {
         + 'Vuosikymmeniä myöhemmin, iäkkäänä naisena Israelissa, Mira Papo '
         + 'huolehti siitä, että Korkutin tytär oli turvassa. Kirja itse '
         + 'siirrettiin 1992 keskuspankin holviin ja odotti siellä.',
+      lahde: 'en-Wikipedia "Sarajevo Haggadah". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 723×1000, public domain (PD-old-100-expired),
        * tekijä tuntematon, ajoitus 1350, kategoria Sarajevo Haggadah,
@@ -431,6 +535,7 @@ export const FOKUSVIRTA_SARAJEVO = {
         + 'suojeltu vuodesta 2010. Ympärillä leviää Livanjsko polje, '
         + 'maailman suurin karstikenttä — 458,7 neliökilometriä — ja se on '
         + 'kuulunut Ramsarin kosteikkoluetteloon vuodesta 2008.',
+      lahde: 'en-Wikipedia "Feral horse". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 1600×1200, CC BY 2.0, Brian Eager, kuvattu
        * 19.7.2012, kategoria Wild horses of Livno. Kuvaajan oma
@@ -517,7 +622,7 @@ export const FOKUSVIRTA_SARAJEVO = {
    * pelissä käytössä: tarinakaaren paketti js/tyohuone-kehitys-data.js
    * (KAARI_PAKETIT, id 'sarajevo') antaa hahmon JA sen kysymyksen, jonka
    * game.actionQuiz esittää laatalla (js/game.js kaariTarina). Hahmo on
-   * siis Kupariseppä Emir, eikä tämä paketti kosketa kysymystä millään
+   * siis Kupariseppä Adnan, eikä tämä paketti kosketa kysymystä millään
    * tavalla — sama suhde kuin Ateenan Nikoksella ja Sofian Nadialla.
    *
    * KOHTAAMISKUVAA EI OLE. Sofian paketissa on
@@ -527,15 +632,15 @@ export const FOKUSVIRTA_SARAJEVO = {
    * merkitty päätoimittajalle.
    *
    * Esittely on tämän kortin omaa tekstiä ja kirjoitettu niin, ettei se
-   * kertaa Emirin omaa repliikkiä eikä paljasta vastausta.
+   * kertaa Adnanin omaa repliikkiä eikä paljasta vastausta.
    */
   kohtaaminen: {
-    hahmo: 'Kupariseppä Emir',
-    nappi: 'Tapaa Emir',
-    teksti: 'Emirin paja on Kazandžilukin kujalla, ja hänen sukunsa on '
+    hahmo: 'Kupariseppä Adnan',
+    nappi: 'Tapaa Adnan',
+    teksti: 'Adnanin paja on Kazandžilukin kujalla, ja hänen sukunsa on '
       + 'takonut saman oven takana kolmesataa vuotta. Hän tunnistaa '
       + 'tulijan askelista ennen kuin nostaa katseensa: kuka on tullut '
-      + 'ostamaan ja kuka katsomaan. Matkustajaa hän ei hoputa. Emir '
+      + 'ostamaan ja kuka katsomaan. Matkustajaa hän ei hoputa. Adnan '
       + 'laskee vasaransa vasta kun on varma, että vieras on ymmärtänyt, '
       + 'mitä näiden pöytien esineistä yksi merkitsee kaupungille '
       + 'enemmän kuin muut.',
@@ -691,6 +796,7 @@ export const FOKUSVIRTA_SARAJEVO = {
         + 'kutsutaan julmaksi huijaukseksi, jolla ei ole sijaa aidon '
         + 'tieteen maailmassa. Kukkulan päällä on samaan aikaan aito '
         + 'keskiaikainen Bosnian kuninkaallinen linnoitus.',
+      lahde: 'en-Wikipedia "Bosnian pyramid claims". Tarkistettu 1.9.2026.',
       /*
        * Tälle nostolle ei ole omaa täkyä tässä tiedostossa, joten `avaa`
        * puuttuu tarkoituksella — lunastus kannattelee noston yksinään.

@@ -1,0 +1,1687 @@
+import { seuraaLivianKasvoAanitetta, lopetaLivianKasvoAanite } from './livia-puhetila.js';
+import { kytkeLivianPuheEleet } from './livia-puheleet.js';
+import { kytkeLivianPilottiEleet } from './livia-puheeleet-lataus.js';
+/*
+ * LIVIAN ÄÄNI — pulu puhuu kuplansa ääneen.
+ *
+ * Omistajan tilaus 6.9.2026 aamupäivä, sanatarkasti: *"Pululle täytyy
+ * etsiä eleveniltä oma ääni joka vähän käheä ja nopea puhumaan.
+ * Generoidaan kaikki valmiiksi kirjoitetut repliikit puheeksi."* ja
+ * *"Tehdään pulusta hyvin vokaalinen ja elävä vastakohta kertojan
+ * monotoonisuuteen."*
+ *
+ * Kertoja (Viisas Kertoja, js/luenta.js ja js/linssipuhe.js) lukee
+ * isoisän tekstit tasaisella äänellä. Livia on sen vastakohta: oma
+ * käheä ääni, nopea tempo ja runsaat elävöitystagit. Äänitteet
+ * generoidaan tools/generoi-pulu.mjs -työkalulla ja ne asuvat
+ * ämpärissä (LIVIAN_AANIJUURI) — repossa niitä ei ole.
+ *
+ * ── TIEDOSTONIMI ON KYTKENTÄ ───────────────────────────────────────
+ *
+ * Nimi EI ole kutsujan muistin varassa vaan johdetaan lähteestä ja
+ * järjestysnumerosta (livianAaniNimi) — samalla funktiolla pelissä ja
+ * generointityökalussa, tasan kuten linssiluennoilla (js/
+ * linssipuhe.js luennanRunko). Jos nimet eriytyisivät, ajo maksaisi
+ * tiedostosta, jota peli ei koskaan hae, eikä mikään kaatuisi:
+ * puuttuva luenta on hiljainen.
+ *
+ * Lähteitä on kaksi lajia. Kolme ensimmäistä ovat js/livia.js:n
+ * repliikkiryhmiä:
+ *   avaus          LIVIAN_AVAUS, viisi kuplaa aloitusvalinnassa
+ *                  (äänitteitä on viisi; näytettäviä voi olla vähemmän,
+ *                  ks. js/livia.js livianAvausSarja — numero on aina
+ *                  kaanonin oma)
+ *   paljastus      livianPaljastus(), kolme kuplaa ensisaapumisessa
+ *                  (kaksi ennen isoisän luentaa, yksi sen jälkeen)
+ *   mannerivihje   MANNERIVIHJE, yksi kupla
+ *   lehtivinkki    LIVIAN_LEHTIVINKKI, yksi kupla lehden avautuessa
+ *
+ * ── KAUPUNKIKOHTAISET LÄHTEET (Eurooppa ensin) ─────────────────────
+ *
+ * Raamattu, VAIN EUROOPPA TYÖN ALLA (omistaja 7.9.2026): pulutekstit
+ * käydään läpi Euroopan kaupunki kerrallaan, ja ääni generoidaan vasta
+ * kun omistaja on hyväksynyt tekstit. Mukana ovat Ateena, Sofia,
+ * Istanbul, Riika ja Vilna. Lähteen nimi on KAUPUNGIN TUNNUS (city.id)
+ * ja indeksi tulee kenttien ja niiden KUPLIEN järjestyksestä
+ * (LIVIAN_KAUPUNKILAHTEET) — ei siis kutsupaikan muistista. Tekstit
+ * asuvat pakkauksissa (js/packs/fokusvirta-<id>.js) eikä niitä kopioida
+ * tänne: peli ja työkalu lukevat saman kentän.
+ *
+ * YKSI KUPLA = YKSI TIEDOSTO (omistaja 7.9.2026). Kentän arvo saa olla
+ * taulukko, jonka jokainen alkio on oma kupla ja oma äänite; vanha muoto
+ * (yksi merkkijono) on yhden kuplan taulukko.
+ *
+ * Muut kaupungit ovat hiljaisia täsmälleen kuten ennen — tuntematon
+ * lähde ei saa nimeä (livianAaniNimi palauttaa null).
+ *
+ * ── KAIKU ON POISTETTU PULUN ALUSTA ────────────────────────────────
+ *
+ * Omistaja 6.9.2026 ilta, sanatarkasti: *"ota kaiku pois pulun tekstin
+ * alusta"*. Se kumoaa saman päivän aiemman tilauksen (*"Voidaan
+ * käyttää myös pulun ääneen efektejä (kaiku alussa kun tulee ja
+ * aloittaa jo huutelemaan viestiä ennenkuin on edes ehtinyt kokonaan
+ * perille)"*): kuultuna kaiku söi repliikin ensimmäiset sanat, ja pulu
+ * puhuu nyt KUIVALLA ÄÄNELLÄ ALUSTA ASTI joka repliikissä.
+ *
+ * Päätös on yhdessä vakiossa (LIVIAN_KAIKU) eikä hajallaan
+ * kutsupaikoissa: kaikuversiot ovat yhä ämpärissä (ne on kerran
+ * maksettu ja generoitu, tools/generoi-pulu.mjs teeKaiku), joten
+ * paluu olisi yhden rivin vaihto — mutta peli ei niitä hae.
+ *
+ * SAAPUMISREPLIIKIT (LIVIAN_SAAPUMISREPLIIKIT) jäävät silti tähän
+ * moduuliin: generointityökalu lukee ne, ja ne kertovat manifestissa,
+ * mille repliikeille kaikuversio on olemassa. Ne ovat ne kuplat,
+ * joissa Livia tulee paikalle: avauksen ensimmäinen (hän lennähtää
+ * mukaan, js/livia.js naytaRepliikki lennahda), paljastuksen
+ * ensimmäinen ("Kaak. Sähke pöllöltä.") ja kaupunkirepliikeistä vain
+ * Sofian `paluu` (hän palaa pöllön luota). Peli soittaa niistäkin nyt
+ * kuivan version.
+ *
+ * ── LUENTA SEURAA KUPLIA ───────────────────────────────────────────
+ *
+ * Omistaja 6.9.2026: *"Kaiuttimen kuvake kuplassa ei ole tarpeen;
+ * luenta seuraa kuplia."* Kuplien rytmi (js/livia.js lukuaika) ohjaa
+ * siis ääntä eikä toisin päin: kun seuraava kupla tulee, edellinen
+ * äänite häivytetään pois.
+ *
+ * MUTTA KUPLA ODOTTAA PUHEEN LOPPUUN (7.9.2026): jos äänite on
+ * lukuaikaansa pidempi, kuplan ajastin venyy sen mittaan
+ * (livianKuplanAjastin) eikä lause enää katkea kesken. Repliikkien
+ * lyhyys on silti tavoite — pitkä kupla seisoo ruudulla pitkään — ja
+ * tools/generoi-pulu.mjs varoittaa yhä ylityksestä.
+ *
+ * Kytkin on sama kuin kertojalla (js/luenta.js luentaKytkinPaalla):
+ * mykistetty peli on mykistetty myös pulun osalta. Puuttuva tiedosto
+ * on hiljainen — kupla toimii ilman ääntä täsmälleen kuten ennen.
+ */
+
+import { pulunVoima } from './aani-ehdokkaat.js';
+import {
+  luentaKytkinPaalla, luovutaPuhevuoro, merkitsePuhuja, PUHUJA_PULU, puhujaAanessa,
+  vapautaPuhuja,
+} from './luenta.js';
+import { AANI_JUURI } from './media.js';
+import {
+  irrotaMusiikinVahvistin, liitaMusiikkiin, volumeToimii,
+} from './musiikkivahvistin.js';
+
+/**
+ * Livian äänitteiden kansio ämpärissä.
+ *
+ * Sama polku kirjoitetaan tools/generoi-pulu.mjs:n vientiin; peli
+ * hakee tasan sen, joten äänet kuuluvat heti ajon jälkeen ilman
+ * julkaisua (kuten linssiluennat).
+ */
+export const LIVIAN_AANIJUURI = `${AANI_JUURI}aanet/pulu/`;
+
+/*
+ * HYVÄKSYTYT VERSIONOIDUT KAUPUNKIÄÄNET (päivitetty 14.9.2026).
+ *
+ * Nämä avaimet tulevat suoraan valmistuneista tuotantokuiteista. Äänitteet
+ * ovat muuttumattomissa R2-avaimissa, joten peli ei enää riipu näiden
+ * repliikkien vanhasta ylikirjoitettavasta aanet/pulu/-avaimesta.
+ *
+ * 14.9.2026: 40 repliikkiä osoittaa Horatio–Livia-Eurooppa-paketin uusiin
+ * luentoihin. Kuitteja on VIISI, koska erän 1 kolme repliikkiä (bukarest-3,
+ * pariisi-3, berliini-3) hylkäytyi 20 s kestokatossa ja ajettiin uusiksi:
+ * pulu-b3a8d61baa0c4dd24123 (7 kpl), pulu-3388cdde59d36a971f1a (3 kpl),
+ * pulu-415d0075be837be8c5bd, pulu-85a34cad2355457c7e9b ja
+ * pulu-0090303ae274b1313286. Kuitin `promotionStatus` on
+ * "pending-code-deploy" — julkaisu live-avaimeen ei ole erillinen vaihe,
+ * vaan tämä taulukko on julkaisu.
+ *
+ * VIISI KAUPUNKIA ODOTTAA ERÄN 5 AJOA: sisilia-3, islanti-3, alpit-3,
+ * lappi-3 ja tromssa-3 jäivät äänittämättä kiintiön loputtua, joten niiden
+ * rivit ja niiden teksti pysyvät 13.9.2026 asussa (js/livia-pilotti-cuet.js
+ * ERA5_ODOTTAVAT_KAUPUNGIT).
+ *
+ * ATEENA-3 JA SOFIA-3 UUDELLA PUTKELLA (14.9.2026 ilta, omistajan
+ * kuunneltavaksi). Omistaja kuuli vanhoissa Livia-äänissä pienen
+ * digitaalisen häiriön; mitattu syy oli ylimääräinen 128 kbps
+ * koodaussukupolvi, kun putki purki ElevenLabsin valmiin mp3:n ja koodasi
+ * sen uudelleen libmp3lamella. Uusi putki (erä pulu-c4a91d1229f96eaac265,
+ * lähde-SHA fd6db48f) lähettää voice_settingsissä vain stabilityn ja
+ * tallentaa mallin mp3:n SELLAISENAAN sekä raaka- että final-avaimeen.
+ * Mitattu: raaka- ja final-tiedoston sha256 on sama
+ * (ateena fde8500a…cc89, sofia c6d42162…b190) ja tiedostoissa on vain
+ * ElevenLabsin Lavf-tunniste, ei omaa Lavc-kooderitunnistetta — eli yksi
+ * koodaussukupolvi. Teksti ei muuttunut (tiivisteet 572e0e85 ja 83dd2f15
+ * ennallaan), joten kupla ja kuitti puhuvat yhä samaa tekstiä. Kohdistusta
+ * näille ei ole: .eleet.json puuttuu uuden avaimen vierestä, joten eleet
+ * jäävät nulliksi kuten muissakin 14.9. äänissä.
+ *
+ * MUUT 38 KAUPUNKIA OVAT ENNALLAAN — vain nämä kaksi ajettiin uusiksi.
+ */
+export const LIVIAN_VERSIOIDUT_AANET = Object.freeze({
+  'ateena-3': 'aanet/pulu/versiot/fd6db48feef7/pulu-c4a91d1229f96eaac265/livia-ateena-3.mp3',
+  'sarajevo-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-sarajevo-3.mp3',
+  'helsinki-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-helsinki-3.mp3',
+  'tampere-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-tampere-3.mp3',
+  'tallinna-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-tallinna-3.mp3',
+  'riika-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-riika-3.mp3',
+  'vilna-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-vilna-3.mp3',
+  'marseille-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-marseille-3.mp3',
+  'venetsia-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-venetsia-3.mp3',
+  'tukholma-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-tukholma-3.mp3',
+  'lappi-3': 'aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-lappi-3.mp3',
+  'tromssa-3': 'aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-tromssa-3.mp3',
+  'sofia-3': 'aanet/pulu/versiot/fd6db48feef7/pulu-c4a91d1229f96eaac265/livia-sofia-3.mp3',
+  'istanbul-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-istanbul-3.mp3',
+  'bukarest-3': 'aanet/pulu/versiot/439bf050af65/pulu-3388cdde59d36a971f1a/livia-bukarest-3.mp3',
+  'budapest-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-budapest-3.mp3',
+  'wien-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-wien-3.mp3',
+  'lontoo-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-lontoo-3.mp3',
+  'pariisi-3': 'aanet/pulu/versiot/439bf050af65/pulu-3388cdde59d36a971f1a/livia-pariisi-3.mp3',
+  'madrid-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-madrid-3.mp3',
+  'berliini-3': 'aanet/pulu/versiot/439bf050af65/pulu-3388cdde59d36a971f1a/livia-berliini-3.mp3',
+  'rooma-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-rooma-3.mp3',
+  'praha-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-praha-3.mp3',
+  'dublin-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-dublin-3.mp3',
+  'edinburgh-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-edinburgh-3.mp3',
+  'lissabon-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-lissabon-3.mp3',
+  'barcelona-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-barcelona-3.mp3',
+  'sevilla-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-sevilla-3.mp3',
+  'amsterdam-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-amsterdam-3.mp3',
+  'dubrovnik-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-dubrovnik-3.mp3',
+  'bergen-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-bergen-3.mp3',
+  'kobenhavn-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-kobenhavn-3.mp3',
+  'krakova-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-krakova-3.mp3',
+  'varsova-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-varsova-3.mp3',
+  'pietari-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-pietari-3.mp3',
+  'moskova-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-moskova-3.mp3',
+  'kiova-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-kiova-3.mp3',
+  'odessa-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-odessa-3.mp3',
+  'kreeta-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-kreeta-3.mp3',
+  'granada-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-granada-3.mp3',
+  'firenze-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-firenze-3.mp3',
+  'oslo-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-oslo-3.mp3',
+  'sisilia-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-sisilia-3.mp3',
+  'islanti-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-islanti-3.mp3',
+  'alpit-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-alpit-3.mp3',
+});
+
+/** Valmiiden city-3-tuotantokuitujen todelliset MP3-kestot sekunteina. */
+export const LIVIAN_KESTOT = Object.freeze({
+  'ateena-3': 17.868, 'sarajevo-3': 13.296, 'helsinki-3': 12.669,
+  'tampere-3': 16.588, 'tallinna-3': 15.517, 'riika-3': 11.912,
+  'vilna-3': 17.554, 'marseille-3': 17.789, 'venetsia-3': 19.043,
+  'tukholma-3': 23.144, 'lappi-3': 14.864, 'tromssa-3': 15.752,
+  'sofia-3': 12.356, 'istanbul-3': 13.793, 'bukarest-3': 24.503,
+  'budapest-3': 21.394, 'wien-3': 13.035, 'lontoo-3': 13.375,
+  'pariisi-3': 25.731, 'madrid-3': 18.469, 'berliini-3': 20.428,
+  'rooma-3': 17.659, 'praha-3': 14.498, 'dublin-3': 16.588,
+  'edinburgh-3': 17.554, 'lissabon-3': 17.084, 'barcelona-3': 14.341,
+  'sevilla-3': 13.845, 'amsterdam-3': 23.432, 'dubrovnik-3': 26.096,
+  'bergen-3': 21.133, 'kobenhavn-3': 23.144, 'krakova-3': 19.67,
+  'varsova-3': 18.26, 'pietari-3': 12.173, 'moskova-3': 12.147,
+  'kiova-3': 13.558, 'odessa-3': 16.562, 'kreeta-3': 16.588,
+  'granada-3': 17.215, 'firenze-3': 15.073, 'oslo-3': 16.327,
+  'sisilia-3': 12.121, 'islanti-3': 12.121, 'alpit-3': 13.662,
+});
+
+/**
+ * VARATTU NUMERO — POISTETUN REPLIIKIN PAIKKA (omistaja 8.9.2026,
+ * sanatarkasti: *"ota kaikki pulun alustukset pois."*).
+ *
+ * Alustuskupla poistui joka kaupungista, mutta sen JÄRJESTYSNUMERO ei
+ * saa poistua: numero on tiedostonimessä (livia-sarajevo-1.mp3), ja
+ * rivin poistaminen taulusta siirtäisi huudahduksen ykköseksi ja
+ * kommentin kakkoseksi. Peli hakisi silloin jokaisessa kaupungissa
+ * väärän tiedoston — poistetun alustuksen äänen kommentin kuplan alle —
+ * ja koska tiiviste on tekstin eikä numeron tarkistus, ainoa vaihtoehto
+ * olisi generoida 18 kaupunkia uudelleen.
+ *
+ * Varattu paikka pitää numeroinnin ennallaan: kenttää ei ole
+ * missään pakkauksessa, joten sillä ei ole tekstiä eikä sen numeroon
+ * osu yksikään haku (livianKaupunkiIndeksi kysyy kentän nimellä).
+ * Ämpärin alustustiedostot jäävät sinne orvoiksi — ne on kerran
+ * maksettu, eikä niiden poistaminen muuttaisi mitään pelissä.
+ */
+export const LIVIAN_VARATTU = '(varattu)';
+
+/**
+ * KAUPUNKIKOHTAISET LÄHTEET: kaupungin tunnus → äänitetyt kentät
+ * siinä järjestyksessä, jossa ne saavat tiedostonumeronsa.
+ *
+ * Kenttien nimet ovat pakkausten omia (js/packs/fokusvirta-<id>.js):
+ * `maadoitus` ja `teksti` ovat `pollo`-lohkosta ja loput sähketehtävän
+ * vaiheita (`sahketehtava.johdanto` jne., js/fokusvirta.js).
+ *
+ * YKSI KUPLA = YKSI TIEDOSTO (omistaja 7.9.2026). Kenttä voi olla
+ * pakkauksessa TAULUKKO, jonka jokainen alkio on oma kupla ja oma
+ * äänite — siksi rivi kertoo myös KUPLIEN MÄÄRÄN: `'odotus'` on yksi
+ * kupla, `['maadoitus', 2]` kaksi. Numerointi juoksee kenttien yli
+ * kuplina, eli Sofian `johdanto` alkaa vasta maadoituksen kahden
+ * kuplan jälkeen. Määrän on vastattava pakkauksen tekstiä; ristiriita
+ * kaataa generointityökalun (tools/generoi-pulu.mjs kaupunginRepliikit)
+ * ja vaientaa kuplan pelissä (LIVIAN_AANITETYT).
+ *
+ * Järjestystä EI saa muuttaa jälkikäteen — numero on tiedostonimessä,
+ * ja uudelleennumerointi tarkoittaisi koko kaupungin
+ * uudelleengenerointia. Uusi kenttä lisätään listan LOPPUUN.
+ *
+ * VAIN EUROOPPA TYÖN ALLA (Raamattu 7.9.2026): mukana on kahdeksantoista
+ * Euroopan kaupunkia, joiden uuden kulun tekstit omistaja hyväksyi
+ * 7.9.2026 kahdessa erässä. Muut kaupungit ovat hiljaisia kunnes niiden
+ * tekstit on hyväksytty.
+ *
+ * KOKO EUROOPPA TAULUSSA (Fablen erä 8.9.2026 ilta, omistaja katsoo
+ * koosteesta 9.9.2026). Lännen kaksikymmentä kaupunkia saivat vanhan
+ * `maadoitus`-kentän tilalle yhden kommenttikuplan, joten nekin ovat nyt
+ * taulussa — Venetsia kuudella kuplalla, muut yhdellä. Tampereen ja Riian
+ * huudahdus poistui, ja sen paikka jäi varatuksi kuten Prahassa.
+ *
+ * KUITTAUS ISOISÄLLE ON POISTETTU (Fablen erä v6 8.9.2026 ilta, Raamattu:
+ * pululle pääsääntöisesti yksi kupla). Kymmenellä kaupungilla oli hetken
+ * kommentin perässä toinen kupla, ja niiden rivi kertoi määrän
+ * (`['kommentti', 2]`). Nyt jokaisella on yksi kupla kuten muillakin, ja
+ * numero 4 jää varatuksi: vanhat livia-<id>-4-äänitteet jäävät ämpäriin
+ * orvoiksi eikä niille ole enää tekstiä.
+ *
+ * KUUSI KEVYTTÄ KOHDETTA JA ATEENA MUKAAN (omistaja 8.9.2026). Kreeta,
+ * Sisilia, Islanti, Alpit, Rovaniemi (tunnus `lappi`) ja Tromssa saivat
+ * omat fokusvirtapakkinsa, kun vanha saapumistaulu arkistoitiin pois
+ * pelistä, ja Ateena kirjoitettiin samaan kulkuun kuin muut. Kullakin on
+ * yksi kupla: kaksi ensimmäistä numeroa ovat varattuja, joten kupla on
+ * numero 3 kuten muissakin kaupungeissa, joilla ei ole välihuutoa.
+ *
+ * ENSIMMÄINEN PAIKKA ON VARATTU (8.9.2026). Siinä oli alustuskupla,
+ * joka poistettiin joka kaupungista (LIVIAN_VARATTU).
+ */
+export const LIVIAN_KAUPUNKILAHTEET = {
+  /*
+   * ATEENAN VANHA `maadoitus` ON POISTUNUT (omistaja 8.9.2026 klo
+   * 19.10): pakkauksessa on nyt `kommentti` kuten muissa kaupungeissa.
+   * Vanha ateena-1 oli maadoituksen äänite, ja se jää ämpäriin orvoksi
+   * — numerot ovat siksi varattuja aivan kuten poistetuilla
+   * alustuksilla, eikä uusi kupla peri vanhaa tiedostoa.
+   */
+  ateena: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  sofia: [
+    LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti', LIVIAN_VARATTU, ['johdanto', 2], ['vinkki', 2],
+    'linkkiSaate', ['oikein', 2], 'odotus', ['paluu', 2],
+  ],
+  istanbul: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  bukarest: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  sarajevo: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  budapest: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  wien: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  praha: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  krakova: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  varsova: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  pietari: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  moskova: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  kiova: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  odessa: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  helsinki: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  tampere: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  tallinna: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  riika: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  vilna: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  /*
+   * KEVYET PAKIT (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT): yksi
+   * kupla, ei välihuutoa — sama numerointi kuin muilla uuden kulun
+   * kaupungeilla, jotta tiedostonimi on ennustettava.
+   */
+  kreeta: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  sisilia: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  islanti: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  alpit: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  lappi: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  tromssa: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  /*
+   * LÄNNEN KAKSIKYMMENTÄ KAUPUNKIA (Fablen erä 8.9.2026 ilta, omistaja
+   * katsoo koosteesta 9.9.2026). Vanha `maadoitus` korvattiin yhdellä
+   * kommenttikuplalla kuten Ateenassa, ja kaksi ensimmäistä numeroa ovat
+   * varattuja, jotta kupla on numero 3 kuten muissakin kaupungeissa.
+   * Vanhat maadoitusäänitteet eivät kuulu näille numeroille: niitä ei ole
+   * koskaan generoitu, koska nämä kaupungit eivät olleet taulussa.
+   */
+  lontoo: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  dublin: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  edinburgh: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  pariisi: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  marseille: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  lissabon: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  madrid: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  barcelona: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  granada: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  sevilla: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  amsterdam: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  berliini: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  /*
+   * VENETSIA ON POIKKEUS (Fablen ehdotus omistajalle 8.9.2026): kuusi
+   * kuplaa yhden sijaan, joten rivi kertoo määrän — tiedostot ovat
+   * livia-venetsia-3…8.mp3.
+   */
+  venetsia: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  firenze: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  rooma: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  dubrovnik: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  tukholma: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  oslo: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  bergen: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+  kobenhavn: [LIVIAN_VARATTU, LIVIAN_VARATTU, 'kommentti'],
+};
+
+/**
+ * KENTÄN KUPLAT PAKKAUKSESTA — sama normalisointi pelissä ja
+ * työkalussa.
+ *
+ * Vanha muoto (yksi merkkijono) on yhä kelvollinen: se on yhden kuplan
+ * taulukko. Tyhjät karsitaan, jotta puuttuva kenttä ei saa numeroa.
+ *
+ * @param {string|string[]|null|undefined} arvo pakkauksen kentän arvo
+ * @returns {string[]} kuplat järjestyksessä
+ */
+export function livianKuplat(arvo) {
+  // Huudahdus on olio { kohta, teksti }: kupla on sen teksti, `kohta`
+  // on ajoitusta varten eikä koskaan puhetta (js/fokusvirta.js).
+  const lista = Array.isArray(arvo) ? arvo
+    : [arvo && typeof arvo === 'object' ? arvo.teksti : arvo];
+  return lista
+    .map((osa) => String(osa ?? '').trim())
+    .filter(Boolean);
+}
+
+/**
+ * Yhden kentän kuplat pakkauksesta kentän nimellä.
+ *
+ * `pollo`-lohko voittaa: `maadoitus` ja `teksti` asuvat siellä, muut
+ * kentät sähketehtävässä. Näin kutsupaikan ei tarvitse tietää, kummasta
+ * lohkosta kenttä tulee.
+ */
+export function livianKentanKuplat(pakkaus, kentta) {
+  const pollo = pakkaus?.pollo ?? {};
+  const arvo = kentta in pollo ? pollo[kentta] : pakkaus?.sahketehtava?.[kentta];
+  return livianKuplat(arvo);
+}
+
+/**
+ * Kaupungin äänitetyt kentät normalisoituna: nimi, kuplien määrä ja
+ * ensimmäisen kuplan järjestysnumero.
+ *
+ * @param {string} kaupunkiId kaupungin tunnus (city.id)
+ * @returns {Array<{kentta:string, kuplat:number, alku:number}>}
+ */
+export function livianKaupunkiKentat(kaupunkiId) {
+  let alku = 0;
+  return (LIVIAN_KAUPUNKILAHTEET[kaupunkiId] ?? []).map((rivi) => {
+    const [kentta, kuplat = 1] = Array.isArray(rivi) ? rivi : [rivi, 1];
+    const tieto = { kentta, kuplat, alku };
+    alku += kuplat;
+    return tieto;
+  });
+}
+
+/**
+ * KIRJOITETUT KUPLAKENTÄT (omistaja 7.9.2026).
+ *
+ * Näiden kenttien teksti on kirjoitettu KUPLAKSI: yhden merkkijonon
+ * huudahdus on yksi kupla, ei kahdeksi virkkeeksi pilkottava
+ * puheenvuoro.
+ * Vanhat kentät (maadoitus ja sähketehtävän vaiheet) ovat yhä pitkiä
+ * merkkijonoja, jotka peli pilkkoo ruudulla (js/ui-apurit.js
+ * jaaPuheenvuoroksi) — ja juuri se ero ratkaisee, mitataanko repliikin
+ * näkyvä aika yhtenä kuplana vai osien summana.
+ */
+export const LIVIAN_KUPLAKENTAT = new Set(['huudahdus', 'kommentti']);
+
+/**
+ * Pilkotaanko tämä kenttä ruudulla osiin (pinoutuva puheenvuoro)?
+ *
+ * @param {string} kentta pakkauksen kentän nimi
+ * @param {number} kuplia kentän kuplien määrä
+ * @returns {boolean}
+ */
+export function livianKenttaPinoutuu(kentta, kuplia) {
+  return !LIVIAN_KUPLAKENTAT.has(kentta) && kuplia <= 1;
+}
+
+/** Kuinka monta kuplaa kentässä on (0 = ei äänitetty). */
+export function livianKaupunkiKuplia(kaupunkiId, kentta) {
+  return livianKaupunkiKentat(kaupunkiId).find((k) => k.kentta === kentta)?.kuplat ?? 0;
+}
+
+/**
+ * LINSSIEN VÄLIHUOMIOT: linssin tunnus → ne jaksot, joissa pulu
+ * kommentoi, siinä järjestyksessä jossa ne saavat tiedostonumeronsa.
+ *
+ * Sama kirjanpito kuin kaupungeilla (LIVIAN_KAUPUNKILAHTEET), eri
+ * aineisto: kaupungin kentät asuvat pakkauksessa, linssin jaksot
+ * kertomuksen kaanonissa (js/linssit/ihmisen-matka-kertomus.js, kenttä
+ * `pulu`). Raamattu KAARI HYVAKSYTTY, TUTKIMUSVAIHE, VIISI NAPPIA
+ * kohta 5: *"kertomuksen keskelle 1–3 pulun lyhyttä välihuomiota omaan
+ * tyyliin, ettei kertoja ole monotoninen"* — ja lopun välihuomio on se,
+ * jolla pulu kertoo olevansa autettavissa (kohta 4).
+ *
+ * JÄRJESTYSTÄ EI SAA MUUTTAA jälkikäteen: numero on tiedostonimessä
+ * (`livia-ihmisen-matka-1.mp3`). Uusi jakso lisätään listan LOPPUUN.
+ * Listan on vastattava kertomuksen `pulu`-kenttiä; ristiriita kaataa
+ * tools/generoi-pulu.mjs:n eikä maksa yhtäkään kutsua
+ * (tests/ihmisen-matka-esitys.test.mjs vartioi saman koneellisesti).
+ *
+ * TEKSTIT ODOTTAVAT AJOA 7.9.2026: ämpärissä ei ole vielä yhtään
+ * `livia-ihmisen-matka-*.mp3`-tiedostoa, joten kupla näkyy ja pulu on
+ * hiljaa (LIVIAN_AANITETYT). Se on tila, ei vika.
+ *
+ * NUMERO 1 ON VARATTU (omistaja 17.9.2026 klo 03.40 UTC, sanatarkasti:
+ * *"Se simpukka tarkoitti pulun simpukka kommenttia. Ei kertojan."*).
+ * `ranta`-jakson välihuomio *"Simpukoita. Hyvä alku."* poistettiin
+ * kaanonista kokonaan, mutta sen numeroa ei saa antaa seuraavalle:
+ * ämpärissä oleva `livia-ihmisen-matka-1.mp3` on yhä se poistettu
+ * repliikki, ja uudelleennumerointi vaientaisi kolme muuta välihuomiota
+ * (LIVIAN_AANITETYT vertaa tekstin tiivistettä). Varattu paikka on
+ * sama ratkaisu kuin kaupungeilla — ks. LIVIAN_VARATTU.
+ */
+export const LIVIAN_LINSSILAHTEET = {
+  'ihmisen-matka': [LIVIAN_VARATTU, 'denisova', 'beringia', 'loppu'],
+};
+
+/**
+ * PULUN PERUSTASO — HIEMAN KERTOJAN ALLE (omistaja 8.9.2026,
+ * sanatarkasti: *"Pulun ääni on vähän voimakkaampi kuin kertojan, sitä
+ * voisi laskea koko pelissä hieman"*).
+ *
+ * Kertoja soi pelin lukijaliu'un tasolla sellaisenaan (js/luenta.js
+ * playDiaryVoice), ja pulu soi oman liukunsa tasolla — mutta sen
+ * käheä, nopea ja tagitettu ääni kuulostaa voimakkaammalta kuin
+ * kertojan tasainen luenta. Tämä kerroin laskee KAIKKI pulun
+ * äänitteet saman verran alle: yksi luku, ei kutsupaikkakohtaisia
+ * säätöjä. Liu'ut erotettiin 11.9.2026 (omistaja: *"pulun ja lukijan
+ * omat äänen voimakkuus säätimet"*).
+ *
+ * Vaimennukset (huudahdus, linssin välihuomio) kertovat TÄHÄN lukuun,
+ * eivät korvaa sitä — välihuuto on siis yhä suhteessa yhtä paljon
+ * hiljaisempi kuin ennenkin.
+ */
+export const LIVIAN_PERUSTASO = 0.8;
+
+/*
+ * SOIVA REPLIIKKI JA PULUN OMA LIUKU (omistaja 11.9.2026). Päävalikon
+ * "Pulun ääni" -liuku kutsuu paivitaPulunVoimaa jokaisella
+ * liikahduksella, jotta säätö kuuluu sormen alla eikä vasta seuraavassa
+ * repliikissä. Muistissa on vain viimeksi aloitettu äänite ja sen
+ * kutsupaikkakohtainen vaimennus — perustaso lasketaan aina uudestaan.
+ */
+let soivaPulu = null;
+
+export function paivitaPulunVoima() {
+  const audio = soivaPulu?.audio;
+  if (!audio || audio.ended || audio.paused) return;
+  // LOPPUHÄIVYTYS VOITTAA LIU'UN: viimeisten millisekuntien ramppi on
+  // jo matkalla nollaan, eikä säätimen liikahdus saa nostaa ääntä
+  // takaisin sen alta. Seuraava repliikki lähtee uudella tasolla.
+  if (audio.livianLoppuhaivytys) return;
+  asetaLivianTaso(audio, pulunVoima() * LIVIAN_PERUSTASO * soivaPulu.vaimennus);
+}
+
+/**
+ * VÄLIHUOMION VAIMENNUS: pulu soi kertojan päälle hiljempaa eikä
+ * kertoja väisty. Sama luku kuin fokusvirran huudahduksella
+ * (js/fokusvirta.js HUUDAHDUKSEN_VAIMENNUS) — se on sama ilmiö.
+ */
+export const LIVIAN_VALIHUOMION_VAIMENNUS = 0.7;
+
+/** Repliikkilähteet siinä nimeämisjärjestyksessä, jota työkalu käyttää. */
+export const LIVIAN_AANILAHTEET = [
+  'avaus', 'paljastus', 'mannerivihje', 'lehtivinkki',
+  ...Object.keys(LIVIAN_KAUPUNKILAHTEET),
+  ...Object.keys(LIVIAN_LINSSILAHTEET),
+];
+
+/**
+ * Linssin välihuomion järjestysnumero jakson tunnuksesta.
+ *
+ * Kutsupaikka sanoo "Ihmisen matka, jakso denisova" eikä numeroa:
+ * numeron omistaa LIVIAN_LINSSILAHTEET.
+ *
+ * @param {string} linssi linssin tunnus
+ * @param {string} jakso kertomusjakson tunnus
+ * @returns {number|null} indeksi tai null, jos jaksolla ei ole huomiota
+ */
+export function livianLinssiIndeksi(linssi, jakso) {
+  const i = (LIVIAN_LINSSILAHTEET[linssi] ?? []).indexOf(jakso);
+  return i < 0 ? null : i;
+}
+
+/**
+ * Saapumisrepliikit lähteittäin: indeksit, joissa Livia tulee paikalle
+ * ja joille on generoitu kaikuversio (ks. KAIKU ON POISTETTU PULUN
+ * ALUSTA yllä — peli ei enää soita niitä, työkalu tuntee ne).
+ *
+ * Sofian `paluu` haetaan kenttälistasta eikä kirjoiteta numerona:
+ * numero on nimeämisen tulos, ei erikseen ylläpidettävä vakio.
+ */
+export const LIVIAN_SAAPUMISREPLIIKIT = {
+  avaus: [0],
+  paljastus: [0],
+  // Paluun ENSIMMÄINEN kupla: siinä Livia tulee ilmasta sisään.
+  sofia: [livianKaupunkiKentat('sofia').find((k) => k.kentta === 'paluu').alku],
+};
+
+/**
+ * Kaupunkirepliikin järjestysnumero kentän nimestä ja kuplan
+ * numerosta.
+ *
+ * Tämä on se kohta, jossa kutsupaikka sanoo "Sofian vinkki, toinen
+ * kupla" eikä "lähde sofia, indeksi 5": kutsupaikan ei kuulu tietää
+ * numeroita.
+ *
+ * @param {string} kaupunkiId kaupungin tunnus (city.id)
+ * @param {string} kentta pakkauksen kentän nimi
+ * @param {number} [kuplaIndeksi] kentän monesko kupla (0-alkuinen)
+ * @returns {number|null} indeksi tai null, jos kaupunkia, kenttää tai
+ *   kuplaa ei ole äänitetty.
+ */
+export function livianKaupunkiIndeksi(kaupunkiId, kentta, kuplaIndeksi = 0) {
+  const tieto = livianKaupunkiKentat(kaupunkiId).find((k) => k.kentta === kentta);
+  if (!tieto) return null;
+  if (!Number.isInteger(kuplaIndeksi) || kuplaIndeksi < 0) return null;
+  if (kuplaIndeksi >= tieto.kuplat) return null;
+  return tieto.alku + kuplaIndeksi;
+}
+
+/*
+ * KAUPUNKIÄÄNET OVAT KYTKIMEN TAKANA (omistaja 6.9.2026 ilta: "älä
+ * generoi ääniä vielä tässä vaiheessa"). Kytkentä ja hitaampi
+ * kuplarytmi ovat koodissa valmiina, mutta ennen generointia ne
+ * jäisivät hiljaisiksi ja hitaiksi: kupla odottaisi puhetta, jota ei
+ * ole. Kytkin käännetään trueksi samassa julkaisussa, jossa
+ * generoi-pulu.yml on vienyt ateena-/sofia-tiedostot ämpäriin.
+ */
+export const LIVIAN_KAUPUNKIAANET_KAYTOSSA = true; // generoitu 6.9.2026 ilta (omistaja: "saat generoida kaikki muut paitsi uuden linssin äänet")
+
+/** Onko tälle kaupungin repliikille olemassa äänite? */
+export function livianKaupunkiAanitetty(kaupunkiId, kentta) {
+  return LIVIAN_KAUPUNKIAANET_KAYTOSSA && livianKaupunkiIndeksi(kaupunkiId, kentta) !== null;
+}
+
+/**
+ * ÄÄNITETTY PALJASTUSVARIANTTI. Paljastuksen teksti ladotaan maasta ja
+ * kaupungista (js/livia.js livianPaljastus), joten äänite on olemassa
+ * vain sille variantille, joka on generoitu. Aloitusreitti on
+ * kaanonissa Ateena ("Ateenasta se alkaa", LIVIAN_AVAUS), ja
+ * paljastus tulee vain ENSIMMÄISELLÄ saapumisella koskaan — muualla
+ * kupla toimii ilman ääntä.
+ *
+ * Jos aloitusreittejä tulee lisää, tähän lisätään variantit ja
+ * työkalu generoi niille omat tiedostonsa (nimeen tulee maan tunnus).
+ */
+export const LIVIAN_AANITETTY_PALJASTUS = { paikkaan: 'Ateenaan', paikkaa: 'Ateenaa' };
+
+/* ------------------------------------------------------------------ *
+ * Vanhentunut äänite on hiljainen
+ * ------------------------------------------------------------------ */
+
+/**
+ * REPLIIKIN TIIVISTE (FNV-1a, 32 bittiä heksana).
+ *
+ * Puhdas funktio, sama pelissä ja työkalussa — kuten tiedostonimikin.
+ * Tiiviste ei ole turvatoimi vaan tunniste: se erottaa kaksi eri
+ * tekstiä toisistaan lyhyellä merkkijonolla, joka mahtuu tauluun ja
+ * manifestiin.
+ */
+export function livianTiiviste(teksti) {
+  let h = 0x811c9dc5;
+  for (const merkki of String(teksti ?? '').trim()) {
+    h ^= merkki.codePointAt(0);
+    h = Math.imul(h, 0x01000193) >>> 0;
+  }
+  return h.toString(16).padStart(8, '0');
+}
+
+/**
+ * MITÄ ÄMPÄRISSÄ OIKEASTI ON: repliikin avain → sen TEKSTIN tiiviste,
+ * jolla tiedosto on generoitu.
+ *
+ * MIKSI TÄMÄ TAULU ON OLEMASSA. Tiedostonimi johdetaan lähteestä ja
+ * indeksistä (livianAaniNimi), joten repliikin tekstin muuttuminen ei
+ * muuta nimeä: ämpärissä oleva vanha äänite soisi uuden kuplan alla ja
+ * sanoisi eri asian kuin ruudulla lukee. Se on pahempi vika kuin
+ * hiljaisuus, koska mikään ei kaadu eikä kukaan huomaa. Kun kuplan
+ * teksti ei vastaa tätä taulua, äänite jätetään soittamatta — kupla
+ * toimii ilman ääntä täsmälleen kuten ennen.
+ *
+ * PÄIVITYS: aja tools/generoi-pulu.mjs (kuiva ajo kertoo, mitkä
+ * repliikit ovat UUSIA tai MUUTTUNEITA, ja generointiajo tulostaa
+ * valmiin taulun tähän liitettäväksi).
+ *
+ * TAULU KATTAA MYÖS KAUPUNKILÄHTEET (7.9.2026). Sofian repliikit
+ * kirjoitettiin uusiksi ja jaettiin kupliksi, ja ämpärissä on yhä
+ * 6.9. generoitu sofia-1…7 vanhoilla teksteillä. Ilman vartiointia se
+ * vanha äänite soisi uuden kuplan alla ja sanoisi eri asian kuin
+ * ruudulla lukee — siksi kaupunkirepliikit kulkevat nyt samasta
+ * portista kuin paljastus ja lehtivinkki, ja kutsupaikka antaa aina
+ * kuplan tekstin (soitaLivianKaupunkiAani).
+ *
+ * TILANNE 8.9.2026: alustusten rivit (jokaisen kaupungin numero 1) on
+ * poistettu tästä taulusta, koska kuplaa ei enää ole — numero on silti
+ * varattu (LIVIAN_VARATTU), joten seuraavat kuplat pitävät omat
+ * tiedostonsa. `sofia-3` on jätetty tauluun MUUTTUNEENA: kuplasta
+ * poistettiin toistuva "Kääk." (omistaja 8.9.2026), joten tiiviste ei
+ * enää täsmää ja kupla on hiljainen — rivi kertoo generointityökalulle,
+ * että äänite on muuttunut eikä uusi (tools/generoi-pulu.mjs
+ * aanitteenTila).
+ *
+ * TAMPERE-2 JA RIIKA-2 ON POISTETTU (8.9.2026 ilta): niiden huudahdus
+ * poistui pakista kuten Prahassa, joten kuplaa ei enää ole eikä avain saa
+ * jäädä tauluun. Kommenttien tiivisteet jäävät, vaikka teksti muuttui:
+ * vanha äänite on yhä ämpärissä, ja rivi kertoo työkalulle, että repliikki
+ * on MUUTTUNUT eikä uusi (peli vaikenee tiivisteen erotessa).
+ */
+export const LIVIAN_AANITETYT = {
+  // Taulu tools/generoi-pulu.mjs --kuiva -tulosteesta 9.9.2026: kaikki 45
+  // Euroopan kaupunkikuplat (-3) generoitu omistajan teksteistä
+  // (generoi-pulu.yml ajo 12, ääni Dr. Von, pakota). Numerot 1–2 ovat
+  // varattuja (alustus ja huudahdus poistettu), eikä niillä ole kuplaa.
+  // venetsia-3 uusiksi 9.9.2026 ilta (tekstisession albumirepliikki; generoi-pulu.yml).
+  'avaus-1': '62c6bcbd',
+  'avaus-2': '30c6eb27',
+  'avaus-3': '1446cf47',
+  'avaus-4': 'b8bf54c6',
+  'avaus-5': 'c7f488b4',
+  'paljastus-1': '4dd412c2',
+  'paljastus-2': '55959b90',
+  'paljastus-3': '531008d4',
+  'mannerivihje-1': '9b1a96f3',
+  'lehtivinkki-1': '676644e9',
+  'ateena-3': '572e0e85',
+  'sofia-3': '83dd2f15',
+  'sofia-5': '1e64f9d0',
+  'sofia-6': '2618c9dd',
+  'sofia-7': '9118b3f7',
+  'sofia-8': '559c7574',
+  'sofia-9': '8f1fd7d8',
+  'sofia-10': '153d43f5',
+  'sofia-11': 'a25842d0',
+  'sofia-12': '75c13aff',
+  'sofia-13': 'bc7f04ef',
+  'sofia-14': 'ced3fd34',
+  'istanbul-3': 'b735c27a',
+  'bukarest-3': 'cd09de32',
+  'sarajevo-3': '92b480b3',
+  'budapest-3': 'e19e0b8e',
+  'wien-3': '731e30e6',
+  'praha-3': '08430cab',
+  'krakova-3': '9330c2aa',
+  'varsova-3': '4fa709ba',
+  'pietari-3': '28ee75f5',
+  'moskova-3': 'e5622fea',
+  'kiova-3': 'a67f5827',
+  'odessa-3': 'ae3305cd',
+  'helsinki-3': 'dd535c7c',
+  'tampere-3': '4db3b5df',
+  'tallinna-3': '801b5b9b',
+  'riika-3': 'e043cafb',
+  'vilna-3': '4003404e',
+  'kreeta-3': '041f72e7',
+  'sisilia-3': 'a37e58c6',
+  'islanti-3': '31082cf9',
+  'alpit-3': '1101111e',
+  'lappi-3': '0ece225d',
+  'tromssa-3': 'd2fb66d9',
+  'lontoo-3': 'c1e6acd2',
+  'dublin-3': 'e388ef88',
+  'edinburgh-3': 'c0efe2b9',
+  'pariisi-3': '3402cfd2',
+  'marseille-3': '8814b515',
+  'lissabon-3': '89015d27',
+  'madrid-3': 'a8201121',
+  'barcelona-3': 'd2428411',
+  'granada-3': 'fb52306b',
+  'sevilla-3': 'be8d8750',
+  'amsterdam-3': 'b233f7ab',
+  'berliini-3': 'a71ce16b',
+  'venetsia-3': 'eb6f4836',
+  'firenze-3': '3684f4df',
+  'rooma-3': 'df365a1f',
+  'dubrovnik-3': '4bf19705',
+  'tukholma-3': 'adbbef5c',
+  'oslo-3': 'b15f2275',
+  'bergen-3': '01049c89',
+  'kobenhavn-3': '88635dca',
+  'ihmisen-matka-2': '45dafd6e',
+  'ihmisen-matka-3': '77366164',
+  'ihmisen-matka-4': 'dbfd92fe',
+};
+
+/*
+ * ÄÄNITYSERÄ — KUN SAMA TEKSTI ÄÄNITETÄÄN UUDELLA ÄÄNELLÄ.
+ *
+ * LIVIAN_AANITETYT on TEKSTIN tiiviste, ja se vaihtuu vain kun repliikin
+ * sanat muuttuvat. Ääni voi kuitenkin vaihtua ilman että sanat
+ * muuttuvat — ja silloin osoite pysyy samana, palvelutyöntekijän
+ * äänikori (sw.js AANICACHE) on välimuisti ensin, ja pelaaja kuulee
+ * vanhan äänen ikuisesti. Omistajan havainto 12.9.2026: *"Uudet luennot
+ * eivät kuulu pulun äänellä, vaikka päivitin versioni ja käynnistin
+ * sovelluksen monta kertaa uudestaan."* Tiedosto oli ämpärissä oikein
+ * (HTTP 200, uusi tavumäärä) — vika oli osoitteessa, ei aineistossa.
+ *
+ * Erä lisätään osoitteeseen tiivisteen perään (`?v=<tiiviste>-<erä>`),
+ * joten se ei riko tekstin tiivistettä eikä sen vartijoita. Ämpäri
+ * ohittaa kyselyn, joten uusi osoite hakee saman tiedoston — mutta
+ * selaimelle ja äänikorille se on uusi osoite.
+ *
+ * ERÄ 2 (12.9.2026): omistaja kokeilee pululle uutta ääntä
+ * (voice ZF6FPAbjXT4488VcRRnw, eleven_v3, stability natural). Vain
+ * avausketju ja Ateena äänitettiin; loput 60 repliikkiä ovat yhä
+ * vanhalla äänellä, joten niissä ei ole erää.
+ *
+ * ERÄ 3 (12.9.2026, samana iltapäivänä): omistaja löysi kolmannen
+ * äänen — "Cherry Twinkle – Adorable Cartoon Girl"
+ * (XJ2fW4ybq7HouelYYGcL) — ja tilasi sen samoihin kohtauksiin sekä
+ * kahteen kaupunkiin lisää: *"Generoi samat kohtaukset kuin aiemmin sekä myös Sofia ja
+ * Krakova. Tällä voisi ID:llä käytä samaa V3-mallia taggeineen.
+ * XJ2fW4ybq7HouelYYGcL"* Sama malli ja sama vakaus kuin erässä 2
+ * (eleven_v3, natural), joten erien ero on pelkkä ääni — juuri siksi
+ * eränumero on olemassa. Sofia äänitettiin kokonaan (kaksitoista
+ * repliikkiä), koska sen ketju on pisin ja kuuluu kaupungissa
+ * peräkkäin; se on paras näyte siitä, väsyttääkö ääni pitkässä
+ * pätkässä.
+ */
+/*
+ * ERÄ 4 (12.9.2026 ilta): PULUN ÄÄNI ON PÄÄTETTY. Omistaja, sanatarkasti:
+ * *"käytetään tätä jatkossa pulun ääneen: piI8Kku0DcvcL6TTSeQt (flicker -
+ * cheerful fairy & sparkly sweetness). tallenna raamattuun. V3 moottori"*
+ *
+ * Kaikki repliikit äänitettiin uudelleen tällä äänellä, joten erä on
+ * jokaisella avaimella. Aiemmat erät 2 ja 3 olivat koekuunteluja
+ * (Amelia ja Cherry Twinkle) eivätkä enää kuulu pelissä.
+ *
+ * ERÄ ON PAKKO NOSTAA, vaikka tekstit eivät muutu: osoite syntyy tekstin
+ * tiivisteestä, joten ilman erää se pysyisi samana ja palvelutyöntekijän
+ * äänikori soittaisi vanhan äänen (omistajan havainto 12.9.2026).
+ */
+export const LIVIAN_AANIERAT = {
+  'avaus-1': 4,
+  'avaus-2': 4,
+  'avaus-3': 4,
+  'avaus-4': 4,
+  'avaus-5': 4,
+  'paljastus-1': 4,
+  'paljastus-2': 4,
+  'paljastus-3': 4,
+  'mannerivihje-1': 4,
+  'lehtivinkki-1': 4,
+  'ateena-3': 4,
+  'sofia-3': 4,
+  'sofia-5': 4,
+  'sofia-6': 4,
+  'sofia-7': 4,
+  'sofia-8': 4,
+  'sofia-9': 4,
+  'sofia-10': 4,
+  'sofia-11': 4,
+  'sofia-12': 4,
+  'sofia-13': 4,
+  'sofia-14': 4,
+  'istanbul-3': 4,
+  'bukarest-3': 4,
+  'sarajevo-3': 4,
+  'budapest-3': 4,
+  'wien-3': 4,
+  'praha-3': 4,
+  'krakova-3': 4,
+  'varsova-3': 4,
+  'pietari-3': 4,
+  'moskova-3': 4,
+  'kiova-3': 4,
+  'odessa-3': 4,
+  'helsinki-3': 4,
+  'tampere-3': 4,
+  'tallinna-3': 4,
+  'riika-3': 4,
+  'vilna-3': 4,
+  'kreeta-3': 4,
+  'sisilia-3': 4,
+  'islanti-3': 4,
+  'alpit-3': 4,
+  'lappi-3': 4,
+  'tromssa-3': 4,
+  'lontoo-3': 4,
+  'dublin-3': 4,
+  'edinburgh-3': 4,
+  'pariisi-3': 4,
+  'marseille-3': 4,
+  'lissabon-3': 4,
+  'madrid-3': 4,
+  'barcelona-3': 4,
+  'granada-3': 4,
+  'sevilla-3': 4,
+  'amsterdam-3': 4,
+  'berliini-3': 4,
+  'venetsia-3': 4,
+  'firenze-3': 4,
+  'rooma-3': 4,
+  'dubrovnik-3': 4,
+  'tukholma-3': 4,
+  'oslo-3': 4,
+  'bergen-3': 4,
+  'kobenhavn-3': 4,
+  'ihmisen-matka-2': 4,
+  'ihmisen-matka-3': 4,
+  'ihmisen-matka-4': 4,
+};
+
+
+/* ------------------------------------------------------------------ *
+ * Tarkistettavat kaupungit kartalla
+ * ------------------------------------------------------------------ */
+
+/**
+ * VÄLIAIKAINEN TARKISTUSAPU (omistajan tilaus 7.9.2026, sanatarkasti:
+ * *"voisit merkitä kartalle nuo kaupungit korostusvärillä, missä on
+ * nämä uudet generoinnit käytössä, niin minun on helpompi käydä ne läpi
+ * ja antaa palaute"*).
+ *
+ * Korostus on TARKISTUSAPU, ei pelimekaniikka: päätoimittaja kääntää
+ * tämän vakion falseksi, kun omistaja on käynyt kaupungit läpi. Se ei
+ * saa muuttaa yhtäkään osumapintaa — pelkkä lisäkehä kaupungin merkin
+ * ympärillä (css .kaupunki-tarkistus).
+ */
+// POIS 9.9.2026: kaikki 45 kaupunkia on äänitetty, ja omistaja nollasi
+// kartan muut värimerkinnät ("Muut värimerkinnät voi nollata kartalta");
+// kartalla korostetaan nyt vain luentakuvalliset kaupungit
+// (js/packs/fokusvirrat.js luentakuvallisetKaupungit).
+export const LIVIAN_KOROSTUS_KAYTOSSA = false;
+
+/**
+ * Ne kaupungit, joissa uusi kulku on VALMIS KUUNNELTAVAKSI: kaupungilla
+ * on uuden kulun kommenttikuplat JA jokaiselle sen kuplalle on
+ * generoitu äänite (LIVIAN_AANITETYT). Varattu paikka
+ * (LIVIAN_VARATTU) ei ole kupla eikä siltä siis odoteta äänitettä.
+ *
+ * Lista JOHDETAAN eikä ylläpidetä käsin: käsin kirjoitettu lista
+ * jäisi jälkeen heti ensimmäisestä ajosta, ja kartta lupaisi ääntä,
+ * jota ei ole. Tyhjä joukko ennen ensimmäistä ajoa on oikea vastaus —
+ * mitään ei ole vielä kuunneltavaksi.
+ *
+ * @returns {Set<string>} kaupunkien tunnukset
+ */
+export function livianKorostetutKaupungit() {
+  const joukko = new Set();
+  if (!LIVIAN_KOROSTUS_KAYTOSSA) return joukko;
+  for (const kaupunkiId of Object.keys(LIVIAN_KAUPUNKILAHTEET)) {
+    const kentat = livianKaupunkiKentat(kaupunkiId);
+    if (!kentat.some((k) => k.kentta === 'kommentti')) continue;
+    let kuplia = 0;
+    let valmiita = 0;
+    for (const { kentta, kuplat, alku } of kentat) {
+      if (kentta === LIVIAN_VARATTU) continue;
+      kuplia += kuplat;
+      for (let i = 0; i < kuplat; i += 1) {
+        if (LIVIAN_AANITETYT[`${kaupunkiId}-${alku + i + 1}`]) valmiita += 1;
+      }
+    }
+    if (kuplia > 0 && valmiita === kuplia) joukko.add(kaupunkiId);
+  }
+  return joukko;
+}
+
+/**
+ * Onko ämpärin äänite tämän tekstin äänite?
+ *
+ * Ilman tekstiä (kutsupaikka ei sitä kerro) vastaus on kyllä js/livia.js:n
+ * omille lähteille: portti ei saa vaientaa niitä, jotka eivät sitä käytä.
+ *
+ * KAUPUNKILÄHTEET OVAT AINA VARTIOITUJA (7.9.2026). Niiden tekstit
+ * asuvat pakkauksissa ja muuttuvat siellä ilman että tiedostonimi
+ * muuttuu, joten ilman tekstiä ei voi todeta, sanooko ämpärin äänite
+ * saman kuin kupla — ja vaikeneminen on silloin ainoa oikea vastaus.
+ * SAMA KOSKEE LINSSILÄHTEITÄ (LIVIAN_LINSSILAHTEET): kertomuksen
+ * `pulu`-tekstit asuvat kaanonissa ja muuttuvat siellä.
+ */
+export function livianAaniAjanTasalla(lahde, indeksi, teksti = null) {
+  if (teksti == null) return !LIVIAN_KAUPUNKILAHTEET[lahde] && !LIVIAN_LINSSILAHTEET[lahde];
+  const avain = `${lahde}-${indeksi + 1}`;
+  return LIVIAN_AANITETYT[avain] === livianTiiviste(teksti);
+}
+
+/** Häivytys, kun seuraava kupla katkaisee edellisen repliikin. */
+export const LIVIAN_HAIVYTYS_MS = 160;
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * LOPPUHÄIVYTYS — TOISTOSSA, EI TIEDOSTOON
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistaja 14.9.2026 (Raamattu, "PULUN ÄÄNI … LOPPUHÄIVYTYS"),
+ * sanatarkasti: *"Pululle voi tehdä ne loppu feidit, ne ei varmaan
+ * edellytä uudelleen pakkausta"*. Livian mp3:t menevät peliin
+ * sellaisinaan (ei ffmpeg-vaihetta), joten häivytys tehdään täällä.
+ *
+ * ------------------------------------------------------------------
+ * MITATTU 14.9.2026: TIEDOSTOJEN PÄISSÄ EI OLE NAKSAHDUSTA
+ * ------------------------------------------------------------------
+ *
+ * Neljä tuotantoäänitettä (pariisi-3, rooma-3, ateena-3, sofia-3)
+ * ladattiin ämpäristä ja dekoodattiin (mpg123-decoder):
+ *
+ *   loppu 50 ms   RMS ja huippu = digitaalinen nolla (−∞ dBFS)
+ *   viimeinen näyte = 0.000000 kaikissa neljässä
+ *   loppuhiljaisuus 0,150–0,160 s (kynnys −60 dBFS)
+ *   puheen oma vaimeneminen −20 → −99 dBFS noin 40 ms:ssä
+ *   alku 20 ms   huippu −31…−77 dBFS, ensimmäinen näyte ≈ 1e−4
+ *
+ * Eli äänite päättyy jo hiljaisuuteen eikä katkea keskeltä aaltoa:
+ * DC-hyppyä nollaan ei ole kummassakaan päässä. ALKUNOUSUA EI SIKSI
+ * TEHDÄ LAINKAAN, ja loppuhäivytys on varmistus — se ei korjaa
+ * mitattua vikaa vaan estää sellaisen, jos jokin tuleva äänite
+ * päättyy kesken äänen.
+ *
+ * ------------------------------------------------------------------
+ * SE HÄIVYTYS, JOKA OIKEASTI PUUTTUI: KATKAISU iOS:SSÄ
+ * ------------------------------------------------------------------
+ *
+ * Kun seuraava kupla katkaisee edellisen repliikin, häivytys on ollut
+ * olemassa (LIVIAN_HAIVYTYS_MS) — mutta se kirjoittaa
+ * `audio.volumeen`, jota iOS:n WebKit ei tottele (perustelu ja mittaus:
+ * js/musiikkivahvistin.js). Puhelimessa katkaisu on siis ollut kova
+ * leikkaus keskellä sanaa. Sama koodi hoitaa nyt molemmat häivytykset,
+ * ja PUHELIMESSA taso menee vahvistinsolmun läpi.
+ *
+ * ------------------------------------------------------------------
+ * KAKSI REITTIÄ, VALINTA MITTAAMALLA
+ * ------------------------------------------------------------------
+ *
+ * `volumeToimii()` kysyy selaimelta kokeella (ei user-agentista),
+ * meneekö `volume`-kirjoitus perille.
+ *
+ *   TOTTELEE (työpöytä, Android)  → taso `audio.volumeen`, häivytys
+ *     ajastimella. Ei uusia solmuja, ei CORS-riippuvuutta — käytös on
+ *     täsmälleen entinen yhtä loppuramppia lukuun ottamatta.
+ *   EI TOTTELE (iOS)              → elementti reititetään pelin OMAN
+ *     äänikontekstin (js/sound.js sfx.ensureContext) vahvistimen läpi
+ *     ja häivytys ajastetaan äänisäikeelle gain-ramppina, joka on
+ *     näytetarkka eikä katkeile ajastinkuristuksessa.
+ *
+ * Reititys vaatii CORS-luvan. Mitattu 14.9.2026: ämpäri
+ * media.matkakirja.app palauttaa `access-control-allow-origin`
+ * pyynnön Originin mukaisena (GET 206 + `vary: Origin`), joten
+ * `crossOrigin = 'anonymous'` toimii. Lupa pyydetään VAIN reitittävällä
+ * polulla: turha crossOrigin muuttaisi työpöydän pyyntöä ilman hyötyä.
+ *
+ * Jos reititys ei onnistu (konteksti nukkuu, ei elettä vielä), taso
+ * jää elementin volumeen kuten ennenkin — hiljaisuutta ei koskaan
+ * valita häivytyksen takia: repliikki on tärkeämpi kuin sen viimeiset
+ * 40 ms.
+ */
+
+/** Loppuhäivytyksen pituus: viimeiset millisekunnit nollaan. */
+export const LIVIAN_LOPPUHAIVYTYS_MS = 40;
+
+/**
+ * Häivytyskäyrä: kerroin perustasolle toiston kohdassa `hetki`.
+ *
+ * Lineaarinen ja yksiselitteinen: 1 aina siihen asti, kun jäljellä on
+ * enemmän kuin häivytyksen verran, sitten suoraan nollaan äänitteen
+ * lopussa. Tuntematon tai järjetön kesto (NaN, Infinity, 0) ei häivytä
+ * mitään — silloin kerroin on 1 koko ajan.
+ *
+ * @param {number} hetki toiston kohta sekunteina (audio.currentTime)
+ * @param {number} kesto äänitteen kesto sekunteina (audio.duration)
+ * @param {number} [haivytysMs] häivytyksen pituus millisekunteina
+ * @returns {number} kerroin välillä 0…1
+ */
+export function livianLoppuKerroin(hetki, kesto, haivytysMs = LIVIAN_LOPPUHAIVYTYS_MS) {
+  const h = Number(haivytysMs) / 1000;
+  const k = Number(kesto);
+  const t = Number(hetki);
+  if (!Number.isFinite(k) || k <= 0 || !(h > 0) || !Number.isFinite(t)) return 1;
+  const jaljella = k - t;
+  if (jaljella >= h) return 1;
+  if (jaljella <= 0) return 0;
+  return jaljella / h;
+}
+
+/** Tottelisiko tämä selain elementin omaa volumea? (iOS: ei) */
+function livianVolumeToimii() {
+  try {
+    return volumeToimii();
+  } catch {
+    return true;
+  }
+}
+
+/**
+ * Livian soittimen nykyinen taso siltä polulta, jota se käyttää.
+ * @param {HTMLAudioElement} audio
+ * @returns {number}
+ */
+export function livianTaso(audio) {
+  if (!audio) return 0;
+  const vahvistin = audio.livianVahvistin;
+  if (vahvistin) return Number(vahvistin.gain.value) || 0;
+  return Number(audio.volume) || 0;
+}
+
+/**
+ * Asettaa Livian soittimen tason oikeaan paikkaan: vahvistimeen jos
+ * elementti on reititetty, muuten elementin volumeen.
+ * @param {HTMLAudioElement} audio
+ * @param {number} arvo
+ */
+export function asetaLivianTaso(audio, arvo) {
+  if (!audio) return;
+  const taso = Math.max(0, Math.min(1, Number(arvo) || 0));
+  const vahvistin = audio.livianVahvistin;
+  if (vahvistin) {
+    try {
+      vahvistin.gain.cancelScheduledValues?.(0);
+      vahvistin.gain.value = taso;
+      return;
+    } catch {
+      /* konteksti kiinni — kirjoitetaan volumeen */
+    }
+  }
+  audio.volume = taso;
+}
+
+/**
+ * Reitittää repliikin vahvistimen läpi, JOS tämä selain ei tottele
+ * elementin omaa volumea. Palauttaa true, kun reititys onnistui.
+ *
+ * Reititys on yksisuuntainen (createMediaElementSource), joten se
+ * puretaan aina soittimen kuollessa (irrotaLivianVahvistin).
+ */
+function liitaLivianVahvistin(audio) {
+  if (!audio || livianVolumeToimii()) return false;
+  const vahvistin = liitaMusiikkiin(audio);
+  if (!vahvistin) return false;
+  audio.livianVahvistin = vahvistin;
+  return true;
+}
+
+/** Purkaa reitityksen. Turvallista kutsua monta kertaa. */
+function irrotaLivianVahvistin(audio) {
+  if (!audio?.livianVahvistin) return;
+  audio.livianVahvistin = null;
+  irrotaMusiikinVahvistin(audio);
+}
+
+/**
+ * Laskee tason nollaan `kesto` millisekunnissa ja kutsuu `valmis`.
+ *
+ * Reititetyllä polulla ramppi ajastetaan ÄÄNISÄIKEELLE: se on
+ * näytetarkka eikä jäädy, vaikka pääsäie olisi varattu. Muuten
+ * askelletaan kellosta (ei askelmäärästä, ks. LIVIAN_HAIVYTYS_MS:n
+ * perustelu) — venynyt askel lyhentää häivytystä, ei pidennä sitä.
+ *
+ * @returns {Function} peruutus, joka pysäyttää häivytyksen
+ */
+function haivytaLivianTaso(audio, kestoMs, valmis) {
+  const aika = Math.max(1, Number(kestoMs) || 1);
+  const perus = livianTaso(audio);
+  const vahvistin = audio?.livianVahvistin;
+  const ctx = vahvistin?.context;
+  if (vahvistin && ctx && typeof ctx.currentTime === 'number') {
+    try {
+      const nyt = ctx.currentTime;
+      vahvistin.gain.cancelScheduledValues(nyt);
+      vahvistin.gain.setValueAtTime(perus, nyt);
+      vahvistin.gain.linearRampToValueAtTime(0, nyt + aika / 1000);
+      const id = setTimeout(valmis, aika + 20);
+      return () => clearTimeout(id);
+    } catch {
+      /* konteksti kiinni — askelletaan kellosta */
+    }
+  }
+  const t0 = (typeof performance !== 'undefined' && performance.now)
+    ? performance.now() : Date.now();
+  const kello = setInterval(() => {
+    const nyt = (typeof performance !== 'undefined' && performance.now)
+      ? performance.now() : Date.now();
+    const kulunut = nyt - t0;
+    if (kulunut < aika) {
+      // Käyrä tulee livianLoppuKertoimesta, jotta yksikkötestattu muoto
+      // on se, joka oikeasti soi: kulunut aika rampin sisällä.
+      asetaLivianTaso(audio, perus * livianLoppuKerroin(kulunut, aika, aika));
+      return;
+    }
+    clearInterval(kello);
+    /*
+     * NOLLA KIRJOITETAAN, EI JÄTETÄ VIIMEISEN ASKELEEN VARAAN. Askelväli
+     * on karkea (ajastin ei tikitä millisekunnilleen), joten viimeinen
+     * tikki ennen määräaikaa jättäisi tason johonkin kymmenesosaan —
+     * MITATTU selaimessa 0,096, kun perustaso oli 0,8. Katkaisussa se ei
+     * kuulunut, koska ääni pysäytetään heti perään; loppuhäivytyksessä
+     * se olisi juuri se naksahdus, jota tässä vältetään.
+     */
+    asetaLivianTaso(audio, 0);
+    valmis();
+  }, Math.max(4, aika / 10));
+  return () => clearInterval(kello);
+}
+
+/**
+ * Kytkee loppuhäivytyksen soivaan repliikkiin.
+ *
+ * VAHTI ON `timeupdate`, MUTTA RAMPPI AJASTETAAN ERIKSEEN. Selain
+ * lähettää timeupdaten vain noin neljä kertaa sekunnissa, eli sen
+ * tarkkuus (~250 ms) on kuusinkertainen häivytyksen pituuteen (40 ms)
+ * nähden: pelkän tapahtuman varassa ramppi viritettäisiin joko liian
+ * aikaisin tai vasta äänitteen loputtua. MITATTU selaimessa 14.9.2026:
+ * suoraan timeupdatesta viritetty häivytys ei ehtinyt laskea tasoa
+ * lainkaan ennen `ended`-tapahtumaa.
+ *
+ * Siksi vahti tekee vain sen, mitä se osaa: kun loppuun on enintään
+ * ENNAKKO_MS, se laskee ajastimen tasan kohtaan duration − 40 ms ja
+ * jättäytyy pois. Ramppi itse ajetaan haivytaLivianTasossa.
+ *
+ * `ended` säilyy koskemattomana: tasoa lasketaan, toistoa ei katkaista.
+ * Kuplan ajastin (livianKuplanAjastin) ei näe tästä mitään — se lukee
+ * kestoa, ei tasoa.
+ */
+function kytkeLivianLoppuhaivytys(audio, { voimassa }) {
+  if (!audio || typeof audio.addEventListener !== 'function') return;
+  /** Kuinka paljon ennen loppua ramppi viritetään ajastimelle. */
+  const ENNAKKO_MS = 1000;
+  /*
+   * JITTERIVARA. Ajastin herää muutaman millisekunnin myöhässä, ja
+   * myöhästyminen söisi häivytyksen hännän: MITATTU 14.9.2026 ilman
+   * varaa taso oli vielä 0,18 kun `ended` tuli. Varalla ramppi
+   * käynnistyy 20 ms aiemmin ja ehtii nollaan ennen loppua; jos ajastin
+   * on myöhässä, kaynnista lyhentää rampin jäljellä olevaan aikaan.
+   * Äänite on noissa viimeisissä millisekunneissa joka tapauksessa jo
+   * hiljaa (mitattu loppuhiljaisuus 0,15 s), joten vara ei syö puhetta.
+   */
+  const VARMUUS_MS = 20;
+  let ajastin = null;
+  let peruuta = null;
+  const nopeus = () => (Number(audio.playbackRate) > 0 ? Number(audio.playbackRate) : 1);
+  const kaynnista = () => {
+    ajastin = null;
+    if (!voimassa()) return;
+    /*
+     * TAUOLLA EI HÄIVYTETÄ. Taustalle mennyt peli pysäyttää luennat
+     * (js/luenta.js taustaHiljennaLuennat); tauon aikana kello juoksisi
+     * mutta ääni ei, ja taso valuisi nollaan kesken lauseen. Vahti
+     * virittää rampin uudestaan, kun toisto jatkuu.
+     */
+    if (audio.paused || audio.ended) return;
+    const kesto = Number(audio.duration);
+    const jaljellaMs = ((kesto - Number(audio.currentTime || 0)) * 1000) / nopeus();
+    audio.livianLoppuhaivytys = true;
+    peruuta = haivytaLivianTaso(
+      audio,
+      Math.max(1, Math.min(LIVIAN_LOPPUHAIVYTYS_MS, jaljellaMs)),
+      () => {},
+    );
+  };
+  const vahti = () => {
+    if (ajastin !== null || audio.livianLoppuhaivytys) return;
+    if (!voimassa()) return;
+    const kesto = Number(audio.duration);
+    if (!Number.isFinite(kesto) || kesto <= 0) return;
+    // Nopeutettu toisto lyhentää jäljellä olevan ajan samassa suhteessa.
+    const jaljellaMs = ((kesto - Number(audio.currentTime || 0)) * 1000) / nopeus();
+    if (jaljellaMs > ENNAKKO_MS) return;
+    ajastin = setTimeout(kaynnista,
+      Math.max(0, jaljellaMs - LIVIAN_LOPPUHAIVYTYS_MS - VARMUUS_MS));
+  };
+  audio.addEventListener('timeupdate', vahti);
+  const lopu = () => {
+    audio.removeEventListener('timeupdate', vahti);
+    if (ajastin !== null) clearTimeout(ajastin);
+    ajastin = null;
+    peruuta?.();
+    peruuta = null;
+  };
+  audio.addEventListener('ended', lopu);
+  audio.addEventListener('error', lopu);
+}
+
+/** Onko tämä repliikki se, jossa Livia saapuu (kaikuversio on olemassa)? */
+export function livianSaapumisrepliikki(lahde, indeksi) {
+  return (LIVIAN_SAAPUMISREPLIIKIT[lahde] ?? []).includes(indeksi);
+}
+
+/*
+ * KAIKU POIS PULUN ALUSTA (omistaja 6.9.2026 ilta: "ota kaiku pois
+ * pulun tekstin alusta"). Tämä on se yksi paikka, joka päättää, hakeeko
+ * peli kaikuversion vai kuivan: false = kuiva aina, myös
+ * saapumisrepliikeissä. Kaikutiedostot jäävät ämpäriin, joten päätöksen
+ * peruminen on tämän rivin vaihto — ei uutta ajoa.
+ */
+export const LIVIAN_KAIKU = false;
+
+/**
+ * Repliikin tiedostonimi ämpärissä.
+ *
+ * PUHDAS FUNKTIO — sama pelissä ja työkalussa. `kaiku` valitsee
+ * saapumisversion; ilman lippua nimi on kuiva perusversio. Peli ei
+ * enää anna lippua (LIVIAN_KAIKU), vain generointityökalu antaa.
+ * Palauttaa null, jos lähde tai indeksi ei kelpaa.
+ */
+export function livianAaniNimi(lahde, indeksi, { kaiku = false } = {}) {
+  if (!LIVIAN_AANILAHTEET.includes(lahde)) return null;
+  if (!Number.isInteger(indeksi) || indeksi < 0) return null;
+  return `livia-${lahde}-${indeksi + 1}${kaiku ? '-kaiku' : ''}.mp3`;
+}
+
+/**
+ * Se tiedosto, jonka PELI soittaa: aina KUIVA versio (LIVIAN_KAIKU on
+ * false, omistajan päätös 6.9.2026 ilta). Null, jos repliikkiä ei ole
+ * olemassa.
+ */
+export function livianSoitettava(lahde, indeksi) {
+  const kaiku = LIVIAN_KAIKU && livianSaapumisrepliikki(lahde, indeksi);
+  return livianAaniNimi(lahde, indeksi, { kaiku });
+}
+
+/**
+ * Repliikin koko osoite ämpärissä.
+ *
+ * VARTIOIDULLA REPLIIKILLÄ ON VERSIOKYSELY (9.9.2026): `?v=<tiiviste>`
+ * LIVIAN_AANITETYT-taulusta. Tiedostonimi ei muutu, kun teksti
+ * äänitetään uusiksi, ja palvelutyöntekijän äänikori (sw.js AANICACHE)
+ * on välimuisti ensin — ilman kyselyä selain soittaisi vanhan
+ * repliikin, vaikka ämpärissä on jo uusi (omistajan havainto 9.9.2026:
+ * "pulun ääntä ei jostain syystä tule isoisän tekstin jälkeen"; sama
+ * mekanismi kuin js/media.js UUSITUT_AANET). Ämpäri ohittaa kyselyn.
+ * Vartioimaton repliikki (ei riviä taulussa) saa osoitteen ilman kyselyä.
+ */
+export function livianAaniOsoite(lahde, indeksi, juuri = LIVIAN_AANIJUURI) {
+  const nimi = livianSoitettava(lahde, indeksi);
+  if (!nimi) return null;
+  const avain = `${lahde}-${indeksi + 1}`;
+  const versioituPolku = LIVIAN_VERSIOIDUT_AANET[avain];
+  if (versioituPolku) return `${AANI_JUURI}${versioituPolku}`;
+  const versio = LIVIAN_AANITETYT[avain];
+  const era = LIVIAN_AANIERAT[avain];
+  if (!versio) return `${juuri}${nimi}`;
+  return `${juuri}${nimi}?v=${versio}${era ? `-${era}` : ''}`;
+}
+
+/**
+ * KAIKKI ÄÄNITETTÄVÄT REPLIIKIT yhtenä listana — työkalun syöte ja
+ * manifestin runko.
+ *
+ * Tekstit tulevat kutsujalta (js/livia.js on kaanonin omistaja), nimet
+ * tästä moduulista: näin peli ja työkalu eivät voi eriytyä.
+ *
+ * @param {object} lahteet { avaus: string[], paljastus: string[],
+ *   mannerivihje: string[] }
+ * @returns {Array<{avain:string, lahde:string, indeksi:number,
+ *   teksti:string, nimi:string, kaikuNimi:string|null, saapuu:boolean,
+ *   merkit:number}>}
+ */
+export function livianAanitykset(lahteet = {}) {
+  const rivit = [];
+  for (const lahde of LIVIAN_AANILAHTEET) {
+    const tekstit = Array.isArray(lahteet[lahde]) ? lahteet[lahde] : [];
+    tekstit.forEach((raaka, indeksi) => {
+      const teksti = String(raaka ?? '').trim();
+      if (!teksti) return;
+      const saapuu = livianSaapumisrepliikki(lahde, indeksi);
+      rivit.push({
+        avain: `${lahde}-${indeksi + 1}`,
+        lahde,
+        indeksi,
+        teksti,
+        merkit: teksti.length,
+        nimi: livianAaniNimi(lahde, indeksi),
+        kaikuNimi: saapuu ? livianAaniNimi(lahde, indeksi, { kaiku: true }) : null,
+        saapuu,
+      });
+    });
+  }
+  return rivit;
+}
+
+/* ------------------------------------------------------------------ *
+ * Kupla odottaa puheen loppuun
+ * ------------------------------------------------------------------ */
+
+/*
+ * KUPLA ODOTTAA PUHEEN LOPPUUN (omistaja, Raamattu PULU PUHUU
+ * 6.9.2026 — korjaus 7.9.2026).
+ *
+ * Kuplan näkyvä aika laskettiin pelkästä tekstin pituudesta
+ * (js/livia.js lukuaika, 78 ms/merkki). Generoitu puhe ei kuitenkaan
+ * ole tasatahtista: Dr. Vonin ajossa 7.9.2026 kymmenen repliikkiä
+ * 85:stä puhui kuplaansa pidempään (esim. 7,37 s puhetta 5,38 s
+ * kuplassa), ja koska seuraava kupla häivyttää edellisen äänitteen
+ * pois (pysaytaLivianAani), lause katkesi kesken.
+ *
+ * Nyt ajastin on `max(lukuaika, äänitteen kesto + LIVIAN_PUHEEN_HANTA_MS)`.
+ * Kesto luetaan siitä samasta `<audio>`-elementistä, joka soi — ei
+ * manifestista eikä uudesta verkkohausta: peli ei lue manifestia
+ * lainkaan, ja `duration` on selaimella jo valmiina heti metatietojen
+ * saavuttua (loadedmetadata).
+ *
+ * EI ÄÄNITETTÄ, EI MUUTOSTA. Puuttuva tiedosto, mykistys tai vielä
+ * tuntematon kesto antaa `null`-keston, ja kuplan aika on tasan se
+ * mikä ennenkin. Napautus jatkaa yhä heti (kutsupaikan `kuittaus`),
+ * ja se häivyttää äänen kuten tähänkin asti.
+ */
+
+/** Hengähdys puheen lopun ja seuraavan kuplan välissä. */
+export const LIVIAN_PUHEEN_HANTA_MS = 400;
+
+/**
+ * Äänitteen kesto MILLISEKUNTEINA — tai null, jos sitä ei tiedetä.
+ *
+ * `duration` on NaN ennen metatietoja, Infinity virrassa ja 0 puretulla
+ * soittimella (pysaytaLivianAani poistaa srcin); kaikissa niissä
+ * vastaus on "ei tietoa", jolloin kupla pitää entisen aikansa.
+ *
+ * @param {HTMLAudioElement|{duration:number}|null} audio
+ * @returns {number|null}
+ */
+export function livianAanenKesto(audio) {
+  const kesto = Number(audio?.duration);
+  return Number.isFinite(kesto) && kesto > 0 ? Math.round(kesto * 1000) : null;
+}
+
+/**
+ * KUPLAN NÄKYVÄ AIKA: lukuaika tai puheen mitta, kumpi on pidempi.
+ *
+ * @param {number} perusaika kuplan lukuaika millisekunteina
+ *   (js/livia.js livianKuplanLukuaika)
+ * @param {HTMLAudioElement|(() => HTMLAudioElement|null)|null} audio
+ *   soiva äänite — tai funktio, joka kertoo sen vasta kutsuhetkellä
+ *   (silloin kahvaa ei tarvitse kuljettaa kutsupaikan läpi).
+ * @returns {number} millisekunteina
+ */
+export function livianKuplanAika(perusaika, audio) {
+  const kahva = typeof audio === 'function' ? audio() : audio;
+  const kesto = livianAanenKesto(kahva);
+  if (kesto === null) return perusaika;
+  return Math.max(perusaika, kesto + LIVIAN_PUHEEN_HANTA_MS);
+}
+
+/**
+ * KUPLASARJAN AJASTIN, JOKA VENYY PUHEEN MITTAAN.
+ *
+ * Kesto ei ole tiedossa silloin kun kupla ilmestyy — `new Audio(url)`
+ * on juuri luotu eikä metatietoja ole vielä haettu — joten aikaa ei
+ * voi laskea kerralla valmiiksi. Ajastin herää siis ensin kuplan
+ * LUKUAJAN kohdalla, kysyy vasta silloin äänitteen keston (metatiedot
+ * ovat ehtineet tulla kauan sitten: lyhinkin lukuaika on 3,2 s) ja
+ * odottaa tarvittaessa loput.
+ *
+ * Kahva on tavallinen setTimeout-tunnus, joten kutsupaikkojen
+ * `clearTimeout` peruu sarjan täsmälleen kuten ennen. Koska tunnus
+ * vaihtuu jatkoajastimen myötä, kutsupaikka antaa `aseta`-funktion,
+ * joka päivittää oman muuttujansa.
+ *
+ * @param {number} perusaika kuplan lukuaika millisekunteina
+ * @param {HTMLAudioElement|(() => HTMLAudioElement|null)|null} audio
+ * @param {() => void} jatka mitä tehdään ajan kuluttua
+ * @param {((id:number) => void)|null} [aseta] kahvan päivitys
+ * @returns {number} ajastimen kahva
+ */
+export function livianKuplanAjastin(perusaika, audio, jatka, aseta = null) {
+  const kaynnista = (ms, kutsu) => {
+    const id = setTimeout(kutsu, Math.max(0, ms));
+    aseta?.(id);
+    return id;
+  };
+  return kaynnista(perusaika, () => {
+    const jaljella = livianKuplanAika(perusaika, audio) - perusaika;
+    if (jaljella > 0) {
+      kaynnista(jaljella, jatka);
+      return;
+    }
+    jatka();
+  });
+}
+
+/**
+ * Pysäyttää soivan repliikin ja vapauttaa taustan väistön.
+ *
+ * Häivytys on lyhyt tarkoituksella: kupla vaihtuu, ja kova katkaisu
+ * kesken sanan kuulostaisi virheeltä. Turvallista kutsua monta kertaa.
+ */
+export function pysaytaLivianAani(ui, { haivyta = true } = {}) {
+  if (!ui) return false;
+  if (ui.liviaAaniAjastin) {
+    clearInterval(ui.liviaAaniAjastin);
+    ui.liviaAaniAjastin = null;
+  }
+  const audio = ui.liviaAani;
+  ui.liviaAani = null;
+  if (!audio) return false;
+  lopetaLivianKasvoAanite(audio);
+  // Häivytys on hyvästely: puhevuoro vapautuu heti, jotta kertoja tai
+  // seuraava kupla ei jää odottamaan häipyvää lausetta (js/luenta.js
+  // luovutaPuhevuoro).
+  luovutaPuhevuoro(audio);
+  const lopeta = () => {
+    try {
+      audio.pause();
+      audio.removeAttribute('src');
+    } catch {
+      /* soitin oli jo purettu */
+    }
+    // Pysäytetty äänite ei laukaise 'ended'- eikä 'error'-tapahtumaa,
+    // joten puhujan rooli vapautetaan käsin (sama sopimus kuin
+    // js/linssipuhe.js pysaytaLinssiluenta).
+    ui.luennat?.delete(audio);
+    vapautaPuhuja(ui, audio);
+    irrotaLivianVahvistin(audio);
+  };
+  if (!haivyta || !(livianTaso(audio) > 0)) {
+    lopeta();
+    return true;
+  }
+  /*
+   * HÄIVYTYS KELLOSTA, EI ASKELMÄÄRÄSTÄ (8.9.2026).
+   *
+   * Ennen häivytys otti tasan neljä askelta ja päättyi vasta
+   * neljännellä. Ajastimia kuristavassa selaimessa (taustalle mennyt
+   * välilehti, hidas laite) askelväli venyy moninkertaiseksi, ja
+   * neljä askelta tarkoitti sekunnin verran ääntä sen jälkeen kun peli
+   * jo käski vaieta — juuri sen mittainen häntä, jonka omistaja kuulee
+   * seuraavassa kaupungissa. Nyt voimakkuus lasketaan KULUNEESTA
+   * AJASTA, joten venynyt askel ei pidennä häivytystä vaan lyhentää
+   * sen: ensimmäinen myöhässä herännyt tikki toteaa ajan täyteen ja
+   * pysäyttää äänen. Askellus asuu nyt haivytaLivianTasossa, jota myös
+   * loppuhäivytys käyttää.
+   *
+   * TASO MENEE SITÄ POLKUA, JOTA TÄMÄ SELAIN TOTTELEE. Ennen tämä
+   * kirjoitti suoraan `audio.volumeen`, jota iOS ei tottele — silloin
+   * katkaisu oli puhelimessa kova leikkaus keskellä sanaa, vaikka
+   * koodissa luki häivytys. Reititetyllä polulla ramppi ajastetaan
+   * äänisäikeelle (haivytaLivianTaso).
+   */
+  haivytaLivianTaso(audio, LIVIAN_HAIVYTYS_MS, lopeta);
+  return true;
+}
+
+/**
+ * Soittaa yhden Livian repliikin. Kutsutaan kuplan ilmestyessä
+ * (js/livia.js) — kupla on aina ensin, ääni seuraa sitä.
+ *
+ * Edellinen repliikki häivytetään pois: kaksi Livian ääntä
+ * päällekkäin olisi pahempi kuin katkennut lause.
+ *
+ * @param {object} ui pelin käyttöliittymä
+ * @param {string} lahde 'avaus' | 'paljastus' | 'mannerivihje' tai
+ *   kaupungin tunnus (LIVIAN_KAUPUNKILAHTEET)
+ * @param {number} indeksi repliikin järjestysnumero lähteessä (0-alkuinen)
+ * @param {object} [asetukset]
+ * @param {string} [asetukset.paikkaan] paljastuksen kaupunki
+ *   illatiivissa (ks. LIVIAN_AANITETTY_PALJASTUS): muu kuin äänitetty
+ *   variantti jää hiljaiseksi.
+ * @param {string} [asetukset.paikkaa] paljastuksen kaupunki
+ *   partitiivissa
+ * @param {string|null} [asetukset.teksti] kuplan teksti: jos annettu,
+ *   äänite soi vain kun se vastaa ämpärissä olevaa (LIVIAN_AANITETYT).
+ * @param {number} [asetukset.vaimennus] äänenvoimakkuuden kerroin
+ *   (1 = pulun perustaso, LIVIAN_PERUSTASO — joka on jo hieman kertojan
+ *   alapuolella). Välihuuto luennan päällä soi tätäkin hiljempaa.
+ * @param {boolean} [asetukset.vaista] väistääkö tausta puheen ajaksi.
+ *   VÄLIHUUTO EI VÄISTÄ (omistaja 7.9.2026): se soi kertojan PÄÄLLE,
+ *   eikä kertoja saa hiljetä sen tieltä.
+ * @param {Array<object>} [asetukset.eleet] lopulliseen äänitteeseen
+ *   kohdistetut puhe-eleet millisekunteina; tyhjä lista ei animoi.
+ * @returns {HTMLAudioElement|null} soittimen kahva tai null
+ */
+export function soitaLivianAani(ui, lahde, indeksi,
+  { paikkaan = '', paikkaa = '', teksti = null, vaimennus = 1, vaista = true, eleet = [] } = {}) {
+  pysaytaLivianAani(ui);
+  if (!ui || ui.dead || typeof Audio === 'undefined') return null;
+  // Sama kytkin kuin kertojalla: mykistetty peli on mykistetty myös
+  // pulun osalta.
+  if (!luentaKytkinPaalla()) return null;
+  // Radiotilassa ei kaksi ääntä päällekkäin (sama ehto kuin
+  // matkakirja- ja linssiluennalla).
+  if (ui.radioModuuli && !ui.radioModuuli.luentaSallittu()) return null;
+  /*
+   * PULU EI ALA KERTOJAN PÄÄLLE (omistaja 8.9.2026, sanatarkasti:
+   * *"pulun ja kertojan äänet menevät päällekkäin ja pulu selittää
+   * ensin jotain ihan väärää juttua"*).
+   *
+   * Vuoro kysytään siitä samasta kirjanpidosta, johon puhujat itse
+   * merkitään (js/luenta.js puhujaAanessa) — ei toisesta rinnakkaisesta
+   * taulusta. Pulun oma edellinen repliikki ei laske: se on juuri
+   * pysäytetty yllä ja häipyy hetkessä pois.
+   *
+   * VÄLIHUUTO KULKEE OHI. `vaista: false` on se huudahdus, joka
+   * omistajan päätöksellä SAA soida kertojan päälle hiljempaa
+   * (js/fokusvirta.js ajastaHuudahdus) — sen vuoroa ei kysytä eikä
+   * varata.
+   *
+   * KUPLA JÄÄ RUUDULLE. Portti vaientaa vain äänitteen; teksti näkyy ja
+   * etenee täsmälleen kuten ennen — sama sopimus kuin puuttuvalla tai
+   * vanhentuneella äänitteellä.
+   */
+  if (vaista && puhujaAanessa(PUHUJA_PULU)) return null;
+  if (lahde === 'paljastus'
+    && (paikkaan !== LIVIAN_AANITETTY_PALJASTUS.paikkaan
+      || paikkaa !== LIVIAN_AANITETTY_PALJASTUS.paikkaa)) {
+    // Muu kaupunki kuin äänitetty: kupla puhuu, äänite vaikenee.
+    return null;
+  }
+  // Vanhentunut äänite on hiljainen: ämpärissä oleva tiedosto lukee
+  // vielä edellisen tekstin (ks. LIVIAN_AANITETYT).
+  if (!livianAaniAjanTasalla(lahde, indeksi, teksti)) return null;
+  const url = livianAaniOsoite(lahde, indeksi);
+  if (!url) return null;
+
+  /*
+   * ELEMENTTI ILMAN SRCIÄ ENSIN. `crossOrigin` on asetettava ENNEN
+   * srciä, ja se asetetaan VAIN silloin kun repliikki aiotaan reitittää
+   * vahvistimen läpi (selain ei tottele volumea, ks. LOPPUHÄIVYTYS).
+   * Työpöydällä pyyntö pysyy täsmälleen entisenä.
+   */
+  const audio = new Audio();
+  if (!livianVolumeToimii()) audio.crossOrigin = 'anonymous';
+  audio.preload = 'auto';
+  audio.src = url;
+  liitaLivianVahvistin(audio);
+  // Perustaso on kertojan alapuolella (LIVIAN_PERUSTASO); kutsupaikan
+  // vaimennus kertoo siihen eikä korvaa sitä. PULULLA ON OMA LIUKU
+  // (omistaja 11.9.2026: *"pulun ja lukijan omat äänen voimakkuus
+  // säätimet"*), joten kertojan puhevoima ei enää säädä pulua.
+  asetaLivianTaso(audio, pulunVoima() * LIVIAN_PERUSTASO * vaimennus);
+  // Soiva repliikki seuraa liukua heti: vaimennus talteen, jotta taso
+  // voidaan laskea uudestaan kesken äänitteen (paivitaPulunVoima).
+  soivaPulu = { audio, vaimennus };
+  ui.liviaAani = audio;
+  seuraaLivianKasvoAanitetta(audio, teksti);
+  kytkeLivianPuheEleet(audio, eleet, { voimassa: () => ui.liviaAani === audio });
+  // Kirjanpito kaikkiin luentoihin: taustalle menevä peli hiljentää
+  // myös tämän (js/luenta.js taustaHiljennaLuennat).
+  (ui.luennat ??= new Set()).add(audio);
+  // Tausta väistyy puheen ajaksi. Merkintä ennen soittoa, jotta se
+  // pariutuu vapautuksen kanssa myös silloin kun soitto ei käynnisty.
+  // Välihuuto (vaista: false) ei merkitse puhujaa, joten kertoja jatkaa
+  // entisellä voimallaan sen alla — eikä se myöskään varaa puhevuoroa.
+  if (vaista) merkitsePuhuja(ui, audio, PUHUJA_PULU);
+  // Loppuhäivytys: viimeiset LIVIAN_LOPPUHAIVYTYS_MS lasketaan nollaan.
+  // 'ended' tulee normaalisti — tasoa lasketaan, toistoa ei katkaista.
+  kytkeLivianLoppuhaivytys(audio, { voimassa: () => ui.liviaAani === audio });
+  const vapaaksi = () => {
+    ui.luennat?.delete(audio);
+    if (ui.liviaAani === audio) ui.liviaAani = null;
+    // Reititys on yksisuuntainen: purkamatta jäänyt ketju pitäisi
+    // kuolleen elementin muistissa.
+    irrotaLivianVahvistin(audio);
+  };
+  audio.addEventListener('ended', vapaaksi);
+  audio.addEventListener('error', vapaaksi);
+  audio.play().then(() => {
+    // play() on asynkroninen: jos repliikki ehti vaihtua, myöhässä
+    // herännyt ääni pysäytetään heti.
+    if (ui.liviaAani !== audio) audio.pause();
+  }).catch(() => {
+    /*
+     * Puuttuva tiedosto tai eleeseen sitomaton soitto: hiljaisuus, ei
+     * virhettä — eikä peiliPetti-kutsua (js/linssipuhe.js:n oppi:
+     * puuttuva puhe ei saa katkaista koko pelin äänipeiliä).
+     */
+    audio.dispatchEvent(new Event('error'));
+  });
+  return audio;
+}
+
+/**
+ * KAUPUNKIREPLIIKIN ÄÄNI KENTÄN NIMELLÄ (js/fokusvirta.js).
+ *
+ * Kutsupaikka sanoo kaupungin, kentän ja kuplan — "sofia, paluu, toinen
+ * kupla" — eikä numeroa: numeron omistaa LIVIAN_KAUPUNKILAHTEET.
+ * Kaupunki, jota ei ole äänitetty, on hiljainen ilman että kutsupaikan
+ * tarvitsee tietää siitä mitään (Raamattu: VAIN EUROOPPA TYÖN ALLA).
+ *
+ * TEKSTI ANNETAAN AINA: kaupunkilähteet ovat tiivistevartioituja
+ * (livianAaniAjanTasalla), joten ilman kuplan tekstiä äänite jää
+ * soimatta — se on tarkoituksellinen, ei vahinko.
+ *
+ * @param {object} ui pelin käyttöliittymä
+ * @param {string} kaupunkiId kaupungin tunnus (city.id)
+ * @param {string} kentta pakkauksen kentän nimi
+ * @param {object} [asetukset]
+ * @param {number} [asetukset.kupla] kentän monesko kupla (0-alkuinen)
+ * @param {string|null} [asetukset.teksti] kuplan teksti tiivisteportille
+ * @param {number} [asetukset.vaimennus] voimakkuuden kerroin
+ * @param {boolean} [asetukset.vaista] väistääkö tausta (välihuuto ei)
+ * @param {Array<object>} [asetukset.eleet] hash-varmistetun kohdistuksen
+ *   jo ratkaistut puhe-eleet; ilman niitä repliikki toimii kuten ennen.
+ * @returns {HTMLAudioElement|null} soittimen kahva tai null
+ */
+export function soitaLivianKaupunkiAani(ui, kaupunkiId, kentta,
+  { kupla = 0, teksti = null, vaimennus = 1, vaista = true, eleet = [] } = {}) {
+  const indeksi = livianKaupunkiIndeksi(kaupunkiId, kentta, kupla);
+  if (indeksi === null) return null;
+  const audio = soitaLivianAani(ui, kaupunkiId, indeksi, { teksti, vaimennus, vaista, eleet });
+  if (audio && !eleet.length) {
+    const aaniOsoite = livianAaniOsoite(kaupunkiId, indeksi);
+    void kytkeLivianPilottiEleet(audio, {
+      kaupunki: kaupunkiId, kentta, kupla, teksti, aaniOsoite,
+    }, { voimassa: () => ui.liviaAani === audio });
+  }
+  return audio;
+}
+
+/**
+ * LINSSIN VÄLIHUOMION ÄÄNI JAKSON TUNNUKSELLA (js/linssit/
+ * ihmisen-matka-esitys.js).
+ *
+ * Kutsupaikka sanoo linssin ja jakson — "ihmisen-matka, denisova" —
+ * eikä numeroa: numeron omistaa LIVIAN_LINSSILAHTEET. Jakso, jota ei
+ * ole taulussa, on hiljainen ilman että kutsupaikan tarvitsee tietää
+ * siitä mitään.
+ *
+ * VÄLIHUOMIO EI VÄISTÄ eikä huuda: oletuksena sama vaimennus ja sama
+ * `vaista: false` kuin fokusvirran huudahduksella (js/fokusvirta.js
+ * HUUDAHDUKSEN_VAIMENNUS) — kertoja jatkaa entisellä voimallaan.
+ *
+ * @param {object} ui pelin käyttöliittymä
+ * @param {string} linssi linssin tunnus
+ * @param {string} jakso kertomusjakson tunnus
+ * @param {object} [asetukset]
+ * @param {string|null} [asetukset.teksti] kuplan teksti tiivisteportille
+ * @param {number} [asetukset.vaimennus] voimakkuuden kerroin
+ * @param {boolean} [asetukset.vaista] väistääkö tausta
+ * @returns {HTMLAudioElement|null} soittimen kahva tai null
+ */
+export function soitaLivianLinssiAani(ui, linssi, jakso,
+  { teksti = null, vaimennus = LIVIAN_VALIHUOMION_VAIMENNUS, vaista = false } = {}) {
+  const indeksi = livianLinssiIndeksi(linssi, jakso);
+  if (indeksi === null) return null;
+  return soitaLivianAani(ui, linssi, indeksi, { teksti, vaimennus, vaista });
+}

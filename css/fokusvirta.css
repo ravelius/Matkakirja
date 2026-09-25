@@ -245,6 +245,599 @@
   height: min(20vh, 9rem);
 }
 
+/* -------------------------------------------------------------------------
+   LUENTAKUVA KARTAN PÄÄLLÄ (js/fokusvirta.js naytaLuentakuva)
+   ---------------------------------------------------------------------------
+   Omistaja 9.9.2026 klo 13.50 (Raamattu, LUENTAKUVA ISOMPANA, VINOSSA JA
+   ILMAN LAATIKKOA): *"kuva saisi näkyä isompana ainakin tässä
+   työpöytänäkymässä ja kuva saisi näkyä yksinään ilman laatikkoa hieman
+   vinoon käännettynä. kuvan omat ääriviivat riittävät. kuvan alle voisi
+   tehdä oman vaalean laatikon ilman ääriviivoja, missä olisi lyhennetty
+   kuvateksti."*
+
+   EI KEHYSLAATIKKOA. Paneeli itse on läpinäkyvä ja reunukseton: kartalla
+   on kuva ja sen alla erillinen vaalea lappu, ei yhtä laatikkoa jossa
+   molemmat ovat. Isoisän kuvassa ei ole kehystä lainkaan (omistaja
+   9.9.2026): kartalla on paljas valokuva, jonka alalaitaan kuvateksti
+   on kiinni.
+
+   MITAT OVAT MUUTTUJIA, EIVÄT LUKUJA SIELLÄ TÄÄLLÄ. Yksi paikka päättää
+   leveyden, korkeuskaton, kallistuksen ja pienennyksen — työpöytä ja
+   puhelin vaihtavat vain muuttujien arvot:
+
+     --luentakuva-leveys     paneelin leveys (kuva täyttää sen)
+     --luentakuva-korkeus    kuvan korkeuskatto (pystykuva ei karkaa)
+     --luentakuva-kallistus  kierto asteina; js kirjoittaa kaupungin oman
+                             kulman tähän (luentakuvanKallistus)
+     --luentakuva-pienennys  pienen kuvan mittakaava kartan liikkeen jälkeen;
+                             JS KIRJOITTAA TÄMÄN (js/fokusvirta.js
+                             kirjoitaPienennys) niin, että valokuvan
+                             korkeus on aina PIENEN_KUVAN_KORKEUS_PX —
+                             tässä oleva luku on vara-arvo ennen
+                             mitoitusta (omistaja 14.9.2026: koko ei saa
+                             riippua siitä, paljonko ISOLLE kuvalle
+                             sattui jäämään tilaa)
+     --luentakuva-tablettikerroin  tabletin puolitoistakertaistus (ks. alla)
+
+   TYÖPÖYTÄ: leveys 38 % näkymästä, katto 640 px (omistaja: kuva oli
+   2000 px:n ruudulla n. 290 px ja liian pieni). PUHELIN: 80 % ruudusta,
+   katto 22 rem — hitusen entistä isompi, mutta kartta näkyy yhä
+   molemmin puolin. TABLETTI (700–1400 px): sama porras kerrottuna
+   1,5:llä (omistaja 10.9.2026, ks. media-ehto alempana).
+
+   PAIKKA: ankkuri on ALAREUNASSA prosentteina. Matkakirjakortti kasvaa
+   ylhäältä alas ja pulun kuplapino alhaalta ylös, joten kuvan paikka on
+   niiden väliin jäävä kaista.
+
+   NOUSU, KALLISTUS JA PIENENNYS ovat samassa transform-ketjussa
+   (translate → rotate → scale) ja liikkuvat muuttujien kautta, joten
+   vain opacity ja transform animoituvat — kartan rasterointi ei kilpaile
+   animaation kanssa (sama sääntö kuin suurennoksella).
+   ------------------------------------------------------------------------- */
+
+.fokusvirta-luentakuva {
+  /* Kerroin on 1 kaikkialla paitsi tablettikaistalla (media-ehto alla),
+     ja se kertoo sekä leveyden että korkeuskaton — porras pysyy yhtenä
+     lukuna eikä samaa mittaa kirjoiteta kahteen kertaan. */
+  --luentakuva-tablettikerroin: 1;
+  --luentakuva-leveys: calc(min(80vw, 22rem) * var(--luentakuva-tablettikerroin));
+  --luentakuva-korkeus: calc(min(34vh, 15rem) * var(--luentakuva-tablettikerroin));
+  --luentakuva-kallistus: -2.4deg;
+  /* PIENI KUVA ON PEUKALONKYNSI (omistaja 11.9.2026, kaksi vaihetta:
+     ensin *"pienennetyt kuvat saisi jäädä kartalla pienemmiksi"* ja
+     sitten *"Kuvapino saisi näkyä vielä paljon pienempänä … vain vähän
+     pelinappulaa korkeammaksi"*). 0,45 → 0,30 → 0,16; kartan mittakaava
+     kertautuu tähän päälle (--luentakuva-karttaskaala). */
+  --luentakuva-pienennys: 0.16;
+  /* Levitetty pakka: napautus suurentaa pinon valittavaksi. */
+  --luentakuva-levitys: 0.78;
+  /* Nousun matka: paneeli ladotaan hieman alempaa ja liukuu paikalleen. */
+  --luentakuva-nousu: 10px;
+  --luentakuva-skaala: 1;
+
+  position: absolute;
+  left: 50%;
+  /* Neljännes ruudun korkeudesta alhaalta: yhden kuplan pino (luennan
+     aikainen välihuuto) jää kuvan alapuolelle eikä sen päälle. */
+  bottom: 24%;
+  z-index: 5;
+  width: var(--luentakuva-leveys);
+  max-width: calc(100% - 1.2rem);
+  /* Kartalla yksinään: ei reunusta, ei pintaa, ei sisennystä. */
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  color: #211d18;
+  text-shadow: none;
+  font-family: var(--font-luku);
+  opacity: 0;
+  /* Kutistuminen tapahtuu ALAREUNAA kohti: pieni kuva jää siihen
+     kaistaan, josta iso lähti, eikä hypähdä ruudun keskelle. */
+  transform-origin: bottom center;
+  transform:
+    translate(-50%, var(--luentakuva-nousu))
+    rotate(var(--luentakuva-kallistus))
+    scale(var(--luentakuva-skaala));
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+.fokusvirta-luentakuva.nakyy {
+  --luentakuva-nousu: 0px;
+  opacity: 1;
+}
+
+/*
+ * ANKKUROITU KARTAN KOHTAAN (js/fokusvirta.js ankkuroiLuentakuva;
+ * omistaja 9.9.2026 klo 16.10 ja 16.15, Raamattu SAAPUMISESSA KAMERA
+ * ASETTUU… ja LUENTAKUVAA VOI ITSE LIIKUTTAA…).
+ *
+ * Paikka ei ole enää css:n kaista vaan LAUDAN piste: skripti kirjoittaa
+ * ankkurin ruutupaikan muuttujiin `--luentakuva-x/-y` joka kehyksellä,
+ * ja paneeli asettuu niin, että sen ALAREUNAN KESKIPISTE osuu siihen
+ * (translate(-50%, -100%)). Alareuna siksi, että kartan liike kutistaa
+ * kuvan `transform-origin: bottom center` -pisteeseen: pieni kuva jää
+ * täsmälleen siihen kartan kohtaan, josta iso lähti.
+ *
+ * Kierto ja mittakaava ovat samassa ketjussa kuin ennen, joten vain
+ * transform ja opacity animoituvat — kartan rasterointi ei kilpaile.
+ *
+ * touch-action: none — paneeli ottaa raahauksen itselleen; ilman tätä
+ * kosketuslaite aloittaisi sivun oman vierityksen kesken siirron.
+ */
+.fokusvirta-luentakuva-ankkuri {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: 5;
+  /* EI SIIRTYMÄÄ. Tämä on se piste, jota skripti kirjoittaa joka
+     kehyksellä; siirtymä jäisi ikuisesti jälkeen liikkuvasta
+     kohteesta (mitattu Chromiumilla 9.9.2026: kuva jäi paikalleen
+     kartan kulmaan, koska jokainen kehys aloitti 400 ms:n siirtymän
+     alusta). Nousu, kallistus ja pienennys animoituvat paneelissa.
+
+     KARTAN MITTAKAAVA ON TÄSSÄ, EI PANEELISSA (omistaja 11.9.2026,
+     kaappaus Madridista: *"pienennetyt kuvat saisi jäädä kartalla
+     pienemmiksi ja pysyä kartan kokoon suhteutettuna, eli pienenevät
+     jos zoomataan ulos kartalla"*). Skripti kirjoittaa suhteen
+     kehyksittäin (js/fokusvirta.js paivitaLuentakuvanPaikka), joten se
+     kuuluu samaan siirtymättömään solmuun kuin paikkakin — paneelissa
+     se aloittaisi 400 ms:n siirtymän joka kehyksellä. */
+  transform:
+    translate(var(--luentakuva-x, 50%), var(--luentakuva-y, 76%))
+    scale(var(--luentakuva-karttaskaala, 1));
+}
+
+.fokusvirta-luentakuva.ankkuroitu {
+  left: 0;
+  top: 0;
+  bottom: auto;
+  /* Ankkuri on nollan kokoinen, joten prosenttikatto olisi myös nolla. */
+  max-width: none;
+  touch-action: none;
+  cursor: grab;
+  transform:
+    translate(-50%, -100%)
+    translate(0, var(--luentakuva-nousu))
+    rotate(var(--luentakuva-kallistus))
+    scale(var(--luentakuva-skaala));
+}
+
+/* KARTAN LIIKE JA LUENNAN LOPPU PIENENTÄVÄT (js/fokusvirta.js
+   pienennaLuentakuva). Kuva jää kartalle koko kaupungissaolon ajaksi, ja
+   sen napautus avaa yhä suurennoksen — siksi vain mittakaava muuttuu,
+   ei näkyvyys. */
+.fokusvirta-luentakuva.pieni {
+  --luentakuva-skaala: var(--luentakuva-pienennys);
+  /* PAKKA POIS KARTALTA TOISTAISEKSI (omistaja 16.9.2026, Raamattu
+     KARTTAUUDISTUKSEN PAATOKSET 31 kohta 1: *"Piilotetaan nuo kuvat
+     kartalta toistaiseksi"*). Tämä on KOLMAS varmistus: js/fokusvirta.js
+     LUENTAKUVAPAKKA_KARTALLA estää jo pakan noston ja pienennyksen,
+     mutta `pieni` on kartalle jäävän kuvan ainoa tila — jos jokin polku
+     silti antaa sen luokan, kuva ei näy. Isot kuvat luennan aikana
+     (ilman `pieni`-luokkaa) ja Pulu Cam eivät koske tähän sääntöön.
+     PALAUTUS: poista display-rivi ja aseta kytkin true. */
+  display: none;
+}
+
+/* KOLME VAIHETTA KARTALLA (omistaja 11.9.2026, sanatarkasti:
+   *"Kuvapino saisi näkyä vielä paljon pienempänä ja sitten kun sitä
+   klikkaa, kuvapino saisi suurentua jotta sopiva kuva olisi helpompi
+   valita pinosta ja sitten kun kuvaa klikkaa se tulisi vasta täydelle
+   ruudulle. Jos karttaa vierittää niin kuvapino pienentäisi taas varsin
+   pieneksi, vain vähän pelinappulaa korkeammaksi"* ja *"Kun mini
+   kuvapinoa klikkaa niin kuvat saisivat levittyä enemmän viuhkan
+   muotoon jotta klikkaaminen ja siirtyminen tiettyyn kuvaan olisi
+   helpompi"*):
+
+     1. PIENI     kartan esine, peukalonkynsi kaupungin päällä
+     2. LEVITETTY napautus suurentaa pinon ja levittää kuvat viuhkaksi
+     3. KOKO RUUTU kuvan napautus levitetyssä pinossa avaa suurennoksen
+
+   Kartan vieritys palauttaa vaiheeseen 1 (js/fokusvirta.js
+   kytkeLuentakuvanPienennys). Levitys ei ole oma mittakaavansa kartan
+   zoomista riippumatta: --luentakuva-karttaskaala kertautuu tähänkin,
+   joten viuhka on kartan kokoinen kuten pinokin. */
+.fokusvirta-luentakuva.pieni.levitetty {
+  --luentakuva-skaala: var(--luentakuva-levitys);
+}
+
+.fokusvirta-luentakuva.levitetty .pulucam-pakka {
+  /* Viuhka: samat asennot kerrottuna. Kulma kasvaa loivemmin kuin
+     siirtymä, jotta kuvat eivät käänny kyljelleen vaan aukeavat. */
+  --pulucam-viuhka: 3.4;
+  --pulucam-viuhka-kulma: 1.8;
+}
+
+/* ISOISÄN KUVASSA EI OLE KEHYSTÄ (omistaja 9.9.2026, sanatarkasti:
+   *"isoisän kuvissa ei saa olla kehystä"*). Kuva näkyy sellaisenaan:
+   ei kermanväristä paperireunaa, ei ääriviivaa — pelkkä kevyt varjo,
+   joka nostaa valokuvan kartan päälle. */
+.fokusvirta-luentakuva .fokusvirta-kuva {
+  /* ISOISÄN KUVA ON PAKAN ALIN KORTTI (omistaja 10.9.2026): sen
+     napautus nostaa sen pulun kuvien päälle, joten sillä on oltava
+     sama kerrosmuuttuja kuin korteilla (js/pulucam.js jarjestaPakka).
+     Ilman `position` z-index ei tekisi mitään. Oletus 0 pitää kuvan
+     pakan alla silloin, kun pakkaa ei ole nostettu. */
+  position: relative;
+  z-index: var(--pulucam-kerros, 0);
+  padding: 0;
+  border: 0;
+  border-radius: 2px;
+  background: none;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.34);
+}
+
+.fokusvirta-luentakuva .fokusvirta-kuva img {
+  height: auto;
+  max-height: var(--luentakuva-korkeus);
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+/* KUVATEKSTI OMASSA VAALEASSA LAATIKOSSAAN, ILMAN ÄÄRIVIIVOJA. Sama
+   seepia/kerma kuin pelin korteilla, pehmeä pyöristys — ja VAIN lyhyt
+   teksti: lähderivi ("Matkakirjan havainnekuva") näkyy vasta
+   suurennoksessa (js/kuvatekstit.js). */
+.fokusvirta-luentakuva .fokusvirta-luentateksti {
+  /* LAPPU ON KIINNI KUVAN ALALAIDASSA (omistaja 9.9.2026, sanatarkasti:
+     *"kuvateksti pitää olla kiinni kuvan alalaidassa"*): ei väliä, ei
+     laskennallista kallistusvaraa. Kallistus tulee koko paneelille
+     (--luentakuva-kallistus), joten kuva ja lappu kääntyvät yhdessä
+     samana kappaleena — lapulla ei ole omaa transformia. Yläkulmat
+     jäävät suoriksi, alakulmat pyöristyvät: lappu on kuvan jatke. */
+  margin: 0;
+  /* LAPPU ON PAKAN PÄÄLLÄ (omistaja 10.9.2026: *"pulun kuvasta puuttuu
+     kuvateksti"*). Pakan kortit siirtyvät asennoissaan alaspäin
+     enintään 10 % kuvan korkeudesta (js/pulucam.js PULUCAM_ASENNOT),
+     ja alin kortti peittäisi juuri sen kaistan, jossa lappu on. Kerros
+     on korkeampi kuin yhdelläkään kortilla (kuusi kuvaa, kerrokset
+     1–6), joten teksti näkyy aina — myös kun pakkaa selataan. */
+  position: relative;
+  z-index: 20;
+  padding: 0.4rem 0.6rem;
+  border: 0;
+  border-radius: 0 0 10px 10px;
+  background: rgba(245, 240, 226, 0.94);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  font-size: 0.85rem;
+  color: rgba(33, 29, 24, 0.84);
+}
+
+/* TYHJÄ LAPPU EI OLE LAPPU. Pohjattoman pakan paneeli ladotaan tyhjällä
+   kuvatekstillä, jonka pakka täyttää ensimmäisen pulpahduksen kohdalla
+   (js/fokusvirta.js rakennaLuentakuvanPaneeli, kuva null) — siihen asti
+   kartalla ei saa olla tyhjää kermanväristä laatikkoa. */
+.fokusvirta-luentakuva .fokusvirta-luentateksti:not(:has(.fokusvirta-kuvaselite:not(:empty))) {
+  display: none;
+}
+
+/* ISOISÄN LAPPU NÄKYY VAIN, KUN ISOISÄN KUVA ON PÄÄLLIMMÄISENÄ
+   (omistaja 10.9.2026 klo 23.37). Pulun kortilla on oma lappunsa
+   kiinni omassa alalaidassaan, ja kahta lappua ei kartalla ole.
+
+   VISIBILITY EIKÄ DISPLAY: kappale pitää paikkansa taitossa, joten
+   paneelin korkeus ei muutu nostoissa — ankkuri on paneelin
+   alareunassa, ja katoava kappale nykäisisi kuvaa alaspäin joka
+   kerta, kun pelaaja selaa pakkaa (js/fokusvirta.js kuvateksti). */
+.fokusvirta-luentakuva .fokusvirta-luentateksti.pulucam-alla {
+  visibility: hidden;
+}
+
+/* Pienessä koossa lappu on lukukelvoton (0,45 × 0,85 rem), joten se
+   häipyy: peukalonkynnen kokoinen valokuva jää kartalle yksin. */
+.fokusvirta-luentakuva.pieni .fokusvirta-luentateksti {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Leveällä ruudulla kuva on selvästi isompi (omistaja 9.9.2026), mutta
+   ei ruudun mittainen: kartan pitää näkyä sen molemmin puolin. */
+@media (min-width: 900px) {
+  .fokusvirta-luentakuva {
+    --luentakuva-leveys: calc(min(38vw, 640px) * var(--luentakuva-tablettikerroin));
+    --luentakuva-korkeus: calc(min(46vh, 26rem) * var(--luentakuva-tablettikerroin));
+  }
+}
+
+/*
+ * TABLETILLA PUOLTA ISOMPI (omistaja 10.9.2026 klo 23.30, iPad-kaappaus
+ * Krakovasta; Raamattu LUENTAKUVA IPADILLA PUOLTA ISOMPANA,
+ * sanatarkasti: *"Kuvat saisivat tulla ipadilla puolta isompana"*).
+ *
+ * Kaista 700–1400 px kattaa iPadin pystyn (1024) ja vaakan (1366);
+ * puhelin ja työpöytä jäävät ennalleen. Sääntö muuttaa VAIN kerrointa,
+ * eikä leveyttä kirjoiteta uusiksi: molemmat portaat (puhelimen 80 vw
+ * ja työpöydän 38 vw) lukevat saman muuttujan, joten kumpi tahansa
+ * niistä on voimassa, se kasvaa tällä kaistalla puolitoistakertaiseksi.
+ *
+ * SAMA LUKU ON js/saapumisasento.js:ssä (LUENTAKUVAN_TABLETTIKERROIN,
+ * LUENTAKUVAN_TABLETTI_PX), joka mitoittaa ANKKUROIDUN kuvan; nämä
+ * media-arvot ovat vara sille tapaukselle, ettei näkyvää aluetta ole.
+ */
+@media (min-width: 700px) and (max-width: 1400px) {
+  .fokusvirta-luentakuva {
+    --luentakuva-tablettikerroin: 1.5;
+  }
+}
+
+/*
+ * ANKKUROIDULLA KUVALLA MITAT TULEVAT SKRIPTILTÄ (js/saapumisasento.js
+ * luentakuvanSijainti): leveys on laskettu niin, että kuva mahtuu
+ * matkakirjakortin viereen tai alle. Yllä olevat media-arvot jäävät
+ * varalle sille tapaukselle, ettei näkyvää aluetta ole (testit, laudan
+ * mitoitus kesken) — silloin kuva jää css:n omaan kaistaan.
+ */
+
+@media (prefers-reduced-motion: reduce) {
+  .fokusvirta-luentakuva {
+    transition: none;
+    --luentakuva-nousu: 0px;
+  }
+}
+
+/* ================= PULU-CAM: PAKKA ISOISÄN KUVAN PÄÄLLE ==================
+   -------------------------------------------------------------------------
+   Omistaja 9.9.2026 klo 15.20–15.30 (Raamattu, PULU-CAM: PULUN NYKYAJAN
+   KUVAT PAKKANA ISOISAN KUVAN PAALLE, YHTEINEN KARUSELLI), sanatarkasti:
+   *"Yksi tai useampi kuva voisi tosiaan tulla pelissä isoisän ottaman kuvan
+   päälle ja ne voisivat limittyä hieman. Eri suuntiin pakan päälle, niin
+   että siinä hahmottaa, että pakassa on useampi kuva."*
+
+   PAKKA ON LUENTAKUVAN SISÄLLÄ, EI SEN VIERESSÄ. Kortit ovat absoluuttisia
+   `.fokusvirta-kuvatila`-kuoren sisällä, joten ne ovat täsmälleen isoisän
+   kuvan kokoiset ja kohdallaan — ja koska kuori on paneelissa, pakka
+   seuraa karttaa, raahautuu ja pienenee ilman omaa koodia (js/pulucam.js
+   moduulikommentti).
+
+   MIKSI KUORI EIKÄ ITSE KUVALAATIKKO: `.fokusvirta-kuva` on NAPPI (nappiin
+   ei ladota nappeja) ja sillä on `overflow: hidden`, joka leikkaisi juuri
+   ne pakan reunat, joiden pitää näkyä. Kuori on kuvan kokoinen block eikä
+   muuta pakattoman paneelin ulkoasua lainkaan.
+
+   SIIRTYMÄ ON PROSENTTIA, EI PIKSELEITÄ. `translate(6%, -6%)` on 6 % KORTIN
+   OMASTA koosta, joten limitys pysyy samana myös kartan liikkeen
+   pienentämässä pakassa. Pikseleinä pieni pakka olisi pelkkä sekasotku.
+   ------------------------------------------------------------------------- */
+
+.fokusvirta-kuvatila {
+  position: relative;
+  display: block;
+}
+
+/*
+ * POHJATON PAKKA (js/fokusvirta.js rakennaLuentakuvanPaneeli, kuva null):
+ * kaupungilla on pulun kuvia mutta ei isoisän luentakuvaa. Laatikko on
+ * paikanvaraaja — sama koko, ei pintaa eikä varjoa.
+ */
+.fokusvirta-luentakuva .fokusvirta-kuva.pulucam-pohja {
+  height: var(--luentakuva-korkeus);
+  padding: 0.3rem;
+  background: none;
+  box-shadow: none;
+}
+
+/*
+ * POHJATTOMAN PAKAN ULKOASU EI MUUTU KEHYKSEN POISTON MYÖTÄ: kun alla ei
+ * ole isoisän kuvaa, ei ole myöskään kuvan reunaa johon kortit
+ * asettuisivat — pakka pitää entisen 0,3 rem sisennyksensä
+ * paikanvaraajan sisällä, jotta se näyttää täsmälleen entiseltä.
+ */
+.fokusvirta-kuvatila:has(.pulucam-pohja) .pulucam-pakka {
+  inset: 0.3rem;
+}
+
+.pulucam-pakka {
+  /* Merkin mitta tulee kartalla paneelin leveydestä; suurennoksessa
+     saman muuttujan kirjoittaa js (avaaSuurennos mitoita). */
+  --pulucam-mitta: var(--luentakuva-leveys);
+
+  position: absolute;
+  /* Isoisän kuva täyttää laatikkonsa kokonaan (ei paperireunaa,
+     .fokusvirta-luentakuva .fokusvirta-kuva padding 0), joten pakan
+     kortit asettuvat suoraan kuvan reunoille. */
+  inset: 0;
+  /* Läpinäkyvä kehys ei ota napautuksia; kortit ottavat. */
+  pointer-events: none;
+}
+
+/* KORTTI ON KUVA JA SEN OMA LAPPU YHDESSÄ LOHKOSSA (omistaja
+   10.9.2026 klo 23.37, iPad-kaappaukset Krakovasta ja Vilnasta;
+   Raamattu "PULUN KORTIN KUVATEKSTI KIINNI KORTIN OMASSA
+   ALALAIDASSA", sanatarkasti: *"Pulun pienissä kuvissa ei näy
+   kuvatekstiä"*).
+
+   Ennen tätä kartalla oli yksi lappu, joka oli kiinni PAKAN
+   POHJAKUVAN (isoisän paperin) alareunassa — pulun kortti kelluu
+   pakan päällä omassa kulmassaan ja hieman ylempänä, joten lappu
+   näytti irralliselta eikä kortin omalta.
+
+   KÄÄRE KANTAA ASENNON, KERROKSEN JA PULPAHDUKSEN, jotka ennen olivat
+   napissa. Kierto koskee siis koko kappaletta: lappu kääntyy kortin
+   mukana, koska se on saman transformin sisällä. Napissa lappu ei voi
+   olla (`<p>` ei kuulu napin sisään), eikä pakan lapsena (silloin se
+   olisi taas irrallinen, eri kulmassa oleva elementti). */
+.pulucam-kortti {
+  --pulucam-pomppu: 0.82;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  z-index: var(--pulucam-kerros, 1);
+  opacity: 0;
+  /* Kääre itse on läpinäkyvä kehys: napautukset ottavat nappi ja
+     lappu (kumpikin pointer-events: auto), jolloin kortin alta
+     näkyvät alemmat kortit saavat omat napautuksensa. */
+  pointer-events: none;
+  /* VIUHKAKERROIN (omistaja 11.9.2026): pakassa kerroin on 1 ja kuvat
+     ovat limittäin; levitetyssä pakassa kerroin kasvaa ja samat asennot
+     venyvät viuhkaksi, jolloin jokainen kuva on erikseen osoitettavissa.
+     Asennot pysyvät prosentteina eivätkä muutu — vain kerroin muuttuu. */
+  transform:
+    translate(
+      calc(var(--pulucam-x, 0%) * var(--pulucam-viuhka, 1)),
+      calc(var(--pulucam-y, 0%) * var(--pulucam-viuhka, 1)))
+    rotate(calc(var(--pulucam-kulma, 0deg) * var(--pulucam-viuhka-kulma, 1)))
+    scale(var(--pulucam-pomppu));
+  /* PULPAHDUS: pieni yliheitto (1,56) tekee noususta pomppuavan eikä
+     liukuvan — omistajan sana oli "pulpahtaa". */
+  transition:
+    transform 420ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 220ms ease-out;
+}
+
+.pulucam-kortti.nakyy {
+  --pulucam-pomppu: 1;
+  opacity: 1;
+}
+
+.pulucam-kuva {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0.3rem;
+  border: 0;
+  border-radius: 4px;
+  /* PuluCamin kortit ovat kehystettyjä valokuvia pöydällä — tämä
+     paperireuna on niiden oma, eikä sitä pidä sekoittaa isoisän
+     kuvaan, joka näkyy kehyksettä (omistaja 9.9.2026). */
+  background: #fbf6ea;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.34);
+  /* Alempi kortti nousee napautuksesta päälle, päällimmäinen avaa
+     karusellin (js/pulucam.js). Osoitin on sama molemmille: pelaajalle
+     kortti on kortti, jota napautetaan. */
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+/* KORTIN OMA KUVATEKSTILAPPU: KIINNI JUURI SEN KORTIN ALALAIDASSA.
+
+   `top: 100%` on kortin alareuna, `margin: 0` pitää lapun kiinni
+   siinä — väliä ei ole, eikä lapulla ole omaa transformia: kierto
+   tulee kääreeltä, joten kuva ja lappu ovat yksi kappale.
+
+   ULKOASU ON SAMA KUIN ISOISÄN LAPULLA (vaalea pohja, alakulmat
+   pyöristetyt, ei yläpyöristystä): pelaajalle lappu on lappu,
+   riippumatta siitä kumman kuvan alla se on.
+
+   VAIN YKSI LAPPU KERRALLAAN. Näkyvissä on päällimmäisen kortin lappu
+   (`.pulucam-paalla`, js/pulucam.js jarjestaPakka) — muut ovat
+   `display: none`, joten ne eivät peitä alempien korttien näkyviä
+   reunoja eivätkä kasvata korkeusvaraa (js/fokusvirta.js
+   pakanLapunKorkeus lukee vain näkyvän). */
+.pulucam-lappu {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin: 0;
+  padding: 0.4rem 0.6rem;
+  border: 0;
+  border-radius: 0 0 10px 10px;
+  background: rgba(245, 240, 226, 0.94);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: rgba(33, 29, 24, 0.84);
+  text-align: left;
+  /* Napautus lappuun on napautus korttiin (kuuntelija on kääreessä). */
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.pulucam-kortti.pulucam-paalla > .pulucam-lappu {
+  display: block;
+}
+
+/* Pienessä koossa lappu on lukukelvoton, kuten isoisän lappukin:
+   kartan liike häivyttää sen (sama sääntö kuin
+   `.fokusvirta-luentakuva.pieni .fokusvirta-luentateksti`). */
+.fokusvirta-luentakuva.pieni .pulucam-lappu {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pulucam-kuva img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  object-fit: cover;
+}
+
+/*
+ * PULU-CAM-MERKKI: MUSTEENSININEN SINETTI KUVAN OIKEASSA YLÄKULMASSA
+ * (omistajan päätös 9.9.2026; Raamattu "PULUCAM-MERKKI ON
+ * MUSTEENSININEN SINETTI OIKEASSA YLAKULMASSA"). Yksi PNG, ei kuvaan
+ * poltettu: teksti PuluCam on sinetin sisällä, joten HTML-tekstiä ei
+ * ole — aiempi selfie + teksti -pari on poistettu. Sinetti on
+ * läpinäkyvä RGBA-PNG (läpinäkyvä myös sinetin sisällä), joten sen alle
+ * EI ladota taustalaatikkoa eikä pyöristystä: kuvaan tulee sinetti, ei
+ * nappi.
+ *
+ * KOKO SKAALAUTUU KUVAN LEVEYDEN MUKAAN: 22 % `--pulucam-mitta`-arvosta
+ * (kartalla luentakuvan leveys, suurennoksessa js:n laskema kuvan
+ * leveys), katto 160 px, jottei sinetti kasva koko ruudun
+ * suurennoksessa julisteeksi. Luvut ovat myös js:ssä (js/pulucam.js
+ * PULUCAM_TARRA_OSUUS, PULUCAM_TARRA_KATTO_PX), jotta testit valvovat
+ * samaa sopimusta.
+ *
+ * ILMAN OMISTAJAN VALITSEMAA SINETTIÄ MERKKIÄ EI SYNNY LAINKAAN
+ * (js/pulucam.js puluCamMerkki palauttaa null): kuvat näkyvät puhtaina
+ * sekä pakassa että karusellissa.
+ */
+.pulucam-merkki {
+  position: absolute;
+  right: 0.45rem;
+  top: 0.45rem;
+  bottom: auto;
+  display: block;
+  width: min(calc(var(--pulucam-mitta, 240px) * 0.22), 160px);
+  line-height: 0;
+  pointer-events: none;
+}
+
+.pulucam-tarra {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/*
+ * SINETTI MYÖS SUURENNOKSESSA. Karusellissa kuva saa ohuen kuoren
+ * (`.fokuszoom-kuvatila`), jonka mitat ovat täsmälleen kuvan mitat —
+ * sinetti asettuu sen oikeaan yläkulmaan eikä kellu paperikehyksen
+ * reunalle. Kuori syntyy VAIN karusellissa ja vain sinetin kanssa
+ * (js/fokusvirta.js avaaSuurennos).
+ */
+.fokuszoom-kuvatila {
+  position: relative;
+  align-self: center;
+  display: block;
+  line-height: 0;
+}
+
+.pulucam-merkki.pulucam-suuri {
+  right: 0.6rem;
+  top: 0.6rem;
+  bottom: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulucam-kortti {
+    --pulucam-pomppu: 1;
+    transition: none;
+  }
+}
+
 /* --- teksti --- */
 
 .fokusvirta-teksti p {
@@ -283,6 +876,14 @@
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
+}
+
+/* Palkkiorivi kysymyksen alla (omistaja 1.9.2026: "lopussa oleva
+   kysymys ei mainitse, mitä siitä voi voittaa"). */
+.fokusvirta-visa-palkkio {
+  margin: -0.35rem 0 0.55rem;
+  font-size: 0.82rem;
+  color: rgba(33, 29, 24, 0.72);
 }
 
 .fokusvirta-vaihtoehdot {
@@ -400,40 +1001,263 @@
 
 /* ==================== PÖLLÖN SÄHKETEHTÄVÄ ====================
  *
- * Sähke näyttää sähkeeltä: kapea liuska, versaalit, harva riviväli ja
- * konekirjoituskirjasin. Asu on tarkoituksella eri kuin kortin muu
- * teksti — pöllön sähke ei ole Livian puhetta eikä isoisän käsialaa,
- * vaan konetta.
+ * SÄHKE ON LOMAKE (omistaja 2.9.2026 ilta: kortti *"visuaalisesti
+ * herkullisemmaksi"*). Aiemmin sähke oli katkoviivalaatikko ja
+ * monospace-rivejä; nyt se on 1870-luvun sähkösanomalomake, jollaisen
+ * asemalta sai käteen:
  *
- * VÄRIT ON POIMITTU KORTIN OMASTA PALETISTA (ei uusia sävyjä): sama
- * ruskea muste ja sama pergamentti kuin muualla, vain vaaleampi
- * pohjalappu ja katkoviivareuna erottavat liuskan.
+ *   painettu otsake "SÄHKÖSANOMA" harvennetuin kapiteelein,
+ *   lomakenumero oikeassa laidassa, ohut kaksoisviiva alla,
+ *   sähköaseman pyöreä musteleima kallellaan vasemmassa yläkulmassa,
+ *   rei'itetyt ala- ja yläreunat (irti revitty arkki),
+ *   ja itse viesti LIIMATTUINA PAPERILIUSKOINA — sähkeet todella
+ *   liimattiin lomakkeelle liuskoina, ja siksi jokainen rivi on oma
+ *   hieman vaaleampi lappunsa, jolla on varjo ja pieni kallistus.
+ *
+ * KAIKKI ON CSS:ÄÄ: yhtään kuvatiedostoa tai fonttilatausta ei tule,
+ * koska peli on offline-PWA. Rei'itys on radial-gradient, leima on
+ * border-radius ja rotate, liuskojen kallistukset ovat nth-child-
+ * sarjana (arvottu kallistus vaihtuisi joka piirrolla ja näyttäisi
+ * vialta, kun kortti piirretään ohilyönnin jälkeen uudelleen).
+ *
+ * VÄRIT OVAT KORTIN OMASTA PALETISTA — sama ruskea muste ja sama
+ * pergamentti kuin muualla — yhtä lukuun ottamatta: sähköaseman leima
+ * ja Livian saate ovat sinertävää mustetta. Ne ovat kortin ainoat
+ * kohdat, joita EI ole kirjoitettu koneella: leima on painettu asemalla
+ * ja saate on Livian oma merkintä marginaaliin.
+ *
+ * MIKSI LIVIALLA EI OLE KAUNOKIRJOITUSTA: pelissä on yksi kaunokirjasin
+ * (--font-kauno) ja se on isoisän käsiala (css/styles.css). Toinen
+ * käsiala samassa pelissä lukisi isoisän merkinnäksi, ja repoon ei
+ * myöskään voi lisätä verkkofonttia ilman että offline-lataus kasvaa.
+ * Saate on siksi kursivoitua lukukirjasinta sinisellä musteella ja
+ * hitusen kallellaan — kynän jälki lomakkeen marginaalissa.
+ *
+ * MITAT: kaikki luettava teksti on vähintään 15 px myös iPhonen 390
+ * pikselin leveydellä, kentät ja napit vähintään 44 px korkeita, eikä
+ * kortti vaakavieritä (vartija: tools/savukkeet/savuke-sahkekortti.mjs).
  */
+
 .fokusvirta-sahke {
-  margin: 0.7rem 0 0;
-  padding: 0.55rem 0.7rem;
-  border: 1px dashed rgba(58, 38, 16, 0.45);
-  background: rgba(255, 252, 240, 0.72);
+  /* Lomakkeen omat sävyt yhdessä paikassa. */
+  --sahke-muste: #3a2610;
+  --sahke-lomake: #f7edcf;
+  --sahke-liuska: #fffbee;
+  --sahke-reuna: rgba(58, 38, 16, 0.34);
+  /* Rei'ityksen "reikä" on kortin oma paperi (.fokusvirta-kortti). */
+  --sahke-kortti: #f5f0e2;
+  --sahke-leima: rgba(72, 74, 116, 0.62);
+
+  position: relative;
+  margin: 0.85rem 0 0;
+  /* Ylä- ja alareunassa on tilaa rei'itykselle (::before, ::after). */
+  padding: 0.75rem 0.6rem 0.85rem;
+  border: 1px solid var(--sahke-reuna);
+  /* Revitty reuna ylhäällä ja alhaalla: siellä ei ole viivaa. */
+  border-top: 0;
+  border-bottom: 0;
+  background: linear-gradient(180deg, #fcf4da 0%, var(--sahke-lomake) 55%, #f1e3bd 100%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset, 0 2px 7px rgba(58, 38, 16, 0.16);
+}
+
+/* Rei'itys: puolikkaita reikiä kortin paperin värillä, kuten
+   irtirevityn lomakkeen reunassa. */
+.fokusvirta-sahke::before,
+.fokusvirta-sahke::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 7px;
+  pointer-events: none;
+}
+
+.fokusvirta-sahke::before {
+  top: 0;
+  background: radial-gradient(circle 4.2px at 6px 0, var(--sahke-kortti) 98%, transparent 100%)
+    0 0 / 12px 7px repeat-x;
+}
+
+.fokusvirta-sahke::after {
+  bottom: 0;
+  background: radial-gradient(circle 4.2px at 6px 7px, var(--sahke-kortti) 98%, transparent 100%)
+    0 0 / 12px 7px repeat-x;
+}
+
+/* --- lomakkeen painettu otsake --- */
+
+.fokusvirta-sahke-otsake {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.4rem;
+  min-height: 3.5rem;
+  /* Vasen laita on leiman: otsakkeen teksti alkaa vasta sen jälkeen. */
+  padding: 0 0.1rem 0.3rem 4.1rem;
+  border-bottom: 3px double rgba(58, 38, 16, 0.42);
+}
+
+.fokusvirta-sahke-nimio {
+  font-family: var(--font-type);
+  font-size: 0.95rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(58, 38, 16, 0.82);
+}
+
+/* Lomakenumero on painatusta, ei tietoa: pientä ja vaaleaa. */
+.fokusvirta-sahke-numero {
+  font-family: var(--font-type);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  color: rgba(58, 38, 16, 0.5);
+}
+
+/* --- sähköaseman musteleima --- */
+
+.fokusvirta-sahke-leima {
+  position: absolute;
+  left: 0.05rem;
+  top: 0.15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  padding: 0 0.15rem;
+  border: 2px solid var(--sahke-leima);
+  border-radius: 50%;
+  /* Kaksoiskehä kuten oikeassa leimasimessa. */
+  box-shadow: inset 0 0 0 1px rgba(72, 74, 116, 0.28);
+  transform: rotate(-11deg);
+  font-family: var(--font-type);
+  line-height: 1.05;
+  text-align: center;
+  color: var(--sahke-leima);
+}
+
+.fokusvirta-sahke-leima-nimi {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.fokusvirta-sahke-leima-asema {
+  font-size: 0.42rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+/* --- liimatut liuskat --- */
+
+.fokusvirta-sahkeliuskat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  /* Kallistus vie liuskan kulmat muutaman pikselin sivulle: pieni
+     sisennys pitää varjot lomakkeen sisällä. */
+  margin: 0.75rem 0.1rem 0;
 }
 
 .fokusvirta-sahkerivi {
-  margin: 0 0 0.3rem;
-  font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
-  font-size: 0.82rem;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
+  margin: 0;
+  padding: 0.32rem 0.5rem;
+  background: linear-gradient(180deg, var(--sahke-liuska), #fdf7e4);
+  box-shadow: 0 1px 2px rgba(58, 38, 16, 0.22), 0 0 0 1px rgba(58, 38, 16, 0.06);
+  transform: rotate(var(--sahke-kallistus, 0deg));
+  font-family: var(--font-type);
+  font-size: 0.96rem;
+  line-height: 1.45;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #3a2610;
+  color: var(--sahke-muste);
 }
 
-.fokusvirta-sahkerivi:last-child { margin-bottom: 0; }
+/* Liimaajan käsi ei ollut suora: ±0,4 asteen sarja, joka toistuu
+   viiden rivin välein. */
+.fokusvirta-sahkeliuskat .fokusvirta-sahkerivi:nth-child(5n + 1) { --sahke-kallistus: -0.35deg; }
+.fokusvirta-sahkeliuskat .fokusvirta-sahkerivi:nth-child(5n + 2) { --sahke-kallistus: 0.28deg; }
+.fokusvirta-sahkeliuskat .fokusvirta-sahkerivi:nth-child(5n + 3) { --sahke-kallistus: -0.16deg; }
+.fokusvirta-sahkeliuskat .fokusvirta-sahkerivi:nth-child(5n + 4) { --sahke-kallistus: 0.4deg; }
+.fokusvirta-sahkeliuskat .fokusvirta-sahkerivi:nth-child(5n + 5) { --sahke-kallistus: -0.26deg; }
 
-/* Lomake on osa sähkettä: aukot ovat rivejä, ei lomakelaatikoita. */
+/* STOP on sähkeen välimerkki eikä sana: haaleampana silmä lukee
+   sisällön eikä pisteitä. */
+.fokusvirta-sahke-stop {
+  letter-spacing: 0.06em;
+  color: rgba(58, 38, 16, 0.42);
+}
+
+/*
+ * KYSYMYSRIVI EROTTUU (omistaja 2.9.2026: *"tässä tehtävässä on vaikea
+ * ymmärtää mitä tässä kysytään"*). Kysymyksen liuska on hitusen tummempi
+ * lappu, jonka vasemmassa reunassa on musteviiva — se on ainoa rivi,
+ * jolla on paino, joten silmä osuu siihen ennen muita.
+ */
+.fokusvirta-sahkerivi.fokusvirta-sahkekysymys {
+  padding-left: 0.65rem;
+  border-left: 3px solid rgba(122, 85, 20, 0.8);
+  background: linear-gradient(180deg, #f7ebc8, #f1e0b4);
+  box-shadow: 0 1px 3px rgba(58, 38, 16, 0.26), 0 0 0 1px rgba(58, 38, 16, 0.08);
+  font-weight: 700;
+  color: #2a1c09;
+}
+
+/*
+ * PUHELIMELLA LOMAKE TIIVISTYY, EI PIENENE. Kirjasinkoot pysyvät
+ * (15 px on alaraja myös kapealla ruudulla) — tilaa otetaan
+ * välistyksistä, otsakkeen korkeudesta ja leiman halkaisijasta, jotta
+ * lomake ja sen vastauskentät mahtuvat samaan silmäykseen.
+ */
+@media (max-width: 430px) {
+  .fokusvirta-sahke { padding: 0.7rem 0.45rem 0.8rem; }
+
+  .fokusvirta-sahke-otsake {
+    min-height: 3.1rem;
+    padding-left: 3.6rem;
+  }
+
+  .fokusvirta-sahke-nimio { font-size: 0.88rem; letter-spacing: 0.18em; }
+
+  .fokusvirta-sahke-leima {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .fokusvirta-sahke-leima-nimi { font-size: 0.55rem; }
+
+  .fokusvirta-sahke-leima-asema { font-size: 0.38rem; }
+
+  .fokusvirta-sahkeliuskat { gap: 0.28rem; margin-top: 0.6rem; }
+
+  .fokusvirta-sahkerivi { padding: 0.26rem 0.42rem; line-height: 1.4; }
+
+  .fokusvirta-sahkeaukko .fokusvirta-sahkekentannimi { min-width: 4rem; }
+}
+
+/* ===================================================================
+   VASTAUSLOMAKE — PAINETTUJA KENTTIÄ, EI SELAIMEN LAATIKOITA
+   -------------------------------------------------------------------
+   Aukot ovat lomakkeen omia rivejä: nimi painettuna vasemmalla ja
+   täytettävä viiva sen perässä ("KOHDE ______"). Kenttien tausta on
+   läpinäkyvä ja ainoa reuna on alaviiva, joten ne näyttävät samalle
+   paperille painetuilta eivätkä selaimen harmailta laatikoilta.
+   Kosketusala on silti 44 px, ja tarkennusrengas on oma, koska
+   oletusreunaa ei enää ole näyttämässä missä ollaan.
+   =================================================================== */
+
 .fokusvirta-sahkelomake {
-  margin: 0.75rem 0 0;
+  margin: 0.85rem 0 0;
+  padding: 0.7rem 0.1rem 0;
+  border-top: 3px double rgba(58, 38, 16, 0.35);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.35rem;
 }
 
 .fokusvirta-sahkeaukko { display: block; }
@@ -441,66 +1265,114 @@
 .fokusvirta-sahkeotsake {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  gap: 0.15rem;
+  font-family: var(--font-type);
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(58, 38, 16, 0.85);
+  color: rgba(58, 38, 16, 0.9);
 }
 
-/*
- * Kentät ovat sormen mittaisia (44 px) ja täyttä leveyttä: valintalista
- * on pitkä (koko maan sisältöhakemisto), eikä kapea kenttä näyttäisi
- * otsikoita puhelimella.
- */
+/* Aukkorivi on yhtä riviä: nimi ja sen perässä täytettävä viiva. */
+.fokusvirta-sahkeaukko .fokusvirta-sahkeotsake {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Sama mitta molemmilla, jotta viivat alkavat samasta kohdasta. */
+.fokusvirta-sahkeaukko .fokusvirta-sahkekentannimi {
+  flex: 0 0 auto;
+  min-width: 4.6rem;
+}
+
 .fokusvirta-sahkevalinta,
 .fokusvirta-sahkeluku {
-  width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
   min-height: 44px;
-  padding: 0.35rem 0.5rem;
-  border: 1px solid rgba(58, 38, 16, 0.5);
-  border-radius: 3px;
-  background: rgba(255, 255, 250, 0.9);
-  font-family: inherit;
-  font-size: 0.95rem;
+  padding: 0.3rem 0.1rem;
+  border: 0;
+  border-bottom: 1px solid rgba(58, 38, 16, 0.55);
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.55);
+  font-family: var(--font-type);
+  font-size: 1rem;
   letter-spacing: normal;
   text-transform: none;
   color: #211d18;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* Valintalistan oma nuoli: selaimen nuoli katosi, kun laatikko meni. */
+.fokusvirta-sahkevalinta {
+  padding-right: 1.3rem;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8'><path d='M1 1 L6 6 L11 1' fill='none' stroke='%233a2610' stroke-width='1.6' stroke-linecap='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.1rem center;
 }
 
 .fokusvirta-sahkeluku {
-  font-family: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
   letter-spacing: 0.12em;
+}
+
+/* Numerokentän nuolinäppäimet pois: ne toisivat laatikon takaisin. */
+.fokusvirta-sahkeluku::-webkit-outer-spin-button,
+.fokusvirta-sahkeluku::-webkit-inner-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.fokusvirta-sahkevalinta:focus-visible,
+.fokusvirta-sahkeluku:focus-visible,
+.fokusvirta-sahkevapaakentta:focus-visible {
+  outline: 2px solid rgba(122, 85, 20, 0.85);
+  outline-offset: 2px;
+  border-bottom-color: rgba(58, 38, 16, 0.85);
 }
 
 /*
  * VAPAA VASTAUS (vaihe 2) on lomakkeen RINNALLA, ei sen tilalla, ja se
- * näyttää siltä: sama otsakerivi ja sama kenttäasu kuin aukoilla, mutta
- * ohut yläviiva kertoo, että tämä on toinen tapa vastata samaan
- * sähkeeseen. Teksti on tavallista leipäkirjasinta eikä sähkekonetta —
- * pelaaja kirjoittaa omin sanoin, ei sähkötä.
+ * näyttää siltä: sama painettu nimiö, mutta oma katkoviiva erottimena ja
+ * viivoitettu kirjoitustila — se on lomakkeen "muuta ilmoitettavaa"
+ * -kenttä, johon kirjoitetaan omin sanoin.
  */
 .fokusvirta-sahkevapaa {
-  margin: 0.75rem 0 0;
-  padding: 0.7rem 0 0;
+  margin: 0.85rem 0 0;
+  padding: 0.7rem 0.1rem 0;
   border-top: 1px dashed rgba(58, 38, 16, 0.3);
 }
 
 .fokusvirta-sahkevapaakentta {
   width: 100%;
-  min-height: 3.2rem;
-  padding: 0.4rem 0.5rem;
-  border: 1px solid rgba(58, 38, 16, 0.5);
-  border-radius: 3px;
-  background: rgba(255, 255, 250, 0.9);
-  font-family: inherit;
-  font-size: 0.95rem;
-  line-height: 1.4;
+  /* Kolme viivoitettua riviä (24 px kukin) — tasaluku, jotta viivat
+     osuvat rivien alle eivätkä keskelle tekstiä. */
+  min-height: 72px;
+  padding: 0 0.15rem;
+  border: 0;
+  border-bottom: 1px solid rgba(58, 38, 16, 0.55);
+  border-radius: 0;
+  background-color: transparent;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 23px,
+    rgba(58, 38, 16, 0.2) 23px 24px
+  );
+  background-attachment: local;
+  font-family: var(--font-type);
+  font-size: 1rem;
+  line-height: 24px;
   letter-spacing: normal;
   text-transform: none;
   color: #211d18;
   resize: vertical;
+}
+
+.fokusvirta-sahkevapaakentta::placeholder {
+  color: rgba(58, 38, 16, 0.45);
 }
 
 /*
@@ -509,6 +1381,46 @@
  * kortin lopetus. Alarivi pysyy kortin viimeisenä rivinä.
  */
 .fokusvirta-napit.fokusvirta-vapaanapit { margin-top: 0.5rem; }
+
+/*
+ * PALKKIORIVI ON LOMAKKEEN ALAREUNAN MAKSUKOHTA: pientä pränttiä ohuen
+ * viivan alla, kuten lomakkeen "maksu" -rivi ennenkin. Tarkoituksella
+ * alle 15 px — se on lomakkeen ehto, ei luettavaa tekstiä.
+ */
+.fokusvirta-varoitus.fokusvirta-sahkemaksu {
+  margin-top: 0.85rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid rgba(58, 38, 16, 0.22);
+  letter-spacing: 0.02em;
+}
+
+/*
+ * LIVIAN SAATE ON MARGINAALIMERKINTÄ. Kursivoitu lukukirjasin,
+ * sinertävä muste, ohut musteviiva vasemmalla ja pieni kallistus:
+ * kynällä kirjoitettu huomautus koneella kirjoitetun sähkeen viereen.
+ * (Miksi ei kaunokirjoitusta — ks. osion alun perustelu.)
+ *
+ * VARALLA 3.9.2026 ALKAEN: saate itse siirtyi sähkekortilta Livian
+ * kuplapinoon (omistaja: *"nuo pulun kommentit voisi siirtää pulun
+ * puhekuplaan"*), joten tätä luokkaa ei tällä hetkellä aseteta
+ * mistään. Asu jää tänne, koska se on Livian marginaaliäänen
+ * määrittely — jos kortille joskus palaa hänen kynällä kirjoittamansa
+ * huomautus, se näyttää tältä eikä uudelta.
+ */
+.fokusvirta-livian-saate {
+  margin: 0.9rem 0 0;
+  padding: 0.05rem 0.2rem 0.05rem 0.7rem;
+  border-left: 2px solid rgba(60, 74, 117, 0.32);
+  transform: rotate(-0.4deg);
+}
+
+.fokusvirta-livian-saate p {
+  font-family: var(--font-luku);
+  font-style: italic;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: #384a72;
+}
 
 /*
  * Odotusrivi Livian lennon ajaksi. Ei omaa animaatiota: lento ITSE on
@@ -547,6 +1459,192 @@
 
 .fokusvirta-vihjelinkki:hover,
 .fokusvirta-vihjelinkki:focus-visible { color: #7a5514; }
+
+/* ===================================================================
+   SÄHKE KIRJOITTUU — ANIMAATION TILAT
+   -------------------------------------------------------------------
+   Omistaja 3.9.2026: *"tekstit saisi tulla siihen animoidusti. Rivi
+   kerrallaan."* Liike itse on JS:ssä (js/fokusvirta.js kirjoitaSahke),
+   koska se on tekstin latomista merkki kerrallaan eikä CSS osaa sitä.
+   CSS hoitaa kaksi asiaa, joita JS ei saa tehdä:
+
+     1. VASTAUSLOMAKE ON HIMMEÄNÄ, EI ESTETTYNÄ, kirjoituksen ajan.
+        Sähke on juuri nyt se, mitä pelaajan kuuluu lukea — mutta jos
+        hän tietää jo vastauksen, kenttiin saa silti tarttua heti.
+        Himmennys on siis vihje eikä lukko (`pointer-events` pysyy).
+     2. PALUU PERUSTILAAN ON PEHMEÄ. Kun luokka `kirjoittaa` poistuu,
+        lomake kirkastuu 320 ms:ssä nopeutuksella ja hidastuksella
+        (Arkkikirjaston animaatiosääntö) — ei välähdystä.
+
+   Liuskapinon korkeus lukitaan kirjoituksen ajaksi JS:stä (min-height),
+   joten kortti ei kasva rivi riviltä.
+   =================================================================== */
+
+/* Vuoroaan odottava liuska varaa paikkansa mutta on maalaamatta:
+   tyhjä paperilappu näyttäisi vialta (js/fokusvirta.js kirjoitaSahke). */
+.fokusvirta-sahkerivi.fokusvirta-sahkerivi-odottaa { visibility: hidden; }
+
+.fokusvirta-sahkelomake,
+.fokusvirta-sahkevapaa,
+.fokusvirta-varoitus.fokusvirta-sahkemaksu,
+.fokusvirta-sahkepullat {
+  transition: opacity 320ms ease-in-out;
+}
+
+.fokusvirta-sahke.kirjoittaa ~ .fokusvirta-sahkelomake,
+.fokusvirta-sahke.kirjoittaa ~ .fokusvirta-sahkevapaa,
+.fokusvirta-sahke.kirjoittaa ~ .fokusvirta-varoitus.fokusvirta-sahkemaksu,
+.fokusvirta-sahke.kirjoittaa ~ .fokusvirta-sahkepullat {
+  opacity: 0.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fokusvirta-sahkelomake,
+  .fokusvirta-sahkevapaa,
+  .fokusvirta-varoitus.fokusvirta-sahkemaksu,
+  .fokusvirta-sahkepullat { transition: none; }
+}
+
+/* ===================================================================
+   LOMAKEPOHJA KUVANA (js/fokusvirta.js SAHKE_LOMAKE_OSOITE)
+   -------------------------------------------------------------------
+   Omistaja 3.9.2026: *"tähän voisi generoida pohjalle oikean
+   sähkösanoman paperin."* Pohja on kuvaputken generoima 1870-luvun
+   lennätinlomake — pysty 3:4, alfakanava, EI painettua tekstiä.
+
+   LUOKKA TULEE VASTA KUN KUVA ON LADATTU. Peli on offline-PWA, joten
+   CSS-lomake (osion alku) on yhä se, mitä pelaaja näkee ilman verkkoa;
+   kuva vain KORVAA koristelun, kun se on saatavilla. Siksi tässä
+   lohkossa ei ole yhtään uutta sääntöä ilman `.lomakekuva`-luokkaa.
+
+   MITÄ KUVA VIE MENNESSÄÄN: paperin väripinta, rei'itetyt reunat ja
+   liuskojen omat laput. Kuvassa on jo lomakkeen viivasto, joten
+   liuskoista jää pelkkä teksti — muuten paperia olisi paperin päällä.
+
+   MITÄ PELI PIIRTÄÄ EDELLEEN ITSE: sähköaseman leima (vasen yläkulma),
+   painettu otsake ja lomakenumero (oikea yläkulma) sekä rivit. Ne ovat
+   pelin tietoa eivätkä painatusta, ja ne vaihtuvat kaupungeittain.
+
+   TARKISTETTAVA, KUN KUVA ON ÄMPÄRISSÄ (mittasuhteet on viritettävä
+   oikeaa kuvaa vasten):
+     · aspect-ratio 3/4 vs. kortin korkeus kapealla puhelimella,
+     · tekstialueen sisennykset (--sahke-kuva-ylareuna/-sivu) niin että
+       rivit osuvat lomakkeen viivastolle,
+     · leiman ja numeron paikat kuvan omiin kehyksiin,
+     · riittääkö kuvan kontrasti tummalle musteelle.
+   =================================================================== */
+
+.fokusvirta-sahke.lomakekuva {
+  /* Kuvan omat mitat: tekstialue on lomakkeen keskellä, ja ylälaita on
+     varattu leimalle ja otsakkeelle. Säädetään kuvaa vasten. */
+  --sahke-kuva-ylareuna: 8%;
+  --sahke-kuva-sivu: 9%;
+
+  aspect-ratio: 3 / 4;
+  padding: var(--sahke-kuva-ylareuna) var(--sahke-kuva-sivu);
+  border: 0;
+  background-color: transparent;
+  background-image: var(--sahke-lomakekuva);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  box-shadow: none;
+}
+
+/* Rei'itys ja liuskojen laput ovat kuvassa: CSS-koristeet pois. */
+.fokusvirta-sahke.lomakekuva::before,
+.fokusvirta-sahke.lomakekuva::after { content: none; }
+
+.fokusvirta-sahke.lomakekuva .fokusvirta-sahkerivi {
+  background: none;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Kysymysrivi erottuu yhä, mutta pelkällä musteella — lappua ei ole. */
+.fokusvirta-sahke.lomakekuva .fokusvirta-sahkerivi.fokusvirta-sahkekysymys {
+  background: none;
+  box-shadow: none;
+}
+
+/* ===================================================================
+   PULLA SÄHKETEHTÄVÄSSÄ (js/fokusvirta.js piirraSahkePullat)
+   -------------------------------------------------------------------
+   Omistaja 3.9.2026: kokonainen pulla ostaa vinkin, puolikas suoran
+   linkin. Napit ovat SAMAA PERHETTÄ kuin lehden aarretehtävän
+   pullatarjous (osio "pulla Livialle" alempana tässä tiedostossa):
+   katkoviivareunus = kauppa, umpireunus ja kullattu pohja = varmistus,
+   pisteviiva = tyhjä kassa. Ero on vain siinä, että tämä laatikko asuu
+   kortilla eikä lehden minitehtävässä, joten valitsimet ovat omat.
+   =================================================================== */
+
+.fokusvirta-sahkepullat {
+  margin-top: 0.75rem;
+  padding-top: 0.65rem;
+  border-top: 1px dashed rgba(58, 38, 16, 0.34);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.fokusvirta-sahkepullat .fokus-pulla-nappi {
+  display: block;
+  width: 100%;
+  /* Sormisääntö: kosketuskoko vähintään 44 px myös kortilla. */
+  min-height: 44px;
+  margin: 0;
+  padding: 0.5rem 0.9rem;
+  border: 1px dashed rgba(60, 44, 26, 0.6);
+  border-radius: 4px;
+  background: rgba(255, 253, 245, 0.72);
+  box-shadow: none;
+  font-family: var(--font-luku);
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  text-align: center;
+  color: #211d18;
+  cursor: pointer;
+}
+
+.fokusvirta-sahkepullat .fokus-pulla-nappi:hover:not(:disabled),
+.fokusvirta-sahkepullat .fokus-pulla-nappi:focus-visible {
+  background: #fffdf5;
+  border-color: rgba(60, 44, 26, 0.85);
+  color: #16130f;
+}
+
+.fokusvirta-sahkepullat .fokus-pulla-nappi.fokus-pulla-varmistus {
+  border-style: solid;
+  border-color: rgba(122, 85, 20, 0.75);
+  background: linear-gradient(180deg, #f0c76a, #dda63a);
+  font-weight: 700;
+  color: #2c1e07;
+}
+
+.fokusvirta-sahkepullat .fokus-pulla-nappi:disabled {
+  border-style: dotted;
+  background: none;
+  color: rgba(33, 29, 24, 0.55);
+  cursor: default;
+}
+
+/* Livian ääni napin alla ja kaupan kuittaus: sama pieni kursiivi. */
+.fokusvirta-sahkepullat .fokus-pulla-huomio,
+.fokusvirta-sahkepullat .fokus-pulla-tehty {
+  margin: 0.4rem 0 0;
+  font-family: var(--font-luku);
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.35;
+  text-align: center;
+  color: rgba(60, 44, 26, 0.72);
+}
+
+.fokusvirta-sahkepullat .fokus-pulla-tehty { margin-top: 0; }
+
+/* Ostettu linkki: nappirivi ilman kortin alarivin yläväliä. */
+.fokusvirta-sahkelinkki .fokusvirta-napit { margin-top: 0; }
 
 /* ===================================================================
    PÖLLÖN PUHEKUPLA (js/fokusvirta.js piirraKupla)
@@ -707,7 +1805,42 @@
   flex-direction: column;
   align-items: stretch;
   gap: 0.45rem;
-  max-width: min(94vw, 94vmin);
+  /*
+   * LEVEYS ON KUVAN LEVEYS, EI KORTIN ULKOMITTA (omistajan
+   * vikailmoitus 12.9.2026: *"Näissä kuvissa on turhaan ylhäällä ja
+   * alhaalla pieni marginaali."*).
+   *
+   * Sivuston yleinen nollaus asettaa kaikelle `box-sizing: border-box`
+   * (css/styles.css tähtivalitsin), ja se söi tästä kehyksestä sisennyksen verran
+   * sisätilaa: JS asettaa SEKÄ kehyksen leveydeksi että kuvan
+   * leveydeksi saman luvun (avaaSuurennos mitoita), joten border-box
+   * kutisti kuvan `max-width: 100%` -säännöllä 19,6 px kapeammaksi
+   * mutta JÄTTI sen korkeuden ennalleen. Kuvasuhde ei enää täsmännyt,
+   * ja `object-fit: contain` piirsi eron kirjekuorireunoina ITSE
+   * kuvaelementin sisään — mitattu Chromiumilla 12.9.2026: puhelimella
+   * (390 × 844) kuvaelementti 324,4 × 215 px, piirretty kuva
+   * 324,4 × 202,8 px eli 6,1 px turhaa tilaa sekä ylle että alle.
+   *
+   * `content-box` palauttaa alkuperäisen sopimuksen: annettu leveys on
+   * KUVAN leveys, ja kortti kasvaa siitä oman paperireunuksensa verran
+   * — juuri se tila, jonka JS on jo varannut (SUURENNOS_KEHYS_PX = 26,
+   * todellinen tarve 19,6). Paperireunus ja kuvatekstipalkki säilyvät
+   * ennallaan; vain kuvan sisäinen kirjekuori katoaa.
+   *
+   * SAMA VIKA ON JO KERRAN KORJATTU TOISAALLA toisella tavalla:
+   * kohdekortin suurennos (css/fokuskohteet.css .fokuskohde-zoomkuva,
+   * omistajan palaute 25.8.2026 *"nyt paperikehyksessä on isot tyhjät
+   * kaistat kuvan ylä- ja alapuolella"*) luopui kuvan omasta
+   * korkeudesta kokonaan ja jätti selaimen laskea sen `aspect-ratio`:sta.
+   * Täällä kuvan pikselimitta on pidettävä (PULU-CAM-sinetin kuori ja
+   * FLIP-animaation maalilaatikko lukevat sitä), joten ristiriita
+   * puretaan toisesta päästä: kehys saa saman mitan sisätilakseen.
+   */
+  box-sizing: content-box;
+  /* JS antaa leveyden (mitoita); katto on vain vara, eikä se saa
+     kaventaa yhteisen linjauksen mittaa (js/ui-apurit.js
+     suurennoksenMitat, omistaja 8.9.2026). */
+  max-width: 100%;
   padding: 0.55rem 0.55rem 0.45rem;
   background: #f8f3e6;
   border: 1px solid rgba(58, 38, 16, 0.35);
@@ -730,7 +1863,9 @@
 .fokuszoom-kuva {
   display: block;
   max-width: 100%;
-  max-height: min(88vh, 94vmin);
+  /* Vara ennen JS:n mitoitusta — samassa hengessä kuin yhteinen
+     linjaus: pystykuva saa vaakaruudulla lähes koko korkeuden. */
+  max-height: 94vh;
   object-fit: contain;
   /* Ohut mustereunus kuvan ympäri — sama kuin postikortin kuvalla. */
   border: 1px solid rgba(0, 0, 0, 0.18);
@@ -770,6 +1905,23 @@
 }
 
 .fokuszoom-selite { display: block; }
+
+/*
+ * HAVAINNEKUVA-LINKKI PITKÄN KUVATEKSTIN PERÄSSÄ (omistaja 9.9.2026 klo
+ * 18.50, Raamattu PULU-CAM: … HAVAINNEKUVA-LINKKI PITKAN LOPUSSA).
+ *
+ * Perusasu tulee `.havainnekuva-selite`-luokasta (css/styles.css:
+ * napin nollaus, pisteviiva, `pointer-events: auto` suurennoksen
+ * paperin yli). Tässä vain se, mikä on tälle paikalle omaa: omistaja
+ * pyysi ALLEVIIVATTUA sanaa, joten viiva on yhtenäinen eikä
+ * pisteviiva — se erottaa linkin lähderivin maininnasta, joka on osa
+ * juoksevaa tekstiä.
+ */
+.fokuszoom-selite .havainnekuva-linkki {
+  border-bottom-style: solid;
+  border-bottom-color: rgba(58, 38, 16, 0.75);
+  white-space: nowrap;
+}
 
 .fokuszoom-lahde,
 .fokuszoom-laskuri {
@@ -869,6 +2021,31 @@ body.fokuszoom-paalla .fokusvirta-kortti {
 }
 
 .fokusvirta-vinkkiruksi input { margin: 0; }
+
+/* ---------- pulun välihuuto keskellä luentaa ---------- */
+
+/*
+ * HUUDAHDUS ON PIENI JA LYHYT (omistaja 7.9.2026, Raamattu KAUPUNGIN
+ * KULKU): yksi tai kaksi sanaa kertojan päälle, ja kupla häipyy
+ * itsestään kahdessa sekunnissa (js/fokusvirta.js HUUDAHDUS_NAKYY_MS).
+ * Siksi se on kapeampi, kevyempi ja hieman kallellaan — se ei ole
+ * repliikki vaan välihuuto.
+ */
+.fokusvirta-kupla.fokusvirta-huudahdus {
+  max-width: min(11rem, 60vw);
+  padding: 0.45rem 0.7rem;
+  transform: rotate(-1.5deg);
+}
+
+.fokusvirta-huudahdus .fokusvirta-vinkkiteksti {
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fokusvirta-kupla.fokusvirta-huudahdus { transform: none; }
+}
 
 /* ---------- nimetyn tehtävän vihjerivi ---------- */
 
@@ -1138,6 +2315,47 @@ body.fokuszoom-paalla .fokusvirta-kortti {
 }
 
 /*
+ * LUKITTU PISTE (karttauudistuksen erä 7, 13.9.2026).
+ *
+ * Raamattu (KARTTAUUDISTUS): aarretehtävä on kartalla vihreänä
+ * pisteenä ja *"sita voi heti yrittaa, kunhan on ratkaissut vahintaan
+ * kaksi mita tahansa mini tehtavaa nostoissa"*. Ennen sitä piste on
+ * NÄKYVISSÄ MUTTA LUKITTU: pelaajan on nähtävä, että aarre on
+ * olemassa, ilman että kartta lupaa sitä vielä.
+ *
+ * KOLME EROA, EI NELJÄTTÄ SYMBOLIA (js/fokuspiste.js: sama merkki
+ * ennen ja jälkeen, jotta pelaaja tunnistaa sen):
+ *   1. TUIKE SAMMUU. Tuike on kutsu; lukittu piste ei kutsu.
+ *   2. VÄRI HARMAANTUU seepiaan päin — merkki on kartan merkintä,
+ *      ei sammunut lamppu.
+ *   3. LÄPINÄKYVYYS pudottaa sen taustan ja elävien nostojen väliin.
+ *
+ * Suodattimia ei käytetä (js/fokuskartta.js sääntö 3): pelkkä `fill`
+ * ja `opacity`, jotka iOS:n taustalta palaava kartta osaa piirtää.
+ */
+.fokuspiste-lukittu .fokuspiste-hehku {
+  fill: #8a8470;
+  opacity: 0.18;
+  animation: none;
+}
+
+.fokuspiste-lukittu .fokuspiste-keha {
+  fill: #9a9482;
+  opacity: 0.5;
+}
+
+.fokuspiste-lukittu .fokuspiste-ydin {
+  fill: #efe8d6;
+  stroke: #6b6552;
+  opacity: 0.85;
+  animation: none;
+}
+
+/* Osoitin kertoo, että napautus tekee jotain — se kertoo lukosta. */
+.fokuspiste-lukittu:hover .fokuspiste-keha,
+.fokuspiste-lukittu:focus-visible .fokuspiste-keha { opacity: 0.7; }
+
+/*
  * LIIKEHERKKYYS: tuike on huomiokeino, ei tieto. Piste pysyy paikallaan
  * ja näkyvänä myös silloin kun liikettä on pyydetty vähemmän.
  */
@@ -1217,4 +2435,600 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
 .fokusvirta-napit.fokusvirta-varmistusnapit button:not(.primary):focus-visible {
   background: rgba(122, 85, 20, 0.12);
   color: #16130f;
+}
+
+/* ===================================================================
+   SÄHKEEN LÄHETYSNAPIT — LAKKASINETTI JA HILLITTY PERUUTUS
+   -------------------------------------------------------------------
+   Sähkekortin alarivi käyttää samaa varmistusnappiparia kuin
+   kohtaaminen (kulta + paperi), mutta sähkeellä nappi on lomakkeen
+   päätös: kullassa on lakkasinetin kohovalo ja teksti on
+   kirjoituskoneella harvennettu, ja "Myöhemmin" vetäytyy pelkäksi
+   kehystetyksi paperiksi, jotta katse jää sinettiin.
+
+   SELEKTORIT OVAT TIEDOSTON LOPUSSA samasta syystä kuin
+   varmistusnapitkin: tarkkuus on sama kuin niillä, joten järjestys
+   ratkaisee. Vain sähkekortin oma luokka (fokusvirta-sahkenapit,
+   js/fokusvirta.js piirraSahketehtava) saa nämä — kohtaamisen
+   Kyllä/Ei on ennallaan.
+   =================================================================== */
+
+.fokusvirta-napit.fokusvirta-sahkenapit {
+  margin-top: 0.9rem;
+}
+
+.fokusvirta-napit.fokusvirta-sahkenapit button {
+  min-height: 46px;
+  font-family: var(--font-type);
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+}
+
+.fokusvirta-napit.fokusvirta-sahkenapit button.primary {
+  border: 1px solid rgba(122, 85, 20, 0.9);
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255, 240, 196, 0.75), rgba(255, 240, 196, 0) 62%),
+    linear-gradient(180deg, #eab84e, #cf8c1f);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 246, 214, 0.75),
+    inset 0 -1px 0 rgba(96, 62, 6, 0.35),
+    0 2px 5px rgba(58, 38, 16, 0.28);
+  text-shadow: 0 1px 0 rgba(255, 240, 200, 0.45);
+}
+
+.fokusvirta-napit.fokusvirta-sahkenapit button.primary:hover:not(:disabled),
+.fokusvirta-napit.fokusvirta-sahkenapit button.primary:focus-visible {
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255, 246, 214, 0.85), rgba(255, 246, 214, 0) 62%),
+    linear-gradient(180deg, #f3c661, #d9a13b);
+}
+
+.fokusvirta-napit.fokusvirta-sahkenapit button:not(.primary) {
+  border: 1px solid rgba(122, 85, 20, 0.3);
+  background: none;
+  color: rgba(33, 29, 24, 0.78);
+}
+
+.fokusvirta-napit.fokusvirta-sahkenapit button:not(.primary):hover:not(:disabled),
+.fokusvirta-napit.fokusvirta-sahkenapit button:not(.primary):focus-visible {
+  background: rgba(122, 85, 20, 0.1);
+  color: #16130f;
+}
+
+/* ===================================================================
+   ILMEPAKETTI (js/ilme.js korosta, omistaja 5.9.2026)
+   -------------------------------------------------------------------
+   Kun kynä on vetänyt viivan kysymysrivin alle, rivin oma lappu ja
+   varjo väistyvät — korostus on nyt viiva, ei laatta. Musteviiva
+   vasemmassa reunassa jää: se on rivin paino. Ilman kirjastoa luokkaa
+   ei tule ja lappu on ennallaan.
+   =================================================================== */
+.fokusvirta-sahkerivi.fokusvirta-sahkekysymys.ilme-korostettu {
+  background: none;
+  box-shadow: none;
+}
+
+/* ===================================================================
+   ISOT KUVAT KESKELLÄ RUUTUA (js/fokusvirta.js naytaLuentakuvasarja)
+   -------------------------------------------------------------------
+   Omistaja 11.9.2026 klo 12.40 (Raamattu, SAAPUMISEN UUSI JARJESTYS:
+   KAUPUNGIN MINITRAILERI, ISOT KUVAT KESKELLA, LYHENNETTY MERKINTA),
+   sanatarkasti: *"isoisan kuva saisi aueta keskelle sivua niin isolla
+   kuin mahdollista ja haivyta kuvan reunat lapinakyviksi ja kulmista
+   hieman enemman pyoristetysti. Pulucamin kuvat tulisivat samalla
+   tavalla."*
+
+   KOLME EROA kartan luentakuvaan:
+     - PAIKKA on ruudun keskus, ei laudan piste. Kortin ALLE, ei päälle
+       (omistaja 12.9.2026, sanatarkasti: *"kuva saisi jäädä matkakirjan
+       alle"*) — tämä kumoaa 11.9. kirjatun "sarja saa peittää kortin".
+     - KALLISTUS ON PAKAN KALLISTUS (omistaja 15.9.2026, sanatarkasti:
+       *"lado ne hieman vinottain toistensa paalle vuorotellen
+       vasemmalle ja oikealle kallistettuina"*). Tämä kumoaa 11.9.
+       kirjatun "kallistusta ei ole": kuvat eivät enää ristihäivy
+       toistensa tilalle vaan JÄÄVÄT RUUDULLE PAKAKSI, ensimmäinen
+       vasemmalle ja seuraava oikealle kallistettuna.
+     - REUNAT OVAT TERÄVÄT (omistaja 15.9.2026: *"Ota isoisan ja pulun
+       valokuvista haivytykset pois"*). Tämä kumoaa 11.9. kirjatun
+       maskihäivytyksen: kuva on valokuva paperireunalla, ja sen reuna
+       saa näkyä — muuten pakan päällekkäisyys ei erotu lainkaan.
+
+   NAPAUTUKSET LÄPI: päällys ei ota osoitintapahtumia, jotta kartan
+   liike päättää sarjan (js/fokusvirta.js kytkeSarjanKartanLiike).
+
+   ── KERROS: KORTIN ALLE, KARTAN PÄÄLLE (omistaja 12.9.2026) ────────
+
+   Päällys oli `document.bodyn` lapsi z-indexillä 40. Matkakirjakortti
+   asuu `.railissa` (z-index 4) `.app`-kerroksen sisällä, ja `.app` on
+   `position: fixed` eli OMA PINONSA, jonka z-index on `auto`. Siksi
+   rungon tasolla oleva 40 voitti kortin riippumatta siitä, mitä lukua
+   kortille olisi annettu — mitattu 12.9.2026 Chromiumilla 1280 × 800:
+   kuva peitti kortista 53 % ja kortin tekstialasta jäi näkyviin 46 %.
+
+   Ratkaisu ei siis ole luku vaan PINO: päällys ladotaan `.stage`-solmun
+   lapseksi (js/fokusvirta.js isokuvanKoti), jolloin se kilpailee
+   samassa pinossa kuin kartta (`.map-pane`, z-index auto) ja kortti
+   (`.rail`, z-index 4). Luku 3 jää näiden väliin: kartan päälle, kortin
+   alle. Kuvaa EI pienennetä eikä piiloteta — ISOT luentakuvat ovat
+   omistajan tilaus ja se linjaus pysyy.
+   =================================================================== */
+.fokusvirta-isokuva {
+  position: fixed;
+  inset: 0;
+  /* Kartan päälle (map-pane: auto), matkakirjakortin alle (.rail: 4). */
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 700ms ease;
+}
+
+.fokusvirta-isokuva.nakyy { opacity: 1; }
+
+/*
+ * RUUDUT LADOTAAN PAKAKSI (omistaja 15.9.2026, sanatarkasti: *"lado ne
+ * hieman vinottain toistensa paalle vuorotellen vasemmalle ja oikealle
+ * kallistettuina"*).
+ *
+ * Ennen ruudut olivat päällekkäin ja vaihtuivat ristihäivytyksellä:
+ * edellinen häipyi ja poistettiin. Nyt EDELLINEN JÄÄ — uusi kortti
+ * laskeutuu sen päälle vastakkaiseen kallistukseen, ja alta pilkottava
+ * reuna kertoo, että kuvia on useampi. Kuvateksti on kortin osa
+ * (figcaption), joten se kallistuu kuvan mukana.
+ *
+ * KALLISTUS JA SIIRTO TULEVAT MUUTTUJINA, jotka js kirjoittaa kortin
+ * omaan tyyliin (js/fokusvirta.js isonKuvanRuutu). Vain opacity
+ * animoituu; transform on staattinen, joten kartan rasterointi ei
+ * kilpaile animaation kanssa (sama sääntö kuin luentakuvalla).
+ */
+.fokusvirta-isokuva-ruutu {
+  --pakka-kallistus: 0deg;
+  --pakka-siirto-x: 0px;
+  --pakka-siirto-y: 0px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 72vw;
+  max-height: 66vh;
+  opacity: 0;
+  transform: translate(var(--pakka-siirto-x), var(--pakka-siirto-y))
+    rotate(var(--pakka-kallistus));
+  transition: opacity 500ms ease;
+}
+
+.fokusvirta-isokuva-ruutu.nakyy { opacity: 1; }
+
+/* Peittyneen kortin kuvateksti pois: pakassa tekstit menisivät
+   päällekkäin. Teksti on yhä kortin oma (figcaption), se vain odottaa
+   kuvansa vuoroa. */
+.fokusvirta-isokuva-ruutu.alla .fokusvirta-isokuva-teksti {
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
+
+/*
+ * VARJO ON KOKO KORTIN, EI KUVAN (omistaja 18.9.2026, PAATOKSET 35
+ * TARKENNUS 2 kohta 5: kuvan varjo lankesi kuvatekstin paperille ja
+ * jatti sen ylalaitaan tumman kaistan).
+ *
+ * Kuva ja paperi ovat YKSI laatikko: varjo maalataan koteloon, jonka
+ * rajat ovat kuvan ylareuna ja paperin alareuna. Ulkovarjo ei maalaudu
+ * oman laatikkonsa sisalle, joten paperille ei voi langeta mitaan —
+ * eika korjaus ole pehmuste, peitto tai varjon siirto sivuun, vaan se,
+ * etta valokuva ja siihen liimattu arkki heittavat yhden varjon, kuten
+ * yksi esine heittaa.
+ *
+ * Pyoristys on sama kuin osilla (kuva 3px ylakulmat, paperi 3px
+ * alakulmat), jotta varjon reuna seuraa kortin omaa muotoa.
+ */
+.fokusvirta-isokuva-kotelo {
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 72vw;
+  border-radius: 3px;
+  box-shadow: 0 10px 26px rgba(20, 14, 6, 0.45);
+}
+
+/* KUVA NIIN ISONA KUIN MAHTUU, KUVASUHDE SÄILYEN.
+ *
+ * TERÄVÄ REUNA JA PAPERIREUNUS (omistaja 15.9.2026, sanatarkasti:
+ * *"Ota isoisan ja pulun valokuvista haivytykset pois ja lado ne
+ * hieman vinottain toistensa paalle"*). Maskihäivytys (7 % joka
+ * reunasta) on poistettu kokonaan: pakassa häivytetyt reunat sulaisivat
+ * toisiinsa eikä kuvien päällekkäisyys erottuisi. Tilalla on vanhan
+ * valokuvan oma paperireuna — ohut vaalea kehys ja pehmeä varjo, sama
+ * kieli kuin kartan pikkupakalla.
+ *
+ * VARJO EI OLE SUODATIN. `box-shadow` maalataan laatikosta, ei
+ * `filter: drop-shadow`illa — iOS-sääntö (tests/rules.test.mjs) koskee
+ * suodattimia, eikä varjo ole animaatiossa. Varjo asuu KOTELOSSA
+ * (kuva + paperi yhtenä laatikkona), ei kuvassa: kuvan oma varjo
+ * lankesi kuvatekstin paperille (PAATOKSET 35 TARKENNUS 2 kohta 5).
+ */
+.fokusvirta-isokuva-kuva {
+  width: auto;
+  height: auto;
+  /*
+   * PIENEMPI RUUDULLA (omistaja 17.9.2026 klo 22.05, Raamattu
+   * KARTTAUUDISTUKSEN PAATOKSET 35, sanatarkasti: *"Isoisan ja pulun
+   * kuvat saisivat tulla vahan pienempina ruudulle."*). Katot olivat
+   * 92 vw / 78 vh; uudet ovat noin viidenneksen pienemmat, joten kuvan
+   * ymparille jaa karttaa ja alle mahtuu paperi ja Ohita-teksti.
+   * Mitattu 390 x 844: kuvan leveys 359 px -> 281 px (-21,7 %).
+   */
+  max-width: 72vw;
+  max-height: 60vh;
+  border-radius: 3px 3px 0 0;
+  object-fit: contain;
+  box-sizing: border-box;
+  border: 6px solid #f7f1e2;
+  border-bottom: 0;
+  /* Kuva on paperin PAALLA: paperin ylareuna limittyy kuvan taakse. */
+  position: relative;
+  z-index: 1;
+}
+
+/* Lyhyt kuvateksti kiinni kuvan alalaidassa, kuten kartalla. */
+/*
+ * KUVATEKSTI ILMAN TAUSTAA (omistaja 13.9.2026, sanatarkasti: *"Ota
+ * kuvatekstin tausta pois. Eli teksti on vain sellaisenaan kuvan
+ * alla."*). Ennen tässä oli paperilaatta (vaalea tausta, varjo ja
+ * alakulmien pyöristys), joka jatkoi kuvaa omana palkkinaan kartan
+ * päällä.
+ *
+ * NEGATIIVINEN YLÄMARGINAALI POISTUI SAMALLA: se kiinnitti laatan
+ * kuvan alareunaan niin, ettei väliin jäänyt saumaa. Ilman laattaa
+ * sama luku vetäisi tekstin kuvan päälle.
+ *
+ * VALKOINEN HALO EIKÄ TAUSTALAATTA. Teksti on nyt kartan päällä, ja
+ * kartassa on tummia viivoja ja nimiä. Kevyt vaalea hehku pitää
+ * kirjaimet luettavina koskematta kartan omaan väriin — se ei ole
+ * palautettu tausta, vaan kirjainten oma reunus.
+ */
+/*
+ * VALKOINEN PAPERI JATKUU KUVAN ALAREUNASTA (omistaja 17.9.2026 klo
+ * 22.05, Raamattu KARTTAUUDISTUKSEN PAATOKSET 35, sanatarkasti:
+ * *"Lisaa valkoista paperia kuvan alareunaa ja lado kuvateksti sen
+ * paalle. Pida huoli etta lisapaperi menee hieman kuvan taakse jotta
+ * kuvan ja lisapaperin valiin ei jaa vahingossa ohutta lapinakyvaa
+ * viivaa."*).
+ *
+ * Sama savy kuin valokuvan omassa paperireunuksessa (#f7f1e2) ja
+ * matkakirjakortin paperilla: kuva on liimattu arkille, jonka alalaita
+ * jatkuu kuvatekstiksi.
+ *
+ * LIMITYS ON NEGATIIVINEN YLAMARGINAALI, EI RAKO. Paperi alkaa
+ * PAPERIN_LIMITYS pikselia kuvan alareunan YLAPUOLELTA ja jaa kuvan
+ * taakse (z-index 0 vs. kuvan 1). Nain kuvan ja paperin valiin ei jaa
+ * puolen pikselin lapinakyvaa viivaa millaan dpr:lla - pyoristys osuu
+ * limityksen sisaan eika sauman kohdalle. Pehmuste kasvaa saman verran,
+ * jottei teksti nouse limityksen myota ylospain.
+ */
+.fokusvirta-isokuva-teksti {
+  --isokuva-paperin-limitys: 3px;
+  position: relative;
+  z-index: 0;
+  align-self: stretch;
+  box-sizing: border-box;
+  margin: calc(var(--isokuva-paperin-limitys) * -1) 0 0;
+  max-width: 100%;
+  padding: calc(0.5rem + var(--isokuva-paperin-limitys)) 0.75rem 0.65rem;
+  background: #f7f1e2;
+  border-radius: 0 0 3px 3px;
+  font-family: var(--font-luku);
+  font-size: 0.95rem;
+  color: rgba(33, 29, 24, 0.92);
+  text-align: center;
+}
+
+/* Kuvateksti itse on paperin sisalla omana lohkonaan (mitattava
+   laatikko): paperi on figcaption, teksti sen span. */
+.fokusvirta-isokuva-selite {
+  display: block;
+  max-width: 46rem;
+  margin: 0 auto;
+}
+
+
+/*
+ * OHITA: PIENI TEKSTI KUVAN JA KUVATEKSTIN ALLA (omistaja 17.9.2026
+ * klo 22.05, PAATOKSET 35 kohta 3, sanatarkasti: *"Lisaa myos kuvien
+ * ja kuvatekstien alle pieni 'ohita' teksti joka hyppaa suoraan
+ * isoisan ja pulun tekstien yli ja nayttaa kartan heti."*).
+ *
+ * TEKSTI EIKA LAATIKKO: ei taustaa, ei reunaa, ei varjolaattaa - sama
+ * halo kuin kuvatekstilla ennen paperia, jotta sana pysyy luettavana
+ * kartan viivojen paalla.
+ *
+ * PAALLYS ON `pointer-events: none`, joten tama yksi solmu ottaa
+ * osoittimen takaisin. Muuten kartan liike-vahti (kytkeSarjanKartanLiike)
+ * nakisi napautuksen kartan liikkeena.
+ */
+/*
+ * OHITA VAISTAA LIIKU-SANAN, EI PIIRRY SEN PAALLE (Sonnetin
+ * puhelintestin loydos 3, 19.9.2026: *"'Ohita' piirtyy suoraan
+ * 'Liiku'-tekstin paalle (paallekkaiset kirjaimet, 390 px)"*).
+ *
+ * MOLEMMAT OVAT KESKELLA ALAREUNAA, ja Liiku EI ole kiinteassa
+ * kohdassa: maapaneelin kortti nostaa sen omalla mitallaan
+ * (`--liiku-pohja`, js/pallolauta/maapaneeli.js mittaaLiikunPohja =
+ * kortin ylareuna ruudun alareunasta + 2 px). Ohitan kiintea
+ * `max(9vh, 56px)` osui siihen heti kun kortti nousi: mitattu 390 px
+ * Chromiumilla --liiku-pohja 60/80/100 px -> laatikot leikkasivat
+ * kaikilla kolmella (Ohita 726-768, Liiku 748-784 / 728-764 /
+ * 708-744), ja 1400 px:lla myos 120 px:lla.
+ *
+ * KOLMAS EHDOKAS `max()`:iin: Liikun oma pohja + napin korkeus + rako.
+ * 44px = mitattu Liiku-napin laatikko (36 px) + 8 px rako, eli Ohita
+ * asettuu tasan sen ylapuolelle eika sana voi enaa osua sanaan. Ilman
+ * muuttujaa (tyopoyta, kartta ilman maapaneelia) luku on 0 + 44 < 56,
+ * joten Ohita pysyy pikselilleen entisella paikallaan.
+ */
+.fokusvirta-isokuva-ohita {
+  --ohita-liikun-tila: 44px;
+  position: absolute;
+  left: 50%;
+  /* Fable 17.9.2026: irti kartan alalaidan Liiku-tekstista */
+  bottom: max(9vh, 56px, calc(var(--liiku-pohja, 0px) + var(--ohita-liikun-tila)));
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0.35rem 0.9rem;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  pointer-events: auto;
+  cursor: pointer;
+  font-family: var(--font-luku);
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  color: rgba(33, 29, 24, 0.86);
+  text-shadow:
+    0 1px 2px rgba(245, 240, 226, 0.95),
+    0 -1px 2px rgba(245, 240, 226, 0.95),
+    1px 0 2px rgba(245, 240, 226, 0.95),
+    -1px 0 2px rgba(245, 240, 226, 0.95);
+}
+
+.fokusvirta-isokuva-ohita:hover { color: rgba(33, 29, 24, 1); }
+
+/*
+ * OHITA ON OMA KELLUVA SOLMUNSA (omistaja 18.9.2026 klo 22.50,
+ * PAATOKSET 43 kohta 10, sanatarkasti: *"Ohita nappi ei saisi havita
+ * vaikka pelaaja painaa jostain muualta ennen kuin kumpikin luenta on
+ * loppu."*).
+ *
+ * SAMA KOHTA RUUDULLA, ERI VANHEMPI. Vanha sääntö oli `position:
+ * absolute` + `bottom` KOKO RUUDUN kokoisessa päällyksessä
+ * (.fokusvirta-isokuva: fixed, inset 0), joten sama luku
+ * `position: fixed`-solmussa osuu pikselilleen samaan paikkaan. Nappi
+ * ei siis liikahda, kun kuvat lentävät sen ylitse matkakirjalappuun
+ * (PAATOKSET 38) — pelaajan sormen alta ei katoa eikä siirry mitään.
+ *
+ * Z-INDEX ON SAMA 3 kuin päällyksellä: kartan päällä, matkakirjakortin
+ * (.rail, 4) alla. Nappi on päällyksen sisar samassa kodissa (.stage),
+ * joten sama luku pitää sen samassa kerroksessa kuin ennen.
+ *
+ * HÄIVYTYS ON NAPIN OMA. Ennen se peri päällyksen opacity-siirtymän
+ * (700 ms); nyt sama kesto on tässä, jotta sana ei ilmesty eikä katoa
+ * napsahtaen.
+ */
+.fokusvirta-ohitanappi {
+  position: fixed;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 700ms ease;
+}
+
+.fokusvirta-ohitanappi.nakyy { opacity: 1; }
+
+/* PULU-CAM-sinetti isossa kuvassa: sama merkki kuin pakan korteissa,
+   oikeassa yläkulmassa, mitta ruudun mukaan. */
+.pulucam-merkki.pulucam-merkki-iso {
+  right: 0.8rem;
+  top: 0.8rem;
+  bottom: auto;
+  width: clamp(56px, 9vw, 160px);
+}
+
+/* LIIKE VÄHENNETTY: samat ajat, ristihäivytys ilman liikettä — tässä
+   liikettä ei ole muutenkaan, joten vain kestot jäävät. */
+@media (prefers-reduced-motion: reduce) {
+  .fokusvirta-isokuva,
+  .fokusvirta-isokuva-ruutu,
+  /* Ohita on oma solmunsa (PAATOKSET 43 kohta 10): sama sääntö. */
+  .fokusvirta-ohitanappi { transition-duration: 500ms; }
+}
+
+/*
+ * ====================================================================
+ * LUENNAN HUNTU: KARTTA TUMMENEE JA SUMENEE KUVAN TAKANA
+ * (omistaja 14.9.2026, sanatarkasti)
+ * ====================================================================
+ *
+ * *"Luennan aikana kun kuvat nakyvat, kartta tausta voisi olla
+ * tummempi ja vahan blurri."*
+ *
+ * Huntu on kartan oma jälkielementti (.map-pane::after), joka asettuu
+ * luentakuvan ALLE: kuva on z-index 5, huntu 4. Näin kuva, sen
+ * kuvateksti ja pulun pakka jäävät terävinä hunnun päälle, ja vain
+ * kartta pehmenee niiden takana.
+ *
+ * HUNTU PYSYY KARTTARUUDUSSA (korjaus 15.9.2026, omistajan
+ * iPhone-vikailmoitus: huntu sumensi myös isoisän ISON luentakuvan).
+ * Nämä z-luvut pitävät vain, jos `.map-pane` on OMA PINONSA. Ennen se
+ * ei ollut (position: relative, z-index: auto), joten huntu karkasi
+ * `.app`-pinoon ja ohitti siellä ison luentapäällyksen
+ * (`.fokusvirta-isokuva`, z-index 3) — 4 > 3, eli huntu maalautui
+ * kuvan päälle. Eristys tehdään css/styles.css `.map-pane`
+ * (`isolation: isolate`); siellä on mittaukset ja koko perustelu.
+ * Vartio: tools/savukkeet/savuke-luentakuvan-kerros.mjs, kohta
+ * "ISO LUENTAKUVA EI SUMENE HUNNUN ALLA".
+ *
+ * MIKSI ::after EIKÄ OMA SOLMU. css/styles.css sammuttaa kartan
+ * jälkielementin (`.map-pane::after { content: none; }`), joten se on
+ * vapaana — eikä js:ään tarvitse lisätä yhtään uutta solmua, jonka
+ * elinkaarta pitäisi vahtia. Luokan `luenta-huntu` asettaa js/ui.js:n
+ * luentavahti (kaynnistaLuentavahti) ja poistaa sen heti, kun kertoja
+ * vaikenee tai kuva laskeutuu.
+ *
+ * SUODATIN ON STAATTINEN, VAIN PEITE LIUKUU (tests/rules.test.mjs,
+ * iOS-sääntö): backdrop-filter ei ole siirtymässä eikä animaatiossa,
+ * koska iOS Safari repii animoidun suodattimen. Opacity liukuu, ja se
+ * riittää pehmeään nousuun.
+ */
+body.luenta-huntu .map-pane::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  /* Huntu ei ota napautuksia: kartta on yhä pelattavissa sen läpi. */
+  pointer-events: none;
+  background: rgba(30, 22, 12, 0.42);
+  -webkit-backdrop-filter: blur(3.5px);
+  backdrop-filter: blur(3.5px);
+  opacity: 1;
+  transition: opacity 400ms ease;
+}
+
+/*
+ * FALLBACK ILMAN SUMENNUSTA (vanhat WebKitit): sumennusta ei saa, joten
+ * peite yksin tekee erottelun — hieman tummempana, jotta kuva erottuu
+ * kartasta yhtä selvästi kuin sumennuksen kanssa.
+ */
+@supports not ((backdrop-filter: blur(3px)) or (-webkit-backdrop-filter: blur(3px))) {
+  body.luenta-huntu .map-pane::after { background: rgba(30, 22, 12, 0.55); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.luenta-huntu .map-pane::after { transition: none; }
+}
+
+/*
+ * HUNTU EI TULE TOPOGRAFIALINSSIN PÄÄLLE (mitattu 18.9.2026, erä 4).
+ *
+ * MIKÄ OLI VIKANA. Linssi avattiin, terävä reliefi tuli ruudulle — ja
+ * noin sekunti myöhemmin koko karttaruutu tummui ja sumeni. Kaappauksista
+ * mitattuna vaikutus osui myös linssin OMAAN nimiölaattaan, joka on
+ * DOM-elementti eikä pallon pintaa lainkaan: kultateksti luki terävässä
+ * kehyksessä (217, 161, 59) ja hunnun alla (86, 65, 29), eli kontrasti
+ * romahti 6,47:stä 1,51:een. Maasto muuttui samalla puuroksi
+ * (`backdrop-filter: blur(3.5px)`). Erän 3 mittaus luki tämän
+ * "asettuneeksi näkymäksi" ja sitä edeltävän terävän kehyksen
+ * "kirkkausvälähdykseksi" — päinvastoin kuin se oli.
+ *
+ * MIKSI SÄÄNTÖ ON OIKEIN EIKÄ PELKKÄ VAIMENNUS. Huntu on olemassa YHTÄ
+ * TARKOITUSTA VARTEN: että luentakuva erottuu kartasta (ks. perustelu
+ * tämän tiedoston alussa). Topografialinssin ajan sitä kuvaa EI OLE —
+ * `body.linssi-topografia` piilottaa sekä ison luentakuvan
+ * (`.fokusvirta-isokuva`, `display: none`) että pienen kuvapakan
+ * (`.fokusvirta-luentakuva`, `visibility: hidden`) css/styles.css:ssä,
+ * omistajan 16.9.2026 antamasta listasta. Huntu siis tummensi ja sumensi
+ * kartan erottaakseen sen kuvasta, jota ruudulla ei ollut.
+ *
+ * Luenta itse jatkuu: kertojan ääni, kaiutin, tekstipiilo ja Liiku-piilo
+ * ovat omia luokkiaan (`luenta-aanessa`, `kertoja-aanessa`,
+ * `luenta-tekstit-piiloon`) eikä tämä kajoa niihin. Vain huntu jää pois.
+ *
+ * `content: none` eikä `opacity: 0`: jälkielementtiä ei tarvitse olla
+ * olemassa, ja css/styles.css sammuttaa `.map-pane::after`:n samalla
+ * tavalla silloin kun sitä ei tarvita.
+ */
+body.linssi-topografia.luenta-huntu .map-pane::after {
+  content: none;
+}
+
+/* =====================================================================
+   PIKKUKUVAT MATKAKIRJAN TEKSTIN LOPUSSA
+   (omistaja 17.9.2026 klo 22.05, Raamattu KARTTAUUDISTUKSEN PAATOKSET 35
+   kohta 4, sanatarkasti: *"Isoisan ja pulun kuvat voisi olla pienella
+   isoisan matkakirjan tekstin lopussa ja ne voisi siella klikata auki
+   (pikkukuvat eivat nay kun matkakirja on pienennettyna)."*)
+   ---------------------------------------------------------------------
+   Rivi on matkakirjakortin (.fact-card) OMA LAPSI, ei tekstirivin sisus.
+   Siksi kortin kutistuminen lappuun hoitaa piilotuksen ilman omaa
+   sääntöä: `.fact-card.pieni > *:not(.fact-place-lyhyt)` vie riviltä
+   näkyvyyden ja osoittimen (css/styles.css). Yhtä asiaa ei kirjoiteta
+   kahteen paikkaan.
+   ===================================================================== */
+.fact-pikkukuvat {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+
+.fact-pikkukuva {
+  display: block;
+  width: 3.1rem;
+  height: 2.3rem;
+  padding: 0;
+  border: 2px solid #f7f1e2;
+  border-radius: 3px;
+  background: #ded5c2;
+  box-shadow: 0 2px 6px rgba(20, 14, 6, 0.28);
+  cursor: pointer;
+  overflow: hidden;
+  /* Sama pieni kallistus kuin isolla pakalla: kuvat ovat valokuvia
+     arkilla, eivät kuvakkeita rivissä. */
+  transform: rotate(-1.4deg);
+}
+
+.fact-pikkukuva:nth-child(even) { transform: rotate(1.4deg); }
+
+.fact-pikkukuva img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =====================================================================
+   KUVAT LENTÄVÄT PIENENNETTYYN MATKAKIRJAAN
+   (omistaja 18.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 38 kohta 2:
+   *"kuvat lentavat matkakirjan ylareunaan, mutta matkakirja itse pysyy
+   pienennettyna"*.)
+
+   KERROS ON RUNGON LAPSI, EI `.stage`. Isojen luentakuvien päällys jää
+   tahallaan matkakirjakortin ALLE (z-index 3 `.stagen` sisällä), mutta
+   lento on päinvastainen liike: kuva matkaa kortin luo ja katoaa sen
+   yläreunaan, joten sen kuuluu kulkea kaiken päällä. Kerros ei ota
+   napautuksia eikä ole ruudunlukijalle mitään (aria-hidden), ja se
+   poistetaan DOMista heti kun viimeinen kuva on perillä (js/fokusvirta.js
+   lennataKuvatMatkakirjaan).
+   ===================================================================== */
+.fokusvirta-lentokerros {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 47;
+}
+
+.fokusvirta-lento {
+  position: fixed;
+  /* Muunnos lasketaan vasemmasta yläkulmasta: js antaa siirron ja
+     kutistuksen yhtenä transformina (FLIP, sama malli kuin
+     suurennoksella). */
+  transform-origin: top left;
+  overflow: hidden;
+  border: 2px solid #f7f1e2;
+  border-radius: 4px;
+  box-shadow: 0 6px 18px rgba(20, 14, 6, 0.32);
+  background: #ded5c2;
+  /* Selain saa varata kuvalle oman tason: lento ei silloin kilpaile
+     kartan rasteroinnin kanssa. */
+  will-change: transform, opacity;
+}
+
+.fokusvirta-lento img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

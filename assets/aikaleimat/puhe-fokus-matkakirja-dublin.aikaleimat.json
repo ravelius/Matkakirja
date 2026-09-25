@@ -1,0 +1,173 @@
+{
+  "versio": 2,
+  "kaupunki": "dublin",
+  "teksti": "Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.",
+  "tekstiSha256": "51ed9ff6ea1bd5d34e0f664578646b96fcdba0a99df6a4fb3144d11cc79d32fe",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-dublin.mp3",
+    "versio": 2,
+    "tavut": 364504,
+    "sha256": "255d6db3314cb5635683ada2eadaa43c10ee42d55542d428456790e0bf01be71"
+  },
+  "kesto": 22700,
+  "sanat": [
+    {
+      "sana": "Guinnessin",
+      "alku": 100,
+      "loppu": 620
+    },
+    {
+      "sana": "panimon",
+      "alku": 660,
+      "loppu": 1080
+    },
+    {
+      "sana": "vuokrasopimus",
+      "alku": 1140,
+      "loppu": 2180
+    },
+    {
+      "sana": "oli",
+      "alku": 2280,
+      "loppu": 2440
+    },
+    {
+      "sana": "tehty",
+      "alku": 2480,
+      "loppu": 2800
+    },
+    {
+      "sana": "yhdeksäksituhanneksi",
+      "alku": 2900,
+      "loppu": 4080
+    },
+    {
+      "sana": "vuodeksi",
+      "alku": 4120,
+      "loppu": 4680
+    },
+    {
+      "sana": "Sellainen",
+      "alku": 6160,
+      "loppu": 6600
+    },
+    {
+      "sana": "vaatii",
+      "alku": 6660,
+      "loppu": 7020
+    },
+    {
+      "sana": "uskoa",
+      "alku": 7140,
+      "loppu": 7520
+    },
+    {
+      "sana": "olueen",
+      "alku": 7600,
+      "loppu": 8060
+    },
+    {
+      "sana": "tai",
+      "alku": 8640,
+      "loppu": 8900
+    },
+    {
+      "sana": "janoon",
+      "alku": 8960,
+      "loppu": 9520
+    },
+    {
+      "sana": "Portilla",
+      "alku": 11440,
+      "loppu": 11920
+    },
+    {
+      "sana": "mies",
+      "alku": 12020,
+      "loppu": 12300
+    },
+    {
+      "sana": "vieritti",
+      "alku": 12340,
+      "loppu": 12780
+    },
+    {
+      "sana": "tynnyreitä",
+      "alku": 12840,
+      "loppu": 13360
+    },
+    {
+      "sana": "kärryille",
+      "alku": 13420,
+      "loppu": 14060
+    },
+    {
+      "sana": "Kysyin",
+      "alku": 15300,
+      "loppu": 15740
+    },
+    {
+      "sana": "loppuuko",
+      "alku": 16120,
+      "loppu": 16660
+    },
+    {
+      "sana": "työ",
+      "alku": 16700,
+      "loppu": 16900
+    },
+    {
+      "sana": "koskaan",
+      "alku": 16960,
+      "loppu": 17540
+    },
+    {
+      "sana": "Hän",
+      "alku": 19360,
+      "loppu": 19500
+    },
+    {
+      "sana": "katsoi",
+      "alku": 19540,
+      "loppu": 19880
+    },
+    {
+      "sana": "minua",
+      "alku": 19920,
+      "loppu": 20180
+    },
+    {
+      "sana": "pitkään",
+      "alku": 20240,
+      "loppu": 20720
+    },
+    {
+      "sana": "ja",
+      "alku": 21120,
+      "loppu": 21200
+    },
+    {
+      "sana": "vieritti",
+      "alku": 21240,
+      "loppu": 21700
+    },
+    {
+      "sana": "seuraavan",
+      "alku": 21760,
+      "loppu": 22300
+    },
+    {
+      "sana": "tynnyrin",
+      "alku": 22340,
+      "loppu": 22700
+    }
+  ],
+  "lauseet": [
+    100,
+    6160,
+    11440,
+    15300,
+    19360
+  ],
+  "luotu": "2026-09-23T15:37:23.171Z"
+}

@@ -1,0 +1,132 @@
+{
+  "versio": 2,
+  "kaupunki": "islanti",
+  "teksti": "Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.",
+  "tekstiSha256": "4c3365081a483fd64b728ae263148fa4ac1a6c323020898888535b1d2a7403f4",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-islanti.mp3",
+    "versio": 2,
+    "tavut": 289271,
+    "sha256": "d9ca791010e4d50fe4ae031c68d3b5bbcd2d56a230e4b7e29ee267a009b41b23"
+  },
+  "kesto": 17960,
+  "sanat": [
+    {
+      "sana": "Reykjavikin",
+      "alku": 220,
+      "loppu": 800
+    },
+    {
+      "sana": "ulkopuolella",
+      "alku": 860,
+      "loppu": 1540
+    },
+    {
+      "sana": "naiset",
+      "alku": 1600,
+      "loppu": 1960
+    },
+    {
+      "sana": "pesivät",
+      "alku": 2000,
+      "loppu": 2360
+    },
+    {
+      "sana": "pyykkiä",
+      "alku": 2420,
+      "loppu": 2920
+    },
+    {
+      "sana": "kuumassa",
+      "alku": 2980,
+      "loppu": 3420
+    },
+    {
+      "sana": "lähteessä",
+      "alku": 3460,
+      "loppu": 4160
+    },
+    {
+      "sana": "Annoin",
+      "alku": 5400,
+      "loppu": 5700
+    },
+    {
+      "sana": "paitani",
+      "alku": 5740,
+      "loppu": 6140
+    },
+    {
+      "sana": "pestäväksi",
+      "alku": 6180,
+      "loppu": 6840
+    },
+    {
+      "sana": "Maa",
+      "alku": 9060,
+      "loppu": 9240
+    },
+    {
+      "sana": "teki",
+      "alku": 9280,
+      "loppu": 9520
+    },
+    {
+      "sana": "ensi",
+      "alku": 9600,
+      "loppu": 9820
+    },
+    {
+      "sana": "kerran",
+      "alku": 9880,
+      "loppu": 10200
+    },
+    {
+      "sana": "palveluksen",
+      "alku": 10260,
+      "loppu": 11040
+    },
+    {
+      "sana": "vaatimatta",
+      "alku": 11100,
+      "loppu": 11680
+    },
+    {
+      "sana": "lapioimista",
+      "alku": 11720,
+      "loppu": 12460
+    },
+    {
+      "sana": "Kaulus",
+      "alku": 14100,
+      "loppu": 14460
+    },
+    {
+      "sana": "puhdistui",
+      "alku": 14500,
+      "loppu": 15060
+    },
+    {
+      "sana": "käsitykseni",
+      "alku": 16140,
+      "loppu": 16800
+    },
+    {
+      "sana": "saaresta",
+      "alku": 16860,
+      "loppu": 17440
+    },
+    {
+      "sana": "ei",
+      "alku": 17840,
+      "loppu": 17960
+    }
+  ],
+  "lauseet": [
+    220,
+    5400,
+    9060,
+    14100
+  ],
+  "luotu": "2026-09-23T15:36:34.232Z"
+}

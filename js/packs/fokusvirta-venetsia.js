@@ -182,86 +182,167 @@ export const FOKUSVIRTA_VENETSIA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Venetsia, kesäkuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Kaupunki, jossa kadut ovat vettä ja portaat päättyvät '
-      + 'mereen. Gondolieeri lauloi minulle hinnan päälle, ja torilla '
-      + 'vaihdettiin kalaa, lasia ja huhuja samalla tiskillä. Markuksen '
-      + 'kirkon hevoset ovat ryöstösaalista Konstantinopolista — täällä '
-      + 'sanotaan suoraan, että puoli kaupunkia on tuotu jostain '
-      + 'muualta, ja sanotaan se ylpeänä. Iltapäivällä vesi nousi '
-      + 'torille ja kauppiaat nostivat tavaransa penkeille kiroamatta: '
-      + 'näin täällä on aina ollut.',
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 631010de6b1c25991957d02e670a8e83b6f50dc2945d39a087ad0abfb9a3917c. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-venetsia-r20260909-paper-v5.jpg",
+      lyhyt: "Venetsia, 1873. Oven kynnys jatkui veteen.",
+      selite: 'Kanava nieli portaiden alimman askelman, ja gondolieri odotti kynnyksen edessä kuin ajuri kuivalla kadulla. Kuvasin avoimen ikkunan ja veteen jatkuvan sisäänkäynnin ennen veneeseen nousua.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.veneziaunica.it/"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-venetsia-r20260911-paper2-v1.jpg",
+      lyhyt: "Venetsia, 1873. Aamiaiskuppi kuului kanavalle asti.",
+      selite: 'Gondoli kulki kapeaa kanavaa talojen seinien noustessa suoraan vedestä. Avoimen ikkunan pieni aamiaiskuppi jäi kuvaan melan liikkeen yläpuolelle.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.veneziaunica.it/"],
+    },
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Venetsia, kesäkuussa 1873. Kosteaa; laguuni haisee laskuveden aikaan.',
+    /* HYVÄKSYTTY TEKSTIPILOTTI r2 13.9.2026: yhteinen Horatio–Livia-
+     * paribudjetti alittaa julkaistun lähtöparin. Sanat on hyväksytty
+     * tekniseen RC-jatkoon; uusi luenta ja aikaleimat vaaditaan ennen
+     * julkaisua. */
+    teksti: "San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[curious] Kaupunki, jossa kadut ovat vettä ja portaat '
-      + 'päättyvät mereen. Gondolieeri lauloi minulle hinnan päälle, ja '
-      + 'torilla vaihdettiin kalaa, lasia ja huhuja samalla tiskillä. '
-      + '[softly] Markuksen kirkon hevoset ovat ryöstösaalista '
-      + 'Konstantinopolista — täällä sanotaan suoraan, että puoli '
-      + 'kaupunkia on tuotu jostain muualta, ja sanotaan se ylpeänä. '
-      + '[warmly] Iltapäivällä vesi nousi torille ja kauppiaat nostivat '
-      + 'tavaransa penkeille kiroamatta: näin täällä on aina ollut.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: ei erikseen hiljaisia osuuksia (jokainen virke
+     * saa reaktion).
+     */
+    reaktiot: [
+  {
+    "id": "venetsia.r1",
+    "ankkuri": "Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "venetsia.r2",
+    "ankkuri": "Muslimivartijat olivat jättäneet korin tutkimatta",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "venetsia.r3",
+    "ankkuri": "Katselin kultaisia mosaiikkeja",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "venetsia.r4",
+    "ankkuri": "olisi seurannut kuulustelu",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "venetsia.r5",
+    "ankkuri": "Venetsiassa oli rakennettu kirkko",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
+     * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
+    luenta: "[curious] San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. [warmly] Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-venetsia.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
-     * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo); kanoninen `teksti` seuraa
-     * sen jälkeen.
-     *
-     * PUHEKIELIPASSI (Raamattu, "LIVIAN PUHEKIELI", sääntö 1 PAINOPISTE
-     * REUNOILLA): lyhentymät ovat vain alussa ("Jep") ja lopussa
-     * ("mut"), keskellä sanat ovat auki; pronominit kokonaisina; ei
-     * huutomerkkejä.
-     *
-     * MIKSI PORTAAT EIKÄ VESI: kanoninen repliikki alla vastaa jo
-     * nousevaan veteen, hevosiin ja gondolieereihin. Merkinnän
-     * ensimmäinen lause — portaat päättyvät mereen — jää muuten
-     * kokonaan vastaamatta, ja juuri siihen tämä maadoitus tarttuu.
-     *
-     * FAKTAKURI: kolme väitettä, kaikki pelin omasta jo hyväksytystä
-     * Venetsia-aineistosta (js/packs/kulttuuri-kategoriat.js, nosto
-     * "Kaupunki seisoo puunrunkojen päällä"). (1) Talot seisovat
-     * tiheinä riveinä alas lyötyjen puupaalujen päällä. (2) Paalujen
-     * päälle ladottiin istrialaiset kalkkikivilaatat ja vasta niiden
-     * päälle tiilet. (3) Ilman happea puu ei lahoa vaan kovettuu, ja
-     * Santa Maria della Saluten alle lyötiin yli miljoona paalua.
-     *
-     * ── SPOILERIKORJAUS (Fable hyväksyi 29.8.2026) ────────────────────
-     *
-     * Maadoituksen ensimmäinen väite kuului aallon 4B integrointiin asti
-     * *"Tämä kaupunki ei seiso kalliolla vaan puussa: laguunin mutaan
-     * lyötiin tiheät rivit lepänrunkoja, kunnes ne ylsivät kovaan
-     * savikerrokseen asti"*, ja kolmas alkoi sanoilla *"Hapettomassa
-     * mudassa"*. Yhdessä ne antoivat js/packs/europe-questions.js:n
-     * `venetsia`-lohkon viidennen laattakysymyksen vastauksen — *"Miksi
-     * Venetsia vajoaa hitaasti?"* → *"se on rakennettu laguunin
-     * pehmeälle pohjalle"* — ennen kysymystä.
-     *
-     * Tämä kenttä EI OLE KAANONIA vaan paketin omaa Livia-tekstiä, joten
-     * päätoimittaja antoi luvan kirjoittaa paljastavan kohdan uusiksi.
-     * Paalufakta on jäljellä sellaisenaan, mutta MAAPERÄ ei enää esiinny
-     * missään muodossa: ei laguunia, ei mutaa, ei savikerrosta eikä
-     * vastakohtaa kalliolle. Livian puhekielisäännöt pitävät: lyhentymät
-     * vain reunoilla ("Jep", "mut"), pronominit kokonaisina, ei
-     * huutomerkkejä.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-venetsia-01-r20260909-paikka-v2.jpg, pulu-cam-venetsia-02-r20260909-paikka-v2-v3.jpg, pulu-cam-venetsia-03-r20260909-euv2-v1.jpg, pulu-cam-venetsia-04-r20260909-euv1-v2.jpg, pulu-cam-venetsia-05-r20260909-euv1-v1.jpg.
      */
-    /* FABLE HYVAKSYI: maadoituskorjaus */
-    maadoitus: 'Jep, ne portaat päättyvät mereen ihan oikeasti. Tämän '
-      + 'kaupungin talot seisovat puupaalujen päällä: paaluja lyötiin '
-      + 'tiheinä riveinä alas, ja niiden päälle ladottiin ensin '
-      + 'kalkkikivilaatat ja vasta sitten tiilet. Ilman happea '
-      + 'puu ei lahoa vaan kovettuu, ja Santa Maria della Saluten alle '
-      + 'niitä paaluja lyötiin yli miljoona. Se alin askelma ei siis ole '
-      + 'vahinko — mut se on vasta kaupungin pintaa.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-01-r20260909-paikka-v2.jpg',
+        lyhyt: 'Venetsia: vesibussi ja aivan sattumalta yksi paikallinen.',
+        selite: 'Punta della Doganan kärjestä näkyvät San Giorgio Maggioren saari ja sen edessä kulkeva vesibussi. Paikallinen sattui etualalle niin sopivasti, että kuvan reunaan ilmestyi sydän — ehkä kameran asetus.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.pinaultcollection.com/palazzograssi/en/punta-della-dogana',
+          'https://www.pinaultcollection.com/palazzograssi/media/styles/big/s3/w_image/golden-hour-1_0.jpg?itok=N1pd3O6K',
+          'https://avm.avmspa.it/en/content/consult-map',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-02-r20260909-paikka-v2-v3.jpg',
+        lyhyt: 'Venetsia: sama paikallinen, kaupunki on yllättävän pieni.',
+        selite: 'Rio San Barnaban yli kuljetaan Ponte dei Pugnin siltaa pitkin ja tavara liikkuu veneellä sen alta. Paikallinen asettui taas etualalle, kun vaihdoin kuvakulmaa kanavan avaamiseksi.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.veneziaunica.it/en/content/dorsoduro-art-district-venetian-origins-international-contemporary-art',
+          'https://www.veneziaunica.it/sites/default/files/redazione-turismo/itinerari/immagini/ponte%20dei%20pugni.jpg',
+          'https://live.comune.venezia.it/index.php/it/2025/04/una-calle-una-storia-ponte-dei-pugni',
+          'https://theboutiqueadventurer.com/landmarks-in-venice/',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-03-r20260909-euv2-v1.jpg',
+        lyhyt: 'Venetsia: aukion nimi on… tiedän kyllä aivan varmasti.',
+        selite: 'Campo Santa Margheritan kahvilapöydistä voi seurata aukion elämää nousematta tuolilta. Paikallinen laskeutui viereen, ja kamera unohti aukion — vaikka väitin tähtääväni yhteen muruun.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.cityscrolls.com/venice/campo-santa-margherita/',
+          'https://www.cityscrolls.com/venice/campo-santa-margherita/photos/large/looking-south.jpg',
+          'https://www.travellers-insight.com/europa/italien/venedig-sehenswuerdigkeiten',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-04-r20260909-euv1-v2.jpg',
+        lyhyt: 'Venetsia: tämä kuva käsittelee kuulemma lentoreittejä.',
+        selite: 'Kanavan yllä vesi jäi alle ja sillan kaari odotti edessä suoralla lentoreitillä. Seurasin häntä tietenkin vain lentoreitin vuoksi; kuvan sydänasetukset tutkin myöhemmin.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://live.comune.venezia.it/index.php/it/2025/04/una-calle-una-storia-ponte-dei-pugni',
+          'https://www.veneziaunica.it/sites/default/files/redazione-turismo/itinerari/documenti/Classic_Dorsoduro_EN.pdf',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-05-r20260909-euv1-v1.jpg',
+        lyhyt: 'Venetsia: nämä eivät kaikki kuuluneet esitykseen.',
+        selite: 'Aukion laidalla oli kaksi kuivaa paikkaa samalla ikkunalaudalla, ja paikallinen jätti toisen vapaaksi. Istuin siihen — hetkinen, näitkö sinä jo tämänkin kuvan?',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.veneziaunica.it/sites/default/files/redazione-turismo/itinerari/documenti/Classic_Dorsoduro_EN.pdf',
+          'https://www.camposantamargherita.com/bar.htm',
+          'https://commons.wikimedia.org/wiki/File:6598_-_Venezia_-_Campo_Santa_Margherita_-_S._Margherita_-_Foto_Giovanni_Dall%27Orto,_8-Aug-2007.jpg',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* TEKSTIPILOTTI 12.9.2026: nykyliikenteen yksi lause lisätty
+     * rikkomatta viiden kuvan romanssipoikkeusta. */
+    kommentti: ["Venetsiassa kuljetaan yhä vesibusseilla. Minä lennän nykyään vähän pidempää reittiä. Yhden tutun takia. Hetkinen — nuo kuvat ovat yksityisiä! Hän vain sattui jokaiseen hyvään kuvakulmaan. No, ehkä minä vähän odotin."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'rakkaus', voimakkuus: 0.8 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      */
@@ -288,6 +369,7 @@ export const FOKUSVIRTA_VENETSIA = {
      */
     kuva: {
       ampari: 'herokoe/hero-venetsia-st-marks.jpg',
+      lyhyt: 'Markuksenkirkon parvekkeella kopiot: 1204 tuodut pronssihevoset siirrettiin sisälle 1980-luvulla.',
       selite: 'Markuksenkirkon parvekkeella seisovat nykyään kopiot: '
         + 'vuonna 1204 Konstantinopolista tuodut pronssihevoset '
         + 'siirrettiin 1980-luvun alussa ilmansaasteiden takia kirkon '
@@ -363,6 +445,7 @@ export const FOKUSVIRTA_VENETSIA = {
         + 'katsottaviksi alhaalta ylöspäin — ne on tehty seisomaan '
         + 'korkealla jossain, kauan ennen kuin kukaan tiesi mitään '
         + 'Venetsiasta.',
+      lahde: 'en-Wikipedia "Horses of Saint Mark". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 3859×2737, public domain, tekijä Tteske
        * (johdannainen: Morn), kuvattu 17.5.2011, kuvaus "Original
@@ -372,6 +455,7 @@ export const FOKUSVIRTA_VENETSIA = {
        */
       kuva: {
         tiedosto: 'Horses of Basilica San Marco bright.jpg',
+        lyhyt: 'Alkuperäiset hevoset basilikan sisällä; kaulapannat 1204 peittämään kuljetuksen katkaisukohdat.',
         selite: 'Alkuperäiset hevoset basilikan sisällä: kaulapannat '
           + 'lisättiin 1204 peittämään kohdat, joista päät katkaistiin '
           + 'kuljetusta varten.',
@@ -464,6 +548,8 @@ export const FOKUSVIRTA_VENETSIA = {
         + 'Venetsialaisnaiset lähettivät kuninkaalle kirjelmän, jossa he '
         + 'kirjoittivat, ettei heidän sukupuolensa ollut koskaan tuntenut '
         + 'lain katkeruutta syvemmin kuin sinä lokakuuna.',
+      lahde: 'en-Wikipedia "Plebiscite of Veneto of 1866" ja en-Wikipedia '
+        + '"Kingdom of Lombardy–Venetia". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 3000×2218, public domain, tekijät Gustave
        * Janet ja Raffaele Pontremoli, julkaistu Le Monde Illustré
@@ -476,6 +562,7 @@ export const FOKUSVIRTA_VENETSIA = {
        */
       kuva: {
         tiedosto: 'Le Monde Illustré 1866 - Votazioni a Venezia.jpg',
+        lyhyt: 'Le Monde Illustrén puupiirros 1866: Markuksen asukkaat kulkevat lippurivistossä äänestämään.',
         selite: 'Le Monde Illustrén puupiirros marraskuulta 1866: '
           + 'Markuksen kaupunginosan asukkaat kulkevat lippurivistössä '
           + 'äänestyspaikalle Ateneoon.',
@@ -561,6 +648,7 @@ export const FOKUSVIRTA_VENETSIA = {
         + 'roomalaiseen kolikkoon kauan ennen Venetsiaa, ja se on '
         + 'suunnilleen ainoa matkaohje, jota isoisäsi ei koskaan '
         + 'noudattanut.',
+      lahde: 'en-Wikipedia "Aldus Manutius". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1211×2000, CC0, kuvaus "Page from the
        * pocket-sized edition of Virgil printed by Aldus Manutius, the
@@ -572,6 +660,7 @@ export const FOKUSVIRTA_VENETSIA = {
        */
       kuva: {
         tiedosto: 'Page from the edition of Virgil printed by Aldus Manutius in 1501.jpg',
+        lyhyt: 'Sivu Manuzion 1501 painamasta ensimmäisestä kursiivilla painetusta kirjasta, reunus käsin maalattu.',
         selite: 'Sivu Aldo Manuzion vuonna 1501 painamasta '
           + 'taskukokoisesta Vergiliuksesta, ensimmäisestä kokonaan '
           + 'kursiivilla painetusta kirjasta; tämän kappaleen reunukset on '
@@ -691,6 +780,7 @@ export const FOKUSVIRTA_VENETSIA = {
      */
     kuva: {
       tiedosto: 'P1030629 Lazzaretto Vecchio (Venice) 01.jpg',
+      lyhyt: 'Lazzaretto Vecchion saari Lidon lähellä eristi ruttosairaat 1423, siitä sana lazaretti.',
       selite: 'Lazzaretto Vecchion saari laguunissa Lidon lähellä: '
         + 'vuodesta 1423 sinne eristettiin ruttoon sairastuneet, ja '
         + 'saaren nimestä on peräisin sana lazaretti.',
@@ -768,9 +858,11 @@ export const FOKUSVIRTA_VENETSIA = {
    * MIKSI TÄMÄ AUKIO: kohtaaminen tapahtuu naamiopajassa, ja pajat ovat
    * San Polon sestierissä; Campo San Polo on sen suurin aukio ja ainoa
    * paikka lähistöllä, jolle Wikipediassa on omat koordinaatit. Piste ei
-   * osoita Rialton laiturille, koska siellä seisoo jo pelin vanhan polun
-   * gondolieeri Matteo (js/packs/kohtaamiset.js, venetsia) — kaksi eri
-   * kohtaamista samalla laiturilla olisi kartalla sekaannus.
+   * osoita Rialton laiturille: siellä seisoi ennen pelin vanhan polun
+   * gondolieeri Matteo, mutta hänet poistettiin 5.9.2026, kun
+   * kaupungin kaksoishenkilö purettiin kaaren Lucian hyväksi
+   * (js/packs/kohtaamiset.js, venetsia). Paja ja sen aukio ovat siis
+   * kaupungin ainoa kohtaamispaikka.
    *
    * 45,4375 N / 12,3299 E — en-Wikipedia "Campo San Polo",
    * prop=coordinates (haettu 29.8.2026). Muunnos on sama kaava ja samat

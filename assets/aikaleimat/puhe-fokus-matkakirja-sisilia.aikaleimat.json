@@ -1,0 +1,183 @@
+{
+  "versio": 2,
+  "kaupunki": "sisilia",
+  "teksti": "Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.",
+  "tekstiSha256": "8e7360e13a20b28263af9c38dfa35b32849c1eae9832e35f6922fc282600d611",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-sisilia.mp3",
+    "versio": 2,
+    "tavut": 404210,
+    "sha256": "18911bda77586b2d990ddae5e8cb27a9af2cb5d923b072b31f1a5aecc6adc044"
+  },
+  "kesto": 25180,
+  "sanat": [
+    {
+      "sana": "Palermon",
+      "alku": 80,
+      "loppu": 540
+    },
+    {
+      "sana": "palatsikappeli",
+      "alku": 580,
+      "loppu": 1520
+    },
+    {
+      "sana": "hohti",
+      "alku": 1580,
+      "loppu": 1860
+    },
+    {
+      "sana": "kultaa",
+      "alku": 1940,
+      "loppu": 2480
+    },
+    {
+      "sana": "ja",
+      "alku": 3000,
+      "loppu": 3120
+    },
+    {
+      "sana": "puukatto",
+      "alku": 3180,
+      "loppu": 3760
+    },
+    {
+      "sana": "kaartui",
+      "alku": 3820,
+      "loppu": 4260
+    },
+    {
+      "sana": "veistetyksi",
+      "alku": 4300,
+      "loppu": 4960
+    },
+    {
+      "sana": "luolastoksi",
+      "alku": 5020,
+      "loppu": 5800
+    },
+    {
+      "sana": "Normannikuningas",
+      "alku": 7460,
+      "loppu": 8400
+    },
+    {
+      "sana": "teetti",
+      "alku": 8460,
+      "loppu": 8800
+    },
+    {
+      "sana": "sen",
+      "alku": 8860,
+      "loppu": 9040
+    },
+    {
+      "sana": "mosaiikit",
+      "alku": 10140,
+      "loppu": 10780
+    },
+    {
+      "sana": "ja",
+      "alku": 10820,
+      "loppu": 10900
+    },
+    {
+      "sana": "puuveistokset",
+      "alku": 10960,
+      "loppu": 11760
+    },
+    {
+      "sana": "syntyivät",
+      "alku": 11820,
+      "loppu": 12320
+    },
+    {
+      "sana": "monen",
+      "alku": 12380,
+      "loppu": 12680
+    },
+    {
+      "sana": "maailman",
+      "alku": 12720,
+      "loppu": 13140
+    },
+    {
+      "sana": "käsissä",
+      "alku": 13200,
+      "loppu": 13740
+    },
+    {
+      "sana": "Katselin",
+      "alku": 15860,
+      "loppu": 16300
+    },
+    {
+      "sana": "ylös",
+      "alku": 16379,
+      "loppu": 16680
+    },
+    {
+      "sana": "kunnes",
+      "alku": 16760,
+      "loppu": 17120
+    },
+    {
+      "sana": "niska",
+      "alku": 17180,
+      "loppu": 17520
+    },
+    {
+      "sana": "väsyi",
+      "alku": 17560,
+      "loppu": 18120
+    },
+    {
+      "sana": "Kuninkaan",
+      "alku": 19420,
+      "loppu": 19960
+    },
+    {
+      "sana": "nimi",
+      "alku": 20020,
+      "loppu": 20280
+    },
+    {
+      "sana": "tunnettiin",
+      "alku": 20340,
+      "loppu": 21020
+    },
+    {
+      "sana": "Tekijöiden",
+      "alku": 22920,
+      "loppu": 23440
+    },
+    {
+      "sana": "nimiä",
+      "alku": 23480,
+      "loppu": 23880
+    },
+    {
+      "sana": "olisin",
+      "alku": 23960,
+      "loppu": 24320
+    },
+    {
+      "sana": "kuunnellut",
+      "alku": 24380,
+      "loppu": 24860
+    },
+    {
+      "sana": "kauemmin",
+      "alku": 24920,
+      "loppu": 25180
+    }
+  ],
+  "lauseet": [
+    80,
+    7460,
+    15860,
+    19420,
+    22920
+  ],
+  "luotu": "2026-09-23T15:36:29.763Z"
+}

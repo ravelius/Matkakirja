@@ -1,0 +1,172 @@
+{
+  "versio": 2,
+  "kaupunki": "kreeta",
+  "teksti": "Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.",
+  "tekstiSha256": "6bf9cb8bc6c7e687abc031834e064e813f0601629a477965237bf44422df5b2e",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-kreeta.mp3",
+    "versio": 2,
+    "tavut": 286346,
+    "sha256": "eda46adfc599704c2bf0feeba4a3a541dada8a0e780a186154c77bfe752f022c"
+  },
+  "kesto": 17800,
+  "sanat": [
+    {
+      "sana": "Falassarnassa",
+      "alku": 160,
+      "loppu": 1000
+    },
+    {
+      "sana": "kävelin",
+      "alku": 1040,
+      "loppu": 1400
+    },
+    {
+      "sana": "muinaisen",
+      "alku": 1460,
+      "loppu": 1980
+    },
+    {
+      "sana": "sataman",
+      "alku": 2020,
+      "loppu": 2500
+    },
+    {
+      "sana": "poikki",
+      "alku": 2560,
+      "loppu": 3000
+    },
+    {
+      "sana": "mutta",
+      "alku": 3580,
+      "loppu": 3800
+    },
+    {
+      "sana": "saappaani",
+      "alku": 3840,
+      "loppu": 4380
+    },
+    {
+      "sana": "eivät",
+      "alku": 4440,
+      "loppu": 4720
+    },
+    {
+      "sana": "kastuneet",
+      "alku": 4780,
+      "loppu": 5460
+    },
+    {
+      "sana": "Meri",
+      "alku": 6800,
+      "loppu": 7040
+    },
+    {
+      "sana": "oli",
+      "alku": 7100,
+      "loppu": 7260
+    },
+    {
+      "sana": "kaukana",
+      "alku": 7300,
+      "loppu": 7900
+    },
+    {
+      "sana": "Rannikko",
+      "alku": 9200,
+      "loppu": 9640
+    },
+    {
+      "sana": "oli",
+      "alku": 9680,
+      "loppu": 9820
+    },
+    {
+      "sana": "kohonnut",
+      "alku": 9880,
+      "loppu": 10360
+    },
+    {
+      "sana": "ja",
+      "alku": 10400,
+      "loppu": 10460
+    },
+    {
+      "sana": "nostanut",
+      "alku": 10500,
+      "loppu": 10960
+    },
+    {
+      "sana": "koko",
+      "alku": 11000,
+      "loppu": 11220
+    },
+    {
+      "sana": "sataman",
+      "alku": 11260,
+      "loppu": 11700
+    },
+    {
+      "sana": "kuiville",
+      "alku": 11760,
+      "loppu": 12340
+    },
+    {
+      "sana": "Istuin",
+      "alku": 14080,
+      "loppu": 14380
+    },
+    {
+      "sana": "kivelle",
+      "alku": 14440,
+      "loppu": 14820
+    },
+    {
+      "sana": "ja",
+      "alku": 14860,
+      "loppu": 14960
+    },
+    {
+      "sana": "piirsin",
+      "alku": 15020,
+      "loppu": 15400
+    },
+    {
+      "sana": "laivan",
+      "alku": 15440,
+      "loppu": 15800
+    },
+    {
+      "sana": "siihen",
+      "alku": 15880,
+      "loppu": 16260
+    },
+    {
+      "sana": "missä",
+      "alku": 16420,
+      "loppu": 16680
+    },
+    {
+      "sana": "vuohi",
+      "alku": 16760,
+      "loppu": 17100
+    },
+    {
+      "sana": "söi",
+      "alku": 17160,
+      "loppu": 17360
+    },
+    {
+      "sana": "ruohoa",
+      "alku": 17440,
+      "loppu": 17800
+    }
+  ],
+  "lauseet": [
+    160,
+    6800,
+    9200,
+    14080
+  ],
+  "luotu": "2026-09-23T15:34:46.963Z"
+}

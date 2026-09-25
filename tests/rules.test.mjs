@@ -1,4 +1,5 @@
 import test from 'node:test';
+import { pulmanGeneraattori } from '../js/pulmageneraattorit.js';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
@@ -27,7 +28,7 @@ function checkSources(source, where) {
   }
   return list.length;
 }
-import { buildBoard, findMoves, posKey, cityDistances, pointAlong } from '../js/rules.js';
+import { BUS_FARE, buildBoard, findMoves, posKey, cityDistances, pointAlong } from '../js/rules.js';
 import { isOnLand } from '../js/mapart.js';
 import {
   ISO_AARRE_ARVO, MANNER_AARRE_ARVO, PIENI_AARRE_ARVO, onAarre, tokenPileTemplate,
@@ -2105,8 +2106,16 @@ test('matkustustavan valinnan voi perua ennen heittoa', () => {
 test('matkustustapa valitaan automaattisesti kun vaihtoehtoja ei ole', () => {
   const game = newGame(51);
 
-  // Sisämaan kaupungissa ilman aarretta ja tutkittavaa maitse on ainoa
-  // tapa: vuoro alkaa heitosta.
+  /*
+   * Sisämaan kaupungissa ilman aarretta ja tutkittavaa maitse on ainoa
+   * NOPPATAPA: vuoro alkaa heitosta.
+   *
+   * BUSSI EI ESTÄ AUTOMAATTISTA HEITTOA (omistaja 13.9.2026, Raamattu
+   * KARTTAUUDISTUKSEN PAATOKSET 5): bussilla ei heitetä noppaa, joten
+   * sen olemassaolo ei tee heitosta valintaa. Ehto on täsmälleen sama
+   * kuin ennen erää 8. Bussi jää silti valittavaksi Liiku-napista niin
+   * kauan kuin noppaa ei ole heitetty (muitaTapojaTarjolla).
+   */
   game.player.pos = { type: 'city', city: 'murzuk' };
   game.tokens.delete('murzuk');
   game.explored.add('africa:murzuk');
@@ -2114,8 +2123,21 @@ test('matkustustapa valitaan automaattisesti kun vaihtoehtoja ei ole', () => {
   game.beginTurn();
   assert.equal(game.phase, 'roll');
   assert.equal(game.travelMode, 'land');
+  assert.ok(game.autoTravel, 'bussi ei saa estää automaattista heittoa');
+  assert.ok(game.muitaTapojaTarjolla(), 'bussi on yhä valittavissa ennen heittoa');
+  assert.equal(game.actionCancelTravel().ok, true, 'Liiku-nappi vie bussin valintaan');
+  assert.equal(game.phase, 'action');
+  assert.deepEqual(game.travelModes().sort(), ['bus', 'land'], 'bussi puuttuu vaihtoehdoista');
+
+  game.player.money = BUS_FARE - 1;
+  game.phase = 'action';
+  game.beginTurn();
+  assert.equal(game.phase, 'roll');
+  assert.equal(game.travelMode, 'land');
   assert.ok(game.autoTravel);
+  assert.equal(game.muitaTapojaTarjolla(), false, 'ilman rahaa bussia ei ole');
   assert.equal(game.actionCancelTravel().ok, false, 'peruutettavaa ei ole');
+  game.player.money = 300;
 
   // Kesken reittiä matka jatkuu samalla tavalla ilman kysymistä.
   game.player.pos = { type: 'edge', edge: 'tanger|karthago', idx: 1 };
@@ -2123,6 +2145,7 @@ test('matkustustapa valitaan automaattisesti kun vaihtoehtoja ei ole', () => {
   game.beginTurn();
   assert.equal(game.phase, 'roll');
   assert.ok(game.autoTravel);
+  assert.equal(game.muitaTapojaTarjolla(), false, 'kesken reittiä ei ole bussia');
 
   // Aarrekaupungissa valinta on aito: liikkua tai jäädä vastaamaan.
   game.player.pos = { type: 'city', city: 'gao' };
@@ -2131,12 +2154,89 @@ test('matkustustapa valitaan automaattisesti kun vaihtoehtoja ei ole', () => {
   game.beginTurn();
   assert.equal(game.phase, 'action');
   assert.equal(game.autoTravel, false);
-  assert.deepEqual(game.travelModes().sort(), ['land', 'stay']);
+  assert.deepEqual(game.travelModes().sort(), ['bus', 'land', 'stay']);
 
   // Aloituskaupungissa on satama ja lentokenttä, joten valinta kysytään.
   const alku = newGame(52);
   assert.equal(alku.phase, 'action');
   assert.equal(alku.autoTravel, false);
+});
+
+/*
+ * MATKA JATKUU ITSESTÄÄN, KUNNES OLLAAN KAUPUNGISSA (omistajan tilaus
+ * 2.9.2026, sanatarkasti: *"nopanheitto tulee jatkua automaattisesti
+ * jos ei olla saavuttu seuraavaan kohdekaupunkiin"*).
+ *
+ * Vartioitava asia on VUOROLOGIIKAN LIPPU, ei animaatio: peli ei heitä
+ * itse, vaan merkitsee jatkotilan ja UI heittää (js/ui.js
+ * ajastaAutomaattinenHeitto). Siksi tässä testataan täsmälleen se, mitä
+ * beginTurn päättää — reittipisteestä kyllä, kaupungista ei.
+ */
+test('reitin askelpisteessä vuoro merkitään jatkuvaksi, kaupungissa ei', () => {
+  const game = newGame(31);
+
+  // 1. Siirto reitin askelpisteeseen: matka on kesken.
+  game.player.pos = { type: 'edge', edge: 'tanger|karthago', idx: 1 };
+  game.phase = 'action';
+  game.beginTurn();
+  assert.equal(game.phase, 'roll');
+  assert.ok(game.jatkaAutomaattisesti, 'reitillä matka jatkuu itsestään');
+  assert.ok(game.jatkaMatkaaItsestaan(), 'heitto saa lauetia ilman nappia');
+
+  // Heiton jälkeen automaatti ei enää laukea: kohde on pelaajan valinta.
+  game.actionRoll();
+  assert.equal(game.phase, 'move');
+  assert.equal(game.jatkaMatkaaItsestaan(), false, 'noppa on jo heitetty');
+
+  // 2. Siirto kaupunkiin katkaisee automaation.
+  const kaupunkiin = game.moveOptions().find((o) => o.city);
+  assert.ok(kaupunkiin, 'jonkin kohteen pitäisi olla kaupunki');
+  game.actionMove(kaupunkiin.key);
+  game.current = 0;
+  game.phase = 'action';
+  game.beginTurn();
+  assert.equal(game.player.pos.type, 'city');
+  assert.equal(game.jatkaAutomaattisesti, false, 'kaupungissa noppa on pelaajan napin takana');
+  assert.equal(game.jatkaMatkaaItsestaan(), false);
+
+  // 3. Botti hoitaa vuoronsa omalla ajastimellaan: lippu ei nouse.
+  const botti = newGame(31);
+  botti.player.isBot = true;
+  botti.player.pos = { type: 'edge', edge: 'tanger|karthago', idx: 1 };
+  botti.phase = 'action';
+  botti.beginTurn();
+  assert.equal(botti.phase, 'roll');
+  assert.equal(botti.jatkaAutomaattisesti, false, 'botilla on oma ajastimensa');
+});
+
+test('kesken matkaa tallennettu peli jatkaa automaattisesti, kaupungissa ei', () => {
+  /*
+   * Maailmankartta eikä testien africa-oletuslauta: erillislaudalle
+   * tallennettu peli SIIRRETÄÄN latauksessa maailmankartalle
+   * (siirraErillislaudat), jolloin nappula palaa kaupunkiin eikä
+   * jatkotilaa voisi mitata.
+   */
+  const maailma = packById('maailma');
+  const reitti = maailma.edges.find((e) => (e.type ?? 'land') === 'land' && (e.steps ?? 1) >= 3);
+  const game = new Game({ pack: maailma, players: [{ name: 'A', color: '#f00' }], seed: 31 });
+  game.player.pos = { type: 'edge', edge: `${reitti.a}|${reitti.b}`, idx: 1 };
+  game.phase = 'action';
+  game.beginTurn();
+  assert.equal(game.phase, 'roll');
+
+  // Jatkotila johdetaan asemasta, joten se selviää tallennuksen yli
+  // ilman omaa kenttää — myös vanhasta tallennuksesta.
+  const ladattu = Game.fromJSON(JSON.parse(JSON.stringify(game.toJSON())));
+  assert.equal(ladattu.phase, 'roll');
+  assert.ok(ladattu.jatkaAutomaattisesti, 'kesken matkaa lataus jatkaa itsestään');
+  assert.ok(ladattu.jatkaMatkaaItsestaan());
+
+  // Kaupungissa odottava vuoro ei saa jatkua itsestään latauksenkaan
+  // jälkeen: noppa on aina pelaajan napin takana.
+  game.player.pos = { type: 'city', city: reitti.a };
+  const kaupungissa = Game.fromJSON(JSON.parse(JSON.stringify(game.toJSON())));
+  assert.equal(kaupungissa.jatkaAutomaattisesti, false);
+  assert.equal(kaupungissa.jatkaMatkaaItsestaan(), false);
 });
 
 test('lähdekentän apurit tulkitsevat lähteet oikein', () => {
@@ -2968,14 +3068,14 @@ test('Euroopan pulmadata on ehjä', () => {
     assert.ok(p.selite && p.selite.length > 20, `pulmalta ${p.id} puuttuu selite`);
     assert.ok(p.q && p.q.length > 20, `pulman ${p.id} kysymys on liian lyhyt`);
     assert.ok(p.fact && p.fact.length > 40, `pulmalta ${p.id} puuttuu selitys`);
-    assert.equal(typeof p.generate, 'function', `pulmalta ${p.id} puuttuu generate`);
+    assert.equal(typeof pulmanGeneraattori(p), 'function', `pulmalta ${p.id} puuttuu generaattori`);
     checkSources(p.source, `pulma "${p.id}"`);
     kaupungit.push(p.city);
     // Arvonta tuottaa aina neljä eri vaihtoehtoa ja kelvollisen vastauksen,
     // eri siemenillä (numerot ja ajat vaihtelevat generaattorissa).
     for (const siemen of [1, 7, 42, 128, 999]) {
       const rng = mulberry32(siemen);
-      const arvottu = p.generate(rng);
+      const arvottu = pulmanGeneraattori(p)(rng);
       assert.equal(arvottu.options.length, 4, `pulman ${p.id} arvonta ei anna neljää vaihtoehtoa`);
       assert.equal(new Set(arvottu.options).size, 4, `pulman ${p.id} arvonnassa on kaksi samaa vaihtoehtoa (siemen ${siemen})`);
       assert.ok(
@@ -3437,10 +3537,10 @@ test('jokaisella pulmalla ja variantilla on vihje ja selite', () => {
   for (const p of packById('africa').puzzles) {
     assert.ok(typeof p.selite === 'string' && p.selite.length > 20, `${p.id}: selite puuttuu`);
     assert.ok(typeof p.hint === 'string' && p.hint.length > 10, `${p.id}: vihje puuttuu`);
-    if (!p.generate) continue;
+    if (!p.generaattori) continue;
     // Kaikilla arvotuilla varianteilla on oma tai peritty vihje.
     for (let i = 0; i < 30; i++) {
-      const arvottu = p.generate(mulberry32(1000 + i));
+      const arvottu = pulmanGeneraattori(p)(mulberry32(1000 + i));
       const hint = arvottu?.hint ?? p.hint;
       assert.ok(typeof hint === 'string' && hint.length > 10, `${p.id}: variantin vihje puuttuu`);
     }
@@ -3543,8 +3643,8 @@ function seedRng(seed) {
 
 test('arvonta on siemenellä deterministinen', () => {
   for (const p of packById('africa').puzzles) {
-    const a = p.generate(seedRng(42));
-    const b = p.generate(seedRng(42));
+    const a = pulmanGeneraattori(p)(seedRng(42));
+    const b = pulmanGeneraattori(p)(seedRng(42));
     assert.deepEqual(a, b, `${p.id}: sama siemen antoi eri pulman`);
   }
 });
@@ -3552,7 +3652,7 @@ test('arvonta on siemenellä deterministinen', () => {
 test('arvonta tuottaa aina neljä uniikkia vaihtoehtoa ja kelvollisen indeksin', () => {
   for (const p of packById('africa').puzzles) {
     for (let seed = 1; seed <= 100; seed++) {
-      const r = p.generate(seedRng(seed));
+      const r = pulmanGeneraattori(p)(seedRng(seed));
       assert.equal(r.options.length, 4, `${p.id} siemen ${seed}: väärä määrä vaihtoehtoja`);
       assert.equal(new Set(r.options).size, 4, `${p.id} siemen ${seed}: kaksi samaa vaihtoehtoa`);
       assert.ok(
@@ -3568,7 +3668,7 @@ test('variointi todella varioi', () => {
   for (const p of packById('africa').puzzles) {
     const nahdyt = new Set();
     for (let seed = 1; seed <= 10; seed++) {
-      const r = p.generate(seedRng(seed));
+      const r = pulmanGeneraattori(p)(seedRng(seed));
       nahdyt.add(JSON.stringify([r.sketch, r.options[r.correct]]));
     }
     assert.ok(nahdyt.size >= 2, `${p.id}: kymmenellä siemenellä vain ${nahdyt.size} erilaista`);
@@ -3578,7 +3678,7 @@ test('variointi todella varioi', () => {
 test('hieroglyfiluvut pysyvät piirtorajoissa ja vastaus on oikein', () => {
   const p = packById('africa').puzzles.find((x) => x.id === 'hieroglyfit');
   for (let seed = 1; seed <= 100; seed++) {
-    const { sketch, options, correct } = p.generate(seedRng(seed));
+    const { sketch, options, correct } = pulmanGeneraattori(p)(seedRng(seed));
     const rivit = [...sketch.esimerkit, sketch.kysytty];
     for (const r of rivit) {
       assert.equal(r.length, 3);
@@ -3601,7 +3701,7 @@ test('hieroglyfiluvut pysyvät piirtorajoissa ja vastaus on oikein', () => {
 test('vaaka on tasapainossa vain oikealla vastauksella', () => {
   const p = packById('africa').puzzles.find((x) => x.id === 'punnukset');
   for (let seed = 1; seed <= 100; seed++) {
-    const { sketch, options, correct } = p.generate(seedRng(seed));
+    const { sketch, options, correct } = pulmanGeneraattori(p)(seedRng(seed));
     const vasenPuoli = sketch.kulta + sketch.vasen;
     const oikeaPuoli = sketch.oikea[0] + sketch.oikea[1];
     // Täsmälleen yksi vaihtoehto tasapainottaa vaa'an.
@@ -3643,7 +3743,7 @@ test('leilipulman oikea sarja tuottaa tavoitteen eivätkä väärät', () => {
   const p = packById('africa').puzzles.find((x) => x.id === 'vesileilit');
   const testatut = new Set();
   for (let seed = 1; seed <= 60; seed++) {
-    const { sketch, options, correct } = p.generate(seedRng(seed));
+    const { sketch, options, correct } = pulmanGeneraattori(p)(seedRng(seed));
     if (testatut.has(sketch.tavoite)) continue;
     testatut.add(sketch.tavoite);
 
@@ -3667,7 +3767,7 @@ test('leilipulman oikea sarja tuottaa tavoitteen eivätkä väärät', () => {
 test('kuunvaiheiden sarja jatkuu oikein', () => {
   const p = packById('africa').puzzles.find((x) => x.id === 'kuunvaiheet');
   for (let seed = 1; seed <= 100; seed++) {
-    const { sketch, options, correct } = p.generate(seedRng(seed));
+    const { sketch, options, correct } = pulmanGeneraattori(p)(seedRng(seed));
     assert.equal(sketch.sarja.length, 3);
     for (const k of sketch.sarja) {
       assert.ok(k.v >= 0 && k.v <= 1, `siemen ${seed}: valaistus ${k.v} rajojen ulkoa`);
@@ -3897,16 +3997,63 @@ test('päiväkirjalla on kaksi kokoa: koko merkintä ja yhden rivin lappu', () =
   assert.doesNotMatch(saannot, /\.fact-teksti-rivi \.fact-text \{[^}]*max-height/,
     'merkinnän tekstiin on palannut rivikatto');
 
-  // Kartan napautus kutistaa kortin yhden rivin lapuksi.
-  assert.match(ui, /mapPane\.addEventListener\('click', \(\) => this\.asetaPaivakirjanKoko\(true\)\)/,
+  // Kartan napautus kutistaa kortin yhden rivin lapuksi — luennan
+  // aikana saman mekanismin kautta, joka nostaa kortin takaisin auki
+  // (ks. tests/paivakirjan-palautus.test.mjs). Kartan päällä kelluvan
+  // kuvapakan napautus EI ole kartan napautus (omistaja 10.9.2026).
+  assert.match(ui, /mapPane\.addEventListener\('click', \(tapahtuma\) => \{/,
     'kartan napautus ei kutista päiväkirjaa yhdelle riville');
+  assert.match(ui, /if \(tapahtuma\.target\?\.closest\?\.\(KUVAPAKAN_PINNAT\)\) return;/,
+    'kuvapakan napautus kutistaa matkakirjakortin');
 
   // Uusi merkintä avaa kortin: avain vaihdetaan vain uusiFactKeyssä.
   assert.equal((ui.match(/this\.factKey = key;/g) ?? []).length, 1,
     'factKey asetetaan uusiFactKeyn ohi, jolloin kortti voisi jäädä lapuksi');
-  const uusi = ui.match(/uusiFactKey\(key\) \{[^}]*\}/)?.[0] ?? '';
-  assert.match(uusi, /asetaPaivakirjanKoko\(false\)/,
-    `uusi merkintä ei avaa korttia: ${uusi}`);
+  /*
+   * PUHELIN ON POIKKEUS (omistaja 14.9.2026, Raamattu "IPHONE: ISOISAN
+   * JA PULUN TEKSTIT PIILOON": *"Iphonella voisi piilottaa isoisan ja
+   * pulun tekstit."*). Sääntö "uusi merkintä avaa kortin" on yhä
+   * voimassa TYÖPÖYDÄLLÄ, mutta puhelimen kokoisella ruudulla kortti
+   * peitti juuri sen kuvan, jota merkintä kuvailee (mitattu 390 × 844:
+   * 340 × 195 px eli 87 % leveydestä). Koko päätetään siis
+   * puhelintunnistuksesta (js/ui.js puhelinTila), ei kiinteästä
+   * epätodesta — ja teksti on yhä yhden napautuksen päässä, koska
+   * lappu on painike.
+   *
+   * LUENTA ON TOINEN POIKKEUS (omistaja 15.9.2026, Raamattu "TEKSTIT
+   * PIILOON KAIKILLA LAITTEILLA"): luennan aikana merkintä on lappuna
+   * KAIKILLA laitteilla, jotta kuva ja kuvateksti näkyvät. Molemmat
+   * syyt ovat saman portin takana (js/ui-apurit.js tekstitPiilossa =
+   * puhelin TAI kertojan luenta), joten vartio seuraa sitä porttia —
+   * kiinteä epätosi ja ruutukokoehto ovat yhä kiellettyjä.
+   */
+  const uusi = ui.match(/uusiFactKey\(key\) \{[\s\S]*?\n  \}/)?.[0] ?? '';
+  assert.match(uusi, /asetaPaivakirjanKoko\(tekstitPiilossa\(\)\)/,
+    `uusi merkintä ei aseta kortin kokoa tekstipiilon portista: ${uusi}`);
+  /*
+   * RAJA SIIRTYI ui-apureihin (v1892). Myös js/pollo.js tarvitsee sen
+   * (puhelimella puhekuplat imeytyvät heti pluskuplaan), eikä pollo saa
+   * tuoda ui.js:ää — ui tuo pollon. Vartio seuraa nimeä sinne, missä se
+   * asuu, ja vaatii yhä että määritys on VAIN yhdessä paikassa.
+   */
+  const apurit = readFileSync(new URL('../js/ui-apurit.js', import.meta.url), 'utf8');
+  assert.match(apurit, /export const PUHELIN_KYSELY = '\(max-width: 699px\), \(max-height: 520px\)';/,
+    'puhelintunnistus ei ole yhdessä nimetyssä paikassa (js/ui-apurit.js PUHELIN_KYSELY)');
+  assert.doesNotMatch(ui, /const PUHELIN_KYSELY =/,
+    'puhelinraja on kirjoitettu toiseen kertaan js/ui.js:ään');
+  /*
+   * LUENNAN TEKSTIPIILO ON YHTÄ LAILLA YHDESSÄ PAIKASSA (15.9.2026):
+   * portti on ui-apureissa, sen ehto luetaan bodyn luokasta, jonka
+   * luentavahti kirjoittaa — ei ruudun koosta. Näin sekä js/ui.js että
+   * js/pollo.js kysyvät samaa porttia.
+   */
+  assert.match(apurit, /export const LUENNAN_TEKSTIPIILO = 'luenta-tekstit-piiloon';/,
+    'luennan tekstipiilon luokka ei ole yhdessä nimetyssä paikassa (js/ui-apurit.js)');
+  assert.match(apurit, /export function tekstitPiilossa\(\) \{\s*return puhelinTila\(\) \|\| luennanTekstipiilo\(\);/,
+    'tekstitPiilossa ei ole puhelin TAI luenta -portti (js/ui-apurit.js)');
+  const pollo = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  assert.match(pollo, /if \(tekstitPiilossa\(\) && puhelimenLaji/,
+    'pulun kupla ei kysy tekstipiilon porttia (js/pollo.js lisaaPinoon)');
 
   // Katto on oltava: ilman sitä pitkä merkintä peittäisi koko kartan,
   // eikä pelaaja näkisi mihin napauttaa kutistaakseen sen.
@@ -3989,7 +4136,15 @@ test('luennan loppuhäivytys ei niele viimeistä sanaa', () => {
   assert.ok(hiljaisuus <= 0.06, 'hiljaisuus on niin pitkä että siihen mahtuu tavu');
   assert.ok(loppu > hiljaisuus * 2, 'häivytykselle ei jää matkaa hiljaisuuden päälle');
 
-  const pehmea = ui.slice(ui.indexOf('function pehmeaLoppu('), ui.indexOf('function pehmeaLoppu(') + 2000);
+  /*
+   * Rajaus funktion LOPPUUN eikä kiinteään merkkimäärään: 2000 merkin
+   * ikkuna katkesi kesken, kun funktioon lisättiin perustelukommentti,
+   * ja portti kaatui vaikka koodi oli oikein. Funktion oma loppu on
+   * sekä tarkempi että kestävämpi raja.
+   */
+  const pehmeaAlku = ui.indexOf('function pehmeaLoppu(');
+  assert.ok(pehmeaAlku > 0, 'pehmeaLoppu on kadonnut');
+  const pehmea = ui.slice(pehmeaAlku, ui.indexOf('\n}\n', pehmeaAlku));
   assert.match(pehmea, /LOPUN_HILJAISUUS_S/, 'pysäytys ei odota hiljaisuutta');
   assert.match(pehmea, /LOPUN_HAIPYMA_S/, 'loppu käyttää väärää häivytystä');
 });
@@ -4181,13 +4336,32 @@ test('porraszoomaus toimii kaikilla laudoilla ja ruuduilla', () => {
   // Zoomatessa keskipiste luetaan ennen tason vaihtoa, muuten kartta
   // hyppäisi laudan keskelle joka painalluksella.
   assert.match(funktio, /nykyinenKeskipiste\(\)/);
-  // Skaala tulee portaikosta eikä kiinteästä vakiosta. Kiertävällä
-  // kartalla se kulkee vielä rajaaSkaalan läpi, jottei maailma mahtuisi
-  // ruudulle kahdesti — mutta portaikko on yhä lähde, ja se on tämän
-  // testin asia.
+  // Skaala tulee portaikosta eikä kiinteästä vakiosta.
   assert.match(ui, /yleiskuva \* this\.zoomiKerroin/);
-  assert.match(ui, /rajaaSkaala\(yleiskuva \* this\.zoomiKerroin/,
-    'kiertävän kartan loitonnusraja puuttuu lähikuvasta');
+  /*
+   * SAUMAVARA EI ENÄÄ NOSTA LÄHIKUVAN MITTAKAAVAA (2.9.2026).
+   *
+   * Tässä vaadittiin ennen `rajaaSkaala(yleiskuva * this.zoomiKerroin`,
+   * eli kiertävällä kartalla mittakaava nostettiin arvoon
+   * paneeli / (lauta x 0,97) — kolme prosenttia yli sen, mihin lauta
+   * juuri mahtuu. Omistaja 2.9.2026: *"Jos ruutu on vaakamuotoinen,
+   * niin silloin pitäisi pystyä zoomaamaan ulos niin paljon, että
+   * kartta näkyy kokonaisena. nyt jostain syystä yläosa hyppää
+   * näkymättömiin."* — juuri tuo nosto vei vaakaruudulla laudan ylä-
+   * ja alareunan ruudun ulkopuolelle.
+   *
+   * Kaksoiskuvan estää nyt leikkaus eikä mittakaava: kun näkymä on
+   * lautaa leveämpi, kierron kopio piilotetaan ja lauta leikataan
+   * arkin levyiseksi (paivitaLaudanKierto + css .lauta-kokonaan).
+   * Mitattu ja vartioitu tools/savukkeet/savuke-uloin-zoomi.mjs.
+   */
+  assert.doesNotMatch(ui, /rajaaSkaala\(yleiskuva \* this\.zoomiKerroin/,
+    'saumavara nostaa taas lähikuvan mittakaavaa — lauta ei mahdu ruudulle');
+  assert.match(ui, /this\.paivitaLaudanKierto\(paneW \/ skaala\)/,
+    'lähikuva ei enää kerro, mahtuuko lauta kokonaan ruudulle');
+  // Uloin zoomi (kerroin 1) on koko laudan sovitus pienellä varalla.
+  assert.match(ui, /Math\.min\(paneW \/ box\.w, paneH \/ box\.h\) \* KOKOLAUDAN_VARA/,
+    'yleiskuvan mittakaava ei ole enää koko laudan sovitus');
 });
 
 test('maailmankartta: sauman yli kulkeva reitti piirtyy yhtenäisenä', () => {
@@ -4233,11 +4407,26 @@ test('yhdistetyt laudat ovat kaikissa sisältötauluissa', () => {
     assert.ok(osuma, `${nimi} ei löydy`);
     return new Set([...osuma[1].matchAll(/^\s{2}([a-z]+):/gm)].map((m) => m[1]));
   };
-  const perus = laudat('SAAPUMISTEKSTIT');
-  for (const nimi of ['KULTTUURIT', 'VALOKUVAT', 'MAATIEDOT']) {
+  const perus = laudat('KULTTUURIT');
+  for (const nimi of ['VALOKUVAT', 'MAATIEDOT']) {
     assert.deepEqual([...laudat(nimi)].sort(), [...perus].sort(),
-      `${nimi} ja SAAPUMISTEKSTIT eivät kata samoja lautoja`);
+      `${nimi} ja KULTTUURIT eivät kata samoja lautoja`);
   }
+  /*
+   * SAAPUMISTEKSTIT ON SAMA JOUKKO MIINUS EUROOPPA (8.9.2026).
+   *
+   * Omistajan linjaus (Raamattu: KOKO EUROOPPA KULKEE
+   * FOKUSVIRTAPAKKIEN KAUTTA) arkistoi Euroopan saapumistaulun pois
+   * pelistä, joten `europe`-rivi POISTETTIIN tästä yhdestä taulusta
+   * tarkoituksella — muissa se on yhä. Poikkeus on kirjattu tähän
+   * nimeltä, jottei se peitä alkuperäistä ansaa: uusi yhdistetty lauta
+   * on yhä lisättävä jokaiseen tauluun, ja tämä testi kaatuu jos se
+   * unohtuu.
+   */
+  const saapumiset = laudat('SAAPUMISTEKSTIT');
+  assert.deepEqual([...saapumiset].sort(), [...perus].filter((l) => l !== 'europe').sort(),
+    'SAAPUMISTEKSTIT kattaa muut laudat paitsi arkistoidun Euroopan');
+  assert.ok(saapumiset.has('maailmankartta'), 'maailmankartta puuttuu sisältötauluista');
   assert.ok(perus.has('maailmankartta'), 'maailmankartta puuttuu sisältötauluista');
 });
 
@@ -4447,6 +4636,60 @@ test('bittikartta ladataan vain sormen irrotessa, ei kesken eleen', () => {
   assert.match(ui, /rasteroiRuutu\(/, 'ruutuja ei rasteroida erikseen');
 });
 
+test('maatummennus on purettu: pelkkä ääriviiva, ei kytkintä', () => {
+  /*
+   * Omistaja 2.9.2026, sanatarkasti: *"Tummennuksen voisi ottaa pois
+   * myös normaalista pelitilasta. Jätetään pelkkä vahvistettu kartan
+   * ääriviiva jäljelle."* ja saman päivän tarkennus: *"kehittäjätilassa
+   * ota pois se tummennusvalinta ja pidä pelkkä kartan ääriviivojen
+   * tummennus aina päällä. Eli tämä on oletus kummassakin tilassa."*
+   *
+   * Purku kulkee viiden tiedoston läpi (kytkinrivi, muisti, kytkentä,
+   * piirtäjä, ajonaikainen nollaus), ja jokainen niistä toimii yksinään
+   * ilman muita — palautunut varjo tai unohtunut kytkin näkyisi vain
+   * ruudulla. Siksi vartija tarkistaa jokaisen lenkin erikseen.
+   */
+  const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const main = readFileSync(new URL('../js/main.js', import.meta.url), 'utf8');
+  const apurit = readFileSync(new URL('../js/ui-apurit.js', import.meta.url), 'utf8');
+  const tumma = readFileSync(new URL('../js/maatummennus.js', import.meta.url), 'utf8');
+  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+
+  // 1. Kytkinriviä ei ole enää kehittäjän valikossa eikä kuuntelijaa.
+  assert.ok(!/kehittaja-tummennus-btn/.test(html),
+    'tummennuskytkin on yhä kehittäjän valikossa');
+  assert.ok(!/tummennusNappi/.test(main), 'tummennusnapin kuuntelija on yhä pystyssä');
+
+  // 2. Muisti purettu, ja laitteelle jäänyt vanha avain siivotaan.
+  assert.ok(!/kehittajaTummennusPaalla|asetaKehittajaTummennus/.test(apurit),
+    'kytkimen muistifunktiot ovat yhä olemassa');
+  assert.match(
+    apurit.match(/const KORVATUT_KEHITTAJA_AVAIMET = \[[\s\S]*?\];/)?.[0] ?? '',
+    /'matkakirja-kehittaja-tummennus'/,
+    'vanhaa tummennusavainta ei siivota laitteelta',
+  );
+
+  // 3. Piirtäjä ei enää maalaa yhtään pintaa: ei varjopolkua, ei
+  //    musteen voimakkuutta, ei kytkinehtoa näkyvyydessä.
+  // Määrittelyt, ei maininnat: tiedoston alku KERTOO mikä purettiin.
+  assert.ok(!/function muidenPolku|const TUMMENNUS_MUSTE|const TUMMENNUS_VOIMA/.test(tumma),
+    'naapurimaiden varjo on yhä piirtäjässä');
+  assert.ok(!/kehittajaTummennusPaalla/.test(tumma),
+    'näkyvyysehto lukee yhä poistettua kytkintä');
+  const piirra = tumma.match(/function piirra\(ui, data, tila\) \{[\s\S]*?\n\}/)?.[0] ?? '';
+  assert.match(piirra, /maatummennus-viiva/, 'ääriviiva ei enää piirry');
+  assert.ok(!/setAttribute\('fill'/.test(piirra), 'kerros maalaa yhä täyttöä');
+
+  // 4. Ajonaikainen kytkimen tahdistin on poistettu ui:sta.
+  assert.ok(!/paivitaKehittajaTummennus/.test(ui),
+    'kytkimen tahdistin on yhä ui:ssa');
+
+  // 5. Tyylit: viiva on tallella, varjon oma luokka poissa.
+  assert.match(css, /\.maatummennus-viiva \{/, 'ääriviivan tyyli puuttuu');
+  assert.ok(!/\.maatummennus-varjo/.test(css), 'varjon tyyli on yhä olemassa');
+});
+
 test('kartan kerroksilla ei ole suodattimia, ja viittaukset osuvat', () => {
   const art = readFileSync(new URL('../js/mapart.js', import.meta.url), 'utf8');
   const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
@@ -4580,7 +4823,7 @@ test('pelaajalle näkyvässä tekstissä ei ole tähti-sanastoa eikä pääaarre
     const tekstit = [
       pack.texts?.intro, pack.texts?.starToast, pack.texts?.starChase,
       pack.texts?.winStar,
-      pack.texts?.starFound?.('A', 'B'), pack.texts?.winnerStar?.('A', 1),
+      pack.texts?.starFound, pack.texts?.winnerStar,
       ...Object.values(pack.tokenTypes ?? {}).map((t) => t?.name),
     ].filter((t) => typeof t === 'string');
     for (const teksti of tekstit) {
@@ -4979,8 +5222,9 @@ test('karusellin ikkuna ei jää kuvaa korkeammaksi kellukkeen vieressä', () =>
  * KARUSELLINUOLTEN LAITALIUKUVÄRI POIS KAIKKIALTA.
  *
  * Omistajan tilaus 17.8.2026 Firenzen lehden etusivun kaappauksesta:
- * *"Ota pois kaikkialta karuselleista"*. Nuolialue on 32 % kuvan
- * leveydestä ja koko kuvan korkuinen, joten liukuväri tummensi kuvan
+ * *"Ota pois kaikkialta karuselleista"*. Nuolialue on kuvan reunakaista
+ * (--gallerian-reunakaista; 17.8.2026 se oli 32 %, 9.9.2026 alkaen
+ * 24 %) ja koko kuvan korkuinen, joten liukuväri tummensi kuvan
  * molemmat laidat ylhäältä alas. Kaikki karusellit (lehden kansikuva
  * ja nostogalleria, nähtävyysjutut, opas) käyttävät samaa luokkaa,
  * joten yksi sääntöjoukko ratkaisee ne kaikki — ja yksi testi vartioi.

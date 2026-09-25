@@ -142,60 +142,128 @@ export const FOKUSVIRTA_BERGEN = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan. */
-    paikkarivi: 'Bergen, kesäkuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Sataa. Kirjoitan tämän kapakan ikkunapöydässä, koska laiturilla '
-      + 'ei pysy paperi kuivana. Saksalaisten vanha kauppalaituri seisoo yhä, '
-      + 'puutalot kylki kyljessä kuin sillit tynnyrissä — ja silliltä täällä '
-      + 'myös tuoksuu, sillä kapakala on tämän kaupungin kulta. Sitä riippuu '
-      + 'telineillä tuhansittain, kuivana ja kovana kuin lauta, ja sillä on '
-      + 'ostettu nämä talot, kirkot ja puolet Norjan purjeista.',
+    /* Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-bergen-i1-r20260914-tarina-v1.jpg',
+      lyhyt: 'Bergen, 1873. Opas ja kuula tuomiokirkolla.',
+      selite: 'Opas odottaa Bergenin tuomiokirkon seinään kiinnitetyn kuulan alapuolella. Kuulan kiinnityksen ajankohtaa ei tunneta.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://tohundrefortellinger.w.uib.no/1966/06/20/2017-kanonkule/',
+      ],
+    },
+    luentakuva2: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-bergen-i2-r20260914-tarina-v1.jpg',
+      lyhyt: 'Bergen, 1873. Pieni kuula korkealla kiviseinässä.',
+      selite: 'Rautakuula on kiinnitetty tuomiokirkon kiviseinän syvennykseen. Perimätieto yhdistää sen Vågenin meritaisteluun vuonna 1665, mutta kiinnityksen ajankohtaa ei tunneta.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://tohundrefortellinger.w.uib.no/1966/06/20/2017-kanonkule/',
+      ],
+    },
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Bergen, kesäkuussa 1873. Sadetta aamusta iltaan; puntari '
+      + 'matalalla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 310 merkkiä (yläraja 400). */
+    teksti: "Bergenin tuomiokirkon seinässä törrötti tykinkuula. Englannin laivasto oli yrittänyt ryöstää sataman hollantilaislaivat parisataa vuotta sitten. Mainitsin oppaalle palvelleeni laivastossa. Hän katsoi minua, sitten kuulaa. Vakuutin, että minulla oli mukana vain lyijykynä.",
     /*
      * LUENTA = sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi): kolme tagia, alku ja loppu eri sävyssä.
      */
-    luenta: '[softly] Sataa. Kirjoitan tämän kapakan ikkunapöydässä, koska '
-      + 'laiturilla ei pysy paperi kuivana. [curious] Saksalaisten vanha '
-      + 'kauppalaituri seisoo yhä, puutalot kylki kyljessä kuin sillit '
-      + 'tynnyrissä — ja silliltä täällä myös tuoksuu, sillä kapakala on '
-      + 'tämän kaupungin kulta. [warmly] Sitä riippuu telineillä '
-      + 'tuhansittain, kuivana ja kovana kuin lauta, ja sillä on ostettu '
-      + 'nämä talot, kirkot ja puolet Norjan purjeista.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: Bryggenin puutalojen kuvaus (asetelma).
+     */
+    reaktiot: [
+  {
+    "id": "bergen.r1",
+    "ankkuri": "seinässä törrötti tykinkuula",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "bergen.r2",
+    "ankkuri": "yrittänyt ryöstää sataman hollantilaislaivat",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "bergen.r3",
+    "ankkuri": "palvelleeni laivastossa",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "bergen.r4",
+    "ankkuri": "Hän katsoi minua, sitten kuulaa",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "bergen.r5",
+    "ankkuri": "mukana vain lyijykynä",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Bergenin tuomiokirkon seinässä törrötti tykinkuula. Englannin laivasto oli yrittänyt ryöstää sataman hollantilaislaivat parisataa vuotta sitten. Mainitsin oppaalle palvelleeni laivastossa. [softly] Hän katsoi minua, sitten kuulaa. Vakuutin, että minulla oli mukana vain lyijykynä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-bergen.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden avauskuva) ----- */
   pollo: {
     /*
-     * LIVIAN MAADOITUS — NALJAILUOTE (Raamattu, "LIVIA AIKASIIRTYMÄN
-     * VÄLITTÄJÄNÄ — PARIPERIAATE"). Merkintä on kevyt ja arkinen — sade,
-     * kapakan ikkunapöytä, märkä paperi — joten pariperiaate sallii
-     * naljailun eikä vaadi pehmennystä. Piikki osoittaa isoisään, kuten
-     * kuuluu: hän haistoi sillin siellä, missä telineillä riippui turskaa.
-     *
-     * FAKTAKURI: yksi väite, kaksi lähdettä. Sana "torsk" tulee
-     * muinaisnorjan muodosta turskr, joka on lyhentymä sanasta turrfiskr,
-     * "kuiva kala" — no-Wikipedia "Tørrfisk", johdanto (*"ordet «torsk»
-     * kommer av det gammelnorske turskr som betyr turrfiskr «tørrfisk»"*),
-     * ja sama etymologia en-Wikipedian "Stockfish"-artikkelin
-     * Etymology-osiossa, joka johtaa myös sanan stockfish kuivaustelineen
-     * puihin. Tarkistettu 29.8.2026. Kapakala tehdään turskasta —
-     * en-Wikipedia "Stockfish", johdanto; fi-Wikipedia "Kapakala".
-     *
-     * MIKSI ETYMOLOGIA EIKÄ KAUPPA: oppitunti kertoo kapakalan kaupan ja
-     * kuivauksen, eikä maadoitus saa syödä sitä etukäteen. Tähän jää siis
-     * vain se, mikä on isoisän oman virheen vastaus.
-     *
-     * PUHEKIELIPASSI: lyhentymät vain reunoilla ("No niin", "Mut"),
-     * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json
      */
-    maadoitus: 'No niin, sataa. Siitä yhdestä asiasta täällä ollaan aina '
-      + 'oltu samaa mieltä.. Mut se haju ei ollut silliä. Telineillä '
-      + 'riippuva kala on turskaa, ja koko kala on nimetty sen mukaan mitä '
-      + 'sille tehdään: sana torsk tulee muinaisnorjan sanasta turskr, joka '
-      + 'on lyhentynyt sanasta turrfiskr, kuiva kala. Isoisäsi haistoi siis '
-      + 'oikean rikkauden ja väärän kalan. Se on hänelle aika hyvä tulos.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bergen-p1-r20260914-tarina-v1.jpg',
+        lyhyt: 'Bergen: rumpujoukon tahdissa kadunrajasta.',
+        selite: 'Lasten ja nuorten rumpujoukko marssii kuvaavien katsojien ohi. Bergenin buekorps-perinne on jatkunut 1800-luvun puolivälistä.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/the-living-tradition-of-buekorps-bergen',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bergen-p2-r20260914-tarina-v1.jpg',
+        lyhyt: 'Bergen: nuori johtaja tarkistaa rumpujoukon järjestystä.',
+        selite: 'Nuorempien soittajien muodostelma näkyy matalalta ikkunalaudalta. Joukon johtaja kulkee rivien edessä ja pitää tahdin.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/the-living-tradition-of-buekorps-bergen',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Bergenissä lapsilla ja nuorilla on omat rumpujoukot. Johtajansakin he valitsevat itse! Liityin marssimaan perään rinta pystyssä. Kadunvarren ihmiset kuvasivat meitä. Meitä! Pidin siivet visusti kyljissä. En aikonut pilata muodostelmaa."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'miettiva', voimakkuus: 0.45 },
     /* KAANON (Fable) — kuplateksti sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Bergenissä sataa noin puolet vuoden päivistä, joten isoisäsi '
       + 'osui tavalliseen päivään.. Se kauppalaituri on yhä pystyssä, '
@@ -286,6 +354,9 @@ export const FOKUSVIRTA_BERGEN = {
         + 'viikinkilaivojen keulassa, ja puu on suojattu tervaamalla — '
         + 'siitä tulee sen musta väri. Keskiajalla tällaisia kirkkoja oli '
         + 'Norjassa yli tuhat. Nyt niitä on 28.',
+      lahde: 'en-Wikipedia "Borgund Stave Church" ja en-Wikipedia "Stave '
+        + 'church"; pelin oma tarkistettu aineisto js/packs/maa-kategoriat.js '
+        + '(NOR/historia). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto NOR/historia,
        * js/packs/maa-kategoriat.js) — siis jo kertaalleen tarkistettu ja
@@ -298,6 +369,7 @@ export const FOKUSVIRTA_BERGEN = {
        */
       kuva: {
         tiedosto: 'Borgund Stave Church in Lærdalen, 2013 June.jpg',
+        lyhyt: 'Borgundin sauvakirkko rakennettiin noin 1200 seurakuntakirkoksi ja toimi sellaisena vuoteen 1868.',
         selite: 'Borgundin sauvakirkko rakennettiin noin vuonna 1200 kylän '
           + 'seurakuntakirkoksi, ja se toimi sellaisena vuoteen 1868.',
         lahde: 'Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 3.0)',
@@ -366,6 +438,8 @@ export const FOKUSVIRTA_BERGEN = {
         + 'sitä ei kannata mennä koettelemaan: retkeilijöitä kehotetaan '
         + 'pysymään kahdensadan metrin päässä, koska eläin on rauhallinen '
         + 'mutta nopea suuttumaan.',
+      lahde: 'en-Wikipedia "Muskox"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (NOR/luonto). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto NOR/luonto).
        * Commons 29.8.2026: 4322×2882, CC BY-SA 4.0, Charles J. Sharp,
@@ -376,6 +450,7 @@ export const FOKUSVIRTA_BERGEN = {
        */
       kuva: {
         tiedosto: 'Muskox (Ovibos moschatus) male Dovrefjell 1.jpg',
+        lyhyt: 'Myskihärkä on paksuturkkinen arktinen sorkkaeläin; inuktitutiksi nimi tarkoittaa parrakasta.',
         selite: 'Myskihärkä on arktinen sorkkaeläin, joka tunnetaan '
           + 'paksusta turkistaan; inuktitutiksi sen nimi tarkoittaa '
           + 'parrakasta.',
@@ -452,6 +527,8 @@ export const FOKUSVIRTA_BERGEN = {
         + 'Blomberg, ja niitä on kunnostettu talkoilla. Vastarannoilla '
         + 'putoaa kaksi koskea vastakkain: Seitsemän sisarta ja sitä vastapäätä '
         + 'Kosija, jonka sanotaan kosiskelevan sisaria siinä onnistumatta.',
+      lahde: 'en-Wikipedia "Geirangerfjord"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (NOR/luonto). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto NOR/luonto).
        * Commons 29.8.2026: 6520×3660, CC BY-SA 3.0, Ximonic (Simo
@@ -462,6 +539,7 @@ export const FOKUSVIRTA_BERGEN = {
        */
       kuva: {
         tiedosto: 'Geirangerfjord from Ørnesvingen, 2013 June.jpg',
+        lyhyt: 'Geirangervuono on 15 km pitkä Sunnylvsfjordenin haara Møre og Romsdalissa, pohjukassa Geiranger.',
         selite: 'Geirangervuono on 15 kilometrin pituinen '
           + 'Sunnylvsfjordenin haara Møre og Romsdalissa, ja sen '
           + 'pohjukassa on Geirangerin kylä.',
@@ -597,6 +675,7 @@ export const FOKUSVIRTA_BERGEN = {
      */
     kuva: {
       tiedosto: 'Tørrfisk.jpg',
+      lyhyt: 'Turska kuivuu hjelle-telineillä; kuvan telineet ovat Moskenesissa Lofooteilla.',
       selite: 'Turska kuivuu telineillä, joita Norjassa sanotaan '
         + 'hjelleiksi; kuvan telineet ovat Moskenesissa Lofooteilla.',
       lahde: 'Sondrekv, Wikimedia Commons (public domain)',
@@ -839,6 +918,7 @@ export const FOKUSVIRTA_BERGEN = {
        */
       kuva: {
         tiedosto: 'Amundsen Expedition at South Pole.jpg',
+        lyhyt: 'Amundsenin retkikunta etelänavalla joulukuussa 1911; kuvan otti viides mies, Olav Bjaaland.',
         selite: 'Amundsenin retkikunta etelänavalla joulukuussa 1911: '
           + 'Roald Amundsen, Helmer Hanssen, Sverre Hassel ja Oscar '
           + 'Wisting. Kuvan otti viides mies, Olav Bjaaland.',
@@ -945,6 +1025,7 @@ export const FOKUSVIRTA_BERGEN = {
        */
       kuva: {
         tiedosto: 'Ekofisk (TELE.1990-2-438).jpg',
+        lyhyt: 'Ekofiskin öljykenttä löytyi 1969, ensimmäinen öljylöytö Pohjanmerellä yli 200 koereikän jälkeen.',
         selite: 'Ekofiskin öljykenttä löydettiin 1969 Stavangerista 320 '
           + 'kilometriä lounaaseen, ja se oli ensimmäinen öljylöytö '
           + 'Pohjanmerellä yli 200 koereiän jälkeen.',

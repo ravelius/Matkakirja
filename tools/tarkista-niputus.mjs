@@ -119,13 +119,49 @@ for (const [nimi, paikat] of julistajat) {
 
 // Staattiset tuonnit (sama tapa kuin build-standalonen checkModuleList).
 const tuojat = new Map(); // polku → Set(tuotujen polut)
+const dynaamiset = new Set(); // polut, jotka joku listan moduuli tuo import():lla
 for (const polku of moduulit) {
   const kansio = dirname(polku);
   const tuodut = new Set();
-  for (const m of read(polku).matchAll(/from '(\.\.?\/[\w/-]+\.js)'/g)) {
+  const lahde = read(polku);
+  for (const m of lahde.matchAll(/from '(\.\.?\/[\w/-]+\.js)'/g)) {
     tuodut.add(join(kansio, m[1]).replaceAll('\\', '/'));
   }
+  for (const m of lahde.matchAll(/import\('(\.\.?\/[\w/-]+\.js)'\)/g)) {
+    dynaamiset.add(join(kansio, m[1]).replaceAll('\\', '/'));
+  }
   tuojat.set(polku, tuodut);
+}
+
+/*
+ * DYNAAMISESTI TUODUT, JOTKA SILTI NIPUTETAAN (laiskoituserä 5b,
+ * 5.9.2026).
+ *
+ * Sääntö 2 on olemassa NS-törmäyksen takia: listalle ei saa jäädä
+ * moduulia, jota kukaan ei tuo. Tasokartta on tietoinen poikkeus —
+ * js/ui.js tuo sen nykyään VAIN dynaamisesti (js/kartta-lataus.js), ja
+ * silti yhden tiedoston versio tarvitsee sen, koska siellä dynaaminen
+ * tuonti kaatuu ja portti lukee moduulit samasta näkyvyysalueesta
+ * (docs/moduulit/linssit.md 2.1, tools/build-standalone.mjs).
+ *
+ * Poikkeus ei voi ruostua: alla vaaditaan, että listan jokin moduuli
+ * oikeasti tuo tiedoston import():lla. Jos dynaaminen tuonti katoaa,
+ * ajo kaatuu kuten ennenkin.
+ */
+const DYNAAMISESTI_TUODUT = new Set([
+  'js/kartta.js',
+  'js/packs/maasto-tekstit.js',
+  'js/packs/maasto-tekstit-malli.js',
+  'js/packs/maailmankartta-varjostus.js',
+]);
+for (const polku of DYNAAMISESTI_TUODUT) {
+  if (!moduulit.includes(polku)) {
+    viat.push(`DYNAAMISESTI_TUODUT viittaa moduuliin ${polku}, jota ei ole MODULES-listalla `
+      + '— poista poikkeus');
+  } else if (!dynaamiset.has(polku)) {
+    viat.push(`poikkeus vanhentunut: ${polku} on DYNAAMISESTI_TUODUT-listalla, `
+      + 'mutta mikään listan moduuli ei tuo sitä import():lla');
+  }
 }
 
 // 2. Irralliset listaukset: kukaan listalla ei tuo, eikä ole
@@ -133,7 +169,7 @@ for (const polku of moduulit) {
 for (const polku of moduulit) {
   if (polku === 'js/main.js') continue;
   const tuotu = moduulit.some((toinen) => toinen !== polku && tuojat.get(toinen).has(polku));
-  if (!tuotu) {
+  if (!tuotu && !DYNAAMISESTI_TUODUT.has(polku)) {
     viat.push(`irrallinen listaus: ${polku} — mikään listan moduuli ei tuo sitä `
       + '(jos poisjättö niputuksesta on tarkoitus, poista listalta ja kirjaa '
       + 'tests/sw.test.mjs:n NIPUTTAMATTOMAT-listaan)');

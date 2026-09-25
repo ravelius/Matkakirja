@@ -46,7 +46,10 @@
  * aina samaa mieltä siitä, onko kohtaaminen auki.
  */
 import { el, maare } from './mapart.js';
-import { avaaFokusKohtaaminen, fokusvirtaKohtaamispiste } from './fokusvirta.js';
+import {
+  avaaFokusKohtaaminen, fokusvirtaAarrepisteLukko, fokusvirtaAarrepisteOhje,
+  fokusvirtaKohtaamispiste,
+} from './fokusvirta.js';
 import { sfx } from './sound.js';
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */
@@ -88,6 +91,114 @@ const PISTE_ERO_MIN = 14;
 const PISTE_SIIRTO_X = 14;
 const PISTE_SIIRTO_Y = -10;
 
+/**
+ * PIIRRETYN PISTEEN SIVUSIIRTO laudan yksiköissä — YKSI SÄÄNTÖ MOLEMMILLE
+ * LAUDOILLE (omistaja 6.9.2026 ilta, iPhone, sanatarkasti: *"aarteen
+ * piste syttyy liian lähelle ateenaa, ei pysty painamaan"* ja *"sama
+ * ongelma myös sofiassa"*). Tasokartalla piste on siirretty laatan
+ * vierestä koilliseen 26.8.2026 lähtien (ks. yllä); karttapallo
+ * (js/pallolauta/nostot.js) piirsi sen datan koordinaatteihin eli
+ * täsmälleen nappulan jalkaan, ja pallon osumatesti (lähin merkki,
+ * js/pallolauta/lauta.js lahinMerkki) antoi tasapelin kaupungille.
+ * Siirto lasketaan nyt täällä ja pallo kysyy sen samasta funktiosta:
+ * etäisyys mitataan kaupungin keskipisteestä, siirto on vakio, eikä
+ * datan koordinaatteihin kosketa kummallakaan laudalla.
+ *
+ * TASOKARTAN OMA MITTA (14.9.2026). Tämä funktio jäi TASOKARTAN
+ * säännöksi: siellä laudan yksikkö on se sama yksikkö, jossa merkit
+ * piirretään, ja zoomi kertoo koko näkymän samalla kertoimella.
+ * Pallolla laudan yksikkö ei ole enää merkin mitta (ks.
+ * fokuspisteenAsteet alla), joten pallo kysyy nyt sisarfunktiota.
+ *
+ * @returns {{ x: number, y: number }} lisättävä siirto (0, 0 kaukana)
+ */
+export function fokuspisteenSiirto(city, piste) {
+  const lahella = Number.isFinite(city?.x) && Number.isFinite(city?.y)
+    && Number.isFinite(piste?.x) && Number.isFinite(piste?.y)
+    && Math.hypot(piste.x - city.x, piste.y - city.y) < PISTE_ERO_MIN;
+  return lahella ? { x: PISTE_SIIRTO_X, y: PISTE_SIIRTO_Y } : { x: 0, y: 0 };
+}
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * SAMA SÄÄNTÖ PALLOLLA — MUTTA PALLON OMASSA MITASSA (ASTEITA)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MITATTU 14.9.2026 (maailmankartta, 390 × 844 -profiili, ruutuero
+ * kaupungin PIIRRETYSTÄ pallopisteestä):
+ *
+ *   Barcelona 0,1 px · Budapest 0,2 px · Marseille 0,5 px ·
+ *   Helsinki 1,9 px  — vihreä piste on kaupungin merkin ALLA.
+ *
+ * KAKSI ERI SYYTÄ, YKSI JUURI: laudan yksikkö ei ole pallon mitta.
+ *
+ * 1. KYNNYS MITATTIIN VÄÄRÄSTÄ PISTEESTÄ. Kaupunki EI ole pallolla
+ *    laudan kohdassaan: sillä on oma pallopiste (js/pallo.js
+ *    pallonOmatPisteet, `c.pallo`), joka siirtää merkin jopa 236 km
+ *    laudan pisteestä. `fokuspisteenSiirto` vertaa kohtaamispistettä
+ *    laudan pisteeseen, joten Budapestin 32,45 laudan yksikköä
+ *    putosivat kynnyksen (14) yli — vaikka pallolla piste ja kaupunki
+ *    ovat samassa pikselissä.
+ * 2. SIIRTO OLI VAKIO LAUDAN YKSIKÖISSÄ. Pituusaste kutistuu ruudulla
+ *    kertoimella cos(lat): sama 14 yksikön siirto oli Ateenassa
+ *    22,4 px ja Helsingissä 15,3 px eli sama sääntö antoi eri
+ *    sormenvaran eri leveysasteilla.
+ *
+ * TÄMÄ ON TÄSMÄLLEEN SAMA KAAVA KUIN TURISTI-INFOLLA — EI UUTTA
+ * KEKSINTÖÄ (js/kaupunkinosto.js turistiInfonAsteet, TURISTI_INFO_*):
+ * siirto on ASTEITA, pituusaste jaetaan kosinilla (lattia napa-alueelle)
+ * ja mitta on valittu MITTAAMALLA ruudulta. Turisti-info menee
+ * kaakkoon (lon +1,5 / lat −0,75 ≈ 39 px saapumisnäkymässä),
+ * kohtaamispiste koilliseen — eri suunta, sama kaava, ei päällekkäin.
+ *
+ * MITTA ON OMISTAJAN JO HYVÄKSYMÄ ERO, EI UUSI (ks. raportti):
+ * hypot(0,26; 0,33) = 0,42° on täsmälleen se ruutuero, jonka Ateena
+ * sai vanhalla säännöllä (0,4125° = 22,4 px) ja jonka omistaja
+ * hyväksyi 6.9.2026. Nyt jokainen kaupunki saa sen — ei enemmän eikä
+ * vähemmän.
+ *
+ * KYNNYS 0,35° on sama ruutuero laudan vanhana kynnyksenä: 14 laudan
+ * yksikköä oli Ateenan leveydellä 0,33–0,36° ruutumitassa. Yli sen
+ * olevaa pistettä EI siirretä: silloin kohtaamispaikka on oikeasti
+ * muualla (Oslo 43 px, Riika 97 px) ja datan suunta on sen oma tieto.
+ */
+/** Sivusiirto pallolla asteina: koilliseen (itään ja pohjoiseen). */
+export const FOKUSPISTE_SIIRTO_AST = Object.freeze({ lon: 0.33, lat: 0.26 });
+/** Alle tämän ruutueron (astetta) piste siirretään; yli sen ei. */
+export const FOKUSPISTE_ERO_MIN_AST = 0.35;
+/** Kosinin lattia — sama kuin turisti-infolla (napa ei karkaa). */
+export const FOKUSPISTE_KOSINIRAJA = 0.25;
+/**
+ * Pisteen OMAN MUSTEEN säde ruudun pikseleinä (hehkukehä). Pallon
+ * osumatesti (js/pallolauta/lauta.js lahinMerkki) lukee tämän: sormi
+ * merkin musteen päällä tarkoittaa merkkiä, sama myönnytys kuin
+ * kaupunkipisteellä on omasta halkaisijastaan.
+ */
+export const FOKUSPISTE_MUSTE_R_PX = PISTE_HEHKU_R;
+
+/**
+ * PIIRRETYN PISTEEN PAIKKA PALLOLLA asteina. Kaupungin PIIRRETTY
+ * pallopiste sisään (sama, jonka merkki saa), kohtaamispisteen omat
+ * asteet sisään — ulos se kohta, johon merkki ja sen osuma piirretään.
+ * Datan koordinaatteihin ei kosketa täälläkään.
+ *
+ * @param {{lat:number, lon:number}|null} kaupunki kaupungin pallopiste
+ * @param {{lat:number, lon:number}|null} piste kohtaamispisteen asteet
+ * @returns {{lat:number, lon:number}|null}
+ */
+export function fokuspisteenAsteet(kaupunki, piste) {
+  if (!Number.isFinite(piste?.lat) || !Number.isFinite(piste?.lon)) return null;
+  if (!Number.isFinite(kaupunki?.lat) || !Number.isFinite(kaupunki?.lon)) return piste;
+  const kosini = Math.max(FOKUSPISTE_KOSINIRAJA, Math.cos((kaupunki.lat * Math.PI) / 180));
+  // Ruutuero: pituusasteen osuus kutistuu kosinilla, aivan kuten ruudulla.
+  const ero = Math.hypot(piste.lat - kaupunki.lat, (piste.lon - kaupunki.lon) * kosini);
+  if (ero >= FOKUSPISTE_ERO_MIN_AST) return piste;
+  return {
+    lat: kaupunki.lat + FOKUSPISTE_SIIRTO_AST.lat,
+    lon: kaupunki.lon + FOKUSPISTE_SIIRTO_AST.lon / kosini,
+  };
+}
+
 /** Tyylitiedoston tunnus — sama tiedosto kuin fokusvirran korteilla. */
 const PISTE_TYYLIN_TUNNUS = 'fokusvirta-tyyli';
 
@@ -117,6 +228,52 @@ function lataaPisteTyyli() {
   document.head.appendChild(linkki);
 }
 
+/**
+ * PISTEEN NAPAUTUS — yksi avaaja kartalle ja pallolle
+ * (js/pallolauta/nostot.js). Kesken animaation (nopan pyörähdys,
+ * siirtymä) kartta ottaa yhä napautuksia vastaan — sama kiireen esto
+ * kuin kaupungin laatalla. Sama selkeä avausääni kuin kohdepopupeilla,
+ * ja ENNEN kortin rakentamista (v1119, kohta 17).
+ */
+export function avaaFokuspiste(ui, city) {
+  if (ui.busy) return false;
+  /*
+   * LUKKO VASTAA, EI KOHTAAMINEN (karttauudistuksen erä 7, 13.9.2026).
+   * Piste on kartalla myös ennen kuin sen saa yrittää
+   * (js/fokusvirta.js fokusvirtaKohtaamispiste `lukittu`), ja silloin
+   * napautus kertoo lyhyesti, mitä puuttuu. Ehto luetaan samasta
+   * paikasta kuin piirto, joten himmeä piste ja vastaus eivät voi olla
+   * eri mieltä. Ääni on sama napautusääni molemmissa: pelaaja sai
+   * kosketuksestaan kuittauksen, vaikka ovi ei auennut.
+   */
+  if (fokusvirtaKohtaamispiste(ui, city)?.lukittu) {
+    sfx.play('popup');
+    fokusvirtaAarrepisteLukko(ui);
+    return false;
+  }
+  sfx.play('popup');
+  return avaaFokusKohtaaminen(ui, city);
+}
+
+/**
+ * PISTEEN KUVIO ILMAN OSUMA-ALUETTA — karttapallon H-elementti
+ * (js/pallolauta/nostot.js) piirtää saman tuikkivan merkin samoilla
+ * luokilla (css/fokusvirta.css fokuspiste-tuike) omaan pieneen
+ * svg:hen; osuma on siellä pallon oma (R-malli). Tyyli ladataan
+ * samalla, jotta merkki ei jää ilman tuikettaan.
+ */
+export function fokuspisteKuvio(g, { lukittu = false } = {}) {
+  lataaPisteTyyli();
+  // Lukko on yksi luokka samaan merkkiin (css/fokusvirta.css
+  // .fokuspiste-lukittu): himmennys ja tuikkeen sammutus, ei toista
+  // kuviota — pelaajan on tunnistettava sama piste ennen ja jälkeen.
+  if (lukittu) g.classList.add('fokuspiste-lukittu');
+  el('circle', { class: 'fokuspiste-hehku', r: PISTE_HEHKU_R }, g);
+  el('circle', { class: 'fokuspiste-keha', r: PISTE_KEHA_R }, g);
+  el('circle', { class: 'fokuspiste-ydin', r: PISTE_YDIN_R }, g);
+  return g;
+}
+
 /** Kerros SVG:n juureen kerran; palauttaa null ilman karttaa. */
 function varmistaPistekerros(ui) {
   if (!ui.svg) return null;
@@ -131,8 +288,8 @@ function varmistaPistekerros(ui) {
 }
 
 /** Yksi merkki: näkymätön osuma-alue, kaksi hehkukehää ja ydin. */
-function piirraPiste(ui, ryhma, city, nimi, teko = 'tapaa paikallinen') {
-  const g = el('g', { class: 'fokuspiste' }, ryhma);
+function piirraPiste(ui, ryhma, city, nimi, teko = 'tapaa paikallinen', lukittu = false) {
+  const g = el('g', { class: `fokuspiste${lukittu ? ' fokuspiste-lukittu' : ''}` }, ryhma);
   g.setAttribute('role', 'button');
   g.setAttribute('tabindex', '0');
   // Teko tulee datasta: sähkekaupungissa pisteen takana ei ole ketään
@@ -146,13 +303,7 @@ function piirraPiste(ui, ryhma, city, nimi, teko = 'tapaa paikallinen') {
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();
-    // Kesken animaation (nopan pyörähdys, siirtymä) kartta ottaa yhä
-    // napautuksia vastaan — sama kiireen esto kuin kaupungin laatalla.
-    if (ui.busy) return;
-    // Sama selkeä avausääni kuin kohdepopupeilla, ja ENNEN kortin
-    // rakentamista (v1119, kohta 17).
-    sfx.play('popup');
-    avaaFokusKohtaaminen(ui, city);
+    avaaFokuspiste(ui, city);
   };
   g.addEventListener('click', avaa);
   g.addEventListener('keydown', (tapahtuma) => {
@@ -174,12 +325,24 @@ function piirraPiste(ui, ryhma, city, nimi, teko = 'tapaa paikallinen') {
  */
 export function paivitaFokuspiste(ui) {
   if (typeof document === 'undefined') return;
+  const nykyinen = ui.katselu ? null : ui.game?.cityOf?.();
+  /*
+   * PULUN KARTTAOHJE (erä 7) LÄHTEE TÄSTÄ, EI SAAPUMISKETJUSTA.
+   * Ohje puhuu lukitusta pisteestä, joten se kuuluu sinne, missä
+   * pisteen tila lasketaan — ja tulee silloin annetuksi juuri siinä
+   * ensimmäisessä kaupungissa, jossa lukittu piste on kartalla.
+   * Kutsu on halpa: kertalippu ja ajastin sulkevat sen heti
+   * (js/fokusvirta.js fokusvirtaAarrepisteOhje).
+   */
+  fokusvirtaAarrepisteOhje(ui, nykyinen);
   const kerros = varmistaPistekerros(ui);
   if (!kerros) return;
-  const city = ui.katselu ? null : ui.game?.cityOf?.();
+  const city = nykyinen;
   const piste = city ? fokusvirtaKohtaamispiste(ui, city) : null;
+  // Lukko kuuluu avaimeen: sen avautuminen on ainoa muutos, joka ei
+  // siirrä pistettä eikä vaihda kaupunkia (erä 7).
   const avain = piste
-    ? `${ui.game.pack.id}:${city.id}:${piste.x}:${piste.y}`
+    ? `${ui.game.pack.id}:${city.id}:${piste.x}:${piste.y}:${piste.lukittu ? 'lukko' : 'auki'}`
     : 'tyhja';
   if (ui.fokuspisteAvain !== avain) {
     ui.fokuspisteAvain = avain;
@@ -192,15 +355,12 @@ export function paivitaFokuspiste(ui) {
        * mitataan kaupungin keskipisteestä, eli siitä samasta kohdasta,
        * johon laatta ja käännetyn laatan aarremerkki piirtyvät.
        */
-      const lahella = Number.isFinite(city.x) && Number.isFinite(city.y)
-        && Math.hypot(piste.x - city.x, piste.y - city.y) < PISTE_ERO_MIN;
-      const sx = lahella ? PISTE_SIIRTO_X : 0;
-      const sy = lahella ? PISTE_SIIRTO_Y : 0;
+      const { x: sx, y: sy } = fokuspisteenSiirto(city, piste);
       // Kiertävällä laudalla sama merkki molempiin kohtiin (ks. sääntö 1).
       for (const x of ui.kiertoKohdat?.(piste.x) ?? [piste.x]) {
         const ryhma = el('g', { class: 'fokuspiste-ryhma' }, kerros);
         ui.fokuspisteRyhmat.push({ g: ryhma, x: x + sx, y: piste.y + sy });
-        piirraPiste(ui, ryhma, city, piste.nimi, piste.teko);
+        piirraPiste(ui, ryhma, city, piste.nimi, piste.teko, piste.lukittu);
       }
     }
   }
@@ -210,6 +370,17 @@ export function paivitaFokuspiste(ui) {
   // (lehdetön näkymä) on yhä ruutumitassa ja tarvitsee sen.
   (ui.nipistysVastaskaalaajat ??= new Set())
     .add(ui.fokuspisteVastaskaala ??= (suhde) => asetaPisteMittakaava(ui, suhde));
+}
+
+/**
+ * Päivittää kohtaamispisteen kummallekin laudalle samasta julkisesta
+ * portista. Lehtipalkinto ei tee koko renderiä, joten pallon oma
+ * nostokerros on herätettävä tässä eikä vasta kameran liikkeestä.
+ */
+export function paivitaFokuspisteKaikillaLaudoilla(ui) {
+  const tasokartta = paivitaFokuspiste(ui);
+  ui?.pallolauta?.paivitaFokuspiste?.();
+  return tasokartta;
 }
 
 /**

@@ -193,33 +193,129 @@ export const FOKUSVIRTA_VARSOVA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ilman lisäystä. */
-    paikkarivi: 'Varsova, syyskuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Kaupunki elää kahta elämää: kaduilla puhutaan puolaa ja '
-      + 'virastoissa venäjää, eikä kumpikaan puoli teeskentele, ettei '
-      + 'huomaisi. Vanhankaupungin torilla värit ovat kirkkaat ja kapakat '
-      + 'täynnä, mutta laulut loppuvat kesken, kun univormu kävelee ohi. '
-      + 'Kuulin pianistista, joka kuoli nuorena kaukana täältä ja jonka '
-      + 'sydämen sisar toi kotiin salaa — tämä kaupunki säilyttää '
-      + 'rakkaimpansa sinne, minne keisari ei näe.',
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 d12971a977623ef43895ce1bc6a6a153e91c32b20d822131098d4f097d60f6f7. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-varsova-r20260909-paper-v4.jpg",
+      lyhyt: "Varsova, 1873. Leipuri piti kaupungin omalla kielellään.",
+      selite: 'Torin talot seisovat lähekkäin, mutta aamun työ levittäytyy kojuina niiden eteen. Leipä valmistui ennen virastojen määräyksiä, ja juuri siksi tahdoin sen mukaan kuvaan.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://muzeumwarszawy.pl/en/old-town-new-town-in-warsaw/","https://muzeum.uw.edu.pl/en/the-old-town-square-1916-1918/","https://muzeumwarszawy.pl/obiekt/rzezba-syreny-fontanny-rynku-starego-miasta/"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-varsova-r20260911-paper2-v1.jpg",
+      lyhyt: "Varsova, 1873. Leipä kulki kadulla helpommin kuin raja kartalla.",
+      selite: 'Lähdin torilta leipä kainalossa ja kartta kädessä, kun viraston kotka kertoi yhden tarinan kaupungista. Kadulla puhuttu kieli ja aamiaiseni kertoivat toisen.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://muzeumwarszawy.pl/en/old-town-new-town-in-warsaw/","https://muzeumwarszawy.pl/dzieje-kamienic/"],
+    },
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Varsova, syyskuussa 1873. Kirkasta; Veikselillä usvaa '
+      + 'aamulla; puntari korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 340 merkkiä (yläraja 400). */
+    teksti: "Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.",
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    luenta: '[curious] Kaupunki elää kahta elämää: kaduilla puhutaan puolaa '
-      + 'ja virastoissa venäjää, eikä kumpikaan puoli teeskentele, ettei '
-      + 'huomaisi. [softly] Vanhankaupungin torilla värit ovat kirkkaat ja '
-      + 'kapakat täynnä, mutta laulut loppuvat kesken, kun univormu kävelee '
-      + 'ohi. [whispers] Kuulin pianistista, joka kuoli nuorena kaukana '
-      + 'täältä ja jonka sydämen sisar toi kotiin salaa — tämä kaupunki '
-      + 'säilyttää rakkaimpansa sinne, minne keisari ei näe.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Karttaan voi vetää rajan yhdellä liikkeellä"
+     * (johdatus päätökseen).
+     */
+    reaktiot: [
+  {
+    "id": "varsova.r1",
+    "ankkuri": "painettu Venäjän santarmien kirjapainossa",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "varsova.r2",
+    "ankkuri": "sotilas tuli katsomaan olkani yli",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "varsova.r3",
+    "ankkuri": "brittiläinen laivaston kartanpiirtäjä",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "varsova.r4",
+    "ankkuri": "Hän haki toisen sotilaan",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "varsova.r5",
+    "ankkuri": "Sana entinen muistui mieleeni vasta vartiotuvassa",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "varsova.r6",
+    "ankkuri": "Piirros jäi heille",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. [softly] Illalla sain passini takaisin. Piirros jäi heille.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-varsova.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era02, euv1-era03; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-varsova-02-r20260909-euv1-v2.jpg. Kuvapaikka 1: Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-varsova-p1-r20260914-tarina-v1.jpg',
+        lyhyt: 'Varsova: metsäpolku kulkee raunioista rakennetun kukkulan halki.',
+        selite: 'Kukkula koottiin sodassa tuhoutuneen Varsovan raunioista. Nykyisen puiston reiteillä historia kohtaa kasvavan metsän.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://zzw.waw.pl/nasze-tereny/parki/park-akcji-burza/',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-varsova-02-r20260909-euv1-v2.jpg',
+        lyhyt: 'Varsova: katolta näkyvät myös talojen välit.',
+        selite: 'Räystään tasolta tori näkyy talojen yhdessä muodostamana tilana, ja lähimmässä ikkunassa kastellaan kukkia. Uudelleen rakentaminen palautti julkisivujen lisäksi paikan aivan tavalliselle päivälle.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://whc.unesco.org/en/list/30/',
+        ],
+      },
+    ],
     /*
      * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
      * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
@@ -252,22 +348,34 @@ export const FOKUSVIRTA_VARSOVA = {
      * PAINOPISTE REUNOILLA): lyhentymät ovat vain alussa ("Kääk") ja
      * lopussa ("mut"), keskellä sanat ovat auki. Ei huutomerkkejä.
      */
-    maadoitus: 'Kääk. Isoisäsi kuuli kaksi kieltä, ja kahta elämää tässä '
-      + 'kaupungissa eletään yhä — mutta raja ei kulje enää virastojen '
-      + 'ovissa vaan joessa. Hänen matkavuonnaan Veikselin yli mentiin '
-      + 'Kierbedźin siltaa pitkin: 474 metriä ristikkoa ja Varsovan '
-      + 'ensimmäinen teräksinen jokisilta, avattu marraskuussa 1864. Sen '
-      + 'itäpäässä on Praga, joka sai kaupunkioikeutensa 1648 ja liitettiin '
-      + 'Varsovaan vasta 1700-luvun lopulla, ja siellä seisoo yhä sotaa '
-      + 'edeltäviä kadunvarsitaloja — mut sinne pitää osata mennä erikseen.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Toisessa maailmansodassa saksalaiset hävittivät Varsovaa talo talolta. Raunioista koottiin tämä kukkula. Nyt täällä kävellään metsäpoluilla, ja puissa pesii lintuja. Kuuntele — tuolla huhuilee sepelkyyhky."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'vakava', voimakkuus: 0.55 },
     /* KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. */
-    teksti: 'Sen pianistin nimen arvaat varmaan itsekin — ja hänen '
-      + 'sydämensä on tänäkin päivänä muurattuna varsovalaisen kirkon '
-      + 'pylvääseen.. Vanhakaupunki jonka isoisäsi näki tuhoutui sodassa '
-      + 'lähes kokonaan, ja rakennettiin uudelleen niin tarkasti, että se '
-      + 'pääsi maailmanperintölistalle jälleenrakennuksena — miten se '
-      + 'onnistui, sen jäljille pääset kohta. Värit ovat taas kirkkaat. '
-      + 'Torille.',
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/
      * kulttuuri-kategoriat.js, varsova/avauskuvat, heroerä 31):
@@ -287,6 +395,7 @@ export const FOKUSVIRTA_VARSOVA = {
      */
     kuva: {
       ampari: 'herokoe/hero-varsova-vanhatori.jpg',
+      lyhyt: 'Vanhankaupungin tori kaavoitettiin 1200-luvulla; merenneito on kopio vuoden 1855 veistoksesta.',
       selite: 'Vanhankaupungin tori kaavoitettiin 1200-luvun lopulla, ja sen '
         + 'keskellä seisova merenneito on kopio Konstanty Hegelin vuoden '
         + '1855 veistoksesta, jonka alkuperäinen on kaupunginmuseossa.',
@@ -367,6 +476,8 @@ export const FOKUSVIRTA_VARSOVA = {
         + 'takaisin niitä luettiin kuin piirustuksia: ikkunarivit, '
         + 'listat, kattojen kaltevuudet. Mies oli maalannut muotokuvan '
         + 'kaupungista tietämättä, että kaupunki tarvitsisi sitä.',
+      lahde: 'en-Wikipedia "Bernardo Bellotto" ja pl-Wikipedia "Bernardo '
+        + 'Bellotto". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 4000×3150, public domain, Bernardo Bellotto,
        * päiväys 1777, Google Art Project. Restrictions tyhjä.
@@ -381,6 +492,7 @@ export const FOKUSVIRTA_VARSOVA = {
        */
       kuva: {
         tiedosto: 'Bernardo Bellotto - Miodowa Street in Warsaw - Google Art Project.jpg',
+        lyhyt: 'Bellotton Miodowa-katu 1777: samaan kirkkoon maalari itse haudattiin kolme vuotta myöhemmin.',
         selite: 'Bellotton Miodowa-katu vuodelta 1777: sama katu, jonka '
           + 'kirkkoon maalari itse haudattiin kolme vuotta myöhemmin.',
         lahde: 'Bernardo Bellotto 1777, Wikimedia Commons (public domain)',
@@ -510,6 +622,10 @@ export const FOKUSVIRTA_VARSOVA = {
         + 'yksi asia, jota mies, joka pelkäsi hevosia enemmän kuin '
         + 'myrskyjä, ei olisi halunnut kuulla: junasta junaan pääsi vain '
         + 'hevosen perässä.',
+      lahde: 'en-Wikipedia "Warsaw–Vienna railway", pl-Wikipedia "Dworzec '
+        + 'Wiedeński w Warszawie", pl-Wikipedia "Most Kierbedzia" ja '
+        + 'en-Wikipedia "Saint Petersburg–Warsaw Railway". Tarkistettu '
+        + '1.9.2026.',
       /*
        * Commons 30.8.2026: 4234×3007, public domain, Konrad Brandel
        * (1838–1920), päiväys noin 1890, kuvaus "Warsaw. Vienna Railway
@@ -525,6 +641,7 @@ export const FOKUSVIRTA_VARSOVA = {
        */
       kuva: {
         tiedosto: 'Dworzec Wiedeński w Warszawie ok. 1890.jpg',
+        lyhyt: 'Wienin asema Varsovassa noin 1890: hevosraitiovaunu kuljetti matkustajat radalta toiselle.',
         selite: 'Wienin asema Varsovassa noin 1890: etualalla '
           + 'hevosraitiovaunu, joka kuljetti matkustajat radalta toiselle.',
         lahde: 'Konrad Brandel, Wikimedia Commons (public domain)',
@@ -647,6 +764,9 @@ export const FOKUSVIRTA_VARSOVA = {
         + 'Viimeisen kirjatun yksilön kallo lähti 1600-luvun sotavuosina '
         + 'Ruotsiin, ja se on Tukholmassa yhä. Metsään jäi vuonna 1972 '
         + 'kivi, johon on hakattu vuosiluku.',
+      lahde: 'pl-Wikipedia "Tur leśny", pl-Wikipedia "Puszcza Jaktorowska", '
+        + 'en-Wikipedia "Aurochs" ja en-Wikipedia "Jaktorów". Tarkistettu '
+        + '1.9.2026.',
       /*
        * Commons 30.8.2026: 800×600, CC BY-SA 3.0, Tomasz Kuran (alias
        * Meteor2017), kuvattu 1.5.2005, kuvaus nimeää muistomerkin
@@ -661,6 +781,7 @@ export const FOKUSVIRTA_VARSOVA = {
        */
       kuva: {
         tiedosto: 'Jaktorow pomnik tura.jpg',
+        lyhyt: 'Jaktorówin muistokivi kertoo turin eläneen metsässä vuoteen 1627, kivessä eläimen pää.',
         selite: 'Jaktorówin muistokivi kertoo, että tur eli tässä metsässä '
           + 'vuoteen 1627, ja kiveen on hakattu myös eläimen pää.',
         lahde: 'Tomasz Kuran, Wikimedia Commons (CC BY-SA 3.0)',
@@ -812,6 +933,7 @@ export const FOKUSVIRTA_VARSOVA = {
      */
     kuva: {
       tiedosto: 'Biblioteka Załuskich r. 1745 (43692).jpg',
+      lyhyt: 'Puupiirros 1861 esittää Załuskien kirjaston talon vuoden 1745 asussa, tornissa tähtitorni.',
       selite: 'Puupiirros vuodelta 1861 esittää Załuskien kirjaston talon '
         + 'sellaisena kuin se oli 1745; katon pienessä tornissa oli '
         + 'tähtitorni.',
@@ -822,14 +944,14 @@ export const FOKUSVIRTA_VARSOVA = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * FABLE KATSELMOI: kohtaamisluonnos
-   *
-   * Varsovalla ei ole riviä js/packs/kohtaamiset.js:ssä eikä
-   * KAARI_PAKETIT-listassa (js/tyohuone-kehitys-data.js), joten tälle
-   * kaupungille kirjoitettiin oma hahmo: alla oleva Antikvaari Zofia
-   * on EHDOTUS, ei kaanonia. Kortti on esittely; VARSINAINEN KYSYMYS on
-   * ennallaan laattamekaniikassa (game.actionQuiz lukee js/packs/
-   * europe-questions.js, varsova), eikä tämä paketti kosketa sitä.
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. KAKSOISHENKILÖ PURETTU.
+   * Zofia on nyt myös KAAREN henkilö: js/tyohuone-kehitys-data.js
+   * KAARI_PAKETIT, id 'varsova' kertoo hänestä ja antaa kysymyksen,
+   * jonka game.actionQuiz esittää laatalla (js/game.js kaariTarina).
+   * Kaupungilla on siis yksi kohtaamishenkilö kahden sijasta, ja tämä
+   * kortti on hänen esittelynsä — ei uusi hahmo eikä irrallinen
+   * ehdotus. Kortti ei kertaa kaaren repliikkiä eikä paljasta
+   * vastausta.
    *
    * *** NIMEN HISTORIA — LUE ENNEN KUIN VAIHDAT SEN. ***
    *
@@ -839,22 +961,22 @@ export const FOKUSVIRTA_VARSOVA = {
    *      toinen puolalaiskaupunki nimesi kohtaamishahmokseen
    *      Szopkanrakentaja Halinan (js/packs/fokusvirta-krakova.js).
    *      Paketit kirjoitettiin rinnakkain, eivätkä ne nähneet toisiaan.
-   *   2. JADWIGA törmäsi Varsovaan itseensä. Yllä oleva perustelu oli
-   *      osin väärä: kaupunki EI OLE KAARI_PAKETIT-listassa
-   *      (js/tyohuone-kehitys-data.js), mutta sillä ON elävä
+   *   2. JADWIGA törmäsi Varsovaan itseensä. Kaupungilla oli elävä
    *      tarinakaari js/packs/tarinakaari.js:n TARINAKAARI-taulussa
    *      (`varsova`), jonka lukevat js/game.js, js/ui.js, js/visa.js ja
-   *      js/fokusvirta.js — ja sen hahmo on **Kalastaja Jadwiga**.
+   *      js/fokusvirta.js — ja sen hahmo oli **Kalastaja Jadwiga**.
    *      Saman kaupungin sisäinen toisto osuu pelaajaan vielä
    *      lähempää kuin kahden kaupungin välinen.
    *   3. ZOFIA (Fablen valinta 30.8.2026) on tarkistettu molempia
-   *      vasten: nimi ei esiinny js/packs/-hakemistossa eikä
-   *      tarinakaaressa kertaakaan.
+   *      vasten: nimi ei esiinny js/packs/-hakemistossa muualla eikä
+   *      toisessa kaaren kohteessa kertaakaan. Fablen päätös 5.9.2026
+   *      klo 20:05 UTC ratkaisi ristiriidan lopullisesti Zofian
+   *      hyväksi: *"Varsova: yhdistetään antikvaari Zofiaan (kalastaja
+   *      Jadwiga pois kaaresta)."* Kalastajaa ei ole enää missään.
    *
    * JOS NIMI VAIHDETAAN VIELÄ, tarkista uusi nimi SEKÄ js/packs/:n
-   * kohtaamishahmoja ETTÄ TARINAKAARI-taulua vasten — pelkkä
-   * KAARI_PAKETIT ei riitä, kuten kohta 2 osoittaa. Vaihto on yhden
-   * lohkon työ (hahmo, varmistus, teksti ja tämän lohkon kommentit).
+   * kohtaamishahmoja ETTÄ TARINAKAARI-taulua vasten, ja muista, että
+   * nimi on nyt KAHDESSA tiedostossa: tässä ja KAARI_PAKETIT-listassa.
    *
    * KUVAA EI OLE (omistajan linjaus): kohtaamiskortissa on vain hahmo,
    * nappi, varmistus, vihjeOsio ja teksti.
@@ -882,7 +1004,11 @@ export const FOKUSVIRTA_VARSOVA = {
    * siltä lehdeltä, jossa on vieras käsiala.
    *
    * EI SPOILERIA: kortti ei mainitse Chopinia, sydäntä, jälleen-
-   * rakennusta, Skłodowska-Curieta, pierogeja eikä merenneitoa.
+   * rakennusta, Skłodowska-Curieta, pierogeja eikä merenneitoa. Se ei
+   * myöskään mainitse paavin bullaa, joka on kaaren uuden
+   * laattakysymyksen vastaus — kortin oma etulehden numerosarake on
+   * eri tarina kuin kirjaston lainaushistoria, vaikka molemmat
+   * kertovat kirjanpidosta.
    */
   kohtaaminen: {
     hahmo: 'Antikvaari Zofia',

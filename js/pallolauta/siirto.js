@@ -1,0 +1,683 @@
+/*
+ * PALLOLAUDAN SIIRTO — nappulan (ja lennolla koneen) kuljettaja pallolla
+ * (vaihe 2, docs/moduulit/karttapallo.md luku 4.2: nappula liikkeessä
+ * **D** = pelin oma DOM-elementti kotelon päällä, paikka joka kehys
+ * getScreenCoords-kutsulla; lento = kaari **A** + kone **D**).
+ *
+ * KOREOGRAFIA EI OLE TÄÄLLÄ. Ennakkozoomi, saatto, nappulan lähdön
+ * viive, äänet, siirtymämusiikki ja tauot ovat js/ui.js
+ * animatePawnSisalla — yhdessä paikassa kummallekin laudalle — ja tämä
+ * moduuli toteuttaa vain kuljettajan sopimuksen (ui.nappulanKuljettaja):
+ * nosta / aseta / hyppaa / aja / laske. Luvut ja käyrät tulevat
+ * js/siirtokoreografia.js:stä (hypynVaihe, hypynHuippu), joten hyppy on
+ * täsmälleen sama kaari kuin tasokartan hyppaaAskel — vaaka ease-in-out,
+ * pysty paraabeli, varjo kutistuu ja haalenee laella (#100).
+ *
+ * NAPPULA PYSYY PALLON PINNALLA. Elementin paikka lasketaan JOKA KEHYS
+ * pallon pinnan pisteestä (getScreenCoords), myös silloin kun nappula
+ * seisoo paikallaan lähtöruudussaan saaton alkaessa (300 ms viive) —
+ * kamera liikkuu, nappula pysyy maassa. Hypyn aikana pinnan piste
+ * kulkee REITIN POLYA pitkin (js/rules.js pointAlong, sama kaava kuin
+ * pixelOf ja askelhelmillä), joten pitkä merireitti kaartaa pallolla
+ * samalla viivalla kuin reittihelmet, ja korkeus lisätään ruudun
+ * y-suuntaan. Hypyn huippu mitataan ruudun pikseleinä (hypynHuippu:
+ * sama 9–30 haarukka kuin tasokartalla laudan yksikköinä).
+ *
+ * LENTO: kone lentää isoympyrää lähtökaupungista kohteeseen samalla
+ * kaarella, jonka js/pallolauta/reitit.js piirtää (arcsData,
+ * lentokaarenKorkeus), ja kamera ajaa ensin rajaukseen, johon lähtö ja
+ * kohde mahtuvat (tasokartan maidenBbox-vastine: kaupunkiparin laatikko
+ * marginaalilla — pallolla ei ole maiden monikulmioita, ja Kartta-olion
+ * sisäisiä metodeja ei kutsuta ristiin). Perillä kamera sukeltaa
+ * kohteeseen (kotiin) ja nappula ilmestyy H-merkkinä (lauta.paivita).
+ *
+ * AUTOKYYTI (`aja`, karttauudistus erä 8): LIFTAUS ja BUSSI eivät hypi
+ * askel kerrallaan vaan ajavat koko nopan matkan yhdellä käyrällä —
+ * kiihdytys alussa, jarrutus lopussa, ei pystykaarta (Raamattu,
+ * KARTTAUUDISTUKSEN PAATOKSET 1 kohta 4). Sama silmukka ja sama reitin
+ * poly kuin hypyllä; ero on siinä, että osuus jaetaan koko polulle eikä
+ * yhdelle askelvälille, ja että oma vaihekäyrä sammuttaa kaaren.
+ *
+ * Reduced motion: aseta hyppää perille, kamera-ajot ovat hyppyjä
+ * (kamera.js), kone ei lennä vaan ilmestyy perille.
+ *
+ * AVAUSLENTO KÄYTTÄÄ SAMAA KULJETTAJAA (vaihe 5b,
+ * js/pallolauta/avaus.js): Lontoo → aloituskaupunki on pallolla sama
+ * kaari ja sama kone kuin mikä tahansa lento, ja js/ui.js:n avauksen
+ * koreografia — repliikki, kertoja, kabiiniääni, ohitus, saapumiskortti
+ * — pysyy yhdessä paikassa kummallekin laudalle. Ohitus tarvitsee
+ * kuljettajalta yhden lisän: `paata()` alla.
+ *
+ * AVAUSLENNOLLA KAMERA ON KOHTAUKSEN (omistaja 6.9.2026 ilta: *"kartta
+ * saisi lentää yhden tasaisen reitin ja zoom muutoksen alusta
+ * loppuun"*). Kaksi valinnaista lisää, jotka koskevat VAIN avauslentoa
+ * ja jättävät tavallisen lennon (FLIGHT_MS, MANNER_LENTO_MS)
+ * ennalleen:
+ *
+ *   omaKamera   kuljettaja EI aja kameraa kaupunkiparin laatikkoon;
+ *               kohtaus ajaa oman kaarensa (avaus.js
+ *               ajaKamerasuunnitelma)
+ *   hyppaa(…, { vaihe })  koneen vaihekäyrä tulee kohtaukselta, jotta
+ *               kone on täsmälleen kameran katsomassa pisteessä
+ *               (avaus.js lennonVaihe); ilman sitä käyrä on siirron oma
+ *               hypynVaihe kuten ennen
+ */
+
+import { pixelOf, pointAlong } from '../rules.js';
+import { hypynHuippu, hypynVaihe } from '../siirtokoreografia.js';
+import { PALLOKAMERAN_AJO_MS } from './kamera.js';
+import { nappulaElementti, MERKIN_KORKEUS } from './merkit.js';
+import { REITIN_KORKEUS, lentokaarenKohta } from './reitit.js';
+
+/** Liikkuvan nappulan svg:n mitat (nappulaElementti): jalka alareunassa. */
+const NAPPULAN_LEVEYS_PX = 32;
+const NAPPULAN_KORKEUS_PX = 36;
+/** Jalusta hitusen pisteen alapuolella kuten tasokartalla (NAPPULAN_JALKA_Y). */
+const NAPPULAN_JALKA_Y = 3.5;
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KAMERA ASETTUU ENNEN LENTOA JA PYSYY (omistaja 16.9.2026,
+ * KARTTAUUDISTUKSEN PAATOKSET 30)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Havainto: *"kartta zoomaa suoraan kohdemaahan"* — lennosta ei näy
+ * matkaa, vain määränpää. Uusi sopimus on:
+ *
+ *   1. rajausajo AJETAAN LOPPUUN ennen kuin kone lähtee (`hyppaa`
+ *      odottaa ajon), jotta lähtö- ja kohdekaupunki ovat ruudulla
+ *      vastakkaisilla reunoilla jo ensimmäisellä lentokehyksellä;
+ *   2. kamera EI liiku lennon aikana lainkaan;
+ *   3. vasta `laske()` vie kuvan kohdemaan saapumisnäkymään.
+ *
+ * Ajo on siksi rauhallisempi kuin ennen (900 ms → 1100 ms): se on nyt
+ * lennon oma alkuele eikä kiire koneen perässä.
+ */
+export const LENNON_KAMERA_MS = 1100;
+/*
+ * MARGINAALI ON 12 % RUUDUN MITASTA. `marginaali` on osuus LAATIKOSTA
+ * joka reunalla, joten laatikon pää päätyy ruudun reunasta
+ *
+ *   m / (1 + 2m)
+ *
+ * päähän. 12 %:n reunaetäisyys tarkoittaa siis m = 0,12 / 0,76 ≈ 0,158
+ * (ennen 0,35 eli 20,6 % — pääkaupungit lähes ruudun keskellä, ja
+ * matkasta näkyi vain lyhyt pätkä). Vartio savuke-lento-rajaus.mjs
+ * mittaa päiden ruutupaikat: molemmat 5–20 % reunasta.
+ */
+export const LENNON_RAJAUKSEN_MARGINAALI = 0.158;
+/*
+ * KONE PIIRTÄÄ PUNAISEN VIIVAN PERÄÄNSÄ MYÖS PELIN SISÄISELLÄ LENNOLLA
+ * (omistaja 16.9.2026: *"lentomatkalla punainen viiva ei piirry"*).
+ *
+ * Sama jälki, sama kerros ja sama kaava kuin avauslennolla
+ * (js/pallolauta/avaus.js, reitit.js jalki): geometria kerran, kasvu
+ * katkoviivan osuudella. Viiva kulkee koneen ALLA samalla kaarella,
+ * joten kärki on aina koneen kohdalla.
+ */
+const LENNON_JALJEN_PISTEET = 64;
+const LENNON_JALJEN_PAKSUUS_PX = 11;
+/** Koneen koko ruudulla (px) ja kaaren korkeuden ruutuvastine pallon säteinä. */
+const KONEEN_KOKO_PX = 44;
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KONE ON HETI LENTOSUUNNASSA — EI ALKUKÄÄNNÖSTÄ (omistaja 5.9.2026
+ * klo 00.35)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Sanatarkasti: *"lentokoneen ei tarvitse kääntyä alussa vaan voi
+ * lehtää heti oikeaan suuntaa ja jättää paksun punaisen viivan."*
+ *
+ * VANHA KÄYTÖS. Kulma laskettiin EDELLISEN KEHYKSEN ruutupisteestä:
+ * kun kone ilmestyi Lontoon ylle, edellistä pistettä ei ollut ja kulma
+ * oli nolla eli nokka itään. Hypyn pehmennys (hypynVaihe) lähtee
+ * hitaasti, joten ensimmäisillä kehyksillä siirtymä jäi alle puolen
+ * pikselin kynnyksen ja kulma pysyi nollassa — kone seisoi väärässä
+ * asennossa ja kääntyi vasta kun vauhti kasvoi. Juuri se näytti
+ * alkukaarrolta.
+ *
+ * UUSI KÄYTÖS. Kulma luetaan KAARESTA eikä liikkeestä: kaksi pistettä
+ * kaarella (osuus e ja e + KONEEN_SUUNTANAYTE) projisoidaan ruudulle ja
+ * niiden välinen kulma on koneen asento. Se on oikea jo ensimmäisellä
+ * kehyksellä, myös silloin kun kone vielä seisoo lähtökaupungin yllä —
+ * ja koska paikka lasketaan joka kehys, asento seuraa myös pallon
+ * pyörintää lennon aikana.
+ *
+ * KÄÄNNÖKSEN KESTO ON NOLLA. Vakio menee elementin css-muuttujaan
+ * (--koneen-kaannos-ms), josta transformin siirtymä luetaan: selain ei
+ * voi animoida kiertoa, vaikka joku myöhemmin lisäisi koneelle
+ * transition-säännön. Peittävyys sen sijaan liukuu
+ * (--koneen-ilmestys-ms), jotta kone HÄIVYTTYY näkyviin — oikeassa
+ * asennossa, ilman nykäystä.
+ */
+export const KONEEN_KAANNOKSEN_MS = 0;
+/** Koneen häivytys näkyviin (peittävyys; asento on jo oikea). */
+export const KONEEN_ILMESTYS_MS = 420;
+/** Suuntanäytteen pituus kaaren osuutena (kaksi pistettä → kulma). */
+const KONEEN_SUUNTANAYTE = 0.004;
+
+/**
+ * Reitin osuudet, joilla `pos` on reitillä `reitti`: 0 = reitin a-pää,
+ * 1 = b-pää, välipiste idx/steps. Null, jos pos ei ole tällä reitillä.
+ */
+function reitinOsuus(reitti, pos) {
+  if (!reitti) return null;
+  if (pos.type === 'edge') return pos.edge === reitti.id ? pos.idx / reitti.steps : null;
+  if (pos.type === 'city') {
+    if (reitti.a === pos.city) return 0;
+    if (reitti.b === pos.city) return 1;
+  }
+  return null;
+}
+
+/**
+ * Lennon rajaus: lähtö ja kohde laudan yksiköissä (marginaali erikseen,
+ * LENNON_RAJAUKSEN_MARGINAALI). Vietynä, koska AVAUSLENTO PALLOLLA
+ * (js/pallolauta/avaus.js) tarvitsee TÄSMÄLLEEN saman laatikon: se ajaa
+ * kameran rajaukseen jo pergamenttiarkin takana, ja kun kuljettajan oma
+ * ajo (hyppaa alla) laskee saman kohteen, ajo on nolla-ajo eikä kamera
+ * nytkähdä koneen lähtiessä.
+ */
+export function lennonRajaus(board, a, b) {
+  const pa = pixelOf(board, a);
+  const pb = pixelOf(board, b);
+  const x = Math.min(pa.x, pb.x);
+  const y = Math.min(pa.y, pb.y);
+  return { x, y, w: Math.abs(pb.x - pa.x), h: Math.abs(pb.y - pa.y) };
+}
+
+/** Reitti, jolla kaksi peräkkäistä paikkaa ovat (askel on aina yhdellä reitillä). */
+function yhteinenReitti(board, a, b) {
+  const ehdokkaat = [];
+  if (a.type === 'edge') ehdokkaat.push(a.edge);
+  if (b.type === 'edge') ehdokkaat.push(b.edge);
+  if (a.type === 'city' && b.type === 'city') {
+    ehdokkaat.push(`${a.city}|${b.city}`, `${b.city}|${a.city}`);
+  }
+  for (const id of ehdokkaat) {
+    const reitti = board.edgeById.get(id);
+    if (!reitti?.poly?.length) continue;
+    if (reitinOsuus(reitti, a) !== null && reitinOsuus(reitti, b) !== null) return reitti;
+  }
+  return null;
+}
+
+/**
+ * Kuljettaja pallolle. `lauta` antaa pallon, kotelon, kameran, asteet ja
+ * merkkien päivityksen (js/pallolauta/lauta.js).
+ */
+export function luoNappulanKuljettaja({ ui, lauta, player, lento = false, omaKamera = false }) {
+  const { pallo, kotelo, kamera } = lauta;
+  const { board } = ui.game;
+  let el = null;
+  let hahmo = null;
+  let varjo = null;
+  let ankkuri = null; // pos, jossa nappula lepää (ei hypyssä)
+  let hyppy = null; // { a, b, reitti, ta, tb, vaihe, alku, kesto, huippu, valmis }
+  let kehys = 0;
+  let koneenKaari = null; // lennon kaari: koneen asento myös paikallaan
+  let koneenOsuus = 0; // koneen osuus kaarella (0 = lähtö, 1 = perillä)
+  /*
+   * PELIN OMAN LENNON PUNAINEN JÄLKI (ks. LENNON_JALJEN_PISTEET yllä).
+   * Lista tehdään KERRAN lennon alussa ja annetaan viivakerrokselle
+   * sellaisenaan; kasvu on katkoviivan osuus, koska geometrian
+   * uudelleenkirjoitus joka kehys jättäisi viivan lähtökaupungin
+   * viereen (mitattu 5.9.2026, js/pallolauta/avaus.js).
+   *
+   * AVAUSLENTO PIIRTÄÄ OMAN JÄLKENSÄ (`omaKamera`): sen kohtaus ajaa
+   * jälkeä samasta kellosta kuin kameraa, eikä kuljettaja saa
+   * kirjoittaa samaan kerrokseen kahdesti.
+   */
+  let jaljenPisteet = null;
+  /*
+   * LENTO ODOTTAA KAMERA-AJOA (ks. hyppaa alla). Odotuksen aikana
+   * `hyppy` on vielä tyhjä, joten purku ja ohitus on osattava ratkaista
+   * TÄSTÄ — muuten katkaistu lento jäisi odottamaan lupausta ikuisesti.
+   */
+  let lentoOdottaa = null; // { b, valmis, lahde }
+
+  /** Pallon pinnan piste ruudulla (kotelon px) laudan kohdasta. */
+  const ruutu = (kohta, korkeus = MERKIN_KORKEUS) => {
+    const a = lauta.asteet(kohta);
+    if (!a) return null;
+    return pallo.getScreenCoords(a.lat, a.lon, korkeus);
+  };
+
+  /*
+   * PELIN PAIKKA → SE LAUDAN KOHTA, JOSSA PALLO PIIRTÄÄ SEN.
+   *
+   * Kaupungilla voi olla oma pallopiste (js/packs/
+   * maailmankartta-pallopisteet.js), ja reitin poly on korjattu päistään
+   * sen mukaan (js/pallolauta/reitit.js korjattuPoly). Nappulan on
+   * kuljettava SAMAA viivaa kuin askelhelmet ja pysähdyttävä samaan
+   * pisteeseen kuin kaupungin oma piste — muuten siirto päättyisi
+   * nytkähdykseen. Siksi kaikki tämän moduulin paikat luetaan tästä
+   * yhdestä paikasta eikä suoraan `pixelOf`illa.
+   */
+  const laudanKohta = (pos) => {
+    const perus = pixelOf(board, pos);
+    if (pos.type === 'city') {
+      const d = lauta.siirtymat?.get(pos.city);
+      return d ? { x: perus.x + d.dx, y: perus.y + d.dy } : perus;
+    }
+    const reitti = board.edgeById.get(pos.edge);
+    if (!reitti?.poly?.length) return perus;
+    return pointAlong(lauta.reitit.poly(reitti), pos.idx / reitti.steps);
+  };
+
+  /** Laudan kohta hypyn osuudella e: reitin polya pitkin tai suoraan. */
+  const hypynKohta = (h, e) => {
+    if (h.reitti) {
+      return pointAlong(lauta.reitit.poly(h.reitti), h.ta + (h.tb - h.ta) * e);
+    }
+    const a = laudanKohta(h.a);
+    const b = laudanKohta(h.b);
+    return { x: a.x + (b.x - a.x) * e, y: a.y + (b.y - a.y) * e };
+  };
+
+  /**
+   * Yhden askelvälin palat (a, b ja reitin osuudet). Omana funktionaan,
+   * koska AUTOKYYTI (`aja` alla) tarvitsee ne KOKO polulle kerralla:
+   * yksi käyrä ajaa monen askeleen yli, ja jokaisen välin on silti
+   * kuljettava reitin omaa viivaa pitkin.
+   */
+  const hypynPalat = (a, b) => {
+    const reitti = yhteinenReitti(board, a, b);
+    return {
+      a,
+      b,
+      reitti,
+      ta: reitti ? reitinOsuus(reitti, a) : 0,
+      tb: reitti ? reitinOsuus(reitti, b) : 1,
+    };
+  };
+
+  /**
+   * Autokyydin kohta koko matkan osuudella e (0 = lähtö, 1 = perillä):
+   * osuus jaetaan askelvälien kesken ja loppu lasketaan välin omalla
+   * viivalla. Askelvälit ovat reitillä yhtä pitkiä (pointAlong jakaa
+   * polyn `steps`-osaan), joten tasainen jako tarkoittaa tasaista
+   * vauhtia — ja käyrän kiihdytys ja jarrutus näkyvät sellaisinaan.
+   */
+  const kyydinKohta = (h, e) => {
+    const n = h.palat.length;
+    const raaka = Math.min(n - 1e-9, Math.max(0, e * n));
+    const i = Math.min(n - 1, Math.floor(raaka));
+    return hypynKohta(h.palat[i], raaka - i);
+  };
+
+  /* ---- nappula ------------------------------------------------------ */
+
+  const piirraNappula = (hetki) => {
+    let p = null;
+    let korkeus = 0;
+    let osuus = 0;
+    if (hyppy) {
+      const t = Math.min(1, (hetki - hyppy.alku) / hyppy.kesto);
+      /*
+       * OMA VAIHEKÄYRÄ = AUTOKYYTI, EI HYPPY (karttauudistus erä 8;
+       * Raamattu, KARTTAUUDISTUKSEN PAATOKSET 1 kohta 4: *"ei hyppivaksi
+       * pelinapiksi, vaan kuin autokyydiksi joka kiihdyttaa alussa ja
+       * jarruttaa lopussa"*).
+       *
+       * `vaihe` oli tähän asti VAIN koneen lisä (piirraKone: avauslennon
+       * kohtaus antaa kameralleen täsmälleen saman käyrän); nappula luki
+       * aina hypynVaiheen. Nyt sama sopimus koskee nappulaa — ja koska
+       * auto ei hyppää, oman käyrän mukana jää pois myös pystykaari:
+       * `nousu` on nolla, joten huippu, varjon kutistus ja haalennus
+       * eivät tee mitään. Ilman omaa käyrää kaikki on ennallaan.
+       */
+      const omaKayra = typeof hyppy.vaihe === 'function';
+      const e = omaKayra ? hyppy.vaihe(t) : hypynVaihe(t).e;
+      const nousu = omaKayra ? 0 : hypynVaihe(t).nousu;
+      p = ruutu(hyppy.palat ? kyydinKohta(hyppy, e) : hypynKohta(hyppy, e));
+      korkeus = (hyppy.huippu ?? 0) * nousu;
+      osuus = nousu;
+      if (t >= 1) {
+        ankkuri = hyppy.b;
+        const { valmis } = hyppy;
+        hyppy = null;
+        valmis();
+      }
+    } else if (ankkuri) {
+      p = ruutu(laudanKohta(ankkuri));
+    }
+    if (!p) return;
+    el.style.transform = `translate(${(p.x - NAPPULAN_LEVEYS_PX / 2).toFixed(2)}px, ${(p.y - NAPPULAN_KORKEUS_PX).toFixed(2)}px)`;
+    // Sama kolmijako kuin tasokartalla (js/ui.js hyppaaAskel): vain
+    // hahmo nousee, varjo jää pintaan, kutistuu ja haalenee.
+    hahmo?.setAttribute('transform', `translate(0,${(-korkeus).toFixed(2)})`);
+    varjo?.setAttribute('transform', `translate(2,${NAPPULAN_JALKA_Y}) scale(${(1 - 0.4 * osuus).toFixed(3)})`);
+    if (varjo) varjo.style.opacity = (1 - 0.55 * osuus).toFixed(3);
+  };
+
+  /* ---- kone (lento) -------------------------------------------------- */
+
+  const koneElementti = () => {
+    const kone = document.createElement('div');
+    kone.className = 'pallolauta-kone pawn-moving';
+    kone.setAttribute('aria-hidden', 'true');
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('viewBox', '-22 -22 44 44');
+    svg.setAttribute('width', String(KONEEN_KOKO_PX));
+    svg.setAttribute('height', String(KONEEN_KOKO_PX));
+    // Sama kone kuin lentokalvolla ja avauslennolla (js/ui.js
+    // animateFlightSisalla): runko, siivet ja pyrstö ylhäältä.
+    const polku = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    polku.setAttribute('d', 'M14,0 L-6,0 M-10,0 L-14,0 M2,0 L-8,-9 L-4,-9 L6,0 L-4,9 L-8,9 z '
+      + 'M-11,0 L-15,-5 L-13,-5 L-9,0 L-13,5 L-15,5 z');
+    polku.setAttribute('class', 'flight-plane-body');
+    polku.setAttribute('transform', 'scale(1.3)');
+    svg.appendChild(polku);
+    kone.appendChild(svg);
+    // Käännöksen kesto ja ilmestyminen tyyliin samasta vakiosta (css
+    // .pallo-kotelo > .pallolauta-kone): asento ei koskaan animoidu.
+    kone.style.setProperty('--koneen-kaannos-ms', `${KONEEN_KAANNOKSEN_MS}ms`);
+    kone.style.setProperty('--koneen-ilmestys-ms', `${KONEEN_ILMESTYS_MS}ms`);
+    return kone;
+  };
+
+  /** Kaaren piste ruudulla (kotelon px) osuudella e. */
+  const kaarenRuutu = (kaari, e) => {
+    const kohta = lentokaarenKohta(kaari, e, MERKIN_KORKEUS);
+    return pallo.getScreenCoords(kohta.lat, kohta.lng, kohta.korkeus);
+  };
+
+  /**
+   * Koneen asento asteina: kaaren suunta ruudulla osuudella e. Luetaan
+   * KAARESTA eikä edellisestä kehyksestä, joten kone on lentosuunnassa
+   * jo ilmestyessään (ks. KONE ON HETI LENTOSUUNNASSA yllä).
+   */
+  const koneenKulma = (kaari, e) => {
+    if (!kaari) return 0;
+    const a = Math.max(0, Math.min(1 - KONEEN_SUUNTANAYTE, e));
+    const p1 = kaarenRuutu(kaari, a);
+    const p2 = kaarenRuutu(kaari, a + KONEEN_SUUNTANAYTE);
+    if (!p1 || !p2) return 0;
+    return (Math.atan2(p2.y - p1.y, p2.x - p1.x) * 180) / Math.PI;
+  };
+
+  /** Koko kaari pisteinä [lat, lng, korkeus] jäljen viivakerrokselle. */
+  const kaarenPisteet = (kaari) => {
+    const pisteet = [];
+    for (let i = 0; i <= LENNON_JALJEN_PISTEET; i += 1) {
+      const k = lentokaarenKohta(kaari, i / LENNON_JALJEN_PISTEET, REITIN_KORKEUS);
+      pisteet.push([k.lat, k.lng, k.korkeus]);
+    }
+    return pisteet;
+  };
+
+  /** Jälki koneen taakse osuudelle e; null poistaa viivan kerrokselta. */
+  const piirraJalki = (e) => {
+    if (!jaljenPisteet) return;
+    lauta.reitit.jalki(jaljenPisteet, { paksuus: LENNON_JALJEN_PAKSUUS_PX, osuus: e });
+  };
+
+  const piirraKone = (hetki) => {
+    let piste = null;
+    if (hyppy) {
+      const t = Math.min(1, (hetki - hyppy.alku) / hyppy.kesto);
+      /*
+       * VAIHE VOI TULLA KOHTAUKSELTA (avauslento, js/pallolauta/avaus.js
+       * lennonVaihe). Avauksessa kamera ajaa oman suunnitelmansa, ja
+       * koneen on oltava täsmälleen siinä pisteessä, jota kamera
+       * katsoo — muuten kuvassa on suhteellista liikettä, jota kamera
+       * näyttää jahtaavan (omistaja 6.9.2026 ilta). Ilman vaihetta
+       * lento kulkee siirron omalla käyrällä kuten ennenkin.
+       */
+      const e = hyppy.vaihe ? hyppy.vaihe(t) : hypynVaihe(t).e;
+      // Kone kaaren korkeudella: sama paraabeli kuin kaaren muodolla —
+      // ja sama kaava kuin avauslennon paksulla viivalla, joka piirtyy
+      // koneen perään (reitit.js lentokaarenKohta).
+      koneenKaari = hyppy.kaari;
+      koneenOsuus = e;
+      piste = kaarenRuutu(hyppy.kaari, e);
+      // Viiva kasvaa koneen perään samasta vaiheesta kuin koneen paikka.
+      piirraJalki(e);
+      if (t >= 1) {
+        ankkuri = hyppy.b;
+        const { valmis } = hyppy;
+        hyppy = null;
+        valmis();
+      }
+    } else if (ankkuri) {
+      piste = ruutu(laudanKohta(ankkuri));
+    }
+    if (!piste) return;
+    const kulma = koneenKulma(koneenKaari, koneenOsuus);
+    el.style.transform = `translate(${(piste.x - KONEEN_KOKO_PX / 2).toFixed(2)}px, `
+      + `${(piste.y - KONEEN_KOKO_PX / 2).toFixed(2)}px) rotate(${kulma.toFixed(1)}deg)`;
+  };
+
+  /* ---- silmukka ------------------------------------------------------ */
+
+  const silmukka = (hetki) => {
+    if (!el) return;
+    if (ui.dead) { pura(); return; }
+    if (lento) piirraKone(hetki); else piirraNappula(hetki);
+    kehys = requestAnimationFrame(silmukka);
+  };
+
+  function pura() {
+    cancelAnimationFrame(kehys);
+    kehys = 0;
+    if (lentoOdottaa) {
+      // Kamera-ajoa odottava lento: lupaus ratkeaa tässä eikä jää roikkumaan.
+      const { b, valmis } = lentoOdottaa;
+      lentoOdottaa = null;
+      ankkuri = b;
+      valmis();
+    }
+    if (hyppy) {
+      // Kuollut peli tai keskeytys: hyppy loppuun heti, ettei siirto jää
+      // odottamaan lupausta ikuisesti.
+      const { valmis } = hyppy;
+      hyppy = null;
+      valmis();
+    }
+    el?.remove();
+    el = null;
+  }
+
+  return {
+    nosta: () => {
+      if (el) return;
+      lauta.heraa();
+      el = lento
+        ? koneElementti()
+        : nappulaElementti(ui, 'pallolauta-nappula pallolauta-liikkuva pawn-moving', false);
+      el.dataset.vaihe = 'lepo';
+      if (!lento) {
+        hahmo = el.querySelector('.pawn-hahmo');
+        varjo = el.querySelector('.pawn-varjo');
+      }
+      kotelo.appendChild(el);
+      /*
+       * KONE HÄIVYTTYY NÄKYVIIN OIKEASSA ASENNOSSA: asento on laskettu
+       * jo ensimmäisellä piirrolla (aseta), ja luokka `nakyy` päästää
+       * pelkän peittävyyden liukumaan seuraavassa kehyksessä.
+       */
+      kehys = requestAnimationFrame((hetki) => {
+        if (lento) el?.classList.add('nakyy');
+        silmukka(hetki);
+      });
+    },
+    /**
+     * Nappula (tai kone) paikalleen. `kaari` on lennon oma lisä: kone
+     * saa asentonsa kaaresta jo seistessään lähtökaupungin yllä, joten
+     * lähdössä ei ole alkukäännöstä (KONEEN_KAANNOKSEN_MS = 0).
+     */
+    aseta: (pos, kaari = null) => {
+      ankkuri = pos;
+      hyppy = null;
+      el.dataset.vaihe = 'lepo';
+      if (lento && kaari) { koneenKaari = kaari; koneenOsuus = 0; }
+      if (lento) piirraKone(performance.now()); else piirraNappula(performance.now());
+    },
+    hyppaa: (a, b, kesto, { vaihe = null } = {}) => new Promise((valmis) => {
+      if (!el || ui.reducedMotion) {
+        ankkuri = b;
+        valmis();
+        return;
+      }
+      lauta.heraa();
+      el.dataset.vaihe = 'hyppy';
+      if (lento) {
+        const lahto = a.type === 'city' ? board.cityById.get(a.city) : null;
+        const kohde = b.type === 'city' ? board.cityById.get(b.city) : null;
+        const kaari = lahto && kohde ? lauta.reitit.lentokaari(lahto, kohde) : null;
+        if (!kaari) { ankkuri = b; valmis(); return; }
+        koneenKaari = kaari;
+        koneenOsuus = 0;
+        /*
+         * JÄLKI ON OLEMASSA SAMALLA HETKELLÄ KUIN KONE LÄHTEE: lista
+         * rakennetaan tässä ja ensimmäinen osuus piirretään heti, jotta
+         * viiva ei ala vasta ensimmäisestä kehyksestä. Avauslento
+         * (`omaKamera`) piirtää oman jälkensä kohtauksessa.
+         */
+        jaljenPisteet = omaKamera ? null : kaarenPisteet(kaari);
+        /*
+         * KAMERA ENSIN RAJAUKSEEN, VASTA SITTEN KONE LIIKKEELLE
+         * (KARTTAUUDISTUKSEN PAATOKSET 30; ks. LENNON_KAMERA_MS yllä).
+         * Ajo ODOTETAAN: lähtö- ja kohdekaupunki ovat ruudulla
+         * vastakkaisilla reunoilla jo ensimmäisellä lentokehyksellä, ja
+         * kamera pysyy siinä koko lennon. Kone seisoo odotuksen ajan
+         * lähtökaupungin yllä oikeassa asennossa (`aseta`), joten
+         * ruudulla ei ole hetkeäkään tyhjää.
+         *
+         * `omaKamera`: avauslennon kohtaus ajaa kameran itse yhtenä
+         * kaarena (js/pallolauta/avaus.js ajaKamerasuunnitelma), ja tämä
+         * ajo vain nykäisisi kuvaa ennen kuin se pysäytetään.
+         */
+        const lahde = () => {
+          if (lentoOdottaa && lentoOdottaa.lahde !== lahde) return; // uudempi lento voitti
+          lentoOdottaa = null;
+          if (!el || ui.dead) { ankkuri = b; valmis(); return; }
+          piirraJalki(0);
+          hyppy = { a, b, kaari, vaihe, alku: performance.now(), kesto, valmis };
+        };
+        if (omaKamera) { lahde(); return; }
+        lentoOdottaa = { b, valmis, lahde };
+        void kamera.ajaKamera(
+          { bbox: lennonRajaus(board, a, b), marginaali: LENNON_RAJAUKSEN_MARGINAALI, kokonaan: true },
+          { kesto: LENNON_KAMERA_MS },
+        ).then(lahde, lahde);
+        return;
+      }
+      const pa = ruutu(laudanKohta(a));
+      const pb = ruutu(laudanKohta(b));
+      const matka = pa && pb ? Math.hypot(pb.x - pa.x, pb.y - pa.y) : 0;
+      hyppy = {
+        ...hypynPalat(a, b),
+        vaihe,
+        alku: performance.now(),
+        kesto,
+        huippu: hypynHuippu(matka),
+        valmis,
+      };
+    }),
+    /**
+     * AUTOKYYTI: koko nopan matka YHDELLÄ ajolla ja yhdellä käyrällä
+     * (karttauudistus erä 8, omistaja 13.9.2026: *"liikutaan nopan
+     * antaman matkan verran"*, kiihdytys alussa ja jarrutus lopussa).
+     *
+     * `polku` on sama askelluettelo, jonka js/rules.js findMoves antaa
+     * (tai bussin oma busPath): jokainen alkio on pelin `pos`. Ajo ei
+     * pysähdy välipisteisiin eikä tauota niissä — juuri se erottaa
+     * kyydin hyppyketjusta.
+     *
+     * Sopimus on muuten hypyn: lupaus ratkeaa perillä, `paata()` vie
+     * sen loppuun heti ja liikeherkkyys hyppää suoraan maaliin.
+     */
+    aja: (lahto, polku, kesto, { vaihe = null } = {}) => new Promise((valmis) => {
+      const maali = polku[polku.length - 1];
+      if (!el || ui.reducedMotion || lento || !maali) {
+        ankkuri = maali ?? lahto;
+        valmis();
+        return;
+      }
+      lauta.heraa();
+      el.dataset.vaihe = 'kyyti';
+      const palat = [];
+      let edellinen = lahto;
+      for (const pos of polku) {
+        palat.push(hypynPalat(edellinen, pos));
+        edellinen = pos;
+      }
+      hyppy = {
+        a: lahto, b: maali, palat, vaihe, alku: performance.now(), kesto, huippu: 0, valmis,
+      };
+    }),
+    /**
+     * OHITUS VIE HYPYN LOPPUUN HETI (js/ui.js ohitaLento, omistaja
+     * 26.8.2026: *"napauttamalla ruutua animaatio katkeaa kesken ja
+     * pelaaja pääsee siirtymään mantereelle välittömästi"*).
+     *
+     * Tasokartalla lento on selaimen oma animaatio ja ohitus on sen
+     * `finish()`; pallolla kone kulkee rAF-silmukassa, joten sama teko
+     * on tämä: kesken oleva hyppy päätetään perille, lupaus ratkeaa ja
+     * kone piirretään kohteen ylle. Ilman tätä ohitus jäisi odottamaan
+     * juuri sitä lentoa, jonka pelaaja äsken katkaisi.
+     */
+    paata: () => {
+      if (lentoOdottaa) {
+        // Ohitus kesken kamera-ajon: kone perille heti, viiva valmiiksi.
+        const { b, valmis } = lentoOdottaa;
+        lentoOdottaa = null;
+        ankkuri = b;
+        koneenOsuus = 1;
+        piirraJalki(1);
+        valmis();
+        if (el) piirraKone(performance.now());
+        return;
+      }
+      if (!hyppy) return;
+      const { b, valmis } = hyppy;
+      hyppy = null;
+      ankkuri = b;
+      valmis();
+      if (el) { if (lento) piirraKone(performance.now()); else piirraNappula(performance.now()); }
+    },
+    laske: () => {
+      const perilla = ankkuri;
+      pura();
+      // Paikallaan oleva nappula ilmestyy perille lauta.paivitassa; tämä
+      // kertoo, ettei se ole teleportti (kamera ei sukella perään)…
+      if (perilla) lauta.merkitseNappulanPaikka(perilla);
+      // …paitsi lennolla: laskeutumisen jälkeen kamera sukeltaa
+      // kohteeseen saapumisnäkymään, kuten kartalla maanvaihdon ajo.
+      /*
+       * Avauslennossa (`omaKamera`) suunnitelma on jo päättynyt
+       * täsmälleen saapumisnäkymään, joten tämä ajo on nolla-ajo:
+       * kamera.js tunnistaa liikkumattoman ajon ja kirjoittaa näkymän
+       * kerralla (ks. js/pallolauta/avaus.js, LOPPUKORKEUS).
+       */
+      /*
+       * SAAPUMISRAJAUS: MAA MAHDOLLISIMMAN ISONA (omistaja 11.9.2026
+       * ilta; js/pallolauta/lauta.js saapumisrajaus).
+       *
+       * AVAUSLENTO PITÄÄ OMAN MAALINSA (`omaKamera`). Sen suunnitelma
+       * päättyy täsmälleen saapumisasentoon (js/pallolauta/avaus.js,
+       * Raamattu 9.9.2026: kaupunki alimmassa kolmanneksessa), ja tämä
+       * ajo on siellä tarkoituksella NOLLA-AJO — maan rajaus nykäisisi
+       * kuvaa heti laskeutumisen päälle. Pelin omissa lennoissa
+       * kamera rajaa maan.
+       */
+      if (lento) {
+        /*
+         * VIIVA HÄIPYY LASKEUTUMISESSA. Jälki piirretään ensin loppuun
+         * (kone on perillä, viiva koko matkan mittainen) ja poistetaan
+         * sitten kerroksen omalla siirtymällä — sama pehmeä katoaminen
+         * kuin avauslennossa (reitit.js jalki palauttaa
+         * pathTransitionDurationin), ei välähdystä.
+         */
+        if (jaljenPisteet) {
+          piirraJalki(1);
+          jaljenPisteet = null;
+          lauta.reitit.jalki(null);
+        }
+        if (omaKamera) void kamera.kotiin({ kesto: PALLOKAMERAN_AJO_MS });
+        else void lauta.saavu({ kesto: PALLOKAMERAN_AJO_MS });
+      }
+    },
+  };
+}

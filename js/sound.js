@@ -11,12 +11,20 @@
 const STORAGE_KEY = 'matkakirja-aani';
 const VANHA_STORAGE_KEY = 'afrikan-tahti-sound';
 
-import { valittuAani, jaaAlku } from './aani-ehdokkaat.js';
+import { livianEleaaniNaytteet } from './livia-tehosteet.js';
+import { valittuAani, jaaAlku, tehosteVoima } from './aani-ehdokkaat.js';
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
-import { haeAani } from './media.js';
+import { AANI_JUURI, haeAani } from './media.js';
+import { kehittajanKerroin, kuunteleKehittajanKerrointa } from './kehittajan-voimat.js';
 
 // Ambienssin ristihäivytys ja tapahtumien väli. Väli on tarkoituksella pitkä
 // ja epäsäännöllinen: säännöllinen ääni alkaa kuulua kellona.
+/*
+ * Masterketjun perustaso. Hillitty kokonaistaso: syntetisoitu ääni
+ * antaa anteeksi paljon enemmän hiljaisena kuin kovana. Pelaajan
+ * äänitehosteliuku (js/aani-ehdokkaat.js tehosteVoima) kertoo tähän.
+ */
+const MASTER_PERUSTASO = 0.24;
 const AMBIENCE_FADE = 2;
 const AMBIENCE_EVENT_MIN = 8000;
 const AMBIENCE_EVENT_MAX = 30000;
@@ -352,6 +360,12 @@ class Sound {
     this.noise = null;
     this.ambience = null;
     this.ambienceType = null;
+    /*
+     * Pulun tehosteiden manifesti: null = ei vielä yritetty, olio =
+     * yritetty (tyhjä olio, jos manifestia ei ollut). Lippu estää
+     * saman haun tekemisen kahdesti — ks. lataaPulunTehosteet.
+     */
+    this.pulunTehosteet = null;
     // Väistökerroin syntetisoidulle äänimaisemalle. Nauhoitetulla
     // taustalla on oma vastaava (js/ambience-stream.js), ja ne ajetaan
     // yhdessä: aiemmin vain nauhoitettu väistyi, ja syntetisoitu jäi
@@ -439,10 +453,10 @@ class Sound {
 
       // Masteriketju: kaikki äänet → kompressori → ulos. Kompressori pitää
       // päällekkäiset äänet kasassa ilman että kokonaisvoimakkuus nousee.
-      // Hillitty kokonaistaso: syntetisoitu ääni antaa anteeksi paljon
-      // enemmän hiljaisena kuin kovana.
+      // Perustaso on MASTER_PERUSTASO; pelaajan äänitehosteliuku kertoo
+      // siihen (paivitaTehosteVoima päivittää soivan ketjun heti).
       this.master = this.ctx.createGain();
-      this.master.gain.value = 0.24;
+      this.master.gain.value = MASTER_PERUSTASO * tehosteVoima();
       const comp = this.ctx.createDynamicsCompressor();
       comp.threshold.value = -20;
       comp.knee.value = 26;
@@ -903,6 +917,24 @@ class Sound {
    * Sama tyyppi uudelleen ei tee mitään, jotta maisema ei nykäise
    * jokaisella renderöinnillä.
    */
+  /*
+   * SYNTETISOITU MAISEMA ON MYOS "TAUSTAAANI" (omistajan vikailmoitus
+   * 13.9.2026: *"Tausta äänen voimakkuus nappi ei vieläkään toimi"*).
+   *
+   * MITATTU JUURISYY: kaupungeissa, joilla ei ole nauhoitettua raitaa,
+   * taustan soittaa TAMA syntetisoitu maisema (ambience-stream kutsuu
+   * sfx.setAmbience(fallbackType)). Sen taso oli pelkkä vaistokerroin,
+   * eika Taustaaanet-liuku (js/kehittajan-voimat.js laji 'tausta')
+   * yltanyt siihen lainkaan — liuku nollaan jatti maiseman soimaan.
+   * Nauhoitettu raita seurasi liukua, joten vika nakyi vain osassa
+   * kaupunkeja ja savuke mittasi juuri sen toimivan polun.
+   *
+   * Taso on nyt sama tulo kuin nauhoitetulla: vaisto x liuku.
+   */
+  ambienssinTaso() {
+    return Math.max(0, Math.min(1, this.ambienssiVaisto)) * kehittajanKerroin('tausta');
+  }
+
   setAmbience(type) {
     if (type === this.ambienceType) return;
     this.ambienceType = type ?? null;
@@ -920,7 +952,7 @@ class Sound {
     // Väistö on voimassa myös uudelle maisemalle: ilman tätä kesken
     // näytteen vaihtuva maisema nousisi täyteen voimaan puheen päälle.
     out.gain.exponentialRampToValueAtTime(
-      Math.max(0.0001, this.ambienssiVaisto), ctx.currentTime + AMBIENCE_FADE,
+      Math.max(0.0001, this.ambienssinTaso()), ctx.currentTime + AMBIENCE_FADE,
     );
     out.connect(this.bus);
 
@@ -950,7 +982,28 @@ class Sound {
       // Liuku tulee kutsujalta (ambience-stream ajaVaisto), jotta
       // nauhoitettu ja syntetisoitu tausta feidaavat samaa tahtia.
       maisema.out.gain.exponentialRampToValueAtTime(
-        Math.max(0.0001, this.ambienssiVaisto), t + Math.max(0.05, liukuS),
+        Math.max(0.0001, this.ambienssinTaso()), t + Math.max(0.05, liukuS),
+      );
+    } catch {
+      /* solmu oli jo purettu */
+    }
+  }
+
+  /**
+   * Liu'un veto kuuluu HETI soivassa maisemassa. Vaisto pysyy
+   * ennallaan: tama paivittaa vain tulon toisen puoliskon, samalla
+   * 200 ms liu'ulla kuin nauhoitetun taustan puolella
+   * (js/ambience-stream.js kuunteleKehittajanKerrointa).
+   */
+  paivitaAmbienssinVoima(liukuS = 0.2) {
+    const maisema = this.ambience;
+    if (!this.ctx || !maisema || maisema.loppuu) return;
+    const t = this.ctx.currentTime;
+    try {
+      maisema.out.gain.cancelScheduledValues(t);
+      maisema.out.gain.setValueAtTime(Math.max(maisema.out.gain.value, 0.0001), t);
+      maisema.out.gain.exponentialRampToValueAtTime(
+        Math.max(0.0001, this.ambienssinTaso()), t + Math.max(0.05, liukuS),
       );
     } catch {
       /* solmu oli jo purettu */
@@ -1064,6 +1117,21 @@ class Sound {
     osc.stop(t0 + dur + 0.05);
   }
 
+  /** Kertaluonteinen, heti peruttava ja omaa äänivalintaa noudattava eleääni. */
+  pikseliEle({kind,voima=1}={}) {
+    if(!eleNahty||!this.enabled||this.taustaTauko||this.saneluTauko)return;
+    const ctx=this.ensureContext();if(!ctx||ctx.state!=='running')return;
+    this.liviaPuskurit??=new Map();
+    if(!this.liviaPuskurit.has(kind)){
+      const data=livianEleaaniNaytteet(kind,ctx.sampleRate);if(!data.length)return;
+      const b=ctx.createBuffer(1,data.length,ctx.sampleRate);b.getChannelData(0).set(data);this.liviaPuskurit.set(kind,b);
+    }
+    const src=ctx.createBufferSource(),gain=ctx.createGain();src.buffer=this.liviaPuskurit.get(kind);
+    gain.gain.value=Math.max(0,Math.min(1,voima));src.connect(gain).connect(this.bus);
+    let ended=false;src.onended=()=>{ended=true;src.disconnect();gain.disconnect();};src.start();
+    return()=>{if(ended)return;ended=true;gain.gain.cancelScheduledValues(ctx.currentTime);gain.gain.setValueAtTime(gain.gain.value,ctx.currentTime);gain.gain.linearRampToValueAtTime(0,ctx.currentTime+.012);try{src.stop(ctx.currentTime+.016);}catch{}};
+  }
+
   // --- pelin äänet --------------------------------------------------------
 
 
@@ -1075,7 +1143,7 @@ class Sound {
     const real = REAL_PLAYERS[name];
     if (real && real(this, asetukset)) return;
     const sound = SOUNDS[name];
-    if (sound) sound(this, asetukset);
+    if (sound) return sound(this, asetukset);
   }
 
   /**
@@ -1105,6 +1173,42 @@ class Sound {
         })
         .catch(() => { /* ei verkkoa — synteesi kelpaa */ });
     }
+    this.lataaPulunTehosteet();
+  }
+
+  /**
+   * PULUN TEHOSTEET MANIFESTIN KAUTTA (ks. PULUN_TEHOSTEET yllä).
+   *
+   * Kaksi askelta eikä yksi: ensin manifesti, joka kertoo mikä tiedosto
+   * kuuluu millekin tunnukselle, sitten tiedostot. Osoitetta ei voi
+   * kovakoodata, koska huonon osuman korvaaminen paremmalla vaihtaa
+   * tiedoston nimen mukana kulkevat tekijä- ja lisenssitiedot — ja
+   * pelin ei pidä odottaa julkaisua sen takia.
+   *
+   * Epäonnistuminen (ei verkkoa, ei vielä ajettua hakua) EI ole virhe:
+   * tehostetta ei silloin ole, ja play() jättää sen soittamatta.
+   */
+  lataaPulunTehosteet() {
+    if (this.pulunTehosteet) return;
+    this.pulunTehosteet = {};
+    fetch(PULUN_MANIFESTI, { mode: 'cors' })
+      .then((res) => (res.ok ? res.json() : Promise.reject(new Error('http'))))
+      .then((manifesti) => {
+        const rivit = Array.isArray(manifesti?.tehosteet) ? manifesti.tehosteet : [];
+        const tunnuksesta = new Map(rivit.map((rivi) => [rivi.tunnus, rivi]));
+        for (const [avain, tiedot] of Object.entries(PULUN_TEHOSTEET)) {
+          const rivi = tunnuksesta.get(tiedot.tunnus);
+          if (!rivi?.tiedosto) continue;
+          this.pulunTehosteet[avain] = rivi;
+          // Peili ensin, alkuperäinen lähde varareittinä (js/media.js).
+          haeAani(`${PULUN_TEHOSTEJUURI}${rivi.tiedosto}`)
+            .then((res) => (res.ok ? res.arrayBuffer() : Promise.reject(new Error('http'))))
+            .then((data) => this.ctx.decodeAudioData(data))
+            .then((buf) => { this.samples[avain] = buf; })
+            .catch(() => { /* yksi tehoste jää soimatta, muut kelpaavat */ });
+        }
+      })
+      .catch(() => { /* manifestia ei ole vielä ajettu — tehosteet ovat hiljaa */ });
   }
 
   /**
@@ -1128,6 +1232,19 @@ class Sound {
       }
     }
     return iskut;
+  }
+
+  /**
+   * ÄÄNITEHOSTEIDEN LIUKU (omistaja 11.9.2026: *"ääni säätimiin voisi
+   * tuoda mukaan äänitehosteet pulun ja lukijan omat äänen voimakkuus
+   * säätimet"*). Kaikki tämän moduulin äänet — syntetisoidut tehosteet,
+   * äänitesiivut (playSlice), pulun tehosteet ja äänimaisema — kulkevat
+   * masterketjun läpi, joten yksi kerroin riittää. Muutos kuuluu heti:
+   * päävalikon liuku kutsuu tätä jokaisella liikahduksella.
+   */
+  paivitaTehosteVoima() {
+    if (!this.master) return;
+    this.master.gain.value = MASTER_PERUSTASO * tehosteVoima();
   }
 
   /**
@@ -1239,7 +1356,7 @@ const ZOOM_VAUHTI_MAX = Math.max(...ZOOM_VAUHTI);
 
 // Oikeat äänitteet Freesoundista (CC0). Ladataan verkosta puskuriin;
 // ilman verkkoa vastaava syntetisoitu ääni soi entiseen tapaan.
-const REAL_SAMPLES = {
+export const REAL_SAMPLES = {
   dice: {
     url: 'https://cdn.freesound.org/previews/94/94031_1554038-lq.mp3',
     credit: '"Dice Roll" — LoafDV, Freesound (CC0)',
@@ -1302,6 +1419,92 @@ const REAL_SAMPLES = {
   stuck: { url: 'assets/audio/efekti-jumissa.mp3', credit: 'ElevenLabs SFX' },
   turn: { url: 'assets/audio/efekti-vuoro.mp3', credit: 'ElevenLabs SFX' },
   win: { url: 'assets/audio/efekti-voitto.mp3', credit: 'ElevenLabs SFX' },
+};
+
+/*
+ * ── PULUN TEHOSTEET: MANIFESTISTA, EI TAULUKOSTA ─────────────────────
+ *
+ * Omistajan tilaus 6.9.2026 aamupäivä, sanatarkasti: *"Pululle ja
+ * muuallekin tarvitaan ääniefektejä: linnun siivet lentäessä,
+ * tömähdyksiä (pulu laskeutuu), hassuja täyteääniä kun pulu sekoilee
+ * (doing vieteriääni yms), oven lämähdys kiinni ja auki (pulu tulee tai
+ * lähtee), viuhahdusefektejä yms. NÄITÄ EI GENEROIDA."*
+ *
+ * Ne haetaan siis valmiina äänitteinä Freesoundista (CC0 tai CC BY,
+ * tools/hae-freesound.mjs --pulu) eikä ElevenLabsilta. Sillä on yksi
+ * seuraus tälle tiedostolle: OSOITETTA EI VOI KIRJOITTAA TÄHÄN. Kun
+ * huono osuma vaihdetaan parempaan, uusi ääni tulee samalle
+ * tunnukselle mutta on eri tiedosto eri tekijältä eri lisenssillä —
+ * ja pelin pitäisi silloin odottaa julkaisua. Siksi tässä on vain
+ * TUNNUS, ja tiedostonimi, tekijä ja lisenssi luetaan ajossa
+ * manifestista, jonka hakuajo kirjoittaa ämpäriin äänten viereen.
+ *
+ * ÄÄNET SOIVAT VAIN JOS MANIFESTI ON LADATTU. Synteesivastinetta ei
+ * ole: puuttuva puskuri tarkoittaa hiljaisuutta (play palaa
+ * REAL_PLAYERSista epätotena eikä SOUNDSissa ole näitä nimiä). Se on
+ * oikea käytös — arvattu siivenräpytys olisi huonompi kuin ei mitään.
+ */
+export const PULUN_TEHOSTEJUURI = `${AANI_JUURI}aanet/tehosteet/pulu/`;
+const PULUN_MANIFESTI = `${PULUN_TEHOSTEJUURI}manifesti.json`;
+
+/*
+ * TASO: −8 dB LUENTAAN NÄHDEN (omistajan tilaus). Tiedostot on
+ * normalisoitu −14 LUFSiin, mikä on lähellä puheen tasoa; tehoste ei
+ * saa nousta luennan päälle, joten sitä vaimennetaan tasan sen verran.
+ * 10^(−8/20) ≈ 0,40.
+ */
+const PULUN_TASO = 0.4;
+/** Lähtövoimakkuus ennen −8 dB:n vaimennusta (sama kuin muilla efekteillä). */
+const PULUN_PERUSVOIMA = 0.35;
+
+/**
+ * Pelin tehostenimi → listan tunnus (tools/tehosteet/pulu-tehosteet.json).
+ * `kesto` on soitettavan siivun pituus ja `voima` tehostekohtainen
+ * hienosäätö: tömähdys saa kuulua täydellä, hassu täyteääni ei.
+ */
+export const PULUN_TEHOSTEET = {
+  'pulu.siivet': { tunnus: 'siivet-lento', kesto: 1.4, voima: 0.9 },
+  'pulu.siivet-lasku': { tunnus: 'siivet-laskeutuminen', kesto: 1.2, voima: 0.9 },
+  'pulu.tomahdys': { tunnus: 'tomahdys-laskeutuminen', kesto: 0.7, voima: 1 },
+  'pulu.doing': { tunnus: 'doing-vieteri', kesto: 1.1, voima: 0.8 },
+  'pulu.sekoilu': { tunnus: 'sekoilu-2', kesto: 1.2, voima: 0.8 },
+  'pulu.ovi-auki': { tunnus: 'ovi-auki', kesto: 1.6, voima: 0.9 },
+  'pulu.ovi-kiinni': { tunnus: 'ovi-lamahdys', kesto: 1.2, voima: 0.9 },
+  'pulu.viuhahdus': { tunnus: 'viuhahdus-tulo', kesto: 0.9, voima: 0.85 },
+  'pulu.viuhahdus-lahto': { tunnus: 'viuhahdus-lahto', kesto: 0.9, voima: 0.85 },
+  'pulu.kujerrus': { tunnus: 'kujerrus', kesto: 1.4, voima: 0.9 },
+  'pulu.sahke': { tunnus: 'paperin-kahina', kesto: 1, voima: 0.8 },
+  'pulu.kilahdus': { tunnus: 'kellon-kilahdus', kesto: 1.2, voima: 0.8 },
+  /*
+   * SAAPUMISEN MINITRAILERI JA ISO KUVASARJA (omistaja 11.9.2026: "Kuville
+   * tarvitaan kameran KLIK ääni tehoste ja kirjaimille jokin lento suhina
+   * efekti"). Samassa listassa ja samassa ämpärikansiossa kuin pulun
+   * tehosteet, koska putki (Freesound, CC0/CC BY, manifesti) on sama —
+   * NÄITÄ EI GENEROIDA. Klik täydellä voimalla: se on kuvan isku, ei
+   * tausta; suhina hieman vaimeampana, koska se soi kirjainten mukana
+   * kahdesti (sisään ja ulos).
+   */
+  'pulu.kamera-klik': { tunnus: 'kamera-laukaisin', kesto: 0.8, voima: 1 },
+  'pulu.kirjain-suhina': { tunnus: 'kirjain-suhina', kesto: 1.4, voima: 0.8 },
+  /*
+   * PULLARIEMU (omistaja 11.9.2026 tekstisession kautta: oma hihkuva
+   * pullansyöntianimaatio joka kaupunkilehteen; ele bunFeast
+   * js/livia-eleet.js). Kohtaus on 4600 ms, ja siinä on kolme ääntä:
+   * riemuhihkaisu alussa, sama puraisu kolmesti (1564/2208/2852 ms) ja
+   * tyytyväinen lopetus.
+   *
+   * LOPETUKSEEN EI OMAA ÄÄNTÄ: `pulu.kujerrus` on juuri se tyytyväinen
+   * kujerrus, joka kohtauksen loppuun kuuluu, ja yksi ääni vähemmän on
+   * yksi kuunneltava ja ämpäriin vietävä vähemmän. Puraisu on yksi
+   * äänite kolmesti, koska kolme eri puraisua kuulostaisi kolmelta eri
+   * suulta.
+   *
+   * VOIMAT: hihkaisu on kohtauksen huippu mutta lyhyt (0,9), puraisu
+   * jää pehmeäksi (0,7) — se soi kolmesti, ja täydellä voimalla
+   * rapina alkaisi hallita koko kohtausta.
+   */
+  'pulu.pulla-riemu': { tunnus: 'pulla-riemu', kesto: 0.9, voima: 0.9 },
+  'pulu.pulla-puraisu': { tunnus: 'pulla-puraisu', kesto: 0.8, voima: 0.7 },
 };
 
 // Mitkä äänet soivat oikeasta äänitteestä ja miten siivu otetaan.
@@ -1395,6 +1598,25 @@ const REAL_PLAYERS = {
   win: (s) => s.playSlice('win', { dur: 3.6, gain: 0.5, alusta: true }),
 };
 
+/*
+ * Pulun tehosteet soittajiksi yhdellä silmukalla eikä kahdellatoista
+ * käsin kirjoitetulla rivillä: ne eroavat toisistaan vain kestossa ja
+ * voimassa, ja ne luetaan jo taulukosta. Kaikki soivat ALUSTA — nämä
+ * ovat kertaeleitä, joilla on oma alkunsa, eivät jatkuvia äänitteitä
+ * joista poimitaan siivu.
+ *
+ * `viive` antaa kutsujan porrastaa kaksi tehostetta peräkkäin (Livia:
+ * viuhahdus ja siivet), `voima` vaimentaa yksittäisen soiton.
+ */
+for (const [avain, tiedot] of Object.entries(PULUN_TEHOSTEET)) {
+  REAL_PLAYERS[avain] = (s, { viive = 0, voima = 1 } = {}) => s.playSlice(avain, {
+    dur: tiedot.kesto,
+    gain: PULUN_PERUSVOIMA * PULUN_TASO * tiedot.voima * voima,
+    alusta: true,
+    delay: viive,
+  });
+}
+
 
 // --- äänimaisemat -----------------------------------------------------------
 //
@@ -1485,6 +1707,7 @@ const AMBIENCE_EVENTS = {
 export const AMBIENCE_TYPES = Object.keys(AMBIENCES);
 
 const SOUNDS = {
+  liviaEle: (s,options) => s.pikseliEle(options),
   // Käyttöliittymä
   // Kysymyskortin avaus ilman verkkoa: paperi ja pehmeä kello.
   quizOpen: (s) => {
@@ -1674,6 +1897,76 @@ const SOUNDS = {
   },
   tick: (s) => s.hiss({ dur: 0.025, freq: 3200, gain: 0.03, q: 2.4 }),
   /*
+   * AIKAJANAN VUOSILUKU NAKSAHTAA (omistajan tilaus 3.9.2026: *"kun
+   * vuosiluku vaihtuu, niin siinäkin voisi olla pieni ääniefekti
+   * taustalla"*). Mekaanisen laskurin naksu: korkea suodatettu kohina
+   * ja sen päällä yksi kuiva klik, yhteensä alle 40 ms.
+   *
+   * KAKSI SYYTÄ, MIKSI TÄMÄ ON JUURI NÄIN HILJAINEN JA HALPA:
+   *   1. Ääni on TAUSTAA, ei kuittaus — taso on murto-osa paperin
+   *      kahahduksesta (0,075), koska se toistuu vuosi toisensa
+   *      jälkeen koko kaaren ajan.
+   *   2. Naksu voi soida kahdeksan kertaa sekunnissa (js/aikajana.js
+   *      AIKAJANA_NAKSU_VALI_MS), joten kohina tulee kierrätetystä
+   *      kanavasta (hissNopea) eikä luo solmuja per naksahdus —
+   *      sama oppi kuin kirjoituskoneen naputuksessa.
+   * Oma äänite olisi tähän ylimitoitettu: naksu ei kaipaa tiedostoa.
+   * VARAÄÄNI, EI PÄÄOSA: kun ämpärin kohahdus (js/tehosteet.js) on
+   * ladattu, se soi tämän sijaan (js/aikajana.js vuosiAani).
+   */
+  /*
+   * KEKSINNÖN KILAHDUS (omistaja 3.9.2026: *"vaihda se efektiääni, joka
+   * on, kun tulee uusi keksintö. Se pitää vaihtaa johonkin todella
+   * yksinkertaiseen"*). Yksi puhdas sävel (C6) ja hyvin hiljainen
+   * oktaavi sen päällä, alle puoli sekuntia, pehmeä alku. Ei tähteä,
+   * ei kohahdusta, ei rullausta — pieni lamppu syttyy.
+   */
+  keksinto: (s) => {
+    s.tone({ freq: 1046.5, dur: 0.4, type: 'sine', gain: 0.05, attack: 0.008 });
+    s.tone({ freq: 2093, dur: 0.24, type: 'sine', gain: 0.01, attack: 0.008, delay: 0.01 });
+  },
+  vuosi: (s) => {
+    s.hissNopea({ dur: 0.028, type: 'highpass', freq: 5200, sweepTo: 3200, gain: 0.014, q: 0.7 });
+    s.knock({ freqs: [2400], dur: 0.022, gain: 0.03, q: 12 });
+  },
+  /*
+   * SÄHKEEN KIRJOITUSKONE (omistajan tilaus 3.9.2026: *"tekstit saisi
+   * tulla siihen animoidusti. Rivi kerrallaan ja taustalla saisi kuulua
+   * kirjoituskoneen äänet ja lopussa aina se bling, kun rivi vaihtuu"*).
+   *
+   * ERI ÄÄNI KUIN `pen`: kynän raapaisu on pehmeä sipaisu pergamentilla,
+   * lennätinkonttorin kone on KOVA vasaranisku metallityyppiä vasten.
+   * Purske on siksi lyhyt (30 ms) ja sen päällä kuiva resonoiva kopsahdus.
+   * Sävy vaihtelee kutsusta toiseen (`vire`), koska jokainen kirjain osuu
+   * eri kohtaan telaa — täysin identtinen naksu kuulostaisi metronomilta.
+   *
+   * KIERRÄTETTY KANAVA (hissNopea): naputus soi kymmeniä kertoja rivissä,
+   * eikä se saa luoda uusia audiosolmuja per lyönti — sama oppi kuin
+   * `pen`-lyönnillä ja aikajanan vuosinaksulla. Soittotiheyden rajaus
+   * (joka toinen merkki, enintään 20/s) on kutsujalla, js/fokusvirta.js.
+   */
+  kirjoituskone: (s, { vire = 1 } = {}) => {
+    s.hissNopea({
+      dur: 0.03, type: 'highpass', freq: 3200 * vire, sweepTo: 1700 * vire, gain: 0.028, q: 0.8,
+    });
+    s.knock({ freqs: [1350 * vire, 2450 * vire], dur: 0.028, gain: 0.05, q: 9 });
+  },
+  /*
+   * LENNÄTTIMEN KELLO RIVIN LOPUSSA (sama tilaus). Kaksi puhdasta
+   * sinisävyä ilman epäharmonisia osasäveliä: se on pieni kirkas kello
+   * eikä soittorasian kellopeli (`bell`), ja juuri siksi tässä on
+   * `tone` eikä `bell`. Vaimennus 250 ms — kello ehtii soida rivin yli
+   * mutta on vaiennut ennen kuin seuraava rivi alkaa (350 ms).
+   *
+   * SUKULAISUUS `typeBell`-ääneen on tarkoituksellinen mutta ero on
+   * selvä: pöllön rivinvaihtokello on FM-kilahdus ja pitkä kellosointu,
+   * tämä on lennätinkonttorin ohuempi ja lyhyempi kilkatus.
+   */
+  bling: (s) => {
+    s.tone({ freq: 2100, dur: 0.25, type: 'sine', gain: 0.055, attack: 0.004 });
+    s.tone({ freq: 3200, dur: 0.22, type: 'sine', gain: 0.03, attack: 0.004, delay: 0.008 });
+  },
+  /*
    * Kuplan varapolku ilman äänitettä: hyvin lyhyt pehmeä paperin
    * kahahdus (ks. REAL_PLAYERS.kupla). Ei kelloa eikä sointua — kupla
    * ei ilmoita mitään, se vain ilmestyy.
@@ -1734,6 +2027,13 @@ const SOUNDS = {
   },
 };
 
+/*
+ * Tehosteiden nimet sisältöpakettiin (Siirtoseppä 23.9.2026, skeema 1.8):
+ * SOUNDS on synteesikoodia, jota natiivi ei aja; se tarvitsee nimet ja
+ * REAL_SAMPLES-näytteet (kokoelma aanitaulut).
+ */
+export const AANITEHOSTEET = Object.keys(SOUNDS);
+
 export const sfx = new Sound();
 
 /*
@@ -1745,6 +2045,13 @@ lisaaTaustaVaimennus({
   hiljenna: () => sfx.taukoaTaustalle(),
   palauta: () => sfx.jatkaEtualalle(),
 });
+
+/*
+ * Taustaaanet-liuku (index.html #voima-tausta) yltaa myos
+ * syntetisoituun maisemaan. Rekisterointi on tassa samasta syysta kuin
+ * taustavahti yllä: luokan voi yha luoda testissa ilman kuuntelijaa.
+ */
+kuunteleKehittajanKerrointa('tausta', () => sfx.paivitaAmbienssinVoima());
 
 /**
  * Aarteen paljastuksen ääni laattatyypin mukaan.

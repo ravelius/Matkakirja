@@ -194,34 +194,113 @@ export const FOKUSVIRTA_MOSKOVA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Moskova, heinäkuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Kaupunki on rakennettu renkaiksi kuin puun vuosilustot, ja '
-      + 'sen sydämessä linnoituksen muurit sulkevat sisäänsä kirkkoja '
-      + 'kuin lippaan. Kelloja on niin monta, että kun ne soivat yhtä '
-      + 'aikaa, kauppias lopettaa tinkimisen ja odottaa. Söin '
-      + 'kauppiastalossa päivällisen, joka kesti neljä tuntia ja jossa '
-      + 'teetä juotiin samovaarista kuin vettä lähteestä. Täällä '
-      + 'sanotaan: Pietari on Venäjän pää, mutta Moskova on sen sydän.',
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 23ac8b086234601814d5d11bc2ffa19b343e3ddd6463eda4e5022c793c84ea9a. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-moskova-r20260909-paper-v4.jpg",
+      lyhyt: "Moskova, 1873. Suuri kello ja sen irti päässyt pala.",
+      selite: 'Tsaarinkellon kyljen valtava repeämä ja vieressä seisova pronssinpala kertovat kellosta, joka sai maineensa soimatta kertaakaan. Kohde ei liikkunut eikä vaatinut ketään hiljenemään, joten vedos valmistui mainiosti.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.kreml.ru/en-Us/visit-to-kremlin/what-to-see/tsar-kolokol/","https://kremlin-architectural-ensemble.kreml.ru/the-tsar-bell/view/"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-moskova-r20260911-paper2-v1.jpg",
+      lyhyt: "Moskova, 1873. Pieni kello sai aikaan sen, mihin suuri ei pystynyt.",
+      selite: 'Majatalon pieni käsikello kutsui minut lämpimän ruoan ääreen, mihin Kremlin kuuluisa jättiläinen ei ollut koskaan pystynyt. Illalla vaikutusvalta mitattiin sillä, kuka sai vieraan istumaan.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.kreml.ru/en-Us/visit-to-kremlin/what-to-see/tsar-kolokol/"],
+    },
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Moskova, heinäkuussa 1873. Helteistä; kupolit häikäisevät; '
+      + 'puntari korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
+    teksti: "Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[curious] Kaupunki on rakennettu renkaiksi kuin puun '
-      + 'vuosilustot, ja sen sydämessä linnoituksen muurit sulkevat '
-      + 'sisäänsä kirkkoja kuin lippaan. [excited] Kelloja on niin monta, '
-      + 'että kun ne soivat yhtä aikaa, kauppias lopettaa tinkimisen ja '
-      + 'odottaa. [warmly] Söin kauppiastalossa päivällisen, joka kesti '
-      + 'neljä tuntia ja jossa teetä juotiin samovaarista kuin vettä '
-      + 'lähteestä. [whispers] Täällä sanotaan: Pietari on Venäjän pää, '
-      + 'mutta Moskova on sen sydän.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Illalla pieni käsikello kutsui minut syömään"
+     * (siirtymä).
+     */
+    reaktiot: [
+  {
+    "id": "moskova.r1",
+    "ankkuri": "valtava kello, joka ei ollut soinut kertaakaan",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "moskova.r2",
+    "ankkuri": "halkesi ennen ensimmäistä lyöntiä",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "moskova.r3",
+    "ankkuri": "Irronnut pala näytti huonettani suuremmalta",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "moskova.r4",
+    "ankkuri": "kuin hiljaisuus olisi sillä voitettu",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "moskova.r5",
+    "ankkuri": "vähemmän mainetta, enemmän vaikutusvaltaa",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. [warmly] Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-moskova.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era02; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-moskova-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-moskova-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Moskova: hiljaisuuden kyljessä on lintua suurempi aukko.',
+        selite: 'Tsaarinkellon irrallinen pala seisoo yhä suuren aukon edessä, ja läheltä pronssin reuna näyttää kallionseinältä. Kello ei ole koskaan soinut, mutta yleisöä se kerää enemmän kuin moni toimiva esine.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://en.wikipedia.org/wiki/Tsar_Bell',
+          'https://bridgetomoscow.com/time-gap-tsar-bell',
+        ],
+      },
+    ],
     /*
      * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
      * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
@@ -253,15 +332,33 @@ export const FOKUSVIRTA_MOSKOVA = {
      *       en-artikkeli lisää, että hän halusi tehdä sen mahdollisimman
      *       huomaamattomasti eikä pitänyt kiitoksista.
      */
-    maadoitus: 'Kääk. Se neljän tunnin päivällinen ei ollut pelkkää '
-      + 'syömistä — sellaisissa taloissa istui väkeä, joka teki rahansa '
-      + 'kankaalla ja pellavalla ja käytti ne sitten johonkin ihan '
-      + 'muuhun. Yksi heistä, Pavel Tretjakov, oli ostellut tauluja '
-      + 'vuodesta 1856 ja avannut kokoelmansa yleisölle jo 1867, eli '
-      + 'kuusi vuotta ennen isoisäsi käyntiä. Vuonna 1892 hän antoi koko '
-      + 'kokoelman kaupungille ja yritti tehdä senkin mahdollisimman '
-      + 'huomaamattomasti, koska kiitosten kuunteleminen oli hänestä '
-      + 'kiusallista. Mut kaupunki sai museon, ja se on siellä yhä.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Moskovan metrossa pronssikoiran kuono on hierottu kiiltäväksi onnen toivossa. Minäkin hipaisin sitä nokallani. En minä muuten, mutta edessä oli pitkä lento."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      *
@@ -273,17 +370,13 @@ export const FOKUSVIRTA_MOSKOVA = {
      * valita karusellin ensimmäistä, koska toinen vastaa repliikkiä
      * sanasta sanaan.
      */
-    teksti: 'Se pää ja sydän -sanonta piti pintansa: puoli vuosisataa '
-      + 'isoisäsi käynnin jälkeen pääkaupunki muutti takaisin Moskovaan, '
-      + 'ja sydän sai pään tehtävät.. Kellot soivat edelleen, samovaarit '
-      + 'höyryävät edelleen, ja se rengasrakenne näkyy nykyään '
-      + 'metrokartassa asti. Muurien luo sitten.',
     kuva: {
       ampari: 'herokoe/hero-moskova-keskipaiva.png',
       /*
        * Selite on lehden oman avauskuvan selite sellaisenaan; yksikään
        * luku ei muutu.
        */
+      lyhyt: 'Kremlin punatiiliset muurit rakensivat italialaiset 1400-luvun lopulla, vallan keskus 500 vuotta.',
       selite: 'Kremlin punatiiliset muurit rakensivat italialaiset '
         + 'mestarit 1400-luvun lopulla, ja niiden sisällä on ollut '
         + 'vallan keskus yli viisisataa vuotta.',
@@ -351,6 +444,8 @@ export const FOKUSVIRTA_MOSKOVA = {
         + 'Hevosvetoinen teekuljetus loppui 1905, karavaanit 1925 — ja '
         + 'Kyahta, joka oli aikoinaan rakennuttanut oman teepörssinsä, '
         + 'jäi paikaksi, jonka läpi ei enää kulje mitään.',
+      lahde: 'en-Wikipedia "Russian tea culture" ja en-Wikipedia "Kyakhta". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 1680×1120, public domain, Nicolas Louis de
        * Lespinasse, päiväys 1783, kuvaus "Кяхта (Histoire physique,
@@ -367,6 +462,7 @@ export const FOKUSVIRTA_MOSKOVA = {
        */
       kuva: {
         tiedosto: 'Кяхта 1783 год.jpg',
+        lyhyt: 'Kyahta ja Maimaitsheng 1783: kaksi kauppapaikkaa rajan yli, Venäjän tee kulki niiden välistä.',
         selite: 'Kyahta ja sen kiinalainen naapurikaupunki Maimaitsheng '
           + 'vuoden 1783 kaiverruksessa: kaksi muurattua kauppapaikkaa '
           + 'vastakkain rajan yli, ja koko Venäjän tee kulki niiden '
@@ -448,6 +544,8 @@ export const FOKUSVIRTA_MOSKOVA = {
         + 'vaihdettiin remontin yhteydessä johonkin sopuisampaan, '
         + 'työntekijät ja kävijät kirjoittivat vetoomuksen, ja manuli '
         + 'palautettiin vuonna 2019 tarhan 155-vuotispäiväksi.',
+      lahde: 'ru-Wikipedia "Московский зоопарк" ja en-Wikipedia "Moscow Zoo". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 1732×1137, public domain, tekijä tuntematon,
        * Credit "Почтовая открытка", DateTimeOriginal 1913-03-06, kuvaus
@@ -463,6 +561,7 @@ export const FOKUSVIRTA_MOSKOVA = {
        */
       kuva: {
         tiedosto: '1900th-MoscowZoo.jpg',
+        lyhyt: 'Moskovan eläintarhan portti 1913 postikortissa, puoli vuosisataa avajaisistaan 1864.',
         selite: 'Moskovan eläintarhan portti vuoden 1913 postikortissa: '
           + 'tarha oli silloin puoli vuosisataa vanha ja seisoi yhä '
           + 'samalla Presnjan lammikoiden paikalla kuin avajaispäivänään '
@@ -542,6 +641,9 @@ export const FOKUSVIRTA_MOSKOVA = {
         + 'pelkää hevosia mutta ei myrskyjä, saapui siis kaupunkiin, '
         + 'jossa hevoset oli juuri pantu kulkemaan kiskoja pitkin '
         + 'aikataulun mukaan.',
+      lahde: 'ru-Wikipedia "Политехнический музей", en-Wikipedia "Polytechnic '
+        + 'Museum", ru-Wikipedia "Московский трамвай" ja en-Wikipedia "Moscow '
+        + 'tram". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 1443×1803, public domain, tekijä tuntematon,
        * päiväys 1872, Credit "Альбом Видов. Составлен по распоряжению
@@ -559,6 +661,7 @@ export const FOKUSVIRTA_MOSKOVA = {
        */
       kuva: {
         tiedosto: '(05) Москва. Политехническая выставка. Главный вход. 1872г e1t3.jpg',
+        lyhyt: 'Vuoden 1872 polyteknillisen näyttelyn pääsisäänkäynti näyttelykomitean albumissa, puinen paviljonki.',
         selite: 'Vuoden 1872 polyteknillisen näyttelyn pääsisäänkäynti '
           + 'näyttelykomitean omassa kuva-albumissa: puinen paviljonki '
           + 'Voskresenskin aukion puolelta.',
@@ -670,6 +773,7 @@ export const FOKUSVIRTA_MOSKOVA = {
      */
     kuva: {
       tiedosto: 'Спасская башня. Часы.jpg',
+      lyhyt: 'Tornin kellotaulun halkaisija 6,12 m ja numerot 72 cm korkeat; kellot soivat taulun yläpuolelta.',
       selite: 'Tornin kellotaulun halkaisija on 6,12 metriä ja numerot '
         + '72 senttiä korkeat; kellot soittavat taulun yläpuolella '
         + 'olevasta aukosta.',

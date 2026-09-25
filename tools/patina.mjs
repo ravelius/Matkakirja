@@ -2,7 +2,7 @@
  * PATINAPASSI: valmiin karttalehden jälkikäsittely 1873-vedokseksi.
  *
  *   node tools/patina.mjs <pohjakuva> <ulos-kansio> \
- *        [--taso hillitty|keskitaso|taysi|kaikki] [--tunnus GRC] \
+ *        [--taso hillitty|keskitaso|taysi|kirkas|kevyt|kaikki] [--tunnus GRC] \
  *        [--leveys 6400] [--laatu 0.9] [--muoto jpeg|webp|png] \
  *        [--vertailu] [--pala x,y,w,h] [--bbox x,y,w,h]
  *
@@ -31,6 +31,8 @@
  * `taysi`      kaikki + viivojen mikrorosoisuus + painolaattojen
  *              kohdistusheitto + musteen leviäminen nimissä +
  *              vinjetointi.
+ * `kirkas`     `taysi` vaaleampana, värikkäämpänä ja hillitymmällä
+ *              pinnalla (omistaja 2.9.2026) — ks. KIRKAS alempana.
  *
  * Taso ei ole kytkinlista vaan valmis resepti: jokainen taso on
  * itsenäinen parametriolio, jota voi säätää rikkomatta muita.
@@ -389,6 +391,29 @@ const PASTELLI_KEVYT = {
   lumPehmeys: 26,
   /* Maskin kromaikkuna: alle ala ei mitään (meri), yli ylä täysi. */
   kromaVali: [36, 72],
+  /*
+   * KROMANVAHVISTUS: maaston värin vahvistus SAMAN maskin sisällä.
+   *
+   * `kyllaisyys` voi vain viedä kromaa pois, joten sillä ei pääse
+   * pohjakuvan väriä VOIMAKKAAMPAAN maastoon — nollakaan ei riitä, jos
+   * omistaja pyytää lisää väriä (2.9.2026: *"lisää vielä kylläisyyttä
+   * reilusti"*). Tämä kerroin skaalaa kroman pikselin OMAN luminanssin
+   * ympäri (c' = Ln + (c − Ln)·k), jolloin
+   *  - luminanssi säilyy TÄSMÄLLEEN (lum on lineaarinen, joten
+   *    lum(Ln + (c − Ln)·k) = Ln), eikä värin lisääminen tummenna;
+   *  - sävy säilyy, koska kaikki kolme kanavaa skaalataan samalla
+   *    kertoimella samasta keskipisteestä.
+   * Vahvistus kulkee samalla maskilla kuin pastelli, joten muste (tumma)
+   * ja meri (matala kroma) jäävät sen ulkopuolelle.
+   *
+   * LEIKKAUSSUOJA ON OSA MÄÄRITELMÄÄ, EI VIIMEISTELY. Ilman sitä
+   * vuoriston ruskean punainen kanava karkaisi yli 255:n, jäisi
+   * rajaukseen kiinni ja sävy kääntyisi oranssiksi juuri siellä, missä
+   * väriä on eniten. Kerroin lasketaan siksi pikselikohtaisesti alas
+   * niin pieneksi, ettei yksikään kanava ylitä väliä [0, 255].
+   * 0 = pois päältä; kaikki muut reseptit jättävät sen nollaan.
+   */
+  kromanVahvistus: 0,
 };
 
 const PASTELLI_KESKI = {
@@ -604,6 +629,46 @@ const VESIVIIVAT_HARVA = {
  * koskemattomina tallella, ja passi herää `null`-arvon vaihtamisella.
  */
 const VESIVIIVOITUS = null;
+/*
+ * KOE 20.9.2026 (omistajan kortti: rannikkoviivoitus TAI syvyysvyöhykkeet,
+ * omistaja valitsee koelaatoista): vaihtoehdot viedään nimellä, jotta
+ * generaattori voi kytkeä viivoituksen reseptiin ajokohtaisesti
+ * (`--vesiviivoitus tihea|harva`) koskematta oletukseen (null).
+ */
+/*
+ * OHUT (poltto-koe 2, omistaja 20.9.2026: *"viivoituksessa ja vyöhykkeissä
+ * kummassakin on hyvää, tarvitaan vielä jotain lisää"* → yhdistelmä: 3–4
+ * hentoa viivaa rannasta, ja sen ulkopuolella yksi vaalea syvyyssävy).
+ */
+const VESIVIIVAT_OHUT = {
+  ...VESIVIIVAT_TIHEA,
+  aloitus: 5,
+  vali: 5.5,
+  kasvu: 2.6,
+  viivoja: 4,
+  paksuus: 0.9,
+  voima: 0.2,
+  haipyma: 0.9,
+  huojunta: 6,
+};
+/*
+ * TUMMA (merikoe 3, omistaja 20.9.2026: *"viivoitus vielä tummempana kuin
+ * vanhoissa kartoissa"*): 6 viivaa, sisin tiheä, muste selvästi näkyvä.
+ */
+const VESIVIIVAT_TUMMA = {
+  ...VESIVIIVAT_TIHEA,
+  aloitus: 4,
+  vali: 4.5,
+  kasvu: 2.2,
+  viivoja: 6,
+  paksuus: 1.05,
+  voima: 0.42,
+  haipyma: 0.8,
+  huojunta: 6,
+};
+export const VESIVIIVOITUKSET = Object.freeze({
+  tihea: VESIVIIVAT_TIHEA, harva: VESIVIIVAT_HARVA, ohut: VESIVIIVAT_OHUT, tumma: VESIVIIVAT_TUMMA,
+});
 
 /*
  * MAANRAJAT ASTEEN TUMMEMMIKSI.
@@ -718,6 +783,166 @@ const TAITTEET = {
 const VINJETTI = { voima: 0.1, eksponentti: 2.4, lampo: 0.4 };
 
 /*
+ * ================================================================
+ * KIRKAS — TÄYSI RESEPTI VAALEAMPANA JA VÄRIKKÄÄMPÄNÄ
+ * ================================================================
+ *
+ * Omistajan tilaus 2.9.2026 (sanatarkasti): *"Kartan patinoinnin voisi
+ * ajaa uudestaan niin, että kartta ei olisi ihan noin tumma ja se
+ * saisi olla myös vähän värikylläisempi kuin nykyinen versio. Myös
+ * raetta ja pehmeyttä saisi olla hieman vähemmän."*
+ *
+ * TÄMÄ EI OLE UUSI TYYLI VAAN SAMA TYYLI TOISELLA ANNOKSELLA. Jokainen
+ * passi on sama kuin `taysi`-reseptissä ja samassa järjestyksessä;
+ * vain kuusi parametrioliota on säädetty. Siksi resepti on kirjattu
+ * `taysi`-arvojen EROINA — kun joku myöhemmin muuttaa perusarvoa,
+ * ero seuraa mukana eikä unohdu tänne vanhaksi kopioksi.
+ *
+ * MITATTU LÄHTÖTILANNE (z2, koko maailman arkki, 2.9.2026 — luvut ovat
+ * kootun kuvan luminanssikeskiarvoja tasaisilta aloilta):
+ *
+ *              ei patinaa   taysi   kirkas
+ *   paperi       235,2      225,7   238,9
+ *   meri         176,7      181,7   195,2
+ *   maa          212,5      204,5   217,6
+ *   vuori        133,5      144,2   156,3
+ *
+ * Patina ei siis juuri tummenna — POHJA on tumma, ja `taysi` vain
+ * jättää sen tummaksi. Siksi kirkastus EI voi olla "vähemmän
+ * tummennusta" vaan sen on oltava aitoa VALON LISÄYSTÄ sävykäyrään.
+ *
+ * MIKSI EI VIELÄ ENEMPÄÄ. Sävykäyrä on affiini, joten meren nosto
+ * L=195:stä kohti maan sävyä vaatisi joko kerman leikkautumista
+ * valkoiseksi tai kontrastin litistämistä — kummassakin tapauksessa
+ * meri ja maa alkaisivat sulaa yhteen. Kirkkaammaksi pääsee vasta
+ * pohjaa muuttamalla (piirto.js SYVYYS-rampin vaalein pää), ja se on
+ * oma eränsä eikä patinan säätöä.
+ *
+ * === 1. SÄVYKÄYRÄ NOSTAA, MUSTE EI NOUSE MUKANA ===
+ *
+ * Käyrä on affiini (L' = L·kerroin + nosto), joten pelkkä noston
+ * kasvattaminen nostaisi myös musteen: viivat ja pieni teksti
+ * haalistuisivat juuri sen verran kuin paperi kirkastuu, eikä kartta
+ * näyttäisi vaaleammalta vaan utuiselta. Siksi noston nostoa
+ * vastaan asetetaan `musteHaalennus`, joka osuu VAIN musteeseen:
+ * 0,13 → 0,04 vetää viivan tummimman pään takaisin alas suunnilleen
+ * saman verran kuin käyrä nostaa sitä. Lopputulos on mitattu z5:n
+ * Kreikka-otoksesta (0,5 %:n persentiili = viivojen tummin pää):
+ *
+ *                       ei      taysi   kirkas
+ *   muste (0,5 %)       80       98      103
+ *   mediaani           197      192      205
+ *   viivan ja paperin ero  117    94      102
+ *
+ * Kartta kirkastuu 13 sävyä, mutta viivan ja paperin ero KASVAA.
+ *
+ * === 2. KYLLÄISYYS: PASTELLOINTIA VÄHEMMÄN — JA SEN YLI ===
+ *
+ * Maaston väri on pohjassa jo olemassa; `taysi` vie siitä 55 %
+ * (PASTELLI_TAYSI.kyllaisyys). Ensimmäinen askel oli siis
+ * pastelloinnista tinkiminen — 0,55 → 0,45 jättää kromasta 55 %
+ * entisen 45 %:n sijaan eli +22 %.
+ *
+ * SE EI RIITTÄNYT. Omistaja katsoi vertailun 2.9.2026 ja sanoi:
+ * *"Vaaleus on hyvä, mutta lisää vielä kylläisyyttä reilusti."*
+ * `kyllaisyys` voi kuitenkin vain VIEDÄ kromaa pois — nollakaan ei
+ * pääse pohjan väriä pidemmälle, ja pohja itse on jo pastelli.
+ * Reilusti lisää väriä on siis pakko olla oma kerroin, ja se on
+ * `kromanVahvistus` (ks. PASTELLI_KEVYT): kroma skaalataan pikselin
+ * OMAN luminanssin ympäri, jolloin luminanssi säilyy täsmälleen ja
+ * sävy säilyy, ja kanavan leikkautuminen on estetty pikselikohtaisella
+ * kertoimen rajauksella. Väri kasvaa, kartta ei tummene eikä vuorten
+ * ruskea käänny oranssiksi.
+ *
+ * KAKSI EHDOKASTA AJETTIIN JA MITATTIIN (maan HSL S, kootut laatat;
+ * `ei` = patinaton pohja, `nyk.` = kirkas ilman vahvistusta):
+ *
+ *                          ei    taysi   nyk.    A 0,55   B 0,95
+ *   z5 Kreikka/Balkan    58,1    31,5    41,3     57,6     68,4
+ *   z2 maailma           68,7    43,7    64,4     74,7     81,3
+ *   z7 Sofia (vuori)     59,9    33,2    43,6     61,2     72,5
+ *
+ * A palauttaa maan täsmälleen patinattoman pohjan kylläisyyteen; B vie
+ * sen yli. Omistajan sana oli "reilusti", joten VALITTU ON B
+ * (0,95). A:n arvo 0,55 on tässä tallessa: se on oikea luku, jos
+ * jonain päivänä halutaan "patinaton väri, patinoitu pinta".
+ *
+ * MIKÄ EI LIIKU. Vahvistus kulkee pastellin maskilla, joten paperi,
+ * meri ja muste jäävät sen ulkopuolelle — mitattuna kaikilla kolmella
+ * tasolla paperin marginaali, meri, rae (σ) ja musteen persentiilit
+ * ovat A:ssa ja B:ssä bitilleen samat kuin ilman vahvistusta. Maan
+ * luminanssi laskee enintään 1,0 sävyä ja sävykulma kääntyy enintään
+ * 1,0 astetta.
+ *
+ * `vaalennus` EI muutu (0,37). Se on korkeuserojen kontrastisäädin,
+ * ja omistaja pyysi 29.8.2026 nimenomaan matalampaa reliefikontrastia;
+ * kirkastus hoituu sävykäyrällä, joka ei litistä rinteitä.
+ *
+ * === 3. RAE JA PEHMEYS PUOLEEN ===
+ *
+ * Paperin rae, nyppy ja kuitu ovat tasan puolet `PAPERI_TAYSI`:n
+ * arvoista — ne ovat sama syy hennompana, eivät eri paperi.
+ * Musteen leviäminen (LEVIAMINEN.voima) puolittuu samoin; säde jää
+ * kahteen pikseliin, koska se on paperivakio (ks. LEVIAMINEN) eikä
+ * puolikasta pikseliä ole olemassa.
+ *
+ * === 4. TAHRAT KEVYEMMIN ===
+ *
+ * Ikääntymislaikku ja akvarellin reunakertymä ovat "tahroja": ne
+ * jäävät, koska ilman niitä lehti muuttuu sileäksi digitaalikartaksi,
+ * mutta molempia annostellaan noin neljännes vähemmän. Laikun
+ * `lampo` laskee 0,55 → 0,40, jotta kevyempi paperi ei kellastu.
+ *
+ * === 5. VINJETTI PYSYY POIS ===
+ *
+ * Tilauksessa luki "vinjetointi säilyy kevyempänä", mutta Raamattu
+ * (PAPERIVAKIOT JA KARTTAVAKIOT) lukitsee vinjetin POIS KAIKILTA
+ * tasoilta: jokainen laatta on laudan pala, ja reunatummennus piirtää
+ * laattaruudukon meren päälle. `taysi`-reseptissä kenttä on jo `null`,
+ * ja se pysyy `null`:na tässäkin. Kevyempi vinjetti olisi vain
+ * himmeämpi ruudukko, ei parempi vinjetti.
+ */
+const SAVYT_KIRKAS = {
+  ...SAVYT,
+  /*
+   * NOSTO 21 → 36 kirkastaa koko arkin; kerroin 0,88 → 0,87 pitää
+   * kirkkaimman pään alle 255:n, jottei paperin rae leikkaudu
+   * huipussa tasaiseksi valkoiseksi (kerma 245 · 0,87 + 36 = 249).
+   *
+   * KAHDEN AJETUN KOKEILUN VÄLISTÄ. 0,875/33 jätti meren 193,1:een;
+   * 0,865/38 vei paperin 239,7:ään, mutta sen vastapainoksi tarvittu
+   * `musteHaalennus` 0,03 alkoi olla niin pieni, että musteen
+   * haalennuspassi oli käytännössä pois päältä. 0,87/36 on näiden
+   * väli: meri 195,2, paperi 238,9, ja muste pysyy paikallaan.
+   */
+  kayra: { kerroin: 0.87, nosto: 36 },
+  /* Ks. kohta 1: musteen vastapaino noston nostolle. */
+  musteHaalennus: 0.04,
+};
+
+/*
+ * Ks. kohta 2. `kromanVahvistus` 0,95 on mitattu ehdokas B; 0,55 (A)
+ * osuu täsmälleen patinattoman pohjan kylläisyyteen, jos joskus
+ * halutaan väri takaisin lähtötasolle patinoidulla pinnalla.
+ */
+const PASTELLI_KIRKAS = {
+  ...PASTELLI_TAYSI, kyllaisyys: 0.45, kromanVahvistus: 0.95,
+};
+
+/* Ks. kohta 3: tasan puolet PAPERI_TAYSI:n rakeesta ja kuidusta. */
+const PAPERI_KIRKAS = {
+  ...PAPERI_TAYSI,
+  rae: 0.036, raeKarkea: 0.027, kuitu: 0.026, kuituRisti: 0.015,
+};
+
+/* Ks. kohta 4. */
+const IKAANTYMINEN_KIRKAS = { ...IKAANTYMINEN, voima: 0.055, lampo: 0.40 };
+const REUNAKERTYMA_KIRKAS = { ...REUNAKERTYMA, voima: 0.18 };
+
+/* Ks. kohta 3: pehmeys puoleen, säde pysyy paperivakiona. */
+const LEVIAMINEN_KIRKAS = { ...LEVIAMINEN, voima: 0.15 };
+
+/*
  * SYVYYS ON SAMA KAIKILLA TASOILLA — se ei ole patinan voimakkuutta.
  *
  * Muut passit ovat tyylivalintoja, joita tasot annostelevat. Tämä on
@@ -725,6 +950,25 @@ const VINJETTI = { voima: 0.1, eksponentti: 2.4, lampo: 0.4 };
  * täydessä vedoksessa, eikä kukaan halua nähdä sitä "vähän". Siksi sama
  * olio jokaisessa reseptissä, ei kolmea voimakkuutta.
  */
+/*
+ * KEVYT — kirkas kevennettynä (omistaja 3.9.2026: "patinaan voisi ajaa
+ * seuraavat muutokset: kirkkautta, raetta ja sumennusta hieman pois"
+ * ja vedosten jälkeen "saturaatiota voi hieman vähentää myös").
+ * Seitsemästä pelinäkymän vedoksesta (kirkas, a/b/c, a2/b2/c2)
+ * omistaja valitsi A2:n eli pienimmän annoksen saturaatio alas:
+ *   kirkkaus  = sävykäyrän nosto 36 → 30 (kerroin 0,87 ennallaan)
+ *   rae       = paperin rae 0,036/0,027 → 0,027/0,020, kuitu
+ *               0,027/0,015 → 0,020/0,011
+ *   sumennus  = musteen leviämisen voima 0,15 → 0,10
+ *   saturaatio: kyllaisyys 0,45 → 0,40, kromanVahvistus 0,95 → 0,80
+ * Muu resepti on kirkas. Hylätyt annokset (b: 26/0,018/0,06, c:
+ * 22/0,010/ei leviämistä) poistettiin; ne ovat git-historiassa.
+ */
+const SAVYT_VALITTU = { ...SAVYT_KIRKAS, kayra: { kerroin: 0.87, nosto: 30 } };
+const PAPERI_VALITTU = { ...PAPERI_KIRKAS, rae: 0.027, raeKarkea: 0.020, kuitu: 0.020, kuituRisti: 0.011 };
+const LEVIAMINEN_VALITTU = { ...LEVIAMINEN, voima: 0.10 };
+const PASTELLI_VALITTU = { ...PASTELLI_KIRKAS, kyllaisyys: 0.40, kromanVahvistus: 0.80 };
+
 export const RESEPTIT = {
   hillitty: {
     nimi: 'hillitty',
@@ -776,6 +1020,44 @@ export const RESEPTIT = {
     taitteet: false,
     /* Ks. VINJETTI: maalehti on laudan pala, ei sivu — reunatummennus
      * piirtää sauman. Arvoksi VINJETTI vain yksittäiselle lehdelle. */
+    vinjetti: null,
+  },
+  /*
+   * KIRKAS — sama resepti kuin `taysi`, kuusi oliota säädettynä.
+   * Perustelut kokonaisuudessaan KIRKAS-osiossa yllä.
+   */
+  kirkas: {
+    nimi: 'kirkas',
+    savyt: SAVYT_KIRKAS,
+    syvyys: SYVYYS,
+    vesiviivoitus: VESIVIIVOITUS,
+    maanraja: MAANRAJA,
+    pastelli: PASTELLI_KIRKAS,
+    paperi: PAPERI_KIRKAS,
+    ikaantyminen: IKAANTYMINEN_KIRKAS,
+    reunakertyma: REUNAKERTYMA_KIRKAS,
+    rosoisuus: ROSOISUUS,
+    kohdistus: KOHDISTUS,
+    leviaminen: LEVIAMINEN_KIRKAS,
+    taitteet: false,
+    /* Ks. KIRKAS kohta 5: vinjetti pysyy poissa (Raamattu). */
+    vinjetti: null,
+  },
+  /* KEVYT — omistajan valinta 3.9.2026 (perustelut KEVYT-osiossa). */
+  kevyt: {
+    nimi: 'kevyt',
+    savyt: SAVYT_VALITTU,
+    syvyys: SYVYYS,
+    vesiviivoitus: VESIVIIVOITUS,
+    maanraja: MAANRAJA,
+    pastelli: PASTELLI_VALITTU,
+    paperi: PAPERI_VALITTU,
+    ikaantyminen: IKAANTYMINEN_KIRKAS,
+    reunakertyma: REUNAKERTYMA_KIRKAS,
+    rosoisuus: ROSOISUUS,
+    kohdistus: KOHDISTUS,
+    leviaminen: LEVIAMINEN_VALITTU,
+    taitteet: false,
     vinjetti: null,
   },
   /*
@@ -1005,6 +1287,51 @@ export async function patinoiSelaimessa({
    * Ilman bbox:ia palautuu lehden omaksi koordinaatiksi (x / s). */
   const maailmaX = (x) => (mk ? (mk.x + x * (mk.w / L)) * VIITE_PX : x / s);
   const maailmaY = (y) => (mk ? (mk.y + y * (mk.h / K)) * VIITE_PX : y / s);
+  /*
+   * VESIVIIVAN MITAT OVAT MAAILMAN MITTOJA (Karttaseppä 22.9.2026,
+   * omistajan tuntumatesti v2106: *"meriviivojen hyppiminen"*).
+   *
+   * Vesiviivoitus oli kolmatta lajia, jota yllä oleva jako ei tunne:
+   * sen VIIVANLEVEYS on paperin mitta (kynä on kynä joka tasolla),
+   * mutta viivan PAIKKA on maailman mitta — viiva k on tietyllä
+   * etäisyydellä rannasta, eikä se etäisyys saa riippua siitä, mitä
+   * pyramidin tasoa katsotaan. Paperivakiona (paperiS 1) viivasto oli
+   * joka tasolla eri kohdassa merta, ja kun peli häivyttää tason
+   * toiseksi, kaksi eri viivastoa sekoittui liaksi. Mitattu 22.9.2026:
+   * saman maa-alan korkeataajuinen kuvio korreloi tasojen z5 ja z6
+   * välillä vain 0,14, kun meren sävy korreloi 0,96
+   * (docs/raportit/merikuviot-tasoissa-20260922.md).
+   *
+   * `vvSkaala` on pikseliä VIITE_PX-yksikköä kohti tällä tasolla, eli
+   * se kerroin, jolla maailman mitta muuttuu tämän kuvan pikseleiksi.
+   * Sillä kerrotaan viivaväli, sen kasvu, aloitusetäisyys ja huojunta;
+   * paksuus ja voima jäävät paperin mittaan (`sp`). Ilman bbox:ia
+   * (yksittäinen koekuva) palautuu vanhaan käytökseen.
+   */
+  const vvSkaala = mk ? (L / mk.w) / VIITE_PX : sp;
+  /*
+   * HARVENNUS: kun viivaväli menee tällä tasolla alle kolmen pikselin,
+   * viivat sulaisivat yhdeksi tummaksi nauhaksi. Silloin piirretään
+   * vain joka toinen (tai joka neljäs) viiva — karkea taso on HARVEMPI
+   * eikä tummempi, ja koska harvennus on viivan indeksistä eikä
+   * paikasta, karkean tason viivat osuvat tarkan tason viivojen päälle.
+   */
+  const VV_VAHIN_VALI_PX = 3;
+  /*
+   * HARVENNUS HÄIVYTTÄEN (omistaja 23.9.2026 Fablen kautta, 22c-poltto:
+   * "harvennetut viivat vaimeina eikä pois"). Kova harvennus pudottaa
+   * viivaluokan kerralla, kun sen väli alittaa 3 px — ja koska väli
+   * kaksinkertaistuu joka tasolla, sama viiva on tasolla z+1 täysi ja
+   * tasolla z poissa: tasonvaihdon häivytys näyttää sen syttyvän.
+   * `vesiviivoitus.harvennus = 'haive'`: jokaisen viivan paino tulee
+   * sen OMAN luokan välistä (väli × 2^r, r = indeksin kakkosen potenssi),
+   * ja paino kasvaa pehmeästi VV_HAIVE_ALKU_PX:stä (0) VV_VAHIN_VALI_PX:ään
+   * (1). Täydet viivat ovat täsmälleen samat kuin ennen; vain pudotetut
+   * saavat välipainon. Oletus 'pois' = entinen käytös (reseptin valinta,
+   * `--resepti-json '{"vesiviivoitus":{"harvennus":"haive"}}'`).
+   */
+  const VV_HAIVE_ALKU_PX = 1.5;
+  const vvHaive = resepti.vesiviivoitus?.harvennus === 'haive';
 
   /* ------------------------------------------------- pienennetyt kentät */
   /*
@@ -1519,6 +1846,20 @@ export async function patinoiSelaimessa({
           r += (Ln * pl.paperiSavy[0] - r) * w;
           gg += (Ln * pl.paperiSavy[1] - gg) * w;
           b += (Ln * pl.paperiSavy[2] - b) * w;
+          /* Kroman vahvistus luminanssin ympäri, leikkaussuojattuna.
+           * Ks. PASTELLI_KEVYT.kromanVahvistus. */
+          if (pl.kromanVahvistus > 0) {
+            let kv = 1 + pl.kromanVahvistus * maski;
+            const yli = Math.max(r, gg, b) - Ln;
+            const ali = Ln - Math.min(r, gg, b);
+            if (yli > 0.001) kv = Math.min(kv, (255 - Ln) / yli);
+            if (ali > 0.001) kv = Math.min(kv, Ln / ali);
+            if (kv > 1) {
+              r = Ln + (r - Ln) * kv;
+              gg = Ln + (gg - Ln) * kv;
+              b = Ln + (b - Ln) * kv;
+            }
+          }
           /* Nosto painottuu tummiin: vuoristo vaalenee, alanko ei. */
           const tummuus = pehmene(pl.vaalennusVali[1], pl.vaalennusVali[0], Ln);
           const v = pl.vaalennus * maski * tummuus;
@@ -1587,26 +1928,35 @@ export async function patinoiSelaimessa({
            * viivat huojuvat rikkomatta samankeskisyyttään: viereiset
            * pikselit saavat lähes saman siirtymän, eivätkä viivat siksi
            * mene ristiin vaikka siirtymä on viivaväliä suurempi. */
-          const hx = (x + faasiX) / (vv.huojuntaSkaala * sp);
-          const hy = (y + faasiY) / (vv.huojuntaSkaala * sp);
+          const hx = maailmaX(x) / vv.huojuntaSkaala;
+          const hy = maailmaY(y) / vv.huojuntaSkaala;
           const wx = (fbm(kohinaVesiviiva, hx, hy, vv.huojuntaOktaavit) - 0.5)
-            * vv.huojunta * sp;
+            * vv.huojunta * vvSkaala;
           const wy = (fbm(kohinaVesiviiva, hx + 137.3, hy + 71.9, vv.huojuntaOktaavit) - 0.5)
-            * vv.huojunta * sp;
+            * vv.huojunta * vvSkaala;
           const et = hae2(etaisyys2, x + wx, y + wy);
-          const e = et - vv.aloitus * sp;
-          const v0 = vv.vali * sp; const kasvu = vv.kasvu * sp;
+          const e = et - vv.aloitus * vvSkaala;
+          const v0 = vv.vali * vvSkaala; const kasvu = vv.kasvu * vvSkaala;
           const juuri = (v0 - kasvu / 2) ** 2 + 2 * kasvu * e;
           if (e > -v0 && juuri > 0 && et < 1e7) {
             /* nro = viivanumero murtolukuna; kokonaisluku osuu viivalle */
             const nro = (Math.sqrt(juuri) - (v0 - kasvu / 2)) / kasvu;
             const k = Math.round(nro);
-            if (k >= 0 && k < vv.viivoja) {
+            /* Harvennusaskel tämän kohdan viivavälistä: 1, 2, 4, 8 … */
+            const valiTassa = v0 + k * kasvu;
+            const askel = valiTassa >= VV_VAHIN_VALI_PX
+              ? 1
+              : 2 ** Math.ceil(Math.log2(VV_VAHIN_VALI_PX / Math.max(0.01, valiTassa)));
+            /* Häivytyksessä viiva k painotetaan oman luokkansa välistä. */
+            let luokka = 1;
+            if (vvHaive && k > 0) { let q = k; while (q % 2 === 0 && luokka < 1024) { q /= 2; luokka *= 2; } }
+            const luokanPaino = !vvHaive || k === 0 || k % askel === 0 ? 1
+              : pehmene(VV_HAIVE_ALKU_PX, VV_VAHIN_VALI_PX, valiTassa * luokka);
+            if (k >= 0 && k < vv.viivoja && luokanPaino > 0.01) {
               /* Paikallinen viivaväli kasvaa ulospäin, joten murto-osa
                * muunnetaan pikseleiksi sillä välillä, jolla ollaan —
                * viivan PAKSUUS pysyy samana, vain tiheys harvenee. */
-              const vali = v0 + k * kasvu;
-              const poikkeama = Math.abs(nro - k) * vali;
+              const poikkeama = Math.abs(nro - k) * valiTassa;
               const viiva = pehmene(vv.paksuus * sp, vv.paksuus * sp * 0.3, poikkeama);
               if (viiva > 0.01) {
                 /* Uloin viiva häipyy: vyö loppuu avomerelle. Vyön pituus
@@ -1629,9 +1979,9 @@ export async function patinoiSelaimessa({
                 const haip = Math.max(0, 1 - k / maara) ** vv.haipyma;
                 /* Voiman vaihtelu pitkin viivaa: muste ei kanna tasaisesti. */
                 const roso = Math.max(0, 1 + vv.roso * 2
-                  * (kohinaVesiviiva((x + faasiX) / (vv.rosoSkaala * sp) + 900.5,
-                    (y + faasiY) / (vv.rosoSkaala * sp) + 401.5) - 0.5));
-                kerroin -= vv.voima * viiva * haip * roso * meriW;
+                  * (kohinaVesiviiva(maailmaX(x) / vv.rosoSkaala + 900.5,
+                    maailmaY(y) / vv.rosoSkaala + 401.5) - 0.5));
+                kerroin -= vv.voima * viiva * haip * roso * meriW * luokanPaino;
               }
             }
           }

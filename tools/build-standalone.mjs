@@ -17,7 +17,16 @@ const read = (p) => readFileSync(join(root, p), 'utf8');
 const MODULES = [
   'js/tokens.js',
   'js/wiki.js',
+  'js/packs/saapumispuheet.js',
   'js/media.js',
+  'js/kuvatekstit.js',
+  // Lauseraja (PAATOKSET 34 kohta 16): puhdas tekstiapuri ilman tuonteja,
+  // jonka nähtävyysnäkymä (js/kaupunkinosto.js) tuo — siksi ennen sitä.
+  'js/lauseraja.js',
+  'js/galleria.js',
+  // Ilmepaketti tuo vain median (peilin juuri); ui, fokusvirta,
+  // karttaselite ja main tuovat sen.
+  'js/ilme.js',
   'js/saa.js',
   'js/packs/maailma-questions.js',
   'js/packs/maailma.js',
@@ -31,7 +40,6 @@ const MODULES = [
   'js/packs/africa-countries.js',
   'js/packs/omat-tiivistelmat.js',
   'js/packs/europe-countries.js',
-  'js/packs/europe-saapumiset.js',
   'js/packs/asia-saapumiset.js',
   'js/packs/northamerica-saapumiset.js',
   'js/packs/southamerica-saapumiset.js',
@@ -46,11 +54,54 @@ const MODULES = [
   'js/packs/southamerica-valokuvat.js',
   'js/packs/oceania-valokuvat.js',
   'js/packs/asia-maatiedot.js',
+  'js/packs/northamerica-maatiedot.js',
+  'js/packs/southamerica-maatiedot.js',
+  'js/packs/oceania-maatiedot.js',
   'js/packs/radiot.js',
   'js/packs/vanhat-aanet.js',
   'js/packs/europe-kulttuuri.js',
   'js/packs/kulttuuri-kategoriat.js',
   'js/packs/maa-kategoriat.js',
+  // Lukee maa-kategoriat.js:ää, joten se on tämän jälkeen ja ennen
+  // fokusvirta-pariisi.js:ää, joka lukee tätä.
+  'js/packs/maalehtinostot-fra.js',
+  'js/packs/nakyvat-kaupungit-fra.js',
+  'js/packs/monumentit-eurooppa.js',
+  'js/packs/hahmotelma-fra.js',
+  'js/packs/hahmotelma-bel.js',
+  'js/packs/hahmotelma-deu.js',
+  'js/packs/hahmotelma-prt.js',
+  'js/packs/hahmotelma-grc.js',
+  'js/packs/hahmotelma-aut.js',
+  'js/packs/hahmotelma-nld.js',
+  'js/packs/hahmotelma-irl.js',
+  'js/packs/hahmotelma-hrv.js',
+  'js/packs/hahmotelma-bgr.js',
+  'js/packs/hahmotelma-pol.js',
+  'js/packs/hahmotelma-cze.js',
+  'js/packs/hahmotelma-swe.js',
+  'js/packs/hahmotelma-dnk.js',
+  'js/packs/hahmotelma-svk.js',
+  'js/packs/hahmotelma-lux.js',
+  'js/packs/hahmotelma-cyp.js',
+  'js/packs/hahmotelma-mlt.js',
+  'js/packs/hahmotelma-hun.js',
+  'js/packs/hahmotelma-esp.js',
+  'js/packs/hahmotelma-ita.js',
+  'js/packs/hahmotelma-fin.js',
+  'js/packs/hahmotelma-rou.js',
+  'js/packs/hahmotelma-svn.js',
+  'js/packs/hahmotelma-est.js',
+  'js/packs/hahmotelma-ltu.js',
+  'js/packs/hahmotelma-lva.js',
+  'js/packs/hahmotelma-tur.js',
+  'js/packs/hahmotelma-gbr.js',
+  'js/packs/hahmotelma-che.js',
+  'js/packs/hahmotelma-isl.js',
+  'js/packs/hahmotelma-nor.js',
+  'js/packs/hahmotelma-rus.js',
+  'js/packs/hahmotelma-bih.js',
+  'js/packs/hahmotelma-ukr.js',
   'js/packs/maakartat.js',
   'js/packs/nahtavyysjutut.js',
   'js/packs/miniatyyrit.js',
@@ -142,6 +193,26 @@ const MODULES = [
   'js/packs/fokusvirta-odessa.js',
   'js/packs/fokusvirta-pietari.js',
   'js/packs/fokusvirta-varsova.js',
+  // Kevyt erä 8.9.2026: Euroopan kuusi viimeistä kohdetta omissa
+  // pakeissaan (vanha europe-saapumiset.js arkistoitiin pois pelistä).
+  'js/packs/fokusvirta-kreeta.js',
+  'js/packs/fokusvirta-sisilia.js',
+  'js/packs/fokusvirta-islanti.js',
+  'js/packs/fokusvirta-alpit.js',
+  'js/packs/fokusvirta-lappi.js',
+  'js/packs/fokusvirta-tromssa.js',
+  // Bryssel (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti).
+  // Kevyt pakki samasta syystä kuin kuusi edellä.
+  'js/packs/fokusvirta-bryssel.js',
+  // Ljubljana (20.9.2026, omistajan päätös: Slovenian pelikaupunki).
+  'js/packs/fokusvirta-ljubljana.js',
+  // Košice (20.9.2026, omistajan päätös: Slovakian pelikaupunki).
+  'js/packs/fokusvirta-kosice.js',
+  // Luxemburg (21.9.2026, omistajan päätös: Kypros, Luxemburg ja Malta
+  // saavat pelikaupungin).
+  'js/packs/fokusvirta-luxemburg.js',
+  // Valletta (21.9.2026, omistajan päätös: Maltan pelikaupunki).
+  'js/packs/fokusvirta-valletta.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
   // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan
@@ -178,24 +249,39 @@ const MODULES = [
   'js/packs/maastokohteet-afg.js',
   'js/packs/maastokohteet-ago.js',
   'js/packs/maastokohteet-are.js',
+  'js/packs/maastokohteet-arg.js',
+  'js/packs/maastokohteet-aus.js',
   'js/packs/maastokohteet-aut.js',
   'js/packs/maastokohteet-bih.js',
+  'js/packs/maastokohteet-bol.js',
+  'js/packs/maastokohteet-bra.js',
+  'js/packs/maastokohteet-can.js',
   'js/packs/maastokohteet-che.js',
+  'js/packs/maastokohteet-chl.js',
   'js/packs/maastokohteet-chn.js',
   'js/packs/maastokohteet-cmr.js',
   'js/packs/maastokohteet-cod.js',
+  'js/packs/maastokohteet-col.js',
+  'js/packs/maastokohteet-cub.js',
   'js/packs/maastokohteet-cyp.js',
   'js/packs/maastokohteet-cze.js',
   'js/packs/maastokohteet-dnk.js',
   'js/packs/maastokohteet-dza.js',
+  'js/packs/maastokohteet-ecu.js',
   'js/packs/maastokohteet-egy.js',
   'js/packs/maastokohteet-esp.js',
   'js/packs/maastokohteet-est.js',
   'js/packs/maastokohteet-eth.js',
   'js/packs/maastokohteet-fin.js',
+  'js/packs/maastokohteet-fji.js',
   'js/packs/maastokohteet-fra.js',
   'js/packs/maastokohteet-gbr.js',
   'js/packs/maastokohteet-gha.js',
+  'js/packs/maastokohteet-grl.js',
+  'js/packs/maastokohteet-gtm.js',
+  'js/packs/maastokohteet-hkg.js',
+  'js/packs/maastokohteet-idn.js',
+  'js/packs/maastokohteet-ind.js',
   'js/packs/maastokohteet-irl.js',
   'js/packs/maastokohteet-irn.js',
   'js/packs/maastokohteet-irq.js',
@@ -209,22 +295,32 @@ const MODULES = [
   'js/packs/maastokohteet-kwt.js',
   'js/packs/maastokohteet-lbr.js',
   'js/packs/maastokohteet-lby.js',
+  'js/packs/maastokohteet-lka.js',
   'js/packs/maastokohteet-ltu.js',
   'js/packs/maastokohteet-lva.js',
   'js/packs/maastokohteet-mar.js',
   'js/packs/maastokohteet-mdg.js',
+  'js/packs/maastokohteet-mex.js',
   'js/packs/maastokohteet-mli.js',
+  'js/packs/maastokohteet-mmr.js',
   'js/packs/maastokohteet-mng.js',
   'js/packs/maastokohteet-moz.js',
   'js/packs/maastokohteet-nam.js',
   'js/packs/maastokohteet-nga.js',
+  'js/packs/maastokohteet-nic.js',
   'js/packs/maastokohteet-nld.js',
   'js/packs/maastokohteet-nor.js',
+  'js/packs/maastokohteet-npl.js',
+  'js/packs/maastokohteet-nzl.js',
   'js/packs/maastokohteet-omn.js',
   'js/packs/maastokohteet-pak.js',
+  'js/packs/maastokohteet-pan.js',
+  'js/packs/maastokohteet-per.js',
   'js/packs/maastokohteet-phl.js',
+  'js/packs/maastokohteet-png.js',
   'js/packs/maastokohteet-pol.js',
   'js/packs/maastokohteet-prt.js',
+  'js/packs/maastokohteet-pry.js',
   'js/packs/maastokohteet-qat.js',
   'js/packs/maastokohteet-rou.js',
   'js/packs/maastokohteet-rus.js',
@@ -232,23 +328,34 @@ const MODULES = [
   'js/packs/maastokohteet-sdn.js',
   'js/packs/maastokohteet-sds.js',
   'js/packs/maastokohteet-sen.js',
+  'js/packs/maastokohteet-sgp.js',
+  'js/packs/maastokohteet-shn.js',
+  'js/packs/maastokohteet-slb.js',
   'js/packs/maastokohteet-sle.js',
   'js/packs/maastokohteet-som.js',
   'js/packs/maastokohteet-swe.js',
   'js/packs/maastokohteet-syr.js',
   'js/packs/maastokohteet-tcd.js',
+  'js/packs/maastokohteet-tha.js',
+  'js/packs/maastokohteet-tls.js',
   'js/packs/maastokohteet-tun.js',
   'js/packs/maastokohteet-tur.js',
   'js/packs/maastokohteet-twn.js',
   'js/packs/maastokohteet-tza.js',
   'js/packs/maastokohteet-uga.js',
   'js/packs/maastokohteet-ukr.js',
+  'js/packs/maastokohteet-usa.js',
+  'js/packs/maastokohteet-ury.js',
   'js/packs/maastokohteet-uzb.js',
+  'js/packs/maastokohteet-ven.js',
+  'js/packs/maastokohteet-vnm.js',
+  'js/packs/maastokohteet-vut.js',
   'js/packs/maastokohteet-yem.js',
   'js/packs/maastokohteet-zaf.js',
   'js/packs/maastokohteet-zwe.js',
   'js/packs/maastokohteet.js',
   'js/packs/fokusvirrat.js',
+  'js/packs/iskulauseet.js',
   'js/packs/uutislahteet.js',
   // uutiset vasta lähteidensä jälkeen (tuo uutislahteet.js:n).
   'js/uutiset.js',
@@ -256,10 +363,15 @@ const MODULES = [
   'js/packs/pollo-asetukset.js',
   // Pöllön valmiskysymykset. js/pollo.js tuo tämän staattisesti.
   'js/packs/pollo-kysymykset.js',
+  // Viisaan pöllön arvonimet (nimilappuvitsi, js/ui-apurit.js polloNimilappu).
+  'js/packs/pollon-arvonimet.js',
   // Kuratoidut pöllöpoiminnat (kysymys–vastaus-pillerit artikkeleissa).
   // js/pollopoiminnat.js tuo tämän staattisesti.
   'js/packs/pollo-poiminnat.js',
   'js/packs/europe-valokuvat.js',
+  // Lisenssiportti (NC/ND, js/lisenssi.js): ei riippuvuuksia; ennen
+  // kielipakettia, äänilistoja ja kuvagalleriaa, jotka tuovat sen.
+  'js/lisenssi.js',
   'js/packs/europe-kielet.js',
   'js/packs/europe-maatiedot.js',
   'js/packs/europe-artikkelit.js',
@@ -318,6 +430,7 @@ const MODULES = [
   'js/passport.js',
   'js/linssit/rekisteri.js',
   'js/linssit/omistus.js',
+  'js/linssit/aarteet.js',
   'js/packs/valokuvat-paikalliset.js',
   'js/packs/valokuvat-flickr.js',
   'js/packs/liput-paikalliset.js',
@@ -375,10 +488,22 @@ const MODULES = [
   // Sama syy kuin edellä: maailmankartta.js lukee MAAILMANKARTAN_MAASTOn
   // moduulitasolla, joten maasto on niputettava ensin.
   'js/packs/maailmankartta-maasto.js',
+  'js/packs/maailmankartta-pallopisteet.js',
   'js/packs/maailmankartta.js',
   'js/packs/maailmankartta-nimet.js',
   'js/packs/vuori-valokuvat.js',
-  'js/packs/maailmankartta-syvyys.js',
+  /*
+   * Tasokartan omat aineistopakat. Nämä tuodaan 5.9.2026 alkaen VAIN
+   * dynaamisesti (js/kartta-lataus.js, laiskoituserä 5b), mutta ne
+   * pysyvät nipussa: yhden tiedoston versiossa dynaaminen tuonti kaatuu
+   * ja portti lukee moduulit samasta näkyvyysalueesta. Poikkeus on
+   * kirjattu tools/tarkista-niputus.mjs:n DYNAAMISESTI_TUODUT-listaan.
+   *
+   * js/packs/maailmankartta-syvyys.js EI ole enää mukana: MERISYVYYS on
+   * pois käytöstä, tuonti poistettiin ui.js:stä, eikä tuojatonta
+   * moduulia saa listata (NS-törmäyksen oppi alempana). Perustelu
+   * tests/sw.test.mjs:n NIPUTTAMATTOMAT-listalla.
+   */
   'js/packs/maasto-tekstit-malli.js',
   'js/packs/maasto-tekstit.js',
   'js/packs/maailmankartta-varjostus.js',
@@ -401,20 +526,74 @@ const MODULES = [
    * mitään — se on riippuvuuspuun pohjalla.
    */
   'js/aani-tausta.js',
+  /*
+   * Kehittajan voimakertoimet (Taustaaanet-liuku) SIIRTYIVAT TAHAN
+   * 13.9.2026, kun js/sound.js alkoi lukea 'tausta'-kerrointa myos
+   * syntetisoituun maisemaan. Moduuli ei tuo mitaan — se on vahdin
+   * tavoin riippuvuuspuun pohjalla — joten se kelpaa yhta aikaisin
+   * kuin mika tahansa lehti, ja nyt se on ennen molempia lukijoitaan
+   * (js/sound.js ja js/ambience-stream.js).
+   */
+  'js/kehittajan-voimat.js',
+  'js/livia-tehosteet.js',
   'js/sound.js',
+  /*
+   * Tehosteketjut (js/tehosteketju.js) SOUNDIN JÄLKEEN JA ENNEN PUHETTA:
+   * se tuo sfx:n (kehittäjän kuuntelunappi) ja puhe.js tuo sen
+   * staattisesti (puhujan akustiikka). Yhden tiedoston versiossa
+   * kirjasto jää lataamatta — moduuli tunnistaa version manifest-
+   * linkin puutteesta ja palauttaa virhehaaran (ääni kulkee suoraan).
+   */
+  'js/tehosteketju.js',
   /*
    * Lukijaääni (js/puhe.js) ENNEN ambience-streamia: sanelun kova
    * tauko (taukoaSanelunAjaksi) pysäyttää 21.8.2026 alkaen myös
    * lukijaäänen piirin, joten ambience-stream tuo puhe.js:n
    * staattisesti.
    */
+  'js/livia-puhetila.js',
+  'js/livia-tilanteet.js',
+  'js/livia-pilotti-cuet.js',
+  'js/livia-puheleet.js',
+  'js/livia-lehtireaktiot.js',
   'js/puhe.js',
+  /*
+   * js/isoisan-valokuvat.js OLI TÄSSÄ. Ainoa niputettu tuoja oli
+   * js/ui.js, joka näytti taulun `lento`-kuvan avauslennolla; omistaja
+   * poisti kortin 6.9.2026 illalla (*"ens. lentokohtauksesta, ota
+   * isoisän kuva pois"*). Jäljellä olevat tuojat — js/aikajana.js ja
+   * etusivun pallon kuvapakka — eivät kumpikaan ole niputuksessa, joten
+   * listaus jäi irralleen (tools/tarkista-niputus.mjs).
+   */
+  'js/kaupunkimusiikki.js',
+  /*
+   * Pohjaraidan valitsin ennen ambience-streamia: soitin tuo sen
+   * staattisesti (ketju, tilat ja kuuntelija ovat siellä).
+   */
+  'js/musiikkivalitsin.js',
+  /*
+   * Musiikin vahvistin ennen soittimia: pohjaraita, siirtymäraidat ja
+   * aarreaihe tuovat sen staattisesti (reititys, kontekstin herätys ja
+   * volume-mittaus ovat siellä).
+   */
+  'js/musiikkivahvistin.js',
   'js/ambience-stream.js',
+  /*
+   * Siirtymämusiikki AMBIENCE-STREAMIN JÄLKEEN: se rekisteröi
+   * väistönsä lisaaVaistajalla moduulitasolla, joten väistökoneiston
+   * on oltava olemassa ennen sitä (sama sääntö kuin taustavahdilla).
+   */
+  'js/siirtymamusiikki.js',
   'js/die.js',
   'js/rules.js',
   // Tietäjätasot ennen peliä: game.js tuo tietajatasonNousut staattisesti
   // (nousu tarkistetaan awardXp-portissa) ja ui.js nimikkeen laukkuun.
   'js/tietajatasot.js',
+  // Sisältöpaketin osa 2: game.js ja ui.js tuovat nämä staattisesti
+  // (pulmien generaattori tunnisteella, packien tekstipohjat).
+  'js/pulmageneraattorit.js',
+  'js/tekstipohja.js',
+  'js/ui-tekstit.js',
   'js/game.js',
   'js/ai.js',
   /*
@@ -434,6 +613,9 @@ const MODULES = [
   'js/sisaltotaulut.js',
   // UI:n apurit ennen ui.js:ää (ui tuo ne; riippuvuudet ovat yllä).
   'js/ui-apurit.js',
+  // Saapumisasento ennen fokusvirtaa (fokusvirta ja kartta tuovat sen);
+  // moduuli itse ei tuo mitään.
+  'js/saapumisasento.js',
   // Minipopup ennen ehdotuksia ja tasogalleriaa (molemmat tuovat sen;
   // moduuli tuo vain ui-apurit, joka on yllä).
   'js/minipopup.js',
@@ -447,6 +629,18 @@ const MODULES = [
   // Lukijoiden ehdotukset ennen pollopoiminnat/lehteä/ui:ta (kaikki
   // tuovat sen; moduuli tuo ui-apurit ja minipopupin, jotka ovat yllä).
   'js/ehdotukset.js',
+  /*
+   * KUVIEN SYÖTTÖPUTKI (1.9.2026) ennen havainnekuvaa ja ui:ta: moduuli
+   * tuo ui-apurit, minipopupin ja ehdotukset, jotka ovat yllä.
+   */
+  'js/kuvavinkki.js',
+  /*
+   * Havainnekuvan selite ennen tekijakorttia: taytaLahderivi kutsuu
+   * merkitseHavainnekuvaa, ja jokainen lähderivin piirtäjä kulkee sen
+   * kautta. Moduuli tuo kuvavinkin (yllä), ehdotukset, minipopupin ja
+   * ui-apurit.
+   */
+  'js/havainnekuva.js',
   /*
    * Reaktiot (peukku ja virheilmoitus) ennen artikkeleiden piirtäjiä:
    * nähtävyydet, maalehti, fokuskohteet ja ui tuovat sen. Moduuli tuo
@@ -469,6 +663,9 @@ const MODULES = [
   // Mallin B pilotit ennen ui.js:ää (ui tuo ne).
   'js/liput.js',
   'js/karttazoom.js',
+  // Maan ääriviivat ennen vertailua ja maatummennusta: molemmat tuovat
+  // aineiston haun ja renkaiden purun tästä moduulista.
+  'js/maanaariviivat.js',
   'js/vertailu.js',
   /*
    * Kuvagalleria ennen nähtävyyksiä (nahtavyydet.js tuo galleriaNapin
@@ -478,9 +675,58 @@ const MODULES = [
    * kohteliaaseen riviin ilman virhettä.
    */
   'js/kuvagalleria.js',
+  /*
+   * Karttasymbolien kirjasto ennen nähtävyyksiä (2.9.2026): kohdekartta
+   * piirtää Matkakirjan ihmeen tähden samasta kirjastosta kuin
+   * pääkartta (piirraNostosymboli, tunnus `ihme`) — Raamattu,
+   * SYMBOLITAKSONOMIA. Kirjasto tuo vain mapartin, joka on listan
+   * kärjessä, joten se voi asua näin ylhäällä; alempana olevat
+   * merkkikerrokset (fokuskohteet, fokusnosto, karttavalot) saavat
+   * sen samalta riviltä.
+   */
+  'js/fokusnosto-symbolit.js',
+  /*
+   * Aihevalojen koneisto ennen kaikkia merkkikerroksia: kohdemerkit
+   * ja eläintäyt piirtävät kumpikin valotäplänsä sillä
+   * (js/karttavalot.js). Se tuo mapartin ja symbolikirjaston (aiheiden
+   * ryhmittely, NOSTOSYM_PAAKATEGORIAT) — molemmat jo yllä.
+   *
+   * SIIRRETTY YLÖS 18.9.2026: kaupunkiliuskan malli (alla) tarvitsee
+   * aihemerkit, jotka lukevat aiheiden nimet tästä moduulista, ja
+   * liuskan nimiö on nähtävyyksien staattinen riippuvuus.
+   */
+  'js/karttavalot.js',
+  /*
+   * KAUPUNKILIUSKAN NIMIÖT ENNEN NÄHTÄVYYKSIÄ (Raamattu,
+   * KARTTAUUDISTUKSEN PAATOKSET 34 kohta 8). `NAHTAVYYDET_NIMIO` on
+   * liuskan rivin ja kohdekartan otsikon YHTEINEN sana, ja se asuu
+   * omassa pikkumoduulissaan juuri siksi, ettei nähtävyyksien tarvitse
+   * tuoda pallolautaa: PALLOLAUTA EI KUULU YHDEN TIEDOSTON VERSIOON,
+   * eikä tällä listalla saa olla yhtään pallolaudan moduulia
+   * (tests/pallolauta.test.mjs ja tests/linssikartta.test.mjs
+   * vartioivat sitä tekstihaulla, joten sitä polkua ei saa mainita
+   * tässä tiedostossa edes kommentissa).
+   */
+  'js/kaupunkiliuska-nimiot.js',
   // M4: nähtävyydet ennen opasta (opas tuo sen apurit).
   'js/nahtavyydet.js',
   'js/opas.js',
+  /*
+   * Pulun luentareaktiot ENNEN luentaa: js/luenta.js tuo
+   * kytkeMatkakirjanReaktiot-funktion staattisesti, ja moduuli itse
+   * lukee FOKUSVIRRAT-taulun (listalla jo ylempänä) sekä
+   * js/livia-tilanteet.js:n ja js/media.js:n.
+   */
+  /*
+   * Lauseiden jako ja matkakirjan tilapäinen lyhennys (11.9.2026):
+   * tuojia ovat luentareaktiot, luenta ja fokusvirta — siksi ennen
+   * niitä. Ei tuo mitään itse.
+   */
+  'js/lausejako.js',
+  'js/luentareaktiot.js',
+  // Livian pilottieleiden loader käyttää luentareaktioiden SHA-apuria;
+  // muut riippuvuudet (media, cue-lähde, puhe-eleohjain) ovat jo yllä.
+  'js/livia-puheeleet-lataus.js',
   // M6: luenta ennen visaa (visa tuo kertojafunktiot).
   'js/luenta.js',
   /*
@@ -491,19 +737,60 @@ const MODULES = [
    * mitään.
    */
   'js/pollo-haku.js',
+  'js/livia-hoyhenet.js',
+  'js/livia-pikselit.js',
+  'js/livia-chat-tila.js',
+  'js/livia-svg-paa.js',
+  'js/livia-astronautti.js',
+  'js/livia-svg.js',
+  'js/livia-uudet-versiot.js',
+  'js/livia-nostotila.js',
+  'js/livia-dialogitila.js',
+  'js/pulu-paneelin-ylla.js',
+  'js/livia-eleet.js',
   'js/pollo.js',
+  /*
+   * Livian ääni ennen Livian kuplia: js/livia.js soittaa repliikin
+   * äänen kuplan ilmestyessä (omistaja 6.9.2026). Moduuli tuo vain
+   * median juuren, puheen voimakkuuden ja luennan puhujakirjanpidon —
+   * kaikki listalla aiemmin.
+   */
+  'js/liviapuhe.js',
   /*
    * Livian omat kuplat heti pöllön jälkeen: moduuli tuo pöllöstä
    * kuplan näyttäjät, ja sen tuovat kartta (avausesittely) ja ui
    * (mannerivihje) — molemmat ovat listalla myöhempänä.
    */
   'js/livia.js',
+  /*
+   * Kohtaamiskuvien katalogi ennen visaa: js/visa.js lukee siitä
+   * kohtaamiskortin ison kuvan (1.9.2026). Pelkkää dataa ja kaksi
+   * apuria, ei omia riippuvuuksia. HUOM: kuvat itse haetaan R2:sta,
+   * joten yhden tiedoston versio näyttää ne vain verkossa — kuvaton
+   * kortti on yhtä ehjä (js/ui.js naytaKohtaamiskuva).
+   */
+  'js/kohtaamiskuvat-data.js',
   'js/visa.js',
   // Tilastot-lehti ennen lehteä (lehti.js tuo sen staattisesti). Se
   // lukee pack.js:n, sisältötaulut ja ui-apurit, jotka ovat yllä —
   // laskenta tapahtuu vasta kun liite avataan.
   'js/viitekuva-herot.js',
   'js/tyohuone-tilastot.js',
+  /*
+   * Musiikki-lehti (3.9.2026) ennen lehteä samoin perustein: lehti.js
+   * tuo sen staattisesti. Riippuvuudet — ui-apurit, media, sound,
+   * ambience-stream ja siirtymämusiikki — ovat kaikki jo yllä, eikä
+   * mitään soiteta ennen kuin liite avataan.
+   */
+  'js/tyohuone-musiikki.js',
+  /*
+   * Työhuoneen kaksi uutta moduulia (11.9.2026) ennen lehteä: lehti.js
+   * tuo molemmat staattisesti. Kehittäjälehti on pelkkä rivitaulukko ja
+   * Raamatun muokkaus lukee vain ui-apurit ja ehdotukset — molemmat jo
+   * yllä.
+   */
+  'js/tyohuone-kehittajalehti.js',
+  'js/tyohuone-raamattu-muokkaus.js',
   /*
    * Kevyen kulun nimetyt lehtitehtävät ENNEN maalehteä (maalehti tuo
    * sivun tehtäväpiirron staattisesti). Moduulin omat riippuvuudet —
@@ -513,6 +800,14 @@ const MODULES = [
   'js/fokustehtavat.js',
   // M5c: maalehden koneisto ennen lehteä (lehti tuo sen piirtäjät).
   'js/maalehti.js',
+  /*
+   * Kääntöteatteri ennen lehteä (lehti tuo sen staattisesti). Itse
+   * kirjasto (page-flip) EI tule mukaan: yhden tiedoston versio jää
+   * ilman valmiita kirjastoja kuten ilman linssejä (Raamattu 5.9.2026),
+   * ja moduuli tunnistaa dist-version manifestin puutteesta —
+   * kääntöä ei edes yritetä ladata, lehti käyttää vanhaa liukua.
+   */
+  'js/sivunkaanto.js',
   // M5a: lehden sivukoneisto (tuo nähtävyydet ja lukijan).
   'js/lehti.js',
   /*
@@ -521,6 +816,33 @@ const MODULES = [
    * media, africa-valokuvat, julisteet, fokusvirrat, natiivi ja äänet —
    * ovat kaikki jo yllä.
    */
+  // fokusmitat (ja sen fokus-grc) ennen fokusvirtaa: saapumisasento 9.9.2026
+  'js/packs/fokus-grc.js',
+  'js/fokusmitat.js',
+  /*
+   * PULU-CAM-pakka ENNEN fokusvirtaa (fokusvirta tuo sen staattisesti).
+   * Sen omat riippuvuudet — ui-apurit, media, kuvatekstit ja pollo —
+   * ovat kaikki jo yllä.
+   */
+  'js/pulucam.js',
+  /*
+   * Minitraileri ENNEN fokusvirtaa (fokusvirta tuo sen staattisesti
+   * siivotakseen sen kaupungista lähdettäessä). Tuo vain ui-apurit,
+   * median, valokuvat ja kulttuurikategoriat — kaikki jo yllä.
+   */
+  'js/saapumistraileri.js',
+  /*
+   * Piirtokoe-asetus ENNEN kaiutinmittaria (23.9.2026, Syötekoe 5-8):
+   * kaiutinmittari tuo sen nyt voimassaOlevatKokeet-lukuun. Ei omia
+   * riippuvuuksia, joten paikka muuten vapaa.
+   */
+  'js/piirtokoe-asetus.js',
+  /*
+   * Kaiuttimen VU-mittari (15.9.2026): tuo nyt piirtokoe-asetuksen
+   * (yllä); paikka on muuten vapaa — kunhan se on ennen js/ui.js:ää,
+   * joka tuo sen.
+   */
+  'js/kaiutinmittari.js',
   'js/fokusvirta.js',
   /*
    * Laattapyramidin lataaja ennen kameraa: kamera lukee siitä arkin
@@ -528,26 +850,54 @@ const MODULES = [
    * arkki on kameran maailma. Tuo vain mapartin ja median, jotka ovat
    * yllä.
    */
+  /*
+   * Nostojen ladonnan mittakaava, ruutukatto ja tiiviste. LEHTIMODUULI,
+   * joka ei tuo mitään — ja siksi se voi olla näin varhain.
+   * js/fokuskohteet.js kysyy siltä, onko merkki poltettu laattaan,
+   * js/ui.js merkkien mittakaavan, js/karttanimet.js merkin
+   * karttavakion (v1394) ja js/laattapyramidi.js piirtosäännön tunnuksen
+   * (1.9.2026) — siksi TÄMÄN on oltava ennen laattapyramidia.
+   * Laattageneraattori laskee saman tiivisteen Nodessa.
+   */
+  'js/nostoladonta.js',
+  /*
+   * Lautaprojektiot ennen niiden lukijoita. Paketti ei tuo mitään.
+   * Se siirtyi tähän 1.9.2026 poistetun tarkan varjon takia ja jää
+   * tähän: paikka on kelvollinen kaikille lukijoille, ja rivin
+   * siirtely tässä luettelossa on aina riski.
+   */
+  /*
+   * Reliefipyramidin laatasto (topografialinssi). ENNEN
+   * js/laattapyramidi.js:ää, koska se tuo tämän — yhden tiedoston
+   * versiossa moduulit ajetaan listan järjestyksessä, eikä tuoja saa
+   * olla ennen tuotua.
+   */
+  'js/reliefipyramidi.js',
   'js/laattapyramidi.js',
-  // M7a: laudan kamera ennen ui:ta (ui tuo Kartan; kartta tuo äänet ja
-  // luennan, jotka ovat yllä).
+  /*
+   * Siirron koreografian luvut ja käyrät (pallolauta vaihe 2). Nousi
+   * tähän 5.9.2026: sovitaAjonKesto muutti kartta.js:stä tänne, joten
+   * riippuvuus on oltava ennen tuojaansa. Ei tuo itse mitään.
+   */
+  'js/siirtokoreografia.js',
+  /*
+   * Tasokartan latausportti ja lepotilan sijaisolio ennen karttaa:
+   * js/kartta.js perii NukkuvaKartta-luokan (laiskoituserä 5b), ja
+   * niputettu koodi on yhtä näkyvyysaluetta — kantaluokan on oltava
+   * julistettu ennen perijäänsä. Tuo laattapyramidin, joka on yllä.
+   */
+  'js/kartta-lataus.js',
+  /*
+   * M7a: laudan kamera ennen ui:ta (kartta tuo äänet ja luennan, jotka
+   * ovat yllä). Tuonti on 5.9.2026 alkaen DYNAAMINEN (kartta-lataus),
+   * mutta nipussa kartta tarvitaan: se on yhden tiedoston version ainoa
+   * lauta. Ks. tools/tarkista-niputus.mjs DYNAAMISESTI_TUODUT.
+   */
   'js/kartta.js',
   // Laitemittari ennen ui:ta (ui tuo sen). Ei tuo itse mitään.
   'js/karttamittari.js',
   // Lavan pohjakerrosten kooste ennen ui:ta (ui tuo sen). Ei tuo itse
   // mitään: geometria luetaan svg:stä ja lehdet DOMista.
-  // Fokusmoodin maakohtainen topografiapohja ennen ui:ta (ui tuo sen;
-  // se itse tuo mapartin, median ja lisänimet, jotka ovat yllä).
-  'js/packs/fokus-grc.js',
-  /*
-   * Nostojen ladonnan mittakaava ja tiiviste. LEHTIMODUULI, joka ei tuo
-   * mitään — ja siksi se voi olla näin varhain. js/fokuskohteet.js
-   * kysyy siltä, onko merkki poltettu laattaan, js/ui.js merkkien
-   * mittakaavan ja js/karttanimet.js merkin karttavakion (v1394);
-   * laattageneraattori laskee saman tiivisteen Nodessa. Ennen
-   * karttanimiä, koska karttanimet tuo tämän.
-   */
-  'js/nostoladonta.js',
   // Ruutuavaruudessa ladotut paikannimet ennen ui:ta (ui tuo sen). Tuo
   // mapartin, laattapyramidin, nimipaketin ja nostoladonnan, jotka
   // ovat yllä.
@@ -559,31 +909,71 @@ const MODULES = [
    * Karttasymbolien kirjasto ennen kohteita ja täkynostoa (molemmat
    * piirtävät symbolinsa sillä — Raamattu, SYMBOLITAKSONOMIA). Kerros
    * tuo vain mapartin ja äänet, jotka ovat jo yllä.
+   *
+   * SIIRRETTY YLEMMÄS 2.9.2026: myös kaupunkilehden kohdekartta
+   * piirtää sillä Matkakirjan ihmeen tähden (js/nahtavyydet.js), ja
+   * nähtävyydet ovat listalla paljon ennen tätä kohtaa. Kirjasto on
+   * siis nyt nähtävyyksien yläpuolella; tässä ei ole enää riviä.
    */
-  'js/fokusnosto-symbolit.js',
   /*
    * Kategoria per kaupunki -ryhmittely ennen kohteita (js/fokuskohteet.js
    * tuo sen). Se tuo vain symbolikirjaston kategorianimet, jotka ovat
    * rivin yllä.
    */
-  'js/fokusryhmat.js',
   /*
-   * Aihevalojen koneisto ennen kaikkia merkkikerroksia: kohdemerkit,
-   * ja eläintäyt piirtävät kumpikin valotäplänsä sillä
-   * (js/karttavalot.js). Se tuo mapartin ja symbolikirjaston (aiheiden
-   * ryhmittely, NOSTOSYM_PAAKATEGORIAT) — molemmat jo yllä.
+   * Peukalolevy (js/karttaselite-levy.js) ennen karttaselitettä, joka
+   * tuo sen (22.9.2026: valikon uusi liukukahva, ks. Raamattu).
    */
-  'js/karttavalot.js',
+  'js/karttaselite-levy.js',
   /*
    * Karttaselitevalikko ennen ui:ta (ui tuo sen käynnistys- ja
    * päivityskutsun). Se tuo valojen koneiston, symbolikirjaston,
-   * mapartin ja ui-apurit — kaikki jo yllä.
+   * mapartin, ui-apurit ja peukalolevyn — kaikki jo yllä.
    */
   'js/karttaselite.js',
+  'js/vakasikoni.js',
+  'js/ylapalkki-vaaka.js',
+  /*
+   * Fokusnäkymän ruutuun ankkuroidut mitat ennen ui:ta (ui tuo ne
+   * staattisesti). Se lukee laudan projektion fokus-grc.js:stä ja maan
+   * perustiedot sisältötauluista — molemmat ovat jo yllä.
+   */
+  /*
+   * Eläintäyn karttarivit ja nimiön kylki ennen kohdekerrosta
+   * (3.9.2026): fokuskohteet.js lukee täyn paikan ladontansa
+   * esteeksi, ja elaintaky.js lukee kohdekerroksen ladonnan kylkeensä
+   * — siksi rivit ovat omassa moduulissaan tässä välissä. Data
+   * (elaintakyt.js) tuo ei mitään; rivit tuovat projektion
+   * (fokusmitat.js) ja symbolikirjaston, molemmat jo yllä.
+   */
+  'js/packs/elaintakyt.js',
+  'js/elaintaky-rivit.js',
+  /*
+   * KUVA EDELLÄ -AVAUS ennen kumpaakin korttia, jotka sitä käyttävät
+   * (js/fokuskohteet.js ja js/fokusnosto.js). Se tuo ui-apurit,
+   * kuvatekstit ja tekijäkortin — kaikki jo yllä.
+   */
+  // Nostokortin kuvakaruselli (nostokortti-erä 20.9.2026): tuo ui-apurit,
+  // kuvatekstit, tekijäkortin, havainnekuva-merkin ja äänet — kaikki jo
+  // yllä — ennen nostokuva.js:ää ja fokuskohteet.js:ää, jotka sitä käyttävät.
+  'js/kuvasarja.js',
+  'js/nostokuva.js',
+  // Lisäkaupunkien kaupunkikortti (PAATOKSET 16) ennen fokuskohteet.js:ää,
+  // joka tuo sen avaaLisakaupunginKortti-funktion.
+  'js/kaupunkinosto.js',
   // Fokuslehden klikattavat karttakohteet ennen ui:ta (ui tuo sen
   // päivitys- ja nollauskutsun; kohteiden lista, symbolikirjasto,
   // mapart, media, ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).
   'js/fokuskohteet.js',
+  /*
+   * Karttatyökalun Maakunnat-välilehden runko (22.9.2026) ennen ui:ta
+   * (ui tuo kytkentäkutsun). Data ensin, moduuli perässä: se tuo
+   * ui-apurit ja fokuskohteet.js:n nykyisen maan päättelyn — molemmat
+   * jo yllä.
+   */
+  'js/packs/maakunnat-luonnehdinnat.js',
+  'js/packs/maakunnat-pulu.js',
+  'js/karttatyokalu-maakunnat.js',
   /*
    * Kevyen kulun vihreä kohtaamispiste ennen ui:ta (ui tuo sen päivitys-
    * ja nollauskutsun). Se tuo fokusvirran kohtaamiskortin ja mapartin,
@@ -597,12 +987,6 @@ const MODULES = [
    * listalla vasta tässä.
    */
   'js/fokusnosto.js',
-  /*
-   * Fokusnäkymän ruutuun ankkuroidut mitat ennen ui:ta (ui tuo ne
-   * staattisesti). Se lukee laudan projektion fokus-grc.js:stä ja maan
-   * perustiedot sisältötauluista — molemmat ovat jo yllä.
-   */
-  'js/fokusmitat.js',
   /*
    * Syvennystarinat kartalle (yhtenäinen kohdemalli): data ensin,
    * kerroskytkentä perässä. js/syvennys.js tuo fokusvirran,
@@ -620,13 +1004,22 @@ const MODULES = [
   'js/packs/skandaalit.js',
   'js/skandaalit.js',
   /*
+   * Historian hetket kartalle (yhtenäinen kohdemalli, sisar
+   * skandaaleille): data ensin, kerroskytkentä perässä.
+   * js/historian-hetket.js tuo fokusvirran (TAKY_PALKKIO),
+   * kohdekerroksen ja sen kuvasuurennoksen, symbolikirjaston,
+   * tekijakortin lähderivin ja projektion (fokusmitat) — kaikki ovat
+   * jo yllä.
+   */
+  'js/packs/historian-hetket.js',
+  'js/historian-hetket.js',
+  /*
    * Eläintäyt ennen ui:ta (ui tuo niiden päivitys- ja nollauskutsun).
    * Data ensin, kerros perässä. Kerros lukee laudan projektion
    * fokusmitat.js:stä — juuri siksi se on listalla vasta tässä — ja
    * tuo lisäksi symbolikirjaston, mapartin, ui-apurit ja äänet, jotka
    * ovat kaikki jo yllä.
    */
-  'js/packs/elaintakyt.js',
   'js/elaintaky.js',
   /*
    * Sähkepinta ennen ui:ta (ui tuo siitä retkikuntaosion ja
@@ -635,9 +1028,51 @@ const MODULES = [
    * pysäyttää tiimalasin sen omilla funktioilla.
    */
   'js/sahke.js',
+  /*
+   * Nykyisen maan tummennus ja ääriviiva ennen ui:ta (ui tuo sen
+   * päivitys- ja nollauskutsun). Ei tuo itse mitään — DOM rakennetaan
+   * createElementNS:llä ja aineisto haetaan laiskasti — joten se voisi
+   * olla listalla missä tahansa ui.js:n yläpuolella.
+   *
+   * AINEISTOA (assets/data/maapolygonit.json) EI UPOTETA — sama sääntö
+   * kuin maan tilastokäyrillä: yhden tiedoston versiossa haku
+   * epäonnistuu ja efekti jää pois hiljaa.
+   */
+  'js/maatummennus.js',
+  /*
+   * Kehittäjän kohtaamislista (5.9.2026) ennen ui.js:ää: ui tuo sen
+   * staattisesti. Omat riippuvuudet — game, pack, tarinakaari,
+   * kehitysdata, kohtaamiskuvat-data, fokusvirrat, europe-puzzles ja
+   * ui-apurit — ovat kaikki jo yllä, eikä mitään lasketa ennen kuin
+   * lehti avataan kehittäjätilassa.
+   */
+  'js/kohtaamistesti.js',
+  /*
+   * Pallolinssien vaiheloki ja pelaajan virheilmoitus ennen ui.js:ää
+   * (16.9.2026, WebApp-tyhjä): js/ui.js tuo `naytaLinssivirhe`n
+   * STAATTISESTI, ja js/linssivirhe.js tuo vuorostaan pallodiagin.
+   * Kumpikaan ei laske mitään ennen kuin linssi avataan, joten
+   * järjestyksellä on väliä vain tässä suhteessa. (js/pallo.js ei ole
+   * niputuksessa — se ladataan dynaamisesti.)
+   */
+  'js/pallodiag.js',
+  'js/linssivirhe.js',
   'js/ui.js',
 
   'js/muutokset.js',
+  /*
+   * Pulun paikkanäyttö (js/pulu-paikka.js) VIIMEISENÄ ennen mainia: se
+   * tuo pöllön, kartan kohdekerroksen, laudan projektion ja
+   * kohdekartat — kaikki jo yllä — ja main.js kytkee sen
+   * (kytkePulunPaikannus).
+   */
+  'js/pulu-paikka.js',
+  'js/kartta-liike.js',
+  'js/tarkkuus-asetus.js',
+  // Kehittäjän pikatie (?lauta=pallo&dev=<kaupunki>): main.js tuo sen staattisesti;
+  // ei pallolauta-tuonteja (kayttaa ui.pallolautaa vain ajossa, jos se on).
+  'js/kehittaja-pikatie.js',
+  'js/lehtikuori.js',
   'js/main.js',
 ];
 
@@ -683,11 +1118,18 @@ const bundle = MODULES.map((file) => `// ===== ${file} =====\n${stripModuleSynta
 const STYLES = [
   'css/styles.css',
   'css/fokusvirta.css',
+  // Kaupungin minitraileri (11.9.2026): js/saapumistraileri.js lataa
+  // tämän selaimessa itse, yhden tiedoston versiossa se liitetään tähän.
+  'css/saapumistraileri.css',
   'css/fokuskohteet.css',
   'css/fokusnosto.css',
+  'css/kuvasarja.css',
   // Sähkepinta on osa peruspeliä (js/ui.js ja js/main.js tuovat
   // js/sahke.js:n), eikä css/styles.css sisällä yhtään sahke-sääntöä.
   'css/sahke.css',
+  // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän
+  // omalla <link>-elementillään, joka ei päädy yhden tiedoston versioon.
+  'css/linssikehys.css',
 ];
 
 const css = STYLES.map((file) => read(file)).join('\n\n');

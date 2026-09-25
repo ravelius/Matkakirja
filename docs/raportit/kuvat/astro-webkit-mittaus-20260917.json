@@ -1,0 +1,2873 @@
+[
+ {
+  "selain": "webkit",
+  "kotelo": "webapp",
+  "kerta": 1,
+  "kirjasto": "kirjasto yritys=0 ok=1 ms=381",
+  "avaruusAlku": "avaruus-alku kotelo=2518x1242 kangas=2518x1242 hukassa=0 itsenainen=0 dpr=1",
+  "lahde": "8192x4096",
+  "ladontaKangas": "8192x4096",
+  "ladontaRivit": [
+   "8192x4096 ok=1 tapa=suodatin"
+  ],
+  "valmis": "blob 1390 ms",
+  "vaiheetKaatui": [],
+  "vartijat": [
+   "ei/64",
+   "ei/64"
+  ],
+  "puuteLopussa": "ei",
+  "pisteitaLopussa": 64,
+  "pisteSarja": [
+   [
+    0,
+    64
+   ],
+   [
+    0.5,
+    64
+   ],
+   [
+    1.4,
+    64
+   ],
+   [
+    2.1,
+    64
+   ],
+   [
+    2.3,
+    64
+   ],
+   [
+    2.5,
+    64
+   ],
+   [
+    3,
+    64
+   ],
+   [
+    3.5,
+    64
+   ],
+   [
+    4,
+    64
+   ],
+   [
+    4.5,
+    64
+   ],
+   [
+    5,
+    64
+   ],
+   [
+    5.5,
+    64
+   ],
+   [
+    6,
+    64
+   ],
+   [
+    6.5,
+    64
+   ],
+   [
+    7,
+    64
+   ],
+   [
+    7.5,
+    64
+   ],
+   [
+    8,
+    64
+   ],
+   [
+    8.5,
+    64
+   ],
+   [
+    9,
+    64
+   ],
+   [
+    9.5,
+    64
+   ],
+   [
+    10,
+    64
+   ],
+   [
+    10.5,
+    64
+   ],
+   [
+    11,
+    64
+   ],
+   [
+    11.5,
+    64
+   ],
+   [
+    12,
+    64
+   ],
+   [
+    12.5,
+    64
+   ],
+   [
+    13,
+    64
+   ],
+   [
+    13.5,
+    64
+   ],
+   [
+    14,
+    64
+   ],
+   [
+    14.5,
+    64
+   ]
+  ],
+  "pisteitaEnsinHetki": 0,
+  "kirkkaus5": {
+   "keski": 92.7,
+   "sivut": [
+    109.8,
+    112,
+    107.2,
+    92.8
+   ],
+   "max": 112
+  },
+  "kirkkaus15": {
+   "keski": 98.6,
+   "sivut": [
+    112.3,
+    94.3,
+    84.7,
+    85.9
+   ],
+   "max": 112.3
+  },
+  "kirkkausSarja": [
+   [
+    1,
+    44.6,
+    118.2
+   ],
+   [
+    2,
+    103.4,
+    129.2
+   ],
+   [
+    5,
+    92.7,
+    112
+   ]
+  ],
+  "eleMs": 2335,
+  "kartta": {
+   "map": true,
+   "tyyppi": "HTMLImageElement",
+   "koko": "8192x4096",
+   "valmis": true,
+   "src": "blob:http://127.0.0.",
+   "versio": 1,
+   "vari": null,
+   "emissive": "000000"
+  },
+  "erittely": null,
+  "kuva": "astro-webkit-webkit-webapp-1-20260917.jpg",
+  "reliefinTarkkuus": "8k",
+  "reliefinKestoMs": 1390,
+  "pinnanOsoite": "blob:http://127.0.0.1:87",
+  "kangas": {
+   "leveys": 2518,
+   "korkeus": 1300
+  },
+  "koteloMitat": {
+   "leveys": 2518,
+   "korkeus": 1300
+  },
+  "kontekstiHukassa": false,
+  "ilmoitus": null,
+  "diag": [
+   "avaruus-alku kotelo=2518x1242 kangas=2518x1242 hukassa=0 itsenainen=0 dpr=1",
+   "alku lahde=8192x4096 kangas=8192x4096 ruutu=2539 kokoPallo=1",
+   "avaruus-pinta tekstuuri=1 tarkkuus=8k",
+   "avaruus-valmis alt=1.54 kotelo=2518x1242 tahtia=2190 kalvo=1",
+   "vaihe nimi=avaruus ok=1 ms=153",
+   "vaihe nimi=pulu ok=1 ms=0",
+   "vaihe nimi=aanet ok=1 ms=0",
+   "vaihe nimi=linssiaani ok=1 ms=1",
+   "vaihe nimi=pisteet ok=1 ms=0",
+   "kuva px=8192x4096 ms=164",
+   "ladonta koko=8192x4096 ok=1 tapa=suodatin ms=264",
+   "blob kt=47046 ms=962",
+   "valmis syy=blob osoite=blob:http:// ms=1390",
+   "vartija puute=ei pisteita=64 vaiheet=0",
+   "vartija puute=ei pisteita=64 vaiheet=0"
+  ],
+  "ruutu": {
+   "inner": "2539x1321",
+   "dpr": 1,
+   "standalone": false,
+   "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, lik"
+  }
+ },
+ {
+  "selain": "webkit",
+  "kotelo": "webapp",
+  "kerta": 2,
+  "kirjasto": "kirjasto yritys=0 ok=1 ms=381",
+  "avaruusAlku": "avaruus-alku kotelo=2518x1300 kangas=2518x1242 hukassa=0 itsenainen=0 dpr=1",
+  "lahde": "8192x4096",
+  "ladontaKangas": "8192x4096",
+  "ladontaRivit": [
+   "8192x4096 ok=1 tapa=suodatin"
+  ],
+  "valmis": "blob 1253 ms",
+  "vaiheetKaatui": [],
+  "vartijat": [
+   "ei/64",
+   "ei/64"
+  ],
+  "puuteLopussa": "ei",
+  "pisteitaLopussa": 64,
+  "pisteSarja": [
+   [
+    0,
+    64
+   ],
+   [
+    1.2,
+    64
+   ],
+   [
+    1.8,
+    64
+   ],
+   [
+    1.8,
+    64
+   ],
+   [
+    2,
+    64
+   ],
+   [
+    2.5,
+    64
+   ],
+   [
+    3,
+    64
+   ],
+   [
+    3.5,
+    64
+   ],
+   [
+    4,
+    64
+   ],
+   [
+    4.5,
+    64
+   ],
+   [
+    5,
+    64
+   ],
+   [
+    5.5,
+    64
+   ],
+   [
+    6,
+    64
+   ],
+   [
+    6.5,
+    64
+   ],
+   [
+    7,
+    64
+   ],
+   [
+    7.5,
+    64
+   ],
+   [
+    8,
+    64
+   ],
+   [
+    8.5,
+    64
+   ],
+   [
+    9,
+    64
+   ],
+   [
+    9.5,
+    64
+   ],
+   [
+    10,
+    64
+   ],
+   [
+    10.5,
+    64
+   ],
+   [
+    11,
+    64
+   ],
+   [
+    11.5,
+    64
+   ],
+   [
+    12,
+    64
+   ],
+   [
+    12.5,
+    64
+   ],
+   [
+    13,
+    64
+   ],
+   [
+    13.5,
+    64
+   ],
+   [
+    14,
+    64
+   ],
+   [
+    14.5,
+    64
+   ]
+  ],
+  "pisteitaEnsinHetki": 0,
+  "kirkkaus5": {
+   "keski": 95.2,
+   "sivut": [
+    112.1,
+    106.9,
+    107.8,
+    92.3
+   ],
+   "max": 112.1
+  },
+  "kirkkaus15": {
+   "keski": 98.4,
+   "sivut": [
+    112.3,
+    94.3,
+    84.7,
+    85.8
+   ],
+   "max": 112.3
+  },
+  "kirkkausSarja": [
+   [
+    1,
+    45.3,
+    118.3
+   ],
+   [
+    2,
+    104.5,
+    129.3
+   ],
+   [
+    5,
+    95.2,
+    112.1
+   ]
+  ],
+  "eleMs": 2243,
+  "kartta": {
+   "map": true,
+   "tyyppi": "HTMLImageElement",
+   "koko": "8192x4096",
+   "valmis": true,
+   "src": "blob:http://127.0.0.",
+   "versio": 1,
+   "vari": null,
+   "emissive": "000000"
+  },
+  "erittely": null,
+  "kuva": "astro-webkit-webkit-webapp-2-20260917.jpg",
+  "reliefinTarkkuus": "8k",
+  "reliefinKestoMs": 1253,
+  "pinnanOsoite": "blob:http://127.0.0.1:87",
+  "kangas": {
+   "leveys": 2518,
+   "korkeus": 1300
+  },
+  "koteloMitat": {
+   "leveys": 2518,
+   "korkeus": 1300
+  },
+  "kontekstiHukassa": false,
+  "ilmoitus": null,
+  "diag": [
+   "avaruus-alku kotelo=2518x1300 kangas=2518x1242 hukassa=0 itsenainen=0 dpr=1",
+   "alku lahde=8192x4096 kangas=8192x4096 ruutu=2539 kokoPallo=1",
+   "avaruus-pinta tekstuuri=1 tarkkuus=8k",
+   "avaruus-valmis alt=1.54 kotelo=2518x1300 tahtia=2190 kalvo=1",
+   "vaihe nimi=avaruus ok=1 ms=72",
+   "vaihe nimi=pulu ok=1 ms=1",
+   "vaihe nimi=aanet ok=1 ms=0",
+   "vaihe nimi=linssiaani ok=1 ms=0",
+   "vaihe nimi=pisteet ok=1 ms=0",
+   "kuva px=8192x4096 ms=55",
+   "ladonta koko=8192x4096 ok=1 tapa=suodatin ms=260",
+   "blob kt=47046 ms=937",
+   "valmis syy=blob osoite=blob:http:// ms=1253",
+   "vartija puute=ei pisteita=64 vaiheet=0",
+   "vartija puute=ei pisteita=64 vaiheet=0"
+  ],
+  "ruutu": {
+   "inner": "2539x1321",
+   "dpr": 1,
+   "standalone": false,
+   "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, lik"
+  },
+  "materiaalinErot": [
+   "version: 4 → 8"
+  ]
+ },
+ {
+  "selain": "webkit",
+  "kotelo": "webapp",
+  "kerta": 3,
+  "kirjasto": "kirjasto yritys=0 ok=1 ms=381",
+  "avaruusAlku": "avaruus-alku kotelo=2518x1300 kangas=2518x1242 hukassa=0 itsenainen=0 dpr=1",
+  "lahde": "8192x4096",
+  "ladontaKangas": "8192x4096",
+  "ladontaRivit": [
+   "8192x4096 ok=1 tapa=suodatin"
+  ],
+  "valmis": "blob 1263 ms",
+  "vaiheetKaatui": [],
+  "vartijat": [
+   "ei/64",
+   "ei/64"
+  ],
+  "puuteLopussa": "ei",
+  "pisteitaLopussa": 64,
+  "pisteSarja": [
+   [
+    0,
+    64
+   ],
+   [
+    1.2,
+    64
+   ],
+   [
+    1.8,
+    64
+   ],
+   [
+    1.8,
+    64
+   ],
+   [
+    2,
+    64
+   ],
+   [
+    2.5,
+    64
+   ],
+   [
+    3,
+    64
+   ],
+   [
+    3.5,
+    64
+   ],
+   [
+    4,
+    64
+   ],
+   [
+    4.5,
+    64
+   ],
+   [
+    5,
+    64
+   ],
+   [
+    5.5,
+    64
+   ],
+   [
+    6,
+    64
+   ],
+   [
+    6.5,
+    64
+   ],
+   [
+    7,
+    64
+   ],
+   [
+    7.5,
+    64
+   ],
+   [
+    8,
+    64
+   ],
+   [
+    8.5,
+    64
+   ],
+   [
+    9,
+    64
+   ],
+   [
+    9.5,
+    64
+   ],
+   [
+    10,
+    64
+   ],
+   [
+    10.5,
+    64
+   ],
+   [
+    11,
+    64
+   ],
+   [
+    11.5,
+    64
+   ],
+   [
+    12,
+    64
+   ],
+   [
+    12.5,
+    64
+   ],
+   [
+    13,
+    64
+   ],
+   [
+    13.5,
+    64
+   ],
+   [
+    14,
+    64
+   ],
+   [
+    14.5,
+    64
+   ]
+  ],
+  "pisteitaEnsinHetki": 0,
+  "kirkkaus5": {
+   "keski": 92.6,
+   "sivut": [
+    109.1,
+    113,
+    107,
+    92.9
+   ],
+   "max": 113
+  },
+  "kirkkaus15": {
+   "keski": 98.7,
+   "sivut": [
+    112.2,
+    94.3,
+    84.8,
+    86
+   ],
+   "max": 112.2
+  },
+  "kirkkausSarja": [
+   [
+    1,
+    43.5,
+    118.3
+   ],
+   [
+    2,
+    103.4,
+    129.1
+   ],
+   [
+    5,
+    92.6,
+    113
+   ]
+  ],
+  "eleMs": 2350,
+  "kartta": {
+   "map": true,
+   "tyyppi": "HTMLImageElement",
+   "koko": "8192x4096",
+   "valmis": true,
+   "src": "blob:http://127.0.0.",
+   "versio": 1,
+   "vari": null,
+   "emissive": "000000"
+  },
+  "erittely": null,
+  "kuva": "astro-webkit-webkit-webapp-3-20260917.jpg",
+  "reliefinTarkkuus": "8k",
+  "reliefinKestoMs": 1264,
+  "pinnanOsoite": "blob:http://127.0.0.1:87",
+  "kangas": {
+   "leveys": 2518,
+   "korkeus": 1300
+  },
+  "koteloMitat": {
+   "leveys": 2518,
+   "korkeus": 1300
+  },
+  "kontekstiHukassa": false,
+  "ilmoitus": null,
+  "diag": [
+   "avaruus-alku kotelo=2518x1300 kangas=2518x1242 hukassa=0 itsenainen=0 dpr=1",
+   "alku lahde=8192x4096 kangas=8192x4096 ruutu=2539 kokoPallo=1",
+   "avaruus-pinta tekstuuri=1 tarkkuus=8k",
+   "avaruus-valmis alt=1.54 kotelo=2518x1300 tahtia=2190 kalvo=1",
+   "vaihe nimi=avaruus ok=1 ms=147",
+   "vaihe nimi=pulu ok=1 ms=0",
+   "vaihe nimi=aanet ok=1 ms=0",
+   "vaihe nimi=linssiaani ok=1 ms=0",
+   "vaihe nimi=pisteet ok=1 ms=0",
+   "kuva px=8192x4096 ms=57",
+   "ladonta koko=8192x4096 ok=1 tapa=suodatin ms=261",
+   "blob kt=47046 ms=945",
+   "valmis syy=blob osoite=blob:http:// ms=1263",
+   "vartija puute=ei pisteita=64 vaiheet=0",
+   "vartija puute=ei pisteita=64 vaiheet=0"
+  ],
+  "ruutu": {
+   "inner": "2539x1321",
+   "dpr": 1,
+   "standalone": false,
+   "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, lik"
+  },
+  "materiaalinErot": [
+   "version: 4 → 12"
+  ],
+  "virheet": [],
+  "konsoli": []
+ },
+ {
+  "selain": "webkit",
+  "kotelo": "iphone",
+  "kerta": 1,
+  "kirjasto": "kirjasto yritys=0 ok=1 ms=119",
+  "avaruusAlku": "avaruus-alku kotelo=374x771 kangas=1122x2313 hukassa=0 itsenainen=0 dpr=3",
+  "lahde": "4096x2048",
+  "ladontaKangas": "2048x1024",
+  "ladontaRivit": [
+   "2048x1024 ok=1 tapa=suodatin"
+  ],
+  "valmis": "blob 349 ms",
+  "vaiheetKaatui": [],
+  "vartijat": [
+   "ei/64",
+   "ei/64"
+  ],
+  "puuteLopussa": "ei",
+  "pisteitaLopussa": 64,
+  "pisteSarja": [
+   [
+    0,
+    64
+   ],
+   [
+    0.5,
+    64
+   ],
+   [
+    1,
+    64
+   ],
+   [
+    1.5,
+    64
+   ],
+   [
+    2,
+    64
+   ],
+   [
+    2.5,
+    64
+   ],
+   [
+    3,
+    64
+   ],
+   [
+    3.5,
+    64
+   ],
+   [
+    4,
+    64
+   ],
+   [
+    4.5,
+    64
+   ],
+   [
+    5,
+    64
+   ],
+   [
+    5.5,
+    64
+   ],
+   [
+    6,
+    64
+   ],
+   [
+    6.5,
+    64
+   ],
+   [
+    7,
+    64
+   ],
+   [
+    7.5,
+    64
+   ],
+   [
+    8,
+    64
+   ],
+   [
+    8.5,
+    64
+   ],
+   [
+    9,
+    64
+   ],
+   [
+    9.5,
+    64
+   ],
+   [
+    10,
+    64
+   ],
+   [
+    10.5,
+    64
+   ],
+   [
+    11,
+    64
+   ],
+   [
+    11.5,
+    64
+   ],
+   [
+    12,
+    64
+   ],
+   [
+    12.5,
+    64
+   ],
+   [
+    13,
+    64
+   ],
+   [
+    13.5,
+    64
+   ],
+   [
+    14,
+    64
+   ],
+   [
+    14.5,
+    64
+   ]
+  ],
+  "pisteitaEnsinHetki": 0,
+  "kirkkaus5": {
+   "keski": 90.6,
+   "sivut": [
+    85.7,
+    115.9,
+    141.5,
+    139.2
+   ],
+   "max": 141.5
+  },
+  "kirkkaus15": {
+   "keski": 99.4,
+   "sivut": [
+    82.8,
+    112.3,
+    137.3,
+    135.3
+   ],
+   "max": 137.3
+  },
+  "kirkkausSarja": [
+   [
+    1,
+    100.7,
+    140.1
+   ],
+   [
+    2,
+    98,
+    143.8
+   ],
+   [
+    5,
+    90.6,
+    141.5
+   ]
+  ],
+  "eleMs": 2346,
+  "kartta": {
+   "map": true,
+   "tyyppi": "HTMLImageElement",
+   "koko": "2048x1024",
+   "valmis": true,
+   "src": "blob:http://127.0.0.",
+   "versio": 1,
+   "vari": null,
+   "emissive": "000000"
+  },
+  "erittely": null,
+  "kuva": "astro-webkit-webkit-iphone-1-20260917.jpg",
+  "reliefinTarkkuus": "4k",
+  "reliefinKestoMs": 349,
+  "pinnanOsoite": "blob:http://127.0.0.1:87",
+  "kangas": {
+   "leveys": 1122,
+   "korkeus": 2484
+  },
+  "koteloMitat": {
+   "leveys": 374,
+   "korkeus": 828
+  },
+  "kontekstiHukassa": false,
+  "ilmoitus": null,
+  "diag": [
+   "avaruus-alku kotelo=374x771 kangas=1122x2313 hukassa=0 itsenainen=0 dpr=3",
+   "alku lahde=4096x2048 kangas=2048x1024 ruutu=390 kokoPallo=1",
+   "avaruus-pinta tekstuuri=1 tarkkuus=4k",
+   "avaruus-valmis alt=3.91 kotelo=374x771 tahtia=2190 kalvo=1",
+   "vaihe nimi=avaruus ok=1 ms=142",
+   "vaihe nimi=pulu ok=1 ms=0",
+   "vaihe nimi=aanet ok=1 ms=0",
+   "vaihe nimi=linssiaani ok=1 ms=1",
+   "vaihe nimi=pisteet ok=1 ms=0",
+   "kuva px=4096x2048 ms=95",
+   "ladonta koko=2048x1024 ok=1 tapa=suodatin ms=191",
+   "blob kt=3493 ms=62",
+   "valmis syy=blob osoite=blob:http:// ms=349",
+   "vartija puute=ei pisteita=64 vaiheet=0",
+   "vartija puute=ei pisteita=64 vaiheet=0"
+  ],
+  "ruutu": {
+   "inner": "390x844",
+   "dpr": 3,
+   "standalone": false,
+   "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHT"
+  }
+ },
+ {
+  "selain": "webkit",
+  "kotelo": "iphone",
+  "kerta": 2,
+  "kirjasto": "kirjasto yritys=0 ok=1 ms=119",
+  "avaruusAlku": "avaruus-alku kotelo=374x828 kangas=1122x2313 hukassa=0 itsenainen=0 dpr=3",
+  "lahde": "4096x2048",
+  "ladontaKangas": "2048x1024",
+  "ladontaRivit": [
+   "2048x1024 ok=1 tapa=suodatin"
+  ],
+  "valmis": "blob 207 ms",
+  "vaiheetKaatui": [],
+  "vartijat": [
+   "ei/64",
+   "ei/64"
+  ],
+  "puuteLopussa": "ei",
+  "pisteitaLopussa": 64,
+  "pisteSarja": [
+   [
+    0,
+    64
+   ],
+   [
+    0.5,
+    64
+   ],
+   [
+    1,
+    64
+   ],
+   [
+    1.5,
+    64
+   ],
+   [
+    2,
+    64
+   ],
+   [
+    2.5,
+    64
+   ],
+   [
+    3,
+    64
+   ],
+   [
+    3.5,
+    64
+   ],
+   [
+    4,
+    64
+   ],
+   [
+    4.5,
+    64
+   ],
+   [
+    5,
+    64
+   ],
+   [
+    5.5,
+    64
+   ],
+   [
+    6,
+    64
+   ],
+   [
+    6.5,
+    64
+   ],
+   [
+    7,
+    64
+   ],
+   [
+    7.5,
+    64
+   ],
+   [
+    8,
+    64
+   ],
+   [
+    8.5,
+    64
+   ],
+   [
+    9,
+    64
+   ],
+   [
+    9.5,
+    64
+   ],
+   [
+    10,
+    64
+   ],
+   [
+    10.5,
+    64
+   ],
+   [
+    11,
+    64
+   ],
+   [
+    11.5,
+    64
+   ],
+   [
+    12,
+    64
+   ],
+   [
+    12.5,
+    64
+   ],
+   [
+    13,
+    64
+   ],
+   [
+    13.5,
+    64
+   ],
+   [
+    14,
+    64
+   ],
+   [
+    14.5,
+    64
+   ]
+  ],
+  "pisteitaEnsinHetki": 0,
+  "kirkkaus5": {
+   "keski": 5.6,
+   "sivut": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "max": 5.6
+  },
+  "kirkkaus15": {
+   "keski": 8.4,
+   "sivut": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "max": 8.4
+  },
+  "kirkkausSarja": [
+   [
+    1,
+    2,
+    2
+   ],
+   [
+    2,
+    3,
+    3
+   ],
+   [
+    5,
+    5.6,
+    5.6
+   ]
+  ],
+  "eleMs": 2237,
+  "kartta": {
+   "map": true,
+   "tyyppi": "HTMLImageElement",
+   "koko": "2048x1024",
+   "valmis": true,
+   "src": "blob:http://127.0.0.",
+   "versio": 1,
+   "vari": null,
+   "emissive": "000000"
+  },
+  "erittely": {
+   "kehykset": {
+    "alku": 2358,
+    "loppu": 2418
+   },
+   "gl": {
+    "keski": [
+     0,
+     0,
+     0,
+     255
+    ],
+    "puskuri": "1122x2484",
+    "hukassa": false
+   },
+   "kokeet": [
+    "kalvo piiloon: keski 0 max 0",
+    "materiaali needsUpdate: keski 0 max 0",
+    "sama osoite uudelleen: keski 0 max 0",
+    "kartta pois, väri punainen: keski 0 max 0",
+    "kartta takaisin: keski 0 max 0",
+    "color null → valkoinen Color: keski 68.2 max 118.3",
+    "color takaisin: keski 67.8 max 115.5",
+    "uusi materiaali (sama luokka) samalla kartalla: keski 68.6 max 117.6"
+   ]
+  },
+  "kuva": "astro-webkit-webkit-iphone-2-20260917.jpg",
+  "reliefinTarkkuus": "4k",
+  "reliefinKestoMs": 208,
+  "pinnanOsoite": "blob:http://127.0.0.1:87",
+  "kangas": {
+   "leveys": 1122,
+   "korkeus": 2484
+  },
+  "koteloMitat": {
+   "leveys": 374,
+   "korkeus": 828
+  },
+  "kontekstiHukassa": false,
+  "ilmoitus": null,
+  "diag": [
+   "avaruus-alku kotelo=374x828 kangas=1122x2313 hukassa=0 itsenainen=0 dpr=3",
+   "alku lahde=4096x2048 kangas=2048x1024 ruutu=390 kokoPallo=1",
+   "avaruus-pinta tekstuuri=1 tarkkuus=4k",
+   "avaruus-valmis alt=4.26 kotelo=374x828 tahtia=2190 kalvo=1",
+   "vaihe nimi=avaruus ok=1 ms=73",
+   "vaihe nimi=pulu ok=1 ms=1",
+   "vaihe nimi=aanet ok=1 ms=0",
+   "vaihe nimi=linssiaani ok=1 ms=0",
+   "vaihe nimi=pisteet ok=1 ms=0",
+   "kuva px=4096x2048 ms=28",
+   "ladonta koko=2048x1024 ok=1 tapa=suodatin ms=106",
+   "blob kt=3493 ms=73",
+   "valmis syy=blob osoite=blob:http:// ms=207",
+   "vartija puute=ei pisteita=64 vaiheet=0",
+   "vartija puute=ei pisteita=64 vaiheet=0"
+  ],
+  "ruutu": {
+   "inner": "390x844",
+   "dpr": 3,
+   "standalone": false,
+   "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHT"
+  },
+  "materiaalinErot": [
+   "version: 4 → 8"
+  ]
+ },
+ {
+  "selain": "webkit",
+  "kotelo": "iphone",
+  "kerta": 3,
+  "kirjasto": "kirjasto yritys=0 ok=1 ms=119",
+  "avaruusAlku": "avaruus-alku kotelo=374x828 kangas=1122x2313 hukassa=0 itsenainen=0 dpr=3",
+  "lahde": "4096x2048",
+  "ladontaKangas": "2048x1024",
+  "ladontaRivit": [
+   "2048x1024 ok=1 tapa=suodatin"
+  ],
+  "valmis": "blob 203 ms",
+  "vaiheetKaatui": [],
+  "vartijat": [
+   "ei/64",
+   "ei/64"
+  ],
+  "puuteLopussa": "ei",
+  "pisteitaLopussa": 64,
+  "pisteSarja": [
+   [
+    0,
+    64
+   ],
+   [
+    0.5,
+    64
+   ],
+   [
+    1,
+    64
+   ],
+   [
+    1.5,
+    64
+   ],
+   [
+    2,
+    64
+   ],
+   [
+    2.5,
+    64
+   ],
+   [
+    3,
+    64
+   ],
+   [
+    3.5,
+    64
+   ],
+   [
+    4,
+    64
+   ],
+   [
+    4.5,
+    64
+   ],
+   [
+    5,
+    64
+   ],
+   [
+    5.5,
+    64
+   ],
+   [
+    6,
+    64
+   ],
+   [
+    6.5,
+    64
+   ],
+   [
+    7,
+    64
+   ],
+   [
+    7.5,
+    64
+   ],
+   [
+    8,
+    64
+   ],
+   [
+    8.5,
+    64
+   ],
+   [
+    9,
+    64
+   ],
+   [
+    9.5,
+    64
+   ],
+   [
+    10,
+    64
+   ],
+   [
+    10.5,
+    64
+   ],
+   [
+    11,
+    64
+   ],
+   [
+    11.5,
+    64
+   ],
+   [
+    12,
+    64
+   ],
+   [
+    12.5,
+    64
+   ],
+   [
+    13,
+    64
+   ],
+   [
+    13.5,
+    64
+   ],
+   [
+    14,
+    64
+   ],
+   [
+    14.5,
+    64
+   ]
+  ],
+  "pisteitaEnsinHetki": 0,
+  "kirkkaus5": {
+   "keski": 90.7,
+   "sivut": [
+    99.1,
+    115.9,
+    141.5,
+    38.7
+   ],
+   "max": 141.5
+  },
+  "kirkkaus15": {
+   "keski": 99.2,
+   "sivut": [
+    83.8,
+    112.5,
+    137.4,
+    37.7
+   ],
+   "max": 137.4
+  },
+  "kirkkausSarja": [
+   [
+    1,
+    100.9,
+    129.5
+   ],
+   [
+    2,
+    98.1,
+    131.4
+   ],
+   [
+    5,
+    90.7,
+    141.5
+   ]
+  ],
+  "eleMs": 2206,
+  "kartta": {
+   "map": true,
+   "tyyppi": "HTMLImageElement",
+   "koko": "2048x1024",
+   "valmis": true,
+   "src": "blob:http://127.0.0.",
+   "versio": 1,
+   "vari": null,
+   "emissive": "000000"
+  },
+  "erittely": null,
+  "kuva": "astro-webkit-webkit-iphone-3-20260917.jpg",
+  "reliefinTarkkuus": "4k",
+  "reliefinKestoMs": 204,
+  "pinnanOsoite": "blob:http://127.0.0.1:87",
+  "kangas": {
+   "leveys": 1122,
+   "korkeus": 2484
+  },
+  "koteloMitat": {
+   "leveys": 374,
+   "korkeus": 828
+  },
+  "kontekstiHukassa": false,
+  "ilmoitus": null,
+  "diag": [
+   "avaruus-alku kotelo=374x828 kangas=1122x2313 hukassa=0 itsenainen=0 dpr=3",
+   "alku lahde=4096x2048 kangas=2048x1024 ruutu=390 kokoPallo=1",
+   "avaruus-pinta tekstuuri=1 tarkkuus=4k",
+   "avaruus-valmis alt=4.26 kotelo=374x828 tahtia=2190 kalvo=1",
+   "vaihe nimi=avaruus ok=1 ms=74",
+   "vaihe nimi=pulu ok=1 ms=1",
+   "vaihe nimi=aanet ok=1 ms=0",
+   "vaihe nimi=linssiaani ok=1 ms=0",
+   "vaihe nimi=pisteet ok=1 ms=0",
+   "kuva px=4096x2048 ms=29",
+   "ladonta koko=2048x1024 ok=1 tapa=suodatin ms=102",
+   "blob kt=3493 ms=72",
+   "valmis syy=blob osoite=blob:http:// ms=203",
+   "vartija puute=ei pisteita=64 vaiheet=0",
+   "vartija puute=ei pisteita=64 vaiheet=0"
+  ],
+  "ruutu": {
+   "inner": "390x844",
+   "dpr": 3,
+   "standalone": false,
+   "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHT"
+  },
+  "materiaalinErot": [
+   "uuid: \"8fca45de-1ffd-42a6-8db0-440d8d910e75\" → \"187418eb-5808-495a-8fd3-ba1883b0cf0a\""
+  ],
+  "virheet": [],
+  "konsoli": []
+ },
+ {
+  "selain": "chromium",
+  "kotelo": "webapp",
+  "kerta": 1,
+  "kirjasto": "kirjasto yritys=0 ok=1 ms=68",
+  "avaruusAlku": "avaruus-alku kotelo=2518x1242 kangas=2518x1242 hukassa=0 itsenainen=0 dpr=1",
+  "lahde": "8192x4096",
+  "ladontaKangas": "8192x4096",
+  "ladontaRivit": [
+   "8192x4096 ok=1 tapa=suodatin"
+  ],
+  "valmis": "blob 2541 ms",
+  "vaiheetKaatui": [],
+  "vartijat": [
+   "ei/64",
+   "ei/64"
+  ],
+  "puuteLopussa": "ei",
+  "pisteitaLopussa": 64,
+  "pisteSarja": [
+   [
+    0,
+    64
+   ],
+   [
+    0.5,
+    64
+   ],
+   [
+    1,
+    64
+   ],
+   [
+    2.5,
+    64
+   ],
+   [
+    2.8,
+    64
+   ],
+   [
+    2.9,
+    64
+   ],
+   [
+    3,
+    64
+   ],
+   [
+    3.5,
+    64
+   ],
+   [
+    4,
+    64
+   ],
+   [
+    4.5,
+    64
+   ],
+   [
+    5,
+    64
+   ],
+   [
+    5.5,
+    64
+   ],
+   [
+    6,
+    64
+   ],
+   [
+    6.5,
+    64
+   ],
+   [
+    7,
+    64
+   ],
+   [
+    7.5,
+    64
+   ],
+   [
+    8,
+    64
+   ],
+   [
+    8.5,
+    64
+   ],
+   [
+    9,
+    64
+   ],
+   [
+    9.5,
+    64
+   ],
+   [
+    10,
+    64
+   ],
+   [
+    10.5,
+    64
+   ],
+   [
+    11,
+    64
+   ],
+   [
+    11.5,
+    64
+   ],
+   [
+    12,
+    64
+   ],
+   [
+    12.5,
+    64
+   ],
+   [
+    13,
+    64
+   ],
+   [
+    13.5,
+    64
+   ],
+   [
+    14,
+    64
+   ],
+   [
+    14.5,
+    64
+   ]
+  ],
+  "pisteitaEnsinHetki": 0,
+  "kirkkaus5": {
+   "keski": 92.3,
+   "sivut": [
+    118.5,
+    106.8,
+    97.5,
+    89.6
+   ],
+   "max": 118.5
+  },
+  "kirkkaus15": {
+   "keski": 105.8,
+   "sivut": [
+    112.7,
+    92.4,
+    86.3,
+    88.9
+   ],
+   "max": 112.7
+  },
+  "kirkkausSarja": [
+   [
+    1,
+    102.6,
+    134.2
+   ],
+   [
+    2,
+    99.1,
+    128.3
+   ],
+   [
+    5,
+    92.3,
+    118.5
+   ]
+  ],
+  "eleMs": 13755,
+  "kartta": {
+   "map": true,
+   "tyyppi": "HTMLImageElement",
+   "koko": "8192x4096",
+   "valmis": true,
+   "src": "blob:http://127.0.0.",
+   "versio": 1,
+   "vari": null,
+   "emissive": "000000"
+  },
+  "erittely": null,
+  "kuva": "astro-webkit-chromium-webapp-1-20260917.jpg",
+  "reliefinTarkkuus": "8k",
+  "reliefinKestoMs": 2541,
+  "pinnanOsoite": "blob:http://127.0.0.1:87",
+  "kangas": {
+   "leveys": 2518,
+   "korkeus": 1300
+  },
+  "koteloMitat": {
+   "leveys": 2518,
+   "korkeus": 1300
+  },
+  "kontekstiHukassa": false,
+  "ilmoitus": null,
+  "diag": [
+   "avaruus-alku kotelo=2518x1242 kangas=2518x1242 hukassa=0 itsenainen=0 dpr=1",
+   "alku lahde=8192x4096 kangas=8192x4096 ruutu=2539 kokoPallo=1",
+   "avaruus-pinta tekstuuri=1 tarkkuus=8k",
+   "avaruus-valmis alt=1.54 kotelo=2518x1242 tahtia=2190 kalvo=1",
+   "vaihe nimi=avaruus ok=1 ms=48",
+   "vaihe nimi=pulu ok=1 ms=0",
+   "vaihe nimi=aanet ok=1 ms=0",
+   "vaihe nimi=linssiaani ok=1 ms=0",
+   "vaihe nimi=pisteet ok=1 ms=0",
+   "kuva px=8192x4096 ms=382",
+   "ladonta koko=8192x4096 ok=1 tapa=suodatin ms=492",
+   "blob kt=49686 ms=1664",
+   "valmis syy=blob osoite=blob:http:// ms=2541",
+   "vartija puute=ei pisteita=64 vaiheet=0",
+   "vartija puute=ei pisteita=64 vaiheet=0"
+  ],
+  "ruutu": {
+   "inner": "2539x1321",
+   "dpr": 1,
+   "standalone": false,
+   "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like "
+  }
+ },
+ {
+  "selain": "chromium",
+  "kotelo": "webapp",
+  "kerta": 2,
+  "kirjasto": "kirjasto yritys=0 ok=1 ms=68",
+  "avaruusAlku": "avaruus-alku kotelo=2518x1300 kangas=2518x1242 hukassa=0 itsenainen=0 dpr=1",
+  "lahde": "8192x4096",
+  "ladontaKangas": "8192x4096",
+  "ladontaRivit": [
+   "8192x4096 ok=1 tapa=suodatin"
+  ],
+  "valmis": "blob 2307 ms",
+  "vaiheetKaatui": [],
+  "vartijat": [
+   "ei/64",
+   "ei/64"
+  ],
+  "puuteLopussa": "ei",
+  "pisteitaLopussa": 64,
+  "pisteSarja": [
+   [
+    0,
+    64
+   ],
+   [
+    0.5,
+    64
+   ],
+   [
+    1,
+    64
+   ],
+   [
+    2.5,
+    64
+   ],
+   [
+    2.8,
+    64
+   ],
+   [
+    2.8,
+    64
+   ],
+   [
+    3,
+    64
+   ],
+   [
+    3.5,
+    64
+   ],
+   [
+    4,
+    64
+   ],
+   [
+    4.5,
+    64
+   ],
+   [
+    5,
+    64
+   ],
+   [
+    5.5,
+    64
+   ],
+   [
+    6,
+    64
+   ],
+   [
+    6.5,
+    64
+   ],
+   [
+    7,
+    64
+   ],
+   [
+    7.5,
+    64
+   ],
+   [
+    8,
+    64
+   ],
+   [
+    8.5,
+    64
+   ],
+   [
+    9,
+    64
+   ],
+   [
+    9.5,
+    64
+   ],
+   [
+    10,
+    64
+   ],
+   [
+    10.5,
+    64
+   ],
+   [
+    11,
+    64
+   ],
+   [
+    11.5,
+    64
+   ],
+   [
+    12,
+    64
+   ],
+   [
+    12.5,
+    64
+   ],
+   [
+    13,
+    64
+   ],
+   [
+    13.5,
+    64
+   ],
+   [
+    14,
+    64
+   ],
+   [
+    14.5,
+    64
+   ]
+  ],
+  "pisteitaEnsinHetki": 0,
+  "kirkkaus5": {
+   "keski": 0,
+   "sivut": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "max": 0
+  },
+  "kirkkaus15": {
+   "keski": 0,
+   "sivut": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "max": 0
+  },
+  "kirkkausSarja": [
+   [
+    1,
+    0,
+    0
+   ],
+   [
+    2,
+    0,
+    0
+   ],
+   [
+    5,
+    0,
+    0
+   ]
+  ],
+  "eleMs": 12283,
+  "kartta": {
+   "map": true,
+   "tyyppi": "HTMLImageElement",
+   "koko": "8192x4096",
+   "valmis": true,
+   "src": "blob:http://127.0.0.",
+   "versio": 1,
+   "vari": null,
+   "emissive": "000000"
+  },
+  "erittely": {
+   "kehykset": {
+    "alku": 1087,
+    "loppu": 1121
+   },
+   "gl": {
+    "keski": [
+     0,
+     0,
+     0,
+     255
+    ],
+    "puskuri": "2518x1300",
+    "hukassa": false
+   },
+   "kokeet": [
+    "kalvo piiloon: keski 0 max 0.7",
+    "materiaali needsUpdate: keski 0 max 11.9",
+    "sama osoite uudelleen: keski 0 max 23.3",
+    "kartta pois, väri punainen: keski 0 max 33.3",
+    "kartta takaisin: keski 0 max 18.5",
+    "color null → valkoinen Color: keski 64.8 max 120.8",
+    "color takaisin: keski 65.7 max 112.5",
+    "uusi materiaali (sama luokka) samalla kartalla: keski 69.2 max 104.6"
+   ]
+  },
+  "kuva": "astro-webkit-chromium-webapp-2-20260917.jpg",
+  "reliefinTarkkuus": "8k",
+  "reliefinKestoMs": 2307,
+  "pinnanOsoite": "blob:http://127.0.0.1:87",
+  "kangas": {
+   "leveys": 2518,
+   "korkeus": 1300
+  },
+  "koteloMitat": {
+   "leveys": 2518,
+   "korkeus": 1300
+  },
+  "kontekstiHukassa": false,
+  "ilmoitus": null,
+  "diag": [
+   "avaruus-alku kotelo=2518x1300 kangas=2518x1242 hukassa=0 itsenainen=0 dpr=1",
+   "alku lahde=8192x4096 kangas=8192x4096 ruutu=2539 kokoPallo=1",
+   "avaruus-pinta tekstuuri=1 tarkkuus=8k",
+   "avaruus-valmis alt=1.54 kotelo=2518x1300 tahtia=2190 kalvo=1",
+   "vaihe nimi=avaruus ok=1 ms=92",
+   "vaihe nimi=pulu ok=1 ms=0",
+   "vaihe nimi=aanet ok=1 ms=0",
+   "vaihe nimi=linssiaani ok=1 ms=0",
+   "vaihe nimi=pisteet ok=1 ms=0",
+   "kuva px=8192x4096 ms=124",
+   "ladonta koko=8192x4096 ok=1 tapa=suodatin ms=504",
+   "blob kt=49686 ms=1677",
+   "valmis syy=blob osoite=blob:http:// ms=2307",
+   "vartija puute=ei pisteita=64 vaiheet=0",
+   "vartija puute=ei pisteita=64 vaiheet=0"
+  ],
+  "ruutu": {
+   "inner": "2539x1321",
+   "dpr": 1,
+   "standalone": false,
+   "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like "
+  },
+  "materiaalinErot": [
+   "version: 4 → 8"
+  ]
+ },
+ {
+  "selain": "chromium",
+  "kotelo": "webapp",
+  "kerta": 3,
+  "kirjasto": "kirjasto yritys=0 ok=1 ms=68",
+  "avaruusAlku": "avaruus-alku kotelo=2518x1300 kangas=2518x1242 hukassa=0 itsenainen=0 dpr=1",
+  "lahde": "8192x4096",
+  "ladontaKangas": "8192x4096",
+  "ladontaRivit": [
+   "8192x4096 ok=1 tapa=suodatin"
+  ],
+  "valmis": "blob 2301 ms",
+  "vaiheetKaatui": [],
+  "vartijat": [
+   "ei/64",
+   "ei/64"
+  ],
+  "puuteLopussa": "ei",
+  "pisteitaLopussa": 64,
+  "pisteSarja": [
+   [
+    0,
+    64
+   ],
+   [
+    0.5,
+    64
+   ],
+   [
+    1,
+    64
+   ],
+   [
+    2.6,
+    64
+   ],
+   [
+    2.9,
+    64
+   ],
+   [
+    3,
+    64
+   ],
+   [
+    3,
+    64
+   ],
+   [
+    3.5,
+    64
+   ],
+   [
+    4,
+    64
+   ],
+   [
+    4.5,
+    64
+   ],
+   [
+    5,
+    64
+   ],
+   [
+    5.5,
+    64
+   ],
+   [
+    6,
+    64
+   ],
+   [
+    6.5,
+    64
+   ],
+   [
+    7,
+    64
+   ],
+   [
+    7.5,
+    64
+   ],
+   [
+    8,
+    64
+   ],
+   [
+    8.5,
+    64
+   ],
+   [
+    9,
+    64
+   ],
+   [
+    9.5,
+    64
+   ],
+   [
+    10,
+    64
+   ],
+   [
+    10.5,
+    64
+   ],
+   [
+    11,
+    64
+   ],
+   [
+    11.5,
+    64
+   ],
+   [
+    12,
+    64
+   ],
+   [
+    12.5,
+    64
+   ],
+   [
+    13,
+    64
+   ],
+   [
+    13.5,
+    64
+   ],
+   [
+    14,
+    64
+   ],
+   [
+    14.5,
+    64
+   ]
+  ],
+  "pisteitaEnsinHetki": 0,
+  "kirkkaus5": {
+   "keski": 92.4,
+   "sivut": [
+    118.4,
+    106.8,
+    96.8,
+    89.4
+   ],
+   "max": 118.4
+  },
+  "kirkkaus15": {
+   "keski": 106.3,
+   "sivut": [
+    112.8,
+    92.2,
+    86.4,
+    89.1
+   ],
+   "max": 112.8
+  },
+  "kirkkausSarja": [
+   [
+    1,
+    101.8,
+    134.5
+   ],
+   [
+    2,
+    98.4,
+    123.6
+   ],
+   [
+    5,
+    92.4,
+    118.4
+   ]
+  ],
+  "eleMs": 12578,
+  "kartta": {
+   "map": true,
+   "tyyppi": "HTMLImageElement",
+   "koko": "8192x4096",
+   "valmis": true,
+   "src": "blob:http://127.0.0.",
+   "versio": 1,
+   "vari": null,
+   "emissive": "000000"
+  },
+  "erittely": null,
+  "kuva": "astro-webkit-chromium-webapp-3-20260917.jpg",
+  "reliefinTarkkuus": "8k",
+  "reliefinKestoMs": 2301,
+  "pinnanOsoite": "blob:http://127.0.0.1:87",
+  "kangas": {
+   "leveys": 2518,
+   "korkeus": 1300
+  },
+  "koteloMitat": {
+   "leveys": 2518,
+   "korkeus": 1300
+  },
+  "kontekstiHukassa": false,
+  "ilmoitus": null,
+  "diag": [
+   "avaruus-alku kotelo=2518x1300 kangas=2518x1242 hukassa=0 itsenainen=0 dpr=1",
+   "alku lahde=8192x4096 kangas=8192x4096 ruutu=2539 kokoPallo=1",
+   "avaruus-pinta tekstuuri=1 tarkkuus=8k",
+   "avaruus-valmis alt=1.54 kotelo=2518x1300 tahtia=2190 kalvo=1",
+   "vaihe nimi=avaruus ok=1 ms=95",
+   "vaihe nimi=pulu ok=1 ms=0",
+   "vaihe nimi=aanet ok=1 ms=0",
+   "vaihe nimi=linssiaani ok=1 ms=0",
+   "vaihe nimi=pisteet ok=1 ms=0",
+   "kuva px=8192x4096 ms=123",
+   "ladonta koko=8192x4096 ok=1 tapa=suodatin ms=512",
+   "blob kt=49686 ms=1664",
+   "valmis syy=blob osoite=blob:http:// ms=2301",
+   "vartija puute=ei pisteita=64 vaiheet=0",
+   "vartija puute=ei pisteita=64 vaiheet=0"
+  ],
+  "ruutu": {
+   "inner": "2539x1321",
+   "dpr": 1,
+   "standalone": false,
+   "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like "
+  },
+  "materiaalinErot": [
+   "uuid: \"879925bf-9923-465c-9129-f360689178b5\" → \"843d696d-3331-4816-b1c4-73e73a58df86\""
+  ],
+  "virheet": [],
+  "konsoli": [
+   "error: Failed to load resource: net::ERR_FAILED",
+   "warning: [.WebGL-0x10c00503e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+   "warning: [.WebGL-0x10c00503e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+   "warning: [.WebGL-0x10c00503e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+   "warning: [.WebGL-0x10c00503e00]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
+   "error: Failed to load resource: net::ERR_FAILED",
+   "warning: Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multip",
+   "warning: Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multip",
+   "warning: Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multip"
+  ]
+ },
+ {
+  "selain": "chromium",
+  "kotelo": "iphone",
+  "kerta": 1,
+  "kirjasto": "kirjasto yritys=0 ok=1 ms=65",
+  "avaruusAlku": "avaruus-alku kotelo=374x771 kangas=1122x2313 hukassa=0 itsenainen=0 dpr=3",
+  "lahde": "4096x2048",
+  "ladontaKangas": "2048x1024",
+  "ladontaRivit": [
+   "2048x1024 ok=1 tapa=suodatin"
+  ],
+  "valmis": "blob 1459 ms",
+  "vaiheetKaatui": [],
+  "vartijat": [
+   "ei/64",
+   "ei/64"
+  ],
+  "puuteLopussa": "ei",
+  "pisteitaLopussa": 64,
+  "pisteSarja": [
+   [
+    0,
+    64
+   ],
+   [
+    0.5,
+    64
+   ],
+   [
+    1,
+    64
+   ],
+   [
+    1.5,
+    64
+   ],
+   [
+    2,
+    64
+   ],
+   [
+    2.5,
+    64
+   ],
+   [
+    3,
+    64
+   ],
+   [
+    3.5,
+    64
+   ],
+   [
+    4,
+    64
+   ],
+   [
+    4.5,
+    64
+   ],
+   [
+    5,
+    64
+   ],
+   [
+    5.5,
+    64
+   ],
+   [
+    6,
+    64
+   ],
+   [
+    6.5,
+    64
+   ],
+   [
+    7,
+    64
+   ],
+   [
+    7.5,
+    64
+   ],
+   [
+    8,
+    64
+   ],
+   [
+    8.5,
+    64
+   ],
+   [
+    9,
+    64
+   ],
+   [
+    9.5,
+    64
+   ],
+   [
+    10,
+    64
+   ],
+   [
+    10.5,
+    64
+   ],
+   [
+    11,
+    64
+   ],
+   [
+    11.5,
+    64
+   ],
+   [
+    12,
+    64
+   ],
+   [
+    12.5,
+    64
+   ],
+   [
+    13,
+    64
+   ],
+   [
+    13.5,
+    64
+   ],
+   [
+    14,
+    64
+   ],
+   [
+    14.5,
+    64
+   ]
+  ],
+  "pisteitaEnsinHetki": 0,
+  "kirkkaus5": {
+   "keski": 90,
+   "sivut": [
+    85.9,
+    116.5,
+    141.5,
+    139.4
+   ],
+   "max": 141.5
+  },
+  "kirkkaus15": {
+   "keski": 100.1,
+   "sivut": [
+    82.6,
+    111.8,
+    136.5,
+    134.8
+   ],
+   "max": 136.5
+  },
+  "kirkkausSarja": [
+   [
+    1,
+    99.4,
+    142.7
+   ],
+   [
+    2,
+    97,
+    145.4
+   ],
+   [
+    5,
+    90,
+    141.5
+   ]
+  ],
+  "eleMs": 10290,
+  "kartta": {
+   "map": true,
+   "tyyppi": "HTMLImageElement",
+   "koko": "2048x1024",
+   "valmis": true,
+   "src": "blob:http://127.0.0.",
+   "versio": 1,
+   "vari": null,
+   "emissive": "000000"
+  },
+  "erittely": null,
+  "kuva": "astro-webkit-chromium-iphone-1-20260917.jpg",
+  "reliefinTarkkuus": "4k",
+  "reliefinKestoMs": 1459,
+  "pinnanOsoite": "blob:http://127.0.0.1:87",
+  "kangas": {
+   "leveys": 1122,
+   "korkeus": 2484
+  },
+  "koteloMitat": {
+   "leveys": 374,
+   "korkeus": 828
+  },
+  "kontekstiHukassa": false,
+  "ilmoitus": null,
+  "diag": [
+   "avaruus-alku kotelo=374x771 kangas=1122x2313 hukassa=0 itsenainen=0 dpr=3",
+   "alku lahde=4096x2048 kangas=2048x1024 ruutu=390 kokoPallo=1",
+   "avaruus-pinta tekstuuri=1 tarkkuus=4k",
+   "avaruus-valmis alt=3.91 kotelo=374x771 tahtia=2190 kalvo=1",
+   "vaihe nimi=avaruus ok=1 ms=47",
+   "vaihe nimi=pulu ok=1 ms=0",
+   "vaihe nimi=aanet ok=1 ms=0",
+   "vaihe nimi=linssiaani ok=1 ms=0",
+   "vaihe nimi=pisteet ok=1 ms=0",
+   "kuva px=4096x2048 ms=198",
+   "ladonta koko=2048x1024 ok=1 tapa=suodatin ms=146",
+   "blob kt=3766 ms=1114",
+   "valmis syy=blob osoite=blob:http:// ms=1459",
+   "vartija puute=ei pisteita=64 vaiheet=0",
+   "vartija puute=ei pisteita=64 vaiheet=0"
+  ],
+  "ruutu": {
+   "inner": "390x844",
+   "dpr": 3,
+   "standalone": false,
+   "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHT"
+  }
+ },
+ {
+  "selain": "chromium",
+  "kotelo": "iphone",
+  "kerta": 2,
+  "kirjasto": "kirjasto yritys=0 ok=1 ms=65",
+  "avaruusAlku": "avaruus-alku kotelo=374x828 kangas=1122x2313 hukassa=0 itsenainen=0 dpr=3",
+  "lahde": "4096x2048",
+  "ladontaKangas": "2048x1024",
+  "ladontaRivit": [
+   "2048x1024 ok=1 tapa=suodatin"
+  ],
+  "valmis": "blob 1377 ms",
+  "vaiheetKaatui": [],
+  "vartijat": [
+   "ei/64",
+   "ei/64"
+  ],
+  "puuteLopussa": "ei",
+  "pisteitaLopussa": 64,
+  "pisteSarja": [
+   [
+    0,
+    64
+   ],
+   [
+    0.5,
+    64
+   ],
+   [
+    1,
+    64
+   ],
+   [
+    1.5,
+    64
+   ],
+   [
+    2,
+    64
+   ],
+   [
+    2.5,
+    64
+   ],
+   [
+    3,
+    64
+   ],
+   [
+    3.5,
+    64
+   ],
+   [
+    4,
+    64
+   ],
+   [
+    4.5,
+    64
+   ],
+   [
+    5,
+    64
+   ],
+   [
+    5.5,
+    64
+   ],
+   [
+    6,
+    64
+   ],
+   [
+    6.5,
+    64
+   ],
+   [
+    7,
+    64
+   ],
+   [
+    7.5,
+    64
+   ],
+   [
+    8,
+    64
+   ],
+   [
+    8.5,
+    64
+   ],
+   [
+    9,
+    64
+   ],
+   [
+    9.5,
+    64
+   ],
+   [
+    10,
+    64
+   ],
+   [
+    10.5,
+    64
+   ],
+   [
+    11,
+    64
+   ],
+   [
+    11.5,
+    64
+   ],
+   [
+    12,
+    64
+   ],
+   [
+    12.5,
+    64
+   ],
+   [
+    13,
+    64
+   ],
+   [
+    13.5,
+    64
+   ],
+   [
+    14,
+    64
+   ],
+   [
+    14.5,
+    64
+   ]
+  ],
+  "pisteitaEnsinHetki": 0,
+  "kirkkaus5": {
+   "keski": 0,
+   "sivut": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "max": 0
+  },
+  "kirkkaus15": {
+   "keski": 0,
+   "sivut": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "max": 0
+  },
+  "kirkkausSarja": [
+   [
+    1,
+    0,
+    0
+   ],
+   [
+    2,
+    0,
+    0
+   ],
+   [
+    5,
+    0,
+    0
+   ]
+  ],
+  "eleMs": 11238,
+  "kartta": {
+   "map": true,
+   "tyyppi": "HTMLImageElement",
+   "koko": "2048x1024",
+   "valmis": true,
+   "src": "blob:http://127.0.0.",
+   "versio": 1,
+   "vari": null,
+   "emissive": "000000"
+  },
+  "erittely": {
+   "kehykset": {
+    "alku": 1387,
+    "loppu": 1427
+   },
+   "gl": {
+    "keski": [
+     0,
+     0,
+     0,
+     255
+    ],
+    "puskuri": "1122x2484",
+    "hukassa": false
+   },
+   "kokeet": [
+    "kalvo piiloon: keski 0 max 0",
+    "materiaali needsUpdate: keski 0 max 0",
+    "sama osoite uudelleen: keski 0 max 0",
+    "kartta pois, väri punainen: keski 0 max 0.4",
+    "kartta takaisin: keski 0 max 8.2",
+    "color null → valkoinen Color: keski 67.8 max 115.7",
+    "color takaisin: keski 68.3 max 114",
+    "uusi materiaali (sama luokka) samalla kartalla: keski 71.6 max 116.6"
+   ]
+  },
+  "kuva": "astro-webkit-chromium-iphone-2-20260917.jpg",
+  "reliefinTarkkuus": "4k",
+  "reliefinKestoMs": 1377,
+  "pinnanOsoite": "blob:http://127.0.0.1:87",
+  "kangas": {
+   "leveys": 1122,
+   "korkeus": 2484
+  },
+  "koteloMitat": {
+   "leveys": 374,
+   "korkeus": 828
+  },
+  "kontekstiHukassa": false,
+  "ilmoitus": null,
+  "diag": [
+   "avaruus-alku kotelo=374x828 kangas=1122x2313 hukassa=0 itsenainen=0 dpr=3",
+   "alku lahde=4096x2048 kangas=2048x1024 ruutu=390 kokoPallo=1",
+   "avaruus-pinta tekstuuri=1 tarkkuus=4k",
+   "avaruus-valmis alt=4.26 kotelo=374x828 tahtia=2190 kalvo=1",
+   "vaihe nimi=avaruus ok=1 ms=90",
+   "vaihe nimi=pulu ok=1 ms=0",
+   "vaihe nimi=aanet ok=1 ms=0",
+   "vaihe nimi=linssiaani ok=1 ms=0",
+   "vaihe nimi=pisteet ok=1 ms=0",
+   "kuva px=4096x2048 ms=101",
+   "ladonta koko=2048x1024 ok=1 tapa=suodatin ms=143",
+   "blob kt=3766 ms=1132",
+   "valmis syy=blob osoite=blob:http:// ms=1377",
+   "vartija puute=ei pisteita=64 vaiheet=0",
+   "vartija puute=ei pisteita=64 vaiheet=0"
+  ],
+  "ruutu": {
+   "inner": "390x844",
+   "dpr": 3,
+   "standalone": false,
+   "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHT"
+  },
+  "materiaalinErot": [
+   "version: 4 → 8"
+  ]
+ },
+ {
+  "selain": "chromium",
+  "kotelo": "iphone",
+  "kerta": 3,
+  "kirjasto": "kirjasto yritys=0 ok=1 ms=65",
+  "avaruusAlku": "avaruus-alku kotelo=374x828 kangas=1122x2313 hukassa=0 itsenainen=0 dpr=3",
+  "lahde": "4096x2048",
+  "ladontaKangas": "2048x1024",
+  "ladontaRivit": [
+   "2048x1024 ok=1 tapa=suodatin"
+  ],
+  "valmis": "blob 1392 ms",
+  "vaiheetKaatui": [],
+  "vartijat": [
+   "ei/64",
+   "ei/64"
+  ],
+  "puuteLopussa": "ei",
+  "pisteitaLopussa": 64,
+  "pisteSarja": [
+   [
+    0,
+    64
+   ],
+   [
+    0.5,
+    64
+   ],
+   [
+    1,
+    64
+   ],
+   [
+    1.5,
+    64
+   ],
+   [
+    2,
+    64
+   ],
+   [
+    2.5,
+    64
+   ],
+   [
+    3,
+    64
+   ],
+   [
+    3.5,
+    64
+   ],
+   [
+    4,
+    64
+   ],
+   [
+    4.5,
+    64
+   ],
+   [
+    5,
+    64
+   ],
+   [
+    5.5,
+    64
+   ],
+   [
+    6,
+    64
+   ],
+   [
+    6.5,
+    64
+   ],
+   [
+    7,
+    64
+   ],
+   [
+    7.5,
+    64
+   ],
+   [
+    8,
+    64
+   ],
+   [
+    8.5,
+    64
+   ],
+   [
+    9,
+    64
+   ],
+   [
+    9.5,
+    64
+   ],
+   [
+    10,
+    64
+   ],
+   [
+    10.5,
+    64
+   ],
+   [
+    11,
+    64
+   ],
+   [
+    11.5,
+    64
+   ],
+   [
+    12,
+    64
+   ],
+   [
+    12.5,
+    64
+   ],
+   [
+    13,
+    64
+   ],
+   [
+    13.5,
+    64
+   ],
+   [
+    14,
+    64
+   ],
+   [
+    14.5,
+    64
+   ]
+  ],
+  "pisteitaEnsinHetki": 0,
+  "kirkkaus5": {
+   "keski": 89.9,
+   "sivut": [
+    85.9,
+    116.5,
+    141.5,
+    38.8
+   ],
+   "max": 141.5
+  },
+  "kirkkaus15": {
+   "keski": 100.6,
+   "sivut": [
+    82.5,
+    111.4,
+    136.2,
+    37.5
+   ],
+   "max": 136.2
+  },
+  "kirkkausSarja": [
+   [
+    1,
+    99,
+    128.5
+   ],
+   [
+    2,
+    95.9,
+    145.5
+   ],
+   [
+    5,
+    89.9,
+    141.5
+   ]
+  ],
+  "eleMs": 11218,
+  "kartta": {
+   "map": true,
+   "tyyppi": "HTMLImageElement",
+   "koko": "2048x1024",
+   "valmis": true,
+   "src": "blob:http://127.0.0.",
+   "versio": 1,
+   "vari": null,
+   "emissive": "000000"
+  },
+  "erittely": null,
+  "kuva": "astro-webkit-chromium-iphone-3-20260917.jpg",
+  "reliefinTarkkuus": "4k",
+  "reliefinKestoMs": 1392,
+  "pinnanOsoite": "blob:http://127.0.0.1:87",
+  "kangas": {
+   "leveys": 1122,
+   "korkeus": 2484
+  },
+  "koteloMitat": {
+   "leveys": 374,
+   "korkeus": 828
+  },
+  "kontekstiHukassa": false,
+  "ilmoitus": null,
+  "diag": [
+   "avaruus-alku kotelo=374x828 kangas=1122x2313 hukassa=0 itsenainen=0 dpr=3",
+   "alku lahde=4096x2048 kangas=2048x1024 ruutu=390 kokoPallo=1",
+   "avaruus-pinta tekstuuri=1 tarkkuus=4k",
+   "avaruus-valmis alt=4.26 kotelo=374x828 tahtia=2190 kalvo=1",
+   "vaihe nimi=avaruus ok=1 ms=98",
+   "vaihe nimi=pulu ok=1 ms=0",
+   "vaihe nimi=aanet ok=1 ms=0",
+   "vaihe nimi=linssiaani ok=1 ms=0",
+   "vaihe nimi=pisteet ok=1 ms=0",
+   "kuva px=4096x2048 ms=109",
+   "ladonta koko=2048x1024 ok=1 tapa=suodatin ms=153",
+   "blob kt=3766 ms=1129",
+   "valmis syy=blob osoite=blob:http:// ms=1392",
+   "vartija puute=ei pisteita=64 vaiheet=0",
+   "vartija puute=ei pisteita=64 vaiheet=0"
+  ],
+  "ruutu": {
+   "inner": "390x844",
+   "dpr": 3,
+   "standalone": false,
+   "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHT"
+  },
+  "materiaalinErot": [
+   "uuid: \"500bec22-b94b-46d8-a797-f6dc377839e9\" → \"8034b20d-cc8b-471b-9470-2f4dad9a0fd0\""
+  ],
+  "virheet": [],
+  "konsoli": [
+   "error: Failed to load resource: net::ERR_FAILED",
+   "error: Failed to load resource: net::ERR_FAILED",
+   "warning: Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multip",
+   "warning: Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multip",
+   "warning: Canvas2D: Multiple readback operations using getImageData are faster with the willReadFrequently attribute set to true. See: https://html.spec.whatwg.org/multip"
+  ]
+ }
+]

@@ -33,8 +33,23 @@ export const LINSSI = {
   tunnus: 'maatiedot',
   jarjestys: 95,
   kerros: false,
+  /*
+   * PALLOLLA (karttapallo.md luku 10, aalto 1C): tila piirtää maat
+   * pallon pinnalle js/vertailu.js:n tahdistaMaatiedot-funktiossa laudan
+   * linssiapurilla (polygonit + merkit), joten linssikarttaa ei tarvita.
+   * Kahva on tyhjä — purku tapahtuu tilan sammuessa samassa paikassa.
+   */
+  pallolle() { return { pura() {} }; },
 
   nimi: 'Maiden tiedot',
+  /*
+   * KESKENERÄINEN (omistaja 20.9.2026 klo 15.10: *"merkitse vertailulinssi,
+   * maidentiedot, sekä vesistölinssi harmaalla ja siirrä omalle rivilleen
+   * ja pienennä niiden ikonit. ne ovat vielä liian keskeneräisiä"*).
+   * Laukku latoo keskeneräiset omalle riville ruudukon loppuun harmaana
+   * ja pienempänä (js/ui.js rakennaLinssivalikko); linssi toimii yhä.
+   */
+  kesken: true,
   lyhyt: 'Napauta kartalta mitä tahansa maata ja lue sen oma lehti — ei tarvitse matkustaa perille.',
   // Avoin kirja ja i-kirjain: hakuteos, ei karttakerros.
   ikoni: '<path d="M4 6.2c2.6-1.1 5.2-1.1 8 0v12c-2.8-1.1-5.4-1.1-8 0Z"/>'

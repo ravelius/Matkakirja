@@ -397,12 +397,24 @@ pakettien otsikkokommentit).
 | --- | --- | --- |
 | radio aporee ::: maps — kenttä-äänitykset (äänimaisemat, "Kuuntele kieltä") | Äänittäjät kohteittain, jakelu archive.org | PD, CC BY, CC BY-SA, CC BY-NC kohteittain |
 | Freesound — äänimaisemat ja tehosteet | Äänittäjät kohteittain (mm. LoafDV, brktkrgll, Hoscalegeek, AardsReal) | CC0, CC BY, CC BY-NC kohteittain |
+| Freesound — Livian ääniefektit ja linssien nauhoitetut äänimaisemat (Ihmisen matka) | Äänittäjät kohteittain; tekijä, lisenssi ja Freesoundin id manifestissa äänen vieressä (aanet/tehosteet/pulu/, aanet/tehosteet/ihmisen-matka/) | CC0 ja CC BY kohteittain |
 | Lyhytaaltoäänitteet — maailmanradion viritysäänet | archive.orgin arkistot, mm. samnewton94 | Public Domain Mark 1.0, CC0 |
 | "Pocket camera start and shut down" — zoomausääni | stephan, pdsounds.org Wikimedia Commonsin kautta | Public domain |
 | Musiikkinäytteet kulttuurinostoissa | Wikimedia Commons, archive.org (vain lisenssiosoitteella merkityt) | Kohteittain |
 | Suorat radiolähetykset | Asemaluettelo Radio Browserista (radio-browser.info); virrat asemien omia | Asemaluettelo vapaasti käytettävä (Radio Browser); lähetykset asemien omilla ehdoilla — peli ei välitä niitä edelleen |
 | Peliäänet ja avaustekstin lukuääni (`efekti-*.mp3`, `intro-puhe.mp3`) | Tuotettu ElevenLabsilla | Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy (ElevenLabsin käyttöehdot 4(c): tuotos jää tekijälle) |
 | Syntetisoidut tehosteet ja ambienssi (Web Audio) | Sami Reivinen / VVI | Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy |
+
+### Ohjelmakirjastot
+
+Valmiit kirjastot ladataan ämpärin `vendor/`-polusta vasta tarvittaessa
+(Raamattu 5.9.2026: VALMIIT KIRJASTOT); lisenssiteksti kulkee kirjaston
+rinnalla samassa kansiossa, yhden tiedoston versio jää ilman niitä.
+
+| Kirjasto | Tekijä | Lisenssi |
+| --- | --- | --- |
+| StPageFlip 2.0.7 (`page-flip`) — lehden sivunkääntö | Nodlik (Oleg Litovski), github.com/Nodlik/StPageFlip | MIT |
+| Globe.gl 2.46.2 (three.js mukana) — karttapallo ja pallolauta | Vasco Asturiano (vasturiano), github.com/vasturiano/globe.gl | MIT |
 
 ### Tekstit
 
@@ -412,6 +424,19 @@ pakettien otsikkokommentit).
 | Project Gutenberg — aikalaislainaukset | Alkuperäisteosten kirjoittajat; digitointi Project Gutenberg | Public domain (teokset) |
 | Internet Archive ja Wikisource — lainaukset, joita Gutenbergissa ei ole | Alkuperäisteosten kirjoittajat | Public domain (teokset) |
 | Pelin omat tekstit: tarina, päiväkirja, kysymykset, väittämät, tapahtumat, pulmat, tiivistelmät | Sami Reivinen / VVI | Copyright © 2026 Visuaaliviestinnän Instituutti Tampere Oy |
+
+### Avoimen lähdekoodin kirjastot
+
+Ladataan pelin ämpärin `vendor/`-polusta (ei reposta eikä CDN:stä);
+lisenssiteksti on ämpärissä kirjaston rinnalla (`<kirjasto>.LICENSE.txt`).
+
+| Kirjasto | Tekijä | Lisenssi |
+| --- | --- | --- |
+| Vivus 0.4.6 — musteviiva piirtyy (SVG-polkujen piirtoanimaatio) | maxwellito | MIT |
+| Rough.js 4.6.6 — käsin piirretyn näköiset kehykset ja viivat | Preet Shihn | MIT |
+| rough-notation 0.5.1 — kynän alleviivaus ja ympyröinti tekstiin | Preet Shihn | MIT |
+| d3-geo 3.1.1 ja d3-geo-projection 4.0.0 — karttaprojektiot, isokaaret ja etäisyydet (`js/geo.js`) | Mike Bostock | ISC |
+| topojson-client 3.1.0 — TopoJSON-aineiston purku kartalle | Mike Bostock | ISC |
 
 **Lisenssit tarkistettu 27.8.2026.** Aiemmin neljä riviä oli merkitty
 epäselväksi: V-Dem / Our World in Data, Yale Bright Star Catalogue, suorat

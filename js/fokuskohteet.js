@@ -92,24 +92,32 @@
  */
 import { el, maare } from './mapart.js';
 import {
-  NOSTOSYM_LUOKAT, NOSTOSYM_MINI_R, NOSTOSYM_TYYPIT,
+  NOSTOSYM_LUOKAT, NOSTOSYM_MINI_R, NOSTOSYM_NIMIO_KYLJET, NOSTOSYM_TYYPIT,
   nostosymAsetaPorras, nostosymNimioLaatikko, nostosymVirkistaRasterit,
   piirraNostosymKartalle, piirraNostosymboli,
 } from './fokusnosto-symbolit.js';
 // Sähketehtävän sisältöhakemisto tarvitsee maan kohdelistan (ks.
 // asetaKohdehakemisto-kutsu KOHDE_MAAT-taulun alla).
-import { asetaKohdehakemisto } from './fokusvirta.js';
-import { FOKUS_LISANIMET } from './packs/fokus-grc.js';
+import { asetaKohdeavaus, asetaKohdehakemisto } from './fokusvirta.js';
+import { FOKUS_LISANIMET, FOKUS_POHJAT } from './packs/fokus-grc.js';
 // Laattoihin poltetut maastonimet (vuoret, järvet, joet): sama nimi
-// vain kerran kartalle, ks. maastonimiLahella.
+// vain kerran kartalle, ks. maastonimenPari ja maastoParit.
 import { MAAILMANKARTAN_NIMET } from './packs/maailmankartta-nimet.js';
 import {
-  LAUDAN_YMPARYS, PARIN_ETAISYYS, asetaKohdenimet, karttanimetLatovat, normalisoiNimi,
+  LAUDAN_YMPARYS, PARIN_ETAISYYS, asetaKohdenimet, asetaMaastonOmistajat,
+  karttanimetLatovat, normalisoiNimi,
 } from './karttanimet.js';
 import { karttavaloKarkisymboli, piirraKarttavalo } from './karttavalot.js';
-import { asetaKuva } from './media.js';
-import { html, jaaKappaleiksi, nielaiseSulkevaNapautus, polloNimilappu } from './ui-apurit.js';
+import { asetaKuva, assetOsoite } from './media.js';
+import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
+import {
+  html, jaaKappaleiksi, kuunteleSulkevaNapautus, linssiEstaa, NAPAUTUKSEN_KESTO_MS,
+  arvonimenPaikkaMaalle, nielaiseSulkevaNapautus, polloNimilappu, RAAHAUKSEN_KYNNYS,
+  suurennoksenMitat, lehtipalstaKotelo,
+} from './ui-apurit.js';
+import { nostokuvaAloita, nostokuvaKortissa, nostokuvaTurvaAlue } from './nostokuva.js';
 import { piirraReaktiot } from './reaktiot.js';
+import { lisaaLukijanappi } from './lukija.js';
 import { valokuvaSuurennos, valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { FOKUSKOHTEET_AFG } from './packs/fokuskohteet-afg.js';
 import { FOKUSKOHTEET_BGR } from './packs/fokuskohteet-bgr.js';
@@ -118,6 +126,43 @@ import { FOKUSKOHTEET_CHN } from './packs/fokuskohteet-chn.js';
 import { FOKUSKOHTEET_DEU } from './packs/fokuskohteet-deu.js';
 import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
 import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
+import { NAKYVAT_KAUPUNGIT_FRA } from './packs/nakyvat-kaupungit-fra.js';
+import { HAHMOTELMA_FRA } from './packs/hahmotelma-fra.js';
+import { HAHMOTELMA_BEL } from './packs/hahmotelma-bel.js';
+import { HAHMOTELMA_DEU } from './packs/hahmotelma-deu.js';
+import { HAHMOTELMA_PRT } from './packs/hahmotelma-prt.js';
+import { HAHMOTELMA_GRC } from './packs/hahmotelma-grc.js';
+import { HAHMOTELMA_AUT } from './packs/hahmotelma-aut.js';
+import { HAHMOTELMA_NLD } from './packs/hahmotelma-nld.js';
+import { HAHMOTELMA_IRL } from './packs/hahmotelma-irl.js';
+import { HAHMOTELMA_HRV } from './packs/hahmotelma-hrv.js';
+import { HAHMOTELMA_BGR } from './packs/hahmotelma-bgr.js';
+import { HAHMOTELMA_POL } from './packs/hahmotelma-pol.js';
+import { HAHMOTELMA_CZE } from './packs/hahmotelma-cze.js';
+import { HAHMOTELMA_SWE } from './packs/hahmotelma-swe.js';
+import { HAHMOTELMA_DNK } from './packs/hahmotelma-dnk.js';
+import { HAHMOTELMA_SVK } from './packs/hahmotelma-svk.js';
+import { HAHMOTELMA_LUX } from './packs/hahmotelma-lux.js';
+import { HAHMOTELMA_CYP } from './packs/hahmotelma-cyp.js';
+import { HAHMOTELMA_MLT } from './packs/hahmotelma-mlt.js';
+import { HAHMOTELMA_HUN } from './packs/hahmotelma-hun.js';
+import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
+import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
+import { HAHMOTELMA_FIN } from './packs/hahmotelma-fin.js';
+import { HAHMOTELMA_ROU } from './packs/hahmotelma-rou.js';
+import { HAHMOTELMA_SVN } from './packs/hahmotelma-svn.js';
+import { HAHMOTELMA_EST } from './packs/hahmotelma-est.js';
+import { HAHMOTELMA_LTU } from './packs/hahmotelma-ltu.js';
+import { HAHMOTELMA_LVA } from './packs/hahmotelma-lva.js';
+import { HAHMOTELMA_TUR } from './packs/hahmotelma-tur.js';
+import { HAHMOTELMA_GBR } from './packs/hahmotelma-gbr.js';
+import { HAHMOTELMA_NOR } from './packs/hahmotelma-nor.js';
+import { HAHMOTELMA_ISL } from './packs/hahmotelma-isl.js';
+import { HAHMOTELMA_RUS } from './packs/hahmotelma-rus.js';
+import { HAHMOTELMA_UKR } from './packs/hahmotelma-ukr.js';
+import { HAHMOTELMA_CHE } from './packs/hahmotelma-che.js';
+import { HAHMOTELMA_BIH } from './packs/hahmotelma-bih.js';
+import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
 import { FOKUSKOHTEET_HRV } from './packs/fokuskohteet-hrv.js';
@@ -134,14 +179,31 @@ import { FOKUSKOHTEET_TUR } from './packs/fokuskohteet-tur.js';
 import { FOKUSKOHTEET_ZWE } from './packs/fokuskohteet-zwe.js';
 import { FOKUSKOHTEET_GRC } from './packs/fokuskohteet-grc.js';
 import { MAASTOKOHTEET } from './packs/maastokohteet.js';
+/*
+ * KAUPUNKILEHDEN KOHDEKARTAT. Tuodaan tänne yhtä kysymystä varten:
+ * onko nostolla oma piste kaupunkilehden kartalla (ks.
+ * KAUPUNGIN KOHDALLA OLEVAT NOSTOT alempana). Taulu on laudan dataa
+ * eikä käyttöliittymää, ja niputuksessa se on jo ladattu
+ * (tools/build-standalone.mjs: js/packs/maakartat.js on listan
+ * alussa, tämä moduuli lopussa), joten kehää ei synny.
+ */
+import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import {
   niputaFokusmerkit, nippuAsettelunVersio, nippuAvaaKaupunki, nippuLaatanEtaisyys,
+  nippuLaattaEsteet,
 } from './fokusniput.js';
-import { ryhmaKuori, ryhmitaKohteet } from './fokusryhmat.js';
-import { nostoOnPoltettu } from './laattapyramidi.js';
-import { nostoladontaTiiviste } from './nostoladonta.js';
+import { laatoissaOnNostoja, nostoOnPoltettu } from './laattapyramidi.js';
+import { elaintakyKarttarivit } from './elaintaky-rivit.js';
+import {
+  NOSTOLADONTA_S, nostoladontaKattoPorras, nostoladontaSkaala, nostoladontaTiiviste,
+  onKaupunkipiste,
+} from './nostoladonta.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
+import { asetaAkustiikka } from './tehosteketju.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
+import { KUVASARJA_PYYHKAISY_PX, piirraKuvasarja } from './kuvasarja.js';
+import { lisaaHavainnekuvaMerkki } from './havainnekuva.js';
 
 /*
  * Maakohtaiset kohdelistat ISO-tunnuksella. Sama tunnus kuin
@@ -153,8 +215,14 @@ import { sfx } from './sound.js';
  * täsmälleen yksi rivi, kuten yllä luvattiin. Pohja BGR.webp ja BGR.json
  * ovat ämpärissä (tarkistettu 25.8.2026), joten merkit saavat lehden,
  * jonka päälle asettua.
+ *
+ * VIENTILISTALLA 6.9.2026 (kattavuustyökalu). Taulu on maan kohteiden
+ * ainoa täysi lista — kuratoitu pakki JA maastokohteet yhdessä, ks.
+ * liitos alempana — ja tools/laske-karttanostot.mjs lukee juuri sen,
+ * jottei työkaluun tarvitse lisätä tuontia joka kerta kun uusi pakki
+ * syntyy. Peli itse käyttää taulua vain tämän tiedoston sisällä.
  */
-const KOHDE_MAAT = {
+export const KOHDE_MAAT = {
   GRC: FOKUSKOHTEET_GRC,
   BGR: FOKUSKOHTEET_BGR,
   ITA: FOKUSKOHTEET_ITA,
@@ -271,6 +339,346 @@ for (const [iso, kohteet] of Object.entries(MAASTOKOHTEET)) {
 }
 
 /*
+ * NÄKYVÄT KAUPUNGIT — RANSKA (omistaja, KARTTAUUDISTUKSEN PAATOKSET 13:
+ * *"kartalle olisi lisaksi hyva tuoda lisaa kaupunkeja nakyviin"*).
+ * Rivit ovat tavallisia kaupunkikohteita, mutta niiden kortti on oma
+ * lajinsa: `kaupunkikortti: true` vie napautuksen kaupunkikorttiin
+ * (kuva, esittely ja yksi kaupunkiin ankkuroitu nosto; PAATOKSET 16,
+ * ks. avaaFokuskohde ja js/kaupunkinosto.js latoLisakaupunginKortti).
+ * Erässä 13 sama rivi oli `vainNimi: true` eli pelkkä nimikyltti ilman
+ * korttia; lippu poistui, kun omistaja tilasi kortit.
+ * Liitos on tässä samasta syystä kuin maastokohteilla yllä: KOHDE_MAAT
+ * on tämän tiedoston oma taulu.
+ */
+KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...NAKYVAT_KAUPUNGIT_FRA];
+
+/*
+ * RANSKAN HAHMOTELMAPISTEET (omistaja, KARTTAUUDISTUKSEN PAATOKSET 33:
+ * *"nostoja siis saisi mielellaan olla ympari Ranskaa … Voi aluksi
+ * vaikka vain hahmotella ne pisteet ja lisata pelkat pisteet kartalle
+ * ja tehda niille vain otsikko pop-upit."*). Rivit ovat tavallisia
+ * kartan kohteita — pelkkä otsikko ja alaotsikko, ei sisältöä — ja ne
+ * ovat kaikki aidosti kaupungin ulkopuolella (PAATOKSET 34 kohta 4).
+ * Liitos on tässä samasta syystä kuin kahdella edellisellä.
+ */
+KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...HAHMOTELMA_FRA];
+
+/*
+ * BELGIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; Belgiassa ei ole pelikaupunkia eikä muita karttanostoja,
+ * ja rivit on harvennettu keskenään yli 7 lautayksikön päähän.
+ */
+KOHDE_MAAT.BEL = [...(KOHDE_MAAT.BEL ?? []), ...HAHMOTELMA_BEL];
+
+/*
+ * SAKSAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot, Espanjan ja Italian jälkeen Saksa). Sama reitti
+ * ja sama rakenne kuin Ranskan hahmotelmalla; rivit ovat aidosti
+ * kaupungin (Berliini) ulkopuolella, lähin yli 33 lautayksikön päässä.
+ */
+KOHDE_MAAT.DEU = [...(KOHDE_MAAT.DEU ?? []), ...HAHMOTELMA_DEU];
+
+/*
+ * PORTUGALIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot, Espanjan, Italian ja Saksan jälkeen Portugali).
+ * Sama reitti ja sama rakenne kuin Ranskan hahmotelmalla; rivit ovat
+ * aidosti kaupungin (Lissabon) ulkopuolella, lähin yli 14 lautayksikön
+ * päässä.
+ */
+KOHDE_MAAT.PRT = [...(KOHDE_MAAT.PRT ?? []), ...HAHMOTELMA_PRT];
+
+/*
+ * KREIKAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot, Espanjan, Italian, Saksan ja Portugalin jälkeen
+ * Kreikka). Sama reitti ja sama rakenne kuin Ranskan hahmotelmalla; rivit
+ * ovat aidosti kaupunkien (Ateena, Kreeta) ulkopuolella, lähin yli 44
+ * lautayksikön päässä.
+ */
+KOHDE_MAAT.GRC = [...(KOHDE_MAAT.GRC ?? []), ...HAHMOTELMA_GRC];
+
+/*
+ * ITÄVALLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti kaupungin (Wien) ulkopuolella, lähin
+ * yli 8 lautayksikön päässä.
+ */
+KOHDE_MAAT.AUT = [...(KOHDE_MAAT.AUT ?? []), ...HAHMOTELMA_AUT];
+
+/*
+ * ALANKOMAIDEN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti kaupungin (Amsterdam) ulkopuolella,
+ * lähin yli 8 lautayksikön päässä.
+ */
+KOHDE_MAAT.NLD = [...(KOHDE_MAAT.NLD ?? []), ...HAHMOTELMA_NLD];
+
+/*
+ * IRLANNIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti kaupungin (Dublin) ulkopuolella,
+ * lähin yli 5 lautayksikön päässä.
+ */
+KOHDE_MAAT.IRL = [...(KOHDE_MAAT.IRL ?? []), ...HAHMOTELMA_IRL];
+
+/*
+ * KROATIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti kaupungin (Dubrovnik) ulkopuolella,
+ * lähin yli 26 lautayksikön päässä.
+ */
+KOHDE_MAAT.HRV = [...(KOHDE_MAAT.HRV ?? []), ...HAHMOTELMA_HRV];
+
+/*
+ * BULGARIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti kaupungin (Sofia) ulkopuolella,
+ * lähin yli 20 lautayksikön päässä.
+ */
+KOHDE_MAAT.BGR = [...(KOHDE_MAAT.BGR ?? []), ...HAHMOTELMA_BGR];
+
+/*
+
+/*
+ * SLOVAKIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; Slovakiassa ei ole pelikaupunkia, joten kaupunkikohteet
+ * (Bratislava, Košice ym.) ovat sallittuja.
+ */
+KOHDE_MAAT.SVK = [...(KOHDE_MAAT.SVK ?? []), ...HAHMOTELMA_SVK];
+
+/*
+ * LUXEMBURGIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; Luxemburgissa ei ole pelikaupunkia, joten kaupunkikohteet
+ * (Luxembourgin kaupunki, Esch ym.) ovat sallittuja.
+ */
+KOHDE_MAAT.LUX = [...(KOHDE_MAAT.LUX ?? []), ...HAHMOTELMA_LUX];
+
+/*
+ * KYPROKSEN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat pelikaupungin (Nikosia) ulkopuolella (lähin yli
+ * 7 lautayksikön päässä) eivätkä toista Kyproksen 13 nykyistä nostoa.
+ *
+ * LIITOSJÄRJESTYS ON TARKOITUKSELLINEN: uudet rivit ovat ENNEN nykyisiä
+ * (`[...HAHMOTELMA_CYP, ...KOHDE_MAAT.CYP]`), koska nimiöladonta on
+ * järjestysriippuvainen ja Kyproksen nykyiset nimiöt ovat ahtaassa
+ * ryppäässä (Khirokitia, Asinou, Kykkos, skandaalit): nykyisten perään
+ * liitettynä mikä tahansa eteläinen tai läntinen uusi nosto kaatoi
+ * tests/nimiolimitys.test.mjs:n (mitattu 19.9.2026), ja HAHMOTELMA_CYP:n
+ * sisäinen järjestys (kormakitis, karpas, akamas, ...) on valittu niin,
+ * että testi menee läpi. Jos järjestystä muutetaan, aja testi.
+ */
+KOHDE_MAAT.CYP = [...HAHMOTELMA_CYP, ...(KOHDE_MAAT.CYP ?? [])];
+
+/*
+ * MALTAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48;
+ * Malta kartalle v1968). Paketti odotti tools/odottavat-paketit/-kansiossa,
+ * kunnes maa oli pallolla; rekisteröinti tiedoston alun ohjeen mukaan.
+ * Nostot ovat laudalla 0,5–2 yksikön päässä toisistaan, joten nimiöladonta
+ * on vartioitu (tests/nimiolimitys.test.mjs).
+ */
+KOHDE_MAAT.MLT = [...(KOHDE_MAAT.MLT ?? []), ...HAHMOTELMA_MLT];
+
+/*
+ * PUOLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti pelikaupunkien (Varsova, Krakova)
+ * ulkopuolella eivätkä toista Puolan 25 nykyistä nostoa.
+ */
+KOHDE_MAAT.POL = [...(KOHDE_MAAT.POL ?? []), ...HAHMOTELMA_POL];
+
+/*
+ * TŠEKIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti Prahan ulkopuolella eivätkä toista
+ * Tšekin 24 nykyistä nostoa.
+ */
+KOHDE_MAAT.CZE = [...(KOHDE_MAAT.CZE ?? []), ...HAHMOTELMA_CZE];
+
+/*
+ * RUOTSIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin Alankomaiden hahmotelmalla; rivit ovat aidosti kaupungin
+ * (Tukholma) ulkopuolella, lähin (Sigtuna) yli 8 lautayksikön päässä.
+ */
+KOHDE_MAAT.SWE = [...(KOHDE_MAAT.SWE ?? []), ...HAHMOTELMA_SWE];
+
+/*
+ * TANSKAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin Alankomaiden hahmotelmalla; rivit ovat aidosti kaupungin
+ * (Kööpenhamina) ulkopuolella, lähin (Lejre) yli 8 lautayksikön päässä.
+ */
+KOHDE_MAAT.DNK = [...(KOHDE_MAAT.DNK ?? []), ...HAHMOTELMA_DNK];
+
+/*
+ * UNKARIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti Budapestin ulkopuolella eivätkä
+ * toista Unkarin 23 nykyistä nostoa.
+ */
+KOHDE_MAAT.HUN = [...(KOHDE_MAAT.HUN ?? []), ...HAHMOTELMA_HUN];
+
+/*
+ * ESPANJAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot, pilotti Espanja). Sama reitti ja sama rakenne
+ * kuin Ranskan hahmotelmalla yllä; rivit ovat aidosti kaupunkien
+ * ulkopuolella (lähin pelikaupunki 15 lautayksikön päässä, raja 7).
+ */
+KOHDE_MAAT.ESP = [...(KOHDE_MAAT.ESP ?? []), ...HAHMOTELMA_ESP];
+
+/*
+ * ITALIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot, Espanjan pilotin jälkeen Italia). Sama reitti ja
+ * sama rakenne kuin Ranskan hahmotelmalla yllä; rivit ovat aidosti
+ * kaupunkien ulkopuolella (lähin pelikaupunki yli 9 lautayksikön päässä,
+ * raja 7).
+ */
+KOHDE_MAAT.ITA = [...(KOHDE_MAAT.ITA ?? []), ...HAHMOTELMA_ITA];
+
+/*
+ * SUOMEN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla; rivit ovat aidosti pelikaupunkien
+ * (Helsinki, Tampere, Lappi) ulkopuolella, lähin (Nokia) yli 8
+ * lautayksikön päässä.
+ */
+KOHDE_MAAT.FIN = [...(KOHDE_MAAT.FIN ?? []), ...HAHMOTELMA_FIN];
+
+/*
+ * ROMANIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla; rivit ovat aidosti kaupungin
+ * (Bukarest) ulkopuolella, lähin (Ploiești) yli 8 lautayksikön päässä.
+ */
+KOHDE_MAAT.ROU = [...(KOHDE_MAAT.ROU ?? []), ...HAHMOTELMA_ROU];
+
+/*
+ * VIRON HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla; rivit ovat aidosti kaupungin
+ * (Tallinna) ulkopuolella.
+ */
+KOHDE_MAAT.EST = [...(KOHDE_MAAT.EST ?? []), ...HAHMOTELMA_EST];
+
+/*
+
+/*
+ * SLOVENIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla; Slovenialla ei ole pelikaupunkia
+ * eikä aiempia nostoja, ja lista on karsittu 24:ään maan pienen koon takia.
+ */
+KOHDE_MAAT.SVN = [...(KOHDE_MAAT.SVN ?? []), ...HAHMOTELMA_SVN];
+
+/*
+ * LIETTUAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla.
+ */
+KOHDE_MAAT.LTU = [...(KOHDE_MAAT.LTU ?? []), ...HAHMOTELMA_LTU];
+
+/*
+ * LATVIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla.
+ */
+KOHDE_MAAT.LVA = [...(KOHDE_MAAT.LVA ?? []), ...HAHMOTELMA_LVA];
+
+/*
+ * TURKIN HAHMOTELMANOSTOT (js/packs/hahmotelma-tur.js): kaksi
+ * täydentävää karttanostoa Turkin olemassa olevien 28 nostoon (kolme
+ * maastokohteet-tur.js:ssä, 25 fokuskohteet-tur.js:ssä) — Nemrut Dağı
+ * ja Safranbolu. Sama liitosreitti kuin EU-maiden hahmotelmilla, mutta
+ * Turkki ei ole EU-maa: tämä on ensimmäinen "muu Eurooppa"
+ * -hahmotelmapakka.
+ */
+KOHDE_MAAT.TUR = [...(KOHDE_MAAT.TUR ?? []), ...HAHMOTELMA_TUR];
+
+/*
+ * BRITANNIAN HAHMOTELMANOSTOT (js/packs/hahmotelma-gbr.js): 17
+ * täydentävää karttanostoa Britannian olemassa olevien 13 nostoon
+ * (10 maastokohteet-gbr.js:ssä, 3 fokuskohteet-gbr.js:ssä) — Pohjois-
+ * Irlanti, Lake District, Cornwall, teollisuushistoria (Quarry Bank
+ * Mill, Stockton ja Darlingtonin rautatie, Sohon manufaktuuri),
+ * Liverpool, Oxford, ruokaperinne (fish and chips, iltapäivätee,
+ * haggis), Skotlannin länsi (Skye, Loch Lomond, Edinburgh), Wales
+ * (Caernarfon), Dover ja York. Sama liitosreitti kuin muu Eurooppa
+ * -hahmotelmilla (Turkki yllä): rivit lisätään olemassa olevan
+ * kuratoidun ja maastolistan PERÄÄN, kumpaakaan alkuperäistä listaa
+ * ei muuteta.
+ */
+KOHDE_MAAT.GBR = [...(KOHDE_MAAT.GBR ?? []), ...HAHMOTELMA_GBR];
+
+/*
+ * NORJAN HAHMOTELMANOSTOT (js/packs/hahmotelma-nor.js): 18
+ * täydentävää karttanostoa Norjan olemassa olevien 12 nostoon
+ * (maastokohteet-nor.js) — vuonot, Lofootit, saamelaiskulttuuri,
+ * viikinkilaiva, öljyteollisuus, ruokaperinne. Sama liitosreitti kuin
+ * muu Eurooppa -hahmotelmilla: rivit lisätään olemassa olevan
+ * maastolistan PERÄÄN, sitä ei muuteta.
+ */
+KOHDE_MAAT.NOR = [...(KOHDE_MAAT.NOR ?? []), ...HAHMOTELMA_NOR];
+
+/*
+ * ISLANNIN HAHMOTELMANOSTOT (js/packs/hahmotelma-isl.js): 13
+ * täydentävää karttanostoa Islannin olemassa olevien 17 nostoon
+ * (maastokohteet-isl.js) — Reykjavík, Akureyri, Ísafjörður, Sinilóni,
+ * Seyðisfjörður, ruokaperinne (hákarl, skyr), tunnetut luontokohteet.
+ * Sama liitosreitti kuin muu Eurooppa -hahmotelmilla.
+ */
+KOHDE_MAAT.ISL = [...(KOHDE_MAAT.ISL ?? []), ...HAHMOTELMA_ISL];
+
+/*
+ * VENÄJÄN HAHMOTELMANOSTOT (js/packs/hahmotelma-rus.js): 14
+ * täydentävää karttanostoa Venäjän eurooppalaisen osan olemassa
+ * olevien 16 nostoon (maastokohteet-rus.js) — Pietari (Peterhof),
+ * Kultaisen renkaan kaupungit, ruokaperinne, avaruustekniikan
+ * pioneeri Tsiolkovski, Laatokka. Sama liitosreitti kuin muu Eurooppa
+ * -hahmotelmilla: rivit lisätään olemassa olevan maastolistan
+ * PERÄÄN, sitä ei muuteta.
+ */
+KOHDE_MAAT.RUS = [...(KOHDE_MAAT.RUS ?? []), ...HAHMOTELMA_RUS];
+
+/*
+ * UKRAINAN HAHMOTELMANOSTOT (js/packs/hahmotelma-ukr.js): 17
+ * täydentävää karttanostoa olemassa olevien 13 nostoon
+ * (maastokohteet-ukr.js) — Kiova (puuttui kokonaan) ja Odesa
+ * pääkaupunkeina/satamana, Krimi, Karpaattien hutsulikulttuuri,
+ * ruoka- ja tekniikkakohteita. Sama liitosreitti kuin muu Eurooppa
+ * -hahmotelmilla: rivit lisätään olemassa olevan maastolistan
+ * PERÄÄN, sitä ei muuteta.
+ */
+KOHDE_MAAT.UKR = [...(KOHDE_MAAT.UKR ?? []), ...HAHMOTELMA_UKR];
+
+/*
+ * SVEITSIN HAHMOTELMANOSTOT (js/packs/hahmotelma-che.js): 13
+ * täydentävää karttanostoa Sveitsin olemassa olevien 16 nostoon
+ * (maastokohteet-che.js) — Geneve, Zürich, Basel, Lugano/Ticino,
+ * Graubündenin vuoristokylät (St. Moritz, Scuol), CERN, Grande
+ * Dixence, sekä ruokaperinne (Lavaux, Vevey, Emmental). Tavoitteesta
+ * 30 jäätiin 29:ään (neljäs ruokakohde, Appenzell, pudotettiin
+ * kokonaan, ks. hahmotelma-che.js). Kytkentä oli blokattu (AUT/DEU/CHE
+ * -nimiörypäs), kunnes Karttaseppä siirsi DEU/Bodensee-nimiön (haara
+ * karttaseppa-bodensee, mergetty v1973-prepiin 21.9.2026).
+ */
+KOHDE_MAAT.CHE = [...(KOHDE_MAAT.CHE ?? []), ...HAHMOTELMA_CHE];
+
+/*
+ * BOSNIA JA HERTSEGOVINAN HAHMOTELMANOSTOT (js/packs/hahmotelma-bih.js):
+ * 14 täydentävää karttanostoa olemassa olevien 16 nostoon
+ * (4 maastokohteet-bih.js:ssä, 12 fokuskohteet-bih.js:ssä) — Sarajevo
+ * (puuttui kokonaan), talviolympiavuori Bjelašnica, Kravicen putoukset,
+ * ruoka- ja tekniikkakohteita. Ei mitään uutta Neumin rannikkokäytävään.
+ * Kytkentä oli blokattu (BIH/Neum + HRV/Ston -nimiörypäs), kunnes
+ * Karttaseppä siirsi BIH/Neum-nimiön puoli yksikköä pohjoiseen (sama
+ * haara karttaseppa-bodensee).
+ */
+KOHDE_MAAT.BIH = [...(KOHDE_MAAT.BIH ?? []), ...HAHMOTELMA_BIH];
+
+/*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
  * SÄHKETEHTÄVÄ).
  *
@@ -288,6 +696,20 @@ for (const [iso, kohteet] of Object.entries(MAASTOKOHTEET)) {
  * (asetaTehtavakuittaus), vain vastakkaiseen suuntaan.
  */
 asetaKohdehakemisto((iso) => KOHDE_MAAT[iso] ?? []);
+
+/*
+ * SÄHKETEHTÄVÄN SUORA LINKKI KOHTEESEEN (3.9.2026, Raamattu:
+ * SÄHKETEHTÄVÄ LEHTIMÄISEKSI JA PULLA VINKIKSI). Puolikkaalla pullalla
+ * Livia näyttää sen kortin, jolta vastaus luetaan — Sofiassa Varnan
+ * kohdekortin. Kytkentä on takaisinkutsu samasta syystä kuin
+ * hakemistolla yllä: fokusvirta on niputusjärjestyksessä ennen tätä.
+ */
+asetaKohdeavaus((ui, iso, tunnus) => {
+  const kohde = (KOHDE_MAAT[iso] ?? []).find((k) => k.id === tunnus);
+  if (!kohde) return false;
+  avaaFokuskohde(ui, kohde);
+  return true;
+});
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */
 const KOHDE_OSUMA_R = 22;
@@ -464,13 +886,30 @@ function nykyinenIso(ui) {
  * @param {Array} lisat        lisälähteiden rivit (täky, syvennys,
  *   skandaali) — generaattori antaa vain ne, jotka se aikoo polttaa
  */
+/*
+ * `kaupungit` EI OLE ENÄÄ TÄMÄN PASSIN SYÖTETTÄ (31.8.2026). Se meni
+ * kategoria per kaupunki -yhdistelylle (ent. js/fokusryhmat.js), joka
+ * purettiin: kaupunkien ympärille latominen on nyt kasauspassin työtä
+ * (js/fokusniput.js), ja se saa kaupungit `ui.fokuskohdeKaupungit`-
+ * kentästä. Parametri jää kutsurajapintaan, koska kutsujia on kaksi
+ * (peli ja laattageneraattori) eikä sen poisto kuulu tähän erään.
+ */
 export function kohdeKarttarivit({
-  iso, lauta, kaupungit, pohjanAlla, lisat = [],
+  iso, lauta, kaupungit = [], pohjanAlla, lisat = [],
 }) {
   const lista = (iso && KOHDE_MAAT[iso]) || [];
   const kohteet = lista.map((kohde) => ({ kohde, paikka: kohde.laudat?.[lauta] }));
   for (const rivi of lisat) kohteet.push(rivi);
-  const nakyvat = kohteet
+  /*
+   * JOKAINEN NOSTO ON OMA MERKKINSÄ (omistaja 31.8.2026,
+   * esityssiirto): passi palauttaa rivit sellaisinaan eikä yhdistä
+   * mitään. Yhdistely eli "kategoria per kaupunki" oli tässä
+   * saman päivän aamusta iltaan — se ratkaisi ahtauden nimiön
+   * kustannuksella, ja pilkkulista ("Olympieion, Iliou Melathron…") oli
+   * omistajan mielestä väärä hinta. Ahtaus ratkeaa nyt ladonnassa
+   * (js/fokusniput.js sääntö 2) eikä sisällössä.
+   */
+  const rivit = kohteet
     .filter(({ paikka }) => Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y))
     /*
      * Vain lehden alueella olevat. Lehti on maan ikkuna, ja sen
@@ -479,15 +918,337 @@ export function kohdeKarttarivit({
      */
     .filter(({ paikka }) => pohjanAlla(paikka.x, paikka.y));
   /*
-   * KATEGORIA PER KAUPUNKI (omistaja 31.8.2026, ks. js/fokusryhmat.js):
-   * saman kaupungin samanlajiset kohteet menevät yhden merkin alle.
-   * Passi on VIIMEISENÄ, jotta se näkee täsmälleen sen listan, joka
-   * kartalle olisi muuten piirtynyt — lisälähteet mukaan lukien — ja
-   * ENNEN piirtoa, jotta merkkejä ei koskaan synny enempää kuin
-   * lopulta jää. Luokittelija on sama funktio, jolla merkin symboli
-   * valitaan (kohteenSymboli): kategoriaa ei siis ole kahta.
+   * KAKSI KARSINTAA, TÄSSÄ JÄRJESTYKSESSÄ. Ensin pois ne, jotka
+   * asuvat kaupunkilehden kohdekartalla (omistajan sääntö 2.9.2026
+   * ilta) — ne eivät kuulu pääkartalle lainkaan. Vasta jäljelle
+   * jäävistä lasketaan kaupunkinostojen katto (1.9.2026), joten katon
+   * kolme paikkaa menevät niille nostoille, joilla ei ole muuta
+   * karttapaikkaa.
    */
-  return ryhmitaKohteet(nakyvat, kaupungit, kohteenSymboli, kohteenKarttanimi);
+  return karsiKaupunkiruuhka(karsiKaupunkikartanNostot(rivit, kaupungit, iso), kaupungit);
+}
+
+/*
+ * === KAUPUNGIN KOHDALLA OLEVAT NOSTOT EIVÄT OLE PÄÄKARTALLA =======
+ *
+ * Omistaja 2.9.2026 illalla, kolmatta kertaa sanottuna (sanatarkasti):
+ * *"nuo karttanostot jotka ovat kohdekaupunkien kohdalla piti viedä
+ * pois pääkartalta ja jättää vain kaupunkilehden sisällä olevaan
+ * kaupunkikartalle. olen sanonut tästä jo kaksi kertaa aiemmin, eikä
+ * se ole vieläkään toteutunut."*
+ *
+ * MIKÄ ON "KAUPUNGIN KOHDALLA". Kaksi mittaa, ja kumpikin riittää:
+ *
+ *   1. nosto on kaupunkilehden kohdekartan rajauksessa
+ *      (js/packs/maakartat.js KAUPUNKIKARTAT[kaupunki].rajat), tai
+ *   2. nosto on alle KAUPUNGIN_KOHDALLA_SADE laudan yksikköä
+ *      kaupungin laatasta.
+ *
+ * TÄMÄ PASSI TOTEUTTAA MITAN 1 SUORAAN JA MITAN 2 SEURAUKSENA. Rivillä
+ * on vain laudan koordinaatit, ja rajaustesti vaatisi käänteis-
+ * projektion (se asuu js/fokusmitat.js:ssä, joka on niputuksessa VASTA
+ * tämän jälkeen). Sitä ei tarvita, koska kohdekartalla oleva nosto
+ * tunnistetaan sen omasta linkistä: kohdekartan piste kantaa kenttää
+ * `nosto: '<tunnus>'`, ja tunnus on täsmälleen se merkki, jonka tämä
+ * passi pudottaa. Piste voi olla kartalla vain, jos se on rajauksen
+ * sisällä (tests/nostot-kartalla.test.mjs valvoo sitä), joten linkin
+ * olemassaolo ON mitta 1.
+ *
+ * SÄDE (mitta 2) on nostojen tarkistuksen ja testin työkalu:
+ * tools/tarkista-nostopaikat.mjs listaa sillä ne kaupungin kohdalla
+ * olevat nostot, joilta kohdekartan piste vielä puuttuu — eli sen
+ * työlistan, joka tyhjentää pääkartan kaupunkien päältä lopullisesti.
+ * Vakio on täällä, koska sääntö on tämän passin sääntö.
+ *
+ * MIKSI PUDOTUS EI SEURAA PELKÄSTÄ SÄTEESTÄ. Omistajan aiempi sääntö
+ * samalta päivältä on yhä voimassa: *"lisää kaikki historian hetket ja
+ * muut karttanostot myös joko pääkarttanäkymään tai sitten
+ * kaupunkilehden kaupunkikartalle"*. Jos pelkkä säde pudottaisi merkin,
+ * kaupungin lähialueen nosto (Sofian Vitoša 5,1 yksikköä eli 13 km,
+ * Boyanan kirkko 6 km, eläintarha 3 km) katoaisi KAIKILTA kartoilta:
+ * se on kohdekartan rajauksen ulkopuolella eikä sille ole siellä
+ * paikkaa. Kaksi sääntöä yhdessä tarkoittavat siis: kohdekartalla
+ * oleva nosto ei ole pääkartalla, ja kohdekartalle mahtumaton nosto
+ * jää pääkartalle kunnes sille tehdään paikka.
+ *
+ * SÄDE 7 YKSIKKÖÄ on mitattu eikä arvattu. Yksi laudan yksikkö on
+ * näillä leveysasteilla noin 2,6 km (mitattu 813 nostoparista
+ * maailmankartalla). Rajat tulevat omistajan kuvakaappauksesta: Sofian
+ * Vitoša (5,12 yksikköä = 13 km) on kaupungin kohdalla, Pernik (10,28
+ * = 27 km), Rilan luostari (22,11 = 58 km) ja Plovdiv (52,14 = 137 km)
+ * eivät. Väli on siis 5,12–10,28, ja 7 jättää molempiin puoliin
+ * kolmanneksen pelivaraa. Se on myös PIENEMPI kuin kaupunkinostojen
+ * katon säde 8, joten katolle jää oma rengas 7–8 yksikköä, jossa se
+ * toimii kuten ennen (Berliinin Köpenick 7,7, Helsingin kirjasota 7,6,
+ * Pariisin kaulanauhajuttu 7,3).
+ */
+export const KAUPUNGIN_KOHDALLA_SADE = 7;
+
+/*
+ * KOHDEKARTTOJEN NOSTOLINKIT: nostotunnus → kaupunki. Sama kenttä,
+ * jota tools/tarkista-nostopaikat.mjs lukee (`nosto` on merkkijono tai
+ * lista), mutta ilman sen napautettavuustarkistusta — se on testin työ.
+ * Taulu on laudan dataa eikä muutu ajon aikana, joten se lasketaan
+ * kerran.
+ */
+let kohdeKarttalinkit = null;
+
+function kohdeKaupunkikartanNostot() {
+  if (kohdeKarttalinkit) return kohdeKarttalinkit;
+  kohdeKarttalinkit = new Map();
+  for (const [kaupunki, kartta] of Object.entries(KAUPUNKIKARTAT)) {
+    for (const piste of kartta.kohteet ?? []) {
+      if (!piste.nosto) continue;
+      const tunnukset = Array.isArray(piste.nosto) ? piste.nosto : [piste.nosto];
+      for (const tunnus of tunnukset) kohdeKarttalinkit.set(tunnus, kaupunki);
+    }
+  }
+  return kohdeKarttalinkit;
+}
+
+/*
+ * NOSTON OMA DATAPAIKKA KAUPUNKIKARTALTA (PAATOKSET 34 kohta 4).
+ *
+ * Kartalle LADOTTU piste ei ole noston paikka: kaupungin rykelmä
+ * ladotaan 0–8 laudan yksikön päähän kaupungista (ks. KAUPUNKIKATON
+ * SÄDE yllä), ja pallon ankkurilevitys (PAATOKSET 32) siirtää merkkiä
+ * vielä lisää — Pariisissa yhteensä 20–47 km. Päätöksen raja on
+ * kuitenkin *"noston OMA paikka"*, ja se on kirjoitettu tähän:
+ * kaupunkilehden kohdekartan piste kantaa noston oikeat asteet ja
+ * `nosto`-linkin siihen nostoon, jota se esittää.
+ *
+ * Sama taulu kuin `kohdeKaupunkikartanNostot`, mutta asteineen —
+ * kaksi lukua samasta rivistä, ei uutta lähdettä.
+ */
+let kohdeKarttapaikat = null;
+
+/** Nostotunnus → { kaupunki, lat, lng } kaupunkilehden kohdekartalta. */
+export function kohdekartanNostopaikat() {
+  if (kohdeKarttapaikat) return kohdeKarttapaikat;
+  kohdeKarttapaikat = new Map();
+  for (const [kaupunki, kartta] of Object.entries(KAUPUNKIKARTAT)) {
+    for (const piste of kartta.kohteet ?? []) {
+      if (!piste.nosto) continue;
+      if (!Number.isFinite(piste.lat) || !Number.isFinite(piste.lon)) continue;
+      const tunnukset = Array.isArray(piste.nosto) ? piste.nosto : [piste.nosto];
+      for (const tunnus of tunnukset) {
+        kohdeKarttapaikat.set(tunnus, { kaupunki, lat: piste.lat, lng: piste.lon });
+      }
+    }
+  }
+  return kohdeKarttapaikat;
+}
+
+/**
+ * POIS PÄÄKARTALTA NE, JOILLA ON PAIKKA KAUPUNKILEHDEN KARTALLA.
+ *
+ * Ehto on kaksiosainen: nostolla on kohdekartan piste JA se kaupunki
+ * on tällä laudalla. Jälkimmäinen ei ole muodollisuus — kohdekartta
+ * avautuu vain kaupunkiin saavuttaessa, joten laudalta puuttuvan
+ * kaupungin kartta ei ole pelaajan ulottuvilla eikä se voi korvata
+ * pääkartan merkkiä.
+ *
+ * `kaupungit`-ehto pitää myös tarkistustyökalun perusmitan ennallaan:
+ * tools/tarkista-nostopaikat.mjs ajaa saman passin tyhjällä
+ * kaupunkilistalla saadakseen KAIKKI nostot, ja se listaus ei saa
+ * kadottaa juuri niitä, joiden paikkaa se on tarkistamassa.
+ */
+/*
+ * === PILOTTI: KOHDEKARTAN NOSTO MYÖS PÄÄKARTALLE LÄHIZOOMISSA =====
+ *
+ * Omistaja 14.9.2026 (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 12 kohta
+ * 3): *"karttanostoja ei voi klikata ja niita pitaisi olla enemman."*
+ * ja KARTTAUUDISTUS: *"Nostot voisivat tulla paremmin nakyviin vasta
+ * kun pelaaja zoomaa tarpeeksi lahelle."*
+ *
+ * Mitattuna (docs/raportit/viesti-fable-nostot-20260914.md luku 2)
+ * Ranskan 37 nostosta 17 on kohdekartalla ja pääkartalle jää 20.
+ * Pariisin seudun 16 nostoa ovat siis kartalla vain kaupunkilehden
+ * sisällä. Tämä lippu päästää ne TAKAISIN pääkartalle — mutta vain
+ * lähizoomiin (`lahi: true`, js/pallolauta/nostot.js merkkiPortti),
+ * joten saapumisnäkymä pysyy sellaisena kuin omistaja sen 2.9.2026
+ * pyysi: siinä ei ole kaupungin kohdalla olevia nostoja.
+ *
+ * KOPIOTA EI SYNNY. Rivi on sama nosto samalla tunnuksella ja samalla
+ * tekstillä; vain merkin näkyvyys on kaksiportainen. Kohdekartta ei
+ * muutu millään tavalla.
+ *
+ * PILOTTI ON YHDESSÄ MAASSA. Muissa maissa sääntö on ennallaan (rivi
+ * pudotetaan), koska omistaja pyysi Ranskan pilottia ensin.
+ */
+const KOHDEKARTAN_NOSTOT_LAHIZOOMIIN = new Set(['FRA']);
+
+function karsiKaupunkikartanNostot(rivit, kaupungit, iso = null) {
+  if (!kaupungit?.length) return rivit;
+  const linkit = kohdeKaupunkikartanNostot();
+  if (!linkit.size) return rivit;
+  const laudalla = new Set(kaupungit.map((k) => k.id));
+  const lahizoomiin = KOHDEKARTAN_NOSTOT_LAHIZOOMIIN.has(iso);
+  const ulos = [];
+  for (const r of rivit) {
+    const kaupunki = linkit.get(r.kohde?.id);
+    if (!(kaupunki && laudalla.has(kaupunki))) {
+      ulos.push(r);
+      continue;
+    }
+    if (!lahizoomiin) continue;
+    /*
+     * Kopio eikä mutaatio: KOHDE_MAAT-taulun oliot ovat jaettua dataa,
+     * ja `lahi` on tämän näkymän päätös eikä datan kenttä.
+     */
+    ulos.push({ ...r, kohde: { ...r.kohde, lahi: true } });
+  }
+  return ulos;
+}
+
+/*
+ * === KAUPUNKINOSTOJEN KATTO (omistaja 1.9.2026, sanatarkasti) ======
+ *
+ * *"Karttanostot pitäisi periaatteessa olla nimenomaan nostoja muista
+ * paikoista kuin kohdekaupungeista. Tehdään niin, että lisätään nuo
+ * mahdollisuuksien mukaan kaupunkilehden sisältöön ja jätetään
+ * maksimissaan kolme nostoa per kohdekaupunki näkyville. Ja ne, mitä
+ * priorisoidaan, ovat joko ihmeitä tai skandaaleja. Kaikki muut
+ * sisällytetään kaupunkilehtiin. Ja kun jatkossa tehdään nostoja, niin
+ * kerätään niitä vain muista kuin kohdekaupungeista."*
+ *
+ * Kaupungin viereen osuvista riveistä (koordinaatittomat syvennykset,
+ * skandaalit ja täkynostot ladotaan kaupunkiin 0–3 yksikön päähän, ja
+ * kaupungin sisäiset nähtävyydet istuvat parin yksikön säteellä)
+ * kartalle jää enintään KATTO kappaletta, prioriteetilla ihme >
+ * skandaali > syvennys > täkynosto > muu. Pudotettu rivi EI katoa
+ * pelistä: sisältö siirretään kaupunkilehteen (erillinen erä).
+ *
+ * SÄDE 8 yksikköä (~27 km): kattaa ladotut ja kaupungin sisäiset,
+ * muttei naapurikohteita (Pernik 10, Vitosa 5 — Vitosa on rypästä).
+ * Sääntö on osa nostoladontaa: sama karsinta ajaa pelissä ja
+ * poltossa (NOSTOLADONTA_SAANTO v3), joten elävä kerros ja laatat
+ * eivät voi erota.
+ *
+ * === KATTOVAPAA: NOSTO, JOKA EI OLE KAUPUNGISSA (2.9.2026) =========
+ *
+ * Omistajan sääntö 2.9.2026 (sanatarkasti): *"lisää kaikki historian
+ * hetket ja muut karttanostot myös joko pääkarttanäkymään tai sitten
+ * kaupunkilehden kaupunkikartalle, ellei näin ole jo tehty."* Lehtisivu
+ * ei siis ole koskaan noston ainoa paikka, ja karsitulle merkille on
+ * kaksi vaihtoehtoa: kaupunkilehden kohdekartta tai pääkartta.
+ *
+ * Kaupunkilehden kohdekartta kelpaa vain, jos nosto osuu sen rajaukseen
+ * — kartta on esirenderöity kuva parin kilometrin ruudusta. Sofian
+ * Vitoša (5 yksikköä keskustasta), Boyanan kirkko ja eläintarha,
+ * Krakovan Wieliczka, Lontoon Richmond Park ja kolmetoista muuta jäävät
+ * sen ulkopuolelle: ne EIVÄT OLE kohdekaupungissa vaan sen lähialueella.
+ * Juuri sellaisia nostoja omistaja pyysi kartalle 1.9. (*"nostoja
+ * nimenomaan muista paikoista kuin kohdekaupungeista"*) — kahdeksan
+ * yksikön säde vain sattuu yltämään niiden yli.
+ *
+ * `kattoVapaa: true` on siksi datan kenttä, joka sanoo: tämä nosto ei
+ * ole kaupungin sisällä, joten kaupunkinostojen katto ei koske sitä.
+ * Lippu on merkitty vain niille, joille tools/tarkista-nostopaikat.mjs
+ * osoittaa, ettei kohdekarttaa ole tarjolla; tests/nostot-kartalla.test.mjs
+ * valvoo, ettei se leviä muualle.
+ *
+ * KATTOVAPAA EI ENÄÄ PELASTA KAUPUNKIKARTAN NOSTOA (2.9.2026 ilta).
+ * Karsintajärjestys on nyt kaksivaiheinen: kohdekartalla asuvat merkit
+ * pudotetaan ENNEN tätä funktiota (karsiKaupunkikartanNostot), joten
+ * niiden lippu ei ehdi vaikuttaa mihinkään. Lippu jää siis siihen, mitä
+ * se lupaa: kaupungin lähialueen nostoon, jolle kohdekartalla EI ole
+ * paikkaa — Wieliczka, Köpenick, Richmond Park, Pariisin
+ * kaulanauhajuttu, Vitoša.
+ */
+export const KAUPUNKIKATON_SADE = 8;
+const KAUPUNKINOSTOJEN_KATTO = 3;
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * NOSTON KAUPUNKIJÄSENYYS — "SAMASSA KAUPUNGISSA" YHTENÄ LUKUNA
+ * (omistaja 16.9.2026 klo 19.00 UTC, Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 27 TARKENNUS 2 kohta 7)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistajan sanoin: *"Nuo saman kategorian jutut piti yhdistaa
+ * yhdeksi nostoksi"* — kaupungin rykelmässä saman AIHEEN nostot
+ * yhdistyvät AINA, zoomista riippumatta. Ryhmitys (js/pallolauta/
+ * aihemerkit.js ryhmitaNostot) tarvitsee siksi yhden kentän, joka
+ * vastaa kysymykseen "onko tämä nosto tuon kaupungin nosto".
+ *
+ * KAKSI LÄHDETTÄ, TÄSSÄ JÄRJESTYKSESSÄ — eikä kolmatta:
+ *
+ *   1. KOHDEKARTAN NOSTOLINKKI (kohdeKaupunkikartanNostot) on
+ *      EKSPLISIITTINEN jäsenyys: päätoimittaja on kirjoittanut
+ *      kaupunkikartan pisteelle `nosto: 'tunnus'`, eli sanonut että
+ *      tämä nosto ON tämä kaupunki. Se voittaa mitan aina, myös
+ *      silloin kun nosto on ladottu kauas kaupungistaan.
+ *   2. LÄHIN KAUPUNKI KAUPUNKIKATON SÄTEELLÄ. Sama säde, jolla
+ *      kaupunkiruuhkan karsinta (karsiKaupunkiruuhka) päättää mikä on
+ *      "kaupungin sisällä" — ei uutta mitoitusta tähän: jos kaksi
+ *      lukua eriytyisi, ryhmitys ja karsinta puhuisivat eri
+ *      kaupungista samasta nostosta.
+ *
+ * Paikka on merkin LADOTTU piste (nippu mukaan luettuna), koska se on
+ * se kohta, jonka pelaaja kartalla näkee — ja juuri sitä rykelmää
+ * omistaja katsoi.
+ *
+ * @param {string} id  noston tunnus
+ * @param {number} x  merkin ladottu x laudan yksiköissä
+ * @param {number} y  merkin ladottu y laudan yksiköissä
+ * @param {Array<{id:string,x:number,y:number}>} [kaupungit]  maan kaupungit
+ * @param {?Map<string,string>} [linkit]  nostotunnus → kaupunki
+ * @returns {?string} kaupungin tunnus tai null
+ */
+export function nostonKaupunkiAvain(id, x, y, kaupungit = [], linkit = null) {
+  const taulu = linkit ?? kohdeKaupunkikartanNostot();
+  const linkki = taulu.get(id);
+  if (linkki) return linkki;
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
+  let paras = null;
+  let lyhin = Infinity;
+  for (const c of kaupungit ?? []) {
+    const d = Math.hypot(x - c.x, y - c.y);
+    if (d <= KAUPUNKIKATON_SADE && d < lyhin) { lyhin = d; paras = c.id; }
+  }
+  return paras;
+}
+
+function nostonPrioriteetti(kohde) {
+  if (kohde?.ihme) return 0;
+  const id = String(kohde?.id ?? '');
+  if (id.startsWith('skandaali-')) return 1;
+  if (id.startsWith('syvennys-')) return 2;
+  if (id.startsWith('nosto-')) return 3;
+  return 4;
+}
+
+function karsiKaupunkiruuhka(rivit, kaupungit) {
+  if (!kaupungit?.length) return rivit;
+  const pois = new Set();
+  for (const c of kaupungit) {
+    const ruuhka = [];
+    rivit.forEach((r, i) => {
+      if (r.kohde?.tyyppi === 'kaupunki') return; // kaupunkikohde on oma laattansa vieressä
+      if (r.kohde?.kattoVapaa) return;            // ei kaupungissa (ks. KATTOVAPAA yllä)
+      /*
+       * LÄHIZOOMIN NOSTO EI OLE SAAPUMISNÄKYMÄSSÄ, joten katolla ei
+       * ole siihen asiaa: katto suojaa juuri sitä näkymää, jossa
+       * `lahi: true` -merkki ei piirry lainkaan
+       * (js/pallolauta/nostot.js merkkiPortti). Ilman tätä ehtoa
+       * kaupungin kohdalle palautetut kohdekartan nostot (ks.
+       * KOHDEKARTAN_NOSTOT_LAHIZOOMIIN yllä) putoaisivat kolmen
+       * merkin kattoon eivätkä olisi kartalla missään.
+       */
+      if (r.kohde?.lahi) return;
+      if (Math.hypot(r.paikka.x - c.x, r.paikka.y - c.y) <= KAUPUNKIKATON_SADE) {
+        ruuhka.push({ r, i });
+      }
+    });
+    if (ruuhka.length <= KAUPUNKINOSTOJEN_KATTO) continue;
+    // Vakaa järjestys: prioriteettiluokka, tasapelissä alkuperäinen
+    // rivijärjestys — sama syöte antaa saman kartan joka ajolla.
+    ruuhka.sort((a, b) => (nostonPrioriteetti(a.r.kohde) - nostonPrioriteetti(b.r.kohde))
+      || (a.i - b.i));
+    for (const { i } of ruuhka.slice(KAUPUNKINOSTOJEN_KATTO)) pois.add(i);
+  }
+  return pois.size ? rivit.filter((_, i) => !pois.has(i)) : rivit;
 }
 
 function nykyisenMaanKohteet(ui) {
@@ -525,6 +1286,79 @@ function nykyisenMaanKohteet(ui) {
  * kerää omat kohteensa, kuten omistajan kysymys edellytti (*"joillain
  * kaupungeilla"*, ei "sillä kaupungilla, jossa pelaaja seisoo").
  */
+/**
+ * MAAN KOHTEET KORTIN AVAAMISTA VARTEN (pallolauta vaihe 3): tunnus →
+ * kohde, jossa lisäkohteilla (täkynosto, syvennys, skandaali, hetki) on
+ * `avaa`-kahva — sama joukko, jonka nykyisenMaanKohteet antaa
+ * tasokartalle, mutta ILMAN lehden ikkunan rajausta, koska pallolla
+ * ladonta (maanKohdemerkit) tekee rajauksen itse. Karttapallo
+ * (js/pallolauta/nostot.js) yhdistää tämän tyngän merkkeihin: tynkä
+ * tuntee paikan, tämä tuntee kortin.
+ */
+export function maanKohdetiedot(ui, iso) {
+  const tiedot = new Map();
+  for (const kohde of (iso && KOHDE_MAAT[iso]) || []) tiedot.set(kohde.id, kohde);
+  for (const hae of KOHDE_LISALAHTEET) {
+    for (const rivi of hae(ui) ?? []) if (rivi?.kohde?.id) tiedot.set(rivi.kohde.id, rivi.kohde);
+  }
+  return tiedot;
+}
+
+/**
+ * MAAN KAIKKI KADONNEET IHMEET — riippumatta siitä, onko kohteella
+ * paikkaa pääkartalla vai onko se kaupunkilehden kohdekartalle
+ * siirretty (js/fokuskohteet.js karsiKaupunkikartanNostot pudottaa
+ * jälkimmäiset pääkartan riveiltä, mutta ne ovat silti MAASSA).
+ *
+ * Omistajan bugiraportti 22.9.2026: Ranskan selitteen "Kadonneet
+ * ihmeet" -rivi näytti 0, vaikka maassa on kolme kadonnutta ihmettä
+ * (Tuileries, Bastilji, Saint-Cloud) — kaksi niistä asuu Pariisin
+ * kaupunkikartalla eikä ollut koskaan pääkartan osumissa, josta vanha
+ * laskuri luki lukunsa (js/pallolauta/nostot.js laskurikoonti).
+ *
+ * SÄÄNTÖ ON SAMA KUIN KARTAN MERKILLÄ (kohteenKategoria) — ei
+ * kopioitu ehtoa, jottei tämä funktio voi eriytyä kartan merkistä.
+ *
+ * @param {Map<string,object>|Iterable<object>} kohdetiedot maanKohdetiedot(ui, iso).
+ * @returns {object[]} kadonneet ihmekohteet, joilla on `id`.
+ */
+export function maanKadonneetIhmeet(kohdetiedot) {
+  const kohteet = kohdetiedot instanceof Map ? kohdetiedot.values() : (kohdetiedot ?? []);
+  return [...kohteet].filter((kohde) => kohde?.id && kohteenKategoria(kohde) === 'ihme');
+}
+
+/*
+ * KOHTEEN OMA MAA (Sonnet 1, kierros 16b, 20.9.2026). Kortin arvonimi
+ * luettiin pelaajan sijainnista, joten Liettuan kortissa luki
+ * *"Pariisin salonkien pöllöltä"*. Kohteet asuvat maittain
+ * (KOHDE_MAAT), joten tunnus löytyy taulusta; hakemisto rakennetaan
+ * kerran ja päivitetään, jos maita on tullut lisää (hahmotelmapaketit
+ * liitetään moduulin latauksessa).
+ */
+let kohteenIsoHakemisto = null;
+let kohteenIsoMaita = 0;
+
+export function kohteenIso(kohde) {
+  if (!kohde) return null;
+  if (typeof kohde.iso === 'string' && kohde.iso.length === 3) return kohde.iso;
+  const maat = Object.keys(KOHDE_MAAT);
+  if (!kohteenIsoHakemisto || maat.length !== kohteenIsoMaita) {
+    kohteenIsoHakemisto = new Map();
+    for (const iso of maat) {
+      for (const k of KOHDE_MAAT[iso] ?? []) {
+        if (k?.id && !kohteenIsoHakemisto.has(k.id)) kohteenIsoHakemisto.set(k.id, iso);
+      }
+    }
+    kohteenIsoMaita = maat.length;
+  }
+  return kohteenIsoHakemisto.get(kohde.id) ?? null;
+}
+
+/** Nykyinen maa (pallolauta lukee saman päättelyn kuin kohdekerros). */
+export function kohteidenNykyinenIso(ui) {
+  return nykyinenIso(ui);
+}
+
 function maanKaupungit(ui, iso) {
   const taulu = ui?.game?.pack?.map?.cityCountry;
   if (!iso || !taulu) return [];
@@ -544,6 +1378,56 @@ export function rekisteroiLisakohteet(hae) {
   if (typeof hae === 'function' && !KOHDE_LISALAHTEET.includes(hae)) {
     KOHDE_LISALAHTEET.push(hae);
   }
+}
+
+/*
+ * SAMAT LÄHTEET MAATUNNUKSELLA — NAAPURIMAAN LADONTAA VARTEN.
+ *
+ * Yllä oleva rekisteri kysyy rivinsä `ui`:lta, ja `ui` tietää vain sen
+ * maan, jossa pelaaja seisoo. Naapurimaan poltetut nostot on ladottava
+ * SAMASTA aineistosta kuin ne laattaan poltettiin
+ * (naapurienPoltetutVaraukset alempana), joten sama lähde kysytään
+ * toisen kerran pelkällä maatunnuksella — täsmälleen kuten
+ * laattageneraattori sen kysyy (tools/fokuskartta/nostot.mjs
+ * keraaNostot).
+ *
+ * Lähde on funktio (iso, lauta, kaupungit, cityCountry) → [{ kohde,
+ * paikka }] eikä se saa lukea pelitilaa: sama vastaus joka vuorolla,
+ * tai naapurin ladonta eroaisi poltetusta.
+ *
+ * ── JÄRJESTYS ON OSA LADONTAA, EI MAKUASIA ────────────────────────
+ *
+ * Rivien järjestys ratkaisee kaupunkiruuhkan karsinnan
+ * (karsiKaupunkiruuhka, tasapelissä rivijärjestys) ja erottelusiirron
+ * tasatilanteet — eli sen, mihin merkki päätyy. Lähde ei siksi saa
+ * ilmoittautua kutsujärjestyksessä (js/main.js), vaan `jarjestys`
+ * kiinnittää sen samaksi kuin laattageneraattorilla
+ * (tools/fokuskartta/nostot.mjs keraaNostot `lisat`): syvennystarinat,
+ * skandaalit, historian hetket, täkynostot.
+ *
+ * MITATTU 2.9.2026: kutsujärjestyksessä (täky ensin) 863 laatikkoa
+ * 870:stä — Alankomaat 12/18 ja Irlanti 14/15, koska niiden ladonta
+ * erosi poltetusta eikä tiiviste täsmännyt. Generaattorin
+ * järjestyksellä 870/870.
+ */
+const KOHDE_MAALAHTEET = [];
+
+export function rekisteroiMaanKohteet(hae, jarjestys = 0) {
+  if (typeof hae !== 'function' || KOHDE_MAALAHTEET.some((r) => r.hae === hae)) return;
+  /*
+   * YKSI LÄHDE JÄRJESTYSNUMEROA KOHTI (3.9.2026). kytke*-funktiot
+   * (js/fokusnosto.js, js/syvennys.js, js/skandaalit.js,
+   * js/historian-hetket.js) luovat sulkeuman joka kutsulla, ja
+   * laattageneraattori kutsuu niitä nyt itse (tools/fokuskartta/
+   * nostot.mjs keraaNostot), samoin testit — toinen kutsu korvaa
+   * edellisen samalla numerolla eikä kahdenna rivejä. Kahdennettu rivi
+   * olisi kaksi merkkiä samassa sarakkeessa ja koko maan ladonta eri
+   * kuin poltettu.
+   */
+  const vanha = KOHDE_MAALAHTEET.findIndex((r) => r.jarjestys === jarjestys);
+  if (vanha >= 0) KOHDE_MAALAHTEET.splice(vanha, 1);
+  KOHDE_MAALAHTEET.push({ hae, jarjestys });
+  KOHDE_MAALAHTEET.sort((a, b) => a.jarjestys - b.jarjestys);
 }
 
 /* ==================== MERKIT KARTALLE ==================== */
@@ -578,8 +1462,10 @@ function varmistaKohdekerros(ui) {
  *      lehdellä — tämä voittaa tyyppijohdon, koska kierros on
  *      napautuksen varsinainen lupaus);
  *   3. TYYPPIJOHTO alla olevasta taulusta;
- *   4. muuten null → vanha piste (tyypit `kaupunki` ja `muu` JÄÄVÄT
- *      pisteiksi — kaupunki on paikka eikä kategoria).
+ *   4. muuten null → vanha piste. Tänne ei enää putoa yhtään
+ *      aineiston riviä: yleistyyppi `muu` purettiin 11.9.2026 (202
+ *      riviä luettiin ja luokiteltiin tämän taulun tuntemiin
+ *      tyyppeihin), ja sen paluuta vartioi tests/nostomerkit.test.mjs.
  *
  * Vihreä tuikkiva kohtaamispiste (js/fokuspiste.js) EI saa symbolia —
  * sen erilaisuus on sen merkki (Raamattu).
@@ -602,12 +1488,32 @@ function varmistaKohdekerros(ui) {
  * toistaa yhdessäkään kutsujassa.
  */
 const KOHDE_TYYPPISYMBOLIT = {
-  // Luonto on yksi kategoria: vuoret, meret, saaret ja joet jakavat
-  // vuorenhuippu ja aalto -symbolin.
+  /*
+   * Luonto on yksi kategoria: vuoret, meret, saaret, joet ja järvet
+   * jakavat vuorenhuippu ja aalto -symbolin.
+   *
+   * JÄRVI PUUTTUI TAULUSTA 11.9.2026 ASTI. Ilman riviä
+   * `kohteenKategoria` palautti nullin, `kohdeMerkinLadonta` palautti
+   * `symboli: null` ja pallon nostokerros ohitti rivin hiljaa — eli
+   * kaksitoista järvinostoa (mm. Vostokin järvi Etelämantereella,
+   * Titicaca, Toba, Baikalin naapurit) ei piirtynyt kartalle lainkaan.
+   * Vika löytyi arktisia nostoja kirjoitettaessa. Testi
+   * `tests/nostomerkit.test.mjs` vartioi nyt, että jokainen aineistossa
+   * esiintyvä tyyppi on tässä taulussa.
+   */
   vuori: 'luonto',
   meri: 'luonto',
   saari: 'luonto',
   joki: 'luonto',
+  jarvi: 'luonto',
+  /*
+   * `muu` EI OLE TÄSSÄ EIKÄ TULE. Yleistyyppi oli sama hiljainen
+   * katoaminen kuin järvellä: 11.9.2026 aineistossa oli 202 `muu`-
+   * riviä, joista 98:lla ei ollut omaa `symboli`-kenttääkään, eli ne
+   * eivät piirtyneet kartalle lainkaan. Rivit luettiin yksitellen ja
+   * luokiteltiin tämän taulun tyyppeihin — `muu` ei siis kaipaa omaa
+   * symbolia vaan on poissa aineistosta, ja testi valvoo sitä.
+   */
   multimedia: 'silma',
   historia: 'historia',
   ruoka: 'ruoka',
@@ -622,8 +1528,23 @@ const KOHDE_TYYPPISYMBOLIT = {
   kaupunki: 'kaupunki',
 };
 
-/** Kohteen TARKKA kategoria (neljätoista) — ks. valintajärjestys yllä. */
-function kohteenKategoria(kohde) {
+/**
+ * Kohteen TARKKA kategoria (neljätoista) — ks. valintajärjestys yllä.
+ *
+ * EXPORTATTU 22.9.2026 (Ranskan "Kadonneet ihmeet" -bugi): tämä on
+ * AINOA paikka, joka tuntee ehdon `ihme.kadonnut && ihme.osoite`.
+ * Kaikkien muiden passien — myös kaupunkilehden kohdekartalle
+ * siirrettyjen kohteiden aiheen (js/pallolauta/nostot.js "siirretyt")
+ * ja maan kadonneiden ihmeiden lukumäärän (maanKadonneetIhmeet alla) —
+ * on kysyttävä TÄTÄ funktiota eikä koottava ehtoa uudelleen
+ * `kohde.symboli ?? kohde.tyyppi`-tyyppisellä oikotiellä: se ohittaa
+ * ihme-lipun, koska ihme ei ole kategoria vaan kohteen KENTTÄ, ja
+ * silloin kadonnut ihme luokittuu vahingossa historiaksi tai joksikin
+ * muuksi (juuri se, mikä pudotti Tuileriesin ja Bastiljin selitteen
+ * "Kadonneet ihmeet" -laskurista, kun ne siirtyivät Pariisin
+ * kaupunkikartalle).
+ */
+export function kohteenKategoria(kohde) {
   if (kohde?.ihme?.kadonnut && kohde.ihme.osoite) return 'ihme';
   if (NOSTOSYM_TYYPIT.has(kohde?.symboli)) return kohde.symboli;
   if (kohteenKierrokset(kohde).length) return 'silma';
@@ -665,16 +1586,30 @@ function kohteenSymboli(kohde) {
  * ankkuri tai malja ilman yhtään sanaa.
  *
  * Ehto luetaan siksi DATASTA eikä tyypistä: nimiö jää pois vain, jos
- * samassa pisteessä on lehden poltettu kaupunginnimi
- * (js/packs/fokus-grc.js FOKUS_LISANIMET) tai pelin oma laatta, jonka
- * nimen peli latoo itse. Vertailu on PAIKALLA eikä nimellä, koska
- * kirjoitusasut eroavat listojen välillä (`Patras` / `Pátra`).
+ * samassa pisteessä on nimi, jonka joku muu kartalle kirjoittaa.
+ * Vertailu on PAIKALLA eikä nimellä, koska kirjoitusasut eroavat
+ * listojen välillä (`Patras` / `Pátra`).
+ *
+ * LEHDEN POLTETTU NIMI EI ENÄÄ KELPAA SIKSI NIMEKSI (2.9.2026): lehdet
+ * on purettu, eikä pyramidiin polteta nimiä. Perustelu ja mittaus ovat
+ * nimiJoKartallan kohdalla alempana.
  */
 
 /** Sama piste laudalla: listat on poimittu samoista koordinaateista. */
 const KOHDE_SAMA_PISTE = 3;
 
-/** Lehden itse painamat kaupunginnimet laudan koordinaateissa. */
+/*
+ * LEHDEN ITSE PAINAMAT KAUPUNGINNIMET laudan koordinaateissa.
+ *
+ * TAULU ON JÄÄNNE, JA SE ON TIEDOSSA (2.9.2026): lehdet on purettu (ks.
+ * nimiJoKartalla alla), joten yksikään näistä nimistä ei ole kartalla.
+ * Funktio jää palvelemaan vain kaupunginNimiLaatikkoa eli sitä
+ * näkymätöntä napautusaluetta, joka poltetun nimen kohdalla oli — se on
+ * kartalla tyhjän paperin päällä ja avaa saman kortin kuin merkki, eikä
+ * siis ole vaarallinen. Jos taulu joskus poistetaan kokonaan, poistuu
+ * laatikkokin; se on oma erilliskysymyksensä (Raamattu:
+ * KLIKATTAVUUSLINJAN VARTIO).
+ */
 function poltetutKaupungit(ui) {
   const iso = nykyinenIso(ui);
   const tiedot = iso ? FOKUS_LISANIMET[iso] : null;
@@ -682,15 +1617,52 @@ function poltetutKaupungit(ui) {
   return tiedot.kaupungit ?? [];
 }
 
-/** Onko kohteen nimi jo kartalla — lehteen poltettuna tai laattana? */
+/* ── LEHTEEN POLTETUT NIMET EIVÄT OLE ENÄÄ MISSÄÄN (2.9.2026) ──────
+ *
+ * OMISTAJAN BUGIRAPORTTI, sanatarkasti: *"symbolit heittelee muodoiltaa
+ * ja tekstejä puuttuu"*; kaappauksessa Bulgariasta on linnasymboli
+ * ilman tekstiä kohdassa 43°P / 25,5°I. Se on Veliko Tarnovo.
+ *
+ * JUURISYY ON VANHENTUNUT OLETUS. Tämä ehto vaiensi kaupunkikohteen
+ * nimiön aina, kun samassa pisteessä oli FOKUS_LISANIMET-taulun rivi —
+ * perustelu oli *"lehti painaa nimen itse"* (v1218). Se piti
+ * paikkansa niin kauan kuin maakohtainen fokuslehti oli kartalla
+ * rasterina. LEHDET ON PURETTU: laattapyramidi on pelin ainoa
+ * karttapohja (omistaja 30.8.2026, *"poista kaikki muut vaihtoehdot
+ * käytöstä"*; js/laattapyramidi.js johdanto ja js/ui.js
+ * paivitaMaanIkkuna: *"lehdet ovat poissa"*), eikä pyramidiin polteta
+ * nimiä lainkaan (js/karttanimet.js). Taulu jäi siis kuvaamaan nimiä,
+ * jotka eivät ole kartalla missään — ja merkki jäi ilman yhtään
+ * kirjainta.
+ *
+ * MITATTU (keraaNostot, koko maailma): nimiöttömiä merkkejä 77 -> 50.
+ * Ne 27 ovat kaupunkikohteita, joiden nimeä ei nyt kirjoita kukaan:
+ * Thessaloniki, Pátra, Ioánnina, Náfplio, Plovdiv, Varna, Veliko
+ * Tarnovo, Mostar, Banja Luka, Zagreb, Split, Rijeka, Zadar, Osijek,
+ * Debrecen, Szeged, Pécs, Eger, Győr, Napoli, Milano, Torino ja
+ * vastaavat. Loput 50 vaikenevat yhä oikein: niiden nimi on kartalla
+ * maastonimenä (maastonimenPari) tai laudan omana kaupunkina.
+ *
+ * TAULU JÄÄ PAIKALLEEN. FOKUS_LISANIMET on yhä kohdedatan täydellisyyden
+ * mitta (tests/fokusnimet.test.mjs, Raamattu: KLIKATTAVUUSLINJAN
+ * VARTIO) — *"poltettu nimi ilman kohdetta vaatii velkakirjarivin"* —
+ * ja se sääntö on riippumaton siitä, kuka nimen piirtää. Vain tämä
+ * VAIENNUS poistuu, koska sen ehto ei enää päde.
+ */
+
+/** Onko kohteen nimi jo kartalla — laudan omana kaupunkina? */
 function nimiJoKartalla(ui, kohde) {
   const paikka = kohde?.laudat?.[ui?.game?.pack?.id];
   if (!Number.isFinite(paikka?.x) || !Number.isFinite(paikka?.y)) return false;
   const lahella = (a) => Number.isFinite(a?.x) && Number.isFinite(a?.y)
     && Math.abs(a.x - paikka.x) <= KOHDE_SAMA_PISTE
     && Math.abs(a.y - paikka.y) <= KOHDE_SAMA_PISTE;
-  return poltetutKaupungit(ui).some(lahella)
-    || (ui?.game?.pack?.cities ?? []).some(lahella);
+  /*
+   * LAUDAN OMA KAUPUNKI ON YHÄ NIMETTY, ja sen nimen latoo nimikerros
+   * (js/karttanimet.js) — kaksoisnimi olisi todellinen. Ehto on siis
+   * sama kuin ennen, mutta vain toinen puolisko siitä.
+   */
+  return (ui?.game?.pack?.cities ?? []).some(lahella);
 }
 
 /* ====== SAMA NIMI VAIN KERRAN KARTALLE — MYÖS MAASTONIMET ==========
@@ -715,6 +1687,30 @@ function nimiJoKartalla(ui, kohde) {
  *
  * MERKKI JÄÄ, VAIN NIMIÖ VÄISTYY. Kolmio kertoo mistä on kyse ja on yhä
  * napautettava (kortti, aihevalo); nimen sanoo laatta.
+ *
+ * ── VÄISTÖ KÄÄNTYI TOISIN PÄIN (omistaja 2.9.2026 ilta) ───────────
+ *
+ * Sanatarkasti: *"Balkan vuoret ovat edelleen polttamatta eikä tekstiä
+ * voi klikata. sen sijaan sen yläpuolella oleva irrallinen vuorenkuva
+ * vie balkan vuorten popupiin."*
+ *
+ * PERUSTE OLI VANHENTUNUT. *"Nimen sanoo laatta"* piti paikkansa
+ * niin kauan kuin maastonimet olivat pohjalaatoissa; sen jälkeen ne
+ * siirtyivät nimikerrokseen (luettelon `nimiot: false`,
+ * js/karttanimet.js), ja nimikerros latoo ne MAASTONIMEN omasta
+ * pisteestä — Balkanvuorilla 19 lautayksikköä kohdemerkin alapuolelta.
+ * Kartalle jäi kaksi puolikasta: nimetön mutta napautettava merkki ja
+ * napauttamaton nimi sen alla, eri lähteistä.
+ *
+ * NYT PARI RATKAISTAAN KERRAN JA MOLEMMAT PUOLET LUKEVAT SAMAN
+ * VASTAUKSEN (maastoParit alempana). Yhden maan kohde saa nimiönsä
+ * takaisin — se palaa nostotasolle nimineen ja saa poltetun nimiön
+ * osumamuodon (asetaPoltetutTekstiOsumat), eli nimi ja merkki ovat
+ * yhtä piirrosta ja yhtä napautusalaa — ja nimikerros jättää saman
+ * maastonimen latomatta (js/karttanimet.js asetaMaastonOmistajat).
+ * Monen maan merkki (Victorianjärvi, Tonava) ei polttaudu eikä ole
+ * kartalla muualla kuin omassa maassaan, joten sen nimen kirjoittaa
+ * yhä nimikerros ja merkki vaikenee kuten ennenkin.
  */
 
 /*
@@ -728,16 +1724,19 @@ function nimiJoKartalla(ui, kohde) {
  */
 
 /**
- * Onko samanniminen maastonimi poltettu laattaan tähän kohtaan?
+ * Sama maastonimi tässä kohtaa — se TIETUE vai null.
  *
  * Joen ankkuri on uoman kiinteä keskikohta — sama piste, jonka
  * laattojen ladonta ja entinen elävä kerros (js/mapart.js
  * drawMaastonimet) valitsivat.
+ *
+ * Palauttaa tietueen eikä totuusarvoa, koska molemmat puolet tarvitsevat
+ * SAMAN tietueen: nimikerros jättää juuri sen latomatta, ja tämä kerros
+ * kirjoittaa sen nimen (maastoParit alempana).
  */
-function maastonimiLahella(ui, kohde, paikka) {
-  if (ui?.game?.pack?.id !== 'maailmankartta') return false;
+function maastonimenPari(kohde, paikka) {
   const nimi = normalisoiNimi(kohde?.nimi);
-  if (!nimi) return false;
+  if (!nimi || !Number.isFinite(paikka?.x) || !Number.isFinite(paikka?.y)) return null;
   const osuu = (x, y) => {
     let dx = Math.abs(x - paikka.x);
     if (dx > LAUDAN_YMPARYS / 2) dx = LAUDAN_YMPARYS - dx;
@@ -745,7 +1744,7 @@ function maastonimiLahella(ui, kohde, paikka) {
   };
   for (const laji of ['vuoret', 'jarvet']) {
     for (const m of MAAILMANKARTAN_NIMET[laji] ?? []) {
-      if (normalisoiNimi(m.nimi) === nimi && osuu(m.x, m.y)) return true;
+      if (normalisoiNimi(m.nimi) === nimi && osuu(m.x, m.y)) return m;
     }
   }
   for (const joki of MAAILMANKARTAN_NIMET.joet ?? []) {
@@ -753,15 +1752,97 @@ function maastonimiLahella(ui, kohde, paikka) {
     const pisteet = joki.pisteet ?? [];
     if (pisteet.length < 2) continue;
     const keski = pisteet[Math.floor(pisteet.length / 2)];
-    if (osuu(keski[0], keski[1])) return true;
+    if (osuu(keski[0], keski[1])) return joki;
   }
-  return false;
+  return null;
 }
 
+/*
+ * PARIT KERRAN, KAKSI LUKIJAA (ks. lohko "VÄISTÖ KÄÄNTYI TOISIN PÄIN").
+ *
+ * `omistetut`  maastonimen tietueita, jotka KOHDEMERKKI kirjoittaa —
+ *              nimikerros jättää ne latomatta (asetaMaastonOmistajat).
+ * `vaikenevat` kohteiden tunnuksia, joiden nimen kirjoittaa NIMIKERROS
+ *              maastonimenä — merkki jää nimiöttömäksi kuten ennen.
+ *
+ * JAKO SEURAA POLTTOSÄÄNTÖÄ. Monen maan merkki latoutuu joka maassa eri
+ * paikkaan eikä sitä siksi polteta lainkaan (tools/fokuskartta/nostot.mjs
+ * "SAMA TUNNUS KAHDESSA MAASSA EI PALA"), joten se on kartalla vain
+ * pelaajan omassa maassa — Victorianjärven nimen on tultava kerrokselta,
+ * joka piirtää sen aina. Yhden maan merkki poltetaan koko maailman
+ * kartalle, joten se kantaa nimensä itse.
+ *
+ * TAULU ON LAUDAN OMINAISUUS EIKÄ PELIN: KOHDE_MAAT ja maastonimet ovat
+ * molemmat vakioaineistoa, joten se lasketaan kerran ensimmäisellä
+ * kysymyksellä (435 kohdetta x ~130 maastonimeä, mitattuna alle
+ * millisekunti).
+ */
+let maastoParitTaulu = null;
+
+/*
+ * NIMI KUULUU MERKILLE VAIN, JOS SE ON MERKIN VIERESSÄ (Fable 2.9.2026,
+ * N3-katselmointi). Parin etäisyysraja (PARIN_ETAISYYS 400) kertoo,
+ * että kyse on SAMASTA kohteesta — ei sitä, että nimi saa muuttaa
+ * merkin luo. Kaspianmeren merkki on Iranin pohjoisrannikon edustalla
+ * ja nimi järven keskellä 174 lautayksikön päässä: jos merkki ottaisi
+ * nimen, "Kaspianmeri" lukisi Iranin rannassa eikä meren päällä. Sama
+ * koskee jokia, joiden merkki on suistossa ja nimi uoman keskellä.
+ *
+ * Raja on kauimmaisen aidon lähiparin (Alpit 114,7) yläpuolella
+ * (mitattu 2.9.2026: Senegaljoki 118 omistaa, Veiksel 124 ja Rein 130
+ * jäävät nimikerrokselle, Kaspianmeri 174, Niili ja Jangtse yli 180):
+ * sitä lähempänä nimi ja merkki ovat samaa piirrosta, kauempana nimi
+ * jää nimikerroksen paikalleen ja merkki vaikenee kuten ennen.
+ */
+const OMISTUKSEN_ETAISYYS = 120;
+
+function nimiKuuluuMerkille(pari, paikka) {
+  let x = pari?.x;
+  let y = pari?.y;
+  if (!Number.isFinite(x) && Array.isArray(pari?.pisteet) && pari.pisteet.length >= 2) {
+    const keski = pari.pisteet[Math.floor(pari.pisteet.length / 2)];
+    [x, y] = keski;
+  }
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return false;
+  let dx = Math.abs(x - paikka.x);
+  if (dx > LAUDAN_YMPARYS / 2) dx = LAUDAN_YMPARYS - dx;
+  return Math.hypot(dx, y - paikka.y) <= OMISTUKSEN_ETAISYYS;
+}
+
+function maastoParit() {
+  if (maastoParitTaulu) return maastoParitTaulu;
+  const kertoja = new Map();
+  for (const lista of Object.values(KOHDE_MAAT)) {
+    for (const k of lista) kertoja.set(k.id, (kertoja.get(k.id) ?? 0) + 1);
+  }
+  const omistetut = new Set();
+  const vaikenevat = new Set();
+  for (const lista of Object.values(KOHDE_MAAT)) {
+    for (const k of lista) {
+      const paikka = k.laudat?.maailmankartta;
+      const pari = maastonimenPari(k, paikka);
+      if (!pari) continue;
+      if ((kertoja.get(k.id) ?? 0) > 1 || !nimiKuuluuMerkille(pari, paikka)) {
+        vaikenevat.add(k.id);
+      } else {
+        omistetut.add(pari);
+      }
+    }
+  }
+  maastoParitTaulu = { omistetut, vaikenevat };
+  return maastoParitTaulu;
+}
+
+/*
+ * ILMOITTAUTUMINEN NIMIKERROKSELLE. Riippuvuus osoittaa yhteen suuntaan
+ * (tämä moduuli tuntee nimikerroksen, ei toisin päin), ja haku on laiska:
+ * taulu lasketaan vasta ensimmäisestä ladonnasta.
+ */
+asetaMaastonOmistajat(() => maastoParit().omistetut);
+
 function kohteenNimio(ui, kohde) {
-  const paikka = kohde?.laudat?.[ui?.game?.pack?.id];
-  if (Number.isFinite(paikka?.x) && Number.isFinite(paikka?.y)
-    && maastonimiLahella(ui, kohde, paikka)) return false;
+  if (ui?.game?.pack?.id === 'maailmankartta'
+    && maastoParit().vaikenevat.has(kohde?.id)) return false;
   if (kohde?.tyyppi !== 'kaupunki') return true;
   return !nimiJoKartalla(ui, kohde);
 }
@@ -952,14 +2033,15 @@ export function kohdeMerkinLadonta(ui, kohde) {
   // samaa tekstiä, joka merkin perään ladotaan.
   ulos.nimi = kohteenKarttanimi(kohde);
   /*
-   * YHDISTETYN MERKIN NIMIÖ ON JO LADOTTU MITTAANSA
-   * (js/fokusryhmat.js ryhmaNimio: jäsenten nimet pilkulla,
-   * katkaistuna kolmella pisteellä). Kartan 18 merkin sääntö
-   * katkaisisi sen ensimmäisen nimen kohdalta, joten kuori sanoo
-   * kirjastolle "älä koske" — sama luku kulkee sekä piirtoon että
-   * väistön laatikkomittaan, jottei niistä tule kahta eri tekstiä.
+   * NIMIÖN KATTO ON KARTAN OMA 18 MERKKIÄ, EIKÄ POIKKEUKSIA OLE
+   * (31.8.2026). Ainoa poikkeus oli yhdistetyn merkin pilkkulista, joka
+   * oli jo ladottu omaan mittaansa ja sanoi kirjastolle "älä koske";
+   * yhdistely purettiin, joten jokainen nimiö kulkee saman lyhennyksen
+   * läpi (js/fokusnosto-symbolit.js nostosymLyhennaNimio). Kenttä jää
+   * ladontatietueeseen, koska sekä piirto että väistön laatikkomitta
+   * lukevat sen — yksi luku kumpaankin, tai teksteistä tulisi kaksi.
    */
-  ulos.nimioKatto = ryhmaKuori(kohde) ? Infinity : undefined;
+  ulos.nimioKatto = undefined;
   return ulos;
 }
 
@@ -997,7 +2079,20 @@ export function kohdeMerkinLadonta(ui, kohde) {
  *
  * KAUPUNGIN LAATTA ON MUKANA SAMASSA RATKONNASSA (omistajan päätös
  * 28.8.2026, ks. js/fokusniput.js sääntö 9): kilpailijoita ei ole enää
- * kaksi lajia vaan yksi mitta. Ks. kohdeNapautuksenVoittaja alla.
+ * kaksi lajia vaan yksi mitta. Ks. merkkiNapautuksenVoittaja alla.
+ *
+ * ELÄINTÄKYMERKKI ON KOLMAS KILPAILIJA (QA-ajo 1.9.2026, 168
+ * napautusta): eläinkerros (js/elaintaky.js .elaintaky-merkki) piirtyy
+ * kohdekerroksen PÄÄLLE, joten selain antoi limittäisen napautuksen
+ * aina eläimelle — täsmälleen sama vika kuin v1217:n Parnassóksella,
+ * vain kerrosten välillä. QA:n kolme tapausta: Bulgarian
+ * skandaali-veda-slovena (23,73E/41,57N) avasi pelastuskarhun
+ * (23,6/41,6), Turkin vanin-kissa avasi Vanin kissan eläintäyn ja
+ * Bosnian syvennys-sarajevo-villihevoset (17,06/43,90) avasi
+ * villihevosvarsan (17,05/43,83). Nyt kummankin kerroksen merkit
+ * mitataan samalla mittatikulla ja voitto käy KUMPAANKIN suuntaan:
+ * eläinmerkki voittaa kohdemerkin silloin kun se on lähempänä.
+ * Ks. lahinElaintaky ja merkkiNapautuksenVoittaja alla.
  *
  * @returns {{kohde: ?object, etaisyys: number}} lähin kohde ja sen
  *   keskipisteen etäisyys napautuksesta ruudun pikseleinä (Infinity,
@@ -1013,6 +2108,14 @@ function lahinKohde(ui, tapahtuma) {
   for (const g of ui.fokuskohdeKerros?.querySelectorAll('.fokuskohde') ?? []) {
     const kohde = ui.fokuskohdeTiedot?.get(g.dataset.kohde);
     if (!kohde) continue;
+    /*
+     * NIMIKYLTTI EI OTA NAPAUTUSTA. `vainNimi`-kohde on kartan
+     * typografiaa (näkyvä kaupunki ilman korttia,
+     * js/packs/nakyvat-kaupungit-fra.js): jos se osallistuisi
+     * etäisyyskilpailuun, se veisi napautuksen naapurinostolta ja
+     * avaisi tyhjän kortin.
+     */
+    if (kohde.vainNimi) continue;
     for (const muoto of g.querySelectorAll('.fokuskohde-osuma')) {
       const r = muoto.getBoundingClientRect();
       if (!(r.width > 0) || !(r.height > 0)) continue;
@@ -1027,6 +2130,51 @@ function lahinKohde(ui, tapahtuma) {
 }
 
 /**
+ * LÄHIN ELÄINTÄKYMERKKI — sama mitta, toinen kerros (QA 1.9.2026).
+ *
+ * Eläintäkymerkit (js/elaintaky.js) ovat kartan omassa kerroksessaan
+ * eivätkä kohdekerroksessa, mutta niiden osuma-alue on sama sormen
+ * ympyrä (ELAINTAKY_OSUMA_R = 22) ja ne asettuvat kohdemerkkien
+ * sekaan. Ilman tätä hakua ne eivät kilpailleet lainkaan, vaan veivät
+ * napautuksen piirtojärjestyksellä — sillä samalla tavalla, jonka
+ * v1218 poisti kohdemerkkien väliltä.
+ *
+ * MITTA LUETAAN DOMISTA EIKÄ MODUULISTA. Eläinkerros tuo tämän
+ * moduulin (avaaKohdeSuurennos), joten tuonti toisin päin olisi kehä;
+ * kerroksen solmut riittävät, kun voiton täytäntöönpano jää sen omalle
+ * avaajalle (ui.avaaElaintakyMerkki). ILMAN AVAAJAA EI KILPAILLA:
+ * merkkiä, jota ei voisi avata, ei saa päästää voittamaan.
+ *
+ * Piilossa oleva kerros (elaintakyt-piilossa) on `display: none`,
+ * jolloin ruutulaatikot ovat nollan kokoisia eikä yksikään merkki
+ * mittaa — sama vaikutus kuin selaimen osumatestissä. Eleen ajaksi
+ * mitään ei enää piiloteta (js/kartta.js asennaPanorointi).
+ *
+ * @returns {{merkki: ?Element, etaisyys: number}}
+ */
+function lahinElaintaky(ui, tapahtuma) {
+  const tyhja = { merkki: null, etaisyys: Infinity };
+  const x = tapahtuma?.clientX;
+  const y = tapahtuma?.clientY;
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return tyhja;
+  if (typeof ui?.avaaElaintakyMerkki !== 'function') return tyhja;
+  const kerros = ui.elaintakyKerros;
+  if (!kerros?.isConnected) return tyhja;
+  let paras = null;
+  let lyhin = Infinity;
+  for (const muoto of kerros.querySelectorAll('.elaintaky-osuma')) {
+    const r = muoto.getBoundingClientRect();
+    if (!(r.width > 0) || !(r.height > 0)) continue;
+    if (x < r.left || x > r.right || y < r.top || y > r.bottom) continue;
+    const etaisyys = Math.hypot(x - (r.left + r.width / 2), y - (r.top + r.height / 2));
+    // Ympyrän laatikko on sen neliö: nurkat eivät kuulu alueeseen.
+    if (etaisyys > r.width / 2) continue;
+    if (etaisyys < lyhin) { lyhin = etaisyys; paras = muoto.closest('.elaintaky-merkki'); }
+  }
+  return { merkki: paras, etaisyys: lyhin };
+}
+
+/**
  * Merkin OMAN osumamuodon keskipisteen etäisyys napautuksesta.
  *
  * Varapolku sille pikselin murto-osan levyiselle reunakaistalle, jossa
@@ -1034,13 +2182,17 @@ function lahinKohde(ui, tapahtuma) {
  * ruutulaatikkomatematiikka hylkää sen (lahinKohde vertaa etäisyyttä
  * laatikon puolikkaaseen). Ilman tätä kilpailu jäisi käymättä ja
  * kaupunki voittaisi kaistalla aina, vaikka merkki oli sormen alla.
+ *
+ * Valitsin on parametri, koska sama varapolku koskee eläintäkymerkkiä
+ * (QA 1.9.2026): sen osumamuodolla on oma luokkansa, mutta mitta ja
+ * syy ovat samat.
  */
-function omanMerkinEtaisyys(g, tapahtuma) {
+function omanMerkinEtaisyys(g, tapahtuma, valitsin = '.fokuskohde-osuma') {
   const x = tapahtuma?.clientX;
   const y = tapahtuma?.clientY;
   if (!Number.isFinite(x) || !Number.isFinite(y)) return Infinity;
   let lyhin = Infinity;
-  for (const muoto of g?.querySelectorAll?.('.fokuskohde-osuma') ?? []) {
+  for (const muoto of g?.querySelectorAll?.(valitsin) ?? []) {
     const r = muoto.getBoundingClientRect();
     if (!(r.width > 0) || !(r.height > 0)) continue;
     const etaisyys = Math.hypot(x - (r.left + r.width / 2), y - (r.top + r.height / 2));
@@ -1050,7 +2202,7 @@ function omanMerkinEtaisyys(g, tapahtuma) {
 }
 
 /**
- * NAPAUTUKSEN VOITTAJA: lähin kohde vai kaupungin laatta?
+ * NAPAUTUKSEN VOITTAJA: lähin kohde, eläintäky vai kaupungin laatta?
  *
  * Merkkikerrokset piirtyvät laattakerroksen päälle, joten selain antaa
  * limittäisen napautuksen aina merkille. Omistajan päätös 28.8.2026
@@ -1059,24 +2211,95 @@ function omanMerkinEtaisyys(g, tapahtuma) {
  * lähempänä kuin yhdenkään merkin, työ luovutetaan laatalle. Juuri tämä
  * sallii nipun asettua kaupungin viereen (NIPPU_DX 48 -> 37).
  *
+ * SAMA KOSKEE ELÄINTÄKYKERROSTA (QA 1.9.2026, ks. LÄHIN VOITTAA
+ * yllä). Kumpi tahansa merkkikerros voi saada tapahtuman ensin, ja
+ * kumpi tahansa voi voittaa — ratkaisu on aina lähin keskipiste.
+ *
  * TASATILANTEESSA VOITTAA MERKKI (`<` eikä `<=`): merkki on laattaa
  * pienempi ja sitä hankalampi osua, ja kaupunki on tavoitettavissa myös
- * ilman merkkien kanssa kilpailua koko laatan alalta.
+ * ilman merkkien kanssa kilpailua koko laatan alalta. Merkkien kesken
+ * tasan menevän voittaa kohdemerkki (`<=`) — kartan pääkerros ensin,
+ * jotta järjestys on deterministinen eikä kerrosten piirtojärjestyksen
+ * varassa.
  *
- * @param {object} oma  merkki, jonka kuuntelija tapahtuman sai.
+ * VARAPOLKU ON SEN KERROKSEN, JOKA TAPAHTUMAN SAI. Reunakaistalla (ks.
+ * omanMerkinEtaisyys) oma kerros mittaa itsensä, ja toinen kerros jää
+ * Infinityyn — muuten napautus karkaisi naapurikerrokselle juuri siinä
+ * kaistassa, jossa selain oli jo valinnut merkin.
+ *
+ * @param {?object} oma kohde, jonka kuuntelija tapahtuman sai — null,
+ *   kun kysyjä on eläintäkykerros.
  * @param {Element} g   saman merkin ryhmä — varapolun mitta (ks.
  *   omanMerkinEtaisyys) ja se merkki, joka voittaa ilman napautuskohtaa
  *   (näppäimistön Enter).
- * @returns {?object} voittanut kohde, tai null kun kaupunki voitti.
+ * @returns {{laji: string, kohde: ?object, merkki: ?Element}} voittaja:
+ *   `kohde` (kohdemerkki), `elain` (eläintäkymerkki) tai `kaupunki`.
  */
-function kohdeNapautuksenVoittaja(ui, tapahtuma, oma, g) {
+function merkkiNapautuksenVoittaja(ui, tapahtuma, oma, g) {
   const osuma = lahinKohde(ui, tapahtuma);
   // Jos yksikään muoto ei mitannut, kilpailijaksi tulee se merkki, jonka
   // kuuntelija tapahtuman sai — ei Infinity, joka antaisi voiton
   // laatalle ilman kilpailua.
-  const kohde = osuma.kohde ?? oma;
-  const etaisyys = osuma.kohde ? osuma.etaisyys : omanMerkinEtaisyys(g, tapahtuma);
-  return nippuLaatanEtaisyys(ui, tapahtuma) < etaisyys ? null : kohde;
+  const kohde = osuma.kohde ?? oma ?? null;
+  let kohdeEtaisyys = Infinity;
+  if (osuma.kohde) kohdeEtaisyys = osuma.etaisyys;
+  else if (oma) kohdeEtaisyys = omanMerkinEtaisyys(g, tapahtuma);
+  const elain = lahinElaintaky(ui, tapahtuma);
+  const merkki = elain.merkki ?? (oma ? null : g ?? null);
+  let elainEtaisyys = Infinity;
+  if (elain.merkki) elainEtaisyys = elain.etaisyys;
+  else if (!oma) elainEtaisyys = omanMerkinEtaisyys(g, tapahtuma, '.elaintaky-osuma');
+  if (nippuLaatanEtaisyys(ui, tapahtuma) < Math.min(kohdeEtaisyys, elainEtaisyys)) {
+    return { laji: 'kaupunki', kohde: null, merkki: null };
+  }
+  if (kohde && kohdeEtaisyys <= elainEtaisyys) return { laji: 'kohde', kohde, merkki: null };
+  if (merkki) return { laji: 'elain', kohde: null, merkki };
+  return { laji: 'kohde', kohde, merkki: null };
+}
+
+/**
+ * Kohdemerkin napautuksen työ: auki, tai kiinni jos se oli jo auki.
+ * Yhdessä paikassa, koska sen tekee myös eläinkerrokselta luovutettu
+ * napautus (QA 1.9.2026).
+ */
+function avaaTaiSuljeKohde(ui, kohde) {
+  if (!kohde) return;
+  if (ui.fokuskohdeAuki?.id === kohde.id) suljeFokuskohde(ui);
+  else avaaFokuskohde(ui, kohde);
+}
+
+/**
+ * ELÄINTÄKYMERKIN NAPAUTUS SAMAAN KILPAILUUN (QA 1.9.2026).
+ *
+ * Eläinkerros kysyy tätä ennen oman korttinsa avaamista — sama
+ * sopimus kuin kaupungin laatalla (js/fokusniput.js sääntö 9), vain
+ * kolmella kilpailijalla. Työ tehdään täällä, koska kilpailun tuntee
+ * tämä moduuli; eläinkerros tarvitsee vain tiedon, jäikö sille mitään.
+ *
+ * @param {Element} g eläintäkymerkin ryhmä (.elaintaky-merkki).
+ * @returns {boolean} true kun napautus kuului toiselle merkille tai
+ *   kaupungille ja se on jo hoidettu; false kun kysyjä itse voitti.
+ */
+export function elainmerkinNapautusLuovutettu(ui, tapahtuma, g) {
+  /*
+   * LINSSIN PORTTI MYÖS ELÄINTÄYLLE (omistaja 4.9.2026). Eläinkerros
+   * (js/elaintaky.js) kysyy tätä ensimmäisenä ja jättää napautuksen
+   * sikseen, kun vastaus on tosi — linssin aikana napautus on siis
+   * "jo hoidettu" eikä avaa mitään, ilman että eläinkerroksen
+   * tarvitsee tietää linssistä.
+   */
+  if (linssiEstaa()) return true;
+  const voittaja = merkkiNapautuksenVoittaja(ui, tapahtuma, null, g);
+  // Laatta voitti: napautus on kaupungin, myös silloin kun kaupunkia ei
+  // juuri nyt voi avata (kiire, ei tutkittavaa) — sama kuin kohdemerkillä.
+  if (voittaja.laji === 'kaupunki') { nippuAvaaKaupunki(ui); return true; }
+  if (voittaja.laji === 'kohde') { avaaTaiSuljeKohde(ui, voittaja.kohde); return true; }
+  // Eläinkerros voitti — mutta voittaja voi olla naapurimerkki.
+  if (voittaja.merkki && voittaja.merkki !== g) {
+    ui.avaaElaintakyMerkki?.(voittaja.merkki);
+    return true;
+  }
+  return false;
 }
 
 function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
@@ -1133,6 +2356,22 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
    */
   const ladonta = kohdeMerkinLadonta(ui, kohde);
   Object.assign(tietue, ladonta);
+  /*
+   * KOLMAS OSUMA-ALUE: NOSTON TEKSTI KOKONAAN (omistaja 1.9.2026 ilta:
+   * "Saisiko karttanostoissa myös tekstit kokonaisuudessa
+   * klikattaviksi? Nyt vain osa tekstistä on klikattavissa"). Sormen
+   * ympyrä kattoi nimiöstä vain alun; loppu oli kuollutta paperia.
+   * Suorakaide asettuu väistöpassin valitsemaan nimiölaatikkoon
+   * (asetaTekstiOsumat) — samaan, johon nimiö rasterissa ladotaan tai
+   * laattaan poltettiin — ja kilpailee napautuksesta keskipisteellään
+   * kuten muutkin osumamuodot (lahinKohde). Nimikerroksen latomat
+   * elävät nimet hoitaa kerros itse (js/karttanimet.js data-kohde).
+   */
+  if (ladonta.nimi) {
+    tietue.tekstiOsuma = el('rect', {
+      class: 'fokuskohde-osuma fokuskohde-tekstiosuma', width: 0, height: 0,
+    }, g);
+  }
   if (symboli) {
     /*
      * Alaryhmä kutistaa kirjaston merkin kohdemerkin mittaan; symbolin
@@ -1162,9 +2401,9 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
       tietue.glyyfi = glyyfi;
       tietue.nimioNakyy = !ui.fokuskohdePiiloNimiot?.has(kohde.id);
       // Sama arvaus koskee myös nimiön PUOLTA (v1218): ahtaassa
-      // paikassa väistö on saattanut kääntää nimiön vasemmalle, ja
+      // paikassa väistö on saattanut siirtää nimiön toiselle kyljelle, ja
       // ilman muistia ensipiirto latoisi sen hetkeksi väärin päin.
-      tietue.nimioVasemmalle = ui.fokuskohdeNimioPuolet?.get(kohde.id) ?? false;
+      tietue.nimioPuoli = ui.fokuskohdeNimioPuolet?.get(kohde.id) ?? 'oikea';
     }
     /*
      * TYYPPI KULKEE MERKILLE MUKANA (27.8.2026 ilta). Kirjasto tarvitsee sen
@@ -1174,29 +2413,46 @@ function piirraKohdemerkki(ui, ryhma, kohde, tietue) {
      */
     piirraNostosymKartalle(glyyfi, symboli,
       tietue.nimioNakyy ? kohteenKarttanimi(kohde) : '',
-      kohde.tyyppi, tietue.nimioVasemmalle, tietue.nimioKatto);
+      kohde.tyyppi, tietue.nimioPuoli, tietue.nimioKatto);
   } else {
     el('circle', { class: 'fokuskohde-halo', r: KOHDE_HALO_R }, g);
     el('circle', { class: 'fokuskohde-rengas', r: KOHDE_RENGAS_R }, g);
     el('circle', { class: 'fokuskohde-piste', r: KOHDE_PISTE_R }, g);
   }
+  kytkeMerkinNapautus(ui, g, kohde);
+  return g;
+}
+
+/**
+ * MERKIN NAPAUTUS — YKSI KUUNTELIJA, KAKSI KIRJOITTAJAA.
+ *
+ * Kutsujia on kaksi: oman maan kohdemerkki (piirraKohdemerkki) ja
+ * naapurimaan poltetun merkin osumamuoto (asetaNaapurinOsumat, lisätty
+ * 2.9.2026). Kumpikin ryhmä kilpailee samassa etäisyyskisassa ja avaa
+ * saman kortin, joten kuuntelijakin on sama — kopio ajautuisi ennen
+ * pitkää eri sääntöihin, ja juuri se ero oli naapurin merkeissä ensin:
+ * osumamuoto oli olemassa, mutta napautus ei tehnyt mitään.
+ */
+function kytkeMerkinNapautus(ui, g, kohde) {
   const avaa = (tapahtuma) => {
     tapahtuma.stopPropagation();
     tapahtuma.preventDefault();
+    // Linssin aikana merkki ei avaa mitään — ei korttia eikä kaupunkia
+    // (ks. avaaFokuskohde ja js/ui-apurit.js linssiEstaa).
+    if (linssiEstaa()) return;
     // Osuma-alueet limittyvät (KOHDE_OSUMA_R on sormen mitta, ei
     // merkin): voittajan valitsee etäisyys eikä piirtojärjestys.
-    // Null = kaupungin laatta oli lähempänä, ja napautus kuuluu sille
-    // (omistaja 28.8.2026, js/fokusniput.js sääntö 9).
-    const valittu = kohdeNapautuksenVoittaja(ui, tapahtuma, kohde, g);
-    if (!valittu) { nippuAvaaKaupunki(ui); return; }
-    if (ui.fokuskohdeAuki?.id === valittu.id) suljeFokuskohde(ui);
-    else avaaFokuskohde(ui, valittu);
+    // Kaupungin laatta (omistaja 28.8.2026, js/fokusniput.js sääntö 9)
+    // ja eläintäkymerkki (QA 1.9.2026) ovat samassa kilpailussa.
+    const voittaja = merkkiNapautuksenVoittaja(ui, tapahtuma, kohde, g);
+    if (voittaja.laji === 'kaupunki') { nippuAvaaKaupunki(ui); return; }
+    if (voittaja.laji === 'elain') { ui.avaaElaintakyMerkki?.(voittaja.merkki); return; }
+    avaaTaiSuljeKohde(ui, voittaja.kohde);
   };
   g.addEventListener('click', avaa);
   g.addEventListener('keydown', (tapahtuma) => {
     if (tapahtuma.key === 'Enter' || tapahtuma.key === ' ') avaa(tapahtuma);
   });
-  return g;
 }
 
 /**
@@ -1267,21 +2523,50 @@ const KOHDE_ERO_KIERROKSIA = 4;
  * kiinteällä suunnalla eikä satunnaisluvulla. Sama lehti antaa siis
  * aina saman kartan.
  *
- * TYÖ TEHDÄÄN VAIN KUN MITTA MUUTTUI: vakioskaalalla vastaus on sama
- * niin kauan kuin lehti ja ruutukoko pysyvät (ui.fokuskohdeEroAvain).
+ * ── PASSI AJETAAN KASAUKSEN JÄLKEEN, EI ENNEN (31.8.2026) ─────────
+ *
+ * Järjestys oli erottelu → kasaus → väistö, ja se oli väärin heti kun
+ * rypäs alkoi latoutua kaupungin molemmin puolin (js/fokusniput.js
+ * sääntö 2). Erottelu näki merkkien DATAPAIKAT, kasaus siirsi osan
+ * niistä kaupungin kylkeen — ja siellä ne saattoivat laskeutua suoraan
+ * jonkin kasauksen ULKOPUOLELLE jääneen merkin päälle. Mitattu Ateenassa:
+ * Marathon (datassa 10 lautayksikköä kaupungista) jäi 1,7 yksikön päähän
+ * ryppääseen ladotusta Akropoliista, kun symbolien pitäisi olla 5,9
+ * yksikön päässä toisistaan; koko maailmassa liian lähelle jääneitä
+ * pareja oli 33.
+ *
+ * KIINTEÄ JA VAPAA. Passi lukee nyt merkkien LOPULLISET paikat, ja
+ * ryppääseen ladottu merkki on KIINTEÄ: se ei väisty, koska sen paikka
+ * on ladonnan päätös eikä sattuma, ja väistyminen hajottaisi juuri sen
+ * sarakkeen, joka kertoo merkin kuuluvan kaupunkiin. Vapaa merkki
+ * väistää silloin yksin koko matkan. Kahden vapaan pari erkanee kuten
+ * ennenkin puoliksi, ja kaksi kiinteää ei voi olla liian lähellä
+ * toisiaan, koska sarakkeen riviväli on mitoitettu juuri tähän
+ * (js/fokusniput.js NIPPU_VALI).
+ *
+ * TYÖ TEHDÄÄN VAIN KUN MITTA TAI ASETTELU MUUTTUI: vakioskaalalla
+ * vastaus on sama niin kauan kuin lehti ja kasausasettelu pysyvät
+ * (ui.fokuskohdeEroAvain; asettelun versio js/fokusniput.js
+ * nippuAsettelunVersio).
  */
 export function eritteleKohdeRyhmat(ui, s) {
   const ryhmat = ui.fokuskohdeRyhmat ?? [];
   if (!ryhmat.length) return;
-  const avain = `${ui.fokuskohdeAvain}:${s.toFixed(4)}`;
+  const avain = `${ui.fokuskohdeAvain}:${s.toFixed(4)}:${nippuAsettelunVersio()}`;
   if (ui.fokuskohdeEroAvain === avain) return;
   ui.fokuskohdeEroAvain = avain;
   const vahin = KOHDE_ERO_MIN * s;
-  const paikat = ryhmat.map(({ x, y }) => ({ x, y }));
+  // Lähtöpaikka on merkin LOPULLINEN paikka: kasattu nippupaikka tai
+  // datapaikka. Vanhat erottelusiirrot nollautuvat, koska ne lasketaan
+  // tässä joka kerta uudestaan samasta lähtökohdasta.
+  const kiinteat = ryhmat.map((r) => Boolean(r.nippu));
+  const paikat = ryhmat.map((r) => ({ x: r.nippu?.x ?? r.x, y: r.nippu?.y ?? r.y }));
   for (let kierros = 0; kierros < KOHDE_ERO_KIERROKSIA; kierros += 1) {
     let liikkui = false;
     for (let i = 0; i < paikat.length; i += 1) {
       for (let j = i + 1; j < paikat.length; j += 1) {
+        // Kaksi kiinteää ei väisty kumpikaan: ladonta on jo päättänyt.
+        if (kiinteat[i] && kiinteat[j]) continue;
         const a = paikat[i];
         const b = paikat[j];
         let dx = b.x - a.x;
@@ -1296,20 +2581,31 @@ export function eritteleKohdeRyhmat(ui, s) {
           dy = Math.sin(kulma);
           etaisyys = 1;
         }
-        // Molempia puoliksi: pari erkanee, eikä kumpikaan siirry yksin.
-        const puolikas = (vahin - etaisyys) / 2;
-        const sx = (dx / etaisyys) * puolikas;
-        const sy = (dy / etaisyys) * puolikas;
-        a.x -= sx; a.y -= sy;
-        b.x += sx; b.y += sy;
+        /*
+         * Vapaat puoliksi, mutta kiinteän parina vapaa siirtyy yksin
+         * koko matkan — muuten pari jäisi puoliksi limittäin.
+         */
+        const vaje = vahin - etaisyys;
+        const aOsuus = kiinteat[i] ? 0 : (kiinteat[j] ? 1 : 0.5);
+        const bOsuus = kiinteat[j] ? 0 : (kiinteat[i] ? 1 : 0.5);
+        const yx = dx / etaisyys;
+        const yy = dy / etaisyys;
+        a.x -= yx * vaje * aOsuus; a.y -= yy * vaje * aOsuus;
+        b.x += yx * vaje * bOsuus; b.y += yy * vaje * bOsuus;
         liikkui = true;
       }
     }
     if (!liikkui) break;
   }
   for (let i = 0; i < ryhmat.length; i += 1) {
-    ryhmat[i].sx = paikat[i].x - ryhmat[i].x;
-    ryhmat[i].sy = paikat[i].y - ryhmat[i].y;
+    /*
+     * KIINTEÄN SIIRTO ON NOLLA, ja se kirjoitetaan silti: nippupaikka
+     * ohittaa sen kaikkialla (`r.nippu?.x ?? r.x + r.sx`), mutta jos
+     * merkki putoaa ryppäästä seuraavalla ajolla, vanha siirto ei saa
+     * jäädä sen mukaan.
+     */
+    ryhmat[i].sx = kiinteat[i] ? 0 : paikat[i].x - ryhmat[i].x;
+    ryhmat[i].sy = kiinteat[i] ? 0 : paikat[i].y - ryhmat[i].y;
   }
 }
 
@@ -1341,8 +2637,15 @@ export function eritteleKohdeRyhmat(ui, s) {
  * ja seuraava poltto korjaa sen.
  */
 
-/** Onko merkki poltettu laattaan? Yksi vastaus, kaksi kysyjää. */
+/**
+ * Onko merkki poltettu laattaan? Yksi vastaus, kaksi kysyjää.
+ *
+ * KAUPUNKIPISTE EI KOSKAAN (js/nostoladonta.js onKaupunkipiste):
+ * kaupungin nimiö on 11,5 px ja merkin napautus avaa liuskan, eikä
+ * kumpikaan ole mahdollista laattaan paistetulle musteelle.
+ */
 function kohdeOnPoltettu(ui, r) {
+  if (onKaupunkipiste(r.id)) return false;
   return nostoOnPoltettu(r.id, kohteenNostotiiviste(ui, r));
 }
 
@@ -1385,7 +2688,7 @@ function merkitsePoltetutNostot(ui) {
     if (poltettu) r.glyyfi?.replaceChildren();
     else if (r.glyyfi) {
       piirraNostosymKartalle(r.glyyfi, r.symboli,
-        r.nimioNakyy ? r.nimi : '', r.laji, r.nimioVasemmalle, r.nimioKatto);
+        r.nimioNakyy ? r.nimi : '', r.laji, r.nimioPuoli, r.nimioKatto);
     }
   }
 }
@@ -1434,8 +2737,46 @@ function asetaKohdeMittakaava(ui, suhde) {
   const s = ui.fokusMerkkiSkaalaPohja?.()
     || ui.fokusMerkkiSkaalaKartalle?.(suhde) || ui.fokusMerkkiSkaala?.(suhde);
   if (!(s > 0)) return;
+  /*
+   * PIIRTOMITTA ON KATOLLA, LADONTA EI (omistaja 1.9.2026: *"Tee max
+   * sama koko kuin kohdekaupungin koko"* — js/nostoladonta.js
+   * nostoladontaKattoPorras). Katto lasketaan merkin KIRJASTON mitassa,
+   * koska nimiön kirjasinkoko on siinä yksikössä, ja jaetaan takaisin
+   * ryhmän mittaan — sama kaava kuin laattageneraattorilla, vain
+   * mittakaava on eri lähteestä (näkymän oma, ei tason).
+   *
+   * KATTAMATON `s` JÄÄ LADONNAKSI: kasaus, erottelusiirto ja
+   * nimiöväistö on laskettava samalla luvulla kuin laattaan, tai
+   * poltettu ja elävä merkki eivät olisi samassa pisteessä.
+   */
+  const nakyvaSkaala = ui.nakyvaAlue?.()?.skaala;
+  const sPiirto = nostoladontaKattoPorras(KOHDE_SYMBOLI_SKAALA * s, nakyvaSkaala)
+    / KOHDE_SYMBOLI_SKAALA;
+  /*
+   * KATTO ON SUHDE, JA SE KOSKEE KOKO PIIRROSTA (omistaja 2.9.2026:
+   * *"symbolit heittelee muodoiltaa ja tekstejä puuttuu"*).
+   *
+   * Tähän asti katto kutisti VAIN merkin oman skaalan. Sarakkeen
+   * siirtymä, siirtoviiva ja nimiön rako jäivät kattamattomaan
+   * ladontamittaan eli karttavakioksi, joka kasvaa rajatta
+   * lähennettäessä — mitattuna Sofiassa (skaala 9,24) merkki oli
+   * 11,3 px, mutta sen sarakesiirtymä 86 px ja siirtoviivan leveys
+   * 8,87 px. Merkki, sen nimi ja niiden välinen viiva olivat kolmessa
+   * eri mittajärjestelmässä samassa kuvassa.
+   *
+   * Nyt sama luku kertoo koko piirroksen ankkurinsa ympäri; perustelu
+   * ja mitat js/nostoladonta.js nostoladontaKattoSuhde.
+   */
+  const kattoSuhde = s > 0 ? sPiirto / s : 1;
   const sRuutu = ui.fokusMerkkiSkaala?.(suhde) ?? s;
-  const osumaR = KOHDE_OSUMA_R * (sRuutu > 0 ? sRuutu / s : 1);
+  /*
+   * OSUMASÄDE LASKETAAN PIIRTOMITASTA, EI LADONNASTA. Ympyrä on ryhmän
+   * lapsi ja skaalautuu sen mukana, joten sormen 44 px säilyy vain jos
+   * säde jaetaan sillä samalla luvulla, jolla ryhmä piirretään — katon
+   * purressa ryhmä on pienempi ja säde siis suurempi. Sama sääntö kuin
+   * typografiakatolla (js/ui.js fokusMerkkiOsumaKerroin).
+   */
+  const osumaR = KOHDE_OSUMA_R * (sRuutu > 0 && sPiirto > 0 ? sRuutu / sPiirto : 1);
   /*
    * OSUMAMUODOT TULEVAT SAMASTA LADONNASTA kuin merkki: sama passi
    * kirjoittaa ryhmän paikan, ja osuma-ympyrä on sen lapsi. Vain
@@ -1443,25 +2784,56 @@ function asetaKohdeMittakaava(ui, suhde) {
    * ylös suhteella sRuutu/s — merkki on lehden kokoinen, napautusala
    * sormen kokoinen, paikka yksi ja sama.
    */
-  eritteleKohdeRyhmat(ui, s);
   /*
-   * KASAUSPASSI KYSYY TÄLTÄ KERROKSELTA, ONKO MERKKI POLTETTU: se ei
-   * saa piirtää yhdysviivaa merkille, jonka viiva on jo laatassa, eikä
-   * js/fokusniput.js tunne luetteloa. Kysymys esitetään merkin
-   * lopullisesta paikasta, jonka passi itse juuri asetti.
+   * KASAUS ENSIN, EROTTELU SEN JÄLKEEN (31.8.2026 — ks.
+   * eritteleKohdeRyhmat, "PASSI AJETAAN KASAUKSEN JÄLKEEN"). Erottelu
+   * väistää ryppääseen ladottuja merkkejä eikä toisin päin, joten sen
+   * on nähtävä kasauksen tulos.
+   *
+   * KASAUSPASSI KYSYY TÄLTÄ KERROKSELTA, ONKO MERKKI POLTETTU
+   * (palautettu 1.9.2026 ilta siirtoviivojen mukana, omistajan tilaus
+   * *"otetaan siirtoviivat takaisin karttanostoille (esim. ateena)"*):
+   * se ei saa piirtää siirtoviivaa merkille, jonka viiva on jo
+   * laatassa, eikä js/fokusniput.js tunne luetteloa. Kysymys esitetään
+   * merkin lopullisesta paikasta, jonka passi itse juuri asettaa —
+   * ryppääseen ladotun merkin erottelusiirto on nolla
+   * (eritteleKohdeRyhmat), joten vastaus on sama ennen ja jälkeen
+   * erottelun.
    */
   ui.nostoPoltettu = (r) => kohdeOnPoltettu(ui, r);
-  niputaFokusmerkit(ui, s);
+  niputaFokusmerkit(ui, s, s, kattoSuhde);
+  eritteleKohdeRyhmat(ui, s);
   /*
    * POLTETUT VAIKENEVAT VASTA TÄSSÄ: tiiviste tuntee merkin lopullisen
    * paikan, jonka kaksi edellistä passia juuri asettivat.
    */
   merkitsePoltetutNostot(ui);
-  const zoom = s.toFixed(4);
+  const zoom = sPiirto.toFixed(4);
   for (const ryhma of ui.fokuskohdeRyhmat ?? []) {
     if (ryhma.osuma) maare(ryhma.osuma, 'r', osumaR.toFixed(2));
-    const px = ryhma.nippu?.x ?? ryhma.x + (ryhma.sx ?? 0);
-    const py = ryhma.nippu?.y ?? ryhma.y + (ryhma.sy ?? 0);
+    /*
+     * LADOTTU PAIKKA JA PIIRRETTY PAIKKA OVAT ERI ASIA (2.9.2026).
+     *
+     * LADOTTU (lx, ly) on se, mikä menee tiivisteeseen ja laattaan
+     * (kohteenNostotiiviste) — kattamaton, tasoriippumaton, Raamatun
+     * ehto. PIIRRETTY on sama paikka ANKKURINSA ympäri kutistettuna
+     * ruutukaton suhteella: sarakkeen siirtymä on osa noston piirrosta
+     * eikä kartan geometriaa, joten se ei saa kasvaa ohi merkin.
+     *
+     * ANKKURI on sarakkeessa kaupungin piste (nippu.cx/cy,
+     * js/fokusniput.js) ja muualla merkin oma datapiste — se piste,
+     * jonka ympäri merkki on siirretty. Erottelusiirto (sx, sy) on
+     * samalla tavalla piirroksen siirtymä ja kutistuu samoin.
+     */
+    const lx = ryhma.nippu?.x ?? ryhma.x + (ryhma.sx ?? 0);
+    const ly = ryhma.nippu?.y ?? ryhma.y + (ryhma.sy ?? 0);
+    const ax = ryhma.nippu?.cx ?? ryhma.x;
+    const ay = ryhma.nippu?.cy ?? ryhma.y;
+    const px = ax + (lx - ax) * kattoSuhde;
+    const py = ay + (ly - ay) * kattoSuhde;
+    /* Nimikerros latoo nimet PIIRRETYN paikan viereen, ei ladotun. */
+    ryhma.piirtoX = px;
+    ryhma.piirtoY = py;
     maare(ryhma.g, 'transform', `translate(${px.toFixed(2)} ${py.toFixed(2)}) scale(${zoom})`);
     /*
      * POLTETUN NIMEN OSUMA-ALUE EI SEURAA MERKKIÄ. Laatikko on lehden
@@ -1475,10 +2847,12 @@ function asetaKohdeMittakaava(ui, suhde) {
     if (!laatikko || !ryhma.nimiOsuma) continue;
     const dx = ryhma.x - px;
     const dy = ryhma.y - py;
-    maare(ryhma.nimiOsuma, 'x', ((laatikko.x1 + dx) / s).toFixed(2));
-    maare(ryhma.nimiOsuma, 'y', ((laatikko.y1 + dy) / s).toFixed(2));
-    maare(ryhma.nimiOsuma, 'width', ((laatikko.x2 - laatikko.x1) / s).toFixed(2));
-    maare(ryhma.nimiOsuma, 'height', ((laatikko.y2 - laatikko.y1) / s).toFixed(2));
+    // Laatikko on LAUDAN yksiköissä ja ryhmä piirretään sPiirrolla:
+    // jakaja on siis se, jolla ryhmä on skaalattu (ei ladonnan s).
+    maare(ryhma.nimiOsuma, 'x', ((laatikko.x1 + dx) / sPiirto).toFixed(2));
+    maare(ryhma.nimiOsuma, 'y', ((laatikko.y1 + dy) / sPiirto).toFixed(2));
+    maare(ryhma.nimiOsuma, 'width', ((laatikko.x2 - laatikko.x1) / sPiirto).toFixed(2));
+    maare(ryhma.nimiOsuma, 'height', ((laatikko.y2 - laatikko.y1) / sPiirto).toFixed(2));
   }
 }
 
@@ -1564,15 +2938,78 @@ const KOHDE_NIMIO_VARA = 2;
  * latoo Pátran ja Ioánninan nimet pisteen VASEMMALLE puolelle
  * (tools/fokuskartta/maat.mjs GRC.kaupungit, `ank: 'right'`), ja
  * yleinen reitti kääntää nimen vasemmalle kuvan oikeassa laidassa
- * (piirto.js kohta 8g). Enempää vaihtoehtoja ei kokeilla: kaksi riittää
- * poistamaan kadot, ja jokainen lisäpaikka on uusi tapa yllättää
- * lukija sillä, missä nimi on.
+ * (piirto.js kohta 8g).
+ *
+ * ── KAKSI EI RIITTÄNYT (omistaja 1.9.2026 aamu, iPad, Bulgaria) ────
+ *
+ * *"Osalta nostoista puuttuu nimiö poltetuista laatoista."* Väite
+ * "kaksi riittää poistamaan kadot" oli mitattavissa, ja mittaus kumosi
+ * sen: koko maailman 605 nimellisestä nostosta 55 jäi ilman nimiötä,
+ * ja JOKAISESSA tapauksessa molemmat kyljet osuivat naapurin
+ * SYMBOLIIN (tools/savukkeet/mittaa-nostonimiot.mjs). Vaakakaista on
+ * pitkä — 18 merkkiä on Sofian mitassa toistakymmentä lautayksikköä —
+ * joten vaakasuora merkkirivi tukkii kummankin kyljen, vaikka merkin
+ * ylä- ja alapuolella on tyhjää paperia.
+ *
+ * NELJÄ KYLKEÄ ON KARTAN OMA LADONTA (js/karttanimet.js: oikea, vasen,
+ * ylä, ala) ja omistajan oma päätös 30.8.2026 *"sama ladonta kuin
+ * paikannimillä."* Pystykyljet ovat keskitettyjä, joten ne vievät
+ * sivusuunnassa vain puolet nimen mitasta. Mitattu jälkeen: 55 -> 31
+ * pudotusta, ja jokainen jäljelle jäänyt on todellinen törmäys, jossa
+ * kaikki neljä kylkeä ovat varattuja.
+ *
+ * JÄRJESTYS SAA TULLA LADONNALTA (31.8.2026, esityssiirto). Kun merkki
+ * on ladottu kaupungin VASEMPAAN sarakkeeseen (js/fokusniput.js
+ * sääntö 2), sen nimiö kuuluu vasemmalle: oikea kylki on kaupungin
+ * laattaan päin, ja sinne ladottu nimi kulkisi laatan yli. Kasauspassi
+ * kirjoittaa toiveensa kenttään `nippuPuoli`, ja tämä lista käännetään
+ * sen mukaan (kohdeNimioPuolet). Toive ei ole käsky: jos toivottu kylki
+ * on tukossa, seuraavat kokeillaan yhä.
  */
-const KOHDE_NIMIO_PUOLET = [false, true];
+const KOHDE_NIMIO_PUOLET = NOSTOSYM_NIMIO_KYLJET;
+
+/** Puolten kokeilujärjestys yhdelle merkille: toivottu ensin. */
+function kohdeNimioPuolet(r) {
+  if (!r?.nippuPuoli) return KOHDE_NIMIO_PUOLET;
+  return ['vasen', ...KOHDE_NIMIO_PUOLET.filter((p) => p !== 'vasen')];
+}
 
 /** Laatikot laudan koordinaateissa. Kosketus ei ole vielä limitystä. */
 function kohdeLimittyy(a, b) {
   return a.x1 < b.x2 && b.x1 < a.x2 && a.y1 < b.y2 && b.y1 < a.y2;
+}
+
+/* ============ PUDOTUKSEN SYY KIRJATAAN, EI ARVATA =================
+ *
+ * Omistajan kuvakaappaus 1.9.2026 aamu (iPad, Bulgaria): osalta
+ * nostoista puuttui nimiö poltetuista laatoista, ja harvassa maastossa
+ * (Koillis-Bulgaria) pudotus ei näyttänyt törmäykseltä. Ilman mittaa
+ * syytä ei voi tietää: väistö vain vaikenee.
+ *
+ * MITTA ON VALINNAINEN JA PELISSÄ POIS PÄÄLTÄ. Kirjanpito syntyy vain,
+ * jos kutsuja on asettanut `ui.fokuskohdeNimioSyyt`-Mapin ennen
+ * passia — mittatyökalu (tools/savukkeet/mittaa-nostonimiot.mjs) tekee
+ * niin, peli ei. Pelissä tämä on siis yksi `instanceof`-vertailu niiden
+ * merkkien kohdalla, joiden nimiö putosi.
+ */
+function kirjaaNimionPudotus(ui, id, rivi, esteet) {
+  const kirja = ui?.fokuskohdeNimioSyyt;
+  if (!(kirja instanceof Map)) return;
+  const { symbolit, laatat, varatut } = esteet;
+  const syyt = rivi.puolet.map((puoli, p) => {
+    for (let n = 0; n < rivi.kehykset.length; n += 1) {
+      const kehys = rivi.kehykset[n][p];
+      const sym = symbolit.findIndex((este, j) => j !== rivi.indeksit[n]
+        && kohdeLimittyy(kehys, este));
+      if (sym >= 0) return { puoli, este: 'symboli', mika: sym };
+      const laatta = laatat.findIndex((este) => kohdeLimittyy(kehys, este));
+      if (laatta >= 0) return { puoli, este: 'kaupunki' };
+      const varattu = varatut.findIndex((este) => kohdeLimittyy(kehys, este));
+      if (varattu >= 0) return { puoli, este: 'nimio' };
+    }
+    return { puoli, este: 'tuntematon' };
+  });
+  kirja.set(id, syyt);
 }
 
 /* ============ NIMIÖT LUOVUTETAAN YHTEISEEN LADONTAAN ==============
@@ -1607,7 +3044,7 @@ function kohdeLimittyy(a, b) {
  * kuten ennenkin. Se on omistajan nimenomainen ehto samalla kortilla:
  * *"Merkit jäävät napautettaviksi myös ilman nimeä."*
  */
-function luovutaKohdeNimiot(ui, s, piilossa) {
+function luovutaKohdeNimiot(ui, s, piilossa, sPiirto = s) {
   const ryhmat = ui.fokuskohdeRyhmat ?? [];
   /*
    * KERROS PIILOSSA = EI NIMIÄ. Nimi seuraa merkkiään: kun merkit
@@ -1638,17 +3075,43 @@ function luovutaKohdeNimiot(ui, s, piilossa) {
       rivit.push({
         id: r.id,
         teksti: r.nimi,
-        // PIIRTOPAIKKA, EI DATAPISTE: merkki on voitu siirtää nipussa
-        // tai erottelussa, ja nimi kuuluu sen viereen missä merkki on.
-        x: r.nippu?.x ?? r.x + (r.sx ?? 0),
-        y: r.nippu?.y ?? r.y + (r.sy ?? 0),
+        /*
+         * PIIRTOPAIKKA, EI DATAPISTE eikä LADOTTU paikka: merkki on
+         * voitu siirtää nipussa tai erottelussa, ja ruutukatto kutistaa
+         * sen siirtymän ankkurinsa ympäri (asetaKohdeMittakaava
+         * ryhma.piirtoX). Nimi kuuluu sen viereen, missä merkki
+         * RUUDULLA on — ladottuun paikkaan ladottuna se jäisi syvässä
+         * zoomissa kymmenien pikselien päähän omasta symbolistaan.
+         * Varapolku on ladottu paikka: ennen ensimmäistä asemointia
+         * piirtopaikkaa ei vielä ole.
+         */
+        x: r.piirtoX ?? r.nippu?.x ?? r.x + (r.sx ?? 0),
+        y: r.piirtoY ?? r.nippu?.y ?? r.y + (r.sy ?? 0),
+        /*
+         * KYLJEN TOIVE KULKEE LADONTAAN ASTI (31.8.2026). Kaupungin
+         * ympärille ladottu rypäs on kahtena sarakkeena laatan
+         * molemmin puolin (js/fokusniput.js sääntö 2), ja vasemman
+         * sarakkeen nimi kuuluu vasemmalle — muuten se kulkisi laatan
+         * yli kohti toista saraketta. Sama toive kuin merkin oman
+         * väistön kokeilujärjestyksessä (kohdeNimioPuolet).
+         */
+        puoli: Boolean(r.nippuPuoli),
       });
     }
   }
-  // Merkin säde laudan yksiköinä: sama ketju kuin piirrossa (merkin
-  // oma kutistus × merkkien vakioskaala). Ladonta tarvitsee sen
-  // nimiön raon laskemiseen.
-  asetaKohdenimet(rivit, KOHDE_SYMBOLI_R * s);
+  /*
+   * MERKIN SÄDE LAUDAN YKSIKÖINÄ, PIIRTOMITASSA (2.9.2026).
+   *
+   * Rako nimen ja merkin reunan välissä lasketaan tästä säteestä
+   * (js/karttanimet.js merkkiR), joten sen on oltava sen merkin säde,
+   * joka RUUDULLA on. Kattamattomalla mitalla säde oli Sofian syvässä
+   * zoomissa 30,5 px vaikka piirretty merkki oli 5,6 px — nimi asettui
+   * 34 pikselin päähän tyhjälle paperille, ja mitä kauemmas se joutui,
+   * sitä useammin se törmäsi naapuriin ja putosi kokonaan. Juuri se on
+   * omistajan *"tekstejä puuttuu"*: viidestä yhdeksästä nimellisestä
+   * nostosta nimi katosi.
+   */
+  asetaKohdenimet(rivit, KOHDE_SYMBOLI_R * sPiirto);
   /*
    * OMAT NIMIÖT POIS RASTERISTA. Nimi on nyt nimikerroksen asia, ja
    * merkin oma nimiö olisi sama nimi kahdesti — sama kaksoisnimivaara,
@@ -1662,18 +3125,23 @@ function luovutaKohdeNimiot(ui, s, piilossa) {
   for (const r of ryhmat) {
     if (!r.glyyfi || !r.nimi || r.nimioNakyy === false || r.poltettu) continue;
     r.nimioNakyy = false;
-    r.nimioVasemmalle = false;
+    r.nimioPuoli = 'oikea';
     r.glyyfi.replaceChildren();
-    piirraNostosymKartalle(r.glyyfi, r.symboli, '', r.laji, false);
+    piirraNostosymKartalle(r.glyyfi, r.symboli, '', r.laji, 'oikea');
   }
 }
 
-export function paivitaKohdeNimiot(ui, s) {
+/**
+ * VÄISTÖN PUHDAS LASKENTA (1.9.2026, nostotekstien napautusalueet):
+ * sama algoritmi kuin ennenkin, mutta päätökset palautetaan arvona eikä
+ * kirjoiteta suoraan tietueisiin. Kutsujia on kaksi: oma väistö
+ * (paivitaKohdeNimiot) ja nimikerroksen tie, joka tarvitsee poltettujen
+ * nimien kehykset napautusalueiksi muttei saa koskea rastereihin
+ * (asetaPoltetutTekstiOsumat). Algoritmi on ladontasopimusta — muutos
+ * vaatii NOSTOLADONTA_SAANTO-noston (js/nostoladonta.js).
+ */
+function laskeKohdeNimioPaatokset(ui, s) {
   const ryhmat = ui.fokuskohdeRyhmat ?? [];
-  if (!ryhmat.length) return;
-  const avain = `${ui.fokuskohdeAvain}|${s.toFixed(4)}|${nippuAsettelunVersio()}`;
-  if (ui.fokuskohdeNimioAvain === avain) return;
-  ui.fokuskohdeNimioAvain = avain;
   // Kirjaston yksikkö laudan yksiköiksi — sama ketju kuin piirrossa:
   // merkin oma kutistus ja merkkien vakioskaala.
   const k = KOHDE_SYMBOLI_SKAALA * s;
@@ -1688,6 +3156,25 @@ export function paivitaKohdeNimiot(ui, s) {
     x1: x - KOHDE_SYMBOLI_R * s - vara, x2: x + KOHDE_SYMBOLI_R * s + vara,
     y1: y - KOHDE_SYMBOLI_R * s - vara, y2: y + KOHDE_SYMBOLI_R * s + vara,
   }));
+  /*
+   * KAUPUNGIN LAATTA ON ESTE (31.8.2026, esityssiirto). Rypäs latoutuu
+   * laatan molemmin puolin (js/fokusniput.js sääntö 2), joten väärälle
+   * kyljelle joutunut nimiö kulkisi suoraan kaupungin kiekon yli. Este
+   * ei ole indeksoitu merkkeihin, joten se kelpaa `esteet`-listan
+   * loppuun sellaisenaan.
+   */
+  const laatat = nippuLaattaEsteet(ui, s);
+  /*
+   * ULKOISET ESTEET (3.9.2026, ks. NAAPURIMAAT LADOTAAN JÄRJESTYKSESSÄ
+   * alempana): edeltävien maiden poltettu ladonta ja oman maan
+   * eläintäyn symboli. Symbolit ovat pehmeitä esteitä omien symbolien
+   * perässä — indeksi ei koskaan ole minkään rivin oma — ja nimiöt
+   * menevät suoraan `varatut`-joukkoon, joka ei putoa millään
+   * kierroksella.
+   */
+  const omiaSymboleja = symbolit.length;
+  const ulkoiset = ladonnanUlkoisetEsteet(ui);
+  for (const este of ulkoiset.symbolit) symbolit.push(este);
   // Kohteittain, ei kopioittain: kiertävän laudan kopiot samaan riviin.
   const jono = new Map();
   ryhmat.forEach((r, i) => {
@@ -1699,69 +3186,1059 @@ export function paivitaKohdeNimiot(ui, s) {
      * solmullinen. Piirto alempana tarkistaa solmun erikseen.
      */
     if (!r.nimi) return;
-    // Sama kaista molemmilta puolilta valmiiksi: mittaus on
-    // välimuistissa (NOSTOSYM_LEVEYDET), joten toinen laatikko on
-    // pelkkää peilausta eikä uutta canvas-mittausta.
-    const vaihtoehdot = KOHDE_NIMIO_PUOLET.map((vasemmalle) => {
+    // Kaikki neljä kylkeä valmiiksi: mittaus on välimuistissa
+    // (NOSTOSYM_LEVEYDET), joten laatikot ovat saman luvun
+    // uudelleenasettelua eivätkä uutta canvas-mittausta.
+    const puolet = kohdeNimioPuolet(r);
+    const vaihtoehdot = puolet.map((puoli) => {
       const laatikko = nostosymNimioLaatikko(
-        r.nimi, r.g?.ownerSVGElement, r.laji, vasemmalle, r.nimioKatto,
+        r.nimi, r.g?.ownerSVGElement, r.laji, puoli, r.nimioKatto,
       );
       if (!laatikko) return null;
+      /*
+       * VÄLJYYSVARA SILLE REUNALLE, JOSTA NIMIÖ LÄHTEE MERKISTÄ POISPÄIN
+       * — vaakakyljillä ulompi pystyreuna, pystykyljillä molemmat sivut
+       * (nimiö on silloin keskitetty eikä kummallakaan sivulla ole
+       * merkkiä pitämässä väliä).
+       */
+      const pysty = puoli === 'yla' || puoli === 'ala';
       return {
-        x1: paikat[i].x + laatikko.x1 * k - (vasemmalle ? vara : 0),
-        x2: paikat[i].x + laatikko.x2 * k + (vasemmalle ? 0 : vara),
+        x1: paikat[i].x + laatikko.x1 * k - (pysty || puoli === 'vasen' ? vara : 0),
+        x2: paikat[i].x + laatikko.x2 * k + (pysty || puoli === 'oikea' ? vara : 0),
         y1: paikat[i].y + laatikko.y1 * k,
         y2: paikat[i].y + laatikko.y2 * k,
       };
     });
     if (vaihtoehdot.some((kehys) => !kehys)) return;
-    const rivi = jono.get(r.id) ?? { indeksit: [], kehykset: [] };
+    const rivi = jono.get(r.id) ?? { indeksit: [], kehykset: [], puolet };
     rivi.indeksit.push(i);
     rivi.kehykset.push(vaihtoehdot);
     jono.set(r.id, rivi);
   });
-  const varatut = [];
+  const varatut = [...ulkoiset.nimiot];
+  // Kunkin varatun omistaja: oman rivin tunnus, tai null ulkoiselle.
+  // Naapurin siirto (yritaSiirtaen) tarvitsee tiedon siitä, kenen
+  // nimiö kylkeä tukkii ja voiko sen siirtää.
+  const varatutOmistaja = varatut.map(() => null);
+  const omatNimiot = [];
+  /*
+   * PIILOSSA JÄÄ TYHJÄKSI (2.9.2026, ks. SYMBOLI EI JÄÄ ILMAN NIMEÄ).
+   * Kenttä säilyy, koska sen lukijat ovat sopimusta — piirto
+   * (kirjoitaKohdeNimioPaatokset) ja nimikerroksen luovutus — eikä
+   * sääntö saa palata takaoven kautta: jos jokin tuleva kierros
+   * joskus taas pudottaa nimen, lukijat tekevät oikein.
+   */
   const piilossa = new Set();
+  const pakotetut = new Set();
   const puolet = new Map();
-  for (const [id, rivi] of jono) {
-    /*
-     * PUOLET JÄRJESTYKSESSÄ: oikea ensin, vasen vasta jos oikea on
-     * tukossa. Järjestys on kiinteä, joten sama lehti antaa saman
-     * kartan — eikä nimiö voi vaihtaa puolta panoroinnissa.
-     */
-    const valittu = KOHDE_NIMIO_PUOLET.findIndex((_, p) => rivi.kehykset
-      .every((vaihtoehdot, n) => {
-        const kehys = vaihtoehdot[p];
-        return !symbolit.some((sym, j) => j !== rivi.indeksit[n]
-          && kohdeLimittyy(kehys, sym))
-          && !varatut.some((varattu) => kohdeLimittyy(kehys, varattu));
-      }));
-    if (valittu < 0) piilossa.add(id);
-    else {
-      puolet.set(id, KOHDE_NIMIO_PUOLET[valittu]);
-      varatut.push(...rivi.kehykset.map((vaihtoehdot) => vaihtoehdot[valittu]));
+  // Valitut nimiökehykset ryhmäindeksillä (laudan yksiköitä):
+  // nostotekstin napautusalue asettuu juuri siihen laatikkoon, johon
+  // nimiö rasterissa ladotaan tai laattaan poltettiin.
+  const kehykset = new Map();
+  /*
+   * PUOLET JÄRJESTYKSESSÄ: toivottu kylki ensin (kohdeNimioPuolet),
+   * toinen vasta jos toivottu on tukossa. Järjestys on merkin oma ja
+   * kiinteä, joten sama lehti antaa saman kartan — eikä nimiö voi
+   * vaihtaa puolta panoroinnissa.
+   *
+   * `esteet` kertoo, mitkä lievemmät esteet ovat tällä kierroksella
+   * voimassa (symbolit, kaupunkilaatat). Jo hyväksytyt nimiöt
+   * (`varatut`) ovat este AINA — ks. lohko alempana.
+   */
+  const valitseKylki = (rivi, esteet) => rivi.puolet
+    .findIndex((_, p) => rivi.kehykset.every((vaihtoehdot, n) => {
+      const kehys = vaihtoehdot[p];
+      return (!esteet.symbolit || !symbolit.some((sym, j) => j !== rivi.indeksit[n]
+        && kohdeLimittyy(kehys, sym)))
+        && (!esteet.laatat || !laatat.some((laatta) => kohdeLimittyy(kehys, laatta)))
+        && !varatut.some((varattu) => kohdeLimittyy(kehys, varattu));
+    }));
+  const hyvaksy = (id, rivi, valittu) => {
+    puolet.set(id, rivi.puolet[valittu]);
+    const omat = rivi.kehykset.map((vaihtoehdot) => vaihtoehdot[valittu]);
+    varatut.push(...omat);
+    omat.forEach(() => varatutOmistaja.push(id));
+    omatNimiot.push(...omat);
+    rivi.indeksit.forEach((indeksi, n) => kehykset.set(indeksi, rivi.kehykset[n][valittu]));
+  };
+  /** Hyväksytyn rivin nimiöt pois varauksista (naapurin siirtoa varten). */
+  const peru = (id) => {
+    for (let i = varatut.length - 1; i >= 0; i -= 1) {
+      if (varatutOmistaja[i] !== id) continue;
+      const [laatikko] = varatut.splice(i, 1);
+      varatutOmistaja.splice(i, 1);
+      const k = omatNimiot.indexOf(laatikko);
+      if (k >= 0) omatNimiot.splice(k, 1);
     }
+    puolet.delete(id);
+  };
+  /*
+   * ====== NAAPURI SIIRTYY, JOS SILLE ON TILAA (3.9.2026) ============
+   *
+   * Mitattuna (tools/tarkista-nimiolimitys.mjs) Romanian Moldoveanu jäi
+   * ilman vapaata kylkeä vain siksi, että Karhusanktuaari oli ottanut
+   * ensimmäisellä kierroksella oikean kylkensä — vaikka sille olisi
+   * ollut vapaa toinenkin kylki. Ahne järjestys ei näe sitä.
+   *
+   * Yksi askel taaksepäin riittää: ennen kuin nimiö pakotetaan toisen
+   * päälle, katsotaan kylki kerrallaan, tukkivatko sitä VAIN oman maan
+   * nimiöt, ja mahtuuko jokainen niistä toiselle kyljelle samoilla
+   * esteillä. Jos mahtuu, naapuri siirtyy ja tämä nimiö saa kyljen —
+   * kukaan ei ole kenenkään päällä. Ulkoinen nimiö (edeltävä maa) ei
+   * siirry koskaan: sen ladonta on jo poltettu.
+   *
+   * Yritys on transaktio: varaukset otetaan talteen ja palautetaan,
+   * jos yksikin naapuri jää ilman kylkeä. Kokeilujärjestys on kiinteä
+   * (kylki, sitten naapurit tunnusjärjestyksessä), joten tulos on
+   * deterministinen.
+   */
+  const yritaSiirtaen = (id, rivi, esteet) => {
+    for (let p = 0; p < rivi.puolet.length; p += 1) {
+      const omat = rivi.kehykset.map((vaihtoehdot) => vaihtoehdot[p]);
+      const kova = omat.some((kehys, n) => (esteet.symbolit
+        && symbolit.some((sym, j) => j !== rivi.indeksit[n] && kohdeLimittyy(kehys, sym)))
+        || (esteet.laatat && laatat.some((laatta) => kohdeLimittyy(kehys, laatta))));
+      if (kova) continue;
+      const tukkijat = [];
+      let vieras = false;
+      varatut.forEach((varattu, i) => {
+        if (!omat.some((kehys) => kohdeLimittyy(kehys, varattu))) return;
+        const omistaja = varatutOmistaja[i];
+        if (omistaja === null) vieras = true;
+        else if (!tukkijat.includes(omistaja)) tukkijat.push(omistaja);
+      });
+      if (vieras || !tukkijat.length) continue;
+      tukkijat.sort();
+      const talteen = {
+        varatut: varatut.slice(),
+        omistajat: varatutOmistaja.slice(),
+        omat: omatNimiot.slice(),
+        puolet: tukkijat.map((t) => puolet.get(t)),
+        kehykset: tukkijat.map((t) => jono.get(t).indeksit.map((i) => kehykset.get(i))),
+      };
+      for (const t of tukkijat) peru(t);
+      hyvaksy(id, rivi, p);
+      let onnistui = true;
+      for (const t of tukkijat) {
+        const toinen = jono.get(t);
+        const q = valitseKylki(toinen, esteet);
+        if (q < 0) { onnistui = false; break; }
+        hyvaksy(t, toinen, q);
+      }
+      if (onnistui) return p;
+      varatut.length = 0;
+      varatut.push(...talteen.varatut);
+      varatutOmistaja.length = 0;
+      varatutOmistaja.push(...talteen.omistajat);
+      omatNimiot.length = 0;
+      omatNimiot.push(...talteen.omat);
+      puolet.delete(id);
+      tukkijat.forEach((t, n) => {
+        puolet.set(t, talteen.puolet[n]);
+        jono.get(t).indeksit.forEach((i, m) => kehykset.set(i, talteen.kehykset[n][m]));
+      });
+      rivi.indeksit.forEach((i) => kehykset.delete(i));
+    }
+    return -1;
+  };
+  /* ── ENSIMMÄINEN KIERROS: kaikki esteet voimassa ───────────────── */
+  const jaljella = [];
+  for (const [id, rivi] of jono) {
+    const valittu = valitseKylki(rivi, { symbolit: true, laatat: true });
+    if (valittu < 0) jaljella.push([id, rivi]);
+    else hyvaksy(id, rivi, valittu);
   }
+  /* ============ SYMBOLI EI JÄÄ ILMAN NIMEÄ =========================
+   *
+   * OMISTAJAN HAVAINTO 2.9.2026 (Bosnia, 50 km), sanatarkasti: *"kaksi
+   * tekstitöntä huutomerkkiä"*. Ne ovat `nosto-pyramidi` ja
+   * `skandaali-fojnican-vaakunakirja`, ja kummankin nimiö putosi tässä
+   * passissa Mostarin ja Sarajevon välisessä ryppäässä.
+   *
+   * VANHA SÄÄNTÖ OLI TOINEN, ja se oli omistajan oma: *"Merkit jäävät
+   * napautettaviksi myös ilman nimeä"* (30.8.2026, ks. lohko NIMIÖT
+   * LUOVUTETAAN YHTEISEEN LADONTAAN). Se koski ELÄVÄÄ merkkiä, jonka
+   * kortin pelaaja saa napauttamalla. Poltettuna sama merkki on
+   * kartalla pelkkä huutomerkki keskellä paperia — ei nimeä, ei
+   * vihjettä siitä mistä on kyse. Uusi sääntö 2.9.2026: SYMBOLI EI
+   * KOSKAAN JÄÄ ILMAN NIMEÄ.
+   *
+   * MITTA (tools/savukkeet/mittaa-nostonimiot.mjs): pudotuksia oli 14
+   * / 509 nimellisestä nostosta, ja lähes jokaisen syy oli sama —
+   * neljä kylkeä neljästä osui NAAPURIN SYMBOLIIN.
+   *
+   * ── NIMI EI KOSKAAN MENE TOISEN NIMEN PÄÄLLE ────────────────────
+   *
+   * Nimi naapurin symbolin päällä jättää molemmat luettaviksi; kaksi
+   * nimeä päällekkäin ei ole kummankaan nimi. Siksi `varatut` — jo
+   * hyväksytyt nimiöt — on este JOKAISELLA kierroksella, ja vain
+   * lievemmät esteet pudotetaan (ks. pahuusjärjestys alempana).
+   * Sama vaatimus on savukkeessa (savuke-fokuskohteet: *"ladottu
+   * nimiö ei mene naapurin symbolin eikä nimiön päälle"*).
+   *
+   * JÄRJESTYS ON KIERROKSITTAIN eikä merkeittäin: ensin KAIKKI ne,
+   * jotka mahtuvat siististi, ja vasta sitten ahtaat. Toisin päin
+   * ahdas merkki veisi väljän merkin paikan.
+   *
+   * SYY KIRJATAAN YHÄ (kirjaaNimionPudotus): mitta kertoo, montako
+   * nimiötä joutui tinkimään ja mihin ne törmäsivät — se on juuri se
+   * luku, jonka pitää painua kohti nollaa, kun ladonta paranee.
+   */
+  for (const [id, rivi] of jaljella) {
+    // Ensin naapurin siirto kaikilla esteillä: jos se onnistuu, kukaan
+    // ei tingi mistään eikä merkki ole pakotettu.
+    if (yritaSiirtaen(id, rivi, { symbolit: true, laatat: true }) >= 0) continue;
+    kirjaaNimionPudotus(ui, id, rivi, { symbolit, laatat, varatut });
+    pakotetut.add(id);
+    /*
+     * ESTEET PUDOTETAAN PAHUUSJÄRJESTYKSESSÄ, LIEVIN ENSIN:
+     *
+     *   symboli   13 yksikön viivamerkki — nimi sen yli jättää
+     *             molemmat luettaviksi;
+     *   laatta    kaupungin kiekko — nimi sen yli on ruma mutta
+     *             luettava, eikä kaupungin OMA nimi ole siinä
+     *             (nimikerros latoo sen erikseen);
+     *   nimiö     toisen merkin nimi — kaksi tekstiä päällekkäin ei
+     *             ole kummankaan nimi. Tämä este EI koskaan putoa,
+     *             ja siksi `varatut` on mukana joka kierroksella.
+     *
+     * VIIMEINEN OLKI on ensimmäinen kylki. Mitattuna (2.9.2026,
+     * mittaa-nostonimiot) sitä ei tarvita yhdessäkään maailman
+     * 14:stä ahtaasta ryppäästä, mutta sääntö on ehdoton eikä saa
+     * jäädä toteutumatta siksi, että jokin tuleva rypäs on entistä
+     * ahtaampi.
+     */
+    let valittu = valitseKylki(rivi, { symbolit: false, laatat: true });
+    if (valittu < 0) valittu = valitseKylki(rivi, { symbolit: false, laatat: false });
+    // Naapurin siirto vielä ilman lievempiä esteitä, ennen kuin nimiö
+    // menee toisen nimiön päälle.
+    if (valittu < 0 && yritaSiirtaen(id, rivi, { symbolit: false, laatat: false }) >= 0) continue;
+    /*
+     * VIIMEINEN OLKI ON PIENIN LIMITYS, EI ENSIMMÄINEN KYLKI (3.9.2026).
+     * Mitattuna (tools/tarkista-nimiolimitys.mjs) kolme merkkiä
+     * maailmassa — Rijeka, Risnjak ja Moldoveanu — oli tässä
+     * tilanteessa: jokainen neljästä kyljestä osui toiseen nimiöön, ja
+     * vanha sääntö otti oikean kyljen katsomatta, kuinka paljon se
+     * peittää. Nyt valitaan kylki, jonka limitys jo hyväksyttyjen
+     * nimiöiden kanssa on pienin; tasapelin ratkaisee
+     * kokeilujärjestys, joten päätös on yhä kiinteä.
+     */
+    if (valittu < 0) valittu = pieninLimitys(rivi, varatut);
+    hyvaksy(id, rivi, valittu);
+  }
+  return {
+    piilossa,
+    pakotetut,
+    puolet,
+    kehykset,
+    /*
+     * OMAN MAAN LAATIKOT SEURAAVILLE LUKIJOILLE (3.9.2026): symbolit
+     * (ilman ulkoisia) ja hyväksytyt nimiöt laudan yksiköissä. Näistä
+     * seuraava maa maatunnusjärjestyksessä ja oman maan eläintäky
+     * lukevat esteensä (maanLadontaEsteet).
+     */
+    esteet: { symbolit: symbolit.slice(0, omiaSymboleja), nimiot: omatNimiot },
+  };
+}
+
+/** Kahden laatikon limityksen pinta-ala laudan yksiköissä. */
+function limitysAla(a, b) {
+  const w = Math.min(a.x2, b.x2) - Math.max(a.x1, b.x1);
+  const h = Math.min(a.y2, b.y2) - Math.max(a.y1, b.y1);
+  return w > 0 && h > 0 ? w * h : 0;
+}
+
+/** Kylki, jonka kehykset limittyvät varattujen kanssa vähiten. */
+function pieninLimitys(rivi, varatut) {
+  let paras = 0;
+  let pienin = Infinity;
+  rivi.puolet.forEach((_, p) => {
+    const ala = rivi.kehykset.reduce((summa, vaihtoehdot) => summa
+      + varatut.reduce((s2, v) => s2 + limitysAla(vaihtoehdot[p], v), 0), 0);
+    if (ala < pienin) { pienin = ala; paras = p; }
+  });
+  return paras;
+}
+
+export function paivitaKohdeNimiot(ui, s) {
+  const ryhmat = ui.fokuskohdeRyhmat ?? [];
+  if (!ryhmat.length) return;
+  const avain = `${ui.fokuskohdeAvain}|${s.toFixed(4)}|${nippuAsettelunVersio()}`;
+  if (ui.fokuskohdeNimioAvain !== avain) {
+    ui.fokuskohdeNimioAvain = avain;
+    ui.fokuskohdeNimioPaatokset = laskeKohdeNimioPaatokset(ui, s);
+    kirjoitaKohdeNimioPaatokset(ui);
+  }
+  /*
+   * NAPAUTUSALUEET JOKA KUTSULLA, PÄÄTÖKSET VÄLIMUISTISTA: alueen
+   * ruutumitta riippuu piirron ruutukatosta (sPiirto), joka elää
+   * zoomiportaan mukana vaikka väistön päätökset eivät muutu. `maare`
+   * kirjoittaa vain muuttuneet arvot, joten toisto on halpa.
+   */
+  asetaTekstiOsumat(ui, s, ui.fokuskohdeNimioPaatokset, false);
+}
+
+/** Väistön päätökset tietueisiin ja rastereihin — entinen häntä. */
+function kirjoitaKohdeNimioPaatokset(ui) {
+  const ryhmat = ui.fokuskohdeRyhmat ?? [];
+  const { piilossa, pakotetut, puolet } = ui.fokuskohdeNimioPaatokset;
   // Päätös jää muistiin seuraavan rakennuksen arvaukseksi.
   ui.fokuskohdePiiloNimiot = piilossa;
   ui.fokuskohdeNimioPuolet = puolet;
   for (const r of ryhmat) {
+    if (!r.nimi) continue;
+    /*
+     * TINKIMINEN JÄÄ TIETUEESEEN (2.9.2026, ks. SYMBOLI EI JÄÄ ILMAN
+     * NIMEÄ): mitta lukee sen (tools/savukkeet/mittaa-nostonimiot.mjs),
+     * eikä sitä voi päätellä `nimioNakyy`-lipusta, koska nimi näkyy
+     * kummallakin kierroksella.
+     */
+    r.nimioPakotettu = Boolean(pakotetut?.has(r.id));
+    const nakyy = !piilossa.has(r.id);
+    const kylki = puolet.get(r.id) ?? 'oikea';
+    if (r.nimioNakyy === nakyy && r.nimioPuoli === kylki) continue;
+    /*
+     * PÄÄTÖS KIRJOITETAAN TIETUEESEEN ENNEN SOLMUEHTOA (31.8.2026).
+     * Kentät olivat solmuehdon takana, ja koska laattageneraattori ajaa
+     * tämän passin ILMAN DOMia (tools/fokuskartta/nostot.mjs), yksikään
+     * poltettava merkki ei koskaan saanut `nimioNakyy: false` — laattaan
+     * paloi myös se 32 nimiötä, jotka väistö oli juuri päättänyt
+     * pudottaa. Sama vika kuin väistön oma `glyyfi`-ehto, joka
+     * poistettiin jonon rakennuksesta samana päivänä: väistö on
+     * LADONTAA, ja ladonnan tulos ei saa riippua siitä, onko ruutua.
+     */
+    r.nimioNakyy = nakyy;
+    r.nimioPuoli = kylki;
     // Poltetun merkin rasteri on tyhjä eikä sitä herätetä henkiin:
     // symboli ja nimiö ovat laatassa (merkitsePoltetutNostot).
-    if (!r.glyyfi || !r.nimi || r.poltettu) continue;
-    const nakyy = !piilossa.has(r.id);
-    const vasemmalle = puolet.get(r.id) ?? false;
-    if (r.nimioNakyy === nakyy && r.nimioVasemmalle === vasemmalle) continue;
-    r.nimioNakyy = nakyy;
-    r.nimioVasemmalle = vasemmalle;
+    if (!r.glyyfi || r.poltettu) continue;
     // Nimiö on paistettu rasteriin, joten tila vaihtuu piirtämällä
     // merkki uudestaan. Nimiötön rasteri on symbolikohtainen ja siksi
     // yhteinen kaikille saman lajin vaienneille merkeille.
     r.glyyfi.replaceChildren();
     piirraNostosymKartalle(
-      r.glyyfi, r.symboli, nakyy ? r.nimi : '', r.laji, vasemmalle, r.nimioKatto,
+      r.glyyfi, r.symboli, nakyy ? r.nimi : '', r.laji, kylki, r.nimioKatto,
     );
   }
+}
+
+/*
+ * NOSTON TEKSTI ON KOKONAAN NAPAUTETTAVA (omistaja 1.9.2026 ilta:
+ * "Saisiko karttanostoissa myös tekstit kokonaisuudessa klikattaviksi?
+ * Nyt vain osa tekstistä on klikattavissa"). Suorakaide asetetaan
+ * väistön valitsemaan nimiökehykseen; kehys on laudan yksiköissä
+ * merkin piirtopaikasta käsin, ja ryhmä on skaalattu piirron
+ * ruutukatolla, joten jakaja on sPiirto — sama kaava kuin poltetun
+ * kaupunginnimen laatikolla (asetaKohdeMittakaava).
+ *
+ * KUMPI NÄYTTÄÄ NIMEN, SE SAA ALUEEN: omalla väistöllä (vanhat laudat,
+ * nimet rasterissa tai laatassa) alue annetaan jokaiselle näkyvälle
+ * nimiölle; nimikerroksen tiellä vain poltetuille — elävien nimet
+ * latoo ja napauttaa nimikerros itse (js/karttanimet.js data-kohde).
+ */
+function asetaTekstiOsumat(ui, s, paatokset, vainPoltetut) {
+  if (!paatokset) return;
+  const nakyvaSkaala = ui.nakyvaAlue?.()?.skaala;
+  const sPiirto = nostoladontaKattoPorras(KOHDE_SYMBOLI_SKAALA * s, nakyvaSkaala)
+    / KOHDE_SYMBOLI_SKAALA;
+  if (!(sPiirto > 0)) return;
+  (ui.fokuskohdeRyhmat ?? []).forEach((r, i) => {
+    const alue = r.tekstiOsuma;
+    if (!alue) return;
+    const kehys = paatokset.kehykset.get(i);
+    if (!kehys || (vainPoltetut && !r.poltettu)) {
+      // Leveydetön alue ei ota napautuksia eikä osallistu kilpailuun
+      // (lahinKohde ohittaa mitattomat muodot).
+      maare(alue, 'width', '0');
+      maare(alue, 'height', '0');
+      return;
+    }
+    const px = r.nippu?.x ?? r.x + (r.sx ?? 0);
+    const py = r.nippu?.y ?? r.y + (r.sy ?? 0);
+    maare(alue, 'x', ((kehys.x1 - px) / sPiirto).toFixed(2));
+    maare(alue, 'y', ((kehys.y1 - py) / sPiirto).toFixed(2));
+    maare(alue, 'width', ((kehys.x2 - kehys.x1) / sPiirto).toFixed(2));
+    maare(alue, 'height', ((kehys.y2 - kehys.y1) / sPiirto).toFixed(2));
+  });
+}
+
+/**
+ * Poltettujen nimien napautusalueet nimikerroksen tiellä.
+ *
+ * Laatan nimiö ladottiin generaattorissa TÄLLÄ SAMALLA väistöllä
+ * (tools/fokuskartta/nostot.mjs paivitaKohdeNimiot), joten sama
+ * laskenta samalla aineistolla antaa saman kehyksen — luettelon
+ * tiiviste vartioi, että aineisto todella on sama (kohdeOnPoltettu).
+ * Jos naapurusto on muuttunut polton jälkeen, muuttuneet merkit ovat
+ * jo eläviä ja kehys voi sillä välillä elää; seuraava poltto korjaa.
+ */
+function asetaPoltetutTekstiOsumat(ui, s, piilossa) {
+  if (piilossa) {
+    for (const r of ui.fokuskohdeRyhmat ?? []) {
+      if (!r.tekstiOsuma) continue;
+      maare(r.tekstiOsuma, 'width', '0');
+      maare(r.tekstiOsuma, 'height', '0');
+    }
+    ui.poltetutNostovaraukset = [];
+    return;
+  }
+  const avain = `${ui.fokuskohdeAvain}|${s.toFixed(4)}|${nippuAsettelunVersio()}`;
+  if (ui.fokuskohdeTekstiOsumaAvain !== avain) {
+    ui.fokuskohdeTekstiOsumaAvain = avain;
+    ui.fokuskohdeTekstiOsumaPaatokset = laskeKohdeNimioPaatokset(ui, s);
+  }
+  asetaTekstiOsumat(ui, s, ui.fokuskohdeTekstiOsumaPaatokset, true);
+  ui.poltetutNostovaraukset = poltettujenNostojenVaraukset(
+    ui, s, ui.fokuskohdeTekstiOsumaPaatokset,
+  );
+}
+
+/*
+ * ====== LAATTAAN POLTETTU NOSTO ON NIMILADONNAN VARAUS =============
+ *
+ * OMISTAJAN HAVAINTO 2.9.2026 ilta (kuvakaappaus Sofiasta, mittajana
+ * 50 km), sanatarkasti: *"Sofia menee päällekkäin jonkun noston tekstin
+ * kanssa kartalla."*
+ *
+ * ── JUURISYY, JA SE ON SAMA VANHA ─────────────────────────────────
+ *
+ * Nimikerros (js/karttanimet.js) latoo kaikki elävät nimet yhdessä
+ * ladonnassa, ja siksi kaupungin nimi, kohdenimiö ja maastonimi eivät
+ * voi mennä päällekkäin. Mutta POLTETTU nosto ei ole ladonnassa
+ * lainkaan: sen nimeä ei anneta nimikerrokselle (luovutaKohdeNimiot
+ * ohittaa poltetut, jottei sama nimi piirtyisi kahdesti), ja laatan
+ * kuvasta ladonta ei voi lukea mitään. Kartalla on siis kaksi
+ * mustelähdettä, joista kumpikaan ei tiedä toisesta — täsmälleen sama
+ * juurisyy kuin kaksoisnimillä ja pelinappulan alle jääneellä nimellä.
+ *
+ * ── KORJAUS ON ILMOITTAUTUMINEN, KUTEN PELIMERKEILLÄ ──────────────
+ *
+ * Poltetun noston SYMBOLI ja NIMIÖ luovutetaan ladonnan varauksiksi
+ * samaa tietä kuin pelinappula ja kaupungin laatta (js/ui.js
+ * luovutaRuutuvaraukset → js/karttanimet.js asetaRuutuvaraukset).
+ * Kehykset ovat jo laskettuina: napautusalue asettuu juuri siihen
+ * laatikkoon, johon nimiö laattaan poltettiin (asetaTekstiOsumat),
+ * joten varaus ei ole uusi laskenta vaan sama vastaus toiselle
+ * kysyjälle.
+ *
+ * KUMPI VÄISTÄÄ: LAATTA EI VOI. Omistajan sääntö on *"kaupunkinimi
+ * voittaa, muu nimi väistää"*, ja se pätee kaikkeen ELÄVÄÄN musteeseen
+ * — nimikerros latoo kaupungit ennen kohde- ja maastonimiä. Poltettua
+ * kuvaa ei voi siirtää, joten siinä ainoassa parissa väistäjä on
+ * kaupungin nimi. Se on silti oikea lopputulos: kaksi nimeä päällekkäin
+ * ei ole kummankaan nimi.
+ *
+ * ── RAJAUS, JA SE ON TIEDOSSA ─────────────────────────────────────
+ *
+ * TÄMÄ FUNKTIO KATTAA VAIN SEN MAAN, JONKA NOSTOT PELISSÄ OVAT
+ * (`ryhmat` = nykyisenMaanKohteet). Naapurimaiden poltetut nostot
+ * luetaan 2.9.2026 illasta alkaen erikseen ja samalla koneistolla —
+ * ks. naapurienPoltetutVaraukset alempana (omistajan päätös samana
+ * iltana: *"Korjaa: lataa naapurimaat"*, kun *"WIEN"* leikkasi Wienin
+ * oman poltetun noston nimeä Bulgarian maalehtinäkymässä).
+ *
+ * ULOS JÄÄVÄT YHÄ: maat, joilla ei ole fokuslehden ikkunaa
+ * (FOKUS_POHJAT), ja ELÄINTÄYT — ne ovat oma perheensä oman
+ * kerroksensa (js/elaintaky.js) ladonnassa eivätkä kulje tämän
+ * kerroksen läpi kummassakaan maassa, ei omassa eikä naapurin.
+ *
+ * @returns {Array} laatikot LAUDAN yksiköissä, [{ x0, y0, x1, y1 }]
+ */
+function poltettujenNostojenVaraukset(ui, s, paatokset) {
+  const rivit = [];
+  (ui.fokuskohdeRyhmat ?? []).forEach((r, i) => {
+    if (!r.poltettu) return;
+    const x = r.nippu?.x ?? r.x + (r.sx ?? 0);
+    const y = r.nippu?.y ?? r.y + (r.sy ?? 0);
+    /* Symboli on laatassa aina, nimiö vain jos se sinne mahtui. */
+    const sade = KOHDE_SYMBOLI_R * s;
+    if (sade > 0) {
+      rivit.push({
+        x0: x - sade, y0: y - sade, x1: x + sade, y1: y + sade,
+      });
+    }
+    const kehys = paatokset?.kehykset?.get(i);
+    if (!kehys) return;
+    rivit.push({
+      x0: kehys.x1, y0: kehys.y1, x1: kehys.x2, y1: kehys.y2,
+    });
+  });
+  return rivit;
+}
+
+/*
+ * ====== NAAPURIMAAN POLTETTU NOSTO ON MYÖS VARAUS ==================
+ *
+ * OMISTAJAN PÄÄTÖS 2.9.2026 ilta, sanatarkasti: *"Korjaa: lataa
+ * naapurimaat"* — vastaus edellisen erän kirjattuun rajaukseen (ks.
+ * poltettujenNostojenVaraukset yllä). Mitattu vika: Bulgarian
+ * maalehtinäkymässä (mittajana 200 km) kaupungin nimi *"WIEN"* leikkasi
+ * Wienin oman poltetun noston nimeä, kun taas Sofia väisti omansa
+ * oikein — laatoissa on jokaisen maan nostot, mutta pelissä vain sen
+ * maan, jossa pelaaja seisoo.
+ *
+ * ── "LATAAMINEN" EI OLE VERKKOTYÖTÄ ────────────────────────────────
+ *
+ * Jokaisen maan kohdeaineisto on jo muistissa (KOHDE_MAAT, staattiset
+ * tuonnit tiedoston alussa), ja lisälähteet vastaavat pelkkään
+ * maatunnukseen (KOHDE_MAALAHTEET). Puuttui vain LADONTA: missä
+ * naapurin merkit ja nimiöt ovat laudalla sen jälkeen, kun kasaus,
+ * erottelusiirto ja nimiöväistö ovat ajaneet.
+ *
+ * ── SAMA KONEISTO, EI RINNAKKAISTA ARVIOTA ─────────────────────────
+ *
+ * Raamattu vaatii sanatarkasti: *"Poltetun ladonnan ja selaimen
+ * osumamuotojen on tultava SAMASTA lähteestä, ettei kahta ladontaa
+ * pääse eriytymään."* Naapurin kehykset lasketaan siksi TÄSMÄLLEEN
+ * samoilla passeilla ja samassa järjestyksessä kuin laattageneraattori
+ * ne poltti (tools/fokuskartta/nostot.mjs nostoladontaMerkit):
+ *
+ *   kohdeKarttarivit → niputaFokusmerkit → eritteleKohdeRyhmat
+ *   → paivitaKohdeNimiot (paatokset.kehykset) → poltettujenNostojenVaraukset
+ *
+ * `ui` on tynkä laudan datasta: ei ruutua, ei pelitilaa, ei vuoroa —
+ * täsmälleen ne kentät, joita passit lukevat. Mittakaava on sama
+ * globaali vakio kuin nykyisellä maalla (js/nostoladonta.js
+ * nostoladontaSkaala), joten neljäs mitta ei pääse eroamaan.
+ *
+ * ── TIIVISTE ON VARTIJA ────────────────────────────────────────────
+ *
+ * Varaukseen otetaan vain rivi, jonka tiiviste on luettelossa
+ * (nostoOnPoltettu). Jos tämä ladonta joskus eroaisi poltetusta, rivi
+ * ei täsmäisi eikä sitä varattaisi — vika olisi siis puuttuva varaus
+ * eikä väärään paikkaan varattu laatikko. Sama vartija kuin nykyisen
+ * maan poltetuilla (kohdeOnPoltettu).
+ *
+ * ── LASKETAAN KERRAN MAATA KOHTI, JA VAIN LEVOSSA ──────────────────
+ *
+ * Tulos on pelkkää laudan dataa, joten se ei riipu näkymästä eikä
+ * vuorosta: maakohtainen välimuisti riittää koko istunnoksi. Näkymä
+ * karsii kahdesti — ensin maan ikkunalla (bbox) ja sitten laatikoittain
+ * — jottei ruudun ulkopuolinen maa tule lasketuksi lainkaan. Kutsu
+ * tulee samasta asettumisketjusta kuin muukin (js/ui.js
+ * paivitaMaastonimet → paivitaFokuskohteet), ei eleen aikana.
+ */
+/**
+ * Yhden maan poltetut laatikot laudan yksiköissä — kiertämättöminä.
+ *
+ * @param {object} pack  laudan paketti
+ * @param {string} iso   maatunnus
+ * @param {object} pohja FOKUS_POHJAT[iso]
+ * @param {function} onPoltettu  (tunnus, tiiviste) → boolean. Oletus on
+ *   laattaluettelo (js/laattapyramidi.js); yksikkötesti antaa
+ *   generaattorin oman luettelon, koska Nodessa ei ole verkkoa.
+ */
+export function maanPoltetutVaraukset(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
+  const tynka = poltettuTynka(pack, iso, pohja, onPoltettu);
+  if (!tynka) return [];
+  return poltettujenNostojenVaraukset(tynka, tynka.__s, tynka.fokuskohdeNimioPaatokset);
+}
+
+/* ============ NAAPURIMAAT LADOTAAN JÄRJESTYKSESSÄ ==================
+ *
+ * OMISTAJAN HAVAINTO 3.9.2026 (Bulgaria, 100 km:n näkymä): Kırkpınar-
+ * nosto limittyy toisen nimen kanssa. Toinen nimi oli Kreikan Évros —
+ * kaksi naapurimaan merkkiä samassa Edirnen pisteessä, kummankin
+ * nimiö oikealla. Mitattuna (tools/tarkista-nimiolimitys.mjs) pareja
+ * oli maailmassa kuusi: Mostar + Sveti Jure, Neretva + Korčula,
+ * Vjetrenica + Stonin muurit, Pyhä Bernhard + Mont Blanc, Sněžka +
+ * Śnieżka ja Évros + Kırkpınar. Jokainen on rajan kahta puolta.
+ *
+ * ── JUURISYY ──────────────────────────────────────────────────────
+ *
+ * Jokainen maa ladottiin OMILLAAN: kasaus, erottelu ja nimiöväistö
+ * tunsivat vain oman maan merkit, ja laattaan paloi kaikkien maiden
+ * ladonta päällekkäin. Kahden ladonnan välillä ei voi olla väistöä.
+ *
+ * ── SÄÄNTÖ ────────────────────────────────────────────────────────
+ *
+ * Saman laudan maat ladotaan MAATUNNUSJÄRJESTYKSESSÄ (ISO-koodi,
+ * aakkosellisesti), ja jokainen maa saa edeltäjiensä valmiin ladonnan
+ * ESTEIKSI nimiöväistöönsä: edeltäjän nimiöt ovat kovia esteitä
+ * (kuin omat hyväksytyt nimiöt) ja edeltäjän symbolit pehmeitä (kuin
+ * omat). Merkkien PAIKAT eivät riipu naapurista lainkaan — kasaus ja
+ * erottelu ovat yhä maan omia — vain nimiön kylki väistää. Järjestys
+ * on kiinteä eikä makuasia: GRC latoo ennen TUR:ia, joten Évros saa
+ * kylkensä ensin ja Kırkpınar väistää.
+ *
+ * ── SAMA KETJU PELISSÄ JA GENERAATTORISSA ─────────────────────────
+ *
+ * Esteet tulevat samasta funktiosta (maanUlkoisetEsteet) kummallekin:
+ * peli latoo nykyisen maan elävänä ja tynkänä (naapurin osumamuodot),
+ * generaattori tynkänä (tools/fokuskartta/nostot.mjs), ja jokainen
+ * kysyy edeltäjänsä täältä. Ketju on laudan datan funktio ja
+ * välimuistissa maittain (LADONTATYNGAT), joten Euroopan neljäkymmentä
+ * maata maksavat kerran laudalla — Nodessa koko maailma on 0,6 s.
+ *
+ * Oman maan ELÄINTÄKY on samassa listassa pehmeänä esteenä (symbolin
+ * laatikko): täky latoo nimiönsä viimeisenä kaiken muun ympäriltä
+ * (js/elaintaky-rivit.js elaintakyNimioKylki), mutta sen symboli on
+ * kartalla joka tapauksessa, eikä noston nimiön kuulu mennä sen yli.
+ */
+
+/** Laudan lehdelliset maat maatunnusjärjestyksessä: [[iso, pohja]]. */
+function maatJarjestyksessa(pack) {
+  return Object.entries(FOKUS_POHJAT)
+    .filter(([, pohja]) => pohja?.lauta === pack?.id && pohja.bbox)
+    .sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0));
+}
+
+const ULKOISET_ESTEET = new Map();
+
+/**
+ * MAAN NIMIÖVÄISTÖN ULKOISET ESTEET laudan yksiköissä {x1,y1,x2,y2}:
+ * edeltävien maiden ladonta ja oman maan eläintäyn symboli.
+ *
+ * @returns {{ symbolit: Array, nimiot: Array }}
+ */
+export function maanUlkoisetEsteet(pack, iso) {
+  if (!pack?.id || !iso) return { symbolit: [], nimiot: [] };
+  const avain = `${pack.id}|${iso}`;
+  const muistissa = ULKOISET_ESTEET.get(avain);
+  if (muistissa) return muistissa;
+  const symbolit = [];
+  const nimiot = [];
+  for (const rivi of elaintakyKarttarivit(pack)) {
+    if (rivi.iso !== iso) continue;
+    // Sama mitta kuin omilla symboleilla (laskeKohdeNimioPaatokset),
+    // täyn omalla portaalla: lehden vakio NOSTOLADONTA_S.
+    const r = (KOHDE_SYMBOLI_R + KOHDE_NIMIO_VARA) * NOSTOLADONTA_S;
+    symbolit.push({
+      x1: rivi.x - r, x2: rivi.x + r, y1: rivi.y - r, y2: rivi.y + r,
+    });
+  }
+  for (const [toinen] of maatJarjestyksessa(pack)) {
+    if (toinen >= iso) break;
+    const esteet = maanLadontaEsteet(pack, toinen);
+    symbolit.push(...esteet.symbolit);
+    nimiot.push(...esteet.nimiot);
+  }
+  const tulos = { symbolit, nimiot };
+  ULKOISET_ESTEET.set(avain, tulos);
+  return tulos;
+}
+
+/** Ulkoiset esteet ladottavalle `ui`:lle — tynkä kantaa maansa itse. */
+function ladonnanUlkoisetEsteet(ui) {
+  return maanUlkoisetEsteet(ui?.game?.pack, ui?.fokuskohdeIso ?? nykyinenIso(ui));
+}
+
+/**
+ * MAAN OMAN LADONNAN LAATIKOT seuraaville lukijoille (ks. yllä):
+ * symbolit ja hyväksytyt nimiöt laudan yksiköissä {x1,y1,x2,y2}.
+ * Ilman lehden ikkunaa (FOKUS_POHJAT) maa ei lado mitään.
+ *
+ * @returns {{ symbolit: Array, nimiot: Array }}
+ */
+export function maanLadontaEsteet(pack, iso) {
+  const pohja = iso ? FOKUS_POHJAT[iso] : null;
+  const tynka = pohja?.lauta === pack?.id ? maanLadontaTynka(pack, iso, pohja) : null;
+  return tynka?.fokuskohdeNimioPaatokset?.esteet ?? { symbolit: [], nimiot: [] };
+}
+
+const LADONTATYNGAT = new Map();
+
+/**
+ * YHDEN MAAN LADOTTU TYNKÄ VÄLIMUISTISTA — kasaus, erottelu ja
+ * nimiöväistö ajettuina, ilman poltettu-lippuja. Kaksi lukijaa
+ * (poltettuTynka, maanLadontaEsteet) ja yksi laskenta.
+ */
+function maanLadontaTynka(pack, iso, pohja) {
+  const avain = `${pack?.id}|${iso}`;
+  if (LADONTATYNGAT.has(avain)) return LADONTATYNGAT.get(avain);
+  const tynka = ladoMaanTynka(pack, iso, pohja);
+  LADONTATYNGAT.set(avain, tynka);
+  return tynka;
+}
+
+function ladoMaanTynka(pack, iso, pohja) {
+  const s = nostoladontaSkaala(pohja?.rajaus);
+  const bbox = pohja?.bbox;
+  if (!(s > 0) || !bbox || !pack) return null;
+  const lauta = pack.id;
+  const taulu = pack.map?.cityCountry ?? {};
+  const kaupungit = (pack.cities ?? []).filter((k) => taulu[k.id] === iso);
+  const pohjanAlla = (x, y) => x >= bbox.x && x <= bbox.x + bbox.w
+    && y >= bbox.y && y <= bbox.y + bbox.h;
+  const lisat = [];
+  for (const { hae } of KOHDE_MAALAHTEET) {
+    for (const rivi of hae(iso, lauta, kaupungit, taulu) ?? []) lisat.push(rivi);
+  }
+  const rivit = kohdeKarttarivit({
+    iso, lauta, kaupungit, pohjanAlla, lisat,
+  });
+  if (!rivit.length) return null;
+  /*
+   * TYNKÄ `ui` — samat kentät kuin generaattorilla. `kiertoKohdat`
+   * antaa yhden kohdan: kiertävän laudan toinen kopio on kutsujan asia
+   * (naapurienPoltetutVaraukset siirtää valmiit laatikot), eikä ladonta
+   * saa riippua siitä, kummasta kopiosta puhutaan. `fokuskohdeIso`
+   * kertoo väistölle maan, jonka edeltäjät ovat sen ulkoiset esteet.
+   */
+  const tynka = {
+    __s: s,
+    fokusmoodi: true,
+    katselu: false,
+    game: { pack },
+    fokusPohjaRajaus: pohja.rajaus,
+    fokusPohjaBbox: bbox,
+    fokusPohjanAlla: pohjanAlla,
+    kiertoKohdat: (x) => [x],
+    fokuskohdeIso: iso,
+    fokuskohdeKaupungit: kaupungit,
+    fokuskohdeAvain: `${iso}:naapuri`,
+    fokuskohdeEroAvain: null,
+    fokuskohdeNimioAvain: null,
+    fokuskohdeRyhmat: [],
+    fokuskohdeTiedot: new Map(rivit.map(({ kohde }) => [kohde.id, kohde])),
+  };
+  tynka.fokuskohdeRyhmat = rivit.map(({ kohde, paikka }) => ({
+    id: kohde.id,
+    x: paikka.x,
+    y: paikka.y,
+    kierto: 0,
+    ...kohdeMerkinLadonta(tynka, kohde),
+  }));
+  niputaFokusmerkit(tynka, s);
+  eritteleKohdeRyhmat(tynka, s);
+  paivitaKohdeNimiot(tynka, s);
+  return tynka;
+}
+
+/**
+ * YKSI LADONTA, KAKSI LUKIJAA: yhden maan ladottu tynkä valmiiksi
+ * ajettuna (kasaus, erottelu, nimiöväistö, poltettu-liput). Varaukset
+ * (maanPoltetutVaraukset) ja osumamuodot (maanPoltetutMerkit) lukevat
+ * saman tuloksen — kaksi ladontaa ajautuisi eri vastauksiin, ja juuri
+ * sen estäminen on koko ketjun sääntö (ks. lohko yllä).
+ *
+ * @returns {?object} tynkä, kenttä `__s` on käytetty mittakaava
+ */
+function poltettuTynka(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
+  const tynka = maanLadontaTynka(pack, iso, pohja);
+  if (!tynka) return null;
+  // Poltettu-lippu samasta tiivisteestä kuin nykyisellä maalla
+  // (kohdeOnPoltettu); vain lippu, ei piirtoa — tyngällä ei ole solmuja.
+  // Lippu kirjoitetaan joka kutsulla: luettelo voi saapua verkosta
+  // kesken istunnon, ja testi antaa oman luettelonsa.
+  for (const r of tynka.fokuskohdeRyhmat) {
+    // Kaupunkipiste ei koskaan (ks. kohdeOnPoltettu ja
+    // js/nostoladonta.js onKaupunkipiste) — sama vastaus molemmille
+    // lukijoille, myös pallolaudan omalle luettelolle.
+    r.poltettu = !onKaupunkipiste(r.id) && onPoltettu(r.id, kohteenNostotiiviste(tynka, r));
+  }
+  return tynka;
+}
+
+/*
+ * ====== NAAPURIN POLTETTU MERKKI ON MYÖS NAPAUTETTAVA ==============
+ *
+ * OMISTAJAN HAVAINTO 2.9.2026 (Bosnia, 50 km): *"Dinara ja Sveti Jure
+ * eivät ole klikattavissa."* Kumpikin on KROATIAN kohde, poltettuna
+ * laattaan (pyramidi.json nostotaso.nostot) ja siksi kartalla myös
+ * Bosnian näkymässä — mutta pelin kohdekerros rakennetaan vain siitä
+ * maasta, jossa pelaaja seisoo (nykyisenMaanKohteet), joten naapurin
+ * musteella ei ollut yhtäkään osumamuotoa. Merkki näkyy, nimi näkyy,
+ * eikä kumpaakaan voi napauttaa.
+ *
+ * LADONTA ON JO OLEMASSA. `maanPoltetutVaraukset` latoo naapurimaan
+ * täsmälleen samoilla passeilla kuin generaattori poltti ja palauttaa
+ * VARAUSLAATIKOT nimiladonnalle. Sama passi tietää myös, MIKÄ kohde
+ * kussakin laatikossa on — se tieto vain heitettiin pois. Tämä funktio
+ * palauttaa sen: yksi rivi merkkiä kohti, symbolin laatikko ja nimiön
+ * laatikko erikseen, ja mukana kohteen tietue, josta kortti aukeaa.
+ *
+ * KAKSI LUKIJAA, YKSI LADONTA (sama sääntö kuin
+ * poltettujenNostojenVaraukset-lohkossa): varaukset johdetaan näistä
+ * riveistä eikä rinnakkaisesta laskennasta.
+ *
+ * @returns {Array} [{ id, nimi, kohde, x, y, sade, symboli: {x0,y0,x1,y1},
+ *   nimio: ?{x0,y0,x1,y1} }] LAUDAN yksiköissä, kiertämättöminä
+ */
+export function maanPoltetutMerkit(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
+  return maanKohdemerkit(pack, iso, pohja, onPoltettu).filter((m) => m.poltettu);
+}
+
+/**
+ * MAAN KAIKKI KOHDEMERKIT LADOTTUINA — poltetut JA elävät (pallolauta
+ * vaihe 3). Karttapallo (js/pallolauta/nostot.js) ei rakenna
+ * SVG-kerrosta, mutta tarvitsee saman ladonnan kuin laatta ja
+ * tasokartta: kasauksen (nippu), erottelun ja nimiöväistön päätökset
+ * (kylki, näkyykö nimiö). Sama tynkä, sama passi, sama tulos —
+ * `poltettu` kertoo, onko merkki laatoissa (R-osuma) vai elävä (H).
+ * `symboli`, `laji`, `nimi`, `puoli` ja `nimioNakyy` ovat piirron
+ * syöte; `symboli` ja `nimio` laatikot laudan yksiköissä.
+ *
+ * @returns {Array} [{ id, nimi, kohde, poltettu, symboli, laji, puoli,
+ *   nimioNakyy, pakotettu, kaupunkiAvain, x, y, sade, symboli, nimio }]
+ */
+export function maanKohdemerkit(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
+  const tynka = poltettuTynka(pack, iso, pohja, onPoltettu);
+  if (!tynka) return [];
+  const ulos = [];
+  const sade = KOHDE_SYMBOLI_R * tynka.__s;
+  // Kaupunkijäsenyys kerran maata kohti (ks. NOSTON KAUPUNKIJÄSENYYS).
+  const linkit = kohdeKaupunkikartanNostot();
+  const kaupungit = tynka.fokuskohdeKaupungit ?? [];
+  tynka.fokuskohdeRyhmat.forEach((r, i) => {
+    const x = r.nippu?.x ?? r.x + (r.sx ?? 0);
+    const y = r.nippu?.y ?? r.y + (r.sy ?? 0);
+    const kehys = tynka.fokuskohdeNimioPaatokset?.kehykset?.get(i);
+    ulos.push({
+      id: r.id,
+      /*
+       * KAUPUNKIJÄSENYYS RIVILLE (PAATOKSET 27 TARKENNUS 2 kohta 7):
+       * saman kaupungin saman aiheen nostot yhdistyvät aihenostoksi
+       * AINA, joten ryhmitys tarvitsee tämän kentän eikä pelkkää
+       * ruutuetäisyyttä (js/pallolauta/aihemerkit.js ryhmitaNostot).
+       */
+      kaupunkiAvain: nostonKaupunkiAvain(r.id, x, y, kaupungit, linkit),
+      nimi: r.nimi ?? null,
+      kohde: tynka.fokuskohdeTiedot.get(r.id) ?? null,
+      poltettu: Boolean(r.poltettu),
+      // Symbolin KATEGORIA (`symboli` on alla laatikko — vanha sopimus).
+      kategoria: r.symboli ?? null,
+      laji: r.laji ?? null,
+      nimioNakyy: r.nimioNakyy !== false && Boolean(r.nimi),
+      /*
+       * TINKIMINEN MUKAAN (2.9.2026, ks. SYMBOLI EI JÄÄ ILMAN NIMEÄ):
+       * tingitty nimiö on ladonnassa, mutta LAATASSA se on vasta
+       * seuraavan polton jälkeen — portti (tools/tarkista-karttamerkit.mjs)
+       * raportoi ne polttovelkana eikä hyväksy niitä hiljaa.
+       */
+      pakotettu: Boolean(tynka.fokuskohdeNimioPaatokset?.pakotetut?.has(r.id)),
+      // Väistön valitsema kylki — testi vertaa sen generaattorin
+      // polttamaan (tests/nimiolimitys.test.mjs).
+      puoli: tynka.fokuskohdeNimioPaatokset?.puolet?.get(r.id) ?? null,
+      x,
+      y,
+      /*
+       * MERKIN OMA DATAPISTE (PAATOKSET 34 kohta 4, velka *"jäsenyyden
+       * koordinaatti luetaan ladotusta pisteestä kasauspassin
+       * jälkeen"*).
+       *
+       * `x`/`y` yllä ovat LADOTTU piste: erottelupassin siirto
+       * (`sx`/`sy`) ja kasauspassin nippu (`nippu`) ovat mukana, ja ne
+       * vievät merkin kymmeniä kilometrejä (Pariisin nostot 33–74 km,
+       * lukittu ankkuri jopa 108 km). Kaupunkijäsenyys on datan tieto
+       * eikä ladonnan, joten alkuperäinen piste kulkee rivillä omana
+       * kenttänään: `r.x`/`r.y` ovat ryhmän paikka ennen kumpaakaan
+       * passia.
+       */
+      omaX: r.x,
+      omaY: r.y,
+      sade,
+      symboli: {
+        x0: x - sade, y0: y - sade, x1: x + sade, y1: y + sade,
+      },
+      nimio: kehys
+        ? {
+          x0: kehys.x1, y0: kehys.y1, x1: kehys.x2, y1: kehys.y2,
+        }
+        : null,
+    });
+  });
+  return ulos;
+}
+
+/*
+ * MAAKOHTAINEN VÄLIMUISTI. Tulos on pelkkää laudan dataa eikä riipu
+ * näkymästä eikä vuorosta (ks. lohko yllä, "LASKETAAN KERRAN MAATA
+ * KOHTI"), joten yksi taulu riittää koko istunnoksi.
+ */
+const NAAPURIN_MERKIT = new Map();
+
+/**
+ * NÄKYMÄSSÄ OLEVAT NAAPURIMAIDEN POLTETUT MERKIT.
+ *
+ * Sama karsinta kuin naapurienPoltetutVarauksilla — maan ikkuna ensin,
+ * sitten merkki kerrallaan — ja kiertävän laudan kopiosiirto mukana,
+ * jotta ruudun laidassa oleva toinen kopio saa oman osumamuotonsa.
+ *
+ * @returns {Array} merkit LAUDAN yksiköissä, kiertosiirto valmiiksi
+ *   lisättynä (kenttä `dx` kertoo, mistä kopiosta rivi on)
+ */
+export function naapurienPoltetutMerkit(ui, nakyva, onPoltettu = null) {
+  const pack = ui.game?.pack;
+  if (!pack?.id || !(nakyva?.w > 0)) return [];
+  if (!onPoltettu && !laatoissaOnNostoja()) return [];
+  const oma = nykyinenIso(ui);
+  const ulos = [];
+  for (const [iso, pohja] of Object.entries(FOKUS_POHJAT)) {
+    if (iso === oma || pohja?.lauta !== pack.id || !pohja.bbox) continue;
+    const { bbox } = pohja;
+    const siirrot = (ui.kiertoKohdat?.(bbox.x) ?? [bbox.x])
+      .map((x) => x - bbox.x)
+      .filter((dx) => laatikkoNakyy({
+        x0: bbox.x + dx, y0: bbox.y, x1: bbox.x + dx + bbox.w, y1: bbox.y + bbox.h,
+      }, nakyva));
+    if (!siirrot.length) continue;
+    const avain = `${pack.id}|${iso}`;
+    let merkit = onPoltettu ? null : NAAPURIN_MERKIT.get(avain);
+    if (!merkit) {
+      merkit = maanPoltetutMerkit(pack, iso, pohja, onPoltettu ?? nostoOnPoltettu);
+      if (!onPoltettu) NAAPURIN_MERKIT.set(avain, merkit);
+    }
+    for (const dx of siirrot) {
+      for (const merkki of merkit) {
+        const laatikot = [merkki.symboli, merkki.nimio].filter(Boolean)
+          .map((l) => ({
+            x0: l.x0 + dx, y0: l.y0, x1: l.x1 + dx, y1: l.y1,
+          }));
+        if (!laatikot.some((l) => laatikkoNakyy(l, nakyva))) continue;
+        ulos.push({
+          ...merkki,
+          iso,
+          dx,
+          x: merkki.x + dx,
+          symboli: laatikot[0],
+          nimio: merkki.nimio ? laatikot[laatikot.length - 1] : null,
+        });
+      }
+    }
+  }
+  return ulos;
+}
+
+/*
+ * ====== NAAPURIN POLTETTU MERKKI ON MYÖS NAPAUTETTAVA ==============
+ *
+ * OMISTAJAN HAVAINTO 2.9.2026 (Bosnia, 50 km), sanatarkasti: *"Dinara
+ * ja Sveti Jure eivät ole klikattavissa."* Kumpikin on KROATIAN kohde,
+ * poltettuna nostotason laattaan ja siksi kartalla myös Bosnian
+ * näkymässä — mutta pelin kohdekerros rakennetaan vain siitä maasta,
+ * jossa pelaaja seisoo (nykyisenMaanKohteet), joten naapurin
+ * musteella ei ollut yhtäkään osumamuotoa. Kartalla oli merkki ja
+ * nimi, eikä kumpaakaan voinut napauttaa.
+ *
+ * Sama koski kaikkea naapurin poltettua mustetta: Zagrebia, Splitiä,
+ * Savaa, Plitvicen järviä, Zrinski–Frankopania. Mitattuna
+ * (tools/tarkista-karttamerkit.mjs --maa BIH) 25 löydöstä 33:sta oli
+ * tätä yhtä juurisyytä.
+ *
+ * ── OSUMAMUODOT TULEVAT SAMASTA LADONNASTA KUIN VARAUKSET ─────────
+ *
+ * `naapurienPoltetutMerkit` on jo se ladonta, jolla nimiladonta saa
+ * naapurin varauslaatikot — ja laatikko on sama olio kummallekin
+ * kysyjälle (Raamattu: *"Poltetun ladonnan ja selaimen osumamuotojen
+ * on tultava SAMASTA lähteestä"*). Tämä passi vain kirjoittaa ne
+ * DOMiin.
+ *
+ * ── OMA KERROS SAMAN KERROKSEN SISÄLLÄ ────────────────────────────
+ *
+ * Muodot elävät kohdekerroksen omassa alaryhmässä, koska napautuksen
+ * ratkaisee kerroksen yhteinen etäisyyskilpailu (lahinKohde) — oma
+ * kerros jäisi sen ulkopuolelle ja veisi napautuksen piirtojärjestyk-
+ * sellä. Alaryhmä on VIIMEISENÄ, jotta tasapelin ratkaisee oman maan
+ * merkki: naapurin muste on kartalla vieraana, eikä se saa voittaa
+ * kotimaista tasatilanteessa.
+ *
+ * MUODOT OVAT SUORAAN LAUDAN YKSIKÖISSÄ eikä skaalatussa ryhmässä:
+ * naapurilla ei ole piirrettävää merkkiä, jonka mittaan ne pitäisi
+ * suhteuttaa — vain osuma. Sormen mitta (KOHDE_OSUMA_R, 44 px) tulee
+ * silloin suoraan ruudun skaalasta.
+ */
+function asetaNaapurinOsumat(ui, kerros, merkit) {
+  const vanha = ui.naapuriOsumaKerros;
+  if (!merkit.length) {
+    if (vanha?.isConnected) vanha.remove();
+    ui.naapuriOsumaKerros = null;
+    ui.naapuriOsumaAvain = null;
+    return;
+  }
+  const sRuutu = ui.fokusMerkkiSkaala?.() ?? 0;
+  if (!(sRuutu > 0)) return;
+  const sade = KOHDE_OSUMA_R * sRuutu;
+  /*
+   * KERROS RAKENNETAAN UUDESTAAN VAIN KUN SEN SISÄLTÖ MUUTTUU — sama
+   * sääntö kuin nimikerroksella (js/karttanimet.js): panoroinnissa
+   * joukko muuttuu vasta kun merkki tulee reunan yli.
+   */
+  const avain = `${sade.toFixed(2)}|${merkit.map((m) => `${m.id}@${m.x.toFixed(0)}`).join(',')}`;
+  const kelpaa = vanha?.isConnected && vanha.parentNode === kerros;
+  if (kelpaa && ui.naapuriOsumaAvain === avain) return;
+  const ryhma = kelpaa ? vanha : el('g', { class: 'naapurikohteet' }, kerros);
+  /* Viimeiseksi: kerros on voitu rakentaa uusiksi tämän alta. */
+  if (ryhma.nextSibling) kerros.appendChild(ryhma);
+  ui.naapuriOsumaKerros = ryhma;
+  ui.naapuriOsumaAvain = avain;
+  ryhma.textContent = '';
+  for (const m of merkit) {
+    if (!m.kohde) continue;
+    /*
+     * TIETO KORTIN AVAAMISTA VARTEN samaan tauluun kuin oman maan
+     * kohteet: napautuksen voittaja (lahinKohde) ja nimikerroksen
+     * napautus (ui.kohdenimenNapautus) lukevat molemmat sitä.
+     */
+    ui.fokuskohdeTiedot?.set(m.id, m.kohde);
+    const g = el('g', { class: 'fokuskohde fokuskohde-naapuri' }, ryhma);
+    g.dataset.kohde = m.id;
+    g.setAttribute('role', 'button');
+    g.setAttribute('tabindex', '0');
+    g.setAttribute('aria-label', `${m.kohde.nimi ?? m.nimi ?? ''}: avaa tietoruutu`);
+    kytkeMerkinNapautus(ui, g, m.kohde);
+    el('circle', {
+      class: 'fokuskohde-osuma',
+      cx: m.x.toFixed(2),
+      cy: m.y.toFixed(2),
+      r: sade.toFixed(2),
+    }, g);
+    /*
+     * NIMIÖ ON OMA MAALINSA (v1218:n sääntö naapuriin laajennettuna):
+     * poltettu nimi on laatan pikseleitä, ja ilman tätä suorakaidetta
+     * napautettavaa olisi vain symboli.
+     */
+    if (m.nimio) {
+      el('rect', {
+        class: 'fokuskohde-osuma fokuskohde-tekstiosuma',
+        x: m.nimio.x0.toFixed(2),
+        y: m.nimio.y0.toFixed(2),
+        width: (m.nimio.x1 - m.nimio.x0).toFixed(2),
+        height: (m.nimio.y1 - m.nimio.y0).toFixed(2),
+      }, g);
+    }
+  }
+}
+
+/** Leikkaako laatikko näkyvää aluetta? */
+function laatikkoNakyy(laatikko, nakyva) {
+  return laatikko.x1 > nakyva.x && laatikko.x0 < nakyva.x + nakyva.w
+    && laatikko.y1 > nakyva.y && laatikko.y0 < nakyva.y + nakyva.h;
+}
+
+/**
+ * NAAPURIMAIDEN POLTETUT NOSTOT VARAUKSIKSI (ks. osio yllä).
+ *
+ * @param {object} ui
+ * @param {object} nakyva  ui.nakyvaAlue() — laudan yksiköissä
+ * @param {?function} onPoltettu  luettelon sauma: pelissä null, jolloin
+ *   vastaa js/laattapyramidi.js. Yksikkötesti antaa generaattorin oman
+ *   luettelon (Nodessa ei ole verkkoa) ja ohittaa samalla välimuistin.
+ * @returns {Array} laatikot LAUDAN yksiköissä, [{ x0, y0, x1, y1 }]
+ */
+export function naapurienPoltetutVaraukset(ui, nakyva, onPoltettu = null) {
+  /*
+   * VARAUS ON MERKIN TOINEN LUKIJA (2.9.2026, ks.
+   * naapurienPoltetutMerkit). Laatikot johdetaan samasta ladonnasta
+   * kuin osumamuodot eikä rinnakkaisesta laskennasta — Raamatun ehto
+   * *"Poltetun ladonnan ja selaimen osumamuotojen on tultava SAMASTA
+   * lähteestä"* koskee myös nimiladonnan varauksia, koska varaus ja
+   * osuma ovat sama laatikko kahdelle kysyjälle.
+   *
+   * JÄRJESTYS ON ENTINEN: symboli ensin, nimiö perään, maa kerrallaan.
+   */
+  return varauksetMerkeista(naapurienPoltetutMerkit(ui, nakyva, onPoltettu), nakyva);
+}
+
+/** Merkkiriveistä nimiladonnan varauslaatikot (ks. yllä). */
+function varauksetMerkeista(merkit, nakyva) {
+  const ulos = [];
+  for (const merkki of merkit) {
+    for (const laatikko of [merkki.symboli, merkki.nimio]) {
+      if (laatikko && laatikkoNakyy(laatikko, nakyva)) ulos.push(laatikko);
+    }
+  }
+  return ulos;
 }
 
 /**
@@ -1786,7 +4263,15 @@ function paivitaRasteriporras(ui, skaala) {
     || ui.fokusMerkkiSkaalaKartalle?.() || ui.fokusMerkkiSkaala?.();
   if (!(perus > 0) || !(skaala > 0)) return false;
   const tiheys = typeof window === 'undefined' ? 1 : (window.devicePixelRatio || 1);
-  return nostosymAsetaPorras(KOHDE_SYMBOLI_SKAALA * skaala * perus * Math.min(tiheys, 3));
+  /*
+   * RUUTUKATTO KUULUU TÄHÄNKIN (1.9.2026). Rasterin tarve on merkin
+   * NÄKYVÄ koko, ja katon purressa merkki piirretään pienempänä kuin
+   * kattamaton mitta lupaisi (asetaKohdeMittakaava sPiirto) — ilman
+   * kattoa syvä zoomi tilaisi kolminkertaisen rasterin siitä musteesta,
+   * joka ruudulle päätyy.
+   */
+  const porras = nostoladontaKattoPorras(KOHDE_SYMBOLI_SKAALA * perus, skaala);
+  return nostosymAsetaPorras(porras * skaala * Math.min(tiheys, 3));
 }
 
 /**
@@ -1805,8 +4290,7 @@ function paivitaRasteriporras(ui, skaala) {
  * ajan menossa takaisin toiseen suuntaan, eikä yksikään näistä
  * portaista ehtinyt näkyä.
  *
- * VIIVE ON SAMA HENKI KUIN MERKKIEN PALUULLA (js/kartta.js
- * MERKKIEN_PALUU_MS) ja asteikoilla (js/fokusmitat.js LEPO_MS): eleen
+ * VIIVE ON SAMA HENKI KUIN asteikoilla (js/fokusmitat.js LEPO_MS): eleen
  * loppuun kuuluu vielä liuku ja näkymän asettuminen, eikä kalleinta
  * työtä kannata tehdä sen keskellä. Väliaikana merkit ovat edellisen
  * portaan tarkkuudella — sama KOKO, vain karkeampi kuva (rasterin
@@ -1937,6 +4421,26 @@ export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
    * joten järjestyksen kääntäminen on turvallinen.
    */
   const piilossa = paivitaNakyvyys(ui, kerros, nakyva);
+  /*
+   * NAAPURIMAAT ENNEN OMAA MAATA, JA SE ON JÄRJESTYSVAATIMUS.
+   * Naapurin kasauspassi kasvattaa asettelun versiota
+   * (js/fokusniput.js nippuAsettelunVersio), joka on tämän maan
+   * nimiöväistön välimuistiavain. Tässä järjestyksessä oman maan passit
+   * lukevat jo uuden version; toisin päin ne laskettaisiin joka levolla
+   * kahdesti — kerran ennen naapuria ja kerran sen jälkeen.
+   *
+   * Sama portti kuin omilla poltetuilla: piilotetussa kerroksessa ei
+   * ole nostolaattojakaan (ks. asetaPoltetutTekstiOsumat).
+   */
+  const naapurinMerkit = piilossa || !karttanimetLatovat(ui)
+    ? [] : naapurienPoltetutMerkit(ui, nakyva);
+  const naapurienVaraukset = varauksetMerkeista(naapurinMerkit, nakyva);
+  /*
+   * NAAPURIN MUSTE SAA OSUMAMUOTONSA SAMASTA LADONNASTA (2.9.2026, ks.
+   * asetaNaapurinOsumat): rivit, joista varaukset yllä johdettiin, ovat
+   * juuri ne merkit, jotka kartalla näkyvät.
+   */
+  asetaNaapurinOsumat(ui, kerros, naapurinMerkit);
   asetaKohdeMittakaava(ui, 1);
   /*
    * NIMIÖIDEN VÄISTÖ VASTA TÄSSÄ eli asemoinnin jälkeen ja vain
@@ -1956,10 +4460,55 @@ export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
    * poltettuina) nimikerros on hiljaa, ja tämän kerroksen oma väistö
    * on yhä ainoa ladonta, joka kohteille on.
    */
-  if (merkkiSkaala > 0) {
-    if (karttanimetLatovat(ui)) luovutaKohdeNimiot(ui, merkkiSkaala, piilossa);
-    else paivitaKohdeNimiot(ui, merkkiSkaala);
+  /*
+   * PIIRTOMITTA NIMIÖILLE (2.9.2026): nimen rako merkin reunaan on
+   * PIIRRETYN merkin säde, ei ladotun — sama katto ja sama kaava kuin
+   * asemoinnissa (asetaKohdeMittakaava kattoSuhde).
+   */
+  const merkkiPiirto = merkkiSkaala > 0
+    ? nostoladontaKattoPorras(KOHDE_SYMBOLI_SKAALA * merkkiSkaala,
+      ui.nakyvaAlue?.()?.skaala) / KOHDE_SYMBOLI_SKAALA
+    : merkkiSkaala;
+  if (merkkiSkaala > 0 && karttanimetLatovat(ui)) {
+    luovutaKohdeNimiot(ui, merkkiSkaala, piilossa, merkkiPiirto);
+    // Laattaan poltetut nimet saavat silti napautusalueensa tästä
+    // kerroksesta, ja SAMALLA ne luovutetaan nimiladonnan varauksiksi
+    // (ks. asetaPoltetutTekstiOsumat, poltettujenNostojenVaraukset).
+    asetaPoltetutTekstiOsumat(ui, merkkiSkaala, piilossa);
+    /*
+     * NAAPURIMAAN POLTETUT SAMAAN JOUKKOON (ks. osio NAAPURIMAAN
+     * POLTETTU NOSTO ON MYÖS VARAUS). Nimikerros ei erottele niitä
+     * omista: kumpikin on laatan kuvassa olevaa mustetta, jota ei voi
+     * siirtää.
+     */
+    if (naapurienVaraukset.length) {
+      ui.poltetutNostovaraukset = (ui.poltetutNostovaraukset ?? [])
+        .concat(naapurienVaraukset);
+    }
+  } else {
+    if (merkkiSkaala > 0) paivitaKohdeNimiot(ui, merkkiSkaala);
+    /*
+     * VARAUS EI SAA JÄÄDÄ VOIMAAN ILMAN LAATTAA. Vanhoilla laudoilla ja
+     * ennen ensimmäistä mittakaavaa poltettuja nostoja ei ole, ja
+     * edellisen maan laatikot osoittaisivat väärään paikkaan — sama
+     * sääntö kuin pelimerkkien varauksilla laudan vaihtuessa
+     * (js/karttanimet.js unohdaKarttanimet).
+     */
+    ui.poltetutNostovaraukset = [];
   }
+  /*
+   * NIMIKERROKSEN NAPAUTUS TAKAISIN TÄNNE (omistaja 1.9.2026 ilta,
+   * tekstit kokonaan klikattaviksi): kerros (js/karttanimet.js) antaa
+   * napautetun nimen kohdetunnuksen, ja kortti avataan täsmälleen kuin
+   * merkistä. Nimi nimeää kohteensa yksiselitteisesti, joten
+   * etäisyyskilpailua (lahinKohde) ei käydä.
+   */
+  ui.kohdenimenNapautus ??= (id) => {
+    const kohde = ui.fokuskohdeTiedot?.get(id);
+    if (!kohde) return;
+    if (ui.fokuskohdeAuki?.id === kohde.id) suljeFokuskohde(ui);
+    else avaaFokuskohde(ui, kohde);
+  };
   // Rekisteröinti nipistykseen jää (js/kartta.js vastaskaalaaMerkit),
   // vaikka vakioskaala ei enää tarvitse vastaskaalaa: varapolku
   // (lehdetön näkymä) on yhä ruutumitassa ja tarvitsee sen.
@@ -1992,7 +4541,7 @@ export function paivitaFokuskohteet(ui, tiedettyNakyva = null) {
  * zoomatessa ne erkanevat. Kummankin osuma pidetään mieluummin
  * täysikokoisena kuin kutistetaan sormelle liian pieneksi.
  */
-const LEHDEN_VAHIN_OSUUS = 0.5;
+export const LEHDEN_VAHIN_OSUUS = 0.5;
 
 /*
  * ...JA VASTA KUN ON SAAVUTTU (omistajan pelitestipalaute 28.8.2026,
@@ -2123,13 +4672,12 @@ export function nollaaFokuskohteet(ui) {
 /*
  * KORTIN OMAT SUURENNOSAVAIMET.
  *
- * Tietoruudun oma kuva aukeaa avaimella `fokuskohdeZoom`. Yhdistetyllä
- * merkillä (js/fokusryhmat.js) kortti latoo lisäksi jäsentensä
- * sisukset, ja ne avaavat kuvansa OMILLA avaimillaan — täkynosto
- * `fokusnostoZoom`, syvennystarina `syvennysZoom` — koska sama koodi
- * latoo ne myös omiin kortteihinsa. Kaikki kolme ovat silloin TÄMÄN
- * kortin jatkeita: sulku vie ne mukanaan, ja Esc kuoritaan niistä
- * ensin (kuunteleKohdetta), tai Esc sulkisi koko lehden kuvan alta.
+ * Tietoruudun oma kuva aukeaa avaimella `fokuskohdeZoom`. Täkynoston ja
+ * syvennystarinan kortit latovat kuvansa OMILLA avaimillaan —
+ * `fokusnostoZoom` ja `syvennysZoom` — ja koska ne aukeavat kartan
+ * kohdemerkistä (YHTENÄINEN KOHDEMALLI), ne ovat silloin TÄMÄN kortin
+ * jatkeita: sulku vie ne mukanaan, ja Esc kuoritaan niistä ensin
+ * (kuunteleKohdetta), tai Esc sulkisi koko lehden kuvan alta.
  */
 const KOHDE_SUURENNOSAVAIMET = ['fokuskohdeZoom', 'fokusnostoZoom', 'syvennysZoom'];
 
@@ -2140,7 +4688,11 @@ export function suljeFokuskohde(ui) {
   const auki = ui?.fokuskohdeAuki;
   if (!auki) return;
   ui.fokuskohdeAuki = null;
+  document.body.classList.remove('nosto-popup-auki');
+  asetaAkustiikka(null);
   auki.merkki?.classList.remove('auki');
+  // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js).
+  auki.popup?.nostokuvaPurku?.();
   auki.popup?.remove();
   if (auki.purku) auki.purku();
 }
@@ -2176,16 +4728,65 @@ function kohdePolloPaneeli() {
  * voittaa yhä molemmat: mieluummin kapea kaista kortin alalaidasta
  * paneelin alle kuin kortti, jota ei voi lukea.
  */
+/*
+ * VIIMEISIN OSOITIN (omistaja 3.9.2026, Pergamonin alttarin kortti:
+ * *"nostot aukeavat liian reunaan"*). Kortti aukesi karttaruudun
+ * vasempaan yläkulmaan, kun kohteella ei ollut ELÄVÄÄ merkkiä: laattaan
+ * poltetun merkin tai nimikerroksen nimen napautus avaa kortin, mutta
+ * asemointi palasi ennen aikojaan (`merkki.isConnected` puuttui) ja
+ * kortti jäi CSS:n oletuspaikkaan. Nyt muistetaan viimeisin
+ * osoittimen paikka ruudulla ja kortti asemoidaan sen viereen samoin
+ * säännöin kuin merkin viereen; ilman kumpaakaan kortti keskitetään
+ * karttaruutuun.
+ */
+let viimeisinOsoitin = null;
+if (typeof document !== 'undefined') {
+  document.addEventListener('pointerdown', (tapahtuma) => {
+    viimeisinOsoitin = { x: tapahtuma.clientX, y: tapahtuma.clientY };
+  }, true);
+}
+
+function ankkurinLaatikko(auki, pane) {
+  if (auki.merkki?.isConnected) return auki.merkki.getBoundingClientRect();
+  /*
+   * ANKKURI RUUTUPISTEESTÄ (pallolauta vaihe 3, karttapallo.md luku 4.2:
+   * *"kortit (avaaFokuskohde) ankkuri ruutupisteestä"*). Pallolla
+   * merkillä ei ole SVG-solmua, jonka laatikon voisi mitata; kutsuja
+   * antaa merkin ruutupisteen (clientX/Y) tai funktion, joka laskee sen
+   * uudestaan joka asemoinnilla — kortti seuraa merkkiään, kun pallo
+   * pysähtyy (js/pallolauta/lauta.js asemoiFokuskohde).
+   */
+  const ankkuri = typeof auki.ankkuri === 'function' ? auki.ankkuri() : auki.ankkuri;
+  if (Number.isFinite(ankkuri?.x) && Number.isFinite(ankkuri?.y)) {
+    return {
+      left: ankkuri.x, right: ankkuri.x, top: ankkuri.y, bottom: ankkuri.y, width: 0, height: 0,
+    };
+  }
+  const p = viimeisinOsoitin
+    && viimeisinOsoitin.x >= pane.left && viimeisinOsoitin.x <= pane.right
+    && viimeisinOsoitin.y >= pane.top && viimeisinOsoitin.y <= pane.bottom
+    ? viimeisinOsoitin
+    : { x: pane.left + pane.width / 2, y: pane.top + pane.height / 2 };
+  return { left: p.x, right: p.x, top: p.y, bottom: p.y, width: 0, height: 0 };
+}
+
 function asetaKohteenPaikka(ui) {
   const auki = ui.fokuskohdeAuki;
-  if (!auki?.popup?.isConnected || !auki.merkki?.isConnected) return;
+  if (!auki?.popup?.isConnected) return;
   // Pelaajan raahaama kortti pysyy siinä, mihin se raahattiin
   // (raahausTaiSulku) — automaattinen asemointi ei kilpaile käden kanssa.
   if (auki.raahattu) return;
+  /*
+   * KUVA EDELLÄ -KORTTI EI SEURAA MERKKIÄÄN (omistaja 11.9.2026). Sen
+   * paikan omistaa js/nostokuva.js, jonka koko lupaus on ettei kuva
+   * liiku: merkin viereen asemointi siirtäisi kuvaa aina, kun kamera
+   * pysähtyy tai ikkuna vaihtaa kokoa.
+   */
+  if (nostokuvaKortissa(auki.popup)) return;
   const koti = auki.popup.offsetParent ?? auki.popup.parentNode;
   const pane = koti?.getBoundingClientRect?.();
   if (!pane || !(pane.width > 0)) return;
-  const m = auki.merkki.getBoundingClientRect();
+  const m = ankkurinLaatikko(auki, pane);
 
   /*
    * PYSTYSUUNNAN LAIDAT OVAT VÄLJEMMÄT KUIN VAAKASUUNNAN
@@ -2196,11 +4797,16 @@ function asetaKohteenPaikka(ui) {
     KOHDE_LAITAVARA_ENINTAAN,
     Math.max(KOHDE_MARGINAALI, Math.round(pane.height * KOHDE_LAITAVARA_OSUUS)),
   );
+  // TURVA-ALUE (omistaja 21.9.2026, iPhone v2021: kortit tilarivin ja
+  // loven alla): rajat alkavat insetin sisäpuolelta — kartan pane
+  // ulottuu viewport-fit=coverissa niiden alle (js/nostokuva.js
+  // nostokuvaTurvaAlue lukee :root --turva-*).
+  const turva = nostokuvaTurvaAlue();
   // Alanapit: vuorolaatikko kelluu kapealla ruudulla kartan päällä.
-  let alaraja = pane.bottom - laitavara;
-  const ylaraja = pane.top + laitavara;
-  let oikeaRaja = pane.right - KOHDE_MARGINAALI;
-  const vasenRaja = pane.left + KOHDE_MARGINAALI;
+  let alaraja = pane.bottom - Math.max(laitavara, turva.ala + KOHDE_MARGINAALI);
+  const ylaraja = pane.top + Math.max(laitavara, turva.yla + KOHDE_MARGINAALI);
+  let oikeaRaja = pane.right - KOHDE_MARGINAALI - turva.oikea;
+  const vasenRaja = pane.left + KOHDE_MARGINAALI + turva.vasen;
   const napit = document.querySelector('.turn-card')?.getBoundingClientRect();
   if (napit && napit.height > 0 && napit.right > pane.left && napit.left < pane.right
     && napit.top > pane.top) {
@@ -2230,6 +4836,16 @@ function asetaKohteenPaikka(ui) {
   ylin = Math.max(ylaraja, ylin);
   auki.popup.style.left = `${Math.round(vasen - pane.left)}px`;
   auki.popup.style.top = `${Math.round(ylin - pane.top)}px`;
+}
+
+/**
+ * Auki olevan kortin paikka uudelleen ulkoa kutsuttuna — pallolauta
+ * (js/pallolauta/lauta.js) kutsuu tätä, kun kamera pysähtyy ja merkin
+ * ruutupiste (ankkuri) on muuttunut. Kartalla saman tekee
+ * paivitaFokuskohteet.
+ */
+export function asemoiFokuskohde(ui) {
+  asetaKohteenPaikka(ui);
 }
 
 /**
@@ -2394,7 +5010,30 @@ function kohteenIhmekuva(kohde) {
     osoite: ihme.osoite,
     selite: ihme.selite ?? '',
     lahde: ihme.lahde ?? '',
+    /*
+     * FAKTALÄHTEEN OSOITE kulkee kuvan mukana samalla nimellä kuin
+     * muissa havainnekuvissa (js/packs/historian-hetket.js kuvat).
+     * Yksikään lähderivin piirtäjä ei vielä tee siitä linkkiä — rivi
+     * on tekstiä (js/tekijakortti.js taytaLahderivi) — mutta kenttä on
+     * data siinä missä lähderivikin, ja se seuraa kuvaa kaikkiin
+     * ikkunoihin, joten linkin lisääminen on myöhemmin yksi kohta
+     * eikä kuudentoista datalohkon kierros.
+     */
+    url: ihme.url ?? '',
     nauha: KOHDE_IHMENAUHA,
+    /*
+     * IHMEKUVAN LIPPU (omistajan lisäys 1.9.2026). Kadonneen ihmeen
+     * rekonstruktio saa lähderivin selitepopupista oman tekstinsä
+     * ("Mihin ihmeen kuva perustuu?") tavallisen havainnekuvatekstin
+     * sijaan — js/havainnekuva.js havainnekuvaLaji.
+     *
+     * LIPPU ON TÄSSÄ eikä lähderivin sanamuodossa, koska tämä on ainoa
+     * tehdas, joka ihmekuvia tekee: lippu kulkee kaikkien renderöijien
+     * (kortti, karuselli, suurennos, nähtävyysikkuna) läpi datan
+     * mukana, eikä yksikään niistä tarvitse tietää ihmeistä mitään.
+     * Lähderivit ovat sisältöä ja ne muuttuvat; tämä kenttä ei.
+     */
+    ihmekuva: true,
     // Suurennos saa oman reaktiorivinsä (avaaKohdeSuurennos ja
     // js/ui.js naytaKulttuuriKuva lukevat tämän kentän).
     reaktio: ihmeReaktioTunniste(kohde?.nimi),
@@ -2560,18 +5199,36 @@ export function matkakirjanIhme(nimi) {
   };
 }
 
-function piirraKohdeKuvat(ui, sisalto, kohde) {
+/**
+ * Kortin kuvat järjestyksessä, kaksoiskappaleet karsittuna.
+ *
+ * VIETY OMAKSI FUNKTIOKSEEN 11.9.2026 (KUVA EDELLÄ -avaus): avaaja
+ * tarvitsee kortin PÄÄKUVAN — listan ensimmäisen — jo ennen kuin
+ * sisus ladotaan, eikä samaa valintaa saa olla kahdessa paikassa.
+ */
+export function kohteenKuvalista(kohde) {
   const nahty = new Set();
   // Kadonneen ihmeen kuva on kortin ENSIMMÄINEN kuva (ks. lohkon alku):
   // kortti avaa suoraan sen, mitä paikalla ei enää ole.
-  const ihme = kohde.ihme?.kadonnut ? kohteenIhmekuva(kohde) : null;
-  const lista = [ihme, kohde.kuva, ...(Array.isArray(kohde.kuvat) ? kohde.kuvat : [])]
+  const ihme = kohde?.ihme?.kadonnut ? kohteenIhmekuva(kohde) : null;
+  return [ihme, kohde?.kuva, ...(Array.isArray(kohde?.kuvat) ? kohde.kuvat : [])]
     .filter((kuva) => {
       const tunnus = kuva?.tiedosto ?? kuva?.osoite;
       if (!tunnus || nahty.has(tunnus)) return false;
       nahty.add(tunnus);
       return true;
     });
+}
+
+/**
+ * @param {Element|null} [valmisKuva] KUVA EDELLÄ -avauksen valmis
+ *   kuvakehys (js/nostokuva.js) kortin ENSIMMÄISEN kuvan tilalle:
+ *   `undefined` piirtää kuvat kuten ennen, elementti sijoittaa juuri
+ *   sen kehyksen (sama kuva, sama elementti, ei uutta latausta), ja
+ *   `null` jättää pääkuvan pois (kuvaesittely peruttiin).
+ */
+function piirraKohdeKuvat(ui, sisalto, kohde, valmisKuva) {
+  const lista = kohteenKuvalista(kohde);
   /*
    * "KOE IHME" ENSIMMÄISEN KUVAN ALLE eikä otsikon alle (omistajan
    * tilaus 27.8.2026 ilta). Nappi asuu siinä kohdassa, jossa poistettu
@@ -2580,8 +5237,46 @@ function piirraKohdeKuvat(ui, sisalto, kohde) {
    * paikka näyttäisi ehjänä. Kuvaton kohde saa napin silti — muuten
    * lupaus katoaisi kokonaan, jos kuva jäisi lataamatta.
    */
+  /*
+   * USEAMPI KUVA ON KARUSELLI, EI PINO (omistaja 20.9.2026, kaappaus
+   * nosto-kuvat-paallekkain-v1980.webp: Avignonin paavinpalatsin `kuva`
+   * ja `kuvat` latoutuivat kahdeksi kuvaksi allekkain). Sama 1/2-
+   * karuselli kuin täky- ja skandaalinostolla (js/kuvasarja.js), kohteen
+   * omalla lataajalla ja suurennoksella; ihmenauha kulkee kuvan mukana
+   * (`koristele`). "Koe ihme" -nappi tulee sarjan alle, kuten se tuli
+   * ennen ensimmäisen kuvan alle. Peruttu kuvaesittely (valmisKuva
+   * null) vie vain pääkuvan: loput ladotaan sarjana kuten ennenkin.
+   */
+  const kuvat = valmisKuva === null ? lista.slice(1) : lista;
+  if (kuvat.length >= 2) {
+    piirraKuvasarja(ui, sisalto, kuvat, {
+      otsikko: kohde?.nimi ?? '',
+      valmisKehys: valmisKuva ?? undefined,
+      kehysLuokka: 'fokuskohde-kuva nostosarja-kuva',
+      nuoliLuokka: 'nostosarja-kuvanuoli',
+      laskuriLuokka: 'nostosarja-kuvalaskuri',
+      leveys: KOHDE_KUVAN_PX,
+      lataa: asetaKohdeKuva,
+      avaaSuurennos: (u, kuva, ankkuri, sarja) => avaaKohdeSuurennos(u, kuva, ankkuri, 'fokuskohdeZoom', sarja),
+      koristele: (nappi, kuva) => {
+        const nauha = piirraIhmenauha(nappi, kuva.nauha);
+        if (nauha) nauha.classList.add('kuvasarja-koriste');
+        nappi.closest('figure')?.classList.toggle('fokuskohde-kuva-nauhalla', Boolean(kuva.nauha));
+      },
+      kuvatekstiLuokka: 'fokuskohde-kuvaselite',
+      lahdeLuokka: 'fokuskohde-kuvalahde',
+      kuvatekstiKaare: 'fokuskohde-kuvateksti',
+      nappiLuokka: 'fokuskohde-kuvanappi',
+    });
+    piirraKortinIhmenappi(ui, sisalto, kohde);
+    return;
+  }
   lista.forEach((kuva, i) => {
-    piirraKohdeKuva(ui, sisalto, kuva);
+    if (i === 0 && valmisKuva !== undefined) {
+      if (valmisKuva) sisalto.appendChild(valmisKuva);
+    } else {
+      piirraKohdeKuva(ui, sisalto, kuva);
+    }
     if (i === 0) piirraKortinIhmenappi(ui, sisalto, kohde);
   });
   if (!lista.length) piirraKortinIhmenappi(ui, sisalto, kohde);
@@ -2606,7 +5301,9 @@ function piirraKohdeKuvat(ui, sisalto, kohde) {
 function asetaKohdeKuva(img, kuva, leveys, onVirhe) {
   if (kuva.osoite) {
     img.addEventListener('error', () => onVirhe(), { once: true });
-    img.src = kuva.osoite;
+    // Repon polku tai ämpäriosoite sen mukaan, onko laji jo siirretty
+    // (js/media.js R2_ASSETIT) — kutsupaikka ei muutu siirrosta.
+    img.src = assetOsoite('ihmeet', kuva.osoite);
     return;
   }
   asetaKuva(img, valokuvaUrl(kuva.tiedosto, leveys),
@@ -2623,7 +5320,8 @@ function piirraKohdeKuva(ui, sisalto, kuva) {
   const img = document.createElement('img');
   img.decoding = 'async';
   img.draggable = false;
-  img.alt = kuva.selite ?? '';
+  // Kortilla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js).
+  img.alt = kuvatekstiLyhyt(kuva);
   asetaKohdeKuva(img, kuva, KOHDE_KUVAN_PX, () => kehys.remove());
   nappi.appendChild(img);
   /*
@@ -2643,10 +5341,15 @@ function piirraKohdeKuva(ui, sisalto, kuva) {
     avaaKohdeSuurennos(ui, kuva, () => nappi);
   });
   kehys.appendChild(nappi);
-  if (kuva.selite || kuva.lahde) {
-    const teksti = html('figcaption', 'fokuskohde-kuvateksti', kuva.selite ?? '');
+  const kortinTeksti = kuvatekstiLyhyt(kuva);
+  if (kortinTeksti || kuva.lahde) {
+    const teksti = html('figcaption', 'fokuskohde-kuvateksti', kortinTeksti);
+    // Generoitu kuva kertoo sen jo kortilla (js/havainnekuva.js).
+    lisaaHavainnekuvaMerkki(teksti, kuva);
     // CC BY vaatii tekijän maininnan: lähde on aina kuvan vieressä.
-    if (kuva.lahde) teksti.appendChild(html('span', 'fokuskohde-kuvalahde', kuva.lahde));
+    if (kuva.lahde) {
+      teksti.appendChild(kortinKuvalahde(html('span', 'fokuskohde-kuvalahde'), kuva.lahde, kuva));
+    }
     kehys.appendChild(teksti);
   }
   sisalto.appendChild(kehys);
@@ -2738,7 +5441,8 @@ function piirraKohdeTeksti(ui, sisalto, kohde) {
   for (const kappale of jaaKappaleiksi(kohde.teksti)) {
     teksti.appendChild(piirraKohdeKappale(ui, kohde, kappale, jaljella));
   }
-  sisalto.appendChild(teksti);
+  // Pitkä teksti lehtipalstoihin (ui-apurit lehtipalstaKotelo).
+  sisalto.appendChild(lehtipalstaKotelo(teksti, kohde.teksti));
 }
 
 /** Kortin loppuun enintään kaksi valmista kysymystä pöllölle. */
@@ -2752,8 +5456,20 @@ function piirraKohdeKysymykset(ui, sisalto, kohde) {
   // muoto tarkennettu 31.8.2026): "Kysy viisaalta pöllöltä pululta:",
   // jossa koko nimi on yhden vedon alla. Ryhmän aria-label on pelkkää
   // tekstiä eikä siinä ole yliviivausta.
+  /*
+   * ARVONIMI KOHTEEN MAASTA, EI PELAAJAN SIJAINNISTA (kierros 16b,
+   * 20.9.2026): Liettuan kortissa luki *"Pariisin salonkien pöllöltä"*.
+   * Kortti kertoo kohteestaan, joten arvonimikin kuuluu sen maahan.
+   * Tuntemattomalle maalle paikka jää tyhjäksi, jolloin arvonta osuu
+   * yleisiin arvonimiin kuten ennen.
+   */
+  const paikka = arvonimenPaikkaMaalle(kohteenIso(kohde), ui?.game ?? null);
   sisalto.appendChild(polloNimilappu(html('p', 'fokuskohde-kysy-otsikko'), {
     ennen: 'Kysy ', yli: 'viisaalta pöllöltä', tilalle: 'pululta', jalkeen: ':',
+    // Arvonimi vaihtuu joka avauksella (Raamattu VIISAAN POLLON ARVONIMET).
+    arvonimi: true,
+    maanosa: paikka.maanosa,
+    iso: paikka.iso,
   }));
   const rivi = html('div', 'fokuskohde-kysymykset');
   rivi.setAttribute('role', 'group');
@@ -2914,9 +5630,17 @@ function avaaKierros(ui, kohde, kierros = kohteenKierrokset(kohde)[0]) {
   varaNappi.target = '_blank';
   varaNappi.rel = 'noopener noreferrer';
   vara.appendChild(varaNappi);
-  if (kierros.lahde) vara.appendChild(html('p', 'fokuskierros-lahde', kierros.lahde));
+  // Kierroksen lähderivi kulkee saman apurin kautta kuin kuvien
+  // (2.9.2026): yksi paikka, jossa lähderivi kirjoitetaan.
+  if (kierros.lahde) {
+    vara.appendChild(taytaLahderivi(html('p', 'fokuskierros-lahde'),
+      kierros.lahde, kierros));
+  }
   ikkuna.appendChild(vara);
-  if (kierros.lahde) ikkuna.appendChild(html('p', 'fokuskierros-lahde', kierros.lahde));
+  if (kierros.lahde) {
+    ikkuna.appendChild(taytaLahderivi(html('p', 'fokuskierros-lahde'),
+      kierros.lahde, kierros));
+  }
 
   kerros.appendChild(ikkuna);
   document.body.appendChild(kerros);
@@ -2998,13 +5722,21 @@ const KOHDE_ZOOM_MS = 320;
 /*
  * Omistajan palaute 25.8.2026 v1103:sta: "Kuvat isommalla" — katot
  * nostettu lähes koko ruutuun ja reunus puolitettu.
+ *
+ * KATOT SIIRTYIVÄT YHTEISEEN LINJAUKSEEN 8.9.2026 (js/ui-apurit.js
+ * suurennoksenMitat): kuvan suuntaa verrataan ruudun suuntaan, ja
+ * vastakkainen suunta täyttää lyhyemmän sivun, sama suunta jättää
+ * reunan näkyviin. Tänne jäi vain se, mikä on tämän kortin omaa:
+ * reunus, kapein sallittu mitta ja venymäkatto.
  */
-const KOHDE_ZOOM_LEVEIN = 0.99;
-const KOHDE_ZOOM_KORKEIN = 0.97;
-/** Vähimmäisreunus pikseleinä, ettei paperi puske ruudun reunaan asti. */
-const KOHDE_ZOOM_REUNA = 10;
-/** Kuvalle jäävä vähimmäisosuus ruudun korkeudesta, jos kuvateksti on pitkä. */
-const KOHDE_ZOOM_VAHIN_OSUUS = 0.28;
+/**
+ * Vähimmäisreunus pikseleinä, ettei paperi puske ruudun reunaan asti.
+ * Sisältää kerroksen oman pehmusteen (css .fokuskohde-zoom padding
+ * 0,5 rem molemmilla puolilla = 16 px): ilman sitä flex kutistaisi
+ * kortin kapealla puhelimella, kun kuva täyttää ruudun lyhyemmän
+ * sivun (yhteinen linjaus 8.9.2026).
+ */
+const KOHDE_ZOOM_REUNA = 16;
 /** Kehyksen kapein sallittu ulkomitta pikseleinä. */
 const KOHDE_ZOOM_KAPEIN = 140;
 /**
@@ -3068,11 +5800,21 @@ export function suljeKohdeSuurennos(ui, avain = 'fokuskohdeZoom') {
  * parametri: nosto pitää omansa omassa kentässään
  * (`fokusnostoZoom`) ja sulkee sen itse.
  */
-export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') {
+export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom', sarja = null) {
   if (typeof document === 'undefined' || (!kuva?.tiedosto && !kuva?.osoite)) return;
   suljeKohdeSuurennos(ui, avain);
   lataaKohdeTyyli();
   let suljettu = false;
+  /*
+   * SARJAA SELATAAN SUURENNOKSESSAKIN (omistaja 20.9.2026, nostokortti 2
+   * kohta 3): kortin karuselli (js/kuvasarja.js) antaa listansa ja
+   * kohtansa, ja suurennos vaihtaa kuvaa pienistä väkäsistä, pyyhkäisyllä
+   * ja nuolinäppäimillä. Vaihto kirjataan myös kortille (`valitse`),
+   * jotta sulkeminen laskeutuu siihen pikkukuvaan, joka on kohdalla.
+   */
+  const kuvat = Array.isArray(sarja?.kuvat) && sarja.kuvat.length > 1 ? sarja.kuvat : null;
+  let kohdalla = kuvat ? Math.max(0, kuvat.indexOf(kuva)) : 0;
+  if (kuvat && kohdalla === 0 && Number.isInteger(sarja.kohdalla)) kohdalla = sarja.kohdalla;
 
   const kerros = html('div', 'fokuskohde-zoom');
   kerros.setAttribute('role', 'dialog');
@@ -3082,32 +5824,68 @@ export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') 
   const img = document.createElement('img');
   img.className = 'fokuskohde-zoomkuva';
   img.draggable = false;
-  img.alt = kuva.selite ?? '';
+  img.alt = kuvatekstiPitka(kuva);
   const teksti = html('figcaption', 'fokuskohde-zoomteksti');
-  teksti.append(
-    html('span', 'fokuskohde-zoomselite', kuva.selite ?? ''),
-    // CC BY vaatii tekijän maininnan myös suurennoksessa.
-    html('span', 'fokuskohde-zoomlahde', kuva.lahde ?? ''),
-  );
+  const selite = html('span', 'fokuskohde-zoomselite');
+  const lahderivi = html('span', 'fokuskohde-zoomlahde');
+  teksti.append(selite, lahderivi);
   kehys.append(img, teksti);
-  // "Matkakirjan ihme" -nauha myös suurennokseen, samalla komponentilla
-  // kuin kortissa (ks. lohko MATKAKIRJAN IHME). Kehys on nauhan
-  // asemointipohja, ja css nostaa sen kuvan vasempaan yläkulmaan.
-  piirraIhmenauha(kehys, kuva.nauha);
-  /*
-   * REAKTIORIVI SUURENNOKSEN PAPERILLE (js/reaktiot.js), kun kuvalla on
-   * oma tunniste — käytännössä Matkakirjan ihme, joka on oma
-   * sisältönsä eikä sama kuin kortti, jonka napista se aukesi.
-   *
-   * Kehys ohittaa eleet (css pointer-events: none), jotta napautus
-   * paperin päällä sulkee suurennoksen; rivi ottaa ne takaisin omalla
-   * luokallaan, ja kerroksen sulkukuuntelija väistää sen (ks. alempana).
-   */
-  piirraReaktiot(kehys, kuva.reaktio, {
-    otsikko: kuva.reaktioOtsikko ?? kuva.selite ?? '',
-    luokka: 'reaktiot-suurennos',
-  });
+  /** Paperin tekstit, nauha ja reaktiorivi sille kuvalle, joka on kohdalla. */
+  const taytaPaperi = () => {
+    img.alt = kuvatekstiPitka(kuva);
+    // AVATTU KUVA NÄYTTÄÄ AINA PITKÄN (js/kuvatekstit.js).
+    selite.textContent = kuvatekstiPitka(kuva);
+    // CC BY vaatii tekijän maininnan myös suurennoksessa.
+    taytaLahderivi(lahderivi, kuva.lahde ?? '', kuva);
+    kehys.querySelector('.fokuskohde-ihmenauha')?.remove();
+    kehys.querySelector('.reaktiorivi')?.remove();
+    // "Matkakirjan ihme" -nauha myös suurennokseen, samalla komponentilla
+    // kuin kortissa (ks. lohko MATKAKIRJAN IHME). Kehys on nauhan
+    // asemointipohja, ja css nostaa sen kuvan vasempaan yläkulmaan.
+    piirraIhmenauha(kehys, kuva.nauha);
+    /*
+     * REAKTIORIVI SUURENNOKSEN PAPERILLE (js/reaktiot.js), kun kuvalla on
+     * oma tunniste — käytännössä Matkakirjan ihme, joka on oma
+     * sisältönsä eikä sama kuin kortti, jonka napista se aukesi.
+     *
+     * Kehys ohittaa eleet (css pointer-events: none), jotta napautus
+     * paperin päällä sulkee suurennoksen; rivi ottaa ne takaisin omalla
+     * luokallaan, ja kerroksen sulkukuuntelija väistää sen (ks. alempana).
+     */
+    piirraReaktiot(kehys, kuva.reaktio, {
+      otsikko: kuva.reaktioOtsikko ?? kuvatekstiPitka(kuva),
+      luokka: 'reaktiot-suurennos',
+    });
+  };
+  taytaPaperi();
   kerros.appendChild(kehys);
+  /*
+   * SELAUSOHJAIMET PAPERIN REUNOILLA: samat hyvin pienet chevronit kuin
+   * kortilla (css .fokuskohde-zoomnuoli), kuvan reunassa eikä ruudun
+   * laidassa, jotta ne löytyvät työpöydälläkin. Kehys ohittaa eleet
+   * (pointer-events: none), joten napit ottavat ne takaisin omalla
+   * luokallaan kuten reaktiorivi. Laskuri kertoo paikan sarjassa.
+   */
+  const laskuri = kuvat ? html('span', 'fokuskohde-zoomlaskuri') : null;
+  const paivitaLaskuri = () => {
+    if (laskuri) laskuri.textContent = `${kohdalla + 1} / ${kuvat.length}`;
+  };
+  paivitaLaskuri();
+  if (kuvat) {
+    const nuoli = (luokka, merkki, nimi, suunta) => {
+      const nap = html('button', `fokuskohde-zoomnuoli ${luokka}`, merkki);
+      nap.type = 'button';
+      nap.setAttribute('aria-label', nimi);
+      nap.addEventListener('click', (tapahtuma) => {
+        tapahtuma.stopPropagation();
+        vaihda(suunta);
+      });
+      kehys.appendChild(nap);
+    };
+    nuoli('edellinen', '‹', 'Edellinen kuva', -1);
+    nuoli('seuraava', '›', 'Seuraava kuva', 1);
+    kehys.appendChild(laskuri);
+  }
 
   /*
    * PIKKUKUVA ENSIN, ISO PERÄSSÄ. Kortin pikkukuva on jo selaimen
@@ -3131,16 +5909,40 @@ export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') 
    * kummallakin kuvalähteellä.
    */
   let isoValmis = Boolean(kuva.osoite);
-  if (!kuva.osoite) {
+  const lataaIso = () => {
+    if (kuva.osoite) { isoValmis = true; return; }
+    isoValmis = false;
+    const oma = kuva;
     const iso = new Image();
     iso.decoding = 'async';
     iso.addEventListener('load', () => {
-      if (!kerros.isConnected) return;
+      // Kuva on voinut vaihtua latauksen aikana — vanha iso ei saa
+      // kirjoittua uuden päälle.
+      if (!kerros.isConnected || kuva !== oma) return;
       img.src = iso.src;
       isoValmis = true;
     }, { once: true });
     iso.src = valokuvaSuurennos(kuva.tiedosto, KOHDE_ZOOM_PX);
-  }
+  };
+  lataaIso();
+
+  /** Vaihda sarjan kuvaa: mitoitus, paperi ja kortin valinta perässä. */
+  const vaihda = (suunta) => {
+    if (!kuvat || suljettu) return;
+    kohdalla = ((kohdalla + suunta) % kuvat.length + kuvat.length) % kuvat.length;
+    kuva = kuvat[kohdalla];
+    if (!kuva?.tiedosto && !kuva?.osoite) return;
+    sfx.play('paper');
+    sarja.valitse?.(kohdalla);
+    taytaPaperi();
+    paivitaLaskuri();
+    // Kortin pikkukuva on välimuistissa ja kertoo mittasuhteen heti;
+    // iso perässä kuten avatessa. Mitoitus ajetaan vasta latauksen
+    // jälkeen (img 'load' → mitoita), sitä ennen vanha kehys pysyy.
+    asetaKohdeKuva(img, kuva, KOHDE_KUVAN_PX, () => {});
+    lataaIso();
+    mitoita();
+  };
 
   /**
    * KUVASUHDE, JOKA ON TIEDOSSA JO ENSIMMÄISELLÄ KEHYKSELLÄ.
@@ -3178,7 +5980,7 @@ export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') 
      * (omistajan pelitestipalaute v1119: *"suurennos jää iPadilla
      * pieneksi keskelle ruutua … kuvat saisi näkyä isommalla"*).
      *
-     * Katot ovat jo lähes koko ruutu (KOHDE_ZOOM_LEVEIN 0,99), joten
+     * Katot ovat jo lähes koko ruutu (suurennoksenMitat), joten
      * vika ei ollut mitoituksessa vaan mitassa: WKWebView voi pitää
      * asetteluviewportin vanhassa kapeassa lukemassa, ja `innerWidth`
      * kertoo silloin kapeamman ruudun kuin laitteessa oikeasti on.
@@ -3210,22 +6012,39 @@ export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') 
      */
     const luonnollinen = isoValmis && img.naturalWidth
       ? img.naturalWidth * KOHDE_ZOOM_VENYMA : Infinity;
-    const enintaanW = Math.min(
-      leveys * KOHDE_ZOOM_LEVEIN, leveys - KOHDE_ZOOM_REUNA, luonnollinen,
-    );
-    const enintaanH = Math.min(korkeus * KOHDE_ZOOM_KORKEIN, korkeus - KOHDE_ZOOM_REUNA);
-    const vahinH = korkeus * KOHDE_ZOOM_VAHIN_OSUUS;
-    let ulko = Math.round(enintaanW);
+    /*
+     * KATOT TULEVAT YHTEISESTÄ LINJAUKSESTA (js/ui-apurit.js
+     * suurennoksenMitat, omistaja 8.9.2026): vastakkainen suunta
+     * täyttää ruudun lyhyemmän sivun, sama suunta jättää reunan
+     * näkyviin. Ennen tässä oli oma kaavansa ja fokusvirralla toinen,
+     * ja juuri se ero näkyi pelaajalle.
+     *
+     * Kierros mitataan yhä: kehyksen reunus ja kuvatekstipalkki vievät
+     * osan, ja teksti taittuu eri tavalla eri leveydellä.
+     */
+    const mitat = (vaakaVara, pystyVara) => suurennoksenMitat({
+      kuvaLeveys: suhde,
+      kuvaKorkeus: 1,
+      ruutuLeveys: leveys,
+      ruutuKorkeus: korkeus,
+      vaakaVara,
+      pystyVara,
+      enintaanLeveys: luonnollinen,
+      vahintaanLeveys: KOHDE_ZOOM_KAPEIN,
+      // NIIN ISONA KUIN MAHTUU (omistaja 20.9.2026, nostokortti 2 kohta
+      // 3): kortin suurennos täyttää ruudun contain-periaatteella, ei
+      // "sama suunta jättää reunan" -katolla.
+      tayteen: true,
+    });
+    let ulko = mitat(KOHDE_ZOOM_REUNA, KOHDE_ZOOM_REUNA).leveys;
     for (let kierros = 0; kierros < 3; kierros += 1) {
       kehys.style.width = `${ulko}px`;
       const kuvaLeveys = img.offsetWidth;
       if (!kuvaLeveys) break;
       const vaakaTila = kehys.offsetWidth - kuvaLeveys;
       const pystyTila = kehys.offsetHeight - img.offsetHeight;
-      // Kuinka leveä kuva mahtuu pystysuunnassa jäljelle jäävään tilaan.
-      const korkeudesta = Math.max(enintaanH - pystyTila, vahinH) * suhde;
       const uusi = Math.round(
-        Math.max(Math.min(enintaanW - vaakaTila, korkeudesta), KOHDE_ZOOM_KAPEIN) + vaakaTila,
+        mitat(vaakaTila + KOHDE_ZOOM_REUNA, pystyTila + KOHDE_ZOOM_REUNA).leveys + vaakaTila,
       );
       if (Math.abs(uusi - ulko) <= 1) { ulko = uusi; break; }
       ulko = uusi;
@@ -3274,13 +6093,41 @@ export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') 
    * kauan kuin ui.fokuskohdeZoom on olemassa (ks. kuunteleKohdetta).
    */
   function nappain(tapahtuma) {
+    if (kuvat && (tapahtuma.key === 'ArrowLeft' || tapahtuma.key === 'ArrowRight')) {
+      if (tapahtuma.altKey || tapahtuma.ctrlKey || tapahtuma.metaKey) return;
+      tapahtuma.preventDefault();
+      tapahtuma.stopPropagation();
+      vaihda(tapahtuma.key === 'ArrowRight' ? 1 : -1);
+      return;
+    }
     if (tapahtuma.key !== 'Escape') return;
     tapahtuma.stopPropagation();
     sulje();
   }
   document.addEventListener('keydown', nappain, true);
+  // Pyyhkäisy selaa sarjaa (sama kynnys kuin kortilla), ja sen päättävä
+  // click ei saa sulkea suurennosta.
+  let pyyhkaisty = 0;
+  let alku = null;
+  if (kuvat) {
+    kerros.addEventListener('pointerdown', (e) => {
+      if (e.button != null && e.button !== 0) return;
+      alku = { x: e.clientX, y: e.clientY, id: e.pointerId };
+    });
+    kerros.addEventListener('pointerup', (e) => {
+      if (!alku || (e.pointerId != null && alku.id != null && e.pointerId !== alku.id)) return;
+      const dx = e.clientX - alku.x;
+      const dy = e.clientY - alku.y;
+      alku = null;
+      if (Math.abs(dx) < KUVASARJA_PYYHKAISY_PX || Math.abs(dx) <= Math.abs(dy)) return;
+      pyyhkaisty = Date.now();
+      vaihda(dx < 0 ? 1 : -1);
+    });
+    kerros.addEventListener('pointercancel', () => { alku = null; });
+  }
   kerros.addEventListener('click', (tapahtuma) => {
     tapahtuma.stopPropagation();
+    if (pyyhkaisty && Date.now() - pyyhkaisty < 400) return;
     // Reaktiorivi on paperin oma toiminto: peukku ei saa sulkea kuvaa,
     // eikä virhelomakkeen kenttään pääsisi muuten kirjoittamaan.
     if (tapahtuma.target?.closest?.('.reaktiorivi')) return;
@@ -3366,13 +6213,29 @@ const KOHDE_RAAHAUSKYNNYS = 8;
  * joka suuntaan (css/fokuskohteet.css touch-action: none).
  */
 function raahausTaiSulku(ui, popup, alku) {
+  /*
+   * EDELLINEN ELE PURETAAN AINA ENSIN (omistajan iPad-havainto 4.9.2026,
+   * Zadarin kortti: *"ei anna klikata kuvaa suuremmaksi vaan nosto
+   * itsessään vain hyppää eri kohtaan"*). Kuuntelijat olivat kortissa
+   * itsessään, ja jos sormen irrotus ei koskaan saapunut kortille
+   * (sormi liukui kortin ulkopuolelle ennen kaappausta, tai iOS:n
+   * WKWebView jätti pointercancelin lähettämättä), ele jäi elämään.
+   * Seuraava kosketus sai iOS:ssa saman pointerId:n, ja vanha
+   * siirtokäsittelijä laski sen matkan VANHASTA lähtöpisteestä: kortti
+   * hyppäsi ja kaappaus söi kuvanapin napautuksen. Nyt liike ja
+   * irrotus kuunnellaan ikkunasta, uusi ele purkaa edellisen, ja hiiren
+   * irronnut nappi purkaa eleen itse.
+   */
+  popup.puraEle?.();
   const alkuX = alku.clientX;
   const alkuY = alku.clientY;
+  const alkuHetki = alku.timeStamp || Date.now();
   const lahtoVasen = popup.offsetLeft;
   const lahtoYlin = popup.offsetTop;
   let raahaa = false;
   const siirry = (tapahtuma) => {
     if (tapahtuma.pointerId !== alku.pointerId) return;
+    if (tapahtuma.pointerType === 'mouse' && !tapahtuma.buttons) { puru(); return; }
     const dx = tapahtuma.clientX - alkuX;
     const dy = tapahtuma.clientY - alkuY;
     if (!raahaa) {
@@ -3388,11 +6251,13 @@ function raahausTaiSulku(ui, popup, alku) {
     popup.style.top = `${Math.round(Math.min(Math.max(0, lahtoYlin + dy), maxYlin))}px`;
   };
   const puru = () => {
-    popup.removeEventListener('pointermove', siirry);
-    popup.removeEventListener('pointerup', loppu);
-    popup.removeEventListener('pointercancel', peru);
+    globalThis.removeEventListener?.('pointermove', siirry);
+    globalThis.removeEventListener?.('pointerup', loppu);
+    globalThis.removeEventListener?.('pointercancel', peru);
     popup.classList.remove('raahauksessa');
+    if (popup.puraEle === puru) popup.puraEle = null;
   };
+  popup.puraEle = puru;
   const loppu = (tapahtuma) => {
     if (tapahtuma.pointerId !== alku.pointerId) return;
     puru();
@@ -3400,6 +6265,21 @@ function raahausTaiSulku(ui, popup, alku) {
       if (ui.fokuskohdeAuki?.popup === popup) ui.fokuskohdeAuki.raahattu = true;
       return;
     }
+    /*
+     * VETO EI OLE NAPAUTUS — EIKÄ SITÄ SAA PÄÄTELLÄ PELKÄSTÄ
+     * `raahaa`-LIPUSTA (mitattu 12.9.2026, iPad 834 x 1194: veto
+     * kortin OTSIKOSTA ylöspäin sulki kortin). Kosketuksessa
+     * pointermove-tapahtumia ei aina tule lainkaan — selain vie eleen
+     * vieritykseen ja lähettää parhaimmillaan pointercancelin, joskus
+     * pelkän pointerupin muualta ruudulta — jolloin `raahaa` jäi
+     * epätodeksi ja irrotus luettiin napautukseksi. Matka ja kesto
+     * luetaan siksi IRROTUKSESTA: sama sääntö ja sama kynnys kuin
+     * kortin ulkopuolisella sulkevalla napautuksella (ui-apurit
+     * kuunteleSulkevaNapautus, RAAHAUKSEN_KYNNYS).
+     */
+    const matka = Math.hypot(tapahtuma.clientX - alkuX, tapahtuma.clientY - alkuY);
+    const kesto = (tapahtuma.timeStamp || Date.now()) - alkuHetki;
+    if (matka >= RAAHAUKSEN_KYNNYS || kesto > NAPAUTUKSEN_KESTO_MS) return;
     sfx.play('paper');
     suljeFokuskohde(ui);
   };
@@ -3407,9 +6287,9 @@ function raahausTaiSulku(ui, popup, alku) {
     if (tapahtuma.pointerId !== alku.pointerId) return;
     puru();
   };
-  popup.addEventListener('pointermove', siirry);
-  popup.addEventListener('pointerup', loppu);
-  popup.addEventListener('pointercancel', peru);
+  globalThis.addEventListener?.('pointermove', siirry);
+  globalThis.addEventListener?.('pointerup', loppu);
+  globalThis.addEventListener?.('pointercancel', peru);
 }
 
 /*
@@ -3452,6 +6332,22 @@ export function asetaKohdeNostot(hae) {
   kohdeNostoHaku = typeof hae === 'function' ? hae : null;
 }
 
+/*
+ * LUKIJAN KYSYMYS MYÖS KOHDEKORTILLE (Sonnet 1:n laitetesti 19.9.2026,
+ * v1960; Raamattu PAATOKSET 51). Hahmotelmanostot ovat KOHDE_MAAT-
+ * rivejä eli kohdeolioita, joten ne avautuvat tällä kortilla eivätkä
+ * nostokortilla, ja `visa`-kenttä jäi piirtämättä: kuvat, teksti,
+ * pulun kysymykset ja lähde näkyivät, visalaatikko ei. Piirtäjä on
+ * nostokortin oma (js/fokusnosto.js piirraNostonVisa) — sama laatikko,
+ * sama palkkio, sama kerran maksava avain — ja se rekisteröidään
+ * samasta syystä kuin nostohaku yllä (niputusjärjestys).
+ */
+let kohdeVisaPiirtaja = null;
+
+export function asetaKohdeVisa(piirra) {
+  kohdeVisaPiirtaja = typeof piirra === 'function' ? piirra : null;
+}
+
 /** Kohteeseen kiinnitetty täkynosto tietoruudun napiksi, jos sellainen on. */
 function piirraKohteenNosto(ui, sisalto, kohde) {
   const nosto = kohdeNostoHaku?.(ui, kohde.id);
@@ -3470,10 +6366,34 @@ function piirraKohteenNosto(ui, sisalto, kohde) {
   sisalto.appendChild(nappi);
 }
 
+/*
+ * KORTIN YLÄRIVI KERTOO KOHTEEN OMAN TYYPIN, EI KARTAN RYHMÄÄ (Sonnet 1,
+ * kierros 13, laitekuvat 19.9.2026: Karlskogan, Fiskarsin ja Kalavrytan
+ * tekniikkanostot ja Cobhin merenkulkunosto näyttivät "KAUPPA"). Kartalla
+ * on vain seliteryhmän kärkisymboli (omistaja 31.8.2026,
+ * js/karttavalot.js karttavaloKarkisymboli), ja ylärivi luki ennen samaa
+ * merkkiä — "Kauppa ja tekniikka" -ryhmän kärki on kauppa. Nyt kortti
+ * piirtää tarkan kategorian merkin ja nimen (veturi + Tekniikka, ankkuri
+ * + Merenkulku, malja + Ruoka ja juoma …). Luonnon viidellä tyypillä on
+ * yksi merkki, joten nimi tarkennetaan tyypillä.
+ */
+const LUONNON_NIMIKKEET = {
+  vuori: 'vuori', meri: 'meri', saari: 'saari', joki: 'joki', jarvi: 'järvi',
+};
+
+/** Kohdekortin ylärivin nimike tarkasta kategoriasta. Vartio testissä. */
+export function kohteenYlarivinNimike(kohde) {
+  const kategoria = kohteenKategoria(kohde);
+  const luokka = kategoria ? NOSTOSYM_LUOKAT[kategoria] : null;
+  if (!luokka) return null;
+  const laji = kategoria === 'luonto' ? LUONNON_NIMIKKEET[kohde?.tyyppi] : null;
+  return laji ? `${luokka} · ${laji}` : luokka;
+}
+
 function piirraKohdeYlarivi(kohde) {
   const rivi = html('p', 'fokuskohde-ylarivi');
-  const symboli = kohteenSymboli(kohde);
-  const luokka = symboli ? NOSTOSYM_LUOKAT[symboli] : null;
+  const symboli = kohteenKategoria(kohde);
+  const luokka = kohteenYlarivinNimike(kohde);
   if (!luokka) {
     rivi.textContent = KOHDE_TYYPIT[kohde.tyyppi] ?? KOHDE_TYYPIT.muu;
     return rivi;
@@ -3495,21 +6415,29 @@ function piirraKohdeYlarivi(kohde) {
 /**
  * YHDEN KOHTEEN SISUS — kaikki se, mikä otsikon alle kuuluu.
  *
- * Erotettu omaksi funktiokseen 31.8.2026, kun yhdistetty merkki tuli
- * kartalle (js/fokusryhmat.js): sama sisus latoutuu nyt joko yksin
- * kortin runkoon tai yhtenä osiona monen kohteen lehdellä. Rivit ovat
- * täsmälleen entiset ja entisessä järjestyksessä — sisältö ei muuttunut,
- * vain sen säiliö voi olla eri.
+ * Erotettu omaksi funktiokseen 31.8.2026 yhdistetyn merkin lehteä
+ * varten; yhdistely purettiin saman päivän illalla, mutta jako jäi,
+ * koska se pitää kortin rungon (avaaFokuskohde) luettavana. Rivit ovat
+ * täsmälleen entiset ja entisessä järjestyksessä.
  */
-function piirraKohteenSisus(ui, sailio, kohde) {
+function piirraKohteenSisus(ui, sailio, kohde, valmisKuva) {
   // Kuvat ja niiden mukana "Koe ihme" -nappi: nappi piirtyy kortin
   // ENSIMMÄISEN kuvan alle (piirraKohdeKuvat), ei otsikon alle.
-  piirraKohdeKuvat(ui, sailio, kohde);
+  piirraKohdeKuvat(ui, sailio, kohde, valmisKuva);
   piirraKohdeTeksti(ui, sailio, kohde);
+  kohdeVisaPiirtaja?.(ui, sailio, kohde);
   piirraKohdeKysymykset(ui, sailio, kohde);
   piirraKierrosnappi(ui, sailio, kohde);
   piirraKohteenNosto(ui, sailio, kohde);
-  if (kohde.lahde) sailio.appendChild(html('p', 'fokuskohde-lahde', kohde.lahde));
+  /*
+   * TEKSTIN LÄHDERIVI EI ENÄÄ PIIRRY KORTILLE (omistaja 20.9.2026,
+   * Laitetestaajan kierros 20: *"en-Wikipedia … tarkistettu 18.9.2026."*
+   * näkyi LISÄÄ-tilan lopussa; omistaja halusi kaiken alaosan
+   * metatekstin pois — sama päätös kuin täkynostolla, js/fokusnosto.js
+   * KORTIN LÄHDERIVI POIS). `kohde.lahde` säilyy datassa tarkistuksen
+   * kirjanpitona ja Lähteet-lehdellä; kuvan Commons-tekijärivi piirtyy
+   * kuvan omana rivinä kuten ennen.
+   */
   /*
    * REAKTIOT LÄHDERIVIN PERÄÄN (js/reaktiot.js): peukku ja
    * virheilmoitus samasta kortista, jossa teksti on. Tunniste on
@@ -3519,56 +6447,46 @@ function piirraKohteenSisus(ui, sailio, kohde) {
   piirraReaktiot(sailio, kohdeReaktioTunniste(kohde), { otsikko: kohde.nimi });
 }
 
-/** Osion otsikkorivi: jäsenen oma symboli ja oma nimi. */
-function piirraOsionOtsikko(osa) {
-  const otsikko = html('h4', 'fokuskohde-osio-otsikko');
-  const symboli = kohteenSymboli(osa);
-  if (symboli) {
-    // Sama piirtokirjasto ja sama ruutu kuin kortin ylärivillä.
-    const kuva = el('svg', {
-      class: 'fokuskohde-ylarivi-symboli',
-      viewBox: '-12 -12 24 24',
-      'aria-hidden': 'true',
-    }, otsikko);
-    piirraNostosymboli(el('g', {}, kuva), symboli);
-  }
-  otsikko.appendChild(document.createTextNode(osa.nimi ?? ''));
-  return otsikko;
-}
-
-/**
- * YHDISTETYN MERKIN LEHTI — jokainen jäsen omana osionaan.
+/* ============ YHDISTETYN MERKIN LEHTI PURETTIIN (31.8.2026) =======
  *
- * Omistajan sanamuoto 31.8.2026: *"yhdistää muutama saman kategorian
- * kohde samalle pop-up-lehdelle"*. Osio on jäsenen oma otsikko ja
- * jäsenen oma sisus — teksti, kuva, visa, lähde ja reaktiot
- * sellaisinaan. YHTÄKÄÄN KOHDETTA EI KADOTA EIKÄ YHDISTETÄ TOISEEN
- * (js/fokusryhmat.js).
+ * Kortilla oli 31.8.2026 aamusta iltaan kaksi asua: yhden kohteen sisus
+ * ja yhdistetyn merkin lehti, jossa jokainen jäsen oli oma osionsa
+ * (`piirraRyhmanOsiot`, `piirraOsionOtsikko`). Kun kartan yhdistely
+ * purettiin saman päivän illalla (kohdeKarttarivit, js/fokusniput.js),
+ * yhdistettyjä merkkejä ei enää synny, eikä kuoria siis ole avattavaksi
+ * — osiolatoja jäi koodiin ilman ainoatakaan kutsujaa.
  *
- * KAKSI TIETÄ SISUKSEEN. Kartan omat kohteet (js/packs/fokuskohteet-*.js)
- * latoo tämä moduuli itse; täkynosto, syvennystarina ja skandaali
- * antavat sisuksensa `osio`-takaisinkutsuna, koska niiden ladonta asuu
- * niiden omissa moduuleissa — samasta syystä ja samalla kaavalla kuin
- * `avaa` (niputusjärjestyksessä ne ovat tämän tiedoston jäljessä).
- * Jäsen ilman `osio`-kenttää latoo siis kohdemallin oman sisuksen.
+ * `piirraKohteenSisus` JÄI, vaikka se erotettiin omaksi funktiokseen
+ * juuri osioita varten: se on nyt kortin ainoa runko, ja jako pitää
+ * `avaaFokuskohde`-funktion luettavana.
  */
-function piirraRyhmanOsiot(ui, sisalto, kohde) {
-  // Kuoren pikkurivi kertoo, MISSÄ nämä kaikki ovat — se on koko
-  // yhdistämisen peruste (omistaja: "suoraan kaupungista").
-  if (kohde.kaupunki) {
-    sisalto.appendChild(html('p', 'fokuskohde-ryhma-paikka', kohde.kaupunki));
-  }
-  for (const osa of kohde.osat) {
-    const osio = html('section', 'fokuskohde-osio');
-    osio.appendChild(piirraOsionOtsikko(osa));
-    if (typeof osa.osio === 'function') osa.osio(ui, osio);
-    else piirraKohteenSisus(ui, osio, osa);
-    sisalto.appendChild(osio);
-  }
-}
 
-export function avaaFokuskohde(ui, kohde) {
+export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
   if (typeof document === 'undefined' || !kohde) return null;
+  /*
+   * LINSSIN PORTTI (omistaja 4.9.2026: *"pitää kaikki muu blokata …
+   * kun linssi alkaa"*). Kortti ei nouse tummennetun kartan ja
+   * juoksevan kellon päälle; napautus jää siihen. Portti on yhteinen
+   * kaikille kelluvien korttien avaajille (js/ui-apurit.js linssiEstaa).
+   */
+  if (linssiEstaa()) return false;
+  /*
+   * LISÄKAUPUNKI AVAA KAUPUNKIKORTIN (Raamattu, KARTTAUUDISTUKSEN
+   * PAATOKSET 16, omistaja 14.9.2026). Kartan lisäkaupungit
+   * (js/packs/nakyvat-kaupungit-fra.js) eivät ole laudan matkakohteita
+   * eikä niillä ole kohteiden tietoruudun kenttiä; napautus avaa
+   * lehden kehyksessä kuvan, esittelyn ja yhden kaupunkiin ankkuroidun
+   * noston (js/kaupunkinosto.js latoLisakaupunginKortti).
+   *
+   * HAARA ON TÄSSÄ EIKÄ MERKKIRIVILLÄ, jotta se pätee molempiin
+   * napautuspolkuihin kerralla: pallon osumalista
+   * (js/pallolauta/nostot.js) ja tasokartan `lahinKohde` päätyvät
+   * kumpikin tähän samaan avaajaan.
+   */
+  if (kohde.kaupunkikortti) {
+    avaaLisakaupunginKortti(ui, kohde, { ankkuri });
+    return null;
+  }
   /*
    * LISÄKOHDE AVAA OMAN KORTTINSA (YHTENÄINEN KOHDEMALLI): täkynoston
    * ja syvennystarinan merkki on kartalla tavallinen kohdemerkki, mutta
@@ -3613,7 +6531,32 @@ export function avaaFokuskohde(ui, kohde) {
    */
   popup.addEventListener('pointerdown', (tapahtuma) => {
     tapahtuma.stopPropagation();
+    // Kesken jäänyt ele ei saa periytyä painikkeen napautukselle
+    // (ks. raahausTaiSulku): puretaan ennen painike-ehtoa.
+    popup.puraEle?.();
     if (tapahtuma.target?.closest?.('button, a')) return;
+    /*
+     * KUVA EDELLÄ -KORTTIA EI RAAHATA: kortti on kuvan kehys, ja
+     * raahaus kirjoittaisi sen offsetLeft/offsetTop-paikan päälle
+     * paikan, jonka js/nostokuva.js laskee ruudun koordinaateissa.
+     *
+     * EIKÄ SE SULJE TÄSSÄ (omistajan vikailmoitus 12.9.2026,
+     * sanatarkasti: *"Nosto häviää edelleen näkyvistä, jos vieritän
+     * mistään muualta kohdasta kuin kuvaa painamalla."*). Tässä oli
+     * `suljeFokuskohde` suoraan pointerdownissa, ja se oli koko vian
+     * juuri: kuvan päältä alkava ele osuu NAPPIIN (ehto yllä palaa
+     * ennen tätä), mutta otsikon, leipätekstin, lähderivin tai
+     * pöllökysymysten päältä alkava vieritys osui tähän ja kortti
+     * katosi ennen kuin sormi oli liikkunut pikseliäkään. v1806:n
+     * napautusvahti korjasi vain kortin ULKOPUOLISEN eleen — tämä
+     * haara jäi silloin huomaamatta.
+     *
+     * Napautus kortin päällä sulkee yhä (sama sopimus kuin ennen),
+     * mutta se ratkeaa vasta sormen noustessa: vahti on
+     * `kuvanNapautus` (kuunteleKohdetta), sama kynnys ja sama
+     * napautusaika kuin muillakin korteilla.
+     */
+    if (nostokuvaKortissa(popup)) return;
     raahausTaiSulku(ui, popup, tapahtuma);
   });
 
@@ -3628,12 +6571,54 @@ export function avaaFokuskohde(ui, kohde) {
   popup.appendChild(sulje);
 
   const sisalto = html('div', 'fokuskohde-sisalto');
-  sisalto.appendChild(piirraKohdeYlarivi(kohde));
-  sisalto.appendChild(html('h3', 'fokuskohde-otsikko', kohde.nimi));
-  if (ryhmaKuori(kohde)) piirraRyhmanOsiot(ui, sisalto, kohde);
-  else piirraKohteenSisus(ui, sisalto, kohde);
+  const latoKohde = (kotelo, kuvakehys) => {
+    kotelo.appendChild(piirraKohdeYlarivi(kohde));
+    kotelo.appendChild(html('h3', 'fokuskohde-otsikko', kohde.nimi));
+    piirraKohteenSisus(ui, kotelo, kohde, kuvakehys);
+  };
   popup.appendChild(sisalto);
   koti.appendChild(popup);
+  /*
+   * KUVA EDELLÄ (omistaja 11.9.2026, js/nostokuva.js). Kuvallinen
+   * nosto avautuu ensin pelkkänä lähes koko ruudun kokoisena kuvana,
+   * jonka alla on lyhyt kuvateksti ja "Lisää"-nappi; napista kortti
+   * latoutuu SAMAN kuvan ympärille eikä kuva liiku pikseliäkään.
+   * Kuvaton kohde aukeaa suoraan tekstikorttina kuten ennenkin.
+   *
+   * KUTSU ON VASTA SEN JÄLKEEN, KUN KORTTI ON DOMISSA: kuvaesittely
+   * mittaa oikeita ruutulaatikoita, eikä irrallisella elementillä ole
+   * sellaista.
+   */
+  const paakuva = kohteenKuvalista(kohde)[0] ?? null;
+  let kuvakehysRef = null;
+  const kaksivaihe = paakuva ? nostokuvaAloita({
+    kortti: popup,
+    sisalto,
+    kuva: paakuva,
+    aseta: (img, leveys, onVirhe) => asetaKohdeKuva(img, paakuva, leveys, onVirhe),
+    // Suurennos näyttää sen kuvan, joka on kohdalla, ja selaa koko
+    // sarjaa (js/kuvasarja.js kirjoittaa valintansa kuvakehykseen).
+    avaaSuurennos: (nappi) => avaaKohdeSuurennos(
+      ui, kuvakehysRef?.nostokuvaKuva ?? paakuva, () => nappi, 'fokuskohdeZoom',
+      kuvakehysRef?.nostokuvaSarja?.(),
+    ),
+    koristele: (nappi, kehys) => {
+      if (paakuva.nauha) kehys.classList.add('fokuskohde-kuva-nauhalla');
+      piirraIhmenauha(nappi, paakuva.nauha);
+    },
+    latoNosto: latoKohde,
+    // Kaksi palstaa leveällä kuten nostokortilla (omistaja 22.9.2026 klo
+    // 23.06, js/nostokuva.js nostoPalstoiksi): iso kuva ensin, sitten
+    // kuva pienenee vasemmalle ja teksti tulee oikealle.
+    kaksipalstaTaitto: true,
+  }) : null;
+  kuvakehysRef = kaksivaihe?.kehys ?? null;
+  if (!kaksivaihe) latoKohde(sisalto, undefined);
+  // Kaiutin kortin otsikkoriville (omistaja 6.9.2026: "Kaikissa missä
+  // on tekstiä, saisi olla striimi lukijan symboli") — js/lukija.js
+  // lisaaLukijanappi. Kutsu on sisällön JÄLKEEN: teksitön kortti (pelkkä
+  // kuva tai kierrosnappi) piilottaa kaiuttimen itse.
+  lisaaLukijanappi(popup, { otsikko: `Kuuntele: ${kohde.nimi}` });
 
   merkki?.classList.add('auki');
   /*
@@ -3641,8 +6626,25 @@ export function avaaFokuskohde(ui, kohde) {
    * (js/pollo.js lueNakyma) lukee tästä auki olevan kortin nimen,
    * tyypin ja tekstin, jotta chat vastaa siitä, mitä ruudulla näkyy.
    */
-  ui.fokuskohdeAuki = { id: kohde.id, kohde, popup, merkki, purku: null };
+  // `ankkuri` on pallolaudan ruutupiste (ks. ankkurinLaatikko); kartalla null.
+  ui.fokuskohdeAuki = {
+    id: kohde.id, kohde, popup, merkki, ankkuri, purku: null,
+  };
+  /*
+   * NOSTOPOPUPIN LIPPU (omistaja 15.9.2026: matkakirjan lappu ja
+   * Liiku-nappi eivät saa jäädä kohdekortin ALLE — ks. css/styles.css
+   * body.nosto-popup-auki .fact-card / .toimintorivi .monitoimi-nappi).
+   * Yhteinen lippu kaikille kartan päälle avautuville korteille
+   * (tämä, js/kaupunkinosto.js avaaKortti); turisti-info avaa
+   * suoraan nähtävyys-dialogin (showModal, top layer), joka peittää
+   * jo kaiken eikä tarvitse tätä lippua.
+   */
+  document.body.classList.add('nosto-popup-auki');
   ui.fokuskohdeAuki.purku = kuunteleKohdetta(ui, popup);
+  // Puhujan akustiikka kortin ajaksi (js/tehosteketju.js): luolan kortilla
+  // Livian ja kertojan ääni saa luolan kaiun; sulkeminen nollaa (ks.
+  // suljeFokuskohde). Kohteen `akustiikka`-kenttä on pakkidataa.
+  asetaAkustiikka(kohde.akustiikka ?? null);
   asetaKohteenPaikka(ui);
   // Mitta uudelleen, kun asettelu ja tyyli ovat valmiit: ensimmäinen
   // mitta voi osua hetkeen, jolloin tyylitiedosto on vasta matkalla.
@@ -3668,15 +6670,22 @@ function kuunteleKohdetta(ui, popup) {
       suljeFokuskohde(ui);
     }
   };
+  /*
+   * VETO EI OLE NAPAUTUS (omistaja 12.9.2026: *"Nosto häviää näkyvistä
+   * jos yrittää scrollata."*). `ulos` kertoo vain, VOISIKO tästä
+   * pointerdownista tulla sulkeva napautus; itse sulkeminen tapahtuu
+   * vasta `sulkeva`:ssa, kun sormi on noussut kynnyksen sisällä ja
+   * ajoissa (ui-apurit kuunteleSulkevaNapautus).
+   */
   const ulos = (tapahtuma) => {
-    if (popup.contains(tapahtuma.target)) return;
+    if (popup.contains(tapahtuma.target)) return false;
     /*
      * Suurennos on tämän kortin oma jatke, vaikka se asuu bodyssa
      * (js/kartta.js KELLUVA_UI: kelluvat pinnat ovat siellä samasta
      * syystä). Ilman tätä napautus suurennoksen päällä sulkisi kortin, ja
      * kuva kutistuisi paikkaan, jota ei enää ole.
      */
-    if (tapahtuma.target?.closest?.('.fokuskohde-zoom')) return;
+    if (tapahtuma.target?.closest?.('.fokuskohde-zoom')) return false;
     /*
      * PÖLLÖ EI SULJE KORTTIA (omistajan pelitesti 25.8.2026: *"kohteen
      * pop-up katoaa, kun painaa pöllönappia"*). Juurisyy oli tässä:
@@ -3688,7 +6697,7 @@ function kuunteleKohdetta(ui, popup) {
      */
     if (tapahtuma.target?.closest?.('.pollo-nappi, .pollo-paneeli')) {
       siirraKohdeMyohemmin(ui);
-      return;
+      return false;
     }
     /*
      * SULKEVA NAPAUTUS EI AVAA MITÄÄN UUTTA (omistaja 31.8.2026:
@@ -3720,11 +6729,18 @@ function kuunteleKohdetta(ui, popup) {
      * CLICKIÄ napautuksen KOHDALTA ja vain puolen sekunnin ajan
      * (ui-apurit nielaiseSulkevaNapautus): kynnyksen ylittänyt veto ei
      * tuota clickiä lainkaan, ja kartan oma raahausvahti nielee senkin
-     * (js/kartta.js raahattiin). Vetoele käyttäytyy siis täsmälleen
-     * kuten ennen tätä muutosta — myös se mitattu yksityiskohta, että
-     * kortin sulkeva veto itse ei vielä panoroi (sulku tapahtuu
-     * pointerdownissa); se on vanhaa käytöstä eikä nielun seurausta.
+     * (js/kartta.js raahattiin). Vetoele ei myöskään enää sulje
+     * korttia lainkaan (omistaja 12.9.2026, ks. `sulkeva` alla): veto
+     * panoroi karttaa ja kortti jää auki — sulku vaatii napautuksen.
      */
+    return true;
+  };
+  /*
+   * SULKEMINEN VASTA NAPAUTUKSESTA. Nielu tarvitsee ALKUPERÄISEN
+   * pointerdownin — sen kohde ratkaisee, oliko napautus kartalle, ja
+   * sen koordinaatit rajaavat nielun (ui-apurit nielaiseSulkevaNapautus).
+   */
+  const sulkeva = (tapahtuma) => {
     if (tapahtuma.target?.closest?.('#board')) nielaiseSulkevaNapautus(tapahtuma);
     suljeFokuskohde(ui);
   };
@@ -3748,14 +6764,56 @@ function kuunteleKohdetta(ui, popup) {
       }
     }
   });
+  /*
+   * KUVA EDELLÄ -KORTIN OMA NAPAUTUS (omistaja 12.9.2026: *"peli
+   * luulee, että edelleen, jos pelaaja klikkaa mistä tahansa muualta
+   * kuin kuvan päältä, niin artikkeli pitää sulkea, mikä on tietenkin
+   * virhe"*).
+   *
+   * Tavallista korttia hallitsee `raahausTaiSulku`, joka lukee eleen
+   * irrotuksesta. Kuva edellä -korttia ei raahata lainkaan, joten sen
+   * eleen lukee talon yhteinen napautusvahti: vieritys (matka yli
+   * kynnyksen, pitkä painallus tai selaimen oma vieritys, joka
+   * lähettää pointercancelin) EI sulje, napautus sulkee. Sama sääntö
+   * ja samat luvut kuin kortin ulkopuolisella napautuksella.
+   *
+   * Painikkeet ja linkit — kuvanappi, "Lisää", pöllökysymykset,
+   * lähderivin linkit, sulkuristi — eivät ole sulkuja: ne hoitavat
+   * oman tekonsa itse.
+   */
+  /*
+   * VAIN VAIHEESSA 1 (omistaja 19.9.2026 klo 23.41, iPad, Chartres,
+   * sanatarkasti: *"Nosto sulkeutuu kun leipätekstin kohdalta klikkaa.
+   * Johtuu siitä että peliin ei päivity että lisää sisältöä on tuotu
+   * ruudulle."*). Kortti pitää luokan `nostokuva-kortti` myös Lisää-
+   * napautuksen jälkeen, joten tämä vahti sulki kortin leipätekstin,
+   * kuvatekstin ja lähderivin napautuksesta. Vaiheessa 2
+   * (`nostokuva-vaihe2`, js/nostokuva.js avaaLisaa) kortti on tavallinen
+   * luettava kortti: sen päällä napautus ei tee mitään, ja sulku on ✕ tai
+   * napautus kortin ULKOPUOLELLE (`ulos`/`sulkeva` alla) — sama sopimus
+   * kuin täkynoston ja eläinkortin kerroksilla.
+   */
+  const kuvanNapautus = kuunteleSulkevaNapautus(popup, {
+    kelpaa: (tapahtuma) => nostokuvaKortissa(popup)
+      && !popup.classList.contains('nostokuva-vaihe2')
+      && !tapahtuma.target?.closest?.('button, a'),
+    napautus: () => {
+      sfx.play('paper');
+      suljeFokuskohde(ui);
+    },
+  });
   document.addEventListener('keydown', nappain, true);
-  document.addEventListener('pointerdown', ulos, true);
+  const puraNapautus = kuunteleSulkevaNapautus(
+    document, { kelpaa: ulos, napautus: sulkeva }, { kaappaus: true },
+  );
   globalThis.addEventListener?.('resize', asemoi);
   globalThis.addEventListener?.('orientationchange', asemoi);
   vahti.observe(document.body, { childList: true, subtree: true });
   return () => {
     document.removeEventListener('keydown', nappain, true);
-    document.removeEventListener('pointerdown', ulos, true);
+    puraNapautus();
+    kuvanNapautus();
+    popup.puraEle?.();
     globalThis.removeEventListener?.('resize', asemoi);
     globalThis.removeEventListener?.('orientationchange', asemoi);
     vahti.disconnect();

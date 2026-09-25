@@ -10,8 +10,10 @@
  * Raamattu (omistaja 31.8.2026, KARTTANOSTOT POLTETAAN LAATTOIHIN):
  * *"mikään karttanostoista ei kuulu kadota laudalta missään vaiheessa
  * peliä, joten ne voidaan aivan hyvin polttaa suoraan karttaan."* —
- * kohdemerkit, niiden symbolit, nimiöt ja nostoviivat ovat pysyvää
- * sisältöä eivätkä pelitilaa.
+ * kohdemerkit, niiden symbolit, nimiöt ja siirtoviivat ovat pysyvää
+ * sisältöä eivätkä pelitilaa. (Siirtoviivat olivat poissa kartalta
+ * yhden vuorokauden ajan 31.8.2026; omistaja pyysi ne takaisin
+ * 1.9.2026 illalla, ks. js/fokusniput.js sääntö 6.)
  *
  * === TÄMÄ EI LASKE LADONTAA ========================================
  *
@@ -19,9 +21,9 @@
  * järjestyksessä ja samoilla luvuilla kuin peli itse — kokoamalla
  * niille tyngän `ui`-oliosta laudan datasta:
  *
- *   ryhmittely          js/fokuskohteet.js  kohdeKarttarivit
- *   erottelusiirto      js/fokuskohteet.js  eritteleKohdeRyhmat
+ *   merkkirivit         js/fokuskohteet.js  kohdeKarttarivit
  *   kasaus ja viivat    js/fokusniput.js    niputaFokusmerkit
+ *   erottelusiirto      js/fokuskohteet.js  eritteleKohdeRyhmat
  *   nimiöiden väistö    js/fokuskohteet.js  paivitaKohdeNimiot
  *   mittakaava ja tiiviste  js/nostoladonta.js
  *
@@ -43,7 +45,7 @@
  * kaupunkia antavat eri joukon, kartalla oleva täkyjoukko VAIHTUU
  * pelin aikana — ja koska täky menee samaan sarakkeeseen kuin muut
  * merkit (js/fokusniput.js), liittyy ryhmiin jäseneksi
- * (js/fokusryhmat.js) ja työntää naapureitaan erottelusiirrolla
+ * ja työntää naapureitaan erottelusiirrolla
  * (js/fokuskohteet.js eritteleKohdeRyhmat), se siirtäisi paljon
  * enemmän kuin oman merkkinsä. Sellaista maata ei voi polttaa
  * lainkaan: SEN JOKAINEN MERKKI jää eläväksi.
@@ -57,17 +59,154 @@
  * Bulgaria, Itävalta) oma lista ei riko mitään, koska kaupunkeja on
  * vain se yksi. Monen kaupungin maissa (Britannia, Turkki, Ranska,
  * Espanja, Italia, Puola, Ukraina, Venäjä, Suomi, Norja) rikkoo.
+ *
+ * === MERKKIPORTTI: ULOIN ZOOMI POLTTAA ENINTÄÄN 21 MERKKIÄ =========
+ *
+ * (14.9.2026, docs/raportit/viesti-fable-merkkirajat-20260914.md luku 7,
+ * "POLTTOVELKA".) Elävä kerros sai v1867:ssä pääkartan merkkirajan
+ * (js/pallolauta/nostot.js `merkkiPortti`): uloimmalla zoomilla piirtyy
+ * enintään PAAKARTAN_MERKKIKATTO tärkeintä merkkiä maata kohti ja
+ * `lahi: true` -kohteet eivät lainkaan; loput tulevat näkyviin
+ * zoomatessa. POLTTOKETJU EI TUNTENUT PORTTIA, ja siitä syntyi
+ * POLTTOVELKA: portin hylkäämä merkki on laatassa mustetta, jota
+ * kerros ei voi piilottaa. Mitattu tässä tiedostossa 14.9.2026:
+ * GRC 12, TUR 8, DEU 7, HRV 2, ITA 1, RUS 1 — 31 merkkiä, jotka
+ * palavat vaikka sääntö kieltää ne uloimmalta zoomilta.
+ *
+ * TÄMÄ ON SE YKSI KUTSU. Portti ajetaan `lahella = false` eli uloimman
+ * zoomin asetuksella, SAMALLA funktiolla ja samalla
+ * tärkeysjärjestyksellä kuin elävä kerros — ei omaa kopiota säännöstä,
+ * koska kaksi sääntöä ajautuisi eri vastauksiin (Raamatun ehto: yksi
+ * ladonta, yksi lähde).
+ *
+ * PORTTI AJETAAN VASTA KOLMEN PASSIN JÄLKEEN, täsmälleen kuten pelissä
+ * (js/pallolauta/nostot.js `keraa`: `maanKohdemerkit` latoo KAIKKI
+ * merkit ja portti karsii vasta valmiista ladonnasta). Jos portti
+ * karsisi ennen kasausta, poltettujen merkkien paikat eroaisivat
+ * elävistä — ja juuri sitä Raamattu kieltää.
+ *
+ * YLIMÄÄRÄINEN MERKKI JÄTETÄÄN KOKONAAN POLTTAMATTA, EI POLTETA
+ * LÄHIZOOMILAATOILLE. Nostolaatan tunnus→tiiviste-luettelo
+ * (`nostotaso.nostot`) ei ole tasokohtainen: peli päättää siitä, onko
+ * merkki laatassa VAI elävä (js/pallo.js `pallonNostoOnPoltettu`,
+ * js/fokuskohteet.js `maanKohdemerkit`). Jos merkki poltettaisiin vain
+ * z6–z7-laatoille ja jäisi luetteloon, se olisi lähizoomilla laatassa
+ * JA uloimmalla zoomilla näkymätön mutta yhä napautettava — eli velka
+ * ei nollautuisi. Jos taas merkki poltettaisiin laatoille mutta EI
+ * luetteloon, lähizoomilla piirtyisi sekä laatan muste että elävä
+ * merkki päällekkäin (kaksoiskuva). Kun merkki jää polttamatta,
+ * ELÄVÄ KERROS HOITAA SEN KOKONAAN: sen oma portti näyttää merkin
+ * lähizoomilla ja piilottaa uloimmalla — sama lopputulos ruudulla,
+ * nolla polttovelkaa eikä yhtään kaksoiskuvaa.
+ *
+ * === MERKKIPORTTI AJETAAN KOHDEMAAN ASETUKSELLA (18.9.2026) ========
+ *
+ * MITATTU VIKA (Fable 18.9.2026 klo 19.30). Yllä oleva kutsu ajoi
+ * portin asetuksella `kohdemaa: false`, eli katolla 21 ja `lahi`-lippu
+ * voimassa — ja se oli oikein NIIN KAUAN kuin nostotaso oli yksi
+ * maailmanlaajuinen laatasto, jossa jokainen maa on "joku muu maa".
+ * PAATOKSET 34 kohta 17 d teki nostotasosta MAAKOHTAISEN
+ * (`--nostomaa <ISO>` → `nostotasot[ISO]`, peli lataa vain kohdemaan
+ * laataston), ja silloin oletus kääntyi päinvastoin: jokaisen maan
+ * laatasto on aina kohdemaan laatasto, koska sitä ei ladata muulloin.
+ *
+ * Vanha oletus jätti Ranskasta poltettavaksi 13 merkkiä 89:stä: katto
+ * 21 ja `lahi: true` pitivät ~47 kaupungin ulkopuolista nostoa —
+ * hahmotelman 27 uutta kohdetta mukaan lukien — elävinä, ja pallon
+ * elävien CSS2D-katto (js/pallolauta/nostot.js NOSTOJEN_KATTO 40)
+ * pudotti niistä osan kokonaan ruudulta.
+ *
+ * SÄÄNTÖ ON PELIN OMA, EI KOPIO: elävä kerros ajaa portin
+ * `{ kohdemaa: true }` -asetuksella (js/pallolauta/nostot.js `keraa`,
+ * "KOHDEMAA-LIPPU"), koska se kerää merkit vain korostetusta maasta.
+ * Maakohtainen poltto on saman päätöksen toinen pää, joten se ajaa
+ * saman funktion samalla asetuksella. Katto ja `lahi` jäävät voimaan
+ * VAIN maailmanlaajuisessa ajossa (ilman `--nostomaa`), jossa naapurin
+ * muste on samassa kuvassa.
+ *
+ * MIKÄ EI MUUTU: kaupunkipisteet (`nakyva-kaupunki-*`), kaupungin
+ * sisäiset nostot (PAATOKSET 33 TARKENNUS 2, FABLEN RAJAUS a),
+ * täkyehto ja lukitun maan ankkuriehto pitävät entisellään — ne ovat
+ * eri sääntöjä eri syistä, eikä portin asetus koske niitä.
  */
 import {
   KOHDE_SYMBOLI_SKAALA, eritteleKohdeRyhmat, kohdeKarttarivit, kohdeMerkinLadonta,
-  paivitaKohdeNimiot,
+  maanLadontaEsteet, paivitaKohdeNimiot,
 } from '../../js/fokuskohteet.js';
 import { nippuViivanJana, niputaFokusmerkit } from '../../js/fokusniput.js';
-import { nostoladontaSkaala, nostoladontaTiiviste } from '../../js/nostoladonta.js';
+import {
+  NOSTOLADONTA_S, nostoladontaSkaala, nostoladontaTiiviste, onKaupunkipiste,
+} from '../../js/nostoladonta.js';
 import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
-import { nostoKarttarivit, nostoKaupunginPooli } from '../../js/fokusnosto.js';
-import { skandaaliKarttarivit } from '../../js/skandaalit.js';
-import { syvennysKarttarivit } from '../../js/syvennys.js';
+import { kytkeFokusnosto, nostoKarttarivit, nostoKaupunginPooli } from '../../js/fokusnosto.js';
+import { elaintakyKarttarivit, elaintakyNimioKylki } from '../../js/elaintaky-rivit.js';
+import { hetkiKarttarivit, kytkeHistorianHetket } from '../../js/historian-hetket.js';
+import { kytkeSkandaalit, skandaaliKarttarivit } from '../../js/skandaalit.js';
+import { kytkeSyvennys, syvennysKarttarivit } from '../../js/syvennys.js';
+import { PAAKARTAN_MERKKIKATTO, merkkiPortti } from '../../js/pallolauta/nostot.js';
+import { lukittuAnkkuri, onLukittuMaa } from '../../js/pallolauta/nostoankkurit.js';
+import { onKaupunginSisainen } from '../../js/pallolauta/kaupunkiliuska.js';
+import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
+import { asteetLaudalle } from '../../js/pulu-paikka.js';
+
+/*
+ * ══ LUKITTU ANKKURI ON POLTETUN MERKIN PAIKKA ══════════════════════
+ * (Raamattu KARTTAUUDISTUKSEN PAATOKSET 33 TARKENNUS 2, Fablen rajaus
+ * 18.9.2026; mitattu docs/raportit/viesti-fable-poltto-ranska-nostot-
+ * 20260918.md luku 4.1.)
+ *
+ * Ladonnan antama piste on RUUDUSTA RIIPPUMATON, mutta pelin elävä
+ * kerros ei enää käytä sitä: PAATOKSET 32:n ankkurointi levittää
+ * merkit saapumiskehyksessä, jonka mitat tulevat ruutukoosta, ja
+ * lukittu taulu (js/packs/nostoankkurit-fra.js) on se yksi piste,
+ * jonka peli lukee KAIKILLA ruuduilla. Poltettu muste on laatassa
+ * yhdessä paikassa, joten sen on oltava juuri se piste — muuten elävä
+ * nimiö ja osumapinta karkaavat musteesta (mitattu ero Avignonissa
+ * 3,10 ja Mont-Saint-Michelissä 2,74 laudan yksikköä eli ~6-7 px).
+ *
+ * KOLME SEURAUSTA, JOTKA OVAT TÄSSÄ TIEDOSTOSSA:
+ *
+ *   1. Merkin `x`/`y` (ja `ankkuriX`/`ankkuriY`) tulevat taulusta
+ *      `asteetLaudalle`-muunnoksella, ei ladonnasta.
+ *   2. SIIRTOVIIVAA EI POLTETA. Fablen rajaus kohta b sanatarkasti:
+ *      siirtoviivaa ei polteta eikä piirretä — lukittu ankkuri ON
+ *      noston paikka, joten viivalla ei ole mitään, mistä lähteä.
+ *      Ilman tätä viiva osoittaisi laatassa pysyvästi paikkaan, jossa
+ *      merkkiä ei ole.
+ *   3. Taulullisen maan merkki ILMAN ankkuria ei pala lainkaan (ks.
+ *      onLukittuMaa): elävä kerros hoitaa sen kokonaan, kuten
+ *      merkkiportin hylkäämän merkin.
+ *
+ * TIIVISTE LASKETAAN ENNEN SIIRTOA, LADONNAN PISTEESTÄ. Tiiviste on
+ * merkin TUNNISTE, jolla peli päättää, onko merkki laatassa
+ * (js/fokuskohteet.js kohteenNostotiiviste → js/pallo.js
+ * pallonNostoOnPoltettu), ja pelin puoli laskee sen omasta
+ * ladonnastaan. Jos poltettu tiiviste laskettaisiin siirretystä
+ * pisteestä, se ei täsmäisi pelin laskemaan — merkki piirtyisi
+ * elävänä musteen päälle (kaksoiskuva). Ladonta on kummallakin
+ * puolella sama, joten ladonnan pisteestä laskettu tiiviste täsmää.
+ */
+
+/*
+ * KAUPUNGIN SISÄISET EIVÄT POLTA PISTETTÄ (PAATOKSET 34, Fablen
+ * rajaus kohta a). Sääntö on pelin oma — `onKaupunginSisainen`
+ * js/pallolauta/kaupunkiliuska.js — eikä tänne kirjoitettu kopio:
+ * kaksi sääntöä ajautuisi eri vastauksiin. Se tarvitsee noston OMAN
+ * paikan asteina, ja polttoketjussa piste on laudan yksiköissä, joten
+ * se käännetään takaisin (js/fokusmitat.js laudaltaAsteiksi).
+ *
+ * KAUPUNKIPISTE EI PALA LAINKAAN (18.9.2026, korjaus). Fablen rajaus
+ * kohta a sanoo kaupunkipisteistä *"kuten ennen"*, ja tämä ketju luki
+ * sen *"palaa kuten muutkin"*: 18.9.2026 vietyyn nostotasoon
+ * (2026-09-18-nostot) paloi seitsemän `nakyva-kaupunki-*`-pistettä,
+ * joita 8.9. luettelossa ei ollut lainkaan — ja Ranskan lisäkaupungit
+ * katosivat kartalta, koska poltetulla merkillä ei ole elävää solmua.
+ * KUTEN ENNEN tarkoittaa siis eläviä: kaupungin nimiö on 11,5 px ja
+ * merkin napautus avaa liuskan, eikä laattamuste ole kumpaakaan.
+ * Sääntö on pelin oma (js/nostoladonta.js `onKaupunkipiste`) ja sen
+ * perustelu Raamatusta on siellä; eläintäky ei kulje kohdekerroksen
+ * läpi lainkaan, joten sitä tämä ei koske.
+ */
 
 /**
  * Maan kaupungit laudan paketista.
@@ -121,10 +260,13 @@ function maanTakyt(pack, iso, kaupungit) {
  *   skandaalit). TÄKYNOSTOT EIVÄT KUULU TÄNNE — ks. tiedoston alku.
  * @param {boolean} estetty  jos tosi, maan yksikään merkki ei ole
  *   poltettava (maan täkyjoukko ei ole vakaa — ks. tiedoston alku)
+ * @param {boolean} maittain  MAAKOHTAINEN LAATASTO (ks. MERKKIPORTTI
+ *   AJETAAN KOHDEMAAN ASETUKSELLA): portti saa `kohdemaa: true`, koska
+ *   tämän maan laatasto on aina kohdemaan laatasto.
  * @returns {{ s:number, merkit:Array }} merkit laudan koordinaateissa
  */
 function nostoladontaMerkit({
-  pack, iso, pohja, lisat = [], estetty = false,
+  pack, iso, pohja, lisat = [], estetty = false, maittain = false,
 }) {
   const rajaus = pohja?.rajaus;
   const bbox = pohja?.bbox;
@@ -159,6 +301,9 @@ function nostoladontaMerkit({
     fokusPohjaBbox: bbox,
     fokusPohjanAlla: pohjanAlla,
     kiertoKohdat: (x) => [x],
+    // Väistön ulkoiset esteet: edeltävät maat maatunnusjärjestyksessä
+    // (js/fokuskohteet.js NAAPURIMAAT LADOTAAN JÄRJESTYKSESSÄ).
+    fokuskohdeIso: iso,
     fokuskohdeKaupungit: kaupungit,
     fokuskohdeAvain: `${iso}:poltto`,
     fokuskohdeEroAvain: null,
@@ -175,30 +320,116 @@ function nostoladontaMerkit({
   /*
    * SAMA KOLMEN PASSIN KETJU JA SAMA JÄRJESTYS KUIN PELISSÄ
    * (js/fokuskohteet.js asetaKohdeMittakaava ja paivitaFokuskohteet):
-   * erottelu, kasaus, väistö. Järjestys ei ole makuasia — väistö lukee
-   * merkkien LOPULLISET paikat, joten se on viimeisenä.
+   * kasaus, erottelu, väistö. Järjestys ei ole makuasia — kumpikin
+   * jälkimmäinen lukee edellisten tuloksen: erottelu väistää
+   * ryppääseen ladottuja merkkejä (31.8.2026) ja väistö lukee
+   * merkkien LOPULLISET paikat.
    */
-  eritteleKohdeRyhmat(ui, s);
   const viivat = niputaFokusmerkit(ui, s);
+  eritteleKohdeRyhmat(ui, s);
   paivitaKohdeNimiot(ui, s);
-  const viivaTunnuksittain = new Map(viivat.map((v) => [v.id, v]));
+  /*
+   * MERKKIPORTTI VALMIISEEN LADONTAAN (ks. MERKKIPORTTI tiedoston
+   * alussa). Sama funktio, sama tärkeysjärjestys ja sama
+   * `lahella = false` kuin elävällä kerroksella uloimmalla zoomilla;
+   * rivit menevät portille DATAN järjestyksessä, kuten pelissä.
+   * `kohde` on rivin oma tietue, josta portti lukee tyypin, `ihme`-
+   * lipun ja `lahi`-lipun.
+   *
+   * Portti ei siirrä eikä poista mitään ladonnasta — se päättää vain,
+   * mikä rivi on `poltettava`. Piiloon jäävät merkit hoitaa elävä
+   * kerros omalla portillaan.
+   *
+   * `kohdemaa`-LIPPU: ks. MERKKIPORTTI AJETAAN KOHDEMAAN ASETUKSELLA
+   * tiedoston alussa. Maakohtaisessa ajossa lippu on tosi, koska peli
+   * lataa tämän laataston VAIN silloin, kun tämä maa on kohdemaa.
+   */
+  const portti = merkkiPortti(
+    ui.fokuskohdeRyhmat, false, (r) => r.kohde ?? null, { kohdemaa: maittain },
+  );
+  const paastetyt = new Set(portti.merkit.map((r) => r.id));
+  /*
+   * SIIRTOVIIVAT KASAUSPASSIN OMASTA PALUUARVOSTA (1.9.2026 ilta,
+   * omistaja: *"otetaan siirtoviivat takaisin karttanostoille (esim.
+   * ateena)"*). Janan päät laskee js/fokusniput.js nippuViivanJana —
+   * sama funktio, jolla peli piirtää oman viivansa. Ilman sitä
+   * poltettu viiva alkaisi eri kohdasta kuin elävä.
+   */
+  const viivaTunnuksittain = new Map((viivat ?? []).map((v) => [v.id, v]));
+  const lukittuMaa = onLukittuMaa(iso);
+  /*
+   * KAUPUNGIN SISÄISET POIS ENNEN MERKKIEN KOKOAMISTA. Keskus on
+   * laudan kaupungin oma piste asteina, ja jäsenyys mitataan noston
+   * omasta datapaikasta — sama funktio ja sama säde kuin pelissä.
+   */
+  const kaupunkienAsteet = kaupungit
+    .map((k) => laudaltaAsteiksi(pack.id, k.x, k.y))
+    .filter((k) => k && Number.isFinite(k.lat));
+  const sisainen = (r) => {
+    const oma = laudaltaAsteiksi(pack.id, r.x, r.y);
+    if (!oma) return false;
+    const nosto = {
+      paikkaNimi: typeof r.kohde?.paikka === 'string' ? r.kohde.paikka : null,
+      lat: oma.lat,
+      lng: oma.lon ?? oma.lng,
+    };
+    return kaupunkienAsteet.some((k) => onKaupunginSisainen(
+      nosto, { nimi: k.nimi, lat: k.lat, lng: k.lon ?? k.lng },
+    ));
+  };
   const merkit = [];
+  let sisaisia = 0;
+  let kaupunkipisteita = 0;
+  let ilmanAnkkuria = 0;
   for (const r of ui.fokuskohdeRyhmat) {
     const viiva = viivaTunnuksittain.get(r.id) ?? null;
     const merkki = {
       tunnus: r.id,
       x: r.nippu?.x ?? r.x + (r.sx ?? 0),
       y: r.nippu?.y ?? r.y + (r.sy ?? 0),
+      /*
+       * SIIRTYMÄN ANKKURI (2.9.2026, ruutukatto koskee koko piirrosta —
+       * js/nostoladonta.js nostoladontaKattoSuhde). Merkin PAIKKA (x, y)
+       * on ladonnan tulos ja pysyy tasoriippumattomana; piirtäjä
+       * kutistaa siirtymän ankkurinsa ympäri tason omalla tiheydellä,
+       * täsmälleen kuten peli näkymän mittakaavalla. Ankkuri on
+       * sarakkeessa kaupungin piste ja muualla merkin oma datapiste.
+       *
+       * KENTTÄ EI OLE TIIVISTEESSÄ, eikä sen tarvitse olla: se on
+       * funktio merkin omasta paikasta ja kasauksen tuloksesta, ja
+       * kumpikin on jo tiivisteessä (paikka) tai sen syötteenä.
+       */
+      ankkuriX: r.nippu?.cx ?? r.x,
+      ankkuriY: r.nippu?.cy ?? r.y,
       symboli: r.symboli ?? null,
       laji: r.laji ?? null,
+      // NOSTON TASO 1|2|3 (Sisältökirjuri 20.9.2026, sisalto-nostotasot-fra):
+      // kulkee merkkiin sellaisenaan; puuttuva = 2 (generaattori päättää).
+      ...((r.kohde?.taso ?? r.taso) ? { taso: Number(r.kohde?.taso ?? r.taso) } : {}),
       nimio: r.nimi ?? '',
-      nimioNakyy: Boolean(r.nimi) && r.nimioNakyy !== false,
-      nimioVasemmalle: Boolean(r.nimioVasemmalle),
       /*
-       * YHDISTETYN MERKIN NIMIÖ ON JO LADOTTU MITTAANSA (pilkkulista,
-       * js/fokusryhmat.js ryhmaNimio), eikä kartan 18 merkin sääntö saa
-       * katkaista sitä uudestaan. Totuusarvo eikä `Infinity`, koska
-       * JSON ei tunne ääretöntä.
+       * NÄKYYKÖ NIMIÖ — VÄISTÖPASSIN PÄÄTÖS SELLAISENAAN. Kenttä oli
+       * 31.8.2026 asti aina tosi, koska väistö kirjoitti päätöksensä
+       * vain DOM-solmullisille riveille eikä generaattorilla ole DOMia;
+       * laattaan paloi siis myös ne nimiöt, jotka väistö oli pudottanut
+       * (js/fokuskohteet.js paivitaKohdeNimiot, "PÄÄTÖS KIRJOITETAAN
+       * TIETUEESEEN ENNEN SOLMUEHTOA").
+       */
+      nimioNakyy: Boolean(r.nimi) && r.nimioNakyy !== false,
+      /*
+       * NIMIÖN KYLKI, NELJÄSTÄ (1.9.2026): oikea, vasen, ylä tai ala —
+       * sama joukko kuin kartan omilla paikannimillä (js/karttanimet.js)
+       * ja sama, jonka väistö juuri päätti. Kenttä oli 1.9.2026 asti
+       * totuusarvo `nimioVasemmalle`, ja kaksi kylkeä pudotti 55 nimiötä
+       * pelkkien symbolitörmäysten takia (ks. js/fokuskohteet.js
+       * KOHDE_NIMIO_PUOLET).
+       */
+      nimioPuoli: r.nimioPuoli ?? 'oikea',
+      /*
+       * KARTAN 18 MERKIN SÄÄNTÖ KOSKEE JOKAISTA NIMIÖTÄ (31.8.2026).
+       * Poikkeus oli yhdistetyn merkin pilkkulista, joka oli jo ladottu
+       * omaan mittaansa; yhdistely purettiin, joten kenttä on aina
+       * epätosi. Se jää luetteloon, koska piirtäjä lukee sen.
        */
       nimioRajaton: r.nimioKatto === Infinity,
       osat: (r.kohde?.osat ?? []).map((osa) => osa.id),
@@ -209,48 +440,212 @@ function nostoladontaMerkit({
        */
       porras: KOHDE_SYMBOLI_SKAALA * s,
       /*
-       * NOSTOVIIVA VALMIINA JANANA — päät laskee js/fokusniput.js
-       * nippuViivanJana, sama funktio jolla peli piirtää oman viivansa.
+       * SIIRTOVIIVA VALMIINA JANANA — tai null, jos merkkiä ei
+       * siirretty ankkuristaan tai pätkä jäisi roskaksi
+       * (js/fokusniput.js NIPPU_VIIVA_MIN). Piirtäjä
+       * (tools/fokuskartta/maailmapiirto.js piirraNostotKankaalle) ei
+       * laske päistä mitään uudelleen — se vain skaalaa ne laatan
+       * kuvapikseleiksi.
+       *
+       * KENTTÄ EI OLE TIIVISTEESSÄ (nostoladontaTiiviste), eikä sen
+       * tarvitse olla: viiva on funktio merkin lopullisesta paikasta ja
+       * ankkurista, ja paikka ON tiivisteessä. Piirtosäännön muutos —
+       * eli tämä erä — huomataan js/nostoladonta.js
+       * NOSTOLADONTA_SAANTO -nostosta.
        */
       viiva: viiva ? nippuViivanJana(viiva, s) : null,
       /*
        * MAA PALAA KOKONAAN TAI EI LAINKAAN (ks. tiedoston alku,
        * TÄKYNOSTOT). Sarakekohtainen esto ei riitä: täky ei siirrä
        * vain oman sarakkeensa rivejä vaan myös naapureitaan
-       * erottelusiirrolla (js/fokuskohteet.js eritteleKohdeRyhmat), ja
-       * se voi liittyä ryhmään jäseneksi mistä tahansa maan
-       * kaupungista (js/fokusryhmat.js). Yksikin epävakaa täky tekee
+       * erottelusiirrolla (js/fokuskohteet.js eritteleKohdeRyhmat) ja
+       * mistä tahansa maan kaupungista. Yksikin epävakaa täky tekee
        * koko maan ladonnasta pelitilasta riippuvan.
        */
-      poltettava: !estetty,
+      /*
+       * MERKKIPORTTI: portin hylkäämä merkki EI PALA lainkaan, vaan
+       * jää eläväksi (ks. MERKKIPORTTI tiedoston alussa). Maa palaa
+       * yhä kokonaan tai ei lainkaan täkyehdon mielessä — portti on
+       * eri sääntö ja koskee yksittäistä merkkiä.
+       */
+      poltettava: !estetty && paastetyt.has(r.id),
     };
+    /*
+     * TIIVISTE LADONNAN PISTEESTÄ (ks. lohko tiedoston alussa): sama
+     * luku kuin pelin `kohteenNostotiiviste`, joten merkki tunnistetaan
+     * poltetuksi eikä piirry musteen päälle.
+     */
     merkki.tiiviste = nostoladontaTiiviste(merkki);
+    // Kaupunkipiste jää eläväksi (ks. KAUPUNKIPISTE EI PALA LAINKAAN).
+    if (merkki.poltettava && onKaupunkipiste(r.id)) {
+      merkki.poltettava = false;
+      kaupunkipisteita += 1;
+    }
+    if (merkki.poltettava && sisainen(r)) {
+      merkki.poltettava = false;
+      sisaisia += 1;
+    }
+    if (merkki.poltettava && lukittuMaa) {
+      // OMAN MAAN taulusta (23.9.2026): yhteisessä taulussa FRA voittaa, ja
+      // Espanjan `valimeri` paloi Touloniin (29 jaettua id:tä).
+      const a = lukittuAnkkuri(`nosto:${r.id}`, iso);
+      const p = a ? asteetLaudalle(pack.id, a.lat, a.lng) : null;
+      if (p) {
+        merkki.x = p.x;
+        merkki.y = p.y;
+        merkki.ankkuriX = p.x;
+        merkki.ankkuriY = p.y;
+        // Fablen rajaus kohta b: siirtoviivaa ei polteta lukitulle.
+        merkki.viiva = null;
+        merkki.lukittuAnkkuri = { lat: a.lat, lng: a.lng };
+      } else {
+        merkki.poltettava = false;
+        ilmanAnkkuria += 1;
+      }
+    }
     merkit.push(merkki);
   }
-  return { s, merkit };
+  return {
+    s,
+    merkit,
+    porttiPiiloon: merkit.length - paastetyt.size,
+    sisaisia,
+    kaupunkipisteita,
+    ilmanAnkkuria,
+  };
 }
 
 /**
  * KOKO MAAILMAN POLTETTAVAT NOSTOT.
  *
  * @param {object} pack  laudan paketti (js/packs/maailmankartta.js)
+ * @param {{maittain?: boolean}} [asetukset]  `maittain: true` =
+ *   maakohtainen laatasto (`--nostomaa <ISO>`): merkkiportti ajetaan
+ *   kohdemaan asetuksella ja sama tunnus saa palaa jokaisen maan omaan
+ *   laatastoon (ks. MERKKIPORTTI AJETAAN KOHDEMAAN ASETUKSELLA ja
+ *   SAMA TUNNUS KAHDESSA MAASSA alempana).
  * @returns {{
  *   merkit: Array,     kaikki merkit (myös poltettava:false)
- *   luettelo: object,  tunnus -> tiiviste, VAIN poltetut
+ *   luettelo: object,  tunnus -> tiiviste, VAIN poltetut. MAAKOHTAISESSA
+ *     ajossa tämä on yhteenveto koko maailmasta eikä kelpaa laataston
+ *     luetteloksi: sama tunnus voi olla usean maan ladonnasta. Ajon oma
+ *     taulu rakennetaan maan merkeistä (tools/generoi-laattapyramidi.mjs
+ *     `poltettuLuettelo`).
  *   tilasto: object
  * }}
  *
  * Merkin kentät ovat laudan yksiköitä ja valmiiksi ladottuja:
- * `x`, `y`, `symboli`, `laji`, `nimio`, `nimioNakyy`, `nimioVasemmalle`,
- * `nimioKatto`, `viiva` ja `s` (maan merkkiskaala). Piirtäjä
+ * `x`, `y`, `symboli`, `laji`, `nimio`, `nimioNakyy`, `nimioPuoli`,
+ * `nimioRajaton`, `viiva` ja `s` (maan merkkiskaala). Piirtäjä
  * (tools/fokuskartta/maailmapiirto.js) ei laske niistä mitään
  * uudelleen — se vain skaalaa ne laatan kuvapikseleiksi.
  */
-export function keraaNostot(pack) {
+/**
+ * ELÄINTÄYT POLTETTAVIKSI MERKEIKSI (2.9.2026).
+ *
+ * OMISTAJAN HAVAINTO, sanatarkasti: *"samalla kun symbolit
+ * uudistetaan, niin voisi tarkistaa, että kaikki kartan merkinnät
+ * tulevat poltetuiksi. Esim. Kreikassa Merikilpikonna on vielä
+ * polttamatta."*
+ *
+ * ── MIKSI NÄMÄ EIVÄT OLE `lisat`-LISTALLA ─────────────────────────
+ *
+ * Eläintäky ei ole kohde eikä se kulje kohdekerroksen läpi: sillä on
+ * pelissä OMA KERROS (js/elaintaky.js), se on kartalla koko laudan
+ * mitalta eikä vain sen maan lehdellä, jossa pelaaja on, eikä se
+ * osallistu kasaukseen, erotteluun tai nimiöväistöön. Jos se
+ * työnnettäisiin `lisat`-listaan, se muuttaisi kaikkien muiden
+ * merkkien ladontaa — ja poltettu ladonta eroaisi elävästä juuri
+ * siinä, mitä Raamattu kieltää eroamasta.
+ *
+ * Merkki latautuu siis omillaan, omaan pisteeseensä, ja piirtyy
+ * samalla funktiolla kuin kaikki muut (piirraNostosymPolttoon).
+ *
+ * ── MITTA ON SAMA RIVI KUIN ELÄVÄSSÄ KERROKSESSA ──────────────────
+ *
+ * Elävä merkki lukee `ELAINTAKY_SYMBOLI_SKAALA * fokusMerkkiSkaala-
+ * Pohja()`, ja kumpikin luku on tässä: kerroin on sama kuin
+ * kohdemerkillä (KOHDE_SYMBOLI_SKAALA) ja pohja on lehden vakio
+ * NOSTOLADONTA_S. Ruutukaton lisää piirtäjä, kuten muillekin.
+ *
+ * ── NÄKYVYYSRAJA EI OSU NOSTOTASOON ───────────────────────────────
+ *
+ * Elävä kerros piilottaa merkit, kun näkymä on yli 90° leveä
+ * (js/elaintaky.js ELAINTAKY_NAKYY_ASTETTA), eikä poltettu laatta voi
+ * piilottaa mitään. Ristiriitaa ei silti synny, koska nostolaattoja on
+ * VAIN tasoilla z5–z7 (tools/generoi-laattapyramidi.mjs NOSTO_ALIN):
+ * z5 valitaan vasta kun näkymän mittakaava on noin 0,9 CSS-pikseliä
+ * lautayksikköä kohti, ja silloin tavallinen ruutu näyttää 30–50
+ * pituusastetta. Yleiskuvassa, jossa raja purisi, nostotasoa ei ole
+ * ladattuna lainkaan.
+ */
+function keraaElaintakyt(pack) {
+  const merkit = [];
+  for (const taky of elaintakyKarttarivit(pack)) {
+    const merkki = {
+      perhe: 'elaintaky',
+      tunnus: taky.tunnus,
+      iso: taky.iso,
+      x: taky.x,
+      y: taky.y,
+      // Merkkiä ei siirretä mistään: ankkuri on sen oma piste.
+      ankkuriX: taky.x,
+      ankkuriY: taky.y,
+      symboli: 'elain',
+      laji: 'elain',
+      nimio: taky.nimio,
+      nimioNakyy: Boolean(taky.nimio),
+      /*
+       * KYLKI MAAN VALMIIN LADONNAN YMPÄRILTÄ (3.9.2026,
+       * js/elaintaky-rivit.js elaintakyNimioKylki): sama funktio ja
+       * samat esteet kuin elävällä kerroksella (js/elaintaky.js).
+       */
+      nimioPuoli: elaintakyNimioKylki(
+        taky, KOHDE_SYMBOLI_SKAALA * NOSTOLADONTA_S, maanLadontaEsteet(pack, taky.iso),
+      ),
+      nimioRajaton: false,
+      osat: [],
+      porras: KOHDE_SYMBOLI_SKAALA * NOSTOLADONTA_S,
+      viiva: null,
+      s: NOSTOLADONTA_S,
+      poltettava: true,
+    };
+    merkki.tiiviste = nostoladontaTiiviste(merkki);
+    merkit.push(merkki);
+  }
+  return merkit;
+}
+
+export function keraaNostot(pack, { maittain = false } = {}) {
+  /*
+   * LISÄLÄHTEET REKISTERIIN, KUTEN PELISSÄ (js/main.js): naapurimaan
+   * ladonta (js/fokuskohteet.js maanUlkoisetEsteet → ladoMaanTynka)
+   * lukee syvennykset, skandaalit, historian hetket ja täkynostot
+   * rekisteristä, ja ilman niitä edeltävän maan esteet olisivat toiset
+   * kuin pelissä. Kutsu on idempotentti (rekisteroiMaanKohteet: yksi
+   * lähde järjestysnumeroa kohti).
+   */
+  kytkeFokusnosto();
+  kytkeSyvennys();
+  kytkeSkandaalit();
+  kytkeHistorianHetket();
   const merkit = [];
   const luettelo = {};
   const tilasto = {
-    maita: 0, maitaEstetty: 0, merkkeja: 0, poltettu: 0, monimaisia: 0, estot: [],
+    maita: 0,
+    maitaEstetty: 0,
+    merkkeja: 0,
+    poltettu: 0,
+    monimaisia: 0,
+    elaimia: 0,
+    // Merkkiportin uloimmalla zoomilla karsimat merkit (ks. MERKKIPORTTI).
+    porttiPiiloon: 0,
+    porttiMaat: [],
+    // Kaupungin sisäiset (PAATOKSET 34) ja lukitun maan ankkurittomat.
+    sisaisia: 0,
+    kaupunkipisteita: 0,
+    ilmanAnkkuria: 0,
+    estot: [],
   };
   for (const [iso, pohja] of Object.entries(FOKUS_POHJAT)) {
     if (pohja.lauta !== pack.id) continue;
@@ -260,21 +655,52 @@ export function keraaNostot(pack) {
       ...syvennysKarttarivit(iso, pack.id, pack.map?.cityCountry)
         .map(({ kohde, paikka }) => ({ kohde, paikka })),
       ...skandaaliKarttarivit(iso, pack.id).map(({ kohde, paikka }) => ({ kohde, paikka })),
+      /*
+       * HISTORIAN HETKET (lisätty 2.9.2026, omistaja: *"voisi tarkistaa,
+       * että kaikki kartan merkinnät tulevat poltetuiksi"*). Perhe tuli
+       * karttaan v1453:ssa omana nostolajinaan (js/historian-hetket.js)
+       * eikä päätynyt tähän listaan, joten sen tiimalasit jäivät
+       * eläväksi kerrokseksi — vaikka ne ovat samaa pysyvää sisältöä
+       * kuin syvennykset ja skandaalit, samassa ladonnassa ja samassa
+       * sarakkeessa.
+       */
+      ...hetkiKarttarivit(iso, pack.id).map(({ kohde, paikka }) => ({ kohde, paikka })),
       ...takyt.rivit.map(({ kohde, paikka }) => ({ kohde, paikka })),
     ];
-    const { s, merkit: maanMerkit } = nostoladontaMerkit({
-      pack, iso, pohja, lisat, estetty: !takyt.vakaa,
+    const {
+      s, merkit: maanMerkit, porttiPiiloon, sisaisia, kaupunkipisteita, ilmanAnkkuria,
+    } = nostoladontaMerkit({
+      pack, iso, pohja, lisat, estetty: !takyt.vakaa, maittain,
     });
     if (!maanMerkit.length) continue;
     tilasto.maita += 1;
+    if (porttiPiiloon > 0) {
+      tilasto.porttiPiiloon += porttiPiiloon;
+      tilasto.porttiMaat.push(`${iso}: ${maanMerkit.length} merkkiä, `
+        + `${porttiPiiloon} yli katon ${PAAKARTAN_MERKKIKATTO}`);
+    }
+    tilasto.sisaisia += sisaisia ?? 0;
+    tilasto.kaupunkipisteita += kaupunkipisteita ?? 0;
+    tilasto.ilmanAnkkuria += ilmanAnkkuria ?? 0;
     if (!takyt.vakaa) {
       tilasto.maitaEstetty += 1;
       tilasto.estot.push(`${iso}: ${takyt.syy}`);
     }
     for (const merkki of maanMerkit) {
-      merkit.push({ ...merkki, iso, s });
+      merkit.push({ ...merkki, perhe: 'nosto', iso, s });
       tilasto.merkkeja += 1;
     }
+  }
+  /*
+   * ELÄINTÄYT OMANA PERHEENÄÄN (ks. keraaElaintakyt yllä): sama
+   * merkkitietue, sama piirtäjä ja sama luettelo, mutta oma ladontansa
+   * — ne eivät ole kohdekerroksen sarakkeissa eivätkä siksi voi
+   * siirtää yhtäkään muuta merkkiä.
+   */
+  for (const merkki of keraaElaintakyt(pack)) {
+    merkit.push(merkki);
+    tilasto.merkkeja += 1;
+    tilasto.elaimia += 1;
   }
   /*
    * === SAMA TUNNUS KAHDESSA MAASSA EI PALA ========================
@@ -292,13 +718,32 @@ export function keraaNostot(pack) {
    * eikä lista maastokohteista: sama sääntö kattaa myös kahden maan
    * saman tunnuksen (Kreikan ja Kyproksen `olympos` ovat eri vuoret
    * samalla tunnuksella) ilman että sitä pitää erikseen tietää.
+   *
+   * ── MAAKOHTAISESSA AJOSSA SYY POISTUU (18.9.2026) ───────────────
+   *
+   * Sääntö syntyi siitä, että laatasto oli koko maailman yhteinen:
+   * *"laatta ei tiedä maasta mitään, ja sama merkki olisi poltettuna
+   * kuudessa paikassa."* Maakohtaisessa laatastossa
+   * (`--nostomaa <ISO>`, PAATOKSET 34 kohta 17 d) laatastot eivät enää
+   * sekoitu: Välimeri palaa Ranskan laatastoon Ranskan mittatikulla ja
+   * Tunisian laatastoon Tunisian, ja peli lataa vain kohdemaan
+   * laataston. Myös TIIVISTELUETTELO on maakohtainen
+   * (`nostotasot[ISO].nostot`, js/laattapyramidi.js nostotasonKirjaus),
+   * joten kohdemaan tiiviste vastaa juuri sitä ladontaa, jolla merkki
+   * poltettiin — eikä naapurin eri paikkaan ladottu kopio pääse
+   * vaientamaan sitä.
+   *
+   * SAMAN MAAN SISÄLLÄ SÄÄNTÖ PYSYY: yksi tunnus voi olla luettelossa
+   * vain kerran, joten kahdesti latoutunut tunnus jää eläväksi myös
+   * maakohtaisessa ajossa. Siksi avain on maittain `ISO|tunnus`.
    */
   const kertoja = new Map();
+  const avain = (m) => (maittain ? `${m.iso ?? ''}|${m.tunnus}` : m.tunnus);
   for (const merkki of merkit) {
-    kertoja.set(merkki.tunnus, (kertoja.get(merkki.tunnus) ?? 0) + 1);
+    kertoja.set(avain(merkki), (kertoja.get(avain(merkki)) ?? 0) + 1);
   }
   for (const merkki of merkit) {
-    if (merkki.poltettava && kertoja.get(merkki.tunnus) > 1) {
+    if (merkki.poltettava && kertoja.get(avain(merkki)) > 1) {
       merkki.poltettava = false;
       tilasto.monimaisia += 1;
     }
@@ -315,5 +760,14 @@ export function nostojenYhteenveto(tilasto) {
   return `  nostot          ${tilasto.merkkeja} merkkiä ${tilasto.maita} maasta, `
     + `poltetaan ${tilasto.poltettu}`
     + (tilasto.maitaEstetty ? ` · ${tilasto.maitaEstetty} maata estetty (täky)` : '')
-    + (tilasto.monimaisia ? ` · ${tilasto.monimaisia} monen maan merkkiä eläväksi` : '');
+    + (tilasto.monimaisia ? ` · ${tilasto.monimaisia} monen maan merkkiä eläväksi` : '')
+    + (tilasto.elaimia ? ` · ${tilasto.elaimia} eläintäkyä` : '')
+    + (tilasto.porttiPiiloon
+      ? ` · ${tilasto.porttiPiiloon} merkkiä merkkiportin taakse (katto ${PAAKARTAN_MERKKIKATTO})`
+      : '')
+    + (tilasto.sisaisia ? ` · ${tilasto.sisaisia} kaupungin sisäistä eläväksi` : '')
+    + (tilasto.kaupunkipisteita
+      ? ` · ${tilasto.kaupunkipisteita} kaupunkipistettä eläväksi` : '')
+    + (tilasto.ilmanAnkkuria
+      ? ` · ${tilasto.ilmanAnkkuria} ilman lukittua ankkuria eläväksi` : '');
 }

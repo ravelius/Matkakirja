@@ -135,34 +135,115 @@ export const FOKUSVIRTA_RIIKA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ilman lisäystä. */
-    paikkarivi: 'Riika, heinäkuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Väinäjoen rannassa lastataan pellavaa ja lankkuja niin '
-      + 'pitkälle kuin silmä kantaa — tämä on keisarikunnan kolmas satama, '
-      + 'vaikka kaupunki puhuu saksaa, käy kauppaa kuin hansa ja rukoilee '
-      + 'kuin luterilainen. Apteekkari kaatoi minulle ryypyn mustaa juomaa, '
-      + 'joka maistui tervalta, yrteiltä ja erehdykseltä. Hän vannoi sen '
-      + 'parantavan kaiken. Kirjoitan tämän varmuuden vuoksi ylös, jos se '
-      + 'paikkansa pitää.',
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 1b41ffdf4d9afc2de9c6b267f39fe9028c14a45b4861b1cae4aa5e0a0c25ce12. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-riika-r20260909-paper-v4.jpg",
+      lyhyt: "Riika, 1873. Kuoro hengitti kaupungin kokoiseksi.",
+      selite: "Laulajien kasvot olivat erilaisia, mutta heidän seuraava hengenvetonsa kuului yhteen. Kuvasin pienen joukon ja miehen, joka jätti kyyneleen poskelleen.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.dziesmusvetki.lv/lv/zinas/pirmajiem-dziesmu-svetkiem-veltita-izstade-rlb/","https://www.dziesmusvetki.lv/en/about-the-celebration/the-song-and-dance-celebration/"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-riika-r20260911-paper2-v1.jpg",
+      lyhyt: "Riika, 1873. Yleisö kuuli kuoron yhteisen hengityksen.",
+      selite: "Lava täyttyi laulajista, jotka vetivät henkeä yhtä aikaa ennen kaupungin kokoista ääntä. Yleisössä mies kuunteli kyynel poskellaan pyyhkimättä sitä pois.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.dziesmusvetki.lv/lv/zinas/pirmajiem-dziesmu-svetkiem-veltita-izstade-rlb/","https://www.dziesmusvetki.lv/en/about-the-celebration/the-song-and-dance-celebration/"],
+    },
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Riika, heinäkuussa 1873. Lämmintä; joella pellavan haju; '
+      + 'puntari korkealla.',
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
+    teksti: "Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.",
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
      * sävyssä. Yksikään sana, välimerkki tai sanajärjestys ei muutu.
      */
-    luenta: '[curious] Väinäjoen rannassa lastataan pellavaa ja lankkuja '
-      + 'niin pitkälle kuin silmä kantaa — tämä on keisarikunnan kolmas '
-      + 'satama, vaikka kaupunki puhuu saksaa, käy kauppaa kuin hansa ja '
-      + 'rukoilee kuin luterilainen. [excited] Apteekkari kaatoi minulle '
-      + 'ryypyn mustaa juomaa, joka maistui tervalta, yrteiltä ja '
-      + 'erehdykseltä. [softly] Hän vannoi sen parantavan kaiken. '
-      + '[whispers] Kirjoitan tämän varmuuden vuoksi ylös, jos se '
-      + 'paikkansa pitää.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: laulujuhlien taustatieto ja "Olin merkinnyt
+     * karttaan sataman ja kirkot" (selitys).
+     */
+    reaktiot: [
+  {
+    "id": "riika.r1",
+    "ankkuri": "ensimmäiset suuret laulujuhlat olivat juuri päättyneet",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "riika.r2",
+    "ankkuri": "kuoro veti henkeä kuin yksi",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "riika.r3",
+    "ankkuri": "En ymmärtänyt sanoja",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "riika.r4",
+    "ankkuri": "mies lauloi kyynel poskellaan",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "riika.r5",
+    "ankkuri": "kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.5,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. [warmly] Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-riika.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-riika-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-riika-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Riika: tämä pesä on rakennettu ihmisäänille.',
+        selite: 'Mežaparksin suuren laululavan rakenteet avautuvat ilmaan kuin '
+          + 'oksisto. Harjoitusryhmä asettuu lavalle tyhjien katsomorivien '
+          + 'eteen juuri ennen laulun alkua.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.liveriga.com/en/1168-grand-stage-at-mezaparks',
+          'https://www.liveriga.com/en/14576-mezaparks-1',
+        ],
+      },
+    ],
     /*
      * KAANONTEKSTI ON JAETTU KAHTEEN KENTTÄÄN, EI MUUTETTU.
      *
@@ -177,12 +258,33 @@ export const FOKUSVIRTA_RIIKA = {
      * sanaa, välimerkkiä tai järjestystä ei ole muutettu — peräkkäin
      * luettuna teksti on sanasta sanaan Fablen kaanonteksti.
      */
-    maadoitus: 'Sitä mustaa juomaa myydään Riiassa edelleen, '
-      + 'savipulloissa, ja paikalliset vannovat sen nimeen edelleen — ja '
-      + 'turistit katuvat edelleen..',
-    teksti: 'Vanha kaupunki on säilynyt niin ehjänä, että keskiaika '
-      + 'tulee vastaan ihan kulman takaa. Isoisäsi haistoi täällä pellavan; '
-      + 'nykyään täällä tuoksuu kahvi. Katsotaan hänen merkintänsä.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
+    kommentti: ["Riian oopperan vieressä majaville tuodaan oksia, jotta puistopuut säästyisivät. Katselin yhden illallista. Minä olen selvästi ollut aivan liian helppo naapuri."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*
      * HERO on kaupunkilehden oma avauskuva (js/packs/kulttuuri-
      * kategoriat.js, riika/avauskuvat, heroerä 31): vanhankaupungin
@@ -192,6 +294,7 @@ export const FOKUSVIRTA_RIIKA = {
      */
     kuva: {
       ampari: 'herokoe/hero-riika-vanhakaupunki.jpg',
+      lyhyt: 'Riian siluetin muodostaa kolme tornia: Pyhän Pietarin kirkko, tuomiokirkko ja Pyhän Jaakobin.',
       selite: 'Riian vanhankaupungin siluetin muodostavat kolme tornia: '
         + '123-metrinen Pyhän Pietarin kirkko, vuonna 1211 perustettu '
         + 'tuomiokirkko ja Pyhän Jaakobin katedraali.',
@@ -253,6 +356,9 @@ export const FOKUSVIRTA_RIIKA = {
         + 'Euroopassa. Se on legenda eikä todennettu tapahtuma — ja juuri '
         + 'sellaiset tarinat myyvät pulloja vielä kahden ja puolen '
         + 'vuosisadan päästä.',
+      lahde: 'en-Wikipedia "Riga Black Balsam"; pelin oma tarkistettu '
+        + 'aineisto js/packs/kulttuuri-kategoriat.js (riika/kaupunki). '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 2852×4279, CC BY-SA 2.5, Fanny Schertzer,
        * kuvaus "Herbal liquor of Latvia", otettu elokuussa 2009.
@@ -264,6 +370,7 @@ export const FOKUSVIRTA_RIIKA = {
        */
       kuva: {
         tiedosto: 'Riga Black Balsam.jpg',
+        lyhyt: 'Riian musta balsami on apteekkari Abraham Kunzen 1752 laatima yrttiuute, sama vuosiluku etiketissä.',
         selite: 'Riian musta balsami on apteekkari Abraham Kunzen vuonna '
           + '1752 laatima yrttiuute, ja sama vuosiluku on yhä sen '
           + 'etiketissä.',
@@ -336,6 +443,10 @@ export const FOKUSVIRTA_RIIKA = {
         + 'yhdessä, ketään ei voitu pidättää. Unesco tunnusti Baltian '
         + 'laulujuhlat vuonna 2003 ja liitti ne aineettoman '
         + 'kulttuuriperinnön luetteloon 2008.',
+      lahde: 'lv-Wikipedia "Vispārējie latviešu dziesmu un deju svētki" ja '
+        + 'en-Wikipedia "Latvian Song and Dance Festival"; pelin oma '
+        + 'tarkistettu aineisto js/packs/maa-kategoriat.js (LVA/tavat). '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto LVA/tavat,
        * js/packs/maa-kategoriat.js) — siis jo kertaalleen tarkistettu ja
@@ -350,6 +461,7 @@ export const FOKUSVIRTA_RIIKA = {
        */
       kuva: {
         tiedosto: 'Riga. IX Latvian Song Celebration. 1938.png',
+        lyhyt: 'Yhdeksänsiä laulujuhlia vietettiin Riiassa 1938; ensimmäiset olivat samassa kaupungissa 65v aiemmin.',
         selite: 'Yhdeksänsiä laulujuhlia vietettiin Riiassa vuonna 1938; '
           + 'ensimmäiset oli pidetty samassa kaupungissa 65 vuotta '
           + 'aiemmin.',
@@ -415,6 +527,9 @@ export const FOKUSVIRTA_RIIKA = {
         + 'poikansa Sergei Eisenstein tuli maailmalla kuuluisaksi '
         + 'elokuvaohjaajana. Isä teki kadulle kasvoja, jotka eivät '
         + 'liikahda; poika teki kuvia, jotka eivät tee mitään muuta.',
+      lahde: 'en-Wikipedia "Mikhail Eisenstein" ja en-Wikipedia "Art Nouveau '
+        + 'architecture in Riga"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (LVA/tavat). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto LVA/tavat,
        * js/packs/maa-kategoriat.js) — jo tarkistettu ja hyväksytty.
@@ -424,6 +539,7 @@ export const FOKUSVIRTA_RIIKA = {
        */
       kuva: {
         tiedosto: 'Immeuble art nouveau (Riga) (7561800214).jpg',
+        lyhyt: 'Jugend on noin kolmasosassa Riian keskustan rakennuksista, valmistuivat 1904–1914.',
         selite: 'Jugend on noin kolmasosassa Riian keskustan '
           + 'rakennuksista, ja valtaosa niistä valmistui talouskasvun '
           + 'vuosina 1904–1914.',
@@ -519,6 +635,7 @@ export const FOKUSVIRTA_RIIKA = {
      */
     kuva: {
       tiedosto: 'Jakob Kettler.jpg',
+      lyhyt: 'Herttua Jaakob Kettler hallitsi Kuramaata 1642–1682; pieni herttuakunta piti siirtokuntia kaukana.',
       selite: 'Herttua Jaakob Kettler hallitsi Kuramaata vuodesta 1642 '
         + 'kuolemaansa 1682, ja hänen aikanaan pieni herttuakunta piti '
         + 'siirtokuntia Tobagossa ja Gambiajoella.',
@@ -739,6 +856,7 @@ export const FOKUSVIRTA_RIIKA = {
        */
       kuva: {
         tiedosto: 'Venta Rapid from the left bank.jpg',
+        lyhyt: 'Ventas rumba on matala mutta satoja metrejä leveä, Euroopan leveimmäksi sanottu vesiputous.',
         selite: 'Ventas rumba on vain parin metrin korkuinen mutta '
           + 'leveimmillään satojen metrien levyinen, ja sitä sanotaan '
           + 'Euroopan leveimmäksi vesiputoukseksi.',
@@ -845,6 +963,7 @@ export const FOKUSVIRTA_RIIKA = {
        */
       kuva: {
         tiedosto: 'Cape Kolka aerial photograph.jpg',
+        lyhyt: 'Kolkan niemellä kohtaavat Itämeri ja Riianlahti; niemi jatkuu veden alla matalikkona kauas.',
         selite: 'Kolkan niemellä kohtaavat Itämeri ja Riianlahti, ja niemi '
           + 'jatkuu veden alla matalikkona kauas ulapalle.',
         lahde: 'acediscovery, Wikimedia Commons (CC BY 4.0)',

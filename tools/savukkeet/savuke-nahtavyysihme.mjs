@@ -28,12 +28,25 @@ import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
 
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
+
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
+/*
+ * Ihmekuvan osoite on repon polku TAI ämpärin peilipolku, siirtolipun
+ * (js/media.js R2_ASSETIT.ihmeet) mukaan — kumpikin on laillinen, joten
+ * väite hyväksyy kummatkin (assetit ämpäriin, 2.9.2026).
+ */
+const IHME_KUVA = /assets\/kartat\/ihmeet\/|\/kohtaamiset\/ihmeet\//;
 const TYYPIT = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg' };
 const palvelin = http.createServer((req, res) => {
   const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
@@ -58,7 +71,7 @@ const sivu = await (await selain.newContext({ viewport: { width: 834, height: 11
  * verkkovirheeltä, jonka puskuri nielee hiljaa.
  */
 await sivu.route('**samireivinen.workers.dev/**', (route) => route.abort());
-await sivu.goto(`http://localhost:${palvelin.address().port}/`, { waitUntil: 'load' });
+await sivu.goto(`http://localhost:${palvelin.address().port}/?lauta=kartta`, { waitUntil: 'load' });
 await sivu.waitForTimeout(1500);
 
 /**
@@ -198,7 +211,7 @@ if (tila.nappeja) {
 }
 let zoom = await suurennos();
 vaadi('"Koe ihme" avaa suurennoksen nähtävyysikkunan sisään (ei sen taakse)',
-  zoom.auki === true && /assets\/kartat\/ihmeet\//.test(zoom.osoite),
+  zoom.auki === true && IHME_KUVA.test(zoom.osoite),
   JSON.stringify({ auki: zoom.auki, osoite: zoom.osoite }));
 /*
  * ODOTUKSET PÄIVITETTY 28.8.2026: nauhan teksti on ollut v1255:stä
@@ -233,6 +246,80 @@ vaadi('ihmeettömässä jutussa ei ole nappia eikä nauhaa',
   tila.nappeja === 0 && tila.nauhoja === 0,
   JSON.stringify({ nappeja: tila.nappeja, nauhoja: tila.nauhoja }));
 await suljeKohde();
+
+/* --- 4a: IHMEEN TÄHTI KOHDEKARTALLA (omistajan tilaus 2.9.2026) ---
+ *
+ * *"karttaan voisi tehdä pienen tähden jokaisen kohteen yläreunaan,
+ * jos sinne on generoitu myös tällainen historiallinen kuva
+ * nykyaikaisen kuvan lisäksi. eli merkki matkakirjan ihmeestä. kartan
+ * yläreunassa voisi olla selite"*.
+ *
+ * Väite mittaa neljä asiaa: tähtiä on täsmälleen niillä kohteilla,
+ * joilla on ihme (Ateenassa kolme: agora, Akropolis ja Zeuksen
+ * temppeli = Olympieion); tähti on merkin YLÄREUNASSA eikä sen
+ * keskellä; tähti on sama kompassiruusu kuin pääkartalla
+ * (.nostosym-tahti, ei uutta muotoa); ja selite on kartalla nimeltä.
+ * Ihmeetön kaupunki (Sofia) tarkistetaan lohkossa 4b.
+ */
+const tahdet = () => sivu.evaluate(() => {
+  const kehys = document.querySelector('.kartta-kehys');
+  const pisteet = [...(kehys?.querySelectorAll('.maakartta-piste.kohde-numero') ?? [])];
+  return {
+    tahdelliset: pisteet
+      .filter((p) => p.querySelector('.kohde-ihmetahti'))
+      .map((p) => p.querySelector('.kohde-nimi')?.textContent ?? '?'),
+    pisteita: pisteet.length,
+    // Tähden keskikohta suhteessa merkin keskikohtaan: negatiivinen
+    // = merkin yläpuolella.
+    ylareunassa: pisteet.filter((p) => {
+      const t = p.querySelector('.kohde-ihmetahti');
+      if (!t) return false;
+      const a = p.getBoundingClientRect();
+      const b = t.getBoundingClientRect();
+      return (b.y + b.height / 2) < (a.y + a.height / 2);
+    }).length,
+    // Vain merkkien tähdet: selitteellä on sama luokka, ja se
+    // lasketaan erikseen (seliteTahtia).
+    kompassiruusuja: kehys
+      ? kehys.querySelectorAll('.maakartta-piste .kohde-ihmetahti .nostosym-tahti').length : 0,
+    selite: kehys?.querySelector('.kartta-ihmeselite')?.textContent?.trim() ?? null,
+    seliteTahtia: kehys
+      ? kehys.querySelectorAll('.kartta-ihmeselite .nostosym-tahti').length : 0,
+  };
+});
+
+let merkit = await tahdet();
+vaadi('Ateenan kohdekartalla tähti on tasan ihmekohteilla',
+  merkit.tahdelliset.length === 3
+  && ['Antiikin agora', 'Akropolis', 'Zeuksen temppeli']
+    .every((n) => merkit.tahdelliset.includes(n)),
+  JSON.stringify(merkit.tahdelliset));
+vaadi('tähti istuu merkin yläreunassa',
+  merkit.ylareunassa === merkit.tahdelliset.length,
+  `${merkit.ylareunassa}/${merkit.tahdelliset.length}`);
+vaadi('tähti on sama kompassiruusu kuin pääkartalla (.nostosym-tahti)',
+  merkit.kompassiruusuja === merkit.tahdelliset.length,
+  `${merkit.kompassiruusuja} ruusua`);
+vaadi('kartalla on selite "Matkakirjan ihme" samalla tähdellä',
+  merkit.selite === 'Matkakirjan ihme' && merkit.seliteTahtia === 1,
+  JSON.stringify({ selite: merkit.selite, tahtia: merkit.seliteTahtia }));
+
+await sivu.evaluate(() => window.matkakirja.ui.closeArrival());
+await sivu.waitForTimeout(600);
+
+/* --- 4b: ihmeetön kaupunki ei saa tähteä eikä selitettä ---
+ *
+ * Tokio on tämän laudan (`maailma`, 14 kaupunkia) kohdekartallinen
+ * kaupunki, jonka yhdelläkään kohteella ei ole ihmettä. Sofia olisi
+ * yhtä hyvä koe, mutta se ei ole tällä laudalla lainkaan.
+ */
+await avaaKaupunki('tokio');
+merkit = await tahdet();
+vaadi('Tokion kohdekartta piirtyi kohteineen',
+  merkit.pisteita > 0, `${merkit.pisteita} pistettä`);
+vaadi('ihmeettömässä kaupungissa ei ole tähtiä eikä selitettä',
+  merkit.tahdelliset.length === 0 && merkit.selite === null,
+  JSON.stringify({ tahtia: merkit.tahdelliset, selite: merkit.selite }));
 await sivu.evaluate(() => window.matkakirja.ui.closeArrival());
 await sivu.waitForTimeout(600);
 
@@ -242,7 +329,7 @@ await avaaKaupunki('peking');
 vaadi('Vanha kesäpalatsi aukesi', await avaaKohde('Vanha kesäpalatsi'));
 tila = await juttu();
 vaadi('kadonneen kohteen ENSIMMÄINEN kuva on havainnekuva nauhoineen',
-  /assets\/kartat\/ihmeet\//.test(tila.kuvanOsoite) && tila.nauhoja === 1
+  IHME_KUVA.test(tila.kuvanOsoite) && tila.nauhoja === 1
   && /^1\//.test(tila.laskuri),
   JSON.stringify({ osoite: tila.kuvanOsoite, nauhoja: tila.nauhoja, laskuri: tila.laskuri }));
 vaadi('kadonneen kohteen nauha on kuvan päällä eikä nappaa napautuksia',

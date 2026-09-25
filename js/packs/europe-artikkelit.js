@@ -1512,6 +1512,328 @@ export const EUROPE_ARTIKKELIT = {
   },
 
   /*
+   * BRYSSEL (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti).
+   * Teksti on kirjoitettu omin sanoin en-Wikipedian artikkeleista
+   * "Brussels" ja "History of Brussels" (luettu 19.9.2026), 1873-
+   * näkökulmasta: Belgian pääkaupunki, kuningas Leopold II (hallitsi
+   * vuodesta 1865), Grand-Place, Manneken Pis, Galeries Royales Saint-
+   * Hubert (avattu 1847), Palais de Justice rakenteilla 1866–1883,
+   * pitsinnyplääjät ja Sennejoen kattaminen 1867–1871. Praliinisuklaata
+   * (Neuhaus 1912) ja Atomiumia (Expo 58) EI mainita esittelyssä
+   * saavutuksina — ne eivät ole vielä olemassa isoisän matkan aikaan;
+   * praliini mainitaan vain vastakohtana EUROPE_FACTS-tiedossa.
+   */
+  Bryssel: {
+    intro: 'Bryssel on Belgian pääkaupunki Sennejoen varrella, ja '
+      + 'siellä asuu vuonna 1873 noin 180 000 ihmistä — esikaupunkeineen '
+      + 'huomattavasti enemmän. Kaupunki on kaksikielinen: kadulla '
+      + 'kuulee sekä ranskaa että flaamia. Belgia itsenäistyi '
+      + 'Alankomaista vuonna 1830, ja sitä hallitsee nyt kuningas '
+      + '**Leopold II**, joka nousi valtaistuimelle 1865.'
+      + '\n\n'
+      + 'Keskustan sydän on **Grand-Place**, keskiaikaisten '
+      + 'kiltatalojen reunustama tori. Ranskan tykistö ampui torin '
+      + 'raunioiksi vuonna 1695, ja porvarikillat rakensivat sen '
+      + 'uudelleen muutamassa vuodessa nykyiseen, kullattuun asuunsa. '
+      + 'Torin lähellä seisoo kaupungin toinen tunnusmerkki, pieni '
+      + 'pronssinen **Manneken Pis** -suihkulähde, joka on huvittanut '
+      + 'matkalaisia jo vuosisatoja.'
+      + '\n\n'
+      + 'Kaupunki on juuri uudistanut itseään: likainen Sennejoki '
+      + 'katettiin keskustan kohdalta vuosina 1867–1871 ja sen päälle '
+      + 'rakennettiin leveät bulevardit. Kauppiaat kulkevat lasikattoisen '
+      + '**Galeries Royales Saint-Hubertin** läpi jo vuodesta 1847, ja '
+      + 'kaupungin laidalla nousee valtava oikeuspalatsi, Palais de '
+      + 'Justice, jota on rakennettu vuodesta 1866 eikä se ole vielä '
+      + 'valmis. Toreilla myydään maailmankuulua brysseliläistä pitsiä.',
+    teksti: 'Bryssel sai alkunsa Sennejoen saaresta, jolle rakennettiin '
+      + 'kappeli 900-luvulla, ja siitä kasvoi kauppatie Kölnin ja '
+      + 'Brugesin välillä. Keskiajalla kaupunki rikastui '
+      + 'tekstiiliteollisuudesta ja kilta-järjestelmästä, ja sen '
+      + 'hallintoa johtivat vuorotellen porvarikillat ja aateli. '
+      + 'Keskustan torin, Grand-Placen, reunustavat yhä samat '
+      + 'kiltatalot, jotka rakennettiin uudelleen sen jälkeen kun '
+      + 'Ranskan kuninkaan tykistö pommitti torin raunioiksi elokuussa '
+      + '1695 — jälleenrakennus vei vain muutaman vuoden, ja lopputulos '
+      + 'on yksi Euroopan komeimmista toreista.'
+      + '\n\nVuonna 1830 belgialaiset nousivat kapinaan Alankomaiden '
+      + 'kuningasta vastaan, ja kapinan tuloksena syntyi itsenäinen '
+      + 'Belgian kuningaskunta, jonka pääkaupungiksi Bryssel tuli. '
+      + 'Ensimmäinen kuningas oli Leopold I; hänen poikansa Leopold II '
+      + 'on hallinnut vuodesta 1865. Belgia on nuori valtio, mutta se '
+      + 'teollistui nopeasti — maassa avattiin jo 1835 Euroopan mantereen '
+      + 'ensimmäinen rautatielinja, ja Bryssel on sittemmin kasvanut '
+      + 'rautateiden solmukohdaksi.'
+      + '\n\nKaupunki on äskettäin uudistanut keskustansa perin '
+      + 'pohjin: pormestari Jules Anspachin johdolla likainen ja '
+      + 'usein tulviva Sennejoki katettiin ja peitettiin leveillä '
+      + 'bulevardeilla vuosina 1867–1871, mikä paransi terveysoloja '
+      + 'huomattavasti. Kauppiaat ovat kulkeneet lasikattoisen '
+      + 'ostoskadun, Galeries Royales Saint-Hubertin, läpi jo vuodesta '
+      + '1847 — se on yksi Euroopan ensimmäisistä katetuista '
+      + 'kauppakujista. Kaupungin laidalla nousee valtava oikeustalo, '
+      + 'Palais de Justice, jonka arkkitehti Joseph Poelaert suunnitteli '
+      + 'ja jota rakennetaan vuodesta 1866; se valmistuu vasta '
+      + '1880-luvulla ja on tuolloin pinta-alaltaan maailman suurin '
+      + 'rakennus. Toreilla ja kaduilla myydään brysseliläistä pitsiä, '
+      + 'jota nyplätään käsin sukupolvesta toiseen — ja pieni '
+      + 'pronssinen poikapatsas, Manneken Pis, jatkaa vuosisataista '
+      + 'ilveilyään kaupungin sydämessä.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
+  /*
+   * LJUBLJANA (20.9.2026, omistajan päätös 19.9.2026: Slovenia saa
+   * pelikaupungin Ljubljana). Teksti on kirjoitettu omin sanoin
+   * en-Wikipedian artikkeleista "Ljubljana" ja "Ljubljana Castle"
+   * (luettu 20.9.2026), 1873-näkökulmasta: Krainin herttuakunnan
+   * pääkaupunki (saksaksi Laibach) Itävallan keisarikunnassa, rautatie
+   * Wienistä 1849 ja Triesteen 1857, linna läänin vankilana, Tivoli-
+   * puisto ja Napoleonin Illyria 1809–1813, lohikäärme kaupungin
+   * tunnuksena sekä slovenien ja saksalaisten kilpailu 1800-luvulla.
+   * Vuoden 1895 maanjäristystä, Lohikäärmesiltaa (1901) ja Plečnikin
+   * töitä (1920–30-luvut) EI mainita nykyhetken asioina — ne tulevat
+   * vasta isoisän matkan jälkeen.
+   */
+  /*
+   * KOŠICE (20.9.2026, omistajan päätös 19.9.2026: Slovakia saa
+   * pelikaupungin Košice). Teksti on kirjoitettu omin sanoin
+   * en-Wikipedian artikkelista "Košice" (luettu 20.9.2026),
+   * 1873-näkökulmasta: unkarilainen Kassa Unkarin kuningaskunnassa
+   * (Itävalta-Unkari), Pyhän Elisabetin tuomiokirkko, Pentapolitana,
+   * jesuiittojen yliopisto 1657, hiippakunta 1802, muurit purettu
+   * 1856 mennessä, sähkösanoma 1856, rautatie Miskolciin 1860 ja
+   * Ylä-Unkarin museo 1872. Slovakian itsenäisyyttä, Tšekkoslovakian
+   * aikaa ja sodan aikaisia tapahtumia EI käsitellä — ne tulevat
+   * vasta isoisän matkan jälkeen. Väestötiedot ovat vuodelta 1891
+   * (28 884), ei 1873.
+   */
+  Košice: {
+    intro: 'Košice, unkariksi **Kassa** ja saksaksi Kaschau, on Ylä-Unkarin '
+      + 'suurin kaupunki Hornád-joen varrella. Se kuuluu Unkarin '
+      + 'kuningaskuntaan ja on siellä vapaa kuninkaallinen kaupunki. Vielä vuonna 1891 asukkaita on '
+      + 'vasta noin 29 000, mutta kaupungin asema on ollut suuri jo '
+      + 'keskiajalta.'
+      + '\n\n'
+      + 'Kaupungin sydän on pitkä, linssinmuotoinen **Hlavná-katu**, jonka '
+      + 'varrella kohoaa **Pyhän Elisabetin tuomiokirkko**. Se on '
+      + 'rakennettu 1300-luvun lopulta alkaen ja oli aikanaan Unkarin '
+      + 'kuningaskunnan suurin kirkko.'
+      + '\n\n'
+      + 'Höyryjuna on tuonut kaupungin lähemmäs maailmaa: rautatie '
+      + 'Miskolciin valmistui vuonna 1860, ja vuonna 1873 kaupungista on '
+      + 'jo yhteys Prešoviin, Žilinaan ja Chopiin. Vanhat kaupunginmuurit '
+      + 'on purettu vaiheittain 1800-luvun alusta vuoteen 1856.',
+    teksti: 'Košicen ensimmäinen tunnettu kirjallinen maininta on '
+      + 'vuodelta 1230, jolloin se oli kuninkaallinen kylä nimeltä Villa '
+      + 'Cassa. Mongolien hyökkäyksen jälkeen 1241 kuningas Béla IV kutsui '
+      + 'kaupunkiin saksalaisia uudisasukkaita, ja Ala- ja Ylä-Kassa '
+      + 'yhdistyivät 1200-luvulla pitkän Hlavná-kadun ympärille. '
+      + 'Kaupunki sai ensimmäiset tunnetut kaupunkioikeutensa 1290, ja '
+      + 'se oli strateginen risteys kauppatiellä.'
+      + '\n\n1300-luvun lopulla kaupunki oli niin rikas, että '
+      + 'sinne päätettiin rakentaa aivan uusi kirkko: Pyhän Elisabetin '
+      + 'tuomiokirkko, Unkarin kuningaskunnan suurin. Keisari Sigismund '
+      + 'ja paavin istuin tukivat hanketta. 1400-luvun alusta Košice oli '
+      + 'Pentapolitanan, Ylä-Unkarin viiden tärkeimmän kaupungin '
+      + '(Bardejov, Levoča, Košice, Prešov ja Sabinov) liiton, '
+      + 'johtavia jäseniä, ja kuningas Matthias Corvinuksen aikana noin '
+      + '10 000 asukkaan kaupunki oli yksi Euroopan suurimmista.'
+      + '\n\nMyöhemmin kaupunki kärsi Unkarin valtataisteluista ja '
+      + 'Ottomaanien valtakunnan läsnäolosta. Vuonna 1657 jesuiitat '
+      + 'perustivat kaupunkiin kirjapainon ja yliopiston, josta tuli '
+      + 'vuonna 1777 kuninkaallinen akatemia ja myöhemmin oikeusakatemia. '
+      + 'Vuonna 1723 Hlavná-kadulle pystytettiin Immaculata-patsas '
+      + '1710–1711 ruton muistoksi. Kaupunki sai oman hiippakunnan '
+      + 'vuonna 1802, ja vuosien 1848–1849 sota kulki myös sen '
+      + 'ympäristössä.'
+      + '\n\nKaupunki nykyaikaistuu: ensimmäiset tehtaat perustettiin '
+      + '1840-luvulla (sokeri- ja naulatehtaat), sähkösanoma saapui 1856 '
+      + 'ja rautatie Miskolciin 1860. Vuonna 1872 perustettiin Ylä-'
+      + 'Unkarin museo, josta tuli myöhemmin Itä-Slovakian museo. '
+      + 'Muurit puretaan, ja vain Pyövelin bastioni säilyy niiden '
+      + 'jäänteenä.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
+  Ljubljana: {
+    intro: 'Ljubljana on Krainin herttuakunnan pääkaupunki '
+      + 'Ljubljanica-joen varrella, ja saksaksi sitä kutsutaan '
+      + '**Laibachiksi**. Kaupunki kuuluu Itävallan keisarikuntaan, ja se '
+      + 'on pieni: vielä vuonna 1895 asukkaita on vasta noin 31 000. '
+      + 'Slovenit ja saksalaiset asuvat samoilla kaduilla.'
+      + '\n\n'
+      + 'Kaupungin yllä kohoaa **Ljubljanan linna** Linnavuoren '
+      + 'huipulla. Keskiaikainen linnoitus on menettänyt merkityksensä ja '
+      + 'rapistuu, ja sitä käytetään läänin vankilana. Kaupungin tunnus '
+      + 'on **lohikäärme**, joka koristaa linnan tornia ja vaakunaa; se '
+      + 'periytyy Pyhän Yrjön legendasta.'
+      + '\n\n'
+      + 'Wienistä tulee nyt höyryjuna: rautatie ulotettiin Ljubljanaan '
+      + 'vuonna 1849 ja Triesteen 1857, ja se on tehnyt kaupungista '
+      + 'kulkureitin Itävallan sisämaan ja Adrianmeren välillä. Slovenit '
+      + 'ja saksalaiset kilpailevat keskenään yhdistyksissä ja '
+      + 'urheiluseuroissa.',
+    teksti: 'Ljubljanan seudulla seisoi antiikin aikana roomalainen '
+      + 'Emona, ja keskiaikaisen kaupungin asutus syntyi '
+      + 'Ljubljanica-joen ja linnavuoren ympärille 1100-luvun toisella '
+      + 'puoliskolla. Vuonna 1278 Ljubljana siirtyi osana Krainia '
+      + 'Habsburgien haltuun, ja se pysyi heidän alaisenaan vuoteen 1918, '
+      + 'Napoleonin ajan lyhyttä väliaikaa lukuun ottamatta. Kaupungin '
+      + 'saksankielinen nimi Laibach on ollut käytössä jo keskiajalta '
+      + 'asti.'
+      + '\n\nVuosina 1809–1813 seutu kuului Napoleonin Illyrian '
+      + 'maakuntiin, ja Ljubljana (Laybach) oli niiden pääkaupunki. '
+      + 'Ranskalaiset jättivät jälkeensä Tivoli-puiston, jonka '
+      + 'ranskalainen insinööri Jean Blanchard suunnitteli vuonna 1813. '
+      + 'Napoleonin tappion jälkeen kaupunki palasi Itävallalle ja oli '
+      + 'vuosina 1815–1849 Illyrian kuningaskunnan hallinnollinen '
+      + 'keskus. Vuonna 1821 siellä kokoontui Laibachin kongressi, joka '
+      + 'vahvisti Euroopan poliittiset rajat vuosikymmeniksi.'
+      + '\n\nLinnavuoren linna on vaihtanut tehtäväänsä: 1600- ja '
+      + '1700-luvulla se oli asevarasto, ranskalaisaikana kasarmi ja '
+      + 'sotilassairaala, ja vuodesta 1813 se on toiminut läänin '
+      + 'vankilana. Vankilan vanhimpaan osaan vangit laskettiin '
+      + 'kuiluun köydellä tai ketjulla. Linna ei ole enää '
+      + 'hallitsijan asuinpaikka eikä puolustuslinnoitus, joten sen '
+      + 'ylläpito on käynyt liian kalliiksi ja muureja rapistuu.'
+      + '\n\nRautatie on muuttanut kaupunkia: ensimmäinen juna saapui '
+      + 'Wienistä vuonna 1849, ja rata jatkui Triesteen 1857. '
+      + 'Slovenien ja saksalaisten kilpailu näkyy jopa urheiluseuroissa: '
+      + 'ensimmäinen kaupungin urheiluseura, Južni Sokol, perustettiin '
+      + 'vuonna 1863. Ljubljanan 1500-luvun puhekieli oli pohjana '
+      + 'slovenian kirjakielelle, jonka perustan laski uskonpuhdistaja '
+      + 'Primož Trubar.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
+  /*
+   * VALLETTA (21.9.2026, omistajan päätös 19.9.2026: Malta saa
+   * pelikaupungin Valletta). Teksti on kirjoitettu omin sanoin
+   * en-Wikipedian artikkeleista "Valletta", "History of Malta" ja
+   * "Great Siege of Malta" (luettu 21.9.2026), 1873-näkökulmasta:
+   * brittiläinen kruununsiirtomaa vuodesta 1800/1814, laivastotukikohta
+   * Grand Harbourissa, Krimin sodan sairaalakausi 1854–56, ritarikunnan
+   * perustama linnoituskaupunki 1566 suuren piirityksen 1565 jälkeen,
+   * Pyhän Johanneksen konkatedraali ja Auberge de Castille. Maltan
+   * itsenäisyyttä (1964), tasavaltaa (1974) ja EU-jäsenyyttä (2004) EI
+   * mainita nykyhetken asioina — ne tulevat vasta isoisän matkan
+   * jälkeen.
+   */
+  Valletta: {
+    intro: 'Valletta on brittiläisen Maltan pääkaupunki kapealla '
+      + 'kalkkikiviniemellä Grand Harbourin ja Marsamxett-sataman '
+      + 'välissä. Britit ottivat saaren haltuunsa 1800, ja Pariisin '
+      + 'rauha 1814 vahvisti Maltan **kruununsiirtomaaksi**; kaupunki '
+      + 'on nyt tärkeä laivastotukikohta, josta kuningatar Victorian '
+      + 'laivasto valvoo koko Välimerta.'
+      + '\n\n'
+      + 'Kaupungin perusti 1566 Johanniittaritarikunnan suurmestari '
+      + '**Jean Parisot de Valette**, joka vuotta aiemmin oli '
+      + 'johtanut ritarikunnan puolustusta osmanien nelikuukautista '
+      + '**suurta piiritystä** vastaan. Uusi kaupunki nousi ennen '
+      + 'lähes asumattomalle Sciberrasin niemelle säännölliseen '
+      + 'ruutukaavaan, ja se ympäröitiin niin paksuilla muureilla, '
+      + 'että niiden purkamista on ehdotettu useaan otteeseen '
+      + 'turhaan.'
+      + '\n\n'
+      + 'Kaduilla kohtaavat maltan kieli, italia ja englanti. '
+      + 'Keskustaa hallitsee **Pyhän Johanneksen konkatedraali**, '
+      + 'jonka koruton hiekkakivijulkisivu kätkee ylellisen '
+      + 'sisustuksen, ja ritarikunnan kieliryhmien majataloista '
+      + 'komein, **Auberge de Castille**, toimii nyt sotilashallinnon '
+      + 'rakennuksena.',
+    teksti: 'Ennen ritarikuntaa Vallettan niemi tunnettiin nimellä '
+      + 'Sciberras — kalliokieleke, jolla ei ollut juuri asutusta. '
+      + 'Kun Johanniittaritarikunta oli 1565 torjunut Osmanien '
+      + 'valtavan hyökkäysjoukon nelikuukautisessa suuressa '
+      + 'piirityksessä, suurmestari Jean Parisot de Valette päätti '
+      + 'rakentaa niemelle täysin uuden, paremmin puolustettavan '
+      + 'pääkaupungin entisen Birgun tilalle. Peruskivi laskettiin '
+      + '28. maaliskuuta 1566, ja kaupunki sai suurmestarin mukaan '
+      + 'nimen Valletta.'
+      + '\n\nRitarikunta rakennutti kaupungin säännölliseen '
+      + 'ruutukaavaan ja täytti sen palatseilla, kirkoilla ja '
+      + 'kieliryhmiensä majataloilla eli aubergeilla. Komein niistä, '
+      + 'Auberge de Castille, edustaa Espanjan ja Portugalin '
+      + 'ritareita. Vuonna 1577 valmistui Pyhän Johanneksen '
+      + 'konkatedraali: ulkoa vaatimaton linnoituskirkko, jonka '
+      + 'sisustus on sittemmin katettu kullalla ja marmorilla. '
+      + 'Ritarikunnan valtakausi päättyi, kun Napoleon valtasi '
+      + 'saaren 1798 matkallaan Egyptiin.'
+      + '\n\nMaltalaiset kapinoivat ranskalaisia vastaan ja pyysivät '
+      + 'apua Britannialta, joka otti saaren haltuunsa syyskuussa '
+      + '1800. Pariisin rauha 1814 vahvisti Maltan brittiläiseksi '
+      + 'kruununsiirtomaaksi, ja Vallettasta tuli kuninkaallisen '
+      + 'laivaston tärkeä tukikohta Grand Harbourissa. Krimin sodan '
+      + 'aikana 1854–56 saarelle perustettiin sotilassairaaloita '
+      + 'haavoittuneille, ja Maltaa alettiin kutsua Välimeren '
+      + 'sairaanhoitajaksi. Linnoitusten purkamista on esitetty '
+      + 'useita kertoja 1800-luvulla kaupungin ahtauden '
+      + 'helpottamiseksi, mutta muurit ovat toistaiseksi säilyneet '
+      + 'ehjinä.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
+  /*
+   * LUXEMBURG (KAUPUNKI) (21.9.2026, omistajan päätös 21.9.2026: Kypros,
+   * Luxemburg ja Malta saavat pelikaupungin). Avain on 'Luxemburg
+   * (kaupunki)', koska 'Luxemburg' on jo maan wiki-avain (COUNTRY_SHAPES
+   * ja MAA_KATEGORIAT.LUX) — sama ratkaisu kuin Pietarilla, Soulilla,
+   * Petralla ja Kuwaitilla. Teksti on kirjoitettu omin sanoin
+   * en-Wikipedian artikkeleista "Luxembourg City", "History of
+   * Luxembourg" ja "Bock (Luxembourg)" (luettu 21.9.2026), 1873-
+   * näkökulmasta: suurherttuakunta henkilöunionissa Alankomaiden
+   * kuningas Vilhelm III:n kanssa, Lontoon sopimus 1867 ja linnoituksen
+   * purku (kesken, kestää 16 vuotta), Bock-kallion perustamistarina
+   * (963), rautateollisuus alkamassa Eschissä. Adolphe-silta (1900–1903)
+   * ja Notre-Damen katedraalin tuomiokirkkoasema (1870, mainitaan vain
+   * ohimennen) EIVÄT ole isoisän matkan aikaan vielä nähtävissä samassa
+   * muodossa kuin nykyään — sama ratkaisu kuin Brysselin Mont des
+   * Artsilla.
+   */
+  'Luxemburg (kaupunki)': {
+    intro: 'Luxemburg on suurherttuakunta, jonka pääkaupunki seisoo '
+      + 'Alzette- ja Pétrusse-jokien kaivamalla kalliolinnakkeella. Maata '
+      + 'hallitsee suurherttuana Alankomaiden kuningas **Vilhelm III** '
+      + 'henkilöunionissa, ja Lontoon sopimus vuodesta 1867 on julistanut '
+      + 'suurherttuakunnan ainaiseksi puolueettomaksi. Kaupunki on '
+      + 'vuosisatoja ollut niin vahva linnoitus, että ranskalainen '
+      + 'sotilasinsinööri Lazare Carnot kutsui sitä maailman parhaaksi '
+      + 'heti Gibraltarin jälkeen — siitä juontuu lempinimi **Pohjoisen '
+      + 'Gibraltar**. Nyt sopimus vaatii koko puolustusjärjestelmän '
+      + 'purkamista, ja työ on ollut käynnissä jo kuusi vuotta.',
+    teksti: 'Luxemburgin kaupunki syntyi Bock-kalliolle, kun kreivi '
+      + 'Siegfried hankki paikan vuonna 963 ja rakensi sille '
+      + 'Lucilinburhuc-nimisen linnan; nimestä juontuu koko maan nimi. '
+      + 'Kallion luonnollinen suoja Alzette-joen mutkassa teki paikasta '
+      + 'halutun, ja vuosisatojen kuluessa Luxemburgista kasvoi yksi '
+      + 'Euroopan vahvimmista linnoituksista — sitä laajensivat '
+      + 'vuorotellen burgundilaiset, Habsburgit, espanjalaiset, '
+      + 'ranskalaiset ja itävaltalaiset, jotka kaikki halusivat hallita '
+      + 'tätä solmukohtaa.'
+      + '\n\nSuurvaltojen kilpailu päättyi, kun Preussin ja Ranskan '
+      + 'välinen jännite Luxemburgista laukesi kansainväliseksi '
+      + 'kriisiksi ja ratkesi Lontoon sopimuksella vuonna 1867: '
+      + 'suurherttuakunta julistettiin puolueettomaksi, ja Preussin '
+      + 'varuskunta joutui vetäytymään. Sopimus määräsi myös koko '
+      + 'linnoituksen purettavaksi. Purkutyö on käynnissä isoisän matkan '
+      + 'aikaan — se on kestänyt jo kuusi vuotta ja jatkuu vielä '
+      + 'kymmenen, ja lopulta se hävittää yli 24 kilometriä maanalaisia '
+      + 'käytäviä.'
+      + '\n\nMaata hallitsee suurherttuana Alankomaiden kuningas '
+      + 'Vilhelm III, joka istuu Haagissa eikä ole vieraillut maassaan '
+      + 'vuosikausiin — henkilöunioni pitää kaksi valtaistuinta yhden '
+      + 'hallitsijan käsissä, mutta arki niissä on erillistä. Kaupungin '
+      + 'katujen alla virtaavat Alzette ja Pétrusse ovat kaivaneet '
+      + 'syviä rotkoja, joiden yli kuljetaan silloilla ja portailla; '
+      + 'rautatie on yhdistänyt kaupungin Ranskaan ja Preussiin jo '
+      + 'vuosia, ja Eschin seudulla alkanut rautamalmin louhinta '
+      + 'ennustaa maalle uutta, teollista tulevaisuutta.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
+  /*
    * TEKSTIREMONTTI 20.8.2026, erä E1: intro on nyt etusivun leipäteksti
    * kappaleineen ja lihavointeineen (ks. Rooman lohkokommentti yllä).
    * Muuri ja kaupungin jako kerrotaan neutraalina historiana ilman

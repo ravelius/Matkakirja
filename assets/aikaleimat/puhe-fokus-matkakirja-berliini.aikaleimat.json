@@ -1,0 +1,158 @@
+{
+  "versio": 2,
+  "kaupunki": "berliini",
+  "teksti": "Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.",
+  "tekstiSha256": "e225f5fb7514e56df874d4a91d101b0e6b7cf325adf0423662c136cb4ba4c7a7",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-berliini.mp3",
+    "versio": 2,
+    "tavut": 319782,
+    "sha256": "3da927e995f02d6bdadf62603b133975ea862773dc7344b728f93f3dac94556d"
+  },
+  "kesto": 19900,
+  "sanat": [
+    {
+      "sana": "Berliinin",
+      "alku": 140,
+      "loppu": 640
+    },
+    {
+      "sana": "lennätintoimistossa",
+      "alku": 680,
+      "loppu": 1940
+    },
+    {
+      "sana": "sähkösanoma",
+      "alku": 2320,
+      "loppu": 3000
+    },
+    {
+      "sana": "suljettiin",
+      "alku": 3060,
+      "loppu": 3580
+    },
+    {
+      "sana": "kapseliin",
+      "alku": 3640,
+      "loppu": 4360
+    },
+    {
+      "sana": "Paineilma",
+      "alku": 5540,
+      "loppu": 6180
+    },
+    {
+      "sana": "vei",
+      "alku": 6320,
+      "loppu": 6480
+    },
+    {
+      "sana": "sen",
+      "alku": 6540,
+      "loppu": 6720
+    },
+    {
+      "sana": "katujen",
+      "alku": 6780,
+      "loppu": 7220
+    },
+    {
+      "sana": "alla",
+      "alku": 7320,
+      "loppu": 7540
+    },
+    {
+      "sana": "kulkevaa",
+      "alku": 7600,
+      "loppu": 8140
+    },
+    {
+      "sana": "putkea",
+      "alku": 8180,
+      "loppu": 8640
+    },
+    {
+      "sana": "pitkin",
+      "alku": 8680,
+      "loppu": 9040
+    },
+    {
+      "sana": "pörssiin",
+      "alku": 9100,
+      "loppu": 9760
+    },
+    {
+      "sana": "Virkailija",
+      "alku": 11560,
+      "loppu": 12100
+    },
+    {
+      "sana": "kysyi",
+      "alku": 12160,
+      "loppu": 12520
+    },
+    {
+      "sana": "oliko",
+      "alku": 12580,
+      "loppu": 12820
+    },
+    {
+      "sana": "minulla",
+      "alku": 12880,
+      "loppu": 13200
+    },
+    {
+      "sana": "jotakin",
+      "alku": 13260,
+      "loppu": 13660
+    },
+    {
+      "sana": "lähetettävää",
+      "alku": 13720,
+      "loppu": 14600
+    },
+    {
+      "sana": "Ei",
+      "alku": 16239,
+      "loppu": 16360
+    },
+    {
+      "sana": "vielä",
+      "alku": 16420,
+      "loppu": 16720
+    },
+    {
+      "sana": "Halusin",
+      "alku": 17720,
+      "loppu": 18040
+    },
+    {
+      "sana": "nähdä",
+      "alku": 18080,
+      "loppu": 18300
+    },
+    {
+      "sana": "seuraavankin",
+      "alku": 18360,
+      "loppu": 19040
+    },
+    {
+      "sana": "kapselin",
+      "alku": 19080,
+      "loppu": 19500
+    },
+    {
+      "sana": "lähtevän",
+      "alku": 19540,
+      "loppu": 19900
+    }
+  ],
+  "lauseet": [
+    140,
+    5540,
+    11560,
+    16239,
+    17720
+  ],
+  "luotu": "2026-09-23T15:35:39.722Z"
+}

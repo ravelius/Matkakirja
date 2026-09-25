@@ -17,11 +17,11 @@
  *
  * Juurisyy on solmumäärä: maailmanäkymä ohittaa käymättömien maiden
  * piilotuksen, jolloin kartalla on KOKO laudan kaupunkikerros — 602
- * näkyvää solmua. Eleenaikainen piilotus (js/kartta.js piilotaMerkit,
- * body.kartta-merkit-piilossa) kattaa polttamattomat sisältökerrokset —
- * fokuskohteet, fokuspisteet, nostosymbolit, nippuviivat, eläintäyt ja
- * paikannimikerroksen — mutta EI kaupunkikerrosta, joka on pelitilaa
- * (laatat, nimilaput, porttikehät). Kustannus on
+ * näkyvää solmua. Eleen ajaksi ei enää piiloteta MITÄÄN (omistaja
+ * 1.9.2026 ilta: *"kaikki elementit pitää pysyä päällä kun karttaa
+ * liikutetaan tai zoomataan vaikka niitä ei olisi poltettu."*; purku
+ * js/kartta.js asennaPanorointi), joten näkymärajaus on ainoa asia,
+ * joka pitää solmumäärän kurissa liikkeen aikana. Kustannus on
  * lineaarinen näkyvissä solmuissa (varmistettu kloonikokeella), koska
  * kartan CSS-muunnos pakottaa selaimen pilkkomaan koko SVG:n uudestaan
  * maalipaloihin joka kehyksellä.
@@ -66,6 +66,13 @@ import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
 
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
+
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -84,7 +91,7 @@ const palvelin = http.createServer((req, res) => {
   res.end(readFileSync(polku));
 });
 await new Promise((ok) => palvelin.listen(0, ok));
-const osoite = `http://localhost:${palvelin.address().port}/`;
+const osoite = `http://localhost:${palvelin.address().port}/?lauta=kartta`;
 
 let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => {
@@ -203,6 +210,13 @@ const tila = () => sivu.evaluate(() => {
     // luetteloa nolla, ks. väite 10d.
     karttanimia: ui.svg.querySelectorAll('.karttanimet .karttanimi').length,
     nakyvanLeveys: Math.round(ui.nakyvaAlue?.()?.w ?? 0),
+    // Kerroksessa on 2.9.2026 alkaen VAIN maan ääriviiva (varjo
+    // purettiin, ks. js/maatummennus.js): solmuja siis yksi.
+    tummennusSolmut: ui.svg.querySelectorAll('.maatummennus > *').length,
+    tummennusNakyy: (() => {
+      const k = ui.svg.querySelector('.maatummennus');
+      return k ? getComputedStyle(k).display !== 'none' : false;
+    })(),
   };
 });
 
@@ -283,8 +297,92 @@ console.log(`      mitattu: panoroinnin longtaskit ${panLt.length} kpl,`
   + ` summa ${panSumma} ms, pahin ${panPahin} ms`);
 
 const panTila = await tila();
+console.log(`      mitattu: maan ääriviiva ${panTila.tummennusSolmut} solmua,`
+  + ` näkyvissä ${panTila.tummennusNakyy}`);
 console.log(`      mitattu: näkyviä kaupunkiosia ${panTila.citiesNakyvia}`
   + ` / ${panTila.citiesSolmut} (rajattuja ${panTila.rajattuja})`);
+
+/* --- 1b/1c: KAIKKI ELÄVÄ SISÄLTÖ PYSYY MOLEMMISSA ELEISSÄ -----------
+ *
+ * Omistaja 1.9.2026 ilta, sanatarkasti: *"kaikki elementit pitää pysyä
+ * päällä kun karttaa liikutetaan tai zoomataan vaikka niitä ei olisi
+ * poltettu."* Saman päivän aamuna panoroinnista: *"Kartan tummennus
+ * voisi pysyä panoroitaessa päällä."*
+ *
+ * Väitteet vartioivat siis KOLMEA asiaa kesken eleen: runkoon ei tule
+ * piilotusluokkaa, maan ääriviivan kerros (.maatummennus — naapurien
+ * varjo purettiin siitä 2.9.2026) näkyy ja kohdemerkkien kerros näkyy.
+ * Kaksi ensimmäistä olivat voimassa jo ennen tätä; kolmas kääntyi
+ * päinvastaiseksi, kun eleenaikainen piilotus purettiin kokonaan
+ * (js/kartta.js asennaPanorointi — perustelu ja mitatut luvut siellä).
+ *
+ * TILA LUETAAN KESKEN ELEEN, ei sen jälkeen: eleen jälkeen kaikki on
+ * näkyvissä kummallakin tavalla, joten levossa mitattu luku ei
+ * erottaisi korjausta mistään. Ele katkaistaan siksi puoliväliin ja
+ * luetaan siitä.
+ */
+const eleenAikainenTila = async (nipistys) => {
+  const cx = 195; const cy = 480;
+  if (nipistys) {
+    const piste = (v, k) => ({ x: cx + Math.cos(k) * v, y: cy + Math.sin(k) * v });
+    await cdp.send('Input.dispatchTouchEvent', {
+      type: 'touchStart',
+      touchPoints: [{ ...piste(80, 0), id: 1 }, { ...piste(80, Math.PI), id: 2 }],
+    });
+    for (let i = 1; i <= 6; i++) {
+      const v = 80 + (80 * 1.6 - 80) * (i / 6);
+      await cdp.send('Input.dispatchTouchEvent', {
+        type: 'touchMove',
+        touchPoints: [{ ...piste(v, 0), id: 1 }, { ...piste(v, Math.PI), id: 2 }],
+      });
+      await sivu.waitForTimeout(16);
+    }
+  } else {
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: 280, y: 420, id: 1 }] });
+    for (let i = 1; i <= 6; i++) {
+      await cdp.send('Input.dispatchTouchEvent', {
+        type: 'touchMove',
+        touchPoints: [{ x: 280 - i * 20, y: 420, id: 1 }],
+      });
+      await sivu.waitForTimeout(16);
+    }
+  }
+  const tulos = await sivu.evaluate(() => {
+    const kerros = window.matkakirja.ui.svg.querySelector('.maatummennus');
+    return {
+      // Purettujen luokkien nimet luetaan yhä: jos jokin polku
+      // kirjoittaisi ne takaisin, väite kaatuu heti.
+      merkitPiilossa: document.body.classList.contains('kartta-merkit-haipyy')
+        || document.body.classList.contains('kartta-merkit-piilossa'),
+      tummennusNakyy: kerros ? getComputedStyle(kerros).display !== 'none' : null,
+      kohteetNakyy: (() => {
+        const k = window.matkakirja.ui.svg.querySelector('.fokuskohteet');
+        return k ? getComputedStyle(k).display !== 'none' : null;
+      })(),
+    };
+  });
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+  await sivu.waitForTimeout(900);
+  return tulos;
+};
+
+const panEle = await eleenAikainenTila(false);
+console.log(`      mitattu: panoroinnin aikana piilotusluokka ${panEle.merkitPiilossa},`
+  + ` ääriviiva näkyvissä ${panEle.tummennusNakyy},`
+  + ` kohdemerkit näkyvissä ${panEle.kohteetNakyy}`);
+vaadi('1b elävä karttasisältö pysyy näkyvissä panoroinnin ajan',
+  panEle.merkitPiilossa === false && panEle.tummennusNakyy === true
+    && panEle.kohteetNakyy === true,
+  JSON.stringify(panEle));
+
+const zoomEle = await eleenAikainenTila(true);
+console.log(`      mitattu: nipistyksen aikana piilotusluokka ${zoomEle.merkitPiilossa},`
+  + ` ääriviiva näkyvissä ${zoomEle.tummennusNakyy},`
+  + ` kohdemerkit näkyvissä ${zoomEle.kohteetNakyy}`);
+vaadi('1c elävä karttasisältö pysyy näkyvissä myös nipistyksen ajan',
+  zoomEle.merkitPiilossa === false && zoomEle.tummennusNakyy === true
+    && zoomEle.kohteetNakyy === true,
+  JSON.stringify(zoomEle));
 
 /*
  * Väite 1 on korjauksen ydin ja ainoa tiukka luku: ilman rajausta tässä
@@ -296,6 +394,41 @@ vaadi('1 eleen asetuttua kartalla on vain näkymän merkit',
   `näkyviä ${panTila.citiesNakyvia} / ${panTila.citiesSolmut}`);
 vaadi('2 rajaus on oikeasti piilottanut osan kerroksesta',
   panTila.rajattuja > 100, `rajattuja ${panTila.rajattuja}`);
+
+/* --- 2b: MAAN ÄÄRIVIIVA ON AINA PÄÄLLÄ -----------------------------
+ *
+ * Omistaja 2.9.2026, sanatarkasti: *"kehittäjätilassa ota pois se
+ * tummennusvalinta ja pidä pelkkä kartan ääriviivojen tummennus aina
+ * päällä. Eli tämä on oletus kummassakin tilassa."*
+ *
+ * Entinen kytkinväite (2b/2c, 1.9.2026) mittasi sitä, että kerros
+ * tyhjenee ja palaa ilman sivulatausta. Kytkintä ei ole enää olemassa,
+ * joten väite kääntyi ympäri: kehittäjän maailmanäkymässä — juuri
+ * siinä tilassa, jossa kytkin asui — kerroksessa on yksi solmu, ja se
+ * on maan ääriviiva eikä naapurien varjo. Lähdepään purun vartioi
+ * tests/rules.test.mjs.
+ */
+const viivaTila = await sivu.evaluate(() => {
+  const kerros = window.matkakirja.ui.svg.querySelector('.maatummennus');
+  const lapset = [...(kerros?.children ?? [])];
+  return {
+    solmut: lapset.length,
+    luokat: lapset.map((o) => o.getAttribute('class')),
+    tayttoja: lapset.filter((o) => {
+      const f = getComputedStyle(o).fill;
+      return f && f !== 'none' && !/rgba\(0, 0, 0, 0\)/.test(f);
+    }).length,
+    nappi: Boolean(document.getElementById('kehittaja-tummennus-btn')),
+  };
+});
+console.log(`      mitattu: kerroksessa ${viivaTila.solmut} solmua`
+  + ` (${viivaTila.luokat.join(', ') || '—'}), täyttöjä ${viivaTila.tayttoja},`
+  + ` kytkinnappi DOMissa ${viivaTila.nappi}`);
+vaadi('2b kehittäjätilassa on vain maan ääriviiva, ei varjoa eikä kytkintä',
+  viivaTila.solmut === 1 && viivaTila.luokat[0] === 'maatummennus-viiva'
+    && viivaTila.tayttoja === 0 && viivaTila.nappi === false,
+  JSON.stringify(viivaTila));
+
 // Tällä savukkeella mitattu: ennen 389 ms / 7 taskia, jälkeen 215 / 4.
 // (Omistajan omalla A/B-ajolla, jossa naapurilehti on kartalla, sama
 // ero on 799 → 475 ms.) Raja 350 kaatuu korjauksen katoamiseen mutta

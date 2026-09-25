@@ -118,6 +118,17 @@ export const FOKUSKOHTEET_HUN = [
         + 'kirkko, kaupungin päätorin laidalla.',
       lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
     },
+    visa: {
+      kysymys: 'Miksi Debreceniä alettiin kutsua "kalvinismin Roomaksi"?',
+      vaihtoehdot: [
+        'Koko kaupunki oli protestanttinen',
+        'Siellä asui paavi maanpaossa',
+        'Kaupunki oli rakennettu Rooman malliin',
+        'Siellä oli maan suurin katedraali',
+      ],
+      oikea: 0,
+      fakta: 'Debrecenin Suuri kirkko on yhä Unkarin suurin protestanttinen kirkko.',
+    },
   },
   {
     id: 'szeged',
@@ -186,6 +197,7 @@ export const FOKUSKOHTEET_HUN = [
     id: 'eger',
     nimi: 'Eger',
     tyyppi: 'kaupunki',
+    taso: 1,
     nappi: 'Linna, joka piti puolensa',
     kysymykset: [
       'Miten pieni varuskunta kesti niin pitkän piirityksen?',
@@ -255,6 +267,7 @@ export const FOKUSKOHTEET_HUN = [
     id: 'kekes',
     nimi: 'Kékes',
     tyyppi: 'vuori',
+    taso: 1,
     nappi: 'Unkarin katto — 1014 metriä',
     kysymykset: [
       'Miten Mátran vuoret syntyivät?',
@@ -382,6 +395,17 @@ export const FOKUSKOHTEET_HUN = [
         + 'vuorten pakottamana etelään.',
       lahde: 'Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    visa: {
+      kysymys: 'Mikä silta yhdisti Budan ja Pestin ensimmäistä kertaa pysyvästi?',
+      vaihtoehdot: [
+        'Erzsébet-silta',
+        'Ketjusilta',
+        'Vapaudensilta',
+        'Margitin silta',
+      ],
+      oikea: 1,
+      fakta: 'Vuonna 1849 valmistunut Ketjusilta oli ensimmäinen pysyvä silta Budan ja Pestin välillä.',
+    },
   },
   {
     id: 'tisza',
@@ -451,7 +475,8 @@ export const FOKUSKOHTEET_HUN = [
   {
     id: 'balaton',
     nimi: 'Balaton',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
+    taso: 1,
     symboli: 'luonto',
     nappi: 'Keski-Euroopan suurin järvi',
     kysymykset: [
@@ -479,6 +504,17 @@ export const FOKUSKOHTEET_HUN = [
         + 'vain muutaman metrin syvyinen.',
       lahde: 'Takkk, Wikimedia Commons (CC BY-SA 3.0)',
     },
+    visa: {
+      kysymys: 'Mikä tekee Tihanyn luostarin perustamiskirjasta poikkeuksellisen?',
+      vaihtoehdot: [
+        'Se on kirjoitettu kokonaan unkariksi',
+        'Se katosi ja löytyi vasta äskettäin',
+        'Vanhimmat unkarinkieliset sanat',
+        'Se on kirjoitettu kreikaksi',
+      ],
+      oikea: 2,
+      fakta: 'Tihanyn luostarin vuoden 1055 perustamiskirja on vanhin säilynyt asiakirja, jossa on unkarinkielisiä sanoja latinan seassa.',
+    },
   },
 
   /* ── 4. MAISEMAT, JOITA LEHTI EI NIMEÄ ──────────────────────────
@@ -490,14 +526,15 @@ export const FOKUSKOHTEET_HUN = [
   {
     id: 'hortobagy',
     nimi: 'Hortobágy',
-    tyyppi: 'muu',
+    tyyppi: 'vuori',
+    taso: 1,
     symboli: 'luonto',
     nappi: 'Aro, jonka yllä ei ole aitaa',
     kysymykset: [
       'Miten puszta syntyi?',
       'Millaista karjaa aroilla laidunnetaan?',
     ],
-    korostukset: ['puszta|pusztan'],
+    korostukset: ['puszta|pusztaksi'],
     // 21,0500 E / 47,6000 N — en-Wikipedia "Hortobágy National Park",
     // puiston keskiosa Hortobágyn kylän seudulla.
     laudat: {
@@ -524,7 +561,8 @@ export const FOKUSKOHTEET_HUN = [
   {
     id: 'tokaj',
     nimi: 'Tokaj',
-    tyyppi: 'muu',
+    tyyppi: 'ruoka',
+    taso: 1,
     symboli: 'ruoka',
     nappi: 'Kuninkaiden viini',
     kysymykset: [
@@ -556,7 +594,8 @@ export const FOKUSKOHTEET_HUN = [
   {
     id: 'pannonhalma',
     nimi: 'Pannonhalma',
-    tyyppi: 'muu',
+    tyyppi: 'historia',
+    taso: 1,
     symboli: 'historia',
     nappi: 'Luostari, joka on ollut paikallaan tuhat vuotta',
     kysymykset: [
@@ -583,11 +622,24 @@ export const FOKUSKOHTEET_HUN = [
         + 'benediktiiniläisyhteisö vuodesta 996.',
       lahde: 'Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0)',
     },
+    visa: {
+      kysymys: 'Mitä munkit toivat Pannonhalmaan kristinuskon lisäksi?',
+      vaihtoehdot: [
+        'Rautatekniikan ja asetekniikan',
+        'Merenkulun ja kaupankäynnin',
+        'Musiikin ja näyttelemisen',
+        'Kirjoitustaidon ja viininviljelyn',
+      ],
+      oikea: 3,
+      fakta: 'Pannonhalman munkit toivat maahan kristinuskon lisäksi kirjoitustaidon, viininviljelyn ja koulun.',
+    },
   },
   {
     id: 'aggtelek',
     nimi: 'Aggtelekin luolat',
-    tyyppi: 'muu',
+    // Puhujan akustiikka kortilla (js/tehosteketju.js): luolan kaiku.
+    akustiikka: 'luola',
+    tyyppi: 'vuori',
     symboli: 'luonto',
     nappi: 'Luola, jossa pidetään konsertteja',
     kysymykset: [
@@ -610,6 +662,7 @@ export const FOKUSKOHTEET_HUN = [
       + 'johdanto (tarkistettu 27.8.2026).',
     kuva: {
       tiedosto: 'Aggtelek - Baradla.jpg',
+      lyhyt: 'Baradlan luolan tippukiviä; luolasto jatkuu Slovakiaan yli kahdenkymmenen kilometrin mittaisena.',
       selite: 'Baradlan luolan tippukiviä; luolasto jatkuu Slovakian '
         + 'puolelle yli kahdenkymmenen kilometrin mittaisena.',
       lahde: 'Fenyessanyi, Wikimedia Commons (CC BY 3.0)',
@@ -618,7 +671,7 @@ export const FOKUSKOHTEET_HUN = [
   {
     id: 'holloko',
     nimi: 'Hollókő',
-    tyyppi: 'muu',
+    tyyppi: 'kulttuuri',
     symboli: 'kulttuuri',
     nappi: 'Kylä, joka rakennettiin uudelleen vanhaan malliin',
     kysymykset: [

@@ -118,12 +118,9 @@ export const FOKUSVIRTA_MADRID = {
      * havainto, ei mitattu väite.
      */
     paikkarivi: 'Madrid, maaliskuussa 1873. Kirkasta; ylätasangon tuuli '
-      + 'kylmä.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Madrid kiehuu: tasavalta on nuori ja kahvilat täynnä '
-      + 'huutoa. Minä kuuntelin ja kirjoitin. Prado oli tyhjä kuin '
-      + 'kirkko arkiaamuna — seisoin Velázquezin edessä yksin, ja se '
-      + 'oli matkani hiljaisin tunti.',
+      + 'kylmä; puntari korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 353 merkkiä (yläraja 400). */
+    teksti: "Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu. Äänite
      * generoidaan tästä kentästä työnkulussa .github/workflows/
@@ -137,37 +134,119 @@ export const FOKUSVIRTA_MADRID = {
      * jälkeen repon polun ja vaikenee siististi (audion 'error' →
      * varareitti → catch), eikä mikään muu hajoa.
      */
-    luenta: '[curious] Madrid kiehuu: tasavalta on nuori ja kahvilat '
-      + 'täynnä huutoa. Minä kuuntelin ja kirjoitin. [softly] Prado oli '
-      + 'tyhjä kuin kirkko arkiaamuna — [whispers] seisoin Velázquezin '
-      + 'edessä yksin, ja se oli matkani hiljaisin tunti.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Madridin kahviloissa väitellään uudesta
+     * tasavallasta" (selittävä tausta).
+     */
+    reaktiot: [
+  {
+    "id": "madrid.r1",
+    "ankkuri": "valmistauduin näyttämään käyntikorttini",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "madrid.r2",
+    "ankkuri": "Vartija viittasi sisään katsomatta nimeä",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "madrid.r3",
+    "ankkuri": "mies levitti eväänsä penkille ja teki minulle tilaa",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "madrid.r4",
+    "ankkuri": "Panin kortin takaisin taskuun",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "madrid.r5",
+    "ankkuri": "ilman esittelyä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. [warmly] Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-madrid.mp3',
+    /*
+     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-madrid-r20260909-paper-v4;
+     * SHA-256 6c9039a530b5e0a2abfc95e58a1cb60ef5de5c795c540f51c7e5e82ba7d35ceb;
+     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
+     * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
+     * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
+     * toimituksen tausta-aineisto (ei näy pelaajalle).
+     */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-madrid-r20260909-paper-v4.jpg',
+      // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
+      // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
+      lyhyt: 'Madrid, 1873. Maalari huomasi katsojansa ensin.',
+      selite: 'Pradon salissa Las Meninas vaihtoi katsomisen järjestystä: hoviväki, kuningaspari, maalari ja lattialla lepäävä koira katsoivat eri suuntiin. Taulun edessä en ollut varma, kummassa huoneessa vierailija seisoi.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+      'https://www.museodelprado.es/en/learn/encyclopedia/voice/meninas-las-velazquez/296ac38f-8bf6-439d-b13c-ed22de8c39de',
+      'https://www.museodelprado.es/en/museum/history-of-the-museum',
+      ],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-madrid-r20260911-paper2-v1.jpg",
+      lyhyt: "Madrid, 1873. Tasavalta sai kahvilassa enemmän puhetta kuin kahvi.",
+      selite: 'Pradon hiljaisuuden jälkeen kaksi herraa järjesti kahvilassa tasavaltaa käsillään kahvikuppien yli. Annoin vallan vaihtua ilman sanomalehteä; kahvi ehti jäähtyä ennen väittelyä.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.museodelprado.es/en/museum/history-of-the-museum"],
+    },
   },
 
   /* ---------- 2. Pöllön nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * LIVIAN MAADOITUS — VÄLITTÄJÄOTE (Raamattu, "LIVIA AIKASIIRTYMÄN
-     * VÄLITTÄJÄNÄ"). Yksi kupla per saapuminen, isoisän merkinnän
-     * perään.
-     *
-     * PUHEKIELIPASSI (Raamattu, "LIVIAN PUHEKIELI", sääntö 1
-     * PAINOPISTE REUNOILLA): lyhentymät ovat vain alussa ("Kääk") ja
-     * lopussa ("Mut"), keskellä sanat ovat auki — yhdessätoista,
-     * neljä, muutaman.
-     *
-     * FAKTAKURI: kaksi väitettä, molemmat tarkistettavia.
-     * (1) Tasavalta julistettiin 11.2.1873, joten maaliskuussa se oli
-     * muutaman viikon vanha. (2) Valtionpäämiehiä vaihtui neljä
-     * yhdentoista kuukauden sisään (takyt-madrid.md, täky 5; kukaan
-     * heistä ei ollut virallisesti presidentti, joten sanaa ei käytetä).
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era02; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-madrid-01-r20260909-euv1-v2.jpg.
      */
-    maadoitus: 'Kääk. Isoisäsi kuunteli huutoa ja käveli sitten '
-      + 'museoon, se on hänen tapansa. Sitten minä katson vuosilukua: '
-      + 'tuo tasavalta oli maaliskuussa muutaman viikon vanha, ja sen '
-      + 'johdossa ehti vaihtua yhdentoista kuukauden sisään neljä '
-      + 'miestä. Ei ihme että kahviloissa huudettiin. Mut kyllä minä '
-      + 'ymmärrän sitä, joka etsii yhden hiljaisen tunnin.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-madrid-01-r20260909-euv1-v2.jpg',
+        lyhyt: 'Madrid: Pradon taiteeseen johtaa myös varjoisa odotus.',
+        selite: 'Las Meninas odottaa Pradossa, mutta puun varjossa lepäävä koira on valinnut saman rauhallisen asennon kuin maalauksen kuuluisa edeltäjä. Sen ihminen katsoo puhelinta, museovieraat sisäänkäyntiä, eikä koira aio perustella huomiotta jättämistään.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.museodelprado.es/en/visit/getting-here',
+          'https://www.museodelprado.es/en/visit-the-museum',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Retiron lammella vuokrataan nyt soutuveneitä. Laskeuduin yhden keulaan kokeilemaan matkustajan osaa. Soutaja sai veneen pyörimään ympyrää. Olisin voinut lentää, tietenkin. Mutta hän nauroi jo itsekin, ja minä jäin vielä yhdelle kierrokselle."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (Kuninkaanlinna). Faktat:
      * linnan valmistumisvuosi, maurilinnan palo ja yli 3 400 huonetta
@@ -183,6 +262,7 @@ export const FOKUSVIRTA_MADRID = {
       + 'neljäsataa. Katso ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-madrid-aamu.png',
+      lyhyt: 'Madridin kuninkaanlinna valmistui 1755 palaneen maurilinnan paikalle, Länsi-Euroopan suurin.',
       selite: 'Madridin kuninkaanlinna valmistui 1755 tulipalossa '
         + 'tuhoutuneen maurilinnan paikalle, ja yli 3 400 huoneellaan '
         + 'se on Länsi-Euroopan suurin kuninkaanlinna.',
@@ -220,6 +300,7 @@ export const FOKUSVIRTA_MADRID = {
         + 'Campoon, ja vanhoihin eläinsuojiin avattiin 2013 '
         + 'kaupunginkirjasto — sen seinissä ovat yhä ne kalterit, '
         + 'joiden läpi pedoille heitettiin ruokaa yläkerrasta.',
+      lahde: 'es-Wikipedia "Casa de Fieras del Retiro". Tarkistettu 1.9.2026.',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (29.8.2026, aalto 1). Sama malli kuin
        * täkynostoilla v1307:stä alkaen: repon oma generoitu
@@ -299,6 +380,7 @@ export const FOKUSVIRTA_MADRID = {
         + 'onttoa etuosaa. Ensimmäistä savimallia kuningas ei '
         + 'hyväksynyt: hän ei tunnistanut omia kasvojaan, ja pää '
         + 'jouduttiin teettämään uudelleen — sen teki Taccan poika.',
+      lahde: 'es-Wikipedia "Monumento a Felipe IV". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 1536×2048, CC0, Zarateman, kuvattu
        * 16.11.2018. Restrictions tyhjä. SILMÄTARKISTUS tehty: kuvassa
@@ -358,6 +440,8 @@ export const FOKUSVIRTA_MADRID = {
         + 'Manuel Pavía vaati edustajia tyhjentämään talon viidessä '
         + 'minuutissa. Osa heistä hyppäsi ikkunoista, ja Pavía kysyi '
         + 'hämmästyneenä, miksi ikkunasta, kun ovesta pääsee ulos.',
+      lahde: 'en-Wikipedia "First Spanish Republic" ja en-Wikipedia "Nicolás '
+        + 'Salmerón". Tarkistettu 1.9.2026.',
       /*
        * Commons 28.8.2026: 959×1298, public domain, litografia Juan
        * Vazquez, julkaistu La Flaca -lehdessä 6.3.1873. Restrictions
@@ -366,6 +450,7 @@ export const FOKUSVIRTA_MADRID = {
        */
       kuva: {
         tiedosto: 'Alegoría de la Primera República Española, por Tomás Padró.jpg',
+        lyhyt: 'Aikalaisallegoria Espanjan ensimmäisen tasavallan julistuksesta, painettu La Flacassa 1873.',
         selite: 'Aikalaisallegoria Espanjan ensimmäisen tasavallan '
           + 'julistamisesta, painettu La Flaca -lehdessä maaliskuussa '
           + '1873.',
@@ -433,6 +518,7 @@ export const FOKUSVIRTA_MADRID = {
      */
     kuva: {
       tiedosto: 'Puerta del Sol - Reloj.jpg',
+      lyhyt: 'Real Casa de Correosin kellotorni Puerta del Solilla; kellon lahjoitti palannut kelloseppa 1866.',
       selite: 'Real Casa de Correosin kellotorni Puerta del Solilla. '
         + 'Kellon lahjoitti kaupungille maanpaosta palannut kelloseppä '
         + 'vuonna 1866.',
@@ -447,16 +533,17 @@ export const FOKUSVIRTA_MADRID = {
    * id 'madrid'): kellomestari Pilar hoitaa Puerta del Solin kelloa, ja
    * game.actionQuiz esittää hänen kysymyksensä laatalla (js/game.js
    * kaariTarina). Tämä kortti EI kosketa kysymystä eikä kertaa Pilarin
-   * omaa repliikkiä — sama suhde kuin Ateenan Nikoksella ja Sofian
-   * Nadialla.
+   * omaa repliikkiä — sama suhde kuin Sofian Nadialla.
    *
-   * MADRIDIN VANHA KOHTAAMINEN JÄÄ ENNALLEEN. js/packs/kohtaamiset.js
-   * antaa Madridille kirpputorikauppias Rosan, ja se rivi on pelin
-   * vanhan polun kohtaaminen (js/visa.js: KOHTAAMISET näytetään, kun
-   * kysymys ei ole kaarikysymys). Hahmoa ei ole poistettu eikä
-   * muutettu: fokusmoodin kohtaaminen on kaaren oma hahmo, koska juuri
-   * hän esittää aarrekysymyksen, ja kaksi hahmoa samaan kysymykseen
-   * olisi kaksi lupausta samasta ovesta.
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. KAKSOISHENKILÖ PURETTU:
+   * js/packs/kohtaamiset.js antoi
+   * Madridille aiemmin kirpputorikauppias Rosan, eli kaupungissa oli
+   * kaksi eri kohtaamishenkilöä. Fablen päätös 5.9.2026 klo 20:05 UTC
+   * ratkaisi asian kaaren hyväksi: *"kaaren henkilö (Pilar, Lucia)
+   * voittaa"*. Rosa on poistettu, ja kohtaamiset.js:n madrid-rivi
+   * puhuu nyt samasta Pilarista — sen tervehdys on kaupungin
+   * myöhempien tavallisten visojen avaus ja sen repliikit ne, jotka
+   * js/visa.js näyttää kätkötuloksen mukaan.
    */
   kohtaaminen: {
     hahmo: 'Kellomestari Pilar',
@@ -588,8 +675,7 @@ export const FOKUSVIRTA_MADRID = {
           + 'vuotta.',
       ],
       lahde: 'en-Wikipedia "Cave of Altamira", johdanto ja osio "Discovery, '
-        + 'excavation, scepticism" (tarkistettu 25.8.2026 työaineistoon '
-        + 'docs/mantereet-tyoaineisto/takynostot-espanja.md, ehdokas 1).',
+        + 'excavation, scepticism" (tarkistettu 25.8.2026).',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
        * areenalla ja v1307:n neljällä nostolla): repon oma generoitu
@@ -616,6 +702,7 @@ export const FOKUSVIRTA_MADRID = {
        */
       valokuva: {
         tiedosto: 'Altamira-1880.jpg',
+        lyhyt: 'Kattomaalausten piirros 1880: juuri se kuva, jonka takia löytäjää syytettiin väärentäjäksi.',
         selite: 'Kattomaalausten piirros vuoden 1880 julkaisusta — juuri se '
           + 'kuva, jonka takia löytäjää syytettiin väärentäjäksi.',
         lahde: 'Vuoden 1880 julkaisu, Wikimedia Commons (public domain)',
@@ -641,16 +728,40 @@ export const FOKUSVIRTA_MADRID = {
        * Aineiston ehto noudatettu: laskentavuosi on tekstissä näkyvissä,
        * koska luku vanhenee.
        *
-       * PAIKKAA EI OLE, JA SE ON TIETOINEN VALINTA. Aineisto puhuu
-       * "Madridin puistoista" eikä nimeä yhtä pesäpaikkaa, eikä
-       * arvattua koordinaattia kirjoiteta datalle. Ilman
-       * `paikka`-kenttää piste ottaa paikakseen kaupungin ja siirtyy
-       * laatan vasemmalle puolelle (nostonPaikka, js/fokusnosto-
-       * symbolit.js) — juuri se varapolku, jota varten kenttä on
-       * valinnainen.
+       * PAIKKA LISÄTTIIN 1.9.2026 (nostojen sisältöaudit). Kenttä
+       * puuttui tietoisesti, koska aineisto puhuu "Madridin puistoista"
+       * eikä nimeä yhtä pesäpaikkaa — mutta varapolku osoittautui
+       * pahemmaksi kuin puuttuva täsmäpiste. Tämä lista ON Espanjan
+       * maapooli (js/fokusnosto.js NOSTO_MAAT.ESP osoittaa tähän
+       * taulukkoon), eikä datamallissa ole tapaa sitoa yksittäistä
+       * nostoa yhteen kaupunkiin: pooli näkyy sellaisenaan jokaisessa
+       * maan kaupungissa, jolla ei ole omaa listaa (nostoKaupunginPooli).
+       * Ilman `paikka`-kenttää merkki asettui siihen kaupunkiin, jossa
+       * pelaaja seisoi (nostonPaikka), joten Barcelonassa pelaava sai
+       * Barcelonan päälle merkin, jonka otsikko puhuu Madridista.
+       *
+       * MIKSI PARQUE DEL OESTE EIKÄ EL RETIRO: lähdeartikkeli ei nimeä
+       * yhtäkään puistoa, joten pistettä ei voi ottaa siitä. Kortin
+       * OMA, jo tarkistettu valokuva on Parque del Oestesta
+       * ("Cotorra Argentina - Parque del Oeste - Madrid 03.jpg",
+       * Commons-kuvaus nimeää puiston), eli se on tässä kortissa ainoa
+       * dokumentoitu pesäpaikka. Piste on siis kortin oman todisteen
+       * paikka, ei arvaus tunnetuimmasta puistosta.
+       *
+       * 40,42833333 N / −3,72416667 E — en-Wikipedia "Parque del
+       * Oeste", prop=coordinates (haettu 1.9.2026). Sama kaava ja samat
+       * vakiot kuin muillakin nostoilla (js/fokusnosto.js, PAIKKA
+       * LAUDALLA): maailmankartta Millerin lieriönä, europe tasavälinä.
        */
       id: 'munkkiaratit',
       nimio: 'Madridin papukaijat',
+      /*
+       * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+       * piste on Casa de Campon ja Länsipuiston puolella, kaupunkilehden
+       * kohdekartan (Kuninkaanlinna–Prado) rajauksen ulkopuolella, joten
+       * merkki kuuluu pääkartalle.
+       */
+      kattoVapaa: true,
       otsikko: 'Madridin puistoissa asuu tuhansia villejä papukaijoja — ja '
         + 'niiden pesät kasvavat pikkuauton kokoisiksi',
       lunastus: [
@@ -668,8 +779,8 @@ export const FOKUSVIRTA_MADRID = {
           + 'oravia. Espanja kielsi lajin pidon ja kaupan vuonna 2013.',
       ],
       lahde: 'en-Wikipedia "Monk parakeet", osiot pesinnästä ja '
-        + 'vieraslajistatuksesta (tarkistettu 25.8.2026 työaineistoon '
-        + 'docs/mantereet-tyoaineisto/takynostot-espanja.md, ehdokas 6).',
+        + 'vieraslajistatuksesta (tarkistettu 25.8.2026); pisteen paikka '
+        + 'en-Wikipedia "Parque del Oeste" (tarkistettu 1.9.2026).',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin yllä):
        * repon oma generoitu kuva, joten kenttä on `osoite` eikä
@@ -681,6 +792,7 @@ export const FOKUSVIRTA_MADRID = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-munkkiaratit-loistoaika.webp',
+        lyhyt: 'Munkkiarattien jättipesä puistopuun oksistossa Madridissa, kaupungin julkisivut takana.',
         selite: 'Munkkiarattien jättipesä puistopuun oksistossa: monta '
           + 'omaa sisäänkäyntiä ja Madridin julkisivut takana.',
         lahde: 'Matkakirjan havainnekuva: yhdyskunnan pesä Madridin '
@@ -702,6 +814,13 @@ export const FOKUSVIRTA_MADRID = {
         'Millainen on munkkiaratin yhteispesä?',
         'Mitä haittaa vieraslajista on kaupungille?',
       ],
+      paikka: {
+        nimi: 'Parque del Oeste',
+        laudat: {
+          maailmankartta: { x: 5709.2, y: 1786 },
+          europe: { x: 139.7, y: 830.3 },
+        },
+      },
     },
     {
       /*
@@ -734,10 +853,8 @@ export const FOKUSVIRTA_MADRID = {
           + 'nostaa Yhdysvaltain lippu, jotta pommitukset lakkaisivat. '
           + 'Lupaa ei tullut. Kaupunki antautui 12. tammikuuta 1874.',
       ],
-      lahde: 'en-Wikipedia "Canton of Cartagena", osiot "Establishment", '
-        + '"Expansion" ja "Defeat", sekä "First Spanish Republic" '
-        + '(tarkistettu 25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
-        + 'takynostot-espanja.md, ehdokas 4).',
+      lahde: 'en-Wikipedia "Canton of Cartagena", osiot "Establishment", "Expansion" '
+        + 'ja "Defeat", sekä "First Spanish Republic" (tarkistettu 25.8.2026).',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin yllä): repon
        * oma generoitu havainnekuva, joten kenttä on `osoite` eikä
@@ -776,6 +893,384 @@ export const FOKUSVIRTA_MADRID = {
         laudat: {
           maailmankartta: { x: 5800.5, y: 1896.2 },
           europe: { x: 192.3, y: 904.7 },
+        },
+      },
+    },
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): MADRIDIN KAUPUNKILEHDEN SIVUT
+     * NOSTOIKSI.
+     *
+     * Sama jako kuin Pariisissa erässä 5
+     * (docs/raportit/viesti-fable-karttauudistus-era5-20260913.md,
+     * suunnitelman luku 4.7): lehden aihesivujen nostot ovat nyt
+     * klikattavia karttapaloja kaupungin kohdekartalla. Kaikki tämän erän
+     * nostot ovat KOHDEKARTALLA, eivät pääkartalla — omistajan sääntö
+     * 2.9.2026 (tests/nostot-kartalla.test.mjs).
+     *
+     * TEKSTIÄ EI OLE KIRJOITETTU UUDESTAAN. Jokainen `lunastus`-kappale on
+     * lehden oman noston `teksti` SANATARKASTI
+     * (js/packs/kulttuuri-kategoriat.js, kaupunki `madrid`), ja `kuva` on
+     * lehden oma kuvarivi kenttineen. Siirto on tehty ohjelmallisesti ja
+     * todennettu ===-vertailulla
+     * (tools/savukkeet/savuke-kaupunkien-nostot.mjs vartio 4b avaa jokaisen
+     * kortin selaimessa ja vertaa merkki merkiltä).
+     *
+     * MINIKYSYMYKSET (erän 6 datamalli, kiintiö joka kolmas nosto):
+     * `madridin-tapaskierros`, `chotis-laatalla`, `gran-vian-murto`.
+     * ══════════════════════════════════════════════════════════════
+     */
+    {
+      id: 'madridin-tapaskierros',
+      nimio: 'Tapaskierros',
+      otsikko: 'Kaupunki, jossa syödään seisten',
+      symboli: 'ruoka',
+      lunastus: [
+        'Madridissa lounas on kahdelta ja illallinen yhdeksän jälkeen, ja '
+          + 'väliin jää tunteja, jotka täytetään tapaksilla. Tapa tarkoittaa '
+          + 'kantta: juomalasin päälle asetettiin viipale kinkkua tai leipää, '
+          + 'jottei kärpäsiä päässyt sisään — kansi muuttui ruoaksi. Tapaksia '
+          + 'syödään seisten baaritiskillä ja siirrytään sitten seuraavaan '
+          + 'paikkaan; kierros on nimeltään tapeo, ja se on yhtä paljon '
+          + 'kävelyä kuin syömistä. Vuoden 1916 valurautainen San Miguelin '
+          + 'halli on kierroksen tunnetuin pysäkki.',
+      ],
+      lahde: 'Madridin kaupunkilehden nosto "Kaupunki, jossa syödään seisten" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Mercado de San Miguel, Madrid - 001.jpg',
+        lyhyt: 'Mercado de San Miguelin lasi- ja valurautahalli oli vihannestori ennen muutostaan tapastoriksi 2009.',
+        selite: 'Mercado de San Miguelin lasi- ja valurautahalli Plaza Mayorin '
+          + 'kupeessa, entinen vihannestori, joka muuttui 2009 tapastoriksi.',
+        lahde: 'Nicolas Vigier, Wikimedia Commons (CC0)',
+      },
+      kysymykset: [
+        'Miksi Madridissa syödään illallinen vasta yhdeksän jälkeen?',
+        'Miten tapeo-kierros käytännössä kulkee baarista toiseen?',
+        'Millaisia tapaksia madridilaisessa baarissa tarjotaan?',
+      ],
+      visa: {
+        kysymys: 'Mitä espanjan sana tapa alun perin tarkoittaa?',
+        vaihtoehdot: [
+          'Pientä lautasta',
+          'Kantta',
+          'Välipalaa',
+        ],
+        oikea: 1,
+        fakta: 'Tapaksia syödään seisten baaritiskillä ja siirrytään sitten '
+          + 'seuraavaan paikkaan; kierros on nimeltään tapeo, ja se on yhtä '
+          + 'paljon kävelyä kuin syömistä.',
+      },
+      paikka: {
+        nimi: 'Tapaskierros',
+        laudat: {
+          maailmankartta: { x: 5709.7, y: 1786.5 },
+          europe: { x: 140, y: 830.7 },
+        },
+      },
+    },
+    {
+      id: 'goyan-kansankuvat',
+      nimio: 'Goyan kansankuvat',
+      otsikko: 'Goya maalasi madridilaisten vapaapäivät',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Ennen kuin Francisco de Goyasta tuli hovimaalari ja ennen kuin '
+          + 'hän maalasi sotaa ja hulluutta, hän teki kymmenen vuotta töitä '
+          + 'kuninkaallisen kutomon tilauksesta: malleja seinävaatteisiin, '
+          + 'joiden aiheeksi haluttiin iloisia kansankuvia. Goya meni kaduille '
+          + 'ja niityille ja katsoi, mitä madridilaiset oikeasti tekivät '
+          + 'vapaapäivinään — joivat, tanssivat, riitelivät, leikkivät. Siitä '
+          + 'syntyi tarkin muotokuva, joka 1700-luvun Madridista on: ei '
+          + 'kuninkaista vaan kaupungista.',
+      ],
+      lahde: 'Madridin kaupunkilehden nosto "Goya maalasi madridilaisten '
+        + 'vapaapäivät" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'La pradera de San Isidro, Francisco de Goya.jpg',
+        lyhyt: 'San Isidron niitty (1788) kuvaa kaupungin suojeluspyhimyksen juhlaa Manzanaresin rannalla.',
+        selite: 'San Isidron niitty (1788) syntyi Goyan kymmenvuotisesta työstä '
+          + 'kuninkaallisen kutomon malleja tehden, ja aiheena on kaupungin '
+          + 'suojeluspyhimyksen juhla Manzanaresin rannalla.',
+        lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+      },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'El Quitasol (Goya).jpg',
+          lyhyt: 'Päivänvarjo (1777) on Goyan kutomomalli El Pardon palatsiin ja yksi Pradon suosituimpia tauluja.',
+          selite: 'Päivänvarjo (1777) kuuluu Goyan kutomomalleihin, jotka tehtiin '
+            + 'El Pardon palatsin seinävaatteita varten, ja se on yhä Pradon '
+            + 'suosituimpia tauluja.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'La gallina ciega (Goya).jpg',
+          lyhyt: 'Sokkoleikki (1789), espanjaksi la gallina ciega eli sokea kana, on Goyan kutomomalli Pradossa.',
+          selite: 'Sokkoleikin (1789) espanjankielinen nimi la gallina ciega '
+            + 'tarkoittaa sokeaa kanaa, ja Goyan kutomomalli kuuluu Pradon '
+            + 'kokoelmaan.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'La nevada, Francisco de Goya.jpg',
+          lyhyt: 'Lumisade eli Talvi (1786) kuvaa Goyan kutomomallissa kolme miestä ja aasin lumituiskussa.',
+          selite: 'Lumisade eli Talvi (1786) on Goyan kutomomalli, jossa kolme '
+            + 'miestä ja aasi kahlaavat lumituiskussa — 650 metrin korkeudessa '
+            + 'talvi puree.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'El baile a orillas del Manzanares.jpg',
+          lyhyt: 'Tanssi Manzanaresin rannalla (1777) esittää madridilaisia keikareita seguidillaa tanssimassa.',
+          selite: 'Tanssi Manzanaresin rannalla (1777) esittää majoja ja majia, '
+            + 'kaupungin omia keikareita, seguidillaa tanssimassa joen '
+            + 'törmällä.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'El cacharrero, Francisco de Goya.jpg',
+          lyhyt: 'Saviastioiden kauppias (1779) asettaa vastakkain katukauppiaan ja ohi vierivät herrasvaunut.',
+          selite: 'Saviastioiden kauppias (1779) asettaa vastakkain maahan '
+            + 'ruukkunsa levittävän kauppiaan ja ohi vierivät herrasvaunut — '
+            + 'kaksi Madridia samassa taulussa.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+      ],
+      kysymykset: [
+        'Millaisia seinävaatteita kuninkaallinen kutomo valmisti?',
+        'Mitä madridilaiset tekivät vapaapäivinään 1700-luvulla?',
+        'Miksi Goyan myöhemmät maalaukset ovat niin toisenlaisia?',
+      ],
+      paikka: {
+        nimi: 'Goyan kansankuvat',
+        laudat: {
+          maailmankartta: { x: 5710.3, y: 1786.6 },
+          europe: { x: 140.3, y: 830.7 },
+        },
+      },
+    },
+    {
+      id: 'chotis-laatalla',
+      nimio: 'Chotis',
+      otsikko: 'Chotis tanssitaan yhden laatan päällä',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui '
+          + 'perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, '
+          + 'jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen '
+          + 'ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. '
+          + 'Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. '
+          + 'toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista '
+          + 'syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään '
+          + 'kaupungin omassa Zarzuela-teatterissa yhä.',
+      ],
+      lahde: 'Madridin kaupunkilehden nosto "Chotis tanssitaan yhden laatan '
+        + 'päällä" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Parejas bailando Chotis - Madrid 01.jpg',
+        lyhyt: 'Chotisia tanssitaan Madridin verbena-juhlissa chulapon asussa, naisilla pilkkumekko ja neilikka.',
+        selite: 'Chotisia tanssitaan Madridin verbena-juhlissa chulapon lakissa ja '
+          + 'liivissä, naisilla pitkä pilkullinen mekko ja neilikka hiuksissa.',
+        lahde: 'Javier Perez Montes, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      /*
+       * MUSIIKKI JA ÄÄNI KORTILLE (avoin kohta 11.1, 14.9.2026). Erässä 10
+       * tämä nosto jäi lehden sivulle kaksoiskappaleeksi vain siksi, että
+       * musiikkilinkille ja ääninäytteelle ei ollut paikkaa kortilla.
+       * Kortti piirtää ne nyt SAMOILLA napeilla kuin lehti (js/ui.js
+       * lisaaNostonNapit), joten sivulta jäänyt kaksoiskappale purkautui.
+       */
+      musiikki: 'https://music.apple.com/fi/search?term=zarzuela',
+      musiikkiNimi: 'Zarzuela-musiikkia Apple Musicissa',
+      musiikkiNayte: 'https://archive.org/download/granvi30g/AE2784.mp3',
+      musiikkiNayteNimi: 'La Gran Vía -zarzuela — Emilio Sagi-Barba, PD',
+      kysymykset: [
+        'Mistä chotis tuli Madridiin ja miten se muuttui perillä?',
+        'Mitä verbena-juhlissa tapahtuu?',
+        'Mikä erottaa zarzuelan oopperasta?',
+      ],
+      visa: {
+        kysymys: 'Mikä soitin säestää chotista Madridin kaduilla?',
+        vaihtoehdot: [
+          'Haitari',
+          'Kitara ja kastanjetit',
+          'Organillo eli kadulla työnnettävä kampiurut',
+        ],
+        oikea: 2,
+        fakta: 'Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. '
+          + 'toukokuuta — sama juhla, jonka Goya maalasi.',
+      },
+      paikka: {
+        nimi: 'Chotis',
+        laudat: {
+          maailmankartta: { x: 5710.1, y: 1786.5 },
+          europe: { x: 140.2, y: 830.6 },
+        },
+      },
+    },
+    {
+      id: 'madridin-kaksi-joukkuetta',
+      nimio: 'Kaksi joukkuetta',
+      otsikko: 'Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka '
+        + 'vaihtoi joukkuetta',
+      symboli: 'urheilu',
+      lunastus: [
+        'Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen '
+          + 'mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen '
+          + 'erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli '
+          + 'sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja '
+          + 'laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. '
+          + 'Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa '
+          + 'kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia '
+          + '— sen jälkeen stadionille mahtuu konsertti.',
+        'Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita '
+          + 'vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético '
+          + 'Madridin kannattajat: seuran toimisto oli naapurikadulla, ja '
+          + 'siellä juhlittiin voittoja jo vuonna 1962. Real Madridin väki '
+          + 'omaksui tavan perässä, ja 1980-luvun lopulla Cibeles oli jo niin '
+          + 'vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. '
+          + 'Vuodesta 1991 he ovat juhlineet saman puistokadun toisessa '
+          + 'päässä, Neptunuksen suihkulähteellä.',
+      ],
+      lahde: 'Madridin kaupunkilehden nostot "Nurmi lasketaan hissillä maan alle" '
+        + 'ja "Suihkulähde, joka vaihtoi joukkuetta" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Estadio Santiago Bernabeu - Field.jpg',
+        lyhyt: 'Santiago Bernabéu avattiin 1947, ja Real Madridin kotistadionille mahtuu nykyään 83 186 katsojaa.',
+        selite: 'Santiago Bernabéu avattiin 14. joulukuuta 1947, ja Real Madridin '
+          + 'kotistadionille mahtuu nykyään 83 186 katsojaa.',
+        lahde: 'Mervat, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Fuente de Cibeles - 03.jpg',
+          selite: 'Cibeleen suihkulähteen vaunuja vetävät kivileijonat veisti '
+            + 'ranskalainen Roberto Michel 1780-luvulla.',
+          lahde: 'Carlos Delgado, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      kysymykset: [
+        'Miten yli sadan metrin nurmikaukalo saadaan liikkumaan?',
+        'Miksi atléticolaiset luopuivat Cibeleen suihkulähteestä?',
+        'Mitä muuta suurilla stadioneilla tehdään kuin pelataan jalkapalloa?',
+      ],
+      paikka: {
+        nimi: 'Kaksi joukkuetta',
+        laudat: {
+          maailmankartta: { x: 5710.2, y: 1786.4 },
+          europe: { x: 140.3, y: 830.6 },
+        },
+      },
+    },
+    {
+      id: 'palamaton-linna',
+      nimio: 'Palamaton linna',
+      otsikko: 'Linna rakennettiin palamattomaksi',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona '
+          + '1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa '
+          + 'tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, '
+          + 'katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja '
+          + 'kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti '
+          + 'sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään '
+          + 'Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan '
+          + 'pienemmässä talossa kaupungin laidalla.',
+      ],
+      lahde: 'Madridin kaupunkilehden nosto "Linna rakennettiin palamattomaksi" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Real Alcázar de Madrid, unknown.jpg',
+        lyhyt: 'Kuninkaiden vanha Alcázar paloi jouluaattona 1734, eikä siitä ole enää jäljellä mitään.',
+        selite: 'Kuninkaiden vanha Alcázar paloi jouluaattona 1734 lähes kokonaan, '
+          + 'eikä rakennuksesta ole enää mitään jäljellä.',
+        lahde: 'Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miten 1700-luvun rakentaja teki talosta palamattoman?',
+        'Mitä vanhan Alcázarin palossa menetettiin?',
+        'Miksi kuningas ei asu Länsi-Euroopan suurimmassa palatsissa?',
+      ],
+      paikka: {
+        nimi: 'Palamaton linna',
+        laudat: {
+          maailmankartta: { x: 5709.5, y: 1786.4 },
+          europe: { x: 139.9, y: 830.6 },
+        },
+      },
+    },
+    {
+      id: 'gran-vian-murto',
+      nimio: 'Gran Vía',
+      otsikko: 'Katu, joka murrettiin talojen läpi',
+      symboli: 'kaupunki',
+      lunastus: [
+        'Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, '
+          + 'ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. '
+          + 'huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla '
+          + 'ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. '
+          + 'Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua '
+          + 'kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin '
+          + 'Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli '
+          + 'tähystyspaikka, ja tykit ampuivat sitä kohti.',
+      ],
+      lahde: 'Madridin kaupunkilehden nosto "Katu, joka murrettiin talojen läpi" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Derribo de casas para la apertura de la Gran Vía - 1912.jpg',
+        lyhyt: 'Gran Vían ensimmäistä osuutta varten 1912 purettiin 312 taloa ja 48 katua katosi tai muuttui.',
+        selite: 'Gran Vían ensimmäistä osuutta rakennettiin vuonna 1912, ja katua '
+          + 'varten purettiin 312 taloa ja 48 katua katosi tai muuttui '
+          + 'toiseksi.',
+        lahde: 'Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miten 312 talon asukkaille kävi, kun katu murrettiin?',
+        'Miksi vanhan keskustan kadut olivat niin kapeita ja mutkaisia?',
+        'Miksi Gran Víaa sanottiin sisällissodassa Kranaattikaduksi?',
+      ],
+      visa: {
+        kysymys: 'Millä työkalulla kuningas Alfonso XIII avasi Gran Vían työmaan '
+          + 'vuonna 1910?',
+        vaihtoehdot: [
+          'Hopeisella hakulla',
+          'Kullatulla lapiolla',
+          'Tavallisella moukarilla',
+        ],
+        oikea: 0,
+        fakta: 'Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua '
+          + 'kadonnut tai muuttunut toiseksi.',
+      },
+      paikka: {
+        nimi: 'Gran Vía',
+        laudat: {
+          maailmankartta: { x: 5710.1, y: 1786.4 },
+          europe: { x: 140.2, y: 830.6 },
         },
       },
     },

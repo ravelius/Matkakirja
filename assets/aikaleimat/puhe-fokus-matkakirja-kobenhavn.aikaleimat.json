@@ -1,0 +1,198 @@
+{
+  "versio": 2,
+  "kaupunki": "kobenhavn",
+  "teksti": "Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.",
+  "tekstiSha256": "ee36ec7481e89d7f199961aedff24db9f3b2ebf04de333264936b091ac8696b0",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-kobenhavn.mp3",
+    "versio": 2,
+    "tavut": 399195,
+    "sha256": "c26edc414d3c36e2bc3ddb9aad0fc1d103d18ae711aaffb3b56bf6dd158a3645"
+  },
+  "kesto": 24860,
+  "sanat": [
+    {
+      "sana": "Tivolin",
+      "alku": 120,
+      "loppu": 520
+    },
+    {
+      "sana": "teatterissa",
+      "alku": 560,
+      "loppu": 1260
+    },
+    {
+      "sana": "palvelija",
+      "alku": 1300,
+      "loppu": 1800
+    },
+    {
+      "sana": "piilotti",
+      "alku": 1860,
+      "loppu": 2300
+    },
+    {
+      "sana": "paistin",
+      "alku": 2360,
+      "loppu": 2840
+    },
+    {
+      "sana": "isännältään",
+      "alku": 2920,
+      "loppu": 3800
+    },
+    {
+      "sana": "Sanaakaan",
+      "alku": 4940,
+      "loppu": 5480
+    },
+    {
+      "sana": "ei",
+      "alku": 5520,
+      "loppu": 5620
+    },
+    {
+      "sana": "lausuttu",
+      "alku": 5660,
+      "loppu": 6340
+    },
+    {
+      "sana": "Vieressäni",
+      "alku": 7800,
+      "loppu": 8320
+    },
+    {
+      "sana": "tanskalainen",
+      "alku": 8360,
+      "loppu": 9000
+    },
+    {
+      "sana": "poika",
+      "alku": 9060,
+      "loppu": 9360
+    },
+    {
+      "sana": "nauroi",
+      "alku": 9420,
+      "loppu": 9800
+    },
+    {
+      "sana": "samoissa",
+      "alku": 9860,
+      "loppu": 10320
+    },
+    {
+      "sana": "kohdissa",
+      "alku": 10380,
+      "loppu": 10820
+    },
+    {
+      "sana": "kuin",
+      "alku": 10880,
+      "loppu": 11080
+    },
+    {
+      "sana": "minä",
+      "alku": 11120,
+      "loppu": 11480
+    },
+    {
+      "sana": "Aamulla",
+      "alku": 13120,
+      "loppu": 13460
+    },
+    {
+      "sana": "olin",
+      "alku": 13500,
+      "loppu": 13680
+    },
+    {
+      "sana": "joutunut",
+      "alku": 13720,
+      "loppu": 14120
+    },
+    {
+      "sana": "piirtämään",
+      "alku": 14160,
+      "loppu": 14720
+    },
+    {
+      "sana": "majatalon",
+      "alku": 14780,
+      "loppu": 15300
+    },
+    {
+      "sana": "isännälle",
+      "alku": 15360,
+      "loppu": 15860
+    },
+    {
+      "sana": "munan",
+      "alku": 16020,
+      "loppu": 16340
+    },
+    {
+      "sana": "saadakseni",
+      "alku": 16620,
+      "loppu": 17160
+    },
+    {
+      "sana": "aamiaisen",
+      "alku": 17200,
+      "loppu": 17760
+    },
+    {
+      "sana": "täällä",
+      "alku": 19100,
+      "loppu": 19380
+    },
+    {
+      "sana": "ymmärsin",
+      "alku": 19460,
+      "loppu": 19880
+    },
+    {
+      "sana": "vieraan",
+      "alku": 19940,
+      "loppu": 20360
+    },
+    {
+      "sana": "ihmisen",
+      "alku": 20440,
+      "loppu": 20840
+    },
+    {
+      "sana": "juonet",
+      "alku": 20920,
+      "loppu": 21280
+    },
+    {
+      "sana": "vaivatta",
+      "alku": 21340,
+      "loppu": 22040
+    },
+    {
+      "sana": "Jäin",
+      "alku": 23560,
+      "loppu": 23780
+    },
+    {
+      "sana": "toiseen",
+      "alku": 23900,
+      "loppu": 24260
+    },
+    {
+      "sana": "näytökseen",
+      "alku": 24300,
+      "loppu": 24860
+    }
+  ],
+  "lauseet": [
+    120,
+    4940,
+    7800,
+    13120,
+    23560
+  ],
+  "luotu": "2026-09-23T15:39:25.796Z"
+}

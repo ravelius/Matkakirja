@@ -1,0 +1,173 @@
+{
+  "versio": 2,
+  "kaupunki": "oslo",
+  "teksti": "Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.",
+  "tekstiSha256": "049aacd3f63354eed994764dac549e49507f960db662c3995d378dd7a04488f4",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-oslo.mp3",
+    "versio": 2,
+    "tavut": 321036,
+    "sha256": "9a75a5cd0988420ff6d8cd572402997dab161563cdceb8dbb417b8091e3442e7"
+  },
+  "kesto": 19980,
+  "sanat": [
+    {
+      "sana": "Christianian",
+      "alku": 40,
+      "loppu": 740
+    },
+    {
+      "sana": "laidalla",
+      "alku": 800,
+      "loppu": 1220
+    },
+    {
+      "sana": "valmistettiin",
+      "alku": 1260,
+      "loppu": 2040
+    },
+    {
+      "sana": "nitroglyseriiniä",
+      "alku": 2100,
+      "loppu": 3260
+    },
+    {
+      "sana": "Työmies",
+      "alku": 4640,
+      "loppu": 5060
+    },
+    {
+      "sana": "kantoi",
+      "alku": 5100,
+      "loppu": 5420
+    },
+    {
+      "sana": "astiaa",
+      "alku": 5520,
+      "loppu": 5880
+    },
+    {
+      "sana": "molemmin",
+      "alku": 5920,
+      "loppu": 6320
+    },
+    {
+      "sana": "käsin",
+      "alku": 6360,
+      "loppu": 6820
+    },
+    {
+      "sana": "Yksi",
+      "alku": 7780,
+      "loppu": 8039
+    },
+    {
+      "sana": "kolaus",
+      "alku": 8100,
+      "loppu": 8660
+    },
+    {
+      "sana": "saattoi",
+      "alku": 8740,
+      "loppu": 9140
+    },
+    {
+      "sana": "räjäyttää",
+      "alku": 9180,
+      "loppu": 9740
+    },
+    {
+      "sana": "sen",
+      "alku": 9880,
+      "loppu": 10180
+    },
+    {
+      "sana": "Nostin",
+      "alku": 11880,
+      "loppu": 12180
+    },
+    {
+      "sana": "hattua",
+      "alku": 12220,
+      "loppu": 12640
+    },
+    {
+      "sana": "ja",
+      "alku": 12880,
+      "loppu": 12940
+    },
+    {
+      "sana": "hän",
+      "alku": 12980,
+      "loppu": 13120
+    },
+    {
+      "sana": "vastasi",
+      "alku": 13160,
+      "loppu": 13580
+    },
+    {
+      "sana": "pelkällä",
+      "alku": 13640,
+      "loppu": 14020
+    },
+    {
+      "sana": "nyökkäyksellä",
+      "alku": 14060,
+      "loppu": 14940
+    },
+    {
+      "sana": "Minä",
+      "alku": 16480,
+      "loppu": 16660
+    },
+    {
+      "sana": "en",
+      "alku": 16680,
+      "loppu": 16760
+    },
+    {
+      "sana": "ole",
+      "alku": 16800,
+      "loppu": 16940
+    },
+    {
+      "sana": "koskaan",
+      "alku": 17000,
+      "loppu": 17420
+    },
+    {
+      "sana": "ollut",
+      "alku": 17480,
+      "loppu": 17700
+    },
+    {
+      "sana": "niin",
+      "alku": 17740,
+      "loppu": 17980
+    },
+    {
+      "sana": "kiitollinen",
+      "alku": 18040,
+      "loppu": 18680
+    },
+    {
+      "sana": "huonosta",
+      "alku": 18740,
+      "loppu": 19240
+    },
+    {
+      "sana": "käytöksestä",
+      "alku": 19300,
+      "loppu": 19980
+    }
+  ],
+  "lauseet": [
+    40,
+    4640,
+    7780,
+    11880,
+    16480
+  ],
+  "luotu": "2026-09-23T15:37:37.919Z"
+}

@@ -147,7 +147,7 @@ export const FOKUSKOHTEET_HRV = [
       'Miksi kaksi kaupunkia riiteli sillasta?',
       'Kuka oli ban?',
     ],
-    korostukset: ['Gradec', 'Kaptol', 'Verinen silta|Verisen sillan'],
+    korostukset: ['Gradec', 'Kaptol', 'Verinen silta'],
     nappi: 'Kaupunki, joka oli kauan kaksi kaupunkia',
     /* 45,8144 N / 15,9772 E — en-Wikipedia "Zagreb". */
     laudat: {
@@ -173,6 +173,19 @@ export const FOKUSKOHTEET_HRV = [
         + 'Zagrebin keskustassa.',
       lahde: 'Isiwal, Wikimedia Commons (CC BY-SA 3.0)',
     },
+    visa: {
+      kysymys: 'Miksi Zagrebin erästä katua kutsutaan yhä Veriseksi sillaksi?',
+      vaihtoehdot: [
+        'Ban Jelačić taisteli siellä sotaa',
+        'Silta rakennettiin raunioille',
+        'Gradec ja Kaptol tappelivat siellä',
+        'Kaptol poltti sillan sodassa',
+      ],
+      oikea: 2,
+      fakta: 'Gradecin ja Kaptolin väliin virtaavan puron ylittävä silta '
+        + 'oli niin usein tappelupaikka, että katu on yhä nimeltään '
+        + 'Krvavi most, Verinen silta.',
+    },
   },
   {
     id: 'split',
@@ -182,7 +195,7 @@ export const FOKUSKOHTEET_HRV = [
       'Kuka oli Diocletianus?',
       'Miltä tuntuisi asua palatsin sisällä?',
     ],
-    korostukset: ['Diocletianuksen palatsi|Diocletianuksen palatsin', 'Salona'],
+    korostukset: ['Diocletianus', 'Salona'],
     nappi: 'Kaupunki keisarin palatsin sisällä',
     /* 43,5081 N / 16,4402 E — en-Wikipedia "Split, Croatia". */
     laudat: {
@@ -250,7 +263,7 @@ export const FOKUSKOHTEET_HRV = [
       'Mikä oli forum?',
       'Mistä maraskino tehdään?',
     ],
-    korostukset: ['forum', 'maraskino', 'Pyhän Donatuksen kirkko|Pyhän Donatuksen kirkon'],
+    korostukset: ['forum', 'maraskino', 'Pyhän Donatuksen kirkko'],
     nappi: 'Kaupunki, joka rakennettiin roomalaisen torin päälle',
     /* 44,1194 N / 15,2314 E — en-Wikipedia "Zadar". */
     laudat: {
@@ -286,7 +299,7 @@ export const FOKUSKOHTEET_HRV = [
       'Miten kahdeksan kilometrin puusilta rakennettiin?',
       'Mitä varten Tvrđa rakennettiin?',
     ],
-    korostukset: ['Tvrđa', 'Suleimanin silta|Suleimanin sillan'],
+    korostukset: ['Tvrđa', 'Suleiman Suuri|Suleiman Suuren'],
     nappi: 'Silta, jota kutsuttiin maailman kahdeksanneksi ihmeeksi',
     /* 45,5550 N / 18,6955 E — en-Wikipedia "Osijek". */
     laudat: {
@@ -342,6 +355,18 @@ export const FOKUSKOHTEET_HRV = [
       tiedosto: 'Mountaineering at Dinara -Croatia- in 2010.jpg',
       selite: 'Retkeilijöitä nousemassa Dinaran huipulle.',
       lahde: 'Ponor, Wikimedia Commons (CC BY-SA 4.0)',
+    },
+    visa: {
+      kysymys: 'Minkä vuoriston nimen Dinara antoi koko rannikon vuorijonolle?',
+      vaihtoehdot: [
+        'Karpaatit',
+        'Dinaariset alpit',
+        'Balkanin vuoristo',
+        'Julian alpit',
+      ],
+      oikea: 1,
+      fakta: 'Koko Adrianmeren itärantaa Sloveniasta Albaniaan seuraava '
+        + 'vuoristo on Dinaariset alpit, nimetty Dinaran mukaan.',
     },
   },
   {
@@ -420,7 +445,7 @@ export const FOKUSKOHTEET_HRV = [
       'Eläkö Euroopassa yhä ilveksiä?',
       'Miksi metsä muuttuu korkeuden mukaan?',
     ],
-    korostukset: ['ilves|ilveksen', 'Gorski kotar'],
+    korostukset: ['ilves', 'Gorski kotar'],
     nappi: 'Vuori, joka on nimetty ilveksen mukaan',
     /* 45,4239 N / 14,7539 E — en-Wikipedia "Risnjak". */
     laudat: {
@@ -489,7 +514,7 @@ export const FOKUSKOHTEET_HRV = [
       'Miksi Kroatian rannikolla on niin paljon saaria?',
       'Mihin Adrianmeri johtaa?',
     ],
-    korostukset: ['Adrianmeri|Adrianmeren', 'Kornatit'],
+    korostukset: ['Adrianmeri', 'kalkkikivi|kalkkikiveä'],
     nappi: 'Meri, jossa on yli tuhat saarta',
     /*
      * KARKEA YLEISPISTE: 43,40 N / 14,60 E on nimen paikka ulapalla,
@@ -520,6 +545,18 @@ export const FOKUSKOHTEET_HRV = [
         + 'Adrianmerta.',
       lahde: 'Miroslav.vajdic, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    visa: {
+      kysymys: 'Miksi Adrianmerellä on yli tuhat saarta?',
+      vaihtoehdot: [
+        'Rikkoutunut kalkkikivirannikko hukkui',
+        'Tulivuoret loivat saaria mereen',
+        'Rannikko on suoraa italialaista hiekkaa',
+        'Joet toivat mukanaan hiekkasärkkiä',
+      ],
+      oikea: 0,
+      fakta: 'Idän kroatialainen ranta on rikkoutunutta kalkkikiveä, '
+        + 'jonka laaksot vedenpinnan nousu on hukuttanut mereen.',
+    },
   },
   {
     id: 'sava',
@@ -529,7 +566,7 @@ export const FOKUSKOHTEET_HRV = [
       'Mihin Sava laskee?',
       'Miksi tulvametsä on hyväksi?',
     ],
-    korostukset: ['Sava|Savan', 'tulvametsä|tulvametsät'],
+    korostukset: ['Sava', 'tulvametsä|tulvametsistä'],
     nappi: 'Joki, joka tulvii tahallaan',
     /*
      * KARKEA YLEISPISTE: 45,1420 N / 17,4958 E on piste uoman
@@ -561,6 +598,19 @@ export const FOKUSKOHTEET_HRV = [
         + 'ja Bosnian raja.',
       lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
     },
+    visa: {
+      kysymys: 'Mihin jokeen Sava lopulta laskee?',
+      vaihtoehdot: [
+        'Tonavaan Belgradin kohdalla',
+        'Adrianmereen Splitin lähellä',
+        'Draviin Osijekin kohdalla',
+        'Mustaanmereen suoraan',
+      ],
+      oikea: 0,
+      fakta: 'Sava alkaa Slovenian Alpeilta ja laskee lopulta Tonavaan '
+        + 'Belgradin kohdalla, tuoden sille enemmän vettä kuin mikään '
+        + 'muu sivujoki.',
+    },
   },
   {
     id: 'drava',
@@ -570,7 +620,7 @@ export const FOKUSKOHTEET_HRV = [
       'Mistä Drava saa alkunsa?',
       'Miksi joki kelpaa rajaksi?',
     ],
-    korostukset: ['Drava|Dravan', 'sorasärkkä|sorasärkkiä'],
+    korostukset: ['Drava', 'sorasärkkä|särkkiä'],
     nappi: 'Joki, joka tuli Alpeilta rajaksi',
     /*
      * KARKEA YLEISPISTE: 45,9060 N / 17,4937 E on piste uoman
@@ -606,11 +656,12 @@ export const FOKUSKOHTEET_HRV = [
     id: 'hvar',
     nimi: 'Hvar',
     tyyppi: 'saari',
+    taso: 1,
     kysymykset: [
       'Keitä olivat Paroksen siirtolaiset?',
       'Miksi pellot jaettiin suorakaiteisiin?',
     ],
-    korostukset: ['Stari Gradin tasanko|Stari Gradin tasangon', 'khora'],
+    korostukset: ['Stari Gradin tasanko|tasangon', 'kuivamuuri|kuivamuureilla'],
     nappi: 'Pelto, jota on kynnetty samoin 2400 vuotta',
     /*
      * KARKEA YLEISPISTE: 43,1667 N / 16,6667 E on saaren piste, ei
@@ -647,7 +698,7 @@ export const FOKUSKOHTEET_HRV = [
       'Syntyikö Marco Polo oikeasti täällä?',
       'Mikä on moreška?',
     ],
-    korostukset: ['moreška|moreškaa', 'Marco Polo'],
+    korostukset: ['moreška', 'Marco Polo'],
     nappi: 'Saari, joka väittää synnyttäneensä Marco Polon',
     /*
      * KARKEA YLEISPISTE: 42,95 N / 16,9167 E on saaren piste;
@@ -683,7 +734,7 @@ export const FOKUSKOHTEET_HRV = [
       'Miten meri pääsee saaren sisälle järveksi?',
       'Kuka oli Kalypso?',
     ],
-    korostukset: ['suolajärvi|suolajärveä', 'benediktiiniluostari'],
+    korostukset: ['suolajärvi|suolajärviä', 'benediktiiniluostari'],
     nappi: 'Saari, jonka sisällä on kaksi merta',
     /*
      * KARKEA YLEISPISTE: 42,75 N / 17,50 E on saaren piste. Järvet ja
@@ -720,7 +771,8 @@ export const FOKUSKOHTEET_HRV = [
   {
     id: 'plitvicen-jarvet',
     nimi: 'Plitvicen järvet',
-    tyyppi: 'muu',
+    tyyppi: 'jarvi',
+    taso: 1,
     /*
      * Symboli kuratoitu: tyyppi `muu` jättäisi merkin ilman kategoriaa
      * ja siten ilman nimiötä (js/fokuskohteet.js kohteenSymboli), ja
@@ -731,7 +783,7 @@ export const FOKUSKOHTEET_HRV = [
       'Miten vesi voi rakentaa padon?',
       'Kuinka nopeasti travertiini kasvaa?',
     ],
-    korostukset: ['travertiini|travertiinia', 'sammal|sammalet'],
+    korostukset: ['travertiini|travertiiniksi', 'sammal|sammalten'],
     nappi: 'Järvet, joiden padot kasvavat itsestään',
     /* 44,8654 N / 15,5820 E — en-Wikipedia "Plitvice Lakes National Park". */
     laudat: {
@@ -754,16 +806,29 @@ export const FOKUSKOHTEET_HRV = [
       selite: 'Plitvicen järvien putouksia ylhäältä katsottuna.',
       lahde: 'Naval S, Wikimedia Commons (CC BY 2.0)',
     },
+    visa: {
+      kysymys: 'Kuinka nopeasti Plitvicen järvien travertiinipadot kasvavat?',
+      vaihtoehdot: [
+        'Metrin vuodessa',
+        'Kymmenen senttiä kuussa',
+        'Puoli metriä vuosikymmenessä',
+        'Noin sentin vuodessa',
+      ],
+      oikea: 3,
+      fakta: 'Vesi tuo mukanaan kalkkia, joka saostuu sammalten ja levien '
+        + 'pinnalle travertiiniksi noin sentin vuodessa.',
+    },
   },
   {
     id: 'pulan-areena',
     nimi: 'Pulan areena',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miten amfiteatteri rakennettiin?',
       'Miksi Venetsia halusi purkaa sen?',
     ],
-    korostukset: ['amfiteatteri|amfiteatterin', 'Venetsian senaatti'],
+    korostukset: ['amfiteatteri', 'Venetsian senaatti'],
     nappi: 'Areena, jonka Venetsia melkein varasti',
     /* 44,8731 N / 13,8503 E — en-Wikipedia "Pula Arena". */
     laudat: {
@@ -793,11 +858,12 @@ export const FOKUSKOHTEET_HRV = [
     id: 'stonin-muurit',
     nimi: 'Stonin muurit',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Miksi suola oli niin arvokasta?',
       'Mikä oli Ragusan tasavalta?',
     ],
-    korostukset: ['suolapannu|suolapannuja', 'Ragusan tasavalta'],
+    korostukset: ['suolapannu|suolapannut', 'Ragusan tasavalta'],
     nappi: 'Viiden kilometrin muuri suolan ympärillä',
     /* 42,8375 N / 17,6928 E — en-Wikipedia "Ston". */
     laudat: {

@@ -55,7 +55,7 @@ const VALIMUISTI = process.env.VESI_VALIMUISTI || join(tmpdir(), 'matkakirja-ved
 /* ------------------------------------------------------------------ */
 
 const JOKI_SCALERANK = 4;      // tämän ja sitä pienemmät pääsevät suoraan
-const JOKI_TOLERANSSI = 0.07;  // astetta, Ramer-Douglas-Peucker
+const JOKI_TOLERANSSI = 0.04;  // astetta, Ramer-Douglas-Peucker (ks. UOMAN SILOTUS)
 const JARVI_TOLERANSSI = 0.05; // järvet ovat suljettuja, kulmat näkyvät herkemmin
 const JARVIA = 34;             // suurinta järveä pinta-alan mukaan
 const KETJU_EPS = 0.05;        // astetta: näin lähellä olevat päät liitetään
@@ -355,7 +355,79 @@ function ketjuta(osat, eps) {
   return ketjut;
 }
 
-const pyorista = (v) => v.map(([x, y]) => [Number(x.toFixed(1)), Number(y.toFixed(1))]);
+/*
+ * ══ UOMAN SILOTUS: SIKSAKIT POIS JOKIVIIVASTA ════════════════════════
+ *
+ * Omistaja 19.9.2026 klo 23.34 Suomen aikaa (iPad, Ranskan maalehti,
+ * Seine Rouenin ja Pariisin välillä): jokiviivassa on teräviä piikkejä
+ * ja siksakkeja, kapeita kolmioita, joissa viiva palaa samaa reittiä.
+ *
+ * JUURISYY ON HARVENNUS, EI AINEISTO (mittaus 20.9.2026, Opus 2:n erä
+ * maalehti-viivat, raportti docs/raportit/viesti-fable-maalehti-viivat-
+ * 20260920.md). Ramer–Douglas–Peucker on JÄNNEVIRHEEN yksinkertaistin:
+ * voimakkaasti meanderoivalla joella se säilyttää vain mutkien kärjet
+ * ja pudottaa kaiken niiden väliltä, jolloin kaksi peräkkäistä
+ * jäljelle jäävää pistettä ovat meanderirivin vastakkaisilla reunoilla
+ * — viiva kääntyy lähes 180°. Seinen mutka-amplitudi on juuri yli
+ * vanhan toleranssin (0,07°), Loiren selvästi alle; siksi vika näkyi
+ * Seinellä eikä Loirella. Mitattuna Seine: raaka ketju 353 pistettä ja
+ * 1 piikki → RDP 0,07° 21 pistettä ja 8 piikkiä.
+ *
+ * PYÖRISTYS OLI TOINEN PUOLI. `toFixed(1)` on 0,1° eli noin 11 km —
+ * KARKEAMPI kuin RDP:n oma toleranssi, joten se heitti säilytettyjä
+ * kärkiä jänteen toiselle puolelle ja teki lisää piikkejä (mitattuna
+ * 201 piikkiä pelkästä pyöristyksestä siistiin geometriaan).
+ *
+ * KOLME MUUTOSTA YHDESSÄ (mitatut vaihtoehdot raportissa):
+ *   1. `silota` ennen harvennusta poistaa meanderin korkeataajuuden,
+ *      jolloin RDP valitsee kärkensä sileästä uomasta;
+ *   2. toleranssi 0,04°, koska silotus on jo pienentänyt pistemäärää;
+ *   3. `poistaPiikit` pudottaa vielä yli PIIKIN_KULMA:n käännökset, ja
+ *      pyöristys on 0,001° (noin 100 m) eli tarkempi kuin toleranssi.
+ * Tulos: 0 kulmapiikkiä koko aineistossa (oli 372).
+ */
+/** Liukuva keskiarvo; päätepisteet pysyvät paikallaan. */
+const SILOTUS_IKKUNA = 5;
+function silota(v, ikkuna = SILOTUS_IKKUNA) {
+  if (v.length < 3) return v;
+  const puoli = Math.floor(ikkuna / 2);
+  return v.map(([x, y], i) => {
+    if (i === 0 || i === v.length - 1) return [x, y];
+    let sx = 0; let sy = 0; let n = 0;
+    for (let j = Math.max(0, i - puoli); j <= Math.min(v.length - 1, i + puoli); j += 1) {
+      sx += v[j][0]; sy += v[j][1]; n += 1;
+    }
+    return [sx / n, sy / n];
+  });
+}
+
+/** Käännös tätä jyrkemmin on piikki eikä mutka. */
+const PIIKIN_KULMA = 120;
+/** Pudottaa kärjet, joissa viiva kääntyy yli PIIKIN_KULMA:n. */
+function poistaPiikit(v) {
+  let ulos = v;
+  for (let kierros = 0; kierros < 5; kierros += 1) {
+    const jaljella = [ulos[0]];
+    let pudotettu = 0;
+    for (let i = 1; i < ulos.length - 1; i += 1) {
+      const a = jaljella[jaljella.length - 1];
+      const b = ulos[i];
+      const c = ulos[i + 1];
+      const k1 = Math.atan2(b[1] - a[1], b[0] - a[0]);
+      const k2 = Math.atan2(c[1] - b[1], c[0] - b[0]);
+      let ero = Math.abs((k2 - k1) * 180) / Math.PI;
+      if (ero > 180) ero = 360 - ero;
+      if (ero > PIIKIN_KULMA) { pudotettu += 1; continue; }
+      jaljella.push(b);
+    }
+    jaljella.push(ulos[ulos.length - 1]);
+    ulos = jaljella;
+    if (!pudotettu) break;
+  }
+  return ulos;
+}
+
+const pyorista = (v) => v.map(([x, y]) => [Number(x.toFixed(3)), Number(y.toFixed(3))]);
 
 function poistaToistot(v) {
   const ulos = [v[0]];
@@ -432,7 +504,9 @@ function haeJoet({ tiedot, muodot }) {
       .sort((a, b) => b.p - a.p);
     ketjut.forEach(({ k, p }, i) => {
       if (p < (i === 0 ? LYHIN_JOKI : LYHIN_SIVU)) return;
-      const pisteet = poistaToistot(pyorista(rdp(k, JOKI_TOLERANSSI)));
+      // Piikkisuodatin AJETAAN PYÖRISTYKSEN JÄLKEEN: pyöristys siirtää
+      // kärkiä ja voi tehdä uuden piikin (mitattu 2 kpl, Arkansas ja Kama).
+      const pisteet = poistaPiikit(poistaToistot(pyorista(rdp(silota(k), JOKI_TOLERANSSI))));
       if (pisteet.length >= 2) joet.push({ nimi, pisteet });
     });
   }

@@ -1,0 +1,1949 @@
+/*
+ * PULUN ÄÄNI — Livian repliikit puheeksi ElevenLabsilla.
+ *
+ * Omistajan tilaus 6.9.2026 aamupäivä, sanatarkasti: *"Pululle täytyy
+ * etsiä eleveniltä oma ääni joka vähän käheä ja nopea puhumaan.
+ * Generoidaan kaikki valmiiksi kirjoitetut repliikit puheeksi."* …
+ * *"Voidaan käyttää myös pulun ääneen efektejä (kaiku alussa kun tulee
+ * ja aloittaa jo huutelemaan viestiä ennenkuin on edes ehtinyt
+ * kokonaan perille). Kaiku voidaan sitten feidata pois kun pulu
+ * 'perillä' ja nostaa äänitasoa hieman."* … *"Tehdään pulusta hyvin
+ * vokaalinen ja elävä vastakohta kertojan monotoonisuuteen. Paljon
+ * elävöitystageja elevenin generointiin."*
+ *
+ *   node tools/generoi-pulu.mjs --aanet             ääniehdokkaat
+ *   node tools/generoi-pulu.mjs --kuiva             tekstit ja kohteet
+ *   node tools/generoi-pulu.mjs --aani <voice_id>   generoi kaikki
+ *   node tools/generoi-pulu.mjs --aani <id> --repliikit avaus-1,paljastus-1
+ *
+ *   --aanet          hakee ElevenLabsin äänet (omat + jaetut) ja
+ *                    tulostaa ne, jotka sopivat kuvaukseen "vähän
+ *                    käheä, nopea puhumaan, eläväinen". EI generoi
+ *                    mitään: äänen valinta on kuuntelupäätös, jota
+ *                    kone ei tee (sama linja kuin aanihaku.yml).
+ *   --kuiva          tulostaa repliikit, tagitetun puhemuodon,
+ *                    kohdetiedostot ja arvioidut kestot. Ei APIa,
+ *                    ei avainta, ei vientiä.
+ *   --aani <id>      käytettävä ääni; ilman lippua käytetään omistajan
+ *                    lukitsemaa Pulun oletusääntä.
+ *   --repliikit a,b  vain nämä avaimet (avaus-1, paljastus-2,
+ *                    mannerivihje-1, ateena-1, sofia-7). Tyhjä = kaikki.
+ *   --pakota         generoi vaikka tiedosto on jo ämpärissä.
+ *   --ei-vientia     VAIN kuivaan ajoon. Maksullinen generointi kieltäytyy
+ *                    tästä lipusta: raakatuotos on aina vietävä ämpäriin
+ *                    (Raamattu: ALKUPERÄISET ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA).
+ *   --tempo <luku>   puheen nopeutus ffmpegillä (oletus 1,0 = ei mitään).
+ *   --haku <nimi>    --aanet: listaa vain äänet, joiden nimessä on <nimi>.
+ *                    Jos arvo on voice_id (20 merkkiä), haetaan nimi
+ *                    suoraan tunnuksella.
+ *
+ * ------------------------------------------------------------------
+ * FFMPEG-NOPEUTUS ON POISSA (omistaja 13.9.2026)
+ * ------------------------------------------------------------------
+ *
+ * Aiemmin viimeistelyketju nopeutti puhetta `atempo`-suodattimella,
+ * koska eleven_v3:lla ei ole nopeussäädintä. Omistaja otti tämän pois:
+ * "ota pulun äänestä fmpeg nopeutus pois". TEMPO on siksi 1,0 eikä
+ * `atempo` mene ketjuun lainkaan — ääni kuullaan sellaisena kuin malli
+ * sen tuottaa. Tahtia säädetään TAGEILLA, ei jälkikäsittelyllä.
+ * Lippu `--tempo` on yhä olemassa kokeiluja varten, mutta oletus on 1,0.
+ * Elävyys tulee TAGEISTA; pysyvä vakausoletus on Natural 0,5. Muita
+ * parametreja ei päätellä äänen nimestä.
+ *
+ * ------------------------------------------------------------------
+ * TAGIT EIVÄT SAA MUUTTAA KAANONIA
+ * ------------------------------------------------------------------
+ *
+ * Repliikit ovat kaanonia (js/livia.js; vain päätoimittaja kirjoittaa
+ * ne). Tagit lisätään siksi OHJELMALLISESTI: jokainen tagi kiinnitetään
+ * ankkuriin eli repliikissä oikeasti olevaan sanaan, ja ankkurin
+ * puuttuminen KAATAA ajon ennen ensimmäistäkään maksullista kutsua.
+ * Lopuksi tarkistetaan, että tagien poisto palauttaa alkuperäisen
+ * tekstin merkilleen. Näin kaanonin muutos huomataan heti eikä
+ * äänitteestä tule hiljaista väärennöstä.
+ *
+ * ------------------------------------------------------------------
+ * KAIKU SAAPUMISREPLIIKEISSÄ
+ * ------------------------------------------------------------------
+ *
+ * Kahdesta saapumisrepliikistä (js/liviapuhe.js
+ * LIVIAN_SAAPUMISREPLIIKIT: avauksen ja paljastuksen ensimmäinen)
+ * tehdään ffmpegillä toinen versio, jossa alku kuulostaa kaukaiselta:
+ * kaikuinen ja hiljaisempi raita häipyy KAIKUN_KESTO sekunnissa pois
+ * ja kuiva raita nousee normaaliin tasoon. Pulu siis huutaa viestiään
+ * jo lentäessä ja on "perillä" reilun sekunnin kuluttua.
+ *
+ * Efekti leivotaan tiedostoon eikä tehdä pelissä Web Audiolla: pelin
+ * kuplaäänet soitetaan tavallisella <audio>-elementillä, ja
+ * konvolveri vaatisi koko soittotien vaihtamisen AudioContextiin
+ * kahden repliikin takia. Perustelu on kirjattu myös js/liviapuhe.js:n
+ * otsikkoon.
+ *
+ * ------------------------------------------------------------------
+ * VIENTI, MANIFESTI JA REPO
+ * ------------------------------------------------------------------
+ *
+ * Valmiit mp3:t EIVÄT mene repoon. Ne kirjoitetaan media/-puolelle
+ * (.gitignoressa, tarkistetaan ennen ensimmäistäkään maksullista
+ * kutsua) ja viedään ämpäriin samalla aws s3 cp -komennolla kuin
+ * linssiluennat. Kansio tulee pelin omasta lähteestä (js/liviapuhe.js
+ * LIVIAN_AANIJUURI → aanet/pulu/), joten peli hakee tasan saman polun
+ * ja äänet kuuluvat heti ajon jälkeen ilman julkaisua.
+ *
+ * MANIFESTI aanet/pulu/manifesti.json kertoo, mitä ämpärissä on:
+ * repliikin avain, teksti, tiedosto, kaikuversio, merkkimäärä ja
+ * kesto. Peli ei tarvitse sitä (nimi johdetaan koodista), mutta se on
+ * ainoa paikka, josta ajon tulos näkyy ilman ämpärin listausta.
+ *
+ * API-avain luetaan VAIN ympäristöstä (ELEVEN_API_KEY) eikä sitä
+ * tulosteta koskaan. HUOM konttiympäristössä: Noden fetch ei käytä
+ * ympäristön proxyä ilman NODE_USE_ENV_PROXY=1 — työkalu käynnistää
+ * itsensä uudelleen lipun kanssa, kuten generoi-linssiluennat.mjs.
+ */
+
+import { spawnSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+import {
+  copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync,
+} from 'node:fs';
+import { tmpdir } from 'node:os';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+import {
+  LIVIAN_AVAUS, LIVIAN_LEHTIVINKKI, MANNERIVIHJE, livianPaljastus,
+} from '../js/livia.js';
+import {
+  LIVIAN_AANIJUURI, LIVIAN_AANITETTY_PALJASTUS, LIVIAN_AANITETYT,
+  LIVIAN_KAUPUNKILAHTEET, LIVIAN_LINSSILAHTEET, LIVIAN_VARATTU, livianAanitykset,
+  livianKaupunkiKentat, livianKentanKuplat, livianKenttaPinoutuu, livianTiiviste,
+} from '../js/liviapuhe.js';
+import { IHMISEN_MATKA_KERTOMUS } from '../js/linssit/ihmisen-matka-kertomus.js';
+import { FOKUSVIRTA_ALPIT } from '../js/packs/fokusvirta-alpit.js';
+import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
+import { FOKUSVIRTA_HELSINKI } from '../js/packs/fokusvirta-helsinki.js';
+import { FOKUSVIRTA_ISLANTI } from '../js/packs/fokusvirta-islanti.js';
+import { FOKUSVIRTA_KIOVA } from '../js/packs/fokusvirta-kiova.js';
+import { FOKUSVIRTA_KREETA } from '../js/packs/fokusvirta-kreeta.js';
+import { FOKUSVIRTA_LAPPI } from '../js/packs/fokusvirta-lappi.js';
+import { FOKUSVIRTA_MOSKOVA } from '../js/packs/fokusvirta-moskova.js';
+import { FOKUSVIRTA_ODESSA } from '../js/packs/fokusvirta-odessa.js';
+import { FOKUSVIRTA_SISILIA } from '../js/packs/fokusvirta-sisilia.js';
+import { FOKUSVIRTA_PIETARI } from '../js/packs/fokusvirta-pietari.js';
+import { FOKUSVIRTA_TALLINNA } from '../js/packs/fokusvirta-tallinna.js';
+import { FOKUSVIRTA_TAMPERE } from '../js/packs/fokusvirta-tampere.js';
+import { FOKUSVIRTA_TROMSSA } from '../js/packs/fokusvirta-tromssa.js';
+import { FOKUSVIRTA_BUDAPEST } from '../js/packs/fokusvirta-budapest.js';
+import { FOKUSVIRTA_BUKAREST } from '../js/packs/fokusvirta-bukarest.js';
+import { FOKUSVIRTA_ISTANBUL } from '../js/packs/fokusvirta-istanbul.js';
+import { FOKUSVIRTA_KRAKOVA } from '../js/packs/fokusvirta-krakova.js';
+import { FOKUSVIRTA_PRAHA } from '../js/packs/fokusvirta-praha.js';
+import { FOKUSVIRTA_RIIKA } from '../js/packs/fokusvirta-riika.js';
+import { FOKUSVIRTA_SARAJEVO } from '../js/packs/fokusvirta-sarajevo.js';
+import { FOKUSVIRTA_SOFIA } from '../js/packs/fokusvirta-sofia.js';
+import { FOKUSVIRTA_VARSOVA } from '../js/packs/fokusvirta-varsova.js';
+import { FOKUSVIRTA_VILNA } from '../js/packs/fokusvirta-vilna.js';
+import { FOKUSVIRTA_WIEN } from '../js/packs/fokusvirta-wien.js';
+import { FOKUSVIRTA_AMSTERDAM } from '../js/packs/fokusvirta-amsterdam.js';
+import { FOKUSVIRTA_BARCELONA } from '../js/packs/fokusvirta-barcelona.js';
+import { FOKUSVIRTA_BERGEN } from '../js/packs/fokusvirta-bergen.js';
+import { FOKUSVIRTA_BERLIINI } from '../js/packs/fokusvirta-berliini.js';
+import { FOKUSVIRTA_DUBLIN } from '../js/packs/fokusvirta-dublin.js';
+import { FOKUSVIRTA_DUBROVNIK } from '../js/packs/fokusvirta-dubrovnik.js';
+import { FOKUSVIRTA_EDINBURGH } from '../js/packs/fokusvirta-edinburgh.js';
+import { FOKUSVIRTA_FIRENZE } from '../js/packs/fokusvirta-firenze.js';
+import { FOKUSVIRTA_GRANADA } from '../js/packs/fokusvirta-granada.js';
+import { FOKUSVIRTA_KOBENHAVN } from '../js/packs/fokusvirta-kobenhavn.js';
+import { FOKUSVIRTA_LISSABON } from '../js/packs/fokusvirta-lissabon.js';
+import { FOKUSVIRTA_LONTOO } from '../js/packs/fokusvirta-lontoo.js';
+import { FOKUSVIRTA_MADRID } from '../js/packs/fokusvirta-madrid.js';
+import { FOKUSVIRTA_MARSEILLE } from '../js/packs/fokusvirta-marseille.js';
+import { FOKUSVIRTA_OSLO } from '../js/packs/fokusvirta-oslo.js';
+import { FOKUSVIRTA_PARIISI } from '../js/packs/fokusvirta-pariisi.js';
+import { FOKUSVIRTA_ROOMA } from '../js/packs/fokusvirta-rooma.js';
+import { FOKUSVIRTA_SEVILLA } from '../js/packs/fokusvirta-sevilla.js';
+import { FOKUSVIRTA_TUKHOLMA } from '../js/packs/fokusvirta-tukholma.js';
+import { FOKUSVIRTA_VENETSIA } from '../js/packs/fokusvirta-venetsia.js';
+import { leikkaaHiljaisuusSuodatin } from './generoi-tehosteet.mjs';
+import { julkinenJuuri, tulkitseEbur128, tulkitseLoudnorm } from './generoi-siirtymamusiikki.mjs';
+
+const TAMA = fileURLToPath(import.meta.url);
+const JUURI = resolve(dirname(TAMA), '..');
+
+/* Sama vartija kuin muissa API-työkaluissa: ilman lippua Noden fetch
+ * ei lue HTTPS_PROXYa, ja kutsu kaatuu kontissa vaikka verkko on auki. */
+if (process.argv[1] === TAMA && !process.env.NODE_USE_ENV_PROXY
+  && (process.env.HTTPS_PROXY || process.env.https_proxy)) {
+  const ajo = spawnSync(process.execPath, [TAMA, ...process.argv.slice(2)], {
+    stdio: 'inherit',
+    env: { ...process.env, NODE_USE_ENV_PROXY: '1', NODE_NO_WARNINGS: '1' },
+  });
+  process.exit(ajo.status ?? 1);
+}
+
+// ── rajapinta ──────────────────────────────────────────────────────
+
+const API = 'https://api.elevenlabs.io';
+const PUHE_OSOITE = `${API}/v1/text-to-speech`;
+/*
+ * PYSYVÄ OLETUS (omistajan valinta 12.9.2026): "flicker - cheerful
+ * fairy & sparkly sweetness", voice_id piI8Kku0DcvcL6TTSeQt,
+ * eleven_v3 ja Natural 0,5. V3:n hakasulkutagit ovat käytössä, mutta
+ * ne eivät koskaan kuulu pelaajan näkyvään tekstiin.
+ *
+ * Aiempi Dr. Von / eleven_multilingual_v2 säilyy vanhoissa
+ * tuotantometatiedoissa ja jo julkaistuissa äänissä. Se ei enää ole
+ * uuden ajon oletus. Ajokohtainen ympäristömuuttuja voi yhä tehdä
+ * tietoisen koestuksen, mutta workflow asettaa nämä uudet oletukset
+ * eksplisiittisesti eikä peri vanhaa valintaa.
+ *
+ * VAKAUS ON NIMI EIKÄ LUKU. v3:n käyttöliittymässä säädin on
+ * Creative / Natural / Robust, ja rajapinta ottaa luvun — nimet
+ * käännetään VAKAUDET-taulussa, jotta ajon syöte on sama sana, jonka
+ * omistaja näkee ElevenLabsin sivulla.
+ */
+const VAKAUDET = Object.freeze({ creative: 0, natural: 0.5, robust: 1 });
+export const PULU_MALLI_OLETUS = 'eleven_v3';
+export const PULU_VAKAUS_OLETUS = 'natural';
+/** "flicker - cheerful fairy & sparkly sweetness" (omistajan valinta 12.9.2026). */
+export const PULU_AANI_OLETUS = 'piI8Kku0DcvcL6TTSeQt';
+/*
+ * ULOSTULOMUOTO 192 kbps (omistaja 14.9.2026, ElevenLabs Pro).
+ *
+ * Aiempi mp3_44100_128 vaati Pro-tason ohittamisen; nyt tilaus sallii
+ * 192 kbps:n. Kun putki ei enää koodaa uudelleen (LIVIA_KASITTELY),
+ * tämä on se AINOA koodaus, jonka ääni käy läpi — siksi sen laadulla
+ * on suora vaikutus lopputulokseen, toisin kuin ennen, jolloin
+ * korkeampi lähtölaatu olisi hukkunut toiseen 128 kbps sukupolveen.
+ * Vanhat, 128 kbps:llä generoidut kuitit pysyvät kelvollisina
+ * (ks. kohdista-pulu-eleet.mjs kelpaaUlostulomuoto).
+ */
+export const PULU_ULOSTULOMUOTO = 'mp3_44100_192';
+const MALLI = process.env.PULU_MALLI ?? PULU_MALLI_OLETUS;
+const TAGIT_KAYTOSSA = MALLI === 'eleven_v3';
+const VAKAUS = process.env.PULU_VAKAUS ?? PULU_VAKAUS_OLETUS;
+const STABILITY = VAKAUDET[VAKAUS] ?? Number(VAKAUS);
+const SIMILARITY = 0.75;
+/** Tyylin voimakkuus: v2:lla nolla (omistajan säätö), v3:lla 0,6. */
+const STYLE = TAGIT_KAYTOSSA ? 0.6 : 0;
+/** Mallin oma nopeus (vain v2-perhe; v3 jättää kentän huomiotta). */
+const SPEED = 1.05;
+/**
+ * Nopeutus viimeistelyssä. 1,0 = ei nopeutusta: omistaja otti ffmpeg-
+ * nopeutuksen pois 13.9.2026. Arvolla 1 `atempo` jätetään pois koko
+ * suodatinketjusta, ei ajeta yksikkösuodattimena.
+ */
+const TEMPO = 1.0;
+/** Lopputauko. Käsittelyn ollessa pois ElevenLabs hoitaa sen itse. */
+const LOPPUTAUKO = ' <break time="1.0s" />';
+
+/*
+ * ------------------------------------------------------------------
+ * LIVIAN VIIMEISTELY ON POIS (omistaja 14.9.2026)
+ * ------------------------------------------------------------------
+ * Raamattu: "PULUN AANI: ELEVENLABSIN OLETUSASETUKSET, EI FFMPEG-
+ * KASITTELYA". Omistaja kuuli uusissa äänissä "pienen digitaalisen
+ * häiriön". Mitattu syy: ketju purki ElevenLabsin valmiin
+ * mp3_44100_128:n ja koodasi sen UUDELLEEN libmp3lamella samalla
+ * 128 kbps:llä — toinen häviöllinen sukupolvi. Mittaus 14.9.2026
+ * (kuusi Livia-mp3:a + kolme Horatiota): yksi ylimääräinen 128 kbps
+ * sukupolvi tuottaa virheen −25 dB signaaliin nähden, kun sama
+ * sukupolvi 320 kbps:llä jää −59…−71 dB:hen. Horation putki ei ole
+ * koskaan koodannut uudelleen (tiedostoissa vain ElevenLabsin oma
+ * Lavf-tunniste, Livian tiedostoissa myös Lavc-kooderitunniste), ja
+ * juuri Horation äänistä ei ole valitettu.
+ *
+ * Päätös: Livian mp3 viedään SELLAISENAAN — sama tavujono raaka- ja
+ * final-avaimeen, sama sha256. Ei leikkausta, ei häivytystä, ei
+ * loudnormia, ei atempoa, ei kaikua. Kesto mitataan dekooderilla
+ * pelkkää validointia varten. Vakio on lippu, jotta Horation puoli
+ * (tools/generoi-luennat.mjs) ja tehosteputki eivät muutu.
+ */
+export const LIVIA_KASITTELY = false;
+
+// ── kansiot ja vaatimukset ─────────────────────────────────────────
+
+const KOHDE_KANSIO = 'media/pulu';
+/** Mallin raaka tuotos talteen: uuden leikkauksen voi tehdä ilmaiseksi. */
+const RAAKA_KANSIO = 'media/pulu-raaka';
+/*
+ * RAAKATUOTOS ÄMPÄRIIN AINA (omistajan sitova sääntö 14.9.2026,
+ * Raamattu: "ALKUPERÄISET ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA").
+ *
+ * Mallin oma tuotos on ainoa asia, josta on maksettu; viimeistely on
+ * ilmainen ja toistettava. Ennen tätä sääntöä raaka jäi vain ajajan
+ * levylle (media/pulu-raaka on .gitignoressa) ja katosi Actions-ajon
+ * mukana, joten korjattu leikkaus vaati uuden maksullisen kutsun.
+ * Nyt raaka menee ämpäriin erätunnuksella versionoituun avaimeen
+ * ENNEN viimeistelyä: avain on eräkohtainen eikä mikään ajo voi
+ * kirjoittaa toisen erän raakaa yli. Jos vienti ei ole käytössä tai
+ * se epäonnistuu, ajo kaatuu — hiljaista jatkamista ei ole.
+ */
+const RAAKA_AMPARI_ALIKANSIO = 'raaka';
+/** Eräkohtaiset kuitit eivät korvaa koko repertuaarin manifestia. */
+const KUITTI_KANSIO = 'media/pulu-kuitit';
+/** Manifestin tiedostonimi ämpärissä. */
+export const MANIFESTI = 'manifesti.json';
+export const TUOTANTOKUITTI_SCHEMA = 1;
+const TUOTANTOERAN_MAX = 10;
+
+const sha256 = (data) => createHash('sha256').update(data).digest('hex');
+
+/** Kaupunkitunnus on kaupunkilähteillä sama kuin repliikkiavaimen alku. */
+function kuitinKaupunkiId(rivi) {
+  return Object.hasOwn(LIVIAN_KAUPUNKILAHTEET, rivi.lahde) ? rivi.lahde : null;
+}
+
+/**
+ * Muuttumaton tuotantokuitti yhdelle eksplisiittisesti valitulle erälle.
+ * `tulokset` jätetään tyhjäksi ennen API-kutsuja ja täytetään valmistuneeseen
+ * kuittiin; salaisuuksia ei oteta argumentiksi eikä siis voida kirjata.
+ */
+export function kokoaTuotantokuitti(rivit, {
+  sourceCommit, voiceId = PULU_AANI_OLETUS, model = MALLI,
+  stability = STABILITY, tempo = TEMPO, pakota = false,
+  retryReason = null, status = 'planned', tulokset = new Map(), staged = false,
+} = {}) {
+  if (!sourceCommit) throw new Error('tuotantokuitti vaatii sourceCommit-tunnuksen');
+  // Kuitti kertoo, mitä rajapinnalle OIKEASTI lähetetään: pois
+  // jätetty kenttä on null, ei vanha vakio (muuten kuitti valehtelisi).
+  const asetukset = {
+    stability, similarityBoost: null, style: null,
+    useSpeakerBoost: null, speed: TAGIT_KAYTOSSA ? null : SPEED,
+  };
+  const postprocess = LIVIA_KASITTELY ? {
+    silenceTrim: true, targetLufs: TAVOITE_LUFS, lufsTolerance: LUFS_TOLERANSSI,
+    fadeSeconds: HAIVYTYS_S, tailPaddingSeconds: HANNAN_PADDING_S, tempo,
+    arrivalEchoSeconds: KAIUN_KESTO,
+  } : { kind: 'none' };
+  const suunnitelma = rivit.map((rivi) => ({
+    utteranceKey: rivi.avain,
+    visibleTextSha256: sha256(Buffer.from(rivi.teksti, 'utf8')),
+    ttsTextSha256: sha256(Buffer.from(rivi.puhe, 'utf8')),
+  }));
+  const batchId = `pulu-${sha256(JSON.stringify({
+    sourceCommit, voiceId, model, asetukset, postprocess, suunnitelma,
+    forcedRegeneration: pakota, retryReason: retryReason || null, staged,
+  })).slice(0, 20)}`;
+  const batchPrefix = `${ampariKansio()}/erat/${batchId}`;
+  const finalPrefix = `${ampariKansio()}/versiot/${String(sourceCommit).slice(0, 12)}/${batchId}`;
+  return {
+    schemaVersion: TUOTANTOKUITTI_SCHEMA,
+    batchId,
+    sourceCommit,
+    generationStatus: status,
+    retryReason: retryReason || null,
+    utterances: rivit.map((rivi) => {
+      const tulos = tulokset.get(rivi.avain) ?? {};
+      return {
+        cityId: kuitinKaupunkiId(rivi),
+        utteranceKey: rivi.avain,
+        visibleText: rivi.teksti,
+        visibleTextSha256: sha256(Buffer.from(rivi.teksti, 'utf8')),
+        ttsText: rivi.puhe,
+        ttsTextSha256: sha256(Buffer.from(rivi.puhe, 'utf8')),
+        voiceId,
+        model,
+        settings: asetukset,
+        outputFormat: PULU_ULOSTULOMUOTO,
+        stagingObjectKey: staged ? `${batchPrefix}/${rivi.nimi}` : `${ampariKansio()}/${rivi.nimi}`,
+        finalObjectKey: staged ? `${finalPrefix}/${rivi.nimi}` : `${ampariKansio()}/${rivi.nimi}`,
+        promotionStatus: staged ? 'pending-code-deploy' : 'not-required',
+        postprocess,
+        generationStatus: tulos.status ?? status,
+        retryReason: tulos.retryReason ?? retryReason ?? (pakota ? 'forced-regeneration' : null),
+        rawArtifact: tulos.rawArtifact ?? null,
+        finalArtifact: tulos.finalArtifact ?? null,
+      };
+    }),
+  };
+}
+
+/** Kirjoittaa uuden kuitin atomisesti ylikirjoittamatta vanhaa kuittia. */
+export function kirjoitaTuotantokuitti(kansio, vaihe, kuitti) {
+  mkdirSync(kansio, { recursive: true });
+  const polku = join(kansio, `${kuitti.batchId}.${vaihe}.json`);
+  writeFileSync(polku, `${JSON.stringify(kuitti, null, 2)}\n`, { flag: 'wx' });
+  return polku;
+}
+
+/** Puheen taso: sama perhe kuin kertojan luennoilla (−17 LUFS). */
+const TAVOITE_LUFS = -17;
+const LUFS_TOLERANSSI = 1.5;
+const HAIVYTYS_S = 0.03;
+const HANNAN_PADDING_S = 0.15;
+// Huudahdukset ("Kääk.", "Vesi ei.") ovat alle sekunnin (7.9.2026).
+const KESTO_MIN_S = 0.3;
+/**
+ * Pisin repliikki on kuplan lukuajan mittainen; yli menee jauhamiseksi.
+ * Omistaja 14.9.2026: katto 30 s, koska eleven_v3:n todelliset kestot ovat
+ * 10–25 % arviota pidempiä; teksti ennallaan.
+ */
+const KESTO_MAX_S = 30.0;
+
+/** Kaiun häipymä sekunteina (omistaja: "kaiku feidataan pois perillä"). */
+const KAIUN_KESTO = 1.5;
+/** Kaukaisen alun vaimennus: kuinka hiljaa pulu aloittaa. */
+const KAIUN_VAIMENNUS = 0.45;
+
+/** Puhenopeus arviossa: merkkiä sekunnissa nopealla puheella. */
+export const MERKKIA_SEKUNNISSA = 14;
+
+/**
+ * KUPLAN LUKUAIKA PELIN OMASTA LÄHTEESTÄ.
+ *
+ * Kuplien rytmi ohjaa ääntä (js/liviapuhe.js: "luenta seuraa kuplia"),
+ * joten liian pitkä repliikki katkeaa kesken kun seuraava kupla tulee.
+ * Vakiot luetaan js/livia.js:stä samalla tavalla kuin ämpärin juuri
+ * luetaan js/media.js:stä — kopio täällä eriytyisi hiljaa.
+ */
+export function kuplanVakiot(lahde = readFileSync(resolve(JUURI, 'js/livia.js'), 'utf8')) {
+  const luku = (nimi) => {
+    const osuma = lahde.match(new RegExp(`const ${nimi} = (\\d+);`));
+    if (!osuma) throw new Error(`js/livia.js: ${nimi} ei löytynyt — päivitä tämä työkalu.`);
+    return Number(osuma[1]);
+  };
+  return {
+    perMerkki: luku('LUKUAIKA_PER_MERKKI'),
+    vahintaan: luku('LUKUAIKA_VAHINTAAN'),
+    enintaan: luku('LUKUAIKA_ENINTAAN'),
+  };
+}
+
+/** Kuinka kauan kupla on ruudulla ennen seuraavaa, sekunteina. */
+export function kuplanLukuaika(teksti, vakiot = kuplanVakiot()) {
+  const ms = Math.min(vakiot.enintaan,
+    Math.max(vakiot.vahintaan, String(teksti ?? '').length * vakiot.perMerkki));
+  return ms / 1000;
+}
+
+/**
+ * NÄKYVÄ AIKA: KUPLAN LUKUAIKA — TAI PINON LUKUAIKOJEN SUMMA.
+ *
+ * Kirjoitettu kupla on oma äänitteensä (omistaja 7.9.2026), joten
+ * useimmiten rivi = kupla = yksi lukuaika. Poikkeus on kenttä, joka on
+ * yhä YKSI PITKÄ MERKKIJONO (esim. Ateenan maadoitus): peli pilkkoo sen
+ * ruudulla pinoksi (js/ui-apurit.js jaaPuheenvuoroksi + js/pollo.js
+ * naytaPuheenvuoro), eivätkä osat korvaa toisiaan — näkyvä aika on
+ * silloin osien lukuaikojen summa eli merkkimäärä × lukuaika per merkki
+ * ilman yhden kuplan kattoa.
+ *
+ * Kumpi on kyseessä, tiedetään LIVIAN_KAUPUNKILAHTEET-taulusta, ja
+ * repliikit() merkitsee sen riville lipuksi `pinoutuu`.
+ *
+ * @param {{teksti:string, merkit:number, pinoutuu?:boolean}} rivi
+ * @param {object} vakiot kuplanVakiot()
+ * @returns {number} sekunteina
+ */
+export function nakyvaAika(rivi, vakiot = kuplanVakiot()) {
+  if (!rivi.pinoutuu) return kuplanLukuaika(rivi.teksti, vakiot);
+  return Number(((rivi.merkit * vakiot.perMerkki) / 1000).toFixed(3));
+}
+
+/**
+ * Ne kaupunkirepliikit, jotka peli yhä pilkkoo pinoksi: kenttä on yksi
+ * merkkijono, ei kuplien taulukko (ks. nakyvaAika).
+ *
+ * @returns {Set<string>} repliikkiavaimet
+ */
+export function pinoutuvatRepliikit() {
+  const avaimet = new Set();
+  for (const kaupunkiId of Object.keys(LIVIAN_KAUPUNKILAHTEET)) {
+    for (const { kentta, kuplat, alku } of livianKaupunkiKentat(kaupunkiId)) {
+      // Varattu paikka ei ole kupla eikä siis pinoudu (LIVIAN_VARATTU).
+      if (kentta === LIVIAN_VARATTU) continue;
+      if (livianKenttaPinoutuu(kentta, kuplat)) avaimet.add(`${kaupunkiId}-${alku + 1}`);
+    }
+  }
+  return avaimet;
+}
+
+// ── tagit ──────────────────────────────────────────────────────────
+
+/**
+ * ELÄVÖITYSTAGIT REPLIIKEITTÄIN.
+ *
+ * `alku` on repliikin eteen tuleva tagi ja `kohdat` ankkuroituja
+ * tageja: [ankkuri, tagi] tarkoittaa "tagi juuri ennen tätä sanaa".
+ * Ankkurin on esiinnyttävä repliikissä TÄSMÄLLEEN KERRAN — muuten ajo
+ * kaatuu (ks. TAGIT EIVÄT SAA MUUTTAA KAANONIA).
+ *
+ * TAULU KATTAA js/livia.js:n LÄHTEET JA EUROOPAN HYVÄKSYTYT
+ * KAUPUNKIREPLIIKIT. Tagiton repliikki menee läpi kaanonisena tekstinä.
+ * Sofian, Istanbulin, Riian ja Vilnan kuplat kirjoitettiin 7.9.2026, ja
+ * ne saivat samalla eleven_v3-tagit: ELÄVÄ JA NOPEA, EI KAIKUA ALUSSA
+ * (Raamattu, PULU PUHUU + KAIKU POIS ALUSTA). Malli on toistaiseksi v2
+ * (TAGIT_KAYTOSSA false), joten tageja ei lähetetä — ne odottavat v3:a.
+ */
+export const TAGIT = {
+  'avaus-1': { alku: '[excited]', kohdat: [['Sinähän', '[amused]']] },
+  'avaus-2': {
+    alku: '[proud]',
+    kohdat: [['Pöllö luki', '[quickly]']],
+  },
+  'avaus-3': {
+    alku: '[warmly]',
+    kohdat: [['vaikka se maanosa', '[excited]']],
+  },
+  'avaus-4': {
+    alku: '[sheepish]',
+    kohdat: [['Ateenasta', '[brightly]']],
+  },
+  'avaus-5': { alku: '[reassuring]', kohdat: [['Minä olen vain', '[modestly]']] },
+  /*
+   * UUSI RYTMI ATEENASSA (omistaja 7.9.2026). Kolme kuplaa: hätääntynyt
+   * ilmoitus tuurauksesta, lämmin tervetulotoivotus ja luennan jälkeen
+   * tuleva reipas ohje. Tagit ovat v3:a varten (v2 ei niitä lähetä) ja
+   * noudattavat PULU PUHUU -ohjetta: elävä ja nopea, ei kaikua alussa —
+   * kaiku on kokonaan pois (js/liviapuhe.js LIVIAN_KAIKU).
+   */
+  'paljastus-1': {
+    alku: '[squawks]',
+    kohdat: [['Pöllö on matkoilla', '[breathless]'], ['tuuraan häntä', '[reassuring]']],
+  },
+  'paljastus-2': {
+    alku: '[warmly]',
+    kohdat: [['Kuunnellaan', '[curious]']],
+  },
+  'paljastus-3': {
+    alku: '[brightly]',
+    kohdat: [['jos meinaat', '[quickly]']],
+  },
+  'mannerivihje-1': {
+    alku: '[casually]',
+    kohdat: [['kerää rahaa', '[helpfully]']],
+  },
+  'lehtivinkki-1': { alku: '[helpfully]', kohdat: [['aarrekysymys', '[excited]']] },
+  /*
+   * EUROOPAN KAUPUNKIREPLIIKIT (omistajan hyväksymät tekstit 7.9.2026,
+   * erät 1 ja 2). Yksi rivi per KUPLA, koska jokainen kupla on oma
+   * äänitiedostonsa. Alkutagi antaa kulun hetkelle sävyn — huudahdus on
+   * välihuuto, kommentti reipas — ja kaikutagia ei ole yhdessäkään,
+   * koska kaiku otettiin pois pulun alusta (js/liviapuhe.js
+   * LIVIAN_KAIKU).
+   *
+   * NUMERO 1 PUUTTUU JOKA KAUPUNGILTA (8.9.2026): siinä oli alustus,
+   * joka poistettiin pelistä (omistaja: *"ota kaikki pulun alustukset
+   * pois."*). Numero on varattu (js/liviapuhe.js LIVIAN_VARATTU) eikä
+   * sillä ole enää tekstiä, joten sillä ei ole tagejakaan.
+   */
+  'sofia-3': {
+    alku: '[brightly]',
+    kohdat: [['Kurkistin', '[curious]'], ['Arvokkuus', '[mischievously]']],
+  },
+  'istanbul-3': {
+    alku: '[brightly]',
+    kohdat: [['Minä', '[mischievously]'], ['Kokeneen', '[warmly]']],
+  },
+  'bukarest-3': {
+    alku: '[brightly]',
+    kohdat: [['Etsin', '[curious]'], ['Muruset', '[mischievously]']],
+  },
+  'sarajevo-3': {
+    alku: '[softly]',
+    kohdat: [
+      ['Minun piti vain piipahtaa', '[curious]'],
+      ['Yritin naputtaa nokalla', '[mischievously]'],
+    ],
+  },
+  'budapest-3': {
+    alku: '[brightly]',
+    kohdat: [['Höyry', '[curious]'], ['Odotin', '[mischievously]']],
+  },
+  'wien-3': {
+    alku: '[softly]',
+    kohdat: [['Pujottelin', '[brightly]'], ['Isoisä', '[warmly]']],
+  },
+  'praha-3': {
+    alku: '[curious]',
+    kohdat: [['Minä', '[brightly]'], ['Kun', '[mischievously]']],
+  },
+  'krakova-3': { alku: '[curious]', kohdat: [['Kirjekyyhky', '[brightly]']] },
+  'varsova-3': { alku: '[curious]', kohdat: [['Kaupunki', '[warmly]']] },
+  'pietari-3': { alku: '[curious]', kohdat: [['kirjekyyhky', '[mischievously]']] },
+  'moskova-3': { alku: '[curious]', kohdat: [['kuuluisuus', '[mischievously]']] },
+  'kiova-3': { alku: '[curious]', kohdat: [['Reittiinsä', '[softly]']] },
+  'odessa-3': { alku: '[softly]' },
+  'helsinki-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Minä kokeilin apostolien näköalaa', '[brightly]'],
+      ['Lokki ehti ensin', '[mischievously]'],
+      ['Se katsoi minua', '[softly]'],
+    ],
+  },
+  'tampere-3': {
+    alku: '[brightly]',
+    kohdat: [
+      ['Seurasin leipäkoria', '[curious]'],
+      ['Kori kääntyi', '[mischievously]'],
+    ],
+  },
+  'tallinna-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Minä odotin portaalla', '[mischievously]'],
+      ['Yksi lapsi jakoi', '[warmly]'],
+      ['Ehkä isoisän lääkkeessä', '[softly]'],
+    ],
+  },
+  'riika-3': {
+    alku: '[softly]',
+    kohdat: [
+      ['Laskeuduin hetkeksi', '[curious]'],
+      ['Kun kuoro aloitti', '[softly]'],
+    ],
+  },
+  'vilna-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Nousin ikkunan korkeudelle', '[brightly]'],
+      ['Tähtitieteilijät lähtivät', '[softly]'],
+    ],
+  },
+  // Teksti muuttui 8.9.2026: alusta poistui toistuva "Kääk.", joten
+  // korostus on nyt lauseen lopussa eikä sen alussa.
+  'sofia-5': { alku: '[helpfully]' },
+  'sofia-6': { alku: '[helpfully]' },
+  'sofia-7': { alku: '[helpfully]' },
+  'sofia-8': { alku: '[helpfully]', kohdat: [['Vuosiluku on', '[brightly]']] },
+  'sofia-9': { alku: '[amused]', kohdat: [['Puolikas pulla,', '[quickly]']] },
+  'sofia-10': { alku: '[excited]', kohdat: [['Yli kolmetuhatta', '[awed]']] },
+  'sofia-11': { alku: '[excited]', kohdat: [['Palaan kyllä.', '[awed]']] },
+  'sofia-12': { alku: '[casually]', kohdat: [['Se palaa', '[amused]']] },
+  'sofia-13': { alku: '[breathless]', kohdat: [['Pöllö oli', '[amused]']] },
+  'sofia-14': { alku: '[breathless]', kohdat: [['Katso alas.', '[amused]']] },
+  /*
+   * KEVYET PAKIT JA ATEENA (omistaja 8.9.2026): Kreeta, Sisilia,
+   * Islanti, Alpit, Rovaniemi (tunnus `lappi`) ja Tromssa saivat omat
+   * fokusvirtapakkinsa, ja Ateenan maadoitus korvattiin samanlaisella
+   * kommenttikuplalla. Jokaisella on yksi kupla numerolla 3 (kaksi
+   * ensimmäistä paikkaa ovat varattuja), ja se on luennan jälkeinen
+   * reipas huomio — sama alkutagi kuin muiden kaupunkien kommenteilla.
+   */
+  'ateena-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Etsin puutarhasta varjoa', '[mischievously]'],
+      ['Siinä unohtui varjo hetkeksi', '[brightly]'],
+    ],
+  },
+  'kreeta-3': {
+    alku: '[brightly]',
+    kohdat: [['Väitin', '[mischievously]'], ['helpotuksesta', '[warmly]']],
+  },
+  'sisilia-3': {
+    alku: '[curious]',
+    kohdat: [['Kiersin', '[brightly]'], ['Katon', '[softly]']],
+  },
+  'islanti-3': {
+    alku: '[brightly]',
+    kohdat: [['Löysin', '[softly]'], ['Hetkeä', '[mischievously]']],
+  },
+  'alpit-3': {
+    alku: '[softly]',
+    kohdat: [['Lensin', '[curious]'], ['En', '[softly]']],
+  },
+  'lappi-3': {
+    alku: '[brightly]',
+    kohdat: [
+      ['Seurasin Ounasjokea', '[curious]'],
+      ['Lähempänä ne olivat heijastuksia', '[mischievously]'],
+      ['Hyvä etten yrittänyt', '[softly]'],
+    ],
+  },
+  'tromssa-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Löysin laiturilta simpukankuoren', '[brightly]'],
+      ['Tyhjä.', '[whispers]'],
+      ['Hetken mietin', '[softly]'],
+    ],
+  },
+  /*
+   * LÄNNEN KAKSIKYMMENTÄ KAUPUNKIA (Fablen erä 8.9.2026 ilta). Yksi
+   * puhekupla kussakin numerolla 3. Venetsian kuvakaruselli ei lisää
+   * puhekuplia. Sama reipas alkutagi kuin muilla kommenteilla;
+   * kaikutagia ei ole yhdessäkään.
+   *
+   * KUITTAUS ISOISÄLLE ON POISTETTU (Fablen erä v6 8.9.2026 ilta):
+   * kymmenellä kaupungilla oli hetken kommentin perässä toinen kupla
+   * numerolla 4, ja nyt jokaisella on yksi kupla kuten muillakin. Numero
+   * 4 ei siis ole enää yhdelläkään näistä kaupungeista.
+   */
+  'lontoo-3': {
+    alku: '[curious]',
+    kohdat: [['Lensin', '[brightly]'], ['Ihmiset', '[softly]']],
+  },
+  'dublin-3': {
+    alku: '[curious]',
+    kohdat: [['Nousin', '[brightly]'], ['Minun', '[mischievously]']],
+  },
+  'edinburgh-3': {
+    alku: '[curious]',
+    kohdat: [['Lensin', '[brightly]'], ['Täällä', '[mischievously]']],
+  },
+  'pariisi-3': {
+    alku: '[curious]',
+    kohdat: [['Minä', '[brightly]'], ['Sisälläkin', '[mischievously]']],
+  },
+  'marseille-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Minä erotan Vieux-Portin', '[warmly]'],
+      ['Lokit tuntevat jokaisen pöydän', '[mischievously]'],
+      ['Minä vasta harjoittelen', '[softly]'],
+    ],
+  },
+  'lissabon-3': {
+    alku: '[brightly]',
+    kohdat: [['Seurasin', '[curious]'], ['Kun', '[mischievously]']],
+  },
+  'madrid-3': {
+    alku: '[curious]',
+    kohdat: [['Minä', '[warmly]'], ['Se', '[mischievously]'], ['Velázquez', '[softly]']],
+  },
+  'barcelona-3': {
+    alku: '[curious]',
+    kohdat: [['Laskeuduin', '[brightly]'], ['Minulle', '[mischievously]'], ['Hyvin', '[softly]']],
+  },
+  'granada-3': {
+    alku: '[curious]',
+    kohdat: [['Laskeuduin', '[softly]'], ['Kerrankin', '[mischievously]']],
+  },
+  'sevilla-3': {
+    alku: '[curious]',
+    kohdat: [['Näin', '[brightly]'], ['Ne', '[softly]']],
+  },
+  'amsterdam-3': {
+    alku: '[curious]',
+    kohdat: [['Saavuin', '[brightly]'], ['En', '[mischievously]']],
+  },
+  'berliini-3': {
+    alku: '[curious]',
+    kohdat: [['Nousin', '[brightly]'], ['Alhaalla', '[softly]']],
+  },
+  'venetsia-3': {
+    alku: '[brightly]',
+    kohdat: [
+      ['Minä lennän nykyään', '[warmly]'],
+      ['Yhden tutun takia', '[whispers]'],
+      ['Hän vain sattui', '[mischievously]'],
+      ['No, ehkä minä vähän odotin', '[softly]'],
+    ],
+  },
+  'firenze-3': {
+    alku: '[curious]',
+    kohdat: [['Kiersin', '[brightly]'], ['Se', '[mischievously]'], ['Minä', '[softly]']],
+  },
+  'rooma-3': {
+    alku: '[curious]',
+    kohdat: [['Minä', '[brightly]'], ['Ihmiset', '[mischievously]']],
+  },
+  'dubrovnik-3': {
+    alku: '[brightly]',
+    kohdat: [['Kun', '[curious]'], ['Sitten', '[mischievously]']],
+  },
+  'tukholma-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Minä nousin Monteliusvägenin', '[brightly]'],
+      ['Neljäntoista laskeminen', '[mischievously]'],
+    ],
+  },
+  'oslo-3': {
+    alku: '[brightly]',
+    kohdat: [['Hämmästyin,', '[surprised]'], ['Kerrankin', '[warmly]']],
+  },
+  'bergen-3': {
+    alku: '[brightly]',
+    kohdat: [['Suojasin', '[curious]'], ['Kirje', '[mischievously]']],
+  },
+  'kobenhavn-3': { alku: '[brightly]', kohdat: [['Orkesterin', '[mischievously]']] },
+};
+
+/**
+ * Muodostaa generaattorin ankkurireseptin hyväksytystä exact-TTS-rivistä.
+ * Näkyvät sanat eivät saa muuttua, ja jokaisen väliankkurin on oltava
+ * yksikäsitteinen. Näin tuotantogeneraattori ja 45 kaupungin hyväksytty
+ * luentamanifesti käyttävät varmasti samaa v3-syötettä.
+ */
+export function tagiresepti(nakyva, tts) {
+  const tagit = [];
+  let plain = '';
+  let cursor = 0;
+  for (const match of tts.matchAll(/\[[^\]]+\]\s*/g)) {
+    plain += tts.slice(cursor, match.index);
+    tagit.push({ tag: match[0].trim(), offset: plain.length });
+    cursor = match.index + match[0].length;
+  }
+  plain += tts.slice(cursor);
+  if (plain !== nakyva) throw new Error('exact-TTS muuttaa näkyviä sanoja');
+  const recipe = {};
+  const internal = tagit.filter(({ offset }) => offset > 0);
+  const first = tagit.find(({ offset }) => offset === 0);
+  if (first) recipe.alku = first.tag;
+  if (internal.length) recipe.kohdat = internal.map((item, index) => {
+    const end = internal[index + 1]?.offset ?? nakyva.length;
+    const anchor = nakyva.slice(item.offset, end).trim();
+    if (!anchor || nakyva.split(anchor).length - 1 !== 1) {
+      throw new Error(`exact-TTS-ankkuri ei ole yksikäsitteinen: ${anchor}`);
+    }
+    return [anchor, item.tag];
+  });
+  return recipe;
+}
+
+const EUROOPPA_TTS_MANIFESTI = JSON.parse(readFileSync(resolve(
+  JUURI, 'docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260914-r2.json',
+), 'utf8'));
+/*
+ * ERÄ 5 ODOTTAA AJOA (14.9.2026). ElevenLabsin kiintiö loppui kesken, joten
+ * sisilia, islanti, alpit, lappi ja tromssa EIVÄT saaneet 14.9. tekstistä
+ * äänitettä. Niiden repliikkiteksti on palautettu 13.9. asuun, ja siksi myös
+ * niiden tagiresepti luetaan 13.9. manifestista: tagiankkurin on esiinnyttävä
+ * repliikissä täsmälleen kerran, eikä 14.9. ankkuri löydy 13.9. tekstistä.
+ * Kun erä 5 on ajettu, poista tämä lohko ja se palaa yhteen manifestiin.
+ */
+const ERA5_TTS_MANIFESTI = JSON.parse(readFileSync(resolve(
+  JUURI, 'docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260913.json',
+), 'utf8'));
+const ERA5_ODOTTAA = new Set(['sisilia', 'islanti', 'alpit', 'lappi', 'tromssa']);
+for (const city of EUROOPPA_TTS_MANIFESTI.cities) {
+  if (ERA5_ODOTTAA.has(city.city)) continue;
+  TAGIT[`${city.city}-3`] = tagiresepti(city.livia.visibleText, city.livia.ttsText);
+}
+for (const city of ERA5_TTS_MANIFESTI.cities) {
+  if (!ERA5_ODOTTAA.has(city.city)) continue;
+  TAGIT[`${city.city}-3`] = tagiresepti(city.livia.visibleText, city.livia.ttsText);
+}
+
+/** Tagi pois tekstistä: `[excited] Hei` → `Hei`. */
+export function ilmanTageja(teksti) {
+  return String(teksti ?? '').replace(/\[[^\]]+\]\s*/g, '').trim();
+}
+
+/**
+ * Repliikin puhemuoto: kaanoninen teksti tageineen.
+ *
+ * Kaatuu, jos ankkuria ei löydy tai se esiintyy monta kertaa, ja
+ * varmistaa lopuksi että tagien poisto palauttaa alkuperäisen tekstin.
+ *
+ * @param {string} teksti kaanoninen repliikki
+ * @param {{alku?:string, kohdat?:Array<[string,string]>}} tagit
+ * @returns {string} mallille lähtevä teksti
+ */
+export function puhemuoto(teksti, tagit = {}) {
+  const alkuperainen = String(teksti ?? '').trim();
+  let ulos = alkuperainen;
+  for (const [ankkuri, tagi] of tagit.kohdat ?? []) {
+    const osumat = ulos.split(ankkuri).length - 1;
+    if (osumat !== 1) {
+      throw new Error(`tagin ankkuri "${ankkuri}" esiintyy ${osumat} kertaa repliikissä `
+        + `"${alkuperainen.slice(0, 60)}…" — kaanon on muuttunut, päivitä TAGIT.`);
+    }
+    ulos = ulos.replace(ankkuri, `${tagi} ${ankkuri}`);
+  }
+  if (tagit.alku) ulos = `${tagit.alku} ${ulos}`;
+  if (ilmanTageja(ulos) !== alkuperainen) {
+    throw new Error(`tagitus muutti repliikin tekstiä: "${alkuperainen.slice(0, 60)}…"`);
+  }
+  return ulos;
+}
+
+// ── repliikit ──────────────────────────────────────────────────────
+
+/**
+ * KAUPUNKIEN PAKKAUKSET, joista kaupunkirepliikit luetaan.
+ *
+ * Tekstejä EI kopioida tänne: sama kenttä, jonka peli näyttää kuplana,
+ * on se, joka äänitetään. Kaupunkia lisättäessä riittää rivi tähän ja
+ * kenttälista js/liviapuhe.js:n LIVIAN_KAUPUNKILAHTEET-tauluun.
+ */
+const KAUPUNKIEN_PAKKAUKSET = {
+  ateena: FOKUSVIRTA_ATEENA,
+  sofia: FOKUSVIRTA_SOFIA,
+  istanbul: FOKUSVIRTA_ISTANBUL,
+  bukarest: FOKUSVIRTA_BUKAREST,
+  sarajevo: FOKUSVIRTA_SARAJEVO,
+  budapest: FOKUSVIRTA_BUDAPEST,
+  wien: FOKUSVIRTA_WIEN,
+  praha: FOKUSVIRTA_PRAHA,
+  krakova: FOKUSVIRTA_KRAKOVA,
+  varsova: FOKUSVIRTA_VARSOVA,
+  pietari: FOKUSVIRTA_PIETARI,
+  moskova: FOKUSVIRTA_MOSKOVA,
+  kiova: FOKUSVIRTA_KIOVA,
+  odessa: FOKUSVIRTA_ODESSA,
+  helsinki: FOKUSVIRTA_HELSINKI,
+  tampere: FOKUSVIRTA_TAMPERE,
+  tallinna: FOKUSVIRTA_TALLINNA,
+  riika: FOKUSVIRTA_RIIKA,
+  vilna: FOKUSVIRTA_VILNA,
+  // Kevyet pakit (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT), yksi
+  // kupla kussakin — omistajan erä 8.9.2026.
+  kreeta: FOKUSVIRTA_KREETA,
+  sisilia: FOKUSVIRTA_SISILIA,
+  islanti: FOKUSVIRTA_ISLANTI,
+  alpit: FOKUSVIRTA_ALPIT,
+  lappi: FOKUSVIRTA_LAPPI,
+  tromssa: FOKUSVIRTA_TROMSSA,
+  // Lännen kaksikymmentä kaupunkia (Fablen erä 8.9.2026 ilta): vanha
+  // maadoitus korvattiin yhdellä kommenttikuplalla myös Venetsiassa.
+  lontoo: FOKUSVIRTA_LONTOO,
+  dublin: FOKUSVIRTA_DUBLIN,
+  edinburgh: FOKUSVIRTA_EDINBURGH,
+  pariisi: FOKUSVIRTA_PARIISI,
+  marseille: FOKUSVIRTA_MARSEILLE,
+  lissabon: FOKUSVIRTA_LISSABON,
+  madrid: FOKUSVIRTA_MADRID,
+  barcelona: FOKUSVIRTA_BARCELONA,
+  granada: FOKUSVIRTA_GRANADA,
+  sevilla: FOKUSVIRTA_SEVILLA,
+  amsterdam: FOKUSVIRTA_AMSTERDAM,
+  berliini: FOKUSVIRTA_BERLIINI,
+  venetsia: FOKUSVIRTA_VENETSIA,
+  firenze: FOKUSVIRTA_FIRENZE,
+  rooma: FOKUSVIRTA_ROOMA,
+  dubrovnik: FOKUSVIRTA_DUBROVNIK,
+  tukholma: FOKUSVIRTA_TUKHOLMA,
+  oslo: FOKUSVIRTA_OSLO,
+  bergen: FOKUSVIRTA_BERGEN,
+  kobenhavn: FOKUSVIRTA_KOBENHAVN,
+};
+
+/**
+ * LINSSIEN KERTOMUKSET, joista pulun välihuomiot luetaan. Avain on
+ * sama kuin LIVIAN_LINSSILAHTEET-taulussa (js/liviapuhe.js).
+ */
+const LINSSIEN_KERTOMUKSET = {
+  'ihmisen-matka': IHMISEN_MATKA_KERTOMUS,
+};
+
+/**
+ * LINSSIN VÄLIHUOMIOT KERTOMUKSESTA — sama kytkentä kuin kaupungeilla.
+ *
+ * Numerointi tulee LIVIAN_LINSSILAHTEET-taulusta ja tekstit kaanonista
+ * (js/linssit/ihmisen-matka-kertomus.js kenttä `pulu`). Jos ne
+ * eriytyvät, ajo maksaisi vääristä tiedostoista ja peli hakisi vääriä
+ * numeroita — siksi ero kaataa tässä eikä vasta ämpärissä.
+ *
+ * @param {string} linssi linssin tunnus
+ * @returns {string[]} välihuomiot taulun järjestyksessä
+ */
+export function linssinRepliikit(linssi) {
+  const kertomus = LINSSIEN_KERTOMUKSET[linssi];
+  if (!kertomus) return [];
+  const taulussa = LIVIAN_LINSSILAHTEET[linssi] ?? [];
+  /*
+   * VARATTU PAIKKA ON TYHJÄ RIVI — sama sääntö kuin kaupungeilla
+   * (17.9.2026: `ranta`-jakson välihuomio poistettiin kaanonista,
+   * mutta numero 1 jää varatuksi). Varattu ei ole jakso, joten sitä ei
+   * verrata kaanoniin eikä sille haeta tekstiä; tyhjä rivi karsiutuu
+   * äänitettävien listalta (js/liviapuhe.js livianAanitykset) mutta
+   * pitää järjestysnumeron.
+   */
+  const jaksot = taulussa.filter((tunnus) => tunnus !== LIVIAN_VARATTU);
+  const kaanonissa = kertomus.filter((jakso) => jakso?.pulu).map((jakso) => jakso.id);
+  if (jaksot.join(',') !== kaanonissa.join(',')) {
+    throw new Error(`${linssi}: js/liviapuhe.js LIVIAN_LINSSILAHTEET lupaa jaksot `
+      + `[${jaksot.join(', ')}], mutta kaanonissa on pulu-kenttä jaksoissa `
+      + `[${kaanonissa.join(', ')}] — korjaa taulu tai kertomus ennen ajoa.`);
+  }
+  return taulussa.map((tunnus) => (tunnus === LIVIAN_VARATTU ? ''
+    : String(kertomus.find((j) => j.id === tunnus)?.pulu ?? '').trim()));
+}
+
+/**
+ * Yhden kaupungin repliikkitekstit LIVIAN_KAUPUNKILAHTEET-järjestyksessä
+ * — YKSI KUPLA = YKSI RIVI (omistaja 7.9.2026).
+ *
+ * `huudahdus` ja `kommentti` (ja varapolun `maadoitus`) ovat
+ * pöllökuplan kenttiä (pollo.<kenttä>) ja loput sähketehtävän vaiheita
+ * (sahketehtava.<kenttä>, js/fokusvirta.js); livianKentanKuplat tuntee
+ * kummankin lohkon ja normalisoi yhden merkkijonon — ja huudahduksen
+ * { kohta, teksti } -olion — yhden kuplan listaksi.
+ *
+ * KUPLIEN MÄÄRÄN ON TÄSMÄTTÄVÄ TAULUUN. Numerointi tulee
+ * LIVIAN_KAUPUNKILAHTEET-taulusta ja tekstit pakkauksesta; jos ne
+ * eriytyvät, ajo maksaisi vääristä tiedostoista ja peli hakisi vääriä
+ * numeroita. Siksi ero kaataa tässä eikä vasta ämpärissä.
+ *
+ * @param {string} kaupunkiId kaupungin tunnus
+ * @returns {string[]} kuplat järjestyksessä
+ */
+export function kaupunginRepliikit(kaupunkiId) {
+  const pakkaus = KAUPUNKIEN_PAKKAUKSET[kaupunkiId];
+  if (!pakkaus) return [];
+  const rivit = [];
+  for (const { kentta, kuplat } of livianKaupunkiKentat(kaupunkiId)) {
+    /*
+     * VARATTU PAIKKA ON TYHJÄ RIVI (8.9.2026). Poistetun alustuksen
+     * numero pysyy varattuna, jotta seuraavat kuplat pitävät omat
+     * tiedostonsa — tyhjä teksti karsiutuu äänitettävien listalta
+     * (js/liviapuhe.js livianAanitykset) mutta pitää järjestysnumeron.
+     */
+    if (kentta === LIVIAN_VARATTU) {
+      rivit.push(...Array.from({ length: kuplat }, () => ''));
+      continue;
+    }
+    const tekstit = livianKentanKuplat(pakkaus, kentta);
+    if (tekstit.length !== kuplat) {
+      throw new Error(`${kaupunkiId}.${kentta}: pakkauksessa on ${tekstit.length} kuplaa, `
+        + `mutta js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET lupaa ${kuplat} — `
+        + 'korjaa taulu tai teksti ennen ajoa.');
+    }
+    rivit.push(...tekstit);
+  }
+  return rivit;
+}
+
+/**
+ * ONKO ÄMPÄRISSÄ TÄMÄN TEKSTIN ÄÄNITE?
+ *
+ * Peli vaikenee, jos repliikin teksti ei vastaa js/liviapuhe.js:n
+ * taulua LIVIAN_AANITETYT (vanha äänite ei saa sanoa eri asiaa kuin
+ * kupla). Sama vertailu tässä kertoo ajolle, mikä on uutta ja mikä
+ * muuttunutta — ilman ämpärin listausta.
+ *
+ * @returns {'uusi'|'muuttunut'|'ajan tasalla'}
+ */
+export function aanitteenTila(rivi) {
+  // Kaupunkilähteet ovat 7.9.2026 alkaen samassa vartioinnissa kuin
+  // js/livia.js:n omat lähteet (ks. js/liviapuhe.js LIVIAN_AANITETYT).
+  const vanha = LIVIAN_AANITETYT[rivi.avain];
+  if (!vanha) return 'uusi';
+  return vanha === livianTiiviste(rivi.teksti) ? 'ajan tasalla' : 'muuttunut';
+}
+
+/**
+ * KAIKKI ÄÄNITETTÄVÄT REPLIIKIT. Tekstit tulevat js/livia.js:stä
+ * (kaanoni) ja kaupunkien pakkauksista, nimet js/liviapuhe.js:stä
+ * (sama funktio kuin pelissä). Paljastus ladotaan äänitetylle
+ * variantille (Ateena/Kreikka).
+ *
+ * TAGIT ODOTTAVAT v3:A. Malli on v2 (TAGIT_KAYTOSSA false), joten
+ * kaikki repliikit lähtevät puhtaana kaanonisena tekstinä. Tagitaulu
+ * kattaa js/livia.js:n lähteet ja 7.9.2026 hyväksytyt Euroopan
+ * kaupunkirepliikit; tagiton rivi (Ateenan maadoitus) menee läpi
+ * tagittomana (puhemuoto ilman kohtia palauttaa tekstin sellaisenaan).
+ */
+export function repliikit() {
+  const kaupungit = Object.fromEntries(Object.keys(LIVIAN_KAUPUNKILAHTEET)
+    .map((kaupunkiId) => [kaupunkiId, kaupunginRepliikit(kaupunkiId)]));
+  // Linssien välihuomiot (Ihmisen matkan kertomus, 7.9.2026).
+  const linssit = Object.fromEntries(Object.keys(LIVIAN_LINSSILAHTEET)
+    .map((linssi) => [linssi, linssinRepliikit(linssi)]));
+  // Vakiot luetaan js/livia.js:stä kerran, ei rivi kerrallaan.
+  const vakiot = kuplanVakiot();
+  const pinoutuvat = pinoutuvatRepliikit();
+  return livianAanitykset({
+    avaus: LIVIAN_AVAUS,
+    paljastus: livianPaljastus(LIVIAN_AANITETTY_PALJASTUS),
+    mannerivihje: [MANNERIVIHJE],
+    lehtivinkki: [LIVIAN_LEHTIVINKKI],
+    ...kaupungit,
+    ...linssit,
+  }).map((rivi) => ({
+    ...rivi,
+    pinoutuu: pinoutuvat.has(rivi.avain),
+    puhe: TAGIT_KAYTOSSA ? puhemuoto(rivi.teksti, TAGIT[rivi.avain]) : rivi.teksti,
+    arvioSekunteina: Number((rivi.merkit / MERKKIA_SEKUNNISSA).toFixed(1)),
+    kuplaSekunteina: nakyvaAika({ ...rivi, pinoutuu: pinoutuvat.has(rivi.avain) }, vakiot),
+    tiiviste: livianTiiviste(rivi.teksti),
+    tila: aanitteenTila(rivi),
+  }));
+}
+
+/** Ämpärin kansio pelin omasta lähteestä: aanet/pulu. */
+export function ampariKansio() {
+  const julkinen = julkinenJuuri();
+  const polku = LIVIAN_AANIJUURI.startsWith(julkinen)
+    ? LIVIAN_AANIJUURI.slice(julkinen.length) : LIVIAN_AANIJUURI;
+  return polku.replace(/^\/+|\/+$/g, '');
+}
+
+/**
+ * Raakatuotosten ämpärikansio: eräkohtainen, jotta kaksi ajoa ei voi
+ * kirjoittaa toistensa alkuperäisiä yli. Raakaa ei koskaan poisteta
+ * eikä ylikirjoiteta (Raamattu 14.9.2026).
+ *
+ * @param {string} kansio ampariKansio()-juuri, esim. 'aanet/pulu'
+ * @param {string} batchId tuotantokuitin batchId
+ */
+export function raakaAmpariKansio(kansio, batchId) {
+  // Erätunnus on aina `pulu-<hex>`. Muu hylätään eikä siivota: siivottu
+  // tunnus voisi törmätä toisen erän kanssa ja ylikirjoittaa sen raa'an.
+  if (!/^[a-zA-Z0-9_-]+$/.test(String(batchId ?? ''))) {
+    throw new Error(`raakavienti vaatii kelvollisen erätunnuksen, sai: ${batchId}`);
+  }
+  return `${kansio}/${RAAKA_AMPARI_ALIKANSIO}/${batchId}`;
+}
+
+/**
+ * Saako maksullinen generointi alkaa? Palauttaa syyn merkkijonona,
+ * jos ei saa, muuten null. Erotettu funktioksi, jotta testi voi
+ * kaataa itsensä ilman API-avainta ja ilman ämpäriä.
+ *
+ * @param {{ toiminto: string, vienti: boolean }} liput tulkitseArgumentit()
+ */
+export function raakavientiEste(liput) {
+  if (liput?.toiminto === 'kuiva' || liput?.toiminto === 'aanet') return null;
+  if (!liput?.vienti) {
+    return 'maksullinen generointi ei ole sallittu ilman raakavientiä: '
+      + '--ei-vientia jättäisi mallin alkuperäisen tuotoksen vain ajajan levylle. '
+      + 'Omistajan sääntö 14.9.2026 (Raamattu: ALKUPERÄISET ÄÄNITIEDOSTOT '
+      + 'SÄILYTETÄÄN AINA) vaatii raakatiedoston ämpäriin ennen käsittelyä. '
+      + 'Käytä --kuiva, jos haluat vain katsoa mitä ajettaisiin.';
+  }
+  return null;
+}
+
+/**
+ * MANIFESTIN MUOTO. Yksi rivi per repliikki; `kesto` on valmiin
+ * äänitteen pituus sekunteina ja null, jos sitä ei tässä ajossa
+ * generoitu (ohitettu tai rajattu pois).
+ *
+ * @param {Array<object>} rivit repliikit()-listan alkiot
+ * @param {Map<string, object>} kestot avain → { kesto, kaikuKesto }
+ */
+export function kokoaManifesti(rivit, kestot = new Map()) {
+  return {
+    versio: 1,
+    kansio: ampariKansio(),
+    paivitetty: new Date().toISOString().slice(0, 10),
+    repliikit: rivit.map((rivi) => ({
+      avain: rivi.avain,
+      lahde: rivi.lahde,
+      indeksi: rivi.indeksi,
+      teksti: rivi.teksti,
+      merkit: rivi.merkit,
+      kuplaSekunteina: rivi.kuplaSekunteina ?? null,
+      // Tekstin tiiviste: sama tunniste kuin js/liviapuhe.js:n
+      // taulussa LIVIAN_AANITETYT, jolla peli tunnistaa vanhentuneen
+      // äänitteen ja vaikenee sen sijaan että soittaisi väärää tekstiä.
+      tiiviste: rivi.tiiviste ?? null,
+      tiedosto: rivi.nimi,
+      kaiku: rivi.kaikuNimi,
+      saapuu: rivi.saapuu,
+      kesto: kestot.get(rivi.avain)?.kesto ?? null,
+      kaikuKesto: kestot.get(rivi.avain)?.kaikuKesto ?? null,
+    })),
+  };
+}
+
+// ── argumentit ─────────────────────────────────────────────────────
+
+/** Komentoriviliput. Palauttaa `{ virhe }`, jos syöte ei kelpaa. */
+export function tulkitseArgumentit(argumentit) {
+  const liput = {
+    toiminto: 'generoi',
+    aani: PULU_AANI_OLETUS,
+    haku: '',
+    valitut: [],
+    pakota: false,
+    vienti: true,
+    tempo: TEMPO,
+    retryReason: null,
+  };
+  for (let i = 0; i < argumentit.length; i += 1) {
+    const arg = argumentit[i];
+    if (arg === '--aanet') {
+      liput.toiminto = 'aanet';
+    } else if (arg === '--kuiva') {
+      liput.toiminto = 'kuiva';
+    } else if (arg === '--aani') {
+      const arvo = argumentit[i + 1];
+      if (!arvo || String(arvo).startsWith('--')) return { ...liput, virhe: '--aani ilman tunnusta' };
+      liput.aani = arvo;
+      i += 1;
+    } else if (arg === '--haku') {
+      const arvo = argumentit[i + 1];
+      if (!arvo || String(arvo).startsWith('--')) return { ...liput, virhe: '--haku ilman hakusanaa' };
+      liput.haku = arvo;
+      i += 1;
+    } else if (arg === '--tempo') {
+      const arvo = Number(argumentit[i + 1]);
+      if (!Number.isFinite(arvo) || arvo < 0.5 || arvo > 2) {
+        return { ...liput, virhe: '--tempo vaatii luvun väliltä 0,5–2' };
+      }
+      liput.tempo = arvo;
+      i += 1;
+    } else if (arg === '--repliikit') {
+      // Pilkku tai välilyönti, kumpi tahansa (sama sietokyky kuin
+      // generoi-linssiluennat.mjs:n --pysakit).
+      const palat = [];
+      while (i + 1 < argumentit.length && !String(argumentit[i + 1]).startsWith('--')) {
+        i += 1;
+        palat.push(argumentit[i]);
+      }
+      if (!palat.length) return { ...liput, virhe: '--repliikit ilman avaimia' };
+      liput.valitut.push(...palat.join(',').split(/[,\s]+/).map((p) => p.trim()).filter(Boolean));
+    } else if (arg === '--pakota') {
+      liput.pakota = true;
+    } else if (arg === '--ei-vientia') {
+      liput.vienti = false;
+    } else if (arg === '--retry-reason') {
+      const arvo = argumentit[i + 1];
+      if (!arvo || String(arvo).startsWith('--')) return { ...liput, virhe: '--retry-reason ilman perustelua' };
+      liput.retryReason = String(arvo).trim();
+      i += 1;
+    } else {
+      return { ...liput, virhe: `tuntematon argumentti: ${arg}` };
+    }
+  }
+  return liput;
+}
+
+/**
+ * VALMIS TAULU LIITETTÄVÄKSI js/liviapuhe.js:ään.
+ *
+ * Ajon jälkeen ämpärissä on uusi teksti, mutta peli tietää siitä vasta
+ * kun LIVIAN_AANITETYT päivitetään. Työkalu ei kirjoita pelin
+ * lähdekoodia puolestasi — se tulostaa rivit, jotka taulun tilalle
+ * liitetään.
+ */
+export function tauluksi(rivit) {
+  const vartioidut = rivit.filter((rivi) => rivi.tila !== 'ei vartioitu');
+  const sisus = vartioidut
+    .map((rivi) => `  '${rivi.avain}': '${rivi.tiiviste}',`).join('\n');
+  return 'js/liviapuhe.js LIVIAN_AANITETYT (päivitä ajon jälkeen):\n'
+    + `export const LIVIAN_AANITETYT = {\n${sisus}\n};`;
+}
+
+/** Valitut repliikit ja tuntemattomat avaimet erikseen. */
+export function valitseRepliikit(kaikki, valinta = []) {
+  if (!valinta.length) return { tyot: kaikki, tuntemattomat: [] };
+  const avaimet = new Set(kaikki.map((rivi) => rivi.avain));
+  return {
+    tyot: kaikki.filter((rivi) => valinta.includes(rivi.avain)),
+    tuntemattomat: valinta.filter((avain) => !avaimet.has(avain)),
+  };
+}
+
+// ── apurit ─────────────────────────────────────────────────────────
+
+function aja(komento, argumentit, { salliVirhe = false } = {}) {
+  const ajo = spawnSync(komento, argumentit, {
+    encoding: 'utf8', maxBuffer: 64 * 1024 * 1024,
+  });
+  const loki = `${ajo.stdout ?? ''}${ajo.stderr ?? ''}`;
+  if (!salliVirhe && (ajo.error || ajo.status !== 0)) {
+    throw new Error(`${komento} epäonnistui (${ajo.error?.message ?? ajo.status}):\n`
+      + loki.slice(-2000));
+  }
+  return { koodi: ajo.status ?? 1, loki };
+}
+
+function onOlemassa(komento) {
+  return spawnSync('which', [komento], { encoding: 'utf8' }).status === 0;
+}
+
+function kestoSekunteina(polku) {
+  const { loki } = aja('ffprobe', [
+    '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', polku,
+  ]);
+  const arvo = Number(loki.trim());
+  if (!Number.isFinite(arvo) || arvo <= 0) throw new Error(`kestoa ei saatu: ${polku}`);
+  return arvo;
+}
+
+/** Kaatuu, jos polku ei ole .gitignoressa — mediaa ei viedä repoon. */
+function vaadiGitignore(polku) {
+  const ajo = spawnSync('git', ['-C', JUURI, 'check-ignore', '-q', polku], { encoding: 'utf8' });
+  if (ajo.status !== 0) {
+    throw new Error(`${polku} EI ole .gitignoressa — valmis äänite menisi repoon. `
+      + 'Media kuuluu ämpäriin (Raamattu: "kaikki aina ämpäriin").');
+  }
+}
+
+function julkinenOsoite(nimi, kansio) {
+  return `${julkinenJuuri()}${kansio}/${nimi}`;
+}
+
+/** HEAD julkiseen osoitteeseen: onko äänite jo ämpärissä. */
+function ampariHead(nimi, kansio) {
+  const url = julkinenOsoite(nimi, kansio);
+  if (!onOlemassa('curl')) return { url, koodi: null };
+  const { loki } = aja('curl', ['-sS', '-I', '--max-time', '30', url], { salliVirhe: true });
+  return { url, koodi: loki.match(/HTTP\/[\d.]+ (\d{3})/)?.[1] ?? null };
+}
+
+// ── ääniehdokkaat ──────────────────────────────────────────────────
+
+/** Ne piirteet, joita omistaja tilasi: käheä, nopea, eläväinen. */
+export const TOIVOTUT = [
+  'raspy', 'hoarse', 'gravelly', 'husky', 'rough',
+  'energetic', 'fast', 'quick', 'lively', 'quirky', 'excited', 'animated',
+];
+
+/** Äänen kuvaus yhtenä pikkukirjaimisena merkkijonona hakua varten. */
+export function aanenKuvaus(aani) {
+  const labels = Object.values(aani?.labels ?? {}).join(' ');
+  return [aani?.name, aani?.description, labels, (aani?.descriptives ?? []).join(' ')]
+    .filter(Boolean).join(' ').toLowerCase();
+}
+
+/** Osuvatko toivotut piirteet ääneen? Palauttaa osuneet piirteet. */
+export function osuvatPiirteet(aani, toivotut = TOIVOTUT) {
+  const kuvaus = aanenKuvaus(aani);
+  return toivotut.filter((piirre) => kuvaus.includes(piirre));
+}
+
+/** Yksi rivi ehdokkaasta lokiin: nimi, tunnus, piirteet, esikuuntelu. */
+function tulostaAani(aani, osumat) {
+  const labels = Object.entries(aani?.labels ?? {})
+    .map(([k, v]) => `${k}=${v}`).join(' ') || '(ei labeleita)';
+  const kielet = (aani?.verified_languages ?? [])
+    .map((k) => k.language ?? k.locale).filter(Boolean).join(',');
+  console.log(`  ${aani.name}  ·  ${aani.voice_id}`);
+  console.log(`    osumat: ${osumat.join(', ') || '—'}${kielet ? `  ·  kielet: ${kielet}` : ''}`);
+  console.log(`    labels: ${labels}`);
+  if (aani.preview_url) console.log(`    esikuuntelu: ${aani.preview_url}`);
+}
+
+async function haeJson(url, avain) {
+  const vastaus = await fetch(url, {
+    headers: { 'xi-api-key': avain },
+    signal: AbortSignal.timeout(60000),
+  });
+  if (!vastaus.ok) {
+    throw new Error(`HTTP ${vastaus.status}: ${(await vastaus.text()).slice(0, 300)}`);
+  }
+  return vastaus.json();
+}
+
+/**
+ * ÄÄNIEHDOKKAAT LOKIIN. Omat äänet (/v1/voices) aina, jaetut äänet
+ * (/v1/shared-voices) niillä hauilla, jotka rajapinta hyväksyy —
+ * jaettu haku on valinnainen, eikä sen kaatuminen saa kaataa ajoa.
+ * Ajo ei valitse ääntä: valinta on kuuntelupäätös.
+ */
+async function haeAanet(avain, haku = '') {
+  /*
+   * HAKU NIMELLÄ (6.9.2026): omistaja löysi äänen ElevenLabsin sivulta
+   * nimellä, ja voice_id tarvitaan ajoon. `--haku "Dr. Von"` listaa
+   * omista ja jaetuista äänistä ne, joiden nimessä haku esiintyy —
+   * piirresuodatinta ei silloin käytetä.
+   */
+  const nimiOsuu = (aani) => !haku
+    || String(aani?.name ?? '').toLowerCase().includes(haku.toLowerCase());
+  /*
+   * HAKU TUNNUKSELLA (12.9.2026). Omistaja kysyi: *"minkä niminen uusin
+   * pulun ääni on?"* — hän oli antanut ajolle voice_id:n eikä nimeä, ja
+   * nimi jää silloin kirjaamatta mihinkään. Nimihaku ei auta, koska se
+   * etsii nimestä; tunnuksesta nimeen pääsee vain rajapinnan omalla
+   * osoitteella /v1/voices/<id>. Tunnus tunnistetaan muodosta: 20
+   * merkkiä kirjaimia ja numeroita ilman välilyöntejä.
+   */
+  if (/^[A-Za-z0-9]{20}$/.test(haku)) {
+    try {
+      const aani = await haeJson(`${API}/v1/voices/${haku}`, avain);
+      console.log(`TUNNUS ${haku}\n`);
+      tulostaAani(aani, osuvatPiirteet(aani));
+      return;
+    } catch (virhe) {
+      console.log(`Tunnuksella ${haku} ei löytynyt ääntä (${virhe.message}); haetaan nimellä.\n`);
+    }
+  }
+  console.log(haku ? `HAKU NIMELLÄ "${haku}"\n` : 'OMAT ÄÄNET (/v1/voices)\n');
+  const omat = await haeJson(`${API}/v1/voices`, avain);
+  let omia = 0;
+  for (const aani of omat.voices ?? []) {
+    if (!nimiOsuu(aani)) continue;
+    const osumat = osuvatPiirteet(aani);
+    if (!haku && !osumat.length) continue;
+    tulostaAani(aani, osumat);
+    omia += 1;
+  }
+  console.log(omia ? '' : '  (ei osumia — koko lista alla)\n');
+  if (!omia && !haku) {
+    for (const aani of omat.voices ?? []) tulostaAani(aani, []);
+  }
+
+  console.log('\nJAETUT ÄÄNET (/v1/shared-voices)\n');
+  const haut = haku ? [`page_size=100&search=${encodeURIComponent(haku)}`] : [
+    'page_size=100&search=raspy',
+    'page_size=100&search=gravelly',
+    'page_size=100&search=energetic',
+    'page_size=100&language=fi',
+  ];
+  const nahdyt = new Set();
+  for (const haku of haut) {
+    let data = null;
+    try {
+      // eslint-disable-next-line no-await-in-loop
+      data = await haeJson(`${API}/v1/shared-voices?${haku}`, avain);
+    } catch (virhe) {
+      console.log(`  (${haku}: ${virhe.message.slice(0, 120)})`);
+      continue;
+    }
+    const aanet = data.voices ?? [];
+    console.log(`  — haku ${haku}: ${aanet.length} ääntä`);
+    for (const aani of aanet) {
+      const tunnus = aani.voice_id;
+      if (!tunnus || nahdyt.has(tunnus)) continue;
+      if (!nimiOsuu(aani)) continue;
+      const osumat = osuvatPiirteet(aani);
+      if (!haku && !osumat.length) continue;
+      nahdyt.add(tunnus);
+      tulostaAani(aani, osumat);
+    }
+  }
+  console.log(`\nEhdokkaita jaetuista äänistä: ${nahdyt.size}.`);
+  console.log('Kuuntele esikuuntelut ja anna valittu voice_id ajolle syötteessä "aani".');
+}
+
+// ── ketjun vaiheet ─────────────────────────────────────────────────
+
+/** Yksi maksullinen kutsu: yksi repliikki levylle. */
+async function haeApista(puhe, aani, avain, kohde) {
+  const osoite = `${PUHE_OSOITE}/${aani}?output_format=${PULU_ULOSTULOMUOTO}`;
+  const vastaus = await fetch(osoite, {
+    method: 'POST',
+    headers: { 'xi-api-key': avain, 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      text: puhe + LOPPUTAUKO,
+      model_id: MALLI,
+      /*
+       * ELEVENLABSIN OMAT OLETUKSET (omistaja 14.9.2026). Vain
+       * stability annetaan; similarity_boost, style ja
+       * use_speaker_boost jätetään pois pyynnöstä kokonaan, jolloin
+       * rajapinta käyttää omia oletuksiaan. Malli (eleven_v3), ääni
+       * (Flicker) ja tekstin tagit pysyvät ennallaan.
+       */
+      voice_settings: {
+        stability: STABILITY,
+        ...(TAGIT_KAYTOSSA ? {} : { speed: SPEED }),
+      },
+    }),
+    signal: AbortSignal.timeout(180000),
+  });
+  if (!vastaus.ok) {
+    // Virherunko näkyviin (avain ei ole siinä): muodon muutokset selviävät siitä.
+    throw new Error(`HTTP ${vastaus.status}: ${(await vastaus.text()).slice(0, 400)}`);
+  }
+  const data = Buffer.from(await vastaus.arrayBuffer());
+  writeFileSync(kohde, data);
+  return data.length;
+}
+
+/**
+ * Viimeistelysuodatin: häivytykset päihin, tason korjaus ja
+ * hiljainen häntä. `kesto` on leikatun äänen pituus sekunteina.
+ */
+export function viimeistelySuodatin({
+  kesto, korjausDb, tempo = TEMPO, haivytys = HAIVYTYS_S, padding = HANNAN_PADDING_S,
+}) {
+  if (!(kesto > 0)) throw new Error('keston pitää olla positiivinen');
+  const h = Math.min(haivytys, kesto / 4);
+  const ulosAlkaa = Math.max(0, kesto - h);
+  return [
+    `afade=t=in:st=0:d=${h.toFixed(3)}`,
+    `afade=t=out:st=${ulosAlkaa.toFixed(3)}:d=${h.toFixed(3)}`,
+    // Nopeutus vain jos sitä on erikseen pyydetty: oletuksella 1,0
+    // atempo jää kokonaan pois eikä ääntä resamplata turhaan.
+    ...(tempo === 1 ? [] : [`atempo=${tempo.toFixed(3)}`]),
+    `volume=${korjausDb.toFixed(2)}dB`,
+    `apad=pad_dur=${padding.toFixed(3)}`,
+  ].join(',');
+}
+
+/**
+ * KAIKUN SUODATINKETJU. Märkä raita (kaiku + vaimennus) häipyy
+ * `kesto` sekunnissa pois samalla kun kuiva raita nousee täyteen
+ * tasoon — pulu lähestyy ja on perillä.
+ */
+export function kaikuSuodatin({ kesto = KAIUN_KESTO, vaimennus = KAIUN_VAIMENNUS } = {}) {
+  const k = kesto.toFixed(2);
+  const v = vaimennus.toFixed(2);
+  /*
+   * Lauseke on YKSINKERTAISISSA LAINAUSMERKEISSÄ eikä pilkkuja
+   * kenoteta: ffmpegin suodatinkielessä lainausmerkkien sisällä
+   * kenoviiva olisi kirjaimellinen merkki, ja lausekkeen jäsennys
+   * kaatuisi (ffmpegin oma esimerkki volume-suodattimen ohjeessa on
+   * samassa muodossa). Argumentit menevät ffmpegille suoraan
+   * argv-taulukossa, joten shelliä ei ole välissä.
+   */
+  return [
+    '[0:a]asplit=2[kauas][lahella]',
+    // aecho vaatii yhtä monta vaimennusta kuin viivettä (340|620 →
+    // 0.45|0.3); yksi vaimennus kaatoi ffmpegin 6.9.2026 ajossa.
+    `[kauas]aecho=0.8:0.85:340|620:0.45|0.3,volume='${v}*max(0,1-t/${k})':eval=frame[marka]`,
+    `[lahella]volume='min(1,t/${k})':eval=frame[kuiva]`,
+    '[marka][kuiva]amix=inputs=2:normalize=0[ulos]',
+  ].join(';');
+}
+
+/** Leikkaa hiljaisuus, normalisoi taso ja koodaa mp3. */
+function viimeistele(lahde, kohde, tyokansio, tempo) {
+  const wav = join(tyokansio, 'leikattu.wav');
+  aja('ffmpeg', [
+    '-y', '-v', 'error', '-i', lahde,
+    '-af', `aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=mono,${
+      leikkaaHiljaisuusSuodatin()}`,
+    '-c:a', 'pcm_s16le', wav,
+  ]);
+  const leikattu = kestoSekunteina(wav);
+
+  // Vaihe 1: mittaus. Vaihe 2: yksi lineaarinen vahvistus.
+  const mittausLoki = aja('ffmpeg', [
+    '-hide_banner', '-v', 'info', '-i', wav,
+    '-af', `loudnorm=I=${TAVOITE_LUFS}:TP=-2:LRA=11:print_format=json`,
+    '-f', 'null', '-',
+  ]).loki;
+  let mitattu = tulkitseLoudnorm(mittausLoki);
+  /*
+   * LYHYT HUUDAHDUS (7.9.2026 ajo: "Kääk." kaatoi ajon). EBU R128:n
+   * integroitu taso tarvitsee vähintään 400 ms:n lohkon; alle sekunnin
+   * huudahdus leikattuna antaa input_i = -inf. Mitataan silloin
+   * hiljaisuudella jatkettu kopio (apad) — täyte ei muuta integroitua
+   * tasoa gatingin takia — ja jos sekään ei anna lukua, käytetään
+   * huippua: korjaus vie todellisen huipun -3 dBTP:hen.
+   */
+  if (!mitattu) {
+    const jatkettuLoki = aja('ffmpeg', [
+      '-hide_banner', '-v', 'info', '-i', wav,
+      '-af', `apad=whole_dur=2,loudnorm=I=${TAVOITE_LUFS}:TP=-2:LRA=11:print_format=json`,
+      '-f', 'null', '-',
+    ]).loki;
+    mitattu = tulkitseLoudnorm(jatkettuLoki);
+    if (mitattu) console.log('   HUOM: lyhyt äänite, taso mitattu hiljaisuudella jatkettuna');
+  }
+  if (!mitattu) {
+    const huippu = Number((/"input_tp"\s*:\s*"([^"]+)"/.exec(mittausLoki) || [])[1]);
+    if (!Number.isFinite(huippu)) {
+      throw new Error(`loudnormin mittaus ei tuottanut lukua:\n${mittausLoki.slice(-800)}`);
+    }
+    mitattu = { taso: TAVOITE_LUFS - (-3 - huippu), huippu, kirjo: 0 };
+    console.log(`   HUOM: tasoa ei voitu mitata, korjaus huipun mukaan (${huippu.toFixed(1)} dBTP → -3)`);
+  }
+  const korjaus = TAVOITE_LUFS - mitattu.taso;
+  aja('ffmpeg', [
+    '-y', '-v', 'error', '-i', wav,
+    '-af', viimeistelySuodatin({ kesto: leikattu, korjausDb: korjaus, tempo }),
+    '-ac', '1', '-ar', '44100', '-c:a', 'libmp3lame', '-b:a', '128k', kohde,
+  ]);
+  return { leikattu, mitattu, korjaus };
+}
+
+/** Saapumisversio: kaukainen kaikuinen alku, joka häipyy pois. */
+function teeKaiku(lahde, kohde) {
+  aja('ffmpeg', [
+    '-y', '-v', 'error', '-i', lahde,
+    '-filter_complex', kaikuSuodatin(), '-map', '[ulos]',
+    '-ac', '1', '-ar', '44100', '-c:a', 'libmp3lame', '-b:a', '128k', kohde,
+  ]);
+  return kestoSekunteina(kohde);
+}
+
+/** Kestorajat erikseen: ainoa tarkistus, kun käsittely on pois. */
+export function tarkistaKesto(pituus) {
+  return (pituus < KESTO_MIN_S || pituus > KESTO_MAX_S)
+    ? [`kesto ${pituus.toFixed(2)} s ei ole välillä ${KESTO_MIN_S}–${KESTO_MAX_S} s`] : [];
+}
+
+/** Valmiin äänitteen tarkistukset: kesto ja taso. */
+function tarkista(kohde) {
+  const pituus = kestoSekunteina(kohde);
+  /*
+   * Käsittelyn ollessa pois taso on se, jonka malli antoi: sitä ei ole
+   * korjattu eikä sitä siksi mitata tavoitetta vasten. Kesto on ainoa
+   * validointi (omistaja 14.9.2026). ffprobe vain LUKEE keston eikä
+   * koske tavuihin — siksi se saa jäädä.
+   */
+  if (!LIVIA_KASITTELY) return { pituus, taso: null, virheet: tarkistaKesto(pituus) };
+  const taso = tulkitseEbur128(aja('ffmpeg', [
+    '-hide_banner', '-v', 'info', '-i', kohde, '-af', 'ebur128=peak=true',
+    '-f', 'null', '-',
+  ]).loki);
+  const virheet = tarkistaKesto(pituus);
+  if (taso === null) {
+    // Alle sekunnin huudahduksesta ebur128 ei anna integroitua tasoa;
+    // taso on jo korjattu huipun mukaan (viimeistele), joten se ei ole virhe.
+    if (pituus >= 1.0) virheet.push('tasoa ei saatu mitattua (ebur128)');
+  } else if (pituus < 1.0 && Math.abs(taso - TAVOITE_LUFS) > LUFS_TOLERANSSI) {
+    // Alle sekunnin huudahduksen integroitu taso on epävarma (R128:n
+    // 400 ms lohkot): poikkeama kirjataan, ei hylätä (7.9.2026).
+    console.log(`   HUOM: lyhyt huudahdus, taso ${taso.toFixed(1)} LUFS hyväksytään`);
+  } else if (Math.abs(taso - TAVOITE_LUFS) > LUFS_TOLERANSSI) {
+    virheet.push(`taso ${taso.toFixed(1)} LUFS, tavoite ${TAVOITE_LUFS} (±${LUFS_TOLERANSSI})`);
+  }
+  return { pituus, taso, virheet };
+}
+
+/** Vie valmis tiedosto ämpäriin (sama komento kuin muissakin ääniajoissa). */
+function vieAmpariin(kohde, nimi, kansio, tyyppi = 'audio/mpeg') {
+  const tili = process.env.R2_ACCOUNT_ID;
+  const ampari = process.env.R2_BUCKET;
+  const avain = process.env.AWS_ACCESS_KEY_ID ?? process.env.R2_ACCESS_KEY_ID;
+  const salaisuus = process.env.AWS_SECRET_ACCESS_KEY ?? process.env.R2_SECRET_ACCESS_KEY;
+  const puuttuu = [
+    !tili && 'R2_ACCOUNT_ID', !ampari && 'R2_BUCKET',
+    !avain && 'R2_ACCESS_KEY_ID', !salaisuus && 'R2_SECRET_ACCESS_KEY',
+  ].filter(Boolean);
+  if (puuttuu.length) throw new Error(`vienti ei onnistu, puuttuu: ${puuttuu.join(', ')}`);
+  if (!onOlemassa('aws')) throw new Error('aws-cli puuttuu — vienti tarvitsee sen.');
+
+  aja('aws', [
+    's3', 'cp', kohde, `s3://${ampari}/${kansio}/${nimi}`,
+    '--endpoint-url', `https://${tili}.r2.cloudflarestorage.com`,
+    '--no-progress',
+    '--content-type', tyyppi,
+    '--cache-control', 'public, max-age=2592000',
+  ]);
+}
+
+// ── pääohjelma ─────────────────────────────────────────────────────
+
+async function main() {
+  const liput = tulkitseArgumentit(process.argv.slice(2));
+  if (liput.virhe) {
+    console.error(`${liput.virhe}.`);
+    console.error('Käyttö: node tools/generoi-pulu.mjs [--aanet] [--kuiva] '
+      + '[--aani <voice_id>] [--repliikit avaus-1,paljastus-1] [--pakota] '
+      + '[--ei-vientia] [--tempo 1.08] [--retry-reason <perustelu>]');
+    process.exit(1);
+  }
+
+  const avain = process.env.ELEVEN_API_KEY ?? process.env.ELEVENLABS_API_KEY;
+
+  if (liput.toiminto === 'aanet') {
+    if (!avain) {
+      console.error('ELEVEN_API_KEY puuttuu ympäristöstä — ääniä ei voi hakea.');
+      process.exit(1);
+    }
+    console.log('ÄÄNIEHDOKKAAT PULULLE — haetaan piirteillä: '
+      + `${TOIVOTUT.join(', ')}.\n`);
+    await haeAanet(avain, liput.haku);
+    process.exit(0);
+  }
+
+  const kaikki = repliikit();
+  const { tyot, tuntemattomat } = valitseRepliikit(kaikki, liput.valitut);
+  if (tuntemattomat.length) {
+    console.error(`Näitä repliikkejä ei ole: ${tuntemattomat.join(', ')}. `
+      + `Avaimet: ${kaikki.map((r) => r.avain).join(', ')}.`);
+    process.exit(1);
+  }
+  if (!tyot.length) {
+    console.error('Yhtään repliikkiä ei valittu.');
+    process.exit(1);
+  }
+  const kansio = ampariKansio();
+  const sourceCommit = aja('git', ['-C', JUURI, 'rev-parse', 'HEAD']).loki.trim();
+  const rajattuEra = liput.valitut.length > 0;
+  if (liput.toiminto !== 'kuiva' && (!rajattuEra || tyot.length > TUOTANTOERAN_MAX)) {
+    console.error(`Maksullinen tuotanto vaatii 1–${TUOTANTOERAN_MAX} eksplisiittistä --repliikit-avainta; `
+      + 'koko repertuaaria ei generoida yhdellä vahinkokomennolla.');
+    process.exit(1);
+  }
+  /*
+   * RAAKAVIENTI ON PAKOLLINEN. Tarkistus tehdään ennen kuittia ja
+   * ennen yhtäkään API-kutsua, jotta kiellettyä ajoa ei makseta.
+   */
+  const este = raakavientiEste(liput);
+  if (este) {
+    console.error(este);
+    process.exit(1);
+  }
+  const suunnitelmakuitti = kokoaTuotantokuitti(tyot, {
+    sourceCommit, voiceId: liput.aani, tempo: liput.tempo,
+    pakota: liput.pakota, retryReason: liput.retryReason, staged: rajattuEra,
+  });
+
+  if (liput.toiminto === 'kuiva') {
+    console.log('KUIVA AJO (--kuiva) — APIa ei kutsuta, ämpäriin ei viedä. '
+      + `${tyot.length} repliikkiä, malli ${MALLI}, tempo ${liput.tempo}.`);
+    console.log(`  voice_settings: stability ${STABILITY} — similarity_boost, style ja `
+      + 'use_speaker_boost jätetään pois (ElevenLabsin omat oletukset, omistaja 14.9.2026).');
+    console.log(`  ulostulomuoto: ${PULU_ULOSTULOMUOTO} (ElevenLabs Pro, omistaja 14.9.2026).`);
+    console.log(`  jälkikäsittely: ${LIVIA_KASITTELY ? 'ffmpeg-ketju' : 'EI MITÄÄN — mallin mp3 '
+      + 'sellaisenaan, sama sha256 raaka- ja final-avaimessa'}.`);
+    console.log(`  raakatuotokset menisivät avaimeen ${
+      raakaAmpariKansio(kansio, suunnitelmakuitti.batchId)}/ :`);
+    for (const tyo of tyot) {
+      console.log(`    ${raakaAmpariKansio(kansio, suunnitelmakuitti.batchId)}/raaka-${tyo.nimi}`);
+    }
+    console.log('  raakavienti on pakollinen: --ei-vientia kaataa maksullisen ajon.');
+    for (const tyo of tyot) {
+      console.log(`\n${kansio}/${tyo.nimi}${tyo.kaikuNimi ? ` (+ ${tyo.kaikuNimi})` : ''}`);
+      console.log(`  teksti (${tyo.merkit} merkkiä, puhe ~${tyo.arvioSekunteina} s, `
+        + `kupla ${tyo.kuplaSekunteina} s): "${tyo.teksti}"`);
+      console.log(`  mallille: "${tyo.puhe}"`);
+      console.log(`  tiiviste ${tyo.tiiviste} — ${tyo.tila.toUpperCase()}`);
+      if (tyo.arvioSekunteina > tyo.kuplaSekunteina) {
+        console.log('  PITKÄ: kupla odottaa puheen loppuun ja jää siksi ruudulle '
+          + 'lukuaikaansa pidemmäksi — lyhennä repliikkiä noin '
+          + `${Math.ceil(tyo.merkit - tyo.kuplaSekunteina * MERKKIA_SEKUNNISSA)} `
+          + 'merkkiä (tai nopeuta tempoa), jos tahti tuntuu hitaalta.');
+      }
+    }
+    const ajettavat = tyot.filter((tyo) => tyo.tila === 'uusi' || tyo.tila === 'muuttunut');
+    console.log(`\nKuiva ajo valmis: ${tyot.length} repliikkiä, `
+      + `${new Set(tyot.map((t) => t.nimi)).size} eri tiedostonimeä. `
+      + 'Merkintä PITKÄ tarkoittaa, että puhe on kuplan lukuaikaa pidempi ja '
+      + 'kupla venyy sen mittaan (kupla odottaa puheen loppuun) — '
+      + 'kenttä, joka on yhä yksi pitkä merkkijono (pinoutuva puheenvuoro), '
+      + 'mitataan osien lukuaikojen summana.');
+    if (ajettavat.length) {
+      console.log('\nAJOA ODOTTAVAT (peli on näissä hiljaa siihen asti):');
+      for (const tyo of ajettavat) {
+        console.log(`  ${tyo.avain.padEnd(16)} ${tyo.tila.toUpperCase().padEnd(10)} `
+          + `~${tyo.arvioSekunteina} s  "${tyo.teksti}"`);
+      }
+      console.log(`  aja: node tools/generoi-pulu.mjs --aani ${liput.aani} --pakota `
+        + `--repliikit ${ajettavat.map((tyo) => tyo.avain).join(',')}`);
+    } else {
+      console.log('\nKaikki vartioidut repliikit ovat ajan tasalla.');
+    }
+    console.log(`\n${tauluksi(tyot)}`);
+    process.exit(0);
+  }
+
+  for (const komento of ['ffmpeg', 'ffprobe']) {
+    if (!onOlemassa(komento)) {
+      console.error(`${komento} puuttuu polusta — viimeistely tarvitsee sen.`);
+      process.exit(1);
+    }
+  }
+  if (!avain) {
+    console.error('ELEVEN_API_KEY puuttuu ympäristöstä — puhetta ei voi generoida.');
+    console.error('Kuivan ajon saa ilman avainta: node tools/generoi-pulu.mjs --kuiva');
+    process.exit(1);
+  }
+  if (!liput.aani) {
+    console.error('Äänitunnus puuttuu. Käytä omistajan lukittua oletusta tai anna '
+      + 'tietoinen koestustunnus lipulla --aani <voice_id>.');
+    process.exit(1);
+  }
+
+  const kohdekansio = resolve(JUURI, KOHDE_KANSIO);
+  const raakakansio = resolve(JUURI, RAAKA_KANSIO);
+  const kuittikansio = resolve(JUURI, KUITTI_KANSIO);
+  vaadiGitignore(kohdekansio);
+  vaadiGitignore(raakakansio);
+  vaadiGitignore(kuittikansio);
+  mkdirSync(kohdekansio, { recursive: true });
+  mkdirSync(raakakansio, { recursive: true });
+  const suunnitelmaPolku = kirjoitaTuotantokuitti(kuittikansio, 'planned', suunnitelmakuitti);
+  console.log(`Tuotantokuitti ennen API-kutsuja: ${suunnitelmaPolku}`);
+  if (liput.vienti) {
+    const nimi = `${suunnitelmakuitti.batchId}.planned.json`;
+    const kuittienKansio = `${kansio}/kuitit`;
+    const vanha = ampariHead(nimi, kuittienKansio);
+    if (vanha.koodi === '200') {
+      throw new Error(`tuotantoerä ${suunnitelmakuitti.batchId} on jo aloitettu (${vanha.url}); `
+        + 'anna uusinnalle --retry-reason, älä veloita samaa erää vahingossa uudelleen');
+    }
+    vieAmpariin(suunnitelmaPolku, nimi, kuittienKansio, 'application/json');
+    console.log(`Suunnitelmakuitti tallennettu ennen API-kutsuja: ${vanha.url}`);
+  }
+
+  const raakaKansioAmpari = raakaAmpariKansio(kansio, suunnitelmakuitti.batchId);
+  console.log(`Raakatuotokset viedään avaimeen ${raakaKansioAmpari}/ (ei koskaan ylikirjoiteta).`);
+
+  const tyokansio = mkdtempSync(join(tmpdir(), 'pulu-'));
+  const kestot = new Map();
+  const kuittitulokset = new Map();
+  const valmiit = [];
+  let ohitettuja = 0;
+  let virheita = 0;
+  try {
+    for (const tyo of tyot) {
+      const soitettava = tyo.kaikuNimi ?? tyo.nimi;
+      console.log(`\n── ${kansio}/${tyo.nimi}${tyo.kaikuNimi ? ` (+ ${tyo.kaikuNimi})` : ''}`);
+      console.log(`   "${tyo.teksti}"`);
+      console.log(`   mallille: "${tyo.puhe}"`);
+
+      // Rajattu erä ei koskaan päättele nykyisestä live-avaimesta, että
+      // uusi tekstiversio olisi jo generoitu: kandidaatti saa oman
+      // batch-avaimensa eikä liveä ylikirjoiteta ennen koodideployta.
+      if (!liput.pakota && !rajattuEra) {
+        const { url, koodi } = ampariHead(soitettava, kansio);
+        if (koodi === '200') {
+          console.log(`   on jo ämpärissä (${url}) — ohitetaan. --pakota kirjoittaa yli.`);
+          ohitettuja += 1;
+          kuittitulokset.set(tyo.avain, {
+            status: 'skipped-existing', retryReason: liput.retryReason ?? 'public-object-exists',
+          });
+          continue;
+        }
+      }
+
+      const kohde = join(kohdekansio, tyo.nimi);
+      const lahde = join(raakakansio, `raaka-${tyo.nimi}`);
+      // eslint-disable-next-line no-await-in-loop
+      const tavut = await haeApista(tyo.puhe, liput.aani, avain, lahde);
+      const raakaKesto = kestoSekunteina(lahde);
+      console.log(`   API: ${(tavut / 1024).toFixed(0)} kt → ${lahde}`);
+
+      /*
+       * RAAKA ÄMPÄRIIN ENNEN KÄSITTELYÄ. Tämä on ainoa kohta, jossa
+       * mallin alkuperäinen tuotos on olemassa; viimeistely kirjoittaa
+       * eri tiedostoon, mutta ajon työkansio katoaa Actions-ajon
+       * mukana. Vienti ennen viimeistelyä tarkoittaa myös, että
+       * hylätynkin äänitteen raaka säilyy — juuri siitä uusi leikkaus
+       * tehdään ilmaiseksi.
+       */
+      const raakaNimi = `raaka-${tyo.nimi}`;
+      vieAmpariin(lahde, raakaNimi, raakaKansioAmpari);
+      const raakaLuku = ampariHead(raakaNimi, raakaKansioAmpari);
+      if (raakaLuku.koodi !== null && raakaLuku.koodi !== '200') {
+        throw new Error(`raakatiedoston vienti epäonnistui (${raakaLuku.url} → HTTP `
+          + `${raakaLuku.koodi}); ajoa ei jatketa, koska alkuperäinen katoaisi`);
+      }
+      const raakaTiedot = {
+        fileName: raakaNimi,
+        objectKey: `${raakaKansioAmpari}/${raakaNimi}`,
+        url: raakaLuku.url,
+        sha256: sha256(readFileSync(lahde)),
+        bytes: statSync(lahde).size,
+        actualDurationSeconds: Number(raakaKesto.toFixed(3)),
+      };
+      console.log(`   raaka talteen: ${raakaTiedot.url}`);
+
+      if (LIVIA_KASITTELY) {
+        const { leikattu, mitattu, korjaus } = viimeistele(lahde, kohde, tyokansio, liput.tempo);
+        console.log(`   leikkaus: ${leikattu.toFixed(2)} s, taso ${mitattu.taso.toFixed(1)} LUFS, `
+          + `korjaus ${korjaus.toFixed(2)} dB, tempo ${liput.tempo}`);
+      } else {
+        /*
+         * EI KÄSITTELYÄ: sama tavujono raakaan ja finaaliin. Pelkkä
+         * kopio, ei purkua eikä uudelleenkoodausta — juuri se toinen
+         * häviöllinen sukupolvi oli omistajan kuulema häiriö.
+         */
+        copyFileSync(lahde, kohde);
+        console.log('   ei käsittelyä (omistaja 14.9.2026): mallin mp3 sellaisenaan.');
+      }
+
+      const tulos = tarkista(kohde);
+      console.log(`   valmis: ${tulos.pituus.toFixed(2)} s, `
+        + `${tulos.taso === null ? '?' : tulos.taso.toFixed(1)} LUFS`);
+      if (tulos.virheet.length) {
+        for (const virhe of tulos.virheet) console.error(`   VIRHE: ${virhe}`);
+        virheita += 1;
+        kuittitulokset.set(tyo.avain, {
+          status: 'validation-failed', retryReason: tulos.virheet.join('; '),
+          rawArtifact: raakaTiedot,
+          finalArtifact: {
+            fileName: tyo.nimi,
+            sha256: sha256(readFileSync(kohde)), bytes: statSync(kohde).size,
+            actualDurationSeconds: Number(tulos.pituus.toFixed(3)),
+          },
+        });
+        // Kelvotonta äänitettä ei viedä; tiedosto jää levylle
+        // kuunneltavaksi, koska kutsu on jo maksettu.
+        continue;
+      }
+      if (tulos.pituus > tyo.kuplaSekunteina) {
+        console.log(`   HUOM: ääni ${tulos.pituus.toFixed(2)} s > kuplan aika `
+          + `${tyo.kuplaSekunteina} s — kupla odottaa puheen loppuun `
+          + '(js/liviapuhe.js livianKuplanAjastin), mutta seisoo ruudulla sitä '
+          + 'kauemmin; lyhennä repliikkiä jos tahti tuntuu hitaalta.');
+      }
+      const rivi = { kesto: Number(tulos.pituus.toFixed(2)), kaikuKesto: null };
+      valmiit.push(tyo.nimi);
+      if (tyo.kaikuNimi && !LIVIA_KASITTELY) {
+        // Kaiku on ffmpeg-käsittelyä: se putoaa pois samalla päätöksellä
+        // (kaiku on muutenkin pois pelissä, js/liviapuhe.js LIVIAN_KAIKU).
+        console.log(`   kaikuversiota ${tyo.kaikuNimi} ei tehdä: käsittely on pois.`);
+      } else if (tyo.kaikuNimi) {
+        /*
+         * Saapumisrepliikin kaikuversio. Tasoa ei mitata: alun väistely
+         * laskee integroitua tasoa tarkoituksella (ks. KAIKU
+         * SAAPUMISREPLIIKEISSÄ). Kesto tarkistetaan kuivan version
+         * kestoa vasten — kaiun häntä saa venyttää sitä sekunnilla.
+         */
+        const kaikuKohde = join(kohdekansio, tyo.kaikuNimi);
+        const kaikuKesto = teeKaiku(kohde, kaikuKohde);
+        console.log(`   kaiku: ${kaikuKesto.toFixed(2)} s → ${tyo.kaikuNimi} `
+          + `(häipymä ${KAIUN_KESTO} s)`);
+        rivi.kaikuKesto = Number(kaikuKesto.toFixed(2));
+        valmiit.push(tyo.kaikuNimi);
+      }
+      kestot.set(tyo.avain, rivi);
+      kuittitulokset.set(tyo.avain, {
+        status: 'generated', retryReason: liput.retryReason ?? (liput.pakota ? 'forced-regeneration' : null),
+        rawArtifact: raakaTiedot,
+        finalArtifact: {
+          fileName: tyo.nimi,
+          sha256: sha256(readFileSync(kohde)), bytes: statSync(kohde).size,
+          actualDurationSeconds: Number(tulos.pituus.toFixed(3)),
+        },
+      });
+    }
+
+    // Manifesti kuvaa AINA koko repliikistön, ei vain tämän ajon osaa:
+    // se on ämpärin sisällysluettelo eikä ajon kuitti.
+    const manifesti = kokoaManifesti(kaikki, kestot);
+    const manifestiPolku = join(kohdekansio, MANIFESTI);
+    if (!rajattuEra) {
+      writeFileSync(manifestiPolku, `${JSON.stringify(manifesti, null, 2)}\n`);
+      console.log(`\nManifesti: ${manifestiPolku}`);
+    } else {
+      console.log('\nKoko repertuaarin manifestia ei kirjoiteta rajatussa erässä; '
+        + 'muiden äänitteiden kestot eivät saa muuttua null-arvoiksi.');
+    }
+
+    const valmisKuitti = kokoaTuotantokuitti(tyot, {
+      sourceCommit, voiceId: liput.aani, tempo: liput.tempo,
+      pakota: liput.pakota, retryReason: liput.retryReason,
+      status: virheita ? 'completed-with-errors' : 'completed', tulokset: kuittitulokset,
+      staged: rajattuEra,
+    });
+    const valmisKuittiPolku = kirjoitaTuotantokuitti(kuittikansio, 'completed', valmisKuitti);
+    console.log(`Tuotantokuitti tuloksista: ${valmisKuittiPolku}`);
+
+    if (liput.vienti) {
+      const stagingKansio = rajattuEra ? `${kansio}/erat/${valmisKuitti.batchId}` : kansio;
+      const finalKansio = rajattuEra
+        ? `${kansio}/versiot/${sourceCommit.slice(0, 12)}/${valmisKuitti.batchId}` : kansio;
+      for (const nimi of valmiit) {
+        vieAmpariin(join(kohdekansio, nimi), nimi, stagingKansio);
+        if (rajattuEra) vieAmpariin(join(kohdekansio, nimi), nimi, finalKansio);
+      }
+      if (!rajattuEra) vieAmpariin(manifestiPolku, MANIFESTI, kansio, 'application/json');
+      vieAmpariin(valmisKuittiPolku, `${valmisKuitti.batchId}.completed.json`, `${kansio}/kuitit`, 'application/json');
+    }
+  } finally {
+    rmSync(tyokansio, { recursive: true, force: true });
+  }
+
+  console.log('');
+  if (!liput.vienti) {
+    console.log('Vienti ohitettiin (--ei-vientia). Tiedostot:');
+    for (const nimi of valmiit) console.log(`  ${join(kohdekansio, nimi)}`);
+  } else {
+    console.log(`${liput.valitut.length ? 'Viety versionoituun staging-erään' : 'Viety ämpäriin'}: `
+      + `${valmiit.length} tiedostoa${liput.valitut.length ? ' (live-avaimia ei muutettu)' : ' + manifesti'}`
+      + `${ohitettuja ? `, ohitettu jo olemassa olevia: ${ohitettuja}` : ''}.`);
+    const readbackKansiot = liput.valitut.length ? [
+      `${kansio}/erat/${suunnitelmakuitti.batchId}`,
+      `${kansio}/versiot/${sourceCommit.slice(0, 12)}/${suunnitelmakuitti.batchId}`,
+    ] : [kansio];
+    for (const readbackKansio of readbackKansiot) {
+      for (const nimi of valmiit) {
+        const { url, koodi } = ampariHead(nimi, readbackKansio);
+        const kunnossa = koodi === '200';
+        if (!kunnossa) virheita += 1;
+        console.log(`  ${url} → HTTP ${koodi ?? '?'}${kunnossa ? '' : '  ← EI VASTAA'}`);
+      }
+    }
+    console.log('');
+    console.log('KUUNTELE äänet ennen kuin ne jäävät peliin: pulun pitää kuulostaa '
+      + 'käheältä ja nopealta, ja saapumisrepliikin kaiun pitää häipyä pois '
+      + 'ennen kuin lause loppuu.');
+    /*
+     * TAULU PÄIVITETTÄVÄKSI. Ämpärissä on nyt uusi teksti, mutta peli
+     * vaikenee siitä niin kauan kuin js/liviapuhe.js:n LIVIAN_AANITETYT
+     * kertoo vanhan tiivisteen. Työkalu ei kirjoita pelin lähdekoodia
+     * puolestasi — se antaa rivit, jotka liitetään taulun tilalle.
+     */
+    console.log('');
+    console.log(tauluksi(kaikki));
+  }
+  process.exit(virheita ? 1 : 0);
+}
+
+if (process.argv[1] === TAMA) await main();

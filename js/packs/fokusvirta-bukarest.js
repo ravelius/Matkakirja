@@ -177,17 +177,75 @@ export const FOKUSVIRTA_BUKAREST = {
 
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 0d1c043fa97375814165c5604b059614ba0ce740984e222c8ef95a7430564220. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bukarest-r20260909-paper-v4.jpg",
+      lyhyt: "Bukarest, 1873. Majatalon pihassa tavara ja matkustaja lepäsivät yhdessä.",
+      selite: 'Manucin majatalon puuparvet kiersivät pihaa, jossa mies nukkui säkkinsä päällä. Kuvasin tavaran ja vartijan yhteisen levon ennen kuin keittiön tuoksu vei huomioni.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://muzeulbucurestiului.ro/expozitia-tematica-hanurile-uitate-ale-bucurestilor/","https://www.hanulluimanuc.ro/"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bukarest-r20260911-paper2-v1.jpg",
+      lyhyt: "Bukarest, 1873. Keittiön tuoksu voitti pylväiden laskemisen.",
+      selite: 'Parven kaide johti katseen avoimeen keittiöön, jossa padan kansi nousi ja höyry karkasi. Jätin pylväät laskematta ja lähdin portaita alas.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://muzeulbucurestiului.ro/expozitia-tematica-hanurile-uitate-ale-bucurestilor/","https://www.hanulluimanuc.ro/"],
+    },
     /* Kaanon, kohta 1 — paikkarivi, teksti ja luenta sellaisinaan. */
     paikkarivi: 'Bukarest, lokakuussa 1873. Ensimmäinen halla; savu nousee '
-      + 'suoraan.',
-    teksti: 'Nousin tornin huipulle, jonka Kaarle XII:n sotilaat rakensivat '
-      + 'paettuaan Poltavasta — ovensuussa vartioi yhä kaksi maalattua '
-      + 'ruotsalaista. Koko kaupunki levittäytyi allani. Toivon, että tämä '
-      + 'torni seisoo vielä, kun sinä tulet.',
-    luenta: '[curious] Nousin tornin huipulle, jonka Kaarle XII:n sotilaat '
-      + 'rakensivat paettuaan Poltavasta — ovensuussa vartioi yhä kaksi '
-      + 'maalattua ruotsalaista. [warmly] Koko kaupunki levittäytyi allani. '
-      + '[softly] Toivon, että tämä torni seisoo vielä, kun sinä tulet.',
+      + 'suoraan; puntari korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 350 merkkiä (yläraja 400). */
+    teksti: "Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.",
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: majatalon parvien kuvaus ja "Menin alas ennen
+     * kuin ehdin laskea parven pylväät" (havainnot).
+     */
+    reaktiot: [
+  {
+    "id": "bukarest.r1",
+    "ankkuri": "uutta raitiovaunua vetivät hevoset",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "bukarest.r2",
+    "ankkuri": "kehumaan hevosia: ne vetivät meidät",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "bukarest.r3",
+    "ankkuri": "Pysähdyimme juottamaan niitä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "bukarest.r4",
+    "ankkuri": "koko uudistus hengitti ja tarvitsi vettä",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. [thoughtfully] Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-bukarest.mp3',
     /*
      * KUVA: Carol Szathmarin valokuva Colțean tornista (kaanon, kohta 1).
@@ -199,6 +257,7 @@ export const FOKUSVIRTA_BUKAREST = {
      */
     kuva: {
       tiedosto: 'Carol Popp de Szathmari - Colţa.jpg',
+      lyhyt: 'Colțean torni Bukarestissa; Carol Szathmari valokuvasi sen 1867, kuusi vuotta ennen isoisän käyntiä.',
       selite: 'Colțean torni Bukarestissa. Carol Szathmari valokuvasi sen '
         + 'vuonna 1867, kuusi vuotta ennen isoisän käyntiä.',
       lahde: 'Carol Szathmari 1867, Wikimedia Commons (public domain)',
@@ -237,6 +296,24 @@ export const FOKUSVIRTA_BUKAREST = {
    */
   pollo: {
     /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bukarest-p1-r20260914-tarina-v1.jpg',
+        lyhyt: 'Bukarest: lintuharrastajat kiikaroivat Văcăreștin ruovikossa.',
+        selite: 'Hylätyn tekojärvihankkeen betonivallien sisään on kehittynyt Bukarestin kaupunkiluonnonpuisto. Ruovikossa pesii kymmeniä lintulajeja keskellä kerrostaloja.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://parculnaturalbucuresti.ro/en/the-park/',
+        ],
+      },
+    ],
+    /*
      * LIVIAN MAADOITUS (Fablen kaanon 27.8.2026, TUURAAJA-KEHYS).
      *
      * Maadoitus koskee KIIPEÄMISEN SÄVYÄ ("Nousin tornin huipulle…
@@ -255,17 +332,33 @@ export const FOKUSVIRTA_BUKAREST = {
      * Loppu myöntää isoisälle sen, mikä pitää paikkansa: torni oli yli
      * vuosisadan Bukarestin korkein rakennus (sama täky).
      */
-    maadoitus: 'Kiipeäminen kuulostaa täs ihan valloitukselta. Mut '
-      + 'maanjäristys oli pudottanut tornin huipun ja kellon jo '
-      + 'seitsemänkymmentä vuotta ennen kuin isoisäsi tuli, eli hän kiipesi '
-      + 'typistettyyn tynkään pimeää ja tunkkaista portaikkoa pitkin — '
-      + 'meikäläisten muistiinpanojen mukaan siellä ei viihtynyt yksikään '
-      + 'siivekäs. Sit hän katsoi ulos. Ja sen minä myönnän: tyngästäkin '
-      + 'näkyy kauas, jos torni on yhä koko kaupungin korkein.',
-    teksti: 'Isoisäsi toive ei toteutunut: torni purettiin 1888, ja sen '
-      + 'nimeä kantaa yhä viereinen sairaala. Tornista jäi kourallinen '
-      + 'valokuvia — tässä on yksi niistä. Just tän takia minä kannan '
-      + 'arkistoa siivissäni.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Bukarestin kerrostalojen välissä on Văcăreștin luonnonpuisto, hylätyn tekojärvihankkeen paikalla. Lensin betonivallin yli ruovikon ylle. Täällä ihmiset kantavat kiikareita nähdäkseen meidät paremmin! Valitsin näkyvän oksan ja käänsin paremman kylkeni. Kiikaroikaa rauhassa."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.55 },
     /*
      * Commons 25.8.2026: 2397×3339, public domain, kuvaus "Photo of
      * Turnul Colței, Bucharest, before the demolition", Category:Turnul
@@ -321,6 +414,7 @@ export const FOKUSVIRTA_BUKAREST = {
         + 'muistoksi; se on kadonnut. Vuoden 1802 maanjäristys pudotti '
         + 'tornin huipun ja kellon, ja kun torni 1888 purettiin kokonaan, '
         + 'sen 1 700 kilon kello vietiin Sinaian luostariin.',
+      lahde: 'en-Wikipedia "Turnul Colței". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 2707×1786, public domain, Amedeo Preziosi,
        * päiväys 1868, Category:Turnul Colței. Akvarelli on viisi vuotta
@@ -368,6 +462,7 @@ export const FOKUSVIRTA_BUKAREST = {
         + 'kuvansa kuningatar Victorialle Osbornessa, jolta sai '
         + 'kultamitalin. Vuodesta 1863 hän oli hovin virallinen maalari ja '
         + 'valokuvaaja.',
+      lahde: 'en-Wikipedia "Carol Szathmari". Tarkistettu 1.9.2026.',
       /*
        * "PIDETÄÄN", EI "OLI" — raportin nimenomainen ohje: lähde itse
        * muotoilee asian "is considered the world's first combat
@@ -426,6 +521,7 @@ export const FOKUSVIRTA_BUKAREST = {
         + 'ruskeakarhusanktuaari, ja sinne pääsee vain opastetulle '
         + 'kierrokselle, tiistaista sunnuntaihin — eikä alle viisivuotiaita '
         + 'päästetä sisään lainkaan.',
+      lahde: 'en-Wikipedia "Wildlife of Romania". Tarkistettu 1.9.2026.',
       /*
        * Commons 25.8.2026: 2048×1536, CC0, Costin Costan, kuvattu
        * 1.9.2017, kuvaus "Close encounter with Carpathian brown bear".
@@ -500,6 +596,7 @@ export const FOKUSVIRTA_BUKAREST = {
      */
     kuva: {
       tiedosto: 'Curtea Veche 1.jpg',
+      lyhyt: 'Vanhan ruhtinaanhovin raunioita; Vlad III nimitti paikan asuinpaikakseen 1459.',
       selite: 'Vanhan ruhtinaanhovin raunioita Bukarestin vanhassakaupungissa. '
         + 'Juuri tämän paikan Vlad III nimitti 1459 asuinpaikakseen.',
       lahde: 'Nicubunu, Wikimedia Commons (CC BY-SA 3.0 ro)',
@@ -658,6 +755,14 @@ export const FOKUSVIRTA_BUKAREST = {
   takynostot: [
     {
       id: 'dracula',
+      /*
+       * KAUPUNKIKATOSTA VAPAA (js/fokuskohteet.js, osio KATTOVAPAA):
+       * nostolla ei ole omaa paikkaa vaan sen ankkuri on Bukarestin
+       * laatta itse (ks. `paikka` alempana), joten kaupunkilehden
+       * kohdekartalle sitä ei voi sijoittaa keksimättä osoitetta.
+       * Merkki kuuluu siksi pääkartalle katon ohi.
+       */
+      kattoVapaa: true,
       // Kartan nimiö täkypisteen kylkeen (päätoimittaja 28.8.2026).
       nimio: 'Draculan alaviite',
       otsikko: 'Dracula syntyi alaviitteestä — kirjailija ei käynyt koskaan '
@@ -670,6 +775,8 @@ export const FOKUSVIRTA_BUKAREST = {
         + 'Moldavian historiasta ja kopioi kirjasta alaviitteen "Dracula '
         + 'means devil". Vlad Seivästäjää ei mainita muistiinpanoissa '
         + 'lainkaan.',
+      lahde: 'en-Wikipedia "Bram Stoker", en-Wikipedia "Dracula" ja '
+        + 'en-Wikipedia "Vlad the Impaler". Tarkistettu 1.9.2026.',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin Sofian
        * areenalla ja Kreikan kahdella nostolla): repon oma generoitu
@@ -682,6 +789,7 @@ export const FOKUSVIRTA_BUKAREST = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-dracula-loistoaika.webp',
+        lyhyt: 'Kirjailijan työpöytä muistiinpanojen aikaan: historiateos, käsin kirjoitettuja arkkeja, öljylamppu.',
         selite: 'Kirjailijan työpöytä muistiinpanojen aikaan: avattu '
           + 'historiateos, käsin kirjoitettuja arkkeja ja öljylamppu.',
         lahde: 'Matkakirjan havainnekuva: hetki, jona myytti syntyi',

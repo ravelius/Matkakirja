@@ -1834,3 +1834,36 @@
   .radio-lamppu-hehku,
   .radio-lamppu-lasi { transition: none; }
 }
+
+/*
+ * ============ MAAILMANRADIO PALLOLAUDALLA (aalto 2B) ============
+ *
+ * Pallolla kaupunkien play-napit ovat CSS2D-merkkejä (js/linssit/radio.js
+ * pallolle → js/pallolauta/linssit.js merkit) eivätkä kartan SVG:tä.
+ * Nämä säännöt asuvat radion omassa tiedostossa samasta syystä kuin koko
+ * soitin: css/styles.css on toisen työvaiheen hallussa.
+ *
+ * NAPPI OTTAA NAPAUTUKSEN, TOISIN KUIN MUUT PALLON MERKIT.
+ * `.pallolauta-merkki` on pointer-events: none, koska pelin merkkien
+ * osuma on pallon oma (44 px, js/pallolauta/lauta.js). Radion nappi on
+ * poikkeus: se ei koske peliin, ja se on ainoa joka tietää mikä
+ * kaupunki sen alla on. Valitsin on kaksiosainen, jotta se voittaa
+ * yleissäännön tiedostojen järjestyksestä riippumatta.
+ */
+.pallolauta-merkki.pallolauta-radionappi {
+  pointer-events: auto;
+  cursor: pointer;
+}
+.pallolauta-radionappi svg { display: block; overflow: visible; }
+/*
+ * Pallon takana oleva nappi on häivytetty näkymättömiin
+ * (.pallolauta-takana) — näkymätön nappi ei saa ottaa napautusta.
+ */
+.pallolauta-merkki.pallolauta-radionappi.pallolauta-takana { pointer-events: none; }
+/*
+ * RADIOTILASSA PALLOLLA EI OLE MUITA KOHTEITA. Sama kuin tasokartalla,
+ * jossa ui.drawTargets piirtää radiotilassa vain radion napit
+ * (omistaja 4.8.2026: "kaikki muu toiminto häviää"). Kaupunkien nimet ja
+ * nappula jäävät, kuten kartallakin: pelaajan on löydettävä itsensä.
+ */
+body.radio-tila .pallolauta-kohde { display: none; }

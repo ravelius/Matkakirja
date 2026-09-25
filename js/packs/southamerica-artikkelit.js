@@ -184,6 +184,144 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'joka tuotiin Ranskasta vuonna 1853 ja josta tuli maan '
       + 'tunnusmerkki.',
   },
+  /* Perun maaintro kirjoitettiin 6.9.2026 maalehden (MAA_KATEGORIAT.PER)
+   * yhteydessä samasta en-Wikipedian aineistosta kuin lehti
+   * (docs/mantereet-tyoaineisto/faktapohja-peru.md). Vain intro-kenttä,
+   * kuten Brasilialla ja Argentiinalla. Guanokausi ja Andien rautatie
+   * jätettiin pois, koska ne ovat Liman kaupunkilehden nostoja. */
+  Peru: {
+    intro: 'Peru on vuonna 1873 viisikymmentäkaksivuotias tasavalta, joka '
+      + 'kasvaa kolmesta täysin erilaisesta maasta. Rannikolla on '
+      + 'aavikko, jota kylmä Humboldtin merivirta pitää sateettomana ja '
+      + 'jonka edustalta nostetaan viidesosa maailman merikalansaaliista. '
+      + 'Sen takana kohoavat Andit, joilla kasvaa kolmetuhatta '
+      + 'perunalajiketta ja jonne kondori nousee lämpöpatsaita pitkin '
+      + 'viidentuhannen metrin korkeuteen. Idässä alkaa Amazon, jonka '
+      + 'sademetsästä on 1800-luvulla kartoitettu vasta reunat.'
+      + '\n\n'
+      + '**Ennen espanjalaisia tämä oli Tawantinsuyu, neljän osan '
+      + 'valtakunta — Amerikan suurin valtio, joka rakennettiin ilman '
+      + 'pyörää, rautaa ja kirjoitusta.** Sen koossa piti neljänkymmenen '
+      + 'tuhannen kilometrin tieverkko, jolla juoksijat kuljettivat '
+      + 'viestit ja solmuköysistöt kirjanpidon. Vanhempaa on silti '
+      + 'enemmän: Supen laaksossa oli kaupunki jo viisituhatta vuotta '
+      + 'sitten, ja Nazcan aavikkoon piirrettiin kuvia, jotka näkyvät '
+      + 'vain ilmasta. Pizarro saapui Cajamarcaan 1532, ja itsenäisyys '
+      + 'julistettiin vasta kolmesataa vuotta myöhemmin.',
+  },
+  /* Chilen ja Kolumbian maaintrot kirjoitettiin 6.9.2026 maalehtien
+   * (MAA_KATEGORIAT.CHL ja .COL) yhteydessä samasta en-Wikipedian
+   * aineistosta kuin lehdet — docs/mantereet-tyoaineisto/
+   * faktapohja-chile.md ja faktapohja-kolumbia.md. Vain intro-kenttä,
+   * kuten Perulla, Brasilialla ja Argentiinalla. Valparaíson ja Bogotán
+   * kaupunkilehtien aiheet (ascensorit, Neruda, muiscat, smaragdit)
+   * jätettiin pois, koska ne ovat kaupunkilehtien nostoja. */
+  Chile: {
+    intro: 'Chile on vuonna 1873 viisikymmentäviisivuotias tasavalta ja '
+      + 'kapea kaistale Andien ja Tyynenmeren välissä. Pohjoisessa on '
+      + 'Atacama, maailman kuivin ei-polaarinen aavikko, jonka '
+      + 'sääasemilla ei ole aina mitattu sadetta lainkaan. Etelässä '
+      + 'alkavat sademetsät, vuonot ja jääkentät, joista eteläinen on '
+      + 'napa-alueiden ulkopuolella maailman toiseksi suurin. Välissä '
+      + 'ovat hedelmälaaksot, joihin tuotiin 1850-luvulla '
+      + 'viinipistokkaita Bordeaux’sta.'
+      + '\n\n'
+      + '**Biobío-joen eteläpuoli ei ollut isoisän matkavuonna vielä '
+      + 'Chileä: mapuchejen maa säilyi itsenäisenä lähes kolmesataa '
+      + 'vuotta.** Espanjalaiset pysäytettiin 1598, ja sen jälkeen '
+      + 'lonkot ja kuvernöörit neuvottelivat rajasta parlamenteissa. '
+      + 'Itsenäisyys julistettiin 1818, saksalaiset siirtolaiset '
+      + 'raivasivat eteläisiä metsiä 1850-luvulta alkaen, ja aavikolle '
+      + 'nousi salpietarikaupunkeja. Maahan kuuluu myös Pääsiäissaari, '
+      + 'jonka moait olivat 1800-luvun lopulla kaikki kaatuneet.',
+  },
+  Kolumbia: {
+    intro: 'Kolumbialla on rantaa sekä Karibianmerellä pohjoisessa että '
+      + 'Tyynellämerellä lännessä, ja Andit haarautuvat maan sisällä '
+      + 'kolmeksi vuorijonoksi. Siitä seuraa jotain '
+      + 'poikkeuksellista: maassa on maailman suurin lajitiheys '
+      + 'pinta-alaa kohti ja yli 1 900 lintulajia — enemmän kuin '
+      + 'Euroopassa ja Pohjois-Amerikassa yhteensä. Metsärajan '
+      + 'yläpuolella leviää páramo, trooppinen vuoristotundra, jonka '
+      + 'sulavesi juottaa pääkaupungin.'
+      + '\n\n'
+      + '**Ihmisen jäljet ovat yhtä vanhoja: Zenút kaivoivat kaksituhatta '
+      + 'vuotta sitten puolen miljoonan hehtaarin kanavaverkoston, ja San '
+      + 'Agustínin laaksoon jäi kuusisataa kivipatsasta, joiden tekijöitä '
+      + 'ei tunneta.** Cartagenaa linnoitettiin merirosvoja vastaan '
+      + 'kaksisataa vuotta, ja Boyacán sillalla ratkesi 1819 koko '
+      + 'Espanjan valta pohjoisessa Etelä-Amerikassa. Isoisän '
+      + 'matkavuonna maan nimi on Kolumbian yhdysvallat ja sen '
+      + 'valtaväylä Magdalena-joki.',
+  },
+  /* Uruguayn, Paraguayn ja Venezuelan maaintrot kirjoitettiin 6.9.2026
+   * maalehtien (MAA_KATEGORIAT.URY, .PRY ja .VEN) yhteydessä samasta
+   * en-Wikipedian aineistosta kuin lehdet — docs/mantereet-tyoaineisto/
+   * faktapohja-uruguay.md, -paraguay.md ja -venezuela.md. Vain
+   * intro-kenttä, kuten Perulla, Chilellä ja Kolumbialla. Montevideon,
+   * Asunciónin ja Caracasin kaupunkilehtien aiheet (candombe, tango,
+   * guaranin kieli, kolmoisliiton sota, Bolívar, El Sistema) jätettiin
+   * pois, koska ne ovat kaupunkilehtien nostoja. */
+  Uruguay: {
+    intro: 'Uruguay on Etelä-Amerikan pienin espanjankielinen maa ja '
+      + 'melkein kokonaan ruohoa: korkein kohta jää alle kuudensadan '
+      + 'metrin, ja loivat harjanteet kuljettavat laitumia rannikolta '
+      + 'rajalle asti. Atlantin puolella on kaksisataa kilometriä '
+      + 'dyynirantaa, jonne mustavalaat nousevat talvella poikimaan, ja '
+      + 'sisämaassa kasvaa saarekkeina butiá-palmua. Maa oli isoisän '
+      + 'matkavuonna 45-vuotias tasavalta.'
+      + '\n\n'
+      + '**Rajat syntyivät siitä, että kaksi kruunua kiisteli samasta '
+      + 'laidunmaasta: Colonia del Sacramento vaihtoi omistajaa sata '
+      + 'vuotta, kunnes asia ratkaistiin sopimuksella 1777.** Ennen '
+      + 'eurooppalaisia alueella liikkuivat charrúat, joiden jälkeläiset '
+      + 'ovat 2000-luvulla järjestäytyneet uudelleen. Itsenäisyyden '
+      + 'kansallissankari José Artigas kuoli maanpaossa Paraguayssa. '
+      + 'Fray Bentosin lihauutetehdas muutti 1860-luvulla sen, mitä '
+      + 'Euroopassa syötiin, ja karja on yhä maan tunnus: joka pihalla on '
+      + 'oma tiilinen grilli. Baskisiirtolaiset toivat samalla '
+      + 'vuosisadalla mukanaan tannat-rypäleen, josta tuli maan '
+      + 'kansallisviini.',
+  },
+  Paraguay: {
+    intro: 'Paraguay on sisämaavaltio, jonka Paraguayjoki jakaa kahtia. '
+      + 'Idässä ovat kosteat metsät, punainen maa ja suuret joet, '
+      + 'lännessä Gran Chaco: kuuma piikkipensastasanko, jossa vettä on '
+      + 'vaikeampi löytää kuin maata. Chacosta löytyi 1971 elävänä '
+      + 'eläin, joka oli kuvattu tieteelle pelkkien fossiilien '
+      + 'perusteella ja luultu sukupuuttoon kuolleeksi.'
+      + '\n\n'
+      + '**Maan historia on sarja avautumisia ja sulkeutumisia: '
+      + 'jesuiitat rakensivat 1600-luvulta alkaen kolmisenkymmentä '
+      + 'reduktiota, ja niiden karkotuksen jälkeen tri Francia katkaisi '
+      + 'ulkomaankaupan kokonaan.** Seuraava johtaja palkkasi '
+      + 'brittiläisiä insinöörejä, ja rautatie vihittiin 1861 — kaksi '
+      + 'vuotta ennen isoisän matkaa. Paranán varrella jyrisivät vielä '
+      + 'tuolloin Guairán putoukset, joiden ääni kuului kolmenkymmenen '
+      + 'kilometrin päähän; ne jäivät 1982 Itaipún tekojärven alle. '
+      + 'Reduktioista jäi maahan kaksi asiaa, joita kuulee ja näkee yhä: '
+      + 'kynsillä soitettava harppu ja punaiseen hiekkakiveen veistetty '
+      + 'barokki.',
+  },
+  Venezuela: {
+    intro: 'Venezuela on Etelä-Amerikan pohjoisnurkka, ja siihen mahtuu '
+      + 'neljä täysin erilaista maata. Rannikolla on Karibia ja sen '
+      + 'takana neljänkymmenen metrin hiekkadyynejä, keskellä Llanosin '
+      + 'tulvatasanko, jossa kapybarat ja krokotiilit kokoontuvat '
+      + 'kuivan kauden vesille, etelässä Guayanan ylängön pöytävuoret '
+      + 'eli tepuit, ja lännessä Andien haara. Orinocosta erkanee joki, '
+      + 'joka vie osan sen vedestä Amazonin puolelle.'
+      + '\n\n'
+      + '**Maa sai nimensä ilmeisesti Maracaibo-järven paalutaloista, '
+      + 'jotka muistuttivat vuonna 1499 purjehtinutta Amerigo Vespuccia '
+      + 'Venetsiasta — mutta jo retkikunnan oma jäsen kertoi toisin.** '
+      + 'Keisari Kaarle V pantasi provinssin 1528 saksalaisille '
+      + 'pankkiireille, ja 1700-luvulla baskilainen kauppayhtiö teki '
+      + 'kaakaosta maan vientituotteen. Vanhin kaupunki Coro on '
+      + 'rakennettu savesta, ja sen kaduissa näkyy yhä saksalaisen '
+      + 'kauden epäsäännöllinen kaava. Isoisän matkavuonna valtion nimi '
+      + 'on Venezuelan yhdysvallat.',
+  },
   /*
    * SÃO PAULO (23.8.2026). Väitteet ovat samasta erästä kuin lehden
    * tekstit (js/packs/kulttuuri-kategoriat.js, avain saopaulo), ja ne
@@ -740,5 +878,444 @@ export const SOUTHAMERICA_ARTIKKELIT = {
       + 'Guinnessin ennätyskirjan mukaan maailman suurin katujuhla. '
       + 'Pelourinhon värikkäitä kortteleita on kunnostettu 1990-luvulta '
       + 'alkaen, ja entisöityjä rakennuksia on yli 800.',
+  },
+  /* PORTO ALEGRE (6.9.2026). Jokainen väite tulee samasta erästä kuin
+   * lehden tekstit (js/packs/kulttuuri-kategoriat.js, avain
+   * portoalegre), ja ne on tarkistettu en-Wikipedian raakateksteistä
+   * 24.8.2026 (faktapohja-portoalegre.md + tarkistus-portoalegre.md)
+   * — uusia lähdehakuja ei tarvittu. Sisältölinjaus on
+   * spec-mantereet.md:n E-Amerikka-osio: siirtolaisuus, kapina ja
+   * charque-talouden orjatyö kerrotaan tapahtumina ja lukuina, ei
+   * nykypolitiikkaa. Vuoden 1873 kulma on introssa, koska se on koko
+   * lehden kantava aihe: isoisän matkavuosi osuu saksalais- ja
+   * italialaissiirtolaisuuden väliin. */
+  'Porto Alegre': {
+    intro: 'Porto Alegre on Rio Grande do Sulin pääkaupunki ja Brasilian '
+      + 'eteläisin osavaltion pääkaupunki. Se on rakennettu Guaíban '
+      + 'itärannalle suistoalueelle, joka on syntynyt viiden joen '
+      + 'yhtymäkohtaan, ja neljäkymmentä kukkulaa rikkovat muuten '
+      + 'tasaista maisemaa. Nimi tarkoittaa kirjaimellisesti iloista '
+      + 'satamaa.'
+      + '\n\n'
+      + 'Portugali toi 1750-luvulta alkaen alueelle atsoorilaisperheitä, '
+      + 'ja kylä perustettiin virallisesti 26. maaliskuuta 1772; jo '
+      + 'seuraavana vuonna siitä tuli maakunnan pääkaupunki. '
+      + '**Farroupilha-kapinan aikana 1835–1845 kaupunkia piiritettiin '
+      + 'kolmesti, eivätkä kapinalliset saaneet sitä kertaakaan '
+      + 'takaisin** — siitä se sai keisarilta arvonimen Leal e Valorosa, '
+      + 'uskollinen ja urhea, joka lukee yhä vaakunassa.'
+      + '\n\n'
+      + 'Isoisän matkan aikoihin kaupunki oli siirtolaisaaltojen '
+      + 'välissä: **saksalaiset olivat asuttaneet osavaltiota vuodesta '
+      + '1824, italialaiset saapuivat vasta 1875.** Vuoden 1872 '
+      + 'väestönlaskennassa asukkaita oli 43 998, ja keskustan kivinen '
+      + 'markkinahalli oli ollut auki nelisen vuotta.',
+    teksti: 'Porto Alegre on Brasilian eteläkulmassa, Guaíban rannalla. '
+      + 'Vesi ei ole merta vaan laaja ja matala suistoalue, josta vedet '
+      + 'laskevat etelään Patojen laguuniin ja vasta sieltä '
+      + 'Atlantille.'
+      + '\n\n'
+      + 'Kaupunki perustettiin 1772 atsoorilaissiirtokunnaksi ja siitä '
+      + 'tuli maakunnan pääkaupunki 1773. Farroupilha-kapina 1835–1845 '
+      + 'jätti siihen kolmen piirityksen jäljet ja arvonimen. '
+      + '1800-luvun talous nojasi charqueen eli kuivalihaan, jota '
+      + 'valmistettiin orjatyöllä, ja saksalaiset ja italialaiset '
+      + 'siirtolaiset muuttivat osavaltion väestön puolessa '
+      + 'vuosisadassa.'
+      + '\n\n'
+      + 'Nykyään kaupungissa on kaksi suurta jalkapalloseuraa, joiden '
+      + 'ottelulla on oma nimi, ja rannassa entinen hiilivoimala toimii '
+      + 'kulttuurikeskuksena. Huhti–toukokuussa 2024 Guaíba nousi 5,31 '
+      + 'metriin ja ylitti vuoden 1941 ennätyksen; keskustan suojaksi '
+      + '1940-luvulla rakennettu penger esti pahimman vahingon '
+      + 'historiallisessa ytimessä.',
+  },
+  /* ASUNCIÓN (6.9.2026). Jokainen väite tulee samasta erästä kuin
+   * lehden tekstit (js/packs/kulttuuri-kategoriat.js, avain asuncion),
+   * ja ne on tarkistettu en-Wikipedian raakateksteistä 24.8.2026
+   * (faktapohja-asuncion.md + tarkistus-asuncion.md) — uusia
+   * lähdehakuja ei tarvittu. Kolmoisliiton sota on introssa, koska
+   * isoisän matkavuosi 1873 osuu suoraan sen jälkeiseen miehitykseen;
+   * väestötappioista annetaan haarukka eikä yhtä lukua, kuten
+   * lehdessäkin. Nykypolitiikka on kokonaan poissa. */
+  'Asunción': {
+    intro: 'Asunción on Paraguayn pääkaupunki ja yksi Río de la Platan '
+      + 'altaan pisimpään yhtäjaksoisesti asutuista paikoista. Se on '
+      + 'Paraguayjoen vasemmalla rannalla lähellä kohtaa, jossa jokeen '
+      + 'yhtyy Pilcomayo, ja vanha kaupunki on rakennettu seitsemälle '
+      + 'matalalle kukkulalle. Luoteessa kaupungin erottaa naapurimaista '
+      + 'Asunciónin lahti.'
+      + '\n\n'
+      + 'Espanjalaiset pystyttivät paikalle linnakkeen elokuussa 1537. '
+      + '**Kun alkuperäisväestö tuhosi tuoreen Buenos Airesin 1542, sen '
+      + 'asukkaat pakenivat tänne, ja Asunciónista tuli koko alueen '
+      + 'keskus, josta lähetettiin retkikuntia perustamaan yli '
+      + 'seitsemänkymmentä muuta siirtokuntaa.** Siksi kaupunkia '
+      + 'kutsutaan yhä kaupunkien äidiksi. Itsenäisyys julistettiin '
+      + 'toukokuussa 1811.'
+      + '\n\n'
+      + '**Isoisän matkan aikoihin Asunción oli vieraan armeijan '
+      + 'kaupunki:** Kolmoisliiton sota 1864–1870 päättyi Paraguayn '
+      + 'tuhoisaan tappioon, ja miehitys jatkui vuoteen 1876. '
+      + 'Presidentin palatsi ja sankaripanteoni, kaupungin kaksi '
+      + 'tunnetuinta rakennusta, olivat vuonna 1873 kumpikin '
+      + 'keskeneräisiä.',
+    teksti: 'Asunción on Etelä-Amerikan sisämaassa, Paraguayjoen '
+      + 'rannalla. Matkaa Atlantille on noin tuhat ja Tyynellemerelle '
+      + 'noin 1 300 kilometriä, ja perinteinen tie kaupunkiin on '
+      + 'kulkenut jokea pitkin etelästä.'
+      + '\n\n'
+      + 'Espanjalaiset perustivat linnakkeen 1537, ja siitä kasvoi Río '
+      + 'de la Platan alueen ensimmäinen keskus. Itsenäisyys tuli 1811, '
+      + 'ja Kolmoisliiton sota 1864–1870 tyhjensi maan: vuoden 1871 '
+      + 'väestönlaskennassa koko maassa oli 221 079 asukasta, joista '
+      + 'miehiä vain 28 746. Vieraat joukot pitivät pääkaupunkia '
+      + 'hallussaan vuoteen 1876.'
+      + '\n\n'
+      + 'Nykyään Paraguayssa on kaksi virallista kieltä, espanja ja '
+      + 'guaraní, ja jälkimmäistä puhuu enemmistö väestöstä. Kaupungin '
+      + 'arkeen kuuluu tereré, jääkylmä mate, joka kiertää seurueessa '
+      + 'yhteisestä astiasta. Vuonna 2011 joen rantaan avattiin '
+      + 'rantapuisto, joka yhdistää vanhan keskustan rakennukset '
+      + 'veteen.',
+  },
+  /*
+   * BOLIVIA (6.9.2026). Maalehden maaosasto (MAA_KATEGORIAT BOL)
+   * nojaa tähän introon yksin, sama malli kuin Kenialla ja Egyptillä.
+   * Avain on maailmankartan countryShapes.BOL.wiki eli 'Bolivia'.
+   * Väitteet on tarkistettu en-Wikipedian raakateksteistä 6.9.2026
+   * (docs/mantereet-tyoaineisto/faktapohja-bolivia.md).
+   */
+  Bolivia: {
+    intro: 'Bolivia on Etelä-Amerikan toinen sisämaavaltio, ja siihen '
+      + 'mahtuu neljä eri maailmaa: läntinen Altiplano kahden Andien '
+      + 'jonon välissä, itärinteen kosteat Yungas-laaksot, pohjoisen '
+      + 'Amazonin tulvatasangot ja etelän kuiva Gran Chaco. Korkeusero '
+      + 'maan sisällä on yli kuusi kilometriä. Hallitus istuu La '
+      + 'Pazissa, mutta perustuslaillinen pääkaupunki ja korkeimman '
+      + 'oikeuden kotipaikka on Sucre, ja suurin kaupunki on itäisen '
+      + 'alangon **Santa Cruz de la Sierra**. Espanjan rinnalla '
+      + 'virallisia kieliä on 36; puhutuimmat niistä ovat ketšua, '
+      + 'aymara ja guaraní.'
+      + '\n\n'
+      + '**Maan nimi tulee Simón Bolívarista, ja se päätettiin vasta '
+      + 'kokouksessa 1825: Bolívarin tasavallasta tuli Bolivia, koska '
+      + 'Romuluksesta oli tullut Rooma.** Isoisän matkavuonna 1873 '
+      + 'Bolivialla oli vielä oma merenranta. Se menetettiin '
+      + 'Tyynenmeren sodassa, joka alkoi riidasta kymmenen sentin '
+      + 'verosta, ja vuoden 1904 rauhansopimus vahvisti rajan — '
+      + 'merivoimat purjehtivat siitä huolimatta yhä Titicacajärvellä '
+      + 'ja Amazonin sivujoilla. Vuoden 1952 vallankumous toi yleisen '
+      + 'äänioikeuden: äänestäjiä oli 1951 noin 205 000 ja viisi '
+      + 'vuotta myöhemmin yli miljoona, kun luku- ja kirjoitustaidon '
+      + 'vaatimus poistui ja naiset saivat äänen.',
+  },
+  /*
+   * SALTA (Opus 7.9.2026, Fablen parvi). Avain on 'Salta', koska
+   * js/packs/maailmankartta.js antaa kaupungille wiki-nimeksi
+   * 'Salta' — ui.js hakee introa kentällä `city.wiki ?? city.name`.
+   * Sama erä kuin lehden tekstit (js/packs/kulttuuri-kategoriat.js,
+   * avain salta): väitteet on luettu en- ja es-Wikipedian
+   * raakateksteistä 7.9.2026, lähdeaineistona
+   * docs/mantereet-tyoaineisto/faktapohja-salta.md ja sen
+   * riippumaton tarkistus tarkistus-salta.md, joka voittaa
+   * ristiriidassa.
+   *
+   * VUODEN 1873 KULMA: isoisän matkavuonna Salta oli köyhä
+   * muulikaupunki. Itsenäisyyssota jätti sen taloudellisesti
+   * raunioihin, ja toipuminen alkoi vasta 1890-luvulla rautatien ja
+   * siirtolaisten myötä. Katedraalin pysähdyksissä olleet
+   * rakennustyöt käynnistettiin uudelleen juuri 1873, ja kaupungin
+   * virallinen lämpötilasarja alkaa samasta vuodesta.
+   */
+  Salta: {
+    intro: 'Salta on Argentiinan luoteisosan keskus, kaupunki '
+      + '1 200 metrin korkeudessa Lerman laaksossa Andien '
+      + 'itärinteen ja Yungas-vuoristosademetsän reunalla. '
+      + 'Asukkaita on 627 704 vuoden 2022 laskennan mukaan, ja se '
+      + 'on maan seitsemänneksi suurin kaupunki.'
+      + '\n\n'
+      + 'Espanjalainen Hernando de Lerma perusti sen 16. huhtikuuta '
+      + '1582 varakuninkaan käskystä, ja tarkoitus sanottiin '
+      + 'suoraan: **kaupungin piti olla etappi Liman ja Buenos '
+      + 'Airesin välillä**. Siirtomaa-aikana se eli Potosín '
+      + 'hopeakaupungin huoltajana, ja 1783 siitä tuli koko '
+      + 'luoteisen hallintoalueen pääkaupunki. Itsenäisyyssodassa '
+      + 'Salta oli rintamakaupunki: Manuel Belgrano voitti täällä '
+      + 'helmikuussa 1813, ja Martín Miguel de Güemesin '
+      + 'gaucho-ratsujoukot pitivät pohjoisen rajan sissisodalla '
+      + 'kuusi vuotta.'
+      + '\n\n'
+      + 'Sota jätti kaupungin köyhäksi, ja taantuma kesti suuren '
+      + 'osan 1800-lukua. **Isoisän matkavuonna 1873 Saltassa ei '
+      + 'ollut rautatietä eikä juuri teollisuutta — tavara kulki '
+      + 'muulien selässä, kuten kolmesataa vuotta aiemmin.** Rautatie '
+      + 'ja sen mukana espanjalaiset, italialaiset ja arabisiirtolaiset '
+      + 'tulivat vasta 1890-luvulla. Juuri siksi keskusta säilyi: '
+      + 'kuvernöörin määräys velvoitti pitämään julkisivut ennallaan, '
+      + 'ja siitä kaupunki sai lempinimensä La Linda, kaunis.',
+    teksti: 'Salta on Argentiinan luoteisnurkassa, Lerman laaksossa '
+      + '1 200 metrin korkeudessa. Idässä kohoaa Cerro San Bernardo, '
+      + 'jonka huippu on 1 472 metriä ja jonka rinteillä kasvaa '
+      + 'Yungas-vuoristosademetsää. Keskusta on yhä se yhdeksän '
+      + 'kertaa viiden korttelin ruudukko, joka mitattiin 1582 '
+      + 'Tineon suon ja Sauce-joen väliin.'
+      + '\n\n'
+      + 'Kaupunki perustettiin tien varteen, ja tie määräsi sen '
+      + 'kohtalon. Kun Potosín hopea ehtyi ja itsenäisyyssota '
+      + 'päättyi, tie menetti merkityksensä eikä Saltaan tullut '
+      + 'mitään tilalle. Vasta 1890-luvun rautatie ja siirtolaiset '
+      + 'toivat elämän takaisin. Kaupunkikuva säilyi köyhyyden ja '
+      + 'määräysten yhteisvaikutuksesta niin hyvin, että sitä '
+      + 'sanotaan Argentiinan parhaiten säilyneeksi '
+      + 'siirtomaakeskustaksi — vaikka moni sen rakennuksista on '
+      + 'itse asiassa 1900-luvun alun uuskolonialismia.'
+      + '\n\n'
+      + 'Nykyään elanto tulee matkailusta, hallinnosta ja '
+      + 'maataloudesta. Pääaukion laidalla on neljä museota, '
+      + 'niistä tunnetuin korkean vuoriston arkeologian museo. '
+      + 'Balcarce-kadulla soitetaan joka ilta pohjoisen omaa '
+      + 'kansanmusiikkia, ja syyskuun puolivälissä Milagro-kulkue '
+      + 'kokoaa kaupunkiin enemmän ihmisiä kuin siellä asuu.',
+  },
+  /*
+   * ANTOFAGASTA (Opus 7.9.2026, Fablen parvi). Avain on
+   * 'Antofagasta' (js/packs/maailmankartta.js: "wiki":"Antofagasta").
+   * Sama erä kuin lehden tekstit (kulttuuri-kategoriat.js, avain
+   * antofagasta); lähdeaineisto faktapohja-antofagasta.md ja sen
+   * riippumaton tarkistus tarkistus-antofagasta.md.
+   *
+   * VUODEN 1873 KULMA: isoisän matkavuonna Antofagasta oli viiden
+   * vuoden ikäinen Bolivian satamakaupunki, ja juuri 27.11.1873
+   * allekirjoitettiin salpietariyhtiön ja Bolivian sopimus, jota
+   * Bolivian kongressi ei vahvistanut. Riita siitä johti kuusi
+   * vuotta myöhemmin sotaan ja kaupungin siirtymiseen Chilelle.
+   *
+   * TYYNENMEREN SOTA kerrotaan tapahtumina ja sopimuksina, ei
+   * taisteluina, ja nykyistä merikiistaa ei mainita
+   * (tarkistus-antofagasta.md, kohta F). SAMA KYMMENEN SENTIN VERO
+   * on jo mainittu tämän tiedoston Bolivia-merkinnässä maan
+   * näkökulmasta; tämä teksti kertoo saman asian kaupungin
+   * näkökulmasta eikä toista maan tekstin muita väitteitä.
+   */
+  Antofagasta: {
+    intro: 'Antofagasta on Pohjois-Chilen satamakaupunki noin 1 100 '
+      + 'kilometriä Santiagosta pohjoiseen, kapea nauha Tyynenmeren '
+      + 'ja rannikkovuoriston välissä keskellä Atacaman aavikkoa. '
+      + 'Asukkaita on 401 096 vuoden 2024 laskennan mukaan, ja se on '
+      + 'Chilen viidenneksi suurin kaupunki.'
+      + '\n\n'
+      + '**Kaupungilla ei ole perustamiskirjaa.** Se syntyi siitä, '
+      + 'että aavikosta löytyi salpietaria: copiapólainen '
+      + 'malminetsijä Juan López asettui rannalle 1866, ja samana '
+      + 'vuonna José Santos Ossa ja Francisco Puelma saivat Bolivian '
+      + 'hallitukselta luvan salpietarimaihin. Asutus tunnustettiin '
+      + 'lailliseksi vasta maanjäristyksen jälkeen 1868, ja se '
+      + 'perustettiin virallisesti nimellä La Chimba. Bolivian '
+      + 'satamana kaupunki kasvoi nopeasti: siellä oli chileläistä '
+      + 'työvoimaa, englantilaista pääomaa ja bolivialainen laki.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 tehtiin sopimus, joka muutti '
+      + 'kaiken: chileläinen salpietariyhtiö sai Bolivian '
+      + 'hallitukselta viidentoista vuoden verovapauden, mutta '
+      + 'Bolivian kongressi ei vahvistanut sopimusta. **Riita siitä '
+      + 'johti vuoden 1879 valtaukseen ja Tyynenmeren sotaan, ja '
+      + 'vuoden 1904 rauhansopimus teki Antofagastasta lopullisesti '
+      + 'Chilen kaupungin.** Salpietarin tilalle tuli kupari, ja '
+      + '2010-luvulta alkaen satamasta on viety myös litiumia.',
+    teksti: 'Antofagasta on Atacaman aavikon rannikolla, Kauriin '
+      + 'kääntöpiirin eteläpuolella. Kaupunki on pitkä ja kapea, '
+      + 'koska rannikkovuoristo alkaa heti talojen takaa; '
+      + 'keskikorkeus on neljäkymmentä metriä, mutta kunta on '
+      + 'pinta-alaltaan Chilen kolmanneksi suurin. Rannikko on '
+      + 'kallioinen eikä luonnonrantoja käytännössä ole.'
+      + '\n\n'
+      + 'Kaupunki eli sata vuotta salpietarista. Aavikolle syntyi '
+      + 'satoja jalostuslaitoksia, rannalle laitureita ja niiden '
+      + 'väliin rautatie, jonka Antofagastan ja Bolivian rautatieyhtiö '
+      + 'perusti 1888. Kaupunkiin muutti väkeä Chilen pohjoisosista, '
+      + 'Euroopasta — erityisesti Espanjasta, Kroatiasta, Englannista '
+      + 'ja Kreikasta — sekä Kiinasta ja arabimaista, ja jälki näkyy '
+      + 'yhä kadunnimissä ja Colónin aukion muistomerkeissä. Kun '
+      + 'typen teollinen sidonta teki luonnonsalpietarista '
+      + 'kannattamatonta, aavikolle jäi aavekaupunkeja.'
+      + '\n\n'
+      + 'Nykyään alue tuottaa 54 prosenttia Chilen kuparista, ja '
+      + 'kaupunki on kaivosteollisuuden palvelukeskus, jolla on maan '
+      + 'korkein bruttokansantuote asukasta kohti. Sadetta tulee '
+      + 'alle kymmenesosamillimetri vuodessa — vähemmän kuin missään '
+      + 'muualla maailmassa — mutta aamuisin rannikko on '
+      + 'camanchaca-sumun peitossa, ja juuri siitä sumusta on '
+      + 'kerätty vettä verkoilla aavikon kyliin.',
+  },
+  /* PUNTA ARENAS (7.9.2026, parvierä). Jokainen väite tulee samasta
+   * erästä kuin lehden tekstit (js/packs/kulttuuri-kategoriat.js,
+   * avain puntaarenas), ja ne on tarkistettu en-Wikipedian
+   * raakateksteistä 7.9.2026 (faktapohja-puntaarenas.md +
+   * tarkistus-puntaarenas.md). Vuoden 1873 kulma on introssa, koska
+   * se on lehden kantava aihe: isoisän matkavuonna Chile lupasi
+   * salmen olevan vapaa ja puolueeton kaikille lipuille. Selkʼnamien
+   * kohtalo kerrotaan tapahtumana ja päättyy vuoden 2023
+   * tunnustukseen — kadonneen kansan kehys on kielletty
+   * (spec-mantereet §1). Vuodet 1973–1990 on rajattu ulos samalla
+   * periaatteella kuin Chilen maalehdessä. */
+  'Punta Arenas': {
+    intro: 'Punta Arenas on Chilen eteläisimmän alueen pääkaupunki ja '
+      + 'maailman eteläisin kaupunki, jossa asuu yli satatuhatta '
+      + 'ihmistä. Se on rakennettu kapealle rantakaistaleelle '
+      + 'kukkuloiden ja Magalhãesinsalmen väliin. Nimi on käännös '
+      + 'käännöksestä: englantilainen John Narborough merkitsi paikan '
+      + 'matkakertomukseensa 1669–1671 nimellä Sandy Point, ja siitä '
+      + 'tuli espanjaksi Punta Arenas.'
+      + '\n\n'
+      + 'Chile perusti kaupungin 1848 siirtämällä viisi vuotta '
+      + 'aiemmin pystytetyn Fuerte Bulnesin väen pohjoisemmaksi Las '
+      + 'Minas -joen suulle. Ensimmäiset vuodet se oli '
+      + 'rangaistussiirtola ja merkki siitä, että salmi kuuluu '
+      + 'Chilelle. **Isoisän matkavuonna 1873 Chile lähetti suurille '
+      + 'merenkulkumaille kirjeen, jossa se lupasi salmen olevan vapaa '
+      + 'ja puolueeton kaikille lipuille.**'
+      + '\n\n'
+      + 'Vauraus tuli lampaista: yksi yhtiö hallitsi vuosisadan '
+      + 'vaihteessa miljoonaa hehtaaria Tulimaata, ja sen omistajat '
+      + 'asuivat täällä. **Sama lammastalous vei selkʼnameilta heidän '
+      + 'maansa ja ravintonsa**, ja Chile tunnusti kansan eläväksi '
+      + 'vasta 2023. Nykyään kaupunki elää Etelämantereen '
+      + 'liikenteestä: manner on 1 419 kilometrin päässä.',
+    teksti: 'Punta Arenas on Magalhãesinsalmen rannalla, Brunswickin '
+      + 'niemimaan koillisrannalla. Kaupunkiin ei pääse maanteitse '
+      + 'muualta Chilestä kulkematta Argentiinan puolen kautta, ja '
+      + 'lähin naapurikaupunki Ushuaia on 635 kilometrin päässä.'
+      + '\n\n'
+      + 'Espanjalaiset yrittivät asuttaa salmen 1584 kahdesti, ja '
+      + 'toinen yritys tunnetaan nimellä Puerto del Hambre, Nälän '
+      + 'satama. Chile onnistui vasta 1843, kun kuunari Ancud purjehti '
+      + 'Ancudista salmelle ja otti alueen haltuun. Kaupunki kasvoi '
+      + 'kultaryntäyksen ja lammastalouden myötä, ja siirtolaisia '
+      + 'tuli etenkin Kroatiasta ja Britanniasta.'
+      + '\n\n'
+      + 'Nykyään Punta Arenas on yksi Chilen kahdesta vapaa-alueen '
+      + 'kaupungista ja kolmesta Etelämantereen porttikaupungista '
+      + 'Ushuaian ja Christchurchin rinnalla. Ilmasto on subpolaarinen '
+      + 'merellinen: lämpötila vaihtelee vähän, sade on niukkaa ja '
+      + 'tuuli yltyy kesällä kovimmilleen.',
+  },
+  /* SANTA CRUZ DE LA SIERRA (7.9.2026, parvierä). Väitteet ovat
+   * samasta erästä kuin lehden tekstit (avain santacruz), tarkistettu
+   * en- ja es-Wikipedian raakateksteistä 7.9.2026
+   * (faktapohja-santacruz.md + tarkistus-santacruz.md). Vuoden 1873
+   * kulma on Andrés Ibáñez, joka oli Santa Cruzin kansanedustaja
+   * juuri vuosina 1872–1874. Maaintro (avain Bolivia) samassa
+   * tiedostossa kertoo merenmenetyksen, 36 kieltä ja vuoden 1952
+   * äänioikeuden — niitä ei toisteta tässä. */
+  'Santa Cruz de la Sierra': {
+    intro: 'Santa Cruz de la Sierra on Bolivian suurin kaupunki ja '
+      + 'maan itäisten trooppisten alankojen pääkaupunki. Se on '
+      + 'Piraí-joen varrella neljänsadan metrin korkeudessa, tuhansia '
+      + 'metrejä alempana kuin La Paz. Kaupunki on kasvanut '
+      + 'kehäkaduiksi: sisäkkäisiä anilloja on kymmenen ja niistä '
+      + 'haarautuvia sädekatuja 27.'
+      + '\n\n'
+      + 'Ñuflo de Chávez perusti kaupungin 26. helmikuuta 1561 '
+      + 'runsaat kaksisataa kilometriä nykyisestä paikasta itään ja '
+      + 'nimesi sen kotikaupunkinsa mukaan Extremadurassa. **Kaupunki '
+      + 'muutti kahdesti ja vakiintui nykyiselle paikalleen vasta '
+      + '1622** — vanhan asutuksen jäänteet ovat yhä nähtävissä Santa '
+      + 'Cruz la Viejassa. Siirtomaa-aikana provinssi sai '
+      + 'poikkeuksellisen autonomian ja vapautuksen keisarillisista '
+      + 'veroista.'
+      + '\n\n'
+      + 'Kasvua se ei silti tuonut. **Isoisän matkavuonna 1873 Santa '
+      + 'Cruz oli yhä pieni etuposti, jonka kansanedustaja oli '
+      + '28-vuotias Andrés Ibáñez** — mies, joka kolme vuotta '
+      + 'myöhemmin julisti kaupungin liittovaltioksi ja lakkautti '
+      + 'maaorjuuden. Kaupunki alkoi kasvaa toden teolla vasta '
+      + '1900-luvun puolivälin maareformien jälkeen, ja nykyään se '
+      + 'tuottaa lähes kolmanneksen koko maan '
+      + 'bruttokansantuotteesta.',
+    teksti: 'Santa Cruz de la Sierra on Bolivian itäosassa, Andien ja '
+      + 'Amazonin altaan välissä. Kaupunkiseudulla asuu noin 2,4 '
+      + 'miljoonaa ihmistä seitsemän kunnan alueella, ja se on maan '
+      + 'väkirikkain taajama.'
+      + '\n\n'
+      + 'Ennen espanjalaisia paikalla asui chané-kansa, ja kaupungin '
+      + 'ensimmäiset asukkaat olivat chanéja, espanjalaisia ja '
+      + 'Paraguayn guaraníta. Kaupunki oli kaksisataa vuotta '
+      + 'lähtöpaikka Chiquitosin ja Moxosin lähetysretkille ja '
+      + 'etuvartio portugalilaisia vastaan, mutta jäi pieneksi. '
+      + 'Vuoden 1810 kapina ja Ignacio Warnesin vuodet kuuluvat maan '
+      + 'itsenäistymisen kertomukseen.'
+      + '\n\n'
+      + 'Ilmasto on trooppinen monsuuni-ilmasto: vuoden keskilämpötila '
+      + 'on noin 25 astetta, ja sadetta tulee runsaat 1 300 '
+      + 'millimetriä, eniten joulu- ja tammikuussa. Talvisin etelästä '
+      + 'puhaltavat kylmät surazo-tuulet laskevat lämpötilan yllättäen '
+      + 'monella asteella.',
+  },
+  /*
+   * IQUITOS (Opus 7.9.2026, Fablen parvi). Avain on 'Iquitos', koska
+   * js/packs/maailmankartta.js antaa kaupungille wiki-nimeksi
+   * 'Iquitos'. Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain iquitos): väitteet on
+   * luettu en- ja es-Wikipedian raakateksteistä 7.9.2026,
+   * lähdeaineistona docs/mantereet-tyoaineisto/faktapohja-iquitos.md
+   * ja sen riippumaton tarkistus tarkistus-iquitos.md, joka voittaa
+   * ristiriidassa.
+   *
+   * VUODEN 1873 KULMA: isoisän matkavuonna Iquitos oli yhdeksän
+   * vuoden ikäinen laivastosatama ja noin tuhannen asukkaan kylä.
+   * Genaro Herreran mukaan asukkaita oli 648 vuonna 1866 ja 1 475
+   * vuonna 1876; luku 1873:lle on näiden välistä eikä lähteen oma,
+   * ja se sanotaan tekstissä ääneen (tarkistus, kohta B).
+   *
+   * KUMIBUUMIN VUODET 1880—1914 johdannosta (tarkistus, kohta C).
+   * Putumayon tapahtumat kerrotaan tapahtumina ja seurauksina, ei
+   * tekoina (tarkistus, kohta D). MANAUSIN LEHDEN AIHEITA — Wickhamin
+   * siemeniä, oopperataloa, sähkövaloja ja tullitaloa — ei toisteta.
+   */
+  Iquitos: {
+    intro: 'Iquitos on Perun Amazonian pääkaupunki, Loreton alueen ja '
+      + 'Maynasin provinssin keskus Amazonin vasemmalla rannalla. '
+      + 'Metropolialueella asuu 471 993 ihmistä neljässä piirissä. '
+      + '**Se on maailman suurin kaupunki, johon ei pääse maantietä '
+      + 'pitkin ja joka ei ole saarella: sinne tullaan joko jokea '
+      + 'pitkin tai lentäen.**'
+      + '\n\n'
+      + 'Nimi tulee iquito-kansasta, joka asui Pastazan, Tigren, '
+      + 'Nanayn ja Curarayn varsilla. Jesuiitat perustivat Marañónin '
+      + 'varrelle yhdeksän lähetysasemaa vuosina 1730—1767, ja niistä '
+      + 'yksi oli San Pablo de los Napeanos vuodelta 1757. Nykyisen '
+      + 'kaupungin perustamispäivä on eri: presidentti Ramón Castilla '
+      + 'määräsi Amazonille jokisataman, ja **5. tammikuuta 1864 kolme '
+      + 'Perun laivaston höyrylaivaa saapui Iquitosin kylään.**'
+      + '\n\n'
+      + 'Kumi teki kaupungin ja jätti sen. Vuonna 1900 Iquitosissa oli '
+      + 'kaksikymmentäviisi kumikauppahuonetta, ja väkiluku nousi '
+      + '1 475:stä 9 438:aan kolmessakymmenessä vuodessa. Siirtolaiset '
+      + 'toivat mukanaan eurooppalaisen arkkitehtuurin ja Italiasta ja '
+      + 'Portugalista tuodut kaakelit. **Isoisän matkavuonna 1873 '
+      + 'mitään tästä ei vielä ollut: Iquitos oli noin tuhannen '
+      + 'asukkaan laivastosatama sademetsän reunassa.**',
+    teksti: 'Iquitos on 106 metrin korkeudessa Amazonin altaan '
+      + 'suurella tasangolla, kolmen joen syöttämänä: Amazon, Nanay ja '
+      + 'Itaya. Itaya ja Nanay estävät laajenemisen kahteen suuntaan ja '
+      + 'lännessä on Moronacochan järvi, joten kaupunki näyttää '
+      + 'kartalla valtavalta jokisaarelta — vaikka se ei sitä ole.'
+      + '\n\n'
+      + 'Kaupunki perustettiin sotilassatamaksi, koska Peru halusi '
+      + 'pitää kiinni Amazonin latvavesistä, ja se rikastui kumista '
+      + 'vuosina 1880—1914. Kumikausi jätti jälkeensä kaakeloidut '
+      + 'julkisivut ja rautatalon — ja Roger Casementin vuoden 1913 '
+      + 'tutkintaraportin, joka johti alueen suurimman kumiyhtiön '
+      + 'purkamiseen. Kun Aasian viljelmien kumi tuli halvemmaksi, '
+      + 'moni työläinen ja kauppias lähti.'
+      + '\n\n'
+      + 'Nykyään elanto tulee puutavarasta, öljystä, kalasta ja '
+      + 'matkailusta. Kaduilla liikkuu yli 25 000 kolmipyöräistä '
+      + 'motokaria, ja Belénin kaupunginosassa talot seisovat paalujen '
+      + 'ja lauttojen varassa, koska Amazonin pinta laskee toukokuusta '
+      + 'lokakuuhun yhdeksästä kahteentoista metriä. Kaupungin ympärillä '
+      + 'on tulvametsää, ja kaksikymmentä kilometriä poispäin alkaa '
+      + 'Allpahuayo-Mishanan valkohiekkametsä.',
   },
 };

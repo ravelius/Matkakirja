@@ -1,0 +1,189 @@
+{
+  "versio": 2,
+  "kaupunki": "wien",
+  "teksti": "Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.",
+  "tekstiSha256": "e33cbef82a3da91095b055ce9f4923eefaaa6a106aee46a4bad0d6eacb1740b2",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-wien.mp3",
+    "versio": 2,
+    "tavut": 392925,
+    "sha256": "1dabb2270789d4ad41787051fca80a73ceabf9d0f1f7f5973538da4af57daf1f"
+  },
+  "kesto": 24460,
+  "sanat": [
+    {
+      "sana": "Wienin",
+      "alku": 120,
+      "loppu": 520
+    },
+    {
+      "sana": "maailmannäyttelyssä",
+      "alku": 580,
+      "loppu": 1660
+    },
+    {
+      "sana": "kone",
+      "alku": 2040,
+      "loppu": 2260
+    },
+    {
+      "sana": "painoi",
+      "alku": 2400,
+      "loppu": 2760
+    },
+    {
+      "sana": "sanomalehteä",
+      "alku": 2820,
+      "loppu": 3640
+    },
+    {
+      "sana": "Lehti",
+      "alku": 5220,
+      "loppu": 5520
+    },
+    {
+      "sana": "vakuutti",
+      "alku": 5560,
+      "loppu": 6120
+    },
+    {
+      "sana": "että",
+      "alku": 6160,
+      "loppu": 6220
+    },
+    {
+      "sana": "kolerapuheet",
+      "alku": 6280,
+      "loppu": 6980
+    },
+    {
+      "sana": "olivat",
+      "alku": 7020,
+      "loppu": 7300
+    },
+    {
+      "sana": "liioittelua",
+      "alku": 7340,
+      "loppu": 8220
+    },
+    {
+      "sana": "Majatalossa",
+      "alku": 9760,
+      "loppu": 10400
+    },
+    {
+      "sana": "aamiaista",
+      "alku": 10480,
+      "loppu": 11000
+    },
+    {
+      "sana": "tarjoillut",
+      "alku": 11040,
+      "loppu": 11560
+    },
+    {
+      "sana": "nainen",
+      "alku": 11600,
+      "loppu": 11940
+    },
+    {
+      "sana": "sairastui",
+      "alku": 12000,
+      "loppu": 12660
+    },
+    {
+      "sana": "Käskin",
+      "alku": 14080,
+      "loppu": 14420
+    },
+    {
+      "sana": "tuoda",
+      "alku": 14460,
+      "loppu": 14700
+    },
+    {
+      "sana": "arkkuni",
+      "alku": 14780,
+      "loppu": 15180
+    },
+    {
+      "sana": "alas",
+      "alku": 15260,
+      "loppu": 15480
+    },
+    {
+      "sana": "heti",
+      "alku": 15540,
+      "loppu": 15920
+    },
+    {
+      "sana": "Kantaja",
+      "alku": 17180,
+      "loppu": 17560
+    },
+    {
+      "sana": "seisoi",
+      "alku": 17600,
+      "loppu": 17960
+    },
+    {
+      "sana": "ovella",
+      "alku": 18060,
+      "loppu": 18340
+    },
+    {
+      "sana": "ja",
+      "alku": 18380,
+      "loppu": 18480
+    },
+    {
+      "sana": "kysyi",
+      "alku": 18540,
+      "loppu": 18880
+    },
+    {
+      "sana": "tarvitsisiko",
+      "alku": 19440,
+      "loppu": 20260
+    },
+    {
+      "sana": "nainen",
+      "alku": 20300,
+      "loppu": 20640
+    },
+    {
+      "sana": "lääkäriä",
+      "alku": 20680,
+      "loppu": 21340
+    },
+    {
+      "sana": "Olin",
+      "alku": 22980,
+      "loppu": 23140
+    },
+    {
+      "sana": "ajatellut",
+      "alku": 23220,
+      "loppu": 23660
+    },
+    {
+      "sana": "vain",
+      "alku": 23700,
+      "loppu": 23880
+    },
+    {
+      "sana": "lähtöäni",
+      "alku": 23920,
+      "loppu": 24460
+    }
+  ],
+  "lauseet": [
+    120,
+    5220,
+    9760,
+    14080,
+    17180,
+    22980
+  ],
+  "luotu": "2026-09-23T15:35:36.201Z"
+}

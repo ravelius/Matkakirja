@@ -1,0 +1,183 @@
+{
+  "versio": 2,
+  "kaupunki": "krakova",
+  "teksti": "Krakovan yliopistossa näin vanhan maapallon. Intian eteläpuolelle oli merkitty maa nimeltä Amerikka. Vieressä luki: vastikään löydetty. Minä luin sen kahdesti. Omista kartoistani on puuttunut saaria, mutta kokonaista mannerta en sentään ole hukannut.",
+  "tekstiSha256": "55312a9be178b614f2ba4d88974892168ac5e2f0927c79b788f60e1b18fee024",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-krakova.mp3",
+    "versio": 2,
+    "tavut": 336501,
+    "sha256": "43875eb33efbd7d0262c30ef3a2e03789b00990f9c86ab2d81d830ebcc544ae6"
+  },
+  "kesto": 20940,
+  "sanat": [
+    {
+      "sana": "Krakovan",
+      "alku": 140,
+      "loppu": 600
+    },
+    {
+      "sana": "yliopistossa",
+      "alku": 660,
+      "loppu": 1340
+    },
+    {
+      "sana": "näin",
+      "alku": 1380,
+      "loppu": 1540
+    },
+    {
+      "sana": "vanhan",
+      "alku": 1580,
+      "loppu": 1920
+    },
+    {
+      "sana": "maapallon",
+      "alku": 2000,
+      "loppu": 2640
+    },
+    {
+      "sana": "Intian",
+      "alku": 3980,
+      "loppu": 4320
+    },
+    {
+      "sana": "eteläpuolelle",
+      "alku": 4420,
+      "loppu": 5180
+    },
+    {
+      "sana": "oli",
+      "alku": 5240,
+      "loppu": 5380
+    },
+    {
+      "sana": "merkitty",
+      "alku": 5420,
+      "loppu": 5920
+    },
+    {
+      "sana": "maa",
+      "alku": 5980,
+      "loppu": 6280
+    },
+    {
+      "sana": "nimeltä",
+      "alku": 6340,
+      "loppu": 6700
+    },
+    {
+      "sana": "Amerikka",
+      "alku": 6800,
+      "loppu": 7520
+    },
+    {
+      "sana": "Vieressä",
+      "alku": 8760,
+      "loppu": 9180
+    },
+    {
+      "sana": "luki",
+      "alku": 9220,
+      "loppu": 9480
+    },
+    {
+      "sana": "vastikään",
+      "alku": 10320,
+      "loppu": 10900
+    },
+    {
+      "sana": "löydetty",
+      "alku": 10960,
+      "loppu": 11600
+    },
+    {
+      "sana": "Minä",
+      "alku": 13280,
+      "loppu": 13460
+    },
+    {
+      "sana": "luin",
+      "alku": 13500,
+      "loppu": 13660
+    },
+    {
+      "sana": "sen",
+      "alku": 13700,
+      "loppu": 13840
+    },
+    {
+      "sana": "kahdesti",
+      "alku": 13880,
+      "loppu": 14420
+    },
+    {
+      "sana": "Omista",
+      "alku": 15680,
+      "loppu": 15980
+    },
+    {
+      "sana": "kartoistani",
+      "alku": 16040,
+      "loppu": 16660
+    },
+    {
+      "sana": "on",
+      "alku": 16720,
+      "loppu": 16840
+    },
+    {
+      "sana": "puuttunut",
+      "alku": 16900,
+      "loppu": 17360
+    },
+    {
+      "sana": "saaria",
+      "alku": 17420,
+      "loppu": 17880
+    },
+    {
+      "sana": "mutta",
+      "alku": 18400,
+      "loppu": 18620
+    },
+    {
+      "sana": "kokonaista",
+      "alku": 18660,
+      "loppu": 19200
+    },
+    {
+      "sana": "mannerta",
+      "alku": 19280,
+      "loppu": 19800
+    },
+    {
+      "sana": "en",
+      "alku": 19860,
+      "loppu": 19940
+    },
+    {
+      "sana": "sentään",
+      "alku": 20000,
+      "loppu": 20360
+    },
+    {
+      "sana": "ole",
+      "alku": 20400,
+      "loppu": 20520
+    },
+    {
+      "sana": "hukannut",
+      "alku": 20560,
+      "loppu": 20940
+    }
+  ],
+  "lauseet": [
+    140,
+    3980,
+    8760,
+    13280,
+    15680
+  ],
+  "luotu": "2026-09-23T15:34:36.726Z"
+}

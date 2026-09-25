@@ -28,12 +28,63 @@
  * koskea eikä yhtään sen kohdetta ole toistettu täällä.
  *
  * Ruotsin maastokohteet. Faktat en-Wikipediasta 29.8.2026.
+ *
+ * ── K2-ERÄ 2 6.9.2026: KAHDEKSAN KOHDETTA MAASTON RINNALLE ─────────
+ *
+ * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+ * Ruotsi oli erän 2 heikoimpia: nolla kuratoitua kohdetta ja yksitoista
+ * karttamerkkiä (docs/moduulit/karttanostot-kattavuus.md). Tavoite on
+ * kahdeksan KOHDETTA maastokohteiden lisäksi, ja tässä ne ovat — sama
+ * malli kuin erässä 1 (js/packs/maastokohteet-isl.js).
+ *
+ * MIKSI NE OVAT TÄSSÄ TIEDOSTOSSA EIVÄTKÄ fokuskohteet-swe.js:ssä.
+ * Kohdepakki tarvitsisi rivin js/fokuskohteet.js:n KOHDE_MAAT-tauluun
+ * ja lehden poltettujen nimien lohkon (js/packs/fokus-grc.js
+ * FOKUS_LISANIMET, tests/fokusnimet.test.mjs). Kumpaakaan ei tehdä
+ * tässä erässä: KOHDE_MAAT on rinnakkaisen erän hallussa, ja
+ * lisänimien lohko ladotaan ämpärin `<ISO>.json`-tiedostosta, jota
+ * repossa ei ole. Tämän tiedoston lista sen sijaan liittyy peliin
+ * hakemiston kautta (js/packs/maastokohteet.js), joten kohteet ovat
+ * kartalla heti — ja kun KOHDE_MAAT vapautuu, lohko siirtyy omaan
+ * pakkiinsa sellaisenaan.
+ *
+ * KAIKKI KAHDEKSAN OVAT KAUKANA PELIKAUPUNGISTA. Lähinkin (Birka) on
+ * 17,2 lautayksikön päässä Tukholmasta, eli reilusti yli kaupungin
+ * kohdalla -säteen (KAUPUNGIN_KOHDALLA_SADE 7, js/fokuskohteet.js).
+ * Yksikään ei siis kuulu kohdekartalle, vaan kaikki ovat pääkartan
+ * merkkejä. Drottningholm jätettiin tästä syystä pois: se on kuuden
+ * yksikön päässä Tukholmasta eli kaupungin kohdalla.
+ *
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä): kortti kantaa nyt kaksi tarkistettua
+ * Commons-kuvaa. Faktat on
+ * tarkistettu en-Wikipediasta kohde kerrallaan 6.9.2026.
  */
 export const MAASTOKOHTEET_SWE = [
   {
     id: 'kebnekaise',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-maasto-kebnekaise-dd1df4d59bad.jpg',
+      lyhyt: 'Kebnekaisen kivinen tunturimassiivi, lumikentät ja etelähuipun jäätikkö.',
+      selite: 'Kebnekaisen leveä kivinen selänne kohoaa Ruotsin Lapissa lumikenttien ja matalan tunturikasvillisuuden ylle.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Antti Leppänen',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kebnekaise_as_seen_from_Vierramvare.JPG',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-maasto-kebnekaise-cd98484728f3.jpg',
+      lyhyt: 'Kebnekaisen lumikentät ja etelähuipun jäätikköinen lakialue Vierramvarelta.',
+      selite: 'Kebnekaisen tummaa tunturimassiivia peittävät vielä keskikesälläkin laajat lumikentät; etelähuipun jäätikköinen lakialue erottuu Vierramvarelta.',
+      lahde: 'Valokuva: Antti Leppänen, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Antti Leppänen',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kebnekaise_as_seen_from_Vierramvare.JPG',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    }],
     nimi: 'Kebnekaise',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Miksi eteläinen huippu on kutistunut?',
       'Mitä nimi Giebmegáisi tarkoittaa?',
@@ -51,9 +102,42 @@ export const MAASTOKOHTEET_SWE = [
       + '096,8 metrissä. Vuori on Ruotsin Lapissa noin 150 kilometriä napapiiristä pohjoiseen, '
       + 'Kirunasta länteen Kungsledenin vaellusreitin varrella.',
     lahde: 'en-Wikipedia "Kebnekaise", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Kumpi Kebnekaisen huipuista on nyt korkein, koska toinen on kutistunut?',
+      vaihtoehdot: [
+        'Pohjoinen huippu',
+        'Eteläinen huippu',
+        'Keskihuippu',
+        'Läntinen huippu',
+      ],
+      oikea: 0,
+      fakta: 'Eteläinen huippu on jäätikön peittämä ja kutistunut 24 metriä viidessäkymmenessä vuodessa.',
+    },
   },
   {
     id: 'itameri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-itameri-8160be2e.jpg',
+      lyhyt: 'Aurinko nousee tyynen Itämeren yllä Kristianopelin lähellä.',
+      selite: 'Oranssi aamurusko heijastuu tyyneen veteen, ja horisontissa näkyy matala saari.',
+      lahde: 'Valokuva: Leonhard Lenz, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Leonhard Lenz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sunrise_at_the_baltic_sea_near_Kristianopel_02.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-itameri-28da9932.jpg',
+        lyhyt: 'Ukkospilvi Itämeren yllä ja kiviaallonmurtaja rannalla.',
+        selite: 'Tummat pilvet kerääntyvät merenrannan yläpuolelle, ja kivistä tehty aallonmurtaja johtaa laiturille.',
+        lahde: 'Valokuva: Arnold Paul, Wikimedia Commons (CC BY-SA 2.5).',
+        tekija: 'Arnold Paul',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cloud_cumulonimbus_at_baltic_sea(1).jpg',
+        lisenssi: 'CC BY-SA 2.5',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.5',
+      },
+    ],
     nimi: 'Itämeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -67,38 +151,107 @@ export const MAASTOKOHTEET_SWE = [
       maailmankartta: { x: 6453.3, y: 1052.7 },
       europe: { x: 568.3, y: 384 },
     },
-    teksti: 'Itämeri on Atlantin haara, jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, '
-      + 'Liettua, Puola, Venäjä ja Ruotsi. Maantieteellisesti se jää Skandinavian niemimaan '
-      + 'sekä Pohjois- ja Keski-Euroopan tasangon väliin. Se on maailman suurin murtovesiallas.',
-    lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Itämeren pohjassa lepää laivoja, jotka eivät ole lahonneet. Vesi on kylmää ja '
+      + 'niin vähäsuolaista, ettei laivamato viihdy siinä, ja siksi vanhat puuhylyt säilyvät '
+      + 'täällä toisin kuin valtamerissä. Kuuluisin niistä on ruotsalainen sotalaiva Vasa: se '
+      + 'kaatui neitsytmatkallaan 10. elokuuta 1628 reilun kilometrin purjehdittuaan, ja se '
+      + 'nostettiin pohjasta 333 vuotta myöhemmin lähes ehjin rungoin. Meri on Atlantin haara, '
+      + 'jonka ympäröivät Tanska, Viro, Suomi, Saksa, Latvia, Liettua, Puola, Venäjä ja '
+      + 'Ruotsi, ja se on maailman suurin murtovesiallas. Gotlanti keskellä merta oli niin '
+      + 'arvokas paikka, että merirosvojoukko Vitaaliveljet piti sitä 1300-luvulla hallussaan; '
+      + 'merirosvous oli Itämerellä arkea 700-luvulta 1300-luvulle. Ruotsi vei merta myöten '
+      + 'varhaiskeskiajalta asti rautaa ja hopeaa.',
+    lahde: 'en-Wikipedia "Baltic Sea", johdanto-osa sekä osiot "Storms and storm floods", '
+      + '"Middle Ages"; laivan osalta "Vasa (ship)", johdanto-osa (tarkistettu 1.9.2026).',
+    visa: {
+      kysymys: 'Kuinka monta vuotta sotalaiva Vasan uppoamisesta kului, kun se nostettiin pohjasta?',
+      vaihtoehdot: [
+        '133 vuotta',
+        '333 vuotta',
+        '233 vuotta',
+        '433 vuotta',
+      ],
+      oikea: 1,
+      fakta: 'Sotalaiva Vasa kaatui neitsytmatkallaan vuonna 1628 ja nostettiin pohjasta 333 vuotta myöhemmin lähes ehjänä.',
+    },
   },
   {
     id: 'pohjanlahti',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-pohjanlahti-99b15e99.jpg',
+      lyhyt: 'Pohjanlahti satelliittikuvassa lumisen Pohjolan välissä.',
+      selite: 'Pohjanlahden tumma vesialue erottuu lumen peittämien rantojen välissä.',
+      lahde: 'Satelliittikuva: MODIS Land Rapid Response Team, NASA GSFC, Wikimedia Commons (public domain).',
+      tekija: 'MODIS Land Rapid Response Team, NASA GSFC',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gulf_of_Bothnia_(MODIS).jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-pohjanlahti-ccde74b0.jpg',
+        lyhyt: 'Merenkurkun saaristo satelliittikuvassa.',
+        selite: 'Metsäiset saaret ja matalat niemet kohoavat tummasta merestä Pohjanlahden Merenkurkussa.',
+        lahde: 'Satelliittikuva: NASA Earth Observatory / Wanmei Liang, Wikimedia Commons (public domain).',
+        tekija: 'NASA Earth Observatory / Wanmei Liang',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Uplift_Underway_in_Finland’s_Kvarken_Archipelago_(153740_-_oli_20240529_lrg).jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Pohjanlahti',
     tyyppi: 'meri',
     kysymykset: [
       'Mikä Merenkurkku on?',
       'Miksi Pohjanlahden rannat nousevat?',
     ],
-    korostukset: ['Merenkurkku|Merenkurkku'],
+    korostukset: ['Merenkurkku|Merenkurkussa'],
     nappi: 'Itämeren pohjoisin haara',
     // 19.6 E / 62.6 N — ulappa Selkämeren pohjoisosassa; artikkelin oma keskipiste on 20 / 63
     laudat: {
       maailmankartta: { x: 6486.7, y: 793.5 },
       europe: { x: 587.5, y: 247.2 },
     },
-    teksti: 'Pohjanlahti on Itämeren pohjoisin haara Suomen länsirannikon ja Pohjois-Ruotsin '
-      + 'itärannikon välissä. Se jakautuu Perämereen, Merenkurkkuun ja Selkämereen. Lahden '
-      + 'eteläosassa on Ahvenanmaa, Ahvenanmeren ja Saaristomeren välissä.',
-    lahde: 'en-Wikipedia "Gulf of Bothnia", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Pohjanlahti on katoamassa. Maa nousee yhä siitä, minkä jääkauden mannerjää painoi '
+      + 'sen alle — lähes kilometrin verran — ja kohoaa 80 senttiä vuosisadassa, Merenkurkussa '
+      + 'melkein sentin vuodessa. Noin kahdentuhannen vuoden kuluttua kynnys nousee pinnan '
+      + 'yläpuolelle ja Perämeri irtoaa omaksi makean veden järvekseen. Sitä kohti se on jo '
+      + 'pitkällä: pohjoisimmillaan vesi on niin vähäsuolaista, että hauki, siika ja ahven '
+      + 'viihtyvät siinä. Lahti on Itämeren pohjoisin haara Suomen länsirannikon ja '
+      + 'Pohjois-Ruotsin itärannikon välissä, ja se jakautuu Perämereen, Merenkurkkuun ja '
+      + 'Selkämereen. Ruotsin puolella Luleå lastaa laivoihin rautamalmipellettejä ja Gävle on '
+      + 'maan kolmanneksi suurin konttisatama; muita satamia ovat Skellefteå, Umeå ja '
+      + 'Sundsvall.',
+    lahde: 'en-Wikipedia "Gulf of Bothnia", johdanto-osa sekä osiot "Geography" ja "Economy" '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'gotaalv',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-maasto-gotaalv-6a7b7252d343.jpg',
+      lyhyt: 'Göta älv kuohuu Trollhättanin kalliorotkossa.',
+      selite: 'Trollhättanin tulvaluukuista vapautettu Göta älv kuohuu kalliosaarten välistä metsäiseen rotkoon.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; paikkareferenssi Tubaist',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trollhattefallen.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-maasto-gotaalv-76c74fdd7683.jpg',
+      lyhyt: 'Göta älv ryöppyää Trollhättanin kalliorotkossa tulvaluukkujen avauksen aikana.',
+      selite: 'Göta älvin vesi ryöppyää Trollhättanin kalliorotkossa kesäisen tulvaluukkujen avauksen aikana.',
+      lahde: 'Valokuva: Tubaist, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Tubaist',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trollhattefallen.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    }],
     nimi: 'Göta älv',
     tyyppi: 'joki',
     kysymykset: [
-      'Mikä Baltian jääjärvi oli?',
-      'Miksi Trollhättanin putoukset ovat tärkeät?',
+      'Mikä oli Itämeren jääkausijärvi?',
+      'Mikä on Trollhätten kanava?',
     ],
     korostukset: ['Vänern|Vänernin'],
     nappi: 'Vänernin lasku mereen',
@@ -107,10 +260,754 @@ export const MAASTOKOHTEET_SWE = [
       maailmankartta: { x: 6243, y: 1010.3 },
       europe: { x: 447.2, y: 360.8 },
     },
-    teksti: 'Göta älv laskee Vänernin vedet Kattegatiin Göteborgin kohdalla Ruotsin '
-      + 'länsirannikolla. Se syntyi viime jääkauden lopussa, kun Baltian jääjärven vedet '
-      + 'purkautuivat sitä myöten Atlanttiin. Sen valuma-alue on Skandinavian suurin.',
-    lahde: 'en-Wikipedia "Göta älv", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Göta älv syntyi jääkauden lopulla laskukanavaksi: sitä pitkin Itämeren jääjärvi '
+      + 'purkautui Atlanttiin. Nykyään se laskee Vänernin vedet Kattegatiin Göteborgin '
+      + 'kohdalla, ja sillä on Skandinavian suurin valuma-alue, vaikka pituutta on vain 93 '
+      + 'kilometriä. Kungälvissä, Bohusin linnoituksen kohdalla, joki jakautuu kahtia ja sulkee '
+      + 'Hisingenin saaren väliinsä. Trollhättanissa on pato, sulkuja ja voimalaitos — '
+      + 'Trollhätte kanal — ja sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä '
+      + 'rahtialuksilla. Voimalaitoksen sähkö nosti kosken partaalle raskaan terästeollisuuden. '
+      + 'Kesäisin padon tulvaluukut avataan muutamaksi minuutiksi päivässä, ja väki kerääntyy '
+      + 'katsomaan, kun vesi ryöppyää alas.',
+    lahde: 'en-Wikipedia "Göta älv", johdanto-osa (tarkistettu 1.9.2026).',
+    visa: {
+      kysymys: 'Kuinka pitkiä rahtialuksia Trollhättanin sulut päästävät jokea ylös?',
+      vaihtoehdot: [
+        'Jopa 38 metriä pitkiä',
+        'Jopa 58 metriä pitkiä',
+        'Jopa 88 metriä pitkiä',
+        'Jopa 118 metriä pitkiä',
+      ],
+      oikea: 2,
+      fakta: 'Trollhättanin sulkujen ansiosta jokea pääsee nousemaan jopa 88 metriä pitkillä rahtialuksilla.',
+    },
+  },
+  /* ================================================================
+   * K2-ERÄ 2, 6.9.2026 — KAHDEKSAN KOHDETTA. Perustelut tiedoston alussa.
+   * ============================================================== */
+  {
+    id: 'visby',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-kohde-visby-727d4c9ed518.jpg',
+      lyhyt: 'Visbyn keskiaikainen muuri ja suorakulmaiset tornit kiertävät vanhaa kaupunkia.',
+      selite: 'Visbyn lähes ehjä keskiaikainen muuri jatkuu suorakulmaisten tornien rytmittämänä vanhan kaupungin laidalla.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva VisbyStar',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Visby_city_wall.jpg',
+      lisenssi: 'CC0 1.0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+    },
+    nimi: 'Visby',
+    tyyppi: 'kaupunki',
+    taso: 1,
+    kysymykset: [
+      'Mistä nimi Visby tulee?',
+      'Miksi keskiaikaiset kivitalot säilyivät?',
+    ],
+    korostukset: ['Hansaliitto|Hansaliiton'],
+    nappi: 'Ruusujen ja raunioiden kaupunki',
+    // 18.2992 E / 57.6347 N — en-Wikipedia "Visby"
+    laudat: {
+      maailmankartta: { x: 6443.3, y: 1041.4 },
+      europe: { x: 562.5, y: 377.8 },
+    },
+    teksti: 'Visby on Gotlannin pääkaupunki, ja siellä asuu noin 24 000 ihmistä. '
+      + 'Hansakaupunki Visby on yksi Skandinavian parhaiten säilyneistä keskiaikaisista '
+      + 'kaupungeista, ja se on ollut maailmanperintökohde vuodesta 1995.\n\n'
+      + 'Näkyvin muistomerkki on 3,4 kilometriä pitkä kaupunginmuuri, joka kiertää '
+      + 'keskustan. Muurin rakentaminen alkoi todennäköisesti 1100-luvulla, ja noin '
+      + 'vuonna 1300 se rakennettiin nykyiseen korkeuteensa ja sai luonteenomaiset '
+      + 'torninsa; osa torneista valmistui vasta 1400-luvulla. Muuri on yhä lähes '
+      + 'ehjä.\n\n'
+      + 'Kaupunki oli kauppapaikka jo noin vuonna 900, ja se kukoisti saksalaisen '
+      + 'Hansaliiton ansiosta. Juuri taantuma myöhäiskeskiajalla säilytti kaupungin '
+      + 'sellaisena kuin se on: kun rahaa uuteen rakentamiseen ei ollut, kivitalot '
+      + 'jäivät alkuperäiseen keskiaikaiseen asuunsa.\n\n'
+      + 'Nimi tulee muinaisnorjan sanoista vis, uhripaikka, ja by, kylä. Visbytä '
+      + 'kutsutaan joskus ruusujen kaupungiksi ja joskus raunioiden kaupungiksi — '
+      + 'kirkkoraunioita on keskustassa useita.',
+    lahde: 'en-Wikipedia "Visby", johdanto-osa sekä osiot "Etymology" ja "History" '
+      + '(tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Kuinka pitkä on Visbyn keskiaikainen kaupunginmuuri?',
+      vaihtoehdot: [
+        '1,4 kilometriä',
+        '2,4 kilometriä',
+        '5,4 kilometriä',
+        '3,4 kilometriä',
+      ],
+      oikea: 3,
+      fakta: 'Visbyn kaupunginmuuri on 3,4 kilometriä pitkä ja kiertää lähes ehjänä vanhan kaupungin ympäri.',
+    },
+  },
+  {
+    id: 'gamla-uppsala',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-kohde-gamla-uppsala-d025b78f39b0.jpg',
+      lyhyt: 'Gamla Uppsalan kuningaskummut muodostavat loivan ruohottuneen ketjun Uppsalan avoimella tasangolla.',
+      selite: 'Gamla Uppsalan kuningaskummut muodostavat loivan ruohottuneen ketjun Uppsalan avoimella tasangolla.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Carl L. Thunberg for Föreningen Kulturarvsbilder',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Royal_Mounds_of_Gamla_Uppsala_in_Sweden_(2024-07-21).jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    },
+    nimi: 'Gamla Uppsala',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mitä kuningas julisti Uppsalan käräjillä?',
+      'Mikä Disting oli?',
+    ],
+    korostukset: ['Dísablót|Dísablót'],
+    nappi: 'Kaikkien svealaisten käräjät',
+    // 17.629 E / 59.897 N — en-Wikipedia "Gamla Uppsala"
+    laudat: {
+      maailmankartta: { x: 6421, y: 930.8 },
+      europe: { x: 549.7, y: 318.3 },
+    },
+    teksti: 'Gamla Uppsala on kylä ja pitäjä Uppsalan ulkopuolella. Jo 200- ja 300-luvuilta '
+      + 'alkaen se oli tärkeä uskonnollinen, taloudellinen ja poliittinen keskus.\n\n'
+      + 'Varhaiset kirjalliset lähteet kertovat, että paikka tunnettiin laajalti '
+      + 'Pohjois-Euroopassa jo esihistoriallisella ajalla legendaarisen Ynglinga-suvun '
+      + 'kuninkaiden asuinpaikkana. Vanhimmat skandinaaviset lähteet — Ynglingatal, '
+      + 'Länsi-Götanmaan laki ja Gutasaga — puhuvat svealaisten kuninkaasta '
+      + '"Uppsalan kuninkaana".\n\n'
+      + 'Täällä pidettiin kaikkien svealaisten käräjät, yleiskokous, joka kokoontui '
+      + 'esihistoriasta keskiajalle helmikuun lopussa tai maaliskuun alussa. Käräjät '
+      + 'pidettiin yhdessä suurten Disting-markkinoiden ja Dísablót-nimisen '
+      + 'uhrijuhlan kanssa. Upplannin lain mukaan juuri näillä käräjillä kuningas '
+      + 'julisti, että laivasto kutsutaan kesän sotaretkelle, ja siellä päätettiin '
+      + 'miehistöt, soutajat, päälliköt ja laivat.\n\n'
+      + 'Gamla Uppsala ei ollut vain pohjoismaisen uskonnon keskus: siitä tuli vuonna '
+      + '1164 myös Ruotsin arkkipiispanistuin.',
+    lahde: 'en-Wikipedia "Gamla Uppsala", johdanto-osa (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'birka',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-birka-2d871fc7.jpg',
+      lyhyt: 'Birkan viikinkiajan taloja jäljittelevät olkikattoiset rakennukset.',
+      selite: 'Ruokokattoiset hirsirakennukset seisovat puiden lomassa Björkön saarella.',
+      lahde: 'Valokuva: Holger.Ellgaard, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Holger.Ellgaard',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Birka_hus_2008a.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    nimi: 'Birka',
+    tyyppi: 'kauppa',
+    taso: 1,
+    kysymykset: [
+      'Mihin asti Birkan kauppareitti ulottui?',
+      'Milloin Birka hylättiin?',
+    ],
+    korostukset: ['Ansgar|Ansgar'],
+    nappi: 'Kiinalaista silkkiä Mälarenin saarella',
+    // 17.5453 E / 59.3361 N — en-Wikipedia "Birka"
+    laudat: {
+      maailmankartta: { x: 6418.2, y: 958.6 },
+      europe: { x: 548.1, y: 333.1 },
+    },
+    teksti: 'Birka oli viikinkiajan tärkeä kauppapaikka Björkön saarella Mälarenissa, '
+      + 'kolmisenkymmentä kilometriä nykyisestä Tukholmasta länteen. Se perustettiin noin '
+      + 'vuonna 750 ja kukoisti yli kahdensadan vuoden ajan; hylätyksi se jäi noin 975, '
+      + 'suunnilleen samaan aikaan kun Sigtuna perustettiin kristityksi kaupungiksi. '
+      + 'Asukkaita arvioidaan olleen 500–1 000.\n\n'
+      + 'Birka oli Itämeren pää Dneprin kauppareitillä, joka kulki Laatokan ja Novgorodin '
+      + 'kautta Bysantin valtakuntaan ja Abbasidien kalifaattiin. Kauppatavaraa olivat '
+      + 'turkikset, rautaesineet ja käsityötuotteet — karhun, ketun, näädän, saukon ja '
+      + 'majavan nahkoja saatiin saamelaisilta, suomalaisilta ja Luoteis-Venäjän '
+      + 'asukkailta. Myös poronsarvet, mursunhampaat, meripihka ja hunaja kulkivat '
+      + 'kauppaa.\n\n'
+      + 'Haudoista on löytynyt lasia ja metalliesineitä, Reininmaan keramiikkaa, '
+      + 'kiinalaista silkkiä, bysanttilaista kultalankakirjontaa ja korkealaatuisia '
+      + 'punoksia.\n\n'
+      + 'Birkassa perustettiin myös Ruotsin ensimmäinen tunnettu kristillinen seurakunta: '
+      + 'pyhä Ansgar teki sen vuonna 831. Yhdessä naapurisaaren Hovgårdenin kanssa Birka '
+      + 'on ollut maailmanperintökohde vuodesta 1993.',
+    lahde: 'en-Wikipedia "Birka", johdanto-osa ja osio "History" (tarkistettu 6.9.2026).',
+    visa: {
+      kysymys: 'Minä vuonna pyhä Ansgar perusti Birkaan Ruotsin ensimmäisen seurakunnan?',
+      vaihtoehdot: [
+        'vuonna 793',
+        'vuonna 831',
+        'vuonna 975',
+        'vuonna 1050',
+      ],
+      oikea: 1,
+      fakta: 'Birkassa pyhä Ansgar perusti Ruotsin ensimmäisen tunnetun kristillisen seurakunnan vuonna 831.',
+    },
+  },
+  {
+    id: 'falunin-kaivos',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-falunin-kaivos-cce33bbd.jpg',
+      lyhyt: 'Falunin kuparikaivon suuri avolouhos ja kaivostorni.',
+      selite: 'Ruosteenkeltaiset louhoksen seinämät laskevat syvyyteen, taustalla kohoaa punatiilinen kaivostorni.',
+      lahde: 'Valokuva: Hans Lindqvist, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Hans Lindqvist',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Falun_Copper_Mine_21.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-falunin-kaivos-16bd4ae5.jpg',
+        lyhyt: 'Falunin avolouhos ja kaupunki taustalla.',
+        selite: 'Suuri kuoppa avautuu aidatun katselupaikan edessä, ja kaupungin rakennukset näkyvät kauempana.',
+        lahde: 'Valokuva: Hans Lindqvist, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Hans Lindqvist',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Falun_Copper_Mine_27.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
+    nimi: 'Falunin kaivos',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Mitä tulittaminen kaivoksessa tarkoitti?',
+      'Kuinka suuri osa Euroopan kuparista tuli Falunista?',
+    ],
+    korostukset: ['tulittaminen|tulittaminen'],
+    nappi: 'Kaivos, joka maksoi Ruotsin sodat',
+    // 15.6122 E / 60.5989 N — en-Wikipedia "Falun Mine"
+    laudat: {
+      maailmankartta: { x: 6353.7, y: 895.7 },
+      europe: { x: 511, y: 299.8 },
+    },
+    teksti: 'Falunin kaivos toimi vuosituhannen ajan: arviolta 900-luvulta vuoteen 1992. '
+      + 'Parhaimmillaan se tuotti kaksi kolmasosaa koko Euroopan kuparintarpeesta ja '
+      + 'rahoitti monta Ruotsin 1600-luvun sotaa. Kaivoksessa kehitetyt menetelmät '
+      + 'vaikuttivat kaivostoimintaan maailmanlaajuisesti kahden vuosisadan ajan.\n\n'
+      + 'Alussa toiminta oli pientä: paikalliset talonpojat keräsivät malmia, sulattivat '
+      + 'sen ja käyttivät metallin kotitarpeisiin. Maunu Ladonlukon aikaan 1200-luvun '
+      + 'lopulla aatelisto ja lyypekkiläiset kauppiaat ottivat toiminnan haltuunsa. '
+      + 'Ensimmäinen kirjallinen maininta on vuodelta 1288: Västeråsin piispa sai '
+      + 'kartanoa vastaan 12,5 prosentin osuuden kaivoksesta.\n\n'
+      + 'Kuparia irrotettiin tulittamalla. Kalliota kuumennettiin suurilla nuotioilla, ja '
+      + 'kun kivi jäähtyi, se haurastui ja halkeili niin että kiilat ja moukarit purivat '
+      + 'siihen. Tulittaminen oli päämenetelmä satojen vuosien ajan.\n\n'
+      + 'Malmi pasutettiin avotulella rikin poistamiseksi. Paksu, myrkyllinen savu oli '
+      + 'Falunin tuntomerkki vuosisatojen ajan. Kaivos on nykyään museo ja vuodesta 2001 '
+      + 'maailmanperintökohde.',
+    lahde: 'en-Wikipedia "Falun Mine", johdanto-osa sekä osiot "History" ja "Methods" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'gota-kanava',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-gota-kanava-3c7f2c3f.jpg',
+      lyhyt: 'Göta-kanavan sulku Sjötorpissa.',
+      selite: 'Kivireunainen sulkukammio ja puiset sulkuportit erottuvat puiden varjostamassa kanavassa.',
+      lahde: 'Valokuva: Leonhard Lenz, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Leonhard Lenz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Göta_Canal_lock_in_Sjötorp_02.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-gota-kanava-4c357238.jpg',
+        lyhyt: 'Göta-kanava kulkee suorana vehreässä maisemassa.',
+        selite: 'Rauhallinen kanava jatkuu ruovikon ja puiden reunustamana kesäisen taivaan alla.',
+        lahde: 'Valokuva: Pudelek, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Pudelek',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Göta_kanal_near_road_E20.JPG',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Göta-kanava',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Kuka piirsi kanavan ensimmäiset suunnitelmat?',
+      'Kuinka kauan kanavan kaivaminen kesti?',
+    ],
+    korostukset: ['Thomas Telford|Thomas Telford'],
+    nappi: 'Ruotsin sininen nauha',
+    // 16.1733 E / 58.4983 N — en-Wikipedia "Göta Canal"
+    laudat: {
+      maailmankartta: { x: 6372.4, y: 999.7 },
+      europe: { x: 521.7, y: 355.1 },
+    },
+    teksti: 'Göta-kanava on 1800-luvun alussa rakennettu kanava. Se on 190 kilometriä '
+      + 'pitkä, ja siitä 87 kilometriä on kaivettu tai louhittu; leveys vaihtelee '
+      + 'seitsemästä neljääntoista metriin ja suurin syvyys on noin kolme metriä.\n\n'
+      + 'Kanava on osa 390 kilometrin vesitietä, joka yhdistää järviä ja jokia niin, että '
+      + 'reitti kulkee Göteborgista länsirannikolta Söderköpingiin Itämerelle '
+      + 'Trollhätte-kanavan ja Göta älvin kautta sekä suurten Vänernin ja Vätternin '
+      + 'läpi. Vesitietä on kutsuttu Ruotsin siniseksi nauhaksi.\n\n'
+      + 'Ajatuksen esitti jo vuonna 1516 Linköpingin piispa Hans Brask, mutta työhön '
+      + 'ryhtyi vasta 1800-luvun alussa Baltzar von Platen. Hanke aloitettiin 11. '
+      + 'huhtikuuta 1810, ja se oli ylivoimaisesti suurin rakennusurakka, jota Ruotsissa '
+      + 'oli siihen mennessä yritetty: 22 vuotta työtä ja yli 58 000 työntekijää.\n\n'
+      + 'Osaaminen ja välineet piti hankkia ulkomailta. Skotlantilainen insinööri Thomas '
+      + 'Telford, joka oli suunnitellut Kaledonian kanavan, laati ensimmäiset '
+      + 'suunnitelmat ja matkusti Ruotsiin 1810 valvomaan alkutöitä. Britanniasta '
+      + 'tuotiin myös hakkuja, lapioita ja kottikärryjä. Kanava avattiin virallisesti '
+      + '26. syyskuuta 1832 — von Platen oli kuollut vähän ennen sitä.',
+    lahde: 'en-Wikipedia "Göta Canal", johdanto-osa ja osio "History" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'vadstenan-luostari',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-vadstenan-luostari-26ff435c.jpg',
+      lyhyt: 'Vadstenan luostari ilmasta katsottuna Vätternin rannalla.',
+      selite: 'Vihreäkattoinen luostarikirkko ja punaiset tiilirakennukset ympäröivät pihaa vesistön äärellä.',
+      lahde: 'Valokuva: L.G.foto, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'L.G.foto',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vadstena_kloster_från_luften.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-vadstenan-luostari-2e387218.jpg',
+        lyhyt: 'Vadstenan luostarin punatiilinen rakennus ja nurmikenttä.',
+        selite: 'Pitkä keskiaikainen tiilirakennus punaisine kattoineen seisoo nurmen reunalla.',
+        lahde: 'Valokuva: Sniper Zeta, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Sniper Zeta',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vadstena_kloster_104.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Vadstenan luostari',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Kuka luostarin perusti?',
+      'Miksi kirkko on niin koruton?',
+    ],
+    korostukset: ['birgittalaiset|birgittalaisen'],
+    nappi: 'Pyhän Birgitan emoluostari',
+    // 14.8914 E / 58.4506 N — en-Wikipedia "Vadstena Abbey"
+    laudat: {
+      maailmankartta: { x: 6329.7, y: 1002 },
+      europe: { x: 497.1, y: 356.4 },
+    },
+    teksti: 'Vadstenan luostari on rakennusryhmä Vätternin rannalla. Pyhä Birgitta perusti '
+      + 'sen vuonna 1346 kuningas Maunu Eerikinpojan ja kuningatar Blankan avulla: '
+      + 'kuningaspari lahjoitti testamentillaan luostarille kymmenen tilaa, niiden joukossa '
+      + 'Vadstenan.\n\n'
+      + 'Luostarikirkko alkoi puukirkkona, joka paloi vuonna 1388. Se rakennettiin '
+      + 'uudelleen 1300-luvun lopulla Birgitan ohjeiden mukaan; hän kertoi saaneensa ohjeet '
+      + 'Jeesukselta ja tahtoi, että kirkko olisi varustukseltaan yksinkertainen. Kirkko '
+      + 'vihittiin 16. helmikuuta 1430.\n\n'
+      + 'Birgitan tytär, pyhä Katariina, saapui luostariin 1374 äitinsä jäännösten kanssa '
+      + 'ja löysi sieltä vain muutaman noviisin; hänet valittiin abbedissaksi. Birgitan '
+      + 'pyhäksi julistaminen 1391 ja hänen jäännöstensä siirto luostarikirkkoon 1394 '
+      + 'toivat yhteisölle mainetta ja rikkautta.\n\n'
+      + 'Luostari toimi birgittalaisten nunnien luostarina vuodesta 1346 vuoteen 1605, '
+      + 'jolloin sen viimeinen ruotsalainen nunna kuoli. Vuosina 1346–1595 se oli koko '
+      + 'birgittalaisen sääntökunnan emoluostari, ja Vadstenan kaupunki kasvoi sen '
+      + 'ympärille.',
+    lahde: 'en-Wikipedia "Vadstena Abbey", johdanto-osa ja osio "Foundation and duration" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'kiruna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-kiruna-6c01e377.jpg',
+      lyhyt: 'Kirunan kirkko ja erillinen kellotorni ilmasta katsottuna.',
+      selite: 'Punainen puukirkko ja kellotorni seisovat syksyisen koivumetsän keskellä.',
+      lahde: 'Valokuva: Arild Vågen, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Arild Vågen',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kiruna_kyrka_September_2017_02.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Kiruna',
+    tyyppi: 'tekniikka',
+    taso: 1,
+    kysymykset: [
+      'Miksi malmi jäi pitkään louhimatta?',
+      'Mikä Esrange on?',
+    ],
+    korostukset: ['Kiirunavaara|Kiirunavaarassa'],
+    nappi: 'Kaupunki, joka syntyi rautamalmista',
+    // 20.3028 E / 67.8489 N — en-Wikipedia "Kiruna"
+    laudat: {
+      maailmankartta: { x: 6510.1, y: 507.9 },
+      europe: { x: 601, y: 109.2 },
+    },
+    teksti: 'Kiruna on Ruotsin pohjoisin kaupunki Lapin maakunnassa. Se rakennettiin '
+      + '1890-luvulla Kirunan kaivosta varten ja perustettiin vuonna 1900.\n\n'
+      + 'Rautamalmi Kiirunavaarassa ja Luossavaarassa oli paikallisten saamelaisten '
+      + 'tiedossa vuosisatoja aiemmin. Vuonna 1696 Kengiksen ruukin kirjanpitäjä Samuel '
+      + 'Mört kirjoitti huhuista, ja vuonna 1736 Mangi-niminen saamelainen ilmoitti '
+      + 'löydöstä Ruotsin viranomaisille Jukkasjärven kirkolla.\n\n'
+      + 'Kaivostoimintaa ei silti aloitettu: paikka oli syrjäinen ja ilmasto ankara. '
+      + '1800-luvulla malmia louhittiin vähän kerrallaan — kesällä irrotettiin ja talvella '
+      + 'kuljetettiin porien ja hevosten vetämillä reillä. Kustannukset olivat korkeat ja '
+      + 'fosforipitoisen malmin laatu huono, kunnes Sidney Gilchrist Thomasin ja Percy '
+      + 'Gilchristin vuonna 1878 keksimä menetelmä erotti fosforin malmista.\n\n'
+      + 'Rautatie ratkaisi kuljetuksen: rata Luulajasta Narvikiin sai luvan 1884, ja '
+      + 'väliaikainen osuus Luulajasta Malmbergetiin valmistui 1888. Kirunassa on nykyään '
+      + 'myös Esrangen avaruuskeskus, joka perustettiin 1960-luvulla, sekä avaruusfysiikan '
+      + 'tutkimuslaitos.',
+    lahde: 'en-Wikipedia "Kiruna", johdanto-osa ja osio "Origins" (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'ales-stenar',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-kohde-ales-stenar-a5345172fddc.jpg',
+      lyhyt: 'Ales stenarin kivilaiva kaartuu Kåsebergan nurmiharjanteella Itämeren äärellä.',
+      selite: 'Ales stenarin kivilaiva kaartuu Kåsebergan nurmiharjanteella Itämeren äärellä.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Anders Lagerås',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ales_stenar1_kaseberga.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    nimi: 'Ales stenar',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mikä kivilaiva on?',
+      'Miksi kivien ikä on kiistanalainen?',
+    ],
+    korostukset: ['kivilaiva|kivilaiva'],
+    nappi: '59 lohkaretta laivan muotoon',
+    // 14.0544 E / 55.3827 N — en-Wikipedia "Ale's Stones"
+    laudat: {
+      maailmankartta: { x: 6301.8, y: 1148 },
+      europe: { x: 481, y: 437 },
+    },
+    teksti: 'Ales stenar on megaliittinen muistomerkki Skoonessa Etelä-Ruotsissa. Se on '
+      + 'kivilaiva: soikea muodostelma, jonka päädyissä olevat kivet ovat muita selvästi '
+      + 'suurempia. Laiva on 67 metriä pitkä, ja siihen kuuluu 59 suurta lohkaretta, joista '
+      + 'raskaimmat painavat viisi tonnia.\n\n'
+      + 'Radiohiiliajoitus on antanut paikalta seitsemän tulosta. Yksi viittaa noin 5 500 '
+      + 'vuoden ikään, kuusi noin 1 400 vuoteen. Jälkimmäistä pidetään todennäköisimpänä '
+      + 'rakennusajankohtana, mikä sijoittaa muistomerkin pohjoismaisen rautakauden '
+      + 'loppuun. Poikkeava näyte on nokisista kivistä, joiden uskotaan olevan vanhemman '
+      + 'tulisijan jäänteitä.\n\n'
+      + 'Tarkoituksesta kiistellään. Yleensä muodostelmaa pidetään hautamonumenttina tai '
+      + 'kulttipaikkana, mutta on esitetty myös, että se olisi aurinkokalenteri, joka on '
+      + 'suunnattu kesäpäivänseisauksen auringonlaskuun.\n\n'
+      + 'Vuoden 1989 ensimmäisissä arkeologisissa kaivauksissa laivan sisältä löytyi '
+      + 'koristeltu saviastia, jossa oli poltettuja ihmisen luita. Luiden arvellaan '
+      + 'tulleen roviolta ja päätyneen astiaan vasta myöhemmin.',
+    lahde: 'en-Wikipedia "Ale\'s Stones", johdanto-osa sekä osiot "Function" ja '
+      + '"Excavations" (tarkistettu 6.9.2026).',
+  },
+  /* ================================================================
+   * NOSTOERÄ 11.9.2026 — KUUSI KOHDETTA LISÄÄ.
+   *
+   * Omistaja 11.9.2026: *"Suomesta puuttuu lisäksi myös nostoja …
+   * Agentit voisivat tarkastaa myös muut Euroopan maat että kaikissa
+   * tarpeeksi nostoja."* Päätoimittajan tavoite on 20 pääkartan nostoa
+   * per Euroopan maa; Ruotsi oli neljässätoista.
+   *
+   * RUOTSISSA ON YKSI PELIKAUPUNKI (Tukholma), ja etäisyys mitattiin
+   * siihen. Lähin uusi merkki on Salan hopeakaivos 57 lautayksikön
+   * päässä — moninkertaisesti yli kaupunkikaton säteen
+   * (js/fokuskohteet.js), joten kaikki kuusi ovat pääkartan merkkejä.
+   * Samasta syystä tähän erään EI otettu Drottningholmia eikä Vasa-
+   * laivan hylkypaikkaa: kumpikin on Tukholman laatan kyljessä.
+   *
+   * VÄNERN ON TYYPPIÄ 'meri' EIKÄ 'jarvi' — perustelu on kirjattu
+   * js/packs/maastokohteet-gha.js:n Voltajärvi-kortissa.
+   *
+   * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä). Faktat en-Wikipediasta kohde kerrallaan 11.9.2026.
+   * ============================================================== */
+  {
+    id: 'vanern',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-vanern-dd0217b8.jpg',
+      lyhyt: 'Vänernin kivinen ranta ja aaltoileva järvi.',
+      selite: 'Tuulinen järvi kimmeltää kivikkoisen rannan ja männikön takana sinisen taivaan alla.',
+      lahde: 'Valokuva: Leonhard Lenz, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Leonhard Lenz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:East_bank_of_the_Vänern_lake_in_Sweden_03.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-vanern-5b74f244.jpg',
+        lyhyt: 'Aurinko laskee Vänernin yllä männyn takana.',
+        selite: 'Oranssi taivas heijastuu tummaan järveen, ja horisontissa näkyy matala saari.',
+        lahde: 'Valokuva: Leonhard Lenz, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Leonhard Lenz',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:East_bank_of_the_Vänern_lake_in_Sweden_with_sunset_01.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Vänern',
+    tyyppi: 'meri',
+    taso: 1,
+    kysymykset: [
+      'Miksi järvessä elää merieläimiä?',
+      'Mihin Vänernin vedet laskevat?',
+    ],
+    korostukset: ['Klarälven|Klarälven'],
+    nappi: 'Euroopan unionin suurin järvi',
+    // 13.5 E / 58.9 N — järvialtaan keskiosa; en-Wikipedia "Vänern"
+    // ei anna yhtä keskipistettä
+    laudat: {
+      maailmankartta: { x: 6283.3, y: 980.0 },
+    },
+    teksti: 'Vänern on Ruotsin suurin järvi, Euroopan unionin suurin ja Euroopan kolmanneksi '
+      + 'suurin heti Laatokan ja Äänisen jälkeen. Se makaa Länsi-Göötanmaan, Taalain ja '
+      + 'Värmlannin mailla 44 metriä merenpinnan yläpuolella, ja koska syvin kohta on 106 '
+      + 'metriä, altaan pohja on alimmillaan 62 metriä merenpintaa alempana. Keskisyvyys on '
+      + 'vaatimattomat 27 metriä. Suurin tulovirta on Klarälven, joka saapuu järveen Karlstadin '
+      + 'luona ja saa alkunsa Norjan Trøndelagista; vedet lähtevät Göta älviä pitkin Göteborgin '
+      + 'suuntaan Kattegatiin — Vänern on Ruotsin kymmenestä suurimmasta järvestä ainoa, joka '
+      + 'ei laske itärannikolle. Jääkauden jälkeen koko Ruotsi oli tässä kohtaa vettä, ja '
+      + 'kun maa nousi, järvi jäi irti merestä — siksi siinä elää yhä lajeja, joita makeasta '
+      + 'vedestä ei tavallisesti löydä. Toukokuussa 2009 järven pohjasta löytyi viikinkilaiva.',
+    lahde: 'en-Wikipedia "Vänern", johdanto-osa ja osio "History" (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'kalmarinlinna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-kalmarinlinna-b88b09bf.jpg',
+      lyhyt: 'Kalmarin linna vihreän niityn takaa.',
+      selite: 'Vaaleanpunertava linna kupariturkoosine kattoineen kohoaa ruovikon ja vallien yläpuolelle sinistä taivasta vasten.',
+      lahde: 'Valokuva: Hstad, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Hstad',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kalmar_Slott_9,_Kalmar.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-kalmarinlinna-ef219e27.jpg',
+        lyhyt: 'Kalmarin linna heijastuu tyyneen Kalmarinsalmeen.',
+        selite: 'Linna siluettina matalalla rannalla, ja sen tornit ja vallit näkyvät vedessä.',
+        lahde: 'Valokuva: Alexandru Baboş Albabos, Wikimedia Commons (CC BY 3.0).',
+        tekija: 'Alexandru Baboş Albabos',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kalmar_slott.nordostra_sidan.jpg',
+        lisenssi: 'CC BY 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+      },
+    ],
+    nimi: 'Kalmarin linna',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mikä Kalmarin unioni oli?',
+      'Miksi linnaa sanottiin valtakunnan avaimeksi?',
+    ],
+    korostukset: ['Kalmarin unioni|Kalmarin unioni'],
+    nappi: 'Valtakunnan avain Tanskan rajalla',
+    // 16.3567 E / 56.6608 N — en-Wikipedia "Kalmar Castle"
+    laudat: {
+      maailmankartta: { x: 6378.6, y: 1087.9 },
+    },
+    teksti: 'Kalmarin linna on Smoolannissa, ja se alkoi pyöreänä puolustustornina noin vuonna '
+      + '1180 Kalmarinsalmen rannalla. Koska Tanskan raja kulki aivan vieressä, linnaa '
+      + 'kutsuttiin nimellä Rikets nyckel, valtakunnan avain. Vuonna 1397 siellä solmittiin '
+      + 'Kalmarin unioni, joka liitti Tanskan, Norjan ja Ruotsin — siis myös Suomen — saman '
+      + 'hallitsijan alle kuningatar Margareeta I:n johdolla. Vuoden 1520 kapinassa linnaa '
+      + 'puolusti Anna Eriksdotter Bielke, joka otti miehensä kuoltua tämän läänitykset '
+      + 'haltuunsa kesken taistelun. Vaasa-kuninkaat tekivät keskiaikaisesta linnoituksesta '
+      + 'renessanssipalatsin: Juhana III käynnisti kruunauksensa jälkeen laajan muutostyön, '
+      + 'jota arkkitehti Domenicus Pahr alkoi toteuttaa 1574 — tornit tasattiin samankorkuisiksi '
+      + 'lyijykattoineen, ikkunat muutettiin neliöiksi, julkisivu maalattiin valkoiseksi ja '
+      + 'katto punaiseksi. Sitä pidetään Pohjoismaiden parhaiten säilyneenä '
+      + 'renessanssilinnana.',
+    lahde: 'en-Wikipedia "Kalmar Castle", johdanto-osa ja osio "History" (tarkistettu '
+      + '11.9.2026).',
+  },
+  {
+    id: 'karlskrona',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-karlskrona-8f2c175d.jpg',
+      lyhyt: 'Karlskronan Stumholmenin majakka ja vanhat rakennukset meren rannalla.',
+      selite: 'Valkoinen majakka ja vanhat tiilirakennukset seisovat saaren rannalla sinisen lahden takana.',
+      lahde: 'Valokuva: Pudelek, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Pudelek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Stumholmen,_Karlskrona_(by_Pudelek).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    nimi: 'Karlskrona',
+    tyyppi: 'merenkulku',
+    kysymykset: [
+      'Miksi laivasto muutti pois Tukholmasta?',
+      'Mikä on maan pisin puurakennus?',
+    ],
+    korostukset: ['jäätön|jäätön'],
+    nappi: 'Laivastokaupunki, joka ei jäädy',
+    // 15.5869 E / 56.1612 N — en-Wikipedia "Karlskrona Naval Base"
+    laudat: {
+      maailmankartta: { x: 6352.9, y: 1111.6 },
+    },
+    teksti: 'Kun Ruotsi ja Tanska lopettivat Skoonen sodan vuonna 1679, kuningas Kaarle XI '
+      + 'lähti tiedusteluretkelle itäisen Blekingen saaristoon ja määräsi Trossön saarelle '
+      + 'rakennettavaksi kaupungin nimeltä Carlscroona. Syy oli yksinkertainen: laivasto '
+      + 'tarvitsi pysyvän tukikohdan lähempänä Tanskaa, joka oli ollut koko 1600-luvun Ruotsin '
+      + 'päävihollinen, ja lisäksi telakan, varastot ja kasarmit. Paikassa oli vielä yksi etu — '
+      + 'se on talvella jäätön, toisin kuin siihen asti päätukikohtana ollut Tukholma. '
+      + 'Kaupunkioikeudet tulivat 1680, kenraalikvartiermestari Erik Dahlberghin suunnitelma '
+      + '1683, ja rakentaminen alkoi kaksi vuotta myöhemmin. Saarikaaret suojaavat satamaa '
+      + 'sekä mereltä että maalta. Telakan alueella on yhä Repslagarbanan, köysirata, joka on '
+      + 'maan pisin puurakennus.',
+    lahde: 'en-Wikipedia "Karlskrona Naval Base", johdanto-osa ja osio "History" (tarkistettu '
+      + '11.9.2026).',
+    visa: {
+      kysymys: 'Miksi Kaarle XI valitsi Karlskronan laivaston uudeksi tukikohdaksi?',
+      vaihtoehdot: [
+        'Se on talvella jäätön',
+        'Se on lähempänä Norjaa',
+        'Siellä oli jo suuri kaupunki',
+        'Siellä oli halpaa puuta',
+      ],
+      oikea: 0,
+      fakta: 'Karlskrona on talvella jäätön, toisin kuin aiempi päätukikohta Tukholma.',
+    },
+  },
+  {
+    id: 'lundintuomiokirkko',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-lundintuomiokirkko-e661c473.jpg',
+      lyhyt: 'Lundin tuomiokirkon kaksi tornia ja romaaninen julkisivu.',
+      selite: 'Harmaakivinen kirkko kohoaa sinistä taivasta vasten, ja sen kaksi suippokattoista tornia hallitsevat julkisivua.',
+      lahde: 'Valokuva: Jorchr, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Jorchr',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lunds_domkyrka_augusti_2012.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-lundintuomiokirkko-72f7ab6b.jpg',
+        lyhyt: 'Lundin tuomiokirkko ilmasta katsottuna.',
+        selite: 'Ilmakuvassa näkyvät kirkon ristikirkon muotoinen pohja, tornit ja pyöreä kuori puiden ympäröimänä.',
+        lahde: 'Valokuva: David Castor, Wikimedia Commons (CC0).',
+        tekija: 'David Castor',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lunds_domkyrka–flygbild_06_september_2014.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+      },
+    ],
+    nimi: 'Lundin tuomiokirkko',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Kenen maassa kirkko rakennettiin?',
+      'Mitä kirkolle tehtiin 1800-luvulla?',
+    ],
+    korostukset: ['astronominen kello|astronominen kello'],
+    nappi: 'Pohjolan mahtavin romaaninen kirkko',
+    // 13.1931 E / 55.7047 N — en-Wikipedia "Lund Cathedral"
+    laudat: {
+      maailmankartta: { x: 6273.1, y: 1133.0 },
+    },
+    teksti: 'Lundin tuomiokirkko on yksi Ruotsin vanhimmista yhä käytössä olevista '
+      + 'kivirakennuksista, ja sitä on sanottu Pohjoismaiden romaanisen rakennustaiteen '
+      + 'väkevimmäksi edustajaksi. Kun se rakennettiin, Lund ei ollut Ruotsia vaan Tanskaa, ja '
+      + 'kirkko oli koko Pohjolan arkkipiispanistuimen katedraali, pyhitetty Pyhälle '
+      + 'Laurentiukselle. Pääalttari vihittiin 1145, ja arkkitehtuurissa näkyy Pohjois-Italian '
+      + 'vaikutus Reinin laakson kautta; varhaisin tunnettu rakentaja oli nimeltään Donatus. '
+      + 'Kryptassa on kaksi omalaatuista kivipatsasta, joita kutsutaan Finn-jättiläiseksi ja '
+      + 'hänen vaimokseen. Kirkossa on 1400-luvun kuoripenkit ja astronominen kello. Lund tuli '
+      + 'Ruotsille Roskilden rauhassa 1658, ja yliopisto perustettiin kirkossa pidetyssä '
+      + 'tilaisuudessa 1668. Foggin matkan aikaan kirkko oli työmaa: vuonna 1832 suositeltua '
+      + 'täydellistä korjausta tehtiin läpi vuosisadan, ensin Carl Georg Brunius ja sitten '
+      + 'Helgo Zettervall johdossa — Zettervall purki koko länsipään torneineen ja rakensi sen '
+      + 'omien piirustustensa mukaan uudestaan. Työ valmistui vasta 1893.',
+    lahde: 'en-Wikipedia "Lund Cathedral", johdanto-osa (tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'tornionjoki',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-tornionjoki-fb698967.jpg',
+      lyhyt: 'Tornionjoki levenee tyyneksi pilvien alla Ylitorniolla.',
+      selite: 'Leveä joki heijastaa pilviä, ja metsäiset rannat jatkuvat horisonttiin.',
+      lahde: 'Valokuva: Estormiz, Wikimedia Commons (CC0).',
+      tekija: 'Estormiz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tornionjoki_Ylitornio_20220724_01.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-tornionjoki-214023fb.jpg',
+        lyhyt: 'Aurinko laskee Tornionjoen rannalla Pellossa, veneet rannassa.',
+        selite: 'Punainen ja oranssi taivas heijastuu jokeen, ja puuveneet lepäävät rannalla.',
+        lahde: 'Valokuva: Arto Alanenpää, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Arto Alanenpää',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tornionjoki-Pello.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Tornionjoki',
+    tyyppi: 'joki',
+    kysymykset: [
+      'Mistä Tornionjoki saa alkunsa?',
+      'Miksi joki on myös raja?',
+    ],
+    korostukset: ['Torneträsk|Torneträsk-järvestä'],
+    nappi: 'Joki, joka on myös valtakunnanraja',
+    // 23.7 E / 66.3 N — joen keskijuoksu Ruotsin puolella; en-Wikipedia
+    // "Torne (Finnish and Swedish river)" ei anna yhtä keskipistettä
+    laudat: {
+      maailmankartta: { x: 6623.3, y: 595.0 },
+    },
+    teksti: 'Tornionjoki alkaa Norjan rajan tuntumasta Torneträsk-järvestä ja virtaa 522 '
+      + 'kilometriä kaakkoon Pohjanlahteen. Noin puolet matkastaan se on kahden valtakunnan '
+      + 'raja: yläjuoksullaan joki on kokonaan Ruotsin puolella, mutta siitä kohdasta, jossa '
+      + 'Muonionjoki yhtyy siihen, se erottaa Ruotsin ja Suomen. Se on Norrbottenin läänin '
+      + 'suurin joki sekä pituudeltaan että valuma-alueeltaan, ja valuma-alue on noin 37 300 '
+      + 'neliökilometriä, josta selvästi suurin osa on Ruotsin puolella. Lähde on kartalla '
+      + 'lähempänä Atlanttia kuin Pohjanlahtea: vedenjakajan toisella puolella on Narvik, ja '
+      + 'vesiteitse paikkojen väliin jää useita tuhansia kilometrejä.',
+    lahde: 'en-Wikipedia "Torne (Finnish and Swedish river)", johdanto-osa ja osio "Geography" '
+      + '(tarkistettu 11.9.2026).',
+  },
+  {
+    id: 'salanhopeakaivos',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-salanhopeakaivos-0943d942.jpg',
+      lyhyt: 'Salan hopeakaivoksen kuningatar Kristiinan kuilun rakennus.',
+      selite: 'Punatiilinen ja keltainen kuilurakennus seisoo lumisessa kaivosalueella.',
+      lahde: 'Valokuva: Riggwelter, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Riggwelter',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Queen_Christina_shaft,_Sala_Silver_mine,_Sala,_Sweden.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-salanhopeakaivos-bb860e17.jpg',
+        lyhyt: 'Salan hopeakaivoksen pyöreä punainen kuiluhuone.',
+        selite: 'Puusta ja tiilestä rakennettu pyöreä kuilurakennus seisoo kivikkoisen kaivoskasan keskellä.',
+        lahde: 'Valokuva: Tulipasylvestris, Wikimedia Commons (CC BY 4.0).',
+        tekija: 'Tulipasylvestris',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Karl_XI_schakt_vid_Sala_silvergruva.jpg',
+        lisenssi: 'CC BY 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+      },
+    ],
+    nimi: 'Salan hopeakaivos',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Kuinka paljon hopeaa kaivoksesta tuli?',
+      'Miksi Salan ympärillä on niin monta patoa?',
+    ],
+    korostukset: ['rikastushiekka|rikastushiekasta'],
+    nappi: 'Kruunun hopea-aitta',
+    // 16.6028 E / 59.9206 N — en-Wikipedia "Sala Silver Mine"
+    laudat: {
+      maailmankartta: { x: 6386.8, y: 929.7 },
+    },
+    teksti: 'Salan hopeakaivos Västmanlandissa oli yhtäjaksoisesti tuotannossa 1400-luvulta '
+      + 'vuoteen 1908. Malmi tunnetaan poikkeuksellisen korkeasta hopeapitoisuudestaan, mutta '
+      + 'siitä saatiin myös lyijyä ja sinkkiä: hopea ei useimmiten näy paljaalle silmälle vaan '
+      + 'piilee lyijyhohteen ja sinkkivälkkeen seassa. Kaikkiaan kaivoksesta louhittiin noin '
+      + 'viisi miljoonaa tonnia kiveä, ja siitä erotettiin yli 200 miljoonaa unssia hopeaa ja '
+      + 'noin 35 000 tonnia lyijyä; syvimmillään kaivos ulottuu 318,6 metriin. Huippukausia oli '
+      + 'kolme, ja viimeinen osui juuri isoisäsi aikaan: 1800-luvun lopulla kaivos siirtyi '
+      + 'valtiolta yhtiölle ja otti käyttöön uusia menetelmiä, muun muassa hopean liuottamisen '
+      + 'vanhasta rikastushiekasta. Rikas malmi loppui silti kesken. Kaupunki syntyi kaivoksen '
+      + 'viereen kaivosmiesten kylänä, siirrettiin kuninkaan käskystä nykyiselle paikalleen ja '
+      + 'sai kaupunkioikeudet Kustaa II Aadolfilta 1624. Ympäristön järvet, padot ja kanavat '
+      + 'rakennettiin tuottamaan vesivoimaa pumppuihin, nostokoneisiin ja sulattoon.',
+    lahde: 'en-Wikipedia "Sala Silver Mine", johdanto-osa sekä osiot "Geology" ja "History" '
+      + '(tarkistettu 11.9.2026).',
   },
 ];
-

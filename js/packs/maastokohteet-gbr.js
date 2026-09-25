@@ -27,13 +27,66 @@
  * mahdollista olemassa olevaa fokuskohteet-pakkia EI ole tarvinnut
  * koskea eikä yhtään sen kohdetta ole toistettu täällä.
  *
+ * ── K2-ERÄ 4 6.9.2026: KOHTEITA MAASTON RINNALLE ───────────────────
+ *
+ * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+ * Britannialla oli jo KOLME kuratoitua kohdetta
+ * (js/packs/fokuskohteet-gbr.js: St Paulin katedraali, Crystal Palace
+ * ja Vanha London Bridge), joten tavoitteesta puuttui viisi
+ * (docs/moduulit/karttanostot-kattavuus.md). Tässä ne ovat; yhdenkään
+ * tyyppi ei ole maastoa, vaan historiaa, kulttuuria tai tekniikkaa.
+ *
+ * fokuskohteet-gbr.js:ÄÄN EI OLE KOSKETTU eikä yhtään sen kolmesta
+ * kohteesta ole toistettu täällä — kaikki kolme ovat Lontoossa, ja
+ * tämän erän kohteet ovat kaukana pelikaupungeista. Sama koskee
+ * js/fokuskohteet.js:n KOHDE_MAAT-taulua; maastokohteiden hakemisto
+ * (js/packs/maastokohteet.js) liittää tämän listan peliin
+ * sellaisenaan.
+ *
+ * KAIKKI VIISI OVAT KAUKANA PELIKAUPUNGISTA. Britanniassa on kaksi
+ * pelikaupunkia (Lontoo ja Edinburgh) ja naapurissa Dublin, ja
+ * etäisyys mitattiin jokaiseen js/packs/maailmankartta.js CITIES-listan
+ * kaupunkiin; jokaisen kohteen lähin on kirjattu sen oman
+ * koordinaattirivin viereen. Lähin koko erässä on Hadrianuksen muuri
+ * 53,1 lautayksikön päässä Edinburghista — raja
+ * KAUPUNGIN_KOHDALLA_SADE on 7 (js/fokuskohteet.js). Forth Bridge
+ * jätettiin siksi pois: se on 7,1 yksikön päässä Edinburghista eli
+ * käytännössä kaupungin kohdalla, ja sen paikka olisi kohdekartalla.
+ *
+ * KUVAT (20.9.2026). Vanhat kuvattomat kortit ovat saaneet kaksi Commons-kuvaa
+ * (PD/CC, lisenssi ja tekijä Commonsin rajapinnasta), ämpärin osoite
+ * karttanostot/20260920/.
+ *
  * Britannian maastokohteet. Faktat en-Wikipediasta 29.8.2026.
  */
 export const MAASTOKOHTEET_GBR = [
   {
     id: 'bennevis',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-bennevis-d378318f.jpg',
+      lyhyt: 'Ben Nevis kohoaa vihreän laakson yllä.',
+      selite: 'Skotlannin korkein vuori näkyy Banavien suunnasta kesäisessä valossa. Harmaa kallioinen huippu ja jyrkkä rinne hallitsevat maisemaa, ja alarinteet ovat ruohon ja metsän peitossa.',
+      lahde: 'Valokuva: Thincat, Wikimedia Commons (public domain).',
+      tekija: 'Thincat',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:BenNevis2005.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-bennevis-ad388164.jpg',
+        lyhyt: 'Ben Nevis ja Càrn Mòr Dearg aamuauringossa.',
+        selite: 'Ilmakuvassa Ben Nevisin massiivinen rinne ja vierellä oleva Càrn Mòr Dearg. Laaksossa mutkittelee puro ja oikealla näkyy pieni järvi.',
+        lahde: 'Valokuva: HikingisKing, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'HikingisKing',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:20250715_Ben_Nevis_4.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Ben Nevis',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Mikä on felsenmeer?',
       'Millainen on Ben Neviksen pohjoisseinämä talvella?',
@@ -54,6 +107,28 @@ export const MAASTOKOHTEET_GBR = [
   },
   {
     id: 'snowdon',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-snowdon-8748dd20.jpg',
+      lyhyt: 'Snowdonin huippu kohoaa Llyn Llydaw -järven yllä.',
+      selite: 'Snowdonin kolmiomainen huippu nousee jyrkkien kallioseinämien takaa. Etualalla on Llyn Llydaw -järvi ja sen ympärillä ruohoisia rinteitä.',
+      lahde: 'Valokuva: Peter S, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Peter S',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Llyn_Llydaw_and_Snowdon_-_geograph.org.uk_-_4302038.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-snowdon-ae490094.jpg',
+        lyhyt: 'Näkymä Snowdonin huipun läheltä Llyn Llydaw -järvelle.',
+        selite: 'Ylhäältä Snowdonin rinteeltä avautuu näkymä kapealle Llyn Llydaw -järvelle ja Crib Gochin terävälle harjanteelle. Polut kiemurtelevat vihreillä rinteillä.',
+        lahde: 'Valokuva: Julian Herzog (Website), Wikimedia Commons (CC BY 4.0).',
+        tekija: 'Julian Herzog (Website)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Yr_Wyddfa_towards_Llyn_Llydaw_Crib_Goch_2019_01.jpg',
+        lisenssi: 'CC BY 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+      },
+    ],
     nimi: 'Snowdon',
     tyyppi: 'vuori',
     kysymykset: [
@@ -77,6 +152,28 @@ export const MAASTOKOHTEET_GBR = [
   },
   {
     id: 'pohjanmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-pohjanmeri-ff42ed0b.jpg',
+      lyhyt: 'Kallioinen Pohjanmeren rannikko Fethalandissa, etualalla ohdake.',
+      selite: 'Vihreät kukkulat ja tummat kalliot ympäröivät pientä hiekkaista poukamaa. Sininen Pohjanmeri levittäytyy taustalle, ja etualalla kukkii purppuranpunainen ohdake.',
+      lahde: 'Valokuva: Colin Smith, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Colin Smith',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:North_Sea_Coast,_Fethaland_-_geograph.org.uk_-_2075000.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-pohjanmeri-982c28f0.jpg',
+        lyhyt: 'Aallot iskeytyvät toisiinsa Pohjanmerellä Seaburnin rannalla.',
+        selite: 'Aallot kohtaavat ja roiskuvat korkeana vaahtosuihkuna tummansinisellä merellä. Taivas on kirkkaan sininen, ja kuvan reunassa näkyy vihreä kaide.',
+        lahde: 'Valokuva: Les Hull, Wikimedia Commons (CC BY-SA 2.0).',
+        tekija: 'Les Hull',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Incoming_and_Outgoing_Waves_Crash_together_in_the_North_Sea_at_Seaburn_-_geograph.org.uk_-_6013605.jpg',
+        lisenssi: 'CC BY-SA 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+      },
+    ],
     nimi: 'Pohjanmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -97,6 +194,28 @@ export const MAASTOKOHTEET_GBR = [
   },
   {
     id: 'irlanninmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-irlanninmeri-bd58cd2d.jpg',
+      lyhyt: 'Auringonlasku Irlanninmerellä Llanddwyn-saarelta katsottuna.',
+      selite: 'Tyyni meri hehkuu oranssina ja kullanhohtoisena taivaan alla. Etualalla on tummia rannikkokallioita ja horisontissa näkyy maakaistale.',
+      lahde: 'Valokuva: TXGemGem, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'TXGemGem',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sunset_and_Coastal_Rock_in_the_Irish_Sea_from_Llanddwyn_Island_–_July_2025.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-irlanninmeri-4b2b4046.jpg',
+        lyhyt: 'Syvänsininen Irlanninmeri ruohoisen kallion takana.',
+        selite: 'Ruohoinen rinne ja kiviaita johtavat kohti laajaa, kirkkaansinistä merta. Horisontti erottuu terävänä vaaleansinistä taivasta vasten.',
+        lahde: 'Valokuva: Glyn Baker, Wikimedia Commons (CC BY-SA 2.0).',
+        tekija: 'Glyn Baker',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Azure_Irish_Sea_at_Contrary_Point_-_geograph.org.uk_-_6123224.jpg',
+        lisenssi: 'CC BY-SA 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+      },
+    ],
     nimi: 'Irlanninmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -117,6 +236,28 @@ export const MAASTOKOHTEET_GBR = [
   },
   {
     id: 'thames',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-thames-c4ec5869.jpg',
+      lyhyt: 'Thames Lontoon keskustassa, vasemmalla London Eye ja kaukana parlamenttitalo.',
+      selite: 'Leveä joki virtaa kohti Big Beniä ja parlamenttitaloa, ja vasemmalla kohoaa London Eye. Oikealla puiden reunustamalla rannalla on laiva ja kaukana joen yli kulkee silta.',
+      lahde: 'Valokuva: Diliff, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Diliff',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Thames_Panorama,_London_-_May_2009.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-thames-c0c90078.jpg',
+        lyhyt: 'Thames Oxfordissa Folly Bridgeltä katsottuna.',
+        selite: 'Panoraamakuvassa joki virtaa puiden reunustamana Oxfordin kohdalla Folly Bridgeltä katsottuna. Vasemmalla on rantapub ja vedessä lomaveneitä.',
+        lahde: 'Valokuva: Diliff, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Diliff',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Folly_Bridge_View_of_downstream_River_Thames,_Oxford_-_May_2010.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Thames',
     tyyppi: 'joki',
     kysymykset: [
@@ -134,6 +275,306 @@ export const MAASTOKOHTEET_GBR = [
       + 'kuningaskunnan toiseksi pisin Severnin jälkeen. Osalla matkaa jokea kutsutaan yhä '
       + 'vanhalla nimellä Isis.',
     lahde: 'en-Wikipedia "River Thames", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mikä joki on koko Yhdistyneessä kuningaskunnassa Thamesia pidempi?',
+      vaihtoehdot: ['Severn', 'Trent', 'Mersey', 'Ouse'],
+      oikea: 0,
+      fakta: 'Thames on Englannin pisin kokonaan maan sisällä virtaava joki, ja sen pituus '
+        + 'on 346 kilometriä.',
+    },
+  },
+  /* ================================================================
+   * K2-ERÄ 4 6.9.2026 — VIISI KOHDETTA. Perustelut tiedoston alussa.
+   * Uusilla kohteilla on vain maailmankartan rivi: Euroopan
+   * erillislaudasta on luovuttu (Raamattu 30.8.2026), eikä uutta
+   * `europe`-koordinaattia siksi lasketa. Yllä olevien maastokohteiden
+   * vanhoihin riveihin ei ole koskettu.
+   * ============================================================== */
+  {
+    id: 'stonehenge',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-stonehenge-83c6d60d.jpg',
+      lyhyt: 'Stonehengen kivipylväät ja päällyskivet ruohokentällä.',
+      selite: 'Suuret pystykivet ja niiden päälle asetetut poikkikivet kohoavat vihreällä tasangolla tummien sadepilvien alla. Kaukana kuvan reunoilla näkyy pieniä kävijöitä.',
+      lahde: 'Valokuva: Diego Delso, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Diego Delso',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Stonehenge,_Condado_de_Wiltshire,_Inglaterra,_2014-08-12,_DD_08.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-stonehenge-756093eb.jpg',
+        lyhyt: 'Stonehenge auringonlaskussa John Constablen maalauksessa.',
+        selite: '1800-luvun öljymaalaus esittää kiviryhmää kumpuilevan nummen laella. Taivaanrannassa hehkuu punainen auringonlasku, ja tie kiemurtelee kohti horisonttia.',
+        lahde: 'Maalaus: John Constable, Wikimedia Commons (public domain).',
+        tekija: 'John Constable',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:John_Constable_-_Stonehenge_at_Sunset_-_Google_Art_Project.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
+    nimi: 'Stonehenge',
+    tyyppi: 'historia',
+    taso: 1,
+    kysymykset: [
+      'Miten kivet pysyvät päällekkäin?',
+      'Mihin suuntaan monumentti on suunnattu?',
+    ],
+    korostukset: ['sarsen|sarsen-kivistä', 'trilitoni|trilitoneja'],
+    nappi: 'Puusepän liitos kivessä',
+    // -1.8261 E / 51.1789 N — en-Wikipedia "Stonehenge";
+    // lähin pelikaupunki Lontoo 58,8 lautayksikön päässä.
+    laudat: {
+      maailmankartta: { x: 5772.5, y: 1338.5 },
+    },
+    teksti: 'Stonehenge on esihistoriallinen megaliittirakennelma Salisburyn '
+      + 'tasangolla Wiltshiressä Englannissa, kolmisen kilometriä Amesburysta länteen. '
+      + 'Ulkokehä on tehty pystyistä sarsen-kivistä, joista kukin on noin neljä metriä '
+      + 'korkea, kaksi metriä leveä ja painaa noin 25 tonnia. Niiden päällä lepäävät '
+      + 'vaakasuorat kamanakivet, jotka pysyvät paikallaan tapin ja lovon avulla — '
+      + 'puusepän liitos kivessä, eikä sellaista tunneta yhdestäkään saman ajan '
+      + 'monumentista.\n\n'
+      + 'Ulkokehän sisällä on rengas pienempiä sinikiviä ja niiden sisällä vapaasti '
+      + 'seisovia trilitoneja: kaksi järeää pystykiveä ja niiden päällä yksi kamana. '
+      + 'Kokonaisuus on suunnattu kesäpäivänseisauksen auringonnousuun ja '
+      + 'talvipäivänseisauksen laskuun. Ympärillä on Englannin tihein neoliittisten ja '
+      + 'pronssikautisten muistomerkkien rypäs, muun muassa useita satoja '
+      + 'hautakumpuja.\n\n'
+      + 'Stonehenge rakennettiin monessa vaiheessa noin vuodesta 3100 eaa. noin '
+      + 'vuoteen 1600 eaa. Ympäröivä valli ja vallihauta ovat vanhimmasta vaiheesta, '
+      + 'suuret sarsenit asetettiin paikoilleen 2600–2400 eaa. ja sinikivet nykyisille '
+      + 'paikoilleen 2400–2200 eaa. Paikka on ollut lain suojaama muinaisjäännös '
+      + 'vuoden 1882 muinaismuistolaista lähtien ja maailmanperintökohde vuodesta '
+      + '1986.',
+    lahde: 'en-Wikipedia "Stonehenge", johdanto-osa (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'hadrianuksen-muuri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-hadrianuksen-muuri-e2ddc440.jpg',
+      lyhyt: 'Hadrianuksen muuri kiemurtelee kallioisen harjanteen yli.',
+      selite: 'Kivimuuri kulkee jyrkkien kukkuloiden ja avoimen nummen halki Northumberlandissa. Muurin varrella kulkevalla polulla näkyy pieniä kävelijöitä.',
+      lahde: 'Kuva: Steven Fruitsmaak, Wikimedia Commons (public domain).',
+      tekija: 'Steven Fruitsmaak',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hadrian\'s_Wall_west_of_Housesteads_3.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-hadrianuksen-muuri-f75fd9cd.jpg',
+        lyhyt: 'Lähikuva Hadrianuksen muurin kuivasta kiviladelmasta.',
+        selite: 'Tiiviisti latoutuneet, jäkälän peittämät kivet muodostavat muurin, joka nousee ruohoisen rinteen reunaa pitkin. Oikealla kulkee kivetty polku harjanteen yli.',
+        lahde: 'Kuva: Steven Fruitsmaak, Wikimedia Commons (public domain).',
+        tekija: 'Steven Fruitsmaak',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hadrian\'s_Wall_west_of_Housesteads_4.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
+    nimi: 'Hadrianuksen muuri',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mihin muurin kivet päätyivät?',
+      'Onko muuri Skotlannin raja?',
+    ],
+    korostukset: ['mailinlinnake|mailinlinnakkeissa'],
+    nappi: 'Muuri, joka ei ole raja',
+    // -2.2833 E / 55.0167 N — en-Wikipedia "Hadrian's Wall";
+    // lähin pelikaupunki Edinburgh 53,1 lautayksikön päässä.
+    laudat: {
+      maailmankartta: { x: 5757.2, y: 1165 },
+    },
+    teksti: 'Hadrianuksen muuri oli Rooman Britannian-provinssin puolustusvarustus. '
+      + 'Sen rakentaminen alkoi vuonna 122 keisari Hadrianuksen aikana. Muuri kulki '
+      + 'idässä Tyne-joen Wallsendista lännessä Bowness-on-Solwayhin eli koko saaren '
+      + 'leveydeltä, ja lopullisessa muodossaan se oli kivimuuri, jonka molemmin '
+      + 'puolin oli leveät vallihaudat. Sotilaat majoittuivat suurissa linnakkeissa, '
+      + 'pienemmissä mailinlinnakkeissa ja niiden välisissä torneissa; puolustuksen '
+      + 'ohella muurin portit saattoivat toimia tullipaikkoina.\n\n'
+      + 'Pituudeltaan muuri on 80 roomalaista mailia eli 117 kilometriä, ja se on '
+      + 'Britannian suurin roomalainen muinaisjäännös. Unesco otti sen luetteloonsa '
+      + '1987.\n\n'
+      + 'Muurin kivet ovat suurelta osin muualla: lähes kaikki pystyssä ollut '
+      + 'kiviaines purettiin uuden ajan alussa paikallisten teiden ja maatalojen '
+      + 'aineeksi, eikä mikään kohta seiso enää alkuperäisessä korkeudessaan. '
+      + 'Nykytutkimus on kaivanut esiin paljon perustuksia, ja monet muurin varren '
+      + 'linnakkeet ovat yleisölle avoinna. Yleisestä puheesta huolimatta muuri ei ole '
+      + 'koskaan ollut Englannin ja Skotlannin raja: se on kokonaan Englannin '
+      + 'puolella.',
+    lahde: 'en-Wikipedia "Hadrian\'s Wall", johdanto-osa ja osio "Dimensions" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'skara-brae',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-skara-brae-0c96761e.jpg',
+      lyhyt: 'Skara Brae -kylän kiviset talonjäänteet meren rannalla.',
+      selite: 'Nurmen peittämät kivirakennusten jäänteet sijaitsevat Orkneyn rannikolla Skaillinlahden äärellä. Hiekkalattiaisten talojen matalat kiviseinät erottuvat vihreän nurmen keskeltä.',
+      lahde: 'Valokuva: Ekrem Canli, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ekrem Canli',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Skara_brae_2026_1.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-skara-brae-66b14abc.jpg',
+        lyhyt: 'Skara Brae -kylän talon sisätila, jossa on keskellä tulisija.',
+        selite: 'Kiviseinäinen talo on säilynyt matalana kuoppana, jonka keskellä on neliön muotoinen kivireunainen tulisija. Seinien vierellä on pystyyn nostettuja kivilaattoja.',
+        lahde: 'Valokuva: Ymblanter, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Ymblanter',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sandwick_Skara_Brae_2.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Skara Brae',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mikä paljasti kylän vuonna 1850?',
+      'Mitä nimi Skara Brae tarkoittaa?',
+    ],
+    korostukset: ['Skaillinlahti|Skaillinlahden'],
+    nappi: 'Myrsky, joka paljasti kivikylän',
+    // -3.3417 E / 59.0487 N — en-Wikipedia "Skara Brae";
+    // lähin pelikaupunki Edinburgh 148,6 lautayksikön päässä.
+    laudat: {
+      maailmankartta: { x: 5721.9, y: 972.8 },
+    },
+    teksti: 'Skara Brae on kivestä rakennettu neoliittinen kylä Skaillinlahden '
+      + 'rannalla Orkneyn pääsaaren länsirannikolla. Näkyvissä on kymmenen rakennusta '
+      + 'ja neljä käytävää sekä kivisiä huonekaluja ja kiinteitä kalusteita. Kylässä '
+      + 'asuttiin suunnilleen vuodesta 3180 eaa. vuoteen 2500 eaa., ja se on Euroopan '
+      + 'täydellisimpänä säilynyt kivikautinen kylä.\n\n'
+      + 'Nimi kertoo Orkneyn kielikerroksista. Brae on skotin sana ja tarkoittaa '
+      + 'rinnettä; Skara juontuu vanhemmista muodoista Skerrabra ja Styerrabrae, jotka '
+      + 'tarkoittivat alun perin sitä ruohoista kumpua, joka peitti hautautuneen '
+      + 'kylän.\n\n'
+      + 'Talvella 1850 Skotlantiin iski ankara myrsky, joka aiheutti laajaa tuhoa ja '
+      + 'yli kahdensadan ihmisen kuoleman. Skaillinlahdella myrsky repi maan pois '
+      + 'suurelta epäsäännölliseltä kummulta, ja kylän asukkaat löysivät sen alta '
+      + 'useiden pienten katottomien talojen ääriviivat. Kaivaukset aloitti Skaill '
+      + 'Housen William Graham Watt, paikallisen kartanonherran poika ja itseoppinut '
+      + 'geologi. Skara Brae kuuluu Unescon maailmanperintökohteeseen Neoliittisen '
+      + 'Orkneyn sydän, johon kuuluu neljä kohdetta.',
+    lahde: 'en-Wikipedia "Skara Brae", johdanto-osa sekä osiot "Name and etymology" ja '
+      + '"Discovery and early exploration" (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'ironbridge',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-ironbridge-4853b993.jpg',
+      lyhyt: 'Ironbridgen valurautakaari Severn-joen yllä.',
+      selite: 'Vuonna 1781 avattu silta kaartuu harmaana rautarakenteena ruskean joen yli metsäisessä rotkossa. Kaaren välissä on ympyröitä ja ristikkorakenteita, ja sillan päällä kulkee kaide.',
+      lahde: 'Valokuva: Nilfanion, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Nilfanion',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Iron_Bridge_(8530).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-ironbridge-157e0786.jpg',
+        lyhyt: 'Ironbridge Coalbrookdalessa akvarellimaalauksessa.',
+        selite: 'Akvarelli esittää rautakaarisiltaa Severn-joen yllä, sillalla ajaa hevosvaunu. Joella on purjeveneitä ja tiellä kulkee kuormattuja aaseja.',
+        lahde: 'Akvarelli: Thomas Frederick Burney, Wikimedia Commons (CC0).',
+        tekija: 'Thomas Frederick Burney',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Thomas_Frederick_Burney_-_The_Iron_Bridge,_Coalbrookdale_-_B1981.25.2406_-_Yale_Center_for_British_Art.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+    ],
+    nimi: 'Ironbridge',
+    tyyppi: 'tekniikka',
+    taso: 1,
+    kysymykset: [
+      'Miksi silta tehtiin raudasta?',
+      'Kuka vastasi sillan rautatyöstä?',
+    ],
+    korostukset: ['valurauta|valuraudasta'],
+    nappi: 'Maailman ensimmäinen rautasilta',
+    // -2.4854 E / 52.6274 N — en-Wikipedia "The Iron Bridge";
+    // lähin pelikaupunki Lontoo 93,5 lautayksikön päässä.
+    laudat: {
+      maailmankartta: { x: 5750.5, y: 1274 },
+    },
+    teksti: 'Ironbridge on valuraudasta tehty kaarisilta, joka ylittää Severn-joen '
+      + 'Shropshiressa Englannissa. Se avattiin 1781 ja oli maailman ensimmäinen '
+      + 'merkittävä valuraudasta rakennettu silta. Menestys johti valuraudan laajaan '
+      + 'käyttöön rakennusaineena, ja siltaa pidetään nykyään teollisen '
+      + 'vallankumouksen tunnuksena.\n\n'
+      + 'Syvä Ironbridgen rotko syntyi jääkauden lopulla. Sen ansiosta kivihiili, '
+      + 'rautamalmi, kalkkikivi ja tulenkestävä savi olivat pinnan lähellä ja helposti '
+      + 'louhittavissa — mutta samasta syystä sillan rakentaminen oli vaikeaa. Rannat '
+      + 'olivat epävakaat ja joessa oli säilytettävä kulkukelpoinen väylä, joten '
+      + 'Thomas Farnolls Pritchard esitti yhden jännevälin rautasiltaa. Aluksi raudan '
+      + 'käyttöä epäiltiin; lopulta työ tehtiin kahdessa vuodessa, ja rautaosista '
+      + 'vastasi Abraham Darby III. Sillan jänneväli on 30,63 metriä, ja veneet '
+      + 'mahtuvat kulkemaan sen alitse.\n\n'
+      + 'Vuonna 1934 silta suojeltiin muinaisjäännöksenä ja suljettiin ajoneuvoilta. '
+      + 'Jalankulkijoilta perittiin tullia vuoteen 1950, jolloin silta siirtyi '
+      + 'julkiseen omistukseen. Silta, sen viereinen Ironbridgen taajama ja koko rotko '
+      + 'muodostavat yhdessä Unescon maailmanperintökohteen.',
+    lahde: 'en-Wikipedia "The Iron Bridge", johdanto-osa ja osio "Background" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'bathin-roomalaiset-kylpylat',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-bathin-roomalaiset-kylpylat-465008b9.jpg',
+      lyhyt: 'Bathin Suuri kylpylä, taustalla Bath Abbeyn torni.',
+      selite: 'Vihreänä hohtava kylpyvesi on pylväskäytävien ympäröimä. Yläparvella seisoo roomalaissotilaita esittäviä patsaita, ja taustalla kohoaa Bath Abbeyn torni.',
+      lahde: 'Valokuva: Diliff, Wikimedia Commons (CC BY 2.5).',
+      tekija: 'Diliff',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Roman_Baths_in_Bath_Spa,_England_-_July_2006_edit3.jpg',
+      lisenssi: 'CC BY 2.5',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.5',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-bathin-roomalaiset-kylpylat-da84eb1a.jpg',
+        lyhyt: 'Höyryävä kylpyvesi heijastaa Bathin kylpylän pylväitä.',
+        selite: 'Suuren kylpylän tyyni vesi heijastaa hiekkakiviset pylväät ja yläparven patsaat. Veden pinnalta nousee höyryä.',
+        lahde: 'Valokuva: Simon Burchell, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Simon Burchell',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Roman_Baths,_Bath,_Somerset_125.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Bathin roomalaiset kylpylät',
+    tyyppi: 'kulttuuri',
+    taso: 1,
+    kysymykset: [
+      'Mistä kylpylän vesi tulee?',
+      'Miksi altaisiin ei saa mennä?',
+    ],
+    korostukset: ['Aquae Sulis|Aquae Sulis'],
+    nappi: 'Miljoona litraa lämmintä vettä päivässä',
+    // -2.3595 E / 51.3809 N — en-Wikipedia "Roman Baths (Bath)";
+    // lähin pelikaupunki Lontoo 75,0 lautayksikön päässä.
+    laudat: {
+      maailmankartta: { x: 5754.7, y: 1329.6 },
+    },
+    teksti: 'Bathin roomalaiset kylpylät ovat hyvin säilyneet lämpökylpylät Bathin '
+      + 'kaupungissa Somersetissa Englannissa. Paikalle rakennettiin temppeli vuosien '
+      + '60 ja 70 välillä jaa. Rooman Britannian ensimmäisinä vuosikymmeninä, ja sen '
+      + 'ympärille kasvoi pieni roomalainen kaupunki nimeltä Aquae Sulis. Kylpylä oli '
+      + 'yleisessä käytössä Rooman vallan loppuun asti 400-luvulla; anglosaksisen '
+      + 'kronikan mukaan se oli vuosisataa myöhemmin jo raunioina.\n\n'
+      + 'Vesi tulee Mendip-kukkuloille satavasta sateesta. Se imeytyy '
+      + 'kalkkikivikerrosten läpi 2 700–4 300 metrin syvyyteen, jossa maan oma lämpö '
+      + 'nostaa sen 69–96 asteeseen. Paineen alaisena kuuma vesi nousee takaisin '
+      + 'halkeamia ja siirroksia pitkin ja kuplii maasta altaisiin. Pennyquickin '
+      + 'siirroksesta purkautuu joka päivä 1 170 000 litraa 46-asteista vettä.\n\n'
+      + 'Kohde on säilynyt neljänä osana: pyhä lähde, roomalainen temppeli, '
+      + 'kylpylärakennus ja museo, jossa on Aquae Sulisin löytöjä. Kaikki katutason '
+      + 'rakennukset ovat 1800-luvulta. Kävijöitä on yli miljoona vuodessa, mutta '
+      + 'veteen ei pääse: siinä esiintyy Naegleria fowleri -ameeba.',
+    lahde: 'en-Wikipedia "Roman Baths (Bath)", johdanto-osa ja osio "Hot spring" '
+      + '(tarkistettu 6.9.2026).',
   },
 ];
 

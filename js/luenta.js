@@ -1,3 +1,8 @@
+import { seuraaLivianKuuntelua } from './livia-tilanteet.js';
+import {
+  LUENNAN_LOPPU_TAPAHTUMA, kytkeMatkakirjanReaktiot, luennanLauserajat,
+} from './luentareaktiot.js';
+import { lauseitaMerkkeihin } from './lausejako.js';
 /*
  * Luennan koneisto: avaustekstin ja päiväkirjan kertojaäänet,
  * lauserajakatkot, häivytykset ja puhujan väistön kirjanpito.
@@ -10,13 +15,16 @@
 
 import { asetaKertojaTila, kertojaTila, puheVoima } from './aani-ehdokkaat.js';
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
-import { puheAlkoi, puheLoppui } from './ambience-stream.js';
+import { lopetaAvauksenAani, puheAlkoi, puheLoppui } from './ambience-stream.js';
 import {
   lueAaneen, lukijaLukee, lukijaTuettu, pysaytaLukija,
 } from './lukija.js';
-import { aaniUrl, haeAani, onPeilista, peiliPetti } from './media.js';
+import { aaniUrl, haeAani } from './media.js';
 import { puheTuettu } from './puhe.js';
 import { sfx } from './sound.js';
+import {
+  irrotaMusiikinVahvistin, kuunteleReitityksenAvautumista, liitaMusiikkiin,
+} from './musiikkivahvistin.js';
 
 /*
  * Luennan loppuhäivytys. Aiempi neljännessekunti oli niin lyhyt, että
@@ -53,6 +61,207 @@ const LOPUN_HAIPYMA_S = 0.12;
 const LOPUN_HILJAISUUS_S = 0.025;
 /** Pehmennyskäyrä: alkaa hitaasti, jyrkkenee lopussa (ease-in). */
 const pehmene = (t) => Math.max(0, Math.min(1, t)) ** 1.8;
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KERTOJAN TASO: YKSI TIE, JOKA TOIMII MYÖS PUHELIMESSA
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Kertojan loppuhäivytys on ollut olemassa kauan (`pehmeaLoppu`), ja
+ * sen perustelu on yhä voimassa: ElevenLabsin tiedosto päättyy keskeltä
+ * signaalia ja kova reuna napsahtaa. MITATTU 14.9.2026 kolmesta
+ * tuotanto-mp3:sta (mpg123-decoder):
+ *
+ *   tiedosto   loppu 50 ms RMS   viimeinen näyte   loppuhiljaisuus
+ *   pariisi    −36,9 dBFS        −0,000850         0,0 ms
+ *   ateena     −37,6 dBFS        −0,005189         0,0 ms
+ *   lontoo     −31,7 dBFS        +0,011618         0,0 ms
+ *
+ * Eli toisin kuin Livialla, KERTOJAN ÄÄNITE EI PÄÄTY HILJAISUUTEEN:
+ * hiljaisuutta on nolla millisekuntia ja viimeinen näyte on kuuluvalla
+ * tasolla. Lontoon 0,0116 on −38,7 dBFS:n DC-hyppy nollaan — juuri se
+ * töksähdys, jonka takia pehmeaLoppu kirjoitettiin. Alku on puhdas
+ * (alkuhiljaisuus 74–138 ms, alun 20 ms huippu −74…−77 dBFS), joten
+ * alkunousua ei tarvita.
+ *
+ * ------------------------------------------------------------------
+ * MIKÄ EI TOIMINUT: KOKO HÄIVYTYS PUUTTUU iOS:SSÄ
+ * ------------------------------------------------------------------
+ *
+ * Jokainen tason kirjoitus tässä moduulissa on mennyt `audio.volumeen`,
+ * jota iOS:n WebKit ei tottele (mittaus ja perustelu:
+ * js/musiikkivahvistin.js, omistajan kaksi vikailmoitusta 8.9. ja
+ * 9.9.2026). Kirjoitus menee läpi ilman virhettä ja lukema palaa
+ * ykköseksi. Puhelimessa siis:
+ *
+ *   – pehmeaLoppu ei vaimenna mitään, ja `pause()` osuu täyteen ääneen
+ *     25 ms ennen tiedoston reunaa: naksahdus, jota koodi luulee
+ *     estävänsä,
+ *   – keskeytyshäivytykset (haivytaAani, haivytaJaSiivoa,
+ *     stopDiaryVoice) ovat kovia leikkauksia,
+ *   – Lukija-liuku ei säädä soivaa luentaa.
+ *
+ * ------------------------------------------------------------------
+ * KORJAUS: VAIN TASON KIRJOITUS VAIHTUU
+ * ------------------------------------------------------------------
+ *
+ * Häivytyskäyriä, kynnyksiä, cue-ajastusta, aikaleimoja ja keskeytyksiä
+ * EI muutettu — ne ovat omistajan hienosäätämiä (LOPUN_HAIPYMA_S 120 ms
+ * → LOPUN_HILJAISUUS_S 25 ms, ease-in). Muuttui se, MIHIN taso
+ * kirjoitetaan.
+ *
+ * PÄIVITYS 15.9.2026 (kaiuttimen VU-mittari): reititys tehdään nyt
+ * KAIKILLA laitteilla, ei vain iOS:llä. Sama ketju, joka ohittaa iOS:n
+ * tottelemattoman volumen, kantaa myös AnalyserNoden, jota kaiuttimen
+ * kolme kaarta lukevat — ilman sitä mittari joutuu arvaamaan.
+ *
+ *   REITITETTY → taso menee gainiin, elementin volume jää ykköseen.
+ *   REITITTÄMÄTÖN (ei AudioContextia) → taso menee `volumeen` kuten
+ *     ennen, eikä hiljaisuutta koskaan valita häivytyksen takia.
+ *
+ * CORS. Mitattu 14.9. ja uudelleen 15.9.2026: ämpäri
+ * media.matkakirja.app palauttaa GET-pyyntöön `access-control-allow-
+ * origin` pyynnön Originin mukaisena ja `vary: Origin`, joten
+ * `crossOrigin = 'anonymous'` toimii.
+ */
+
+/**
+ * Luennan nykyinen taso siltä polulta, jota se käyttää.
+ * @param {HTMLAudioElement} audio
+ * @returns {number}
+ */
+export function luennanTaso(audio) {
+  if (!audio) return 0;
+  const vahvistin = audio.luennanVahvistin;
+  if (vahvistin) return Number(vahvistin.gain.value) || 0;
+  return Number(audio.volume) || 0;
+}
+
+/**
+ * Asettaa luennan tason oikeaan paikkaan: vahvistimeen jos elementti on
+ * reititetty, muuten elementin volumeen.
+ * @param {HTMLAudioElement} audio
+ * @param {number} arvo
+ */
+export function asetaLuennanTaso(audio, arvo) {
+  if (!audio) return;
+  const taso = Math.max(0, Math.min(1, Number(arvo) || 0));
+  const vahvistin = audio.luennanVahvistin;
+  if (vahvistin) {
+    try {
+      vahvistin.gain.value = taso;
+      return;
+    } catch {
+      /* konteksti kiinni — kirjoitetaan volumeen */
+    }
+  }
+  try {
+    audio.volume = taso;
+  } catch {
+    /* selain ei kelpuuta arvoa — seuraava luenta lukee sen itse */
+  }
+}
+
+/**
+ * Reitittää luennan vahvistimen läpi. Palauttaa true, kun reititys
+ * onnistui.
+ *
+ * ── KAIKILLA LAITTEILLA, EI VAIN iOS:LLÄ (omistaja 15.9.2026 klo
+ * 08.35 UTC, iPhone v1908, sanatarkasti: *"Kajutin kuvake elää, mutta
+ * se ei elä puheen tahdissa."*; Raamattu, KAIUTTIMEN KAARET SEURAAVAT
+ * PUHETTA, EIVÄT AJASTUSTA) ──
+ *
+ * Aiemmin tämä palasi heti, jos selain totteli elementin omaa volumea
+ * (`kertojanVolumeToimii()`), koska reititystä tarvittiin VAIN tason
+ * kirjoittamiseen. Samassa ketjussa asuu kuitenkin AnalyserNode
+ * (`audio.aaniMittari`), jota kaiuttimen VU-mittari lukee — ja ilman
+ * reititystä mittarilla ei ole mitään mitattavaa, joten se piirtää
+ * ajastettua kuviota. Sama ketju kaikille: taso menee gainiin ja
+ * mittari saa todellisen puheen.
+ *
+ * Kutsutaan heti soittimen synnyttyä; `crossOrigin` on jo asetettu
+ * ennen srciä (luentaSoitin).
+ */
+function liitaLuennanVahvistin(audio) {
+  if (!audio || audio.luennanVahvistin) return Boolean(audio?.luennanVahvistin);
+  // Taso talteen ennen reititystä: liitaMusiikkiin nollaa gainin ja
+  // nostaa elementin volumen ykköseen, joten liu'un keskellä oleva
+  // luenta hyppäisi muuten joko täyteen tai hiljaisuuteen.
+  const ennen = luennanTaso(audio);
+  const vahvistin = liitaMusiikkiin(audio);
+  if (!vahvistin) return false;
+  audio.luennanVahvistin = vahvistin;
+  asetaLuennanTaso(audio, ennen);
+  return true;
+}
+
+/**
+ * ODOTTAJA: jos äänikonteksti nukkui soittimen syntyessä, reititys
+ * yritetään uudelleen heti kun konteksti herää.
+ *
+ * MIKSI TÄMÄ ON VÄLTTÄMÄTÖN. `AudioContext.resume()` on asynkroninen,
+ * ja iOS:ssä konteksti on eleen jälkeenkin hetken `suspended`. Ilman
+ * uusintaa juuri istunnon ensimmäinen luenta — saapumisluenta, jonka
+ * omistaja näki iPhonella — jäi reitittämättä, jolloin kaiuttimessa
+ * ei ollut analysaattoria ja kaaret piirsivät ajastettua kuviota.
+ * Sama aukko oli musiikilla 8.9.2026 (js/musiikkivahvistin.js).
+ */
+function varaaReitityksenUusinta(audio) {
+  if (!audio || audio.luennanReititysvahti) return;
+  const pura = kuunteleReitityksenAvautumista(() => {
+    if (audio.luennanVahvistin) { audio.luennanReititysvahti?.(); return; }
+    if (liitaLuennanVahvistin(audio)) audio.luennanReititysvahti?.();
+  });
+  audio.luennanReititysvahti = () => {
+    audio.luennanReititysvahti = null;
+    try { pura(); } catch { /* jo purettu */ }
+  };
+  // kuunteleReitityksenAvautumista kutsuu takaisin heti, jos konteksti
+  // oli jo käynnissä — silloin vahti purki itsensä ennen kuin kahva
+  // ehti tähän kenttään.
+  if (audio.luennanVahvistin) audio.luennanReititysvahti();
+}
+
+/** Purkaa reitityksen. Turvallista kutsua monta kertaa. */
+function irrotaLuennanVahvistin(audio) {
+  audio?.luennanReititysvahti?.();
+  if (!audio?.luennanVahvistin) return;
+  audio.luennanVahvistin = null;
+  irrotaMusiikinVahvistin(audio);
+}
+
+/**
+ * Luennan soitin: elementti ilman srciä ensin, koska `crossOrigin` on
+ * asetettava ENNEN srciä — ja se asetetaan vain silloin, kun luenta
+ * aiotaan reitittää vahvistimen läpi. Taso menee samaa tietä kuin
+ * kaikki muukin (asetaLuennanTaso).
+ *
+ * @param {string} osoite valmis ääniosoite
+ * @param {number} taso aloitustaso
+ * @returns {HTMLAudioElement}
+ */
+function luentaSoitin(osoite, taso) {
+  const audio = new Audio();
+  /*
+   * CORS-LUPA KAIKILLE, koska reititys on nyt kaikilla laitteilla.
+   * Web Audio lukee elementin ääntä, ja ilman `crossOrigin`-lupaa
+   * MediaElementSource antaisi hiljaisuutta ILMAN VIRHETTÄ. Mitattu
+   * 15.9.2026: `GET https://media.matkakirja.app/audio/…` Originilla
+   * vastaa `access-control-allow-origin: https://matkakirja.app` ja
+   * `vary: Origin`, joten lupa on olemassa. Repon oma varapolku on
+   * samaa alkuperää, jolloin lupa ei tee mitään.
+   */
+  audio.crossOrigin = 'anonymous';
+  audio.src = osoite;
+  if (!liitaLuennanVahvistin(audio)) varaaReitityksenUusinta(audio);
+  asetaLuennanTaso(audio, taso);
+  // Reititys on yksisuuntainen: purkamatta jäänyt ketju pitäisi
+  // kuolleen elementin muistissa.
+  const vapauta = () => irrotaLuennanVahvistin(audio);
+  audio.addEventListener('ended', vapauta);
+  audio.addEventListener('error', vapauta);
+  return audio;
+}
 
 /*
  * ── LUENNAN KYTKIN (omistajan tilaus 25.8.2026) ─────────────────────
@@ -126,14 +335,56 @@ export function playIntroVoice(ui) {
    * mukanaan eivätkä kytkimet olleet erillisiä.
    */
   if (!luentaKytkinPaalla()) return;
-  // Vain pitkä kertoja lukee avaustekstin: lyhyt lukee pelkän
-  // matkakirjan kuvauksen ja ei kertojaa -tila ei mitään.
+  // Vain pitkä kertoja lukee avaustekstin; ei kertojaa -tila ei mitään
+  // ('lyhyt' poistettu 3.9.2026).
   if (kertojaTila() !== 'pitka') return;
   stopIntroVoice(ui);
-  const audio = new Audio(aaniUrl('assets/audio/intro-puhe.mp3'));
-  audio.volume = puheVoima();
+  const audio = luentaSoitin(aaniUrl('assets/audio/intro-puhe.mp3'), puheVoima());
   pehmeaLoppu(ui, audio);
   ui.introVoice = audio;
+  /*
+   * AVAUSTEKSTIN LUENNAN LOPPU ON PAUSE, EI 'ended'.
+   *
+   * pehmeaLoppu pysäyttää tämän nauhoituksen 25 millisekuntia ennen
+   * tiedoston reunaa, jottei loppu napsahda — ja pysäytetty soitin ei
+   * enää lähetä 'ended'-tapahtumaa. Siihen tapahtumaan nojaa kaksi
+   * asiaa, ja siksi molemmat hoidetaan tässä:
+   *
+   *  1. AVAUKSEN SEKOITUS purkautuu luennan mukana (omistajan tilaus
+   *     7.9.2026): musiikki nousee takaisin ja terminaalin nosto
+   *     laskee, kun kertoja on lukenut avaustekstin
+   *     (js/ambience-stream.js "AVAUKSEN ÄÄNI").
+   *  2. PUHUJAN ROOLI vapautuu, jotta taustan väistö (0,25) purkautuu.
+   *     Ilman tätä etusivun tausta jäi luennan jälkeen pysyvästi
+   *     neljäsosaan siihen asti, kunnes pelaaja eteni ja
+   *     stopIntroVoice ehti vapauttaa roolin (mitattu savukkeella
+   *     tools/savukkeet/savuke-etusivun-aani.mjs 7.9.2026). Sama vika
+   *     ja sama korjaus kuin haivytaLuennassa: pysäytetty luenta ei
+   *     laukaise enää 'ended'- eikä 'error'-tapahtumaa.
+   *
+   * Kuuntelu kattaa myös katkaisun (stopIntroVoice → haivytaJaSiivoa)
+   * ja taustalle menon; kumpikin vapauttaa roolin jo itse, ja
+   * vapautaPuhuja on tarkoituksella idempotentti. Avausteksti on
+   * kertaluontoinen luenta ilman jatkonappia, joten sen pysähdys on
+   * aina loppu — toisin kuin matkakirjamerkinnän, jonka voi jatkaa
+   * kaiuttimesta (ks. ui.luentaTauolla).
+   *
+   * JÄRJESTYS: PUHUJA VAPAUTETAAN ENSIN, nosto vasta perään.
+   *
+   * Avauksen aikana terminaali ei ole väistössä lainkaan (kertoja on
+   * osa avausta, ks. js/ambience-stream.js "KERTOJA EI VÄISTÄ
+   * TERMINAALIA"), joten roolin vapautus ei liikuta sitä ollenkaan ja
+   * nosto laskee tason kerralla oikeaan lukemaan. Päinvastaisessa
+   * järjestyksessä nosto purkautuisi ensin ja tausta putoaisi vielä
+   * väistössä olevaan lukemaan (0,25) siksi ajaksi, joka roolin
+   * vapautukselta kuluu — kuuluva notkahdus juuri luennan lopussa.
+   */
+  const luentaOhi = () => {
+    vapautaPuhuja(ui, audio);
+    lopetaAvauksenAani();
+  };
+  audio.addEventListener('ended', luentaOhi);
+  audio.addEventListener('pause', luentaOhi);
   merkitsePuhuja(ui, audio);
   audio.play().catch(() => {
     const aloita = () => {
@@ -167,17 +418,24 @@ export function stopIntroVoice(ui) {
  * puhujan rooli jäi vapauttamatta ja tausta jäi väistöön.
  */
 export function haivytaJaSiivoa(ui, audio, kesto = 600) {
-  const alkuVoima = audio.volume;
+  // Häivytys on hyvästely: vuoro on vapaa jo nyt (ks. luovutaPuhevuoro).
+  luovutaPuhevuoro(audio);
+  // Lukija-liuku ei enää kirjoita tason päälle (paivitaLuentojenVoima).
+  audio.luennanHaivytys = true;
+  const alkuVoima = luennanTaso(audio);
   const t0 = performance.now();
   const askel = () => {
     const osuus = (performance.now() - t0) / kesto;
     if (osuus >= 1 || audio.paused) {
       audio.pause();
       audio.removeAttribute('src');
+      // Reititys puretaan kuolleelta soittimelta: 'ended' ei tule
+      // pysäytetylle äänelle, joten ketju jäisi muistiin.
+      irrotaLuennanVahvistin(audio);
       vapautaPuhuja(ui, audio);
       return;
     }
-    audio.volume = alkuVoima * (1 - osuus);
+    asetaLuennanTaso(audio, alkuVoima * (1 - osuus));
     setTimeout(askel, 40);
   };
   askel();
@@ -190,22 +448,228 @@ export function haivytaJaSiivoa(ui, audio, kesto = 600) {
  * olla käynnissä ilman että se on enää `ui.diaryVoice`. Elinkaari
  * seuraa puhujan roolia: merkitsePuhuja lisää, vapautaPuhuja poistaa.
  */
-const soivatLuennat = new Map(); // audio → ui
+const soivatLuennat = new Map(); // audio → { ui, rooli }
+
+/*
+ * ── PULU JA KERTOJA EIVÄT PUHU PÄÄLLEKKÄIN ─────────────────────────
+ *
+ * Omistajan vikailmoitus 8.9.2026 klo 12.55, sanatarkasti: *"jos
+ * minulla on maailma tila päällä kehittäjänä ja menen kuuntelemaan
+ * kaupunkeja joissa pululla äänet, niin pulun ja kertojan äänet menevät
+ * päällekkäin ja pulu selittää ensin jotain ihan väärää juttua."*
+ *
+ * JUURISYY oli KAKSI RINNAKKAISTA KIRJANPITOA. Kertojan luenta eli
+ * `ui.diaryVoice`-kentässä ja pulun repliikki `ui.liviaAani`-kentässä,
+ * eikä kumpikaan tiennyt toisesta mitään: järjestys syntyi pelkistä
+ * ajastimista (js/fokusvirta.js alustus → luenta → kommentti). Kun
+ * kehittäjä hyppää kaupungista toiseen (js/ui.js doKehittajaSiirto),
+ * ajastimet eivät ehdi loppuun — edellisen kaupungin repliikki jää
+ * soimaan uuden kaupungin luennan alle, ja juuri se on omistajan
+ * kuulema *"ihan väärä juttu"*: se on toisen kaupungin lause.
+ *
+ * NYT VUOROKIRJANPITO ON YKSI JA TÄSSÄ. Sama taulu, joka jo tiesi
+ * kaikki soivat luennat (taustan väistöä varten), tietää nyt myös
+ * KUKA puhuu. Molemmat puolet kysyvät samasta paikasta:
+ * js/liviapuhe.js ei aloita pulun repliikkiä kertojan päälle, ja
+ * playDiaryVoice odottaa pulun lauseen loppuun ennen kuin kertoja
+ * aloittaa.
+ *
+ * VÄLIHUUTO ON TIETOINEN POIKKEUS (omistaja 7.9.2026): huudahdus soi
+ * kertojan päälle hiljempaa eikä varaa vuoroa lainkaan
+ * (js/liviapuhe.js `vaista: false`) — se ei siis kulje tästä portista.
+ *
+ * RAJA: striimattu lukija (js/lukija.js) ei kulje tämän taulun kautta,
+ * koska se ei ole <audio>-elementti. Kaupunkien saapumisluennat ovat
+ * äänitteitä, joten vuoro on niissä aina tiedossa.
+ */
+/** Isoisän lukija: matkakirjamerkinnät, avausteksti ja linssiluennat. */
+export const PUHUJA_KERTOJA = 'kertoja';
+/** Livia eli pulu: kuplien repliikit. */
+export const PUHUJA_PULU = 'pulu';
+/** Kuinka usein kertoja kysyy, onko pulun lause jo loppunut. */
+const PULUN_ODOTUSVALI_MS = 250;
+/** Kauanko kertoja korkeintaan odottaa pulua ennen kuin aloittaa silti. */
+const PULUN_ODOTUKSEN_KATTO_MS = 15000;
 
 /**
  * Merkitsee äänen puhujaksi: tausta väistyy niin kauan kuin yksikin
  * puhuu. Vapautus tapahtuu kerran ja vain kerran — 'ended' ja
  * 'error' voivat molemmat laueta, ja kaksinkertainen vapautus
  * nostaisi taustan kesken toisen luennan.
+ *
+ * @param {string} [rooli] kumpi ääni tämä on (PUHUJA_KERTOJA tai
+ *   PUHUJA_PULU) — sama merkintä varaa myös PUHEVUORON.
  */
-export function merkitsePuhuja(ui, audio) {
+export function merkitsePuhuja(ui, audio, rooli = PUHUJA_KERTOJA) {
   if (!audio || audio.puhujaMerkitty) return;
   audio.puhujaMerkitty = true;
-  soivatLuennat.set(audio, ui);
+  soivatLuennat.set(audio, { ui, rooli });
   puheAlkoi();
   const lopeta = () => vapautaPuhuja(ui, audio);
   audio.addEventListener('ended', lopeta);
   audio.addEventListener('error', lopeta);
+  /*
+   * KUULUVAN ÄÄNEN KUITTAUS (15.9.2026, ks. soivaPuhuja).
+   *
+   * 'playing' on selaimen oma vahvistus siitä, että toisto on
+   * oikeasti alkanut — play() palauttaa vain lupauksen, ja se voi
+   * hylkääntyä (NotSupportedError latausvirheestä, NotAllowedError
+   * eleen puutteesta). Lippu ei korvaa `paused`-tarkistusta vaan
+   * täydentää sitä: se kertoo, että toisto ON kerran alkanut.
+   */
+  audio.addEventListener('playing', () => { audio.aaniAlkoiSoida = true; });
+}
+
+/**
+ * KUULUUKO TÄSTÄ ÄÄNESTÄ JUURI NYT ÄÄNTÄ?
+ *
+ * Ero puheVUOROON on koko tämän vartion ydin: vuoro varataan ENNEN
+ * play()-kutsua, ja jos play() hylkääntyy (headless-selain, offline,
+ * rikkinäinen tiedosto), vuoro ehtii silti näkyä ruudulla. Se on
+ * tuotantovika eikä vain testin kiusa: luennan visuaaliset merkit
+ * (tekstipiilo, kartan huntu, kaiuttimen mittari, Liiku-napin piilo)
+ * kytkeytyisivät vaikka mitään ei kuulu.
+ *
+ * Kuuluvaksi lasketaan soitin, joka ei ole tauolla eikä loppunut ja
+ * jonka toisto on joko vahvistetusti alkanut ('playing') tai ehtinyt
+ * edetä nollasta. Juuri luotu tai käynnistymättä jäänyt soitin on
+ * `paused === true`, joten se ei koskaan läpäise tätä.
+ */
+export function aaniKuuluu(audio) {
+  if (!audio || audio.ended || audio.paused || audio.error) return false;
+  return audio.aaniAlkoiSoida === true || audio.currentTime > 0;
+}
+
+/**
+ * KUKA ON KUULUVASTI ÄÄNESSÄ — tai null.
+ *
+ * Sama kysely kuin puhujaAanessa, mutta VUORON sijaan mitataan
+ * kuuluvaa ääntä (ks. aaniKuuluu). Puheenvuorojen jonotus käyttää yhä
+ * puhujaAanessaa: vuoro on varattava jo ennen kuin ääni alkaa, tai
+ * kaksi luentaa alkaisi päällekkäin. Ruudulla näkyvät merkit taas
+ * eivät saa syttyä ennen kuin ääntä oikeasti kuuluu.
+ *
+ * @param {string|null} [paitsi] rooli, jota ei lasketa.
+ * @returns {string|null} PUHUJA_KERTOJA, PUHUJA_PULU tai null.
+ */
+export function soivaPuhuja(paitsi = null) {
+  for (const [audio, tieto] of soivatLuennat) {
+    if (paitsi && tieto.rooli === paitsi) continue;
+    if (audio.puhevuoroPaattyi) continue;
+    if (!aaniKuuluu(audio)) continue;
+    return tieto.rooli;
+  }
+  return null;
+}
+
+/**
+ * PUHEEN KELLO: soivien luentojen toistokohtien summa sekunteina.
+ *
+ * Luentavahti (js/ui.js kaynnistaLuentavahti) vertaa tätä edelliseen
+ * kyselyyn: muuttunut summa = puhe etenee. Varaventtiili aukeaa vain,
+ * jos summa seisoo 30 sekuntia kerronnan aikana (löydös 45).
+ */
+export function puheenKello() {
+  let summa = 0;
+  for (const [audio] of soivatLuennat) {
+    if (!audio.puhevuoroPaattyi) summa += Number(audio.currentTime) || 0;
+  }
+  return summa;
+}
+
+/**
+ * KUKA ON ÄÄNESSÄ JUURI NYT — tai null, jos vuoro on vapaa.
+ *
+ * "Äänessä" tarkoittaa varattua vuoroa, ei pelkkää soivaa signaalia:
+ * juuri luotu soitin odottaa vielä hengähdystään (playDiaryVoice
+ * `viive`) ja on silti vuorossa. Kaksi tilaa EI ole äänessä:
+ *
+ *   1. loppuun soinut äänite (`ended`)
+ *   2. pysäytetty soitin, joka on jo ehtinyt soida — lauserajahäivytys,
+ *      pehmeaLopun viimeinen hetki ja Tutki-näkymän tauko
+ *      (`ui.luentaTauolla`). Nämä eivät laukaise 'ended'-tapahtumaa,
+ *      joten pelkkä taulun jäsenyys jäisi tänne roikkumaan.
+ *
+ * @param {string|null} [paitsi] rooli, jota ei lasketa — kysyjä itse.
+ * @returns {string|null} PUHUJA_KERTOJA, PUHUJA_PULU tai null.
+ */
+export function puhujaAanessa(paitsi = null) {
+  for (const [audio, tieto] of soivatLuennat) {
+    if (paitsi && tieto.rooli === paitsi) continue;
+    if (audio.puhevuoroPaattyi) continue;
+    if (audio.ended) continue;
+    if (audio.paused && audio.currentTime > 0) continue;
+    return tieto.rooli;
+  }
+  return null;
+}
+
+/**
+ * LOPPUHÄIVYTYS LUOVUTTAA VUORON HETI (omistaja 8.9.2026).
+ *
+ * Häivytys on hyvästely, ei puheenvuoro: pelaaja on jo lähtenyt
+ * paikasta, ja seuraava puhuja saa aloittaa saman tien. Ilman tätä
+ * lähtevän kaupungin kertoja (haivytaLuenta, 0,7 s) tai edellinen
+ * pulun repliikki (js/liviapuhe.js pysaytaLivianAani, 0,16 s) veisi
+ * vuoron vielä hetkeksi mukanaan — ja juuri se hetki on se, jolloin
+ * uuden kaupungin ensimmäinen repliikki alkaisi.
+ *
+ * Taustan väistö EI pura tästä: se seuraa yhä vapautaPuhujaa, joka
+ * tulee häivytyksen lopussa.
+ */
+export function luovutaPuhevuoro(audio) {
+  if (audio) audio.puhevuoroPaattyi = true;
+}
+
+/*
+ * ── LUKIJA-LIUKU YLTÄÄ JOKAISEEN SOIVAAN LUENTAAN ───────────────────
+ *
+ * OMISTAJAN VIKAILMOITUS 12.9.2026, sanatarkasti: *"äänien
+ * voimakkuussäädin ei muuten toimi."*
+ *
+ * MITATTU JUURISYY (selainmittaus tools/savukkeet/savuke-aanivoimat.mjs):
+ * Lukija-liuku (index.html #voima-lukija) muutti tallennetun arvon ja
+ * seuraavat luennat lähtivät oikealla tasolla, mutta SOIVA luenta ei
+ * liikahtanut. js/main.js kävi läpi vain `ui.luennat` -joukon, ja siitä
+ * puuttuivat kaikki luennat, joita kukaan ei ollut sinne kirjannut —
+ * mitattuna mm. avaustekstin luenta (playIntroVoice), joka on ensimmäinen
+ * ääni, jonka pelaaja ylipäätään kuulee. Mittaus etusivulla: liuku
+ * 90 % → 0 %, soiva intro-puhe.mp3 pysyi tasolla 0,9 sekä heti että
+ * kolmen sekunnin kuluttua.
+ *
+ * KORJAUS ON KIRJANPIDON YHDISTÄMINEN, EI UUSI SILMUKKA. `soivatLuennat`
+ * on jo koko pelin ainoa täydellinen luettelo soivista luennoista —
+ * jokainen kertojan äänite kulkee `merkitsePuhujan` kautta (avaus,
+ * matkakirja, linssiluenta, hihkaisu), koska ilman sitä taustan väistö
+ * ei toimisi. Sama taulu kelpaa siis myös liu'ulle, ja silloin uusi
+ * luentapaikka ei voi jäädä liu'un ulottumattomiin huomaamatta: se
+ * kaatuisi ensin väistöstä.
+ *
+ * PULU EI OLE LUKIJA. Rooli (PUHUJA_PULU) rajaa pulun repliikit ulos;
+ * niillä on oma liukunsa (index.html #voima-pulu). Vanha rajaus vertasi
+ * soitinta `ui.liviaAani`-kenttään, ja se piti vain niin kauan kuin pulu
+ * oli aloittanut viimeisimmän repliikin — kaksi peräkkäistä repliikkiä
+ * jätti edellisen Lukija-liu'un armoille.
+ *
+ * HÄIVYTYSTÄ EI KESKEYTETÄ. Poistuva luenta (`luennanHaivytys`) on
+ * matkalla nollaan, ja tason kirjoittaminen sen päälle palauttaisi äänen
+ * hetkeksi kuuluviin. Sama koskee vuoronsa luovuttanutta
+ * (`puhevuoroPaattyi`) ja jo vaiennutta soitinta.
+ *
+ * PERUSTASO TALLETETAAN SOITTIMEEN (`luennanPerustaso`), koska
+ * `pehmeaLoppu` häivyttää loppuhetken suhteessa siihen: ilman tätä lopun
+ * ramppi nostaisi äänen takaisin liu'un edeltäneeseen tasoon.
+ */
+export function paivitaLuentojenVoima() {
+  const arvo = puheVoima();
+  for (const [audio, tieto] of soivatLuennat) {
+    if (tieto.rooli === PUHUJA_PULU) continue;
+    audio.luennanPerustaso = arvo;
+    if (audio.luennanHaivytys || audio.puhevuoroPaattyi || audio.ended || audio.paused) continue;
+    // Taso menee sitä polkua, jota tämä selain tottelee — iOS:ssä
+    // vahvistimeen, muuten elementin volumeen (asetaLuennanTaso).
+    asetaLuennanTaso(audio, arvo);
+  }
 }
 
 /** Vapauttaa äänen puhujan roolista; turvallista kutsua monta kertaa. */
@@ -234,7 +698,7 @@ export function vapautaPuhuja(ui, audio) {
  * haivytaLuennasta (ks. sen kommentti).
  */
 export function taustaHiljennaLuennat() {
-  for (const [audio, isanta] of [...soivatLuennat]) {
+  for (const [audio, { ui: isanta }] of [...soivatLuennat]) {
     try {
       audio.pause();
       audio.removeAttribute('src');
@@ -365,31 +829,86 @@ export function lueKertojana(ui, teksti, { viive = 0, onLoppu = null } = {}) {
   };
 }
 
-export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, viive = 0 } = {}) {
+export function playDiaryVoice(ui, url, {
+  ekaLauseeseen = false, osuus = null, viive = 0, lopetaOsuuteen = null,
+} = {}) {
   stopDiaryVoice(ui);
   if (ui.radioModuuli && !ui.radioModuuli.luentaSallittu()) return;
   // Kertojan oma kytkin, ei taustaäänten (ks. playIntroVoice).
   if (!url || !luentaKytkinPaalla()) return;
   /*
-   * Luennat tulevat ämpäristä (js/media.js aaniUrl), repon polku on
-   * varareitti. Ämpärin pettäessä siirrytään siihen kerran ja
-   * merkitään virhe äänipeilin katkaisijalle — sama kahden portaan
-   * malli kuin äänimaisemilla ja visamusiikilla.
+   * Luennat tulevat ämpäristä (js/media.js aaniUrl). VARAREITTIÄ EI
+   * OLE: äänitiedostot eivät ole enää repossa (omistajan linjaus
+   * 11.9.2026), joten repon polku olisi vain toinen 404. Ennen tässä
+   * siirryttiin siihen kerran ja merkittiin virhe äänipeilin
+   * katkaisijalle; katkaisija sammuttaisi nyt turhaan myös
+   * äänimaisemien peilin, joilla varareitti (alkuperäislähde) yhä on.
    */
-  const audio = new Audio(aaniUrl(url));
-  let varareittiKokeiltu = false;
-  audio.addEventListener('error', () => {
-    if (varareittiKokeiltu || ui.diaryVoice !== audio) return;
-    if (!onPeilista(audio.getAttribute('src'))) return;
-    varareittiKokeiltu = true;
-    peiliPetti('aanet');
-    audio.src = url;
-    audio.load();
-    audio.play().catch(() => { /* varareittikään ei soi — hiljaisuus */ });
-  });
-  audio.volume = puheVoima();
+  const audio = luentaSoitin(aaniUrl(url), puheVoima());
   pehmeaLoppu(ui, audio);
+  /*
+   * LUENNAN LOPPU PERUU MATKAKIRJAKORTIN PALUUN (omistaja 10.9.2026:
+   * *"Puheen jälkeen se voi pysyä piilossa"*). Kartan liike on voinut
+   * ajastaa kortin nousemaan takaisin auki (js/ui.js
+   * kutistaKortinLiikkeesta); kun puhe loppuu, ajastin sammutetaan ja
+   * kutistunut kortti jää lapuksi. Tarkistus on luennan oma eikä
+   * pelkkä tapahtuma: 'error' voi johtaa varareittiin, joka jatkaa
+   * lukemista, eikä silloin peruta mitään.
+   */
+  const luennanLoppuVahti = () => {
+    if (!ui.luentaKesken?.()) ui.peruKortinPalautus?.();
+  };
+  audio.addEventListener('ended', luennanLoppuVahti);
+  audio.addEventListener('error', luennanLoppuVahti);
   ui.diaryVoice = audio;
+  /*
+   * ONKO TÄLLÄ LUENNALLA AJASTETTUJA REAKTIOITA? Sovitin
+   * (js/livia-eleet.js) kysyy sitä, jotta se voi antaa tarkkaan
+   * ajastetun reaktion voittaa yleisen kuuntelueleen. Tieto on
+   * epätosi siihen asti, kunnes aikaleimat on ladattu, tarkistettu ja
+   * vähintään yksi ankkuri on ratkennut — ei siis heti kytkennän
+   * yrityksestä.
+   */
+  let reaktiotValmis = false;
+  // Myös aarremerkinnät ja muut saman lukijan luennat kuuluvat Pululle.
+  // Matkakirjan tekstiä ei käytetä toisen äänitteen tunnelman lähteenä.
+  seuraaLivianKuuntelua(audio, () => ui.diaryVoice === audio,
+    () => (url === ui.diaryFullUrl ? ui.factText?.textContent || '' : ''),
+    { lahde: 'matkakirja', reaktiotAjastettu: () => reaktiotValmis });
+  /*
+   * PULU REAGOI LUENNAN SISÄLLÄ (Raamattu: PULU REAGOI TEKSTIN SISALLA,
+   * docs/pulu-reaktiot.md "Luentareaktiot"). Vain matkakirjaluenta —
+   * sama tunnistus kuin yllä (url === ui.diaryFullUrl) — ja vain jos
+   * pakissa on reaktioita JA äänitteelle on sanakohtaiset aikaleimat
+   * (tools/kohdista-luennat.mjs). Ilman niitä ei tehdä mitään: arvattu
+   * hetki osuisi väärään sanaan. Lataus on asynkroninen eikä saa kaataa
+   * luentaa, joten virheet nielaistaan täällä.
+   *
+   * PURKU JÄÄ SOITTIMEEN (`audio.puraReaktiot`), koska luennan
+   * pysäyttäjä ei ole tämä kohta vaan stopDiaryVoice tai haivytaLuenta
+   * — ja ne näkevät vain soittimen. Purku katkaisee myös eleen
+   * (moottori lähettää reactionEndin) ja nollaa yllä olevan tiedon.
+   */
+  if (url === ui.diaryFullUrl) {
+    kytkeMatkakirjanReaktiot(audio, url, {
+      voimassa: () => ui.diaryVoice === audio,
+      // Moottori purki itsensä (virhe, tyhjennys, luennan loppu): tieto
+      // ajastetuista reaktioista ei saa jäädä todeksi sovittimelle.
+      kuollut: () => { reaktiotValmis = false; },
+    })
+      .then((pura) => {
+        if (typeof pura !== 'function') return;
+        // Luenta ehti vaihtua latauksen aikana: kytkentä heti auki.
+        if (ui.diaryVoice !== audio) { pura(); return; }
+        audio.puraReaktiot = () => {
+          audio.puraReaktiot = null;
+          reaktiotValmis = false;
+          pura();
+        };
+        reaktiotValmis = true;
+      })
+      .catch(() => { /* reaktiot ovat lisä, eivät luennan ehto */ });
+  }
   // Kirjanpito kaikista luennoista: pysäytys hiljentää myös sellaisen
   // äänen, joka ei enää ole diaryVoice mutta soi yhä.
   (ui.luennat ??= new Set()).add(audio);
@@ -398,8 +917,26 @@ export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, v
   // jotta se pariutuu varmasti vapautuksen kanssa myös silloin kun
   // soitto ei koskaan käynnisty.
   merkitsePuhuja(ui, audio);
-  if (ekaLauseeseen) {
-    lauseTauko(ui, url, osuus).then((raja) => {
+  /*
+   * PYSÄYTYS LAUSERAJAAN — KAKSI SYYTÄ, YKSI KONEISTO.
+   *
+   *   `ekaLauseeseen`  vanha lyhyt kertojatila: raja haetaan
+   *                    ensimmäisen virkkeen kohdalta.
+   *   `lopetaOsuuteen` matkakirjan tilapäinen lyhennys (omistaja
+   *                    11.9.2026): raja haetaan siitä kohdasta, johon
+   *                    lyhennetty teksti päättyy — ei ensimmäisen
+   *                    virkkeen jälkeen.
+   *
+   * Molemmissa häivytys alkaa ennen rajaa ja soitin jää tauolle. TÄMÄ
+   * EI OLE LUENNAN LOPPU: `matkakirja:luenta-loppu` lähtee vain
+   * pehmeaLopun luonnollisesta haarasta (js/luentareaktiot.js),
+   * eikä katkaistu luenta saa teeskennellä loppuneensa. Pulun
+   * kuuntelu päättyy soittimen pauseen kuten tauossakin.
+   */
+  const rajanHaku = ekaLauseeseen ? lauseTauko(ui, url, osuus)
+    : (lopetaOsuuteen == null ? null : lopetuksenRaja(ui, url, lopetaOsuuteen));
+  if (rajanHaku) {
+    rajanHaku.then((raja) => {
       if (ui.diaryVoice !== audio || raja == null) return;
       const vahti = () => {
         if (audio.jatkettu) {
@@ -417,7 +954,30 @@ export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, v
       audio.addEventListener('timeupdate', vahti);
     });
   }
+  /*
+   * KERTOJA EI ALA PULUN PÄÄLLE (omistaja 8.9.2026, ks. osio PULU JA
+   * KERTOJA EIVÄT PUHU PÄÄLLEKKÄIN).
+   *
+   * Järjestys on muuten ajastimien varassa: pulun kuplat saavat
+   * lukuaikansa ja luenta alkaa omalla vuorollaan (js/fokusvirta.js
+   * kaupungin kulku, js/livia.js paljastussarja). Kehittäjän hyppy
+   * kaupungista toiseen ohittaa ne ajastimet, ja silloin edellisen
+   * kaupungin repliikki on yhä äänessä kun uuden kaupungin luenta
+   * alkaisi. Tämä on se yksi portti, jonka läpi kertoja kulkee — se
+   * odottaa pulun lauseen loppuun eikä puhu sen päälle.
+   *
+   * KATTO ON PAKOLLINEN: pulun äänite voi jäädä myös jumiin (verkko
+   * poikki, purettu soitin), eikä luenta saa hävitä sen mukana.
+   */
+  let odotettu = 0;
   const aloita = () => {
+    if (odotettu < PULUN_ODOTUKSEN_KATTO_MS && puhujaAanessa(PUHUJA_KERTOJA) === PUHUJA_PULU) {
+      odotettu += PULUN_ODOTUSVALI_MS;
+      setTimeout(() => {
+        if (ui.diaryVoice === audio) aloita();
+      }, PULUN_ODOTUSVALI_MS);
+      return;
+    }
     audio.play().then(() => {
       // play() on asynkroninen: jos luenta ehti vaihtua tai pysähtyä
       // käynnistyksen aikana, myöhässä herännyt ääni pysäytetään heti —
@@ -451,6 +1011,130 @@ export function playDiaryVoice(ui, url, { ekaLauseeseen = false, osuus = null, v
   // Kutsuja saa kahvan luentaan: aarrekortti pysyy esillä luennan
   // ajan ja sen ruksi feidaa juuri tämän äänen (playTokenReveal).
   return audio;
+}
+
+/*
+ * ── SAAPUMISPUHE: HORATIO SANOO KAUPUNGIN NIMEN JA ISKULAUSEEN ──────
+ *
+ * Omistaja 15.9.2026, sanatarkasti: *"Kokeile tehdä pelkästään isoisän
+ * äänellä. Siinä paras että generaattori tekee itse tauon"* ja
+ * hyväksyntä *"Nyt hyvä. Tee kaikkiin ja vie peliin"*. Aineisto on
+ * Codexin toimittama (js/packs/saapumispuheet.js, 45 Euroopan
+ * kaupunkia): yksi otto, jossa nimi ja nykyinen iskulause sanotaan
+ * peräkkäin. Pulu ei puhu saapumisessa.
+ *
+ * MIKSI TÄMÄ ON TÄSSÄ EIKÄ TRAILERISSA. Luennan koko koneisto —
+ * crossOrigin, Web Audio -reititys vahvistimen läpi (iOS), Lukija-liuku,
+ * taustan väistö ja taustalle menon hiljennys — asuu tässä moduulissa
+ * ja seuraa `merkitsePuhujan` kirjanpitoa. Traileri saa siis yhden
+ * kutsun, ei omaa Audio-koneistoa (js/saapumistraileri.js).
+ *
+ * KOLME EROA MATKAKIRJALUENTAAN:
+ *
+ *  1. EI PEHMEÄÄ LOPPUA. Codexin toimitusohje: *"Älä leikkaa puhetta
+ *     kellon perusteella: luota soittimen luonnolliseen
+ *     `ended`-tapahtumaan."* pehmeaLoppu pysäyttää 25 ms ennen reunaa,
+ *     eikä lyhyessä otossa ole mitään leikattavaa.
+ *  2. EI PULUN ODOTUSTA EIKÄ LAUSERAJOJA. Otto on 3–6 s ja sidottu
+ *     ruudulla näkyvään nimeen; odotus rikkoisi juuri sen synkan.
+ *  3. OMA KAHVANSA (`saapumispuheenSoitin`), koska tämä ei ole
+ *     `ui.diaryVoice`: matkakirjaluenta alkaa vasta tämän jälkeen, ja
+ *     kaiuttimen VU-mittari löytää analysaattorin täältä.
+ *
+ * Soitin on silti `ui.luennat`-joukossa ja puhujien kirjanpidossa,
+ * joten jokainen olemassa oleva pysäytystie (stopDiaryVoice,
+ * haivytaLuenta, taustaHiljennaLuennat) vaientaa myös saapumispuheen.
+ */
+
+/** Soiva saapumispuhe tai null — yksi kerrallaan koko pelissä. */
+let saapumispuheSoitin = null;
+
+/**
+ * Soivan saapumispuheen soitin (kaiuttimen VU-mittari lukee tästä
+ * analysaattorin, js/ui.js luentavahti).
+ * @returns {HTMLAudioElement|null}
+ */
+export function saapumispuheenSoitin() {
+  return saapumispuheSoitin;
+}
+
+/**
+ * SAAPUMISPUHE SOIMAAN. Palauttaa soittimen tai null, jos puhetta ei
+ * soitettu (ei osoitetta, kertoja pois päältä tai radiotila).
+ *
+ * `onLoppu` laukeaa TASAN KERRAN: luonnollisesta lopusta ('ended'),
+ * pysäytyksestä ('pause'), latausvirheestä ('error') ja hylätystä
+ * autoplaysta. Kutsuja (traileri) odottaa sitä ennen kuin
+ * matkakirjaluenta alkaa — hylätty play() ei siis jumita mitään.
+ *
+ * @param {object} ui
+ * @param {string} url
+ * @param {{onLoppu?: (() => void)|null}} [asetukset]
+ * @returns {HTMLAudioElement|null}
+ */
+export function soitaSaapumispuhe(ui, url, { onLoppu = null } = {}) {
+  pysaytaSaapumispuhe(ui);
+  if (!url) return null;
+  // Kertojan oma kytkin, sama kuin matkakirjaluennalla (playDiaryVoice).
+  if (!luentaKytkinPaalla()) return null;
+  if (ui?.radioModuuli && !ui.radioModuuli.luentaSallittu()) return null;
+  const audio = luentaSoitin(aaniUrl(url), puheVoima());
+  saapumispuheSoitin = audio;
+  (ui.luennat ??= new Set()).add(audio);
+  // Tausta väistyy puheen ajaksi ja vuoro varataan ENNEN play():ta,
+  // jotta merkintä pariutuu vapautuksen kanssa myös silloin, kun
+  // soitto ei koskaan käynnisty (sama kaava kuin playDiaryVoice).
+  merkitsePuhuja(ui, audio);
+  let ilmoitettu = false;
+  const loppu = () => {
+    if (ilmoitettu) return;
+    ilmoitettu = true;
+    if (saapumispuheSoitin === audio) saapumispuheSoitin = null;
+    ui?.luennat?.delete(audio);
+    vapautaPuhuja(ui, audio);
+    onLoppu?.();
+  };
+  audio.addEventListener('ended', loppu);
+  audio.addEventListener('pause', loppu);
+  audio.addEventListener('error', loppu);
+  const lupaus = audio.play();
+  if (lupaus?.catch) {
+    lupaus.catch((virhe) => {
+      // iOS hylkää play():n NotAllowedError-virheellä ilman elettä.
+      // Virhe näkyviin, mutta traileri jatkaa kuin puhetta ei olisi.
+      console.warn('saapumispuhe ei käynnistynyt:', virhe?.name ?? virhe, url);
+      loppu();
+    });
+  }
+  return audio;
+}
+
+/**
+ * SAAPUMISPUHE KIINNI JA SIIVOON — ohitus, kaupungin vaihto ja
+ * trailerin poisto. Turvallista kutsua monta kertaa.
+ *
+ * @returns {boolean} oliko puhetta pysäytettävänä
+ */
+export function pysaytaSaapumispuhe(ui) {
+  const audio = saapumispuheSoitin;
+  saapumispuheSoitin = null;
+  if (!audio) return false;
+  try {
+    audio.pause();
+    audio.removeAttribute('src');
+  } catch {
+    /* soitin oli jo purettu */
+  }
+  ui?.luennat?.delete(audio);
+  // Reititys puretaan kuolleelta soittimelta: 'ended' ei tule
+  // pysäytetylle äänelle, joten ketju jäisi muistiin roikkumaan
+  // äänikontekstin ja destinationin väliin (sama purku kuin
+  // haivytaJaSiivoassa ja haivytaLuennassa).
+  irrotaLuennanVahvistin(audio);
+  // Pysäytetty soitin ei laukaise enää 'ended'-tapahtumaa; ilman tätä
+  // taustan väistö jäisi päälle (sama vika kuin haivytaLuennassa).
+  vapautaPuhuja(ui, audio);
+  return true;
 }
 
 /**
@@ -528,19 +1212,86 @@ export function lauseTauko(ui, url, osuus = null) {
 }
 
 /**
+ * Marginaali ennen tarkkaa lauserajaa (s): aikaleima on seuraavan
+ * lauseen ENSIMMÄISEN sanan alku, ja häivytys saa alkaa hitusen ennen
+ * sitä, jottei uuden lauseen ensitavu vilahda kuuluviin.
+ */
+const AIKALEIMAN_MARGINAALI_S = 0.15;
+
+/**
+ * LYHENNETYN LUENNAN PYSÄYTYSKOHTA (playDiaryVoice `lopetaOsuuteen`).
+ *
+ * AIKALEIMAT VOITTAVAT ARVION. Jos äänitteelle on tarkistetut
+ * sanakohtaiset aikaleimat (js/luentareaktiot.js), niissä on myös
+ * lauseiden alkuajat: pysäytys osuu silloin täsmälleen sen lauseen
+ * alkuun, joka jää pois. Ilman aikaleimoja palataan hiljaisuusarvioon
+ * (lauseTauko), joka etsii lähimmän vähintään 0,3 s hengähdyksen
+ * osuuden kohdalta.
+ *
+ * @param {object} ui
+ * @param {string} url äänitteen polku
+ * @param {number} osuus lyhennetyn tekstin merkkiosuus koko tekstistä
+ * @returns {Promise<?number>} pysäytyshetki sekunteina
+ */
+function lopetuksenRaja(ui, url, osuus) {
+  return luennanLauserajat(url).then((rajat) => {
+    const tarkka = lopetuksenLauseraja(rajat, osuus);
+    return tarkka == null ? lauseTauko(ui, url, osuus) : tarkka;
+  }).catch(() => lauseTauko(ui, url, osuus));
+}
+
+/**
+ * PYSÄYTYSHETKI AIKALEIMOISTA — puhdas funktio, ei verkkoa.
+ *
+ * Lyhennetty teksti päättyy tiettyyn merkkiin; sitä vastaava
+ * lauseiden määrä kertoo, MONESKO lause jää ensimmäisenä pois, ja sen
+ * alkuaika on pysäytyskohta. Marginaali vedetään siitä taaksepäin,
+ * jottei pois jäävän lauseen ensitavu vilahda kuuluviin.
+ *
+ * @param {?{lauseet:number[], teksti:string}} rajat aikaleimatiedosto
+ * @param {number} osuus lyhennetyn tekstin merkkiosuus
+ * @returns {?number} pysäytyshetki sekunteina, tai null (ei tietoa)
+ */
+export function lopetuksenLauseraja(rajat, osuus) {
+  if (!rajat || !Array.isArray(rajat.lauseet) || !rajat.teksti) return null;
+  if (!Number.isFinite(osuus) || osuus <= 0 || osuus >= 1) return null;
+  const merkkeja = Math.round(osuus * rajat.teksti.length);
+  const lauseita = lauseitaMerkkeihin(rajat.teksti, merkkeja);
+  const aika = rajat.lauseet[lauseita];
+  // Viimeinen lause mukana (tai kelvoton aika): ei pysäytystä.
+  if (!Number.isFinite(aika) || aika <= 0) return null;
+  return Math.max(0, aika / 1000 - AIKALEIMAN_MARGINAALI_S);
+}
+
+/**
  * Pehmeä loppu puhetiedostoille: viimeinen neljännessekunti häivytetään
  * ja toisto pysäytetään juuri ennen tiedoston reunaa. ElevenLabsin
  * tiedosto päättyy keskeltä signaalia, ja kova reuna kuului pienenä
  * töksähdyksenä (omistajan havainto etusivulla) — pehmennys tehdään
  * toistossa, joten tiedostoja ei tarvinnut generoida uusiksi.
+ *
+ * PERUSTASO LUETAAN JOKA KERRALLA (`perus()`), EI KERRAN KIINNITYKSESSÄ.
+ * Lukija-liuku muuttaa soivan luennan tasoa kesken nauhan
+ * (paivitaLuentojenVoima kirjoittaa soittimeen `luennanPerustason`), ja
+ * kerran talteen otettu lähtötaso olisi loppuhetkellä vanhentunut:
+ * viimeinen puoli sekuntia häipyisi siitä tasosta, jolla luenta ALKOI —
+ * eli kesken kaiken hiljennetty luenta kiljahtaisi lopussa takaisin
+ * kuuluviin.
  */
 export function pehmeaLoppu(ui, audio) {
-  const perus = audio.volume;
+  const lahtotaso = luennanTaso(audio);
+  const perus = () => audio.luennanPerustaso ?? lahtotaso;
   let rampissa = false;
+  /*
+   * LOPPU ILMOITETAAN KERRAN. Tämä on luennan ainoa luonnollinen loppu:
+   * soitin ei ehdi lähettää 'ended'-tapahtumaa, koska pysäytämme sen
+   * itse 25 ms ennen tiedoston reunaa.
+   */
+  let loppuIlmoitettu = false;
   const rullaa = () => {
     if (audio.paused || !audio.duration) {
       rampissa = false;
-      audio.volume = perus;
+      asetaLuennanTaso(audio, perus());
       return;
     }
     const jaljella = audio.duration - audio.currentTime;
@@ -554,15 +1305,32 @@ export function pehmeaLoppu(ui, audio) {
      * napsahda.
      */
     if (jaljella <= LOPUN_HILJAISUUS_S) {
-      // Pysäytys osuu jo vaienneeseen ääneen eikä voi napsahtaa.
-      audio.volume = 0;
+      // Pysäytys osuu jo vaienneeseen ääneen eikä voi napsahtaa —
+      // PUHELIMESSAKIN, koska taso menee nyt vahvistimeen.
+      asetaLuennanTaso(audio, 0);
+      /*
+       * LUENTA PÄÄTTYI LUONNOLLISESTI — ja vain tästä haarasta.
+       * Kuuntelijat (js/luentareaktiot.js loppureaktio, tekstisession
+       * narrationEnd) eivät saa tätä tietoa soittimelta, koska oma
+       * pause() tulee ennen tiedoston reunaa eikä 'ended' laukea.
+       * Manuaalinen pysäytys, häivytys, kelaus ja virhe ovat
+       * keskeytyksiä eivätkä lähetä tätä.
+       */
+      if (!loppuIlmoitettu) {
+        loppuIlmoitettu = true;
+        // Soitin jää tarkoituksella diaryVoice-kahvaan ja paused-tilaan,
+        // mutta puhe on oikeasti ohi. Kuluttajat, joiden pitää erottaa
+        // tämä kesken jätetystä pausesta, saavat yhden täsmällisen merkin.
+        audio.luentaPaattyiLuonnollisesti = true;
+        audio.dispatchEvent(new Event(LUENNAN_LOPPU_TAPAHTUMA));
+      }
       audio.pause();
       rampissa = false;
       return;
     }
     if (jaljella < LOPUN_HAIPYMA_S) {
       const matka = (jaljella - LOPUN_HILJAISUUS_S) / (LOPUN_HAIPYMA_S - LOPUN_HILJAISUUS_S);
-      audio.volume = perus * Math.max(0, Math.min(1, matka));
+      asetaLuennanTaso(audio, perus() * Math.max(0, Math.min(1, matka)));
     }
     requestAnimationFrame(rullaa);
   };
@@ -584,12 +1352,14 @@ export function pehmeaLoppu(ui, audio) {
  * sanaa, koska pause() tuli ilman häivytystä.
  */
 export function haivytaAani(ui, audio, kesto = LUENNAN_HAIPYMA_S * 1000) {
-  const perus = audio.volume;
+  // Lukija-liuku ei enää kirjoita tason päälle (paivitaLuentojenVoima).
+  audio.luennanHaivytys = true;
+  const perus = luennanTaso(audio);
   const t0 = performance.now();
   const askel = (nyt) => {
     if (audio.paused) return;
     const t = Math.min(1, Math.max(0, (nyt - t0) / kesto));
-    audio.volume = perus * pehmene(1 - t);
+    asetaLuennanTaso(audio, perus * pehmene(1 - t));
     if (t < 1) requestAnimationFrame(askel);
     else audio.pause();
   };
@@ -651,12 +1421,18 @@ export function luennanLoppuun(ui, { katto = 60000 } = {}) {
 export function stopDiaryVoice(ui) {
   ui.diaryVoice = null;
   ui.luentaTauolla = null;
+  // Puhe on ohi: kartan liikkeen ajastama kortin paluu perutaan.
+  ui.peruKortinPalautus?.();
   // Laitteen lukija on saman kaiuttimen takana kuin generoitu äänite,
   // joten "luenta kiinni" tarkoittaa myös sitä.
   if (lukijaLukee(ui.factKuuntele)) pysaytaLukija();
   // Kaikki luennat kiinni — myös mahdollinen myöhästelijä, joka ei
   // enää ollut diaryVoice mutta soi yhä.
   for (const audio of [...(ui.luennat ?? [])]) {
+    // Pulun luentareaktiot ensin auki: moottori lähettää eleen
+    // katkaisevan reactionEndin ja irrottaa kuuntelijansa ennen kuin
+    // soitin pysähtyy (js/luentareaktiot.js).
+    audio.puraReaktiot?.();
     audio.pause();
     audio.removeAttribute('src');
     // Vapautus ennen tyhjennystä: muuten laskuri jäisi plussalle eikä
@@ -677,19 +1453,30 @@ export function haivytaLuenta(ui, kestoMs = 700) {
     stopDiaryVoice(ui);
     return;
   }
+  // Pulun reaktiot katkaistaan heti eikä vasta häivytyksen lopussa:
+  // pelaaja on jo lähtenyt tästä kohdasta, eikä ele saa jäädä päälle
+  // odottamaan pausea (js/luentareaktiot.js reactionEnd).
+  audio.puraReaktiot?.();
   // Irrotetaan heti, jotta seuraava luenta saa alkaa puhtaalta pöydältä.
   ui.diaryVoice = null;
   ui.luentaTauolla = null;
-  const alku = audio.volume;
+  ui.peruKortinPalautus?.();
+  // Puhevuoro samassa hetkessä: häivytys on hyvästely eikä saa estää
+  // seuraavan paikan ensimmäistä repliikkiä (ks. luovutaPuhevuoro).
+  luovutaPuhevuoro(audio);
+  // Lukija-liuku ei enää kirjoita tason päälle (paivitaLuentojenVoima).
+  audio.luennanHaivytys = true;
+  const alku = luennanTaso(audio);
   const t0 = performance.now();
   const askel = (nyt) => {
     const t = Math.min(1, (nyt - t0) / kestoMs);
-    audio.volume = alku * (1 - t);
+    asetaLuennanTaso(audio, alku * (1 - t));
     if (t < 1 && !audio.paused) {
       requestAnimationFrame(askel);
     } else {
       audio.pause();
       audio.removeAttribute('src');
+      irrotaLuennanVahvistin(audio);
       ui.luennat?.delete(audio);
       /*
        * Vapautus puhujan roolista, samasta syystä kuin

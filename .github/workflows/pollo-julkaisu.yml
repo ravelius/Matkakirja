@@ -48,7 +48,9 @@ env:
   # joka on aina pelkkä alkuosa ILMAN polkua: pelin sivu on
   # https://ravelius.github.io/Matkakirja/ mutta Origin on
   # https://ravelius.github.io. Useampi arvo erotetaan pilkulla.
-  POLLO_ORIGINIT: 'https://ravelius.github.io'
+  # 6.9.2026: peli siirtyy osoitteeseen matkakirja.app (omistaja: "Siirrä
+  # vain peli"); vanha Pages-origin jää siirtymän ajaksi.
+  POLLO_ORIGINIT: 'https://ravelius.github.io,https://matkakirja.app,https://www.matkakirja.app'
   # Wrangler TÄSMÄVERSIOON lukittuna (28.8.2026): pelkkä suurversio
   # ei riittänyt — 27.8. alkaen jokainen ajo kaatui Cloudflaren
   # virheeseen "Authentication error [code: 10000]" heti kv namespace

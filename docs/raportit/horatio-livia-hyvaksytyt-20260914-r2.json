@@ -1,0 +1,419 @@
+{
+  "schemaVersion": 1,
+  "edition": "tarinan-imu-final-20260914-r2",
+  "sourceSha256": "44b3192a64ee18efa1fce43c1729ba4b410440328dcc5b6ce694f6885bf85fbc",
+  "authorization": {
+    "date": "2026-09-14",
+    "instruction": "Hyväksyn korjaukset, voit generoida äänet.",
+    "textApproved": true,
+    "audioAuthorized": true,
+    "scope": "45 Horatio + 45 Livia city-pair speeches"
+  },
+  "cities": [
+    {
+      "id": "ateena",
+      "name": "Ateena",
+      "text": {
+        "horatio": "Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.",
+        "livia": "Schliemannin talo on nyt rahamuseo. Sen puutarhasta löysin kiiltävän kolikon ja peitin sen jalallani. Sitten lapsi palasi etsimään. Siirsin jalkaa ihan vähän. Hän ilahtui. Niin minäkin."
+      },
+      "placeLine": "Ateena, elokuussa 1873. Pölyä ja puhetta kullasta."
+    },
+    {
+      "id": "sofia",
+      "name": "Sofia",
+      "text": {
+        "horatio": "Sofiassa maa lämmitti veden ilman halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. Palasin hakemaan oman astian. Majatalon isäntä ei ilahtunut, kun neuvoin muitakin lähtemään lähteelle.",
+        "livia": "Sofian lähteeltä haetaan yhä kuumaa vettä. Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. Arvokkuus palasi vasta seuraavalla räystäällä."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "istanbul",
+      "name": "Istanbul",
+      "text": {
+        "horatio": "Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.",
+        "livia": "Tünel kulkee yhä mäen alla. Minä kuljen yllä! Kisasin vaunun kanssa. Voitin, mutta matkustajat eivät hengästyneet. Myönnetään: kätevä laite."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "rooma",
+      "name": "Rooma",
+      "text": {
+        "horatio": "Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.",
+        "livia": "Pantheoniin ostetaan nyt pääsylippu. Minä kiersin kattoaukkoa juuri, kun sade alkoi. Alhaalla ihmiset siirtyivät kuivaan. Löysin itsekin suojan räystäältä — mutta ensin oli pakko katsoa, mihin sade sisällä menee."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "bukarest",
+      "name": "Bukarest",
+      "text": {
+        "horatio": "Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.",
+        "livia": "Bukarestin kerrostalojen välissä on Văcăreștin luonnonpuisto, hylätyn tekojärvihankkeen paikalla. Lensin betonivallin yli ruovikon ylle. Täällä ihmiset kantavat kiikareita nähdäkseen meidät paremmin! Valitsin näkyvän oksan ja käänsin paremman kylkeni. Kiikaroikaa rauhassa."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "sarajevo",
+      "name": "Sarajevo",
+      "text": {
+        "horatio": "Sarajevon kupariseppä naputti kahvipannua vasaralla, jonka olisin hukannut taskuun. Aamulla olin juonut kahvini samanlaisesta pannusta vilkaisematta sitä. Nyt näin jokaisen vasaranjäljen. Basaarin kilkutuksessa aamiainen muuttui käsityöksi.",
+        "livia": "Kuparisepät naputtavat basaarissa yhä. Minun piti vain piipahtaa, mutta jäin kuuntelemaan yhtä vasaraa. Yritin naputtaa nokalla samaa tahtia — seppä oli kyllä nopeampi!"
+      },
+      "placeLine": null
+    },
+    {
+      "id": "madrid",
+      "name": "Madrid",
+      "text": {
+        "horatio": "Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.",
+        "livia": "Retiron lammella vuokrataan nyt soutuveneitä. Laskeuduin yhden keulaan kokeilemaan matkustajan osaa. Soutaja sai veneen pyörimään ympyrää. Olisin voinut lentää, tietenkin. Mutta hän nauroi jo itsekin, ja minä jäin vielä yhdelle kierrokselle."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "wien",
+      "name": "Wien",
+      "text": {
+        "horatio": "Wienin maailmannäyttelyssä kone painoi sanomalehteä. Lehti vakuutti, että kolerapuheet olivat liioittelua. Majatalossa aamiaista tarjoillut nainen sairastui. Käskin tuoda arkkuni alas heti. Kantaja seisoi ovella ja kysyi, tarvitsisiko nainen lääkäriä. Olin ajatellut vain lähtöäni.",
+        "livia": "Wieniin johdetaan nyt juomavettä vuoristolähteistä. Kahvilan pihalla löysin tiputtavan hanan ja odotin pisaraa nokka auki. Kokonainen matka vuorilta asti, ja minä vain ojensin kaulaani."
+      },
+      "placeLine": "Wien, heinäkuussa 1873. Koneiden kolinaa; levottomia uutisia."
+    },
+    {
+      "id": "pariisi",
+      "name": "Pariisi",
+      "text": {
+        "horatio": "Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.",
+        "livia": "Palatsia ei enää ole, mutta Tuileries’n puutarhassa voi siirtää vihreän tuolin juuri siihen, missä haluaa istua. Valitsin selkänojan auringosta. Tuolilla istuva nainen käänsi sen ystäväänsä kohti, ja minä sain uuden näkymän liikahtamatta. Jäin kuuntelemaan. He olivat tavanneet täällä jo koululaisina."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "berliini",
+      "name": "Berliini",
+      "text": {
+        "horatio": "Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.",
+        "livia": "Tempelhofin vanhalla lentokentällä lensin punaisen leijan rinnalla. Se pysyi ilmassa räpäyttämättä siipeäkään. Hiukan ärsyttävää. Sitten katsoin alas: narun toisessa päässä mies juoksi hiki hatussa. Helpotukseni oli suuri. Joku tässä sentään teki töitä."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "lontoo",
+      "name": "Lontoo",
+      "text": {
+        "horatio": "Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Laiturilla tunnistin herra Grimshaw’n, kilpakumppanini aarrejahdissa. Hän tarjosi nenäliinaa. Otin sen. Palautuksesta emme sopineet.",
+        "livia": "Nyt metron junat kulkevat sähköllä. Minä pysyttelen mieluummin Thamesin yllä: näen, kuka tulee perässä. Kerran tarkistin saman varjon kolmesti. Omahan se oli."
+      },
+      "placeLine": "Lontoo, joulukuussa 1873. Sumu niin sakea, ettei kadun toista puolta erota; puntari matalalla."
+    },
+    {
+      "id": "budapest",
+      "name": "Budapest",
+      "text": {
+        "horatio": "Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.",
+        "livia": "Ketjusillan leijonilla ei kuulemma ole kieliä. Lensin katsomaan suuhun: onhan siellä! Alhaalta niitä ei vain näe. Olin juuri lähdössä levittämään tietoa, kun opas kertoi uuden ryhmänsä edessä saman vanhan jutun. Hei! Minulla olisi tästä aivan tuore havainto!"
+      },
+      "placeLine": null
+    },
+    {
+      "id": "dubrovnik",
+      "name": "Dubrovnik",
+      "text": {
+        "horatio": "Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.",
+        "livia": "Lazaretin pihalla katselin linđo-tanssia. Johtaja huusi, ja parit vaihtoivat suuntaa kuin yhteisestä ajatuksesta. Kokeilin samaa kaiteella: askel, käännös, toinen askel. Siivet piti avata heti. Ihmiset tekivät kaiken ilman niitä! Jäin vielä yhden tanssin ajaksi tutkimaan jalkoja."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "praha",
+      "name": "Praha",
+      "text": {
+        "horatio": "Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.",
+        "livia": "Kello kokoaa torille väkeä yhä. Minä istuin katon reunalla ja ihmettelin, miksi puhelintaan katsovat ihmiset nostivat yhtä aikaa päänsä. Kun luuranko liikahti, nostin minäkin."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "tukholma",
+      "name": "Tukholma",
+      "text": {
+        "horatio": "Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.",
+        "livia": "Kuninkaanlinnan vieressä kalastajan vapa taipui niin, että unohdin koko linnan. Kävelin pitkin kaidetta kalan mukana. Se välähti pinnassa, roiskautti vettä rinnuksilleni ja katosi. Kalastaja jäi tuijottamaan tyhjää siimaa. Minä pörhistin märät sulkani. Meillä oli nyt yhteinen puheenaihe."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "kobenhavn",
+      "name": "Kööpenhamina",
+      "text": {
+        "horatio": "Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.",
+        "livia": "Tivolin pantomiimiteatterin esirippu on valtava riikinkukon pyrstö. Se laskeutui, ja näyttämö aukesi! Minä kurkistin sivulta, minne pyrstö oikein meni. Halusin nähdä koneiston. Kun viimein käännyin katsomaan näyttelijöitä, yleisö nauroi jo. Mitä minä nyt menetin?"
+      },
+      "placeLine": null
+    },
+    {
+      "id": "helsinki",
+      "name": "Helsinki",
+      "text": {
+        "horatio": "Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi rasvajälki. Harvoin olen saanut yhtä täsmällistä paikallistietoa.",
+        "livia": "Minä kokeilin tuomiokirkon apostolien näköalaa, mutta torin kalat näkyivät paremmin alempaa. Lokki ehti ensin. Se katsoi minua kuin olisin ollut harjoittelija."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "tallinna",
+      "name": "Tallinna",
+      "text": {
+        "horatio": "Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.",
+        "livia": "Raeapteekki myy marsipaania yhä. Minä odotin portaalla, että joku murentaisi annoksensa. Yksi lapsi jakoi palan ystävälleen. Ehkä isoisän lääkkeessä oli oikea ajatus."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "sevilla",
+      "name": "Sevilla",
+      "text": {
+        "horatio": "Sevillan tupakkatehdas näytti palatsilta, mutta portista kulki työväkeä. Nainen sitoi huivinsa, haukkasi leipää ja katosi sisään. Pihalta tuli appelsiininkukkien tuoksu. Aioin kirjoittaa suuresta rakennuksesta; kirjoitinkin pienestä aamiaisesta, joka piti sitä käynnissä.",
+        "livia": "Entinen tupakkatehdas on nyt yliopisto. Näin opiskelijalla niin suuren paperipinon, että lähdin vaistosta perään. Ne eivät olleet kirjeitä. Hyvä yritys."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "bergen",
+      "name": "Bergen",
+      "text": {
+        "horatio": "Bergenin tuomiokirkon seinässä törrötti tykinkuula. Englannin laivasto oli yrittänyt ryöstää sataman hollantilaislaivat parisataa vuotta sitten. Mainitsin oppaalle palvelleeni laivastossa. Hän katsoi minua, sitten kuulaa. Vakuutin, että minulla oli mukana vain lyijykynä.",
+        "livia": "Bergenissä lapsilla ja nuorilla on omat rumpujoukot. Johtajansakin he valitsevat itse! Liityin marssimaan perään rinta pystyssä. Kadunvarren ihmiset kuvasivat meitä. Meitä! Pidin siivet visusti kyljissä. En aikonut pilata muodostelmaa."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "amsterdam",
+      "name": "Amsterdam",
+      "text": {
+        "horatio": "Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.",
+        "livia": "Amsterdamin aseman edessä on pyörähalli veden alla. Seitsemälletuhannelle pyörälle! Kävin kurkistamassa sisään ja palasin rantaan. Vieressä ui ankka. Sen alla minä olin juuri kävellyt, kuivin jaloin. Olisin halunnut nähdä sen ilmeen, jos se olisi tiennyt."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "dublin",
+      "name": "Dublin",
+      "text": {
+        "horatio": "Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.",
+        "livia": "St James’s Gaten panimolle jonotetaan nyt kameroiden kanssa. Asetuin matkalaukun viereen kuvaan ja kohotin leukaa. Kuvaaja tähtäsi harppumerkkiin. Otin askeleen lähemmäs. Ihan vain sommittelun vuoksi."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "edinburgh",
+      "name": "Edinburgh",
+      "text": {
+        "horatio": "Edinburghin hautausmaalla vanha rautahäkki peitti hautaa. Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen. Kysyin haudankaivajalta, kauanko häkkiä oli tarvittu. Kunnes ruumis ei enää kelvannut kaupaksi. Hän jatkoi työtään. Minä jäin lukemaan nimeä kivestä.",
+        "livia": "1800-luvun alun lääkäriopiskelijat tutkivat vainajia oppiakseen ihmisen rakennetta. Ruumiita saatiin laillisesti liian vähän, joten varkaille maksettiin. Minä luulin, että hautausmaalla sai olla rauhassa."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "lissabon",
+      "name": "Lissabon",
+      "text": {
+        "horatio": "Lissabonin Carmon kirkon katto oli sortunut vuoden 1755 maanjäristyksessä. Rauniot oli säilytetty muistomerkkinä. Riisuin ovella hattuni vanhasta tottumuksesta. Kun sade alkoi, panin sen takaisin. Toivoin, että tämä ymmärrettäisiin.",
+        "livia": "Lissabonin mäillä talot seisovat kylki kyljessä. Niiden seiniä koristavat värikkäät kaakelit. Lennän punaisten tiilikattojen yli, ja alapuolellani kujat mutkittelevat varjossa. Edessä kimaltaa leveä Tejojoki."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "riika",
+      "name": "Riika",
+      "text": {
+        "horatio": "Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.",
+        "livia": "Riian oopperan vieressä majaville tuodaan oksia, jotta puistopuut säästyisivät. Katselin yhden illallista. Minä olen selvästi ollut aivan liian helppo naapuri."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "barcelona",
+      "name": "Barcelona",
+      "text": {
+        "horatio": "Barcelonan laidalla miehet nousivat toistensa hartioille, kerros kerrokselta. Viimeisenä kiipesi poika. Olin nähnyt miehiä mastossa, mutta tämä masto hengitti. Tartuin vieraan miehen käsivarteen. Poika nosti huipulla kätensä. Minä en uskaltanut irrottaa omaani.",
+        "livia": "Barcelonan Sagrada Famíliassa pesii muuttohaukkoja. Niitä voi katsella pesäkamerasta. Minä näin emon palaavan kyyhky kynsissään. Suosittelen kameraa."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "firenze",
+      "name": "Firenze",
+      "text": {
+        "horatio": "Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.",
+        "livia": "Firenzessä pääsiäisen ilotulituksen sytyttää kyyhkynmuotoinen raketti. Se kiitää kirkosta vaijeria pitkin! Minä jännitin paluuta. Oli kone tai ei, omia kannustetaan."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "venetsia",
+      "name": "Venetsia",
+      "text": {
+        "horatio": "San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.",
+        "livia": "Venetsiassa kuljetaan yhä vesibusseilla. Minä lennän nykyään vähän pidempää reittiä. Yhden tutun takia. Hetkinen — nuo kuvat ovat yksityisiä! Hän vain sattui jokaiseen hyvään kuvakulmaan. No, ehkä minä vähän odotin."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "marseille",
+      "name": "Marseille",
+      "text": {
+        "horatio": "Marseillen satamassa saippuaa myytiin tiiliskivinä, kuulemma koko maailman pesuun. Kauppiaan mustat kynnet kertoivat köysitöistä. Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. Maailma jäi likaiseksi; käteni olivat jo toista mieltä.",
+        "livia": "Vieux-Portin tunnistan äänestä ja suolasta höyhenissä. Seurasin lokkien kierrosta sataman pöydillä. Yksi nyökkäsi minulle. Työlupa myönnetty, ajattelin — ja pidin silti vähän etäisyyttä sen nokkaan."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "oslo",
+      "name": "Oslo",
+      "text": {
+        "horatio": "Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.",
+        "livia": "Oslon oopperatalon valkoinen katto nousee vuonon rannasta kuin mäki. Ihmiset kävelevät sen päällä ja katselevat laivoja. Minä väistin yhtä kenkää. Katot ovat sentään tavallisesti meidän aluettamme!"
+      },
+      "placeLine": null
+    },
+    {
+      "id": "tampere",
+      "name": "Tampere",
+      "text": {
+        "horatio": "Tammerkoski teki töitä kahden järven välissä: puuvilla muuttui langaksi ja miehet rahakkaiksi. Finlaysonilla nainen näytti katkenneen langan solmun. Minun sormissani lanka katkesi heti; hän sitoi sen katsomatta. Tehtaan voimaa mitatessa pitäisi laskea myös sormet.",
+        "livia": "Tampereen Rajaportin saunalla ihmiset jäähdyttelevät pihalla ja juttelevat ventovieraille. Minä jäin aidalle kuuntelemaan. Yksi teki lähtöä kolmesti. Minäkin tiesin lopulta hänen putkiremonttinsa hinnan."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "vilna",
+      "name": "Vilna",
+      "text": {
+        "horatio": "Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.",
+        "livia": "Vilnan Užupisin taiteilijat julistivat kaupunginosansa leikillään tasavallaksi. Sen perustuslaki vapauttaa kissan rakastamasta omistajaansa. Minä etsin lintujen pykälää. Se puuttuu. Minulla olisi lisättävää."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "granada",
+      "name": "Granada",
+      "text": {
+        "horatio": "Alhambran palatsista vietiin koristeita matkamuistoiksi. Poimin jätekasasta sinisen kaakelinpalan. Mies keräsi sirpaleita museota varten ja ojensi kätensä. Annoin palan hänelle. Olin pitänyt sitä vain hetken, mutta tuntui kuin hän olisi ottanut jotakin minun omaani.",
+        "livia": "Alhambran puutarhat ovat kukkulalla, mutta vesi ei kiivennyt sinne. Se johdettiin Darrojoesta vielä korkeammalta, yli kuuden kilometrin kanavaa pitkin. Koko matka alamäkeä! Siinä olisi kelvannut lepuuttaa siipiä."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "kiova",
+      "name": "Kiova",
+      "text": {
+        "horatio": "Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.",
+        "livia": "Kiovan tunnuspuu on hevoskastanja. Puistossa näin uusia puita raketti-iskun tuhoamien tilalla. Minä vein yhden oksanhaaraan risun. Siihen saisi vielä pesän."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "krakova",
+      "name": "Krakova",
+      "text": {
+        "horatio": "Krakovan yliopistossa näin vanhan maapallon. Intian eteläpuolelle oli merkitty maa nimeltä Amerikka. Vieressä luki: vastikään löydetty. Minä luin sen kahdesti. Omista kartoistani on puuttunut saaria, mutta kokonaista mannerta en sentään ole hukannut.",
+        "livia": "Tuo maapallo on 1500-luvun alusta, jolloin eurooppalaisten tiedot Amerikasta olivat vielä hataria. Krakova on vanha yliopistokaupunki. Minä kuuntelin kahvilan ikkunalla opiskelijoiden väittelyä. Kolme ihmistä, neljä mielipidettä."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "moskova",
+      "name": "Moskova",
+      "text": {
+        "horatio": "Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.",
+        "livia": "Moskovan metrossa pronssikoiran kuono on hierottu kiiltäväksi onnen toivossa. Minäkin hipaisin sitä nokallani. En minä muuten, mutta edessä oli pitkä lento."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "odessa",
+      "name": "Odessa",
+      "text": {
+        "horatio": "Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.",
+        "livia": "Odessan Privozin torilla kaupankäyntiin kuuluu sanailu. Minä tuijotin kirsikoita. Myyjä kysyi, ostanko vai vartioinko. Pörhistin höyheniäni. Vartioin, tietenkin."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "pietari",
+      "name": "Pietari",
+      "text": {
+        "horatio": "Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.",
+        "livia": "Pietarin Eremitaasin taidemuseossa kissojen tehtävä on pitää hiiret loitolla taideaarteista. Minä tervehdin yhtä pihalla. Katolta, tietenkin."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "varsova",
+      "name": "Varsova",
+      "text": {
+        "horatio": "Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.",
+        "livia": "Toisessa maailmansodassa saksalaiset hävittivät Varsovaa talo talolta. Raunioista koottiin tämä kukkula. Nyt täällä kävellään metsäpoluilla, ja puissa pesii lintuja. Kuuntele — tuolla huhuilee sepelkyyhky."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "kreeta",
+      "name": "Kreeta",
+      "text": {
+        "horatio": "Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.",
+        "livia": "Hanian Nikolauksen kirkolla on sekä kellotorni että minareetti, sillä rakennus on ollut välillä moskeija. Aukion kahviloista kantautuu puheensorinaa. Tuon plataanin varjossa voisi viipyä pitkään."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "sisilia",
+      "name": "Sisilia",
+      "text": {
+        "horatio": "Palermon nukketeatterissa puiset ritarit taistelivat ja yleisö huusi niille neuvoja. Sankari jäi vangiksi, ja tarina jatkuisi vasta seuraavana iltana. Ostin uuden lipun. Ei miestä voinut sinne jättää.",
+        "livia": "Catanian kahvilassa aamiaiseksi tuotiin granitaa, makeaa jäähileherkkua, ja lämmin pulla, jonka päällä oli pienempi pulla. Minä nyökkäilin ikkunalaudalla. Pullallakin oli oma pulla."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "islanti",
+      "name": "Reykjavík",
+      "text": {
+        "horatio": "Lähdin Islannissa hainpyyntiin soutuveneellä. Hain maksasta saatiin öljyä Euroopan katulamppuihin. Kun saalis vedettiin laidan viereen, vene tuntui äkkiä kovin pieneltä. Kalastaja kohotti harppuunan. Minä painoin airot veteen ja pidin keulan aaltoja vasten.",
+        "livia": "Reykjavíkin vanhassa keskustassa pienet puutalot on verhottu värikkäällä pellillä. Vanhan sataman varastoissa on nyt kahviloita. Minä löysin suojaisan terassin. Tuuli löysi minut."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "alpit",
+      "name": "Alpit",
+      "text": {
+        "horatio": "Grindelwaldin jäätiköltä halusin kiven aivan railon reunasta. Opas kielsi oikaisemasta, mutta minulla oli tarkka kartta. Lumi petti saappaan alta. Köysi löi ilmat keuhkoistani, ja jäin riippumaan sinisen jään väliin. Opas veti minut ylös, ja köysi viilsi hänen kämmenensä rikki. Minä pitelin yhä kiveä.",
+        "livia": "Sveitsin Alpeilla lehmät palaavat syksyllä vuoristolaitumilta kukkaseppeleissä ja kellot kaulassa. Minä lensin juhlakulkueen mukana. Yksi lehmä söi edellä kulkevan seppelettä."
+      },
+      "placeLine": "Grindelwald, heinäkuussa 1873. Kylmää keskellä kesää; puntari korkealla."
+    },
+    {
+      "id": "lappi",
+      "name": "Lappi — Rovaniemi",
+      "text": {
+        "horatio": "Rovaniemellä Kemijoki kuljetti tukkeja jokisuun sahoille. Rantaan pakkautuneen suman päälle kiipesi mies. Hän väänsi yhden rungon irti ja loikkasi maihin. Koko kasa rysähti liikkeelle. Omat käteni tärisivät vielä, kun hän jo jatkoi töitään.",
+        "livia": "Rovaniemen keskustaan on piilotettu poron pää! Alvar Aalto hahmotteli sen kaupungin asemakaavaan: tiet haarautuvat sarviksi ja urheilukenttä on silmä. Maasta sitä on vaikea huomata. Kerrankin kannattaa olla lintu."
+      },
+      "placeLine": null
+    },
+    {
+      "id": "tromssa",
+      "name": "Tromssa",
+      "text": {
+        "horatio": "Tromssan majatalossa kerrottiin kapteeni Carlsenin löytämästä majasta. Barentsin retkikunnan tavarat olivat säilyneet jäässä lähes kolmesataa vuotta. Joukossa olivat laivapojan pienet kengät. Kysyin pojan nimeä. Kukaan pöydässä ei tiennyt sitä.",
+        "livia": "Tuohon hotelliin lennetään suoraan huoneeseen. Tromssassa pikkukajaville on rakennettu pesähyllyjä, jotta lokit löytäisivät paikan muualla kuin talojen ikkunalaudoilla. Kirjekyyhkyllekin kelpaisi merinäköala."
+      },
+      "placeLine": null
+    }
+  ]
+}

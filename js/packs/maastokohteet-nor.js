@@ -27,11 +27,65 @@
  * mahdollista olemassa olevaa fokuskohteet-pakkia EI ole tarvinnut
  * koskea eikä yhtään sen kohdetta ole toistettu täällä.
  *
+ * ── K2-ERÄ 3 6.9.2026: KAHDEKSAN KOHDETTA MAASTON RINNALLE ────────
+ *
+ * Omistaja 6.9.2026: *"Jatka kartta nostojen tekoa koko maailmaan."*
+ * Norjassa oli neljä maastokohdetta ja nolla kuratoitua kohdetta
+ * (docs/moduulit/karttanostot-kattavuus.md). Tavoite on kahdeksan
+ * KOHDETTA maastokohteiden lisäksi, ja tässä ne ovat. Malli on sama
+ * kuin K2-erässä 1 (js/packs/maastokohteet-isl.js, -che.js).
+ *
+ * MIKSI NE OVAT TÄSSÄ TIEDOSTOSSA EIVÄTKÄ fokuskohteet-nor.js:ssä.
+ * Kohdepakki tarvitsisi rivin js/fokuskohteet.js:n KOHDE_MAAT-tauluun
+ * ja lehden poltettujen nimien lohkon (js/packs/fokus-grc.js
+ * FOKUS_LISANIMET, tests/fokusnimet.test.mjs). Kumpaakaan ei tehdä
+ * tässä erässä: KOHDE_MAAT on rinnakkaisen erän hallussa, ja
+ * lisänimien lohko ladotaan ämpärin `<ISO>.json`-tiedostosta, jota
+ * repossa ei ole. Tämän tiedoston lista liittyy peliin hakemiston
+ * kautta (js/packs/maastokohteet.js), joten kohteet ovat kartalla heti.
+ *
+ * NORJASSA ON KOLME PELIKAUPUNKIA (Oslo, Bergen, Tromssa), ja etäisyys
+ * mitattiin niihin kaikkiin. Lähin uusi merkki on Eidsvollin rakennus
+ * 23,7 lautayksikön päässä Oslosta — reilusti yli kaupungin kohdalla
+ * -säteen (KAUPUNGIN_KOHDALLA_SADE 7, js/fokuskohteet.js). Kaikki
+ * kahdeksan ovat siis pääkartan merkkejä.
+ *
+ * MITÄ JÄTETTIIN POIS JA MIKSI: Bergenin Bryggen ja Oslon Oseberg
+ * jäisivät pelikaupunkien kohdalle, ja Huippuvuoret jäävät maan
+ * fokuslehden rajauksen ulkopuolelle (tools/johda-maastokohteet.mjs
+ * osuuLehteen). Norjanmeri ja Barentsinmeri ovat jo yllä olevia
+ * maastokohteita; ne esiintyvät uusissa teksteissä mutta eivät
+ * uutena nimenä kartalla (sääntö N3).
+ *
+ * KUVAT (20.9.2026). Vanhat kuvattomat kortit ovat saaneet kaksi Commons-kuvaa
+ * (PD/CC, lisenssi ja tekijä Commonsin rajapinnasta), ämpärin osoite
+ * karttanostot/20260920/.
+ *
  * Norjan maastokohteet. Faktat en-Wikipediasta 29.8.2026.
  */
 export const MAASTOKOHTEET_NOR = [
   {
     id: 'galdhpiggen',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/nor-maasto-galdhpiggen-3570e4558290.jpg',
+      lyhyt: 'Styggebreenin jäätikkö ja Galdhøpiggen Jotunheimenin kivihuippujen keskellä.',
+      selite: 'Styggebreenin jäätikköallas avautuu Jotunheimenin kivisten huippujen keskellä, ja Galdhøpiggen nousee sen oikealla puolella.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Sindre Skrede (Commons user SinWin)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Galdh%C3%B8piggen_and_Styggebreen,_Norway.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/nor-maasto-galdhpiggen-abed85b170a3.jpg',
+      lyhyt: 'Styggebreenin jäätikkö ja Galdhøpiggen näkymän oikeassa laidassa.',
+      selite: 'Styggebreenin jäätikkö levittäytyy kivisten Jotunheimenin harjanteiden keskelle; Galdhøpiggen kohoaa näkymän oikeassa laidassa.',
+      lahde: 'Valokuva: Sindre Skrede (Commons user SinWin), Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Sindre Skrede (Commons user SinWin)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Galdh%C3%B8piggen_and_Styggebreen,_Norway.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    }],
     nimi: 'Galdhøpiggen',
     tyyppi: 'vuori',
     kysymykset: [
@@ -50,9 +104,42 @@ export const MAASTOKOHTEET_NOR = [
       + 'Jotunheimenin kansallispuiston sisällä. Ympärillä kohoaa tiheä joukko muita huippuja — '
       + 'Keilhaus topp, Store Styggehøe, Storjuvtinden ja Skardstinden muiden muassa.',
     lahde: 'en-Wikipedia "Galdhøpiggen", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Missä Norjan maakunnassa Galdhøpiggen ja sitä ympäröivä kansallispuisto sijaitsevat?',
+      vaihtoehdot: [
+        'Innlandetissa',
+        'Rogalandissa',
+        'Trøndelagissa',
+        'Vestlandissa',
+      ],
+      oikea: 0,
+      fakta: 'Galdhøpiggen sijaitsee Lomin kunnassa Jotunheimenin kansallispuiston sisällä.',
+    },
   },
   {
     id: 'norjanmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-norjanmeri-004473a2.jpg',
+      lyhyt: 'Satelliittikuva Norjan rannikosta ja sen edustan Norjanmerestä.',
+      selite: 'Satelliittikuvassa Norjan pohjoisrannikon vuonot ja saaret erottuvat tumman meren reunalla. Rannikon edustan vaaleansiniset ja vihertävät vedet ovat todennäköisesti kasviplanktonia.',
+      lahde: 'Satelliittikuva: MODIS Rapid Response Team, NASA GSFC, Wikimedia Commons (public domain).',
+      tekija: 'MODIS Rapid Response Team, NASA GSFC',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bloom_in_the_Norwegian_Sea.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-norjanmeri-97b6dd3a.jpg',
+        lyhyt: 'Pieni saari ja punainen venevaja Norjanmeren rannikolla Brønnøysundin edustalla.',
+        selite: 'Matalalla saarella on punainen venevaja ja pieni valkoinen mökki. Saari on Brønnøysundin satamaa vastapäätä Nordlandin rannikolla.',
+        lahde: 'Valokuva: K1008, Wikimedia Commons (CC0).',
+        tekija: 'K1008',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Buholmen.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+    ],
     nimi: 'Norjanmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -70,46 +157,513 @@ export const MAASTOKOHTEET_NOR = [
       + 'ja Färsaarten välinen vedenalainen harjanne, pohjoisessa Jan Mayenin harjanne erottaa '
       + 'sen Grönlanninmerestä. Meri luetaan joko Atlanttiin tai Jäämereen kuuluvaksi.',
     lahde: 'en-Wikipedia "Norwegian Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    visa: {
+      kysymys: 'Mikä harjanne erottaa Norjanmeren Grönlanninmerestä pohjoisessa?',
+      vaihtoehdot: [
+        'Islannin ja Färsaarten harjanne',
+        'Jan Mayenin harjanne',
+        'Huippuvuorten harjanne',
+        'Barentsin harjanne',
+      ],
+      oikea: 1,
+      fakta: 'Islannin ja Färsaarten välinen vedenalainen harjanne taas erottaa meren Atlantista lounaassa.',
+    },
   },
   {
     id: 'barentsinmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-barentsinmeri-44cab68c.jpg',
+      lyhyt: 'Grense Jakobselvin satama Barentsinmeren rannalla Finnmarkissa.',
+      selite: 'Punaiset venevajat ja kaksi venettä kalliorannalla, taustalla avautuu Barentsinmeri. Paikka on Norjan itärajalla, Venäjän rajan tuntumassa.',
+      lahde: 'Valokuva: MattiPaavola, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'MattiPaavola',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Grense_Jakobselv_harbor_2009-09-29.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-barentsinmeri-34d1fcb2.jpg',
+        lyhyt: 'Barentsinmeren aava vesi Kibergnesetin kallioniemeltä Finnmarkissa.',
+        selite: 'Jyrkkä, sammalpeitteinen kalliorinne laskeutuu Barentsinmereen, jonka harmaa vesi jatkuu horisonttiin asti. Kibergneset on Norjan mantereen itäisin kärki.',
+        lahde: 'Valokuva: magnethy, Wikimedia Commons (CC BY 2.0).',
+        tekija: 'magnethy',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kibergneset.jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+    ],
     nimi: 'Barentsinmeri',
     tyyppi: 'meri',
     kysymykset: [
       'Kuka Willem Barentsz oli?',
       'Miksi merta kutsuttiin ennen Murmanskinmereksi?',
     ],
-    korostukset: ['Willem Barentsz|Willem Barentszin'],
+    korostukset: ['Willem Barentsz|Willem Barentszilta'],
     nappi: 'Meri, joka on nimetty hollantilaiselta',
     // 26 E / 71.3 N — ulappa Finnmarkin rannikon edustalla; artikkelin oma keskipiste on 40 / 75
     laudat: {
       maailmankartta: { x: 6700, y: 303.8 },
       europe: { x: 710.4, y: 18.4 },
     },
-    teksti: 'Barentsinmeri on Jäämeren reunameri Norjan ja Venäjän pohjoisrannikoilla, ja se on '
-      + 'jaettu Norjan ja Venäjän aluevesiksi. Venäläiset tunsivat sen aiemmin '
-      + 'Murmanskinmerenä. Nykyinen nimi tulee hollantilaiselta merenkulkijalta Willem '
-      + 'Barentszilta.',
-    lahde: 'en-Wikipedia "Barents Sea", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Barentsinmeressä ui maailman viimeinen suuri turskakanta, eikä sen kohtaloa '
+      + 'ratkaise kumpikaan rantavaltio yksin: Norja ja Venäjä ovat hoitaneet kalastusta '
+      + 'yhdessä vuonna 1976 perustetussa yhteiskomissiossa. Meri on Jäämeren reunameri Norjan '
+      + 'ja Venäjän pohjoisrannikoilla, jaettu maiden aluevesiksi, ja se lämpenee nopeammin '
+      + 'kuin mikään muu osa arktista aluetta — tutkijat puhuvat sen atlantisoitumisesta. '
+      + 'Venäläisillä kartoilla se oli 1500-luvulla Murmanskinmeri; nykyinen nimi tulee '
+      + 'hollantilaiselta merenkulkijalta Willem Barentszilta, joka johti vuosisadan lopulla '
+      + 'ensimmäisiä retkiä kauas pohjoiseen. Norjan puolella Vardøn satama pysyy sulana '
+      + 'ympäri vuoden, koska lämmin Pohjois-Atlantin virta yltää tänne asti.',
+    lahde: 'en-Wikipedia "Barents Sea", johdanto-osa sekä osiot "Extent", "Name" ja "Fishing" '
+      + '(tarkistettu 1.9.2026).',
   },
   {
     id: 'glomma',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/nor-maasto-glomma-93f541979ec1.jpg',
+      lyhyt: 'Glomma kaartaa Nesin peltojen ja metsäsaarekkeiden lomassa.',
+      selite: 'Glomman leveä uoma kaartaa Nesin peltojen ja metsäsaarekkeiden lomassa Itä-Norjassa.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; paikkareferenssi Bjoertvedt',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Glomma_Nes_IMG_1708.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/nor-maasto-glomma-abcd4279dea9.jpg',
+      lyhyt: 'Glomma mutkittelee Nesin metsäisten rantojen, peltojen ja Årnesin halki.',
+      selite: 'Glomma mutkittelee Nesin metsäisten rantojen, peltojen ja Årnesin taajaman halki.',
+      lahde: 'Valokuva: Bjoertvedt, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Bjoertvedt',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Glomma_Nes_IMG_1708.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    }],
     nimi: 'Glomma',
     tyyppi: 'joki',
     kysymykset: [
       'Miksi Glommaa käytettiin tukinuittoon?',
-      'Mihin Glomma laskee?',
+      'Mikä on Fetsundin uittolaitos?',
     ],
+    korostukset: ['tukinuitto|tukinuittojoki'],
     nappi: 'Norjan pisin joki',
     // 11.56 E / 60.88 N — Elverum joen keskijuoksulla; artikkelin koordinaatti 10,931 / 59,218 on suistossa
     laudat: {
       maailmankartta: { x: 6218.7, y: 881.6 },
       europe: { x: 433.2, y: 292.5 },
     },
-    teksti: 'Glomma eli Glåma on Norjan pisin ja vesirikkain joki. Sen kokonaispituus on 621 '
-      + 'kilometriä, ja valuma-alue kattaa 13 prosenttia koko Norjan pinta-alasta — kaikki maan '
-      + 'eteläosassa.',
-    lahde: 'en-Wikipedia "Glomma", johdanto-osa (tarkistettu 29.8.2026).',
+    teksti: 'Isoisäsi aikaan Glomma oli Norjan työteliäin joki: se virtaa maan rikkaimpien '
+      + 'metsäseutujen läpi, ja siksi siitä tuli koko maan tärkein tukinuittojoki. Puuta, '
+      + 'vesivoimaa ja hyvä satama suistossa — se yhdistelmä nosti Fredrikstadin ympärille '
+      + 'Norjan suurimpia teollisuuslaitoksia. Joki on 621 kilometriä pitkä, maan pisin ja '
+      + 'vesirikkain, ja sen valuma-alueeseen kuuluu kolmetoista prosenttia Norjan '
+      + 'pinta-alasta. Øyeren-järveen laskiessaan se on kasannut Euroopan suurimman '
+      + 'sisämaasuiston, joka ulottuu järven poikki toiselle rannalle. Muinaisskandinaaviksi '
+      + 'joen nimi oli Raumelfr, jyrisevä virta.',
+    lahde: 'en-Wikipedia "Glomma", johdanto-osa sekä osiot "Geography" ja "Name" (tarkistettu '
+      + '1.9.2026).',
+    visa: {
+      kysymys: 'Mikä oli Glomman nimi muinaisskandinaaviksi, ja mitä se tarkoitti?',
+      vaihtoehdot: [
+        'Nidelva, musta joki',
+        'Trollelva, peikkovirta',
+        'Raumelfr, jyrisevä virta',
+        'Glomelfr, leveä virta',
+      ],
+      oikea: 2,
+      fakta: 'Glomma on Norjan pisin ja vesirikkain joki, 621 kilometriä pitkä.',
+    },
+  },
+  /* ================================================================
+   * K2-ERÄ 3 6.9.2026 — KAHDEKSAN KOHDETTA. Perustelut tiedoston alussa.
+   *
+   * Uusilla kohteilla on vain maailmankartan rivi: Euroopan
+   * erillislaudasta on luovuttu (Raamattu 30.8.2026), eikä uutta
+   * `europe`-koordinaattia siksi lasketa. Yllä olevien maastokohteiden
+   * vanhoihin riveihin ei ole koskettu.
+   * ============================================================== */
+  {
+    id: 'urnes',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/nor-kohde-urnes-13afbfbbe1bf.jpg',
+      lyhyt: 'Tummaksi patinoitunut Urnesin sauvakirkko kohoaa hautausmaan ja Lustrafjordin välisellä rinteellä.',
+      selite: 'Tummaksi patinoitunut Urnesin sauvakirkko kohoaa hautausmaan ja Lustrafjordin välisellä rinteellä.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Concierge.2C',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Urnes_-_Stavkirke_-_Ext%C3%A9rieur_01.JPG',
+      lisenssi: 'CC BY-SA 3.0 NO',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/no/deed.en',
+    },
+    nimi: 'Urnesin sauvakirkko',
+    tyyppi: 'kulttuuri',
+    kysymykset: [
+      'Mikä sauvakirkko on?',
+      'Mikä Urnes-tyyli on?',
+    ],
+    korostukset: ['sauvakirkko|sauvakirkko'],
+    nappi: 'Vanhin sauvakirkko ja viikinkikuvien viimeinen luku',
+    // 7.3226 E / 61.2981 N — en-Wikipedia "Urnes Stave Church"
+    laudat: {
+      maailmankartta: { x: 6077.4, y: 860.4 },
+    },
+    teksti: 'Urnesin sauvakirkko on 1100-luvun sauvakirkko Ornesissa Lustrafjordin varrella '
+      + 'Vestlandissa. Se on Norjan vanhimpia sauvakirkkoja: osa hirsirakenteesta on '
+      + '1000-luvun jälkipuoliskolta, ja nykyinen kirkko rakennettiin noin vuonna 1130 tai '
+      + 'vähän sen jälkeen. Nimi tulee sanasta stav, joka tarkoittaa niitä tukevia '
+      + 'puupylväitä ja nurkkatolppia, jotka kannattavat koko rakennusta; seinät ovat '
+      + 'pystysuoria seinälankkuja rungon urissa. Kirkon pohjoisportaali on antanut nimen '
+      + 'Urnes-tyylille, jonka koristeaiheet ovat norjalaisesta muinaisuskosta — juuri se '
+      + 'koristelu on näkyvä todiste siitä, miten viikinkikulttuuri muuttui ja sulautui '
+      + 'kristinuskoon. Kirkko on ollut muinaismuistoyhdistyksen omistuksessa vuodesta 1881 '
+      + 'ja maailmanperintökohde vuodesta 1979.',
+    lahde: 'en-Wikipedia "Urnes Stave Church", johdanto-osa ja osio "Context" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'roros',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-roros-93c7c236.jpg',
+      lyhyt: 'Røroksen vanhaa puukaupunkia, kirkko ja kuparisulatto kuonakasojen takana.',
+      selite: 'Etualalla ovat kuparinsulatuksen kuonakasat, niiden takana tummia puutaloja, valkoinen kirkontorni ja pitkä sulattorakennus. Kaupunki on Trøndelagissa ja Unescon maailmanperintökohde.',
+      lahde: 'Valokuva: Geir Hval, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Geir Hval',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bergstaden_Røros_Røros_kirke_Bergstadens_Ziir_Slegghaugan_Smelthytta_Trøndelag_Norway_(2022.08.04).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-roros-62d07cc7.jpg',
+        lyhyt: 'Røroksen sulatto talvella, sen ohi virtaa puro.',
+        selite: 'Lumen peittämä tumma puurakennus, sulatto, on puron varrella. Rakennuksessa sulatettiin aikoinaan Røroksen kaivosten kuparimalmia.',
+        lahde: 'Valokuva: Henrik Dvergsdal, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Henrik Dvergsdal',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Røros_smeltehytta_vinter.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
+    nimi: 'Røros',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Miksi Røros on nimeltään Bergstaden?',
+      'Mikä on Norjan toinen kaivoskaupunki?',
+    ],
+    korostukset: ['Bergstaden|Bergstaden'],
+    nappi: 'Vuorikaupunki tervattujen hirsien varassa',
+    // 11.3831 E / 62.5742 N — en-Wikipedia "Røros Municipality"
+    laudat: {
+      maailmankartta: { x: 6212.8, y: 794.8 },
+    },
+    teksti: 'Røros on kaupunki Trøndelagin maakunnassa Norjassa, ja sitä kutsutaan usein '
+      + 'nimellä Bergstaden eli vuorikaupunki sen kuparikaivosten takia. Se on toinen Norjan '
+      + 'kahdesta kaupungista, joilla on ollut virallinen kaivoskaupungin asema; toinen on '
+      + 'hopeakaupunki Kongsberg. Monet nykyisistä asukkaista työskentelevät ja asuvat yhä '
+      + '1600- ja 1700-luvun rakennuksissa, ja juuri siksi kaupunki merkittiin '
+      + 'maailmanperintöluetteloon vuonna 1980. Kaupungissa on noin kahdeksankymmentä vanhaa '
+      + 'puutaloa, useimmat ryhmiteltyinä pihapiireiksi. Monissa on yhä tumma tervattu '
+      + 'hirsijulkisivu, joka antaa kaupungille keskiaikaisen näön.',
+    lahde: 'en-Wikipedia "Røros Municipality", johdanto-osa (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'altankalliopiirrokset',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-altankalliopiirrokset-81c27406.jpg',
+      lyhyt: 'Punaisiksi maalattuja kalliopiirroksia Altassa: poroja ja muita eläinhahmoja.',
+      selite: 'Sileälle kalliopinnalle on veistetty eläinhahmoja, muun muassa poroja, sekä pitkä kiemurteleva juova. Kuvat ovat Bergbukten 1 -alueelta ja 6 000–7 000 vuotta vanhoja.',
+      lahde: 'Valokuva: Hans A. Rosbach, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Hans A. Rosbach',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Alta_helleristninger_2018-07-26-9465.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-altankalliopiirrokset-242d8a47.jpg',
+        lyhyt: 'Kalliopiirroksia Hjemmeluftin kalliolla Altavuonon rannalla.',
+        selite: 'Kalliolla erottuu himmeästi punaisiksi maalattuja kalliopiirroksia, taustalla avautuu Altavuono. Hjemmeluft on osa Altan Unescon maailmanperintökohdetta.',
+        lahde: 'Valokuva: Tore Sætre, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Tore Sætre',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hjemmeluft_(144130).jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Altan kalliopiirrokset',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Miten piirrosten ikä on määritetty?',
+      'Mitä piirroksissa esitetään?',
+    ],
+    korostukset: ['rannansiirtymä|rannansiirtymän'],
+    nappi: 'Kuusituhatta kuvaa kalliossa',
+    // 23.1878 E / 69.9469 N — en-Wikipedia "Rock carvings at Alta"
+    laudat: {
+      maailmankartta: { x: 6606.3, y: 385.6 },
+    },
+    teksti: 'Altan kalliopiirrokset ovat Altan kunnassa Finnmarkissa Pohjois-Norjassa. '
+      + 'Ensimmäiset piirrokset löytyivät vuonna 1973, ja sen jälkeen niitä on löytynyt yli '
+      + '6 000 useasta paikasta; suurin niistä, Jiepmaluokta noin viiden kilometrin päässä '
+      + 'Altasta, on tuhansine kuvineen muutettu ulkoilmamuseoksi. Kohde merkittiin '
+      + 'maailmanperintöluetteloon 3. joulukuuta 1985, ja se on Norjan ainoa esihistoriallinen '
+      + 'maailmanperintökohde. Professori Knut Helskog jakoi kuvat viiteen ryhmään ja ajoitti '
+      + 'ne rannansiirtymän avulla: vanhimmat noin 4200 eaa. ja nuorimmat noin 500 eaa.; '
+      + 'vuonna 2010 tutkija Jan Magne Gjerde siirsi vanhimpia vaiheita tuhat vuotta '
+      + 'taaksepäin. Kuvasto kertoo metsästäjä-keräilijöistä, jotka osasivat hallita '
+      + 'porolaumoja, rakentaa veneitä ja kalastaa ja jotka harjoittivat šamanistisia menoja, '
+      + 'joihin kuului karhun ja muiden eläinten palvonta.',
+    lahde: 'en-Wikipedia "Rock carvings at Alta", johdanto-osa ja osio "Cultural and '
+      + 'historical background" (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'nordkapp',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-nordkapp-b19a6323.jpg',
+      lyhyt: 'Peder Balken 1840-luvun maalaus: Nordkappin jyrkänne, soutuvene ja purjeveneitä.',
+      selite: 'Öljymaalauksessa pilviaukosta laskeutuvat valonsäteet valaisevat Nordkappin tummaa, pystysuoraa jyrkännettä ja aavaa merta. Etualalla soutuvene ja rannalla kaksi purjevenettä.',
+      lahde: 'Maalaus: Peder Balke, Wikimedia Commons (public domain).',
+      tekija: 'Peder Balke',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Peder_Balke_-_From_North_Cape_-_NG.M.04152_-_National_Museum_of_Art,_Architecture_and_Design.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-nordkapp-cc4bd668.jpg',
+        lyhyt: 'Nordkappin tasanko, maapallopatsas ja meri horisontissa.',
+        selite: 'Karulla kivikkotasangolla on maapalloa esittävä teräspatsas ja kaide, jonka takana meri jatkuu horisonttiin. Pieni joukko kävijöitä katselee merta.',
+        lahde: 'Valokuva: Hanspeter Hofer, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Hanspeter Hofer',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nordkap_5102.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Nordkapp',
+    tyyppi: 'merenkulku',
+    taso: 1,
+    kysymykset: [
+      'Onko Nordkapp todella Euroopan pohjoisin kohta?',
+      'Mitkä kaksi merta kohtaavat niemellä?',
+    ],
+    korostukset: ['keskiyön aurinko|keskiyön aurinkoa'],
+    nappi: 'Pohjoisin kohta, johon pääsee autolla',
+    // 25.7844 E / 71.1725 N — en-Wikipedia "North Cape (Norway)"
+    laudat: {
+      maailmankartta: { x: 6692.8, y: 311.6 },
+    },
+    teksti: 'Nordkapp on niemi Magerøyan saaren pohjoisrannalla Finnmarkissa. Sen 307 metriä '
+      + 'korkean jyrkänteen päällä on laaja tasanko, jolta katsotaan keskiyön aurinkoa ja '
+      + 'näkymää pohjoiseen; Euroopan tie E69 päättyy tänne, joten se on Euroopan pohjoisin '
+      + 'autolla saavutettava kohta. Pohjoisimmaksi kohdaksi sitä sanotaan silti '
+      + 'virheellisesti: naapuriniemi Knivskjellodden työntyy 1 450 metriä kauemmas '
+      + 'pohjoiseen, ja Manner-Euroopan pohjoisin kohta on Kinnarodden Nordkinnin '
+      + 'niemimaalla. Nordkapp on kuitenkin paikka, jossa Atlanttiin kuuluva Norjanmeri '
+      + 'kohtaa Jäämereen kuuluvan Barentsinmeren. Keskiyön aurinko näkyy 14. toukokuuta ja '
+      + '31. heinäkuuta välisenä aikana, ja tasangolle rakennettiin vuonna 1988 '
+      + 'vierailukeskus Nordkapphallen.',
+    lahde: 'en-Wikipedia "North Cape (Norway)", johdanto-osa ja osio "Geography" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'nidaros',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-nidaros-415aedfa.jpg',
+      lyhyt: 'Nidarosin tuomiokirkon goottilainen länsijulkisivu Trondheimissa.',
+      selite: 'Kaksitorninen länsijulkisivu on täynnä patsaita ja kaarikäytäviä, keskellä ruusuikkuna. Tuomiokirkko seisoo Trondheimissa.',
+      lahde: 'Valokuva: Leonhard Lenz, Wikimedia Commons (CC0).',
+      tekija: 'Leonhard Lenz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nidarosdomen_Trondheim_2022-08-18_06.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-nidaros-8c9205a1.jpg',
+        lyhyt: 'Nidarosin tuomiokirkon ruusuikkuna sisältä.',
+        selite: 'Lasimaalauksin koristeltu ruusuikkuna hohtaa punaisena ja sinisenä tummaa goottilaista kaarta vasten. Ikkunan lehtimäiset osat säteilevät keskustasta.',
+        lahde: 'Valokuva: Ad Meskens, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Ad Meskens',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trondheim_Nidaros_Cathedral_Rose_Window_01.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Nidarosin tuomiokirkko',
+    tyyppi: 'kulttuuri',
+    taso: 1,
+    kysymykset: [
+      'Kenen haudan päälle kirkko rakennettiin?',
+      'Missä Norjan hallitsijat vihitään?',
+    ],
+    korostukset: ['pyhiinvaeltaja|pyhiinvaeltajia'],
+    nappi: 'Maailman pohjoisin keskiaikainen katedraali',
+    // 10.3962 E / 63.4267 N — en-Wikipedia "Nidaros Cathedral"
+    laudat: {
+      maailmankartta: { x: 6179.9, y: 750.2 },
+    },
+    teksti: 'Nidarosin tuomiokirkko on Norjan kirkon katedraali Trondheimissa. Se on rakennettu '
+      + 'kuningas Olavi II:n haudan päälle: Olavi toi kristinuskon Norjaan, hänestä tuli maan '
+      + 'suojeluspyhimys, ja hänen kirkossaan vihitään yhä Norjan uudet hallitsijat. Kirkkoa '
+      + 'rakennettiin 230 vuotta, vuodesta 1070 vuoteen 1300, jolloin se oli olennaisilta '
+      + 'osin valmis; lisäyksiä ja korjauksia on tehty siitä lähtien, ja viimeisin suuri '
+      + 'jälleenrakennus alkoi 1869 ja päättyi 2001. Vuonna 1152 kirkosta tuli Nidarosin '
+      + 'arkkihiippakunnan katedraali, ja vuonna 1537 se siirtyi uskonpuhdistuksessa '
+      + 'vastaperustettuun Norjan kirkkoon. Se on maailman pohjoisin keskiaikainen katedraali, '
+      + 'siihen mahtuu noin 1 850 ihmistä, ja sinne saapuu yhä vuosittain tuhansia '
+      + 'pyhiinvaeltajia.',
+    lahde: 'en-Wikipedia "Nidaros Cathedral", johdanto-osa ja osio "History" '
+      + '(tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'vemork',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-vemork-31d0a6d2.jpg',
+      lyhyt: 'Vemorkin vesivoimalaitos ja jyrkkä putkisto vuorenrinteellä Rjukanissa.',
+      selite: 'Kivinen voimalaitosrakennus seisoo metsäisen rinteen juurella. Rinnettä pitkin nousevat valkoiset paineputket, joita pitkin vesi syöksyy voimalaitokselle.',
+      lahde: 'Valokuva: G.Lanting, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'G.Lanting',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:P1000742Vemork.JPG',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-vemork-0e40ed5f.jpg',
+        lyhyt: 'Vanha sepiakuva Vemorkin voimalaitoksesta, putkistosta ja vesiputouksesta.',
+        selite: 'Vanhassa valokuvassa pitkä voimalaitosrakennus on jyrkän vuorenrinteen kupeessa. Rinnettä pitkin kulkee paineputkien rivi ja sen vieressä putoaa korkea vesiputous.',
+        lahde: 'Kuva: tekijä tuntematon, Wikimedia Commons (public domain).',
+        tekija: 'tuntematon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rjukan_Kraftanlæg_I_-_no-nb_digifoto_20160412_00123_bldsa_EYDE_5_07B_013_(cropped).jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
+    nimi: 'Vemork',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Mitä raskas vesi on?',
+      'Mikä oli operaatio Gunnerside?',
+    ],
+    korostukset: ['raskas vesi|raskasta vettä'],
+    nappi: 'Voimalaitos, jota vastaan hyökättiin viidesti',
+    // 8.4914 E / 59.8711 N — en-Wikipedia "Vemork"
+    laudat: {
+      maailmankartta: { x: 6116.4, y: 932.1 },
+    },
+    teksti: 'Vemork on vesivoimalaitos ja museo Rjukanin kaupungin ulkopuolella Telemarkissa '
+      + 'Norjassa. Norsk Hydro rakensi sen ja avasi vuonna 1911 typen sitomista ja '
+      + 'lannoitteiden valmistusta varten, ja 108 megawatin teholla se oli avautuessaan '
+      + 'maailman suurin voimalaitos. Myöhemmin Vemorkiin tuli maailman ensimmäinen laitos, '
+      + 'joka valmisti raskasta vettä suurina erinä; tuotanto alkoi joulukuussa 1934. '
+      + 'Toisessa maailmansodassa laitosta pidettiin niin vakavana uhkana — pelkona oli '
+      + 'saksalaisten atomipommi — että sitä vastaan tehtiin ainakin viisi erillistä '
+      + 'hyökkäystä: helmikuussa 1943 laskuvarjoilla pudotetut norjalaisagentit tuhosivat '
+      + 'operaatiossa Gunnerside laitoksen raskaan veden osaston ja 500 kiloa tuotetta, ja '
+      + 'helmikuussa 1944 vastarintaliike upotti lautan, joka vei lastia Saksaan. Myöhemmin '
+      + 'selvisi, etteivät saksalaiset olleet lähelläkään pommia; raskaan veden laitos '
+      + 'suljettiin 1971, ja voimalasta tuli vuonna 1988 Norjan teollisuustyöväen museo.',
+    lahde: 'en-Wikipedia "Vemork", johdanto-osa sekä osiot "History" ja "Heavy water '
+      + 'sabotage" (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'flamsbana',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-flamsbana-558bc4f5.jpg',
+      lyhyt: 'Flåmsbanan juna kulkee vuorten ympäröimässä Flåmsdalenin laaksossa.',
+      selite: 'Tumma juna kulkee rinnettä pitkin Berekvamin aseman kohdalla, alempana laaksossa on punaisia maalaistaloja. Radan takana kohoavat jyrkät vuorenrinteet.',
+      lahde: 'Valokuva: Henning Klokkeråsen from Oslo, Norway, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Henning Klokkeråsen from Oslo, Norway',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Flåmsbana_at_Berekvam_station.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-flamsbana-bed15db1.jpg',
+        lyhyt: 'Sähköveturi vetää Flåmsbanan junaa Flåmin asemalle.',
+        selite: 'Vihreä sähköveturi saapuu asemalaiturin viereen, vieressä on keltainen Flåmsbanan museo ja taustalla vuorenrinne. Rata yhdistää Flåmin Myrdalin asemaan.',
+        lahde: 'Kuva: Alasdair McLellan, Wikimedia Commons (public domain).',
+        tekija: 'Alasdair McLellan',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Flåmsbana_train_at_Flåm_Station.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
+    nimi: 'Flåmsbana',
+    tyyppi: 'tekniikka',
+    kysymykset: [
+      'Kuinka jyrkkä rata on?',
+      'Miksi rata melkein lakkautettiin?',
+    ],
+    korostukset: ['normaaliraide|normaaliraiteisen'],
+    nappi: 'Euroopan jyrkin normaaliraiteinen rata',
+    // 7.1 E / 60.77 N — en-Wikipedia "Flåm Line"
+    laudat: {
+      maailmankartta: { x: 6070, y: 887.1 },
+    },
+    teksti: 'Flåmsbana on 20,2 kilometrin pituinen rautatie Myrdalin ja Flåmin välillä '
+      + 'Aurlandissa Vestlandissa. Se on Bergenin radan haara, kulkee Flåmsdalenin laaksoa '
+      + 'pitkin ja yhdistää pääradan Sognefjordiin; korkeusero on 866 metriä, ja radalla on '
+      + 'kaksikymmentä tunnelia ja yksi silta. Suurin nousu on 5,5 prosenttia eli 1:18, mikä '
+      + 'tekee siitä Euroopan jyrkimmän normaaliraiteisen rautatien, ja ylämäkeen saa ajaa '
+      + '40 ja alamäkeen 30 kilometriä tunnissa. Rakentaminen alkoi vuonna 1924, rata '
+      + 'avattiin 1940 ja sähköveto otettiin käyttöön 1944. Tavaraliikenne loppui 1992, ja '
+      + 'halvat liput ja kalliit käyttökustannukset veivät radan lakkautuksen partaalle, '
+      + 'kunnes Flåm Utvikling otti vuonna 1998 markkinoinnin ja lipunmyynnin hoitaakseen ja '
+      + 'nosti hintoja rajusti — nykyään rata on Norjan kolmanneksi suosituin matkailukohde.',
+    lahde: 'en-Wikipedia "Flåm Line", johdanto-osa ja osio "Route" (tarkistettu 6.9.2026).',
+  },
+  {
+    id: 'eidsvoll',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-eidsvoll-61252011.jpg',
+      lyhyt: 'Eidsvollsbygningen, valkoinen kartanorakennus, ja Norjan liput.',
+      selite: 'Vaaleaksi maalattu kaksikerroksinen puurakennus, jossa on punainen tiilikatto ja parveke. Rakennuksen edessä liehuu Norjan lippuja. Täällä Norjan perustuslaki allekirjoitettiin 17. toukokuuta 1814.',
+      lahde: 'Valokuva: Asgeir Kolberg, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Asgeir Kolberg',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Eidsvoll_building.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-eidsvoll-b06dc383.jpg',
+        lyhyt: 'Eidsvollsbygningen puiston rinteellä Andelva-joen rannalla.',
+        selite: 'Joen yli katsottuna valkoinen päärakennus näkyy vihreällä rinteellä puiden keskellä. Etualalla virtaa Andelva.',
+        lahde: 'Valokuva: Øyvind Holmstad, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Øyvind Holmstad',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Eidsvoldsbygningen_ved_Andelva.JPG',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
+    nimi: 'Eidsvollin rakennus',
+    tyyppi: 'historia',
+    kysymykset: [
+      'Mitä Eidsvollissa tapahtui 17. toukokuuta 1814?',
+      'Kuka pelasti talon konkurssin jälkeen?',
+    ],
+    korostukset: ['perustuslaki|perustuslaki'],
+    nappi: 'Talo, jossa Norjan perustuslaki allekirjoitettiin',
+    // 11.1717 E / 60.3011 N — en-Wikipedia "Eidsvollsbygningen"
+    laudat: {
+      maailmankartta: { x: 6205.7, y: 910.7 },
+    },
+    teksti: 'Eidsvollsbygningen on historiallinen kartanorakennus Eidsvollissa Akershusissa '
+      + 'Norjassa. Siellä allekirjoitettiin Norjan perustuslaki 17. toukokuuta 1814, ja talo '
+      + 'on nykyään valtion omistama kansallismonumentti ja museo. Rakennus valmistui vuonna '
+      + '1770, ja sen pinta-ala on yli 2 000 neliömetriä; noin vuonna 1800 sen osti Carsten '
+      + 'Anker, joka kunnosti kartanon ja asui siellä perheineen juuri allekirjoituksen '
+      + 'aikaan. Anker ajautui konkurssiin 1822 ja omistus siirtyi brittiläisille velkojille, '
+      + 'mutta runoilija Henrik Wergelandin johtama yksityisten kansalaisten ryhmä keräsi '
+      + 'rahat ja osti talon puutarhoineen; kauppa vahvistui 1851, ja ryhmä lahjoitti '
+      + 'kiinteistön Norjan valtiolle. Vuonna 2011 alkanut kunnostus palautti talon '
+      + 'mahdollisimman tarkasti vuoden 1814 asuun, ja työ valmistui perustuslain '
+      + '200-vuotisjuhlaan 2014.',
+    lahde: 'en-Wikipedia "Eidsvollsbygningen", johdanto-osa sekä osiot "History" ja '
+      + '"Renovations" (tarkistettu 6.9.2026).',
   },
 ];
 

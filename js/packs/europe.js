@@ -64,6 +64,57 @@ const EU_CITIES = [
    */
   { id: 'sevilla', name: 'Sevilla', wiki: 'Sevilla', ambience: 'kaupunki', x: 81, y: 917, la: 'end', lx: -16, ly: 5 },
   { id: 'amsterdam', name: 'Amsterdam', wiki: 'Amsterdam', ambience: 'satama', x: 305, y: 516, la: 'start', lx: 16, ly: 5 },
+  /*
+   * BRYSSEL ON TODELLISELLA PAIKALLAAN (50,8503 N / 4,3517 E). Laudan
+   * kaava x = (lon + 11) x 19,2 ja y = (72 - lat) x 26,3 antaa
+   * (294,8, 556,2), ja se on tässä pyöristettynä kokonaisluvuiksi.
+   * Vanhan 1000 x 1000 -laudan mitassa Amsterdamiin jää vain 41
+   * yksikköä eli alle laudan 60:n, MUTTA erillislautaa ei enää ole
+   * (Raamattu 30.8.2026) eikä tätä pakkaa tarkisteta
+   * minCityDistance-portilla. Pelilauta on maailmankartta, jossa sama
+   * piste on (5978,4, 1353,0) ja Amsterdamiin on 70,2 yksikköä — yli
+   * vaaditun 60:n. Piste on siis mitattu oikeaksi juuri siellä missä
+   * peli sitä lukee, eikä sitä tarvitse siirtää.
+   */
+  { id: 'bryssel', name: 'Bryssel', wiki: 'Bryssel', ambience: 'kaupunki', x: 295, y: 556, la: 'end', lx: -16, ly: 5 },
+  /*
+   * LJUBLJANA ON TODELLISELLA PAIKALLAAN (46,0569 N / 14,5058 E). Laudan
+   * kaava x = (lon + 11) x 19,2 ja y = (72 - lat) x 26,3 antaa
+   * (489,7, 682,3), ja se on tässä pyöristettynä kokonaisluvuiksi.
+   * Erillislautaa ei enää ole (Raamattu 30.8.2026), joten tätä pakkaa
+   * ei tarkisteta minCityDistance-portilla. Pelilauta on maailmankartta,
+   * jossa sama piste on (6316,9, 1558,0) ja lähimpään kaupunkiin,
+   * Venetsiaan, on 72,9 yksikköä — yli vaaditun 60:n. Piste on siis
+   * mitattu oikeaksi juuri siellä missä peli sitä lukee, eikä sitä
+   * tarvitse siirtää.
+   */
+  /*
+   * KOŠICE (Kassa) ON TODELLISELLA PAIKALLAAN (48,7164 N / 21,2611 E).
+   * Laudan kaava x = (lon + 11) x 19,2 ja y = (72 - lat) x 26,3 antaa
+   * (619,4, 612,4), ja se on tässä pyöristettynä kokonaisluvuiksi.
+   * Erillislautaa ei enää ole (Raamattu 30.8.2026), joten tätä pakkaa
+   * ei tarkisteta minCityDistance-portilla. Pelilauta on maailmankartta,
+   * jossa sama piste on (6542,0, 1445,6) ja lähimpään kaupunkiin,
+   * Krakovaan, on 72,8 yksikköä (Budapestiin 88,7) — yli vaaditun
+   * 60:n. Piste on siis mitattu oikeaksi juuri siellä missä peli sitä
+   * lukee, eikä sitä tarvitse siirtää.
+   */
+  { id: 'kosice', name: 'Košice', wiki: 'Košice', ambience: 'kaupunki', x: 619, y: 612, la: 'start', lx: 16, ly: 5 },
+  { id: 'ljubljana', name: 'Ljubljana', wiki: 'Ljubljana', ambience: 'kaupunki', x: 490, y: 682, la: 'middle', lx: 0, ly: -20 },
+  /*
+   * LUXEMBURG ON TODELLISELLA PAIKALLAAN (49,6117 N / 6,1296 E). Laudan
+   * kaava x = (lon + 11) x 19,2 ja y = (72 - lat) x 26,3 antaa
+   * (328,9, 588,8), ja se on tässä pyöristettynä kokonaisluvuiksi.
+   * Erillislautaa ei enää ole (Raamattu 30.8.2026), joten tätä pakkaa
+   * ei tarkisteta minCityDistance-portilla. Pelilauta on maailmankartta,
+   * jossa sama piste on (6037,7, 1407,0) ja lähimpään kaupunkiin,
+   * Brysseliin, on 80,2 yksikköä — yli vaaditun 60:n. Piste on siis
+   * mitattu oikeaksi juuri siellä missä peli sitä lukee, eikä sitä
+   * tarvitse siirtää. Omistajan päätös 21.9.2026: kolme maata ilman
+   * pelikaupunkia (Kypros, Luxemburg, Malta) saavat pelikaupungin;
+   * tämä on Luxemburgin osuus.
+   */
+  { id: 'luxemburg', name: 'Luxemburg', wiki: 'Luxemburg (kaupunki)', ambience: 'kaupunki', x: 329, y: 589, la: 'start', lx: 16, ly: 5 },
   { id: 'berliini', name: 'Berliini', wiki: 'Berliini', ambience: 'kaupunki', x: 468, y: 512, airport: true },
   { id: 'praha', name: 'Praha', wiki: 'Praha', ambience: 'kaupunki', x: 488, y: 576, la: 'end', lx: -16, ly: 5 },
   { id: 'wien', name: 'Wien', wiki: 'Wien', ambience: 'kaupunki', x: 526, y: 626, la: 'start', lx: 16, ly: -6 },
@@ -91,6 +142,20 @@ const EU_CITIES = [
   { id: 'firenze', name: 'Firenze', wiki: 'Firenze', ambience: 'kaupunki', x: 412, y: 746, la: 'start', lx: 16, ly: 5 },
   { id: 'rooma', name: 'Rooma', wiki: 'Rooma', ambience: 'kaupunki', x: 451, y: 792, airport: true, la: 'end', lx: -16, ly: 5 },
   { id: 'sisilia', name: 'Sisilia', wiki: 'Sisilia', ambience: 'meri', x: 468, y: 891, la: 'end', lx: -16, ly: 5 },
+  /*
+   * VALLETTA ON TODELLISELLA PAIKALLAAN (35,8989 N / 14,5146 E). Laudan
+   * kaava x = (lon + 11) x 19,2 ja y = (72 - lat) x 26,3 antaa
+   * (489,9, 949,5), ja se on tässä pyöristettynä kokonaisluvuiksi (piste
+   * on lähellä vanhan 1000 x 1000 -laudan alareunaa, mutta ei sen
+   * ulkopuolella). Erillislautaa ei enää ole (Raamattu 30.8.2026), joten
+   * tätä pakkaa ei tarkisteta minCityDistance-portilla. Pelilauta on
+   * maailmankartta, jossa sama piste on (6317,2, 1961,4) ja lähimpään
+   * kaupunkiin, Sisiliaan, on 93,4 yksikköä (Tripoliin 121,3) — yli
+   * vaaditun 60:n. Piste on siis mitattu oikeaksi juuri siellä missä peli
+   * sitä lukee, eikä sitä tarvitse siirtää. Malta on saari (islands),
+   * eikä sen tarvitse osua kartan maa-alueeseen.
+   */
+  { id: 'valletta', name: 'Valletta', wiki: 'Valletta', ambience: 'meri', x: 490, y: 949, la: 'end', lx: -16, ly: 5 },
   {
     id: 'ateena', name: 'Ateena', wiki: 'Ateena', ambience: 'kaupunki', x: 667, y: 895, start: true, airport: true, la: 'end', lx: -16, ly: 5,
   },
@@ -191,9 +256,26 @@ const EU_EDGES = [
 
   // Länsi-Eurooppa. Biskajan rannikon suora reitti on jätetty pois:
   // Iberiaan kuljetaan Rhônen laaksoa ja rannikkoa pitkin (haaste).
-  { a: 'pariisi', b: 'amsterdam', steps: 3 },
+  /*
+   * Bryssel katkaisi vanhan pariisi–amsterdam-yhteyden (3 askelta)
+   * kahdeksi, samalla tavalla kuin Firenze katkaisi Venetsia–Rooman.
+   * Suora jätettiin pois, koska se olisi kulkenut Brysselin ohi
+   * rinnakkaisena pikatienä ja tehnyt uudesta kaupungista
+   * väliinjäävän mutkan.
+   */
+  { a: 'pariisi', b: 'bryssel', steps: 2 },
+  { a: 'bryssel', b: 'amsterdam', steps: 2 },
   { a: 'pariisi', b: 'marseille', steps: 4 },
-  { a: 'pariisi', b: 'alpit', steps: 3 },
+  /*
+   * Luxemburg katkaisi vanhan pariisi–alpit-yhteyden (3 askelta)
+   * kahdeksi (2 + 2), samalla tavalla kuin Bryssel, Ljubljana ja
+   * Košice katkaisivat omansa: mitattu lähin reitti (segDist)
+   * Luxemburgin pisteestä oli juuri tämä yhteys (68,3 laudan
+   * yksikköä), lähempänä kuin pariisi–bryssel (79,9) tai
+   * bryssel–amsterdam (80,2). Suora jätettiin pois.
+   */
+  { a: 'pariisi', b: 'luxemburg', steps: 2 },
+  { a: 'luxemburg', b: 'alpit', steps: 2 },
   { a: 'marseille', b: 'barcelona', steps: 3 },
   { a: 'marseille', b: 'alpit', steps: 3 },
   { a: 'madrid', b: 'lissabon', steps: 3 },
@@ -217,9 +299,25 @@ const EU_EDGES = [
   { a: 'praha', b: 'wien', steps: 2 },
   { a: 'praha', b: 'krakova', steps: 3 },
   { a: 'krakova', b: 'varsova', steps: 2 },
-  { a: 'krakova', b: 'budapest', steps: 3 },
+  /*
+   * Košice katkaisi vanhan krakova–budapest-yhteyden (3 askelta)
+   * kahdeksi (2 + 2), samalla tavalla kuin Bryssel, Ljubljana ja
+   * Firenze katkaisivat omansa: Košice on Ylä-Unkarin kaupunki
+   * Krakovan ja Budapestin välisellä kauppatiellä, joten suora
+   * jätettiin pois.
+   */
+  { a: 'krakova', b: 'kosice', steps: 2 },
+  { a: 'kosice', b: 'budapest', steps: 2 },
   { a: 'wien', b: 'budapest', steps: 2 },
-  { a: 'wien', b: 'venetsia', steps: 4 },
+  /*
+   * Ljubljana katkaisi vanhan wien–venetsia-yhteyden (4 askelta)
+   * kahdeksi (2 + 2), samalla tavalla kuin Bryssel ja Firenze
+   * katkaisivat omansa: Ljubljana on Krainin pääkaupunki Wienin ja
+   * Venetsian välisellä reitillä, joten suora jätettiin pois eikä
+   * matka-aika muutu.
+   */
+  { a: 'wien', b: 'ljubljana', steps: 2 },
+  { a: 'ljubljana', b: 'venetsia', steps: 2 },
   { a: 'alpit', b: 'venetsia', steps: 3 },
   { a: 'alpit', b: 'berliini', steps: 4 },
   /*
@@ -288,6 +386,10 @@ const EU_EDGES = [
   { a: 'sisilia', b: 'ateena', steps: 4, type: 'sea' },
   { a: 'ateena', b: 'kreeta', steps: 2, type: 'sea' },
   { a: 'kreeta', b: 'sisilia', steps: 5, type: 'sea', via: [[620, 950], [540, 930]] },
+  // Valletta: meritie Sisiliaan (93,4 yksikköä maailmankartalla, sama
+  // luokka kuin Sarajevo-Dubrovnik). Tripolin (Afrikka) reitti on vain
+  // maailmankartta.js:ssä, koska europe.js ei tunne Afrikan kaupunkeja.
+  { a: 'sisilia', b: 'valletta', steps: 2, type: 'sea' },
   { a: 'istanbul', b: 'odessa', steps: 4, type: 'sea' },
   { a: 'dubrovnik', b: 'rooma', steps: 3, type: 'sea' },
   { a: 'tukholma', b: 'helsinki', steps: 2, type: 'sea' },
@@ -368,11 +470,11 @@ export const EUROPE = {
           + 'asti, ja kirkkaimpiin paloihin on jäänyt hyönteisiä kiinni.',
       },
     }),
-    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (45). Uusi
+    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (50). Uusi
     // kaupunki lisätään paikallisaarteisiin samassa suhteessa kuin
     // muutkin (noin kolmasosa isoja) — pääaarre ja mantereen aarre ovat
     // aina yksi kumpikin, eikä ryöstäjien määrä muutu kaupunkien mukana.
-    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 29 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 34 },
   },
 
   questions: EUROPE_QUESTIONS,
@@ -419,11 +521,11 @@ export const EUROPE = {
 
   texts: {
     intro: 'Peli alkaa! Etsikää kadonneen Meripihkahuoneen aarre ja palatkaa kotisatamaan: Lontooseen, Istanbuliin, Moskovaan tai Ateenaan.',
-    starFound: (name, city) => `◈ ${name} löysi MERIPIHKAHUONEEN AARTEEN kaupungista ${city}!`,
+    starFound: '◈ {name} löysi MERIPIHKAHUONEEN AARTEEN kaupungista {city}!',
     starToast: 'MERIPIHKAHUONEEN AARRE!',
     starChase: 'Nyt on kiire kotiin — ensimmäisenä perille ehtinyt voittaa pelin.',
     winStar: 'toi Meripihkahuoneen aarteen turvallisesti kotiin',
-    winnerStar: (name, money) => `${name} toi Meripihkahuoneen aarteen kotiin ${money} punnan kanssa.`,
+    winnerStar: '{name} toi Meripihkahuoneen aarteen kotiin {money} punnan kanssa.',
     // Saapumismerkinnät: yksi arvotaan laudalle saavuttaessa.
     diaries: [
       'Kotimantere. Puolet karttani rajoista on väärin, ja loput ylitetään näyttämättä passia. Kukaan ei tarkasta papereitani — en tiedä, olenko helpottunut vai loukkaantunut.',

@@ -8,16 +8,42 @@
 // CC-lisensoituja äänitteitä.
 
 import { sfx } from './sound.js';
+import { kehittajanKerroin, kuunteleKehittajanKerrointa } from './kehittajan-voimat.js';
 import {
   valittuTaiOletus, jaaAlku, tyyppiKori, kaupunkiKori, maaKori,
 } from './aani-ehdokkaat.js';
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import {
-  aaniOsoite, omaAaniPolku, onPeilista, peiliPetti,
+  aaniOsoite, musaPolku, omaAaniPolku, onPeilista, peiliPetti,
 } from './media.js';
 // Lukijaäänen piiri kuuluu samaan sanelun kovaan taukoon kuin
 // tehosteet ja maisema (ks. taukoaSanelunAjaksi).
 import { jatkaPuhePiiri, taukoaPuhePiiri } from './puhe.js';
+// Kaupungin oma kappale pohjavireen tilalla (omistaja 5.9.2026:
+// "ateenaan saavuttaessa voisi vaihtua kappale"). Taulukot ja
+// nimisäännöt ovat js/kaupunkimusiikki.js:ssä, soitin täällä.
+//
+// POHJARAIDAN VALITSIN (js/musiikkivalitsin.js) päättää, mikä raita
+// tähän yhteen paikkaan sekoituksessa kuuluu: etusivu, kaupunki, alue,
+// lehti, matkalaukku vai pohjavire. Se antaa KETJUN parhaasta alkaen,
+// ja tämä soitin ottaa siitä ensimmäisen, jota ei ole todettu
+// puuttuvaksi (omistaja 5.9.2026 yö: "generoi musiikkeja kaikkiin
+// kohtiin peliä").
+import {
+  MUSIIKIN_PERUSTASO, POHJARAITA, asetaMusiikkipaikka, asetaMusiikkitila,
+  kuunteleMusiikinKerrointa, kuunteleMusiikkitilaa, musiikinKerroin,
+  musiikinMaa, musiikinPaikka, musiikkiPaalla, valitseMusiikki,
+} from './musiikkivalitsin.js';
+/*
+ * MUSIIKIN VAHVISTIN (js/musiikkivahvistin.js) on se tie, jota pitkin
+ * taso menee perille myös iPhonessa: reititys, kontekstin herätys
+ * eleestä ja mittaus siitä, tottelisiko selain volumea lainkaan
+ * (omistajan vika 9.9.2026: *"Taustamusiikki on ainakin iPhonilla vielä
+ * aivan liian kovalla"*).
+ */
+import {
+  kuunteleReitityksenAvautumista, liitaMusiikkiin, musiikkiSaaSoida, volumeToimii,
+} from './musiikkivahvistin.js';
 
 // Arvottu ääni pysyy samana koko käynnin ajan: syncAmbience kutsuu
 // playPlaceAmbiencea jokaisella piirrolla, eikä ääni saa vaihtua tai
@@ -33,7 +59,7 @@ let arvottu = null; // { cityId, url }
  * sekunneilla 1–4, ja arvottu aloituskohta hyppäsi sen yli, jolloin
  * kabiini kuulosti pelkältä huminalta.
  */
-const VAKIOPAIKAT = new Set(['etusivu', 'lentomatka']);
+export const VAKIOPAIKAT = new Set(['etusivu', 'lentomatka']);
 
 /**
  * Kaupungin äänimaisema: oma kenttä-äänitys ensin, maisematyypin
@@ -176,8 +202,20 @@ const SILMUKKA_RISTI_MS = 2600;
 
 let nykyinen = null; // { audio, cityId, url, tavoite, vaimennus }
 
-/** Soiva taso: kohdevoimakkuus kerrottuna mahdollisella väistöllä. */
-const taso = (oma) => (oma ? oma.tavoite * (oma.vaimennus ?? 1) : 0);
+/**
+ * Soiva taso: kohdevoimakkuus kerrottuna sillä kertoimella, joka juuri
+ * nyt on voimassa — tavallisesti väistö, avauksen aikana etusivulla
+ * avauksen oma sekoitus (ks. AVAUKSEN ÄÄNI ja avauksenMaisemanKerroin).
+ */
+const taso = (oma) => (oma
+  ? oma.tavoite * avauksenMaisemanKerroin(oma) * kehittajanKerroin('tausta')
+  : 0);
+
+// Kehittäjän säädin (js/kehittajan-voimat.js) muuttaa soivan maiseman
+// tason heti: lyhyt liuku, ettei säätö naksu.
+kuunteleKehittajanKerrointa('tausta', () => {
+  if (nykyinen?.audio) haivyta(nykyinen.audio, taso(nykyinen), undefined, 200);
+});
 
 /*
  * --- kompressointi (omistajan toive) ---
@@ -251,6 +289,51 @@ function liitaKompressori(audio) {
     return null;
   }
 }
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * MUSIIKIN OMA VAHVISTINSOLMU — JOTTA SÄÄDIN VAIKUTTAA MYÖS PUHELIMESSA
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * OMISTAJAN VIKA 8.9.2026 klo 18.39 (iPhone, Vilna, maailma-pakki):
+ * *"Taustamusiikki on aivan liian kovalla, eikä rattaan säädin vaikuta
+ * sen tasoon ollenkaan."*
+ *
+ * Toinen puoli viasta on taso (ks. js/musiikkivalitsin.js
+ * MUSIIKIN_PERUSTASO). Toinen puoli on TIE, jota pitkin taso menee
+ * perille. Äänimaisema säädetään VAHVISTINSOLMULLA (liitaKompressori
+ * yllä), mutta musiikkisoitin oli tähän asti pelkkä
+ * `<audio>`-elementti, jonka ainoa säätökahva on `element.volume`.
+ * Työpöytäselaimessa se toimii — mitattuna Chromiumissa säädin liikutti
+ * soivaa raitaa täsmälleen kertoimen verran — mutta iPhonen WebKit ei
+ * anna JavaScriptin asettaa `volumea` lainkaan: kirjoitus menee läpi
+ * ilman virhettä ja lukema palaa ykköseksi. Silloin KOKO musiikin
+ * tasosäätö katoaa: perustaso, väistö, avauksen sekoitus ja säädin
+ * kaikki. Raita soi tiedoston omalla tasolla (Lyria-masterit
+ * RMS −14,5 dBFS, huiput 0 dBFS) eli kertojan yläpuolella — juuri niin
+ * kuin omistaja kuvasi, ja juuri siksi säädin ei vaikuta "ollenkaan".
+ *
+ * EI KOMPRESSORIA. Maiseman ketjussa on kompressori, koska kenttä-
+ * äänitteen sisäinen vaihtelu on suurta. Musiikkipaletti on jo
+ * masteroitu (huiput nollassa), joten kompressori vain pumppaisi sen.
+ * Siksi tässä on pelkkä vahvistin — ja siksi musiikin taso ei myöskään
+ * tarvitse VOLUME_POLUN_KORVAUSTA (ks. korvaus()): sama luku tarkoittaa
+ * samaa kuuluvaa tasoa kummallakin reitillä.
+ *
+ * REITITYS EI OLE PAKKO ONNISTUA. Jos äänikonteksti ei ole käynnissä
+ * tai reititys ei muuten onnistu, palautetaan null ja soitin jää
+ * täsmälleen entiselleen (volume-polku). Mykäksi jäävän ketjun varalta
+ * on sama hiljaisuusvahti kuin maisemalla (vartioiMusiikinHiljaisuutta).
+ */
+/*
+ * REITITYS ASUU NYT OMASSA MODUULISSAAN (js/musiikkivahvistin.js), koska
+ * pohjaraita ei ole ainoa musiikkireitti: visamusiikki, siirtymä- ja
+ * linssiraidat sekä aarreaihe tarvitsevat täsmälleen saman kohtelun,
+ * ja ne asuvat eri tiedostoissa. Neljä kopiota samasta ketjusta olisi
+ * neljä paikkaa, joissa iOS:n volume-vika pitäisi muistaa erikseen —
+ * ja juuri niin kävi 8.9.2026 korjauksessa, joka jäi puolitiehen.
+ */
+const liitaMusiikinVahvistin = (audio) => liitaMusiikkiin(audio);
 
 /*
  * ── HILJAISUUSVAHTI (turvaverkko Web Audio -reitille) ────────────────
@@ -360,17 +443,25 @@ function vapautaSoitin(audio) {
  */
 const VOLUME_POLUN_KORVAUS = 1.8;
 
+/*
+ * Korvauskerroin on maiseman asia. Musiikkisoitin ei kulje
+ * kompressorin läpi kummallakaan reitillä (ks. liitaMusiikinVahvistin),
+ * joten sille korvausta ei ole — ja juuri siksi sen taso tarkoittaa
+ * SAMAA lukemaa riippumatta siitä, kumpaan reittiin laite päätyy.
+ */
+const korvaus = (audio) => audio.aaniKorvaus ?? VOLUME_POLUN_KORVAUS;
+
 /** Soittimen nykyinen taso riippumatta siitä, kumpi reitti on käytössä. */
 const lueTaso = (audio) => (audio.aaniVahvistin
   ? audio.aaniVahvistin.gain.value
-  : audio.volume / VOLUME_POLUN_KORVAUS);
+  : audio.volume / korvaus(audio));
 
 /** Asettaa tason oikeaan paikkaan. Vahvistin sallii yli ykkösen. */
 function asetaTaso(audio, arvo) {
   if (audio.aaniVahvistin) {
     audio.aaniVahvistin.gain.value = Math.max(0, arvo);
   } else {
-    audio.volume = Math.min(1, Math.max(0, arvo * VOLUME_POLUN_KORVAUS));
+    audio.volume = Math.min(1, Math.max(0, arvo * korvaus(audio)));
   }
 }
 
@@ -455,9 +546,28 @@ export function playPlaceAmbience(cityId, fallbackType, lauta, cityCountry = nul
    * syntetisoitua tyyppiä. Käynnistys on tässä, koska tämä on se yksi
    * kohta, josta koko peli pyytää taustaääntä — kytkimen sammuttamana
    * se ei lähde soimaan eikä jää soimaan.
+   *
+   * Paikan tunnus menee mukana, koska osalla kaupungeista on OMA
+   * KAPPALE pohjavireen tilalla (omistaja 5.9.2026:
+   * *"ateenaan saavuttaessa voisi vaihtua kappale"*). Vaihto tapahtuu
+   * juuri tässä: saapuminen antaa kaupungin id:n, ja matkan aikana
+   * (jalkamatka, merimatka, lentomatka, null) pohjavire palaa.
+   *
+   * MAA MENEE MYÖS MUKANA (5.9.2026 yö): kaupungeilla, joilla ei ole
+   * omaa kappaletta, soi ALUEEN raita, ja alue johdetaan pakan
+   * cityCountry-taulusta — samasta, jolla maisemankin maakori
+   * arvotaan (maaKori yllä). Näin uusi kaupunki saa musiikkinsa ilman
+   * uutta taulukkoriviä.
    */
-  if (sfx.enabled) kaynnistaPohjaMusiikki();
+  if (sfx.enabled) kaynnistaPohjaMusiikki(cityId, cityCountry?.[cityId] ?? null);
   else stopPohjaMusiikki();
+  /*
+   * MUSIIKIN KYTKIN EI KOSKE MAISEMAAN (Raamattu, VIAT v1672): rivi
+   * yllä hoitaa musiikin, ja se osaa itse vaieta musiikin ollessa pois
+   * (kaynnistaPohjaMusiikki). Kaikki tästä alaspäin on ÄÄNIMAISEMAA ja
+   * kysyy vain sfx.enabledia — sitä samaa kytkintä, joka on
+   * äänivalikossa nimellä Äänimaisema.
+   */
   // Kaupungin oma äänitys ensin, maisematyypin maanosakohtainen
   // arvontakori varalle. Tyhjä kori tarkoittaa syntetisoitua ambienssia.
   const url = arvoAani(cityId, fallbackType, lauta, cityCountry);
@@ -904,15 +1014,42 @@ const QUIZ_MUSIC = {
   url: 'https://cdn.freesound.org/previews/713/713120_14632469-lq.mp3',
   credit: '"Arabic Flute 04" — DYEKHO, Freesound (CC0)',
 };
-const MUSIIKKI_VOIMA = 0.09;
+/*
+ * VISAMUSIIKKI on musiikkia kuten pohjaraitakin, joten sen taso
+ * lausutaan musiikin yhteisenä perustasona (js/musiikkivalitsin.js
+ * MUSIIKIN_PERUSTASO) eikä omana lukunaan. Kerroin 1,3 (+2,3 dB) on
+ * visan oma suhde pohjaraitaan: kysymys on kohtaus, joten sen musiikki
+ * saa kuulua hieman pohjavirettä paremmin.
+ *
+ * Vanha luku oli 0,09, ja se oli kirjoitettu ElevenLabsin visaraidalle
+ * (musa-visa-2.mp3, RMS −28,7 dBFS). Lyria-raita on RMS −14,4 dBFS, eli
+ * sama luku soi 14,3 dB kovempaa — sama vika kuin pohjaraidalla
+ * (omistaja 8.9.2026: *"Taustamusiikki on aivan liian kovalla"*).
+ */
+const MUSIIKKI_VOIMA = MUSIIKIN_PERUSTASO * 1.3;
 
 let musiikki = null;
+
+/* Soivan visaraidan oma mitattu kerroin (jaaAlku), jotta säätö ja
+ * väistö osaavat laskea saman tason uudelleen ilman soitinta. */
+let visanVoima = 1;
+
+/** Visamusiikin tavoitetaso juuri nyt (väistö × musiikin kerroin). */
+const visaMusiikinTaso = (kerroin = 1) => Math.min(
+  1, MUSIIKKI_VOIMA * visanVoima * kerroin * musiikinKerroin(),
+);
+
+// Musiikin säädin: myös kysymyksen aikana soiva raita seuraa heti.
+kuunteleMusiikinKerrointa(() => {
+  if (musiikki) haivyta(musiikki, visaMusiikinTaso(voimassaVaisto()), undefined, 200);
+});
 
 export function startQuizMusic(lauta) {
   // Kaupungin ääni väistyy reilusti kysymyksen ajaksi — kaksi ääntä
   // päällekkäin täydellä voimalla oli puuroa.
   saadaVaistoa(0.15);
-  if (!sfx.enabled || musiikki) return;
+  // Visan huililuuppi on musiikkia: oma kytkin vaientaa sen (v1672).
+  if (!sfx.enabled || !musiikkiPaalla() || musiikki) return;
   // Maanosan oma valinta tai oletus voittaa; ilman kumpaakaan soi
   // yleinen. Oletukset kulkevat koodin mukana, joten ne toimivat myös
   // kotivalikkoon asennetussa pelissä, jonne selainvalinnat eivät yllä.
@@ -920,11 +1057,35 @@ export function startQuizMusic(lauta) {
   if (valinta == null) valinta = valittuTaiOletus('musiikki:tietovisa');
   if (valinta === '') return; // musiikki valittu pois
   const asetus = jaaAlku(valinta);
+  // Raidan oma mitattu kerroin talteen: säätö ja väistö laskevat tason
+  // uudestaan ilman että soittimen asetuksia tarvitsee etsiä uudelleen.
+  visanVoima = asetus.voima ?? 1;
   const alkuperainen = asetus.url ?? QUIZ_MUSIC.url;
-  const audio = new Audio(aaniOsoite(alkuperainen));
+  const osoite = aaniOsoite(alkuperainen);
+  const audio = new Audio();
+  /*
+   * crossOrigin ENNEN srciä ja VAIN peilistä tulevalle raidalle. Web
+   * Audio lukee elementin ääntä, ja ilman CORS-lupaa ketju olisi
+   * hiljainen ilman virhettä; toisaalta lupaa ei saa vaatia
+   * ulkopuoliselta lähteeltä (Freesound), jolle sitä ei ole luvattu —
+   * silloin raita jäisi soimatta kokonaan. Peilin vastaus tulee
+   * palvelutyöntekijän kautta CORS-tilassa (sw.js aaniPeilista).
+   */
+  if (onPeilista(osoite)) audio.crossOrigin = 'anonymous';
+  audio.src = osoite;
   audio.loop = true;
   audio.preload = 'auto';
-  audio.volume = 0;
+  // Visan raita on musiikkia: ei kompressoria, ei korvauskerrointa
+  // (ks. korvaus()) — taso tarkoittaa sitä mitä lukee.
+  audio.aaniKorvaus = 1;
+  /*
+   * VISAMUSIIKKI ON MUSIIKKIA MYÖS TÄSSÄ: sama vahvistinreitti kuin
+   * pohjaraidalla, jotta säädin ja perustaso menevät perille myös
+   * puhelimessa (omistajan vika 9.9.2026). Ilman reititystä taso jää
+   * elementin omaan volumeen kuten ennen.
+   */
+  audio.aaniVahvistin = liitaMusiikkiin(audio);
+  audio.volume = audio.aaniVahvistin ? 1 : 0;
   if (asetus.alku) {
     audio.addEventListener('loadedmetadata', () => {
       try {
@@ -945,29 +1106,38 @@ export function startQuizMusic(lauta) {
       audio.pause();
       return;
     }
-    haivyta(audio, Math.min(1, MUSIIKKI_VOIMA * asetus.voima));
+    haivyta(audio, visaMusiikinTaso(voimassaVaisto()));
   }).catch(petti);
   const petti = () => {
     if (varareittiKokeiltu || !onPeilista(audio.getAttribute('src'))) { luovuta(); return; }
-    varareittiKokeiltu = true;
     /*
-     * PUUTTUVA OMA ÄÄNITE EI OLE PEILIN VIKA (29.8.2026, musiikki-
-     * paletti). Katkaisija (peiliPetti) sulkee koko äänipeilin
-     * kolmen virheen jälkeen, ja siihen mennessä se on jo lukenut
-     * kolme kertaa saman puuttuvan tiedoston vikana palvelimessa,
-     * joka toimii moitteetta. Pelin oma äänite voi puuttua ihan
-     * laillisesti — juuri niin on aina siinä välissä, kun kytkentä
-     * on mainissa ja mp3 vasta generoidaan (ks.
-     * .github/workflows/generoi-musiikki.yml). Ulkoisilla lähteillä
-     * käytös on ennallaan: sieltä 404 kertoo oikeasti peilistä.
+     * PELIN OMALLA RAIDALLA EI OLE VARAREITTIÄ (11.9.2026): ämpäri on
+     * ainoa varasto, eikä assets/audio-polkua ole enää olemassa.
+     * Katkaisijaa (peiliPetti) ei kutsuta tässäkään — PUUTTUVA OMA
+     * ÄÄNITE EI OLE PEILIN VIKA (29.8.2026, musiikkipaletti): kolme
+     * 404:ää samasta puuttuvasta tiedostosta sulkisi koko äänipeilin,
+     * vaikka palvelin toimii moitteetta. Oma raita voi puuttua ihan
+     * laillisesti — juuri niin on aina siinä välissä, kun kytkentä on
+     * mainissa ja mp3 vasta generoidaan (generoi-musiikki.yml).
      */
-    if (!omaAaniPolku(alkuperainen)) peiliPetti('aanet');
+    if (omaAaniPolku(alkuperainen)) { luovuta(); return; }
+    // Ulkoisella lähteellä (Freesound) käytös on ennallaan: peilin 404
+    // kertoo oikeasti peilistä, ja alkuperäislähde on varareitti.
+    varareittiKokeiltu = true;
+    peiliPetti('aanet');
     if (musiikki !== audio) return;
     audio.src = alkuperainen;
     audio.load();
     soi();
   };
   audio.addEventListener('error', petti);
+  /*
+   * Sama sääntö kuin pohjaraidalla: ilman vahvistinta JA ilman toimivaa
+   * volumea (iOS) soitto tarkoittaisi tiedoston omaa täyttä tasoa.
+   * Kysymyksen musiikki on lyhyt kohtaus eikä sitä jäädä odottamaan —
+   * hiljainen kysymys on parempi kuin kertojan yli soiva huilu.
+   */
+  if (!musiikkiSaaSoida(audio)) { luovuta(); return; }
   soi();
 }
 
@@ -996,54 +1166,285 @@ export function startQuizMusic(lauta) {
  * josta maisemakin — ja sammutus samoista paikoista kuin maiseman:
  * taustaäänten kytkin pois (js/main.js kaannaTausta) ja radiotila
  * (js/linssit/radio.js paalle), jossa radio on ainoa ääni.
- */
-const POHJA_MUSIIKKI = 'assets/audio/musa-pohja.mp3';
-/*
- * Taso ≈ −19 dB suhteessa ambienssiin. Maiseman efektiivinen taso on
- * VOIMA (0,14) kertaa äänitteen oma mitattu kerroin, joka on
- * tyypillisesti ykkösen kahta puolta — käytännön keskitaso on siis
- * noin 0,17. Siitä −19 dB on 0,17 × 10^(−19/20) ≈ 0,019.
  *
- * LOPULLINEN TASO SÄÄDETÄÄN KUULOKOKEELLA, kuten ETUSIVUN_VOIMA ja
- * LENNON_VOIMA aikanaan: tämä on laskettu lähtöarvo tilaukselle
- * "soi hiljaa ambienssiäänten alla", ei mitattu totuus. Pohjavire on
- * generoitu raita eikä LUFS-mitattu äänite (mittaus koskee ulkoisia
- * lähteitä, tools/mittaa-aanet.mjs), joten sen oma taso riippuu siitä
- * mitä malli tuotti — omistaja kuulee sen ensimmäisenä oikeasta
- * laitteesta ja saa siirtää lukemaa suuntaan tai toiseen.
+ * ── KAUPUNKIRAITA POHJAVIREEN TILALLA (omistaja 5.9.2026 klo 00.35) ──
+ *
+ * *"ateenaan saavuttaessa voisi vaihtua kappale. generoi sinne oma
+ * musiikki."* Kaupungit, joilla on oma kappale, ovat taulukossa
+ * js/kaupunkimusiikki.js. Kun playPlaceAmbience saa sellaisen
+ * cityId:n, TÄMÄ SAMA SOITIN vaihtaa raitaa: vanha häivytetään pois ja
+ * uusi sisään VAIHTO_MS:ssä ristikkäin. Kun kaupungista lähdetään
+ * (cityId on 'jalkamatka', 'merimatka', null…), pohjavire palaa samaa
+ * tietä. Kaupunkiraita ei siis ole uusi kerros vaan pohjavireen
+ * paikallinen sijainen: sama paikka sekoituksessa, sama väistö, sama
+ * kehittäjäkerroin, sama puuttuvan raidan sietäminen.
+ *
+ * PUUTTUVA KAUPUNKIRAITA EI HILJENNÄ PELIÄ: jos kaupungin mp3 ei
+ * vastaa (404 — normaali tila siinä välissä, kun taulukko on mainissa
+ * ja raita vasta generoidaan), polku merkitään puuttuvaksi ja
+ * pohjavire käynnistetään uudelleen sen tilalle.
  */
-const POHJA_VOIMA = 0.019;
+const POHJA_MUSIIKKI = musaPolku(POHJARAITA);
+/*
+ * POHJARAIDAN JA KAUPUNKIRAITOJEN TASO ON MUSIIKIN YHTEINEN PERUSTASO
+ * (js/musiikkivalitsin.js MUSIIKIN_PERUSTASO) — siellä on myös
+ * perustelu ja mittaus. Täällä ei ole omaa lukua: juuri oma luku oli
+ * se, jonka takia paletin vaihto Lyriaan nosti musiikin 16,8 dB
+ * kenenkään huomaamatta (omistaja 8.9.2026: *"Taustamusiikki on aivan
+ * liian kovalla"*).
+ */
+const POHJA_VOIMA = MUSIIKIN_PERUSTASO;
 // Pohjavire nousee hitaammin kuin maisema: se ei ole vaihdos vaan tila,
 // joka on ollut siellä koko ajan.
 const POHJA_NOUSU_MS = 4000;
+/*
+ * RAIDAN VAIHDON RISTIHÄIVYTYS (kaupunkiraita). Sama mitta kumpaankin
+ * suuntaan: pohjavire → kaupungin kappale saavuttaessa ja takaisin
+ * lähdettäessä. 1,5 s on selvästi nopeampi kuin pohjavireen oma nousu
+ * (4 s), koska tämä ON vaihdos — pelaajan kuuluu huomata, että kappale
+ * vaihtui — mutta tarpeeksi pitkä, ettei sauma kuulu leikkaukselta.
+ */
+const VAIHTO_MS = 1500;
 
 let pohja = null;
+/*
+ * Soivan raidan polku (POHJA_MUSIIKKI tai kaupungin raita). Tästä
+ * tiedetään, tarvitseeko mitään vaihtaa, kun playPlaceAmbience kutsuu
+ * samaa käynnistystä joka renderöinnillä.
+ */
+let pohjaPolku = null;
 /*
  * Puuttuva raita hiljenee LOPULLISESTI (ei joka renderöinnillä uutta
  * yritystä). Kytkentä on mainissa ennen kuin mp3 on generoitu — juuri
  * se on tarkoituskin, sama etukäteisnimeäminen kuin luentojen
- * `aanite`-kentässä — ja ilman tätä lippua peli rakentaisi uuden
+ * `aanite`-kentässä — ja ilman tätä joukkoa peli rakentaisi uuden
  * epäonnistuvan soittimen jokaisesta paikanvaihdosta.
  *
- * VAIN LATAUSVIRHE nostaa lipun. play():n hylkäys on eri asia: se on
- * yleensä selaimen eleen odotus, ja siitä on määrä toipua seuraavasta
- * renderöinnistä täsmälleen kuten maisemankin.
+ * JOUKKO EIKÄ LIPPU, koska raitoja on nyt useita: puuttuva
+ * kaupunkiraita ei saa merkitä pohjavirettä puuttuvaksi eikä
+ * päinvastoin.
+ *
+ * VAIN LATAUSVIRHE merkitsee polun puuttuvaksi. play():n hylkäys on eri
+ * asia: se on yleensä selaimen eleen odotus, ja siitä on määrä toipua
+ * seuraavasta renderöinnistä täsmälleen kuten maisemankin.
  */
-let pohjaPuuttuu = false;
+const puuttuvatMusiikit = new Set();
 
-/** Käynnistää pohjavireen, jos taustaäänet ovat päällä eikä se jo soi. */
-export function kaynnistaPohjaMusiikki() {
-  if (!sfx.enabled || pohja || pohjaPuuttuu) return;
-  const audio = new Audio(aaniOsoite(POHJA_MUSIIKKI));
+/*
+ * Reititys on kokeiltu ja todettu kelvottomaksi (CORS-virhe tai mykkä
+ * ketju). Lippu on koko istunnon mittainen kuten maiseman
+ * `ilmanKompressoria`: kerran epäonnistunutta reititystä ei kannata
+ * yrittää uudestaan jokaisella raidanvaihdolla, ja volume-polku on
+ * täsmälleen se, jolla peli soi ennen tätä muutosta.
+ */
+let musiikkiIlmanReititysta = false;
+
+/*
+ * ── REITITYSTÄ YRITETÄÄN UUDESTAAN, KUN KONTEKSTI HERÄÄ ─────────────
+ *
+ * TÄMÄ OLI 8.9.2026 KORJAUKSEN AUKKO. Reititys onnistuu vain käynnissä
+ * olevaan äänikontekstiin, ja iOS:ssä konteksti on `suspended` siihen
+ * asti kunnes `resume()` on ehtinyt ratketa — eleen JÄLKEENKIN. Pelin
+ * ensimmäinen raita syntyy juuri siinä hetkessä, joten se päätyi lähes
+ * aina volume-polulle. Ja koska pohjaraita jää soimaan silmukkana,
+ * yksi huono ajoitus tarkoitti koko istunnon täyttä tasoa puhelimessa.
+ *
+ * Nyt soitin ilmoittautuu odottajaksi: kun konteksti on käynnissä,
+ * reitittämätön raita rakennetaan uudelleen reititettynä. Yritysten
+ * määrä on rajattu, ettei epäonnistuva reititys jäisi rakentamaan
+ * soittimia loputtomiin.
+ */
+const REITITYSYRITYKSET = 4;
+let reitityksenYritykset = 0;
+
+kuunteleReitityksenAvautumista(() => {
+  if (!pohja || pohja.aaniVahvistin || musiikkiIlmanReititysta) return;
+  if (reitityksenYritykset >= REITITYSYRITYKSET) return;
+  reitityksenYritykset += 1;
+  const vanha = pohja;
+  pohja = null;
+  pohjaPolku = null;
+  vapautaSoitin(vanha);
+  kaynnistaPohjaMusiikki();
+});
+
+/**
+ * Mittaa reititetyn musiikkiketjun ulostuloa ja rakentaa raidan
+ * uudelleen ilman reititystä, jos ketju on mykkä. Sama turvaverkko ja
+ * samat perustelut kuin maisemalla (ks. HILJAISUUSVAHTI) — WebKitissä
+ * reititetty elementti voi vaieta ilman virhettä.
+ */
+function vartioiMusiikinHiljaisuutta(audio) {
+  const mittari = audio.aaniMittari;
+  if (!mittari || musiikkiIlmanReititysta) return;
+  const nayte = (jaljella) => {
+    if (pohja !== audio || audio.paused) return;
+    if (huippu(mittari) > 0) return; // yksikin kuuluva näyte riittää
+    if (jaljella > 1) {
+      setTimeout(() => nayte(jaljella - 1), HILJAISUUS_VALI_MS);
+      return;
+    }
+    if (audio.readyState < 3) return; // lataus kesken, ei mykkyys
+    if (pohjaMusiikinTaso() <= 0) return; // täysi väistö on tarkoitus
+    /*
+     * VARAREITTI EI SAA OLLA VIKAA PAHEMPI (omistajan vika 9.9.2026).
+     * Volume-polku palauttaa tason elementin omaan volumeen — ja jos
+     * selain ei tottele volumea (iOS), se tarkoittaa TÄYTTÄ tasoa eikä
+     * entistä tasoa. Sellaisessa selaimessa mykkä ketju jätetään
+     * paikalleen: hiljainen musiikki on korjattavissa, kertojan yli
+     * jyräävä ei.
+     */
+    if (!volumeToimii()) return;
+    musiikkiIlmanReititysta = true;
+    pohja = null;
+    pohjaPolku = null;
+    vapautaSoitin(audio);
+    kaynnistaPohjaMusiikki();
+  };
+  setTimeout(() => nayte(HILJAISUUS_NAYTTEITA), HILJAISUUS_ALKU_MS);
+}
+
+/**
+ * Mikä raita tässä tilanteessa kuuluu soida. Ketju tulee valitsimelta
+ * (js/musiikkivalitsin.js) — lehti ja matkalaukku ennen paikkaa,
+ * kaupungin oma kappale ennen alueen raitaa, pohjavire viimeisenä — ja
+ * tämä ottaa siitä ensimmäisen, jota ei ole todettu puuttuvaksi.
+ * Null tarkoittaa, ettei yhtäkään ole: silloin peli on tämän raidan
+ * osalta hiljainen eikä yritä uudestaan joka renderöinnillä.
+ */
+function pohjanPolku(cityId, maa) {
+  return valitseMusiikki(puuttuvatMusiikit, cityId, maa);
+}
+
+/**
+ * Pohjavireen (tai kaupunkiraidan) tavoitetaso juuri nyt.
+ *
+ * Kehittäjän säädin on 'musiikki' eikä 'tausta': raita on pelin omaa
+ * musiikkia siinä missä siirtymä- ja linssiraidat
+ * (js/siirtymamusiikki.js raidanTaso). Tavallisella pelaajalla kerroin
+ * on aina 1,0.
+ */
+const pohjaMusiikinTaso = (kerroin = voimassaVaisto()) => POHJA_VOIMA * kerroin
+  * musiikinKerroin() * avauksenMusiikkiKerroin();
+
+/*
+ * Musiikin säädin (js/musiikkivalitsin.js musiikinKerroin): soiva raita
+ * seuraa heti. VÄISTÖ KERTAUTUU KERTOIMEN KANSSA eikä ylikirjoita sitä
+ * — taso lasketaan aina samasta kaavasta, jossa `voimassaVaisto()` on
+ * mukana, joten luennan aikana tehty säätö jää väistön alle ja luennan
+ * jälkeen taso palaa säädettyyn lukemaan.
+ */
+kuunteleMusiikinKerrointa(() => {
+  if (pohja) haivyta(pohja, pohjaMusiikinTaso(), undefined, 200);
+});
+
+/*
+ * NÄKYMÄ VAIHTUI (lehti auki, matkalaukku kiinni): valitsin herättää
+ * saman käynnistyksen kuin paikanvaihto, ja se tekee ristihäivytyksen
+ * jos raita todella vaihtuu. Paikkaa ei anneta — valitsin muistaa sen
+ * itse, joten tilan vaihtuminen ei voi hukata kaupunkia.
+ *
+ * Kytkin on sfx.enabled kuten muuallakin: taustaäänten ollessa pois
+ * lehden avaaminen ei saa aloittaa musiikkia.
+ */
+kuunteleMusiikkitilaa(() => {
+  if (sfx.enabled) kaynnistaPohjaMusiikki();
+});
+
+/**
+ * Käynnistää sen raidan, jonka valitsin tähän tilanteeseen antaa, jos
+ * taustaäänet ovat päällä. Turvallinen kutsua joka renderöinnillä:
+ * sama raita jatkaa soimistaan, ja vain raidan VAIHTO tekee
+ * ristihäivytyksen.
+ *
+ * Ilman argumentteja käynnistys tarkoittaa "sama paikka kuin äsken":
+ * juuri niin tilan vaihtuminen (lehti auki, matkalaukku kiinni) sen
+ * kutsuu, eikä paikkaa tarvitse muistaa kahdessa paikassa.
+ *
+ * @param {?string} cityId paikan tunnus (laudan kaupunki tai
+ *   virtuaalipaikka kuten 'etusivu') — tuntematon tarkoittaa
+ *   pohjavirettä, ellei jokin tila ole päällä.
+ * @param {?string} maa kaupungin ISO-3-maakoodi, josta alueen raita
+ *   johdetaan (js/kaupunkimusiikki.js ALUEEN_MAAT).
+ */
+export function kaynnistaPohjaMusiikki(cityId = musiikinPaikka(), maa = musiikinMaa()) {
+  asetaMusiikkipaikka(cityId, maa);
+  /*
+   * KAKSI KYTKINTÄ, ERI ASIAT (Raamattu, VIAT v1672). Musiikin oma
+   * kytkin (js/musiikkivalitsin.js) vaientaa vain musiikin;
+   * äänimaisema jatkaa. Paikka on jo talletettu yllä, joten kytkimen
+   * palatessa oikea raita palaa samaan kaupunkiin.
+   */
+  if (!sfx.enabled || !musiikkiPaalla()) { stopPohjaMusiikki(); return; }
+  /*
+   * PITO VOITTAA KAIKKI KUTSUJAT (20.9.2026).
+   *
+   * Ensin pito oli pelkkä kuuntelija musiikkitilan muutoksille, ja se
+   * kattoi sen reitin, jolla vika löydettiin (kytkin → syncAmbience).
+   * Savuke osoitti sen riittämättömäksi: SUORA `kaynnistaPohjaMusiikki`
+   * -kutsu kesken linssin käynnisti raidan silti. Pito, jonka ohi
+   * pääsee kutsumalla, ei ole pito — siksi ehto on tässä, kaikkien
+   * kutsujien yhteisessä portissa. Paikka talletetaan yllä ennen tätä,
+   * joten oikea raita palaa, kun pito puretaan.
+   */
+  if (musiikkiPidossa()) { stopPohjaMusiikki(); return; }
+  const polku = pohjanPolku(cityId, maa);
+  if (!polku || (pohja && pohjaPolku === polku)) return;
+  /*
+   * Väistyvä puoli lähtee nollaan omalla häivytyksellään ja vapautuu
+   * itsestään. Sitä ei jäädä odottamaan eikä siihen enää kosketa
+   * (myöskään väistössä, ks. ajaVaisto): uusi raita nousee sen läpi.
+   */
+  const vaistyva = pohja;
+  pohja = null;
+  pohjaPolku = null;
+  if (vaistyva) haivyta(vaistyva, 0, () => vapautaSoitin(vaistyva), VAIHTO_MS);
+
+  const audio = new Audio();
+  /*
+   * crossOrigin ENNEN srciä, sama syy kuin maisemalla: Web Audio lukee
+   * elementin ääntä, ja ilman CORS-lupaa tuloksena olisi hiljaisuus
+   * ilman virhettä. Reitittämättömällä varakierroksella lupaa ei
+   * pyydetä — silloin sitä ei tarvita eikä se saa estää soittoa.
+   */
+  if (!musiikkiIlmanReititysta) audio.crossOrigin = 'anonymous';
+  audio.src = aaniOsoite(polku);
   // Raita on generoitu saumattomaksi silmukaksi, joten selaimen oma
   // loop riittää — maiseman ristihäivytystä (vahdiSilmukka) ei tarvita.
   audio.loop = true;
   audio.preload = 'auto';
   audio.volume = 0;
+  /*
+   * MUSIIKIN TASO TARKOITTAA SAMAA KUMMALLAKIN REITILLÄ. Maiseman
+   * volume-polku kertoo tason luvulla VOLUME_POLUN_KORVAUS, koska
+   * siltä puuttuu kompressori; musiikilla kompressoria ei ole
+   * kummallakaan reitillä, joten korvausta ei ole (ks. korvaus()).
+   * Ilman tätä perustaso tarkoittaisi kahta eri kuuluvaa tasoa sen
+   * mukaan, kumpaan reittiin laite sattuu päätymään.
+   */
+  audio.aaniKorvaus = 1;
+  /*
+   * Vahvistinsolmu, jotta taso menee perille myös puhelimessa (ks.
+   * MUSIIKIN OMA VAHVISTINSOLMU). Ilman reititystä taso jää elementin
+   * omaan volumeen kuten ennenkin, ja se alkaa nollasta.
+   */
+  audio.aaniVahvistin = musiikkiIlmanReititysta ? null : liitaMusiikinVahvistin(audio);
+  /*
+   * REITITETYN ELEMENTIN OMA VOLUME ON OSA KETJUA (mitattu: nolla syötti
+   * graafiin hiljaisuutta, ja hiljaisuusvahti pudotti raidan takaisin
+   * volume-polulle joka kerta). Reititettynä taso säädetään vahvistimella
+   * ja elementti soittaa täydellä; reitittämättömänä taso on elementin
+   * omassa volumessa ja sen on alettava nollasta. Sama kaava kuin
+   * maisemalla, ks. luoSoitin.
+   */
+  audio.volume = audio.aaniVahvistin ? 1 : 0;
   pohja = audio;
-  let varareittiKokeiltu = false;
+  pohjaPolku = polku;
   const luovuta = () => {
-    if (pohja === audio) pohja = null;
+    if (pohja === audio) {
+      pohja = null;
+      pohjaPolku = null;
+    }
     vapautaSoitin(audio);
   };
   const soi = () => audio.play().then(() => {
@@ -1051,44 +1452,126 @@ export function kaynnistaPohjaMusiikki() {
       audio.pause();
       return;
     }
-    haivyta(audio, POHJA_VOIMA * voimassaVaisto(), undefined, POHJA_NOUSU_MS);
+    // Vaihdos nousee vaihdon mitalla, ensimmäinen käynnistys
+    // pohjavireen omalla hitaalla nousulla.
+    haivyta(audio, pohjaMusiikinTaso(), undefined, vaistyva ? VAIHTO_MS : POHJA_NOUSU_MS);
+    vartioiMusiikinHiljaisuutta(audio);
   }).catch(() => {
     // Ele puuttui tai laite kieltäytyi: seuraava renderöinti yrittää
-    // uudestaan (lippua ei nosteta).
+    // uudestaan (polkua ei merkitä puuttuvaksi).
     luovuta();
   });
   const petti = () => {
-    // Ämpäri ensin, repon polku perään — ja jos kumpikaan ei vastaa,
-    // peli on hiljainen tämän raidan osalta. Katkaisijaa (peiliPetti)
+    /*
+     * VIRHE EI PURA REITITYSTÄ. Latausvirhettä ei voi erottaa
+     * puuttuvasta CORS-luvasta, ja puuttuva raita on pelissä NORMAALI
+     * tila (kytkentä on mainissa ennen kuin mp3 on generoitu) — jos
+     * ensimmäinen 404 pudottaisi koko istunnon volume-polulle, säädin
+     * lakkaisi toimimasta juuri siellä, missä se on tärkein. Mykän
+     * ketjun hoitaa vartioiMusiikinHiljaisuutta.
+     */
+    // Pohjaraita on AINA pelin oma äänite (musaPolku), ja 11.9.2026
+    // alkaen ämpäri on sen ainoa varasto: repon polkua ei ole, joten
+    // varareittiä ei ole — raita merkitään suoraan puuttuvaksi ja
+    // ketjun seuraava taso ottaa sen paikan. Katkaisijaa (peiliPetti)
     // ei kutsuta: puuttuva oma äänite ei ole peilin vika, ks.
     // startQuizMusicin sama perustelu.
-    if (varareittiKokeiltu || !onPeilista(audio.getAttribute('src'))) {
-      pohjaPuuttuu = true;
-      luovuta();
-      return;
-    }
-    varareittiKokeiltu = true;
-    if (pohja !== audio) return;
-    audio.src = POHJA_MUSIIKKI;
-    audio.load();
-    soi();
+    puuttuvatMusiikit.add(polku);
+    luovuta();
+    /*
+     * Puuttunut raita ei jätä peliä hiljaiseksi: KETJUN SEURAAVA
+     * TASO ottaa sen paikan heti (lehti → kaupunki → alue →
+     * pohjavire). Rekursio päättyy, koska jokainen kierros merkitsee
+     * yhden polun puuttuvaksi ja ketju lyhenee — viimeisen jälkeen
+     * pohjanPolku palauttaa nullin eikä uutta soitinta synny.
+     *
+     * `!pohja` on ehtona siksi, että virhe voi tulla vasta kun peli
+     * on jo ehtinyt vaihtaa raitaa (myöhästynyt 404 väistyneeltä
+     * soittimelta) — silloin soiva raita on jo oikea eikä sitä saa
+     * korvata tämän vanhentuneen paikan varamiehellä. Samasta syystä
+     * uusi yritys tehdään ILMAN paikkaa: valitsin muistaa, missä
+     * PELI on nyt, eikä myöhästynyt virhe saa palauttaa vanhaa.
+     */
+    if (polku !== POHJA_MUSIIKKI && !pohja) kaynnistaPohjaMusiikki();
   };
   audio.addEventListener('error', petti);
+  /*
+   * HILJAISUUS ON PAREMPI KUIN HALLITSEMATON TÄYSI TASO. Jos elementin
+   * volume ei tottele (iOS) EIKÄ vahvistinta saatu, soitto tarkoittaisi
+   * tiedoston omaa tasoa — juuri sitä, mistä omistaja valitti kahdesti.
+   * Silloin raita jää odottamaan: yllä oleva odottaja rakentaa sen
+   * uudelleen reititettynä heti kun äänikonteksti herää eleestä.
+   */
+  if (!musiikkiSaaSoida(audio)) return;
   soi();
 }
 
 /** Sammuttaa pohjavireen pehmeästi (taustaäänet pois, radiotila). */
+/*
+ * TAUSTAMUSIIKKI KIINNI NIIN KAUAN KUIN LINSSI ON AUKI (omistaja
+ * 20.9.2026: astronautin kamera ja topografialinssi).
+ *
+ * MIKSI TÄMÄ EI OLE `hiljennaAmbienssi`. Se kutsuu
+ * `asetaMusiikkitila(syy, true)`, ja musiikkivalitsin aloittaa rivillä
+ * `if (!Object.hasOwn(TILARAIDAT, nimi)) return;` — TILARAIDAT tuntee
+ * vain `lehti` ja `matkalaukku`, joten linssin syy `linssi` palautti
+ * tekemättä mitään EIKÄ SANONUT SIITÄ. Tuntemattoman nimen sietokyky on
+ * tarkoituksellinen, joten linssi sanoo suoraan mitä haluaa.
+ *
+ * MIKSI KERTAPYSÄYTYS EI RIITÄ. Musiikkikytkimen paluu päälle ajaa
+ * `syncAmbience`n, joka käynnistää kaupungin raidan uudestaan kesken
+ * linssin (mitattu savukkeessa 20.9.2026). Siksi tämä jää kuuntelemaan
+ * musiikkitilaa ja pysäyttää raidan uudelleen, kunnes kahva puretaan.
+ *
+ * PAIKKA JÄÄ MUISTIIN (js/musiikkivalitsin.js asetaMusiikkipaikka),
+ * joten `pura` palauttaa saman raidan samaan kaupunkiin.
+ */
+let musiikkipitoja = 0;
+
+/** Onko jokin linssi pitämässä taustamusiikkia kiinni? */
+export const musiikkiPidossa = () => musiikkipitoja > 0;
+
+export function pidaMusiikkiKiinni() {
+  let purettu = false;
+  musiikkipitoja += 1;
+  const pysayta = () => {
+    if (purettu) return;
+    try { stopPohjaMusiikki(); } catch { /* musiikkia ei ole */ }
+  };
+  pysayta();
+  let irrota = null;
+  try { irrota = kuunteleMusiikkitilaa(pysayta); } catch { /* ei kuuntelijaa */ }
+  return {
+    /** Mittari savukkeille ja testeille. */
+    kiinni: () => !purettu,
+    pura() {
+      if (purettu) return;
+      purettu = true;
+      musiikkipitoja = Math.max(0, musiikkipitoja - 1);
+      try { irrota?.(); } catch { /* jo irti */ }
+      irrota = null;
+    },
+  };
+}
+
 export function stopPohjaMusiikki() {
   const vanha = pohja;
   pohja = null;
+  pohjaPolku = null;
   if (!vanha) return;
   haivyta(vanha, 0, () => vapautaSoitin(vanha));
 }
 
-/** Vain testejä varten: unohtaa puuttuvan raidan lipun. */
+/** Vain testejä varten: unohtaa puuttuvat raidat ja soivan soittimen. */
 export function nollaaPohjaMusiikki() {
-  pohjaPuuttuu = false;
+  puuttuvatMusiikit.clear();
   pohja = null;
+  pohjaPolku = null;
+}
+
+/** Vain testejä varten: minkä raidan polku juuri nyt soi (tai null). */
+export function soivaPohjaMusiikki() {
+  return pohja ? pohjaPolku : null;
 }
 
 /**
@@ -1184,20 +1667,157 @@ const VAISTO_HILJENNYS = 0.45;
 const HILJENNYS_LIUKU_MS = 400;
 const hiljennykset = new Set();
 
+/*
+ * SYY ON MYÖS MUSIIKIN TILA (5.9.2026 yö). Lukunäkymällä on nyt oma
+ * raitansa (lehti), ja se avautuu ja sulkeutuu täsmälleen samoista
+ * kohdista kuin tämä hiljennys: kolme avausta (js/lehti.js kaksi,
+ * js/ui.js openArrival) ja yksi sulkeminen (dialogin close-kuuntelija,
+ * joka laukeaa myös Escistä ja taustanapautuksesta). Uusi koukku
+ * niihin olisi ollut neljäs ja viides paikka muistaa sama asia, joten
+ * tila luetaan syystä. Valitsin sivuuttaa syyt, joille ei ole raitaa
+ * (pöllö, linssi, aarremusiikki, musiikkisivu).
+ */
 export function hiljennaAmbienssi(syy) {
   if (hiljennykset.has(syy)) return;
   hiljennykset.add(syy);
+  asetaMusiikkitila(syy, true);
   ajaVaisto(HILJENNYS_LIUKU_MS);
 }
 
 export function palautaAmbienssi(syy) {
   if (!hiljennykset.delete(syy)) return;
+  asetaMusiikkitila(syy, false);
   ajaVaisto(HILJENNYS_LIUKU_MS);
 }
 
 /** Vain testejä varten: unohtaa kaikki hiljennyssyyt. */
 export function nollaaHiljennykset() {
+  for (const syy of hiljennykset) asetaMusiikkitila(syy, false);
   hiljennykset.clear();
+}
+
+/*
+ * ── AVAUKSEN ÄÄNI (omistajan tilaus 7.9.2026) ────────────────────────
+ *
+ * *"Pelin aloitussivulla, heti kun pelaaja on painanut "aloita
+ * seikkailu" nappia, niin musiikki saisi hiljentyä hieman ja mukaan
+ * saisi tulla se terminaalin äänimaisema voimakkaasti mukaan ja siitä
+ * lähtisi omalla ajallaan kertojan luenta myös käyntiin."*
+ *
+ * Portin painallus on pelin ensimmäinen ele, ja siitä alkaa kolmen
+ * äänen sarja: musiikki laskee askeleen, terminaali (etusivun
+ * lähtöaulan häly) nousee selvästi kuuluviin, ja vasta niiden päälle
+ * tulee kertoja omalla viiveellään (js/ui.js AVAUS_KERTOMUS_MS).
+ *
+ * TÄMÄ EI OLE VÄISTÖ VAAN AVAUKSEN OMA SEKOITUS. Väistö (puhe,
+ * ääninäyte, lukunäkymä) painaa KAIKKEA samalla kertoimella; tässä
+ * kaksi raitaa liikkuu ERI SUUNTIIN, ja juuri se ero tekee vaikutelman
+ * "peli alkaa". Siksi omat kertoimensa eikä pyydettyVaisto.
+ *
+ * KERTOJA EI VÄISTÄ TERMINAALIA (omistajan vika 7.9.2026 illalla,
+ * v1671: *"Lentoterminaalin ääni ei kuulu etusivulla, vaikka
+ * pitäisi."*). Ensimmäinen toteutus kertoi avauksen nostot väistön
+ * PÄÄLLE, ja avauksen ainoa puhuja on avaustekstin kertoja itse.
+ * MITATTU (Chromium, oikeat äänitteet, tools/savukkeet/
+ * savuke-etusivun-aani.mjs): terminaali nousee lukemaan 0,1728, pitää
+ * sen noin sekunnin ja putoaa luennan alkaessa (2,85 s painalluksesta)
+ * lukemaan 0,1728 × 0,25 = 0,0432 — 64 % ALLE oman kalibroidun
+ * tasonsa (0,1192) — ja jää sinne koko 18 sekunnin luennan ajaksi.
+ * Painalluksesta kuului siis lyhyt aalto ja sen jälkeen ei mitään:
+ * juuri se, mistä omistaja kirjoitti.
+ *
+ * Vika oli laskukaavassa eikä säädössä. Tilauksessa luenta lähtee
+ * käyntiin SEN PÄÄLLE, mikä on jo "voimakkaasti mukana" — kertoja on
+ * osa avausta eikä keskeytys, jonka alta terminaalin pitäisi väistyä.
+ * Siksi avauksen sekoitus KORVAA väistön etusivun maisemalla sen ajan
+ * kun se on voimassa, eikä kerry sen päälle. Musiikkiin kertyminen jää
+ * ennalleen: siellä molemmat osoittavat samaan suuntaan (tilaus haluaa
+ * musiikin hiljenevän, ja kertojan alla vielä hieman lisää).
+ *
+ * LUKUNÄKYMÄ VÄISTÄÄ YHÄ. Jos pelaaja avaa pöllön tai lehden kesken
+ * avauksen, hiljennys (VAISTO_HILJENNYS) pätee terminaaliinkin — se on
+ * pelaajan oma keskeytys eikä osa avausta.
+ *
+ * MIKSI 0,6 JA 1,45. Musiikki laskee −4,4 dB (0,019 → 0,0114): askel
+ * kuuluu selvästi, mutta raita jää soimaan — tilauksessa musiikki
+ * hiljenee "hieman", ei pois. Maisema nousee +3,2 dB (efektiivinen
+ * 0,119 → 0,173), jolloin raitojen ero kasvaa lähes 8 dB ja terminaali
+ * astuu eteen ilman että sen oma kalibrointi (ETUSIVUN_VOIMA,
+ * kuulokoe 12.8.2026) unohtuu: nosto on tilapäinen ja purkautuu
+ * luennan päätyttyä.
+ *
+ * LIUKU EIKÄ HYPPY. 1,3 s on pitkä tarpeeksi, ettei kumpikaan naksahda,
+ * ja lyhyt tarpeeksi, että sekoitus on valmis reilusti ennen
+ * kirjoituskonetta ja luentaa (2,85 s napin painalluksesta). Paluu saa
+ * maiseman oman hitaan mitan (HAIVYTYS_MS): silloin ei enää tapahdu
+ * mitään, sekoitus vain palaa pelin tavalliseen käytäntöön.
+ *
+ * MIKÄÄN EI OLE PAKKO SOIDA. Taustaäänten ollessa pois maisemaa ja
+ * musiikkia ei ole olemassa eikä kumpikaan kutsu tee mitään; kertojan
+ * ollessa pois luentaa ei tule ja nosto purkautuu vasta kun pelaaja
+ * etenee (js/ui.js aloitaKartalta). Kumpikin on normaali tila, ei virhe.
+ */
+const AVAUKSEN_MUSIIKKI = 0.6;
+const AVAUKSEN_MAISEMA = 1.45;
+const AVAUKSEN_LIUKU_MS = 1300;
+let avausKaynnissa = false;
+
+/** Musiikin kerroin avauksen ajan (ks. pohjaMusiikinTaso). */
+const avauksenMusiikkiKerroin = () => (avausKaynnissa ? AVAUKSEN_MUSIIKKI : 1);
+
+/**
+ * Maiseman kerroin: tavallisesti voimassa oleva väistö, avauksen aikana
+ * etusivulla avauksen oma nosto SEN TILALLA (ks. yllä "KERTOJA EI
+ * VÄISTÄ TERMINAALIA").
+ *
+ * Vain etusivu: nosto koskee terminaalia eikä mitään muuta paikkaa,
+ * joten avauksen aikana alkava lento tai kaupunki soi omalla
+ * kalibroidulla tasollaan ja väistyy kertojan alta kuten ennenkin —
+ * silloinkin, kun lippu ehtii jäädä hetkeksi päälle.
+ *
+ * Lukunäkymän hiljennys on ainoa väistö, joka pätee myös nostettuun
+ * terminaaliin, ja se luetaan syistä eikä soittimen `vaimennus`-
+ * kentästä: kenttä sisältää myös kertojan väistön, joka on juuri se,
+ * mitä tässä ei saa ottaa mukaan.
+ */
+const avauksenMaisemanKerroin = (oma) => {
+  if (!(avausKaynnissa && oma?.cityId === 'etusivu')) return oma?.vaimennus ?? 1;
+  return AVAUKSEN_MAISEMA * (hiljennykset.size ? VAISTO_HILJENNYS : 1);
+};
+
+/** Ajaa avauksen sekoituksen soiviin raitoihin yhdellä yhteisellä liu'ulla. */
+function ajaAvauksenAani(kesto) {
+  if (pohja) haivyta(pohja, pohjaMusiikinTaso(), undefined, kesto);
+  if (nykyinen?.audio) haivyta(nykyinen.audio, taso(nykyinen), undefined, kesto);
+}
+
+/**
+ * Portin painallus: musiikki alas, terminaali ylös — samalla liu'ulla.
+ *
+ * Turvallinen kutsua vaikkei mikään vielä soi: lippu jää päälle, ja
+ * hetken päästä käynnistyvä soitin nousee suoraan oikeaan tasoon, koska
+ * se lukee tason vasta onnistuttuaan (luoSoitin, kaynnistaPohjaMusiikki).
+ * Juuri niin portissa käy: etusivun ääni odottaa selaimen elettä, ja
+ * tämä sama painallus on se ele.
+ */
+export function aloitaAvauksenAani(kesto = AVAUKSEN_LIUKU_MS) {
+  if (avausKaynnissa) return false;
+  avausKaynnissa = true;
+  ajaAvauksenAani(kesto);
+  return true;
+}
+
+/** Luenta päättyi tai pelaaja eteni: takaisin pelin tavalliseen tasoon. */
+export function lopetaAvauksenAani(kesto = HAIVYTYS_MS) {
+  if (!avausKaynnissa) return false;
+  avausKaynnissa = false;
+  ajaAvauksenAani(kesto);
+  return true;
+}
+
+/** Onko avauksen sekoitus päällä (savuke ja testit). */
+export function avauksenAaniPaalla() {
+  return avausKaynnissa;
 }
 
 /*
@@ -1375,6 +1995,24 @@ const voimassaVaisto = () => (hiljennykset.size
   ? Math.min(pyydettyVaisto, VAISTO_HILJENNYS)
   : pyydettyVaisto);
 
+/*
+ * VÄISTÖN TIEDOT ULKOISILLE VÄISTÄJILLE (3.9.2026).
+ *
+ * Kerroin yksin ei riitä, kun väistäjä on ITSE se, joka hiljennyksen
+ * pyysi: aikajanalinssi hiljentää maiseman omalla syyllään ja soittaa
+ * sen alla omaa raitaansa (js/siirtymamusiikki.js LINSSIN_HILJENNYS).
+ * Ilman syytä raita väistyisi omaa hiljennystään ja jäisi puoleen
+ * tasoon koko ajon ajaksi.
+ *
+ *   syyt   voimassa olevat hiljennyssyyt ('pollo', 'lehti', 'linssi'…)
+ *   pohja  pyydetty väistö ilman hiljennysten kattoa — se kerroin,
+ *          joka jää voimaan, kun oma hiljennys jätetään huomiotta.
+ *
+ * Kolmas argumentti on VALINNAINEN: vanhat väistäjät (js/linssit/
+ * radio.js) lukevat vain kertoimen ja keston eivätkä muutu.
+ */
+const vaistonTiedot = () => ({ syyt: [...hiljennykset], pohja: pyydettyVaisto });
+
 /** Asettaa väistökertoimen ja ajaa kaikki soivat kierrokset sen mukaiseksi. */
 function saadaVaistoa(kerroin) {
   pyydettyVaisto = kerroin;
@@ -1398,7 +2036,7 @@ export function lisaaVaistaja(fn) {
   // Nykytila heti: kesken luennan käynnistyvä lähde ei saa aloittaa
   // täydellä voimalla.
   try {
-    fn(voimassaVaisto(), 0);
+    fn(voimassaVaisto(), 0, vaistonTiedot());
   } catch {
     /* väistäjä ei saa kaataa äänipolkua */
   }
@@ -1408,9 +2046,10 @@ export function lisaaVaistaja(fn) {
 /** Ajaa voimassa olevan kertoimen kaikkiin soiviin raitoihin. */
 function ajaVaisto(kesto = HAIVYTYS_MS) {
   const kerroin = voimassaVaisto();
+  const tiedot = vaistonTiedot();
   for (const vaistaja of vaistajat) {
     try {
-      vaistaja(kerroin, kesto);
+      vaistaja(kerroin, kesto, tiedot);
     } catch {
       /* väistäjä ei saa kaataa äänipolkua */
     }
@@ -1422,7 +2061,7 @@ function ajaVaisto(kesto = HAIVYTYS_MS) {
   sfx.vaimennaAmbienssi?.(kerroin, kesto / 1000);
   // Tietovisan musiikki on oma raitansa: se ei saa jäädä jyräämään
   // ääninäytettä, mutta ei myöskään kokonaan vaieta kysymyksen ajaksi.
-  if (musiikki && kerroin < 1) haivyta(musiikki, MUSIIKKI_VOIMA * kerroin, undefined, kesto);
+  if (musiikki && kerroin < 1) haivyta(musiikki, visaMusiikinTaso(kerroin), undefined, kesto);
   /*
    * Pohjavire väistyy samalla kertoimella. Se on jo valmiiksi hyvin
    * hiljainen, mutta juuri siksi sen pitää väistyä: kertojan alla
@@ -1430,9 +2069,10 @@ function ajaVaisto(kesto = HAIVYTYS_MS) {
    * nousisi suhteessa esiin vaikka sen oma lukema ei muutu.
    * Palautuksen (kerroin === 1) on oltava mukana toisin kuin
    * visamusiikilla, joka sammuu kysymyksen mukana — pohjavire jää
-   * soimaan ja jäisi muuten pysyvästi väistöön.
+   * soimaan ja jäisi muuten pysyvästi väistöön. Kaupungin oma kappale
+   * soi samassa soittimessa, joten se väistyy täsmälleen samoin.
    */
-  if (pohja) haivyta(pohja, POHJA_VOIMA * kerroin, undefined, kesto);
+  if (pohja) haivyta(pohja, pohjaMusiikinTaso(kerroin), undefined, kesto);
   if (!nykyinen) return;
   nykyinen.vaimennus = kerroin;
   const kohde = taso(nykyinen);

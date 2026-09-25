@@ -294,8 +294,9 @@ export function opasKaudet(ui, matkailu) {
  * sadepalkit, samat asteikot ja sama lähde — kaksi graafia samassa
  * pelissä ei enää eroa toisistaan millään tavalla.
  *
- * Data tulee samasta paketista kuin lehdenkin (SAATIEDOT, ERA5
- * 1991–2020), joten oppaalla ei ole omaa ilmastodataansa
+ * Data tulee samasta paketista kuin lehdenkin (SAATIEDOT, pääosin
+ * ERA5 1991–2020; rivikohtainen poikkeus kertoo lähteensä
+ * lahde-kentässä), joten oppaalla ei ole omaa ilmastodataansa
  * ylläpidettävänä eikä kaupungin lukuja ole kahdessa paikassa.
  * Kaupunki ilman säätietoja taittuu ilman graafia.
  *

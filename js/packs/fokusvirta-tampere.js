@@ -214,34 +214,130 @@ export const FOKUSVIRTA_TAMPERE = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Tampere, elokuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Kahden järven välissä kohisee koski, ja kosken partaalla '
-      + 'seisoo tehdas toisensa vieressä — puuvillaa, paperia, rautaa. '
-      + 'Isäntäni vertasi kaupunkiaan ylpeänä Manchesteriin, ja piiput '
-      + 'tosiaan savuavat samaan tapaan. Tehtaansaleissa on enemmän naisia kuin '
-      + 'miehiä, ja lauantaina koko kaupunki kävelee koskenrantaa pitkin '
-      + 'parhaissaan. Vesi tekee täällä työn, jonka muualla tekee hiili — '
-      + 'ja vesi ei lopu.',
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 befc56ce08b1a5ca27e2c989d199bfe8cd26f9ca3860110867c5319366aa2506. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tampere-r20260909-paper-v4.jpg",
+      lyhyt: "Tampere, 1873. Katkennut lanka ja kädet, jotka osaavat jatkaa.",
+      selite: "Pitkien tehdaskoneiden vierellä työntekijä solmi katkenneen langan taitavin sormin. Kuvasin hänet työssään, sillä koneiden voima tarvitsi rinnalleen ihmisen osaamista.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.finna.fi/Search/Results?lookfor=Finlayson+tehdas+kehruusali&type=AllFields"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tampere-r20260911-paper2-v1.jpg",
+      lyhyt: "Tampere, 1873. Koneiden voima kulki työntekijöiden sormien kautta.",
+      selite: "Nainen seisoi jälleen kehruukoneensa äärellä pitkien konerivien täyttämässä salissa. Jokainen lanka tarvitsi silti työntekijän käsiä.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.finna.fi/Search/Results?lookfor=Finlayson+tehdas+kehruusali&type=AllFields"],
+    },
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Tampere, elokuussa 1873. Viileä aamu; koski kohisee yöllä; '
+      + 'puntari korkealla.',
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1; audio/alignment tarvitaan. */
+    teksti: "Tammerkoski teki töitä kahden järven välissä: puuvilla muuttui langaksi ja miehet rahakkaiksi. Finlaysonilla nainen näytti katkenneen langan solmun. Minun sormissani lanka katkesi heti; hän sitoi sen katsomatta. Tehtaan voimaa mitatessa pitäisi laskea myös sormet.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä. Suuraakkosia ei tekstissä ole, joten
      * kirjoitusasun sovituksia ei tarvita.
      */
-    luenta: '[curious] Kahden järven välissä kohisee koski, ja kosken '
-      + 'partaalla seisoo tehdas toisensa vieressä — puuvillaa, paperia, '
-      + 'rautaa. [excited] Isäntäni vertasi kaupunkiaan ylpeänä '
-      + 'Manchesteriin, ja piiput tosiaan savuavat samaan tapaan. Tehtaansaleissa on '
-      + 'enemmän naisia kuin miehiä, ja lauantaina koko kaupunki kävelee '
-      + 'koskenrantaa pitkin parhaissaan. [softly] Vesi tekee täällä '
-      + 'työn, jonka muualla tekee hiili — [whispers] ja vesi ei lopu.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Finlaysonin tehtaassa nainen näytti, kuinka
+     * katkennut lanka yhdistetään" (opastus).
+     */
+    reaktiot: [
+  {
+    "id": "tampere.r1",
+    "ankkuri": "puuvilla muuttui langaksi ja miehet rahakkaiksi",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tampere.r2",
+    "ankkuri": "nainen näytti katkenneen langan solmun",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tampere.r3",
+    "ankkuri": "lanka katkesi heti",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tampere.r4",
+    "ankkuri": "hän sitoi sen katsomatta",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tampere.r5",
+    "ankkuri": "pitäisi laskea myös sormet",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    luenta: "[curious] Tammerkoski teki töitä kahden järven välissä: puuvilla muuttui langaksi ja miehet rahakkaiksi. Finlaysonilla nainen näytti katkenneen langan solmun. Minun sormissani lanka katkesi heti; hän sitoi sen katsomatta. [thoughtfully] Tehtaan voimaa mitatessa pitäisi laskea myös sormet.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-tampere.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat tampere-v2; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-tampere-01-r20260909-14mm-v2.jpg, pulu-cam-tampere-02-r20260909-14mm-v3.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tampere-01-r20260909-14mm-v2.jpg',
+        lyhyt: 'Tampere: seurasin tarjoilijaa ja päädyin tehtaan katolle.',
+        selite: 'Finlaysonin Kattopuutarhassa istutukset ja kahvilapöydät '
+          + 'levittäytyvät kaupungin kattojen tasolle. Sinipaitainen tarjoilija '
+          + 'kulkee niiden välissä leipäkori kädessään.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.kattopuutarha.fi/',
+          'https://finlaysoninalue.fi/tehdaspuutarha/',
+          'https://finlaysoninalue.fi/ravintolat-ja-kahvilat/',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tampere-02-r20260909-14mm-v3.jpg',
+        lyhyt: 'Tampere: puutarha katolla ja leipäkori reitillä on hyvä '
+          + 'kaupunkisuunnitelma.',
+        selite: 'Ylhäältä Kattopuutarhan pöydät ja istutukset muodostavat '
+          + 'kartan, jolla tarjoilija jatkaa leipäkorin kanssa kohti asiakasta. '
+          + 'Tehdasalueen katolle on syntynyt uusia vihreitä kulkureittejä.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.kattopuutarha.fi/',
+          'https://finlaysoninalue.fi/tehdaspuutarha/',
+          'https://finlaysoninalue.fi/ravintolat-ja-kahvilat/',
+        ],
+      },
+    ],
     /*
      * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ —
      * PARIPERIAATE"). Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti
@@ -279,13 +375,33 @@ export const FOKUSVIRTA_TAMPERE = {
      * REUNOILLA): lyhentymät vain reunoilla ("Kato", "mut"), keskellä
      * sanat auki; pronominit kokonaisina; ei huutomerkkejä.
      */
-    maadoitus: 'Kato, siinä isoisäsi oli oikeassa: vesi ei loppunut. '
-      + 'Samassa koskessa pyörii yhä neljä vesivoimalaa, ja vanhin '
-      + 'niistä aloitti vuonna 1916 — koski tekee edelleen sähköä '
-      + 'keskellä kaupunkia. Yhdeksän vuotta hänen käyntinsä jälkeen '
-      + 'sama vesi sytytti Finlaysonin kutomosaliin hehkulamput, '
-      + 'ensimmäiset koko Pohjolassa. Piiput hän ehti nähdä, mut sitä '
-      + 'valoa ei.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Tampereen Rajaportin saunalla ihmiset jäähdyttelevät pihalla ja juttelevat ventovieraille. Minä jäin aidalle kuuntelemaan. Yksi teki lähtöä kolmesti. Minäkin tiesin lopulta hänen putkiremonttinsa hinnan."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      *
@@ -301,16 +417,11 @@ export const FOKUSVIRTA_TAMPERE = {
      * koski- tai tehdashero generoidaan myöhemmin, vaihto on tässä
      * yhden rivin työ.
      */
-    teksti: 'Se isäntäväen vertaus jäi elämään lempinimenä, jonka kuulet '
-      + 'kohta itsekin — tehtaat vaan ovat nykyään museoita, teattereita '
-      + 'ja panimoita.. piiput seisovat mut eivät savua. Koski kohisee keskellä '
-      + 'kaupunkia ihan niin kuin isoisäsi aikaan, ja sen rannalla '
-      + 'kävellään edelleen. Suomi oli hänen käydessään '
-      + 'suuriruhtinaskunta, keisarin oma. Katsotaan merkinnät.',
     kuva: {
       ampari: 'herokoe/hero-tampere-aamu.jpg',
       /* Selite on lehden oman avauskuvan selite lyhennettynä yhdeksi
        * virkkeeksi; yksikään luku eikä nimi muutu. */
+      lyhyt: 'Näsilinna valmistui 1898 Karl August Wreden suunnittelemana uusbarokkipalatsina, nimeltä Milavida.',
       selite: 'Tampereen Näsilinna valmistui 1898 Karl August Wreden '
         + 'suunnittelemaksi uusbarokkipalatsiksi tehtailijasuvun '
         + 'jäsenelle Peter von Nottbeckille, joka antoi sille nimen '
@@ -374,6 +485,8 @@ export const FOKUSVIRTA_TAMPERE = {
         + 'vuotta, eli kaupunki on kosken rinnalla eilinen. Ja maa nousee '
         + 'yhä: Tampereella noin viisi millimetriä vuodessa. Isoisäsi '
         + 'olisi mitannut sen ja kirjannut lukeman ylös.',
+      lahde: 'fi-Wikipedia "Tammerkoski" ja fi-Wikipedia "Tampere". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 1654×1209, public domain, Magnus von Wright,
        * päiväys 1861, Kansallisgallerian kokoelma (A I 36:2),
@@ -388,6 +501,7 @@ export const FOKUSVIRTA_TAMPERE = {
        */
       kuva: {
         tiedosto: 'Magnus von Wright - Tammerkoski - A I 36-2 - Finnish National Gallery.jpg',
+        lyhyt: 'Tammerkosken partaalla seisoi tehtaita ja piippuja jo 1861, ennen isoisän käyntiä.',
         selite: 'Tammerkosken partaalla seisoi tehtaita ja savuavia '
           + 'piippuja jo vuonna 1861, kaksitoista vuotta ennen isoisän '
           + 'käyntiä.',
@@ -482,6 +596,8 @@ export const FOKUSVIRTA_TAMPERE = {
         + 'punatiilisen kirkon, ja siellä aloitettiin vuoden ensimmäinen '
         + 'työpäivä jumalanpalveluksella aina 1970-luvulle asti. Kirkko '
         + 'annettiin seurakunnalle 1981 — yhdellä ehdolla: nimi pysyy.',
+      lahde: 'fi-Wikipedia "Finlaysonin tehdasalue", fi-Wikipedia "Tampere" '
+        + 'ja fi-Wikipedia "Finlaysonin kirkko". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 2272×1704, CC BY 2.0, tekijä Museokeskus
        * Vapriikki, kuvaaja Heli Haavisto, kuvattu 21.2.2013,
@@ -494,6 +610,7 @@ export const FOKUSVIRTA_TAMPERE = {
        */
       kuva: {
         tiedosto: 'Finlaysonin kirkko Heli Haavisto (16556986992).jpg',
+        lyhyt: 'Finlaysonin puuvillatehtaan kirkko valmistui 1879, luovutettiin seurakunnalle 1981 nimi säilyttäen.',
         selite: 'Finlaysonin puuvillatehtaan oma kirkko valmistui 1879, '
           + 'ja tehdas luovutti sen seurakunnalle 1981 ehdolla, että nimi '
           + 'säilyy.',
@@ -573,6 +690,7 @@ export const FOKUSVIRTA_TAMPERE = {
         + 'poistettu. Nykyään ne ovat suomalaisen symbolismin '
         + 'mestariteoksia, ja käärme katsoo alas kirkkosaliin siipien '
         + 'keskeltä kuin mitään ei olisi tapahtunut.',
+      lahde: 'fi-Wikipedia "Tampereen tuomiokirkko". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 4272×2848, public domain (tekijä Hugo Simberg,
        * kuollut 1917; kuvaus "Snake fresco by Hugo Simberg in Tampere
@@ -582,6 +700,7 @@ export const FOKUSVIRTA_TAMPERE = {
        */
       kuva: {
         tiedosto: 'Kattofresko Tampereen tuomiokirkko.jpg',
+        lyhyt: 'Tampereen tuomiokirkon pääholvin keskellä paratiisikäärme, suussaan hyvän ja pahan tiedon omena.',
         selite: 'Tampereen tuomiokirkon pääholvin keskellä kiemurtelee '
           + 'paratiisikäärme, jonka suussa on hyvän ja pahan tiedon '
           + 'omena.',
@@ -691,6 +810,7 @@ export const FOKUSVIRTA_TAMPERE = {
      */
     kuva: {
       tiedosto: 'Senate Atlas, 1870–1907. Sheet XIX-XX 24-25 Tampere.jpg',
+      lyhyt: 'Venäjän sotaministeriön topografit kartoittivat Tampereen Senaatin kartastoon nimellä Таммерфорсъ.',
       selite: 'Venäjän sotaministeriön topografit kartoittivat Tampereen '
         + 'seudun Senaatin kartastoon, jossa kaupunki on kahden järven '
         + 'välissä nimellä Таммерфорсъ.',

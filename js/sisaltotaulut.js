@@ -7,7 +7,6 @@
  */
 
 import { AFRICA_SAAPUMISET } from './packs/africa-saapumiset.js';
-import { EUROPE_SAAPUMISET } from './packs/europe-saapumiset.js';
 import { ASIA_SAAPUMISET } from './packs/asia-saapumiset.js';
 import { NORTHAMERICA_SAAPUMISET } from './packs/northamerica-saapumiset.js';
 import { SOUTHAMERICA_SAAPUMISET } from './packs/southamerica-saapumiset.js';
@@ -24,6 +23,9 @@ import { OCEANIA_VALOKUVAT } from './packs/oceania-valokuvat.js';
 import { AFRICA_MAATIEDOT } from './packs/africa-maatiedot.js';
 import { EUROPE_MAATIEDOT } from './packs/europe-maatiedot.js';
 import { ASIA_MAATIEDOT } from './packs/asia-maatiedot.js';
+import { NORTHAMERICA_MAATIEDOT } from './packs/northamerica-maatiedot.js';
+import { SOUTHAMERICA_MAATIEDOT } from './packs/southamerica-maatiedot.js';
+import { OCEANIA_MAATIEDOT } from './packs/oceania-maatiedot.js';
 import { EUROPE_KIELET } from './packs/europe-kielet.js';
 import { OMAT_ARTIKKELIT } from './packs/africa-artikkelit.js';
 import { EUROPE_ARTIKKELIT } from './packs/europe-artikkelit.js';
@@ -65,8 +67,23 @@ import { OCEANIA_ARTIKKELIT } from './packs/oceania-artikkelit.js';
  * Nimetty yhdistelmä ei estä ansaa mutta tekee siitä yhden rivin
  * kokoisen: uusi lauta lisätään yhteen paikkaan taulua kohti.
  */
+/*
+ * EUROOPPA EI OLE TÄSSÄ TAULUSSA (omistaja 8.9.2026, Raamattu: KOKO
+ * EUROOPPA KULKEE FOKUSVIRTAPAKKIEN KAUTTA, sanatarkasti: *"joo
+ * kirjoita niille omat ja arkistoi europe-saapumiset tiedosto ja
+ * kirjoita sen alkuun EI ENÄÄ KÄYTÖSSÄ tms tai miten vain parhaiten
+ * saadaan pelistä pois että ei vahingossa palaa"*).
+ *
+ * Euroopan laudan jokaisella 45 kohteella on nyt oma fokusvirtapakki
+ * (js/packs/fokusvirrat.js), josta matkakirjakortti lukee merkintänsä
+ * (js/fokusvirta.js fokusvirtaMatkakirja). Vanha taulu on arkistoitu
+ * pelin ulkopuolelle tekstitiedostoksi
+ * (docs/arkisto/europe-saapumiset-2026-09-08.js.txt), jottei se palaa
+ * vahingossa tuontina. Afrikan, Aasian, Amerikoiden ja Oseanian taulut
+ * jäävät ennalleen.
+ */
 const KAIKKI_SAAPUMISET = {
-  ...AFRICA_SAAPUMISET, ...EUROPE_SAAPUMISET, ...ASIA_SAAPUMISET,
+  ...AFRICA_SAAPUMISET, ...ASIA_SAAPUMISET,
   ...NORTHAMERICA_SAAPUMISET, ...SOUTHAMERICA_SAAPUMISET, ...OCEANIA_SAAPUMISET,
 };
 const KAIKKI_KULTTUURI = { ...AFRICA_KULTTUURI, ...EUROPE_KULTTUURI };
@@ -100,7 +117,18 @@ export const KAIKKI_VALOKUVAT = {
   ...AFRICA_VALOKUVAT, ...EUROPE_VALOKUVAT, ...ASIA_VALOKUVAT, ...ASIA_LISAT_VALOKUVAT,
   ...NORTHAMERICA_VALOKUVAT, ...SOUTHAMERICA_VALOKUVAT, ...OCEANIA_VALOKUVAT,
 };
-const KAIKKI_MAATIEDOT = { ...AFRICA_MAATIEDOT, ...EUROPE_MAATIEDOT, ...ASIA_MAATIEDOT };
+/*
+ * Amerikoiden ja Oseanian taulut tulivat mukaan 6.9.2026: maalehti
+ * lukee tunnusluvut MAATIEDOT[laudan tunnus][maatunnus], eikä puuttuva
+ * rivi kaada mitään — se vain jättää kartan alta väkiluvun, pinta-alan,
+ * demokratiaindeksin ja tervehdykset pois. USA:n, Kanadan, Meksikon,
+ * Brasilian, Argentiinan, Perun, Ecuadorin, Australian ja Uuden-
+ * Seelannin lehdet olivat siihen asti tältä osin tyhjiä.
+ */
+const KAIKKI_MAATIEDOT = {
+  ...AFRICA_MAATIEDOT, ...EUROPE_MAATIEDOT, ...ASIA_MAATIEDOT,
+  ...NORTHAMERICA_MAATIEDOT, ...SOUTHAMERICA_MAATIEDOT, ...OCEANIA_MAATIEDOT,
+};
 
 /*
  * HUOM: avain puuttuvalta laudalta ei kaada mitään — sisältö vain
@@ -112,7 +140,9 @@ const KAIKKI_MAATIEDOT = { ...AFRICA_MAATIEDOT, ...EUROPE_MAATIEDOT, ...ASIA_MAA
  */
 export const SAAPUMISTEKSTIT = {
   africa: AFRICA_SAAPUMISET,
-  europe: EUROPE_SAAPUMISET,
+  // `europe`-riviä EI ole (8.9.2026, ks. KAIKKI_SAAPUMISET yllä):
+  // Euroopan merkinnät tulevat fokusvirtapakeista. Rivin palauttaminen
+  // toisi vanhat tekstit takaisin varapolulle (js/ui.js renderFact).
   // Aasian teksteillä ei ole omaa lautaa: kaupungit ovat vain
   // yhdistetyillä laudoilla, joten ne tulevat mukaan vain tänne.
   maailmankartta: KAIKKI_SAAPUMISET,
@@ -197,6 +227,19 @@ export function luentaLauta(joukko, packId, cityId) {
   return null;
 }
 
+/*
+ * EUROOPAN RIVIT ON POISTETTU (omistaja 8.9.2026, Raamattu: KOKO
+ * EUROOPPA KULKEE FOKUSVIRTAPAKKIEN KAUTTA).
+ *
+ * Nämä 41 riviä kertoivat, että vanhalle saapumistekstille on generoitu
+ * luenta (assets/audio/puhe-europe-saapuminen-<kaupunki>.mp3). Kun
+ * vanha taulu arkistoitiin pois pelistä, myös sen luennat jäivät
+ * orvoiksi: teksti, jota ne lukevat, ei ole enää missään kortissa.
+ * Euroopan merkinnät luetaan nyt fokusvirtapakkien omista
+ * `matkakirja.aanite`-kentistä (js/ui.js renderFact). Ämpärin vanhat
+ * tiedostot jäävät paikoilleen — ne on kerran maksettu — mutta peli ei
+ * enää hae niitä.
+ */
 export const SAAPUMISLUENNAT = new Set([
   'africa:addisabeba',
   'africa:ahaggar',
@@ -237,47 +280,6 @@ export const SAAPUMISLUENNAT = new Set([
   'africa:tshadjarvi',
   'africa:viktoria',
   'africa:viktorianputoukset',
-  'europe:alpit',
-  'europe:amsterdam',
-  'europe:ateena',
-  'europe:barcelona',
-  'europe:berliini',
-  'europe:budapest',
-  'europe:bukarest',
-  'europe:dublin',
-  'europe:dubrovnik',
-  'europe:edinburgh',
-  'europe:granada',
-  'europe:helsinki',
-  'europe:islanti',
-  'europe:istanbul',
-  'europe:kiova',
-  'europe:kobenhavn',
-  'europe:krakova',
-  'europe:kreeta',
-  'europe:lappi',
-  'europe:lissabon',
-  'europe:lontoo',
-  'europe:madrid',
-  'europe:marseille',
-  'europe:moskova',
-  'europe:odessa',
-  'europe:oslo',
-  'europe:pariisi',
-  'europe:pietari',
-  'europe:praha',
-  'europe:riika',
-  'europe:rooma',
-  'europe:sarajevo',
-  'europe:sisilia',
-  'europe:sofia',
-  'europe:tallinna',
-  'europe:tromssa',
-  'europe:tukholma',
-  'europe:varsova',
-  'europe:venetsia',
-  'europe:vilna',
-  'europe:wien',
   'middleeast:aden',
   'middleeast:ankara',
   'middleeast:bagdad',
@@ -491,9 +493,19 @@ export const HAVAINTOLUENNAT = new Set([
  * Ilman tätä nappia vastaavaa vahtia soitettaisiin hiljaisuutta
  * kaupungeissa, joiden luentaa ei ole vielä tehty.
  */
-export const KOHTAAMISLUENNAT = new Set([
-  'lontoo',
-]);
+/*
+ * Uudistus 5.9.2026, Fable tarkisti ja viimeisteli 22.10.
+ *
+ * LONTOO POISTETTU TILAPÄISESTI. Kaupungin kohtaaminen kirjoitettiin
+ * uusiksi (js/packs/kohtaamiset.js: jokietsijä Ned → muotialan
+ * opiskelija Leila), joten R2:ssa olevat
+ * puhe-kohtaaminen-lontoo-{tervehdys,loyto}.mp3 puhuvat vanhoilla
+ * sanoilla. Sama sääntö kuin kaaren mykistetyt-listalla: muuttunut
+ * teksti ei saa soida vanhalla äänellä. Rivi 'lontoo' palautetaan
+ * tähän, kun tools/generoi-kohtaamiset.mjs on ajettu uusilla
+ * teksteillä ja tiedostot on kuunneltu.
+ */
+export const KOHTAAMISLUENNAT = new Set([]);
 
 // Lautojen tunnusluvut karttaselitteeseen: pinta-ala ja väkiluku isoin
 // pyöristyksin (omistajan toive — vähäeleinen, vain numerot ja symboli).

@@ -15,6 +15,7 @@
  * uusi kaupunki oli yksi tuonti ja yksi rivi tähän tauluun. Sofia on
  * Ateenasta yksi askel jalan pelin maantieteessä.
  */
+import { FOKUSVIRTA_ALPIT } from './fokusvirta-alpit.js';
 import { FOKUSVIRTA_ATEENA } from './fokusvirta-ateena.js';
 import { FOKUSVIRTA_BERLIINI } from './fokusvirta-berliini.js';
 import { FOKUSVIRTA_BUDAPEST } from './fokusvirta-budapest.js';
@@ -35,6 +36,11 @@ import { FOKUSVIRTA_TUKHOLMA } from './fokusvirta-tukholma.js';
 import { FOKUSVIRTA_WIEN } from './fokusvirta-wien.js';
 import { FOKUSVIRTA_SEVILLA } from './fokusvirta-sevilla.js';
 import { FOKUSVIRTA_BERGEN } from './fokusvirta-bergen.js';
+import { FOKUSVIRTA_BRYSSEL } from './fokusvirta-bryssel.js';
+import { FOKUSVIRTA_LJUBLJANA } from './fokusvirta-ljubljana.js';
+import { FOKUSVIRTA_KOSICE } from './fokusvirta-kosice.js';
+import { FOKUSVIRTA_LUXEMBURG } from './fokusvirta-luxemburg.js';
+import { FOKUSVIRTA_VALLETTA } from './fokusvirta-valletta.js';
 import { FOKUSVIRTA_AMSTERDAM } from './fokusvirta-amsterdam.js';
 import { FOKUSVIRTA_DUBLIN } from './fokusvirta-dublin.js';
 import { FOKUSVIRTA_EDINBURGH } from './fokusvirta-edinburgh.js';
@@ -54,6 +60,42 @@ import { FOKUSVIRTA_MOSKOVA } from './fokusvirta-moskova.js';
 import { FOKUSVIRTA_ODESSA } from './fokusvirta-odessa.js';
 import { FOKUSVIRTA_PIETARI } from './fokusvirta-pietari.js';
 import { FOKUSVIRTA_VARSOVA } from './fokusvirta-varsova.js';
+import { FOKUSVIRTA_ISLANTI } from './fokusvirta-islanti.js';
+import { FOKUSVIRTA_KREETA } from './fokusvirta-kreeta.js';
+import { FOKUSVIRTA_LAPPI } from './fokusvirta-lappi.js';
+import { FOKUSVIRTA_SISILIA } from './fokusvirta-sisilia.js';
+import { FOKUSVIRTA_TROMSSA } from './fokusvirta-tromssa.js';
+
+/**
+ * KEVYET PAKIT — vain matkakirja ja pulun kupla (omistaja 8.9.2026).
+ *
+ * Nämä kuusi kohdetta olivat Euroopan viimeiset, joiden merkintä
+ * luettiin vanhasta saapumistaulusta (js/packs/europe-saapumiset.js,
+ * arkistoitu docs/arkisto/europe-saapumiset-2026-09-08.js.txt).
+ * Omistajan linjaus 8.9.2026 (Raamattu: KOKO EUROOPPA KULKEE
+ * FOKUSVIRTAPAKKIEN KAUTTA) siirsi ne fokusvirtapakkeihin, mutta VAIN
+ * siltä osin kuin peli lukee: kortit ovat pois käytöstä
+ * (js/fokusvirta.js FOKUSVIRTA_KORTIT === false), joten täkyjä,
+ * oppituntia, kohtaamista ja lehtitehtäviä ei ole kirjoitettu.
+ *
+ * MIKSI JOUKKO ON NIMETTY EIKÄ PÄÄTELTY. Testit vaativat täydeltä
+ * pakilta neljä kuvaa, aarrevaiheen ja kolme täkyä
+ * (tests/fokusvirta.test.mjs). Jos kevyt pakki tunnistettaisiin siitä,
+ * että kentät puuttuvat, sama sääntö vaientaisi vartion myös silloin
+ * kun kentät katoavat TÄYDESTÄ pakista vahingossa. Nimetty joukko
+ * pitää poikkeuksen luettelona: uusi kevyt pakki on yksi rivi tässä,
+ * ja täyden pakin rapautuminen kaataa testin kuten ennenkin.
+ *
+ * BRYSSEL (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti)
+ * liittyi samaan kevyeen joukkoon: uusi pelikaupunki tarvitsee
+ * fokusvirtapakin heti (tests/fokusvirta.test.mjs), mutta täysi pino
+ * (täkyt, oppitunti, kohtaaminen, lehtitehtävät) on oma, isompi
+ * sisältöerä eikä kuulu minimiin.
+ */
+export const KEVYET_FOKUSVIRRAT = new Set([
+  'alpit', 'islanti', 'kreeta', 'lappi', 'sisilia', 'tromssa', 'bryssel',
+  'ljubljana', 'kosice', 'luxemburg', 'valletta',
+]);
 
 export const FOKUSVIRRAT = {
   ateena: FOKUSVIRTA_ATEENA,
@@ -200,9 +242,85 @@ export const FOKUSVIRRAT = {
   odessa: FOKUSVIRTA_ODESSA,
   pietari: FOKUSVIRTA_PIETARI,
   varsova: FOKUSVIRTA_VARSOVA,
+  /*
+   * KEVYT ERÄ (omistaja 8.9.2026, Raamattu: KOKO EUROOPPA KULKEE
+   * FOKUSVIRTAPAKKIEN KAUTTA): Euroopan laudan kuusi viimeistä kohdetta
+   * — Kreeta, Sisilia, Islanti, Alpit, Rovaniemi (tunnus `lappi`) ja
+   * Tromssa. Näiden merkintä luettiin siihen asti vanhasta
+   * saapumistaulusta, joka on nyt arkistoitu pois pelistä
+   * (docs/arkisto/europe-saapumiset-2026-09-08.js.txt). Tämän erän
+   * jälkeen JOKAISELLA Euroopan laudan kaupungilla on fokusvirtapakki —
+   * vartiona tests/fokusvirta.test.mjs.
+   *
+   * PAKIT OVAT KEVYITÄ (KEVYET_FOKUSVIRRAT yllä): matkakirja ja pulun
+   * kupla, ei täkyjä eikä kortteja. Rekisteri ei huomaa siitä mitään —
+   * ero on paketin sisällössä, ei täällä.
+   */
+  kreeta: FOKUSVIRTA_KREETA,
+  sisilia: FOKUSVIRTA_SISILIA,
+  islanti: FOKUSVIRTA_ISLANTI,
+  alpit: FOKUSVIRTA_ALPIT,
+  lappi: FOKUSVIRTA_LAPPI,
+  tromssa: FOKUSVIRTA_TROMSSA,
+  /*
+   * BRYSSEL (19.9.2026, omistajan päätös: Belgia saa pelikaupungin
+   * Bryssel, pilotti). Kevyt pakki (KEVYET_FOKUSVIRRAT yllä), sama
+   * perustelu kuin edellisellä kuudella: peli tarvitsee matkakirjan ja
+   * pulun kuplan heti, täysi pino on oma sisältöerä.
+   */
+  bryssel: FOKUSVIRTA_BRYSSEL,
+  /*
+   * LJUBLJANA (20.9.2026, omistajan päätös 19.9.2026: Slovenia saa
+   * pelikaupungin Ljubljana). Kevyt pakki samasta syystä kuin Bryssel
+   * ja muut KEVYET_FOKUSVIRRAT: peli tarvitsee matkakirjan ja pulun
+   * kuplan heti, täysi pino on oma sisältöerä.
+   */
+  ljubljana: FOKUSVIRTA_LJUBLJANA,
+  /*
+   * KOŠICE (20.9.2026, omistajan päätös 19.9.2026: Slovakia saa
+   * pelikaupungin Košice). Kevyt pakki samasta syystä kuin Bryssel ja
+   * Ljubljana: peli tarvitsee matkakirjan ja pulun kuplan heti, täysi
+   * pino on oma sisältöerä.
+   */
+  kosice: FOKUSVIRTA_KOSICE,
+  /*
+   * LUXEMBURG (21.9.2026, omistajan päätös 21.9.2026: Kypros, Luxemburg
+   * ja Malta saavat pelikaupungin). Kevyt pakki samasta syystä kuin
+   * Bryssel, Ljubljana ja Košice: peli tarvitsee matkakirjan ja pulun
+   * kuplan heti, täysi pino on oma sisältöerä.
+   */
+  luxemburg: FOKUSVIRTA_LUXEMBURG,
+  /*
+   * VALLETTA (21.9.2026, omistajan päätös 19.9.2026: Malta saa
+   * pelikaupungin Valletta). Kevyt pakki samasta syystä kuin Bryssel,
+   * Ljubljana ja Košice: peli tarvitsee matkakirjan ja pulun kuplan
+   * heti, täysi pino on oma sisältöerä.
+   */
+  valletta: FOKUSVIRTA_VALLETTA,
 };
 
 /** Kaupungin fokusvirta tai null, jos kaupungille ei ole sisältöä. */
 export function fokusvirtaKaupungille(cityId) {
   return (cityId && FOKUSVIRRAT[cityId]) || null;
+}
+
+/**
+ * KAUPUNGIT, JOILLA ON LUENTAKUVA (omistaja 9.9.2026 klo 12.20,
+ * sanatarkasti: *"Kuvaputkelta tulee kohta kahdeksan kuvaa, joita
+ * käytetään matkakirjan luennon kanssa yhtä aikaa. … Voisit nyt merkata
+ * eri värillä sellaiset kaupungit, joissa tällaiset kuvat on."*).
+ *
+ * Joukko JOHDETAAN pakeista (matkakirja.luentakuva), ei ylläpidetä
+ * käsin: kartan merkintä seuraa dataa eikä lupaa kuvaa, jota ei ole.
+ * Kartta (js/pallolauta/lauta.js kaupunkipisteenVari, js/ui.js
+ * luentakuvakehä) värjää nämä pisteet omalla värillään.
+ *
+ * @returns {Set<string>} kaupunkien tunnukset
+ */
+export function luentakuvallisetKaupungit() {
+  const joukko = new Set();
+  for (const [id, virta] of Object.entries(FOKUSVIRRAT)) {
+    if (virta?.matkakirja?.luentakuva) joukko.add(id);
+  }
+  return joukko;
 }

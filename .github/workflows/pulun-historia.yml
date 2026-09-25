@@ -1,0 +1,118 @@
+# ══════════════════════════════════════════════════════════════════
+# PULUN ÄÄNIHISTORIA — RAJATTU LUKUREITTI
+# ══════════════════════════════════════════════════════════════════
+#
+# Rootin pyyntö 13.9.2026: rajattu workflow_dispatch-lukureitti
+# tools/pulun-historia.mjs:lle, joka käyttää Actionsin ELEVEN_API_KEY
+# -salaisuutta suoraan runnerissa.
+#
+# MIKSI TÄMÄ ON OMA TIEDOSTONSA EIKÄ TOIMINTO generoi-pulu.yml:SSÄ.
+# Se työnkulku kantaa myös R2-salaisuudet ja osaa ajaa maksullisen
+# generoinnin. Lukureitin arvo on siinä, mitä se EI voi tehdä: tällä
+# työnkululla ei ole R2-tunnuksia lainkaan, joten se ei voi kirjoittaa
+# pelin mediapalvelimelle edes vahingossa. Sama raja on helpompi pitää
+# omassa tiedostossa kuin ehtolauseissa toisen sisällä.
+#
+# MITÄ TÄMÄ TEKEE: GET /v1/history (listaus) ja GET
+# /v1/history/<id>/audio (jo maksetun äänen lataus). Ei krediittien
+# kulutusta, ei TTS:ää, ei forced alignmentia, ei viimeistelyerää, ei
+# vientiä mediapalvelimelle, ei livecachen kytkentää.
+#
+# SALAISUUS EI VUODA: avain menee vain askeleen ympäristöön, eikä sitä
+# tulosteta, kopioida artifactiin tai kirjoiteta tiedostoon. Työkalussa
+# on tätä koskeva vartiotesti (tests/pulun-historia.test.mjs).
+#
+# Tulokset palautetaan saman repon Actions-artifactina RC:lle. Artifact
+# ei ole repo eikä julkinen mediapalvelin: media ei päädy kumpaankaan.
+
+name: Pulun äänihistoria (luku)
+
+on:
+  workflow_dispatch:
+    inputs:
+      sivut:
+        description: >-
+          Montako 100 rivin sivua historiaa haetaan. Aloita pienellä ja
+          kasvata vain jos rivit loppuvat kesken.
+        required: false
+        default: '5'
+      lataa:
+        description: >-
+          Ladataanko löytyneet äänet artifactiin (kylla/ei). Listaus
+          yksin riittää sen selvittämiseen, onko arkisto tallessa.
+        required: true
+        type: choice
+        default: 'ei'
+        options: ['ei', 'kylla']
+
+permissions:
+  contents: read
+
+jobs:
+  historia:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Tarkista että avain on tallessa
+        env:
+          AVAIN: ${{ secrets.ELEVEN_API_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -z "$AVAIN" ]; then
+            echo "::error::ELEVEN_API_KEY-salaisuutta ei löydy tästä reposta."
+            exit 1
+          fi
+          echo "Avain löytyy."
+
+      - name: Lue historia
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          # Suodattamaton listaus näyttäisi saman tilin muutkin
+          # projektit; tämä reitti lukee vain Pulun oman äänen.
+          PULU_HISTORIA_ESTA_KAIKKI: '1'
+          SIVUT: ${{ inputs.sivut }}
+          LATAA: ${{ inputs.lataa }}
+        run: |
+          set -euo pipefail
+          mkdir -p output/pulun-historia
+          if [ "$LATAA" = "kylla" ]; then
+            node tools/pulun-historia.mjs --sivut "$SIVUT" \
+              --lataa media/pulu-historia | tee output/pulun-historia/listaus.txt
+          else
+            node tools/pulun-historia.mjs --sivut "$SIVUT" \
+              | tee output/pulun-historia/listaus.txt
+          fi
+
+      - name: Varmista ettei avain päätynyt tulosteeseen
+        env:
+          AVAIN: ${{ secrets.ELEVEN_API_KEY }}
+        run: |
+          set -euo pipefail
+          # Viimeinen lukko ennen artifactia: jos avain jostain syystä
+          # olisi tulosteessa, artifactia ei synny lainkaan.
+          if grep -qF "$AVAIN" output/pulun-historia/listaus.txt; then
+            echo "::error::Tuloste sisältää API-avaimen — artifactia ei luoda."
+            rm -f output/pulun-historia/listaus.txt
+            exit 1
+          fi
+          echo "Tuloste on puhdas."
+
+      - name: Tallenna listaus tarkastettavaksi
+        uses: actions/upload-artifact@v4
+        with:
+          name: pulun-historia-${{ github.run_id }}
+          path: output/pulun-historia/listaus.txt
+          if-no-files-found: error
+
+      - name: Tallenna ladatut raa'at äänet
+        if: ${{ inputs.lataa == 'kylla' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: pulun-historia-raaka-${{ github.run_id }}
+          path: media/pulu-historia/*.mp3
+          if-no-files-found: warn

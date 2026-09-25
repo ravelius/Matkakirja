@@ -414,6 +414,7 @@ const teksti = `// Maailmankartta: koko maapallo yhtenä kiertävänä karttana.
 ${TUONNIT.map((t) => `import { ${t.vienti} } from '${t.tiedosto}';`).join('\n')}
 import { themedTokenTypes } from '../tokens.js';
 import { MAAILMANKARTAN_MAASTO } from './maailmankartta-maasto.js';
+import { PALLON_KAUPUNKIPISTEET } from './maailmankartta-pallopisteet.js';
 
 const LAHDEPAKAT = [${TUONNIT.map((t) => t.vienti).join(', ')}];
 
@@ -470,9 +471,21 @@ const OUTLINES = [
 ${viivat.map((v) => `  [\n${pisteLista(v)}\n  ],`).join('\n')}
 ];
 
+/*
+ * KAUPUNGIN OMA PISTE PALLOLLA. Laudan x/y on osa pelin geometriaa
+ * (reittien pituus, via-pisteet, merireittien ranta, minCityDistance)
+ * eikä sitä siirretä, vaikka käsin sommiteltu piste osuu pallon
+ * todelliselle pinnalle joskus kymmeniä kilometrejä sivuun. Kaupunki saa
+ * siksi erillisen `pallo`-kentän ({ lat, lon }, Wikidata P625), jota
+ * VAIN karttapallo lukee (js/pallo.js pallonOmatPisteet); taulu ja sen
+ * perustelut ovat js/packs/maailmankartta-pallopisteet.js:ssä.
+ */
+const pallonPisteella = (c) => (PALLON_KAUPUNKIPISTEET[c.id]
+  ? { ...c, pallo: PALLON_KAUPUNKIPISTEET[c.id] } : c);
+
 const CITIES = [
 ${cities.map((c) => `  ${JSON.stringify(c)},`).join('\n')}
-];
+].map(pallonPisteella);
 
 /*
  * Kaupungin maatunnus. Ratkaisee, näkyykö Tutki-ikkunan oikea palsta:

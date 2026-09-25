@@ -71,7 +71,7 @@ const NIKE_VISA = {
  * MIKSI EI DEMOKRATIA-KYSYMYSTÄ. Oppitunti pohjustaa laattakysymyksen
  * (EUROPE_QUESTIONS.ateena: "Mikä hallintomuoto sai alkunsa antiikin
  * Ateenasta?"), ja jos lehden tehtävä kysyisi saman, aarrekysymys
- * olisi ratkaistu ennen kuin Nikosta on tavattu. Visasääntö pätee yhä:
+ * olisi ratkaistu ennen kuin Dafni on tavattu. Visasääntö pätee yhä:
  * vastaus löytyy tekstistä, mutta kysymyksen sanamuoto ei toistu siinä
  * sellaisenaan.
  */
@@ -93,25 +93,99 @@ export const FOKUSVIRTA_ATEENA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni + vanha kuva) ---------- */
   matkakirja: {
-    paikkarivi: 'Ateena, heinäkuussa 1873. Seesteistä; ilmanpuntari 762 mmHg.',
-    teksti: 'Torilla ei tänään tingitty oliiveista — siellä puhuttiin '
-      + 'miehestä, joka löysi kesäkuussa Troijan kullan. Puoli toria piti '
-      + 'häntä valehtelijana, toinen puoli nerona, eikä yksikään ollut '
-      + 'nähnyt kultaa omin silmin. Kirjoitan tämän muistiin siksi, että '
-      + 'molemmat puolet saattavat olla oikeassa yhtä aikaa.',
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 da5ec9e174df3205e6fe9fc0657b37606436b2361f34df00f0917de46184ced3. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-ateena-r20260909-paper-v4.jpg",
+      lyhyt: "Ateena, 1873. Kultakeskustelu jatkui ilman kultaa.",
+      selite: 'Kahvilapöydän kaksi keskustelijaa elehti Troijan löydöistä, kun kupit pysyivät pieninä heidän välissään. Pölyn takana kohoava Akropolis muistutti, kuinka lähellä kahvipöytää vanha maailma täällä on.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.theacropolismuseum.gr/en"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-ateena-r20260911-paper2-v1.jpg",
+      lyhyt: "Ateena, 1873. Kahviraha kelpasi ilman kertomusta alkuperästään.",
+      selite: 'Laskin kolikon kupin viereen, ja isäntä ojensi kätensä kysymättä sen historiaa. Pölyn takana Akropolis piti arvonsa ilman selitystä.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.theacropolismuseum.gr/en"],
+    },
     /*
-     * Luenta generoitu 25.8.2026 samalla reseptillä kuin
-     * tools/generoi-luennat.mjs (Viisas Kertoja, eleven_v3,
-     * stability 0.5, lopputauko). Teksti on sama kuin yllä —
-     * vain tunnetagit lisätty. Äänite:
-     * assets/audio/puhe-fokus-matkakirja-ateena.mp3 (~23 s).
+     * KAANON UUSIKSI (Fable, omistajan hyväksyntä 8.9.2026 klo 19.10):
+     * Ateena siirtyy samaan kulkuun kuin muut Euroopan kaupungit —
+     * paikkarivi, jonka toinen virke on kortin tunnelmarivi
+     * (js/ui-apurit.js matkakirjanOtsikko), ja merkintä, jossa
+     * Akropolis nousee mukaan. Teksti on sanatarkasti Fablen; vanha
+     * versio ("ilmanpuntari 762 mmHg", "löysi kesäkuussa Troijan
+     * kullan") on kokonaan korvattu, ei muokattu.
      */
-    luenta: '[curious] Torilla ei tänään tingitty oliiveista — siellä '
-      + 'puhuttiin miehestä, joka löysi kesäkuussa Troijan kullan. '
-      + 'Puoli toria piti häntä valehtelijana, toinen puoli nerona, '
-      + '[whispers] eikä yksikään ollut nähnyt kultaa omin silmin. '
-      + '[softly] Kirjoitan tämän muistiin siksi, että molemmat puolet '
-      + 'saattavat olla oikeassa yhtä aikaa.',
+    paikkarivi: "Ateena, elokuussa 1873. Pölyä ja puhetta kullasta.",
+    /* HYVÄKSYTTY TEKSTIPILOTTI r2 13.9.2026: yhteinen Horatio–Livia-
+     * paribudjetti alittaa julkaistun lähtöparin. Sanat on hyväksytty
+     * tekniseen RC-jatkoon; uusi luenta ja aikaleimat vaaditaan ennen
+     * julkaisua. */
+    teksti: "Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.",
+    /*
+     * LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia.
+     *
+     * ÄÄNITE ON VANHENTUNUT (8.9.2026). Ämpärissä ja repossa oleva
+     * assets/audio/puhe-fokus-matkakirja-ateena.mp3 on generoitu
+     * 25.8.2026 EDELLISESTÄ tekstistä, eikä fokusvirran matkakirjalla
+     * ole tekstin ja äänitteen vertailua (js/ui.js renderFact soittaa
+     * `aanite`-kentän sellaisenaan; vertailu luentaVastaaTekstia koskee
+     * vain vanhaa saapumistaulua). Polku on jätetty ennalleen omistajan
+     * ohjeen mukaan — se on siis GENEROITAVA UUDELLEEN tästä luennasta
+     * ennen seuraavaa julkaisua, tai kertoja lukee eri tekstin kuin
+     * ruudulla lukee.
+     */
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Kaivoin taskustani kolikon kahvia varten"
+     * (arkinen liike, pulu kuuntelee).
+     */
+    reaktiot: [
+  {
+    "id": "ateena.r1",
+    "ankkuri": "kahvilan isäntä piti Schliemannia nerona, asiakas varkaana",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "ateena.r2",
+    "ankkuri": "jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "ateena.r3",
+    "ankkuri": "milloin löytäminen muuttuu ottamiseksi",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "ateena.r4",
+    "ankkuri": "Maksoin kahvini ja vaihdoin pöytää",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.25,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
+     * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
+    luenta: "[curious] Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. [softly] Maksoin kahvini ja vaihdoin pöytää.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-ateena.mp3',
     /*
      * Fablen päätös 4: Sophia Schliemann koruineen. Commonsin
@@ -120,6 +194,7 @@ export const FOKUSVIRTA_ATEENA = {
      */
     kuva: {
       tiedosto: 'Sophia Schliemann wearing gold jewelry.jpg',
+      lyhyt: 'Sophia Schliemann koruissaan Priamoksen aarteen löydön jälkeen; kulta oli Euroopan puheenaihe.',
       selite: 'Sophia Schliemann kantaa "Priamoksen aarteen" koruja. '
         + 'Kuva otettiin pian löydön jälkeen, ja juuri se teki '
         + 'kullasta puheenaiheen kaikkialla Euroopassa.',
@@ -141,28 +216,51 @@ export const FOKUSVIRTA_ATEENA = {
    */
   pollo: {
     /*
-     * LIVIAN MAADOITUS (Fablen kaanon 27.8.2026, TUURAAJA-KEHYS).
-     *
-     * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo). Ateena on se kaupunki,
-     * jossa ISOISÄ OSOITTAUTUU OIKEAKSI ja Livia myöntää sen
-     * vastahakoisen kunnioittavasti — kaanon vaatii vähintään yhden
-     * tällaisen kuudesta, ettei hahmosta tule besserwisseriä.
-     *
-     * EI FAKTAVÄITTEITÄ: maadoitus koskee vain merkinnän SÄVYÄ
-     * (toriuutisesta tehty elämänohje), eikä se paljasta kullan
-     * kohtaloa — se on seuraavan kappaleen asia, ja järjestys on
-     * tarkoituksellinen: myönnytys ensin, palkinto perässä.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era04; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-ateena-01-r20260909-euv1-v1.jpg.
      */
-    maadoitus: '"Molemmat puolet saattavat olla oikeassa yhtä aikaa." No, '
-      + 'isoisälläsi oli tapana tehdä toriuutisesta elämänohje, ja yleensä '
-      + 'minä kutistan sellaisen takaisin sen torin kokoiseksi. Mut en tällä '
-      + 'kertaa. Hän osui, ja se harmittaa minua just sen verran kun '
-      + 'kohtuullista on.',
-    teksti: 'Isoisäsi ei koskaan saanut tietää, miten sen kullan kävi. '
-      + 'Aitoa se oli — mut ei Priamoksen. Ja löytäjä rakensi palatsinsa '
-      + 'tuonne kadun varteen; sen friisissä se kaivaa vieläkin. Katso '
-      + 'ensin tonne ylös.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-ateena-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Ateena: kultaa sisällä, hyvä varjo puutarhassa.',
+        selite: 'Schliemannin myöhempi kotitalo toimii nyt rahamuseona, jonka puutarhakahvilassa kolikoilla maksetaan taas kahvia. Löysin tuolin alta varjon, jonka arvosta kukaan ei väitellyt.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.nummus.gr/en/refreshment-room-cafe/',
+          'https://www.nummus.gr/en/iliou-melathron/',
+        ],
+      },
+    ],
+    /*
+     * ATEENA SAMAAN KULKUUN KUIN MUUT (omistaja 8.9.2026 klo 19.10).
+     *
+     * Ennen tätä Ateena oli ainoa kaupunki, jossa pulun teksti asui
+     * kentissä `maadoitus` (puheenvuoro merkinnän perään) ja `teksti`
+     * (vaiheen huomio korttivirrassa). Molemmat on korvattu yhdellä
+     * kuplalla, joka tulee luennan jälkeen täsmälleen kuten muissa
+     * kaupungeissa (js/fokusvirta.js kulunKuplat). Kupla on Fablen
+     * kaanontekstiä sanatarkasti, eikä alustusta tai välihuutoa ole —
+     * alustukset poistettiin joka kaupungista 8.9.2026.
+     *
+     * ÄÄNITE: vanha ateena-1 oli maadoituksen luenta, ja se jää
+     * ämpäriin orvoksi (poistettu taulusta js/liviapuhe.js
+     * LIVIAN_AANITETYT). Uuden kuplan numero on 3 — kaksi ensimmäistä
+     * paikkaa ovat varattuja (LIVIAN_VARATTU), jotta numerointi on sama
+     * kuin muissa kaupungeissa.
+     *
+     * SAAPUMISKUPLA ON KÄYTÖSSÄ MYÖS ATEENASSA. Vaiennus purettiin, kun
+     * aloituskaupungin ohjekuplat väistyivät saapumisen uuden
+     * järjestyksen tieltä (Raamattu: SAAPUMISEN UUSI JARJESTYS):
+     * js/fokusvirta.js SAAPUMISKUPLA_VAITI on tyhjä joukko, joten tämä
+     * kupla näkyy samalla tavalla kuin muissa kaupungeissa.
+     */
+    /* TEKSTIPILOTTI 12.9.2026: nykyhavainto ja Pulun oma valinta. */
+    kommentti: ["Schliemannin talo on nyt rahamuseo. Sen puutarhasta löysin kiiltävän kolikon ja peitin sen jalallani. Sitten lapsi palasi etsimään. Siirsin jalkaa ihan vähän. Hän ilahtui. Niin minäkin."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     kuva: {
       ampari: 'herokoe/hero-ateena-aamu.png',
       selite: 'Parthenon aamuvalossa. Temppeli rakennettiin Athena '
@@ -207,6 +305,7 @@ export const FOKUSVIRTA_ATEENA = {
         + 'mainita tätä matkakirjassaan — hän kirjoitti enemmän toreista '
         + 'kuin temppeleistä — mutta veikkaan, että hänkin pysähtyi tähän '
         + 'kulmaan hetkeksi.',
+      lahde: 'en-Wikipedia "Temple of Athena Nike". Tarkistettu 1.9.2026.',
       /*
        * Commons 24.8.2026: 3450×2405, CC BY-SA 3.0, Joanbanjo,
        * kategoria "Temple of Athena Nike (Athens)". Tiedoston oma nimi
@@ -215,6 +314,7 @@ export const FOKUSVIRTA_ATEENA = {
        */
       kuva: {
         tiedosto: "Acròpoli d'Atenes - Temple de Nike Àptera.JPG",
+        lyhyt: 'Athena Niken temppeli Akropoliin lounaiskulmassa; toinen nimi Nike Aptera, siivetön Voitto.',
         selite: 'Athena Niken temppeli Akropoliin lounaiskulmassa. '
           + 'Toinen nimi Nike Aptera tarkoittaa siivetöntä Voittoa.',
         lahde: 'Joanbanjo, Wikimedia Commons (CC BY-SA 3.0)',
@@ -236,6 +336,7 @@ export const FOKUSVIRTA_ATEENA = {
         + 'ihmistä", ikään kuin kirkkainkaan valo ei siihen riittäisi. '
         + 'Isoisäsi mainitsee torin tingittyine oliiveineen — hänkin olisi '
         + 'kävellyt Diogeneen astian ohi tietämättään.',
+      lahde: 'en-Wikipedia "Diogenes". Tarkistettu 1.9.2026.',
       /*
        * Fablen päätös 1: ohutta Category:Diogenes -pääkategoriaa EI
        * käytetä, vaan aito pithos-astia. Commons 24.8.2026: 4640×6960,
@@ -246,6 +347,7 @@ export const FOKUSVIRTA_ATEENA = {
        */
       kuva: {
         tiedosto: 'At Wikimedia Hackathon Athens (MP) 2023 365.jpg',
+        lyhyt: 'Myöhäisroomalainen viljanastia Ateenasta, samaa lajia kuin Diogeneen asuma astia, ei se itse.',
         selite: 'Tällaisessa viljanastiassa Diogenes majaili: '
           + 'myöhäisroomalainen pithos Ateenasta. Astia on samaa lajia '
           + 'kuin filosofin asumus, ei se itse.',
@@ -267,6 +369,19 @@ export const FOKUSVIRTA_ATEENA = {
     },
     {
       id: 'schliemann',
+      /*
+       * TYÖNJAKO KAHDEN MUUN SCHLIEMANN-KORTIN KANSSA (1.9.2026,
+       * nostojen sisältöaudit): tämä syvennys on TALO, ja se pitää
+       * Iliou Melathronin pisteen (js/packs/syvennyspaikat.js
+       * ateena.schliemann). Tekstiä ei ole muutettu.
+       *
+       * Kreikan täkynosto `sofia-korut` (js/fokusnosto.js
+       * NOSTO_MAAT.GRC) istui tähän asti samassa osoitteessa, 0,1
+       * laudayksikön päässä; se kertoo nyt SEURAUKSET ja on siirretty
+       * Mykeneen, jonne Schliemann paljastumisen jälkeen meni.
+       * Turkin `schliemann` (js/packs/fokusvirta-istanbul.js) on
+       * KAIVAUS ja piirtyy Troijan kohteesta.
+       */
       nappi: 'Kullanetsijän palatsi',
       otsikko: 'Iliou Melathron',
       teksti: 'Muistatko isoisäsi torikohtauksen — puheet miehestä, joka '
@@ -278,6 +393,7 @@ export const FOKUSVIRTA_ATEENA = {
         + 'Se seisoo paikallaan yhä: nykyään talossa lasketaan vanhoja '
         + 'kolikoita, sillä se on numismaattinen museo, ja sen friisissä '
         + 'Schliemann kaivaa ikuisesti, lapio kädessä.',
+      lahde: 'en-Wikipedia "Heinrich Schliemann". Tarkistettu 1.9.2026.',
       /*
        * Commons 24.8.2026: 1920×3166, CC0, athenswalk, kuvaus "The main
        * entrance of archaeologist and entrepreneur Heinrich Schliemann's
@@ -288,6 +404,7 @@ export const FOKUSVIRTA_ATEENA = {
        */
       kuva: {
         tiedosto: "Heinrich Schliemann's house..tif",
+        lyhyt: 'Iliou Melathronin pääsisäänkäynti; Schliemannin kotipalatsissa toimii nykyään numismaattinen museo.',
         selite: 'Iliou Melathronin pääsisäänkäynti. Schliemannin '
           + 'kotipalatsissa toimii nykyään Ateenan numismaattinen museo.',
         lahde: 'athenswalk, Wikimedia Commons (CC0)',
@@ -343,20 +460,27 @@ export const FOKUSVIRTA_ATEENA = {
 
   /*
    * ---------- 6. Kohtaaminen ----------
-   * Fablen päätös 3: Nikos HYVÄKSYTTY. Esittely on tämän kortin oma
-   * sisältö; VARSINAINEN KYSYMYS on ennallaan laattamekaniikassa
-   * (game.actionQuiz), eikä tämä paketti kosketa sitä.
+   * Esittely on tämän kortin oma sisältö; VARSINAINEN KYSYMYS on
+   * ennallaan laattamekaniikassa (game.actionQuiz), eikä tämä paketti
+   * kosketa sitä.
+   *
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut. HENKILÖ VAIHTUI: vartija Nikos
+   * → marmorikonservaattori Dafni (js/tyohuone-kehitys-data.js
+   * KAARI_PAKETIT, 'ateena'). Perustelu on kaaren omassa
+   * kommenttilohkossa; tämä kortti seuraa perässä, jottei kaupungissa
+   * ole kahta eri kohtaamishenkilöä. Kortti ei kertaa Dafnin omaa
+   * repliikkiä eikä paljasta laattakysymyksen vastausta.
    */
   kohtaaminen: {
-    hahmo: 'Vartija Nikos',
-    nappi: 'Tapaa Nikos',
+    hahmo: 'Marmorikonservaattori Dafni',
+    nappi: 'Tapaa Dafni',
     /*
      * VARMISTUSKYSYMYS (omistajan pelitestipalaute v1119). Lause on
      * datassa eikä koodissa, koska suomen genetiivi ei taivu
      * koneellisesti jokaisesta nimestä — ilman omaa lausetta kortti
      * käyttää pronominia (js/fokusvirta.js varmistusLause).
      */
-    varmistus: 'Haluatko varmasti tavata Nikoksen juuri nyt?',
+    varmistus: 'Haluatko varmasti tavata Dafnin juuri nyt?',
     /*
      * VIHJELINKIN OSIO (omistajan pelitestipalaute v1119, kohta 13:
      * rivi kertoo *"MISTÄ PÄIN LEHTEÄ pulman ratkaisu löytyy,
@@ -364,22 +488,22 @@ export const FOKUSVIRTA_ATEENA = {
      *
      * Tunnus on kaupunkilehden osion id (js/packs/kulttuuri-
      * kategoriat.js): Ateenan lehdessä on kaksi osiota, 'kaupunki'
-     * ("Ateena") ja 'arki' ("Arki ja tavat"). Nikoksen kysymys koskee
+     * ("Ateena") ja 'arki' ("Arki ja tavat"). Dafnin kysymys koskee
      * Athenen lahjaa, ja lähin tuki sille on Ateena-osiossa —
      * artikkeli "Palkintona oksa puusta" kertoo, minkä puun oksa on
      * kaupungin oma palkinto. Vastausta se ei anna, vaan nyökkää
      * siihen suuntaan.
      */
     vihjeOsio: 'kaupunki',
-    teksti: 'Vartija Nikos on kiertänyt Akropoliin ja Agoran kujia jo '
-      + 'kaksikymmentä vuotta, ja hän on nähnyt tarpeeksi ulkomaalaisia, '
-      + 'jotka haaveilevat löytävänsä oman Priamoksensa jo ensimmäisellä '
-      + 'kaivauksella. Hän ei naura vieraalleen vasten kasvoja, mutta '
-      + 'hänen katseessaan on huvittunut kärsivällisyys, kun nuori '
-      + 'matkustaja jo vilkuilee seuraavaa kiveä kääntääkseen. Ennen kuin '
-      + 'Nikos suostuu kertomaan mitään todella hyödyllistä, hän haluaa '
-      + 'varmistaa, että vieras on oikeasti katsonut ympärilleen — ei vain '
-      + 'etsinyt kultaa.',
+    teksti: 'Dafni on kymmenen vuotta paikannut Akropoliin marmoria: '
+      + 'täydentänyt murtuneita reunoja, mitannut, kirjannut ja pannut '
+      + 'kiven takaisin sinne mistä se lähti. Työpäivä loppuu, kun valo '
+      + 'loppuu, eikä hän jää ylitöihin kenenkään vuoksi. Vieraita hän '
+      + 'on nähnyt kaikki lajit, ja useimmat kysyvät kullasta tai '
+      + 'linnusta. Vanha luonnos on eri asia: siinä on mittamerkintä, '
+      + 'ja mittamerkinnän hän tunnistaa työkseen. Ennen kuin hän avaa '
+      + 'sen kanssa mitään, hän haluaa tietää, tietääkö tulija edes '
+      + 'sen, kenen mukaan kaupunki on nimetty ja miksi.',
   },
 
   /*
@@ -394,9 +518,9 @@ export const FOKUSVIRTA_ATEENA = {
    * KOHTAAMISPAIKKA: AKROPOLIS, ei kaupungin laatta.
    *
    * Raamattu (KEVYT KULKU -KOKEILU): *"Kohtaamisen paikan voi sitoa
-   * muuhunkin kuin kaupunkipisteeseen (kehyskertomus)."* Vartija Nikos
-   * on kiertänyt Akropoliin ja Agoran kujia kaksikymmentä vuotta, joten
-   * hänet tavataan siellä missä hän työskentelee.
+   * muuhunkin kuin kaupunkipisteeseen (kehyskertomus)."* Konservaattori
+   * Dafnin työmaa on Akropoliilla, joten hänet tavataan siellä missä hän
+   * työskentelee — piste ei siis muutu henkilön vaihtuessa.
    *
    * 23,72573 E / 37,97154 N — en-Wikipedia "Acropolis of Athens".
    * Muunnos on sama kaava ja samat vakiot kuin fokuskohteilla

@@ -355,6 +355,127 @@ export const PAIKALLISAARTEET = {
         + 'tilikirjoissa.',
     },
   },
+  /*
+   * BELGIA (19.9.2026, omistajan päätös: Belgian pelikaupunki Bryssel,
+   * pilotti). Ei kuvaa vielä (KUVAA_ODOTTAVAT-lista,
+   * tests/paikallisaarteet.test.mjs) — samat kuvat generoidaan myöhemmin
+   * kuin muillekin maille.
+   */
+  BEL: {
+    pieniAarre: {
+      name: 'Käärö brysseliläistä pitsiä',
+      fakta: 'Brysseliläistä pitsiä on nyplätty käsin 1600-luvulta asti, '
+        + 'kymmenillä puunapeilla yhtä aikaa ilman että tekijä katsoo '
+        + 'käsiään. Työ vaati niin paljon aikaa, että valmis liina saattoi '
+        + 'maksaa enemmän kuin tekijänsä koko vuoden palkka.',
+    },
+    isoAarre: {
+      name: 'Antwerpenin timanttihiojan kätkö',
+      fakta: 'Antwerpenista on hiottu timantteja 1400-luvulta lähtien, ja '
+        + 'kaupungista tuli Euroopan johtava timanttikeskus, kun '
+        + 'portugalinjuutalaiset pakolaiset toivat hiontataidon mukanaan '
+        + '1500-luvulla. Suuri osa maailman raakatimanteista kulkee yhä '
+        + 'Antwerpenin kauppiaiden kautta.',
+    },
+  },
+  /*
+   * SLOVENIA (20.9.2026, omistajan päätös 19.9.2026: Slovenian
+   * pelikaupunki Ljubljana). Faktat ovat Slovenian karttanostojen
+   * (js/packs/hahmotelma-svn.js Lipica, Idrija) en-Wikipedia-pohjaisia
+   * tekstejä. Ei kuvaa vielä (KUVAA_ODOTTAVAT-lista,
+   * tests/paikallisaarteet.test.mjs) — samat kuvat generoidaan
+   * myöhemmin kuin muillekin maille.
+   */
+  /*
+   * SLOVAKIA (20.9.2026, omistajan päätös 19.9.2026: Slovakian
+   * pelikaupunki Košice). Faktat ovat Slovakian karttanostojen
+   * (js/packs/hahmotelma-svk.js Kremnica, Banská Štiavnica)
+   * en-Wikipedia-pohjaisia tekstejä. Ei kuvaa vielä
+   * (KUVAA_ODOTTAVAT-lista, tests/paikallisaarteet.test.mjs).
+   */
+  SVK: {
+    pieniAarre: {
+      name: 'Kremnican kultadukaatti',
+      fakta: 'Kremnican rahapaja on maailman vanhin yhä toimiva: '
+        + 'kaupunki sai kuninkaalliset oikeutensa 1328, ja vuodesta 1335 '
+        + 'siellä lyötiin kultaflorineja ja myöhemmin kuuluisia '
+        + 'dukaatteja. Niiden tasainen kultapuhtaus teki niistä '
+        + 'kansainvälisen maksuvälineen.',
+    },
+    isoAarre: {
+      name: 'Banská Štiavnican hopeakaivoksen kätkö',
+      fakta: 'Banská Štiavnica kasvoi keskiajalla runsaiden '
+        + 'hopeamalmivarojen ansiosta. Siellä käytettiin 1627 ruutia '
+        + 'kaivoksessa yhtenä ensimmäisistä maailmassa, ja vuonna 1735 '
+        + 'perustettu kaivoskoulu kasvoi kaivosakatemiaksi, jota '
+        + 'kutsutaan maailman ensimmäiseksi teknilliseksi yliopistoksi.',
+    },
+  },
+  /*
+   * LUXEMBURG (21.9.2026, omistajan päätös 21.9.2026: Kypros, Luxemburg
+   * ja Malta saavat pelikaupungin). Faktat ovat Luxemburgin
+   * karttanostojen (js/packs/hahmotelma-lux.js Remich, Esch)
+   * en-Wikipedia-pohjaisia tekstejä. Ei kuvaa vielä
+   * (KUVAA_ODOTTAVAT-lista, tests/paikallisaarteet.test.mjs).
+   */
+  LUX: {
+    pieniAarre: {
+      name: 'Moselin rieslingpullo',
+      fakta: 'Moselin jokivarren rinteet Remichin ja Grevenmacherin '
+        + 'ympärillä ovat Luxemburgin ainoa viinialue. Ensimmäinen '
+        + 'silta Remichin kohdalla joen yli valmistui vasta 1866, '
+        + 'joten viini kulki aiemmin markkinoille lautoilla ja veneillä.',
+    },
+    isoAarre: {
+      name: 'Minette-rautamalmin lohkare',
+      fakta: 'Maan eteläosasta, Eschin seudulta, löytyi 1850-luvulla '
+        + 'punertavaa "minette"-rautamalmia. Löytö muutti pienen '
+        + 'maatalouskylän muutamassa vuosikymmenessä yhdeksi Euroopan '
+        + 'tärkeimmistä teräksentuottajista.',
+    },
+  },
+  SVN: {
+    pieniAarre: {
+      name: 'Lipicanhevosen kavioraudan jäljennös',
+      fakta: 'Lipican ratsutila Karstin alueella on perustettu vuonna '
+        + '1580, ja sen ensimmäiset hevoset ostettiin Espanjasta, koska '
+        + 'Karstin maaperä ja ilmasto muistuttavat Espanjan oloja. '
+        + 'Lipizzanerhevonen on saanut nimensä tilan mukaan.',
+    },
+    isoAarre: {
+      name: 'Idrijan elohopeakaivoksen kätkö',
+      fakta: 'Idrijan kaivoksessa elohopeaa esiintyy sekä puhtaana että '
+        + 'sinooperina, ja legendan mukaan saavinvalmistaja huomasi '
+        + 'lähteessä nestemäistä elohopeaa jo vuonna 1490. Kaivos '
+        + 'kuuluu Espanjan Almadénin kanssa UNESCOn maailmanperintöön '
+        + 'vuodesta 2012.',
+    },
+  },
+  /*
+   * MALTA (21.9.2026, omistajan päätös 19.9.2026: Maltan pelikaupunki
+   * Valletta). Faktat en-Wikipedian artikkeleista "Megalithic Temples
+   * of Malta" ja "Cross of the Order of Saint John" (luettu
+   * 21.9.2026). Ei kuvaa vielä (KUVAA_ODOTTAVAT-lista,
+   * tests/paikallisaarteet.test.mjs) — samat kuvat generoidaan
+   * myöhemmin kuin muillekin maille.
+   */
+  MLT: {
+    pieniAarre: {
+      name: 'Maltan ristin jäljennös',
+      fakta: 'Kahdeksankärkinen Maltan risti on Johanniittaritarikunnan '
+        + 'tunnus jo 1100-luvulta. Kärkien kerrotaan symboloivan '
+        + 'ritarin kahdeksaa hyvettä, ja risti koristaa yhä saaren '
+        + 'lippua ja Auberge de Castillen julkisivua Vallettassa.',
+    },
+    isoAarre: {
+      name: 'Ħaġar Qimin temppelin kivilohkare',
+      fakta: 'Ħaġar Qimin kalkkikivitemppeli rakennettiin noin '
+        + '3600–3200 eaa., mikä tekee siitä yhden maailman vanhimmista '
+        + 'vapaasti seisovista rakennuksista — vanhempi kuin Egyptin '
+        + 'pyramidit tai Stonehenge. Se kuuluu Maltan megaliittitemppelien '
+        + 'joukkoon Unescon maailmanperintölistalla.',
+    },
+  },
   GBR: {
     pieniAarre: {
       name: 'Purkki marmeladia',
@@ -671,6 +792,32 @@ export const PAIKALLISAARTEET = {
         + 'eivätkä kaikki esineet ole tulleet esiin. Aarre on lisäksi noin tuhat '
         + 'vuotta vanhempi kuin Homeroksen Troija, joten se ei voi olla '
         + 'Priamoksen.',
+    },
+  },
+  /*
+   * KYPROS (CYP), lisätty 21.9.2026 pelikaupunkitilauksen yhteydessä
+   * (Nikosia). Kuvaa ei ole vielä — maa on KUVAA_ODOTTAVAT-listalla
+   * (tests/paikallisaarteet.test.mjs), kuten Belgia, Slovenia ja
+   * Slovakia.
+   */
+  CYP: {
+    pieniAarre: {
+      name: 'Enkomin sarvijumala',
+      fakta: 'Enkomin raunioilta Famagustan liepeiltä kaivettiin 1963 esiin '
+        + 'pieni pronssinen patsas, jonka päässä on sarvet ja jalkana '
+        + 'tikapuun muotoinen jalusta. Se on 1200-luvulta eaa. ja seisoi '
+        + 'rakennuksessa, jossa sulatettiin kuparia — sarvijumalaa on '
+        + 'tulkittu kuparin ja karjan suojelijaksi. Patsas on nyt '
+        + 'Nikosiassa Kyproksen museon tunnetuimpia esineitä.',
+    },
+    isoAarre: {
+      name: 'Lambousan hopea-aarre',
+      fakta: 'Talonpojat löysivät 1902 Lambousan raunioilta Pohjois-Kyprokselta '
+        + 'yhdeksän hopeista lautasta, joihin on taottu kuningas Daavidin '
+        + 'elämän kohtauksia 600-luvulta. Aarre jaettiin löytäjien ja '
+        + 'siirtomaahallinnon kesken, ja lautaset ovat nykyään hajallaan '
+        + 'Kyproksen museossa, Lontoon British Museumissa ja New Yorkin '
+        + 'Metropolitan-museossa.',
     },
   },
 };

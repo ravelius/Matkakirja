@@ -63,8 +63,41 @@ const { muunnaViiva } = sovitaMaailma({
   leveys: LEVEYS, lon0: -175, etela: -58, pohjoinen: 76,
 });
 
+/*
+ * PYÖRISTYS EI SAA TEHDÄ PIIKKIÄ (sama vika kuin tools/hae-vedet.mjs:n
+ * osiossa UOMAN SILOTUS, omistaja 19.9.2026 klo 23.34): lautayksikön
+ * kymmenesosaan pyöristäminen siirtää kärkiä, ja lähes suoralla
+ * uomalla se voi kääntää viivan takaisinpäin. Mitattuna neljä piikkiä
+ * (Tonava, Kolyma, Don, Olenjok) syntyi vasta tässä, kun lähdeaineisto
+ * oli jo siisti.
+ */
+const PIIKIN_KULMA = 120;
+function poistaPiikit(v) {
+  if (v.length < 3) return v;
+  let ulos = v;
+  for (let kierros = 0; kierros < 5; kierros += 1) {
+    const jaljella = [ulos[0]];
+    let pudotettu = 0;
+    for (let i = 1; i < ulos.length - 1; i += 1) {
+      const a = jaljella[jaljella.length - 1];
+      const b = ulos[i];
+      const c = ulos[i + 1];
+      const k1 = Math.atan2(b[1] - a[1], b[0] - a[0]);
+      const k2 = Math.atan2(c[1] - b[1], c[0] - b[0]);
+      let ero = Math.abs((k2 - k1) * 180) / Math.PI;
+      if (ero > 180) ero = 360 - ero;
+      if (ero > PIIKIN_KULMA) { pudotettu += 1; continue; }
+      jaljella.push(b);
+    }
+    jaljella.push(ulos[ulos.length - 1]);
+    ulos = jaljella;
+    if (!pudotettu) break;
+  }
+  return ulos;
+}
+
 /** Viiva laudan koordinaatteihin, sauma auki pidettynä. */
-const viiva = (pisteet) => muunnaViiva(pisteet).map(([x, y]) => [luku(x), luku(y)]);
+const viiva = (pisteet) => poistaPiikit(muunnaViiva(pisteet).map(([x, y]) => [luku(x), luku(y)]));
 
 /*
  * Rengas laudalle. Jos rengas jää kokonaan tai osittain laudan

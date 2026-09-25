@@ -28,9 +28,20 @@ matkaopas kulkee laukussa koko maan ajan, vain kansilehti vaihtuu.
 - **Kaupungin kansi:** `KULTTUURI_KATEGORIAT[cityId]`, yksi aihe
   (id `kaupunki`, nimi = kaupungin nimi) ja 3–5 paikallista nostoa:
   maamerkit, paikallinen elämä, visan aihe.
-- **Yhdistäminen** (js/ui.js rakennaSivut): kaupungin aiheet ensin,
-  sitten litteä "Elämää" jos omia ei ole, sitten maan aiheet. Sama
-  aihe-id kaupungilla voittaa maan version.
+- **Yhdistäminen** (js/lehti.js rakennaSivut): kaupunkilehti saa
+  kaupungin aiheet — ensin kansi, sitten litteä "Elämää" jos omia ei
+  ole — ja maalehti oman listansa maan aiheista. **Listat ovat
+  erilliset (v350, omistajan päätös 8.8.2026: "erotetaan kaupunki ja
+  maa lehti toisistaan"), joten sama aihe-id kaupungilla ei enää
+  piilota maan sivua:** maalehti saa oman historia-aiheensa, vaikka
+  kaupungilla olisi omansa. Tämä dokumentti sanoi vuoteen 2026 asti
+  päinvastaista, ja HKG, MMR ja NPL jättivät maan historia-aiheen
+  kirjoittamatta vanhan säännön takia (6.9.2026) — samaa sisältöä ei
+  silti kannata kirjoittaa kahteen kertaan, vaan maan sivun pitää
+  kertoa eri asia kuin kaupungin (ks. Lontoon jako v349).
+  Poikkeus, joka yhä lainataan: "Menovinkit" ja "Maa numeroina"
+  näkyvät molemmissa lehdissä, ja niiden sisältö asuu maapaketissa
+  yhtenä kappaleena.
 - **Järjestys monistukseen:** maat sen mukaan, montako kaupunkia ne
   kattavat ja mihin lennetään ensin — Italia ✅, Egypti ✅ (Kairo,
   v297: ensimmäinen monistus todisti reseptin — pelkkää dataa, ei
@@ -260,3 +271,94 @@ poissa — se avaa saman kartan tilan, johon pääsee ilmankin.
 Omistaja päättää myöhemmin, tuleeko varusteelle uusi merkitys (esim.
 maiden vertailu, tunnusluvut kartalle tai suodatin "mitkä maat olen
 jo lukenut") vai poistetaanko se. Tätä EI ratkaista loppukirissä.
+
+## Maan tunnusluvut: Amerikat ja Oseania mukaan (6.9.2026)
+
+Kartan alla oleva tunnuslukulaatikko (väkiluku, pinta-ala,
+V-Dem-demokratiaindeksi, keskitulo ja tervehdykset) tulee taulusta
+`MAATIEDOT[laudan tunnus][maatunnus]` (js/sisaltotaulut.js). Puuttuva
+rivi ei kaada mitään: laatikko vain jää piiloon. Niinpä yhdeksän maan
+lehti oli tältä osin tyhjä, koska tauluja oli vain Afrikalle,
+Euroopalle ja Aasialle.
+
+Uudet taulut: `js/packs/northamerica-maatiedot.js` (USA, CAN, MEX),
+`js/packs/southamerica-maatiedot.js` (BRA, ARG, PER, ECU) ja
+`js/packs/oceania-maatiedot.js` (AUS, NZL). Ne on tuotettu samalla
+`tools/kirjoita-maatiedot.mjs`-työkalulla kuin Aasian taulu, ja ne on
+kytketty `KAIKKI_MAATIEDOT`-yhdistelmään sekä `tools/build-standalone.mjs`-
+ja `sw.js`-listoihin.
+
+Lähteet ja vertailuvuodet ovat samat kuin Euroopan taulussa, jotta
+sijaluvut ovat vertailukelpoisia: Maailmanpankin SP.POP.TOTL (2024),
+AG.SRF.TOTL.K2 (2023) ja NY.GNP.PCAP.CD (2024) sekä V-Demin liberaalin
+demokratian indeksi (2025) Our World in Datan aineistosta; kaikki
+haettu 6.9.2026. Sijoitus lasketaan suvereenien valtioiden kesken
+(193 maata; V-Demissä 172), ja menetelmä tarkistettiin toistamalla
+Italian, Ranskan, Espanjan ja Tanskan valmiit luvut. Demokratiaselitykset
+nojaavat en-Wikipedian "Politics of ..." -artikkeleihin ja tervehdykset
+"Languages of ..." -artikkeleihin sekä en-Wiktionaryyn (luettu 6.9.2026).
+
+Kanadan pinta-ala on ainoa poikkeus: Maailmanpankin sarja antaa sille
+15,6 milj. km², joten tauluun on kirjattu yleisesti käytetty
+10,0 milj. km². Sijoitus (2.) on sama kummallakin luvulla.
+
+`tests/maatiedot.test.mjs` vahtii, että jokaisella maalla, jolla on
+`MAA_KATEGORIAT`-lohko, on myös tunnuslukurivi, ja että rivillä on
+pakolliset kentät ja vähintään yksi tervehdys. Testissä on nimetty
+odotuslista niistä Aasian maista, joiden luvut ovat vielä tekemättä
+(BHR, IND, THA, VNM, IDN, MYS); lista saa vain lyhentyä.
+
+## Tunnuslukujen odotuslista tyhjeni (6.9.2026, iltapäivä)
+
+Yhdeksän puuttunutta riviä kirjoitettiin samalla menetelmällä ja
+samasta aineistosta kuin saman päivän aamun erä: CHL ja COL
+`southamerica-maatiedot.js`:ään, CUB `northamerica-maatiedot.js`:ään
+sekä BHR, IDN, IND, MYS, THA ja VNM `asia-maatiedot.js`:ään. Rivit
+tuotettiin `tools/kirjoita-maatiedot.mjs`-työkalulla ja liitettiin
+olemassa oleviin tauluihin aakkosjärjestykseen, joten tiedostojen
+otsikkokommentit säilyivät. `tests/maatiedot.test.mjs`:n
+`VIELA_ILMAN_TUNNUSLUKUJA` on nyt tyhjä.
+
+Menetelmä tarkistettiin toistamalla aamun erän yhdeksän maan kaikki
+27 sijalukua (väkiluku, pinta-ala, keskitulo) sekä niiden
+demokratiasijat: jokainen osui kohdalleen, joten sijat ovat
+vertailukelpoisia aiempien kanssa.
+
+Kaksi poikkeusta on kirjattu tiedostojen otsikkoihin:
+
+- **Kuuban keskitulo.** Maailmanpankin NY.GNP.PCAP.CD-sarjan tuorein
+  Kuuban havainto on vuodelta 2019 (9 010 $), kun muilla luku on
+  vuodelta 2024. Sija on siksi laskettu vuoden 2019 jakaumasta;
+  2024-jakaumaan verrattuna Kuuba näyttäisi rikkaammalta kuin on.
+  Vuosilukua ei kirjoiteta arvokenttään, koska js/maalehti.js lukee
+  tulopalkin pituuden kentän numeroista.
+- **Aasian demokratianimittäjä.** Uusissa kuudessa rivissä se on
+  `/172` (V-Demin 2025-aineisto, sama kuin Amerikoissa ja Oseaniassa),
+  vanhemmissa Aasian riveissä `/179`. Sija itse on kummassakin laskettu
+  samasta indeksistä, vain vertailujoukko on eri kokoinen.
+
+Tervehdyksissä pidettiin kiinni siitä, että sanamuodolla on
+en-Wiktionaryn kate. Siksi Chilelle jäi vain kaksi tervehdystä
+(espanja ja mapudungun): rapanuin ja aymaran tervehdyksistä ei
+löytynyt Wiktionary-artikkelia, ja arvattu sana olisi huonompi kuin
+puuttuva rivi.
+
+## Kentät `tyyppi` ja `maasto` — maastokohde ei sulaudu aihemerkkiin (16.9.2026)
+
+Karttanoston (myös `js/packs/maastokohteet-*.js`-pakkien) `tyyppi`-kenttä
+kertoo jo, onko kohde luontoa: `vuori`, `meri`, `joki`, `saari` ja
+`jarvi` ovat sama viisikko kuin `js/fokuskohteet.js`:n
+`KOHDE_TYYPPISYMBOLIT`-taulun `'luonto'`-rivit, ja pallolaudan
+aihemerkkilogiikka (`js/pallolauta/nostot.js` `onMaastokohde`) lukee
+sen sellaisenaan: näillä tyypeillä kohde ei koskaan sulaudu saman
+aiheen aihemerkkiin, vaan pysyy omana nostonaan nimiöineen (Raamattu,
+KARTTAUUDISTUKSEN PAATOKSET 27 kohta 4: "maan laajat yksittäiset
+nostot näkyvät nimiöin heti"). Osa maan laajoista nostoista on
+kuitenkin sisällöltään historiaa tai tekniikkaa eikä luontoa — Ranskan
+Mont-Saint-Michel (`tyyppi: 'kulttuuri'`) ja Millaun silta
+(`tyyppi: 'tekniikka'`) ovat juuri PAATOKSET 27 kohta 4:n nimeämät
+esimerkit — joten niille lisätään sama sääntö pienimmällä mahdollisella
+merkinnällä, `maasto: true`, suoraan pakin rivillä; uutta kohdetta
+kirjoitettaessa lippu kannattaa lisätä, jos kohde on maan laaja,
+nimetty ja visuaalisesti muista erottuva yksittäinen nähtävyys eikä
+tavallinen lehtinosto.

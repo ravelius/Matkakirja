@@ -1,0 +1,236 @@
+{
+  "versio": 2,
+  "kaupunki": "varsova",
+  "teksti": "Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.",
+  "tekstiSha256": "cfbd7d32596fb91ef7759e0ad739b20f2c1cb8f6b7283f12eb9a9b1cdd73761b",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-varsova.mp3",
+    "versio": 2,
+    "tavut": 505356,
+    "sha256": "b84a215535d352a8bf5e0c46ae29a500391f8af2b4ef88141fb2b0e425fb2d7e"
+  },
+  "kesto": 31500,
+  "sanat": [
+    {
+      "sana": "Varsovan",
+      "alku": 60,
+      "loppu": 500
+    },
+    {
+      "sana": "matkaoppaani",
+      "alku": 540,
+      "loppu": 1340
+    },
+    {
+      "sana": "oli",
+      "alku": 1400,
+      "loppu": 1540
+    },
+    {
+      "sana": "painettu",
+      "alku": 1600,
+      "loppu": 2040
+    },
+    {
+      "sana": "Venäjän",
+      "alku": 2100,
+      "loppu": 2520
+    },
+    {
+      "sana": "santarmien",
+      "alku": 2580,
+      "loppu": 3180
+    },
+    {
+      "sana": "kirjapainossa",
+      "alku": 3240,
+      "loppu": 4200
+    },
+    {
+      "sana": "Siinä",
+      "alku": 5620,
+      "loppu": 5820
+    },
+    {
+      "sana": "oli",
+      "alku": 5880,
+      "loppu": 6000
+    },
+    {
+      "sana": "nähtävyyksiä",
+      "alku": 6040,
+      "loppu": 6880
+    },
+    {
+      "sana": "ja",
+      "alku": 6920,
+      "loppu": 7020
+    },
+    {
+      "sana": "passisääntöjä",
+      "alku": 7060,
+      "loppu": 8080
+    },
+    {
+      "sana": "Tsaarin",
+      "alku": 9320,
+      "loppu": 9700
+    },
+    {
+      "sana": "linnoitusta",
+      "alku": 9760,
+      "loppu": 10400
+    },
+    {
+      "sana": "piirtäessäni",
+      "alku": 10440,
+      "loppu": 11320
+    },
+    {
+      "sana": "sotilas",
+      "alku": 11400,
+      "loppu": 11800
+    },
+    {
+      "sana": "tuli",
+      "alku": 11840,
+      "loppu": 12020
+    },
+    {
+      "sana": "katsomaan",
+      "alku": 12060,
+      "loppu": 12560
+    },
+    {
+      "sana": "olkani",
+      "alku": 12660,
+      "loppu": 13000
+    },
+    {
+      "sana": "yli",
+      "alku": 13080,
+      "loppu": 13340
+    },
+    {
+      "sana": "Selitin",
+      "alku": 14840,
+      "loppu": 15200
+    },
+    {
+      "sana": "olevani",
+      "alku": 15240,
+      "loppu": 15620
+    },
+    {
+      "sana": "brittiläinen",
+      "alku": 15640,
+      "loppu": 16260
+    },
+    {
+      "sana": "laivaston",
+      "alku": 16320,
+      "loppu": 16840
+    },
+    {
+      "sana": "kartanpiirtäjä",
+      "alku": 16880,
+      "loppu": 17840
+    },
+    {
+      "sana": "Hän",
+      "alku": 19440,
+      "loppu": 19560
+    },
+    {
+      "sana": "haki",
+      "alku": 19600,
+      "loppu": 19820
+    },
+    {
+      "sana": "toisen",
+      "alku": 19880,
+      "loppu": 20220
+    },
+    {
+      "sana": "sotilaan",
+      "alku": 20260,
+      "loppu": 20840
+    },
+    {
+      "sana": "Sana",
+      "alku": 22160,
+      "loppu": 22480
+    },
+    {
+      "sana": "entinen",
+      "alku": 22620,
+      "loppu": 23200
+    },
+    {
+      "sana": "muistui",
+      "alku": 23280,
+      "loppu": 23640
+    },
+    {
+      "sana": "mieleeni",
+      "alku": 23680,
+      "loppu": 24120
+    },
+    {
+      "sana": "vasta",
+      "alku": 24160,
+      "loppu": 24420
+    },
+    {
+      "sana": "vartiotuvassa",
+      "alku": 24460,
+      "loppu": 25500
+    },
+    {
+      "sana": "Illalla",
+      "alku": 27600,
+      "loppu": 27900
+    },
+    {
+      "sana": "sain",
+      "alku": 27940,
+      "loppu": 28140
+    },
+    {
+      "sana": "passini",
+      "alku": 28180,
+      "loppu": 28580
+    },
+    {
+      "sana": "takaisin",
+      "alku": 28620,
+      "loppu": 29240
+    },
+    {
+      "sana": "Piirros",
+      "alku": 30440,
+      "loppu": 30960
+    },
+    {
+      "sana": "jäi",
+      "alku": 31040,
+      "loppu": 31200
+    },
+    {
+      "sana": "heille",
+      "alku": 31240,
+      "loppu": 31500
+    }
+  ],
+  "lauseet": [
+    60,
+    5620,
+    9320,
+    14840,
+    19440,
+    22160,
+    27600,
+    30440
+  ],
+  "luotu": "2026-09-23T15:34:44.867Z"
+}

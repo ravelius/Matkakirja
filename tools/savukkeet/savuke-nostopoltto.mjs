@@ -39,6 +39,13 @@ import { packById } from '../../js/pack.js';
 import { MAAILMANKARTTA } from '../../js/packs/maailmankartta.js';
 import { keraaNostot, nostojenYhteenveto } from '../fokuskartta/nostot.mjs';
 
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
+
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
@@ -60,7 +67,7 @@ const palvelin = http.createServer((req, res) => {
   res.end(readFileSync(polku));
 });
 await new Promise((ok) => palvelin.listen(0, ok));
-const osoite = `http://localhost:${palvelin.address().port}/`;
+const osoite = `http://localhost:${palvelin.address().port}/?lauta=kartta`;
 
 let lapi = 0;
 let kaikki = 0;
@@ -73,11 +80,22 @@ const vaadi = (nimi, ehto, lisa = '') => {
 
 const poltto = keraaNostot(MAAILMANKARTTA);
 console.log(nostojenYhteenveto(poltto.tilasto));
+/*
+ * KAKSI PERHETTÄ, KAKSI VERTAILUA (2.9.2026). Nostot ovat kohdekerroksen
+ * ladontaa (ui.fokuskohdeRyhmat) ja eläintäyt oma kerroksensa
+ * (ui.elaintakyRyhmat, js/elaintaky.js) — molemmat poltetaan, mutta
+ * niitä ei voi verrata samaan DOM-listaan. Ilman jakoa maan
+ * merkkijoukko olisi eri kummallakin puolella eikä vartio 1 kertoisi
+ * enää mitään ladonnasta.
+ */
 const nodeMaittain = new Map();
-for (const merkki of poltto.merkit) {
+for (const merkki of poltto.merkit.filter((m) => m.perhe !== 'elaintaky')) {
   if (!nodeMaittain.has(merkki.iso)) nodeMaittain.set(merkki.iso, new Map());
   nodeMaittain.get(merkki.iso).set(merkki.tunnus, merkki);
 }
+const nodeElaimet = new Map(
+  poltto.merkit.filter((m) => m.perhe === 'elaintaky').map((m) => [m.iso, m]),
+);
 
 /* ------------------------------------------------------ selainpuoli */
 
@@ -122,6 +140,15 @@ async function pelinMerkit(kaupunki, ruutu) {
    * PAIKKA LUETAAN DOMista, EI ui-oliosta. Juuri se on se piste, johon
    * näkymätön osumamuoto piirtyy — jos tietue ja solmu eroaisivat,
    * mittaus jäisi huomaamatta.
+   *
+   * KOE TEHDÄÄN LEHTINÄKYMÄSSÄ, JA SE ON EHTO (2.9.2026). Ruutukatto
+   * kutistaa syvässä zoomissa koko noston piirroksen ankkurinsa ympäri
+   * (js/nostoladonta.js nostoladontaKattoSuhde), jolloin DOMin muunnos
+   * EI enää ole ladottu paikka vaan piirretty. Lehtinäkymässä katto ei
+   * pure (mittakaava ~1,9 < kynnys ~2,5), joten muunnos on ladonta
+   * sellaisenaan — juuri se, mitä tämä koe vertaa Nodeen. Jos koe
+   * joskus siirretään syvempään zoomiin, paikka on luettava tietueesta
+   * (r.nippu) eikä solmusta.
    */
   const tulos = await sivu.evaluate(() => {
     const ui = window.matkakirja.ui;
@@ -139,13 +166,30 @@ async function pelinMerkit(kaupunki, ruutu) {
         skaala: m ? Number(m[3]) : null,
         nimi: r.nimi ?? '',
         nimioNakyy: Boolean(r.nimi) && r.nimioNakyy !== false,
-        nimioVasemmalle: Boolean(r.nimioVasemmalle),
+        nimioPuoli: r.nimioPuoli ?? 'oikea',
         osat: (ui.fokuskohdeTiedot?.get(r.id)?.osat ?? []).map((o) => o.id),
         symboli: r.symboli ?? null,
         laji: r.laji ?? null,
       });
     }
-    return { rivit, s: ui.fokusMerkkiSkaalaPohja() };
+    /*
+     * ELÄINTÄYT OMASTA KERROKSESTAAN. Kiertävä lauta piirtää saman
+     * eläimen kahteen kohtaan, joten sama maatunnus voi esiintyä
+     * kahdesti — vertailu tehdään laudan ympäryksen modulossa.
+     */
+    const elaimet = [];
+    for (const r of ui.elaintakyRyhmat ?? []) {
+      const merkki = r.g?.querySelector?.('.elaintaky-merkki');
+      const kuva = r.g?.querySelector?.('.nostosym-rasteri');
+      const m = /translate\(([-\d.]+) ([-\d.]+)\)/.exec(r.g?.getAttribute('transform') ?? '');
+      elaimet.push({
+        iso: merkki?.dataset?.elaintaky ?? null,
+        x: m ? Number(m[1]) : null,
+        y: m ? Number(m[2]) : null,
+        nimio: kuva?.dataset?.nimio ?? null,
+      });
+    }
+    return { rivit, elaimet, s: ui.fokusMerkkiSkaalaPohja() };
   });
   await sivu.close();
   await ctx.close();
@@ -159,20 +203,26 @@ const RUUDUT = {
 
 /*
  * KREIKKA ON KOE, koska se on ainoa kuratoitu lehti ja sen Ateena on
- * kartan tihein rypäs (kuusi kohdetta yhden merkin alla). Kroatia on
- * vertailukohta: kolme kohdetta, jotka EIVÄT yhdisty.
+ * kartan tihein rypäs: kymmenen nostoa laatan päällä, jotka ladotaan
+ * kaupungin molemmin puolin (js/fokusniput.js). Kroatia on
+ * vertailukohta: kolme merkkiä väljässä.
  */
 const KOKEET = [
   { nimi: 'Ateena', kaupunki: 'ateena', iso: 'GRC', poltettava: true },
   { nimi: 'Dubrovnik', kaupunki: 'dubrovnik', iso: 'HRV', poltettava: true },
   /*
-   * ROOMA ON ESTETTY MAA (tools/fokuskartta/nostot.mjs: Italiassa on
-   * yksi täky ilman omia koordinaatteja, joten se asettuu siihen
-   * kaupunkiin jossa pelaaja on). Sen merkkijoukko EROAA Nodesta
-   * tarkoituksella — Node latoo ilman täkyä — ja koe vaatii vain, ettei
-   * yksikään Italian merkki ole luettelossa.
+   * MADRID ON ESTETYSSÄ MAASSA (tools/fokuskartta/nostot.mjs: Espanjan
+   * täkypooli vaihtuu kaupungeittain — Sevillalla on oma lista — joten
+   * kartalla oleva täkyjoukko riippuu siitä, missä pelaaja seisoo).
+   * Sen merkkijoukko EROAA Nodesta tarkoituksella, ja koe vaatii vain,
+   * ettei yksikään Espanjan merkki ole luettelossa.
+   *
+   * ESIMERKKIMAA VAIHTUI 31.8.2026: Italia oli tässä siihen asti, kun
+   * `kissat`-täky sai omat koordinaattinsa (v1391) ja maa vapautui
+   * poltettavaksi — väite jäi punaiseksi, koska se väitti Italian
+   * olevan yhä estetty. Kaksi maata on yhä estettynä (ESP, GBR).
    */
-  { nimi: 'Rooma', kaupunki: 'rooma', iso: 'ITA', poltettava: false },
+  { nimi: 'Madrid', kaupunki: 'madrid', iso: 'ESP', poltettava: false },
 ];
 
 const raportti = [];
@@ -225,6 +275,27 @@ for (const koe of KOKEET) {
      */
     vaadi(`${koe.nimi} ${ruudunNimi}: sama nimiöteksti`,
       tekstiEroja === 0, `${tekstiEroja} merkillä eri nimiöteksti`);
+    /*
+     * ELÄINTÄKY ON POLTETTAVA MERKKI SIINÄ MISSÄ NOSTO (omistaja
+     * 2.9.2026: *"Esim. Kreikassa Merikilpikonna on vielä
+     * polttamatta"*), ja sen paikka ja nimiö on saatava samasta
+     * lähteestä kuin elävän. Vertailu tehdään laudan ympäryksen
+     * modulossa, koska kiertävä lauta piirtää saman eläimen kahdesti.
+     */
+    const nodeElain = nodeElaimet.get(koe.iso);
+    const elavaElain = (peli.elaimet ?? []).find((e) => e.iso === koe.iso);
+    vaadi(`${koe.nimi} ${ruudunNimi}: eläintäky sekä laatassa että kartalla`,
+      Boolean(nodeElain) === Boolean(elavaElain),
+      `Node ${nodeElain ? 'kyllä' : 'ei'} · peli ${elavaElain ? 'kyllä' : 'ei'}`);
+    if (nodeElain && elavaElain) {
+      const dx = Math.abs(((elavaElain.x - nodeElain.x) % 12000 + 12000) % 12000);
+      const elainEro = Math.hypot(Math.min(dx, 12000 - dx), elavaElain.y - nodeElain.y);
+      vaadi(`${koe.nimi} ${ruudunNimi}: eläintäky samassa pisteessä`,
+        elainEro < 0.01, `ero ${elainEro.toFixed(4)}`);
+      vaadi(`${koe.nimi} ${ruudunNimi}: eläintäyn nimiö on sama`,
+        elavaElain.nimio === nodeElain.nimio,
+        `peli "${elavaElain.nimio}" · Node "${nodeElain.nimio}"`);
+    }
   }
   vaadi(`${koe.nimi}: iPad ja iPhone antavat saman skaalan`,
     mitat.iPad.s === mitat.iPhone.s,
@@ -258,11 +329,11 @@ vaadi('Kreikan ja Kyproksen yhteinen olympos ei ole luettelossa',
   poltto.luettelo.olympos === undefined,
   'monen maan merkki päätyi luetteloon');
 
-const ita = nodeMaittain.get('ITA') ?? new Map();
-vaadi('estetyn maan (Italia) merkit EIVÄT ole luettelossa',
-  ita.size > 0 && [...ita.values()].every((m) => !m.poltettava
+const esp = nodeMaittain.get('ESP') ?? new Map();
+vaadi('estetyn maan (Espanja) merkit EIVÄT ole luettelossa',
+  esp.size > 0 && [...esp.values()].every((m) => !m.poltettava
     && poltto.luettelo[m.tunnus] === undefined),
-  `${[...ita.values()].filter((m) => poltto.luettelo[m.tunnus]).length} merkkiä luettelossa`);
+  `${[...esp.values()].filter((m) => poltto.luettelo[m.tunnus]).length} merkkiä luettelossa`);
 
 /*
  * TIIVISTE HUOMAA MUUTOKSEN. Muutetaan yhtä kenttää kerrallaan ja
@@ -270,7 +341,13 @@ vaadi('estetyn maan (Italia) merkit EIVÄT ole luettelossa',
  * kartalle.
  */
 const { nostoladontaTiiviste } = await import('../../js/nostoladonta.js');
-const malli = [...gr.values()].find((m) => m.osat.length > 1) ?? [...gr.values()][0];
+/*
+ * Mallimerkki on ryppään ensimmäinen. Tässä haettiin 31.8.2026 asti
+ * yhdistettyä merkkiä (`osat.length > 1`), koska sellaisella oli
+ * jäsenlista; yhdistely purettiin, joten `osat` on aina tyhjä ja
+ * jäsenkoe tehdään lisäämällä siihen yksi tunnus.
+ */
+const malli = [...gr.values()][0];
 const perus = nostoladontaTiiviste(malli);
 const muunna = (muutos) => nostoladontaTiiviste({ ...malli, ...muutos });
 vaadi('tiiviste muuttuu, kun nimiö muuttuu', muunna({ nimio: `${malli.nimio}!` }) !== perus);
@@ -284,7 +361,7 @@ vaadi('tiiviste muuttuu, kun merkki siirtyy', muunna({ x: malli.x + 0.01 }) !== 
  * ovat. Tämä koe pitää sen tarkoituksena eikä unohduksena.
  */
 vaadi('tiiviste EI muutu väistön päätöksestä',
-  muunna({ nimioNakyy: !malli.nimioNakyy, nimioVasemmalle: !malli.nimioVasemmalle }) === perus);
+  muunna({ nimioNakyy: !malli.nimioNakyy, nimioPuoli: 'ala' }) === perus);
 vaadi('tiiviste ei muutu ilman muutosta', muunna({}) === perus);
 
 console.log('');

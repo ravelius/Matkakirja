@@ -192,34 +192,112 @@ export const FOKUSVIRTA_PIETARI = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, ei omaa säälisäystä. */
-    paikkarivi: 'Pietari, kesäkuussa 1873',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Keisari rakennutti kaupunkinsa suolle ja käski sen olla '
-      + 'suora, ja suo totteli — kadut ovat leveitä kuin joet ja joki '
-      + 'leveä kuin meri. Kesäyönä aurinko ei mene mailleen kunnolla, ja '
-      + 'ihmiset kävelevät rantakatua keskiyöllä kuin iltapäivällä. '
-      + 'Palatsin taidesaleissa kävelin kolme tuntia enkä nähnyt '
-      + 'puoliakaan. Sillat avataan öisin laivoille; myöhästyjä saa '
-      + 'odottaa aamuun, ja moni odottaa mielellään.',
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 eb860339dcbf2606da93b13ccdeb423c6d8e17dae68b1bc6951005cd2a5d8e4e. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pietari-r20260909-paper-v4.jpg",
+      lyhyt: "Pietari, 1873. Neva ei näyttänyt kellonaikaa.",
+      selite: 'Vaalea taivas jäi Nevan pintaan ja palatsien ikkunoihin, vaikka penkki odotti jo illan istujaa. Kuvasin kaupungin ilman varsinaista yötä; kameralle järjestely sopi minua paremmin.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.loc.gov/pictures/resource/ppmsc.03878","https://hermitagemuseum.org/panorama/pano_37/?floorNum=1&lng=en"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pietari-r20260911-paper2-v1.jpg",
+      lyhyt: "Pietari, 1873. Kello päätti päivän, valo ei.",
+      selite: 'Kirjoitin päivän tapahtumat loppuun avoimen ikkunan ääressä, vaikka Neva ja palatsit pysyivät vaaleina. Kello oli jo pitkällä; päivä itse ei suostunut lopettamaan.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.loc.gov/pictures/resource/ppmsc.03878","https://hermitagemuseum.org/panorama/pano_37/?floorNum=1&lng=en"],
+    },
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Pietari, kesäkuussa 1873. Valkeat yöt; ei tule pimeää; '
+      + 'puntari korkealla.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 333 merkkiä (yläraja 400). */
+    teksti: "Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
      * loppu eri sävyssä.
      */
-    luenta: '[curious] Keisari rakennutti kaupunkinsa suolle ja käski '
-      + 'sen olla suora, ja suo totteli — kadut ovat leveitä kuin joet ja '
-      + 'joki leveä kuin meri. [softly] Kesäyönä aurinko ei mene '
-      + 'mailleen kunnolla, ja ihmiset kävelevät rantakatua keskiyöllä '
-      + 'kuin iltapäivällä. [excited] Palatsin taidesaleissa kävelin '
-      + 'kolme tuntia enkä nähnyt puoliakaan. [whispers] Sillat avataan '
-      + 'öisin laivoille; myöhästyjä saa odottaa aamuun, ja moni odottaa '
-      + 'mielellään.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Rantakadulla nainen sulki päivänvarjonsa" ja
+     * "Kirjoitin päivän tapahtumat loppuun" (havainnot).
+     */
+    reaktiot: [
+  {
+    "id": "pietari.r1",
+    "ankkuri": "penkkien eteen oli piilotettu vesisuihkuja",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "pietari.r2",
+    "ankkuri": "tarkoitus oli kastella vieraat",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "pietari.r3",
+    "ankkuri": "kiljaisi kuin poika",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "pietari.r4",
+    "ankkuri": "palasi pian nauraen uudestaan",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "pietari.r5",
+    "ankkuri": "riisuin takkini ja menin perässä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. [warmly] Minä riisuin takkini ja menin perässä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-pietari.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat 01-07 + Tampere; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-pietari-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-pietari-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Pietari: vaalea kesäyö jätti Nevan rantaan tilaa vielä yhdelle kierrokselle.',
+        selite: 'Nevan rannassa kesäyö on niin vaalea, että tyhjä penkki näyttää odottavan seuraavaa katselijaa. Isoisä jatkoi kirjoittamista; minä otin vielä yhden ruudun.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.awaywithmaja.com/guide-st-petersburgs-white-nights/',
+        ],
+      },
+    ],
     /*
      * LIVIAN MAADOITUS (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ").
      * Piirtyy kuplan ENSIMMÄISEKSI kappaleeksi, heti isoisän merkinnän
@@ -251,13 +329,33 @@ export const FOKUSVIRTA_PIETARI = {
      * vuotta. (3) Noin 25 kilometrin suojapato valmistui kokonaan vasta
      * vuonna 2011.
      */
-    maadoitus: 'Kääk. Suoran käskeminen onnistui, veden käskeminen ei: '
-      + 'marraskuussa 1824 vesi nousi täällä yli neljä metriä normaalin '
-      + 'yläpuolelle, ja kaupunki eli tulvien varassa lähes kolmesataa '
-      + 'vuotta. Kahdenkymmenenviiden kilometrin suojapato valmistui '
-      + 'kokonaan vasta 2011 — isoisäsi käynnistä siihen meni vielä sata '
-      + 'neljäkymmentä vuotta. Kadut ovat yhä suorat, mut kuivia ne ovat '
-      + 'olleet vasta vähän aikaa.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Pietarin Eremitaasin taidemuseossa kissojen tehtävä on pitää hiiret loitolla taideaarteista. Minä tervehdin yhtä pihalla. Katolta, tietenkin."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'miettiva', voimakkuus: 0.5 },
     /*
      * KAANON (Fable) — Livian nykypäivän huomio sellaisenaan.
      *
@@ -266,16 +364,11 @@ export const FOKUSVIRTA_PIETARI = {
      * Talvipalatsi (js/packs/kulttuuri-kategoriat.js, pietari/
      * avauskuvat) — kuva ja teksti osuvat siis samaan rakennukseen.
      */
-    teksti: 'Ne valoisat kesäyöt ovat edelleen kaupungin juhla-aikaa, ja '
-      + 'siltojen nousua kerääntyy katsomaan väkeä kuin ilotulitusta.. '
-      + 'Se palatsin taidekokoelma on nykyään yksi maailman suurimmista '
-      + 'museoista — ja sen kellareissa asuu kissoja ihan virallisissa '
-      + 'viroissa.. minkä takia, se selviää sulle perillä. Rantakadulle '
-      + 'siis, vaikka kello olisi mitä.',
     kuva: {
       ampari: 'herokoe/hero-pietari-aamu.png',
       /* Selite on lehden oman avauskuvan selite sellaisenaan; yksikään
        * luku ei muutu. Se on jo yhden virkkeen mittainen. */
+      lyhyt: 'Talvipalatsi valmistui 1762; Aleksanterin pylväs 1834 on yksi 600 tonnin graniittikappale.',
       selite: 'Talvipalatsi valmistui 1762 Bartolomeo Rastrellin '
         + 'piirustuksin, ja sen edustan Aleksanterin pylväs (1834) on '
         + 'nostettu paikalleen yhtenä 600 tonnin graniittikappaleena.',
@@ -369,6 +462,8 @@ export const FOKUSVIRTA_PIETARI = {
         + 'keittiöön. Vuosia myöhemmin hän luki lehdestä kadonneesta '
         + 'munasta. Se oli sama muna, ja arvoksi arvioitiin '
         + 'kolmekymmentäkolme miljoonaa dollaria.',
+      lahde: 'en-Wikipedia "Fabergé egg" ja en-Wikipedia "Peter Carl '
+        + 'Fabergé". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 1759×1169, CC BY-SA 4.0, Mihail Ovtšinnikov
        * (Михаил Овчинников), kuvattu 16.9.2013, kuvaus "Императорское
@@ -388,6 +483,7 @@ export const FOKUSVIRTA_PIETARI = {
        */
       kuva: {
         tiedosto: 'Яйцо "Курочка" (cropped).JPG',
+        lyhyt: 'Vuoden 1885 ensimmäinen keisarillinen pääsiäismuna on ulkoa munan näköinen valkoista emalia.',
         selite: 'Vuoden 1885 ensimmäinen keisarillinen pääsiäismuna on '
           + 'ulkoa valkoista emalia ja munan näköinen; kaikki oleellinen '
           + 'on sen sisällä.',
@@ -481,6 +577,7 @@ export const FOKUSVIRTA_PIETARI = {
         + 'rakennettiin sitä varten oma proomu, jota kannatteli '
         + 'kummaltakin puolelta täysikokoinen sotalaiva. Kivi oli '
         + 'perillä 1770, ja saapumisesta lyötiin muistomitali.',
+      lahde: 'en-Wikipedia "Bronze Horseman". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 703×418, public domain, I. F. Schleyn
        * kaiverrus J. M. Feltenin piirroksesta 1770, kuvaus "The
@@ -496,6 +593,7 @@ export const FOKUSVIRTA_PIETARI = {
        */
       kuva: {
         tiedosto: 'Thunder Stone.jpg',
+        lyhyt: 'Vuoden 1770 kaiverrus näyttää ukkoskiven matkalla: veistetään ja vedetään vinsseillä merelle.',
         selite: 'Vuoden 1770 kaiverrus näyttää ukkoskiven matkalla: '
           + 'kivenhakkaajat veistävät sitä päällä samalla kun sitä '
           + 'vedetään vinsseillä rataa pitkin kohti merta.',
@@ -582,6 +680,8 @@ export const FOKUSVIRTA_PIETARI = {
         + 'siinä on kaksisataakuusikymmentäviisi mittauspistettä. '
         + 'Silloin se kulki kolmen maan halki. Nykyään samat pisteet '
         + 'ovat kymmenessä maassa, eikä yksikään niistä liikkunut.',
+      lahde: 'en-Wikipedia "Pulkovo Observatory" ja en-Wikipedia "Struve '
+        + 'Geodetic Arc". Tarkistettu 1.9.2026.',
       /*
        * Commons 30.8.2026: 1087×757, public domain, Jev. Bernardski
        * (1819–1889), päiväys 1855, kuvaus "Pulkovo Observatory in 1855".
@@ -595,6 +695,7 @@ export const FOKUSVIRTA_PIETARI = {
        */
       kuva: {
         tiedosto: 'Ev. Bernardsky. Pulkovo Observatory in 1855.jpg',
+        lyhyt: 'Kaiverrus 1855 näyttää Pulkovan observatorion kukkulallaan kolmine kupoleineen ja pylväikköineen.',
         selite: 'Kaiverrus vuodelta 1855 näyttää Pulkovan observatorion '
           + 'kukkulallaan: kolme kupolia, pylväikkö ja aita niityn '
           + 'takana.',
@@ -708,6 +809,7 @@ export const FOKUSVIRTA_PIETARI = {
      */
     kuva: {
       tiedosto: 'СПБ. Установка колонн Исаакиевского собора (к 1830). Лит.~1845г 15 e1.jpg',
+      lyhyt: 'Montferrandin litografia näyttää pylväiden noston puutelineissä ennen seinien muurausta.',
       selite: 'Montferrandin oma litografia näyttää pylväiden noston: '
         + 'graniittipylväät pystytettiin valtavissa puutelineissä, ja '
         + 'seinät muurattiin vasta niiden ympärille.',
@@ -718,41 +820,55 @@ export const FOKUSVIRTA_PIETARI = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * FABLE KATSELMOI: kohtaamisluonnos
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
+   *
+   * HAHMO VAIHDETTU TOISEN KERRAN 12.9.2026: huoltoteknikko Matvei →
+   * sellisti Polina (omistajan päätös kysymyskortissa: *"Vaihda
+   * kaanoniin uudet henkilöt"*, kun kuvaputki toimitti kuvan Vitebskin
+   * aseman hallista ja sellokoteloa kantavasta naisesta). Kortin oma
+   * esittely seuraa kuvaa: sama joki, sama kysymys, sama vastaus — vain
+   * se, kuka odottaa siltojen aukeamista, vaihtui sillan huoltajasta
+   * sen yli kiirehtiväksi. Perustelu kaanonin puolella on
+   * js/tyohuone-kehitys-data.js KAARI_PAKETIT, 'pietari'.
+   *
+   * HAHMO VAIHDETTU: sillanhoitaja Dmitri → huoltoteknikko Matvei
+   * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 20:05 UTC).
+   * Dmitrin kaanoninen repliikki sanoi isoisän *pyytäneen hänen sukuaan
+   * pitämään sivun auki* — se on yhtä aikaa Horation tunnistus ja
+   * Euroopan jo täyteen käytetty "Horation pieni pyyntö" -kiintiö.
+   * Sillanhoitajasuku poistuu kokonaan; myös tämän kortin vanha
+   * esittely rakentui sen varaan.
    *
    * HAHMOA EI OLE KEKSITTY TÄSSÄ. Pietarilla ON tarinakaaren paketti
    * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, id 'pietari'), joka
    * antaa hahmon JA sen kysymyksen, jonka game.actionQuiz esittää
    * laatalla (js/game.js kaariTilanne, js/packs/tarinakaari.js). Hahmo
-   * on siis sillanhoitaja Dmitri, eikä tämä paketti kosketa hänen omaa
+   * on siis sellisti Polina, eikä tämä paketti kosketa hänen omaa
    * repliikkiään eikä kysymystä millään tavalla — sama suhde kuin
-   * Ateenan Nikoksella, Sofian Nadialla ja Rooman Enzolla.
+   * Ateenan Dafnilla, Sofian Nadialla ja Rooman Nicolla.
    *
-   * ALLA OLEVA on siis kortin OMA ESITTELYTEKSTI, ei kaanonia, ja se on
-   * merkitty katselmoitavaksi omistajan ohjeen mukaan. Se on
-   * kirjoitettu niin, ettei se kertaa Dmitrin omaa repliikkiä
-   * ("Kirjaan merkitään laiva, joka ei ole vielä palannut…") eikä
+   * ALLA OLEVA on siis kortin OMA ESITTELYTEKSTI, ei kaanonia. Se on
+   * kirjoitettu niin, ettei se kertaa Polinan omaa repliikkiä eikä
    * paljasta vastausta.
+   *
+   * EI PERITTYÄ TEHTÄVÄÄ EIKÄ SUURTA KÄSIKAMPEA (kuvaputken rajaus):
+   * Polina on omalla asiallaan liikkuva ammattilainen, ei sukunsa
+   * jatkaja, eikä siltaa avata käsin. Varallisuussääntö pitää kaikessa: isoisä
+   * ei maksa, tilaa eikä käske ketään, eikä kukaan odota perillistä.
    *
    * KUVAA EI OLE (omistajan linjaus): kohtaamiskortti rakennetaan ilman
    * kuvaa, joten kentät ovat hahmo, nappi, varmistus, vihjeOsio ja
    * teksti. Kansiossa assets/kohtaamiset ei myöskään ole Pietarin
    * kuvaa, eikä tänne kirjoiteta polkua, jota ei ole.
    *
-   * VARALLISUUSSÄÄNTÖ tarkistettu virke virkkeeltä: isoisä ei maksa
-   * mitään, ei tilaa mitään eikä komenna ketään. Dmitrin kaanoninen
-   * repliikki sisältää isoisän pienen pyynnön ("pyysi sukuani pitämään
-   * sivun auki"), ja juuri siksi ESITTELY EI TOISTA SITÄ: suvun oma syy
-   * jatkaa on tässä ammattitapa, ei velvoite.
-   *
-   * ÄÄNIPROFIILI (tarinakaari, luku 3): Dmitri on niitä, jotka
-   * tarkistavat saman asian joka yö vaikka tietävät vastauksen — ei
-   * puhelias, ei äreä, vaan tarkka.
+   * ÄÄNIPROFIILI (tarinakaari, luku 3): KIIREINEN JA HÄMMÄSTYNYT.
+   * Polina aloittaa kesken askeleen ja pysähtyy vasta piirroksen
+   * nähtyään; erän tuiman äänen hoitaa Sofian Nadia.
    */
   kohtaaminen: {
-    hahmo: 'Sillanhoitaja Dmitri',
-    nappi: 'Tapaa Dmitri',
-    varmistus: 'Haluatko varmasti tavata Dmitrin juuri nyt?',
+    hahmo: 'Sellisti Polina',
+    nappi: 'Tapaa Polina',
+    varmistus: 'Haluatko varmasti tavata Polinan juuri nyt?',
     /*
      * VIHJELINKIN OSIO (omistajan pelitestipalaute v1119, kohta 13):
      * rivi kertoo, MISTÄ PÄIN LEHTEÄ ratkaisu löytyy, vastausta
@@ -763,15 +879,15 @@ export const FOKUSVIRTA_PIETARI = {
      * "Kaupunki rakennettiin suolle" — siis 'kaupunki'.
      */
     vihjeOsio: 'kaupunki',
-    teksti: 'Dmitri tulee koneistokammioon puoli tuntia ennen nostoa ja '
-      + 'käy saman vivun läpi kuin edellisenä yönä, vaikka tietää sen '
-      + 'kunnon ulkoa. Suku on hoitanut siltoja niin kauan, ettei kukaan '
-      + 'muista kirjanpidon aloittajaa; Dmitri sanoo pitävänsä tapaa '
-      + 'pikemminkin ammattina kuin perintönä, ja jatkavansa siksi, että '
-      + 'kesken jätetty vuoro näkyisi heti joessa. Kaiteen takana seisoo '
-      + 'öisin väkeä katsomassa, eikä hän häädä ketään. Vierasta hän ei '
-      + 'päästä koneiston viereen ennen kuin tämä osaa vastata siihen, '
-      + 'mitä hän itse pitää kaupungin ainoana oikeana kysymyksenä: '
+    teksti: 'Polina tulee Vitebskin asemalle puoli tuntia ennen junaansa '
+      + 'ja käy saman kierroksen kuin edelliselläkin kerralla: portaat '
+      + 'ylös, lasin alla seisahdus, sitten laiturille. Sellonsa kanssa '
+      + 'hän on kulkenut kaupungin halki kolme vuotta ja sanoo oppineensa '
+      + 'siinä ajassa, että ilta on aina joen mittainen — kello, jota '
+      + 'noudatetaan, on siltojen aukeaminen eikä konserttiohjelman. '
+      + 'Väärälle rannalle jäänyt soittaja ei ehdi mihinkään ennen aamua. '
+      + 'Vieraita hän ei odota eikä kaipaa, mutta kysyjän hän pysäyttää '
+      + 'siihen, mitä itse pitää kaupungin ainoana oikeana kysymyksenä: '
       + 'minkä varaan tämä kaikki on ylipäätään pystytetty.',
   },
 
@@ -781,10 +897,18 @@ export const FOKUSVIRTA_PIETARI = {
    */
 
   /*
-   * KOHTAAMISPAIKKA: PALATSISILTA, Nevan ylitys Talvipalatsin kohdalla.
-   * Dmitri on sillanhoitaja, ja Palatsisilta on se kääntösilta, jonka
-   * nousua kaanoninen Livian repliikki käy katsomassa.
+   * KOHTAAMISPAIKKA VAIHTUI 12.9.2026: PALATSISILLALTA VITEBSKIN
+   * ASEMALLE. Piste seurasi henkilöä: Polina on sellisti, joka kulkee
+   * kaupungin halki soittamaan, eikä hänen paikkansa ole sillan alla
+   * vaan asemahallissa — juuri siinä, minkä kuvaputken kuva näyttää.
+   * Vitebskin asema on myös Venäjän ensimmäisen rautatien pääteasema ja
+   * maan tunnetuin jugendasema, joten paikka kestää oman korttinsa.
+   * Silta ei katoa mihinkään: kysymys, vastaus ja kaaren repliikki
+   * puhuvat yhä siltojen aukeamisesta, ja Palatsisilta on kaupunkilehden
+   * oma nosto.
    *
+   * 59,920278 N / 30,329444 E — en-Wikipedia "Vitebsky railway station",
+   * prop=coordinates (haettu 12.9.2026). Vanha piste oli
    * 59,941149 N / 30,308105 E — en-Wikipedia "Palace Bridge",
    * prop=coordinates (haettu 30.8.2026). Muunnos on sama kaava ja samat
    * vakiot kuin fokuskohteilla: maailmankartalla Millerin lieriö LEVEYS
@@ -793,28 +917,28 @@ export const FOKUSVIRTA_PIETARI = {
    * y = (72 − lat) × 26,3.
    *
    * LASKU:
-   *   maailmankartta  x = ((30,308105 − (−175)) mod 360) × (12000/360)
-   *                     = 205,308105 × 33,3333… = 6843,6
-   *                   y = (millerY(59,941149) − millerY(76)) × 12000/2π
-   *                     = 928,6
-   *   europe          x = (30,308105 + 11) × 19,2 = 793,1
-   *                   y = (72 − 59,941149) × 26,3 = 317,1
+   *   maailmankartta  x = ((30,329444 − (−175)) mod 360) × (12000/360)
+   *                     = 205,329444 × 33,3333… = 6844,3
+   *                   y = (millerY(59,920278) − millerY(76)) × 12000/2π
+   *                     = 929,7
+   *   europe          x = (30,329444 + 11) × 19,2 = 793,5
+   *                   y = (72 − 59,920278) × 26,3 = 317,7
    *
    * TARKISTUS PIETARIN LAATTAA VASTEN: laatta on Euroopan laudalla
    * 793 / 317 ja maailmankartalla 6843,4 / 928,4 (js/packs/europe.js ja
    * js/packs/maailmankartta.js) — eli laatta on omalla oikealla
    * paikallaan, ja kohtaamispiste osuu käytännössä sen päälle (ero alle
-   * 0,2 yksikköä). Se on oikein eikä virhe: silta on kaupungin
-   * keskustassa. Koska ero alittaa js/fokuspiste.js:n PISTE_ERO_MIN-rajan
+   * yhden yksikön). Se on oikein eikä virhe: asema on kaupungin
+   * keskustassa runsaan kahden kilometrin päässä laatasta. Koska ero alittaa js/fokuspiste.js:n PISTE_ERO_MIN-rajan
    * (14), peli siirtää PIIRRETYN merkin koilliseen laatan viereen, ja
    * molemmat näkyvät erikseen. Dataan ei kosketa (sama ratkaisu kuin
    * Tallinnassa).
    */
   kohtaamispiste: {
-    nimi: 'Palatsisilta',
+    nimi: 'Vitebskin asema',
     laudat: {
-      maailmankartta: { x: 6843.6, y: 928.6 },
-      europe: { x: 793.1, y: 317.1 },
+      maailmankartta: { x: 6844.3, y: 929.7 },
+      europe: { x: 793.5, y: 317.7 },
     },
   },
 
@@ -973,6 +1097,7 @@ export const FOKUSVIRTA_PIETARI = {
        */
       kuva: {
         tiedosto: 'Kizhi Pogost. The Church of the Transfiguration DSC02646 2200.jpg',
+        lyhyt: 'Kižin kirkastumisen kirkon 22 kupolia nousevat portaittain, runko veistettyä hirttä.',
         selite: 'Kižin kirkastumisen kirkon kaksikymmentäkaksi kupolia '
           + 'nousevat portaittain; runko on veistettyä hirttä ja kupolit '
           + 'haapapaanua.',
@@ -1077,6 +1202,7 @@ export const FOKUSVIRTA_PIETARI = {
        */
       kuva: {
         tiedosto: 'Grand Cascade of Peterhof 01.jpg',
+        lyhyt: 'Suuri kaskadi laskeutuu 16 metrin törmää alas palatsin edestä, antaen paineen suihkuille.',
         selite: 'Suuri kaskadi laskeutuu kuudentoista metrin törmää alas '
           + 'palatsin edestä; sama korkeusero antaa kaikille sen '
           + 'suihkuille paineen.',

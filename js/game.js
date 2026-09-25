@@ -1,15 +1,29 @@
 // Pelin tila ja säännöt: vuorot, laattojen kääntäminen ja voittoehdot.
 
-import { FLIGHT_PRICE, buildBoard, findMoves, posKey, reachableCities } from './rules.js';
+import {
+  BUS_FARE, FLIGHT_PRICE, buildBoard, edgeId, findMoves, posKey, reachableCities,
+} from './rules.js';
 import { TOKEN_TYPES, arvoAarteenArvo, createTokenPile } from './tokens.js';
 import { packById, sourceList } from './pack.js';
 import { paikallisaarre } from './packs/paikallisaarteet.js';
 import { TARINAKAARI, KAARI_LAUDAT } from './packs/tarinakaari.js';
-import { tarkistaKynnys } from './linssit/omistus.js';
+import {
+  hiomassa, hiomassaNimi, hyvitaHiomassa, myonna, tarkistaKynnys,
+} from './linssit/omistus.js';
+import { LINSSIAARTEET, linssiAarteesta } from './linssit/aarteet.js';
 import { tietajatasonNousut } from './tietajatasot.js';
+import { pulmanGeneraattori } from './pulmageneraattorit.js';
+import { taytaPohja } from './tekstipohja.js';
 
 export const START_MONEY = 300;
 export const SEA_FARE = 100; // laivamatkan hinta vuorolta
+/*
+ * BUSSILIPPU 50 puntaa (js/rules.js BUS_FARE) — vietynä tästä, koska
+ * peli-ikkuna ja käyttöliittymä lukevat matkahinnat game.js:stä
+ * (SEA_FARE, FLIGHT_PRICE). Luku itse on säännöissä, jotta sitä on
+ * vain yksi kappale.
+ */
+export { BUS_FARE };
 export const FIFTY_FIFTY_PRICE = 80; // kahden väärän vaihtoehdon piilotus
 export const HINT_PRICE = 40; // sanallinen vihje kysymykseen
 /*
@@ -428,6 +442,24 @@ export class Game {
     this.phase = 'action';
     this.travelMode = null;
     this.autoTravel = false;
+    /*
+     * MATKA JATKUU ITSESTÄÄN, KUNNES OLLAAN KAUPUNGISSA (omistajan
+     * tilaus 2.9.2026, sanatarkasti: *"nopanheitto tulee jatkua
+     * automaattisesti jos ei olla saavuttu seuraavaan
+     * kohdekaupunkiin"*).
+     *
+     * Lippu nousee vuoron alussa (beginTurn), kun ihmispelaaja seisoo
+     * reitin askelpisteessä eikä kaupungissa: silloin vuoro ei ole
+     * valinta vaan matkan jatko, ja nopan saa heittää peli itse.
+     * PELI EI HEITÄ TÄSSÄ — heitto kuuluu UI:lle, jotta nopan ja
+     * nappulan animaatiot pysyvät samassa ketjussa (js/ui.js
+     * ajastaAutomaattinenHeitto).
+     *
+     * Ei tallenneta: arvo johdetaan fromJSONissa asemasta ja
+     * vaiheesta, jolloin kesken matkaa ladattu peli jatkaa oikein
+     * eikä lippu voi jäädä roikkumaan väärään tilaan.
+     */
+    this.jatkaAutomaattisesti = false;
     this.pendingFare = 0;
     this.die = null;
     this.moves = null;
@@ -455,6 +487,40 @@ export class Game {
      */
     this.minitehtavatOikein = new Set();
     /*
+     * KARTTANOSTOJEN RATKAISTUT MINIKYSYMYKSET, PELKKÄNÄ LUKUNA
+     * (karttauudistuksen erä 6, 13.9.2026).
+     *
+     * Nostokortin lopun minikysymys kirjataan kuten lehden minitehtävä
+     * (actionMinitehtava, avain 'pakka:nosto:tunnus'), mutta erä 7
+     * tarvitsee siitä vain yhden asian: MONTAKO on ratkaistu. Aarteen
+     * vihreä piste syttyy, kun tämä on vähintään 2 — ja koska ehto
+     * lukee VAIN nostojen kysymyksiä, lehtitehtävien joukko ei kelpaa
+     * laskuriksi (se täyttyisi vahingossa vanhoista vastauksista).
+     *
+     * KOKONAISLUKU EIKÄ JOUKKO, jotta lukija pysyy yksinkertaisena.
+     * Kaksoiskirjaukselta suojaa actionMinitehtavan oma portti: luku
+     * kasvaa vain, kun kirjaus meni läpi ja vastaus oli oikein
+     * (js/fokusnosto.js piirraNostonVisa).
+     */
+    this.nostotehtavatRatkaistu = 0;
+    /*
+     * PULUN KARTTAOHJE ON NÄYTETTY (karttauudistuksen erä 7,
+     * 13.9.2026).
+     *
+     * Raamattu (KARTTAUUDISTUS, omistaja 13.9.2026 sanatarkasti):
+     * *"Ensimmaisen kaupungin kohdalla pulu voisi kertoa etta
+     * 'loytamalla kartalta kaksi kysymysta ja vastaamalla niihin
+     * oikein saat vihjeen aarteen sijainnista'"*. Ohje kuuluu KERRAN,
+     * ensimmäisessä kaupungissa, jossa lukittu aarrepiste on kartalla.
+     *
+     * TALLENNUKSESSA EIKÄ LAITTEEN MUISTISSA (vrt. js/livia.js
+     * LIVIA_PALJASTUS_TALLE, joka on localStorage-lippu): ohje kertoo
+     * pelin säännön tälle pelille, joten uusi peli samalla selaimella
+     * saa sen uudestaan eikä vanha peli toisella laitteella kuule sitä
+     * kahdesti.
+     */
+    this.aarrepisteOhjeNahty = false;
+    /*
      * LIVIALLE OSTETUT PULLAT (omistajan tilaus 28.8.2026), avaimena
      * 'pakka:kaupunki'. Osto on vaihtoehtoinen tie samaan vinkkiin,
      * jonka lehden AARTEEN AVAUS -tehtävä antaa (js/fokustehtavat.js
@@ -463,6 +529,17 @@ export class Game {
      * samaa pullaa myydä kahdesti.
      */
     this.pullaVinkit = new Set();
+    /*
+     * SÄHKETEHTÄVÄN PULLAT (omistaja 3.9.2026: *"tässäkin tehtävässä
+     * voisi olla mahdollisuus ostaa pulla pululle ja saada vinkki …
+     * lisäksi pelaaja voisi ostaa 25 punnalla puolikkaan pullan"*)
+     * kirjataan SAMAAN joukkoon omalla avainmuodollaan
+     * 'sahke:<tehtäväId>:vinkki' ja 'sahke:<tehtäväId>:linkki'. Sama
+     * joukko siksi, että kyse on samasta asiasta — Livialle ostetusta
+     * pullasta — ja tallennuskenttiä ei kannata monistaa; eri
+     * avainmuoto siksi, ettei sähkeen pulla voi koskaan sekoittua
+     * kaupungin aarrepullaan ('pakka:kaupunki').
+     */
     /*
      * LUNASTETUT ELÄINTÄYT (js/elaintaky.js), avaimena MAATUNNUS ilman
      * pakan tunnusta: eläin on maan eläin eikä laudan, ja sama
@@ -920,9 +997,22 @@ export class Game {
 
   /**
    * Käytettävissä olevat matkustustavat vuoron alussa.
-   *   land = maitse, sea = laivalla (100 p), fly = lentäen (300 p),
+   *   land = LIFTAUS eli noppa (ilmainen, kuluttaa päiviä),
+   *   bus  = bussi kahden vierekkäisen kaupungin välillä (50 p, ei aikaa),
+   *   sea  = laivalla (100 p), fly = lentäen (300 p),
    *   stay = jää paikalleen ja kokeile kaupungin kysymystä
    * Kesken reittiä matka jatkuu samalla tavalla kuin se alkoi.
+   *
+   * `land` ON LIFTAUS (omistaja 13.9.2026, Raamattu KARTTAUUDISTUKSEN
+   * PAATOKSET 1 kohta 4, sanatarkasti: *"liftaus tarkoittaa nopalla
+   * liikkumista. mutta koska jalan liikkuminen ei ole realistista, niin
+   * siksi jalan termi muutetaan liftaukseksi. siina kuluu saman verran
+   * aikaa."*). Tunnus `land` pysyy datassa ja tallennuksissa — vain
+   * NIMI ja animaatio vaihtuivat (js/ui.js ja laudan oma kuljettaja).
+   *
+   * `bus` EI OLE NOPPATAPA: sillä ei heitetä, vaan kohde valitaan
+   * naapurikaupungeista (busDestinations → actionBus). Siksi se ei
+   * koskaan päädy `travelMode`-kenttään actionTravelin kautta.
    */
   travelModes(player = this.player) {
     if (this.phase !== 'action') return [];
@@ -933,11 +1023,102 @@ export class Game {
     const edges = this.board.adj.get(city.id).map((id) => this.board.edgeById.get(id));
     const modes = [];
     if (edges.some((e) => e.type === 'land')) modes.push('land');
+    if (this.busDestinations(player).length) modes.push('bus');
     if (edges.some((e) => e.type === 'sea') && player.money >= SEA_FARE) modes.push('sea');
     if (this.airportDestinations(player).length) modes.push('fly');
     // Tutki paikka: tehtävä ei koskaan aukea itsestään, vaan napista.
     if (this.tehtavaTarjolla(player)) modes.push('stay');
     return modes;
+  }
+
+  /**
+   * Bussin kohteet: VIEREISET kaupungit eli yhden maakaaren päässä
+   * olevat (omistaja 13.9.2026: *"bussi kahden vierekkaisen kaupungin
+   * valilla"*). Sama päättely kuin rideTargetilla (tapahtumakortin
+   * kyyti), mutta kaikki kohteet eikä arvottu yksi, ja vain maakaaret:
+   * bussi ei aja laivareittiä.
+   *
+   * Tyhjä lista tarkoittaa "ei valittavissa", ja se on tarkoituksella
+   * sama ehto rahalle ja maantieteelle: ilman 50 puntaa bussia ei ole
+   * (käyttöliittymä näyttää napin harmaana ja kertoo syyn).
+   */
+  busDestinations(player = this.player) {
+    // Vaihe 'roll' on mukana, koska bussi on valittavissa myös silloin,
+    // kun noppatapa on esivalittu mutta noppaa ei ole vielä heitetty
+    // (muitaTapojaTarjolla, Raamattu KARTTAUUDISTUKSEN PAATOKSET 5).
+    if (this.phase !== 'action' && this.phase !== 'roll') return [];
+    if (player.pos.type !== 'city') return [];
+    if (player.money < BUS_FARE) return [];
+    const city = this.cityOf(player);
+    if (!city) return [];
+    const kohteet = [];
+    for (const eid of this.board.adj.get(city.id) ?? []) {
+      const e = this.board.edgeById.get(eid);
+      if (!e || e.type !== 'land') continue;
+      const toinen = e.a === city.id ? e.b : e.a;
+      if (this.board.cityById.has(toinen) && !kohteet.includes(toinen)) kohteet.push(toinen);
+    }
+    return kohteet;
+  }
+
+  /**
+   * Bussimatkan askelpolku animaatiolle: kaaren välipisteet lähdöstä
+   * kohteeseen ja viimeisenä kohdekaupunki.
+   *
+   * Peli siirtää nappulan suoraan kaupunkiin (bussi ei pysähdy kaaren
+   * varrelle), mutta ANIMAATIO ajaa saman viivan kuin liftaus — muuten
+   * bussi oikaisisi kartan poikki reitin ohi. Sama polkumuoto kuin
+   * findMoves palauttaa, joten js/ui.js:n siirtokoreografia ei tunne
+   * eroa.
+   */
+  busPath(fromCityId, toCityId) {
+    const e = this.board.edgeById.get(edgeId(fromCityId, toCityId))
+      ?? this.board.edgeById.get(edgeId(toCityId, fromCityId));
+    const polku = [];
+    if (e) {
+      const eteen = e.a === fromCityId;
+      for (let i = 1; i < e.steps; i += 1) {
+        polku.push({ type: 'edge', edge: e.id, idx: eteen ? i : e.steps - i });
+      }
+    }
+    polku.push({ type: 'city', city: toCityId });
+    return polku;
+  }
+
+  /**
+   * BUSSIMATKA: 50 puntaa, ei nopanheittoa eikä aikaa (omistaja
+   * 13.9.2026). Kassa on se, mistä bussi maksaa; kello ei liiku, ja
+   * juuri siinä on koko valinta — 80 päivän tavoite on pelin oma kello
+   * (Raamattu, "Pelin kulku").
+   *
+   * Rakenne on actionMoven sisar: veloitus, siirto, saapuminen,
+   * voittotarkistus ja vuoron päätös samassa järjestyksessä. Ainoa ero
+   * on `aikaKuluu: false` vuoron päätöksessä.
+   */
+  actionBus(cityId) {
+    if (this.phase !== 'action') return { ok: false, error: 'Väärä vaihe' };
+    const p = this.player;
+    if (!this.busDestinations(p).includes(cityId)) {
+      return { ok: false, error: 'Bussi ei kulje tuonne' };
+    }
+    const kohde = this.board.cityById.get(cityId);
+    if (!kohde) return { ok: false, error: 'Tuntematon kaupunki' };
+    const lahto = p.pos.city;
+    p.money -= BUS_FARE;
+    this.travelMode = 'bus';
+    this.pendingFare = 0;
+    this.lastPath = this.busPath(lahto, cityId);
+    p.pos = { type: 'city', city: cityId };
+    this.visitCity(p);
+    this.say(p.id, `${p.name} otti bussin kaupunkiin ${kohde.name} (bussilippu ${BUS_FARE} puntaa).`);
+    this.emit('fare', `Bussimatka −${BUS_FARE} puntaa`, { icon: 'kukkaro' });
+    this.moves = null;
+    this.die = null;
+    if (this.checkWin()) return { ok: true, win: true };
+    if (this.offerQuiz()) return { ok: true, offer: true };
+    // AIKA EI KULU: bussi ostaa nimenomaan päiviä (ks. endTurn).
+    this.endTurn({ aikaKuluu: false });
+    return { ok: true };
   }
 
   /**
@@ -1006,8 +1187,60 @@ export class Game {
   tarkistaLinssikynnys(player, ennen, jalkeen) {
     for (const tunnus of tarkistaKynnys(this, player, ennen, jalkeen)) {
       this.say(player.id, `${player.name} on nähnyt maailmaa niin paljon, että sai uuden linssin (${jalkeen} tp).`);
-      this.emit('aid', 'Uusi linssi', { icon: 'suurennuslasi', linssi: tunnus, sub: 'Kokemus avasi uuden katselutavan' });
+      this.emit('aid', 'Uusi linssi', {
+        icon: 'suurennuslasi',
+        linssi: tunnus,
+        sub: 'Kokemus avasi uuden katselutavan',
+        tilanne: 'peli.linssi.avautui',
+      });
     }
+  }
+
+  /**
+   * LINSSI ISON AARTEEN KYLKIÄISENÄ (omistaja 21.9.2026, Raamatun loki
+   * "HIOMASSA-LINSSI JA OPTIKON HYVITYS: MEKANIIKKA HYVAKSYTTY").
+   *
+   * Aarteen raha on jo maksettu — keskeneräisyys ei saa rangaista.
+   * Jos kaupungin isoon aarteeseen kuuluu linssi (js/linssit/aarteet.js;
+   * testit antavat oman taulun `this.linssiAarteet`), se myönnetään.
+   * Hiomassa oleva linssi tuo optikon hyvityksen kerran (omistus.js
+   * hyvitaHiomassa) ja jää laukkuun harmaana; valmis linssi on heti
+   * käytössä. Toisella pelikerralla linssi on jo passissa eikä uusi:
+   * silloin ei kuplaa eikä hyvitystä.
+   *
+   * Tapahtumalaji on 'aid' kuten kynnyslinssillä: aarrelaji nähdään jo
+   * laatan paljastuksessa, ja tämä on sen jälkeinen lisä.
+   */
+  linssiAarteenKylkiaisena(player, cityId, type) {
+    const tunnus = linssiAarteesta(cityId, type, this.linssiAarteet ?? LINSSIAARTEET);
+    if (!tunnus) return null;
+    const { uusi } = myonna(this, player, tunnus);
+    if (!uusi) return null;
+    if (hiomassa(tunnus)) {
+      const hyvitys = hyvitaHiomassa(this, player, tunnus);
+      const nimi = hiomassaNimi(tunnus);
+      this.say(player.id, `${player.name} löysi aarteen kyljestä linssin (${nimi}), mutta optikko hioo sitä vielä`
+        + (hyvitys ? ` — hän maksoi odotuksesta ${hyvitys} puntaa hyvitystä.` : '.'));
+      this.emit('aid', 'Linssi hiomassa', {
+        icon: 'suurennuslasi',
+        linssi: tunnus,
+        hiomassa: true,
+        hyvitys,
+        sub: hyvitys
+          ? `Optikko hioo vielä tätä linssiä — hän maksoi odotuksesta ${hyvitys} puntaa hyvitystä. Linssi tulee laukkuun, kun se on valmis.`
+          : 'Optikko hioo vielä tätä linssiä. Linssi tulee laukkuun, kun se on valmis.',
+        tilanne: 'peli.linssi.hiomassa',
+      });
+      return { tunnus, hiomassa: true, hyvitys };
+    }
+    this.say(player.id, `${player.name} löysi aarteen kyljestä linssin.`);
+    this.emit('aid', 'Uusi linssi', {
+      icon: 'suurennuslasi',
+      linssi: tunnus,
+      sub: 'Aarteen kyljessä oli linssi — uusi katselutapa laukkuun',
+      tilanne: 'peli.linssi.avautui',
+    });
+    return { tunnus, hiomassa: false, hyvitys: 0 };
   }
 
   /**
@@ -1178,6 +1411,37 @@ export class Game {
   }
 
   /**
+   * KARTTANOSTON MINIKYSYMYS RATKESI (karttauudistuksen erä 6).
+   *
+   * Vain laskurin kasvatus: kassa, kirjanpito ja kaksoiskirjauksen
+   * esto ovat `actionMinitehtava`ssa, jonka rajapintaa erä 6 ei muuta.
+   * Kutsuja (js/fokusnosto.js piirraNostonVisa) kutsuu tätä vasta, kun
+   * actionMinitehtava palautti `ok` JA vastaus oli oikein — siksi tässä
+   * ei ole omaa porttia eikä omaa avainta.
+   *
+   * @returns {number} laskurin uusi arvo
+   */
+  kirjaaNostotehtava() {
+    this.nostotehtavatRatkaistu += 1;
+    return this.nostotehtavatRatkaistu;
+  }
+
+  /**
+   * PULUN KARTTAOHJE KULUTETAAN (karttauudistuksen erä 7).
+   *
+   * Kertalippu kuluu vasta, kun kupla oikeasti näkyi — kutsuja
+   * (js/fokusvirta.js fokusvirtaAarrepisteOhje) tarkistaa pulun napin
+   * ennen tätä, jottei piilossa jäänyt ohje katoaisi pelaajalta.
+   *
+   * @returns {boolean} kului lippu nyt (false = ohje oli jo nähty)
+   */
+  merkitseAarrepisteOhje() {
+    if (this.aarrepisteOhjeNahty) return false;
+    this.aarrepisteOhjeNahty = true;
+    return true;
+  }
+
+  /**
    * PULLA LIVIALLE — VINKKI RAHALLA (omistajan tilaus 28.8.2026:
    * *"aarretehtävässä vinkin voisi saada jatkossa ostamalla pullan
    * pululle"*).
@@ -1197,19 +1461,41 @@ export class Game {
    * pelaajaa. Sama linja kuin visan 50:50:llä ja vihjeellä.
    */
   actionPullaVinkki(cityId, hinta = PULLA_HINTA) {
-    const avain = `${this.pack.id}:${cityId}`;
+    return this.actionPullaOstos(`${this.pack.id}:${cityId}`, hinta,
+      'sai vinkin aarteen paikasta');
+  }
+
+  /**
+   * SAMA KASSATAPAHTUMA MILLE TAHANSA LIVIALLE OSTETULLE PULLALLE.
+   *
+   * Avain on kutsujan: aarrevinkki käyttää muotoa 'pakka:kaupunki',
+   * sähketehtävä muotoa 'sahke:<tehtäväId>:vinkki|linkki'. Portti,
+   * kassa ja kirjanpito ovat silti YHDESSÄ paikassa — kaksi rinnakkaista
+   * kassafunktiota ajautuisi ennen pitkää eri säännöille.
+   *
+   * @param {string} avain kirjanpidon avain (ks. pullaVinkit)
+   * @param {number} hinta punnat
+   * @param {string} mita mitä pelaaja sai, lokiriville
+   */
+  actionPullaOstos(avain, hinta = PULLA_HINTA, mita = 'sai vinkin') {
+    if (!avain) return { ok: false, error: 'Avain puuttuu' };
     if (this.pullaVinkit.has(avain)) return { ok: false, error: 'Jo ostettu' };
     const p = this.player;
     if (p.money < hinta) return { ok: false, error: 'Rahat eivät riitä' };
     p.money -= hinta;
     this.pullaVinkit.add(avain);
-    this.say(p.id, `${p.name} osti Livialle pullan ${hinta} punnalla ja sai vinkin aarteen paikasta.`);
+    this.say(p.id, `${p.name} osti Livialle pullan ${hinta} punnalla ja ${mita}.`);
     return { ok: true, hinta };
   }
 
   /** Onko tämän kaupungin pullavinkki jo ostettu? */
   pullaVinkkiOstettu(cityId) {
     return this.pullaVinkit.has(`${this.pack.id}:${cityId}`);
+  }
+
+  /** Onko tällä avaimella ostettu pulla jo kirjattu? */
+  pullaOstettu(avain) {
+    return Boolean(avain) && this.pullaVinkit.has(avain);
   }
 
   /**
@@ -1355,6 +1641,7 @@ export class Game {
     this.travelMode = null;
     this.pendingFare = 0;
     this.autoTravel = false;
+    this.jatkaAutomaattisesti = false;
 
     // Pääaarre kotikaupungissa ratkaisee pelin heti vuoron alussa.
     if (this.checkWin()) return;
@@ -1362,15 +1649,70 @@ export class Game {
     if (this.needsAid(p)) {
       p.money += STRANDED_AID;
       this.say(p.id, `${p.name} on jumissa ilman rahaa ja saa pankilta ${STRANDED_AID} puntaa.`);
-      this.emit('aid', `${p.name} sai pankilta ${STRANDED_AID} puntaa`, { icon: 'kukkaro' });
+      this.emit('aid', `${p.name} sai pankilta ${STRANDED_AID} puntaa`, {
+        icon: 'kukkaro',
+        tilanne: 'peli.vararikko.pankkiapu',
+      });
     }
 
     // Kun vaihtoehtoja ei ole — esimerkiksi sisämaan kaupungissa tai kesken
     // reittiä — matkustustapa valitaan valmiiksi ja vuoro alkaa suoraan
     // nopanheitosta. Turhaa napinpainallusta ei tarvita.
+    /*
+     * BUSSI EI ESTÄ AUTOMAATTISTA HEITTOA (omistaja 13.9.2026, Raamattu
+     * KARTTAUUDISTUKSEN PAATOKSET 5, sanatarkasti: *"Bussilippu vie aina
+     * suoraan seuraavaan kaupunkiin ilman nopanheittoa, joten
+     * automaattinen nopanheitto on edelleen voimassa, koska se koskee
+     * ainoastaan vain liftausta. Kaikissa tapauksissa paitsi
+     * laivareitillä."* ja *"Ja laiva  reitilläkään ei taas ole muuta
+     * vaihtoehtoa kuin laiva, niin siellekin on automaattinen
+     * nopanheitto."*).
+     *
+     * Automaattivalinta lasketaan siksi NOPPATAVOISTA (land, sea, fly):
+     * bussilla ei heitetä, joten sen olemassaolo ei tee heitosta
+     * valintaa. Ehto on täsmälleen sama kuin ennen erää 8 (v1844).
+     * Bussi jää silti valittavaksi Liiku-napista ennen heittoa
+     * (muitaTapojaTarjolla → js/ui.js paluunappi).
+     */
     const modes = this.travelModes(p);
-    this.autoTravel = modes.length === 1 && modes[0] !== 'stay';
-    if (this.autoTravel) this.actionTravel(modes[0]);
+    const noppaTavat = modes.filter((m) => m !== 'bus');
+    this.autoTravel = noppaTavat.length === 1 && noppaTavat[0] !== 'stay';
+    if (this.autoTravel) this.actionTravel(noppaTavat[0]);
+
+    /*
+     * MATKA KESKEN = HEITTO ILMAN NAPPIA (omistaja 2.9.2026:
+     * *"nopanheitto tulee jatkua automaattisesti jos ei olla saavuttu
+     * seuraavaan kohdekaupunkiin"*).
+     *
+     * Ehto luetaan asemasta: reitin askelpiste ei ole pysähdys vaan
+     * matkan puoliväli. Kaupunkiin saavuttaessa lippu jää alas, ja
+     * saapumiskortti sekä tutkiminen saavat vuoron kuten ennenkin.
+     * Botti ei tarvitse tätä — sillä on oma ajastimensa (ui.js
+     * scheduleBot) — eikä lippu nouse, ellei matkustustapa jatkunut
+     * itsestään samana (autoTravel): merellä se tarkoittaa, että
+     * laivalippu on jo maksettu satamassa (pendingFare = 0).
+     */
+    this.jatkaAutomaattisesti = this.autoTravel
+      && this.phase === 'roll'
+      && !p.isBot
+      && p.pos.type === 'edge';
+  }
+
+  /**
+   * Saako peli heittää nopan pelaajan puolesta juuri nyt?
+   *
+   * Lipun lisäksi tarkistetaan elävä tila, koska kesken vuoron voi
+   * tapahtua mitä tahansa (kehittäjäsiirto, tallennuksen lataus,
+   * käsin siirretty nappula savukkeissa): vaiheen on oltava 'roll',
+   * noppa heittämättä ja nappulan yhä reitillä. Näin vanhentunut
+   * lippu ei voi laukaista heittoa kaupungissa.
+   */
+  jatkaMatkaaItsestaan(player = this.player) {
+    return this.jatkaAutomaattisesti
+      && this.phase === 'roll'
+      && this.die === null
+      && !player.isBot
+      && player.pos.type === 'edge';
   }
 
   /**
@@ -1400,11 +1742,21 @@ export class Game {
     return true;
   }
 
-  endTurn() {
+  /**
+   * Vuoro vaihtuu.
+   *
+   * `aikaKuluu: false` päättää vuoron ILMAN kellon liikettä (bussi,
+   * omistaja 13.9.2026: bussi on *"nopeampi"* kuin liftaus). Aika on
+   * pelissä kierrosten laskuri (elapsedHours = (turnCount − 1) ×
+   * TURN_HOURS), joten ainoa tapa olla kuluttamatta aikaa on jättää
+   * kierroslaskuri koskematta — kaikki muu vuoron päätöksessä
+   * (pelaajan vaihto, aikataulu, uuden vuoron alku) tehdään normaalisti.
+   */
+  endTurn({ aikaKuluu = true } = {}) {
     if (this.phase === 'over') return;
     this.phase = 'action';
     this.current = (this.current + 1) % this.players.length;
-    if (this.current === 0) this.turnCount++;
+    if (this.current === 0 && aikaKuluu) this.turnCount++;
     this.updateSchedule();
     this.beginTurn();
   }
@@ -1446,6 +1798,13 @@ export class Game {
       return { ok: false, error: 'Tuo matkustustapa ei ole nyt käytettävissä' };
     }
     if (mode === 'stay') return this.actionQuiz(opts);
+    /*
+     * BUSSI EI OLE NOPPATAPA. Se on oma tekonsa (actionBus), koska
+     * kohde valitaan naapurikaupungeista eikä nopan silmäluvusta —
+     * tänne päätyessään se jättäisi pelin odottamaan heittoa, jota ei
+     * koskaan tule.
+     */
+    if (mode === 'bus') return { ok: false, error: 'Bussin kohde valitaan erikseen' };
 
     const p = this.player;
     this.travelMode = mode;
@@ -1455,13 +1814,46 @@ export class Game {
     return { ok: true, mode };
   }
 
+  /**
+   * Onko esivalitun nopanheiton rinnalla vielä jotain valittavaa?
+   *
+   * Bussi ei ole noppatapa eikä siksi estä automaattista heittoa
+   * (Raamattu KARTTAUUDISTUKSEN PAATOKSET 5), mutta se on yhä tarjolla
+   * Liiku-napista niin kauan kuin noppaa ei ole heitetty. Kesken
+   * reittiä (nappula kaaren askelpisteessä) bussia ei ole, joten
+   * paluuta ei tarjota.
+   */
+  muitaTapojaTarjolla(player = this.player) {
+    if (this.phase !== 'roll') return false;
+    if (this.travelMode === 'bus') return false;
+    return this.busDestinations(player).length > 0;
+  }
+
   /** Palaa matkustustavan valintaan ennen nopanheittoa. */
   actionCancelTravel() {
     if (this.phase !== 'roll') return { ok: false, error: 'Väärä vaihe' };
-    if (this.autoTravel) return { ok: false, error: 'Muita matkustustapoja ei ole' };
+    if (this.autoTravel && !this.muitaTapojaTarjolla()) {
+      return { ok: false, error: 'Muita matkustustapoja ei ole' };
+    }
     this.travelMode = null;
     this.pendingFare = 0;
     this.phase = 'action';
+    /*
+     * ESIVALINTA PURKAUTUU TÄSSÄ (mitattu 14.9.2026, reittiviuhkan erä).
+     *
+     * `autoTravel` tarkoittaa *"peli valitsi tavan pelaajan puolesta"*
+     * (beginTurn), ja juuri sitä lukee js/ui.js matkaSessioKesken
+     * erottaakseen vuoron lepotilan aidosta matkan vaiheesta. Kun
+     * pelaaja painaa "Vaihda matkustustapa", esivalinta on purettu — ja
+     * jos lippu jäi päälle, pelaajan ITSE seuraavaksi valitsema tapa
+     * luettiin yhä koneen esivalinnaksi ja matkasessio katkesi kesken
+     * matkan liu'un sulkeutuessa (viuhka katosi nopanheiton alta).
+     * `jatkaAutomaattisesti` on saman esivalinnan jatke (matka kesken
+     * reittiä), eikä sitäkään saa jäädä kaupunkiin palanneeseen
+     * vuoroon.
+     */
+    this.autoTravel = false;
+    this.jatkaAutomaattisesti = false;
     return { ok: true };
   }
 
@@ -1475,7 +1867,10 @@ export class Game {
     this.say(p.id, `${p.name} heitti ${die}.`);
     if (this.moves.size === 0) {
       this.say(p.id, `${p.name} ei pysty liikkumaan ja jää paikalleen.`);
-      this.emit('stuck', `${p.name} ei pysty liikkumaan`, { icon: 'estetty' });
+      this.emit('stuck', `${p.name} ei pysty liikkumaan`, {
+        icon: 'estetty',
+        tilanne: 'matka.jumissa',
+      });
       this.endTurn();
       return { ok: true, moved: false, die };
     }
@@ -2225,7 +2620,8 @@ export class Game {
     // VAIN tässä, pelin omalla rng:llä, ja tulos jää quiz-tilaan — näin
     // tallennettu peli jatkuu täsmälleen samasta pulmasta. `fact` on aina
     // pulman oma: se on tarkistettu fakta eikä se saa vaihdella.
-    const arvottu = puzzle.generate ? puzzle.generate(this.rng) : null;
+    const generaattori = pulmanGeneraattori(puzzle);
+    const arvottu = generaattori ? generaattori(this.rng) : null;
     const sketch = arvottu?.sketch ?? puzzle.sketch ?? null;
     const options = arvottu?.options ?? puzzle.options;
     const correct = arvottu?.correct ?? puzzle.correct;
@@ -2794,7 +3190,7 @@ export class Game {
             this.say(p.id, MANNERLENTO_ILMOITUS);
           }
         } else {
-          this.say(p.id, this.pack.texts.starFound(p.name, city.name));
+          this.say(p.id, taytaPohja(this.pack.texts.starFound, { name: p.name, city: city.name }));
           this.say(null, this.pack.texts.starChase);
           this.emit('treasure', this.pack.texts.starToast, {
             token: type,
@@ -2824,6 +3220,7 @@ export class Game {
         p.money += arvo;
         this.say(p.id, `${token.symbol} ${p.name} löysi kätköstä: ${token.name} (${arvo} puntaa).`);
         this.emit('treasure', token.name, { token: type, city: cityId, sub: `+${arvo} puntaa` });
+        this.linssiAarteenKylkiaisena(p, cityId, type);
     }
 
     this.checkWin();
@@ -2900,6 +3297,8 @@ export class Game {
       kulttuuriVastatut: [...this.kulttuuriVastatut],
       minitehtavatVastatut: [...this.minitehtavatVastatut],
       minitehtavatOikein: [...this.minitehtavatOikein],
+      nostotehtavatRatkaistu: this.nostotehtavatRatkaistu,
+      aarrepisteOhjeNahty: this.aarrepisteOhjeNahty,
       pullaVinkit: [...this.pullaVinkit],
       elaintakyLunastetut: [...this.elaintakyLunastetut],
       julisteet: [...this.julisteet],
@@ -3029,6 +3428,18 @@ export class Game {
     game.phase = data.phase;
     game.travelMode = data.travelMode ?? null;
     game.autoTravel = !!data.autoTravel;
+    /*
+     * JATKOTILA JOHDETAAN, EI LUETA (2.9.2026). Kesken matkaa
+     * tallennettu peli jatkuu itsestään vain siitä samasta tilasta,
+     * jossa automaatti muutenkin toimii: vuoro on nopanheitossa ja
+     * nappula reitin askelpisteessä. Näin vanhakin tallennus jatkaa
+     * matkaa oikein eikä kenttä voi jäädä roikkumaan väärään tilaan
+     * (esim. kaupungissa, jossa noppa kuuluu aina pelaajan napin
+     * taakse).
+     */
+    game.jatkaAutomaattisesti = game.phase === 'roll'
+      && !game.player?.isBot
+      && game.player?.pos?.type === 'edge';
     game.pendingFare = data.pendingFare ?? 0;
     game.die = data.die ?? null;
     game.quiz = data.quiz ?? null;
@@ -3048,6 +3459,20 @@ export class Game {
      * julistetta, ja mennyttä vastausta ei voi enää tarkistaa.
      */
     game.minitehtavatOikein = new Set(data.minitehtavatOikein ?? data.minitehtavatVastatut ?? []);
+    /*
+     * Vanha tallennus ei tunne nostojen minikysymyksiä: laskuri alkaa
+     * nollasta eikä skeemaversio nouse (erän 6 sääntö). Rikkinäinen tai
+     * puuttuva arvo luetaan nollaksi — laskuri ei saa muuttua
+     * NaN:ksi, koska erän 7 ehto (>= 2) lukee sitä suoraan.
+     */
+    game.nostotehtavatRatkaistu = Number.isFinite(Number(data.nostotehtavatRatkaistu))
+      ? Math.max(0, Math.trunc(Number(data.nostotehtavatRatkaistu))) : 0;
+    /*
+     * Vanha tallennus ei tunne pulun karttaohjetta: lippu on auki ja
+     * ohje kuuluu seuraavassa kaupungissa, jossa lukittu piste näkyy.
+     * Skeemaversio ei nouse (sama sääntö kuin erällä 6).
+     */
+    game.aarrepisteOhjeNahty = Boolean(data.aarrepisteOhjeNahty);
     /*
      * Vanha tallennus ei tunne pullavinkkiä: joukko alkaa tyhjänä ja
      * tarjous on kesken olevassa pelissä yhä ostamatta. Se on oikea

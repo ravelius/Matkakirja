@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Livia — oikean puheohjaimen QA</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="livia-svg.css">
+  <style>
+    html,body{height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto;background:#e8dec7;color:#352e24}body{margin:0;padding:20px;font:15px/1.45 system-ui,sans-serif}main{max-width:1080px;margin:auto}.qa-note,.qa-error{padding:12px 14px;border-left:3px solid #7d8f88;background:#fffaf0}.qa-error{border-color:#a54835}.qa-toolbar,.qa-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:end;margin:16px 0}.qa-toolbar label{display:grid;gap:4px;min-width:180px}.qa-toolbar select,.qa-actions button{font:inherit;padding:8px 10px}.qa-frame{display:block;width:min(920px,100%);height:1120px;border:1px solid #a99878;border-radius:16px;background:#f6eedb}.qa-frame.mobile{width:392px;height:1580px;max-width:100%}.qa-runner{max-width:none}.qa-runner>header,.qa-runner>footer{max-width:760px;margin-inline:auto}.qa-player{max-width:760px;margin:12px auto}.qa-player audio{width:100%}.qa-stage{height:330px;position:relative;overflow:visible;border:1px solid #cabea2;border-radius:16px;background:radial-gradient(ellipse at 10% 90%,#d7cbb0 0 35%,transparent 36%),linear-gradient(35deg,#e2d8bd,#f1e4bc)}.qa-anchor{position:absolute;right:18px;bottom:18px;width:1px;height:1px;opacity:.01;pointer-events:none}.qa-readout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:14px 0;font:13px/1.45 ui-monospace,SFMono-Regular,monospace}.qa-readout div{padding:9px;background:#fffaf0;border-radius:8px;overflow-wrap:anywhere}.qa-readout strong{display:block;font-family:system-ui,sans-serif}.qa-seek{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center}.qa-seek input{width:100%}.qa-links{font-size:12px;overflow-wrap:anywhere}.qa-hidden{display:none!important}@media(max-width:600px){body{padding:10px}.qa-readout{grid-template-columns:1fr}.qa-stage{height:318px}.qa-actions button{flex:1 1 28%}}
+    #transport{border:0;padding:0;margin:0;min-width:0}#transport:disabled{opacity:.55}
+  </style>
+</head>
+<body>
+<main id="host">
+  <header><span>MATKAKIRJA / LIVIA / ERILLINEN QA</span><h1>Oikea puheohjain ja julkaistu ääni</h1></header>
+  <p class="qa-note">Tämä sivu käyttää oikeaa HTMLAudioElement-soitinta, tuotannon cue-validaattoria, puhe-eleohjainta, kasvosovitinta ja SVG:tä. Se ei ole tavallinen peli eikä tee ääni-, kohdistus- tai tallennusmuutoksia. Liikevalinta avaa aina uuden QA-ruudun valitulla reduced-motion-tilalla; se ei muuta käyttöjärjestelmän asetusta kesken cuen.</p>
+  <div class="qa-toolbar">
+    <label>Kaupunki<select id="host-case"><option value="berliini" selected>Berliini — c1 6,200 s</option><option value="tromssa">Tromssa — c1 1,500 s</option></select></label>
+    <label>Näkymä<select id="host-viewport"><option value="desktop" selected>Desktop</option><option value="mobile">390 px</option></select></label>
+    <label>Liike<select id="host-motion"><option value="full" selected>Tavallinen</option><option value="reduced">Vähennetty liike</option></select></label>
+  </div>
+  <iframe id="qa-frame" class="qa-frame" title="Livian oikean audio-ohjaimen katselu"></iframe>
+  <footer><p>Erillinen katselupinta · ei linkkiä normaaliin peliin · julkaisu vaatii oman päätöksen</p></footer>
+</main>
+
+<main id="runner" class="qa-runner qa-hidden">
+  <header><span>OIKEA HTMLAUDIOELEMENT</span><h1 id="runner-title">Livia</h1><p id="origin-note" class="qa-note"></p></header>
+  <section class="qa-player">
+    <audio id="audio" controls preload="metadata" inert aria-disabled="true"></audio>
+    <fieldset id="transport" disabled><div class="qa-actions"><button id="play" type="button">Toista</button><button id="pause" type="button">Tauko</button><button type="button" data-rate="0.5">0,5×</button><button type="button" data-rate="1">1×</button><button type="button" data-rate="2">2×</button></div>
+    <label class="qa-seek"><span>Kelaa</span><input id="seek" type="range" min="0" max="1000" value="0"><output id="seek-out">0 %</output></label></fieldset>
+    <div class="qa-stage"><button id="pulu-anchor" class="qa-anchor" aria-label="Livian QA-ankkuri"></button></div>
+    <div class="qa-readout">
+      <div><strong>Ohjaimen tila</strong><span id="controller">ladataan…</span></div>
+      <div><strong>Oikea media-aika</strong><span id="time">0,000 s</span></div>
+      <div><strong>Aktiivinen cue</strong><span id="cue">—</span></div>
+      <div><strong>Liikevariantti</strong><span id="variant">lepo</span></div>
+      <div><strong>Näkymä / liike</strong><span id="mode">—</span></div>
+      <div><strong>Lähteet</strong><span id="sources" class="qa-links">—</span></div>
+    </div>
+    <p id="error" class="qa-error qa-hidden"></p>
+  </section>
+  <footer><p>Tuotantomoduulit · julkaistu MP3 ja sen täsmäävä sidecar · vain luku</p></footer>
+</main>
+<script type="module" src="livia-cue-ab.mjs"></script>
+</body>
+</html>

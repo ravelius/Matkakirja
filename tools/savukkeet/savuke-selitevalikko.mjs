@@ -12,7 +12,7 @@
  * VARTIOT:
  *   1. NAPPI JA LEVY. Kartan oikeassa yläkulmassa on nappi, valikko on
  *      aluksi kiinni (visibility: hidden) ja napista se aukeaa. Rivejä
- *      on omistajan kahdeksan pääkategoriaa, ja jokaisella on symboli,
+ *      on omistajan pääkategoriat, ja jokaisella on symboli,
  *      suomenkielinen selite ja kappalemäärä.
  *   2. KAPPALEMÄÄRÄ ON TOSI (omistajan lisätilaus 29.8.2026). Rivin
  *      luku vastaa täsmälleen sitä, montako sen aiheen merkkiä kartalle
@@ -22,7 +22,7 @@
  *      eläintäyt; kun kamera ajaa maalehdelle, maan omat kohdemerkit
  *      ilmestyvät ja rivien luvut kasvavat niiden mukana. Juuri tämä on
  *      omistajan *"kappalemäärä kyseisen maan kohdalla"*.
- *   4. KARTALLA ON VAIN SELITTEEN KAHDEKSAN SYMBOLIA (omistajan päätös
+ *   4. KARTALLA ON VAIN SELITTEEN SYMBOLIT (omistajan päätös
  *      31.8.2026). Jokainen kartalle piirretty merkki on jonkin
  *      seliterivin oma kärkisymboli (js/fokuskohteet.js kohteenSymboli
  *      → js/karttavalot.js karttavaloKarkisymboli) — kartalla ei siis
@@ -57,6 +57,13 @@ import { KARTTAVALO_AIHEET } from '../../js/karttavalot.js';
 import { NOSTOSYM_PAAKATEGORIAT } from '../../js/fokusnosto-symbolit.js';
 import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
 
+// VANHA KARTTA POIS KÄYTÖSTÄ (omistaja 7.9.2026): tämä savuke ajaa
+// ?lauta=kartta, joka ei enää vaihda lautaa — ohitus ja perustelu ovat
+// tiedostossa tools/savukkeet/vanha-kartta-ohitus.mjs.
+import { ohitaVanhanKartanSavuke } from './vanha-kartta-ohitus.mjs';
+
+ohitaVanhanKartanSavuke(import.meta.url);
+
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -76,7 +83,7 @@ const palvelin = http.createServer((req, res) => {
   res.end(readFileSync(polku));
 });
 await new Promise((ok) => palvelin.listen(0, ok));
-const osoite = `http://localhost:${palvelin.address().port}/`;
+const osoite = `http://localhost:${palvelin.address().port}/?lauta=kartta`;
 
 mkdirSync(KAAPPAUKSET, { recursive: true });
 
@@ -225,14 +232,16 @@ const valikko = () => sivu.evaluate(() => {
   const napinTila = nappi?.getBoundingClientRect();
   const rivit = [...document.querySelectorAll('.karttaselite-rivi')].map((r) => ({
     aihe: r.dataset.aihe,
+    valinta: r.dataset.valinta,
     nimi: r.querySelector('.karttaselite-nimi')?.textContent ?? '',
     luku: r.querySelector('.karttaselite-luku')?.textContent ?? '',
     paalla: r.getAttribute('aria-pressed') === 'true',
+    pallo: Boolean(r.querySelector('.karttaselite-pallo')),
     // Symboli on joko kirjaston kaiverruskuva tai koodilla piirretyt
     // muodot — kumpi tahansa kelpaa, tyhjä ruutu ei.
+    // Symboli on minimerkki (svg) tai Codexin kuvamerkki (img) — Kaikki/Ei mitään -riveillä ei kumpaakaan.
     symboleita: r.querySelectorAll('.karttaselite-symboli image, .karttaselite-symboli path, '
-      + '.karttaselite-symboli circle').length,
-    pallonVari: getComputedStyle(r.querySelector('.karttaselite-pallo')).backgroundColor,
+      + '.karttaselite-symboli circle, img.karttaselite-kuvamerkki').length,
     // Rivin oma tausta ja teksti: sormen alla oleva rivi ei saa maalautua
     // pelin yleisellä button:hover-mustella tummaksi (teksti katoaisi).
     tausta: getComputedStyle(r).backgroundColor,
@@ -318,16 +327,19 @@ const auki = await valikko();
 vaadi('napin painallus avaa valikon',
   auki.auki && auki.nakyvyys === 'visible' && auki.laajennettu === 'true',
   `auki=${auki.auki} nakyvyys=${auki.nakyvyys}`);
-vaadi(`selitelistalla on kaikki ${KARTTAVALO_AIHEET.length} aihetta`,
-  auki.rivit.length === KARTTAVALO_AIHEET.length
-  && auki.rivit.every((r, i) => r.aihe === KARTTAVALO_AIHEET[i].aihe),
-  `${auki.rivit.length} riviä`);
-vaadi('jokaisella rivillä on symboli ja suomenkielinen selite',
-  auki.rivit.every((r) => r.symboleita > 0 && r.nimi.length > 3),
-  JSON.stringify(auki.rivit.filter((r) => !r.symboleita || r.nimi.length <= 3)));
-vaadi('sammuneen rivin pallo on väritön ääriviiva',
-  auki.rivit.every((r) => /rgba\(0, 0, 0, 0\)|transparent/.test(r.pallonVari)),
-  JSON.stringify(auki.rivit.slice(0, 3).map((r) => r.pallonVari)));
+// Järjestys on omistajan (22.9.2026): Kaikki, Kaupungit, Historia, Ihmeet, Hetket,
+// Skandaalit, Luonto, Eläimet, Kulttuuri, Kauppa, Ei mitään.
+const ODOTETTU = ['kaikki', 'kaupungit', 'historia', 'ihmeet', 'hetket', 'skandaalit', 'luonto', 'elaimet', 'kulttuuri', 'kauppa', 'ei'];
+vaadi(`selitelistalla on kaikki ${KARTTAVALO_AIHEET.length} aihetta sekä Kaikki ja Ei mitään omistajan järjestyksessä`,
+  auki.rivit.map((r) => r.valinta).join() === ODOTETTU.join()
+  && auki.rivit.filter((r) => r.aihe).length === KARTTAVALO_AIHEET.length,
+  auki.rivit.map((r) => r.valinta).join());
+vaadi('jokaisella aiherivillä on tyyppimerkki ja suomenkielinen selite',
+  auki.rivit.filter((r) => r.aihe).every((r) => r.symboleita > 0 && r.nimi.length > 3),
+  JSON.stringify(auki.rivit.filter((r) => r.aihe && (!r.symboleita || r.nimi.length <= 3))));
+// Värirenkaat poistuivat 22.9.2026 (omistaja): rivin tila näkyy vain aria-pressed-taustana.
+vaadi('riveillä ei ole värirengasta',
+  auki.rivit.every((r) => !r.pallo), JSON.stringify(auki.rivit.filter((r) => r.pallo).map((r) => r.aihe)));
 
 /* --- 2: kappalemäärä vastaa kartalle piirrettyjä merkkejä --- */
 
@@ -410,9 +422,9 @@ vaadi('eläinvalot palavat kartalla',
   elainkuva.elaimet?.nakyvia === elainkuva.elaimet?.solmuja && elainkuva.elaimet?.nakyvia > 0,
   JSON.stringify(elainkuva.elaimet));
 await sivu.screenshot({ path: join(KAAPPAUKSET, 'selitevalikko-valot-elaimet.png') });
-await klikkaa('.karttaselite-kaikki:first-of-type');
+await klikkaa('.karttaselite-rivi[data-valinta="ei"]');
 
-/* --- 4: kartalla on vain kahdeksan symbolia, ja pallo sytyttää oman --- */
+/* --- 4: kartalla on vain selitteen symbolit, ja pallo sytyttää oman --- */
 
 /*
  * MIKÄ TÄSSÄ MUUTTUI 31.8.2026. Vartio mittasi ennen, että yksi pallo
@@ -430,7 +442,7 @@ await klikkaa('.karttaselite-kaikki:first-of-type');
 const KARJET = Object.fromEntries(KARTTAVALO_AIHEET.map((r) => [r.aihe, r.symboli]));
 const vieraat = Object.entries(lehdella)
   .filter(([aihe, t]) => t.alalajit.join() !== KARJET[aihe]);
-vaadi('kartan merkit ovat vain selitteen kahdeksan kärkisymbolia',
+vaadi('kartan merkit ovat vain selitteen kärkisymbolit',
   vieraat.length === 0,
   JSON.stringify(vieraat.map(([a, t]) => `${a}: ${t.alalajit.join('+')} ≠ ${KARJET[a]}`)));
 vaadi('jokainen kartalla oleva alalaji kuuluu oman rivinsä pääkategoriaan',
@@ -477,11 +489,8 @@ const painettu = sytytettyValikko.rivit.find((r) => r.aihe === koeaihe);
 vaadi('sytytetty rivi pysyy vaaleana ja luettavana myös osoittimen alla',
   vaalea(painettu?.tausta) && !vaalea(painettu?.tekstinVari),
   `tausta=${painettu?.tausta} teksti=${painettu?.tekstinVari}`);
-vaadi('syttynyt pallo saa aiheen oman värin',
-  !/rgba\(0, 0, 0, 0\)/.test(
-    sytytettyValikko.rivit.find((r) => r.aihe === koeaihe)?.pallonVari ?? '',
-  ),
-  sytytettyValikko.rivit.find((r) => r.aihe === koeaihe)?.pallonVari);
+vaadi('syttynyt rivi on painettuna (aria-pressed)',
+  painettu?.paalla === true, JSON.stringify(painettu));
 
 await sivu.screenshot({ path: join(KAAPPAUKSET, 'selitevalikko-valot-paalla.png') });
 
@@ -493,19 +502,21 @@ vaadi('toinen painallus sammuttaa saman aiheen valot',
 
 /* --- 5: OFF ja ALL --- */
 
-await klikkaa('.karttaselite-kaikki:last-of-type');
+await klikkaa('.karttaselite-rivi[data-valinta="kaikki"]');
 const kaikkiPaalla = await valot();
 const kaikkiLuokat = await luokat();
 vaadi('ALL sytyttää kaikki aiheet yhdellä painalluksella',
   kaikkiLuokat.length === KARTTAVALO_AIHEET.length
   && Object.values(kaikkiPaalla).every((t) => t.nakyvia === t.solmuja),
   `${kaikkiLuokat.length} luokkaa`);
-vaadi('ALL sytyttää myös jokaisen rivin pallon',
-  (await valikko()).rivit.every((r) => r.paalla), 'rivit');
+// Valinta on yksi kerrallaan (omistaja 22.9.2026): vain Kaikki-rivi on painettuna,
+// aiheiden valot palavat kartalla (yllä).
+vaadi('Kaikki-rivi on valittuna, aiherivit eivät',
+  (await valikko()).rivit.every((r) => r.paalla === (r.valinta === 'kaikki')), 'rivit');
 
 await sivu.screenshot({ path: join(KAAPPAUKSET, 'selitevalikko-kaikki-valot.png') });
 
-await klikkaa('.karttaselite-kaikki:first-of-type');
+await klikkaa('.karttaselite-rivi[data-valinta="ei"]');
 vaadi('OFF sammuttaa kaikki yhdellä painalluksella',
   (await luokat()).length === 0
   && Object.values(await valot()).every((t) => t.nakyvia === 0),

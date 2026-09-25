@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kokeilu: CesiumJS, UrlTemplate-laatat</title>
+<!-- KIRJASTOKOKEILU (Fablemax 6.9.2026): pelin laatat CesiumJS:llä ilman Ion-avainta ja ilman maastoa. Rajapinta window.koe (ks. maplibre.html). -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cesium@1.145.0/Build/Cesium/Widgets/widgets.css">
+<style>
+  html, body { margin: 0; height: 100%; background: #2a1d12; overflow: hidden; }
+  #cesium { position: absolute; inset: 0; }
+  .cesium-viewer-bottom, .cesium-widget-credits { display: none !important; }
+</style>
+<script>window.CESIUM_BASE_URL = 'https://cdn.jsdelivr.net/npm/cesium@1.145.0/Build/Cesium/';</script>
+<script src="https://cdn.jsdelivr.net/npm/cesium@1.145.0/Build/Cesium/Cesium.js"></script>
+</head>
+<body>
+<div id="cesium"></div>
+<script>
+const haku = new URLSearchParams(location.search);
+const LAATAT = haku.get('laatat')
+  ?? 'https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-03a-nostot-c/{z}/{x}/{y}.jpg';
+const R = 6378137;
+const alku = performance.now();
+const viewer = new Cesium.Viewer('cesium', {
+  baseLayer: new Cesium.ImageryLayer(new Cesium.UrlTemplateImageryProvider({ url: LAATAT, maximumLevel: 8, credit: '' })),
+  terrain: undefined, baseLayerPicker: false, geocoder: false, homeButton: false, sceneModePicker: false,
+  navigationHelpButton: false, animation: false, timeline: false, fullscreenButton: false, infoBox: false,
+  selectionIndicator: false, skyBox: false, skyAtmosphere: false, requestRenderMode: false,
+  contextOptions: { webgl: { antialias: false } },
+});
+viewer.scene.globe.showGroundAtmosphere = false;
+viewer.scene.fog.enabled = false;
+viewer.scene.globe.enableLighting = false;
+viewer.resolutionScale = 1;
+viewer.camera.frustum.fov = Cesium.Math.toRadians(50);
+window.viewer = viewer;
+
+let nakyma = { lat: 37.98, lng: 23.73, korkeus: 2.5 };
+const asemoi = ({ lat, lng, korkeus }) => {
+  nakyma = { lat, lng, korkeus };
+  viewer.camera.setView({ destination: Cesium.Cartesian3.fromDegrees(lng, lat, korkeus * R), orientation: { heading: 0, pitch: -Cesium.Math.PI_OVER_TWO, roll: 0 } });
+};
+asemoi(nakyma);
+let valmisOk;
+const valmis = new Promise((ok) => { valmisOk = ok; });
+let kehyksia = 0;
+let ajo = null;
+viewer.scene.postRender.addEventListener(() => {
+  kehyksia += 1;
+  if (kehyksia === 30) valmisOk({ kaynnistysMs: Math.round(performance.now() - alku) });
+  if (!ajo) return;
+  const t = Math.min(1, (performance.now() - ajo.alku) / ajo.kesto);
+  const a = ajo.alusta; const b = ajo.kohde;
+  asemoi({
+    lat: a.lat + (b.lat - a.lat) * t, lng: a.lng + (b.lng - a.lng) * t,
+    korkeus: Math.exp(Math.log(a.korkeus) + (Math.log(b.korkeus) - Math.log(a.korkeus)) * t),
+  });
+  if (t >= 1) { const ok = ajo.ok; ajo = null; ok(true); }
+});
+
+window.koe = {
+  nimi: 'cesium', versio: '1.145.0', lisenssi: 'Apache-2.0',
+  valmis,
+  asetaNakyma: asemoi,
+  ajaNakyma(kohde, kesto) {
+    return new Promise((ok) => { ajo = { alusta: { ...nakyma }, kohde, kesto, alku: performance.now(), ok }; });
+  },
+  tila() {
+    const g = viewer.scene.globe;
+    return {
+      laattoja: g._surface?._tilesToRender?.length ?? null, ladattu: g._surface?._tileLoadQueueHigh?.length ?? null,
+      korkeus: +nakyma.korkeus.toFixed(3), lat: +nakyma.lat.toFixed(2), lng: +nakyma.lng.toFixed(2),
+      taso: g._surface?._tilesToRender?.length ? Math.max(...g._surface._tilesToRender.map((t) => t.level)) : null,
+    };
+  },
+};
+</script>
+</body>
+</html>

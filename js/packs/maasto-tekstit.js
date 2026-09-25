@@ -59,6 +59,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Aldan River (near Dvortsy section, Siberia, Russia) 2 (21485056591).jpg',
+          lyhyt: 'Aldanin ranta Dvortsyn kohdalla: kevättulva syö ikiroutaista hiekkarantaa vuosittain.',
           selite: 'Aldan Dvortsyn kohdalla. Ranta on ikiroudan päällä olevaa '
             + 'hiekkaa, joka sortuu kevättulvassa metreittäin kerrallaan; '
             + 'uoma siirtyy siksi vuodesta toiseen.',
@@ -78,6 +79,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Pioneer, Pa., 186-. Oil barge in Oil Creek in foregrd. LCCN2002718639.jpg',
+          lyhyt: 'Öljylautta Oil Creekillä 1860-luvulla, kadonneessa Pioneerin kaupungissa.',
           selite: 'Öljylautta Oil Creekillä 1860-luvulla. Puron varsi oli '
             + 'tiheimmillään yhtenäistä porantornia; kuva on Pioneerista, '
             + 'kaupungista, jota ei enää ole.',
@@ -125,6 +127,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Battle on the River Oxus (right).jpg',
+          lyhyt: 'Behzadin 1400-luvun kuvitus taistelusta Oxuksen eli Amu Darjan rannalla.',
           selite: 'Behzadille luettu kuvitus taistelusta Oxuksen rannalla, '
             + '1400-luvun lopulta. Joki oli persialaisessa runoudessa Iranin '
             + 'ja Turanin raja kauan ennen kuin se oli sitä millään kartalla.',
@@ -138,6 +141,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Amu darya delta.jpg',
+          lyhyt: 'Amu Darjan vanha suisto ylhäältä: kuivunut järvenpohja pölyää pelloille.',
           selite: 'Vanha suisto ylhäältä. Vaaleat alueet ovat kuivunutta '
             + 'järvenpohjaa, ja niiden suolapöly kulkeutuu tuulessa juuri '
             + 'niille pelloille, joita varten vesi otettiin.',
@@ -165,6 +169,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Riverfront on the Amur River, Khabarovsk, Russia (14599202559).jpg',
+          lyhyt: 'Habarovka perustettiin 1858 Amurin ja Ussurin yhtymäkohtaan, nyt suurkaupunki.',
           selite: 'Habarovka perustettiin 1858 sotilasasemaksi Ussurin ja Amurin '
             + 'yhtymäkohtaan, kaksi vuotta ennen kuin raja vahvistettiin '
             + 'Pekingin sopimuksessa. Nyt siinä on puolen miljoonan asukkaan '
@@ -190,6 +195,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'RU Irkutsk Taltsy Angara River.jpg',
+          lyhyt: 'Angara höyryää pakkasessa Taltsyssa Irkutskin ja Baikalin välissä.',
           selite: 'Angara Taltsyn kohdalla Irkutskin ja Baikalin välissä. '
             + 'Pakkasessa joki höyryää: vesi on lähtiessään järvestä muutaman '
             + 'asteen lämpöistä, ilma neljäkymmentä astetta kylmempää.',
@@ -220,6 +226,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Rio Javaés.jpg',
+          lyhyt: 'Javaés-haara tekee Bananalista saaren Araguaiassa, tulva-aikaan järviä.',
           selite: 'Javaés on se Araguaian haara, joka tekee Bananalista saaren. '
             + 'Tulva-aikaan haarojen välinen maa muuttuu järviksi ja '
             + 'kanaviksi, ja kuivalla kaudella samat paikat ovat '
@@ -259,6 +266,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Argun River near Inner Mogolia.jpg',
+          lyhyt: 'Argun Sisä-Mongolian puolelta: liikkuva raja kiisti saaret 1990-luvulle asti.',
           selite: 'Argun Sisä-Mongolian puolelta. Uoma on valtakunnanraja, mutta '
             + 'uoma myös liikkuu: tulvat siirtävät sitä, ja saarten '
             + 'omistuksesta kiisteltiin 1990-luvulle asti.',
@@ -283,6 +291,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Grand Canyon of the Arkansas, Royal Gorge, by Jackson, William Henry, 1843-1942.jpg',
+          lyhyt: 'Jacksonin valokuva Kuninkaan kurusta: Arkansas-joki ja silta 1879.',
           selite: 'William Henry Jacksonin valokuva Kuninkaan kurusta. Arkansas '
             + 'laskee Kalliovuorilta niin jyrkästi, että seinämät nousevat '
             + 'kolmesataa metriä. Kapeimpaan kohtaan rautatie ripustettiin '
@@ -340,6 +349,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'NASA EO Athabasca tar sands environmental impact 1984 vs 2011.jpg',
+          lyhyt: 'Nasan satelliittikuvat Athabascan öljyhiekasta vuosilta 1984 ja 2011.',
           selite: 'Nasan satelliittikuvat samalta jokiosuudelta vuosilta 1984 ja '
             + '2011. Öljyhiekkaa on noin 140 000 neliökilometrin alalla, '
             + 'mutta vain murto-osa on niin lähellä pintaa, että se kannattaa '
@@ -376,6 +386,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'River Benue (in Makurdi).jpg',
+          lyhyt: 'Benue Makurdin kohdalla: sadekausi nostaa proomut Yolaan asti.',
           selite: 'Benue Makurdin kohdalla. Sadekautena joki nousee useita '
             + 'metrejä ja proomut pääsevät Yolaan asti; kuivana aikana '
             + 'samasta paikasta kävellään hiekkasärkille.',
@@ -413,6 +424,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Brahmaputra river in Majuli Island.jpg',
+          lyhyt: 'Majuli, Assamin jokisaari, on kutistunut yli puoleen sadassa vuodessa.',
           selite: 'Majuli Assamissa, maailman suurimpia jokisaaria. Se on '
             + 'kutistunut runsaassa sadassa vuodessa alle puoleen: tulva vie '
             + 'rantaa joka kesä, eikä menetetty pinta-ala palaudu.',
@@ -443,6 +455,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Waving fisherman on Lake Chad (detilt).jpg',
+          lyhyt: 'Kalastaja Tšadjärvellä kaislikossa, Barthin kuvaamaa maisemaa.',
           selite: 'Kalastaja tervehtii veneestään Tšadjärvellä kaislikon '
             + 'laidassa. Järvi on täynnä matalia salmia ja ruokosaaria — '
             + 'juuri sitä avoveden ja niittymaan vaihtelua, josta Barthille '
@@ -468,6 +481,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Grand Canyon, Colorado River, Ariz. - Hillers. LCCN00649751.jpg',
+          lyhyt: 'Hillers kuvasi Coloradon kanjonin Powellin retkellä 1870-luvulla.',
           selite: 'John K. Hillers kuvasi kanjonin Powellin toisella retkellä '
             + '1870-luvulla. Märkälevytekniikka vaati, että lasilevy '
             + 'valmistettiin ja kehitettiin heti kuvauksen yhteydessä, joten '
@@ -504,6 +518,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Fishermen at Celilo Falls on the Columbia River (3229038197).jpg',
+          lyhyt: 'Celilon putouksen kalastuslavat hukkuivat The Dallesin padon alle 1957.',
           selite: 'Kalastuslavat Celilon putouksella. Lohta on nostettu tästä '
             + 'kohdasta haavilla tuhansia vuosia. The Dallesin pato sulki '
             + 'porttinsa maaliskuussa 1957, ja putous oli veden alla saman '
@@ -546,6 +561,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'View near Koknese in 1833.png',
+          lyhyt: 'Hagenin maalaus Koknesen raunioista 1833; Pļaviņasin pato hukutti ne 1966.',
           selite: 'August Matthias Hagen maalasi Koknesen näkymän 1833. Rauniot '
             + 'seisovat kalliolla joen yllä. Pļaviņasin voimalaitos nosti '
             + 'veden 1966, ja rauniot ovat nyt matalalla saarella aivan '
@@ -582,6 +598,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'DneproGES 1947.JPG',
+          lyhyt: 'Dneprin kosket padottiin 1932; kuva 1947 padon kolmannesta rakennuskerrasta.',
           selite: 'Dneprin kosket olivat purjehduksen este Kiovan ja meren '
             + 'välillä tuhat vuotta. Vuoden 1932 pato nosti veden niiden '
             + 'ylle. Kuva on vuodelta 1947: pato oli räjäytetty sodassa '
@@ -620,6 +637,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Zalishchyky DniesterCanyon.jpg',
+          lyhyt: 'Dnestrin kanjoni Zalištšykyssä: joki kiertää kaupungin lähes ympäri.',
           selite: 'Dnestrin kanjoni Zalištšykyn kohdalla. Joki on urautunut '
             + 'satojen metrien syvyyteen kalkkikiveen ja kiertää kaupungin '
             + 'lähes umpeen; kannaksen leveys on muutama sata metriä.',
@@ -645,6 +663,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'William Heath - Russian Cossacks at a Boathouse on the Banks of the Don - B1975.4.1542 - Yale Center for British Art.jpg',
+          lyhyt: 'Heathin piirros donkasakoista Napoleonin sotien jälkeiseltä ajalta.',
           selite: 'William Heath piirsi donkasakoita venevajan luona pian '
             + 'Napoleonin sotien jälkeen, kun kasakat olivat Länsi-Euroopassa '
             + 'uutuus. Piirtäjä ei ollut käynyt Donilla; kuva on tehty '
@@ -682,6 +701,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Río Ebro en su desembocadura en el Delta del Ebre.jpg',
+          lyhyt: 'Ebron suisto kutistuu, kun yläjuoksun padot pidättävät liejun.',
           selite: 'Suisto työntyy Välimereen parikymmentä kilometriä. Se on '
             + 'kutistumassa: yläjuoksun padot pidättävät liejun, eikä uutta '
             + 'maata synny yhtä nopeasti kuin meri vie vanhaa.',
@@ -706,6 +726,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Hungerstein in Decin (21).JPG',
+          lyhyt: 'Nälkäkivi Děčínissä Elbellä: vanhin vuosiluku 1616 kuivina kesinä.',
           selite: 'Nälkäkivi Děčínissä. Vanhin selvästi luettava vuosiluku on '
             + '1616, ja uudempia on lisätty myöhempinä kuivina kesinä. Kivi '
             + 'näkyy vain silloin, kun pinta laskee tavallista alemmas.',
@@ -747,6 +768,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Guffa on the Tigris, Baghdad, 1932.jpg',
+          lyhyt: 'Quffa-vene Bagdadissa Tigriksellä 1932: sama malli tunnettiin jo 2400 vuotta aiemmin.',
           selite: 'Sama vene 2 400 vuotta myöhemmin. Kuva on Bagdadista Tigriksen '
             + 'rannalta vuonna 1932, jolloin pyöreä quffa oli yhä käytössä. '
             + 'Viimeiset katosivat 1900-luvun puolivälissä.',
@@ -784,6 +806,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Fraser joins Thompson River at Lytton.JPG',
+          lyhyt: 'Thompson ja Fraser yhtyvät Lyttonissa; eriväriset vedet virtaavat rinnakkain.',
           selite: 'Thompson yhtyy Fraseriin Lyttonissa. Vedet ovat eri värisiä ja '
             + 'kulkevat rinnakkain jonkin matkaa. Rannoilla näkyvät penkat, '
             + 'joita Milton ja Cheadle yrittivät selittää.',
@@ -821,6 +844,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Kumbha mela on ghats of the river godavari nashik.jpg',
+          lyhyt: 'Kumbh Mela Nashikin ghateilla Godavarilla, juhla kahdentoista vuoden välein.',
           selite: 'Kumbh Mela Nashikin ghateilla. Juhla kiertää neljää kaupunkia '
             + 'ja osuu Godavarille kahdentoista vuoden välein; Nashikin osuus '
             + 'on Pancavatin perinnön varassa.',
@@ -845,6 +869,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Loess landscape china.jpg',
+          lyhyt: 'Löössikerros ylängöllä sortuu sateessa, pellon reunaan syntyy jyrkkä seinämä.',
           selite: 'Lössikerros on ylängöllä paikoin sadan metrin paksuinen. Se on '
             + 'pehmeää ja pystysuunnassa lujaa: jokainen sadekuuro vie osan '
             + 'siitä uomaan, ja pellon reunaan syntyy jyrkkä seinämä yhdessä '
@@ -860,6 +885,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Hukou Waterfall.jpg',
+          lyhyt: 'Hukoun putous Huanghella Shaanxin ja Shanxin rajalla: keltainen pyörre.',
           selite: 'Hukoun putous Shaanxin ja Shanxin rajalla. Yläpuolella joki on '
             + 'parisataa metriä leveä, kurkussa parikymmentä. Vesi on paksua '
             + 'kuin liete, eikä putouksen alla ole kirkasta allasta vaan '
@@ -896,6 +922,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Oymyakon - 190228 DSC 5477.jpg',
+          lyhyt: 'Ojmjakonissa mitattiin -67,7 astetta helmikuussa 1933, kylmin asuttu paikka.',
           selite: 'Ojmjakon Indigirkan yläjuoksulla. Kylässä mitattiin '
             + 'helmikuussa 1933 lämpötila −67,7 astetta, kylmin koskaan '
             + 'pysyvästi asutussa paikassa mitattu lukema. Talvella joki '
@@ -925,6 +952,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Indus River near Skardu City.jpg',
+          lyhyt: 'Indus Skardun kohdalla Baltistanissa, liete on jäätiköiden jauhamaa kiveä.',
           selite: 'Indus Skardun kohdalla Baltistanissa. Joki tulee Tiibetistä '
             + 'luoteeseen, kiertää Nanga Parbatin ja kääntyy vasta sitten '
             + 'etelään; liete on jäätiköiden jauhamaa kiveä.',
@@ -950,6 +978,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'IRRAWADDY RIVER SUNRISE BAGAN MYANMA FEB 2013 (8521128304).jpg',
+          lyhyt: 'Iravadi Baganin kohdalla: siirtyvät hiekkasärkät vaativat luotsin.',
           selite: 'Iravadi Baganin kohdalla. Joki on tässä matala ja leveä ja '
             + 'siirtää särkkiensä paikkaa joka tulvassa, joten väylää ei voi '
             + 'merkitä pysyvästi ja laivat kulkevat luotsin varassa.',
@@ -991,6 +1020,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Irtish v Omsk.JPG',
+          lyhyt: 'Irtyš Omskissa: Dostojevski istui täällä pakkotyössä 1850-luvulla.',
           selite: 'Irtyš Omskissa. Kaupunki oli Länsi-Siperian hallintokeskus ja '
             + 'karkotettujen kauttakulkupaikka; Dostojevski istui täällä '
             + 'neljä vuotta pakkotyössä 1850-luvulla.',
@@ -1026,6 +1056,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Yenisei River in Krasnoyarsk.jpg',
+          lyhyt: 'Krasnojarsk siinä missä Jenisei murtautuu Sajaneista tasangolle.',
           selite: 'Krasnojarsk on kohdassa, jossa joki on juuri murtautunut '
             + 'Sajanien läpi tasangolle. Oikea ranta nousee jyrkkänä, vasen '
             + 'loivenee hiekaksi: juuri se ero, jota Nansen katseli.',
@@ -1062,6 +1093,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'KageraRuvubu.jpg',
+          lyhyt: 'Kagera ja Ruvubu: Niilin kaukaisin latva Burundissa riippuu tulkinnasta.',
           selite: 'Kagera ja sen sivujoki Ruvubu. Niilin kaukaisimmaksi latvaksi '
             + 'lasketaan nykyään Ruvubun haara Burundissa, joten mitattu '
             + 'pituus riippuu siitä, mitä haaraa seurataan.',
@@ -1087,6 +1119,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Ust-Borovaya IvanSaltPan 7327.JPG',
+          lyhyt: 'Suolapannu Solikamskissa: suolavesi haihdutettiin puualtaissa vuorokauden.',
           selite: 'Suolapannu Ust-Borovajan keittämössä Solikamskissa. Maasta '
             + 'pumpattu suolavesi haihdutettiin puisissa altaissa puuta '
             + 'polttaen; yksi keitos kesti vuorokauden ja vaati '
@@ -1128,6 +1161,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Car ferry crossing the Kasai River in Bandundu Region.jpg',
+          lyhyt: 'Lautta Kasailla Bandundussa: leveä alajuoksu, suun kalliokuja esti isot alukset.',
           selite: 'Lautta Kasailla Bandundussa. Joki on alajuoksullaan yli '
             + 'kilometrin levyinen ja kantaa raskaita proomuja, mutta suun '
             + 'kalliokuja pysyi pitkään esteenä isommille aluksille.',
@@ -1164,6 +1198,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Port in Khatanga.jpg',
+          lyhyt: 'Hatangan satama on auki elokuusta syyskuuhun, muulloin vain lentoyhteys.',
           selite: 'Hatangan satama. Meritie on auki elokuusta syyskuuhun, ja koko '
             + 'vuoden tarvikkeet tuodaan sinä aikana; muulloin yhteys on '
             + 'lentokone.',
@@ -1188,6 +1223,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Srednekolymsk 01.jpg',
+          lyhyt: 'Srednekolymsk perustettiin kasakoiden talvehtimispaikaksi 1643.',
           selite: 'Srednekolymsk perustettiin kasakkojen talvehtimispaikaksi '
             + '1643. Se on yhä yksi harvoista asutuista paikoista '
             + 'alajuoksulla, ja sinne pääsee jokea pitkin tai talvitietä, '
@@ -1221,6 +1257,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Stanley Founding of Congo Free State 157 Scene from the Covelet near our Station at Stanley Falls The Seventh CAtaract in the distance.jpg',
+          lyhyt: 'Stanleyn kirjan kuva seitsemännestä koskesta, nykyisin Kisangani, 1890.',
           selite: 'Stanleyn kirjan kuva seitsemännestä koskesta. Paikka on '
             + 'nykyinen Kisangani, ja sieltä Williams kirjoitti kirjeensä '
             + 'heinäkuussa 1890. Koskia on tässä seitsemän peräkkäin noin '
@@ -1269,6 +1306,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Golconda Fort 001.jpg',
+          lyhyt: 'Golcondan linnoitus Hyderabadissa: Krishnan timantit hiottiin siellä.',
           selite: 'Golcondan linnoitus Hyderabadin laidalla. Timantteja ei '
             + 'louhittu täällä vaan Krishnan varrella, mutta ne hiottiin ja '
             + 'myytiin linnoituksessa, ja siksi koko esiintymä tunnetaan '
@@ -1296,6 +1334,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Baie-James - L\'escalier du géant.jpg',
+          lyhyt: 'LG-2:n jättiläisen portaat: kymmenen kallioporrasta, kuivat lähes aina.',
           selite: 'LG-2:n tulvauoma, jota kutsutaan jättiläisen portaiksi: '
             + 'kymmenen kallioon louhittua porrasta. Ne ovat kuivia lähes '
             + 'aina, sillä vesi kulkee turbiinien läpi. Portaita tarvitaan '
@@ -1347,6 +1386,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Lachlan River at Booligal NSW 1.jpg',
+          lyhyt: 'Lachlan Booligalin kohdalla, kylä tunnetaan kuumasta sanonnastaan.',
           selite: 'Lachlan Booligalin kohdalla. Kylä on jäänyt australialaiseen '
             + 'sanontaan kolmantena paikkana Hayn ja helvetin jälkeen, ja '
             + 'lämpötila selittää järjestyksen paremmin kuin joki.',
@@ -1366,6 +1406,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Lena River Delta - Landsat 2000.jpg',
+          lyhyt: 'Lenan suisto on 30 000 neliökilometriä; De Long rantautui autiolle osalle.',
           selite: 'Suisto on noin 30 000 neliökilometriä ja jakautuu satoihin '
             + 'uomiin. De Longin veneen rantautumispaikka oli asumattomassa '
             + 'pohjoisosassa, kaukana niistä kylistä, joita hän kartalta '
@@ -1392,6 +1433,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Lena Pillars 20050716 3.JPG',
+          lyhyt: 'Lenan pilarit: kambrikautista kalkkikiveä, jonka ikirouta on halkonut.',
           selite: 'Lenan pilarit noin kahdensadan kilometrin päässä Jakutskista '
             + 'ylävirtaan: kambrikautista kalkkikiveä, jonka ikirouta on '
             + 'halkonut pystysuoriksi pylväiksi.',
@@ -1411,6 +1453,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Limpopo river mouth (14861850191).jpg',
+          lyhyt: 'Limpopon suisto Mosambikissa; vuoden 2000 tulva peitti laakson viikoiksi.',
           selite: 'Suisto Mosambikissa. Ylempänä uoma kuivuu paikoin kokonaan '
             + 'kuivana kautena ja nousee sadekaudella nopeasti; vuoden 2000 '
             + 'tulvassa se peitti laaksonsa viikoiksi.',
@@ -1455,6 +1498,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Amboise Loire Panorama - July 2011.jpg',
+          lyhyt: 'Loire Amboisen kohdalla: hiekkasärkät pysyviä, ei yhtään patoa keski- ja alajuoksulla.',
           selite: 'Loire Amboisen kohdalla. Hiekkasärkät ovat pysyvä piirre: '
             + 'virtaama vaihtelee kymmenkertaisesti, ja loppukesällä uoma on '
             + 'paikoin kahluusyvyinen. Keski- ja alajuoksulla joessa ei ole '
@@ -1491,6 +1535,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Wagenia 17 copy.jpg',
+          lyhyt: 'Wageniojen kalastusrakennelmat Boyoman koskissa Kisanganin kohdalla.',
           selite: 'Wagenia-kalastajien puurakennelmat Boyoman koskissa Kisanganin '
             + 'kohdalla. Kartiomaiset merrat lasketaan virran kapeimpiin '
             + 'kohtiin, ja telineiden paikat periytyvät suvuittain.',
@@ -1535,6 +1580,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Mackenzie river enters Beaufort sea.jpg',
+          lyhyt: 'Mackenzien suisto Beaufortinmerellä: ikiroudan kanavia ja lietekieli.',
           selite: 'Suisto Beaufortinmerellä: kymmeniätuhansia kanavia ja järviä '
             + 'ikiroudan päällä. Ruskea kieli on lietettä, jota joki tuo '
             + 'Kalliovuorilta asti ja joka värjää meren kesäisin kauas '
@@ -1555,6 +1601,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Macquarie River in flood at Bathurst.jpg',
+          lyhyt: 'Macquarie Bathurstissa: sama uoma kuivana laidunmaana ja tulvivana.',
           selite: 'Sama joki Bathurstissa tulvan aikaan. Macquarie tekee '
             + 'vuosikymmenessä molemmat: kuivan uoman, jossa lampaat '
             + 'kävelevät, ja veden, joka nostaa sillat.',
@@ -1597,6 +1644,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Rio Madeira- Cachoeira do Teotônio.jpg',
+          lyhyt: 'Teotônion koski Madeirassa ennen patoja: kalastajakylä kosken partaalla.',
           selite: 'Teotônion koski Madeirassa ennen patoja: vaalea lietevesi '
             + 'kuohuu, ja kalastajakylä seisoo paaluillaan aivan kosken '
             + 'partaalla. Tällaisten koskien ohi kumi piti kantaa maitse.',
@@ -1621,6 +1669,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Rio Magdalena Bootsfahrt 01.jpg',
+          lyhyt: 'Magdalena Momposin kohdalla, päähaaran siirryttyä 1700-luvulla toisaalle.',
           selite: 'Magdalena Momposin kohdalla. Kaupunki jäi sivuun, kun päähaara '
             + 'siirtyi 1700-luvulla toiseen uomaan. Barokkikirkot jäivät '
             + 'paikoilleen, ja liikenne meni muualta.',
@@ -1658,6 +1707,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Passageiros no Vagão-Plataforma do Trem, na Altura do Quilômetro 151 da Ferrovia Madeira-Mamoré - 1107, Acervo do Museu Paulista da USP.jpg',
+          lyhyt: 'Matkustajia Mamorén kumirautatiellä sen avautuessa hinnan romahtaessa.',
           selite: 'Matkustajia lava-vaunussa radan 151. kilometrillä. Rata '
             + 'rakennettiin kuljettamaan kumia, ja se avattiin vuonna, jona '
             + 'Amazonin kumin hinta romahti Aasian viljelmien alle.',
@@ -1683,6 +1733,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Carte du Détroit appelé Pongo de Mansériché dans le Maragnon ou la Rivière des Amazones entre Sant-Yago et Borja où le lit du fleuve se rétrécit de 250 toises à 25 toises - btv1b8596519g.jpg',
+          lyhyt: 'La Condaminen kartta Pongo de Manserichesta Marañónilta 1743.',
           selite: 'Charles-Marie de La Condaminen kartta Pongo de Manserichestä. '
             + 'Hän laski Marañónia 1743 palatessaan päiväntasaajan '
             + 'mittausretkeltä ja piirsi kujan mitat: uoma kapenee 250 '
@@ -1720,6 +1771,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Khone Phapheng Falls, Si Phan Don, Laos, widest waterfall in the world.jpg',
+          lyhyt: 'Khone Phapheng Mekongin rajalla: leveä putous, kapearaiteinen rata 1890-luvulta.',
           selite: 'Khone Phapheng Laosin ja Kambodžan rajalla. Putous on matala '
             + 'mutta yli kymmenen kilometriä leveä ja katkaisee '
             + 'laivaliikenteen kokonaan. Ranskalaiset rakensivat 1890-luvulla '
@@ -1768,6 +1820,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'The Great Mississippi Steamboat Race. From New Orleans to St. Louis, July 1870.jpg',
+          lyhyt: 'Höyrylaivat Robert E. Lee ja Natchez kilpailivat Mississippillä 1870.',
           selite: 'Robert E. Lee ja Natchez kilpailivat New Orleansista St. '
             + 'Louisiin heinäkuussa 1870, ja Currier & Ives painoi kuvan '
             + 'saman tien. Lee voitti kolmessa vuorokaudessa ja '
@@ -1805,6 +1858,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Rainbow Falls Great Falls MT1.jpg',
+          lyhyt: 'Sateenkaariputous Missourilla, toinen viidestä; molemmilla nyt pato.',
           selite: 'Sateenkaariputous, viidestä putouksesta toinen. Lewis piti '
             + 'sitä kauniina ja alempaa Suurta putousta mahtavana ja epäröi '
             + 'kumman asettaisi edelle. Molempien harjalla on nyt pato.',
@@ -1843,6 +1897,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Section of Narmada River near Bhedaghat, Jabalpur.jpg',
+          lyhyt: 'Bhedaghatin marmorikuru Narmadalla: venemiehet Dhuandhar-putouksen alla.',
           selite: 'Bhedaghatin marmorikuru. Kivi on kiteytynyttä kalkkikiveä, '
             + 'jota halkovat tummat juonteet; venemiehet soutavat kujaan '
             + 'Dhuandhar-putouksen alta ja kääntyvät samasta kohdasta '
@@ -1889,6 +1944,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Rio Negro Floodplain, Patagonia, Argentina 2010-01-04 lrg.jpg',
+          lyhyt: 'Kastellun Negro-laakson vihreä kaista aron keskellä, hedelmiä Eurooppaan.',
           selite: 'Vihreä viiva harmaassa: kastellun laakson leveys on paikoin '
             + 'kymmenen kilometriä ja aro alkaa siitä heti. Omenaa ja '
             + 'päärynää viedään täältä Eurooppaan eteläisen pallonpuoliskon '
@@ -1909,6 +1965,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Cha Chay Pay Way Ti’s Map of the Waterways of a Part of Northern Manitoba (1806).jpg',
+          lyhyt: 'Cha Chay Pay Way Tin vesistökartta Nelsonista 1806, Fidlerin kopioima.',
           selite: 'Cha Chay Pay Way Ti piirsi tämän vesistökartan vuonna 1806, ja '
             + 'Peter Fidler kopioi sen yhtiön kirjoihin. Sisämaan reitit '
             + 'tunsivat creet ja denet; kauppiaat merkitsivät ne muistiin.',
@@ -1945,6 +2002,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Where Giants Roamed (MODIS 2021-12-07).jpg',
+          lyhyt: 'Neuquén ja Limay yhtyvät Río Negroksi; tekoaltaat ja suolatasangot näkyvät.',
           selite: 'Neuquén tulee kuvassa pohjoisesta ja Limay etelästä; niiden '
             + 'yhtymäkohdasta alkaa Río Negro. Vaaleat läiskät ovat '
             + 'suolatasankoja, tummat säännölliset kuviot tekoaltaita.',
@@ -1969,6 +2027,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'SPB Panoramic view of Neva downstream by Atkinson 1802-1805.jpg',
+          lyhyt: 'Atkinsonin näkymä Nevalle 1800-luvun alussa: purjelaivat pääsivät keskustaan.',
           selite: 'John Augustus Atkinsonin näkymä Nevalle 1800-luvun alussa. '
             + 'Uoma on kaupungin kohdalla noin puoli kilometriä leveä ja niin '
             + 'syvä, että purjelaivat pääsivät keskustaan asti.',
@@ -2010,6 +2069,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Mopti Fishing Boats.jpg',
+          lyhyt: 'Mopti Malissa sisämaasuiston reunalla; tulva ratkaisee riisisadon.',
           selite: 'Mopti Malissa, sisämaasuiston reunalla. Joki hajoaa täällä '
             + 'haaroiksi ja kausijärviksi, ja tulvan laajuus ratkaisee vuoden '
             + 'riisisadon. Ségou, jossa Park näki joen, on muutaman sadan '
@@ -2036,6 +2096,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'North Saskatchewan River and downtown, Edmonton, Alberta, Canada2.jpg',
+          lyhyt: 'Pohjois-Saskatchewan Edmontonissa: satametrinen laakso jätetty puistoksi.',
           selite: 'Pohjois-Saskatchewan Edmontonin kohdalla. Laakso on satakunta '
             + 'metriä syvä ja leikkautunut jääkauden jälkeisiin kerrostumiin; '
             + 'kaupunki on jättänyt sen rakentamatta ja käyttää sitä '
@@ -2072,6 +2133,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Barnaul ObRiver 012 8618.jpg',
+          lyhyt: 'Ob Barnaulissa Altain juurella: kevättulva leviää soille jäisen uoman edessä.',
           selite: 'Ob Barnaulissa Altain juurella. Kevättulva etenee etelästä '
             + 'pohjoiseen ja törmää alavirrassa vielä jäätyneeseen uomaan; '
             + 'vesi ei pääse eteenpäin vaan leviää sivuille soille.',
@@ -2108,6 +2170,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Odra o zachodzie słońca.jpg',
+          lyhyt: 'Odra Szczecinissä: satama 65 km merestä, väylä pidettävä auki ruoppaamalla.',
           selite: 'Odra Szczecinin kohdalla. Satama on 65 kilometriä merestä '
             + 'sisämaassa ja yhteydessä Itämerelle lahden kautta. Väylä on '
             + 'ruopattava, koska joki ei syvennä sitä itse.',
@@ -2143,6 +2206,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'George Caleb Bingham - Jolly Flatboatmen in Port.jpg',
+          lyhyt: 'Binghamin maalaus lauttamiehistä 1850-luvulta, kun höyry syrjäytti heidät.',
           selite: 'George Caleb Bingham maalasi lauttamiehiä 1850-luvulla, kun '
             + 'höyry oli jo syrjäyttämässä heidät. Lautta purettiin '
             + 'määränpäässä ja myytiin lankkuina, sillä ylävirtaan sillä ei '
@@ -2179,6 +2243,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Vista aérea del delta del Okavango, Botsuana, 2018-08-01, DD 23.jpg',
+          lyhyt: 'Okavangon suiston tulva saapuu maalis-heinäkuussa Angolan sateista.',
           selite: 'Tulva saapuu suistoon maalis-heinäkuussa, puoli vuotta sen '
             + 'jälkeen kun sade satoi Angolassa. Kuivin vuodenaika on siis '
             + 'se, jolloin suistossa on eniten vettä, ja eläimet tulevat '
@@ -2216,6 +2281,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Olenëk river, Russia.jpg',
+          lyhyt: 'Olenjokin suisto Sentinel-2:lta; Tšeljuskin ehti sisään ennen jäätymistä 1736.',
           selite: 'Olenjokin suisto Sentinel-2:n kuvaamana. Joki jäätyi vuonna '
             + '1736 lokakuun alussa, ja Tšeljuskin sai aluksen sisään kolme '
             + 'viikkoa ennen sitä. Ust-Olenjokin kylä on itäisen haaran '
@@ -2242,6 +2308,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Augrabies Falls 2.JPG',
+          lyhyt: 'Augrabies-putous Orangessa: joki syöksyy 60 metriä graniittirotkoon.',
           selite: 'Augrabies, jossa joki putoaa kuusikymmentä metriä graniittiin '
             + 'hakkautuneeseen rotkoon. Nama-kielinen nimi Aukoerebis '
             + 'tarkoittaa suurta melua. Rotko jatkuu putouksen alapuolella '
@@ -2285,6 +2352,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Orinoco river from Parmana Venezuela.jpg',
+          lyhyt: 'Orinoco Parmanan kohdalla: sadekauden tulva ja kuivan kauden hiekkasärkät.',
           selite: 'Orinoco Parmanan kohdalla. Sadekaudella pinta nousee '
             + 'toistakymmentä metriä ja joki leviää tulvatasangolle. Kuivalla '
             + 'kaudella hiekkasärkät nousevat esiin, ja jokikilpikonnat '
@@ -2322,6 +2390,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Chaudiere Falls Ottawa (NBY 440517).jpg',
+          lyhyt: 'Chaudièren putous Ottawalla, algonkinien pyhä paikka, valjastettu 1800-luvulla.',
           selite: 'Chaudièren putous, jonka kohdalla algonkinit pysähtyivät ja '
             + 'heittivät tupakkaa veteen. Putous valjastettiin sahoille '
             + '1800-luvulla; nykyinen rengaspato on 1900-luvun alusta.',
@@ -2364,6 +2433,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Paraná Delta near Rosario.jpg',
+          lyhyt: 'Paranán suisto alkaa satojen kilometrien päässä merestä; saaret syntyvät ja katoavat.',
           selite: 'Suisto alkaa jo satojen kilometrien päässä merestä. Saaria on '
             + 'tuhansia, ja ne syntyvät ja katoavat vuosikymmenissä; Darwinin '
             + 'laivuri muisti useiden hävinneen omana aikanaan.',
@@ -2382,6 +2452,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Paranaíbariver.JPG',
+          lyhyt: 'Paranaíba erottaa Minas Geraisin Goiásista, raja kulkee keskellä uomaa.',
           selite: 'Paranaíba erottaa Minas Geraisin Goiásista suurimman osan '
             + 'matkaa. Osavaltioiden raja kulkee keskellä uomaa, joten sillat '
             + 'ovat aina kahden hallinnon yhteisiä hankkeita.',
@@ -2425,6 +2496,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Peace River, Alberta (HS85-10-32013).jpg',
+          lyhyt: 'Rauhanjoki Albertassa on vanhempi kuin Kalliovuoret ja lävistää ne.',
           selite: 'Rauhanjoki Albertassa. Uoma on vanhempi kuin nykyinen vuoristo '
             + 'ja on kuluttanut itsensä sen läpi; Rauhanjoki on siksi harvoja '
             + 'jokia, jotka läpäisevät Kalliovuoret idästä länteen.',
@@ -2462,6 +2534,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Black-bellied Plover nest (33254864926).jpg',
+          lyhyt: 'Tundrakurmitsan pesä Petšoralla: neljä munaa avoimella paikalla.',
           selite: 'Tundrakurmitsan pesä: kuoppa jäkälässä, neljä munaa kärjet '
             + 'sisäänpäin. Juuri tätä Seebohm etsi. Pesä on aina avoimella '
             + 'paikalla, koska hautova lintu luottaa näkyvyyteen eikä '
@@ -2502,6 +2575,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Po River Delta- ISS020-E-9731.JPG',
+          lyhyt: 'Po avaruudesta: penkereiden välinen uoma ja painunut suistomaa.',
           selite: 'Suisto avaruudesta. Uoma kulkee penkereiden välissä paikoin '
             + 'ympäröivää maata korkeammalla, ja suistossa maanpinta on '
             + 'painunut merenpinnan alapuolelle pohjaveden ja maakaasun oton '
@@ -2522,6 +2596,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Rio purus - panoramio.jpg',
+          lyhyt: 'Purús Amazonasissa mutkittelee niin, ettei jokimatka vastaa linnuntietä.',
           selite: 'Purús Amazonasin osavaltiossa. Uoma mutkittelee niin jyrkästi, '
             + 'että jokimatka kahden pisteen välillä on usein moninkertainen '
             + 'linnuntiehen nähden ja katkeavat mutkat jäävät rannalle '
@@ -2568,6 +2643,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Königswinter, Drachenfels, Blick auf den Rhein -- 2024 -- 3926.jpg',
+          lyhyt: 'Drachenfels Reinillä: trakiittilouhinta lopetettiin 1836 vuoren katoamisen tähden.',
           selite: 'Drachenfels Königswinterin yllä. Vuoren trakiittia louhittiin '
             + 'Kölnin tuomiokirkkoon asti, kunnes Preussi lopetti louhinnan '
             + '1836, koska kallio oli katoamassa. Höyrylaiva toi silloin jo '
@@ -2604,6 +2680,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Suspension bridge over the Rhone, Avignon, Provence, France-LCCN2001698589.jpg',
+          lyhyt: 'Rhône Avignonissa noin 1890: Pont Saint-Bénézetistä on jäljellä neljä kaarta.',
           selite: 'Rhône Avignonissa noin 1890. Riippusilta on 1800-luvulta. Sen '
             + 'takana näkyvä Pont Saint-Bénézet menetti kaarensa tulviin, ja '
             + 'kahdestakymmenestä on jäljellä neljä.',
@@ -2628,6 +2705,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Big Bend Santa Elena Canyon 2006.JPG',
+          lyhyt: 'Santa Elenan kanjoni Rio Grandella Big Bendissä: Meksiko ja Yhdysvallat rannoilla.',
           selite: 'Santa Elenan kanjoni Big Bendissä. Seinämät nousevat runsaat '
             + 'neljäsataa metriä, ja joki kulkee niiden välissä paikoin '
             + 'kymmenen metrin levyisenä. Oikea puoli on Meksikoa, vasen '
@@ -2659,6 +2737,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Arquipélago de Mariauá.jpg',
+          lyhyt: 'Mariuán saaristo Rio Negrolla: maailman laajin jokisaaristo.',
           selite: 'Mariuán saaristo. Uoma jakautuu satoihin haaroihin, ja veden '
             + 'laskiessa niiden väliin jää pitkulaisia saaria. Saaristo '
             + 'jatkuu satoja kilometrejä ja on maailman laajin jokisaaristo.',
@@ -2706,6 +2785,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Rapides de Lachine 1.JPG',
+          lyhyt: 'Lachinen kosket Pyhällä Laurinjoella ohitettiin kanavalla 1825, meriväylä 1959.',
           selite: 'Lachinen kosket Montrealin yläpuolella. Ne ohitettiin ensin '
             + 'kanavalla 1825. Nykyinen meriväylä avattiin 1959, ja se nostaa '
             + 'valtamerilaivat sulkuportailla Ontariojärveen asti.',
@@ -2736,6 +2816,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Salween River, The Rope Station (5710965271).jpg',
+          lyhyt: 'Köysiasema Salweenin yllä 1900-luvun alussa: kaksi köyttä, yksi suuntaan.',
           selite: 'Köysiasema Salweenin yllä 1900-luvun alussa. Lasku käy '
             + 'painovoimalla, ja vastarannalle noustaan kiskomalla, joten '
             + 'köysiä on yleensä kaksi: kummallekin suunnalle omansa.',
@@ -2777,6 +2858,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Cataratas Victoria, Zambia-Zimbabue, 2018-07-27, DD 05.jpg',
+          lyhyt: 'Sambesin halkeama: 1700 metriä leveä, tulvahuipulla sumu näkyy kauas.',
           selite: 'Halkeama on runsaat 1 700 metriä leveä ja yli sata metriä '
             + 'syvä. Tulvahuipulla reunan yli menee satoja miljoonia litroja '
             + 'minuutissa, ja sumu näkyy kymmenien kilometrien päähän.',
@@ -2802,6 +2884,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Canyon, Paulo Afonso - BA, Brazil.JPG',
+          lyhyt: 'Paulo Afonson kanjoni São Franciscolla: voimalaitos vei veden 1949.',
           selite: 'Paulo Afonson kanjoni, johon joki putosi kahdeksankymmentä '
             + 'metriä. Vuodesta 1949 vesi on ohjattu voimalaitokseen, ja '
             + 'putouksessa on vettä lähinnä tulvien ja koeajojen aikaan.',
@@ -2844,6 +2927,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Gezicht op de Saskatchewan, RP-F-2001-7-821-35.jpg',
+          lyhyt: 'Wilcoxin heliograuuri Saskatchewanin latvahaaralta Kalliovuorilta noin 1893.',
           selite: 'Walter Dwight Wilcoxin heliograuuri Saskatchewanin '
             + 'latvahaaralta Kalliovuorilta, noin 1893. Preerian yli kulkeva '
             + 'joki alkaa jäätiköiltä, ja sulamisvesi ajoittaa sen tulvan '
@@ -2869,6 +2953,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Alfred Sisley, Flood at Port-Marly, 1872, NGA 66436.jpg',
+          lyhyt: 'Sisleyn maalaus Tulva Port-Marlyssa 1872 Seinellä; tulva toistui neljä vuotta myöhemmin.',
           selite: 'Alfred Sisley, Tulva Port-Marlyssa (1872). Talo on '
             + 'viinikauppiaan, ja vesi ulottuu oven yläreunaan. Sisley palasi '
             + 'samaan paikkaan neljä vuotta myöhemmin, kun tulva toistui.',
@@ -2893,6 +2978,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'ISS-29 Snowfall on the Selenga River Delta, Russia.jpg',
+          lyhyt: 'Selengan suisto avaruusasemalta: Baikalin suodatin, lähes 700 neliökilometriä.',
           selite: 'Selengan suisto ensilumen jälkeen avaruusasemalta. Suisto on '
             + 'lähes seitsemänsataa neliökilometriä ja toimii Baikalin '
             + 'suodattimena: se pidättää suuren osan siitä, mitä '
@@ -2930,6 +3016,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'AMH-6796-NA Bird\'s eye view of the mouth of the Senegal, Saint Louis.jpg',
+          lyhyt: 'Hollantilainen näkymä Senegalin suulle noin 1665: hiekkasärkkä siirsi jokisuuta.',
           selite: 'Hollantilainen näkymä Senegalin suulle noin 1665. Hiekkasärkkä '
             + 'kääntää joen kymmeniä kilometrejä etelään ennen kuin se pääsee '
             + 'mereen, ja särkän aukko siirtyi myrskyissä paikasta toiseen.',
@@ -2961,6 +3048,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Basra, Galérie agréable du Monde.jpg',
+          lyhyt: 'Basra 1720-luvun kaiverruksessa: Intian-kaupan päätepysäkki Shatt al-Arabilla.',
           selite: 'Basra 1720-luvun hollantilaisessa kaiverruksessa. Kaupunki oli '
             + 'Intian-kaupan päätepysäkki: tavara purettiin täällä ja jatkoi '
             + 'karavaanilla Aleppoon.',
@@ -3007,6 +3095,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Pool on the River Shire at the Foot of the Murchison Cataracts, Africa, ca.1860-ca.1900 (imp-cswc-GB-237-CSWC47-LS16-040).jpg',
+          lyhyt: 'Suvanto Murchisonin koskien alla Shirellä: laivat purettiin osiin kosken kohdalla.',
           selite: 'Suvanto Murchisonin koskien alapuolella. Kosket katkaisevat '
             + 'joen kahdeksankymmenen kilometrin matkalta, ja laivat '
             + 'jouduttiin purkamaan osiin ja kantamaan ohi.',
@@ -3025,6 +3114,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Blue Nile falls (5494283771).jpg',
+          lyhyt: 'Tis Issat -putous Siniisellä Niilillä: voimalaitos 2003 vie suurimman osan vedestä.',
           selite: 'Tis Issat Tanajärven alapuolella. Putous oli ennen leveä koko '
             + 'uoman poikki; vuonna 2003 valmistunut voimalaitos ohjaa '
             + 'suurimman osan vedestä ohitse, ja täysi näkymä on nykyään '
@@ -3068,6 +3158,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Horse drawn carts portage goods around the impassable rapids on the Slave River -a.jpg',
+          lyhyt: 'Hevoskärryt kiertivät Slaven koskia Fort Smithissä 1922, ainoa katkos vesitiellä.',
           selite: 'Hevoskärryt kiertävät koskia Fort Smithissä vuonna 1922. '
             + 'Höyrylaiva odotti kummallakin puolella; kahdenkymmenenkuuden '
             + 'kilometrin ajomatka oli ainoa katkos yhtenäisessä vesitiessä '
@@ -3105,6 +3196,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'A SMALL (17 FOOT) RAFT RUNNING WILD SHEEP RAPIDS ON THE SNAKE RIVER IN HELLS CANYON. EXPERT BOATMEN WORKING FOR... - NARA - 549465.jpg',
+          lyhyt: 'Wild Sheepin koski Hells Canyonissa Snakella, Pohjois-Amerikan syvin kuru, 1973.',
           selite: 'Wild Sheepin koski Hells Canyonissa. Kuru on Pohjois-Amerikan '
             + 'syvin, paikoin yli kaksi kilometriä reunalta veteen. Kuva on '
             + 'vuodelta 1973, jolloin alue oli juuri suojeltu lisäpadoilta.',
@@ -3137,6 +3229,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Frozen Songhua River.jpg',
+          lyhyt: 'Sungari on jäässä marraskuusta huhtikuuhun; Harbinin jäälyhdyt veistetään uomasta.',
           selite: 'Sungari on jäässä marraskuusta huhtikuuhun. Harbinin '
             + 'jäälyhtyjuhla ottaa rakennusaineensa suoraan uomasta: lohkot '
             + 'sahataan joesta ja sulavat keväällä takaisin siihen.',
@@ -3168,6 +3261,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Сухона. Брошенная деревня.jpg',
+          lyhyt: 'Autioitunut kylä Suhonan rannalla 1980: vesitien kylät jäivät tarpeettomiksi.',
           selite: 'Autioitunut kylä Suhonan rannalla, kuvattuna 1980. Rantakylät '
             + 'syntyivät vesitien varteen ja jäivät sen mukana '
             + 'tarpeettomiksi; lähin rautatie kulkee kaukana pohjoisessa.',
@@ -3203,6 +3297,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'SDHP-3510 Sutlej river gorge and rapids near Tattapani.jpg',
+          lyhyt: 'Sutlejin rotko Himachal Pradeshissa: uoma vanhempi kuin läpäisemänsä Himalaja.',
           selite: 'Sutlejin rotko Tattapanin lähellä Himachal Pradeshissa. Joki '
             + 'alkaa Tiibetin ylängöltä yli neljäntuhannen metrin korkeudelta '
             + 'ja leikkaa Himalajan poikki; uoma on siis vanhempi kuin sen '
@@ -3240,6 +3335,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Syr Darya Oblast. Crossing via the Syr Darya River WDL10988.png',
+          lyhyt: 'Lautta Syrdarjan yli Turkestanin albumista 1871-72, juuri valloitetulta maalta.',
           selite: 'Lautta Syrdarjan yli. Kuva on Turkestanin albumista, jonka '
             + 'Venäjän kenraalikuvernööri teetti 1871-1872 juuri '
             + 'valloitetusta maasta; lauttapaikat olivat armeijan reittejä.',
@@ -3273,6 +3369,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Tagus River, sunrise next to Lisbon, 2009.jpg',
+          lyhyt: 'Tajon suu Lissabonissa: sisämaan Olkimeri kapenee kaupungin kohdalla.',
           selite: 'Tajon suu Lissabonin kohdalla. Sisämaassa jokisuu levenee '
             + 'altaaksi, jota kutsutaan Olkimereksi; kaupungin kohdalla '
             + 'kapeikkoa on runsaat kaksi kilometriä rannasta rantaan.',
@@ -3316,6 +3413,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Santarém May 2015-9a.jpg',
+          lyhyt: 'Santarém Tapajósin suulla: laiton kullankaivuu on samentanut veden 2000-luvulla.',
           selite: 'Santarém Tapajósin suulla. Raja näkyy yhä, mutta ei enää '
             + 'samana: Tapajósin vesi on 2000-luvulla samentunut, kun laiton '
             + 'kullankaivuu on nostanut lietettä yläjuoksulta.',
@@ -3345,6 +3443,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Tarim Desert Highway - Crossing the Tarim River, Xinjiang, China.jpg',
+          lyhyt: 'Autiomaan valtatie ylittää Tarimin, tienvarsi kasteltu hiekkaa vastaan.',
           selite: 'Autiomaan halki vedetty valtatie ylittää Tarimin. Tienvartta '
             + 'on istutettu kestävää pensasta ja kastellaan porakaivoista, '
             + 'jotta hiekka ei peitä asfalttia.',
@@ -3376,6 +3475,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Teslin-Yukon river 1988 1.jpg',
+          lyhyt: 'Teslin virtaa Yukoniin: veneenveistäjät odottivat jäiden lähtöä matkalle Dawsoniin.',
           selite: 'Teslin virtaa Yukoniin leveänä ja hitaana. Ne, jotka pääsivät '
             + 'järvelle asti, veistivät rannalla veneen ja odottivat jäiden '
             + 'lähtöä; matka Dawsoniin kesti siitä noin kaksi viikkoa.',
@@ -3410,6 +3510,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Thomas Wyke- Thames frost fair.JPG',
+          lyhyt: 'Talven 1683-84 jäämarkkinat Thamesilla; uusi silta 1831 lopetti jäätymisen.',
           selite: 'Talven 1683-1684 jäämarkkinat. Uusi Lontoon silta valmistui '
             + '1831 ja poisti padon; virta nopeutui, ja penkereet kavensivat '
             + 'uoman. Joki ei ole sen jälkeen jäätynyt kaupungin kohdalla.',
@@ -3424,6 +3525,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Caricature; Faraday giving his card to Father Thames. Wellcome M0012507.jpg',
+          lyhyt: 'Punchin pilakuva 1855: Faraday ojentaa käyntikorttinsa Isä Thamesille.',
           selite: 'Punchin pilakuva vuodelta 1855: Michael Faraday ojentaa '
             + 'käyntikorttinsa Isä Thamesille. Faraday oli kirjoittanut '
             + 'lehteen joen tilasta samana kesänä, ja kuva vastasi siihen.',
@@ -3460,6 +3562,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Views along the river Tigris in Mosul in 2019 when Moslawis go during the summer to cool down 02.jpg',
+          lyhyt: 'Mosul Tigrisin länsirannalla, Ksenofonin näkemät muurit vastarannalla.',
           selite: 'Mosul Tigrisin länsirannalla. Ksenofonin näkemät muurit ovat '
             + 'vastarannalla kaupungin itäpuolella; Kujundžikin ja Nabi '
             + 'Junusin kummut ovat yhä siellä keskellä asutusta.',
@@ -3478,6 +3581,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Vasily Surikov - Yermak\'s Conquest of Siberia - Google Art Project.jpg',
+          lyhyt: 'Surikovin maalaus Tobolista 1895: savu peittää molemmat rannat tarkoituksella.',
           selite: 'Vasili Surikovin maalaus vuodelta 1895. Surikov oli itse '
             + 'kasakkasukua Krasnojarskista. Savu on maalattu niin sakeaksi, '
             + 'ettei kumpaakaan puolta erota kunnolla, ja se on '
@@ -3532,6 +3636,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Usina de Tucuruí.jpg',
+          lyhyt: 'Tucuruín pato Tocantinsilla 1984 hukutti kosket, jotka käänsivät Batesin ja Wallacen.',
           selite: 'Tucuruín pato valmistui 1984 juuri koskiosuuden alapäähän. '
             + 'Allas peitti runsaat kaksituhatta neliökilometriä metsää, ja '
             + 'sen alle jäivät myös kosket, joiden takia Bates ja Wallace '
@@ -3570,6 +3675,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Danube near Iron Gate 2006.JPG',
+          lyhyt: 'Rautaportti Tonavalla Serbian ja Romanian rajalla, räjäytetty 1890-luvulla.',
           selite: 'Rautaportti Serbian ja Romanian välissä. Kallionkielekkeet '
             + 'tekivät solasta vaarallisen, ja 1890-luvulla niihin '
             + 'räjäytettiin väylä. Vuoden 1972 pato nosti veden kymmeniä '
@@ -3589,6 +3695,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Oubangui (28604476433).jpg',
+          lyhyt: 'Ubangi Banguin kohdalla: raja Kongon demokraattiseen tasavaltaan ilman siltaa.',
           selite: 'Ubangi Banguin kohdalla. Vastaranta on Kongon demokraattista '
             + 'tasavaltaa; kahden maan välillä ei ole tällä matkalla yhtään '
             + 'siltaa, ja ylitys tehdään lautalla tai ruuhella.',
@@ -3636,6 +3743,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'ISS-45 StoryOfWater, Meandering River - Rio Ucayali.jpg',
+          lyhyt: 'Ucayali avaruusasemalta: uoma siirtyy nopeammin kuin kartat ehtivät perässä.',
           selite: 'Ucayali avaruusasemalta. Uoma siirtyy nopeammin kuin kartat '
             + 'ehtivät perässä: rannalla näkyy kymmeniä vanhoja mutkia, ja '
             + 'rantakylä voi jäädä vuosikymmenessä kilometrien päähän '
@@ -3656,6 +3764,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Map Ubangi-Uelle 1888.png',
+          lyhyt: 'Kartta 1888: Uelen alajuoksun suunta oli vielä auki kysymys.',
           selite: 'Kartta vuodelta 1888, jolloin kysymys oli yhä auki. Uelen '
             + 'alajuoksu on piirretty katkoviivalla, ja sen jatkoksi on '
             + 'merkitty kaksi vaihtoehtoa: Ubangi etelään ja Shari '
@@ -3681,6 +3790,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Uele river.jpg',
+          lyhyt: 'Uele Kongon pohjoisosassa kulkee ylätasangolla ja laskee Ubangiin vasta lopussa.',
           selite: 'Uele Kongon pohjoisosassa. Joki kulkee koko matkansa '
             + 'ylätasangolla ja putoaa Ubangiin vasta lopussa, mikä on syy '
             + 'siihen, että sen suunta oli pitkään arvailun varassa.',
@@ -3710,6 +3820,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Ural River Atyrau.JPG',
+          lyhyt: 'Atyrau Uraljoen suulla Kaspianmerellä, Euroopan ja Aasian rajalla.',
           selite: 'Atyrau joen suulla Kaspianmerellä. Kaupunki on kahden maanosan '
             + 'kahta puolta: Uraljokea on totuttu pitämään Euroopan ja Aasian '
             + 'rajana tästä ylöspäin Uralvuorille asti.',
@@ -3751,6 +3862,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Río Uruguay - Salto, Uruguay.JPG',
+          lyhyt: 'Salto sai nimensä Uruguayjoen koskesta, joka hukkui Salto Granden padon alle.',
           selite: 'Salton kaupunki sai nimensä koskesta, joka katkaisi '
             + 'laivaliikenteen. Koski jäi Salto Granden padon altaan alle, ja '
             + 'padon harjalla kulkee nyt tie Argentiinan ja Uruguayn välillä.',
@@ -3788,6 +3900,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'SA1899 pg136 A Pont . Vaal River.jpg',
+          lyhyt: 'Lautta Vaalin yli 1899: kahlaamo antoi nimen Transvaalille.',
           selite: 'Lautta Vaalin yli vuonna 1899. Kahlaamo eli drift ratkaisi, '
             + 'mistä tiet kulkivat. Joen pohjoispuolinen valtio otti nimensä '
             + 'tästä uomasta: Transvaal on se, mikä on Vaalin takana.',
@@ -3806,6 +3919,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Stryowski-Flisacy nad Wisla.jpg',
+          lyhyt: 'Stryowskin maalaus lauttamiehistä Gdańskissa Veikselillä 1800-luvulla.',
           selite: 'Wilhelm August Stryowski maalasi lauttamiehiä Gdańskissa '
             + '1800-luvulla. Miehet asuivat matkan ajan lautalle rakennetussa '
             + 'majassa. Paluu ylävirtaan tehtiin jalan.',
@@ -3846,6 +3960,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Arkhangelsk. Northern Dvina River P7151096 2200.jpg',
+          lyhyt: 'Arkangeli Vienanjoella: Pietarin perustaminen 1703 vei kaupalta merkityksen.',
           selite: 'Arkangeli Vienanjoen rannalla. Satama jäätyy puoleksi '
             + 'vuodeksi. Pietarin perustaminen 1703 vei kaupalta merkityksen, '
             + 'ja tsaari rajoitti määräajaksi viennin täältä pakottaakseen '
@@ -3872,6 +3987,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Vilyuy River.jpg',
+          lyhyt: 'Viljui, Lenan pisin sivujoki, kantaa laivoja vain kesäkuusta syyskuuhun.',
           selite: 'Viljui on Lenan pisin sivujoki. Uoma on leveä ja matala, ja '
             + 'laivakausi kestää kesäkuusta syyskuuhun; muun vuoden joki on '
             + 'tie vain sikäli kuin jää kantaa kuorma-auton.',
@@ -3886,6 +4002,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Diamond mine. Mirny in Yakutia. 01.jpg',
+          lyhyt: 'Mirin kaivos Viljuilla: yli 500 metriä syvä louhos, suljettu 2001.',
           selite: 'Mirin kaivos. Kuoppa ulottuu runsaan viidensadan metrin '
             + 'syvyyteen, ja avolouhinta lopetettiin 2001. Ikirouta ulottuu '
             + 'täällä satojen metrien syvyyteen, mikä pitää seinämät '
@@ -3921,6 +4038,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Akosombo dam spilling water.JPG',
+          lyhyt: 'Akosombon pato Voltalla siirsi 80 000 ihmistä ja 700 kylää altaan alta.',
           selite: 'Akosombon pato juoksuttaa ylivuotoa. Altaan alle jäi '
             + 'kahdeksankymmentätuhatta ihmistä ja yli seitsemänsataa kylää; '
             + 'sähkö vietiin alusta asti pääosin yhdelle alumiinisulatolle.',
@@ -3945,6 +4063,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: '2014 NASA Earth Observatory image of Pearl River Delta.jpg',
+          lyhyt: 'Helmijoen suisto Xillä satelliitista: Guangzhou, Shenzhen ja naapurit kasvaneet yhteen.',
           selite: 'Helmijoen suisto satelliitista. Harmaa alue on yhtenäistä '
             + 'kaupunkia: Guangzhou, Shenzhen, Dongguan, Foshan, Hongkong ja '
             + 'Macao ovat kasvaneet kiinni toisiinsa.',
@@ -3969,6 +4088,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Rio Xingu, Altamira-PA.png',
+          lyhyt: 'Volta Grande Xingulla satelliitista: kuivalla kaudella luodot, tulvalla yhtä vettä.',
           selite: 'Volta Grande Altamiran alapuolella satelliitista. Kuivalla '
             + 'kaudella luodot nousevat esiin ja uomat erottuvat toisistaan; '
             + 'tulva-aikaan koko leveys on yhtä vettä.',
@@ -4000,6 +4120,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: '-The Taj Mahal from the Banks of the Yamuna River- MET DP143011.jpg',
+          lyhyt: 'Murrayn valokuva 1850-luvulta: Yamuna oli täynnä vettä, nyt kuivimpina kuukausina tyhjä Agrassa.',
           selite: 'John Murrayn valokuva 1850-luvulta, otettuna joen penkalta. '
             + 'Vettä oli silloin ympäri vuoden. Nykyään Yamuna on Agran '
             + 'kohdalla kuivimpina kuukausina lähes tyhjä, koska vesi otetaan '
@@ -4031,6 +4152,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Five Finger Rapids island, Yukon, ca. 1899 - DPLA - d6c77ff606e121c7bb3237c810e052c0.jpg',
+          lyhyt: 'Viiden sormen kosket Yukonilla: kultaryntäyksen laivat vinssattiin itäisintä väylää.',
           selite: 'Viiden sormen kosket, joissa neljä kalliopaadetta jakaa joen '
             + 'viideksi väyläksi. Vain itäisin on kuljettava. Kultaryntäyksen '
             + 'höyrylaivat vinssattiin siitä ylös kallioon pultattua vaijeria '
@@ -4081,6 +4203,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Albertsee-Albertnil.jpg',
+          lyhyt: 'Albertjärvi hautavajoamassa: Ugandan ylänkö idässä, Kongon vuoret lännessä.',
           selite: 'Albertinjärvi ja Albert-Niilin lähtökohta. Järvi on '
             + 'hautavajoaman pohjalla: itärannan takana nousee Ugandan '
             + 'ylänkö, länsirannalla nousevat Kongon vuoret yli kilometrin '
@@ -4116,6 +4239,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Battle of Lake Erie - painted by W.H. Powell. LCCN2007683561.jpg',
+          lyhyt: 'Powellin näkemys Perrystä 1877: Eriejärven taistelu ratkaisi pohjoisrannan.',
           selite: 'William Powellin näkemys Perrystä soutuveneessä, painettuna '
             + 'vuonna 1877. Taistelu ratkaisi, kummalle puolelle järven '
             + 'pohjoisranta jäi, ja siitä tuli Yhdysvalloissa yksi harvoista '
@@ -4142,6 +4266,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Moynaq, Aral Sea (6226842732).jpg',
+          lyhyt: 'Kalastusaluksia Mo\'ynoqissa: 1960-luvun satama on nyt sata kilometriä vedestä.',
           selite: 'Kalastusaluksia Mo\'ynoqissa. Kaupunki oli 1960-luvulla '
             + 'kalasatama, jossa purettiin kymmeniätuhansia tonneja kalaa '
             + 'vuodessa. Vesi on nyt yli sadan kilometrin päässä.',
@@ -4172,6 +4297,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Windswept pine on Georgian Bay.jpg',
+          lyhyt: 'Varleyn maalaus Stormy Weather, Georgian Bay 1921 Seitsemän ryhmän tunnuksena.',
           selite: 'Tuulen taivuttama mänty Georgianlahden kalliolla. Frederick '
             + 'Varley maalasi vuonna 1921 tästä maisemasta teoksen Stormy '
             + 'Weather, Georgian Bay, ja siitä tuli Seitsemän ryhmän '
@@ -4213,6 +4339,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Port Radium in 1936.jpg',
+          lyhyt: 'Port Radium Great Bear Lakella 1936: dene-miehet kantoivat malmia suojaimitta.',
           selite: 'Port Radium järven itärannalla vuonna 1936. Kaivos otti ensin '
             + 'radiumia, sitten uraania. Dene-miehet kantoivat malmisäkkejä '
             + 'laivoihin ilman suojaimia, eikä heille kerrottu mitä säkeissä '
@@ -4238,6 +4365,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'UtsingiPoint-GreatSlaveLake.JPG',
+          lyhyt: 'Utsingi Point Great Slave Lakella: Kanadan kilpi päättyy, järven kaksi päätä erilaiset.',
           selite: 'Utsingi Point järven itähaarassa. Tässä loppuu Kanadan kilpi, '
             + 'kahden miljardin vuoden ikäinen kallio. Länsipuolella alkaa '
             + 'pehmeä sedimenttimaa, ja siksi järven kaksi päätä näyttävät '
@@ -4280,6 +4408,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Lake Huron from Upper Peninsula.JPG',
+          lyhyt: 'Huron ja Michigan ovat samaa vettä Mackinacin salmen kautta.',
           selite: 'Huronjärveä ylemmältä niemimaalta. Järvi on Michiganjärven '
             + 'kanssa samaa vettä: Mackinacin salmi on niin leveä ja syvä, '
             + 'että pinta on molemmissa sentilleen sama ja vesi kulkee '
@@ -4316,6 +4445,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Lob Issyk-Kul-04.JPG',
+          lyhyt: 'Ysyk-Köl Tienšanissa: "kuuma järvi" ei jäädy, koska vesi on suolaista ja syvää.',
           selite: 'Ysyk-Köl ja Tienšanin harjanne. Nimi tarkoittaa kuumaa järveä, '
             + 'vaikka vesi on kylmää. Se ei silti jäädy: vesi on lievästi '
             + 'suolaista ja lähes seitsemänsataa metriä syvää.',
@@ -4346,6 +4476,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Шхеры, Ладога, северная часть.jpg',
+          lyhyt: 'Laatokan pohjoisosa kallioista saaristoa, eteläosa matalaa hiekkaa ja ruovikkoa.',
           selite: 'Laatokan pohjoisosan luotoja. Pohjoisranta on kallioista '
             + 'saaristoa, eteläranta matalaa hiekkaa ja ruovikkoa — sama '
             + 'järvi näyttää päistään kahdelta eri maalta.',
@@ -4387,6 +4518,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Lake Mweru.jpg',
+          lyhyt: 'Mweru Sambian puolelta: Livingstone luuli sen Niilin latvaksi, vesi menee Kongoon.',
           selite: 'Mwerujärvi Sambian puolelta. Luapula laskee etelästä ja lähtee '
             + 'pohjoisesta Luvualla. Livingstone uskoi kulkevansa Niilin '
             + 'latvoilla; vesi menee Kongoon ja Atlantille.',
@@ -4422,6 +4554,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Sand Dunes at Lake Athabasca.jpg',
+          lyhyt: 'Athabascan dyynit, maailman pohjoisin laaja dyynikenttä jääkauden hiekasta.',
           selite: 'Athabascan etelärannan dyynit, maailman pohjoisin laaja '
             + 'dyynikenttä. Hiekka on jääkauden sulamisvesien tuomaa, ja '
             + 'tuuli siirtää harjanteita yhä. Kymmenkunta kasvilajia kasvaa '
@@ -4452,6 +4585,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Lake Balkhash by Landsat 8.jpg',
+          lyhyt: 'Balkaš satelliitista: läntinen puolisko makeaa, itäinen suolaista vettä.',
           selite: 'Balkaš satelliitista. Läntinen puolisko on makeaa vettä, '
             + 'itäinen suolaista, ja niitä yhdistää vain kilometrien levyinen '
             + 'salmi. Väriraja näkyy kuvassa keskellä järveä.',
@@ -4482,6 +4616,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'ISS-30 Lake Eyre - South Australia.jpg',
+          lyhyt: 'Kati Thanda avaruudesta: täyttyessään houkuttelee kymmeniätuhansia pelikaaneja.',
           selite: 'Kati Thanda avaruusasemalta. Vaaleat alueet ovat suolakuorta, '
             + 'tummat matalaa vettä. Kun allas täyttyy, pelikaaneja saapuu '
             + 'rannikolta kymmeniätuhansia parissa viikossa, eikä tiedetä '
@@ -4512,6 +4647,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Delta Beach Manitoba Canada.JPG',
+          lyhyt: 'Delta Marsh Manitobajärvellä: Pohjois-Amerikan suurin sisämaan kosteikko.',
           selite: 'Manitobajärven etelärantaa. Delta Marsh, järven eteläpään '
             + 'ruovikko, on Pohjois-Amerikan suurimpia sisämaan kosteikkoja '
             + 'ja levähdyspaikka miljoonille muuttolinnuille syksyisin.',
@@ -4542,6 +4678,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Lake Nipigon.JPG',
+          lyhyt: 'Nipigonjärvi on Yläjärven suurin tulovirta, laskee 80 metriä 60 kilometrillä.',
           selite: 'Nipigonjärven rantaa. Järvi on Yläjärven suurin yksittäinen '
             + 'tulovirta, ja sen vesi kulkee Nipigonjokea pitkin '
             + 'kuusikymmentä kilometriä ja laskee lähes kahdeksankymmentä '
@@ -4581,6 +4718,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Welcome to the United States - You are entering the Northwest Angle, Minnesota (35505460693).jpg',
+          lyhyt: 'Northwest Anglen tie: Minnesotan pala tavoitettavissa vain Kanadan kautta.',
           selite: 'Tie Northwest Angleen. Tämä Minnesotan pala on maateitse '
             + 'saavutettavissa vain Kanadan kautta. Noin sata asukasta '
             + 'ilmoittautuu tullille videopuhelimella tienvarren kopista, '
@@ -4600,6 +4738,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Lake Taymyr-txu-oclc-6654394-ns-46-48-2nd-ed.jpg',
+          lyhyt: 'Yhdysvaltain armeijan karttalehti Taimyrjärvestä 1964, rantaviiva ilmakuvista.',
           selite: 'Yhdysvaltain armeijan karttalehti Taimyrjärvestä vuodelta '
             + '1964. Rantaviiva on piirretty ilmakuvista. Matalilla rannoilla '
             + 'jää ulottuu talvella pohjaan asti, ja kartan ranta on siksi '
@@ -4642,6 +4781,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'E. C. Frome - First view of the salt desert - called Lake Torrens - Google Art Project.jpg',
+          lyhyt: 'Fromen akvarelli 1843: "Ensinäkymä suola-aavikkoon" Torrensjärvestä.',
           selite: 'Edward Fromen akvarelli vuodelta 1843. Frome lähetettiin '
             + 'tarkastamaan Eyren havainnot ja antoi kuvalleen nimen '
             + 'Ensinäkymä suola-aavikkoon. Vettä siinä on hädin tuskin: '
@@ -4667,6 +4807,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'ISS059-E-19273 - View of Manitoba.jpg',
+          lyhyt: 'Manitoban järvet avaruudesta: Winnipegosis, Manitoba ja Winnipeg entistä yhtä vettä.',
           selite: 'Manitoban järvet avaruusasemalta nähtynä. Winnipegosis, '
             + 'Manitoba ja Winnipeg ovat samaa vesijättöä. Niiden väliset '
             + 'tasangot ovat entistä järvenpohjaa, ja siksi ne ovat '
@@ -4715,6 +4856,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Boats at the shore of the malawi lake.jpg',
+          lyhyt: 'Malawijärvi: enemmän kalalajeja kuin missään muussa järvessä, satoja kirjoahvenia.',
           selite: 'Veneitä Malawijärven rannalla. Järvessä elää enemmän '
             + 'kalalajeja kuin missään muussa järvessä, satoja kirjoahvenia, '
             + 'jotka lähes kaikki ovat kotoperäisiä. Ruokakalana tunnetuin on '
@@ -4735,6 +4877,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Le Griffon.jpg',
+          lyhyt: 'Griffon-laiva 1800-luvun kuvituksessa; hylkyä ei ole koskaan varmuudella löydetty.',
           selite: 'Griffon 1800-luvun kuvittajan näkemänä. Laivasta ei ole yhtään '
             + 'aikalaiskuvaa. Hylkyä on ilmoitettu löydetyksi useita kertoja '
             + 'sekä Michiganjärvestä että Huronista, eikä yksikään löytö ole '
@@ -4769,6 +4912,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Koukdjuak 1 2002-08-24.jpg',
+          lyhyt: 'Koukdjuak vie Nettillingin vedet Foxe-altaaseen, sadattuhannet hanhet sulkasadolla.',
           selite: 'Koukdjuak, joka vie Nettillingin vedet länteen Foxe-altaaseen. '
             + 'Joki on leveä ja niin matala, että se jäätyy pohjaa myöten. '
             + 'Sen suistoon kerääntyy kesällä satojatuhansia hanhia '
@@ -4802,6 +4946,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Concepción volcano - Ometepe island.jpg',
+          lyhyt: 'Concepción kohoaa Ometepen saarelta Nicaraguajärvellä, kahdesta tulivuoresta.',
           selite: 'Concepción kohoaa Ometepen saarelta järven keskeltä. Saari on '
             + 'kaksi tulivuorta, jotka ovat kasvaneet kiinni toisiinsa; nimi '
             + 'on nahuatlia ja tarkoittaa kahta vuorta.',
@@ -4844,6 +4989,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Lake Ontario Dusk.jpg',
+          lyhyt: 'Ontariojärvi on Suurista järvistä pienin alaltaan mutta syvempi kuin Erie.',
           selite: 'Ontariojärvi hämärässä. Pinta-alaltaan se on Suurista järvistä '
             + 'pienin mutta tilavuudeltaan Eriejärveä isompi: se on kapea ja '
             + 'syvä, ja jäätyy kokonaan vain poikkeuksellisen kylminä '
@@ -4879,6 +5025,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'The Shrinking Aral Sea Recovers 2010.jpg',
+          lyhyt: 'Kokaralin pato Pohjois-Araljärvellä 2010 erottaa sen kuivuneesta eteläisestä.',
           selite: 'Pohjoinen allas vuonna 2010. Kapea vaalea viiva altaan '
             + 'eteläreunassa on Kokaralin pato. Sen takana näkyy se, mitä '
             + 'eteläisestä Aralista on jäljellä.',
@@ -4940,6 +5087,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Pusa hispida saimensis 431602934.jpg',
+          lyhyt: 'Saimaannorppa kaivaa pesän helmikuussa; vähäluminen talvi uhkaa kantaa.',
           selite: 'Saimaannorppa kivellä. Naaras kaivaa poikaspesän '
             + 'rantakinokseen helmikuussa, joten vähäluminen talvi on '
             + 'kannalle vaarallisempi kuin leuto kesä. Yksilöitä on vajaat '
@@ -4983,6 +5131,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Les eaux bleues du lac Tanganyika.jpg',
+          lyhyt: 'Tanganjika: happea vain ylimmässä parisadassa metrissä, syvemmällä ei elämää.',
           selite: 'Tanganjika Burundin puolelta. Vettä on lähes puolentoista '
             + 'kilometrin syvyyteen, mutta happea vain päällimmäisessä '
             + 'parissasadassa metrissä. Sen alapuolella vesi ei sekoitu eikä '
@@ -5014,6 +5163,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Barcos de Totora.jpg',
+          lyhyt: 'Totorakaislasta sidotut veneet ja uru-kansan kelluvat saaret Titicacalla.',
           selite: 'Totorakaislasta sidottuja veneitä. Sama kaisla kannattaa '
             + 'uru-kansan kelluvia saaria: pohja mätänee alta ja päälle '
             + 'ladotaan uutta, joten saari on ikuisesti kesken ja kestää noin '
@@ -5049,6 +5199,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Lake Chad from Apollo 7.jpg',
+          lyhyt: 'Tšadjärvi Apollo 7:stä 1968: keskisyvyys puolitoista metriä.',
           selite: 'Tšadjärvi Apollo 7:stä lokakuussa 1968. Tummana näkyvä vesi '
             + 'ulottuu kuvan poikki. Järvi on keskimäärin puolitoista metriä '
             + 'syvä, joten pieni pinnanlasku vie suuren alan.',
@@ -5056,6 +5207,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Chad AMO 2004323 lrg.jpg',
+          lyhyt: 'Tšadjärvi 2004: vettä jäljellä kahdeskymmenesosa, kaakkoisosa jo peltona.',
           selite: 'Sama järvi vuonna 2004. Vettä on jäljellä noin '
             + 'kahdeskymmenesosa siitä mitä edellisessä kuvassa. Vaaleat '
             + 'kuviot ovat entistä pohjaa; kaakkoisosaa on jo raivattu '
@@ -5092,6 +5244,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Lake Turkana Kenya.jpg',
+          lyhyt: 'Turkanajärvi eli Jademeri: sinivihreä levästä, Teleki nimesi kruununprinssin mukaan.',
           selite: 'Turkanajärvi. Vesi on sinivihreää levästä, ja siitä tulee '
             + 'toinen nimi, Jademeri. Paikallinen nimi oli Basso Narok, musta '
             + 'järvi; Teleki nimesi sen Itävallan kruununprinssin mukaan.',
@@ -5126,6 +5279,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Early morning fishing at Lake Victoria.jpg',
+          lyhyt: 'Victoriajärven aamukalastus: niilinahven istutettiin 1950-luvulla, kirjoahvenet hävisivät.',
           selite: 'Aamukalastusta Victorianjärvellä. Saalis on nykyään '
             + 'enimmäkseen niilinahventa, joka istutettiin järveen '
             + '1950-luvulla; sitä ennen vedessä eli satoja vain täältä '
@@ -5158,6 +5312,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Vänern Skarprunmarn.jpg',
+          lyhyt: 'Vänernin ulkoluodot: omat merenkulkusäännöt ja majakat, syysmyrsky kolme metriä.',
           selite: 'Vänernin ulkoluotoja. Järvi on niin laaja, että sillä on oma '
             + 'merenkulkusäännöstönsä ja omat majakkansa; syysmyrskyssä '
             + 'aallokko voi yltää kolmeen metriin.',
@@ -5187,6 +5342,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Lake winnipeg HDRI.jpg',
+          lyhyt: 'Winnipegjärvi: myrsky sekoittaa koko vesimassan, talvella siikaa avannoista.',
           selite: 'Winnipegjärven rantaa. Keskisyvyys on runsaat kymmenen metriä, '
             + 'joten myrsky sekoittaa koko vesimassan pohjaa myöten. Talvella '
             + 'jäältä nostetaan siikaa verkoilla, jotka lasketaan avannoista.',
@@ -5219,6 +5375,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'North Shore of Lake Superior.jpg',
+          lyhyt: 'Yläjärven vesi vaihtuu noin 200 vuodessa ja pysyy kylmänä kesälläkin.',
           selite: 'Yläjärven pohjoisrantaa. Vesi vaihtuu järvessä kokonaan noin '
             + 'kahdessasadassa vuodessa, ja se pysyy kylmänä: kesälläkin '
             + 'pintakerros lämpenee harvoin yli kymmenen asteen.',
@@ -5248,6 +5405,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Lake Onega. Kizhi Island DSC 0588 2600.jpg',
+          lyhyt: 'Kižin Kirkastuksen kirkko Äänisellä 1714: hirret ilman nauloja, päreet vaihdetaan.',
           selite: 'Kižin saari Äänisellä. Kirkastuksen kirkko valmistui 1714: '
             + 'hirsiseinät on salvottu ilman nauloja, ja sen '
             + 'kaksikymmentäkaksi kupolia on katettu haapapäreillä, jotka '
@@ -5275,6 +5433,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'View from the Assekrem.jpg',
+          lyhyt: 'Assekremin ylätasanko Ahaggarissa: tulivuorten kurkkuja, nimi tarkoittaa maailmanloppua.',
           selite: 'Assekremin ylätasanko. Pystyt tornit ovat tulivuorten '
             + 'kurkkujen kovettunutta täytettä, jonka ympäriltä pehmeämpi '
             + 'tuhka on tuulettunut pois. Assekrem tarkoittaa tamašekiksi '
@@ -5323,6 +5482,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Alaska Range from Air (7065264169).jpg',
+          lyhyt: 'Denali nousee tundrasta yli viisi kilometriä, huippu 6190 metriä.',
           selite: 'Alaskan vuoristo ilmasta. Denali nousee ympäröivästä tundrasta '
             + 'yli viisi kilometriä; harva vuori maapallolla nousee jyrkemmin '
             + 'omalta jalustaltaan. Huipun korkeus merenpinnasta on silti '
@@ -5343,6 +5503,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Belukha.jpg',
+          lyhyt: 'Beluha, Altain korkein, 4506 metriä, kolmen suuren joen vedenjakaja.',
           selite: 'Beluha, 4 506 metriä, Altain korkein. Vuori on neljän valtion '
             + 'kulmassa ja kolmen suuren joen vedenjakajalla; Katun lähtee '
             + 'sen etelärinteeltä ja päätyy lopulta Obiin.',
@@ -5383,6 +5544,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Phou Bia seen from Xaysomboun.jpg',
+          lyhyt: 'Phou Bia, Laosin korkein huippu 2819 metriä, suojasi Ho Chi Minhin polkua.',
           selite: 'Phou Bia, Laosin korkein huippu, 2 819 metriä. Ylängön metsät '
             + 'ovat tiheitä ja laaksot kapeita; sama maasto piti kaksi '
             + 'kulttuuripiiriä erillään ja tarjosi myöhemmin suojan Ho Chi '
@@ -5417,6 +5579,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Corno Grande del Gran Sasso d\'Italia.JPG',
+          lyhyt: 'Corno Grande, Apenniinien korkein 2912 m; sen jäätikkö luokiteltiin lumikentäksi.',
           selite: 'Corno Grande, 2 912 metriä, Apenniinien korkein. Sen alla oli '
             + 'Calderone, Euroopan eteläisin jäätikkö, joka luokiteltiin '
             + '2000-luvulla lumikentäksi, koska se ei enää liiku.',
@@ -5441,6 +5604,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'The Smoky Mountains, in Great Smoky Mountains National Park.jpg',
+          lyhyt: 'Great Smoky Mountainsin sininen usva syntyy kasvien haihduttamasta terpeenistä.',
           selite: 'Great Smoky Mountainsin harjanteita. Sininen usva on kasvien '
             + 'haihduttamaa terpeeniä, joka hajottaa valoa — sama ilmiö antoi '
             + 'nimen myös Blue Ridgelle.',
@@ -5476,6 +5640,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'View from Toubkal west flank.jpg',
+          lyhyt: 'Toubkal, Pohjois-Afrikan korkein 4167 m: lumi katoaa nopeasti rinteiltä.',
           selite: 'Näkymä Toubkalin länsirinteeltä. Pohjois-Afrikan korkein '
             + 'huippu on 4 167 metriä, ja lunta on kuvan ottohetkellä '
             + 'paikoin. Kolmen viikon päästä samasta paikasta ei välttämättä '
@@ -5519,6 +5684,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Shipka pass.jpg',
+          lyhyt: 'Šipkan sola Balkanvuorilla 1150 m, muistomerkki kansan rahoilla 1920-luvulta.',
           selite: 'Šipkan sola, 1 150 metriä, jonon tunnetuin kohta. Solan '
             + 'huipulla on muistomerkki, jonka rahat kerättiin kansalta '
             + '1920-luvulla. Tie on sama, jota pitkin hyökättiin.',
@@ -5543,6 +5709,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Serra da Mantiqueira vista da Rodovia Floriano Rodrigues Pinheiro.jpg',
+          lyhyt: 'Serra da Mantiqueira Brasilian ylängöllä: "itkevä vuori", vettä ympäri vuoden.',
           selite: 'Serra da Mantiqueira. Nimi tarkoittaa tupinkielellä '
             + 'suunnilleen itkevää vuorta, koska rinteiltä valuu vettä ympäri '
             + 'vuoden. Reunan takana maa nousee tasaisesti eikä laske enää.',
@@ -5574,6 +5741,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Uvala NVelebit Veliki-Lubenovac Dinarides Croatia.jpg',
+          lyhyt: 'Velebitin karstilaakso Dinaarisilla alpeilla: vesi katoaa heti maan alle.',
           selite: 'Velebitin karstilaakso. Pinnalla ei ole puroa eikä järveä, '
             + 'koska vesi menee heti maan alle. Kuoppa nimeltä uvala syntyy, '
             + 'kun useampi kalkkikiven liukenemispesäke sulautuu yhteen.',
@@ -5603,6 +5771,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'San Painting, Ukalamba Drakensberge 1.JPG',
+          lyhyt: 'Sanien kalliomaalaukset Drakensbergissä: Afrikan laajin kokoelma, tuhansia vuosia vanha.',
           selite: 'Sanien kalliomaalaus Drakensbergissä. Maalauksia on yli '
             + 'kuudessasadassa paikassa ja kuvia kymmeniätuhansia — Afrikan '
             + 'laajin yhtenäinen kokoelma. Vanhimmat ovat tuhansien vuosien '
@@ -5616,6 +5785,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Amphitheatre Drakensberg.jpg',
+          lyhyt: 'Amfiteatteri Drakensbergissä: viisi km leveä, tuhat metriä korkea, Tugela putoaa siitä.',
           selite: 'Amfiteatteri, viiden kilometrin levyinen ja tuhannen metrin '
             + 'korkuinen seinä. Sen laelta putoaa Tugela, jonka '
             + 'kokonaispudotus on runsaat yhdeksänsataa metriä ja joka kuivuu '
@@ -5641,6 +5811,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: '2009-05-13 Damavand from Abbasabad 08.jpg',
+          lyhyt: 'Damavand, Aasian korkein tulivuori 5610 m, rikkihöyryä huipulla.',
           selite: 'Damavand, 5 610 metriä, Aasian korkein tulivuori. Se nousee '
             + 'yksin ilman naapurihuippua, ja huipulla on rikkihöyryä ja '
             + 'keltaista lunta. Teheranista on matkaa runsaat kuusikymmentä '
@@ -5677,6 +5848,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Simien Mountains Landscape, Ethiopia (2462794039).jpg',
+          lyhyt: 'Simienin rotkot Etiopian ylängöllä: basalttitornit, korkeusero puolitoista km.',
           selite: 'Simienin rotkoja. Ylänkö on basalttia, jonka joet ovat '
             + 'leikanneet pystyseinäisiksi torneiksi; korkeuseroa on paikoin '
             + 'puolitoista kilometriä. Sama maasto teki valloittamisesta '
@@ -5721,6 +5893,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Roraima vistaBase.JPG',
+          lyhyt: 'Roraiman seinämä Guyanan ylängöllä: lähes 2 miljardia vuotta vanhaa hiekkakiveä.',
           selite: 'Roraiman seinämä juurelta katsottuna. Pöytävuoren hiekkakivi '
             + 'on lähes kaksi miljardia vuotta vanhaa, ja laella elää lajeja, '
             + 'joita ei ole muualla — jokainen tepui on saari ilman merta.',
@@ -5751,6 +5924,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Tirich Mir Hindu Kush Chitral; Tahsin Shah 06.jpg',
+          lyhyt: 'Tirich Mir, 7708 m, Hindukušin kapeiden solien maisemaa Chitralin laaksosta.',
           selite: 'Tirich Mir, 7 708 metriä, Chitralin laaksosta. Vuoristo on '
             + 'kapea mutta pitkä, ja juuri kapeus tekee soloista arvokkaita: '
             + 'harjan yli pääsee kävellen muutamassa päivässä, jos tietää '
@@ -5788,6 +5962,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'View from Kita dake-pano2.jpg',
+          lyhyt: 'Kita-dake, Japanin toiseksi korkein huippu, graniittia ja jääkauden kääpiökoivua.',
           selite: 'Näkymä Kita-dakelta, Japanin toiseksi korkeimmalta huipulta. '
             + 'Eteläiset Alpit ovat graniittia ja liusketta, ja rinteillä '
             + 'kasvaa kääpiövaivaiskoivikkoa, joka on jäänyt jäljelle '
@@ -5826,6 +6001,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Mount Kosciuszko, Australia.jpg',
+          lyhyt: 'Kosciuszkon loivat rinteet Australiassa: hiihtokausi kestää neljä kuukautta.',
           selite: 'Kosciuszkon rinteitä kesällä. Maasto on loivaa ja pyöreää, '
             + 'koska jääkauden jäätiköt olivat pieniä; lumi jää silti '
             + 'pitkälle kevääseen, ja hiihtokausi kestää neljä kuukautta.',
@@ -5851,6 +6027,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Sanford Robinson Gifford - Longs Peak, Colorado - Google Art Project.jpg',
+          lyhyt: 'Giffordin maalaus Longs Peakista Kalliovuorilla, 4346 m, seinä putoaa 700 metriä.',
           selite: 'Sanford Robinson Gifford maalasi Longs Peakin samoihin '
             + 'aikoihin kuin Bird kiipesi sille. Huippu on 4 346 metriä, ja '
             + 'itärinteen seinä putoaa suoraan runsaat seitsemänsataa metriä.',
@@ -5897,6 +6074,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Gezicht op de Berg Kameroen (Mount Cameroon) vanuit Victoria (Kameroen), RP-F-F01175-AD.jpg',
+          lyhyt: 'Kamerunvuori Victoriasta 1800-luvulla; Kingsley lähti täältä, huippu 4040 m.',
           selite: 'Kamerunvuori Victoriasta, nykyisestä Limbestä, 1800-luvun '
             + 'lopun valokuvassa. Kingsley lähti liikkeelle tästä satamasta. '
             + 'Vuori nousee suoraan merestä 4 040 metriin.',
@@ -5932,6 +6110,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Klyuchevskaya Sopka (Klyuchevskoi) Volcano with lava flow, Kamchatka, Russia - October 31st, 2020.jpg',
+          lyhyt: 'Kljutševskaja sopka Kamtšatkalla purkautuu keskimäärin joka toinen vuosi.',
           selite: 'Kljutševskaja sopka ja laavavirta lokakuussa 2020, '
             + 'satelliittikuvana. Purkaus tulee keskimäärin joka toinen '
             + 'vuosi, ja tuhkaa on satanut kaupungeissa molemmilla puolilla '
@@ -5957,6 +6136,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'SwartbergP1020173.JPG',
+          lyhyt: 'Swartbergin poimut: tie yli rakennettiin 1880-luvulla ilman laastia.',
           selite: 'Swartbergin poimuja. Kerrokset ovat kääntyneet lähes pystyyn, '
             + 'ja tie yli rakennettiin 1880-luvulla vankityövoimalla ilman '
             + 'laastia; muurit seisovat yhä pelkän kivenladonnan varassa.',
@@ -5987,6 +6167,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Chogori.jpg',
+          lyhyt: 'K2 pohjoisesta: neljä 8000-metristä lähekkäin, jäätiköt napa-alueiden pisimmät.',
           selite: 'K2 pohjoisesta. Jyrkkyys on koko vuoriston tunnus: neljä '
             + 'kahdeksantuhattametristä mahtuu muutaman kymmenen kilometrin '
             + 'säteelle, ja jäätiköt ovat pisimmät napa-alueiden '
@@ -6033,6 +6214,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Gerlachovský štít (Gerlach Peak).jpg',
+          lyhyt: 'Gerlachovský štít, Karpaattien korkein 2655 m; Korkeat Tatrat vain 25 km pätkä kaaresta.',
           selite: 'Gerlachovský štít, 2 655 metriä, Karpaattien korkein. Korkeat '
             + 'Tatrat ovat vain 25 kilometriä pitkä pätkä kaaresta, joka '
             + 'kiertää Unkarin tasangon puolitoista tuhatta kilometriä.',
@@ -6074,6 +6256,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Mount Rainier over Tacoma.jpg',
+          lyhyt: 'Rainier Tacoman yllä: eniten jäätikköä mannerosan huipuista, kaupunki mutavyöryllä.',
           selite: 'Rainier Tacoman yllä. Vuorella on enemmän jäätikköä kuin '
             + 'millään muulla Yhdysvaltain mannerosan huipulla, ja kaupunki '
             + 'on rakennettu vanhan mutavyöryn kerrostumalle.',
@@ -6104,6 +6287,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Travels in the central Caucasus and Bash P.380.jpg',
+          lyhyt: 'Freshfieldin matkakirjan kuvitus 1869: hän kiipesi Kazbekille ja Elbrusille oppaiden avulla.',
           selite: 'Kuvitusta Douglas Freshfieldin matkakirjasta 1869. Hän kiipesi '
             + 'Kazbekille ja Elbrusille ensimmäisten eurooppalaisten '
             + 'joukossa, mutta reitit tunsivat paikalliset oppaat, joita '
@@ -6136,6 +6320,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Batian and Nelion in the background cropped.JPG',
+          lyhyt: 'Batian ja Nelion Kenianvuorella, 5199 ja 5188 m, sammuneen tulivuoren jähmettynyt sydän.',
           selite: 'Batian ja Nelion, 5 199 ja 5 188 metriä. Ne ovat sammuneen '
             + 'tulivuoren tulikanavan jähmettynyt täyte: pehmeä kartio on '
             + 'kulunut pois ja kova sydän jäänyt pystyyn.',
@@ -6167,6 +6352,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Mount Kilimandjaro in Amboseli national park.jpg',
+          lyhyt: 'Kilimanjaro Amboselista: nousee savannista viisi km ilman ympäröivää vuoristoa.',
           selite: 'Kilimanjaro Amboselista. Vuori nousee savannista suoraan viisi '
             + 'kilometriä ilman ympäröivää vuoristoa, ja siksi se näkyy sadan '
             + 'kilometrin päähän. Rinteellä on viisi kasvillisuusvyöhykettä.',
@@ -6200,6 +6386,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'ISS022-E-5098 - View of China - Kunlun Mountains - Liushi Shan - Trungtse Glacier (cropped).jpg',
+          lyhyt: 'Kunlunin harja avaruusasemalta: 3000 km pitkä, Tiibetin ylätasangon ja Taklamakanin raja.',
           selite: 'Kunlunin harjaa avaruusasemalta. Etelässä alkaa Tiibetin '
             + 'ylätasanko, pohjoisessa laskeudutaan suoraan Taklamakanin '
             + 'hiekkaan. Jono on kolmetuhatta kilometriä pitkä, ja teitä sen '
@@ -6225,6 +6412,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Monsoon clouds in Western ghats.jpg',
+          lyhyt: 'Monsuunipilvi nousee Länsi-Ghatteja vasten joka kesäkuu, Intian maatalouden tahdittajana.',
           selite: 'Monsuunipilvi nousee Ghattien reunaa vasten. Sama ilmiö '
             + 'toistuu joka kesäkuu muutaman päivän tarkkuudella, ja Intian '
             + 'maatalouden vuosi on rakennettu sen varaan.',
@@ -6255,6 +6443,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Landscape Madagascar 01.jpg',
+          lyhyt: 'Madagaskarin keskiylängön lavaka-eroosiouurteet kasvavat sateella metrikaupalla.',
           selite: 'Keskiylängön kumpuja ja riisiterasseja. Punainen maa on '
             + 'rautapitoista rapautumaa, ja eroosiouurteita kutsutaan nimellä '
             + 'lavaka; ne kasvavat sateella metrikaupalla kerrallaan.',
@@ -6299,6 +6488,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Thomas Edward Gordon Lake Victoria, Great Pamir, May 2nd, 1874.png',
+          lyhyt: 'Gordonin piirros Suurelta Pamirilta 1874: Zorkul-järvi, jota pidettiin Oxuksen lähteenä.',
           selite: 'Thomas Edward Gordonin piirros Suurelta Pamirilta 2. '
             + 'toukokuuta 1874. Järvi on Zorkul, jota britit kutsuivat '
             + 'Victoriaksi ja jota pidettiin Oxuksen lähteenä. Puuta ei '
@@ -6334,6 +6524,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Gustave Doré - Roland à Roncevaux.jpg',
+          lyhyt: 'Doré kuvitti Rolandin laulun: Roland puhaltaa torveaan Pyreneillä liian myöhään.',
           selite: 'Gustave Doré kuvitti Rolandin laulun 1800-luvulla. Kuvassa '
             + 'Roland puhaltaa torveaan liian myöhään. Tapaus on tuolloin '
             + 'runsaat tuhat vuotta vanha, ja Dorén Pyreneet ovat jyrkemmät '
@@ -6365,6 +6556,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Mount Waddington.jpg',
+          lyhyt: 'Mount Waddington, Brittiläisen Kolumbian korkein erillinen huippu, löytyi kartalle 1920-luvulla.',
           selite: 'Mount Waddington, 4 019 metriä, Brittiläisen Kolumbian korkein '
             + 'kokonaan omalla alueellaan oleva huippu. Se löydettiin '
             + 'kartalle vasta 1920-luvulla, koska sitä ei näy mereltä eikä '
@@ -6400,6 +6592,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Ruwenzori Mountains Virunga National Park.jpg',
+          lyhyt: 'Ruwenzori pilvien välistä: jättiläislobeliat sopeutuneet yöpakkasiin ja päivän paahteeseen.',
           selite: 'Ruwenzori pilvien välistä. Vuoret ovat pilvessä lähes aina, ja '
             + 'rinteillä kasvaa jättiläismäisiä lobelioita ja ristikukkaisia, '
             + 'jotka ovat sopeutuneet yöpakkasiin ja päivän paahteeseen saman '
@@ -6425,6 +6618,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Haraz Mountains, Yemen (12633745063).jpg',
+          lyhyt: 'Harazin vuorten terassit Sarawatilla pitävät mullan ja veden paikallaan.',
           selite: 'Harazin vuorten terasseja. Muuri pitää mullan paikallaan ja '
             + 'hidastaa veden, joka muuten katoaisi rinnettä alas tunnissa. '
             + 'Kylät on rakennettu harjanteille, jotta viljelysmaata ei '
@@ -6466,6 +6660,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Divisadero, Barrancas del Cobre, Chihuahua.jpg',
+          lyhyt: 'Divisaderon näköalapaikka Kuparirotkolla: rautatie 1961, 86 tunnelia ja 37 siltaa.',
           selite: 'Divisaderon näköalapaikka Kuparirotkolla. Rautatie kulkee '
             + 'juuri tästä; se valmistui 1961 ja vaati 86 tunnelia ja 37 '
             + 'siltaa. Sitä ennen sisämaahan mentiin muulilla.',
@@ -6490,6 +6685,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Sierra Madre en Rayones - panoramio.jpg',
+          lyhyt: 'Sierra Madre Orientalin poimut Nuevo Leónissa: kalkkikivi vettä luoliksi syövyttämässä.',
           selite: 'Sierra Madre Orientalin poimuja Nuevo Leónissa. Kerrokset ovat '
             + 'kalkkikiveä, joka syntyi matalassa meressä; nyt ne seisovat '
             + 'pystyssä ja vesi katoaa niiden sisään luoliksi.',
@@ -6519,6 +6715,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Mount Whitney from south.jpg',
+          lyhyt: 'Mount Whitney, 4421 m: Sierra Nevada on yksi kallistunut graniittilohkare.',
           selite: 'Mount Whitney, 4 421 metriä, itäpuolelta. Sierra on yksi '
             + 'kallistunut graniittilohkare: itärinne on kahden kilometrin '
             + 'muuri, länsirinne loiva. Alla oleva laakso kuuluu '
@@ -6554,6 +6751,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Jotunheimen - view from Galdhøpiggen.JPG',
+          lyhyt: 'Galdhøpiggen, Skandien korkein 2469 m, jäätikön keskellä pohjoisen matalan lumirajan takia.',
           selite: 'Jotunheimen Galdhøpiggenin huipulta. Skandien korkein kohta on '
             + '2 469 metriä, mutta se on jäätikön keskellä eikä näytä siltä: '
             + 'pohjoinen sijainti tuo lumirajan alas kilometrin päähän '
@@ -6603,6 +6801,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Jamison Valley, Blue Mountains, Australia - Nov 2008.jpg',
+          lyhyt: 'Jamisonin laakso: Darwin vertasi hiekkakivilahtia kuivuneeseen satamaan.',
           selite: 'Jamisonin laakso. Hiekkakivitasanko on sahautunut '
             + 'pystyseinäisiksi lahdiksi, joiden pohja on metsää; Darwin '
             + 'vertasi näkymää kuivuneeseen satamaan, jonka pohjalle on '
@@ -6623,6 +6822,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Puertas Cilícias.jpg',
+          lyhyt: 'Kilikian portit Taurusvuorilla: Çakıt-joen sahaama rako, roomalaisten levennystyön jäljet.',
           selite: 'Kilikian portit nykyisin. Çakıt-joki on sahannut raon '
             + 'kalkkikiveen, ja tie kulkee samassa uomassa kuin ennen. '
             + 'Kalliossa näkyy yhä leikkausjälkiä, joita on pidetty '
@@ -6658,6 +6858,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Emi Koussi.jpg',
+          lyhyt: 'Emi Koussi Tibestissä satelliitista: loiva kilpi ja romahtanut kaldera autiolla seudulla.',
           selite: 'Emi Koussi satelliitista. Loiva kilpi ja keskellä romahtanut '
             + 'kaldera; pohjalla on tuhkakartioita ja kuivunutta natronia. '
             + 'Ympärillä ei ole mitään sadan kilometrin säteellä.',
@@ -6693,6 +6894,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Khan Tengri 87 (355).jpg',
+          lyhyt: 'Khan Tengri iltavalossa: marmorihuippu punertuu, kuva Jaan Künnapilta 1987.',
           selite: 'Khan Tengri iltavalossa. Marmorihuippu punertuu '
             + 'auringonlaskussa, ja siitä tulee nimi: taivaan herra. Kuvan '
             + 'otti virolainen Jaan Künnap kiipeilyretkellä 1987.',
@@ -6718,6 +6920,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'A Proliferation of Lakes on the Tibetan Plateau (154011 - oli2 20240811 lrg).jpg',
+          lyhyt: 'Changtangin järvet Tiibetin ylätasangolla kasvavat, kun vesi haihtuu suolaiseksi.',
           selite: 'Changtangin järviä satelliitista. Umpinaisella ylätasangolla '
             + 'vedellä ei ole ulospääsyä, joten se jää altaisiin ja haihtuu '
             + 'suolaiseksi. Järvien pinta-ala on kasvanut mitattavasti viime '
@@ -6771,6 +6974,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Snow in the Ural Mountains (MODIS 2016-05-03).jpg',
+          lyhyt: 'Ural satelliitista toukokuussa: lumijuova 2000 km, korkeus alle 2000 metriä.',
           selite: 'Ural toukokuussa satelliitista. Jono erottuu lumijuovana '
             + 'kahdentuhannen kilometrin matkalla, mutta korkeus on vain '
             + 'vajaat kaksituhatta metriä. Maasta katsottuna sitä ei aina '
@@ -6790,6 +6994,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: '20170905 Papouasie Baliem valley.jpg',
+          lyhyt: 'Baliemin laakso Uuden-Guinean ylängöillä, 1600 m korkeudessa, ei malariaa.',
           selite: 'Baliemin laakso. Pohja on tasainen ja ojitettu, ja '
             + 'bataattipenkkejä on viljelty samalla tavalla tuhansia vuosia. '
             + 'Laakson korkeus on 1 600 metriä, joten malariaa ei ole.',
@@ -6809,6 +7014,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Cartens peaks in West Papua.jpg',
+          lyhyt: 'Puncak Jaya eli Carstenszin pyramidi, 4884 m, merenpohjasta noussutta kalkkikiveä.',
           selite: 'Puncak Jaya eli Carstenszin pyramidi, 4 884 metriä. '
             + 'Kalkkikiveä, jossa on merieläinten jäänteitä: laatta on '
             + 'noussut merenpohjasta lähes viiteen kilometriin muutamassa '
@@ -6845,6 +7051,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Aoraki-Mount Cook from Tasman Lake outlet.jpg',
+          lyhyt: 'Aoraki Tasmanjärven laskukohdalta: järvi syntyi 1970-luvun jälkeen, huippu 3724 m.',
           selite: 'Aoraki Tasmanjärven laskukohdalta. Järveä ei ollut '
             + '1970-luvulla lainkaan: se on syntynyt jäätikön vetäytyessä ja '
             + 'kasvaa yhä. Huippu on 3 724 metriä, ja vuoden 1991 sortuma vei '
@@ -6864,6 +7071,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Verkhoyansk Range, Republic of Sakha (Yakutia), Russia - 2-2019.jpg',
+          lyhyt: 'Verhojanskin vuoristo helmikuussa: kylmyys ympäristöstä, ei korkeudesta.',
           selite: 'Verhojanskin vuoristoa helmikuussa. Jono kaartaa Lenan takana '
             + 'runsaat tuhat kilometriä ja on korkeimmillaan vain 2 400 '
             + 'metriä. Kylmä ei tule korkeudesta vaan siitä, mitä vuoret '
@@ -6895,6 +7103,7 @@ export const MAASTO_TEKSTIT = {
         },
         {
           tiedosto: 'Zagros from above.jpg',
+          lyhyt: 'Zagrosin poimut ilmasta: laattojen puristamat aallot, joet kulkevat poimujen väleissä.',
           selite: 'Zagrosin poimuja ilmasta. Kerrokset ovat taipuneet aalloiksi '
             + 'Arabian ja Euraasian laattojen välissä, ja jokien uomat '
             + 'seuraavat poimujen välejä, mikä tekee poikittaisesta '

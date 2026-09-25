@@ -270,6 +270,24 @@ export function laskeMittajana(ui) {
  * kissa ei mahdu sille laudalle lainkaan ja merkki jätetään siellä
  * piirtämättä.
  */
+/**
+ * Laudan paikasta asteiksi — projisoiLaudalle-funktion käänteinen.
+ * Karttapallo (js/pallo.js) asettaa kaupungit ja reitit pallolle tästä:
+ * laudan data on x/y-yksiköinä, pallo tarvitsee lon/lat. Sama taulu ja
+ * samat kaavat kuin edestakaisin, joten piste palaa täsmälleen.
+ */
+export function laudaltaAsteiksi(lauta, x, y) {
+  const projektio = FOKUS_LAUTAPROJEKTIOT[lauta];
+  const kaavat = projektionKaavat(projektio);
+  if (!kaavat || !Number.isFinite(x) || !Number.isFinite(y)) return null;
+  let lon = kaavat.lon(x);
+  const lat = kaavat.lat(y);
+  if (!Number.isFinite(lon) || !Number.isFinite(lat)) return null;
+  while (lon > 180) lon -= 360;
+  while (lon < -180) lon += 360;
+  return { lon, lat };
+}
+
 export function projisoiLaudalle(lauta, lon, lat) {
   const projektio = FOKUS_LAUTAPROJEKTIOT[lauta];
   const kaavat = projektionKaavat(projektio);
@@ -299,8 +317,82 @@ export function projisoiLaudalle(lauta, lon, lat) {
  * lehdessä) kulkee arvon perässä samoin kuin siellä.
  */
 
+/*
+ * ===== KARTUUTSI PALLOLLA (omistaja 11.9.2026 ilta) ================
+ *
+ * Sanatarkasti: *"Pelistä on muuten hävinnyt pallokartan uudistuksen
+ * myötä maan nimi ja infolaatikko ja linkki maalehteen. Ne olivat ennen
+ * vasemmassa alakulmassa. Ne saisi palauttaa näkyviin."*
+ *
+ * MIKSI NE KATOSIVAT. Kartuutsi, maataulu ja sen maalehtilinkki eivät
+ * ole koskaan olleet omaa koodiaan — ne ovat tämän tiedoston
+ * elementtejä, ja niiden AINOA ehto oli maan ikkuna (FOKUS_POHJAT,
+ * js/ui.js paivitaMaanIkkuna). Kun pallosta tuli pelilauta, tasokartta
+ * jäi nukkumaan sen alle (js/kartta.js lepotila), ja `paivitaFokusPohja`
+ * palaa nukkuvalla kartalla heti — `fokusPohjaBbox` jää siis pysyvästi
+ * nulliksi, eikä yksikään ehto enää täyty. Lisäksi laudan purku
+ * (js/ui.js puraLauta) nollaa kalusteet. Poisto oli siis sivuvaikutus,
+ * ei päätös, ja korjaus on antaa kartuutsille pallolaudan oma ehto.
+ *
+ * MAA LUETAAN SAMASTA TAULUSTA kuin kartan kohteet ja maan korostus
+ * (js/fokuskohteet.js nykyinenIso, js/maanaariviivat.js): pelaajan
+ * kaupunki → pack.map.cityCountry. Taulua ei tuoda fokuskohteista,
+ * koska se on niputuksessa VASTA tämän jälkeen (tools/build-standalone.mjs)
+ * — sama yhden rivin haku tehdään tässä.
+ *
+ * KAKSI TILAA EIVÄT OLE PELITILOJA, täsmälleen kuten tasokartalla
+ * (js/ui.js maanIkkuna): lähtökaupungin valinnassa matkaajalla ei ole
+ * maata, ja aloituslennon aikana kohdemaan nimi paljastaisi määränpään
+ * ennen kuin kone on perillä. Katselutila (?lauta=) ei ole peli.
+ */
+/*
+ * ===== NURKKA VAI KARTTA (karttauudistus, erä 3) ====================
+ *
+ * Raamattu, KARTTAUUDISTUKSEN PAATOKSET 2 kohta 2 (omistaja 13.9.2026,
+ * sanatarkasti): *"maan tiedot, lisaa-valikko, nostot ja muut elementit
+ * KIINNITETAAN KARTTAAN (karttakoordinaatit, skaalautuvat zoomatessa
+ * kuin painettu kartta), maan reunan ulkopuolelle tai rajalle, ei
+ * ruutuun."*
+ *
+ * Pallolaudalla maan perustiedot asuvat siis pallon merkkikerroksessa
+ * maantieteellisellä ankkurilla (js/pallolauta/maapaneeli.js), eivät
+ * karttaruudun vasemmassa alanurkassa. TASOKARTALLA MIKÄÄN EI MUUTU:
+ * kartuutsi, mittajana ja asteviivaimet ovat sen omia kalusteita, ja
+ * niiden ruutuankkurointi on perusteltu tämän tiedoston alussa.
+ *
+ * NURKKATILA JÄÄ YHDEN VAKION TAAKSE. Kaluste palautettiin nurkkaan
+ * OMISTAJAN OMASTA PYYNNÖSTÄ 11.9.2026 (ks. KARTUUTSI PALLOLLA yllä),
+ * ja PÄÄTÖKSET 2 siirtää sen karttaan vasta kaksi päivää myöhemmin.
+ * Uusi päätös voittaa, mutta paluu ei saa olla remontti: `false`
+ * tähän — tai `?maapaneeli=nurkka` osoitteeseen — ja pallolauta on
+ * takaisin entisellään. Sama vipu on savukkeen vastakoe: nurkkatilassa
+ * paneeli EI ole kartassa kiinni, jolloin sijaintiväitteen on
+ * kaaduttava.
+ */
+export const MAAPANEELI_KARTASSA = true;
+
+/** Onko maan paneeli kartassa kiinni (true) vai ruudun nurkassa (false)? */
+export function maapaneeliKartassa(win = globalThis) {
+  try {
+    const arvo = new URLSearchParams(win.location?.search ?? '').get('maapaneeli');
+    if (arvo === 'nurkka') return false;
+    if (arvo === 'kartta') return true;
+  } catch {
+    /* ei osoitetta */
+  }
+  return MAAPANEELI_KARTASSA;
+}
+
+export function pallolaudanMaa(ui) {
+  if (!ui.pallolauta || ui.katselu) return null;
+  if (ui.game?.phase === 'pickstart' || ui.aloituslentoKesken) return null;
+  const city = ui.game?.cityOf?.();
+  if (!city) return null;
+  return ui.game?.pack?.map?.cityCountry?.[city.id] ?? null;
+}
+
 /** Maan nimi laudan omasta taulusta, versaaleina kartuutsiin. */
-function maanNimi(ui, iso) {
+export function maanNimi(ui, iso) {
   return ui.game?.pack?.map?.countryShapes?.[iso]?.nimi ?? iso;
 }
 
@@ -309,7 +401,7 @@ function maanNimi(ui, iso) {
  * pois — tyhjä rivi näyttäisi rikkinäiseltä, ja kaikilla mailla ei ole
  * kaikkia lukuja.
  */
-function maanRivit(ui, iso) {
+export function maanRivit(ui, iso) {
   const tiedot = (MAATIEDOT[ui.game?.pack?.id] ?? {})[iso] ?? {};
   const rivit = [];
   if (tiedot.vakiluku) rivit.push(['Väkiluku', tiedot.vakiluku, tiedot.vakilukuSija ?? '']);
@@ -345,7 +437,7 @@ function maanRivit(ui, iso) {
  * NÄYTETTÄVÄ; se ladotaan kielen nimen perään pienempänä ja
  * haaleampana, samalla erotinpisteellä kuin muutkin lisät.
  */
-function kieliOsat(ui, iso) {
+export function kieliOsat(ui, iso) {
   const tiedot = (MAATIEDOT[ui.game?.pack?.id] ?? {})[iso] ?? {};
   return (tiedot.tervehdykset ?? []).map((t) => {
     const osa = luo('span', 'tervehdys');
@@ -406,6 +498,14 @@ function rakenna(ui) {
 
   const sailio = luo('div', 'fokusmitat');
   sailio.hidden = true;
+  /*
+   * AVAIN NOLLILLE UUDEN SÄILIÖN MYÖTÄ. Elementit ovat juuri syntyneet
+   * tyhjinä, joten vanha `fokusMitatAvain` väittäisi tekstien olevan
+   * jo paikallaan ja kartuutsi jäisi tyhjäksi. Säiliö voidaan rakentaa
+   * uudelleen ilman nollausta esimerkiksi silloin, kun karttaruudun
+   * sisältö on vaihtunut alta (pallolauta, linssikartta).
+   */
+  ui.fokusMitatAvain = null;
 
   /*
    * KARTUUTSI: suomenkielinen nimi, viiva ja sen alla MAAN OMA NIMI
@@ -1510,6 +1610,26 @@ function paivitaPerusta(ui) {
  * ruutu tulevat nyt parametreina (ks. "KEHYSSILMUKKA EI SAA TUOTTAA
  * ROSKAA").
  */
+/*
+ * PITUUSASTE KIERRETÄÄN VÄLILLE (-180, 180] (2.9.2026).
+ *
+ * Sama vika kuin leveysasteen 100 °P:ssä, mutta toisin päin: Miller
+ * on jatkuva kummallakin akselilla, ja arkki kattaa TASAN 360
+ * pituusastetta (-175…185). Näkymä voi olla arkkia leveämpi kahdessa
+ * tilanteessa — sauman yli panoroitaessa ollaan laudan kopion päällä,
+ * ja uloimmalla zoomilla laudan sivuille jää paperia (js/kartta.js
+ * KOKOLAUDAN_VARA) — ja silloin käänteisprojektio antoi kuuliaisesti
+ * "200 °I" ja "300 °L", joita ei ole olemassa.
+ *
+ * Kierto on tässä oikea vastaus eikä merkin pudotus (vrt. navat):
+ * arkin oikea reuna ON sama meridiaani kuin sen vasen reuna, joten
+ * kierretty lukema osuu kopion päällä täsmälleen oikeaan paikkaan.
+ */
+function kierraPituusaste(lon) {
+  const kierretty = (((lon + 180) % 360) + 360) % 360 - 180;
+  return kierretty <= -180 ? 180 : kierretty;
+}
+
 function laskeVaakaParit(kaavat, ruutu) {
   const lonAlku = kaavat.lon(ruutu.lautaX(0));
   const lonLoppu = kaavat.lon(ruutu.lautaX(ruutu.leveys));
@@ -1522,7 +1642,7 @@ function laskeVaakaParit(kaavat, ruutu) {
   const alku = Math.ceil(Math.min(reunaA, reunaB) / askel) * askel;
   const loppu = Math.max(reunaA, reunaB);
   for (let lon = alku; lon <= loppu + 1e-9; lon += askel) {
-    parit.push([ruutu.px(kaavat.x(lon)), asteTeksti(lon, ['I', 'L'])]);
+    parit.push([ruutu.px(kaavat.x(lon)), asteTeksti(kierraPituusaste(lon), ['I', 'L'])]);
   }
   return parit;
 }
@@ -1956,11 +2076,21 @@ function paivitaTaulunPohja(ui) {
  */
 function ajaFokusmitat(ui) {
   if (!ui.mapPane) return;
-  const pohja = ui.fokusPohjaBbox ?? null;
-  const iso = pohja ? ui.fokuskarttaAvain : null;
+  const pallolla = Boolean(ui.pallolauta);
+  const pohja = pallolla ? null : (ui.fokusPohjaBbox ?? null);
+  const iso = pallolla ? pallolaudanMaa(ui) : (pohja ? ui.fokuskarttaAvain : null);
   // Näkyvissä vain kun maan ikkuna on tiedossa (js/ui.js
-  // paivitaMaanIkkuna lukee sen FOKUS_POHJAT-taulusta).
-  const nakyy = Boolean(pohja && iso && FOKUS_POHJAT[iso]);
+  // paivitaMaanIkkuna lukee sen FOKUS_POHJAT-taulusta); pallolaudalla
+  // riittää maa, koska ikkunataulua ei ole (ks. KARTUUTSI PALLOLLA).
+  /*
+   * PALLOLLA NURKKA ON TYHJÄ, KUN PANEELI ON KARTASSA (erä 3, ks.
+   * NURKKA VAI KARTTA yllä). Ehto on tässä eikä kutsupaikoissa, koska
+   * tämä on se yksi kohta, joka päättää kalusteiden näkyvyyden — ja
+   * `nakyy === false` purkaa myös auki olevan taulun ja sen bodyluokan.
+   */
+  const nakyy = pallolla
+    ? Boolean(iso) && !maapaneeliKartassa()
+    : Boolean(pohja && iso && FOKUS_POHJAT[iso]);
   const sailio = ui.fokusmitatSailio?.isConnected ? ui.fokusmitatSailio : rakenna(ui);
   if (!nakyy) {
     if (!sailio.hidden) {
@@ -2000,6 +2130,20 @@ function ajaFokusmitat(ui) {
     taytaMaataulu(ui, iso);
   }
 
+  /*
+   * PALLOLAUDALLA VAIN KARTUUTSI JA MAATAULU. Mittajana ja
+   * asteviivaimet lukevat tasokartan viewBoxin ja sen projektion
+   * (mittaaPerusta, laskeMittajana); pallolla ne valehtelisivat, ja
+   * pallon oma mittakaava on kameran asia. Poistuminen on siis tässä
+   * eikä ehdoissa: säiliö, kartuutsi ja taulu ovat jo ajan tasalla.
+   */
+  if (pallolla) {
+    if (ui.fokusJana) ui.fokusJana.hidden = true;
+    if (ui.fokusViivaimet) ui.fokusViivaimet.hidden = true;
+    paivitaTaulunPohja(ui);
+    paivitaMaatauluHuntu(ui);
+    return;
+  }
   // Neliönapin paikka ja taulun alareuna mitataan joka päivityksellä:
   // ruudun leveys (ja sen myötä kartuutsin kirjasinkoko) sekä
   // karttaruudun korkeus voivat vaihtua kesken pelin.

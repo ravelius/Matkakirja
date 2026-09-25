@@ -101,27 +101,125 @@ export const FOKUSVIRTA_HELSINKI = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 50343ccd0d063c094178f78d26df4402b7e42b0f585b7d4bbd3300a83858d3e8. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-helsinki-r20260909-paper-v4.jpg",
+      lyhyt: "Helsinki, 1873. Kartta sai rannikon päälle vielä kalan.",
+      selite: "Torikauppias painoi karttani silakalla alas ennen kuin tuuli ehti viedä paperin merelle. Valkoinen kirkko kohosi myyntipaikkojen takana, kun kuvasin kalan uuden tehtävän.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.finna.fi/Record/hkm.CCD1A6CE-FD67-4BDD-9E29-D3C71E41D098","https://www.finna.fi/Record/hkm.F2DD5045-4DE1-49AF-8418-01F6629EEBB6","https://helsingintuomiokirkko.fi/index/kirkontarina.html","https://www.hamhelsinki.fi/en/sculptures/havis-amanda-2/","https://www.hamhelsinki.fi/en/sculptures/alexander-ii/"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-helsinki-r20260911-paper2-v1.jpg",
+      lyhyt: "Helsinki, 1873. Suomenlahti löytyi kartasta myös rasvajälkenä.",
+      selite: "Torilta lähdettyäni tutkin silakan kartalle jättämää rasvajälkeä Suomenlahden kohdalla. Pidin tuulen taittamasta paperista kiinni sataman näkyessä taustalla.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.finna.fi/Record/hkm.CCD1A6CE-FD67-4BDD-9E29-D3C71E41D098","https://helsingintuomiokirkko.fi/index/kirkontarina.html"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Se seuraa merkinnän omaa
      * havaintopaikkaa — laivan kannelta katsottu kaupunki ja satama,
      * jossa tervaa lastataan.
      */
-    paikkarivi: 'Helsingfors, kesällä 1873. Tulin mereltä, ja kaupunki '
-      + 'näytti isommalta kuin se maalta katsottuna on.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Helsingfors näyttää mereltä suuremmalta kuin maalta, ja '
-      + 'valkoinen kirkko seisoo kukkulallaan kuin keisarin allekirjoitus. '
-      + 'Satamassa tuoksui terva — sitä lastattiin laivoihin kuin kultaa, '
-      + 'ja tavallaan se sitä olikin.',
-    luenta: '[curious] Helsingfors näyttää mereltä suuremmalta kuin maalta, '
-      + 'ja valkoinen kirkko seisoo kukkulallaan kuin keisarin '
-      + 'allekirjoitus. [softly] Satamassa tuoksui terva — sitä lastattiin '
-      + 'laivoihin kuin kultaa, [whispers] ja tavallaan se sitä olikin.',
+    paikkarivi: 'Helsingfors, heinäkuussa 1873. Kirkasta; mereltä käy viileä '
+      + 'tuuli; puntari korkealla.',
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1; audio/alignment tarvitaan. */
+    teksti: "Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi rasvajälki. Harvoin olen saanut yhtä täsmällistä paikallistietoa.",
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: apostolit katolla ja kalakauppiaan vaaka
+     * (rinnakkaiskuva, pulu kuuntelee).
+     */
+    reaktiot: [
+  {
+    "id": "helsinki.r1",
+    "ankkuri": "apostolit katsoivat merelle",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "helsinki.r2",
+    "ankkuri": "kalakauppias punnitsi silakoita",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "helsinki.r3",
+    "ankkuri": "Kummankin työ vaikutti vakavalta",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "helsinki.r4",
+    "ankkuri": "nainen painoi sen silakalla paikoilleen",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "helsinki.r5",
+    "ankkuri": "yhtä täsmällistä paikallistietoa",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    luenta: "[softly] Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi rasvajälki. [warmly] Harvoin olen saanut yhtä täsmällistä paikallistietoa.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-helsinki.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era03; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-helsinki-01-r20260909-euv1-v1.jpg, pulu-cam-helsinki-02-r20260909-euv1-v2.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-helsinki-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Helsinki: paperipaino on siirtynyt lokkien kiinnostuksen piiriin.',
+        selite: 'Kauppatorilla tuuli tarttuu paperiin, ja kalatiskin vierellä '
+          + 'lokki seuraa käärepaperia. Kuvasin tilanteen ennen kuin kumpikaan '
+          + 'meistä ehti sekaantua kaupankäyntiin.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.myhelsinki.fi/places/helsinki-cathedral/',
+          'https://www.myhelsinki.fi/places/senate-square/',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-helsinki-02-r20260909-euv1-v2.jpg',
+        lyhyt: 'Helsinki: katolla seurataan toisenlaista toria.',
+        selite: 'Tuomiokirkon sinkkiset apostolipatsaat katsovat katolta '
+          + 'Helsinkiä. Niiden alapuolella Senaatintori asettuu rakennusten '
+          + 'väliin ja merikaupunki jatkuu taustalle.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.myhelsinki.fi/places/helsinki-cathedral/',
+          'https://www.myhelsinki.fi/places/senate-square/',
+          'https://www.helsinginseurakunnat.fi/artikkelit/apostoliveistokset_0',
+        ],
+      },
+    ],
     /*
      * LIVIAN MAADOITUS — VÄLITTÄJÄOTE (Raamattu, "LIVIA AIKASIIRTYMÄN
      * VÄLITTÄJÄNÄ — PARIPERIAATE"). Merkintä ei ole synkkä vaan tarkka:
@@ -147,15 +245,33 @@ export const FOKUSVIRTA_HELSINKI = {
      * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kato", "mut"),
      * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
      */
-    maadoitus: 'Kato, siinä isoisäsi oli oikeassa, ja enemmän kuin hän '
-      + 'tiesi. Terva oli pitkään Suomen tärkein vientitavara, ja koko '
-      + 'Pohjanmaan vauraus rakennettiin sen päälle. Vielä kaksisataa '
-      + 'vuotta ennen hänen käyntiään pohjalaisten oli pakko viedä '
-      + 'tervansa Tukholmaan, koska tervakauppa oli siellä muutaman '
-      + 'porvarin yksinoikeus — se purettiin vasta vuonna 1765. Ja se '
-      + 'valkoinen kirkko oli hänen käydessään nimeltään Nikolainkirkko; '
-      + 'nykyään se on tuomiokirkko, ja sama torni näkyy mereltä yhä '
-      + 'ensimmäisenä. Mut se tervan tuoksu on kyllä poissa.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Minä kokeilin tuomiokirkon apostolien näköalaa, mutta torin kalat näkyivät paremmin alempaa. Lokki ehti ensin. Se katsoi minua kuin olisin ollut harjoittelija."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (tuomiokirkko Senaatintorilla)
      * — juuri se valkoinen kirkko, jonka isoisä näki mereltä. Faktat ovat
@@ -163,16 +279,9 @@ export const FOKUSVIRTA_HELSINKI = {
      * helsinki/avauskuvat): Carl Ludvig Engelin piirtämä kirkko valmistui
      * 1852 ja siitä tuli merelle näkyvä tunnus jo purjelaivojen aikana.
      */
-    teksti: 'Katso ensin tonne ylös kukkulalle. Se valkoinen kirkko on Carl '
-      + 'Ludvig Engelin piirtämä, se valmistui 1852 — kaksikymmentäyksi '
-      + 'vuotta ennen isoisäsi käyntiä — ja siitä tuli merelle näkyvä '
-      + 'Helsingin tunnus jo purjelaivojen aikana. Se on siis rakennettu '
-      + 'nimenomaan katsottavaksi kaukaa, ja juuri siksi kaupunki näyttää '
-      + 'mereltä suuremmalta kuin maalta. Koko torin sommitelma on saman '
-      + 'miehen käsialaa: kirkko, yliopisto ja senaatintalo yhtenä '
-      + 'kuvana.',
     kuva: {
       ampari: 'herokoe/hero-helsinki-senaatintori.jpg',
+      lyhyt: 'Carl Ludvig Engelin Tuomiokirkko valmistui 1852, merelle näkyväksi Helsingin tunnukseksi.',
       selite: 'Carl Ludvig Engelin piirtämä Tuomiokirkko valmistui 1852, ja '
         + 'siitä tuli merelle näkyvä Helsingin tunnus jo purjelaivojen '
         + 'aikana.',
@@ -223,6 +332,9 @@ export const FOKUSVIRTA_HELSINKI = {
         + 'välillä, ja uinti kestää harvoin minuuttia kauempaa — '
         + 'tarkoitus ei ole uida vaan kääntyä ympäri ja nousta ylös. '
         + 'Harrastajia on yli satatuhatta.',
+      lahde: 'fi-Wikipedia "Kotiharjun sauna" ja en-Wikipedia "Sauna"; pelin '
+        + 'oma tarkistettu aineisto js/packs/maa-kategoriat.js (FIN/arki). '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto FIN/arki,
        * js/packs/maa-kategoriat.js). Commons 29.8.2026: CC BY-SA 4.0,
@@ -231,6 +343,7 @@ export const FOKUSVIRTA_HELSINKI = {
        */
       kuva: {
         tiedosto: 'Kotiharjun yleinen sauna (Kotiharju public sauna in Helsinki) Helsingin Torkkelinmäellä Kalliossa 01.jpg',
+        lyhyt: 'Vuonna 1928 avattu Kotiharjun sauna on viimeinen alkuperäinen puulämmitteinen yleinen sauna.',
         selite: 'Vuonna 1928 avattu Kotiharjun sauna on Helsingin viimeinen '
           + 'alkuperäisessä käytössä säilynyt puulämmitteinen yleinen '
           + 'sauna.',
@@ -287,6 +400,8 @@ export const FOKUSVIRTA_HELSINKI = {
         + 'yhdessä viron kandlen, latvian kokleen ja liettuan kanklėsin '
         + 'kanssa. Meren toisella puolella soi siis sama soitin toisella '
         + 'nimellä.',
+      lahde: 'fi-Wikipedia "Kantele"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (FIN/savel). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto FIN/savel).
        * Commons 29.8.2026: CC BY-SA 4.0, R.o.t. SILMÄTARKISTUS tehty:
@@ -294,6 +409,7 @@ export const FOKUSVIRTA_HELSINKI = {
        */
       kuva: {
         tiedosto: 'Musician Rauno Esa Nieminen with Saarijärven kantele (Saarijärvi zither).jpg',
+        lyhyt: 'Kantele kuuluu Baltian psalttereiden perheeseen viron kandlen ja latvian kokleen kanssa.',
         selite: 'Kantele kuuluu Baltian psalttereiden perheeseen yhdessä '
           + 'viron kandlen, latvian kokleen ja liettuan kanklėsin kanssa.',
         lahde: 'R.o.t, Wikimedia Commons (CC BY-SA 4.0)',
@@ -351,6 +467,8 @@ export const FOKUSVIRTA_HELSINKI = {
         + 'Nimen Finlandia teos sai vasta vuonna 1900. Se kestää noin '
         + 'kahdeksan minuuttia, ja siinä ajassa se ehti tehdä sen, mitä '
         + 'yksikään puhe ei olisi saanut tehdä ääneen.',
+      lahde: 'fi-Wikipedia "Jean Sibelius"; pelin oma tarkistettu aineisto '
+        + 'js/packs/maa-kategoriat.js (FIN/savel). Tarkistettu 1.9.2026.',
       /*
        * Kuva on pelin omasta aineistosta (sama tiedosto FIN/savel).
        * Commons 29.8.2026: public domain. SILMÄTARKISTUS tehty:
@@ -358,6 +476,7 @@ export const FOKUSVIRTA_HELSINKI = {
        */
       kuva: {
         tiedosto: 'Jean-Sibelius-at-the-piano.jpg',
+        lyhyt: 'Jean Sibelius (1865–1957) on Suomen tunnetuin säveltäjä, vahvisti kansallista identiteettiä.',
         selite: 'Jean Sibelius (1865–1957) on Suomen tunnetuin säveltäjä, '
           + 'ja hänen musiikkinsa vahvisti kansallista identiteettiä '
           + 'venäläistämiskausien aikana.',
@@ -607,6 +726,7 @@ export const FOKUSVIRTA_HELSINKI = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-tervakauppa-loistoaika.webp',
+        lyhyt: 'Tervavene tulee Oulujokea alas täydessä lastissa, tynnyrit nostetaan tervahovin rantaan.',
         selite: 'Tervavene tulee Oulujokea alas täydessä lastissa, ja '
           + 'tynnyrit nostetaan tervahovin rantaan punnittaviksi.',
         lahde: 'Matkakirjan havainnekuva: kohde loistoaikansa asussa',
@@ -621,6 +741,7 @@ export const FOKUSVIRTA_HELSINKI = {
        */
       valokuva: {
         tiedosto: 'Kauppatori, syys- eli silakkamarkkinat - G30676 - hkm.HKMS000005-km0000pheu.jpg',
+        lyhyt: 'Eteläsataman rantaan purjehdittiin ennen höyrylaivoja; samoja laitureita myöten kulki myös terva.',
         selite: 'Eteläsataman rantaan purjehdittiin lasteineen kauan ennen '
           + 'höyrylaivoja; samoja laitureita myöten kulki myös terva.',
         lahde: 'Tuntematon tekijä, Helsingin kaupunginmuseo, Wikimedia '

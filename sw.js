@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1404';
+const CACHE = 'matkakirja-2026-09-21.2214';
 const SHELL = [
   './',
   './index.html',
@@ -9,14 +9,42 @@ const SHELL = [
   './css/kohtaamiskuvat.css',
   // Fokusmoodin annostelukortti lataa oman tyylinsä itse (js/fokusvirta.js).
   './css/fokusvirta.css',
+  // Kaupungin minitraileri lataa oman tyylinsä itse (js/saapumistraileri.js).
+  './css/saapumistraileri.css',
   './css/fokuskohteet.css',
   './css/fokusnosto.css',
+  // Nosto aukeaa kuva edellä (js/nostokuva.js lataa tyylinsä itse).
+  './css/nostokuva.css',
+  './css/kuvasarja.css',
+  // Kaupungin iso pop-up ja turisti-info (js/kaupunkinosto.js lataa
+  // tyylinsä itse; merkin oma tyyli on css/styles.css:ssä).
+  './css/kaupunkinosto.css',
   // Sähkepinta lataa oman tyylinsä itse (js/sahke.js).
   './css/sahke.css',
   './js/muutokset.js',
   './js/main.js',
   './js/ui.js',
-  './js/kartta.js',
+  './js/siirtokoreografia.js',
+  /*
+   * TASOKARTTA POIS ESILATAUKSESTA (omistaja 7.9.2026, sanatarkasti:
+   * *"eli että se ei lataisi sitä millään lailla"*). Vanha kartta on
+   * väliaikaisesti pois käytöstä (js/ui-apurit.js VANHA_KARTTA_KAYTOSSA),
+   * eikä js/kartta-lataus.js lataaTasokartta enää tuo mitään — jos
+   * ne jäisivät SHELLiin, palvelutyöntekijä hakisi ne silti joka
+   * asennuksessa, ja juuri sen omistaja kielsi.
+   *
+   * SHELLISTÄ POIS TÄSSÄ ERÄSSÄ (tests/sw.test.mjs VANHA_KARTTA_POIS
+   * kertoo saman): js/kartta.js sekä sen omat aineistopakat
+   * js/packs/maasto-tekstit.js, js/packs/maasto-tekstit-malli.js ja
+   * js/packs/maailmankartta-varjostus.js. Tiedostot jäävät repoon ja
+   * yhden tiedoston versioon; SHELLiin ne palaavat samalla, kun
+   * VANHA_KARTTA_KAYTOSSA kääntyy todeksi.
+   *
+   * PYRAMIDIN LAATAT EIVÄT OLE TASOKARTAN OMAISUUTTA: pallon laattakerros
+   * lukee saman pyramidin luetteloa ja rantatasoa (js/pallolaatat.js),
+   * joten js/laattapyramidi.js ja laattakori jäävät ennalleen.
+   */
+  './js/kartta-lataus.js',
   './js/karttamittari.js',
   './js/fokusmitat.js',
   './js/laattapyramidi.js',
@@ -24,46 +52,113 @@ const SHELL = [
   './js/packs/fokus-grc.js',
   './js/sisaltotaulut.js',
   './js/ui-apurit.js',
+  // Viisaan pöllön arvonimet (nimilappuvitsi, Raamattu VIISAAN POLLON ARVONIMET).
+  './js/packs/pollon-arvonimet.js',
   './js/liput.js',
   './js/karttazoom.js',
   './js/vertailu.js',
   './js/nahtavyydet.js',
   './js/kuvagalleria.js',
+  './js/kuvatekstit.js',
+  './js/lauseraja.js',
+  // Gallerioiden selauskaistat (omistaja 9.9.2026): ui.js tuo staattisesti.
+  './js/galleria.js',
   './js/kohtaamiskuvat-data.js',
   './js/kohtaamiskuvat.js',
   './js/opas.js',
   './js/lehti.js',
+  // Sivunkääntö (5.9.2026): teatteri kuuluu SHELLiin; itse kirjasto
+  // (page-flip) tulee ämpärin vendor/-polusta ja säilyy VENDORCACHEssa.
+  './js/sivunkaanto.js',
   './js/ehdotukset.js',
+  './js/kuvavinkki.js',
+  './js/havainnekuva.js',
   './js/reaktiot.js',
   './js/tekijakortti.js',
+  /*
+   * Matkakirjan lauseiden jako ja tilapäinen lyhennys (11.9.2026):
+   * luentareaktiot, luenta ja fokusvirta tuovat sen staattisesti.
+   */
+  './js/lausejako.js',
+  // Pulun luentareaktiot (11.9.2026): luenta.js tuo sen staattisesti.
+  './js/luentareaktiot.js',
   './js/luenta.js',
   './js/visa.js',
+  // Kehittäjän kohtaamislista (5.9.2026): ui.js tuo sen staattisesti.
+  './js/kohtaamistesti.js',
   './js/fokusvirta.js',
+  // Kaupungin minitraileri (11.9.2026): ui.js ja fokusvirta tuovat sen.
+  './js/saapumistraileri.js',
+  './js/kaiutinmittari.js',
+  // PULU-CAM-pakka isoisän luentakuvan päälle (9.9.2026): fokusvirta tuo
+  // sen staattisesti, ja se itse tuo pöllön kuvakkeen ja median.
+  './js/pulucam.js',
+  /*
+   * Saapumisasento (9.9.2026): kaupungin paikka ruudulla saapumisessa ja
+   * luentakuvan sijainti. Puhdas moduuli, jonka tuovat fokusvirta,
+   * pallolaudan kamera ja (nukkuva) tasokartta.
+   */
+  './js/saapumisasento.js',
   './js/fokusniput.js',
-  './js/fokusryhmat.js',
   './js/fokuskohteet.js',
   './js/fokuspiste.js',
   './js/elaintaky.js',
+  './js/elaintaky-rivit.js',
   './js/packs/elaintakyt.js',
   './js/fokusnosto-symbolit.js',
   './js/karttavalot.js',
+  './js/karttaselite-levy.js',
   './js/karttaselite.js',
+  './js/karttatyokalu-maakunnat.js',
+  './js/vakasikoni.js',
+  './js/ylapalkki-vaaka.js',
   './js/fokusnosto.js',
+  './js/kuvasarja.js',
   './js/syvennys.js',
   './js/packs/syvennyspaikat.js',
   './js/skandaalit.js',
   './js/packs/skandaalit.js',
+  './js/historian-hetket.js',
+  './js/packs/historian-hetket.js',
   './js/fokustehtavat.js',
   './js/maalehti.js',
   './js/lukija.js',
   './js/pollo.js',
+  './js/pulu-paneelin-ylla.js',
+  './js/livia-kasvot.js',
+  './js/livia-puhetila.js',
+  './js/livia-pilotti-cuet.js',
+  './js/livia-puheleet.js',
+  './js/livia-puheeleet-lataus.js',
+  './js/livia-hoyhenet.js',
+  './js/livia-pikselit.js',
+  './js/livia-svg-paa.js',
+  './js/livia-astronautti.js',
+  './js/livia-svg.js',
+  './js/livia-uudet-versiot.js',
+  './assets/livia/livia-astronauttikypara-2x.png',
+  './js/minipulu.js',
+  './js/livia-eleet.js',
+  './js/livia-dialogitila.js',
+  './js/livia-tilanteet.js',
+  './js/livia-lehtireaktiot.js',
+  './js/livia-nostotila.js',
+  './js/livia-chat-tila.js',
+  './js/pulu-paikka.js',
+  './js/liviapuhe.js',
   './js/livia.js',
   './js/puhe.js',
+  // Tehosteketjut (Tuna, 5.9.2026): moduuli kuuluu kuoreen, kirjasto
+  // itse tulee ämpärin vendor/-polusta ja säilyy VENDORCACHE-korissa.
+  './js/tehosteketju.js',
   './js/puhe-oletukset.js',
   './js/pollo-haku.js',
   './js/pollopoiminnat.js',
   './js/game.js',
   './js/tietajatasot.js',
+  './js/pulmageneraattorit.js',
+  './js/tekstipohja.js',
+  './js/ui-tekstit.js',
   './js/tietajagalleria.js',
   './js/minipopup.js',
   './js/ai.js',
@@ -76,11 +171,17 @@ const SHELL = [
   './js/lahteet.js',
   './js/wiki.js',
   './js/media.js',
+  // Ilmepaketti (js/ilme.js): musteviiva, karhea kehys, kynäkorostus.
+  './js/ilme.js',
+  './js/geo.js',
   './js/saa.js',
   './js/maakayrat.js',
+  './js/maanaariviivat.js',
+  './js/maatummennus.js',
   './js/uutiset.js',
   './js/packs/maailmankartta.js',
   './js/packs/maailmankartta-maasto.js',
+  './js/packs/maailmankartta-pallopisteet.js',
   './js/packs/maailmankartta-nimet.js',
   './js/packs/maasto-vedet.js',
   './js/packs/maasto-korkeus.js',
@@ -88,9 +189,6 @@ const SHELL = [
   './js/packs/vuori-valokuvat.js',
   './js/packs/maasto-nimet-vedet.js',
   './js/packs/maailmankartta-syvyys.js',
-  './js/packs/maasto-tekstit-malli.js',
-  './js/packs/maasto-tekstit.js',
-  './js/packs/maailmankartta-varjostus.js',
   './js/packs/linssi-topografia.js',
   './js/packs/linssi-maaluvut.js',
   './js/packs/linssi-muuttoliike.js',
@@ -112,14 +210,187 @@ const SHELL = [
   './js/packs/omat-tiivistelmat.js',
   './js/packs/liput-paikalliset.js',
   './js/packs/lippu-tekijat.js',
+  './js/aikajana.js',
+  // Aikajanan elävä liekkivalo (canvas-kerros, 5.9.2026): vain
+  // js/aikajana.js tuo tämän, joten se seuraa samaa polkua.
+  './js/aikajana-valo.js',
+  // Linssin hampurilaisvalikko (8.9.2026): js/aikajana.js tuo tämän
+  // staattisesti, joten se seuraa samaa polkua offline-käyttöön.
+  './js/aikajana-valikko.js',
+  './js/linssipuhe.js',
+  './js/tiedeliite.js',
+  './js/lyhty.js',
+  // Pergamentin repaleinen reuna (yhteinen osa, 7.9.2026): js/aikajana.js
+  // tuo tämän, joten se seuraa samaa polkua offline-käyttöön.
+  './js/pergamentti.js',
+  './js/pallo.js',
+  // Avausketjun vaiheloki (?pallodiag=1) ja näkyvä virheilmoitus
+  // (16.9.2026, Raamattu ASTRONAUTIN KAMERA LISÄYS 11 kohta 34):
+  // js/pallo.js ja js/ui.js tuovat molemmat staattisesti, joten ne
+  // kuuluvat ytimeen — ilman niitä peli ei käynnisty offline.
+  './js/pallodiag.js',
+  './js/linssivirhe.js',
+  // Laattakerroksen puhtaat apurit (erä E0, 6.9.2026): js/pallo.js tuo
+  // ne staattisesti, joten ne kulkevat samaa polkua offline-käyttöön.
+  './js/pallolaatat.js',
+  './js/laattakerma-shader.js',
+  './js/reliefipyramidi.js',
+  // Vektoriviivat laattojen päälle (erä V1, 6.9.2026, Raamattu
+  // VEKTORIT SAMALLA): pallolauta tuo kerroksen, joten se kulkee samaa
+  // polkua offline-käyttöön. Vektoriaineisto itse on HTTP-välimuistissa
+  // (immutable, versio polussa) eikä palvelutyöntekijän korissa.
+  './js/pallovektorit.js',
+  './js/laattaesilataus.js',
+  './js/pallomaakunnat.js',
+  // Pallolauta (karttapallo pelin lautana, 5.9.2026): tuodaan
+  // dynaamisesti kuten pallo.js, mutta kuuluu SHELLiin offline-käyttöä
+  // varten. Ei niputeta yhden tiedoston versioon (tests/sw.test.mjs).
+  // Kaupungin iso pop-up ja turisti-info (karttauudistus erä 4,
+  // 13.9.2026): vain pallolauta tuo tämän, joten se kulkee samaa polkua
+  // eikä ole yhden tiedoston niputuksessa.
+  './js/kaupunkinosto.js',
+  './js/pallolauta/lauta.js',
+  './js/pallolauta/avaus.js',
+  './js/pallolauta/kamera.js',
+  './js/pallolauta/kameraloki.js',
+  './js/pallolauta/lepopiirto.js',
+  './js/pallolauta/profiilinaytto.js',
+  './js/kartta-liike.js',
+  './js/piirtokoe-asetus.js',
+  './js/lisenssi.js',
+  './js/vedon-seuranta.js',
+  './js/tarkkuus-asetus.js',
+  './js/kehittaja-pikatie.js',
+  './js/lehtikuori.js',
+  './js/pallolauta/linssikartta.js',
+  './js/pallolauta/linssit.js',
+  './js/pallolauta/merkit.js',
+  // Maan perustiedot ja Lisää-valikko kartalla (karttauudistus erä 3).
+  './js/pallolauta/maapaneeli.js',
+  // Kartussin käsinpiirretty kaksoisviivakehys (erä 11, 14.9.2026,
+  // Raamattu PÄÄTÖKSET 7): mitatut suhdeluvut ja deterministinen aalto.
+  // Ainoa tuoja on maapaneeli, joka on niputuksen ulkopuolella, joten
+  // tämäkin on vain SHELLissä.
+  './js/kasinpiirto.js',
+  // Avaruuden tähdet ja pöly (7.9.2026): kertomusesityksen musta alku.
+  './js/pallolauta/tahdet.js',
+  './js/pallolauta/nimet.js',
+  // Saman aiheen nostot yhdeksi merkiksi ja viuhka napautuksesta
+  // (PAATOKSET 27): nostot.js:n oma alimoduuli, samaa polkua kuin muu
+  // pallolauta eikä yhden tiedoston niputuksessa.
+  './js/kaupunkiliuska-nimiot.js',
+  './js/pallolauta/aihemerkit.js',
+  // Kaupunkiliuskan malli (PAATOKSET 34): kaupungin sisäisyyden raja ja
+  // liuskan rivit; js/nahtavyydet.js lukee siitä myös otsikkonimen.
+  './js/pallolauta/kaupunkiliuska.js',
+  // Nostojen kiinteät kartta-ankkurit ja levitys (PAATOKSET 32).
+  './js/pallolauta/nostoankkurit.js',
+  './js/pallolauta/nostot.js',
+  './js/pallolauta/reitit.js',
+  './js/pallolauta/siirto.js',
+  './js/pallolauta/sovittelu.js',
+  './js/pallolauta/sulavuusmittari.js',
+  './js/pallolauta/nimiorasterit.js',
+  './js/pallolauta/glnimiot-sovitin.js',
+  './js/pallolauta/kerrokset.js',
+  './js/pallolauta/kehysprofiili.js',
+  './js/pallolauta/kallistus.js',
+  './js/pallolauta/sumu.js',
+  './css/aikajana.css',
+  // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän
+  // suoraan, joten se kuuluu kuoreen kuten css/styles.css.
+  './css/linssikehys.css',
+  // Etusivun esirenderöity pallo (pallolauta vaihe 5a, 5.9.2026):
+  // tuodaan dynaamisesti kuten pallo.js, mutta kuuluu SHELLiin
+  // offline-käyttöä varten. Ei niputeta yhden tiedoston versioon
+  // (tests/sw.test.mjs) — dist jää vanhaan etusivun karttaan.
+  './js/etusivupallo.js',
+  // Etusivun pinon kuvat (pakka, 5.9.2026 klo 22.50): vain
+  // etusivupallo.js tuo tämän, joten se seuraa samaa polkua.
+  './js/packs/etusivun-isoisakuvat.js',
+  './js/tehosteet.js',
+  './js/kehittajan-voimat.js',
+  './js/isoisan-valokuvat.js',
   './js/linssit/kerros.js',
+  './js/linssit/keksinnot.js',
+  './js/linssit/ihmisen-matka.js',
+  './js/linssit/ihmisen-matka-data.js',
+  // Livia-pulun valmiit kysymykset ja vastaukset jokaiselle pääjaksolle
+  // (omistaja 19.9.2026 klo 18.02, Raamattu). Sama malli kuin
+  // astronaut-kysymykset.js.
+  './js/linssit/ihmisen-matka-kysymykset.js',
+  './js/linssit/ihmisen-matka-pulukysymykset.js',
+  /*
+   * TÄSSÄ OLI './js/linssit/ihmisen-matka-kertomus.js' TOISEEN KERTAAN
+   * (v1699, 7.9.2026). Sama rivi on alempana omine perusteluineen, eikä
+   * tiedosto ole tästä poistunut kuoresta.
+   *
+   * Kaksoiskappale hylkäsi KOKO ASENNUKSEN: Cache.addAll heittää
+   * InvalidStateError "duplicate requests", jolloin install-käsittelijän
+   * waitUntil-lupaus hylkää eikä self.skipWaiting() ehdi ajoon —
+   * palvelutyöntekijä ei asentunut eikä aktivoitunut lainkaan.
+   * tests/sw.test.mjs vartioi, ettei kaksoiskappale palaa.
+   */
+  // Ihmisen matka värivirtoina (6.9.2026): virtojen aineisto ja maamaski
+  // tulevat linssin mukana; piirto ja laskenta seuraavat js/aikajana.js:ää.
+  './js/linssit/ihmisen-matka-virrat.js',
+  './js/linssit/ihmisen-matka-maamaski.js',
+  // Kaistan rantamaski (7.9.2026): vana leikataan rantaviivaan
+  './js/linssit/ihmisen-matka-rantamaski.js',
+  // Kertomus yhtenä kaarena (7.9.2026): kaanoni, sen ohjaaja (esitys),
+  // jaksojen äänimaisemat ja tutkimusvaihe (esityksen jälkeen kartta
+  // jää pelaajalle: nostot, viisi nappia, kysymykset pululle).
+  // Maisematiedostot tulevat ämpäristä, mutta soitin ja käsikirjoitus
+  // kuuluvat kuoreen — muuten offline-peli avaisi linssin, jolla ei
+  // ole esitystä.
+  './js/linssit/ihmisen-matka-kertomus.js',
+  './js/linssit/ihmisen-matka-esitys.js',
+  // Kertojan soitin (8.9.2026): yksi yhtenäinen luenta ämpäristä tai
+  // jakso kerrallaan — esitys tuo tämän suoraan, joten se kuuluu kuoreen.
+  './js/linssit/ihmisen-matka-luenta.js',
+  './js/linssit/ihmisen-matka-aanimaisema.js',
+  './js/linssit/ihmisen-matka-tutkimus.js',
+  // Yksi nostomalli ja muisti (7.9.2026 ilta): kortti, jonka lamppu,
+  // kuva ja hehku avaavat, sekä sulun yli tallennettu tila.
+  './js/linssit/ihmisen-matka-kortti.js',
+  './js/linssit/ihmisen-matka-muisti.js',
+  // Linssien yhteinen aikaselain (7.9.2026): alareunan aikanauha, jota
+  // kertomuskaari käyttää jaksojen selaamiseen — ja tulevat linssit
+  // omiensa. Kuuluu kuoreen, koska aikajanamoottori tuo sen suoraan.
+  './js/linssit/aikaselain.js',
+  './css/ihmisen-tutkimus.css',
+  './js/aikajana-virrat.js',
+  './js/aikajana-vanat.js',
+  './js/aikajana-virrat-laskenta.js',
+  // Laskenta Workerissa (hionta 6.9.2026): pääsäie ei jäädy avauksessa.
+  './js/aikajana-virrat-tyo.js',
+  // Rannikon naulaus omana moduulina ja työsäikeenä (sulavuus E1, 21.9.2026).
+  './js/pallovektorit-naulaus.js',
+  './js/pallovektorit-tyo.js',
+  // GL-nimiökerros (runko, 21.9.2026; ?glnimiot=1).
+  './js/pallonimiot-gl.js',
   './js/linssit/rekisteri.js',
+  './js/linssit/aarteet.js',
   './js/linssit/omistus.js',
+  './js/linssit/pallo.js',
   './js/linssit/pistenaytto.js',
   './js/linssit/radiosoitin.js',
   './js/linssit/viritin.js',
   './js/linssit/radio.js',
+  // Satelliittilinssi (12.9.2026): linssi, sen koneellisesti tuotettu
+  // havaintoaineisto ja oma tyylitiedosto. Kuvat EIVÄT ole repossa
+  // eivätkä SHELLissä — ne tulevat ICEYEn omasta ämpäristä pyydettäessä.
+  './js/linssit/satelliitti.js',
+  './js/linssit/satelliitti-data.js',
+  './js/linssit/astronaut-kysymykset.js',
+  './js/linssit/satelliitti-aani.js',
+  './js/linssit/astro-sumu.js',
+  './js/linssit/satelliitti-avaruus.js',
+  './js/linssit/satelliitti-nimiot.js',
+  './css/satelliitti.css',
   './js/linssit/topografia.js',
+  './js/linssit/topografia-tarkennus.js',
+  './js/linssit/reliefikuva.js',
   './js/linssit/vertailu.js',
   './js/linssit/maatiedot.js',
   './js/linssit/vesistot.js',
@@ -136,7 +407,6 @@ const SHELL = [
   './js/packs/europe-questions.js',
   './js/packs/europe-puzzles.js',
   './js/packs/europe-countries.js',
-  './js/packs/europe-saapumiset.js',
   './js/packs/tarinakaari.js',
   './js/tyohuone-kehitys-data.js',
   // Kehittäjän liitteet (Raamattu, Tilanne, Tilastot ja sen
@@ -144,9 +414,12 @@ const SHELL = [
   // nämä ovat pelin omia moduuleja: ui.js tuo ne staattisesti, joten
   // ilman esilatausta koko peli jäisi offline käynnistymättä.
   './js/tyohuone-raamattu.js',
+  './js/tyohuone-raamattu-muokkaus.js',
+  './js/tyohuone-kehittajalehti.js',
   './js/tyohuone-tilanne.js',
   './js/tyohuone-pelit.js',
   './js/tyohuone-tilastot.js',
+  './js/tyohuone-musiikki.js',
   './js/viitekuva-herot.js',
   './js/packs/asia-saapumiset.js',
   './js/packs/northamerica-saapumiset.js',
@@ -162,14 +435,83 @@ const SHELL = [
   './js/packs/southamerica-valokuvat.js',
   './js/packs/oceania-valokuvat.js',
   './js/packs/asia-maatiedot.js',
+  './js/packs/northamerica-maatiedot.js',
+  './js/packs/southamerica-maatiedot.js',
+  './js/packs/oceania-maatiedot.js',
   './js/packs/radiot.js',
   './js/packs/vanhat-aanet.js',
   './js/packs/europe-kulttuuri.js',
   './js/packs/kulttuuri-kategoriat.js',
   './js/packs/maa-kategoriat.js',
+  './js/packs/maalehtinostot-fra.js',
+  './js/packs/nakyvat-kaupungit-fra.js',
+  './js/packs/nostoankkurit-fra.js',
+  './js/packs/nostoankkurit-esp.js',
+  './js/packs/nostoankkurit-ita.js',
+  './js/packs/nostoankkurit-deu.js',
+  './js/packs/nostoankkurit-prt.js',
+  './js/packs/nostoankkurit-grc.js',
+  './js/packs/nostoankkurit-aut.js',
+  './js/packs/nostoankkurit-nld.js',
+  './js/packs/nostoankkurit-bel.js',
+  './js/packs/nostoankkurit-pol.js',
+  './js/packs/nostoankkurit-cze.js',
+  './js/packs/nostoankkurit-dnk.js',
+  './js/packs/nostoankkurit-hun.js',
+  './js/packs/nostoankkurit-swe.js',
+  './js/packs/monumentit-eurooppa.js',
+  './js/packs/hahmotelma-fra.js',
+  './js/packs/hahmotelma-bel.js',
+  './js/packs/hahmotelma-deu.js',
+  './js/packs/hahmotelma-prt.js',
+  './js/packs/hahmotelma-grc.js',
+  './js/packs/hahmotelma-aut.js',
+  './js/packs/hahmotelma-nld.js',
+  './js/packs/hahmotelma-irl.js',
+  './js/packs/hahmotelma-hrv.js',
+  './js/packs/hahmotelma-bgr.js',
+  './js/packs/hahmotelma-pol.js',
+  './js/packs/hahmotelma-cze.js',
+  './js/packs/hahmotelma-swe.js',
+  './js/packs/hahmotelma-dnk.js',
+  './js/packs/hahmotelma-svk.js',
+  './js/packs/hahmotelma-lux.js',
+  './js/packs/hahmotelma-cyp.js',
+  './js/packs/hahmotelma-mlt.js',
+  './js/packs/hahmotelma-hun.js',
+  './js/packs/hahmotelma-esp.js',
+  './js/packs/hahmotelma-ita.js',
+  './js/packs/hahmotelma-fin.js',
+  './js/packs/hahmotelma-rou.js',
+  './js/packs/hahmotelma-svn.js',
+  './js/packs/hahmotelma-est.js',
+  './js/packs/hahmotelma-ltu.js',
+  './js/packs/hahmotelma-lva.js',
+  './js/packs/hahmotelma-tur.js',
+  './js/packs/hahmotelma-gbr.js',
+  './js/packs/hahmotelma-che.js',
+  './js/packs/hahmotelma-isl.js',
+  './js/packs/hahmotelma-nor.js',
+  './js/packs/hahmotelma-rus.js',
+  './js/packs/hahmotelma-bih.js',
+  './js/packs/hahmotelma-ukr.js',
   './js/packs/maakartat.js',
+  './js/packs/maakunnat-luonnehdinnat.js',
+  './js/packs/maakunnat-pulu.js',
   './js/packs/nahtavyysjutut.js',
   './js/packs/miniatyyrit.js',
+  // Ykköstason nostojen kuvamerkit (js/fokusnosto-symbolit.js NOSTOSYM_KUVAMERKIT).
+  './assets/nostotyypit/merkki-vuori.png',
+  './assets/nostotyypit/merkki-saari.png',
+  './assets/nostotyypit/merkki-jarvi.png',
+  './assets/nostotyypit/merkki-joki.png',
+  './assets/nostotyypit/merkki-meri.png',
+  './assets/nostotyypit/merkki-historia.png',
+  './assets/nostotyypit/merkki-kulttuuri.png',
+  './assets/nostotyypit/merkki-ruoka.png',
+  './assets/nostotyypit/merkki-kauppa.png',
+  './assets/nostotyypit/merkki-tekniikka.png',
+  './assets/nostotyypit/merkki-merenkulku.png',
   './assets/kartat/symbolit/sym-elain.webp',
   './assets/kartat/symbolit/sym-historia.webp',
   './assets/kartat/symbolit/sym-huuto.webp',
@@ -193,6 +535,8 @@ const SHELL = [
   './js/packs/saatiedot.js',
   './js/packs/kohtaamiset.js',
   './js/packs/fokusvirrat.js',
+  './js/packs/iskulauseet.js',
+  './js/packs/saapumispuheet.js',
   './js/packs/fokuskohteet-grc.js',
   './js/packs/fokusvirta-ateena.js',
   './js/packs/fokuskohteet-bgr.js',
@@ -260,6 +604,30 @@ const SHELL = [
   './js/packs/fokusvirta-odessa.js',
   './js/packs/fokusvirta-pietari.js',
   './js/packs/fokusvirta-varsova.js',
+  // KEVYT ERÄ 8.9.2026 (omistaja): Euroopan laudan kuusi viimeistä
+  // kohdetta saivat omat fokusvirtapakkinsa, kun vanha saapumistaulu
+  // (europe-saapumiset.js) arkistoitiin pois pelistä. Pakit ovat
+  // kevyitä — matkakirja ja pulun kupla — mutta ne ovat NIIDEN
+  // kaupunkien ainoa merkintä, joten ilman esilatausta kortti jäisi
+  // offline-pelissä tyhjäksi.
+  './js/packs/fokusvirta-kreeta.js',
+  './js/packs/fokusvirta-sisilia.js',
+  './js/packs/fokusvirta-islanti.js',
+  './js/packs/fokusvirta-alpit.js',
+  './js/packs/fokusvirta-lappi.js',
+  './js/packs/fokusvirta-tromssa.js',
+  // Bryssel (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti).
+  // Kevyt pakki samasta syystä kuin kuusi edellä.
+  './js/packs/fokusvirta-bryssel.js',
+  // Ljubljana (20.9.2026, omistajan päätös: Slovenian pelikaupunki).
+  './js/packs/fokusvirta-ljubljana.js',
+  // Košice (20.9.2026, omistajan päätös: Slovakian pelikaupunki).
+  './js/packs/fokusvirta-kosice.js',
+  // Luxemburg (21.9.2026, omistajan päätös: Kypros, Luxemburg ja Malta
+  // saavat pelikaupungin).
+  './js/packs/fokusvirta-luxemburg.js',
+  // Valletta (21.9.2026, omistajan päätös: Maltan pelikaupunki).
+  './js/packs/fokusvirta-valletta.js',
   // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
   // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',
@@ -290,24 +658,42 @@ const SHELL = [
   './js/packs/maastokohteet-afg.js',
   './js/packs/maastokohteet-ago.js',
   './js/packs/maastokohteet-are.js',
+  './js/packs/maastokohteet-arg.js',
+  './js/packs/maastokohteet-ark.js',
+  './js/packs/maastokohteet-ata.js',
+  './js/packs/maastokohteet-aus.js',
   './js/packs/maastokohteet-aut.js',
   './js/packs/maastokohteet-bih.js',
+  './js/packs/maastokohteet-bol.js',
+  './js/packs/maastokohteet-bra.js',
+  './js/packs/maastokohteet-can.js',
   './js/packs/maastokohteet-che.js',
+  './js/packs/maastokohteet-chl.js',
   './js/packs/maastokohteet-chn.js',
   './js/packs/maastokohteet-cmr.js',
   './js/packs/maastokohteet-cod.js',
+  './js/packs/maastokohteet-col.js',
+  './js/packs/maastokohteet-cub.js',
   './js/packs/maastokohteet-cyp.js',
   './js/packs/maastokohteet-cze.js',
   './js/packs/maastokohteet-dnk.js',
   './js/packs/maastokohteet-dza.js',
+  './js/packs/maastokohteet-ecu.js',
   './js/packs/maastokohteet-egy.js',
   './js/packs/maastokohteet-esp.js',
   './js/packs/maastokohteet-est.js',
   './js/packs/maastokohteet-eth.js',
   './js/packs/maastokohteet-fin.js',
+  './js/packs/maastokohteet-fji.js',
   './js/packs/maastokohteet-fra.js',
+  './js/packs/nimisto-1873.js',
   './js/packs/maastokohteet-gbr.js',
   './js/packs/maastokohteet-gha.js',
+  './js/packs/maastokohteet-grl.js',
+  './js/packs/maastokohteet-gtm.js',
+  './js/packs/maastokohteet-hkg.js',
+  './js/packs/maastokohteet-idn.js',
+  './js/packs/maastokohteet-ind.js',
   './js/packs/maastokohteet-irl.js',
   './js/packs/maastokohteet-irn.js',
   './js/packs/maastokohteet-irq.js',
@@ -321,22 +707,32 @@ const SHELL = [
   './js/packs/maastokohteet-kwt.js',
   './js/packs/maastokohteet-lbr.js',
   './js/packs/maastokohteet-lby.js',
+  './js/packs/maastokohteet-lka.js',
   './js/packs/maastokohteet-ltu.js',
   './js/packs/maastokohteet-lva.js',
   './js/packs/maastokohteet-mar.js',
   './js/packs/maastokohteet-mdg.js',
+  './js/packs/maastokohteet-mex.js',
   './js/packs/maastokohteet-mli.js',
+  './js/packs/maastokohteet-mmr.js',
   './js/packs/maastokohteet-mng.js',
   './js/packs/maastokohteet-moz.js',
   './js/packs/maastokohteet-nam.js',
   './js/packs/maastokohteet-nga.js',
+  './js/packs/maastokohteet-nic.js',
   './js/packs/maastokohteet-nld.js',
   './js/packs/maastokohteet-nor.js',
+  './js/packs/maastokohteet-npl.js',
+  './js/packs/maastokohteet-nzl.js',
   './js/packs/maastokohteet-omn.js',
   './js/packs/maastokohteet-pak.js',
+  './js/packs/maastokohteet-pan.js',
+  './js/packs/maastokohteet-per.js',
   './js/packs/maastokohteet-phl.js',
+  './js/packs/maastokohteet-png.js',
   './js/packs/maastokohteet-pol.js',
   './js/packs/maastokohteet-prt.js',
+  './js/packs/maastokohteet-pry.js',
   './js/packs/maastokohteet-qat.js',
   './js/packs/maastokohteet-rou.js',
   './js/packs/maastokohteet-rus.js',
@@ -344,18 +740,28 @@ const SHELL = [
   './js/packs/maastokohteet-sdn.js',
   './js/packs/maastokohteet-sds.js',
   './js/packs/maastokohteet-sen.js',
+  './js/packs/maastokohteet-sgp.js',
+  './js/packs/maastokohteet-shn.js',
+  './js/packs/maastokohteet-slb.js',
   './js/packs/maastokohteet-sle.js',
   './js/packs/maastokohteet-som.js',
   './js/packs/maastokohteet-swe.js',
   './js/packs/maastokohteet-syr.js',
   './js/packs/maastokohteet-tcd.js',
+  './js/packs/maastokohteet-tha.js',
+  './js/packs/maastokohteet-tls.js',
   './js/packs/maastokohteet-tun.js',
   './js/packs/maastokohteet-tur.js',
   './js/packs/maastokohteet-twn.js',
   './js/packs/maastokohteet-tza.js',
   './js/packs/maastokohteet-uga.js',
   './js/packs/maastokohteet-ukr.js',
+  './js/packs/maastokohteet-usa.js',
+  './js/packs/maastokohteet-ury.js',
   './js/packs/maastokohteet-uzb.js',
+  './js/packs/maastokohteet-ven.js',
+  './js/packs/maastokohteet-vnm.js',
+  './js/packs/maastokohteet-vut.js',
   './js/packs/maastokohteet-yem.js',
   './js/packs/maastokohteet-zaf.js',
   './js/packs/maastokohteet-zwe.js',
@@ -390,11 +796,17 @@ const SHELL = [
   './js/packs/istanbul-questions.js',
   './js/tokens.js',
   './js/mapart.js',
+  './js/nostokuva.js',
   './js/nostoladonta.js',
   './js/aani-ehdokkaat.js',
   './js/aani-tausta.js',
+  './js/livia-tehosteet.js',
   './js/sound.js',
   './js/ambience-stream.js',
+  './js/kaupunkimusiikki.js',
+  './js/musiikkivahvistin.js',
+  './js/musiikkivalitsin.js',
+  './js/siirtymamusiikki.js',
   './js/die.js',
   './assets/icon.svg',
   './assets/logo.png',
@@ -403,42 +815,59 @@ const SHELL = [
   // pelin ENSIMMÄINEN ruutu olisi offline-tilassa vajaa.
   './assets/etusivu/kansikuva.png',
   './assets/etusivu/irtolehti.png',
+  /*
+   * Etusivun pallon REITTIKUVAT (omistaja 6.9.2026: *"Etusivulle kuvat
+   * kannattaa varmaan pienentää valmiiksi että pyörii parhaiten"*).
+   * Pienennetyt 320 px:n vedokset (9–14 kt) ovat repossa, koska pallo
+   * lataa ne heti kerroksen syntyessä: ilman esilatausta kaupungin
+   * käännös näyttäisi tyhjää. Pariisin kuva puuttuu, kunnes kuvaputki
+   * toimittaa sen (js/packs/etusivun-isoisakuvat.js).
+   */
+  './assets/etusivu/reitti/lontoo.jpg',
+  './assets/etusivu/reitti/pariisi.jpg',
+  './assets/etusivu/reitti/kairo.jpg',
+  './assets/etusivu/reitti/mumbai.jpg',
+  './assets/etusivu/reitti/kolkata.jpg',
+  './assets/etusivu/reitti/singapore.jpg',
+  './assets/etusivu/reitti/hongkong.jpg',
+  './assets/etusivu/reitti/tokio.jpg',
+  './assets/etusivu/reitti/sanfrancisco.jpg',
+  './assets/etusivu/reitti/newyork.jpg',
   // Kuvalinssit. Nämä ovat binäärejä eivätkä moduuleja — ilman
   // esilatausta ne puuttuisivat juuri offline-tilassa, jossa linssejä
   // selaillaan eniten.
   './assets/linssit/yokartta.jpg',
-  './assets/linssit/topografia.webp',
+  // Reliefikuvat (litteä ja pallo) siirtyivät Cloudflare R2:een
+  // 15.9.2026 (js/packs/linssi-topografia-kuva.js) — mediaa ei
+  // säilytetä repossa, eikä niitä siksi enää esilatauslistalla.
   // Varustekuvat (linssien toimintakuvat, 10.8.2026).
   './assets/varusteet/varuste-topografia.jpg',
   './assets/varusteet/varuste-vesistot.jpg',
   './assets/varusteet/varuste-vertailu.jpg',
+  './assets/linssit/hiomassa.svg',
   './assets/varusteet/varuste-maatiedot.jpg',
   './assets/varusteet/varuste-radio.jpg',
+  // Keksinnöt ja Ihmisen matka saivat omat kuvakkeensa 7.9.2026; ilman
+  // näitä matkalaukun ruutu putoaisi viivakuvakkeeseen juuri offlinessa.
+  './assets/varusteet/varuste-keksinnot.jpg',
+  './assets/varusteet/varuste-ihmisen-matka.jpg',
   /*
-   * ÄÄNTEN YDINSETTI — ainoat äänitiedostot, jotka esiladataan.
+   * ÄÄNITIEDOSTOJA EI OLE TÄLLÄ LISTALLA (omistajan linjaus 11.9.2026:
+   * *"repossa ei saa olla äänitiedostoja, kaikki vain ämpärissä"*).
    *
    * Tällä listalla oli 16.8.2026 asti 420 äänitiedostoa eli noin 200 Mt,
    * ja ne haettiin joka asennuksessa. Niistä 195 Mt oli luentoja, joista
-   * yksittäinen pelaaja kuulee murto-osan: peli latasi jokaiselle
-   * kaikkien maanosien kertojaäänet, myös niiden kaupunkien, joihin hän
-   * ei koskaan matkusta.
+   * yksittäinen pelaaja kuulee murto-osan. Sen jälkeen listalle jäi
+   * ydinsetti (huudahdukset ja tehosteet) repon omasta polusta — nyt
+   * sekin on poissa, koska assets/audio ei ole enää versionhallinnassa.
    *
-   * Loput jaellaan nyt ämpäristä (js/media.js aaniUrl) ja tallentuvat
-   * AANICACHEen sinä hetkenä kun ne ensi kerran soivat — sama malli kuin
-   * valokuvilla. Omistajan linjaus 16.8.2026: OFFLINE-PELAUS EI OLE
-   * TAVOITE, joten välimuisti on nopeutta varten eikä lupaus.
-   *
-   * Ydinsettiin jäävät kaksi lajia, joilla myöhästyminen kuuluisi:
-   * pääaarteen huudahdukset (sama repliikki kuin kortilla — muiden
-   * aarteiden huudahdukset ovat kahden sanan mittaisia eikä niitä
-   * lueta ääneen) ja käyttöliittymän lyhyet tehosteet (alempana).
-   * Ne EIVÄT kulje ämpärin kautta, koska silloin peli
-   * pyytäisi eri osoitetta kuin minkä tämä lista esilatasi — sääntö on
-   * js/media.js:n YDINAANI, ja nämä kaksi listaa kuuluvat yhteen.
+   * Ydinsetti esiladataan silti, mutta ämpärin osoitteista omaan
+   * äänikoriinsa: ks. YDINAANET ja install-käsittelijä alempana. Loput
+   * äänet tallentuvat AANICACHEen sinä hetkenä kun ne ensi kerran soivat
+   * — sama malli kuin valokuvilla. Omistajan linjaus 16.8.2026:
+   * OFFLINE-PELAUS EI OLE TAVOITE, joten välimuisti on nopeutta varten
+   * eikä lupaus.
    */
-  './assets/audio/huudahdus-star-1.mp3',
-  './assets/audio/huudahdus-star-2.mp3',
-  './assets/audio/huudahdus-star-3.mp3',
   // Kohtaamiskuvat (kohtaamiskortti + kätkötulos, pilotti 10.8.2026).
   './assets/kohtaamiset/kohtaaminen-ateena.jpg',
   './assets/kohtaamiset/kohtaaminen-sofia.jpg',
@@ -658,6 +1087,7 @@ const SHELL = [
   './assets/kartat/miniatyyrit/tokio-uenon-puisto.webp',
   './assets/kartat/miniatyyrit/tokio-shitamachi-museo.webp',
   './assets/tietaja/viisas-pollo.jpg',
+  './assets/tietaja/viisas-pollo-muotokuva-v1.png',
   /*
    * Tietäjätasojen muotokuvat (18.8.2026): matkalaukun rivin kuvake,
    * tasonnousun juhlakupla ja tasogallerian ruudukko. Kymmenen pientä
@@ -866,6 +1296,128 @@ const SHELL = [
   './assets/kartat/miniatyyrit/vilna-uzupis.webp',
   './assets/kartat/miniatyyrit/vilna-vilnan-tuomiokirkko.webp',
   './assets/kartat/miniatyyrit/vilna-vilnan-yliopisto.webp',
+  './assets/kartat/miniatyyrit/amsterdam-herengracht-537.webp',
+  './assets/kartat/miniatyyrit/amsterdam-kapein-talo.webp',
+  './assets/kartat/miniatyyrit/amsterdam-kissalaiva.webp',
+  './assets/kartat/miniatyyrit/amsterdam-maitotytto.webp',
+  './assets/kartat/miniatyyrit/amsterdam-yovartio.webp',
+  './assets/kartat/miniatyyrit/ateena-akropolis-museo.webp',
+  './assets/kartat/miniatyyrit/ateena-diogeneen-astia.webp',
+  './assets/kartat/miniatyyrit/ateena-elginin-marmorit.webp',
+  './assets/kartat/miniatyyrit/ateena-iliou-melathron.webp',
+  './assets/kartat/miniatyyrit/ateena-louis-1896.webp',
+  './assets/kartat/miniatyyrit/ateena-maratonhuijaus.webp',
+  './assets/kartat/miniatyyrit/ateena-niken-temppeli.webp',
+  './assets/kartat/miniatyyrit/bergen-fredriksbergin-linnake.webp',
+  './assets/kartat/miniatyyrit/bergen-kaupunginkirjasto.webp',
+  './assets/kartat/miniatyyrit/bergen-korskirken.webp',
+  './assets/kartat/miniatyyrit/bergen-munkelivin-luostari.webp',
+  './assets/kartat/miniatyyrit/bergen-nykirken.webp',
+  './assets/kartat/miniatyyrit/bergen-permanenten.webp',
+  './assets/kartat/miniatyyrit/bergen-pyhan-yrjanan-kirkko.webp',
+  './assets/kartat/miniatyyrit/bergen-yliopistomuseo.webp',
+  './assets/kartat/miniatyyrit/berliini-gaertnerin-berliini.webp',
+  './assets/kartat/miniatyyrit/berliini-hattupainen-ukkeli.webp',
+  './assets/kartat/miniatyyrit/berliini-maailmankello.webp',
+  './assets/kartat/miniatyyrit/berliini-marlene-dietrich.webp',
+  './assets/kartat/miniatyyrit/berliini-muuri-1961.webp',
+  './assets/kartat/miniatyyrit/berliini-paavin-kosto.webp',
+  './assets/kartat/miniatyyrit/bryssel-brysselin-porssi.webp',
+  './assets/kartat/miniatyyrit/bryssel-galeries-royales-saint-hubert.webp',
+  './assets/kartat/miniatyyrit/bryssel-grand-place.webp',
+  './assets/kartat/miniatyyrit/bryssel-kuninkaanpalatsi.webp',
+  './assets/kartat/miniatyyrit/bryssel-manneken-pis.webp',
+  './assets/kartat/miniatyyrit/bryssel-mont-des-arts.webp',
+  './assets/kartat/miniatyyrit/bryssel-oikeuspalatsi.webp',
+  './assets/kartat/miniatyyrit/helsinki-suomi-heraa-1899.webp',
+  './assets/kartat/miniatyyrit/istanbul-konstantinopoli-1453.webp',
+  './assets/kartat/miniatyyrit/kosice-hlavn-katu.webp',
+  './assets/kartat/miniatyyrit/kosice-immaculata.webp',
+  './assets/kartat/miniatyyrit/kosice-jakabin-palatsi.webp',
+  './assets/kartat/miniatyyrit/kosice-miklu-in-vankila.webp',
+  './assets/kartat/miniatyyrit/kosice-pyhan-elisabetin-tuomiokirkko.webp',
+  './assets/kartat/miniatyyrit/kosice-pyovelin-bastioni.webp',
+  './assets/kartat/miniatyyrit/kosice-urbanin-torni.webp',
+  './assets/kartat/miniatyyrit/kosice-valtionteatteri.webp',
+  './assets/kartat/miniatyyrit/ljubljana-keskustori.webp',
+  './assets/kartat/miniatyyrit/ljubljana-kri-anke.webp',
+  './assets/kartat/miniatyyrit/ljubljana-ljubljanan-linna.webp',
+  './assets/kartat/miniatyyrit/ljubljana-ljubljanan-tuomiokirkko.webp',
+  './assets/kartat/miniatyyrit/ljubljana-lohikaarmesilta.webp',
+  './assets/kartat/miniatyyrit/ljubljana-pre-ernin-aukio.webp',
+  './assets/kartat/miniatyyrit/ljubljana-tivoli-puisto.webp',
+  './assets/kartat/miniatyyrit/ljubljana-tromostovje.webp',
+  './assets/kartat/miniatyyrit/luxemburg-adolphe-silta.webp',
+  './assets/kartat/miniatyyrit/luxemburg-bockin-kasematit.webp',
+  './assets/kartat/miniatyyrit/luxemburg-chemin-de-la-corniche.webp',
+  './assets/kartat/miniatyyrit/luxemburg-guillaume-ii-aukio.webp',
+  './assets/kartat/miniatyyrit/luxemburg-notre-damen-katedraali.webp',
+  './assets/kartat/miniatyyrit/luxemburg-suurherttuallinen-palatsi.webp',
+  './assets/kartat/miniatyyrit/lontoo-abbey-roadin-suojatie.webp',
+  './assets/kartat/miniatyyrit/lontoo-canaletto-lontoossa.webp',
+  './assets/kartat/miniatyyrit/lontoo-dickensin-pubi.webp',
+  './assets/kartat/miniatyyrit/lontoo-exchange-alley.webp',
+  './assets/kartat/miniatyyrit/lontoo-faraday-1831.webp',
+  './assets/kartat/miniatyyrit/lontoo-fleming-1928.webp',
+  './assets/kartat/miniatyyrit/lontoo-globe-1599.webp',
+  './assets/kartat/miniatyyrit/lontoo-leake-streetin-tunneli.webp',
+  './assets/kartat/miniatyyrit/lontoo-liukumakiveistos.webp',
+  './assets/kartat/miniatyyrit/lontoo-metron-hoyryveturi.webp',
+  './assets/kartat/miniatyyrit/lontoo-neljas-jalusta.webp',
+  './assets/kartat/miniatyyrit/lontoo-palo-1666.webp',
+  './assets/kartat/miniatyyrit/lontoo-tunneli-1827.webp',
+  './assets/kartat/miniatyyrit/lontoo-turbiinihalli.webp',
+  './assets/kartat/miniatyyrit/madrid-chotis.webp',
+  './assets/kartat/miniatyyrit/madrid-goyan-kansankuvat.webp',
+  './assets/kartat/miniatyyrit/madrid-gran-v-a.webp',
+  './assets/kartat/miniatyyrit/madrid-kaksi-joukkuetta.webp',
+  './assets/kartat/miniatyyrit/madrid-palamaton-linna.webp',
+  './assets/kartat/miniatyyrit/madrid-tapaskierros.webp',
+  './assets/kartat/miniatyyrit/nikosia-buyuk-han.webp',
+  './assets/kartat/miniatyyrit/nikosia-faneromenin-kirkko.webp',
+  './assets/kartat/miniatyyrit/nikosia-kyproksen-museo.webp',
+  './assets/kartat/miniatyyrit/nikosia-leventis-museo.webp',
+  './assets/kartat/miniatyyrit/nikosia-omeryen-hamam.webp',
+  './assets/kartat/miniatyyrit/nikosia-selimiyen-moskeija.webp',
+  './assets/kartat/miniatyyrit/pariisi-72-nimea.webp',
+  './assets/kartat/miniatyyrit/pariisi-bastilji-1789.webp',
+  './assets/kartat/miniatyyrit/pariisi-carmenin-ensi-ilta.webp',
+  './assets/kartat/miniatyyrit/pariisi-curie-1898.webp',
+  './assets/kartat/miniatyyrit/pariisi-impressionistit.webp',
+  './assets/kartat/miniatyyrit/pariisi-kirahvin-kavelymatka.webp',
+  './assets/kartat/miniatyyrit/pariisi-kyyhkyposti.webp',
+  './assets/kartat/miniatyyrit/pariisi-lavoisier-1780.webp',
+  './assets/kartat/miniatyyrit/pariisi-lumiere-1895.webp',
+  './assets/kartat/miniatyyrit/pariisi-metron-sisaankaynti.webp',
+  './assets/kartat/miniatyyrit/pariisi-notre-damen-kukko.webp',
+  './assets/kartat/miniatyyrit/pariisi-paras-patonki.webp',
+  './assets/kartat/miniatyyrit/pariisi-pariisi-soi.webp',
+  './assets/kartat/miniatyyrit/pariisi-pariisin-vuosisadat.webp',
+  './assets/kartat/miniatyyrit/pariisi-pasteur-1862.webp',
+  './assets/kartat/miniatyyrit/pariisi-torni-1888.webp',
+  './assets/kartat/miniatyyrit/pariisi-torni-romuraudaksi.webp',
+  './assets/kartat/miniatyyrit/pariisi-tuileriain-rauniot.webp',
+  './assets/kartat/miniatyyrit/pariisi-vrain-lucas.webp',
+  './assets/kartat/miniatyyrit/pietari-janissaari-1703.webp',
+  './assets/kartat/miniatyyrit/rooma-aqua-virgo.webp',
+  './assets/kartat/miniatyyrit/rooma-areenan-kellari.webp',
+  './assets/kartat/miniatyyrit/rooma-kolikko-olan-yli.webp',
+  './assets/kartat/miniatyyrit/rooma-nasone.webp',
+  './assets/kartat/miniatyyrit/rooma-norsu-ja-obeliski.webp',
+  './assets/kartat/miniatyyrit/rooma-sikstus-1510.webp',
+  './assets/kartat/miniatyyrit/valletta-auberge-de-castille.webp',
+  './assets/kartat/miniatyyrit/valletta-piirityskello-muistomerkki.webp',
+  './assets/kartat/miniatyyrit/valletta-pyhan-elmon-linnake.webp',
+  './assets/kartat/miniatyyrit/valletta-pyhan-johanneksen-ko-katedraali.webp',
+  './assets/kartat/miniatyyrit/valletta-suurmestarin-palatsi.webp',
+  './assets/kartat/miniatyyrit/valletta-ylabarrakka-puutarhat.webp',
+  './assets/kartat/miniatyyrit/wien-figaro-1786.webp',
+  './assets/kartat/miniatyyrit/wien-lipizzanit.webp',
+  './assets/kartat/miniatyyrit/wien-rattaan-kulmat.webp',
+  './assets/kartat/miniatyyrit/wien-taikahuilu.webp',
+  './assets/kartat/miniatyyrit/wien-tonava-kaunoinen.webp',
+  './assets/kartat/miniatyyrit/wien-vuoristovesijohto.webp',
+  './assets/kartat/miniatyyrit/wien-yhdeksas-1824.webp',
   // Matkakirjan ihmeet: sama kohde loistoaikansa asussa NYKYMAAILMASSA
   // (Raamattu, osio "Matkakirjan ihmeet"; kohteiden `ihme`-kenttä
   // js/packs/fokuskohteet-*.js). Nämä ovat pelin kohokohtia, ja monella
@@ -1164,6 +1716,16 @@ const SHELL = [
   './assets/kartat/amsterdam-varikartta.png',
   './assets/kartat/kobenhavn-varikartta.png',
   './assets/kartat/firenze-varikartta.png',
+  './assets/kartat/luxemburg-keskusta.png',
+  './assets/kartat/luxemburg-varikartta.png',
+  './assets/kartat/bryssel-keskusta.png',
+  './assets/kartat/bryssel-varikartta.png',
+  './assets/kartat/ljubljana-keskusta.png',
+  './assets/kartat/ljubljana-varikartta.png',
+  './assets/kartat/kosice-keskusta.png',
+  './assets/kartat/kosice-varikartta.png',
+  './assets/kartat/valletta-keskusta.png',
+  './assets/kartat/valletta-varikartta.png',
   './assets/kartat/tampere-varikartta.png',
   './assets/kartat/bagdad-varikartta.png',
   './assets/kartat/teheran-varikartta.png',
@@ -1172,31 +1734,6 @@ const SHELL = [
   './assets/kartat/soul-varikartta.png',
   './assets/kartat/shanghai-varikartta.png',
   './assets/kartat/venetsia-keskusta.png',
-  // Käyttöliittymän lyhyet tehosteet — ydinsetin toinen puolisko
-  // (ks. huudahdusten kohdalla oleva selitys).
-  './assets/audio/efekti-klik.mp3',
-  './assets/audio/efekti-paperi.mp3',
-  './assets/audio/efekti-kolikot.mp3',
-  './assets/audio/efekti-oikein.mp3',
-  './assets/audio/efekti-vaarin.mp3',
-  './assets/audio/efekti-pyyhkaisy.mp3',
-  './assets/audio/efekti-askel.mp3',
-  './assets/audio/efekti-saapuminen.mp3',
-  './assets/audio/efekti-laiva.mp3',
-  './assets/audio/efekti-lento.mp3',
-  './assets/audio/efekti-vihje.mp3',
-  './assets/audio/efekti-tikitys.mp3',
-  './assets/audio/efekti-aikaloppui.mp3',
-  './assets/audio/efekti-kaanto.mp3',
-  './assets/audio/efekti-naksu.mp3',
-  './assets/audio/efekti-zoom.mp3',
-  './assets/audio/efekti-tahti.mp3',
-  './assets/audio/efekti-jalokivi.mp3',
-  './assets/audio/efekti-rosvo.mp3',
-  './assets/audio/efekti-tyhja.mp3',
-  './assets/audio/efekti-jumissa.mp3',
-  './assets/audio/efekti-vuoro.mp3',
-  './assets/audio/efekti-voitto.mp3',
   // Liput (tools/fetch-flags.mjs) — pieniä ja tarvitaan heti saapumiskortilla.
   './assets/liput/algeria.png',
   './assets/liput/austria.png',
@@ -1298,16 +1835,153 @@ const SHELL = [
  *
  * SAMA KOSKEE NYT ÄÄNIÄ (omistajan linjaus 16.8.2026). Luennat,
  * visamusiikki ja viritysäänet tulevat ämpäristä ja tallentuvat
- * AANICACHEen ensimmäisellä kuuntelulla; esilatauksessa on enää
- * ydinsetti (huudahdukset ja tehosteet), joka on osa MEDIA-erää kuten
- * ennenkin. Peli itse ja kartat haetaan yhä kokonaan etukäteen.
+ * AANICACHEen ensimmäisellä kuuntelulla. Esilatauksessa on enää
+ * ydinsetti (huudahdukset ja tehosteet), ja 11.9.2026 alkaen sekin
+ * haetaan ämpäristä omaan äänikoriinsa (ks. YDINAANET) — repossa ei ole
+ * enää yhtään äänitiedostoa. Peli itse ja kartat haetaan yhä kokonaan
+ * etukäteen.
  */
 // Linssikuvat kuuluvat samaan erään: yölinssin kuva on satoja kilotavuja,
 // eikä sen katkennut lataus saa kaataa koko asennusta. Ilman tätä rivi
 // päätyisi YDIMEEN, jossa yksikin virhe vie pelin ilman välimuistia.
-const MEDIAA = (osoite) => /\/assets\/(liput|audio|linssit)\//.test(osoite);
+const MEDIAA = (osoite) => /\/assets\/(liput|linssit)\//.test(osoite);
 const YDIN = SHELL.filter((o) => !MEDIAA(o));
 const MEDIA = SHELL.filter(MEDIAA);
+
+/*
+ * PELIN MEDIAN ISÄNNÄT (6.9.2026). Media tulee R2-ämpäristä, jolla on
+ * nyt oma verkkotunnus media.matkakirja.app (omistaja osti
+ * matkakirja.app:n 6.9.2026 aamulla; Cloudflaren r2.dev-osoite
+ * rajoitti pyyntötahtia ja vastasi 429:llä). Vanha pub-*.r2.dev-osoite
+ * tunnistetaan yhä, jotta välimuistiin jääneet ja vanhojen tietueiden
+ * osoitteet käyttäytyvät samoin.
+ */
+const medianIsanta = (isanta) => isanta === 'media.matkakirja.app' || isanta.endsWith('.r2.dev');
+
+/*
+ * ÄÄNTEN JUURI. Sama osoite kuin js/media.js AANI_JUURI, mutta omana
+ * vakionaan: palvelutyöntekijä ei voi tuoda pelin moduuleita (se
+ * ladataan klassisena skriptinä, jotta vanhat selaimet saavat
+ * päivityksen), joten osoite toistuu tässä. tests/sw-aanet.test.mjs
+ * vartioi, etteivät juuret pääse eriytymään.
+ */
+const AANI_JUURI = 'https://media.matkakirja.app/audio/';
+
+/*
+ * ÄÄNTEN YDINSETTI — ainoat äänet, jotka esiladataan.
+ *
+ * Kaksi lajia, joilla myöhästyminen kuuluisi: käyttöliittymän lyhyet
+ * tehosteet (kuuluvat samalla hetkellä kun sormi osuu laattaan) ja
+ * pääaarteen huudahdukset (sama repliikki kuin kortilla). Yhteensä
+ * noin 1,3 Mt, eli asennus pysyy kevyenä.
+ *
+ * Nimet ovat samat kuin pelin poluissa (js/sound.js, js/ui-apurit.js):
+ * assets/audio/<nimi> on enää tunniste, ja js/media.js aaniUrl kääntää
+ * sen juuri tähän osoitteeseen. Jos jokin näistä joskus äänitetään
+ * uusiksi (js/media.js UUSITUT_AANET), peli pyytää kyselyversiollisen
+ * osoitteen eikä tämä esilataus osu — silloin ääni vain haetaan
+ * verkosta ensimmäisellä soitolla, mikä on oikea käytös eikä vika.
+ */
+const YDINAANET = [
+  'huudahdus-star-1.mp3',
+  'huudahdus-star-2.mp3',
+  'huudahdus-star-3.mp3',
+  'efekti-klik.mp3',
+  'efekti-paperi.mp3',
+  'efekti-kolikot.mp3',
+  'efekti-oikein.mp3',
+  'efekti-vaarin.mp3',
+  'efekti-pyyhkaisy.mp3',
+  'efekti-askel.mp3',
+  'efekti-saapuminen.mp3',
+  'efekti-laiva.mp3',
+  'efekti-lento.mp3',
+  'efekti-vihje.mp3',
+  'efekti-tikitys.mp3',
+  'efekti-aikaloppui.mp3',
+  'efekti-kaanto.mp3',
+  'efekti-naksu.mp3',
+  'efekti-zoom.mp3',
+  'efekti-tahti.mp3',
+  'efekti-jalokivi.mp3',
+  'efekti-rosvo.mp3',
+  'efekti-tyhja.mp3',
+  'efekti-jumissa.mp3',
+  'efekti-vuoro.mp3',
+  'efekti-voitto.mp3',
+].map((nimi) => `${AANI_JUURI}${nimi}`);
+
+/*
+ * ÄÄNTEN ESILATAUKSEN AIKAKATKAISU (mitattu 14.9.2026).
+ *
+ * Ilman katkoa asennus jäi roikkumaan ämpärin varaan: mitattu koe,
+ * jossa media.matkakirja.app otti TCP-yhteyden vastaan muttei koskaan
+ * vastannut, jätti palvelutyöntekijän tilaan `installing` vielä 90
+ * sekunnin kuluttua, vaikka versiokori oli ollut täysi (1252/1252) jo
+ * 50 sekunnin kohdalla. `skipWaiting()` ei silloin ehdi ajoon, joten
+ * offline-tuki ja koko päivitysketju jäävät syntymättä — sama
+ * lopputulos kuin SHELLin kaksoiskappaleessa (tests/sw.test.mjs).
+ *
+ * Katkon pituus perustuu mittaukseen, ei arvaukseen (Chromium,
+ * 26 ääntä, sama paikallinen palvelin, vastausviive muuttujana):
+ *
+ *   viive 0 ms     → 26/26 ääntä korissa, esilataus 0,43 s
+ *   viive 800 ms   → 21/26 ääntä korissa, esilataus 5,96 s (katko)
+ *   viive 1500 ms  →  9/26 ääntä korissa, esilataus 6,41 s (katko)
+ *   viive 4000 ms  →  3/26 ääntä korissa, esilataus 6,05 s (katko)
+ *   ei vastausta   →  0/26 ääntä korissa, esilataus 6,12–6,29 s (katko)
+ *
+ * Kuusi sekuntia on siis noin 14-kertainen mitattuun normaaliaikaan
+ * (0,43 s), joten toimiva ämpäri ehtii aina; hitaalla yhteydellä osa
+ * setistä jää hakematta nyt ja haetaan ensimmäisellä soitolla. Tärkein
+ * mitattu lukema on viimeinen sarake: asennus valmistuu joka tilanteessa
+ * noin kuudessa sekunnissa sen sijaan, että se jäisi roikkumaan.
+ *
+ * ÄÄNI ON KORISTE, PELI ON PÄÄASIA: jos katko osuu, ääntä ei haeta nyt
+ * vaan ensimmäisellä soitolla — pelin toiminta ei muutu.
+ */
+const AANI_ESILATAUS_KATKO_MS = 6000;
+
+/*
+ * Ydinsetin esilataus äänikoriin (AANICACHE, sama kori josta
+ * fetch-käsittelijä palvelee ämpärin audio/-pyynnöt).
+ *
+ * Nouto tehdään fetchillä mode: 'cors' kuten kuvakorissa: cache.addAll
+ * kaatuisi koko erään yhdestä virheestä, ja ilman cors-tilaa vastaus
+ * olisi opaakki eikä kelpaisi koriin. Asennus EI saa kaatua, jos ääni
+ * jää saamatta — ydinsetti on nopeutta varten, ei asennuksen ehto,
+ * joten jokainen virhe niellään erikseen.
+ *
+ * Katko on kaksinkertainen tarkoituksella:
+ *  1. Yhteinen AbortController katkaisee kaikki kesken olevat noudot,
+ *     jolloin jumittunut soketti todella vapautuu eikä jää roikkumaan.
+ *  2. Uloin Promise.race varmistaa paluun silloinkin, kun jumi ei ole
+ *     fetchissä vaan koriin pääsyssä (caches.open, kiintiöpaine) —
+ *     AbortController ei yllä sinne asti.
+ * Funktio palaa siis AINA viimeistään katkon kuluttua.
+ */
+async function esilataaYdinaanet(katkoMs = AANI_ESILATAUS_KATKO_MS) {
+  const vahti = new AbortController();
+  const kello = setTimeout(() => vahti.abort(), katkoMs);
+  const tyo = (async () => {
+    const kori = await caches.open(AANICACHE);
+    await Promise.all(YDINAANET.map(async (osoite) => {
+      try {
+        if (await kori.match(osoite)) return;
+        const vastaus = await fetch(osoite, { mode: 'cors', signal: vahti.signal });
+        if (vastaus.ok && vastaus.status === 200) await kori.put(osoite, vastaus);
+      } catch { /* ääni jää hakematta nyt, haetaan ensimmäisellä soitolla */ }
+    }));
+  })();
+  try {
+    await Promise.race([
+      tyo,
+      new Promise((valmis) => { setTimeout(valmis, katkoMs + 250); }),
+    ]);
+  } finally {
+    clearTimeout(kello);
+  }
+}
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -1321,6 +1995,12 @@ self.addEventListener('install', (event) => {
         await Promise.all(MEDIA.map((osoite) => cache
           .add(new Request(osoite, { cache: 'reload' }))
           .catch(() => {})));
+        // Äänten ydinsetti ämpäristä omaan koriinsa — ei tähän
+        // versiokoriin, koska äänet eivät vanhene version mukana.
+        // Aikakatkaistu (AANI_ESILATAUS_KATKO_MS): estetty tai hyvin
+        // hidas ämpäri ei saa jättää asennusta roikkumaan, koska
+        // silloin skipWaiting jää ajamatta eikä peli käynnisty offline.
+        await esilataaYdinaanet().catch(() => {});
       })
       .then(() => self.skipWaiting()),
   );
@@ -1356,6 +2036,259 @@ const OMA_VALOKUVA = (osoite) => osoite.pathname.includes('/assets/valokuvat/');
  * kuullut luennat kaikilla pelaajilla turhaan.
  */
 const AANICACHE = 'matkakirja-aanet-v1';
+/*
+ * VALMIIT KIRJASTOT ÄMPÄRIN vendor/-POLUSTA (Raamattu 5.9.2026,
+ * VALMIIT KIRJASTOT: STPAGEFLIP ENSIN): page-flip, Globe.gl, Tuna,
+ * ilmepaketti ja d3-geo ladataan vasta tarvittaessa (js/sivunkaanto.js,
+ * js/pallo.js, js/tehosteketju.js, js/ilme.js, js/geo.js).
+ * Tiedostonimi kantaa versionumeron, joten sisältö ei koskaan muutu
+ * saman nimen alla — kori on pysyvä eikä tyhjene versionvaihdossa, ja
+ * kerran ladattu kirjasto toimii lentokoneessa. Skriptin oma pyyntö on
+ * no-cors (opaakki vastaus ei kelpaa koriin), joten nouto tehdään
+ * cors-tilassa kuten kuvilla, ja tavallinen fetch jää varareitiksi.
+ */
+const VENDORCACHE = 'matkakirja-vendor-v1';
+
+/*
+ * ======== PALLON LAATAT OMAAN KORIINSA (pallolauta vaihe 5c) =========
+ *
+ * Karttapallo on pelin lauta (Raamattu 5.9.2026, KARTTAPALLO ON
+ * PELILAUTA), ja sen pinta tulee ämpäristä Web Mercator -laattoina
+ * (js/pallo.js pallonLaatta). Ilman omaa koria lentokoneessa avattu
+ * peli näyttäisi tyhjän pallon: laatat ovat toisessa originissa eikä
+ * niitä ole SHELLissä (niitä on kymmeniä tuhansia).
+ *
+ * NELJÄ SÄÄNTÖÄ:
+ *
+ * 1. VÄLIMUISTI ENSIN, EIKÄ KOSKAAN UUDESTAAN. Laatan osoitteessa on
+ *    kansion nimessä versio (<versio>-nostot), ja ämpäri lähettää
+ *    `immutable`-otsakkeen: saman osoitteen sisältö ei muutu koskaan.
+ *    Kerran haettu laatta luetaan siis aina korista.
+ * 2. KORILLA ON KATTO. Z0–Z8 on yli 87 000 laattaa; ilman kattoa kori
+ *    kasvaisi satoihin megatavuihin ja selain kaataisi sen kokonaan
+ *    (silloin menisi myös se karkea maailma, joka lentokoneessa
+ *    tarvitaan). Katto on LAATTAKATTO laattaa ≈ 30 Mt (mitattu laatta
+ *    8–14 kt), ja ylityksessä poistetaan vanhimmat.
+ *
+ *    POISTOJÄRJESTYS ON KIRJOITUSJÄRJESTYS, EI VIIMEISIN KÄYTTÖ. Cache
+ *    API:n `keys()` palauttaa avaimet siinä järjestyksessä kuin ne on
+ *    kirjoitettu, joten FIFO on ilmainen: ei omaa kirjanpitoa, ei
+ *    IndexedDB:tä, ei ylimääräistä kirjoitusta jokaisesta osumasta.
+ *    Aito LRU vaatisi joko `delete`+`put`-parin JOKAISELLA osumalla
+ *    (kaksi kirjoitusta jokaista piirrettyä laattaa kohden) tai
+ *    erillisen aikaleimatietokannan — kumpikin on tässä kalliimpi kuin
+ *    se, mitä niillä voitetaan: laatat ovat muuttumattomia, ja
+ *    uudelleen haettu laatta maksaa yhden pyynnön.
+ * 3. LUETTELO (laatat.json) ON LYHYELLÄ VÄLIMUISTILLA: korin kappale
+ *    tarjotaan heti ja uusi haetaan sen rinnalla (stale-while-
+ *    revalidate). Luettelo kertoo, mihin tasoon asti laattoja on ajettu
+ *    (js/pallo.js laatatSaatavilla) ja muuttuu ajojen myötä saman nimen
+ *    alla, joten se ei saa jäädä pysyvästi voimaan — mutta pallo ei
+ *    myöskään saa odottaa verkkoa käynnistyessään.
+ * 4. VANHA KANSIO SIIVOTAAN, kun PALLO_LAATTAKANSIO vaihtuu: kansion
+ *    nimi on osa osoitetta, joten vanhat laatat tunnistaa polusta.
+ *    Siivous ajetaan activatessa (uusi versio = uusi laattakansio).
+ *
+ * Kori EI tyhjene versionvaihdossa (kuten kuvat, äänet ja kirjastot):
+ * laatta ei vanhene pelin version mukana.
+ */
+const LAATTACACHE = 'matkakirja-pallolaatat-v1';
+/** Laattojen polku ämpärissä (js/pallo.js PALLO_LAATAT). */
+const LAATTAPOLKU = '/julisteet/pallo/laatat/';
+/**
+ * Nykyinen laattakansio (js/pallo.js PALLO_LAATTAKANSIO). Kaksoiskappale
+ * on tahallinen: palvelutyöntekijä ei voi tuoda ES-moduulia, ja
+ * tests/sw.test.mjs vartioi, että luvut ovat samat.
+ */
+const LAATTAKANSIO = '2026-09-23a-pohja-20260923a';
+/** Varakansio syvimmälle tasolle (js/pallo.js PALLO_LAATAT_SYVA), kunnes nostosarja kattaa sen. */
+const LAATTAKANSIO_SYVA = '2026-09-23a-pohja';
+const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA];
+/** Laattoja korissa enintään (≈ 30 Mt; yksi laatta 8–14 kt). */
+const LAATTAKATTO = 3000;
+/** Kerralla poistettava erä: yksi keys()-ajo riittää sadoiksi laatoiksi. */
+const LAATTASIIVOUS = 200;
+/** Esilatauksen rinnakkaiset noudot (ei pursketa ämpäriä; 6 → 4 22.9.2026, omistaja: pieni rinnakkaisuus levossa). */
+const LAATTAESILATAUKSEN_LEVEYS = 4;
+
+/** Onko osoite pallon laatta tai sen luettelo (peili tai paikallinen peili)? */
+const PALLOLAATTA = (osoite) => osoite.pathname.includes(LAATTAPOLKU);
+/*
+ * PYRAMIDIN LAATAT SAMAAN KORIIN (esilataus levossa, 22.9.2026;
+ * js/laattaesilataus.js). Laattakerroksen (js/pallolaatat.js) laatat
+ * asuvat polussa julisteet/pyramidi/<versio>/… ja ne haetaan
+ * fetch()-kutsulla, joka ei ole `destination: image` — ne eivät siis
+ * osuneet mihinkään koriin, vaan vain selaimen HTTP-välimuistiin. Nyt
+ * ne palvellaan kuten pallon laatat (välimuisti ensin, talletus
+ * ensimmäisellä haulla), ja lepoaikainen esilataus voi tuoda ne koriin
+ * ennen zoomia. Luettelot (pyramidi.json, .json) menevät verkkoon
+ * kuten ennen (js/laattapyramidi.js revalidoi ne itse). Versiot eivät
+ * ole täällä kaksoiskappaleina: pyramidin versio vaihtuu ämpärin
+ * luettelossa ilman sw.js-muutosta, joten vanhat versiot vanhenevat
+ * FIFO-katon (LAATTAKATTO) kautta eikä siivoaVanhatLaatat koske niihin.
+ */
+const PYRAMIDIPOLKU = '/julisteet/pyramidi/';
+const PYRAMIDILAATTA = (osoite) => osoite.pathname.includes(PYRAMIDIPOLKU) && !osoite.pathname.endsWith('.json');
+
+/*
+ * Laattojen määrä muistissa, jotta keys() ei aja jokaisella laatalla —
+ * ja laskuri siitä, montako laattaa on kirjoitettu viimeisimmän
+ * todellisen mittauksen jälkeen. Palvelutyöntekijä nukahtaa ja unohtaa
+ * luvun; silloin se mitataan uudestaan.
+ */
+let laattojaKorissa = null;
+let laattojaMittauksesta = 0;
+let laattasiivousKesken = false;
+
+/**
+ * Poistaa vanhimmat laatat, jos katto ylittyy (FIFO, ks. sääntö 2).
+ *
+ * Korin todellinen koko MITATAAN (keys()) kolmessa tilanteessa: kun
+ * lukua ei tiedetä (työntekijä on juuri herännyt), kun arvio lähestyy
+ * kattoa, ja joka tapauksessa erän välein — arvio on vain arvio, sillä
+ * koria voi muuttaa myös toinen välilehti tai selaimen oma siivous.
+ * Mitattu 5.9.2026: keys() 3 000 laatan korista noin 200 ms, eli erän
+ * (LAATTASIIVOUS) välein ajettuna se on 1 ms laattaa kohden.
+ */
+async function siivoaLaatat(kori) {
+  laattojaMittauksesta += 1;
+  const arvio = laattojaKorissa ?? Infinity;
+  if (arvio + LAATTASIIVOUS < LAATTAKATTO && laattojaMittauksesta < LAATTASIIVOUS) return;
+  if (laattasiivousKesken) return;
+  laattasiivousKesken = true;
+  try {
+    const avaimet = await kori.keys();
+    laattojaKorissa = avaimet.length;
+    laattojaMittauksesta = 0;
+    if (avaimet.length <= LAATTAKATTO) return;
+    const poistettavat = avaimet
+      .filter((p) => !p.url.endsWith('laatat.json'))
+      .slice(0, Math.max(0, avaimet.length - LAATTAKATTO + LAATTASIIVOUS));
+    await Promise.all(poistettavat.map((p) => kori.delete(p).catch(() => {})));
+    laattojaKorissa = avaimet.length - poistettavat.length;
+  } finally {
+    laattasiivousKesken = false;
+  }
+}
+
+/** Laatta: välimuisti ensin, talletus ensimmäisellä piirrolla. */
+async function laattaPeilista(pyynto) {
+  const kori = await caches.open(LAATTACACHE);
+  const osuma = await kori.match(pyynto.url);
+  if (osuma) return osuma;
+  const vastaus = await fetch(pyynto.url, { mode: 'cors' }).catch(() => null);
+  if (vastaus && vastaus.ok) {
+    // Kiintiön täyttyminen ei saa jättää laattaa piirtymättä.
+    await kori.put(pyynto.url, vastaus.clone()).catch(() => {});
+    if (laattojaKorissa !== null) laattojaKorissa += 1;
+    void siivoaLaatat(kori);
+    return vastaus;
+  }
+  return fetch(pyynto).catch(() => vastaus ?? Response.error());
+}
+
+/**
+ * Laattaluettelo: korin kappale heti, päivitys taustalla (sääntö 3).
+ *
+ * Pallo EI SAA ODOTTAA verkkoa: luettelo luetaan ennen ensimmäistäkään
+ * laattaa (js/pallo.js laatatSaatavilla), ja hidas tai roikkuva pyyntö
+ * jättäisi laudan tyhjäksi juuri käynnistyksessä. Siksi vanha kappale
+ * kelpaa heti ja uusi haetaan sen rinnalla: uusi taso (esim. Z8) tulee
+ * käyttöön seuraavassa käynnistyksessä. Ilman koria odotetaan verkkoa.
+ *
+ * TAUSTAPÄIVITYS EI SAA TULLA SELAIMEN VÄLIMUISTISTA (6.9.2026): ämpäri
+ * antaa luettelolle max-age 3600, joten tavallinen fetch palauttaisi
+ * tunnin ajan saman kappaleen — ja koska kori on jo yhden käynnistyksen
+ * jäljessä, uusi taso viipyisi kaksi käynnistystä. `no-cache` revalidoi
+ * ETagilla (304 on muutama sata tavua) eikä ohita koria: kappale
+ * tarjotaan yhä heti. Laatat itse eivät revalidoi — ne ovat immutable.
+ */
+function laattaluettelo(event) {
+  const { url } = event.request;
+  return caches.open(LAATTACACHE).then(async (kori) => {
+    const paivitys = fetch(url, { mode: 'cors', cache: 'no-cache' })
+      .then((v) => {
+        if (v && v.ok) kori.put(url, v.clone()).catch(() => {});
+        return v;
+      })
+      .catch(() => null);
+    const osuma = await kori.match(url);
+    if (osuma) {
+      event.waitUntil(paivitys);
+      return osuma;
+    }
+    const tuore = await paivitys;
+    if (tuore && tuore.ok) return tuore;
+    return fetch(event.request).catch(() => tuore ?? Response.error());
+  });
+}
+
+/*
+ * ESILATAUS: KARKEA MAAILMA TALTEEN (sama malli kuin kuvien
+ * etukäteispuskurilla — pelaaja ei odota sitä, mutta se on paikalla,
+ * kun verkko katkeaa). Peli lähettää listan osoitteita, kun pallolauta
+ * on avattu (js/pallo.js esilataaPallolaatat: koko maailma tasoille
+ * 0–3 ja aloituskaupungin ympäristö tasolle 4), ja työntekijä hakee ne
+ * taustalla korkeintaan kuutena rinnakkaisena noutona. Lista tulee
+ * sivulta eikä työntekijältä, koska laattojen geometria ja kansio
+ * asuvat js/pallo.js:ssä — yksi totuus.
+ */
+async function esilataaLaatat(osoitteet, portti) {
+  const alku = Date.now();
+  const kori = await caches.open(LAATTACACHE);
+  const jono = (Array.isArray(osoitteet) ? osoitteet : [])
+    .filter((u) => typeof u === 'string'
+      && (LAATTAKANSIOT.some((k) => u.includes(`${LAATTAPOLKU}${k}/`)) || u.includes(PYRAMIDIPOLKU)))
+    .slice(0, LAATTAKATTO);
+  let seuraava = 0;
+  let uusia = 0;
+  let jo = 0;
+  let tavuja = 0;
+  const nouda = async () => {
+    while (seuraava < jono.length) {
+      const url = jono[seuraava];
+      seuraava += 1;
+      if (await kori.match(url)) { jo += 1; continue; }
+      const vastaus = await fetch(url, { mode: 'cors' }).catch(() => null);
+      if (!vastaus || !vastaus.ok) continue;
+      const kopio = vastaus.clone();
+      await kori.put(url, vastaus).catch(() => {});
+      uusia += 1;
+      if (laattojaKorissa !== null) laattojaKorissa += 1;
+      tavuja += (await kopio.arrayBuffer().catch(() => ({ byteLength: 0 }))).byteLength;
+      // Katto pitää myös pitkän esilatauksen aikana (erän välein mitattu).
+      await siivoaLaatat(kori);
+    }
+  };
+  await Promise.all(Array.from(
+    { length: Math.min(LAATTAESILATAUKSEN_LEVEYS, jono.length) }, nouda,
+  ));
+  await siivoaLaatat(kori);
+  portti?.postMessage({
+    tyyppi: 'pallolaatat-esiladattu', pyydetty: jono.length, uusia, jo, tavuja, kesto: Date.now() - alku,
+  });
+}
+
+/** Vanhan laattakansion laatat pois, kun kansio vaihtuu (sääntö 4). */
+async function siivoaVanhatLaatat() {
+  const kori = await caches.open(LAATTACACHE).catch(() => null);
+  if (!kori) return;
+  const nykyiset = LAATTAKANSIOT.map((k) => `${LAATTAPOLKU}${k}/`);
+  const avaimet = await kori.keys();
+  // Pyramidin laatat eivät ole kansiosiivouksen kohde (ks. PYRAMIDILAATTA).
+  const vanhat = avaimet.filter((p) => {
+    const polku = new URL(p.url).pathname;
+    return !polku.includes(PYRAMIDIPOLKU) && !nykyiset.some((n) => polku.includes(n));
+  });
+  await Promise.all(vanhat.map((p) => kori.delete(p).catch(() => {})));
+  laattojaKorissa = avaimet.length - vanhat.length;
+}
+
+self.addEventListener('message', (event) => {
+  const viesti = event.data;
+  if (!viesti || viesti.tyyppi !== 'esilataa-pallolaatat') return;
+  event.waitUntil(esilataaLaatat(viesti.osoitteet, event.ports?.[0] ?? null));
+});
 
 /**
  * Osittaisvastaus (206) välimuistista noudetusta kokonaisesta äänestä.
@@ -1442,10 +2375,14 @@ self.addEventListener('activate', (event) => {
     caches
       .keys()
       .then((keys) => Promise.all(
-        keys.filter((k) => k !== CACHE && k !== KUVACACHE && k !== AANICACHE
+        keys.filter((k) => k !== CACHE && k !== KUVACACHE && k !== AANICACHE && k !== VENDORCACHE
+          && k !== LAATTACACHE
           // Lukijaäänen pysyvät säilöt (js/puhe.js) eivät ole tämän
           // workerin omia — siivous ei saa tuhota niitä versionvaihdossa.
           && !k.startsWith('matkakirja-puhe-')).map((k) => caches.delete(k))))
+      // Pallon laattakori jää, mutta vanhan laattakansion laatat pois
+      // (pallolauta vaihe 5c, sääntö 4): kansio on osa osoitetta.
+      .then(() => siivoaVanhatLaatat().catch(() => {}))
       .then(() => self.clients.claim()),
   );
 });
@@ -1456,6 +2393,23 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   const osoite = new URL(event.request.url);
+  /*
+   * PALLON LAATAT ENNEN MUITA (pallolauta vaihe 5c): laatta tunnistetaan
+   * POLUSTA eikä palvelimen nimestä, jotta sama haara palvelee ämpäriä
+   * ja paikallista peiliä (savuke-pallolaatat-offline ajaa laatat oman
+   * palvelimensa kautta — palvelutyöntekijän fetch ohittaa Playwrightin
+   * page.routen, joten muuta tapaa mitata tätä haaraa ei ole).
+   */
+  if (PALLOLAATTA(osoite)) {
+    event.respondWith(osoite.pathname.endsWith('/laatat.json')
+      ? laattaluettelo(event)
+      : laattaPeilista(event.request));
+    return;
+  }
+  if (PYRAMIDILAATTA(osoite)) {
+    event.respondWith(laattaPeilista(event.request));
+    return;
+  }
   // Ulkoisista kutsuista välimuistitetaan vain wikikuvat (kuva kerran
   // nähtynä latautuu heti ja toimii offline). Muut ulkoiset kutsut
   // (esim. Wikipedian tiivistelmä-JSON) menevät suoraan verkkoon.
@@ -1470,14 +2424,26 @@ self.addEventListener('fetch', (event) => {
     // verkkotunnus. Ehto on silti tiukka, koska destination === 'image'
     // rajaa jo valmiiksi vain kuviin.
     //
+    // KOHTAAMISET/ MUKAAN 6.9.2026 (omistajan bugiraportti klo 01.09:
+    // "Kartalla pisteitä jotka eivät toimi"). Pelin omat generoidut
+    // kuvat — kohdekartan miniatyyrit, eläinlähikuvat, aarrekuvat ja
+    // havainnekuvat — siirtyivät ämpäriin 2.9.2026 polkuun
+    // `kohtaamiset/<laji>/` (js/media.js assetOsoite), mutta jäivät
+    // tämän ehdon ulkopuolelle: yksikään niistä ei mennyt koriin, ja
+    // jokainen kohdekartan avaus oli siis uusi 12 kuvan purske
+    // r2.dev-osoitteeseen, joka rajoittaa pyyntötahtia (429). Nyt ne
+    // ovat samassa korissa kuin wikikuvat: kerran nähty piirros ei
+    // lähde verkkoon enää lainkaan, joten purske syntyy korkeintaan
+    // kerran per laite.
+    //
     // Äänet ovat oma haaransa heti kuvien jälkeen: ne tarvitsevat
     // Range-käsittelyn (ks. aaniPalanen), jota kuvat eivät tarvitse.
     const kuvalahde = event.request.destination === 'image'
       && (osoite.hostname === 'upload.wikimedia.org'
         || (osoite.hostname === 'commons.wikimedia.org'
           && osoite.pathname.startsWith('/wiki/Special:FilePath/'))
-        || (osoite.hostname.endsWith('.r2.dev')
-          && /^\/(kuvat|liput)\//.test(osoite.pathname)));
+        || (medianIsanta(osoite.hostname)
+          && /^\/(kuvat|liput|kohtaamiset)\//.test(osoite.pathname)));
     if (kuvalahde) {
       /*
        * CORS-nouto vain sinne, mistä sen tiedetään onnistuvan.
@@ -1533,11 +2499,28 @@ self.addEventListener('fetch', (event) => {
             return vastaus;
           }
           /*
-           * CORS ei onnistunut. Kuvan oma no-cors-pyyntö menee silti
-           * läpi — vastaus on opaakki eikä kelpaa koriin, mutta kuva
-           * näkyy. Tämä on sama reitti kuin ennen tätä muutosta.
+           * VAIN ONNISTUNUT VASTAUS MENEE KORIIN. Ei-ok (429, 5xx, 404)
+           * ei tallennu — muuten purskerajoituksen hetkellä koko
+           * kohdekartta jäisi kiinni siihen, että kori palauttaisi
+           * ikuisesti 429:n.
+           *
+           * PALVELIMEN VASTAUS PALAUTUU SELLAISENAAN (6.9.2026). Ennen
+           * tätä ei-ok vastaus johti TOISEEN noutoon (no-cors), eli
+           * juuri 429-purskeen aikana pyyntömäärä kaksinkertaistui —
+           * sama status olisi tullut toisellakin kerralla. Toinen nouto
+           * on nyt vain siltä varalta, ettei CORS-pyyntö saanut
+           * vastausta lainkaan: sellainen tarkoittaa, ettei ämpärin
+           * CORS-sääntö osu tähän alkuperään (peli avattu muualta), ja
+           * silloin kuvan oma no-cors-pyyntö menee yhä läpi. Opaakkia
+           * vastausta ei säilötä.
+           *
+           * Kuvan 429 näkyy kutsujalle `error`-tapahtumana, ja
+           * js/media.js lataaKuvaSitkeasti uusii sen kasvavalla
+           * odotuksella — kori ei siis peitä rajoitusta, vaan estää
+           * vain sen tallentumisen.
            */
-          return fetch(event.request).catch(() => vastaus ?? Response.error());
+          if (vastaus) return vastaus;
+          return fetch(event.request).catch(() => Response.error());
         }),
       );
       return;
@@ -1550,8 +2533,42 @@ self.addEventListener('fetch', (event) => {
      * äänimaisema. Ne käyttäytyvät soitossa samoin, joten myös
      * välimuistin on kohdeltava niitä samoin.
      */
-    if (osoite.hostname.endsWith('.r2.dev') && /^\/(?:audio|aanet)\//.test(osoite.pathname)) {
+    if (medianIsanta(osoite.hostname) && /^\/(?:audio|aanet)\//.test(osoite.pathname)) {
       event.respondWith(aaniPeilista(event.request));
+      return;
+    }
+    /*
+     * Valmiit kirjastot (vendor/): välimuisti ensin, talletus
+     * ensimmäisellä latauksella — ks. VENDORCACHE. Pyyntö menee
+     * sellaisenaan: moduulituonti (js/tehosteketju.js import()) on
+     * CORS-pyyntö ja saa tavallisen vastauksen, <script>-lataus
+     * (js/pallo.js) no-cors-pyyntö ja opaakin vastauksen; kumpikin
+     * kelpaa koriin (vain 206 ei kelpaa), ja koriin kerran pantu
+     * tavallinen vastaus kelpaa myös no-cors-pyynnölle. Jos
+     * kirjastoa ei saada, virhe palaa kutsujalle, joka jatkaa ilman
+     * kirjastoa (laiska lataus + virhehaara).
+     */
+    if (osoite.hostname.endsWith('.r2.dev') && osoite.pathname.startsWith('/vendor/')) {
+      event.respondWith(
+        caches.open(VENDORCACHE).then(async (kori) => {
+          const osuma = await kori.match(event.request.url);
+          if (osuma) return osuma;
+          /*
+           * Nouto cors-tilassa: cors-vastaus kelpaa koriin ja palvelee
+           * myöhemmin sekä <script>-latauksen (no-cors) että
+           * moduulituonnin (import(), cors) — opaakki vastaus palvelisi
+           * vain edellistä. Jos cors ei onnistu (peli avattu muualta
+           * kuin omasta alkuperästä), tavallinen nouto jää varareitiksi
+           * eikä sitä säilötä.
+           */
+          const vastaus = await fetch(event.request.url, { mode: 'cors' }).catch(() => null);
+          if (vastaus && vastaus.ok) {
+            kori.put(event.request.url, vastaus.clone());
+            return vastaus;
+          }
+          return fetch(event.request).catch(() => vastaus ?? Response.error());
+        }),
+      );
       return;
     }
     return;

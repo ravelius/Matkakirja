@@ -33,15 +33,36 @@
  * tunnus, nimi, lyhyt, ikoni, laudat ja lahde — sekä piirra, jos
  * kerros ei ole false. Moottori tarkistaa sen ja heittää selkeän
  * virheen, jos jokin puuttuu.
+ *
+ * HIOMASSA (omistaja 21.9.2026, Raamatun loki "HIOMASSA-LINSSI JA
+ * OPTIKON HYVITYS"): linssi voi olla pelissä palkkiona ENNEN kuin se
+ * toimii. Silloin rivi on muotoa
+ *
+ *     { tunnus: 'yokartta', manner: null, tila: 'hiomassa',
+ *       nimi: 'Yökartta', ikoni: 'assets/linssit/yokartta.png' },
+ *
+ * ilman `tuo`-tuontia: moottori (kerros.js haeLinssi) jättää sen pois
+ * valikoimasta, mutta omistus (omistus.js) tuntee sen — laukku näyttää
+ * sen harmaana "hiomassa optikolla" -ikonina, ja löytäjä saa
+ * OPTIKON_HYVITYS puntaa. Kun linssi valmistuu, rivi vaihdetaan
+ * tavalliseksi (tila pois, tuo mukaan): omistus on jo tallessa
+ * (player.linssit + passileima), joten linssi herää käyttöön itsestään
+ * — kerran nähtyä maailmaa ei oteta pois. `ikoni` on paikkavaraus
+ * Codexin piirtämälle kuvakkeelle; ennen sitä laukku käyttää yhteistä
+ * hiomassa-kuvaa (js/ui.js linssiLiuska).
  */
 export const LINSSIT = [
   // { tunnus: 'historia',     manner: 'middleeast',    tuo: () => import('./historia.js') },
+  { tunnus: 'ihmisen-matka', manner: null,           tuo: () => import('./ihmisen-matka.js') },
   // { tunnus: 'ilmasto',      manner: 'oceania',       tuo: () => import('./ilmasto.js') },
   // { tunnus: 'kielet',       manner: 'europe',        tuo: () => import('./kielet.js') },
+  { tunnus: 'keksinnot',    manner: null,            tuo: () => import('./keksinnot.js') },
+  { tunnus: 'pallo',        manner: null,            tuo: () => import('./pallo.js') },
   // { tunnus: 'leviaminen',   manner: 'africa',        tuo: () => import('./leviaminen.js') },
   // { tunnus: 'maaluvut',     manner: null,            tuo: () => import('./maaluvut.js') },
   // { tunnus: 'muuttoliike',  manner: null,            tuo: () => import('./muuttoliike.js') },
   { tunnus: 'radio',        manner: null,            tuo: () => import('./radio.js') },
+  { tunnus: 'satelliitti',  manner: null,            tuo: () => import('./satelliitti.js') },
   // { tunnus: 'tahdet',       manner: null,            tuo: () => import('./tahdet.js') },
   { tunnus: 'topografia',   manner: 'southamerica',  tuo: () => import('./topografia.js') },
   // { tunnus: 'tuulet',       manner: 'asia',          tuo: () => import('./tuulet.js') },

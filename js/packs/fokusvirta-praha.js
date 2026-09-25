@@ -118,31 +118,113 @@ export const FOKUSVIRTA_PRAHA = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
+    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 67072e87444f8277b3f7318c4d401fb516e3adf6086947115c2b8a55514b9a0e. */
+    luentakuva: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-praha-r20260909-paper-v4.jpg",
+      lyhyt: "Praha, 1873. Kiire jäi kellon eteen odottamaan.",
+      selite: 'Astronominen kello sai torilla kokonaisen joukon katsomaan ylöspäin, kun ajuri odotti vaunuineen syrjemmällä. Taskukelloni oli tarkempi mutta sillä hetkellä paljon huonompi seuralainen.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://prague.eu/en/about-the-old-town-astronomical-clock/","https://prague.eu/en/objevujte/old-town-hall-with-astronomical-clock-staromestska-radnice-s-orlojem/"],
+    },
+    luentakuva2: {
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-praha-r20260911-paper2-v1.jpg",
+      lyhyt: "Praha, 1873. Ajurin kellossa puoli tuntia oli aivan tavallinen määrä.",
+      selite: 'Ajuri tarkisti kelloaan vaunujen vieressä, kun torin koneisto piti muun yleisön vallassaan. Hänen hevosensa suhtautui puoleen tuntiin rauhallisemmin kuin hän.',
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://prague.eu/en/about-the-old-town-astronomical-clock/"],
+    },
     /*
      * Paikkarivi on kirjoittajan oma. Kuukausi on lokakuu, jotta
      * Praha asettuu Budapestin (marraskuu) ja Lontoon (joulukuu)
      * eteen aallon 2 sisällä. Sääkommentti on isoisän havainto eikä
      * mitattu väite.
      */
-    paikkarivi: 'Praha, lokakuussa 1873. Kirkasta; yön aikana '
-      + 'ensimmäinen halla.',
+    paikkarivi: 'Praha, lokakuussa 1873. Kirkasta; yön aikana ensimmäinen '
+      + 'halla; puntari korkealla.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Prahassa on kello, joka näyttää auringon ja kuun paikan '
-      + 'mutta ei kiirettä. Myöhästyin sen takia ajurin kyydistä enkä '
-      + 'kadu. Tässä kaupungissa keisari keräsi aikoinaan kaiken '
-      + 'maailman ihmeet yhteen saliin — ja sali on yhä olemassa, vaikka '
-      + 'ihmeet ovat hajallaan.',
-    luenta: '[curious] Prahassa on kello, joka näyttää auringon ja kuun '
-      + 'paikan mutta ei kiirettä. [laughs] Myöhästyin sen takia '
-      + 'ajurin kyydistä enkä kadu. [softly] Tässä kaupungissa keisari '
-      + 'keräsi aikoinaan kaiken maailman ihmeet yhteen saliin — '
-      + '[whispers] ja sali on yhä olemassa, vaikka ihmeet ovat '
-      + 'hajallaan.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 358 merkkiä (yläraja 400). */
+    teksti: "Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.",
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: ei erikseen hiljaisia osuuksia (jokainen virke
+     * saa reaktion).
+     */
+    reaktiot: [
+  {
+    "id": "praha.r1",
+    "ankkuri": "luuranko soitti, apostolit kulkivat",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "praha.r2",
+    "ankkuri": "tilaa auringolle, kuulle ja kuolemalle",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "praha.r3",
+    "ankkuri": "omassani vain kiireelle",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "praha.r4",
+    "ankkuri": "samasta paikasta puoli tuntia myöhemmin",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "praha.r5",
+    "ankkuri": "Hän piti aikaa hukattuna",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. [softly] Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-praha.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
+    /*
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era01; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-praha-01-r20260909-euv1-v1.jpg.
+     */
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-praha-01-r20260909-euv1-v1.jpg',
+        lyhyt: 'Praha: minua katsotaan harvoin näin yksimielisesti ylöspäin.',
+        selite: 'Astronomisen kellon alla kokonainen yleisö nostaa kasvonsa ja puhelimensa samaan suuntaan. Hetken luulin heidän odottavan minua, mutta kellolla oli jälleen parempi ohjelmanumero.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://prague.eu/en/objevujte/old-town-hall-with-astronomical-clock-staromestska-radnice-s-orlojem/',
+          'https://prague.eu/en/objevujte/old-town-square-staromestske-namesti/',
+        ],
+      },
+    ],
     /*
      * LIVIAN MAADOITUS — PARIPERIAATE (Raamattu, "LIVIA AIKASIIRTYMÄN
      * VÄLITTÄJÄNÄ"): merkintä on kevyt arvoitus eikä synkkä, joten
@@ -165,15 +247,33 @@ export const FOKUSVIRTA_PRAHA = {
      * PUHEKIELIPASSI: lyhentymät vain reunoilla ("Kääk", "Mut"),
      * keskellä sanat auki; pronominit kokonaisina; ei huutomerkkejä.
      */
-    maadoitus: 'Kääk. Kello, joka näyttää auringon ja kuun mutta ei '
-      + 'kiirettä — sellaisen kellon minä hyväksyn. Sen vanhin osa on '
-      + 'vuodelta 1410, ja se on maailman vanhin yhä käyvä astronominen '
-      + 'kello; kuunkiertoa pyörittää pelkkä painovoima ja ruuvikierre, '
-      + 'ja se erehtyy noin päivän viidessä vuodessa. Isoisäsi jäi '
-      + 'katsomaan, ja siinä hän teki oikein. Minä hain sillä välin '
-      + 'torilta chlebíčekin, joka on paksu viipale leipää ja sen päällä '
-      + 'perunasalaattia, kinkkua ja suolakurkkua. Mut makeaa siinä ei '
-      + 'ollut grammaakaan, ja sen minä muistan.',
+    /*
+     * KAUPUNGIN KULKU: PULU — LUENTA — PULU (Raamattu, omistaja 7.9.2026).
+     *
+     * Kaksi kenttää, kaksi hetkeä, ja jokainen kupla on oma
+     * äänitiedostonsa (js/liviapuhe.js LIVIAN_KAUPUNKILAHTEET):
+     *
+     *   huudahdus  enintään yksi lyhyt välihuuto LUENNAN AIKANA, tarkasti
+     *              siinä kohdassa, jonka `kohta` nimeää (kohdan on
+     *              esiinnyttävä matkakirjan tekstissä tasan kerran). Se
+     *              soi kertojan päälle hiljempaa eikä kertoja väisty.
+     *   kommentti  1-2 kuplaa luennan jälkeen.
+     *
+     * ALUSTUS ON POISTETTU (omistaja 8.9.2026, sanatarkasti: *"ota
+     * kaikki pulun alustukset pois."*). Isoisän luenta alkaa nyt heti
+     * saapumisesta, ja pulu puhuu vasta luennan aikana ja sen jälkeen.
+     * Ateena on ainoa kaupunki, jossa pulu puhuu ennen luentaa
+     * (pollo.maadoitus).
+     *
+     * KUVIA EI NÄYTETÄ eikä repliikeissä viitata kuviin: kuvat kuuluvat
+     * kaupunkilehteen. Tekstit ovat omistajan sanatarkasti hyväksymiä
+     * (7.9.2026), eikä niitä muotoilla uusiksi.
+     */
+    // Huudahdus poistettu 8.9.2026 (omistaja: ei tuo lisähyötyä).
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Kello kokoaa torille väkeä yhä. Minä istuin katon reunalla ja ihmettelin, miksi puhelintaan katsovat ihmiset nostivat yhtä aikaa päänsä. Kun luuranko liikahti, nostin minäkin."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'miettiva', voimakkuus: 0.5 },
     /*
      * Huomio viittaa herokuvan kohteeseen (Kaarlensilta ja linna).
      * Faktat ovat lehden oman avauskuvan selitteestä (js/packs/
@@ -182,14 +282,9 @@ export const FOKUSVIRTA_PRAHA = {
      * kiinteä ylitys 1840-luvulle asti. Loppu osoittaa linnanmäelle ja
      * pohjustaa oppitunnin ilman että ratkaisee mitään.
      */
-    teksti: 'Tuo silta on ollut paikallaan kauemmin kuin mikään muu '
-      + 'joen ylitys tässä kaupungissa: peruskivi laskettiin 1357, ja '
-      + 'aina 1840-luvulle asti se oli Vltavan ainoa kiinteä ylitys — '
-      + 'siis myös isoisäsi ainoa. Ja tuolla ylhäällä, sillan päässä '
-      + 'kohoavalla linnanmäellä, on se sali, josta hän kirjoitti. Katso '
-      + 'ensin tonne ylös.',
     kuva: {
       ampari: 'herokoe/hero-praha-kaarlensilta-linna.jpg',
+      lyhyt: 'Kaarlensillan peruskivi 1357; Vltavan ainoa kiinteä ylitys Prahassa aina 1840-luvulle asti.',
       selite: 'Kaarlensillan peruskivi laskettiin vuonna 1357 ja silta '
         + 'valmistui 1400-luvun alussa; se oli Vltavan ainoa kiinteä '
         + 'ylitys Prahassa aina 1840-luvulle asti.',
@@ -254,6 +349,10 @@ export const FOKUSVIRTA_PRAHA = {
         + 'aurinkoa soikiota pitkin — ja siitä tuli yksi luonnontieteen '
         + 'käännekohdista. Tycho itse on haudattu Tynin kirkkoon, sadan '
         + 'metrin päähän kellosta.',
+      lahde: 'en-Wikipedia "Tycho Brahe" ja en-Wikipedia "Rudolf II, Holy '
+        + 'Roman Emperor"; pelin oma tarkistettu aineisto '
+        + 'js/packs/kulttuuri-kategoriat.js (praha/avauskuvat). Tarkistettu '
+        + '1.9.2026.',
       /*
        * Commons 29.8.2026: 3072×4080, CC0, käyttäjä Arpasevan, kuvattu
        * 28.5.2026, kuvaus "Tycho Brahe's Tomb in Prague's Týn Church".
@@ -262,6 +361,7 @@ export const FOKUSVIRTA_PRAHA = {
        */
       kuva: {
         tiedosto: "Tycho Brahe's Tomb.jpg",
+        lyhyt: 'Tycho Brahen hautakivi Tynin kirkossa Prahan Vanhankaupungin torilla, lähellä astronomista kelloa.',
         selite: 'Tycho Brahen hautakivi Tynin kirkossa Prahan '
           + 'Vanhankaupungin torilla, muutaman askeleen päässä '
           + 'astronomisesta kellosta.',
@@ -341,6 +441,7 @@ export const FOKUSVIRTA_PRAHA = {
         + 'säänmittaus alkoi Klementinumissa vuonna 1775, ja se jatkuu '
         + 'yhä. Isoisäsi lukemat mahtuisivat siihen sarjaan yhtenä '
         + 'lokakuisena rivinä.',
+      lahde: 'en-Wikipedia "Clementinum". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 6000×4000, CC BY-SA 4.0, Václav Jiroušek,
        * kuvattu 12.4.2024, kuvaus "Baroque Library Hall located in the
@@ -349,6 +450,7 @@ export const FOKUSVIRTA_PRAHA = {
        */
       kuva: {
         tiedosto: 'Clementinum baroque library 2.jpg',
+        lyhyt: 'Klementinumin barokkikirjaston sali valmistui vuosien 1709 ja 1726 välillä.',
         selite: 'Klementinumin barokkikirjaston sali, joka valmistui '
           + 'vuosien 1709 ja 1726 välisessä rakennusvaiheessa.',
         lahde: 'Václav Jiroušek, Wikimedia Commons (CC BY-SA 4.0)',
@@ -422,6 +524,9 @@ export const FOKUSVIRTA_PRAHA = {
         + '1990-luvulta lähtien hevosia on palautettu Mongolian aroille, '
         + 'ja Prahan eläintarha on kuljettanut niitä sinne useassa '
         + 'erässä, muun muassa Tšekin ilmavoimien koneilla.',
+      lahde: 'en-Wikipedia "Przewalski\'s horse", cs-Wikipedia "Chov koně '
+        + 'Převalského v Zoo Praha" ja en-Wikipedia "Rudolf II, Holy Roman '
+        + 'Emperor". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 2200×1567, CC BY-SA 2.5, tšekkiläinen
        * Wikipedia-käyttäjä Packa, kuvattu 1.9.2007, kuvaus
@@ -431,6 +536,7 @@ export const FOKUSVIRTA_PRAHA = {
        */
       kuva: {
         tiedosto: 'Przewalskis horses exposition, Zoo Prague.jpg',
+        lyhyt: 'Przewalskin hevosia Prahan eläintarhassa; kaikki nykyiset polveutuvat eläintarhojen hevosista.',
         selite: 'Przewalskin hevosia Prahan eläintarhassa. Kaikki '
           + 'nykyiset yksilöt polveutuvat kourallisesta eläintarhojen '
           + 'hevosia.',
@@ -538,6 +644,7 @@ export const FOKUSVIRTA_PRAHA = {
      */
     kuva: {
       tiedosto: 'Vertumnus årstidernas gud målad av Giuseppe Arcimboldo 1591 - Skoklosters slott - 91503.jpg',
+      lyhyt: 'Giuseppe Arcimboldon muotokuva keisari Rudolf II:sta 1591, nykyään Skoklosterin linnassa.',
       selite: 'Giuseppe Arcimboldon muotokuva keisari Rudolf II:sta '
         + 'vuodelta 1591. Maalaus on nykyään Skoklosterin linnassa '
         + 'Ruotsissa.',
@@ -708,6 +815,7 @@ export const FOKUSVIRTA_PRAHA = {
        */
       kuva: {
         osoite: 'assets/kartat/nostot/nosto-karlstejn-loistoaika.webp',
+        lyhyt: 'Pyhän Ristin kappeli: kullatut paneelit, upotetut puolijalokivet, tähtiholvi kynttilänvalossa.',
         selite: 'Pyhän Ristin kappeli: kullatut paneelit, seiniin '
           + 'upotetut puolijalokivet ja tähtiholvi kynttilänvalossa.',
         lahde: 'Matkakirjan havainnekuva: aarrekammio vihkiäisvuonnaan '
@@ -722,6 +830,7 @@ export const FOKUSVIRTA_PRAHA = {
        * kuvassa on linna talvimaisemassa, ei ihmisiä. */
       valokuva: {
         tiedosto: 'Karlštejn in winter.jpg',
+        lyhyt: 'Karlštejnin linna talvella; suuri torni sisältää sen rakennussyyn, Pyhän Ristin kappelin.',
         selite: 'Karlštejnin linna talvella. Suuri torni oikealla '
           + 'sisältää Pyhän Ristin kappelin, jota varten koko linna '
           + 'rakennettiin.',

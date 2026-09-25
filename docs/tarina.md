@@ -16,12 +16,24 @@ hän kuoli aikaa sitten. Matkustava osapuoli on hänen päiväkirjansa, jota
 lapsenlapsi lukee junissa, laivoissa ja lentokentillä, ja jonka merkinnät
 ovat vuoroin hämmentävän tarkkoja ja vuoroin toivottoman vanhentuneita.
 
+**Isoisän ulkonäkö (kaanon 3.9.2026, kuvaputken valokuvat Kanton ja
+Bombay 1873):** noin 35–40-vuotias brittiläinen herrasmiesmatkailija.
+Vaalea kolmiosainen pellavapuku ja liivi, tumma solmio, kellonperät
+liivissä, leveälierinen huopahattu kädessä tai pöydällä. Tuuhea,
+kihartuva vaalea tukka ja lyhyt täysparta. Avoin, vilpitön hymy; istuu
+tai seisoo rennosti paikallisten seurassa, ei koskaan poseeraa
+komentavasti. Matkassa iso vaneri- ja nahkakuorinen matka-arkku. Kaikki
+uudet kuvat ja kuvaukset isoisästä noudattavat tätä.
+
 Nuori Fogg olettaa maailman olevan suunnilleen siinä kunnossa kuin isoisä
 sen jätti.
 
 Se ei ole.
 
 ## Kaksi ääntä
+
+*(Korjattu omistajan linjauksella 21.9.2026: pelin nykymuodossa nuori
+Fogg ei koskaan kommentoi eikä havainnoi mitään. Hän on pelaaja.)*
 
 Pelin tietoruudussa puhuu vuorotellen kaksi hahmoa. Tämä on tarinan
 rakenne, ei koriste:
@@ -30,13 +42,23 @@ rakenne, ei koriste:
   ovat yhä totta: joet, vuoret, monsuuni, keskiyön aurinko, basaarin
   tuoksut, satamien järjestys. Saa olla toivottoman vanhentunut nimissä,
   rajoissa, tekniikassa ja oletuksissa siitä, kuka maailmaa hallitsee.
-- **Nuoren Foggin havainto** — nykyaika. Faktat, lähteet ja kuiva
-  huvittuneisuus isoisän merkinnöistä. Nuori Fogg ei ole isoisäänsä
-  viisaampi ihmisenä; hän vain sattuu elämään sata viisikymmentä vuotta
-  myöhemmin ja tietää siksi enemmän.
+- **Livia, kirjekyyhky** — nykyaika. Kertoo kaupungin nykytilasta: miten
+  siellä eletään, mitä vanha paikka nykyään palvelee, mitä on muuttunut
+  ja mitä säilynyt; oikaisee isoisää kevyesti ja innostuu helposti
+  (persoona: docs/moduulit/horatio-livia-tuotanto.md). Livia ei ole
+  isoisää viisaampi; hän vain elää sata viisikymmentä vuotta myöhemmin
+  ja on nähnyt käytännössä kaiken.
 
-Vitsi syntyy näiden välistä. Joskus isoisä on oikeassa ja nuori Fogg
+Vitsi syntyy näiden välistä. Joskus isoisä on oikeassa ja Livia
 yllättyy siitä — se on tärkeää, jottei vanha ääni ole pelkkä narri.
+
+**Nuori Fogg on pelaaja, ei ääni.** Hänellä ei ole omia repliikkejä eikä
+havaintoja tietoruudussa. Kaupunkikuvaukset ovat pelin kertojan
+neutraalia tekstiä, eivät nuoren Foggin puhetta. Nuoren Foggin piirteet
+(isoisan-raamattu.md, "Nuori Fogg paperilla") saavat näkyä vain
+kertojan kuvaamana tekona tai Livian huomiona, eivät koskaan
+minä-muodossa. Kolmas ääni, Viisas Pöllö, kommentoi nostoja ja
+skandaaleja omalla äänellään (Raamattu: PÖLLÖN KARAKTÄÄRI).
 
 ## Aarni ja unohdetut aarteet
 
@@ -175,6 +197,28 @@ Kaksi lisäsääntöä:
   paikkaa koskevat faktat tarkistetaan.
 - Sama tehokeino ei saa toistua vierekkäisissä kaupungeissa: kaksi
   "opas sanoi" -tekstiä peräkkäin syö molemmat.
+
+## Kohtaamishenkilöt (kaanon 7.9.2026)
+
+Jokaisen kaupungin aarrekohtaamisessa on YKSI nimetty nykyhetken
+paikallinen (js/tyohuone-kehitys-data.js KAARI_PAKETIT). Omistaja
+valitsee henkilön kuvaputken arviointisivulla, ja kaari kirjoitetaan
+valitun kuvan mukaan — henkilö lukitaan vasta kuvavalinnalla.
+Henkilöä koskevat kolme kiellettyä odotusta (isoisan-raamattu.md):
+hän ei tunnista Horatiota, ei odota perillistä eikä kanna perittyä
+lupausta; hän lukee vanhaa kirjaa oman ammattitaitonsa ja
+uteliaisuutensa varassa, ja löytö on aina kaupungin kätkö.
+
+Omistajan palautteesta 7.9.2026 vaihdetut henkilöt: Tallinna opas
+Leena (Raatihuoneentori, vanhankaupungin päivät), Tromssa
+venemekaanikko Sigrid (satamaverstas keskiyön auringossa), Medina
+punoja Safa (paja kaupungin ulkopuolella — Horatio ei astu
+kaupunkiin), Kiova näyttelymestari Danylo (Kultaisen portin museo;
+1873 portti oli raunio, ei kupolia), Lappi poronhoitaja Reetta
+(talvinen metsä päivänvalossa) ja Nikosia seripainotaiteilija Marios
+(Chrysaliniotissan käsityöpiha; omistaja vahvisti Marioksen
+7.9.2026). Vanhat henkilöt (Eve, Kjell,
+Omar, Taras, Aslak, Andreas) poistuivat kaanonista.
 
 ## Avoinna (mietitään yhdessä)
 

@@ -203,7 +203,10 @@ class TynkaAudio {
 
   get src() { return this._src; }
 
-  set src(v) { this._src = v; this.readyState = 0; }
+  /* Musiikkisoitin saa srcinsä vasta konstruktorin jälkeen (crossOrigin
+   * on asetettava ensin), joten alkuperäinen osoite otetaan talteen
+   * ensimmäisestä asetuksesta riippumatta siitä, kumpaa tietä se tuli. */
+  set src(v) { this._src = v; if (!this.alkuSrc) this.alkuSrc = v ?? ''; this.readyState = 0; }
 
   getAttribute(nimi) { return nimi === 'src' ? (this._src || null) : null; }
 
@@ -450,4 +453,182 @@ test('silmukan vahti viritetään vain kerran soitinta kohti', async () => {
   await mikrotehtavat();
   ajaRuudut();
   assert.equal(a.kuuntelijat.get('timeupdate').size, 1);
+});
+
+/*
+ * ── AVAUKSEN ÄÄNI (omistajan tilaus 7.9.2026) ────────────────────────
+ *
+ * *"heti kun pelaaja on painanut "aloita seikkailu" nappia, niin
+ * musiikki saisi hiljentyä hieman ja mukaan saisi tulla se terminaalin
+ * äänimaisema voimakkaasti mukaan"*.
+ *
+ * Mitataan se, mitä omistaja kuulee: kaksi raitaa liikkuu ERI
+ * SUUNTIIN samasta painalluksesta, kumpikaan ei vaikene, ja purku
+ * palauttaa täsmälleen entiset tasot.
+ */
+const musiikki = (s) => s.soittimet.filter((a) => /musa-/.test(a.alkuSrc)).pop() ?? null;
+
+test('avauksen ääni: musiikki laskee, terminaali nousee, kumpikaan ei vaikene', async () => {
+  const s = await pystyta({ ctxTila: 'running' });
+  await soitaEtusivu(s);
+  const maisema = s.maisemat().pop();
+  const musa = musiikki(s);
+  assert.ok(musa, 'etusivulla pitää soida pohjaraita');
+  const ennen = { maisema: maisema.kuuluu, musa: musa.kuuluu };
+  assert.ok(ennen.maisema > 0 && ennen.musa > 0, JSON.stringify(ennen));
+
+  assert.equal(s.virta.aloitaAvauksenAani(), true, 'ensimmäinen painallus aloittaa avauksen');
+  assert.equal(s.virta.avauksenAaniPaalla(), true);
+  ajaRuudut();
+  const avaus = { maisema: maisema.kuuluu, musa: musa.kuuluu };
+  assert.ok(avaus.musa < ennen.musa, `musiikin pitää laskea: ${JSON.stringify(avaus)}`);
+  assert.ok(avaus.musa > 0, 'musiikki hiljenee mutta ei vaikene');
+  assert.ok(avaus.maisema > ennen.maisema, `terminaalin pitää nousta: ${JSON.stringify(avaus)}`);
+
+  // Toinen painallus ei tee mitään: sekoitus on jo päällä.
+  assert.equal(s.virta.aloitaAvauksenAani(), false);
+
+  assert.equal(s.virta.lopetaAvauksenAani(), true, 'luennan loputtua palataan');
+  ajaRuudut();
+  assert.equal(s.virta.avauksenAaniPaalla(), false);
+  assert.ok(Math.abs(maisema.kuuluu - ennen.maisema) < 1e-6,
+    `maiseman pitää palata entiselleen: ${maisema.kuuluu} ≠ ${ennen.maisema}`);
+  assert.ok(Math.abs(musa.kuuluu - ennen.musa) < 1e-6,
+    `musiikin pitää palata entiselleen: ${musa.kuuluu} ≠ ${ennen.musa}`);
+});
+
+test('avauksen ääni: portissa odottava maisema nousee suoraan avauksen tasoon', async () => {
+  /*
+   * Portin takana selain ei vielä salli toistoa, joten etusivun ääni
+   * odottaa elettä — ja se ele ON napin painallus. Silloin soitin
+   * syntyy vasta noston jälkeen, eikä se saa nousta ensin tavalliseen
+   * tasoon ja hypätä sitten uudelleen.
+   */
+  const s = await pystyta({ ctxTila: 'running', soitto: 'estetty' });
+  await soitaEtusivu(s);
+  assert.equal(s.maisemat().pop().kuuluu, 0, 'estetty toisto ei vielä kuulu');
+
+  s.virta.aloitaAvauksenAani();
+  s.asetaSoitto('ok');
+  laukaiseEle('pointerdown');
+  await mikrotehtavat();
+  ajaRuudut();
+  const nostettu = s.maisemat().pop().kuuluu;
+  assert.ok(nostettu > 0, 'eleen jälkeen terminaalin pitää kuulua');
+
+  s.virta.lopetaAvauksenAani();
+  ajaRuudut();
+  const tavallinen = s.maisemat().pop().kuuluu;
+  assert.ok(nostettu > tavallinen,
+    `noston pitää olla tavallista tasoa kovempi: ${nostettu} ≤ ${tavallinen}`);
+});
+
+/*
+ * OMISTAJAN VIKA 7.9.2026 ILLALLA (v1671): *"Lentoterminaalin ääni ei
+ * kuulu etusivulla, vaikka pitäisi."* Avauksen nostot kerrottiin
+ * väistön PÄÄLLE, ja avauksen ainoa puhuja on avaustekstin kertoja —
+ * joten nosto (1,45) hukkui kertojan väistöön (0,25) heti 2,85
+ * sekunnin kohdalla ja terminaali jäi koko luennan ajaksi 64 %
+ * kalibroidun tasonsa alle. Kertoja on osa avausta, ei keskeytys.
+ */
+test('avauksen aikana kertoja EI väistä terminaalia — luenta tulee sen päälle', async () => {
+  const s = await pystyta({ ctxTila: 'running' });
+  await soitaEtusivu(s);
+  const maisema = s.maisemat().pop();
+  const musa = musiikki(s);
+  const tavallinen = maisema.kuuluu;
+  s.virta.aloitaAvauksenAani();
+  ajaRuudut();
+  const avaus = { maisema: maisema.kuuluu, musa: musa.kuuluu };
+  s.virta.puheAlkoi();
+  ajaRuudut();
+  assert.ok(Math.abs(maisema.kuuluu - avaus.maisema) < 1e-6,
+    `terminaali pysyy avauksen tasossa kertojan alla: ${maisema.kuuluu} ≠ ${avaus.maisema}`);
+  assert.ok(maisema.kuuluu > tavallinen,
+    `terminaalin pitää luennan aikana olla YLI tavallisen tasonsa: ${maisema.kuuluu} ≤ ${tavallinen}`);
+  // Musiikkiin väistö kertyy yhä: siellä molemmat osoittavat alaspäin.
+  assert.ok(musa.kuuluu < avaus.musa, 'kertoja väistää myös hiljennettyä musiikkia');
+  s.virta.puheLoppui();
+  ajaRuudut();
+  assert.ok(Math.abs(musa.kuuluu - avaus.musa) < 1e-6, 'musiikki palaa avauksen tasoon');
+  s.virta.nollaaPuhujat();
+});
+
+test('avauksen aikana lukunäkymän hiljennys väistää terminaalia yhä', async () => {
+  /*
+   * Pöllö tai lehti kesken avauksen on PELAAJAN OMA keskeytys eikä osa
+   * avausta: silloin terminaali madaltuu kuten aina.
+   */
+  const s = await pystyta({ ctxTila: 'running' });
+  await soitaEtusivu(s);
+  const maisema = s.maisemat().pop();
+  s.virta.aloitaAvauksenAani();
+  ajaRuudut();
+  const avaus = maisema.kuuluu;
+  s.virta.hiljennaAmbienssi('pollo');
+  ajaRuudut();
+  assert.ok(maisema.kuuluu < avaus,
+    `lukunäkymän pitää madaltaa nostettuakin terminaalia: ${maisema.kuuluu} ≥ ${avaus}`);
+  s.virta.palautaAmbienssi('pollo');
+  ajaRuudut();
+  assert.ok(Math.abs(maisema.kuuluu - avaus) < 1e-6, 'hiljennys purkautuu avauksen tasoon');
+  s.virta.nollaaHiljennykset();
+});
+
+/*
+ * ── MUSIIKKI JA ÄÄNIMAISEMA OVAT ERI KYTKIMET ────────────────────────
+ *
+ * OMISTAJAN VIKA 7.9.2026 illalla, sanatarkasti: *"striimilukija ei mene
+ * päälle, jos taustamusiikki on kytketty pois. Ne ovat kaksia irrallista
+ * asiaa, joten striimi-ääni pitäisi kuulua, vaikka taustamusiikki on
+ * kytketty pois."* (Raamattu, VIAT v1672.)
+ *
+ * Juurisyy oli, että kaikki taustaääni kysyi samaa lippua (sound.js
+ * enabled). Nyt musiikilla on oma kytkin (js/musiikkivalitsin.js), ja
+ * nämä testit mittaavat molemmat suunnat: musiikki pois ei saa vaientaa
+ * maisemaa, ja koko pelin mykistys vaientaa yhä molemmat.
+ */
+test('musiikki pois: äänimaisema soi silti (kaksi eri kytkintä)', async () => {
+  const juuri = new URL('../js/', import.meta.url).href;
+  const valitsin = await import(`${juuri}musiikkivalitsin.js`);
+  const s = await pystyta({ ctxTila: 'running' });
+  try {
+    valitsin.asetaMusiikkiPaalla(false);
+    await soitaEtusivu(s);
+    const maisema = s.maisemat().pop();
+    assert.ok(maisema, 'maiseman soittimen pitää syntyä musiikin ollessa pois');
+    assert.ok(maisema.kuuluu > 0, `äänimaiseman pitää kuulua, nyt ${maisema.kuuluu}`);
+    assert.equal(s.soittimet.filter((a) => /musa-/.test(a.alkuSrc)).length, 0,
+      'musiikin ollessa pois pohjaraitaa ei saa syntyä');
+  } finally {
+    valitsin.asetaMusiikkiPaalla(true);
+  }
+});
+
+test('musiikin kytkin päälle palauttaa raidan samaan paikkaan', async () => {
+  const juuri = new URL('../js/', import.meta.url).href;
+  const valitsin = await import(`${juuri}musiikkivalitsin.js`);
+  const s = await pystyta({ ctxTila: 'running' });
+  try {
+    valitsin.asetaMusiikkiPaalla(false);
+    await soitaEtusivu(s);
+    assert.equal(s.virta.soivaPohjaMusiikki(), null, 'pois päältä ei soi mitään');
+    // Kytkin päälle: valitsin herättää soittimen, joka muistaa paikan.
+    valitsin.asetaMusiikkiPaalla(true);
+    await mikrotehtavat();
+    ajaRuudut();
+    assert.ok(s.virta.soivaPohjaMusiikki(), 'kytkimen palatessa raidan pitää palata');
+    assert.ok(s.soittimet.some((a) => /musa-/.test(a.alkuSrc)), 'raidalle syntyy soitin');
+  } finally {
+    valitsin.asetaMusiikkiPaalla(true);
+  }
+});
+
+test('koko pelin mykistys vaientaa yhä sekä musiikin että maiseman', async () => {
+  const s = await pystyta({ ctxTila: 'running' });
+  s.sfx.enabled = false;
+  await soitaEtusivu(s);
+  assert.equal(s.maisemat().length, 0, 'mykistettynä maisemaa ei synny');
+  assert.equal(s.virta.soivaPohjaMusiikki(), null, 'mykistettynä musiikkia ei synny');
+  s.sfx.enabled = true;
 });

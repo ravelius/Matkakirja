@@ -54,8 +54,9 @@
  * Kohtaamisen teksti on EHDOTUS päätoimittajalle (ks. FABLE KATSELMOI
  * alempana), ei kaanonia. Kuvaa siinä ei ole. Hahmo ja laattakysymys
  * tulevat tarinakaaren paketista (js/tyohuone-kehitys-data.js
- * KAARI_PAKETIT, 'amsterdam'): siltavahti Willem ja kysymys
- * kanavatalojen päädyissä olevasta koukusta.
+ * KAARI_PAKETIT, 'amsterdam'): muuttotyöntekijä Yara ja kysymys
+ * kanavatalojen päädyissä olevasta koukusta (henkilö vaihdettu
+ * 5.9.2026, ks. KOHTAAMINEN alempana).
  *
  * ── ÄÄNITE ─────────────────────────────────────────────────────────
  *
@@ -92,7 +93,7 @@
  * MIKSI EI NOSTOKOUKKUKYSYMYSTÄ: kaupungin laattakysymys koskee
  * kanavatalon päädyssä olevaa koukkua (ks. KOHTAAMINEN alempana). Jos
  * lehden aarteen avaava tehtävä kysyisi samasta koukusta, aarrekysymys
- * olisi ratkaistu ennen kuin Willemiä on tavattu.
+ * olisi ratkaistu ennen kuin Yaraa on tavattu.
  *
  * HUOM. SIVUN 1 KULTTUURIVISA on Amsterdamin oma kysymys kapeista
  * kanavataloista (js/packs/europe-kulttuuri.js), ja js/fokustehtavat.js
@@ -134,67 +135,128 @@ export const FOKUSVIRTA_AMSTERDAM = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* KAANON (Fable) — paikkarivi sellaisenaan, vain piste lisätty. */
-    paikkarivi: 'Amsterdam, toukokuussa 1873.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    teksti: 'Tämä kaupunki on rakennettu veteen lyötyjen paalujen '
-      + 'varaan, ja minusta tuntuu, että myös sen omaisuus seisoo '
-      + 'samalla tavalla — ilmaan luotetun arvon päällä. Kanavat '
-      + 'kiertävät kehinä kuin puun vuosirenkaat. Timanttihiomoissa '
-      + 'juutalaiset mestarit halkovat kiviä, jotka kulkevat täältä '
-      + 'kaikkien kruunupäiden sormiin. Vanhat miehet puhuvat yhä '
-      + 'Kompaniasta, jonka laivat toivat idän rikkaudet — ja veivät '
-      + 'monta miestä, jotka eivät palanneet.',
+    /* Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json */
+    luentakuva: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-amsterdam-i1-r20260914-tarina-v1.jpg',
+      lyhyt: 'Amsterdam, 1873. Kanavatalon ullakolle mahtui kokonainen kirkko.',
+      selite: 'Pappi seisoo kapean ullakkokirkon alttarin vierellä puuparvien alla. Kirkko rakennettiin kolmen kanavatalon ullakoille 1660-luvulla, kun katolinen jumalanpalvelus oli julkisesti kielletty.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://opsolder.nl/en/the-monument/',
+      ],
+    },
+    luentakuva2: {
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-amsterdam-i2-r20260914-tarina-v1.jpg',
+      lyhyt: 'Amsterdam, 1873. Ullakkokirkon urut salin toisessa päädyssä.',
+      selite: 'Vuonna 1794 rakennetut urut ovat parven päädyssä penkkien yläpuolella. Kaksikerroksiset parvet kiertävät salia, ja soitin täyttää sen ahtaan päädyn kokonaan.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://opsolder.nl/wp-content/uploads/2024/04/haantje36.pdf',
+      ],
+    },
+    /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
+       tunnelmarivi (Fablen kaanon 8.9.2026). */
+    paikkarivi: 'Amsterdam, toukokuussa 1873. Tuulista; kanavat väreilevät; '
+      + 'puntari putoaa.',
+    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
+    teksti: "Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.",
     /*
      * LUENTA = sama teksti tunnetagein (Raamattu, luentaprosessi):
      * neljä tagia, alku ja loppu eri sävyssä, yksikään sana ei vaihdu.
      */
-    luenta: '[curious] Tämä kaupunki on rakennettu veteen lyötyjen '
-      + 'paalujen varaan, ja minusta tuntuu, että myös sen omaisuus '
-      + 'seisoo samalla tavalla — ilmaan luotetun arvon päällä. '
-      + '[softly] Kanavat kiertävät kehinä kuin puun vuosirenkaat. '
-      + 'Timanttihiomoissa juutalaiset mestarit halkovat kiviä, jotka '
-      + 'kulkevat täältä kaikkien kruunupäiden sormiin. [curious] '
-      + 'Vanhat miehet puhuvat yhä Kompaniasta, jonka laivat toivat '
-      + 'idän rikkaudet — [whispers] ja veivät monta miestä, jotka '
-      + 'eivät palanneet.',
+    /*
+     * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
+     * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
+     * pilotin laajennus). Ankkuri on katkelma luentatekstistä sanasta
+     * sanaan ja osuu tekstiin tasan kerran; hetki lasketaan äänitteen
+     * sanakohtaisista aikaleimoista (forced alignment), ei merkkimäärästä.
+     * Tarkoitus: myotailee | epailee | torjuu | huvittuu | hammastyy |
+     * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
+     * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
+     * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
+     * Hiljaiset osuudet: "Se riippui katon koukusta" (tekninen selitys).
+     */
+    reaktiot: [
+  {
+    "id": "amsterdam.r1",
+    "ankkuri": "ullakolta löysin kokonaisen kirkon urkuineen",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "amsterdam.r2",
+    "ankkuri": "katoliset eivät saaneet pitää messua julkisesti",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "amsterdam.r3",
+    "ankkuri": "Kysyin papilta kuiskaten",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "amsterdam.r4",
+    "ankkuri": "Olivat tienneet jo kauan",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "amsterdam.r5",
+    "ankkuri": "urut alkoivat soida niin, että penkki värisi",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
+    luenta: "[curious] Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. [warmly] Sitten urut alkoivat soida niin, että penkki värisi.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-amsterdam.mp3',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
   pollo: {
     /*
-     * LIVIAN MAADOITUS — TÄMÄN PAKETIN OMA TEKSTI (ei kaanonia).
-     * Piirtyy kuplan ensimmäiseksi kappaleeksi, heti isoisän merkinnän
-     * perään (js/fokusvirta.js piirraPollo).
-     *
-     * PARIPERIAATE (Raamattu, "LIVIA AIKASIIRTYMÄN VÄLITTÄJÄNÄ"):
-     * merkintä on tyyni ja pohtiva, joten Livia saa tarttua sen
-     * vertaukseen — eikä nalja osu isoisään vaan siihen, että hänen
-     * kielikuvansa on kirjaimellisesti totta.
-     *
-     * FAKTAKURI: kolme väitettä, kaikki pelin omasta, jo hyväksytystä
-     * aineistosta (js/packs/kulttuuri-kategoriat.js, amsterdam-osion
-     * nosto "Koko kaupunki seisoo puutukkien päällä"): maaperä on
-     * suota ja löysää hiekkaa, Damin palatsi lepää 13 659 paalun
-     * päällä, ja paalu kestää vain veden alla — pohjaveden laskiessa
-     * puu lahoaa. EI YHTÄÄN UUTTA FAKTAVÄITETTÄ.
-     *
-     * PUHEKIELIPASSI (Raamattu, LIVIAN PUHEKIELI): lyhentymät vain
-     * reunoilla ("Kääk", "mut"), keskellä sanat auki, pronominit
-     * kokonaisina, ei huutomerkkejä.
+     * PULUCAM (kuvatoimitus 9.9.2026, erat euv1-era01; tilaus
+     * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
+     * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
+     * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json
      */
-    maadoitus: 'Kääk. Se vertaus ilmaan luotetusta arvosta on paljon '
-      + 'kirjaimellisempi kuin isoisäsi ehti tietää: tämän kaupungin '
-      + 'alla ei ole kalliota vaan suota ja löysää hiekkaa, ja jokainen '
-      + 'talo seisoo maahan lyötyjen puupaalujen varassa. Damin aukion '
-      + 'palatsin alla niitä on kolmetoistatuhatta kuusisataa'
-      + 'viisikymmentäyhdeksän. Ja paalu kestää täsmälleen niin kauan '
-      + 'kuin se pysyy veden alla — jos pohjavesi laskee, puu lahoaa ja '
-      + 'talo alkaa nojata naapuriinsa. Koko kaupunki on siis sopimus '
-      + 'siitä, että vesi jätetään paikalleen. Mut se sopimus on '
-      + 'pitänyt neljäsataa vuotta, eikä sitä voi sanoa kovin monesta '
-      + 'sopimuksesta.',
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-amsterdam-p1-r20260914-tarina-v1.jpg',
+        lyhyt: 'Amsterdam: pyörät parkissa veden alla, kuivin renkain.',
+        selite: 'Stationsplein-hallin pyörätelineet ja valkoiset pylväät kohoavat matalan kameran yllä. Halli on rakennettu veden alle aseman edustan satama-altaaseen.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.prorail.nl/nieuws/twee-grote-fietsenstallingen-bij-station-amsterdam-centraal-geopend',
+        ],
+      },
+      {
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-amsterdam-p2-r20260914-tarina-v1.jpg',
+        lyhyt: 'Amsterdam: ankka ui pyörähallin katon yllä.',
+        selite: 'Ankka kelluu Open Havenfrontilla, jonka alla sijaitsee aseman edustan pyörähalli. Pinnan alla on tilaa tuhansille polkupyörille.',
+        lahde: 'Matkakirjan havainnekuva',
+        lahteet: [
+          'https://www.prorail.nl/nieuws/twee-grote-fietsenstallingen-bij-station-amsterdam-centraal-geopend',
+        ],
+      },
+    ],
+    /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
+    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    kommentti: ["Amsterdamin aseman edessä on pyörähalli veden alla. Seitsemälletuhannelle pyörälle! Kävin kurkistamassa sisään ja palasin rantaan. Vieressä ui ankka. Sen alla minä olin juuri kävellyt, kuivin jaloin. Olisin halunnut nähdä sen ilmeen, jos se olisi tiennyt."],
+    /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
+    tunne: { tunne: 'ylpea', voimakkuus: 0.5 },
     /* KAANON (Fable) — Livian huomio sellaisenaan, sanaakaan muuttamatta. */
     teksti: 'Amsterdamissa on enemmän siltoja kuin Venetsiassa, mut '
       + 'siitä ei pidetä täällä isoa ääntä.. Ne kanavakehät näkyvät '
@@ -212,6 +274,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
      */
     kuva: {
       ampari: 'herokoe/hero-amsterdam-kanaalikeha.jpg',
+      lyhyt: 'Amsterdamin kanaalikehä alkoi 1613; 1600-luvun kehä on Unescon maailmanperintöä vuodesta 2010.',
       selite: 'Kanaalikehän kaivaminen alkoi 1613 kaupungin '
         + 'suunniteltuna laajennuksena, ja 1600-luvun kehä pääsi '
         + 'Unescon maailmanperintöluetteloon 2010.',
@@ -296,6 +359,8 @@ export const FOKUSVIRTA_AMSTERDAM = {
         + 'Vuonna 1894 juuri nämä työläiset perustivat maan ensimmäisen '
         + 'suuren ammattiliiton. Boasin tehdas seisoo yhä '
         + 'Uilenburgerstraatilla, ja siellä hiotaan edelleen timantteja.',
+      lahde: 'nl-Wikipedia "Algemene Nederlandse Diamantbewerkersbond" ja '
+        + 'nl-Wikipedia "Diamantslijperij Boas". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 2629×2029, CC0, Willem van de Poll, kuvattu
        * 1.1.1932, kuvaus "Slijpen van de diamant bij Van Moppes in
@@ -311,6 +376,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       kuva: {
         tiedosto: 'Slijpen van de diamant bij Van Moppes in Amsterdam, Bestanddeelnr 252-0343.jpg',
+        lyhyt: 'Timantin hionta amsterdamilaisessa hiomossa 1932: kivi painetaan pyörivää timanttipölytahkoa vasten.',
         selite: 'Timantin hionta amsterdamilaisessa hiomossa vuonna '
           + '1932: kivi painetaan vaakatasossa pyörivää tahkoa vasten, '
           + 'ja tahkoon on hierottu timanttipölyä.',
@@ -399,6 +465,8 @@ export const FOKUSVIRTA_AMSTERDAM = {
         + 'lintu, joka isoisäsi aikaan väisti ihmistä puolen '
         + 'peninkulman päähän, katsoo nyt hänen jälkeläistään silmiin '
         + 'sillankaiteelta.',
+      lahde: 'en-Wikipedia "Grey heron" ja nl-Wikipedia "Blauwe reiger". '
+        + 'Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 2048×1536, CC BY-SA 3.0, Apus apus, kuvattu
        * 21.11.2010, kuvaus "Grey heron (Ardea cinerea) on an Amsterdam
@@ -408,6 +476,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       kuva: {
         tiedosto: 'Ardea cinerea - Amsterdam.jpg',
+        lyhyt: 'Harmaahaikara kanavan sillan kaiteella Amsterdamissa; kaupungin haikarat elävät ihmisten seassa.',
         selite: 'Harmaahaikara seisoo sillan kaiteella amsterdamilaisen '
           + 'kanavan yllä; kaupungin haikarat elävät ihmisten seassa '
           + 'ympäri vuoden.',
@@ -505,6 +574,8 @@ export const FOKUSVIRTA_AMSTERDAM = {
         + 'tai sen kokoinen kopio, jonka neljäsataa vapaaehtoista '
         + 'rakensi vuosina 1982–1990. Se on merimuseon laiturissa, ja '
         + 'sinne pääsee kävelemään kuivin jaloin.',
+      lahde: 'nl-Wikipedia "Amsterdam (schip, 1748)" ja en-Wikipedia '
+        + '"Amsterdam (1748 ship)". Tarkistettu 1.9.2026.',
       /*
        * Commons 29.8.2026: 5027×3352, CC BY-SA 2.0, Adrian Diack
        * (geograph.org.uk), kuvaus "The wreck of the Amsterdam in the
@@ -516,6 +587,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       kuva: {
         tiedosto: 'The wreck of the Amsterdam in the fossil forest at Bulverhythe - geograph.org.uk - 8295766.jpg',
+        lyhyt: 'Amsterdam-laivan runko paljastuu Bulverhythen rannalla vain poikkeuksellisen matalalla vedellä.',
         selite: 'Amsterdam-laivan runko paljastuu Bulverhythen rannalla '
           + 'vain poikkeuksellisen matalan veden aikaan; etualalla '
           + 'näkyy muinaismetsän kantoja.',
@@ -620,6 +692,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
      */
     kuva: {
       tiedosto: 'Detail van de top van de voorgevel, een klokgevel, met hijsbalk - Amsterdam - 20528909 - RCE.jpg',
+      lyhyt: 'Kellopäädyn hijsbalk-nostopuu on yhä käytössä; talot on rakennettu hieman eteenpäin kallelleen.',
       selite: 'Kellopäädyn alta työntyvä hijsbalk-nostopuu on yhä '
         + 'käytössä, ja talot rakennettiin hieman eteenpäin kallelleen, '
         + 'jottei nostettava tavara kolhisi julkisivua.',
@@ -632,86 +705,102 @@ export const FOKUSVIRTA_AMSTERDAM = {
   /*
    * ---------- 5. Kohtaaminen ----------
    *
-   * TÄMÄ TEKSTI ON EHDOTUS EIKÄ KAANONIA. Hahmo, laattakysymys ja
-   * kohtaamisen oma repliikki ovat tarinakaaren paketissa
-   * (js/tyohuone-kehitys-data.js KAARI_PAKETIT, 'amsterdam'):
-   * siltavahti Willem kääntää kammella auki saman kääntösillan, jota
-   * hänen sukunsa on avannut purjeille sukupolvien ajan, ja hänen
-   * kirjaansa on merkitty jokainen vene, jolle silta on avattu.
+   * Kirjoitettu 5.9.2026 (Opus-luonnos); Fable tarkistanut.
    *
-   * MITÄ LUONNOS EI TEE: se ei kertaa Willemin repliikkiä, ei toista
-   * hänen kirjansa yksityiskohtaa isoisän veneestä eikä paljasta
-   * laattakysymyksen vastausta. Viimeinen virke on kehotus katsoa
-   * ylös — se on vihje, ei vastaus, ja lunastuu vasta visassa.
+   * HAHMO VAIHDETTU: siltavahti Willem → muuttotyöntekijä Yara
+   * (kuvaputken tarinaehdotus 5.9.2026, Fablen päätös klo 20:05 UTC).
+   * Willemin kirja merkitsi isoisän veneen ja suku avasi siltaa
+   * sukupolvien ajan — molemmat ovat kaanonrikkeitä, ja koko henkilö
+   * poistuu pelistä. Hahmo, laattakysymys ja kohtaamisen oma repliikki
+   * ovat tarinakaaren paketissa (js/tyohuone-kehitys-data.js
+   * KAARI_PAKETIT, 'amsterdam'): Yara keskeyttää kanavatalon muuton ja
+   * tunnistaa kirjan piirroksesta oman työmaansa kulman.
    *
-   * KUVAA EI OLE (omistajan rajaus aallolle 4A).
+   * EI SUKUSALAISUUTTA: Yara ei tunne Horatiota eikä odota perillistä.
+   * Tunnistus syntyy ammattisilmästä — hän mittaa kaappeja ja tietää
+   * talojen mittasuhteet ulkoa.
+   *
+   * MITÄ LUONNOS EI TEE: se ei kertaa Yaran repliikkiä eikä paljasta
+   * laattakysymyksen vastausta. Viimeinen virke on sama kehotus katsoa
+   * ylös kuin ennenkin — vihje, ei vastaus, ja se lunastuu visassa.
+   *
+   * KUVAA EI OLE (omistajan rajaus aallolle 4A). Vanha Willem-kuva on
+   * arkistoitu myös kohtaamiskuvakatalogista (js/kohtaamiskuvat-data.js,
+   * `amsterdam-koysityontekija`), jottei pelissä näy eri ihminen kuin se,
+   * joka kysymyksen esittää.
    */
   kohtaaminen: {
-    hahmo: 'Siltavahti Willem',
-    nappi: 'Tapaa siltavahti',
+    hahmo: 'Muuttotyöntekijä Yara',
+    nappi: 'Tapaa Yara',
     /*
      * VARMISTUSKYSYMYS (omistajan pelitestipalaute v1119): lause on
      * datassa, koska suomen genetiivi ei taivu koneellisesti jokaisesta
      * nimestä.
      */
-    varmistus: 'Haluatko varmasti tavata Willemin juuri nyt?',
+    varmistus: 'Haluatko varmasti tavata Yaran juuri nyt?',
     /*
      * VIHJELINKIN OSIO on kaupunkilehden osion id (js/packs/
      * kulttuuri-kategoriat.js): Amsterdamin lehdessä on kaksi osiota,
-     * 'kaupunki' ("Amsterdam") ja 'taide' ("Taide"). Willemin kysymys
-     * koskee kanavatalon päätyä, ja lähin tuki sille on Amsterdam-osion
-     * nosto "Verotettiin julkisivun leveydestä". Se ei anna vastausta,
-     * vaan nyökkää siihen suuntaan.
+     * 'kaupunki' ("Amsterdam") ja 'taide' ("Taide"). Yaran kysymys koskee
+     * kanavatalon päätyä, ja lähin tuki sille on Amsterdam-osion nosto
+     * "Verotettiin julkisivun leveydestä". Se ei anna vastausta, vaan
+     * nyökkää siihen suuntaan.
      */
     vihjeOsio: 'kaupunki',
-    teksti: 'Willem seisoo kääntösillan kammen vieressä niin kuin hänen '
-      + 'isänsä ja isoisänsä seisoivat: avaa, odottaa, sulkee, merkitsee '
-      + 'rivin. Työ on tylsää kymmenen kertaa päivässä ja tarkkaa '
-      + 'yhdennellätoista, ja hän tekee sen samalla ilmeellä. Vieraita '
-      + 'hän ei karta eikä hae; hän vastaa kysymyksiin lyhyesti ja '
-      + 'palaa kampeen. Mutta kirjaa hän ei avaa kenelle tahansa. Ennen '
-      + 'kuin hän kääntää sivun vieraan nähden, hän haluaa tietää, onko '
-      + 'tulija katsonut kertaakaan ylös — sinne, missä kanavatalojen '
-      + 'päädyt ovat.',
+    teksti: 'Yara vetää muuttokuormat kanavatalojen läpi ja tietää tunnissa, '
+      + 'mikä menee ovesta ja mikä ei. Hän mittaa jokaisen kaapin ennen '
+      + 'kuin siihen kosketaan, ja työpari yläkerrassa odottaa hänen '
+      + 'merkkiään eikä toisin päin. Vieraita hän ei karta: hän puhuu '
+      + 'mielellään ja nopeasti, ja kesken lauseen hän saattaa kadota '
+      + 'nostamaan jotain raskasta. Ennen kuin hän neuvoo tulijaa '
+      + 'eteenpäin, hän haluaa tietää, onko tämä katsonut kertaakaan '
+      + 'ylös — sinne, missä kanavatalojen päädyt ovat.',
   },
 
   /*
    * ---------- KEVYT KULKU ----------
    *
-   * KOHTAAMISPAIKKA: MAGERE BRUG. Willem on siltavahti, ja tämä on
-   * kaupungin tunnetuin käsin kammettava kääntösilta — pelin oma
-   * Amsterdam-aineisto nimeää sen (js/packs/kulttuuri-kategoriat.js,
-   * amsterdam/avauskuvat: *"Laiha silta eli Magere Brug on Amstelin yli
-   * johtava valkoinen puinen kääntösilta"*).
+   * KOHTAAMISPAIKKA SIIRRETTY 5.9.2026 (Fable tarkistanut 5.9.2026):
+   * MAGERE BRUG → HERENGRACHTIN KANAVATALOT. Vanha piste oli
+   * siltavahti Willemin työpaikka, ja Willem poistui kaaresta. Fablen
+   * päätös klo 20:05 UTC: *"Fokusvirran kohtaamispiste siirtyy Magere
+   * Brugilta kanavataloille."* Yara tekee muuttoa kanavatalon edessä,
+   * joten piste ankkuroidaan Herengrachtin kanavatalojaksoon, jonka
+   * hollantilainen nimi on Gouden Bocht.
    *
-   * 52,36361111 N / 4,9025 E — nl-Wikipedia "Magere Brug",
-   * prop=coordinates (haettu 29.8.2026). Muunnos on sama kaava ja samat
+   * PAIKKA ON JAKSO, EI OSOITE: yhtäkään taloa ei nimetä eikä
+   * yhteenkään taloon väitetä kätköä tai pääsyoikeutta. Kaaren kätkö on
+   * kanavan reunan kivilaiturissa, siis yleisellä paikalla (Fablen
+   * päätös: *"kätkö on kaupungin kätkö, ei yksityisasunnon ullakko"*).
+   *
+   * 52,36555556 N / 4,89 E — nl-Wikipedia "Gouden Bocht",
+   * prop=coordinates (haettu 5.9.2026). Muunnos on sama kaava ja samat
    * vakiot kuin fokuskohteilla: maailmankartalla Millerin lieriö
    * LEVEYS 12000 / LON0 −175 / POHJOINEN 76 (tools/fokuskartta/
    * piirto.js laudanProjektio), Euroopan laudalla x = (lon + 11) × 19,2
    * ja y = (72 − lat) × 26,3.
    *
-   * LASKU:
-   *   maailmankartta  x = ((4,9025 − (−175)) mod 360) × (12000/360)
-   *                     = 179,9025 × 33,3333… = 5996,8
-   *                   y = (millerY(76) − millerY(52,36361111)) × 12000/2π
-   *                     = 1285,9
-   *   europe          x = (4,9025 + 11) × 19,2 = 305,3
-   *                   y = (72 − 52,36361111) × 26,3 = 516,4
+   * LASKU (ajettu laudanProjektion omalla kaavalla):
+   *   maailmankartta  x = ((4,89 − (−175)) mod 360) × (12000/360)
+   *                     = 179,89 × 33,3333… = 5996,3
+   *                   y = (millerY(76) − millerY(52,36555556)) × 12000/2π
+   *                     = 1285,8
+   *   europe          x = (4,89 + 11) × 19,2 = 305,1
+   *                   y = (72 − 52,36555556) × 26,3 = 516,4
    *
    * TARKISTUS LAATTAA VASTEN: Amsterdamin laatta on Euroopan laudalla
    * 305 / 516 (js/packs/europe.js) ja maailmankartalla 5996,8 / 1285,7,
-   * eli piste osuu käytännössä laatan päälle. Niin pitääkin — silta on
-   * keskustassa runsaan kilometrin päässä Damista, ja laudan yksikkö on
-   * maailmankartalla noin kolme kilometriä. Piirtopuoli hoitaa erotuksen
-   * itse: alle 14 yksikön päässä laatasta piste siirretään koilliseen
-   * (js/fokuspiste.js PISTE_ERO_MIN).
+   * eli piste osuu käytännössä laatan päälle — kuten ennenkin. Niin
+   * pitääkin: kanavakehä on keskustassa alle kilometrin päässä Damista,
+   * ja laudan yksikkö on maailmankartalla noin kolme kilometriä.
+   * Piirtopuoli hoitaa erotuksen itse: alle 14 yksikön päässä laatasta
+   * piste siirretään koilliseen (js/fokuspiste.js PISTE_ERO_MIN).
    */
   kohtaamispiste: {
-    nimi: 'Magere Brug',
+    nimi: 'Herengrachtin kanavatalot',
     laudat: {
-      maailmankartta: { x: 5996.8, y: 1285.9 },
-      europe: { x: 305.3, y: 516.4 },
+      maailmankartta: { x: 5996.3, y: 1285.8 },
+      europe: { x: 305.1, y: 516.4 },
     },
   },
 
@@ -845,6 +934,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       kuva: {
         tiedosto: 'Semper Augustus Tulip 17th century.jpg',
+        lyhyt: 'Semper Augustus oli tulppaanimanian kallein lajike; sen liekkikuvio oli kasvitaudin merkki.',
         selite: 'Semper Augustus oli tulppaanimanian kallein lajike, ja '
           + 'sen valko-punainen liekkikuvio oli kasvitaudin merkki.',
         lahde: 'Tuntematon tekijä ennen vuotta 1640, Wikimedia Commons '
@@ -935,6 +1025,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       kuva: {
         tiedosto: 'Afsluitdijk 1031.jpg',
+        lyhyt: 'Afsluitdijk erottaa Vattimeren ja makean IJsselmeerin; pato on 32,5 km pitkä ja sen yli kulkee tie.',
         selite: 'Afsluitdijk erottaa Vattimeren ja makean IJsselmeerin: '
           + 'pato on 32,5 kilometriä pitkä ja sen yli kulkee maantie.',
         lahde: 'C messier, Wikimedia Commons (CC BY-SA 4.0)',
@@ -1030,6 +1121,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       kuva: {
         tiedosto: 'Leiden Museum Boerhaave single lens microscope 071815 06.jpg',
+        lyhyt: 'Leeuwenhoekin mikroskooppi on kämmenelle mahtuva levy yhdellä itse sulatetulla pallolinssillä.',
         selite: 'Leeuwenhoekin mikroskooppi on kämmenelle mahtuva levy, '
           + 'jonka sisään on puristettu yksi itse sulatettu pallolinssi.',
         lahde: 'Hnapel, Wikimedia Commons (CC BY-SA 4.0)',
@@ -1114,6 +1206,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
        */
       kuva: {
         tiedosto: 'Boekenkist van Hugo de Groot, NG-KOG-1208.jpg',
+        lyhyt: 'Kirja-arkku, jollaisessa Hugo de Groot kannettiin ulos Loevesteinin linnasta vuonna 1621.',
         selite: 'Kirja-arkku Rijksmuseumin kokoelmassa: tällaisessa '
           + 'arkussa Hugo de Groot kannettiin ulos Loevesteinin '
           + 'linnasta vuonna 1621.',
@@ -1133,6 +1226,305 @@ export const FOKUSVIRTA_AMSTERDAM = {
         laudat: {
           maailmankartta: { x: 6000.7, y: 1310.3 },
           europe: { x: 307.6, y: 530.8 },
+        },
+      },
+    },
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): AMSTERDAMIN KAUPUNKILEHDEN SIVUT
+     * NOSTOIKSI.
+     *
+     * Sama jako kuin Pariisissa erässä 5
+     * (docs/raportit/viesti-fable-karttauudistus-era5-20260913.md,
+     * suunnitelman luku 4.7): lehden aihesivujen nostot ovat nyt
+     * klikattavia karttapaloja kaupungin kohdekartalla. Kaikki tämän erän
+     * nostot ovat KOHDEKARTALLA, eivät pääkartalla — omistajan sääntö
+     * 2.9.2026 (tests/nostot-kartalla.test.mjs).
+     *
+     * TEKSTIÄ EI OLE KIRJOITETTU UUDESTAAN. Jokainen `lunastus`-kappale on
+     * lehden oman noston `teksti` SANATARKASTI
+     * (js/packs/kulttuuri-kategoriat.js, kaupunki `amsterdam`), ja `kuva`
+     * on lehden oma kuvarivi kenttineen. Siirto on tehty ohjelmallisesti ja
+     * todennettu ===-vertailulla
+     * (tools/savukkeet/savuke-kaupunkien-nostot.mjs vartio 4b avaa jokaisen
+     * kortin selaimessa ja vertaa merkki merkiltä).
+     *
+     * MINIKYSYMYKSET (erän 6 datamalli, kiintiö joka kolmas nosto):
+     * `amsterdamin-kapein-talo`, `amsterdamin-kissalaiva`,
+     * `amsterdamin-yovartio`.
+     * ══════════════════════════════════════════════════════════════
+     */
+    {
+      id: 'amsterdamin-kapein-talo',
+      nimio: 'Kapein talo',
+      otsikko: 'Verotettiin julkisivun leveydestä',
+      symboli: 'kaupunki',
+      lunastus: [
+        '1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun '
+          + 'leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein '
+          + 'niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä '
+          + 'syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa '
+          + 'niitä pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos '
+          + 'nostopuu, hijsbalk, jonka koukusta huonekalut vedetään köydellä '
+          + 'ikkunasta sisään.',
+      ],
+      lahde: 'Amsterdamin kaupunkilehden nosto "Verotettiin julkisivun '
+        + 'leveydestä" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Detail van de top van de voorgevel, een klokgevel, met hijsbalk - Amsterdam - 20528909 - RCE.jpg',
+        lyhyt: 'Kellopäätyjen hijsbalk-nostopuut ovat käytössä, ja talot kallistuvat, ettei tavara kolhi julkisivua.',
+        selite: 'Kellopäädyn alta työntyvä hijsbalk-nostopuu on yhä käytössä, ja '
+          + 'talot rakennettiin hieman eteenpäin kallelleen, jottei nostettava '
+          + 'tavara kolhisi julkisivua.',
+        lahde: 'René Gerritsen, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      kysymykset: [
+        'Miksi vero laskettiin juuri julkisivun leveydestä eikä pinta-alasta?',
+        'Millaista on asua kahden metrin levyisessä talossa?',
+        'Käytetäänkö nostopuita yhä, vai ovatko ne pelkkää koristetta?',
+      ],
+      visa: {
+        kysymys: 'Amsterdamin kapeissa kanavataloissa portaat ovat jyrkät kuin '
+          + 'tikkaat. Miten huonekalut saadaan yläkertaan?',
+        vaihtoehdot: [
+          'Päätykolmion nostopuusta köydellä ikkunasta sisään',
+          'Ne kootaan vasta paikan päällä osista',
+          'Ne nostetaan kanavasta veneellä takapihan kautta',
+        ],
+        oikea: 0,
+        fakta: 'Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi '
+          + 'metriä syvä.',
+      },
+      paikka: {
+        nimi: 'Kapein talo',
+        laudat: {
+          maailmankartta: { x: 5996.6, y: 1285.5 },
+          europe: { x: 305.2, y: 516.2 },
+        },
+      },
+    },
+    {
+      id: 'amsterdamin-maitotytto',
+      nimio: 'Maitotyttö',
+      otsikko: 'Vermeer peitti omat esineensä maalilla',
+      symboli: 'silma',
+      lunastus: [
+        'Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä '
+          + 'korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna '
+          + '1660, ja koko hänen tuotannostaan tunnetaan vain runsaat '
+          + 'kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja '
+          + 'infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer oli '
+          + 'aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja '
+          + 'maalannut molemmat itse umpeen, niin että katse jää maitoon ja '
+          + 'käsiin.',
+      ],
+      lahde: 'Amsterdamin kaupunkilehden nosto "Vermeer peitti omat esineensä '
+        + 'maalilla" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Johannes Vermeer - Het melkmeisje - Google Art Project.jpg',
+        lyhyt: 'Maitotyttö esittää nimestään huolimatta keittiöapulaista, Rijksmuseumin keskeisimpiä teoksia.',
+        selite: 'Maitotyttö esittää nimestään huolimatta keittiöapulaista, ja '
+          + 'Rijksmuseum pitää sitä yhtenä kokoelmansa keskeisimmistä '
+          + 'teoksista.',
+        lahde: 'Johannes Vermeer, Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miksi Vermeer peitti jo maalaamansa kannuhyllyn ja tulikorin?',
+        'Mitä muuta röntgen- ja infrapunakuvaus on paljastanut vanhoista '
+          + 'maalauksista?',
+        'Miksi Vermeerin tuotannosta tunnetaan vain runsaat kolmekymmentä '
+          + 'työtä?',
+      ],
+      paikka: {
+        nimi: 'Maitotyttö',
+        laudat: {
+          maailmankartta: { x: 5996.2, y: 1286 },
+          europe: { x: 305, y: 516.5 },
+        },
+      },
+    },
+    {
+      id: 'amsterdamin-kissalaiva',
+      nimio: 'Kissalaiva',
+      otsikko: 'Kanavalla asuu laivallinen kissoja',
+      symboli: 'elain',
+      lunastus: [
+        'Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu '
+          + 'satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. '
+          + 'Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja '
+          + 'kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna '
+          + '1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on '
+          + 'yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat '
+          + 'vapaana kannella, ja vieraat saavat tulla katsomaan.',
+      ],
+      lahde: 'Amsterdamin kaupunkilehden nosto "Kanavalla asuu laivallinen '
+        + 'kissoja" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'De Poezenboot (Exterior), Amsterdam (2168146135).jpg',
+        lyhyt: 'Poezenboot avattiin Singel-kanavaan 1968, kun kerätyt kulkukissat eivät enää mahtuneet kotiin.',
+        selite: 'Poezenboot avattiin Singel-kanavaan vuonna 1968, kun Henriëtte '
+          + 'van Weelde ei enää saanut keräämiään kulkukissoja mahtumaan '
+          + 'kotiinsa.',
+        lahde: 'Antony Stanley, Wikimedia Commons (CC BY-SA 2.0)',
+      },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Mevrouw H. van Weelde en enkele medewerksters openen kooien op Poezenboot op S, Bestanddeelnr 933-5755.jpg',
+          lyhyt: 'Henriëtte van Weelde hoiti Kissalaivaa yhä 1986, kahdeksantoista vuotta sen avaamisesta.',
+          selite: 'Henriëtte van Weelde hoiti Kissalaivaa avustajineen yhä '
+            + 'helmikuussa 1986, kahdeksantoista vuotta laivan avaamisen '
+            + 'jälkeen.',
+          lahde: 'Roland Gerrits / Anefo, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Three bikes on the canal bridge in Amsterdam (3798069610).jpg',
+          selite: 'Amsterdamin kanavista nostetaan joka vuosi 12 000–15 000 '
+            + 'polkupyörää.',
+          lahde: 'joiseyshowaa, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      kysymykset: [
+        'Miksi Amsterdamin kanavissa on satoja asuntolaivoja?',
+        'Kuka hoitaa Kissalaivan kissat nykyään?',
+        'Mitä kulkukissoille tehtiin ennen vuotta 1966?',
+      ],
+      visa: {
+        kysymys: 'Henriëtte van Weelden asunto kävi ahtaaksi kerätyistä '
+          + 'kulkukissoista. Mitä hän teki?',
+        vaihtoehdot: [
+          'Muutti itse pienempään asuntoon naapurikadulle',
+          'Avasi kissoille oman laivan Singel-kanavaan',
+          'Jakoi kissat ystävien koteihin ympäri kaupunkia',
+        ],
+        oikea: 1,
+        fakta: 'Poezenboot eli Kissalaiva on yhä siinä: kissoja on kiireisimpinä '
+          + 'aikoina noin 60, ne kulkevat vapaana kannella, ja vieraat saavat '
+          + 'tulla katsomaan.',
+      },
+      paikka: {
+        nimi: 'Kissalaiva',
+        laudat: {
+          maailmankartta: { x: 5996.4, y: 1285.2 },
+          europe: { x: 305.1, y: 516.1 },
+        },
+      },
+    },
+    {
+      id: 'amsterdamin-puupaalut',
+      nimio: 'Puupaalut',
+      otsikko: 'Koko kaupunki seisoo puutukkien päällä',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. '
+          + 'Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, '
+          + 'jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. '
+          + 'Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, '
+          + 'lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy '
+          + 'veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa '
+          + 'naapuriinsa.',
+      ],
+      lahde: 'Amsterdamin kaupunkilehden nosto "Koko kaupunki seisoo puutukkien '
+        + 'päällä" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Amsterdam stut zijn huizen met palen Perceel Herengracht 537 achter palenbos, Bestanddeelnr 912-2174.jpg',
+        lyhyt: 'Herengracht 537 tuettiin puupaaluin 1961, kun pohjaveden lasku lahottaa talojen paalutuksia.',
+        selite: 'Herengracht 537 jouduttiin tukemaan väliaikaisilla puupaaluilla '
+          + 'maaliskuussa 1961, sillä Amsterdamin talot lepäävät paalutuksen '
+          + 'varassa, joka lahoaa pohjaveden laskiessa.',
+        lahde: 'Harry Pot / Anefo, Wikimedia Commons (CC0)',
+      },
+      kysymykset: [
+        'Miten puupaalu lyödään pehmeän suon läpi kovaan pohjahiekkaan?',
+        'Mitä tehdään talolle, jonka paalut ovat päässeet lahoamaan?',
+        'Miksi kaupungin pohjavesi pääsee laskemaan?',
+      ],
+      paikka: {
+        nimi: 'Herengracht 537',
+        laudat: {
+          maailmankartta: { x: 5996.5, y: 1285.8 },
+          europe: { x: 305.2, y: 516.4 },
+        },
+      },
+    },
+    {
+      id: 'amsterdamin-yovartio',
+      nimio: 'Yövartio',
+      otsikko: 'Yövartiosta sahattiin palat pois',
+      symboli: 'historia',
+      lunastus: [
+        'Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään '
+          + '363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin '
+          + 'kaupungintaloon, eikä se mahtunut sille varatulle seinälle — '
+          + 'joten sitä leikattiin joka reunalta. Vasemmalta katosi kaksi '
+          + 'miestä ja alta askelman reuna, ylhäältä holvikaaren huippu. '
+          + 'Palasia ei ole löydetty. Nimikin on väärä: teos ei esitä yötä, '
+          + 'vaan pinta oli tummunut lakasta, joka poistettiin vasta '
+          + '1940-luvulla.',
+      ],
+      lahde: 'Amsterdamin kaupunkilehden nosto "Yövartiosta sahattiin palat pois" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'The Night Watch - cropped.jpg',
+        lyhyt: 'Yövartioksi kutsuttiin taulua vasta, kun sen oikea nimi unohtui lakan tummuttua mustaksi.',
+        selite: 'Teoksen oikea nimi on kaartinkapteeni Frans Banning Cocqin '
+          + 'komppania, ja Yövartioksi sitä alettiin kutsua vasta kun lakka '
+          + 'oli tummunut lähes mustaksi.',
+        lahde: 'Rembrandt, Wikimedia Commons (PD)',
+      },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Lundens - Nachtwache-Kopie.jpg',
+          lyhyt: 'Gerrit Lundensin pienoiskopio on ainoa todiste siitä, mitä Yövartiosta leikattiin pois 1715.',
+          selite: 'Gerrit Lundensin 1600-luvulla maalaama pienoiskopio on ainoa '
+            + 'säilynyt todiste siitä, mitä Yövartiosta leikattiin pois vuonna '
+            + '1715.',
+          lahde: 'Gerrit Lundens, Wikimedia Commons (PD)',
+        },
+      ],
+      kysymykset: [
+        'Mihin taulusta leikatut palaset joutuivat?',
+        'Miksi taulu ylipäätään siirrettiin kaupungintaloon vuonna 1715?',
+        'Mistä tiedetään, mitä taulusta puuttuu?',
+      ],
+      visa: {
+        kysymys: 'Yövartio ei esitä yötä lainkaan. Mistä väärä nimi silloin tuli?',
+        vaihtoehdot: [
+          'Kuvan tumma tausta tulkittiin yötaivaaksi',
+          'Nimi kääntyi väärin toisesta kielestä',
+          'Taulun pinta oli tummunut lakasta',
+        ],
+        oikea: 2,
+        fakta: 'Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään '
+          + '363 senttiä korkea ja 437 leveä.',
+      },
+      paikka: {
+        nimi: 'Yövartio',
+        laudat: {
+          maailmankartta: { x: 5996.4, y: 1285.4 },
+          europe: { x: 305.1, y: 516.2 },
         },
       },
     },

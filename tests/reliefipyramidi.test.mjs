@@ -1,0 +1,404 @@
+/*
+ * RELIEFIPYRAMIDIN LAATASTO — kytkin, osoitteet ja meripeitto.
+ *
+ * Nämä testit vartioivat sitä, mitä ei voi nähdä kuvasta: että laatasto
+ * on oletuksena PÄÄLLÄ (18.9.2026, erä 4 — laatat ovat ämpärissä) ja
+ * että `?reliefipyramidi=0` palauttaa vanhan yhden kuvan polun, että
+ * laatan osoite osoittaa oikeaan polkuun ja että avomeren aukot luetaan
+ * laattakartaksi eikä 404:n arvoisiksi hauiksi.
+ */
+
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, join } from 'node:path';
+
+import {
+  ASTRONAUTIN_SAVY, MERIVARI, VERSIO_VARALLA, asetaReliefiLinssi, astronautinValokerroin,
+  astronautinValoliuunPysakit, meripeitonBitit, nollaaReliefi,
+  reliefiKaytossa, reliefinJuuri, reliefinLaattaUrl, reliefinSyvinTaso, reliefinTaso,
+  reliefinVersio, reliefipyramidiPaalla,
+} from '../js/reliefipyramidi.js';
+import { PALLON_SAVY, valokerroin } from '../js/linssit/satelliitti-avaruus.js';
+
+const juuri = dirname(fileURLToPath(import.meta.url));
+const lue = (polku) => readFileSync(join(juuri, polku), 'utf8');
+
+const ikkuna = (haku, kansio) => ({
+  location: { search: haku },
+  ...(kansio ? { RELIEFIPYRAMIDI_KANSIO: kansio } : {}),
+});
+
+test('laatasto on oletuksena päällä, ?reliefipyramidi=0 ottaa sen pois', () => {
+  assert.equal(reliefipyramidiPaalla(ikkuna('')), true);
+  assert.equal(reliefipyramidiPaalla(ikkuna('?linssi=topografia')), true);
+  assert.equal(reliefipyramidiPaalla(ikkuna('?reliefipyramidi=1')), true);
+  assert.equal(reliefipyramidiPaalla(ikkuna('?reliefipyramidi=0')), false);
+  assert.equal(reliefipyramidiPaalla(ikkuna('?reliefipyramidi=false')), false);
+});
+
+test('kytkin yksin ei riitä: linssin on oltava auki', () => {
+  nollaaReliefi();
+  const paalla = ikkuna('?reliefipyramidi=1');
+  const pois = ikkuna('?reliefipyramidi=0');
+  assert.equal(reliefiKaytossa(paalla), false, 'linssi kiinni');
+  assert.equal(reliefiKaytossa(ikkuna('')), false, 'linssi kiinni, oletuskytkin');
+  asetaReliefiLinssi(true);
+  assert.equal(reliefiKaytossa(paalla), true, 'linssi auki ja kytkin päällä');
+  assert.equal(reliefiKaytossa(ikkuna('')), true, 'linssi auki, kytkin oletuksena');
+  assert.equal(reliefiKaytossa(pois), false, 'linssi auki mutta kytkin kielletty');
+  asetaReliefiLinssi(false);
+  assert.equal(reliefiKaytossa(paalla), false, 'linssi suljettu');
+  nollaaReliefi();
+});
+
+test('juuri on ämpäri, ellei savuke osoita paikalliseen kansioon', () => {
+  assert.equal(
+    reliefinJuuri(ikkuna('')),
+    'https://media.matkakirja.app/matkakirja/reliefipyramidi/',
+  );
+  // Savukkeen kansio korvaa ämpärin, ja kauttaviiva täydentyy.
+  assert.equal(reliefinJuuri(ikkuna('', '/levy/reliefi')), '/levy/reliefi/');
+  assert.equal(reliefinJuuri(ikkuna('', '/levy/reliefi/')), '/levy/reliefi/');
+});
+
+test('laatan osoite: versio polussa, z/sarake/rivi sen alla', () => {
+  nollaaReliefi();
+  assert.equal(reliefinVersio(), VERSIO_VARALLA);
+  assert.equal(
+    reliefinLaattaUrl({ z: 7 }, 166, 21, ikkuna('')),
+    `https://media.matkakirja.app/matkakirja/reliefipyramidi/${VERSIO_VARALLA}/z7/166/21.webp`,
+  );
+  assert.equal(
+    reliefinLaattaUrl({ z: 4 }, 9, 8, ikkuna('', '/levy/reliefi')),
+    `/levy/reliefi/${VERSIO_VARALLA}/z4/9/8.webp`,
+  );
+});
+
+test('meriLaatat kääntyy laattakartaksi: aukot eivät lähde hakuun', () => {
+  // 4 × 2 ruutua, joista kaksi on avomerta.
+  const bitit = meripeitonBitit({
+    sarakkeita: 4, riveja: 2, meriLaatat: ['0/0', '3/1'],
+  });
+  const on = (s, r) => {
+    const i = r * 4 + s;
+    return ((bitit[i >> 3] >> (i & 7)) & 1) === 1;
+  };
+  assert.equal(on(0, 0), false, 'avomeri 0/0');
+  assert.equal(on(3, 1), false, 'avomeri 3/1');
+  assert.equal(on(1, 0), true);
+  assert.equal(on(2, 1), true);
+  // Roskarivit eivät kaada eivätkä sammuta muita.
+  const siedetty = meripeitonBitit({
+    sarakkeita: 2, riveja: 1, meriLaatat: ['', 'x/y', '9/9', '0/0'],
+  });
+  assert.equal(((siedetty[0] >> 0) & 1) === 1, false);
+  assert.equal(((siedetty[0] >> 1) & 1) === 1, true);
+});
+
+test('tasot saavat reliefilipun, meripeiton ja meren taustavärin', () => {
+  nollaaReliefi({
+    versio: '20260920',
+    tasot: [{ z: 7, sarakkeita: 169, riveja: 91, meriLaatat: ['0/0'] }],
+  });
+  const taso = reliefinTaso(7);
+  assert.equal(taso.reliefi, true);
+  assert.equal(taso.taustavari, MERIVARI);
+  assert.ok(taso.__bitit instanceof Uint8Array, 'bittikartta on purettu valmiiksi');
+  assert.equal(reliefinTaso(3), null, 'tasoa 3 ei ole tässä luettelossa');
+  nollaaReliefi();
+});
+
+/*
+ * ARKKI ON PIKSELILLEEN PÄÄKARTAN ARKKI. Tämä on koko kytkennän ehto:
+ * jos reliefipyramidin arkki tai tasogeometria eroaisi pohjan
+ * laatastosta, sama laattakone piirtäisi reliefin väärään kohtaan
+ * lautaa — eikä sitä huomaisi muuten kuin silmällä.
+ */
+test('reliefin arkki on sama kuin laattapyramidin ARKKI_VARALLA', () => {
+  const tyokalu = lue('../tools/tee-reliefipyramidi.mjs');
+  const pyramidi = lue('../js/laattapyramidi.js');
+  assert.match(tyokalu, /LAUTA = \{ leveys: 12000, lon0: -175/);
+  assert.match(tyokalu, /export const LAATTA = 512;/);
+  assert.match(pyramidi, /x: 0, y: -1046\.3149255312064, w: 12000, h: 7307\.715927310571/);
+});
+
+/*
+ * POHJATTOMUUS (omistajan lisäys 18.9.2026, Raamattu LISAYS 16 kohta
+ * 49): reliefin alle ei ladota seepiapohjaa. Testi lukee koodin, koska
+ * kerrosvalinta on puhdas funktio vasta luettelon kanssa — ja koska
+ * juuri tämä rivi on se, jonka poisto palauttaisi välähdyksen.
+ */
+test('reliefi korvaa pohjan eikä peitä sitä', () => {
+  const pyramidi = lue('../js/laattapyramidi.js');
+  assert.match(pyramidi, /return \[reliefi, \.\.\.merkit\];/);
+  const laatat = lue('../js/pallolaatat.js');
+  assert.match(laatat, /pohja: !reliefi,/);
+  assert.match(laatat, /vari: vari && !reliefi,/);
+  // Avomeri maalataan taustavärillä eikä merkitä virheeksi; puuttuvan
+  // laatan paikanpitäjä on karkeampi reliefilaatta (PAATOKSET 41).
+  assert.match(laatat, /if \(!kuvat\.some\(Boolean\) && !tausta && !vara\)/);
+  assert.match(laatat, /varaKartta = reliefinVaraLahde\(t\.z, t\.sarake, t\.rivi, laattaKoko\(\)\);/);
+});
+
+/*
+ * RELIEFIN KATTO, KOLME MITATTUA VIKAA YHDESSÄ TESTISSÄ (18.9.2026,
+ * tools/savukkeet/mittaa-reliefipyramidi.mjs, Chromium 390 × 844,
+ * Alppien lähizoomi):
+ *
+ *   1. Kerros valitsi tason POHJAN luettelosta, jossa on z8. Reliefi
+ *      on poltettu z7:ään, joten jokainen laatta jäi tilaan `virhe`,
+ *      ruutu oli musta eikä yhtään laattapyyntöä lähtenyt.
+ *   2. Lipun nosto ei yksin herättänyt kerrosta: paikallaan olevassa
+ *      näkymässä ensimmäinen reliefilaattapyyntö lähti vasta 15,7 s
+ *      päästä, kun kamera liikkui.
+ *   3. Linssin vaihtuminen ei mitätöinyt jo koottuja seepialaattoja,
+ *      joten kytkin ei näkynyt ruudulla lainkaan.
+ *
+ * Kaikki kolme ovat yhden rivin kokoisia, ja jokainen niistä palaisi
+ * huomaamatta — vika näkyy vain ruudulla, ei virheenä.
+ */
+test('reliefin syvin taso on laattakoneen katto, ja kytkin herättää kerroksen', () => {
+  nollaaReliefi({
+    versio: '20260920',
+    tasot: [
+      { z: 6, sarakkeita: 85, riveja: 46, meriLaatat: [] },
+      { z: 7, sarakkeita: 169, riveja: 91, meriLaatat: [] },
+    ],
+  });
+  assert.equal(reliefinSyvinTaso(), 7);
+  nollaaReliefi();
+  assert.equal(reliefinSyvinTaso(), null, 'ilman luetteloa ei kattoa');
+
+  const laatat = lue('../js/pallolaatat.js');
+  assert.match(laatat, /valittu\.z > reliefinKatto/, 'taso rajataan reliefin kattoon');
+  assert.match(laatat, /kerrokset\.reliefi !== reliefiEdellinen/, 'lipun vaihto mitätöi laatat');
+  const linssi = lue('../js/linssit/topografia.js');
+  assert.match(linssi, /lauta\.lepokerros\?\.\(\)\?\.kokoa\?\.\(\)/, 'kerros herätetään');
+});
+
+/*
+ * VALON VASTAKAAVA LAASTARILLE (PAATOKSET 41 kohta 4).
+ *
+ * Vika 18.9.2026: laastari oli 41,6°:ssa 1,40-kertaisesti kirkkaampi
+ * kuin pallon 4k-pohja samassa kohdassa, koska pohjatekstuuriin oli
+ * poltettu pallon valon käänteisluku mutta laattojen kankaalle ei.
+ * Sama luku on nyt kahdessa moduulissa (linssi ei tuo laattakonetta
+ * eikä laattakone linssiä) — ja juuri sitä tämä testi vartioi: jos
+ * toista muutetaan ilman toista, raja palaa ruudulle eikä mikään
+ * muu kerro siitä.
+ */
+test('astronautin valokerroin on sama luku kuin linssin oma', () => {
+  for (const lat of [-58, -30, 0, 15, 41.6, 60, 76, 90]) {
+    assert.equal(astronautinValokerroin(lat), valokerroin(lat), `leveysaste ${lat}`);
+  }
+  assert.equal(astronautinValokerroin(0), 1, 'päiväntasaajalla ei vaimennusta');
+  assert.equal(astronautinValokerroin(-45), 1, 'etelässä valo ei osu: ei vaimennusta');
+  assert.ok(Math.abs(astronautinValokerroin(90) - 1 / 1.6) < 1e-12, 'navalla 1/1,6');
+  assert.equal(astronautinValokerroin(NaN), 1, 'tuntematon rivi ei tummu');
+});
+
+test('valoliu\'un pysäkit seuraavat kankaan rivin leveysastetta', () => {
+  // Kangas 100 px, ylärivi 50°N ja alarivi 40°N (pohjoinen ylhäällä).
+  const lat = (y) => 50 - (y / 100) * 10;
+  const pysakit = astronautinValoliuunPysakit(100, lat, 4);
+  assert.equal(pysakit.length, 5);
+  assert.deepEqual(pysakit.map((p) => p.t), [0, 0.25, 0.5, 0.75, 1]);
+  assert.equal(pysakit[0].lat, 50);
+  assert.equal(pysakit[4].lat, 40);
+  // Pohjoisempi rivi on TUMMEMPI: valo kertoo sen kirkkaammaksi.
+  assert.ok(pysakit[0].arvo < pysakit[4].arvo, 'liuku tummenee pohjoiseen');
+  for (const p of pysakit) assert.equal(p.arvo, astronautinValokerroin(p.lat));
+  // Arkin ulkopuoli: ei liukua lainkaan, ei rikkinäistä laattaa.
+  assert.deepEqual(astronautinValoliuunPysakit(100, () => NaN, 4), []);
+  assert.deepEqual(astronautinValoliuunPysakit(0, lat, 4), []);
+  assert.deepEqual(astronautinValoliuunPysakit(100, null, 4), []);
+});
+
+test('laastarin kangas maalaa liu\'un ja laattapyramidi avaa oven', () => {
+  const laatat = lue('../js/pallolaatat.js');
+  assert.match(laatat, /maalaaAstronautinValoliuku/, 'liuku maalataan kankaalle');
+  assert.match(laatat, /globalCompositeOperation = 'multiply'/, 'kertova sekoitus');
+  assert.match(laatat, /pyramidinReliefinValoliuku\(kartta\.korkeus/, 'pysäkit laattakoneelta');
+  const pyramidi = lue('../js/laattapyramidi.js');
+  assert.match(pyramidi, /export function pyramidinReliefinValoliuku/, 'ovi on olemassa');
+  assert.match(pyramidi, /if \(!reliefiAstronautilla\(\)\) return \[\];/, 'vain astronautin ikkunassa');
+});
+
+/*
+ * PALLON SÄVY MYÖS LAASTARILLE. Mitattu 18.9.2026: valon vastakaavan
+ * korjauksen JÄLKEEN laastari oli yhä 1,68-kertaisesti kirkkaampi kuin
+ * pohja — 1 / 0,60, eli täsmälleen se tummennus, jonka omistaja tilasi
+ * pallon materiaaliin (LISÄYS 15 kohta 43, LISÄYS 16 kohta 46).
+ * Laattojen materiaali ei käy linssin kautta, joten sävy on annettava
+ * sille erikseen; testi vartioi, että luku on sama kummassakin.
+ */
+test('laastarin sävy on pallon sävy', () => {
+  assert.equal(ASTRONAUTIN_SAVY, PALLON_SAVY);
+  const laatat = lue('../js/pallolaatat.js');
+  assert.match(laatat, /pyramidinReliefinSavy\(\)/, 'sävy kysytään laattakoneelta');
+  assert.match(laatat, /\.\.\.\(savy === null \? \{\} : \{ color: savy \}\)/, 'sävy materiaalin väriksi');
+  const pyramidi = lue('../js/laattapyramidi.js');
+  assert.match(pyramidi, /export function pyramidinReliefinSavy/, 'ovi on olemassa');
+});
+
+/*
+ * AVOMEREN OHITUS MITTAA TASAISUUTTA, EI SYVYYTTÄ (omistaja 20.9.2026,
+ * kaappaus topografia-meret-puuttuvat.webp).
+ *
+ * Vika: `pelkkaaMerta` ohitti laatan, jonka jokainen solu oli alle
+ * −200 m. Perustelu oli "se on tasaista väriä", mutta syvyys ei ole
+ * tasaisuus: Keski-Intian selänne ja Sundan hauta ovat kokonaan sen
+ * alapuolella ja niissä on kilometrien korkeuserot. Ohitetut laatat
+ * piirtyivät pelissä yhtenä sinisenä suorakaiteena.
+ *
+ * Mitattu ETOPO-ruudukosta 20.9.2026: koko maailmassa 5 300 laattaa
+ * ohittui avomerenä, ja niistä VAIN 129 oli tasaisia — 5 171 eli 98 %
+ * sisälsi yli 500 m korkeuseron.
+ */
+test('pelkkaaMerta ohittaa vain tasaisen laatan, ei syvää', async () => {
+  const { pelkkaaMerta, TASAISUUDEN_RAJA } = await import('../tools/tee-reliefipyramidi.mjs');
+
+  const ruudukko = (arvot) => ({ z: Int16Array.from(arvot) });
+
+  // Tasainen syvänmeren tasanko: ohitetaan kuten ennenkin.
+  assert.equal(pelkkaaMerta(ruudukko([-4000, -4002, -4005, -4001])), true,
+    'tasainen avomeri pitää yhä ohittaa — optimointi ei saa kadota');
+
+  // Syvä MUTTA muotoinen: selänne tai hauta. TÄMÄ ON SE VIKA.
+  assert.equal(pelkkaaMerta(ruudukko([-6000, -5200, -2400, -3100])), false,
+    'syvänmeren selänne ohittui avomerenä ja piirtyi sinisenä laatikkona');
+
+  // Matala vesi ja rannikko: ei koskaan ohiteta.
+  assert.equal(pelkkaaMerta(ruudukko([-150, -160, -155, -152])), false,
+    'mannerjalusta ei ole avomerta');
+  assert.equal(pelkkaaMerta(ruudukko([-4000, -4000, 120, -4000])), false,
+    'laatta, jossa on maata, ei ole avomerta');
+
+  // Raja on nimetty ja tiukka: varjostus tekee pienestäkin erosta pintaa.
+  assert.ok(TASAISUUDEN_RAJA > 0 && TASAISUUDEN_RAJA <= 50,
+    `tasaisuuden raja ${TASAISUUDEN_RAJA} m ei ole tiukka`);
+  assert.equal(pelkkaaMerta(ruudukko([-4000, -4000 - TASAISUUDEN_RAJA - 1])), false,
+    'rajan ylittävä korkeusero ei ole tasaista väriä');
+
+  // Tyhjä ruudukko ei ole laatta eikä merta.
+  assert.equal(pelkkaaMerta(ruudukko([])), false, 'tyhjä ruudukko ei ole avomerta');
+});
+
+/*
+ * JÄRVIMASKI: merenpinnan yläpuoliset järvet vedeksi (omistaja
+ * 20.9.2026). Väriasteikko lukee vain korkeutta, joten Kaspianmeri
+ * (−28 m) piirtyy oikein vedeksi mutta Baikal (+456 m) maana. Maski
+ * tuo veden erikseen, vektorista.
+ */
+test('jarviMaski täyttää järven renkaan vain nollan yläpuolella', async () => {
+  const { jarviMaski, varjostaJaVarita, JARVEN_SYVYYS } = await import('../tools/tee-reliefipyramidi.mjs');
+
+  // 4 x 4 ruudukko, lon 0..3, lat 0..3. Järvi kattaa keskineliön.
+  // Ruudukko on lon0/lat0 + ruutu, kuten haeIkkuna palauttaa — EI
+  // valmiita lat/lon-taulukoita. Juuri se virhe jätti maskin tyhjäksi
+  // ensimmäisessä versiossa (mitattu Victorian laatalla 20.9.2026).
+  const leveys = 4; const korkeus = 4;
+  const lon0 = 0; const lat0 = 0; const ruutu = 1;
+  const z = new Int16Array([
+    100, 100, 100, 100,
+    100, 500, 500, 100,
+    100, 500, 500, 100,
+    100, 100, 100, 100,
+  ]);
+  const jarvi = [{ nimi: 'koe', renkaat: [[[0.5, 0.5], [2.5, 0.5], [2.5, 2.5], [0.5, 2.5]]] }];
+  const maski = jarviMaski({ z, leveys, korkeus, lon0, lat0, ruutu }, jarvi);
+  const paalla = [...maski].reduce((n, v) => n + v, 0);
+  assert.ok(paalla >= 4, `maski jäi tyhjäksi (${paalla} solua)`);
+  assert.equal(maski[0], 0, 'renkaan ulkopuoli ei saa olla järveä');
+  assert.equal(maski[1 * leveys + 1], 1, 'renkaan sisäpuoli jäi merkitsemättä');
+
+  // Merenpinnan alapuolinen ei kuulu maskiin: se on jo sinistä.
+  const zAlla = new Int16Array(z);
+  zAlla[1 * leveys + 1] = -50;
+  const maskiAlla = jarviMaski({ z: zAlla, leveys, korkeus, lon0, lat0, ruutu }, jarvi);
+  assert.equal(maskiAlla[1 * leveys + 1], 0,
+    'merenpinnan alapuolista ei pidä maalata järvimaskilla');
+
+  // Ilman järviä mikään ei muutu.
+  const tyhja = jarviMaski({ z, leveys, korkeus, lon0, lat0, ruutu }, []);
+  assert.equal([...tyhja].reduce((n, v) => n + v, 0), 0, 'tyhjä järvilista maalasi jotain');
+
+  // Väritys: maskattu piste saa VEDEN sävyn, maskaamaton maan.
+  // `ruutu` on varjostuksen solukoko asteina (tools/varjostus.mjs).
+  const ruudukko = {
+    z, leveys, korkeus, lon0, lat0, ruutu,
+  };
+  const maalla = varjostaJaVarita(ruudukko, null);
+  const vedella = varjostaJaVarita(ruudukko, maski);
+  const i = (1 * leveys + 1) * 3;
+  assert.notDeepEqual(
+    [maalla[i], maalla[i + 1], maalla[i + 2]],
+    [vedella[i], vedella[i + 1], vedella[i + 2]],
+    'järven sävy ei eronnut maasta',
+  );
+  assert.ok(vedella[i + 2] > vedella[i], 'järven sävyn pitää olla sinertävä');
+  assert.ok(JARVEN_SYVYYS < 0, 'järven sävy otetaan meriasteikolta');
+});
+
+/*
+ * PÄIVÄMÄÄRÄRAJAN ALUE (Karttaseppä 24.9.2026). Versio 20260920
+ * poltettiin alueella −180…180, ja arkin itäisimmät z7-sarakkeet
+ * 167–168 (lautaLon 181,27…185 eli −178,7…−175) jäivät hakematta:
+ * alinäytteistys maalasi niiden kohdan MERIVARI-täytteellä jokaisella
+ * tasolla. Alue kiertää nyt ±360°.
+ */
+test('laatatAlueelle: −180…180 kattaa koko arkin myös päivämäärärajan takaa', async () => {
+  const { laatatAlueelle, tasonMitat } = await import('../tools/tee-reliefipyramidi.mjs');
+  const mitat = tasonMitat(7);
+  const koko = laatatAlueelle(mitat, [-180, -65.4, 180, 84]);
+  const sarakkeet = new Set(koko.map((l) => l.sarake));
+  assert.equal(sarakkeet.size, mitat.sarakkeita, 'jokin arkin sarake jäi alueen ulkopuolelle');
+  assert.ok(sarakkeet.has(167) && sarakkeet.has(168), 'itäisimmät sarakkeet puuttuvat');
+  assert.equal(koko.length, mitat.sarakkeita * 90, 'rivit 6–95 kaikilla sarakkeilla');
+
+  // Kierretty alue osuu samoihin laattoihin kuin arkin omat koordinaatit.
+  const avaimet = (lista) => lista.map((l) => `${l.sarake}/${l.rivi}`).sort().join(',');
+  assert.equal(
+    avaimet(laatatAlueelle(mitat, [-178, 51, -177, 52])),
+    avaimet(laatatAlueelle(mitat, [182, 51, 183, 52])),
+  );
+  // Tavallinen alue ei muutu: Eurooppa ei saa laattoja maailman toiselta puolelta.
+  const eurooppa = laatatAlueelle(mitat, [5, 40, 15, 48]);
+  assert.ok(eurooppa.every((l) => l.sarake >= 84 && l.sarake <= 89), 'Euroopan alue levisi');
+});
+
+/*
+ * OPeNDAP-VARAREITTI (24.9.2026: NCSS vastasi `No space left on
+ * device`). DAP2-binääri luetaan itse, ja pyynnön indeksit valitaan
+ * solukeskipisteistä niin, ettei 15°:n rajalle jää rakoa.
+ */
+test('lueDods lukee DAP2-gridin ja dodsIndeksit ei jätä rajalle rakoa', async () => {
+  const { lueDods, dodsIndeksit, RUUTU_15S } = await import('../tools/tee-reliefipyramidi.mjs');
+
+  const pituus = (n) => { const b = Buffer.alloc(8); b.writeUInt32BE(n, 0); b.writeUInt32BE(n, 4); return b; };
+  const f32 = (arvot) => { const b = Buffer.alloc(arvot.length * 4); arvot.forEach((v, i) => b.writeFloatBE(v, i * 4)); return b; };
+  const f64 = (arvot) => { const b = Buffer.alloc(arvot.length * 8); arvot.forEach((v, i) => b.writeDoubleBE(v, i * 8)); return b; };
+  const buf = Buffer.concat([
+    Buffer.from('Dataset {\n  Grid { ... } z;\n} koe;\n\nData:\n', 'latin1'),
+    pituus(6), f32([1, 2, 3, 4, 5, 6]),
+    pituus(2), f64([51.95, 51.96]),
+    pituus(3), f64([-179.99, -179.98, -179.97]),
+  ]);
+  const { z, lat, lon } = lueDods(buf);
+  assert.deepEqual([...z], [1, 2, 3, 4, 5, 6]);
+  assert.deepEqual([...lat], [51.95, 51.96]);
+  assert.equal(lon.length, 3);
+  assert.throws(() => lueDods(Buffer.from('Error { message = "x"; };')), /OPeNDAP/);
+
+  // Pala, jonka itäreuna on vedetty puoli solua sisään 15°:n rajalta
+  // (haeIkkuna `rajat`), päättyy lähdelaatan viimeiseen soluun, ja
+  // seuraava pala alkaa seuraavan laatan ensimmäisestä.
+  const [, loppu] = dodsIndeksit(10, 15 - 0.5 * RUUTU_15S, 0);
+  const [alku] = dodsIndeksit(15, 17, 15);
+  assert.equal(loppu, 3599);
+  assert.equal(alku, 0);
+  // Keskipisteet välillä: 0,5 solun sisään osuva väli antaa sen solun.
+  assert.deepEqual(dodsIndeksit(-180 + 240 * RUUTU_15S, -180 + 243.9 * RUUTU_15S, -180), [240, 243]);
+});

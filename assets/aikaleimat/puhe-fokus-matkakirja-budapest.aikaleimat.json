@@ -1,0 +1,183 @@
+{
+  "versio": 2,
+  "kaupunki": "budapest",
+  "teksti": "Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.",
+  "tekstiSha256": "b78d069b46940f4b155ca1860e125315359480e73b28f2c075416b147d7df037",
+  "aani": {
+    "nimi": "puhe-fokus-matkakirja-budapest.mp3",
+    "versio": 2,
+    "tavut": 363250,
+    "sha256": "73c226e44182aaf8559a47d670f38c161fedb21be8c4aabacb953c8c73b9224a"
+  },
+  "kesto": 22620,
+  "sanat": [
+    {
+      "sana": "Buda",
+      "alku": 200,
+      "loppu": 460
+    },
+    {
+      "sana": "Pest",
+      "alku": 720,
+      "loppu": 1140
+    },
+    {
+      "sana": "ja",
+      "alku": 1220,
+      "loppu": 1340
+    },
+    {
+      "sana": "Óbuda",
+      "alku": 1460,
+      "loppu": 1880
+    },
+    {
+      "sana": "liitettiin",
+      "alku": 2180,
+      "loppu": 2660
+    },
+    {
+      "sana": "marraskuussa",
+      "alku": 2720,
+      "loppu": 3380
+    },
+    {
+      "sana": "yhteen",
+      "alku": 3480,
+      "loppu": 3900
+    },
+    {
+      "sana": "Karttani",
+      "alku": 5400,
+      "loppu": 5840
+    },
+    {
+      "sana": "vanheni",
+      "alku": 5900,
+      "loppu": 6320
+    },
+    {
+      "sana": "kesken",
+      "alku": 6360,
+      "loppu": 6720
+    },
+    {
+      "sana": "aamiaisen",
+      "alku": 6800,
+      "loppu": 7360
+    },
+    {
+      "sana": "mutta",
+      "alku": 7760,
+      "loppu": 7980
+    },
+    {
+      "sana": "Tonava",
+      "alku": 8020,
+      "loppu": 8380
+    },
+    {
+      "sana": "piti",
+      "alku": 8500,
+      "loppu": 8720
+    },
+    {
+      "sana": "suuntansa",
+      "alku": 8780,
+      "loppu": 9380
+    },
+    {
+      "sana": "Ketjusillalla",
+      "alku": 11080,
+      "loppu": 11800
+    },
+    {
+      "sana": "minulta",
+      "alku": 11840,
+      "loppu": 12140
+    },
+    {
+      "sana": "perittiin",
+      "alku": 12180,
+      "loppu": 12680
+    },
+    {
+      "sana": "yhä",
+      "alku": 12780,
+      "loppu": 13000
+    },
+    {
+      "sana": "ylitysmaksu",
+      "alku": 13080,
+      "loppu": 13900
+    },
+    {
+      "sana": "Huomautin",
+      "alku": 15240,
+      "loppu": 15740
+    },
+    {
+      "sana": "että",
+      "alku": 15800,
+      "loppu": 16059
+    },
+    {
+      "sana": "pysyin",
+      "alku": 16120,
+      "loppu": 16460
+    },
+    {
+      "sana": "nyt",
+      "alku": 16520,
+      "loppu": 16720
+    },
+    {
+      "sana": "samassa",
+      "alku": 16780,
+      "loppu": 17220
+    },
+    {
+      "sana": "kaupungissa",
+      "alku": 17280,
+      "loppu": 18140
+    },
+    {
+      "sana": "Maksunkerääjä",
+      "alku": 19860,
+      "loppu": 20540
+    },
+    {
+      "sana": "nyökkäsi",
+      "alku": 20580,
+      "loppu": 21160
+    },
+    {
+      "sana": "ja",
+      "alku": 21240,
+      "loppu": 21380
+    },
+    {
+      "sana": "piti",
+      "alku": 21420,
+      "loppu": 21680
+    },
+    {
+      "sana": "kätensä",
+      "alku": 21740,
+      "loppu": 22180
+    },
+    {
+      "sana": "ojossa",
+      "alku": 22260,
+      "loppu": 22620
+    }
+  ],
+  "lauseet": [
+    200,
+    5400,
+    11080,
+    15240,
+    19860
+  ],
+  "luotu": "2026-09-23T15:39:17.626Z"
+}

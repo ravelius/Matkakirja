@@ -13,13 +13,13 @@
  *     kutsuja sijoittaa haluamaansa koteloon.
  */
 
-const ENNUSTE_OSOITE = 'https://api.open-meteo.com/v1/forecast';
+export const ENNUSTE_OSOITE = 'https://api.open-meteo.com/v1/forecast';
 // Tunti on hyvä tasapaino: ennuste ei vanhene kesken pelisession,
 // mutta illalla avattu lehti ei näytä aamun lukemia.
 const VALIMUISTI_MS = 60 * 60 * 1000;
 
 /** WMO-koodit suomeksi ja kuvakeryhmäksi (aurinko/pilvi/sade/lumi...). */
-const SAAKOODIT = [
+export const SAAKOODIT = [
   [[0], 'selkeää', 'aurinko'],
   [[1], 'melkein selkeää', 'aurinko'],
   [[2], 'puolipilvistä', 'pilvi'],
@@ -48,7 +48,7 @@ export const SAA_IKONIT = {
   ukkonen: '<path d="M7 13.5h9.6a3.4 3.4 0 0 0 .5-6.8 5 5 0 0 0-9.8-1.1A3.9 3.9 0 0 0 7 13.5Z"/><path d="M12.8 15.5 10.6 19h2.6l-1.8 3"/>',
 };
 
-const KUUKAUDET_SSA = [
+export const KUUKAUDET_SSA = [
   'tammikuussa', 'helmikuussa', 'maaliskuussa', 'huhtikuussa',
   'toukokuussa', 'kesäkuussa', 'heinäkuussa', 'elokuussa',
   'syyskuussa', 'lokakuussa', 'marraskuussa', 'joulukuussa',
@@ -116,13 +116,26 @@ function kelpaaKaista(ylin, alin) {
  * avaavat (18.8.2026 lähtien sama kortti molemmissa) — rivi asuu
  * täällä graafin vierellä, koska sanamuoto seuraa kaistan olemassa-
  * oloa eli piirtimen omaa dataa.
+ *
+ * RIVIKOHTAINEN LÄHDE (7.9.2026). Suurin osa normaaleista on laskettu
+ * Open-Meteon ERA5-arkistosta jaksolta 1991–2020, ja se on yhä oletus.
+ * Neljätoista kaupunkia sai rivinsä 6.9.2026 en-Wikipedian
+ * ilmastotaulukoista, koska Open-Meteon vuorokausikiintiö oli täynnä,
+ * eikä niiden kausikaan ole aina 1991–2020 (Port Vila 1961–1990,
+ * Halifax 1981–2010). Sellainen rivi kertoo oman lähteensä
+ * lahde-kentässä { nimi, kausi }, ja tämä lause käyttää sitä. Ilman
+ * kenttää lause on entinen — vanhat rivit eivät siis tarvinneet
+ * mitään.
  */
 export function vuosiSaaSelite(tiedot) {
   const kaista = kelpaaKaista(tiedot?.ylin, tiedot?.alin);
+  const nimi = tiedot?.lahde?.nimi;
+  const kausi = tiedot?.lahde?.kausi;
+  const lahde = nimi ? `${nimi}${kausi ? `, ${kausi}` : ''}` : 'Open-Meteo (ERA5), 1991–2020';
   return kaista
     ? 'Käyrä keskilämpö, kaista tyypillinen vaihteluväli °C · palkit sademäärä mm '
-      + '· Open-Meteo (ERA5), 1991–2020'
-    : 'Käyrä keskilämpö °C · palkit sademäärä mm · Open-Meteo (ERA5), 1991–2020';
+      + `· ${lahde}`
+    : `Käyrä keskilämpö °C · palkit sademäärä mm · ${lahde}`;
 }
 
 /**

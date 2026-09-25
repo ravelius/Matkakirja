@@ -30,6 +30,15 @@
  * jolla merkki on kartalle piirretty — eikä uutta väriä keksitä
  * yhtään. Pallo on siis kirjaimellisesti se, mitä kartalta etsitään.
  *
+ * 2.9.2026 SE ON KIRJAIMELLISEMPI KUIN KOSKAAN (omistaja: *"Kaikista
+ * muista kategorioista voisi tehdä yksinkertaisesti vain pisteen"*):
+ * yhdeksästä rivistä viisi — kaupungit, historia, historian hetket,
+ * kulttuuri ja kauppa — on kartalla juuri sen värinen PISTE, ja
+ * neljällä on yhä oma muotonsa (luonto, eläimet, kadonneet ihmeet,
+ * skandaalit). Seliterivi latoo saman minimerkin kuin kartta
+ * (js/karttaselite.js karttaseliteSymboli), joten rivin kuvaa voi
+ * etsiä kartalta sellaisenaan.
+ *
  * SYMBOLITON MERKKI EI SAA VALOA. Vihreä kohtaamispiste
  * (js/fokuspiste.js) ja symboliton musteympyrä (js/fokuskohteet.js)
  * eivät ole symbolikategorioita, joten ne eivät kuulu mihinkään
@@ -68,9 +77,9 @@
  *     ankkuriryhmässä ja skaalautuu sen mukana (js/ui.js
  *     fokusMerkkiSkaalaKartalle).
  *
- * Eleen ajaksi valot häipyvät ja piiloutuvat muiden merkkien mukana,
- * koska ne ovat niissä samoissa kerroksissa (css/styles.css
- * kartta-merkit-haipyy ja kartta-merkit-piilossa).
+ * Valot pysyvät näkyvissä myös eleen ajan, kuten kaikki muukin elävä
+ * karttasisältö (omistaja 1.9.2026; js/kartta.js asennaPanorointi):
+ * ne elävät merkkiensä ankkuriryhmissä eikä niitä piiloteta.
  *
  * ── NIMET ON PREFIKSOITU ───────────────────────────────────────────
  *
@@ -85,12 +94,14 @@ import { nostosymPaakategoria } from './fokusnosto-symbolit.js';
 const KARTTAVALO_TALLE = 'matkakirja-karttavalot';
 
 /**
- * SELITELISTA — KAHDEKSAN AIHETTA, kartan järjestyksessä.
+ * SELITELISTA — YHDEKSÄN AIHETTA, kartan järjestyksessä.
  *
- * Omistajan lopullinen jako 29.8.2026. Järjestys on kartan oma eikä
- * aakkosten: ensin kaupungit (joita etsitään useimmin), sitten luonto
- * ja eläimet, sitten menneisyys, ja lopuksi ihmisen tekemiset —
- * kulttuuri, kauppa ja skandaalit.
+ * Omistajan jako 29.8.2026 (kahdeksan riviä) sai yhdeksännen rivin
+ * 2.9.2026, kun Historian hetket tuli peliin omana nostolajinaan
+ * (js/historian-hetket.js). Järjestys on kartan oma eikä aakkosten:
+ * ensin kaupungit (joita etsitään useimmin), sitten luonto ja eläimet,
+ * sitten menneisyys — historia, kadonneet ihmeet ja historian hetket —
+ * ja lopuksi ihmisen tekemiset: kulttuuri, kauppa ja skandaalit.
  *
  * `nimi` on selite eli se, mitä kartalla NÄKYY. Kahdella rivillä on
  * kaksiosainen nimi, koska ryhmä on kaksiosainen: yksi lyyra kattaa
@@ -108,6 +119,7 @@ export const KARTTAVALO_AIHEET = [
   { aihe: 'elaimet', nimi: 'Eläimet', symboli: 'elain' },
   { aihe: 'historia', nimi: 'Historia', symboli: 'historia' },
   { aihe: 'ihmeet', nimi: 'Kadonneet ihmeet', symboli: 'ihme' },
+  { aihe: 'hetket', nimi: 'Historian hetket', symboli: 'hetki' },
   { aihe: 'kulttuuri', nimi: 'Kulttuuri ja ruoka', symboli: 'kulttuuri' },
   { aihe: 'kauppa', nimi: 'Kauppa ja tekniikka', symboli: 'kauppa' },
   { aihe: 'skandaalit', nimi: 'Skandaalit', symboli: 'huuto' },
@@ -125,9 +137,11 @@ const KARTTAVALO_KARJET = Object.fromEntries(
  * SYMBOLI → RYHMÄNSÄ KÄRKISYMBOLI, eli se merkki, joka kartalle
  * oikeasti piirretään.
  *
- * OMISTAJAN PÄÄTÖS 31.8.2026: KARTALLA ON VAIN KAHDEKSAN SYMBOLIA —
- * täsmälleen selitevalikon kahdeksan riviä (KARTTAVALO_AIHEET). Ennen
- * tätä kartalla oli neljäntoista kategorian merkit, ja niistä kuusi
+ * OMISTAJAN PÄÄTÖS 31.8.2026: KARTALLA ON VAIN SELITEVALIKON OMAT
+ * SYMBOLIT — yksi merkki jokaista KARTTAVALO_AIHEET-riviä kohti, ei
+ * yhtään enempää (rivejä oli tuolloin kahdeksan; Historian hetket toi
+ * yhdeksännen 2.9.2026). Ennen tätä kartalla oli neljäntoista
+ * kategorian merkit, ja niistä kuusi
  * (silmä, malja, veturi, sulkakynä, ankkuri, seppele) esiintyi ilman
  * omaa seliteriviä: pelaaja näki kartalla ankkurin muttei löytänyt
  * ankkuria selitteestä. Nyt jokainen kartan merkki on jonkin
@@ -297,6 +311,66 @@ export function karttavalotKaikki(paalla) {
   karttavalotSovita();
 }
 
+/*
+ * ── YKSI KERRALLAAN (omistajan päätös 22.9.2026) ───────────────────
+ *
+ * Karttaselitteen monivalinta poistui: valikossa on nyt PEUKALOLEVY
+ * (js/karttaselite-levy.js), joka osoittaa aina tasan yhteen riviin.
+ * Kaksi funktiota riittää sille koko koneiston rajapinnaksi — kolmas,
+ * karttavaloAseta, jää ennalleen, koska sitä voi yhä käyttää se
+ * koodi, joka ei tunne valikon uutta rakennetta lainkaan.
+ *
+ * TILA ON EDELLEEN SAMA JOUKKO (KARTTAVALO_TALLE) JA SAMAT
+ * BODY-LUOKAT: karttavaloValitse kirjoittaa vain sen, montako aihetta
+ * joukossa on — kartan valot eivät tiedä, tuliko sytytys vanhasta
+ * OFF/ALL-parista vai uudesta levystä.
+ */
+
+/**
+ * Uusi valikko kirjoittaa tilan tällä yhdellä kutsulla: `valinta` on
+ * joko yksittäinen aihe, `'kaikki'` (sama kuin vanha ALL) tai `'ei'`
+ * (sama kuin vanha OFF). Tuntematon arvo ei tee mitään — kutsujan on
+ * itse tiedettävä aiheensa (KARTTAVALO_TYYPIT).
+ */
+export function karttavaloValitse(valinta) {
+  if (valinta === 'kaikki') { karttavalotKaikki(true); return; }
+  if (valinta === 'ei') { karttavalotKaikki(false); return; }
+  if (!KARTTAVALO_TYYPIT.has(valinta)) return;
+  const palaa = karttavalotLue();
+  palaa.clear();
+  palaa.add(valinta);
+  karttavalotTallenna();
+  karttavalotSovita();
+}
+
+/**
+ * Nykyinen valinta uuden mallin sanoin — peukalolevyn ainoa totuus.
+ *
+ * VANHA MONIVALINTATILA NORMALISOIDAAN: laitteella voi vielä olla
+ * useampi valo päällä ajalta ennen 22.9.2026 (tai käyttäjä on ehtinyt
+ * kutsua karttavaloAsetaa suoraan). Levy ei voi osoittaa moneen
+ * riviin yhtä aikaa, joten tilanne puretaan heti ensimmäisen sytkeen
+ * mukaiseksi ja KIRJOITETAAN talteen — muuten sama ristiriita
+ * palaisi joka päivityksellä.
+ *
+ * `jarjestys` on valinnainen: kutsuja (valikko) voi antaa oman
+ * näyttöjärjestyksensä (js/karttaselite.js KARTTASELITE_JARJESTYS),
+ * jotta "ensimmäinen" tarkoittaa samaa kuin mitä pelaaja NÄKEE
+ * ylimpänä. Oletus on tämän tiedoston oma KARTTAVALO_AIHEET-järjestys,
+ * jotta funktio on kutsuttavissa ilman argumenttia — koneisto ei
+ * tarvitse valikkoa toimiakseen, eikä tästä tiedostosta ole syytä
+ * tuoda karttaselite.js:ää (se toisi riippuvuuden takaisinpäin).
+ */
+export function karttavaloValinta(jarjestys = KARTTAVALO_AIHEET.map((r) => r.aihe)) {
+  const palaa = karttavalotLue();
+  if (palaa.size === 0) return 'ei';
+  if (palaa.size === KARTTAVALO_AIHEET.length) return 'kaikki';
+  if (palaa.size === 1) return [...palaa][0];
+  const uusi = jarjestys.find((aihe) => palaa.has(aihe)) ?? [...palaa][0];
+  karttavaloValitse(uusi);
+  return uusi;
+}
+
 /* ==================== LASKURIT ==================== */
 
 /**
@@ -316,9 +390,31 @@ export function karttavalotKaikki(paalla) {
  * KIERTOKOHDAT EIVÄT TUPLAA LUKUA. Kiertävällä laudalla sama merkki
  * piirretään kahteen kohtaan (ui.kiertoKohdat), joten laskuri laskee
  * ERI avaimia eikä solmuja.
+ *
+ * POIKKEUS 22.9.2026: KADONNEET IHMEET (aihe 'ihmeet') EIVÄT NOUDATA
+ * YLLÄ OLEVAA LUPAUSTA. Pallolaudan oma laskuri (ui.karttavaloLaskuri,
+ * js/pallolauta/nostot.js laskurikoonti) lisää tähän aiheeseen myös ne
+ * maan kadonneet ihmeet, joilla EI ole täplää ruudulla juuri nyt —
+ * tyypillisesti siksi, että kohde on siirretty kaupunkilehden
+ * kohdekartalle (js/fokuskohteet.js karsiKaupunkikartanNostot) eikä
+ * siksi enää koskaan piirry pääkartan merkiksi. Omistajan päätös:
+ * ihme on silti MAASSA, joten rivin luku on maan koko ihmemäärä, ei
+ * vain kartalla juuri nyt näkyvä osajoukko. Muut kahdeksan aihetta
+ * noudattavat yhä alkuperäistä sääntöä sellaisenaan.
  */
 export function karttavalotLaskurit(ui) {
   const luvut = new Map(KARTTAVALO_AIHEET.map(({ aihe }) => [aihe, 0]));
+  /*
+   * PALLOLAUDALLA MERKIT EIVÄT OLE SVG:SSÄ (pallolauta vaihe 3):
+   * karttapallo ilmoittaa laskurinsa itse (js/pallolauta/lauta.js
+   * ui.karttavaloLaskuri), samalla säännöllä — kappaleita, ei solmuja.
+   * Tasokartalla kenttää ei ole, ja alla oleva svg-laskenta pätee.
+   */
+  const omat = ui?.karttavaloLaskuri?.();
+  if (omat) {
+    for (const [aihe, n] of omat) if (luvut.has(aihe)) luvut.set(aihe, n);
+    return luvut;
+  }
   const juuri = ui?.svg;
   if (!juuri) return luvut;
   const nahdyt = new Map();

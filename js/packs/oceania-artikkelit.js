@@ -673,4 +673,609 @@ export const OCEANIA_ARTIKKELIT = {
       + 'jonka korjaustyön ensimmäisen vaiheen on määrä valmistua '
       + 'vuoteen 2030 mennessä.',
   },
+  /* DUNEDIN (Opus 6.9.2026, paketti O9). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain dunedin): väitteet on
+   * luettu en-Wikipedian raakateksteistä 6.9.2026, ja pohjana ovat
+   * docs/mantereet-tyoaineisto/faktapohja-dunedin.md ja
+   * tarkistus-dunedin.md. Avain on kaupungin wiki-nimi
+   * (js/packs/oceania.js: 'Dunedin (Uusi-Seelanti)'), ei näyttönimi —
+   * ARTIKKELIT haetaan city.wiki ?? city.name -avaimella. Kāi tahun
+   * eteläinen murre näkyy nimissä (Ōtākou), ja kansa on kuvattu
+   * nykyisenä. Kultaryntäyksen tarkkoja väestölukuja 1 700 -> 15 000 EI
+   * toisteta täällä, koska ne ovat laudan OCEANIA_FACTS-rivillä. */
+  'Dunedin (Uusi-Seelanti)': {
+    intro: 'Dunedin on Uuden-Seelannin Eteläsaaren kaakkoiskulmassa, '
+      + '23 kilometriä pitkän Otago Harbour -lahden perukassa. '
+      + 'Skotlannin vapaakirkon maallikkojärjestö perusti kaupungin '
+      + '1848, ja nimi on gaelia: **Dùn Èideann on Edinburgh**. '
+      + 'Kaupunginmittaaja Charles Kettle sai ohjeekseen jäljitellä '
+      + 'emokaupunkia, ja hänen komea katuverkkonsa piirrettiin '
+      + 'mäkiseen maastoon, joka pani rakentajat koville.'
+      + '\n\n'
+      + 'Kultaa löytyi Gabriel’s Gullystä 1861, ja väki tulvi Otagoon. '
+      + 'Dunedinista tuli 1865 maan väkirikkain kaupunki, ja rahalla '
+      + 'rakennettiin pysyvää: Otagon yliopisto perustettiin 1869 ja se '
+      + 'on maan vanhin. **Isoisän matkan vuonna 1873 kolme hanketta '
+      + 'valmistui yhtä aikaa** — First Church vihittiin käyttöön, '
+      + 'kaupungin oma pankki sulautui uuteen National Bankiin ja '
+      + 'ensimmäinen rautatie myytiin maakunnalle.'
+      + '\n\n'
+      + 'Vuosisadan vaihteessa kasvu siirtyi pohjoisemmas, ja Dunedin '
+      + 'jäi neljänneksi pääkeskukseksi. Se säilytti kuitenkin sen, '
+      + 'minkä kulta oli maksanut: viktoriaanisen kivikeskustan, joka '
+      + '1990-luvulla kunnostettiin ja josta tuli kaupungin uusi '
+      + 'käyntikortti.',
+    teksti: 'Dunedin lepää sammuneen tulivuoren päällä. Kilpitulivuori '
+      + 'purkautui 16–10 miljoonaa vuotta sitten, ja Otago Harbour '
+      + 'täyttää nyt sen vanhimman ja eniten kuluneen osan; Mount '
+      + 'Cargill, Flagstaff, Saddle Hill, Signal Hill ja koko Otagon '
+      + 'niemimaa ovat saman purkauskentän jäänteitä.'
+      + '\n\n'
+      + 'Kaupunki syntyi 1848 skotlantilaisena siirtokuntana ja kasvoi '
+      + 'kultaryntäyksen varassa. 1850-luvun loppuun mennessä tänne oli '
+      + 'muuttanut noin 12 000 skottia, ja 1874 Dunedin lähiöineen oli '
+      + 'väkiluvultaan maan suurin: 29 832 asukasta Aucklandin 27 840:tä '
+      + 'vastaan. Vuonna 1875 täällä perustettiin Union-laivayhtiö, '
+      + 'josta kasvoi eteläisen pallonpuoliskon suurin varustamo.'
+      + '\n\n'
+      + 'Nykyään joka viides dunedinilainen on 15–24-vuotias, ja '
+      + 'opiskelijaelämä värittää katukuvaa. UNESCO nimesi kaupungin '
+      + '2014 kirjallisuuden luovaksi kaupungiksi, ensimmäisenä '
+      + 'Uudessa-Seelannissa. Kaupungin kupeessa Otagon niemimaa on '
+      + 'kuninkaanalbatrossien ja keltasilmäpingviinien pesimäaluetta.',
+  },
+  /* SUVA (Opus 6.9.2026, paketti O9). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain suva); pohjana
+   * docs/mantereet-tyoaineisto/faktapohja-suva.md ja tarkistus-suva.md.
+   * 1873-KEHYS ON KIRJOITETTU TARKISTUKSEN MUKAAN: Suva oli 1873 pieni
+   * kylä, ei tyhjä maapala — lähteen oma sanamuoto on "in 1868, when
+   * Suva was still a small village". Vallankaappauksia ei mainita
+   * (ei nykypolitiikkaa). Päivämäärän vaihtumislinjaa ja Viti Levun
+   * kokoa EI toisteta, koska ne ovat laudan visan omia vastausfaktoja. */
+  Suva: {
+    intro: 'Suva on Fidžin pääkaupunki ja Etelä-Tyynenmeren suurimpia '
+      + 'kaupunkeja. Se on rakennettu kukkulaiselle niemelle Laucala '
+      + 'Bayn ja Suva Harbourin väliin. **Vuonna 1873 Suva oli vielä '
+      + 'pieni kylä**: pääkaupunki oli Levuka, saaria hallitsi '
+      + 'Cakobaun kolmivuotias kuningaskunta, eikä luovutusta '
+      + 'Britannialle ollut vielä tehty.'
+      + '\n\n'
+      + 'Sen jälkeen kaikki tapahtui nopeasti. Fidži luovutettiin '
+      + 'Britannialle 10. lokakuuta 1874, ja jo 1877 siirtomaa'
+      + 'viranomaiset siirsivät pääkaupungin Levukasta Suvaan, koska '
+      + 'vanha satamakaupunki ei mahtunut kasvamaan vuoren ja meren '
+      + 'väliin. Hallinto muutti virallisesti 1882, kunnallisstatus tuli '
+      + '1910 ja kaupunkioikeudet vasta lokakuussa 1952.'
+      + '\n\n'
+      + 'Suvaa kutsutaan joskus **Tyynenmeren New Yorkiksi**. '
+      + 'Kaupungissa asuvat rinnakkain alkuperäiset fidžiläiset eli '
+      + 'iTaukei ja indofidžiläiset, joiden esivanhemmat saapuivat '
+      + 'sopimustyöläisinä 1879 alkaen, ja se isännöi enemmän '
+      + 'kansainvälisiä ja alueellisia järjestöjä kuin mikään muu '
+      + 'Tyynenmeren saaripääkaupunki.',
+    teksti: 'Suva sijaitsee Viti Levun kaakkoiskulmassa Rewan '
+      + 'provinssissa. Niemi on lähes meren ympäröimä, mutta sen rantaa '
+      + 'reunustavat mangrovemetsät eikä hiekka: lähin hiekkaranta on 40 '
+      + 'kilometrin päässä Pacific Harbourissa. Merkittävä osa '
+      + 'keskustasta, parlamenttirakennukset mukaan lukien, seisoo '
+      + 'täytetyllä mangrovesuolla.'
+      + '\n\n'
+      + 'Kaupungin alku oli maakauppa. Cakobau lahjoitti 1868 '
+      + 'australialaiselle Polynesia-yhtiölle 5 000 neliökilometriä '
+      + 'maata maksuksi Yhdysvalloille velatuista korvauksista, ja yli '
+      + '575 neliökilometriä siitä oli Suvan lähellä; puuvillaviljelmä '
+      + 'ei menestynyt. Kuninkaallisten insinöörien eversti F. E. Pratt '
+      + 'nimitettiin ylikartoittajaksi 1875, ja hän piirsi uuden '
+      + 'pääkaupungin.'
+      + '\n\n'
+      + 'Nykyään Suva on Fidžin kauppa- ja hallintokeskus ja '
+      + 'Etelä-Tyynenmeren yliopiston kotikaupunki. Sade kuuluu arkeen: '
+      + 'yksikään kuukausi ei jää alle kuudenkymmenen millimetrin, ja '
+      + 'vuosikertymä on lähes kolme tuhatta millimetriä.',
+  },
+  /* CAIRNS (Opus 6.9.2026, paketti O9). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain cairns); pohjana
+   * docs/mantereet-tyoaineisto/faktapohja-cairns.md ja
+   * tarkistus-cairns.md. Avain on kaupungin wiki-nimi (js/packs/
+   * oceania.js: 'Cairns'), joka on tässä sama kuin näyttönimi.
+   * Väitteet on luettu en-Wikipedian raakateksteistä 6.9.2026
+   * ("Cairns", "George Elphinstone Dalrymple", "Kuranda Scenic
+   * Railway").
+   *
+   * TARKISTUKSEN KORJAUKSET ON TEHTY: Dalrymplen leiri on "syksyllä
+   * 1873" eikä syyskuun lopulla (29.9. oli lähtöpäivä Cardwellista,
+   * ja Trinity Bayhin päästiin vasta Johnstone-joen jälkeen), ja
+   * alukset olivat kuttereita eivätkä kaljaaseja.
+   *
+   * PILARI 1: gimuy-walubarra-yidinjit ja seudun oma nimi Gimuy
+   * tulevat ennen siirtomaanimiä, ja neljä perinteisten omistajien
+   * ryhmää mainitaan nykyisinä. Dalrymplen oman matkakertomuksen
+   * rasistista kieltä ja väkivaltakuvauksia EI toisteta (pilari 4,
+   * spec-mantereet.md Oseania-linjaus 2).
+   *
+   * RIUTAN MITTOJA (2 300 km, lähes 3 000 riuttaa) EI toisteta
+   * täällä: ne ovat laudan visan ja saapumiskortin omia faktoja
+   * (js/packs/oceania-questions.js ja oceania-saapumiset.js). */
+  Cairns: {
+    intro: 'Cairns on Australian trooppisen pohjoisen suurin kaupunki. '
+      + 'Se on rakennettu kapealle rantakaistaleelle Korallimeren ja '
+      + 'Suuren vedenjakajavuoriston väliin, ja sen keskustan edusta on '
+      + 'laajaa liejuista vuorovesitasankoa. Ennen brittejä seutu oli '
+      + 'gimuy-walubarra-yidinjien maata, ja yidinyn kielellä paikka on '
+      + 'yhä **Gimuy**.'
+      + '\n\n'
+      + 'Isoisän matkan vuonna 1873 kaupunkia ei ollut olemassa. Silloin '
+      + 'tutkimusretkeilijä George Elphinstone Dalrymple leiriytyi '
+      + 'retkikuntineen Trinity Bayn rannalle — juuri sille paikalle, '
+      + 'josta kolmen vuoden kuluttua tuli Cairnsin kaupunki. Kaupunki '
+      + 'perustettiin 1876 satamaksi Hodgkinsonin kultakentille ja '
+      + 'nimettiin Queenslandin silloisen kuvernöörin William Cairnsin '
+      + 'mukaan. Paikka oli mangrovesuota ja hiekkaharjuja.'
+      + '\n\n'
+      + 'Kulta ehtyi, mutta rautatie Athertonin ylängölle ja '
+      + 'kiinalaisten siirtolaisten aloittama trooppinen maatalous '
+      + 'pitivät kaupungin pystyssä. Nykyään Cairns elää matkailusta ja '
+      + 'on ulkomaisille kävijöille Australian neljänneksi suosituin '
+      + 'kohde. Syy on **kaksi maailmanperintökohdetta samalla '
+      + 'rannalla** — riutta merellä ja sademetsä maalla.',
+    teksti: 'Cairns sijaitsee Kap Yorkin niemimaan itärannikolla '
+      + 'Korallimeren ja Suuren vedenjakajavuoriston välissä. Kaupungin '
+      + 'pohjoisosa on Trinity Bayn rannalla ja keskusta Trinity '
+      + 'Inletin varrella; osa lähiöistä on tulvatasangolla, ja Barron- '
+      + 'ja Mulgravejoki virtaavat kaupunkialueella mutta eivät '
+      + 'keskustan läpi.'
+      + '\n\n'
+      + 'Britit tunsivat rannikon nimellä Trinity Bay vuodesta 1770, '
+      + 'mutta ensimmäiset eurooppalaiset asettuivat sinne vasta '
+      + '1860-luvun lopulla merikurkkua pyytävinä kalastajina. Kaupunki '
+      + 'perustettiin 1876, ja pian sen jälkeen kiinalaiset siirtolaiset '
+      + 'aloittivat puuvillan, tupakan, kahvin, riisin, sokerin ja '
+      + 'banaanin viljelyn; vuonna 1886 heitä oli 60 prosenttia seudun '
+      + 'viljelijöistä. Rautatie Kurandaan valmistui 1891.'
+      + '\n\n'
+      + 'Toisen maailmansodan aikana Cairns oli liittoutuneiden '
+      + 'tukikohta Tyynenmeren operaatioille, ja sodan jälkeen '
+      + 'kaupungista kehittyi vähitellen matkailukeskus. Kansainvälinen '
+      + 'lentokenttä avattiin 1984. Vuoden 2021 väestönlaskennassa '
+      + 'alkuperäiskansojen osuus asukkaista oli 9,7 prosenttia, ja '
+      + 'seudulla toimii neljä tunnustettua perinteisten omistajien '
+      + 'ryhmää.',
+  },
+  /* HONIARA (Opus 6.9.2026, paketti O9). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain honiara); pohjana
+   * docs/mantereet-tyoaineisto/faktapohja-honiara.md ja
+   * tarkistus-honiara.md. Avain on kaupungin wiki-nimi
+   * (js/packs/oceania.js: 'Honiara').
+   *
+   * TARKISTUKSEN KORJAUKSET NÄKYVÄT TÄSSÄKIN: Saksan protektoraattia
+   * ei mainita (1884 vs. 1886 -ristiriita), Guadalcanalin pinta-alaa
+   * ei anneta lukuna, lentokentän etäisyys on Honiara-artikkelin
+   * "runsaat kymmenen kilometriä", ja blackbirding-luku on
+   * Pijin-artikkelin täsmällinen 13 000 Queenslandiin.
+   *
+   * EI NYKYPOLITIIKKAA: vuosien 1998–2003, 2006 ja 2021 levottomuudet
+   * jätetty pois. Ironbottom Sound ja Guadalcanalin taistelut ovat
+   * laudan visan omia vastausfaktoja, joten niitä ei toisteta tässä
+   * enempää kuin kehyksen verran. */
+  Honiara: {
+    intro: 'Honiara on Salomonsaarten pääkaupunki Guadalcanalin '
+      + 'luoteisrannikolla. **Vuonna 1873 sitä ei ollut olemassa**: '
+      + 'saarilla ei ollut siihen aikaan minkäänlaista '
+      + 'siirtomaahallintoa, ja Britannian protektoraatti julistettiin '
+      + 'vasta 1893. Kaupunki syntyi vasta toisen maailmansodan '
+      + 'jälkeen sotilastukikohdan paikalle.'
+      + '\n\n'
+      + 'Nimi tulee sanoista *nagho ni ara*, jotka tarkoittavat '
+      + 'suunnilleen itätuulen paikkaa. Sama nimi on niemellä, jonka '
+      + 'ympärille kaupunki rakennettiin: Point Cruzin ghari-kielinen '
+      + 'nimi on naho-ni-ara. Honiarasta tuli protektoraatin '
+      + 'pääkaupunki 1952, koska amerikkalaiset olivat rakentaneet '
+      + 'sodan aikana tiet, laiturit ja lentokentän valmiiksi, ja '
+      + 'heinäkuussa 1978 itsenäisten Salomonsaarten pääkaupunki.'
+      + '\n\n'
+      + 'Kaupunki on **maan nopeimmin kasvava väestökeskus**: '
+      + 'asukkaita oli 1979 vielä 18 346 ja 2019 jo 129 569, ja noin '
+      + 'puolet heistä on alle kolmekymmenvuotiaita. Honiaran kautta '
+      + 'levisi myös pijin, joka on nykyään koko maan pääkieli.',
+    teksti: 'Honiara on Guadalcanalin luoteisrannikolla ohuena '
+      + 'nauhana meren ja jyrkkien kukkuloiden välissä. Matanikaujoki '
+      + 'virtaa kaupungin läpi, ja Kukum Highway vie runsaat kymmenen '
+      + 'kilometriä itään lentokentälle, joka oli sota-aikana '
+      + 'Henderson Field. Kaupungin edustalla oleva vesialue on '
+      + 'Ironbottom Sound eli Rautapohja.'
+      + '\n\n'
+      + 'Ennen kaupunkia seudulla oli kyliä, valaanpyytäjiä ja '
+      + 'lähetyssaarnaajia. Anglikaaninen Melanesian-lähetys '
+      + 'perustettiin 1849, ja 1870-luvun alussa australialaiset '
+      + 'istuttajat siirsivät työvoimanvärväyksensä näille vesille; '
+      + 'Queenslandin viljelmille vietiin kaikkiaan noin 13 000 '
+      + 'salomonsaarelaista. Toisen maailmansodan taistelut '
+      + 'lentokentästä käytiin 7.8.1942–9.2.1943.'
+      + '\n\n'
+      + 'Nykyään Honiara on maan hallinto- ja kauppakeskus. '
+      + 'Keskustori on maan suurin kauppapaikka, ja sen venerampilta '
+      + 'kalastajat kantavat saaliinsa suoraan pöydälle. '
+      + 'Parlamenttitalon kartiokatto yhdistää Temotun ja '
+      + 'Guadalcanalin perinteiset kattomuodot.',
+  },
+  /* PORT VILA (Opus 6.9.2026, paketti O9). Sama erä kuin lehden
+   * tekstit (js/packs/kulttuuri-kategoriat.js, avain portvila);
+   * pohjana docs/mantereet-tyoaineisto/faktapohja-portvila.md ja
+   * tarkistus-portvila.md. Avain on kaupungin wiki-nimi
+   * (js/packs/oceania.js: 'Port Vila').
+   *
+   * 1873-KEHYS ON KIRJOITETTU TARKISTUKSEN MUKAAN: Franceville on
+   * 1889, ei 1873, eikä Efatella ollut isoisän aikaan kuntaa eikä
+   * hallintoa. Chevillard saapui 1880. Kielten määrä on "yli sata",
+   * koska lähteet antavat 138, 113 ja 100+. Yasuria ja Pentecostin
+   * maahyppyä ei mainita: ne ovat laudan visan omia vastausfaktoja ja
+   * muiden saarten aiheita. */
+  'Port Vila': {
+    intro: 'Port Vila on Vanuatun pääkaupunki ja maan tärkein satama. '
+      + 'Se on rakennettu Efaten rannalle suojaisan luonnonsataman '
+      + 'ympärille, ja sataman suulla makaa Iririkin saari. Alueen '
+      + 'oma nimi on eteläefaten kielellä *Efil* ja mele-filan '
+      + 'kielellä *Ifira*; Vila on niiden muunnos.'
+      + '\n\n'
+      + '**Vuonna 1873 kaupunkia ei ollut** — ei kuntaa eikä '
+      + 'hallintoa. Santelipuu oli hakattu loppuun 1860-luvun '
+      + 'puoliväliin mennessä, mutta valaanpyyntialuksia kävi yhä ja '
+      + 'työvoimaa hakevat alukset veivät saarelaisia Queenslandin, '
+      + 'Fidžin ja Uuden-Kaledonian viljelmille. Britannia ja Ranska '
+      + 'julistivat Uudet Hebridit puolueettomaksi alueeksi 1878, ja '
+      + 'ensimmäinen ranskalainen istuttaja saapui Efatelle 1880.'
+      + '\n\n'
+      + 'Sitten tuli poikkeuksellinen välivuosi. Franceville '
+      + 'julistautui itsenäiseksi kunnaksi 9. elokuuta 1889 ja '
+      + 'toteutti **yleisen äänioikeuden sukupuoleen ja rotuun '
+      + 'katsomatta** — yhtenä ensimmäisistä tunnetun historian '
+      + 'itsehallinnollisista yhteisöistä. Kunta hajosi jo '
+      + 'seuraavana kesänä.',
+    teksti: 'Port Vila sijaitsee Efaten rannalla Shefan provinssissa. '
+      + 'Väkiluku oli vuoden 2020 väestönlaskennassa 49 034 ja '
+      + 'pinta-ala 23,6 neliökilometriä. Kaupunki on niin pieni, että '
+      + 'kauppahalli, kulttuurikeskus, kaupungintalo ja katedraali '
+      + 'ovat kaikki saman kävelyn varrella.'
+      + '\n\n'
+      + 'Vuoden 1887 jälkeen saaria hallitsivat Ranska ja Britannia '
+      + 'yhdessä, ja 1906 järjestely virallistettiin kondominioksi: '
+      + 'kaksi erillistä hallinto-, laki-, tuomioistuin- ja '
+      + 'finanssijärjestelmää, jotka kohtasivat vain yhteisessä '
+      + 'tuomioistuimessa. Ni-vanuatulaisilta oli suljettu kummankin '
+      + 'vallan kansalaisuus. Vanuatu itsenäistyi 1980.'
+      + '\n\n'
+      + 'Nykyään arjen kieli on bislama, mutta englanti ja ranska ovat '
+      + 'molemmat virallisia. Kaupungissa on Vanuatun kulttuurikeskus, '
+      + 'jonka kokoelmista osa on tabu, ja sen kenttätyöntekijät ovat '
+      + 'tallentaneet suullista perinnettä vuodesta 1976.',
+  },
+  /* Fidžin, Papua-Uuden-Guinean ja Salomonsaarten maaintrot
+   * kirjoitettiin 6.9.2026 maalehtien (MAA_KATEGORIAT.FJI, .PNG ja
+   * .SLB) yhteydessä samasta en-Wikipedian aineistosta kuin lehdet.
+   * Vain intro-kenttä, kuten Australialla ja Uudella-Seelannilla.
+   * Avain on maan nimi js/packs/oceania-countries.js:ssä, koska
+   * mailla ei ole erillistä wiki-kenttää. Suvan ja Port Moresbyn
+   * kaupunkilehtien aiheet (Cakobau, luovutus 1874, hiri-purjehdukset,
+   * kansallismuseo) on jätetty pois, koska ne ovat kaupunkilehtien
+   * nostoja. */
+  Fidži: {
+    intro: 'Fidži on 330 saaren ja yli viidensadan luodon ryhmä '
+      + 'eteläisellä Tyynellämerellä, ja saarista noin 110 on pysyvästi '
+      + 'asuttuja. Kaksi suurta '
+      + 'saarta, Viti Levu ja Vanua Levu, ovat vuoristoisia ja '
+      + 'tuuliylärinteiltään sateisia; muut ovat pieniä ja monet '
+      + 'korallin ympäröimiä. **Ensimmäiset asukkaat olivat '
+      + 'lapitalaisia, jotka saapuivat noin vuosina 1100–1000 eaa. ja '
+      + 'jättivät jälkeensä hammasleimasimella koristeltua '
+      + 'keramiikkaa.** Moturikin saarelta löytyi 2002 lapitanaisen '
+      + 'luuranko, joka on vanhempi kuin vuosi 800 eaa.'
+      + '\n\n'
+      + 'Isoisän matkavuonna 1873 Fidži ei ole vielä Britannian '
+      + 'siirtomaa vaan lyhytikäinen kuningaskunta, ja saaret ovat olleet '
+      + 'seitsemänkymmentä vuotta kauppalaivojen kohde: ensin '
+      + 'santelipuun, sitten kuivatun merimakkaran takia. Itäisillä '
+      + 'Lau-saarilla valtaa pitää tongalainen prinssi Enele Ma’afu. '
+      + 'Luonto on saariluontoa parhaimmillaan: kruunuleguaani vaihtaa '
+      + 'värinsä mustaksi suuttuessaan, tagimoucia-kukka kasvaa vain '
+      + 'yhden saaren ylängöllä, ja punaisen kula-papukaijan höyheniä '
+      + 'kuljetettiin aikoinaan Samoaan ja Tongaan asti.',
+  },
+  'Papua-Uusi-Guinea': {
+    intro: 'Papua-Uusi-Guinea käsittää maailman toiseksi suurimman '
+      + 'saaren itäisen puoliskon sekä satoja pienempiä saaria. Maa on '
+      + 'vuoristoinen, tiheän sademetsän peittämä ja poikkeuksellisen '
+      + 'vaikeakulkuinen, ja juuri siksi sen laaksot ovat säilyneet '
+      + 'erillisinä maailmoina. **Kieliä puhutaan noin 840 — enemmän kuin '
+      + 'missään muualla maailmassa — ja yhteiseksi kieleksi on '
+      + 'kasvanut englannin pohjalta syntynyt kreoli tok pisin.**'
+      + '\n\n'
+      + 'Ylängöillä maanviljely keksittiin itsenäisesti: Kukin suon '
+      + 'turpeesta on kaivettu yhdeksäntuhatta vuotta vanhoja ojia, '
+      + 'joilla kuivattiin maata taarolle. Ulkomaailma sai tietää '
+      + 'ylängöillä asuvista sadoistatuhansista ihmisistä vasta '
+      + '1930-luvulla, kun australialaiset kullanetsijät kävelivät ja '
+      + 'lensivät saaren sisäosiin. Isoisän matkavuonna 1873 saaren '
+      + 'rannikko on vasta kartoitettavana eikä siirtomaavaltoja ole '
+      + 'vielä tullut.'
+      + '\n\n'
+      + 'Luonto on omanlaisensa: paratiisilinnut tanssivat '
+      + 'soidinaukioilla, maailman suurin perhonen elää yhden maakunnan '
+      + 'sademetsässä, kengurut kiipeävät puihin ja maailman suurin '
+      + 'kyyhky kävelee metsänpohjalla. Sing-sing-juhlassa kymmenet '
+      + 'ryhmät esittävät toisilleen oman tanssinsa ja koristelunsa.',
+  },
+  Salomonsaaret: {
+    intro: 'Salomonsaariin kuuluu kuusi suurta saarta ja 992 pienempää, '
+      + 'ja ne ovat Papua-Uuden-Guinean kaakkoispuolella. Suuret saaret '
+      + 'ovat vuoristoisia ja sademetsän peittämiä. Nimi syntyi '
+      + 'väärinkäsityksestä: kun espanjalainen Álvaro de Mendaña palasi '
+      + '1568 ensimmäiseltä matkaltaan, kertomukset sekoittuivat '
+      + 'tarinoihin kuningas Salomon rikkauksista, ja saaret ristittiin '
+      + 'Islas Salomóniksi. **Kultaa ei ollut.**'
+      + '\n\n'
+      + 'Asutus on vanhaa: Bukan saaren luolasta on löydetty jälkiä noin '
+      + '30 000 vuoden takaa, ja austronesialaiset lapitalaiset saapuivat '
+      + 'noin 1200–800 eaa. Isoisän matkavuonna 1873 saaret eivät ole '
+      + 'vielä minkään vallan alaisia — Britannia julistaa eteläiset '
+      + 'saaret protektoraatikseen vasta 1893 — mutta valaanpyytäjät ja '
+      + 'kauppiaat käyvät jo säännöllisesti, ja Malaitalta lähdetään '
+      + 'sopimustyöhön Queenslandin ja Fidžin viljelmille.'
+      + '\n\n'
+      + 'Meri on täällä samaan aikaan ruokakomero ja tulivuori: Marovon '
+      + 'laguuni on maailman suurin kaksoisvalliriutan sulkema laguuni, '
+      + 'Kavachi purkautuu merenpinnan alla ja Langa Langan laguunissa '
+      + 'ihmiset ovat kasanneet itselleen saaria hiekkasärkkien päälle. '
+      + 'Raha on tehty käsin simpukasta ja punaisista sulista.',
+  },
+  'Itä-Timor': {
+    // Muita pidempi tarkoituksella: maalehden maaosasto (MAA_KATEGORIAT
+    // TLS) nojaa tähän introon yksin, sama malli kuin Egyptillä ja
+    // Kenialla. Faktat en-Wikipedian artikkeleista "Timor-Leste",
+    // "Timor", "Tatamailau" ja "Oecusse" (luettu 6.9.2026).
+    intro: 'Itä-Timor on Timorin saaren itäinen puolisko, ja siihen '
+      + 'kuuluvat myös Oecussen eksklaavi Länsi-Timorin sisällä sekä '
+      + 'Ataúron ja Jacon saaret. Saaren nimi tulee malaijin sanasta '
+      + 'timur, itä, joten portugalinkielinen **Timor-Leste tarkoittaa '
+      + 'kirjaimellisesti Itä-itää**. Sisämaa on vuoristoa: korkein '
+      + 'kohta on 2 963 metrin Tatamailau, jonka nimi tarkoittaa '
+      + 'mambain kielellä kaikkien isoisää. Rannikolta vietiin '
+      + 'santelipuuta kiinalaisiin, jaavalaisiin ja intialaisiin '
+      + 'kauppaverkkoihin jo 1300-luvulla, ja juuri santelipuu toi '
+      + 'paikalle 1500-luvulla ensimmäiset eurooppalaiset. Portugali '
+      + 'ja Alankomaat jakoivat saaren 1859, ja jaon jäljiltä maalla on '
+      + 'yhä pala maata keskellä naapurivaltiota. Nykyään Itä-Timor on '
+      + 'Aasian ainoa suvereeni valtio, jossa portugali on virallinen '
+      + 'kieli tetumin rinnalla, ja sen tärkein vientikasvi on '
+      + 'ylängöillä kasvava kahvi.',
+  },
+  /* Vanuatun maaintro kirjoitettiin 6.9.2026 maalehden
+   * (MAA_KATEGORIAT.VUT) yhteydessä samasta en-Wikipedian aineistosta
+   * kuin lehti. Vain intro-kenttä, kuten Fidžillä ja
+   * Salomonsaarilla — maalehden maaosasto nojaa tähän introon yksin.
+   * Avain on maan nimi js/packs/oceania-countries.js:ssä. Port Vilan
+   * kaupunkilehden aiheet (Franceville, kondominio, bislama,
+   * kulttuurikeskus) on jätetty pois, koska ne ovat kaupunkilehden
+   * nostoja. */
+  Vanuatu: {
+    intro: 'Vanuatu on vulkaanista alkuperää oleva saariketju '
+      + 'Melanesiassa, 1 750 kilometriä Pohjois-Australiasta itään ja '
+      + 'Fidžistä länteen. Ensimmäiset asukkaat saapuivat noin '
+      + '3 000 vuotta sitten, ja he olivat lapita-kulttuurin väkeä: '
+      + 'Efaten Teoumasta on kaivettu Tyynenmeren vanhin tunnettu '
+      + 'hautausmaa, jonka vainajilta oli irrotettu kallo ja tilalle '
+      + 'asetettu kartiokotilorenkaita. **Maailman tihein kielikartta '
+      + 'on täällä: alle 300 000 asukasta ja 138 alkuperäistä kieltä, '
+      + 'keskimäärin vajaat kaksituhatta puhujaa kutakin kohti.**'
+      + '\n\n'
+      + 'Ensimmäisenä eurooppalaisena saarille tuli 1606 portugalilainen '
+      + 'Pedro Fernandes de Queirós Espanjan kruunun palveluksessa; hän '
+      + 'luuli löytäneensä eteläisen mantereen ja nimesi suurimman '
+      + 'saaren Espíritu Santoksi. Isoisän matkavuonna 1873 saarilla ei '
+      + 'ole hallintoa: Britannia ja Ranska sopivat yhteishallinnosta '
+      + 'vasta 1887 ja kondominiosta 1906. Nimi Vanuatu valittiin vasta '
+      + 'itsenäistymisen alla helmikuussa 1980 — vanua tarkoittaa maata '
+      + 'tai kotia ja tu seisomista.'
+      + '\n\n'
+      + 'Kulttuuri on tehty katoavista aineista ja kestävistä merkeistä: '
+      + 'hiekkapiirros syntyy yhtenä viivana yhdellä sormella, Ambrymin '
+      + 'lohkorummut nostetaan pystyyn kylän aukiolle, ja namelen lehti '
+      + 'maahan pistettynä kertoo, että paikka on tabu. Ruoka kypsyy '
+      + 'maakuopassa kuumilla kivillä, ja illan kava juodaan yhteisessä '
+      + 'nakamalissa, jonka ovessa ei ole lukkoa.',
+  },
+  /* DILI (Opus 7.9.2026). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain dili); pohjana
+   * docs/mantereet-tyoaineisto/faktapohja-dili.md ja
+   * tarkistus-dili.md. Avain on kaupungin wiki-nimi
+   * (js/packs/oceania.js: 'Dili'). Väitteet on luettu en-Wikipedian
+   * raakateksteistä 7.9.2026 ("Dili", "Casa Europa", "Port of Dili",
+   * "Tetun language").
+   *
+   * EI NYKYPOLITIIKKAA EIKÄ NYKYVÄKIVALTAA (Myanmar-linja):
+   * miehitysajan väkivalta, Santa Cruz 1991 sekä vuosien 1999 ja
+   * 2006 kriisit on jätetty pois. Miehitys ja itsenäistyminen
+   * esiintyvät vain päivämäärinä.
+   *
+   * VUOSILUKUA 1866 EI KÄYTETÄ (tarkistus-dili.md, kohta A): lähde
+   * antaa vain suhteellisen ajan "viisi vuotta ennen vuotta 1871".
+   * Maan intro ('Itä-Timor') kertoo santelipuusta ja Oecussesta,
+   * joten niitä ei toisteta täällä. */
+  Dili: {
+    intro: 'Dili on Itä-Timorin pääkaupunki ja suurin kaupunki '
+      + 'Timorin saaren pohjoisrannikolla. Se on rakennettu pienelle '
+      + 'tasaisen maan alueelle, jota vuoret ympäröivät, ja se on '
+      + 'ollut maan talouden keskus ja pääsatama siitä asti, kun '
+      + 'siitä tehtiin Portugalin Timorin pääkaupunki 1769.'
+      + '\n\n'
+      + 'Kuvernööri António José Teles de Meneses siirsi silloin '
+      + 'hallinnon ja 1 200 ihmistä itään. Paikka kuului Motaelin '
+      + 'kuningaskuntaan, jonka johtaja oli portugalilaisten ystävä, '
+      + 'ja ympärillä oli riisinviljelyyn sopivaa kosteikkoa. '
+      + 'Kaupunki rakennettiin uudelleen ruutukaavaan 1830-luvulta '
+      + 'alkaen, ja isoisän matkan aikaan se oli **rakennustyömaa**: '
+      + 'tulipalo oli tuhonnut linnoituksen, ja sen raunioille '
+      + 'nostettiin uutta kasarmia vuodesta 1871.'
+      + '\n\n'
+      + 'Nykyään Dili on nuoren maan pääkaupunki. Väestö on '
+      + 'poikkeuksellisen nuorta ja kasvaa muuttajista: joka muusta '
+      + 'kunnasta muutetaan pois, ja Diliin muutetaan. Kaupungin oma '
+      + 'kieli on tetum, ja sen Dilissä syntynyt muoto **Tetun Prasa '
+      + 'eli torin tetum** on koko maan yleiskieli.',
+    teksti: 'Dili sijaitsee Timorin pohjoisrannikolla kapealla '
+      + 'rantatasangolla. Kaupungin ydin on alle sadan metrin '
+      + 'korkeudessa, ja vain noin 37 prosenttia kaupunkialueesta on '
+      + 'riittävän tasaista rakentamiseen. Comoro-joki virtaa '
+      + 'länsiosan läpi, ja sen valuma-alue ulottuu yhdeksän '
+      + 'kilometrin päähän sisämaahan, missä vuoret ovat jo '
+      + 'yhdeksänsataa metriä korkeita.'
+      + '\n\n'
+      + 'Paikalla on ollut satama ainakin vuodesta 1726. Vuonna 1769 '
+      + 'siitä tuli Portugalin Timorin pääkaupunki, ja kuvernööri '
+      + 'José Maria Marques rakensi asutuksen uudelleen ruutukaavaan '
+      + '1834 alkaen, kun vanhan kaupungin ja Lahanen välinen '
+      + 'kosteikko kuivattiin. Toisessa maailmansodassa kaupunki '
+      + 'joutui kahden sotajoukon väliin, ja syyskuuhun 1945 mennessä '
+      + 'sen keskusta oli raunioina. Portugalin hallinto päättyi '
+      + '1975, ja maa itsenäistyi lopullisesti 2002.'
+      + '\n\n'
+      + 'Ilmasto on trooppinen savanni-ilmasto, jossa on kaksi '
+      + 'vuodenaikaa: sadekausi marraskuusta huhtikuuhun ja kuiva '
+      + 'kausi toukokuusta lokakuuhun. Kaupungissa on maan ainoa '
+      + 'toimiva kansainvälinen lentokenttä ja maan yliopistot, ja '
+      + 'kolme neljäsosaa maan yliopisto-opiskelijoista opiskelee '
+      + 'täällä.',
+  },
+  /* ALICE SPRINGS (Opus 7.9.2026). Sama erä kuin lehden tekstit
+   * (js/packs/kulttuuri-kategoriat.js, avain alicesprings); pohjana
+   * faktapohja-alicesprings.md ja tarkistus-alicesprings.md. Avain
+   * on kaupungin wiki-nimi (js/packs/oceania.js: 'Alice Springs').
+   * Väitteet on luettu en-Wikipedian raakateksteistä 7.9.2026
+   * ("Alice Springs", "Alice Springs railway station").
+   *
+   * PILARI 1: arrernte-kansa ja paikan oma nimi Mparntwe tulevat
+   * ennen siirtomaanimiä, ja kansa näytetään nykypäivän toimijana
+   * (vuoden 2000 maaoikeuspäätös).
+   *
+   * ASUKASLUKUA EI ANNETA (tarkistus-alicesprings.md, kohta B):
+   * infobox ja leipäteksti ovat 34 prosentin päässä toisistaan.
+   * Stuart Town Gaol on 1907 eikä 1909 (kohta A). AUS-maalehden
+   * lennätinnosto kertoo linjan rakentamisen, joten sitä ei toisteta
+   * täällä. */
+  'Alice Springs': {
+    intro: 'Alice Springs on kaupunki Pohjoisterritoriossa '
+      + 'suunnilleen Australian maantieteellisessä keskipisteessä, '
+      + 'lähes yhtä kaukana Adelaidesta ja Darwinista. Seudun '
+      + 'alkuperäiset asukkaat, **arrernte-kansa**, ovat asuneet '
+      + 'Keski-Australian aavikolla kymmeniätuhansia vuosia, ja '
+      + 'taajaman alueen perinteinen nimi on Mparntwe eli '
+      + 'vedenottopaikka.'
+      + '\n\n'
+      + 'Isoisän matkan aikaan kaupunkia ei ollut. Yleislennätinlinja '
+      + 'Adelaidesta Darwiniin oli valmistunut 1872, ja sen '
+      + 'toistinasema oli pystytetty tavallisesti kuivan Todd-joen '
+      + 'vesikuopan viereen. W. W. Mills nimesi paikan Alice '
+      + 'Springsiksi lennätinylitarkastajan sir Charles Toddin vaimon '
+      + 'mukaan — mutta viereinen asutus sai nimen Stuart, ja **se '
+      + 'nimettiin uudelleen Alice Springsiksi vasta 31. elokuuta '
+      + '1933**.'
+      + '\n\n'
+      + 'Kaupunki kasvoi vasta radan myötä 1929. Nykyään se on seudun '
+      + 'palvelukeskus ja matkailukaupunki, jossa asuu noin '
+      + 'kymmenesosa koko Pohjoisterritorion väestöstä, ja se on '
+      + 'Keski-Australian aboriginaalitaiteen kauppa- ja '
+      + 'näyttelykeskus.',
+    teksti: 'Alice Springs on 545 metrin korkeudessa '
+      + 'MacDonnell-vuorten pohjoispuolella, tavallisesti kuivan '
+      + 'Todd-joen molemmin puolin. Ympäröivä seutu tunnetaan nimellä '
+      + 'Keski-Australia tai Punainen keskusta, ja se on kuivaa '
+      + 'aavikkoa. Merelle on noin kaksitoistasataa kilometriä ja '
+      + 'lähimpiin suuriin kaupunkeihin noin puolitoista tuhatta.'
+      + '\n\n'
+      + 'Merkittävä eurooppalainen asutus alkoi vasta, kun '
+      + 'Arltungasta löytyi kultaa 1887. Kaupungin ensimmäinen '
+      + 'kunnollinen rakennus, Stuart Town Gaol, valmistui 1907, '
+      + 'jolloin eurooppalaisia asukkaita oli alle kaksikymmentä. '
+      + 'Keski-Australian ensimmäinen sairaala Adelaide House avattiin '
+      + '1926, rata tuli 1929, ja maailman ensimmäinen radiokoulu '
+      + 'School of the Air aloitti täältä 1951. Toukokuussa 2000 '
+      + 'liittovaltion tuomioistuin tunnusti arrernte-kansan '
+      + 'kaupungin perinteisiksi omistajiksi — se oli Australian '
+      + 'ensimmäinen onnistunut kaupunkialueen maaoikeusvaade.'
+      + '\n\n'
+      + 'Kaupunki palvelee aluetta, joka on Suomea suurempi. Se on '
+      + 'Adelaide–Darwin-radan puolivälissä, ja sitä palvelee '
+      + 'matkailujuna Ghan. Ilmasto on subtrooppinen kuuma '
+      + 'aavikkoilmasto: kesän ylin keskilämpötila on 35,6 astetta ja '
+      + 'talvella pakkasöitä on keskimäärin kaksitoista vuodessa.',
+  },
+  /*
+   * TOWNSVILLE (Opus 7.9.2026, Fablen parvi). Avain on 'Townsville',
+   * koska js/packs/maailmankartta.js antaa kaupungille wiki-nimeksi
+   * 'Townsville' — ui.js hakee introa kentällä `city.wiki ?? city.name`.
+   * Sama erä kuin lehden tekstit (js/packs/kulttuuri-kategoriat.js,
+   * avain townsville): väitteet on luettu en-Wikipedian raakatekstistä
+   * 7.9.2026, lähdeaineistona
+   * docs/mantereet-tyoaineisto/faktapohja-townsville.md ja sen
+   * riippumaton tarkistus tarkistus-townsville.md, joka voittaa
+   * ristiriidassa.
+   *
+   * VUODEN 1873 KULMA: isoisän matkavuonna Townsville oli yhdeksän
+   * vuoden ikäinen satamakaupunki ilman rautatietä. Kultaa oli
+   * löytynyt Cape Riveriltä 1867, Ravenswoodista 1869 ja Charters
+   * Towersista jouluaattona 1871, ja kaikki se kulki Townsvillen
+   * laitureille maanteitse. Rata Charters Towersista valmistui vasta
+   * joulukuussa 1882. Tullilla ja oikeusistuimella oli tuolloin yhä
+   * yhteinen ahdas puurakennus.
+   *
+   * PERUSTAMISLEIRIN KUUKAUTTA EI ANNETA (tarkistus, kohta A):
+   * "Townsville" sanoo huhtikuu 1864, "Townsville Customs House"
+   * marraskuu 1864. Teksti sanoo vain vuoden.
+   */
+  Townsville: {
+    intro: 'Townsville on Pohjois-Queenslandin suurin kaupunki, '
+      + 'satama Cleveland Bayn rannalla 1 350 kilometriä Brisbanesta '
+      + 'pohjoiseen ja 350 kilometriä Cairnsista etelään. Asukkaita on '
+      + 'kaupungin oman ilmoituksen mukaan 204 541, ja keskustaa '
+      + 'hallitsee 286 metriä korkea graniittikallio Castle Hill.'
+      + '\n\n'
+      + 'Kaupunki syntyi tulvan takia. Burdekin-joki katkaisi joka '
+      + 'sadekausi karjatilojen tien etelän satamiin, joten **satama '
+      + 'oli pakko perustaa joen pohjoispuolelle** — ja niin Woodstock '
+      + 'Stationin John Melton Black lähetti 1864 miehiä etsimään '
+      + 'paikkaa. Leiri pystytettiin Ross Creekin rantaan Melton '
+      + 'Hillin alle. Nimi tuli sydneyläiseltä liikemieheltä Robert '
+      + 'Townsilta, joka rahoitti asutuksen mutta kävi paikalla vain '
+      + 'kerran, kolmen päivän ajan.'
+      + '\n\n'
+      + 'Kulta teki lopun. Cape River 1867, Ravenswood 1869 ja '
+      + 'Charters Towers jouluaattona 1871 — viisi kultakenttää lähetti '
+      + 'saaliinsa Townsvillen laitureille. **Isoisän matkavuonna 1873 '
+      + 'kaupungissa ei vielä ollut rautatietä, ja kulta tuli alas '
+      + 'maanteitse.** Rautateiden rakentaminen alkoi 1879, ja rata '
+      + 'Charters Towersiin valmistui joulukuussa 1882. Väkiluku oli '
+      + 'silloin 4 000; yhdeksän vuotta myöhemmin 13 000.',
+    teksti: 'Townsville on trooppisessa Queenslandissa mutta kuivalla '
+      + 'kaistaleella. Rannikko kääntyy juuri tässä itä—länsisuuntaan, '
+      + 'eikä kaakkoispasaati enää nouse rinnettä ylös — siksi talvet '
+      + 'ovat sinitaivaisia ja sade kertyy marras—huhtikuun kuudelle '
+      + 'kuukaudelle. Kaupungin keskellä on Castle Hill, edustalla '
+      + 'kahdeksan kilometrin päässä Magnetic Island, ja lävitse '
+      + 'virtaa Ross River.'
+      + '\n\n'
+      + 'Kaupunki on ollut aina jonkin toisen paikan satama: ensin '
+      + 'karjatilojen, sitten kultakenttien, sitten sokerin. Vuonna '
+      + '1896 Japani avasi tänne ensimmäisen australialaisen '
+      + 'konsulaattinsa, koska seudulla oli noin neljätuhatta '
+      + 'japanilaista työntekijää. Toisen maailmansodan aikana '
+      + 'kaupungissa oli yli 50 000 sotilasta. Vuonna 1992 Australian '
+      + 'korkein oikeus tunnusti alkuperäisen maaoikeuden jutussa, '
+      + 'jonka aloitti täkäläinen puutarhuri Eddie Mabo.'
+      + '\n\n'
+      + 'Nykyään Townsville on hallinnon ja raskaan teollisuuden '
+      + 'keskus: se on ainoa kaupunki maailmassa, joka jalostaa '
+      + 'kolmea perusmetallia — sinkkiä, kuparia ja nikkeliä. Täällä '
+      + 'ovat James Cook -yliopiston suurin kampus ja Australian '
+      + 'meritieteen instituutin päämaja. Flinders Street on yhä '
+      + 'vanhin katu.',
+  },
 };

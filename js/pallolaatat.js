@@ -1,0 +1,4832 @@
+/*
+ * PALLON LAATTAKERROS JA SEN PUHTAAT APURIT.
+ *
+ * Moduulin alkuosa (erä E0) on pallon lepokerroksen puhtaat laskimet:
+ * näkyvän alueen rajaus, laattakatto, tason valinta, laattaruudukko,
+ * Millerin UV, verkon puskurit ja levon ajoitus. Ne eivät koske
+ * kirjastoon, DOMiin eivätkä pallon tilaan, joten ne ovat yksin
+ * testattavia (tests/pallolepokerros.test.mjs) — lepokerroksen elinkaari
+ * (luoLepokerros) ja laatunosto (kytkeLaatunosto) ovat yhä js/pallo.js:ssä,
+ * joka tuo ja vie nämä nimet edelleen.
+ *
+ * Moduulin loppuosa (erä E1) on itse LAATTAKERROS: pyramidin laatat
+ * laatta kerrallaan pallon pinnalle, taso hystereesillä ruudun
+ * pikseleistä, ristihäive ja LRU-kiintiö — sama tarkkuus liikkeessä kuin
+ * levossa. Ks. luoLaattakerros ja sen otsikko alempana.
+ *
+ * Erät E0 ja E1 suunnitelmasta
+ * docs/moduulit/pallon-liike-taydella-tarkkuudella.md (luvut 4 ja 6).
+ *
+ * MODUULI EI TUO js/pallo.js:ÄÄ. Siksi kaksi laatunoston vakiota, joita
+ * nämä apurit tarvitsevat (LAATU_LEPOVIIVE_MS, LAATU_KAUKORAJA), muuttivat
+ * mukana E0:ssa: js/pallo.js tuo ne täältä takaisin. Toisin päin tuonti
+ * tekisi kehän, jossa LEPOKERROS_KORKEUSRAJA jäisi alustamatta — samasta
+ * syystä kerros saa kirjaston luokat, pallon laattaluettelon ja laudan
+ * tunnuksen kutsujalta (luoLaattakerros-parametrit) eikä tuo niitä.
+ * Laattapyramidi ja projektio ovat oma asiansa: ne EIVÄT tuo palloa,
+ * joten ne tuodaan tästä suoraan — sama ovi kuin tasokartalla.
+ */
+import { laajennaKokeet, tallennetutKokeet } from './piirtokoe-asetus.js';
+import {
+  KOHDEMAAN_NIMIOT_ELAVINA,
+  PYRAMIDIN_JAARAJA_LAT as JAARAJA_LAT,
+  haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
+  pyramidinLinssiketju, pyramidinReliefiAstronautilla, pyramidinReliefiKaytossa,
+  pyramidinReliefinSavy, pyramidinReliefinSuodatin, pyramidinReliefinSyvinTaso,
+  pyramidinReliefinTaso, pyramidinReliefinTaustavari as reliefinTaustavari,
+  pyramidinReliefinValoliuku, pyramidinReliefinVaraLahde as reliefinVaraLahde,
+  pyramidinTasoitus, pyramidinVaritasonMaa,
+} from './laattapyramidi.js';
+import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
+import {
+  ESILATAUS_LEPO_MS, ESILATAUS_LIIKEVARA, ESILATAUS_MAATASOT, esilatausPaalla, laajennaLaatikko,
+  laattojenOsoitteet, luoEsilatausjono,
+} from './laattaesilataus.js';
+import { peiliKaytossa, peiliPetti, peilinKatkoJaljella } from './media.js';
+import { asennaKermaShader, luoKermanJaetut, paivitaKermanJaetut } from './laattakerma-shader.js';
+
+/** Kuinka kauan kameran on oltava paikallaan ennen lepolaatua (ms). */
+export const LAATU_LEPOVIIVE_MS = 260;
+/** Korkeus, jonka yläpuolella terävyys on yleiskuvan arvo. */
+export const LAATU_KAUKORAJA = 0.6;
+/** Korkeus, jonka yläpuolella lepokerrosta ei koota (= yleiskuva). */
+export const LEPOKERROS_KORKEUSRAJA = LAATU_KAUKORAJA;
+/** Tason valinta: laatan pikseli ≥ laitepikseli × tämä (1 = ei venytystä). */
+export const LEPOKERROS_TERAVYYS = 1;
+/*
+ * LAATTAKATTO ON RUUDUN KOKOINEN, EI VAKIO (mitattu 6.9.2026). Näkyvä
+ * alue on pallon pinnalla leveys-pituus-laatikko, joka on perspektiivin
+ * ja Millerin venytyksen takia 2–3 kertaa ruudun pikselimäärä: työpöytä
+ * 2758 × 1642 (4,5 Mpx) tarvitsi Kreikan lähikuvassa z7:llä 48 laattaa
+ * (12,6 Mpx), puhelin 1170 × 2532 (3,0 Mpx) Euroopan yllä z6:lla 42.
+ * Kiinteä 32 pudotti kummankin tasoa karkeammaksi — työpöydällä z6:een,
+ * joka on SUMEAMPI kuin pallon omat Z8-laatat (Laplace-varianssi 363 →
+ * 133). Katto on siksi ruudun laitepikseleistä: kerroin × pikselit /
+ * laatan ala, rajattuna 16…64 (64 × 512² ≈ 67 Mt kangas + mipmapit).
+ */
+export const LEPOKERROS_KATTOKERROIN = 4;
+export const LEPOKERROS_LAATTAKATTO_MIN = 16;
+export const LEPOKERROS_LAATTAKATTO_MAX = 64;
+/** Kankaan sivu enintään (px) — näytönohjaimen katto rajaa vielä alemmas. */
+export const LEPOKERROS_KANGASKATTO = 8192;
+/**
+ * Kerros kootaan vain, jos pyramidin taso on vähintään tämän osan pallon
+ * omien laattojen tiheydestä katsotulla leveysasteella: Mercator-laatta
+ * tihenee 1/cos φ, joten Euroopan yleiskuvassa Z7 (133 px/aste 47° N)
+ * on jo tiheämpi kuin pyramidin z5, johon laattakatto pakottaisi —
+ * karkeampi kerros olisi askel taaksepäin (mitattu puhelimella: 224 →
+ * 123). Sama tiheys kelpaa, koska lepokerros säästää kaksi
+ * uudelleennäytteistystä ja jpeg-pakkauksen.
+ */
+export const LEPOKERROS_TIHEYSOSUUS = 0.85;
+/**
+ * Verkon silmän koko asteina ja silmiä sivulla vähintään / enintään.
+ * Vähimmäismäärä on 64, ei 8: lähikuvassa syvyyspuskurin askel on
+ * pienimmillään, ja jänteen painuma pitää pysyä sen alla (ks.
+ * PIIRTOJÄRJESTYS) — 65² kärkeä on silti mitätön verkko.
+ */
+export const LEPOKERROS_RUUDUKKO_AST = 0.25;
+export const LEPOKERROS_RUUDUKKO_MIN = 64;
+export const LEPOKERROS_RUUDUKKO_MAX = 160;
+/** Reunus näkyvän alueen ympärille asteina (pieni korjaus ei paljasta reunaa). */
+export const LEPOKERROS_VARA_AST = 0.5;
+/**
+ * Kerros TÄSMÄLLEEN pinnan säteellä (ei suurennosta, ks. PIIRTOJÄRJESTYS
+ * yllä); järjestys laattoihin nähden tulee syvyyssiirrosta.
+ */
+export const LEPOKERROS_KOROTUS = 1;
+/** polygonOffsetUnits: syvyyspuskurin askelta kameraa kohti (negatiivinen). */
+export const LEPOKERROS_SYVYYSSIIRTO = -8;
+/** Häivytys päälle (ms). Reduced motion: 0. Pois HETI liikkeestä, ilman häivettä. */
+export const LEPOKERROS_HAIVE_SISAAN_MS = 260;
+/**
+ * Aito lepo: kerros kootaan vasta, kun kamera on ollut paikallaan tämän
+ * ajan (LAATU_LEPOVIIVE_MS:n 260 ms:n lepo nostaa vain laattatason) ja
+ * sormet ovat irti. Raahauksen mikrotauko on tyypillisesti alle
+ * 300 ms; 400 ms jättää sen väliin (ks. LEPOKERROS JA LIIKE).
+ */
+export const LEPOKERROS_LEPOVIIVE_MS = 400;
+/** Purettuja laattakuvia muistissa enintään (512² × 4 t ≈ 1 Mt kukin). */
+export const LEPOKERROS_KUVAKATTO = 96;
+/** Näytepisteitä ruudulla sivua kohti (7 × 7 = 49 säteenjäljitystä). */
+export const LEPOKERROS_NAYTTEITA = 7;
+/** Ruutupikselien matka keskipisteestä alas, josta tiheys mitataan (css-px). */
+export const LEPOKERROS_MITTAMATKA_PX = 40;
+
+const RAD = Math.PI / 180;
+
+/**
+ * Pallon pinnan piste kirjaston koordinaatistossa (mitattu 6.9.2026:
+ * getCoords(0, 0) = +z, getCoords(0, 90) = +x, napa = +y). Sama kaava
+ * kuin three-globen polar2Cartesian; lepokerros ei kutsu getCoordsia
+ * tuhansia kertoja per kokoaminen.
+ */
+export function pallonPiste(lat, lng, sade = 100) {
+  const la = lat * RAD;
+  const lo = lng * RAD;
+  return { x: sade * Math.cos(la) * Math.sin(lo), y: sade * Math.sin(la), z: sade * Math.cos(la) * Math.cos(lo) };
+}
+
+/**
+ * Ruudun piste pallon pinnalle OMALLA säde–pallo-leikkauksella.
+ *
+ * TÄMÄ ON PALLON AINOA PINNANLUKIJA (vika v1649, mitattu 6.9.2026).
+ * Kirjaston `toGlobeCoords` säteenjäljittää scenen, ja osuma tulee
+ * kirjaston omasta pallosta, joka on 72 × 36 -jaettu monitahokas
+ * (globeCurvatureResolution 5°): jänne painuu pinnan alle, ja
+ * osumapiste eroaa oikeasta jopa 3,2 laitepikseliä (mediaani 1,4;
+ * puhelin 390 × 844 dpr 3, Ateena korkeus 0,35, 124 px/aste). Sormiveto
+ * (js/pallo.js asennaPallonEleet) syöttää tuon eron suoraan kameraan
+ * JOKA pointermovessa, joten kartta ei pysy sormen alla — ja koska
+ * liu'ussa (irrotuksen jälkeen) sitä ei lueta lainkaan, oire loppuu
+ * täsmälleen silloin kun sormi irtoaa. Sama leikkaus kaikille:
+ * vektorikerros ja laattakerros lukevat pinnan tästä.
+ *
+ * Pallo on origokeskinen säteellä R, joten leikkaus on toisen asteen
+ * yhtälö — mikrosekunteja, kun säteenjäljitys maksoi mitatusti 585 ms
+ * 49 näytteeltä. Palauttaa { lat, lng } tai null, jos säde menee pallon
+ * ohi (ruudun kulma taivaalla).
+ *
+ * ── SÄDE LASKETAAN KAMERAN PAIKASTA, EI SEN MATRIISISTA ────────────
+ * (vika v1664: *"Kartta räpsii panoroitaessa"*, mitattu 7.9.2026)
+ *
+ * Ensimmäinen toteutus (v1653) otti säteen suunnan `unproject`illa,
+ * joka lukee kameran `matrixWorld`in — mutta origon `kamera.position`
+ * ista. Ne EIVÄT ole samasta hetkestä: `pointOfView` siirtää kameran
+ * paikan HETI, kun taas suunnan (lookAt origoon) päivittää OrbitControls
+ * vasta seuraavassa piirrossa. Sormivedon aikana kameran paikka on siis
+ * tuore ja suunta vanha, ja lukema on väärä kaikilla niillä
+ * pointermoveilla, jotka osuvat kahden piirron väliin — iPhonella niitä
+ * on joka toinen (120 Hz syöte, 60 Hz piirto).
+ *
+ * Mitattu (puhelin 390 × 844, Chromium, 7.9.2026): kun kamera oli juuri
+ * siirretty 10° itään, ruudun keski luki **13,558°** eikä 10°. Kahdeksan
+ * yhtä suurta 8 px:n sormiaskelta siirsivät karttaa
+ * 0,1941° / 0,1261° / 0,1499° / 0,1415° / 0,1444° / 0,1433° / 0,1437° /
+ * 0,1435° — sahaus **1,54×** (suurin / pienin). Juuri se on räpsintä:
+ * kartta ei kulje sormen tahdissa vaan nykii joka toisella syötteellä.
+ * Kirjaston vanha `toGlobeCoords` ei sahannut, koska three.js:n
+ * `Raycaster.setFromCamera` ottaa MYÖS origon matriisista: lukema oli
+ * yhden kehyksen vanha mutta itsensä kanssa yhtenäinen.
+ *
+ * Korjaus: säde rakennetaan pelkästä kameran paikasta (`position`) ja
+ * linssistä samalla kaavalla kuin laattakerroksen näytteet
+ * (laattakerroksenOsuma). Se on aina itsensä kanssa yhtenäinen, koska
+ * OrbitControlsin tähtäyspiste on kirjaston pakottamana pallon
+ * keskipiste eikä kameralla ole kallistusta. Mitattu korjauksen
+ * jälkeen: sama 10°:n siirto luetaan 10,000°, ja samat kahdeksan
+ * askelta ovat 0,1941…0,1947° — sahaus 1,003× (oli 1,54×).
+ *
+ * @param {object} kamera kirjaston kamera (position ja fov)
+ * @param {number} x ruudun x css-pikseleinä kotelon vasemmasta reunasta
+ * @param {number} y ruudun y css-pikseleinä kotelon yläreunasta
+ * @param {number} W kotelon leveys css-pikseleinä
+ * @param {number} H kotelon korkeus css-pikseleinä
+ * @param {number} R pallon säde (getGlobeRadius)
+ */
+export function pinnanPiste(kamera, x, y, W, H, R) {
+  const o = kamera?.position;
+  if (!o || !(W > 0) || !(H > 0) || !(R > 0)) return null;
+  const fov = Number.isFinite(kamera.fov) && kamera.fov > 0 ? kamera.fov : 50;
+  /*
+   * KALLISTETTU KAMERA (js/pallolauta/kallistus.js, pysyvä kallistus
+   * 23.9.2026): silmä ei ole katsepisteen yllä, joten paikasta johdettu
+   * pov osuisi väärään kohtaan — veto ja zoomin ankkuri karkasivat.
+   * Kallistus kirjoittaa virtuaalisen pov:n kameraan samalla kun se
+   * asettaa paikan, joten lukema on yhä itsensä kanssa yhtenäinen.
+   */
+  const kallistettu = kamera.__kallistusPov;
+  if (kallistettu) {
+    return laattakerroksenOsuma(kallistettu, (2 * x) / W - 1, 1 - (2 * y) / H,
+      { fov, kuvasuhde: W / H, sade: R });
+  }
+  const pituus = Math.hypot(o.x, o.y, o.z);
+  if (!(pituus > R)) return null;
+  const pov = {
+    lat: Math.asin(Math.max(-1, Math.min(1, o.y / pituus))) / RAD,
+    lng: Math.atan2(o.x, o.z) / RAD,
+    altitude: pituus / R - 1,
+  };
+  return laattakerroksenOsuma(pov, (2 * x) / W - 1, 1 - (2 * y) / H,
+    { fov, kuvasuhde: W / H, sade: R });
+}
+
+/**
+ * Näkyvä alue näytteistä. Pituuspiirit AUKIKIERRETÄÄN keskipituuspiirin
+ * ympärille (−180…180 siitä), jotta sauman yli katsova ruutu ei saa
+ * koko maailman levyistä laatikkoa. Palauttaa { lat0, lat1, lon0, lon1 }
+ * (lon aukikierrettynä, lon1 > lon0) tai null, jos yksikään näyte ei
+ * osunut palloon. Leveys rajataan latMin…latMax (kartta-ala ja
+ * napakannet).
+ */
+export function lepokerroksenAlue(naytteet, keskiLng, {
+  vara = LEPOKERROS_VARA_AST, latMin = -90, latMax = 90,
+} = {}) {
+  let lat0 = Infinity;
+  let lat1 = -Infinity;
+  let lon0 = Infinity;
+  let lon1 = -Infinity;
+  let n = 0;
+  for (const p of naytteet) {
+    if (!p || !Number.isFinite(p.lat) || !Number.isFinite(p.lng)) continue;
+    const d = ((p.lng - keskiLng + 540) % 360) - 180;
+    lat0 = Math.min(lat0, p.lat);
+    lat1 = Math.max(lat1, p.lat);
+    lon0 = Math.min(lon0, d);
+    lon1 = Math.max(lon1, d);
+    n += 1;
+  }
+  if (!n) return null;
+  lat0 = Math.max(latMin, lat0 - vara);
+  lat1 = Math.min(latMax, lat1 + vara);
+  if (!(lat1 > lat0)) return null;
+  lon0 -= vara;
+  lon1 += vara;
+  if (lon1 - lon0 >= 360) { lon0 = -180; lon1 = 180; }
+  return { lat0, lat1, lon0: keskiLng + lon0, lon1: keskiLng + lon1, naytteita: n };
+}
+
+/*
+ * KARTTA-ALA ON ARKIN KARTTA, EI KOKO ARKKI (vika 11.9.2026, omistaja
+ * sanatarkasti: *"Maapallon ylä- ja alaosan voisi piirtää
+ * oikeanlaiseksi. Siinä näkyy vielä se vanhan kartan teksti."*).
+ *
+ * MITATTU SYY. Pyramidin `rajaus` ulottuu arkin ALAKEHYKSEN yli: sen
+ * alareuna on 66,0° S, mutta kartta loppuu jo 61,47° S:ään ja väliin jää
+ * julisteen alamarginaali — kaksoisviivakehys, kompassiruusu ja rivit
+ * "Painettu Matkakirjan kustantamossa MDCCCLXXIII" / "© Matkakirja".
+ * Poltetut pallolaatat osaavat tämän (tools/tee-pallolaatat.mjs
+ * julisteenLeveysvali vähentää `kehys.ala`:n ja täyttää alapuolen
+ * merellä ja jäällä), mutta lepo- ja laattakerros rajasivat pelkkään
+ * `rajaus`-laatikkoon ja piirsivät marginaalin pallon pinnalle: 900 ×
+ * 900 px:n napanäkymässä kompassiruusu ja painajanrivi näkyivät
+ * Etelämantereen ympärillä (mitattu Chromium-kaappauksella 11.9.2026,
+ * ja SAMA näkymä ilman kerrosta ?laattakerros=0 oli puhdas).
+ *
+ * Pohjoisessa vähennystä ei tehdä: siellä kartta ulottuu rajauksen
+ * yläreunaan (84° N, Huippuvuoret ja Frans Joosefin maa) — sama
+ * päättely kuin polttotyökalussa. Pohjoisrajan tekee napakansi
+ * (naparaja 83,7°), ei arkki.
+ *
+ * TÄMÄ RAJA KOSKEE MYÖS JOKAISTA YKSITTÄISTÄ LAATTAA (12.9.2026):
+ * pelkkä valinta-alueen rajaus jätti arkin marginaalin laatan OMAAN
+ * verkkoon, ja kartussi päätyi pohjoisnavalle — ks. laatanPalloAlue.
+ *
+ * @param {object} p.pyramidi  pyramidi.json (rajaus/arkki, kehys)
+ * @param {function} p.yLat    arkin y (lautayksikköä) → leveysaste
+ * @param {number} p.naparaja  napakansien leveysaste (NAPAKANNEN_LEVEYS)
+ * @returns {{ latMin: number, latMax: number }}
+ */
+export function pyramidinKarttaAla({ pyramidi, yLat, naparaja = 90 }) {
+  const rajaus = pyramidi?.rajaus ?? pyramidi?.arkki ?? { y: 0, h: 0 };
+  const alakehys = Number(pyramidi?.kehys?.ala) || 0;
+  const latMax = Math.min(naparaja, yLat(rajaus.y));
+  const latMin = Math.max(-naparaja, yLat(rajaus.y + rajaus.h - alakehys));
+  return { latMin, latMax };
+}
+
+/*
+ * LAATAN OMA SUORAKAIDE PALLOLLA — RAJATTUNA KARTTA-ALAAN (vika
+ * 12.9.2026, omistaja sanatarkasti: *"Pohjoisnapa kaukaa edelleen
+ * väärin"*; kuvakaappauksessa navan päällä on julisteen KARTUSSI, se
+ * pyöreä vaalea leima, jossa lukee MATKAKIRJA).
+ *
+ * MITATTU SYY. `pyramidinKarttaAla` rajasi vain sen laatikon, jolta
+ * laatat VALITAAN — laatan oma verkko rakennettiin laatan koko
+ * pikselisuorakaiteesta. Pyramidin ylin laattarivi on ARKKIA eikä
+ * karttaa: arkin yläreuna on 88,65° N (laudaltaAsteiksi arkki.y:stä),
+ * kartan yläreuna 84,0° N ja napakansi alkaa 83,7°:sta. Väliin jää
+ * julisteen ylämarginaali, jossa on kartussi (MATKAKIRJA / Unohdettu
+ * aarre, tools/fokuskartta/maailmapiirto.js osio 9) — ja se piirtyi
+ * pallolle 84°–88,65° N:n kiekkona, jonka keskellä on reikä.
+ *
+ * MITTAUS (Chromium 390 × 844, 12.9.2026, kaikki viisi kamerakorkeutta
+ * 0,3 / 0,6 / 1,0 / 1,6 / 2,5): rivin 0 laattojen verkon ylin
+ * leveysaste oli JOKA korkeudella 88,65° eli 4,95° napakannen reunan
+ * yli. Etelässä sama vuoto oli −65,43°, vaikka karttaAla rajaa
+ * −61,47°:een (alakehys). Kalotti (js/pallo.js NAPAKALOTIT) peitti
+ * vuodon lähikuvassa, mutta EI KAUKAA: laatan materiaalissa on
+ * polygonOffsetUnits −8, ja se on ikkunasyvyyttä — mitä kauempana
+ * kamera on, sitä enemmän maailmayksikköjä sama askel tarkoittaa.
+ * Kaukana se ylittää kalotin korotuksen (säde × 0,0025) ja laatta
+ * piirtyy kalotin päälle. Siksi vika näkyi vain kaukaa.
+ *
+ * KORJAUS ON SISÄLLÖSSÄ EIKÄ JÄRJESTYKSESSÄ: arkin kalusteita ei
+ * piirretä pallolle lainkaan, millään tasolla eikä miltään
+ * etäisyydeltä. Laatan verkko leikataan karttaAlaan; jos laatasta ei
+ * jää karttaa lainkaan, verkkoa ei synny (lat1 ≤ lat0).
+ *
+ * @param {object} p.taso     pyramidin taso { z, leveys, korkeus, ... }
+ * @param {number} p.laatta   laatan sivu pikseleinä
+ * @param {function} p.lonPx  laatan pikselisarake → pituusaste
+ * @param {function} p.latPx  laatan pikselirivi → leveysaste
+ * @param {object} p.karttaAla { latMin, latMax } (pyramidinKarttaAla)
+ */
+export function laatanPalloAlue({ taso, sarake, rivi, laatta, lonPx, latPx, karttaAla }) {
+  const x0 = sarake * laatta;
+  const y0 = rivi * laatta;
+  const w = Math.min(laatta, taso.leveys - x0);
+  const h = Math.min(laatta, taso.korkeus - y0);
+  const latMax = Number.isFinite(karttaAla?.latMax) ? karttaAla.latMax : 90;
+  const latMin = Number.isFinite(karttaAla?.latMin) ? karttaAla.latMin : -90;
+  return {
+    lon0: lonPx(x0),
+    lon1: lonPx(x0 + w),
+    lat1: Math.min(latMax, latPx(y0)),
+    lat0: Math.max(latMin, latPx(y0 + h)),
+  };
+}
+
+/** Laattakatto ruudun laitepikseleistä (ks. LEPOKERROS_KATTOKERROIN). */
+export function lepokerroksenLaattakatto(pikseleita, laatta = 512) {
+  const tarve = Math.ceil((LEPOKERROS_KATTOKERROIN * Math.max(0, pikseleita)) / (laatta * laatta));
+  return Math.max(LEPOKERROS_LAATTAKATTO_MIN, Math.min(LEPOKERROS_LAATTAKATTO_MAX, tarve));
+}
+
+/**
+ * Onko pyramidin taso vähintään pallon omien laattojen tiheyttä
+ * (LEPOKERROS_TIHEYSOSUUS) leveysasteella lat, kun laattamoottori on
+ * Mercator-tasolla mercatorTaso (256 px:n laatat)?
+ */
+export function lepokerroksenTasoRiittaa(taso, mercatorTaso, lat, osuus = LEPOKERROS_TIHEYSOSUUS) {
+  if (!taso || !Number.isFinite(mercatorTaso)) return true;
+  const cos = Math.max(0.1, Math.cos((Number.isFinite(lat) ? lat : 0) * RAD));
+  const mercator = (256 * 2 ** mercatorTaso) / 360 / cos;
+  return taso.leveys / 360 >= osuus * mercator;
+}
+
+/**
+ * Pyramidin taso, jonka tiheys riittää ruudun tarpeeseen: matalin
+ * taso, jolla laatan pikseleitä astetta kohti (leveys / 360) on
+ * vähintään tarve × terävyys. Jos mikään ei riitä, syvin — silloin
+ * kerros on yhä paras, mitä levyllä on (sama kuin tasokartan syvä zoom).
+ */
+export function lepokerroksenTaso(tasot, tarvePxAste, teravyys = LEPOKERROS_TERAVYYS) {
+  const jarjestys = [...(tasot ?? [])].filter((t) => t && t.leveys > 0).sort((a, b) => a.z - b.z);
+  for (const t of jarjestys) if (t.leveys / 360 >= tarvePxAste * teravyys) return t;
+  return jarjestys[jarjestys.length - 1] ?? null;
+}
+
+/**
+ * Mitkä kerrokset lepokerros saa piirtää, kun pallon sarja (laatat.json)
+ * ja pyramidi (pyramidi.json) ovat nämä. Pohja vaatii saman version;
+ * viiva- ja nostotaso piirretään vain jos pallon sarjaan on poltettu
+ * täsmälleen sama versio (muuten sama merkki olisi levossa laatassa ja
+ * liikkeessä elävänä tai poissa). Null = ei kerrosta lainkaan.
+ */
+export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null, {
+  poltetutNostot = laattakerroksenKokeet().has('poltetutnostot'),
+} = {}) {
+  if (!pallonLuettelo?.versio || !pyramidi?.versio) return null;
+  if (pallonLuettelo.versio !== pyramidi.versio) return null;
+  const viivat = pallonLuettelo.viivat ?? null;
+  const nostot = pallonLuettelo.nostot ?? null;
+  if (viivat && viivat !== (pyramidi.viivataso?.versio ?? null)) return null;
+  if (nostot && nostot !== (pyramidi.nostotaso?.versio ?? null)) return null;
+  /*
+   * RANTATASO (V4, omistaja 6.9.2026 ilta: pohja ilman rantaviivaa,
+   * rantaviiva omalla läpinäkyvällä tasollaan). Pallon sarja kertoo
+   * laatat.json:in `ranta`-kentässä, poltettiinko sen laatat rannan
+   * kanssa (versio) vai ilman (null, kun vektoriviivat piirtävät
+   * rannan). Kerros seuraa sarjaa DATA-OHJATUSTI: rannan kanssa
+   * poltettu sarja → ranta-taso piirretään ja sen version on
+   * täsmättävä pyramidiin; rannaton sarja → ranta-taso ohitetaan.
+   * Vanha sarja ilman kenttää: pyramidin vanha pohja sisältää rannan,
+   * ranta-tasoa ei ole → ranta false, käytös ennallaan.
+   */
+  const ranta = pallonLuettelo.ranta ?? null;
+  if (ranta && ranta !== (pyramidi.rantataso?.versio ?? null)) return null;
+  /*
+   * VÄRITASO EI SAA SAMMUTTAA KERROSTA (erä 1b, suunnitelman riski 4.2).
+   *
+   * Muut portit ovat KOKO KERROKSEN ehtoja: jos pallon sarja ja
+   * pyramidi ovat eri versiota, laattoja ei saa piirtää lainkaan, koska
+   * sama merkki olisi levossa laatassa ja liikkeessä elävänä. Väritaso
+   * on eri laji: se on YHDEN MAAN lisäys pohjan päälle, eikä sen
+   * puuttuminen tee kartasta väärää — se tekee siitä seepiaa, eli
+   * täsmälleen sen kartan, joka peli oli ennen tätä erää. Siksi tämä
+   * on BOOLEAN eikä `return null`: puuttuva tai eri versiossa oleva
+   * värilaatasto pudottaa värit, ei karttaa.
+   *
+   * PORTTI ON MAAKOHTAINEN, koska laatastokin on: taulusta luetaan
+   * pelaajan maan kirjaus, ja ilman sitä (muu maa, vanha luettelo,
+   * ajamaton maa) väri on pois.
+   */
+  const variKirjaus = variMaa ? (pyramidi.varitasot?.[variMaa] ?? null) : null;
+  const vari = Boolean(variKirjaus?.versio && variKirjaus.tasot?.length);
+  /*
+   * NOSTOTASO MAITTAIN (18.9.2026, Raamattu PAATOKSET 34 kohta 17 d:
+   * *"muiden maiden nostot piiloon"*). Sama laji kuin väritaso, ja
+   * samasta syystä BOOLEAN eikä `return null`: puuttuva maakohtainen
+   * nostolaatasto pudottaa nostot, ei karttaa.
+   *
+   * EHTO ON `!nostot`: jos pallon sarjaan ON poltettu nostot, ne ovat
+   * jo laattojen kankaassa KOKO MAAILMASTA, eikä tämä kerros voi
+   * ottaa niitä pois — silloin käytös on entinen (portti yllä vaatii
+   * saman version kuin pyramidin maailmanlaajuinen nostotaso).
+   * Maakohtainen kerros herää vasta, kun pallon sarja ajetaan ILMAN
+   * `--nostot`-lippua: silloin liikkuvassa pallossa ei ole nostoja
+   * lainkaan ja lepokerros latoo VAIN kohdemaan nostolaatat, kuten
+   * tasokartta. Ks. raportti
+   * docs/raportit/viesti-fable-nostotaso-maittain-20260918.md.
+   */
+  const nostoKirjaus = variMaa ? (pyramidi.nostotasot?.[variMaa] ?? null) : null;
+  // Kohdemaan nimiöt elävinä (js/pallo.js KOHDEMAAN_NIMIOT_ELAVINA):
+  // nostolaatastoa ei ladota, muuten elävä nimiö piirtyisi poltetun päälle —
+  // PAITSI kun laatasto on poltettu ilman nimiä (`nimiot: false`) ja koe
+  // `poltetutnostot` on päällä: silloin laatta kantaa vain merkin
+  // (js/pallo.js pallonNostonPisteLaatassa).
+  const nimetonLaatasto = poltetutNostot && nostoKirjaus?.nimiot === false;
+  const nostotMaittain = !nostot && (!KOHDEMAAN_NIMIOT_ELAVINA || nimetonLaatasto)
+    && Boolean(nostoKirjaus?.versio && nostoKirjaus.tasot?.length);
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * VIIVATASO EI TULE PALLOLLE — REITTIVIUHKA OLI POLTETTU LAATTAAN
+   * ══════════════════════════════════════════════════════════════
+   *
+   * Raamattu KARTTAUUDISTUKSEN PAATOKSET 9 kohta 6 (omistaja
+   * 14.9.2026, sanatarkasti): *"lisaksi reittiviuhka nakyy edelleen
+   * vaikka ei olla liikkumistilassa. korjaa se myos."* Ja lähtötilaus
+   * (PAATOKSET 8): *"onko kaupunkien valiset siirtymalinjat ja
+   * merireitit omalla tasollaan? jos on niin ne voi ottaa pois
+   * nakyvista ja palauttaa vasta kun pelaaja painaa liiku nappia."*
+   *
+   * MITATTU JUURISYY (Chromium 14.9.2026, Pariisi, ks. raportti
+   * docs/raportit/viesti-fable-reittiviuhka-20260914.md): v1865 vei
+   * viuhkan pois ELÄVÄSTÄ kerroksesta (js/ui.js matkareittienValinta →
+   * js/pallolauta/reitit.js), ja se kerros mittaa nollaa kaupungissa
+   * seistessä. Ruudulla viuhka näkyi silti, koska REITTIVERKKO ON
+   * POLTETTU VIIVATASON LAATTOIHIN (tools/generoi-laattapyramidi.mjs
+   * VIIVATASO, osoite .../viivat/z<taso>/…) ja pallo latoo ne joka
+   * laatan kankaalle. Kokeessa `/viivat/`-laattojen esto poisti
+   * TÄSMÄLLEEN ne neljä katkoviivaa askelhelmineen, jotka omistaja
+   * näki — eikä mitään muuta tarpeellista.
+   *
+   * MIKSI KERROKSEN SAA JÄTTÄÄ POIS KOKONAAN. Viivatasolla on kolme
+   * asiaa: reitit, erikoispiirit ja maiden rajat. Piirit on poltettu
+   * pois jo 1.9.2026 (luettelon `viivataso.piirit` on epätosi), ja
+   * RAJAT PALLO PIIRTÄÄ ITSE VEKTORINA (js/pallovektorit.js
+   * VEKTORIT_RAJA_LEVEYS_CSS) — poltettu raja oli vektorin alla
+   * kaksinkertaisena musteena. Jäljelle jää siis vain reittiverkko, ja
+   * juuri se on se, minkä omistaja käski ottaa pois. Sama ratkaisu kuin
+   * RANTATASOLLA yllä: kun pallolla on sama viiva vektorina, poltettua
+   * ei ladata.
+   *
+   * MATKAN AIKANA VIUHKA TULEE ELÄVÄSTÄ KERROKSESTA — se on ainoa
+   * lähde, ja siksi PAATOKSET 8:n matkasessio (js/ui.js
+   * matkaSessioKesken) ratkaisee nyt yksin sen, mitä ruudulla on.
+   *
+   * TASOKARTTA ENNALLAAN: se latoo viivatason kuten ennenkin
+   * (js/laattapyramidi.js pyramidiViivaKerros) — siellä rajat eivät ole
+   * vektorina. Tämä portti on pallon oma.
+   */
+  /*
+   * RELIEFITASO ON VÄRITASON LAJIA EIKÄ KOKO KERROKSEN EHTO: se on
+   * topografialinssin laatasto pohjan päällä, ja sen puuttuminen
+   * tekee kartasta sen, mikä se oli ennen — ei väärää karttaa.
+   * Siksi tämä on BOOLEAN eikä `return null`, ja siksi se ei vertaa
+   * versiota pallon sarjaan: reliefillä on oma luettelo ja oma
+   * versionsa, eikä pallon laatat.json tiedä siitä mitään.
+   *
+   * Kytkin (`?reliefipyramidi=1`) on portin ainoa ehto pelin
+   * puolella; ilman sitä `pyramidinKerrostasot` ei palauta
+   * reliefitasoa lainkaan, joten tämä lippu jää vaikutuksetta.
+   */
+  /*
+   * POHJA POIS, KUN RELIEFI ON PÄÄLLÄ (omistajan lisäys 18.9.2026):
+   * reliefi ei ole seepiakartan päällä vaan sen TILALLA, joten
+   * pohjalaattoja ei haeta lainkaan linssin ajan.
+   */
+  const reliefi = pyramidinReliefiKaytossa();
+  /*
+   * ASTRONAUTIN KAMERA: PELKKÄ MAASTO (PAATOKSET 41 kohta 4).
+   *
+   * Astronautin ikkunasta ei näy pelin mustetta — ei rantaviivaa, ei
+   * reittiä, ei poltettuja nimiöitä. Portit suljetaan tässä, jotta
+   * `pyramidinKerrostasot`in astronauttihaara ja tämä suodatin sanovat
+   * saman asian kahdesti: laatta on se, mitä laatastossa on, eikä
+   * yhtään ylimääräistä hakua lähde.
+   */
+  const astronautti = reliefi && pyramidinReliefiAstronautilla();
+  return {
+    pohja: !reliefi,
+    ranta: Boolean(ranta) && !astronautti,
+    viiva: false,
+    /*
+     * JOKITASO (omistaja 20.9.2026, Loire; js/laattapyramidi.js
+     * JOKITASO): joet ja rajat ILMAN reittejä, viivatason paikalle.
+     * Sama laji kuin väritaso — puuttuva kenttä pudottaa joet, ei
+     * karttaa — ja sama astronauttiportti kuin muulla musteella.
+     * Tässä ei verrata versiota pallon sarjaan: sarja k kantaa joet
+     * liikkeessä omassa laatassaan, ja tämä on levon lisäkenttä.
+     */
+    joki: Boolean(pyramidi.jokitaso?.versio) && !astronautti,
+    // NIMIÖTASO (js/laattapyramidi.js NIMIÖTASO): sama laji kuin joki.
+    nimio: Boolean(pyramidi.nimiotaso?.versio) && !astronautti,
+    nosto: (Boolean(nostot) || nostotMaittain) && !astronautti,
+    vari: vari && !reliefi,
+    reliefi,
+    astronautti,
+    /*
+     * KANKAAN SUODATIN (kylläisyys alas) tai null. Astronautin
+     * pallotekstuuri on ladottu kertoimella 0,8, ja ilman samaa
+     * kerrointa laastarin reunalla näkyisi sävyraja.
+     */
+    suodatin: astronautti ? pyramidinReliefinSuodatin() : null,
+  };
+}
+
+/**
+ * Laatat ja kankaan mitat alueelle tasolla `taso` — sama ruudukko kuin
+ * tasokartan jokaLaatta, mutta pikseliavaruus on AUKIKIERRETTY: sauman
+ * yli katsova alue jatkuu tason leveyden verran oikealle, ja sarake
+ * haetaan kierroksen sisältä (k · leveys + sarake · laatta). Viimeinen
+ * sarake ja rivi ovat VAJAITA (tason leveys ei ole laattakoon
+ * monikerta), joten laatan leveys luetaan tason pikseleistä — muuten
+ * sauman takainen laatta osuisi väärään kohtaan.
+ *
+ * @param {object} p.taso      pyramidin taso { z, leveys, korkeus, pikseliaPerYksikko, sarakkeita, riveja }
+ * @param {number} p.laatta    laatan sivu (512)
+ * @param {object} p.arkki     { x, y } laudan yksikköinä
+ * @param {object} p.projektio { leveys, lon0 } (pyramidi.json projektio)
+ * @param {object} p.alue      lepokerroksenAlue
+ * @param {function} p.laudanY lat → laudan y (Miller)
+ * @returns {{ kansX0, kansY0, leveys, korkeus, laatat, ppu }} tai null
+ */
+export function lepokerroksenLaatat({ taso, laatta, arkki, projektio, alue, laudanY }) {
+  if (!taso || !alue || !(laatta > 0) || !projektio?.leveys) return null;
+  const ppu = taso.pikseliaPerYksikko;
+  const xU = (lon) => ((lon - projektio.lon0) / 360) * projektio.leveys;
+  const px0 = (xU(alue.lon0) - arkki.x) * ppu;
+  const px1 = (xU(alue.lon1) - arkki.x) * ppu;
+  const py0 = Math.max(0, (laudanY(alue.lat1) - arkki.y) * ppu);
+  const py1 = Math.min(taso.korkeus, (laudanY(alue.lat0) - arkki.y) * ppu);
+  if (!(py1 > py0) || !(px1 > px0)) return null;
+  const r0 = Math.floor(py0 / laatta);
+  const r1 = Math.min(taso.riveja - 1, Math.floor((py1 - 1e-6) / laatta));
+  const k0 = Math.floor(px0 / taso.leveys);
+  const k1 = Math.floor((px1 - 1e-6) / taso.leveys);
+  const sarake = (px, k) => Math.max(0, Math.min(taso.sarakkeita - 1, Math.floor((px - k * taso.leveys) / laatta)));
+  const s0 = sarake(px0, k0);
+  const s1 = sarake(px1 - 1e-6, k1);
+  const kansX0 = k0 * taso.leveys + s0 * laatta;
+  const kansY0 = r0 * laatta;
+  const laatat = [];
+  for (let k = k0; k <= k1; k += 1) {
+    const a = k === k0 ? s0 : 0;
+    const b = k === k1 ? s1 : taso.sarakkeita - 1;
+    for (let s = a; s <= b; s += 1) {
+      const w = Math.min(laatta, taso.leveys - s * laatta);
+      for (let r = r0; r <= r1; r += 1) {
+        const h = Math.min(laatta, taso.korkeus - r * laatta);
+        laatat.push({ sarake: s, rivi: r, x: k * taso.leveys + s * laatta - kansX0, y: r * laatta - kansY0, w, h });
+      }
+    }
+  }
+  const viimeinen = laatat[laatat.length - 1];
+  if (!viimeinen) return null;
+  const leveys = Math.max(...laatat.map((l) => l.x + l.w));
+  const korkeus = Math.max(...laatat.map((l) => l.y + l.h));
+  return { kansX0, kansY0, leveys, korkeus, laatat, ppu, arkki, projektio, laudanY };
+}
+
+/** Pinnan pisteen (lon aukikierrettynä, lat) UV kankaalla (v ylhäältä alas käännettynä, flipY). */
+export function lepokerroksenUV(kartta, lon, lat) {
+  const px = (((lon - kartta.projektio.lon0) / 360) * kartta.projektio.leveys - kartta.arkki.x) * kartta.ppu;
+  const py = (kartta.laudanY(lat) - kartta.arkki.y) * kartta.ppu;
+  return { u: (px - kartta.kansX0) / kartta.leveys, v: 1 - (py - kartta.kansY0) / kartta.korkeus };
+}
+
+/**
+ * Suunnitelma: taso tarpeesta, sitten karkeammaksi kunnes laattamäärä ja
+ * kangas mahtuvat kattoihin. Null, jos edes matalin taso ei mahdu.
+ */
+export function lepokerroksenSuunnitelma({
+  tasot, tarvePxAste, alue, laatta, arkki, projektio, laudanY,
+  katto = LEPOKERROS_LAATTAKATTO_MIN, kangasKatto = LEPOKERROS_KANGASKATTO, teravyys = LEPOKERROS_TERAVYYS,
+}) {
+  let taso = lepokerroksenTaso(tasot, tarvePxAste, teravyys);
+  const tasoista = new Map((tasot ?? []).map((t) => [t.z, t]));
+  while (taso) {
+    const kartta = lepokerroksenLaatat({ taso, laatta, arkki, projektio, alue, laudanY });
+    if (kartta && kartta.laatat.length <= katto && kartta.leveys <= kangasKatto && kartta.korkeus <= kangasKatto) {
+      return { taso, kartta };
+    }
+    taso = tasoista.get(taso.z - 1) ?? null;
+  }
+  return null;
+}
+
+/** Verkon silmien määrä asteista: LEPOKERROS_RUUDUKKO_AST:n silmä, rajattuna. */
+export function lepokerroksenSilmat(asteet) {
+  return Math.max(LEPOKERROS_RUUDUKKO_MIN, Math.min(LEPOKERROS_RUUDUKKO_MAX,
+    Math.ceil(Math.abs(asteet) / LEPOKERROS_RUUDUKKO_AST)));
+}
+
+/**
+ * Verkon puskurit: (nx + 1) × (ny + 1) kärkeä, sarake = pituusaste itään,
+ * rivi = leveysaste pohjoisesta etelään (sama kierto kuin kirjaston
+ * SphereGeometryllä, jotta etupuoli on ulospäin). Normaali on säteen
+ * suunta, UV Millerin kankaalta.
+ */
+export function lepokerroksenVerkko({ alue, kartta, sade, nx, ny }) {
+  const kohtia = (nx + 1) * (ny + 1);
+  const paikat = new Float32Array(kohtia * 3);
+  const normaalit = new Float32Array(kohtia * 3);
+  const uvt = new Float32Array(kohtia * 2);
+  let i = 0;
+  for (let iy = 0; iy <= ny; iy += 1) {
+    const lat = alue.lat1 - ((alue.lat1 - alue.lat0) * iy) / ny;
+    for (let ix = 0; ix <= nx; ix += 1) {
+      const lon = alue.lon0 + ((alue.lon1 - alue.lon0) * ix) / nx;
+      const p = pallonPiste(lat, lon, sade);
+      const n = pallonPiste(lat, lon, 1);
+      paikat[i * 3] = p.x; paikat[i * 3 + 1] = p.y; paikat[i * 3 + 2] = p.z;
+      normaalit[i * 3] = n.x; normaalit[i * 3 + 1] = n.y; normaalit[i * 3 + 2] = n.z;
+      const uv = lepokerroksenUV(kartta, lon, lat);
+      uvt[i * 2] = uv.u; uvt[i * 2 + 1] = uv.v;
+      i += 1;
+    }
+  }
+  const indeksit = [];
+  for (let iy = 0; iy < ny; iy += 1) {
+    for (let ix = 0; ix < nx; ix += 1) {
+      const a = iy * (nx + 1) + ix + 1;
+      const b = iy * (nx + 1) + ix;
+      const c = (iy + 1) * (nx + 1) + ix;
+      const d = (iy + 1) * (nx + 1) + ix + 1;
+      indeksit.push(a, b, d, b, c, d);
+    }
+  }
+  return { paikat, normaalit, uvt, indeksit };
+}
+
+/** THREE:n vakiot (kirjasto ei vie niitä): suodattimet ja reunan kiinnitys. */
+const THREE_LINEAR = 1006;
+const THREE_LINEAR_MIPMAP_LINEAR = 1008;
+const THREE_CLAMP = 1001;
+
+/**
+ * Lepokerroksen ajoitus: aito lepo ennen kokoamista (ks. LEPOKERROS JA
+ * LIIKE). `levossa()` tulee laattamoottorin levosta (LAATU_LEPOVIIVE_MS
+ * viimeisestä liikkeestä) ja käynnistää loppuajan LEPOKERROS_LEPOVIIVE_MS:ään;
+ * `liike()` peruu kaiken; `sormiAlas()`/`sormiYlos()` laskevat pohjassa
+ * olevia osoittimia — kokoaminen odottaa, kunnes viimeinenkin on irti,
+ * ja lähtee silloin heti (kamera ei liiku, jos sormi ei liikkunut).
+ * Puhdas ja testattava: aika ja ajastimet tulevat ikkunasta.
+ *
+ * @returns {{ levossa(): void, liike(): void, sormiAlas(): void, sormiYlos(): void, pura(): void, tila(): object }}
+ */
+export function luoLepokerroksenAjoitus({
+  ikkuna, kokoa, lepoviive = LAATU_LEPOVIIVE_MS, viive = LEPOKERROS_LEPOVIIVE_MS,
+}) {
+  let lepo = false;
+  let sormia = 0;
+  let ajastin = 0;
+  let odottaa = false;
+  const peru = () => { if (ajastin) { ikkuna.clearTimeout(ajastin); ajastin = 0; } odottaa = false; };
+  const laukaise = () => {
+    ajastin = 0;
+    if (!lepo) return;
+    // Sormi pohjassa: raahauksen tauko. Kokoaminen odottaa irrotusta.
+    if (sormia > 0) { odottaa = true; return; }
+    odottaa = false;
+    kokoa();
+  };
+  return {
+    levossa() {
+      lepo = true;
+      peru();
+      ajastin = ikkuna.setTimeout(laukaise, Math.max(0, viive - lepoviive));
+    },
+    liike() { lepo = false; peru(); },
+    sormiAlas() { sormia += 1; },
+    sormiYlos() {
+      sormia = Math.max(0, sormia - 1);
+      if (sormia === 0 && odottaa) laukaise();
+    },
+    pura() { lepo = false; sormia = 0; peru(); },
+    tila: () => ({ lepo, sormia, odottaa, ajastettu: Boolean(ajastin) }),
+  };
+}
+
+/*
+ * Kirjaston vakiot pysyvät moduulin sisäisinä kuten ennen; js/pallo.js
+ * tarvitsee ne lepokerroksen tekstuuriin, joten ne viedään erikseen.
+ */
+export { THREE_CLAMP, THREE_LINEAR, THREE_LINEAR_MIPMAP_LINEAR };
+
+/*
+ * ======== LAATTAKERROS: SAMA TARKKUUS LIIKKEESSÄ KUIN LEVOSSA =======
+ *
+ * OMISTAJA 6.9.2026 ilta (Raamattu, PALLO LEVOSSA YHTA TERAVA KUIN
+ * TASOKARTTA › PALAUTE v1642:STA, LIIKKEEN AIKAINEN TARKKUUS,
+ * sanatarkasti): *"Saisiko tuota siirron aikaista matalampaa
+ * resoluutiota mitenkään parannettua? Siinä ei oikeastaan ole mikään
+ * muu häiritsevää kuin rannan ääriviiva, koska se kasvaa niin paljon
+ * paksummaksi."* ja LISÄYS: *"Google Earthissä myös sisäänpäin zoomaus
+ * näyttää portaattomalta."*
+ *
+ * MIKÄ TÄMÄ ON. Lepokerros on yksi kangas, joka kootaan levossa ja
+ * poistetaan liikkeen alkaessa. Laattakerros on sama tekniikka LAATTA
+ * KERRALLAAN ja PYSYVÄNÄ: pyramidin laatat (pohja + viiva + nosto
+ * samassa järjestyksessä kuin tasokartalla) piirretään pallon pinnalle
+ * yksi verkko per laatta, taso valitaan ruudun pikseleistä hystereesillä,
+ * uudet laatat häipyvät vanhojen päälle ja vanhat pysyvät kunnes uudet
+ * peittävät ne. Mitään ei pureta kerralla, joten liikkeessä ja levossa
+ * näkyy sama kartta — se, jonka ruutu tarvitsee.
+ *
+ * KIRJASTON MOOTTORI JÄÄ POHJAKSI (js/pallo.js POHJAN_TASO_MAX): se
+ * naulataan tasoon 5 ja näkyy vain napojen yli (pyramidin rajaus
+ * 84° N…66° S) ja sen ajan, kun kerroksen laatta ei ole vielä saapunut.
+ * Kynnyksiä ja pikselisuhdetta ei enää vaihdeta liikkeen mukaan.
+ *
+ * PIIRTOJÄRJESTYS on lepokerroksen (ks. PIIRTOJÄRJESTYS js/pallo.js:ssä):
+ * kerros on TÄSMÄLLEEN pinnan säteellä (LEPOKERROS_KOROTUS 1, ei
+ * suurennosta eli ei hyppyä) ja järjestys pohjaa vasten tulee
+ * syvyyssiirrosta (LAATTAKERROS_SYVYYSSIIRTO −8, factor 0). Kerroksen
+ * omat tasot erottaa toisistaan jänteen painuma: hienomman laatan verkko
+ * on lähempänä kameraa kuin karkeamman, joten se voittaa syvyystestin
+ * ilman omaa siirtoa, ja renderOrder (LAATTAKERROS_RENDER_ORDER_POHJA +
+ * z) piirtää karkeat ensin.
+ *
+ * HÄIVE VAIN PEITON PÄÄLLE (v1641:n oppi: kaksi karttaa päällekkäin on
+ * röpelöä). Sisään häivytetään aina — uusi laatta tulee vanhan tai
+ * pohjan päälle, jotka peittävät sen alla olevan kokonaan. Ulos
+ * häivytetään VAIN, kun karkeampi valmis laatta on jo sen alla; jos
+ * hienommat laatat peittävät alueen kokonaan, ylimääräinen poistetaan
+ * heti (se ei näy), ja jos mikään ei peitä, se pidetään.
+ */
+/** Tason valinta: laatan pikseli ≥ laitepikseli × tämä (1 = ei venytystä). */
+export const LAATTAKERROS_TERAVYYS = 1;
+/**
+ * Hystereesi: nykyisestä tasosta luovutaan vasta, kun sen venytys
+ * ylittää 1/0,7 = 1,43. Ilman tätä ruudun tarve heilahtaisi tason
+ * rajalla edestakaisin (mitattu v1645: zoomissa 2–4 edestakaista
+ * vaihtoa kahdeksassa sekunnissa).
+ */
+export const LAATTAKERROS_HYSTEREESI_ALAS = 0.7;
+/** Näytepisteitä ruudulla sivua kohti (9 × 9 = 81 laskettua osumaa). */
+export const LAATTAKERROS_NAYTTEITA = 9;
+/** Reunus näkyvän alueen ympärille: vähintään näin monta astetta… */
+export const LAATTAKERROS_VARA_AST = 0.5;
+/** …ja vähintään tämä osuus laatikon suuremmasta sivusta (liikkeen vara). */
+export const LAATTAKERROS_VARA_OSUUS = 0.03;
+/*
+ * MERET NÄKYVIIN ON OLETUS, JA KYTKIN ON PAKOTIE (`?meretNakyviin=0`).
+ *
+ * Omistaja 18.9.2026 (PAATOKSET 37 kohta 2): *"Ainakin haluaisin
+ * kokeilla ja nahda sen, jos se ei ole iso tyo ottaa kayttoon."*
+ *
+ * OLETUS ON PÄÄLLÄ, KOSKA MITTAUS ON SIISTI. Kuvapari
+ * docs/raportit/kuvat/kerma-heti-20260918/uusi-panoroinnin-jalkeen.png
+ * (maski pois) ja uusi-meret-panoroinnin-jalkeen.png (maski päällä),
+ * 390 × 844 dpr 3, z7 Ranskasta itään: ilman maskia Välimeri,
+ * Tyrrhenanmeri ja Adrianmeri ovat samaa kermaa kuin Italia, maskin
+ * kanssa ne ovat pohjan omaa syvyysharmaata ja maa on kermaa.
+ * Rannikot ovat pehmeitä eikä sahalaitaa ole — ramppi on pehmeä
+ * (ks. maalaaKermaMaamaskilla) ja Korsika pysyy kohdemaana
+ * alkuperäisenä.
+ *
+ * LIPPU LUETAAN KERRAN MODUULIN LATAUTUESSA: laattoja rakennetaan
+ * sadoittain, eikä jokainen niistä saa jäsentää osoiteriviä uudestaan.
+ */
+export const MERET_NAKYVIIN = (() => {
+  try {
+    const arvo = new URLSearchParams(globalThis.location?.search ?? '').get('meretNakyviin');
+    return arvo === null || !/^(0|ei|off)$/.test(arvo);
+  }
+  catch { return true; }
+})();
+/*
+ * NOPEA EDESTAKAINEN PANOROINTI (omistajan palaute v1649, iPad,
+ * sanatarkasti): *"Ainoastaan jos todella nopeasti panoroi edestakaisin
+ * päästämättä sormea irti niin kartta putoaa joiltain osin hetkeksi
+ * matalaan laatuun vaikka ko. osa on jo ladattu ja ruudunpäivitys on
+ * hyvä."*
+ *
+ * JUURISYY (mitattu tools/savukkeet/mittaa-pallon-liike.mjs
+ * --vaihe=heiluri, puhelin 390 × 844 dpr 3, 4×, 6.9.2026): näkyvä alue
+ * lasketaan VAIN nykyisestä pov:sta, ja latausjono kootaan joka
+ * päivityksellä pelkistä näkyvistä laatoista. Heilurin ääripäässä
+ * reunan laatta on näkyvissä yhden päivityksen ajan (100 ms), ehtii
+ * jonoon muttei latauspaikkaan (RINNAKKAIN 6) — ja seuraavalla
+ * päivityksellä se putoaa jonosta kokonaan. Mitattu: levossa 28
+ * näkyvästä laatasta 28 scenessä, heilurin alkaessa näkyviä 35 ja
+ * scenessä 31; ne neljä olivat olleet tietueina muistissa koko ajan
+ * tilassa "ladataan" ilman että lataus oli koskaan alkanut.
+ *
+ * KOLME KORJAUSTA (vakiot alla):
+ *  1. ENNAKKOALUE liikesuuntaan: alue laajennetaan sillä matkalla, jonka
+ *     kamera kulki edellisestä päivityksestä, kerrottuna
+ *     LIIKEVARA_KERROIN:lla ja MOLEMPIIN suuntiin (heiluri kääntyy).
+ *     Ennakon laatat ladataan ja pidetään, mutta ne EIVÄT osallistu
+ *     tason valintaan (LAATTAKATTO_NAKYVA) — tason on pysyttävä
+ *     terävänä, vaikka jono kasvaa.
+ *  2. PITO: laatta, joka on ollut näkyvissä tai ennakossa viimeisen
+ *     PITO_MS:n aikana, ei putoa jonosta, sen hakua ei katkaista eikä
+ *     LRU:n MÄÄRÄkatto pura sitä. Tavukatto (LAATTAKATTO_TAVUT) purkaa
+ *     yhä myös pidettyjä — muisti on kova raja.
+ *  3. Valmis laatta lisätään sceneen aina, kun se on yhä alueella
+ *     (näkyvä tai pidetty), ei vain jos se sattui olemaan näkyvissä
+ *     sillä kehyksellä, jolla tekstuuri vietiin näytönohjaimelle.
+ */
+/** Laatta pidetään (jono, LRU:n määräkatto) näin kauan viimeisestä näöstä. */
+export const LAATTAKERROS_PITO_MS = 2000;
+/** Ennakkoalue = näkyvä alue + tämä kertaa edellisen päivityksen matka. */
+export const LAATTAKERROS_LIIKEVARA_KERROIN = 2;
+/**
+ * …tai laajemmalti: se laatikko, jonka kamera on PYYHKINYT viimeisen
+ * PITO_MS:n aikana. Yhden päivitysvälin matka ei riitä, kun heiluri
+ * kääntyy: käännöksen kohdalla matka on nolla, vaikka ruutu on juuri
+ * ollut 20 % leveydestä sivummalla. Pyyhitty laatikko muistaa sen.
+ */
+export const LAATTAKERROS_LIIKEVARA_PYYHKAISY = true;
+/** Ennakkoalueen laattoja enintään (fling ei saa tilata satoja). */
+export const LAATTAKERROS_LAATTAKATTO_ENNAKKO = 96;
+/*
+ * ZOOMIENNAKKO (omistajan tuntuma v2026, 21.9.2026 ilta: *"merialueille
+ * tulee zoomatessa hetkellisesti karkeampien viivojen muhjua"*).
+ * Mitattu Chromium 1400 × 900 dpr 2, Marseille, zoom 0,3 → 0,025:
+ * taso vaihtuu heti kynnyksellä (z6 → z7 → z8), ja uuden tason laatat
+ * tulevat sceneen vasta 4–6 päivityksen (300–500 ms) kuluessa — sillä
+ * välin vanha taso näkyy 2× venytettynä (paksut rantaviivat ja
+ * syvyyskäyrät). Kun kamera LASKEE ja tarve on ZOOMIENNAKKO_OSUUS:n
+ * päässä seuraavan tason kynnyksestä, seuraavan tason laatat tilataan
+ * jo näkymän KESKIALUEELTA (se osa, joka on ruudulla myös lähempää:
+ * laatikko kutistettuna ZOOMIENNAKKO_KESKIOSUUS:lla) ennakkona —
+ * ladataan ja viedään näytönohjaimelle, mutta EI sceneen ennen tason
+ * vaihtoa. Vaihdon hetkellä uusi taso on jo muistissa ja peittää
+ * vanhan heti. Enintään LAATTAKATTO_ZOOMIENNAKKO laattaa, samasta
+ * muistibudjetista kuin liikevaran ennakko.
+ */
+export const LAATTAKERROS_ZOOMIENNAKKO_OSUUS = 0.35;
+export const LAATTAKERROS_ZOOMIENNAKKO_KESKIOSUUS = 0.6;
+export const LAATTAKERROS_LAATTAKATTO_ZOOMIENNAKKO = 16;
+/*
+ * TUKITASO (sulavuus E2, 21.9.2026): näkyvän alueen alla pidetään aina
+ * KARKEAMMAN tason laatat — oletuksena kaksi tasoa karkeammat, eli yksi
+ * tukilaatta kattaa 16 näkyvää — ja alue on näkyvää laajempi (vara
+ * kumpaankin suuntaan, osuus laatikon koosta). Mitattu ennen tätä
+ * (tools/savukkeet/mittaa-sulavuus.mjs, puhelin 4×): loitonnuksessa
+ * z8 → z7 pohja (z5 ilman rantaviivaa) näkyi 62 kehystä ja 12 %
+ * näytepisteistä, heitossa 7 kehystä reunalla — näkymä laajeni vanhojen
+ * laattojen yli ennen kuin uudet ehtivät. Tukilaatta on halpa (25 %
+ * laattamäärästä), sen alla ei koskaan ole pohjaa, ja hienompi laatta
+ * voittaa sen syvyystestissä (ks. PIIRTOJÄRJESTYS). Tukilaattaa ei
+ * poisteta peiton alta (LAATTAKERROS_PEITTO), vain LRU:n tavukatto
+ * purkaa sen. Enintään LAATTAKATTO_TUKI laattaa; jos askel ei mahdu
+ * kattoon, otetaan karkeampi taso.
+ */
+export const LAATTAKERROS_TUKI_ASKEL = 2;
+/** Nopeassa loitonnuksessa (korkeus kasvoi yli tämän osuuden päivitysten välillä) askel + 1. */
+export const LAATTAKERROS_TUKI_LOITONNUSRAJA = 0.04;
+/*
+ * TUKIVARA 0,35 → 0,75 (omistaja 22.9.2026: panoroinnissa pohja näkyi
+ * ilman huntua ennen laattaa). Tukilaatta on ainoa kermallinen pinta,
+ * joka ehtii nopean panoroinnin edelle; 0,35 ruudun laidan yli ei
+ * riittänyt sormen vauhdilla. Tukitaso on kaksi tasoa karkeampi, joten
+ * laajempi alue maksaa vain muutaman laatan (katto alla).
+ */
+export const LAATTAKERROS_TUKI_VARA = 0.75;
+export const LAATTAKERROS_LAATTAKATTO_TUKI = 24;
+/** Kerman odotus, kun tarkka suoja ei ole vielä saapunut (ks. valmistele). */
+export const KERMAN_ODOTUS_MS = 200;
+export const KERMAN_ODOTUS_KERTOJA = 25;
+/*
+ * TUKILAATAN SYVYYSSIIRTO. Tasojen välinen syvyysero on muuten vain
+ * jänteen painuma (ks. PIIRTOJÄRJESTYS), ja z5:n ja z7:n verkoilla se
+ * on 0,25° vastaan 0,13° — syvyyspuskurin tarkkuuden rajoilla. Pysyvä
+ * tukilaatta hienomman alla välkkyi mitattuna (kaappaus 21.9.2026:
+ * "LIONINLAHTI" kahtena, z5:n laivat z7:n meren läpi). Tuki saa oman,
+ * laattoja PIENEMMÄN siirron: se on pohjan edessä mutta jokaisen
+ * tavallisen laatan takana varmasti, ei jänteen varassa.
+ */
+export const LAATTAKERROS_TUKI_SYVYYSSIIRTO = -4;
+/*
+ * SYVYYSSIIRTO TASON MUKAAN (21.9.2026, omistajan tuotantokaappaus v1997
+ * Ranska z6: meri laikukas Biskajalla, vaaleammat alueet päättyvät
+ * suoriin laatan reunoihin). Kun karkeampi laatta jää sceneen
+ * (näkymää laajempi, ei kokonaan peitossa) ja sen päällä on nykyisen
+ * tason laatta, syvyysero on vain jänteen painuma — syvyyspuskurin
+ * tarkkuuden rajoilla, ja koko laatan ala saattoi voittaa hienomman:
+ * karkean laatan meri (eri kohinan mittakaava) näkyi suorareunaisena
+ * laikkuna. Nyt jokainen scenen laatta saa siirron ASEMANSA mukaan
+ * (`laatanSyvyyssiirto`): nykyinen taso −8, sitä hienommat −10
+ * (edelleen −12:n eli vektorien ja kalvojen takana), karkeammat −6 ja
+ * tuki −4. Kokonaiset yksiköt eivät jää painuman varaan.
+ */
+export const LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI = -10;
+export const LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI = -6;
+/*
+ * KARKEAMMAT PORRASTETAAN TASOERON MUKAAN (23.9.2026, omistaja: "vaihdos
+ * ei ole nätti, siinä tulee aika häiritsevääkin värinää"; kaappaukset
+ * docs/raportit/kaappaukset/omistaja-20260923/meri-ropelo-1335-*.webp:
+ * tummia salmiakkeja säännöllisissä riveissä vain tasonvaihdon ajan).
+ *
+ * MITATTU SYY: tasolla z tuki z−2 on −4 ja nykyinen −8. Kun taso vaihtuu
+ * z → z+1, vanha z ja entinen tuki (tuki-lippu pois) ovat MOLEMMAT
+ * "karkeampia" ja saivat saman −6:n — niiden järjestyksen ratkaisi taas
+ * pelkkä jänteen painuma. Karkean verkon kärkien ympärillä karkea laatta
+ * on hienompaa lähempänä kameraa, joten z−2:n suurennettu sisältö pisti
+ * esiin salmiakkeina karkean verkon ruudukossa, kunnes uusi taso peitti
+ * sen (WebKit, Lioninlahti z7→z8, z8-lataus estettynä: 8 × z7 ja 16 × z5
+ * samalla −6:lla). Nyt jokainen askel karkeammaksi on 2 yksikköä
+ * taaempana: z−1 −6, z−2 −4, z−3 −2, sitä karkeammat −1 (yhä pohjan
+ * edessä). Tuki noudattaa samaa porrasta, mutta ei tule −4:ää lähemmäs.
+ */
+export const LAATTAKERROS_SYVYYSSIIRTO_PORRAS = 2;
+/** Laatan polygonOffsetUnits sen suhteesta valittuun tasoon. */
+export function laatanSyvyyssiirto(t, valittuZ) {
+  const tasoton = !Number.isFinite(valittuZ) || !Number.isFinite(t?.z);
+  if (t?.tuki) {
+    if (tasoton || t.z >= valittuZ) return LAATTAKERROS_TUKI_SYVYYSSIIRTO;
+    return Math.max(LAATTAKERROS_TUKI_SYVYYSSIIRTO, karkeammanSiirto(valittuZ - t.z));
+  }
+  if (tasoton || t.z === valittuZ) return LAATTAKERROS_SYVYYSSIIRTO;
+  return t.z > valittuZ ? LAATTAKERROS_SYVYYSSIIRTO_HIENOMPI : karkeammanSiirto(valittuZ - t.z);
+}
+/** Karkeamman laatan siirto tasoerosta (1 → KARKEAMPI, sitten portaittain taemmas). */
+function karkeammanSiirto(ero) {
+  return Math.min(-1, LAATTAKERROS_SYVYYSSIIRTO_KARKEAMPI + (ero - 1) * LAATTAKERROS_SYVYYSSIIRTO_PORRAS);
+}
+/** Ennakon katto muistista: näin monta laattaa jätetään tavukatosta vapaaksi. */
+export const LAATTAKERROS_ENNAKKO_MUISTIVARA = 4;
+/*
+ * Näkyviä laattoja enintään: tätä isompi määrä pudottaa tason karkeammaksi.
+ *
+ * KATTO LASKETAAN AIDOSTI NÄKYVÄSTÄ ALUEESTA, EI VARALLA LAAJENNETUSTA
+ * (omistajan tuntumatesti 21.9.2026 ilta, iPhone dpr 3, Ranska z6–z8:
+ * *panoroidessa ruudulla on karkeampi taso, liikkeen loputtua hieno
+ * palaa*). Mitattu WebKit 390 × 844 dpr 3, korkeus 0,1: levossa z8 ja
+ * 45 näkyvää laattaa — katon alla vain kolmen laatan varalla. Alue, josta
+ * laatat lasketaan, on näkymä + vara (LAATTAKERROS_VARA_AST 0,5° ja 3 %),
+ * ja panoroinnissa laattaruudukon asento vaihtuu: sama laatikko osuu
+ * milloin 7 × 7:ään, milloin 8 × 8:aan laattaan. Kun määrä ylitti 48:n,
+ * taso putosi z7:ään KESKEN LIIKKEEN (z8-laatat purettiin, tukitaso
+ * näkyi alta paksuine viivoineen ja ilman nimiöitä), ja hystereesi
+ * (LAATTAKERROS_HYSTEREESI_ALAS 0,7) piti z7:n vielä levossakin. Nyt
+ * katto vertaa VAIN aidosti näkyvän alueen (ilman varaa) laattoja —
+ * vara ladataan yhä reunan laattoina, mutta se ei pudota tasoa — ja
+ * katon pudottama taso ei saa hystereesiä (ks. kattoRajoitti): kun
+ * näkyvä joukko taas mahtuu, palataan tarpeen tasolle.
+ */
+export const LAATTAKERROS_LAATTAKATTO_NAKYVA = 48;
+/** Valmiita mutta näkymättömiä laattoja muistissa enintään (LRU). */
+export const LAATTAKERROS_LAATTAKATTO_MUISTI = 24;
+/** Tekstuurimuistin kiintiö: LRU purkaa, kunnes alitetaan (96 Mt). */
+export const LAATTAKERROS_LAATTAKATTO_TAVUT = 96 * 1048576;
+/*
+ * OSOITINLAITTEELLA KIINTIÖ ON KAKSINKERTAINEN (sulavuus E3, 21.9.2026).
+ * 96 Mt on 68 laattaa, ja työpöydän ruutu (1400 × 900 dpr 2) tarvitsee
+ * z6:lla 45 näkyvää: zoomi z7:ään ja takaisin purki koko z6-sarjan
+ * (mitattu: 24 näkyvästä 0 scenessä loitonnuksessa, 295 purkua yhdessä
+ * zoomissa) ja haki sen uudestaan. Kosketuslaitteet (iPad, puhelin)
+ * pysyvät 96 Mt:ssa — muisti on siellä kova raja.
+ */
+export const LAATTAKERROS_TAVUKERROIN_OSOITIN = 2;
+/** Rinnakkaisia laattalatauksia enintään. */
+export const LAATTAKERROS_RINNAKKAIN = 6;
+/*
+ * LATAUKSIA ALOITETAAN ENINTÄÄN KAKSI KEHYSTÄ KOHTI (ablaatiotikas,
+ * 22.9.2026). Kuusi latauspaikkaa vapautuu zoomissa usein samaan
+ * aikaan (samankokoiset laatat samasta ämpäristä valmistuvat yhdessä),
+ * ja `kaynnista` täytti ne kaikki heti: 6 laattaa × 3 kerrosta = 18
+ * fetch + createImageBitmap -aloitusta yhdessä kehyksessä. Mitattu
+ * (tools/savukkeet/mittaa-ablaatio.mjs, WebKit 390 × 844 dpr 3, Ranska
+ * z6, portaat 1–2, main v2035): zoomin jokaisessa yli 35 ms:n kehyksessä
+ * oli 15–18 pyynnön aloitus ja yksi tekstuurin vienti; p95 35–42 ms.
+ * Aloitukset tahditetaan kahteen laattaan kehystä kohti: loput jonosta
+ * lähtevät seuraavissa kehyksissä (requestAnimationFrame), joten
+ * verkko pysyy lähes yhtä täynnä (12 aloitusta 100 ms:ssa) mutta yksi
+ * kehys ei maksa koko erää. Ilman rAF:ia (yksikkötestit) ei tahditeta.
+ */
+export const LAATTAKERROS_ALOITUKSIA_PER_KEHYS = 2;
+/*
+ * TEKSTUUREJA YKSI KEHYSTÄ KOHTI, EI KAHTA (mitattu 7.9.2026,
+ * savuke-pallo-kehystahti). Yksi `renderer.initTexture` maksoi
+ * mittausympäristössä 3,0 ms (p50) ja 6,7 ms (max) — kaksi peräkkäin
+ * samassa kehyksessä on siis pahimmillaan 13 ms 16,7 ms:n budjetista,
+ * ja se yksin pudottaa kehyksen. Yksi vienti kehystä kohti on 60 Hz:n
+ * ruudulla yhä 60 laattaa sekunnissa, eli enemmän kuin
+ * LAATTAKERROS_RINNAKKAIN (6) ehtii ladata: jono ei kasva tästä.
+ */
+/*
+ * KAKSI VIENTIÄ KEHYSTÄ KOHTI (22.9.2026, omistajan aamutesti: merellä
+ * zoomatessa karkea taso näkyy hetken paksuine syvyyskäyrineen).
+ * Mitattu tools/savukkeet/mittaa-zoomiennakko-meri.mjs (WebKit 390 × 844
+ * dpr 3, Välimeri 40,5 N 6 E ja Ranska, z7 → z8, kuorma 9–13): verkko ei
+ * ole pullonkaula (z8-laatta 16–52 kt, TTFB 21–56 ms, 10 rinnakkain
+ * 67 ms), vaan tämä katto ja valmistelun budjetti: 32 uutta laattaa vie
+ * yhdellä viennillä vähintään 32 kehystä. Kahdella viennillä ja 6–8 ms:n
+ * valmistelubudjetilla karkean tason näkymisaika putosi merellä 536–895
+ * → 347–433 ms ja maalla 751–1052 → 546–711 ms (6 ms:n budjetilla 354–477
+ * / 560–664), eikä zoomin tai panoroinnin p95 muuttunut (mittaa-ablaatio
+ * porras 2: zoomi 25–28, panorointi 18–22 ms). 7.9.2026 mitattu
+ * 3,0 ms/vienti → kaksi on 6 ms, joka mahtuu budjettiin, kun ladonta on
+ * pois liikkeen ajalta (v2062 liikevara).
+ */
+export const LAATTAKERROS_TEKSTUUREJA_PER_KEHYS = 2;
+/*
+ * VEDON AIKANA VIENTI BUDJETILLA (omistajan iPad-kierros v2135/v2136,
+ * 22.9.2026 klo 23.35): koe "Ei tekstuurivientejä" pudotti yli 20 ms:n
+ * kehykset 25 %:sta 8 %:iin ja p95:n 45 → 25 ms. Pääsäie oli pitkissä
+ * kehyksissä vapaana (varattu 3–5 ms, vapaa 30–40 ms): initTexture
+ * palaa nopeasti, mutta tekstuurin lataus maksetaan Safarin
+ * GPU-prosessissa, joka myöhästyttää kehyksen esityksen. Normaali vei
+ * vedossa 62–68 laattaa sekunnissa — lähes kaiken, mitä ohi vilahti.
+ *
+ * SIVUVAIKUTUS, JOKA POISTUU SAMALLA (mitattu WebKit, savuke-
+ * vientibudjetti): jokainen vedossa viety laatta häipyy sisään, ja
+ * häiveen ajan kerros ei peitä ruutua, joten kirjaston pohja (z5-laatat,
+ * dc ≈ 400) piirtyi alle 52–82 %:ssa vetokehyksistä. Budjetilla 0–8 %.
+ * Tämä oli omistajan iPad-kaappauksen "dc 431".
+ *
+ * Liikkeessä siksi korkeintaan YKSI vienti kehystä kohti ja vain NÄKYVÄ
+ * laatta (aukko ruudulla), lähin keskeltä; alueella pidetty ennakko vain
+ * VEDON_VIENTIVALI_MS:n välein (≤ 20/s). Jo alueelta pois liukuneet laatat odottavat
+ * lepoa, jolloin jono valuu entiseen tahtiin (2/kehys) — mitään ei
+ * hukata, ja häive toimii kuten ennen. Aikaväli eikä kehysmäärä, koska rAF voi käydä 60 tai
+ * 120 Hz:llä.
+ *
+ * VAIN KOKEENA (`?koe=vientibudjetti`): omistaja 22.9.2026 klo 23.45 —
+ * "Ei tekstuurivientejä tökkii yhtä pahasti. Ei vaihdeta siihen." Nähty
+ * nykiminen ei ole kehysaikaa, joten oletus pysyy entisenä (2/kehys myös
+ * liikkeessä).
+ */
+export const LAATTAKERROS_VEDON_VIENTIVALI_MS = 50;
+/*
+ * ZOOMIN PIIRTOKOKEET (kehittäjälippu `?koe=a,b`, Pelikoodari 22.9.2026).
+ * Ranska z6 zoomin pisimmät kehykset olivat oikealla iPhonella
+ * "piirtoa" — ei ladontaa, ei laskurimuutosta (docs/raportit/
+ * sulavuus-liikevara-iphone-20260922.md). Lippu vaihtaa yhden laattojen
+ * GPU-kustannuksen kerrallaan, jotta Laitetestaaja voi mitata laitteella
+ * (tools/savukkeet/mittaa-zoomipiirto.mjs KOKEET=…):
+ *   aniso1     laatan tekstuurin anisotropia 1 (oletus laitteen maksimi)
+ *   eimip      ei mipmappeja, minFilter LINEAR
+ *   silmat40   laatan verkko enintään 40 × 40 silmää (oletus 160)
+ *   eihaive    ei häivettä: uusi laatta heti täysi, vanha pois heti
+ *   eihaivevedossa  sama vain liikkeen ajan; alkanut häive päättyy heti,
+ *              kun liike alkaa (ratasvalikon Piirtokoe "Ei häivytystä vedossa")
+ *   vientilepo tekstuurien vienti vain levossa (liikkeessä jono odottaa)
+ * Ei vaikuta ilman lippua; yksikkötestit eivät anna lippua.
+ */
+export function laattakerroksenKokeet(haku) {
+  const osoite = haku ?? (globalThis.location?.search ?? '');
+  const arvo = (() => { try { return new URLSearchParams(osoite).get('koe') ?? ''; } catch { return ''; } })();
+  const joukko = new Set(String(arvo).split(',').map((k) => k.trim()).filter(Boolean));
+  /*
+   * VALIKON VALINTA ON SAMA KUIN LIPPU (js/piirtokoe-asetus.js):
+   * ratasvalikosta valittu piirtokoe käyttäytyy täsmälleen kuin
+   * `?koe=` osoitteessa. Mukaan VAIN silloin, kun kutsuja ei antanut
+   * omaa hakumerkkijonoa — savuke ja testi eivät saa lukea laitteen
+   * muistia, tai mittaus mittaisi väärää tilaa.
+   */
+  if (haku === undefined) for (const lippu of tallennetutKokeet()) joukko.add(lippu);
+  return laajennaKokeet(joukko);
+}
+/** Häive sisään ja ulos (ms). Reduced motion: 0. */
+export const LAATTAKERROS_HAIVE_MS = 260;
+/** Kerros päivittyy liikkeessä enintään 10 kertaa sekunnissa. */
+export const LAATTAKERROS_PAIVITYSVALI_LIIKE_MS = 100;
+/** Verkon silmiä laatan sivulla vähintään / enintään. */
+export const LAATTAKERROS_SILMAT_MIN = 16;
+export const LAATTAKERROS_SILMAT_MAX = 160;
+/** polygonOffsetUnits: syvyyspuskurin askelta kameraa kohti (negatiivinen). */
+export const LAATTAKERROS_SYVYYSSIIRTO = -8;
+/*
+ * NIMIÖN VAALEA REUNUS RELIEFIN PÄÄLLÄ (ks. käyttökohta alempana).
+ * Sävy on linssiperheen oma vaalea pergamentti eikä puhdas valkoinen:
+ * valkoinen reunus kirkkaan lumirajan päällä olisi näkymätön, ja
+ * maastossa se näyttäisi liidulta.
+ *
+ * PEITTÄVYYS 0,92 EI KANTANUT (mitattu 18.9.2026,
+ * tools/savukkeet/savuke-topografialinssi.mjs, Chromium 390 × 844,
+ * z7 nostotaso reliefin päällä, 1 314 mustepikseliä): tekstin ja sen
+ * välittömän taustan WCAG-suhde oli tummimmalla reliefikolmanneksella
+ * 1,97:1 ja vaaleimmalla 2,18:1 — eli reunus oli olemassa muttei
+ * riittänyt 4,5:1:een. Syy on varjon LÄPINÄKYVYYS: kolme vetoa 0,92:lla
+ * jättää kirjaimen reunaan sen verran maastoa läpi, että tumma rinne
+ * tulee kirjaimen viereen. Sävy pysyy pergamenttina, mutta veto on nyt
+ * täysi ja vetoja on neljä — mitä lähempänä kirjainta, sitä vankempi
+ * reunus, ja ulompana se yhä liukuu maastoon eikä ole laatikko.
+ *
+ * SÄVY KIRISTETTIIN VIELÄ (18.9.2026, erä "nimiön kontrasti"): pergamentti
+ * (247, 241, 224) → (252, 249, 242). Se on viisi luminanssiprosenttia
+ * vaaleampi mutta yhä lämmin eikä valkoinen, joten lumirajan päällä
+ * reunuksella on yhä oma sävynsä. Kaksi muuta kokeiltua tietä mitattiin
+ * samalla (ks. docs/raportit/viesti-fable-nimion-kontrasti-20260918.md):
+ * VIIDES VETO yksin (poltettu muste, vanha sävy) nosti tummimman
+ * kolmanneksen 4,23 → 4,61 eli vain 0,11 rajan yli, ja viides veto
+ * yhdessä musteen kanssa antoi 11,32 — sen verran enemmän kuin
+ * pelkkä muste (10,30), ettei ylimääräinen koko laatan veto maksa
+ * itseään takaisin. Vetoja on siis yhä NELJÄ.
+ */
+export const NIMION_HALO = 'rgb(252, 249, 242)';
+/** Reunuksen leveys laatan omissa pikseleissä (laatta on 512 px). */
+export const NIMION_HALO_PX = 3;
+/**
+ * Vetoja saman varjon kanssa: yksi jää ohueksi, neljä kantaa myös
+ * tummimman rinteen päällä (ks. mittaus yllä).
+ */
+export const NIMION_HALO_VETOJA = 4;
+/*
+ * NIMIÖN MUSTE LINSSIN AJAKSI (18.9.2026, erä "nimiön kontrasti").
+ *
+ * MIKSI MUSTEESEEN KOSKETAAN VASTA NYT. Neljä täyttä halovetoa nosti
+ * mitatun suhteen 3,62 → 4,19 (tummin reliefikolmannes, mediaani), ja
+ * 4,5:1 jäi silti saavuttamatta. Musteen kanssa sama mitta on 10,30
+ * (tummin) ja 11,58 (vaalein), ja LADONTA ON PIKSELILLEEN ENNALLAAN:
+ * savuke kokoaa saman laatan myös v1945:n asetuksella ja vertaa
+ * laatikoita — leveys 0 px, korkeus 0 px, reliefin peitto 10,11×
+ * mustepikseli molemmilla. Loput ei tule reunuksesta: reunus on
+ * jo lähes pergamentin vaaleus, ja se, mitä kirjaimen VIERESTÄ mitataan,
+ * on aina reunuksen ja rinteen sekoitus. Suhteen toinen puoli on
+ * teksti, ja se on seepiakarttaa varten poltettua HAALEAA harmaata
+ * (mitattu 82, 71, 54) — vaalealla pergamentilla oikea sävy, mutta
+ * reliefin päällä se antaa pois sen kontrastin, jonka reunus juuri
+ * hankki.
+ *
+ * MUSTE VÄRITETÄÄN UUDELLEEN LINSSILLE, EI POLTETA UUDELLEEN. Nimiö on
+ * laatan pikseleissä, mutta sen ALFA on se, mikä kantaa ladonnan: kun
+ * laatta maalataan `source-in`-vedolla yhdellä tummalla sävyllä, jokainen
+ * pikseli säilyttää oman peittävyytensä ja siis oman muotonsa — kirjaimen
+ * leveys, korkeus ja pehmennys ovat pikselilleen samat kuin poltossa.
+ * Vain sävy vaihtuu. Uusintapoltto (raportin suositus) olisi yhä oikea
+ * korjaus KARTAN OMAAN musteeseen; tämä on linssin oma sävy eikä koske
+ * seepiakarttaa.
+ *
+ * `null` = muste sellaisena kuin se on poltettu (vertailuasetus).
+ */
+export const NIMION_MUSTE = 'rgb(43, 29, 16)';
+
+/*
+ * Linssin nimiölaatta uudessa musteessa. Kangas varataan kerran ja
+ * kierrätetään: laatta on aina saman kokoinen (512 px), ja väritys on
+ * kolme vetoa samalle pinnalle — ei uutta pikselijoukkoa per laatta.
+ * Kutsu tulee VAIN linssin haarasta (kerrokset.reliefi), eikä
+ * seepiakartan nimiöihin siis kosketa täältä lainkaan.
+ *
+ * Varareitti on paluu ALKUPERÄISEEN kuvaan: jos kangasta tai
+ * 2d-piirtopintaa ei jostain syystä saa (yksityinen tila, muisti),
+ * nimiö piirtyy sellaisena kuin se on poltettu — reunus kantaa yhä.
+ */
+let nimionKangas = null;
+function nimioLinssinMusteella(kuva, leveys, korkeus) {
+  if (!NIMION_MUSTE) return kuva;
+  try {
+    if (!nimionKangas || nimionKangas.width !== leveys || nimionKangas.height !== korkeus) {
+      nimionKangas = typeof OffscreenCanvas === 'function'
+        ? new OffscreenCanvas(leveys, korkeus)
+        : Object.assign(document.createElement('canvas'), { width: leveys, height: korkeus });
+    }
+    const c = nimionKangas.getContext('2d');
+    if (!c) return kuva;
+    c.globalCompositeOperation = 'source-over';
+    c.clearRect(0, 0, leveys, korkeus);
+    c.drawImage(kuva, 0, 0, leveys, korkeus);
+    c.globalCompositeOperation = 'source-in';
+    c.fillStyle = NIMION_MUSTE;
+    c.fillRect(0, 0, leveys, korkeus);
+    c.globalCompositeOperation = 'source-over';
+    return nimionKangas;
+  } catch {
+    return kuva;
+  }
+}
+
+/** renderOrder = tämä + z: karkeat tasot ensin, kaikki läpinäkyvien alkuun. */
+export const LAATTAKERROS_RENDER_ORDER_POHJA = -10;
+/** Onko kerros oletuksena päällä (?laattakerros=0 sammuttaa). */
+export const LAATTAKERROS_OLETUS = true;
+/** Laatan sivu pikseleinä, kun pyramidin luettelo ei kerro muuta. */
+export const LAATTAKERROS_LAATTA = 512;
+
+/**
+ * Tason valinta hystereesillä. `nykyinen` on nykyinen taso (olio tai z)
+ * tai null.
+ *
+ * Kaksi ehtoa, ei yhtä: nykyisestä pidetään kiinni vain, jos se on
+ * (a) riittävän terävä (leveys/360 ≥ tarve × HYSTEREESI_ALAS) JA
+ * (b) korkeintaan yhtä hieno kuin tarve vaatii. Pelkkä (a) jättäisi
+ * ulos zoomatessa hienon tason ikuisesti voimaan — se täyttää ehdon
+ * aina — ja näkyvä alue kasvaisi satoihin laattoihin.
+ */
+export function laattakerroksenTaso(tasot, tarvePxAste, nykyinen = null, {
+  teravyys = LAATTAKERROS_TERAVYYS, hystereesi = LAATTAKERROS_HYSTEREESI_ALAS,
+} = {}) {
+  const tarve = lepokerroksenTaso(tasot, tarvePxAste, teravyys);
+  if (!tarve) return null;
+  const z = Number.isFinite(nykyinen?.z) ? nykyinen.z : nykyinen;
+  const nyt = (tasot ?? []).find((t) => t && t.z === z && t.leveys > 0) ?? null;
+  if (!nyt || nyt.z > tarve.z) return tarve;
+  return nyt.leveys / 360 >= tarvePxAste * hystereesi ? nyt : tarve;
+}
+
+/*
+ * ══ KAMERAKALLISTUS (koe, js/pallolauta/kallistus.js; suunnitelma
+ * docs/raportit/kamerakallistus-suunnitelma-20260923.md) ════════════
+ *
+ * Kallistuksen aikana `pointOfView()` palauttaa VIRTUAALISEN kameran:
+ * lat/lng on katsepiste P (ruudun keskellä), korkeus on kameran etäisyys
+ * P:stä pallon säteinä ja `kallistus` = { kulma, suunta, raja }. Kulma
+ * mitataan pinnan normaalista (0 = suoraan alas), suunta on katseen
+ * atsimuutti pohjoisesta myötäpäivään ja raja horisontin rajaus
+ * radiaaneina P:stä. Ilman kallistusta (kulma 0 tai kenttää ei ole)
+ * alla olevat funktiot ajavat vanhan polkunsa bitilleen samana.
+ *
+ * Kehys (pallon säteinä, origokeskinen): n = P:n normaali, u pohjoinen,
+ * r itä; katse h = u cos β + r sin β, oikea' = r cos β − u sin β,
+ * kameran suunta P:stä o = n cos α − h sin α, eteen f = −o,
+ * ylös' = h cos α + n sin α, silmä C = n + korkeus · o.
+ */
+/** Kallistus pov:sta tai null, kun kamera katsoo suoraan alas. */
+export function povinKallistus(pov) {
+  const k = pov?.kallistus;
+  return k && Number.isFinite(k.kulma) && Math.abs(k.kulma) > 1e-9 ? k : null;
+}
+
+/**
+ * Kameran kehys pallon säteinä annetulla kulmalla ja suunnalla (myös
+ * kulmalla 0). Yksi kaava laattakerrokselle ja kallistuksen kameralle
+ * (js/pallolauta/kallistus.js).
+ * @returns {{ n, silma, eteen, oikea, ylos }}
+ */
+export function kameranKehys(pov, kulma = 0, suunta = 0) {
+  const n = pallonPiste(pov.lat, pov.lng, 1);
+  let rx = n.z;
+  let rz = -n.x;
+  const rl = Math.hypot(rx, rz);
+  if (rl < 1e-9) { rx = 1; rz = 0; } else { rx /= rl; rz /= rl; }
+  const r = { x: rx, y: 0, z: rz };
+  const u = { x: n.y * rz, y: n.z * rx - n.x * rz, z: -n.y * rx };
+  const a = kulma * RAD;
+  const b = (Number.isFinite(suunta) ? suunta : 0) * RAD;
+  const yhd = (p, pa, q, qa) => ({ x: p.x * pa + q.x * qa, y: p.y * pa + q.y * qa, z: p.z * pa + q.z * qa });
+  const h = yhd(u, Math.cos(b), r, Math.sin(b));
+  const o = yhd(n, Math.cos(a), h, -Math.sin(a));
+  const alt = Math.max(0, pov.altitude);
+  return {
+    n,
+    silma: { x: n.x + alt * o.x, y: n.y + alt * o.y, z: n.z + alt * o.z },
+    eteen: { x: -o.x, y: -o.y, z: -o.z },
+    oikea: yhd(r, Math.cos(b), u, -Math.sin(b)),
+    ylos: yhd(h, Math.cos(a), n, Math.sin(a)),
+  };
+}
+
+/**
+ * Kallistetun kameran kehys ja horisontin raja, tai null ilman kallistusta.
+ * @returns {{ n, silma, eteen, oikea, ylos, raja: number }|null}
+ */
+export function kallistettuKehys(pov) {
+  const k = povinKallistus(pov);
+  if (!k || !Number.isFinite(pov?.lat) || !Number.isFinite(pov?.lng) || !Number.isFinite(pov?.altitude)) return null;
+  return {
+    ...kameranKehys(pov, k.kulma, k.suunta),
+    raja: Number.isFinite(k.raja) && k.raja > 0 ? k.raja : Infinity,
+  };
+}
+
+/** Pallon pisteiden (yksikkövektorit) välinen kulma radiaaneina. */
+const pisteidenKulma = (a, b) => Math.acos(Math.max(-1, Math.min(1, a.x * b.x + a.y * b.y + a.z * b.z)));
+
+/*
+ * NÄYTTEET LASKETAAN, EI SÄTEENJÄLJITETÄ (mitattu 6.9.2026). Lepokerros
+ * kysyi näkyvän alueen kirjastolta (`toGlobeCoords`) kerran levossa;
+ * laattakerros tarvitsee sen kymmenen kertaa sekunnissa, eikä kirjaston
+ * säteenjäljitys kestä sitä: 81 kutsua maksoi puhelinnäkymässä
+ * **444 ms** (Chromium, ei hidastusta), koska jokainen kutsu testaa
+ * pallon kaikki laattaverkot — mittausnäkymässä 47 000 kolmiota, siis
+ * 3,8 miljoonaa kolmiotestiä päivitystä kohti.
+ *
+ * Sama vastaus saadaan kahdella rivillä geometriaa: kamera on
+ * TÄSMÄLLEEN säteellä R(1 + korkeus) suunnassa (lat, lng), sillä ei ole
+ * kallistusta (OrbitControls, ylös = +Y), ja pallo on origokeskinen —
+ * ruudun pisteen säde leikkaa pallon toisen asteen yhtälöllä. Mitattu
+ * ero säteenjäljitykseen samassa näkymässä (Ateena, korkeus 0,35,
+ * 374 × 771): laatikon reunat 0,03–0,05° kohdallaan, hinta alle 0,1 ms.
+ *
+ * @param {object} pov   { lat, lng, altitude }
+ * @param {number} sx    ruudun x normalisoituna −1…1 (oikealle)
+ * @param {number} sy    ruudun y normalisoituna −1…1 (YLÖS)
+ * @returns {{lat: number, lng: number}|null} null, jos säde ohittaa pallon
+ */
+export function laattakerroksenOsuma(pov, sx, sy, { fov = 50, kuvasuhde = 1, sade = 100 } = {}) {
+  if (!Number.isFinite(pov?.lat) || !Number.isFinite(pov?.lng) || !Number.isFinite(pov?.altitude)) return null;
+  const kk = kallistettuKehys(pov);
+  if (kk) {
+    // KALLISTETTU (ks. KAMERAKALLISTUS): sama toisen asteen yhtälö silmästä C.
+    const tY = Math.tan((fov / 2) * RAD);
+    const tX = tY * kuvasuhde;
+    let ex = kk.eteen.x + kk.oikea.x * sx * tX + kk.ylos.x * sy * tY;
+    let ey = kk.eteen.y + kk.oikea.y * sx * tX + kk.ylos.y * sy * tY;
+    let ez = kk.eteen.z + kk.oikea.z * sx * tX + kk.ylos.z * sy * tY;
+    const el = Math.hypot(ex, ey, ez);
+    if (!(el > 0)) return null;
+    ex /= el; ey /= el; ez /= el;
+    const C = kk.silma;
+    const bb = 2 * (C.x * ex + C.y * ey + C.z * ez);
+    const cc = C.x * C.x + C.y * C.y + C.z * C.z - 1;
+    const dd = bb * bb - 4 * cc;
+    if (dd < 0) return null;
+    const tt = (-bb - Math.sqrt(dd)) / 2;
+    if (!(tt > 0)) return null;
+    const q = { x: C.x + tt * ex, y: C.y + tt * ey, z: C.z + tt * ez };
+    // Horisontin rajaus: kauempana kuin `raja` P:stä on usvan takana.
+    if (pisteidenKulma(q, kk.n) > kk.raja) return null;
+    return {
+      lat: Math.asin(Math.max(-1, Math.min(1, q.y))) / RAD,
+      lng: Math.atan2(q.x, q.z) / RAD,
+    };
+  }
+  const n = pallonPiste(pov.lat, pov.lng, 1);
+  /*
+   * Ruudun oikea (itä) ja ylös (pohjoinen) kameran kehyksessä. Oikea on
+   * r = ylös × n = (n.z, 0, −n.x) normalisoituna (y on nolla, koska
+   * maailman ylös on +Y), ja ylös on u = n × r. Navalla r on
+   * määrittelemätön; siellä kelpaa mikä tahansa suunta.
+   */
+  let rx = n.z;
+  let rz = -n.x;
+  const rl = Math.hypot(rx, rz);
+  if (rl < 1e-9) { rx = 1; rz = 0; } else { rx /= rl; rz /= rl; }
+  const ux = n.y * rz;
+  const uy = n.z * rx - n.x * rz;
+  const uz = -n.y * rx;
+  const tanY = Math.tan((fov / 2) * RAD);
+  const tanX = tanY * kuvasuhde;
+  let dx = -n.x + rx * sx * tanX + ux * sy * tanY;
+  let dy = -n.y + uy * sy * tanY;
+  let dz = -n.z + rz * sx * tanX + uz * sy * tanY;
+  const dl = Math.hypot(dx, dy, dz);
+  if (!(dl > 0)) return null;
+  dx /= dl; dy /= dl; dz /= dl;
+  const etaisyys = sade * (1 + pov.altitude);
+  const cx = n.x * etaisyys;
+  const cy = n.y * etaisyys;
+  const cz = n.z * etaisyys;
+  const b = 2 * (cx * dx + cy * dy + cz * dz);
+  const c = etaisyys * etaisyys - sade * sade;
+  const disc = b * b - 4 * c;
+  if (disc < 0) return null;
+  const t = (-b - Math.sqrt(disc)) / 2;
+  if (!(t > 0)) return null;
+  const px = cx + t * dx;
+  const py = cy + t * dy;
+  const pz = cz + t * dz;
+  return {
+    lat: Math.asin(Math.max(-1, Math.min(1, py / sade))) / RAD,
+    lng: Math.atan2(px, pz) / RAD,
+  };
+}
+
+/**
+ * KÄÄNTEINEN: pinnan piste ruudulle (sulavuus E4, 21.9.2026). Sama
+ * kameran kehys kuin laattakerroksenOsumassa (kamera säteellä ilman
+ * kallistusta, ylös = +Y), joten piste, jonka osuma antaa ruudun
+ * kohdasta (sx, sy), palaa tässä täsmälleen samaan kohtaan. Nimiöiden
+ * ja pisteiden asettelu liikkeen aikana saa ruutupaikan ilman kirjaston
+ * Vector3-projektiota ja matriisilukuja — pelkkää trigonometriaa,
+ * noin puoli mikrosekuntia pisteeltä.
+ *
+ * @returns {{sx: number, sy: number, edessa: boolean, syvyys: number}|null}
+ *   sx, sy normalisoituina (−1…1, y ylös; ruudun ulkopuolella |sx| > 1),
+ *   `edessa` = piste pallon näkyvällä puolella (horisontin sisällä),
+ *   `syvyys` = etäisyys kamerasta kameran suunnassa (maailman
+ *   yksiköissä). Null vain roskasyötteellä: pallon ulkopuolelta pinnan
+ *   jokainen piste on kameran edessä.
+ */
+export function pinnanRuutupiste(pov, lat, lng, { fov = 50, kuvasuhde = 1, sade = 100 } = {}) {
+  if (!Number.isFinite(pov?.lat) || !Number.isFinite(pov?.lng) || !Number.isFinite(pov?.altitude)) return null;
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+  const kk = kallistettuKehys(pov);
+  if (kk) {
+    // KALLISTETTU (ks. KAMERAKALLISTUS): projektio silmän C kehykseen.
+    const q = pallonPiste(lat, lng, 1);
+    const C = kk.silma;
+    const vx = q.x - C.x;
+    const vy = q.y - C.y;
+    const vz = q.z - C.z;
+    const syv = vx * kk.eteen.x + vy * kk.eteen.y + vz * kk.eteen.z;
+    if (!(syv > 1e-9)) return null;
+    const tY = Math.tan((fov / 2) * RAD);
+    const tX = tY * kuvasuhde;
+    const Cl = Math.hypot(C.x, C.y, C.z);
+    // Horisontti todellisesta silmästä + usvan raja katsepisteestä.
+    const edessa = (q.x * C.x + q.y * C.y + q.z * C.z) / Cl >= 1 / Cl && pisteidenKulma(q, kk.n) <= kk.raja;
+    return {
+      sx: (vx * kk.oikea.x + vy * kk.oikea.y + vz * kk.oikea.z) / (syv * tX),
+      sy: (vx * kk.ylos.x + vy * kk.ylos.y + vz * kk.ylos.z) / (syv * tY),
+      edessa,
+      syvyys: syv * sade,
+    };
+  }
+  const n = pallonPiste(pov.lat, pov.lng, 1);
+  let rx = n.z;
+  let rz = -n.x;
+  const rl = Math.hypot(rx, rz);
+  if (rl < 1e-9) { rx = 1; rz = 0; } else { rx /= rl; rz /= rl; }
+  const ux = n.y * rz;
+  const uy = n.z * rx - n.x * rz;
+  const uz = -n.y * rx;
+  const etaisyys = 1 + pov.altitude;
+  const p = pallonPiste(lat, lng, 1);
+  // Vektori kamerasta pisteeseen pallon säteinä.
+  const vx = p.x - n.x * etaisyys;
+  const vy = p.y - n.y * etaisyys;
+  const vz = p.z - n.z * etaisyys;
+  // Kameran eteenpäin on −n; syvyys on projektio sille.
+  const syvyys = -(vx * n.x + vy * n.y + vz * n.z);
+  if (!(syvyys > 1e-9)) return null;
+  const tanY = Math.tan((fov / 2) * RAD);
+  const tanX = tanY * kuvasuhde;
+  const oikea = vx * rx + vz * rz;
+  const ylos = vx * ux + vy * uy + vz * uz;
+  // Horisontti: pinnan normaalin ja kameran suunnan pistetulo ≥ 1/d.
+  const edessa = (p.x * n.x + p.y * n.y + p.z * n.z) >= 1 / etaisyys;
+  return {
+    sx: oikea / (syvyys * tanX),
+    sy: ylos / (syvyys * tanY),
+    edessa,
+    syvyys: syvyys * sade,
+  };
+}
+
+/**
+ * Onko laatta pallon NÄKYVÄLLÄ puolella? Näkyvä alue on kalotti, jonka
+ * reunalla pinnan normaalin ja kameran suunnan pistetulo on R/d =
+ * 1/(1 + korkeus). Testi on kalottien leikkaus: laatan keskipisteen
+ * kulmaetäisyys kameran alta saa olla enintään horisontti + laatan oma
+ * kulmasäde, joten osittainkin näkyvä laatta jää mukaan.
+ *
+ * Miksi tämä tarvitaan: näkyvä alue on lat/lon-LAATIKKO, ja yleiskuvassa
+ * laatikon kulmat ovat pallon takapuolella. Ilman testiä kerros loisi
+ * takapuolen laatat (kirjaston moottorilla niitä oli mitattuna 45–139)
+ * ja laattakatto pudottaisi tasoa turhaan — mitattu 6.9.2026: zoomissa
+ * taso KARKENI kesken sisäänzoomauksen (3 → 2), kun laatikko kasvoi
+ * nopeammin kuin taso tarkentui.
+ *
+ * @param {object} alue    laatan { lat0, lat1, lon0, lon1 }
+ * @param {object} pov     { lat, lng, altitude }
+ */
+export function laattakerroksenNakyvissa(alue, pov) {
+  if (!alue || !Number.isFinite(pov?.altitude)) return true;
+  const kk = kallistettuKehys(pov);
+  if (kk) {
+    // KALLISTETTU: horisontti todellisesta silmästä ja usvan raja P:stä.
+    const c0 = pallonPiste((alue.lat0 + alue.lat1) / 2, (alue.lon0 + alue.lon1) / 2, 1);
+    const sade0 = pisteidenKulma(c0, pallonPiste(alue.lat1, alue.lon1, 1));
+    const Cl = Math.hypot(kk.silma.x, kk.silma.y, kk.silma.z);
+    const cHat = { x: kk.silma.x / Cl, y: kk.silma.y / Cl, z: kk.silma.z / Cl };
+    return pisteidenKulma(c0, cHat) <= Math.acos(Math.min(1, 1 / Cl)) + sade0
+      && pisteidenKulma(c0, kk.n) <= kk.raja + sade0;
+  }
+  const n = pallonPiste(pov.lat, pov.lng, 1);
+  const latK = (alue.lat0 + alue.lat1) / 2;
+  const lonK = (alue.lon0 + alue.lon1) / 2;
+  const c = pallonPiste(latK, lonK, 1);
+  const nurkka = pallonPiste(alue.lat1, alue.lon1, 1);
+  const pistetulo = (a, b) => Math.max(-1, Math.min(1, a.x * b.x + a.y * b.y + a.z * b.z));
+  const sade = Math.acos(pistetulo(c, nurkka));
+  const horisontti = Math.acos(Math.max(-1, Math.min(1, 1 / (1 + Math.max(0, pov.altitude)))));
+  return Math.acos(pistetulo(c, n)) <= horisontti + sade;
+}
+
+/** Verkon silmien määrä laatan sivun asteista (LEPOKERROS_RUUDUKKO_AST). */
+export function laattakerroksenSilmat(asteet) {
+  return Math.max(LAATTAKERROS_SILMAT_MIN, Math.min(LAATTAKERROS_SILMAT_MAX,
+    Math.ceil(Math.abs(asteet) / LEPOKERROS_RUUDUKKO_AST)));
+}
+
+/**
+ * Yhden laatan "kartta": sama muoto kuin lepokerroksenLaatat, mutta
+ * kansX0/kansY0 tulevat laatan omasta pikselipaikasta. Kerros ei kokoa
+ * yhtä kangasta vaan piirtää laatan omaksi tekstuurikseen, joten UV
+ * (lepokerroksenUV) juoksee laatan sisällä 0…1 ja sauma katoaa: laatta
+ * asetetaan omalle pituuspiirilleen, ja pallo on jaksollinen.
+ */
+export function laatanKartta(taso, sarake, rivi, {
+  laatta = LAATTAKERROS_LAATTA, arkki = null, projektio = null, laudanY = null,
+} = {}) {
+  if (!taso || !(laatta > 0)) return null;
+  if (!(sarake >= 0 && rivi >= 0 && sarake < taso.sarakkeita && rivi < taso.riveja)) return null;
+  const w = Math.min(laatta, taso.leveys - sarake * laatta);
+  const h = Math.min(laatta, taso.korkeus - rivi * laatta);
+  if (!(w > 0 && h > 0)) return null;
+  return {
+    kansX0: sarake * laatta, kansY0: rivi * laatta, leveys: w, korkeus: h,
+    laatat: [{ sarake, rivi, x: 0, y: 0, w, h }],
+    ppu: taso.pikseliaPerYksikko, arkki, projektio, laudanY,
+  };
+}
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * ASTRONAUTIN LAASTARI: TASAINEN MERIVARI ON AUKKO, EI MERTA
+ * (Opus 19.9.2026, erä opus-local-laastari; Fablen päätös klo 18.10)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistajan laitekuvat (v1957): tummansinisiä suorakaiteita Kreetan
+ * eteläpuolella ja porrastettu rengas navan ympärillä. MITATTU:
+ * reliefipyramidin alinäytteistetyt tasot täyttävät polttamattoman
+ * merilapsen kohdan tasaisella MERIVARIlla (ämpärin z5/22/10: 24,7 %
+ * pikseleistä). Topografialinssissä laatasto on koko pinta ja väri on
+ * oikea. Astronautin kamerassa laastari piirtyy batymetrisen
+ * 4k-pohjan PÄÄLLE, jolloin tasainen alue on väärä: se peittää
+ * merenpohjan muodot. Laastarissa MERIVARI tehdään siksi
+ * läpinäkyväksi, ja pohja näkyy aukosta. Ks.
+ * docs/raportit/viesti-fable-webkit-napa-20260919.md.
+ */
+/** MERIVARI RGB:nä (js/reliefipyramidi.js MERIVARI = rgb(38, 78, 145)). */
+export const LAASTARIN_MERIVARI = [38, 78, 145];
+/** Kanavakohtainen toleranssi (WebP-pakkaus heiluttaa tasaista väriä). */
+export const LAASTARIN_MERIVARIN_TOLERANSSI = 6;
+/**
+ * Leveysraja astronautin laastarille: pyramidissa ei ole jääsekoitusta,
+ * joten Grönlanti ja napa-alueet olisivat laastarissa ruskeita ja
+ * jäättömiä 4k-pohjan jäisen pinnan päällä. Laastari rajataan siksi
+ * ±60°:een; sen pohjoispuolella näkyy 4k-pohja.
+ */
+export const LAASTARIN_LEVEYSRAJA = 60;
+
+/**
+ * Kirjoittaa alfakanavaan 0 niille pikseleille, jotka ovat tasaista
+ * MERIVARIa, ja 255 muille. Puhdas funktio (tests/laastari.test.mjs).
+ *
+ * @param {Uint8ClampedArray} data RGBA
+ * @returns {number} läpinäkyviksi merkittyjen pikselien määrä
+ */
+export function merkitseMerivariAukoksi(data, vari = LAASTARIN_MERIVARI, tol = LAASTARIN_MERIVARIN_TOLERANSSI, leveys = 0) {
+  let aukkoja = 0;
+  const lahella = (i, t) => Math.abs(data[i] - vari[0]) <= t
+    && Math.abs(data[i + 1] - vari[1]) <= t
+    && Math.abs(data[i + 2] - vari[2]) <= t;
+  for (let i = 0; i < data.length; i += 4) {
+    const aukko = lahella(i, tol);
+    data[i + 3] = aukko ? 0 : 255;
+    if (aukko) aukkoja += 1;
+  }
+  /*
+   * REUNA LAAJENEE KAHDELLA PIKSELILLÄ (mitattu 19.9.2026, Kreeta):
+   * polton alinäytteistys sekoitti tasaisen alueen reunapikseleihin
+   * MERIVARIa, ja pelkkä tarkka osuma jätti suorakaiteen ääriviivaksi
+   * tumman katkoviivan. Aukkoa laajennetaan niihin naapureihin, jotka
+   * ovat yhä lähellä MERIVARIa (LAASTARIN_REUNAN_TOLERANSSI); pohja
+   * näkyy niiden kohdalla, eikä batymetrian muu sävy täytä ehtoa.
+   */
+  if (leveys > 0) {
+    const korkeus = data.length / 4 / leveys;
+    for (let kierros = 0; kierros < 2; kierros += 1) {
+      const lisattavat = [];
+      for (let y = 0; y < korkeus; y += 1) {
+        for (let x = 0; x < leveys; x += 1) {
+          const i = (y * leveys + x) * 4;
+          if (data[i + 3] === 0 || !lahella(i, LAASTARIN_REUNAN_TOLERANSSI)) continue;
+          const naapuri = (x > 0 && data[i - 1] === 0)
+            || (x < leveys - 1 && data[i + 7] === 0)
+            || (y > 0 && data[i - leveys * 4 + 3] === 0)
+            || (y < korkeus - 1 && data[i + leveys * 4 + 3] === 0);
+          if (naapuri) lisattavat.push(i);
+        }
+      }
+      for (const i of lisattavat) { data[i + 3] = 0; aukkoja += 1; }
+    }
+  }
+  return aukkoja;
+}
+/** Reunan laajennuksen toleranssi (ks. REUNA LAAJENEE). */
+export const LAASTARIN_REUNAN_TOLERANSSI = 40;
+
+/*
+ * ── KOKO MERI ON AUKKO (Fablen erä G, 19.9.2026; Sonnet 1:n kierros 10,
+ *    kuvat 05/06: Kreetan etelä- ja Peloponnesoksen länsipuolella
+ *    tasaiset suorakaiteet ohuine reunoineen ja pikselöityä läiskää) ──
+ *
+ * MITATTU JUURISYY: MERIVARI (38, 78, 145) EI OLE VAIN POLTTAMATTOMAN
+ * LAATAN TÄYTE, vaan TÄSMÄLLEEN reliefipaletin −4 000 metrin merisävy
+ * (tools/reliefivarit.mjs MERI). Välimeren syvät altaat Kreetan
+ * eteläpuolella ovat 3–5 km syviä, joten ±6-toleranssi osui POLTETUN
+ * batymetrian pikseleihin: z6-laatoista 50–85 % meni aukoksi pilkkuina
+ * (mitattu 19.9.2026, raportti viesti-fable-kreikka-reliefi-20260919.md).
+ * Aukosta näkyy 4k-pohja, jonka sävy on eri kuin laastarin meren, ja
+ * laatan reuna piirtyi suorakaiteena.
+ *
+ * KORJAUS: laastari piirtää vain MAAN. Meri tulee kokonaan pallon
+ * omasta 4k-pohjasta, joten laastarin reunaa ei merellä ole lainkaan,
+ * eikä sävyeroa voi syntyä. Maa ja meri erotetaan värisävystä:
+ * reliefipaletin meri on sinistä (b > r · 1,2 + 4 ja b > g · 1,05),
+ * maa vihreää, ruskeaa tai valkoista (lumi, jää: b ≈ r ≈ g).
+ * Rinnevarjostus säilyttää suhteet, joten tummakin meri tunnistuu.
+ * Rantaviivan sekoittuneet pikselit laajennetaan aukkoon yhdellä
+ * kierroksella (b > r + 8 ja b ≥ g), jottei rannalle jää sininen hiussauma.
+ */
+/** Onko reliefin pikseli merta (ks. KOKO MERI ON AUKKO). */
+export function onReliefinMeri(r, g, b) {
+  return b > g + 2 && b > r * 1.2 + 4 && b > g * 1.05;
+}
+
+/**
+ * Laastarin meri aukoksi. Palauttaa aukkopikselien määrän.
+ *
+ * @param {Uint8ClampedArray} data RGBA
+ * @param {number} leveys kuvan leveys (reunan laajennukseen; 0 = ei)
+ */
+export function merkitseMeriAukoksi(data, leveys = 0) {
+  let aukkoja = 0;
+  for (let i = 0; i < data.length; i += 4) {
+    const meri = onReliefinMeri(data[i], data[i + 1], data[i + 2]);
+    data[i + 3] = meri ? 0 : 255;
+    if (meri) aukkoja += 1;
+  }
+  if (leveys > 0) {
+    const korkeus = data.length / 4 / leveys;
+    const lisattavat = [];
+    for (let y = 0; y < korkeus; y += 1) {
+      for (let x = 0; x < leveys; x += 1) {
+        const i = (y * leveys + x) * 4;
+        if (data[i + 3] === 0) continue;
+        if (!(data[i + 2] > data[i] + 8 && data[i + 2] >= data[i + 1])) continue;
+        const naapuri = (x > 0 && data[i - 1] === 0)
+          || (x < leveys - 1 && data[i + 7] === 0)
+          || (y > 0 && data[i - leveys * 4 + 3] === 0)
+          || (y < korkeus - 1 && data[i + leveys * 4 + 3] === 0);
+        if (naapuri) lisattavat.push(i);
+      }
+    }
+    for (const i of lisattavat) { data[i + 3] = 0; aukkoja += 1; }
+  }
+  return aukkoja;
+}
+
+/**
+ * ASTRONAUTIN VALOLIUKU LAATAN KANKAALLE — valon vastakaava.
+ *
+ * Perustelu ja kaava ovat js/reliefipyramidi.js:ssä (VALON VASTAKAAVA
+ * MYÖS LAASTARILLE): pallon suunnattu valo kertoo pinnan kirkkauden
+ * kertoimella 1 + 0,6 · sin(lat), ja linssin oma 4k-pohjatekstuuri on
+ * jaettu samalla kertoimella ennen käyttöä. Ilman tätä laastari oli
+ * 41,6°:ssa 1,40-kertaisesti kirkkaampi kuin pohja samassa kohdassa,
+ * ja reunalla oli kirkkausraja.
+ *
+ * `multiply` yhdistää alfat source-overina, joten läpinäkyvä pikseli
+ * täyttyisi harmaalla. Laatan kangas on tässä vaiheessa
+ * läpinäkymätön — meriväri on maalattu taustaksi ennen laattaa
+ * (`taustavari`, ks. AVOMERI EI OLE VIRHE) — joten alfan palautusta ei
+ * tarvita. Sekoitustila luetaan silti takaisin: `globalCompositeOperation`
+ * ei heitä tuntemattomasta arvosta vaan jättää edellisen voimaan.
+ *
+ * @param {object} ctx      2D-konteksti
+ * @param {number} leveys   kankaan leveys
+ * @param {number} korkeus  kankaan korkeus
+ * @param {Array}  pysakit  [{ t, arvo }] (pyramidinReliefinValoliuku)
+ * @returns {boolean} maalattiinko liuku
+ */
+export function maalaaAstronautinValoliuku(ctx, leveys, korkeus, pysakit) {
+  if (!ctx || !(leveys > 0) || !(korkeus > 0) || !pysakit?.length) return false;
+  let liuku = null;
+  try {
+    liuku = ctx.createLinearGradient(0, 0, 0, korkeus);
+    for (const p of pysakit) {
+      const v = Math.round(255 * Math.max(0, Math.min(1, p.arvo)));
+      liuku.addColorStop(Math.max(0, Math.min(1, p.t)), `rgb(${v},${v},${v})`);
+    }
+  } catch { return false; }
+  try {
+    ctx.globalCompositeOperation = 'multiply';
+    if (ctx.globalCompositeOperation !== 'multiply') {
+      ctx.globalCompositeOperation = 'source-over';
+      return false;
+    }
+    ctx.fillStyle = liuku;
+    ctx.fillRect(0, 0, leveys, korkeus);
+    ctx.globalCompositeOperation = 'source-over';
+    return true;
+  } catch {
+    try { ctx.globalCompositeOperation = 'source-over'; } catch { /* ei kontekstia */ }
+    return false;
+  }
+}
+
+/**
+ * Tasoituksen kerma-peite laatan kankaalle: suojatun suorakaiteen
+ * ULKOPUOLI maalataan käsin, sisäpuoli jätetään laatalle.
+ *
+ * MIKSI MAALAUS ON LAATAN ALLA EIKÄ PÄÄLLÄ. Kerma on peite, ei väri:
+ * tulos on `0,15 · pohja + 0,85 · kerma`. Jos maalaus tulisi laatan
+ * PÄÄLLE, laataston oma kerma jäisi alle ja peitto kertautuisi
+ * (1 − 0,15² = 0,977) juuri siinä marginaalissa, jossa laatassa on jo
+ * täysi kerma — eli uusi porras samaan paikkaan, josta vanha
+ * poistettiin. Siksi laatta piirretään VAIN suojan sisään ja maalaus
+ * vain sen ulkopuolelle: jokainen pikseli saa peiton täsmälleen kerran.
+ *
+ * REUNAT PYÖRISTETÄÄN KOKONAISIIN PIKSELEIHIN ja samat luvut annetaan
+ * sekä maalaukselle että laatan leikkaukselle. Murto-osapikseli jättäisi
+ * väliin raon, jossa pohjan seepia näkyisi peittämättä — yhden pikselin
+ * terävä viiva on sekin terävä viiva.
+ *
+ * @param {object} p.tasoitus  pyramidinTasoitus(): { kerma, peitto, suoja }
+ * @param {object} p.kuva      laataston kuva tai null (laattaa ei ole)
+ * @returns {boolean} maalattiinko kermaa
+ */
+/**
+ * Onko laatta KOKONAAN tasoituksen suojatun suorakaiteen ulkopuolella?
+ *
+ * VÄREILYN JUURISYY (mitattu 14.9.2026, iPad 1180 × 820 dpr 2, Ihmisen
+ * matka Etiopiassa, kuvapari docs/raportit/kuvat/linssilaatat-*.jpg).
+ * Tällaisessa laatassa EI OLE YHTÄÄN karttatietoa: `maalaaTasoitus`
+ * maalaa sen kokonaan kermaan (`fillRect(0, 0, W, H)`), koska laataston
+ * oma kuva piirretään vain suojan sisään. Kohdemaan laatasto kattaa
+ * silti koko tason, joten linssin kertomuskamera lensi Afrikassa
+ * seudulle, jossa jokainen värilaatta on TYHJÄ VAALEA ARKKI — ne
+ * haettiin, häivytettiin seepiapohjan päälle ja purettiin taas.
+ * Ruudulla se on juuri se, minkä omistaja näki: *"valilla kartan
+ * pienta vareilee meinaten pudottaa topografian"*.
+ *
+ * Luvut ovat samat kuin `maalaaTasoitus`:ssa, samalla pyöristyksellä,
+ * jottei kaksi laskentaa voi olla eri mieltä laatan reunalla.
+ *
+ * @returns {boolean} true, jos suojasta ei leikkaudu laatalle mitään
+ */
+export function tasoituksenUlkopuolella({
+  tasoitus, kartta, ppu, arkki,
+}) {
+  if (!tasoitus?.suoja || !arkki || !(ppu > 0)) return false;
+  if (!(kartta?.leveys > 0) || !(kartta.korkeus > 0)) return false;
+  const W = kartta.leveys;
+  const H = kartta.korkeus;
+  const s = tasoitus.suoja;
+  const raja = (a, b, c) => Math.max(a, Math.min(b, c));
+  const x0 = raja(0, W, Math.round((s.x - arkki.x) * ppu - kartta.kansX0));
+  const y0 = raja(0, H, Math.round((s.y - arkki.y) * ppu - kartta.kansY0));
+  const x1 = raja(x0, W, Math.round((s.x + s.w - arkki.x) * ppu - kartta.kansX0));
+  const y1 = raja(y0, H, Math.round((s.y + s.h - arkki.y) * ppu - kartta.kansY0));
+  return !(x1 > x0) || !(y1 > y0);
+}
+
+/**
+ * MAAILMANÄKYMÄN VÄRILAATTA: kuva vain kohdemaan renkaiden sisään,
+ * kermaa ei lainkaan (Raamattu: KARTTAUUDISTUKSEN PAATOKSET 23).
+ *
+ * Laatan kankaalle on tässä vaiheessa jo piirretty pohjalaatta, eli
+ * koko maailman topografia varjostuksineen. Värilaatan kuva leikataan
+ * kohdemaan renkaisiin (`tasoitus.renkaat`, js/laattapyramidi.js) ja
+ * piirretään niiden sisään sellaisenaan: kohdemaassa pikseli on sama
+ * kuin kerman kanssa, sen ulkopuolella jää näkyviin pohja, eikä laatan
+ * kankaaseen poltettu kerma (polttaVariLeikkuri) päädy ruudulle
+ * ollenkaan.
+ *
+ * KOKONAAN RENKAIDEN ULKOPUOLINEN LAATTA EI PIIRRÄ MITÄÄN eikä avaa
+ * leikkuria: se on valtaosa laatoista, ja jokainen niistä olisi muuten
+ * turha `clip` + `drawImage` koko kankaan yli.
+ *
+ * SAUMAN MONISTUSTA EI TEHDÄ: värilaatasto on aina kohdemaan laatikon
+ * alalla, eikä yhdenkään kohdemaan laatikko ylitä päivämääränrajaa.
+ *
+ * @returns {boolean} piirrettiinkö kuvaa
+ */
+export function maalaaMaailmanVari(ctx, {
+  tasoitus, kartta, ppu, arkki, kuva = null,
+}) {
+  if (!ctx || !kuva || !arkki || !(ppu > 0)) return false;
+  const renkaat = tasoitus?.renkaat;
+  if (!renkaat?.length) return false;
+  if (!(kartta?.leveys > 0) || !(kartta.korkeus > 0)) return false;
+  const W = kartta.leveys;
+  const H = kartta.korkeus;
+  const kx = (bx) => (bx - arkki.x) * ppu - kartta.kansX0;
+  const ky = (by) => (by - arkki.y) * ppu - kartta.kansY0;
+  let osui = false;
+  ctx.save();
+  ctx.beginPath();
+  for (const rengas of renkaat) {
+    if (!rengas || rengas.length < 3) continue;
+    let minX = Infinity;
+    let maxX = -Infinity;
+    let minY = Infinity;
+    let maxY = -Infinity;
+    for (const piste of rengas) {
+      const x = kx(piste[0]);
+      const y = ky(piste[1]);
+      if (x < minX) minX = x;
+      if (x > maxX) maxX = x;
+      if (y < minY) minY = y;
+      if (y > maxY) maxY = y;
+    }
+    if (maxX < 0 || minX > W || maxY < 0 || minY > H) continue;
+    osui = true;
+    for (let i = 0; i < rengas.length; i += 1) {
+      const x = kx(rengas[i][0]);
+      const y = ky(rengas[i][1]);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+  }
+  if (!osui) { ctx.restore(); return false; }
+  ctx.clip();
+  ctx.drawImage(kuva, 0, 0, W, H);
+  ctx.restore();
+  return true;
+}
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * MAAMASKI PIKSELISTÄ: MERET JÄÄVÄT ALKUPERÄISIKSI
+ * (omistaja 18.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 37 kohta 2)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Sanatarkasti: *"meret saisi olla silla Alkuperaisella
+ * korkeuserokartalla ja varilla … vain maiden kartoista otettaisiin
+ * korkeuserot pois nakyvista mutta ei merista seka kohdemaasta."*
+ *
+ * MASKI LUETAAN POHJALAATAN PIKSELISTÄ, EI AINEISTOSTA. Merimaski on
+ * generaattorin rakennusaikainen tieto (tools/generoi-laattapyramidi.mjs
+ * merenAlalla): pelillä ei ole sitä, eikä sitä saa hakea kesken
+ * panoroinnin — se olisi juuri se odotus, jonka kohta 1 kieltää.
+ * Pohjalaatta on kuitenkin jo kankaalla, ja SIINÄ maa ja meri ovat eri
+ * sävyjä samasta moottorista, joten maski on luettavissa pikselistä.
+ *
+ * EROTIN ON PUNAISEN JA SINISEN ERO (R − B), EI KIRKKAUS. Kirkkaus ei
+ * erota matalaa merta alangosta — molemmat ovat vaaleaa paperia.
+ * Sävykylläisyys erottaa: tools/fokuskartta/piirto.js ASTEIKKO on
+ * lämmin seepia (R − B on merenpinnan tasolla 48, 500 m:ssä 80,
+ * 1400 m:ssä 98), kun taas SYVYYS on *"viileää paperia"* (R − B
+ * ankkureissa 32 → 10) ja se sekoitetaan paperiin puolella peitolla
+ * (maailmapiirto.js MEREN_PEITTO 0,5), jolloin meren R − B on
+ * 38 (ranta) … 27 (syvin valtameri).
+ *
+ * MAASTON RAE EI HÄIRITSE. Maapikselin kohina (`pigmentti`, `lai`)
+ * lisätään maailmapiirto.js:ssä KAIKKIIN KOLMEEN KANAVAAN samana
+ * lukuna, joten se katoaa erotuksesta kokonaan. Varjostus taas
+ * KASVATTAA eroa (sininen vaimennetaan erikseen kertoimella
+ * 1 − varjo · 0,3), joten vuoren varjopuoli ei luiskahda mereksi.
+ *
+ * RAJA ON PEHMEÄ, EI KYNNYS. Kova kynnys piirtäisi rannikolle
+ * sahalaidan juuri siihen paikkaan, jossa webp:n väripakkaus on
+ * sumeimmillaan. Siksi kerman peitto on `smoothstep` välillä
+ * MERI_ERO … MAA_ERO: syvä meri jää koskematta, sisämaa saa täyden
+ * peiton, ja ranta liukuu näiden välillä laatan omalla sumeudella.
+ */
+const TASOITUS_MERI_ERO = 36;
+const TASOITUS_MAA_ERO = 52;
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * SUOJASUORAKAIDE EI OLE KERMAN RAJA (omistaja 18.9.2026 klo 15.05,
+ * Raamattu PAATOKSET 37 TARKENNUS kohdat 3–5)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Sanatarkasti: *"kartta nakyy vaarin ranskan ymparistossa"* —
+ * työpöytäkuvassa (1400 px, Ranskan saapuminen) kerma peitti vain
+ * suojasuorakaiteen sisäpuolen, laatikon vino kova reuna näkyi
+ * kartalla, ja laatikon sisällä myös Kanaali ja Välimeri olivat
+ * kerman vaaleita.
+ *
+ * JUURISYY OLI KERMAN KAKSI ERI LÄHDETTÄ. v1938:aan asti kerma
+ * koottiin kahdesta palasta, joiden raja oli suojasuorakaide:
+ *   • SISÄLLÄ kerman antoi VÄRILAATAN POLTETTU KUVA, johon leikkuri
+ *     (tools/fokuskartta/maailmapiirto.js polttaVariLeikkuri) on
+ *     maalannut kerman kaiken muun kuin kohdemaan päälle — MYÖS
+ *     MERTEN päälle, koska poltossa ei ole maamaskia. Siksi Kanaali
+ *     ja Välimeri olivat laatikon sisällä kermaa (TARKENNUS 4).
+ *   • ULKOPUOLELLA kerman maalasi peli itse maamaskilla. Pohjalaatan
+ *     R − B on kohdemaan naapurustossa (Belgian ja Saksan alangot,
+ *     webp-pakkauksen jäljiltä) lähellä alarajaa, joten `smoothstep`
+ *     antoi sinne vain murto-osan peitosta — ruudulla se on
+ *     peittämätön reliefi, ja laatikon reunassa portaan toinen puoli
+ *     (TARKENNUS 3).
+ * Kaksi eri lähdettä ei voi koskaan kohdata saumattomasti: toinen
+ * peittää meretkin, toinen ei peitä maatakaan.
+ *
+ * KORJAUS ON YKSI LÄHDE JA MAAN OMA ÄÄRIVIIVA RAJANA. Kerma maalataan
+ * maamaskilla KOKO LAATALLE, ja kohdemaan renkaiden sisus palautetaan
+ * maalausta edeltäneeseen tilaan (`maalaaKermaRenkaidenUlkopuolelle`).
+ * Silloin
+ *   a) kohdemaan ulkopuolinen maa saa saman peiton joka puolella
+ *      näkyvää karttaa — suorakaiteen reunaa ei ole olemassa,
+ *   b) meri ei saa kermaa missään, ei laatikon sisälläkään,
+ *   c) kohdemaan reliefi ja rajat ovat kirjaimellisesti koskematta:
+ *      niiden pikselit ovat samat kuin ennen maalausta.
+ * Värilaatan poltettu kuva jää silloin käyttämättä (sen sisus on
+ * kohdemaassa sama alkuperäinen reliefi kuin pohjalaatassa), eikä
+ * laataston ruudukon reuna pääse kartalle.
+ *
+ * MASKIN RAMPPI (36…52) JÄÄ ENNALLEEN. Se on mitattu kohdan 2 erässä,
+ * ja se on kapea tarkoituksella: kerman oma R − B on 36 ja rannikon
+ * matala meri 38, joten alarajaa ei saa laskea ilman että ranta alkaa
+ * vaaleta. Peittävyyden TASAISUUS ei riipu rampista, koska laatikon
+ * molemmilla puolilla on nyt sama maski.
+ */
+/*
+ * RENKAIDEN LAATIKOT LAUDAN YKSIKÖISSÄ, KERRAN (sulavuus E2, 21.9.2026).
+ * Laatikkotesti ja polku kävivät kohdemaan kaikki pisteet (tuhansia)
+ * läpi JOKA LAATALLE kahdesti — profiilissa 500 ms / 2,6 s
+ * valmistelusta (4×). Rengas ei muutu laattojen välillä; laatikko
+ * lasketaan laudan yksiköissä kerran ja muunnetaan laatan pikseleiksi
+ * neljällä kertolaskulla. Muisti on heikko viittaus renkaiden taulukkoon.
+ */
+const rengaslaatikot = new WeakMap();
+function renkaanLaatikko(rengas) {
+  let l = rengaslaatikot.get(rengas);
+  if (l) return l;
+  let minX = Infinity;
+  let maxX = -Infinity;
+  let minY = Infinity;
+  let maxY = -Infinity;
+  for (const piste of rengas) {
+    if (piste[0] < minX) minX = piste[0];
+    if (piste[0] > maxX) maxX = piste[0];
+    if (piste[1] < minY) minY = piste[1];
+    if (piste[1] > maxY) maxY = piste[1];
+  }
+  l = { minX, maxX, minY, maxY };
+  rengaslaatikot.set(rengas, l);
+  return l;
+}
+/** Osuuko rengas laatan alalle: laatikko laudan yksiköistä laatan pikseleiksi (kx, ky kasvavia). */
+function rengasOsuu(rengas, { W, H, kx, ky }) {
+  if (!rengas || rengas.length < 3) return false;
+  const l = renkaanLaatikko(rengas);
+  const x0 = kx(l.minX);
+  const x1 = kx(l.maxX);
+  const y0 = ky(l.minY);
+  const y1 = ky(l.maxY);
+  return !(Math.max(x0, x1) < 0 || Math.min(x0, x1) > W || Math.max(y0, y1) < 0 || Math.min(y0, y1) > H);
+}
+/** Osuuko yksikään kohdemaan rengas tämän laatan alalle (laatikkotesti)? */
+function renkaatOsuvat({
+  renkaat, W, H, kx, ky,
+}) {
+  for (const rengas of renkaat) {
+    if (rengasOsuu(rengas, { W, H, kx, ky })) return true;
+  }
+  return false;
+}
+
+/** Kohdemaan renkaiden polku laatan kankaan pikseleinä; false jos ei osu. */
+function renkaidenPolku(ctx, {
+  renkaat, W, H, kx, ky,
+}) {
+  let osui = false;
+  ctx.beginPath();
+  for (const rengas of renkaat) {
+    if (!rengasOsuu(rengas, { W, H, kx, ky })) continue;
+    osui = true;
+    for (let i = 0; i < rengas.length; i += 1) {
+      const x = kx(rengas[i][0]);
+      const y = ky(rengas[i][1]);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+  }
+  return osui;
+}
+
+/** Tilapäinen kangas kohdemaan peitemaskin rasterointiin. */
+function tilapainenKangas(w, h) {
+  const ikkuna = globalThis;
+  if (ikkuna.OffscreenCanvas) {
+    try { return new ikkuna.OffscreenCanvas(w, h); } catch { /* vara alla */ }
+  }
+  const kangas = ikkuna.document?.createElement?.('canvas');
+  if (!kangas) return null;
+  kangas.width = w;
+  kangas.height = h;
+  return kangas;
+}
+
+/**
+ * Kohdemaan renkaiden PEITEMASKI laatan kankaan kokoisena: renkaat
+ * rasteroidaan tyhjälle tilapäiskankaalle, ja alfa kertoo kuinka suuri
+ * osa pikselistä on kohdemaan sisällä (reunalla 0…255, antialiasoitu).
+ *
+ * @returns {Uint8ClampedArray|null} RGBA-puskuri, tai null jos ei saatu
+ */
+function renkaidenMaski({
+  renkaat, W, H, kx, ky, apuUlos = null,
+}) {
+  const kangas = tilapainenKangas(W, H);
+  let apu = null;
+  try { apu = kangas?.getContext?.('2d', { willReadFrequently: true }); } catch { apu = null; }
+  if (!apu || typeof apu.getImageData !== 'function') return null;
+  apu.clearRect(0, 0, W, H);
+  if (!renkaidenPolku(apu, {
+    renkaat, W, H, kx, ky,
+  })) return null;
+  apu.fillStyle = '#fff';
+  apu.fill();
+  if (apuUlos) apuUlos.apu = apu;
+  try { return apu.getImageData(0, 0, W, H).data; } catch { return null; }
+}
+
+/**
+ * Löytämisen sumun aukot maskikankaalle: käytyjen kaupunkien ellipsit
+ * puhkaistaan (destination-out) pehmeällä reunalla. Kanvas on sama,
+ * jolle renkaat on juuri rasteroitu (renkaidenMaski), joten sumun
+ * maski = renkaat miinus aukot. Palauttaa maskin alfan tai null.
+ */
+function sumunMaski(apu, {
+  aukot, W, H, kx, ky, ppu,
+}) {
+  apu.globalCompositeOperation = 'destination-out';
+  for (const a of aukot) {
+    const cx = kx(a.x);
+    const cy = ky(a.y);
+    const rx = a.rx * ppu;
+    const ry = a.ry * ppu;
+    if (!(rx > 0) || !(ry > 0)) continue;
+    if (cx + rx < 0 || cy + ry < 0 || cx - rx > W || cy - ry > H) continue;
+    // Pehmeä reuna: täysi aukko 70 %:iin säteestä, häipyy reunaan.
+    apu.save();
+    apu.translate(cx, cy);
+    apu.scale(1, ry / rx);
+    const g = apu.createRadialGradient(0, 0, rx * 0.7, 0, 0, rx);
+    g.addColorStop(0, 'rgba(0,0,0,1)');
+    g.addColorStop(1, 'rgba(0,0,0,0)');
+    apu.fillStyle = g;
+    apu.beginPath();
+    apu.arc(0, 0, rx, 0, Math.PI * 2);
+    apu.fill();
+    apu.restore();
+  }
+  apu.globalCompositeOperation = 'source-over';
+  try { return apu.getImageData(0, 0, W, H).data; } catch { return null; }
+}
+
+/**
+ * Kerma koko laatalle maamaskilla niin, että kohdemaan renkaiden sisus
+ * jää täsmälleen ennalleen.
+ *
+ * ══════════════════════════════════════════════════════════════════
+ * MIKSI MASKI EIKÄ TALTEENOTTO + PALAUTUS (hotfix 18.9.2026)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * v1942 teki tämän kolmessa vaiheessa: laatan kangas kopioitiin
+ * tilapäiselle kankaalle (`drawImage(ctx.canvas)`), kerma maalattiin
+ * koko laatalle, ja kohdemaan renkaiden sisus PALAUTETTIIN piirtämällä
+ * kopio takaisin `clip()`in läpi. Chromiumilla se oli oikein, mutta
+ * OMISTAJAN iPhonella (Safari/WebKit, 390 px) Ranskan saapumisnäkymä
+ * oli rikki: kohdemaan sisus oli merenvärinen ja kerma näkyi vain
+ * vaakaraitoina. Ketjussa on kolme WebKitille herkkää kohtaa —
+ * `ctx.canvas` kiihdytetyltä OffscreenCanvasilta, sen piirto toiselle
+ * kankaalle ja saman kankaan piirto takaisin monen alipolun clipin
+ * läpi — eikä yksikään niistä kerro epäonnistuessaan mitään: jokainen
+ * voi hiljaa jättää pikselit koskematta tai tyhjiksi, jolloin
+ * varapolku ei koskaan laukea.
+ *
+ * MASKISSA EI OLE YHTÄKÄÄN NIISTÄ VAIHEISTA. Renkaat rasteroidaan
+ * TYHJÄLLE tilapäiskankaalle (laatan omia pikseleitä ei kopioida
+ * minnekään), maski luetaan kerran, ja kerman pikselisilmukka kertoo
+ * peiton maskin alfalla: kohdemaan sisällä 0, ulkona täysi, reunalla
+ * pehmeä. Yksikään pikseli ei siis saa peittoa kahdesti eikä yhtäkään
+ * makseta takaisin — sisus on kirjaimellisesti koskematta, koska sitä
+ * ei kirjoiteta. Jos maskia ei saada (vanha konteksti, tainted
+ * kangas), palautetaan false ja kutsuja tekee saman varapolun kuin
+ * ennenkin.
+ *
+ * @returns {boolean} onnistuiko (false → kutsuja tekee varapolun)
+ */
+function maalaaKermaRenkaidenUlkopuolelle(ctx, {
+  W, H, renkaat, kx, ky, kerma, peitto, sumu = null, ppu = 0,
+}) {
+  /*
+   * OSUUKO KOHDEMAA TÄHÄN LAATTAAN LAINKAAN? Valtaosa näkyvistä
+   * laatoista on kokonaan sen ulkopuolella, eikä niille tarvita
+   * maskia — silloin kerma maalataan suoraan koko laatalle.
+   */
+  let maski = null;
+  let sumumaski = null;
+  if (renkaatOsuvat({
+    renkaat, W, H, kx, ky,
+  })) {
+    const apuUlos = { apu: null };
+    maski = renkaidenMaski({
+      renkaat, W, H, kx, ky, apuUlos,
+    });
+    if (!maski) return false;
+    /*
+     * LÖYTÄMISEN SUMU SAMASSA PASSISSA (sulavuus E2, 21.9.2026): sumu
+     * (maalaaSisasumu) luki laatan pikselit toiseen kertaan, rasteroi
+     * renkaat toiseen kertaan ja ajoi toisen 262 144 kierroksen
+     * silmukan — profiilissa 43 % laatan valmistelusta (4×). Sumun
+     * maski on renkaat miinus aukot samalla kankaalla, ja kerroin
+     * lasketaan pikselille kerran: kerma renkaiden ulkopuolella, sumu
+     * niiden sisällä. Jos sumun maskia ei saada, sumu jää tältä
+     * laatalta pois (sama kuin ennen, kun maalaaSisasumu palautti false).
+     */
+    if (sumu?.aukot && apuUlos.apu && ppu > 0) {
+      sumumaski = sumunMaski(apuUlos.apu, {
+        aukot: sumu.aukot, W, H, kx, ky, ppu,
+      });
+    }
+    /*
+     * LAATTA KOKONAAN KOHDEMAAN SISÄLLÄ (sulavuus E2, 21.9.2026): kun
+     * maski on täysi joka pikselissä, kerma ei koskisi yhteenkään
+     * pikseliin — mutta pikselipassi (getImageData, 262 144 kierrosta,
+     * putImageData) ajettiin silti. Juuri näin on lähes jokaisella
+     * z7–z8-laatalla, kun pelaaja on zoomannut kohdemaahansa, eli
+     * siellä missä tason vaihto on tiheintä. Maskin alfa luetaan
+     * kerran (yksi tavu neljästä); ensimmäinen vajaa pikseli keskeyttää.
+     */
+    if (!sumumaski) {
+      let taysi = true;
+      for (let i = 3; i < maski.length; i += 4) {
+        if (maski[i] !== 255) { taysi = false; break; }
+      }
+      if (taysi) return true;
+    }
+  }
+  return maalaaKermaMaamaskilla(ctx, {
+    W, H, x0: 0, y0: 0, x1: 0, y1: 0, kerma, peitto, maski,
+    sumumaski, sumuPeitto: sumumaski ? sumu.peitto : 0,
+  });
+}
+
+/**
+ * Kerma laatan kankaalle suojan ULKOPUOLELLE niin, että meri jää
+ * pohjan omaan syvyysväriin. Yksi pikselipassi laattaa kohti.
+ *
+ * `x1 > x0 && y1 > y0` rajaa suojan sisuksen maalauksen ulkopuolelle
+ * (varapolku); renkailla maalataan koko laatta (x0 = x1 = 0).
+ *
+ * `maski` (valinnainen) on kohdemaan renkaiden peitemaski samalla
+ * kankaalla: peitto kerrotaan sen ULKOPUOLISELLA osuudella, joten
+ * kohdemaan sisällä kerroin on 0 eikä pikseliin kosketa lainkaan.
+ *
+ * @returns {boolean} maalattiinko
+ */
+/*
+ * Kerman peitto maan ja meren erosta (R − B, −255…255) taulukkona:
+ * smoothstep välillä MERI_ERO…MAA_ERO kertaa peitto. Sama luku
+ * laskettiin ennen joka maapikselille erikseen (sulavuus E2).
+ */
+const peittotaulut = new Map();
+function kermanPeittotaulu(peitto) {
+  let taulu = peittotaulut.get(peitto);
+  if (taulu) return taulu;
+  taulu = new Float32Array(511);
+  const vali = TASOITUS_MAA_ERO - TASOITUS_MERI_ERO;
+  for (let ero = -255; ero <= 255; ero += 1) {
+    if (ero <= TASOITUS_MERI_ERO) continue;
+    let t = ero >= TASOITUS_MAA_ERO ? 1 : (ero - TASOITUS_MERI_ERO) / vali;
+    t = t * t * (3 - 2 * t);
+    taulu[ero + 255] = peitto * t;
+  }
+  peittotaulut.set(peitto, taulu);
+  return taulu;
+}
+
+function maalaaKermaMaamaskilla(ctx, {
+  W, H, x0, y0, x1, y1, kerma, peitto, maski = null, sumumaski = null, sumuPeitto = 0,
+}) {
+  if (typeof ctx.getImageData !== 'function' || typeof ctx.putImageData !== 'function') return false;
+  let data = null;
+  try { data = ctx.getImageData(0, 0, W, H); } catch { return false; }
+  const d = data.data;
+  const [kr, kg, kb] = kerma;
+  const suoja = x1 > x0 && y1 > y0;
+  const peittoEro = kermanPeittotaulu(peitto);
+  const sumuEro = sumumaski ? kermanPeittotaulu(sumuPeitto) : null;
+  for (let y = 0; y < H; y += 1) {
+    const rivilla = suoja && y >= y0 && y < y1;
+    for (let x = 0; x < W; x += 1) {
+      if (rivilla && x >= x0 && x < x1) { x = x1 - 1; continue; }
+      const i = (y * W + x) * 4;
+      const ero = d[i] - d[i + 2];
+      if (ero <= TASOITUS_MERI_ERO) continue;
+      const ulkona = maski ? 1 - maski[i + 3] / 255 : 1;
+      let a = ulkona > 0 ? peittoEro[ero + 255] * ulkona : 0;
+      if (sumuEro) {
+        const sisalla = sumumaski[i + 3] / 255;
+        if (sisalla > 0) a += sumuEro[ero + 255] * sisalla;
+      }
+      if (!(a > 0)) continue;
+      d[i] += (kr - d[i]) * a;
+      d[i + 1] += (kg - d[i + 1]) * a;
+      d[i + 2] += (kb - d[i + 2]) * a;
+    }
+  }
+  ctx.putImageData(data, 0, 0);
+  return true;
+}
+
+/*
+ * LÖYTÄMISEN SUMU — MAAN SISÄINEN SUMU (js/pallolauta/sumu.js,
+ * prototyyppi kehittäjälipun takana). Kohdemaan renkaiden SISÄLLÄ
+ * maalataan kevyt kerma (`tasoitus.sumu.peitto`, 0,35) kaikkialle paitsi
+ * käytyjen kaupunkien ympärille: jokainen aukko on ellipsi laudan
+ * yksiköissä (`aukot`: x, y, rx, ry), jonka reuna pehmenee
+ * säteittäisellä liukuvärillä. Maski rakennetaan tilapäiskankaalle:
+ * renkaat valkoisella, aukot destination-out-liukuvärillä; maskin alfa
+ * kertoo kerman peiton. Meri jää pohjan omaan väriin samalla maa/meri-
+ * erottelulla kuin hunnussa (TASOITUS_MERI_ERO).
+ */
+export function maalaaSisasumu(ctx, {
+  tasoitus, kartta, ppu, arkki,
+}) {
+  const sumu = tasoitus?.sumu;
+  if (!ctx || !sumu?.aukot || !tasoitus?.renkaat?.length || !arkki || !(ppu > 0)) return false;
+  if (!(kartta?.leveys > 0) || !(kartta.korkeus > 0)) return false;
+  const W = kartta.leveys;
+  const H = kartta.korkeus;
+  const kx = (bx) => (bx - arkki.x) * ppu - kartta.kansX0;
+  const ky = (by) => (by - arkki.y) * ppu - kartta.kansY0;
+  if (!renkaatOsuvat({
+    renkaat: tasoitus.renkaat, W, H, kx, ky,
+  })) return false;
+  const kangas = tilapainenKangas(W, H);
+  let apu = null;
+  try { apu = kangas?.getContext?.('2d', { willReadFrequently: true }); } catch { apu = null; }
+  if (!apu || typeof apu.getImageData !== 'function') return false;
+  apu.clearRect(0, 0, W, H);
+  if (!renkaidenPolku(apu, {
+    renkaat: tasoitus.renkaat, W, H, kx, ky,
+  })) return false;
+  apu.fillStyle = '#fff';
+  apu.fill();
+  apu.globalCompositeOperation = 'destination-out';
+  for (const a of sumu.aukot) {
+    const cx = kx(a.x);
+    const cy = ky(a.y);
+    const rx = a.rx * ppu;
+    const ry = a.ry * ppu;
+    if (!(rx > 0) || !(ry > 0)) continue;
+    if (cx + rx < 0 || cy + ry < 0 || cx - rx > W || cy - ry > H) continue;
+    // Pehmeä reuna: täysi aukko 70 %:iin säteestä, häipyy reunaan.
+    apu.save();
+    apu.translate(cx, cy);
+    apu.scale(1, ry / rx);
+    const g = apu.createRadialGradient(0, 0, rx * 0.7, 0, 0, rx);
+    g.addColorStop(0, 'rgba(0,0,0,1)');
+    g.addColorStop(1, 'rgba(0,0,0,0)');
+    apu.fillStyle = g;
+    apu.beginPath();
+    apu.arc(0, 0, rx, 0, Math.PI * 2);
+    apu.fill();
+    apu.restore();
+  }
+  let maski = null;
+  try { maski = apu.getImageData(0, 0, W, H).data; } catch { return false; }
+  const [r, g, b] = [1, 3, 5].map((i) => parseInt(tasoitus.kerma.slice(i, i + 2), 16));
+  let data = null;
+  try { data = ctx.getImageData(0, 0, W, H); } catch { return false; }
+  const d = data.data;
+  const vali = TASOITUS_MAA_ERO - TASOITUS_MERI_ERO;
+  for (let i = 0; i < d.length; i += 4) {
+    const sisalla = maski[i + 3] / 255;
+    if (!(sisalla > 0)) continue;
+    const ero = d[i] - d[i + 2];
+    if (ero <= TASOITUS_MERI_ERO) continue;
+    let t = ero >= TASOITUS_MAA_ERO ? 1 : (ero - TASOITUS_MERI_ERO) / vali;
+    t = t * t * (3 - 2 * t);
+    const a = sumu.peitto * t * sisalla;
+    d[i] += (r - d[i]) * a;
+    d[i + 1] += (g - d[i + 1]) * a;
+    d[i + 2] += (b - d[i + 2]) * a;
+  }
+  ctx.putImageData(data, 0, 0);
+  return true;
+}
+
+export function maalaaTasoitus(ctx, {
+  tasoitus, kartta, ppu, arkki, kuva = null, maamaski = false,
+}) {
+  if (!ctx || !tasoitus?.suoja || !arkki || !(ppu > 0)) return false;
+  if (!(kartta?.leveys > 0) || !(kartta.korkeus > 0)) return false;
+  const W = kartta.leveys;
+  const H = kartta.korkeus;
+  const s = tasoitus.suoja;
+  const raja = (a, b, c) => Math.max(a, Math.min(b, c));
+  const x0 = raja(0, W, Math.round((s.x - arkki.x) * ppu - kartta.kansX0));
+  const y0 = raja(0, H, Math.round((s.y - arkki.y) * ppu - kartta.kansY0));
+  const x1 = raja(x0, W, Math.round((s.x + s.w - arkki.x) * ppu - kartta.kansX0));
+  const y1 = raja(y0, H, Math.round((s.y + s.h - arkki.y) * ppu - kartta.kansY0));
+  const [r, g, b] = [1, 3, 5].map((i) => parseInt(tasoitus.kerma.slice(i, i + 2), 16));
+  let maskilla = false;
+  if (maamaski && tasoitus.renkaat?.length) {
+    /*
+     * KERMA KOKO LAATALLE, KOHDEMAA REIKÄNÄ (PAATOKSET 37 TARKENNUS).
+     * Värilaatan kuvaa ei piirretä lainkaan: sen sisus on kohdemaassa
+     * sama alkuperäinen reliefi, ja sen ulkopuolinen osa on juuri se
+     * maskiton kerma, joka peitti meret.
+     */
+    const kx = (bx) => (bx - arkki.x) * ppu - kartta.kansX0;
+    const ky = (by) => (by - arkki.y) * ppu - kartta.kansY0;
+    if (maalaaKermaRenkaidenUlkopuolelle(ctx, {
+      W,
+      H,
+      renkaat: tasoitus.renkaat,
+      kx,
+      ky,
+      kerma: [r, g, b],
+      peitto: tasoitus.peitto,
+      sumu: tasoitus.sumu ?? null,
+      ppu,
+    })) return tasoitus.sumu ? 'sumu' : true;
+    // Varapolku alla: pikselimaskia ei saatu (tainted canvas, vanha
+    // konteksti) — silloin kerma maalataan kuten ennen kohtaa 2,
+    // suojan ulkopuolelle ja meristä välittämättä. Se on porras, mutta
+    // peittämätön reliefi olisi pahempi.
+  }
+  else if (maamaski) {
+    maskilla = maalaaKermaMaamaskilla(ctx, {
+      W, H, x0, y0, x1, y1, kerma: [r, g, b], peitto: tasoitus.peitto,
+    });
+    if (maskilla && (!(x1 > x0) || !(y1 > y0))) return true;
+  }
+  if (!maskilla) {
+    ctx.fillStyle = `rgba(${r},${g},${b},${tasoitus.peitto})`;
+    if (!(x1 > x0) || !(y1 > y0)) { ctx.fillRect(0, 0, W, H); return true; }
+    if (y0 > 0) ctx.fillRect(0, 0, W, y0);
+    if (y1 < H) ctx.fillRect(0, y1, W, H - y1);
+    if (x0 > 0) ctx.fillRect(0, y0, x0, y1 - y0);
+    if (x1 < W) ctx.fillRect(x1, y0, W - x1, y1 - y0);
+  }
+  if (kuva) {
+    // Laatan kuva venytetään kankaalle (reunalaatta on vajaa), joten
+    // lähdesuorakaide on sama osuus kuvasta kuin kohde kankaasta.
+    const sx = (x0 / W) * kuva.width;
+    const sy = (y0 / H) * kuva.height;
+    const sw = ((x1 - x0) / W) * kuva.width;
+    const sh = ((y1 - y0) / H) * kuva.height;
+    if (sw > 0 && sh > 0) ctx.drawImage(kuva, sx, sy, sw, sh, x0, y0, x1 - x0, y1 - y0);
+  }
+  return true;
+}
+
+/**
+ * Peittotesti: peittävätkö tason z + 1 (tai `kohdeZ`) valmiit laatat
+ * laatan `{ z, sarake, rivi }` alueen kokonaan? Millerin pyramidissa
+ * tasot eivät sisäkkäisty siististi 2 × 2:na (sarakkeita on
+ * 675 · 2^z / 512, ei potenssia kahdesta), joten alue projisoidaan
+ * pikseleinä ja osuvat laatat luetellaan. Rajauksen ulkopuolelle jäävät
+ * sarakkeet ja rivit eivät ole peiton este — niitä ei ole olemassa.
+ *
+ * @param {object} laatta  { z, sarake, rivi }
+ * @param {Set|object} valmiit  avaimet 'z/sarake/rivi', jotka ovat valmiita
+ * @param {Array} tasot    pyramidin tasot
+ */
+export function laattakerroksenPeitto(laatta, valmiit, tasot, {
+  laattaKoko = LAATTAKERROS_LAATTA, kohdeZ = null,
+} = {}) {
+  const nyt = (tasot ?? []).find((t) => t && t.z === laatta?.z) ?? null;
+  const kohde = (tasot ?? []).find((t) => t && t.z === (kohdeZ ?? (laatta?.z ?? 0) + 1)) ?? null;
+  if (!nyt || !kohde || kohde.z <= nyt.z) return false;
+  const s = kohde.leveys / nyt.leveys;
+  const x0 = laatta.sarake * laattaKoko;
+  const x1 = Math.min(nyt.leveys, x0 + laattaKoko);
+  const y0 = laatta.rivi * laattaKoko;
+  const y1 = Math.min(nyt.korkeus, y0 + laattaKoko);
+  if (!(x1 > x0 && y1 > y0)) return false;
+  const on = valmiit instanceof Set ? (a) => valmiit.has(a) : (a) => Boolean(valmiit?.[a]);
+  const s0 = Math.floor((x0 * s) / laattaKoko);
+  const s1 = Math.ceil((x1 * s) / laattaKoko) - 1;
+  const r0 = Math.floor((y0 * s) / laattaKoko);
+  const r1 = Math.ceil((y1 * s) / laattaKoko) - 1;
+  for (let r = r0; r <= r1; r += 1) {
+    if (r < 0 || r >= kohde.riveja) continue;
+    for (let sar = s0; sar <= s1; sar += 1) {
+      if (sar < 0 || sar >= kohde.sarakkeita) continue;
+      if (!on(`${kohde.z}/${sar}/${r}`)) return false;
+    }
+  }
+  return true;
+}
+
+/**
+ * LRU: mitkä tietueet puretaan? Näkyviä ei pureta koskaan.
+ *
+ * PIDETTYJÄ (`pito`, ks. LAATTAKERROS_PITO_MS) ei pura MÄÄRÄkatto: juuri
+ * nähty laatta on se, johon heiluri palaa sadassa millisekunnissa, ja
+ * sen purku maksaisi uuden haun, dekoodauksen ja tekstuurin viennin.
+ * TAVUKATTO purkaa yhä myös pidetyt — muisti on kova raja (omistajan
+ * palaute v1649 ja suunnitelman luku 4.4).
+ *
+ * @param {Array} tietueet  [{ avain, nakyva, pito, kaytetty, tavut }]
+ * @returns {string[]} purettavien avaimet purkujärjestyksessä
+ */
+export function laattakerroksenLRU(tietueet, katto = LAATTAKERROS_LAATTAKATTO_MUISTI,
+  tavukatto = LAATTAKERROS_LAATTAKATTO_TAVUT) {
+  const kaikki = [...(tietueet ?? [])].filter(Boolean);
+  // Tukilaatat (ks. LAATTAKERROS_TUKI_ASKEL) puretaan viimeisinä: yksi
+  // niistä on pohjan ainoa peitto 16 näkyvän laatan alalla.
+  const ehdokkaat = kaikki.filter((t) => !t.nakyva)
+    .sort((a, b) => (a.tuki ? 1 : 0) - (b.tuki ? 1 : 0) || (a.kaytetty ?? 0) - (b.kaytetty ?? 0));
+  const vapaat = ehdokkaat.filter((t) => !t.pito);
+  const ulos = [];
+  const purettu = new Set();
+  const yli = Math.max(0, vapaat.length - Math.max(0, katto));
+  for (let i = 0; i < yli; i += 1) { ulos.push(vapaat[i].avain); purettu.add(vapaat[i].avain); }
+  let tavuja = kaikki.reduce((s, t) => s + (purettu.has(t.avain) ? 0 : (t.tavut ?? 0)), 0);
+  for (const t of ehdokkaat) {
+    if (tavuja <= tavukatto) break;
+    if (purettu.has(t.avain)) continue;
+    ulos.push(t.avain);
+    purettu.add(t.avain);
+    tavuja -= t.tavut ?? 0;
+  }
+  return ulos;
+}
+
+/**
+ * Laattakerroksen elinkaari yhdelle pallolle. Kutsutaan laatunoston
+ * asennuksesta (js/pallo.js kytkeLaatunosto), kun kerros on päällä.
+ *
+ * Kirjaston luokat, pallon laattaluettelo ja laudan tunnus TUODAAN
+ * SISÄÄN (kolmiulotteinen, pallonSarja, lauta, naparaja): ne asuvat
+ * js/pallo.js:ssä, joka tuo tämän moduulin — tuonti toisin päin tekisi
+ * kehän, jossa moduulin vakiot jäisivät alustamatta (ks. otsikko).
+ *
+ * @returns {{ paivita(pov, liikkeessa): boolean, mittarit(): object, pura(): void }}
+ */
+export function luoLaattakerros({
+  pallo, kotelo, ikkuna, renderer,
+  kolmiulotteinen, pallonSarja = () => null, lauta = 'maailmankartta', naparaja = 90,
+  /** Osoitelistan lähettäjä palvelutyöntekijälle (js/pallo.js lahetaLaattaesilataus) tai null. */
+  esilataa = null,
+  /*
+   * Levon pikselisuhde (js/pallo.js PIKSELISUHDE KERROKSEN KANSSA):
+   * tason valinta lasketaan tästä, ei renderöijän hetkellisestä
+   * suhteesta, jotta tasaisen tilan liikkeen alempi puskuri (2) ei vaihda
+   * laattatasoa eleen alussa ja lopussa. null = renderöijän suhde.
+   */
+  lepoSuhde = null,
+}) {
+  const doc = kotelo?.ownerDocument ?? ikkuna?.document ?? null;
+  const aika = () => ikkuna.performance?.now?.() ?? Date.now();
+  /*
+   * ESILATAUS LEVOSSA (js/laattaesilataus.js): seuraavan tason laatat
+   * näkymän ympäriltä ja kohdemaan z6–z8 palvelutyöntekijän koriin.
+   * Jono lähettää erän vain lepopäivityksessä; liike keskeyttää.
+   */
+  const esilataus = esilataa && esilatausPaalla(ikkuna) ? luoEsilatausjono({ laheta: esilataa, nyt: aika }) : null;
+  let viimeLiike = -Infinity;
+  let liikkeessaNyt = false;
+  let esilatausNakymaAvain = '';
+  /** Kohdemaa, jonka laatat odottavat luetteloa ({ iso, laatikko }) tai null. */
+  let esilatausMaaOdottaa = null;
+  const reduced = () => Boolean(ikkuna.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
+  /** Tekstuurimuistin kiintiö laitteelle (ks. LAATTAKERROS_TAVUKERROIN_OSOITIN). */
+  const kosketuslaite = () => Boolean(ikkuna.matchMedia?.('(hover: none)')?.matches);
+  const tavukatto = () => LAATTAKERROS_LAATTAKATTO_TAVUT * (kosketuslaite() ? 1 : LAATTAKERROS_TAVUKERROIN_OSOITIN);
+  // Piirtokoe: tuki- ja ennakkolaatat piiloon täydellä peitolla (ks. vahemmandc alempana).
+  const vahemmanDc = laattakerroksenKokeet().has('vahemmandc');
+  const mittarit = {
+    tila: 'ei', taso: null, laattoja: 0, valmiita: 0, hapyvia: 0, pyyntoja: 0, pyydettyja: 0,
+    syy: '', kaytetytTavut: 0, jonossa: 0, scenessa: 0, purettuja: 0, paivityksia: 0, piilotettuja: 0,
+    /*
+     * NÄKYVÄN ALUEEN PEITTO (heilurimittaus, savuke --vaihe=heiluri).
+     * `nakyvia` on näkyvän alueen laattojen määrä, `nakyviaScenessa`
+     * niistä ne, jotka ovat scenessä (peittävät pohjan Z5:n), ja
+     * `nakyviaTaysin` ne, joiden häive on jo perillä. Osuus
+     * nakyviaScenessa / nakyvia on se luku, jonka on pysyttävä 100 %:ssa,
+     * kun jo ladattua aluetta panoroidaan edestakaisin.
+     */
+    nakyvia: 0, nakyviaScenessa: 0, nakyviaTaysin: 0, ladattavia: 0, ennakkoja: 0, pidettyja: 0, tukia: 0, kattoRajoitti: false, zoomiennakkoja: 0,
+    /** Kertoja, jolloin jonossa oli laattoja mutta kehyksen aloituskatto tuli vastaan. */
+    tahditettuja: 0,
+    /** Onko katkaisija (js/media.js 'laatat') juuri nyt auki eli lataukset seis. */
+    katkaistu: false,
+    /*
+     * JUMISSA on tämän erän tarkin mitta: tietue, joka on tilassa
+     * "ladataan", jota ei ole aloitettu eikä ole jonossa — laatta,
+     * jonka kerros on unohtanut. Juuri niitä heilurin ääripäähän jäi
+     * ennen v1649:n korjausta (mitattu 4 kpl 35:stä), ja pohjan Z5
+     * näkyi niiden kohdalla joka käännöksellä. Mitta ei riipu verkon
+     * viiveestä eikä kehysajasta, joten se kelpaa vartioksi myös
+     * hitaassa mittausympäristössä.
+     */
+    jumissa: 0,
+    /** Haettiinko pyramidi.json tästä (savukkeet laskevat sen kerroksen pyynnöksi). */
+    luettelo: false,
+    /** Lepokerroksen kenttä; kerros ei kokoa yhtä kangasta (savukkeiden tuloste). */
+    kangas: null,
+    /*
+     * LAATAN VALMISTELU (kangas, drawImage, verkko, materiaali) on
+     * pääsäikeen työtä, joka osuu satunnaiseen kehykseen — se ei näy
+     * missään kehyskoukussa, joten se mitataan tässä
+     * (savuke-pallo-kehystahti lukee nämä).
+     */
+    valmisteluMs: 0, valmisteluja: 0, valmisteluMax: 0,
+    /* Astronautin laastarin valoliuku: montako laattaa sai vastakaavan. */
+    valoliukuja: 0,
+    /*
+     * VÄRITASO (erä 1b): `variMaa` on se maa, jonka värilaatasto on
+     * juuri nyt käytössä (null = ei väriä), ja `varillisia` niiden
+     * laattojen määrä, joihin värikerros haettiin. Nimet ovat erän 1
+     * omat (js/laattapyramidi.js mittarit), jotta savukkeet lukevat
+     * molemmilta laudoilta samaa kenttää.
+     */
+    variMaa: null, varillisia: 0, varimitatointeja: 0,
+    /*
+     * KERTOMUSLUKKO (ks. KERTOMUSLUKKO alla): naulattu taso (z) tai
+     * null. Savukkeen ainoa tapa nähdä, onko lukko päällä ja mihin
+     * tasoon se osui.
+     */
+    kertomustaso: null,
+    /*
+     * RELIEFIN AUKOT (PAATOKSET 41 kohta 3). `reliefi404` on niiden
+     * laattojen määrä, jotka luettelon mukaan pitäisi olla olemassa
+     * mutta joita ämpäri ei anna; `reliefiVaroja` niiden laattojen
+     * määrä, joille piirrettiin karkeamman tason laatta paikanpitäjäksi
+     * (avomeri tai aukko), ja `reliefiTasavareja` ne, joille ei ollut
+     * sitäkään ja jotka maalattiin yhdellä värillä. Kentät ovat
+     * kentällä luettavissa (window.matkakirja.ui.reliefi404).
+     */
+    reliefi404: 0, reliefiVaroja: 0, reliefiTasavareja: 0,
+    /** Astronautin laastarissa läpinäkyviksi tehdyt MERIVARI-pikselit (ks. LAASTARIN_MERIVARI). */
+    merivariAukkoja: 0,
+    /*
+     * Laattoja, jotka koottiin ILMAN kerman maalausta, koska suojasta ei
+     * leikkaudu niille mitään (ks. tasoituksenUlkopuolella). Savukkeen
+     * mitta siitä, että lukko todella jättää tyhjät arkit pois.
+     */
+    kermattomia: 0,
+  };
+  const pyydetyt = new Set();
+  /** avain 'z/sarake/rivi' → tietue. */
+  const laatat = new Map();
+  const jono = [];
+  const vientijono = [];
+  const kokeet = laattakerroksenKokeet();
+  /*
+   * KERMA SHADERISSA (js/laattakerma-shader.js, 22.9.2026): kerma, sumu ja
+   * kohdemaan reikä lasketaan laatan materiaalissa yhdestä maskista, ei
+   * laatan kankaalle. `?koe=kermakangas` palauttaa vanhan kangaspolun
+   * vertailuksi (kerma-reuna-savuke). Maski päivitetään `suorita`ssa,
+   * kun tasoituksen avain vaihtuu — laattoja ei silloin pureta.
+   */
+  const kermaShader = !kokeet.has('kermakangas');
+  const kermanJaetut = luoKermanJaetut();
+  let kermanMaskiAvain = '';
+  const eiHaiveVedossa = kokeet.has('eihaivevedossa');
+  const haiveMs = () => (reduced() || kokeet.has('eihaive') || (eiHaiveVedossa && liikkeessaNyt)
+    ? 0 : LAATTAKERROS_HAIVE_MS);
+  if (kokeet.size) mittarit.kokeet = [...kokeet];
+  let ladattavia = 0;
+  /** Tässä kehyksessä aloitetut lataukset ja kehyksen vaihtava rAF (tahditus). */
+  let aloituksia = 0;
+  let aloitusRaf = 0;
+  /** Katkaisijan jatkoajastin (kaynnista uudestaan, kun katko päättyy). */
+  let katkoAjastin = 0;
+  let vientiRaf = 0;
+  /** Edellisen liikkeen aikaisen viennin kehysaika (VEDON_VIENTIVALI_MS). */
+  let vedonVientiViimeksi = -Infinity;
+  const vientiKehys = { kehys: 0, perakkain: 0 };
+  let liikkeessaViimeksi = false;
+  let taso = null;
+  /** Edellinen taso oli laattakaton (ei tarpeen) pudottama: ei hystereesiä seuraavassa valinnassa. */
+  let kattoRajoitti = false;
+  let pyramidi;
+  let pyramidiHaussa = false;
+  let kerrokset = null;
+  /*
+   * VÄRITASON MAA EDELLISELTÄ PÄIVITYKSELTÄ. Laatan avain
+   * (`z/sarake/rivi`) ei sisällä maata eikä laatan osoitteen versiota,
+   * joten maanvaihto EI mitätöi laattoja itsestään: Ranskan värillinen
+   * laatta jäisi kankaalle, kun pelaaja siirtyy Belgiaan. Purku on
+   * olemassa (LRU ja `pura`), sen laukaisu ei — se on tässä.
+   */
+  let variMaaEdellinen = null;
+  /*
+   * RELIEFILINSSI AUKEAA KESKEN AJON — JA SE ON MAANVAIHDON LAJI.
+   *
+   * Mitattu 18.9.2026 (tools/savukkeet/mittaa-reliefipyramidi.mjs,
+   * Chromium 390 × 844, Alppien lähizoomi): linssin avauksesta kului
+   * 15,7 SEKUNTIA ensimmäiseen reliefilaattapyyntöön, ja sekin lähti
+   * vasta kun kamera liikkui. Syy: kerrostasot luetaan vasta laatan
+   * VALMISTELUSSA (`lataa`), ja näkyvän ikkunan laatat olivat jo
+   * tilassa `valmis` seepiakankaineen. Päivitys käyttää valmiin
+   * laatan uudelleen, joten kytkin ei näkynyt ruudulla lainkaan
+   * ennen panorointia.
+   *
+   * Reliefi on samalla tavalla KANKAASSA kuin väri: vanha laatta ei
+   * ole vanhentunut kuva vaan väärä kuva. Mitätöinti on siksi sama
+   * kuin maanvaihdossa alla — eikä se ole raskas, koska lippu
+   * kääntyy vain linssin avautuessa ja sulkeutuessa.
+   */
+  let reliefiEdellinen = null;
+  /*
+   * TASOITUKSEN SUOJA TARKENTUU KESKEN AJON. Maapolygonit ovat laiskat,
+   * ja ennen niitä suoja on koko laatikko (js/laattapyramidi.js
+   * pyramidinTasoitus). Kun tarkka suoja saapuu, jo kootut kankaat on
+   * maalattu väärällä rajalla — sama laji kuin maanvaihto, joten sama
+   * mitätöinti.
+   */
+  let tasoitusAvainEdellinen = '';
+  let sukupolvi = 0;
+  let viimePaivitys = -Infinity;
+  /**
+   * Kameran paikat viimeisen LAATTAKERROS_PITO_MS:n ajalta: liikevara on
+   * sekä seuraavan päivitysvälin ennuste (viimeisin ero × kerroin) että
+   * se laatikko, jonka kamera on jo pyyhkinyt (heilurin ääripäät).
+   */
+  const povHistoria = [];
+  let purettu = false;
+
+  /*
+   * Kirjaston luokat ja pallon ryhmä haetaan scenestä KERRAN. Haku
+   * traversoi koko näyttämön, ja kerros päivittyy kymmenen kertaa
+   * sekunnissa — muistiin pantuna se on yksi haku per pallo.
+   */
+  let kolmiMuisti = null;
+  const kolmi = () => {
+    if (kolmiMuisti) return kolmiMuisti;
+    const k = kolmiulotteinen?.(pallo) ?? null;
+    if (k?.laatatValmiit && k.Texture && k.BufferGeometry && k.BufferAttribute && k.juuri) kolmiMuisti = k;
+    return k;
+  };
+
+  const laudanY = (lat) => projisoiLaudalle(lauta, 0, lat)?.y ?? NaN;
+  const yLat = (y) => laudaltaAsteiksi(lauta, 0, y)?.lat ?? NaN;
+  const tasoZ = (z) => (pyramidi?.tasot ?? []).find((t) => t.z === z) ?? null;
+  const laattaKoko = () => pyramidi?.laatta ?? LAATTAKERROS_LAATTA;
+  const luovuta = (syy) => { mittarit.syy = syy; return false; };
+
+  /* ---------------- kuvat ---------------- */
+
+  /**
+   * Laatan kuva: createImageBitmap (dekoodaus pääsäikeen ulkopuolella).
+   * Vara on tavallinen Image + decode(), jos selain ei tunne bittikarttaa
+   * tai haku kaatuu. CORS on pakko: kangas menee WebGL-tekstuuriksi.
+   *
+   * BITTIKARTAN ASETUKSET (7.9.2026) ovat pääsäikeen työtä pois:
+   * `imageOrientation: 'none'` ohittaa EXIF-tarkistuksen (laatoissa ei
+   * ole EXIFiä) ja `colorSpaceConversion: 'none'` värimuunnoksen —
+   * laatat ovat jo sRGB:tä, ja sama väriavaruus luetaan kirjaston
+   * omasta laattamateriaalista alla.
+   *
+   * `premultiplyAlpha` JÄTETÄÄN SELAIMEN OLETUKSEKSI: bittikartta
+   * piirretään 2D-kankaalle, joka säilyttää pikselit esikerrottuina,
+   * joten 'none' pakottaisi muunnoksen juuri drawImagen kohdalla.
+   * Laatat ovat läpinäkymättömiä, joten valinta ei näy kuvassa —
+   * vain työn paikassa.
+   */
+  const BITTIKARTTA_ASETUKSET = { imageOrientation: 'none', colorSpaceConversion: 'none' };
+  const haeKuva = async (url, merkki = null) => {
+    pyydetyt.add(url);
+    mittarit.pyyntoja += 1;
+    if (ikkuna.createImageBitmap && ikkuna.fetch) {
+      try {
+        const vastaus = await ikkuna.fetch(url, { mode: 'cors', credentials: 'omit', signal: merkki ?? undefined });
+        // Katkaisija (js/media.js 'laatat'): 429 ja 5xx ovat ämpärin vikoja, 404 ei.
+        if (vastaus.status === 429 || vastaus.status >= 500) peiliPetti('laatat');
+        if (!vastaus.ok) return null;
+        const blob = await vastaus.blob();
+        try {
+          return await ikkuna.createImageBitmap(blob, BITTIKARTTA_ASETUKSET);
+        } catch (syy) {
+          // Katkaistu haku ei mene varapolulle (ks. alla); vanha selain,
+          // joka ei tunne asetuksia, saa saman kuvan ilman niitä.
+          if (merkki?.aborted) return null;
+          void syy;
+        }
+        return await ikkuna.createImageBitmap(blob);
+      } catch {
+        // Verkkovirhe (ei keskeytys) laskee katkaisijaa; vara alla.
+        if (!merkki?.aborted) peiliPetti('laatat');
+      }
+    }
+    // Katkaistu lataus (laatta purettiin kesken haun) ei mene varapolulle:
+    // se ottaisi latauspaikan takaisin siltä laatalta, jota katsotaan.
+    if (merkki?.aborted) return null;
+    // Varapolku on OMA verkkopyyntönsä (haku kaatui): savukkeiden vartio
+    // vähentää kerroksen pyynnöt tasokartan pyynnöistä, joten molemmat
+    // lasketaan.
+    mittarit.pyyntoja += 1;
+    return new Promise((ok) => {
+      const kuva = new ikkuna.Image();
+      kuva.crossOrigin = 'anonymous';
+      kuva.decoding = 'async';
+      kuva.fetchPriority = 'high';
+      kuva.onload = () => (kuva.decode ? kuva.decode().then(() => ok(kuva), () => ok(kuva)) : ok(kuva));
+      kuva.onerror = () => ok(null);
+      kuva.src = url;
+    });
+  };
+
+  /*
+   * VARALAATTOJEN PIKKUVÄLIMUISTI.
+   *
+   * Yksi karkea laatta on paikanpitäjä 4^k:lle tarkalle laatalle —
+   * näkyvässä ikkunassa kymmenille — joten ilman välimuistia sama kuva
+   * purettaisiin kymmenen kertaa peräkkäin. Välimuisti on tarkoituksella
+   * PIENI: bittikartta on 512 × 512 × 4 = 1 Mt keskusmuistia, ja
+   * puhelimessa se on oikea raha. Kuudes työntää vanhimman ulos ja
+   * sulkee sen; kerroksen purku sulkee loput.
+   */
+  const VARAKUVIA = 6;
+  const varakuvat = new Map();
+  const varalaatanKuva = async (lahde, merkki) => {
+    const taso = pyramidinReliefinTaso?.(lahde.z) ?? null;
+    if (!taso) return null;
+    const url = pyramidinLaattaUrl(taso, lahde.sarake, lahde.rivi);
+    if (varakuvat.has(url)) {
+      const osuma = varakuvat.get(url);
+      // LRU: tuoreimmaksi.
+      varakuvat.delete(url);
+      varakuvat.set(url, osuma);
+      return osuma;
+    }
+    const lupaus = haeKuva(url, merkki);
+    varakuvat.set(url, lupaus);
+    while (varakuvat.size > VARAKUVIA) {
+      const vanhin = varakuvat.keys().next().value;
+      const kuva = varakuvat.get(vanhin);
+      varakuvat.delete(vanhin);
+      Promise.resolve(kuva).then((k) => k?.close?.(), () => {});
+    }
+    return lupaus;
+  };
+  const sulkeVarakuvat = () => {
+    for (const kuva of varakuvat.values()) Promise.resolve(kuva).then((k) => k?.close?.(), () => {});
+    varakuvat.clear();
+  };
+
+  const luoKangas = (w, h) => {
+    if (ikkuna.OffscreenCanvas) {
+      try { return new ikkuna.OffscreenCanvas(w, h); } catch { /* vara alla */ }
+    }
+    const kangas = doc?.createElement?.('canvas');
+    if (!kangas) return null;
+    kangas.width = w;
+    kangas.height = h;
+    return kangas;
+  };
+
+  /* ---------------- häive ---------------- */
+
+  /*
+   * YKSI HÄIVYTYSJONO, EI rAF-KETJUA PER MATERIAALI (sulavuuskatsaus
+   * 22.9.2026 kohta 12). Tason vaihdossa kymmenet laatat häipyivät
+   * yhtä aikaa, kukin omassa requestAnimationFrame-ketjussaan: kymmeniä
+   * takaisinkutsuja kehystä kohti ja kymmeniä lepopiirron ilmoituksia.
+   * Nyt häiveet ovat yhdessä taulussa (materiaali → tietue), ja yksi
+   * rAF-askel etenee ne kaikki: yksi kutsu, yksi ilmoitus kehystä kohti.
+   * `materiaali.__haive` on tietue (peruutus = poisto taulusta), kuten
+   * ennen askel-funktio.
+   */
+  const haiveet = new Map();
+  let haiveRaf = 0;
+  const haiveAskel = () => {
+    haiveRaf = 0;
+    if (!haiveet.size) return;
+    const nyt = aika();
+    for (const [materiaali, h] of haiveet) {
+      if (materiaali.__haive !== h) { haiveet.delete(materiaali); continue; }
+      const t = Math.min(1, (nyt - h.t0) / h.kesto);
+      const e = 1 - (1 - t) ** 3;
+      materiaali.opacity = h.alku + (h.kohde - h.alku) * e;
+      if (t < 1) continue;
+      haiveet.delete(materiaali);
+      materiaali.__haive = null;
+      h.paata();
+    }
+    pallo.__piirto?.tarvitaan(); // lepopiirto: häiveen askel näkyviin (kerran kaikille)
+    if (haiveet.size) haiveRaf = ikkuna.requestAnimationFrame(haiveAskel);
+  };
+  /** Kaikki käynnissä olevat häiveet loppuun heti (koe eihaivevedossa, liikkeen alku). */
+  const paataHaiveet = () => {
+    if (!haiveet.size) return 0;
+    const kesken = [...haiveet.entries()];
+    haiveet.clear();
+    for (const [materiaali, h] of kesken) {
+      if (materiaali.__haive !== h) continue;
+      materiaali.__haive = null;
+      h.paata();
+    }
+    mittarit.haiveitaKatkaistu = (mittarit.haiveitaKatkaistu ?? 0) + kesken.length;
+    pallo.__piirto?.tarvitaan();
+    return kesken.length;
+  };
+  const haivyta = (materiaali, kohde, kesto, valmis = null) => {
+    const alku = materiaali.opacity;
+    materiaali.__kohde = kohde;
+    // Valmis laatta on läpinäkymätön (nopeampi ja kirjoittaa syvyyden);
+    // ulos-häive tarvitsee läpinäkyvyyden takaisin, muuten opacity ei
+    // vaikuta mihinkään.
+    if (kohde < 1 && !materiaali.transparent) { materiaali.transparent = true; materiaali.needsUpdate = true; }
+    const paata = () => {
+      materiaali.opacity = kohde;
+      if (kohde >= 1 && materiaali.transparent) { materiaali.transparent = false; materiaali.needsUpdate = true; }
+      valmis?.();
+    };
+    if (!(kesto > 0) || alku === kohde) { haiveet.delete(materiaali); materiaali.__haive = null; paata(); pallo.__piirto?.tarvitaan(); return; }
+    const h = { alku, kohde, kesto, t0: aika(), paata };
+    materiaali.__haive = h;
+    haiveet.set(materiaali, h);
+    if (!haiveRaf) haiveRaf = ikkuna.requestAnimationFrame(haiveAskel);
+  };
+
+  /* ---------------- tietueen purku ---------------- */
+
+  /*
+   * PEITON ALTA POIS SCENESTÄ, EI MUISTISTA (sulavuus E3, 21.9.2026).
+   * Hienomman tason kokonaan peittämä laatta purettiin ennen heti
+   * (`poista`), ja loitonnus haki saman laatan uudestaan — mitattu
+   * työpöydän zoomissa z6 → z7 → z6: 295 purkua ja koko z6-sarja
+   * uudestaan verkosta. Nyt laatta otetaan vain pois scenestä; tietue
+   * jää valmiina muistiin, LRU purkaa sen tavukaton ja pidon mukaan, ja
+   * loitonnus lisää sen sceneen heti (`lisaaSceneen` näkyvien
+   * silmukassa) ilman hakua ja valmistelua.
+   */
+  const piilota = (t) => {
+    if (!t?.scenessa) return;
+    if (t.materiaali) {
+      t.materiaali.__haive = null;
+      t.materiaali.__kohde = 0;
+      t.materiaali.opacity = 0;
+      if (!t.materiaali.transparent) { t.materiaali.transparent = true; t.materiaali.needsUpdate = true; }
+    }
+    t.verkko?.parent?.remove(t.verkko);
+    t.scenessa = false;
+    t.haipyy = false;
+  };
+
+  const poista = (t) => {
+    if (!t) return;
+    // Kesken oleva haku katkaistaan: purettu laatta ei saa pitää
+    // latauspaikkaa (LAATTAKERROS_RINNAKKAIN) sen laatan tieltä, jota
+    // juuri katsotaan.
+    try { t.katkaisin?.abort?.(); } catch { /* ei väliä */ }
+    t.katkaisin = null;
+    // Valmistelua odottava laatta: kuvat kiinni, jonon rivi jää tyhjäksi.
+    if (t.valmistelu) { t.valmistelu = null; t.suljeKuvat?.(); t.suljeKuvat = null; }
+    if (t.materiaali) t.materiaali.__haive = null;
+    if (t.verkko) {
+      t.verkko.parent?.remove(t.verkko);
+      t.verkko.geometry?.dispose?.();
+    }
+    t.tekstuuri?.dispose?.();
+    t.materiaali?.dispose?.();
+    t.verkko = null;
+    t.materiaali = null;
+    t.tekstuuri = null;
+    t.scenessa = false;
+    laatat.delete(t.avain);
+    mittarit.purettuja += 1;
+  };
+
+  /* ---------------- laatan luonti ---------------- */
+
+  /*
+   * Laatan lat/lon-suorakaide sen omista pikselirajoista. Rivin
+   * leveysasteet muistetaan: Millerin käänteismuunnos (laudaltaAsteiksi)
+   * ajetaan päivityksessä sadoille laattaehdokkaille, ja rivejä on
+   * kourallinen.
+   */
+  const rivimuisti = new Map();
+  /*
+   * ALUEMUISTI (7.9.2026): laatan lat/lon-suorakaide ei muutu koskaan,
+   * mutta `laatanAlue` ajettiin joka päivityksellä jokaiselle
+   * ehdokkaalle KAHDESTI (näkyvien suodatus ja ennakon suodatus) — ja
+   * jokainen kutsu varasi uuden olion. Sadan ehdokkaan näkymässä se on
+   * 200 oliota 100 ms:n välein. Muisti on rajattu: kun se paisuu yli
+   * katon, se tyhjennetään kokonaan (laatat ovat halpoja laskea
+   * uudestaan, muistivuoto ei ole).
+   */
+  const aluemuisti = new Map();
+  const ALUEMUISTIN_KATTO = 4096;
+  /*
+   * KARTTA-ALA KERRAN. Pyramidi haetaan kerran, joten arkin karttaraja
+   * (pyramidinKarttaAla) on vakio — ja sitä tarvitsee sekä laattojen
+   * valinta (suorita) että jokaisen laatan verkko (laatanPalloAlue).
+   */
+  let karttaAlaMuisti = null;
+  const karttaAla = () => {
+    if (!karttaAlaMuisti && pyramidi) {
+      karttaAlaMuisti = pyramidinKarttaAla({ pyramidi, yLat, naparaja });
+    }
+    const ala = karttaAlaMuisti ?? { latMin: -naparaja, latMax: naparaja };
+    if (!pyramidinReliefiAstronautilla()) return ala;
+    // Astronautin laastari ±LAASTARIN_LEVEYSRAJA (ks. yllä).
+    return {
+      ...ala,
+      latMin: Math.max(ala.latMin, -LAASTARIN_LEVEYSRAJA),
+      latMax: Math.min(ala.latMax, LAASTARIN_LEVEYSRAJA),
+    };
+  };
+  const laatanAlue = (tasoOlio, sarake, rivi) => {
+    const muistiavain = `${pyramidinReliefiAstronautilla() ? 'a' : 'p'}/${tasoOlio.z}/${sarake}/${rivi}`;
+    const muistissa = aluemuisti.get(muistiavain);
+    if (muistissa) return muistissa;
+    const laskettu = laskeLaatanAlue(tasoOlio, sarake, rivi);
+    if (aluemuisti.size >= ALUEMUISTIN_KATTO) aluemuisti.clear();
+    aluemuisti.set(muistiavain, laskettu);
+    return laskettu;
+  };
+  const laskeLaatanAlue = (tasoOlio, sarake, rivi) => {
+    const { arkki, projektio } = pyramidi;
+    const koko = laattaKoko();
+    const ppu = tasoOlio.pikseliaPerYksikko;
+    const lonPx = (px) => ((px / ppu + arkki.x) / projektio.leveys) * 360 + projektio.lon0;
+    const latPx = (py) => {
+      const avain = `${tasoOlio.z}/${py}`;
+      let lat = rivimuisti.get(avain);
+      if (lat === undefined) { lat = yLat(py / ppu + arkki.y); rivimuisti.set(avain, lat); }
+      return lat;
+    };
+    // Arkin marginaalit (kartussi, kehys, painajanrivi) pois: ks.
+    // laatanPalloAlue.
+    return laatanPalloAlue({
+      taso: tasoOlio, sarake, rivi, laatta: koko, lonPx, latPx, karttaAla: karttaAla(),
+    });
+  };
+
+  /** Kohdemaan z6–z8-laatat esilatausjonon perään, kun luettelo on; palauttaa jonoon lisättyjen määrän. */
+  const annaEsilatausMaa = () => {
+    if (!esilataus || !pyramidi || !esilatausMaaOdottaa) return 0;
+    const { iso, laatikko } = esilatausMaaOdottaa;
+    esilatausMaaOdottaa = null;
+    const osoitteet = [];
+    for (const z of ESILATAUS_MAATASOT) {
+      const taso = tasoZ(z);
+      if (!taso) continue;
+      const kartta = lepokerroksenLaatat({
+        taso, laatta: laattaKoko(), arkki: pyramidi.arkki, projektio: pyramidi.projektio, alue: laatikko, laudanY,
+      });
+      osoitteet.push(...laattojenOsoitteet({
+        laatat: kartta?.laatat ?? [], kerrostasot: kaytossaKerrostasot(z),
+        olemassa: pyramidinLaattaOlemassa, osoite: pyramidinLaattaUrl,
+      }));
+    }
+    return esilataus.maa(iso, osoitteet);
+  };
+  /** Laatan kerrostasot nykyisillä kytkimillä (pohja, viivat, ranta, nimiöt, nostot, väri, reliefi). */
+  const kaytossaKerrostasot = (z) => (pyramidinKerrostasot(z) ?? [])
+    .filter((k) => {
+      if (k.nosto) return kerrokset.nosto;
+      if (k.viiva) return kerrokset.viiva;
+      if (k.joki) return kerrokset.joki;
+      if (k.nimio) return kerrokset.nimio;
+      if (k.ranta) return kerrokset.ranta;
+      if (k.vari) return kerrokset.vari;
+      if (k.reliefi) return kerrokset.reliefi;
+      // Pohja: reliefilinssin ajan `kerrokset.pohja` on epätosi.
+      return kerrokset.pohja !== false;
+    });
+
+  const lataa = async (t) => {
+    const tasoOlio = tasoZ(t.z);
+    const luokat = kolmi();
+    if (!tasoOlio || !luokat?.laatatValmiit || !luokat.Texture || !luokat.BufferGeometry || !luokat.BufferAttribute) {
+      t.tila = 'virhe';
+      return;
+    }
+    const kartta = laatanKartta(tasoOlio, t.sarake, t.rivi, {
+      laatta: laattaKoko(), arkki: pyramidi.arkki, projektio: pyramidi.projektio, laudanY,
+    });
+    if (!kartta) { t.tila = 'virhe'; return; }
+    /*
+     * VÄRITASOLLA ON OMA PORTTI (`kerrokset.vari`). Ilman sitä väri
+     * menisi suodattimen `: true`-haaraan — samaan, jossa pohja on —
+     * ja kohdemaan laatat piirtyisivät myös silloin, kun pelaaja on
+     * naapurissa tai kun laatastoa ei ole ajettu tälle maalle.
+     */
+    const kerrostasot = kaytossaKerrostasot(t.z);
+    if (!kerrostasot.length) { t.tila = 'virhe'; return; }
+    const katkaisin = ikkuna.AbortController ? new ikkuna.AbortController() : null;
+    t.katkaisin = katkaisin;
+    /*
+     * LINSSIKETJUN VAIHEET (js/reliefipyramidi.js). Kolme merkkiä
+     * kertovat, kuinka paljon avauksen ajasta on VERKKOA ja kuinka
+     * paljon pääsäikeen työtä — ilman niitä optimointi olisi arvausta.
+     * `merkitseLinssiketju` ottaa vain ensimmäisen kutsun vaihetta
+     * kohti, joten kymmenien laattojen silmukka ei kasvata lokia.
+     */
+    if (kerrokset.reliefi) pyramidinLinssiketju('laatta-haku');
+    const kuvat = await Promise.all(kerrostasot.map((k) => (pyramidinLaattaOlemassa(k, t.sarake, t.rivi)
+      ? haeKuva(pyramidinLaattaUrl(k, t.sarake, t.rivi), katkaisin?.signal ?? null) : null)));
+    if (kerrokset.reliefi) pyramidinLinssiketju('laatta-kuvat');
+    // Väritaso mittariin vasta haun jälkeen: harvasta laatastosta
+    // puuttuva laatta ei ole värillinen laatta.
+    t.varillinen = kerrostasot.some((k, i) => k.vari && kuvat[i]);
+    t.katkaisin = null;
+    if (purettu || laatat.get(t.avain) !== t) { for (const k of kuvat) k?.close?.(); return; }
+    /*
+     * AVOMERI EI OLE VIRHE, KUN POHJAA EI OLE ALLA.
+     *
+     * Omistajan lisäys 18.9.2026 (Raamattu LISAYS 16 kohta 49):
+     * reliefilinssin alle EI ladota seepiapohjaa. Reliefilaatasto on
+     * HARVA — avomerestä ei polteta laattaa lainkaan (6 228 laattaa
+     * 6 631:stä z7:llä on merta) — joten ilman tätä jokainen
+     * merilaatta olisi `virhe` ja meri jäisi reikinä. Tasolla on
+     * `taustavari`, ja se maalataan kankaalle: sama väri, jonka
+     * polttotyökalu antaisi merelle (tools/tee-reliefipyramidi.mjs
+     * MERIVARI), joten saumaa laatan ja aukon välillä ei näy.
+     */
+    /*
+     * PUUTTUVAN RELIEFILAATAN PAIKANPITÄJÄ (PAATOKSET 41 kohdat 1–3).
+     *
+     * Tasainen MERIVARI oli väärä vastaus kahdesti: batymetrisen meren
+     * päällä se näkyi tummansinisenä suorakaiteena (Musta meri,
+     * Välimeri) ja maa-aukon päällä se ei ollut maata lainkaan.
+     * Tilalle haetaan KARKEAMMAN TASON reliefilaatta ja siitä tämän
+     * laatan oma neljännes (js/reliefipyramidi.js reliefinVaraLahde) —
+     * sama aineisto, sama asteikko, sama varjostus kuin naapurilla,
+     * joten sauman kahta puolta on sama väri. Tasainen väri jää vain
+     * siihen, mihin karkeaakaan laattaa ei ole: Etelämantereelle
+     * (jään sävy) ja aivan pyramidin ulkopuolelle (avomeren sävy).
+     */
+    const reliefiKohta = kerrostasot.findIndex((k) => k.reliefi);
+    let vara = null;
+    let varaKartta = null;
+    if (reliefiKohta >= 0 && !kuvat[reliefiKohta]) {
+      if (pyramidinLaattaOlemassa(kerrostasot[reliefiKohta], t.sarake, t.rivi)) mittarit.reliefi404 += 1;
+      const ylaLat = yLat(pyramidi.arkki.y + kartta.kansY0 / tasoOlio.pikseliaPerYksikko);
+      if (!(Number.isFinite(ylaLat) && ylaLat <= JAARAJA_LAT)) {
+        varaKartta = reliefinVaraLahde(t.z, t.sarake, t.rivi, laattaKoko());
+        if (varaKartta) {
+          vara = await varalaatanKuva(varaKartta, katkaisin?.signal ?? null);
+          if (purettu || laatat.get(t.avain) !== t) { for (const k of kuvat) k?.close?.(); return; }
+        }
+      }
+      if (vara) mittarit.reliefiVaroja += 1; else mittarit.reliefiTasavareja += 1;
+      t.reliefiVara = vara ? varaKartta.z : -1;
+    }
+    const tausta = (() => {
+      const k = kerrostasot.find((x) => x.taustavari);
+      if (!k) return null;
+      if (!k.reliefi) return k.taustavari;
+      const ylaLat = yLat(pyramidi.arkki.y + kartta.kansY0 / tasoOlio.pikseliaPerYksikko);
+      return reliefinTaustavari(ylaLat);
+    })();
+    if (!kuvat.some(Boolean) && !tausta && !vara) { t.tila = 'virhe'; return; }
+    /*
+     * KANGAS ON MITATUSTI NOPEAMPI TEKSTUURILÄHDE KUIN BITTIKARTTA
+     * (kokeiltu ja hylätty 7.9.2026). Kokeilussa yhden kerroksen laatta
+     * — ja niitä on valtaosa, koska ranta-, viiva- ja nostotasot ovat
+     * harvoja — vietiin `new Texture(bittikartta)`:na suoraan ilman
+     * kangasta ja `drawImage`ia. Ajatus oli säästää yksi pääsäikeen
+     * pikselikopio. TULOS OLI PÄINVASTAINEN: `renderer.initTexture`
+     * kallistui 3,0 → 5,1 ms (p50) ja pahin vienti 6,7 → 64,2 ms
+     * (savuke-pallo-kehystahti, 390 × 844 dpr 2).
+     *
+     * SYY ON PYSTYKÄÄNNÖSSÄ. three.js:n tekstuurin oletus on
+     * `flipY = true`, ja kun lähde on bittikartta, kääntö tehdään
+     * pikseli pikseliltä keskusmuistissa. Kangas taas elää jo
+     * näytönohjaimessa (kiihdytetty 2D-konteksti), joten sama kääntö on
+     * yksi GPU-kopio. Kangas siis MAKSAA yhden drawImagen ja SÄÄSTÄÄ
+     * koko viennin.
+     */
+    /*
+     * VALMISTELUN HINTA MITATAAN (7.9.2026). Tästä eteenpäin kaikki on
+     * PÄÄSÄIKEEN työtä — kangas, drawImage, verkon puskurit, materiaali
+     * — ja se osuu siihen kehykseen, jossa laatan haku sattuu
+     * valmistumaan. Se ei näy missään kehyskoukussa, joten ilman tätä
+     * mittaria se olisi savukkeelle näkymätöntä aikaa.
+     */
+    /*
+     * VALMISTELU JONOON, EI HAUN JATKOKSI (sulavuus E1, 21.9.2026).
+     *
+     * Mitattu (tools/savukkeet/mittaa-sulavuus.mjs, 390 dpr 3, CPU 4×):
+     * tason vaihtuessa kuusi hakua valmistui samaan aikaan ja jokainen
+     * jatkoi tässä omaan valmisteluunsa (kangas, kerma, sumu,
+     * getImageData-silmukat, verkko) — yhteensä 352 ms:n tehtävä yhdessä
+     * kehyksessä. Valmistelu on siksi oma jono, josta piirtokoukku ottaa
+     * laattoja aikabudjetin verran kehystä kohti (VALMISTELU_BUDJETTI_MS),
+     * aina vähintään yhden. Haun paikka (RINNAKKAIN) vapautuu heti, kun
+     * kuvat ovat tulleet — jono ei hidasta latausta, se tasaa työn.
+     */
+    const valmistele = () => {
+      if (purettu || laatat.get(t.avain) !== t) { for (const k of kuvat) k?.close?.(); return; }
+      const valmisteluAlkoi = aika();
+      /*
+       * SUORA BITTIKARTTA — NOLLAKOPIO (sulavuuskatsaus 22.9.2026 kohta 10).
+       * 7.9.2026 kokeilu hylkäsi bittikartan tekstuurilähteenä, koska
+       * three:n oletus flipY = true käänsi kuvan pikseli pikseliltä
+       * keskusmuistissa (initTexture 3,0 → 5,1 ms). Tunnettu tapa (three:n
+       * ImageBitmapLoader-ohje) on flipY = false: bittikartta menee
+       * näytönohjaimelle sellaisenaan, ja käännös tehdään UV:ssä —
+       * tekstuurin repeat.y = −1 / offset.y = 1 (kirjaston Lambert lukee
+       * mapTransformin) ja kerma-shaderissa uniformilla kermaKaanto.
+       * Kangasta ja drawImagea ei tarvita. Vain yhden kuvan laatoille:
+       * pohja + shaderin kerma (väritaso), ei taustaväriä, varaa, halo-
+       * nimiötä, astronautin laastaria eikä kankaan kermaa (tasot ilman
+       * väritasoa). Koelippu `?koe=kangasaina` palauttaa kangaspolun.
+       */
+      const tasoitusEnnakko = kerrokset.vari ? pyramidinTasoitus() : null;
+      const shaderKermaEnnakko = kermaShader && tasoitusEnnakko && !tasoitusEnnakko.maailma;
+      const variTasollaEnnakko = kerrostasot.some((k) => k?.vari);
+      const kuvaKohdat = [];
+      for (let i = 0; i < kuvat.length; i += 1) if (kuvat[i] && !kerrostasot[i]?.vari) kuvaKohdat.push(i);
+      const suoraKohta = kuvaKohdat.length === 1 ? kuvaKohdat[0] : -1;
+      const suora = suoraKohta >= 0 && !kokeet.has('kangasaina') && !kerrokset.astronautti && !tausta && !vara
+        && !kerrokset.suodatin && !(kerrokset.reliefi && kerrostasot[suoraKohta]?.nosto)
+        && (!tasoitusEnnakko || (shaderKermaEnnakko && variTasollaEnnakko))
+        && typeof ikkuna.ImageBitmap === 'function' && kuvat[suoraKohta] instanceof ikkuna.ImageBitmap;
+      if (suora) {
+        const kuva = kuvat[suoraKohta];
+        for (let i = 0; i < kuvat.length; i += 1) if (i !== suoraKohta) kuvat[i]?.close?.();
+        let variTasoOliSuora = false;
+        if (shaderKermaEnnakko && tasoitusEnnakko) {
+          variTasoOliSuora = true;
+          t.kermaPois = Boolean(kertomuslukko && tasoituksenUlkopuolella({
+            tasoitus: tasoitusEnnakko, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki,
+          }));
+          if (t.kermaPois && !t.kermatta) { mittarit.kermattomia += 1; t.kermatta = true; }
+        }
+        mittarit.suoria = (mittarit.suoria ?? 0) + 1;
+        valmistaLaatta({ lahde: kuva, suora: true, shaderKerma: shaderKermaEnnakko, variTasoOli: variTasoOliSuora, valmisteluAlkoi });
+        return;
+      }
+      const kangas = luoKangas(kartta.leveys, kartta.korkeus);
+      /*
+       * LUETAAN USEIN (sulavuus E1b, 21.9.2026): kerma ja sumu lukevat
+       * kankaan pikselit takaisin (getImageData), ja kiihdytetyltä
+       * kankaalta se on näytönohjaimen synkroninen luku — profiilissa
+       * getImageData oli valmistelun suurin yksittäinen erä (388 ms /
+       * 34 s, enemmän kuin itse pikselisilmukat). `willReadFrequently`
+       * pitää kankaan muistissa, jolloin luku on kopio eikä odotus.
+       */
+      let ctx = null;
+      try { ctx = kangas?.getContext?.('2d', { willReadFrequently: true }); } catch { ctx = null; }
+      if (!ctx) ctx = kangas?.getContext?.('2d');
+      if (!ctx) { for (const k of kuvat) k?.close?.(); t.tila = 'virhe'; return; }
+      /*
+       * TASOITUS ULOTTUU LAATASTON ULKOPUOLELLE (kaistat, 13.9.2026).
+       * Laatasto on vain kohdemaan laatikon alalla; laajalla ruudulla
+       * kamera näkee sen ohi. Peli maalaa saman kerman samalla peitolla
+       * suojatun suorakaiteen ulkopuolelle — myös laatoille, joita ei ole
+       * olemassa — jolloin laatikon ja laattaruudukon reunat eivät ole
+       * kartalla nähtävissä. Perustelu: js/laattapyramidi.js
+       * pyramidinTasoitus.
+       */
+      /*
+       * KYLLÄISYYS ALAS ASTRONAUTIN LAASTARILLA (PAATOKSET 41 kohta 4).
+       *
+       * Astronautin pallotekstuuri ladotaan kertoimella 0,8
+       * (js/linssit/satelliitti-avaruus.js kyllaisyysAlas), koska
+       * hypsometrinen asteikko on kartan asteikko eikä astronautin
+       * ikkunan. Laastari on SAMA reliefi, joten ilman samaa kerrointa
+       * laastarin reunalla olisi sävyraja. Suodatin pannaan päälle
+       * ennen taustaa, jotta myös avomeren sävy on sama kuin pohjalla.
+       *
+       * VARAREITTI ON PELKKÄ EI-MITÄÄN: jos kankaan `filter` ei kelpaa
+       * (vanha WebKit, OffscreenCanvas ilman suodatinta), asetus heittää
+       * tai jää lukematta, ja laastari on täydellä kylläisyydellä —
+       * terävyys, muisti ja saumat ovat ennallaan, vain sävy on aavistuksen
+       * kirkkaampi. Se on parempi kuin laatta, jota ei piirretä.
+       */
+      let suodatinPaalla = false;
+      if (kerrokset.suodatin) {
+        try {
+          ctx.filter = kerrokset.suodatin;
+          suodatinPaalla = ctx.filter !== 'none';
+        } catch { suodatinPaalla = false; }
+      }
+      // Astronautin laastarissa merilaatta on aukko, ei tasainen meri (ks. LAASTARIN_MERIVARI).
+      if (tausta && !kerrokset.astronautti) {
+        ctx.fillStyle = tausta;
+        ctx.fillRect(0, 0, kartta.leveys, kartta.korkeus);
+      }
+      /*
+       * Karkea laatta tasaisen värin PÄÄLLE ja varsinaisten kerrosten
+       * ALLE: jos varalaatta on vaillinainen (reunalaatta), tasainen väri
+       * jää sen alle eikä kankaalle jää läpinäkyvää kohtaa.
+       */
+      if (vara) {
+        ctx.imageSmoothingEnabled = true;
+        ctx.drawImage(
+          vara, varaKartta.sx, varaKartta.sy, varaKartta.sw, varaKartta.sh,
+          0, 0, kartta.leveys, kartta.korkeus,
+        );
+      }
+      /*
+       * AUKKOMASKI ASTRONAUTIN LAASTARILLE (ks. LAASTARIN_MERIVARI): raaka
+       * reliefikuva (tai varalaatta) ennen suodatinta ja valoliukua, jolloin
+       * MERIVARI on vielä tarkka luku. Maski leikataan kankaaseen vasta
+       * lopuksi (`destination-in`), koska valoliu'un multiply täyttäisi
+       * läpinäkyvän kohdan. Ilman kuvaa ja varaa merilaatta on kokonaan
+       * aukko.
+       */
+      let aukkoMaski = null;
+      if (kerrokset.astronautti) {
+        const lahde = reliefiKohta >= 0 ? kuvat[reliefiKohta] : null;
+        aukkoMaski = luoKangas(kartta.leveys, kartta.korkeus);
+        const mctx = aukkoMaski?.getContext?.('2d', { willReadFrequently: true });
+        if (!mctx) {
+          aukkoMaski = null;
+        } else if (lahde || vara) {
+          try {
+            if (lahde) mctx.drawImage(lahde, 0, 0, kartta.leveys, kartta.korkeus);
+            else {
+              mctx.drawImage(vara, varaKartta.sx, varaKartta.sy, varaKartta.sw, varaKartta.sh,
+                0, 0, kartta.leveys, kartta.korkeus);
+            }
+            const d = mctx.getImageData(0, 0, kartta.leveys, kartta.korkeus);
+            // Koko meri aukoksi (ks. KOKO MERI ON AUKKO); tasainen
+            // MERIVARI on sen osajoukko.
+            mittarit.merivariAukkoja += merkitseMeriAukoksi(d.data, kartta.leveys);
+            mctx.putImageData(d, 0, 0);
+          } catch { aukkoMaski = null; }
+        }
+      }
+      const tasoitus = kerrokset.vari ? pyramidinTasoitus() : null;
+      /*
+       * LAATTA EI NÄY ENNEN KERMAA (omistaja 22.9.2026 aamu, iPhone v2076:
+       * *"muiden maiden laatat näkyvät hetken ilman huntua, kerma tulee
+       * jälkikäteen"*). Ennen maapolygoneja suoja on koko laatikko
+       * (`tarkka` epätosi) ja piirraKerma palasi ilman kermaa — laatta
+       * asennettiin raakana ja vaihtui vasta mitätöinnin jälkeen. Nyt
+       * valmistelu odottaa tarkkaa suojaa: laatta palaa jonoon
+       * KERMAN_ODOTUS_MS:n päästä, enintään KERMAN_ODOTUS_KERTOJA (maa,
+       * jolle polygoneja ei ole, ei saa jäädä ikuisesti piirtämättä).
+       */
+      // Shaderilla kerma on materiaalissa: laatta saa maskin heti kun se saapuu, odotusta ei tarvita.
+      const shaderKerma = kermaShader && tasoitus && !tasoitus.maailma;
+      // Sama portti kuin kankaalla: kerma vain laatalle, jolla on väritaso (kerrostasot[i].vari).
+      let variTasoOli = false;
+      if (!shaderKerma && tasoitus && !tasoitus.maailma && !tasoitus.suoja?.tarkka && (t.kermanOdotus ?? 0) < KERMAN_ODOTUS_KERTOJA) {
+        t.kermanOdotus = (t.kermanOdotus ?? 0) + 1;
+        mittarit.kermaaOdottaa = (mittarit.kermaaOdottaa ?? 0) + 1;
+        kangas.width = 0; kangas.height = 0;
+        ikkuna.setTimeout(() => {
+          if (purettu || laatat.get(t.avain) !== t) { for (const k of kuvat) k?.close?.(); return; }
+          t.valmistelu = valmistele;
+          t.suljeKuvat = () => { for (const k of kuvat) k?.close?.(); };
+          valmistelujono.push(t);
+          ajaValmistelu();
+        }, KERMAN_ODOTUS_MS);
+        return;
+      }
+      /*
+       * ══════════════════════════════════════════════════════════════
+       * KERMA EI ODOTA VÄRILAATTAA (omistaja 18.9.2026, Raamattu
+       * KARTTAUUDISTUKSEN PAATOKSET 37 kohta 1)
+       * ══════════════════════════════════════════════════════════════
+       *
+       * Sanatarkasti: *"peli valkkyy panoroitaessa, eli etta poistettu
+       * korkeusero kartta tulee nakyviin aina vasta pienella viiveella"*.
+       *
+       * JUURISYY ON VÄRITASON TASOVÄLI, EI VERKON VIIVE. Kohdemaan
+       * väritaso on ajettu vain tasoille z4…z8 (ämpärin pyramidi.json,
+       * `varitasot.<ISO>.tasot`), ja `pyramidinKerrostasot(z)` lisää
+       * `vari`-kerroksen VAIN niille tasoille. Tasoilla z0…z3 silmukka ei
+       * siis koskaan päätynyt tähän haaraan, eikä `maalaaTasoitus`
+       * maalannut mitään: karkea laatta oli koko maailman topografia
+       * ILMAN KERMAA. Panoroitaessa uusi ala tulee ensin näkyviin
+       * karkeana tasona ja tarkentuu vasta z4+:n saapuessa — juuri siinä
+       * hetkessä reliefi välähtää ja katoaa.
+       *
+       * KORJAUS ON, ETTÄ KERMA EI RIIPU VÄRILAATASTA LAINKAAN. Suoja ja
+       * renkaat tietää `pyramidinTasoitus()` ilman yhtään laattaa, joten
+       * peitto maalataan SAMASSA VAIHEESSA kuin pohja piirretään — myös
+       * tasolla, jolla väritasoa ei ole olemassa (`variTasolla` epätosi).
+       * Värilaatta täydentää saapuessaan vain suojan sisäosan.
+       *
+       * JÄRJESTYS SÄILYY: kerma menee pohjan päälle mutta rannan,
+       * viivan ja noston alle, kuten väritasokin (pyramidinKerrostasot).
+       */
+      const variTasolla = kerrostasot.some((k) => k?.vari);
+      const piirraKerma = (kuva) => {
+        if (tasoitus.maailma) {
+          maalaaMaailmanVari(ctx, {
+            tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki, kuva,
+          });
+          return;
+        }
+        const tyhjaKerma = kertomuslukko && tasoituksenUlkopuolella({
+          tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki,
+        });
+        if (tyhjaKerma) {
+          if (!t.kermatta) mittarit.kermattomia += 1;
+          t.kermatta = true;
+          return;
+        }
+        if (!tasoitus.suoja?.tarkka) return;
+        const maalattu = maalaaTasoitus(ctx, {
+          tasoitus,
+          kartta,
+          ppu: tasoOlio.pikseliaPerYksikko,
+          arkki: pyramidi.arkki,
+          kuva,
+          maamaski: MERET_NAKYVIIN,
+        });
+        // Löytämisen sumu: maan sisäinen kevyt kerma käymättömien seuduille.
+        // Renkaiden passi maalaa sen samalla ('sumu'); varapolut erikseen.
+        if (tasoitus.sumu && maalattu !== 'sumu') {
+          maalaaSisasumu(ctx, {
+            tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki,
+          });
+        }
+      };
+      for (let i = 0; i < kuvat.length; i += 1) {
+        const kuva = kuvat[i];
+        if (tasoitus && kerrostasot[i]?.vari) {
+          /*
+           * KARKEA SUOJA EI SAA PÄÄTYÄ RUUDULLE (mitattu 14.9.2026,
+           * puhelimen saapumisnäkymä; omistajan kuvakaappaus klo 17.55
+           * UTC: *"laattojen reunoilla repaleiset kermaläiskät"*).
+           *
+           * Ennen maapolygonien saapumista suoja on KOKO LAATASTON
+           * LAATIKKO (js/laattapyramidi.js pyramidinTasoitus, `tarkka`
+           * epätosi), eikä maalaus silloin peitä laataston sisältä
+           * mitään: laatan oma kuva piirtyy sellaisenaan myös
+           * Välimerelle, Espanjaan ja Marokkoon — harmaa meri ja
+           * Atlaksen rinteet seepian päällä, laatan reunaan katkeavina
+           * läiskinä. Mitattu 390 × 844 dpr 3: näin näytti 35 s ajan,
+           * koska hitaalla laitteella suojan tarkentumisen jälkeinen
+           * uudelleenpiirto ei ehtinyt valmiiksi (valmiita 4/30).
+           *
+           * VÄRITASO JÄTETÄÄN SILLOIN KOKONAAN POIS. Kartta on sen
+           * hetken täsmälleen se seepiakartta, joka se oli ennen
+           * tasoituskerrosta — ei koskaan väärä kuva. Suojan
+           * tarkentuessa `tasoitus.avain` vaihtuu (L → T) ja kerros
+           * mitätöi laattansa itse (ks. MAANVAIHTO MITÄTÖI LAATAT).
+           */
+          /*
+           * TYHJÄ KERMALAATTA JÄTETÄÄN LINSSIN AJAKSI PIIRTÄMÄTTÄ
+           * (ks. tasoituksenUlkopuolella). Laatta, josta suojaa ei
+           * leikkaudu lainkaan, on pelkkä vaalea arkki — linssin
+           * kertomuskamera lentää kohdemaan ulkopuolelle, ja juuri ne
+           * arkit välkkyivät seepiakartan päällä. Ilman maalausta laatta
+           * on se seepiakartta, joka se muutenkin on, eikä kerros hae
+           * niille mitään.
+           *
+           * VAIN LINSSIN AJAKSI: pelin omalla kartalla kerman marginaali
+           * on tarkoituksellinen (js/laattapyramidi.js), eikä sitä muuteta
+           * täältä. Lipulla merkitty laatta puretaan lukon auetessa, jotta
+           * kerma palaa entiselleen (lukitseKertomus).
+           */
+          /*
+           * MAAILMANÄKYMÄSSÄ EI KERMAA (omistaja 15.9.2026, Raamattu:
+           * KARTTAUUDISTUKSEN PAATOKSET 23). Kuva leikataan kohdemaan
+           * renkaisiin ja muualle jää pohjan topografia; ilman renkaita
+           * (aineisto vielä haussa) värilaatta jätetään kokonaan pois,
+           * jolloin kartta on se pohjakartta, joka se muutenkin on.
+           */
+          if (shaderKerma) {
+            // Kerma tulee shaderista; linssin tyhjä arkki (tasoituksenUlkopuolella) sammuttaa sen laatalta.
+            variTasoOli = true;
+            t.kermaPois = Boolean(kertomuslukko && tasoituksenUlkopuolella({
+              tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki,
+            }));
+            if (t.kermaPois && !t.kermatta) { mittarit.kermattomia += 1; t.kermatta = true; }
+          } else piirraKerma(kuva);
+          kuva?.close?.();
+          continue;
+        }
+        if (!kuva) continue;
+        /*
+         * NIMIÖT LUETTAVIKSI RELIEFIN PÄÄLLÄ (Fablen kohta 3, 18.9.2026).
+         *
+         * Nostotason nimiöt — La Chaux-de-Fonds, Bern 1905, Chillon,
+         * Aletsch — on poltettu laattoihin SEEPIAKARTTAA varten: tummaa
+         * harmaata tasaisen vaalealle pergamentille. Reliefin päällä
+         * tausta ei ole tasainen vaan Alppien vaaleanvihreää ja ruskeaa
+         * rinnettä, joka vaihtelee kirjaimen sisällä, ja teksti hukkuu
+         * siihen. Mitattu 18.9.2026 (Chromium 390 × 844, Alpit,
+         * "Bern 1905"): maasto (182, 195, 117), teksti (82, 71, 54).
+         *
+         * HALO EIKÄ VÄRINVAIHTO. Nimiö on laatan pikseleissä eikä
+         * elementtinä, joten sen väriin ei pääse käsiksi ilman uutta
+         * polttoa. Vaalea reunus sen sijaan on kankaan oma työ: se
+         * erottaa tumman kirjaimen vaihtelevasta taustasta, ja se on
+         * kartografian tavallinen keino juuri tähän. Kolme vetoa yhdellä
+         * varjolla — yksi veto jää ohueksi, kolme tekee yhtenäisen
+         * reunuksen — ja sen päälle nimiö itse terävänä.
+         *
+         * MUSTE TUMMENNETAAN SAMASSA HAARASSA (ks. NIMION_MUSTE): reunus
+         * yksin jäi mitattuna 4,19:ään, ja suhteen toinen puoli on teksti.
+         * Sävy vaihtuu, muoto ei — `source-in` pitää jokaisen pikselin
+         * oman peittävyyden.
+         *
+         * VAIN RELIEFIN AIKANA (`kerrokset.reliefi`): pelin omalla
+         * seepiakartalla tausta on tasainen pergamentti, jossa reunus
+         * olisi pelkkää sotkua, eikä sinne kosketa.
+         */
+        let nimio = kuva;
+        if (kerrokset.reliefi && kerrostasot[i]?.nosto) {
+          nimio = nimioLinssinMusteella(kuva, kartta.leveys, kartta.korkeus);
+          ctx.save();
+          ctx.shadowColor = NIMION_HALO;
+          ctx.shadowBlur = NIMION_HALO_PX;
+          for (let veto = 0; veto < NIMION_HALO_VETOJA; veto += 1) {
+            ctx.drawImage(nimio, 0, 0, kartta.leveys, kartta.korkeus);
+          }
+          ctx.restore();
+        }
+        ctx.drawImage(nimio, 0, 0, kartta.leveys, kartta.korkeus);
+        kuva.close?.();
+        /*
+         * POHJA ON JUURI PIIRRETTY: kerma tähän, jos tällä tasolla ei ole
+         * väritasoa lainkaan (z0…z3). Sama kehys, ei odotusta.
+         */
+        if (tasoitus && !variTasolla && i === 0) piirraKerma(null);
+      }
+      // Suodatin pois heti piirron jälkeen: kangas jää tekstuurin lähteeksi.
+      if (suodatinPaalla) { try { ctx.filter = 'none'; } catch { /* ei suodatinta */ } }
+      /*
+       * VALON VASTAKAAVA VIIMEISENÄ (PAATOKSET 41 kohta 4). Liuku menee
+       * KAIKEN päälle — pohjan, meritaustan ja nimiöiden — koska myös
+       * pallon 4k-pohjatekstuuri on jaettu samalla kertoimella kokonaan.
+       * Rivin leveysaste tulee samasta `yLat`-muunnoksesta kuin laatan
+       * oma pallonala, joten liuku ja verkko ovat samaa mieltä rivistä.
+       */
+      if (kerrokset.astronautti) {
+        const arkkiY = pyramidi?.arkki?.y ?? 0;
+        const ppuY = tasoOlio.pikseliaPerYksikko;
+        const pysakit = pyramidinReliefinValoliuku(kartta.korkeus,
+          (y) => yLat((kartta.kansY0 + y) / ppuY + arkkiY));
+        if (maalaaAstronautinValoliuku(ctx, kartta.leveys, kartta.korkeus, pysakit)) {
+          mittarit.valoliukuja += 1;
+        }
+      }
+      if (aukkoMaski) {
+        try {
+          ctx.globalCompositeOperation = 'destination-in';
+          ctx.drawImage(aukkoMaski, 0, 0);
+        } finally { ctx.globalCompositeOperation = 'source-over'; }
+        aukkoMaski.width = 0;
+        aukkoMaski.height = 0;
+      }
+      mittarit.kankaita = (mittarit.kankaita ?? 0) + 1;
+      valmistaLaatta({ lahde: kangas, suora: false, shaderKerma, variTasoOli, valmisteluAlkoi });
+    };
+    /** Verkko, tekstuuri ja materiaali lähteestä (kangas tai suora bittikartta). */
+    const valmistaLaatta = ({ lahde, suora, shaderKerma, variTasoOli, valmisteluAlkoi }) => {
+      // Verkko: laatan oma lat/lon-suorakaide, UV laatan omalla kankaalla.
+      const alue = laatanAlue(tasoOlio, t.sarake, t.rivi);
+      if (!Number.isFinite(alue.lat0) || !Number.isFinite(alue.lat1) || !(alue.lat1 > alue.lat0)) {
+        t.tila = 'virhe';
+        if (suora) lahde?.close?.();
+        return;
+      }
+      const silmakatto = kokeet.has('silmat40') ? 40 : LAATTAKERROS_SILMAT_MAX;
+      const nx = Math.min(silmakatto, laattakerroksenSilmat(alue.lon1 - alue.lon0));
+      const ny = Math.min(silmakatto, laattakerroksenSilmat(alue.lat1 - alue.lat0));
+      const sade = pallo.getGlobeRadius() * LEPOKERROS_KOROTUS;
+      const puskurit = lepokerroksenVerkko({ alue, kartta, sade, nx, ny });
+      const geometria = new luokat.BufferGeometry();
+      geometria.setAttribute('position', new luokat.BufferAttribute(puskurit.paikat, 3));
+      geometria.setAttribute('normal', new luokat.BufferAttribute(puskurit.normaalit, 3));
+      geometria.setAttribute('uv', new luokat.BufferAttribute(puskurit.uvt, 2));
+      geometria.setIndex(puskurit.indeksit);
+      const tekstuuri = new luokat.Texture(lahde);
+      if (suora) {
+        // Nollakopio: ei pystykääntöä keskusmuistissa; käännös UV:ssä (ks. SUORA BITTIKARTTA).
+        tekstuuri.flipY = false;
+        tekstuuri.repeat.y = -1;
+        tekstuuri.offset.y = 1;
+        t.suoraKuva = true;
+      }
+      const malli = luokat.tekstuurimalli;
+      // Sama väriavaruus kuin laatoilla — muuten sävy hyppäisi kerroksen alla.
+      if (malli && 'colorSpace' in malli) tekstuuri.colorSpace = malli.colorSpace;
+      else if (malli && 'encoding' in malli) tekstuuri.encoding = malli.encoding;
+      const webgl2 = Boolean(renderer?.capabilities?.isWebGL2) && !kokeet.has('eimip');
+      tekstuuri.generateMipmaps = webgl2;
+      tekstuuri.minFilter = webgl2 ? THREE_LINEAR_MIPMAP_LINEAR : THREE_LINEAR;
+      tekstuuri.magFilter = THREE_LINEAR;
+      /*
+       * ESIKERROTTU ALFA AUKON REUNALLE (ks. LAASTARIN_MERIVARI): kangas
+       * tallentaa läpinäkyvän pikselin värin nollaksi, ja suora alfa
+       * sekoitti sen suodatuksessa reunaan mustana ääriviivana (mitattu
+       * 19.9.2026, Kreeta). Esikerrottuna suodatus sekoittaa reunan
+       * pohjaan eikä mustaan.
+       */
+      if (kerrokset.astronautti) tekstuuri.premultiplyAlpha = true;
+      tekstuuri.wrapS = THREE_CLAMP;
+      tekstuuri.wrapT = THREE_CLAMP;
+      tekstuuri.anisotropy = kokeet.has('aniso1') ? 1 : (renderer?.capabilities?.getMaxAnisotropy?.() ?? 1);
+      tekstuuri.needsUpdate = true;
+      /*
+       * LAASTARIN SÄVY ON PALLON SÄVY (PAATOKSET 41 kohta 4). Linssin oma
+       * pallo on tummennettu materiaalin värillä 0x999999 (omistajan
+       * tilaus *"hieman tummempi kauttaaltaan"*), ja laatan oma materiaali
+       * jäi valkoiseksi — mitattuna 1,68-kertainen kirkkaus pohjaan
+       * nähden. Sama diffuse-kerroin molemmille, ei pikselityötä.
+       */
+      const savy = kerrokset.astronautti ? pyramidinReliefinSavy() : null;
+      const materiaali = new luokat.LaattaMateriaali({
+        map: tekstuuri, transparent: true, opacity: 0, depthWrite: true,
+        polygonOffset: true, polygonOffsetFactor: 0,
+        polygonOffsetUnits: laatanSyvyyssiirto(t, taso?.z),
+        /*
+         * Astronautin laastarin aukko (MERIVARI → alfa 0) ei saa kirjoittaa
+         * syvyyttä: laastari piirtyy ENNEN pohjapalloa (renderOrder), ja
+         * syvyyden kirjoittanut läpinäkyvä pikseli jätti pohjan
+         * piirtämättä — mitattu mustana suorakaiteena. alphaTest hylkää
+         * aukon kokonaan; häivytyksen aikainen opacity > 0,004 ei osu siihen.
+         */
+        ...(kerrokset.astronautti ? { alphaTest: 0.004, premultipliedAlpha: true } : {}),
+        ...(savy === null ? {} : { color: savy }),
+      });
+      if (shaderKerma && variTasoOli) {
+        const ppuL = tasoOlio.pikseliaPerYksikko;
+        asennaKermaShader(materiaali, {
+          jaettu: kermanJaetut,
+          tarkka: kokeet.has('kermapow'),
+          kaanto: Boolean(suora),
+          laatta: {
+            alue: { x0: pyramidi.arkki.x + kartta.kansX0 / ppuL, y0: pyramidi.arkki.y + kartta.kansY0 / ppuL, w: kartta.leveys / ppuL, h: kartta.korkeus / ppuL },
+            paalla: !t.kermaPois,
+          },
+        });
+      }
+      const verkko = new luokat.Mesh(geometria, materiaali);
+      verkko.renderOrder = LAATTAKERROS_RENDER_ORDER_POHJA + t.z;
+      // Kerros ei ota napautuksia: pelin merkit ja onGlobeClick kuten ennen.
+      verkko.raycast = () => {};
+      verkko.userData.laattakerros = { z: t.z, sarake: t.sarake, rivi: t.rivi };
+      t.alue = alue;
+      t.tekstuuri = tekstuuri;
+      t.materiaali = materiaali;
+      t.verkko = verkko;
+      t.silmat = [nx, ny];
+      t.tavut = Math.round(kartta.leveys * kartta.korkeus * 4 * (webgl2 ? 4 / 3 : 1));
+      t.tila = 'valmis';
+      if (kerrokset.reliefi) pyramidinLinssiketju('laatta-valmis');
+      const valmisteluKesti = aika() - valmisteluAlkoi;
+      mittarit.valmisteluMs += valmisteluKesti;
+      mittarit.valmisteluja += 1;
+      if (valmisteluKesti > mittarit.valmisteluMax) mittarit.valmisteluMax = valmisteluKesti;
+      vientijono.push(t);
+      ajaVienti();
+    };
+    t.valmistelu = valmistele;
+    t.suljeKuvat = () => { for (const k of kuvat) k?.close?.(); };
+    valmistelujono.push(t);
+    ajaValmistelu();
+  };
+
+  /* ---------------- valmistelujono ---------------- */
+
+  /** Laatan valmistelun aikabudjetti kehystä kohti (ms, pääsäie); 4 → 6 ms 22.9.2026, ks. LAATTAKERROS_TEKSTUUREJA_PER_KEHYS. */
+  const VALMISTELU_BUDJETTI_MS = 6;
+  const valmistelujono = [];
+  let valmisteluRaf = 0;
+  /** Jono tyhjäksi: valmistelemattomien laattojen kuvat vapautetaan. */
+  const tyhjennaValmistelujono = () => {
+    for (const t of valmistelujono.splice(0)) { t.valmistelu = null; t.suljeKuvat?.(); t.suljeKuvat = null; }
+    if (valmisteluRaf) ikkuna.cancelAnimationFrame?.(valmisteluRaf);
+    valmisteluRaf = 0;
+    mittarit.valmisteluJonossa = 0;
+  };
+  /*
+   * VALMISTELU VÄISTÄÄ PITKÄÄ KEHYSTÄ LIIKKEESSÄ (Ranska z6 zoomi,
+   * 22.9.2026). Kehysprofiili (js/pallolauta/kehysprofiili.js, WebKit
+   * 390 × 844 dpr 3, porras 6): zoomin pitkissä kehyksissä pääsäikeen
+   * rAF-työstä 5–6 ms/kehys oli tätä jonoa (kangas, kerma, getImageData,
+   * verkko) — kolme kertaa three.js:n render ja suurin yksittäinen erä.
+   * Oikealla iPhonella pitkien kehysten ajasta 54–73 % oli pääsäikeen työtä.
+   * Yksi laatta kestää budjettia (4 ms) kauemmin, joten "aina vähintään
+   * yksi" osui joka kehykseen. Nyt liikkeessä valmistelu jättää kehyksen
+   * väliin, jos a) edellinen kehys oli pitkä (> VALMISTELU_PITKA_KEHYS_MS,
+   * kone on jo jäljessä) tai b) tähän kutsuun tullessa kehyksestä on jo
+   * kulunut yli VALMISTELU_KEHYSVARA_MS (muut rAF-kutsut veivät
+   * budjetin). Levossa jono puretaan kuten ennen. Koe `valmisteluvanha`
+   * palauttaa vanhan tahdin vertailuksi.
+   */
+  const VALMISTELU_PITKA_KEHYS_MS = 24;
+  const VALMISTELU_KEHYSVARA_MS = 8;
+  /** Peräkkäisiä väistöjä enintään: hitaalla laitteella joka kehys on pitkä, ja jono etenee silti neljäsosatahtia. */
+  const VALMISTELU_VAISTOJA_PERAKKAIN = 3;
+  /**
+   * Väistääkö raskas jonotyö tämän kehyksen (liikkeessä: edellinen kehys
+   * pitkä tai kehyksestä jo kulunut yli varan). `muisti` pitää jonon oman
+   * edellisen kehysajan ja peräkkäiset väistöt. Sama sääntö valmistelulle
+   * ja tekstuurin viennille.
+   */
+  const kehysVaisto = (kehysAlku, muisti, laskuri) => {
+    const alku = aika();
+    const edellinen = muisti.kehys;
+    muisti.kehys = Number.isFinite(kehysAlku) ? kehysAlku : alku;
+    if (!liikkeessaViimeksi || kokeet.has('valmisteluvanha') || !Number.isFinite(kehysAlku)) { muisti.perakkain = 0; return false; }
+    const pitkaKehys = edellinen > 0 && kehysAlku - edellinen > VALMISTELU_PITKA_KEHYS_MS;
+    const myohassa = alku - kehysAlku > VALMISTELU_KEHYSVARA_MS;
+    if (!(pitkaKehys || myohassa) || (muisti.perakkain ?? 0) >= VALMISTELU_VAISTOJA_PERAKKAIN) { muisti.perakkain = 0; return false; }
+    muisti.perakkain = (muisti.perakkain ?? 0) + 1;
+    mittarit[laskuri] = (mittarit[laskuri] ?? 0) + 1;
+    return true;
+  };
+  const valmisteluKehys = { kehys: 0, perakkain: 0 };
+  const ajaValmistelu = () => {
+    if (purettu || valmisteluRaf || !valmistelujono.length) return;
+    valmisteluRaf = ikkuna.requestAnimationFrame((kehysAlku) => {
+      valmisteluRaf = 0;
+      if (purettu) return;
+      if (kehysVaisto(kehysAlku, valmisteluKehys, 'valmisteluVaistoja')) { ajaValmistelu(); return; }
+      const alku = aika();
+      let n = 0;
+      // Näkyvät ensin, sitten tuki, sitten ennakko — sama järjestys kuin latausjonossa.
+      if (valmistelujono.length > 1) {
+        const sija = (t) => (t.nakyva ? 0 : t.tuki ? 1 : 2);
+        valmistelujono.sort((a, b) => sija(a) - sija(b) || a.etaisyys - b.etaisyys);
+      }
+      while (valmistelujono.length && (n === 0 || aika() - alku < VALMISTELU_BUDJETTI_MS)) {
+        const t = valmistelujono.shift();
+        const f = t.valmistelu;
+        t.valmistelu = null;
+        t.suljeKuvat = null;
+        n += 1;
+        if (typeof f === 'function') f();
+      }
+      mittarit.valmisteluJonossa = valmistelujono.length;
+      if (valmistelujono.length) ajaValmistelu();
+    });
+  };
+
+  /* ---------------- latausjono ---------------- */
+
+  const kaynnista = () => {
+    if (purettu) return;
+    /*
+     * ── LINSSI KATKAISEE JONON HETI (19.9.2026) ───────────────────────
+     *
+     * `kerrokset` päivittyy vain `suorita`ssa, joka ajetaan pallon
+     * piirtokoukusta. Latausjono sen sijaan valuu ITSESTÄÄN: jokainen
+     * valmistunut haku kutsuu `kaynnista`n uudestaan, eikä se katso
+     * kehyksiä lainkaan. Kun topografialinssi avataan, pohjalaattojen
+     * jono on siis yhä entisellään, ja se ehtii lähettää lisää
+     * seepiapohjan hakuja ennen kuin ensimmäinen kehys käy —
+     * kuormitetulla koneella kehysten väli venyy sadoiksi
+     * millisekunneiksi, ja juuri silloin savuke näki 1–3 pohjalaattaa
+     * linssin ajalta (tools/savukkeet/savuke-topografialinssi.mjs,
+     * kolme rinnakkaista ajoa 19.9.2026; yksin ajettuna 0).
+     *
+     * Portti on siksi tässä eikä vain `suorita`ssa: jos linssin tila on
+     * vaihtunut viime päivityksen jälkeen, jonossa oleva laatta on
+     * VÄÄRÄÄ KARTTAA eikä vanhentunutta karttaa. Jonoa ei käynnistetä,
+     * ja kesken olevat haut katkaistaan (AbortController) — turha
+     * verkkoliikenne on puhelimella oikeaa rahaa. Seuraava `suorita`
+     * purkaa laatat ja kokoaa jonon uudestaan oikeilla kerroksilla,
+     * kuten ennenkin (sukupolvi + `poista`).
+     *
+     * Sama portti pätee molempiin suuntiin: linssin sulkeutuessa
+     * reliefilaattojen jono katkeaa samalla tavalla.
+     */
+    if (kerrokset && kerrokset.reliefi !== pyramidinReliefiKaytossa()) {
+      for (const t of jono) t.jonossa = false;
+      jono.length = 0;
+      mittarit.jonossa = 0;
+      for (const t of laatat.values()) {
+        if (t.aloitettu && t.tila === 'ladataan') {
+          try { t.katkaisin?.abort?.(); } catch { /* ei väliä */ }
+        }
+      }
+      return;
+    }
+    /*
+     * KATKAISIJA (js/media.js laji 'laatat', sulavuuskatsaus kohta 21):
+     * kolmen verkkovirheen tai 429/5xx:n jälkeen uusia latauksia ei
+     * aloiteta 20 sekuntiin. Jono säilyy; jatko ajastetaan katkon
+     * päättymiseen. Kesken olevat haut saavat valmistua.
+     */
+    if (!peiliKaytossa('laatat')) {
+      mittarit.katkaistu = true;
+      if (!katkoAjastin && jono.length) {
+        katkoAjastin = ikkuna.setTimeout?.(() => { katkoAjastin = 0; if (!purettu) kaynnista(); }, peilinKatkoJaljella('laatat') + 50) ?? 0;
+      }
+      mittarit.jonossa = jono.length;
+      return;
+    }
+    mittarit.katkaistu = false;
+    // Näkyvät ensin, sitten tuki, sitten ennakko ja pidetyt — kaikki ruudun keskeltä.
+    const sija = (t) => (t.nakyva ? 0 : t.tuki ? 1 : 2);
+    jono.sort((a, b) => sija(a) - sija(b) || a.etaisyys - b.etaisyys);
+    // Tahditus (LAATTAKERROS_ALOITUKSIA_PER_KEHYS): vain jos kehyksiä on.
+    const tahditettu = typeof ikkuna.requestAnimationFrame === 'function';
+    const katto = tahditettu ? LAATTAKERROS_ALOITUKSIA_PER_KEHYS : Infinity;
+    while (ladattavia < LAATTAKERROS_RINNAKKAIN && aloituksia < katto && jono.length) {
+      const t = jono.shift();
+      t.jonossa = false;
+      if (laatat.get(t.avain) !== t || t.tila !== 'ladataan' || t.aloitettu) continue;
+      t.aloitettu = true;
+      ladattavia += 1;
+      aloituksia += 1;
+      lataa(t)
+        .catch((syy) => { t.tila = 'virhe'; mittarit.syy = String(syy?.message ?? syy); })
+        .then(() => { ladattavia -= 1; kaynnista(); });
+    }
+    if (tahditettu && aloituksia > 0 && !aloitusRaf) {
+      // Laskuri nollautuu kehyksen vaihtuessa; jonon loput lähtevät silloin.
+      if (jono.length && ladattavia < LAATTAKERROS_RINNAKKAIN) mittarit.tahditettuja += 1;
+      aloitusRaf = ikkuna.requestAnimationFrame(() => {
+        aloitusRaf = 0;
+        aloituksia = 0;
+        if (!purettu && jono.length) kaynnista();
+      });
+    }
+    mittarit.jonossa = jono.length;
+    mittarit.ladattavia = ladattavia;
+  };
+
+  /*
+   * ── LUKKO: KERROS SEIS LINSSIN AJAKSI (12.9.2026) ────────────────
+   *
+   * Satelliittilinssi vaihtaa pallon pinnan Maaksi avaruudesta
+   * (js/linssit/satelliitti-avaruus.js). Linssi piilottaa kerroksen
+   * verkot piirtokerroksista, mutta se EI riitä: kerros rakentaa uusia
+   * verkkoja aina kun laatan kuva saapuu verkosta, ja juuri saapunut
+   * laatta ehtii yhden kehyksen ajan ruudulle ennen kuin linssin oma
+   * kehyssilmukka sulkee sen (mitattu 12.9.2026: yksi karttapinta jäi
+   * näkyviin kolmella näytöllä kolmesta ajosta). Lukko sulkee
+   * PÄIVITYKSEN, jolloin uusia verkkoja ei synny lainkaan — ja samalla
+   * peli lakkaa hakemasta laattoja, joita pelaaja ei voi nähdä.
+   *
+   * LUKKO EI PURA MITÄÄN: valmiit verkot jäävät paikoilleen ja tulevat
+   * takaisin sellaisinaan, kun lukko avataan. Vain päivitys pysähtyy.
+   */
+  let lukittu = false;
+
+  /*
+   * ── KERTOMUSLUKKO: TASO JA LAATTAJOUKKO PAIKALLEEN LINSSIN AJAKSI ──
+   *
+   * OMISTAJA 14.9.2026 (iPad, Ihmisen matka, sanatarkasti): *"valilla
+   * kartan pienta vareilee meinaten pudottaa topografian"*. Syy on
+   * MITATTU (docs/raportit/viesti-fable-linssivika-20260914.md luku 3,
+   * 30 s näyte iPad 1180 × 820 dpr 2): linssin kertomuskamera lentää
+   * yhtäjaksoisesti (korkeus 0,19 → 2,5 → 0,19), ja kerros laskee
+   * näkyvän joukon uudelleen joka liikkeellä. Laattoja purettiin
+   * **368 kpl / 30 s**, pyyntöjä ehdittiin lähettää **66**, ja
+   * näyttämölle jäi 0–15 laattaa tarvitusta 15–40:stä. Reliefi putosi
+   * siis toistuvasti takaisin sumeaan pohjaan. Taso ehti lisäksi
+   * vaihtua kesken ajon (z6 → z4 → z6 → z5), mikä vaihtaa koko
+   * tekstuuriston kerralla.
+   *
+   * LUKKO EI OLE SAMA KUIN `lukitse` YLLÄ. Satelliittilinssin lukko
+   * pysäyttää koko päivityksen, koska sen näkymässä karttapintaa ei
+   * saa näkyä lainkaan. Kertomuslinssissä kartta on se, mitä
+   * katsotaan: päivitys jatkuu, mutta
+   *
+   *   1. TASO PYSYY. Valinta ei seuraa tarvetta vaan lukittua z:aa.
+   *      Laattakatto (LAATTAKERROS_LAATTAKATTO_NAKYVA) saa yhä laskea
+   *      tasoa yleiskuvassa — se on muistin kova raja — mutta kun
+   *      kamera palaa alas, valinta alkaa taas lukitusta tasosta eikä
+   *      jää karkeaan.
+   *   2. LAATTAJOUKKO PYSYY. `pito` ei vanhene ajassa, joten kerran
+   *      ladattu laatta on yhä muistissa, kun kamera palaa samalle
+   *      seudulle. Määräkatto ei pura pidettyjä (laattakerroksenLRU),
+   *      mutta TAVUKATTO purkaa yhä — muisti on kova raja myös
+   *      linssissä, eikä lukko saa kasvattaa sitä rajattomasti.
+   *
+   * PYYNTÖJÄ EI SULJETA. Kertomuskamera lentää uusille seuduille,
+   * joilla kerroksella ei ole yhtään laattaa; pyyntöjen sulkeminen
+   * jättäisi ne seudut kokonaan sumeaksi pohjaksi, eli tekisi juuri
+   * sen, mitä lukko korjaa (mitattu, raportin luku 4).
+   */
+  let kertomuslukko = false;
+  /** Taso, johon kertomuslukko naulasi valinnan (z), tai null. */
+  let kertomustaso = null;
+
+  /* ---------------- tekstuurien vienti (≤ 2 / kehys) ---------------- */
+
+  const ajaVienti = () => {
+    /*
+     * LUKKO PYSÄYTTÄÄ MYÖS VIENNIN. Päivityksen pysäyttäminen ei yksin
+     * riitä: jono voi olla täynnä laattoja, jotka latautuivat ennen
+     * lukkoa, ja vienti lisäisi ne sceneen kaksi kehystä kohti vielä
+     * pitkään lukon jälkeen (mitattu 12.9.2026: satelliittilinssin
+     * avaruusnäkymässä yksi karttapinta ilmestyi joka kehyksellä).
+     * Jono SÄILYY ja valuu sceneen, kun lukko avataan (lukitse kutsuu
+     * ajaVientiä uudestaan) — mitään ei siis hukata.
+     */
+    if (purettu || lukittu || vientiRaf || !vientijono.length) return;
+    /*
+     * Koe `vientilepo`: liikkeessä vienti odottaa seuraavaa lepopäivitystä.
+     *
+     * `eivienti` (ratasvalikon "Ei tekstuurivientejä", Fable 22.9.2026)
+     * tekee saman: se jäädytti aiemmin VAIN nimiöatlaksen viennin
+     * (js/pallonimiot-gl.js), ja laattojen tekstuurit — juuri se vienti,
+     * joka iPhonella virtaa vedon aikana — menivät näytönohjaimelle kuten
+     * ennenkin. Laitetestaajan Mac-mittauksessa lippu ei siksi muuttanut
+     * mitään. Jono säilyy ja valuu sceneen levossa; mitään ei hukata.
+     */
+    if ((kokeet.has('vientilepo') || kokeet.has('eivienti')) && liikkeessaViimeksi) {
+      mittarit.vientejaOdottaa = vientijono.length;
+      return;
+    }
+    /*
+     * VEDON BUDJETTI (ks. LAATTAKERROS_VEDON_VIENTIVALI_MS): liikkeessä
+     * vain alueen laatta. Jos jonossa ei ole yhtään, silmukkaa ei pidetä
+     * käynnissä — uusi laatta tai seuraava päivitys (suorita) kutsuu
+     * ajaVientiä, ja lepo valuttaa loput.
+     */
+    const budjetti = liikkeessaViimeksi && kokeet.has('vientibudjetti');
+    if (budjetti && vedonVientiehdokas() < 0) {
+      mittarit.vientejaOdottaa = vientijono.length;
+      return;
+    }
+    vientiRaf = ikkuna.requestAnimationFrame((kehysAlku) => {
+      vientiRaf = 0;
+      // Vienti (initTexture 3–7 ms) väistää pitkää kehystä liikkeessä kuten valmistelu.
+      if (kehysVaisto(kehysAlku, vientiKehys, 'vientiVaistoja')) { ajaVienti(); return; }
+      if (liikkeessaViimeksi && kokeet.has('vientibudjetti')) {
+        const nytT = Number.isFinite(kehysAlku) ? kehysAlku : aika();
+        const i = vedonVientiehdokas();
+        if (i < 0) { mittarit.vientejaOdottaa = vientijono.length; return; }
+        // Näkyvä laatta (aukko ruudulla) saa viennin joka kehys; ennakko odottaa väliä.
+        if (!vientijono[i].nakyva && nytT - vedonVientiViimeksi < LAATTAKERROS_VEDON_VIENTIVALI_MS) { ajaVienti(); return; }
+        const [t] = vientijono.splice(i, 1);
+        vie(t);
+        vedonVientiViimeksi = nytT;
+        mittarit.vedonVienteja = (mittarit.vedonVienteja ?? 0) + 1;
+        if (!t.nakyva) mittarit.vedonEnnakkoja = (mittarit.vedonEnnakkoja ?? 0) + 1;
+        mittarit.vientejaOdottaa = vientijono.length;
+        if (vientijono.length) ajaVienti();
+        return;
+      }
+      let n = 0;
+      while (vientijono.length && n < LAATTAKERROS_TEKSTUUREJA_PER_KEHYS) {
+        if (vie(vientijono.shift())) n += 1;
+      }
+      mittarit.vientejaOdottaa = vientijono.length;
+      if (vientijono.length) ajaVienti();
+    });
+  };
+
+  /**
+   * Liikkeen aikainen vientiehdokas: näkyvä ensin, sitten alueella pidetty
+   * (ennakko, tuki), kummassakin lähin keskeltä. Indeksi tai -1.
+   *
+   * ENNAKKO MUKAAN (mitattu WebKit 390 × 844, savuke-vientibudjetti):
+   * pelkillä näkyvillä vedon reunaan tuleva laatta puuttui muutaman
+   * kehyksen, jolloin kerros ei peittänyt ruutua ja kirjaston pohja
+   * (z5-laatat) piirtyi alle — dc 400–423 joka vedossa. Ennakon kanssa
+   * dc 42–47 (pohja piilossa) ja vientejä silti ~37 per kolme vetoa, kun
+   * vanha tahti vei samoista vedoista 36–180.
+   */
+  const vedonVientiehdokas = () => {
+    let paras = -1;
+    let parasSija = Infinity;
+    for (let i = 0; i < vientijono.length; i += 1) {
+      const t = vientijono[i];
+      if (!t.tekstuuri || laatat.get(t.avain) !== t) continue;
+      if (!t.nakyva && !t.pito) continue;
+      const sija = (t.nakyva ? 0 : 1e9) + (t.etaisyys ?? 0);
+      if (sija < parasSija) { paras = i; parasSija = sija; }
+    }
+    return paras;
+  };
+
+  /**
+   * Yksi laatta näytönohjaimelle ja sceneen. Palauttaa true, jos vienti
+   * tehtiin (orpo tai tekstuuriton laatta ei kuluta budjettia).
+   */
+  const vie = (t) => {
+    /*
+     * SAMA AVAIN EI OLE SAMA LAATTA (mitattu 19.9.2026, erä
+     * opus-local-laastari): pelilaudan z7-laatan haku oli kesken,
+     * kun Astronautin kamera avautui, ja laastari loi heti saman
+     * avaimen laatan. `laatat.has(avain)` päästi vanhan seepialaatan
+     * asentamaan verkkonsa, eikä `poista` purkanut sitä koskaan —
+     * se jäi näyttämöön läiskänä (kankaita 74, laattoja 72). Vain
+     * taulun nykyinen olio saa asentua; orpo vapautetaan tässä.
+     */
+    if (laatat.get(t.avain) !== t) {
+      t.verkko?.geometry?.dispose?.();
+      t.tekstuuri?.dispose?.();
+      t.materiaali?.dispose?.();
+      t.verkko = null; t.tekstuuri = null; t.materiaali = null;
+      mittarit.orpoja = (mittarit.orpoja ?? 0) + 1;
+      return false;
+    }
+    if (!t.tekstuuri) return false;
+    const vientiAlkoi = aika();
+    renderer?.initTexture?.(t.tekstuuri);
+    const vientiKesti = aika() - vientiAlkoi;
+    mittarit.vientiMs = (mittarit.vientiMs ?? 0) + vientiKesti;
+    mittarit.vienteja = (mittarit.vienteja ?? 0) + 1;
+    if (vientiKesti > (mittarit.vientiMax ?? 0)) mittarit.vientiMax = vientiKesti;
+    // Suoran bittikartan viennit erikseen (kohta 10: mittaus kangas vs nollakopio).
+    if (t.suoraKuva) {
+      mittarit.vientiMsSuora = (mittarit.vientiMsSuora ?? 0) + vientiKesti;
+      mittarit.vientejaSuora = (mittarit.vientejaSuora ?? 0) + 1;
+    }
+    // Suora bittikartta on nyt näytönohjaimella: keskusmuistin kopio kiinni.
+    if (t.suoraKuva) { try { t.tekstuuri.image?.close?.(); } catch { /* jo kiinni */ } }
+    t.viety = true;
+    /*
+     * VALMIS LAATTA MENEE SCENEEN, JOS SE ON YHÄ ALUEELLA — näkyvä
+     * tai juuri nähty (pito). Vanha ehto (vain `nakyva`) jätti
+     * heilurin ääripään laatan scenen ulkopuolelle, kun tekstuuri
+     * sattui valmistumaan sillä kehyksellä, jolla laatta oli
+     * käännöksen toisella puolella (omistajan palaute v1649).
+     */
+    if (t.nakyva || t.pito) {
+      lisaaSceneen(t);
+      if (kerrokset.reliefi) pyramidinLinssiketju('laatta-ruudulla');
+    }
+    return true;
+  };
+
+  /* ---------------- scene ---------------- */
+
+  const lisaaSceneen = (t) => {
+    if (!t.verkko || t.scenessa) return;
+    const juuri = kolmi()?.juuri;
+    if (!juuri) return;
+    juuri.add(t.verkko);
+    t.scenessa = true;
+    haivyta(t.materiaali, 1, haiveMs());
+  };
+
+  /**
+   * Onko ylimääräisen laatan alla valmis karkeampi laatta? Vain silloin
+   * ulos-häive on turvallinen: alla on jo koko kartta, eikä kahta
+   * karttaa jää päällekkäin (v1641:n oppi).
+   */
+  const karkeampiValmis = (t, valittu, valmiit) => {
+    if (!(valittu.z < t.z)) return false;
+    const oma = tasoZ(t.z);
+    if (!oma) return false;
+    const koko = laattaKoko();
+    const s = valittu.leveys / oma.leveys;
+    const sar = Math.floor(((t.sarake + 0.5) * koko * s) / koko);
+    const rivi = Math.floor(((t.rivi + 0.5) * koko * s) / koko);
+    return valmiit.has(`${valittu.z}/${sar}/${rivi}`);
+  };
+
+  /* ---------------- päivitys ---------------- */
+
+  const varmistaPyramidi = () => {
+    if (pyramidi !== undefined || pyramidiHaussa) return;
+    pyramidiHaussa = true;
+    mittarit.luettelo = true;
+    haePyramidinLuettelo()
+      .then((p) => { pyramidi = p ?? null; })
+      .catch(() => { pyramidi = null; })
+      .then(() => { if (!purettu) suorita(); });
+  };
+
+  /*
+   * KEHYSMITAT YHDESTÄ LÄHTEESTÄ (vika v1649). Kerros ei enää mittaa
+   * ruutua ja kameraa itse tapahtumakäsittelijän sisällä, vaan saa ne
+   * renderöintikoukusta (js/pallo.js kytkePallonKehys): täsmälleen
+   * samat luvut, samasta kehyksestä, kuin vektorikerros — ja ruudun
+   * koko siitä, mitä REALLY piirretään (renderer.getSize), ei kotelon
+   * CSS-laatikosta, joka voi olla kuoressa eri kokoinen. Ilman koukkua
+   * (yksikkötestit, savukkeet, lepoon()) mitataan kuten ennen.
+   */
+  const kehysmitat = (kehys) => {
+    if (kehys?.pov) return kehys;
+    const kam = pallo.camera?.() ?? null;
+    return {
+      pov: pallo.pointOfView?.() ?? null,
+      kamera: kam,
+      W: kotelo.clientWidth,
+      H: kotelo.clientHeight,
+      suhde: renderer?.getPixelRatio?.() ?? (ikkuna.devicePixelRatio || 1),
+      kuvasuhde: Number.isFinite(kam?.aspect) && kam.aspect > 0 ? kam.aspect : 0,
+      fov: Number.isFinite(kam?.fov) ? kam.fov : 50,
+      sade: pallo.getGlobeRadius(),
+    };
+  };
+
+  /*
+   * SHADERIT ESIKÄÄNNETÄÄN ENNEN ENSIMMÄISTÄ LAATTAA (sulavuuskatsaus
+   * 22.9.2026 kohta 7). Laattamateriaalilla on variantteja — kerma/ei,
+   * läpinäkyvä (häive) / opaakki (häiveen jälkeen), astronautin laastari
+   * (alphaTest + esikerrottu alfa + sävy) — ja three kääntää kunkin
+   * ohjelman sillä kehyksellä, jolla ensimmäinen sellainen laatta sattuu
+   * valmistumaan: kesken liikkeen, kymmeniä millisekunteja. Tässä
+   * jokaisesta variantista tehdään pieni näytemesh pallon ryhmään (säde
+   * 0,001 pallon keskellä, ei näy) ja `renderer.compileAsync` kääntää
+   * ohjelmat rinnakkain (KHR_parallel_shader_compile) heti, kun kerros
+   * tietää mitä variantteja se tekee (ensimmäinen `suorita`). Näyte-
+   * meshit poistetaan scenestä käännöksen jälkeen, mutta MATERIAALEJA EI
+   * PURETA: three vapauttaa ohjelman, kun sen viimeinen materiaali
+   * puretaan, ja esikäännös menisi hukkaan. Ohjelma-avain sisältää
+   * `transparent`-lipun, siksi molemmat. `?koe=eiesikaannos` ohittaa.
+   */
+  let esikaannetty = '';
+  let esikaannoksenNaytteet = null; // pidetään elossa (ks. yllä)
+  const esikaannaOhjelmat = (luokat) => {
+    if (kokeet.has('eiesikaannos') || typeof renderer?.compileAsync !== 'function') return;
+    const avain = `${kermaShader ? 'kerma' : 'kangas'}/${kerrokset?.astronautti ? 'astro' : 'perus'}`;
+    if (esikaannetty === avain) return;
+    const scene = pallo.scene?.(); const kamera = pallo.camera?.();
+    const juuri = luokat?.juuri;
+    if (!scene || !kamera || !juuri || !luokat.Texture || !luokat.SphereGeometry || !luokat.LaattaMateriaali) return;
+    esikaannetty = avain;
+    const kangas = luoKangas(2, 2);
+    const tekstuuri = new luokat.Texture(kangas);
+    tekstuuri.needsUpdate = true;
+    const geometria = new luokat.SphereGeometry(1e-3, 4, 2);
+    const savy = kerrokset?.astronautti ? pyramidinReliefinSavy() : null;
+    const naytteet = [];
+    for (const kerma of (kermaShader ? [true, false] : [false])) {
+      for (const transparent of [true, false]) {
+        const materiaali = new luokat.LaattaMateriaali({
+          map: tekstuuri, transparent, opacity: transparent ? 0.5 : 1, depthWrite: true,
+          polygonOffset: true, polygonOffsetFactor: 0, polygonOffsetUnits: 0,
+          ...(kerrokset?.astronautti ? { alphaTest: 0.004, premultipliedAlpha: true } : {}),
+          ...(savy === null ? {} : { color: savy }),
+        });
+        if (kerma) {
+          asennaKermaShader(materiaali, {
+            jaettu: kermanJaetut, tarkka: kokeet.has('kermapow'),
+            laatta: { alue: { x0: 0, y0: 0, w: 1, h: 1 }, paalla: true },
+          });
+        }
+        const mesh = new luokat.Mesh(geometria, materiaali);
+        mesh.renderOrder = -1000;
+        mesh.frustumCulled = false;
+        naytteet.push(mesh);
+      }
+    }
+    /*
+     * VAIN NÄYTTEET KÄÄNNETÄÄN, EI KOKO SCENEÄ (vika v2099, CI 22.9.2026:
+     * "Cannot read properties of undefined (reading 'isReady')"). three:n
+     * compileAsync(scene) ottaa jokaisen scenen materiaalin joukkoonsa ja
+     * pollaa niitä 10 ms:n välein, kunnes kaikki ohjelmat ovat valmiit;
+     * jos jokin laatta puretaan sillä välin (LRU, tason vaihto),
+     * materiaalin ominaisuudet ovat poissa ja polli kaatuu — sivuvirhe.
+     * Käännettävä on siksi OMA RYHMÄ, jossa on vain näytemeshit (ne
+     * pidetään elossa), ja oikea scene annetaan kolmantena
+     * argumenttina vain valojen lähteeksi (three: compile(scene,
+     * camera, targetScene)). Näytteitä ei lisätä sceneen lainkaan.
+     */
+    const ryhma = new (juuri.constructor)();
+    for (const n of naytteet) ryhma.add(n);
+    esikaannoksenNaytteet = naytteet;
+    mittarit.esikaannos = 'kesken';
+    const alku = aika();
+    // Kolmas argumentti (valojen scene) on r16x:n; vanhempi three ohittaa sen.
+    Promise.resolve(renderer.compileAsync(ryhma, kamera, scene)).catch(() => {}).then(() => {
+      mittarit.esikaannos = 'valmis';
+      mittarit.esikaannosMs = Math.round(aika() - alku);
+      mittarit.esikaannoksia = naytteet.length;
+    });
+  };
+
+  function suorita(kehys) {
+    if (purettu) return false;
+    const luokat = kolmi();
+    if (!luokat?.laatatValmiit || !luokat.Texture || !luokat.BufferGeometry || !luokat.BufferAttribute) {
+      return luovuta('kirjaston luokat puuttuvat');
+    }
+    varmistaPyramidi();
+    if (pyramidi === undefined) return luovuta('pyramidin luettelo haussa');
+    if (!pyramidi) return luovuta('pyramidin luetteloa ei saatu');
+    /*
+     * KOHDEMAA LUETAAN YHDESTÄ LÄHTEESTÄ (js/laattapyramidi.js
+     * variMaaNyt), jonka lauta asettaa samassa hetkessä kuin punaisen
+     * kehän (js/pallolauta/lauta.js). Kerros ei päättele maata itse:
+     * kaksi päättelyä ehtisi olla eri mieltä, ja väri on osa laatan
+     * kangasta eikä kerros, jonka voisi piilottaa jälkikäteen.
+     */
+    const variMaa = pyramidinVaritasonMaa();
+    kerrokset = lepokerroksenKerrokset(pallonSarja(), pyramidi, variMaa);
+    if (!kerrokset) return luovuta('pallon sarja ja pyramidi eri versiota');
+    esikaannaOhjelmat(luokat);
+    /*
+     * MAANVAIHTO MITÄTÖI LAATAT. Väri on kankaassa, joten vanhan maan
+     * laatta on väärä kuva eikä vanhentunut kuva — se on purettava ja
+     * haettava uudestaan. Sukupolvi kasvaa, jotta kesken oleva vienti
+     * ei asenna purettua laattaa takaisin.
+     */
+    const tasoitusNyt = kerrokset.vari ? pyramidinTasoitus() : null;
+    const tasoitusAvain = tasoitusNyt?.avain ?? '';
+    // Shaderilla tasoituksen muutos (tarkka suoja, liikkeen kohde, sumu) on
+    // pelkkä maskin päivitys; laatat pysyvät. Maanvaihto puretaan yhä.
+    if (kermaShader && tasoitusAvain !== kermanMaskiAvain) {
+      kermanMaskiAvain = tasoitusAvain;
+      paivitaKermanJaetut(kermanJaetut, tasoitusNyt, { luoKangas, Texture: luokat.Texture, THREE_LINEAR, THREE_CLAMP });
+      mittarit.kermamaskeja = (mittarit.kermamaskeja ?? 0) + 1;
+    }
+    if (variMaa !== variMaaEdellinen || (!kermaShader && tasoitusAvain !== tasoitusAvainEdellinen)
+      || kerrokset.reliefi !== reliefiEdellinen) {
+      variMaaEdellinen = variMaa;
+      tasoitusAvainEdellinen = tasoitusAvain;
+      reliefiEdellinen = kerrokset.reliefi;
+      mittarit.variMaa = kerrokset.vari ? variMaa : null;
+      mittarit.varimitatointeja += 1;
+      sukupolvi += 1;
+      jono.length = 0;
+      vientijono.length = 0;
+      tyhjennaValmistelujono();
+      for (const t of [...laatat.values()]) poista(t);
+      laatat.clear();
+      taso = null;
+    }
+    const mitat = kehysmitat(kehys);
+    const W = mitat.W;
+    const H = mitat.H;
+    if (!(W > 0 && H > 0)) return luovuta('kotelo piilossa');
+    const pov = mitat.pov;
+    if (!pov || !Number.isFinite(pov.altitude)) return luovuta('ei kameraa');
+    const linssi = {
+      fov: Number.isFinite(mitat.fov) ? mitat.fov : 50,
+      kuvasuhde: mitat.kuvasuhde > 0 ? mitat.kuvasuhde : W / H,
+      sade: mitat.sade ?? pallo.getGlobeRadius(),
+    };
+    const osuma = (x, y) => laattakerroksenOsuma(pov, (2 * x) / W - 1, 1 - (2 * y) / H, linssi);
+    const keski = osuma(W / 2, H / 2);
+    const alas = osuma(W / 2, H / 2 + LEPOKERROS_MITTAMATKA_PX);
+    if (!keski || !alas || !(Math.abs(keski.lat - alas.lat) > 1e-6)) return luovuta('keskipiste ei pallolla');
+    const naytteet = [];
+    const N = LAATTAKERROS_NAYTTEITA;
+    for (let j = 0; j < N; j += 1) {
+      for (let i = 0; i < N; i += 1) naytteet.push(osuma((W * i) / (N - 1), (H * j) / (N - 1)));
+    }
+    const { latMin, latMax } = karttaAla();
+    const raaka = lepokerroksenAlue(naytteet, pov.lng, { latMin, latMax, vara: 0 });
+    if (!raaka) return luovuta('ei näytteitä pallolla');
+    /*
+     * Vara on aina vähintään puoli astetta ja lisäksi 3 % laatikosta:
+     * reunan uudet laatat ehtivät saapua ennen kuin panorointi tuo ne
+     * näkyviin (suunnitelman luku 4.4, "reunan laatat saapuvat hitaasti").
+     */
+    const vara = Math.max(LAATTAKERROS_VARA_AST,
+      LAATTAKERROS_VARA_OSUUS * Math.max(raaka.lat1 - raaka.lat0, raaka.lon1 - raaka.lon0));
+    const alue = lepokerroksenAlue(naytteet, pov.lng, { latMin, latMax, vara }) ?? raaka;
+    // Ruudun tarve: laitepikseleitä astetta kohti keskellä (fov on pystykulma).
+    // Levon suhde, jos annettu: liikkeen alempi puskuri (tasainen tila) ei vaihda tasoa.
+    const suhde = lepoSuhde ?? mitat.suhde;
+    const tarvePxAste = (LEPOKERROS_MITTAMATKA_PX * suhde) / Math.abs(keski.lat - alas.lat);
+    /*
+     * TASO KERTOMUSLUKOSTA, JOS SE ON PÄÄLLÄ (ks. KERTOMUSLUKKO yllä).
+     * Lukittu taso otetaan LÄHTÖKOHDAKSI, ei lopputulokseksi: alla oleva
+     * silmukka laskee sitä yhä, jos alue ei mahdu laattakattoon.
+     */
+    // Katon pudottama taso ei ole hystereesin lähtökohta (ks. LAATTAKATTO_NAKYVA).
+    const hystereesinTaso = kattoRajoitti ? null : taso;
+    let valittu = kertomuslukko && Number.isFinite(kertomustaso)
+      ? (tasoZ(kertomustaso) ?? laattakerroksenTaso(pyramidi.tasot, tarvePxAste, hystereesinTaso))
+      : laattakerroksenTaso(pyramidi.tasot, tarvePxAste, hystereesinTaso);
+    /*
+     * RELIEFIN KATTO. Taso valitaan POHJAN luettelosta, jossa on z8;
+     * reliefi on poltettu z7:ään asti. Mitattu 18.9.2026
+     * (tools/savukkeet/mittaa-reliefipyramidi.mjs, Alppien lähizoomi):
+     * ilman kattoa kerros valitsi z8:n, `pyramidinKerrostasot` ei
+     * löytänyt sille reliefitasoa, pohja oli portista kiinni — ja
+     * jokainen laatta jäi tilaan `virhe`. Ruutu oli musta eikä yhtään
+     * laattapyyntöä lähtenyt. Katto on reliefin oma syvin taso; sitä
+     * karkeampi valinta on yhä tarkempi kuin yhden kuvan 30 px/aste.
+     */
+    const reliefinKatto = kerrokset.reliefi ? pyramidinReliefinSyvinTaso() : null;
+    while (valittu && Number.isFinite(reliefinKatto) && valittu.z > reliefinKatto) {
+      valittu = tasoZ(valittu.z - 1);
+    }
+    let kartta = null;
+    let nakyvatLaatat = null;
+    kattoRajoitti = false;
+    while (valittu) {
+      kartta = lepokerroksenLaatat({
+        taso: valittu, laatta: laattaKoko(), arkki: pyramidi.arkki,
+        projektio: pyramidi.projektio, alue, laudanY,
+      });
+      // Takapuoli pois ENNEN kattoa: laatikon kulmat ovat yleiskuvassa
+      // pallon toisella puolella eivätkä saa pudottaa tasoa.
+      nakyvatLaatat = kartta
+        ? kartta.laatat.filter((l) => laattakerroksenNakyvissa(laatanAlue(valittu, l.sarake, l.rivi), pov))
+        : null;
+      /*
+       * KATTO AIDOSTI NÄKYVISTÄ (ks. LAATTAKATTO_NAKYVA): varalla
+       * laajennettu alue ladataan, mutta tason pudottaa vain se, ettei
+       * näkymän oma alue mahdu kattoon.
+       */
+      const raakaKartta = nakyvatLaatat?.length ? lepokerroksenLaatat({
+        taso: valittu, laatta: laattaKoko(), arkki: pyramidi.arkki,
+        projektio: pyramidi.projektio, alue: raaka, laudanY,
+      }) : null;
+      const aidostiNakyvia = raakaKartta
+        ? raakaKartta.laatat.filter((l) => laattakerroksenNakyvissa(laatanAlue(valittu, l.sarake, l.rivi), pov)).length
+        : 0;
+      if (nakyvatLaatat?.length && aidostiNakyvia <= LAATTAKERROS_LAATTAKATTO_NAKYVA) break;
+      valittu = tasoZ(valittu.z - 1);
+      kattoRajoitti = true;
+      kartta = null;
+      nakyvatLaatat = null;
+    }
+    if (!valittu || !kartta) return luovuta('alue ei mahdu laattakattoon');
+    if (taso?.z !== valittu.z) sukupolvi += 1;
+    taso = valittu;
+    const nyt = aika();
+    const ppu = valittu.pikseliaPerYksikko;
+    const keskiX = (((keski.lng - pyramidi.projektio.lon0) / 360) * pyramidi.projektio.leveys - pyramidi.arkki.x) * ppu;
+    const keskiY = (laudanY(keski.lat) - pyramidi.arkki.y) * ppu;
+    const koko = laattaKoko();
+
+    /* 1. näkyvät laatat: tietue, latausjono ja sceneen lisäys. */
+    const nakyvat = new Set();
+    /** Tietue laatalle (luodaan tarvittaessa), etäisyys ja pito päivitettynä. */
+    const varmista = (l, nakyva) => {
+      const avain = `${valittu.z}/${l.sarake}/${l.rivi}`;
+      let t = laatat.get(avain);
+      if (!t) {
+        t = {
+          avain, z: valittu.z, sarake: l.sarake, rivi: l.rivi, alue: null, tila: 'ladataan',
+          verkko: null, materiaali: null, tekstuuri: null, kaytetty: nyt, tavut: 0,
+          nakyva, scenessa: false, viety: false, aloitettu: false, haipyy: false, jonossa: false,
+          varillinen: false, kermatta: false, tuki: false,
+          katkaisin: null, etaisyys: 0, sukupolvi, pito: true, ennakko: !nakyva,
+        };
+        laatat.set(avain, t);
+      }
+      // Etäisyys ruudun keskeltä laattapikseleinä (sauma kierretään auki).
+      let dx = (l.sarake + 0.5) * koko - keskiX;
+      while (dx > valittu.leveys / 2) dx -= valittu.leveys;
+      while (dx < -valittu.leveys / 2) dx += valittu.leveys;
+      t.etaisyys = Math.hypot(dx, (l.rivi + 0.5) * koko - keskiY);
+      t.kaytetty = nyt;
+      t.pito = true;
+      return t;
+    };
+    for (const l of nakyvatLaatat) {
+      const t = varmista(l, true);
+      nakyvat.add(t.avain);
+      t.nakyva = true;
+      t.ennakko = false;
+      t.haipyy = false;
+      // Ulos häipymässä ollut laatta palasi näkyviin: käännetään häive
+      // takaisin. Sisään häipyvään ei kosketa — uudelleenaloitus joka
+      // päivityksellä (10 kertaa sekunnissa) ei koskaan päättyisi.
+      if (t.materiaali && t.materiaali.__kohde === 0) {
+        haivyta(t.materiaali, 1, haiveMs());
+      }
+      if (t.tila === 'valmis' && t.viety && !t.scenessa) lisaaSceneen(t);
+    }
+    for (const t of laatat.values()) {
+      if (t.tuki && t.materiaali) t.materiaali.polygonOffsetUnits = LAATTAKERROS_SYVYYSSIIRTO;
+      t.tuki = false;
+      if (nakyvat.has(t.avain)) continue;
+      t.nakyva = false;
+      t.ennakko = false;
+    }
+
+    /*
+     * 1b. TUKITASO (ks. LAATTAKERROS_TUKI_ASKEL): karkeamman tason
+     * laatat näkyvän alueen alle ja ympärille. Tietue luodaan kuten
+     * ennakolle (`varmista`), mutta laatta merkitään tueksi: se ei
+     * putoa peiton alta eikä häivy, ja se on jonossa heti näkyvien
+     * jälkeen — yksi tukilaatta on suurempi turva kuin yksi ennakko.
+     */
+    const tuet = new Set();
+    {
+      const tukiVaraLat = LAATTAKERROS_TUKI_VARA * (alue.lat1 - alue.lat0);
+      const tukiVaraLon = LAATTAKERROS_TUKI_VARA * (alue.lon1 - alue.lon0);
+      const tukialue = {
+        lat0: Math.max(latMin, alue.lat0 - tukiVaraLat), lat1: Math.min(latMax, alue.lat1 + tukiVaraLat),
+        lon0: alue.lon0 - tukiVaraLon, lon1: alue.lon1 + tukiVaraLon,
+      };
+      // Nopea loitonnus: näkymä laajenee tukialueen yli ennen seuraavaa
+      // päivitystä, joten tuki otetaan tasoa karkeampana (nelinkertainen ala).
+      const edellinenKorkeus = povHistoria[povHistoria.length - 1]?.altitude;
+      const loitonnus = Number.isFinite(edellinenKorkeus)
+        && pov.altitude > edellinenKorkeus * (1 + LAATTAKERROS_TUKI_LOITONNUSRAJA);
+      const tukiaskel = LAATTAKERROS_TUKI_ASKEL + (loitonnus ? 1 : 0);
+      for (let z = valittu.z - tukiaskel; z >= 0; z -= 1) {
+        const tukitaso = tasoZ(z);
+        if (!tukitaso || !(tukitaso.leveys > 0)) continue;
+        const tukikartta = lepokerroksenLaatat({
+          taso: tukitaso, laatta: koko, arkki: pyramidi.arkki,
+          projektio: pyramidi.projektio, alue: tukialue, laudanY,
+        });
+        if (!tukikartta) break;
+        const ehdokkaat = tukikartta.laatat.filter((l) => laattakerroksenNakyvissa(laatanAlue(tukitaso, l.sarake, l.rivi), pov));
+        if (!ehdokkaat.length) break;
+        if (ehdokkaat.length > LAATTAKERROS_LAATTAKATTO_TUKI) continue;
+        const tukiPpu = tukitaso.pikseliaPerYksikko;
+        const tukiKeskiX = (((keski.lng - pyramidi.projektio.lon0) / 360) * pyramidi.projektio.leveys - pyramidi.arkki.x) * tukiPpu;
+        const tukiKeskiY = (laudanY(keski.lat) - pyramidi.arkki.y) * tukiPpu;
+        for (const l of ehdokkaat) {
+          const avain = `${tukitaso.z}/${l.sarake}/${l.rivi}`;
+          let t = laatat.get(avain);
+          if (!t) {
+            t = {
+              avain, z: tukitaso.z, sarake: l.sarake, rivi: l.rivi, alue: null, tila: 'ladataan',
+              verkko: null, materiaali: null, tekstuuri: null, kaytetty: nyt, tavut: 0,
+              nakyva: false, scenessa: false, viety: false, aloitettu: false, haipyy: false, jonossa: false,
+              varillinen: false, kermatta: false, tuki: true,
+              katkaisin: null, etaisyys: 0, sukupolvi, pito: true, ennakko: false,
+            };
+            laatat.set(avain, t);
+          }
+          let dx = (l.sarake + 0.5) * koko - tukiKeskiX;
+          while (dx > tukitaso.leveys / 2) dx -= tukitaso.leveys;
+          while (dx < -tukitaso.leveys / 2) dx += tukitaso.leveys;
+          // Etäisyys tukitason pikseleinä skaalattuna valitun tason mittaan (jonon järjestys).
+          t.etaisyys = Math.hypot(dx, (l.rivi + 0.5) * koko - tukiKeskiY) * (valittu.leveys / tukitaso.leveys);
+          t.kaytetty = nyt;
+          t.pito = true;
+          t.tuki = true;
+          if (t.materiaali) t.materiaali.polygonOffsetUnits = LAATTAKERROS_TUKI_SYVYYSSIIRTO;
+          tuet.add(avain);
+          // Tuki ei häivy ulos: käännetään häive takaisin, jos se oli alkanut.
+          if (t.materiaali && t.materiaali.__kohde === 0) {
+            haivyta(t.materiaali, 1, haiveMs());
+          }
+          t.haipyy = false;
+          if (t.tila === 'valmis' && t.viety && !t.scenessa) lisaaSceneen(t);
+        }
+        break;
+      }
+    }
+    /*
+     * 1c. ENNAKKOALUE LIIKESUUNTAAN (omistajan palaute v1649). Vara on
+     * se matka, jonka kamera kulki edellisestä päivityksestä, kerrottuna
+     * LIIKEVARA_KERROIN:lla ja MOLEMPIIN suuntiin: heiluri kääntyy
+     * takaisin, joten jo ohitettu reuna tarvitaan yhtä pian kuin edessä
+     * oleva. Ennakon laatat ladataan ja pidetään, mutta ne EIVÄT olleet
+     * mukana tason valinnassa (LAATTAKATTO_NAKYVA) — taso pysyy yhtä
+     * terävänä kuin ennen, vaikka jono kasvaa.
+     */
+    const ennakko = new Set();
+    const edellinenPov = povHistoria[povHistoria.length - 1] ?? null;
+    const kulunut = edellinenPov ? nyt - edellinenPov.hetki : Infinity;
+    const tuore = edellinenPov && kulunut <= 4 * LAATTAKERROS_PAIVITYSVALI_LIIKE_MS;
+    const lonEro = (a, b) => Math.abs(((a - b + 540) % 360) - 180);
+    // Ennuste: seuraava päivitysväli vie yhtä pitkälle kuin edellinen.
+    let varaLat = tuore ? LAATTAKERROS_LIIKEVARA_KERROIN * Math.abs(pov.lat - edellinenPov.lat) : 0;
+    let varaLon = tuore ? LAATTAKERROS_LIIKEVARA_KERROIN * lonEro(pov.lng, edellinenPov.lng) : 0;
+    while (povHistoria.length && nyt - povHistoria[0].hetki > LAATTAKERROS_PITO_MS) povHistoria.shift();
+    if (LAATTAKERROS_LIIKEVARA_PYYHKAISY) {
+      // Pyyhitty laatikko: heilurin ääripää on yhtä lähellä kuin edessä oleva.
+      for (const h of povHistoria) {
+        varaLat = Math.max(varaLat, Math.abs(pov.lat - h.lat));
+        varaLon = Math.max(varaLon, lonEro(pov.lng, h.lng));
+      }
+    }
+    povHistoria.push({ lat: pov.lat, lng: pov.lng, altitude: pov.altitude, hetki: nyt });
+    varaLat = Math.min(alue.lat1 - alue.lat0, varaLat);
+    varaLon = Math.min(alue.lon1 - alue.lon0, varaLon);
+    if (varaLat > 0 || varaLon > 0) {
+      const laaja = {
+        lat0: Math.max(latMin, alue.lat0 - varaLat), lat1: Math.min(latMax, alue.lat1 + varaLat),
+        lon0: alue.lon0 - varaLon, lon1: alue.lon1 + varaLon,
+      };
+      const ennakkoKartta = lepokerroksenLaatat({
+        taso: valittu, laatta: koko, arkki: pyramidi.arkki,
+        projektio: pyramidi.projektio, alue: laaja, laudanY,
+      });
+      /*
+       * ENNAKON EHDOKKAAT YHDELLÄ KIERROKSELLA JA KATTO HETI (7.9.2026).
+       * Ennen tästä lähti kaksi `filter`-kierrosta, jotka rakensivat
+       * välitaulukot KAIKISTA laajennetun alueen laatoista ennen kuin
+       * katto (LAATTAKERROS_LAATTAKATTO_ENNAKKO) edes katsoi niitä.
+       * Laajennus on enintään kolminkertainen kumpaankin suuntaan, eli
+       * yhdeksänkertainen laattamäärä: 24 näkyvästä tulee yli 200
+       * ehdokasta, joista katto ottaa 96. Nyt sama kierros tekee
+       * suodatuksen ja lisäyksen ja pysähtyy kattoon.
+       */
+      /*
+       * ENNAKON KATTO MUISTISTA (sulavuus E2, 21.9.2026). Tavukatto
+       * (LAATTAKERROS_LAATTAKATTO_TAVUT) on 68 laattaa 512 px:n
+       * mipmapatuilla laatoilla, ja näkyvät + tuki + 96 ennakkoa eivät
+       * mahdu siihen. LRU purki silloin juuri käytettyjä laattoja, jotka
+       * seuraava päivitys tilasi uudestaan — mitattu puhelinnäkymässä
+       * 4×: 391 purkua ja 864 pyyntöä jo ennen ensimmäistä mittausvaihetta.
+       * Ennakkoa tilataan vain sen verran kuin muistiin mahtuu näkyvien
+       * ja tukien jälkeen; loput ennakosta on pelkkää kirjanpitoa.
+       */
+      const tavuaPerLaatta = koko * koko * 4 * (renderer?.capabilities?.isWebGL2 ? 4 / 3 : 1);
+      const mahtuu = Math.floor(tavukatto() / tavuaPerLaatta);
+      const ennakkoKatto = Math.max(0, Math.min(LAATTAKERROS_LAATTAKATTO_ENNAKKO,
+        mahtuu - nakyvat.size - tuet.size - LAATTAKERROS_ENNAKKO_MUISTIVARA));
+      for (const l of ennakkoKartta?.laatat ?? []) {
+        if (ennakko.size >= ennakkoKatto) break;
+        if (nakyvat.has(`${valittu.z}/${l.sarake}/${l.rivi}`)) continue;
+        if (!laattakerroksenNakyvissa(laatanAlue(valittu, l.sarake, l.rivi), pov)) continue;
+        const t = varmista(l, false);
+        t.ennakko = true;
+        ennakko.add(t.avain);
+        if (t.tila === 'valmis' && t.viety && !t.scenessa) lisaaSceneen(t);
+      }
+    }
+    /*
+     * 1d. ZOOMIENNAKKO (ks. LAATTAKERROS_ZOOMIENNAKKO_OSUUS): kamera
+     * laskee ja seuraava taso on lähellä → sen laatat keskialueelta
+     * muistiin ennen vaihtoa. Ei kertomuslukossa (taso on lukittu).
+     */
+    let zoomiennakkoja = 0;
+    const laskee = Number.isFinite(edellinenPov?.altitude) && pov.altitude < edellinenPov.altitude * 0.999;
+    if (laskee && !kertomuslukko) {
+      const seuraava = tasoZ(valittu.z + 1);
+      /*
+       * Vaihto on lähellä kahdella tavalla: tarve ylittää kynnyksen
+       * ZOOMIENNAKKO_OSUUS:n sisällä, TAI taso on jo laattakaton
+       * rajoittama (tarve on hienompi kuin valittu) — silloin vaihto
+       * tulee heti, kun näkyvä joukko mahtuu kattoon zoomin edetessä.
+       */
+      const tarveKohta = lepokerroksenTaso(pyramidi.tasot, tarvePxAste * (1 + LAATTAKERROS_ZOOMIENNAKKO_OSUUS), LAATTAKERROS_TERAVYYS);
+      const reliefinKattoZ = kerrokset.reliefi ? pyramidinReliefinSyvinTaso() : null;
+      if (seuraava && tarveKohta && (tarveKohta.z >= seuraava.z || kattoRajoitti)
+        && !(Number.isFinite(reliefinKattoZ) && seuraava.z > reliefinKattoZ)) {
+        const kw = (raaka.lon1 - raaka.lon0) * LAATTAKERROS_ZOOMIENNAKKO_KESKIOSUUS / 2;
+        const kh = (raaka.lat1 - raaka.lat0) * LAATTAKERROS_ZOOMIENNAKKO_KESKIOSUUS / 2;
+        const kx = (raaka.lon0 + raaka.lon1) / 2;
+        const ky = (raaka.lat0 + raaka.lat1) / 2;
+        const keskialue = { lon0: kx - kw, lon1: kx + kw, lat0: Math.max(latMin, ky - kh), lat1: Math.min(latMax, ky + kh) };
+        const zoomiKartta = lepokerroksenLaatat({
+          taso: seuraava, laatta: koko, arkki: pyramidi.arkki, projektio: pyramidi.projektio, alue: keskialue, laudanY,
+        });
+        const tavuaPerLaatta = koko * koko * 4 * (renderer?.capabilities?.isWebGL2 ? 4 / 3 : 1);
+        const mahtuu = Math.floor(tavukatto() / tavuaPerLaatta);
+        const katto = Math.max(0, Math.min(LAATTAKERROS_LAATTAKATTO_ZOOMIENNAKKO,
+          mahtuu - nakyvat.size - tuet.size - ennakko.size - LAATTAKERROS_ENNAKKO_MUISTIVARA));
+        const seurPpu = seuraava.pikseliaPerYksikko;
+        const seurKeskiX = keskiX * (seurPpu / ppu);
+        const seurKeskiY = keskiY * (seurPpu / ppu);
+        const ehdokkaat = (zoomiKartta?.laatat ?? [])
+          .filter((l) => laattakerroksenNakyvissa(laatanAlue(seuraava, l.sarake, l.rivi), pov))
+          .map((l) => {
+            let dx = (l.sarake + 0.5) * koko - seurKeskiX;
+            while (dx > seuraava.leveys / 2) dx -= seuraava.leveys;
+            while (dx < -seuraava.leveys / 2) dx += seuraava.leveys;
+            return { l, d: Math.abs(dx) };
+          })
+          .sort((a, b) => a.d - b.d);
+        for (const { l } of ehdokkaat) {
+          if (zoomiennakkoja >= katto) break;
+          const avain = `${seuraava.z}/${l.sarake}/${l.rivi}`;
+          let t = laatat.get(avain);
+          if (!t) {
+            t = {
+              avain, z: seuraava.z, sarake: l.sarake, rivi: l.rivi, alue: null, tila: 'ladataan',
+              verkko: null, materiaali: null, tekstuuri: null, kaytetty: nyt, tavut: 0,
+              nakyva: false, scenessa: false, viety: false, aloitettu: false, haipyy: false, jonossa: false,
+              varillinen: false, kermatta: false, tuki: false,
+              katkaisin: null, etaisyys: 0, sukupolvi, pito: true, ennakko: true,
+            };
+            laatat.set(avain, t);
+          }
+          // Jonon järjestys: keskeltä ulospäin, valitun tason mitassa (kuten liikevaralla).
+          let dx = (l.sarake + 0.5) * koko - seurKeskiX;
+          while (dx > seuraava.leveys / 2) dx -= seuraava.leveys;
+          while (dx < -seuraava.leveys / 2) dx += seuraava.leveys;
+          t.etaisyys = Math.hypot(dx, (l.rivi + 0.5) * koko - seurKeskiY) * (valittu.leveys / seuraava.leveys);
+          t.kaytetty = nyt;
+          t.pito = true;
+          if (!t.nakyva && !t.tuki) t.ennakko = true;
+          zoomiennakkoja += 1;
+        }
+      }
+    }
+    mittarit.zoomiennakkoja = zoomiennakkoja;
+    /*
+     * 1e. ESILATAUS LEVOSSA (js/laattaesilataus.js): kamera paikallaan
+     * ESILATAUS_LEPO_MS eikä sormi alhaalla → seuraavan tason laatat
+     * näkymän laatikosta × LIIKEVARA jonon kärkeen ja yksi erä
+     * palvelutyöntekijälle. Ei kertomuslukossa eikä reliefilinssissä
+     * (eri laatasto). Sama laatikko lasketaan vain kerran (avain).
+     */
+    if (esilataus) {
+      const liikkui = !edellinenPov
+        || Math.abs(pov.lat - edellinenPov.lat) > 1e-6 || lonEro(pov.lng, edellinenPov.lng) > 1e-6
+        || Math.abs(pov.altitude - edellinenPov.altitude) > 1e-9;
+      if (liikkui || liikkeessaNyt) viimeLiike = nyt;
+      const levossa = nyt - viimeLiike >= ESILATAUS_LEPO_MS && !kertomuslukko && !kerrokset.reliefi;
+      if (levossa) {
+        if (esilatausMaaOdottaa) annaEsilatausMaa();
+        const seuraava = tasoZ(valittu.z + 1);
+        if (seuraava) {
+          const laatikko = laajennaLaatikko(raaka, ESILATAUS_LIIKEVARA, latMin, latMax);
+          const avain = `${seuraava.z}|${laatikko.lon0.toFixed(2)},${laatikko.lat0.toFixed(2)},${laatikko.lon1.toFixed(2)},${laatikko.lat1.toFixed(2)}`;
+          if (avain !== esilatausNakymaAvain) {
+            esilatausNakymaAvain = avain;
+            const kartta = lepokerroksenLaatat({
+              taso: seuraava, laatta: koko, arkki: pyramidi.arkki, projektio: pyramidi.projektio, alue: laatikko, laudanY,
+            });
+            esilataus.nakyma(laattojenOsoitteet({
+              laatat: kartta?.laatat ?? [], kerrostasot: kaytossaKerrostasot(seuraava.z),
+              olemassa: pyramidinLaattaOlemassa, osoite: pyramidinLaattaUrl,
+            }));
+          }
+        }
+        esilataus.askel(true);
+      }
+      mittarit.esilataus = esilataus.mittarit();
+    }
+    /*
+     * PITO: laatta, joka on ollut näkyvissä tai ennakossa viimeisen
+     * LAATTAKERROS_PITO_MS:n aikana, ei putoa jonosta eikä LRU:n
+     * määräkatosta. Tavukatto purkaa yhä (ks. laattakerroksenLRU).
+     */
+    for (const t of laatat.values()) {
+      const tuore = nyt - (t.kaytetty ?? 0) <= LAATTAKERROS_PITO_MS;
+      /*
+       * KERTOMUSLUKOSSA PITO EI VANHENE — MUTTA VAIN VALMIILLA
+       * LAATALLA (ks. KERTOMUSLUKKO yllä). Pito on kaksikäyttöinen: se
+       * suojaa LRU:lta JA pitää tietueen latausjonossa (`t.jonossa`
+       * alla). Jos lukko pitäisi myös aloittamattomat tietueet, jokainen
+       * laatta, jonka kamera on lennollaan ohittanut, jäisi jonoon
+       * ikuisesti — lukko lisäisi pyyntöjä sen sijaan että vähentäisi
+       * niitä. Valmis laatta ei ole jonossa, joten sen pito on pelkkää
+       * muistisuojaa: juuri se, mitä tässä haetaan.
+       */
+      t.pito = tuore || (kertomuslukko && t.tila === 'valmis');
+    }
+
+    /* 2. ylimääräiset: poista peiton alta, häivytä karkeamman päältä, muuten pidä. */
+    const valmiit = new Set();
+    for (const t of laatat.values()) {
+      if (t.tila === 'valmis' && t.scenessa && t.materiaali && t.materiaali.opacity >= 1) valmiit.add(t.avain);
+    }
+    // Suoraan Mapista ilman kopiota (kohta 11: ei taulukoita kehyspolussa); nykyisen
+    // alkion poisto kesken Map-iteroinnin on turvallista.
+    for (const t of laatat.values()) {
+      if (t.nakyva || t.tuki || !t.scenessa || t.haipyy) continue;
+      if (t.z < valittu.z && laattakerroksenPeitto(t, valmiit, pyramidi.tasot, {
+        laattaKoko: koko, kohdeZ: valittu.z,
+      })) { piilota(t); continue; }
+      if (!karkeampiValmis(t, valittu, valmiit)) continue;
+      t.haipyy = true;
+      haivyta(t.materiaali, 0, haiveMs(), () => poista(t));
+    }
+
+    /*
+     * 3. LRU: näkymättömiä valmiita muistissa katon verran. Sitä ennen
+     * pois ALOITTAMATTOMAT tietueet, joita ei enää katsota eikä pidetä:
+     * ne ovat pelkkää kirjanpitoa (jono kootaan näkyvistä ja pidetyistä),
+     * ja laatta luodaan tarvittaessa uudestaan samalla avaimella.
+     */
+    for (const t of laatat.values()) {
+      if (!t.nakyva && !t.pito && t.tila === 'ladataan' && !t.aloitettu) poista(t);
+    }
+    // Määräkatto samassa suhteessa kuin tavukatto (osoitinlaite 2×).
+    const maarakatto = LAATTAKERROS_LAATTAKATTO_MUISTI * (kosketuslaite() ? 1 : LAATTAKERROS_TAVUKERROIN_OSOITIN);
+    for (const avain of laattakerroksenLRU(laatat.values(), maarakatto, tavukatto())) {
+      const t = laatat.get(avain);
+      if (t && !t.haipyy) poista(t);
+    }
+
+    /*
+     * 4. Latausjono KOOTAAN JOKA PÄIVITYKSELLÄ näkyvistä lataamattomista,
+     * lähin ensin. Zoomatessa taso vaihtuu monta kertaa sekunnissa, ja
+     * kertaalleen jonoon jätetyt vanhentuneet tietueet veisivät kaistan
+     * laatoilta, joita ei enää katsota (mitattu: jono ei tyhjentynyt
+     * zoomin aikana lainkaan). Kesken oleva lataus jatkuu loppuun —
+     * liike ei peru latauksia, vain vanhentuneiden lisäyksen sceneen.
+     *
+     * JONOSSA OVAT MYÖS PIDETYT (v1649:n korjaus): heilurin ääripäässä
+     * laatta on näkyvissä yhden päivityksen ajan, eikä se ehtinyt
+     * latauspaikkaan ennen kuin vanha ehto (`t.nakyva`) pudotti sen
+     * jonosta seuraavalla päivityksellä — se jäi ikuisesti tilaan
+     * "ladataan", ja pohjan Z5 näkyi sen kohdalla joka käännöksellä.
+     */
+    jono.length = 0;
+    for (const t of laatat.values()) {
+      // `jonossa` on tietueen oma lippu eikä erillinen Set: mittarit
+      // luetaan samalla kierroksella kuin kaikki muukin (ks. alla).
+      t.jonossa = (t.nakyva || t.pito) && t.tila === 'ladataan' && !t.aloitettu;
+      if (t.jonossa) jono.push(t);
+    }
+
+    /*
+     * MITTARIT YHDELLÄ KIERROKSELLA (7.9.2026). Ennen tästä lähti
+     * kahdeksan erillistä `filter`/`reduce`-kierrosta ja kaksi taulukko-
+     * kopiota kaikista tietueista — kymmenen sadan alkion varausta
+     * JOKAISELLA päivityksellä, eli 100 kertaa sekunnissa liikkeessä.
+     * Kehysaikaa se ei yksinään syönyt paljon, mutta roskaa kyllä, ja
+     * roskienkeruun tauko on juuri se 30 ms:n nykäys, jota mitataan
+     * (jäljessä V8.GC_MC_BACKGROUND_MARKING 845 ms / 4 s). Sama tulos,
+     * yksi kierros, ei yhtään varausta.
+     */
+    let jumissa = 0;
+    let laattojaN = 0;
+    let valmiitaN = 0;
+    let hapyviaN = 0;
+    let scenessaN = 0;
+    let nakyviaScenessa = 0;
+    let nakyviaTaysin = 0;
+    let pidettyjaN = 0;
+    let tavuja = 0;
+    let varillisiaN = 0;
+    for (const t of laatat.values()) {
+      laattojaN += 1;
+      tavuja += t.tavut ?? 0;
+      if (t.varillinen) varillisiaN += 1;
+      if (t.tila === 'valmis') valmiitaN += 1;
+      if (t.tila === 'ladataan' && !t.aloitettu && !t.jonossa) jumissa += 1;
+      if (t.scenessa) {
+        scenessaN += 1;
+        const tayte = t.materiaali ? t.materiaali.opacity : 0;
+        if (tayte < 1) hapyviaN += 1;
+        if (t.nakyva) {
+          nakyviaScenessa += 1;
+          if (t.materiaali && tayte >= 1) nakyviaTaysin += 1;
+        }
+      }
+      if (t.pito && !t.nakyva) pidettyjaN += 1;
+    }
+    /*
+     * PEITTO NÄYTEPISTEISTÄ (sulavuus E2, 21.9.2026): monessako
+     * näkyvän alueen 9 × 9 -näytepisteessä on scenessä TÄYSIN
+     * häivytetty laatta (mitä tahansa tasoa) — se on pelaajan
+     * "pohja näkyy" -mitta; `peittoTaso` sama vain nykyisellä tasolla.
+     * Vanhan tason laatta on peittoa (kuva on karkeampi, ei tyhjä).
+     */
+    let naytteitaPallolla = 0;
+    let peitetty = 0;
+    let peitettyTaso = 0;
+    const scenenLaatat = [];
+    for (const t of laatat.values()) {
+      if (t.scenessa && t.alue && t.materiaali && t.materiaali.opacity >= 0.98) scenenLaatat.push(t);
+    }
+    for (const n of naytteet) {
+      if (!n) continue;
+      naytteitaPallolla += 1;
+      let osui = false;
+      let osuiTaso = false;
+      for (const t of scenenLaatat) {
+        const a = t.alue;
+        if (n.lat < a.lat0 || n.lat > a.lat1) continue;
+        let dl = n.lng - a.lon0;
+        dl -= 360 * Math.floor((dl + 180) / 360);
+        const lev = a.lon1 - a.lon0;
+        if (dl < 0 || dl > lev) continue;
+        osui = true;
+        if (t.z === taso?.z) { osuiTaso = true; break; }
+      }
+      if (osui) peitetty += 1;
+      if (osuiTaso) peitettyTaso += 1;
+    }
+    mittarit.naytteitaPallolla = naytteitaPallolla;
+    mittarit.peittoOsuus = naytteitaPallolla ? +(peitetty / naytteitaPallolla).toFixed(3) : null;
+    mittarit.peittoTaso = naytteitaPallolla ? +(peitettyTaso / naytteitaPallolla).toFixed(3) : null;
+    mittarit.jumissa = jumissa;
+    mittarit.nakyvia = nakyvat.size;
+    mittarit.kattoRajoitti = kattoRajoitti;
+    mittarit.nakyviaScenessa = nakyviaScenessa;
+    mittarit.nakyviaTaysin = nakyviaTaysin;
+    mittarit.ennakkoja = ennakko.size;
+    mittarit.tukia = tuet.size;
+    /*
+     * KOELIPPU `?koe=vahemmandc` (Fable 22.9.2026): kun näkyvä ala on
+     * TÄYSIN peitetty (peittoOsuus === 1), tuki- ja ennakkolaatat eivät
+     * näy mistään — ne ovat varalla tasonvaihtoa ja panorointia varten.
+     * Kokeessa ne piilotetaan scenestä, jolloin piirtokutsuja on
+     * vähemmän eikä kuvassa muutu mitään. Häipyvää laattaa ei koskaan
+     * piiloteta: se on kesken olevaa ristihäivytystä.
+     *
+     * Mittaus, ei oletus: jos peitto arvioi väärin, kokeessa vilahtaa
+     * pohja. Siksi näkyvyys palautetaan heti, kun peitto ei ole täysi.
+     */
+    if (vahemmanDc) {
+      const taysi = mittarit.peittoOsuus === 1;
+      let piilossa = 0;
+      for (const t of laatat.values()) {
+        if (!t.scenessa || !t.verkko) continue;
+        const piiloon = taysi && !t.nakyva && !t.haipyy;
+        if (piiloon) piilossa += 1;
+        if (t.verkko.visible !== !piiloon) t.verkko.visible = !piiloon;
+      }
+      mittarit.piilotettuja = piilossa;
+    }
+    // Syvyyssiirto aseman mukaan joka päivityksellä: taso vaihtui tai laatta vaihtoi roolia.
+    for (const t of laatat.values()) {
+      if (!t.materiaali) continue;
+      const siirto = laatanSyvyyssiirto(t, valittu.z);
+      if (t.materiaali.polygonOffsetUnits !== siirto) t.materiaali.polygonOffsetUnits = siirto;
+    }
+    mittarit.pidettyja = pidettyjaN;
+    mittarit.tila = 'nakyy';
+    mittarit.taso = valittu.z;
+    mittarit.laattoja = laattojaN;
+    mittarit.valmiita = valmiitaN;
+    mittarit.hapyvia = hapyviaN;
+    mittarit.scenessa = scenessaN;
+    mittarit.kaytetytTavut = tavuja;
+    mittarit.varillisia = varillisiaN;
+    mittarit.variMaa = kerrokset.vari ? variMaaEdellinen : null;
+    mittarit.pyydettyja = pyydetyt.size;
+    mittarit.paivityksia += 1;
+    mittarit.syy = '';
+    kaynnista();
+    // Vedon budjetti: jonon laatta voi tulla näkyviin vasta tässä päivityksessä.
+    if (liikkeessaNyt && vientijono.length) ajaVienti();
+    return true;
+  }
+
+  /*
+   * `kehys` on renderöintikoukun kehysmitat (js/pallo.js
+   * kytkePallonKehys) tai null/vanha pov-argumentti: silloin mitat
+   * luetaan kuten ennen. Kutsuja EI enää ole tapahtumakäsittelijä.
+   */
+  const paivita = (kehys, liikkeessa = false, { liike = null } = {}) => {
+    if (purettu || lukittu) return false;
+    const nyt = kehys?.aika ?? aika();
+    /*
+     * `liike` on kutsujan tieto kameran liikkeestä (pallo.js: lepoajastin
+     * käy); `liikkeessa` on vain harvennuksen lippu, joka piirtokoukusta
+     * on aina tosi. Koe `vientilepo` lukee tätä.
+     */
+    const liikkuu = liike == null ? Boolean(liikkeessa) : Boolean(liike);
+    if (liikkeessaViimeksi && !liikkuu) { liikkeessaViimeksi = false; ajaVienti(); }
+    // Koe eihaivevedossa: liikkeen alkaessa kesken olevat häiveet päättyvät heti.
+    if (eiHaiveVedossa && liikkuu && !liikkeessaViimeksi) paataHaiveet();
+    liikkeessaViimeksi = liikkuu;
+    liikkeessaNyt = liikkuu;
+    if (liikkeessa && nyt - viimePaivitys < LAATTAKERROS_PAIVITYSVALI_LIIKE_MS) return false;
+    viimePaivitys = nyt;
+    return suorita(kehys);
+  };
+
+  return {
+    paivita,
+    /** Päivitä heti ilman harvennusta (savukkeet ja vartijat). */
+    kokoa: () => paivita(null, false),
+    /** Lepokerroksen rajapinta: kerros päivittyy, se ei kokoa eikä piiloudu. */
+    levossa: () => paivita(null, false),
+    piilota: () => false,
+    /**
+     * Päivitys seis (true) tai taas käyntiin (false). Ks. LUKKO yllä.
+     * Palauttaa lukon tilan, jotta kutsuja voi mitata sen.
+     */
+    lukitse: (paalla) => {
+      lukittu = Boolean(paalla);
+      if (!lukittu) ajaVienti();
+      return lukittu;
+    },
+    /** Onko kerros lukossa (savukkeet ja vartijat). */
+    lukossa: () => lukittu,
+    /**
+     * Kohdemaan laatat (ESILATAUS_MAATASOT) esilatausjonon perään:
+     * `laatikko` asteina { lon0, lat0, lon1, lat1 } (lauta.js maanvaihdossa).
+     * Erät lähtevät lepopäivityksissä näkymän z+1:n jälkeen.
+     */
+    asetaEsilatausMaa: (iso, laatikko) => {
+      if (!esilataus || !laatikko) return 0;
+      // Luettelo voi olla vielä matkalla: maa jää odottamaan lepopäivitystä.
+      esilatausMaaOdottaa = { iso, laatikko };
+      return annaEsilatausMaa();
+    },
+    /** Esilatausjonon mittarit (savukkeet) tai null. */
+    esilataus: () => (esilataus ? esilataus.mittarit() : null),
+    /**
+     * KERTOMUSLUKKO päälle (true) tai pois (false). Ks. KERTOMUSLUKKO
+     * yllä. Päälle mennessä naulataan se taso, joka on juuri nyt
+     * valittuna — siis se, jonka laatat ovat jo ladattuina; pois
+     * mennessä lukko ja naula katoavat, ja seuraava päivitys valitsee
+     * tason taas tarpeesta. Palauttaa naulatun tason (z) tai null.
+     */
+    lukitseKertomus: (paalla) => {
+      kertomuslukko = Boolean(paalla);
+      kertomustaso = kertomuslukko ? (taso?.z ?? null) : null;
+      mittarit.kertomustaso = kertomustaso;
+      /*
+       * Lukon auetessa puretaan ne laatat, jotka koottiin ILMAN kerman
+       * maalausta (ks. TYHJÄ KERMALAATTA). Pelin omalla kartalla kerman
+       * marginaali kuuluu kuvaan, joten ne on koottava uudelleen; muita
+       * laattoja ei pureta, eikä kartta siis välähdä sulkiessa.
+       */
+      if (!kertomuslukko) {
+        for (const t of [...laatat.values()]) if (t.kermatta) poista(t);
+      }
+      return kertomustaso;
+    },
+    /** Kertomuslukon tila savukkeille: naulattu z tai null. */
+    kertomuslukossa: () => (kertomuslukko ? kertomustaso : null),
+    /*
+     * TILA JA SYY ILMAN VARAUSTA (7.9.2026). `mittarit()` kopioi koko
+     * mittaritaulun JA pyydettyjen osoitteiden joukon taulukoksi —
+     * satoja merkkijonoja. js/pallo.js kutsui sitä `vapautaPohja`ssa
+     * JOKA PIIRRETYLLÄ KEHYKSELLÄ pelkän kahden kentän takia, eli
+     * roskaa 60 kertaa sekunnissa. Nämä kaksi lukevat saman tiedon
+     * varaamatta mitään; `mittarit()` jää savukkeille ja raporteille.
+     */
+    tila: () => mittarit.tila,
+    syy: () => mittarit.syy,
+    /** Valmistelun hinta (ms, kpl, pisin) savukkeelle — ei varausta. */
+    valmistelu: () => [mittarit.valmisteluMs, mittarit.valmisteluja, mittarit.valmisteluMax],
+    /** Käynnissä olevia häiveitä (yksi jono, ks. YKSI HÄIVYTYSJONO). */
+    haiveita: () => haiveet.size,
+    /** Peittääkö kerros koko näkyvän alueen juuri nyt (pohjan tarve)? */
+    peittaa: () => mittarit.nakyvia > 0 && mittarit.nakyviaScenessa >= mittarit.nakyvia,
+    /**
+     * Peittääkö kerros KOKO RUUDUN täysin häivytetyillä laatoilla: jokainen
+     * 9 × 9 -näytepiste on pallolla (reuna ei näy) ja jokaisen alla on
+     * scenessä täysin häivytetty laatta (mitä tahansa tasoa). Vain silloin
+     * kirjaston pohja (pohjapallo + z5) voidaan jättää piirtämättä
+     * (js/pallo.js POHJA PIILOON). Lukossa tai purettuna ei koskaan.
+     */
+    peittaaKokonaan: () => !purettu && !lukittu && mittarit.tila === 'nakyy'
+      && mittarit.nakyvia > 0 && mittarit.nakyviaScenessa >= mittarit.nakyvia
+      && mittarit.naytteitaPallolla === LAATTAKERROS_NAYTTEITA * LAATTAKERROS_NAYTTEITA
+      && mittarit.peittoOsuus === 1,
+    mittarit: () => ({ ...mittarit, pyydetyt: [...pyydetyt], nakyvissa: mittarit.scenessa > 0 }),
+    pura: () => {
+      purettu = true;
+      sukupolvi += 1;
+      for (const n of esikaannoksenNaytteet ?? []) n.parent?.remove(n);
+      esikaannoksenNaytteet = null;
+      if (vientiRaf) ikkuna.cancelAnimationFrame?.(vientiRaf);
+      vientiRaf = 0;
+      if (haiveRaf) ikkuna.cancelAnimationFrame?.(haiveRaf);
+      haiveRaf = 0;
+      haiveet.clear();
+      if (aloitusRaf) ikkuna.cancelAnimationFrame?.(aloitusRaf);
+      aloitusRaf = 0;
+      if (katkoAjastin) ikkuna.clearTimeout?.(katkoAjastin);
+      katkoAjastin = 0;
+      vientijono.length = 0;
+      tyhjennaValmistelujono();
+      jono.length = 0;
+      povHistoria.length = 0;
+      aluemuisti.clear();
+      rivimuisti.clear();
+      for (const t of [...laatat.values()]) poista(t);
+      laatat.clear();
+      sulkeVarakuvat();
+      mittarit.tila = 'purettu';
+      mittarit.laattoja = 0;
+      mittarit.scenessa = 0;
+    },
+  };
+}
