@@ -130,6 +130,8 @@ namespace Matkakirja.Editori
             // Skeema 1.42: maakunnat 138 maasta. Maakohtainen kuten webin asetaMaa (lauta.js:5098): vain pelaajan maan
             // alueet, tunnuskartta maan omasta rajauksesta (Maakuntajako), teksel noin 1,2 km (suurilla mailla karkeampi).
             maakunnat.maakohtainen = true;
+            // Löydös 113: kohdemaan ohuet rajat oletuksena (web: nimiötason poltetut rajat), täyttö valinnasta.
+            maakunnat.oletusrajat = true;
             // Rajat vektoriviivoina (Fable 24.9.): täyttö 1,2 km:n tunnuskartasta, rajan tarkkuus aineistosta.
             maakunnat.rajaMateriaali = Materiaali("Rajaviiva", "Matkakirja/Rajaviiva", new Color(0.23f, 0.18f, 0.13f, 0.8f));
             kerrokset.maakunnat = maakunnat;
