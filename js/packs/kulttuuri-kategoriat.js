@@ -118320,6 +118320,290 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Arrau turtle',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Kohde on jokisaari ja
+       * kansallispuisto, ei kaupunki, joten opas kulkee porttikaupunkien,
+       * joen ja vuodenaikojen kautta. Taustatiedot englannin Wikipediasta
+       * (Bananal Island, Araguaia National Park, Araguaia River, Cantão
+       * State Park, Karajá, Palmas (Tocantins), World Indigenous Games,
+       * Bananal antbird, Arapaima, Peacock bass, Potamotrygonidae, FUNAI),
+       * Wikivoyagesta (Araguaia National Park, Tocantins, Palmas, Brazil:
+       * Stay healthy ja Stay safe) ja portugalin Wikipediasta (Ilha do
+       * Bananal: Transbananal, Mata do Mamãon avá-canoeirot, ilmasto;
+       * Parque Nacional do Araguaia: ICMBion toimisto Piumissa; Parque
+       * Estadual do Cantão: järvet, igapó, piranheira, palot; Caseara, Pium
+       * (nimen tupi-etymologia), Rio do Côco (Praia do Sol), Araguacema
+       * (Praia da Gaivota), São Miguel do Araguaia (Luiz Alves,
+       * Carnaraguaia), Rio Javaés (kalalajit), Piracema, Período de
+       * defeso, Praça dos Girassóis, Aeroporto de São Félix do Araguaia,
+       * Juanahu Karajá, Jogos Mundiais dos Povos Indígenas, Narubia
+       * Werreria) — teksti omaa. Hinnat, aukioloajat ja aikataulut jätetty
+       * pois. Nostojen ja gallerioiden aiheita (saaren synty ja koko,
+       * löytöhistoria ja Villas Bôas, suojelu 1959/1973/Unesco, tulvapulssi
+       * yleisesti, jättiläissaukot ja jaguaari, jokidelfiini,
+       * kilpikonnarannat, inyjen kieli ja väkiluku, ritxoko-nuket,
+       * sulkakoristeet) ei toisteta. Kuvien lisenssit ja tekijät
+       * tarkistettu Commonsin extmetadatasta, kuvat katsottu silmin ja
+       * tiedostonimet tarkistettu käyttämättömiksi. Pystykuva: jabiru
+       * Cantãon hiekkasärkällä.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Parque Estadual do Cantão - Jorge Lansarin(01).jpg',
+          lyhyt: 'Jabiru Araguaian hiekkasärkällä Cantãon puistossa saaren pohjoiskärjen naapurissa.',
+          selite: 'Suuri valkoinen haikaralintu, jolla on musta paljas pää '
+            + 'ja kaula sekä punainen kaulus, seisoo pitkillä jaloillaan '
+            + 'hiekalla kuivan pensaikon edessä. Kuva on otettu toukokuussa '
+            + '2022 Cantãon osavaltionpuistossa, jonka Javaés-joki erottaa '
+            + 'Araguaian kansallispuistosta.',
+          lahde: 'Jorge Lansarin, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Ilha do Bananalille ei johda siltaa, joten matka päättyy '
+          + 'aina veneeseen. Tavallisin reitti kulkee Tocantinsin '
+          + 'pääkaupungin Palmasin kautta itärannan pikkukaupunkeihin, mutta '
+          + 'saarelle pääsee myös lännestä Mato Grosson São Félix do '
+          + 'Araguaiasta ja etelästä Goiásin Luiz Alvesista. Pohjoinen '
+          + 'kolmannes on Araguaian kansallispuistoa ja loput kaksi '
+          + 'kolmannesta alkuperäiskansojen maata, jonne mennään vain luvan ja '
+          + 'paikallisen oppaan kanssa. Paras matka-aika on kuiva kausi '
+          + 'toukokuusta lokakuuhun, kun joesta nousee valkoisia hiekkasärkkiä '
+          + 'ja rannoille pystytetään kesäleirejä. Marraskuusta huhtikuuhun '
+          + 'sataa, ja alkuvuodesta osa saaresta on veden alla. Kalastajat '
+          + 'tulevat tucunarén perässä, lintuharrastajat etsivät saaren omaa '
+          + 'muurahaislintua. Hyttyskarkote ja aurinkosuoja kuuluvat '
+          + 'varustukseen, ja keltakuumerokotusta kannattaa harkita.',
+        artikkeli: {
+          nimi: 'Matkailijan Ilha do Bananal',
+          teksti: 'Maailman suurimmalle jokisaarelle mennään veneellä, oppaan kanssa ja joen aikataulussa.',
+          nosto: 'Kansallispuiston toimisto on Piumissa, kaupungissa, jonka '
+            + 'nimi tulee vanhan tupin kielen mäkärää tarkoittavasta sanasta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Joen yli, ei sillalla',
+              teksti: 'Useimmat matkat alkavat Palmasista, Tocantinsin '
+                + 'pääkaupungista, joka rakennettiin tyhjälle maalle vuodesta '
+                + '1990 alkaen Brasílian mallin mukaan. Wikivoyagen mukaan '
+                + 'kaupunkiin pääsee parhaiten etelästä Brasílian kautta niin '
+                + 'lentäen kuin bussilla, ja lentoasema on muutaman '
+                + 'kymmenen kilometrin päässä keskustasta. Kaupungin sydän on '
+                + 'valtava Praça dos Girassóis -aukio, jolla seisoo '
+                + 'osavaltion hallituspalatsi Palácio Araguaia. Sen aulassa voi '
+                + 'asettua valokuvaan Brasilian geodeettiseen keskipisteeseen. '
+                + 'Palmasista jatketaan maanteitse länteen. Noin 124 '
+                + 'kilometrin päässä olevassa Piumissa on kansallispuistoa '
+                + 'hoitavan ICMBio-viraston paikallistoimisto, ja 256 '
+                + 'kilometrin päässä oleva Caseara on Cantãon '
+                + 'osavaltionpuiston pääportti. Kalastajien perustamassa '
+                + 'kylässä on lauttasatama, ja Wikivoyage neuvoo vuokraamaan '
+                + 'sieltä veneen ja oppaan saaren pohjoiskärkeen. Mato Grosson '
+                + 'puolella São Félix do Araguaialla on oma lentokenttänsä, ja '
+                + 'joen toisella puolella on saaren suurin kylä, Santa Isabel '
+                + 'do Morro. Etelässä Goiásin Luiz Alvesin rannasta lähtee '
+                + 'veneitä jokiretkille ja kalaan. Saaren poikki kulkee '
+                + 'liittovaltion valtatie BR-242, paikallisesti Transbananal, '
+                + 'mutta se on päällystämätön maantie, jota sadekaudella ei '
+                + 'käytännössä pysty ajamaan. Sen päällystämisestä '
+                + 'alkuperäiskansojen maan halki on kiistelty vuosia. '
+                + 'Kuivimpina viikkoina kesä–elokuussa joen voi ylittää '
+                + 'nelivetoautolla kahlaten, muulloin vene on ainoa keino. '
+                + 'Saarella liikutaan jalan, polkupyörällä tai hevosella.',
+              kuva: [
+                {
+                  tiedosto: 'Cascata Pca Girassois Palmas TO.jpg',
+                  lyhyt: 'Tekoputous ja Palácio Araguaia Praça dos Girassóis -aukiolla Palmasissa.',
+                  selite: 'Kivilohkareiden välistä valuva tekoputous laskee '
+                    + 'vihreään altaaseen, ja sen takana näkyy osavaltion '
+                    + 'hallituspalatsi Palácio Araguaia vaakunoineen. Putous '
+                    + 'kuvaa Tocantinsin jokia ja vesiputouksia. Kuva on '
+                    + 'otettu maaliskuussa 2018.',
+                  lahde: 'Flávio André / MTur Destinos, Wikimedia Commons (Public domain)',
+                },
+                {
+                  tiedosto: 'Rio Araguaia durante Travessia na Balsa 01.jpg',
+                  lyhyt: 'Leveä Araguaia lautan kannelta Tocantinsin ja Parán välillä.',
+                  selite: 'Leveä, harmaa Araguaia-joki virtaa pilvisen taivaan '
+                    + 'alla, ja vasemmalla rannalla kasvaa tiheää metsää. Kuva '
+                    + 'on otettu maaliskuussa 2017 lautalta, joka ylittää '
+                    + 'joen Tocantinsin ja Parán osavaltioiden välillä.',
+                  lahde: 'Ruan Lion, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Porto de Luis Alves, barco dos pirangueiros passeio de turistas e pesca esportiva - panoramio.jpg',
+                  lyhyt: 'Moottoriveneitä Luiz Alvesin rantatörmän juurella Araguaia-joella.',
+                  selite: 'Kapeita moottoriveneitä on vedetty Luiz Alvesin '
+                    + 'rantatörmän juurelle ruskeaan jokiveteen, ja törmän '
+                    + 'yläpuolella näkyy taloja ja bambupensaita. Veneillä '
+                    + 'viedään matkailijoita jokiretkille ja kalaan. Kuva on '
+                    + 'otettu toukokuussa 2012.',
+                  lahde: 'Angelo Vieira, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Tucunaré ja kutukauden kielto',
+              teksti: 'Araguaia on urheilukalastajien joki. Pelkästään '
+                + 'saaren itäpuolella virtaavasta Javaés-haarasta pyydetään '
+                + 'muun muassa tucunaréa, pintadoa, pacua, piraijaa, suurta '
+                + 'pirarara-monnia ja pirarucua. Halutuin saalis on '
+                + 'tucunaré eli englanniksi peacock bass, kirjoahventen '
+                + 'sukuun kuuluva taistelija, jonka suvun suurimmat lajit '
+                + 'kasvavat metrin mittaisiksi. Urheilukalastajat matkustavat '
+                + 'sen vuoksi Brasiliaan varta vasten. Casearan '
+                + 'viereisessä Coco-joessa pyydetään tucunarén lisäksi jaú- ja '
+                + 'curimatã-kaloja. Saaren pohjoispuolen Cantãon noin 900 '
+                + 'järveä ovat entisiä joenmutkia, jotka jäävät kuivana '
+                + 'kautena erilleen joesta. Niissä kutevat tucunaré ja moni muu '
+                + 'laji, ja siksi aluetta kutsutaan Araguaian lastenkamariksi. '
+                + 'Samat syrjäiset järvet ovat yksi pirarucun viimeisistä '
+                + 'turvapaikoista. Maailman suurimpiin makean veden kaloihin '
+                + 'kuuluva pirarucu nousee pintaan hengittämään ilmaa, mikä '
+                + 'tekee siitä helpon saaliin. Brasilia kielsi sen '
+                + 'kalastuksen vuonna 1996, kun kannat olivat hupenemassa. '
+                + 'Pyydä ja päästä -kalastuksessa suuri kala pidetään '
+                + 'vedessä, sillä pirarucun nostaminen kokonaan ilmaan '
+                + 'valokuvaa varten voi repiä sen selkärangan vierellä '
+                + 'kulkevan suuren verisuonen. Kalastusta säätelee myös '
+                + 'piracema, kalojen kutuvaellus, jonka nimi tulee tupin '
+                + 'sanoista kala ja lähtö. Kutuaikana marraskuusta helmikuuhun '
+                + 'ympäristövirasto Ibaman määräämä kausi kieltää tai rajoittaa '
+                + 'kalastusta, joten kalamatka kannattaa ajoittaa kuivaan '
+                + 'kauteen.',
+              kuva: {
+                tiedosto: 'Pesca na Área de Proteção Ambiental Meandros do Araguaia (01).jpg',
+                lyhyt: 'Kaksi kalastajaa kahlaa Araguaian matalikossa suuren kalan roiskiessa vettä.',
+                selite: 'Kaksi lippalakkista miestä seisoo ruskeassa, '
+                  + 'matalassa jokivedessä, ja heidän edessään suuri kala '
+                  + 'roiskii vettä pinnalla. Taustalla on hiekkasärkkä ja '
+                  + 'rantametsää. Kuva on otettu heinäkuussa 2020 Araguaian '
+                  + 'mutkien suojelualueella saaren eteläpuolella.',
+                lahde: 'Cuia Elias, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Vieraana inyjen maalla',
+              teksti: 'Saaren kaksi eteläistä kolmannesta on alkuperäiskansojen '
+                + 'aluetta, jota hoitaa liittovaltion alkuperäiskansavirasto '
+                + 'FUNAI, ja kansallispuiston päällekin ulottuu kaksi '
+                + 'alkuperäiskansojen aluetta. Kyliin ei mennä omin '
+                + 'päin: Wikivoyage neuvoo käyttämään luvanvaraista ja '
+                + 'hyvämaineista matkanjärjestäjää, ja kuvaamiseen kysytään '
+                + 'aina lupa. Saaren keskiosan Mata do Mamão -metsässä elää '
+                + 'pieni avá-canoeiro-ryhmä, joka torjuu kaiken yhteyden '
+                + 'ulkomaailmaan, jopa naapurikyliin. Se on Tocantinsin ainoa '
+                + 'eristäytyneenä elävä alkuperäiskansojen ryhmä, eikä sitä '
+                + 'pidä yrittää etsiä. Karajá-perheet leiriytyvät kuivana '
+                + 'kautena kalastamaan joen rannoille ja viettävät silloin '
+                + 'juhlansa, ja sadekaudeksi ne siirtyvät korkeammalla '
+                + 'sijaitseviin kyliin. Tärkein juhla on Hetohokỹ, poikien '
+                + 'aikuistumisriitti. Siitä kertoo O Povo que Veio do Fundo do '
+                + 'Rio eli Kansa, joka tuli joen pohjasta. Juanahu Karaján '
+                + 'vuonna 2014 valmistunut elokuva on ensimmäinen karajá-'
+                + 'ohjaajan tekemä pitkä elokuva omasta kulttuurista. '
+                + 'Kehomaalaus on yhä elävää taidetta, ja sen tekijät ovat '
+                + 'enimmäkseen naisia. Värit saadaan genipapuhedelmän '
+                + 'mehusta, puuhiilestä ja urukusta. Inyjen kulttuuria näkee '
+                + 'myös Palmasissa, joka järjesti lokakuussa 2015 '
+                + 'ensimmäiset alkuperäiskansojen maailmankisat. Niihin '
+                + 'osallistui yli 2 000 urheilijaa ja kulttuurivierasta, ja '
+                + 'lajeina olivat esimerkiksi tukkijuoksu, keihäänheitto ja '
+                + 'xikunahati, pallopeli jossa palloa saa koskettaa vain '
+                + 'päällä. Kisat saivat myös arvostelua: Ilha do Bananalin '
+                + 'karajá-perheestä lähtöisin oleva aktivisti Narubia '
+                + 'Werreria moitti niitä siitä, ettei suurin osa Brasilian '
+                + 'kansoista päässyt mukaan.',
+              kuva: {
+                tiedosto: 'Xambioas.jpg',
+                lyhyt: 'Xambioá-kansan edustajia sulkakoristein ja kehomaalauksin Palmasissa 2015.',
+                selite: 'Poika ja nainen seisovat sulkakoristeissa ja '
+                  + 'helmikaulakoruissa, ja heidän vartaloihinsa on maalattu '
+                  + 'tummia kuvioita. Taustalla nuori mies kantaa selässään '
+                  + 'suurta sulkaviuhkaa. Xambioá on yksi karajan kielen '
+                  + 'murteista ja sitä puhuvan ryhmän nimi. Kuva on otettu lokakuussa 2015 alkuperäiskansojen '
+                  + 'maailmankisoissa Palmasissa.',
+                lahde: 'Marcelo Camargo/Agência Brasil, Wikimedia Commons (CC BY 3.0 br)',
+              },
+            },
+            {
+              otsikko: 'Saaren oma lintu ja tulvametsät',
+              teksti: 'Lintuharrastajan tärkein laji on bananalinmuurahaislintu '
+                + '(Cercomacra ferdinandi), jonka levinneisyysalue keskittyy '
+                + 'juuri Ilha do Bananalille. Noin 16-senttinen koiras on '
+                + 'lähes kokomusta, siivissä valkoisia täpliä, ja naaras on '
+                + 'harmaa. Lintu piileskelee köynnösten tiheiköissä '
+                + 'rantametsissä ja vanhojen joenmutkien järvien lähellä, ja '
+                + 'sen hätäinen, vinkuva laulu on kuvattu tavuina tudr-tudr-'
+                + 'tudr. Laji on luokiteltu silmälläpidettäväksi, sillä '
+                + 'vesivoimaloiden padot uhkaavat hukuttaa sen kapeaa '
+                + 'elinympäristöä. Saaren savanneilla elää nanduja, '
+                + 'ja kansallispuistossa elää muun muassa suohirviä, '
+                + 'harjasusia, jättiläismuurahaiskarhuja ja kapybaroita. '
+                + 'Rantapuissa pesii hoatsin, jonka poikasilla on '
+                + 'siivissään kaksi kynttä kiipeilyä varten, ja vesissä elävät '
+                + 'anakonda ja mustakaimaani. Pohjoiskärjen naapurissa '
+                + 'Cantãon osavaltionpuistossa on vierailukeskus, majoitusta '
+                + 'ja opastettuja polkuja. Yhdessä selvityksessä puistosta '
+                + 'laskettiin 317 lintulajia. Sen igapó-tulvametsissä vesi '
+                + 'seisoo maaliskuun huipputulvan aikaan viidestä '
+                + 'kahdeksaan metriä syvänä ja virtaa muutaman kilometrin '
+                + 'tuntivauhtia puiden välissä. Helmikuussa piranheira-puu '
+                + 'pudottaa lehtensä, ja uusiin lehtiin kerääntyy toukkia. '
+                + 'Kun tuuli ravistaa latvoja, toukat putoavat veteen ja '
+                + 'houkuttelevat paikalle piraijaparvia, joista puu on '
+                + 'saanut nimensä.',
+              kuva: {
+                tiedosto: 'Cercomacra ferdinandi - Bananal antbird (male).jpg',
+                lyhyt: 'Bananalinmuurahaislinnun musta koiras oksalla Piumissa Tocantinsissa.',
+                selite: 'Lähes kokomusta pieni lintu istuu vaakasuoralla '
+                  + 'oksalla, ja sen siivessä erottuu valkoisia täpliä ja '
+                  + 'reunuksia. Kuva on otettu syyskuussa 2015 Canguçun '
+                  + 'luonnonsuojelualueella Piumin kunnassa.',
+                lahde: 'Marco Cruz, Wikimedia Commons (CC BY-SA 2.0)',
+              },
+            },
+            {
+              otsikko: 'Rantakausi, rauskut ja savu',
+              teksti: 'Saarella on kaksi selvää vuodenaikaa. Marraskuusta '
+                + 'huhtikuuhun sataa, ja tammi–maaliskuussa joki tulvii niin, '
+                + 'että osa saaresta jää veden alle. Toukokuusta lokakuuhun on '
+                + 'kuivaa. Heinäkuussa lämpötila laskee alimmillaan noin 22 '
+                + 'asteeseen, ja elo–syyskuussa päivälämpö nousee 38 '
+                + 'asteeseen. Kuiva kausi on myös rantakausi. Joen laskiessa '
+                + 'esiin nousevat valkoiset hiekkasärkät, joille pystytetään '
+                + 'heinäkuun lomakaudeksi olkikattoisia katoksia, kioskeja ja '
+                + 'telttaleirejä. Pohjoisempana Araguacemassa kaupungin '
+                + 'edustan saaren Praia da Gaivota -ranta vetää heinäkuussa '
+                + 'tuhansia kävijöitä, Casearan Coco-joen Praia do Sol on '
+                + 'auki kesäkuusta syyskuuhun, ja Luiz Alvesissa vietetään '
+                + 'heinäkuussa Carnaraguaia-karnevaalia. Hiekkapohjaisella '
+                + 'matalikolla kannattaa kävellä jalkoja laahaten, sillä '
+                + 'makean veden rauskut lepäävät pohjassa ja pistävät '
+                + 'myrkkypiikillään yleensä silloin, kun uimari astuu niiden '
+                + 'päälle. Kuivan kauden varjopuoli ovat maastopalot. '
+                + 'Salaman sytyttämät palot sammuvat yleensä pian '
+                + 'seuraavaan sateeseen, mutta ihmisen sytyttämät leviävät '
+                + 'paahteessa laajoiksi, ja Ilha do Bananalilla niitä on '
+                + 'usein. Hyttyset ja mäkärät kuuluvat maisemaan, ja '
+                + 'kansallispuiston toimistokaupungin Piumin nimikin tulee '
+                + 'vanhan tupin kielen mäkärää tarkoittavasta sanasta. '
+                + 'Wikivoyagen mukaan keltakuumerokotus ja malarialääkitys '
+                + 'voivat olla tarpeen Mato Grossossa ja Pohjois-Brasiliassa. '
+                + 'Särkillä on vähän '
+                + 'varjoa, joten juomavesi, lierihattu ja pitkähihaiset '
+                + 'vaatteet kuuluvat päiväretkelle.',
+              kuva: {
+                tiedosto: 'Casas de Palha.jpg',
+                lyhyt: 'Olkikattoisia katoksia Araguaian hiekkarannalla heinäkuun rantakaudella.',
+                selite: 'Tyynen joen takana kaartuu vaalea hiekkaranta, '
+                  + 'jolle on rakennettu useita olkikattoisia katoksia, ja '
+                  + 'rannan takana kasvaa vehreää metsää. Kuva on otettu '
+                  + 'heinäkuun alussa 2013 Araguaia-joella Tocantinsissa.',
+                lahde: 'Edivaldo Alves de Sousa, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'kulttuuri',
