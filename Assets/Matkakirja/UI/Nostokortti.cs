@@ -485,8 +485,12 @@ namespace Matkakirja.Natiivi
             eleAlku = e.position;
             eleAika = Time.unscaledTime * 1000f;
             raahaa = false;
-            eleKahvasta = OnKahva(e.target as VisualElement);
+            // Kuva edellä -kortissa (vaihe 1) ei ole yläriviä eikä otsikkoa: kahvana on kortin ylin kaista.
+            eleKahvasta = OnKahva(e.target as VisualElement) || e.position.y - kortti.worldBound.yMin < KahvanKorkeus;
         }
+
+        /// <summary>Kortin yläreunan kaista, josta raahaus alkaa myös ilman yläriviä (löydös 79).</summary>
+        const float KahvanKorkeus = 28f;
 
         /// <summary>Ele alkoi raahauskahvasta (ylärivi tai otsikko).</summary>
         bool eleKahvasta;
