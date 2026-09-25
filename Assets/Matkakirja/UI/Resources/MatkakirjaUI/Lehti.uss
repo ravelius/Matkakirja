@@ -1270,6 +1270,14 @@
     flex-basis: 0;
 }
 
+/* Löydös 62 (Bukarest, iPad): pinossa (sarake) flex-basis 0 on korkeus, joten "Milloin matkaan?" -laatikon palsta
+ * jäi 0 pt:n korkuiseksi ja kaudet piirtyivät seuraavan jakson päälle. Pinossa palsta on sisältönsä korkuinen. */
+.mk-opas__pino > .mk-opas__palsta {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+
 .mk-opas__sivupalsta {
     width: 256px;
     flex-shrink: 0;
