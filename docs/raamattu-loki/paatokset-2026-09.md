@@ -5171,3 +5171,7 @@ Nollaus kaavan mukaan (clear samassa vuorossa, list_events 0); sessio ehti 87 %:
 ## KUORMA 400–900 VAIKKA POLTTO 8 YTIMELLA: coreaudiod 305 % CPU JA NELJA JOUTILASTA Matkakirja3D-INSTANSSIA SIMULAATTOREISSA (22–31 % KUKIN) — FABLE: PELI SAMMUTETAAN SIMULAATTORISTA HETI KIERROKSEN JALKEEN (simctl terminate) JA AANET MYKISTETAAN TESTIEN AJAKSI; POSTIVAHTI VALVOO (>30 min JOUTILAS → MUISTUTUS) (25.9.2026 klo 08.02)
 
 Todennäköinen syy coreaudiodille: simulaattorien ääni AudioListener-korjauksen (49) jälkeen.
+
+## KUORMA 500–1000 MYOS 8 YTIMELLA (simctl JUMITTAA >2 min, coreaudiod 290 %, 6 SIMULAATTORIA PELEINEEN) → FABLE: POLTTO TAUOLLE JATKOKOHTAAN, JATKO klo 22 TAYSILLA 16 YTIMELLA (KARTTASEPAN ALKUPERAINEN SUUNNITELMA); PAIVAN TODENNUKSET BUILD 13:EEN ETUSIJALLE; FABLE SAMMUTTI JOUTILAAN PELIN iPAD PRO 13:STA (KAYNNISSA 04.36 ALKAEN), LINSSISEPALLE JA MUILLE SAMMUTUSSAANTO (25.9.2026 klo 08.05)
+
+Työnjohtajan harkinta: aamun 4 ytimen sääntö olisi ollut oikea päivällä — poltto ei sovi päiväkäyttöön tällä koneella, kun simulaattorit ja käännökset pyörivät.
