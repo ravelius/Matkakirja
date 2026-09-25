@@ -109981,6 +109981,282 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Cape Horn',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Cape Horn, Hornos Island, Cabo de Hornos National
+       * Park, Cape Horn Biosphere Reserve, Drake Passage, Puerto Williams,
+       * Williwaw), espanjan Wikipediasta (Isla Hornos, Cabo de Hornos:
+       * Caleta León, Alcaldía de Mar, tuntemattoman merimiehen muistomerkki,
+       * FitzRoyn laatta, miinakenttä 1982 ja raivaus 2009–2010) sekä
+       * Wikivoyagen sivuilta Cabo de Hornos National Park (aukiolokausi),
+       * Puerto Williams (lennot, lautta, veneet Ushuaiasta,
+       * tuontirajoitukset), Ushuaia (retkiristeily), Antarctica
+       * (aallokko, alustyypit, vaatetus, lento-risteilyt) ja Motion
+       * sickness — teksti omaa. Wikivoyagen hinnat (2023–2025),
+       * lentojen viikkomäärät ja aikataulut on jätetty pois; opas kertoo,
+       * että reitit ja yhtiöt vaihtuvat. Wikipedian sääluvut ovat
+       * vuosien 1882–1883 mittauksista, ja ne on kerrottu sellaisina.
+       * Nostojen aiheita (nimen synty, tuulet ja jättiaallot,
+       * Panaman kanava, Diego Ramírezin saaret, majakan historia,
+       * albatrossimuistomerkki ja sen kaatuminen 2014, klipperit,
+       * korvarengas, albatrossiuskomus, Balclutha) eikä gallerian
+       * maalauksia toisteta. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * Kap Horn laivalta nähtynä (Jerzy Strzelecki, tammikuu 2000).
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Cape Horn (js) 2.jpg',
+          lyhyt: 'Kap Hornin jyrkkä niemi kohoaa tuulen pieksemän meren takaa.',
+          selite: 'Laivalta kuvattu näkymä tammikuulta 2000: tuuli repii '
+            + 'vaahtoa aallonharjalta etualalla, ja kaukana taustalla '
+            + 'Kap Hornin tumma, jyrkkärinteinen niemi nousee merestä '
+            + 'raskaiden pilvien alla.',
+          lahde: 'Jerzy Strzelecki, Wikimedia Commons (CC BY 3.0)',
+        },
+        kappale: 'Kap Horniin ei kulje tietä eikä säännöllistä lauttaa, ja '
+          + 'useimmat matkailijat näkevät niemen vain laivan kannelta. '
+          + 'Lähtösatamia ovat Argentiinan Ushuaia, Chilen Punta Arenas ja '
+          + 'pieni Puerto Williams Beaglen kanaalin rannalla, josta '
+          + 'purjeveneet ja retkialukset lähtevät etelään. Maihin Hornosin '
+          + 'saarelle päästään vain tyynellä säällä ja vain kesäkaudella, '
+          + 'ja silloinkin retki on lyhyt: kulkuväylä rinnettä ylös, laivaston '
+          + 'asema, majakka ja muistomerkit. Saarella ei ole majoitusta, sillä se '
+          + 'kuuluu tiukasti suojeltuun kansallispuistoon. Etelässä avautuu '
+          + 'Drakensalmi, jonka yli Etelämantereen laivat keinuvat pari '
+          + 'vuorokautta, ja joulukuun lähes valkoisina öinä aurinko painuu '
+          + 'mailleen vasta myöhään illalla. Varaa aikaa, lämpimät vaatteet ja '
+          + 'kärsivällisyyttä: sää päättää täällä aikataulun.',
+        artikkeli: {
+          nimi: 'Matkailijan Kap Horn',
+          teksti: 'Perille pääsee vain meritse, ja maihinnousun ratkaisee aina sää.',
+          nosto: 'Kap Hornin majakka ja muistomerkki eivät ole itse '
+            + 'niemellä, vaan noin puolentoista kilometrin päässä siitä.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille vain meritse',
+              teksti: 'Wikivoyagen mukaan Kap Hornin kansallispuisto on auki '
+                + 'vain lokakuusta huhtikuuhun, eikä sinne kulje yleistä '
+                + 'laivaliikennettä. Helpoin tapa nähdä niemi on risteily. '
+                + 'Suuret risteilyalukset kiertävät Hornin siirtyessään '
+                + 'valtamereltä toiselle ja pysähtyvät yleensä Ushuaiassa, '
+                + 'Punta Arenasissa tai Falklandinsaarten Stanleyssä, ja osa '
+                + 'Ushuaiasta Etelämantereelle lähtevistä pienistä aluksista '
+                + 'ohittaa niemen, jos aikaa ja säätä riittää. Maihin laskevat '
+                + 'matkustajia vain jotkin yksityiset toimijat, nekin satunnaisesti. Wikivoyage mainitsee '
+                + 'esimerkkinä Cruceros Australiksen neljän yön risteilyn '
+                + 'Punta Arenasista Ushuaiaan: reitti kulkee Beaglen ja '
+                + 'Murrayn kanavia pitkin Pían jäätikölle ja Wulaian lahdelle '
+                + 'ja pysähtyy myös Kap Hornin kansallispuistossa. '
+                + 'Purjehtijoiden tukikohta on Navarinon saaren Puerto '
+                + 'Williams, jonka satamassa laivaston entinen kuljetusalus '
+                + 'Micalvi toimii nykyään pursiseuran laiturina. Sieltä '
+                + 'puistoon on veneellä noin 12 tunnin matka. Puerto '
+                + 'Williamsiin lennetään Punta Arenasista, ja samalta '
+                + 'suunnalta kulkee noin 32 tunnin lautta, joka saapuu yöllä: '
+                + 'matkustajat nukkuvat laivassa ja nousevat maihin aamulla. '
+                + 'Ushuaiasta pääsee yksityisillä veneyhteyksillä, yleensä '
+                + 'veneellä Beaglen kanaalin yli Puerto Navarinoon ja sieltä '
+                + 'pikkubussilla saaren poikki. Silloin ylitetään Argentiinan ja '
+                + 'Chilen raja, joten passi tarvitaan, ja Chilen tuontirajoitukset '
+                + 'koskevat hedelmiä, lihaa ja maitotuotteita. Puerto Williamsista '
+                + 'voi myös lentää niemen yli tilauslennolla, ja Wikipedian '
+                + 'mukaan Hornin voi kiertää päiväretkellä helikopterilla. '
+                + 'Yhtiöt ja aikataulut vaihtuvat usein, joten tiedot '
+                + 'kannattaa tarkistaa juuri ennen matkaa.',
+              kuva: [
+                {
+                  tiedosto: 'Aerovías DAP en Puerto Williams 1.jpg',
+                  lyhyt: 'Aerovías DAP:n kone Puerto Williamsin lentokentällä vuorten juurella.',
+                  selite: 'Aerovías DAP -yhtiön valkoinen nelimoottorinen BAe '
+                    + '146 -matkustajakone seisoo Guardiamarina Zañartun '
+                    + 'lentokentällä Puerto Williamsissa, ja sen vieressä on '
+                    + 'autoja ja matkatavarakärryjä; taustalla metsäiset '
+                    + 'vuoret. Kuva helmikuulta 2016.',
+                  lahde: 'Janitoalevic, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Micalvi yacht club navarino chile.jpg',
+                  lyhyt: 'Purjeveneet ovat kiinnittyneet vanhan Micalvi-aluksen kylkeen.',
+                  selite: 'Puerto Williamsin Micalvi-pursiseuran laiturilla '
+                    + 'purjeveneiden mastot tungeksivat vanhan aluksen '
+                    + 'ympärillä; nurmikolta laiturille vie puinen kulkusilta '
+                    + 'valkoisten aitojen välistä, ja taustalla kohoavat '
+                    + 'metsäiset rinteet.',
+                  lahde: 'James Cadwell, Wikimedia Commons (CC BY-SA 3.0)',
+                },
+                {
+                  tiedosto: 'Cape Horn Coral Princess.jpg',
+                  lyhyt: 'Risteilyalukselta Kap Horn näkyy harmaana, sahalaitaisena siluettina.',
+                  selite: 'Kap Hornin jyrkkä, sahalaitainen huippu ja sen '
+                    + 'viereiset kalliot erottuvat utuisina tummansinisen, '
+                    + 'tuulen rypyttämän meren takaa; taivaalla ajelehtii '
+                    + 'valkoisia pilviä. Tiedostonimen mukaan kuva on otettu '
+                    + 'Coral Princess -risteilyalukselta joulukuussa 2019.',
+                  lahde: 'amanderson2, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Maihin Hornosin saarelle',
+              teksti: 'Espanjankielisen Wikipedian mukaan matkustajia tuovat '
+                + 'alukset ankkuroivat Caleta Leónin poukamaan, josta maihin '
+                + 'noustaan pienveneellä. Moni yllättyy ylhäällä: laivaston '
+                + 'asema, majakka ja muistomerkit eivät ole itse Kap Hornilla, '
+                + 'vaan Punta Espolónin kärjessä noin puolentoista kilometrin '
+                + 'päässä niemestä itäkoilliseen. Varsinainen niemi on saaren '
+                + 'jyrkkä, noin 425 metriä korkea länsipää, jonne on vaikea '
+                + 'päästä sekä maalta että mereltä, ja sen pientä automaattista '
+                + 'valoa huolletaan omasta poukamastaan. Asemalla, Chilen '
+                + 'laivaston Alcaldía de Marilla, on vartijan perheen asunto, '
+                + 'radio- ja tutkahuone, sääasema, joka lähettää mittauksia '
+                + 'reaaliajassa, sekä pieni kappeli. Vuonna 2019 saarella asui '
+                + 'Wikipedian mukaan viisi ihmistä: majakanvartija, hänen '
+                + 'vaimonsa ja heidän kolme lastaan. Albatrossiveistoksen '
+                + 'lisäksi asemalta löytyy tuntemattoman merimiehen '
+                + 'muistomerkki sekä laatta, joka paljastettiin vuonna 2005 '
+                + 'Robert FitzRoyn syntymän 200-vuotisjuhlan kunniaksi. '
+                + 'Beaglen kapteeni nousi saarelle huhtikuussa 1830, kiipesi '
+                + 'sen huipulle ja hautasi sinne kirjallisen muistion, jonka '
+                + 'Chilen laivaston upseerit löysivät vuonna 1989. Saaren '
+                + 'rauhallinen nummi kätki pitkään myös rajakiistan jäljen: Chilen '
+                + 'laivasto miinoitti vuonna 1982 Beaglen kiistan aikana noin '
+                + '18 000 neliömetrin alueen, ja miinat raivattiin kokonaan '
+                + 'vuosina 2009–2010. Nykyään vaara on ohi, mutta nummi on '
+                + 'herkkä, joten kulje vain merkittyjä kulkureittejä.',
+              kuva: {
+                tiedosto: 'Horn Island Navy Base.jpg',
+                lyhyt: 'Laivaston asema ja majakka Hornosin saaren kärjessä, taustalla Drakensalmi.',
+                selite: 'Viereiseltä kukkulalta etelään kuvattu näkymä '
+                  + 'lokakuulta 2023: ruskean nummen takana niemekkeellä ovat '
+                  + 'laivaston punakattoiset rakennukset, majakka ja '
+                  + 'radiomasto, rinnettä nousee oranssi kulkuväylä, ja '
+                  + 'oikealla niemen reunalla erottuu albatrossimuistomerkin '
+                  + 'siluetti. Taustalla avautuu Drakensalmi.',
+                lahde: 'Mat Austro, Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sää, valo ja vaatteet',
+              teksti: 'Kap Hornin ilmasto luokitellaan polaariseksi, ja suuri '
+                + 'osa sateesta tulee räntänä tai lumena. Wikipedian '
+                + 'sääluvut ovat vanhoja, vuosien 1882–1883 tutkimuksesta: '
+                + 'vuoden keskilämpötila oli noin viisi astetta, ja sadepäiviä '
+                + 'kertyi 278, niistä 70 lumisina. Kesän ja talven ero on '
+                + 'silti selvä. Myrskytuulta on '
+                + 'kesäisin enintään viisi prosenttia ajasta, '
+                + 'yleensä hyvällä näkyvyydellä, talvella jopa 30 prosenttia, '
+                + 'usein huonolla näkyvyydellä. Siksi matkat tehdään eteläisen '
+                + 'pallonpuoliskon kesällä. Valo on toinen yllätys: '
+                + 'joulukuun päivänseisauksen aikaan päivä kestää noin 17 ja '
+                + 'puoli tuntia, eikä yö ehdi pimetä kunnolla, kun taas '
+                + 'kesäkuussa valoisaa on vain vajaat seitsemän tuntia. '
+                + 'Saarten välisissä kanavissa purjehtijoita varoitetaan '
+                + 'williwaw-puuskista: vuorilta alas syöksyvä kylmä ilma voi '
+                + 'iskeä veneeseen lähes varoittamatta. Maissa tuuli tuntuu '
+                + 'heti, sillä puita kasvaa vain suojaisissa notkoissa. Etelämantereen '
+                + 'matkoille annettu Wikivoyagen neuvo sopii tännekin: '
+                + 'kannella seisominenkin vaatii lämpimät kerrokset, '
+                + 'lämpimät alusvaatteet, vedenpitävät housut, parkatakin, '
+                + 'hupun, käsineet ja saappaat. Ushuaiasta voi '
+                + 'ostaa tai vuokrata varusteita, mutta omaa kokoa ei aina '
+                + 'löydy. Retken ohjelma voi muuttua lyhyellä varoitusajalla, '
+                + 'ja maihinnousu voidaan perua, jos aallokko on liian kova.',
+              kuva: {
+                tiedosto: 'Horn Leve de soleil.JPG',
+                lyhyt: 'Aurinko nousee oranssina pilvien alta Kap Hornilta itään katsottaessa.',
+                selite: 'Kuvaajan mukaan Kap Hornilta kuvattu auringonnousu '
+                  + 'Deceitin saaren yllä huhtikuussa 2006: oranssi ja '
+                  + 'kultainen taivas heijastuu tyyneen mereen, ja '
+                  + 'horisontissa erottuvat saarten ja luotojen tummat '
+                  + 'ääriviivat.',
+                lahde: 'Rémi Jouan, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Drakensalmen yli',
+              teksti: 'Kap Hornin eteläpuolella alkaa Drakensalmi, noin 800 '
+                + 'kilometrin levyinen merialue, joka ulottuu Etelä-Shetlannin '
+                + 'Livingstoninsaarelle asti. Se on lyhin merimatka '
+                + 'Etelämantereelta muille mantereille, ja sen läpi virtaa '
+                + 'Etelämantereen ympärysvirta, maailman voimakkain '
+                + 'merivirta. Kansainvälinen merenmittausjärjestö IHO vetää '
+                + 'Atlantin ja Tyynen valtameren rajan Kap Hornin kautta '
+                + 'kulkevaa pituuspiiriä 67° 16′ W pitkin, joten niemen '
+                + 'kohdalla vaihdetaan valtamerta. Wikivoyagen mukaan '
+                + 'Etelämantereen laivakausi kestää marraskuusta helmikuuhun, '
+                + 'ja salmen aallot ovat tavallisesti noin neljän metrin '
+                + 'korkuisia, joskus jopa 12-metrisiä. Useimmat matkustaja-alukset '
+                + 'ovat jäävahvistettuja, sillä pyöreäpohjaiset jäänmurtajat '
+                + 'keinuvat aallokossa vielä enemmän. Jos parin vuorokauden '
+                + 'keinunta arveluttaa, jotkin yhtiöt tarjoavat '
+                + 'lento-risteilyjä, joissa salmen yli lennetään Chilestä. '
+                + 'Merisairauteen Wikivoyage neuvoo varautumaan ajoissa: '
+                + 'lääke otetaan ennen oireita, koska se voi alkaa vaikuttaa '
+                + 'vasta yli tunnin kuluttua, ja se väsyttää usein. '
+                + 'Runsasta ateriaa ja alkoholia kannattaa välttää, ja '
+                + 'hyvät yöunet auttavat. Laivassa paras paikka on keskellä '
+                + 'alusta, katse horisontissa ja raitista ilmaa kasvoilla, '
+                + 'ja jos olo pahenee, kannattaa käydä pitkälleen silmät '
+                + 'kiinni. Rauhallisina hetkinä kannelta kannattaa katsoa '
+                + 'merelle: salmessa elää valaita, delfiinejä, '
+                + 'jättiläisliitäjiä, albatrosseja ja pingviinejä.',
+              kuva: {
+                tiedosto: 'Drake2.JPG',
+                lyhyt: 'Valkoinen kuohu vyöryy laivan kylkeä vasten Drakensalmen aallokossa.',
+                selite: 'Laivan kannelta kuvattu näkymä tammikuulta 2014: '
+                  + 'vihreän kannen ja valkoisen kaiteen vieressä aalto '
+                  + 'murtuu valkoiseksi vaahdoksi, ja taustalla '
+                  + 'tummansininen meri jatkuu horisonttiin pilvisen taivaan '
+                  + 'alla.',
+                lahde: 'Lewnwdc77, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Luonto maailman laidalla',
+              teksti: 'Kap Horn kuuluu maailman eteläisimpään kansallispuistoon, '
+                + 'joka perustettiin vuonna 1945. Siihen kuuluvat Wollastonin '
+                + 'ja Hermiten saariryhmät, yhteensä noin 63 000 hehtaaria, '
+                + 'ja sitä hoitaa Chilen metsähallinto CONAF. Vuodesta 2005 '
+                + 'puisto on ollut osa Unescon Kap Hornin biosfäärialuetta, '
+                + 'jonka ydinvyöhykkeelle ei saa rakentaa majoitusta, joten '
+                + 'saarilla ei ole hotelleja eikä majoja. Maisema on lähes puutonta '
+                + 'turvenummea, jolla kasvaa matalia heinätupsuja, pensaita, '
+                + 'jäkäliä ja sammalia. Vuonna 2019 tutkijat löysivät '
+                + 'Hornosin saaren kaakkoiskulmasta maailman eteläisimmän '
+                + 'puun, Nothofagus betuloides -pyökin, joka kasvaa lähes '
+                + 'maata myöten taipuneena. Saaristossa elää viisi '
+                + 'prosenttia maailman sammal- ja maksasammallajeista, ja '
+                + 'Puerto Williamsin lähellä Omoran etnobotaanisessa '
+                + 'puistossa matkailijoita opastetaan katsomaan niitä suurennuslasilla. Kap Horn on '
+                + 'magellaninpingviinin levinneisyyden eteläraja, ja '
+                + 'rannikolla on pingviiniyhdyskuntia, eikä saarella ole '
+                + 'maapetoja. BirdLife on nimennyt puiston tärkeäksi '
+                + 'lintualueeksi muun muassa töyhtö- ja magellaninpingviinien '
+                + 'sekä nokiliitäjien vuoksi, ja vesillä '
+                + 'voi nähdä meriuttereita, chilendelfiinejä ja '
+                + 'ryhävalaita. Myös ihmisen jälki on vanha: yaganit ovat '
+                + 'meloneet näillä kanavilla tuhansia vuosia, ja vuonna 2019 '
+                + 'Hornosin saaren eteläosasta löytyi harppuunankärkiä ja '
+                + 'nuotiopaikka, maailman eteläisin esiteollisen ajan '
+                + 'metsästysleiri. Biosfäärialuetta uhkaavat vieraslajit, '
+                + 'lohenkasvatus ja kasvava matkailu, joten jätä nummelle '
+                + 'vain jalanjälkesi.',
+              kuva: {
+                tiedosto: 'PNCabodeHornos.JPG',
+                lyhyt: 'Kansallispuiston turvenummea Herschelin saarella Kap Hornin naapurissa.',
+                selite: 'Herschelin saaren nummella kasvaa korkeita, '
+                  + 'vaaleita heinätupsuja ja matalia vihreitä pensaita, ja '
+                  + 'taustalla kohoaa puuton, loiva vaara harmaan taivaan '
+                  + 'alla. Saari kuuluu samaan Hermiten saariryhmään kuin '
+                  + 'Hornosin saari. Kuva vuodelta 2007.',
+                lahde: 'Butterfly austral - Serge Ouachée, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'merenkulku',
