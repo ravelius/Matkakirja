@@ -5535,3 +5535,7 @@ C16-regressio natiivi-ui/paljastus-c16b Pelikoodarilla todennettavana. Video pro
 ## NATIIVI-UI NOLLATTU klo 15.22 (PROSESSI POIS, RC POIS) → ALOITUSVIESTI LAHETETTY send_message-KANAVALLA (LUOVUTUS o, 6518eff24), RC TAKAISIN; PELIKOODARI 63 % → ERA LOPPUUN JA LUOVUTUS 65 %:SSA; juna/b13 YLARAJA LAUKESI 15.22 (1550 s), KAANNOS KAYNNISSA (25.9.2026 klo 15.24)
 
 Postivahti ei näe kontekstia sammuneesta prosessista; nollaus todetaan isRunning false + RC pois.
+
+## PELIKOODARIN LUOVUTUS -20260925-ilta.md + ALOITUSVIESTI (99d0451a0), NOLLAUS: LIIKKUMISLISTA 0 (VIDEOLLA A3/A9/A11/A13/B22/B23/D6), 93/100/101/104/109 JUNASSA, 111/112 MITAT NATIIVISEPALLA, #3188 JULKAISIJALLA; AUKI C16/C10/C12 — A/B OLI VIRHEELLINEN (ui paljastus nollaa EI TEE MITAAN, OIKEA ui livia paljastus nollaa), UUSI SESSIO AJAA B:N (natiivi-ui/paljastus-c16b) UUDELLEEN; NATIIVI-UI:LLE: LENNON ALAPALKKI 'Kone nousee…' JAA RUUTUUN LASKEUTUMISEN JALKEEN (25.9.2026 klo 15.33)
+
+Aloitusviesti Pelikoodarille, kun prosessi on sammunut (Postivahti ilmoittaa).
