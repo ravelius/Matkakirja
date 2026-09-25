@@ -119123,6 +119123,248 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Rodrigo Fernández, Wikimedia Commons (CC BY-SA 4.0)',
         },
       ],
+      /*
+       * Matkailijalle (turistiopas 25.9.2026). Taustatiedot englannin
+       * Wikipediasta (Puerto Montt; El Tepual International Airport;
+       * Navimag; Chacao Channel; Chacao Channel bridge; Paila marina;
+       * Milcao; Chapalele; Chilean cuisine; Puerto Varas; Frutillar;
+       * Teatro del Lago; Todos los Santos Lake; Petrohué River; Vicente
+       * Pérez Rosales National Park), espanjan Wikipediasta (Tren
+       * Llanquihue-Puerto Montt; Sentados frente al mar; Catedral de
+       * Puerto Montt; Casa del Arte Diego Rivera) ja Wikivoyagen Puerto
+       * Montt -sivulta (bussit, Naviera Austral, Chacaon lautta, ilmasto,
+       * colectivot) — teksti omaa. Nostojen ja kuvien aiheita (perustaminen,
+       * puurakentaminen, Angelmón tori ja curanto, Isla Tenglo, ankkuri,
+       * rantabulevardi ja väkiluku, tulivuoret, Reloncavín selkä, lohi,
+       * Alerce Andino, cochayuyo, choro zapato, kuchen) ei toisteta:
+       * lentokenttä ja lautat saavat oman jaksonsa, Osorno näkyy vain
+       * maisemana järven takana. Kuvien lisenssit ja tekijät tarkistettu
+       * Commonsin extmetadatasta ja kuvat katsottu silmin. Pystykuva:
+       * rakastavaisten patsas alkuperäisellä penkillään 2010.
+       */
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Chile, Puerto Montt - Estatua de los Enamorados.jpg',
+          lyhyt: 'Rantakadun kuusimetrinen rakastavaisten patsas on Puerto Montin kuvatuimpia paikkoja.',
+          selite: 'Robinson Barrían ferrosementistä tekemä pariskunta istui '
+            + 'toukokuussa 2010 vielä alkuperäisellä penkkimäisellä '
+            + 'jalustallaan, joka muutettiin rantapuiston rakennustöissä '
+            + '2021–2022.',
+          lahde: 'stéfano pérez tonella, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        kappale: 'Puerto Montt on Pohjois-Patagonian liikenteen solmukohta: '
+          + 'tänne lennetään Santiagosta, ja täältä lähtevät bussit Chiloén '
+          + 'saarelle ja Argentiinaan sekä laivat etelän vuonoille. Vuonna '
+          + '2025 kaupunkiin palasivat myös lähijunat. Ravintoloissa syödään '
+          + 'äyriäiskeittoa savikulhosta ja Chiloén perunaleipiä. '
+          + 'Rantakadulla istuu kuusimetrinen rakastavaisten patsas, jota on '
+          + 'moitittu rumaksi ja josta on silti tullut kaupungin rakastetuin '
+          + 'maamerkki. Päiväretkellä ehtii saksalaissiirtolaisten '
+          + 'järvikaupunkeihin ja smaragdinvihreän järven vesiputouksille. '
+          + 'Sadetakki kannattaa pitää mukana, sillä sade kuuluu Puerto '
+          + 'Monttiin kaikkina vuodenaikoina.',
+        artikkeli: {
+          nimi: 'Matkailijan Puerto Montt',
+          teksti: 'Useimmat matkailijat saapuvat El Tepualin lentoasemalle kaupungin länsipuolelle.',
+          nosto: 'Kun rakastavaisten patsaan kohtalosta äänestettiin 2019, '
+            + 'lähes kaksi kolmasosaa yli 48 000 äänestäjästä halusi sen '
+            + 'jäävän paikalleen.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Lentäen, junalla ja laivalla',
+              teksti: 'Useimmat matkailijat saapuvat El Tepualin lentoasemalle '
+                + 'kaupungin länsipuolelle. Sen kiitotie valmistui huhtikuussa '
+                + '1960, juuri ennen toukokuun suurta maanjäristystä, ja kentästä '
+                + 'tuli heti avustuslentojen tukikohta. Nykyinen terminaali '
+                + 'avattiin 2010, ja LATAM, Sky ja JetSMART lentävät sieltä '
+                + 'Santiagoon noin kahdessa tunnissa sekä etelään Punta Arenasiin '
+                + 'ja Balmacedaan. Kaupungin linja-autoasema on sataman vieressä, '
+                + 'vartin kävelymatkan päässä keskustasta. Sieltä lähtee busseja '
+                + 'pohjoiseen, Chiloén saarelle ja Andien yli Argentiinan '
+                + 'Barilocheen, jonne ajetaan noin seitsemän tuntia. Uusin tulokas '
+                + 'on juna. Matkustajajunat lakkasivat kulkemasta Puerto Monttiin '
+                + '1997, mutta huhtikuussa 2025 alkoi lähiliikenne vuonna 1913 '
+                + 'avattua rataa pitkin: 27 kilometrin reitti yhdistää '
+                + 'Llanquihuen, Puerto Varasin ja Puerto Montin La Paloman '
+                + 'aseman. Vuoden 2025 lopulla junat kulkivat vain arkipäivisin. '
+                + 'Meritse etelään pääsee Navimagin rahti- ja '
+                + 'matkustajalautoilla. Puerto Natalesiin matka kestää neljä '
+                + 'päivää Patagonian kanavien läpi, ja matkalla poiketaan pienessä '
+                + 'Puerto Edénin kylässä. Vuonna 2020 liikenteeseen tullut '
+                + 'Esperanza ottaa ajoneuvojen lisäksi kyytiin 244 matkustajaa. '
+                + 'Chaiténiin Carretera Australin varrelle kulkee yölauttoja, ja '
+                + 'matka kestää 10–12 tuntia.',
+              kuva: [
+                {
+                  tiedosto: 'Aeropuerto El Tepual Puerto Montt (PMC), 2019 (02).jpg',
+                  lyhyt: 'Sky Airlinen matkustajakone El Tepualin lentoaseman matkustajasillalla 2019.',
+                  selite: 'Tammikuussa 2019 Sky Airlinen matkustajakone odottaa '
+                    + 'El Tepualin lentoaseman matkustajasillassa, jonka '
+                    + 'kyljessä lukee Puerto Montt; kentän takana alkaa '
+                    + 'matala metsä.',
+                  lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Tren TLD-502 en Estación La Paloma (2).jpg',
+                  lyhyt: 'Llanquihuen ja Puerto Montin välistä lähijunaa ajava TLD-502 La Paloman asemalla.',
+                  selite: 'Valtionrautatie EFE:n sinivalkoinen moottorijuna '
+                    + 'TLD-502 seisoo Puerto Montin La Paloman asemalla '
+                    + 'syyskuussa 2025, puoli vuotta lähiliikenteen alkamisen '
+                    + 'jälkeen.',
+                  lahde: 'Caineuser1431, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Ferry esperanza.jpg',
+                  lyhyt: 'Navimagin punainen lautta Esperanza ankkurissa Puerto Montin edustalla 2020.',
+                  selite: 'Navimagin uusi lautta Esperanza on ankkurissa Puerto '
+                    + 'Montin edustalla syyskuussa 2020, pian liikenteeseen '
+                    + 'tulonsa jälkeen; pieni punainen vene kulkee aluksen '
+                    + 'vieressä.',
+                  lahde: 'Patricio Pillancari, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Äyriäiskeittoa ja perunaleipää',
+              teksti: 'Satamakaupungin ruokapöytä katetaan merestä. Paila marina '
+                + 'on äyriäis- ja kalakeitto, joka tarjoillaan tulikuumana '
+                + 'paksussa savikulhossa, pailassa: kalaliemessä haudutetaan '
+                + 'sipulia, porkkanaa, paprikaa ja tomaattia sekä simpukoita '
+                + 'kuorineen, ja pinnalle ripotellaan persiljaa. Chileläiset '
+                + 'syövät sitä mielellään porukalla juhlaa seuraavana aamuna, '
+                + 'koska sen uskotaan palauttavan voimat. Toinen etelän perusta '
+                + 'on peruna. Viljellyllä perunalla on kaksi alkukotia, Perun '
+                + 'Andit ja Chiloén saaristo, ja Chiloén saarelaiset ovat '
+                + 'tehneet siitä omat leipänsä. Milcao on litteä perunakakku, '
+                + 'jonka taikinaan sekoitetaan raastettua raakaa ja keitettyä '
+                + 'survottua perunaa, usein myös rapeaksi paistettuja sianlihan '
+                + 'paloja; se paistetaan uunissa tai pannulla tai höyrytetään '
+                + 'muiden ruokien päällä. Chapalele on keitetystä perunasta ja '
+                + 'vehnäjauhoista tehty mykyrä. Kun saaristolaisperheet muuttivat '
+                + '1800-luvun jälkipuoliskolla ja 1900-luvun alussa '
+                + 'Patagoniaan, milcao levisi heidän mukanaan koko Etelä-Chileen '
+                + 'ja Argentiinaan. Makeaa tuo murta, Etelä-Chilen oma '
+                + 'pensasmarja, josta keitetään hilloa ja likööriä, ja '
+                + 'Etelä-Chile tunnetaan myös oluistaan. Illansuussa chileläiset '
+                + 'kokoontuvat oncesille, teehetkelle, jolla syödään leipää. '
+                + 'Tuoreen leivän haku lähileipomosta kuuluu päivän rytmiin, ja '
+                + 'Chile on maailman suurimpia leivänsyöjämaita.',
+              kuva: {
+                tiedosto: 'PailaMarina.jpg',
+                lyhyt: 'Paila marina -keitto mustassa savikulhossa Puerto Montin Angelmón ravintolassa.',
+                selite: 'Maaliskuussa 2015 Angelmón ravintolassa tarjoiltu paila '
+                  + 'marina: mustassa savikulhossa höyryää äyriäisliemi, jossa '
+                  + 'on simpukoita kuorineen, paprikaa ja runsaasti persiljaa.',
+                lahde: 'Ultramanttiga, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Patsas, katedraali ja taidetalo',
+              teksti: 'Rantakadun kuuluisimmat asukkaat ovat pariskunta, joka '
+                + 'istuu sylikkäin ja katsoo Reloncavín selälle. Puerto Varasista '
+                + 'kotoisin olevan kuvanveistäjän Robinson Barrían kuusimetrinen '
+                + 'Sentados frente al mar, "Meren edessä istuen", sai aiheensa '
+                + 'uruguaylaisen Los Iracundos -yhtyeen laulusta Puerto Montt, '
+                + 'ja se paljastettiin ystävänpäivänä 2002. Patsas on tehty '
+                + 'ferrosementistä rautarungon ympärille, ja sen ulkonäköä on '
+                + 'arvosteltu alusta asti; tekijä itsekin myönsi, että kiire '
+                + 'ehtiä ystävänpäiväksi jätti työn keskeneräiseksi. Silti siitä '
+                + 'on tullut kaupungin kuvatuimpia kohteita. Kun asuntoministeriö '
+                + 'ehdotti 2019 sen siirtämistä, yli 48 000 ihmistä äänesti, ja '
+                + 'lähes kaksi kolmasosaa halusi patsaan pysyvän paikallaan. '
+                + 'Kaupungin omat muraalimaalarit entisöivät sen värit 2023. '
+                + 'Pääaukion laidalla seisoo puinen katedraali, jonka '
+                + 'julkisivupylväät muistuttavat Ateenan Parthenonia; sisällä '
+                + 'kattoa kannattaa kaksitoista alerce-puista pylvästä, ja '
+                + 'kirkosta tuli katedraali 1939. Vuoden 1960 maanjäristyksen '
+                + 'jälkeen Meksiko auttoi rakentamaan kaupunkiin taidetalon, joka '
+                + 'nimettiin maalari Diego Riveran mukaan ja avattiin 1964. Casa '
+                + 'del Arte Diego Riveran teatterisalissa on 429 paikkaa, '
+                + 'näyttelysalin oveen on veistetty saksalaisen Loreleyn ja '
+                + 'chiloéläisen merenneito Pincoyan tarut, ja toisen kerroksen '
+                + 'kahvilasta näkyy lahdelle. Vuodesta 1992 talo on ollut '
+                + 'kaupungin kansainvälisen teatterifestivaalin päänäyttämö.',
+              kuva: {
+                tiedosto: 'Catedral de Puerto Montt.jpg',
+                lyhyt: 'Puerto Montin puinen katedraali pylväsjulkisivuineen kaupungin pääaukion laidalla.',
+                selite: 'Tammikuussa 2015 aukiolta kuvatun katedraalin '
+                  + 'ruskeassa puujulkisivussa pylväät kannattavat kolmiopäätyä, '
+                  + 'ja katolla kohoaa lasi-ikkunainen kupoli.',
+                lahde: 'Manxuc, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ruusuja, musiikkia ja vesiputous',
+              teksti: 'Puerto Montista ehtii päivässä Llanquihuen järven '
+                + 'rannoille. Parinkymmenen kilometrin päässä on Puerto Varas, '
+                + 'jonka saksalaiset siirtolaiset perustivat samana vuonna kuin '
+                + 'Puerto Montin. Sitä kutsutaan ruusujen kaupungiksi, koska '
+                + 'pormestari Teobaldo Kuschel alkoi 1950-luvulla istuttaa '
+                + 'ruusupensaita aukioille, puistoihin ja etupihoille. Vanhojen '
+                + 'alerce-puisten talojen kortteli on suojeltu, mäellä kohoaa '
+                + 'vuonna 1918 rakennettu puukirkko, ja rannalta näkyvät '
+                + 'Osorno, Calbuco ja Tronador. Pohjoisempana järven rannalla on '
+                + 'Frutillar, josta tuli 2017 Chilen ensimmäinen Unescon '
+                + 'luovien kaupunkien verkoston musiikkikaupunki. Rantaan 2010 '
+                + 'avatussa Teatro del Lagossa on 1 178 paikan konserttisali, ja '
+                + 'tammi–helmikuun vaihteessa siellä soi maan suurin klassisen '
+                + 'musiikin festivaali, Semanas Musicales de Frutillar. Idempänä '
+                + 'Vicente Pérez Rosalesin kansallispuistossa Todos los Santos '
+                + '-järvi laskee Petrohué-jokeen, joka kuohuu pian lähtönsä '
+                + 'jälkeen tummien laavakivien lomitse Petrohuén putouksina. '
+                + 'Järven vihreä väri tulee jäätiköiden sulamisvesien '
+                + 'kivijauhosta, ja saksalaissiirtolaiset kutsuivat sitä '
+                + 'Smaragdijärveksi. Järven länsipään Petrohuésta ei ole tietä '
+                + 'itäpään Peullaan, joten Argentiinan Barilocheen jatketaan '
+                + 'bussien ja järvilaivojen yhdistelmällä metsäisten vuorten '
+                + 'halki. Joella kalastetaan lohta ja taimenta marraskuusta '
+                + 'toukokuuhun.',
+              kuva: {
+                tiedosto: 'Saltos del Petrohué y Volcán Osorno.jpg',
+                lyhyt: 'Petrohué-joki kuohuu laavakivien välissä, taustalla lumihuippuinen Osorno.',
+                selite: 'Petrohuén putouksilla turkoosi vesi kuohuu tummien '
+                  + 'laavakallioiden lomitse lokakuussa 2025, ja metsän takana '
+                  + 'kohoaa Osornon lumipeitteinen kartio.',
+                lahde: 'Alexmrz, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+            {
+              otsikko: 'Sadetakki ja lautta Chiloélle',
+              teksti: 'Puerto Montin ilmasto on viileä ja sateinen. Tammi- ja '
+                + 'helmikuussa päivälämpötila nousee noin 20 asteeseen, ja '
+                + 'silloin sataa vähiten; kesäkuussa sademäärä on kolminkertainen, '
+                + 'ja heinäkuun päivät jäävät noin kymmeneen asteeseen. Pakkasta '
+                + 'on harvoin. Keskusta, rantakatu ja linja-autoasema ovat '
+                + 'kävelymatkan päässä toisistaan, ja muuten liikutaan takseilla '
+                + 'tai colectivoilla, kiinteää reittiä ajavilla yhteistakseilla. '
+                + 'Maksuvälineenä on Chilen peso. Suosittu retki suuntautuu '
+                + 'Chiloén saarelle, jonka puukirkot kuuluvat Unescon '
+                + 'maailmanperintöluetteloon. Chacaon salmen yli ei vielä pääse '
+                + 'siltaa pitkin: autot ja bussit ajavat noin 50 kilometrin '
+                + 'päässä Parguassa lautalle, ja ylitys kestää puolisen tuntia. '
+                + 'Neljän kilometrin levyisessä salmessa vuorovesivirta voi '
+                + 'kulkea neljästä viiteen metriä sekunnissa. Cruz del Sur '
+                + '-yhtiön bussit ohittavat lauttajonon, koska yhtiö omistaa '
+                + 'monta salmen lauttaa, ja bussimatka kestää noin kaksi tuntia. '
+                + 'Salmen ylle rakennetaan riippusiltaa, josta tulee valmistuessaan '
+                + 'Latinalaisen Amerikan pisin, ja avajaiset on siirretty vuoden '
+                + '2028 jälkipuoliskolle. Siltaa ehdotettiin ensimmäisen kerran '
+                + 'jo 1960-luvulla, ja hanke on sen jälkeen peruttu ja herätetty '
+                + 'henkiin monta kertaa.',
+              kuva: {
+                tiedosto: 'Canal de Chacao transbordador 0241.jpg',
+                lyhyt: 'Rekkoja ja henkilöautoja lautan kannella Chacaon salmen ylityksellä 2019.',
+                selite: 'Tammikuussa 2019 Chacaon salmen lautan avokannella '
+                  + 'rekat ja autot odottavat rantautumista, ja matkustajat '
+                  + 'seisovat kaiteen vieressä komentosillan alla; taivaalla '
+                  + 'kulkee sadepilviä.',
+                lahde: 'Draceane, Wikimedia Commons (CC BY-SA 4.0)',
+              },
+            },
+          ],
+        },
+      },
     },
     {
       id: 'luonto',
