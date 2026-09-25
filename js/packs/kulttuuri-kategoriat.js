@@ -28625,6 +28625,136 @@ export const KULTTUURI_KATEGORIAT = {
           + 'puolueeton.',
       },
     },
+    /*
+     * EUROOPPA-SIVU (23.9.2026). Toinen aihesivu kannen rinnalle: kansi
+     * kertoo kalliolinnoituksesta ja vanhastakaupungista, tämä sivu
+     * EU:n toimielinten kaupungista 1952 alkaen. LUX-maalehti
+     * (js/packs/maa-kategoriat.js) ei käsittele EU:ta, joten nostot
+     * eivät toista sitä. Faktat en-Wikipediasta: Robert Schuman,
+     * Clausen (Luxembourg), Schuman Declaration, Location of European
+     * Union institutions, High Authority of the European Coal and Steel
+     * Community, European Court of Justice, Villa Vauban, Kirchberg
+     * (Luxembourg), European Parliament in Luxembourg ja Grand Duchess
+     * Charlotte Bridge. Minitehtävän vastaus on nostossa 2.
+     *
+     * SIVU-ID `eurooppa` on AIHE_IKONIT-taulun ulkopuolella ja piirtyy
+     * yleiskuvakkeella (sama perusteltu poikkeus kuin esim.
+     * `saksalaisperinne`): vakioaiheista `historia` olisi harhaanjohtava,
+     * koska sivu jatkuu nykypäivän Kirchbergiin.
+     *
+     * KUVAT: neljä Commons-kuvaa, lisenssi ja tekijä luettu rajapinnan
+     * extmetadatasta (LicenseShortName, Artist, Restrictions tyhjä),
+     * kaikki vähintään 3500 px leveitä, katsottu silmin eikä yhtäkään
+     * käytetä muualla repossa.
+     */
+    {
+      id: 'eurooppa',
+      nimi: 'Eurooppa',
+      johdanto: 'Seitsemästä EU:n toimielimestä viisi toimii ainakin osittain '
+        + 'Luxemburgissa — enemmän kuin missään muussa kaupungissa. Kaikki alkoi '
+        + '1952, kun kuusi maata ei päässyt sopuun, minne uusi hiili- ja '
+        + 'teräsyhteisö sijoitetaan.',
+      tehtava: {
+        kysymys: 'Miksi Luxemburgista tuli vuonna 1952 Euroopan hiili- ja '
+          + 'teräsyhteisön kotipaikka?',
+        vaihtoehdot: [
+          'Robert Schuman vaati sitä, koska oli syntynyt kaupungissa',
+          'Jäsenmaat eivät päässeet sopuun, ja Luxemburg tarjoutui väliaikaiseksi kotipaikaksi',
+          'Luxemburg oli jäsenmaista suurin teräksentuottaja',
+          'Kirchbergissä oli jo valmiina toimistokortteli',
+        ],
+        oikea: 1,
+        fakta: 'Bryssel olisi kelvannut monelle, mutta Belgia vaati Liègeä. '
+          + 'Luxemburgin pääministeri Joseph Bech ehdotti umpikujan ratkaisuksi, '
+          + 'että toimielimet sijoitetaan Luxemburgiin väliaikaisesti, kunnes '
+          + 'pysyvästä paikasta sovitaan.',
+      },
+      nostot: [
+        {
+          otsikko: 'Clausenin poika, joka ehdotti yhteistä Eurooppaa',
+          tiedosto: 'Luxembourg rue Jules Wilhelm - Gebuertshaus Robert Schuman (101).jpg',
+          teksti: 'Robert Schuman syntyi 29. kesäkuuta 1886 Luxemburgin '
+            + 'Clausenissa, talossa, jota hänen vanhempansa vuokrasivat rue Jules '
+            + 'Wilhelmin varrelta. Isä oli kotoisin Lotaringiasta ja äiti '
+            + 'luxemburgilainen; poika puhui äidinkielenään luxemburgia ja kävi '
+            + 'koulua Luxemburgin Athénée-lyseossa. Ranskan ulkoministerinä hän '
+            + 'ehdotti 9. toukokuuta 1950, että Ranskan ja Länsi-Saksan hiili ja '
+            + 'teräs asetetaan yhteisen viranomaisen alle, jotta sota maiden '
+            + 'välillä kävisi aineellisesti mahdottomaksi. Päivää juhlitaan '
+            + 'nykyään EU:ssa Eurooppa-päivänä. Valtio osti syntymätalon 1985, ja '
+            + 'Euroopan parlamentti on kunnostanut sen.',
+          lyhyt: 'Robert Schumanin syntymätalo Clausenissa rue Jules Wilhelmin varrella.',
+          selite: 'Robert Schumanin syntymätalo Clausenin kaupunginosassa; '
+            + 'Luxemburgin valtio osti talon 1985, ja nykyään siinä toimii pieni '
+            + 'tutkimuslaitos.',
+          lahde: 'GilPe, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Robert Schuman',
+        },
+        {
+          otsikko: 'Väliaikainen kotipaikka, joka jäi pysyväksi',
+          tiedosto: 'Lux City Hall 1952.jpg',
+          teksti: 'Pariisin sopimus perusti 1951 Euroopan hiili- ja '
+            + 'teräsyhteisön, mutta kuusi jäsenmaata ei päässyt sopuun sen '
+            + 'kotipaikasta. Bryssel olisi kelvannut monelle, mutta Belgia vaati '
+            + 'Liègeä. Umpikujan ratkaisi Luxemburgin pääministeri Joseph Bech: '
+            + 'toimielimet sijoitettaisiin väliaikaisesti Luxemburgiin, kunnes '
+            + 'pysyvästä paikasta sovitaan. Yhteisön toimeenpanoelin, korkea '
+            + 'viranomainen, piti ensimmäisen istuntonsa Luxemburgin '
+            + 'kaupungintalossa 10. elokuuta 1952, ja sen ensimmäiseksi '
+            + 'puheenjohtajaksi valittiin Jean Monnet. Myöhemmin komissio ja '
+            + 'neuvosto keskittyivät Brysseliin, mutta vuoden 1965 päätös '
+            + 'korvasi menetyksen: tuomioistuin jäi Luxemburgiin, ja EU:n '
+            + 'neuvosto kokoontuu täällä yhä huhti-, kesä- ja lokakuussa.',
+          lyhyt: 'Väkijoukko Luxemburgin kaupungintalon edessä 10. elokuuta 1952.',
+          selite: 'Väkeä kerääntyi Luxemburgin kaupungintalon eteen 10. elokuuta '
+            + '1952, kun sisällä pidettiin hiili- ja teräsyhteisön korkean '
+            + 'viranomaisen ensimmäinen istunto.',
+          lahde: 'European Parliament, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'High Authority of the European Coal and Steel Community',
+        },
+        {
+          otsikko: 'Tuomioistuin taiteilijahuvilassa',
+          tiedosto: 'Villa Vauban - Luxembourg City - DSC06363.JPG',
+          teksti: 'Villa Vauban rakennettiin 1873 yksityisasunnoksi tontille, '
+            + 'joka vapautui, kun kaupungin linnoitukset purettiin, ja nimensä se '
+            + 'sai paikalla aiemmin seisseestä Vaubanin linnakkeesta. Kaupunki '
+            + 'osti huvilan 1949 taidekokoelmilleen, mutta hiili- ja '
+            + 'teräsyhteisön tuomioistuin tarvitsi tilat, ja se piti huvilassa '
+            + 'ensimmäisen istuntonsa 28. marraskuuta 1954. Talo jäi pian '
+            + 'ahtaaksi: tuomioistuin muutti 1959 Côte d\'Eichin rakennukseen ja '
+            + '1972 omaan palatsiinsa Kirchbergiin. Tuomarit neuvottelevat yhä '
+            + 'ranskaksi, ja tuomio kirjoitetaan ensin sillä kielellä, oli asian '
+            + 'kieli mikä tahansa.',
+          lyhyt: 'Villa Vauban on nykyään Luxemburgin kaupungin taidemuseo.',
+          selite: 'Villa Vauban rakennettiin 1873, ja siinä toimi hiili- ja '
+            + 'teräsyhteisön tuomioistuin vuosina 1952–1959. Nykyään se on '
+            + 'kaupungin taidemuseo.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+          wiki: 'Villa Vauban',
+        },
+        {
+          otsikko: 'Punainen silta Euroopan kortteleihin',
+          tiedosto: 'Puente rojo, ciudad de Luxemburgo, Luxemburgo, 2023-12-16, DD 137.jpg',
+          teksti: 'Kun Bryssel ja Strasbourg kilpailivat 1950-luvun lopulla '
+            + 'uusien yhteisöjen virastoista, Luxemburgin hallitus halusi tarjota '
+            + 'niille halpaa maata Kirchbergin lähes rakentamattomalta ylängöltä. '
+            + 'Sinne oli kuitenkin hankala päästä, koska välissä oli 75 metriä '
+            + 'syvä Pfaffenthalin laakso. Vuoden 1957 suunnittelukilpailuun tuli '
+            + '69 ehdotusta, ja voittajan, saksalaisen Egon Juxin, silta avattiin '
+            + 'liikenteelle 24. lokakuuta 1966. Kirkkaanpunainen väri valittiin '
+            + 'tarkoituksella, jotta silta erottuisi myös sumussa. Nykyään '
+            + 'Kirchbergissä ovat EU:n tuomioistuin, tilintarkastustuomioistuin, '
+            + 'Euroopan investointipankki ja parlamentin sihteeristö, jossa '
+            + 'työskentelee yli 4 000 ihmistä.',
+          lyhyt: 'Punainen Grande-Duchesse Charlotten silta ylittää Pfaffenthalin laakson.',
+          selite: 'Grande-Duchesse Charlotten silta, luxemburgiksi Rout Bréck, '
+            + 'kulkee 75 metrin korkeudella Alzetten yllä ja yhdistää '
+            + 'yläkaupungin Kirchbergin EU-kortteleihin.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Grand Duchess Charlotte Bridge',
+        },
+      ],
+    },
   ],
   nikosia: [
     {
@@ -58274,6 +58404,147 @@ export const KULTTUURI_KATEGORIAT = {
         },
       },
     },
+    /*
+     * ALCATRAZ (lisätty 23.9.2026). Kansi kertoo Alcatrazista vain
+     * avauskuvan rivin ja oppaan maininnan, joten saari saa oman
+     * sivunsa: majakka, linnake, liittovaltion vankila ja valtaus
+     * 1969–1971. Faktat en-Wikipedian raakatekstistä (haettu
+     * 23.9.2026): Alcatraz Island, Alcatraz Island Lighthouse, Fort
+     * Alcatraz, Alcatraz Federal Penitentiary, Occupation of Alcatraz ja
+     * Alcatraz water tower. Hopi-vankien vuosi 1895 on Fort Alcatraz
+     * -artikkelista (Alcatraz Island -artikkeli sanoo epätarkasti
+     * "1870s"). RAJAUS: vankilasta kerrotaan rakenne, arki ja
+     * sulkemisen syyt — ei Battle of Alcatrazia, ammuttuja pakenijoita
+     * eikä D-korttelin rangaistussellejä. Valtaus kerrotaan
+     * alkuperäiskansojen omana aloitteena ja päättyy nykyhetkeen
+     * (Raamatun pilari 3). Kuvien lisenssit ja tekijät Commonsin
+     * extmetadatasta 23.9.2026, kaikki katsottu silmin: majakkakuvan
+     * vasemmassa laidassa oleva kävijä pitää puhelinta kasvojensa
+     * edessä, eikä muissa ole ihmisiä; vuoden 1888 vedoksen numero
+     * "3071" on alkuperäinen negatiivimerkintä.
+     */
+    {
+      id: 'historia',
+      nimi: 'Alcatrazin saari',
+      johdanto: 'Lahden keskellä, kahden kilometrin päässä rannasta, on pieni '
+        + 'kallio, jolla on ollut majakka, linnake, sotilasvankila ja maan '
+        + 'kuuluisin vankila. Isoisän matkavuonna 1873 armeija tasoitti '
+        + 'saarta vankiensa voimin.',
+      tehtava: {
+        kysymys: 'Mihin sopimukseen Alcatrazin valtaajat vetosivat vaatiessaan saarta 1969?',
+        vaihtoehdot: [
+          'Guadalupe Hidalgon rauhaan 1848',
+          'Fort Laramien sopimukseen 1868',
+          'Chicagon sopimukseen 1833',
+          'Pariisin rauhaan 1783',
+        ],
+        oikea: 1,
+        fakta: 'Valtaajien mukaan sopimus lupasi palauttaa käytöstä poistetut '
+          + 'liittovaltion maat alkuperäiskansoille. Vankila oli suljettu '
+          + '1963, ja saari oli julistettu ylijäämämaaksi 1964.',
+      },
+      nostot: [
+        {
+          otsikko: 'Pelikaanien saari ja lännen ensimmäinen majakka',
+          tiedosto: 'San Francisco (CA, USA), Alcatraz, Lighthouse -- 2022 -- 3155.jpg',
+          teksti: 'Espanjalainen merenkulkija Juan Manuel de Ayala kartoitti '
+            + 'lahden 1775 ja antoi nykyiselle Yerba Buena Islandille nimen '
+            + 'La Isla de los Alcatraces; nimen siirsi myöhemmin tälle '
+            + 'kalliolle englantilainen kapteeni Frederick W. Beechey. Nimi '
+            + 'tarkoittanee pelikaanien saarta, ja ranskalainen kapteeni '
+            + 'Auguste Duhaut-Cilly kirjoitti elokuussa 1827, että laukaus '
+            + 'nosti saaren linnut pilveksi hurrikaanin äänellä. '
+            + 'Kultaryntäyksen vilkastuttama merenkulku sai kongressin '
+            + 'tilaamaan 1851–1852 seitsemän majakkaa länsirannikolle, ja '
+            + 'Alcatrazin majakka valmistui niistä ensimmäisenä. Ranskalainen '
+            + 'Fresnel-linssi tuotiin laivalla Etelä-Amerikan ympäri, ja '
+            + 'vartija Michael Cassin sytytti valon 1. kesäkuuta 1854 — '
+            + 'ensimmäisenä Yhdysvaltain Tyynenmeren rannikolla.',
+          lyhyt: 'Nykyinen betonitorni rakennettiin 1909, kun alkuperäinen majakka oli vaurioitunut maanjäristyksessä.',
+          selite: 'Nykyinen betoninen majakkatorni rakennettiin 1909 uuden '
+            + 'sellirakennuksen viereen, ja vuoden 1906 maanjäristyksessä '
+            + 'vaurioitunut alkuperäinen majakka purettiin.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Alcatraz Island Lighthouse',
+        },
+        {
+          otsikko: 'Isoisän vuonna: linnakkeesta tuli vankila',
+          tiedosto: 'Fort Alcatraz, San Francisco, circa 1888 (14660678076).jpg',
+          teksti: 'Armeijan insinöörit linnoittivat saarta 1853–1859 Zealous '
+            + 'B. Towerin johdolla, ja sisällissodan alkaessa 1861 muureilla '
+            + 'oli 85 tykkiä, vuoteen 1866 mennessä 105. Tykkejä ei koskaan '
+            + 'laukaistu vihollista kohti, mutta kylmä vesi ja voimakkaat '
+            + 'virtaukset tekivät saaresta hyvän vankilan: rikoksiin '
+            + 'syyllistyneitä sotilaita pidettiin siellä jo 1859, ja 1868 '
+            + 'saari nimettiin virallisesti armeijan pitkäaikaisvankilaksi. '
+            + 'Vuosina 1870–1876 armeija yritti tasoittaa koko saaren, ja '
+            + 'majuri George Mendell pani vangit ja muulit kaatamaan louhetta '
+            + 'lahteen; nykyinen paraatikenttä on keskeneräisen työn jälki. '
+            + 'Kesäkuun 5. päivänä 1873 saarelle tuotiin ensimmäinen '
+            + 'alkuperäiskansan vanki, paiute Tom, ja vuoteen 1895 mennessä '
+            + 'heitä oli ollut 32 — joukossa 19 hopi-miestä, jotka olivat '
+            + 'kieltäytyneet lähettämästä lapsiaan pois perheiltään '
+            + 'sisäoppilaitoksiin.',
+          lyhyt: 'Noin vuodelta 1888 oleva valokuva katsoo kaupungin rannasta lahdelle ja Fort Alcatrazin kalliolle.',
+          selite: 'Noin vuodelta 1888 oleva valokuva katsoo kaupungin '
+            + 'rannasta lahdelle, jonka keskellä seisoo Fort Alcatraz '
+            + 'linnakkeineen ja majakoineen.',
+          lahde: 'USMC Archives from Quantico, USA, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Fort Alcatraz',
+        },
+        {
+          otsikko: 'Kallio, josta ei pitänyt päästä pois',
+          tiedosto: 'Alcatraz cell block (5938779149).jpg',
+          teksti: 'Oikeusministeriö otti saaren armeijalta 12. lokakuuta 1933, '
+            + 'ja 11. elokuuta 1934 ensimmäiset 137 vankia tuotiin junalla '
+            + 'Kansasin Leavenworthista lahden rantaan ja sieltä saarelle. '
+            + 'Alcatraz oli tarkoitettu vangeille, jotka olivat aiheuttaneet '
+            + 'jatkuvasti ongelmia muissa liittovaltion vankiloissa, ja 29 '
+            + 'toimintavuoden aikana siellä oli kaikkiaan 1 576 vankia. Selli '
+            + 'oli noin 2,7 metriä pitkä ja 1,5 metriä leveä, eikä yksikään '
+            + 'selli ollut ulkoseinää vasten. Alkuvuosina vankilassa vallitsi '
+            + 'ehdoton vaikenemisen sääntö, ja kirjastosta, jossa oli 10 000–'
+            + '15 000 kirjaa, keskivertovanki luki 75–100 kirjaa vuodessa. '
+            + 'Vankila suljettiin 21. maaliskuuta 1963, koska se oli maan '
+            + 'kallein: vankipäivä maksoi lähes kymmenen dollaria, Atlantassa '
+            + 'kolme, ja saarelle piti kuljettaa mantereelta lähes miljoona '
+            + 'gallonaa vettä viikossa.',
+          lyhyt: 'Sellirakennus valmistui armeijan vankilaksi 1912, ja siinä on neljä selliosastoa A:sta D:hen.',
+          selite: 'Sellirakennus valmistui armeijan vankilaksi 1912, ja '
+            + 'liittovaltion vankilan aikana sen kolmikerroksiset sellirivit '
+            + 'jakautuivat neljään osastoon A:sta D:hen.',
+          lahde: 'Tim Wilson from Blaine, MN, USA, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Alcatraz Federal Penitentiary',
+        },
+        {
+          otsikko: 'Kaikkien heimojen intiaanit',
+          tiedosto: 'San Francisco (CA, USA), Alcatraz, Water Tower -- 2022 -- 3136.jpg',
+          teksti: 'Maaliskuun 8. päivänä 1964 joukko lakotoja nousi Belva '
+            + 'Cottierin aloitteesta saarelle neljäksi tunniksi ja tarjosi '
+            + 'siitä saman hinnan, jonka valtio oli aikanaan tarjonnut heille '
+            + 'maistaan: 47 senttiä eekkeriltä eli 9,40 dollaria koko '
+            + 'saaresta. Marraskuun 20. päivänä 1969 lähti 89 alkuperäiskansojen '
+            + 'jäsentä, enimmäkseen lahden alueen opiskelijoita, valtaamaan '
+            + 'saarta nimellä Indians of All Tribes, Kaikkien heimojen '
+            + 'intiaanit. He vetosivat vuoden 1868 Fort Laramien sopimukseen, '
+            + 'jonka katsoivat lupaavan käytöstä poistetut liittovaltion maat '
+            + 'takaisin alkuperäisille asukkailleen, ja suunnittelivat '
+            + 'saarelle kulttuurikeskusta. Valtaus kesti 19 kuukautta, '
+            + 'parhaimmillaan saarella oli 400 ihmistä, ja siellä toimivat '
+            + 'koulu, päiväkoti, terveysasema ja John Trudellin Radio Free '
+            + 'Alcatraz. Presidentti Nixon luopui heinäkuussa 1970 '
+            + 'alkuperäiskansojen aseman lakkauttamispolitiikasta, ja '
+            + 'saarella pidetään yhä joka vuosi Unthanksgiving Dayn '
+            + 'aamunkoittoseremonia.',
+          lyhyt: 'Vesitornin punaiset tekstit maalattiin valtauksen aikana ja uudelleen korjauksessa 2011–2012.',
+          selite: 'Vesitorni rakennettiin 1940–1941, ja sen kylkeen valtauksen '
+            + 'aikana maalatut punaiset tekstit maalattiin uudelleen, kun '
+            + 'torni korjattiin 2011–2012.',
+          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Occupation of Alcatraz',
+        },
+      ],
+    },
   ],
   /*
    * NEW YORK (Opus 23.8.2026). Pohjois-Amerikan laudan PILOTTIKAUPUNKI
@@ -65115,6 +65386,110 @@ export const KULTTUURI_KATEGORIAT = {
           + 'Kadut nousevat ja laskevat jyrkästi niemen muodon mukaan, '
           + 'ja monessa kohdassa portaat korvaavat ajoradan kokonaan.',
       },
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Haukka vuokrana, lähes neljän kuukauden piiritys, ritarien antautuminen '
+          + 'Napoleonille ja kaksi vuotta pommituksia: neljä vaihetta, joissa pieni saari '
+          + 'oli Välimeren taistelujen keskipisteessä.',
+      tehtava: {
+        kysymys: 'Mitä johanniittaritarien piti maksaa vuosittain, kun keisari Kaarle V '
+            + 'antoi heille Maltan vuonna 1530?',
+        vaihtoehdot: [
+          'Tynnyrillinen maltalaista viiniä',
+          'Sata kultadukaattia',
+          'Kaksi varustettua kaleeria',
+          'Yksi maltalainen haukka',
+        ],
+        oikea: 3,
+        fakta: 'Kaarle V antoi Maltan, Gozon ja Tripolin ritarikunnalle ikuiseksi '
+            + 'läänitykseksi. Vuosimaksuksi riitti yksi maltalainen haukka, joka lähetettiin '
+            + 'Sisilian varakuninkaalle.',
+      },
+      nostot: [
+        {
+          otsikko: 'Saari, jonka vuokra oli yksi haukka',
+          tiedosto: 'Prise de Malte en 1530.jpg',
+          teksti: 'Johanniittaritarit menettivät tukikohtansa Rodoksella vuonna 1522, kun '
+              + 'osmanit valtasivat saaren kuuden kuukauden piirityksen jälkeen. Seitsemän '
+              + 'vuoden vaelluksen jälkeen keisari Kaarle V antoi heille Sisilian kuninkaana '
+              + 'Maltan, Gozon ja Pohjois-Afrikan Tripolin ikuiseksi läänitykseksi. '
+              + 'Vuosimaksu oli yksi maltalainen haukka, joka lähetettiin Sisilian '
+              + 'varakuninkaalle. Suurmestari Philippe Villiers de L\'Isle-Adam purjehti '
+              + 'Suureen satamaan 26. lokakuuta 1530, mutta moni ritari haaveili yhä '
+              + 'Rodoksen takaisinvaltaamisesta, sillä Malta oli pieni ja karu saari. '
+              + 'Ritarit asettuivat Birgun kaupunkiin ja rakensivat sen vanhan linnan '
+              + 'uudelleen Pyhän Angelon linnakkeeksi.',
+          lyhyt: 'Punaviittaiset ritarit ja ritarikunnan valkoristinen lippu Maltan '
+              + 'rannalla.',
+          selite: 'René Théodore Berthonin vuonna 1839 maalaama kuva ritarikunnan '
+              + 'saapumisesta Maltalle vuonna 1530: punaviittaiset ritarit, trumpetit ja '
+              + 'valkoristinen lippu linnoituksen edustalla.',
+          lahde: 'René Théodore Berthon, Wikimedia Commons (PD)',
+          wiki: 'Hospitaller Malta',
+        },
+        {
+          otsikko: 'Lähes neljän kuukauden piiritys',
+          tiedosto: 'Matteo Perez d\' Aleccio (1547-1616) - The Siege of Malta, Capture of St Elmo, 23 June 1565 - BHC0254 - Royal Museums Greenwich.jpg',
+          teksti: 'Sulttaani Suleiman Suuri lähetti vuonna 1565 valtavan laivaston '
+              + 'ajamaan ritarit Maltalta. Piiritys kesti 18. toukokuuta – 8. syyskuuta, ja '
+              + 'saarta puolusti noin 500 ritaria ja 6 000 jalkaväen sotilasta. Osmanit '
+              + 'hyökkäsivät ensin Pyhän Elmon linnakkeeseen Sciberras-vuoren kärjessä, '
+              + 'nykyisen Vallettan paikalla, ja sen valtaaminen 23. kesäkuuta maksoi heille '
+              + 'ainakin 6 000 miestä. Birgu ja Senglea kestivät silti pommituksen, jossa '
+              + 'aikalaiskertoja Francisco Balbin mukaan ammuttiin noin 130 000 tykinkuulaa. '
+              + 'Voiton jälkeen Euroopasta virtasi Maltalle rahaa, ja suurmestari Jean de '
+              + 'Valette rakensi Sciberras-vuorelle linnoitetun kaupungin, joka sai hänen '
+              + 'nimensä.',
+          lyhyt: 'Osmanien joukot ja tykit Pyhän Elmon linnakkeen ympärillä kesäkuussa '
+              + '1565.',
+          selite: 'Matteo Perez d\'Aleccion maalaus Pyhän Elmon valtauksesta 23. kesäkuuta '
+              + '1565 on Greenwichissä Lontoossa. Saman taiteilijan freskot piirityksestä '
+              + 'koristavat Vallettan Suurmestarin palatsin valtaistuinsalia.',
+          lahde: 'Matteo Perez d\'Aleccio, Royal Museums Greenwich, Wikimedia Commons (PD)',
+          wiki: 'Great Siege of Malta',
+        },
+        {
+          otsikko: 'Ritarikunnan loppu ja ranskalaisten kaksi vuotta',
+          tiedosto: 'Palazzo Parisio plaque Napoleon Bonaparte.jpg',
+          teksti: 'Kesäkuun 9. päivänä 1798 Egyptiin matkalla ollut Napoleon Bonaparten '
+              + 'laivasto saapui Vallettan edustalle. Suurmestari Ferdinand von Hompesch '
+              + 'vetosi Maltan puolueettomuuteen ja suostui päästämään satamaan vain kaksi '
+              + 'laivaa kerrallaan, jolloin Napoleon määräsi pommituksen ja maihinnousun. '
+              + 'Vaikka Valletta olisi kestänyt pitkän piirityksen, Hompesch luovutti saaret '
+              + 'ranskalaisille vastineeksi tiloista ja eläkkeistä itselleen ja ritareilleen. '
+              + 'Ranskalaiset lakkauttivat aateliston ja orjuuden, mutta kun he alkoivat '
+              + 'ryöstää kirkkojen omaisuutta, maltalaiset nousivat syyskuussa kapinaan ja '
+              + 'saartoivat varuskunnan Vallettaan. Ranskalaiset antautuivat briteille 5. '
+              + 'syyskuuta 1800, kun heidän ruokavaransa olivat loppumassa.',
+          lyhyt: 'Napoleonin muistolaatta Palazzo Parision kalkkikiviseinässä Vallettassa.',
+          selite: 'Palazzo Parision marmorilaatan mukaan Napoleon asui talossa 12.–18. '
+              + 'kesäkuuta 1798. Nykyään rakennuksessa toimii Maltan ulkoministeriö.',
+          lahde: 'Сале, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'French occupation of Malta',
+        },
+        {
+          otsikko: 'Saari, joka sai George-ristin',
+          tiedosto: 'BombDamageMalta.jpg',
+          teksti: 'Kesäkuusta 1940 marraskuuhun 1942 Saksan ja Italian ilmavoimat yrittivät '
+              + 'pommittaa ja näännyttää brittien Maltan antautumaan, sillä saarelta käsin '
+              + 'iskettiin Pohjois-Afrikkaan kulkeviin huoltokuljetuksiin. Pelkästään 20. '
+              + 'maaliskuuta – 28. huhtikuuta 1942 saksalaiset pudottivat saarelle 6 557 '
+              + 'tonnia pommeja, niistä 3 150 tonnia Vallettaan. Ruoka ja vesi alkoivat '
+              + 'loppua, ja elokuun 1942 Pedestal-saattueen 14 kauppalaivasta upotettiin '
+              + 'yhdeksän. Kuningas Yrjö VI myönsi 15. huhtikuuta 1942 George-ristin koko '
+              + 'saarelle sen asukkaiden sankaruuden kunniaksi. Risti on ollut Maltan '
+              + 'lipussa vuodesta 1943, ja itse kunniamerkki ja kuninkaan viestit ovat nyt '
+              + 'Pyhän Elmon linnakkeen sotamuseossa.',
+          lyhyt: 'Pommituksissa raunioitunut Kingsway, Vallettan pääkatu, huhtikuussa 1942.',
+          selite: 'Sotilaat ja siviilit raivaavat raunioita Vallettan pääkadulla Kingswaylla '
+              + 'huhtikuussa 1942. Kuvan otti kuninkaallisen laivaston valokuvaaja J. E. '
+              + 'Russell.',
+          lahde: 'J. E. Russell, Royal Navy, Imperial War Museums, Wikimedia Commons (PD)',
+          wiki: 'Siege of Malta (World War II)',
+        },
+      ],
     },
   ],
 

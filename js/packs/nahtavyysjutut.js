@@ -63174,4 +63174,906 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
   },
+  /*
+   * BRYSSEL (23.9.2026): kohdekartan seitsemän kohdetta
+   * (maakartat.js KAUPUNKIKARTAT.bryssel). Tekstit en-Wikipedian
+   * kohdeartikkeleista 1873-katseella; nämä voittavat kohteiden omat
+   * `teksti`-kentät (Oikeuspalatsi, Mont des Arts) nahtavyydet.js:n
+   * yhdistyksessä.
+   */
+  bryssel: {
+    'Brysselin pörssi': {
+      aika: '1868–1873',
+      teksti: 'Brysselin pörssi perustettiin Napoleonin määräyksellä '
+          + 'vuonna 1801. Aluksi kaupankävijät kokoontuivat entisessä '
+          + 'augustinolaisluostarissa, sitten La Monnaie -teatterissa ja '
+          + 'lopulta vuokratalossa. Kun Belgian teollisuus kasvoi '
+          + '1850-luvulla, ahtaat ja epäterveelliset tilat eivät enää '
+          + 'riittäneet, ja liike-elämä alkoi vaatia kaupungilta kunnon '
+          + 'pörssirakennusta.'
+          + '\n\n'
+          + 'Isoisän matkan vuonna 1873 uusi pörssipalatsi on juuri '
+          + 'valmistumassa Anspachin bulevardin varrelle. Sen suunnitteli '
+          + 'arkkitehti Léon-Pierre Suys eklektiseen tyyliin, jossa '
+          + 'uusrenessanssi yhdistyy Ranskan toisen keisarikunnan '
+          + 'loistoon, ja se nousi vuosina 1868–1873 entisen voitorin '
+          + 'paikalle — tori oli puolestaan rakennettu 1200-luvulla '
+          + 'perustetun fransiskaaniluostarin raunioille. Julkisivun '
+          + 'runsaita veistoksia tekivät muun muassa Jacquet-veljekset, '
+          + 'ranskalainen Albert-Ernest Carrier-Belleuse ja hänen '
+          + 'silloinen apulaisensa, nuori Auguste Rodin.'
+          + '\n\n'
+          + 'Palatsi palveli pörssinä yli sata vuotta. Tulipalo vaurioitti '
+          + 'sitä marraskuussa 1990, ja vuonna 1996 kaupankäynti siirtyi '
+          + 'kokonaan tietokoneille, jolloin meklarien päivittäiset '
+          + 'kokoontumiset salissa loppuivat. Vuonna 2000 Brysselin pörssi '
+          + 'yhdistyi Pariisin ja Amsterdamin pörssien kanssa Euronextiksi, '
+          + 'ja 2015 se muutti pois liian suureksi käyneestä palatsista.',
+      kuvat: [
+        {
+          tiedosto: 'Bruxelles. Bourse Late 19th-begin 20th century barcode 800000030846.jpg',
+          lyhyt: 'Uusi pörssipalatsi valokuvassa, johon on merkitty vuosiluku 1873.',
+          selite: 'Uusi pörssipalatsi kupoleineen ja pylväskäytävineen '
+            + 'valokuvassa, jonka kulmaan on merkitty vuosiluku 1873 — '
+            + 'rakennus sellaisena kuin se valmistui isoisän matkan aikaan.',
+          lahde: 'Tuntematon kuvaaja (Gentin yliopiston kirjasto), Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Manneken Pis': {
+      aika: '1619',
+      teksti: 'Manneken Pis on 55,5 senttimetrin korkuinen pronssinen '
+          + 'suihkulähdepatsas, joka esittää alastonta poikaa pissaamassa '
+          + 'altaaseen. Suihkulähde mainitaan jo vuosien 1451–1452 '
+          + 'asiakirjassa kaupungin vesijohdoista, ja alun perin se jakoi '
+          + 'asukkaille juomavettä. Nykyisen hahmon muotoili kuvanveistäjä '
+          + 'Jérôme Duquesnoy vanhempi kaupunginneuvoston tilauksesta '
+          + 'vuonna 1619, ja sinisestä kivestä tehty rokokoosyvennys on '
+          + 'vuodelta 1770.'
+          + '\n\n'
+          + 'Patsasta on varastettu ja rikottu monta kertaa. Vuonna 1817 '
+          + 'vapautettu vanki Antoine Licas vei sen, ja patsas hajosi '
+          + 'yhteentoista palaan. Varas tuomittiin elinkautiseen '
+          + 'pakkotyöhön, ja ensin hänet sidottiin tunniksi häpeäpaaluun '
+          + 'Grand-Placella. Palat koottiin ja niistä valettiin uusi '
+          + 'pronssi, jonka jalustaan merkittiin "1620 – REST 1817". '
+          + 'Isoisän aikaan patsasta ympäröi vuonna 1851 tehty takorautainen '
+          + 'aita, joka esti pääsyn veteen: juomavesilähteestä oli tullut '
+          + 'pelkkä koriste ja kaupungin vertauskuva.'
+          + '\n\n'
+          + 'Pojan pukeminen on vanha perinne: ensimmäisen pukunsa hän sai '
+          + 'vuonna 1698. Kerrotaan, että kun ranskalaiset sotilaat olivat '
+          + '1747 yrittäneet viedä patsaan, kuningas Ludvig XV lepytteli '
+          + 'kaupunkilaisia lahjoittamalla kullalla kirjaillun '
+          + 'brokadiasun. Nykyään vaatekaapissa on noin tuhat pukua. '
+          + 'Vuoden 1965 varkauden jälkeen paikalla on ollut kopio, ja '
+          + 'alkuperäinen on Brysselin kaupunginmuseossa Grand-Placella.',
+      kuvat: [
+        {
+          tiedosto: 'Bruxelles Manneken Pis.jpg',
+          lyhyt: 'Manneken Pis sinisen kiven rokokoosyvennyksessään.',
+          selite: 'Manneken Pis sinisen kiven rokokoosyvennyksessään. '
+            + 'Paikalla on vuodesta 1965 ollut kopio; alkuperäinen '
+            + 'pronssi on Brysselin kaupunginmuseossa.',
+          lahde: 'Myrabella, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Oikeuspalatsi': {
+      aika: '1866–1883',
+      teksti: 'Brysselin oikeuspalatsi on Belgian tärkein oikeustalo, ja '
+          + 'siellä istuu muun muassa maan korkein oikeus. Se seisoo '
+          + 'Galgenbergin kukkulalla ylä- ja alakaupungin välissä: nimi '
+          + 'tarkoittaa hirsipuumäkeä, sillä keskiajalla tuomitut '
+          + 'hirtettiin täällä. Kaupungin edellinen oikeustalo oli '
+          + 'rakennettu vasta 1818–1823, mutta se rapistui niin nopeasti, '
+          + 'että uutta ja suurempaa alettiin suunnitella jo 1837.'
+          + '\n\n'
+          + 'Isoisän matkan aikaan palatsi on vielä työmaa. Peruskivi '
+          + 'muurattiin 31. lokakuuta 1866 arkkitehti Joseph Poelaertin '
+          + 'piirustusten mukaan, mutta Poelaert kuoli 1879 eikä nähnyt '
+          + 'työtä valmiina; kuningas Leopold II vihki rakennuksen 15. '
+          + 'lokakuuta 1883. Työmaan tieltä purettiin osa Marollesin '
+          + 'kaupunginosaa, ja satakunta vaatimatonta asukasta joutui '
+          + 'muuttamaan. Moni syytti Poelaertia, ja "schieven architect", '
+          + 'häpeällinen arkkitehti, tuli Marollesin murteen pahimpiin '
+          + 'haukkumasanoihin.'
+          + '\n\n'
+          + 'Valmistuessaan palatsi oli maailman suurin rakennus: 160 kertaa '
+          + '150 metriä, pohja-alaltaan 26 006 neliömetriä eli suurempi '
+          + 'kuin Rooman Pietarinkirkko, ja kupoli nousee 105 metriin. '
+          + 'Kustannusarvio oli alle neljä miljoonaa frangia, mutta lasku '
+          + 'ylitti 50 miljoonaa — koko maan yhden vuoden julkisten töiden '
+          + 'verran. Toisen maailmansodan lopussa perääntyvät saksalaiset '
+          + 'sytyttivät palatsin, ja kupoli romahti; uusi rakennettiin '
+          + '2,5 metriä alkuperäistä korkeammaksi. Kunnostus alkoi 1984, '
+          + 'ja telineet ovat yhä paikoillaan.',
+      kuvat: [
+        {
+          tiedosto: 'Bruxelles. Palais de Justice. Façade principale Late 19th-begin 20th century barcode 800000060227.jpg',
+          lyhyt: 'Oikeuspalatsin pääjulkisivu ja alkuperäinen kupoli vanhassa kuvaplanssissa.',
+          selite: 'Oikeuspalatsin pääjulkisivu 1800-luvun lopun tai '
+            + '1900-luvun alun kuvaplanssissa. Kupoli on vielä '
+            + 'alkuperäinen, matalampi versio, joka tuhoutui toisen '
+            + 'maailmansodan lopussa.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Grand-Place': {
+      aika: '1695–1699',
+      teksti: 'Grand-Place on Brysselin keskusaukio, 68 kertaa 110 metriä '
+          + 'ja kokonaan kivetty. Tori syntyi 1000-luvun lopulla '
+          + 'kuivuneelle suolle Senne-joen sataman lähelle. Sen etelälaidalla '
+          + 'seisoo vuosina 1401–1455 rakennettu goottilainen kaupungintalo, '
+          + 'jonka 96-metrisen tornin huipulla kaupungin suojeluspyhimys '
+          + 'Mikael surmaa lohikäärmettä. Vastapäätä on Kuninkaan talo, '
+          + 'jota hollanniksi kutsutaan yhä Leipätaloksi paikalla ennen '
+          + 'olleen leipätorin mukaan, vaikka yksikään kuningas ei ole '
+          + 'siinä asunut.'
+          + '\n\n'
+          + 'Elokuun 13. päivänä 1695 ranskalainen 70 000 miehen armeija '
+          + 'alkoi pommittaa lähes puolustuskyvytöntä kaupunkia, ja suurin '
+          + 'osa aukiosta paloi. Pystyyn jäi vain kaupungintalon kivikuori '
+          + '— ironista kyllä, sillä se oli tykistön päämaali. Killat ja '
+          + 'muut omistajat rakensivat aukion uudelleen neljässä vuodessa, '
+          + 'ja koska jokaisen piirustukset piti hyväksyttää viranomaisilla, '
+          + 'aukiosta tuli yllättävän yhtenäinen, vaikka goottilaisuus, '
+          + 'barokki ja Ludvig XIV:n tyyli sekoittuvat siinä.'
+          + '\n\n'
+          + 'Isoisän aikaan aukio on yhä kaupungin kauppatori, ja torina se '
+          + 'toimi vuoteen 1959 asti. Killat oli lakkautettu 1795, ja '
+          + 'kiltatalot olivat päässeet rapistumaan; herätys tuli 1853, '
+          + 'kun yksi taloista purettiin hevosraitiotien tieltä, ja '
+          + 'myöhemmin pormestari Charles Buls palautti aukion entiseen '
+          + 'loistoonsa. Victor Hugo oli asunut aukion laidalla 1852, ja '
+          + 'Charles Baudelaire piti Kuninkaan talossa esitelmiä '
+          + '1860-luvulla. Vuodesta 1998 aukio on ollut Unescon '
+          + 'maailmanperintökohde.',
+      kuvat: [
+        {
+          tiedosto: 'Bruxelles Grand-Place Hôtel de Ville & No. 7-1.jpg',
+          lyhyt: 'Kaupungintalo tornineen ja kiltatalojen rivi Grand-Placella.',
+          selite: 'Kaupungintalo ja sen 96-metrinen torni; oikealla '
+            + 'aukion luoteislaidan kiltatalot numerot 1–7, jotka '
+            + 'rakennettiin uudelleen vuoden 1695 pommituksen jälkeen.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Galeries Royales Saint-Hubert': {
+      aika: '1846–1847',
+      teksti: 'Galeries Royales Saint-Hubert on kolmen lasikattoisen '
+          + 'kauppakäytävän kokonaisuus: Kuninkaan galleria, Kuningattaren '
+          + 'galleria ja Prinssien galleria. Nuori hollantilainen '
+          + 'arkkitehti Jean-Pierre Cluysenaar halusi pyyhkiä pois '
+          + 'hämärien kujien sokkelon, jonne porvarit tuskin uskalsivat, '
+          + 'ja korvata sen yli 200 metrin katetulla ostoskadulla. Idea '
+          + 'syntyi 1836, kaupunki hyväksyi sen 1845, ja rakentaminen '
+          + 'kesti kolmetoista kuukautta. Kuningas Leopold I poikineen '
+          + 'avasi 213 metrin käytävän 20. kesäkuuta 1847.'
+          + '\n\n'
+          + 'Tonttien lunastaminen oli kestänyt yhdeksän vuotta. Kerrotaan, '
+          + 'että yksi talonomistaja kuoli halvaukseen ja että eräs parturi '
+          + 'viilsi kurkkunsa, kun naapuritaloa purettiin. Viranomaisten '
+          + 'takaama rahoitus teki galleriasta kuitenkin menestyksen: se '
+          + 'oli ensimmäinen poliittisella tahdolla ja julkisin takuin '
+          + 'rakennettu katettu galleria, ja sitä pidetään Euroopan '
+          + 'ensimmäisenä todella julkisena kauppakäytävänä. Se edelsi '
+          + 'myös Milanon kuuluisaa Galleria Vittorio Emanuele II:ta.'
+          + '\n\n'
+          + 'Päätykolmion tunnuslause Omnibus omnia, "kaikkea kaikille", '
+          + 'piti paikkansa. Isoisän aikaan gallerioissa kävellään ja '
+          + 'istutaan kahviloissa Brysselin sateelta suojassa, ja '
+          + 'Kuninkaan galleriassa toimii Cluysenaarin suunnittelema '
+          + 'teatteri, joka avattiin samana kesänä kuin käytävätkin. '
+          + 'Vuoteen 1892 Café des Arts -nimellä toimineessa tavernassa '
+          + 'kävivät Victor Hugo, Alexandre Dumas, Charles Baudelaire ja '
+          + 'Paul Verlaine, ja maaliskuussa 1896 '
+          + 'gallerioissa näytettiin Lumièren veljesten liikkuvia kuvia '
+          + 'ensimmäistä kertaa Brysselin yleisölle.',
+      kuvat: [
+        {
+          tiedosto: 'Galeries royales Saint-Hubert, Bruselas, Bélgica, 2021-12-15, DD 14-16 HDR.jpg',
+          lyhyt: 'Galerian käytävä lasikattoineen ja kaarevine näyteikkunoineen.',
+          selite: 'Galeries Royales Saint-Hubertin käytävä: '
+            + 'valurautakehikkoinen lasikatto, kaarevat näyteikkunat ja '
+            + 'kahviloiden pöydät, kuten gallerioissa on ollut vuodesta '
+            + '1847.',
+          lahde: 'Diego Delso, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Mont des Arts': {
+      aika: '1910',
+      teksti: 'Mont des Arts eli Kunstberg, "taiteiden mäki", on '
+          + 'kulttuurikortteli Brysselin keskustan rinteessä: siellä ovat '
+          + 'Belgian kuninkaallinen kirjasto, valtionarkisto, '
+          + 'kongressikeskus ja maisema-arkkitehti René Pechèren '
+          + 'geometrinen puutarha. Isoisän matkan aikaan mitään tästä ei '
+          + 'vielä ole. Rinnettä peittää tiheään asuttu Saint-Rochin '
+          + 'kaupunginosa, ja rinteen vanha nimi Montagne de la Cour, '
+          + 'Hovin mäki, muistuttaa ylhäällä seisoneesta Coudenbergin '
+          + 'palatsista, joka paloi 1731.'
+          + '\n\n'
+          + 'Kuningas Leopold II halusi rinteelle taiteiden kaupunginosan '
+          + 'ja osti koko korttelin. Pormestari Charles Buls olisi '
+          + 'säilyttänyt vanhasta kaupunginosasta mahdollisimman paljon, '
+          + 'mutta kaupunginvaltuusto äänesti 19. marraskuuta 1894 '
+          + 'kuninkaan suunnitelman puolesta, ja Buls erosi viisi vuotta '
+          + 'myöhemmin. Vanhat talot purettiin 1897–1898, mutta rahaa ei '
+          + 'ollut, ja paikka jäi vuosiksi tyhjäksi. Vuoden 1910 '
+          + 'maailmannäyttelyä varten rinteeseen tehtiin väliaikainen '
+          + 'puisto portaineen ja porrastettuine suihkulähteineen, ja '
+          + 'kuningas Albert I vihki sen vuosi Leopold II:n kuoleman '
+          + 'jälkeen.'
+          + '\n\n'
+          + 'Väliaikaisesta puistosta tuli rakastettu, mutta se '
+          + 'purettiin, kun alueelle vuosina 1956–1969 rakennettiin '
+          + 'arkkitehtien Maurice Houyoux\'n ja Jules Ghobertin '
+          + 'järeät, geometriset rakennukset. Pechèren puutarha on tehty '
+          + 'pysäköintihallin betonikannen päälle, ja sen alapäässä on '
+          + 'kuningas Albert I:n ratsastajapatsas vuodelta 1951. '
+          + 'Ylhäältä avautuu yksi Brysselin tunnetuimmista näköaloista '
+          + 'kohti Grand-Placen kaupungintalon tornia.',
+      kuvat: [
+        {
+          tiedosto: 'Brussels, Jardin du Mont des Arts foto5 2015-06-07 14.01.jpg',
+          lyhyt: 'Mont des Artsin puutarha, Albert I:n patsas ja kaupungintalon torni.',
+          selite: 'Mont des Artsin geometrinen puutarha kesällä. '
+            + 'Keskellä kuningas Albert I:n ratsastajapatsas, taustalla '
+            + 'Grand-Placen kaupungintalon torni.',
+          lahde: 'Michielverbeek, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kuninkaanpalatsi': {
+      aika: '1815–1909',
+      teksti: 'Brysselin kuninkaanpalatsi on Belgian kuninkaan virallinen '
+          + 'palatsi, jossa hän hoitaa valtionpäämiehen tehtävät, ottaa '
+          + 'vastaan vieraita ja järjestää suuret vastaanotot. Asunto se '
+          + 'ei ole: kuningasperhe asuu Laekenin palatsissa kaupungin '
+          + 'pohjoisosassa. Palatsi seisoo keskiaikaisen Coudenbergin '
+          + 'palatsin mailla. Sen suuressa salissa keisari Kaarle V '
+          + 'luopui kruunustaan poikansa Filip II:n hyväksi vuonna 1555, '
+          + 'mutta helmikuun 1731 tulipalo tuhosi palatsin lähes '
+          + 'kokonaan. Sen holvit ovat yhä Place Royalen alla, ja niihin '
+          + 'pääsee tutustumaan.'
+          + '\n\n'
+          + 'Nykyinen palatsi syntyi, kun Brysselistä tuli Wienin '
+          + 'kongressin jälkeen Alankomaiden yhdistyneen kuningaskunnan '
+          + 'toinen pääkaupunki. Kuningas Vilhelm I yhdisti kaksi '
+          + '1700-luvun kartanoa gallerialla, ja välissä kulkenut katu '
+          + 'katettiin. Belgian itsenäistyttyä 1830–1831 palatsi siirtyi '
+          + 'Leopold I:lle, joka asui Laekenissa ja muutti rakennusta '
+          + 'vähän. Isoisän aikaan hallitsee hänen poikansa Leopold II, '
+          + 'jonka mielestä palatsi on liian vaatimaton hänen arvoiselleen '
+          + 'kuninkaalle; hänen kaudellaan palatsin pinta-ala lähes '
+          + 'kaksinkertaistui, ja arkkitehti Alphonse Balat lisäsi siihen '
+          + 'suuren portaikon, valtaistuinsalin ja suuren gallerian.'
+          + '\n\n'
+          + 'Nykyinen julkisivu rakennettiin vasta vuoden 1904 jälkeen '
+          + 'arkkitehti Henri Maquet\'n piirustusten mukaan, ja '
+          + 'päätykolmiossa Belgiaa esittävää hahmoa ympäröivät '
+          + 'Teollisuus ja Maanviljely. Peilisali tehtiin Leopold II:n '
+          + 'Kongon siirtomaan kunniaksi, ja sen kattoon kiinnitettiin '
+          + 'vuonna 2004 yli miljoona kuoriaisen siipipeitettä, jotka '
+          + 'hohtavat metallinvihreinä. Vuodesta 1965 palatsi on ollut '
+          + 'kesäisin avoinna yleisölle kansallispäivästä 21. heinäkuuta '
+          + 'syyskuun alkuun.',
+      kuvat: [
+        {
+          tiedosto: 'Palais Royal Brussels 1911.jpg',
+          lyhyt: 'Kuninkaanpalatsi uuden julkisivunsa kanssa postikortissa vuodelta 1911.',
+          selite: 'Kuninkaanpalatsi postikortissa, joka lähetettiin '
+            + 'vuonna 1911: uusi, vuoden 1904 jälkeen rakennettu '
+            + 'julkisivu etupuutarhoineen ja edessä raitiovaunu.',
+          lahde: 'Tuntematon, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * KOŠICE (23.9.2026). Faktat en-Wikipedian artikkeleista Cathedral of
+   * St. Elizabeth, St. Urban Tower, Hlavná ulica, National Theatre Košice,
+   * Plague Column, Košice, Executioner's Bastion ja Old Town, Košice.
+   * Miklušin vankilalla ja Jakabin palatsilla ei ole omaa en-artikkelia,
+   * joten niiden tiedot ovat sk-Wikipediasta (Miklušova väznica, Jakabov
+   * palác); samoin vanhan teatterin (1788) ja Urbanin tornin kauppojen
+   * tiedot (Národné divadlo Košice, Urbanova veža). Kuvat eivät ole
+   * käytössä muualla repossa, myöskään maakartat.js:n Košice-kohteissa.
+   */
+  kosice: {
+    'Pyhän Elisabetin tuomiokirkko': {
+      aika: '1380–1508',
+      teksti: 'Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko ja '
+          + 'yksi Euroopan itäisimmistä goottilaisista katedraaleista. Se on '
+          + '60 metriä pitkä ja 36 metriä leveä, ja sinne mahtuu yli 5 000 '
+          + 'ihmistä. Paikalla seisoi jo aiempi kirkko, joka paloi noin 1380. '
+          + 'Uutta rakennettiin varakkaiden porvarien rahoilla ja keisari '
+          + 'Sigismundin tuella, ja työ valmistui 1508.'
+          + '\n\n'
+          + 'Kirkon pohjoisportaali on keskiaikaisessa perinteessä harvinainen, '
+          + 'koska kirkkojen pohjoisseinässä ei yleensä ollut porttia. Se '
+          + 'avautui kaupungin vilkkaimpaan kohtaan, torille ja raatihuoneelle, '
+          + 'ja sitä kutsutaan Kultaiseksi portiksi, koska se oli keskiajalla '
+          + 'kullattu. Sisällä on Euroopan vanhin säilynyt kaksihaarainen '
+          + 'kierreportaikko, jonka mallin mukaan Grazin keisarilliseen '
+          + 'residenssiin rakennettiin samanlainen 1499–1500.'
+          + '\n\n'
+          + 'Isoisä näkee kirkon vuonna 1873 juuri ennen suurta muutosta. '
+          + 'Rakenteissa oli korjaamattomia vaurioita, ja 1875 myrsky pahensi '
+          + 'niitä. Vuosina 1877–1896 kirkko rakennettiin arkkitehti Imre '
+          + 'Steindlin johdolla laajasti uudelleen, osin halvalla hiekkakivellä, '
+          + 'joka rapautui nopeasti. Samalle Steindlille annettiin 1885 '
+          + 'Budapestin parlamenttitalon suunnittelu.',
+      kuvat: [
+        {
+          tiedosto: 'TUTKÓ(1861) p087 Košice, St.Elizabeth.jpg',
+          lyhyt: 'Tuomiokirkko vuoden 1861 litografiassa, ennen 1877 alkanutta suurta uudelleenrakennusta.',
+          selite: 'Béla Klimkovicsin piirtämä ja Kassassa painettu litografia '
+            + 'vuodelta 1861 näyttää tuomiokirkon sellaisena kuin isoisä sen '
+            + 'näkee: tornissa on 1700-luvun kupolikatto, eikä Steindlin '
+            + 'uudelleenrakennus ole vielä alkanut.',
+          lahde: 'British Library, Wikimedia Commons (public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Urbanin torni': {
+      aika: '1500-luku',
+      teksti: 'Urbanin torni on tuomiokirkon renessanssiajan kellotorni, '
+          + 'joka on rakennettu 1500-luvulla. Kun kaupunki paloi 1556, tornin '
+          + 'ja tuomiokirkon kellot sulivat. Niiden tilalle valettiin 1557 '
+          + 'suuri Urbanin kello, joka sai nimensä viininviljelijöiden '
+          + 'suojeluspyhimykseltä. Kellon valoi olomoucilainen kellonvalaja '
+          + 'Franciscus Illenfeld.'
+          + '\n\n'
+          + 'Isoisän aikaan tornin juurella on pieniä kauppoja. Ne rakennettiin '
+          + '1800-luvun alussa, ja ne purettiin vasta 1911–1912, kun tornin '
+          + 'ympärille tehtiin kaariholvi. Tornin ulkoseiniin on muurattu 36 '
+          + 'vanhaa hautakiveä 1300- ja 1400-luvuilta, ja yksi niistä on '
+          + 'roomalaisajalta 300-luvulta.'
+          + '\n\n'
+          + 'Vuonna 1966 torni paloi, ja vanha Urbanin kello tuhoutui. '
+          + 'Sirpaleista koottu kello on nykyään esillä tornin edessä, ja '
+          + 'tornissa soi kopio, jonka Košicen terästehtaan työntekijät '
+          + 'valoivat 1996.',
+      kuvat: [
+        {
+          tiedosto: 'Fő tér (Hlavné namestie), Szent Erzsébet-főszékesegyház (Dóm), előtte az Orbán-torony. Fortepan 17733.jpg',
+          lyhyt: 'Urbanin torni ja tuomiokirkko 1904, vielä ilman tornin ympärille 1912 tehtyä kaariholvia.',
+          selite: 'Valokuva vuodelta 1904: Urbanin torni seisoo puiston '
+            + 'laidalla tuomiokirkon edessä. Tornin ympärillä ei vielä ole '
+            + 'kaariholvia, joka rakennettiin 1911–1912.',
+          lahde: 'Schoch Frigyes, Fortepan / Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Hlavná-katu': {
+      aika: 'keskiaika',
+      teksti: 'Hlavná eli Pääkatu syntyi keskiajalla toriaukioksi, ja siksi se '
+          + 'on karan muotoinen: keskeltä leveä, päistä kapea. Keskiajan '
+          + 'asiakirjoissa sen nimi vaihteli, ja nimet Circulus, Ring ja '
+          + 'Theatrum kertovat, että sitä pidettiin aukiona eikä katuna. '
+          + '1700-luvun kartoissa se on Platea principalis.'
+          + '\n\n'
+          + 'Isoisän aikaan kadun nimi on saksaksi Haupt Gasse ja unkariksi '
+          + 'Fő utcza. Slovakiksi käännetty nimi Hlavná ulica otettiin käyttöön vasta, '
+          + 'kun kaupunki siirtyi Tšekkoslovakialle. Myöhemmin nimi vaihtui '
+          + 'politiikan mukana: 1933 kadusta tuli kenraali Štefánikin katu, '
+          + 'ja vuodesta 1949 se oli 41 vuotta Leninin katu. Vanha nimi '
+          + 'palautettiin 1. heinäkuuta 1990.'
+          + '\n\n'
+          + 'Vuonna 1984 Hlavnásta tuli koko Tšekkoslovakian ensimmäinen '
+          + 'laaja kävelykatu. Pormestari Rudolf Schuster otti mallia '
+          + 'saksalaisesta Wuppertalista, ja monet slovakialaiset ja '
+          + 'tšekkiläiset kaupungit seurasivat esimerkkiä.',
+      kuvat: [
+        {
+          tiedosto: 'Kaschau Theater 1900.jpg',
+          lyhyt: 'Pääkatu ja uusi teatteri noin 1900; kadulla kulkee raitiovaunu.',
+          selite: 'Värillinen valokuvapainate noin vuodelta 1900 näyttää, '
+            + 'miten Pääkatu levenee teatterin kohdalla ja kapenee taas. '
+            + 'Kadulla kulkee raitiovaunu, ja taustalla kohoavat kukkulat.',
+          lahde: 'Library of Congress, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Valtionteatteri': {
+      aika: '1899',
+      teksti: 'Teatteri seisoo keskiaikaisen raatihuoneen paikalla. '
+          + 'Raatihuone oli jäänyt tyhjäksi jo 1500-luvulla, ja 1756 siihen '
+          + 'avattiin kahvila, josta tuli kaupungin seuraelämän keskus. '
+          + 'Ensimmäinen teatteritalo otettiin käyttöön 1788: klassistinen '
+          + 'rakennus, jonka katsomoon mahtui 500 ihmistä.'
+          + '\n\n'
+          + 'Isoisä näkee vuonna 1873 juuri tämän vanhan teatterin. '
+          + 'Aluksi siellä esitettiin vain saksaksi, mutta vuodesta 1816 '
+          + 'vuorotellen unkariksi ja saksaksi. Samassa talossa toimivat '
+          + 'myös kahvila, tanssisali ja vuodesta 1828 kasino. Rakennus '
+          + 'suljettiin 1894 turvallisuussyistä.'
+          + '\n\n'
+          + 'Nykyinen uusbarokkinen teatteri rakennettiin Adolf Langin '
+          + 'suunnitelmien mukaan, ja se avattiin juhlallisesti 28. syyskuuta '
+          + '1899. Näyttämö on lyyran muotoinen, ja katossa on kohtauksia '
+          + 'Shakespearen näytelmistä Othello, Romeo ja Julia, Kuningas Lear '
+          + 'ja Kesäyön unelma.',
+      kuvat: [
+        {
+          tiedosto: 'Kosice - National Theatre.jpg',
+          lyhyt: 'Vuonna 1899 avattu uusbarokkinen teatteri aamuvalossa.',
+          selite: 'Košicen kansallisteatterin uusbarokkinen päärakennus '
+            + 'Hlavná-kadulla. Se avattiin 1899 vanhan, vuonna 1788 '
+            + 'valmistuneen teatterin paikalle.',
+          lahde: 'Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Immaculata': {
+      aika: '1723',
+      teksti: 'Immaculata on barokkiajan ruttopylväs, joka on pystytetty '
+          + 'kiitokseksi Neitsyt Marialle vuosien 1709–1710 '
+          + 'ruttoepidemian päättymisestä. Se pystytettiin 1723 paikalle, '
+          + 'jossa keskiajalla olivat kaupungin hirsipuut. Jalustan laatan '
+          + 'mukaan sen alle on kätketty pyhän Valentinuksen reliikit.'
+          + '\n\n'
+          + 'Pylväs on 14 metriä korkea, ja sen huipulla seisoo Neitsyt Maria. '
+          + 'Jalustalla ovat pyhä Joosef, pyhä Sebastian ja pyhä Laslo, ja '
+          + 'aidan pilareilla viisi pyhimystä, muun muassa Unkarin Elisabet, '
+          + 'kaupungin suojeluspyhimys.'
+          + '\n\n'
+          + 'Isoisän aikaan pylväs on jo 150 vuotta vanha. Toisessa '
+          + 'maailmansodassa se vaurioitui, ja kuvanveistäjä Vojtech Löffler '
+          + 'korjasi sen 1949–1951 ja uudelleen 1971–1972.',
+      kuvat: [
+        {
+          tiedosto: 'Košice - Súsošie Immaculata.jpg',
+          lyhyt: 'Immaculatan ruttopylväs aitauksessaan Pääkadun puistossa.',
+          selite: 'Neitsyt Marian patsas pylvään huipulla ja pyhimysten patsaat '
+            + 'jalustalla. Pylväs seisoo pienessä aidatussa puistossa '
+            + 'Pääkadun varrella.',
+          lahde: 'Ladislav Luppa, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Miklušin vankila': {
+      aika: '1400-luvun alkupuoli',
+      teksti: 'Miklušin vankila on kaksi toisiinsa liitettyä goottilaista '
+          + 'porvaristaloa 1400-luvun alkupuoliskolta. 1600-luvun alussa ne '
+          + 'muutettiin kaupungin vankilaksi ja kidutushuoneeksi.'
+          + '\n\n'
+          + 'Isoisän aikaan talot ovat yhä vankilana, ja siinä tehtävässä ne '
+          + 'pysyivät vuoteen 1909. Sen jälkeen ne annettiin Ylä-Unkarin '
+          + 'museon hoitoon, josta on tullut nykyinen Itä-Slovakian museo. '
+          + 'Museo aikoi tehdä taloihin kaupungin historian näyttelyn, mutta '
+          + 'se toteutui vasta sota-aikana 1940–1942 tehdyn peruskorjauksen '
+          + 'jälkeen.'
+          + '\n\n'
+          + 'Vuonna 2009 valmistunut korjaus yhdisti vankilan, viereisen '
+          + 'Pyövelin bastionin ja Rákóczin muistotalon yhdeksi '
+          + 'museoalueeksi. Samalla yleisö pääsi taas pyövelin asuntoon, ja '
+          + 'pihalle tehtiin kivimuistomerkkien kokoelma.',
+      kuvat: [
+        {
+          tiedosto: 'Kálvin tér (Kálvinovo námestie), Miklós börtön. Fortepan 71238.jpg',
+          lyhyt: 'Vankilarakennus 1939, rapautuneena ja vielä ennen peruskorjausta.',
+          selite: 'Valokuva vuodelta 1939: rapattu seinä on lohkeillut, '
+            + 'ikkunoissa on ristikot ja kulmassa katukyltti Kálvin tér. '
+            + 'Talot korjattiin museoksi 1940–1942.',
+          lahde: 'Lissák Tivadar, Fortepan / Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pyövelin bastioni': {
+      aika: '1400-luku',
+      teksti: 'Pyövelin bastioni on Slovakian suurin ja parhaiten säilynyt osa '
+          + 'keskiaikaisia kaupunginmuureja. Alun perin se ei ollut bastioni '
+          + 'vaan barbakaani eli portin eteen rakennettu puolustusvarustus. '
+          + 'Nimen se sai lähellä sijainneesta pyövelin talosta, ja nimi on '
+          + 'vasta 1800-luvulta.'
+          + '\n\n'
+          + 'Varustuksen rakennutti vuoden 1441 jälkeen Košicen kapteeni Jan '
+          + 'Jiskra suojaamaan kaupungin Maalattua porttia. Aluksi se oli '
+          + 'yksinkertainen puolipyöreä rakennus, mutta noin 1461–1471 se '
+          + 'muutettiin tykkikammioilla varustetuksi tykistölinnoitteeksi, '
+          + 'jonka ympärillä oli iskuja vaimentava maavalli.'
+          + '\n\n'
+          + 'Kasemateissa toimi myöhemmin Friedrich Gebrechtin '
+          + 'hattumanufaktuuri, ja sen jälkeen niissä asuttiin. Itä-Slovakian '
+          + 'museo otti bastionin käyttöönsä 1900-luvulla, ja 1940–1943 sen '
+          + 'viereen rakennettiin kopio Ferenc II Rákóczin '
+          + 'maanpakolaistalosta Turkin Tekirdağissa.',
+      kuvat: [
+        {
+          tiedosto: 'East Slovak Museum in Košice - Executioner\'s Bastion, Hrnčiarska 7 - Wheeled cannon displayed at the courtyard of the Executioner\'s Bastion in Košice, winter (February 2006).jpg',
+          lyhyt: 'Vanha pyörillä kulkeva tykki bastionin lumisella pihalla.',
+          selite: 'Itä-Slovakian museon vanhoja tykkejä Pyövelin bastionin '
+            + 'pihalla helmikuussa 2006. Bastioni muutettiin 1460-luvulla '
+            + 'tykistölinnoitteeksi.',
+          lahde: 'Marian Gladis, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Jakabin palatsi': {
+      aika: '1899',
+      teksti: 'Jakabin palatsi on uusgoottilainen talo Mlynská- ja '
+          + 'Štefánikova-katujen kulmassa. Rakennusmestari Peter Jakab '
+          + 'suunnitteli sen itselleen, ja se valmistui 1899. Jakab sai '
+          + 'rakennusainetta tuomiokirkon uudelleenrakennuksesta: talossa '
+          + 'on käytetty kirkosta poistettuja kiviosia.'
+          + '\n\n'
+          + 'Isoisän matkan aikaan palatsia ei siis vielä ole. Se rakennettiin '
+          + 'Mlynský náhon -myllykanavan rannalle ja seisoi veden äärellä '
+          + 'vuoteen 1968, jolloin kanava lakkautettiin. Nykyään '
+          + 'talon vieressä kulkee vilkas nelikaistainen katu.'
+          + '\n\n'
+          + 'Vuonna 1945 palatsissa asui jonkin aikaa presidentti Edvard '
+          + 'Beneš, ja vuosina 1992–2000 siinä toimi British Council. '
+          + 'Talon omistuksesta on käyty oikeutta 1990-luvulta asti.',
+      kuvat: [
+        {
+          tiedosto: 'Jakab-palota. Fortepan 51521.jpg',
+          lyhyt: 'Jakabin palatsin torni ja goottilainen portti vuonna 1956.',
+          selite: 'Valokuva vuodelta 1956: palatsin tornissa on '
+            + 'kulmatornit ja jyrkkä kattohuippu. Kuva on otettu ennen '
+            + 'vuotta 1968, jolloin myllykanava lakkautettiin.',
+          lahde: 'Nagy Gyula, Fortepan / Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
+  /*
+   * LJUBLJANA (Opus 23.9.2026). Kohteet ovat kohdekartan kahdeksan
+   * pistettä (maakartat.js: KAUPUNKIKARTAT.ljubljana), ja jokainen väite
+   * on luettu en-Wikipedian raakatekstistä 23.9.2026 (artikkelit
+   * "Tivoli City Park", "Križanke", "Prešeren Square", "Triple Bridge",
+   * "Ljubljana Cathedral", "Ljubljana Castle", "Ljubljana Central
+   * Market", "Vodnik Square" ja "Dragon Bridge (Ljubljana)").
+   * Keskustori on kartan koordinaateilla Vodnikin aukion torialue eikä
+   * Mestni trg, joten juttu kertoo keskustorista ja Plečnikin hallista.
+   *
+   * Juttu korvaa ajonaikaisesti kohteen oman lyhyen tekstin ja kuvan
+   * (js/nahtavyydet.js: juttu voittaa raa'an kohteen), joten jutut
+   * kertovat myös, miltä paikka näytti isoisän matkan aikaan 1873.
+   * Kaupunkilehden artikkeli (europe-artikkelit.js: Ljubljana) käsittelee
+   * jo linnan vankilakuilun ja Illyrian ajan, joten linnan juttu
+   * painottuu keskiajan mainintaan, Erasmuksen torniin ja palovartijaan.
+   *
+   * KUVAT: kaikki tarkistettu Commonsin rajapinnasta 23.9.2026
+   * (lisenssi ja tekijä extmetadatasta, leveys vähintään 1200 px) ja
+   * katsottu silmin 960 px esikatseluna. Yksikään tiedosto ei ole
+   * käytössä muualla js/-kansiossa (grep). HYLÄTTY: "Fruit stalls at
+   * Ljubljana Central Market 02.JPG" ja "SLO-Ljubljana17.JPG" (jo
+   * käytössä kulttuuri-kategoriat.js:ssä) sekä "Postcard of Vodnik
+   * Square 1899.jpg" (paikkaa ei voinut varmistaa kuvasta).
+   */
+  ljubljana: {
+    'Tivoli-puisto': {
+      aika: '1813',
+      teksti: 'Tivoli on Ljubljanan suurin puisto. Sen suunnitelman '
+          + 'laati insinööri Jean Blanchard vuonna 1813, kun Ljubljana '
+          + 'oli Napoleonin Illyrian maakuntien pääkaupunki. Blanchard '
+          + 'ei aloittanut tyhjästä: hän yhdisti kaksi valmista puistoa '
+          + 'Podturnin ja Cekinin kartanoiden ympäriltä ja liitti ne '
+          + 'kaupungin keskustaan. Nimensä puisto sai vasta 1800-luvun '
+          + 'jälkipuoliskolla Kasinoseuran kesäpaikasta, joka oli avattu '
+          + '1835 Podturnin kartanon viereen; siellä oli huvipuisto, '
+          + 'kapakka ja kahvila.'
+          + '\n\n'
+          + 'Podturnin kartano on nykyinen Tivolin linna. Se rakennettiin '
+          + '1600-luvulla renessanssilinnan raunioille, ja sen omisti '
+          + 'aluksi jesuiittajärjestö. 1800-luvun puolivälissä marsalkka '
+          + 'Joseph Radetzky kunnosti sen uusklassiseen asuun, joka sillä '
+          + 'on yhä. Vuonna 1864 linnan eteen tuli neljä valurautakoiraa, '
+          + 'jotka itävaltalaiset kuvanveistäjät suunnittelivat '
+          + 'määriläisessä valimossa. Koirilta puuttuvat kielet, ja siitä '
+          + 'syntyi sitkeä mutta perätön huhu: kuvanveistäjä Fernkorn '
+          + 'olisi ampunut itsensä virheensä takia. Cekinin kartano '
+          + 'puiston pohjoislaidalla on vuodelta 1720, ja sen piirustukset '
+          + 'teki wieniläinen barokkiarkkitehti Fischer von Erlach.'
+          + '\n\n'
+          + 'Isoisän aikaan puistossa ei ole vielä lampea: se kaivettiin '
+          + 'vasta 1880, ja siellä on sittemmin soudettu, luisteltu ja '
+          + 'kalastettu. Suora näkymä puistosta kaupunkiin on Jože '
+          + 'Plečnikin työtä 1920-luvulta. Hänen Jakopičin kävelykatunsa '
+          + 'luo näköakselin, joka kulkee Tivolin linnalta Prešernin '
+          + 'aukion ja Tromostovjen yli aina Ljubljanan linnalle asti.',
+      kuvat: [
+        {
+          tiedosto: 'Tivolski grad 1873.jpg',
+          lyhyt: 'Tivolin linna valokuvassa vuodelta 1873.',
+          selite: 'Tivolin linna ja sen puutarhaportaat Wilhelm Schulzen '
+            + 'valokuvassa vuodelta 1873, samana vuonna kun isoisä '
+            + 'matkusti: rakennus on jo Radetzkyn uusklassisessa asussa.',
+          lahde: 'Wilhelm Schulze, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Križanke': {
+      aika: '1228',
+      teksti: 'Križanke on entinen Pyhän ristin luostari. Saksalaisen '
+          + 'ritarikunnan luostarin rakentamisen uskotaan alkaneen '
+          + 'vuonna 1228. Vuoden 1511 Idrijan maanjäristys vaurioitti '
+          + 'rakennuksia pahoin, ja niitä rakennettiin osin uudelleen '
+          + '1567–1579.'
+          + '\n\n'
+          + 'Luostarikirkko rakennettiin kokonaan uudelleen barokkiin '
+          + '1714–1715 venetsialaisen Domenico Rossin piirustuksilla. Sen '
+          + 'pohja on kreikkalainen risti, ja se oli ensimmäinen laatuaan '
+          + 'Sloveniassa; julkisivua korostavat pilasterit ja aaltoileva '
+          + 'kupoli. Työssä oli mukana paikallisia mestareita, kuten '
+          + 'Gregor Maček vanhempi, joka suunnitteli myös nykyisen '
+          + 'kaupungintalon. Kirkon alkuperäinen pienoismalli on yhä '
+          + 'Ljubljanan kaupunginmuseossa, ja luostarin Ritarisali '
+          + 'rakennettiin samalla vuosisadalla.'
+          + '\n\n'
+          + 'Isoisän aikaan Križanke on toimiva luostari, ja sellaisena se '
+          + 'pysyi vuoteen 1945, jolloin se kansallistettiin. Vuonna 1952 '
+          + 'kaupunki pyysi Jože Plečnikiä muuttamaan rapistuneen '
+          + 'luostarin Ljubljanan festivaalin näyttämöksi. Työ valmistui '
+          + '1956, ja se jäi Plečnikin viimeiseksi suureksi työksi '
+          + 'kaupungissa. Eteläpihasta tuli amfiteatterimainen '
+          + 'ulkonäyttämö suurine siirrettävine katoksineen, ja yksi '
+          + 'pihoista tunnetaan nimellä Helvetin piha.',
+      kuvat: [
+        {
+          tiedosto: 'Krizanke, main courtyard 01.jpg',
+          lyhyt: 'Križanken pääpiha ja sen kaariholvit.',
+          selite: 'Križanken pääpiha: matalissa kaarissa ja '
+            + 'sgrafittokoristeissa näkyy, miten luostarin goottilaiset '
+            + 'yksityiskohdat peittyivät vähitellen renessanssin ja '
+            + 'barokin alle.',
+          lahde: 'Ajznponar, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Prešernin aukio': {
+      aika: '1600-luku',
+      teksti: 'Prešernin aukio on Ljubljanan keskusaukio vanhan '
+          + 'kaupungin sisäänkäynnin edessä: suppilomainen solmu, josta '
+          + 'kadut lähtevät joka suuntaan. Etelään Tromostovje vie joen '
+          + 'yli vanhaankaupunkiin ja kaupungintalolle, pohjoiseen '
+          + 'Miklošičeva-katu kohti rautatieasemaa. Aukio sai perusmuotonsa '
+          + '1600-luvulla, kun barokkinen Ilmestyksen fransiskaanikirkko '
+          + 'rakennettiin, ja sitä kutsuttiin aluksi kirkon mukaan Marian '
+          + 'aukioksi. Vasta 1800-luvulla risteys muutettiin aukioksi ja '
+          + 'kivettiin.'
+          + '\n\n'
+          + 'Wolfin ja Čopin kadun välissä seisova Hauptmannin talo '
+          + 'rakennettiin juuri vuonna 1873, isoisän matkan vuonna. Muu '
+          + 'aukio muuttui perusteellisesti vuoden 1895 maanjäristyksen '
+          + 'jälkeen: Max Fabiani suunnitteli sen neljän kadun '
+          + 'solmukohdaksi, ja vaurioituneiden keskiaikaisten talojen '
+          + 'tilalle nousi palatseja. Vuonna 1905 keskusapteekin eteen '
+          + 'pystytettiin kansallisrunoilija France Prešerenin '
+          + 'pronssipatsas muusan kanssa; sen teki Ivan Zajec, ja '
+          + 'jalustan suunnitteli Fabiani.'
+          + '\n\n'
+          + 'Nykyisen pyöreän muotonsa aukio sai Edvard Ravnikarilta '
+          + '1987–88: graniittikiveykseen upotettiin ympyrä ja säteet '
+          + 'makedonialaista Sivec-marmoria. Ravnikar ehdotti myös '
+          + 'suihkulähdettä, mutta kaupunkilaiset eivät sitä hyväksyneet. '
+          + 'Moottoriliikenteeltä aukio suljettiin 3. syyskuuta 2007.',
+      kuvat: [
+        {
+          tiedosto: 'Prešernov trg in frančiškanska cerkev Marijinega oznanjenja v Ljubljani 1905.jpg',
+          lyhyt: 'Prešernin aukio ja fransiskaanikirkko vuonna 1905.',
+          selite: 'Ilmestyksen fransiskaanikirkko ja aukion talot Fran '
+            + 'Veselin valokuvassa vuodelta 1905. Kirkko on 1600-luvulta, '
+            + 'joten sen isoisäkin näki vuonna 1873.',
+          lahde: 'Fran Vesel, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Tromostovje: {
+      aika: '1842',
+      teksti: 'Tromostovje, suomeksi Kolmisilta, on Ljubljanan vanhin '
+          + 'silta. Samassa kohdassa mainitaan puusilta jo vuonna 1280. '
+          + 'Sitä kutsuttiin ensin Vanhaksi sillaksi ja myöhemmin '
+          + 'Alasillaksi, erotuksena samalla vuosisadalla rakennetusta '
+          + 'Yläsillasta, ja myös Špitalin sillaksi läheisen köyhäintalon '
+          + 'mukaan. Tulipalon jälkeen silta rakennettiin uudelleen 1657.'
+          + '\n\n'
+          + 'Vuonna 1842 puusillan tilalle tuli kivisilta, jonka '
+          + 'suunnitteli villachilainen italialaisarkkitehti Giovanni '
+          + 'Picco. Se avattiin 25. syyskuuta 1842 ja nimettiin Franzin '
+          + 'sillaksi arkkiherttua Franz Karlin kunniaksi. Siinä oli kaksi '
+          + 'kaarta ja metallikaide, ja keskipilarin yllä on yhä '
+          + 'latinankielinen omistus: "Arkkiherttua Franz Karlille 1842, '
+          + 'kaupunki." Tämän kaksikaarisen kivisillan yli isoisä kulkee '
+          + 'vuonna 1873.'
+          + '\n\n'
+          + 'Kolmisillaksi se muuttui vasta, kun Jože Plečnik suunnitteli '
+          + '1929 kivisillan kummallekin puolelle loivassa kulmassa '
+          + 'jalankulkusillan, jotta vanha silta ei olisi pullonkaula. '
+          + 'Piirustukset teki hänen oppilaansa Ciril Tavčar, ja sillat '
+          + 'rakennettiin 1931–1932. Kaiteissa on 642 betonista '
+          + 'kaidepuolaa. Vuodesta 2021 silta kuuluu Plečnikin töiden '
+          + 'mukana UNESCOn maailmanperintöön.',
+      kuvat: [
+        {
+          tiedosto: 'Tromostovje napis.jpg',
+          lyhyt: 'Vuoden 1842 omistuskirjoitus sillan keskipilarin yllä.',
+          selite: 'Keskimmäisen sillan pilarin yllä lukee yhä '
+            + '"ARCHIDVCI. FRANCISCO. CAROLO. MDCCCXLII. CIVITAS.", '
+            + 'kaupungin omistus arkkiherttua Franz Karlille vuodelta 1842.',
+          lahde: 'Eleassar, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ljubljanan tuomiokirkko': {
+      aika: '1701–1706',
+      teksti: 'Ljubljanan tuomiokirkko on virallisesti Pyhän Nikolauksen '
+          + 'kirkko, ja sen tuntee vihreästä kupolista ja kahdesta '
+          + 'tornista. Paikalla seisoi ensin kolmilaivainen romaaninen '
+          + 'kirkko, joka mainitaan vuonna 1262. Tulipalon jälkeen 1361 '
+          + 'se uusittiin goottilaiseksi, ja kun Ljubljanan hiippakunta '
+          + 'perustettiin 1461, siitä tuli tuomiokirkko. Vuonna 1469 se '
+          + 'paloi taas, ja tuhopoltosta epäiltiin turkkilaisia.'
+          + '\n\n'
+          + 'Nykyinen barokkikirkko rakennettiin 1701–1706 dekaani Johann '
+          + 'Gregor Thalnitscherin aloitteesta. Ensimmäisen suunnitelman '
+          + 'teki kapusiiniveli, mutta jesuiitta-arkkitehti Andrea Pozzo '
+          + 'muutti sen basilikaksi ja lisäsi kupolin. Pozzo ei itse '
+          + 'valvonut työtä, joten rakentajat muuttivat suunnitelmaa '
+          + 'paljon. Salzburgin tuomiokirkkoa muistuttavat tornit tehtiin '
+          + 'Giulio Quaglion piirustuksilla, ja freskot maalasi Giulio '
+          + 'Quaglio. Kirkko vihittiin 8. toukokuuta 1707.'
+          + '\n\n'
+          + 'Isoisän aikaan oikea kupoli on vielä uusi: se korvasi '
+          + 'maalatun valekupolin vasta vuonna 1841, ja Matevž Langus '
+          + 'maalasi sen sisäpuolen 1843–44. Etelänseinän Pyhän '
+          + 'Hermagoraan ja Pyhän Fortunatuksen hiekkakivipatsaat '
+          + 'valmistuivat 1872, vain vuotta ennen hänen tuloaan. Samalla '
+          + 'seinällä on aurinkokello vuodelta 1826 latinankielisine '
+          + 'mietelauseineen "Ette tiedä päivää ettekä hetkeä", ja '
+          + 'torneissa soi Slovenian toiseksi vanhin kello vuodelta 1326.',
+      kuvat: [
+        {
+          tiedosto: 'Stolnica sv. Nikolaja - kupola.JPG',
+          lyhyt: 'Tuomiokirkon kupoli sisältä nähtynä.',
+          selite: 'Kupolin sisäpuolen maalasi Matevž Langus 1843–44: '
+            + 'lakikuvassa on Pyhä Henki enkelien keskellä, seinissä '
+            + 'Neitsyt Marian kruunaus ja Pyhän Nikolauksen kirkastus.',
+          lahde: 'ModriDirkac, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Ljubljanan linna': {
+      aika: '1100-luku',
+      teksti: 'Linnavuorella on asuttu arkeologien mukaan yhtäjaksoisesti '
+          + 'vuodesta 1200 eaa. Ensimmäinen linna oli luultavasti '
+          + '1000-luvulla rakennettu puu- ja kivilinnoitus. Vanhin '
+          + 'kirjallinen maininta on Udinen tuomiokirkon arkistossa '
+          + 'säilytetyssä pergamentissa, luultavasti vuoden 1161 '
+          + 'jälkipuoliskolta: siinä linna on nimeltään castrum Leibach. '
+          + 'Vuonna 1256 se mainitaan Krainin hallitsijoiden tärkeimpänä '
+          + 'linnana, ja 1278 se siirtyi Rudolf Habsburgille.'
+          + '\n\n'
+          + 'Nykyisen ääriviivansa linna sai 1400-luvulla, kun se '
+          + 'purettiin lähes kokonaan ja rakennettiin uudelleen muureineen, '
+          + 'porttitorneineen ja nostosiltoineen; samaan aikaan valmistui '
+          + 'Pyhän Yrjön kappeli. Erasmuksen tornissa pidettiin '
+          + 'luultavasti ylhäisiä vankeja, ja sen seiniin raaputettujen '
+          + 'merkintöjen joukossa on vuosiluku 1442. Tornin nimi tulee '
+          + 'ritari ja rosvo Erazem Luegerista, joka pakeni vankilasta '
+          + 'yöllä nostetusta nostosillasta huolimatta, todennäköisesti '
+          + 'lahjomalla vartijan.'
+          + '\n\n'
+          + 'Vuonna 1873 linna on vankila. Se toimi vankilana vuodesta '
+          + '1815, ja tauon 1848–1868 jälkeen tehtävä oli palannut vain '
+          + 'viisi vuotta aiemmin. Näkötorni on vuodelta 1848, ja siinä '
+          + 'asui vartija, joka ampui tykillä varoituksen tulipalosta tai '
+          + 'ilmoitti tärkeän vieraan saapumisesta. Kaupunki osti linnan '
+          + '1905, ja köysirata huipulle avattiin vasta 28. joulukuuta '
+          + '2006.',
+      kuvat: [
+        {
+          tiedosto: 'Ljubljana Castle Tower.jpg',
+          lyhyt: 'Linnan näkötorni ja Pyhän Yrjön kappeli.',
+          selite: 'Linnan näkötorni rakennettiin kiviseksi 1845–1848 '
+            + 'puisen merkkitornin tilalle, ja sitä korotettiin 1982. '
+            + 'Edessä on goottilainen Pyhän Yrjön kappeli.',
+          lahde: 'Valerio2468, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    Keskustori: {
+      aika: '1940–1942',
+      teksti: 'Keskustori levittäytyy Vodnikin aukiolle Tromostovjen ja '
+          + 'Lohikäärmesillan väliin Ljubljanica-joen oikealle rannalle. '
+          + 'Aukio on nimetty Valentin Vodnikin mukaan: hän oli '
+          + 'valistusajan lopun pappi, toimittaja ja runoilija. Isoisän '
+          + 'aikaan aukiolla ei ole toria eikä Vodnikin patsasta, joka '
+          + 'paljastettiin vasta 1889. Paikalla seisoo vanha luostari, '
+          + 'jossa toimivat hiippakunnan tyttökoulu ja kirjasto.'
+          + '\n\n'
+          + 'Vuoden 1895 maanjäristys tuhosi luostarin niin pahoin, että '
+          + 'se purettiin kokonaan, ja tyhjälle aukiolle syntyi ulkotori. '
+          + 'Torihallin suunnitteli Jože Plečnik 1931–1939, ja se '
+          + 'rakennettiin 1940–1942. Kaksikerroksinen halli seuraa joen '
+          + 'kaarta: jokipuolella on suuret puolipyöreät ikkunat, '
+          + 'katupuolella pylväskäytävä, ja kaksi avointa loggiaa jättää '
+          + 'näkymän joelle. Plečnik halusi hallien väliin katetun sillan '
+          + 'joen yli, mutta se jäi rakentamatta. Ajatus toteutui vasta '
+          + 'heinäkuussa 2010, kun uusi Teurastajien silta avattiin.'
+          + '\n\n'
+          + 'Tori on auki joka päivä paitsi sunnuntaisin. Kukat myydään '
+          + 'Pogačarin ja Vodnikin aukioiden kulmassa, kala ja kuivatut '
+          + 'hedelmät hallin alakerrassa, ja Tromostovjen pään '
+          + 'pylväikössä on yrttejä, mausteita ja käsitöitä. Vuodesta 2021 '
+          + 'tori kuuluu Plečnikin perintönä UNESCOn maailmanperintöön.',
+      kuvat: [
+        {
+          tiedosto: 'Tržnica - panoramio (3).jpg',
+          lyhyt: 'Torikojut ja Valentin Vodnikin patsas Vodnikin aukiolla.',
+          selite: 'Keskustorin kojut Vodnikin aukiolla ja oikealla '
+            + 'Valentin Vodnikin patsas, joka paljastettiin 1889.',
+          lahde: 'Kasius Klej, Wikimedia Commons (CC BY 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lohikäärmesilta': {
+      aika: '1901',
+      teksti: 'Isoisän aikaan tässä ei ole Lohikäärmesiltaa vaan '
+          + 'Teurastajien silta, vuonna 1819 rakennettu tammisilta. Vuoden '
+          + '1895 maanjäristys vaurioitti sitä pahoin, ja pormestari Ivan '
+          + 'Hribarin kaupunkiuudistuksessa sen tilalle rakennettiin silta '
+          + 'uudesta aineesta, teräsbetonista. Kaupunkisuunnittelun '
+          + 'professori Janez Koželj on arvellut, että uutta tekniikkaa '
+          + 'kokeiltiin Ljubljanassa eikä Wienissä juuri siksi, että '
+          + 'epäonnistuminen olisi täällä ollut pienempi vahinko.'
+          + '\n\n'
+          + 'Silta tehtiin wieniläisen Pittel+Brausewetterin '
+          + 'suunnitelmista insinööri Josef Melanin patentin mukaan, ja '
+          + 'arkkitehtina oli Otto Wagnerin koulun kasvatti Jurij '
+          + 'Zaninović. Työt alkoivat 1. heinäkuuta 1900, ja piispa Anton '
+          + 'Bonaventura Jeglič avasi sillan liikenteelle 4. lokakuuta '
+          + '1901. Se sai nimen keisari Frans Joosefin jubileumisilta '
+          + 'hänen 40-vuotisen hallituskautensa 1848–1888 muistoksi, ja '
+          + 'Lohikäärmesillaksi se nimettiin heinäkuussa 1919.'
+          + '\n\n'
+          + 'Melanin järjestelmässä betonin sisään jää rautaiset '
+          + 'ristikkokaaret, joten siltaa ei tarvinnut rakentaa tukitelineen '
+          + 'varaan. Kolminivelkaaren jänneväli on 33,34 metriä, ja '
+          + 'valmistuessaan se oli Euroopan kolmanneksi suurin kaari. Se '
+          + 'oli myös Slovenian ensimmäinen asfaltoitu silta. Kulmissa '
+          + 'seisoo neljä kuparilevystä tehtyä lohikäärmettä ja pitkin '
+          + 'siltaa kuusitoista pienempää; ne valmistettiin A. M. '
+          + 'Beschornerin tehtaalla Wienissä.',
+      kuvat: [
+        {
+          tiedosto: 'Mesarski most in Resljev trg pred 1882.jpg',
+          lyhyt: 'Teurastajien puusilta ennen vuotta 1882.',
+          selite: 'Teurastajien silta ja Resslin aukio ennen vuotta 1882. '
+            + 'Tämän vuoden 1819 tammisillan isoisä näki; '
+            + 'Lohikäärmesilta rakennettiin sen paikalle vasta 1900–1901.',
+          lahde: 'Tuntematon kuvaaja, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+  },
 };
