@@ -1262,16 +1262,16 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Kinkaku-ji': 'kioto-kinkaku-ji',
-    'Ginkaku-ji': 'kioto-ginkaku-ji',
-    'Keisarillinen palatsi': 'kioto-keisarillinen-palatsi',
-    'Nijō-linna': 'kioto-nijo-linna',
-    'Nishiki-tori': 'kioto-nishiki-tori',
-    Gion: 'kioto-gion',
-    'Kiyomizu-dera': 'kioto-kiyomizu-dera',
-    'Sanjūsangen-dō': 'kioto-sanjusangen-do',
-    'Tō-ji': 'kioto-to-ji',
-    'Fushimi Inari-taisha': 'kioto-fushimi-inari-taisha',
+    'Kinkaku-ji': 'kioto-kinkaku-ji-vari2',
+    'Ginkaku-ji': 'kioto-ginkaku-ji-vari2',
+    'Keisarillinen palatsi': 'kioto-keisarillinen-palatsi-vari2',
+    'Nijō-linna': 'kioto-nijo-linna-vari2',
+    'Nishiki-tori': 'kioto-nishiki-tori-vari2',
+    Gion: 'kioto-gion-vari2',
+    'Kiyomizu-dera': 'kioto-kiyomizu-dera-vari2',
+    'Sanjūsangen-dō': 'kioto-sanjusangen-do-vari2',
+    'Tō-ji': 'kioto-to-ji-vari2',
+    'Fushimi Inari-taisha': 'kioto-fushimi-inari-taisha-vari2',
   },
   singapore: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
@@ -1509,16 +1509,16 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Howrah-silta': 'kolkata-howrah-silta',
-    'Howrahin rautatieasema': 'kolkata-howrahin-rautatieasema',
-    'Marble Palace': 'kolkata-marble-palace',
-    'Nakhodan moskeija': 'kolkata-nakhodan-moskeija',
-    'College Street': 'kolkata-college-street',
-    'Writers’ Building': 'kolkata-writers-building',
-    'St. John’sin kirkko': 'kolkata-st-john-sin-kirkko',
-    'Shaheed Minar': 'kolkata-shaheed-minar',
-    'Intian museo': 'kolkata-intian-museo',
-    'Victoria Memorial': 'kolkata-victoria-memorial',
+    'Howrah-silta': 'kolkata-howrah-silta-vari2',
+    'Howrahin rautatieasema': 'kolkata-howrahin-rautatieasema-vari2',
+    'Marble Palace': 'kolkata-marble-palace-vari2',
+    'Nakhodan moskeija': 'kolkata-nakhodan-moskeija-vari2',
+    'College Street': 'kolkata-college-street-vari2',
+    'Writers’ Building': 'kolkata-writers-building-vari2',
+    'St. John’sin kirkko': 'kolkata-st-john-sin-kirkko-vari2',
+    'Shaheed Minar': 'kolkata-shaheed-minar-vari2',
+    'Intian museo': 'kolkata-intian-museo-vari2',
+    'Victoria Memorial': 'kolkata-victoria-memorial-vari2',
   },
   kabul: {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
