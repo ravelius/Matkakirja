@@ -74,7 +74,7 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Löyly ja avanto': 'helsinki-loyly-ja-avanto',
+    'Löyly ja avanto': 'helsinki-loyly-ja-avanto-vari2',
     Kantele: 'helsinki-kantele-vari2',
     Finlandia: 'helsinki-finlandia-vari2',
     Pirtukuningas: 'helsinki-pirtukuningas-vari2',
@@ -535,9 +535,9 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    Levski: 'sofia-levski',
-    Ruhtinaskaappaus: 'sofia-ruhtinaskaappaus',
-    Vihellyskonsertti: 'sofia-vihellyskonsertti',
+    Levski: 'sofia-levski-vari2',
+    Ruhtinaskaappaus: 'sofia-ruhtinaskaappaus-vari2',
+    Vihellyskonsertti: 'sofia-vihellyskonsertti-vari2',
   },
   bukarest: {
     'Romanian ateneum': 'assets/kartat/miniatyyrit/bukarest-romanian-ateneum.webp',
@@ -553,8 +553,8 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Colțean torni': 'bukarest-coltean-torni',
-    Kultakana: 'bukarest-kultakana',
+    'Colțean torni': 'bukarest-coltean-torni-vari2',
+    Kultakana: 'bukarest-kultakana-vari2',
   },
   sarajevo: {
     'Sarajevon katedraali': 'assets/kartat/miniatyyrit/sarajevo-sarajevon-katedraali.webp',
@@ -566,7 +566,7 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Inat kuća': 'sarajevo-inat-kuca',
+    'Inat kuća': 'sarajevo-inat-kuca-vari2',
   },
   /*
    * Erä 2 läntiseen ja keskiseen Eurooppaan (generoi-miniatyyrit.yml
@@ -611,9 +611,9 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Alves dos Reis': 'lissabon-alves-dos-reis',
-    'Ultimaatum 1890': 'lissabon-ultimaatum-1890',
-    'Kolumbus 1484': 'lissabon-kolumbus-1484',
+    'Alves dos Reis': 'lissabon-alves-dos-reis-vari2',
+    'Ultimaatum 1890': 'lissabon-ultimaatum-1890-vari2',
+    'Kolumbus 1484': 'lissabon-kolumbus-1484-vari2',
   },
   budapest: {
     Kalastajanlinnake: 'assets/kartat/miniatyyrit/budapest-kalastajanlinnake.webp',
@@ -693,8 +693,8 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Font de Canaletes': 'barcelona-font-de-canaletes',
-    'Roviran aukio': 'barcelona-roviran-aukio',
+    'Font de Canaletes': 'barcelona-font-de-canaletes-vari2',
+    'Roviran aukio': 'barcelona-roviran-aukio-vari2',
   },
   edinburgh: {
     'Charlotte Square': 'assets/kartat/miniatyyrit/edinburgh-charlotte-square.webp',
@@ -740,7 +740,7 @@ export const MINIATYYRIT = {
     // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
     // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
     // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
-    'Fabergé-museo': 'pietari-faberge-museo',
+    'Fabergé-museo': 'pietari-faberge-museo-vari2',
     // Kuvaputken toimitus 7.9.2026 (posti/kuvatoimitus-16b- ja
     // -22-20260907.json). Kuvaputki vei tiedostot pelin lukupolkuun
     // kohtaamiset/miniatyyrit/<tunnus>.png 7.9.2026
